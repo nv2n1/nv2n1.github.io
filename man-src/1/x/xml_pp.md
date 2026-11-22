@@ -15,7 +15,7 @@ xml_pp - xml pretty-printer
 
 <h2>DESCRIPTION</h2>
 
- <font SIZE="-1">XML</font> pretty printer using XML::Twig
+ XML pretty printer using XML::Twig
 
 <h2>OPTIONS</h2>
 
@@ -29,11 +29,11 @@ xml_pp - xml pretty-printer
 </dt><dd> preserves white spaces in tags. You can use several <tt>&quot;-p&quot;</tt> options or quote the tags if you need more than one
 </dd><dt>-e &lt;encoding&gt;
 </dt><dd> use XML::Twig output_encoding (based on Text::Iconv or Unicode::Map8 and Unicode::String) to set the output encoding. By default the original encoding is preserved. 
- If this option is used the <font SIZE="-1">XML</font> declaration is updated (and created if there was none). 
+ If this option is used the XML declaration is updated (and created if there was none). 
  Make sure that the encoding is supported by the parser you use if you want to be able to process the pretty_printed file (XML::Parser does not support 'latin1' for example, you have to use 'iso-8859-1')
 </dd><dt>-l
 </dt><dd> loads the documents in memory instead of outputing them as they are being parsed. 
- This prevents a bug (see <font SIZE="-1">BUGS</font>) but uses more memory
+ This prevents a bug (see BUGS) but uses more memory
 </dd><dt>-f &lt;file&gt;
 </dt><dd> read the list of files to process from &lt;file&gt;, one per line
 </dd><dt>-v

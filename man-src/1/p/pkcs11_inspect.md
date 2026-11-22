@@ -35,5 +35,5 @@ description: "pkcs11_inspect – print certificate contents"
 <h2>AUTHORS</h2>
 <p> Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a></code>(8), <code><a href="/docs/linux/man/1-pklogin_finder/">pklogin_finder</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a></code>(8), <code><a href="/docs/linux/man/1-pklogin_finder/">pklogin_finder</a></code>(1)<br/>
  PAM-PKCS11 User Manual </p>

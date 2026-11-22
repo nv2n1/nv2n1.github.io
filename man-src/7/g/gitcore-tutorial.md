@@ -11,9 +11,9 @@ description: "gitcore-tutorial – A Git core tutorial for developers"
 <h2>Synopsis</h2>
 <p>git *</p>
 <h2>Description</h2>
-<p>This tutorial explains how to use the &quot;core&quot; Git commands to set up and work with a Git repository. If you just need to use Git as a revision control system you may prefer to start with &quot;A Tutorial Introduction to Git&quot; (<code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7)) or m[blue]<code>the Git User Manual</code>m[]<font SIZE="-2">[1]</font>. However, an understanding of these low-level tools can be helpful if you want to understand Git&#8217;s internals. The core Git is often called &quot;plumbing&quot;, with the prettier user interfaces on top of it called &quot;porcelain&quot;. You may not want to use the plumbing directly very often, but it can be good to know what the plumbing does when the porcelain isn&#8217;t flushing. Back when this document was originally written, many porcelain commands were shell scripts. For simplicity, it still uses them as examples to illustrate how plumbing is fit together to form the porcelain commands. The source tree includes some of these scripts in contrib/examples/ for reference. Although these are not implemented as shell scripts anymore, the description of what the plumbing layer commands do is still valid.</p>
+<p>This tutorial explains how to use the &quot;core&quot; Git commands to set up and work with a Git repository. If you just need to use Git as a revision control system you may prefer to start with &quot;A Tutorial Introduction to Git&quot; (<code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7)) or m[blue]<code>the Git User Manual</code>m[][1]. However, an understanding of these low-level tools can be helpful if you want to understand Git&#8217;s internals. The core Git is often called &quot;plumbing&quot;, with the prettier user interfaces on top of it called &quot;porcelain&quot;. You may not want to use the plumbing directly very often, but it can be good to know what the plumbing does when the porcelain isn&#8217;t flushing. Back when this document was originally written, many porcelain commands were shell scripts. For simplicity, it still uses them as examples to illustrate how plumbing is fit together to form the porcelain commands. The source tree includes some of these scripts in contrib/examples/ for reference. Although these are not implemented as shell scripts anymore, the description of what the plumbing layer commands do is still valid.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Deeper technical details are often marked as Notes, which you can skip on your first reading. </dd>
 <h2>Creating A Git Repository</h2>
 <p>Creating a new Git repository couldn&#8217;t be easier: all Git repositories start out empty, and the only thing you need to do is find yourself a subdirectory that you want to use as a working tree &#8211; either an empty one for a totally new project, or an existing working tree that you want to import into Git. </p>
@@ -41,12 +41,12 @@ $ git init</pre>
 <p> One note: the special <code>master</code> head is the default branch, which is why the <code>.git/HEAD</code> file was created points to it even if it doesn&#8217;t yet exist. Basically, the <code>HEAD</code> link is supposed to always point to the branch you are working on right now, and you always start out expecting to work on the <code>master</code> branch. </p>
 <p> However, this is only a convention, and you can name your branches anything you want, and don&#8217;t have to ever even <i>have</i> a <code>master</code> branch. A number of the Git tools will assume that <code>.git/HEAD</code> is valid, though. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> An <i>object</i> is identified by its 160-bit SHA-1 hash, aka <i>object name</i>, and a reference to an object is always the 40-byte hex representation of that SHA-1 name. The files in the <code>refs</code> subdirectory are expected to contain these hex references (usually with a final <code>
 </code> at the end), and you should thus expect to see a number of 41-byte files containing these references in these <code>refs</code> subdirectories when you actually start populating your tree. </p>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> An advanced user may want to take a look at <code><a href="/docs/linux/man/5-gitrepository-layout/">gitrepository-layout</a></code>(5) after finishing this tutorial. </p>
 </dl>
 <p> You have now created your first Git repository. Of course, since it&#8217;s empty, that&#8217;s not very useful, so let&#8217;s start populating it with data.</p>
@@ -94,11 +94,11 @@ $ echo &quot;Silly example&quot; &gt;example</pre>
 </dd></dl>
 <p> which will print out &quot;Hello World&quot;. The object <code>557db03</code> is nothing more than the contents of your file <code>hello</code>. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Don&#8217;t confuse that object with the file <code>hello</code> itself. The object is literally just those specific <code>contents</code> of the file, and however much you later change the contents in file <code>hello</code>, the object we just looked at will never change. Objects are immutable. </p>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> The second example demonstrates that you can abbreviate the object name to only the first several hexadecimal digits in most places. </p>
 </dl>
 <p> Anyway, as we mentioned previously, you normally never actually take a look at the objects themselves, and typing long 40-character hex names is not something you&#8217;d normally want to do. The above digression was just to show that <i>git update-index</i> did something magical, and actually saved away the contents of your files into the Git object database. </p>
@@ -184,7 +184,7 @@ $ git update-ref HEAD $commit</pre>
 <p> which ends up doing the above for you. </p>
 <p> In other words, <i>git diff-index</i> normally compares a tree against the working tree, but when given the <code>&#8211;cached</code> flag, it is told to instead compare against just the index cache contents, and ignore the current working tree state entirely. Since we just wrote the index file to HEAD, doing <code>git diff-index &#8211;cached -p HEAD</code> should thus return an empty set of differences, and that&#8217;s exactly what it does. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> <i>git diff-index</i> really always uses the index for its comparisons, and saying that it compares a tree against the working tree is thus not strictly accurate. In particular, the list of files to compare (the &quot;meta-data&quot;) <code>always</code> comes from the index file, regardless of whether the <code>&#8211;cached</code> flag is used or not. The <code>&#8211;cached</code> flag really only determines whether the file <code>contents</code> to be compared come from the working tree or not. </p>
 <p> This is not hard to understand, as soon as you realize that Git simply never knows (or cares) about files that it is not told about explicitly. Git will never go <code>looking</code> for files to compare, it expects you to tell it what the files are, and that&#8217;s what the index is there for. </p>
 </dl>
@@ -212,7 +212,7 @@ $ git update-ref HEAD $commit</pre>
 </dd></dl>
 <p> (again, <code>-p</code> means to show the difference as a human-readable patch), and it will show what the last commit (in <code>HEAD</code>) actually changed. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Here is an ASCII art by Jon Loeliger that illustrates how various <i>diff-*</i> commands compare things. </p>
 <dl>
 <dd>
@@ -271,7 +271,7 @@ diff-index | V
 <h2>Copying Repositories</h2>
 <p>Git repositories are normally totally self-sufficient and relocatable. Unlike CVS, for example, there is no separate notion of &quot;repository&quot; and &quot;working tree&quot;. A Git repository normally <code>is</code> the working tree, with the local Git information hidden in the <code>.git</code> subdirectory. There is nothing else. What you see is what you got. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> You can tell Git to split the Git internal information from the directory that it tracks, but we&#8217;ll ignore that for now: it&#8217;s not how normal projects work, and it&#8217;s really only meant for special uses. So the mental model of &quot;the Git information is always tied directly to the working tree that it describes&quot; may not be technically 100% accurate, but it&#8217;s a good model for all normal use. </p>
 </dl>
 <p> This has two implications: </p>
@@ -342,7 +342,7 @@ $ git checkout</pre>
 </dd></dl>
 <p> will create a new branch based at the current <code>HEAD</code> position, and switch to it. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If you make the decision to start your new branch at some other point in the history than the current <code>HEAD</code>, you can do so by just telling <i>git switch</i> what the base of the checkout would be. In other words, if you have an earlier tag or branch, you&#8217;d just do </p>
 <dl>
 <dd>
@@ -442,11 +442,11 @@ Work, work, work</pre>
 </dd></dl>
 <p> The first two lines indicate that it is showing the two branches with the titles of their top-of-the-tree commits, you are currently on <code>master</code> branch (notice the asterisk <code>*</code> character), and the first column for the later output lines is used to show commits contained in the <code>master</code> branch, and the second column for the <code>mybranch</code> branch. Three commits are shown along with their titles. All of them have non blank characters in the first column (<code>*</code> shows an ordinary commit on the current branch, <code>&#8211;</code> is a merge commit), which means they are now part of the <code>master</code> branch. Only the &quot;Some work&quot; commit has the plus <code>+</code> character in the second column, because <code>mybranch</code> has not been merged to incorporate these commits from the master branch. The string inside brackets before the commit log message is a short name you can use to name the commit. In the above example, <i>master</i> and <i>mybranch</i> are branch heads. <i>master^</i> is the first parent of <i>master</i> branch head. Please see <code><a href="/docs/linux/man/7-gitrevisions/">gitrevisions</a></code>(7) if you want to see more complex cases. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Without the <i>&#8211;more=1</i> option, <i>git show-branch</i> would not output the <i>[master^]</i> commit, as <i>[mybranch]</i> commit is a common ancestor of both <i>master</i> and <i>mybranch</i> tips. Please see <code><a href="/docs/linux/man/1-git-show-branch/">git-show-branch</a></code>(1) for details. </p>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If there were more commits on the <i>master</i> branch after the merge, the merge commit itself would not be shown by <i>git show-branch</i> by default. You would need to provide <code>&#8211;sparse</code> option to make the merge commit visible in this case. </p>
 </dl>
 <p> Now, let&#8217;s pretend you are the one who did all the work in <code>mybranch</code>, and the fruit of your hard work has finally been merged to the <code>master</code> branch. Let&#8217;s go back to <code>mybranch</code>, and run <i>git merge</i> to get the &quot;upstream changes&quot; back to your branch. </p>
@@ -508,7 +508,7 @@ Fast-forward (no commit created; -m option ignored)
 </dd></dl>
 <p> and optionally give a branch-name for the remote end as a second argument. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> You could do without using any branches at all, by keeping as many local repositories as you would like to have branches, and merging between them with <i>git pull</i>, just like you merge between branches. The advantage of this approach is that it lets you keep a set of files for each <code>branch</code> checked out and you may find it easier to switch back and forth if you juggle multiple lines of development simultaneously. Of course, you will pay the price of more disk usage to hold multiple working trees, but disk space is cheap these days. </p>
 </dl>
 <p> It is likely that you will be pulling from the same remote repository from time to time. As a short hand, you can store the remote repository URL in the local repository&#8217;s config file like this: </p>
@@ -616,13 +616,13 @@ fatal: merge program failed</pre>
 <p>So, we can use somebody else&#8217;s work from a remote repository, but how can <code>you</code> prepare a repository to let other people pull from it? </p>
 <p> You do your real work in your working tree that has your primary repository hanging under it as its <code>.git</code> subdirectory. You <code>could</code> make that repository accessible remotely and ask people to pull from it, but in practice that is not the way things are usually done. A recommended way is to have a public repository, make it reachable by other people, and when the changes you made in your primary working tree are in good shape, update the public repository from it. This is often called <i>pushing</i>. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> This public repository could further be mirrored, and that is how Git repositories at <code>kernel.org</code> are managed. </p>
 </dl>
 <p> Publishing the changes from your local (private) repository to your remote (public) repository requires a write privilege on the remote machine. You need to have an SSH account there to run a single command, <i>git-receive-pack</i>. </p>
 <p> First, you need to create an empty repository on the remote machine that will house your public repository. This empty repository will be populated and be kept up to date by pushing into it later. Obviously, this repository creation needs to be done only once. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> <i>git push</i> uses a pair of commands, <i>git send-pack</i> on your local machine, and <i>git-receive-pack</i> on the remote machine. The communication between the two over the network internally uses an SSH connection. </p>
 </dl>
 <p> Your private repository&#8217;s Git directory is usually <code>.git</code>, but your public repository is often named after the project name, i.e. <code>&lt;project&gt;.git</code>. Let&#8217;s create such a public repository for project <code>my-git</code>. After logging into the remote machine, create an empty directory: </p>
@@ -637,11 +637,11 @@ fatal: merge program failed</pre>
 </dd></dl>
 <p> Make sure this directory is available for others you want your changes to be pulled via the transport of your choice. Also you need to make sure that you have the <i>git-receive-pack</i> program on the <code>$PATH</code>. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Many installations of sshd do not invoke your shell as the login shell when you directly run programs; what this means is that if your login shell is <i>bash</i>, only <code>.bashrc</code> is read and not <code>.bash_profile</code>. As a workaround, make sure <code>.bashrc</code> sets up <code>$PATH</code> so that you can run <i>git-receive-pack</i> program. </p>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If you plan to publish this repository to be accessed over http, you should do <code>mv my-git.git/hooks/post-update.sample my-git.git/hooks/post-update</code> at this point. This makes sure that every time you push into this repository, <code>git update-server-info</code> is run. </p>
 </dl>
 <p> Your &quot;public repository&quot; is now ready to accept your changes. Come back to the machine you have your private repository. From there, run this command: </p>
@@ -663,7 +663,7 @@ fatal: merge program failed</pre>
 </dd></dl>
 <p> will do it for you. If you followed the tutorial examples, you would have accumulated about 17 objects in <code>.git/objects/??/</code> directories by now. <i>git repack</i> tells you how many objects it packed, and stores the packed file in the <code>.git/objects/pack</code> directory. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> You will see two files, <code>pack-*.pack</code> and <code>pack-*.idx</code>, in <code>.git/objects/pack</code> directory. They are closely related to each other, and if you ever copy them by hand to a different repository for whatever reason, you should make sure you copy them together. The former holds all the data from the objects in the pack, and the latter holds the index for random access. </p>
 </dl>
 <p> If you are paranoid, running <i>git verify-pack</i> command would detect if you have a corrupt pack, but do not worry too much. Our programs are always perfect ;-). </p>
@@ -675,13 +675,13 @@ fatal: merge program failed</pre>
 <p> would remove them for you. </p>
 <p> You can try running <code>find .git/objects -type f</code> before and after you run <code>git prune-packed</code> if you are curious. Also <code>git count-objects</code> would tell you how many unpacked objects are in your repository and how much space they are consuming. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> <code>git pull</code> is slightly cumbersome for HTTP transport, as a packed repository may contain relatively few objects in a relatively large pack. If you expect many HTTP pulls from your public repository you might want to repack &amp; prune often, or never. </p>
 </dl>
 <p> If you run <code>git repack</code> again at this point, it will say &quot;Nothing new to pack.&quot;. Once you continue your development and accumulate the changes, running <code>git repack</code> again will create a new pack, that contains objects created since you packed your repository the last time. We recommend that you pack your project soon after the initial import (unless you are starting your project from scratch), and then run <code>git repack</code> every once in a while, depending on how active your project is. </p>
 <p> When a repository is synchronized via <code>git push</code> and <code>git pull</code> objects packed in the source repository are usually stored unpacked in the destination. While this allows you to use different packing strategies on both ends, it also means you may need to repack both repositories every once in a while.</p>
 <h2>Working With Others</h2>
-<p>Although Git is a truly distributed system, it is often convenient to organize your project with an informal hierarchy of developers. Linux kernel development is run this way. There is a nice illustration (page 17, &quot;Merges to Mainline&quot;) in m[blue]<code>Randy Dunlap&#8217;s presentation</code>m[]<font SIZE="-2">[2]</font>. </p>
+<p>Although Git is a truly distributed system, it is often convenient to organize your project with an informal hierarchy of developers. Linux kernel development is run this way. There is a nice illustration (page 17, &quot;Merges to Mainline&quot;) in m[blue]<code>Randy Dunlap&#8217;s presentation</code>m[][2]. </p>
 <p> It should be stressed that this hierarchy is purely <code>informal</code>. There is nothing fundamental in Git that enforces the &quot;chain of patch flow&quot; this hierarchy implies. You do not have to pull from only one remote repository. </p>
 <p> A recommended workflow for a &quot;project lead&quot; goes like this: </p>
 <dl>
@@ -791,7 +791,7 @@ $ git show-branch
 </dd></dl>
 <p> Note that you should not do Octopus just because you can. An octopus is a valid thing to do and often makes it easier to view the commit history if you are merging more than two independent changes at the same time. However, if you have merge conflicts with any of the branches you are merging in and need to hand resolve, that is an indication that the development happened in those branches were not independent after all, and you should merge two at a time, documenting how you resolved the conflicts, and the reason why you preferred changes made in one side over the other. Otherwise it would make the project history harder to follow, not easier.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7), <code><a href="/docs/linux/man/7-gittutorial-2/">gittutorial-2</a></code>(7), <code><a href="/docs/linux/man/7-gitcvs-migration/">gitcvs-migration</a></code>(7), <code><a href="/docs/linux/man/1-git-help/">git-help</a></code>(1), <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7), m[blue]<code>The Git User&#8217;s Manual</code>m[]<font SIZE="-2">[1]</font></p>
+<p><code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7), <code><a href="/docs/linux/man/7-gittutorial-2/">gittutorial-2</a></code>(7), <code><a href="/docs/linux/man/7-gitcvs-migration/">gitcvs-migration</a></code>(7), <code><a href="/docs/linux/man/1-git-help/">git-help</a></code>(1), <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7), m[blue]<code>The Git User&#8217;s Manual</code>m[][1]</p>
 <h2>Git</h2>
 <p>Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>Notes</h2>

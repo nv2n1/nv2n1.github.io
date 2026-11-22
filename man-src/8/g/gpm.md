@@ -35,8 +35,8 @@ description: "gpm – a cut and paste utility and mouse server for virtual conso
 <dt>-A[<code>limit</code>]</dt>
 <dd>Start up with selection pasting disabled. This is intended as a security measure; a plausible attack on a system seems to be to stuff a nasty shell command into the selection buffer (rm -rf /) including the terminating line break, then all the victim has to do is click the middle mouse button .. As of version 1.17.2, this has developed into a more general aging mechanism; the gpm daemon can disable (age) selection pasting automatically after a period of inactivity. To enable this mode just give the optional <code>limit</code> parameter (no space in between !) which is interpreted as the time in seconds for which a selection is considered valid and pastable. As of version 1.15.7, a trivial program called disable-paste is provided. The following makes a good addition to /etc/profile if you allow multiple users to work on your console. </dd>
 </dl>
-<p> case $( /usr/bin/tty ) in<br />
- /dev/tty[0-9]*) /usr/bin/disable-paste ;;<br />
+<p> case $( /usr/bin/tty ) in<br/>
+ /dev/tty[0-9]*) /usr/bin/disable-paste ;;<br/>
  esac</p>
 <dl>
 <dt>-b <code>baud</code></dt>

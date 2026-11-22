@@ -9,10 +9,10 @@ description: "cups-genppd – generate Gutenprint PPD files for use with CUPS"
 
 <p>cups-genppd &#8211; generate Gutenprint PPD files for use with CUPS</p>
 <h2>Synopsis</h2>
-<p><code>cups-genppd</code> [<i>-c localedir</i>] [<i>-l locale</i>] [<i>-p prefix</i>] [<i>-q</i>] [<i>-v</i>] <i>model1</i> <i>[model2, &#8230;modeln]</i><br />
- <code>cups-genppd</code> <i>-L </i>[<i>-c localedir</i>]<br />
- <code>cups-genppd</code> <i>-M </i>[<i>-v</i>]<br />
- <code>cups-genppd</code> <i>-h</i><br />
+<p><code>cups-genppd</code> [<i>-c localedir</i>] [<i>-l locale</i>] [<i>-p prefix</i>] [<i>-q</i>] [<i>-v</i>] <i>model1</i> <i>[model2, &#8230;modeln]</i><br/>
+ <code>cups-genppd</code> <i>-L </i>[<i>-c localedir</i>]<br/>
+ <code>cups-genppd</code> <i>-M </i>[<i>-v</i>]<br/>
+ <code>cups-genppd</code> <i>-h</i><br/>
  <code>cups-genppd</code> <i>-V</i></p>
 <h2>Description</h2>
 <p><code>cups-genppd</code> generates <i>Gutenprint</i> PPD files for use with CUPS. The default behavior is to output PPD files for all models of printer that the <i>Gutenprint</i> printer driver library supports. You may restrict the models by listing either the driver names or the full names of the printers you wish to generate PPD files for after any options. Additionally, the PPD files may be <i>localised</i>, that is, translated, to use your native language rather than US English. There are commands to find out what printer models and languages are supported.</p>

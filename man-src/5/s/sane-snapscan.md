@@ -39,8 +39,8 @@ description: "sane-snapscan – SANE backend for AGFA SnapScan flatbed scanners"
 <h2>Bugs</h2>
 <p>Man page doesn&#8217;t provide much information yet. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5),<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5),<br/>
  <i><a rel="nofollow" href="http://sourceforge.net/projects/snapscan/">http://sourceforge.net/projects/snapscan/</a></i> (new development website) </p>
 <h2>Author</h2>
-<p>Kevin Charter, Franck Schneider, Michel Roelofs, Emmanuel Blot, Mikko Tyolajarvi, David Mosberger-Tang, Wolfgang Goeller, Petter Reinholdtsen, Gary Plewa, Sebastien Sable, Oliver Schwartz and Mikael Magnusson.<br />
+<p>Kevin Charter, Franck Schneider, Michel Roelofs, Emmanuel Blot, Mikko Tyolajarvi, David Mosberger-Tang, Wolfgang Goeller, Petter Reinholdtsen, Gary Plewa, Sebastien Sable, Oliver Schwartz and Mikael Magnusson.<br/>
  Man page by Henning Meier-Geinitz (mostly based on the web pages and source code).</p>

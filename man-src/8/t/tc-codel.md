@@ -11,11 +11,11 @@ description: "CoDel – Controlled-Delay Active Queue Management algorithm"
 <h2>Synopsis</h2>
 <p><code>tc qdisc &#8230; codel</code> [ <code>limit</code> PACKETS ] [ <code>target</code> TIME ] [ <code>interval</code> TIME ] [ <code>ecn</code> | <code>noecn</code> ] [ <code>ce_threshold</code> TIME ] </p>
 <h2>Description</h2>
-<p>CoDel (pronounced &quot;coddle&quot;) is an adaptive &quot;no-knobs&quot; active queue management algorithm (AQM) scheme that was developed to address the shortcomings of RED and its variants. It was developed with the following goals in mind:<br />
-&nbsp;o It should be parameterless.<br />
-&nbsp;o It should keep delays low while permitting bursts of traffic.<br />
-&nbsp;o It should control delay.<br />
-&nbsp;o It should adapt dynamically to changing link rates with no impact on utilization.<br />
+<p>CoDel (pronounced &quot;coddle&quot;) is an adaptive &quot;no-knobs&quot; active queue management algorithm (AQM) scheme that was developed to address the shortcomings of RED and its variants. It was developed with the following goals in mind:<br/>
+&nbsp;o It should be parameterless.<br/>
+&nbsp;o It should keep delays low while permitting bursts of traffic.<br/>
+&nbsp;o It should control delay.<br/>
+&nbsp;o It should adapt dynamically to changing link rates with no impact on utilization.<br/>
 &nbsp;o It should be simple and efficient and should scale from simple to complex routers. </p>
 <h2>Algorithm</h2>
 <p>CoDel comes with three major innovations. Instead of using queue size or queue average, it uses the local minimum queue as a measure of the standing/persistent queue. Second, it uses a single state-tracking variable of the minimum delay to see where it is relative to the standing queue delay. Third, instead of measuring queue size in bytes or packets, it is measured in packet-sojourn time in the queue. </p>
@@ -33,19 +33,19 @@ description: "CoDel – Controlled-Delay Active Queue Management algorithm"
 <h3>ce_threshold</h3>
 <p>sets a threshold above which all packets are marked with ECN Congestion Experienced. This is useful for DCTCP-style congestion control algorithms that require marking at very shallow queueing thresholds.</p>
 <h2>Examples</h2>
-<p>&nbsp;#&nbsp;tc qdisc add dev eth0 root codel<br />
-&nbsp;#&nbsp;tc -s qdisc show<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;qdisc codel 801b: dev eth0 root refcnt 2 limit 1000p target 5.0ms interval 100.0ms<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 245801662 bytes 275853 pkt&nbsp;(dropped 0, overlimits 0 requeues 24)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 0b 0p requeues 24<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;count 0 lastcount 0 ldelay 2us drop_next 0us<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;maxpacket 7306 ecn_mark 0 drop_overlimit 0<br />
-&nbsp;#&nbsp;tc qdisc add dev eth0 root codel limit 100 target 4ms interval 30ms ecn<br />
-&nbsp;#&nbsp;tc -s qdisc show<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;qdisc codel 801c: dev eth0 root refcnt 2 limit 100p target 4.0ms interval 30.0ms ecn<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 237573074 bytes 268561 pkt&nbsp;(dropped 0, overlimits 0 requeues 5)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 0b 0p requeues 5<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;count 0 lastcount 0 ldelay 76us drop_next 0us<br />
+<p>&nbsp;#&nbsp;tc qdisc add dev eth0 root codel<br/>
+&nbsp;#&nbsp;tc -s qdisc show<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;qdisc codel 801b: dev eth0 root refcnt 2 limit 1000p target 5.0ms interval 100.0ms<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 245801662 bytes 275853 pkt&nbsp;(dropped 0, overlimits 0 requeues 24)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 0b 0p requeues 24<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;count 0 lastcount 0 ldelay 2us drop_next 0us<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;maxpacket 7306 ecn_mark 0 drop_overlimit 0<br/>
+&nbsp;#&nbsp;tc qdisc add dev eth0 root codel limit 100 target 4ms interval 30ms ecn<br/>
+&nbsp;#&nbsp;tc -s qdisc show<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;qdisc codel 801c: dev eth0 root refcnt 2 limit 100p target 4.0ms interval 30.0ms ecn<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 237573074 bytes 268561 pkt&nbsp;(dropped 0, overlimits 0 requeues 5)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 0b 0p requeues 5<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;count 0 lastcount 0 ldelay 76us drop_next 0us<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;maxpacket 2962 ecn_mark 0 drop_overlimit 0 </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-red/">tc-red</a></code>(8) </p>

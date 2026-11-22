@@ -11,19 +11,19 @@ perllocale - Perl locale handling (internationalization and localization)
 
 <h2>DESCRIPTION</h2>
 
- In the beginning there was <font SIZE="-1">ASCII,</font> the ``American Standard Code for Information Interchange'', which works quite well for Americans with their English alphabet and dollar-denominated currency. But it doesn't work so well even for other English speakers, who may use different currencies, such as the pound sterling (as the symbol for that currency is not in <font SIZE="-1">ASCII</font>); and it's hopelessly inadequate for many of the thousands of the world's other languages. 
+ In the beginning there was ASCII, the ``American Standard Code for Information Interchange'', which works quite well for Americans with their English alphabet and dollar-denominated currency. But it doesn't work so well even for other English speakers, who may use different currencies, such as the pound sterling (as the symbol for that currency is not in ASCII); and it's hopelessly inadequate for many of the thousands of the world's other languages. 
 
- To address these deficiencies, the concept of locales was invented (formally the <font SIZE="-1">ISO C, XPG4, POSIX 1</font>.c ``locale system''). And applications were and are being written that use the locale mechanism. The process of making such an application take account of its users' preferences in these kinds of matters is called <b>internationalization</b> (often abbreviated as <b>i18n</b>); telling such an application about a particular set of preferences is known as <b>localization</b> (<b>l10n</b>). 
+ To address these deficiencies, the concept of locales was invented (formally the ISO C, XPG4, POSIX 1.c ``locale system''). And applications were and are being written that use the locale mechanism. The process of making such an application take account of its users' preferences in these kinds of matters is called <b>internationalization</b> (often abbreviated as <b>i18n</b>); telling such an application about a particular set of preferences is known as <b>localization</b> (<b>l10n</b>). 
 
  Perl has been extended to support certain types of locales available in the locale system. This is controlled per application by using one pragma, one function call, and several environment variables. 
 
- Perl supports single-byte locales that are supersets of <font SIZE="-1">ASCII,</font> such as the <font SIZE="-1">ISO 8859</font> ones, and one multi-byte-type locale, <font SIZE="-1">UTF-8</font> ones, described in the next paragraph. Perl doesn't support any other multi-byte locales, such as the ones for East Asian languages. 
+ Perl supports single-byte locales that are supersets of ASCII, such as the ISO 8859 ones, and one multi-byte-type locale, UTF-8 ones, described in the next paragraph. Perl doesn't support any other multi-byte locales, such as the ones for East Asian languages. 
 
- Unfortunately, there are quite a few deficiencies with the design (and often, the implementations) of locales. Unicode was invented (see perlunitut for an introduction to that) in part to address these design deficiencies, and nowadays, there is a series of ``<font SIZE="-1">UTF-8</font> locales'', based on Unicode. These are locales whose character set is Unicode, encoded in <font SIZE="-1">UTF-8.</font> Starting in v5.20, Perl fully supports <font SIZE="-1">UTF-8</font> locales, except for sorting and string comparisons like <tt>&quot;lt&quot;</tt> and <tt>&quot;ge&quot;</tt>. Starting in v5.26, Perl can handle these reasonably as well, depending on the platform's implementation. However, for earlier releases or for better control, use Unicode::Collate. There are actually two slightly different types of <font SIZE="-1">UTF-8</font> locales: one for Turkic languages and one for everything else. Starting in Perl v5.30, Perl seamlessly handles both types; previously only the non-Turkic one was supported. 
+ Unfortunately, there are quite a few deficiencies with the design (and often, the implementations) of locales. Unicode was invented (see perlunitut for an introduction to that) in part to address these design deficiencies, and nowadays, there is a series of ``UTF-8 locales'', based on Unicode. These are locales whose character set is Unicode, encoded in UTF-8. Starting in v5.20, Perl fully supports UTF-8 locales, except for sorting and string comparisons like <tt>&quot;lt&quot;</tt> and <tt>&quot;ge&quot;</tt>. Starting in v5.26, Perl can handle these reasonably as well, depending on the platform's implementation. However, for earlier releases or for better control, use Unicode::Collate. There are actually two slightly different types of UTF-8 locales: one for Turkic languages and one for everything else. Starting in Perl v5.30, Perl seamlessly handles both types; previously only the non-Turkic one was supported. 
 
- Perl continues to support the old non <font SIZE="-1">UTF-8</font> locales as well. There are currently no <font SIZE="-1">UTF-8</font> locales for <font SIZE="-1">EBCDIC</font> platforms. 
+ Perl continues to support the old non UTF-8 locales as well. There are currently no UTF-8 locales for EBCDIC platforms. 
 
- (Unicode is also creating <tt>&quot;CLDR&quot;</tt>, the ``Common Locale Data Repository'', &lt;<a rel="nofollow" HREF="http://cldr.unicode.org/">http://cldr.unicode.org/</a>&gt; which includes more types of information than are available in the <font SIZE="-1">POSIX</font> locale system. At the time of this writing, there was no <font SIZE="-1">CPAN</font> module that provides access to this XML-encoded data. However, it is possible to compute the <font SIZE="-1">POSIX</font> locale data from them, and earlier <font SIZE="-1">CLDR</font> versions had these already extracted for you as <font SIZE="-1">UTF-8</font> locales &lt;<a rel="nofollow" HREF="http://unicode.org/Public/cldr/2.0.1/">http://unicode.org/Public/cldr/2.0.1/</a>&gt;.)
+ (Unicode is also creating <tt>&quot;CLDR&quot;</tt>, the ``Common Locale Data Repository'', &lt;<a rel="nofollow" HREF="http://cldr.unicode.org/">http://cldr.unicode.org/</a>&gt; which includes more types of information than are available in the POSIX locale system. At the time of this writing, there was no CPAN module that provides access to this XML-encoded data. However, it is possible to compute the POSIX locale data from them, and earlier CLDR versions had these already extracted for you as UTF-8 locales &lt;<a rel="nofollow" HREF="http://unicode.org/Public/cldr/2.0.1/">http://unicode.org/Public/cldr/2.0.1/</a>&gt;.)
 
 <h2>WHAT IS A LOCALE</h2>
 
@@ -45,13 +45,13 @@ perllocale - Perl locale handling (internationalization and localization)
 </dt><dd> Some platforms have other categories, dealing with such things as measurement units and paper sizes. None of these are used directly by Perl, but outside operations that Perl interacts with may use these. See ``Not within the scope of ''use locale&quot;&quot; below.</dd></dl>
  
 
- More details on the categories used by Perl are given below in ``<font SIZE="-1">LOCALE CATEGORIES''</font>. 
+ More details on the categories used by Perl are given below in ``LOCALE CATEGORIES''. 
 
  Together, these categories go a long way towards being able to customize a single program to run in many different locations. But there are deficiencies, so keep reading.
 
 <h2>PREPARING TO USE LOCALES</h2>
 
- Perl itself (outside the <font SIZE="-1">POSIX</font> module) will not use locales unless specifically requested to (but again note that Perl may interact with code that does use them). Even if there is such a request, <b>all</b> of the following must be true for it to work properly:
+ Perl itself (outside the POSIX module) will not use locales unless specifically requested to (but again note that Perl may interact with code that does use them). Even if there is such a request, <b>all</b> of the following must be true for it to work properly:
 <dl>
 <dt>&bull;
 </dt><dd> <b>Your operating system must support the locale system</b>. If it does, you should find that the <tt>&quot;setlocale()&quot;</tt> function is a documented part of its C library.
@@ -64,7 +64,7 @@ perllocale - Perl locale handling (internationalization and localization)
  If you want a Perl application to process and present your data according to a particular locale, the application code should include the <tt>&quot;use locale&quot;</tt> pragma (see ``The ''use locale`` pragma'') where appropriate, and <b>at least one</b> of the following must be true:
 <dl>
 <dt>1.
-</dt><dd> <b>The locale-determining environment variables (see ``</b><font SIZE="-1"><b>ENVIRONMENT''</b></font><b>) must be correctly set up</b> at the time the application is started, either by yourself or by whomever set up your system account; or
+</dt><dd> <b>The locale-determining environment variables (see ``</b><b>ENVIRONMENT''</b><b>) must be correctly set up</b> at the time the application is started, either by yourself or by whomever set up your system account; or
 </dd><dt>2.
 </dt><dd> <b>The application must set its own locale</b> using the method described in ``The setlocale function''.</dd></dl>
 
@@ -72,11 +72,11 @@ perllocale - Perl locale handling (internationalization and localization)
 
 <h3>The use locale pragma</h3>
 
- Starting in Perl 5.28, this pragma may be used in multi-threaded applications on systems that have thread-safe locale ability. Some caveats apply, see ``Multi-threaded'' below. On systems without this capability, or in earlier Perls, do <font SIZE="-1">NOT</font> use this pragma in scripts that have multiple threads active. The locale in these cases is not local to a single thread. Another thread may change the locale at any time, which could cause at a minimum that a given thread is operating in a locale it isn't expecting to be in. On some platforms, segfaults can also occur. The locale change need not be explicit; some operations cause perl to change the locale itself. You are vulnerable simply by having done a <tt>&quot;use locale&quot;</tt>. 
+ Starting in Perl 5.28, this pragma may be used in multi-threaded applications on systems that have thread-safe locale ability. Some caveats apply, see ``Multi-threaded'' below. On systems without this capability, or in earlier Perls, do NOT use this pragma in scripts that have multiple threads active. The locale in these cases is not local to a single thread. Another thread may change the locale at any time, which could cause at a minimum that a given thread is operating in a locale it isn't expecting to be in. On some platforms, segfaults can also occur. The locale change need not be explicit; some operations cause perl to change the locale itself. You are vulnerable simply by having done a <tt>&quot;use locale&quot;</tt>. 
 
- By default, Perl itself (outside the <font SIZE="-1">POSIX</font> module) ignores the current locale. The <tt>&quot;use locale&quot;</tt> pragma tells Perl to use the current locale for some operations. Starting in v5.16, there are optional parameters to this pragma, described below, which restrict which operations are affected by it. 
+ By default, Perl itself (outside the POSIX module) ignores the current locale. The <tt>&quot;use locale&quot;</tt> pragma tells Perl to use the current locale for some operations. Starting in v5.16, there are optional parameters to this pragma, described below, which restrict which operations are affected by it. 
 
- The current locale is set at execution time by <b>setlocale()</b> described below. If that function hasn't yet been called in the course of the program's execution, the current locale is that which was determined by the ``<font SIZE="-1">ENVIRONMENT''</font> in effect at the start of the program. If there is no valid environment, the current locale is whatever the system default has been set to. On <font SIZE="-1">POSIX</font> systems, it is likely, but not necessarily, the ``C'' locale. On Windows, the default is set via the computer's <tt>&quot;Control Panel-&gt;Regional and Language Options&quot;</tt> (or its current equivalent). 
+ The current locale is set at execution time by <b>setlocale()</b> described below. If that function hasn't yet been called in the course of the program's execution, the current locale is that which was determined by the ``ENVIRONMENT'' in effect at the start of the program. If there is no valid environment, the current locale is whatever the system default has been set to. On POSIX systems, it is likely, but not necessarily, the ``C'' locale. On Windows, the default is set via the computer's <tt>&quot;Control Panel-&gt;Regional and Language Options&quot;</tt> (or its current equivalent). 
 
  The operations that are affected by locale are:
 <dl>
@@ -87,16 +87,16 @@ perllocale - Perl locale handling (internationalization and localization)
 <dt>&bull;
 </dt><dd> The current locale is used when going outside of Perl with operations like <b>system()</b> or qx//, if those operations are locale-sensitive.
 </dd><dt>&bull;
-</dt><dd> Also Perl gives access to various C library functions through the <font SIZE="-1">POSIX</font> module. Some of those functions are always affected by the current locale. For example, <tt>&quot;POSIX::strftime()&quot;</tt> uses <tt>&quot;LC_TIME&quot;</tt>; <tt>&quot;POSIX::strtod()&quot;</tt> uses <tt>&quot;LC_NUMERIC&quot;</tt>; <tt>&quot;POSIX::strcoll()&quot;</tt> and <tt>&quot;POSIX::strxfrm()&quot;</tt> use <tt>&quot;LC_COLLATE&quot;</tt>. All such functions will behave according to the current underlying locale, even if that locale isn't exposed to Perl space. 
+</dt><dd> Also Perl gives access to various C library functions through the POSIX module. Some of those functions are always affected by the current locale. For example, <tt>&quot;POSIX::strftime()&quot;</tt> uses <tt>&quot;LC_TIME&quot;</tt>; <tt>&quot;POSIX::strtod()&quot;</tt> uses <tt>&quot;LC_NUMERIC&quot;</tt>; <tt>&quot;POSIX::strcoll()&quot;</tt> and <tt>&quot;POSIX::strxfrm()&quot;</tt> use <tt>&quot;LC_COLLATE&quot;</tt>. All such functions will behave according to the current underlying locale, even if that locale isn't exposed to Perl space. 
  This applies as well to I18N::Langinfo.
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">XS</font> modules for all categories but <tt>&quot;LC_NUMERIC&quot;</tt> get the underlying locale, and hence any C library functions they call will use that underlying locale. For more discussion, see ``<font SIZE="-1">CAVEATS''</font> in perlxs.</dd></dl>
+</dt><dd> XS modules for all categories but <tt>&quot;LC_NUMERIC&quot;</tt> get the underlying locale, and hence any C library functions they call will use that underlying locale. For more discussion, see ``CAVEATS'' in perlxs.</dd></dl>
 </dl>
 
 <dl>
 <dt>
 </dt><dd> 
- Note that all C programs (including the perl interpreter, which is written in C) always have an underlying locale. That locale is the ``C'' locale unless changed by a call to <b>setlocale()</b>. When Perl starts up, it changes the underlying locale to the one which is indicated by the ``<font SIZE="-1">ENVIRONMENT''</font>. When using the <font SIZE="-1">POSIX</font> module or writing <font SIZE="-1">XS</font> code, it is important to keep in mind that the underlying locale may be something other than ``C'', even if the program hasn't explicitly changed it. 
+ Note that all C programs (including the perl interpreter, which is written in C) always have an underlying locale. That locale is the ``C'' locale unless changed by a call to <b>setlocale()</b>. When Perl starts up, it changes the underlying locale to the one which is indicated by the ``ENVIRONMENT''. When using the POSIX module or writing XS code, it is important to keep in mind that the underlying locale may be something other than ``C'', even if the program hasn't explicitly changed it. 
 </dd></dl>
 
 <dt><b>Lingering effects of </b>&quot;use locale&quot;
@@ -138,7 +138,7 @@ perllocale - Perl locale handling (internationalization and localization)
 
  The default behavior is restored with the <tt>&quot;no locale&quot;</tt> pragma, or upon reaching the end of the block enclosing <tt>&quot;use locale&quot;</tt>. Note that <tt>&quot;use locale&quot;</tt> calls may be nested, and that what is in effect within an inner scope will revert to the outer scope's rules at the end of the inner scope. 
 
- The string result of any operation that uses locale information is tainted, as it is possible for a locale to be untrustworthy. See ``<font SIZE="-1">SECURITY''</font>. 
+ The string result of any operation that uses locale information is tainted, as it is possible for a locale to be untrustworthy. See ``SECURITY''. 
 
  Starting in Perl v5.16 in a very limited way, and more generally in v5.22, you can restrict which category or categories are enabled by this particular instance of the pragma by adding parameters to it. For example, 
 
@@ -181,11 +181,11 @@ perllocale - Perl locale handling (internationalization and localization)
  use locale qw(:messages :monetary :numeric :time);
 </pre> 
 
- We use the term ``nearly'', because <tt>&quot;:not_characters&quot;</tt> also turns on <tt>&quot;use feature 'unicode_strings'&quot;</tt> within its scope. This form is less useful in v5.20 and later, and is described fully in ``Unicode and <font SIZE="-1">UTF-8''</font>, but briefly, it tells Perl to not use the character portions of the locale definition, that is the <tt>&quot;LC_CTYPE&quot;</tt> and <tt>&quot;LC_COLLATE&quot;</tt> categories. Instead it will use the native character set (extended by Unicode). When using this parameter, you are responsible for getting the external character set translated into the native/Unicode one (which it already will be if it is one of the increasingly popular <font SIZE="-1">UTF-8</font> locales). There are convenient ways of doing this, as described in ``Unicode and <font SIZE="-1">UTF-8''</font>.
+ We use the term ``nearly'', because <tt>&quot;:not_characters&quot;</tt> also turns on <tt>&quot;use feature 'unicode_strings'&quot;</tt> within its scope. This form is less useful in v5.20 and later, and is described fully in ``Unicode and UTF-8'', but briefly, it tells Perl to not use the character portions of the locale definition, that is the <tt>&quot;LC_CTYPE&quot;</tt> and <tt>&quot;LC_COLLATE&quot;</tt> categories. Instead it will use the native character set (extended by Unicode). When using this parameter, you are responsible for getting the external character set translated into the native/Unicode one (which it already will be if it is one of the increasingly popular UTF-8 locales). There are convenient ways of doing this, as described in ``Unicode and UTF-8''.
 
 <h3>The setlocale function</h3>
 
- <font SIZE="-1">WARNING</font>! Prior to Perl 5.28 or on a system that does not support thread-safe locale operations, do <font SIZE="-1">NOT</font> use this function in a thread. The locale will change in all other threads at the same time, and should your thread get paused by the operating system, and another started, that thread will not have the locale it is expecting. On some platforms, there can be a race leading to segfaults if two threads call this function nearly simultaneously. 
+ WARNING! Prior to Perl 5.28 or on a system that does not support thread-safe locale operations, do NOT use this function in a thread. The locale will change in all other threads at the same time, and should your thread get paused by the operating system, and another started, that thread will not have the locale it is expecting. On some platforms, there can be a race leading to segfaults if two threads call this function nearly simultaneously. 
 
  You can switch locales as often as you wish at run time with the <tt>&quot;POSIX::setlocale()&quot;</tt> function: 
 
@@ -211,7 +211,7 @@ setlocale(LC_CTYPE, "");
 setlocale(LC_CTYPE, $old_locale);
 </code></pre> 
 
- The first argument of <tt>&quot;setlocale()&quot;</tt> gives the <b>category</b>, the second the <b>locale</b>. The category tells in what aspect of data processing you want to apply locale-specific rules. Category names are discussed in ``<font SIZE="-1">LOCALE CATEGORIES''</font> and ``<font SIZE="-1">ENVIRONMENT''</font>. The locale is the name of a collection of customization information corresponding to a particular combination of language, country or territory, and codeset. Read on for hints on the naming of locales: not all systems name locales as in the example. 
+ The first argument of <tt>&quot;setlocale()&quot;</tt> gives the <b>category</b>, the second the <b>locale</b>. The category tells in what aspect of data processing you want to apply locale-specific rules. Category names are discussed in ``LOCALE CATEGORIES'' and ``ENVIRONMENT''. The locale is the name of a collection of customization information corresponding to a particular combination of language, country or territory, and codeset. Read on for hints on the naming of locales: not all systems name locales as in the example. 
 
  If no second argument is provided and the category is something other than <tt>&quot;LC_ALL&quot;</tt>, the function returns a string naming the current locale for the category. You can use this value as the second argument in a subsequent call to <tt>&quot;setlocale()&quot;</tt>, <b>but</b> on some platforms the string is opaque, not something that most people would be able to decipher as to what locale it means. 
 
@@ -225,7 +225,7 @@ setlocale(LC_CTYPE, $old_locale);
 
  If <tt>&quot;set_locale()&quot;</tt> fails for some reason (for example, an attempt to set to a locale unknown to the system), the locale for the category is not changed, and the function returns <tt>&quot;undef&quot;</tt>. 
 
- Starting in Perl 5.28, on multi-threaded perls compiled on systems that implement <font SIZE="-1">POSIX 2008</font> thread-safe locale operations, this function doesn't actually call the system <tt>&quot;setlocale&quot;</tt>. Instead those thread-safe operations are used to emulate the <tt>&quot;setlocale&quot;</tt> function, but in a thread-safe manner. 
+ Starting in Perl 5.28, on multi-threaded perls compiled on systems that implement POSIX 2008 thread-safe locale operations, this function doesn't actually call the system <tt>&quot;setlocale&quot;</tt>. Instead those thread-safe operations are used to emulate the <tt>&quot;setlocale&quot;</tt> function, but in a thread-safe manner. 
 
  You can force the thread-safe locale operations to always be used (if available) by recompiling perl with 
 
@@ -239,23 +239,23 @@ setlocale(LC_CTYPE, $old_locale);
 
 <h3>Multi-threaded operation</h3>
 
- Beginning in Perl 5.28, multi-threaded locale operation is supported on systems that implement either the <font SIZE="-1">POSIX 2008</font> or Windows-specific thread-safe locale operations. Many modern systems, such as various Unix variants and Darwin do have this. 
+ Beginning in Perl 5.28, multi-threaded locale operation is supported on systems that implement either the POSIX 2008 or Windows-specific thread-safe locale operations. Many modern systems, such as various Unix variants and Darwin do have this. 
 
  You can tell if using locales is safe on your system by looking at the read-only boolean variable <tt>&quot;${^SAFE_LOCALES}&quot;</tt>. The value is 1 if the perl is not threaded, or if it is using thread-safe locale operations. 
 
- Thread-safe operations are supported in Windows starting in Visual Studio 2005, and in systems compatible with <font SIZE="-1">POSIX 2008.</font> Some platforms claim to support <font SIZE="-1">POSIX 2008,</font> but have buggy implementations, so that the hints files for compiling to run on them turn off attempting to use thread-safety. <tt>&quot;${^SAFE_LOCALES}&quot;</tt> will be 0 on them. 
+ Thread-safe operations are supported in Windows starting in Visual Studio 2005, and in systems compatible with POSIX 2008. Some platforms claim to support POSIX 2008, but have buggy implementations, so that the hints files for compiling to run on them turn off attempting to use thread-safety. <tt>&quot;${^SAFE_LOCALES}&quot;</tt> will be 0 on them. 
 
- Be aware that writing a multi-threaded application will not be portable to a platform which lacks the native thread-safe locale support. On systems that do have it, you automatically get this behavior for threaded perls, without having to do anything. If for some reason, you don't want to use this capability (perhaps the <font SIZE="-1">POSIX 2008</font> support is buggy on your system), you can manually compile Perl to use the old non-thread-safe implementation by passing the argument <tt>&quot;-Accflags='-DNO_THREAD_SAFE_LOCALE'&quot;</tt> to <i>Configure</i>. Except on Windows, this will continue to use certain of the <font SIZE="-1">POSIX 2008</font> functions in some situations. If these are buggy, you can pass the following to <i>Configure</i> instead or additionally: <tt>&quot;-Accflags='-DNO_POSIX_2008_LOCALE'&quot;</tt>. This will also keep the code from using thread-safe locales. <tt>&quot;${^SAFE_LOCALES}&quot;</tt> will be 0 on systems that turn off the thread-safe operations. 
+ Be aware that writing a multi-threaded application will not be portable to a platform which lacks the native thread-safe locale support. On systems that do have it, you automatically get this behavior for threaded perls, without having to do anything. If for some reason, you don't want to use this capability (perhaps the POSIX 2008 support is buggy on your system), you can manually compile Perl to use the old non-thread-safe implementation by passing the argument <tt>&quot;-Accflags='-DNO_THREAD_SAFE_LOCALE'&quot;</tt> to <i>Configure</i>. Except on Windows, this will continue to use certain of the POSIX 2008 functions in some situations. If these are buggy, you can pass the following to <i>Configure</i> instead or additionally: <tt>&quot;-Accflags='-DNO_POSIX_2008_LOCALE'&quot;</tt>. This will also keep the code from using thread-safe locales. <tt>&quot;${^SAFE_LOCALES}&quot;</tt> will be 0 on systems that turn off the thread-safe operations. 
 
  Normally on unthreaded builds, the traditional <tt>&quot;setlocale()&quot;</tt> is used and not the thread-safe locale functions. You can force the use of these on systems that have them by adding the <tt>&quot;-Accflags='-DUSE_THREAD_SAFE_LOCALE'&quot;</tt> to <i>Configure</i>. 
 
- The initial program is started up using the locale specified from the environment, as currently, described in ``<font SIZE="-1">ENVIRONMENT''</font>. All newly created threads start with <tt>&quot;LC_ALL&quot;</tt> set to <tt>&quot;C&quot;</tt>&gt;. Each thread may use <tt>&quot;POSIX::setlocale()&quot;</tt> to query or switch its locale at any time, without affecting any other thread. All locale-dependent operations automatically use their thread's locale. 
+ The initial program is started up using the locale specified from the environment, as currently, described in ``ENVIRONMENT''. All newly created threads start with <tt>&quot;LC_ALL&quot;</tt> set to <tt>&quot;C&quot;</tt>&gt;. Each thread may use <tt>&quot;POSIX::setlocale()&quot;</tt> to query or switch its locale at any time, without affecting any other thread. All locale-dependent operations automatically use their thread's locale. 
 
- This should be completely transparent to any applications written entirely in Perl (minus a few rarely encountered caveats given in the ``Multi-threaded'' section). Information for <font SIZE="-1">XS</font> module writers is given in ``Locale-aware <font SIZE="-1">XS</font> code'' in perlxs.
+ This should be completely transparent to any applications written entirely in Perl (minus a few rarely encountered caveats given in the ``Multi-threaded'' section). Information for XS module writers is given in ``Locale-aware XS code'' in perlxs.
 
 <h3>Finding locales</h3>
 
- For locales available in your system, consult also <b><a HREF="/docs/linux/man/3-setlocale/">setlocale</a></b>(3) to see whether it leads to the list of available locales (search for the <i></i><font SIZE="-1"><i>SEE ALSO</i></font><i></i> section). If that fails, try the following command lines: 
+ For locales available in your system, consult also <b><a HREF="/docs/linux/man/3-setlocale/">setlocale</a></b>(3) to see whether it leads to the list of available locales (search for the <i></i><i>SEE ALSO</i><i></i> section). If that fails, try the following command lines: 
 
  <pre>
         locale -a
@@ -278,13 +278,13 @@ setlocale(LC_CTYPE, $old_locale);
         english.roman8                          russian.koi8r
 </pre> 
 
- Sadly, even though the calling interface for <tt>&quot;setlocale()&quot;</tt> has been standardized, names of locales and the directories where the configuration resides have not been. The basic form of the name is <i>language_territory</i><b>.</b><i>codeset</i>, but the latter parts after <i>language</i> are not always present. The <i>language</i> and <i>country</i> are usually from the standards <font SIZE="-1"><b>ISO 3166</b></font> and <font SIZE="-1"><b>ISO 639</b></font>, the two-letter abbreviations for the countries and the languages of the world, respectively. The <i>codeset</i> part often mentions some <font SIZE="-1"><b>ISO 8859</b></font> character set, the Latin codesets. For example, <tt>&quot;ISO 8859-1&quot;</tt> is the so-called ``Western European codeset'' that can be used to encode most Western European languages adequately. Again, there are several ways to write even the name of that one standard. Lamentably. 
+ Sadly, even though the calling interface for <tt>&quot;setlocale()&quot;</tt> has been standardized, names of locales and the directories where the configuration resides have not been. The basic form of the name is <i>language_territory</i><b>.</b><i>codeset</i>, but the latter parts after <i>language</i> are not always present. The <i>language</i> and <i>country</i> are usually from the standards <b>ISO 3166</b> and <b>ISO 639</b>, the two-letter abbreviations for the countries and the languages of the world, respectively. The <i>codeset</i> part often mentions some <b>ISO 8859</b> character set, the Latin codesets. For example, <tt>&quot;ISO 8859-1&quot;</tt> is the so-called ``Western European codeset'' that can be used to encode most Western European languages adequately. Again, there are several ways to write even the name of that one standard. Lamentably. 
 
- Two special locales are worth particular mention: ``C'' and ``<font SIZE="-1">POSIX''.</font> Currently these are effectively the same locale: the difference is mainly that the first one is defined by the C standard, the second by the <font SIZE="-1">POSIX</font> standard. They define the <b>default locale</b> in which every program starts in the absence of locale information in its environment. (The <i>default</i> default locale, if you will.) Its language is (American) English and its character codeset <font SIZE="-1">ASCII</font> or, rarely, a superset thereof (such as the ``<font SIZE="-1">DEC</font> Multinational Character Set (DEC-MCS)''). <b>Warning</b>. The C locale delivered by some vendors may not actually exactly match what the C standard calls for. So beware. 
+ Two special locales are worth particular mention: ``C'' and ``POSIX''. Currently these are effectively the same locale: the difference is mainly that the first one is defined by the C standard, the second by the POSIX standard. They define the <b>default locale</b> in which every program starts in the absence of locale information in its environment. (The <i>default</i> default locale, if you will.) Its language is (American) English and its character codeset ASCII or, rarely, a superset thereof (such as the ``DEC Multinational Character Set (DEC-MCS)''). <b>Warning</b>. The C locale delivered by some vendors may not actually exactly match what the C standard calls for. So beware. 
 
- <font SIZE="-1"><b>NOTE</b></font>: Not all systems have the ``<font SIZE="-1">POSIX''</font> locale (not all systems are POSIX-conformant), so use ``C'' when you need explicitly to specify this default locale.
+ <b>NOTE</b>: Not all systems have the ``POSIX'' locale (not all systems are POSIX-conformant), so use ``C'' when you need explicitly to specify this default locale.
 
-<h3><font SIZE="-1">LOCALE PROBLEMS</font></h3>
+<h3>LOCALE PROBLEMS</h3>
 
  You may encounter the following warning message at Perl startup: 
 
@@ -297,7 +297,7 @@ setlocale(LC_CTYPE, $old_locale);
         perl: warning: Falling back to the standard locale (&quot;C&quot;).
 </pre> 
 
- This means that your locale settings had <tt>&quot;LC_ALL&quot;</tt> set to ``En_US'' and <font SIZE="-1">LANG</font> exists but has no value. Perl tried to believe you but could not. Instead, Perl gave up and fell back to the ``C'' locale, the default locale that is supposed to work no matter what. (On Windows, it first tries falling back to the system default locale.) This usually means your locale settings were wrong, they mention locales your system has never heard of, or the locale installation in your system has problems (for example, some system files are broken or missing). There are quick and temporary fixes to these problems, as well as more thorough and lasting fixes.
+ This means that your locale settings had <tt>&quot;LC_ALL&quot;</tt> set to ``En_US'' and LANG exists but has no value. Perl tried to believe you but could not. Instead, Perl gave up and fell back to the ``C'' locale, the default locale that is supposed to work no matter what. (On Windows, it first tries falling back to the system default locale.) This usually means your locale settings were wrong, they mention locales your system has never heard of, or the locale installation in your system has problems (for example, some system files are broken or missing). There are quick and temporary fixes to these problems, as well as more thorough and lasting fixes.
 
 <h3>Testing for broken locales</h3>
 
@@ -307,7 +307,7 @@ setlocale(LC_CTYPE, $old_locale);
  PERL_DEBUG_FULL_TEST=1 ./perl -T -Ilib lib/locale.t &gt; locale.log 2&gt;&amp;1
 </pre> 
 
- Besides many other tests, it will test every locale it finds on your system to see if they conform to the <font SIZE="-1">POSIX</font> standard. If any have errors, it will include a summary near the end of the output of which locales passed all its tests, and which failed, and why.
+ Besides many other tests, it will test every locale it finds on your system to see if they conform to the POSIX standard. If any have errors, it will include a summary near the end of the output of which locales passed all its tests, and which failed, and why.
 
 <h3>Temporarily fixing locale problems</h3>
 
@@ -315,7 +315,7 @@ setlocale(LC_CTYPE, $old_locale);
 
  Perl's moaning about locale problems can be silenced by setting the environment variable <tt>&quot;PERL_BADLANG&quot;</tt> to ``0'' or &quot;&quot;. This method really just sweeps the problem under the carpet: you tell Perl to shut up even when Perl sees that something is wrong. Do not be surprised if later something locale-dependent misbehaves. 
 
- Perl can be run under the ``C'' locale by setting the environment variable <tt>&quot;LC_ALL&quot;</tt> to ``C''. This method is perhaps a bit more civilized than the <tt>&quot;PERL_BADLANG&quot;</tt> approach, but setting <tt>&quot;LC_ALL&quot;</tt> (or other locale variables) may affect other programs as well, not just Perl. In particular, external programs run from within Perl will see these changes. If you make the new settings permanent (read on), all programs you run see the changes. See ``<font SIZE="-1">ENVIRONMENT''</font> for the full list of relevant environment variables and ``<font SIZE="-1">USING LOCALES''</font> for their effects in Perl. Effects in other programs are easily deducible. For example, the variable <tt>&quot;LC_COLLATE&quot;</tt> may well affect your <b>sort</b> program (or whatever the program that arranges ``records'' alphabetically in your system is called). 
+ Perl can be run under the ``C'' locale by setting the environment variable <tt>&quot;LC_ALL&quot;</tt> to ``C''. This method is perhaps a bit more civilized than the <tt>&quot;PERL_BADLANG&quot;</tt> approach, but setting <tt>&quot;LC_ALL&quot;</tt> (or other locale variables) may affect other programs as well, not just Perl. In particular, external programs run from within Perl will see these changes. If you make the new settings permanent (read on), all programs you run see the changes. See ``ENVIRONMENT'' for the full list of relevant environment variables and ``USING LOCALES'' for their effects in Perl. Effects in other programs are easily deducible. For example, the variable <tt>&quot;LC_COLLATE&quot;</tt> may well affect your <b>sort</b> program (or whatever the program that arranges ``records'' alphabetically in your system is called). 
 
  You can test out changing these variables temporarily, and if the new settings seem to help, put those settings into your shell startup files. Consult your local documentation for the exact details. For Bourne-like shells (<b>sh</b>, <b>ksh</b>, <b>bash</b>, <b>zsh</b>): 
 
@@ -342,7 +342,7 @@ setlocale(LC_CTYPE, $old_locale);
 
  The slower but superior fixes are when you may be able to yourself fix the misconfiguration of your own environment variables. The mis(sing)configuration of the whole system's locales usually requires the help of your friendly system administrator. 
 
- First, see earlier in this document about ``Finding locales''. That tells how to find which locales are really supported---and more importantly, installed---on your system. In our example error message, environment variables affecting the locale are listed in the order of decreasing importance (and unset variables do not matter). Therefore, having <font SIZE="-1">LC_ALL</font> set to ``En_US'' must have been the bad choice, as shown by the error message. First try fixing locale settings listed first. 
+ First, see earlier in this document about ``Finding locales''. That tells how to find which locales are really supported---and more importantly, installed---on your system. In our example error message, environment variables affecting the locale are listed in the order of decreasing importance (and unset variables do not matter). Therefore, having LC_ALL set to ``En_US'' must have been the bad choice, as shown by the error message. First try fixing locale settings listed first. 
 
  Second, if using the listed commands you see something <b>exactly</b> (prefix matches do not count and case usually counts) like ``En_US'' without the quotes, then you should be okay because you are using a locale name that should be installed and available in your system. In this case, see ``Permanently fixing your system's locale configuration''.
 
@@ -380,7 +380,7 @@ for (sort keys % $locale_values) {
 }
  
 
- <tt>&quot;localeconv()&quot;</tt> takes no arguments, and returns <b>a reference to</b> a hash. The keys of this hash are variable names for formatting, such as <tt>&quot;decimal_point&quot;</tt> and <tt>&quot;thousands_sep&quot;</tt>. The values are the corresponding, er, values. See ``localeconv'' in <font SIZE="-1">POSIX</font> for a longer example listing the categories an implementation might be expected to provide; some provide more and others fewer. You don't need an explicit <tt>&quot;use locale&quot;</tt>, because <tt>&quot;localeconv()&quot;</tt> always observes the current locale. 
+ <tt>&quot;localeconv()&quot;</tt> takes no arguments, and returns <b>a reference to</b> a hash. The keys of this hash are variable names for formatting, such as <tt>&quot;decimal_point&quot;</tt> and <tt>&quot;thousands_sep&quot;</tt>. The values are the corresponding, er, values. See ``localeconv'' in POSIX for a longer example listing the categories an implementation might be expected to provide; some provide more and others fewer. You don't need an explicit <tt>&quot;use locale&quot;</tt>, because <tt>&quot;localeconv()&quot;</tt> always observes the current locale. 
 
  Here's a simple-minded example program that rewrites its command-line parameters as integers correctly formatted in the current locale: 
 
@@ -440,7 +440,7 @@ print "$abday_1? [$yesstr/$nostr] ";
 
 <h2>LOCALE CATEGORIES</h2>
 
- The following subsections describe basic locale categories. Beyond these, some combination categories allow manipulation of more than one basic category at a time. See ``<font SIZE="-1">ENVIRONMENT''</font> for a discussion of these.
+ The following subsections describe basic locale categories. Beyond these, some combination categories allow manipulation of more than one basic category at a time. See ``ENVIRONMENT'' for a discussion of these.
 
 <h3>Category LC_COLLATE: Collation: Text Comparisons and Sorting</h3>
 
@@ -471,7 +471,7 @@ print "$abday_1? [$yesstr/$nostr] ";
 
  This machine-native collation (which is what you get unless <tt>&quot;use locale&quot;</tt> has appeared earlier in the same block) must be used for sorting raw binary data, whereas the locale-dependent collation of the first example is useful for natural text. 
 
- As noted in ``<font SIZE="-1">USING LOCALES''</font>, <tt>&quot;cmp&quot;</tt> compares according to the current collation locale when <tt>&quot;use locale&quot;</tt> is in effect, but falls back to a char-by-char comparison for strings that the locale says are equal. You can use <tt>&quot;POSIX::strcoll()&quot;</tt> if you don't want this fall-back: 
+ As noted in ``USING LOCALES'', <tt>&quot;cmp&quot;</tt> compares according to the current collation locale when <tt>&quot;use locale&quot;</tt> is in effect, but falls back to a char-by-char comparison for strings that the locale says are equal. You can use <tt>&quot;POSIX::strcoll()&quot;</tt> if you don't want this fall-back: 
 
  
 use POSIX qw(strcoll);
@@ -481,7 +481,7 @@ $equal_in_locale =
 
  <tt>$equal_in_locale</tt> will be true if the collation locale specifies a dictionary-like ordering that ignores space characters completely and which folds case. 
 
- Perl uses the platform's C library collation functions <tt>&quot;strcoll()&quot;</tt> and <tt>&quot;strxfrm()&quot;</tt>. That means you get whatever they give. On some platforms, these functions work well on <font SIZE="-1">UTF-8</font> locales, giving a reasonable default collation for the code points that are important in that locale. (And if they aren't working well, the problem may only be that the locale definition is deficient, so can be fixed by using a better definition file. Unicode's definitions (see ``Freely available locale definitions'') provide reasonable <font SIZE="-1">UTF-8</font> locale collation definitions.) Starting in Perl v5.26, Perl's use of these functions has been made more seamless. This may be sufficient for your needs. For more control, and to make sure strings containing any code point (not just the ones important in the locale) collate properly, the Unicode::Collate module is suggested. 
+ Perl uses the platform's C library collation functions <tt>&quot;strcoll()&quot;</tt> and <tt>&quot;strxfrm()&quot;</tt>. That means you get whatever they give. On some platforms, these functions work well on UTF-8 locales, giving a reasonable default collation for the code points that are important in that locale. (And if they aren't working well, the problem may only be that the locale definition is deficient, so can be fixed by using a better definition file. Unicode's definitions (see ``Freely available locale definitions'') provide reasonable UTF-8 locale collation definitions.) Starting in Perl v5.26, Perl's use of these functions has been made more seamless. This may be sufficient for your needs. For more control, and to make sure strings containing any code point (not just the ones important in the locale) collate properly, the Unicode::Collate module is suggested. 
 
  In non-UTF-8 locales (hence single byte), code points above 0xFF are technically invalid. But if present, again starting in v5.26, they will collate to the same position as the highest valid code point does. This generally gives good results, but the collation order may be skewed if the valid code point gets special treatment when it forms particular sequences with other characters as defined by the locale. When two strings collate identically, the code point order is used as a tie breaker. 
 
@@ -499,21 +499,21 @@ print "locale collation ignores case\n" if $xfrm_string eq strxfrm("mixed-case s
 
  <tt>&quot;strxfrm()&quot;</tt> takes a string and maps it into a transformed string for use in char-by-char comparisons against other transformed strings during collation. ``Under the hood'', locale-affected Perl comparison operators call <tt>&quot;strxfrm()&quot;</tt> for both operands, then do a char-by-char comparison of the transformed strings. By calling <tt>&quot;strxfrm()&quot;</tt> explicitly and using a non locale-affected comparison, the example attempts to save a couple of transformations. But in fact, it doesn't save anything: Perl magic (see ``Magic Variables'' in perlguts) creates the transformed version of a string the first time it's needed in a comparison, then keeps this version around in case it's needed again. An example rewritten the easy way with <tt>&quot;cmp&quot;</tt> runs just about as fast. It also copes with null characters embedded in strings; if you call <tt>&quot;strxfrm()&quot;</tt> directly, it treats the first null it finds as a terminator. Don't expect the transformed strings it produces to be portable across systems---or even from one revision of your operating system to the next. In short, don't call <tt>&quot;strxfrm()&quot;</tt> directly: let Perl do it for you. 
 
- Note: <tt>&quot;use locale&quot;</tt> isn't shown in some of these examples because it isn't needed: <tt>&quot;strcoll()&quot;</tt> and <tt>&quot;strxfrm()&quot;</tt> are <font SIZE="-1">POSIX</font> functions which use the standard system-supplied <tt>&quot;libc&quot;</tt> functions that always obey the current <tt>&quot;LC_COLLATE&quot;</tt> locale.
+ Note: <tt>&quot;use locale&quot;</tt> isn't shown in some of these examples because it isn't needed: <tt>&quot;strcoll()&quot;</tt> and <tt>&quot;strxfrm()&quot;</tt> are POSIX functions which use the standard system-supplied <tt>&quot;libc&quot;</tt> functions that always obey the current <tt>&quot;LC_COLLATE&quot;</tt> locale.
 
 <h3>Category LC_CTYPE: Character Types</h3>
 
- In the scope of a <tt>&quot;use locale&quot;</tt> form that includes <tt>&quot;LC_CTYPE&quot;</tt>, Perl obeys the <tt>&quot;LC_CTYPE&quot;</tt> locale setting. This controls the application's notion of which characters are alphabetic, numeric, punctuation, <i>etc</i>. This affects Perl's <tt>&quot;\w&quot;</tt> regular expression metanotation, which stands for alphanumeric characters---that is, alphabetic, numeric, and the platform's native underscore. (Consult perlre for more information about regular expressions.) Thanks to <tt>&quot;LC_CTYPE&quot;</tt>, depending on your locale setting, characters like ``æ'', ``ð'', ``ß'', and ``ø'' may be understood as <tt>&quot;\w&quot;</tt> characters. It also affects things like <tt>&quot;\s&quot;</tt>, <tt>&quot;\D&quot;</tt>, and the <font SIZE="-1">POSIX</font> character classes, like <tt>&quot;[[:graph:]]&quot;</tt>. (See perlrecharclass for more information on all these.) 
+ In the scope of a <tt>&quot;use locale&quot;</tt> form that includes <tt>&quot;LC_CTYPE&quot;</tt>, Perl obeys the <tt>&quot;LC_CTYPE&quot;</tt> locale setting. This controls the application's notion of which characters are alphabetic, numeric, punctuation, <i>etc</i>. This affects Perl's <tt>&quot;\w&quot;</tt> regular expression metanotation, which stands for alphanumeric characters---that is, alphabetic, numeric, and the platform's native underscore. (Consult perlre for more information about regular expressions.) Thanks to <tt>&quot;LC_CTYPE&quot;</tt>, depending on your locale setting, characters like ``æ'', ``ð'', ``ß'', and ``ø'' may be understood as <tt>&quot;\w&quot;</tt> characters. It also affects things like <tt>&quot;\s&quot;</tt>, <tt>&quot;\D&quot;</tt>, and the POSIX character classes, like <tt>&quot;[[:graph:]]&quot;</tt>. (See perlrecharclass for more information on all these.) 
 
  The <tt>&quot;LC_CTYPE&quot;</tt> locale also provides the map used in transliterating characters between lower and uppercase. This affects the case-mapping functions---<tt>&quot;fc()&quot;</tt>, <tt>&quot;lc()&quot;</tt>, <tt>&quot;lcfirst()&quot;</tt>, <tt>&quot;uc()&quot;</tt>, and <tt>&quot;ucfirst()&quot;</tt>; case-mapping interpolation with <tt>&quot;\F&quot;</tt>, <tt>&quot;\l&quot;</tt>, <tt>&quot;\L&quot;</tt>, <tt>&quot;\u&quot;</tt>, or <tt>&quot;\U&quot;</tt> in double-quoted strings and <tt>&quot;s///&quot;</tt> substitutions; and case-insensitive regular expression pattern matching using the <tt>&quot;i&quot;</tt> modifier. 
 
- Starting in v5.20, Perl supports <font SIZE="-1">UTF-8</font> locales for <tt>&quot;LC_CTYPE&quot;</tt>, but otherwise Perl only supports single-byte locales, such as the <font SIZE="-1">ISO 8859</font> series. This means that wide character locales, for example for Asian languages, are not well-supported. Use of these locales may cause core dumps. If the platform has the capability for Perl to detect such a locale, starting in Perl v5.22, Perl will warn, default enabled, using the <tt>&quot;locale&quot;</tt> warning category, whenever such a locale is switched into. The <font SIZE="-1">UTF-8</font> locale support is actually a superset of <font SIZE="-1">POSIX</font> locales, because it is really full Unicode behavior as if no <tt>&quot;LC_CTYPE&quot;</tt> locale were in effect at all (except for tainting; see ``<font SIZE="-1">SECURITY''</font>). <font SIZE="-1">POSIX</font> locales, even <font SIZE="-1">UTF-8</font> ones, are lacking certain concepts in Unicode, such as the idea that changing the case of a character could expand to be more than one character. Perl in a <font SIZE="-1">UTF-8</font> locale, will give you that expansion. Prior to v5.20, Perl treated a <font SIZE="-1">UTF-8</font> locale on some platforms like an <font SIZE="-1">ISO 8859-1</font> one, with some restrictions, and on other platforms more like the ``C'' locale. For releases v5.16 and v5.18, <tt>&quot;use locale 'not_characters&quot;</tt> could be used as a workaround for this (see ``Unicode and <font SIZE="-1">UTF-8''</font>). 
+ Starting in v5.20, Perl supports UTF-8 locales for <tt>&quot;LC_CTYPE&quot;</tt>, but otherwise Perl only supports single-byte locales, such as the ISO 8859 series. This means that wide character locales, for example for Asian languages, are not well-supported. Use of these locales may cause core dumps. If the platform has the capability for Perl to detect such a locale, starting in Perl v5.22, Perl will warn, default enabled, using the <tt>&quot;locale&quot;</tt> warning category, whenever such a locale is switched into. The UTF-8 locale support is actually a superset of POSIX locales, because it is really full Unicode behavior as if no <tt>&quot;LC_CTYPE&quot;</tt> locale were in effect at all (except for tainting; see ``SECURITY''). POSIX locales, even UTF-8 ones, are lacking certain concepts in Unicode, such as the idea that changing the case of a character could expand to be more than one character. Perl in a UTF-8 locale, will give you that expansion. Prior to v5.20, Perl treated a UTF-8 locale on some platforms like an ISO 8859-1 one, with some restrictions, and on other platforms more like the ``C'' locale. For releases v5.16 and v5.18, <tt>&quot;use locale 'not_characters&quot;</tt> could be used as a workaround for this (see ``Unicode and UTF-8''). 
 
- Note that there are quite a few things that are unaffected by the current locale. Any literal character is the native character for the given platform. Hence 'A' means the character at code point 65 on <font SIZE="-1">ASCII</font> platforms, and 193 on <font SIZE="-1">EBCDIC.</font> That may or may not be an 'A' in the current locale, if that locale even has an 'A'. Similarly, all the escape sequences for particular characters, <tt>&quot;\n&quot;</tt> for example, always mean the platform's native one. This means, for example, that <tt>&quot;\N&quot;</tt> in regular expressions (every character but new-line) works on the platform character set. 
+ Note that there are quite a few things that are unaffected by the current locale. Any literal character is the native character for the given platform. Hence 'A' means the character at code point 65 on ASCII platforms, and 193 on EBCDIC. That may or may not be an 'A' in the current locale, if that locale even has an 'A'. Similarly, all the escape sequences for particular characters, <tt>&quot;\n&quot;</tt> for example, always mean the platform's native one. This means, for example, that <tt>&quot;\N&quot;</tt> in regular expressions (every character but new-line) works on the platform character set. 
 
- Starting in v5.22, Perl will by default warn when switching into a locale that redefines any <font SIZE="-1">ASCII</font> printable character (plus <tt>&quot;\t&quot;</tt> and <tt>&quot;\n&quot;</tt>) into a different class than expected. This is likely to happen on modern locales only on <font SIZE="-1">EBCDIC</font> platforms, where, for example, a <font SIZE="-1">CCSID 0037</font> locale on a <font SIZE="-1">CCSID 1047</font> machine moves <tt>&quot;[&quot;</tt>, but it can happen on <font SIZE="-1">ASCII</font> platforms with the <font SIZE="-1">ISO 646</font> and other 7-bit locales that are essentially obsolete. Things may still work, depending on what features of Perl are used by the program. For example, in the example from above where <tt>&quot;|&quot;</tt> becomes a <tt>&quot;\w&quot;</tt>, and there are no regular expressions where this matters, the program may still work properly. The warning lists all the characters that it can determine could be adversely affected. 
+ Starting in v5.22, Perl will by default warn when switching into a locale that redefines any ASCII printable character (plus <tt>&quot;\t&quot;</tt> and <tt>&quot;\n&quot;</tt>) into a different class than expected. This is likely to happen on modern locales only on EBCDIC platforms, where, for example, a CCSID 0037 locale on a CCSID 1047 machine moves <tt>&quot;[&quot;</tt>, but it can happen on ASCII platforms with the ISO 646 and other 7-bit locales that are essentially obsolete. Things may still work, depending on what features of Perl are used by the program. For example, in the example from above where <tt>&quot;|&quot;</tt> becomes a <tt>&quot;\w&quot;</tt>, and there are no regular expressions where this matters, the program may still work properly. The warning lists all the characters that it can determine could be adversely affected. 
 
- <b>Note:</b> A broken or malicious <tt>&quot;LC_CTYPE&quot;</tt> locale definition may result in clearly ineligible characters being considered to be alphanumeric by your application. For strict matching of (mundane) <font SIZE="-1">ASCII</font> letters and digits---for example, in command strings---locale-aware applications should use <tt>&quot;\w&quot;</tt> with the <tt>&quot;/a&quot;</tt> regular expression modifier. See ``<font SIZE="-1">SECURITY''</font>.
+ <b>Note:</b> A broken or malicious <tt>&quot;LC_CTYPE&quot;</tt> locale definition may result in clearly ineligible characters being considered to be alphanumeric by your application. For strict matching of (mundane) ASCII letters and digits---for example, in command strings---locale-aware applications should use <tt>&quot;\w&quot;</tt> with the <tt>&quot;/a&quot;</tt> regular expression modifier. See ``SECURITY''.
 
 <h3>Category LC_NUMERIC: Numeric Formatting</h3>
 
@@ -557,7 +557,7 @@ for (0..11) {
 }
  
 
- Note: <tt>&quot;use locale&quot;</tt> isn't needed in this example: <tt>&quot;strftime()&quot;</tt> is a <font SIZE="-1">POSIX</font> function which uses the standard system-supplied <tt>&quot;libc&quot;</tt> function that always obeys the current <tt>&quot;LC_TIME&quot;</tt> locale. 
+ Note: <tt>&quot;use locale&quot;</tt> isn't needed in this example: <tt>&quot;strftime()&quot;</tt> is a POSIX function which uses the standard system-supplied <tt>&quot;libc&quot;</tt> function that always obeys the current <tt>&quot;LC_TIME&quot;</tt> locale. 
 
  See also I18N::Langinfo and <tt>&quot;ABDAY_1&quot;</tt>..<tt>&quot;ABDAY_7&quot;</tt>, <tt>&quot;DAY_1&quot;</tt>..<tt>&quot;DAY_7&quot;</tt>, <tt>&quot;ABMON_1&quot;</tt>..<tt>&quot;ABMON_12&quot;</tt>, and <tt>&quot;ABMON_1&quot;</tt>..<tt>&quot;ABMON_12&quot;</tt>.
 
@@ -576,7 +576,7 @@ for (0..11) {
 </dd><dt>&bull;
 </dt><dd> A sneaky <tt>&quot;LC_COLLATE&quot;</tt> locale could result in the names of students with ``D'' grades appearing ahead of those with ``A''s.
 </dd><dt>&bull;
-</dt><dd> An application that takes the trouble to use information in <tt>&quot;LC_MONETARY&quot;</tt> may format debits as if they were credits and vice versa if that locale has been subverted. Or it might make payments in <font SIZE="-1">US</font> dollars instead of Hong Kong dollars.
+</dt><dd> An application that takes the trouble to use information in <tt>&quot;LC_MONETARY&quot;</tt> may format debits as if they were credits and vice versa if that locale has been subverted. Or it might make payments in US dollars instead of Hong Kong dollars.
 </dd><dt>&bull;
 </dt><dd> The date and day names in dates formatted by <tt>&quot;strftime()&quot;</tt> could be manipulated to advantage by a malicious user able to subvert the <tt>&quot;LC_DATE&quot;</tt> locale. (``Look---it says I wasn't in the building on Sunday.'')</dd></dl>
  
@@ -594,7 +594,7 @@ for (0..11) {
 </dd><dt>&bull;
 </dt><dd> <b>Matching operator</b> (<tt>&quot;m//&quot;</tt>): 
  Scalar true/false result never tainted. 
- All subpatterns, either delivered as a list-context result or as <tt>$1</tt> <i>etc</i>., are tainted if a <tt>&quot;use locale&quot;</tt> form that includes <tt>&quot;LC_CTYPE&quot;</tt> is in effect, and the subpattern regular expression contains a locale-dependent construct. These constructs include <tt>&quot;\w&quot;</tt> (to match an alphanumeric character), <tt>&quot;\W&quot;</tt> (non-alphanumeric character), <tt>&quot;\b&quot;</tt> and <tt>&quot;\B&quot;</tt> (word-boundary and non-boundardy, which depend on what <tt>&quot;\w&quot;</tt> and <tt>&quot;\W&quot;</tt> match), <tt>&quot;\s&quot;</tt> (whitespace character), <tt>&quot;\S&quot;</tt> (non whitespace character), <tt>&quot;\d&quot;</tt> and <tt>&quot;\D&quot;</tt> (digits and non-digits), and the <font SIZE="-1">POSIX</font> character classes, such as <tt>&quot;[:alpha:]&quot;</tt> (see ``<font SIZE="-1">POSIX</font> Character Classes'' in perlrecharclass). 
+ All subpatterns, either delivered as a list-context result or as <tt>$1</tt> <i>etc</i>., are tainted if a <tt>&quot;use locale&quot;</tt> form that includes <tt>&quot;LC_CTYPE&quot;</tt> is in effect, and the subpattern regular expression contains a locale-dependent construct. These constructs include <tt>&quot;\w&quot;</tt> (to match an alphanumeric character), <tt>&quot;\W&quot;</tt> (non-alphanumeric character), <tt>&quot;\b&quot;</tt> and <tt>&quot;\B&quot;</tt> (word-boundary and non-boundardy, which depend on what <tt>&quot;\w&quot;</tt> and <tt>&quot;\W&quot;</tt> match), <tt>&quot;\s&quot;</tt> (whitespace character), <tt>&quot;\S&quot;</tt> (non whitespace character), <tt>&quot;\d&quot;</tt> and <tt>&quot;\D&quot;</tt> (digits and non-digits), and the POSIX character classes, such as <tt>&quot;[:alpha:]&quot;</tt> (see ``POSIX Character Classes'' in perlrecharclass). 
  Tainting is also likely if the pattern is to be matched case-insensitively (via <tt>&quot;/i&quot;</tt>). The exception is if all the code points to be matched this way are above 255 and do not have folds under Unicode rules to below 256. Tainting is not done for these because Perl only uses Unicode rules for such code points, and those rules are the same no matter what the current locale. 
  The matched-pattern variables, <tt>$&amp;</tt>, <tt>&quot;$`&quot;</tt> (pre-match), <tt>&quot;$'&quot;</tt> (post-match), and <tt>$+</tt> (last match) also are tainted.
 </dd><dt>&bull;
@@ -607,7 +607,7 @@ for (0..11) {
 </dt><dd> <b>Case-mapping functions</b> (<tt>&quot;lc()&quot;</tt>, <tt>&quot;lcfirst()&quot;</tt>, <tt>&quot;uc()&quot;</tt>, <tt>&quot;ucfirst()&quot;</tt>): 
  Results are tainted if a <tt>&quot;use locale&quot;</tt> form that includes <tt>&quot;LC_CTYPE&quot;</tt> is in effect.
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1"><b>POSIX</b></font><b> locale-dependent functions</b> (<tt>&quot;localeconv()&quot;</tt>, <tt>&quot;strcoll()&quot;</tt>, <tt>&quot;strftime()&quot;</tt>, <tt>&quot;strxfrm()&quot;</tt>): 
+</dt><dd> <b>POSIX</b><b> locale-dependent functions</b> (<tt>&quot;localeconv()&quot;</tt>, <tt>&quot;strcoll()&quot;</tt>, <tt>&quot;strftime()&quot;</tt>, <tt>&quot;strxfrm()&quot;</tt>): 
  Results are never tainted.</dd></dl>
  
 
@@ -648,22 +648,22 @@ open(F, "&gt;$localized_output_file") or warn "Open of $localized_output_file fa
 <h2>ENVIRONMENT</h2>
 
 <dl>
-<dt><font SIZE="-1">PERL_SKIP_LOCALE_INIT</font>
-</dt><dd> This environment variable, available starting in Perl v5.20, if set (to any value), tells Perl to not use the rest of the environment variables to initialize with. Instead, Perl uses whatever the current locale settings are. This is particularly useful in embedded environments, see ``Using embedded Perl with <font SIZE="-1">POSIX</font> locales'' in perlembed.
-</dd><dt><font SIZE="-1">PERL_BADLANG</font>
+<dt>PERL_SKIP_LOCALE_INIT
+</dt><dd> This environment variable, available starting in Perl v5.20, if set (to any value), tells Perl to not use the rest of the environment variables to initialize with. Instead, Perl uses whatever the current locale settings are. This is particularly useful in embedded environments, see ``Using embedded Perl with POSIX locales'' in perlembed.
+</dd><dt>PERL_BADLANG
 </dt><dd> A string that can suppress Perl's warning about failed locale settings at startup. Failure can occur if the locale support in the operating system is lacking (broken) in some way---or if you mistyped the name of a locale when you set up your environment. If this environment variable is absent, or has a value other than ``0'' or &quot;&quot;, Perl will complain about locale setting failures. 
- <font SIZE="-1"><b>NOTE</b></font>: <tt>&quot;PERL_BADLANG&quot;</tt> only gives you a way to hide the warning message. The message tells about some problem in your system's locale support, and you should investigate what the problem is.
-</dd><dt><font SIZE="-1">DPKG_RUNNING_VERSION</font>
-</dt><dd> On Debian systems, if the <font SIZE="-1">DPKG_RUNNING_VERSION</font> environment variable is set (to any value), the locale failure warnings will be suppressed just like with a zero <font SIZE="-1">PERL_BADLANG</font> setting. This is done to avoid floods of spurious warnings during system upgrades. See &lt;<a rel="nofollow" HREF="http://bugs.debian.org/508764">http://bugs.debian.org/508764</a>&gt;.</dd></dl>
+ <b>NOTE</b>: <tt>&quot;PERL_BADLANG&quot;</tt> only gives you a way to hide the warning message. The message tells about some problem in your system's locale support, and you should investigate what the problem is.
+</dd><dt>DPKG_RUNNING_VERSION
+</dt><dd> On Debian systems, if the DPKG_RUNNING_VERSION environment variable is set (to any value), the locale failure warnings will be suppressed just like with a zero PERL_BADLANG setting. This is done to avoid floods of spurious warnings during system upgrades. See &lt;<a rel="nofollow" HREF="http://bugs.debian.org/508764">http://bugs.debian.org/508764</a>&gt;.</dd></dl>
  
 
- The following environment variables are not specific to Perl: They are part of the standardized (<font SIZE="-1">ISO C, XPG4, POSIX 1</font>.c) <tt>&quot;setlocale()&quot;</tt> method for controlling an application's opinion on data. Windows is non-POSIX, but Perl arranges for the following to work as described anyway. If the locale given by an environment variable is not valid, Perl tries the next lower one in priority. If none are valid, on Windows, the system default locale is then tried. If all else fails, the <tt>&quot;C&quot;</tt> locale is used. If even that doesn't work, something is badly broken, but Perl tries to forge ahead with whatever the locale settings might be.
+ The following environment variables are not specific to Perl: They are part of the standardized (ISO C, XPG4, POSIX 1.c) <tt>&quot;setlocale()&quot;</tt> method for controlling an application's opinion on data. Windows is non-POSIX, but Perl arranges for the following to work as described anyway. If the locale given by an environment variable is not valid, Perl tries the next lower one in priority. If none are valid, on Windows, the system default locale is then tried. If all else fails, the <tt>&quot;C&quot;</tt> locale is used. If even that doesn't work, something is badly broken, but Perl tries to forge ahead with whatever the locale settings might be.
 <dl>
 <dt>&quot;LC_ALL&quot;
 </dt><dd> <tt>&quot;LC_ALL&quot;</tt> is the ``override-all'' locale environment variable. If set, it overrides all the rest of the locale environment variables.
 </dd><dt>&quot;LANGUAGE&quot;
-</dt><dd> <font SIZE="-1"><b>NOTE</b></font>: <tt>&quot;LANGUAGE&quot;</tt> is a <font SIZE="-1">GNU</font> extension, it affects you only if you are using the <font SIZE="-1">GNU</font> libc. This is the case if you are using e.g. Linux. If you are using ``commercial'' Unixes you are most probably <i>not</i> using <font SIZE="-1">GNU</font> libc and you can ignore <tt>&quot;LANGUAGE&quot;</tt>. 
- However, in the case you are using <tt>&quot;LANGUAGE&quot;</tt>: it affects the language of informational, warning, and error messages output by commands (in other words, it's like <tt>&quot;LC_MESSAGES&quot;</tt>) but it has higher priority than <tt>&quot;LC_ALL&quot;</tt>. Moreover, it's not a single value but instead a ``path'' (``:''-separated list) of <i>languages</i> (not locales). See the <font SIZE="-1">GNU</font> <tt>&quot;gettext&quot;</tt> library documentation for more information.
+</dt><dd> <b>NOTE</b>: <tt>&quot;LANGUAGE&quot;</tt> is a GNU extension, it affects you only if you are using the GNU libc. This is the case if you are using e.g. Linux. If you are using ``commercial'' Unixes you are most probably <i>not</i> using GNU libc and you can ignore <tt>&quot;LANGUAGE&quot;</tt>. 
+ However, in the case you are using <tt>&quot;LANGUAGE&quot;</tt>: it affects the language of informational, warning, and error messages output by commands (in other words, it's like <tt>&quot;LC_MESSAGES&quot;</tt>) but it has higher priority than <tt>&quot;LC_ALL&quot;</tt>. Moreover, it's not a single value but instead a ``path'' (``:''-separated list) of <i>languages</i> (not locales). See the GNU <tt>&quot;gettext&quot;</tt> library documentation for more information.
 </dd><dt>&quot;LC_CTYPE&quot;
 </dt><dd> In the absence of <tt>&quot;LC_ALL&quot;</tt>, <tt>&quot;LC_CTYPE&quot;</tt> chooses the character type locale. In the absence of both <tt>&quot;LC_ALL&quot;</tt> and <tt>&quot;LC_CTYPE&quot;</tt>, <tt>&quot;LANG&quot;</tt> chooses the character type locale.
 </dd><dt>&quot;LC_COLLATE&quot;
@@ -751,13 +751,13 @@ print "\n";
 
 <h3>Freely available locale definitions</h3>
 
- The Unicode <font SIZE="-1">CLDR</font> project extracts the <font SIZE="-1">POSIX</font> portion of many of its locales, available at 
+ The Unicode CLDR project extracts the POSIX portion of many of its locales, available at 
 
  <pre>
   <a rel="nofollow" HREF="http://unicode.org/Public/cldr/2.0.1/">http://unicode.org/Public/cldr/2.0.1/</a>
 </pre> 
 
- (Newer versions of <font SIZE="-1">CLDR</font> require you to compute the <font SIZE="-1">POSIX</font> data yourself. See &lt;<a rel="nofollow" HREF="http://unicode.org/Public/cldr/latest/">http://unicode.org/Public/cldr/latest/</a>&gt;.) 
+ (Newer versions of CLDR require you to compute the POSIX data yourself. See &lt;<a rel="nofollow" HREF="http://unicode.org/Public/cldr/latest/">http://unicode.org/Public/cldr/latest/</a>&gt;.) 
 
  There is a large collection of locale definitions at: 
 
@@ -773,13 +773,13 @@ print "\n";
 
 <h3>An imperfect standard</h3>
 
- Internationalization, as defined in the C and <font SIZE="-1">POSIX</font> standards, can be criticized as incomplete and ungainly. They also have a tendency, like standards groups, to divide the world into nations, when we all know that the world can equally well be divided into bankers, bikers, gamers, and so on.
+ Internationalization, as defined in the C and POSIX standards, can be criticized as incomplete and ungainly. They also have a tendency, like standards groups, to divide the world into nations, when we all know that the world can equally well be divided into bankers, bikers, gamers, and so on.
 
 <h2>Unicode and UTF-8</h2>
 
  The support of Unicode is new starting from Perl version v5.6, and more fully implemented in versions v5.8 and later. See perluniintro. 
 
- Starting in Perl v5.20, <font SIZE="-1">UTF-8</font> locales are supported in Perl, except <tt>&quot;LC_COLLATE&quot;</tt> is only partially supported; collation support is improved in Perl v5.26 to a level that may be sufficient for your needs (see &quot;Category <tt>&quot;LC_COLLATE&quot;</tt>: Collation: Text Comparisons and Sorting&quot;). 
+ Starting in Perl v5.20, UTF-8 locales are supported in Perl, except <tt>&quot;LC_COLLATE&quot;</tt> is only partially supported; collation support is improved in Perl v5.26 to a level that may be sufficient for your needs (see &quot;Category <tt>&quot;LC_COLLATE&quot;</tt>: Collation: Text Comparisons and Sorting&quot;). 
 
  If you have Perl v5.16 or v5.18 and can't upgrade, you can use 
 
@@ -787,31 +787,31 @@ print "\n";
     use locale ':not_characters';
 </pre> 
 
- When this form of the pragma is used, only the non-character portions of locales are used by Perl, for example <tt>&quot;LC_NUMERIC&quot;</tt>. Perl assumes that you have translated all the characters it is to operate on into Unicode (actually the platform's native character set (<font SIZE="-1">ASCII</font> or <font SIZE="-1">EBCDIC</font>) plus Unicode). For data in files, this can conveniently be done by also specifying 
+ When this form of the pragma is used, only the non-character portions of locales are used by Perl, for example <tt>&quot;LC_NUMERIC&quot;</tt>. Perl assumes that you have translated all the characters it is to operate on into Unicode (actually the platform's native character set (ASCII or EBCDIC) plus Unicode). For data in files, this can conveniently be done by also specifying 
 
  <pre>
     use open ':locale';
 </pre> 
 
- This pragma arranges for all inputs from files to be translated into Unicode from the current locale as specified in the environment (see ``<font SIZE="-1">ENVIRONMENT''</font>), and all outputs to files to be translated back into the locale. (See open). On a per-filehandle basis, you can instead use the PerlIO::locale module, or the Encode::Locale module, both available from <font SIZE="-1">CPAN.</font> The latter module also has methods to ease the handling of <tt>&quot;ARGV&quot;</tt> and environment variables, and can be used on individual strings. If you know that all your locales will be <font SIZE="-1">UTF-8,</font> as many are these days, you can use the <b>-C</b> command line switch. 
+ This pragma arranges for all inputs from files to be translated into Unicode from the current locale as specified in the environment (see ``ENVIRONMENT''), and all outputs to files to be translated back into the locale. (See open). On a per-filehandle basis, you can instead use the PerlIO::locale module, or the Encode::Locale module, both available from CPAN. The latter module also has methods to ease the handling of <tt>&quot;ARGV&quot;</tt> and environment variables, and can be used on individual strings. If you know that all your locales will be UTF-8, as many are these days, you can use the <b>-C</b> command line switch. 
 
  This form of the pragma allows essentially seamless handling of locales with Unicode. The collation order will be by Unicode code point order. Unicode::Collate can be used to get Unicode rules collation. 
 
- All the modules and switches just described can be used in v5.20 with just plain <tt>&quot;use locale&quot;</tt>, and, should the input locales not be <font SIZE="-1">UTF-8,</font> you'll get the less than ideal behavior, described below, that you get with pre-v5.16 Perls, or when you use the locale pragma without the <tt>&quot;:not_characters&quot;</tt> parameter in v5.16 and v5.18. If you are using exclusively <font SIZE="-1">UTF-8</font> locales in v5.20 and higher, the rest of this section does not apply to you. 
+ All the modules and switches just described can be used in v5.20 with just plain <tt>&quot;use locale&quot;</tt>, and, should the input locales not be UTF-8, you'll get the less than ideal behavior, described below, that you get with pre-v5.16 Perls, or when you use the locale pragma without the <tt>&quot;:not_characters&quot;</tt> parameter in v5.16 and v5.18. If you are using exclusively UTF-8 locales in v5.20 and higher, the rest of this section does not apply to you. 
 
  There are two cases, multi-byte and single-byte locales. First multi-byte: 
 
- The only multi-byte (or wide character) locale that Perl is ever likely to support is <font SIZE="-1">UTF-8.</font> This is due to the difficulty of implementation, the fact that high quality <font SIZE="-1">UTF-8</font> locales are now published for every area of the world (&lt;<a rel="nofollow" HREF="http://unicode.org/Public/cldr/2.0.1/">http://unicode.org/Public/cldr/2.0.1/</a>&gt; for ones that are already set-up, but from an earlier version; &lt;<a rel="nofollow" HREF="http://unicode.org/Public/cldr/latest/">http://unicode.org/Public/cldr/latest/</a>&gt; for the most up-to-date, but you have to extract the <font SIZE="-1">POSIX</font> information yourself), and that failing all that you can use the Encode module to translate to/from your locale. So, you'll have to do one of those things if you're using one of these locales, such as Big5 or Shift <font SIZE="-1">JIS.</font> For <font SIZE="-1">UTF-8</font> locales, in Perls (pre v5.20) that don't have full <font SIZE="-1">UTF-8</font> locale support, they may work reasonably well (depending on your C library implementation) simply because both they and Perl store characters that take up multiple bytes the same way. However, some, if not most, C library implementations may not process the characters in the upper half of the Latin-1 range (128 - 255) properly under <tt>&quot;LC_CTYPE&quot;</tt>. To see if a character is a particular type under a locale, Perl uses the functions like <tt>&quot;isalnum()&quot;</tt>. Your C library may not work for <font SIZE="-1">UTF-8</font> locales with those functions, instead only working under the newer wide library functions like <tt>&quot;iswalnum()&quot;</tt>, which Perl does not use. These multi-byte locales are treated like single-byte locales, and will have the restrictions described below. Starting in Perl v5.22 a warning message is raised when Perl detects a multi-byte locale that it doesn't fully support. 
+ The only multi-byte (or wide character) locale that Perl is ever likely to support is UTF-8. This is due to the difficulty of implementation, the fact that high quality UTF-8 locales are now published for every area of the world (&lt;<a rel="nofollow" HREF="http://unicode.org/Public/cldr/2.0.1/">http://unicode.org/Public/cldr/2.0.1/</a>&gt; for ones that are already set-up, but from an earlier version; &lt;<a rel="nofollow" HREF="http://unicode.org/Public/cldr/latest/">http://unicode.org/Public/cldr/latest/</a>&gt; for the most up-to-date, but you have to extract the POSIX information yourself), and that failing all that you can use the Encode module to translate to/from your locale. So, you'll have to do one of those things if you're using one of these locales, such as Big5 or Shift JIS. For UTF-8 locales, in Perls (pre v5.20) that don't have full UTF-8 locale support, they may work reasonably well (depending on your C library implementation) simply because both they and Perl store characters that take up multiple bytes the same way. However, some, if not most, C library implementations may not process the characters in the upper half of the Latin-1 range (128 - 255) properly under <tt>&quot;LC_CTYPE&quot;</tt>. To see if a character is a particular type under a locale, Perl uses the functions like <tt>&quot;isalnum()&quot;</tt>. Your C library may not work for UTF-8 locales with those functions, instead only working under the newer wide library functions like <tt>&quot;iswalnum()&quot;</tt>, which Perl does not use. These multi-byte locales are treated like single-byte locales, and will have the restrictions described below. Starting in Perl v5.22 a warning message is raised when Perl detects a multi-byte locale that it doesn't fully support. 
 
- For single-byte locales, Perl generally takes the tack to use locale rules on code points that can fit in a single byte, and Unicode rules for those that can't (though this isn't uniformly applied, see the note at the end of this section). This prevents many problems in locales that aren't <font SIZE="-1">UTF-8.</font> Suppose the locale is <font SIZE="-1">ISO8859-7,</font> Greek. The character at 0xD7 there is a capital Chi. But in the <font SIZE="-1">ISO8859-1</font> locale, Latin1, it is a multiplication sign. The <font SIZE="-1">POSIX</font> regular expression character class <tt>&quot;[[:alpha:]]&quot;</tt> will magically match 0xD7 in the Greek locale but not in the Latin one. 
+ For single-byte locales, Perl generally takes the tack to use locale rules on code points that can fit in a single byte, and Unicode rules for those that can't (though this isn't uniformly applied, see the note at the end of this section). This prevents many problems in locales that aren't UTF-8. Suppose the locale is ISO8859-7, Greek. The character at 0xD7 there is a capital Chi. But in the ISO8859-1 locale, Latin1, it is a multiplication sign. The POSIX regular expression character class <tt>&quot;[[:alpha:]]&quot;</tt> will magically match 0xD7 in the Greek locale but not in the Latin one. 
 
- However, there are places where this breaks down. Certain Perl constructs are for Unicode only, such as <tt>&quot;\p{Alpha}&quot;</tt>. They assume that 0xD7 always has its Unicode meaning (or the equivalent on <font SIZE="-1">EBCDIC</font> platforms). Since Latin1 is a subset of Unicode and 0xD7 is the multiplication sign in both Latin1 and Unicode, <tt>&quot;\p{Alpha}&quot;</tt> will never match it, regardless of locale. A similar issue occurs with <tt>&quot;\N{...}&quot;</tt>. Prior to v5.20, it is therefore a bad idea to use <tt>&quot;\p{}&quot;</tt> or <tt>&quot;\N{}&quot;</tt> under plain <tt>&quot;use locale&quot;</tt>--<i>unless</i> you can guarantee that the locale will be <font SIZE="-1">ISO8859-1.</font> Use <font SIZE="-1">POSIX</font> character classes instead. 
+ However, there are places where this breaks down. Certain Perl constructs are for Unicode only, such as <tt>&quot;\p{Alpha}&quot;</tt>. They assume that 0xD7 always has its Unicode meaning (or the equivalent on EBCDIC platforms). Since Latin1 is a subset of Unicode and 0xD7 is the multiplication sign in both Latin1 and Unicode, <tt>&quot;\p{Alpha}&quot;</tt> will never match it, regardless of locale. A similar issue occurs with <tt>&quot;\N{...}&quot;</tt>. Prior to v5.20, it is therefore a bad idea to use <tt>&quot;\p{}&quot;</tt> or <tt>&quot;\N{}&quot;</tt> under plain <tt>&quot;use locale&quot;</tt>--<i>unless</i> you can guarantee that the locale will be ISO8859-1. Use POSIX character classes instead. 
 
- Another problem with this approach is that operations that cross the single byte/multiple byte boundary are not well-defined, and so are disallowed. (This boundary is between the codepoints at 255/256.) For example, lower casing <font SIZE="-1">LATIN CAPITAL LETTER Y WITH DIAERESIS</font> (U+0178) should return <font SIZE="-1">LATIN SMALL LETTER Y WITH DIAERESIS</font> (U+00FF). But in the Greek locale, for example, there is no character at 0xFF, and Perl has no way of knowing what the character at 0xFF is really supposed to represent. Thus it disallows the operation. In this mode, the lowercase of U+0178 is itself. 
+ Another problem with this approach is that operations that cross the single byte/multiple byte boundary are not well-defined, and so are disallowed. (This boundary is between the codepoints at 255/256.) For example, lower casing LATIN CAPITAL LETTER Y WITH DIAERESIS (U+0178) should return LATIN SMALL LETTER Y WITH DIAERESIS (U+00FF). But in the Greek locale, for example, there is no character at 0xFF, and Perl has no way of knowing what the character at 0xFF is really supposed to represent. Thus it disallows the operation. In this mode, the lowercase of U+0178 is itself. 
 
- The same problems ensue if you enable automatic UTF-8-ification of your standard file handles, default <tt>&quot;open()&quot;</tt> layer, and <tt>@ARGV</tt> on non-ISO8859-1, non-UTF-8 locales (by using either the <b>-C</b> command line switch or the <tt>&quot;PERL_UNICODE&quot;</tt> environment variable; see perlrun). Things are read in as <font SIZE="-1">UTF-8,</font> which would normally imply a Unicode interpretation, but the presence of a locale causes them to be interpreted in that locale instead. For example, a 0xD7 code point in the Unicode input, which should mean the multiplication sign, won't be interpreted by Perl that way under the Greek locale. This is not a problem <i>provided</i> you make certain that all locales will always and only be either an <font SIZE="-1">ISO8859-1,</font> or, if you don't have a deficient C library, a <font SIZE="-1">UTF-8</font> locale. 
+ The same problems ensue if you enable automatic UTF-8-ification of your standard file handles, default <tt>&quot;open()&quot;</tt> layer, and <tt>@ARGV</tt> on non-ISO8859-1, non-UTF-8 locales (by using either the <b>-C</b> command line switch or the <tt>&quot;PERL_UNICODE&quot;</tt> environment variable; see perlrun). Things are read in as UTF-8, which would normally imply a Unicode interpretation, but the presence of a locale causes them to be interpreted in that locale instead. For example, a 0xD7 code point in the Unicode input, which should mean the multiplication sign, won't be interpreted by Perl that way under the Greek locale. This is not a problem <i>provided</i> you make certain that all locales will always and only be either an ISO8859-1, or, if you don't have a deficient C library, a UTF-8 locale. 
 
- Still another problem is that this approach can lead to two code points meaning the same character. Thus in a Greek locale, both U+03A7 and U+00D7 are <font SIZE="-1">GREEK CAPITAL LETTER CHI.</font> 
+ Still another problem is that this approach can lead to two code points meaning the same character. Thus in a Greek locale, both U+03A7 and U+00D7 are GREEK CAPITAL LETTER CHI. 
 
  Because of all these problems, starting in v5.22, Perl will raise a warning if a multi-byte (hence Unicode) code point is used when a single-byte locale is in effect. (Although it doesn't check for this if doing so would unreasonably slow execution down.) 
 
@@ -829,14 +829,14 @@ print "\n";
 
 <h3>Multi-threaded</h3>
 
- <font SIZE="-1">XS</font> code or C-language libraries called from it that use the system <tt><a HREF="/docs/linux/man/3-setlocale/">setlocale</a>(3)</tt> function (except on Windows) likely will not work from a multi-threaded application without changes. See ``Locale-aware <font SIZE="-1">XS</font> code'' in perlxs. 
+ XS code or C-language libraries called from it that use the system <tt><a HREF="/docs/linux/man/3-setlocale/">setlocale</a>(3)</tt> function (except on Windows) likely will not work from a multi-threaded application without changes. See ``Locale-aware XS code'' in perlxs. 
 
- An <font SIZE="-1">XS</font> module that is locale-dependent could have been written under the assumption that it will never be called in a multi-threaded environment, and so uses other non-locale constructs that aren't multi-thread-safe. See ``Thread-aware system interfaces'' in perlxs. 
+ An XS module that is locale-dependent could have been written under the assumption that it will never be called in a multi-threaded environment, and so uses other non-locale constructs that aren't multi-thread-safe. See ``Thread-aware system interfaces'' in perlxs. 
 
- <font SIZE="-1">POSIX</font> does not define a way to get the name of the current per-thread locale. Some systems, such as Darwin and NetBSD do implement a function, <b>querylocale</b>(3) to do this. On non-Windows systems without it, such as Linux, there are some additional caveats:
+ POSIX does not define a way to get the name of the current per-thread locale. Some systems, such as Darwin and NetBSD do implement a function, <b>querylocale</b>(3) to do this. On non-Windows systems without it, such as Linux, there are some additional caveats:
 <dl>
 <dt>&bull;
-</dt><dd> An embedded perl needs to be started up while the global locale is in effect. See ``Using embedded Perl with <font SIZE="-1">POSIX</font> locales'' in perlembed.
+</dt><dd> An embedded perl needs to be started up while the global locale is in effect. See ``Using embedded Perl with POSIX locales'' in perlembed.
 </dd><dt>&bull;
 </dt><dd> It becomes more important for perl to know about all the possible locale categories on the platform, even if they aren't apparently used in your program. Perl knows all of the Linux ones. If your platform has others, you can send email to &lt;mailto:perlbug [at] perl.org&gt; for inclusion of it in the next release. In the meantime, it is possible to edit the Perl source to teach it about the category, and then recompile. Search for instances of, say, <tt>&quot;LC_PAPER&quot;</tt> in the source, and use that as a template to add the omitted one.
 </dd><dt>&bull;
@@ -848,9 +848,9 @@ print "\n";
 
 <h2>SEE ALSO</h2>
 
- I18N::Langinfo, perluniintro, perlunicode, open, ``localeconv'' in <font SIZE="-1">POSIX</font>, ``setlocale'' in <font SIZE="-1">POSIX</font>, ``strcoll'' in <font SIZE="-1">POSIX</font>, ``strftime'' in <font SIZE="-1">POSIX</font>, ``strtod'' in <font SIZE="-1">POSIX</font>, ``strxfrm'' in <font SIZE="-1">POSIX</font>. 
+ I18N::Langinfo, perluniintro, perlunicode, open, ``localeconv'' in POSIX, ``setlocale'' in POSIX, ``strcoll'' in POSIX, ``strftime'' in POSIX, ``strtod'' in POSIX, ``strxfrm'' in POSIX. 
 
- For special considerations when Perl is embedded in a C program, see ``Using embedded Perl with <font SIZE="-1">POSIX</font> locales'' in perlembed.
+ For special considerations when Perl is embedded in a C program, see ``Using embedded Perl with POSIX locales'' in perlembed.
 
 <h2>HISTORY</h2>
 

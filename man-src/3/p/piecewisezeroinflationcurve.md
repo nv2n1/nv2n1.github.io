@@ -14,9 +14,9 @@ description: "ql/termstructures/inflation/piecewisezeroinflationcurve.hpp – Pi
 #include &lt;ql/termstructures/iterativebootstrap.hpp&gt;
 #include &lt;ql/patterns/lazyobject.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>ZeroInflationTraits</code><br />
- <i>Bootstrap traits to use for </i><code>PiecewiseZeroInflationCurve</code>.<br />
- class <code>PiecewiseZeroInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</code><br />
+<p>class <code>ZeroInflationTraits</code><br/>
+ <i>Bootstrap traits to use for </i><code>PiecewiseZeroInflationCurve</code>.<br/>
+ class <code>PiecewiseZeroInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</code><br/>
  <i>Piecewise zero-inflation term structure. </i></p>
 <h2>Detailed Description</h2>
 <p>Piecewise zero-inflation term structure.</p>

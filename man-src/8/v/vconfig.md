@@ -27,10 +27,10 @@ description: "vconfig – VLAN (802.1q) configuration program."
 <h2>Notes</h2>
 <p>VLAN will use Broadcom&#8217;s NICE interface when the network device supports it. This is necessary, since usually the hardware of these devices already removes the vlan tag from the ethernet packet. The set_flag option on vlan-devices created on such a physical network device will be ignored. Dumping the network-device will show only untagged(non-vlan) traffic, and dumping the vlan-devices will only show traffic intended for that vlan, without the tags.</p>
 <h2>Files</h2>
-<p><i>/proc/net/vlan/config</i><br />
+<p><i>/proc/net/vlan/config</i><br/>
  <i>/proc/net/vlan/[vlan-device]</i></p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ip/">ip</a>(8), <a href="/docs/linux/man/8-ifconfig/">ifconfig</a>(8)</p>
 <h2>Authors</h2>
-<p>This manual page was written by Ard van Breemen &lt;ard [at] kwaak.net&gt;<br />
+<p>This manual page was written by Ard van Breemen &lt;ard [at] kwaak.net&gt;<br/>
  The vlan patch is written by Ben Greear &lt;greearb [at] candelatech.com&gt;</p>

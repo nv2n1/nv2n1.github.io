@@ -11,9 +11,9 @@ description: "ql/currencies/oceania.hpp – Oceanian currencies."
 <h2>Synopsis</h2>
 <p> #include &lt;ql/currency.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>AUDCurrency</code><br />
- <i>Australian dollar. </i><br />
- class <code>NZDCurrency</code><br />
+<p> class <code>AUDCurrency</code><br/>
+ <i>Australian dollar. </i><br/>
+ class <code>NZDCurrency</code><br/>
  <i>New Zealand dollar. </i></p>
 <h2>Detailed Description</h2>
 <p> Oceanian currencies. </p>

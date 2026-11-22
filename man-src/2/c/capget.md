@@ -21,12 +21,12 @@ description: "capget, capset – set/get capabilities of thread(s)"
 <p> #define _LINUX_CAPABILITY_VERSION_1 0x19980330 #define _LINUX_CAPABILITY_U32S_1 1 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;V2 added in Linux 2.6.25;&nbsp;deprecated&nbsp;*/ #define _LINUX_CAPABILITY_VERSION_2 0x20071026 #define _LINUX_CAPABILITY_U32S_2 2 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;V3 added in Linux 2.6.26&nbsp;*/ #define _LINUX_CAPABILITY_VERSION_3 0x20080522 #define _LINUX_CAPABILITY_U32S_3 2 </p>
-<p> typedef struct __user_cap_header_struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 version;<br />
+<p> typedef struct __user_cap_header_struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 version;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;int pid; } *cap_user_header_t; </p>
-<p> typedef struct __user_cap_data_struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 effective;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 permitted;<br />
+<p> typedef struct __user_cap_data_struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 effective;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 permitted;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 inheritable; } *cap_user_data_t; </p>
 <p> The <i>effective</i>, <i>permitted</i>, and <i>inheritable</i> fields are bit masks of the capabilities defined in <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7). Note that the <code>CAP_*</code> values are bit indexes and need to be bit-shifted before ORing into the bit fields. To define the structures for passing to the system call, you have to use the <i>struct __user_cap_header_struct</i> and <i>struct __user_cap_data_struct</i> names because the typedefs are only pointers. </p>
 <p> Kernels prior to 2.6.25 prefer 32-bit capabilities with version <code>_LINUX_CAPABILITY_VERSION_1</code>. Linux 2.6.25 added 64-bit capability sets, with version <code>_LINUX_CAPABILITY_VERSION_2</code>. There was, however, an API glitch, and Linux 2.6.26 added <code>_LINUX_CAPABILITY_VERSION_3</code> to fix the problem. </p>

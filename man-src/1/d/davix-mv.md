@@ -12,7 +12,7 @@ description: "davix-mv – Rename tool based on libdavix"
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>davix-mv&nbsp;<wbr>[options]&#8230; original-url new-url </p>
 <h2>DESCRIPTION</h2>
-<p> <code>davix-mv</code> is a tool to rename/move resources with HTTP, Webdav or REST compatible services.<br />
+<p> <code>davix-mv</code> is a tool to rename/move resources with HTTP, Webdav or REST compatible services.<br/>
  The commands can rename/move resources and resources containers. </p>
 <p> davix-mv is powered by libdavix. See <a href="/docs/linux/man/3-libdavix/">libdavix</a>(3) for details. </p>
 <h2>OPTIONS</h2>
@@ -181,9 +181,9 @@ description: "davix-mv – Rename tool based on libdavix"
 <dt>
 </dt><dd> Azure authentication key</dd></dl>
 <h2>EXAMPLES</h2>
-<p> <code> Rename a resource over HTTP<br />
+<p> <code> Rename a resource over HTTP<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-mv&nbsp;<wbr><a rel="nofollow" href="http://example.org/rename_me.txt">http://example.org/rename_me.txt</a>&nbsp;<wbr><a href="http://example.org/thanks.txt">http://example.org/thanks.txt</a> </p>
-<p> Move a resource on a Grid Storage with VOMS authentication<br />
+<p> Move a resource on a Grid Storage with VOMS authentication<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-mv -P grid&nbsp;<wbr><a href="davs://grid-storage.example.org/dir1/dir2/move_me.txt">davs://grid-storage.example.org/dir1/dir2/move_me.txt</a>&nbsp;<wbr><a href="davs://grid-storage.example.org/dir1/move_me.txt">davs://grid-storage.example.org/dir1/move_me.txt</a> </p>
 <p> </code></p>
 <h2>SEE ALSO</h2>

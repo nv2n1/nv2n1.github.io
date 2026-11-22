@@ -13,7 +13,7 @@ description: "mp3gain — lossless mp3 normalizer"
 <p> <code>mp3gain</code> [<code>options</code>] [<i>infile</i>] [<i>infile 2</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mp3gain</code> command. </p>
-<p> This manual page was written for the <code>Debian</code> distribution because the original program does not have a manual page.<br />
+<p> This manual page was written for the <code>Debian</code> distribution because the original program does not have a manual page.<br/>
 &nbsp;<wbr> </p>
 <p> <code>mp3gain</code> can analyze and adjust mp3 files so that they have the same volume. </p>
 <p> <code>mp3gain</code> does not just do peak normalization, as many normalizers do. Instead, it does some statistical analysis to determine how loud the file actually sounds to the human ear. Also, the changes <code>mp3gain</code> makes are completely lossless. There is no quality lost in the change because the program adjusts the mp3 file directly, without decoding and re-encoding. Also, this works with all mp3 players, i.e. no support for a special tag or something similar is required. </p>
@@ -72,31 +72,31 @@ description: "mp3gain — lossless mp3 normalizer"
 <p> If you specify <code>-r</code> and <code>-a</code>, only the second one will work. </p>
 <p> If you do not specify <code>-c</code>, the program will stop and ask before applying gain change to a file that might clip</p>
 <h3>The WRAP option</h3>
-<p> Here&#8217;s the problem: The &quot;global gain&quot; field that mp3gain adjusts is an 8-bit unsigned integer, so the possible values are 0 to 255.<br />
+<p> Here&#8217;s the problem: The &quot;global gain&quot; field that mp3gain adjusts is an 8-bit unsigned integer, so the possible values are 0 to 255.<br/>
 &nbsp;<wbr> </p>
-<p> MOST mp3 files (in fact, ALL the mp3 files I&#8217;ve examined so far) don&#8217;t go over 230. So there&#8217;s plenty of headroom on top&#8211; you can increase the gain by 37dB (multiplying the amplitude by 76) without a problem.<br />
+<p> MOST mp3 files (in fact, ALL the mp3 files I&#8217;ve examined so far) don&#8217;t go over 230. So there&#8217;s plenty of headroom on top&#8211; you can increase the gain by 37dB (multiplying the amplitude by 76) without a problem.<br/>
 &nbsp;<wbr> </p>
-<p> The problem is at the bottom of the range. Some encoders create frames with 0 as the global gain for silent frames. What happens when you _lower_ the global gain by 1? Well, in the past, mp3gain always simply wrapped the result up to 255. That way, if you lowered the gain by any amount and then raised it by the same amount, the mp3 would always be _exactly_ the same.<br />
+<p> The problem is at the bottom of the range. Some encoders create frames with 0 as the global gain for silent frames. What happens when you _lower_ the global gain by 1? Well, in the past, mp3gain always simply wrapped the result up to 255. That way, if you lowered the gain by any amount and then raised it by the same amount, the mp3 would always be _exactly_ the same.<br/>
 &nbsp;<wbr> </p>
-<p> There are a few encoders out there, unfortunately, that create 0-gain frames with other audio data in the frame. As long as the global gain is 0, you&#8217;ll never hear the data. But if you lower the gain on such a file, the global gain is suddenly _huge_. If you play this modified file, there might be a brief, very loud blip.<br />
+<p> There are a few encoders out there, unfortunately, that create 0-gain frames with other audio data in the frame. As long as the global gain is 0, you&#8217;ll never hear the data. But if you lower the gain on such a file, the global gain is suddenly _huge_. If you play this modified file, there might be a brief, very loud blip.<br/>
 &nbsp;<wbr> </p>
-<p> So now the default behavior of mp3gain is to _not_ wrap gain changes. In other words,<br />
+<p> So now the default behavior of mp3gain is to _not_ wrap gain changes. In other words,<br/>
 &nbsp;<wbr></p>
 <dl>
 <dt> 1.</dt>
-<dd> If the gain change would make a frame&#8217;s global gain drop below 0, then the global gain is set to 0.<br />
+<dd> If the gain change would make a frame&#8217;s global gain drop below 0, then the global gain is set to 0.<br/>
 &nbsp;<wbr></dd>
 <dt> 2.</dt>
-<dd> If the gain change would make a frame&#8217;s global gain grow above 255, then the global gain is set to 255.<br />
+<dd> If the gain change would make a frame&#8217;s global gain grow above 255, then the global gain is set to 255.<br/>
 &nbsp;<wbr></dd>
 <dt> 3.</dt>
 <dd>
-&nbsp;<wbr> If a frame&#8217;s global gain field is already 0, it is not changed, even if the gain change is a positive number.<br />
+&nbsp;<wbr> If a frame&#8217;s global gain field is already 0, it is not changed, even if the gain change is a positive number.<br/>
 &nbsp;<wbr></dd></dl>
-<p> To use the original &quot;wrapping&quot; behavior, use the <code>-w</code> switch.<br />
+<p> To use the original &quot;wrapping&quot; behavior, use the <code>-w</code> switch.<br/>
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
-<p> The homepage of mp3gain is located at <i><a rel="nofollow" href="http://mp3gain.sourceforge.net/">http://mp3gain.sourceforge.net/</a> (link to URL <a href="http://mp3gain.sourceforge.net/)">http://mp3gain.sourceforge.net/)</a> </i> .<br />
+<p> The homepage of mp3gain is located at <i><a rel="nofollow" href="http://mp3gain.sourceforge.net/">http://mp3gain.sourceforge.net/</a> (link to URL <a href="http://mp3gain.sourceforge.net/)">http://mp3gain.sourceforge.net/)</a> </i> .<br/>
 &nbsp;<wbr></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Stefan Fritsch sf [at] sfritsch.de for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Lesser General Public License, Version 2.1 or any later version published by the Free Software Foundation. </p>

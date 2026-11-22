@@ -245,14 +245,14 @@ $ git checkout-index -n -f -a &amp;&amp; git update-index --ignore-missing --ref
 $ git update - index-- really - refresh(1) $ git update - index-- no - assume - unchanged foo.c(2) $ git diff-- name - only(3) $ edit foo.c $ git diff-- name - only(4) M foo.c $ git update - index foo.c(5) $ git diff-- name - only(6) $ edit foo.c $ git diff-- name - only(7) $ git update - index-- no - assume - unchanged foo.c(8) $ git diff-- name - only(9) M foo.c
 </code></pre>
 </dd></dl>
-<p> <code>1. </code>forces <a href="/docs/linux/man/2-lstat/">lstat</a>(2) to set &quot;assume unchanged&quot; bits for paths that match index.<br />
- <code>2. </code>mark the path to be edited.<br />
- <code>3. </code>this does <a href="/docs/linux/man/2-lstat/">lstat</a>(2) and finds index matches the path.<br />
- <code>4. </code>this does <a href="/docs/linux/man/2-lstat/">lstat</a>(2) and finds index does <code>not</code> match the path.<br />
- <code>5. </code>registering the new version to index sets &quot;assume unchanged&quot; bit.<br />
- <code>6. </code>and it is assumed unchanged.<br />
- <code>7. </code>even after you edit it.<br />
- <code>8. </code>you can tell about the change after the fact.<br />
+<p> <code>1. </code>forces <a href="/docs/linux/man/2-lstat/">lstat</a>(2) to set &quot;assume unchanged&quot; bits for paths that match index.<br/>
+ <code>2. </code>mark the path to be edited.<br/>
+ <code>3. </code>this does <a href="/docs/linux/man/2-lstat/">lstat</a>(2) and finds index matches the path.<br/>
+ <code>4. </code>this does <a href="/docs/linux/man/2-lstat/">lstat</a>(2) and finds index does <code>not</code> match the path.<br/>
+ <code>5. </code>registering the new version to index sets &quot;assume unchanged&quot; bit.<br/>
+ <code>6. </code>and it is assumed unchanged.<br/>
+ <code>7. </code>even after you edit it.<br/>
+ <code>8. </code>you can tell about the change after the fact.<br/>
  <code>9. </code>now it checks with <a href="/docs/linux/man/2-lstat/">lstat</a>(2) and finds it has been changed.
 </dl>
 <h2>SKIP-WORKTREE BIT</h2>

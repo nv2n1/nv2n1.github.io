@@ -34,5 +34,5 @@ int ares_save_options(ares_channel channel, struct ares_options *options, int *o
 <h2>AVAILABILITY</h2>
 <p> <a href="/docs/linux/man/3-ares_save_options/">ares_save_options</a>(3) was added in c-ares 1.4.0</p>
 <h2>AUTHOR</h2>
-<p> Brad House<br />
+<p> Brad House<br/>
  Copyright 1998 by the Massachusetts Institute of Technology. </p>

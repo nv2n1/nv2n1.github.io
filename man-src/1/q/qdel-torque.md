@@ -34,8 +34,8 @@ description: "qdel – delete pbs batch job"
 </dt><dd> If an array range isn&#8217;t specified, the command tries to operate on the entire array. The command acts on the array (or specified range of the array) just as it would on an individual job.</dd></dl>
 <p> </i></p>
 <h2>OPERANDS</h2>
-<p> The qdel command accepts one or more <i> operands of the form:<br />
- </i><code><br />
+<p> The qdel command accepts one or more <i> operands of the form:<br/>
+ </i><code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>or </p>
 <p> </code></p>
 <h2>STANDARD ERROR</h2>

@@ -10,18 +10,18 @@ description: "strings – print the sequences of printable characters in files"
 
 <p> strings - print the sequences of printable characters in files </p>
 <h2>SYNOPSIS</h2>
-<p> strings [<code>-afovV</code>] [<code>-</code><i>min-len</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-n</code>&nbsp;<i>min-len</i>]&nbsp;[<code>--bytes=</code><i>min-len</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>&nbsp;<i>radix</i>]&nbsp;[<code>--radix=</code><i>radix</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-e</code>&nbsp;<i>encoding</i>]&nbsp;[<code>--encoding=</code><i>encoding</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-U</code>&nbsp;<i>method</i>]&nbsp;[<code>--unicode=</code><i>method</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-</code>]&nbsp;[<code>--all</code>]&nbsp;[<code>--print-file-name</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-T</code>&nbsp;<i>bfdname</i>]&nbsp;[<code>--target=</code><i>bfdname</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-w</code>]&nbsp;[<code>--include-all-whitespace</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-s</code>]&nbsp;[<code>--output-separator</code>&nbsp;<i>sep_string</i>] <br />
+<p> strings [<code>-afovV</code>] [<code>-</code><i>min-len</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-n</code>&nbsp;<i>min-len</i>]&nbsp;[<code>--bytes=</code><i>min-len</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>&nbsp;<i>radix</i>]&nbsp;[<code>--radix=</code><i>radix</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-e</code>&nbsp;<i>encoding</i>]&nbsp;[<code>--encoding=</code><i>encoding</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-U</code>&nbsp;<i>method</i>]&nbsp;[<code>--unicode=</code><i>method</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-</code>]&nbsp;[<code>--all</code>]&nbsp;[<code>--print-file-name</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-T</code>&nbsp;<i>bfdname</i>]&nbsp;[<code>--target=</code><i>bfdname</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-w</code>]&nbsp;[<code>--include-all-whitespace</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-s</code>]&nbsp;[<code>--output-separator</code>&nbsp;<i>sep_string</i>] <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--help</code>]&nbsp;[<code>--version</code>]&nbsp;<i>file</i>...  </p>
 <h2>DESCRIPTION</h2>
-<p> For each <i>file</i> given, <font SIZE="-1">GNU</font> <code>strings</code> prints the printable character sequences that are at least 4 characters long (or the number given with the options below) and are followed by an unprintable character. </p>
+<p> For each <i>file</i> given, GNU <code>strings</code> prints the printable character sequences that are at least 4 characters long (or the number given with the options below) and are followed by an unprintable character. </p>
 <p> Depending upon how the strings program was configured it will default to either displaying all the printable sequences that it can find in each file, or only those sequences that are in loadable, initialized data sections. If the file type is unrecognizable, or if strings is reading from stdin then it will always display all of the printable sequences that it can find. </p>
 <p> For backwards compatibility any file that occurs after a command-line option of just <code>-</code> will also be scanned in full, regardless of the presence of any <code>-d</code> option. </p>
 <p> <code>strings</code> is mainly useful for determining the contents of non-text files.  </p>
@@ -38,7 +38,7 @@ description: "strings – print the sequences of printable characters in files"
 <dt><code>-d</code></dt>
 <dd>  </dd>
 <dt><code>--data</code></dt>
-<dd> <p> Only print strings from initialized, loaded data sections in the file. This may reduce the amount of garbage in the output, but it also exposes the strings program to any security flaws that may be present in the <font SIZE="-1">BFD</font> library used to scan and load sections. Strings can be configured so that this option is the default behaviour. In such cases the <code>-a</code> option can be used to avoid using the <font SIZE="-1">BFD</font> library and instead just print all of the strings found in the file. </p>
+<dd> <p> Only print strings from initialized, loaded data sections in the file. This may reduce the amount of garbage in the output, but it also exposes the strings program to any security flaws that may be present in the BFD library used to scan and load sections. Strings can be configured so that this option is the default behaviour. In such cases the <code>-a</code> option can be used to avoid using the BFD library and instead just print all of the strings found in the file. </p>
  </dd>
 <dt><code>-f</code></dt>
 <dd>  </dd>
@@ -66,14 +66,14 @@ description: "strings – print the sequences of printable characters in files"
 <dt><code>-e</code><i>encoding</i></dt>
 <dd>  </dd>
 <dt><code>--encoding=</code><i>encoding</i></dt>
-<dd> <p> Select the character encoding of the strings that are to be found. Possible values for <i>encoding</i> are: <code>s</code> = single-7-bit-byte characters (<font SIZE="-1">ASCII, ISO 8859,</font> etc., default), <code>S</code> = single-8-bit-byte characters, <code>b</code> = 16-bit bigendian, <code>l</code> = 16-bit littleendian, <code>B</code> = 32-bit bigendian, <code>L</code> = 32-bit littleendian. Useful for finding wide character strings. (<code>l</code> and <code>b</code> apply to, for example, Unicode <font SIZE="-1">UTF-16/UCS-2</font> encodings). </p>
+<dd> <p> Select the character encoding of the strings that are to be found. Possible values for <i>encoding</i> are: <code>s</code> = single-7-bit-byte characters (ASCII, ISO 8859, etc., default), <code>S</code> = single-8-bit-byte characters, <code>b</code> = 16-bit bigendian, <code>l</code> = 16-bit littleendian, <code>B</code> = 32-bit bigendian, <code>L</code> = 32-bit littleendian. Useful for finding wide character strings. (<code>l</code> and <code>b</code> apply to, for example, Unicode UTF-16/UCS-2 encodings). </p>
  </dd>
 <dt><code>-U</code><i>[d|i|l|e|x|h]</i></dt>
 <dd>  </dd>
 <dt><code>--unicode=</code><i>[default|invalid|locale|escape|hex|highlight]</i></dt>
-<dd> <p> Controls the display of <font SIZE="-1">UTF-8</font> encoded multibyte characters in strings. The default (<code>--unicode=default</code>) is to give them no special treatment, and instead rely upon the setting of the <code>--encoding</code> option. The other values for this option automatically enable <code>--encoding=S</code>. </p>
+<dd> <p> Controls the display of UTF-8 encoded multibyte characters in strings. The default (<code>--unicode=default</code>) is to give them no special treatment, and instead rely upon the setting of the <code>--encoding</code> option. The other values for this option automatically enable <code>--encoding=S</code>. </p>
 <p> The <code>--unicode=invalid</code> option treats them as non-graphic characters and hence not part of a valid string. All the remaining options treat them as valid string characters. </p>
-<p> The <code>--unicode=locale</code> option displays them in the current locale, which may or may not support <font SIZE="-1">UTF-8</font> encoding. The <code>--unicode=hex</code> option displays them as hex byte sequences enclosed between <i>&lt;&gt;</i> characters. The <code>--unicode=escape</code> option displays them as escape sequences (<i>\uxxxx</i>) and the <code>--unicode=highlight</code> option displays them as escape sequences highlighted in red (if supported by the output device). The colouring is intended to draw attention to the presence of unicode sequences where they might not be expected. </p>
+<p> The <code>--unicode=locale</code> option displays them in the current locale, which may or may not support UTF-8 encoding. The <code>--unicode=hex</code> option displays them as hex byte sequences enclosed between <i>&lt;&gt;</i> characters. The <code>--unicode=escape</code> option displays them as escape sequences (<i>\uxxxx</i>) and the <code>--unicode=highlight</code> option displays them as escape sequences highlighted in red (if supported by the output device). The colouring is intended to draw attention to the presence of unicode sequences where they might not be expected. </p>
  </dd>
 <dt><code>-T</code><i>bfdname</i></dt>
 <dd>  </dd>
@@ -105,4 +105,4 @@ description: "strings – print the sequences of printable characters in files"
 <p> <code><a href="/docs/linux/man/1-ar/">ar</a></code>(1), <code><a href="/docs/linux/man/1-nm/">nm</a></code>(1), <code><a href="/docs/linux/man/1-objdump/">objdump</a></code>(1), <code><a href="/docs/linux/man/1-ranlib/">ranlib</a></code>(1), <code><a href="/docs/linux/man/1-readelf/">readelf</a></code>(1) and the Info entries for <i>binutils</i>.  </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991-2022 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled ``<font SIZE="-1">GNU</font> Free Documentation License&#8217;&#8216;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled ``GNU Free Documentation License&#8217;&#8216;. </p>

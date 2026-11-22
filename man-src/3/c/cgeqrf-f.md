@@ -10,7 +10,7 @@ description: "cgeqrf.f –"
 <p>cgeqrf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgeqrf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
+<p>subroutine <code>cgeqrf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>CGEQRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgeqrf (integerM, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

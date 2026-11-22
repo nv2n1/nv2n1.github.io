@@ -14,15 +14,15 @@ description: "sc::VWN1LCFunctional –"
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::VWNLCFunctional</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>VWN1LCFunctional</code> ()<br />
- <i>Construct a VWN1 functional using Monte-Carlo parameters. </i><br />
- <code>VWN1LCFunctional</code> (int use_rpa)<br />
- <i>Construct a VWN1 functional using the RPA parameters. </i><br />
- <code>VWN1LCFunctional</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>Construct a VWN1 functional using the Monte-Carlo parameters by default. </i><br />
+<p><code>VWN1LCFunctional</code> ()<br/>
+ <i>Construct a VWN1 functional using Monte-Carlo parameters. </i><br/>
+ <code>VWN1LCFunctional</code> (int use_rpa)<br/>
+ <i>Construct a VWN1 functional using the RPA parameters. </i><br/>
+ <code>VWN1LCFunctional</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>Construct a VWN1 functional using the Monte-Carlo parameters by default. </i><br/>
  <code>VWN1LCFunctional</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>point_lc</code> (const <code>PointInputData</code> &amp;, <code>PointOutputData</code> &amp;, double &amp;, double &amp;, double &amp;)</p>
 <h3>Protected Attributes</h3>
 <pre><code>double x0p_

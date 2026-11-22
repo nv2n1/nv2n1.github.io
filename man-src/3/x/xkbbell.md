@@ -10,7 +10,7 @@ description: "XkbBell – Rings the bell on the default keyboard"
 <p>XkbBell &#8211; Rings the bell on the default keyboard </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbBell</code> <code>(Display *</code><i>display</i><code>,</code> <code>Window </code><i>window</i><code>,</code> <code>int </code><i>percent</i><code>,</code> <code>Atom </code><i>name</i><code>);</code><br />
+<dt> <code>Bool XkbBell</code> <code>(Display *</code><i>display</i><code>,</code> <code>Window </code><i>window</i><code>,</code> <code>int </code><i>percent</i><code>,</code> <code>Atom </code><i>name</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
@@ -229,8 +229,8 @@ description: "XkbBell – Rings the bell on the default keyboard"
 </td>
 </tr>
 </table>
-<p> If a compatible keyboard extension isn&#8217;t present in the X server, <i>XkbBell </i> calls <i>XBell </i> with the specified <i>display </i> and <i>percent, </i> and returns False. Otherwise, <i>XkbBell </i> calls <i>XkbDeviceBell </i> with the specified <i>display, window, percent, </i> and <i>name, </i> a <i>device_spec </i> of XkbUseCoreKbd, a <i>bell_class </i> of XkbDfltXIClass, and a <i>bell_id </i> of XkbDfltXIId, and returns True.<br />
-&nbsp; If you have disabled the audible bell, the server does not ring the system bell, although it does generate a XkbBellNotify event.<br />
+<p> If a compatible keyboard extension isn&#8217;t present in the X server, <i>XkbBell </i> calls <i>XBell </i> with the specified <i>display </i> and <i>percent, </i> and returns False. Otherwise, <i>XkbBell </i> calls <i>XkbDeviceBell </i> with the specified <i>display, window, percent, </i> and <i>name, </i> a <i>device_spec </i> of XkbUseCoreKbd, a <i>bell_class </i> of XkbDfltXIClass, and a <i>bell_id </i> of XkbDfltXIId, and returns True.<br/>
+&nbsp; If you have disabled the audible bell, the server does not ring the system bell, although it does generate a XkbBellNotify event.<br/>
 &nbsp; You can call <i>XkbBell </i> without first initializing the keyboard extension.</p>
 <h2>Return Values</h2>
 <dl COMPACT>

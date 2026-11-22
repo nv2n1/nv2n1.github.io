@@ -31,7 +31,7 @@ description: "lpc – line printer control program"
 <h2>Compatibility</h2>
 <p>The CUPS version of <i>lpc</i> does not implement all of the standard Berkeley or LPRng commands.</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-cancel/">cancel</a>(1)</i>, <i><a href="/docs/linux/man/8-cupsaccept/">cupsaccept</a>(8)</i>, <i><a href="/docs/linux/man/8-cupsenable/">cupsenable</a>(8)</i>, <i><a href="/docs/linux/man/1-lp/">lp</a>(1)</i>, <i><a href="/docs/linux/man/1-lpr/">lpr</a>(1)</i>, <i><a href="/docs/linux/man/1-lprm/">lprm</a>(1)</i>, <i><a href="/docs/linux/man/1-lpstat/">lpstat</a>(1)</i>,<br />
+<p><i><a href="/docs/linux/man/1-cancel/">cancel</a>(1)</i>, <i><a href="/docs/linux/man/8-cupsaccept/">cupsaccept</a>(8)</i>, <i><a href="/docs/linux/man/8-cupsenable/">cupsenable</a>(8)</i>, <i><a href="/docs/linux/man/1-lp/">lp</a>(1)</i>, <i><a href="/docs/linux/man/1-lpr/">lpr</a>(1)</i>, <i><a href="/docs/linux/man/1-lprm/">lprm</a>(1)</i>, <i><a href="/docs/linux/man/1-lpstat/">lpstat</a>(1)</i>,<br/>
  <a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a></p>
 <h2>Copyright</h2>
 <p>Copyright 2007-2013 by Apple Inc.</p>

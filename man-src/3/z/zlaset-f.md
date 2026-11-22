@@ -10,7 +10,7 @@ description: "zlaset.f –"
 <p>zlaset.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaset</code> (UPLO, M, N, ALPHA, BETA, A, LDA)<br />
+<p>subroutine <code>zlaset</code> (UPLO, M, N, ALPHA, BETA, A, LDA)<br/>
  <i></i><code>ZLASET</code> initializes the off-diagonal elements and the diagonal elements of a matrix to given values.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaset (characterUPLO, integerM, integerN, complex*16ALPHA, complex*16BETA, complex*16, dimension( lda, * )A, integerLDA)</h3>

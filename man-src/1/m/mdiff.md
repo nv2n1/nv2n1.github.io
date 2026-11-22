@@ -67,7 +67,7 @@ description: "mdiff – manual page for mdiff 1.2.2"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;wdiff-bugs [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1992, 1997, 1998, 1999, 2010 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 1992, 1997, 1998, 1999, 2010 Free Software Foundation, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>mdiff</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>mdiff</code> programs are properly installed at your site, the command</p>

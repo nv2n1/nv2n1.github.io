@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-backupninja/"
 description: "BACKUPNINJA – A lightweight, extensible meta-backup system \"a silent flower blossom death strike to lost data.\""
 ---
 
-<p> BACKUPNINJA &#8211; A lightweight, extensible meta-backup system<br />
+<p> BACKUPNINJA &#8211; A lightweight, extensible meta-backup system<br/>
  <i>&quot;a silent flower blossom death strike to lost data.&quot;</i> </p>
 <h2>SYNOPSIS</h2>
 <p> <code>backupninja [ -h ] [ -d ] [ -n ] [ -t ] [ -f filename ] [ &#8211;run filename ]</code> </p>
@@ -72,18 +72,18 @@ description: "BACKUPNINJA – A lightweight, extensible meta-backup system \"a s
 <dd>
 </dd><dt>In order for this to work (ie for diff-backup to run unattended), you must create ssh keys on the source server and copy the public key to the remote user&#8217;s authorized keys file. For example:</dt>
 <dd>
- root [at] srchost# ssh-keygen -t rsa -b 4096<br />
+ root [at] srchost# ssh-keygen -t rsa -b 4096<br/>
  root [at] srchost# ssh-copy-id -i /root/.ssh/id_dsa.pub backup [at] desthost</dd>
 <dt>Now, you should be able to ssh from user &#8216;root&#8217; on srchost to user &#8216;backup&#8217; on desthost without specifying a password. When prompted for a password by ssh-keygen, just leave it blank by hitting return. The &quot;wizard&quot; <code><a href="/docs/linux/man/1-ninjahelper/">ninjahelper</a>(1)</code> will walk you through these steps.</dt>
 <dd>
 </dd></dl>
 <h2>FILES</h2>
-<p> <code>/usr/sbin/backupninja</code> main script<br />
- <code>/etc/backupninja.conf</code> main configuration file; general options<br />
- <code>/etc/cron.d/backupninja</code> runs main script hourly<br />
- <code>/etc/logrotate.d/backupninja</code> rotates backupninja.log<br />
- <code>/etc/backup.d</code> directory for configuration files<br />
- <code>/usr/share/backupninja</code> directory for handler scripts<br />
+<p> <code>/usr/sbin/backupninja</code> main script<br/>
+ <code>/etc/backupninja.conf</code> main configuration file; general options<br/>
+ <code>/etc/cron.d/backupninja</code> runs main script hourly<br/>
+ <code>/etc/logrotate.d/backupninja</code> rotates backupninja.log<br/>
+ <code>/etc/backup.d</code> directory for configuration files<br/>
+ <code>/usr/share/backupninja</code> directory for handler scripts<br/>
  <code>/usr/share/doc/backupninja/examples</code> example action configuration files. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ninjahelper/">ninjahelper</a></code>(1), <code><a href="/docs/linux/man/5-backupninja-conf/">backupninja.conf</a></code>(5), <code><a href="/docs/linux/man/5-backup-d/">backup.d</a></code>(5), </p>

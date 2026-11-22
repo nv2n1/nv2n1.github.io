@@ -174,7 +174,7 @@ description: "pam_mount.conf – Description of the pam_mount configuration file
 <pre><code>&lt;volume fstype=&quot;fuse&quot; path=&quot;sshfs#%(USER)@fileserver:&quot; mountpoint=&quot;~&quot; /&gt;</code></pre>
 <p> &lt;volume fstype=&quot;fuse&quot; path=&quot;ccgfs-ssh-pull#%(USER)@host:directory&quot; mountpoint=&quot;~&quot; /&gt;</p>
 <h3>encfs 1.4.x and up</h3>
-<p>&lt;volume fstype=&quot;fuse&quot; path=&quot;encfs#/crypto/%(USER)&quot; mountpoint=&quot;~&quot;<br />
+<p>&lt;volume fstype=&quot;fuse&quot; path=&quot;encfs#/crypto/%(USER)&quot; mountpoint=&quot;~&quot;<br/>
 options=&quot;nonempty&quot; /&gt; (encfs 1.3 is no longer supported.)</p>
 <h3>NFS mounts</h3>
 <p>&lt;volume fstype=&quot;nfs&quot; server=&quot;fileserver&quot; path=&quot;/home/%(USER)&quot; mountpoint=&quot;~&quot; /&gt;</p>

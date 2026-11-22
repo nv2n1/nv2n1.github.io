@@ -42,15 +42,15 @@ description: "tcftest – test cases of the fixed-length database API"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-mt</code> : call the function `tcfdbsetmutex&#8217;.<br />
- <code>-nl</code> : enable the option `FDBNOLCK&#8217;.<br />
- <code>-nb</code> : enable the option `FDBLCKNB&#8217;.<br />
- <code>-rnd</code> : select keys at random.<br />
- <code>-wb</code> : use the function `tcfdbget4&#8242; instead of `tcfdbget2&#8242;.<br />
- <code>-pn </code><i>num</i> : specify the number of patterns.<br />
- <code>-dai</code> : use the function `tcfdbaddint&#8217; instead of `tcfdbputcat&#8217;.<br />
- <code>-dad</code> : use the function `tcfdbadddouble&#8217; instead of `tcfdbputcat&#8217;.<br />
- <code>-rl</code> : set the length of values at random.<br />
+</dt><dd> <code>-mt</code> : call the function `tcfdbsetmutex&#8217;.<br/>
+ <code>-nl</code> : enable the option `FDBNOLCK&#8217;.<br/>
+ <code>-nb</code> : enable the option `FDBLCKNB&#8217;.<br/>
+ <code>-rnd</code> : select keys at random.<br/>
+ <code>-wb</code> : use the function `tcfdbget4&#8242; instead of `tcfdbget2&#8242;.<br/>
+ <code>-pn </code><i>num</i> : specify the number of patterns.<br/>
+ <code>-dai</code> : use the function `tcfdbaddint&#8217; instead of `tcfdbputcat&#8217;.<br/>
+ <code>-dad</code> : use the function `tcfdbadddouble&#8217; instead of `tcfdbputcat&#8217;.<br/>
+ <code>-rl</code> : set the length of values at random.<br/>
  <code>-ru</code> : perform random operation on random key.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

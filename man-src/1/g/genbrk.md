@@ -39,7 +39,7 @@ description: "genbrk – Compiles ICU break iteration rules source files into bi
 <dt><code>ICU_DATA</code></dt>
 <dd> Specifies the directory containing ICU data. Defaults to <code>${prefix}/share/icu/70.1/</code>. Some tools in ICU depend on the presence of the trailing slash. It is thus important to make sure that it is present if <code>ICU_DATA</code> is set.</dd></dl>
 <h2>AUTHORS</h2>
-<p> George Rhoten<br />
+<p> George Rhoten<br/>
  Andy Heninger</p>
 <h2>VERSION</h2>
 <p> 1.0</p>

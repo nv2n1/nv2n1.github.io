@@ -21,5 +21,5 @@ description: "XtAppLock, XtAppUnlock – lock and unlock application context"
 <p><code>XtAppLock</code> locks the application context including all its related displays and widgets. </p>
 <p> <code>XtAppUnlock</code> unlocks the application context.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

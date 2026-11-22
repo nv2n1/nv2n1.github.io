@@ -162,7 +162,7 @@ s - Service VLAN, m - Two - port MAC Relay(TPMR) 1 neighbors listed.
 <p> <code>label</code></p>
 <dl>
 <dt>
-</dt><dd> Show numerical address labels that can be used for address selection. This is the same information that <code><a href="/docs/linux/man/8-ip-addrlabel/">ip-addrlabel</a></code>(8) shows. See m[blue]<code>RFC 3484</code>m[]<font SIZE="-2">[1]</font> for a discussion of address labels. </dd>
+</dt><dd> Show numerical address labels that can be used for address selection. This is the same information that <code><a href="/docs/linux/man/8-ip-addrlabel/">ip-addrlabel</a></code>(8) shows. See m[blue]<code>RFC 3484</code>m[][1] for a discussion of address labels. </dd>
 <p> Produces output similar to: </p>
 <dl>
 <dt>

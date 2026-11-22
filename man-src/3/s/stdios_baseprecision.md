@@ -9,11 +9,11 @@ description: "std::ios_base::precision – std::ios_base::precision"
 
 <p>std::ios_base::precision &#8211; std::ios_base::precision</p>
 <h2>Synopsis</h2>
-<p>streamsize precision() const; <code>(1)</code><br />
-streamsize precision( streamsize new_precision ); <code>(2)</code><br />
-Manages the precision (i.e. how many digits are generated) of floating point output performed by std::num_put::do_put.<br />
-1) Returns the current precision.<br />
-2) Sets the precision to the given one. Returns the previous precision.<br />
+<p>streamsize precision() const; <code>(1)</code><br/>
+streamsize precision( streamsize new_precision ); <code>(2)</code><br/>
+Manages the precision (i.e. how many digits are generated) of floating point output performed by std::num_put::do_put.<br/>
+1) Returns the current precision.<br/>
+2) Sets the precision to the given one. Returns the previous precision.<br/>
 The default precision, as established by std::basic_ios::init, is 6. </p>
 <h2>Parameters</h2>
 <p>new_precision &#8211; new precision setting</p>
@@ -36,10 +36,10 @@ int main()
 </code></pre>
 <h2>Output:</h2>
 <p>&nbsp;<wbr>&nbsp;The default precision is 6 </p>
-<p>&nbsp;<wbr>&nbsp;With default precision d is 1.23457<br />
+<p>&nbsp;<wbr>&nbsp;With default precision d is 1.23457<br/>
 &nbsp;<wbr>&nbsp;With high precision d is 1.23456789012</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;manages field width<br />
-width <i>(public member function)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;changes floating-point precision<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;manages field width<br/>
+width <i>(public member function)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;changes floating-point precision<br/>
 setprecision <i>(function)</i> </p>

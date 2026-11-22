@@ -10,7 +10,7 @@ description: "vltsv – mutual converter between TSV and Villa database"
 
 <p> vltsv &#8211; mutual converter between TSV and Villa database </p>
 <h2>SYNOPSIS</h2>
-<p> <code>vltsv import</code> [-bin] <i>name</i><br />
+<p> <code>vltsv import</code> [-bin] <i>name</i><br/>
  <code>vltsv export</code> [-bin] <i>name</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>vltsv</code> commands. </p>
@@ -22,9 +22,9 @@ description: "vltsv – mutual converter between TSV and Villa database"
 <dt><code>-bin</code></dt>
 <dd> treat records as Base64 format.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> For example, to make a database to search `/etc/password&#8217; by a user name, perform the following command.<br />
+<p> For example, to make a database to search `/etc/password&#8217; by a user name, perform the following command.<br/>
  <code> cat /etc/passwd | tr &#8216;:&#8217; &#8216; &#8216; | vltsv import casket</code> </p>
-<p> Thus, to retrieve the information of a user `mikio&#8217;, perform the following command.<br />
+<p> Thus, to retrieve the information of a user `mikio&#8217;, perform the following command.<br/>
  <code> vlmgr get casket mikio</code> </p>
 <h2>SEE ALSO</h2>
 <p> <code>qdbm</code>(3), <code><a href="/docs/linux/man/1-vlmgr/">vlmgr</a></code>(1), <code>villa</code>(3), <code>vlopen</code>(3).</p>

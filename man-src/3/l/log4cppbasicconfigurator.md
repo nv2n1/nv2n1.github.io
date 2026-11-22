@@ -12,7 +12,7 @@ description: "log4cpp::BasicConfigurator –"
 <h2>Synopsis</h2>
 <p>#include &lt;BasicConfigurator.hh&gt;</p>
 <h3>Static Public Member Functions</h3>
-<p>static void <code>configure</code> ()<br />
+<p>static void <code>configure</code> ()<br/>
  <i>Performs a minimal configuration of </i><code>log4cpp</code>.</p>
 <h2>Detailed Description</h2>
 <p>This class implements a trivial default configuration for <code>log4cpp</code>: it adds a <code>FileAppender</code> that logs to stdout and uses a <code>BasicLayout</code> to the root <code>Category</code>. </p>

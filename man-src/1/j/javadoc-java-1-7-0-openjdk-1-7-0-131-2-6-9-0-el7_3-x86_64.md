@@ -330,8 +330,8 @@ initialize, start, and stop the applet.
  AudioClip.html Page for AudioClip source code</pre>
 <h3>Generated API Declarations</h3>
 <p>The Javadoc tool generates a declaration at the start of each class, interface, field, constructor, and method description for that API item. For example, the declaration for the <i>Boolean</i> class is: </p>
-<p> <i>public final class Boolean</i><br />
- <i>extends Object</i><br />
+<p> <i>public final class Boolean</i><br/>
+ <i>extends Object</i><br/>
  <i>implements Serializable</i> </p>
 <p> and the declaration for the <i>Boolean.valueOf</i>method is: </p>
 <p> <i>public static Boolean valueOf(String s)</i> </p>
@@ -1184,12 +1184,12 @@ Options shown in <i>italic</i> are the Javadoc core options, which are provided 
 <dd>
 </dd><dl>
 <dt>o</dt>
-<dd>In any kind of <i>import</i> statement: by wildcard import, import explicitly by name, or automatically import for <i>java.lang.*</i>. For example, this would suffice:<br />
- <i>import java.io.*;</i><br />
+<dd>In any kind of <i>import</i> statement: by wildcard import, import explicitly by name, or automatically import for <i>java.lang.*</i>. For example, this would suffice:<br/>
+ <i>import java.io.*;</i><br/>
  In 1.3.x and 1.2.x, only an explicit import by name works &#8212; a wildcard import statement does not work, nor does the automatic import <i>java.lang.*</i>.</dd>
 <dt>o</dt>
-<dd>In a declaration:<br />
- <i>void foo(File f) {}</i><br />
+<dd>In a declaration:<br/>
+ <i>void foo(File f) {}</i><br/>
  The reference and be in the return type or parameter type of a method, constructor, field, class or interface, or in an <i>implements</i>, <i>extends</i> or <i>throws</i> statement.</dd></dl>
 </dl>
 <p> An important corollary is that when you use the <i>-link</i> option, there may be many links that unintentionally do not appear due to this constraint. (The text would appear without a hypertext link.) You can detect these by the warnings they emit. The most innocuous way to properly reference a class and thereby add the link would be to import that class, as shown above. </p>
@@ -1230,8 +1230,8 @@ Options shown in <i>italic</i> are the Javadoc core options, which are provided 
 <p><code>Example using relative links to the external docs</code> &#8211; It&#8217;s not very common to use <i>-linkoffline</i> with relative paths, for the simple reason that <i>-link</i> usually suffices. When using <i>-linkoffline</i>, the <i>package-list</i> file is generally local, and when using relative links, the file you are linking to is also generally local. So it is usually unnecessary to give a different path for the two arguments to <i>-linkoffline</i>. When the two arguments are identical, you can use <i>-link</i>. See the <i>-link</i> relative example. </p>
 <p> <code>Manually Creating a </code><tt>package-list</tt><code> File</code> &#8211; If a <i>package-list</i> file does not yet exist, but you know what package names your document will link to, you can create your own copy of this file by hand and specify its path with <i>packagelistLoc</i>. An example would be the previous case where the package list for <i>com.spipackage</i> did not exist when <i>com.apipackage</i> was first generated. This technique is useful when you need to generate documentation that links to new external documentation whose package names you know, but which is not yet published. This is also a way of creating <i>package-list</i> files for packages generated with Javadoc 1.0 or 1.1, where <i>package-list</i> files were not generated. Likewise, two companies can share their unpublished <i>package-list</i> files, enabling them to release their cross-linked documentation simultaneously. </p>
 <p> <code>Linking to Multiple Documents</code> &#8211; You can include <i>-linkoffline</i> once for each generated document you want to refer to (each option is shown on a separate line for clarity): </p>
-<p> <i>% </i><tt>javadoc -linkoffline</tt> <i>extdocURL1</i> <i>packagelistLoc1</i> <i>\</i><br />
- <i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></i><tt>-linkoffline</tt> <i>extdocURL2</i> <i>packagelistLoc2</i> <i>\</i><br />
+<p> <i>% </i><tt>javadoc -linkoffline</tt> <i>extdocURL1</i> <i>packagelistLoc1</i> <i>\</i><br/>
+ <i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></i><tt>-linkoffline</tt> <i>extdocURL2</i> <i>packagelistLoc2</i> <i>\</i><br/>
  <i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8230;</i> </p>
 <p> <code>Updating docs</code> &#8211; Another use for <i>-linkoffline</i> option is useful if your project has dozens or hundreds of packages, if you have already run javadoc on the entire tree, and now, in a separate run, you want to quickly make some small changes and re-run javadoc on just a small portion of the source tree. This is somewhat of a hack in that it works properly only if your changes are only to doc comments and not to declarations. If you were to add, remove or change any declarations from the source code, then broken links could show up in the index, package tree, inherited member lists, use page, and other places. </p>
 <p> First, you create a new destination directory (call it <i>update</i>) for this new small run. Let us say the original destination directory was named <i>html</i>. In the simplest example, cd to the parent of <i>html</i>. Set the first argument of <i>-linkoffline</i> to the current directory &quot;.&quot; and set the second argument to the relative path to <i>html</i>, where it can find <i>package-list</i>, and pass in only the package names of the packages you want to update: </p>
@@ -1318,13 +1318,13 @@ Options shown in <i>italic</i> are the Javadoc core options, which are provided 
 <p> The colon (<tt>:</tt>) is always the separator. To use a colon in <i>tagname</i>, see Use of Colon in Tag Name. </p>
 <p> The <i>-tag</i> option outputs the tag&#8217;s heading <i>taghead</i> in bold, followed on the next line by the text from its single argument, as shown in the example below. Like any block tag, this argument&#8217;s text can contain inline tags, which are also interpreted. The output is similar to standard one-argument tags, such as <i>@return</i> and <i>@author</i>. Omitting <i>taghead</i> causes <i>tagname</i> to appear as the heading. </p>
 <p> <code>Placement of tags</code> &#8211; The <tt>Xaoptcmf</tt> part of the argument determines where in the source code the tag is allowed to be placed, and whether the tag can be disabled (using <i>X</i>). You can supply either <tt>a</tt>, to allow the tag in all places, or any combination of the other letters: </p>
-<p> <tt>X</tt> (disable tag)<br />
- <tt>a</tt> (all)<br />
- <tt>o</tt> (overview)<br />
- <tt>p</tt> (packages)<br />
- <tt>t</tt> (types, that is classes and interfaces)<br />
- <tt>c</tt> (constructors)<br />
- <tt>m</tt> (methods)<br />
+<p> <tt>X</tt> (disable tag)<br/>
+ <tt>a</tt> (all)<br/>
+ <tt>o</tt> (overview)<br/>
+ <tt>p</tt> (packages)<br/>
+ <tt>t</tt> (types, that is classes and interfaces)<br/>
+ <tt>c</tt> (constructors)<br/>
+ <tt>m</tt> (methods)<br/>
  <tt>f</tt> (fields) </p>
 <p> <code>Examples of single tags</code> &#8211; An example of a tag option for a tag that can be used anywhere in the source code is: </p>
 <pre><code> -tag todo:a:&quot;To Do:&quot;</code></pre>

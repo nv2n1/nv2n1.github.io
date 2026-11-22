@@ -44,7 +44,7 @@ description: "perldsc – Perl Data Structures Cookbook"
 <p> But for now, let&#8217;s look at general issues common to all these types of data structures.  </p>
 <h2>REFERENCES</h2>
 <p> The most important thing to understand about all data structures in Perl---including multidimensional arrays---is that even though they might appear otherwise, Perl <code>@ARRAY</code>s and <code>%HASH</code>es are all internally one-dimensional. They can hold only scalar values (meaning a string, number, or a reference). They cannot directly contain other arrays or hashes, but instead contain <i>references</i> to other arrays or hashes. </p>
-<p> You can&#8217;t use a reference to an array or hash in quite the same way that you would a real array or hash. For C or C<font SIZE="-2">++</font> programmers unused to distinguishing between arrays and pointers to the same, this can be confusing. If so, just think of it as the difference between a structure and a pointer to a structure. </p>
+<p> You can&#8217;t use a reference to an array or hash in quite the same way that you would a real array or hash. For C or C++ programmers unused to distinguishing between arrays and pointers to the same, this can be confusing. If so, just think of it as the difference between a structure and a pointer to a structure. </p>
 <p> You can (and should) read more about references in perlref. Briefly, references are rather like pointers that know what they point to. (Objects are also a kind of reference, but we won&#8217;t be needing them right away---if ever.) This means that when you have something which looks to you like an access to a two-or-more-dimensional array and/or hash, what&#8217;s really going on is that the base type is merely a one-dimensional entity that contains references to the next level. It&#8217;s just that you can <i>use</i> it as though it were a two-dimensional one. This is actually the way almost all C multidimensional arrays work as well. </p>
 <pre><code>    $array[7][12] # array of arrays
     $array[7]{string} # array of hashes
@@ -137,7 +137,7 @@ description: "perldsc – Perl Data Structures Cookbook"
 <pre><code>    $aref-&gt;[2][2] # clear
     $$aref[2][2] # confusing
 </code></pre>
-<p> That&#8217;s because Perl&#8217;s precedence rules on its five prefix dereferencers (which look like someone swearing: <code>&quot;$ @ * % &amp;&quot;</code>) make them bind more tightly than the postfix subscripting brackets or braces! This will no doubt come as a great shock to the C or C<font SIZE="-2">++</font> programmer, who is quite accustomed to using <code>*a[i]</code> to mean what&#8217;s pointed to by the <i>i&#8217;th</i> element of <code>&quot;a&quot;</code>. That is, they first take the subscript, and only then dereference the thing at that subscript. That&#8217;s fine in C, but this isn&#8217;t C. </p>
+<p> That&#8217;s because Perl&#8217;s precedence rules on its five prefix dereferencers (which look like someone swearing: <code>&quot;$ @ * % &amp;&quot;</code>) make them bind more tightly than the postfix subscripting brackets or braces! This will no doubt come as a great shock to the C or C++ programmer, who is quite accustomed to using <code>*a[i]</code> to mean what&#8217;s pointed to by the <i>i&#8217;th</i> element of <code>&quot;a&quot;</code>. That is, they first take the subscript, and only then dereference the thing at that subscript. That&#8217;s fine in C, but this isn&#8217;t C. </p>
 <p> The seemingly equivalent construct in Perl, <code>$$aref[$i]</code> first does the deref of <code>$aref</code>, making it take <code>$aref</code> as a reference to an array, and then dereference that, and finally tell you the <i>i&#8217;th</i> value of the array pointed to by <code>$AoA</code>. If you wanted the C notion, you&#8217;d have to write <code>&quot;${$AoA[$i]}&quot;</code> to force the <code>$AoA[$i]</code> to get evaluated first before the leading <code>&quot;$&quot;</code> dereferencer.  </p>
 <h2>WHY YOU SHOULD ALWAYS use strict</h2>
 <p> If this is starting to sound scarier than it&#8217;s worth, relax. Perl has some features to help you avoid its most common pitfalls. The best way to avoid getting confused is to start every program like this: </p>
@@ -179,14 +179,14 @@ description: "perldsc – Perl Data Structures Cookbook"
 <h2>CODE EXAMPLES</h2>
 <p> Presented with little comment (these will get their own manpages someday) here are short code examples illustrating access of various types of data structures.  </p>
 <h2>ARRAYS OF ARRAYS</h2>
-<font SIZE="-1"></font><h3>Declaration of an ARRAY OF ARRAYS</h3>
+<h3>Declaration of an ARRAY OF ARRAYS</h3>
 <pre><code> @AoA = (
         [ &quot;fred&quot;, &quot;barney&quot; ],
         [ &quot;george&quot;, &quot;jane&quot;, &quot;elroy&quot; ],
         [ &quot;homer&quot;, &quot;marge&quot;, &quot;bart&quot; ],
       );
 </code></pre>
-<font SIZE="-1"></font><h3>Generation of an ARRAY OF ARRAYS</h3>
+<h3>Generation of an ARRAY OF ARRAYS</h3>
 <pre><code> # reading from file
  while ( &lt;&gt; ) {
      push @AoA, [ split ];
@@ -203,7 +203,7 @@ description: "perldsc – Perl Data Structures Cookbook"
  # add to an existing row
  push @{ $AoA[0] }, &quot;wilma&quot;, &quot;betty&quot;;
 </code></pre>
-<font SIZE="-1"></font><h3>Access and Printing of an ARRAY OF ARRAYS</h3>
+<h3>Access and Printing of an ARRAY OF ARRAYS</h3>
 <pre><code> # one element
  $AoA[0][0] = &quot;Fred&quot;;
  # another element
@@ -224,14 +224,14 @@ description: "perldsc – Perl Data Structures Cookbook"
  }
 </code></pre>
 <h2>HASHES OF ARRAYS</h2>
-<font SIZE="-1"></font><h3>Declaration of a HASH OF ARRAYS</h3>
+<h3>Declaration of a HASH OF ARRAYS</h3>
 <pre><code> %HoA = (
         flintstones =&gt; [ &quot;fred&quot;, &quot;barney&quot; ],
         jetsons =&gt; [ &quot;george&quot;, &quot;jane&quot;, &quot;elroy&quot; ],
         simpsons =&gt; [ &quot;homer&quot;, &quot;marge&quot;, &quot;bart&quot; ],
       );
 </code></pre>
-<font SIZE="-1"></font><h3>Generation of a HASH OF ARRAYS</h3>
+<h3>Generation of a HASH OF ARRAYS</h3>
 <pre><code> # reading from file
  # flintstones: fred barney wilma dino
  while ( &lt;&gt; ) {
@@ -257,7 +257,7 @@ description: "perldsc – Perl Data Structures Cookbook"
  # append new members to an existing family
  push @{ $HoA{&quot;flintstones&quot;} }, &quot;wilma&quot;, &quot;betty&quot;;
 </code></pre>
-<font SIZE="-1"></font><h3>Access and Printing of a HASH OF ARRAYS</h3>
+<h3>Access and Printing of a HASH OF ARRAYS</h3>
 <pre><code> # one element
  $HoA{flintstones}[0] = &quot;Fred&quot;;
  # another element
@@ -289,7 +289,7 @@ description: "perldsc – Perl Data Structures Cookbook"
  }
 </code></pre>
 <h2>ARRAYS OF HASHES</h2>
-<font SIZE="-1"></font><h3>Declaration of an ARRAY OF HASHES</h3>
+<h3>Declaration of an ARRAY OF HASHES</h3>
 <pre><code> @AoH = (
         {
             Lead =&gt; &quot;fred&quot;,
@@ -307,7 +307,7 @@ description: "perldsc – Perl Data Structures Cookbook"
         }
   );
 </code></pre>
-<font SIZE="-1"></font><h3>Generation of an ARRAY OF HASHES</h3>
+<h3>Generation of an ARRAY OF HASHES</h3>
 <pre><code> # reading from file
  # format: LEAD=fred FRIEND=barney
  while ( &lt;&gt; ) {
@@ -337,7 +337,7 @@ description: "perldsc – Perl Data Structures Cookbook"
  $AoH[0]{pet} = &quot;dino&quot;;
  $AoH[2]{pet} = &quot;santa's little helper&quot;;
 </code></pre>
-<font SIZE="-1"></font><h3>Access and Printing of an ARRAY OF HASHES</h3>
+<h3>Access and Printing of an ARRAY OF HASHES</h3>
 <pre><code> # one element
  $AoH[0]{lead} = &quot;fred&quot;;
  # another element
@@ -366,7 +366,7 @@ description: "perldsc – Perl Data Structures Cookbook"
  }
 </code></pre>
 <h2>HASHES OF HASHES</h2>
-<font SIZE="-1"></font><h3>Declaration of a HASH OF HASHES</h3>
+<h3>Declaration of a HASH OF HASHES</h3>
 <pre><code> %HoH = (
         flintstones =&gt; {
                 lead =&gt; &quot;fred&quot;,
@@ -384,7 +384,7 @@ description: "perldsc – Perl Data Structures Cookbook"
         },
  );
 </code></pre>
-<font SIZE="-1"></font><h3>Generation of a HASH OF HASHES</h3>
+<h3>Generation of a HASH OF HASHES</h3>
 <pre><code> # reading from file
  # flintstones: lead=fred pal=barney wife=wilma pet=dino
  while ( &lt;&gt; ) {
@@ -423,7 +423,7 @@ description: "perldsc – Perl Data Structures Cookbook"
      $HoH{flintstones}{$what} = $new_folks{$what};
  }
 </code></pre>
-<font SIZE="-1"></font><h3>Access and Printing of a HASH OF HASHES</h3>
+<h3>Access and Printing of a HASH OF HASHES</h3>
 <pre><code> # one element
  $HoH{flintstones}{wife} = &quot;wilma&quot;;
  # another element
@@ -472,7 +472,7 @@ description: "perldsc – Perl Data Structures Cookbook"
  }
 </code></pre>
 <h2>MORE ELABORATE RECORDS</h2>
-<font SIZE="-1"></font><h3>Declaration of MORE ELABORATE RECORDS</h3>
+<h3>Declaration of MORE ELABORATE RECORDS</h3>
 <p> Here&#8217;s a sample showing how to create and use a record whose fields are of many different sorts: </p>
 <pre><code>     $rec = {
          TEXT =&gt; $string,
@@ -495,7 +495,7 @@ description: "perldsc – Perl Data Structures Cookbook"
      $rec-&gt;{HANDLE}-&gt;autoflush(1);
      $rec-&gt;{HANDLE}-&gt;print(&quot; a string\n&quot;);
 </code></pre>
-<font SIZE="-1"></font><h3>Declaration of a HASH OF COMPLEX RECORDS</h3>
+<h3>Declaration of a HASH OF COMPLEX RECORDS</h3>
 <pre><code>     %TV = (
         flintstones =&gt; {
             series =&gt; &quot;flintstones&quot;,
@@ -526,7 +526,7 @@ description: "perldsc – Perl Data Structures Cookbook"
          },
       );
 </code></pre>
-<font SIZE="-1"></font><h3>Generation of a HASH OF COMPLEX RECORDS</h3>
+<h3>Generation of a HASH OF COMPLEX RECORDS</h3>
 <pre><code>     # reading from file
      # this is most easily done by having the file itself be
      # in the raw data format as shown above. perl is happy
@@ -587,7 +587,7 @@ description: "perldsc – Perl Data Structures Cookbook"
      }
 </code></pre>
 <h2>Database Ties</h2>
-<p> You cannot easily tie a multilevel data structure (such as a hash of hashes) to a dbm file. The first problem is that all but <font SIZE="-1">GDBM</font> and Berkeley <font SIZE="-1">DB</font> have size limitations, but beyond that, you also have problems with how references are to be represented on disk. One experimental module that does partially attempt to address this need is the <font SIZE="-1">MLDBM</font> module. Check your nearest <font SIZE="-1">CPAN</font> site as described in perlmodlib for source code to <font SIZE="-1">MLDBM.</font>  </p>
+<p> You cannot easily tie a multilevel data structure (such as a hash of hashes) to a dbm file. The first problem is that all but GDBM and Berkeley DB have size limitations, but beyond that, you also have problems with how references are to be represented on disk. One experimental module that does partially attempt to address this need is the MLDBM module. Check your nearest CPAN site as described in perlmodlib for source code to MLDBM.  </p>
 <h2>SEE ALSO</h2>
 <p> perlref, perllol, perldata, perlobj  </p>
 <h2>AUTHOR</h2>

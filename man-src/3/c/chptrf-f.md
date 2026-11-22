@@ -10,7 +10,7 @@ description: "chptrf.f –"
 <p>chptrf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>chptrf</code> (UPLO, N, AP, IPIV, INFO)<br />
+<p>subroutine <code>chptrf</code> (UPLO, N, AP, IPIV, INFO)<br/>
  <i></i><code>CHPTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chptrf (characterUPLO, integerN, complex, dimension( * )AP, integer, dimension( * )IPIV, integerINFO)</h3>

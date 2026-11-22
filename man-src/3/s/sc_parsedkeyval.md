@@ -14,24 +14,24 @@ description: "sc::ParsedKeyVal –"
 #include &lt;keyval.h&gt;</code></pre>
 <p> Inherits <code>sc::StringKeyVal</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>ParsedKeyVal</code> ()<br />
- <i>Create an empty </i><code>ParsedKeyVal</code>.<br />
- <code>ParsedKeyVal</code> (const char *file)<br />
- <i>Parse the given input file. </i><br />
- <code>ParsedKeyVal</code> (std::istream &amp;s)<br />
- <i>Read input from s. </i><br />
- <code>ParsedKeyVal</code> (<code>IPV2</code> *)<br />
- <i>Use the given IPV2* object. </i><br />
- <code>ParsedKeyVal</code> (const char *, const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>This ctor is given a string which is used to form keywords that are sought in the keyval argument. </i><br />
- <code>~ParsedKeyVal</code> ()<br />
- <i>Cleanup, deleting the </i><code>IPV2</code> object.<br />
- void <code>read</code> (const char *)<br />
- <i>Read input data from the given filename. </i><br />
- void <code>read</code> (std::istream &amp;)<br />
- <i>Read input data from the given stream. </i><br />
- void <code>parse_string</code> (const char *)<br />
- <i>Read input data from the given string. </i> <code>Overrides of parent members.</code><br />
+<p><code>ParsedKeyVal</code> ()<br/>
+ <i>Create an empty </i><code>ParsedKeyVal</code>.<br/>
+ <code>ParsedKeyVal</code> (const char *file)<br/>
+ <i>Parse the given input file. </i><br/>
+ <code>ParsedKeyVal</code> (std::istream &amp;s)<br/>
+ <i>Read input from s. </i><br/>
+ <code>ParsedKeyVal</code> (<code>IPV2</code> *)<br/>
+ <i>Use the given IPV2* object. </i><br/>
+ <code>ParsedKeyVal</code> (const char *, const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>This ctor is given a string which is used to form keywords that are sought in the keyval argument. </i><br/>
+ <code>~ParsedKeyVal</code> ()<br/>
+ <i>Cleanup, deleting the </i><code>IPV2</code> object.<br/>
+ void <code>read</code> (const char *)<br/>
+ <i>Read input data from the given filename. </i><br/>
+ void <code>read</code> (std::istream &amp;)<br/>
+ <i>Read input data from the given stream. </i><br/>
+ void <code>parse_string</code> (const char *)<br/>
+ <i>Read input data from the given string. </i> <code>Overrides of parent members.</code><br/>
  See parent class documentation. </p>
 <pre><code>const char * stringrep (const char *)
 Returns the string representation of the value assigned to key.
@@ -48,7 +48,7 @@ Print keywords that were never looked at, if possible.
 int have_unseen ()
 Return 1 if there were unseen keywords, 0 if there are none, or -1 this keyval doesn't keep track of unseen keywords.
 Static Public Member Functions</code></pre>
-<p> static void <code>cat_files</code> (const char *, const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;, std::ostream &amp;o)<br />
+<p> static void <code>cat_files</code> (const char *, const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;, std::ostream &amp;o)<br/>
  <i>This is like the </i><code>ParsedKeyVal(const char*,const Ref&lt;KeyVal&gt;&amp;)</code> ctor, but writes the contents of the files to the given ostream.</p>
 <h2>Detailed Description</h2>
 <p>Converts textual information into keyword/value assocations. </p>

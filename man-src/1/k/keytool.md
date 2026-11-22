@@ -249,17 +249,17 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <p> These options can appear for all commands operating on a keystore: </p>
 <dl>
 <dt>-storetype <i>storetype</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  This qualifier specifies the type of keystore to be instantiated. </p>
  </dd>
 <dt>-keystore <i>keystore</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  The keystore location. </p>
 <p> If the JKS <code>storetype</code> is used and a keystore file does not yet exist, then certain <code>keytool</code> commands can result in a new keystore file being created. For example, if <code>keytool -genkeypair</code> is called and the <code>-keystore</code> option is not specified, the default keystore file named <code>.keystore</code> in the user&#8217;s home directory is created when it does not already exist. Similarly, if the <code>-keystore ks_file</code> option is specified but ks_file does not exist, then it is created. For more information on the JKS <code>storetype</code>, see the <i>KeyStore Implementation</i> section in KeyStore aliases. </p>
 <p> Note that the input stream from the <code>-keystore</code> option is passed to the <code>KeyStore.load</code> method. If <code>NONE</code> is specified as the URL, then a null stream is passed to the <code>KeyStore.load</code> method. <code>NONE</code> should be specified if the keystore is not file-based. For example, when it resides on a hardware token device. </p>
  </dd>
 <dt>-storepass[:<i>env</i>| :<i>file</i>] argument</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  The password that is used to protect the integrity of the keystore. </p>
 <p> If the modifier <code>env</code> or <code>file</code> is not specified, then the password has the <code>value</code> argument, which must be at least 6 characters long. Otherwise, the password is retrieved as follows: </p>
  </dd>
@@ -277,23 +277,23 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <p> The password must be provided to all commands that access the keystore contents. For such commands, when the <code>-storepass</code> option is not provided at the command line, the user is prompted for it. </p>
 <p> When retrieving information from the keystore, the password is optional. If no password is specified, then the integrity of the retrieved information cannot be verified and a warning is displayed. </p>
 <dt>-providerName <i>provider_name</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Used to identify a cryptographic service provider&#8217;s name when listed in the security properties file. </p>
  </dd>
 <dt>-providerClass <i>provider_class_name</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Used to specify the name of a cryptographic service provider&#8217;s master class file when the service provider is not listed in the security properties file. </p>
  </dd>
 <dt>-providerArg <i>provider_arg</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Used with the <code>-providerClass</code> option to represent an optional string input argument for the constructor of <code>provider_class_name</code>. </p>
  </dd>
 <dt>-protected</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Either <code>true</code> or <code>false</code>. This value should be specified as <code>true</code> when a password must be specified by way of a protected authentication path such as a dedicated PIN reader.Because there are two keystores involved in the <code>-importkeystore</code> command, the following two options <code>-srcprotected</code> and -<code>destprotected</code> are provided for the source keystore and the destination keystore respectively. </p>
  </dd>
 <dt>-ext <i>{name{:critical} {=value}}</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Denotes an X.509 certificate extension. The option can be used in <code>-genkeypair</code> and <code>-gencert</code> to embed extensions into the certificate generated, or in <code>-certreq</code> to show what extensions are requested in the certificate request. The option can appear multiple times. The <code>name</code> argument can be a supported extension name (see Named Extensions) or an arbitrary OID number. The <code>value</code> argument, when provided, denotes the argument for the extension. When <i>value</i> is omitted, that means that the default value of the extension or the extension requires no argument. The <code>:critical</code> modifier, when provided, means the extension&#8217;s <code>isCritical</code> attribute is <code>true</code>; otherwise, it is <code>false</code>. You can use <code>:c</code> in place of <code>:critical</code>. </p>
  </dd></dl>
 <h2>NAMED EXTENSIONS</h2>
@@ -676,7 +676,7 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <p> Move an existing keystore entry from the specified <code>alias</code> to a new alias, <code>destalias</code>. If no destination alias is provided, then the command prompts for one. If the original entry is protected with an entry password, then the password can be supplied with the <code>-keypass</code> option. If no key password is provided, then the <code>storepass</code> (if provided) is attempted first. If the attempt fails, then the user is prompted for a password. </p>
  </dd>
 <dt>-help</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Lists the basic commands and their options. </p>
 <p> For more information about a specific command, enter the following, where <code>command_name</code> is the name of the command: <code>keytool -command_name -help</code>. </p>
  </dd></dl>
@@ -1147,6 +1147,6 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <dd> <p> <a href="/docs/linux/man/1-jarsigner/">jarsigner</a>(1) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Trail: Security Features in Java SE at <a rel="nofollow" href="http://docs.oracle.com/javase/tutorial/security/index.html">http://docs.oracle.com/javase/tutorial/security/index.html</a> <br />
+<dd> <p> Trail: Security Features in Java SE at <a rel="nofollow" href="http://docs.oracle.com/javase/tutorial/security/index.html">http://docs.oracle.com/javase/tutorial/security/index.html</a> <br/>
  </p>
  </dd></dl>

@@ -64,20 +64,20 @@ description: "cciss – HP Smart Array block driver"
 <h3>Device nodes</h3>
 <p>The device naming scheme is as follows: </p>
 <p> Major numbers: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;104&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;105&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss1<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;106&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss2<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;105&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss3<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;108&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss4<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;109&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss5<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;110&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss6<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;104&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;105&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss1<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;106&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss2<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;105&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss3<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;108&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss4<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;109&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss5<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;110&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss6<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;111&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cciss7 </p>
 <p> Minor numbers: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;b7 b6 b5 b4 b3 b2 b1 b0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|&#8212;-+&#8212;-| |&#8212;-+&#8212;-|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;+&#8212;&#8212;&#8211; Partition ID&nbsp;(0=wholedev, 1-15 partition)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;b7 b6 b5 b4 b3 b2 b1 b0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|&#8212;-+&#8212;-| |&#8212;-+&#8212;-|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;+&#8212;&#8212;&#8211; Partition ID&nbsp;(0=wholedev, 1-15 partition)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; Logical Volume number </p>
 <p> The device naming scheme is: </p>
 <table>
@@ -156,7 +156,7 @@ description: "cciss – HP Smart Array block driver"
 <h3>SCSI tape drive and medium changer support</h3>
 <p>SCSI sequential access devices and medium changer devices are supported and appropriate device nodes are automatically created (e.g., <i>/dev/st0</i>, <i>/dev/st1</i>, etc.; see <code><a href="/docs/linux/man/4-st/">st</a></code>(4) for more details.) You must enable &quot;SCSI tape drive support for Smart Array 5xxx&quot; and &quot;SCSI support&quot; in your kernel configuration to be able to use SCSI tape drives with your Smart Array 5xxx controller. </p>
 <p> Additionally, note that the driver will not engage the SCSI core at init time. The driver must be directed to dynamically engage the SCSI core via the <i>/proc</i> filesystem entry, which the &quot;block&quot; side of the driver creates as <i>/proc/driver/cciss/cciss*</i> at run time. This is because at driver init time, the SCSI core may not yet be initialized (because the driver is a block driver) and attempting to register it with the SCSI core in such a case would cause a hang. This is best done via an initialization script (typically in <i>/etc/init.d</i>, but could vary depending on distribution). For example: </p>
-<p> for x in /proc/driver/cciss/cciss[0-9]* do<br />
+<p> for x in /proc/driver/cciss/cciss[0-9]* do<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;echo&nbsp;&quot;engage scsi&quot;&nbsp;&gt;&nbsp;$x done </p>
 <p> Once the SCSI core is engaged by the driver, it cannot be disengaged (except by unloading the driver, if it happens to be linked as a module.) </p>
 <p> Note also that if no sequential access devices or medium changers are detected, the SCSI core will not be engaged by the action of the above script.</p>

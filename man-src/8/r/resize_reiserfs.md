@@ -31,10 +31,10 @@ description: "resize_reiserfs – resizer tool for the ReiserFS filesystem"
 <dt>-1<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Resizing not successful.</dt>
 <dd></dd></dl>
 <h2>Examples</h2>
-<p>The following example shows how to test <code>resize_reiserfs</code>. Suppose 2Gb reiserfs filesystem is created on the device /dev/hda8 and is mounted on /mnt. For shrinking the device we need to unmount it first, then run <code>resize_reiserfs</code> with a <i>size </i> parameter (in this case -1Gb): df<br />
- umount /mnt<br />
- resize_reiserfs -s -1G /dev/hda8<br />
- mount /dev/hda8 /mnt<br />
+<p>The following example shows how to test <code>resize_reiserfs</code>. Suppose 2Gb reiserfs filesystem is created on the device /dev/hda8 and is mounted on /mnt. For shrinking the device we need to unmount it first, then run <code>resize_reiserfs</code> with a <i>size </i> parameter (in this case -1Gb): df<br/>
+ umount /mnt<br/>
+ resize_reiserfs -s -1G /dev/hda8<br/>
+ mount /dev/hda8 /mnt<br/>
  df /mnt </p>
 <h2>Author</h2>
 <p>This version of <code>resize_reiserfs</code> has been written by Alexander Zarochentcev &lt;zam [at] namesys.com&gt;.</p>

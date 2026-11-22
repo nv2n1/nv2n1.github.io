@@ -10,12 +10,12 @@ description: "ql/math/distributions/binomialdistribution.hpp – Binomial distri
 
 <p> ql/math/distributions/binomialdistribution.hpp &#8211; Binomial distribution. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/math/factorial.hpp&gt;<br />
+<p> #include &lt;ql/math/factorial.hpp&gt;<br/>
  #include &lt;ql/math/beta.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>BinomialDistribution</code><br />
- <i>Binomial probability distribution function. </i><br />
- class <code>CumulativeBinomialDistribution</code><br />
+<p> class <code>BinomialDistribution</code><br/>
+ <i>Binomial probability distribution function. </i><br/>
+ class <code>CumulativeBinomialDistribution</code><br/>
  <i>Cumulative binomial distribution function. </i></p>
 <h3>Functions</h3>
 <p> Real <code>binomialCoefficientLn</code> (BigNatural n, BigNatural k) </p>

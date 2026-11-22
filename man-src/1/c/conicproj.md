@@ -27,7 +27,7 @@ description: "ConicProj — perform conic projections"
 <dt><code>-r</code></dt>
 <dd>perform the reverse projection. <i>x</i> and <i>y</i> are given on standard input and each line of standard output gives <i>latitude</i>, <i>longitude</i>, <i>gamma</i>, and <i>k</i>.</dd>
 <dt><code>-e</code></dt>
-<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</dd>
+<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the WGS84 ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</dd>
 <dt><code>-p</code></dt>
 <dd>set the output precision to <i>prec</i> (default 6). <i>prec</i> is the number of digits after the decimal point for lengths (in meters). For latitudes and longitudes (in degrees), the number of digits after the decimal point is <i>prec</i> + 5. For the convergence (in degrees) and scale, the number of digits after the decimal point is <i>prec</i> + 6.</dd>
 <dt><code>&#8211;comment-delimiter</code></dt>

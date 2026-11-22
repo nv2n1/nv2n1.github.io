@@ -9,8 +9,8 @@ description: "snmp – cups snmp backend (deprecated)"
 
 <p>snmp &#8211; cups snmp backend (deprecated)</p>
 <h2>Synopsis</h2>
-<p><code>/usr/lib/cups/backend/snmp</code> <i>ip-address-or-hostname</i><br />
- <code>/usr/libexec/cups/backend/snmp</code> <i>ip-address-or-hostname</i><br />
+<p><code>/usr/lib/cups/backend/snmp</code> <i>ip-address-or-hostname</i><br/>
+ <code>/usr/libexec/cups/backend/snmp</code> <i>ip-address-or-hostname</i><br/>
  <code>lpinfo</code> <code>-v</code> <code>&#8211;include-schemes</code> snmp</p>
 <h2>Description</h2>
 <p>The <code>DEPRECATED</code> CUPS SNMP backend provides legacy discovery and identification of network printers using SNMPv1. When used for discovery through the scheduler, the backend will list all printers that respond to a broadcast SNMPv1 query with the &quot;public&quot; community name. Additional queries are then sent to printers that respond in order to determine the correct device URI, make and model, and other information needed for printing. </p>

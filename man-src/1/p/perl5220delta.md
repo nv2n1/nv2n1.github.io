@@ -38,10 +38,10 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> For details on what is in this release, see &lt;<a rel="nofollow" href="http://www.unicode.org/versions/Unicode7.0.0/">http://www.unicode.org/versions/Unicode7.0.0/</a>&gt;. The version of Unicode 7.0 that comes with Perl includes a correction dealing with glyph shaping in Arabic (see &lt;<a rel="nofollow" href="http://www.unicode.org/errata/#current_errata">http://www.unicode.org/errata/#current_errata</a>&gt;).</p>
 <h3>use locale can restrict which locale categories are affected</h3>
 <p> It is now possible to pass a parameter to <tt>&quot;use locale&quot;</tt> to specify a subset of locale categories to be locale-aware, with the remaining ones unaffected. See &#8220;The &#8221;use locale&#8220; pragma&#8221; in perllocale for details.</p>
-<h3>Perl now supports <font SIZE="-1">POSIX 2008</font> locale currency additions</h3>
-<p> On platforms that are able to handle <font SIZE="-1">POSIX.1-2008,</font> the hash returned by <tt>&quot;POSIX::localeconv()&quot;</tt> includes the international currency fields added by that version of the <font SIZE="-1">POSIX</font> standard. These are <tt>&quot;int_n_cs_precedes&quot;</tt>, <tt>&quot;int_n_sep_by_space&quot;</tt>, <tt>&quot;int_n_sign_posn&quot;</tt>, <tt>&quot;int_p_cs_precedes&quot;</tt>, <tt>&quot;int_p_sep_by_space&quot;</tt>, and <tt>&quot;int_p_sign_posn&quot;</tt>.</p>
+<h3>Perl now supports POSIX 2008 locale currency additions</h3>
+<p> On platforms that are able to handle POSIX.1-2008, the hash returned by <tt>&quot;POSIX::localeconv()&quot;</tt> includes the international currency fields added by that version of the POSIX standard. These are <tt>&quot;int_n_cs_precedes&quot;</tt>, <tt>&quot;int_n_sep_by_space&quot;</tt>, <tt>&quot;int_n_sign_posn&quot;</tt>, <tt>&quot;int_p_cs_precedes&quot;</tt>, <tt>&quot;int_p_sep_by_space&quot;</tt>, and <tt>&quot;int_p_sign_posn&quot;</tt>.</p>
 <h3>Better heuristics on older platforms for determining locale UTF-8ness</h3>
-<p> On platforms that implement neither the C99 standard nor the <font SIZE="-1">POSIX 2001</font> standard, determining if the current locale is <font SIZE="-1">UTF-8</font> or not depends on heuristics. These are improved in this release.</p>
+<p> On platforms that implement neither the C99 standard nor the POSIX 2001 standard, determining if the current locale is UTF-8 or not depends on heuristics. These are improved in this release.</p>
 <h3>Aliasing via reference</h3>
 <p> Variables and subroutines can now be aliased by assigning to a reference: </p>
 <pre>
@@ -60,28 +60,28 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> The <tt>&quot;const&quot;</tt> attribute can be applied to an anonymous subroutine. It causes the new sub to be executed immediately whenever one is created (<i>i.e.</i> when the <tt>&quot;sub&quot;</tt> expression is evaluated). Its value is captured and used to create a new constant subroutine that is returned. This feature is experimental. See &#8220;Constant Functions&#8221; in perlsub.</p>
 <h3>fileno now works on directory handles</h3>
 <p> When the relevant support is available in the operating system, the <tt>&quot;fileno&quot;</tt> builtin now works on directory handles, yielding the underlying file descriptor in the same way as for filehandles. On operating systems without such support, <tt>&quot;fileno&quot;</tt> on a directory handle continues to return the undefined value, as before, but also sets <tt>$!</tt> to indicate that the operation is not supported. </p>
-<p> Currently, this uses either a <tt>&quot;dd_fd&quot;</tt> member in the <font SIZE="-1">OS</font> <tt>&quot;DIR&quot;</tt> structure, or a <tt><a href="/docs/linux/man/3-dirfd/">dirfd</a>(3)</tt> function as specified by <font SIZE="-1">POSIX.1-2008.</font></p>
+<p> Currently, this uses either a <tt>&quot;dd_fd&quot;</tt> member in the OS <tt>&quot;DIR&quot;</tt> structure, or a <tt><a href="/docs/linux/man/3-dirfd/">dirfd</a>(3)</tt> function as specified by POSIX.1-2008.</p>
 <h3>List form of pipe open implemented for Win32</h3>
 <p> The list form of pipe: </p>
 <pre>
   open my $fh, &quot;-|&quot;, &quot;program&quot;, @arguments;
 </pre>
-<p> is now implemented on Win32. It has the same limitations as <tt>&quot;system LIST&quot;</tt> on Win32, since the Win32 <font SIZE="-1">API</font> doesn&#8217;t accept program arguments as a list.</p>
+<p> is now implemented on Win32. It has the same limitations as <tt>&quot;system LIST&quot;</tt> on Win32, since the Win32 API doesn&#8217;t accept program arguments as a list.</p>
 <h3>Assignment to list repetition</h3>
 <p> <tt>&quot;(...) x ...&quot;</tt> can now be used within a list that is assigned to, as long as the left-hand side is a valid lvalue. This allows <tt>&quot;(undef,undef,$foo) = that_function()&quot;</tt> to be written as <tt>&quot;((undef)x2, $foo) = that_function()&quot;</tt>.</p>
 <h3>Infinity and NaN (not-a-number) handling improved</h3>
 <p> Floating point values are able to hold the special values infinity, negative infinity, and NaN (not-a-number). Now we more robustly recognize and propagate the value in computations, and on output normalize them to the strings <tt>&quot;Inf&quot;</tt>, <tt>&quot;-Inf&quot;</tt>, and <tt>&quot;NaN&quot;</tt>. </p>
-<p> See also the <font SIZE="-1">POSIX</font> enhancements.</p>
+<p> See also the POSIX enhancements.</p>
 <h3>Floating point parsing has been improved</h3>
 <p> Parsing and printing of floating point values has been improved. </p>
 <p> As a completely new feature, hexadecimal floating point literals (like <tt>&quot;0x1.23p-4&quot;</tt>) are now supported, and they can be output with <tt>&quot;printf &quot;%a&quot;&quot;</tt>. See &#8220;Scalar value constructors&#8221; in perldata for more details.</p>
 <h3>Packing infinity or not-a-number into a character is now fatal</h3>
 <p> Before, when trying to pack infinity or not-a-number into a (signed) character, Perl would warn, and assumed you tried to pack <tt>0xFF</tt>; if you gave it as an argument to <tt>&quot;chr&quot;</tt>, <tt>&quot;U+FFFD&quot;</tt> was returned. </p>
 <p> But now, all such actions (<tt>&quot;pack&quot;</tt>, <tt>&quot;chr&quot;</tt>, and <tt>&quot;print '%c'&quot;</tt>) result in a fatal error.</p>
-<h3>Experimental C Backtrace <font SIZE="-1">API</font></h3>
-<p> Perl now supports (via a C level <font SIZE="-1">API</font>) retrieving the C level backtrace (similar to what symbolic debuggers like gdb do). </p>
+<h3>Experimental C Backtrace API</h3>
+<p> Perl now supports (via a C level API) retrieving the C level backtrace (similar to what symbolic debuggers like gdb do). </p>
 <p> The backtrace returns the stack trace of the C call frames, with the symbol names (function names), the object names (like &#8220;perl&#8221;), and if it can, also the source code locations (file:line). </p>
-<p> The supported platforms are Linux and <font SIZE="-1">OS X</font> (some *BSD might work at least partly, but they have not yet been tested). </p>
+<p> The supported platforms are Linux and OS X (some *BSD might work at least partly, but they have not yet been tested). </p>
 <p> The feature needs to be enabled with <tt>&quot;Configure -Dusecbacktrace&quot;</tt>. </p>
 <p> See &#8220;C backtrace&#8221; in perlhacktips for more information.</p>
 <h2>Security</h2>
@@ -91,7 +91,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> Critical bugfix: outside packages could be replaced. Safe has been patched to 2.38 to address this.</p>
 <h3>Perl is now always compiled with -D_FORTIFY_SOURCE=2 if available</h3>
 <p> The &#8216;code hardening&#8217; option called <tt>&quot;_FORTIFY_SOURCE&quot;</tt>, available in gcc 4.*, is now always used for compiling Perl, if available. </p>
-<p> Note that this isn&#8217;t necessarily a huge step since in many platforms the step had already been taken several years ago: many Linux distributions (like Fedora) have been using this option for Perl, and <font SIZE="-1">OS X</font> has enforced the same for many years.</p>
+<p> Note that this isn&#8217;t necessarily a huge step since in many platforms the step had already been taken several years ago: many Linux distributions (like Fedora) have been using this option for Perl, and OS X has enforced the same for many years.</p>
 <h2>Incompatible Changes</h2>
 <h3>Subroutine signatures moved before attributes</h3>
 <p> The experimental sub signatures feature, as introduced in 5.20, parsed signatures after attributes. In this release, following feedback from users of the experimental feature, the positioning has been moved such that signatures occur after the subroutine name (if any) and before the attribute list (if any).</p>
@@ -107,7 +107,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <h3>use UNIVERSAL &#8216;&#8230;&#8217; is now a fatal error</h3>
 <p> Importing functions from <tt>&quot;UNIVERSAL&quot;</tt> has been deprecated since v5.12, and is now a fatal error. <tt>&quot;use UNIVERSAL&quot;</tt> without any arguments is still allowed.</p>
 <h3>In double-quotish 
- \cX, <i>X</i> must now be a printable <font SIZE="-1">ASCII</font> character</h3>
+ \cX, <i>X</i> must now be a printable ASCII character</h3>
 <p> In prior releases, failure to do this raised a deprecation warning.  </p>
 <h3>Splitting the tokens (? and (* in regular expressions is now a fatal compilation error.</h3>
 <p> These had been deprecated since v5.18.  </p>
@@ -128,8 +128,8 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> Really old Perl let you omit the <code>&quot;@&quot;</code> on array names and the <code>&quot;%&quot;</code> on hash names in some spots. This has issued a deprecation warning since Perl 5.000, and is no longer permitted.  </p>
 <h3>$! text is now in English outside the scope of use locale</h3>
 <p> Previously, the text, unlike almost everything else, always came out based on the current underlying locale of the program. (Also affected on some systems is <code>&quot;$^E&quot;</code>.) For programs that are unprepared to handle locale differences, this can cause garbage text to be displayed. It&#8217;s better to display text that is translatable via some tool than garbage text which is much harder to figure out.  </p>
-<font SIZE="-1"></font><h3>$! text will be returned in UTF-8 when appropriate</h3>
-<p> The stringification of <code>$!</code> and <code>$^E</code> will have the <font SIZE="-1">UTF-8</font> flag set when the text is actually non-ASCII <font SIZE="-1">UTF-8.</font> This will enable programs that are set up to be locale-aware to properly output messages in the user&#8217;s native language. Code that needs to continue the 5.20 and earlier behavior can do the stringification within the scopes of both <code>&quot;use bytes&quot;</code> and <code>&quot;use locale &quot;:messages&quot;&quot;</code>. Within these two scopes, no other Perl operations will be affected by locale; only <code>$!</code> and <code>$^E</code> stringification. The <code>&quot;bytes&quot;</code> pragma causes the <font SIZE="-1">UTF-8</font> flag to not be set, just as in previous Perl releases. This resolves [perl #112208] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=112208">https://rt.perl.org/Ticket/Display.html?id=112208</a>&gt;.  </p>
+<h3>$! text will be returned in UTF-8 when appropriate</h3>
+<p> The stringification of <code>$!</code> and <code>$^E</code> will have the UTF-8 flag set when the text is actually non-ASCII UTF-8. This will enable programs that are set up to be locale-aware to properly output messages in the user&#8217;s native language. Code that needs to continue the 5.20 and earlier behavior can do the stringification within the scopes of both <code>&quot;use bytes&quot;</code> and <code>&quot;use locale &quot;:messages&quot;&quot;</code>. Within these two scopes, no other Perl operations will be affected by locale; only <code>$!</code> and <code>$^E</code> stringification. The <code>&quot;bytes&quot;</code> pragma causes the UTF-8 flag to not be set, just as in previous Perl releases. This resolves [perl #112208] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=112208">https://rt.perl.org/Ticket/Display.html?id=112208</a>&gt;.  </p>
 <h3>Support for ?PATTERN? without explicit operator has been removed</h3>
 <p> The <code>&quot;m?PATTERN?&quot;</code> construct, which allows matching a regex only once, previously had an alternative form that was written directly with a question mark delimiter, omitting the explicit <code>&quot;m&quot;</code> operator. This usage has produced a deprecation warning since 5.14.0. It is now a syntax error, so that the question mark can be available for use in new operators.  </p>
 <h3>defined(@array) and defined(%hash) are now fatal errors</h3>
@@ -148,9 +148,9 @@ description: "perl5220delta – what is new for perl v5.22.0"
 </code></pre>
 <h2>Deprecations</h2>
 <h3>Setting ${^ENCODING} to anything but undef</h3>
-<p> This variable allows Perl scripts to be written in an encoding other than <font SIZE="-1">ASCII</font> or <font SIZE="-1">UTF-8.</font> However, it affects all modules globally, leading to wrong answers and segmentation faults. New scripts should be written in <font SIZE="-1">UTF-8</font>; old scripts should be converted to <font SIZE="-1">UTF-8,</font> which is easily done with the piconv utility.  </p>
+<p> This variable allows Perl scripts to be written in an encoding other than ASCII or UTF-8. However, it affects all modules globally, leading to wrong answers and segmentation faults. New scripts should be written in UTF-8; old scripts should be converted to UTF-8, which is easily done with the piconv utility.  </p>
 <h3>Use of non-graphic characters in single-character variable names</h3>
-<p> The syntax for single-character variable names is more lenient than for longer variable names, allowing the one-character name to be a punctuation character or even invisible (a non-graphic). Perl v5.20 deprecated the ASCII-range controls as such a name. Now, all non-graphic characters that formerly were allowed are deprecated. The practical effect of this occurs only when not under <code>&quot;use utf8&quot;</code>, and affects just the C1 controls (code points 0x80 through 0xFF), NO-BREAK <font SIZE="-1">SPACE,</font> and <font SIZE="-1">SOFT HYPHEN.</font>  </p>
+<p> The syntax for single-character variable names is more lenient than for longer variable names, allowing the one-character name to be a punctuation character or even invisible (a non-graphic). Perl v5.20 deprecated the ASCII-range controls as such a name. Now, all non-graphic characters that formerly were allowed are deprecated. The practical effect of this occurs only when not under <code>&quot;use utf8&quot;</code>, and affects just the C1 controls (code points 0x80 through 0xFF), NO-BREAK SPACE, and SOFT HYPHEN.  </p>
 <h3>Inlining of sub () { $var } with observable side-effects</h3>
 <p> In many cases Perl makes <code>&quot;sub () { $var }&quot;</code> into an inlinable constant subroutine, capturing the value of <code>$var</code> at the time the <code>&quot;sub&quot;</code> expression is evaluated. This can break the closure behavior in those cases where <code>$var</code> is subsequently modified, since the subroutine won&#8217;t return the changed value. (Note that this all only applies to anonymous subroutines with an empty prototype (<code>&quot;sub ()&quot;</code>).) </p>
 <p> This usage is now deprecated in those cases where the variable could be modified elsewhere. Perl detects those cases and emits a deprecation warning. Such code will likely change in the future and stop producing a constant. </p>
@@ -178,9 +178,9 @@ description: "perl5220delta – what is new for perl v5.22.0"
     /(?xax:foo)/;
     use re qw(/amxx);
 </code></pre>
-<p> That is, now <code>&quot;x&quot;</code> should only occur once in any string of contiguous regular expression pattern modifiers. We do not believe there are any occurrences of this in all of <font SIZE="-1">CPAN.</font> This is in preparation for a future Perl release having <code>&quot;/xx&quot;</code> permit white-space for readability in bracketed character classes (those enclosed in square brackets: <code>&quot;[...]&quot;</code>).  </p>
+<p> That is, now <code>&quot;x&quot;</code> should only occur once in any string of contiguous regular expression pattern modifiers. We do not believe there are any occurrences of this in all of CPAN. This is in preparation for a future Perl release having <code>&quot;/xx&quot;</code> permit white-space for readability in bracketed character classes (those enclosed in square brackets: <code>&quot;[...]&quot;</code>).  </p>
 <h3>Using a NO-BREAK space in a character alias for \N{...} is now deprecated</h3>
-<p> This non-graphic character is essentially indistinguishable from a regular space, and so should not be allowed. See ``<font SIZE="-1">CUSTOM ALIASES&#8217;&#8216;</font> in charnames.  </p>
+<p> This non-graphic character is essentially indistinguishable from a regular space, and so should not be allowed. See ``CUSTOM ALIASES&#8217;&#8216; in charnames.  </p>
 <h3>A literal { should now be escaped in a pattern</h3>
 <p> If you want a literal left curly bracket (also called a left brace) in a regular expression pattern, you should now escape it by either preceding it with a backslash (<code>&quot;\{&quot;</code>) or enclosing it within square brackets <code>&quot;[{]&quot;</code>, or by using <code>&quot;\Q&quot;</code>; otherwise a deprecation warning will be raised. This was first announced as forthcoming in the v5.16 release; it will allow future extensions to the language to happen.  </p>
 <h3>Making all warnings fatal is discouraged</h3>
@@ -206,10 +206,10 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> Assignment to an empty list is now sometimes faster. In particular, it never calls <code>&quot;FETCH&quot;</code> on tied arguments on the right-hand side, whereas it used to sometimes. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> There is a performance improvement of up to 20% when <code>&quot;length&quot;</code> is applied to a non-magical, non-tied string, and either <code>&quot;use bytes&quot;</code> is in scope or the string doesn&#8217;t use <font SIZE="-1">UTF-8</font> internally. </p>
+<dd> <p> There is a performance improvement of up to 20% when <code>&quot;length&quot;</code> is applied to a non-magical, non-tied string, and either <code>&quot;use bytes&quot;</code> is in scope or the string doesn&#8217;t use UTF-8 internally. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> On most perl builds with 64-bit integers, memory usage for non-magical, non-tied scalars containing only a floating point value has been reduced by between 8 and 32 bytes, depending on <font SIZE="-1">OS.</font> </p>
+<dd> <p> On most perl builds with 64-bit integers, memory usage for non-magical, non-tied scalars containing only a floating point value has been reduced by between 8 and 32 bytes, depending on OS. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> In <code>&quot;@array = split&quot;</code>, the assignment can be optimized away, so that <code>&quot;split&quot;</code> writes directly to the array. This optimisation was happening only for package arrays other than <code>@_</code>, and only sometimes. Now this optimisation happens almost all the time. </p>
@@ -239,10 +239,10 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> Subroutines in packages no longer need to be stored in typeglobs: declaring a subroutine will now put a simple sub reference directly in the stash if possible, saving memory. The typeglob still notionally exists, so accessing it will cause the stash entry to be upgraded to a typeglob (<i>i.e.</i> this is just an internal implementation detail). This optimization does not currently apply to XSUBs or exported subroutines, and method calls will undo it, since they cache things in typeglobs. [perl #120441] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=120441">https://rt.perl.org/Ticket/Display.html?id=120441</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The functions <code>&quot;utf8::native_to_unicode()&quot;</code> and <code>&quot;utf8::unicode_to_native()&quot;</code> (see utf8) are now optimized out on <font SIZE="-1">ASCII</font> platforms. There is now not even a minimal performance hit in writing code portable between <font SIZE="-1">ASCII</font> and <font SIZE="-1">EBCDIC</font> platforms. </p>
+<dd> <p> The functions <code>&quot;utf8::native_to_unicode()&quot;</code> and <code>&quot;utf8::unicode_to_native()&quot;</code> (see utf8) are now optimized out on ASCII platforms. There is now not even a minimal performance hit in writing code portable between ASCII and EBCDIC platforms. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Win32 Perl uses 8 <font SIZE="-1">KB</font> less of per-process memory than before for every perl process, because some data is now memory mapped from disk and shared between processes from the same perl binary. </p>
+<dd> <p> Win32 Perl uses 8 KB less of per-process memory than before for every perl process, because some data is now memory mapped from disk and shared between processes from the same perl binary. </p>
  </dd></dl>
 <h2>Modules and Pragmata</h2>
 <h3>Updated Modules and Pragmata</h3>
@@ -258,16 +258,16 @@ description: "perl5220delta – what is new for perl v5.22.0"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> attributes has been upgraded to version 0.27. </p>
-<p> The usage of <code>&quot;memEQs&quot;</code> in the <font SIZE="-1">XS</font> has been corrected. [perl #122701] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122701">https://rt.perl.org/Ticket/Display.html?id=122701</a>&gt; </p>
+<p> The usage of <code>&quot;memEQs&quot;</code> in the XS has been corrected. [perl #122701] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122701">https://rt.perl.org/Ticket/Display.html?id=122701</a>&gt; </p>
 <p> Avoid reading beyond the end of a buffer. [perl #122629] </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> B has been upgraded to version 1.58. </p>
 <p> It provides a new <code>&quot;B::safename&quot;</code> function, based on the existing <code>&quot;B::GV-&gt;SAFENAME&quot;</code>, that converts <code>&quot;\cOPEN&quot;</code> to <code>&quot;^OPEN&quot;</code>. </p>
 <p> Nulled COPs are now of class <code>&quot;B::COP&quot;</code>, rather than <code>&quot;B::OP&quot;</code>. </p>
-<p> <code>&quot;B::REGEXP&quot;</code> objects now provide a <code>&quot;qr_anoncv&quot;</code> method for accessing the implicit <font SIZE="-1">CV</font> associated with <code>&quot;qr//&quot;</code> things containing code blocks, and a <code>&quot;compflags&quot;</code> method that returns the pertinent flags originating from the <code>&quot;qr//blahblah&quot;</code> op. </p>
+<p> <code>&quot;B::REGEXP&quot;</code> objects now provide a <code>&quot;qr_anoncv&quot;</code> method for accessing the implicit CV associated with <code>&quot;qr//&quot;</code> things containing code blocks, and a <code>&quot;compflags&quot;</code> method that returns the pertinent flags originating from the <code>&quot;qr//blahblah&quot;</code> op. </p>
 <p> <code>&quot;B::PMOP&quot;</code> now provides a <code>&quot;pmregexp&quot;</code> method returning a <code>&quot;B::REGEXP&quot;</code> object. Two new classes, <code>&quot;B::PADNAME&quot;</code> and <code>&quot;B::PADNAMELIST&quot;</code>, have been introduced. </p>
-<p> A bug where, after an ithread creation or psuedofork, special/immortal SVs in the child ithread/psuedoprocess did not have the correct class of <code>&quot;B::SPECIAL&quot;</code>, has been fixed. The <code>&quot;id&quot;</code> and <code>&quot;outid&quot;</code> <font SIZE="-1">PADLIST</font> methods have been added. </p>
+<p> A bug where, after an ithread creation or psuedofork, special/immortal SVs in the child ithread/psuedoprocess did not have the correct class of <code>&quot;B::SPECIAL&quot;</code>, has been fixed. The <code>&quot;id&quot;</code> and <code>&quot;outid&quot;</code> PADLIST methods have been added. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> B::Concise has been upgraded to version 0.996. </p>
@@ -288,8 +288,8 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> <code>&quot;our @array = split(...)&quot;</code> now deparses correctly with <code>&quot;our&quot;</code> in those cases where the assignment is optimized away. </p>
 <p> It now deparses <code>&quot;our(</code>LIST <code>)&quot;</code> and typed lexical (<code>&quot;my Dog $spot&quot;</code>) correctly. </p>
 <p> Deparse <code>$#_</code> as that instead of as <code>$#{_}</code>. [perl #123947] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123947">https://rt.perl.org/Ticket/Display.html?id=123947</a>&gt; </p>
-<p> <font SIZE="-1">BEGIN</font> blocks at the end of the enclosing scope are now deparsed in the right place. [perl #77452] </p>
-<p> <font SIZE="-1">BEGIN</font> blocks were sometimes deparsed as __ANON__, but are now always called <font SIZE="-1">BEGIN.</font> </p>
+<p> BEGIN blocks at the end of the enclosing scope are now deparsed in the right place. [perl #77452] </p>
+<p> BEGIN blocks were sometimes deparsed as __ANON__, but are now always called BEGIN. </p>
 <p> Lexical subroutines are now fully deparsed. [perl #116553] </p>
 <p> <code>&quot;Anything =~ y///r&quot;</code> with <code>&quot;/r&quot;</code> no longer omits the left-hand operand. </p>
 <p> The op trees that make up regexp code blocks are now deparsed for real. Formerly, the original string that made up the regular expression was used. That caused problems with <code>&quot;qr/(?{&lt;&lt;heredoc})/&quot;</code> and multiline code blocks, which were deparsed incorrectly. [perl #123217] [perl #115256] </p>
@@ -317,7 +317,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> bigint, bignum, bigrat have been upgraded to version 0.39. </p>
-<p> Document in <font SIZE="-1">CAVEATS</font> that using strings as numbers won&#8217;t always invoke the big number overloading, and how to invoke it. [rt.perl.org #123064] </p>
+<p> Document in CAVEATS that using strings as numbers won&#8217;t always invoke the big number overloading, and how to invoke it. [rt.perl.org #123064] </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Carp has been upgraded to version 1.36. </p>
@@ -330,13 +330,13 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> It now accepts fully-qualified constant names, allowing constants to be defined in packages other than the caller. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">CPAN</font> has been upgraded to version 2.11. </p>
+<dd> <p> CPAN has been upgraded to version 2.11. </p>
 <p> Add support for <code>&quot;Cwd::getdcwd()&quot;</code> and introduce workaround for a misbehavior seen on Strawberry Perl 5.20.1. </p>
 <p> Fix <code>&quot;chdir()&quot;</code> after building dependencies bug. </p>
 <p> Introduce experimental support for plugins/hooks. </p>
 <p> Integrate the <code>&quot;App::Cpan&quot;</code> sources. </p>
 <p> Do not check recursion on optional dependencies. </p>
-<p> Sanity check <i></i><font SIZE="-1"><i>META</i></font><i>.yml</i> to contain a hash. [cpan #95271] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=95271">https://rt.cpan.org/Ticket/Display.html?id=95271</a>&gt; </p>
+<p> Sanity check <i></i><i>META</i><i>.yml</i> to contain a hash. [cpan #95271] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=95271">https://rt.cpan.org/Ticket/Display.html?id=95271</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> CPAN::Meta::Requirements has been upgraded to version 2.132. </p>
@@ -344,8 +344,8 @@ description: "perl5220delta – what is new for perl v5.22.0"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Data::Dumper has been upgraded to version 2.158. </p>
-<p> Fixes <font SIZE="-1">CVE-2014-4330</font> by adding a configuration variable/option to limit recursion when dumping deep data structures. </p>
-<p> Changes to resolve Coverity issues. <font SIZE="-1">XS</font> dumps incorrectly stored the name of code references stored in a <font SIZE="-1">GLOB.</font> [perl #122070] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122070">https://rt.perl.org/Ticket/Display.html?id=122070</a>&gt; </p>
+<p> Fixes CVE-2014-4330 by adding a configuration variable/option to limit recursion when dumping deep data structures. </p>
+<p> Changes to resolve Coverity issues. XS dumps incorrectly stored the name of code references stored in a GLOB. [perl #122070] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122070">https://rt.perl.org/Ticket/Display.html?id=122070</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> DynaLoader has been upgraded to version 1.32. </p>
@@ -354,11 +354,11 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dt>&bull;</dt>
 <dd> <p> Encode has been upgraded to version 2.72. </p>
 <p> <code>&quot;piconv&quot;</code> now has better error handling when the encoding name is nonexistent, and a build breakage when upgrading Encode in perl-5.8.2 and earlier has been fixed. </p>
-<p> Building in C<font SIZE="-2">++</font> mode on Windows now works. </p>
+<p> Building in C++ mode on Windows now works. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Errno has been upgraded to version 1.23. </p>
-<p> Add <code>&quot;-P&quot;</code> to the preprocessor command-line on <font SIZE="-1">GCC 5.</font> <font SIZE="-1">GCC</font> added extra line directives, breaking parsing of error code definitions. [rt.perl.org #123784] </p>
+<p> Add <code>&quot;-P&quot;</code> to the preprocessor command-line on GCC 5. GCC added extra line directives, breaking parsing of error code definitions. [rt.perl.org #123784] </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> experimental has been upgraded to version 0.013. </p>
@@ -393,8 +393,8 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> <code>&quot;keep_alive&quot;</code> is now fork-safe and thread-safe. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">IO</font> has been upgraded to version 1.35. </p>
-<p> The <font SIZE="-1">XS</font> implementation has been fixed for the sake of older Perls. </p>
+<dd> <p> IO has been upgraded to version 1.35. </p>
+<p> The XS implementation has been fixed for the sake of older Perls. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> IO::Socket has been upgraded to version 1.38. </p>
@@ -407,16 +407,16 @@ description: "perl5220delta – what is new for perl v5.22.0"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The libnet collection of modules has been upgraded to version 3.05. </p>
-<p> Support for IPv6 and <font SIZE="-1">SSL</font> to <code>&quot;Net::FTP&quot;</code>, <code>&quot;Net::NNTP&quot;</code>, <code>&quot;Net::POP3&quot;</code> and <code>&quot;Net::SMTP&quot;</code>. Improvements in <code>&quot;Net::SMTP&quot;</code> authentication. </p>
+<p> Support for IPv6 and SSL to <code>&quot;Net::FTP&quot;</code>, <code>&quot;Net::NNTP&quot;</code>, <code>&quot;Net::POP3&quot;</code> and <code>&quot;Net::SMTP&quot;</code>. Improvements in <code>&quot;Net::SMTP&quot;</code> authentication. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Locale::Codes has been upgraded to version 3.34. </p>
-<p> Fixed a bug in the scripts used to extract data from spreadsheets that prevented the <font SIZE="-1">SHP</font> currency code from being found. [cpan #94229] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=94229">https://rt.cpan.org/Ticket/Display.html?id=94229</a>&gt; </p>
+<p> Fixed a bug in the scripts used to extract data from spreadsheets that prevented the SHP currency code from being found. [cpan #94229] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=94229">https://rt.cpan.org/Ticket/Display.html?id=94229</a>&gt; </p>
 <p> New codes have been added. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Math::BigInt has been upgraded to version 1.9997. </p>
-<p> Synchronize <font SIZE="-1">POD</font> changes from the <font SIZE="-1">CPAN</font> release. <code>&quot;Math::BigFloat-&gt;blog(x)&quot;</code> would sometimes return <code>&quot;blog(2*x)&quot;</code> when the accuracy was greater than 70 digits. The result of <code>&quot;Math::BigFloat-&gt;bdiv()&quot;</code> in list context now satisfies <code>&quot;x = quotient * divisor + remainder&quot;</code>. </p>
+<p> Synchronize POD changes from the CPAN release. <code>&quot;Math::BigFloat-&gt;blog(x)&quot;</code> would sometimes return <code>&quot;blog(2*x)&quot;</code> when the accuracy was greater than 70 digits. The result of <code>&quot;Math::BigFloat-&gt;bdiv()&quot;</code> in list context now satisfies <code>&quot;x = quotient * divisor + remainder&quot;</code>. </p>
 <p> Correct handling of subclasses. [cpan #96254] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=96254">https://rt.cpan.org/Ticket/Display.html?id=96254</a>&gt; [cpan #96329] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=96329">https://rt.cpan.org/Ticket/Display.html?id=96329</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
@@ -429,7 +429,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The PathTools module collection has been upgraded to version 3.56. </p>
-<p> A warning from the <code>gcc</code> compiler is now avoided when building the <font SIZE="-1">XS.</font> </p>
+<p> A warning from the <code>gcc</code> compiler is now avoided when building the XS. </p>
 <p> Don&#8217;t turn leading <code>&quot;//&quot;</code> into <code>&quot;/&quot;</code> on Cygwin. [perl #122635] </p>
  </dd>
 <dt>&bull;</dt>
@@ -450,7 +450,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> Filehandles opened for reading or writing now have <code>&quot;:encoding(UTF-8)&quot;</code> set. [cpan #98019] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=98019">https://rt.cpan.org/Ticket/Display.html?id=98019</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">POSIX</font> has been upgraded to version 1.53. </p>
+<dd> <p> POSIX has been upgraded to version 1.53. </p>
 <p> The C99 math functions and constants (for example <code>&quot;acosh&quot;</code>, <code>&quot;isinf&quot;</code>, <code>&quot;isnan&quot;</code>, <code>&quot;round&quot;</code>, <code>&quot;trunc&quot;</code>; <code>&quot;M_E&quot;</code>, <code>&quot;M_SQRT2&quot;</code>, <code>&quot;M_PI&quot;</code>) have been added. </p>
 <p> <code>&quot;POSIX::tmpnam()&quot;</code> now produces a deprecation warning. [perl #122005] </p>
  </dd>
@@ -460,7 +460,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Scalar-List-Utils has been upgraded to version 1.41. </p>
-<p> A new module, Sub::Util, has been added, containing functions related to <font SIZE="-1">CODE</font> refs, including <code>&quot;subname&quot;</code> (inspired by <code>&quot;Sub::Identity&quot;</code>) and <code>&quot;set_subname&quot;</code> (copied and renamed from <code>&quot;Sub::Name&quot;</code>). The use of <code>&quot;GetMagic&quot;</code> in <code>&quot;List::Util::reduce()&quot;</code> has also been fixed. [cpan #63211] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=63211">https://rt.cpan.org/Ticket/Display.html?id=63211</a>&gt; </p>
+<p> A new module, Sub::Util, has been added, containing functions related to CODE refs, including <code>&quot;subname&quot;</code> (inspired by <code>&quot;Sub::Identity&quot;</code>) and <code>&quot;set_subname&quot;</code> (copied and renamed from <code>&quot;Sub::Name&quot;</code>). The use of <code>&quot;GetMagic&quot;</code> in <code>&quot;List::Util::reduce()&quot;</code> has also been fixed. [cpan #63211] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=63211">https://rt.cpan.org/Ticket/Display.html?id=63211</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> SDBM_File has been upgraded to version 1.13. </p>
@@ -476,7 +476,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Unicode::Normalize has been upgraded to version 1.18. </p>
-<p> The <font SIZE="-1">XSUB</font> implementation has been removed in favor of pure Perl. </p>
+<p> The XSUB implementation has been removed in favor of pure Perl. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Unicode::UCD has been upgraded to version 0.61. </p>
@@ -485,7 +485,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> A new function <code>charprops_all()</code> has been added to return the values of all Unicode properties for a given code point. </p>
 <p> A bug has been fixed so that <code>propaliases()</code> returns the correct short and long names for the Perl extensions where it was incorrect. </p>
 <p> A bug has been fixed so that <code>prop_value_aliases()</code> returns <code>&quot;undef&quot;</code> instead of a wrong result for properties that are Perl extensions. </p>
-<p> This module now works on <font SIZE="-1">EBCDIC</font> platforms. </p>
+<p> This module now works on EBCDIC platforms. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> utf8 has been upgraded to version 1.17 </p>
@@ -493,15 +493,15 @@ description: "perl5220delta – what is new for perl v5.22.0"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> version has been upgraded to version 0.9909. </p>
-<p> Numerous changes. See the <i>Changes</i> file in the <font SIZE="-1">CPAN</font> distribution for details. </p>
+<p> Numerous changes. See the <i>Changes</i> file in the CPAN distribution for details. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Win32 has been upgraded to version 0.51. </p>
-<p> <code>&quot;GetOSName()&quot;</code> now supports Windows 8.1, and building in C<font SIZE="-2">++</font> mode now works. </p>
+<p> <code>&quot;GetOSName()&quot;</code> now supports Windows 8.1, and building in C++ mode now works. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Win32API::File has been upgraded to version 0.1202 </p>
-<p> Building in C<font SIZE="-2">++</font> mode now works. </p>
+<p> Building in C++ mode now works. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> XSLoader has been upgraded to version 0.20. </p>
@@ -511,7 +511,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> The following modules (and associated modules) have been removed from the core perl distribution: </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">CGI</font> </p>
+<dd> <p> CGI </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Module::Build </p>
@@ -545,7 +545,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> Entries are now organized into groups rather than by the file where they are found. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Alphabetical sorting of entries is now done consistently (automatically by the <font SIZE="-1">POD</font> generator) to make entries easier to find when scanning. </p>
+<dd> <p> Alphabetical sorting of entries is now done consistently (automatically by the POD generator) to make entries easier to find when scanning. </p>
  </dd></dl>
 <p> <i>perldata</i> </p>
 <dl>
@@ -558,12 +558,12 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> <i>perlebcdic</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> This document has been significantly updated in the light of recent improvements to <font SIZE="-1">EBCDIC</font> support. </p>
+<dd> <p> This document has been significantly updated in the light of recent improvements to EBCDIC support. </p>
  </dd></dl>
 <p> <i>perlfilter</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Added a <font SIZE="-1">LIMITATIONS</font> section. </p>
+<dd> <p> Added a LIMITATIONS section. </p>
  </dd></dl>
 <p> <i>perlfunc</i> </p>
 <dl>
@@ -587,7 +587,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> <i>perlguts</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> The <font SIZE="-1">OOK</font> example has been updated to account for <font SIZE="-1">COW</font> changes and a change in the storage of the offset. </p>
+<dd> <p> The OOK example has been updated to account for COW changes and a change in the storage of the offset. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Details on C level symbols and libperl.t added. </p>
@@ -596,7 +596,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> Information on Unicode handling has been added </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Information on <font SIZE="-1">EBCDIC</font> handling has been added </p>
+<dd> <p> Information on EBCDIC handling has been added </p>
  </dd></dl>
 <p> <i>perlhack</i> </p>
 <dl>
@@ -646,12 +646,12 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> <i>perlpodspec</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> The specification of the pod language is changing so that the default encoding of pods that aren&#8217;t in <font SIZE="-1">UTF-8</font> (unless otherwise indicated) is <font SIZE="-1">CP1252</font> instead of <font SIZE="-1">ISO 8859-1</font> (Latin1). </p>
+<dd> <p> The specification of the pod language is changing so that the default encoding of pods that aren&#8217;t in UTF-8 (unless otherwise indicated) is CP1252 instead of ISO 8859-1 (Latin1). </p>
  </dd></dl>
 <p> <i>perlpolicy</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> We now have a code of conduct for the <i>p5p</i> mailing list, as documented in ``<font SIZE="-1">STANDARDS OF CONDUCT&#8217;&#8216;</font> in perlpolicy. </p>
+<dd> <p> We now have a code of conduct for the <i>p5p</i> mailing list, as documented in ``STANDARDS OF CONDUCT&#8217;&#8216; in perlpolicy. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The conditions for marking an experimental feature as non-experimental are now set out. </p>
@@ -665,7 +665,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> Out-of-date VMS-specific information has been fixed and/or simplified. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Notes about <font SIZE="-1">EBCDIC</font> have been added. </p>
+<dd> <p> Notes about EBCDIC have been added. </p>
  </dd></dl>
 <p> <i>perlre</i> </p>
 <dl>
@@ -686,7 +686,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> <i>perlrecharclass</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Clarifications have been added to ``Character Ranges&#8217;&#8216; in perlrecharclass to the effect <code>&quot;[A-Z]&quot;</code>, <code>&quot;[a-z]&quot;</code>, <code>&quot;[0-9]&quot;</code> and any subranges thereof in regular expression bracketed character classes are guaranteed to match exactly what a naive English speaker would expect them to match, even on platforms (such as <font SIZE="-1">EBCDIC</font>) where perl has to do extra work to accomplish this. </p>
+<dd> <p> Clarifications have been added to ``Character Ranges&#8217;&#8216; in perlrecharclass to the effect <code>&quot;[A-Z]&quot;</code>, <code>&quot;[a-z]&quot;</code>, <code>&quot;[0-9]&quot;</code> and any subranges thereof in regular expression bracketed character classes are guaranteed to match exactly what a naive English speaker would expect them to match, even on platforms (such as EBCDIC) where perl has to do extra work to accomplish this. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The documentation of Bracketed Character Classes has been expanded to cover the improvements in <code>&quot;qr/[\N{named sequence}]/&quot;</code> (see under ``Selected Bug Fixes&#8217;&#8216;). </p>
@@ -736,12 +736,12 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> Out-of-date and/or incorrect material has been removed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Updated documentation on environment and shell interaction in <font SIZE="-1">VMS.</font> </p>
+<dd> <p> Updated documentation on environment and shell interaction in VMS. </p>
  </dd></dl>
 <p> <i>perlxs</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Added a discussion of locale issues in <font SIZE="-1">XS</font> code. </p>
+<dd> <p> Added a discussion of locale issues in XS code. </p>
  </dd></dl>
 <h2>Diagnostics</h2>
 <p> The following additions or changes have been made to diagnostic output, including warnings and fatal error messages. For the complete list of diagnostic messages, see perldiag.  </p>
@@ -793,11 +793,11 @@ description: "perl5220delta – what is new for perl v5.22.0"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> charnames alias definitions may not contain a sequence of multiple spaces </p>
-<p> (F) You defined a character name which had multiple space characters in a row. Change them to single spaces. Usually these names are defined in the <code>&quot;:alias&quot;</code> import argument to <code>&quot;use charnames&quot;</code>, but they could be defined by a translator installed into <code>$^H{charnames}</code>. See ``<font SIZE="-1">CUSTOM ALIASES&#8217;&#8216;</font> in charnames. </p>
+<p> (F) You defined a character name which had multiple space characters in a row. Change them to single spaces. Usually these names are defined in the <code>&quot;:alias&quot;</code> import argument to <code>&quot;use charnames&quot;</code>, but they could be defined by a translator installed into <code>$^H{charnames}</code>. See ``CUSTOM ALIASES&#8217;&#8216; in charnames. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> charnames alias definitions may not contain trailing white-space </p>
-<p> (F) You defined a character name which ended in a space character. Remove the trailing space(s). Usually these names are defined in the <code>&quot;:alias&quot;</code> import argument to <code>&quot;use charnames&quot;</code>, but they could be defined by a translator installed into <code>$^H{charnames}</code>. See ``<font SIZE="-1">CUSTOM ALIASES&#8217;&#8216;</font> in charnames. </p>
+<p> (F) You defined a character name which ended in a space character. Remove the trailing space(s). Usually these names are defined in the <code>&quot;:alias&quot;</code> import argument to <code>&quot;use charnames&quot;</code>, but they could be defined by a translator installed into <code>$^H{charnames}</code>. See ``CUSTOM ALIASES&#8217;&#8216; in charnames. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> :const is not permitted on named subroutines </p>
@@ -816,16 +816,16 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> (F) The script run under suidperl was somehow illegal. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In &#8216;(?...)&#8216;, the &#8216;(&#8216; and &#8216;?&#8216; must be adjacent in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ </p>
+<dd> <p> In &#8216;(?...)&#8216;, the &#8216;(&#8216; and &#8216;?&#8216; must be adjacent in regex; marked by &lt;-- HERE in m/%s/ </p>
 <p> (F) The two-character sequence <code>&quot;(?&quot;</code> in this context in a regular expression pattern should be an indivisible token, with nothing intervening between the <code>&quot;(&quot;</code> and the <code>&quot;?&quot;</code>, but you separated them. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In &#8216;(*VERB...)&#8216;, the &#8216;(&#8216; and &#8216;*&#8216; must be adjacent in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ </p>
+<dd> <p> In &#8216;(*VERB...)&#8216;, the &#8216;(&#8216; and &#8216;*&#8216; must be adjacent in regex; marked by &lt;-- HERE in m/%s/ </p>
 <p> (F) The two-character sequence <code>&quot;(*&quot;</code> in this context in a regular expression pattern should be an indivisible token, with nothing intervening between the <code>&quot;(&quot;</code> and the <code>&quot;*&quot;</code>, but you separated them. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Invalid quantifier in {,} in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ </p>
-<p> (F) The pattern looks like a {min,max} quantifier, but the min or max could not be parsed as a valid number: either it has leading zeroes, or it represents too big a number to cope with. The &lt;-- <font SIZE="-1">HERE</font> shows where in the regular expression the problem was discovered. See perlre. </p>
+<dd> <p> Invalid quantifier in {,} in regex; marked by &lt;-- HERE in m/%s/ </p>
+<p> (F) The pattern looks like a {min,max} quantifier, but the min or max could not be parsed as a valid number: either it has leading zeroes, or it represents too big a number to cope with. The &lt;-- HERE shows where in the regular expression the problem was discovered. See perlre. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> &#8216;%s&#8217; is an unknown bound type in regex </p>
@@ -840,10 +840,10 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dl>
 <dt>&bull;</dt>
 <dd> <p> \C is deprecated in regex </p>
-<p> (D deprecated) The <code>&quot;/\C/&quot;</code> character class was deprecated in v5.20, and now emits a warning. It is intended that it will become an error in v5.24. This character class matches a single byte even if it appears within a multi-byte character, breaks encapsulation, and can corrupt <font SIZE="-1">UTF-8</font> strings. </p>
+<p> (D deprecated) The <code>&quot;/\C/&quot;</code> character class was deprecated in v5.20, and now emits a warning. It is intended that it will become an error in v5.24. This character class matches a single byte even if it appears within a multi-byte character, breaks encapsulation, and can corrupt UTF-8 strings. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> ``%s&#8217;&#8216; is more clearly written simply as ``%s&#8217;&#8216; in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ </p>
+<dd> <p> ``%s&#8217;&#8216; is more clearly written simply as ``%s&#8217;&#8216; in regex; marked by &lt;-- HERE in m/%s/ </p>
 <p> (W regexp) (only under <code>&quot;use re &#8216;strict&#8217;&quot;</code> or within <code>&quot;(?[...])&quot;</code>) </p>
 <p> You specified a character that has the given plainer way of writing it, and which is also portable to platforms running with different character sets. </p>
  </dd>
@@ -852,13 +852,13 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> (W numeric) The indicated string was fed as an argument to the <code>&quot;++&quot;</code> operator which expects either a number or a string matching <code>&quot;/^[a-zA-Z]*[0-9]*\z/&quot;</code>. See ``Auto-increment and Auto-decrement&#8217;&#8216; in perlop for details. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Both or neither range ends should be Unicode in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ </p>
+<dd> <p> Both or neither range ends should be Unicode in regex; marked by &lt;-- HERE in m/%s/ </p>
 <p> (W regexp) (only under <code>&quot;use re &#8216;strict&#8217;&quot;</code> or within <code>&quot;(?[...])&quot;</code>) </p>
 <p> In a bracketed character class in a regular expression pattern, you had a range which has exactly one end of it specified using <code>&quot;\N{}&quot;</code>, and the other end is specified using a non-portable mechanism. Perl treats the range as a Unicode range, that is, all the characters in it are considered to be the Unicode characters, and which may be different code points on some platforms Perl runs on. For example, <code>&quot;[\N{U+06}-\x08]&quot;</code> is treated as if you had instead said <code>&quot;[\N{U+06}-\N{U+08}]&quot;</code>, that is it matches the characters whose code points in Unicode are 6, 7, and 8. But that <code>&quot;\x08&quot;</code> might indicate that you meant something different, so the warning gets raised. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Can&#8217;t do %s(``%s&#8217;&#8216;) on non-UTF-8 locale; resolved to ``%s&#8217;&#8216;. </p>
-<p> (W locale) You are 1) running under &quot;<code>&quot;use locale&quot;</code>&quot;; 2) the current locale is not a <font SIZE="-1">UTF-8</font> one; 3) you tried to do the designated case-change operation on the specified Unicode character; and 4) the result of this operation would mix Unicode and locale rules, which likely conflict. </p>
+<p> (W locale) You are 1) running under &quot;<code>&quot;use locale&quot;</code>&quot;; 2) the current locale is not a UTF-8 one; 3) you tried to do the designated case-change operation on the specified Unicode character; and 4) the result of this operation would mix Unicode and locale rules, which likely conflict. </p>
 <p> The warnings category <code>&quot;locale&quot;</code> is new. </p>
  </dd>
 <dt>&bull;</dt>
@@ -899,8 +899,8 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> (W numeric) You tried to execute the <code>&quot;x&quot;</code> repetition operator fewer than 0 times, which doesn&#8217;t make sense. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> NO-BREAK <font SIZE="-1">SPACE</font> in a charnames alias definition is deprecated </p>
-<p> (D deprecated) You defined a character name which contained a no-break space character. Change it to a regular space. Usually these names are defined in the <code>&quot;:alias&quot;</code> import argument to <code>&quot;use charnames&quot;</code>, but they could be defined by a translator installed into <code>$^H{charnames}</code>. See ``<font SIZE="-1">CUSTOM ALIASES&#8217;&#8216;</font> in charnames. </p>
+<dd> <p> NO-BREAK SPACE in a charnames alias definition is deprecated </p>
+<p> (D deprecated) You defined a character name which contained a no-break space character. Change it to a regular space. Usually these names are defined in the <code>&quot;:alias&quot;</code> import argument to <code>&quot;use charnames&quot;</code>, but they could be defined by a translator installed into <code>$^H{charnames}</code>. See ``CUSTOM ALIASES&#8217;&#8216; in charnames. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Non-finite repeat count does nothing </p>
@@ -913,9 +913,9 @@ description: "perl5220delta – what is new for perl v5.22.0"
 </code></pre>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Ranges of <font SIZE="-1">ASCII</font> printables should be some subset of ``0-9&#8217;&#8216;, ``A-Z&#8217;&#8216;, or ``a-z&#8217;&#8216; in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ </p>
+<dd> <p> Ranges of ASCII printables should be some subset of ``0-9&#8217;&#8216;, ``A-Z&#8217;&#8216;, or ``a-z&#8217;&#8216; in regex; marked by &lt;-- HERE in m/%s/ </p>
 <p> (W regexp) (only under <code>&quot;use re &#8216;strict&#8217;&quot;</code> or within <code>&quot;(?[...])&quot;</code>) </p>
-<p> Stricter rules help to find typos and other errors. Perhaps you didn&#8217;t even intend a range here, if the <code>&quot;-&quot;</code> was meant to be some other character, or should have been escaped (like <code>&quot;\-&quot;</code>). If you did intend a range, the one that was used is not portable between <font SIZE="-1">ASCII</font> and <font SIZE="-1">EBCDIC</font> platforms, and doesn&#8217;t have an obvious meaning to a casual reader. </p>
+<p> Stricter rules help to find typos and other errors. Perhaps you didn&#8217;t even intend a range here, if the <code>&quot;-&quot;</code> was meant to be some other character, or should have been escaped (like <code>&quot;\-&quot;</code>). If you did intend a range, the one that was used is not portable between ASCII and EBCDIC platforms, and doesn&#8217;t have an obvious meaning to a casual reader. </p>
 <pre><code> [3-7] # OK; Obvious and portable
  [d-g] # OK; Obvious and portable
  [A-Y] # OK; Obvious and portable
@@ -924,10 +924,10 @@ description: "perl5220delta – what is new for perl v5.22.0"
  [%-.] # WRONG; Not portable; not clear what is meant
  [\x41-Z] # WRONG; Not portable; not obvious to non-geek
 </code></pre>
-<p> (You can force portability by specifying a Unicode range, which means that the endpoints are specified by <code>&quot;\N{...}&quot;</code>, but the meaning may still not be obvious.) The stricter rules require that ranges that start or stop with an <font SIZE="-1">ASCII</font> character that is not a control have all their endpoints be a literal character, and not some escape sequence (like <code>&quot;\x41&quot;</code>), and the ranges must be all digits, or all uppercase letters, or all lowercase letters. </p>
+<p> (You can force portability by specifying a Unicode range, which means that the endpoints are specified by <code>&quot;\N{...}&quot;</code>, but the meaning may still not be obvious.) The stricter rules require that ranges that start or stop with an ASCII character that is not a control have all their endpoints be a literal character, and not some escape sequence (like <code>&quot;\x41&quot;</code>), and the ranges must be all digits, or all uppercase letters, or all lowercase letters. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Ranges of digits should be from the same group in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ </p>
+<dd> <p> Ranges of digits should be from the same group in regex; marked by &lt;-- HERE in m/%s/ </p>
 <p> (W regexp) (only under <code>&quot;use re &#8216;strict&#8217;&quot;</code> or within <code>&quot;(?[...])&quot;</code>) </p>
 <p> Stricter rules help to find typos and other errors. You included a range, and at least one of the end points is a decimal digit. Under the stricter rules, when this happens, both end points should be digits in the same group of 10 consecutive digits. </p>
  </dd>
@@ -941,13 +941,13 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> This is not a new diagnostic, but in earlier releases was accidentally not displayed if the transliteration contained wide characters. This is now fixed, so that you may see this diagnostic in places where you previously didn&#8217;t (but should have). </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Use of \b{} for non-UTF-8 locale is wrong. Assuming a <font SIZE="-1">UTF-8</font> locale </p>
-<p> (W locale) You are matching a regular expression using locale rules, and a Unicode boundary is being matched, but the locale is not a Unicode one. This doesn&#8217;t make sense. Perl will continue, assuming a Unicode (<font SIZE="-1">UTF-8</font>) locale, but the results could well be wrong except if the locale happens to be <font SIZE="-1">ISO-8859-1</font> (Latin1) where this message is spurious and can be ignored. </p>
+<dd> <p> Use of \b{} for non-UTF-8 locale is wrong. Assuming a UTF-8 locale </p>
+<p> (W locale) You are matching a regular expression using locale rules, and a Unicode boundary is being matched, but the locale is not a Unicode one. This doesn&#8217;t make sense. Perl will continue, assuming a Unicode (UTF-8) locale, but the results could well be wrong except if the locale happens to be ISO-8859-1 (Latin1) where this message is spurious and can be ignored. </p>
 <p> The warnings category <code>&quot;locale&quot;</code> is new. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Using /u for &#8216;%s&#8217; instead of /%s in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ </p>
-<p> (W regexp) You used a Unicode boundary (<code>&quot;\b{...}&quot;</code> or <code>&quot;\B{...}&quot;</code>) in a portion of a regular expression where the character set modifiers <code>&quot;/a&quot;</code> or <code>&quot;/aa&quot;</code> are in effect. These two modifiers indicate an <font SIZE="-1">ASCII</font> interpretation, and this doesn&#8217;t make sense for a Unicode definition. The generated regular expression will compile so that the boundary uses all of Unicode. No other portion of the regular expression is affected. </p>
+<dd> <p> Using /u for &#8216;%s&#8217; instead of /%s in regex; marked by &lt;-- HERE in m/%s/ </p>
+<p> (W regexp) You used a Unicode boundary (<code>&quot;\b{...}&quot;</code> or <code>&quot;\B{...}&quot;</code>) in a portion of a regular expression where the character set modifiers <code>&quot;/a&quot;</code> or <code>&quot;/aa&quot;</code> are in effect. These two modifiers indicate an ASCII interpretation, and this doesn&#8217;t make sense for a Unicode definition. The generated regular expression will compile so that the boundary uses all of Unicode. No other portion of the regular expression is affected. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The bitwise feature is experimental </p>
@@ -958,7 +958,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 </code></pre>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Unescaped left brace in regex is deprecated, passed through in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ </p>
+<dd> <p> Unescaped left brace in regex is deprecated, passed through in regex; marked by &lt;-- HERE in m/%s/ </p>
 <p> (D deprecated, regexp) You used a literal <code>&quot;{&quot;</code> character in a regular expression pattern. You should change to use <code>&quot;\{&quot;</code> instead, because a future version of Perl (tentatively v5.26) will consider this to be a syntax error. If the pattern delimiters are also braces, any matching right brace (<code>&quot;}&quot;</code>) should also be escaped to avoid confusing the parser, for example, </p>
 <pre><code>    qr{abc\{def\}ghi}
 </code></pre>
@@ -993,8 +993,8 @@ description: "perl5220delta – what is new for perl v5.22.0"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Wide character (U+%X) in <code>%s</code> </p>
-<p> (W locale) While in a single-byte locale (<i>i.e.</i>, a non-UTF-8 one), a multi-byte character was encountered. Perl considers this character to be the specified Unicode code point. Combining non-UTF-8 locales and Unicode is dangerous. Almost certainly some characters will have two different representations. For example, in the <font SIZE="-1">ISO 8859-7</font> (Greek) locale, the code point 0xC3 represents a Capital Gamma. But so also does 0x393. This will make string comparisons unreliable. </p>
-<p> You likely need to figure out how this multi-byte character got mixed up with your single-byte locale (or perhaps you thought you had a <font SIZE="-1">UTF-8</font> locale, but Perl disagrees). </p>
+<p> (W locale) While in a single-byte locale (<i>i.e.</i>, a non-UTF-8 one), a multi-byte character was encountered. Perl considers this character to be the specified Unicode code point. Combining non-UTF-8 locales and Unicode is dangerous. Almost certainly some characters will have two different representations. For example, in the ISO 8859-7 (Greek) locale, the code point 0xC3 represents a Capital Gamma. But so also does 0x393. This will make string comparisons unreliable. </p>
+<p> You likely need to figure out how this multi-byte character got mixed up with your single-byte locale (or perhaps you thought you had a UTF-8 locale, but Perl disagrees). </p>
 <p> The warnings category <code>&quot;locale&quot;</code> is new. </p>
  </dd></dl>
 <h3>Changes to Existing Diagnostics</h3>
@@ -1020,7 +1020,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> &#8216;``my&#8217;&#8216; variable &amp;foo::bar can&#8217;t be in a package&#8217; has been reworded to say &#8216;subroutine&#8217; instead of &#8216;variable&#8217;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> \N{} in character class restricted to one character in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ </p>
+<dd> <p> \N{} in character class restricted to one character in regex; marked by &lt;-- HERE in m/%s/ </p>
 <p> This message has had <i>character class</i> changed to <i>inverted character class or as a range end-point is</i> to reflect improvements in <code>&quot;qr/[\N{named sequence}]/&quot;</code> (see under ``Selected Bug Fixes&#8217;&#8216;). </p>
  </dd>
 <dt>&bull;</dt>
@@ -1048,7 +1048,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> There is actually no ambiguity here, and this impedes the use of negated constants; <i>e.g.</i>, <code>&quot;-Inf&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> ``Constant is not a <font SIZE="-1">FOO</font> reference&#8217;&#8216; </p>
+<dd> <p> ``Constant is not a FOO reference&#8217;&#8216; </p>
 <p> Compile-time checking of constant dereferencing (<i>e.g.</i>, <code>&quot;my_constant-&gt;()&quot;</code>) has been removed, since it was not taking overloading into account. [perl #69456] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=69456">https://rt.perl.org/Ticket/Display.html?id=69456</a>&gt; [perl #122607] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122607">https://rt.perl.org/Ticket/Display.html?id=122607</a>&gt; </p>
  </dd></dl>
 <h2>Utility Changes</h2>
@@ -1056,7 +1056,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dl>
 <dt>&bull;</dt>
 <dd> <p> The <i>x2p/</i> directory has been removed from the Perl core. </p>
-<p> This removes find2perl, s2p and a2p. They have all been released to <font SIZE="-1">CPAN</font> as separate distributions (<code>&quot;App::find2perl&quot;</code>, <code>&quot;App::s2p&quot;</code>, <code>&quot;App::a2p&quot;</code>). </p>
+<p> This removes find2perl, s2p and a2p. They have all been released to CPAN as separate distributions (<code>&quot;App::find2perl&quot;</code>, <code>&quot;App::s2p&quot;</code>, <code>&quot;App::a2p&quot;</code>). </p>
  </dd></dl>
 <h3>h2ph</h3>
 <dl>
@@ -1077,10 +1077,10 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> <i>Configure</i> with <code>&quot;-Dmksymlinks&quot;</code> should now be faster. [perl #122002] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122002">https://rt.perl.org/Ticket/Display.html?id=122002</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;pthreads&quot;</code> and <code>&quot;cl&quot;</code> libraries will be linked by default if present. This allows <font SIZE="-1">XS</font> modules that require threading to work on non-threaded perls. Note that you must still pass <code>&quot;-Dusethreads&quot;</code> if you want a threaded perl. </p>
+<dd> <p> The <code>&quot;pthreads&quot;</code> and <code>&quot;cl&quot;</code> libraries will be linked by default if present. This allows XS modules that require threading to work on non-threaded perls. Note that you must still pass <code>&quot;-Dusethreads&quot;</code> if you want a threaded perl. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> To get more precision and range for floating point numbers one can now use the <font SIZE="-1">GCC</font> quadmath library which implements the quadruple precision floating point numbers on x86 and <font SIZE="-1">IA-64</font> platforms. See <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> for details. </p>
+<dd> <p> To get more precision and range for floating point numbers one can now use the GCC quadmath library which implements the quadruple precision floating point numbers on x86 and IA-64 platforms. See <i></i><i>INSTALL</i><i></i> for details. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> MurmurHash64A and MurmurHash64B can now be configured as the internal hash function. </p>
@@ -1094,7 +1094,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> [perl #121431] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=121431">https://rt.perl.org/Ticket/Display.html?id=121431</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <font SIZE="-1">MAD</font> (Misc Attribute Decoration) build option has been removed </p>
+<dd> <p> The MAD (Misc Attribute Decoration) build option has been removed </p>
 <p> This was an unmaintained attempt at preserving the Perl parse tree more faithfully so that automatic conversion of Perl 5 to Perl 6 would have been easier. </p>
 <p> This build-time configuration option had been unmaintained for years, and had probably seriously diverged on both Perl 5 and Perl 6 sides. </p>
  </dd>
@@ -1102,7 +1102,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> A new compilation flag, <code>&quot;-DPERL_OP_PARENT&quot;</code> is available. For details, see the discussion below at ``Internal Changes&#8217;&#8216;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Pathtools no longer tries to load <font SIZE="-1">XS</font> on miniperl. This speeds up building perl slightly. </p>
+<dd> <p> Pathtools no longer tries to load XS on miniperl. This speeds up building perl slightly. </p>
  </dd></dl>
 <h2>Testing</h2>
 <dl>
@@ -1124,21 +1124,21 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <h2>Platform Support</h2>
 <h3>Regained Platforms</h3>
 <dl>
-<dt><font SIZE="-1">IRIX</font> and Tru64 platforms are working again.</dt>
-<dd> <p> Some <code>&quot;make test&quot;</code> failures remain: [perl #123977] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123977">https://rt.perl.org/Ticket/Display.html?id=123977</a>&gt; and [perl #125298] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=125298">https://rt.perl.org/Ticket/Display.html?id=125298</a>&gt; for <font SIZE="-1">IRIX</font>; [perl #124212] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=124212">https://rt.perl.org/Ticket/Display.html?id=124212</a>&gt;, [cpan #99605] &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=99605">https://rt.cpan.org/Public/Bug/Display.html?id=99605</a>&gt;, and [cpan #104836] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=104836">https://rt.cpan.org/Ticket/Display.html?id=104836</a>&gt; for Tru64. </p>
+<dt>IRIX and Tru64 platforms are working again.</dt>
+<dd> <p> Some <code>&quot;make test&quot;</code> failures remain: [perl #123977] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123977">https://rt.perl.org/Ticket/Display.html?id=123977</a>&gt; and [perl #125298] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=125298">https://rt.perl.org/Ticket/Display.html?id=125298</a>&gt; for IRIX; [perl #124212] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=124212">https://rt.perl.org/Ticket/Display.html?id=124212</a>&gt;, [cpan #99605] &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=99605">https://rt.cpan.org/Public/Bug/Display.html?id=99605</a>&gt;, and [cpan #104836] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=104836">https://rt.cpan.org/Ticket/Display.html?id=104836</a>&gt; for Tru64. </p>
  </dd>
-<dt>z/OS running <font SIZE="-1">EBCDIC</font> Code Page 1047</dt>
-<dd> <p> Core perl now works on this <font SIZE="-1">EBCDIC</font> platform. Earlier perls also worked, but, even though support wasn&#8217;t officially withdrawn, recent perls would not compile and run well. Perl 5.20 would work, but had many bugs which have now been fixed. Many <font SIZE="-1">CPAN</font> modules that ship with Perl still fail tests, including <code>&quot;Pod::Simple&quot;</code>. However the version of <code>&quot;Pod::Simple&quot;</code> currently on <font SIZE="-1">CPAN</font> should work; it was fixed too late to include in Perl 5.22. Work is under way to fix many of the still-broken <font SIZE="-1">CPAN</font> modules, which likely will be installed on <font SIZE="-1">CPAN</font> when completed, so that you may not have to wait until Perl 5.24 to get a working version. </p>
+<dt>z/OS running EBCDIC Code Page 1047</dt>
+<dd> <p> Core perl now works on this EBCDIC platform. Earlier perls also worked, but, even though support wasn&#8217;t officially withdrawn, recent perls would not compile and run well. Perl 5.20 would work, but had many bugs which have now been fixed. Many CPAN modules that ship with Perl still fail tests, including <code>&quot;Pod::Simple&quot;</code>. However the version of <code>&quot;Pod::Simple&quot;</code> currently on CPAN should work; it was fixed too late to include in Perl 5.22. Work is under way to fix many of the still-broken CPAN modules, which likely will be installed on CPAN when completed, so that you may not have to wait until Perl 5.24 to get a working version. </p>
  </dd></dl>
 <h3>Discontinued Platforms</h3>
 <dl>
 <dt>NeXTSTEP/OPENSTEP</dt>
-<dd> <p> NeXTSTEP was a proprietary operating system bundled with NeXT&#8217;s workstations in the early to mid 90s; <font SIZE="-1">OPENSTEP</font> was an <font SIZE="-1">API</font> specification that provided a NeXTSTEP-like environment on a non-NeXTSTEP system. Both are now long dead, so support for building Perl on them has been removed. </p>
+<dd> <p> NeXTSTEP was a proprietary operating system bundled with NeXT&#8217;s workstations in the early to mid 90s; OPENSTEP was an API specification that provided a NeXTSTEP-like environment on a non-NeXTSTEP system. Both are now long dead, so support for building Perl on them has been removed. </p>
  </dd></dl>
 <h3>Platform-Specific Notes</h3>
 <dl>
-<dt><font SIZE="-1">EBCDIC</font></dt>
-<dd> <p> Special handling is required of the perl interpreter on <font SIZE="-1">EBCDIC</font> platforms to get <code>&quot;qr/[i-j]/&quot;</code> to match only <code>&quot;i&quot;</code> and <code>&quot;j&quot;</code>, since there are 7 characters between the code points for <code>&quot;i&quot;</code> and <code>&quot;j&quot;</code>. This special handling had only been invoked when both ends of the range are literals. Now it is also invoked if any of the <code>&quot;\N{...}&quot;</code> forms for specifying a character by name or Unicode code point is used instead of a literal. See ``Character Ranges&#8217;&#8216; in perlrecharclass. </p>
+<dt>EBCDIC</dt>
+<dd> <p> Special handling is required of the perl interpreter on EBCDIC platforms to get <code>&quot;qr/[i-j]/&quot;</code> to match only <code>&quot;i&quot;</code> and <code>&quot;j&quot;</code>, since there are 7 characters between the code points for <code>&quot;i&quot;</code> and <code>&quot;j&quot;</code>. This special handling had only been invoked when both ends of the range are literals. Now it is also invoked if any of the <code>&quot;\N{...}&quot;</code> forms for specifying a character by name or Unicode code point is used instead of a literal. See ``Character Ranges&#8217;&#8216; in perlrecharclass. </p>
  </dd>
 <dt>HP-UX</dt>
 <dd> <p> The archname now distinguishes use64bitint from use64bitall. </p>
@@ -1146,16 +1146,16 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dt>Android</dt>
 <dd> <p> Build support has been improved for cross-compiling in general and for Android in particular. </p>
  </dd>
-<dt><font SIZE="-1">VMS</font></dt>
+<dt>VMS</dt>
 <dd>  </dd>
 <dl>
 <dd>  </dd>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> When spawning a subprocess without waiting, the return value is now the correct <font SIZE="-1">PID.</font> </p>
+<dd> <p> When spawning a subprocess without waiting, the return value is now the correct PID. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fix a prototype so linking doesn&#8217;t fail under the <font SIZE="-1">VMS C<font SIZE="-2">++</font></font> compiler. </p>
+<dd> <p> Fix a prototype so linking doesn&#8217;t fail under the VMS C++ compiler. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;finite&quot;</code>, <code>&quot;finitel&quot;</code>, and <code>&quot;isfinite&quot;</code> detection has been added to <code>&quot;configure.com&quot;</code>, environment handling has had some minor changes, and a fix for legacy feature checking status. </p>
@@ -1169,13 +1169,13 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd>  </dd>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> <i>miniperl.exe</i> is now built with <code>&quot;-fno-strict-aliasing&quot;</code>, allowing 64-bit builds to complete on <font SIZE="-1">GCC 4.8.</font> [perl #123976] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123976">https://rt.perl.org/Ticket/Display.html?id=123976</a>&gt; </p>
+<dd> <p> <i>miniperl.exe</i> is now built with <code>&quot;-fno-strict-aliasing&quot;</code>, allowing 64-bit builds to complete on GCC 4.8. [perl #123976] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123976">https://rt.perl.org/Ticket/Display.html?id=123976</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;nmake minitest&quot;</code> now works on Win32. Due to dependency issues you need to build <code>&quot;nmake test-prep&quot;</code> first, and a small number of the tests fail. [perl #123394] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123394">https://rt.perl.org/Ticket/Display.html?id=123394</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Perl can now be built in C<font SIZE="-2">++</font> mode on Windows by setting the makefile macro <code>&quot;USE_CPLUSPLUS&quot;</code> to the value ``define&#8217;&#8216;. </p>
+<dd> <p> Perl can now be built in C++ mode on Windows by setting the makefile macro <code>&quot;USE_CPLUSPLUS&quot;</code> to the value ``define&#8217;&#8216;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The list form of piped open has been implemented for Win32. Note: unlike <code>&quot;system LIST&quot;</code> this does not fall back to the shell. [perl #121159] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=121159">https://rt.perl.org/Ticket/Display.html?id=121159</a>&gt; </p>
@@ -1184,10 +1184,10 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> New <code>&quot;DebugSymbols&quot;</code> and <code>&quot;DebugFull&quot;</code> configuration options added to Windows makefiles. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Previously, compiling <font SIZE="-1">XS</font> modules (including <font SIZE="-1">CPAN</font> ones) using Visual C<font SIZE="-2">++</font> for Win64 resulted in around a dozen warnings per file from <i>hv_func.h</i>. These warnings have been silenced. </p>
+<dd> <p> Previously, compiling XS modules (including CPAN ones) using Visual C++ for Win64 resulted in around a dozen warnings per file from <i>hv_func.h</i>. These warnings have been silenced. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Support for building without PerlIO has been removed from the Windows makefiles. Non-PerlIO builds were all but deprecated in Perl 5.18.0 and are already not supported by <i>Configure</i> on <font SIZE="-1">POSIX</font> systems. </p>
+<dd> <p> Support for building without PerlIO has been removed from the Windows makefiles. Non-PerlIO builds were all but deprecated in Perl 5.18.0 and are already not supported by <i>Configure</i> on POSIX systems. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Between 2 and 6 milliseconds and seven I/O calls have been saved per attempt to open a perl module for each path in <code>@INC</code>. </p>
@@ -1232,7 +1232,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <h2>Internal Changes</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Experimental support has been added to allow ops in the optree to locate their parent, if any. This is enabled by the non-default build option <code>&quot;-DPERL_OP_PARENT&quot;</code>. It is envisaged that this will eventually become enabled by default, so <font SIZE="-1">XS</font> code which directly accesses the <code>&quot;op_sibling&quot;</code> field of ops should be updated to be future-proofed. </p>
+<dd> <p> Experimental support has been added to allow ops in the optree to locate their parent, if any. This is enabled by the non-default build option <code>&quot;-DPERL_OP_PARENT&quot;</code>. It is envisaged that this will eventually become enabled by default, so XS code which directly accesses the <code>&quot;op_sibling&quot;</code> field of ops should be updated to be future-proofed. </p>
 <p> On <code>&quot;PERL_OP_PARENT&quot;</code> builds, the <code>&quot;op_sibling&quot;</code> field has been renamed <code>&quot;op_sibparent&quot;</code> and a new flag, <code>&quot;op_moresib&quot;</code>, added. On the last op in a sibling chain, <code>&quot;op_moresib&quot;</code> is false and <code>&quot;op_sibparent&quot;</code> points to the parent (if any) rather than being <code>&quot;NULL&quot;</code>. </p>
 <p> To make existing code work transparently whether using <code>&quot;PERL_OP_PARENT&quot;</code> or not, a number of new macros and functions have been added that should be used, rather than directly manipulating <code>&quot;op_sibling&quot;</code>. </p>
 <p> For the case of just reading <code>&quot;op_sibling&quot;</code> to determine the next sibling, two new macros have been added. A simple scan through a sibling chain like this: </p>
@@ -1265,67 +1265,67 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dl>
 <dd>  </dd></dl>
 <dt>&bull;</dt>
-<dd> <p> Macros have been created to allow <font SIZE="-1">XS</font> code to better manipulate the <font SIZE="-1">POSIX</font> locale category <code>&quot;LC_NUMERIC&quot;</code>. See ``Locale-related functions and macros&#8217;&#8216; in perlapi. </p>
+<dd> <p> Macros have been created to allow XS code to better manipulate the POSIX locale category <code>&quot;LC_NUMERIC&quot;</code>. See ``Locale-related functions and macros&#8217;&#8216; in perlapi. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The previous <code>&quot;atoi&quot;</code> <i>et al</i> replacement function, <code>&quot;grok_atou&quot;</code>, has now been superseded by <code>&quot;grok_atoUV&quot;</code>. See perlclib for details. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A new function, <code>&quot;Perl_sv_get_backrefs()&quot;</code>, has been added which allows you retrieve the weak references, if any, which point at an <font SIZE="-1">SV.</font> </p>
+<dd> <p> A new function, <code>&quot;Perl_sv_get_backrefs()&quot;</code>, has been added which allows you retrieve the weak references, if any, which point at an SV. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;screaminstr()&quot;</code> function has been removed. Although marked as public <font SIZE="-1">API,</font> it was undocumented and had no usage in <font SIZE="-1">CPAN</font> modules. Calling it has been fatal since 5.17.0. </p>
+<dd> <p> The <code>&quot;screaminstr()&quot;</code> function has been removed. Although marked as public API, it was undocumented and had no usage in CPAN modules. Calling it has been fatal since 5.17.0. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;newDEFSVOP()&quot;</code>, <code>&quot;block_start()&quot;</code>, <code>&quot;block_end()&quot;</code> and <code>&quot;intro_my()&quot;</code> functions have been added to the <font SIZE="-1">API.</font> </p>
+<dd> <p> The <code>&quot;newDEFSVOP()&quot;</code>, <code>&quot;block_start()&quot;</code>, <code>&quot;block_end()&quot;</code> and <code>&quot;intro_my()&quot;</code> functions have been added to the API. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The internal <code>&quot;convert&quot;</code> function in <i>op.c</i> has been renamed <code>&quot;op_convert_list&quot;</code> and added to the <font SIZE="-1">API.</font> </p>
+<dd> <p> The internal <code>&quot;convert&quot;</code> function in <i>op.c</i> has been renamed <code>&quot;op_convert_list&quot;</code> and added to the API. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;sv_magic()&quot;</code> function no longer forbids ``ext&#8217;&#8216; magic on read-only values. After all, perl can&#8217;t know whether the custom magic will modify the <font SIZE="-1">SV</font> or not. [perl #123103] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123103">https://rt.perl.org/Ticket/Display.html?id=123103</a>&gt;. </p>
+<dd> <p> The <code>&quot;sv_magic()&quot;</code> function no longer forbids ``ext&#8217;&#8216; magic on read-only values. After all, perl can&#8217;t know whether the custom magic will modify the SV or not. [perl #123103] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123103">https://rt.perl.org/Ticket/Display.html?id=123103</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Accessing ``CvPADLIST&#8217;&#8216; in perlapi on an <font SIZE="-1">XSUB</font> is now forbidden. </p>
-<p> The <code>&quot;CvPADLIST&quot;</code> field has been reused for a different internal purpose for XSUBs. So in particular, you can no longer rely on it being <font SIZE="-1">NULL</font> as a test of whether a <font SIZE="-1">CV</font> is an <font SIZE="-1">XSUB.</font> Use <code>&quot;CvISXSUB()&quot;</code> instead. </p>
+<dd> <p> Accessing ``CvPADLIST&#8217;&#8216; in perlapi on an XSUB is now forbidden. </p>
+<p> The <code>&quot;CvPADLIST&quot;</code> field has been reused for a different internal purpose for XSUBs. So in particular, you can no longer rely on it being NULL as a test of whether a CV is an XSUB. Use <code>&quot;CvISXSUB()&quot;</code> instead. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> SVs of type <code>&quot;SVt_NV&quot;</code> are now sometimes bodiless when the build configuration and platform allow it: specifically, when <code>&quot;sizeof(NV) &lt;= sizeof(IV)&quot;</code>. ``Bodiless&#8217;&#8216; means that the <font SIZE="-1">NV</font> value is stored directly in the head of an <font SIZE="-1">SV,</font> without requiring a separate body to be allocated. This trick has already been used for IVs since 5.9.2 (though in the case of IVs, it is always used, regardless of platform and build configuration). </p>
+<dd> <p> SVs of type <code>&quot;SVt_NV&quot;</code> are now sometimes bodiless when the build configuration and platform allow it: specifically, when <code>&quot;sizeof(NV) &lt;= sizeof(IV)&quot;</code>. ``Bodiless&#8217;&#8216; means that the NV value is stored directly in the head of an SV, without requiring a separate body to be allocated. This trick has already been used for IVs since 5.9.2 (though in the case of IVs, it is always used, regardless of platform and build configuration). </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The <code>$DB::single</code>, <code>$DB::signal</code> and <code>$DB::trace</code> variables now have set- and get-magic that stores their values as IVs, and those IVs are used when testing their values in <code>&quot;pp_dbstate()&quot;</code>. This prevents perl from recursing infinitely if an overloaded object is assigned to any of those variables. [perl #122445] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122445">https://rt.perl.org/Ticket/Display.html?id=122445</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;Perl_tmps_grow()&quot;</code>, which is marked as public <font SIZE="-1">API</font> but is undocumented, has been removed from the public <font SIZE="-1">API.</font> This change does not affect <font SIZE="-1">XS</font> code that uses the <code>&quot;EXTEND_MORTAL&quot;</code> macro to pre-extend the mortal stack. </p>
+<dd> <p> <code>&quot;Perl_tmps_grow()&quot;</code>, which is marked as public API but is undocumented, has been removed from the public API. This change does not affect XS code that uses the <code>&quot;EXTEND_MORTAL&quot;</code> macro to pre-extend the mortal stack. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Perl&#8217;s internals no longer sets or uses the <code>&quot;SVs_PADMY&quot;</code> flag. <code>&quot;SvPADMY()&quot;</code> now returns a true value for anything not marked <code>&quot;PADTMP&quot;</code> and <code>&quot;SVs_PADMY&quot;</code> is now defined as 0. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The macros <code>&quot;SETsv&quot;</code> and <code>&quot;SETsvUN&quot;</code> have been removed. They were no longer used in the core since commit 6f1401dc2a five years ago, and have not been found present on <font SIZE="-1">CPAN.</font> </p>
+<dd> <p> The macros <code>&quot;SETsv&quot;</code> and <code>&quot;SETsvUN&quot;</code> have been removed. They were no longer used in the core since commit 6f1401dc2a five years ago, and have not been found present on CPAN. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The <code>&quot;SvFAKE&quot;</code> bit (unused on HVs) got informally reserved by David Mitchell for future work on vtables. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;sv_catpvn_flags()&quot;</code> function accepts <code>&quot;SV_CATBYTES&quot;</code> and <code>&quot;SV_CATUTF8&quot;</code> flags, which specify whether the appended string is bytes or <font SIZE="-1">UTF-8,</font> respectively. (These flags have in fact been present since 5.16.0, but were formerly not regarded as part of the <font SIZE="-1">API.</font>) </p>
+<dd> <p> The <code>&quot;sv_catpvn_flags()&quot;</code> function accepts <code>&quot;SV_CATBYTES&quot;</code> and <code>&quot;SV_CATUTF8&quot;</code> flags, which specify whether the appended string is bytes or UTF-8, respectively. (These flags have in fact been present since 5.16.0, but were formerly not regarded as part of the API.) </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A new opcode class, <code>&quot;METHOP&quot;</code>, has been introduced. It holds information used at runtime to improve the performance of class/object method calls. </p>
 <p> <code>&quot;OP_METHOD&quot;</code> and <code>&quot;OP_METHOD_NAMED&quot;</code> have changed from being <code>&quot;UNOP/SVOP&quot;</code> to being <code>&quot;METHOP&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;cv_name()&quot;</code> is a new <font SIZE="-1">API</font> function that can be passed a <font SIZE="-1">CV</font> or <font SIZE="-1">GV.</font> It returns an <font SIZE="-1">SV</font> containing the name of the subroutine, for use in diagnostics. </p>
+<dd> <p> <code>&quot;cv_name()&quot;</code> is a new API function that can be passed a CV or GV. It returns an SV containing the name of the subroutine, for use in diagnostics. </p>
 <p> [perl #116735] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=116735">https://rt.perl.org/Ticket/Display.html?id=116735</a>&gt; [perl #120441] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=120441">https://rt.perl.org/Ticket/Display.html?id=120441</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;cv_set_call_checker_flags()&quot;</code> is a new <font SIZE="-1">API</font> function that works like <code>&quot;cv_set_call_checker()&quot;</code>, except that it allows the caller to specify whether the call checker requires a full <font SIZE="-1">GV</font> for reporting the subroutine&#8217;s name, or whether it could be passed a <font SIZE="-1">CV</font> instead. Whatever value is passed will be acceptable to <code>&quot;cv_name()&quot;</code>. <code>&quot;cv_set_call_checker()&quot;</code> guarantees there will be a <font SIZE="-1">GV,</font> but it may have to create one on the fly, which is inefficient. [perl #116735] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=116735">https://rt.perl.org/Ticket/Display.html?id=116735</a>&gt; </p>
+<dd> <p> <code>&quot;cv_set_call_checker_flags()&quot;</code> is a new API function that works like <code>&quot;cv_set_call_checker()&quot;</code>, except that it allows the caller to specify whether the call checker requires a full GV for reporting the subroutine&#8217;s name, or whether it could be passed a CV instead. Whatever value is passed will be acceptable to <code>&quot;cv_name()&quot;</code>. <code>&quot;cv_set_call_checker()&quot;</code> guarantees there will be a GV, but it may have to create one on the fly, which is inefficient. [perl #116735] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=116735">https://rt.perl.org/Ticket/Display.html?id=116735</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;CvGV&quot;</code> (which is not part of the <font SIZE="-1">API</font>) is now a more complex macro, which may call a function and reify a <font SIZE="-1">GV.</font> For those cases where it has been used as a boolean, <code>&quot;CvHASGV&quot;</code> has been added, which will return true for CVs that notionally have GVs, but without reifying the <font SIZE="-1">GV.</font> <code>&quot;CvGV&quot;</code> also returns a <font SIZE="-1">GV</font> now for lexical subs. [perl #120441] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=120441">https://rt.perl.org/Ticket/Display.html?id=120441</a>&gt; </p>
+<dd> <p> <code>&quot;CvGV&quot;</code> (which is not part of the API) is now a more complex macro, which may call a function and reify a GV. For those cases where it has been used as a boolean, <code>&quot;CvHASGV&quot;</code> has been added, which will return true for CVs that notionally have GVs, but without reifying the GV. <code>&quot;CvGV&quot;</code> also returns a GV now for lexical subs. [perl #120441] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=120441">https://rt.perl.org/Ticket/Display.html?id=120441</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The ``sync_locale&#8217;&#8216; in perlapi function has been added to the public <font SIZE="-1">API.</font> Changing the program&#8217;s locale should be avoided by <font SIZE="-1">XS</font> code. Nevertheless, certain non-Perl libraries called from <font SIZE="-1">XS</font> need to do so, such as <code>&quot;Gtk&quot;</code>. When this happens, Perl needs to be told that the locale has changed. Use this function to do so, before returning to Perl. </p>
+<dd> <p> The ``sync_locale&#8217;&#8216; in perlapi function has been added to the public API. Changing the program&#8217;s locale should be avoided by XS code. Nevertheless, certain non-Perl libraries called from XS need to do so, such as <code>&quot;Gtk&quot;</code>. When this happens, Perl needs to be told that the locale has changed. Use this function to do so, before returning to Perl. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The defines and labels for the flags in the <code>&quot;op_private&quot;</code> field of OPs are now auto-generated from data in <i>regen/op_private</i>. The noticeable effect of this is that some of the flag output of <code>&quot;Concise&quot;</code> might differ slightly, and the flag output of <code>&quot;perl -Dx&quot;</code> may differ considerably (they both use the same set of labels now). Also, debugging builds now have a new assertion in <code>&quot;op_free()&quot;</code> to ensure that the op doesn&#8217;t have any unrecognized flags set in <code>&quot;op_private&quot;</code>. </p>
@@ -1334,23 +1334,23 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> The deprecated variable <code>&quot;PL_sv_objcount&quot;</code> has been removed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Perl now tries to keep the locale category <code>&quot;LC_NUMERIC&quot;</code> set to ``C&#8217;&#8216; except around operations that need it to be set to the program&#8217;s underlying locale. This protects the many <font SIZE="-1">XS</font> modules that cannot cope with the decimal radix character not being a dot. Prior to this release, Perl initialized this category to ``C&#8217;&#8216;, but a call to <code>&quot;POSIX::setlocale()&quot;</code> would change it. Now such a call will change the underlying locale of the <code>&quot;LC_NUMERIC&quot;</code> category for the program, but the locale exposed to <font SIZE="-1">XS</font> code will remain ``C&#8217;&#8216;. There are new macros to manipulate the <font SIZE="-1">LC_NUMERIC</font> locale, including <code>&quot;STORE_LC_NUMERIC_SET_TO_NEEDED&quot;</code> and <code>&quot;STORE_LC_NUMERIC_FORCE_TO_UNDERLYING&quot;</code>. See ``Locale-related functions and macros&#8217;&#8216; in perlapi. </p>
+<dd> <p> Perl now tries to keep the locale category <code>&quot;LC_NUMERIC&quot;</code> set to ``C&#8217;&#8216; except around operations that need it to be set to the program&#8217;s underlying locale. This protects the many XS modules that cannot cope with the decimal radix character not being a dot. Prior to this release, Perl initialized this category to ``C&#8217;&#8216;, but a call to <code>&quot;POSIX::setlocale()&quot;</code> would change it. Now such a call will change the underlying locale of the <code>&quot;LC_NUMERIC&quot;</code> category for the program, but the locale exposed to XS code will remain ``C&#8217;&#8216;. There are new macros to manipulate the LC_NUMERIC locale, including <code>&quot;STORE_LC_NUMERIC_SET_TO_NEEDED&quot;</code> and <code>&quot;STORE_LC_NUMERIC_FORCE_TO_UNDERLYING&quot;</code>. See ``Locale-related functions and macros&#8217;&#8216; in perlapi. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A new macro <code>&quot;isUTF8_CHAR&quot;</code> has been written which efficiently determines if the string given by its parameters begins with a well-formed <font SIZE="-1">UTF-8</font> encoded character. </p>
+<dd> <p> A new macro <code>&quot;isUTF8_CHAR&quot;</code> has been written which efficiently determines if the string given by its parameters begins with a well-formed UTF-8 encoded character. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The following private <font SIZE="-1">API</font> functions had their context parameter removed: <code>&quot;Perl_cast_ulong&quot;</code>, <code>&quot;Perl_cast_i32&quot;</code>, <code>&quot;Perl_cast_iv&quot;</code>, <code>&quot;Perl_cast_uv&quot;</code>, <code>&quot;Perl_cv_const_sv&quot;</code>, <code>&quot;Perl_mg_find&quot;</code>, <code>&quot;Perl_mg_findext&quot;</code>, <code>&quot;Perl_mg_magical&quot;</code>, <code>&quot;Perl_mini_mktime&quot;</code>, <code>&quot;Perl_my_dirfd&quot;</code>, <code>&quot;Perl_sv_backoff&quot;</code>, <code>&quot;Perl_utf8_hop&quot;</code>. </p>
-<p> Note that the prefix-less versions of those functions that are part of the public <font SIZE="-1">API,</font> such as <code>&quot;cast_i32()&quot;</code>, remain unaffected. </p>
+<dd> <p> The following private API functions had their context parameter removed: <code>&quot;Perl_cast_ulong&quot;</code>, <code>&quot;Perl_cast_i32&quot;</code>, <code>&quot;Perl_cast_iv&quot;</code>, <code>&quot;Perl_cast_uv&quot;</code>, <code>&quot;Perl_cv_const_sv&quot;</code>, <code>&quot;Perl_mg_find&quot;</code>, <code>&quot;Perl_mg_findext&quot;</code>, <code>&quot;Perl_mg_magical&quot;</code>, <code>&quot;Perl_mini_mktime&quot;</code>, <code>&quot;Perl_my_dirfd&quot;</code>, <code>&quot;Perl_sv_backoff&quot;</code>, <code>&quot;Perl_utf8_hop&quot;</code>. </p>
+<p> Note that the prefix-less versions of those functions that are part of the public API, such as <code>&quot;cast_i32()&quot;</code>, remain unaffected. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;PADNAME&quot;</code> and <code>&quot;PADNAMELIST&quot;</code> types are now separate types, and no longer simply aliases for <font SIZE="-1">SV</font> and <font SIZE="-1">AV.</font> [perl #123223] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123223">https://rt.perl.org/Ticket/Display.html?id=123223</a>&gt;. </p>
+<dd> <p> The <code>&quot;PADNAME&quot;</code> and <code>&quot;PADNAMELIST&quot;</code> types are now separate types, and no longer simply aliases for SV and AV. [perl #123223] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123223">https://rt.perl.org/Ticket/Display.html?id=123223</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Pad names are now always <font SIZE="-1">UTF-8.</font> The <code>&quot;PadnameUTF8&quot;</code> macro always returns true. Previously, this was effectively the case already, but any support for two different internal representations of pad names has now been removed. </p>
+<dd> <p> Pad names are now always UTF-8. The <code>&quot;PadnameUTF8&quot;</code> macro always returns true. Previously, this was effectively the case already, but any support for two different internal representations of pad names has now been removed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A new op class, <code>&quot;UNOP_AUX&quot;</code>, has been added. This is a subclass of <code>&quot;UNOP&quot;</code> with an <code>&quot;op_aux&quot;</code> field added, which points to an array of unions of <font SIZE="-1">UV,</font> SV* etc. It is intended for where an op needs to store more data than a simple <code>&quot;op_sv&quot;</code> or whatever. Currently the only op of this type is <code>&quot;OP_MULTIDEREF&quot;</code> (see next item). </p>
+<dd> <p> A new op class, <code>&quot;UNOP_AUX&quot;</code>, has been added. This is a subclass of <code>&quot;UNOP&quot;</code> with an <code>&quot;op_aux&quot;</code> field added, which points to an array of unions of UV, SV* etc. It is intended for where an op needs to store more data than a simple <code>&quot;op_sv&quot;</code> or whatever. Currently the only op of this type is <code>&quot;OP_MULTIDEREF&quot;</code> (see next item). </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A new op has been added, <code>&quot;OP_MULTIDEREF&quot;</code>, which performs one or more nested array and hash lookups where the key is a constant or simple variable. For example the expression <code>$a[0]{$k}[$i]</code>, which previously involved ten <code>&quot;rv2Xv&quot;</code>, <code>&quot;Xelem&quot;</code>, <code>&quot;gvsv&quot;</code> and <code>&quot;const&quot;</code> ops is now performed by a single <code>&quot;multideref&quot;</code> op. It can also handle <code>&quot;local&quot;</code>, <code>&quot;exists&quot;</code> and <code>&quot;delete&quot;</code>. A non-simple index expression, such as <code>&quot;[$i+1]&quot;</code> is still done using <code>&quot;aelem&quot;</code>/<code>&quot;helem&quot;</code>, and single-level array lookup with a small constant index is still done using <code>&quot;aelemfast&quot;</code>. </p>
@@ -1366,7 +1366,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> Previously, running <code>&quot;no re&quot;</code> would turn off only a few things. Now it can turn off all the enabled things. For example, the only way to stop debugging, once enabled, was to exit the enclosing block; that is now fixed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;pack(&quot;D&quot;, $x)&quot;</code> and <code>&quot;pack(&quot;F&quot;, $x)&quot;</code> now zero the padding on x86 long double builds. Under some build options on <font SIZE="-1">GCC 4.8</font> and later, they used to either overwrite the zero-initialized padding, or bypass the initialized buffer entirely. This caused <i>op/pack.t</i> to fail. [perl #123971] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123971">https://rt.perl.org/Ticket/Display.html?id=123971</a>&gt; </p>
+<dd> <p> <code>&quot;pack(&quot;D&quot;, $x)&quot;</code> and <code>&quot;pack(&quot;F&quot;, $x)&quot;</code> now zero the padding on x86 long double builds. Under some build options on GCC 4.8 and later, they used to either overwrite the zero-initialized padding, or bypass the initialized buffer entirely. This caused <i>op/pack.t</i> to fail. [perl #123971] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123971">https://rt.perl.org/Ticket/Display.html?id=123971</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Extending an array cloned from a parent thread could result in ``Modification of a read-only value attempted&#8217;&#8216; errors when attempting to modify the new elements. [perl #124127] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=124127">https://rt.perl.org/Ticket/Display.html?id=124127</a>&gt; </p>
@@ -1378,7 +1378,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> A possible crashing/looping bug related to compiling lexical subs has been fixed. [perl #124099] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=124099">https://rt.perl.org/Ticket/Display.html?id=124099</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">UTF-8</font> now works correctly in function names, in unquoted HERE-document terminators, and in variable names used as array indexes. [perl #124113] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=124113">https://rt.perl.org/Ticket/Display.html?id=124113</a>&gt; </p>
+<dd> <p> UTF-8 now works correctly in function names, in unquoted HERE-document terminators, and in variable names used as array indexes. [perl #124113] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=124113">https://rt.perl.org/Ticket/Display.html?id=124113</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Repeated global pattern matches in scalar context on large tainted strings were exponentially slow depending on the current match position in the string. [perl #123202] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123202">https://rt.perl.org/Ticket/Display.html?id=123202</a>&gt; </p>
@@ -1411,7 +1411,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> The original visible value of <code>$/</code> is now preserved when it is set to an invalid value. Previously if you set <code>$/</code> to a reference to an array, for example, perl would produce a runtime error and not set <code>&quot;PL_rs&quot;</code>, but Perl code that checked <code>$/</code> would see the array reference. [perl #123218] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123218">https://rt.perl.org/Ticket/Display.html?id=123218</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In a regular expression pattern, a <font SIZE="-1">POSIX</font> class, like <code>&quot;[:ascii:]&quot;</code>, must be inside a bracketed character class, like <code>&quot;qr/[[:ascii:]]/&quot;</code>. A warning is issued when something looking like a <font SIZE="-1">POSIX</font> class is not inside a bracketed class. That warning wasn&#8217;t getting generated when the <font SIZE="-1">POSIX</font> class was negated: <code>&quot;[:^ascii:]&quot;</code>. This is now fixed. </p>
+<dd> <p> In a regular expression pattern, a POSIX class, like <code>&quot;[:ascii:]&quot;</code>, must be inside a bracketed character class, like <code>&quot;qr/[[:ascii:]]/&quot;</code>. A warning is issued when something looking like a POSIX class is not inside a bracketed class. That warning wasn&#8217;t getting generated when the POSIX class was negated: <code>&quot;[:^ascii:]&quot;</code>. This is now fixed. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Perl 5.14.0 introduced a bug whereby <code>&quot;eval { LABEL: }&quot;</code> would crash. This has been fixed. [perl #123652] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123652">https://rt.perl.org/Ticket/Display.html?id=123652</a>&gt;. </p>
@@ -1432,7 +1432,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> <code>&quot;stat -t&quot;</code> is now no longer treated as stackable, just like <code>&quot;-t stat&quot;</code>. [perl #123816] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123816">https://rt.perl.org/Ticket/Display.html?id=123816</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The following no longer causes a <font SIZE="-1">SEGV:</font> <code>&quot;qr{x+(y(?0))*}&quot;</code>. </p>
+<dd> <p> The following no longer causes a SEGV: <code>&quot;qr{x+(y(?0))*}&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Fixed infinite loop in parsing backrefs in regexp patterns. </p>
@@ -1441,7 +1441,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> Several minor bug fixes in behavior of Infinity and NaN, including warnings when stringifying Infinity-like or NaN-like strings. For example, ``NaNcy&#8217;&#8216; doesn&#8217;t numify to NaN anymore. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A bug in regular expression patterns that could lead to segfaults and other crashes has been fixed. This occurred only in patterns compiled with <code>&quot;/i&quot;</code> while taking into account the current <font SIZE="-1">POSIX</font> locale (which usually means they have to be compiled within the scope of <code>&quot;use locale&quot;</code>), and there must be a string of at least 128 consecutive bytes to match. [perl #123539] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123539">https://rt.perl.org/Ticket/Display.html?id=123539</a>&gt;. </p>
+<dd> <p> A bug in regular expression patterns that could lead to segfaults and other crashes has been fixed. This occurred only in patterns compiled with <code>&quot;/i&quot;</code> while taking into account the current POSIX locale (which usually means they have to be compiled within the scope of <code>&quot;use locale&quot;</code>), and there must be a string of at least 128 consecutive bytes to match. [perl #123539] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123539">https://rt.perl.org/Ticket/Display.html?id=123539</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;s///g&quot;</code> now works on very long strings (where there are more than 2 billion iterations) instead of dying with &#8216;Substitution loop&#8217;. [perl #103260] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=103260">https://rt.perl.org/Ticket/Display.html?id=103260</a>&gt;. [perl #123071] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123071">https://rt.perl.org/Ticket/Display.html?id=123071</a>&gt;. </p>
@@ -1483,7 +1483,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> <code>&quot;op_free()&quot;</code> and <code>&quot;scalarvoid()&quot;</code> no longer crash due to a stack overflow when freeing a deeply recursive op tree. [perl #108276] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=108276">https://rt.perl.org/Ticket/Display.html?id=108276</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In Perl 5.20.0, <code>$^N</code> accidentally had the internal <font SIZE="-1">UTF-8</font> flag turned off if accessed from a code block within a regular expression, effectively UTF-8-encoding the value. This has been fixed. [perl #123135] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123135">https://rt.perl.org/Ticket/Display.html?id=123135</a>&gt;. </p>
+<dd> <p> In Perl 5.20.0, <code>$^N</code> accidentally had the internal UTF-8 flag turned off if accessed from a code block within a regular expression, effectively UTF-8-encoding the value. This has been fixed. [perl #123135] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123135">https://rt.perl.org/Ticket/Display.html?id=123135</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A failed <code>&quot;semctl&quot;</code> call no longer overwrites existing items on the stack, which means that <code>&quot;(semctl(-1,0,0,0))[0]&quot;</code> no longer gives an ``uninitialized&#8217;&#8216; warning. </p>
@@ -1513,7 +1513,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> <code>&quot;(...) x ...&quot;</code> in scalar context used to corrupt the stack if one operand was an object with ``x&#8217;&#8216; overloading, causing erratic behavior. [perl #121827] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=121827">https://rt.perl.org/Ticket/Display.html?id=121827</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Assignment to a lexical scalar is often optimised away; for example in <code>&quot;my $x; $x = $y + $z&quot;</code>, the assign operator is optimised away and the add operator writes its result directly to <code>$x</code>. Various bugs related to this optimisation have been fixed. Certain operators on the right-hand side would sometimes fail to assign the value at all or assign the wrong value, or would call <font SIZE="-1">STORE</font> twice or not at all on tied variables. The operators affected were <code>&quot;$foo++&quot;</code>, <code>&quot;$foo--&quot;</code>, and <code>&quot;-$foo&quot;</code> under <code>&quot;use integer&quot;</code>, <code>&quot;chomp&quot;</code>, <code>&quot;chr&quot;</code> and <code>&quot;setpgrp&quot;</code>. </p>
+<dd> <p> Assignment to a lexical scalar is often optimised away; for example in <code>&quot;my $x; $x = $y + $z&quot;</code>, the assign operator is optimised away and the add operator writes its result directly to <code>$x</code>. Various bugs related to this optimisation have been fixed. Certain operators on the right-hand side would sometimes fail to assign the value at all or assign the wrong value, or would call STORE twice or not at all on tied variables. The operators affected were <code>&quot;$foo++&quot;</code>, <code>&quot;$foo--&quot;</code>, and <code>&quot;-$foo&quot;</code> under <code>&quot;use integer&quot;</code>, <code>&quot;chomp&quot;</code>, <code>&quot;chr&quot;</code> and <code>&quot;setpgrp&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> List assignments were sometimes buggy if the same scalar ended up on both sides of the assignment due to use of <code>&quot;tied&quot;</code>, <code>&quot;values&quot;</code> or <code>&quot;each&quot;</code>. The result would be the wrong value getting assigned. </p>
@@ -1535,7 +1535,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> Some subroutines with an explicit <code>&quot;return&quot;</code> were being made inlinable, contrary to the documentation, Now <code>&quot;return&quot;</code> always prevents inlining. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> On some systems, such as <font SIZE="-1">VMS,</font> <code>&quot;crypt&quot;</code> can return a non-ASCII string. If a scalar assigned to had contained a <font SIZE="-1">UTF-8</font> string previously, then <code>&quot;crypt&quot;</code> would not turn off the <font SIZE="-1">UTF-8</font> flag, thus corrupting the return value. This would happen with <code>&quot;$lexical = crypt ...&quot;</code>. </p>
+<dd> <p> On some systems, such as VMS, <code>&quot;crypt&quot;</code> can return a non-ASCII string. If a scalar assigned to had contained a UTF-8 string previously, then <code>&quot;crypt&quot;</code> would not turn off the UTF-8 flag, thus corrupting the return value. This would happen with <code>&quot;$lexical = crypt ...&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;crypt&quot;</code> no longer calls <code>&quot;FETCH&quot;</code> twice on a tied first argument. </p>
@@ -1556,10 +1556,10 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> <code>&quot;POSIX::localeconv()&quot;</code> now works properly on platforms which don&#8217;t have <code>&quot;LC_NUMERIC&quot;</code> and/or <code>&quot;LC_MONETARY&quot;</code>, or for which Perl has been compiled to disregard either or both of these locale categories. In such circumstances, there are now no entries for the corresponding values in the hash returned by <code>&quot;localeconv()&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;POSIX::localeconv()&quot;</code> now marks appropriately the values it returns as <font SIZE="-1">UTF-8</font> or not. Previously they were always returned as bytes, even if they were supposed to be encoded as <font SIZE="-1">UTF-8.</font> </p>
+<dd> <p> <code>&quot;POSIX::localeconv()&quot;</code> now marks appropriately the values it returns as UTF-8 or not. Previously they were always returned as bytes, even if they were supposed to be encoded as UTF-8. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> On Microsoft Windows, within the scope of <code>&quot;use locale&quot;</code>, the following <font SIZE="-1">POSIX</font> character classes gave results for many locales that did not conform to the <font SIZE="-1">POSIX</font> standard: <code>&quot;[[:alnum:]]&quot;</code>, <code>&quot;[[:alpha:]]&quot;</code>, <code>&quot;[[:blank:]]&quot;</code>, <code>&quot;[[:digit:]]&quot;</code>, <code>&quot;[[:graph:]]&quot;</code>, <code>&quot;[[:lower:]]&quot;</code>, <code>&quot;[[:print:]]&quot;</code>, <code>&quot;[[:punct:]]&quot;</code>, <code>&quot;[[:upper:]]&quot;</code>, <code>&quot;[[:word:]]&quot;</code>, and <code>&quot;[[:xdigit:]]&quot;</code>. This was because the underlying Microsoft implementation does not follow the standard. Perl now takes special precautions to correct for this. </p>
+<dd> <p> On Microsoft Windows, within the scope of <code>&quot;use locale&quot;</code>, the following POSIX character classes gave results for many locales that did not conform to the POSIX standard: <code>&quot;[[:alnum:]]&quot;</code>, <code>&quot;[[:alpha:]]&quot;</code>, <code>&quot;[[:blank:]]&quot;</code>, <code>&quot;[[:digit:]]&quot;</code>, <code>&quot;[[:graph:]]&quot;</code>, <code>&quot;[[:lower:]]&quot;</code>, <code>&quot;[[:print:]]&quot;</code>, <code>&quot;[[:punct:]]&quot;</code>, <code>&quot;[[:upper:]]&quot;</code>, <code>&quot;[[:word:]]&quot;</code>, and <code>&quot;[[:xdigit:]]&quot;</code>. This was because the underlying Microsoft implementation does not follow the standard. Perl now takes special precautions to correct for this. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Many issues have been detected by Coverity &lt;<a rel="nofollow" href="http://www.coverity.com/">http://www.coverity.com/</a>&gt; and fixed. </p>
@@ -1572,7 +1572,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> <code>&quot;qr(...\(...\)...)&quot;</code>, <code>&quot;qr[...\[...\]...]&quot;</code>, and <code>&quot;qr{...\{...\}...}&quot;</code> now work. Previously it was impossible to escape these three left-characters with a backslash within a regular expression pattern where otherwise they would be considered metacharacters, and the pattern opening delimiter was the character, and the closing delimiter was its mirror character. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;s///e&quot;</code> on tainted <font SIZE="-1">UTF-8</font> strings corrupted <code>&quot;pos()&quot;</code>. This bug, introduced in 5.20, is now fixed. [perl #122148] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122148">https://rt.perl.org/Ticket/Display.html?id=122148</a>&gt;. </p>
+<dd> <p> <code>&quot;s///e&quot;</code> on tainted UTF-8 strings corrupted <code>&quot;pos()&quot;</code>. This bug, introduced in 5.20, is now fixed. [perl #122148] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122148">https://rt.perl.org/Ticket/Display.html?id=122148</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A non-word boundary in a regular expression (<code>&quot;\B&quot;</code>) did not always match the end of the string; in particular <code>&quot;q{} =~ /\B/&quot;</code> did not match. This bug, introduced in perl 5.14, is now fixed. [perl #122090] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122090">https://rt.perl.org/Ticket/Display.html?id=122090</a>&gt;. </p>
@@ -1581,7 +1581,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> <code>&quot;&quot; P&quot; =~ /(?=.*P)P/&quot;</code> should match, but did not. This is now fixed. [perl #122171] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122171">https://rt.perl.org/Ticket/Display.html?id=122171</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Failing to compile <code>&quot;use Foo&quot;</code> in an <code>&quot;eval&quot;</code> could leave a spurious <code>&quot;BEGIN&quot;</code> subroutine definition, which would produce a ``Subroutine <font SIZE="-1">BEGIN</font> redefined&#8217;&#8216; warning on the next use of <code>&quot;use&quot;</code>, or other <code>&quot;BEGIN&quot;</code> block. [perl #122107] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122107">https://rt.perl.org/Ticket/Display.html?id=122107</a>&gt;. </p>
+<dd> <p> Failing to compile <code>&quot;use Foo&quot;</code> in an <code>&quot;eval&quot;</code> could leave a spurious <code>&quot;BEGIN&quot;</code> subroutine definition, which would produce a ``Subroutine BEGIN redefined&#8217;&#8216; warning on the next use of <code>&quot;use&quot;</code>, or other <code>&quot;BEGIN&quot;</code> block. [perl #122107] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122107">https://rt.perl.org/Ticket/Display.html?id=122107</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;method { BLOCK } ARGS&quot;</code> syntax now correctly parses the arguments if they begin with an opening brace. [perl #46947] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=46947">https://rt.perl.org/Ticket/Display.html?id=46947</a>&gt;. </p>
@@ -1630,13 +1630,13 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> The parser no longer gets confused by <code>&quot;\U=&quot;</code> within a double-quoted string. It used to produce a syntax error, but now compiles it correctly. [perl #80368] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=80368">https://rt.perl.org/Ticket/Display.html?id=80368</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> It has always been the intention for the <code>&quot;-B&quot;</code> and <code>&quot;-T&quot;</code> file test operators to treat <font SIZE="-1">UTF-8</font> encoded files as text. (perlfunc has been updated to say this.) Previously, it was possible for some files to be considered <font SIZE="-1">UTF-8</font> that actually weren&#8217;t valid <font SIZE="-1">UTF-8.</font> This is now fixed. The operators now work on <font SIZE="-1">EBCDIC</font> platforms as well. </p>
+<dd> <p> It has always been the intention for the <code>&quot;-B&quot;</code> and <code>&quot;-T&quot;</code> file test operators to treat UTF-8 encoded files as text. (perlfunc has been updated to say this.) Previously, it was possible for some files to be considered UTF-8 that actually weren&#8217;t valid UTF-8. This is now fixed. The operators now work on EBCDIC platforms as well. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Under some conditions warning messages raised during regular expression pattern compilation were being output more than once. This has now been fixed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Perl 5.20.0 introduced a regression in which a <font SIZE="-1">UTF-8</font> encoded regular expression pattern that contains a single <font SIZE="-1">ASCII</font> lowercase letter did not match its uppercase counterpart. That has been fixed in both 5.20.1 and 5.22.0. [perl #122655] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122655">https://rt.perl.org/Ticket/Display.html?id=122655</a>&gt; </p>
+<dd> <p> Perl 5.20.0 introduced a regression in which a UTF-8 encoded regular expression pattern that contains a single ASCII lowercase letter did not match its uppercase counterpart. That has been fixed in both 5.20.1 and 5.22.0. [perl #122655] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122655">https://rt.perl.org/Ticket/Display.html?id=122655</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Constant folding could incorrectly suppress warnings if lexical warnings (<code>&quot;use warnings&quot;</code> or <code>&quot;no warnings&quot;</code>) were not in effect and <code>$^W</code> were false at compile time and true at run time. </p>
@@ -1675,7 +1675,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> Some unterminated <code>&quot;(?(...)...)&quot;</code> constructs in regular expressions would either crash or give erroneous error messages. <code>&quot;/(?(1)/&quot;</code> is one such example. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;pack &quot;w&quot;, $tied&quot;</code> no longer calls <font SIZE="-1">FETCH</font> twice. </p>
+<dd> <p> <code>&quot;pack &quot;w&quot;, $tied&quot;</code> no longer calls FETCH twice. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> List assignments like <code>&quot;($x, $z) = (1, $y)&quot;</code> now work correctly if <code>$x</code> and <code>$y</code> have been aliased by <code>&quot;foreach&quot;</code>. </p>
@@ -1696,19 +1696,19 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> Fatal warnings no longer prevent the output of syntax errors. [perl #122966] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122966">https://rt.perl.org/Ticket/Display.html?id=122966</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed a NaN double-to-long-double conversion error on <font SIZE="-1">VMS.</font> For quiet NaNs (and only on Itanium, not Alpha) negative infinity instead of NaN was produced. </p>
+<dd> <p> Fixed a NaN double-to-long-double conversion error on VMS. For quiet NaNs (and only on Itanium, not Alpha) negative infinity instead of NaN was produced. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Fixed the issue that caused <code>&quot;make distclean&quot;</code> to incorrectly leave some files behind. [perl #122820] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122820">https://rt.perl.org/Ticket/Display.html?id=122820</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">AIX</font> now sets the length in <code>&quot;getsockopt&quot;</code> correctly. [perl #120835] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=120835">https://rt.perl.org/Ticket/Display.html?id=120835</a>&gt;. [cpan #91183] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=91183">https://rt.cpan.org/Ticket/Display.html?id=91183</a>&gt;. [cpan #85570] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=85570">https://rt.cpan.org/Ticket/Display.html?id=85570</a>&gt;. </p>
+<dd> <p> AIX now sets the length in <code>&quot;getsockopt&quot;</code> correctly. [perl #120835] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=120835">https://rt.perl.org/Ticket/Display.html?id=120835</a>&gt;. [cpan #91183] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=91183">https://rt.cpan.org/Ticket/Display.html?id=91183</a>&gt;. [cpan #85570] &lt;<a rel="nofollow" href="https://rt.cpan.org/Ticket/Display.html?id=85570">https://rt.cpan.org/Ticket/Display.html?id=85570</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The optimization phase of a regexp compilation could run ``forever&#8217;&#8216; and exhaust all memory under certain circumstances; now fixed. [perl #122283] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122283">https://rt.perl.org/Ticket/Display.html?id=122283</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The test script <i>t/op/crypt.t</i> now uses the <font SIZE="-1">SHA-256</font> algorithm if the default one is disabled, rather than giving failures. [perl #121591] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=121591">https://rt.perl.org/Ticket/Display.html?id=121591</a>&gt;. </p>
+<dd> <p> The test script <i>t/op/crypt.t</i> now uses the SHA-256 algorithm if the default one is disabled, rather than giving failures. [perl #121591] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=121591">https://rt.perl.org/Ticket/Display.html?id=121591</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Fixed an off-by-one error when setting the size of a shared array. [perl #122950] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122950">https://rt.perl.org/Ticket/Display.html?id=122950</a>&gt;. </p>
@@ -1720,7 +1720,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <p> The bug was introduced in 5.20.0 [perl #122995] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122995">https://rt.perl.org/Ticket/Display.html?id=122995</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> On Win32, if a variable was <code>&quot;local&quot;</code>-ized in a pseudo-process that later forked, restoring the original value in the child pseudo-process caused memory corruption and a crash in the child pseudo-process (and therefore the <font SIZE="-1">OS</font> process). [perl #40565] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=40565">https://rt.perl.org/Ticket/Display.html?id=40565</a>&gt;. </p>
+<dd> <p> On Win32, if a variable was <code>&quot;local&quot;</code>-ized in a pseudo-process that later forked, restoring the original value in the child pseudo-process caused memory corruption and a crash in the child pseudo-process (and therefore the OS process). [perl #40565] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=40565">https://rt.perl.org/Ticket/Display.html?id=40565</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Calling <code>&quot;write&quot;</code> on a format with a <code>&quot;^**&quot;</code> field could produce a panic in <code>&quot;sv_chop()&quot;</code> if there were insufficient arguments or if the variable used to fill the field was empty. [perl #123245] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123245">https://rt.perl.org/Ticket/Display.html?id=123245</a>&gt;. </p>
@@ -1738,7 +1738,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> <code>&quot;scalar()&quot;</code> now propagates lvalue context, so that <code>&quot;for(scalar($#foo)) { ... }&quot;</code> can modify <code>$#foo</code> through <code>$_</code>. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;qr/@array(?{block})/&quot;</code> no longer dies with ``Bizarre copy of <font SIZE="-1">ARRAY&#8217;&#8216;.</font> [perl #123344] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123344">https://rt.perl.org/Ticket/Display.html?id=123344</a>&gt;. </p>
+<dd> <p> <code>&quot;qr/@array(?{block})/&quot;</code> no longer dies with ``Bizarre copy of ARRAY&#8217;&#8216;. [perl #123344] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123344">https://rt.perl.org/Ticket/Display.html?id=123344</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;eval &#8216;$variable&#8217;&quot;</code> in nested named subroutines would sometimes look up a global variable even with a lexical variable in scope. </p>
@@ -1764,13 +1764,13 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> A goal is for Perl to be able to be recompiled to work reasonably well on any Unicode version. In Perl 5.22, though, the earliest such version is Unicode 5.1 (current is 7.0). </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">EBCDIC</font> platforms </p>
+<dd> <p> EBCDIC platforms </p>
  </dd>
 <dl>
 <dd>  </dd>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;cmp&quot;</code> (and hence <code>&quot;sort&quot;</code>) operators do not necessarily give the correct results when both operands are UTF-EBCDIC encoded strings and there is a mixture of <font SIZE="-1">ASCII</font> and/or control characters, along with other characters. </p>
+<dd> <p> The <code>&quot;cmp&quot;</code> (and hence <code>&quot;sort&quot;</code>) operators do not necessarily give the correct results when both operands are UTF-EBCDIC encoded strings and there is a mixture of ASCII and/or control characters, along with other characters. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Ranges containing <code>&quot;\N{...}&quot;</code> in the <code>&quot;tr///&quot;</code> (and <code>&quot;y///&quot;</code>) transliteration operators are treated differently than the equivalent ranges in regular expression patterns. They should, but don&#8217;t, cause the values in the ranges to all be treated as Unicode code points, and not native ones. (``Version 8 Regular Expressions&#8217;&#8216; in perlre gives details as to how it should work.) </p>
@@ -1779,7 +1779,7 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd> <p> Encode and encoding are mostly broken. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Many <font SIZE="-1">CPAN</font> modules that are shipped with core show failing tests. </p>
+<dd> <p> Many CPAN modules that are shipped with core show failing tests. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;pack&quot;</code>/<code>&quot;unpack&quot;</code> with <code>&quot;U0&quot;</code> format may not work properly. </p>
@@ -1843,21 +1843,21 @@ description: "perl5220delta – what is new for perl v5.22.0"
 <dd>  </dd></dl>
 </dl>
 <h2>Obituary</h2>
-<p> Brian McCauley died on May 8, 2015. He was a frequent poster to Usenet, Perl Monks, and other Perl forums, and made several <font SIZE="-1">CPAN</font> contributions under the nick <font SIZE="-1">NOBULL,</font> including to the Perl <font SIZE="-1">FAQ.</font> He attended almost every YAPC::Europe, and indeed, helped organise YAPC::Europe 2006 and the <font SIZE="-1">QA</font> Hackathon 2009. His wit and his delight in intricate systems were particularly apparent in his love of board games; many Perl mongers will have fond memories of playing Fluxx and other games with Brian. He will be missed.  </p>
+<p> Brian McCauley died on May 8, 2015. He was a frequent poster to Usenet, Perl Monks, and other Perl forums, and made several CPAN contributions under the nick NOBULL, including to the Perl FAQ. He attended almost every YAPC::Europe, and indeed, helped organise YAPC::Europe 2006 and the QA Hackathon 2009. His wit and his delight in intricate systems were particularly apparent in his love of board games; many Perl mongers will have fond memories of playing Fluxx and other games with Brian. He will be missed.  </p>
 <h2>Acknowledgements</h2>
 <p> Perl 5.22.0 represents approximately 12 months of development since Perl 5.20.0 and contains approximately 590,000 lines of changes across 2,400 files from 94 authors. </p>
 <p> Excluding auto-generated files, documentation and release tools, there were approximately 370,000 lines of changes to 1,500 .pm, .t, .c and .h files. </p>
 <p> Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.22.0: </p>
 <p> Aaron Crane, Abhijit Menon-Sen, Abigail, Alberto Simões, Alex Solovey, Alex Vandiver, Alexandr Ciornii, Alexandre (Midnite) Jousset, Andreas König, Andreas Voegele, Andrew Fresh, Andy Dougherty, Anthony Heading, Aristotle Pagaltzis, brian d foy, Brian Fraser, Chad Granum, Chris &#8216;BinGOs&#8217; Williams, Craig A. Berry, Dagfinn Ilmari Mannsåker, Daniel Dragan, Darin McBride, Dave Rolsky, David Golden, David Mitchell, David Wheeler, Dmitri Tikhonov, Doug Bell, E. Choroba, Ed J, Eric Herman, Father Chrysostomos, George Greer, Glenn D. Golden, Graham Knop, H.Merijn Brand, Herbert Breunung, Hugo van der Sanden, James E Keenan, James McCoy, James Raspass, Jan Dubois, Jarkko Hietaniemi, Jasmine Ngan, Jerry D. Hedden, Jim Cromie, John Goodyear, kafka, Karen Etheridge, Karl Williamson, Kent Fredric, kmx, Lajos Veres, Leon Timmermans, Lukas Mai, Mathieu Arnold, Matthew Horsfall, Max Maischein, Michael Bunk, Nicholas Clark, Niels Thykier, Niko Tyni, Norman Koch, Olivier Mengué, Peter John Acklam, Peter Martini, Petr Písař, Philippe Bruhat (BooK), Pierre Bogossian, Rafael Garcia-Suarez, Randy Stauner, Reini Urban, Ricardo Signes, Rob Hoelz, Rostislav Skudnov, Sawyer X, Shirakata Kentaro, Shlomi Fish, Sisyphus, Slaven Rezic, Smylers, Steffen Müller, Steve Hay, Sullivan Beck, syber, Tadeusz Sośnierz, Thomas Sibley, Todd Rinaldo, Tony Cook, Vincent Pit, Vladimir Marek, Yaroslav Kuzmin, Yves Orton, Ævar Arnfjörð Bjarmason. </p>
 <p> The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. </p>
-<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.  </p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish. </p>
+<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.  </p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at &lt;<a rel="nofollow" href="https://rt.perl.org/">https://rt.perl.org/</a>&gt;. There may also be information at &lt;<a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a>&gt;, the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font>  </p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

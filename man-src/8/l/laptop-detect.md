@@ -25,7 +25,7 @@ description: "laptop-detect – attempt to detect a laptop"
 <code>1</code> most likely NOT running on a laptop
 <code>2</code> usage error (arguments supplied)</pre>
 <h2>Files</h2>
-<p><i>/proc/acpi/battery</i><br />
+<p><i>/proc/acpi/battery</i><br/>
  <i>/proc/pmu/info</i></p>
 <h2>Authors</h2>
 <p>Franklin PIAT &lt;fpiat [at] bigfoot.com&gt;</p>

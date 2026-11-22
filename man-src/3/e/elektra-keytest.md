@@ -44,7 +44,7 @@ returns also true because check is indirect below key
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the key object to work with<br />
+</dt><dd> <i>key</i> the key object to work with<br/>
  <i>check</i> the key to find the relative position of</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -116,7 +116,7 @@ does not return true, because there is only a indirect relation
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the key object to work with<br />
+</dt><dd> <i>key</i> the key object to work with<br/>
  <i>check</i> the key to find the relative position of</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

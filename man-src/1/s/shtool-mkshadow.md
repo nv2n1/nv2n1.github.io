@@ -21,13 +21,13 @@ description: "shtool mkshadow – GNU shtool create shadow tree using symlinks"
 <dt><code>-t</code>, <code>&#8211;trace</code></dt>
 <dd> Enable the output of the essential shell commands which are executed.</dd>
 <dt><code>-a</code>, <code>&#8211;all</code></dt>
-<dd> Really shadow all files and directories in <i>src-dir</i>. Default is to skip <font SIZE="-1">CVS</font> related files and directories, backup files, object files, etc.</dd></dl>
+<dd> Really shadow all files and directories in <i>src-dir</i>. Default is to skip CVS related files and directories, backup files, object files, etc.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   shell script
  shtool mkshadow -v -a . /tmp/shadow
 </pre>
 <h2>HISTORY</h2>
-<p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>mkshadow</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1998 for <code>Apache</code>. It was later revised and taken over into <font SIZE="-1"><code>GNU</code></font><code> shtool</code>.</p>
+<p> The <code>GNU</code><code> shtool</code> <code>mkshadow</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1998 for <code>Apache</code>. It was later revised and taken over into <code>GNU</code><code> shtool</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1). </p>

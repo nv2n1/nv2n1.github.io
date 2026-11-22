@@ -30,7 +30,7 @@ description: "ghc-pkg – GHC Haskell Cabal package manager"
 <dt><code>list</code> [<i>pkg</i>]&#8230;</dt>
 <dd> List registered packages in the global database, and also the user database if <code>&#8211;user</code> is given. If a package name is given all the registered versions will be listed in ascending order. Accepts the <code>&#8211;simple-output</code> flag.</dd>
 <dt><code>dot</code></dt>
-<dd> Generate a graph of the package dependencies in a form suitable for input for the graphviz tools. For example, to generate a PDF of the dependency graph:<br />
+<dd> Generate a graph of the package dependencies in a form suitable for input for the graphviz tools. For example, to generate a PDF of the dependency graph:<br/>
  <code> dot tred dot -Tpdf &gt;pkgs.pdf</code></dd>
 <dt><code>find-module</code> <i>module</i></dt>
 <dd> List registered packages exposing module <i>module</i> in the global database, and also the user database if <code>&#8211;user</code> is given. All the registered versions will be listed in ascending order. Accepts the <code>&#8211;simple-output</code> flag.</dd>

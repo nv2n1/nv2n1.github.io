@@ -139,7 +139,7 @@ description: "bltk – tool kit is used to measure battery life and performance 
 <dt><code>-F,</code> &#8211;file</dt>
 <dd> workload file</dd>
 <dt><code>-W,</code> &#8211;prog</dt>
-<dd> workload program <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>name of player (player workload, default &#8216;mplayer&#8217;)<br />
+<dd> workload program <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>name of player (player workload, default &#8216;mplayer&#8217;)<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>name of web-browser (reader workload, default &#8216;firefox&#8217;)</dd>
 <dt><code>-L,</code> &#8211;title</dt>
 <dd> title of web-browser document</dd>

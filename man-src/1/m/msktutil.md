@@ -98,11 +98,11 @@ description: "msktutil – fetches and manages kerberos keytabs in an Active Dir
 <dd> Unsets the DONT_EXPIRE_PASSWORD flag in the userAccountControl attribute. Generally requires administrator credentials.</dd>
 <dt>&#8211;enctypes &lt;integer&gt;</dt>
 <dd> Sets the supported encryption types in the msDs-supportedEncryptionTypes field. </dd>
-<p> You may OR together the following values:<br />
-&nbsp;<wbr>&nbsp;<wbr>0x1=des-cbc-crc<br />
-&nbsp;<wbr>&nbsp;<wbr>0x2=des-cbc-md5<br />
-&nbsp;<wbr>&nbsp;<wbr>0x4=rc4-hmac-md5<br />
-&nbsp;<wbr>&nbsp;<wbr>0x8=aes128-cts-hmac-sha1<br />
+<p> You may OR together the following values:<br/>
+&nbsp;<wbr>&nbsp;<wbr>0x1=des-cbc-crc<br/>
+&nbsp;<wbr>&nbsp;<wbr>0x2=des-cbc-md5<br/>
+&nbsp;<wbr>&nbsp;<wbr>0x4=rc4-hmac-md5<br/>
+&nbsp;<wbr>&nbsp;<wbr>0x8=aes128-cts-hmac-sha1<br/>
 &nbsp;<wbr>&nbsp;<wbr>0x10=aes256-cts-hmac-sha1 </p>
 <p> This value is used to determine which encryption types AD will offer to use, and which encryption types to put in the keytab. </p>
 <p> If the value is set to 0x3 (that is: only the two DES types), it also attempts to set the DES-only flag in userAccountControl. </p>

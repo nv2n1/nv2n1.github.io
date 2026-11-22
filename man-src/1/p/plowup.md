@@ -239,9 +239,9 @@ description: "plowup – Simple upload manager for file sharing websites"
 <p> # Change destination filename $ plowup -a &#8216;myuser:mypassword&#8217; turbobit /path/myfile.txt:anothername.txt</p>
 <h3>3) Remote upload</h3>
 <p> Note: URL fetching is rarely implemented by modules. </p>
-<p> # Feature dedicated to premium members $ plowup -a myuser:mypassword rapidgator \<br />
+<p> # Feature dedicated to premium members $ plowup -a myuser:mypassword rapidgator \<br/>
 &nbsp;<wbr><a rel="nofollow" href="http://www.somewherefarbeyond.com/somefile">http://www.somewherefarbeyond.com/somefile</a> </p>
-<p> # Change destination filename $ plowup -a myuser:mypassword rapidgator \<br />
+<p> # Change destination filename $ plowup -a myuser:mypassword rapidgator \<br/>
 &nbsp;<wbr><a rel="nofollow" href="http://www.somewherefarbeyond.com/somefile:anothername">http://www.somewherefarbeyond.com/somefile:anothername</a> </p>
 <h2>FILES</h2>
 <dl>

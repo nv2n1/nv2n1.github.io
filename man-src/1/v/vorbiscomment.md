@@ -10,8 +10,8 @@ description: "vorbiscomment – List or edit comments in Ogg Vorbis files"
 
 <p> vorbiscomment - List or edit comments in Ogg Vorbis files  </p>
 <h2>SYNOPSIS</h2>
-<p> <code>vorbiscomment</code> <code>[-l]</code> [<code>-R</code>] [<code>-e</code>] <i>file.ogg</i> <br />
- <code>vorbiscomment</code> <code>-a</code> <code>[ -c commentfile | -t ``name=value&#8217;&#8216; ]</code> [<code>-q</code>] [<code>-R</code>] [<code>-e</code>] <i>in.ogg</i> <i>[out.ogg]</i> <br />
+<p> <code>vorbiscomment</code> <code>[-l]</code> [<code>-R</code>] [<code>-e</code>] <i>file.ogg</i> <br/>
+ <code>vorbiscomment</code> <code>-a</code> <code>[ -c commentfile | -t ``name=value&#8217;&#8216; ]</code> [<code>-q</code>] [<code>-R</code>] [<code>-e</code>] <i>in.ogg</i> <i>[out.ogg]</i> <br/>
  <code>vorbiscomment</code> <code>-w</code> <code>[ -c commentfile | -t ``name=value&#8217;&#8216; ]</code> [<code>-q</code>] [<code>-R</code>] [<code>-e</code>] <i>in.ogg</i> <i>[out.ogg]</i> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>vorbiscomment</code> Reads, modifies, and appends Ogg Vorbis audio file metadata tags. </p>
@@ -48,34 +48,34 @@ description: "vorbiscomment – List or edit comments in Ogg Vorbis files"
  </dd></dl>
 <h2>EXAMPLES</h2>
 <p> To just see what comment tags are in a file: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>vorbiscomment -l file.ogg </p>
 <p> To edit those comments: </p>
-<p> <br />
-&nbsp;<wbr>vorbiscomment -l file.ogg&nbsp;<wbr>&gt;&nbsp;<wbr>file.txt <br />
-&nbsp;<wbr>[edit the comments in file.txt to your satisfaction] <br />
+<p> <br/>
+&nbsp;<wbr>vorbiscomment -l file.ogg&nbsp;<wbr>&gt;&nbsp;<wbr>file.txt <br/>
+&nbsp;<wbr>[edit the comments in file.txt to your satisfaction] <br/>
 &nbsp;<wbr>vorbiscomment -w -c file.txt file.ogg newfile.ogg </p>
 <p> To simply add a comment: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>vorbiscomment -a -t&nbsp;<wbr>&#8216;ARTIST=No One You Know&#8217;&nbsp;<wbr>file.ogg newfile.ogg </p>
 <p> To add a set of comments from the standard input: </p>
-<p> <br />
-&nbsp;<wbr>vorbiscomment -a file.ogg <br />
-&nbsp;<wbr>ARTIST=No One You Know <br />
-&nbsp;<wbr>ALBUM=The Famous Album <br />
+<p> <br/>
+&nbsp;<wbr>vorbiscomment -a file.ogg <br/>
+&nbsp;<wbr>ARTIST=No One You Know <br/>
+&nbsp;<wbr>ALBUM=The Famous Album <br/>
 &nbsp;<wbr>&lt;ctrl-d&gt; </p>
 <h2>TAG FORMAT</h2>
 <p> See <a rel="nofollow" href="http://xiph.org/vorbis/doc/v-comment.html">http://xiph.org/vorbis/doc/v-comment.html</a> for documentation on the Ogg Vorbis tag format, including a suggested list of canonical tag names. </p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Program Authors:</dt>
-<dd> <p> <br />
- Michael Smith &lt;msmith [at] xiph.org&gt; <br />
- Ralph Giles &lt;giles [at] xiph.org&gt; <br />
+<dd> <p> <br/>
+ Michael Smith &lt;msmith [at] xiph.org&gt; <br/>
+ Ralph Giles &lt;giles [at] xiph.org&gt; <br/>
  </p>
  </dd>
 <dt>Manpage Author:</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Christopher L Cheney &lt;ccheney [at] debian.org&gt; </p>
  </dd></dl>
 <h2>SEE ALSO</h2>

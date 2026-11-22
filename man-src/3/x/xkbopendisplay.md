@@ -10,7 +10,7 @@ description: "XkbOpenDisplay – Checks for a compatible version of the Xkb exte
 <p>XkbOpenDisplay &#8211; Checks for a compatible version of the Xkb extension in both the library and the server, and initializes the extension for use. </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Display *XkbOpenDisplay</code> <code>(char *</code><i>display_name</i><code>,</code> <code>int *</code><i>event_rtrn</i><code>,</code> <code>int *</code><i>error_rtrn</i><code>,</code> <code>int *</code><i>major_in_out</i><code>,</code> <code>int *</code><i>minor_in_out</i><code>,</code> <code>int *</code><i>reason_rtrn</i><code>);</code><br />
+<dt> <code>Display *XkbOpenDisplay</code> <code>(char *</code><i>display_name</i><code>,</code> <code>int *</code><i>event_rtrn</i><code>,</code> <code>int *</code><i>error_rtrn</i><code>,</code> <code>int *</code><i>major_in_out</i><code>,</code> <code>int *</code><i>minor_in_out</i><code>,</code> <code>int *</code><i>reason_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
@@ -50,7 +50,7 @@ description: "XkbOpenDisplay – Checks for a compatible version of the Xkb exte
 <p> The <i>XkbOpenDisplay </i> function returns NULL and closes the display if the server extension version is not compatible with the library extension version or if the server extension is not present.</dl>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">BadAccess</font></dt>
+<dt>BadAccess</dt>
 <dd>The Xkb extension has not been properly initialized</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkblibraryversion/">XkbLibraryVersion</a></code>(3), <code><a href="/docs/linux/man/3-xkbqueryextension/">XkbQueryExtension</a></code>(3), <code><a href="/docs/linux/man/3-xopendisplay/">XOpenDisplay</a></code>(3)</p>

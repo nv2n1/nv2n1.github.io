@@ -16,42 +16,42 @@ description: "efix – convert between fax, text, bit-map and gray-scale formats
 <dl>
 <dt><code>-i </code><i>f</i></dt>
 <dd> the input image is in format <i>f</i>. Default is to automatically determine the input type from its contents. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fax</code></dt>
 <dd> fax (&quot;Group3&quot;) 1-D coded image </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>text</code></dt>
 <dd> text. Line feeds separate lines, form feeds cause page breaks and tabs are expanded assuming tabs every 8 columns. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pbm</code></dt>
 <dd> raw PBM (portable bit map) </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>tiffg3</code></dt>
 <dd> TIFF format with Group 3 (fax) compression. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>tiffraw</code></dt>
 <dd> TIFF format with no compression. </dd>
 <dt><code>-o </code><i>f</i></dt>
 <dd> write the output in format <i>f</i>. Default is tiffg3. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fax</code></dt>
 <dd> fax (&quot;Group3&quot;) 1-D coded image </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pbm</code></dt>
 <dd> raw PBM </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pgm</code></dt>
 <dd> raw PGM (Portable Gray Map). Gray-scale values are produced by summing pixels in 4&#215;4 pixel blocks. The output file is 1/4 of the size given by -p. The resulting image has 17 discrete values between 0 and 255. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pcl</code></dt>
 <dd> HP-PCL (e.g. HP LaserJet). </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ps</code></dt>
 <dd> encapsulated Postscript (e.g. Apple Laserwriter). The file is compressed using differential coding vertically and run-length coding horizontally. There is no provision for positioning the image within the page and so the image will appear at the lower left corner of the page when printed. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>tiffg3</code></dt>
 <dd> TIFF format with Group 3 (fax) compression. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>tiffraw</code></dt>
 <dd> TIFF format with no compression. </dd>
 <dt><code>-n </code><i>pat</i></dt>
@@ -60,10 +60,10 @@ description: "efix – convert between fax, text, bit-map and gray-scale formats
 <dd> print messages of type in string <i>lvl</i>. Each <i>lower-case</i> letter in <i>lvl</i> enables one type of message: </dd>
 <dl>
 <dt>
-</dt><dd> <code>e &#8211; </code> errors<br />
- <code>w &#8211; </code> warnings<br />
- <code>i &#8211; </code> information messages<br />
- <code>a &#8211; </code> program arguments<br />
+</dt><dd> <code>e &#8211; </code> errors<br/>
+ <code>w &#8211; </code> warnings<br/>
+ <code>i &#8211; </code> information messages<br/>
+ <code>a &#8211; </code> program arguments<br/>
  <code>f &#8211; </code> file format details</dd></dl>
 <dl>
 <dt>

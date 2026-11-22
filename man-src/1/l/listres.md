@@ -33,7 +33,7 @@ description: "listres – list resources in widgets"
 <h2>BUGS</h2>
 <p> On operating systems that do not support dynamic linking of run-time routines, this program must have all of its known widgets compiled in. The sources provide several tools for automating this process for various widget sets.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 1994 X Consortium<br />
+<p> Copyright 1994 X Consortium<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHOR</h2>
 <p> Jim Fulton, MIT X Consortium </p>

@@ -24,7 +24,7 @@ description: "systemd-journald.service, systemd-journald.socket, systemd-journal
 <dl>
 <dd>&bull; Simple system log messages, via the libc <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) call</dd></dl>
 <dl>
-<dd>&bull; Structured system log messages via the native Journal API, see <code><a href="/docs/linux/man/3-sd_journal_print/">sd_journal_print</a></code>(3) and m[blue]<code>Native Journal Protocol</code>m[]<font SIZE="-2">[1]</font></dd></dl>
+<dd>&bull; Structured system log messages via the native Journal API, see <code><a href="/docs/linux/man/3-sd_journal_print/">sd_journal_print</a></code>(3) and m[blue]<code>Native Journal Protocol</code>m[][1]</dd></dl>
 <dl>
 <dd>&bull; Standard output and standard error of service units. For further details see below.</dd></dl>
 <dl>
@@ -71,7 +71,7 @@ systemd-tmpfiles --create --prefix /var/log/journal</pre>
 <p> Note that these kernel command line options are only honoured by the default namespace, see above.</p>
 <h2>Access Control</h2>
 <p>Journal files are, by default, owned and readable by the &quot;systemd-journal&quot; system group but are not writable. Adding a user to this group thus enables them to read the journal files. </p>
-<p> By default, each user, with a UID outside the range of system users, dynamic service users, and the nobody user, will get their own set of journal files in /var/log/journal/. See m[blue]<code>Users, Groups, UIDs and GIDs on systemd systems</code>m[]<font SIZE="-2">[2]</font> for more details about UID ranges. These journal files will not be owned by the user, however, in order to avoid that the user can write to them directly. Instead, file system ACLs are used to ensure the user gets read access only. </p>
+<p> By default, each user, with a UID outside the range of system users, dynamic service users, and the nobody user, will get their own set of journal files in /var/log/journal/. See m[blue]<code>Users, Groups, UIDs and GIDs on systemd systems</code>m[][2] for more details about UID ranges. These journal files will not be owned by the user, however, in order to avoid that the user can write to them directly. Instead, file system ACLs are used to ensure the user gets read access only. </p>
 <p> Additional users and groups may be granted access to journal files via file system access control lists (ACL). Distributions and administrators may choose to grant read access to all members of the &quot;wheel&quot; and &quot;adm&quot; system groups with a command such as the following: </p>
 <dl>
 <dd>

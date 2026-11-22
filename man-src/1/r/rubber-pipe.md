@@ -10,7 +10,7 @@ description: "rubber – a building system for LaTeX documents"
 
 <p> rubber &#8211; a building system for LaTeX documents </p>
 <h2>SYNOPSIS</h2>
-<p> <code>rubber</code> [<i>options</i>] <i>sources &#8230;</i><br />
+<p> <code>rubber</code> [<i>options</i>] <i>sources &#8230;</i><br/>
  <code>rubber-pipe</code> [<i>options</i>] </p>
 <h2>DESCRIPTION</h2>
 <p> Rubber is a wrapper for LaTeX and companion programs. Its purpose is, given a LaTeX source to process, to compile it enough times to resolve all references, possibly running satellite programs such as BibTeX, makeindex, Metapost, etc. to produce appropriate data files. </p>

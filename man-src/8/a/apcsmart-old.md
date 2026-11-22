@@ -11,7 +11,7 @@ description: "apcsmart-old – Driver for American Power Conversion Smart Protoc
 <h2>Synopsis</h2>
 <p><code>apcsmart-old</code> -h <code>apcsmart-old</code> -a <i>UPS_NAME</i> [<i>OPTIONS</i>]</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  This man page only documents the hardware-specific features of the apcsmart-old driver. For information about the core driver, see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8). </dd>
 <h2>Supported Hardware</h2>
 <p>apcsmart-old should recognize all recent APC models that use a serial protocol at 2400 bps. This is primarily the Smart-UPS, Matrix-UPS and Back-UPS Pro lines. </p>

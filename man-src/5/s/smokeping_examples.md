@@ -10,7 +10,7 @@ smokeping_examples - Examples of Smokeping configuration
 
 <h2>Overview</h2>
 
-This document provides some examples of Smokeping configuration files. All the examples can be found in the <tt>&quot;examples&quot;</tt> directory in the Smokeping documentation. Note that the <font SIZE="-1">DNS</font> names in the examples are non-functional. 
+This document provides some examples of Smokeping configuration files. All the examples can be found in the <tt>&quot;examples&quot;</tt> directory in the Smokeping documentation. Note that the DNS names in the examples are non-functional. 
 
  Details of the syntax and all the variables are found in smokeping_config and in the documentation of the corresponding probe, if applicable. 
 
@@ -67,9 +67,9 @@ Currently the examples differ only in the <tt>&quot;Probes&quot;</tt> and <tt>&q
  + EchoPingHttp
  pings = 5
  url = /test-url</pre></dd><dt>Probe explanation
-</dt><dd>Here we have three probes: FPing for the regular <font SIZE="-1">ICMP</font> pings, <font SIZE="-1">DNS</font> for name server latency measurement and EchoPingHttp for web servers. 
- The FPing probe runs with the default parameters, except that the <font SIZE="-1">ICMP</font> packet size is 1000 bytes instead of the default 56 bytes. 
- The <font SIZE="-1">DNS</font> and EchoPingHttp probes have been configured to be a bit more gentle with the servers, as they only do 5 queries (pings) instead of the default 20 (or whatever is specified in the Database section). However, <font SIZE="-1">DNS</font> queries are made more often: 5 queries every 3 minutes instead of every 5 minutes.
+</dt><dd>Here we have three probes: FPing for the regular ICMP pings, DNS for name server latency measurement and EchoPingHttp for web servers. 
+ The FPing probe runs with the default parameters, except that the ICMP packet size is 1000 bytes instead of the default 56 bytes. 
+ The DNS and EchoPingHttp probes have been configured to be a bit more gentle with the servers, as they only do 5 queries (pings) instead of the default 20 (or whatever is specified in the Database section). However, DNS queries are made more often: 5 queries every 3 minutes instead of every 5 minutes.
 </dd><dt>Target configuration
 </dt><dd><pre> *** Targets ***
  probe = FPing
@@ -148,7 +148,7 @@ Currently the examples differ only in the <tt>&quot;Probes&quot;</tt> and <tt>&q
  title = Large packetsize (5000 bytes)
  probe = FPingLarge
  host = myhost2.example</pre></dd><dt>Target explanation
-</dt><dd>The target section shows two host, myhost1.example and myhost2.example, being pinged with two differently sized <font SIZE="-1">ICMP</font> packets. This time the tree is divided by the target host rather than the probe.</dd></dl>
+</dt><dd>The target section shows two host, myhost1.example and myhost2.example, being pinged with two differently sized ICMP packets. This time the tree is divided by the target host rather than the probe.</dd></dl>
 
 <h3>Example 4: config.targetvars-with-Curl</h3>
 
@@ -200,8 +200,8 @@ Currently the examples differ only in the <tt>&quot;Probes&quot;</tt> and <tt>&q
  menu = myhost2
  title = FTP latency for myhost2
  host = myhost2.example</pre></dd><dt>Target explanation
-</dt><dd>The target tree is divided into an <font SIZE="-1">HTTP</font> branch and an <font SIZE="-1">FTP</font> one. The servers ``myhost1.example'' and ``myhost2.example'' are probed in both. The third server, ``myhost3.example'', only has an <font SIZE="-1">HTTP</font> server, and it's in a non-standard port (8080). 
- The ``urlformat'' variable is specified for the whole <font SIZE="-1">FTP</font> branch as ``<a HREF="ftp://%host%/''.">ftp://%host%/''.</a> For the <font SIZE="-1">HTTP</font> branch, the default from the Probes section is used, except for myhost3, which overrides it to tag the port number into the <font SIZE="-1">URL. </font> 
+</dt><dd>The target tree is divided into an HTTP branch and an FTP one. The servers ``myhost1.example'' and ``myhost2.example'' are probed in both. The third server, ``myhost3.example'', only has an HTTP server, and it's in a non-standard port (8080). 
+ The ``urlformat'' variable is specified for the whole FTP branch as ``<a HREF="ftp://%host%/''.">ftp://%host%/''.</a> For the HTTP branch, the default from the Probes section is used, except for myhost3, which overrides it to tag the port number into the URL.  
  The myhost3 assignment could just as well have included the hostname verbatim (ie. urlformat = <a rel="nofollow" HREF="http://myhost3.example:8080/)">http://myhost3.example:8080/)</a> instead of using the <tt>%host</tt>% placeholder, but the host variable would still have been required (even though it wouldn't have been used for anything).</dd></dl>
 
 <h3>Example 5: config.echoping</h3>
@@ -306,7 +306,7 @@ Currently the examples differ only in the <tt>&quot;Probes&quot;</tt> and <tt>&q
  probe = EchoPingWhois
  whois_request = domain.example
  host = whois-server.example</pre></dd><dt>Target explanation
-</dt><dd>All the servers are pinged both with <font SIZE="-1">ICMP </font>(the FPing probe) and their respective echoping probe. The proxy server, www-cache, is probed with both <font SIZE="-1">HTTP</font> requests and <font SIZE="-1">ICP</font> requests for the same <font SIZE="-1">URL.</font></dd></dl>
+</dt><dd>All the servers are pinged both with ICMP (the FPing probe) and their respective echoping probe. The proxy server, www-cache, is probed with both HTTP requests and ICP requests for the same URL.</dd></dl>
 
 <h3>Example 6: config.template</h3>
 
@@ -371,11 +371,11 @@ Copyright 2005 by Niko Tyni.
 
 <h2>License</h2>
 
-This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
 
- This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. 
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. 
 
- You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font>
+ You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 <h2>Author</h2>
 

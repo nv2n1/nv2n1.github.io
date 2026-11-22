@@ -12,8 +12,8 @@ description: "Gromit-MPX – Presentation helper to make annotations on screen"
 <h2>SYNOPSIS</h2>
 <p> <code>gromit-mpx</code> [<i>options</i>] </p>
 <h2>DESCRIPTION</h2>
-<p> <code>Gromit-MPX</code> enables you to make multi-pointer annotations on your screen. It can run in the background and be activated on demand to let you draw over all your currently running applications. The drawing will stay on screen as long as you want, you can continue to use your applications while the drawing is visible.<br />
- <code>Gromit-MPX</code> is XInput-Aware, so if you have a graphic tablet you can draw lines with different strength, colour, erase things, etc.<br />
+<p> <code>Gromit-MPX</code> enables you to make multi-pointer annotations on your screen. It can run in the background and be activated on demand to let you draw over all your currently running applications. The drawing will stay on screen as long as you want, you can continue to use your applications while the drawing is visible.<br/>
+ <code>Gromit-MPX</code> is XInput-Aware, so if you have a graphic tablet you can draw lines with different strength, colour, erase things, etc.<br/>
  Since you typically want to use the program you are demonstrating and highlighting something is a short interruption of you workflow, Gromit-MPX is activated by either a hotkey or a repeated invocation of Gromit-MPX (the latter can e.g. used by other applications or your windowmanager). </p>
 <h2>KEYBOARD CONTROL</h2>
 <p> By default, Gromit-MPX grabs the &quot;F9&quot; key (this can be changed using the &quot;&#8211;key&quot; option), making it unavailable to other application. The available shortcuts are:</p>

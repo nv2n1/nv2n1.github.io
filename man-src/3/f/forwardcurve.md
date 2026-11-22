@@ -10,15 +10,15 @@ description: "ql/termstructures/yield/forwardcurve.hpp – interpolated forward-
 
 <p> ql/termstructures/yield/forwardcurve.hpp &#8211; interpolated forward-rate structure </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/yield/forwardstructure.hpp&gt;<br />
- #include &lt;ql/math/interpolation.hpp&gt;<br />
- #include &lt;ql/math/comparison.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/yield/forwardstructure.hpp&gt;<br/>
+ #include &lt;ql/math/interpolation.hpp&gt;<br/>
+ #include &lt;ql/math/comparison.hpp&gt;<br/>
  #include &lt;boost/noncopyable.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>InterpolatedForwardCurve&lt; Interpolator &gt;</code><br />
+<p> class <code>InterpolatedForwardCurve&lt; Interpolator &gt;</code><br/>
  <i>Term structure based on interpolation of forward rates. </i></p>
 <h3>Typedefs</h3>
-<p> typedef InterpolatedForwardCurve&lt; BackwardFlat &gt; <code>ForwardCurve</code><br />
+<p> typedef InterpolatedForwardCurve&lt; BackwardFlat &gt; <code>ForwardCurve</code><br/>
  <i>Term structure based on flat interpolation of forward rates. </i></p>
 <h2>Detailed Description</h2>
 <p> interpolated forward-rate structure </p>

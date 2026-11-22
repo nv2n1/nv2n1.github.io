@@ -16,14 +16,14 @@ description: "perl5134delta – what is new for perl v5.13.4"
 <h3>srand() now returns the seed</h3>
 <p> This allows programs that need to have repeatable results to not have to come up with their own seed generating mechanism. Instead, they can use <tt>&quot;srand()&quot;</tt> and somehow stash the return for future use. Typical is a test program which has too many combinations to test comprehensively in the time available to it each run. It can test a random subset each time, and should there be a failure, log the seed used for that run so that it can later be used to reproduce the exact results.</p>
 <h3>\N{<i>name</i>} and charnames enhancements</h3>
-<p> <tt>&quot;\N{}&quot;</tt>, <tt>&quot;charnames::vianame&quot;</tt>, <tt>&quot;charnames::viacode&quot;</tt> now know about every character in Unicode. Previously, they didn&#8217;t know about the Hangul syllables nor a number of <font SIZE="-1">CJK</font> (Chinese/Japanese/Korean) characters.</p>
+<p> <tt>&quot;\N{}&quot;</tt>, <tt>&quot;charnames::vianame&quot;</tt>, <tt>&quot;charnames::viacode&quot;</tt> now know about every character in Unicode. Previously, they didn&#8217;t know about the Hangul syllables nor a number of CJK (Chinese/Japanese/Korean) characters.</p>
 <h2>Incompatible Changes</h2>
-<h3>Declare <font SIZE="-1">API</font> incompatibility between blead releases</h3>
+<h3>Declare API incompatibility between blead releases</h3>
 <p> Only stable releases (5.10.x, 5.12.x, 5.14.x, &#8230;) guarantee binary compatibility with each other, while blead releases (5.13.x, 5.15.x, &#8230;) often break this compatibility. However, prior to perl 5.13.4, all blead releases had the same <tt>&quot;PERL_API_REVISION&quot;</tt>, <tt>&quot;PERL_API_VERSION&quot;</tt>, and <tt>&quot;PERL_API_SUBVERSION&quot;</tt>, effectively declaring them as binary compatible, which they weren&#8217;t. From now on, blead releases will have a <tt>&quot;PERL_API_SUBVERSION&quot;</tt> equal to their <tt>&quot;PERL_SUBVERSION&quot;</tt>, explicitly marking them as incompatible with each other. </p>
-<p> Maintenance releases of stable perl versions will continue to make no intentionally incompatible <font SIZE="-1">API</font> changes.</p>
-<h3>Check <font SIZE="-1">API</font> compatibility when loading <font SIZE="-1">XS</font> modules</h3>
-<p> When perl&#8217;s <font SIZE="-1">API</font> changes in incompatible ways (which usually happens between every major release), <font SIZE="-1">XS</font> modules compiled for previous versions of perl will not work anymore. They will need to be recompiled against the new perl. </p>
-<p> In order to ensure that modules are recompiled, and to prevent users from accidentally loading modules compiled for old perls into newer ones, the <tt>&quot;XS_APIVERSION_BOOTCHECK&quot;</tt> macro has been added. That macro, which is called when loading every newly compiled extension, compares the <font SIZE="-1">API</font> version of the running perl with the version a module has been compiled for and raises an exception if they don&#8217;t match.</p>
+<p> Maintenance releases of stable perl versions will continue to make no intentionally incompatible API changes.</p>
+<h3>Check API compatibility when loading XS modules</h3>
+<p> When perl&#8217;s API changes in incompatible ways (which usually happens between every major release), XS modules compiled for previous versions of perl will not work anymore. They will need to be recompiled against the new perl. </p>
+<p> In order to ensure that modules are recompiled, and to prevent users from accidentally loading modules compiled for old perls into newer ones, the <tt>&quot;XS_APIVERSION_BOOTCHECK&quot;</tt> macro has been added. That macro, which is called when loading every newly compiled extension, compares the API version of the running perl with the version a module has been compiled for and raises an exception if they don&#8217;t match.</p>
 <h3>Binary Incompatible with all previous Perls</h3>
 <p> Some bit fields have been reordered; therefore, this release will not be binary compatible with any previous Perl release.</p>
 <h3>Change in the parsing of certain prototypes</h3>
@@ -80,7 +80,7 @@ foo $a &lt; $b;
 <dl>
 <dt>&quot;Archive::Tar&quot;</dt>
 <dd> Upgraded from version 1.64 to 1.68. </dd>
-<p> Among other things, the new version adds a new option to <tt>&quot;ptar&quot;</tt> to allow safe creation of tarballs without world-writable files on Windows, allowing those archives to be uploaded to <font SIZE="-1">CPAN</font>.</p>
+<p> Among other things, the new version adds a new option to <tt>&quot;ptar&quot;</tt> to allow safe creation of tarballs without world-writable files on Windows, allowing those archives to be uploaded to CPAN.</p>
 <dt>&quot;B::Lint&quot;</dt>
 <dd> Upgraded from version 1.11 to 1.12.</dd>
 <dt>&quot;Carp&quot;</dt>
@@ -109,7 +109,7 @@ foo $a &lt; $b;
 <p> Among many other things, subtests without a <tt>&quot;plan&quot;</tt> or <tt>&quot;no_plan&quot;</tt> now have an implicit <tt>&quot;done_testing()&quot;</tt> added to them.</p>
 <dt>&quot;Unicode::Collate&quot;</dt>
 <dd> Upgraded from version 0.53 to 0.56. </dd>
-<p> Among other things, it is now using <font SIZE="-1">UCA</font> Revision 20 (based on Unicode 5.2.0) and supports a couple of new locales.</p>
+<p> Among other things, it is now using UCA Revision 20 (based on Unicode 5.2.0) and supports a couple of new locales.</p>
 <dt>&quot;feature&quot;</dt>
 <dd> Upgraded from version 1.17 to 1.18.</dd></dl>
 <h3>Removed Modules and Pragmata</h3>
@@ -165,7 +165,7 @@ foo $a &lt; $b;
 <dt>&bull;</dt>
 <dd> <i>lib/Tie/ExtraHash.t</i> has been added to make sure the, previously untested, Tie::ExtraHash keeps working.</dd>
 <dt>&bull;</dt>
-<dd> <i>t/re/overload.t</i> has been added to test against string corruption in pattern matches on overloaded objects. This is a <font SIZE="-1">TODO</font> test.</dd></dl>
+<dd> <i>t/re/overload.t</i> has been added to test against string corruption in pattern matches on overloaded objects. This is a TODO test.</dd></dl>
 <h2>Platform Support</h2>
 <h3>Platform-Specific Notes</h3>
 <dl>
@@ -176,9 +176,9 @@ foo $a &lt; $b;
 <dt>&bull;</dt>
 <dd> Fixed a possible hang in <i>t/op/readline.t</i>.</dd>
 <dt>&bull;</dt>
-<dd> Fixed build process for <font SIZE="-1">SDK2003SP1</font> compilers.</dd>
+<dd> Fixed build process for SDK2003SP1 compilers.</dd>
 <dt>&bull;</dt>
-<dd> When using old 32-bit compilers, the define <tt>&quot;_USE_32BIT_TIME_T&quot;</tt> will now be set in <tt>$Config{ccflags}</tt>. This improves portability when compiling <font SIZE="-1">XS</font> extensions using new compilers, but for a perl compiled with old 32-bit compilers.</dd></dl>
+<dd> When using old 32-bit compilers, the define <tt>&quot;_USE_32BIT_TIME_T&quot;</tt> will now be set in <tt>$Config{ccflags}</tt>. This improves portability when compiling XS extensions using new compilers, but for a perl compiled with old 32-bit compilers.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -199,7 +199,7 @@ foo $a &lt; $b;
 <dt>&bull;</dt>
 <dd> A possible memory leak when using <i>caller()</i> to set <tt>@DB::args</tt> has been fixed.</dd>
 <dt>&bull;</dt>
-<dd> Several memory leaks when loading <font SIZE="-1">XS</font> modules were fixed.</dd>
+<dd> Several memory leaks when loading XS modules were fixed.</dd>
 <dt>&bull;</dt>
 <dd> A panic in the regular expression optimizer has been fixed (RT#75762).</dd>
 <dt>&bull;</dt>
@@ -217,19 +217,19 @@ foo $a &lt; $b;
 <h2>Known Problems</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> The changes in <i>substr()</i> broke <tt>&quot;HTML::Parser&quot;</tt> &lt;= 3.66. A fixed <tt>&quot;HTML::Parser&quot;</tt> is available as version 3.67 on <font SIZE="-1">CPAN</font>.</dd>
+<dd> The changes in <i>substr()</i> broke <tt>&quot;HTML::Parser&quot;</tt> &lt;= 3.66. A fixed <tt>&quot;HTML::Parser&quot;</tt> is available as version 3.67 on CPAN.</dd>
 <dt>&bull;</dt>
-<dd> The changes in prototype handling break <tt>&quot;Switch&quot;</tt>. A patch has been sent upstream and will hopefully appear on <font SIZE="-1">CPAN</font> soon.</dd></dl>
+<dd> The changes in prototype handling break <tt>&quot;Switch&quot;</tt>. A patch has been sent upstream and will hopefully appear on CPAN soon.</dd></dl>
 <h2>Acknowledgements</h2>
 <p> Perl 5.13.4 represents approximately one month of development since Perl 5.13.3, and contains 91,200 lines of changes across 436 files from 34 authors and committers. </p>
 <p> Thank you to the following for contributing to this release: </p>
-<p> Abigail, Andy Armstrong, Andy Dougherty, Chas. Owens, Chip Salzenberg, Chris &#8216;BinGOs&#8217; Williams, Craig A. Berry, David Cantrell, David Golden, David Mitchell, Eric Brine, Father Chrysostomos, Florian Ragwitz, George Greer, Gerard Goossen, H.Merijn Brand, James Mastros, Jan Dubois, Jerry D. Hedden, Joshua ben Jore, Karl Williamson, Lars <font SIZE="-1">DXXXXXX</font> <font SIZE="-1">XXX</font>, Leon Brocard, Lubomir Rintel, Nicholas Clark, Paul Marquess, Rafael Garcia-Suarez, Reini Urban, Robin Barker, Slaven Rezic, Steve Peters, Tony Cook, Wolfram Humann, Zefram</p>
+<p> Abigail, Andy Armstrong, Andy Dougherty, Chas. Owens, Chip Salzenberg, Chris &#8216;BinGOs&#8217; Williams, Craig A. Berry, David Cantrell, David Golden, David Mitchell, Eric Brine, Father Chrysostomos, Florian Ragwitz, George Greer, Gerard Goossen, H.Merijn Brand, James Mastros, Jan Dubois, Jerry D. Hedden, Joshua ben Jore, Karl Williamson, Lars DXXXXXX XXX, Leon Brocard, Lubomir Rintel, Nicholas Clark, Paul Marquess, Rafael Garcia-Suarez, Reini Urban, Robin Barker, Slaven Rezic, Steve Peters, Tony Cook, Wolfram Humann, Zefram</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN</font>.</p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

@@ -46,7 +46,7 @@ description: "rhythmbox-client – controls a running instance of rhythmbox"
 <dt><code>&#8211;print-playing</code></dt>
 <dd> Print the title and artist of the playing song</dd>
 <dt><code>&#8211;print-playing-format=format</code></dt>
-<dd> Print formatted details of the song (see <font SIZE="-1"><code>FORMAT OPTIONS</code> </font> below).</dd>
+<dd> Print formatted details of the song (see <code>FORMAT OPTIONS</code>  below).</dd>
 <dt><code>&#8211;set-volume</code></dt>
 <dd> Set the playback volume</dd>
 <dt><code>&#8211;volume-up</code></dt>

@@ -28,11 +28,11 @@ description: "pamditherbw – dither grayscale image to black and white"
 <p> If all you want is to change a PGM image with maxval 1 to a PBM image, <code>pamtopnm</code> will do that. </p>
 <h2>OPTIONS</h2>
 <p> The default quantization method is boustrophedonic Floyd-Steinberg error diffusion (<code>-floyd</code> or <code>-fs</code>). </p>
-<p> Also available are simple thresholding (<code>-threshold</code>); Bayer&#8217;s ordered dither (<code>-dither8</code>) with a 16&#215;16 matrix;<br />
+<p> Also available are simple thresholding (<code>-threshold</code>); Bayer&#8217;s ordered dither (<code>-dither8</code>) with a 16&#215;16 matrix;<br/>
 &nbsp;<wbr>Atkinson ; and three different sizes of 45-degree clustered-dot dither (<code>-cluster3</code>, <code>-cluster4</code>, <code>-cluster8</code>). </p>
 <p> A space filling curve halftoning method using the Hilbert curve is also available (<code>-hilbert</code>). </p>
 <p> Floyd-Steinberg or Atkinson will almost always give the best looking results; however, looking good is not always what you want. For instance, you can use thresholding in a pipeline with the <code>pnmconvol</code>, for tasks such as edge and peak detection. And clustered-dot dithering gives a newspaper-ish look, a useful special effect. </p>
-<p> Floyd-Steinberg is by far the more traditional, but<br />
+<p> Floyd-Steinberg is by far the more traditional, but<br/>
 &nbsp;<wbr>some claim Atkinson works better. </p>
 <p> The Hilbert curve method is useful for processing images before display on devices that do not render individual pixels distinctly (like laser printers). This dithering method can give better results than the dithering usually done by the laser printers themselves. The <code>-clump</code> option alters the number of pixels in a clump. Typically a PGM image will have to be scaled to fit on a laser printer page (2400 x 3000 pixels for an A4 300 dpi page), and then dithered to a PBM image before being converted to a postscript file. A printing pipeline might look something like: </p>
 <pre>

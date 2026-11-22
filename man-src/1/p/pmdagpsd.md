@@ -10,7 +10,7 @@ description: "pmdagpsd – gpsd performance metrics domain agent (PMDA)"
 
 <p> pmdagpsd &#8211; gpsd performance metrics domain agent (PMDA) </p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdagpsd</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports values from the gpsd daemon.</p>
+<p> <code>pmdagpsd</code> is a Performance Metrics Domain Agent (PMDA) which exports values from the gpsd daemon.</p>
 <h2>INSTALLATION</h2>
 <p> If you want access to the names and values for gpsd, do the following as root: </p>
 <pre>

@@ -35,17 +35,17 @@ description: "Tspi_SetAttribData – set a non 32bit attribute of an object."
 <h2>Return Codes</h2>
 <p><code>Tspi_SetAttribData</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; <i>hObject</i> is an invalid parameter.</font></dt>
+<dt>TSS_E_INVALID_HANDLE &#8211; <i>hObject</i> is an invalid parameter.</dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_ATTRIB_FLAG &#8211; <i>attribFlag</i> is an invalid parameter.</font></dt>
+</dd><dt>TSS_E_ATTRIB_FLAG &#8211; <i>attribFlag</i> is an invalid parameter.</dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_ATTRIB_SUBFLAG &#8211; <i>subFlag</i> is an invalid parameter.</font></dt>
+</dd><dt>TSS_E_ATTRIB_SUBFLAG &#8211; <i>subFlag</i> is an invalid parameter.</dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_ATTRIB_DATA &#8211; <i>rgbAttribData</i> is an invalid parameter.</font></dt>
+</dd><dt>TSS_E_ATTRIB_DATA &#8211; <i>rgbAttribData</i> is an invalid parameter.</dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+</dd><dt>TSS_E_BAD_PARAMETER</dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></dt>
+</dd><dt>TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</dt>
 <dd></dd></dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_SetAttribData</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>

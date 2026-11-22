@@ -20,7 +20,7 @@ description: "rpdump – alpine remote data utility"
 <dt><code>-l</code>&nbsp;<wbr><code>Local_file</code></dt>
 <dd> The file on this system that is to be copied to.</dd>
 <dt><code>-r</code>&nbsp;<wbr><code>Remote_folder</code></dt>
-<dd> A remote folder name to be copied from. See the Alpine documentation for the syntax of a remote folder name. One example is<br />
+<dd> A remote folder name to be copied from. See the Alpine documentation for the syntax of a remote folder name. One example is<br/>
  {my.imap.server}remote_pinerc.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> Exit status is zero if all goes well, -1 otherwise.</p>

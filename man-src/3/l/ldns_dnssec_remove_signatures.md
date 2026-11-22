@@ -10,7 +10,7 @@ description: "ldns_dnssec_zone_sign, ldns_dnssec_zone_sign_nsec3, ldns_dnssec_zo
 
 <p> ldns_dnssec_zone_sign, ldns_dnssec_zone_sign_nsec3, ldns_dnssec_zone_mark_glue, ldns_dnssec_name_node_next_nonglue, ldns_dnssec_zone_create_nsecs, ldns_dnssec_remove_signatures, ldns_dnssec_zone_create_rrsigs </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_dnssec_zone_sign(ldns_dnssec_zone *zone, ldns_rr_list *new_rrs, ldns_key_list *key_list, int (*func)(ldns_rr *, void *), void *arg); </p>

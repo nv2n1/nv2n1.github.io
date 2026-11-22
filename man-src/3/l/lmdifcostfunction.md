@@ -9,7 +9,7 @@ description: "ql/math/optimization/lmdif.hpp – wrapper for MINPACK minimizatio
 
 <p>ql/math/optimization/lmdif.hpp &#8211; wrapper for MINPACK minimization routine </p>
 <h2>Synopsis</h2>
-<p>#include &lt;ql/qldefines.hpp&gt;<br />
+<p>#include &lt;ql/qldefines.hpp&gt;<br/>
  #include &lt;boost/function.hpp&gt; </p>
 <h3>Typedefs</h3>
 <p>typedef boost::function&lt; void(int, int, double *, double *, int *) <code>LmdifCostFunction</code> ) </p>

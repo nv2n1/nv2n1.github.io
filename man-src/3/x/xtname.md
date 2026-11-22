@@ -19,5 +19,5 @@ description: "XtName – obtain widget’s name"
 <h2>Description</h2>
 <p><code>XtName</code> returns the widget&#8217;s name.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

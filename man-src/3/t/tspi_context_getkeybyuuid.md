@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-tspi_context_getkeybyuuid/"
 description: "Tspi_Context_GetKeyByUUID – get a handle to a key registered in persistent storage."
 ---
 
-<p>TCG Software Stack Developers Reference<br />
+<p>TCG Software Stack Developers Reference<br/>
  </center></p>
 <h2>Name</h2>
 <p>Tspi_Context_GetKeyByUUID &#8211; get a handle to a key registered in persistent storage. </p>
@@ -35,13 +35,13 @@ description: "Tspi_Context_GetKeyByUUID – get a handle to a key registered in 
 <h2>Return Codes</h2>
 <p><code>Tspi_Context_GetKeyByUUID</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dt>TSS_E_INVALID_HANDLE</dt>
 <dd><i>hContext</i> is an invalid handle. </dd>
-<dt><font SIZE="-1">TSS_E_PS_KEY_NOTFOUND</font></dt>
+<dt>TSS_E_PS_KEY_NOTFOUND</dt>
 <dd>The key cannot be found in the persistent storage database. </dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An internal SW error has been detected. </dd>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dt>TSS_E_BAD_PARAMETER</dt>
 <dd>One or more parameters is bad. </dd>
 </dl>
 <h2>Conforming To</h2>

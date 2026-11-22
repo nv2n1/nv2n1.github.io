@@ -10,7 +10,7 @@ description: "cla_syrpvgrw.f –"
 <p>cla_syrpvgrw.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>cla_syrpvgrw</code> (UPLO, N, INFO, A, LDA, AF, LDAF, IPIV, WORK)<br />
+<p>REAL function <code>cla_syrpvgrw</code> (UPLO, N, INFO, A, LDA, AF, LDAF, IPIV, WORK)<br/>
  <i></i><code>CLA_SYRPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a symmetric indefinite matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function cla_syrpvgrw (character*1UPLO, integerN, integerINFO, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, real, dimension( * )WORK)</h3>

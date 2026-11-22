@@ -24,16 +24,16 @@ description: "XvQueryAdaptors – return adaptor information for a screen"
 <dt><i>pp_adaptor_info</i></dt>
 <dd>A pointer to where the list of returned adaptor information is returned.</dd></dl>
 <h2>Description</h2>
-<p><code><a href="/docs/linux/man/3-xvqueryadaptors/">XvQueryAdaptors</a></code>(3)<br />
+<p><code><a href="/docs/linux/man/3-xvqueryadaptors/">XvQueryAdaptors</a></code>(3)<br/>
 &nbsp;<wbr>returns an video adaptor information for the screen of the specified drawable. The XvAdaptorInfo structure has the following organization: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br />
-&nbsp;<wbr>XvPortID base_id;<br />
-&nbsp;<wbr>unsigned long num_ports;<br />
-&nbsp;<wbr>char type;<br />
-&nbsp;<wbr>char&nbsp;<wbr>*name;<br />
-&nbsp;<wbr>unsigned long num_formats;<br />
-&nbsp;<wbr>XvFormat&nbsp;<wbr>*formats;<br />
-&nbsp;<wbr>unsigned long num_adaptors;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br/>
+&nbsp;<wbr>XvPortID base_id;<br/>
+&nbsp;<wbr>unsigned long num_ports;<br/>
+&nbsp;<wbr>char type;<br/>
+&nbsp;<wbr>char&nbsp;<wbr>*name;<br/>
+&nbsp;<wbr>unsigned long num_formats;<br/>
+&nbsp;<wbr>XvFormat&nbsp;<wbr>*formats;<br/>
+&nbsp;<wbr>unsigned long num_adaptors;<br/>
 &nbsp;<wbr>&nbsp;<wbr>}&nbsp;<wbr>XvAdaptorInfo; </p>
 <dl COMPACT>
 <dt><i>base_id</i></dt>
@@ -49,9 +49,9 @@ description: "XvQueryAdaptors – return adaptor information for a screen"
 <dt><i>formats</i></dt>
 <dd>A pointer to an array of XvFormat structures.</dd></dl>
 <p> The XvFormat structure has the following organization: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br />
-&nbsp;<wbr>char depth;<br />
-&nbsp;<wbr>unsigned long visual_id;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br/>
+&nbsp;<wbr>char depth;<br/>
+&nbsp;<wbr>unsigned long visual_id;<br/>
 &nbsp;<wbr>&nbsp;<wbr>}&nbsp;<wbr>XvFormat; </p>
 <dl COMPACT>
 <dt><i>depth</i></dt>

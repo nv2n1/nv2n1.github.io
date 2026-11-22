@@ -66,15 +66,15 @@ description: "latex2html – translate LaTeX files to HTML (HyperText Markup Lan
 <dd> <p> Same as setting: <i>$UNSEGMENT = 1;</i> Treat a segmented document (see the section about document segmentation) like it were not segmented. This will cause the translator to concatenate all segments and process them as a whole. You might find this useful to check a segmented document for consistency. For all documents the sectioning levels referred to above are: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;0&nbsp;<wbr>&nbsp;document <br />
-&nbsp;1&nbsp;<wbr>&nbsp;part <br />
-&nbsp;2&nbsp;<wbr>&nbsp;chapter <br />
-&nbsp;3&nbsp;<wbr>&nbsp;section <br />
-&nbsp;4&nbsp;<wbr>&nbsp;subsection <br />
-&nbsp;5&nbsp;<wbr>&nbsp;subsubsection <br />
-&nbsp;6&nbsp;<wbr>&nbsp;paragraph <br />
-&nbsp;7&nbsp;<wbr>&nbsp;subparagraph <br />
+<dd> <p> <br/>
+&nbsp;0&nbsp;<wbr>&nbsp;document <br/>
+&nbsp;1&nbsp;<wbr>&nbsp;part <br/>
+&nbsp;2&nbsp;<wbr>&nbsp;chapter <br/>
+&nbsp;3&nbsp;<wbr>&nbsp;section <br/>
+&nbsp;4&nbsp;<wbr>&nbsp;subsection <br/>
+&nbsp;5&nbsp;<wbr>&nbsp;subsubsection <br/>
+&nbsp;6&nbsp;<wbr>&nbsp;paragraph <br/>
+&nbsp;7&nbsp;<wbr>&nbsp;subparagraph <br/>
 &nbsp;8&nbsp;<wbr>&nbsp;subsubparagraph </p>
  </dd></dl>
 </dl>
@@ -102,7 +102,7 @@ description: "latex2html – translate LaTeX files to HTML (HyperText Markup Lan
  </dd>
 <dt><code>-local_icons</code></dt>
 <dd> <p> Same as setting: <i>$LOCAL_ICONS = 1;</i> A copy of each of the icons actually used within the document is placed in the directory along with the <code>HTML </code> files and generated images. This allows the whole document to be fully self-contained, within this directory; otherwise the icons must be retrieved from a (perhaps remote) server. It is also the default behavior if $ICONSERVER is not set. The icons are normally copied from a subdirectory of the </p>
-<p> <code>$LATEX2HTMLDIR,</code> <br />
+<p> <code>$LATEX2HTMLDIR,</code> <br/>
 &nbsp;set within latex2html.config. An alternative set of icons can be used by specifying a (relative) directory path in $ALTERNATIVE_ICONS to where the customised images can be found. </p>
  </dd>
 <dt><code>-init_file &lt;file&gt;</code></dt>
@@ -429,21 +429,21 @@ description: "latex2html – translate LaTeX files to HTML (HyperText Markup Lan
 <dd> <p> Formerly specified the width of an image, when the contents were to be right- or center-justified. (No longer used.) </p>
  </dd></dl>
 <p> The following variables are used to access the utilities required during image-generation. File and program locations on the local system are established by the configure-pstoimg <code>Perl </code> script and stored within <i>$LATEX2HTMLDIR/local.pm </i> as <code>Perl </code> code, to be read by pstoimg when required. After running the configure-pstoimg Perl script it should not be necessary to alter the values obtained. Those shown below are what happens on the author&#8217;s system; they are for illustration only and do not represent default values. </p>
-<p> <br />
-&nbsp;$GS_LIB&nbsp;=&nbsp;&#8216;/usr/local/share/ghostscript/4.02&#8217;; <br />
-&nbsp;$PNMCAT&nbsp;=&nbsp;&#8216;/usr/local/bin/pnmcat&#8217;; <br />
-&nbsp;$PPMQUANT&nbsp;=&nbsp;&#8216;/usr/local/bin/ppmquant&#8217;; <br />
-&nbsp;$PNMFLIP&nbsp;=&nbsp;&#8216;/usr/local/bin/pnmflip&#8217;; <br />
-&nbsp;$PPMTOGIF&nbsp;=&nbsp;&#8216;/usr/local/bin/ppmtogif&#8217;; <br />
-&nbsp;$HOWTO_TRANSPARENT_GIF&nbsp;=&nbsp;&#8216;netpbm&#8217;; <br />
-&nbsp;$GS_DEVICE&nbsp;=&nbsp;&#8216;pnmraw&#8217;; <br />
-&nbsp;$GS&nbsp;=&nbsp;&#8216;/usr/local/bin/gs&#8217;; <br />
-&nbsp;$PNMFILE&nbsp;=&nbsp;&#8216;/usr/local/bin/pnmfile&#8217;; <br />
-&nbsp;$HOWTO_INTERLACE_GIF&nbsp;=&nbsp;&#8216;netpbm&#8217;; <br />
-&nbsp;$PBMMAKE&nbsp;=&nbsp;&#8216;/usr/local/bin/pbmmake&#8217;; <br />
-&nbsp;$PNMCROP&nbsp;=&nbsp;&#8216;/usr/local/bin/pnmcrop&#8217;; <br />
-&nbsp;$TMP&nbsp;=&nbsp;&#8216;/usr/var/tmp&#8217;; The following variables are no longer needed, having been replaced by the more specific information obtained using the Perl script configure-pstoimg. <br />
-&nbsp;$USENETPBM&nbsp;=&nbsp;1; <br />
+<p> <br/>
+&nbsp;$GS_LIB&nbsp;=&nbsp;&#8216;/usr/local/share/ghostscript/4.02&#8217;; <br/>
+&nbsp;$PNMCAT&nbsp;=&nbsp;&#8216;/usr/local/bin/pnmcat&#8217;; <br/>
+&nbsp;$PPMQUANT&nbsp;=&nbsp;&#8216;/usr/local/bin/ppmquant&#8217;; <br/>
+&nbsp;$PNMFLIP&nbsp;=&nbsp;&#8216;/usr/local/bin/pnmflip&#8217;; <br/>
+&nbsp;$PPMTOGIF&nbsp;=&nbsp;&#8216;/usr/local/bin/ppmtogif&#8217;; <br/>
+&nbsp;$HOWTO_TRANSPARENT_GIF&nbsp;=&nbsp;&#8216;netpbm&#8217;; <br/>
+&nbsp;$GS_DEVICE&nbsp;=&nbsp;&#8216;pnmraw&#8217;; <br/>
+&nbsp;$GS&nbsp;=&nbsp;&#8216;/usr/local/bin/gs&#8217;; <br/>
+&nbsp;$PNMFILE&nbsp;=&nbsp;&#8216;/usr/local/bin/pnmfile&#8217;; <br/>
+&nbsp;$HOWTO_INTERLACE_GIF&nbsp;=&nbsp;&#8216;netpbm&#8217;; <br/>
+&nbsp;$PBMMAKE&nbsp;=&nbsp;&#8216;/usr/local/bin/pbmmake&#8217;; <br/>
+&nbsp;$PNMCROP&nbsp;=&nbsp;&#8216;/usr/local/bin/pnmcrop&#8217;; <br/>
+&nbsp;$TMP&nbsp;=&nbsp;&#8216;/usr/var/tmp&#8217;; The following variables are no longer needed, having been replaced by the more specific information obtained using the Perl script configure-pstoimg. <br/>
+&nbsp;$USENETPBM&nbsp;=&nbsp;1; <br/>
 &nbsp;$PBMPLUSDIR&nbsp;=&nbsp;&#8216;/usr/local/bin&#8217;;  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1)  </p>

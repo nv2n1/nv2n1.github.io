@@ -9,7 +9,7 @@ description: "xfs_freeze – suspend access to an XFS filesystem"
 
 <p>xfs_freeze &#8211; suspend access to an XFS filesystem</p>
 <h2>Synopsis</h2>
-<p><code>xfs_freeze</code> [ <code>-f</code> | <code>-u</code> ] <i>mount-point</i><br />
+<p><code>xfs_freeze</code> [ <code>-f</code> | <code>-u</code> ] <i>mount-point</i><br/>
  <code>xfs_freeze -V</code></p>
 <h2>Description</h2>
 <p><code>xfs_freeze</code> suspends and resumes access to an XFS filesystem (see <code><a href="/docs/linux/man/5-xfs/">xfs</a></code>(5)). </p>

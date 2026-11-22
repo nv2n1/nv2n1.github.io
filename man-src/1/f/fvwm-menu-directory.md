@@ -10,7 +10,7 @@ description: "fvwm-menu-directory – builds a directory browsing menu for fvwm"
 
 <p> fvwm-menu-directory &#8211; builds a directory browsing menu for fvwm </p>
 <h2>SYNOPSIS</h2>
-<p> <code>fvwm-menu-directory</code> [ <code>&#8211;help</code>|<code>-h</code>|<code>-?</code> ] [ <code>&#8211;version</code>|<code>-V</code> ] [ <code>&#8211;name</code>|<code>-na</code> <font SIZE="-1">NAME</font> ] [ <code>&#8211;title</code>|<code>-t</code> <font SIZE="-1">NAME</font> ] [ <code>&#8211;item</code>|<code>-it</code> <font SIZE="-1">NAME</font> ] [ <code>&#8211;icon-title</code>|<code>-icon-t</code> <font SIZE="-1">XPM</font> ] [ <code>&#8211;icon-dir</code>|<code>-icon-d</code> <font SIZE="-1">XPM</font> ] [ <code>&#8211;icon-file</code>|<code>-icon-f</code> <font SIZE="-1">XPM</font> ] [ <code>&#8211;icon-app</code>|<code>-icon-a</code> <font SIZE="-1">XPM</font> ] [ <code>&#8211;wm-icons</code> ] [ <code>&#8211;dir</code>|<code>-d</code> <font SIZE="-1">NAME</font> ] [ <code>&#8211;order</code>|<code>-o</code> <font SIZE="-1">NUM</font> ] [ <code>&#8211;[no]all</code>|<code>-a</code> ] [ <code>&#8211;[no]links</code>|<code>-l</code> ] [ <code>&#8211;xterm</code>|<code>-x</code> <font SIZE="-1">CMD</font> ] [ <code>&#8211;exec-title</code>|<code>-exec-t</code> <font SIZE="-1">CMD</font> ] [ <code>&#8211;exec-file</code>|<code>-exec-f</code> <font SIZE="-1">CMD</font> ] [ <code>&#8211;exec-app</code>|<code>-exec-a</code> [<font SIZE="-1">CMD</font>] ] [ <code>&#8211;command-title</code>|<code>-command-t</code> <font SIZE="-1">CMD</font> ] [ <code>&#8211;command-file</code>|<code>-command-f</code> <font SIZE="-1">CMD</font> ] [ <code>&#8211;command-app</code>|<code>-command-a</code> <font SIZE="-1">CMD</font> ] [ <code>&#8211;[no]reuse</code>|<code>-r</code> ] [ <code>&#8211;[no]check-subdirs</code>|<code>-ch</code> ] [ <code>&#8211;special-dirs</code>|<code>-s</code> [<font SIZE="-1">VALUE</font>] ] [ <code>&#8211;[no]memory-for-speed</code>|<code>-mem</code> ] [ <code>&#8211;menu-style</code>|<code>-men</code> <font SIZE="-1">NAME</font> ] [ <code>&#8211;func-name</code>|<code>-f</code> <font SIZE="-1">NAME</font> ]</p>
+<p> <code>fvwm-menu-directory</code> [ <code>&#8211;help</code>|<code>-h</code>|<code>-?</code> ] [ <code>&#8211;version</code>|<code>-V</code> ] [ <code>&#8211;name</code>|<code>-na</code> NAME ] [ <code>&#8211;title</code>|<code>-t</code> NAME ] [ <code>&#8211;item</code>|<code>-it</code> NAME ] [ <code>&#8211;icon-title</code>|<code>-icon-t</code> XPM ] [ <code>&#8211;icon-dir</code>|<code>-icon-d</code> XPM ] [ <code>&#8211;icon-file</code>|<code>-icon-f</code> XPM ] [ <code>&#8211;icon-app</code>|<code>-icon-a</code> XPM ] [ <code>&#8211;wm-icons</code> ] [ <code>&#8211;dir</code>|<code>-d</code> NAME ] [ <code>&#8211;order</code>|<code>-o</code> NUM ] [ <code>&#8211;[no]all</code>|<code>-a</code> ] [ <code>&#8211;[no]links</code>|<code>-l</code> ] [ <code>&#8211;xterm</code>|<code>-x</code> CMD ] [ <code>&#8211;exec-title</code>|<code>-exec-t</code> CMD ] [ <code>&#8211;exec-file</code>|<code>-exec-f</code> CMD ] [ <code>&#8211;exec-app</code>|<code>-exec-a</code> [CMD] ] [ <code>&#8211;command-title</code>|<code>-command-t</code> CMD ] [ <code>&#8211;command-file</code>|<code>-command-f</code> CMD ] [ <code>&#8211;command-app</code>|<code>-command-a</code> CMD ] [ <code>&#8211;[no]reuse</code>|<code>-r</code> ] [ <code>&#8211;[no]check-subdirs</code>|<code>-ch</code> ] [ <code>&#8211;special-dirs</code>|<code>-s</code> [VALUE] ] [ <code>&#8211;[no]memory-for-speed</code>|<code>-mem</code> ] [ <code>&#8211;menu-style</code>|<code>-men</code> NAME ] [ <code>&#8211;func-name</code>|<code>-f</code> NAME ]</p>
 <h2>DESCRIPTION</h2>
 <p> A perl script which provides an output to read in with PipeRead to build an fvwm menu containing a directory listing. Almost everything can be configured.</p>
 <h2>HINTS</h2>
@@ -24,11 +24,11 @@ description: "fvwm-menu-directory – builds a directory browsing menu for fvwm"
 <dt><code>&#8211;name</code> name</dt>
 <dd> menu name, used only with &#8211;reuse, default is MenuBrowser</dd>
 <dt><code>&#8211;title</code> title</dt>
-<dd> menu title format, default is &#8216;%*-40p&#8217; &#8211; last 40 characters of the current full path. <font SIZE="-1">TAB</font> can be specified as &#8216;	&#8217;, but in .fvwm2rc you should specify a double backslash or a real <font SIZE="-1">TAB</font>. </dd>
+<dd> menu title format, default is &#8216;%*-40p&#8217; &#8211; last 40 characters of the current full path. TAB can be specified as &#8216;	&#8217;, but in .fvwm2rc you should specify a double backslash or a real TAB. </dd>
 <p> Format specifiers: <tt>%d</tt> &#8211; the current directory name <tt>%p</tt> &#8211; the current directory full path </p>
 <p> These specifiers can receive an optional integer size, positive for right adjusted string or negative for left adjusted, example: <tt>%8x</tt>; and optional *num or *-num, which means to leave only the first or last (if minus) num of chars, the num must be greater than 3, since the striped part is replaced with &#8220;&#8230;&#8221;, example: %*30x. Both can be combined: %-10*-20x, this instructs to get only the 20 last characters, but if the length is less then 10 &#8211; to fill with up to 10 spaces on the right.</p>
 <dt><code>&#8211;item</code> format</dt>
-<dd> menu item format, default is &#8216;%n&#8217;. <font SIZE="-1">TAB</font> and width modifiers for <tt>%n</tt>, <tt>%N</tt> and <tt>%s</tt> can be specified as described in <code>&#8211;title</code> above. Note, specifying a non default format slows the script. </dd>
+<dd> menu item format, default is &#8216;%n&#8217;. TAB and width modifiers for <tt>%n</tt>, <tt>%N</tt> and <tt>%s</tt> can be specified as described in <code>&#8211;title</code> above. Note, specifying a non default format slows the script. </dd>
 <p> Format specifiers: </p>
 <pre>
   %n - file/dir name (without the path)
@@ -51,7 +51,7 @@ description: "fvwm-menu-directory – builds a directory browsing menu for fvwm"
 <dt><code>&#8211;wm-icons</code></dt>
 <dd> define icon names suitable for use with wm-icons package. Currently this is equivalent to: &#8211;icon-title menu/folder-open.xpm &#8211;icon-item menu/file.xpm &#8211;icon-dir menu/folder.xpm &#8211;icon-app menu/utility.xpm.</dd>
 <dt><code>&#8211;dir</code> dir</dt>
-<dd> starting dir, default is ${<font SIZE="-1">HOME-</font>.}</dd>
+<dd> starting dir, default is ${HOME-.}</dd>
 <dt><code>&#8211;order</code> number</dt>
 <dd> in the range (-6 .. 6), default is 5: </dd>
 <pre>
@@ -136,6 +136,6 @@ description: "fvwm-menu-directory – builds a directory browsing menu for fvwm"
 <p> Inspired on 1999-06-07 by Dominik Vogt &lt;domivogt [at] fvwm.org&gt;. </p>
 <p> Rewritten on 1999-08-05 by Mikhael Goikhman &lt;migo [at] homemail.com&gt;.</p>
 <h2>COPYING</h2>
-<p> The script is distributed by the same terms as fvwm itself. See <font SIZE="-1">GNU</font> General Public License for details.</p>
+<p> The script is distributed by the same terms as fvwm itself. See GNU General Public License for details.</p>
 <h2>BUGS</h2>
 <p> Report bugs to fvwm-bug [at] fvwm.org. </p>

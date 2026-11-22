@@ -10,7 +10,7 @@ description: "zlalsd.f –"
 <p>zlalsd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlalsd</code> (UPLO, SMLSIZ, N, NRHS, D, E, B, LDB, RCOND, RANK, WORK, RWORK, IWORK, INFO)<br />
+<p>subroutine <code>zlalsd</code> (UPLO, SMLSIZ, N, NRHS, D, E, B, LDB, RCOND, RANK, WORK, RWORK, IWORK, INFO)<br/>
  <i></i><code>ZLALSD</code> uses the singular value decomposition of A to solve the least squares problem.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlalsd (characterUPLO, integerSMLSIZ, integerN, integerNRHS, double precision, dimension( * )D, double precision, dimension( * )E, complex*16, dimension( ldb, * )B, integerLDB, double precisionRCOND, integerRANK, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integer, dimension( * )IWORK, integerINFO)</h3>

@@ -16,50 +16,50 @@ description: "Threading –"
 <p> <code>Thread-Specific Storage</code> </p>
 <p> <code>One-time execution</code> </p>
 <h3>Data Structures</h3>
-<p> union <code>globus_thread_t</code><br />
- <i>Thread ID. </i><br />
- union <code>globus_threadattr_t</code><br />
- <i>Thread attributes. </i><br />
- union <code>globus_thread_key_t</code><br />
+<p> union <code>globus_thread_t</code><br/>
+ <i>Thread ID. </i><br/>
+ union <code>globus_threadattr_t</code><br/>
+ <i>Thread attributes. </i><br/>
+ union <code>globus_thread_key_t</code><br/>
  <i>Thread-specific data key. </i></p>
 <h3>Macros</h3>
-<p> #define <code>GLOBUS_THREAD_CANCEL_DISABLE</code> 0<br />
- <i>Disable thread cancellation value. </i><br />
- #define <code>GLOBUS_THREAD_CANCEL_ENABLE</code> 1<br />
- <i>Enable thread cancellation value. </i><br />
- #define <code>GLOBUS_THREAD_MODULE</code> (&amp;globus_i_thread_module)<br />
+<p> #define <code>GLOBUS_THREAD_CANCEL_DISABLE</code> 0<br/>
+ <i>Disable thread cancellation value. </i><br/>
+ #define <code>GLOBUS_THREAD_CANCEL_ENABLE</code> 1<br/>
+ <i>Enable thread cancellation value. </i><br/>
+ #define <code>GLOBUS_THREAD_MODULE</code> (&amp;globus_i_thread_module)<br/>
  <i>Thread Module. </i></p>
 <h3>Typedefs</h3>
-<p> typedef void(* <code>globus_thread_key_destructor_func_t</code> )(void *value)<br />
+<p> typedef void(* <code>globus_thread_key_destructor_func_t</code> )(void *value)<br/>
  <i>Thread-specific data destructor. </i></p>
 <h3>Functions</h3>
-<p> int <code>globus_thread_set_model</code> (const char *model)<br />
- <i>Select threading model for an application. </i><br />
- int <code>globus_thread_create</code> (<code>globus_thread_t</code> *thread, <code>globus_threadattr_t</code> *attr, globus_thread_func_t func, void *user_arg)<br />
- <i>Create a new thread. </i><br />
- void <code>globus_thread_yield</code> (void)<br />
- <i>Yield execution to another thread. </i><br />
- void <code>globus_thread_exit</code> (void *value)<br />
- <i>Terminate the current thread. </i><br />
- int <code>globus_thread_sigmask</code> (int how, const sigset_t *new_mask, sigset_t *old_mask)<br />
- <i>Modify the current thread&#8217;s signal mask. </i><br />
- int <code>globus_thread_kill</code> (<code>globus_thread_t</code> thread, int sig)<br />
- <i>Send a signal to a thread. </i><br />
- <code>globus_thread_t</code> <code>globus_thread_self</code> (void)<br />
- <i>Determine the current thread&#8217;s ID. </i><br />
- <code>globus_bool_t</code> <code>globus_thread_equal</code> (<code>globus_thread_t</code> thread1, <code>globus_thread_t</code> thread2)<br />
- <i>Check whether thread identifiers match. </i><br />
- <code>globus_bool_t</code> <code>globus_thread_preemptive_threads</code> (void)<br />
- <i>Indicate whether the active thread model supports preemption. </i><br />
- <code>globus_bool_t</code> <code>globus_i_am_only_thread</code> (void)<br />
- <i>Determine if threads are supported. </i><br />
- void * <code>globus_thread_cancellable_func</code> (void *(*func)(void *), void *arg, void(*cleanup_func)(void *), void *cleanup_arg, <code>globus_bool_t</code> execute_cleanup)<br />
- <i>Execute a function with thread cleanup in case of cancellation. </i><br />
- int <code>globus_thread_cancel</code> (<code>globus_thread_t</code> thr)<br />
- <i>Cancel a thread. </i><br />
- void <code>globus_thread_testcancel</code> (void)<br />
- <i>Thread cancellation point. </i><br />
- int <code>globus_thread_setcancelstate</code> (int state, int *oldstate)<br />
+<p> int <code>globus_thread_set_model</code> (const char *model)<br/>
+ <i>Select threading model for an application. </i><br/>
+ int <code>globus_thread_create</code> (<code>globus_thread_t</code> *thread, <code>globus_threadattr_t</code> *attr, globus_thread_func_t func, void *user_arg)<br/>
+ <i>Create a new thread. </i><br/>
+ void <code>globus_thread_yield</code> (void)<br/>
+ <i>Yield execution to another thread. </i><br/>
+ void <code>globus_thread_exit</code> (void *value)<br/>
+ <i>Terminate the current thread. </i><br/>
+ int <code>globus_thread_sigmask</code> (int how, const sigset_t *new_mask, sigset_t *old_mask)<br/>
+ <i>Modify the current thread&#8217;s signal mask. </i><br/>
+ int <code>globus_thread_kill</code> (<code>globus_thread_t</code> thread, int sig)<br/>
+ <i>Send a signal to a thread. </i><br/>
+ <code>globus_thread_t</code> <code>globus_thread_self</code> (void)<br/>
+ <i>Determine the current thread&#8217;s ID. </i><br/>
+ <code>globus_bool_t</code> <code>globus_thread_equal</code> (<code>globus_thread_t</code> thread1, <code>globus_thread_t</code> thread2)<br/>
+ <i>Check whether thread identifiers match. </i><br/>
+ <code>globus_bool_t</code> <code>globus_thread_preemptive_threads</code> (void)<br/>
+ <i>Indicate whether the active thread model supports preemption. </i><br/>
+ <code>globus_bool_t</code> <code>globus_i_am_only_thread</code> (void)<br/>
+ <i>Determine if threads are supported. </i><br/>
+ void * <code>globus_thread_cancellable_func</code> (void *(*func)(void *), void *arg, void(*cleanup_func)(void *), void *cleanup_arg, <code>globus_bool_t</code> execute_cleanup)<br/>
+ <i>Execute a function with thread cleanup in case of cancellation. </i><br/>
+ int <code>globus_thread_cancel</code> (<code>globus_thread_t</code> thr)<br/>
+ <i>Cancel a thread. </i><br/>
+ void <code>globus_thread_testcancel</code> (void)<br/>
+ <i>Thread cancellation point. </i><br/>
+ int <code>globus_thread_setcancelstate</code> (int state, int *oldstate)<br/>
  <i>Set the thread&#8217;s cancellable state. </i></p>
 <h2>Detailed Description</h2>
 <p> Portable Thread Abstraction. </p>
@@ -108,10 +108,10 @@ description: "Threading –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>func</i> Pointer to a function which may be cancelled.<br />
- <i>arg</i> Parameter to the <i>func</i> function.<br />
- <i>cleanup_func</i> Pointer to a function to execute if thread cancellation occurs during <i>func</i>.<br />
- <i>cleanup_arg</i> Parameter to the <i>cleanup_func</i> function.<br />
+</dt><dd> <i>func</i> Pointer to a function which may be cancelled.<br/>
+ <i>arg</i> Parameter to the <i>func</i> function.<br/>
+ <i>cleanup_func</i> Pointer to a function to execute if thread cancellation occurs during <i>func</i>.<br/>
+ <i>cleanup_arg</i> Parameter to the <i>cleanup_func</i> function.<br/>
  <i>execute_cleanup</i> Flag indicating whether the function pointed to by <i>cleanup_func</i> should be executed after <i>func</i> completes even if it is not cancelled.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -122,9 +122,9 @@ description: "Threading –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>thread</i> Pointer to a variable to contain the new thread&#8217;s identifier.<br />
- <i>attr</i> Ignored<br />
- <i>func</i> Pointer to a function to start in the new thread.<br />
+</dt><dd> <i>thread</i> Pointer to a variable to contain the new thread&#8217;s identifier.<br/>
+ <i>attr</i> Ignored<br/>
+ <i>func</i> Pointer to a function to start in the new thread.<br/>
  <i>user_arg</i> Argument to the new thread&#8217;s function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -135,12 +135,12 @@ description: "Threading –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>thread1</i> Thread identifier to compare.<br />
+</dt><dd> <i>thread1</i> Thread identifier to compare.<br/>
  <i>thread2</i> Thread identifier to compare.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_TRUE</i> thread1 and thread2 refer to the same thread.<br />
+</dt><dd> <i>GLOBUS_TRUE</i> thread1 and thread2 refer to the same thread.<br/>
  <i>GLOBUS_TRUE</i> thread1 and thread2 do not refer to the same thread.</dd></dl>
 <h3>void globus_thread_exit (void *value)</h3>
 <p> Terminate the current thread. The <code>globus_thread_exit()</code> terminates the current thread with the value passed to it. This function does not return.</p>
@@ -149,7 +149,7 @@ description: "Threading –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>thread</i> The thread identifier of the thread to signal.<br />
+</dt><dd> <i>thread</i> The thread identifier of the thread to signal.<br/>
  <i>sig</i> The signal to send to the thread.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -183,7 +183,7 @@ description: "Threading –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>state</i> The desired cancellation state. If the value is GLOBUS_THREAD_CANCEL_DISABLE, then cancellation will be disabled for this thread. If the value is GLOBUS_THREAD_CANCEL_ENABLE, then cancellation will be enabled for this thread.<br />
+</dt><dd> <i>state</i> The desired cancellation state. If the value is GLOBUS_THREAD_CANCEL_DISABLE, then cancellation will be disabled for this thread. If the value is GLOBUS_THREAD_CANCEL_ENABLE, then cancellation will be enabled for this thread.<br/>
  <i>oldstate</i> A pointer to a value which will be set to the value of the thread&#8217;s cancellation state when this function call began. This may be NULL if the caller is not interested in the previous value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -194,8 +194,8 @@ description: "Threading –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>how</i> Flag indicating how to interpret <i>new_mask</i> if it is non-NULL. If <i>how</i> is SIG_BLOCK, then all signals in <i>new_mask</i> are blocked, as well as any which were previously blocked. If <i>how</i> is SIG_UNBLOCK, then all signals in which were previously blocked in <i>new_mask</i> are unblocked. If <i>how</i> is SIG_SETMASK, then the old signal mask is replaced with the value of <i>new_mask</i>.<br />
- <i>new_mask</i> Set of signals to block or unblock, based on the <i>how</i> parameter.<br />
+</dt><dd> <i>how</i> Flag indicating how to interpret <i>new_mask</i> if it is non-NULL. If <i>how</i> is SIG_BLOCK, then all signals in <i>new_mask</i> are blocked, as well as any which were previously blocked. If <i>how</i> is SIG_UNBLOCK, then all signals in which were previously blocked in <i>new_mask</i> are unblocked. If <i>how</i> is SIG_SETMASK, then the old signal mask is replaced with the value of <i>new_mask</i>.<br/>
+ <i>new_mask</i> Set of signals to block or unblock, based on the <i>how</i> parameter.<br/>
  <i>old_mask</i> A pointer to be set to the old signal mask associated with the current thread.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

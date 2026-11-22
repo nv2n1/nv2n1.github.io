@@ -10,9 +10,9 @@ description: "audacity – Graphical cross-platform audio editor"
 
 <p> audacity &#8211; Graphical cross-platform audio editor</p>
 <h2>SYNOPSIS</h2>
-<p> <code>audacity</code> -help<br />
+<p> <code>audacity</code> -help<br/>
  <code>audacity</code> -version </p>
-<p> <code>audacity</code> [-blocksize nnn] -test<br />
+<p> <code>audacity</code> [-blocksize nnn] -test<br/>
  <code>audacity</code> [-blocksize nnn] [ <i>AUDIO-FILE</i> ] <code>&#8230;</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>Audacity</code> is a graphical audio editor. This man page does not describe all of the features of Audacity or how to use it; for this, see the html documentation that came with the program, which should be accessible from the Help menu. This man page describes the Unix-specific features, including special files and environment variables. </p>
@@ -69,9 +69,9 @@ description: "audacity – Graphical cross-platform audio editor"
 <h2>LICENSE</h2>
 <p> Audacity is distributed under the GPL, however some of the libraries it links to are distributed under other free licenses, including the LGPL and BSD licenses. </p>
 <h2>BUGS</h2>
-<p> For details of known problems, see the release notes and the audacity wiki:<br />
+<p> For details of known problems, see the release notes and the audacity wiki:<br/>
  <a rel="nofollow" href="http://www.audacityteam.org/wiki/index.php?title=Known_Issues">http://www.audacityteam.org/wiki/index.php?title=Known_Issues</a> </p>
-<p> To report a bug, see the instructions at<br />
+<p> To report a bug, see the instructions at<br/>
  <a rel="nofollow" href="http://www.audacityteam.org/wiki/index.php?title=Reporting_Bugs">http://www.audacityteam.org/wiki/index.php?title=Reporting_Bugs</a> </p>
 <h2>AUTHORS</h2>
 <p> Project leaders include Dominic Mazzoni, Matt Brubeck, James Crook, Vaughan Johnson, Leland Lucius, and Markus Meyer, but dozens of others have contributed, and Audacity would not be possible without wxWindows, libsndfile, and many of the other libraries it is built upon. For the most recent list of contributors and current email addresses, see our website: </p>

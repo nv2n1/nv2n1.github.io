@@ -10,7 +10,7 @@ description: "ldns_key_new_frm_fp_dsa, ldns_key_new_frm_fp_dsa_l"
 
 <p> ldns_key_new_frm_fp_dsa, ldns_key_new_frm_fp_dsa_l </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> DSA* ldns_key_new_frm_fp_dsa(FILE *fp); </p>

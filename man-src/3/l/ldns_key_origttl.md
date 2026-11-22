@@ -10,7 +10,7 @@ description: "ldns_key_origttl, ldns_key_inception, ldns_key_expiration, ldns_ke
 
 <p> ldns_key_origttl, ldns_key_inception, ldns_key_expiration, ldns_key_keytag, ldns_key_pubkey_owner, ldns_key_flags </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> uint32_t ldns_key_origttl(const ldns_key *k); </p>

@@ -50,8 +50,8 @@ description: "mp2enc – Simple MPEG-1 layer-II audio encoder"
 <h2>BUGS</h2>
 <p> Mono output does not work for layer I.</p>
 <h2>AUTHOR</h2>
-<p> This man page was written by Andrew Stevens.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was written by Andrew Stevens.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

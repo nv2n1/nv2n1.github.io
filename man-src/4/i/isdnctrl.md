@@ -11,12 +11,12 @@ description: "isdnctrl – ISDN control device"
 <h2>Synopsis</h2>
 <pre><code>#include &lt;linux/isdn.h&gt;</code></pre>
 <h2>Description</h2>
-<p><i>/dev/isdnctrl</i> is a character device with major number <code>45</code> and minor numbers <code>64</code> to <code>127</code>. It allows controlling functionality of the Linux <font SIZE="-1">ISDN</font> subsystem.</p>
+<p><i>/dev/isdnctrl</i> is a character device with major number <code>45</code> and minor numbers <code>64</code> to <code>127</code>. It allows controlling functionality of the Linux ISDN subsystem.</p>
 <h2>Ioctl Functions</h2>
 <p>Currently, the following ioctl calls are supported:</p>
 <dl>
 <dt><code>IIOCNETAIF</code></dt>
-<dd>Add an <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Add an ISDN network interface.</dd>
 <dl>
 <dd>This function adds a network interface to the kernel&#8217;s device table. This interface can be used just like normal eth interfaces.</dd>
 <dl>
@@ -28,17 +28,17 @@ description: "isdnctrl – ISDN control device"
 <dt><code>IIOCNETASL</code></dt>
 <dd>Create a slave interface.</dd>
 <dl>
-<dd>Creates a slave interface for RAW-device channel-bundling. These devices behave like network-interfaces, except they are invisible to user. Only <font SIZE="-1">ISDN</font> parameters can be controlled, not IP-parameters. IP-parameters are inherited from the corresponding master-device.</dd>
+<dd>Creates a slave interface for RAW-device channel-bundling. These devices behave like network-interfaces, except they are invisible to user. Only ISDN parameters can be controlled, not IP-parameters. IP-parameters are inherited from the corresponding master-device.</dd>
 <dl>
 <dt>Argument:</dt>
-<dd><i>arg</i> should point to a zero terminated string of max. 21 characters containing two comma-separated names. The first part is the name of an existing <font SIZE="-1">ISDN</font> network device, which will be master. The second part will be the name of the new slave interface.</dd>
+<dd><i>arg</i> should point to a zero terminated string of max. 21 characters containing two comma-separated names. The first part is the name of an existing ISDN network device, which will be master. The second part will be the name of the new slave interface.</dd>
 <dt>Return:</dt>
 <dd>On success, the name of the new interface is copied to <i>arg</i>. and the call returns 0. On failure, an error code is returned.</dd></dl>
 </dl>
 <dt><code>IIOCNETDIF</code></dt>
 <dd>Delete a network-interface.</dd>
 <dl>
-<dd>This call deletes an existing <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>This call deletes an existing ISDN network interface.</dd>
 <dl>
 <dt>Argument:</dt>
 <dd><i>arg</i> should point to a zero terminated string of max. 10 characters naming an existing interface which will be deleted. If the interface is a master interface, all its slave-interfaces will be deleted also.</dd>
@@ -46,9 +46,9 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0. On failure, an error code is returned.</dd></dl>
 </dl>
 <dt><code>IIOCNETSCF</code></dt>
-<dd>Set configurable parameters of an <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Set configurable parameters of an ISDN network interface.</dd>
 <dl>
-<dd>This call replaces all <font SIZE="-1">ISDN</font> related parameters of an interface by the parameters given.</dd>
+<dd>This call replaces all ISDN related parameters of an interface by the parameters given.</dd>
 <dl>
 <dt>Argument:</dt>
 <dd><i>arg</i> should point to a <i>struct isdn_net_ioctl_cfg</i> (defined in linux/isdn.h)</dd>
@@ -56,9 +56,9 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0. On failure, an error code is returned.</dd></dl>
 </dl>
 <dt><code>IIOCNETGCF</code></dt>
-<dd>Get configurable parameters of an <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Get configurable parameters of an ISDN network interface.</dd>
 <dl>
-<dd>This call returns all <font SIZE="-1">ISDN</font> related parameters of an interface.</dd>
+<dd>This call returns all ISDN related parameters of an interface.</dd>
 <dl>
 <dt>Argument:</dt>
 <dd><i>arg</i> should point to a <i>struct isdn_net_ioctl_cfg</i> (defined in linux/isdn.h) which will be filled by the current setup.</dd>
@@ -66,7 +66,7 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0 and the interface-setup is copied to *arg. On failure, an error code is returned.</dd></dl>
 </dl>
 <dt><code>IIOCNETANM</code></dt>
-<dd>Add a phone number to an <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Add a phone number to an ISDN network interface.</dd>
 <dl>
 <dd>This call adds a phone number to an existing network interface.</dd>
 <dl>
@@ -76,7 +76,7 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0 and the phone number is added to either outgoing or incoming number list. On failure, an error code is returned.</dd></dl>
 </dl>
 <dt><code>IIOCNETDNM</code></dt>
-<dd>Delete a phone number from an <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Delete a phone number from an ISDN network interface.</dd>
 <dl>
 <dd>This call deletes a phone number from an existing network interface.</dd>
 <dl>
@@ -86,7 +86,7 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0 and the phone number is deleted from either outgoing or incoming number list. On failure, an error code is returned.</dd></dl>
 </dl>
 <dt><code>IIOCNETGNM</code></dt>
-<dd>Get list of phone numbers from an <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Get list of phone numbers from an ISDN network interface.</dd>
 <dl>
 <dd>This call returns the list of phone numbers associated to an existing network interface.</dd>
 <dl>
@@ -96,9 +96,9 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0 and the list of phone numbers is returned as a space-separated list of number-strings terminated by a NULL byte.</dd></dl>
 </dl>
 <dt><code>IIOCNETDIL</code></dt>
-<dd>Trigger dialing of an <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Trigger dialing of an ISDN network interface.</dd>
 <dl>
-<dd>This call initiates dialing of an <font SIZE="-1">ISDN</font> network interface, if it is not connected. Normally, this ioctl is not needed, because <font SIZE="-1">ISDN</font> network interface perform dial on demand by default.</dd>
+<dd>This call initiates dialing of an ISDN network interface, if it is not connected. Normally, this ioctl is not needed, because ISDN network interface perform dial on demand by default.</dd>
 <dl>
 <dt>Argument:</dt>
 <dd><i>arg</i> should point to a zero terminated string of max. 10 characters naming the desired interface.</dd>
@@ -106,9 +106,9 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0 and the interface starts dialing.</dd></dl>
 </dl>
 <dt><code>IIOCNETHUP</code></dt>
-<dd>Hangup an <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Hangup an ISDN network interface.</dd>
 <dl>
-<dd>This call initiates hangup of an <font SIZE="-1">ISDN</font> network interface, if it is connected.</dd>
+<dd>This call initiates hangup of an ISDN network interface, if it is connected.</dd>
 <dl>
 <dt>Argument:</dt>
 <dd><i>arg</i> should point to a zero terminated string of max. 10 characters naming the desired interface.</dd>
@@ -116,9 +116,9 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0 and the interface hangs up.</dd></dl>
 </dl>
 <dt><code>IIOCNETALN</code></dt>
-<dd>Add a link of an MPP-configured <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Add a link of an MPP-configured ISDN network interface.</dd>
 <dl>
-<dd>This call initiates dialing of a Multilink-PPP slave <font SIZE="-1">ISDN</font> network interface, if it is not connected.</dd>
+<dd>This call initiates dialing of a Multilink-PPP slave ISDN network interface, if it is not connected.</dd>
 <dl>
 <dt>Argument:</dt>
 <dd><i>arg</i> should point to a zero terminated string of max. 10 characters naming the desired interface.</dd>
@@ -126,9 +126,9 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0 and the interface starts dialing.</dd></dl>
 </dl>
 <dt><code>IIOCNETDLN</code></dt>
-<dd>Hangup an MPP-configured <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Hangup an MPP-configured ISDN network interface.</dd>
 <dl>
-<dd>This call initiates hangup of an Multilink-PPP <font SIZE="-1">ISDN</font> network interface, if it is connected.</dd>
+<dd>This call initiates hangup of an Multilink-PPP ISDN network interface, if it is connected.</dd>
 <dl>
 <dt>Argument:</dt>
 <dd><i>arg</i> should point to a zero terminated string of max. 10 characters naming the desired interface.</dd>
@@ -136,7 +136,7 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0 and the interface hangs up.</dd></dl>
 </dl>
 <dt><code>IIOCNETARU</code></dt>
-<dd>Add a timeout rule to an <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Add a timeout rule to an ISDN network interface.</dd>
 <dl>
 <dd>This call adds a timeout rule to an existing interface.</dd>
 <dl>
@@ -146,7 +146,7 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0 and the rule is added to the rule list of the interface.</dd></dl>
 </dl>
 <dt><code>IIOCNETDRU</code></dt>
-<dd>Delete a timeout rule from an <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Delete a timeout rule from an ISDN network interface.</dd>
 <dl>
 <dd>This call deletes a timeout rule from an existing interface.</dd>
 <dl>
@@ -156,7 +156,7 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0 and the rule is deleted from the rule list of the interface.</dd></dl>
 </dl>
 <dt><code>IIOCNETGRU</code></dt>
-<dd>Get a timeout rule from an <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Get a timeout rule from an ISDN network interface.</dd>
 <dl>
 <dd>This call returns a timeout rule from an existing interface.</dd>
 <dl>
@@ -166,7 +166,7 @@ description: "isdnctrl – ISDN control device"
 <dd>On success, the call returns 0 and the struct is filled from the rule list of the interface.</dd></dl>
 </dl>
 <dt><code>IIOCNETBUD</code></dt>
-<dd>Handle budget accounting of an <font SIZE="-1">ISDN</font> network interface.</dd>
+<dd>Handle budget accounting of an ISDN network interface.</dd>
 <dl>
 <dd>
 </dd><dl>

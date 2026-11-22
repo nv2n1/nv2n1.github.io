@@ -15,9 +15,9 @@ int sem_trywait(sem_t *sem);
 int sem_timedwait(sem_t *sem, const struct timespec *abs_timeout);</code></pre>
 <p> Link with <i>-pthread</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>sem_timedwait</code>(): _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</p>
 <h2>Description</h2>
-<p><code>sem_wait</code>() decrements (locks) the semaphore pointed to by <i>sem</i>. If the semaphore&#8217;s value is greater than zero, then the decrement proceeds, and the function returns, immediately. If the semaphore currently has the value zero, then the call blocks until either it becomes possible to perform the decrement (i.e., the semaphore value rises above zero), or a signal handler interrupts the call. <code>sem_trywait</code>() is the same as <code>sem_wait</code>(), except that if the decrement cannot be immediately performed, then call returns an error (<i>errno</i> set to <code>EAGAIN</code>) instead of blocking. <code>sem_timedwait</code>() is the same as <code>sem_wait</code>(), except that <i>abs_timeout</i> specifies a limit on the amount of time that the call should block if the decrement cannot be immediately performed. The <i>abs_timeout</i> argument points to a structure that specifies an absolute timeout in seconds and nanoseconds since the Epoch, 1970-01-01 00:00:00 +0000 (UTC). This structure is defined as follows: struct timespec {<br />
-    time_t tv_sec; /* Seconds */<br />
-    long tv_nsec;  /* Nanoseconds [0 .. 999999999] */<br />
+<p><code>sem_wait</code>() decrements (locks) the semaphore pointed to by <i>sem</i>. If the semaphore&#8217;s value is greater than zero, then the decrement proceeds, and the function returns, immediately. If the semaphore currently has the value zero, then the call blocks until either it becomes possible to perform the decrement (i.e., the semaphore value rises above zero), or a signal handler interrupts the call. <code>sem_trywait</code>() is the same as <code>sem_wait</code>(), except that if the decrement cannot be immediately performed, then call returns an error (<i>errno</i> set to <code>EAGAIN</code>) instead of blocking. <code>sem_timedwait</code>() is the same as <code>sem_wait</code>(), except that <i>abs_timeout</i> specifies a limit on the amount of time that the call should block if the decrement cannot be immediately performed. The <i>abs_timeout</i> argument points to a structure that specifies an absolute timeout in seconds and nanoseconds since the Epoch, 1970-01-01 00:00:00 +0000 (UTC). This structure is defined as follows: struct timespec {<br/>
+    time_t tv_sec; /* Seconds */<br/>
+    long tv_nsec;  /* Nanoseconds [0 .. 999999999] */<br/>
 }; If the timeout has already expired by the time of the call, and the semaphore could not be locked immediately, then <code>sem_timedwait</code>() fails with a timeout error (<i>errno</i> set to <code>ETIMEDOUT</code>). If the operation can be performed immediately, then <code>sem_timedwait</code>() never fails with a timeout error, regardless of the value of <i>abs_timeout</i>. Furthermore, the validity of <i>abs_timeout</i> is not checked in this case.</p>
 <h2>Return Value</h2>
 <p>All of these functions return 0 on success; on error, the value of the semaphore is left unchanged, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
@@ -57,20 +57,20 @@ int sem_timedwait(sem_t *sem, const struct timespec *abs_timeout);</code></pre>
 <p>POSIX.1-2001, POSIX.1-2008.</p>
 <h2>Examples</h2>
 <p>The (somewhat trivial) program shown below operates on an unnamed semaphore. The program expects two command-line arguments. The first argument specifies a seconds value that is used to set an alarm timer to generate a <code>SIGALRM</code> signal. This handler performs a <code><a href="/docs/linux/man/3-sem_post/">sem_post</a></code>(3) to increment the semaphore that is being waited on in <i>main()</i> using <code>sem_timedwait</code>(). The second command-line argument specifies the length of the timeout, in seconds, for <code>sem_timedwait</code>(). The following shows what happens on two different runs of the program: $ ./a.out 2 3</p>
-<p>About to call sem_timedwait()<br />
-sem_post() from handler<br />
-sem_timedwait() succeeded<br />
+<p>About to call sem_timedwait()<br/>
+sem_post() from handler<br/>
+sem_timedwait() succeeded<br/>
 $ ./a.out 2 1</p>
-<p>About to call sem_timedwait()<br />
+<p>About to call sem_timedwait()<br/>
 sem_timedwait() timed out</p>
 <p>Program source</p>
-<p>#include &lt;unistd.h&gt;<br />
-#include &lt;stdio.h&gt;<br />
-#include &lt;stdlib.h&gt;<br />
-#include &lt;semaphore.h&gt;<br />
-#include &lt;time.h&gt;<br />
-#include &lt;assert.h&gt;<br />
-#include &lt;errno.h&gt;<br />
+<p>#include &lt;unistd.h&gt;<br/>
+#include &lt;stdio.h&gt;<br/>
+#include &lt;stdlib.h&gt;<br/>
+#include &lt;semaphore.h&gt;<br/>
+#include &lt;time.h&gt;<br/>
+#include &lt;assert.h&gt;<br/>
+#include &lt;errno.h&gt;<br/>
 #include &lt;signal.h&gt; sem_t sem; </p>
 <pre><code>#define handle_error(msg)   \
     do {                    \

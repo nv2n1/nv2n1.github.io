@@ -20,12 +20,12 @@ description: "QuantLib::GenericRiskStatistics – empirical-distribution risk me
 <p> Real <code>downsideVariance</code> () const </p>
 <p> Real <code>downsideDeviation</code> () const </p>
 <p> Real <code>regret</code> (Real target) const </p>
-<p> Real <code>potentialUpside</code> (Real percentile) const<br />
- <i>potential upside (the reciprocal of VAR) at a given percentile </i><br />
- Real <code>valueAtRisk</code> (Real percentile) const<br />
- <i>value-at-risk at a given percentile </i><br />
- Real <code>expectedShortfall</code> (Real percentile) const<br />
- <i>expected shortfall at a given percentile </i><br />
+<p> Real <code>potentialUpside</code> (Real percentile) const<br/>
+ <i>potential upside (the reciprocal of VAR) at a given percentile </i><br/>
+ Real <code>valueAtRisk</code> (Real percentile) const<br/>
+ <i>value-at-risk at a given percentile </i><br/>
+ Real <code>expectedShortfall</code> (Real percentile) const<br/>
+ <i>expected shortfall at a given percentile </i><br/>
  Real <code>shortfall</code> (Real target) const </p>
 <p> Real <code>averageShortfall</code> (Real target) const</p>
 <h2>Detailed Description</h2>

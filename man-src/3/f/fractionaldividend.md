@@ -15,8 +15,8 @@ description: "QuantLib::FractionalDividend – Predetermined cash flow."
 <p><code>FractionalDividend</code> (Real rate, const <code>Date</code> &amp;date) </p>
 <p> <code>FractionalDividend</code> (Real rate, Real nominal, const <code>Date</code> &amp;date) </p>
 <p> <code>Dividend interface</code> </p>
-<p> virtual Real <code>amount</code> () const<br />
- <i>returns the amount of the cash flow </i><br />
+<p> virtual Real <code>amount</code> () const<br/>
+ <i>returns the amount of the cash flow </i><br/>
  virtual Real <code>amount</code> (Real underlying) const </p>
 <p> <code>Inspectors</code> </p>
 <p> Real <code>rate</code> () const </p>

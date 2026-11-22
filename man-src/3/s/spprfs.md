@@ -11,7 +11,7 @@ description: "spprfs.f –"
 <p> spprfs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>spprfs</code> (UPLO, N, NRHS, AP, AFP, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
+<p> subroutine <code>spprfs</code> (UPLO, N, NRHS, AP, AFP, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code>SPPRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spprfs (characterUPLO, integerN, integerNRHS, real, dimension( * )AP, real, dimension( * )AFP, real, dimension( ldb, * )B, integerLDB, real, dimension( ldx, * )X, integerLDX, real, dimension( * )FERR, real, dimension( * )BERR, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

@@ -10,7 +10,7 @@ description: "XkbSetControls – Copies changes to the X server based on a modif
 <p>XkbSetControls &#8211; Copies changes to the X server based on a modified ctrls structure in a local copy of the keyboard description </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbSetControls</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned long </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
+<dt> <code>Bool XkbSetControls</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned long </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

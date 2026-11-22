@@ -13,11 +13,11 @@ description: "glutInitWindowPosition – Requests future windows to open at a gi
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutInitWindowPosition int x int y</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>x Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>x Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>X coordinate. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>y Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>y Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Y coordinate.</p>
 <h2>Description</h2>
 <p>This function allows you to request an initial position for future windows. </p>

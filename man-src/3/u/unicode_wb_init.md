@@ -29,7 +29,7 @@ size_t unicode_wbscan_end(unicode_wbscan_info_t wbs);</code></pre>
 <p><code>unicode_wbscan_init</code>(), <code>unicode_wbscan_next</code>() and <code>unicode_wbscan_end</code> scan for the next word boundary in a unicode character sequence. <code>unicode_wbscan_init</code>() obtains a handle, then <code>unicode_wbscan_next</code>() gets repeatedly invoked to define the unicode character sequence. <code>unicode_wbscan_end</code>() deallocates the handle and returns the number of leading characters in the unicode character sequence up to the first word break. </p>
 <p> A non-0 return value from <code>unicode_wbscan_next</code>() indicates that the word boundary is already known, and any further calls to <code>unicode_wbscan_next</code>() will be ignored. <code>unicode_wbscan_end</code>() must still be called, to obtain the unicode character count.</p>
 <h2>See Also</h2>
-<p>m[blue]<code>TR-29</code>m[]<font SIZE="-2">[1]</font>, <code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7), <code>unicode::wordbreak</code>(3), <code><a href="/docs/linux/man/3-unicode_convert_tocase/">unicode_convert_tocase</a></code>(3), <code>unicode_line_break</code>(3), <code><a href="/docs/linux/man/3-unicode_grapheme_break/">unicode_grapheme_break</a></code>(3).</p>
+<p>m[blue]<code>TR-29</code>m[][1], <code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7), <code>unicode::wordbreak</code>(3), <code><a href="/docs/linux/man/3-unicode_convert_tocase/">unicode_convert_tocase</a></code>(3), <code>unicode_line_break</code>(3), <code><a href="/docs/linux/man/3-unicode_grapheme_break/">unicode_grapheme_break</a></code>(3).</p>
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>

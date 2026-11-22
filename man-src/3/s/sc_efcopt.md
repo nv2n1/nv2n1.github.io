@@ -14,15 +14,15 @@ description: "sc::EFCOpt –"
 #include &lt;efc.h&gt;</code></pre>
 <p> Inherits <code>sc::Optimize</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>EFCOpt</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor reads the following keywords:.<br />
+<p><code>EFCOpt</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor reads the following keywords:.<br/>
  <code>EFCOpt</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>apply_transform</code> (const <code>Ref</code>&lt; <code>NonlinearTransform</code> &gt; &amp;) </p>
-<p> void <code>init</code> ()<br />
- <i>Initialize the optimizer. </i><br />
- int <code>update</code> ()<br />
+<p> void <code>init</code> ()<br/>
+ <i>Initialize the optimizer. </i><br/>
+ int <code>update</code> ()<br/>
  <i>Take a step. </i></p>
 <h3>Protected Attributes</h3>
 <pre><code>int tstate

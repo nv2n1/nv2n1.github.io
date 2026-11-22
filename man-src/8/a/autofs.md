@@ -9,9 +9,9 @@ description: "Service control for the automounter"
 
 <p>Service control for the automounter</p>
 <h2>Synopsis</h2>
-<p>If a SysV init script system is being used:<br />
+<p>If a SysV init script system is being used:<br/>
  <code>/etc/rc.d/init.d/autofs</code> <i>start|stop|restart|reload|status</i> </p>
-<p> or if the systemd init system is being used:<br />
+<p> or if the systemd init system is being used:<br/>
  <code>systemctl</code> <i>start|stop|restart|reload|status</i> <code>autofs.service</code></p>
 <h2>Description</h2>
 <p><code>autofs</code> controls the operation of the <code><a href="/docs/linux/man/8-automount/">automount</a></code>(8) daemon(s) running on the Linux system. Usually <code>autofs</code> is invoked at system boot time with the <i>start</i> parameter and at shutdown time with the <i>stop</i> parameter. Service control actions can also be manually invoked by the system administrator to shut down, restart, reload or obtain service status. </p>

@@ -10,7 +10,7 @@ description: "cheev.f –"
 <p>cheev.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cheev</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, INFO)<br />
+<p>subroutine <code>cheev</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code> CHEEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for HE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cheev (characterJOBZ, characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )W, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerINFO)</h3>

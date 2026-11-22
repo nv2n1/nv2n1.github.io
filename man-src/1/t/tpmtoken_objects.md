@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-tpmtoken_objects/"
 description: "tpmtoken_objects – display the objects in the user’s TPM PKCS#11 data store"
 ---
 
-<p>TPM Management &#8211; tpmtoken_objects<br />
+<p>TPM Management &#8211; tpmtoken_objects<br/>
  </center></p>
 
 <p> tpmtoken_objects &#8211; display the objects in the user&#8217;s TPM PKCS#11 data store </p>

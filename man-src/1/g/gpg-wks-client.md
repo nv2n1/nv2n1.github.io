@@ -10,10 +10,10 @@ description: "gpg-wks-client – Client for the Web Key Service"
 
 <p> <code>gpg-wks-client</code> &#8211; Client for the Web Key Service </p>
 <h2>SYNOPSIS</h2>
-<p> <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;supported</code> <i>user-id</i><br />
- <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;check</code> <i>user-id</i><br />
- <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;create</code> <i>fingerprint</i> <i>user-id</i><br />
- <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;receive</code><br />
+<p> <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;supported</code> <i>user-id</i><br/>
+ <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;check</code> <i>user-id</i><br/>
+ <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;create</code> <i>fingerprint</i> <i>user-id</i><br/>
+ <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;receive</code><br/>
  <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;read</code> </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>gpg-wks-client</code> is used to send requests to a Web Key Service provider. This is usuallay done to upload a key into a Web Key Directory. </p>

@@ -46,16 +46,16 @@ break</pre>
 <p> <code>unsetenv</code> <i>variable</i> [<i>value</i>]</p>
 <dl>
 <dd>Unsets environment <i>variable</i>. However, if there is an optional <i>value</i>, then when unloading a module, it will set <i>variable</i> to <i>value</i>. The <code>unsetenv</code> command changes the process&#8217; environment like <code>setenv</code>.</dd></dl>
-<p> <code>append-path</code> [ <i>-d C</i> | <i>&#8211;delim C</i> | <i>&#8211;delim=C</i> ] <i>variable</i> <i>value</i><br />
+<p> <code>append-path</code> [ <i>-d C</i> | <i>&#8211;delim C</i> | <i>&#8211;delim=C</i> ] <i>variable</i> <i>value</i><br/>
  <code>prepend-path</code> [ <i>-d C</i> | <i>&#8211;delim C</i> | <i>&#8211;delim=C</i> ] <i>variable</i> <i>value</i></p>
 <dl>
-<dd>Append or prepend <i>value</i> to environment <i>variable</i>. The <i>variable</i> is a colon, or delimiter, separated list such as<br />
+<dd>Append or prepend <i>value</i> to environment <i>variable</i>. The <i>variable</i> is a colon, or delimiter, separated list such as<br/>
  &quot;PATH=directory:directory:directory&quot;. The default delimiter is a colon &#8216;:&#8217;, but an arbitrary one can be given by the <i>&#8211;delim</i> option. For example a space can be used instead (which will need to be handled in the Tcl specially by enclosing it in &quot; &quot; or { }). A space, however, can not be specified by the <i>&#8211;delim=C</i> form. </dd>
 <p> If the <i>variable</i> is not set, it is created. When a <i>modulefile</i> is unloaded, <code>append-path</code> and <code>prepend-path</code> become <code>remove-path</code>.</dl>
 <p> <code>remove-path</code> [ <i>-d C</i> | <i>&#8211;delim C</i> | <i>&#8211;delim=C</i> ] <i>variable</i> <i>value</i></p>
 <dl>
 <dd>Remove <i>value</i> from the colon, or delimiter, separated list in <i>variable</i>. See <i>prepend-path</i> or <i>append-path</i> for further explanation of using an arbitrary delimiter. Every string between colons, or delimiters, in <i>variable</i> is compared to <i>value</i>. If the two match, <i>value</i> is removed from <i>variable</i>.</dd></dl>
-<p> <code>prereq</code> <i>modulefile</i> [ <i>modulefile</i> &#8230; ]<br />
+<p> <code>prereq</code> <i>modulefile</i> [ <i>modulefile</i> &#8230; ]<br/>
  <code>conflict</code> <i>modulefile</i> [ <i>modulefile</i> &#8230; ]</p>
 <dl>
 <dd><code>prereq</code> and <code>conflict</code> control whether or not the <i>modulefile</i> will be loaded. The <code>prereq</code> command lists modulefiles which must have been previously loaded before the current <i>modulefile</i> will be loaded. Similarly, the <code>conflict</code> command lists modulefiles which conflict with the current <i>modulefile</i>. If a list contains more than one <i>modulefile</i>, then each member of the list acts as a Boolean OR operation. Multiple <code>prereq</code> and <code>conflict</code> commands may be used to create a Boolean AND operation. If one of the requirements have not been satisfied, an error is reported and the current <i>modulefile</i> makes no changes to the user&#8217;s environment. </dd>
@@ -250,7 +250,7 @@ break</pre>
 <dl>
 <dd><i>machine</i> &#8211; a standard name that identifies the system&#8217;s hardware</dd></dl>
 </dl>
-<p> <code>x-resource</code> <i>resource-string</i><br />
+<p> <code>x-resource</code> <i>resource-string</i><br/>
  <code>x-resource</code> <i>filename</i></p>
 <dl>
 <dd>Merge resources into the <i>X11</i> resource database. The resources are used to control look and behavior of <i>X11</i> applications. The command will attempt to read resources from <i>filename</i>. If the argument isn&#8217;t a valid file name, then string will be interpreted as a resource. If a file is found, it will be filtered through the <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) preprocessor, just as <code><a href="/docs/linux/man/1-xrdb/">xrdb</a></code>(1) would do. </dd>
@@ -274,7 +274,7 @@ break</pre>
 <h2>Modules Variables</h2>
 <p>The <code>ModulesCurrentModulefile</code> variable contains the full pathname of the <i>modulefile</i> being interpreted.</p>
 <h2>Locating Modulefiles</h2>
-<p>Every directory in <font SIZE="-1">MODULEPATH</font> is searched to find the <i>modulefile</i>. A directory in <font SIZE="-1">MODULEPATH</font> can have an arbitrary number of sub-directories. If the user names a <i>modulefile</i> to be loaded which is actually a directory, the directory is opened and a search begins for an actual <i>modulefile</i>. First, <code>modulecmd</code> looks for a file with the name <i>.modulerc</i> in the directory. If this file exists, its contents will be evaluated as if it was a module file to be loaded. You may place <i>module-version</i> and <i>module-alias</i> commands inside this file. Additionally, before seeking for <i>.modulerc</i> files in the module directory, the global <i>.modulerc</i> file is sourced, too. If a named version <i>default</i> now exists for the module file to be loaded, the assigned modulefile now will be sourced. Otherwise the file <i>.version</i> is looked up in the directory. If the <i>.version</i> file exists, it is opened and interpreted as Tcl code and takes precedence over a <i>.modulerc</i> file in the same directory. If the Tcl variable <code>ModulesVersion</code> is set by the <i>.version</i> file, <code>modulecmd</code> will use the name as if it specifies a <i>modulefile</i> in the directory. This will become the <i>default</i> module file in this case. If <code>ModulesVersion</code> is a directory, the search begins anew down that directory. If the name does not match any files located in the current directory, the search continues through the remaining directories in <font SIZE="-1">MODULEPATH</font>. </p>
+<p>Every directory in MODULEPATH is searched to find the <i>modulefile</i>. A directory in MODULEPATH can have an arbitrary number of sub-directories. If the user names a <i>modulefile</i> to be loaded which is actually a directory, the directory is opened and a search begins for an actual <i>modulefile</i>. First, <code>modulecmd</code> looks for a file with the name <i>.modulerc</i> in the directory. If this file exists, its contents will be evaluated as if it was a module file to be loaded. You may place <i>module-version</i> and <i>module-alias</i> commands inside this file. Additionally, before seeking for <i>.modulerc</i> files in the module directory, the global <i>.modulerc</i> file is sourced, too. If a named version <i>default</i> now exists for the module file to be loaded, the assigned modulefile now will be sourced. Otherwise the file <i>.version</i> is looked up in the directory. If the <i>.version</i> file exists, it is opened and interpreted as Tcl code and takes precedence over a <i>.modulerc</i> file in the same directory. If the Tcl variable <code>ModulesVersion</code> is set by the <i>.version</i> file, <code>modulecmd</code> will use the name as if it specifies a <i>modulefile</i> in the directory. This will become the <i>default</i> module file in this case. If <code>ModulesVersion</code> is a directory, the search begins anew down that directory. If the name does not match any files located in the current directory, the search continues through the remaining directories in MODULEPATH. </p>
 <p> Every <i>.version</i> and <i>.modulerc</i> file found is Tcl interpreted. So, changes made in these file will affect the subsequently interpreted <i>modulefile</i>. </p>
 <p> If no <i>default</i> version may be figured out, then the highest lexicographically sorted <i>modulefile</i> under the directory using the &#8216;C&#8217; locale will be used. </p>
 <p> For example, it is possible for a user to have a directory named <i>X11</i> which simply contains a <i>.version</i> file specifying which version of <i>X11</i> is to be loaded. Such a file would look like: </p>
@@ -292,7 +292,7 @@ set ModulesVersion &quot;R4&quot;</pre>
 <p>The &#8216;module display <i>modulefile</i>&#8216; command will detail all changes that will be made to the environment. After displaying all of the environment changes <code>modulecmd</code> will call the <code>ModulesDisplay</code> subroutine. The <code>ModulesDisplay</code> subroutine is a good place to put additional descriptive information about the <i>modulefile</i>.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>${</code><font SIZE="-1"><code>MODULEPATH</code></font><code>}</code></dt>
+<dt><code>${</code><code>MODULEPATH</code><code>}</code></dt>
 <dd>Path of directories containing <i>modulefiles</i>.</dd></dl>
 <h2>Version</h2>
 <p>3.2.10</p>

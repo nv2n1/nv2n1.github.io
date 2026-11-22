@@ -25,7 +25,7 @@ description: "dshbak – format output from pdsh command"
 <dd> With <i>-d</i>, force creation of specified <i>DIR</i>. </dd>
 </dl>
 <h2>ORIGIN</h2>
-<p> A rewrite of IBM <a href="/docs/linux/man/1-dshbak/">dshbak</a>(1) by Jim Garlick<br />
+<p> A rewrite of IBM <a href="/docs/linux/man/1-dshbak/">dshbak</a>(1) by Jim Garlick<br/>
  &lt;garlick [at] llnl.gov&gt; on LLNL&#8217;s ASCI Blue-Pacific IBM SP system. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pdsh/">pdsh</a></code>(1) </p>

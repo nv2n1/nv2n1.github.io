@@ -88,14 +88,14 @@ description: "texi2html – a Texinfo to HTML converter"
 <h2>AVAILABILITY</h2>
 <p> The latest version of this program, as well as support in the form of mailing lists with archives, bug tracking, documentation, and other tools can be found at: <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> <a rel="nofollow" href="http://www.nongnu.org/texi2html/">http://www.nongnu.org/texi2html/</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1999-2005 Patrice Dumas &lt;dumas [at] centre-cired.fr&gt;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Derek Price&nbsp;<wbr>&lt;derek [at] ximbiot.com&gt;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Adrian Aichner&nbsp;<wbr>&lt;adrian [at] xemacs.org&gt;,<br />
+<p> Copyright &#169; 1999-2005 Patrice Dumas &lt;dumas [at] centre-cired.fr&gt;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Derek Price&nbsp;<wbr>&lt;derek [at] ximbiot.com&gt;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Adrian Aichner&nbsp;<wbr>&lt;adrian [at] xemacs.org&gt;,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&amp;&nbsp;<wbr>others. </p>
 <p> There is NO warranty. You may redistribute this software under the terms of the GNU General Public License. For more information about these matters, see the file named COPYING.</p>
 <h2>SEE ALSO</h2>
-<p> GNU Texinfo Documentation Format<br />
- <a rel="nofollow" href="http://texinfo.org/">http://texinfo.org/</a><br />
- World Wide Web (WWW), HyperText Markup Language (HTML)<br />
- <a rel="nofollow" href="http://www.w3.org">http://www.w3.org</a><br />
+<p> GNU Texinfo Documentation Format<br/>
+ <a rel="nofollow" href="http://texinfo.org/">http://texinfo.org/</a><br/>
+ World Wide Web (WWW), HyperText Markup Language (HTML)<br/>
+ <a rel="nofollow" href="http://www.w3.org">http://www.w3.org</a><br/>
  LaTeX2HTML</p>

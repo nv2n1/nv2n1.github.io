@@ -10,7 +10,7 @@ description: "ctrsna.f –"
 <p>ctrsna.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ctrsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, RWORK, INFO)<br />
+<p>subroutine <code>ctrsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, RWORK, INFO)<br/>
  <i></i><code>CTRSNA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctrsna (characterJOB, characterHOWMNY, logical, dimension( * )SELECT, integerN, complex, dimension( ldt, * )T, integerLDT, complex, dimension( ldvl, * )VL, integerLDVL, complex, dimension( ldvr, * )VR, integerLDVR, real, dimension( * )S, real, dimension( * )SEP, integerMM, integerM, complex, dimension( ldwork, * )WORK, integerLDWORK, real, dimension( * )RWORK, integerINFO)</h3>

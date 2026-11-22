@@ -10,7 +10,7 @@ description: "pmdanamed – BIND (named) PMDA"
 
 <p> pmdanamed &#8211; BIND (named) PMDA </p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdanamed</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the <font SIZE="-1">BIND DNS</font> server. Further details on <font SIZE="-1">BIND</font> can be found at <a rel="nofollow" href="http://isc.org/.">http://isc.org/.</a></p>
+<p> <code>pmdanamed</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values from the BIND DNS server. Further details on BIND can be found at <a rel="nofollow" href="http://isc.org/.">http://isc.org/.</a></p>
 <h2>INSTALLATION</h2>
 <p> If you want access to the names and values for the named performance metrics, do the following as root: </p>
 <pre>

@@ -58,13 +58,13 @@ description: "fence_virtd.conf – configuration file for fence_virtd"
 </dl>
 <h3>serial</h3>
 <p>The serial listener plugin utilizes libvirt&#8217;s serial (or VMChannel) mapping to listen for requests. When using the serial listener, it is necessary to add a serial port (preferably pointing to /dev/ttyS1) or a channel (preferrably pointing to 10.0.2.179:1229) to the libvirt domain description. Note that only type <code>unix</code> , mode <code>bind</code> serial ports and channels are supported. Example libvirt XML: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&lt;<code>serial</code>&nbsp;<wbr>type=&#8217;unix&#8217;&gt;<br />
-&nbsp;<wbr>&lt;source mode=&#8217;bind&#8217;&nbsp;<wbr>path=&#8217;/sandbox/guests/fence_socket_molly&#8217;/&gt;<br />
-&nbsp;<wbr>&lt;target port=&#8217;1&#8217;/&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;/serial&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;<code>channel</code>&nbsp;<wbr>type=&#8217;unix&#8217;&gt;<br />
-&nbsp;<wbr>&lt;source mode=&#8217;bind&#8217;&nbsp;<wbr>path=&#8217;/sandbox/guests/fence_molly_vmchannel&#8217;/&gt;<br />
-&nbsp;<wbr>&lt;target type=&#8217;guestfwd&#8217;&nbsp;<wbr>address=&#8217;10.0.2.179&#8242;&nbsp;<wbr>port=&#8217;1229&#8217;/&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&lt;<code>serial</code>&nbsp;<wbr>type=&#8217;unix&#8217;&gt;<br/>
+&nbsp;<wbr>&lt;source mode=&#8217;bind&#8217;&nbsp;<wbr>path=&#8217;/sandbox/guests/fence_socket_molly&#8217;/&gt;<br/>
+&nbsp;<wbr>&lt;target port=&#8217;1&#8217;/&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;/serial&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;<code>channel</code>&nbsp;<wbr>type=&#8217;unix&#8217;&gt;<br/>
+&nbsp;<wbr>&lt;source mode=&#8217;bind&#8217;&nbsp;<wbr>path=&#8217;/sandbox/guests/fence_molly_vmchannel&#8217;/&gt;<br/>
+&nbsp;<wbr>&lt;target type=&#8217;guestfwd&#8217;&nbsp;<wbr>address=&#8217;10.0.2.179&#8242;&nbsp;<wbr>port=&#8217;1229&#8217;/&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;/serial&gt; </p>
 <dl>
 <dt><code>uri</code></dt>
@@ -115,10 +115,10 @@ description: "fence_virtd.conf – configuration file for fence_virtd"
 <dd>defines an IP which is allowed to send fencing requests for members of this group (e.g. for multicast). It is highly recommended that this be used in conjunction with a key file. </dd>
 </dl>
 <h2>Example</h2>
-<p>fence_virtd {<br />
-    listener = &quot;multicast&quot;;<br />
+<p>fence_virtd {<br/>
+    listener = &quot;multicast&quot;;<br/>
     backend = &quot;checkpoint&quot;;</p>
-<p>}<br />
+<p>}<br/>
 &nbsp;<wbr>#&nbsp;<wbr>this is the listeners section </p>
 <pre><code>listeners {
     multicast {

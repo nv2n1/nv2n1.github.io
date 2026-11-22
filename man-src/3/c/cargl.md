@@ -11,8 +11,8 @@ description: "carg, cargf, cargl – calculate the complex argument"
 <p> carg, cargf, cargl &#8211; calculate the complex argument </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double carg(double complex </code><i>z</i><code>);</code><br />
- <code>float cargf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double carg(double complex </code><i>z</i><code>);</code><br/>
+ <code>float cargf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double cargl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

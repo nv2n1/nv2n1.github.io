@@ -12,7 +12,7 @@ description: "QuantLib::CMSwapCurveState – Curve state for constant-maturity-s
 <pre><code>void setOnCMSwapRates (const std::vector&lt; Rate &gt; &amp;cmSwapRates, Size firstValidIndex=0)</code></pre>
 <p> Inherits <code>QuantLib::CurveState</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>CMSwapCurveState</code> (const std::vector&lt; <code>Time</code> &gt; &amp;rateTimes, Size spanningForwards)<br />
+<p><code>CMSwapCurveState</code> (const std::vector&lt; <code>Time</code> &gt; &amp;rateTimes, Size spanningForwards)<br/>
  <code>Modifiers</code> </p>
 <pre><code>void setOnCMSwapRates (const std::vector&lt; Rate &gt; &amp;cmSwapRates, Size firstValidIndex=0)</code></pre>
 <p> <code>Inspectors</code> </p>

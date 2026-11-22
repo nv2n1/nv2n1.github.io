@@ -16,10 +16,10 @@ description: "IV_WAIT_INTEREST_INIT, iv_wait_interest_register, iv_wait_interest
  void (*handler)(void *cookie, int status,
  struct rusage *rusage);
 };</pre>
-<p><code>void IV_WAIT_INTEREST_INIT(struct iv_wait_interest *</code><i>this</i><code>);</code><br />
- <code>int iv_wait_interest_register(struct iv_wait_interest *</code><i>this</i><code>);</code><br />
- <code>int iv_wait_interest_register_spawn(struct iv_wait_interest *</code><i>this</i><code>, void (*</code><i>fn</i><code>)(void *), void *</code><i>cookie</i><code>);</code><br />
- <code>void iv_wait_interest_unregister(struct iv_wait_interest *</code><i>this</i><code>);</code><br />
+<p><code>void IV_WAIT_INTEREST_INIT(struct iv_wait_interest *</code><i>this</i><code>);</code><br/>
+ <code>int iv_wait_interest_register(struct iv_wait_interest *</code><i>this</i><code>);</code><br/>
+ <code>int iv_wait_interest_register_spawn(struct iv_wait_interest *</code><i>this</i><code>, void (*</code><i>fn</i><code>)(void *), void *</code><i>cookie</i><code>);</code><br/>
+ <code>void iv_wait_interest_unregister(struct iv_wait_interest *</code><i>this</i><code>);</code><br/>
  <code>int iv_wait_interest_kill(struct iv_wait_interest *</code><i>this</i><code>, int </code><i>sig</i><code>);</code> </p>
 <h2>Description</h2>
 <p><code>iv_wait</code> is an <code>ivykis</code>(3) wrapper around <code><a href="/docs/linux/man/2-wait4/">wait4</a></code>(2), integrating process state change notification with the ivykis event loop. </p>

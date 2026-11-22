@@ -11,7 +11,7 @@ description: "dlasd5.f –"
 <p> dlasd5.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlasd5</code> (I, D, Z, DELTA, RHO, DSIGMA, WORK)<br />
+<p> subroutine <code>dlasd5</code> (I, D, Z, DELTA, RHO, DSIGMA, WORK)<br/>
  <i></i><code>DLASD5</code> computes the square root of the i-th eigenvalue of a positive symmetric rank-one modification of a 2-by-2 diagonal matrix. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasd5 (integerI, double precision, dimension( 2 )D, double precision, dimension( 2 )Z, double precision, dimension( 2 )DELTA, double precisionRHO, double precisionDSIGMA, double precision, dimension( 2 )WORK)</h3>

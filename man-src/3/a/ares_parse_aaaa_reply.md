@@ -33,5 +33,5 @@ int ares_parse_aaaa_reply(const unsigned char *abuf, int alen,
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_gethostbyname/">ares_gethostbyname</a></code>(3), <code><a href="/docs/linux/man/3-ares_free_hostent/">ares_free_hostent</a></code>(3)</p>
 <h2>AUTHOR</h2>
-<p> Dominick Meglio<br />
+<p> Dominick Meglio<br/>
  Copyright 2005 by Dominick Meglio. </p>

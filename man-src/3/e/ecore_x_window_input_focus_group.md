@@ -9,15 +9,15 @@ description: "X Window Input Focus Functions – Functions that manage the focus
 
 <p>X Window Input Focus Functions &#8211; Functions that manage the focus of an X Window. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>ecore_x_window_focus</code> (Ecore_X_Window window)<br />
- <i>Sets the focus to the window </i>window.<br />
- EAPI void <code>ecore_x_window_focus_at_time</code> (Ecore_X_Window window, Ecore_X_Time time)<br />
- <i>Sets the focus to the given window at a specific time. </i><br />
- EAPI void <code>ecore_x_get_input_focus_prefetch</code> (void)<br />
- <i>Sends the GetInputFocus request. </i><br />
- EAPI void <code>ecore_x_get_input_focus_fetch</code> (void)<br />
- <i>Gets the reply of the GetInputFocus request sent by </i><code>ecore_x_get_input_focus_prefetch()</code>.<br />
- EAPI Ecore_X_Window <code>ecore_x_window_focus_get</code> (void)<br />
+<p>EAPI void <code>ecore_x_window_focus</code> (Ecore_X_Window window)<br/>
+ <i>Sets the focus to the window </i>window.<br/>
+ EAPI void <code>ecore_x_window_focus_at_time</code> (Ecore_X_Window window, Ecore_X_Time time)<br/>
+ <i>Sets the focus to the given window at a specific time. </i><br/>
+ EAPI void <code>ecore_x_get_input_focus_prefetch</code> (void)<br/>
+ <i>Sends the GetInputFocus request. </i><br/>
+ EAPI void <code>ecore_x_get_input_focus_fetch</code> (void)<br/>
+ <i>Gets the reply of the GetInputFocus request sent by </i><code>ecore_x_get_input_focus_prefetch()</code>.<br/>
+ EAPI Ecore_X_Window <code>ecore_x_window_focus_get</code> (void)<br/>
  <i>Gets the window that has focus. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that manage the focus of an X Window.</p>
@@ -31,7 +31,7 @@ description: "X Window Input Focus Functions – Functions that manage the focus
 <p>Sets the focus to the given window at a specific time. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> The window to focus.<br />
+<dd><i>window</i> The window to focus.<br/>
  <i>time</i> When to set the focus to the window.</dd></dl>
 <h3>EAPI Ecore_X_Window ecore_x_window_focus_get (void)</h3>
 <p>Gets the window that has focus. </p>

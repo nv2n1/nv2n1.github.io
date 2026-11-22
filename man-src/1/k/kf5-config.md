@@ -18,7 +18,7 @@ description: "kf5-config – Prints Qt(TM) and Frameworks installation paths"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> kf5-config is mostly a deprecated replacement for kde4-config, while the recommended tool to use instead is qtpaths (which is shipped with Qt(TM)). </p>
 </dl>
 <h2>OPTIONS</h2>

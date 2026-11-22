@@ -7,38 +7,38 @@ url: "/docs/linux/man/8-biosdecode/"
 description: "biosdecode – BIOS information decoder"
 ---
 
-<p>biosdecode &#8211; <font SIZE="-1">BIOS</font> information decoder</p>
+<p>biosdecode &#8211; BIOS information decoder</p>
 <h2>Synopsis</h2>
 <p><code>biosdecode</code> [<code>OPTIONS</code>]</p>
 <h2>Description</h2>
-<p><code>biosdecode</code> parses the <font SIZE="-1">BIOS</font> memory and prints information about all structures (or entry points) it knows of. Currently known entry point types are:</p>
+<p><code>biosdecode</code> parses the BIOS memory and prints information about all structures (or entry points) it knows of. Currently known entry point types are:</p>
 <dl>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">SMBIOS</font> (System Management <font SIZE="-1">BIOS</font>)<br />
+<dd>SMBIOS (System Management BIOS)<br/>
  Use <code>dmidecode</code> for a more detailed output.</dd>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">DMI</font> (Desktop Management Interface, a legacy version of <font SIZE="-1">SMBIOS</font>)<br />
+<dd>DMI (Desktop Management Interface, a legacy version of SMBIOS)<br/>
  Use <code>dmidecode</code> for a more detailed output.</dd>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">SYSID</font></dd>
+<dd>SYSID</dd>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">PNP</font> (Plug and Play)</dd>
+<dd>PNP (Plug and Play)</dd>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">ACPI</font> (Advanced Configuration and Power Interface)</dd>
+<dd>ACPI (Advanced Configuration and Power Interface)</dd>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">BIOS32</font> (<font SIZE="-1">BIOS32</font> Service Directory)</dd>
+<dd>BIOS32 (BIOS32 Service Directory)</dd>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">PIR</font> (<font SIZE="-1">PCI</font> <font SIZE="-1">IRQ</font> Routing)</dd>
+<dd>PIR (PCI IRQ Routing)</dd>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">32OS</font> (<font SIZE="-1">BIOS32</font> Extension, Compaq-specific)<br />
+<dd>32OS (BIOS32 Extension, Compaq-specific)<br/>
  See <code>ownership</code> for a Compaq ownership tag retrieval tool.</dd>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">SNY</font> (Sony-specific, not decoded)</dd>
+<dd>SNY (Sony-specific, not decoded)</dd>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">VPD</font> (Vital Product Data, IBM-specific)<br />
+<dd>VPD (Vital Product Data, IBM-specific)<br/>
  Use <code>vpddecode</code> for a more detailed output.</dd>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">FJKEYINF</font> (Application Panel, Fujitsu-specific)  <code>biosdecode</code> started its life as a part of <code>dmidecode</code> but as more entry point types were added, it was moved to a different program.</dd>
+<dd>FJKEYINF (Application Panel, Fujitsu-specific)  <code>biosdecode</code> started its life as a part of <code>dmidecode</code> but as more entry point types were added, it was moved to a different program.</dd>
 <h2>Options</h2>
 <dl>
 <dt><code>-d</code>, <code>&#8211;dev-mem FILE</code></dt>

@@ -29,7 +29,7 @@ ndctl zero - labels&lt;nmem0&gt;[&lt;nmem1&gt;..&lt;nmemN&gt;][&lt;options&gt;]
 <dt>
 </dt><dd> Turn on verbose debug messages in the library (if ndctl was built with logging and debug enabled).</dd></dl>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code>NVDIMM Namespace Specification</code>m[]<font SIZE="-2">[1]</font></p>
+<p> m[blue]<code>NVDIMM Namespace Specification</code>m[][1]</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

@@ -18,8 +18,8 @@ description: "sane-pint – SANE backend for scanners that use the PINT device d
 <h2>Configuration</h2>
 <p>The contents of the <i>pint.conf</i>. file is a list of device names that correspond to PINT scanners. Empty lines and lines starting with a hash mark (#) are ignored. A sample configuration file is shown below: </p>
 <dl>
-<dd>/dev/scanner<br />
- # this is a comment<br />
+<dd>/dev/scanner<br/>
+ # this is a comment<br/>
  /dev/ss1</dd></dl>
 <h2>Files</h2>
 <dl>

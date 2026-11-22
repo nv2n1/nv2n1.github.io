@@ -25,8 +25,8 @@ description: "Error Handling Helpers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The error object for which to perform the check<br />
- <i>module</i> The module descriptor to check for<br />
+</dt><dd> <i>error</i> The error object for which to perform the check<br/>
+ <i>module</i> The module descriptor to check for<br/>
  <i>type</i> The type to check for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

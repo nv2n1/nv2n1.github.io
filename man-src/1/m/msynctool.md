@@ -10,10 +10,10 @@ description: "msynctool – Command line interface for OpenSync"
 
 <p> msynctool &#8211; Command line interface for OpenSync</p>
 <h2>SYNTAX</h2>
-<p> msynctool <i>option</i> [<i>arguments</i>] [<i>option</i>]<br />
+<p> msynctool <i>option</i> [<i>arguments</i>] [<i>option</i>]<br/>
  msynctool &#8211;sync SYNC_GROUP</p>
 <h2>DESCRIPTION</h2>
-<p> Command line interface for OpenSync<br />
+<p> Command line interface for OpenSync<br/>
  You can use this tool to synchronize your devices and applications using the OpenSync framework from the command line. </p>
 <dl>
 <dt>&#8211; First you have to create a SYNC_GROUP:</dt>
@@ -31,10 +31,10 @@ description: "msynctool – Command line interface for OpenSync"
 <dt>&#8211; The next thing you have to do is to configure the plugins.</dt>
 <dd>
 </dd><dt>
-</dt><dd> msynctool &#8211;configure evo2-sync 1<br />
+</dt><dd> msynctool &#8211;configure evo2-sync 1<br/>
  (configures the first group member)</dd>
 <dt>
-</dt><dd> msynctool &#8211;configure evo2-sync 2<br />
+</dt><dd> msynctool &#8211;configure evo2-sync 2<br/>
  (configures the second group member)</dd>
 <dt>&#8211; Now your group is ready for usage!</dt>
 <dd>

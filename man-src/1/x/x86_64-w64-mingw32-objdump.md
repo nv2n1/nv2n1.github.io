@@ -10,48 +10,48 @@ description: "objdump – display information from object files."
 
 <p> objdump &#8211; display information from object files. </p>
 <h2>SYNOPSIS</h2>
-<p> objdump [<code>-a</code>|<code>&#8211;archive-headers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-d</code>|<code>&#8211;disassemble</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-D</code>|<code>&#8211;disassemble-all</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-z</code>|<code>&#8211;disassemble-zeroes</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-EB</code>|<code>-EL</code>|<code>&#8211;endian=</code>{big | little&nbsp;<wbr>}]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-f</code>|<code>&#8211;file-headers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-F</code>|<code>&#8211;file-offsets</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;file-start-context</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-g</code>|<code>&#8211;debugging</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>|<code>&#8211;debugging-tags</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-h</code>|<code>&#8211;section-headers</code>|<code>&#8211;headers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>|<code>&#8211;info</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-j</code>&nbsp;<wbr><i>section</i>|<code>&#8211;section=</code><i>section</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-l</code>|<code>&#8211;line-numbers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-S</code>|<code>&#8211;source</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-m</code>&nbsp;<wbr><i>machine</i>|<code>&#8211;architecture=</code><i>machine</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-M</code>&nbsp;<wbr><i>options</i>|<code>&#8211;disassembler-options=</code><i>options</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;private-headers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-P</code>&nbsp;<wbr><i>options</i>|<code>&#8211;private=</code><i>options</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-r</code>|<code>&#8211;reloc</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-R</code>|<code>&#8211;dynamic-reloc</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-s</code>|<code>&#8211;full-contents</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-W[lLiaprmfFsoRt]</code>|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;dwarf</code>[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=frames-interp,=str,=loc,=Ranges,=pubtypes,=trace_info,=trace_abbrev,=trace_aranges,=gdb_index]]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-G</code>|<code>&#8211;stabs</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>|<code>&#8211;syms</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-T</code>|<code>&#8211;dynamic-syms</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-x</code>|<code>&#8211;all-headers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-w</code>|<code>&#8211;wide</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;start-address=</code><i>address</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;stop-address=</code><i>address</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix-addresses</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;[no-]show-raw-insn</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;adjust-vma=</code><i>offset</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;special-syms</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix=</code><i>prefix</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix-strip=</code><i>level</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;insn-width=</code><i>width</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-H</code>|<code>&#8211;help</code>]<br />
+<p> objdump [<code>-a</code>|<code>&#8211;archive-headers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-d</code>|<code>&#8211;disassemble</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-D</code>|<code>&#8211;disassemble-all</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-z</code>|<code>&#8211;disassemble-zeroes</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-EB</code>|<code>-EL</code>|<code>&#8211;endian=</code>{big | little&nbsp;<wbr>}]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-f</code>|<code>&#8211;file-headers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-F</code>|<code>&#8211;file-offsets</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;file-start-context</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-g</code>|<code>&#8211;debugging</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>|<code>&#8211;debugging-tags</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-h</code>|<code>&#8211;section-headers</code>|<code>&#8211;headers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>|<code>&#8211;info</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-j</code>&nbsp;<wbr><i>section</i>|<code>&#8211;section=</code><i>section</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-l</code>|<code>&#8211;line-numbers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-S</code>|<code>&#8211;source</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-m</code>&nbsp;<wbr><i>machine</i>|<code>&#8211;architecture=</code><i>machine</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-M</code>&nbsp;<wbr><i>options</i>|<code>&#8211;disassembler-options=</code><i>options</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;private-headers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-P</code>&nbsp;<wbr><i>options</i>|<code>&#8211;private=</code><i>options</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-r</code>|<code>&#8211;reloc</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-R</code>|<code>&#8211;dynamic-reloc</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-s</code>|<code>&#8211;full-contents</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-W[lLiaprmfFsoRt]</code>|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;dwarf</code>[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=frames-interp,=str,=loc,=Ranges,=pubtypes,=trace_info,=trace_abbrev,=trace_aranges,=gdb_index]]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-G</code>|<code>&#8211;stabs</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>|<code>&#8211;syms</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-T</code>|<code>&#8211;dynamic-syms</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-x</code>|<code>&#8211;all-headers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-w</code>|<code>&#8211;wide</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;start-address=</code><i>address</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;stop-address=</code><i>address</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix-addresses</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;[no-]show-raw-insn</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;adjust-vma=</code><i>offset</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;special-syms</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix=</code><i>prefix</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix-strip=</code><i>level</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;insn-width=</code><i>width</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-H</code>|<code>&#8211;help</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>objfile</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>objdump</code> displays information about one or more object files. The options control what particular information to display. This information is mostly useful to programmers who are working on the compilation tools, as opposed to programmers who just want their program to compile and work. </p>
@@ -73,15 +73,15 @@ description: "objdump – display information from object files."
 <pre>
         objdump -b oasys -m vax -h fu.o
 </pre>
-<p> displays summary information from the section headers (<code>-h</code>) of <i>fu.o</i>, which is explicitly identified (<code>-m</code>) as a <font SIZE="-1">VAX</font> object file in the format produced by Oasys compilers. You can list the formats available with the <code>-i</code> option.</p>
+<p> displays summary information from the section headers (<code>-h</code>) of <i>fu.o</i>, which is explicitly identified (<code>-m</code>) as a VAX object file in the format produced by Oasys compilers. You can list the formats available with the <code>-i</code> option.</p>
 <dt><code>-C</code></dt>
 <dd>
 </dd><dt><code>&#8211;demangle[=</code><i>style</i><code>]</code></dt>
-<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C<font SIZE="-2">++</font> function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
+<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C++ function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
 <dt><code>-g</code></dt>
 <dd>
 </dd><dt><code>&#8211;debugging</code></dt>
-<dd> Display debugging information. This attempts to parse <font SIZE="-1">STABS</font> and <font SIZE="-1">IEEE</font> debugging format information stored in the file and print it out using a C like syntax. If neither of these formats are found this option falls back on the <code>-W</code> option to print any <font SIZE="-1">DWARF</font> information in the file.</dd>
+<dd> Display debugging information. This attempts to parse STABS and IEEE debugging format information stored in the file and print it out using a C like syntax. If neither of these formats are found this option falls back on the <code>-W</code> option to print any DWARF information in the file.</dd>
 <dt><code>-e</code></dt>
 <dd>
 </dd><dt><code>&#8211;debugging-tags</code></dt>
@@ -94,7 +94,7 @@ description: "objdump – display information from object files."
 <dd>
 </dd><dt><code>&#8211;disassemble-all</code></dt>
 <dd> Like <code>-d</code>, but disassemble the contents of all sections, not just those expected to contain instructions. </dd>
-<p> If the target is an <font SIZE="-1">ARM</font> architecture this switch also has the effect of forcing the disassembler to decode pieces of data found in code sections as if they were instructions.</p>
+<p> If the target is an ARM architecture this switch also has the effect of forcing the disassembler to decode pieces of data found in code sections as if they were instructions.</p>
 <dt><code>&#8211;prefix-addresses</code></dt>
 <dd> When disassembling, print the complete address on each line. This is the older disassembly format.</dd>
 <dt><code>-EB</code></dt>
@@ -140,45 +140,45 @@ description: "objdump – display information from object files."
 <dd>
 </dd><dt><code>&#8211;architecture=</code><i>machine</i></dt>
 <dd> Specify the architecture to use when disassembling object files. This can be useful when disassembling object files which do not describe architecture information, such as S-records. You can list the available architectures with the <code>-i</code> option. </dd>
-<p> If the target is an <font SIZE="-1">ARM</font> architecture then this switch has an additional effect. It restricts the disassembly to only those instructions supported by the architecture specified by <i>machine</i>. If it is necessary to use this switch because the input file does not contain any architecture information, but it is also desired to disassemble all the instructions use <code>-marm</code>.</p>
+<p> If the target is an ARM architecture then this switch has an additional effect. It restricts the disassembly to only those instructions supported by the architecture specified by <i>machine</i>. If it is necessary to use this switch because the input file does not contain any architecture information, but it is also desired to disassemble all the instructions use <code>-marm</code>.</p>
 <dt><code>-M</code> <i>options</i></dt>
 <dd>
 </dd><dt><code>&#8211;disassembler-options=</code><i>options</i></dt>
 <dd> Pass target specific information to the disassembler. Only supported on some targets. If it is necessary to specify more than one disassembler option then multiple <code>-M</code> options can be used or can be placed together into a comma separated list. </dd>
-<p> If the target is an <font SIZE="-1">ARM</font> architecture then this switch can be used to select which register name set is used during disassembler. Specifying <code>-M reg-names-std</code> (the default) will select the register names as used in <font SIZE="-1">ARM</font>&#8216;s instruction set documentation, but with register 13 called &#8216;sp&#8217;, register 14 called &#8216;lr&#8217; and register 15 called &#8216;pc&#8217;. Specifying <code>-M reg-names-apcs</code> will select the name set used by the <font SIZE="-1">ARM</font> Procedure Call Standard, whilst specifying <code>-M reg-names-raw</code> will just use <code>r</code> followed by the register number. </p>
-<p> There are also two variants on the <font SIZE="-1">APCS</font> register naming scheme enabled by <code>-M reg-names-atpcs</code> and <code>-M reg-names-special-atpcs</code> which use the ARM/Thumb Procedure Call Standard naming conventions. (Either with the normal register names or the special register names). </p>
-<p> This option can also be used for <font SIZE="-1">ARM</font> architectures to force the disassembler to interpret all instructions as Thumb instructions by using the switch <code>&#8211;disassembler-options=force-thumb</code>. This can be useful when attempting to disassemble thumb code produced by other compilers. </p>
-<p> For the x86, some of the options duplicate functions of the <code>-m</code> switch, but allow finer grained control. Multiple selections from the following may be specified as a comma separated string. <code>x86-64</code>, <code>i386</code> and <code>i8086</code> select disassembly for the given architecture. <code>intel</code> and <code>att</code> select between intel syntax mode and <font SIZE="-1">AT&amp;T</font> syntax mode. <code>intel-mnemonic</code> and <code>att-mnemonic</code> select between intel mnemonic mode and <font SIZE="-1">AT&amp;T</font> mnemonic mode. <code>intel-mnemonic</code> implies <code>intel</code> and <code>att-mnemonic</code> implies <code>att</code>. <code>addr64</code>, <code>addr32</code>, <code>addr16</code>, <code>data32</code> and <code>data16</code> specify the default address size and operand size. These four options will be overridden if <code>x86-64</code>, <code>i386</code> or <code>i8086</code> appear later in the option string. Lastly, <code>suffix</code>, when in <font SIZE="-1">AT&amp;T</font> mode, instructs the disassembler to print a mnemonic suffix even when the suffix could be inferred by the operands. </p>
-<p> For PowerPC, <code>booke</code> controls the disassembly of BookE instructions. <code>32</code> and <code>64</code> select PowerPC and PowerPC64 disassembly, respectively. <code>e300</code> selects disassembly for the e300 family. <code>440</code> selects disassembly for the PowerPC 440. <code>ppcps</code> selects disassembly for the paired single instructions of the <font SIZE="-1">PPC750CL.</font> </p>
-<p> For <font SIZE="-1">MIPS,</font> this option controls the printing of instruction mnemonic names and register names in disassembled instructions. Multiple selections from the following may be specified as a comma separated string, and invalid options are ignored:</p>
+<p> If the target is an ARM architecture then this switch can be used to select which register name set is used during disassembler. Specifying <code>-M reg-names-std</code> (the default) will select the register names as used in ARM&#8216;s instruction set documentation, but with register 13 called &#8216;sp&#8217;, register 14 called &#8216;lr&#8217; and register 15 called &#8216;pc&#8217;. Specifying <code>-M reg-names-apcs</code> will select the name set used by the ARM Procedure Call Standard, whilst specifying <code>-M reg-names-raw</code> will just use <code>r</code> followed by the register number. </p>
+<p> There are also two variants on the APCS register naming scheme enabled by <code>-M reg-names-atpcs</code> and <code>-M reg-names-special-atpcs</code> which use the ARM/Thumb Procedure Call Standard naming conventions. (Either with the normal register names or the special register names). </p>
+<p> This option can also be used for ARM architectures to force the disassembler to interpret all instructions as Thumb instructions by using the switch <code>&#8211;disassembler-options=force-thumb</code>. This can be useful when attempting to disassemble thumb code produced by other compilers. </p>
+<p> For the x86, some of the options duplicate functions of the <code>-m</code> switch, but allow finer grained control. Multiple selections from the following may be specified as a comma separated string. <code>x86-64</code>, <code>i386</code> and <code>i8086</code> select disassembly for the given architecture. <code>intel</code> and <code>att</code> select between intel syntax mode and AT&amp;T syntax mode. <code>intel-mnemonic</code> and <code>att-mnemonic</code> select between intel mnemonic mode and AT&amp;T mnemonic mode. <code>intel-mnemonic</code> implies <code>intel</code> and <code>att-mnemonic</code> implies <code>att</code>. <code>addr64</code>, <code>addr32</code>, <code>addr16</code>, <code>data32</code> and <code>data16</code> specify the default address size and operand size. These four options will be overridden if <code>x86-64</code>, <code>i386</code> or <code>i8086</code> appear later in the option string. Lastly, <code>suffix</code>, when in AT&amp;T mode, instructs the disassembler to print a mnemonic suffix even when the suffix could be inferred by the operands. </p>
+<p> For PowerPC, <code>booke</code> controls the disassembly of BookE instructions. <code>32</code> and <code>64</code> select PowerPC and PowerPC64 disassembly, respectively. <code>e300</code> selects disassembly for the e300 family. <code>440</code> selects disassembly for the PowerPC 440. <code>ppcps</code> selects disassembly for the paired single instructions of the PPC750CL. </p>
+<p> For MIPS, this option controls the printing of instruction mnemonic names and register names in disassembled instructions. Multiple selections from the following may be specified as a comma separated string, and invalid options are ignored:</p>
 <dl>
 <dl>
 <dt>&quot;no-aliases&quot;</dt>
 <dd> Print the &#8216;raw&#8217; instruction mnemonic instead of some pseudo instruction mnemonic. I.e., print &#8216;daddu&#8217; or &#8216;or&#8217; instead of &#8216;move&#8217;, &#8216;sll&#8217; instead of &#8216;nop&#8217;, etc.</dd>
 <dt>&quot;msa&quot;</dt>
-<dd> Disassemble <font SIZE="-1">MSA</font> instructions.</dd>
+<dd> Disassemble MSA instructions.</dd>
 <dt>&quot;virt&quot;</dt>
-<dd> Disassemble the virtualization <font SIZE="-1">ASE</font> instructions.</dd>
+<dd> Disassemble the virtualization ASE instructions.</dd>
 <dt>&quot;xpa&quot;</dt>
-<dd> Disassemble the eXtended Physical Address (<font SIZE="-1">XPA</font>) <font SIZE="-1">ASE</font> instructions.</dd>
+<dd> Disassemble the eXtended Physical Address (XPA) ASE instructions.</dd>
 <dt>&quot;gpr-names=ABI<tt>&quot;</dt>
-<dd> Print </tt><font SIZE="-1"><tt>GPR </tt></font><tt>(general-purpose register) names as appropriate for the specified </tt><font SIZE="-1"><tt>ABI. </tt></font><tt> By default, </tt><font SIZE="-1"><tt>GPR</tt></font><tt> names are selected according to the </tt><font SIZE="-1"><tt>ABI</tt></font><tt> of the binary being disassembled.</dd>
+<dd> Print </tt><tt>GPR </tt><tt>(general-purpose register) names as appropriate for the specified </tt><tt>ABI. </tt><tt> By default, </tt><tt>GPR</tt><tt> names are selected according to the </tt><tt>ABI</tt><tt> of the binary being disassembled.</dd>
 <dt>&quot;fpr-names=</tt>ABI<tt>&quot;</dt>
-<dd> Print </tt><font SIZE="-1"><tt>FPR </tt></font><tt>(floating-point register) names as appropriate for the specified </tt><font SIZE="-1"><tt>ABI. </tt></font><tt> By default, </tt><font SIZE="-1"><tt>FPR</tt></font><tt> numbers are printed rather than names.</dd>
+<dd> Print </tt><tt>FPR </tt><tt>(floating-point register) names as appropriate for the specified </tt><tt>ABI. </tt><tt> By default, </tt><tt>FPR</tt><tt> numbers are printed rather than names.</dd>
 <dt>&quot;cp0-names=</tt>ARCH<tt>&quot;</dt>
-<dd> Print </tt><font SIZE="-1"><tt>CP0 </tt></font><tt>(system control coprocessor; coprocessor 0) register names as appropriate for the </tt><font SIZE="-1"><tt>CPU</tt></font><tt> or architecture specified by </tt><i></i><font SIZE="-1"><i>ARCH</i></font><i></i>. By default, <font SIZE="-1">CP0</font> register names are selected according to the architecture and <font SIZE="-1">CPU</font> of the binary being disassembled.</dd>
+<dd> Print </tt><tt>CP0 </tt><tt>(system control coprocessor; coprocessor 0) register names as appropriate for the </tt><tt>CPU</tt><tt> or architecture specified by </tt><i></i><i>ARCH</i><i></i>. By default, CP0 register names are selected according to the architecture and CPU of the binary being disassembled.</dd>
 <dt>&quot;hwr-names=ARCH<tt>&quot;</dt>
-<dd> Print </tt><font SIZE="-1"><tt>HWR </tt></font><tt>(hardware register, used by the &quot;rdhwr&quot;</tt> instruction) names as appropriate for the <font SIZE="-1">CPU</font> or architecture specified by <i></i><font SIZE="-1"><i>ARCH</i></font><i></i>. By default, <font SIZE="-1">HWR</font> names are selected according to the architecture and <font SIZE="-1">CPU</font> of the binary being disassembled.</dd>
+<dd> Print </tt><tt>HWR </tt><tt>(hardware register, used by the &quot;rdhwr&quot;</tt> instruction) names as appropriate for the CPU or architecture specified by <i></i><i>ARCH</i><i></i>. By default, HWR names are selected according to the architecture and CPU of the binary being disassembled.</dd>
 <dt>&quot;reg-names=ABI<tt>&quot;</dt>
-<dd> Print </tt><font SIZE="-1"><tt>GPR</tt></font><tt> and </tt><font SIZE="-1"><tt>FPR</tt></font><tt> names as appropriate for the selected </tt><font SIZE="-1"><tt>ABI.</tt></font><tt></dd>
+<dd> Print </tt><tt>GPR</tt><tt> and </tt><tt>FPR</tt><tt> names as appropriate for the selected </tt><tt>ABI.</tt><tt></dd>
 <dt>&quot;reg-names=</tt>ARCH<tt>&quot;</dt>
-<dd> Print CPU-specific register names (</tt><font SIZE="-1"><tt>CP0</tt></font><tt> register and </tt><font SIZE="-1"><tt>HWR</tt></font><tt> names) as appropriate for the selected </tt><font SIZE="-1"><tt>CPU</tt></font><tt> or architecture.</dd></dl>
+<dd> Print CPU-specific register names (</tt><tt>CP0</tt><tt> register and </tt><tt>HWR</tt><tt> names) as appropriate for the selected </tt><tt>CPU</tt><tt> or architecture.</dd></dl>
 </dl>
 <dl>
 <dt>
 </dt><dd>
-<p> For any of the options listed above, </tt><i></i><font SIZE="-1"><i>ABI</i></font><i></i> or <i></i><font SIZE="-1"><i>ARCH</i></font><i></i> may be specified as <code>numeric</code> to have numbers printed rather than names, for the selected types of registers. You can list the available values of <i></i><font SIZE="-1"><i>ABI</i></font><i></i> and <i></i><font SIZE="-1"><i>ARCH</i></font><i></i> using the <code>&#8211;help</code> option. </p>
-<p> For <font SIZE="-1">VAX,</font> you can specify function entry addresses with <code>-M entry:0xf00ba</code>. You can use this multiple times to properly disassemble <font SIZE="-1">VAX</font> binary files that don&#8217;t contain symbol tables (like <font SIZE="-1">ROM</font> dumps). In these cases, the function entry mask would otherwise be decoded as <font SIZE="-1">VAX</font> instructions, which would probably lead the rest of the function being wrongly disassembled.</dd></dl>
+<p> For any of the options listed above, </tt><i></i><i>ABI</i><i></i> or <i></i><i>ARCH</i><i></i> may be specified as <code>numeric</code> to have numbers printed rather than names, for the selected types of registers. You can list the available values of <i></i><i>ABI</i><i></i> and <i></i><i>ARCH</i><i></i> using the <code>&#8211;help</code> option. </p>
+<p> For VAX, you can specify function entry addresses with <code>-M entry:0xf00ba</code>. You can use this multiple times to properly disassemble VAX binary files that don&#8217;t contain symbol tables (like ROM dumps). In these cases, the function entry mask would otherwise be decoded as VAX instructions, which would probably lead the rest of the function being wrongly disassembled.</dd></dl>
 <dt><code>-p</code></dt>
 <dd>
 </dd><dt><code>&#8211;private-headers</code></dt>
@@ -187,7 +187,7 @@ description: "objdump – display information from object files."
 <dd>
 </dd><dt><code>&#8211;private=</code><i>options</i></dt>
 <dd> Print information that is specific to the object file format. The argument <i>options</i> is a comma separated list that depends on the format (the lists of options is displayed with the help). </dd>
-<p> For <font SIZE="-1">XCOFF,</font> the available options are: <code>header</code>, <code>aout</code>, <code>sections</code>, <code>syms</code>, <code>relocs</code>, <code>lineno</code>, <code>loader</code>, <code>except</code>, <code>typchk</code>, <code>traceback</code>, <code>toc</code> and <code>ldinfo</code>.</p>
+<p> For XCOFF, the available options are: <code>header</code>, <code>aout</code>, <code>sections</code>, <code>syms</code>, <code>relocs</code>, <code>lineno</code>, <code>loader</code>, <code>except</code>, <code>typchk</code>, <code>traceback</code>, <code>toc</code> and <code>ldinfo</code>.</p>
 <dt><code>-r</code></dt>
 <dd>
 </dd><dt><code>&#8211;reloc</code></dt>
@@ -224,15 +224,15 @@ description: "objdump – display information from object files."
 <dd> Limit the dump of the <tt>&quot;.debug_info&quot;</tt> section to <i>n</i> children. This is only useful with <code>&#8211;dwarf=info</code>. The default is to print all DIEs; the special value 0 for <i>n</i> will also have this effect. </dd>
 <p> With a non-zero value for <i>n</i>, DIEs at or deeper than <i>n</i> levels will not be printed. The range for <i>n</i> is zero-based.</p>
 <dt><code>&#8211;dwarf-start=</code><i>n</i></dt>
-<dd> Print only DIEs beginning with the <font SIZE="-1">DIE</font> numbered <i>n</i>. This is only useful with <code>&#8211;dwarf=info</code>. </dd>
-<p> If specified, this option will suppress printing of any header information and all DIEs before the <font SIZE="-1">DIE</font> numbered <i>n</i>. Only siblings and children of the specified <font SIZE="-1">DIE</font> will be printed. </p>
+<dd> Print only DIEs beginning with the DIE numbered <i>n</i>. This is only useful with <code>&#8211;dwarf=info</code>. </dd>
+<p> If specified, this option will suppress printing of any header information and all DIEs before the DIE numbered <i>n</i>. Only siblings and children of the specified DIE will be printed. </p>
 <p> This can be used in conjunction with <code>&#8211;dwarf-depth</code>.</p>
 <dt><code>&#8211;dwarf-check</code></dt>
 <dd> Enable additional checks for consistency of Dwarf information.</dd>
 <dt><code>-G</code></dt>
 <dd>
 </dd><dt><code>&#8211;stabs</code></dt>
-<dd> Display the full contents of any sections requested. Display the contents of the .stab and .stab.index and .stab.excl sections from an <font SIZE="-1">ELF</font> file. This is only useful on systems (such as Solaris 2.0) in which <tt>&quot;.stab&quot;</tt> debugging symbol-table entries are carried in an <font SIZE="-1">ELF</font> section. In most other file formats, debugging symbol-table entries are interleaved with linkage symbols, and are visible in the <code>&#8211;syms</code> output.</dd>
+<dd> Display the full contents of any sections requested. Display the contents of the .stab and .stab.index and .stab.excl sections from an ELF file. This is only useful on systems (such as Solaris 2.0) in which <tt>&quot;.stab&quot;</tt> debugging symbol-table entries are carried in an ELF section. In most other file formats, debugging symbol-table entries are interleaved with linkage symbols, and are visible in the <code>&#8211;syms</code> output.</dd>
 <dt><code>&#8211;start-address=</code><i>address</i></dt>
 <dd> Start displaying data at the specified address. This affects the output of the <code>-d</code>, <code>-r</code> and <code>-s</code> options.</dd>
 <dt><code>&#8211;stop-address=</code><i>address</i></dt>
@@ -246,7 +246,7 @@ description: "objdump – display information from object files."
     [6](sec 1)(fl 0x00)(ty 0)(scl 2)(nx 0)0x00000000 fred
 </code></pre>
 <p> where the number inside the square brackets is the number of the entry in the symbol table, the <i>sec</i> number is the section number, the <i>fl</i> value are the symbol&#8217;s flag bits, the <i>ty</i> number is the symbol&#8217;s type, the <i>scl</i> number is the symbol&#8217;s storage class and the <i>nx</i> value is the number of auxilary entries associated with the symbol. The last two fields are the symbol&#8217;s value and its name. </p>
-<p> The other common output format, usually seen with <font SIZE="-1">ELF</font> based files, looks like this: </p>
+<p> The other common output format, usually seen with ELF based files, looks like this: </p>
 <pre>
         00000000 l    d  .bss   00000000 .bss
         00000000 g       .text  00000000 fred
@@ -263,7 +263,7 @@ description: "objdump – display information from object files."
 </dd><dt>&quot;u&quot;</dt>
 <dd>
 </dd><dt>&quot;!&quot;</dt>
-<dd> The symbol is a local (l), global (g), unique global (u), neither global nor local (a space) or both global and local (!). A symbol can be neither local or global for a variety of reasons, e.g., because it is used for debugging, but it is probably an indication of a bug if it is ever both local and global. Unique global symbols are a <font SIZE="-1">GNU</font> extension to the standard set of <font SIZE="-1">ELF</font> symbol bindings. For such a symbol the dynamic linker will make sure that in the entire process there is just one symbol with this name and type in use.</dd>
+<dd> The symbol is a local (l), global (g), unique global (u), neither global nor local (a space) or both global and local (!). A symbol can be neither local or global for a variety of reasons, e.g., because it is used for debugging, but it is probably an indication of a bug if it is ever both local and global. Unique global symbols are a GNU extension to the standard set of ELF symbol bindings. For such a symbol the dynamic linker will make sure that in the entire process there is just one symbol with this name and type in use.</dd>
 <dt>&quot;w&quot;</dt>
 <dd> The symbol is weak (w) or strong (a space).</dd>
 <dt>&quot;C&quot;</dt>
@@ -316,4 +316,4 @@ description: "objdump – display information from object files."
 <p> <i><a href="/docs/linux/man/1-nm/">nm</a></i>(1), <i><a href="/docs/linux/man/1-readelf/">readelf</a></i>(1), and the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991-2014 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

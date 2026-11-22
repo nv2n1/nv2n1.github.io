@@ -11,8 +11,8 @@ description: "casin, casinf, casinl – complex arc sine"
 <p> casin, casinf, casinl &#8211; complex arc sine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex casin(double complex </code><i>z</i><code>);</code><br />
- <code>float complex casinf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex casin(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex casinf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex casinl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

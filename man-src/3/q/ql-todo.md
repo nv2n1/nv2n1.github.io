@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-ql-todo/"
 description: "todo – Possible Enhancements"
 ---
 
-<p>todo &#8211; Possible Enhancements<br />
+<p>todo &#8211; Possible Enhancements<br/>
 &nbsp;<wbr></p>
 <dl>
 <dt><code>Class AmericanCondition</code></dt>
@@ -68,7 +68,7 @@ description: "todo – Possible Enhancements"
 <dl>
 <dt><code>Class CallableBond</code></dt>
 <dd>models/shortrate/calibrationHelpers</dd></dl>
-<p> OAS/OAD floating rate callable bonds ?<br />
+<p> OAS/OAD floating rate callable bonds ?<br/>
 &nbsp;<wbr></p>
 <dl>
 <dt><code>Class CashFlows</code></dt>

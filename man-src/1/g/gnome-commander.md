@@ -26,26 +26,26 @@ description: "gnome-commander – a GNOME file manager"
 <dt><code>&nbsp;<wbr> &#8211;config-dir=STRING</code></dt>
 <dd> Specify the directory for configuration files</dd>
 <dt><code>-d, &#8211;debug=STRING</code></dt>
-<dd> Specify debug flags to use. Debug output will be written to STDOUT.<br />
- Possible flags:<br />
- a: set all debug flags<br />
- c: file and directory counting<br />
- d: directory ref-counting<br />
- f: file ref-counting<br />
- g: run_command debugging<br />
- i: imageloader<br />
- k: directory pool<br />
- l: directory listings<br />
- m: connection debugging<br />
- n: directory monitoring<br />
- p: python plugins<br />
- s: SMB network browser<br />
- t: metadata tags<br />
- u: user actions debugging<br />
- v: internal viewer<br />
- w: widget_lookup<br />
- x: xfer<br />
- y: brief MIME based imageload<br />
+<dd> Specify debug flags to use. Debug output will be written to STDOUT.<br/>
+ Possible flags:<br/>
+ a: set all debug flags<br/>
+ c: file and directory counting<br/>
+ d: directory ref-counting<br/>
+ f: file ref-counting<br/>
+ g: run_command debugging<br/>
+ i: imageloader<br/>
+ k: directory pool<br/>
+ l: directory listings<br/>
+ m: connection debugging<br/>
+ n: directory monitoring<br/>
+ p: python plugins<br/>
+ s: SMB network browser<br/>
+ t: metadata tags<br/>
+ u: user actions debugging<br/>
+ v: internal viewer<br/>
+ w: widget_lookup<br/>
+ x: xfer<br/>
+ y: brief MIME based imageload<br/>
  z: detailed MIME based imageload </dd>
 <dt><code>[gtk,gnome,bonobo options]</code></dt>
 <dd> Standard gtk, gnome, bonobo options are supported. Use <code>&#8211;help</code> to see possible options.</dd></dl>
@@ -68,9 +68,9 @@ description: "gnome-commander – a GNOME file manager"
 <dt><code>/usr/lib/gnome-commander/plugins</code></dt>
 <dd> System-wide plugins.</dd></dl>
 <h2>BUGS</h2>
-<p> If you find any bugs, please report them (or better yet, fix them and send a patch). See the <code>GNOME Commander</code> home page for more information:<br />
+<p> If you find any bugs, please report them (or better yet, fix them and send a patch). See the <code>GNOME Commander</code> home page for more information:<br/>
  <a rel="nofollow" href="http://gcmd.github.io/">http://gcmd.github.io/</a></p>
 <h2>AUTHOR</h2>
-<p> <code>GNOME Commander</code> was originally developed by Marcus Bjurman from 2001 till 2004. Assaf Gordon added the internal viewer code and other features. Piotr Eljasiak was the project manager from 2006 until 2012. Since 2013 till now, Uwe Scholz &lt;u.scholz83 [at] gmx.de&gt; is the current project manager.<br />
+<p> <code>GNOME Commander</code> was originally developed by Marcus Bjurman from 2001 till 2004. Assaf Gordon added the internal viewer code and other features. Piotr Eljasiak was the project manager from 2006 until 2012. Since 2013 till now, Uwe Scholz &lt;u.scholz83 [at] gmx.de&gt; is the current project manager.<br/>
  Translations and other contributions where made by numerous people. See the <code>AUTHORS</code> file in the source tarball for the detailed list. </p>
 <p> The original manual page was written by Michael Vogt &lt;mvo [at] debian.org&gt;, for the Debian GNU/Linux system. Current manual page is maintained as the part of the <code>GNOME Commander</code> project. </p>

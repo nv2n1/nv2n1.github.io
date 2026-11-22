@@ -20,8 +20,8 @@ description: "PAPI_get_dmem_info –"
 <dd><i>dest</i> structure to be filled in <code>PAPI_dmem_info_t</code></dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_ECMP</i> The funtion is not implemented for the current component.<br />
- <i>PAPI_EINVAL</i> Any value in the structure or array may be undefined as indicated by this error value.<br />
+<dd><i>PAPI_ECMP</i> The funtion is not implemented for the current component.<br/>
+ <i>PAPI_EINVAL</i> Any value in the structure or array may be undefined as indicated by this error value.<br/>
  <i>PAPI_SYS</i> A system error occured.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>

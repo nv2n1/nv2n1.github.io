@@ -67,39 +67,39 @@ description: "hh – easily view, navigate, sort and use your command history wi
 <dl>
 <dt><code>HH_CONFIG</code></dt>
 <dd> Configuration options: </dd>
-<p> <i>hicolor</i><br />
+<p> <i>hicolor</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Get more colors with this option&nbsp;<wbr>(default is monochromatic). </p>
-<p> <i>monochromatic</i><br />
+<p> <i>monochromatic</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Ensure black and white view. </p>
-<p> <i>regexp</i><br />
+<p> <i>regexp</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Filter command history using regular expressions&nbsp;<wbr>(substring match is default)&nbsp;<wbr> </p>
-<p> <i>substring</i><br />
+<p> <i>substring</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Filter command history using substring. </p>
-<p> <i>keywords</i><br />
+<p> <i>keywords</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Filter command history using keywords &#8211; item matches if contains all keywords in pattern in any order. </p>
-<p> <i>casesensitive</i><br />
+<p> <i>casesensitive</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Make history filtering case sensitive&nbsp;<wbr>(it&#8217;s case insensitive by default).&nbsp;<wbr> </p>
-<p> <i>rawhistory</i><br />
+<p> <i>rawhistory</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Show normal history as a default view&nbsp;<wbr>(metric-based view is shown otherwise).&nbsp;<wbr> </p>
-<p> <i>favorites</i><br />
+<p> <i>favorites</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Show favorites as a default view&nbsp;<wbr>(metric-based view is shown otherwise). </p>
-<p> <i>blacklist</i><br />
+<p> <i>blacklist</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Load list of commands to skip when processing history from&nbsp;<wbr>~/.hh_blacklist&nbsp;<wbr>(built-in blacklist used otherwise). </p>
-<p> <i>bigkeysskip</i><br />
+<p> <i>bigkeysskip</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Skip big history entries i.e. very long lines&nbsp;<wbr>(default). </p>
-<p> <i>bigkeysfloor</i><br />
+<p> <i>bigkeysfloor</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Use different sorting slot for big keys when building metrics-based view&nbsp;<wbr>(big keys are skipped by default). </p>
-<p> <i>bigkeysexit</i><br />
+<p> <i>bigkeysexit</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Exit&nbsp;<wbr>(fail)&nbsp;<wbr>on presence of a big key in history&nbsp;<wbr>(big keys are skipped by default). </p>
-<p> <i>warning</i><br />
+<p> <i>warning</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Show warning. </p>
-<p> <i>debug</i><br />
+<p> <i>debug</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Show debug information. </p>
-<p> Example:<br />
+<p> Example:<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>export HH_CONFIG=hicolor,regexp,rawhistory</code> </p>
 <dt><code>HH_PROMPT</code></dt>
 <dd> Change prompt string which is <code>user [at] host$</code> by default. </dd>
-<p> Example:<br />
+<p> Example:<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>export HH_PROMPT=&quot;$&nbsp;<wbr>&quot;</code> </p>
 </dl>
 <h2>FILES</h2>

@@ -22,14 +22,14 @@ description: "dmtxwrite – create Data Matrix barcodes"
 <dt><code>-m</code>, <code>&#8211;margin</code>=<i>N</i></dt>
 <dd> Margin size in pixels.</dd>
 <dt><code>-e</code>, <code>&#8211;encoding</code>=[bfactxe8]</dt>
-<dd> Encodation scheme.<br />
-b&nbsp;<wbr>=&nbsp;<wbr>Best optimized&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>best possible optimization&nbsp;<wbr>(beta)<br />
-f&nbsp;<wbr>=&nbsp;<wbr>Fast optimized&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>basic optimization&nbsp;<wbr>(not implemented)<br />
-a&nbsp;<wbr>=&nbsp;<wbr>ASCII&nbsp;<wbr>&nbsp;<wbr>[default]&nbsp;<wbr>ASCII standard&nbsp;<wbr>&amp;&nbsp;<wbr>extended<br />
-c&nbsp;<wbr>=&nbsp;<wbr>C40&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>digits and uppercase<br />
-t&nbsp;<wbr>=&nbsp;<wbr>Text&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>digits and lowercase<br />
-x&nbsp;<wbr>=&nbsp;<wbr>X12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ANSI X12 EDI<br />
-e&nbsp;<wbr>=&nbsp;<wbr>EDIFACT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ASCII values 32-94<br />
+<dd> Encodation scheme.<br/>
+b&nbsp;<wbr>=&nbsp;<wbr>Best optimized&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>best possible optimization&nbsp;<wbr>(beta)<br/>
+f&nbsp;<wbr>=&nbsp;<wbr>Fast optimized&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>basic optimization&nbsp;<wbr>(not implemented)<br/>
+a&nbsp;<wbr>=&nbsp;<wbr>ASCII&nbsp;<wbr>&nbsp;<wbr>[default]&nbsp;<wbr>ASCII standard&nbsp;<wbr>&amp;&nbsp;<wbr>extended<br/>
+c&nbsp;<wbr>=&nbsp;<wbr>C40&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>digits and uppercase<br/>
+t&nbsp;<wbr>=&nbsp;<wbr>Text&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>digits and lowercase<br/>
+x&nbsp;<wbr>=&nbsp;<wbr>X12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ANSI X12 EDI<br/>
+e&nbsp;<wbr>=&nbsp;<wbr>EDIFACT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ASCII values 32-94<br/>
 8&nbsp;<wbr>=&nbsp;<wbr>Base 256&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>all byte values 0-255</dd>
 <dt><code>-f</code>, <code>&#8211;format</code>=<i>FORMAT</i></dt>
 <dd> Output image format (PNG [default], TIF, GIF, PDF, etc&#8230;).</dd>
@@ -43,14 +43,14 @@ e&nbsp;<wbr>=&nbsp;<wbr>EDIFACT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp
 <dd> Set image print resolution (dpi).</dd>
 <dt><code>-s</code>, <code>&#8211;symbol-size</code>=[sr|RxC] (default &quot;s&quot;)</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>Automatic symbol size options:<br />
-&nbsp;<wbr>s&nbsp;<wbr>=&nbsp;<wbr>Auto square&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&nbsp;<wbr>=&nbsp;<wbr>Auto rectangle<br />
-&nbsp;<wbr>&nbsp;<wbr>Manual symbol size options for square symbols:<br />
-&nbsp;<wbr>10&#215;10&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&#215;12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>14&#215;14&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16&#215;16&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>18&#215;18&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>20&#215;20<br />
-&nbsp;<wbr>22&#215;22&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>24&#215;24&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>26&#215;26&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>32&#215;32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>36&#215;36&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>40&#215;40<br />
-&nbsp;<wbr>44&#215;44&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>48&#215;48&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>52&#215;52&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64&#215;64&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>72&#215;72&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80&#215;80<br />
-&nbsp;<wbr>88&#215;88&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>96&#215;96 104&#215;104 120&#215;120 132&#215;132 144&#215;144<br />
-&nbsp;<wbr>&nbsp;<wbr>Manually symbol size options for rectangle symbols:<br />
+&nbsp;<wbr>&nbsp;<wbr>Automatic symbol size options:<br/>
+&nbsp;<wbr>s&nbsp;<wbr>=&nbsp;<wbr>Auto square&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&nbsp;<wbr>=&nbsp;<wbr>Auto rectangle<br/>
+&nbsp;<wbr>&nbsp;<wbr>Manual symbol size options for square symbols:<br/>
+&nbsp;<wbr>10&#215;10&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&#215;12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>14&#215;14&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16&#215;16&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>18&#215;18&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>20&#215;20<br/>
+&nbsp;<wbr>22&#215;22&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>24&#215;24&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>26&#215;26&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>32&#215;32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>36&#215;36&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>40&#215;40<br/>
+&nbsp;<wbr>44&#215;44&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>48&#215;48&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>52&#215;52&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64&#215;64&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>72&#215;72&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80&#215;80<br/>
+&nbsp;<wbr>88&#215;88&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>96&#215;96 104&#215;104 120&#215;120 132&#215;132 144&#215;144<br/>
+&nbsp;<wbr>&nbsp;<wbr>Manually symbol size options for rectangle symbols:<br/>
 &nbsp;<wbr>&nbsp;<wbr>8&#215;18&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>8&#215;32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&#215;26&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&#215;36&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16&#215;36&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16&#215;48</dd>
 <dt><code>-C</code>, <code>&#8211;color</code>=<i>COLOR</i></dt>
 <dd> Barcode color (not implemented).</dd>

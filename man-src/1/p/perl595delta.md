@@ -26,8 +26,8 @@ description: "perl595delta – what is new for perl v5.9.5"
 <h3>Removal of the bytecode compiler and of perlcc</h3>
 <p> <tt>&quot;perlcc&quot;</tt>, the byteloader and the supporting modules (B::C, B::CC, B::Bytecode, etc.) are no longer distributed with the perl sources. Those experimental tools have never worked reliably, and, due to the lack of volunteers to keep them in line with the perl interpreter developments, it was decided to remove them instead of shipping a broken version of those. The last version of those modules can be found with perl 5.9.4. </p>
 <p> However the B compiler framework stays supported in the perl core, as with the more useful modules it has permitted (among others, B::Deparse and B::Concise).</p>
-<h3>Removal of the <font SIZE="-1">JPL</font></h3>
-<p> The <font SIZE="-1">JPL</font> (Java-Perl Linguo) has been removed from the perl sources tarball.</p>
+<h3>Removal of the JPL</h3>
+<p> The JPL (Java-Perl Linguo) has been removed from the perl sources tarball.</p>
 <h3>Recursive inheritance detected earlier</h3>
 <p> Perl will now immediately throw an exception if you modify any package&#8217;s <tt>@ISA</tt> in such a way that it would cause recursive inheritance. </p>
 <p> Previously, the exception would not occur until Perl attempted to make use of the recursive inheritance while resolving a method or doing a <tt>&quot;$foo-&gt;isa($bar)&quot;</tt> lookup.</p>
@@ -54,7 +54,7 @@ description: "perl595delta – what is new for perl v5.9.5"
      $                      # end of line
     /x
 </pre>
-<p> Note, users experienced with <font SIZE="-1">PCRE</font> will find that the Perl implementation of this feature differs from the <font SIZE="-1">PCRE</font> one in that it is possible to backtrack into a recursed pattern, whereas in <font SIZE="-1">PCRE</font> the recursion is atomic or &#8220;possessive&#8221; in nature. (Yves Orton)</p>
+<p> Note, users experienced with PCRE will find that the Perl implementation of this feature differs from the PCRE one in that it is possible to backtrack into a recursed pattern, whereas in PCRE the recursion is atomic or &#8220;possessive&#8221; in nature. (Yves Orton)</p>
 <dt>Named Capture Buffers</dt>
 <dd> It is now possible to name capturing parenthesis in a pattern and refer to the captured contents by name. The naming syntax is <tt>&quot;(?&lt;NAME&gt;....)&quot;</tt>. It&#8217;s possible to backreference to a named buffer with the <tt>&quot;\k&lt;NAME&gt;&quot;</tt> syntax. In code, the new magical hashes <tt>&quot;%+&quot;</tt> and <tt>&quot;%-&quot;</tt> can be used to access the contents of the capture buffers. </dd>
 <p> Thus, to replace all doubled chars, one could write </p>
@@ -100,14 +100,14 @@ foreach
 <h3>The _ prototype</h3>
 <p> A new prototype character has been added. <tt>&quot;_&quot;</tt> is equivalent to <tt>&quot;$&quot;</tt> (it denotes a scalar), but defaults to <tt>$_</tt> if the corresponding argument isn&#8217;t supplied. Due to the optional nature of the argument, you can only use it at the end of a prototype, or before a semicolon. </p>
 <p> This has a small incompatible consequence: the <i>prototype()</i> function has been adjusted to return <tt>&quot;_&quot;</tt> for some built-ins in appropriate cases (for example, <tt>&quot;prototype('CORE::rmdir')&quot;</tt>). (Rafael)</p>
-<h3><font SIZE="-1">UNITCHECK</font> blocks</h3>
+<h3>UNITCHECK blocks</h3>
 <p> <tt>&quot;UNITCHECK&quot;</tt>, a new special code block has been introduced, in addition to <tt>&quot;BEGIN&quot;</tt>, <tt>&quot;CHECK&quot;</tt>, <tt>&quot;INIT&quot;</tt> and <tt>&quot;END&quot;</tt>. </p>
 <p> <tt>&quot;CHECK&quot;</tt> and <tt>&quot;INIT&quot;</tt> blocks, while useful for some specialized purposes, are always executed at the transition between the compilation and the execution of the main program, and thus are useless whenever code is loaded at runtime. On the other hand, <tt>&quot;UNITCHECK&quot;</tt> blocks are executed just after the unit which defined them has been compiled. See perlmod for more information. (Alex Gough)</p>
 <h3><i>readpipe()</i> is now overridable</h3>
 <p> The built-in function <i>readpipe()</i> is now overridable. Overriding it permits also to override its operator counterpart, <tt>&quot;qx//&quot;</tt> (a.k.a. <tt>&quot;``&quot;</tt>). Moreover, it now defaults to <tt>$_</tt> if no argument is provided. (Rafael)</p>
 <h3>default argument for <i>readline()</i></h3>
 <p> <i>readline()</i> now defaults to <tt>*ARGV</tt> if no argument is provided. (Rafael)</p>
-<h3><font SIZE="-1">UCD</font> 5.0.0</h3>
+<h3>UCD 5.0.0</h3>
 <p> The copy of the Unicode Character Database included in Perl 5.9 has been updated to version 5.0.0.</p>
 <h3>Smart match</h3>
 <p> The smart match operator (<tt>&quot;~~&quot;</tt>) is now available by default (you don&#8217;t need to enable it with <tt>&quot;use feature&quot;</tt> any longer). (Michael G Schwern)</p>
@@ -115,7 +115,7 @@ foreach
 <p> The <tt>&quot;feature&quot;</tt> pragma is now implicitly loaded when you require a minimal perl version (with the <tt>&quot;use VERSION&quot;</tt> construct) greater than, or equal to, 5.9.5.</p>
 <h2>Modules and Pragmas</h2>
 <h3>New Pragma, mro</h3>
-<p> A new pragma, <tt>&quot;mro&quot;</tt> (for Method Resolution Order) has been added. It permits to switch, on a per-class basis, the algorithm that perl uses to find inherited methods in case of a multiple inheritance hierarchy. The default <font SIZE="-1">MRO</font> hasn&#8217;t changed (<font SIZE="-1">DFS</font>, for Depth First Search). Another <font SIZE="-1">MRO</font> is available: the C3 algorithm. See mro for more information. (Brandon Black) </p>
+<p> A new pragma, <tt>&quot;mro&quot;</tt> (for Method Resolution Order) has been added. It permits to switch, on a per-class basis, the algorithm that perl uses to find inherited methods in case of a multiple inheritance hierarchy. The default MRO hasn&#8217;t changed (DFS, for Depth First Search). Another MRO is available: the C3 algorithm. See mro for more information. (Brandon Black) </p>
 <p> Note that, due to changes in the implementation of class hierarchy search, code that used to undef the <tt>*ISA</tt> glob will most probably break. Anyway, undef&#8217;ing <tt>*ISA</tt> had the side-effect of removing the magic on the <tt>@ISA</tt> array and should not have been done in the first place.</p>
 <h3>bignum, bigint, bigrat</h3>
 <p> The three numeric pragmas <tt>&quot;bignum&quot;</tt>, <tt>&quot;bigint&quot;</tt> and <tt>&quot;bigrat&quot;</tt> are now lexically scoped. (Tels)</p>
@@ -141,13 +141,13 @@ foreach
 <dd>
 </dd><dt><i>as_oct()</i></dt>
 <dd></dd></dl>
-<p> In addition, the default math-backend (Calc (Perl) and FastCalc (<font SIZE="-1">XS</font>)) now support storing numbers in parts with 9 digits instead of 7 on Perls with either 64bit integer or long double support. This means math operations scale better and are thus faster for really big numbers.</p>
+<p> In addition, the default math-backend (Calc (Perl) and FastCalc (XS)) now support storing numbers in parts with 9 digits instead of 7 on Perls with either 64bit integer or long double support. This means math operations scale better and are thus faster for really big numbers.</p>
 <h3>New Core Modules</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> <tt>&quot;Locale::Maketext::Simple&quot;</tt>, needed by <font SIZE="-1">CPANPLUS</font>, is a simple wrapper around <tt>&quot;Locale::Maketext::Lexicon&quot;</tt>. Note that <tt>&quot;Locale::Maketext::Lexicon&quot;</tt> isn&#8217;t included in the perl core; the behaviour of <tt>&quot;Locale::Maketext::Simple&quot;</tt> gracefully degrades when the later isn&#8217;t present.</dd>
+<dd> <tt>&quot;Locale::Maketext::Simple&quot;</tt>, needed by CPANPLUS, is a simple wrapper around <tt>&quot;Locale::Maketext::Lexicon&quot;</tt>. Note that <tt>&quot;Locale::Maketext::Lexicon&quot;</tt> isn&#8217;t included in the perl core; the behaviour of <tt>&quot;Locale::Maketext::Simple&quot;</tt> gracefully degrades when the later isn&#8217;t present.</dd>
 <dt>&bull;</dt>
-<dd> <tt>&quot;Params::Check&quot;</tt> implements a generic input parsing/checking mechanism. It is used by <font SIZE="-1">CPANPLUS</font>.</dd>
+<dd> <tt>&quot;Params::Check&quot;</tt> implements a generic input parsing/checking mechanism. It is used by CPANPLUS.</dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Term::UI&quot;</tt> simplifies the task to ask questions at a terminal prompt.</dd>
 <dt>&bull;</dt>
@@ -167,7 +167,7 @@ foreach
 <dt>&bull;</dt>
 <dd> <tt>&quot;Archive::Extract&quot;</tt> is a generic archive extraction mechanism for <i>.tar</i> (plain, gziped or bzipped) or <i>.zip</i> files.</dd>
 <dt>&bull;</dt>
-<dd> <tt>&quot;CPANPLUS&quot;</tt> provides an <font SIZE="-1">API</font> and a command-line tool to access the <font SIZE="-1">CPAN</font> mirrors.</dd></dl>
+<dd> <tt>&quot;CPANPLUS&quot;</tt> provides an API and a command-line tool to access the CPAN mirrors.</dd></dl>
 <h3>Module changes</h3>
 <dl>
 <dt>&quot;assertions&quot;</dt>
@@ -184,7 +184,7 @@ foreach
     Carp::confess &quot;argh&quot;;
 </pre>
 <dt>&quot;less&quot;</dt>
-<dd> <tt>&quot;less&quot;</tt> now does something useful (or at least it tries to). In fact, it has been turned into a lexical pragma. So, in your modules, you can now test whether your users have requested to use less <font SIZE="-1">CPU</font>, or less memory, less magic, or maybe even less fat. See less for more. (Joshua ben Jore)</dd>
+<dd> <tt>&quot;less&quot;</tt> now does something useful (or at least it tries to). In fact, it has been turned into a lexical pragma. So, in your modules, you can now test whether your users have requested to use less CPU, or less memory, less magic, or maybe even less fat. See less for more. (Joshua ben Jore)</dd>
 <dt>&quot;Attribute::Handlers&quot;</dt>
 <dd> <tt>&quot;Attribute::Handlers&quot;</tt> can now report the caller&#8217;s file and line number. (David Feldman)</dd>
 <dt>&quot;B::Lint&quot;</dt>
@@ -195,26 +195,26 @@ foreach
 <dd> As the old 5005thread threading model has been removed, in favor of the ithreads scheme, the <tt>&quot;Thread&quot;</tt> module is now a compatibility wrapper, to be used in old code only. It has been removed from the default list of dynamic extensions.</dd></dl>
 <h2>Utility Changes</h2>
 <h3>cpanp</h3>
-<p> <tt>&quot;cpanp&quot;</tt>, the <font SIZE="-1">CPANPLUS</font> shell, has been added. (<tt>&quot;cpanp-run-perl&quot;</tt>, an helper for <font SIZE="-1">CPANPLUS</font> operation, has been added too, but isn&#8217;t intended for direct use).</p>
+<p> <tt>&quot;cpanp&quot;</tt>, the CPANPLUS shell, has been added. (<tt>&quot;cpanp-run-perl&quot;</tt>, an helper for CPANPLUS operation, has been added too, but isn&#8217;t intended for direct use).</p>
 <h3>cpan2dist</h3>
-<p> <tt>&quot;cpan2dist&quot;</tt> is a new utility, that comes with <font SIZE="-1">CPANPLUS</font>. It&#8217;s a tool to create distributions (or packages) from <font SIZE="-1">CPAN</font> modules.</p>
+<p> <tt>&quot;cpan2dist&quot;</tt> is a new utility, that comes with CPANPLUS. It&#8217;s a tool to create distributions (or packages) from CPAN modules.</p>
 <h3>pod2html</h3>
-<p> The output of <tt>&quot;pod2html&quot;</tt> has been enhanced to be more customizable via <font SIZE="-1">CSS</font>. Some formatting problems were also corrected. (Jari Aalto)</p>
+<p> The output of <tt>&quot;pod2html&quot;</tt> has been enhanced to be more customizable via CSS. Some formatting problems were also corrected. (Jari Aalto)</p>
 <h2>Documentation</h2>
 <h3>New manpage, perlunifaq</h3>
-<p> A new manual page, perlunifaq (the Perl Unicode <font SIZE="-1">FAQ</font>), has been added (Juerd Waalboer).</p>
+<p> A new manual page, perlunifaq (the Perl Unicode FAQ), has been added (Juerd Waalboer).</p>
 <h2>Installation and Configuration Improvements</h2>
-<h3>C<font SIZE="-2">++</font> compatibility</h3>
-<p> Efforts have been made to make perl and the core <font SIZE="-1">XS</font> modules compilable with various C<font SIZE="-2">++</font> compilers (although the situation is not perfect with some of the compilers on some of the platforms tested.)</p>
-<h3>Visual C<font SIZE="-2">++</font></h3>
-<p> Perl now can be compiled with Microsoft Visual C<font SIZE="-2">++</font> 2005.</p>
+<h3>C++ compatibility</h3>
+<p> Efforts have been made to make perl and the core XS modules compilable with various C++ compilers (although the situation is not perfect with some of the compilers on some of the platforms tested.)</p>
+<h3>Visual C++</h3>
+<p> Perl now can be compiled with Microsoft Visual C++ 2005.</p>
 <h3>Static build on Win32</h3>
 <p> It&#8217;s now possible to build a <tt>&quot;perl-static.exe&quot;</tt> that doesn&#8217;t depend on <tt>&quot;perl59.dll&quot;</tt> on Win32. See the Win32 makefiles for details. (Vadim Konovalov)</p>
 <h3>win32 builds</h3>
 <p> All win32 builds (MS-Win, WinCE) have been merged and cleaned up.</p>
 <h3>d_pseudofork and d_printf_format_null</h3>
 <p> A new configuration variable, available as <tt>$Config{d_pseudofork}</tt> in the Config module, has been added, to distinguish real <i>fork()</i> support from fake pseudofork used on Windows platforms. </p>
-<p> A new configuration variable, <tt>&quot;d_printf_format_null&quot;</tt>, has been added, to see if printf-like formats are allowed to be <font SIZE="-1">NULL</font>.</p>
+<p> A new configuration variable, <tt>&quot;d_printf_format_null&quot;</tt>, has been added, to see if printf-like formats are allowed to be NULL.</p>
 <h3>Help</h3>
 <p> <tt>&quot;Configure -h&quot;</tt> has been extended with the most used option. </p>
 <p> Much less &#8216;Whoa there&#8217; messages.</p>
@@ -222,12 +222,12 @@ foreach
 <p> Better detection of 64bit(only) systems, and setting all the (library) paths accordingly.</p>
 <h3>Ports</h3>
 <p> Perl has been reported to work on MidnightBSD. </p>
-<p> Support for Cray <font SIZE="-1">XT4</font> Catamount/Qk has been added. </p>
+<p> Support for Cray XT4 Catamount/Qk has been added. </p>
 <p> Vendor patches have been merged for RedHat and GenToo.</p>
 <h2>Selected Bug Fixes</h2>
 <p> PerlIO::scalar will now prevent writing to read-only scalars. Moreover, <i>seek()</i> is now supported with PerlIO::scalar-based filehandles, the underlying string being zero-filled as needed. (Rafael, Jarkko Hietaniemi) </p>
-<p> <i>study()</i> never worked for <font SIZE="-1">UTF-8</font> strings, but could lead to false results. It&#8217;s now a no-op on <font SIZE="-1">UTF-8</font> data. (Yves Orton) </p>
-<p> The signals <font SIZE="-1">SIGILL</font>, <font SIZE="-1">SIGBUS</font> and <font SIZE="-1">SIGSEGV</font> are now always delivered in an &#8220;unsafe&#8221; manner (contrary to other signals, that are deferred until the perl interpreter reaches a reasonably stable state; see &#8220;Deferred Signals (Safe Signals)&#8221; in perlipc). (Rafael) </p>
+<p> <i>study()</i> never worked for UTF-8 strings, but could lead to false results. It&#8217;s now a no-op on UTF-8 data. (Yves Orton) </p>
+<p> The signals SIGILL, SIGBUS and SIGSEGV are now always delivered in an &#8220;unsafe&#8221; manner (contrary to other signals, that are deferred until the perl interpreter reaches a reasonably stable state; see &#8220;Deferred Signals (Safe Signals)&#8221; in perlipc). (Rafael) </p>
 <p> When a module or a file is loaded through an <tt>@INC</tt>-hook, and when this hook has set a filename entry in <tt>%INC</tt>, __FILE__ is now set for this module accordingly to the contents of that <tt>%INC</tt> entry. (Rafael) </p>
 <p> The <tt>&quot;-w&quot;</tt> and <tt>&quot;-t&quot;</tt> switches can now be used together without messing up what categories of warnings are activated or not. (Rafael) </p>
 <p> Duping a filehandle which has the <tt>&quot;:utf8&quot;</tt> PerlIO layer set will now properly carry that layer on the duped filehandle. (Rafael) </p>
@@ -246,6 +246,6 @@ foreach
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

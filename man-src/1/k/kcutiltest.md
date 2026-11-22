@@ -50,10 +50,10 @@ description: "kcutiltest – command line interface to test the utility function
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br />
- <code>-iv </code><i>num</i> : specifies the interval between iterations.<br />
- <code>-rnd</code> : performs random test.<br />
- <code>-msiz </code><i>num</i> : specifies the size of the memory-mapped region.<br />
+</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br/>
+ <code>-iv </code><i>num</i> : specifies the interval between iterations.<br/>
+ <code>-rnd</code> : performs random test.<br/>
+ <code>-msiz </code><i>num</i> : specifies the size of the memory-mapped region.<br/>
  <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

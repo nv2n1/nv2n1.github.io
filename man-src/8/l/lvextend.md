@@ -51,11 +51,11 @@ description: "lvextend – Add space to a logical volume"
 <p>Extend an LV by a specified size. </p>
 <p> <code>lvextend</code> <code>-L</code>|<code>&#8211;size</code> [<code>+</code>]<i>Size</i>[m|UNIT] <i>LV</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> [<code>+</code>]<i>Number</i>[PERCENT] ]<br />
- [ <code>-r</code>|<code>&#8211;resizefs</code> ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;poolmetadatasize</code> [<code>+</code>]<i>Size</i>[m|UNIT] ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> [<code>+</code>]<i>Number</i>[PERCENT] ]<br/>
+ [ <code>-r</code>|<code>&#8211;resizefs</code> ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> [<code>+</code>]<i>Size</i>[m|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -63,16 +63,16 @@ description: "lvextend – Add space to a logical volume"
 <p> Extend an LV by specified PV extents. </p>
 <p> <code>lvextend</code> <i>LV</i> <i>PV</i> &#8230; </p>
 <dl>
-<dd>[ <code>-r</code>|<code>&#8211;resizefs</code> ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
+<dd>[ <code>-r</code>|<code>&#8211;resizefs</code> ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Extend a pool metadata SubLV by a specified size. </p>
 <p> <code>lvextend</code> <code>&#8211;poolmetadatasize</code> [<code>+</code>]<i>Size</i>[m|UNIT] <i>LV</i><i>_thinpool</i> </p>
 <dl>
-<dd>[ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
+<dd>[ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -80,37 +80,37 @@ description: "lvextend – Add space to a logical volume"
 <p> Extend an LV according to a predefined policy. </p>
 <p> <code>lvextend</code> <code>&#8211;usepolicies</code> <i>LV</i><i>_snapshot_thinpool</i> </p>
 <dl>
-<dd>[ <code>-r</code>|<code>&#8211;resizefs</code> ]<br />
+<dd>[ <code>-r</code>|<code>&#8211;resizefs</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
 <p> Common options for command:</p>
 <dl>
-<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-f</code>|<code>&#8211;force</code> ]<br />
- [ <code>-m</code>|<code>&#8211;mirrors</code> <i>Number</i> ]<br />
- [ <code>-n</code>|<code>&#8211;nofsck</code> ]<br />
- [ <code>&#8211;alloc</code> <code>contiguous</code>|<code>cling</code>|<code>cling_by_tags</code>|<code>normal</code>|<code>anywhere</code>|<code>inherit</code> ]<br />
- [ <code>&#8211;nosync</code> ]<br />
- [ <code>&#8211;noudevsync</code> ]<br />
- [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br />
+<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-f</code>|<code>&#8211;force</code> ]<br/>
+ [ <code>-m</code>|<code>&#8211;mirrors</code> <i>Number</i> ]<br/>
+ [ <code>-n</code>|<code>&#8211;nofsck</code> ]<br/>
+ [ <code>&#8211;alloc</code> <code>contiguous</code>|<code>cling</code>|<code>cling_by_tags</code>|<code>normal</code>|<code>anywhere</code>|<code>inherit</code> ]<br/>
+ [ <code>&#8211;nosync</code> ]<br/>
+ [ <code>&#8211;noudevsync</code> ]<br/>
+ [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br/>
  [ <code>&#8211;type</code> <code>linear</code>|<code>striped</code>|<code>snapshot</code>|<code>mirror</code>|<code>raid</code>|<code>thin</code>|<code>cache</code>|<code>vdo</code>|<code>thin-pool</code>|<code>cache-pool</code>|<code>vdo-pool</code> ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>
@@ -221,11 +221,11 @@ description: "lvextend – Add space to a logical volume"
 <h2>Environment Variables</h2>
 <p>See <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) for information about environment variables used by lvm. For example, LVM_VG_NAME can generally be substituted for a required VG parameter.</p>
 <h2>Examples</h2>
-<p>Extend the size of an LV by 54MiB, using a specific PV.<br />
+<p>Extend the size of an LV by 54MiB, using a specific PV.<br/>
  <code>lvextend -L +54 vg01/lvol10 /dev/sdk3</code> </p>
-<p> Extend the size of an LV by the amount of free space on PV /dev/sdk3. This is equivalent to specifying &quot;-l +100%PVS&quot; on the command line.<br />
+<p> Extend the size of an LV by the amount of free space on PV /dev/sdk3. This is equivalent to specifying &quot;-l +100%PVS&quot; on the command line.<br/>
  <code>lvextend vg01/lvol01 /dev/sdk3</code> </p>
-<p> Extend an LV by 16MiB using specific physical extents.<br />
+<p> Extend an LV by 16MiB using specific physical extents.<br/>
  <code>lvextend -L+16m vg01/lvol01 /dev/sda:8-9 /dev/sdb:8-9</code></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8) <code><a href="/docs/linux/man/8-pvchange/">pvchange</a></code>(8) <code><a href="/docs/linux/man/8-pvck/">pvck</a></code>(8) <code><a href="/docs/linux/man/8-pvcreate/">pvcreate</a></code>(8) <code><a href="/docs/linux/man/8-pvdisplay/">pvdisplay</a></code>(8) <code><a href="/docs/linux/man/8-pvmove/">pvmove</a></code>(8) <code><a href="/docs/linux/man/8-pvremove/">pvremove</a></code>(8) <code><a href="/docs/linux/man/8-pvresize/">pvresize</a></code>(8) <code><a href="/docs/linux/man/8-pvs/">pvs</a></code>(8) <code><a href="/docs/linux/man/8-pvscan/">pvscan</a></code>(8) <code><a href="/docs/linux/man/8-vgcfgbackup/">vgcfgbackup</a></code>(8) <code><a href="/docs/linux/man/8-vgcfgrestore/">vgcfgrestore</a></code>(8) <code><a href="/docs/linux/man/8-vgchange/">vgchange</a></code>(8) <code><a href="/docs/linux/man/8-vgck/">vgck</a></code>(8) <code><a href="/docs/linux/man/8-vgcreate/">vgcreate</a></code>(8) <code><a href="/docs/linux/man/8-vgconvert/">vgconvert</a></code>(8) <code><a href="/docs/linux/man/8-vgdisplay/">vgdisplay</a></code>(8) <code><a href="/docs/linux/man/8-vgexport/">vgexport</a></code>(8) <code><a href="/docs/linux/man/8-vgextend/">vgextend</a></code>(8) <code><a href="/docs/linux/man/8-vgimport/">vgimport</a></code>(8) <code><a href="/docs/linux/man/8-vgimportclone/">vgimportclone</a></code>(8) <code><a href="/docs/linux/man/8-vgmerge/">vgmerge</a></code>(8) <code><a href="/docs/linux/man/8-vgmknodes/">vgmknodes</a></code>(8) <code><a href="/docs/linux/man/8-vgreduce/">vgreduce</a></code>(8) <code><a href="/docs/linux/man/8-vgremove/">vgremove</a></code>(8) <code><a href="/docs/linux/man/8-vgrename/">vgrename</a></code>(8) <code><a href="/docs/linux/man/8-vgs/">vgs</a></code>(8) <code><a href="/docs/linux/man/8-vgscan/">vgscan</a></code>(8) <code><a href="/docs/linux/man/8-vgsplit/">vgsplit</a></code>(8) <code><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></code>(8) <code><a href="/docs/linux/man/8-lvchange/">lvchange</a></code>(8) <code><a href="/docs/linux/man/8-lvconvert/">lvconvert</a></code>(8) <code><a href="/docs/linux/man/8-lvdisplay/">lvdisplay</a></code>(8) <code><a href="/docs/linux/man/8-lvextend/">lvextend</a></code>(8) <code><a href="/docs/linux/man/8-lvreduce/">lvreduce</a></code>(8) <code><a href="/docs/linux/man/8-lvremove/">lvremove</a></code>(8) <code><a href="/docs/linux/man/8-lvrename/">lvrename</a></code>(8) <code><a href="/docs/linux/man/8-lvresize/">lvresize</a></code>(8) <code><a href="/docs/linux/man/8-lvs/">lvs</a></code>(8) <code><a href="/docs/linux/man/8-lvscan/">lvscan</a></code>(8) <code><a href="/docs/linux/man/8-lvm-fullreport/">lvm-fullreport</a></code>(8) <code><a href="/docs/linux/man/8-lvm-lvpoll/">lvm-lvpoll</a></code>(8) <code><a href="/docs/linux/man/8-lvm2-activation-generator/">lvm2-activation-generator</a></code>(8) <code><a href="/docs/linux/man/8-blkdeactivate/">blkdeactivate</a></code>(8) <code><a href="/docs/linux/man/8-lvmdump/">lvmdump</a></code>(8) <code><a href="/docs/linux/man/8-dmeventd/">dmeventd</a></code>(8) <code><a href="/docs/linux/man/8-lvmpolld/">lvmpolld</a></code>(8) <code><a href="/docs/linux/man/8-lvmlockd/">lvmlockd</a></code>(8) <code><a href="/docs/linux/man/8-lvmlockctl/">lvmlockctl</a></code>(8) <code><a href="/docs/linux/man/8-cmirrord/">cmirrord</a></code>(8) <code>lvmdbusd</code>(8) <code><a href="/docs/linux/man/7-lvmsystemid/">lvmsystemid</a></code>(7) <code><a href="/docs/linux/man/7-lvmreport/">lvmreport</a></code>(7) <code><a href="/docs/linux/man/7-lvmraid/">lvmraid</a></code>(7) <code><a href="/docs/linux/man/7-lvmthin/">lvmthin</a></code>(7) <code><a href="/docs/linux/man/7-lvmcache/">lvmcache</a></code>(7) </p>

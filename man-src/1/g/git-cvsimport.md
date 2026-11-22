@@ -18,7 +18,7 @@ git cvsimport [-o &lt;branch-for-HEAD&gt;] [-h] [-v] [-d &lt;CVSROOT&gt;]
               [-r &lt;remote&gt;] [-R] [&lt;CVS_module&gt;]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <code>WARNING:</code> git cvsimport uses cvsps version 2, which is considered deprecated; it does not work with cvsps version 3 and later. If you are performing a one-shot import of a CVS repository consider using m[blue]<code>cvs2git</code>m[]<font SIZE="-2">[1]</font> or m[blue]<code>parsecvs</code>m[]<font SIZE="-2">[2]</font>. </p>
+<p> <code>WARNING:</code> git cvsimport uses cvsps version 2, which is considered deprecated; it does not work with cvsps version 3 and later. If you are performing a one-shot import of a CVS repository consider using m[blue]<code>cvs2git</code>m[][1] or m[blue]<code>parsecvs</code>m[][2]. </p>
 <p> Imports a CVS repository into Git. It will either create a new repository, or incrementally import into an existing one. </p>
 <p> Splitting the CVS log into patch sets is done by <i>cvsps</i>. At least version 2.1 is required. </p>
 <p> <code>WARNING:</code> for certain situations the import leads to incorrect results. Please see the section ISSUES for further reference. </p>

@@ -10,8 +10,8 @@ description: "itstool – convert between XML and PO using ITS"
 
 <p> itstool &#8211; convert between XML and PO using ITS </p>
 <h2>SYNOPSIS</h2>
-<p> itstool [OPTIONS] XMLFILES&#8230;<br />
- itstool <code>-m</code> &lt;MOFILE&gt; [OPTIONS] XMLFILES&#8230;<br />
+<p> itstool [OPTIONS] XMLFILES&#8230;<br/>
+ itstool <code>-m</code> &lt;MOFILE&gt; [OPTIONS] XMLFILES&#8230;<br/>
  itstool <code>-j</code> &lt;XMLFILE&gt; [OPTIONS] MOFILES&#8230; </p>
 <h2>DESCRIPTION</h2>
 <p> <code>itstool </code> extracts messages from XML files and outputs PO template files, then merges translations from MO files to create translated XML files. It determines what to translate and how to chunk it into messages using the W3C Internationalization Tag Set (ITS). </p>

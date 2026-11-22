@@ -67,84 +67,84 @@ abicompat &lt;the-application&gt; &lt;the-library&gt;
 <dl>
 <dt>&bull;</dt>
 <dd> Detecting a possible ABI incompatibility in a new shared library version: </dd>
-<p>$ cat &#8211; n test0.h 1 struct foo 2<br />
-{<br />
-    3 int m0;<br />
-    4 5 foo() 6 : m0() 7<br />
-    {<br />
-    }<br />
-    8<br />
-};<br />
-9 10 foo *<br />
-    11 first_func();<br />
-12 13 void 14 second_func(foo &amp;);<br />
-15 16 void 17 third_func();<br />
-$<br />
-        $ cat &#8211;<br />
-    n test &#8211; app.cc 1 // Compile with:<br />
-             2        //  g++ -g -Wall -o test-app -L. -ltest-0 test-app.cc<br />
-             3 4 #include &#8220;test0.h&#8221; 5 6 int 7 main() 8<br />
-{<br />
-    9 foo *f = first_func();<br />
-    10 second_func(*f);<br />
-    11 return 0;<br />
-    12<br />
-}<br />
-$<br />
-        $ cat &#8211;<br />
-    n test0.cc 1 // Compile this with:<br />
-        2        //  g++ -g -Wall -shared -o libtest-0.so test0.cc<br />
-        3 4 #include &#8220;test0.h&#8221; 5 6 foo *<br />
-        7 first_func() 8<br />
-{<br />
-    9 foo *f = new foo();<br />
-    10 return f;<br />
-    11<br />
-}<br />
-12 13 void 14 second_func(foo &amp;) 15<br />
-{<br />
-    16<br />
-}<br />
-17 18 void 19 third_func() 20 {<br />
-    21} $<br />
-    $ cat<br />
-    &#8211; n test1.h<br />
-      1 struct foo<br />
-      2<br />
-{<br />
-    3 int m0;<br />
-    4 char m1; /* &lt;&#8211; a new member got added here! */<br />
-    5 6 foo() 7 : m0(),<br />
-                  8 m1() 9<br />
-    {<br />
-    }<br />
-    10<br />
-};<br />
-11 12 foo *<br />
-    13 first_func();<br />
-14 15 void 16 second_func(foo &amp;);<br />
-17 18 void 19 third_func();<br />
-$<br />
-        $ cat &#8211;<br />
-    n test1.cc 1 // Compile this with:<br />
-        2        //  g++ -g -Wall -shared -o libtest-1.so test1.cc<br />
-        3 4 #include &#8220;test1.h&#8221; 5 6 foo *<br />
-        7 first_func() 8<br />
-{<br />
-    9 foo *f = new foo();<br />
-    10 return f;<br />
-    11<br />
-}<br />
-12 13 void 14 second_func(foo &amp;) 15<br />
-{<br />
-    16<br />
-}<br />
-17 18 /* Let&#8217;s comment out the definition of third_func()<br />
-  19     void<br />
-  20     third_func()<br />
-  21     {<br />
-  22     }<br />
-  23  */<br />
+<p>$ cat &#8211; n test0.h 1 struct foo 2<br/>
+{<br/>
+    3 int m0;<br/>
+    4 5 foo() 6 : m0() 7<br/>
+    {<br/>
+    }<br/>
+    8<br/>
+};<br/>
+9 10 foo *<br/>
+    11 first_func();<br/>
+12 13 void 14 second_func(foo &amp;);<br/>
+15 16 void 17 third_func();<br/>
+$<br/>
+        $ cat &#8211;<br/>
+    n test &#8211; app.cc 1 // Compile with:<br/>
+             2        //  g++ -g -Wall -o test-app -L. -ltest-0 test-app.cc<br/>
+             3 4 #include &#8220;test0.h&#8221; 5 6 int 7 main() 8<br/>
+{<br/>
+    9 foo *f = first_func();<br/>
+    10 second_func(*f);<br/>
+    11 return 0;<br/>
+    12<br/>
+}<br/>
+$<br/>
+        $ cat &#8211;<br/>
+    n test0.cc 1 // Compile this with:<br/>
+        2        //  g++ -g -Wall -shared -o libtest-0.so test0.cc<br/>
+        3 4 #include &#8220;test0.h&#8221; 5 6 foo *<br/>
+        7 first_func() 8<br/>
+{<br/>
+    9 foo *f = new foo();<br/>
+    10 return f;<br/>
+    11<br/>
+}<br/>
+12 13 void 14 second_func(foo &amp;) 15<br/>
+{<br/>
+    16<br/>
+}<br/>
+17 18 void 19 third_func() 20 {<br/>
+    21} $<br/>
+    $ cat<br/>
+    &#8211; n test1.h<br/>
+      1 struct foo<br/>
+      2<br/>
+{<br/>
+    3 int m0;<br/>
+    4 char m1; /* &lt;&#8211; a new member got added here! */<br/>
+    5 6 foo() 7 : m0(),<br/>
+                  8 m1() 9<br/>
+    {<br/>
+    }<br/>
+    10<br/>
+};<br/>
+11 12 foo *<br/>
+    13 first_func();<br/>
+14 15 void 16 second_func(foo &amp;);<br/>
+17 18 void 19 third_func();<br/>
+$<br/>
+        $ cat &#8211;<br/>
+    n test1.cc 1 // Compile this with:<br/>
+        2        //  g++ -g -Wall -shared -o libtest-1.so test1.cc<br/>
+        3 4 #include &#8220;test1.h&#8221; 5 6 foo *<br/>
+        7 first_func() 8<br/>
+{<br/>
+    9 foo *f = new foo();<br/>
+    10 return f;<br/>
+    11<br/>
+}<br/>
+12 13 void 14 second_func(foo &amp;) 15<br/>
+{<br/>
+    16<br/>
+}<br/>
+17 18 /* Let&#8217;s comment out the definition of third_func()<br/>
+  19     void<br/>
+  20     third_func()<br/>
+  21     {<br/>
+  22     }<br/>
+  23  */<br/>
     $</p>
 <dt>&bull;</dt>
 <dd> Compile the first and second versions of the libraries: <code>libtest-0.so</code> and <code>libtest-1.so</code>: </dd>

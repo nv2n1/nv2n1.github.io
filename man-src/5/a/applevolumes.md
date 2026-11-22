@@ -12,12 +12,12 @@ description: "AppleVolumes.default – Configuration file used by"
 <h2>Description</h2>
 <p>/etc/atalk//AppleVolumes.default is the configuration file used by <code>afpd</code> to determine what portions of the file system will be shared via Apple Filing Protocol, as well as their behaviour. Any line not prefixed with # is interpreted. Newline escaping is supported. The configuration lines are composed like: path <i>[ volume name ] [ options ]</i> The path name must be a fully qualified path name, or a path name using either the ~ shell shorthand or any of the substitution variables, which are listed below. The volume name is the name that appears in the Chooser ot the &quot;connect to server&quot; dialog on Macintoshes to represent the appropriate share. If there are spaces in the name, it should be in quotes (i.e. &quot;File Share&quot;). The volume name may not exceed 27 characters in length, and cannot contain the &#8216;:&#8217; character.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Each volume has to be configured on a <code>single</code> line. Though newline escaping is supported.  The possible options and their meanings are: adouble:<i>[v1|v2|osx]</i></dd>
 <dl>
 <dd>specify the format of the metadata files, which are used for saving Mac resource fork as well. Earlier versions used AppleDouble V1, the new default format is V2. Starting with Netatalk 2.0, the scheme MacOS X uses currently (10.3.x), is also supported</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Using <code>adouble:osx</code> is <code>not</code> recommended for production use. Its only aim is to temporarely share eg. FAT32 formatted FireWire harddrives written on a Macintosh with afpd. Apple&#8217;s metadata scheme lacks several essential features, so using it on the server&#8217;s side will break both CNIDs and MacOS 9 compatibility  allow:<i>[users/groups]</i></dd>
 <dl>
 <dd>The allow option allows the users and groups that access a share to be specified. Users and groups are specified, delimited by commas. Groups are designated by a @ prefix. Example: allow:user1,user2,@group</dd></dl>
@@ -209,7 +209,7 @@ description: "AppleVolumes.default – Configuration file used by"
 <dl>
 <dd>Forces filename restrictions imposed by MS WinXX. <i>Warning</i>: This is <i>NOT</i> recommened for volumes mainly used by Macs. Please make sure you fully understand this option before using it. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  This option breaks direct saving to netatalk volumes from some applications, i.e. OfficeX. </dd>
 </dl>
 </dl>

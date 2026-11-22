@@ -13,42 +13,42 @@ description: "log4cpp::FixedContextCategory –"
 <p>#include &lt;FixedContextCategory.hh&gt; </p>
 <p> Inherits <code>log4cpp::Category</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>FixedContextCategory</code> (const std::string &amp;name, const std::string &amp;context=&#8221;)<br />
- <i>Constructor. </i><br />
- virtual <code>~FixedContextCategory</code> ()<br />
- <i>Destructor for </i><code>Category</code>.<br />
- virtual void <code>setContext</code> (const std::string &amp;context)<br />
- <i>Set the context string used as </i><code>NDC</code>.<br />
- virtual std::string <code>getContext</code> () const<br />
- <i>Return the context string used as </i><code>NDC</code>.<br />
- virtual <code>Priority::Value</code> <code>getPriority</code> () const throw ()<br />
- <i>Returns the assigned </i><code>Priority</code>, if any, for this <code>Category</code>.<br />
- virtual <code>Priority::Value</code> <code>getChainedPriority</code> () const throw ()<br />
- <i>Starting from this </i><code>Category</code>, search the category hierarchy for a set priority and return it.<br />
- virtual void <code>addAppender</code> (<code>Appender</code> *appender) throw ()<br />
- <i>For the moment this method does nothing. </i><br />
- virtual void <code>addAppender</code> (<code>Appender</code> &amp;appender)<br />
- <i>For the moment this method does nothing. </i><br />
- virtual <code>Appender</code> * <code>getAppender</code> () const<br />
- <i>Returns the </i><code>Appender</code> for this <code>Category</code>, or NULL if no <code>Appender</code> has been set.<br />
- virtual <code>Appender</code> * <code>getAppender</code> (const std::string &amp;name) const<br />
- <i>Returns the specified </i><code>Appender</code> for this <code>Category</code>, or NULL if the <code>Appender</code> is not attached to this <code>Category</code>.<br />
- virtual <code>AppenderSet</code> <code>getAllAppenders</code> () const<br />
- <i>Returns the set of Appenders currently attached to this Catogory. </i><br />
- virtual void <code>removeAllAppenders</code> ()<br />
- <i>Removes all appenders set for this </i><code>Category</code>.<br />
- virtual bool <code>ownsAppender</code> () const throw ()<br />
- <i>FixedContextAppenders cannot own Appenders. </i><br />
- virtual bool <code>ownsAppender</code> (<code>Appender</code> *appender) const throw ()<br />
- <i>FixedContextAppenders cannot own Appenders. </i><br />
- virtual void <code>callAppenders</code> (const <code>LoggingEvent</code> &amp;event) throw ()<br />
- <i>Call the appenders in the hierarchy starting at </i>this.<br />
- virtual void <code>setAdditivity</code> (bool additivity)<br />
- <i>Set the additivity flag for this </i><code>Category</code> instance.<br />
- virtual bool <code>getAdditivity</code> () const throw ()<br />
+<p><code>FixedContextCategory</code> (const std::string &amp;name, const std::string &amp;context=&#8221;)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~FixedContextCategory</code> ()<br/>
+ <i>Destructor for </i><code>Category</code>.<br/>
+ virtual void <code>setContext</code> (const std::string &amp;context)<br/>
+ <i>Set the context string used as </i><code>NDC</code>.<br/>
+ virtual std::string <code>getContext</code> () const<br/>
+ <i>Return the context string used as </i><code>NDC</code>.<br/>
+ virtual <code>Priority::Value</code> <code>getPriority</code> () const throw ()<br/>
+ <i>Returns the assigned </i><code>Priority</code>, if any, for this <code>Category</code>.<br/>
+ virtual <code>Priority::Value</code> <code>getChainedPriority</code> () const throw ()<br/>
+ <i>Starting from this </i><code>Category</code>, search the category hierarchy for a set priority and return it.<br/>
+ virtual void <code>addAppender</code> (<code>Appender</code> *appender) throw ()<br/>
+ <i>For the moment this method does nothing. </i><br/>
+ virtual void <code>addAppender</code> (<code>Appender</code> &amp;appender)<br/>
+ <i>For the moment this method does nothing. </i><br/>
+ virtual <code>Appender</code> * <code>getAppender</code> () const<br/>
+ <i>Returns the </i><code>Appender</code> for this <code>Category</code>, or NULL if no <code>Appender</code> has been set.<br/>
+ virtual <code>Appender</code> * <code>getAppender</code> (const std::string &amp;name) const<br/>
+ <i>Returns the specified </i><code>Appender</code> for this <code>Category</code>, or NULL if the <code>Appender</code> is not attached to this <code>Category</code>.<br/>
+ virtual <code>AppenderSet</code> <code>getAllAppenders</code> () const<br/>
+ <i>Returns the set of Appenders currently attached to this Catogory. </i><br/>
+ virtual void <code>removeAllAppenders</code> ()<br/>
+ <i>Removes all appenders set for this </i><code>Category</code>.<br/>
+ virtual bool <code>ownsAppender</code> () const throw ()<br/>
+ <i>FixedContextAppenders cannot own Appenders. </i><br/>
+ virtual bool <code>ownsAppender</code> (<code>Appender</code> *appender) const throw ()<br/>
+ <i>FixedContextAppenders cannot own Appenders. </i><br/>
+ virtual void <code>callAppenders</code> (const <code>LoggingEvent</code> &amp;event) throw ()<br/>
+ <i>Call the appenders in the hierarchy starting at </i>this.<br/>
+ virtual void <code>setAdditivity</code> (bool additivity)<br/>
+ <i>Set the additivity flag for this </i><code>Category</code> instance.<br/>
+ virtual bool <code>getAdditivity</code> () const throw ()<br/>
  <i>Returns the additivity flag for this </i><code>Category</code> instance.</p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>_logUnconditionally2</code> (<code>Priority::Value</code> priority, const std::string &amp;message) throw ()<br />
+<p>virtual void <code>_logUnconditionally2</code> (<code>Priority::Value</code> priority, const std::string &amp;message) throw ()<br/>
  <i>Unconditionally log a message with the specified priority. </i></p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>
@@ -62,7 +62,7 @@ description: "log4cpp::FixedContextCategory –"
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> the fully qualified name of this Categories delegate <code>Category</code>.<br />
+<dd><i>name</i> the fully qualified name of this Categories delegate <code>Category</code>.<br/>
  <i>context</i> the context to fill the <code>NDC</code> field of LoggingEvents with.</dd></dl>
 <h3>log4cpp::FixedContextCategory::~FixedContextCategory () [virtual]</h3>
 <p>Destructor for <code>Category</code>.</p>
@@ -71,7 +71,7 @@ description: "log4cpp::FixedContextCategory –"
 <p>Unconditionally log a message with the specified priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>priority</i> The priority of this log message.<br />
+<dd><i>priority</i> The priority of this log message.<br/>
  <i>message</i> string to write in the log file</dd></dl>
 <p> Reimplemented from <code>log4cpp::Category</code>.</p>
 <h3>void log4cpp::FixedContextCategory::addAppender (<code>Appender</code> *appender) [virtual]</h3>

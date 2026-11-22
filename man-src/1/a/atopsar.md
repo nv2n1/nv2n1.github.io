@@ -10,12 +10,12 @@ description: "atopsar – Advanced System Activity Report (atop related)"
 
 <p> <code>atopsar</code> &#8211; Advanced System Activity Report (atop related)</p>
 <h2>SYNOPSIS</h2>
-<p> <code>atopsar</code> [-flags&#8230;] [-r <i>file|date</i> ] [-R <i>cnt</i> ] [-b <i>hh:mm</i> ] [-e <i>hh:mm</i> ]<br />
+<p> <code>atopsar</code> [-flags&#8230;] [-r <i>file|date</i> ] [-R <i>cnt</i> ] [-b <i>hh:mm</i> ] [-e <i>hh:mm</i> ]<br/>
  <code>atopsar</code> [-flags&#8230;] <i>interval</i> [ <i>samples</i> ] </p>
 <h2>DESCRIPTION</h2>
 <p> The program <i>atopsar</i> can be used to report statistics on system level. </p>
-<p> In the first synopsis line (no sampling interval specified), <i>atopsar</i> extracts data from a raw logfile that has been recorded previously by the program <i>atop</i> (option <code>-w </code> of the <i>atop</i> program).<br />
- You can specify the name of the logfile with the <code>-r</code> option of the <i>atopsar</i> program. When a daily logfile of <i>atop</i> is used, named <code>/var/log/atop/atop_YYYYMMDD</code> (where YYYYMMDD reflects the date), the required date of the form YYYYMMDD can be specified with the <code>-r</code> option instead of the filename, or the symbolic name &#8216;y&#8217; can be used for yesterday&#8217;s daily logfile (this can be repeated so &#8216;yyyy&#8217; indicates the logfile of four days ago). If the <code>-r</code> option is not specified at all, today&#8217;s daily logfile is used by default.<br />
+<p> In the first synopsis line (no sampling interval specified), <i>atopsar</i> extracts data from a raw logfile that has been recorded previously by the program <i>atop</i> (option <code>-w </code> of the <i>atop</i> program).<br/>
+ You can specify the name of the logfile with the <code>-r</code> option of the <i>atopsar</i> program. When a daily logfile of <i>atop</i> is used, named <code>/var/log/atop/atop_YYYYMMDD</code> (where YYYYMMDD reflects the date), the required date of the form YYYYMMDD can be specified with the <code>-r</code> option instead of the filename, or the symbolic name &#8216;y&#8217; can be used for yesterday&#8217;s daily logfile (this can be repeated so &#8216;yyyy&#8217; indicates the logfile of four days ago). If the <code>-r</code> option is not specified at all, today&#8217;s daily logfile is used by default.<br/>
  The starting and ending times of the report can be defined using the options <code>-b</code> and <code>-e</code> followed by a time argument of the form hh:mm. </p>
 <p> In the second synopsis line, <code>atopsar</code> reads actual activity counters from the kernel with the specified <i>interval</i> (in seconds) and the specified number of <i>samples</i> (optionally). When <code>atopsar</code> is activated in this way it immediately sends the output for every requested report to standard output. If only one type of report is requested, the header is printed once and after every <i>interval</i> seconds the statistical counters are shown for that period. If several reports are requested, a header is printed per sample followed by the statistical counters for that period. </p>
 <p> Some generic flags can be specified to influence the behaviour of the <code>atopsar</code> program: </p>
@@ -27,11 +27,11 @@ description: "atopsar – Advanced System Activity Report (atop related)"
 <dd> By default certain resources as disks and network interfaces are only shown when they were active during the interval. With this flag all resources of a given type are shown, even if they were inactive during the interval.</dd></dl>
 <dl>
 <dt><code>-x</code></dt>
-<dd> By default <code>atopsar</code> only uses colors if output is directed to a terminal (window). These colors might indicate that a critical occupation percentage has been reached (red) or has been almost reached (cyan) for a particular resource. See the man-page of <code>atop</code> for a detailed description of this feature (section COLORS).<br />
+<dd> By default <code>atopsar</code> only uses colors if output is directed to a terminal (window). These colors might indicate that a critical occupation percentage has been reached (red) or has been almost reached (cyan) for a particular resource. See the man-page of <code>atop</code> for a detailed description of this feature (section COLORS).<br/>
  With the flag <code>-x</code> the use of colors is suppressed unconditionally.</dd></dl>
 <dl>
 <dt><code>-C</code></dt>
-<dd> By default <code>atopsar</code> only uses colors if output is directed to a terminal (window). These colors might indicate that a critical occupation percentage has been reached (red) or has been almost reached (cyan) for a particular resource. See the man-page of <code>atop</code> for a detailed description of this feature (section COLORS).<br />
+<dd> By default <code>atopsar</code> only uses colors if output is directed to a terminal (window). These colors might indicate that a critical occupation percentage has been reached (red) or has been almost reached (cyan) for a particular resource. See the man-page of <code>atop</code> for a detailed description of this feature (section COLORS).<br/>
  With the flag <code>-C</code> colors will always be used, even if output is not directed to a terminal.</dd></dl>
 <dl>
 <dt><code>-M</code></dt>
@@ -243,7 +243,7 @@ description: "atopsar – Advanced System Activity Report (atop related)"
 <dt><code>ombps/s</code></dt>
 <dd> Effective number of megabits transmitted per second.</dd>
 <dt><code>maxmbps/s</code></dt>
-<dd> Linespeed as number of megabits per second. If the linespeed could not be determined (for virtual interfaces or in case that <code>atop</code> or <code>atopsar</code> had no root-privileges), value 0 is shown.<br />
+<dd> Linespeed as number of megabits per second. If the linespeed could not be determined (for virtual interfaces or in case that <code>atop</code> or <code>atopsar</code> had no root-privileges), value 0 is shown.<br/>
  The linespeed is followed by the indication &#8216;f&#8217; (full duplex) or &#8216;h&#8217; (half duplex).</dd></dl>
 <p> The output for the flag <code>-I</code> provides information about the failures that were detected for network interfaces:</p>
 <dl>
@@ -519,7 +519,7 @@ description: "atopsar – Advanced System Activity Report (atop related)"
 <dt><code>/var/log/atop/atop_</code><i>YYYYMMDD</i></dt>
 <dd> Daily data file, where <i>YYYYMMDD</i> are digits representing the date.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-atop/">atop</a>(1),</code> <code>atoprc(5),</code> <code>atopacctd(8),</code> <code>netatop(4),</code> <code>netatopd(8)</code><br />
+<p> <code><a href="/docs/linux/man/1-atop/">atop</a>(1),</code> <code>atoprc(5),</code> <code>atopacctd(8),</code> <code>netatop(4),</code> <code>netatopd(8)</code><br/>
  <code><a rel="nofollow" href="http://www.atoptool.nl">http://www.atoptool.nl</a></code></p>
 <h2>AUTHOR</h2>
 <p> Gerlof Langeveld (gerlof.langeveld [at] atoptool.nl) </p>

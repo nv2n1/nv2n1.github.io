@@ -10,10 +10,10 @@ description: "ql/pricingengines/latticeshortratemodelengine.hpp – Engine for a
 
 <p> ql/pricingengines/latticeshortratemodelengine.hpp &#8211; Engine for a short-rate model specialized on a lattice. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/models/model.hpp&gt;<br />
+<p> #include &lt;ql/models/model.hpp&gt;<br/>
  #include &lt;ql/pricingengines/genericmodelengine.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>LatticeShortRateModelEngine&lt; Arguments, Results &gt;</code><br />
+<p> class <code>LatticeShortRateModelEngine&lt; Arguments, Results &gt;</code><br/>
  <i>Engine for a short-rate model specialized on a lattice. </i></p>
 <h2>Detailed Description</h2>
 <p> Engine for a short-rate model specialized on a lattice. </p>

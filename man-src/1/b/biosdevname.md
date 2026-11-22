@@ -28,7 +28,7 @@ description: "biosdevname – give BIOS-given name of a device"
 <dt><code>-s, &#8211;smbios </code><i>[x.y]</i></dt>
 <dd> Require minimum SMBIOS version x.y</dd></dl>
 <h2>POLICIES</h2>
-<p> The <code>physical</code> policy is the current default. However, when invoking biosdevname in udev rules, one should always specify the policy you want, as the default has changed over time.<br />
+<p> The <code>physical</code> policy is the current default. However, when invoking biosdevname in udev rules, one should always specify the policy you want, as the default has changed over time.<br/>
  The <code>physical</code> policy uses the following scheme:</p>
 <dl>
 <dt>em&lt;port&gt;[_&lt;virtual instance&gt;]</dt>
@@ -39,14 +39,14 @@ description: "biosdevname – give BIOS-given name of a device"
 <dd> <code>all_ethN</code> policy makes a best guess at what the device order should be, with embedded devices first, PCI cards in ascending slot order, and ports in ascending PCI bus/device/function order breadth-first. However, this policy <i>does not work</i> if your PCI devices are hot-plugged or hot-pluggable, including the virtual functions on an SR-IOV device. In a hot-plug scenario, each separate udev instance will be invoked in parallel, while the device tree is still being populated with new devices. Each udev instance will see a different PCI tree, and thus cannot provide consistent enumeration. Use of this policy should be limited to only scenarios where all PCI devices are present at boot (cold-plug). </dd>
 </dl>
 <h2>EXIT CODES</h2>
-<p> Returns 0 on success, with BIOS-suggested name printed to stdout.<br />
- Returns 1 on provided device name lookup failure.<br />
- Returns 2 if system BIOS does not provide naming information. biosdevname requires system BIOS to provide naming information, either via SMBIOS or sysfs files.<br />
- Returns 3 if not run as root but requires root privileges.<br />
+<p> Returns 0 on success, with BIOS-suggested name printed to stdout.<br/>
+ Returns 1 on provided device name lookup failure.<br/>
+ Returns 2 if system BIOS does not provide naming information. biosdevname requires system BIOS to provide naming information, either via SMBIOS or sysfs files.<br/>
+ Returns 3 if not run as root but requires root privileges.<br/>
  Returns 4 if running in a virtual machine. </p>
 <h2>SEE ALSO</h2>
-<p> <a rel="nofollow" href="http://linux.dell.com/wiki/index.php/Oss/libnetdevname">http://linux.dell.com/wiki/index.php/Oss/libnetdevname</a><br />
- <a rel="nofollow" href="http://linux.dell.com/files/biosdevname/">http://linux.dell.com/files/biosdevname/</a><br />
+<p> <a rel="nofollow" href="http://linux.dell.com/wiki/index.php/Oss/libnetdevname">http://linux.dell.com/wiki/index.php/Oss/libnetdevname</a><br/>
+ <a rel="nofollow" href="http://linux.dell.com/files/biosdevname/">http://linux.dell.com/files/biosdevname/</a><br/>
  <a href="git://linux.dell.com/biosdevname.git">git://linux.dell.com/biosdevname.git</a> </p>
 <h2>RELATED PROGRAMS</h2>
 <p> The <code>dmidecode</code> package contains two tools useful for debugging BIOS features that biosdevname uses, specifically <code>dmidecode</code> to read the SMBIOS Type 9 and Type 41 tables, and <code>biosdecode</code> to read the PCI IRQ Routing Table. Please include the output of each of these programs in any bug reports.</p>

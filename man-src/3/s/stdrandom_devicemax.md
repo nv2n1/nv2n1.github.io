@@ -18,6 +18,6 @@ description: "std::random_device::max – std::random_device::max"
 <h2>Complexity</h2>
 <p>Constant</p>
 <h2>See also</h2>
-<p>min gets the smallest possible value in the output range<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>min gets the smallest possible value in the output range<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>

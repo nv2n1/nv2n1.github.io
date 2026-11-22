@@ -57,7 +57,7 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <dt><code>VesaText</code></dt>
 <dd>forces the driver to set 80&#215;25 text mode, before any standard vga mode setting. Fixes text mode restoring with many cards, as well as standard VGA modes.</dd>
 <dt><code>VesaSave</code></dt>
-<dd>selects the bitmap to save and restore, using VESA functions. see VESA documentation for bits&#8217; meanings. The default is 1110 (=14) which is good for most cards, but some give better results with other numbers.<br />
+<dd>selects the bitmap to save and restore, using VESA functions. see VESA documentation for bits&#8217; meanings. The default is 1110 (=14) which is good for most cards, but some give better results with other numbers.<br/>
 &nbsp;<wbr></dd></dl>
 <h2>General Options (Handled By The Main Module)</h2>
 <h3>Mouse configuration</h3>
@@ -129,16 +129,16 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <dt><code>0</code> or <code>off</code></dt>
 <dd>No acceleration.</dd>
 <dt><code>normal</code></dt>
-<dd>No acceleration while delta is less than <code>mouse_accel_thresh</code> but multiplied by <code>mouse_accel_mult</code> if more.<br />
+<dd>No acceleration while delta is less than <code>mouse_accel_thresh</code> but multiplied by <code>mouse_accel_mult</code> if more.<br/>
  Originally done by Mike Chapman &lt;mike [at] paranoia.com&gt;.</dd>
 <dt><code>power</code></dt>
 <dd>The acceleration factor is a power function of delta until it reaches <code>mouse_accel_mult</code> After that it&#8217;s a simple multiplication. Basically it&#8217;s like the normal mode but the acceleration factor grows as you move your mouse faster and faster, not just turns in and out. If the acceleration factor reaches <code>mouse_accel_mult</code> it turns into a plain multiplication. </dd>
 <p> Threshold has the same meaning as in normal mode. The one I use for *uaking&#8230; :) </p>
 <p> It is calculated like this: </p>
 <p> if (abs(dx) &gt; 1) /* to prevent losing resolution */ </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>dx&nbsp;<wbr>=&nbsp;<wbr>(abs(dx)&nbsp;<wbr>&gt;=<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>dx&nbsp;<wbr>=&nbsp;<wbr>(abs(dx)&nbsp;<wbr>&gt;=<br/>
  <code> mouse_accel_thresh</code> ) ? </p>
-<p>&nbsp;<wbr>(float)dx&nbsp;<wbr>*<br />
+<p>&nbsp;<wbr>(float)dx&nbsp;<wbr>*<br/>
  <code> mouse_accel_mult</code> : </p>
 <p>&nbsp;<wbr>(float)dx&nbsp;<wbr>* </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>m_accel_powertable[abs(dx)];</p>
@@ -146,12 +146,12 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <dd>The acceleration factor grows linear with the delta until it reaches <code>mouse_accel_thresh</code>. After that it is a simple mutiplication. (I know that it can be done with setting <code>mouse_accel_power</code> to 1, but it was one minute to implement&#8230; and uses no memory&#8230; and&#8230;) </dd>
 <p> It is calculated like this: </p>
 <p> if (abs(dx) &gt; 1) </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>dx&nbsp;<wbr>=&nbsp;<wbr>(abs(dx)&nbsp;<wbr>&gt;=<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>dx&nbsp;<wbr>=&nbsp;<wbr>(abs(dx)&nbsp;<wbr>&gt;=<br/>
  <code> mouse_accel_thresh</code> ) ? </p>
-<p>&nbsp;<wbr>(float)dx&nbsp;<wbr>*<br />
+<p>&nbsp;<wbr>(float)dx&nbsp;<wbr>*<br/>
  <code> mouse_accel_mult</code> : </p>
-<p>&nbsp;<wbr>(float)dx&nbsp;<wbr>*&nbsp;<wbr>abs(dx)&nbsp;<wbr>*<br />
- <code> mouse_accel_mult</code> /<br />
+<p>&nbsp;<wbr>(float)dx&nbsp;<wbr>*&nbsp;<wbr>abs(dx)&nbsp;<wbr>*<br/>
+ <code> mouse_accel_mult</code> /<br/>
  <code> mouse_accel_thresh</code> ;</dl>
 </dl>
 <p> The enhanced acceleration was done by 101 (Attila Lendvai) &lt;101 [at] kempelen.inf.bme.hu&gt;</dl>
@@ -190,14 +190,14 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 </dl>
 <dd>Here are some examples: </dd>
 <p> This is one I use in *uake: it turns around, looks down a bit and when the key is released it does the opposite, so it gets back to the starting state. With this one and the help of a rocket you can fly though the whole map :) (Scancode 28 is <code>&lt;Enter&gt;</code>): </p>
-<p> <code> kbd_fake_mouse_event 28 both deltax 8182</code><br />
- <code> down deltay -1500</code><br />
+<p> <code> kbd_fake_mouse_event 28 both deltax 8182</code><br/>
+ <code> down deltay -1500</code><br/>
  <code> up deltay 1500</code> </p>
 <p> This one will switch off the y axis of the mouse while the key <code>&lt;Right Ctrl&gt;</code> is kept pressed. </p>
-<p> <code> kbd_fake_mouse_event 97 down deltay off</code><br />
+<p> <code> kbd_fake_mouse_event 97 down deltay off</code><br/>
  <code> up deltay on</code> </p>
 <p> This one is the same as if you were pressing the left mouse button. (But if you move your mouse then the button state will reset even if you keep <code>&lt;Right Ctrl&gt;</code> down&#8230;) </p>
-<p> <code> kbd_fake_mouse_event 97 down button1 pressed</code><br />
+<p> <code> kbd_fake_mouse_event 97 down button1 pressed</code><br/>
  <code> up button1 released</code> </p>
 <p> <code>NOTE:</code> This does only work when the keyboard is in raw keyboard mode! </p>
 <p> Yet another feature brought to you by 101 (Attila Lendvai) &lt;101 [at] kempelen.inf.bme.hu&gt; </p>
@@ -214,16 +214,16 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <dd>
 </dd><dt><code>VertRefresh </code><i>min_Hz max_Hz</i></dt>
 <dd>specifies the range of frequencies acceptable to your monitor. They obsolete the <code>monitor</code> settings below, and this shouldn&#8217;t be used if <code>HorizSync</code> and <code>VertRefresh</code> are defined. Examples: </dd>
-<p> <code>HorizSync 31.5 35.5</code><br />
+<p> <code>HorizSync 31.5 35.5</code><br/>
  <code>VertRefresh 50 70</code> </p>
 <dt><code>monitor</code><i> monitor_class</i></dt>
 <dd>where <i>monitor_class</i> is a digit <code>0</code> &#8211; <code>6</code> or the maximal horizontal frequency in kHz. Examples: </dd>
-<p> <code>monitor 0</code> # Max horizontal sync is 31.5 kHz<br />
- <code>monitor 1</code> # Max horizontal sync is 35.1 kHz<br />
- <code>monitor 2</code> # Max horizontal sync is 35.5 kHz<br />
- <code>monitor 3</code> # Max horizontal sync is 37.9 kHz<br />
- <code>monitor 4</code> # Max horizontal sync is 48.3 kHz<br />
- <code>monitor 5</code> # Max horizontal sync is 56.0 kHz<br />
+<p> <code>monitor 0</code> # Max horizontal sync is 31.5 kHz<br/>
+ <code>monitor 1</code> # Max horizontal sync is 35.1 kHz<br/>
+ <code>monitor 2</code> # Max horizontal sync is 35.5 kHz<br/>
+ <code>monitor 3</code> # Max horizontal sync is 37.9 kHz<br/>
+ <code>monitor 4</code> # Max horizontal sync is 48.3 kHz<br/>
+ <code>monitor 5</code> # Max horizontal sync is 56.0 kHz<br/>
  <code>monitor 6</code> # No restrictions. </p>
 <p> For your convenience you may specify the max horizontal sync explicitly. The correct class will the be chosen. You may use floats consisting of digits and a decimal point for this too: </p>
 <p> <code>monitor 40.0</code> # equivalent to monitor 3 </p>
@@ -263,8 +263,8 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <p> Everything should be on one line. The values for the horizontal timings must be multiples of eight. </p>
 <p> These are prefered over the default timings (if monitor and chipset can handle them). The format is identical to the one used by XFree86, but the label following the modeline keyword is ignored by vgalib. </p>
 <p> Here some examples: </p>
-<p> <code>modeline 640&#215;480@100 43 640 664 824 848 480 483 490 504</code><br />
- <code>modeline 800&#215;600@73 50 800 856 976 1024 600 637 643 666</code><br />
+<p> <code>modeline 640&#215;480@100 43 640 664 824 848 480 483 490 504</code><br/>
+ <code>modeline 800&#215;600@73 50 800 856 976 1024 600 637 643 666</code><br/>
  <code>modeline 1024&#215;768@75 85 1024 1048 1376 1400 768 771 780 806</code> </p>
 <p> <code>IMPORTANT!</code> Not all drivers, that is SVGA cards, use the values. Only drivers using timing.c. As of this writing, drivers using this feature are: Ark, Cirrus, Chips &amp; Technologies, Et6000, S3. </p>
 <p> The Mach32 driver provides a similar feature separately, you have to use the <code>define</code> command described below. </p>
@@ -362,15 +362,15 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <dd>
 </dd><dl>
 <dt>Clock chip 18811-0:</dt>
-<dd><code>clocks 43 49 92 36 50 56 0 45</code><br />
+<dd><code>clocks 43 49 92 36 50 56 0 45</code><br/>
  <code> 30 32 110 80 40 45 75 65</code> </dd>
 <dt>Clock chip 18811-1:</dt>
 <dd>due to Xfree86 info valid for: Ultra pro ISA, Ultra pro EISA, Ultra pro VLB(68800-3) </dd>
-<p> <code>clocks 100 126 92 36 50 56 0 45</code><br />
+<p> <code>clocks 100 126 92 36 50 56 0 45</code><br/>
  <code> 135 32 110 80 40 45 75 65</code> </p>
 <dt>Clock chip 1881 (ICS2494):</dt>
 <dd>due to Xfree86 info valid for: Ultra pro VLB (6880006) </dd>
-<p> <code>clocks 18 22 25 28 36 44 50 56</code><br />
+<p> <code>clocks 18 22 25 28 36 44 50 56</code><br/>
  <code> 30 32 37 39 40 0 75 65</code></dl>
 </dl>
 <dd>In my own correspondence with ATI they say every Mach32 would have a 18811-1, so it should be possible just to take the 18811-1 line. However I have now reports of third party cards and motherboards with on board Mach32 chips, so be careful. </dd>
@@ -405,10 +405,10 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <p> <i>horz_timing</i> is four integers: <i>hdisp h_sync_strt h_sync_wid h_total</i>. </p>
 <p> <i>vert_timing</i> has the same format but for vertical. </p>
 <p> You may specify one or more <i>flags</i> out of: <code>Interlace</code>, <code>+vsync</code>, <code>-vsync</code>, <code>+hsync</code>, or <code>-hsync</code> to select interlace mode and polarity of sync signals. This format is almost the same Xfree uses, s.t. you may use their mode table and the modegen spreadsheet package for mode creation. You simple need to round the clock to the next integer, add the resolution instead of the timing name for Xfree and replace the <code>modeline</code> keyword with <code>define</code>. Here is a 1024x768x256 mode as example: </p>
-<p> <code>define 1024x768x256 80 1024 1024 1184 1312</code><br />
+<p> <code>define 1024x768x256 80 1024 1024 1184 1312</code><br/>
  <code> 768 768 772 791 +vsync -hsync</code> </p>
 <p> or </p>
-<p> <code>define 1024x768x256 1024x768x32K 1024x768x64K</code><br />
+<p> <code>define 1024x768x256 1024x768x32K 1024x768x64K</code><br/>
  <code> :11 1024 1024 1184 1312 768 768 772 791</code> </p>
 <p> (yes any whitespace in a command is allowed, even a newline !) </p>
 <p> Both commands define the same timings (if the 11-th clock is 80) but the first explicitly specifies the polarity of sync signals whereas the second declares that these timings are also to be used for a 32K and 64K mode. </p>
@@ -442,24 +442,24 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <dd>Disable support for imageblt.</dd></dl>
 </dl>
 <dd>Mach32 default is: </dd>
-<p> <code>blit bit fill image hlinelist settrans setrop</code><br />
- <code> fillbox screencopy drawline putimage</code><br />
- <code> drawhlinelist putbitmap screencopymono</code><br />
- <code> setmode polyline polyhline polyfillmode</code><br />
+<p> <code>blit bit fill image hlinelist settrans setrop</code><br/>
+ <code> fillbox screencopy drawline putimage</code><br/>
+ <code> drawhlinelist putbitmap screencopymono</code><br/>
+ <code> setmode polyline polyhline polyfillmode</code><br/>
  <code> memimage</code> </p>
 <p> The <code>blit</code> command is <code>not privileged</code>. </p>
 </dl>
 <p> The Mach32 has also a few intermediate debug options for low level timing adjust. They are: </p>
-<p> <code>vfifo8</code><i> number</i><br />
- <code>vfifo16</code><i> number</i><br />
- <code>vfifo24</code><i> number</i><br />
- <code>vfifo32</code><i> number</i><br />
- <code>blank</code><i> number</i><br />
+<p> <code>vfifo8</code><i> number</i><br/>
+ <code>vfifo16</code><i> number</i><br/>
+ <code>vfifo24</code><i> number</i><br/>
+ <code>vfifo32</code><i> number</i><br/>
+ <code>blank</code><i> number</i><br/>
  <code>latch</code><i> number</i> </p>
 <p> There also options which are useful to support broken Mach32 cards or third party hardware based on Mach32 which does not follow the ATI specifications completely. For example: </p>
-<p> <code>vendor ati</code><br />
- <code>misc_ctl keep-off</code><br />
- <code>svgaclocks 9</code><br />
+<p> <code>vendor ati</code><br/>
+ <code>misc_ctl keep-off</code><br/>
+ <code>svgaclocks 9</code><br/>
  <code>ramdac auto</code> </p>
 <p> For details about these options see <code>svgalib.mach32</code>(7). All of them are <code>privileged</code>.</p>
 <h2>Obsolete Commands</h2>
@@ -477,7 +477,7 @@ description: "libvga.config, svgalibrc – the svgalib configuration file"
 <dt><code>c</code><i>flag</i></dt>
 <dd>When using the EGA chipset driver, the card is in monochrome emulation mode for <i>flag</i> = 0 and in color emulation mode for <i>flag</i> = 1.</dd></dl>
 <h2>Files</h2>
-<p><i>/etc/vga/libvga.config</i><br />
+<p><i>/etc/vga/libvga.config</i><br/>
  <i>/etc/vga/libvga.et4000</i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-svgalib/">svgalib</a></code>(7), <code>svgalib.et4000</code>(7), <code>svgalib.chips</code>(7), <code>svgalib.mach32</code>(7), </p>

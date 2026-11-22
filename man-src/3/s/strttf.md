@@ -11,7 +11,7 @@ description: "strttf.f –"
 <p> strttf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>strttf</code> (TRANSR, UPLO, N, A, LDA, ARF, INFO)<br />
+<p> subroutine <code>strttf</code> (TRANSR, UPLO, N, A, LDA, ARF, INFO)<br/>
  <i></i><code>STRTTF</code> copies a triangular matrix from the standard full format (TR) to the rectangular full packed format (TF).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine strttf (characterTRANSR, characterUPLO, integerN, real, dimension( 0: lda-1, 0: * )A, integerLDA, real, dimension( 0: * )ARF, integerINFO)</h3>

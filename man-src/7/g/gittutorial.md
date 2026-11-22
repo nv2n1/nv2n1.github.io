@@ -11,7 +11,7 @@ description: "gittutorial – A tutorial introduction to Git"
 <h2>Synopsis</h2>
 <pre>git *</pre>
 <h2>Description</h2>
-<p>This tutorial explains how to import a new project into Git, make changes to it, and share changes with other developers. If you are instead primarily interested in using Git to fetch a project, for example, to test the latest version, you may prefer to start with the first two chapters of m[blue]<code>The Git User&#8217;s Manual</code>m[]<font SIZE="-2">[1]</font>. First, note that you can get documentation for a command such as <code>git log &#8211;graph</code> with:</p>
+<p>This tutorial explains how to import a new project into Git, make changes to it, and share changes with other developers. If you are instead primarily interested in using Git to fetch a project, for example, to test the latest version, you may prefer to start with the first two chapters of m[blue]<code>The Git User&#8217;s Manual</code>m[][1]. First, note that you can get documentation for a command such as <code>git log &#8211;graph</code> with:</p>
 <dl>
 <dd>
 <pre>$ man git-log</pre>
@@ -392,7 +392,7 @@ $ git log v2.5.. Makefile # commits since v2.5 which modify
 <dl>
 <dd>&bull; <code><a href="/docs/linux/man/7-gitcvs-migration/">gitcvs-migration</a></code>(7): Git for CVS users.</dd></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-gittutorial-2/">gittutorial-2</a></code>(7), <code><a href="/docs/linux/man/7-gitcvs-migration/">gitcvs-migration</a></code>(7), <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7), <code><a href="/docs/linux/man/7-gitglossary/">gitglossary</a></code>(7), <code><a href="/docs/linux/man/1-git-help/">git-help</a></code>(1), <code><a href="/docs/linux/man/7-gitworkflows/">gitworkflows</a></code>(7), <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7), m[blue]<code>The Git User&#8217;s Manual</code>m[]<font SIZE="-2">[1]</font></p>
+<p><code><a href="/docs/linux/man/7-gittutorial-2/">gittutorial-2</a></code>(7), <code><a href="/docs/linux/man/7-gitcvs-migration/">gitcvs-migration</a></code>(7), <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7), <code><a href="/docs/linux/man/7-gitglossary/">gitglossary</a></code>(7), <code><a href="/docs/linux/man/1-git-help/">git-help</a></code>(1), <code><a href="/docs/linux/man/7-gitworkflows/">gitworkflows</a></code>(7), <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7), m[blue]<code>The Git User&#8217;s Manual</code>m[][1]</p>
 <h2>Git</h2>
 <p>Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>Notes</h2>

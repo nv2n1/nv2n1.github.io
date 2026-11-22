@@ -252,7 +252,7 @@ ID_NET_NAME_MAC=enx026d3c00000a
 ID_NET_NAME_PATH=encf5f0</pre>
 </dd></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-udev/">udev</a></code>(7), <code><a href="/docs/linux/man/8-udevadm/">udevadm</a></code>(8), m[blue]<code>Predictable Network Interface Names</code>m[]<font SIZE="-2">[1]</font>, <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1)</p>
+<p><code><a href="/docs/linux/man/7-udev/">udev</a></code>(7), <code><a href="/docs/linux/man/8-udevadm/">udevadm</a></code>(8), m[blue]<code>Predictable Network Interface Names</code>m[][1], <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

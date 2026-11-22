@@ -11,7 +11,7 @@ description: "ssygvx.f –"
 <p> ssygvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssygvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, A, LDA, B, LDB, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, LWORK, IWORK, IFAIL, INFO)<br />
+<p> subroutine <code>ssygvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, A, LDA, B, LDB, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, LWORK, IWORK, IFAIL, INFO)<br/>
  <i></i><code>SSYGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssygvx (integerITYPE, characterJOBZ, characterRANGE, characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, realVL, realVU, integerIL, integerIU, realABSTOL, integerM, real, dimension( * )W, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integer, dimension( * )IFAIL, integerINFO)</h3>
@@ -157,12 +157,12 @@ IL = 1 and IU = 0 if N = 0. Not referenced if RANGE = 'A' or 'V'.
           eigenvalues in ascending order.
 </pre>
 <p> <i>Z</i> </p>
-<p>Z is REAL array, dimension(LDZ, max(1, M)) If JOBZ = &#8216;N&#8217;, then Z is not referenced.If JOBZ = &#8216;V&#8217;, then if INFO = 0, the first M columns of Z contain the orthonormal eigenvectors of the matrix A corresponding to the selected eigenvalues, with the i &#8211; th column of Z holding the eigenvector associated with W(i).The eigenvectors are normalized as follows : if ITYPE = 1 or 2, Z **T *B *Z = I;<br />
-if ITYPE<br />
-    = 3, Z **T *inv(B) *Z = I.If an eigenvector fails to converge, then that column of Z contains the latest approximation to the eigenvector, and the index of the eigenvector is returned in IFAIL.Note : the user must ensure that at least max(1, M) columns are supplied in the array Z;<br />
-if RANGE<br />
-= &#8216;V&#8217;, the exact value of M<br />
-               is not known in advance and<br />
+<p>Z is REAL array, dimension(LDZ, max(1, M)) If JOBZ = &#8216;N&#8217;, then Z is not referenced.If JOBZ = &#8216;V&#8217;, then if INFO = 0, the first M columns of Z contain the orthonormal eigenvectors of the matrix A corresponding to the selected eigenvalues, with the i &#8211; th column of Z holding the eigenvector associated with W(i).The eigenvectors are normalized as follows : if ITYPE = 1 or 2, Z **T *B *Z = I;<br/>
+if ITYPE<br/>
+    = 3, Z **T *inv(B) *Z = I.If an eigenvector fails to converge, then that column of Z contains the latest approximation to the eigenvector, and the index of the eigenvector is returned in IFAIL.Note : the user must ensure that at least max(1, M) columns are supplied in the array Z;<br/>
+if RANGE<br/>
+= &#8216;V&#8217;, the exact value of M<br/>
+               is not known in advance and<br/>
            an upper bound must be used.</p>
 <p> <i>LDZ</i> </p>
 <pre>
@@ -176,13 +176,13 @@ if RANGE<br />
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>          LWORK is INTEGER<br />
-          The length of the array WORK.  LWORK &gt;= max(1,8*N).<br />
-          For optimal efficiency, LWORK &gt;= (NB+3)*N,<br />
-          where NB is the blocksize for SSYTRD returned by ILAENV.<br />
-          If LWORK = -1, then a workspace query is assumed;<br />
-          the routine<br />
-              only calculates the optimal size of the WORK array,<br />
+<p>          LWORK is INTEGER<br/>
+          The length of the array WORK.  LWORK &gt;= max(1,8*N).<br/>
+          For optimal efficiency, LWORK &gt;= (NB+3)*N,<br/>
+          where NB is the blocksize for SSYTRD returned by ILAENV.<br/>
+          If LWORK = -1, then a workspace query is assumed;<br/>
+          the routine<br/>
+              only calculates the optimal size of the WORK array,<br/>
               returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>IWORK</i> </p>
 <pre>

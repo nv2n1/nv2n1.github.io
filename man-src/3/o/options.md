@@ -9,7 +9,7 @@ description: "XMLTV::Options – Command-line parsing for XMLTV grabbers"
 
 <p>XMLTV::Options &#8211; Command-line parsing for XMLTV grabbers </p>
 <h2>Description</h2>
-<p>Utility library that implements command-line parsing and handles a lot of functionality that is common to all <font SIZE="-1">XMLTV</font> grabbers.</p>
+<p>Utility library that implements command-line parsing and handles a lot of functionality that is common to all XMLTV grabbers.</p>
 <h2>Exported Functions</h2>
 <p>All these functions are exported on demand.</p>
 <h2>Usage</h2>
@@ -69,7 +69,7 @@ description: "XMLTV::Options – Command-line parsing for XMLTV grabbers"
 </dl>
 <dl COMPACT>
 <dd>ParseOptions will thus only return to the grabber when the grabber shall actually grab data. </dd>
-<p> If the &#8211;output option is specified, <font SIZE="-1">STDOUT</font> will be redirected to the specified file. </p>
+<p> If the &#8211;output option is specified, STDOUT will be redirected to the specified file. </p>
 <p> The grabber must check the following options on its own:</p>
 <dl COMPACT>
 <dt>&#8211;days</dt>
@@ -131,6 +131,6 @@ description: "XMLTV::Options – Command-line parsing for XMLTV grabbers"
 </dl>
 <h2>Copyright</h2>
 <p>Copyright (C) 2005,2006 Mattias Holmlund. </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301, USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>

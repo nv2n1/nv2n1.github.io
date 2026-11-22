@@ -13,7 +13,7 @@ description: "QuantLib::DoubleStickyRatchetPayoff – Intermediate class for sin
 #include &lt;ql/instruments/stickyratchet.hpp&gt;</code></pre>
 <p> Inherits <code>QuantLib::Payoff</code>. Inherited by <code>RatchetMaxPayoff</code>, <code>RatchetMinPayoff</code>, <code>RatchetPayoff</code>, <code>StickyMaxPayoff</code>, <code>StickyMinPayoff</code>, and <code>StickyPayoff</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>DoubleStickyRatchetPayoff</code> (Real type1, Real type2, Real gearing1, Real gearing2, Real gearing3, Real spread1, Real spread2, Real spread3, Real initialValue1, Real initialValue2, Real accrualFactor)<br />
+<p><code>DoubleStickyRatchetPayoff</code> (Real type1, Real type2, Real gearing1, Real gearing2, Real gearing3, Real spread1, Real spread2, Real spread3, Real initialValue1, Real initialValue2, Real accrualFactor)<br/>
  <code>Payoff interface</code> </p>
 <p> std::string <code>name</code> () const </p>
 <p> Real <code>operator()</code> (Real forward) const </p>

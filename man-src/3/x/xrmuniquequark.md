@@ -12,24 +12,24 @@ description: "XrmUniqueQuark, XrmStringToQuark, XrmPermStringToQuark, XrmQuarkTo
 <dl COMPACT>
 <dt> #include &lt;X11/Xresource.h&gt;</dt>
 <dd>XrmQuark XrmUniqueQuark(void);</dd></dl>
-<p> #define XrmStringToName(string) XrmStringToQuark(string)<br />
- #define XrmStringToClass(string) XrmStringToQuark(string)<br />
+<p> #define XrmStringToName(string) XrmStringToQuark(string)<br/>
+ #define XrmStringToClass(string) XrmStringToQuark(string)<br/>
  #define XrmStringToRepresentation(string) XrmStringToQuark(string)</p>
 <dl COMPACT>
 <dd>int XrmQuark XrmStringToQuark(char *<i>string</i>);</dd>
 <dd>XrmQuark XrmPermStringToQuark(char *<i>string</i>);</dd></dl>
-<p> #define XrmStringToName(string) XrmStringToQuark(string)<br />
- #define XrmStringToClass(string) XrmStringToQuark(string)<br />
+<p> #define XrmStringToName(string) XrmStringToQuark(string)<br/>
+ #define XrmStringToClass(string) XrmStringToQuark(string)<br/>
  #define XrmStringToRepresentation(string) XrmStringToQuark(string)</p>
 <dl COMPACT>
 <dd>XrmQuark XrmStringToQuark(char *<i>string</i>);</dd>
 <dd>XrmQuark XrmPermStringToQuark(char *<i>string</i>);</dd></dl>
-<p> #define XrmNameToString(name) XrmQuarkToString(name)<br />
- #define XrmClassToString(class) XrmQuarkToString(class)<br />
+<p> #define XrmNameToString(name) XrmQuarkToString(name)<br/>
+ #define XrmClassToString(class) XrmQuarkToString(class)<br/>
  #define XrmRepresentationToString(type) XrmQuarkToString(type)</p>
 <dl COMPACT>
 <dd>char *XrmQuarkToString(XrmQuark <i>quark</i>);</dd></dl>
-<p> #define XrmStringToNameList(str, name) XrmStringToQuarkList((str), (name))<br />
+<p> #define XrmStringToNameList(str, name) XrmStringToQuarkList((str), (name))<br/>
  #define XrmStringToClassList(str,class) XrmStringToQuarkList((str), (class)) </p>
 <dl COMPACT>
 <dd>void XrmStringToQuarkList(char *<i>string</i>, XrmQuarkList <i>quarks_return</i>);</dd>

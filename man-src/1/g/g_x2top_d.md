@@ -22,46 +22,46 @@ description: "x2top – generates a primitive topology from coordinates"
 <p> G43a2 GROMOS96 43a2 Forcefield (development) (improved alkane dihedrals) </p>
 <p> The corresponding data files can be found in the library directory with names like ffXXXX.YYY. Check chapter 5 of the manual for more information about file formats. By default the forcefield selection is interactive, but you can use the <code> -ff</code> option to specify one of the short names above on the command line instead. In that case pdb2gmx just looks for the corresponding file. </p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> conf.gro</i> <code>Input</code><br />
+<p> <code>-f</code><i> conf.gro</i> <code>Input</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-o</code><i> out.top</i> <code>Output, Opt.</code><br />
+<p> <code>-o</code><i> out.top</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Topology file&nbsp;<wbr> </p>
-<p> <code>-r</code><i> out.rtp</i> <code>Output, Opt.</code><br />
+<p> <code>-r</code><i> out.rtp</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Residue Type file used by pdb2gmx&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-ff</code><i> string</i><code> oplsaa</code><br />
+<p> <code>-ff</code><i> string</i><code> oplsaa</code><br/>
 &nbsp;<wbr>Force field for your simulation. Type&nbsp;<wbr>&quot;select&quot;&nbsp;<wbr>for interactive selcection. </p>
-<p> <code>-[no]v</code><i>no </i><br />
+<p> <code>-[no]v</code><i>no </i><br/>
 &nbsp;<wbr>Generate verbose output in the top file. </p>
-<p> <code>-nexcl</code><i> int</i><code> 3</code><br />
+<p> <code>-nexcl</code><i> int</i><code> 3</code><br/>
 &nbsp;<wbr>Number of exclusions </p>
-<p> <code>-[no]H14</code><i>yes </i><br />
+<p> <code>-[no]H14</code><i>yes </i><br/>
 &nbsp;<wbr>Use 3rd neighbour interactions for hydrogen atoms </p>
-<p> <code>-[no]alldih</code><i>no </i><br />
+<p> <code>-[no]alldih</code><i>no </i><br/>
 &nbsp;<wbr>Generate all proper dihedrals </p>
-<p> <code>-[no]remdih</code><i>no </i><br />
+<p> <code>-[no]remdih</code><i>no </i><br/>
 &nbsp;<wbr>Remove dihedrals on the same bond as an improper </p>
-<p> <code>-[no]pairs</code><i>yes </i><br />
+<p> <code>-[no]pairs</code><i>yes </i><br/>
 &nbsp;<wbr>Output 1-4 interactions&nbsp;<wbr>(pairs)&nbsp;<wbr>in topology file </p>
-<p> <code>-name</code><i> string</i><code> ICE</code><br />
+<p> <code>-name</code><i> string</i><code> ICE</code><br/>
 &nbsp;<wbr>Name of your molecule </p>
-<p> <code>-[no]pbc</code><i>yes </i><br />
+<p> <code>-[no]pbc</code><i>yes </i><br/>
 &nbsp;<wbr>Use periodic boundary conditions. </p>
-<p> <code>-[no]pdbq</code><i>no </i><br />
+<p> <code>-[no]pdbq</code><i>no </i><br/>
 &nbsp;<wbr>Use the B-factor supplied in a pdb file for the atomic charges </p>
-<p> <code>-[no]param</code><i>yes </i><br />
+<p> <code>-[no]param</code><i>yes </i><br/>
 &nbsp;<wbr>Print parameters in the output </p>
-<p> <code>-[no]round</code><i>yes </i><br />
+<p> <code>-[no]round</code><i>yes </i><br/>
 &nbsp;<wbr>Round off measured values </p>
-<p> <code>-kb</code><i> real</i><code> 400000</code><br />
+<p> <code>-kb</code><i> real</i><code> 400000</code><br/>
 &nbsp;<wbr>Bonded force constant&nbsp;<wbr>(kJ/mol/nm2) </p>
-<p> <code>-kt</code><i> real</i><code> 400 </code><br />
+<p> <code>-kt</code><i> real</i><code> 400 </code><br/>
 &nbsp;<wbr>Angle force constant&nbsp;<wbr>(kJ/mol/rad2) </p>
-<p> <code>-kp</code><i> real</i><code> 5 </code><br />
+<p> <code>-kp</code><i> real</i><code> 5 </code><br/>
 &nbsp;<wbr>Dihedral angle force constant&nbsp;<wbr>(kJ/mol/rad2) </p>
 <h2>KNOWN PROBLEMS</h2>
 <p> &#8211; The atom type selection is primitive. Virtually no chemical knowledge is used </p>

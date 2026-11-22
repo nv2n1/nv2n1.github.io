@@ -1621,7 +1621,7 @@ Default: ""</pre>
 <dt>%f</dt>
 <dd>Expands to the name of a file containing a message.</dd>
 <dt>%s</dt>
-<dd>Expands to the name of a file containing the signature part<br />
+<dd>Expands to the name of a file containing the signature part<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;of a multipart/signed attachment when verifying it.</dd>
 <dt>%a</dt>
 <dd>The value of $pgp_sign_as if set, otherwise the value of $pgp_default_key.</dd>
@@ -2460,7 +2460,7 @@ Default: ""</pre>
 <dt>%f</dt>
 <dd>Expands to the name of a file containing a message.</dd>
 <dt>%s</dt>
-<dd>Expands to the name of a file containing the signature part<br />
+<dd>Expands to the name of a file containing the signature part<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;of a multipart/signed attachment when verifying it.</dd>
 <dt>%k</dt>
 <dd>The key-pair specified with $smime_default_key</dd>
@@ -2471,8 +2471,8 @@ Default: ""</pre>
 <dt>%d</dt>
 <dd>The message digest algorithm specified with $smime_sign_digest_alg.</dd>
 <dt>%C</dt>
-<dd>CA location: Depending on whether $smime_ca_location<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;points to a directory or file, this expands to<br />
+<dd>CA location: Depending on whether $smime_ca_location<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;points to a directory or file, this expands to<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8220;-CApath&nbsp;$smime_ca_location&#8221;&nbsp;or&nbsp;&#8220;-CAfile&nbsp;$smime_ca_location&#8221;.</dd></dl>
 </dl>
 <dd>For examples on how to configure these formats, see the smime.rc in the samples/ subdirectory which has been installed on your system alongside the documentation. (S/MIME only) </dd>

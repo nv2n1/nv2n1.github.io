@@ -36,7 +36,7 @@ description: "nicotine is a graphical client for the SoulSeek peer-to-peer netwo
 <h2>FILES</h2>
 <p> All personal files are stored in the folder ~/.nicotine/</p>
 <h2>AUTHOR</h2>
-<p> This manual page was initially written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Nicotine+ project.<br />
+<p> This manual page was initially written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Nicotine+ project.<br/>
  Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nicotine-import-winconfig/">nicotine-import-winconfig</a>(1)</code> </p>

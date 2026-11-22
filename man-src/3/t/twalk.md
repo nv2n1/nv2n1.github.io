@@ -55,7 +55,7 @@ void tdestroy(void *root, void (*free_node)(void *nodep));</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>tsearch</code>(), <code>tfind</code>(),<br />
+<td> <code>tsearch</code>(), <code>tfind</code>(),<br/>
  <code>tdelete</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe race:rootp

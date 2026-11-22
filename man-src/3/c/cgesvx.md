@@ -11,7 +11,7 @@ description: "cgesvx.f –"
 <p> cgesvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgesvx</code> (FACT, TRANS, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, RWORK, INFO)<br />
+<p> subroutine <code>cgesvx</code> (FACT, TRANS, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, RWORK, INFO)<br/>
  <i></i><code> CGESVX computes the solution to system of linear equations A * X = B for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgesvx (characterFACT, characterTRANS, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, characterEQUED, real, dimension( * )R, real, dimension( * )C, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldx, * )X, integerLDX, realRCOND, real, dimension( * )FERR, real, dimension( * )BERR, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>
@@ -168,20 +168,20 @@ description: "cgesvx.f –"
           output argument.
 </pre>
 <p> <i>R</i> </p>
-<p>          R is REAL array, dimension (N)<br />
-          The row scale factors for A.  If EQUED = &#8216;R&#8217; or &#8216;B&#8217;, A is<br />
-          multiplied on the left by diag(R);<br />
-          if EQUED<br />
-              = &#8216;N&#8217; or &#8216;C&#8217;, R<br />
-                                is not accessed.R is an input argument if FACT = &#8216;F&#8217;;<br />
+<p>          R is REAL array, dimension (N)<br/>
+          The row scale factors for A.  If EQUED = &#8216;R&#8217; or &#8216;B&#8217;, A is<br/>
+          multiplied on the left by diag(R);<br/>
+          if EQUED<br/>
+              = &#8216;N&#8217; or &#8216;C&#8217;, R<br/>
+                                is not accessed.R is an input argument if FACT = &#8216;F&#8217;;<br/>
           otherwise, R is an output argument.If FACT = &#8216;F&#8217; and EQUED = &#8216;R&#8217; or &#8216;B&#8217;, each element of R must be positive.</p>
 <p> <i>C</i> </p>
-<p>          C is REAL array, dimension (N)<br />
-          The column scale factors for A.  If EQUED = &#8216;C&#8217; or &#8216;B&#8217;, A is<br />
-          multiplied on the right by diag(C);<br />
-          if EQUED<br />
-              = &#8216;N&#8217; or &#8216;R&#8217;, C<br />
-                                is not accessed.C is an input argument if FACT = &#8216;F&#8217;;<br />
+<p>          C is REAL array, dimension (N)<br/>
+          The column scale factors for A.  If EQUED = &#8216;C&#8217; or &#8216;B&#8217;, A is<br/>
+          multiplied on the right by diag(C);<br/>
+          if EQUED<br/>
+              = &#8216;N&#8217; or &#8216;R&#8217;, C<br/>
+                                is not accessed.C is an input argument if FACT = &#8216;F&#8217;;<br/>
           otherwise, C is an output argument.If FACT = &#8216;F&#8217; and EQUED = &#8216;C&#8217; or &#8216;B&#8217;, each element of C must be positive.</p>
 <p> <i>B</i> </p>
 <pre><code>

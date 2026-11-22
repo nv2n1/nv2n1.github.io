@@ -32,5 +32,5 @@ description: "XtDisplay, XtDisplayOfObject, XtScreen, XtScreenOfObject, XtWindow
 <p> <code>XtWindow</code> returns the window of the specified widget. </p>
 <p> <code>XtWindowOfObject</code> returns the window of the specified object.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -11,7 +11,7 @@ description: "dlarz.f –"
 <p> dlarz.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlarz</code> (SIDE, M, N, L, V, INCV, TAU, C, LDC, WORK)<br />
+<p> subroutine <code>dlarz</code> (SIDE, M, N, L, V, INCV, TAU, C, LDC, WORK)<br/>
  <i></i><code>DLARZ</code> applies an elementary reflector (as returned by stzrzf) to a general matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarz (characterSIDE, integerM, integerN, integerL, double precision, dimension( * )V, integerINCV, double precisionTAU, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( * )WORK)</h3>

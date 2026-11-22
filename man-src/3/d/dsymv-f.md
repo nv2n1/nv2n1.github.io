@@ -10,7 +10,7 @@ description: "dsymv.f –"
 <p>dsymv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dsymv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>dsymv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>DSYMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsymv (characterUPLO, integerN, double precisionALPHA, double precision, dimension(lda,*)A, integerLDA, double precision, dimension(*)X, integerINCX, double precisionBETA, double precision, dimension(*)Y, integerINCY)</h3>

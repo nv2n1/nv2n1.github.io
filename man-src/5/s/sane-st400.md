@@ -11,7 +11,7 @@ description: "sane-st400 – SANE backend for Siemens ST/Highscan flatbed scanne
 <h2>Description</h2>
 <p>The <code>sane-st400</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to Siemens ST400 flatbed scanners and compatibles. At present, the following scanners are supported by this backend:</p>
 <dl>
-<dd>Siemens ST400 (6 bit gray scale)<br />
+<dd>Siemens ST400 (6 bit gray scale)<br/>
  Siemens ST800 (6 bit gray scale)
 </dd></dl>
 <p> The driver supports line art and gray scans up to 8bpp. The Siemens ST/Highscan series includes several more models, e.g. the ST300 and ST600. If you own one of these scanners, or a scanner other than the ones listed above that works with this backend, please let us know by sending the scanner&#8217;s model name, SCSI ID, and firmware revision to <i>sane-devel [at] alioth-lists.debian.net</i>. Have a look at <i><a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a></i> concerning subscription to sane-devel. </p>
@@ -23,8 +23,8 @@ description: "sane-st400 – SANE backend for Siemens ST/Highscan flatbed scanne
 <h2>Configuration</h2>
 <p>The contents of the <i>st400.conf</i> file is a list of device names that correspond to Siemens scanners. Empty lines and lines starting with a hash mark (#) are ignored. A sample configuration file is shown below: </p>
 <dl>
-<dd>/dev/scanner<br />
- # this is a comment<br />
+<dd>/dev/scanner<br/>
+ # this is a comment<br/>
  /dev/sge</dd></dl>
 <p> The default configuration file that is distributed with SANE looks like this: </p>
 <dl>
@@ -55,7 +55,7 @@ description: "sane-st400 – SANE backend for Siemens ST/Highscan flatbed scanne
 <p>If you encounter a bug please set the environment variable <code>SANE_DEBUG_ST400</code> to 128 and try to regenerate the problem. Then send me a report with the log attached. </p>
 <p> If you encounter a SCSI bus error or trimmed and/or displaced images please also set the environment variable <code>SANE_DEBUG_SANEI_SCSI</code> to 128 before sending me the report.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5)<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5)<br/>
  <i><a rel="nofollow" href="http://www.informatik.uni-oldenburg.de/~ingo/sane/">http://www.informatik.uni-oldenburg.de/~ingo/sane/</a></i> </p>
 <h2>Author</h2>
 <p>Ingo Wilken &lt;<i>Ingo.Wilken [at] informatik.uni-oldenburg.de</i>&gt;</p>

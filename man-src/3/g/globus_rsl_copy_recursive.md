@@ -10,23 +10,23 @@ description: "RSL Memory Management –"
 
 <p> RSL Memory Management &#8211; </p>
 <h3>Functions</h3>
-<p> globus_rsl_t * <code>globus_rsl_copy_recursive</code> (globus_rsl_t *ast_node)<br />
- <i>Create a deep copy of an RSL syntax tree. </i><br />
- globus_rsl_value_t * <code>globus_rsl_value_copy_recursive</code> (globus_rsl_value_t *globus_rsl_value_ptr)<br />
- <i>Create a deep copy of an RSL value. </i><br />
- int <code>globus_rsl_value_free</code> (globus_rsl_value_t *val)<br />
- <i>Free an RSL value node. </i><br />
- int <code>globus_rsl_free</code> (globus_rsl_t *ast_node)<br />
- <i>Free an RSL syntax tree node. </i><br />
- int <code>globus_rsl_value_free_recursive</code> (globus_rsl_value_t *globus_rsl_value_ptr)<br />
- <i>Free an RSL value and all its child nodes. </i><br />
- int <code>globus_rsl_free_recursive</code> (globus_rsl_t *ast_node)<br />
- <i>Free an RSL syntax tree and all its child nodes. </i><br />
- int <code>globus_rsl_value_list_literal_replace</code> (globus_list_t *value_list, char *string_value)<br />
- <i>Replace the first value in a value list with a literal. </i><br />
- int <code>globus_rsl_value_eval</code> (globus_rsl_value_t *ast_node, globus_symboltable_t *symbol_table, char **string_value, int rsl_substitution_flag)<br />
- <i>Evaluate RSL substitions in an RSL value node. </i><br />
- int <code>globus_rsl_eval</code> (globus_rsl_t *ast_node, globus_symboltable_t *symbol_table)<br />
+<p> globus_rsl_t * <code>globus_rsl_copy_recursive</code> (globus_rsl_t *ast_node)<br/>
+ <i>Create a deep copy of an RSL syntax tree. </i><br/>
+ globus_rsl_value_t * <code>globus_rsl_value_copy_recursive</code> (globus_rsl_value_t *globus_rsl_value_ptr)<br/>
+ <i>Create a deep copy of an RSL value. </i><br/>
+ int <code>globus_rsl_value_free</code> (globus_rsl_value_t *val)<br/>
+ <i>Free an RSL value node. </i><br/>
+ int <code>globus_rsl_free</code> (globus_rsl_t *ast_node)<br/>
+ <i>Free an RSL syntax tree node. </i><br/>
+ int <code>globus_rsl_value_free_recursive</code> (globus_rsl_value_t *globus_rsl_value_ptr)<br/>
+ <i>Free an RSL value and all its child nodes. </i><br/>
+ int <code>globus_rsl_free_recursive</code> (globus_rsl_t *ast_node)<br/>
+ <i>Free an RSL syntax tree and all its child nodes. </i><br/>
+ int <code>globus_rsl_value_list_literal_replace</code> (globus_list_t *value_list, char *string_value)<br/>
+ <i>Replace the first value in a value list with a literal. </i><br/>
+ int <code>globus_rsl_value_eval</code> (globus_rsl_value_t *ast_node, globus_symboltable_t *symbol_table, char **string_value, int rsl_substitution_flag)<br/>
+ <i>Evaluate RSL substitions in an RSL value node. </i><br/>
+ int <code>globus_rsl_eval</code> (globus_rsl_t *ast_node, globus_symboltable_t *symbol_table)<br/>
  <i>Evaluate an RSL syntax tree. </i></p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -45,7 +45,7 @@ description: "RSL Memory Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ast_node</i> A pointer to the RSL syntax tree to evaluate.<br />
+</dt><dd> <i>ast_node</i> A pointer to the RSL syntax tree to evaluate.<br/>
  <i>symbol_table</i> A symbol table containing current definitions of the RSL substitutions which can occur in this evaluation scope.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -86,9 +86,9 @@ description: "RSL Memory Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ast_node</i> A pointer to the RSL value node to evaluate.<br />
- <i>symbol_table</i> A symbol table containing current definitions of the RSL substitutions which can occur in this evaluation scope.<br />
- <i>string_value</i> An output parameter which is set to point to the value of the string returned by evaluating the value node pointed to by <i>ast_node</i> if it evaluates to a literal value. list pointed to by the <i>value_list</i> parameter.<br />
+</dt><dd> <i>ast_node</i> A pointer to the RSL value node to evaluate.<br/>
+ <i>symbol_table</i> A symbol table containing current definitions of the RSL substitutions which can occur in this evaluation scope.<br/>
+ <i>string_value</i> An output parameter which is set to point to the value of the string returned by evaluating the value node pointed to by <i>ast_node</i> if it evaluates to a literal value. list pointed to by the <i>value_list</i> parameter.<br/>
  <i>rsl_substitution_flag</i> A flag indicating whether the node pointed to by the <i>ast_node</i> parameter defines RSL substition variables.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -119,7 +119,7 @@ description: "RSL Memory Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>value_list</i> The RSL value list to modify by replacing its first element.<br />
+</dt><dd> <i>value_list</i> The RSL value list to modify by replacing its first element.<br/>
  <i>string_value</i> The new string value to use as a literal first element of the list pointed to by the <i>value_list</i> parameter.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

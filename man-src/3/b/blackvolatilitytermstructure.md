@@ -13,13 +13,13 @@ description: "QuantLib::BlackVolatilityTermStructure – Black-volatility term s
 <p> Inherits <code>QuantLib::BlackVolTermStructure</code>. </p>
 <p> Inherited by <code>BlackConstantVol</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors</code><br />
+<p><code>Constructors</code><br/>
  See the <code>TermStructure</code> documentation for issues regarding constructors. </p>
-<p> <code>BlackVolatilityTermStructure</code> (const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
- <i>default constructor </i><br />
- <code>BlackVolatilityTermStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
- <i>initialize with a fixed reference date </i><br />
- <code>BlackVolatilityTermStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;cal, <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
+<p> <code>BlackVolatilityTermStructure</code> (const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
+ <i>default constructor </i><br/>
+ <code>BlackVolatilityTermStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
+ <i>initialize with a fixed reference date </i><br/>
+ <code>BlackVolatilityTermStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;cal, <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
  <i>calculate the reference date based on the global evaluation date </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>

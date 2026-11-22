@@ -10,7 +10,7 @@ description: "ipq_set_mode — set the ip_queue queuing mode"
 
 <p> ipq_set_mode &#8212; set the ip_queue queuing mode </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />
+<p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br/>
  <code>#include &lt;<a href="file:/usr/include/libipq.h">libipq.h</a>&gt;</code> </p>
 <p> <code>int ipq_set_mode(const struct ipq_handle *</code><i>h</i><code>, u_int8_t </code><i>mode</i><code>, size_t </code><i>range</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
@@ -26,7 +26,7 @@ description: "ipq_set_mode — set the ip_queue queuing mode"
 <p> <code>ipq_set_mode</code> is usually used immediately following <code>ipq_create_handle</code> to enable the flow of packets to userspace. </p>
 <p> Note that as the underlying Netlink messaging transport is connectionless, the ip_queue module does not know that a userspace application is ready to communicate until it receives a message such as this.</p>
 <h2>RETURN VALUE</h2>
-<p> On failure, -1 is returned.<br />
+<p> On failure, -1 is returned.<br/>
  On success, a non-zero positive value is returned.</p>
 <h2>ERRORS</h2>
 <p> On failure, a descriptive error message will be available via the <code>ipq_errstr</code> function.</p>

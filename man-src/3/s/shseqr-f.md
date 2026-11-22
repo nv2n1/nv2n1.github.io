@@ -10,7 +10,7 @@ description: "shseqr.f –"
 <p>shseqr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>shseqr</code> (JOB, COMPZ, N, ILO, IHI, H, LDH, WR, WI, Z, LDZ, WORK, LWORK, INFO)<br />
+<p> subroutine <code>shseqr</code> (JOB, COMPZ, N, ILO, IHI, H, LDH, WR, WI, Z, LDZ, WORK, LWORK, INFO)<br/>
  <i></i><code>SHSEQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine shseqr (characterJOB, characterCOMPZ, integerN, integerILO, integerIHI, real, dimension( ldh, * )H, integerLDH, real, dimension( * )WR, real, dimension( * )WI, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

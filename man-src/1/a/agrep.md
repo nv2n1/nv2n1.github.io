@@ -80,5 +80,5 @@ description: "agrep – print lines approximately matching a pattern"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to the TRE mailing list &lt;<code>tre-general [at] lists.laurikari.net</code>&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2002-2004 Ville Laurikari.<br />
+<p> Copyright &#169; 2002-2004 Ville Laurikari.<br/>
  This is free software, and comes with ABSOLUTELY NO WARRANTY. You are welcome to redistribute this software under certain conditions; see the source for the full license text. </p>

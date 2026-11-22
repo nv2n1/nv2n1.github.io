@@ -21,6 +21,6 @@ description: "gset_marker_size (Set marker size scale factor) – sets the polym
 <p>Online: <code>gpolymarker(3NCARG),</code> <code>gset_marker_type(3NCARG),</code> <code>gset_colr_rep(3NCARG),</code> <code>gset_marker_colr_ind(3NCARG),</code> <code>ginq_marker_type(3NCARG),</code> <code>ginq_marker_size(3NCARG),</code> <code>ginq_marker_colr_ind(3NCARG),</code> <code>point(3NCARG),</code> <code>points(3NCARG),</code> <code>gks(3NCARG),</code> <code>ncarg_gks_cbind(3NCARG)</code> </p>
 <p> Hardcopy: User&#8217;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 1987-2009<br />
- University Corporation for Atmospheric Research<br />
+<p>Copyright (C) 1987-2009<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement.</p>

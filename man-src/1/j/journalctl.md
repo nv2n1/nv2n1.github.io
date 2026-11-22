@@ -94,11 +94,11 @@ description: "journalctl – Query the systemd journal"
 <p> <code>export</code></p>
 <dl>
 <dt>
-</dt><dd> serializes the journal into a binary (but mostly text-based) stream suitable for backups and network transfer (see m[blue]<code>Journal Export Format</code>m[]<font SIZE="-2">[1]</font> for more information). To import the binary stream back into native journald format use <code><a href="/docs/linux/man/8-systemd-journal-remote/">systemd-journal-remote</a></code>(8).</dd></dl>
+</dt><dd> serializes the journal into a binary (but mostly text-based) stream suitable for backups and network transfer (see m[blue]<code>Journal Export Format</code>m[][1] for more information). To import the binary stream back into native journald format use <code><a href="/docs/linux/man/8-systemd-journal-remote/">systemd-journal-remote</a></code>(8).</dd></dl>
 <p> <code>json</code></p>
 <dl>
 <dt>
-</dt><dd> formats entries as JSON objects, separated by newline characters (see m[blue]<code>Journal JSON Format</code>m[]<font SIZE="-2">[2]</font> for more information). Field values are generally encoded as JSON strings, with three exceptions: </dd>
+</dt><dd> formats entries as JSON objects, separated by newline characters (see m[blue]<code>Journal JSON Format</code>m[][2] for more information). Field values are generally encoded as JSON strings, with three exceptions: </dd>
 <dl>
 <dt>
 </dt><dd> 1. Fields larger than 4096 bytes are encoded as <code>null</code> values. (This may be turned off by passing <code>&#8211;all</code>, but be aware that this may allocate overly long JSON objects.)</dd></dl>
@@ -116,11 +116,11 @@ description: "journalctl – Query the systemd journal"
 <p> <code>json-sse</code></p>
 <dl>
 <dt>
-</dt><dd> formats entries as JSON data structures, but wraps them in a format suitable for m[blue]<code>Server-Sent Events</code>m[]<font SIZE="-2">[3]</font>.</dd></dl>
+</dt><dd> formats entries as JSON data structures, but wraps them in a format suitable for m[blue]<code>Server-Sent Events</code>m[][3].</dd></dl>
 <p> <code>json-seq</code></p>
 <dl>
 <dt>
-</dt><dd> formats entries as JSON data structures, but prefixes them with an ASCII Record Separator character (0x1E) and suffixes them with an ASCII Line Feed character (0x0A), in accordance with m[blue]<code>JavaScript Object Notation (JSON) Text Sequences</code>m[]<font SIZE="-2">[4]</font> (&quot;application/json-seq&quot;).</dd></dl>
+</dt><dd> formats entries as JSON data structures, but prefixes them with an ASCII Record Separator character (0x1E) and suffixes them with an ASCII Line Feed character (0x0A), in accordance with m[blue]<code>JavaScript Object Notation (JSON) Text Sequences</code>m[][4] (&quot;application/json-seq&quot;).</dd></dl>
 <p> <code>cat</code></p>
 <dl>
 <dt>
@@ -146,7 +146,7 @@ description: "journalctl – Query the systemd journal"
 <p> <code>-x</code>, <code>&#8211;catalog</code></p>
 <dl>
 <dt>
-</dt><dd> Augment log lines with explanation texts from the message catalog. This will add explanatory help texts to log messages in the output where this is available. These short help texts will explain the context of an error or log event, possible solutions, as well as pointers to support forums, developer documentation, and any other relevant manuals. Note that help texts are not available for all messages, but only for selected ones. For more information on the message catalog, please refer to the m[blue]<code>Message Catalog Developer Documentation</code>m[]<font SIZE="-2">[5]</font>. </dd>
+</dt><dd> Augment log lines with explanation texts from the message catalog. This will add explanatory help texts to log messages in the output where this is available. These short help texts will explain the context of an error or log event, possible solutions, as well as pointers to support forums, developer documentation, and any other relevant manuals. Note that help texts are not available for all messages, but only for selected ones. For more information on the message catalog, please refer to the m[blue]<code>Message Catalog Developer Documentation</code>m[][5]. </dd>
 <p> Note: when attaching <code>journalctl</code> output to bug reports, please do <i>not</i> use <code>-x</code>.</dl>
 <p> <code>-q</code>, <code>&#8211;quiet</code></p>
 <dl>
@@ -263,7 +263,7 @@ description: "journalctl – Query the systemd journal"
 <p> <code>&#8211;image=</code><i>IMAGE</i></p>
 <dl>
 <dt>
-</dt><dd> Takes a path to a disk image file or block device node. If specified, <code>journalctl</code> will operate on the file system in the indicated disk image. This is similar to <code>&#8211;root=</code> but operates on file systems stored in disk images or block devices, thus providing an easy way to extract log data from disk images. The disk image should either contain just a file system or a set of file systems within a GPT partition table, following the m[blue]<code>Discoverable Partitions Specification</code>m[]<font SIZE="-2">[6]</font>. For further information on supported disk images, see <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1)&#8217;s switch of the same name.</dd></dl>
+</dt><dd> Takes a path to a disk image file or block device node. If specified, <code>journalctl</code> will operate on the file system in the indicated disk image. This is similar to <code>&#8211;root=</code> but operates on file systems stored in disk images or block devices, thus providing an easy way to extract log data from disk images. The disk image should either contain just a file system or a set of file systems within a GPT partition table, following the m[blue]<code>Discoverable Partitions Specification</code>m[][6]. For further information on supported disk images, see <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1)&#8217;s switch of the same name.</dd></dl>
 <p> <code>&#8211;namespace=</code><i>NAMESPACE</i></p>
 <dl>
 <dt>

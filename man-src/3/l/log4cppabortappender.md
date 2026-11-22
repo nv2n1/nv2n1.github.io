@@ -15,16 +15,16 @@ description: "log4cpp::AbortAppender –"
 <h3>Public Member Functions</h3>
 <p><code>AbortAppender</code> (const std::string &amp;name) </p>
 <p> virtual <code>~AbortAppender</code> () </p>
-<p> virtual bool <code>reopen</code> ()<br />
- <i>Reopens the output destination of this </i><code>Appender</code>, e.g.<br />
- virtual void <code>close</code> ()<br />
- <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i><br />
- virtual bool <code>requiresLayout</code> () const<br />
- <i>The </i><code>AbortAppender</code> does not layout.<br />
- virtual void <code>setLayout</code> (<code>Layout</code> *layout)<br />
+<p> virtual bool <code>reopen</code> ()<br/>
+ <i>Reopens the output destination of this </i><code>Appender</code>, e.g.<br/>
+ virtual void <code>close</code> ()<br/>
+ <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i><br/>
+ virtual bool <code>requiresLayout</code> () const<br/>
+ <i>The </i><code>AbortAppender</code> does not layout.<br/>
+ virtual void <code>setLayout</code> (<code>Layout</code> *layout)<br/>
  <i>Set the </i><code>Layout</code> for this appender.</p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Log in </i><code>Appender</code> specific way.</p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>

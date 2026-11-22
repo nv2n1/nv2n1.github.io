@@ -14,10 +14,10 @@ time_t timelocal(struct tm *tm);
 time_t timegm(struct tm *tm);
 Feature Test Macro Requirements for glibc (see
 feature_test_macros(7)):</code></pre>
-<p> <code>timelocal</code>(), <code>timegm</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> <code>timelocal</code>(), <code>timegm</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
 <h2>Description</h2>
 <p>The functions <code>timelocal</code>() and <code>timegm</code>() are the inverses of <code><a href="/docs/linux/man/3-localtime/">localtime</a></code>(3) and <code><a href="/docs/linux/man/3-gmtime/">gmtime</a></code>(3). Both functions take a broken-down time and convert it to calendar time (seconds since the Epoch, 1970-01-01 00:00:00 +0000, UTC). The difference between the two functions is that <code>timelocal</code>() takes the local timezone into account when doing the conversion, while <code>timegm</code>() takes the input value to be Coordinated Universal Time (UTC).</p>

@@ -124,22 +124,22 @@ description: "KDB :: Low Level Methods –"
 <dd> option_t::KDB_O_NORECURSIVE </dd>
 <p>&nbsp;<wbr>Dont get the keys recursive. Only receive keys from one folder. This might not work if the backend does not support it. Be prepared for more keys and use&nbsp;<wbr><code>ksLookup()</code>&nbsp;<wbr>and avoid static assumptions on how many keys you get.</dl>
 <p> <code>Example:</code>.RS 4 </p>
-<p>KDB *handle;<br />
-KeySet *myConfig;<br />
-Key *key;<br />
-myConfig = ksNew(0);<br />
-handle = kdbOpen();<br />
-key = keyNew(&#8216;system/sw/MyApp&#8217;, KEY_END);<br />
-rc = kdbGet(handle, key, myConfig, 0);<br />
-keyDel(key);<br />
-key = keyNew(&#8216;user/sw/MyApp&#8217;, KEY_END);<br />
-rc = kdbGet(handle, key, myConfig, 0);<br />
-keyDel(key);<br />
-// will sort keyset here<br />
-key = ksLookupByName(myConfig, &#8216;/sw/MyApp/key&#8217;, 0);<br />
-// check if key is not 0 and work with it&#8230;<br />
-ksDel(myConfig); // delete the in-memory configuration<br />
-// maybe you want kdbSet() myConfig here<br />
+<p>KDB *handle;<br/>
+KeySet *myConfig;<br/>
+Key *key;<br/>
+myConfig = ksNew(0);<br/>
+handle = kdbOpen();<br/>
+key = keyNew(&#8216;system/sw/MyApp&#8217;, KEY_END);<br/>
+rc = kdbGet(handle, key, myConfig, 0);<br/>
+keyDel(key);<br/>
+key = keyNew(&#8216;user/sw/MyApp&#8217;, KEY_END);<br/>
+rc = kdbGet(handle, key, myConfig, 0);<br/>
+keyDel(key);<br/>
+// will sort keyset here<br/>
+key = ksLookupByName(myConfig, &#8216;/sw/MyApp/key&#8217;, 0);<br/>
+// check if key is not 0 and work with it&#8230;<br/>
+ksDel(myConfig); // delete the in-memory configuration<br/>
+// maybe you want kdbSet() myConfig here<br/>
 kdbClose(handle); // no more affairs with the key database.</p>
 <h2>Details</h2>
 <p> When no backend could be found (e.g. no backend mounted) the default backend will be used. </p>
@@ -150,9 +150,9 @@ kdbClose(handle); // no more affairs with the key database.</p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
- <i>parentKey</i> parent key or NULL to get the root keys<br />
- <i>returned</i> the (pre-initialized) KeySet returned with all keys found<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br/>
+ <i>parentKey</i> parent key or NULL to get the root keys<br/>
+ <i>returned</i> the (pre-initialized) KeySet returned with all keys found<br/>
  <i>options</i> ORed options to control approaches</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
@@ -172,18 +172,18 @@ kdbClose(handle); // no more affairs with the key database.</p>
 <p> Will return a key representing the mountpoint or null if there is no appropriate mountpoint e.g. its the root mountpoint. </p>
 <p> Together with kdbGetCapability() the two essential informations about mounted backends. </p>
 <p> <code>Example:</code>.RS 4 </p>
-<p>Key *key = keyNew(&#8216;system/template&#8217;);<br />
-KDB *handle = kdbOpen();<br />
-Key *mountpoint = 0;<br />
-mountpoint = kdbGetMountpoint(handle, key);<br />
-printf(&#8216;The library I am using is %s mounted in %s, keyValue(mountpoint),<br />
-       keyName(mountpoint));<br />
-kdbClose(handle);<br />
+<p>Key *key = keyNew(&#8216;system/template&#8217;);<br/>
+KDB *handle = kdbOpen();<br/>
+Key *mountpoint = 0;<br/>
+mountpoint = kdbGetMountpoint(handle, key);<br/>
+printf(&#8216;The library I am using is %s mounted in %s, keyValue(mountpoint),<br/>
+       keyName(mountpoint));<br/>
+kdbClose(handle);<br/>
 keyDel(key);</p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> is the data structure, where the mounted directories are saved.<br />
+</dt><dd> <i>handle</i> is the data structure, where the mounted directories are saved.<br/>
  <i>where</i> the key, that should be looked up.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -196,8 +196,8 @@ keyDel(key);</p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> handle to the kdb data structure<br />
- <i>mountpoint</i> the <code>keyName()</code> of this key is the mountpoint, <code>keyValue()</code> the backend<br />
+</dt><dd> <i>handle</i> handle to the kdb data structure<br/>
+ <i>mountpoint</i> the <code>keyName()</code> of this key is the mountpoint, <code>keyValue()</code> the backend<br/>
  <i>config</i> the configuration passed for that backend</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -208,19 +208,19 @@ keyDel(key);</p>
 <p> You must always call this method before retrieving or commiting any keys to the database. In the end of the program, after using the key database, you must not forget to <code>kdbClose()</code>. You can use the atexit () handler for it. </p>
 <p> The pointer to the KDB structure returned will be initialized like described above, and it must be passed along on any kdb*() method your application calls. </p>
 <p> Get a KDB handle for every thread using elektra. Don&#8217;t share the handle across threads, and also not the pointer accessing it: </p>
-<p>thread1<br />
-{<br />
-    KDB *h;<br />
-    h = kdbOpen();<br />
-    // fetch keys and work with them<br />
-    kdbClose(h);<br />
-}<br />
-thread2<br />
-{<br />
-    KDB *h;<br />
-    h = kdbOpen();<br />
-    // fetch keys and work with them<br />
-    kdbClose(h);<br />
+<p>thread1<br/>
+{<br/>
+    KDB *h;<br/>
+    h = kdbOpen();<br/>
+    // fetch keys and work with them<br/>
+    kdbClose(h);<br/>
+}<br/>
+thread2<br/>
+{<br/>
+    KDB *h;<br/>
+    h = kdbOpen();<br/>
+    // fetch keys and work with them<br/>
+    kdbClose(h);<br/>
 }</p>
 <p> You don&#8217;t need to use the <code>kdbOpen()</code> if you only want to manipulate plain in-memory Key or KeySet objects without any affairs with the backend key database, </p>
 <p> <code>See also:</code></p>
@@ -235,11 +235,11 @@ thread2<br />
 <h3>ssize_t kdbSet (KDB * handle, KeySet * ks, Key * parentKey, option_t options)Set keys in an atomic and universal way, all other kdbSet Functions rely on that one.</h3>
 <p> The given handle and keyset are the objects to work with. </p>
 <p> With parentKey you can only store a part of the given keyset. Otherwise pass a null pointer or a parentKey without a name. </p>
-<p>KeySet *ks = ksNew(0);<br />
-kdbGet(h, ks, keyNew(&#8216;system/myapp&#8217;, 0), KDB_O_DEL);<br />
-kdbGet(h, ks, keyNew(&#8216;user/myapp&#8217;, 0), KDB_O_DEL);<br />
-// now only set everything below user, because you can&#8217;t write to system<br />
-kdbSet(h, ks, keyNew(&#8216;user/myapp&#8217;, 0), KDB_O_DEL);<br />
+<p>KeySet *ks = ksNew(0);<br/>
+kdbGet(h, ks, keyNew(&#8216;system/myapp&#8217;, 0), KDB_O_DEL);<br/>
+kdbGet(h, ks, keyNew(&#8216;user/myapp&#8217;, 0), KDB_O_DEL);<br/>
+// now only set everything below user, because you can&#8217;t write to system<br/>
+kdbSet(h, ks, keyNew(&#8216;user/myapp&#8217;, 0), KDB_O_DEL);<br/>
 ksDel(ks);</p>
 <p> Each key is checked with <code>keyNeedSync()</code> before being actually committed. So only changed keys are updated. If no key of a backend needs to be synced the <code>kdbSet_backend()</code> will be omitted. </p>
 <p> If some error occurs, <code>kdbSet()</code> will stop. In this situation the KeySet internal cursor will be set on the key that generated the error. This specific key and all behind it were not set. To be failsafe jump over it and try to set the rest, but report the error to the user. </p>
@@ -289,9 +289,9 @@ for (i = 0; i &lt; 10; i++) // limit to 10 tries
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
- <i>ks</i> a KeySet which should contain changed keys, otherwise nothing is done<br />
- <i>parentKey</i> holds the information below which key keys should be set<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br/>
+ <i>ks</i> a KeySet which should contain changed keys, otherwise nothing is done<br/>
+ <i>parentKey</i> holds the information below which key keys should be set<br/>
  <i>options</i> see in <code>kdbSet()</code> documentation</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -309,7 +309,7 @@ for (i = 0; i &lt; 10; i++) // limit to 10 tries
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> handle to the kdb data structure<br />
+</dt><dd> <i>handle</i> handle to the kdb data structure<br/>
  <i>mountpoint</i> directory where backend is mounted to, that should be unmounted</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

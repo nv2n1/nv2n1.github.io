@@ -9,7 +9,7 @@ description: "key.dns_resolver – Upcall for request-key to handle dns_resolver
 
 <p>key.dns_resolver &#8211; Upcall for request-key to handle dns_resolver keys</p>
 <h2>Synopsis</h2>
-<p><code>/sbin/key.dns_resolver </code>&lt;key&gt;<br />
+<p><code>/sbin/key.dns_resolver </code>&lt;key&gt;<br/>
  <code>/sbin/key.dns_resolver </code>-D [-v] [-v] &lt;keydesc&gt; &lt;calloutinfo&gt;</p>
 <h2>Description</h2>
 <p>This program is invoked by request-key on behalf of the kernel when kernel services (such as NFS, CIFS and AFS) want to perform a hostname lookup and the kernel does not have the key cached. It is not ordinarily intended to be called directly. </p>

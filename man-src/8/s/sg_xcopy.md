@@ -105,17 +105,17 @@ description: "sg_xcopy – copy data to and from files and devices using SCSI EX
 <p> XCOPY (LID1) capability has been added to the ddpt utility which is in a package of the same name. The ddpt utility will run on other OSes (e.g. FreeBSD and Windows) while sg_xcopy only runs on Linux. Also ddpt permits the arguments to <i>ibs=</i> and <i>ibs=</i> to be different.</p>
 <h2>Examples</h2>
 <p>Copy 2M of data from the start of one device to another: </p>
-<p> # sg_xcopy if=/dev/sdo of=/dev/sdp count=2048 list_id=2 dc=1<br />
- sg_xcopy: if=/dev/sdo skip=0 of=/dev/sdp seek=0 count=1024<br />
- Start of loop, count=1024, bpt=65535, lba_in=0, lba_out=0<br />
+<p> # sg_xcopy if=/dev/sdo of=/dev/sdp count=2048 list_id=2 dc=1<br/>
+ sg_xcopy: if=/dev/sdo skip=0 of=/dev/sdp seek=0 count=1024<br/>
+ Start of loop, count=1024, bpt=65535, lba_in=0, lba_out=0<br/>
  sg_xcopy: 1024 blocks, 1 command </p>
 <p> Check the status of the EXTENDED COPY command: </p>
-<p> # sg_copy_results &#8211;status &#8211;list_id=2 /dev/sdp<br />
- Receive copy results (copy status):<br />
-&nbsp;<wbr>Held data discarded: Yes<br />
-&nbsp;<wbr>Copy manager status: Operation completed without errors<br />
-&nbsp;<wbr>Segments processed: 1<br />
-&nbsp;<wbr>Transfer count units: 0<br />
+<p> # sg_copy_results &#8211;status &#8211;list_id=2 /dev/sdp<br/>
+ Receive copy results (copy status):<br/>
+&nbsp;<wbr>Held data discarded: Yes<br/>
+&nbsp;<wbr>Copy manager status: Operation completed without errors<br/>
+&nbsp;<wbr>Segments processed: 1<br/>
+&nbsp;<wbr>Transfer count units: 0<br/>
 &nbsp;<wbr>Transfer count: 0</p>
 <h2>Signals</h2>
 <p>The signal handling has been borrowed from dd: SIGINT, SIGQUIT and SIGPIPE output the number of remaining blocks to be transferred and the records in + out counts; then they have their default action. SIGUSR1 causes the same information to be output yet the copy continues. All output caused by signals is sent to stderr.</p>
@@ -127,7 +127,7 @@ description: "sg_xcopy – copy data to and from files and devices using SCSI EX
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2000-2013 Hannes Reinecke and Douglas Gilbert<br />
+<p>Copyright &#169; 2000-2013 Hannes Reinecke and Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p>There is a web page discussing sg_dd at <a rel="nofollow" href="http://sg.danny.cz/sg/sg_dd.html">http://sg.danny.cz/sg/sg_dd.html</a> A POSIX threads version of this utility called <code>sgp_dd</code> is in the sg3_utils package. Another version from that package is called <code>sgm_dd</code> and it uses memory mapped IO to speed transfers from sg devices. The lmbench package contains <code>lmdd</code> which is also interesting. For moving data to and from tapes see <code>dt</code> which is found at <a rel="nofollow" href="http://www.scsifaq.org/RMiller_Tools/index.html">http://www.scsifaq.org/RMiller_Tools/index.html</a> To change mode parameters that effect a SCSI device&#8217;s caching and error recovery see <code>sdparm(sdparm)</code> See also <code><a href="/docs/linux/man/1-dd/">dd</a>(1), sg_copy_results(sg3_utils), ddrescue(GNU), ddpt(ddpt)</code> </p>

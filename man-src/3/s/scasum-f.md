@@ -10,7 +10,7 @@ description: "scasum.f –"
 <p>scasum.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>scasum</code> (N, CX, INCX)<br />
+<p>REAL function <code>scasum</code> (N, CX, INCX)<br/>
  <i></i><code>SCASUM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function scasum (integerN, complex, dimension(*)CX, integerINCX)</h3>

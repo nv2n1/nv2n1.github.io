@@ -11,7 +11,7 @@ description: "stpcon.f –"
 <p> stpcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>stpcon</code> (NORM, UPLO, DIAG, N, AP, RCOND, WORK, IWORK, INFO)<br />
+<p> subroutine <code>stpcon</code> (NORM, UPLO, DIAG, N, AP, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>STPCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stpcon (characterNORM, characterUPLO, characterDIAG, integerN, real, dimension( * )AP, realRCOND, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

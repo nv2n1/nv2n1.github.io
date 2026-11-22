@@ -10,7 +10,7 @@ description: "prover9 – resolution/paramodulation theorem prover"
 
 <p> prover9 &#8211; resolution/paramodulation theorem prover</p>
 <h2>SYNOPSIS</h2>
-<p> <code>prover9</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i><br />
+<p> <code>prover9</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i><br/>
  <code>prover9</code> [<i>options</i>] -f <i>input-file</i> &gt; <i>output-file</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>prover9</code> command. </p>
@@ -29,7 +29,7 @@ description: "prover9 – resolution/paramodulation theorem prover"
 <dt><code>-f </code><i>file</i></dt>
 <dd> Take input from <i>file</i> instead of from standard input.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1), <code>otter</code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1), <code>otter</code>(1).<br/>
  On Debian systems, the manual is found in the <i>prover9-doc</i> package, at <i>/usr/share/doc/prover9-doc/manual/index.html</i>.</p>
 <h2>AUTHOR</h2>
 <p> <code>prover9</code> was written by William McCune &lt;mccune [at] cs.unm.edu&gt; </p>

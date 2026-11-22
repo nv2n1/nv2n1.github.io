@@ -11,7 +11,7 @@ description: "dlasq2.f –"
 <p> dlasq2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlasq2</code> (N, Z, INFO)<br />
+<p> subroutine <code>dlasq2</code> (N, Z, INFO)<br/>
  <i></i><code>DLASQ2</code> computes all the eigenvalues of the symmetric positive definite tridiagonal matrix associated with the qd Array Z to high relative accuracy. Used by sbdsqr and sstegr.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasq2 (integerN, double precision, dimension( * )Z, integerINFO)</h3>

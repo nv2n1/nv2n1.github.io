@@ -25,7 +25,7 @@ description: "sadc – System activity data collector."
 <dt><code>-L</code></dt>
 <dd><code>sadc</code> will try to get an exclusive lock on the <i>outfile</i> before writing to it or truncating it. Failure to get the lock is fatal, except in the case of trying to write a normal (i.e. not a dummy and not a header) record to an existing file, in which case <code>sadc</code> will try again at the next interval. Usually, the only reason a lock would fail would be if another <code>sadc </code>process were also writing to the file. This can happen when <code>cron</code> is used to launch <code>sadc</code>. If the system is under heavy load, an old <code>sadc</code> might still be running when <code>cron</code> starts a new one. Without locking, this situation can result in a corrupted system activity file.</dd>
 <dt><code>-S { </code><i>keyword</i><code>[,&#8230;] | ALL | XALL }</code></dt>
-<dd>Possible keywords are <code>DISK</code>, <code>INT</code>, <code>IPV6</code>, <code>POWER</code>, <code>SNMP</code>, <code>XDISK</code>, <code>ALL </code>and <code>XALL</code>.<br />
+<dd>Possible keywords are <code>DISK</code>, <code>INT</code>, <code>IPV6</code>, <code>POWER</code>, <code>SNMP</code>, <code>XDISK</code>, <code>ALL </code>and <code>XALL</code>.<br/>
  Specify which optional activities should be collected by <code>sadc</code>. Some activities are optional to prevent data files from growing too large. The <code>DISK </code>keyword indicates that <code>sadc</code> should collect data for block devices. The <code>INT </code>keyword indicates that <code>sadc</code> should collect data for system interrupts. The <code>IPV6 </code>keyword indicates that IPv6 statistics should be collected by <code>sadc</code>. The <code>POWER </code>keyword indicates that <code>sadc</code> should collect power management statistics. The <code>SNMP </code>keyword indicates that SNMP statistics should be collected by <code>sadc</code>. The <code>ALL </code>keyword is equivalent to specifying all the keywords above and therefore all previous activities are collected.</dd>
 <dd>The <code>XDISK </code>keyword is an extension to the <code>DISK</code> one and indicates that partitions and filesystems statistics should be collected by <code>sadc</code> in addition to disk statistics. This option works only with kernels 2.6.25 and later. The <code>XALL</code> keyword is equivalent to specifying all the keywords above (including keyword extensions) and therefore all possible activities are collected.</dd>
 <dd>Important note: The activities (including optional ones) saved in an existing data file prevail over those selected with option <code>-S</code>. As a consequence, appending data to an existing data file will result in option <code>-S</code> being ignored.</dd>
@@ -47,7 +47,7 @@ description: "sadc – System activity data collector."
 <h2>Bugs</h2>
 <p>The <i>/proc</i> filesystem must be mounted for the <code>sadc </code>command to work. All the statistics are not necessarily available, depending on the kernel version used. <code>sadc</code> assumes that you are using at least a 2.6 kernel. </p>
 <h2>Files</h2>
-<p><i>/var/log/sysstat/saDD</i><br />
+<p><i>/var/log/sysstat/saDD</i><br/>
  <i>/var/log/sysstat/saYYYYMMDD</i></p>
 <dl>
 <dd>The standard system activity daily data files and their default location. <i>YYYY </i>stands for the current year, <i>MM </i>for the current month and <i>DD</i> for the current day.</dd></dl>
@@ -55,6 +55,6 @@ description: "sadc – System activity data collector."
 <h2>Author</h2>
 <p>Sebastien Godard (sysstat &lt;at&gt; orange.fr)</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-sar/">sar</a></code>(1), <code><a href="/docs/linux/man/8-sa1/">sa1</a></code>(8), <code><a href="/docs/linux/man/8-sa2/">sa2</a></code>(8), <code><a href="/docs/linux/man/1-sadf/">sadf</a></code>(1), <code><a href="/docs/linux/man/5-sysstat/">sysstat</a></code>(5) <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br />
+<p><code><a href="/docs/linux/man/1-sar/">sar</a></code>(1), <code><a href="/docs/linux/man/8-sa1/">sa1</a></code>(8), <code><a href="/docs/linux/man/8-sa2/">sa2</a></code>(8), <code><a href="/docs/linux/man/1-sadf/">sadf</a></code>(1), <code><a href="/docs/linux/man/5-sysstat/">sysstat</a></code>(5) <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br/>
  <i><a rel="nofollow" href="http://pagesperso-orange.fr/sebastien.godard/">http://pagesperso-orange.fr/sebastien.godard/</a></i> </p>
 </dl>

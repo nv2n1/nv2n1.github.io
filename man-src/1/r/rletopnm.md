@@ -40,8 +40,8 @@ description: "rletopnm – convert a Utah Raster Tools RLE image file into a PNM
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmtorle/">pnmtorle</a></code>(1), <code><a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code><a href="/docs/linux/man/5-pgm/">pgm</a></code>(5), <code>urt</code>(1), <code>RLE</code>(5)</p>
 <h2>AUTHOR</h2>
-<p> Wes Barris<br />
- Army High Performance Computing Research Center (AHPCRC)<br />
+<p> Wes Barris<br/>
+ Army High Performance Computing Research Center (AHPCRC)<br/>
  Minnesota Supercomputer Center, Inc. </p>
 <p> Modifications by Eric Haines to support raw and plain formats. </p>
 <p> Modifications by Bryan Henderson to create alpha files and use mnemonic options. </p>

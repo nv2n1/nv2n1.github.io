@@ -16,7 +16,7 @@ description: "ql/termstructures/yield/piecewiseyieldcurve.hpp – piecewise-inte
 #include &lt;ql/patterns/lazyobject.hpp&gt;
 #include &lt;ql/quote.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>PiecewiseYieldCurve&lt; Traits, Interpolator, Bootstrap &gt;</code><br />
+<p>class <code>PiecewiseYieldCurve&lt; Traits, Interpolator, Bootstrap &gt;</code><br/>
  <i>Piecewise yield term structure. </i></p>
 <h2>Detailed Description</h2>
 <p>piecewise-interpolated term structure</p>

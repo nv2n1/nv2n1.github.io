@@ -41,7 +41,7 @@ cc prog.c -o prog `pkg-config raptor2 --cflags` `pkg-config raptor2 --libs`
 <p> <i>RDF Site Summary (RSS) 1.0</i>, <a rel="nofollow" href="http://purl.org/rss/1.0/spec">http://purl.org/rss/1.0/spec</a> </p>
 <p> <i>Atom 1.0 syndication format</i>, RFC 4287, <a rel="nofollow" href="http://www.ietf.org/rfc/rfc4287.txt">http://www.ietf.org/rfc/rfc4287.txt</a> </p>
 <p> <i>Gleaning Resource Descriptions from Dialects of Languages (GRDDL)</i>, Dan Connolly (ed.), W3C Recommendation, 2007-09-11, <a rel="nofollow" href="http://www.w3.org/TR/2007/REC-grddl-20070911/">http://www.w3.org/TR/2007/REC-grddl-20070911/</a> </p>
-<p> <i>RDFa in XHTML: Syntax and Processing</i>, Ben Adida, Mark Birbeck, Shane McCarron, Steven Pemberton (eds.)<br />
+<p> <i>RDFa in XHTML: Syntax and Processing</i>, Ben Adida, Mark Birbeck, Shane McCarron, Steven Pemberton (eds.)<br/>
 &nbsp;<wbr>W3C Recommendation, 2008-10-14, <a rel="nofollow" href="http://www.w3.org/TR/2008/REC-rdfa-syntax-20081014/">http://www.w3.org/TR/2008/REC-rdfa-syntax-20081014/</a> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rapper/">rapper</a>(1)</code></p>

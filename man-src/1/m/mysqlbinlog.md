@@ -46,7 +46,7 @@ shell&gt; <code>mysqlbinlog binlog.0000003</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> When using event groups, the file offsets of events may be grouped together and the comments of events may be grouped together. Do not mistake these grouped events for blank file offsets. </p>
 </dl>
 <p> The output from <code>mysqlbinlog</code> can be re-executed (for example, by using it as input to <code>mysql</code>) to redo the statements in the log. This is useful for recovery operations after a server crash. For other usage examples, see the discussion later in this section and in Section 7.5, &#8220;Point-in-Time (Incremental) Recovery Using the Binary Log&#8221;. To execute the internal-use BINLOG statements used by <code>mysqlbinlog</code>, the user requires the BINLOG_ADMIN or SUPER privilege, or the REPLICATION_APPLIER privilege plus the appropriate privileges to execute each log event. </p>
@@ -69,7 +69,7 @@ shell&gt; <code>mysqlbinlog binlog.0000003</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  Automatic BINLOG display is the only safe behavior if you intend to use the output of <code>mysqlbinlog</code> to re-execute binary log file contents. The other option values are intended only for debugging or testing purposes because they may produce output that does not include all events in executable form. </dd>
 </dl>
 </dl>
@@ -258,7 +258,7 @@ INSERT INTO t2(j) VALUES(203);
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font><br />
+  <code>Important</code> <br/>
  These temporary files are not automatically removed by <code>mysqlbinlog</code> or any other MySQL program. </dd>
 </dl>
 </dl>
@@ -340,7 +340,7 @@ INSERT INTO t2(j) VALUES(203);
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font><br />
+  <code>Warning</code> <br/>
  Statements in which table names are qualified with database names are not rewritten to use the new name when using this option. </dd>
 </dl>
 <p> The rewrite rule employed as a value for this option is a string having the form &#8216;<i>from_name</i>-&gt;<i>to_name</i>&#8216;, as shown previously, and for this reason must be enclosed by quotation marks. </p>
@@ -420,7 +420,7 @@ shell&gt; <code>mysql -u root -p -e &quot;source /tmp/dump.sql&quot;</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If the OpenSSL FIPS Object Module is not available, the only permitted value for <code>&#8211;ssl-fips-mode</code> is OFF. In this case, setting <code>&#8211;ssl-fips-mode</code> to ON or STRICT causes the client to produce a warning at startup and to operate in non-FIPS mode. </dd>
 </dl>
 </dl>
@@ -575,7 +575,7 @@ shell&gt; <code>gzip -cd binlog-files_1.gz binlog-files_2.gz | ./mysqlbinlog - |
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font> </dd>
+  <code>Warning</code>  </dd>
 <p> The temporary files created for LOAD DATA LOCAL statements are <i>not</i> automatically deleted because they are needed until you actually execute those statements. You should delete the temporary files yourself after you no longer need the statement log. The files can be found in the temporary file directory and have names like <i>original_file_name-#-#</i>. </p>
 </dl>
 <h2>MYSQLBINLOG HEX DUMP FORMAT</h2>
@@ -608,7 +608,7 @@ shell&gt; <code>mysqlbinlog --hexdump master-bin.000001</code>
 ROLLBACK;
 </pre>
 </dd></dl>
-<p> Hex dump output currently contains the elements in the following list. This format is subject to change. For more information about binary log format, see m[blue]<code>MySQL Internals: The Binary Log</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> Hex dump output currently contains the elements in the following list. This format is subject to change. For more information about binary log format, see m[blue]<code>MySQL Internals: The Binary Log</code>m[][1]. </p>
 <dl>
 <dt>
 </dt><dd> &bull; Position: The byte position within the log file.</dd></dl>
@@ -636,88 +636,88 @@ ROLLBACK;
 <dl>
 <dt>
 </dt><dd>
-CREATE TABLE t(<br />
-    id INT NOT NULL,<br />
-    name VARCHAR(20) NOT NULL,<br />
-    date DATE NULL) ENGINE = InnoDB;<br />
-START TRANSACTION;<br />
-INSERT INTO t VALUES(1, &#8216;apple&#8217;, NULL);<br />
-UPDATE t SET name = &#8216;pear&#8217;, date = &#8216;2009-01-01&#8217; WHERE id = 1;<br />
-DELETE FROM t WHERE id = 1;<br />
+CREATE TABLE t(<br/>
+    id INT NOT NULL,<br/>
+    name VARCHAR(20) NOT NULL,<br/>
+    date DATE NULL) ENGINE = InnoDB;<br/>
+START TRANSACTION;<br/>
+INSERT INTO t VALUES(1, &#8216;apple&#8217;, NULL);<br/>
+UPDATE t SET name = &#8216;pear&#8217;, date = &#8216;2009-01-01&#8217; WHERE id = 1;<br/>
+DELETE FROM t WHERE id = 1;<br/>
 COMMIT;
 </dd></dl>
 <p> By default, <code>mysqlbinlog</code> displays row events encoded as base-64 strings using BINLOG statements. Omitting extraneous lines, the output for the row events produced by the preceding statement sequence looks like this: </p>
 <dl>
 <dt>
 </dt><dd>
-shell &gt; mysqlbinlog log_file&#8230;<br />
-#at 218<br />
-# 080828 15 : 03 : 08 server id 1 end_log_pos 258 Write_rows : table id 17 flags : STMT_END_F<br />
-    BINLOG &#8216; fAS3SBMBAAAALAAAANoAAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br />
-    fAS3SBcBAAAAKAAAAAIBAAAQABEAAAAAAAEAA // 8AQAAAAVhcHBsZQ==<br />
-&#8216;/*!*/; &#8230;<br />
-#at 302<br />
-# 080828 15 : 03 : 08 server id 1 end_log_pos 356 Update_rows : table id 17 flags : STMT_END_F<br />
-    BINLOG &#8216; fAS3SBMBAAAALAAAAC4BAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br />
-        fAS3SBgBAAAANgAAAGQBAAAQABEAAAAAAAEAA ////AEAAAAFYXBwbGX4AQAAAARwZWFyIbIP<br />
-&#8216;/*!*/; &#8230;<br />
-#at 400<br />
-# 080828 15 : 03 : 08 server id 1 end_log_pos 442 Delete_rows : table id 17 flags : STMT_END_F<br />
-    BINLOG &#8216; fAS3SBMBAAAALAAAAJABAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br />
-        fAS3SBkBAAAAKgAAALoBAAAQABEAAAAAAAEAA // 4AQAAAARwZWFyIbIP<br />
+shell &gt; mysqlbinlog log_file&#8230;<br/>
+#at 218<br/>
+# 080828 15 : 03 : 08 server id 1 end_log_pos 258 Write_rows : table id 17 flags : STMT_END_F<br/>
+    BINLOG &#8216; fAS3SBMBAAAALAAAANoAAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br/>
+    fAS3SBcBAAAAKAAAAAIBAAAQABEAAAAAAAEAA // 8AQAAAAVhcHBsZQ==<br/>
+&#8216;/*!*/; &#8230;<br/>
+#at 302<br/>
+# 080828 15 : 03 : 08 server id 1 end_log_pos 356 Update_rows : table id 17 flags : STMT_END_F<br/>
+    BINLOG &#8216; fAS3SBMBAAAALAAAAC4BAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br/>
+        fAS3SBgBAAAANgAAAGQBAAAQABEAAAAAAAEAA ////AEAAAAFYXBwbGX4AQAAAARwZWFyIbIP<br/>
+&#8216;/*!*/; &#8230;<br/>
+#at 400<br/>
+# 080828 15 : 03 : 08 server id 1 end_log_pos 442 Delete_rows : table id 17 flags : STMT_END_F<br/>
+    BINLOG &#8216; fAS3SBMBAAAALAAAAJABAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br/>
+        fAS3SBkBAAAAKgAAALoBAAAQABEAAAAAAAEAA // 4AQAAAARwZWFyIbIP<br/>
 &#8216;/*!*/;
 </dd></dl>
 <p> To see the row events as comments in the form of &#8220;pseudo-SQL&#8221; statements, run <code>mysqlbinlog</code> with the <code>&#8211;verbose</code> or <code>-v</code> option. This output level also shows table partition information where applicable. The output will contain lines beginning with ###: </p>
 <dl>
 <dt>
 </dt><dd>
-shell &gt; mysqlbinlog &#8211; v log_file&#8230;<br />
-#at 218<br />
-# 080828 15 : 03 : 08 server id 1 end_log_pos 258 Write_rows : table id 17 flags : STMT_END_F<br />
-            BINLOG &#8216; fAS3SBMBAAAALAAAANoAAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br />
-    fAS3SBcBAAAAKAAAAAIBAAAQABEAAAAAAAEAA // 8AQAAAAVhcHBsZQ==<br />
-&#8216;/*!*/; ## #INSERT INTO test.t## #SET## #@1 = 1## #@2 = &#8216;apple&#8217;## #@3 = NULL&#8230;<br />
-#at 302<br />
-# 080828 15 : 03 : 08 server id 1 end_log_pos 356 Update_rows : table id 17 flags : STMT_END_F<br />
-    BINLOG &#8216; fAS3SBMBAAAALAAAAC4BAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br />
-        fAS3SBgBAAAANgAAAGQBAAAQABEAAAAAAAEAA ////AEAAAAFYXBwbGX4AQAAAARwZWFyIbIP<br />
-&#8216;/*!*/; ## #UPDATE test.t## #WHERE## #@1 = 1## #@2 = &#8216;apple&#8217;## #@3 = NULL## #SET## #@1 = 1## #@2 = &#8216;pear&#8217;## #@3 = &#8216;2009:01:01&#8217; &#8230;<br />
-#at 400<br />
-# 080828 15 : 03 : 08 server id 1 end_log_pos 442 Delete_rows : table id 17 flags : STMT_END_F<br />
-    BINLOG &#8216; fAS3SBMBAAAALAAAAJABAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br />
-        fAS3SBkBAAAAKgAAALoBAAAQABEAAAAAAAEAA // 4AQAAAARwZWFyIbIP<br />
+shell &gt; mysqlbinlog &#8211; v log_file&#8230;<br/>
+#at 218<br/>
+# 080828 15 : 03 : 08 server id 1 end_log_pos 258 Write_rows : table id 17 flags : STMT_END_F<br/>
+            BINLOG &#8216; fAS3SBMBAAAALAAAANoAAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br/>
+    fAS3SBcBAAAAKAAAAAIBAAAQABEAAAAAAAEAA // 8AQAAAAVhcHBsZQ==<br/>
+&#8216;/*!*/; ## #INSERT INTO test.t## #SET## #@1 = 1## #@2 = &#8216;apple&#8217;## #@3 = NULL&#8230;<br/>
+#at 302<br/>
+# 080828 15 : 03 : 08 server id 1 end_log_pos 356 Update_rows : table id 17 flags : STMT_END_F<br/>
+    BINLOG &#8216; fAS3SBMBAAAALAAAAC4BAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br/>
+        fAS3SBgBAAAANgAAAGQBAAAQABEAAAAAAAEAA ////AEAAAAFYXBwbGX4AQAAAARwZWFyIbIP<br/>
+&#8216;/*!*/; ## #UPDATE test.t## #WHERE## #@1 = 1## #@2 = &#8216;apple&#8217;## #@3 = NULL## #SET## #@1 = 1## #@2 = &#8216;pear&#8217;## #@3 = &#8216;2009:01:01&#8217; &#8230;<br/>
+#at 400<br/>
+# 080828 15 : 03 : 08 server id 1 end_log_pos 442 Delete_rows : table id 17 flags : STMT_END_F<br/>
+    BINLOG &#8216; fAS3SBMBAAAALAAAAJABAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br/>
+        fAS3SBkBAAAAKgAAALoBAAAQABEAAAAAAAEAA // 4AQAAAARwZWFyIbIP<br/>
 &#8216;/*!*/; ## #DELETE FROM test.t## #WHERE## #@1 = 1## #@2 = &#8216;pear&#8217;## #@3 = &#8216;2009:01:01&#8217;
 </dd></dl>
 <p> Specify <code>&#8211;verbose</code> or <code>-v</code> twice to also display data types and some metadata for each column, and informational log events such as row query log events if the binlog_rows_query_log_events system variable is set to TRUE. The output will contain an additional comment following each column change: </p>
 <dl>
 <dt>
 </dt><dd>
-shell &gt; mysqlbinlog &#8211; vv log_file&#8230;<br />
-#at 218<br />
-# 080828 15 : 03 : 08 server id 1 end_log_pos 258 Write_rows : table id 17 flags : STMT_END_F<br />
-            BINLOG &#8216; fAS3SBMBAAAALAAAANoAAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br />
-    fAS3SBcBAAAAKAAAAAIBAAAQABEAAAAAAAEAA        // 8AQAAAAVhcHBsZQ==<br />
-&#8216;/*!*/; ## #INSERT INTO test.t## #SET## #@1 = 1 /* INT meta=0 nullable=0 is_null=0 */<br />
-    ## #@2 = &#8216;apple&#8217;                             /* VARSTRING(20) meta=20 nullable=0 is_null=0 */<br />
-    ## #@3 = NULL                                /* VARSTRING(20) meta=0 nullable=1 is_null=1 */<br />
-    &#8230;<br />
-#at 302<br />
-# 080828 15 : 03 : 08 server id 1 end_log_pos 356 Update_rows : table id 17 flags : STMT_END_F<br />
-    BINLOG &#8216; fAS3SBMBAAAALAAAAC4BAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br />
-        fAS3SBgBAAAANgAAAGQBAAAQABEAAAAAAAEAA ////AEAAAAFYXBwbGX4AQAAAARwZWFyIbIP<br />
-&#8216;/*!*/; ## #UPDATE test.t## #WHERE## #@1 = 1 /* INT meta=0 nullable=0 is_null=0 */<br />
-    ## #@2 = &#8216;apple&#8217;                          /* VARSTRING(20) meta=20 nullable=0 is_null=0 */<br />
-    ## #@3 = NULL                             /* VARSTRING(20) meta=0 nullable=1 is_null=1 */<br />
-    ## #SET## #@1 = 1                         /* INT meta=0 nullable=0 is_null=0 */<br />
-    ## #@2 = &#8216;pear&#8217;                           /* VARSTRING(20) meta=20 nullable=0 is_null=0 */<br />
-    ## #@3 = &#8216;2009:01:01&#8217;                     /* DATE meta=0 nullable=1 is_null=0 */<br />
-    &#8230;<br />
-#at 400<br />
-# 080828 15 : 03 : 08 server id 1 end_log_pos 442 Delete_rows : table id 17 flags : STMT_END_F<br />
-    BINLOG &#8216; fAS3SBMBAAAALAAAAJABAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br />
-        fAS3SBkBAAAAKgAAALoBAAAQABEAAAAAAAEAA      // 4AQAAAARwZWFyIbIP<br />
-&#8216;/*!*/; ## #DELETE FROM test.t## #WHERE## #@1 = 1 /* INT meta=0 nullable=0 is_null=0 */<br />
-    ## #@2 = &#8216;pear&#8217;                                /* VARSTRING(20) meta=20 nullable=0 is_null=0 */<br />
+shell &gt; mysqlbinlog &#8211; vv log_file&#8230;<br/>
+#at 218<br/>
+# 080828 15 : 03 : 08 server id 1 end_log_pos 258 Write_rows : table id 17 flags : STMT_END_F<br/>
+            BINLOG &#8216; fAS3SBMBAAAALAAAANoAAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br/>
+    fAS3SBcBAAAAKAAAAAIBAAAQABEAAAAAAAEAA        // 8AQAAAAVhcHBsZQ==<br/>
+&#8216;/*!*/; ## #INSERT INTO test.t## #SET## #@1 = 1 /* INT meta=0 nullable=0 is_null=0 */<br/>
+    ## #@2 = &#8216;apple&#8217;                             /* VARSTRING(20) meta=20 nullable=0 is_null=0 */<br/>
+    ## #@3 = NULL                                /* VARSTRING(20) meta=0 nullable=1 is_null=1 */<br/>
+    &#8230;<br/>
+#at 302<br/>
+# 080828 15 : 03 : 08 server id 1 end_log_pos 356 Update_rows : table id 17 flags : STMT_END_F<br/>
+    BINLOG &#8216; fAS3SBMBAAAALAAAAC4BAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br/>
+        fAS3SBgBAAAANgAAAGQBAAAQABEAAAAAAAEAA ////AEAAAAFYXBwbGX4AQAAAARwZWFyIbIP<br/>
+&#8216;/*!*/; ## #UPDATE test.t## #WHERE## #@1 = 1 /* INT meta=0 nullable=0 is_null=0 */<br/>
+    ## #@2 = &#8216;apple&#8217;                          /* VARSTRING(20) meta=20 nullable=0 is_null=0 */<br/>
+    ## #@3 = NULL                             /* VARSTRING(20) meta=0 nullable=1 is_null=1 */<br/>
+    ## #SET## #@1 = 1                         /* INT meta=0 nullable=0 is_null=0 */<br/>
+    ## #@2 = &#8216;pear&#8217;                           /* VARSTRING(20) meta=20 nullable=0 is_null=0 */<br/>
+    ## #@3 = &#8216;2009:01:01&#8217;                     /* DATE meta=0 nullable=1 is_null=0 */<br/>
+    &#8230;<br/>
+#at 400<br/>
+# 080828 15 : 03 : 08 server id 1 end_log_pos 442 Delete_rows : table id 17 flags : STMT_END_F<br/>
+    BINLOG &#8216; fAS3SBMBAAAALAAAAJABAAAAABEAAAAAAAAABHRlc3QAAXQAAwMPCgIUAAQ =<br/>
+        fAS3SBkBAAAAKgAAALoBAAAQABEAAAAAAAEAA      // 4AQAAAARwZWFyIbIP<br/>
+&#8216;/*!*/; ## #DELETE FROM test.t## #WHERE## #@1 = 1 /* INT meta=0 nullable=0 is_null=0 */<br/>
+    ## #@2 = &#8216;pear&#8217;                                /* VARSTRING(20) meta=20 nullable=0 is_null=0 */<br/>
     ## #@3 = &#8216;2009:01:01&#8217;                          /* DATE meta=0 nullable=1 is_null=0 */
 </dd></dl>
 <p> You can tell <code>mysqlbinlog</code> to suppress the BINLOG statements for row events by using the <code>&#8211;base64-output=DECODE-ROWS</code> option. This is similar to <code>&#8211;base64-output=NEVER</code> but does not exit with an error if a row event is found. The combination of <code>&#8211;base64-output=DECODE-ROWS</code> and <code>&#8211;verbose</code> provides a convenient way to see row events only as SQL statements: </p>
@@ -759,7 +759,7 @@ shell&gt; <code>mysqlbinlog -v --base64-output=DECODE-ROWS </code><i>log_file</i
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> You should not suppress BINLOG statements if you intend to re-execute <code>mysqlbinlog</code> output. </p>
 </dl>
 <p> The SQL statements produced by <code>&#8211;verbose</code> for row events are much more readable than the corresponding BINLOG statements. However, they do not correspond exactly to the original SQL statements that generated the events. The following limitations apply: </p>
@@ -815,7 +815,7 @@ CHAR(2) CHARACTER SET ucs2
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font> </dd>
+  <code>Important</code>  </dd>
 <p> <code>mysqlbinlog</code> can back up both encrypted and unencrypted binary log files . However, copies of encrypted binary log files that are generated using <code>mysqlbinlog</code> are stored in an unencrypted format. </p>
 </dl>
 <p> mysqlbinlog Backup Options </p>
@@ -842,11 +842,11 @@ CHAR(2) CHARACTER SET ucs2
 <dl>
 <dt>
 </dt><dd>
-mysql &gt; SHOW BINARY LOGS;<br />
-+ &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; -+ | Log_name | File_size | Encrypted |<br />
-    +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; -+ | binlog .000130 | 27459 | No |<br />
-    | binlog .000131 | 13719 | No |<br />
-    | binlog .000132 | 43268 | No |<br />
+mysql &gt; SHOW BINARY LOGS;<br/>
++ &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; -+ | Log_name | File_size | Encrypted |<br/>
+    +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; -+ | binlog .000130 | 27459 | No |<br/>
+    | binlog .000131 | 13719 | No |<br/>
+    | binlog .000132 | 43268 | No |<br/>
     +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; -+
 </dd></dl>
 <p> With that information, you can use <code>mysqlbinlog</code> to back up the binary log to the current directory as follows (enter each command on a single line): </p>
@@ -856,8 +856,8 @@ mysql &gt; SHOW BINARY LOGS;<br />
 <dl>
 <dt>
 </dt><dd>
-mysqlbinlog&#8211; read &#8211; from &#8211; remote &#8211; server&#8211; host = host_name&#8211; raw<br />
-                                                         binlog .000130 binlog .000131 binlog .000132 mysqlbinlog&#8211; read &#8211;<br />
+mysqlbinlog&#8211; read &#8211; from &#8211; remote &#8211; server&#8211; host = host_name&#8211; raw<br/>
+                                                         binlog .000130 binlog .000131 binlog .000132 mysqlbinlog&#8211; read &#8211;<br/>
                                                      from &#8211; remote &#8211; server&#8211; host = host_name&#8211; raw&#8211; to &#8211; last &#8211; log binlog .000130
 </dd></dl>
 <p> The first command specifies every file name explicitly. The second names only the first file and uses <code>&#8211;to-last-log</code> to read through the last. A difference between these commands is that if the server happens to open binlog.000133 before <code>mysqlbinlog</code> reaches the end of binlog.000132, the first command will not read it, but the second command will.</dl>

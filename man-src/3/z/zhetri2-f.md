@@ -10,7 +10,7 @@ description: "zhetri2.f –"
 <p>zhetri2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhetri2</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br />
+<p>subroutine <code>zhetri2</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br/>
  <i></i><code>ZHETRI2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhetri2 (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( * )WORK, integerLWORK, integerINFO)</h3>

@@ -46,5 +46,5 @@ url: "/docs/linux/man/7-groff_mmse/"
 </dd><dt><code>/usr/share/groff/1.22.2/tmac/mm/se_*.cov</code></dt>
 <dd></dd></dl>
 <h2>Se Också</h2>
-<p><code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1), <code><a href="/docs/linux/man/1-tbl/">tbl</a></code>(1), <code><a href="/docs/linux/man/1-pic/">pic</a></code>(1), <code><a href="/docs/linux/man/1-eqn/">eqn</a></code>(1)<br />
+<p><code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1), <code><a href="/docs/linux/man/1-tbl/">tbl</a></code>(1), <code><a href="/docs/linux/man/1-pic/">pic</a></code>(1), <code><a href="/docs/linux/man/1-eqn/">eqn</a></code>(1)<br/>
  <code><a href="/docs/linux/man/7-groff_mm/">groff_mm</a></code>(7)</p>

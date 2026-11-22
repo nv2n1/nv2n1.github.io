@@ -10,7 +10,7 @@ description: "pngtopnm – convert a Portable Network Graphics file into portabl
 
 <p> pngtopnm &#8211; convert a Portable Network Graphics file into portable anymap </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pngtopnm</code> [-verbose] [-alpha | -mix] [-background color]<br />
+<p> <code>pngtopnm</code> [-verbose] [-alpha | -mix] [-background color]<br/>
  [-gamma value] [-text file] [-time] [<i>pngfile</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> Reads a Portable Network Graphics as input. Produces a portable anymap as output. The type of the output file depends on the input file &#8211; if it&#8217;s black &amp; white, a <i>pbm</i> file is written, else if it&#8217;s grayscale a <i>pgm</i> file, else a <i>ppm</i> file.</p>
@@ -25,7 +25,7 @@ description: "pngtopnm – convert a Portable Network Graphics file into portabl
 <dt><code>-background color</code></dt>
 <dd> If no background color chunck is present in the <i>png-file,</i> or when another color is required this parameter can be used to set the background color of images. This is especially useful for alpha-channel images or those with transparency chunks. The format, to specify the color in, is either (in the case of orange) &quot;1.0,0.5,0.0&quot;, where the values are floats between zero and one, or with the syntax &quot;#RGB&quot;, &quot;#RRGGBB&quot; or &quot;#RRRRGGGGBBBB&quot; where R, G and B are hexa-decimal numbers.</dd>
 <dt><code>-gamma value</code></dt>
-<dd> Converts the image to a new display-gamma value. When a gAMA chunk is present in the <i>png-file,</i> the image-gamma value will be used. When not, the image-gamma is considered to be 1.0. Based on the image-gamma and the display-gamma given with this option the colors written to the <i>pnm-file</i> will be adjusted.<br />
+<dd> Converts the image to a new display-gamma value. When a gAMA chunk is present in the <i>png-file,</i> the image-gamma value will be used. When not, the image-gamma is considered to be 1.0. Based on the image-gamma and the display-gamma given with this option the colors written to the <i>pnm-file</i> will be adjusted.<br/>
  Because the gamma&#8217;s of uncompensated monitors are around 2.6, which results in an image-gamma of 0.45, some typical situations are: when the image-gamma is 0.45 (use -verbose to check) and the picture is too light, your system is gamma-corrected, so convert with &quot;-gamma 1.0&quot;. When no gAMA chunk is present or the image-gamma is 1.0, use 2.2 to make the picture lighter and 0.45 to make the picture darker.</dd>
 <dt><code>-text file</code></dt>
 <dd> Writes the tEXt and zTXt chunks to a file, in a format as described in the <i>pnmtopng</i> man-page. These chunks contain text comments or annotations.</dd>

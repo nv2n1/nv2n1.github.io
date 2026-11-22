@@ -58,8 +58,8 @@ description: "orte-dvm, ompi_dvm – Establish a Distributed Virtual Machine (DV
 <dt>orte-dvm -H aa,aa,bb ./a.out</dt>
 <dd> launches two processes on node aa and one on bb.</dd></dl>
 <p> Or, consider the hostfile </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;cat myhostfile<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;aa slots=2<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;bb slots=2<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;cat myhostfile<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;aa slots=2<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;bb slots=2<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;cc slots=2 </p>
 <p> Here, we list both the host names (aa, bb, and cc) but also how many &quot;slots&quot; there are for each. Slots indicate how many processes can potentially execute on a node. For best performance, the number of slots may be chosen to be the number of cores on the node or the number of processor sockets. If the hostfile does not provide slots information, a default of 1 is assumed. When running under resource managers (e.g., SLURM, Torque, etc.), Open MPI will obtain both the hostnames and the number of slots directly from the resource manger. </p>

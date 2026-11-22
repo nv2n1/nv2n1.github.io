@@ -15,12 +15,12 @@ nsiswrapper[options][roots...] nsiswrapper myprogram.exe anotherprog.exe docs / 
                                                                                           nsiswrapper-- run myprogram.exe anotherprog.exe docs /
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> nsiswrapper is a helper program for making it easier to create Windows installers in a cross-compiler environment. It still requires <font SIZE="-1">NSIS</font> (a Windows installer generator) but cuts out the tedium of writing the <font SIZE="-1">NSIS</font> command script, and can even invoke <font SIZE="-1">NSIS</font> automatically to generate a final Windows executable. </p>
+<p> nsiswrapper is a helper program for making it easier to create Windows installers in a cross-compiler environment. It still requires NSIS (a Windows installer generator) but cuts out the tedium of writing the NSIS command script, and can even invoke NSIS automatically to generate a final Windows executable. </p>
 <p> The general way to use it is to list out some files that you want packaged. For example: </p>
 <pre>
   nsiswrapper myprogram.exe
 </pre>
-<p> This will search for <tt>&quot;myprogram.exe&quot;</tt> and any libraries (<tt>&quot;*.dll&quot;</tt>) that it depends upon, and then it will print out an <font SIZE="-1">NSIS</font> script. </p>
+<p> This will search for <tt>&quot;myprogram.exe&quot;</tt> and any libraries (<tt>&quot;*.dll&quot;</tt>) that it depends upon, and then it will print out an NSIS script. </p>
 <p> If you want to have it run <tt>&quot;makensis&quot;</tt> as well (to automatically create a Windows installer) then do: </p>
 <pre>
   nsiswrapper --run myprogram.exe
@@ -30,7 +30,7 @@ nsiswrapper[options][roots...] nsiswrapper myprogram.exe anotherprog.exe docs / 
 <pre>
   nsiswrapper myprogram.exe anotherprog.exe docs/*.html
 </pre>
-<p> There are many other command line options which control aspects of the <font SIZE="-1">NSIS</font> command script (and hence, the final installer), such as:</p>
+<p> There are many other command line options which control aspects of the NSIS command script (and hence, the final installer), such as:</p>
 <dl>
 <dt>*</dt>
 <dd> The name of the final installer.</dd>
@@ -38,7 +38,7 @@ nsiswrapper[options][roots...] nsiswrapper myprogram.exe anotherprog.exe docs / 
 <dd> Desktop shortcuts and menu items.</dd>
 <dt>*</dt>
 <dd> License files.</dd></dl>
-<p> It&#8217;s a good idea to examine the <font SIZE="-1">NSIS</font> command script, to check that nsiswrapper is including all the right dependencies.</p>
+<p> It&#8217;s a good idea to examine the NSIS command script, to check that nsiswrapper is including all the right dependencies.</p>
 <h2>ROOTS (FILES AND DIRECTORIES)</h2>
 <p> Each parameter should refer to a file or directory which is to be included in the installer. </p>
 <p> These are known as &#8220;roots&#8221; because we also automatically add any dependencies to the list of files. Thus if a Windows executable requires any DLLs, those are added automatically. DLLs are searched for on the current <tt>$PATH</tt> (environment variable). </p>
@@ -80,9 +80,9 @@ nsiswrapper[options][roots...] nsiswrapper myprogram.exe anotherprog.exe docs / 
 <dt><code>&#8211;verbose</code></dt>
 <dd> Print verbose messages while running. If this is not given then we try to operate quietly.</dd>
 <dt><code>&#8211;run</code></dt>
-<dd> Normally this program just prints out the <font SIZE="-1">NSIS</font> installer command script. However if you supply this option, then we run <tt>&quot;makensis&quot;</tt> and attempt to generate an actual Windows installer.</dd>
+<dd> Normally this program just prints out the NSIS installer command script. However if you supply this option, then we run <tt>&quot;makensis&quot;</tt> and attempt to generate an actual Windows installer.</dd>
 <dt><code>&#8211;with-gtk</code></dt>
-<dd> <font SIZE="-1">GTK</font> programs should normally supply this option. It ensures that the correct files are copied and/or created by the installer for <font SIZE="-1">GTK</font> programs to work.</dd>
+<dd> GTK programs should normally supply this option. It ensures that the correct files are copied and/or created by the installer for GTK programs to work.</dd>
 <dt><code>&#8211;name Name</code></dt>
 <dd> Set the long name of the installer. </dd>
 <p> If not set, the script tries to invent a suitable name based on the first root file given on the command line. </p>
@@ -90,15 +90,15 @@ nsiswrapper[options][roots...] nsiswrapper myprogram.exe anotherprog.exe docs / 
 <dt><code>&#8211;outfile myinstaller.exe</code></dt>
 <dd> Set the output filename for the installer. </dd>
 <p> If not set, this defaults to <tt>&quot;installer.exe&quot;</tt>. </p>
-<p> This is the same as the <tt>&quot;OutFile&quot;</tt> option to <font SIZE="-1">NSIS</font>.</p>
+<p> This is the same as the <tt>&quot;OutFile&quot;</tt> option to NSIS.</p>
 <dt><code>&#8211;installdir &#8216;C:oo&#8217;</code></dt>
 <dd> Set the default Windows installation directory. If not set, this program will choose a suitable default based on the name. </dd>
 <p> In any case, the end user can override this when they run the installer. </p>
 <p> Note that since this string will contain backslashes, you should single-quote it to protect it from the shell. </p>
-<p> This is the same as the <tt>&quot;InstallDir&quot;</tt> option to <font SIZE="-1">NSIS</font>.</p>
-<dt><code>&#8211;installdirregkey &#8216;</code><font SIZE="-1"><code>HKLM</code></font><code> SOFTWARE\FOO&#8217;</code></dt>
+<p> This is the same as the <tt>&quot;InstallDir&quot;</tt> option to NSIS.</p>
+<dt><code>&#8211;installdirregkey &#8216;</code><code>HKLM</code><code> SOFTWARE\FOO&#8217;</code></dt>
 <dd> Set the name of the registry key used to save the installation directory. This has two purposes: Firstly it is used to automagically remember the installation directory between installs. Secondly your program can use this as one method to find its own installation directory (there are other ways to do this). </dd>
 <p> The default is <tt>&quot;HKLM SOFTWARE\Name&quot;</tt> where <tt>&quot;Name&quot;</tt> is derived from the name of the installer. </p>
 <p> Note that since this string will contain backslashes and spaces, you should single-quote it to protect it from the shell. </p>
-<p> This is the same as the <tt>&quot;InstallDirRegKey&quot;</tt> option to <font SIZE="-1">NSIS</font>. </p>
+<p> This is the same as the <tt>&quot;InstallDirRegKey&quot;</tt> option to NSIS. </p>
 </dl>

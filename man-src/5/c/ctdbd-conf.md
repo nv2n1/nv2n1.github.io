@@ -162,11 +162,11 @@ description: "ctdbd.conf – CTDB daemon configuration file"
 <p> If GATEWAY is specified then the corresponding route on the NATGW master node will be via GATEWAY. Such routes are created even if <i>CTDB_NATGW_DEFAULT_GATEWAY</i> is not specified. If GATEWAY is not specified for some networks then routes are only created on the NATGW master node for those networks if <i>CTDB_NATGW_DEFAULT_GATEWAY</i> is specified. </p>
 <p> This should be used with care to avoid causing traffic to unnecessarily double-hop through the NAT gateway master, even when a node is hosting public IP addresses. Each specified network or host should probably have a corresponding automatically created link route or static route to avoid this. </p>
 <p> No default.</dl>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dd>
 </dd><dl>
-<dd></font></dd>
+<dd></dd>
 <pre>CTDB_NATGW_NODES=/etc/ctdb/natgw_nodes
 CTDB_NATGW_PRIVATE_NETWORK=192.168.1.0/24
 CTDB_NATGW_DEFAULT_GATEWAY=10.0.0.1
@@ -206,11 +206,11 @@ CTDB_NATGW_STATIC_ROUTES=10.0.0.0/24</pre>
 <p> <code><a href="/docs/linux/man/8-ip/">ip</a></code>(8) uses some reserved routing table numbers below 255. Therefore, CTDB_PER_IP_ROUTING_TABLE_ID_LOW should be (strictly) greater than 255. </p>
 <p> CTDB uses the standard file /etc/iproute2/rt_tables to maintain a mapping between the routing table numbers and labels. The label for a public address <i>ADDR</i> will look like ctdb.<i>addr</i>. This means that the associated rules and routes are easy to read (and manipulate). </p>
 <p> No default, usually 1000 and 9000.</dl>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dd>
 </dd><dl>
-<dd></font></dd>
+<dd></dd>
 <pre>CTDB_PER_IP_ROUTING_CONF=/etc/ctdb/policy_routing
 CTDB_PER_IP_ROUTING_RULE_PREF=100
 CTDB_PER_IP_ROUTING_TABLE_ID_LOW=1000
@@ -227,7 +227,7 @@ CTDB_PER_IP_ROUTING_TABLE_ID_HIGH=9000</pre>
 <p>CTDB can be configured to manage and/or monitor various NAS (and other) services via its eventscripts. </p>
 <p> In the simplest case CTDB will manage a service. This means the service will be started and stopped along with CTDB, CTDB will monitor the service and CTDB will do any required reconfiguration of the service when public IP addresses are failed over.</p>
 <h3>Samba</h3>
-<p><font SIZE="+1"> <code>Eventscripts</code></p>
+<p> <code>Eventscripts</code></p>
 <dl>
 <dd>
 </dd><dl>
@@ -263,10 +263,10 @@ CTDB_PER_IP_ROUTING_TABLE_ID_HIGH=9000</pre>
 <dl>
 <dd>Distribution specific SERVICE for managing winbindd. </dd>
 <p> Default is &quot;winbind&quot;.</dl>
-<p> </font></p>
+<p> </p>
 <h3>Nfs</h3>
-<p>This includes parameters for the kernel NFS server. Alternative NFS subsystems (such as m[blue]<code>NFS-Ganesha</code>m[]<font SIZE="-2">[1]</font>) can be integrated using <i>CTDB_NFS_CALLOUT</i>. </p>
-<p> <font SIZE="+1"> <code>Eventscript</code></p>
+<p>This includes parameters for the kernel NFS server. Alternative NFS subsystems (such as m[blue]<code>NFS-Ganesha</code>m[][1]) can be integrated using <i>CTDB_NFS_CALLOUT</i>. </p>
+<p>  <code>Eventscript</code></p>
 <dl>
 <dd>
 </dd><dl>
@@ -296,10 +296,10 @@ CTDB_PER_IP_ROUTING_TABLE_ID_HIGH=9000</pre>
 <dl>
 <dd>IPADDR or HOSTNAME indicates the address that <code>rpcinfo</code> should connect to when doing <code>rpcinfo</code> check on IPv6 RPC service during monitoring. Optimally this would be &quot;localhost6&quot; (or similar). However, this can add some performance overheads. </dd>
 <p> Default is &quot;::1&quot;.</dl>
-<p> </font></p>
+<p> </p>
 <h3>Apache Httpd</h3>
 <p>CTDB can manage the Apache web server. </p>
-<p> <font SIZE="+1"> <code>Eventscript</code></p>
+<p>  <code>Eventscript</code></p>
 <dl>
 <dd>
 </dd><dl>
@@ -309,10 +309,10 @@ CTDB_PER_IP_ROUTING_TABLE_ID_HIGH=9000</pre>
 <dl>
 <dd>Should CTDB manage the Apache web server? </dd>
 <p> Default is no.</dl>
-<p> </font></p>
+<p> </p>
 <h3>Clamav</h3>
 <p>CTDB has support to manage the popular anti-virus daemon ClamAV. </p>
-<p> <font SIZE="+1"> <code>Eventscript</code></p>
+<p>  <code>Eventscript</code></p>
 <dl>
 <dd>
 </dd><dl>
@@ -326,10 +326,10 @@ CTDB_PER_IP_ROUTING_TABLE_ID_HIGH=9000</pre>
 <dl>
 <dd>FILENAME is the socket to monitor ClamAV. </dd>
 <p> No default.</dl>
-<p> </font></p>
+<p> </p>
 <h3>Iscsi</h3>
 <p>CTDB has support for managing the Linux iSCSI tgtd service. </p>
-<p> <font SIZE="+1"> <code>Eventscript</code></p>
+<p>  <code>Eventscript</code></p>
 <dl>
 <dd>
 </dd><dl>
@@ -343,10 +343,10 @@ CTDB_PER_IP_ROUTING_TABLE_ID_HIGH=9000</pre>
 <dl>
 <dd>DIRECTORY on shared storage containing scripts to start tgtd for each public IP address. </dd>
 <p> No default.</dl>
-<p> </font></p>
+<p> </p>
 <h3>Multipathd</h3>
 <p>CTDB can monitor multipath devices to ensure that active paths are available. </p>
-<p> <font SIZE="+1"> <code>Eventscript</code></p>
+<p>  <code>Eventscript</code></p>
 <dl>
 <dd>
 </dd><dl>
@@ -356,10 +356,10 @@ CTDB_PER_IP_ROUTING_TABLE_ID_HIGH=9000</pre>
 <dl>
 <dd>MP-DEVICE-LIST is a list of multipath devices for CTDB to monitor? </dd>
 <p> No default.</dl>
-<p> </font></p>
+<p> </p>
 <h3>Vsftpd</h3>
 <p>CTDB can manage the vsftpd FTP server. </p>
-<p> <font SIZE="+1"> <code>Eventscript</code></p>
+<p>  <code>Eventscript</code></p>
 <dl>
 <dd>
 </dd><dl>
@@ -369,11 +369,11 @@ CTDB_PER_IP_ROUTING_TABLE_ID_HIGH=9000</pre>
 <dl>
 <dd>Should CTDB manage the vsftpd FTP server? </dd>
 <p> Default is no.</dl>
-<p> </font></p>
+<p> </p>
 <h3>System Resource Monitoring Configuration</h3>
 <p>CTDB can experience seemingly random (performance and other) issues if system resources become too constrained. Options in this section can be enabled to allow certain system resources to be checked. They allows warnings to be logged and nodes to be marked unhealthy when system resource usage reaches the configured thresholds. </p>
 <p> Some checks are enabled by default. It is recommended that these checks remain enabled or are augmented by extra checks. There is no supported way of completely disabling the checks. </p>
-<p> <font SIZE="+1"> <code>Eventscripts</code></p>
+<p>  <code>Eventscripts</code></p>
 <dl>
 <dd>
 </dd><dl>
@@ -391,7 +391,7 @@ CTDB_PER_IP_ROUTING_TABLE_ID_HIGH=9000</pre>
 <dl>
 <dd>SWAP-LIMITS takes the form <i>WARN_LIMIT</i>[:<i>UNHEALTHY_LIMIT</i>] indicating that warnings should be logged if swap usage reaches WARN_LIMIT%. If usage reaches UNHEALTHY_LIMIT then the node should be flagged unhealthy. Either WARN_LIMIT or UNHEALTHY_LIMIT may be left blank, meaning that check will be omitted. </dd>
 <p> Default is 25, so warnings will be logged when swap usage reaches 25%.</dl>
-<p> </font></p>
+<p> </p>
 <h3>Miscellaneous Service-Related Configuration</h3>
 <p>CTDB_MANAGED_SERVICES=<i>SERVICE-LIST</i></p>
 <dl>

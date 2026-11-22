@@ -90,10 +90,10 @@ description: "squid – HTTP web proxy caching server"
 <p>Squid was written over many years by a changing team of developers and maintained in turn by <i>Duane Wessels &lt;duane [at] squid-cache.org&gt;</i> <i>Henrik Nordstrom &lt;hno [at] squid-cache.org&gt;</i> <i>Amos Jeffries &lt;amosjeffries [at] squid-cache.org&gt;</i> </p>
 <p> With contributions from many others in the Squid community. see CONTRIBUTORS for a full list of individuals who contributed code. see CREDITS for a list of major code contributing copyright holders.</p>
 <h2>Copyright</h2>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br />
-&nbsp;<wbr>*<br />
-&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br />
-&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br/>
+&nbsp;<wbr>*<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br/>
+&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br/>
 &nbsp;<wbr>*&nbsp;<wbr>Please see the COPYING and CONTRIBUTORS files for details.</p>
 <h2>Questions</h2>
 <p>Questions on the usage of this program can be sent to the <i>Squid Users mailing list</i> &lt;squid-users [at] squid-cache.org&gt;</p>
@@ -103,6 +103,6 @@ description: "squid – HTTP web proxy caching server"
 <p> Report serious security bugs to <i>Squid Bugs &lt;squid-bugs [at] squid-cache.org&gt;</i> </p>
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list</i> &lt;squid-dev [at] squid-cache.org&gt;</p>
 <h2>See Also</h2>
-<p><code>cachemgr.cgi (8), </code> <code>squidclient (1), </code> <code>pam_auth (8), </code> <code>squid_ldap_auth (8), </code> <code>squid_ldap_group (8), </code> <code>ext_session_acl (8), </code> <code>squid_unix_group (8), </code><br />
- The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br />
+<p><code>cachemgr.cgi (8), </code> <code>squidclient (1), </code> <code>pam_auth (8), </code> <code>squid_ldap_auth (8), </code> <code>squid_ldap_group (8), </code> <code>ext_session_acl (8), </code> <code>squid_unix_group (8), </code><br/>
+ The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br/>
  The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>

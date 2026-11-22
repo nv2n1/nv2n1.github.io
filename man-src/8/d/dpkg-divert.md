@@ -53,7 +53,7 @@ description: "dpkg-divert – override a package’s version of a file"
 <h2>Files</h2>
 <dl>
 <dt><i>/var/lib/dpkg/diversions</i></dt>
-<dd>File which contains the current list of diversions of the system. It is located in the <code>dpkg</code> administration directory, along with other files important to <code>dpkg</code>, such as <i>status</i> or <i>available</i>.<br />
+<dd>File which contains the current list of diversions of the system. It is located in the <code>dpkg</code> administration directory, along with other files important to <code>dpkg</code>, such as <i>status</i> or <i>available</i>.<br/>
  Note: <code>dpkg-divert</code> preserves the old copy of this file, with extension <i>-old</i>, before replacing it with the new one.</dd></dl>
 <h2>Notes</h2>
 <p>When adding, default is <code>&#8211;local</code> and <code>&#8211;divert</code> <i>original</i><code>.distrib</code>. When removing, <code>&#8211;package</code> or <code>&#8211;local</code> and <code>&#8211;divert</code> must match if specified. </p>

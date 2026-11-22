@@ -27,7 +27,7 @@ description: "dh_link – create symlinks in package build directories"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-A</code>, <code>&#8211;all</code></dt>
-<dd> Create any links specified by command line parameters in <font SIZE="-1">ALL</font> packages acted on, not just the first.</dd>
+<dd> Create any links specified by command line parameters in ALL packages acted on, not just the first.</dd>
 <dt><code>-X</code><i>item</i>, <code>&#8211;exclude=</code><i>item</i></dt>
 <dd> Exclude symlinks that contain <i>item</i> anywhere in their filename from being corrected to comply with Debian policy.</dd>
 <dt><i>source destination</i> &#8230;</dt>

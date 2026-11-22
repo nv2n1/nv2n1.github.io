@@ -19,23 +19,23 @@ int ibv_free_dm(struct ibv_dm *dm);
 <h2>DESCRIPTION</h2>
 <p> <code>ibv_alloc_dm()</code> allocates a device memory buffer for the RDMA device context <i>context</i>. The argument <i>attr</i> is a pointer to an ibv_alloc_dm_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <p> <code>ibv_free_dm()</code> free the device memory buffer <i>dm</i>. </p>
-<p>struct ibv_alloc_dm_attr {<br />
-    size_t length;          /* Length of desired device memory buffer */<br />
-    uint32_t log_align_req; /* Log base 2 of address alignment requirement */<br />
-    uint32_t comp_mask;     /* Compatibility mask that defines which of the following variables are valid */<br />
-};<br />
-Address alignment may be required in cases where RDMA atomic operations will be performed using the device memory.In such cases, the user may specify the device memory start address alignment using the log_align_req parameter<br />
+<p>struct ibv_alloc_dm_attr {<br/>
+    size_t length;          /* Length of desired device memory buffer */<br/>
+    uint32_t log_align_req; /* Log base 2 of address alignment requirement */<br/>
+    uint32_t comp_mask;     /* Compatibility mask that defines which of the following variables are valid */<br/>
+};<br/>
+Address alignment may be required in cases where RDMA atomic operations will be performed using the device memory.In such cases, the user may specify the device memory start address alignment using the log_align_req parameter<br/>
                                                                                                                                      in the allocation attributes struct.</p>
 <h2>Accessing an allocated device memory</h2>
-<p>In order to perform a write / read memory access to an allocated device memory, a user could use the ibv_memcpy_to_dm<br />
-                                                                                    and ibv_memcpy_from_dm calls respectively.int<br />
-                                                                                    ibv_memcpy_to_dm(struct ibv_dm *dm, uint64_t dm_offset,<br />
-                                                                                                     void *host_addr, size_t length);<br />
-int ibv_memcpy_from_dm(void *host_addr, struct ibv_dm *dm,<br />
-                       uint64_t dm_offset, size_t length);<br />
-dm_offest<br />
-    is the byte offset from the beginning of the allocated device memory buffer to access.host_addr<br />
-        is the host memory buffer address to access.length<br />
+<p>In order to perform a write / read memory access to an allocated device memory, a user could use the ibv_memcpy_to_dm<br/>
+                                                                                    and ibv_memcpy_from_dm calls respectively.int<br/>
+                                                                                    ibv_memcpy_to_dm(struct ibv_dm *dm, uint64_t dm_offset,<br/>
+                                                                                                     void *host_addr, size_t length);<br/>
+int ibv_memcpy_from_dm(void *host_addr, struct ibv_dm *dm,<br/>
+                       uint64_t dm_offset, size_t length);<br/>
+dm_offest<br/>
+    is the byte offset from the beginning of the allocated device memory buffer to access.host_addr<br/>
+        is the host memory buffer address to access.length<br/>
             is the copy length in bytes.</p>
 <h2>Device memory registration</h2>
 <pre><code>

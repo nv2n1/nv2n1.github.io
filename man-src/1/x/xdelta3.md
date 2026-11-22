@@ -94,8 +94,8 @@ description: "xdelta3 – VCDIFF (RFC 3284) binary diff tool"
 <p> The <code>XDELTA</code> environment variable may contain extra args: </p>
 <dl>
 <dt>
-</dt><dd> XDELTA=&quot;-s source-x.y.tar.gz&quot; \<br />
- tar &#8211;use-compress-program=xdelta3 -cf \<br />
+</dt><dd> XDELTA=&quot;-s source-x.y.tar.gz&quot; \<br/>
+ tar &#8211;use-compress-program=xdelta3 -cf \<br/>
  target-x.z.tar.gz.vcdiff target-x.y/ </dd>
 </dl>
 <h2>EXAMPLES</h2>

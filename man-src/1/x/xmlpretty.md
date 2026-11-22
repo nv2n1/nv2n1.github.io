@@ -14,7 +14,7 @@ description: "xmlpretty – XML pretty printer"
 xmlpretty[--options][filename]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <code>xmlpretty</code> is the commandline interface to XML::Handler::YAWriter, acting as a tool to add and remove pretty printing to <font SIZE="-1">XML</font> files. </p>
+<p> <code>xmlpretty</code> is the commandline interface to XML::Handler::YAWriter, acting as a tool to add and remove pretty printing to XML files. </p>
 <p> <code>xmlpretty</code> has several methods to add human readablitiy. </p>
 <p> If you want to add readablity without adding so-called <i>ignorable whitespace</i>, use it in the following way : </p>
 <pre>
@@ -30,7 +30,7 @@ xmlpretty[--options][filename]
           --CatchEmptyElement \
           uglyfile.xml &gt; prettyfile.xml
 </pre>
-<p> You may use YAWriter to clean whitespace from <font SIZE="-1">XML</font> documents. This may work in 99% of the cases where you want to get rid of ignorable whitespace caused by the various forms of pretty printing. </p>
+<p> You may use YAWriter to clean whitespace from XML documents. This may work in 99% of the cases where you want to get rid of ignorable whitespace caused by the various forms of pretty printing. </p>
 <pre><code>
 $ xmlpretty-- NoWhiteSpace-- NoComments-- AddHiddenNewline-- AddHiddenAttrTab-- CatchEmptyElement
         prettyfile.xml &gt; cleanfile.xml
@@ -47,11 +47,11 @@ $ xmlpretty-- NoWhiteSpace-- NoComments-- AddHiddenNewline-- AddHiddenAttrTab-- 
 <dt>CatchWhiteSpace boolean</dt>
 <dd> Catch whitespace with comments</dd>
 <dt>IsSGML boolean</dt>
-<dd> This option will cause start_document, processing_instruction and doctype_decl to appear as <font SIZE="-1">SGML.</font> The <font SIZE="-1">SGML</font> is still well-formed of course, if your <font SIZE="-1">SAX</font> events are well-formed.</dd>
+<dd> This option will cause start_document, processing_instruction and doctype_decl to appear as SGML. The SGML is still well-formed of course, if your SAX events are well-formed.</dd>
 <dt>NoComments boolean</dt>
 <dd> Supress Comments</dd>
 <dt>NoDTD boolean</dt>
-<dd> Supress <font SIZE="-1">DTD</font></dd>
+<dd> Supress DTD</dd>
 <dt>NoPI boolean</dt>
 <dd> Supress Processing Instructions</dd>
 <dt>NoProlog boolean</dt>
@@ -62,14 +62,14 @@ $ xmlpretty-- NoWhiteSpace-- NoComments-- AddHiddenNewline-- AddHiddenAttrTab-- 
 <dd> Add visible indent before any eventstring</dd>
 <dt>PrettyWhiteNewline boolean</dt>
 <dd> Add visible newlines before any eventstring</dd>
-<dt><font SIZE="-1">SAX1</font> boolean (not yet implemented)</dt>
-<dd> Output only <font SIZE="-1">SAX1</font> compilant eventstrings</dd></dl>
+<dt>SAX1 boolean (not yet implemented)</dt>
+<dd> Output only SAX1 compilant eventstrings</dd></dl>
 <h3>Bugs:</h3>
 <p> Automatic recoding between 8bit and 16bit does not yet work correctly ! </p>
 <p> I have Perl-5.6 at home and here I can specify &#8220;use utf8;&#8221; in the right places to make recoding work. But I dislike saying &#8220;use 5.00555;&#8221; because many systems run 5.00503.</p>
 <h2>AUTHOR</h2>
 <p> Michael Koehne, Kraehe [at] Copyleft.De</p>
 <h2>Thanks</h2>
-<p> &#8220;Derksen, Eduard (Enno), <font SIZE="-1">CSCIO&#8221;</font> &lt;enno [at] att.com&gt; helped me with the Escape hash and gave quite a lot of usefull comments.</p>
+<p> &#8220;Derksen, Eduard (Enno), CSCIO&#8221; &lt;enno [at] att.com&gt; helped me with the Escape hash and gave quite a lot of usefull comments.</p>
 <h2>SEE ALSO</h2>
 <p> perl and XML::Parser::PerlSAX </p>

@@ -21,8 +21,8 @@ int ioctl(int fd, MTIOCPOS, (struct mtpos *)mt_pos);</code></pre>
 <h3>Ioctls</h3>
 <p>The driver supports three <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) requests. Requests not recognized by the <code>st</code> driver are passed to the <code>SCSI</code> driver. The definitions below are from <i>/usr/include/linux/mtio.h</i>:</p>
 <h3>MTIOCTOP &#8212; perform a tape operation</h3>
-<p>This request takes an argument of type <i>(struct mtop&nbsp;*)</i>. Not all drives support all operations. The driver returns an <code>EIO</code> error if the drive rejects an operation. /* Structure for MTIOCTOP &#8211; mag tape op command: */ struct mtop {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_op;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;operations defined below&nbsp;*/<br />
+<p>This request takes an argument of type <i>(struct mtop&nbsp;*)</i>. Not all drives support all operations. The driver returns an <code>EIO</code> error if the drive rejects an operation. /* Structure for MTIOCTOP &#8211; mag tape op command: */ struct mtop {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_op;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;operations defined below&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_count;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;how many of them&nbsp;*/ }; Magnetic tape operations for normal tape use:</p>
 <dl>
 <dt><code>MTBSF</code></dt>
@@ -179,15 +179,15 @@ the cleaning request.
 If the pattern is nonzero, the pattern must match
 the masked sense data byte.
 MTIOCGET --- get status</code></pre>
-<p> This request takes an argument of type <i>(struct mtget&nbsp;*)</i>. /* structure for MTIOCGET &#8211; mag tape get status command */ struct mtget {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_type;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_resid;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;the following registers are device dependent&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_dsreg;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_gstat;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_erreg;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;The next two fields are not always used&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;daddr_t&nbsp;<wbr>&nbsp;mt_fileno;<br />
+<p> This request takes an argument of type <i>(struct mtget&nbsp;*)</i>. /* structure for MTIOCGET &#8211; mag tape get status command */ struct mtget {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_type;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_resid;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;the following registers are device dependent&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_dsreg;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_gstat;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mt_erreg;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;The next two fields are not always used&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;daddr_t&nbsp;<wbr>&nbsp;mt_fileno;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;daddr_t&nbsp;<wbr>&nbsp;mt_blkno; };</p>
 <dl>
 <dt><i>mt_type</i></dt>
@@ -231,7 +231,7 @@ MTIOCGET --- get status</code></pre>
 <dt><i>mt_blkno</i></dt>
 <dd>reports the block number (zero-based) within the current file. This value is set to -1 when the block number is unknown (e.g., after <code>MTBSF</code>, <code>MTBSS</code>, or <code>MTSEEK</code>).</dd></dl>
 <h3>MTIOCPOS &#8212; get tape position</h3>
-<p>This request takes an argument of type <i>(struct mtpos&nbsp;*)</i> and reports the drive&#8217;s notion of the current tape block number, which is not the same as <i>mt_blkno</i> returned by <code>MTIOCGET</code>. This drive must be a SCSI-2 drive that supports the <code>READ POSITION</code> command (device-specific address) or a Tandberg-compatible SCSI-1 drive (Tandberg, Archive Viper, Wangtek, &#8230; ). /* structure for MTIOCPOS &#8211; mag tape get position command */ struct mtpos {<br />
+<p>This request takes an argument of type <i>(struct mtpos&nbsp;*)</i> and reports the drive&#8217;s notion of the current tape block number, which is not the same as <i>mt_blkno</i> returned by <code>MTIOCGET</code>. This drive must be a SCSI-2 drive that supports the <code>READ POSITION</code> command (device-specific address) or a Tandberg-compatible SCSI-1 drive (Tandberg, Archive Viper, Wangtek, &#8230; ). /* structure for MTIOCPOS &#8211; mag tape get position command */ struct mtpos {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long mt_blkno;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;current block number&nbsp;*/ };</p>
 <h2>Return Value</h2>
 <dl>

@@ -11,7 +11,7 @@ description: "libssh2_session_hostkey – get the remote key"
 <p> libssh2_session_hostkey &#8211; get the remote key</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
-<p> const char *libssh2_session_hostkey(LIBSSH2_SESSION *session,<br />
+<p> const char *libssh2_session_hostkey(LIBSSH2_SESSION *session,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>size_t&nbsp;<wbr>*len, int&nbsp;<wbr>*type);</p>
 <h2>DESCRIPTION</h2>
 <p> Returns a pointer to the current host key, the value <i>len</i> points to will get the length of the key. </p>

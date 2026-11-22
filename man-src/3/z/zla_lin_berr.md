@@ -10,7 +10,7 @@ description: "zla_lin_berr.f –"
 <p>zla_lin_berr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zla_lin_berr</code> (N, NZ, NRHS, RES, AYB, BERR)<br />
+<p>subroutine <code>zla_lin_berr</code> (N, NZ, NRHS, RES, AYB, BERR)<br/>
  <i></i><code>ZLA_LIN_BERR</code> computes a component-wise relative backward error.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zla_lin_berr (integerN, integerNZ, integerNRHS, complex*16, dimension( n, nrhs )RES, double precision, dimension( n, nrhs )AYB, double precision, dimension( nrhs )BERR)</h3>

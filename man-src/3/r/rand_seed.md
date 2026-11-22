@@ -28,14 +28,14 @@ description: "RAND crypto functions –"
 <p>Seed that random number generator. Secret material can securely be feed into the function, they will never be returned. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>indata</i> the input data.<br />
- <i>size</i> size of in data.<br />
+<dd><i>indata</i> the input data.<br/>
+ <i>size</i> size of in data.<br/>
  <i>entropi</i> entropi in data.</dd></dl>
 <h3>int RAND_bytes (void *outdata, size_tsize)</h3>
 <p>Get a random block from the random generator, can be used for key material. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>outdata</i> random data<br />
+<dd><i>outdata</i> random data<br/>
  <i>size</i> length random data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -46,7 +46,7 @@ description: "RAND crypto functions –"
 <p>Return the default random state filename for a user to use for <code>RAND_load_file()</code>, and <code>RAND_write_file()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>filename</i> buffer to hold file name.<br />
+<dd><i>filename</i> buffer to hold file name.<br/>
  <i>size</i> size of buffer filename.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -57,13 +57,13 @@ description: "RAND crypto functions –"
 <p>Load a a file and feed it into <code>RAND_seed()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>filename</i> name of file to read.<br />
+<dd><i>filename</i> name of file to read.<br/>
  <i>size</i> minimum size to read.</dd></dl>
 <h3>int RAND_pseudo_bytes (void *outdata, size_tsize)</h3>
 <p>Get a random block from the random generator, should NOT be used for key material. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>outdata</i> random data<br />
+<dd><i>outdata</i> random data<br/>
  <i>size</i> length random data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -72,7 +72,7 @@ description: "RAND crypto functions –"
 <p>Seed that random number generator. Secret material can securely be feed into the function, they will never be returned. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>indata</i> seed data<br />
+<dd><i>indata</i> seed data<br/>
  <i>size</i> length seed data</dd></dl>
 <h3>int RAND_set_rand_engine (ENGINE *engine)</h3>
 <p>Set the default random method from engine. </p>

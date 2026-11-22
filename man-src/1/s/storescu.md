@@ -43,127 +43,127 @@ dcmfile-in  DICOM file or directory to be transmitted
           show presentation contexts in verbose mode
 </code></pre>
 <h3>input options</h3>
-<p>input file format:<br />
-  +f    &#8211;read-file<br />
-          read file format or data set (default)<br />
-  +fo   &#8211;read-file-only<br />
-          read file format only<br />
-  -f    &#8211;read-dataset<br />
-          read data set without file meta information<br />
-input files:<br />
-  +sd   &#8211;scan-directories<br />
-          scan directories for input files (dcmfile-in)<br />
-  +sp   &#8211;scan-pattern  [p]attern: string (only with &#8211;scan-directories)<br />
-          pattern for filename matching (wildcards)<br />
-#possibly not available on all systems<br />
-  -r    &#8211;no-recurse<br />
-          do not recurse within directories (default)<br />
-  +r    &#8211;recurse<br />
+<p>input file format:<br/>
+  +f    &#8211;read-file<br/>
+          read file format or data set (default)<br/>
+  +fo   &#8211;read-file-only<br/>
+          read file format only<br/>
+  -f    &#8211;read-dataset<br/>
+          read data set without file meta information<br/>
+input files:<br/>
+  +sd   &#8211;scan-directories<br/>
+          scan directories for input files (dcmfile-in)<br/>
+  +sp   &#8211;scan-pattern  [p]attern: string (only with &#8211;scan-directories)<br/>
+          pattern for filename matching (wildcards)<br/>
+#possibly not available on all systems<br/>
+  -r    &#8211;no-recurse<br/>
+          do not recurse within directories (default)<br/>
+  +r    &#8211;recurse<br/>
           recurse within specified directories</p>
 <h3>network options</h3>
-<p>application entity titles:<br />
-  -aet  &#8211;aetitle  [a]etitle: string<br />
-          set my calling AE title (default: STORESCU)<br />
-  -aec  &#8211;call  [a]etitle: string<br />
-          set called AE title of peer (default: ANY-SCP)<br />
-association negotiation profile from configuration file:<br />
-  -xf   &#8211;config-file  [f]ilename, [p]rofile: string<br />
-          use profile p from config file f<br />
-proposed transmission transfer syntaxes (not with &#8211;config-file):<br />
-  -x=   &#8211;propose-uncompr<br />
-          propose all uncompressed TS, explicit VR<br />
-          with local byte ordering first (default)<br />
-  -xe   &#8211;propose-little<br />
-          propose all uncompressed TS, explicit VR little endian first<br />
-  -xb   &#8211;propose-big<br />
-          propose all uncompressed TS, explicit VR big endian first<br />
-  -xi   &#8211;propose-implicit<br />
-          propose implicit VR little endian TS only<br />
-  -xs   &#8211;propose-lossless<br />
-          propose default JPEG lossless TS<br />
-          and all uncompressed transfer syntaxes<br />
-  -xy   &#8211;propose-jpeg8<br />
-          propose default JPEG lossy TS for 8 bit data<br />
-          and all uncompressed transfer syntaxes<br />
-  -xx   &#8211;propose-jpeg12<br />
-          propose default JPEG lossy TS for 12 bit data<br />
-          and all uncompressed transfer syntaxes<br />
-  -xv   &#8211;propose-j2k-lossless<br />
-          propose JPEG 2000 lossless TS<br />
-          and all uncompressed transfer syntaxes<br />
-  -xw   &#8211;propose-j2k-lossy<br />
-          propose JPEG 2000 lossy TS<br />
-          and all uncompressed transfer syntaxes<br />
-  -xt   &#8211;propose-jls-lossless<br />
-          propose JPEG-LS lossless TS<br />
-          and all uncompressed transfer syntaxes<br />
-  -xu   &#8211;propose-jls-lossy<br />
-          propose JPEG-LS lossy TS<br />
-          and all uncompressed transfer syntaxes<br />
-  -xm   &#8211;propose-mpeg2<br />
-          propose MPEG2 Main Profile @ Main Level TS only<br />
-  -xh   &#8211;propose-mpeg2-high<br />
-          propose MPEG2 Main Profile @ High Level TS only<br />
-  -xr   &#8211;propose-rle<br />
-          propose RLE lossless TS<br />
-          and all uncompressed transfer syntaxes<br />
-  -R    &#8211;required<br />
-          propose only required presentation contexts<br />
-          (default: propose all supported)<br />
-  +C    &#8211;combine<br />
-          combine proposed transfer syntaxes<br />
-          (default: separate presentation context for each TS)<br />
-post-1993 value representations:<br />
-  +u    &#8211;enable-new-vr<br />
-          enable support for new VRs (UN/UT) (default)<br />
-  -u    &#8211;disable-new-vr<br />
-          disable support for new VRs, convert to OB<br />
-deflate compression level (only with &#8211;propose-deflated or &#8211;config-file):<br />
-  +cl   &#8211;compression-level  [l]evel: integer (default: 6)<br />
-          0=uncompressed, 1=fastest, 9=best compression<br />
-user identity negotiation:<br />
-  -usr  &#8211;user  [u]ser name: string<br />
-          authenticate using user name u<br />
-  -pwd  &#8211;password  [p]assword: string (only with &#8211;user)<br />
-          authenticate using password p<br />
-  -epw  &#8211;empty-password<br />
-          send empty password (only with &#8211;user)<br />
-  -kt   &#8211;kerberos  [f]ilename: string<br />
-          read kerberos ticket from file f<br />
-        &#8211;saml  [f]ilename: string<br />
-          read SAML request from file f<br />
-  -rsp  &#8211;pos-response<br />
-          expect positive response<br />
-other network options:<br />
-  -to   &#8211;timeout  [s]econds: integer (default: unlimited)<br />
-          timeout for connection requests<br />
-  -ta   &#8211;acse-timeout  [s]econds: integer (default: 30)<br />
-          timeout for ACSE messages<br />
-  -td   &#8211;dimse-timeout  [s]econds: integer (default: unlimited)<br />
-          timeout for DIMSE messages<br />
-  -pdu  &#8211;max-pdu  [n]umber of bytes: integer (4096..131072)<br />
-          set max receive pdu to n bytes (default: 16384)<br />
-        &#8211;max-send-pdu  [n]umber of bytes: integer (4096..131072)<br />
-          restrict max send pdu to n bytes<br />
-        &#8211;repeat  [n]umber: integer<br />
-          repeat n times<br />
-        &#8211;abort<br />
-          abort association instead of releasing it<br />
-  -nh   &#8211;no-halt<br />
-          do not halt if unsuccessful store encountered<br />
-          (default: do halt)<br />
-  -up   &#8211;uid-padding<br />
-          silently correct space-padded UIDs<br />
-  +II   &#8211;invent-instance<br />
-          invent a new SOP instance UID for every image sent<br />
-  +IR   &#8211;invent-series  [n]umber: integer (implies &#8211;invent-instance)<br />
-          invent a new series UID after n images have been sent<br />
-          (default: 100)<br />
-  +IS   &#8211;invent-study  [n]umber: integer (implies &#8211;invent-instance)<br />
-          invent a new study UID after n series have been sent<br />
-          (default: 50)<br />
-  +IP   &#8211;invent-patient  [n]umber: integer (implies &#8211;invent-instance)<br />
-          invent a new patient ID and name after n studies have been sent<br />
+<p>application entity titles:<br/>
+  -aet  &#8211;aetitle  [a]etitle: string<br/>
+          set my calling AE title (default: STORESCU)<br/>
+  -aec  &#8211;call  [a]etitle: string<br/>
+          set called AE title of peer (default: ANY-SCP)<br/>
+association negotiation profile from configuration file:<br/>
+  -xf   &#8211;config-file  [f]ilename, [p]rofile: string<br/>
+          use profile p from config file f<br/>
+proposed transmission transfer syntaxes (not with &#8211;config-file):<br/>
+  -x=   &#8211;propose-uncompr<br/>
+          propose all uncompressed TS, explicit VR<br/>
+          with local byte ordering first (default)<br/>
+  -xe   &#8211;propose-little<br/>
+          propose all uncompressed TS, explicit VR little endian first<br/>
+  -xb   &#8211;propose-big<br/>
+          propose all uncompressed TS, explicit VR big endian first<br/>
+  -xi   &#8211;propose-implicit<br/>
+          propose implicit VR little endian TS only<br/>
+  -xs   &#8211;propose-lossless<br/>
+          propose default JPEG lossless TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xy   &#8211;propose-jpeg8<br/>
+          propose default JPEG lossy TS for 8 bit data<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xx   &#8211;propose-jpeg12<br/>
+          propose default JPEG lossy TS for 12 bit data<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xv   &#8211;propose-j2k-lossless<br/>
+          propose JPEG 2000 lossless TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xw   &#8211;propose-j2k-lossy<br/>
+          propose JPEG 2000 lossy TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xt   &#8211;propose-jls-lossless<br/>
+          propose JPEG-LS lossless TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xu   &#8211;propose-jls-lossy<br/>
+          propose JPEG-LS lossy TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xm   &#8211;propose-mpeg2<br/>
+          propose MPEG2 Main Profile @ Main Level TS only<br/>
+  -xh   &#8211;propose-mpeg2-high<br/>
+          propose MPEG2 Main Profile @ High Level TS only<br/>
+  -xr   &#8211;propose-rle<br/>
+          propose RLE lossless TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -R    &#8211;required<br/>
+          propose only required presentation contexts<br/>
+          (default: propose all supported)<br/>
+  +C    &#8211;combine<br/>
+          combine proposed transfer syntaxes<br/>
+          (default: separate presentation context for each TS)<br/>
+post-1993 value representations:<br/>
+  +u    &#8211;enable-new-vr<br/>
+          enable support for new VRs (UN/UT) (default)<br/>
+  -u    &#8211;disable-new-vr<br/>
+          disable support for new VRs, convert to OB<br/>
+deflate compression level (only with &#8211;propose-deflated or &#8211;config-file):<br/>
+  +cl   &#8211;compression-level  [l]evel: integer (default: 6)<br/>
+          0=uncompressed, 1=fastest, 9=best compression<br/>
+user identity negotiation:<br/>
+  -usr  &#8211;user  [u]ser name: string<br/>
+          authenticate using user name u<br/>
+  -pwd  &#8211;password  [p]assword: string (only with &#8211;user)<br/>
+          authenticate using password p<br/>
+  -epw  &#8211;empty-password<br/>
+          send empty password (only with &#8211;user)<br/>
+  -kt   &#8211;kerberos  [f]ilename: string<br/>
+          read kerberos ticket from file f<br/>
+        &#8211;saml  [f]ilename: string<br/>
+          read SAML request from file f<br/>
+  -rsp  &#8211;pos-response<br/>
+          expect positive response<br/>
+other network options:<br/>
+  -to   &#8211;timeout  [s]econds: integer (default: unlimited)<br/>
+          timeout for connection requests<br/>
+  -ta   &#8211;acse-timeout  [s]econds: integer (default: 30)<br/>
+          timeout for ACSE messages<br/>
+  -td   &#8211;dimse-timeout  [s]econds: integer (default: unlimited)<br/>
+          timeout for DIMSE messages<br/>
+  -pdu  &#8211;max-pdu  [n]umber of bytes: integer (4096..131072)<br/>
+          set max receive pdu to n bytes (default: 16384)<br/>
+        &#8211;max-send-pdu  [n]umber of bytes: integer (4096..131072)<br/>
+          restrict max send pdu to n bytes<br/>
+        &#8211;repeat  [n]umber: integer<br/>
+          repeat n times<br/>
+        &#8211;abort<br/>
+          abort association instead of releasing it<br/>
+  -nh   &#8211;no-halt<br/>
+          do not halt if unsuccessful store encountered<br/>
+          (default: do halt)<br/>
+  -up   &#8211;uid-padding<br/>
+          silently correct space-padded UIDs<br/>
+  +II   &#8211;invent-instance<br/>
+          invent a new SOP instance UID for every image sent<br/>
+  +IR   &#8211;invent-series  [n]umber: integer (implies &#8211;invent-instance)<br/>
+          invent a new series UID after n images have been sent<br/>
+          (default: 100)<br/>
+  +IS   &#8211;invent-study  [n]umber: integer (implies &#8211;invent-instance)<br/>
+          invent a new study UID after n series have been sent<br/>
+          (default: 50)<br/>
+  +IP   &#8211;invent-patient  [n]umber: integer (implies &#8211;invent-instance)<br/>
+          invent a new patient ID and name after n studies have been sent<br/>
           (default: 25)</p>
 <h3>transport layer security (TLS) options</h3>
 <pre><code>
@@ -312,7 +312,7 @@ RLELosslessTransferSyntax                            1.2.840.10008.1.2.5
 <p> The <code>storescu</code> utility will attempt to load DICOM data dictionaries specified in the <i>DCMDICTPATH</i> environment variable. By default, i.e. if the <i>DCMDICTPATH</i> environment variable is not set, the file <i>&lt;datadir&gt;/dicom.dic</i> will be loaded unless the dictionary is built into the application (default for Windows). </p>
 <p> The default behaviour should be preferred and the <i>DCMDICTPATH</i> environment variable only used when alternative data dictionaries are required. The <i>DCMDICTPATH</i> environment variable has the same format as the Unix shell <i>PATH</i> variable in that a colon (&#8216;:&#8217;) separates entries. On Windows systems, a semicolon (&#8216;;&#8217;) is used as a separator. The data dictionary code will attempt to load each file specified in the <i>DCMDICTPATH</i> environment variable. It is an error if no data dictionary can be loaded.</p>
 <h2>FILES</h2>
-<p> <i>&lt;docdir&gt;/asconfig.txt</i> &#8211; configuration file documentation<br />
+<p> <i>&lt;docdir&gt;/asconfig.txt</i> &#8211; configuration file documentation<br/>
  <i>&lt;etcdir&gt;/storescu.cfg</i> &#8211; example association negotiation profile</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-storescp/">storescp</a></code>(1)</p>

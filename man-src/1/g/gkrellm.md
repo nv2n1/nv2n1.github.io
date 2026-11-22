@@ -286,7 +286,7 @@ sudo /bin/umount /mnt/A
 <p> A battery low level warning and alarm alert may be set. If battery time is not available from the OS and the estimate time mode is not set, the alert units will be battery percent level. Otherwise the alert units will be battery time left in minutes. If OS battery time is not available and the estimate time mode is set when the alert is created, the alert will have units of time left in minutes and the alert will automatically be destroyed if the estimate time option is subsequently turned off. </p>
 <p> If the OS reports multiple batteries, the alert will be a master alert which is duplicated for each battery. </p>
 <h3>CPU/Motherboard Sensors &#8211; Temperature, Voltages, and Fan RPM</h3>
-<p> <code>Linux:</code><br />
+<p> <code>Linux:</code><br/>
  Sensor monitoring on Linux requires that either lm_sensors modules are installed in your running kernel, that you run a kernel &gt;= 2.6 with sysfs sensors configured, or, for i386 architectures, that you have the mbmon daemon running when <code>gkrellm</code> is started (as long as mbmon supports reporting sensor values for your motherboard). </p>
 <p> For lm_sensors to be used, <code>gkrellm</code> must be compiled with libsensors support. It will be if the libsensors development package is installed when <code>gkrellm</code> is compiled. Using libsensors is the preferred interface on Linux since it is the only interface that will be up to date on supporting correct voltage scaling factors and offsets for recent sensor chips. </p>
 <p> If the mbmon daemon is used, it must be started before <code>gkrellm</code> like so: </p>
@@ -325,13 +325,13 @@ make without-libsensors=yes
 </dd></dl>
 <p> Disk temperatures may also be monitored if you have the hddtemp daemon running when <code>gkrellm</code> is started. <code>gkrellm</code> uses the default hddtemp port of 7634. Like mbmon, hddtemp is best started in a boot script to guarantee it will be running when <code>gkrellm</code> is started. </p>
 <p> NVIDIA graphics card GPU temperatures may also be monitored if the nvidia-settings command is installed and your Nvidia card supports the temperature reporting. If nvidia-settings is not installed or does not report temperatures for your card, an option for using the nvclock program will appear in the Sensors config. Nvclock use is not automatically enabled as is nvidia-settings because nvclock can add seconds of <code>gkrellm</code> startup time when used on a NVIDIA GPU chipset it does not support. GKrellM must be restarted to recognize changes for the nvclock option. </p>
-<p> <code>Windows:</code><br />
+<p> <code>Windows:</code><br/>
  Requires a MBM install: <i><a rel="nofollow" href="http://mbm.livewiredev.com/.">http://mbm.livewiredev.com/.</a></i> </p>
-<p> <code>FreeBSD:</code><br />
+<p> <code>FreeBSD:</code><br/>
  Builtin sensor reporting is available for some sensor chips. FreeBSD systems can also read sensor data from the mbmon daemon as described in the Linux section above. </p>
-<p> <code>NetBSD:</code><br />
+<p> <code>NetBSD:</code><br/>
  Builtin sensor reporting is available for some sensor chips. NetBSD uses the envsys(4) interface and sensors reading is automatically enabled if you have either a lm(4) or viaenv(4) chip configured in your kernel. </p>
-<p> <code>General Setup:</code><br />
+<p> <code>General Setup:</code><br/>
  Temperature and fan sensor displays may be optionally located on the CPU or Proc panels to save some vertical space while voltages are always displayed on their own panel. If you set up to monitor both a temperature and a fan on a single CPU or Proc panel, they can be displayed optionally as an alternating single display or as separate displays. If separate, the fan display will replace the panel label. The configuration for this is under the CPU and Proc config pages. </p>
 <p> If not using libsensors, in the Setup page for the Sensors config enter any correction factors and offsets for each of the sensors you are monitoring (see below and lm_sensor documentation). For Linux, default values are automatically provided for many sensor chips. </p>
 <p> But if using libsenors, it is not possible to enter correction factors and offsets on the Sensors config page because libsensors configuration is done in the /etc/sensors.conf file. To get sensor debug output and to find out the sensor data source, run: </p>
@@ -376,7 +376,7 @@ From : s - S1 t - T1-- -- -- = -- -- --S2 - S1 T2 - T1 T2 - T1 S2 *T1 - S1 *T2 t
 </code></pre>
 </dd></dl>
 <h3>Voltage Sensor Corrections</h3>
-<p> You need to read this section only if you think the default voltage correction factors and offsets are incorrect. For Linux and lm_sensors and sysfs sensors<br />
+<p> You need to read this section only if you think the default voltage correction factors and offsets are incorrect. For Linux and lm_sensors and sysfs sensors<br/>
 &nbsp;<wbr>this would be if <code>gkrellm</code> does not know about your particular sensor chip. For MBM with Windows, the default values should be correct. </p>
 <p> Motherboard voltage measurements are made by a variety of sensor chips which are capable of measuring a small positive voltage. GKrellM can display these voltage values and can apply a correction factor, offset, and for the negative voltages of some chips (lm80), a level shifting reference voltage to the displayed voltage. There are four cases to consider: </p>
 <dl>
@@ -391,7 +391,7 @@ From : s - S1 t - T1-- -- -- = -- -- --S2 - S1 T2 - T1 T2 - T1 S2 *T1 - S1 *T2 t
 <dl>
 <dt>
 </dt><dd>
-For cases 2 and 3, the sensor chip input network looks like : Vs o&#8211; &#8212; /\/\/ &#8212; -o&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; -o Vin R1 |<br />
+For cases 2 and 3, the sensor chip input network looks like : Vs o&#8211; &#8212; /\/\/ &#8212; -o&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; -o Vin R1 |<br/>
                        o&#8211; /\/\/ &#8211;o Vref R2
 </dd></dl>
 <dl>

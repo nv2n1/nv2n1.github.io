@@ -11,8 +11,8 @@ description: "csqrt, csqrtf, csqrtl – complex square root"
 <p> csqrt, csqrtf, csqrtl &#8211; complex square root </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex csqrt(double complex </code><i>z</i><code>);</code><br />
- <code>float complex csqrtf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex csqrt(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex csqrtf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex csqrtl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

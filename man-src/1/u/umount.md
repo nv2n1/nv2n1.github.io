@@ -20,12 +20,12 @@ description: "umount.ecryptfs_private – eCryptfs private unmount helper."
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>umount.ecryptfs_private</code> is a mount helper utility for non-root users to unmount a cryptographically mounted private directory, ~/Private. </p>
-<p> If, and only if:<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; the private mount passphrase is in their kernel keyring, and<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; the current user owns both&nbsp;<wbr>~/.Private and&nbsp;<wbr>~/Private, and<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>~/.Private is currently mounted on&nbsp;<wbr>~/Private<br />
+<p> If, and only if:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; the private mount passphrase is in their kernel keyring, and<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; the current user owns both&nbsp;<wbr>~/.Private and&nbsp;<wbr>~/Private, and<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>~/.Private is currently mounted on&nbsp;<wbr>~/Private<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211; the mount counter is 0&nbsp;<wbr>(counter is ignored if -f option is used) </p>
-<p> This program will:<br />
+<p> This program will:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211; unmount&nbsp;<wbr>~/Private </p>
 <p> The only setuid operationis in this program are the call to <code>umount</code> and updating <code>/etc/mtab</code>. </p>
 <p> The system administrator can add the pam_ecryptfs.so module to the PAM stack and automatically perform the unmount on logout. See <code><a href="/docs/linux/man/8-pam_ecryptfs/">pam_ecryptfs</a></code>(8). </p>

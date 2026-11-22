@@ -12,10 +12,10 @@ description: "cimmofl – compile MOF files into the CIM Repository"
 <h2>SYNOPSIS</h2>
 <p> <code>cimmofl</code> <code>-h</code> | <code>&#8211;help</code> </p>
 <p> <code>cimmofl</code> <code>&#8211;version</code> </p>
-<p> <code>cimmofl</code> [ <code>-w</code> ] [ <code>-E</code> ] [ <code>-uc</code> ] [ <code>-aE | -aV | -aEV</code> ] [ <code>-I</code> path ]<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-n</code>&nbsp;<wbr>namespace |&nbsp;<wbr><code>&#8211;namespace</code>&nbsp;<wbr>namespace&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;xml</code>&nbsp;<wbr>]&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;trace</code>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-R</code>&nbsp;<wbr>repositorydir&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;CIMRepository</code>&nbsp;<wbr>repositorydir&nbsp;<wbr>]<br />
+<p> <code>cimmofl</code> [ <code>-w</code> ] [ <code>-E</code> ] [ <code>-uc</code> ] [ <code>-aE | -aV | -aEV</code> ] [ <code>-I</code> path ]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-n</code>&nbsp;<wbr>namespace |&nbsp;<wbr><code>&#8211;namespace</code>&nbsp;<wbr>namespace&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;xml</code>&nbsp;<wbr>]&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;trace</code>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-R</code>&nbsp;<wbr>repositorydir&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;CIMRepository</code>&nbsp;<wbr>repositorydir&nbsp;<wbr>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-N</code>&nbsp;<wbr>repositoryname&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-M</code>&nbsp;<wbr>repositorymode&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>mof_file &#8230;&nbsp;<wbr>]</p>
 <h3>Remarks</h3>
 <p> Only a superuser or user with write access to the default or specified namespace can run the <code>cimmofl</code> command to compile MOFs in the CIM Repository. </p>
@@ -89,8 +89,8 @@ description: "cimmofl – compile MOF files into the CIM Repository"
 </dl>
 <p> When an error occurs, an error message is written to stderr and an error value of 1 is returned.</p>
 <h2>USAGE NOTE</h2>
-<p> Warning: Use of <code>cimmofl</code> can corrupt the CIM Server Repository.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>cimmofl</code>&nbsp;<wbr>should only be used under very controlled situations.<br />
+<p> Warning: Use of <code>cimmofl</code> can corrupt the CIM Server Repository.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>cimmofl</code>&nbsp;<wbr>should only be used under very controlled situations.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>cimmof</code>&nbsp;<wbr>is the recommended OpenPegasus MOF compiler.</p>
 <h2>DIAGNOSTICS</h2>
 <p> <code>Error trying to create Repository in path localhost:5988: Cannot connect to: localhost:5988 Failed to set DefaultNamespacePath.</code></p>

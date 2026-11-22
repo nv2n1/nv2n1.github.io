@@ -105,7 +105,7 @@ Alias:          (control-D here indicates end of entries)
 <dd> isdnmon: used internally by isdnmon to get alias info. </dd>
 </dl>
 <h2>AUTHOR</h2>
-<p> Andreas Kool &lt;akool [at] isdn4linux.de&gt;<br />
+<p> Andreas Kool &lt;akool [at] isdn4linux.de&gt;<br/>
  manpage adapted from the README by Paul Slootman &lt;paul [at] isdn4linux.de&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-callerid-conf/">callerid.conf</a></i>(5), <i><a href="/docs/linux/man/8-isdnlog/">isdnlog</a></i>(8) </p>

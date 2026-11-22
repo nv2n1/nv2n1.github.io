@@ -10,7 +10,7 @@ description: "XkbChangeTypesOfKey – Change the number of groups and the types 
 <p>XkbChangeTypesOfKey &#8211; Change the number of groups and the types bound to a key </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbChangeTypesOfKey</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>int </code><i>key</i><code>,</code> <code>int </code><i>n_groups</i><code>,</code> <code>unsigned int </code><i>groups</i><code>,</code> <code>int *</code><i>new_types_in</i><code>,</code> <code>XkbMapChangesPtr </code><i>p_changes</i><code>);</code><br />
+<dt> <code>Status XkbChangeTypesOfKey</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>int </code><i>key</i><code>,</code> <code>int </code><i>n_groups</i><code>,</code> <code>unsigned int </code><i>groups</i><code>,</code> <code>int *</code><i>new_types_in</i><code>,</code> <code>XkbMapChangesPtr </code><i>p_changes</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

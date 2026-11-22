@@ -9,16 +9,16 @@ description: "ql/math/distributions/normaldistribution.hpp – normal, cumulativ
 
 <p>ql/math/distributions/normaldistribution.hpp &#8211; normal, cumulative and inverse cumulative distributions </p>
 <h2>Synopsis</h2>
-<p>#include &lt;ql/math/errorfunction.hpp&gt;<br />
+<p>#include &lt;ql/math/errorfunction.hpp&gt;<br/>
  #include &lt;ql/errors.hpp&gt; </p>
 <h3>Classes</h3>
-<p>class <code>NormalDistribution</code><br />
- <i>Normal distribution function. </i><br />
- class <code>CumulativeNormalDistribution</code><br />
- <i>Cumulative normal distribution function. </i><br />
- class <code>InverseCumulativeNormal</code><br />
- <i>Inverse cumulative normal distribution function. </i><br />
- class <code>MoroInverseCumulativeNormal</code><br />
+<p>class <code>NormalDistribution</code><br/>
+ <i>Normal distribution function. </i><br/>
+ class <code>CumulativeNormalDistribution</code><br/>
+ <i>Cumulative normal distribution function. </i><br/>
+ class <code>InverseCumulativeNormal</code><br/>
+ <i>Inverse cumulative normal distribution function. </i><br/>
+ class <code>MoroInverseCumulativeNormal</code><br/>
  <i>Moro Inverse cumulative normal distribution class. </i></p>
 <h3>Typedefs</h3>
 <p>typedef NormalDistribution <code>GaussianDistribution</code> </p>

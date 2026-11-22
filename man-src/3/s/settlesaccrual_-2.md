@@ -13,21 +13,21 @@ description: "QuantLib::CreditDefaultSwap – Credit default swap."
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors</code><br />
+<p><code>Constructors</code><br/>
  void setupExpired () const</p>
 <p>Protected Attributes <code>Instrument interface</code> </p>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  void <code>setupArguments</code> (PricingEngine::arguments *) const </p>
-<p> void <code>fetchResults</code> (const PricingEngine::results *) const<br />
+<p> void <code>fetchResults</code> (const PricingEngine::results *) const<br/>
  <code>Inspectors</code> </p>
 <p> Protection::Side <code>side</code> () const </p>
 <p> Real <code>notional</code> () const </p>
 <p> <code>Rate</code> <code>spread</code> () const </p>
 <p> bool <code>settlesAccrual</code> () const </p>
 <p> bool <code>paysAtDefaultTime</code> () const </p>
-<p> const Leg &amp; <code>coupons</code> () const<br />
- <code>Results</code><br />
+<p> const Leg &amp; <code>coupons</code> () const<br/>
+ <code>Results</code><br/>
  void setupExpired () const</p>
 <p>Protected Attributes <code>Instrument interface</code> </p>
 <pre><code>void setupExpired () const

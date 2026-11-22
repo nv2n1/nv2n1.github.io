@@ -13,56 +13,56 @@ description: "ANTLR3_RECOGNIZER_SHARED_STATE_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3recognizersharedstate.h">antlr3recognizersharedstate.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> <code>ANTLR3_INT32</code> <code>backtracking</code><br />
- <i>If 0, no backtracking is going on. </i><br />
- <code>ANTLR3_UINT32</code> <code>channel</code><br />
- <i>The channel number for the current token. </i><br />
+<p> <code>ANTLR3_INT32</code> <code>backtracking</code><br/>
+ <i>If 0, no backtracking is going on. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>channel</code><br/>
+ <i>The channel number for the current token. </i><br/>
  void * <code>custom</code> </p>
-<p> <code>ANTLR3_BOOLEAN</code> <code>error</code><br />
- <i>If set to ANTLR3_TRUE then the recognizer has an exception condition (this is tested by the generated code for the rules of the grammar). </i><br />
- <code>ANTLR3_UINT32</code> <code>errorCount</code><br />
- <i>When the recognizer terminates, the error handling functions will have incremented this value if any error occurred (that was displayed). </i><br />
- <code>ANTLR3_BOOLEAN</code> <code>errorRecovery</code><br />
- <i>This is true when we see an error and before having successfully matched a token. </i><br />
- <code>pANTLR3_EXCEPTION</code> <code>exception</code><br />
- <i>Points to the first in a possible chain of exceptions that the recognizer has discovered. </i><br />
- <code>ANTLR3_BOOLEAN</code> <code>failed</code><br />
- <i>In lieu of a return value, this indicates that a rule or token has failed to match. </i><br />
- <code>pANTLR3_STACK</code> <code>following</code><br />
- <i>Track the set of token types that can follow any rule invocation. </i><br />
- <code>ANTLR3_MARKER</code> <code>lastErrorIndex</code><br />
- <i>The index into the input stream where the last error occurred. </i><br />
- <code>pANTLR3_VECTOR</code> <code>rStreams</code><br />
- <i>A stack of token/tree rewrite streams that are available for use by a parser or tree parser that is using rewrites to generate an AST. </i><br />
- <code>pANTLR3_INT_TRIE</code> <code>ruleMemo</code><br />
- <i>ANTLR3_VECTOR of ANTLR3_LIST for rule memoizing. </i><br />
- <code>ANTLR3_UINT32</code> <code>sizeHint</code><br />
- <i>Track around a hint from the creator of the recognizer as to how big this thing is going to get, as the actress said to the bishop. </i><br />
- <code>pANTLR3_STACK</code> <code>streams</code><br />
- <i>Input stream stack, which allows the C programmer to switch input streams easily and allow the standard </i><code>nextToken()</code> implementation to deal with it as this is a common requirement.<br />
- <code>pANTLR3_STRING</code> <code>text</code><br />
- <i>Text for the current token. </i><br />
- <code>pANTLR3_COMMON_TOKEN</code> <code>token</code><br />
- <i>The goal of all lexer rules/methods is to create a token object. </i><br />
- <code>pANTLR3_UINT8</code> * <code>tokenNames</code><br />
- <i>Pointer to an array of token names that are generally useful in error reporting. </i><br />
- <code>ANTLR3_MARKER</code> <code>tokenStartCharIndex</code><br />
- <i>What character index in the stream did the current token start at? Needed, for example, to get the text for current token. </i><br />
- <code>ANTLR3_INT32</code> <code>tokenStartCharPositionInLine</code><br />
- <i>The character position of the first character of the current token within the line specified by tokenStartLine. </i><br />
- <code>ANTLR3_INT32</code> <code>tokenStartLine</code><br />
- <i>The input line (where it makes sense) on which the first character of the current token resides. </i><br />
- <code>pANTLR3_TOKEN_FACTORY</code> <code>tokFactory</code><br />
- <i>The goal of all lexer rules being to create a token, then a lexer needs to build a token factory to create them. </i><br />
- <code>pANTLR3_TOKEN_SOURCE</code> <code>tokSource</code><br />
- <i>A lexer is a source of tokens, produced by all the generated (or hand crafted if you like) matching rules. </i><br />
- <code>ANTLR3_UINT32</code> <code>type</code><br />
- <i>The token type for the current token. </i><br />
- <code>ANTLR3_UINT32</code> <code>user1</code><br />
- <i>User controlled variables that will be installed in a newly created token. </i><br />
+<p> <code>ANTLR3_BOOLEAN</code> <code>error</code><br/>
+ <i>If set to ANTLR3_TRUE then the recognizer has an exception condition (this is tested by the generated code for the rules of the grammar). </i><br/>
+ <code>ANTLR3_UINT32</code> <code>errorCount</code><br/>
+ <i>When the recognizer terminates, the error handling functions will have incremented this value if any error occurred (that was displayed). </i><br/>
+ <code>ANTLR3_BOOLEAN</code> <code>errorRecovery</code><br/>
+ <i>This is true when we see an error and before having successfully matched a token. </i><br/>
+ <code>pANTLR3_EXCEPTION</code> <code>exception</code><br/>
+ <i>Points to the first in a possible chain of exceptions that the recognizer has discovered. </i><br/>
+ <code>ANTLR3_BOOLEAN</code> <code>failed</code><br/>
+ <i>In lieu of a return value, this indicates that a rule or token has failed to match. </i><br/>
+ <code>pANTLR3_STACK</code> <code>following</code><br/>
+ <i>Track the set of token types that can follow any rule invocation. </i><br/>
+ <code>ANTLR3_MARKER</code> <code>lastErrorIndex</code><br/>
+ <i>The index into the input stream where the last error occurred. </i><br/>
+ <code>pANTLR3_VECTOR</code> <code>rStreams</code><br/>
+ <i>A stack of token/tree rewrite streams that are available for use by a parser or tree parser that is using rewrites to generate an AST. </i><br/>
+ <code>pANTLR3_INT_TRIE</code> <code>ruleMemo</code><br/>
+ <i>ANTLR3_VECTOR of ANTLR3_LIST for rule memoizing. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>sizeHint</code><br/>
+ <i>Track around a hint from the creator of the recognizer as to how big this thing is going to get, as the actress said to the bishop. </i><br/>
+ <code>pANTLR3_STACK</code> <code>streams</code><br/>
+ <i>Input stream stack, which allows the C programmer to switch input streams easily and allow the standard </i><code>nextToken()</code> implementation to deal with it as this is a common requirement.<br/>
+ <code>pANTLR3_STRING</code> <code>text</code><br/>
+ <i>Text for the current token. </i><br/>
+ <code>pANTLR3_COMMON_TOKEN</code> <code>token</code><br/>
+ <i>The goal of all lexer rules/methods is to create a token object. </i><br/>
+ <code>pANTLR3_UINT8</code> * <code>tokenNames</code><br/>
+ <i>Pointer to an array of token names that are generally useful in error reporting. </i><br/>
+ <code>ANTLR3_MARKER</code> <code>tokenStartCharIndex</code><br/>
+ <i>What character index in the stream did the current token start at? Needed, for example, to get the text for current token. </i><br/>
+ <code>ANTLR3_INT32</code> <code>tokenStartCharPositionInLine</code><br/>
+ <i>The character position of the first character of the current token within the line specified by tokenStartLine. </i><br/>
+ <code>ANTLR3_INT32</code> <code>tokenStartLine</code><br/>
+ <i>The input line (where it makes sense) on which the first character of the current token resides. </i><br/>
+ <code>pANTLR3_TOKEN_FACTORY</code> <code>tokFactory</code><br/>
+ <i>The goal of all lexer rules being to create a token, then a lexer needs to build a token factory to create them. </i><br/>
+ <code>pANTLR3_TOKEN_SOURCE</code> <code>tokSource</code><br/>
+ <i>A lexer is a source of tokens, produced by all the generated (or hand crafted if you like) matching rules. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>type</code><br/>
+ <i>The token type for the current token. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>user1</code><br/>
+ <i>User controlled variables that will be installed in a newly created token. </i><br/>
  <code>ANTLR3_UINT32</code> <code>user2</code> </p>
 <p> <code>ANTLR3_UINT32</code> <code>user3</code> </p>
-<p> void * <code>userp</code><br />
+<p> void * <code>userp</code><br/>
  <i>User programmable pointer that can be used for instance as a place to store some tracking structure specific to the grammar that would not normally be available to the error handling functions. </i></p>
 <h2>Detailed Description</h2>
 <p> All the data elements required to track the current state of any recognizer (lexer, parser, tree parser). </p>

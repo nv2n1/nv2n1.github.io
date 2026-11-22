@@ -55,23 +55,23 @@ description: "o2cb – Default cluster stack for the OCFS2 file system."
 <dt><code>Network Reconnect Delay</code></dt>
 <dd>The Network Reconnect specifies the minimum delay in milliseconds between connection attempts. It defaults to 2000 ms.</dd></dl>
 <h2>Examples</h2>
-<p>A sample /etc/ocfs2/cluster.conf. cluster:<br />
-&nbsp;<wbr>node_count&nbsp;<wbr>=&nbsp;<wbr>3<br />
-&nbsp;<wbr>name&nbsp;<wbr>=&nbsp;<wbr>webcluster node:<br />
-&nbsp;<wbr>ip_port&nbsp;<wbr>=&nbsp;<wbr>7777<br />
-&nbsp;<wbr>ip_address&nbsp;<wbr>=&nbsp;<wbr>192.168.0.107<br />
-&nbsp;<wbr>number&nbsp;<wbr>=&nbsp;<wbr>7<br />
-&nbsp;<wbr>name&nbsp;<wbr>=&nbsp;<wbr>node7<br />
-&nbsp;<wbr>cluster&nbsp;<wbr>=&nbsp;<wbr>webcluster node:<br />
-&nbsp;<wbr>ip_port&nbsp;<wbr>=&nbsp;<wbr>7777<br />
-&nbsp;<wbr>ip_address&nbsp;<wbr>=&nbsp;<wbr>192.168.0.106<br />
-&nbsp;<wbr>number&nbsp;<wbr>=&nbsp;<wbr>6<br />
-&nbsp;<wbr>name&nbsp;<wbr>=&nbsp;<wbr>node6<br />
-&nbsp;<wbr>cluster&nbsp;<wbr>=&nbsp;<wbr>webcluster node:<br />
-&nbsp;<wbr>ip_port&nbsp;<wbr>=&nbsp;<wbr>7777<br />
-&nbsp;<wbr>ip_address&nbsp;<wbr>=&nbsp;<wbr>192.168.0.110<br />
-&nbsp;<wbr>number&nbsp;<wbr>=&nbsp;<wbr>10<br />
-&nbsp;<wbr>name&nbsp;<wbr>=&nbsp;<wbr>node10<br />
+<p>A sample /etc/ocfs2/cluster.conf. cluster:<br/>
+&nbsp;<wbr>node_count&nbsp;<wbr>=&nbsp;<wbr>3<br/>
+&nbsp;<wbr>name&nbsp;<wbr>=&nbsp;<wbr>webcluster node:<br/>
+&nbsp;<wbr>ip_port&nbsp;<wbr>=&nbsp;<wbr>7777<br/>
+&nbsp;<wbr>ip_address&nbsp;<wbr>=&nbsp;<wbr>192.168.0.107<br/>
+&nbsp;<wbr>number&nbsp;<wbr>=&nbsp;<wbr>7<br/>
+&nbsp;<wbr>name&nbsp;<wbr>=&nbsp;<wbr>node7<br/>
+&nbsp;<wbr>cluster&nbsp;<wbr>=&nbsp;<wbr>webcluster node:<br/>
+&nbsp;<wbr>ip_port&nbsp;<wbr>=&nbsp;<wbr>7777<br/>
+&nbsp;<wbr>ip_address&nbsp;<wbr>=&nbsp;<wbr>192.168.0.106<br/>
+&nbsp;<wbr>number&nbsp;<wbr>=&nbsp;<wbr>6<br/>
+&nbsp;<wbr>name&nbsp;<wbr>=&nbsp;<wbr>node6<br/>
+&nbsp;<wbr>cluster&nbsp;<wbr>=&nbsp;<wbr>webcluster node:<br/>
+&nbsp;<wbr>ip_port&nbsp;<wbr>=&nbsp;<wbr>7777<br/>
+&nbsp;<wbr>ip_address&nbsp;<wbr>=&nbsp;<wbr>192.168.0.110<br/>
+&nbsp;<wbr>number&nbsp;<wbr>=&nbsp;<wbr>10<br/>
+&nbsp;<wbr>name&nbsp;<wbr>=&nbsp;<wbr>node10<br/>
 &nbsp;<wbr>cluster&nbsp;<wbr>=&nbsp;<wbr>webcluster </p>
 <h2>See Also</h2>
 <p><code>mkfs.ocfs2(8)</code> <code>fsck.ocfs2(8)</code> <code>tunefs.ocfs2(8)</code> <code>debugfs.ocfs2(8)</code> <code><a href="/docs/linux/man/8-ocfs2console/">ocfs2console</a>(8)</code> </p>

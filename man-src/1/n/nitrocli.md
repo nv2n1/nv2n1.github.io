@@ -136,11 +136,11 @@ description: "nitrocli – access Nitrokey devices"
 <dd> If set to true, do not cache any inquired secrets (boolean, default: false, see <code>&#8211;no-cache</code>).</dd>
 <dt><code>verbosity</code></dt>
 <dd> Set the log level (integer, default: 0, see <code>&#8211;verbose</code>).</dd></dl>
-<p> The configuration file must use the TOML format, for example:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;model&nbsp;=&nbsp;&quot;pro&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;serial_numbers&nbsp;=&nbsp;[&quot;0xf00baa&quot;,&nbsp;&quot;deadbeef&quot;]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;usb_path&nbsp;=&nbsp;&quot;0001:0006:02&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no_cache&nbsp;=&nbsp;false<br />
+<p> The configuration file must use the TOML format, for example:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;model&nbsp;=&nbsp;&quot;pro&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;serial_numbers&nbsp;=&nbsp;[&quot;0xf00baa&quot;,&nbsp;&quot;deadbeef&quot;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;usb_path&nbsp;=&nbsp;&quot;0001:0006:02&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no_cache&nbsp;=&nbsp;false<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;verbosity&nbsp;=&nbsp;0 </p>
 <h2>ENVIRONMENT</h2>
 <p> The program honors two sets of environment variables, all prefixed by &quot;NITROCLI_&quot;.</p>
@@ -194,50 +194,50 @@ description: "nitrocli – access Nitrokey devices"
 </dl>
 <h2>EXAMPLES</h2>
 <h3>Storage</h3>
-<p> Create a hidden volume in the first available slot, starting at half the size of the encrypted volume (i.e., 50%) and stretching all the way to its end (100%):<br />
+<p> Create a hidden volume in the first available slot, starting at half the size of the encrypted volume (i.e., 50%) and stretching all the way to its end (100%):<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli hidden create 0 50 100</code> </p>
 <h3>One-time passwords</h3>
-<p> Configure a one-time password slot with a hexadecimal secret representation:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 0 test-rfc4226 3132333435363738393031323334353637383930 &#8211;format hex &#8211;algorithm hotp</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 1 test-foobar 666F6F626172 &#8211;format hex &#8211;algorithm hotp</code><br />
+<p> Configure a one-time password slot with a hexadecimal secret representation:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 0 test-rfc4226 3132333435363738393031323334353637383930 &#8211;format hex &#8211;algorithm hotp</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 1 test-foobar 666F6F626172 &#8211;format hex &#8211;algorithm hotp</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 0 test-rfc6238 3132333435363738393031323334353637383930 &#8211;format hex &#8211;algorithm totp &#8211;digits 8</code> </p>
-<p> Configure a one-time password slot with an ASCII secret representation:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 0 test-rfc4226 12345678901234567890 &#8211;format ascii &#8211;algorithm hotp</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 1 test-foobar foobar &#8211;format ascii &#8211;algorithm hotp</code><br />
+<p> Configure a one-time password slot with an ASCII secret representation:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 0 test-rfc4226 12345678901234567890 &#8211;format ascii &#8211;algorithm hotp</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 1 test-foobar foobar &#8211;format ascii &#8211;algorithm hotp</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 0 test-rfc6238 12345678901234567890 &#8211;format ascii &#8211;algorithm totp &#8211;digits 8</code> </p>
-<p> Configure a one-time password slot with a base32 secret representation:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 0 test-rfc4226 gezdgnbvgy3tqojqgezdgnbvgy3tqojq &#8211;algorithm hotp</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 1 test-foobar mzxw6ytboi======&nbsp;&#8211;algorithm hotp</code><br />
+<p> Configure a one-time password slot with a base32 secret representation:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 0 test-rfc4226 gezdgnbvgy3tqojqgezdgnbvgy3tqojq &#8211;algorithm hotp</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 1 test-foobar mzxw6ytboi======&nbsp;&#8211;algorithm hotp</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp set 0 test-rfc6238 gezdgnbvgy3tqojqgezdgnbvgy3tqojq &#8211;algorithm totp &#8211;digits 8</code> </p>
-<p> Generate a one-time password:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp get 0 &#8211;algorithm hotp</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;755224<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp get 0 &#8211;algorithm totp &#8211;time 1234567890</code><br />
+<p> Generate a one-time password:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp get 0 &#8211;algorithm hotp</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;755224<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp get 0 &#8211;algorithm totp &#8211;time 1234567890</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;89005924 </p>
-<p> Clear a one-time password slot:<br />
+<p> Clear a one-time password slot:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli otp clear 0 &#8211;algorithm hotp</code> </p>
 <h3>Configuration</h3>
-<p> Query the configuration:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli config get</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Config:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;numlock binding:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;not set<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;capslock binding:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;not set<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;scrollock binding:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;not set<br />
+<p> Query the configuration:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli config get</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Config:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;numlock binding:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;not set<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;capslock binding:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;not set<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;scrollock binding:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;not set<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;require user PIN for OTP: true </p>
-<p> Change the configuration:<br />
+<p> Change the configuration:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli config set &#8211;otp-pin</code> </p>
 <h3>Password safe</h3>
-<p> Configure a PWS slot:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli pws add example.org john.doe passw0rd</code><br />
+<p> Configure a PWS slot:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli pws add example.org john.doe passw0rd</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Added PWS slot 0 </p>
-<p> Get the data from a slot:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli pws get 0</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;name:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;example.org<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;login:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;john.doe<br />
+<p> Get the data from a slot:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli pws get 0</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;name:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;example.org<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;login:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;john.doe<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;password: passw0rd </p>
-<p> Copy the password to the clipboard (requires <code><a href="/docs/linux/man/1-xclip/">xclip</a></code>(1)).<br />
+<p> Copy the password to the clipboard (requires <code><a href="/docs/linux/man/1-xclip/">xclip</a></code>(1)).<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>nitrocli pws get 0 &#8211;password &#8211;quiet | xclip -in</code> </p>
-<p> Query the PWS slots:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>&nbsp;nitrocli pws status</code><br />
+<p> Query the PWS slots:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>&nbsp;nitrocli pws status</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;slot<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>name</p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>example.org</p>

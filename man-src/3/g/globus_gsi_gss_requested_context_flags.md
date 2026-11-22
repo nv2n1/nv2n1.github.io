@@ -11,15 +11,15 @@ description: "Request Flags –"
 <p> Request Flags &#8211; </p>
 <p> Request Flags.</p>
 <h3>Macros</h3>
-<p> #define <code>GSS_C_GLOBUS_DONT_ACCEPT_LIMITED_PROXY_FLAG</code><br />
- <i>No limited proxy flag. </i><br />
- #define <code>GSS_C_GLOBUS_DELEGATE_LIMITED_PROXY_FLAG</code><br />
- <i>Delegate Limited Proxy Flag. </i><br />
- #define <code>GSS_C_GLOBUS_ACCEPT_PROXY_SIGNED_BY_LIMITED_PROXY_FLAG</code><br />
- <i>Accept Proxy Signed By Limited Proxy Flag. </i><br />
- #define <code>GSS_C_GLOBUS_ALLOW_MISSING_SIGNING_POLICY</code><br />
- <i>Allow Missing Signing Policy Flag. </i><br />
- #define <code>GSS_C_GLOBUS_FORCE_SSL3</code><br />
+<p> #define <code>GSS_C_GLOBUS_DONT_ACCEPT_LIMITED_PROXY_FLAG</code><br/>
+ <i>No limited proxy flag. </i><br/>
+ #define <code>GSS_C_GLOBUS_DELEGATE_LIMITED_PROXY_FLAG</code><br/>
+ <i>Delegate Limited Proxy Flag. </i><br/>
+ #define <code>GSS_C_GLOBUS_ACCEPT_PROXY_SIGNED_BY_LIMITED_PROXY_FLAG</code><br/>
+ <i>Accept Proxy Signed By Limited Proxy Flag. </i><br/>
+ #define <code>GSS_C_GLOBUS_ALLOW_MISSING_SIGNING_POLICY</code><br/>
+ <i>Allow Missing Signing Policy Flag. </i><br/>
+ #define <code>GSS_C_GLOBUS_FORCE_SSL3</code><br/>
  <i>Force SSLv3 Flag. </i></p>
 <h2>Detailed Description</h2>
 <p> Request Flags. </p>

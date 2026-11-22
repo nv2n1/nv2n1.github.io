@@ -10,8 +10,8 @@ description: "perlreref – Perl Regular Expressions Reference"
 
 <p> perlreref - Perl Regular Expressions Reference </p>
 <h2>DESCRIPTION</h2>
-<p> This is a quick reference to Perl&#8217;s regular expressions. For full information see perlre and perlop, as well as the ``<font SIZE="-1">SEE ALSO&#8217;&#8216;</font> section in this document.  </p>
-<font SIZE="-1"></font><h3>OPERATORS</h3>
+<p> This is a quick reference to Perl&#8217;s regular expressions. For full information see perlre and perlop, as well as the ``SEE ALSO&#8217;&#8216; section in this document.  </p>
+<h3>OPERATORS</h3>
 <p> <code>&quot;=~&quot;</code> determines to which variable the regex is applied. In its absence, <code>$_</code> is used. </p>
 <pre><code>    $var =~ /foo/;
 </code></pre>
@@ -44,7 +44,7 @@ description: "perlreref – Perl Regular Expressions Reference"
 </code></pre>
 <p> &#8216;e&#8217; may be specified multiple times. &#8216;replacement&#8217; is interpreted as a double quoted string unless a single-quote (<code>&quot;&#8216;&quot;</code>) is the delimiter. </p>
 <p> <code>&quot;m?pattern?&quot;</code> is like <code>&quot;m/pattern/&quot;</code> but matches only once. No alternate delimiters can be used. Must be reset with <code>reset()</code>.  </p>
-<font SIZE="-1"></font><h3>SYNTAX</h3>
+<h3>SYNTAX</h3>
 <pre><code> \ Escapes the character immediately following it
  . Matches any single character except a newline (unless /s is
            used)
@@ -66,7 +66,7 @@ description: "perlreref – Perl Regular Expressions Reference"
  \k'name' Named backreference
  (?P=name) Named backreference (python syntax)
 </code></pre>
-<font SIZE="-1"></font><h3>ESCAPE SEQUENCES</h3>
+<h3>ESCAPE SEQUENCES</h3>
 <p> These work as in normal strings. </p>
 <pre><code>   \a Alarm (beep)
    \e Escape
@@ -93,7 +93,7 @@ description: "perlreref – Perl Regular Expressions Reference"
 <p> This one works differently from normal strings: </p>
 <pre><code>   \b An assertion, not backspace, except in a character class
 </code></pre>
-<font SIZE="-1"></font><h3>CHARACTER CLASSES</h3>
+<h3>CHARACTER CLASSES</h3>
 <pre><code>   [amy] Match 'a', 'm' or 'y'
    [f-j] Dash specifies &quot;range&quot;
    [f-j-] Dash escaped or at start or end means 'dash'
@@ -120,7 +120,7 @@ description: "perlreref – Perl Regular Expressions Reference"
    \P{...} Match lack of Unicode property with name longer than 1 char
    \X Match Unicode extended grapheme cluster
 </code></pre>
-<p> <font SIZE="-1">POSIX</font> character classes and their Unicode and Perl equivalents: </p>
+<p> POSIX character classes and their Unicode and Perl equivalents: </p>
 <pre><code>            ASCII- Full-
    POSIX range range backslash
  [[:...:]] \p{...} \p{...} sequence Description
@@ -157,7 +157,7 @@ description: "perlreref – Perl Regular Expressions Reference"
   [:digit:] \d \p{Digit}
   [:^digit:] \D \P{Digit}
 </code></pre>
-<font SIZE="-1"></font><h3>ANCHORS</h3>
+<h3>ANCHORS</h3>
 <p> All are zero-width assertions. </p>
 <pre><code>   ^ Match string start (or line, if /m is used)
    $ Match string end (or line, if /m is used) or before newline
@@ -171,7 +171,7 @@ description: "perlreref – Perl Regular Expressions Reference"
    \G Match where previous m//g left off
    \K Keep the stuff left of the \K, don't include it in $&amp;
 </code></pre>
-<font SIZE="-1"></font><h3>QUANTIFIERS</h3>
+<h3>QUANTIFIERS</h3>
 <p> Quantifiers are greedy by default and match the <code>longest</code> leftmost. </p>
 <pre><code>   Maximal Minimal Possessive Allowed range
    ------- ------- ---------- -------------
@@ -185,7 +185,7 @@ description: "perlreref – Perl Regular Expressions Reference"
 </code></pre>
 <p> The possessive forms (new in Perl 5.10) prevent backtracking: what gets matched by a pattern with a possessive quantifier will not be backtracked into, even if that causes the whole match to fail. </p>
 <p> There is no quantifier <code>&quot;{,n}&quot;</code>. That&#8217;s interpreted as a literal string.  </p>
-<font SIZE="-1"></font><h3>EXTENDED CONSTRUCTS</h3>
+<h3>EXTENDED CONSTRUCTS</h3>
 <pre><code>   (?#text) A comment
    (?:...) Groups subexpressions without capturing (cluster)
    (?pimsx-imsx:...) Enable/disable option (as per m// modifiers)
@@ -226,7 +226,7 @@ description: "perlreref – Perl Regular Expressions Reference"
                      (R&amp;name) true if recursing into named subpattern
                      (DEFINE) always false, no no-pattern allowed
 </code></pre>
-<font SIZE="-1"></font><h3>VARIABLES</h3>
+<h3>VARIABLES</h3>
 <pre><code>   $_ Default variable for operators to use
    $` Everything prior to matched string
    $&amp; Entire matched string
@@ -246,7 +246,7 @@ description: "perlreref – Perl Regular Expressions Reference"
    %- Named capture groups, as array refs
 </code></pre>
 <p> Captured groups are numbered according to their <i>opening</i> paren.  </p>
-<font SIZE="-1"></font><h3>FUNCTIONS</h3>
+<h3>FUNCTIONS</h3>
 <pre><code>   lc Lowercase a string
    lcfirst Lowercase first char of a string
    uc Uppercase a string
@@ -259,7 +259,7 @@ description: "perlreref – Perl Regular Expressions Reference"
    split Use a regex to split a string into parts
 </code></pre>
 <p> The first five of these are like the escape sequences <code>&quot;\L&quot;</code>, <code>&quot;\l&quot;</code>, <code>&quot;\U&quot;</code>, <code>&quot;\u&quot;</code>, and <code>&quot;\F&quot;</code>. For Titlecase, see ``Titlecase&#8217;&#8216;; For Foldcase, see ``Foldcase&#8217;&#8216;.  </p>
-<font SIZE="-1"></font><h3>TERMINOLOGY</h3>
+<h3>TERMINOLOGY</h3>
 <p> <i>Titlecase</i> </p>
 <p> Unicode concept which most often is equal to uppercase, but for certain characters like the German ``sharp s&#8217;&#8216; there is a difference. </p>
 <p> <i>Foldcase</i> </p>

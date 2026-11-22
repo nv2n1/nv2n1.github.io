@@ -137,7 +137,7 @@ description: "Attributes and Cntls –"
 <p> Used only where no specific service or port has been set. It overrides the range set in the GLOBUS_UDP_PORT_RANGE env variable. If &#8216;restrict port&#8217; is true, the listening port will be constrained to the range specified. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>listener_min_port</i> The lower bound on the listener port. (default 0 &#8212; no bound)<br />
+<dd><i>listener_min_port</i> The lower bound on the listener port. (default 0 &#8212; no bound)<br/>
  <i>listener_max_port</i> The upper bound on the listener port. (default 0 &#8212; no bound)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -146,7 +146,7 @@ description: "Attributes and Cntls –"
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the udp port range on an attr. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>listener_min_port_out</i> The lower bound will be stored here.<br />
+<dd><i>listener_min_port_out</i> The lower bound will be stored here.<br/>
  <i>listener_max_port_out</i> The upper bound will be stored here.</dd></dl>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_UDP_SET_INTERFACE</code>, const char *interface)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the interface to bind the socket to. </p>

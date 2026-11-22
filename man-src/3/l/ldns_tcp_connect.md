@@ -10,7 +10,7 @@ description: "ldns_tcp_send_query, ldns_tcp_read_wire, ldns_tcp_connect"
 
 <p> ldns_tcp_send_query, ldns_tcp_read_wire, ldns_tcp_connect </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ssize_t ldns_tcp_send_query(ldns_buffer *qbin, int sockfd, const struct sockaddr_storage *to, socklen_t tolen); </p>

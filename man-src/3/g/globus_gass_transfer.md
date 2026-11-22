@@ -12,18 +12,18 @@ description: "GASS Transfer API –"
 <p> GASS Transfer API.</p>
 <h3>Modules</h3>
 <p> <code>Activation</code> </p>
-<p> <code>Client-Initiated Operations</code><br />
- <i>GASS Transfer Client Operations. </i><br />
- <code>Implementing Servers</code><br />
- <i>GASS Server Implementation. </i><br />
- <code>Referrals</code><br />
- <i>GASS Referrals. </i><br />
- <code>Request Handles</code><br />
- <i>Request Handles. </i><br />
+<p> <code>Client-Initiated Operations</code><br/>
+ <i>GASS Transfer Client Operations. </i><br/>
+ <code>Implementing Servers</code><br/>
+ <i>GASS Server Implementation. </i><br/>
+ <code>Referrals</code><br/>
+ <i>GASS Referrals. </i><br/>
+ <code>Request Handles</code><br/>
+ <i>Request Handles. </i><br/>
  <code>Request Attributes</code> </p>
 <p> <code>Listener attributes</code> </p>
 <p> <code>Implementing Request Attributes</code> </p>
-<p> <code>Protocol Modules</code><br />
+<p> <code>Protocol Modules</code><br/>
  <i>Protocol Implementation API. </i></p>
 <h2>Detailed Description</h2>
 <p> GASS Transfer API. </p>

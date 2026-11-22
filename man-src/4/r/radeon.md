@@ -151,16 +151,16 @@ description: "radeon – ATI/AMD RADEON video driver"
 <dt><code>Option &#34;SWcursor&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Selects software cursor. The default is <code>off.</code></dd>
 <dt><code>Option &#34;Accel&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
-<dd>Enables or disables all hardware acceleration.<br />
+<dd>Enables or disables all hardware acceleration.<br/>
  The default is <code>on.</code></dd>
 <dt><code>Option &#34;ZaphodHeads&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
-<dd>Specify the RandR output(s) to use with zaphod mode for a particular driver instance. If you use this option you must use this option for all instances of the driver.<br />
+<dd>Specify the RandR output(s) to use with zaphod mode for a particular driver instance. If you use this option you must use this option for all instances of the driver.<br/>
  For example: <code>Option &#34;ZaphodHeads&#34; &#34;LVDS,VGA-0&#34;</code> will assign xrandr outputs LVDS and VGA-0 to this instance of the driver.</dd>
 <dt><code>Option &#34;ColorTiling&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
-<dd>The framebuffer can be addressed either in linear or tiled mode. Tiled mode can provide significant performance benefits with 3D applications. Tiling will be disabled if the drm module is too old or if the current display configuration does not support it. On R600+ this enables 1D tiling mode.<br />
+<dd>The framebuffer can be addressed either in linear or tiled mode. Tiled mode can provide significant performance benefits with 3D applications. Tiling will be disabled if the drm module is too old or if the current display configuration does not support it. On R600+ this enables 1D tiling mode.<br/>
  The default value is <code>on</code> for R/RV3XX, R/RV4XX, R/RV5XX, RS6XX, RS740, R/RV6XX, R/RV7XX, RS780, RS880, EVERGREEN, CAYMAN, ARUBA, Southern Islands, and Sea Islands and <code>off</code> for R/RV/RS1XX, R/RV/RS2XX, RS3XX, and RS690/RS780/RS880 when fast fb feature is enabled.</dd>
 <dt><code>Option &#34;ColorTiling2D&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
-<dd>The framebuffer can be addressed either in linear, 1D, or 2D tiled modes. 2D tiled mode can provide significant performance benefits over 1D tiling with 3D applications. Tiling will be disabled if the drm module is too old or if the current display configuration does not support it. KMS ColorTiling2D is only supported on R600 and newer chips and requires Mesa 9.0 or newer for R6xx-ARUBA, Mesa 9.2 or newer for Southern Islands, and Mesa 10.1 or newer for Sea Islands.<br />
+<dd>The framebuffer can be addressed either in linear, 1D, or 2D tiled modes. 2D tiled mode can provide significant performance benefits over 1D tiling with 3D applications. Tiling will be disabled if the drm module is too old or if the current display configuration does not support it. KMS ColorTiling2D is only supported on R600 and newer chips and requires Mesa 9.0 or newer for R6xx-ARUBA, Mesa 9.2 or newer for Southern Islands, and Mesa 10.1 or newer for Sea Islands.<br/>
  The default value is <code>on</code> for R/RV6XX, R/RV7XX, RS780, RS880, EVERGREEN, CAYMAN, ARUBA, Southern Islands, and Sea Islands.</dd>
 <dt><code>Option &#34;DRI&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
 <dd>Define the maximum level of DRI to enable. Valid values are 2 for DRI2 or 3 for DRI3. The default is <code>3 for DRI3</code> if the Xorg version is &gt;= 1.18.3 and glamor is enabled, otherwise <code>2 for DRI2. Note:</code> DRI3 may not work correctly in all cases with EXA, enable at your own risk.</dd>

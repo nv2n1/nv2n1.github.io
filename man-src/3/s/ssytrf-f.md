@@ -10,7 +10,7 @@ description: "ssytrf.f –"
 <p>ssytrf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssytrf</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br />
+<p>subroutine <code>ssytrf</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br/>
  <i></i><code>SSYTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssytrf (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

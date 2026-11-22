@@ -75,7 +75,7 @@ description: "eqn – format equations for troff or MathML"
 </tr>
 <tr VALIGN=top>
 <td><code>operator</code></td>
-<td> a large operator such as &#8216;<font SIZE="+5">&Sigma;</font>&#8216; 
+<td> a large operator such as &#8216;&Sigma;&#8216; 
 </td>
 </tr>
 <tr VALIGN=top>
@@ -210,16 +210,16 @@ description: "eqn – format equations for troff or MathML"
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> <code> <br />
- .EQ <br />
- define cancel &#8216;special Ca&#8217; <br />
- .EN <br />
- .de Ca <br />
- .&nbsp;<wbr>&nbsp;ds 0s \ <br />
- \Z&#8217;\\*(0s&#8217;\ <br />
- \v&#8217;\\n(0du&#8217;\ <br />
- \D&#8217;l \\n(0wu -\\n(0hu-\\n(0du&#8217;\ <br />
- \v&#8217;\\n(0hu&#8217; <br />
+<dd> <p> <code> <br/>
+ .EQ <br/>
+ define cancel &#8216;special Ca&#8217; <br/>
+ .EN <br/>
+ .de Ca <br/>
+ .&nbsp;<wbr>&nbsp;ds 0s \ <br/>
+ \Z&#8217;\\*(0s&#8217;\ <br/>
+ \v&#8217;\\n(0du&#8217;\ <br/>
+ \D&#8217;l \\n(0wu -\\n(0hu-\\n(0du&#8217;\ <br/>
+ \v&#8217;\\n(0hu&#8217; <br/>
  .. </code> </p>
  </dd></dl>
 </dl>
@@ -230,23 +230,23 @@ description: "eqn – format equations for troff or MathML"
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> <code> .EQ <br />
- define box &#8216;special Bx&#8217; <br />
- .EN <br />
- .de Bx <br />
- .&nbsp;<wbr>&nbsp;ds 0s \ <br />
- \Z&#8217;\h&#8217;1n&#8217;\\*(0s&#8217;\ <br />
- \Z&#8217;\ <br />
- \v&#8217;\\n(0du+1n&#8217;\ <br />
- \D&#8217;l \\n(0wu+2n 0&#8217;\ <br />
- \D&#8217;l 0 -\\n(0hu-\\n(0du-2n&#8217;\ <br />
- \D&#8217;l -\\n(0wu-2n 0&#8217;\ <br />
- \D&#8217;l 0 \\n(0hu+\\n(0du+2n&#8217;\ <br />
- &#8216;\ <br />
- \h&#8217;\\n(0wu+2n&#8217; <br />
- .&nbsp;<wbr>&nbsp;nr 0w +2n <br />
- .&nbsp;<wbr>&nbsp;nr 0d +1n <br />
- .&nbsp;<wbr>&nbsp;nr 0h +1n <br />
+<dd> <p> <code> .EQ <br/>
+ define box &#8216;special Bx&#8217; <br/>
+ .EN <br/>
+ .de Bx <br/>
+ .&nbsp;<wbr>&nbsp;ds 0s \ <br/>
+ \Z&#8217;\h&#8217;1n&#8217;\\*(0s&#8217;\ <br/>
+ \Z&#8217;\ <br/>
+ \v&#8217;\\n(0du+1n&#8217;\ <br/>
+ \D&#8217;l \\n(0wu+2n 0&#8217;\ <br/>
+ \D&#8217;l 0 -\\n(0hu-\\n(0du-2n&#8217;\ <br/>
+ \D&#8217;l -\\n(0wu-2n 0&#8217;\ <br/>
+ \D&#8217;l 0 \\n(0hu+\\n(0du+2n&#8217;\ <br/>
+ &#8216;\ <br/>
+ \h&#8217;\\n(0wu+2n&#8217; <br/>
+ .&nbsp;<wbr>&nbsp;nr 0w +2n <br/>
+ .&nbsp;<wbr>&nbsp;nr 0d +1n <br/>
+ .&nbsp;<wbr>&nbsp;nr 0h +1n <br/>
  .. </code> </p>
  </dd></dl>
 </dl>

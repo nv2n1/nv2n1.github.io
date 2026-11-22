@@ -41,7 +41,7 @@ int tolower_l(int c, locale_t locale);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>toupper</code>(), <code>tolower</code>(),<br />
+<td> <code>toupper</code>(), <code>tolower</code>(),<br/>
  <code>toupper_l</code>(), <code>tolower_l</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

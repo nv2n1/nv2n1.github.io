@@ -52,9 +52,9 @@ description: "Restart Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> A pointer to an uninitialized plugin. The plugin will be configured as a restart plugin.<br />
- <i>max_retries</i> The maximum number of times to retry the operation before giving up on the transfer. If this value is less than or equal to 0, then the restart plugin will keep trying to restart the operation until it completes or the deadline is reached with an unsuccessful operation.<br />
- <i>interval</i> The interval to wait after a failures before retrying the transfer. If the interval is 0 seconds or GLOBUS_NULL, then an exponential backoff will be used.<br />
+</dt><dd> <i>plugin</i> A pointer to an uninitialized plugin. The plugin will be configured as a restart plugin.<br/>
+ <i>max_retries</i> The maximum number of times to retry the operation before giving up on the transfer. If this value is less than or equal to 0, then the restart plugin will keep trying to restart the operation until it completes or the deadline is reached with an unsuccessful operation.<br/>
+ <i>interval</i> The interval to wait after a failures before retrying the transfer. If the interval is 0 seconds or GLOBUS_NULL, then an exponential backoff will be used.<br/>
  <i>deadline</i> An absolute timeout. If the deadline is GLOBUS_NULL then the retry will never timeout.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

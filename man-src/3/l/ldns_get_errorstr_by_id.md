@@ -10,7 +10,7 @@ description: "ldns_get_errorstr_by_id"
 
 <p> ldns_get_errorstr_by_id </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p>&nbsp;<wbr>ldns_get_errorstr_by_id(); </p>

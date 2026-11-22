@@ -54,7 +54,7 @@ In this single case all spawned processes will use the same global clock without
 <p> Please use <a rel="nofollow" href="https://github.com/wolfcw/libfaketime/issues">https://github.com/wolfcw/libfaketime/issues</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2003-2013 by the libfaketime authors. </p>
-<p> There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. You may redistribute copies of faketime under the terms of the GNU General Public License.<br />
+<p> There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. You may redistribute copies of faketime under the terms of the GNU General Public License.<br/>
  For more information about these matters, see the file named COPYING.</p>
 <h2>SEE ALSO</h2>
 <p> ld.so(1), <a href="/docs/linux/man/2-time/">time</a>(2), <a href="/docs/linux/man/2-fstat/">fstat</a>(2) </p>

@@ -50,8 +50,8 @@ description: "perltex – enable LaTeX macros to be defined in terms of Perl cod
 <h2>ENVIRONMENT</h2>
 <p> <code>perltex</code> honors the following environment variables: </p>
 <dl>
-<dt><font SIZE="-1">PERLTEX</font></dt>
-<dd> <p> Specify the filename of the LaTeX compiler. The LaTeX compiler defaults to ``<code>&quot;latex&quot;</code>&#8216;&#8216;. The <code>&quot;PERLTEX&quot;</code> environment variable overrides this default, and the <code>--latex</code> command-line option (see ``<font SIZE="-1">OPTIONS&#8217;&#8216;</font>) overrides that. </p>
+<dt>PERLTEX</dt>
+<dd> <p> Specify the filename of the LaTeX compiler. The LaTeX compiler defaults to ``<code>&quot;latex&quot;</code>&#8216;&#8216;. The <code>&quot;PERLTEX&quot;</code> environment variable overrides this default, and the <code>--latex</code> command-line option (see ``OPTIONS&#8217;&#8216;) overrides that. </p>
  </dd></dl>
 <h2>FILES</h2>
 <p> While compiling <i>jobname.tex</i>, <code>perltex</code> makes use of the following files: </p>

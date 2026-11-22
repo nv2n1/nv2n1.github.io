@@ -13,7 +13,7 @@ description: "slice2php – The Slice to PHP compiler."
 <p> slice2php [options] [files] </p>
 <h2>DESCRIPTION</h2>
 <p> slice2php compiles Slice files to PHP. </p>
-<p> Full documentation for slice2php is available online at:<br />
+<p> Full documentation for slice2php is available online at:<br/>
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/slice2php+Command-Line+Options">http://doc.zeroc.com/display/Ice/slice2php+Command-Line+Options</a>&quot;. </p>
 <h2>OPTIONS</h2>
 <dl>

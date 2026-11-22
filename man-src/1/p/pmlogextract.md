@@ -59,23 +59,23 @@ description: "pmlogextract – reduce, extract, concatenate and merge Performanc
 <p> Any additional white space is ignored and comments may be added with a `#&#8217; prefix.</p>
 <h2>CONFIGURATION FILE EXAMPLE</h2>
 <p> This is an example of a valid <i>configfile</i>: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>config file for pmlogextract<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>config file for pmlogextract<br/>
 &nbsp;<wbr>&nbsp;<wbr># </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>kernel.all.cpu<br />
-&nbsp;<wbr>&nbsp;<wbr>kernel.percpu.cpu.sys&nbsp;<wbr>[&quot;cpu0&quot;,&quot;cpu1&quot;]<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>kernel.all.cpu<br/>
+&nbsp;<wbr>&nbsp;<wbr>kernel.percpu.cpu.sys&nbsp;<wbr>[&quot;cpu0&quot;,&quot;cpu1&quot;]<br/>
 &nbsp;<wbr>&nbsp;<wbr>disk.dev&nbsp;<wbr>[&quot;dks0d1&quot;]</p>
 <h2>MARK RECORDS</h2>
 <p> When more than one input archive log contributes performance data to the output archive log, then <i>&lt;mark&gt;</i> records are inserted to indicate a possible discontinuity in the performance data. </p>
 <p> A <i>&lt;mark&gt;</i> record contains a timestamp and no performance data and is used to indicate that there is a time period in the PCP archive log where we do not know the values of <code>any</code> performance metrics, because there was no <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) collecting performance data during this period. Since these periods are often associated with the restart of a service or <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) or a system, there may be considerable doubt as to the continuity of performance data across this time period. </p>
 <p> The rationale behind <i>&lt;mark&gt;</i> records may be demonstrated with an example. Consider one input archive log that starts at 00:10 and ends at 09:15 on the same day, and another input archive log that starts at 09:20 on the same day and ends at 00:10 the following morning. This would be a very common case for archives managed and rotated by <code><a href="/docs/linux/man/1-pmlogger_check/">pmlogger_check</a></code>(1) and <code>pmlogger_daily</code>(1). </p>
-<p> The output archive log created by <code>pmlogextract</code> would contain:<br />
+<p> The output archive log created by <code>pmlogextract</code> would contain:<br/>
  00:10.000<tt>&nbsp;<wbr>&nbsp;<wbr></tt>first record from first input archive log</p>
-<p> &#8230;<br />
+<p> &#8230;<br/>
  09:15.000<tt>&nbsp;<wbr>&nbsp;<wbr></tt>last record from first input archive log</p>
 <p> 09:15.001<tt>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;mark&gt; record</p>
 <p> 09:20.000<tt>&nbsp;<wbr>&nbsp;<wbr></tt>first record from second input archive log</p>
-<p> &#8230;<br />
+<p> &#8230;<br/>
  01:10.000<tt>&nbsp;<wbr>&nbsp;<wbr></tt>last record from second input archive log</p>
 <p> The time period where the performance data is missing starts just after 09:15 and ends just before 09:20. When the output archive log is processed with any of the PCP reporting tools, the <i>&lt;mark&gt;</i> record is used to indicate a period of missing data. For example using the output archive above, imagine one was reporting the average I/O rate at 30 minute intervals aligned on the hour and half-hour. The I/O count metric is a counter, so the average I/O rate requires two valid values from consecutive sample times. There would be values for all the intervals ending at 09:00, then no values at 09:30 because of the <i>&lt;mark&gt;</i> record, then no values at 10:00 because the &#8220;prior&#8221; value at 09:30 is not available, then the rate would be reported again at 10:30 and continue every 30 minutes until the last reported value at 01:00. </p>
 <p> The presence of <i>&lt;mark&gt;</i> records in a PCP archive log can be established using <code><a href="/docs/linux/man/1-pmdumplog/">pmdumplog</a></code>(1) where a timestamp and the annotation <code>&lt;mark&gt;</code> is used to indicate a <i>&lt;mark&gt;</i> record.</p>

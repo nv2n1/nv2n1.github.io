@@ -10,9 +10,9 @@ description: "riemann-client – Riemann communication tool"
 
 <p> <code>riemann-client</code> &#8211; Riemann communication tool</p>
 <h2>SYNOPSIS</h2>
-<p> <code>riemann-client</code> <code>query</code> [<i>OPTIONS</i>&#8230;] <i>QUERY</i> [<i>HOST</i>] [<i>PORT</i>]<br />
- <code>riemann-client</code> <code>send</code> [<i>OPTIONS</i>&#8230;] [<i>HOST</i>] [<i>PORT</i>]<br />
- <code>riemann-client</code> <code>&#8211;help</code>|<code>-?</code><br />
+<p> <code>riemann-client</code> <code>query</code> [<i>OPTIONS</i>&#8230;] <i>QUERY</i> [<i>HOST</i>] [<i>PORT</i>]<br/>
+ <code>riemann-client</code> <code>send</code> [<i>OPTIONS</i>&#8230;] [<i>HOST</i>] [<i>PORT</i>]<br/>
+ <code>riemann-client</code> <code>&#8211;help</code>|<code>-?</code><br/>
  <code>riemann-client</code> <code>&#8211;version</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>riemann-client</code> is a very simple tool to faciliate communication with a Riemann event stream processing server. It can be used both for sending events to one, and to query it too. </p>

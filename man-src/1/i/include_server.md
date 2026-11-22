@@ -22,9 +22,9 @@ description: "include_server.py – conservative approximation of include depend
 <p> The following options are understood by include_server.py.</p>
 <dl>
 <dt><code>-dPAT, &#8211;debug_pattern=PAT </code></dt>
-<dd> Bit vector for turning on warnings and debugging<br />
-&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>warnings<br />
-&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>trace some functions<br />
+<dd> Bit vector for turning on warnings and debugging<br/>
+&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>warnings<br/>
+&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>trace some functions<br/>
 &nbsp;<wbr>other powers of two: see include_server/basics.py.</dd>
 <dt><code>-e, &#8211;email</code></dt>
 <dd> Send email to &#8216;distcc-pump-errors&#8217; or if defined, the value of enviroment variable DISTCC_EMAILLOG_WHOM_TO_BLAME, when include server gets in trouble. The default is to not send email.</dd>
@@ -80,7 +80,7 @@ description: "include_server.py – conservative approximation of include depend
 </dl>
 <h2>DISTCC DISCREPANCY SYMPTOMS</h2>
 <p> The interactions between the build system, distcc, and the include server is somewhat complex. When a distcc commands receives a failing compilation from the remote server it retries the compilation locally. This section discusses the causes of discrepancies between remote and local compilation. These are flagged by the demotion message: </p>
-<p> <code>__________Warning: &#8230; pump-mode compilation(s) failed on server,</code> <code>but succeeded locally.</code><br />
+<p> <code>__________Warning: &#8230; pump-mode compilation(s) failed on server,</code> <code>but succeeded locally.</code><br/>
  <code>__________Distcc-pump was demoted to plain mode.</code> <code>See the Distcc Discrepancy Symptoms section in the <a href="/docs/linux/man/1-include_server/">include_server</a>(1) man</code> <code>page.</code> </p>
 <p> The pump script issues this message at the end of the build. This means that for at least one distcc invocation a local compilation succeeded after the remote compilation failed. Each distcc invocation for which such a discrepancy occurred in turn also issues a message such as: </p>
 <p> <code>Warning: remote compilation of &#8216;&#8230;&#8217; failed,</code> <code>retried locally and got a different result.</code> </p>

@@ -15,8 +15,8 @@ neigh
 { COMMAND |
     help }
 </code></pre>
-<p> <code>ip neigh</code> { <code>add</code> | <code>del</code> | <code>change</code> | <code>replace</code> } { <i>ADDR</i> [ <code>lladdr</code> <i>LLADDR</i> ] [ <code>nud</code> <i>STATE</i> ] | <code>proxy</code> <i>ADDR</i> } [ <code>dev</code> <i>DEV</i> ] [ <code>router</code> ] [ <code>extern_learn</code> ]<br />
- <code>ip neigh</code> { <code>show</code> | <code>flush</code> } [ <code>proxy</code> ] [ <code>to</code> <i>PREFIX</i> ] [ <code>dev</code> <i>DEV</i> ] [ <code>nud</code> <i>STATE</i> ] [ <code>vrf</code> <i>NAME</i> ]<br />
+<p> <code>ip neigh</code> { <code>add</code> | <code>del</code> | <code>change</code> | <code>replace</code> } { <i>ADDR</i> [ <code>lladdr</code> <i>LLADDR</i> ] [ <code>nud</code> <i>STATE</i> ] | <code>proxy</code> <i>ADDR</i> } [ <code>dev</code> <i>DEV</i> ] [ <code>router</code> ] [ <code>extern_learn</code> ]<br/>
+ <code>ip neigh</code> { <code>show</code> | <code>flush</code> } [ <code>proxy</code> ] [ <code>to</code> <i>PREFIX</i> ] [ <code>dev</code> <i>DEV</i> ] [ <code>nud</code> <i>STATE</i> ] [ <code>vrf</code> <i>NAME</i> ]<br/>
  <code>ip neigh get</code> <i>ADDR</i> <code>dev</code> <i>DEV</i> </p>
 <pre><code>STATE := {
     permanent | noarp | stale | reachable | none |

@@ -68,7 +68,7 @@ description: "mailpost – Feed an e-mail message into a newsgroup"
 <dt><i>pathtmp</i>/mailpost-msgid.dir and <i>pathtmp</i>/mailpost-msgid.pag</dt>
 <dd>The default database files which record previously seen Message-IDs.</dd></dl>
 <h2>History</h2>
-<p>Written by Paul Vixie long ago and then hacked up by James Brister for <font SIZE="-1">INN</font> integration. </p>
+<p>Written by Paul Vixie long ago and then hacked up by James Brister for INN integration. </p>
 <p> <tt>$Id:</tt> mailpost.in 9831 2015-04-23 19:07:39Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/5-active/">active</a></i>(5), <i><a href="/docs/linux/man/1-inews/">inews</a></i>(1), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8), <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3). </p>

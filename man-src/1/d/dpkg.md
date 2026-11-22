@@ -15,8 +15,8 @@ description: "dpkg – package manager for Debian"
 <p> This manual is intended for users wishing to understand <code>dpkg</code>&#8216;s command line options and package states in more detail than that provided by <code>dpkg &#8211;help</code>. </p>
 <p> It should <i>not</i> be used by package maintainers wishing to understand how <code>dpkg</code> will install their packages. The descriptions of what <code>dpkg</code> does when installing and removing packages are particularly inadequate.</p>
 <h2>DESCRIPTION</h2>
-<p> <code>dpkg</code> is a medium-level tool to install, build, remove and manage Debian packages. The primary and more user-friendly front-end for <code>dpkg</code> as a <font SIZE="-1">CLI</font> (command-line interface) is <code>apt</code>(8&gt; and as a <font SIZE="-1">TUI</font> (terminal user interface) is <code>aptitude</code>(8). <code>dpkg</code> itself is controlled entirely via command line parameters, which consist of exactly one action and zero or more options. The action-parameter tells <code>dpkg</code> what to do and options control the behavior of the action in some way. </p>
-<p> <code>dpkg</code> can also be used as a front-end to <code><a href="/docs/linux/man/1-dpkg-deb/">dpkg-deb</a></code>(1) and <code><a href="/docs/linux/man/1-dpkg-query/">dpkg-query</a></code>(1). The list of supported actions can be found later on in the <font SIZE="-1"><code>ACTIONS</code></font> section. If any such action is encountered <code>dpkg</code> just runs <code>dpkg-deb</code> or <code>dpkg-query</code> with the parameters given to it, but no specific options are currently passed to them, to use any such option the back-ends need to be called directly.</p>
+<p> <code>dpkg</code> is a medium-level tool to install, build, remove and manage Debian packages. The primary and more user-friendly front-end for <code>dpkg</code> as a CLI (command-line interface) is <code>apt</code>(8&gt; and as a TUI (terminal user interface) is <code>aptitude</code>(8). <code>dpkg</code> itself is controlled entirely via command line parameters, which consist of exactly one action and zero or more options. The action-parameter tells <code>dpkg</code> what to do and options control the behavior of the action in some way. </p>
+<p> <code>dpkg</code> can also be used as a front-end to <code><a href="/docs/linux/man/1-dpkg-deb/">dpkg-deb</a></code>(1) and <code><a href="/docs/linux/man/1-dpkg-query/">dpkg-query</a></code>(1). The list of supported actions can be found later on in the <code>ACTIONS</code> section. If any such action is encountered <code>dpkg</code> just runs <code>dpkg-deb</code> or <code>dpkg-query</code> with the parameters given to it, but no specific options are currently passed to them, to use any such option the back-ends need to be called directly.</p>
 <h2>INFORMATION ABOUT PACKAGES</h2>
 <p> <code>dpkg</code> maintains some usable information about available packages. The information is divided in three classes: <code>states</code>, <code>selection states</code> and <code>flags</code>. These values are intended to be changed mainly with <code>dselect</code>.</p>
 <h3>Package states</h3>
@@ -98,7 +98,7 @@ description: "dpkg – package manager for Debian"
 <dd>
 </dd><dt><code>&#8211;merge-avail</code> [<i>Packages-file</i>]</dt>
 <dd> Update <code>dpkg</code>&#8216;s and <code>dselect</code>&#8216;s idea of which packages are available. With action <code>&#8211;merge-avail</code>, old information is combined with information from <i>Packages-file</i>. With action <code>&#8211;update-avail</code>, old information is replaced with the information in the <i>Packages-file</i>. The <i>Packages-file</i> distributed with Debian is simply named &laquo;<i>Packages</i>&raquo;. If the <i>Packages-file</i> argument is missing or named &laquo;<code>&#8211;</code>&raquo; then it will be read from standard input (since dpkg 1.17.7). <code>dpkg</code> keeps its record of available packages in <i>/var/lib/dpkg/available</i>. </dd>
-<p> A simpler one-shot command to retrieve and update the <i>available</i> file is <code>dselect update</code>. Note that this file is mostly useless if you don&#8217;t use <code>dselect</code> but an APT-based frontend: <font SIZE="-1">APT</font> has its own system to keep track of available packages.</p>
+<p> A simpler one-shot command to retrieve and update the <i>available</i> file is <code>dselect update</code>. Note that this file is mostly useless if you don&#8217;t use <code>dselect</code> but an APT-based frontend: APT has its own system to keep track of available packages.</p>
 <dt><code>-A</code>, <code>&#8211;record-avail</code> <i>package-file</i>&#8230;</dt>
 <dd> Update <code>dpkg</code> and <code>dselect</code>&#8216;s idea of which packages are available with information from the package <i>package-file</i>. If <code>&#8211;recursive</code> or <code>-R</code> option is specified, <i>package-file</i> must refer to a directory instead.</dd>
 <dt><code>&#8211;forget-old-unavail</code></dt>
@@ -272,7 +272,7 @@ description: "dpkg – package manager for Debian"
 <p> <code>overwrite-diverted</code>: Overwrite a diverted file with an undiverted version. </p>
 <p> <code>statoverride-add</code>: Overwrite an existing stat override when adding it (since dpkg 1.19.5). </p>
 <p> <code>statoverride-remove</code>: Ignore a missing stat override when removing it (since dpkg 1.19.5). </p>
-<p> <code>security-mac</code>(*): Use platform-specific Mandatory Access Controls (<font SIZE="-1">MAC</font>) based security when installing files into the filesystem (since dpkg 1.19.5). On Linux systems the implementation uses SELinux. </p>
+<p> <code>security-mac</code>(*): Use platform-specific Mandatory Access Controls (MAC) based security when installing files into the filesystem (since dpkg 1.19.5). On Linux systems the implementation uses SELinux. </p>
 <p> <code>unsafe-io</code>: Do not perform safe I/O operations when unpacking (since dpkg 1.15.8.6). Currently this implies not performing file system syncs before file renames, which is known to cause substantial performance degradation on some file systems, unfortunately the ones that require the safe I/O on the first place due to their unreliable behaviour causing zero-length files on abrupt system crashes. </p>
 <p> <i>Note</i>: For ext4, the main offender, consider using instead the mount option <code>nodelalloc</code>, which will fix both the performance degradation and the data safety issues, the latter by making the file system not produce zero-length files on abrupt system crashes with any software not doing syncs before atomic renames. </p>
 <p> <i>Warning: Using this option might improve performance at the cost of losing data, use with care.</i> </p>
@@ -280,7 +280,7 @@ description: "dpkg – package manager for Debian"
 <p> <i>Warning: This can destroy your host system, use with extreme care.</i> </p>
 <p> <code>architecture</code>: Process even packages with wrong or no architecture. </p>
 <p> <code>bad-version</code>: Process even packages with wrong versions (since dpkg 1.16.1). </p>
-<p> <code>bad-path</code>: <font SIZE="-1"><code>PATH</code></font> is missing important programs, so problems are likely. </p>
+<p> <code>bad-path</code>: <code>PATH</code> is missing important programs, so problems are likely. </p>
 <p> <code>not-root</code>: Try to (de)install things even when not root. </p>
 <p> <code>bad-verify</code>: Install a package even if it fails authenticity check.</p>
 <dt><code>&#8211;ignore-depends</code>=<i>package</i>,&#8230;</dt>
@@ -305,7 +305,7 @@ description: "dpkg – package manager for Debian"
 <dt><code>&#8211;pre-invoke=</code><i>command</i></dt>
 <dd>
 </dd><dt><code>&#8211;post-invoke=</code><i>command</i></dt>
-<dd> Set an invoke hook <i>command</i> to be run via &#8220;sh -c&#8221; before or after the <code>dpkg</code> run for the <i>unpack</i>, <i>configure</i>, <i>install</i>, <i>triggers-only</i>, <i>remove</i>, <i>purge</i>, <i>add-architecture</i> and <i>remove-architecture</i> <code>dpkg</code> actions (since dpkg 1.15.4; <i>add-architecture</i> and <i>remove-architecture</i> actions since dpkg 1.17.19). This option can be specified multiple times. The order the options are specified is preserved, with the ones from the configuration files taking precedence. The environment variable <font SIZE="-1"><code>DPKG_HOOK_ACTION</code></font> is set for the hooks to the current <code>dpkg</code> action. </dd>
+<dd> Set an invoke hook <i>command</i> to be run via &#8220;sh -c&#8221; before or after the <code>dpkg</code> run for the <i>unpack</i>, <i>configure</i>, <i>install</i>, <i>triggers-only</i>, <i>remove</i>, <i>purge</i>, <i>add-architecture</i> and <i>remove-architecture</i> <code>dpkg</code> actions (since dpkg 1.15.4; <i>add-architecture</i> and <i>remove-architecture</i> actions since dpkg 1.17.19). This option can be specified multiple times. The order the options are specified is preserved, with the ones from the configuration files taking precedence. The environment variable <code>DPKG_HOOK_ACTION</code> is set for the hooks to the current <code>dpkg</code> action. </dd>
 <p> <code>Note:</code> Front-ends might call <code>dpkg</code> several times per invocation, which might run the hooks more times than expected.</p>
 <dt><code>&#8211;path-exclude=</code><i>glob-pattern</i></dt>
 <dd>
@@ -325,7 +325,7 @@ description: "dpkg – package manager for Debian"
 <dt><code>&#8211;verify-format</code> <i>format-name</i></dt>
 <dd> Sets the output format for the <code>&#8211;verify</code> command (since dpkg 1.17.2). </dd>
 <p> The only currently supported output format is <code>rpm</code>, which consists of a line for every path that failed any check. These lines have the following format: </p>
-<p>&nbsp;<code>missing&nbsp;<wbr>&nbsp;</code>&nbsp;[<code>c</code>]&nbsp;<i>pathname</i>&nbsp;[<code>(</code><i>error-message</i><code>)</code>]<br />
+<p>&nbsp;<code>missing&nbsp;<wbr>&nbsp;</code>&nbsp;[<code>c</code>]&nbsp;<i>pathname</i>&nbsp;[<code>(</code><i>error-message</i><code>)</code>]<br/>
 &nbsp;<code>??5??????</code>&nbsp;[<code>c</code>]&nbsp;<i>pathname</i> </p>
 <p> The first 9 characters are used to report the checks result, either a literal <code>missing</code> when the file is not present or its metadata cannot be fetched, or one of the following special characters that report the result for each check:</p>
 <dl>
@@ -385,13 +385,13 @@ description: "dpkg – package manager for Debian"
 <dd> Log status change updates and actions to <i>filename</i>, instead of the default <i>/var/log/dpkg.log</i>. If this option is given multiple times, the last filename is used. Log messages are of the form:</dd>
 <dl>
 <dl>
-<dt>YYYY-MM-DD <font SIZE="-1">HH:MM:SS</font> <code>startup</code> <i>type</i> <i>command</i></dt>
+<dt>YYYY-MM-DD HH:MM:SS <code>startup</code> <i>type</i> <i>command</i></dt>
 <dd> For each dpkg invocation where <i>type</i> is <code>archives</code> (with a <i>command</i> of <code>unpack</code> or <code>install</code>) or <code>packages</code> (with a <i>command</i> of <code>configure</code>, <code>triggers-only</code>, <code>remove</code> or <code>purge</code>).</dd>
-<dt>YYYY-MM-DD <font SIZE="-1">HH:MM:SS</font> <code>status</code> <i>state</i> <i>pkg</i> <i>installed-version</i></dt>
+<dt>YYYY-MM-DD HH:MM:SS <code>status</code> <i>state</i> <i>pkg</i> <i>installed-version</i></dt>
 <dd> For status change updates.</dd>
-<dt>YYYY-MM-DD <font SIZE="-1">HH:MM:SS</font> <i>action</i> <i>pkg</i> <i>installed-version</i> <i>available-version</i></dt>
+<dt>YYYY-MM-DD HH:MM:SS <i>action</i> <i>pkg</i> <i>installed-version</i> <i>available-version</i></dt>
 <dd> For actions where <i>action</i> is one of <code>install</code>, <code>upgrade</code>, <code>configure</code>, <code>trigproc</code>, <code>disappear</code>, <code>remove</code> or <code>purge</code>.</dd>
-<dt>YYYY-MM-DD <font SIZE="-1">HH:MM:SS</font> <code>conffile</code> <i>filename</i> <i>decision</i></dt>
+<dt>YYYY-MM-DD HH:MM:SS <code>conffile</code> <i>filename</i> <i>decision</i></dt>
 <dd> For conffile changes where <i>decision</i> is either <code>install</code> or <code>keep</code>.</dd></dl>
 </dl>
 <dl>
@@ -418,55 +418,55 @@ description: "dpkg – package manager for Debian"
 <h2>ENVIRONMENT</h2>
 <h3>External environment</h3>
 <dl>
-<dt><font SIZE="-1"><code>PATH</code></font></dt>
+<dt><code>PATH</code></dt>
 <dd> This variable is expected to be defined in the environment and point to the system paths where several required programs are to be found. If it&#8217;s not set or the programs are not found, <code>dpkg</code> will abort.</dd>
-<dt><font SIZE="-1"><code>HOME</code></font></dt>
+<dt><code>HOME</code></dt>
 <dd> If set, <code>dpkg</code> will use it as the directory from which to read the user specific configuration file.</dd>
-<dt><font SIZE="-1"><code>TMPDIR</code></font></dt>
+<dt><code>TMPDIR</code></dt>
 <dd> If set, <code>dpkg</code> will use it as the directory in which to create temporary files and directories.</dd>
-<dt><font SIZE="-1"><code>SHELL</code></font></dt>
+<dt><code>SHELL</code></dt>
 <dd> The program <code>dpkg</code> will execute when starting a new interactive shell, or when spawning a command via a shell.</dd>
-<dt><font SIZE="-1"><code>PAGER</code></font></dt>
+<dt><code>PAGER</code></dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>DPKG_PAGER</code></font></dt>
-<dd> The program <code>dpkg</code> will execute when running a pager, which will be executed with &laquo;$SHELL<code> -c</code>&raquo;, for example when displaying the conffile differences. If <font SIZE="-1"><code>SHELL</code></font> is not set, &laquo;<code>sh</code>&raquo; will be used instead. The <font SIZE="-1"><code>DPKG_PAGER</code></font> overrides the <font SIZE="-1"><code>PAGER</code></font> environment variable (since dpkg 1.19.2).</dd>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+</dd><dt><code>DPKG_PAGER</code></dt>
+<dd> The program <code>dpkg</code> will execute when running a pager, which will be executed with &laquo;$SHELL<code> -c</code>&raquo;, for example when displaying the conffile differences. If <code>SHELL</code> is not set, &laquo;<code>sh</code>&raquo; will be used instead. The <code>DPKG_PAGER</code> overrides the <code>PAGER</code> environment variable (since dpkg 1.19.2).</dd>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
-<dt><font SIZE="-1"><code>DPKG_FORCE</code></font></dt>
+<dt><code>DPKG_FORCE</code></dt>
 <dd> Sets the force flags (since dpkg 1.19.5). When this variable is present, no built-in force defaults will be applied. If the variable is present but empty, all force flags will be disabled.</dd>
-<dt><font SIZE="-1"><code>DPKG_ADMINDIR</code></font></dt>
+<dt><code>DPKG_ADMINDIR</code></dt>
 <dd> If set and the <code>&#8211;admindir</code> or <code>&#8211;root</code> options have not been specified, it will be used as the <code>dpkg</code> administrative directory (since dpkg 1.20.0).</dd>
-<dt><font SIZE="-1"><code>DPKG_FRONTEND_LOCKED</code></font></dt>
+<dt><code>DPKG_FRONTEND_LOCKED</code></dt>
 <dd> Set by a package manager frontend to notify dpkg that it should not acquire the frontend lock (since dpkg 1.19.1).</dd></dl>
 <h3>Internal environment</h3>
 <dl>
-<dt><font SIZE="-1"><code>LESS</code></font></dt>
-<dd> Defined by <code>dpkg</code> to &#8220;<code>-FRSXMQ</code>&#8220;, if not already set, when spawning a pager (since dpkg 1.19.2). To change the default behavior, this variable can be preset to some other value including an empty string, or the <font SIZE="-1"><code>PAGER</code></font> or <font SIZE="-1"><code>DPKG_PAGER</code></font> variables can be set to disable specific options with &laquo;<code>-+</code>&raquo;, for example <code>DPKG_PAGER=&#8220;less -+F&#8221;</code>.</dd>
-<dt><font SIZE="-1"><code>DPKG_ROOT</code></font></dt>
+<dt><code>LESS</code></dt>
+<dd> Defined by <code>dpkg</code> to &#8220;<code>-FRSXMQ</code>&#8220;, if not already set, when spawning a pager (since dpkg 1.19.2). To change the default behavior, this variable can be preset to some other value including an empty string, or the <code>PAGER</code> or <code>DPKG_PAGER</code> variables can be set to disable specific options with &laquo;<code>-+</code>&raquo;, for example <code>DPKG_PAGER=&#8220;less -+F&#8221;</code>.</dd>
+<dt><code>DPKG_ROOT</code></dt>
 <dd> Defined by <code>dpkg</code> on the maintainer script environment to indicate which installation to act on (since dpkg 1.18.5). The value is intended to be prepended to any path maintainer scripts operate on. During normal operation, this variable is empty. When installing packages into a different <code>instdir</code>, <code>dpkg</code> normally invokes maintainer scripts using <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2) and leaves this variable empty, but if <code>&#8211;force-script-chrootless</code> is specified then the <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2) call is skipped and <code>instdir</code> is non-empty.</dd>
-<dt><font SIZE="-1"><code>DPKG_ADMINDIR</code></font></dt>
+<dt><code>DPKG_ADMINDIR</code></dt>
 <dd> Defined by <code>dpkg</code> on the maintainer script environment to indicate the <code>dpkg</code> administrative directory to use (since dpkg 1.16.0). This variable is always set to the current <code>&#8211;admindir</code> value.</dd>
-<dt><font SIZE="-1"><code>DPKG_FORCE</code></font></dt>
+<dt><code>DPKG_FORCE</code></dt>
 <dd> Defined by <code>dpkg</code> on the subprocesses environment to all the currently enabled force option names separated by commas (since dpkg 1.19.5).</dd>
-<dt><font SIZE="-1"><code>DPKG_SHELL_REASON</code></font></dt>
+<dt><code>DPKG_SHELL_REASON</code></dt>
 <dd> Defined by <code>dpkg</code> on the shell spawned on the conffile prompt to examine the situation (since dpkg 1.15.6). Current valid value: <code>conffile-prompt</code>.</dd>
-<dt><font SIZE="-1"><code>DPKG_CONFFILE_OLD</code></font></dt>
+<dt><code>DPKG_CONFFILE_OLD</code></dt>
 <dd> Defined by <code>dpkg</code> on the shell spawned on the conffile prompt to examine the situation (since dpkg 1.15.6). Contains the path to the old conffile.</dd>
-<dt><font SIZE="-1"><code>DPKG_CONFFILE_NEW</code></font></dt>
+<dt><code>DPKG_CONFFILE_NEW</code></dt>
 <dd> Defined by <code>dpkg</code> on the shell spawned on the conffile prompt to examine the situation (since dpkg 1.15.6). Contains the path to the new conffile.</dd>
-<dt><font SIZE="-1"><code>DPKG_HOOK_ACTION</code></font></dt>
+<dt><code>DPKG_HOOK_ACTION</code></dt>
 <dd> Defined by <code>dpkg</code> on the shell spawned when executing a hook action (since dpkg 1.15.4). Contains the current <code>dpkg</code> action.</dd>
-<dt><font SIZE="-1"><code>DPKG_RUNNING_VERSION</code></font></dt>
+<dt><code>DPKG_RUNNING_VERSION</code></dt>
 <dd> Defined by <code>dpkg</code> on the maintainer script environment to the version of the currently running <code>dpkg</code> instance (since dpkg 1.14.17).</dd>
-<dt><font SIZE="-1"><code>DPKG_MAINTSCRIPT_PACKAGE</code></font></dt>
+<dt><code>DPKG_MAINTSCRIPT_PACKAGE</code></dt>
 <dd> Defined by <code>dpkg</code> on the maintainer script environment to the (non-arch-qualified) package name being handled (since dpkg 1.14.17).</dd>
-<dt><font SIZE="-1"><code>DPKG_MAINTSCRIPT_PACKAGE_REFCOUNT</code></font></dt>
+<dt><code>DPKG_MAINTSCRIPT_PACKAGE_REFCOUNT</code></dt>
 <dd> Defined by <code>dpkg</code> on the maintainer script environment to the package reference count, i.e. the number of package instances with a state greater than <code>not-installed</code> (since dpkg 1.17.2).</dd>
-<dt><font SIZE="-1"><code>DPKG_MAINTSCRIPT_ARCH</code></font></dt>
+<dt><code>DPKG_MAINTSCRIPT_ARCH</code></dt>
 <dd> Defined by <code>dpkg</code> on the maintainer script environment to the architecture the package got built for (since dpkg 1.15.4).</dd>
-<dt><font SIZE="-1"><code>DPKG_MAINTSCRIPT_NAME</code></font></dt>
+<dt><code>DPKG_MAINTSCRIPT_NAME</code></dt>
 <dd> Defined by <code>dpkg</code> on the maintainer script environment to the name of the script running, one of <code>preinst</code>, <code>postinst</code>, <code>prerm</code> or <code>postrm</code> (since dpkg 1.15.7).</dd>
-<dt><font SIZE="-1"><code>DPKG_MAINTSCRIPT_DEBUG</code></font></dt>
+<dt><code>DPKG_MAINTSCRIPT_DEBUG</code></dt>
 <dd> Defined by <code>dpkg</code> on the maintainer script environment to a value (&#8216;<code>0</code>&#8216; or &#8216;<code>1</code>&#8216;) noting whether debugging has been requested (with the <code>&#8211;debug</code> option) for the maintainer scripts (since dpkg 1.18.4).</dd></dl>
 <h2>FILES</h2>
 <dl>
@@ -481,7 +481,7 @@ description: "dpkg – package manager for Debian"
 <dt><i>/var/lib/dpkg/available</i></dt>
 <dd> List of available packages.</dd>
 <dt><i>/var/lib/dpkg/status</i></dt>
-<dd> Statuses of available packages. This file contains information about whether a package is marked for removing or not, whether it is installed or not, etc. See section <font SIZE="-1"><code>INFORMATION ABOUT PACKAGES</code></font> for more info. </dd>
+<dd> Statuses of available packages. This file contains information about whether a package is marked for removing or not, whether it is installed or not, etc. See section <code>INFORMATION ABOUT PACKAGES</code> for more info. </dd>
 <p> The status file is backed up daily in <i>/var/backups</i>. It can be useful if it&#8217;s lost or corrupted due to filesystems troubles.</dl>
 <p> The format and contents of a binary package are described in <code><a href="/docs/linux/man/5-deb/">deb</a></code>(5).</p>
 <h2>BUGS</h2>
@@ -503,7 +503,7 @@ description: "dpkg – package manager for Debian"
 <pre>
  dpkg -r elvis
 </pre>
-<p> To install a package, you first need to find it in an archive or <font SIZE="-1">CDROM.</font> The <i>available</i> file shows that the vim package is in section <code>editors</code>: </p>
+<p> To install a package, you first need to find it in an archive or CDROM. The <i>available</i> file shows that the vim package is in section <code>editors</code>: </p>
 <pre>
  cd /media/cdrom/pool/main/v/vim
  dpkg -i vim_4.5-3.deb

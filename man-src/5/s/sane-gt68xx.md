@@ -23,11 +23,11 @@ description: "sane-gt68xx – SANE backend for GT-68XX based USB flatbed scanner
 <p> The <code>afe</code> option allows one to set custom offset and gain values for the Analog FrontEnd of the scanner. This option can be either used to select the AFE values if automatic coarse calibration is disabled, or to make automatic coarse calibration faster. For the latter usage, enable debug level 3 (see below), scan an image and look for debug line string with &quot;afe&quot;. Copy this line to <i>gt68xx.conf</i>. The option has six parameters: red offset, red gain, green offset, green gain, blue offset, and blue gain. </p>
 <p> A sample configuration file is shown below: </p>
 <dl>
-<dd>usb 0x05d8 0x4002<br />
- override &quot;mustek-scanexpress-1200-ub-plus&quot;<br />
- firmware &quot;/opt/gt68xx/SBfw.usb&quot;<br />
- vendor &quot;Trust&quot;<br />
- model &quot;Compact Scan USB 19200&quot;<br />
+<dd>usb 0x05d8 0x4002<br/>
+ override &quot;mustek-scanexpress-1200-ub-plus&quot;<br/>
+ firmware &quot;/opt/gt68xx/SBfw.usb&quot;<br/>
+ vendor &quot;Trust&quot;<br/>
+ model &quot;Compact Scan USB 19200&quot;<br/>
  afe 0x20 0x02 0x22 0x03 0x1f 0x04</dd></dl>
 <h2>Files</h2>
 <dl>
@@ -46,13 +46,13 @@ description: "sane-gt68xx – SANE backend for GT-68XX based USB flatbed scanner
 <p> Example: export SANE_DEBUG_GT68XX=4 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-artec_eplus48u/">sane-artec_eplus48u</a></code>(5) <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-ma1509/">sane-ma1509</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_usb/">sane-mustek_usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek/">sane-mustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_pp/">sane-mustek_pp</a></code>(5), <code><a href="/docs/linux/man/1-cabextract/">cabextract</a></code>(1)<br />
- <i>/usr/share/doc/libsane/gt68xx/gt68xx.CHANGES</i><br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-artec_eplus48u/">sane-artec_eplus48u</a></code>(5) <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-ma1509/">sane-ma1509</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_usb/">sane-mustek_usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek/">sane-mustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_pp/">sane-mustek_pp</a></code>(5), <code><a href="/docs/linux/man/1-cabextract/">cabextract</a></code>(1)<br/>
+ <i>/usr/share/doc/libsane/gt68xx/gt68xx.CHANGES</i><br/>
  <i><a rel="nofollow" href="http://www.meier-geinitz.de/sane/gt68xx">http://www.meier-geinitz.de/sane/gt68xx</a></i> </p>
 <h2>Author</h2>
-<p>Henning Meier-Geinitz &lt;<i>henning [at] meier-geinitz.de</i>&gt;<br />
+<p>Henning Meier-Geinitz &lt;<i>henning [at] meier-geinitz.de</i>&gt;<br/>
  The original gt68xx driver was written by Sergey Vlasov, Andreas Nowack, and David Stevenson. Thanks for sending patches and answering questions to them and all the other contributors.</p>
 <h2>Bugs</h2>
-<p>The first few lines of the image are garbage for the 2400 TA Plus. Interpolation should be used instead of just copying data, when the X- and Y-resolution differ. Support for buttons is missing. More detailed bug information is available at the gt68xx backend homepage <i><a rel="nofollow" href="http://www.meier-geinitz.de/sane/gt68xx-backend/">http://www.meier-geinitz.de/sane/gt68xx-backend/</a></i>.<br />
- Please contact us if you find a bug or missing feature: &lt;<i>sane-devel [at] alioth-lists.debian.net</i>&gt;.<br />
+<p>The first few lines of the image are garbage for the 2400 TA Plus. Interpolation should be used instead of just copying data, when the X- and Y-resolution differ. Support for buttons is missing. More detailed bug information is available at the gt68xx backend homepage <i><a rel="nofollow" href="http://www.meier-geinitz.de/sane/gt68xx-backend/">http://www.meier-geinitz.de/sane/gt68xx-backend/</a></i>.<br/>
+ Please contact us if you find a bug or missing feature: &lt;<i>sane-devel [at] alioth-lists.debian.net</i>&gt;.<br/>
  Please send a debug log if your scanner isn&#8217;t detected correctly (see <code>SANE_DEBUG_GT68XX</code> above). </p>

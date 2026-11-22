@@ -68,8 +68,8 @@ description: "ykneomgr – YubiKey NEO management tool"
 <p> To install a CAP file as an applet you use the &#8211;applet-install or -i parameter, giving it the filename of the CAP file applet as a parameter. Note that loading can take several seconds, for typical CAP file sizes it takes around 5 seconds. </p>
 <p>ykneomgr &#8211;applet-install path/to/applet.cap </p>
 <p> To work with multiple card readers use the &#8211;reader or -r parameter, giving it a substring of the card reader name to use. Consider a system which has three card readers, one YubiKey NEO in CCID mode, one YubiKey NEO in OTP+CCID mode, and one Gemalto GemPC Express reader. Running ykneomgr -l results in the following output: </p>
-<p>0: Gemalto GemPC Express 00 00<br />
-1: Yubico Yubikey NEO CCID 01 00<br />
+<p>0: Gemalto GemPC Express 00 00<br/>
+1: Yubico Yubikey NEO CCID 01 00<br/>
 2: Yubico Yubikey NEO OTP+CCID 02 00 </p>
 <p> To use the second NEO, you could use -r OTP+CCID as follows: </p>
 <p>ykneomgr &#8211;reader OTP+CCID &#8211;applet-list </p>

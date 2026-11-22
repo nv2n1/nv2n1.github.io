@@ -10,9 +10,9 @@ description: "gjar – – Archive tool for Java archives"
 
 <p> gjar &#8211; &#8211; Archive tool for Java archives </p>
 <h2>SYNOPSIS</h2>
-<p> gjar <code>-ctxui</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] <i>jar-file</i> [<code>-C</code> <i></i><font SIZE="-1"><i>DIR</i></font><i></i> <i></i><font SIZE="-1"><i>FILE</i></font><i></i>] <i></i><font SIZE="-1"><i>FILE</i></font><i></i>&#8230;</p>
+<p> gjar <code>-ctxui</code> [<i></i><i>OPTIONS</i><i></i>] <i>jar-file</i> [<code>-C</code> <i></i><i>DIR</i><i></i> <i></i><i>FILE</i><i></i>] <i></i><i>FILE</i><i></i>&#8230;</p>
 <h2>DESCRIPTION</h2>
-<p> <code>gjar</code> is an implementation of Sun&#8217;s jar utility that comes with the <font SIZE="-1">JDK</font>. </p>
+<p> <code>gjar</code> is an implementation of Sun&#8217;s jar utility that comes with the JDK. </p>
 <p> If any file is a directory then it is processed recursively. The manifest file name and the archive file name needs to be specified in the same order the <code>-m</code> and <code>-f</code> flags are specified.</p>
 <h2>OPTIONS</h2>
 <p> Operation mode:</p>
@@ -25,14 +25,14 @@ description: "gjar – – Archive tool for Java archives"
 <dd> Extract named (or all) files from archive.</dd>
 <dt><code>-u</code></dt>
 <dd> Update existing archive.</dd>
-<dt><code>-i</code> <i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
+<dt><code>-i</code> <i></i><i>FILE</i><i></i></dt>
 <dd> Compute archive index.</dd></dl>
 <p> Operation modifiers:</p>
 <dl>
-<dt><code>-f</code> <i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
+<dt><code>-f</code> <i></i><i>FILE</i><i></i></dt>
 <dd> Specify archive file name.</dd>
 <dt><code>-0</code></dt>
-<dd> Store only; use no <font SIZE="-1">ZIP</font> compression.</dd>
+<dd> Store only; use no ZIP compression.</dd>
 <dt><code>-v</code></dt>
 <dd> Generate verbose output on standard output.</dd>
 <dt><code>-M</code></dt>
@@ -41,17 +41,17 @@ description: "gjar – – Archive tool for Java archives"
 <dd> Include manifest information from specified <i>manifest</i> file.</dd></dl>
 <p> File name selection:</p>
 <dl>
-<dt><code>-C</code> <i></i><font SIZE="-1"><i>DIR</i></font><i></i><i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
-<dd> Change to the <i></i><font SIZE="-1"><i>DIR</i></font><i></i> and include the following <i></i><font SIZE="-1"><i>FILE</i></font><i></i>.</dd>
+<dt><code>-C</code> <i></i><i>DIR</i><i></i><i></i><i>FILE</i><i></i></dt>
+<dd> Change to the <i></i><i>DIR</i><i></i> and include the following <i></i><i>FILE</i><i></i>.</dd>
 <dt><code>-@</code></dt>
-<dd> Read the names of the files to add to the archive from stdin. This option is supported only in combination with <code>-c</code> or <code>-u</code>. Non standard option added in the <font SIZE="-1">GCC</font> version.</dd></dl>
+<dd> Read the names of the files to add to the archive from stdin. This option is supported only in combination with <code>-c</code> or <code>-u</code>. Non standard option added in the GCC version.</dd></dl>
 <p> Standard options:</p>
 <dl>
 <dt><code>-help</code></dt>
 <dd> Print help text, then exit.</dd>
 <dt><code>-version</code></dt>
 <dd> Print version number, then exit.</dd>
-<dt><code>-J</code><i></i><font SIZE="-1"><i>OPTION</i></font><i></i></dt>
+<dt><code>-J</code><i></i><i>OPTION</i><i></i></dt>
 <dd> Pass argument to the Java runtime.</dd></dl>
 <h2>BUGS</h2>
 <h2>SEE ALSO</h2>

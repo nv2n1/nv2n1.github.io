@@ -16,17 +16,17 @@ description: "sc::StateOutBin –"
 <h3>Public Member Functions</h3>
 <p><code>StateOutBin</code> (std::ostream &amp;) </p>
 <p> <code>StateOutBin</code> (const char *) </p>
-<p> int <code>open</code> (const char *name)<br />
- <i>State information will be written to name. </i><br />
- void <code>close</code> ()<br />
- <i>Close the output stream. </i><br />
- int <code>use_directory</code> ()<br />
- <i>Returns true if this object uses a directory. </i><br />
- int <code>tell</code> ()<br />
- <i>Returns the current position in the file. </i><br />
- void <code>seek</code> (int loc)<br />
- <i>Set the current position in the file. </i><br />
- int <code>seekable</code> ()<br />
+<p> int <code>open</code> (const char *name)<br/>
+ <i>State information will be written to name. </i><br/>
+ void <code>close</code> ()<br/>
+ <i>Close the output stream. </i><br/>
+ int <code>use_directory</code> ()<br/>
+ <i>Returns true if this object uses a directory. </i><br/>
+ int <code>tell</code> ()<br/>
+ <i>Returns the current position in the file. </i><br/>
+ void <code>seek</code> (int loc)<br/>
+ <i>Set the current position in the file. </i><br/>
+ int <code>seekable</code> ()<br/>
  <i>Return non-zero if tell and seek do anything sensible. </i></p>
 <h2>Detailed Description</h2>
 <p>Save state to a binary file.</p>

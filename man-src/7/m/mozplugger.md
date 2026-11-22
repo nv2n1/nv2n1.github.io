@@ -27,7 +27,7 @@ description: "mozplugger – a streaming multimedia plugin for UNIX mozilla"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>video/quicktime: qt,mov: Mpeg video</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>: xanim +W$window -Zr +q +Ze +f $file</p>
 <p> Each line describing a mime type has three fields: </p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br />
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br/>
  <code>mime type</code> : <code>extensions</code> : <code>description</code> </p>
 <dl>
 <dt><code>mime type</code></dt>
@@ -38,7 +38,7 @@ description: "mozplugger – a streaming multimedia plugin for UNIX mozilla"
 <dd>This is the description that shows up in about:plugins and in the application preferences section in Mozilla. </dd>
 <dt>Lines that describe what command to use for a mime type must begin</dt>
 <dd>with a whitespace and have two fields: </dd>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br />
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br/>
  <code>flags</code> : <code>command</code> </p>
 <dt><code>flags</code></dt>
 <dd>This is a space separated list of flags associated with the command and tells mozplugger how to handle this command. See below for further details.</dd>
@@ -125,6 +125,6 @@ description: "mozplugger – a streaming multimedia plugin for UNIX mozilla"
 <p> Occassionally you may notice some zombie mozplugger-helper processes (defunct), this is not a bug, this is by design. The zombie processes occur when either the application exits or when using <code>nokill</code> flag (without exiting the page with the embedded object). The zombie(s) are reaped when closing the web page containing the associated embedded objects. </p>
 <p> If using behind a non-transparent HTTP proxy, it may be found that the commands using the <code>stream</code> flag do not work. This is because the proxy settings are not passed to the application in the command line. To work around this situation, dont use the stream flag OR edit the mozpluggerrc file and passed in necessary proxy setiings via the command line.</p>
 <h2>Authors</h2>
-<p>Fredrik Hubinette, hubbe [at] hubbe.net<br />
- Louis Bavoil, louis [at] bavoil.net<br />
+<p>Fredrik Hubinette, hubbe [at] hubbe.net<br/>
+ Louis Bavoil, louis [at] bavoil.net<br/>
  Peter Leese, peter [at] leese.net</p>

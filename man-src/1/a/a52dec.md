@@ -25,17 +25,17 @@ description: "a52dec – decode ATSC A/52 audio streams"
 <dt><code>-r</code></dt>
 <dd> disable dynamic range compression</dd>
 <dt><code>-o</code> <i>mode</i></dt>
-<dd> use audio output driver `mode&#8217;.<br />
+<dd> use audio output driver `mode&#8217;.<br/>
  A list of modes is available using the <code>-h</code> option.</dd></dl>
 <h2>AUTHORS</h2>
-<p> Michel Lespinasse &lt;walken [at] zoy.org&gt;<br />
- Aaron Holtzman &lt;aholtzma [at] ess.engr.uvic.ca&gt;<br />
+<p> Michel Lespinasse &lt;walken [at] zoy.org&gt;<br/>
+ Aaron Holtzman &lt;aholtzma [at] ess.engr.uvic.ca&gt;<br/>
  And many others on the net.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;liba52-devel [at] lists.sourceforge.net&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2000-2002 Michel Lespinasse<br />
- Copyright &#169; 1999-2000 Aaron Holtzman<br />
+<p> Copyright &#169; 2000-2002 Michel Lespinasse<br/>
+ Copyright &#169; 1999-2000 Aaron Holtzman<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-extract_a52/">extract_a52</a></code>(1) </p>

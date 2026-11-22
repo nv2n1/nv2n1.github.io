@@ -36,5 +36,5 @@ description: "bstr_printf – Format a string from binary arguments and place it
 <p>The format follows C99 vsnprintf, but has some extensions: see vsnprintf comment for details. </p>
 <p>The return value is the number of characters which would be generated for the given input, excluding the trailing &#8216;\0&#8217;, as per ISO C99. If you want to have the exact number of characters written into <i>buf</i> as return value (not including the trailing &#8216;\0&#8217;), use <code>vscnprintf</code>. If the return is greater than or equal to <i>size</i>, the resulting string is truncated.  </p>
 <h2>COPYRIGHT</h2>
-<p> <br />
+<p> <br/>
  </p>

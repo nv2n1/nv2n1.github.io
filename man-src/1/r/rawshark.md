@@ -44,7 +44,7 @@ struct rawshark_rec_s {
     3 0=&quot;192.168.77.10&quot; 1 -
     4 0=&quot;74.125.19.104&quot; 1 -
 </pre>
-<p> Note that packets 1 and 2 are <font SIZE="-1">DNS</font> queries, and 3 and 4 are not. Adding <code>-R &#8220;not dns&#8221;</code> still prints each line, but there&#8217;s an indication that packets 1 and 2 didn&#8217;t pass the filter: </p>
+<p> Note that packets 1 and 2 are DNS queries, and 3 and 4 are not. Adding <code>-R &#8220;not dns&#8221;</code> still prints each line, but there&#8217;s an indication that packets 1 and 2 didn&#8217;t pass the filter: </p>
 <pre>
     0 FT_IPv4 BASE_NONE - 1 FT_UINT16 BASE_HEX -
     1 1=&quot;1&quot; 0=&quot;192.168.77.10&quot; 0 -
@@ -57,32 +57,32 @@ struct rawshark_rec_s {
 <dl>
 <dt>-d &lt;encapsulation&gt;</dt>
 <dd> Specify how the packet data should be dissected. The encapsulation is of the form <i>type</i><code>:</code><i>value</i>, where <i>type</i> is one of: </dd>
-<p> <code>encap</code>:<i>name</i> Packet data should be dissected using the libpcap/WinPcap data link type (<font SIZE="-1">DLT</font>) <i>name</i>, e.g. <code>encap:EN10MB</code> for Ethernet. Names are converted using <i>pcap_datalink_name_to_val()</i>. A complete list of DLTs can be found at &lt;<a rel="nofollow" href="http://www.tcpdump.org/linktypes.html">http://www.tcpdump.org/linktypes.html</a>&gt;. </p>
-<p> <code>encap</code>:<i>number</i> Packet data should be dissected using the libpcap/WinPcap <font SIZE="-1">DLT </font><i>number</i>, e.g. <code>encap:105</code> for raw <font SIZE="-1">IEEE 802.11. </font> </p>
-<p> <code>proto</code>:<i>protocol</i> Packet data should be passed to the specified Wireshark protocol dissector, e.g. <code>proto:http</code> for <font SIZE="-1">HTTP</font> data.</p>
+<p> <code>encap</code>:<i>name</i> Packet data should be dissected using the libpcap/WinPcap data link type (DLT) <i>name</i>, e.g. <code>encap:EN10MB</code> for Ethernet. Names are converted using <i>pcap_datalink_name_to_val()</i>. A complete list of DLTs can be found at &lt;<a rel="nofollow" href="http://www.tcpdump.org/linktypes.html">http://www.tcpdump.org/linktypes.html</a>&gt;. </p>
+<p> <code>encap</code>:<i>number</i> Packet data should be dissected using the libpcap/WinPcap DLT <i>number</i>, e.g. <code>encap:105</code> for raw IEEE 802.11.  </p>
+<p> <code>proto</code>:<i>protocol</i> Packet data should be passed to the specified Wireshark protocol dissector, e.g. <code>proto:http</code> for HTTP data.</p>
 <dt>-F &lt;field to display&gt;</dt>
 <dd> Add the matching field to the output. Fields are any valid display filter field. More than one <code>-F</code> flag may be specified, and each field can match multiple times in a given packet. A single field may be specified per <code>-F</code> flag. If you want to apply a display filter, use the <code>-R</code> flag.</dd>
 <dt>-h</dt>
 <dd> Print the version and options and exits.</dd>
 <dt>-l</dt>
-<dd> Flush the standard output after the information for each packet is printed. (This is not, strictly speaking, line-buffered if <code>-V</code> was specified; however, it is the same as line-buffered if <code>-V</code> wasn&#8217;t specified, as only one line is printed for each packet, and, as <code>-l</code> is normally used when piping a live capture to a program or script, so that output for a packet shows up as soon as the packet is seen and dissected, it should work just as well as true line-buffering. We do this as a workaround for a deficiency in the Microsoft Visual C<font SIZE="-2">++</font> C library.) </dd>
+<dd> Flush the standard output after the information for each packet is printed. (This is not, strictly speaking, line-buffered if <code>-V</code> was specified; however, it is the same as line-buffered if <code>-V</code> wasn&#8217;t specified, as only one line is printed for each packet, and, as <code>-l</code> is normally used when piping a live capture to a program or script, so that output for a packet shows up as soon as the packet is seen and dissected, it should work just as well as true line-buffering. We do this as a workaround for a deficiency in the Microsoft Visual C++ C library.) </dd>
 <p> This may be useful when piping the output of <code>TShark</code> to another program, as it means that the program to which the output is piped will see the dissected data for a packet as soon as <code>TShark</code> sees the packet and generates that output, rather than seeing it only when the standard output buffer containing that data fills up.</p>
 <dt>-n</dt>
-<dd> Disable network object name resolution (such as hostname, <font SIZE="-1">TCP</font> and <font SIZE="-1">UDP</font> port names), the <code>-N</code> flag might override this one.</dd>
+<dd> Disable network object name resolution (such as hostname, TCP and UDP port names), the <code>-N</code> flag might override this one.</dd>
 <dt>-N &lt;name resolving flags&gt;</dt>
 <dd> Turn on name resolving only for particular types of addresses and port numbers, with name resolving for other types of addresses and port numbers turned off. This flag overrides <code>-n</code> if both <code>-N</code> and <code>-n</code> are present. If both <code>-N</code> and <code>-n</code> flags are not present, all name resolutions are turned on. </dd>
 <p> The argument is a string that may contain the letters: </p>
-<p> <code>m</code> to enable <font SIZE="-1">MAC</font> address resolution </p>
+<p> <code>m</code> to enable MAC address resolution </p>
 <p> <code>n</code> to enable network address resolution </p>
-<p> <code>N</code> to enable using external resolvers (e.g., <font SIZE="-1">DNS</font>) for network address resolution </p>
+<p> <code>N</code> to enable using external resolvers (e.g., DNS) for network address resolution </p>
 <p> <code>t</code> to enable transport-layer port number resolution </p>
-<p> <code>C</code> to enable concurrent (asynchronous) <font SIZE="-1">DNS</font> lookups</p>
+<p> <code>C</code> to enable concurrent (asynchronous) DNS lookups</p>
 <dt>-o &lt;preference&gt;:&lt;value&gt;</dt>
 <dd> Set a preference value, overriding the default value and any value read from a preference file. The argument to the option is a string of the form <i>prefname</i><code>:</code><i>value</i>, where <i>prefname</i> is the name of the preference (which is the same name that would appear in the preference file), and <i>value</i> is the value to which it should be set.</dd>
 <dt>-p</dt>
 <dd> Assume that packet data is preceded by a pcap_pkthdr struct as defined in pcap.h. On some systems the size of the timestamp data will be different from the data written to disk. On other systems they are identical and this flag has no effect.</dd>
 <dt>-r &lt;pipe&gt;|-</dt>
-<dd> Read packet data from <i>input source</i>. It can be either the name of a <font SIZE="-1">FIFO </font>(named pipe) or &#8220;-&#8221; to read data from the standard input, and must have the record format specified above.</dd>
+<dd> Read packet data from <i>input source</i>. It can be either the name of a FIFO (named pipe) or &#8220;-&#8221; to read data from the standard input, and must have the record format specified above.</dd>
 <dt>-R &lt;read (display) filter&gt;</dt>
 <dd> Cause the specified filter (which uses the syntax of read/display filters, rather than that of capture filters) to be applied before printing the output.</dd>
 <dt>-s</dt>
@@ -126,7 +126,7 @@ struct rawshark_rec_s {
 <p> The global <i>disabled_protos</i> file uses the same directory as the global preferences file. </p>
 <p> The personal <i>disabled_protos</i> file uses the same directory as the personal preferences file.</p>
 <dt>Name Resolution (hosts)</dt>
-<dd> If the personal <i>hosts</i> file exists, it is used to resolve IPv4 and IPv6 addresses before any other attempts are made to resolve them. The file has the standard <i>hosts</i> file syntax; each line contains one <font SIZE="-1">IP</font> address and name, separated by whitespace. The same directory as for the personal preferences file is used. </dd>
+<dd> If the personal <i>hosts</i> file exists, it is used to resolve IPv4 and IPv6 addresses before any other attempts are made to resolve them. The file has the standard <i>hosts</i> file syntax; each line contains one IP address and name, separated by whitespace. The same directory as for the personal preferences file is used. </dd>
 <p> Capture filter name resolution is handled by libpcap on UNIX-compatible systems and WinPcap on Windows. As such the Wireshark personal <i>hosts</i> file will not be consulted for capture filter name resolution.</p>
 <dt>Name Resolution (ethers)</dt>
 <dd> The <i>ethers</i> files are consulted to correlate 6-byte hardware addresses to names. First the personal <i>ethers</i> file is tried and if an address is not found there the global <i>ethers</i> file is tried next. </dd>
@@ -140,19 +140,19 @@ struct rawshark_rec_s {
 <p> The personal <i>ethers</i> file is looked for in the same directory as the personal preferences file. </p>
 <p> Capture filter name resolution is handled by libpcap on UNIX-compatible systems and WinPcap on Windows. As such the Wireshark personal <i>ethers</i> file will not be consulted for capture filter name resolution.</p>
 <dt>Name Resolution (manuf)</dt>
-<dd> The <i>manuf</i> file is used to match the 3-byte vendor portion of a 6-byte hardware address with the manufacturer&#8217;s name; it can also contain well-known <font SIZE="-1">MAC</font> addresses and address ranges specified with a netmask. The format of the file is the same as the <i>ethers</i> files, except that entries of the form: </dd>
+<dd> The <i>manuf</i> file is used to match the 3-byte vendor portion of a 6-byte hardware address with the manufacturer&#8217;s name; it can also contain well-known MAC addresses and address ranges specified with a netmask. The format of the file is the same as the <i>ethers</i> files, except that entries of the form: </dd>
 <pre>
   00:00:0C      Cisco
 </pre>
-<p> can be provided, with the 3-byte <font SIZE="-1">OUI</font> and the name for a vendor, and entries such as: </p>
+<p> can be provided, with the 3-byte OUI and the name for a vendor, and entries such as: </p>
 <pre>
   00-00-0C-07-AC/40     All-HSRP-routers
 </pre>
-<p> can be specified, with a <font SIZE="-1">MAC</font> address and a mask indicating how many bits of the address must match. The above entry, for example, has 40 significant bits, or 5 bytes, and would match addresses from 00-00-0C-07-AC-00 through 00-00-0C-07-AC-FF. The mask need not be a multiple of 8. </p>
+<p> can be specified, with a MAC address and a mask indicating how many bits of the address must match. The above entry, for example, has 40 significant bits, or 5 bytes, and would match addresses from 00-00-0C-07-AC-00 through 00-00-0C-07-AC-FF. The mask need not be a multiple of 8. </p>
 <p> The <i>manuf</i> file is looked for in the same directory as the global preferences file.</p>
 <dt>Name Resolution (ipxnets)</dt>
-<dd> The <i>ipxnets</i> files are used to correlate 4-byte <font SIZE="-1">IPX</font> network numbers to names. First the global <i>ipxnets</i> file is tried and if that address is not found there the personal one is tried next. </dd>
-<p> The format is the same as the <i>ethers</i> file, except that each address is four bytes instead of six. Additionally, the address can be represented as a single hexadecimal number, as is more common in the <font SIZE="-1">IPX</font> world, rather than four hex octets. For example, these four lines are valid lines of an <i>ipxnets</i> file: </p>
+<dd> The <i>ipxnets</i> files are used to correlate 4-byte IPX network numbers to names. First the global <i>ipxnets</i> file is tried and if that address is not found there the personal one is tried next. </dd>
+<p> The format is the same as the <i>ethers</i> file, except that each address is four bytes instead of six. Additionally, the address can be represented as a single hexadecimal number, as is more common in the IPX world, rather than four hex octets. For example, these four lines are valid lines of an <i>ipxnets</i> file: </p>
 <pre>
   C0.A8.2C.00              HR
   c0-a8-1c-00              CEO
@@ -163,40 +163,40 @@ struct rawshark_rec_s {
 <p> The personal <i>ipxnets</i> file is looked for in the same directory as the personal preferences file.</dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><font SIZE="-1">WIRESHARK_DEBUG_EP_NO_CHUNKS</font></dt>
+<dt>WIRESHARK_DEBUG_EP_NO_CHUNKS</dt>
 <dd> Normally per-packet memory is allocated in large &#8220;chunks.&#8221; This behavior doesn&#8217;t work well with debugging tools such as Valgrind or ElectricFence. Export this environment variable to force individual allocations. Note: disabling chunks also disables canaries (see below).</dd>
-<dt><font SIZE="-1">WIRESHARK_DEBUG_SE_NO_CHUNKS</font></dt>
+<dt>WIRESHARK_DEBUG_SE_NO_CHUNKS</dt>
 <dd> Normally per-file memory is allocated in large &#8220;chunks.&#8221; This behavior doesn&#8217;t work well with debugging tools such as Valgrind or ElectricFence. Export this environment variable to force individual allocations. Note: disabling chunks also disables canaries (see below).</dd>
-<dt><font SIZE="-1">WIRESHARK_DEBUG_EP_NO_CANARY</font></dt>
+<dt>WIRESHARK_DEBUG_EP_NO_CANARY</dt>
 <dd> Normally per-packet memory allocations are separated by &#8220;canaries&#8221; which allow detection of memory overruns. This comes at the expense of some extra memory usage. Exporting this environment variable disables these canaries.</dd>
-<dt><font SIZE="-1">WIRESHARK_DEBUG_SE_USE_CANARY</font></dt>
+<dt>WIRESHARK_DEBUG_SE_USE_CANARY</dt>
 <dd> Exporting this environment variable causes per-file memory allocations to be protected with &#8220;canaries&#8221; which allow for detection of memory overruns. This comes at the expense of significant extra memory usage.</dd>
-<dt><font SIZE="-1">WIRESHARK_DEBUG_SCRUB_MEMORY</font></dt>
+<dt>WIRESHARK_DEBUG_SCRUB_MEMORY</dt>
 <dd> If this environment variable is set, the contents of per-packet and per-file memory is initialized to 0xBADDCAFE when the memory is allocated and is reset to 0xDEADBEEF when the memory is freed. This functionality is useful mainly to developers looking for bugs in the way memory is handled.</dd>
-<dt><font SIZE="-1">WIRESHARK_DEBUG_WMEM_OVERRIDE</font></dt>
-<dd> Setting this environment variable forces the wmem framework to use the specified allocator backend for *all* allocations, regardless of which backend is normally specified by the code. This is mainly useful to developers when testing or debugging. See <i></i><font SIZE="-1"><i>README</i></font><i>.wmem</i> in the source distribution for details.</dd>
-<dt><font SIZE="-1">WIRESHARK_RUN_FROM_BUILD_DIRECTORY</font></dt>
+<dt>WIRESHARK_DEBUG_WMEM_OVERRIDE</dt>
+<dd> Setting this environment variable forces the wmem framework to use the specified allocator backend for *all* allocations, regardless of which backend is normally specified by the code. This is mainly useful to developers when testing or debugging. See <i></i><i>README</i><i>.wmem</i> in the source distribution for details.</dd>
+<dt>WIRESHARK_RUN_FROM_BUILD_DIRECTORY</dt>
 <dd> This environment variable causes the plugins and other data files to be loaded from the build directory (where the program was compiled) rather than from the standard locations. It has no effect when the program in question is running with root (or setuid) permissions on *NIX.</dd>
-<dt><font SIZE="-1">WIRESHARK_DATA_DIR</font></dt>
+<dt>WIRESHARK_DATA_DIR</dt>
 <dd> This environment variable causes the various data files to be loaded from a directory other than the standard locations. It has no effect when the program in question is running with root (or setuid) permissions on *NIX.</dd>
-<dt><font SIZE="-1">WIRESHARK_PYTHON_DIR</font></dt>
+<dt>WIRESHARK_PYTHON_DIR</dt>
 <dd> This environment variable points to an alternate location for Python. It has no effect when the program in question is running with root (or setuid) permissions on *NIX.</dd>
-<dt><font SIZE="-1">ERF_RECORDS_TO_CHECK</font></dt>
-<dd> This environment variable controls the number of <font SIZE="-1">ERF</font> records checked when deciding if a file really is in the <font SIZE="-1">ERF</font> format. Setting this environment variable a number higher than the default (20) would make false positives less likely.</dd>
-<dt><font SIZE="-1">IPFIX_RECORDS_TO_CHECK</font></dt>
-<dd> This environment variable controls the number of <font SIZE="-1">IPFIX</font> records checked when deciding if a file really is in the <font SIZE="-1">IPFIX</font> format. Setting this environment variable a number higher than the default (20) would make false positives less likely.</dd>
-<dt><font SIZE="-1">WIRESHARK_ABORT_ON_DISSECTOR_BUG</font></dt>
+<dt>ERF_RECORDS_TO_CHECK</dt>
+<dd> This environment variable controls the number of ERF records checked when deciding if a file really is in the ERF format. Setting this environment variable a number higher than the default (20) would make false positives less likely.</dd>
+<dt>IPFIX_RECORDS_TO_CHECK</dt>
+<dd> This environment variable controls the number of IPFIX records checked when deciding if a file really is in the IPFIX format. Setting this environment variable a number higher than the default (20) would make false positives less likely.</dd>
+<dt>WIRESHARK_ABORT_ON_DISSECTOR_BUG</dt>
 <dd> If this environment variable is set, <code>Rawshark</code> will call <i><a href="/docs/linux/man/3-abort/">abort</a></i>(3) when a dissector bug is encountered. <i><a href="/docs/linux/man/3-abort/">abort</a></i>(3) will cause the program to exit abnormally; if you are running <code>Rawshark</code> in a debugger, it should halt in the debugger and allow inspection of the process, and, if you are not running it in a debugger, it will, on some OSes, assuming your environment is configured correctly, generate a core dump file. This can be useful to developers attempting to troubleshoot a problem with a protocol dissector.</dd>
-<dt><font SIZE="-1">WIRESHARK_EP_VERIFY_POINTERS</font></dt>
+<dt>WIRESHARK_EP_VERIFY_POINTERS</dt>
 <dd> This environment variable, if set, causes certain uses of pointers to be audited to ensure they do not point to memory that is deallocated after each packet has been fully dissected. This can be useful to developers writing or auditing code.</dd>
-<dt><font SIZE="-1">WIRESHARK_SE_VERIFY_POINTERS</font></dt>
+<dt>WIRESHARK_SE_VERIFY_POINTERS</dt>
 <dd> This environment variable, if set, causes certain uses of pointers to be audited to ensure they do not point to memory that is deallocated after when a capture file is closed. This can be useful to developers writing or auditing code.</dd>
-<dt><font SIZE="-1">WIRESHARK_ABORT_ON_OUT_OF_MEMORY</font></dt>
+<dt>WIRESHARK_ABORT_ON_OUT_OF_MEMORY</dt>
 <dd> This environment variable, if present, causes <i><a href="/docs/linux/man/3-abort/">abort</a></i>(3) to be called if certain out-of-memory conditions (which normally result in an exception and an explanatory error message) are experienced. This can be useful to developers debugging out-of-memory conditions.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/4-wireshark-filter/">wireshark-filter</a></i>(4), <i><a href="/docs/linux/man/1-wireshark/">wireshark</a></i>(1), <i><a href="/docs/linux/man/1-tshark/">tshark</a></i>(1), <i><a href="/docs/linux/man/1-editcap/">editcap</a></i>(1), <i>pcap</i>(3), <i><a href="/docs/linux/man/1-dumpcap/">dumpcap</a></i>(1), <i><a href="/docs/linux/man/1-text2pcap/">text2pcap</a></i>(1), <i><a href="/docs/linux/man/7-pcap-filter/">pcap-filter</a></i>(7) or <i><a href="/docs/linux/man/8-tcpdump/">tcpdump</a></i>(8)</p>
 <h2>NOTES</h2>
 <p> <code>Rawshark</code> is part of the <code>Wireshark</code> distribution. The latest version of <code>Wireshark</code> can be found at &lt;<a rel="nofollow" href="http://www.wireshark.org">http://www.wireshark.org</a>&gt;. </p>
-<p> <font SIZE="-1">HTML</font> versions of the Wireshark project man pages are available at: &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/man-pages">http://www.wireshark.org/docs/man-pages</a>&gt;.</p>
+<p> HTML versions of the Wireshark project man pages are available at: &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/man-pages">http://www.wireshark.org/docs/man-pages</a>&gt;.</p>
 <h2>AUTHORS</h2>
 <p> <code>Rawshark</code> uses the same packet dissection code that <code>Wireshark</code> does, as well as using many other modules from <code>Wireshark</code>; see the list of authors in the <code>Wireshark</code> man page for a list of authors of that code. </p>

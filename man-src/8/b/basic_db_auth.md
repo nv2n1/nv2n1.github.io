@@ -16,7 +16,7 @@ url: "/docs/linux/man/8-basic_db_auth/"
 <dt><code>&#8211;debug</code></dt>
 <dd>Write debug info to stderr.</dd>
 <dt><code>&#8211;dsn</code></dt>
-<dd>Database <font SIZE="-1">DSN.</font> Default &#8220;DBI:mysql:database=squid&#8221;</dd>
+<dd>Database DSN. Default &#8220;DBI:mysql:database=squid&#8221;</dd>
 <dt><code>&#8211;user</code></dt>
 <dd>Database User</dd>
 <dt><code>&#8211;password</code></dt>
@@ -38,7 +38,7 @@ url: "/docs/linux/man/8-basic_db_auth/"
 <dt><code>&#8211;persist</code></dt>
 <dd>Keep a persistent database connection open between queries.</dd>
 <dt><code>&#8211;joomla</code></dt>
-<dd>Tells helper that user database is Joomla <font SIZE="-1">DB. </font> So their unusual salt hashing is understood.</dd></dl>
+<dd>Tells helper that user database is Joomla DB.  So their unusual salt hashing is understood.</dd></dl>
 <h2>Author</h2>
 <p>This program was written by <i>Henrik Nordstrom &lt;henrik [at] henriknordstrom.net</i>&gt; and <i>Luis Daniel Lucio Quiroz &lt;dlucio [at] okay.com.mx</i>&gt; </p>
 <p> This manual was written by <i>Henrik Nordstrom &lt;henrik [at] henriknordstrom.net</i>&gt;</p>
@@ -48,7 +48,7 @@ url: "/docs/linux/man/8-basic_db_auth/"
  * Squid software is distributed under GPLv2+ license and includes
  * contributions from numerous individuals and organizations.
  * Please see the COPYING and CONTRIBUTORS files for details.</pre>
-<p>Copyright (C) 2007 Henrik Nordstrom &lt;henrik [at] henriknordstrom.net&gt; Copyright (C) 2010 Luis Daniel Lucio Quiroz &lt;dlucio [at] okay.com.mx&gt; (Joomla support) This program is free software. You may redistribute copies of it under the terms of the <font SIZE="-1">GNU</font> General Public License version 2, or (at youropinion) any later version.</p>
+<p>Copyright (C) 2007 Henrik Nordstrom &lt;henrik [at] henriknordstrom.net&gt; Copyright (C) 2010 Luis Daniel Lucio Quiroz &lt;dlucio [at] okay.com.mx&gt; (Joomla support) This program is free software. You may redistribute copies of it under the terms of the GNU General Public License version 2, or (at youropinion) any later version.</p>
 <h2>Questions</h2>
 <p>Questions on the usage of this program can be sent to the <i>Squid Users mailing list &lt;squid-users [at] squid-cache.org</i>&gt;</p>
 <h2>Reporting Bugs</h2>
@@ -57,4 +57,4 @@ url: "/docs/linux/man/8-basic_db_auth/"
 <p> Report serious security bugs to <i>Squid Bugs &lt;squid-bugs [at] squid-cache.org</i>&gt; </p>
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list &lt;squid-dev [at] squid-cache.org</i>&gt;</p>
 <h2>See Also</h2>
-<p>squid (8), <font SIZE="-1">GPL \fIs0(7), The Squid </font><font SIZE="-2">FAQ</font> wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a> The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>
+<p>squid (8), GPL \fIs0(7), The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a> The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>

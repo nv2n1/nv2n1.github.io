@@ -14,10 +14,10 @@ description: "metalink_resource_t – The structure that holds an URL of a resou
 <h2>DESCRIPTION</h2>
 <p> <code>metalink_resource_t</code> is a structure that holds an URL of a resource and its metadata. </p>
 <h2>STRUCTURE MEMBERS</h2>
-<p> char *url;<br />
- char *type;<br />
- char *location;<br />
- int preference;<br />
+<p> char *url;<br/>
+ char *type;<br/>
+ char *location;<br/>
+ int preference;<br/>
  int maxconnections; </p>
 <h3>url</h3>
 <p> Null terminated string of URL. </p>

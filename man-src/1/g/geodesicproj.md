@@ -24,7 +24,7 @@ description: "GeodesicProj — perform projections based on geodesics"
 <dt><code>-r</code></dt>
 <dd>perform the reverse projection. <i>x</i> and <i>y</i> are given on standard input and each line of standard output gives <i>latitude</i>, <i>longitude</i>, <i>azi</i>, and <i>rk</i>.</dd>
 <dt><code>-e</code></dt>
-<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</dd>
+<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the WGS84 ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</dd>
 <dt><code>-p</code></dt>
 <dd>set the output precision to <i>prec</i> (default 6). <i>prec</i> is the number of digits after the decimal point for lengths (in meters). For latitudes, longitudes, and azimuths (in degrees), the number of digits after the decimal point is <i>prec</i> + 5. For the scale, the number of digits after the decimal point is <i>prec</i> + 6.</dd>
 <dt><code>&#8211;comment-delimiter</code></dt>
@@ -51,7 +51,7 @@ description: "GeodesicProj — perform projections based on geodesics"
 <h2>Errors</h2>
 <p>An illegal line of input will print an error message to standard output beginning with <tt>&quot;ERROR:&quot;</tt> and causes <code>GeodesicProj</code> to return an exit code of 1. However, an error does not cause <code>GeodesicProj</code> to terminate; following lines will be converted.</p>
 <h2>See Also</h2>
-<p>The ellipsoidal gnomonic projection is derived in Section 8 of C. F. F. Karney, <i>Algorithms for geodesics</i>, J. Geodesy 87, 43-55 (2013); <font SIZE="-1">DOI </font>&lt;<a rel="nofollow" href="https://dx.doi.org/10.1007/s00190-012-0578-z">https://dx.doi.org/10.1007/s00190-012-0578-z</a>&gt;; addenda: &lt;<a rel="nofollow" href="http://geographiclib.sf.net/geod-addenda.html">http://geographiclib.sf.net/geod-addenda.html</a>&gt;.</p>
+<p>The ellipsoidal gnomonic projection is derived in Section 8 of C. F. F. Karney, <i>Algorithms for geodesics</i>, J. Geodesy 87, 43-55 (2013); DOI &lt;<a rel="nofollow" href="https://dx.doi.org/10.1007/s00190-012-0578-z">https://dx.doi.org/10.1007/s00190-012-0578-z</a>&gt;; addenda: &lt;<a rel="nofollow" href="http://geographiclib.sf.net/geod-addenda.html">http://geographiclib.sf.net/geod-addenda.html</a>&gt;.</p>
 <h2>Author</h2>
 <p><code>GeodesicProj</code> was written by Charles Karney.</p>
 <h2>History</h2>

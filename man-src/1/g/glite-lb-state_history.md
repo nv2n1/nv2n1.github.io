@@ -17,15 +17,15 @@ description: "glite-lb-state_history – utility to show job state changes store
 <dl>
 <dt><code>-f</code> <i>FIELDS</i></dt>
 <dd> Job status fields to show in the history listing. </dd>
-<p> Basic information always shown:<br />
-&nbsp;<wbr>&nbsp;<wbr><code>event name</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>jobid</code><br />
+<p> Basic information always shown:<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>event name</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>jobid</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>job status</code> </p>
-<p> Fields shown by default:<br />
-&nbsp;<wbr>&nbsp;<wbr><code>network_server</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>jdl:VirtualOrganisation</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>destination</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>done_code</code><br />
+<p> Fields shown by default:<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>network_server</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>jdl:VirtualOrganisation</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>destination</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>done_code</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>reason</code> </p>
 </dl>
 <h2>BUGS</h2>

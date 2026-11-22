@@ -239,9 +239,9 @@ string = "abcdefghijklm" print $
 </dd><dl>
 <dt>
 </dt><dd>
-key2 = &#8216;original key&#8217; print $<br />
-{<br />
-    array[(Re)$key2]<br />
+key2 = &#8216;original key&#8217; print $<br/>
+{<br/>
+    array[(Re)$key2]<br/>
 }
 </dd></dl>
 </dl>
@@ -283,8 +283,8 @@ key2 = &#8216;original key&#8217; print $<br />
 <dl>
 <dt>
 </dt><dd>
-typeset &#8211; A aa<br />
-              typeset &#8220;aa[one\&#8221;two\&#8221;three\&#8221;quotes]&#8221; = QQQ<br />
+typeset &#8211; A aa<br/>
+              typeset &#8220;aa[one\&#8221;two\&#8221;three\&#8221;quotes]&#8221; = QQQ<br/>
     print &#8220;$aa[one\&#8221;two\&#8221;three\&#8221;quotes]&#8221;
 </dd></dl>
 <p> It is important to note that the quoting rules do not change when a parameter expansion with a subscript is nested inside another subscript expression. That is, it is not necessary to use additional backslashes within the inner subscript expression; they are removed only once, from the innermost subscript outwards. Parameters are also expanded from the innermost subscript first, as each expansion is encountered left to right in the outer expression. </p>
@@ -292,8 +292,8 @@ typeset &#8211; A aa<br />
 <dl>
 <dt>
 </dt><dd>
-typeset &#8211; A aa<br />
-              aa[(e) * ] = star<br />
+typeset &#8211; A aa<br/>
+              aa[(e) * ] = star<br/>
     print $aa[(e) * ]
 </dd></dl>
 <p> A last detail must be considered when reverse subscripting is performed. Parameters appearing in the subscript expression are first expanded and then the complete expression is interpreted as a pattern. This has two effects: first, parameters behave as if <code>GLOB_SUBST</code> were on (and it cannot be turned off); second, backslashes are interpreted twice, once when parsing the array subscript and again when parsing the pattern. In a reverse subscript, it&#8217;s necessary to use <i>four</i> backslashes to cause a single backslash to match literally in the pattern. For complex patterns, it is often easiest to assign the desired pattern to a parameter and then refer to that parameter in the subscript, because then the backslashes, brackets, parentheses, etc., are seen only when the complete expression is converted to a pattern. To match the value of a parameter literally in a reverse subscript, rather than as a pattern, use `<code>${(q</code><code>)</code><i>name</i><code>}</code>&#8216; (see <i><a href="/docs/linux/man/1-zshexpn/">zshexpn</a></i>(1)) to quote the expanded value. </p>

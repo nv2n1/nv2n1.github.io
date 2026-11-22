@@ -10,24 +10,24 @@ description: "nfstest.file_io – File I/O module"
 <p>nfstest.file_io &#8211; File I/O module</p>
 <h2>Description</h2>
 <p>Provides an interface to create and manipulate files of different types. The arguments allow running for a specified period of time as well as running multiple processes. Each process modifies a single file at a time and the file name space is different for each process so there are no collisions between two different processes modifying the same file. </p>
-<p> File types:<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Regular file<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Hard link<br />
+<p> File types:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Regular file<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Hard link<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211; Symbolic link </p>
-<p> File operations:<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Open&nbsp;<wbr>(create or re-open)<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Open downgrade<br />
-&nbsp;<wbr>This is done by opening the file for read and write, then the file is<br />
-&nbsp;<wbr>opened again as read only and finally closing the read and write file<br />
-&nbsp;<wbr>descriptor<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Read&nbsp;<wbr>(sequential or random access)<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Write&nbsp;<wbr>(sequential or random access)<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Remove<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Rename<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Truncate&nbsp;<wbr>(path or file descriptor)<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Readdir<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Lock<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Unlock<br />
+<p> File operations:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Open&nbsp;<wbr>(create or re-open)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Open downgrade<br/>
+&nbsp;<wbr>This is done by opening the file for read and write, then the file is<br/>
+&nbsp;<wbr>opened again as read only and finally closing the read and write file<br/>
+&nbsp;<wbr>descriptor<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Read&nbsp;<wbr>(sequential or random access)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Write&nbsp;<wbr>(sequential or random access)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Remove<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Rename<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Truncate&nbsp;<wbr>(path or file descriptor)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Readdir<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Lock<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Unlock<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211; Tlock</p>
 <h2>Classes</h2>
 <h3>class FileIO(baseobj.BaseObj)</h3>

@@ -10,23 +10,23 @@ description: "debconf-updatepo – update PO files about debconf templates"
 
 <p> debconf-updatepo &#8211; update PO files about debconf templates </p>
 <h2>SYNOPSIS</h2>
-<p> <code>debconf-updatepo</code> [<code>-v</code>] [<code>-h</code>] [<code>&#8211;podir=</code><font SIZE="-1">DIR</font>] [<code>&#8211;skip-pot</code>] [<code>&#8211;skip-merge</code>] [<code>&#8211;msgid-bugs-address=</code><font SIZE="-1">EMAIL</font>]</p>
+<p> <code>debconf-updatepo</code> [<code>-v</code>] [<code>-h</code>] [<code>&#8211;podir=</code>DIR] [<code>&#8211;skip-pot</code>] [<code>&#8211;skip-merge</code>] [<code>&#8211;msgid-bugs-address=</code>EMAIL]</p>
 <h2>DESCRIPTION</h2>
-<p> This program reads <i>po/POTFILES.in</i> to determine which master files need to be processed, then extracts new gettext strings into <i>po/templates.pot</i> and updates all <i>po/*.po</i> files. This script can be called either in the top-level directory, or in the <i>debian</i> or <i>debian/po</i> subdirectories. It is run by developer and/or translator to update <font SIZE="-1">PO</font> files when the English text is modified in <i>templates</i> files.</p>
+<p> This program reads <i>po/POTFILES.in</i> to determine which master files need to be processed, then extracts new gettext strings into <i>po/templates.pot</i> and updates all <i>po/*.po</i> files. This script can be called either in the top-level directory, or in the <i>debian</i> or <i>debian/po</i> subdirectories. It is run by developer and/or translator to update PO files when the English text is modified in <i>templates</i> files.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Display a usage summary and exit.</dd>
 <dt><code>-v</code>, <code>&#8211;verbose</code></dt>
 <dd> Process in verbose mode.</dd>
-<dt><code>&#8211;podir=</code><font SIZE="-1">DIR</font></dt>
-<dd> Set directory for <font SIZE="-1">PO</font> files. By default <font SIZE="-1">PO</font> files are searched in <i>debian/po</i>, <i>po</i> and <i>../po</i> directories in that order.</dd>
+<dt><code>&#8211;podir=</code>DIR</dt>
+<dd> Set directory for PO files. By default PO files are searched in <i>debian/po</i>, <i>po</i> and <i>../po</i> directories in that order.</dd>
 <dt><code>&#8211;skip-pot</code></dt>
 <dd> Do not generate a new <i>po/templates.pot</i> file.</dd>
 <dt><code>&#8211;skip-merge</code></dt>
-<dd> Do not merge existing <font SIZE="-1">PO</font> files with <i>po/templates.pot</i>.</dd>
-<dt><code>&#8211;msgid-bugs-address=</code><font SIZE="-1">EMAIL</font></dt>
-<dd> Set the email address that will be specified in the <font SIZE="-1">POT</font>&#8216;s Report-Msgid-Bugs-To field. </dd>
+<dd> Do not merge existing PO files with <i>po/templates.pot</i>.</dd>
+<dt><code>&#8211;msgid-bugs-address=</code>EMAIL</dt>
+<dd> Set the email address that will be specified in the POT&#8216;s Report-Msgid-Bugs-To field. </dd>
 <p> By default, this field is set to &lt;package&gt;@package.debian.org. </p>
 <p> It is intended for the maintainers of Debian based distributions, and should be used in the following cases:</p>
 <dl>

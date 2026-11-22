@@ -16,8 +16,8 @@ AIPTEK stv680 0x0553 0x0202 basic
 Konica e-mini 0x04c8 0x0722 untested
 DigitalDream l'espion XS 0x1183 0x0001 untested
 Creative WebCam Go mini 0x041e 0x4007 untested</pre>
-<p>For all these cameras, see the backend home page (under AUTHOR) for the exact status of each camera. For startup of this backend check that if present the stv680 kernel module is removed or disabled.<br />
- Also before using, enable the backend by editing the <i>/etc/sane.d/dll.conf</i> file, change #stv680 to stv680. For problems with the untested cameras, you should contact the author for that. The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1). For both programs use the <code>-B</code> option needed for size buffer. Some frontends examples:<br />
+<p>For all these cameras, see the backend home page (under AUTHOR) for the exact status of each camera. For startup of this backend check that if present the stv680 kernel module is removed or disabled.<br/>
+ Also before using, enable the backend by editing the <i>/etc/sane.d/dll.conf</i> file, change #stv680 to stv680. For problems with the untested cameras, you should contact the author for that. The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1). For both programs use the <code>-B</code> option needed for size buffer. Some frontends examples:<br/>
  <code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1)</p>
 <dl>
 <dd>xcam -B</dd></dl>
@@ -67,8 +67,8 @@ scanimage -B -d stv680:libusb:001:002 --batch=out%d.ppm --batch-count 5 --mode &
 <h2>Bugs</h2>
 <dl>
 <dt>Plenty. Parts of this backend are still under development.</dt>
-<dd>1. Some untested cameras.<br />
- 2. Video streaming slow and stops sometimes (scanimage).<br />
+<dd>1. Some untested cameras.<br/>
+ 2. Video streaming slow and stops sometimes (scanimage).<br/>
  3. Sometimes 1/3 of image is NOK (xcam). </dd>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1) </p>
@@ -77,8 +77,8 @@ scanimage -B -d stv680:libusb:001:002 --batch=out%d.ppm --batch-count 5 --mode &
 <h2>Credits</h2>
 <dl>
 <dt>Thanks to developers of the other stv680 programs:</dt>
-<dd>STV680 kernel module<br />
- pencam2 program<br />
+<dd>STV680 kernel module<br/>
+ pencam2 program<br/>
  <code>libghoto2</code>(3) program (camlib stv0680) </dd>
 </dl>
 </dl></dl>

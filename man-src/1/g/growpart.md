@@ -11,13 +11,13 @@ description: "growpart – extend a partition in a partition table to fill avail
 <p> growpart &#8211; extend a partition in a partition table to fill available space </p>
 <h2>SYNOPSIS</h2>
 <p> <code>growpart [OPTIONS] DISK PARTITION-NUMBER</code> </p>
-<p> growpart partition<br />
-rewrite partition table so that partition takes up all the space it can<br />
-options:<br />
-&nbsp;<wbr>-h | &#8211;help&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>print Usage an exit<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;fudge F&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>if part could be resized, but change would be<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>less than&nbsp;<wbr>&#8216;F&#8217;, do not resize&nbsp;<wbr>(default: 20480)<br />
-&nbsp;<wbr>-N | &#8211;dry-run&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>only report what would be done, show new&nbsp;<wbr>&#8216;sfdisk -d&#8217;<br />
+<p> growpart partition<br/>
+rewrite partition table so that partition takes up all the space it can<br/>
+options:<br/>
+&nbsp;<wbr>-h | &#8211;help&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>print Usage an exit<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;fudge F&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>if part could be resized, but change would be<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>less than&nbsp;<wbr>&#8216;F&#8217;, do not resize&nbsp;<wbr>(default: 20480)<br/>
+&nbsp;<wbr>-N | &#8211;dry-run&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>only report what would be done, show new&nbsp;<wbr>&#8216;sfdisk -d&#8217;<br/>
 &nbsp;<wbr>-v | &#8211;verbose&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>increase verbosity&nbsp;<wbr>/&nbsp;<wbr>debug </p>
 <h2>OPTIONS</h2>
 <dl>

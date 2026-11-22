@@ -10,7 +10,7 @@ description: "zpftri.f –"
 <p>zpftri.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zpftri</code> (TRANSR, UPLO, N, A, INFO)<br />
+<p>subroutine <code>zpftri</code> (TRANSR, UPLO, N, A, INFO)<br/>
  <i></i><code>ZPFTRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zpftri (characterTRANSR, characterUPLO, integerN, complex*16, dimension( 0: * )A, integerINFO)</h3>

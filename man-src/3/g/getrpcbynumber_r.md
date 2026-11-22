@@ -22,10 +22,10 @@ int getrpcbynumber_r(int number,
                      size_t buflen, struct rpcent **result);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>getrpcent_r</code>(), <code>getrpcbyname_r</code>(), <code>getrpcbynumber_r</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> <code>getrpcent_r</code>(), <code>getrpcbyname_r</code>(), <code>getrpcbynumber_r</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>getrpcent_r</code>(), <code>getrpcbyname_r</code>(), and <code>getrpcbynumber_r</code>() functions are the reentrant equivalents of, respectively, <code><a href="/docs/linux/man/3-getrpcent/">getrpcent</a></code>(3), <code><a href="/docs/linux/man/3-getrpcbyname/">getrpcbyname</a></code>(3), and <code><a href="/docs/linux/man/3-getrpcbynumber/">getrpcbynumber</a></code>(3). They differ in the way that the <i>rpcent</i> structure is returned, and in the function calling signature and return value. This manual page describes just the differences from the nonreentrant functions. </p>

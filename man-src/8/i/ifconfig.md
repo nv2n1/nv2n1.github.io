@@ -9,7 +9,7 @@ description: "ifconfig – configure a network interface"
 
 <p>ifconfig &#8211; configure a network interface</p>
 <h2>Synopsis</h2>
-<p><code>ifconfig [-v] [-a] [-s] [interface]</code><br />
+<p><code>ifconfig [-v] [-a] [-s] [interface]</code><br/>
  <code>ifconfig [-v] interface [aftype] options | address &#8230;</code></p>
 <h2>Description</h2>
 <p><code>Ifconfig</code> is used to configure the kernel-resident network interfaces. It is used at boot time to set up interfaces as necessary. After that, it is usually only needed when debugging or when system tuning is needed. If no arguments are given, <code>ifconfig</code> displays the status of the currently active interfaces. If a single <code>interface</code> argument is given, it displays the status of the given interface only; if a single <code>-a</code> argument is given, it displays the status of all interfaces, even those that are down. Otherwise, it configures an interface. </p>
@@ -58,7 +58,7 @@ description: "ifconfig – configure a network interface"
 <dt><code>[-]broadcast [addr]</code></dt>
 <dd>If the address argument is given, set the protocol broadcast address for this interface. Otherwise, set (or clear) the <code>IFF_BROADCAST</code> flag for the interface.</dd>
 <dt><code>[-]pointopoint [addr]</code></dt>
-<dd>This keyword enables the <code>point-to-point</code> mode of an interface, meaning that it is a direct link between two machines with nobody else listening on it.<br />
+<dd>This keyword enables the <code>point-to-point</code> mode of an interface, meaning that it is a direct link between two machines with nobody else listening on it.<br/>
  If the address argument is also given, set the protocol address of the other side of the link, just like the obsolete <code>dstaddr</code> keyword does. Otherwise, set or clear the <code>IFF_POINTOPOINT</code> flag for the interface.</dd>
 <dt><code>hw class address</code></dt>
 <dd>Set the hardware address of this interface, if the device driver supports this operation. The keyword must be followed by the name of the hardware class and the printable ASCII equivalent of the hardware address. Hardware classes currently supported include <code>ether</code> (Ethernet), <code>ax25</code> (AMPR AX.25), <code>ARCnet</code> and <code>netrom</code> (AMPR NET/ROM).</dd>
@@ -72,17 +72,17 @@ description: "ifconfig – configure a network interface"
 <p>Since kernel release 2.2 there are no explicit interface statistics for alias interfaces anymore. The statistics printed for the original address are shared with all alias addresses on the same device. If you want per-address statistics you should add explicit accounting rules for the address using the <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8) command. </p>
 <p> Interrupt problems with Ethernet device drivers fail with EAGAIN <i>(SIOCSIIFLAGS: Resource temporarily unavailable)</i> it is most likely a interrupt conflict. See <i><a rel="nofollow" href="http://www.scyld.com/expert/irq-conflict.html">http://www.scyld.com/expert/irq-conflict.html</a></i> for more information.</p>
 <h2>Files</h2>
-<p><i>/proc/net/dev</i><br />
+<p><i>/proc/net/dev</i><br/>
  <i>/proc/net/if_inet6</i></p>
 <h2>Bugs</h2>
 <p>Ifconfig uses the ioctl access method to get the full address information, which limits hardware addresses to 8 bytes. Because Infiniband hardware address has 20 bytes, only the first 8 bytes are displayed correctly. Please use <code>ip link</code> command from <code>iproute2</code> package to display link layer informations including the hardware address. </p>
 <p> While appletalk DDP and IPX addresses will be displayed they cannot be altered by this command.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/8-route/">route</a>(8), <a href="/docs/linux/man/8-netstat/">netstat</a>(8), <a href="/docs/linux/man/8-arp/">arp</a>(8), <a href="/docs/linux/man/8-rarp/">rarp</a>(8), <a href="/docs/linux/man/8-iptables/">iptables</a>(8), <a href="/docs/linux/man/8-ifup/">ifup</a>(8), <a href="/docs/linux/man/5-interfaces/">interfaces</a>(5).<br />
+<p><a href="/docs/linux/man/8-route/">route</a>(8), <a href="/docs/linux/man/8-netstat/">netstat</a>(8), <a href="/docs/linux/man/8-arp/">arp</a>(8), <a href="/docs/linux/man/8-rarp/">rarp</a>(8), <a href="/docs/linux/man/8-iptables/">iptables</a>(8), <a href="/docs/linux/man/8-ifup/">ifup</a>(8), <a href="/docs/linux/man/5-interfaces/">interfaces</a>(5).<br/>
  <a rel="nofollow" href="http://physics.nist.gov/cuu/Units/binary.html">http://physics.nist.gov/cuu/Units/binary.html</a> &#8211; Prefixes for binary multiples</p>
 <h2>Authors</h2>
-<p>Fred N. van Kempen, &lt;waltje [at] uwalt.nl.mugnet.org&gt;<br />
- Alan Cox, &lt;Alan.Cox [at] linux.org&gt;<br />
- Phil Blundell, &lt;Philip.Blundell [at] pobox.com&gt;<br />
- Andi Kleen<br />
+<p>Fred N. van Kempen, &lt;waltje [at] uwalt.nl.mugnet.org&gt;<br/>
+ Alan Cox, &lt;Alan.Cox [at] linux.org&gt;<br/>
+ Phil Blundell, &lt;Philip.Blundell [at] pobox.com&gt;<br/>
+ Andi Kleen<br/>
  Bernd Eckenfels, &lt;net-tools [at] lina.inka.de&gt;</p>

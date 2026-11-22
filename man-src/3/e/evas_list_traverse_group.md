@@ -9,11 +9,11 @@ description: "Linked List Traverse Functions – Functions that you can use to t
 
 <p>Linked List Traverse Functions &#8211; Functions that you can use to traverse a linked list. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Evas_List</code> * <code>evas_list_last</code> (const <code>Evas_List</code> *list)<br />
- <i>Get the last list node in the list. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_list_next</code> (const <code>Evas_List</code> *list)<br />
- <i>Get the next list node after the specified list node. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_list_prev</code> (const <code>Evas_List</code> *list)<br />
+<p>EAPI <code>Evas_List</code> * <code>evas_list_last</code> (const <code>Evas_List</code> *list)<br/>
+ <i>Get the last list node in the list. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_list_next</code> (const <code>Evas_List</code> *list)<br/>
+ <i>Get the next list node after the specified list node. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_list_prev</code> (const <code>Evas_List</code> *list)<br/>
  <i>Get the previous list node before the specified list node. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that you can use to traverse a linked list.</p>

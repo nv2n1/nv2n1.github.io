@@ -10,7 +10,7 @@ description: "cpttrf.f –"
 <p>cpttrf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cpttrf</code> (N, D, E, INFO)<br />
+<p>subroutine <code>cpttrf</code> (N, D, E, INFO)<br/>
  <i></i><code>CPTTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpttrf (integerN, real, dimension( * )D, complex, dimension( * )E, integerINFO)</h3>

@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-gpt-config/"
 description: "gpt-config – Configure the current installation of GPT"
 ---
 
-<p><code>gpt-config</code> &#8211; Configure the current installation of <font SIZE="-1">GPT</font></p>
+<p><code>gpt-config</code> &#8211; Configure the current installation of GPT</p>
 <h2>Synopsis</h2>
 <p><code>gpt-config</code> [options] </p>
 <pre> Help-Related Options:
@@ -31,8 +31,8 @@ description: "gpt-config – Configure the current installation of GPT"
  --probe probe for the various programs that GPT needs
  --ignore ignore any missing programs</pre>
 <h2>Description</h2>
-<p><code>gpt-config</code> is a runtime configuration script that is used to localize a <font SIZE="-1">GPT</font> installation. <font SIZE="-1">GPT</font> uses various programs and packaging parameters to do its job. These items can be listed and modified by this script. </p>
-<p> Configuration information for <font SIZE="-1">GPT</font> is stored in the module <tt>$GPT_LOCATION</tt>/lib/perl/Grid/GPT/LocalEnv.pm. This module is regenerated when gpt-config is used to change the configuration.</p>
+<p><code>gpt-config</code> is a runtime configuration script that is used to localize a GPT installation. GPT uses various programs and packaging parameters to do its job. These items can be listed and modified by this script. </p>
+<p> Configuration information for GPT is stored in the module <tt>$GPT_LOCATION</tt>/lib/perl/Grid/GPT/LocalEnv.pm. This module is regenerated when gpt-config is used to change the configuration.</p>
 <h2>Options</h2>
 <dl>
 <dt><i>-builddir</i></dt>
@@ -50,7 +50,7 @@ description: "gpt-config – Configure the current installation of GPT"
 </dd><dt><i>-rpm</i></dt>
 <dd>
 </dd><dt><i>-rpmbuild</i></dt>
-<dd>Location of various programs that <font SIZE="-1">GPT</font> uses. These switches will override any searching done by the -probe switch..</dd>
+<dd>Location of various programs that GPT uses. These switches will override any searching done by the -probe switch..</dd>
 <dt><i>-license</i></dt>
 <dd>
 </dd><dt><i>-vendor</i></dt>
@@ -62,11 +62,11 @@ description: "gpt-config – Configure the current installation of GPT"
 </dd><dt><i>-packager</i></dt>
 <dd>
 </dd><dt><i>-prefix</i></dt>
-<dd>Values that are used by <font SIZE="-1">GPT</font> when generating <font SIZE="-1">RPM</font> packages. These values are not configured when the platform does not support <font SIZE="-1">RPM</font>.</dd>
+<dd>Values that are used by GPT when generating RPM packages. These values are not configured when the platform does not support RPM.</dd>
 <dt><i>-list</i></dt>
 <dd>List the current configuration.</dd>
 <dt><i>-probe</i></dt>
-<dd>Probe for the various programs that <font SIZE="-1">GPT</font> needs. The probe examines each directory listed in the $PATH variable for these programs.</dd>
+<dd>Probe for the various programs that GPT needs. The probe examines each directory listed in the $PATH variable for these programs.</dd>
 <dt><i>-use-archive-tar</i></dt>
 <dd>Skip the probes for a system tar and unzip programs. Use Archive::Tar module to untar source packages. Using this modules slows down the build noticably.</dd>
 <dt><i>-ignore</i></dt>

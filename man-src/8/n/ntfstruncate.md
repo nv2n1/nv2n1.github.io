@@ -148,12 +148,12 @@ description: "ntfstruncate – truncate a file on an NTFS volume"
 <dl>
 <dd><code>ntfstruncate /dev/sda1 Data/database.db 100M</code> </dd>
 <h2>Bugs</h2>
-<p>There are no known problems with <code>ntfstruncate</code>. If you find a bug, please send an email describing the problem to the development team:<br />
+<p>There are no known problems with <code>ntfstruncate</code>. If you find a bug, please send an email describing the problem to the development team:<br/>
  ntfs-3g-devel [at] lists.sf.net</p>
 <h2>Authors</h2>
 <p><code>ntfstruncate</code> was written by Anton Altaparmakov.</p>
 <h2>Availability</h2>
-<p><code>ntfstruncate</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+<p><code>ntfstruncate</code> is part of the <code>ntfs-3g</code> package and is available from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfs-3g/">ntfs-3g</a></code>(8), <code><a href="/docs/linux/man/8-ntfsfallocate/">ntfsfallocate</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8). </p>

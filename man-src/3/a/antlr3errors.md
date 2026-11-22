@@ -11,8 +11,8 @@ description: "include/antlr3errors.h –"
 <p> include/antlr3errors.h &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Defines</h3>
-<p> #define <code>ANTLR3_CHARSTREAM_EOF</code> 0xFFFFFFFF<br />
- <i>Indicates end of character stream and is an invalid Unicode code point. </i><br />
+<p> #define <code>ANTLR3_CHARSTREAM_EOF</code> 0xFFFFFFFF<br/>
+ <i>Indicates end of character stream and is an invalid Unicode code point. </i><br/>
  #define <code>ANTLR3_ERR_BASE</code> 0 </p>
 <p> #define <code>ANTLR3_ERR_HASHDUP</code> (ANTLR3_ERR_BASE + 3) </p>
 <p> #define <code>ANTLR3_ERR_NOFILE</code> (ANTLR3_ERR_BASE + 2) </p>
@@ -21,8 +21,8 @@ description: "include/antlr3errors.h –"
 <p> #define <code>ANTLR3_FALSE</code> 0 </p>
 <p> #define <code>ANTLR3_SUCCESS</code> 0 </p>
 <p> #define <code>ANTLR3_TRUE</code> 1 </p>
-<p> #define <code>MEMO_RULE_FAILED</code> 0xFFFFFFFE<br />
- <i>Indicates memoizing on a rule failed. </i><br />
+<p> #define <code>MEMO_RULE_FAILED</code> 0xFFFFFFFE<br/>
+ <i>Indicates memoizing on a rule failed. </i><br/>
  #define <code>MEMO_RULE_UNKNOWN</code> 0xFFFFFFFF </p>
 <h2>Define Documentation</h2>
 <h3>#define ANTLR3_CHARSTREAM_EOF 0xFFFFFFFF</h3>

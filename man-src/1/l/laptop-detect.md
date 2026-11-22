@@ -30,11 +30,11 @@ description: "laptop-detect – attempt to detect a laptop"
 <code>2</code>       usage error (arguments supplied)
 </pre>
 <h2>FILES</h2>
-<p> <i>/proc/acpi/battery</i><br />
- <i>/proc/pmu/info</i><br />
- <i>/dev/mem</i><br />
- <i>/sys/devices/virtual/dmi/id/chassis_type</i><br />
- <i>/sys/class/power_supply/*/type</i><br />
+<p> <i>/proc/acpi/battery</i><br/>
+ <i>/proc/pmu/info</i><br/>
+ <i>/dev/mem</i><br/>
+ <i>/sys/devices/virtual/dmi/id/chassis_type</i><br/>
+ <i>/sys/class/power_supply/*/type</i><br/>
  <i>/proc/apm</i></p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-dmidecode/">dmidecode</a>(8) </p>

@@ -58,7 +58,7 @@ systemd-tmpfiles-clean.timer</pre>
 <p> Consider combining this with <code>-E</code> to ensure the invocation does not create files or directories below mount points in the OS image operated on that are typically overmounted during runtime.</dl>
 <p> <code>&#8211;image=</code><i>image</i></p>
 <dl>
-<dd>Takes a path to a disk image file or block device node. If specified all operations are applied to file system in the indicated disk image. This is similar to <code>&#8211;root=</code> but operates on file systems stored in disk images or block devices. The disk image should either contain just a file system or a set of file systems within a GPT partition table, following the m[blue]<code>Discoverable Partitions Specification</code>m[]<font SIZE="-2">[1]</font>. For further information on supported disk images, see <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1)&#8217;s switch of the same name. </dd>
+<dd>Takes a path to a disk image file or block device node. If specified all operations are applied to file system in the indicated disk image. This is similar to <code>&#8211;root=</code> but operates on file systems stored in disk images or block devices. The disk image should either contain just a file system or a set of file systems within a GPT partition table, following the m[blue]<code>Discoverable Partitions Specification</code>m[][1]. For further information on supported disk images, see <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1)&#8217;s switch of the same name. </dd>
 <p> Implies <code>-E</code>.</dl>
 <p> <code>&#8211;replace=</code><i>PATH</i></p>
 <dl>

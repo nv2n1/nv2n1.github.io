@@ -76,13 +76,13 @@ description: "flatpak-metadata – Information about an application or runtime"
 <p> Available since 0.3.</dl>
 <p> <code>xdg-desktop</code>, <code>xdg-documents</code>, <code>xdg-download</code>, <code>xdg-music</code>, <code>xdg-pictures</code>, <code>xdg-public-share</code>, <code>xdg-videos</code>, <code>xdg-templates</code></p>
 <dl>
-<dd>m[blue]<code>freedesktop.org special directories</code>m[]<font SIZE="-2">[1]</font>. Available since 0.3.</dd></dl>
+<dd>m[blue]<code>freedesktop.org special directories</code>m[][1]. Available since 0.3.</dd></dl>
 <p> <code>xdg-desktop/</code><i>path</i>, <code>xdg-documents/</code><i>path</i>, etc.</p>
 <dl>
 <dd>Subdirectories of freedesktop.org special directories. Available since 0.4.13.</dd></dl>
 <p> <code>xdg-cache</code>, <code>xdg-config</code>, <code>xdg-data</code></p>
 <dl>
-<dd>Directories defined by the m[blue]<code>freedesktop.org Base Directory Specification</code>m[]<font SIZE="-2">[2]</font>. Available since 0.6.14.</dd></dl>
+<dd>Directories defined by the m[blue]<code>freedesktop.org Base Directory Specification</code>m[][2]. Available since 0.6.14.</dd></dl>
 <p> <code>xdg-cache/</code><i>path</i>, <code>xdg-config/</code><i>path</i>, <code>xdg-data/</code><i>path</i></p>
 <dl>
 <dd>Subdirectories of directories defined by the freedesktop.org Base Directory Specification. Available since 0.6.14.</dd></dl>

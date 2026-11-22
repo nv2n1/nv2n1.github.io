@@ -10,7 +10,7 @@ description: "ssbmv.f –"
 <p>ssbmv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssbmv</code> (UPLO, N, K, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>ssbmv</code> (UPLO, N, K, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>SSBMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssbmv (characterUPLO, integerN, integerK, realALPHA, real, dimension(lda,*)A, integerLDA, real, dimension(*)X, integerINCX, realBETA, real, dimension(*)Y, integerINCY)</h3>

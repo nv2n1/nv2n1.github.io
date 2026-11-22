@@ -9,7 +9,7 @@ description: "sane-pie – SANE backend for PIE, Devcom and AdLib SCSI flatbed s
 
 <p>sane-pie &#8211; SANE backend for PIE, Devcom and AdLib SCSI flatbed scanners</p>
 <h2>Description</h2>
-<p>The <code>sane-pie</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to PIE, Devcom and AdLib SCSI flatbed scanners.<br />
+<p>The <code>sane-pie</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to PIE, Devcom and AdLib SCSI flatbed scanners.<br/>
  At present, the following scanners should work with this backend: </p>
 <pre>Model: Status
 ---------------------- ------
@@ -41,5 +41,5 @@ JetScan 636PRO Untested</pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) </p>
 <h2>Contact And Bug-Reports</h2>
-<p>Please send any information and bug-reports to:<br />
+<p>Please send any information and bug-reports to:<br/>
  Simon Munton &lt;<i>simon [at] munton.demon.co.uk</i>&gt;</p>

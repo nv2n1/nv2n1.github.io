@@ -11,7 +11,7 @@ description: "sgttrs.f –"
 <p> sgttrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgttrs</code> (TRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB, INFO)<br />
+<p> subroutine <code>sgttrs</code> (TRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB, INFO)<br/>
  <i></i><code>SGTTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgttrs (characterTRANS, integerN, integerNRHS, real, dimension( * )DL, real, dimension( * )D, real, dimension( * )DU, real, dimension( * )DU2, integer, dimension( * )IPIV, real, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

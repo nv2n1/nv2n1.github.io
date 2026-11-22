@@ -13,15 +13,15 @@ description: "sestatus – SELinux status tool"
 <h2>Description</h2>
 <p>This manual page describes the <code>sestatus</code> program. This tool is used to get the status of a system running SELinux. It displays data about whether SELinux is enabled or disabled, location of key directories, and the loaded policy with its status as shown in the example:</p>
 <dl>
-<dd>&gt; sestatus<br />
- SELinux status: enabled<br />
- SELinuxfs mount: /selinux<br />
- SELinux root directory: /etc/selinux<br />
- Loaded policy name: targeted<br />
- Current mode: permissive<br />
- Mode from config file: enforcing<br />
- Policy MLS status: enabled<br />
- Policy deny_unknown status: allow<br />
+<dd>&gt; sestatus<br/>
+ SELinux status: enabled<br/>
+ SELinuxfs mount: /selinux<br/>
+ SELinux root directory: /etc/selinux<br/>
+ Loaded policy name: targeted<br/>
+ Current mode: permissive<br/>
+ Mode from config file: enforcing<br/>
+ Policy MLS status: enabled<br/>
+ Policy deny_unknown status: allow<br/>
  Max kernel policy version: 26</dd></dl>
 <p> <code>sestatus</code> can also be used to display:</p>
 <dl>
@@ -38,8 +38,8 @@ description: "sestatus – SELinux status tool"
 <dd>Displays the contexts of files and processes listed in the <i>/etc/sestatus.conf</i> file. It also checks whether the file is a symbolic link, if so then the context of the target file is also shown. </dd>
 <p> The following contexts will always be displayed:</p>
 <dl>
-<dd>The current process context<br />
- The init process context<br />
+<dd>The current process context<br/>
+ The init process context<br/>
  The controlling terminal file context</dd></dl>
 </dl>
 <p> <code>-b</code></p>
@@ -48,7 +48,7 @@ description: "sestatus – SELinux status tool"
 <h2>Files</h2>
 <p><i>/etc/sestatus.conf</i></p>
 <h2>Author</h2>
-<p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;.<br />
+<p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;.<br/>
  The program was written by Chris PeBenito &lt;pebenito [at] gentoo.org&gt;</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/5-sestatus-conf/">sestatus.conf</a></code>(5) </p>

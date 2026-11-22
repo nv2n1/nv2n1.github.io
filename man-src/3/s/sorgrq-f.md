@@ -10,7 +10,7 @@ description: "sorgrq.f –"
 <p>sorgrq.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sorgrq</code> (M, N, K, A, LDA, TAU, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sorgrq</code> (M, N, K, A, LDA, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>SORGRQ</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sorgrq (integerM, integerN, integerK, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

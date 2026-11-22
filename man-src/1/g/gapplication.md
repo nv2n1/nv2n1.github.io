@@ -148,7 +148,7 @@ create;
 </code></pre>
 </dd></dl>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code>Desktop Entry Specification</code>m[]<font SIZE="-2">[1]</font>, <code><a href="/docs/linux/man/1-gdbus/">gdbus</a></code>(1), <code><a href="/docs/linux/man/1-xdg-open/">xdg-open</a></code>(1), <code><a href="/docs/linux/man/1-desktop-file-validate/">desktop-file-validate</a></code>(1)</p>
+<p> m[blue]<code>Desktop Entry Specification</code>m[][1], <code><a href="/docs/linux/man/1-gdbus/">gdbus</a></code>(1), <code><a href="/docs/linux/man/1-xdg-open/">xdg-open</a></code>(1), <code><a href="/docs/linux/man/1-desktop-file-validate/">desktop-file-validate</a></code>(1)</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

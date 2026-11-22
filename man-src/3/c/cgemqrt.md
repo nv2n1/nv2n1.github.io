@@ -11,7 +11,7 @@ description: "cgemqrt.f –"
 <p> cgemqrt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgemqrt</code> (SIDE, TRANS, M, N, K, NB, V, LDV, T, LDT, C, LDC, WORK, INFO)<br />
+<p> subroutine <code>cgemqrt</code> (SIDE, TRANS, M, N, K, NB, V, LDV, T, LDT, C, LDC, WORK, INFO)<br/>
  <i></i><code>CGEMQRT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgemqrt (characterSIDE, characterTRANS, integerM, integerN, integerK, integerNB, complex, dimension( ldv, * )V, integerLDV, complex, dimension( ldt, * )T, integerLDT, complex, dimension( ldc, * )C, integerLDC, complex, dimension( * )WORK, integerINFO)</h3>

@@ -9,7 +9,7 @@ description: "efibootdump – dump a boot entries from a variable or a file"
 
 <p>efibootdump &#8211; dump a boot entries from a variable or a file</p>
 <h2>Synopsis</h2>
-<p><code>efibootdump</code> [<code>-?</code>|<code>&#8211;help</code>] [<code>&#8211;usage</code>]<br />
+<p><code>efibootdump</code> [<code>-?</code>|<code>&#8211;help</code>] [<code>&#8211;usage</code>]<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[<code>-f</code> <i>&lt;file1&gt;</i> [&#8230; <code>-f</code> <i>&lt;fileN&gt;</i>]]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[[<code>-g</code> <i>{guid}</i>] <i>&lt;name0&gt;</i> [&#8230; [<i>&lt;nameN&gt;</i>]]]</p>
 <h2>Description</h2>

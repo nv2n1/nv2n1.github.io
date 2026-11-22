@@ -10,12 +10,12 @@ description: "std::basic_istream< _CharT, _Traits >::sentry –"
 <p>std::basic_istream&lt; _CharT, _Traits &gt;::sentry &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Public Types</h3>
-<p>typedef<br />
+<p>typedef<br/>
  <code>__istream_type::__ctype_type</code> <code>__ctype_type</code>&quot; </p>
 <p> typedef _Traits::int_type <code>__int_type</code> </p>
-<p> typedef <code>basic_istream</code>&lt; _CharT,<br />
+<p> typedef <code>basic_istream</code>&lt; _CharT,<br/>
  _Traits &gt; <code>__istream_type</code>&quot; </p>
-<p> typedef <code>basic_streambuf</code><br />
+<p> typedef <code>basic_streambuf</code><br/>
  &lt; _CharT, _Traits &gt; <code>__streambuf_type</code>&quot; </p>
 <p> typedef _Traits <code>traits_type</code></p>
 <h3>Public Member Functions</h3>
@@ -35,7 +35,7 @@ operator bool () const</code></pre>
 <p>The constructor performs all the work. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__is</i> The input stream to guard.<br />
+<dd><i>__is</i> The input stream to guard.<br/>
  <i>__noskipws</i> Whether to consume whitespace or not.</dd></dl>
 <p> If the stream state is good (<i>__is.good()</i> is true), then the following actions are performed, otherwise the sentry state is false (<i>not okay</i>) and failbit is set in the stream state. </p>
 <p> The sentry&#8217;s preparatory actions are: </p>

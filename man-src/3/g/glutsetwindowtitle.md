@@ -13,8 +13,8 @@ description: "glutSetWindowTitle – Request changing the title of the current w
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutSetWindowTitle const char* title</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>title Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>title Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>New window title</p>
 <h2>Description</h2>
 <p>glutSetWindowTitle() requests that the window system change the title of the window. </p>

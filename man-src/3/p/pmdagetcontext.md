@@ -9,8 +9,8 @@ description: "pmdaMain, pmdaGetContext, pmdaSetResultCallBack, pmdaSetCheckCallB
 
 <p><code>pmdaMain</code>, <code>pmdaGetContext</code>, <code>pmdaSetResultCallBack</code>, <code>pmdaSetCheckCallBack</code>, <code>pmdaSetDoneCallBack</code>, <code>pmdaSetEndContextCallBack</code> &#8211; generic PDU processing for a PMDA</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> cc &#8230; -lpcp_pmda -lpcp </p>
 <p> void pmdaMain(pmdaInterface *</code><i>dispatch</i>); </p>

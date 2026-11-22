@@ -17,10 +17,10 @@ description: "sc::Shape –"
 <p><code>Shape</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;keyval) </p>
 <p> virtual double <code>distance_to_surface</code> (const <code>SCVector3</code> &amp;r, <code>SCVector3</code> *grad=0) const =0 </p>
 <p> virtual int <code>is_outside</code> (const <code>SCVector3</code> &amp;r) const </p>
-<p> void <code>compute</code> ()<br />
- <i>Recompute at least the results that have compute true and are not already computed. </i><br />
+<p> void <code>compute</code> ()<br/>
+ <i>Recompute at least the results that have compute true and are not already computed. </i><br/>
  void <code>interpolate</code> (const <code>SCVector3</code> &amp;p1, const <code>SCVector3</code> &amp;p2, double val, <code>SCVector3</code> &amp;result) </p>
-<p> int <code>value_implemented</code> () const<br />
+<p> int <code>value_implemented</code> () const<br/>
  <i>Information about the availability of values, gradients, and hessians. </i></p>
 <h2>Detailed Description</h2>
 <p>A <code>Shape</code> is a <code>Volume</code> represents an 3D solid. </p>

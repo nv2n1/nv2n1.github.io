@@ -44,8 +44,8 @@ description: "qalter – alter pbs batch job"
 <dt>
 </dt><dd> This attribute can be altered once the job has begun execution, but the new value does not take affect until the job is rerun.</dd>
 <dt>-e path</dt>
-<dd> Replaces the path to be used for the standard error stream of the batch job. The argument is of the form:<br />
- </i><code><br />
+<dd> Replaces the path to be used for the standard error stream of the batch job. The argument is of the form:<br/>
+ </i><code><br/>
  where is the name of a host to which the file will be returned and is the path name on that host in the syntax recognized by POSIX 1003.1. The argument will be interpreted as follows:</dd>
 <dl>
 <dl>
@@ -101,7 +101,7 @@ description: "qalter – alter pbs batch job"
 <dt>
 </dt><dd> This attribute cannot be altered once the job has begun execution.</dd>
 <dt>-l resource_list</dt>
-<dd> Modifies the list of resources that are required by the job. The <i> argument is in the following syntax:<br />
+<dd> Modifies the list of resources that are required by the job. The <i> argument is in the following syntax:<br/>
  </i><code></dd>
 <dt>
 </dt><dd> If a requested modification to a resource would exceed the resource limits for jobs in the current queue, the server will reject the request.</dd>
@@ -125,15 +125,15 @@ description: "qalter – alter pbs batch job"
 <dt>-M user_list</dt>
 <dd> Replaces the list of users to whom mail is sent by the execution server when it sends mail about the job.</dd>
 <dt>
-</dt><dd> The <i> argument is of the form:<br />
+</dt><dd> The <i> argument is of the form:<br/>
  </i><code></dd>
 <dt>-n node exclusive</dt>
 <dd> Sets whether or not the job has node exclusive access. To specify node exclusive access, just use the single character &#8216;y&#8217;. To specify that the job should not have node exclusive access, just use the single character &#8216;n&#8217;.</dd>
 <dt>-N name</dt>
 <dd> Renames the job. The name specified may be up to and including 15 characters in length. It must consist of printable, non white space characters with the first character alphabetic.</dd>
 <dt>-o path</dt>
-<dd> Replaces the path to be used for the standard output stream of the batch job. The </code><i> argument is of the form:<br />
- </i><code><br />
+<dd> Replaces the path to be used for the standard output stream of the batch job. The </code><i> argument is of the form:<br/>
+ </i><code><br/>
  where is the name of a host to which the file will be returned and is the path name on that host in the syntax recognized by POSIX. The argument will be interpreted as follows:</dd>
 <dl>
 <dl>
@@ -159,8 +159,8 @@ description: "qalter – alter pbs batch job"
 <dt>-S path</dt>
 <dd> Declares the shell that interprets the job script.</dd>
 <dt>
-</dt><dd> The option argument <i> is in the form:<br />
- </i><code><br />
+</dt><dd> The option argument <i> is in the form:<br/>
+ </i><code><br/>
  Only one path may be specified for any host named. Only one path may be specified without the corresponding host name. The path selected will be the one with the host name that matched the name of the execution host. If no matching host is found, then if present the path specified without a host will be selected.</dd>
 <dt>
 </dt><dd> If the </code><i> option is not specified, the option argument is the null string, or no entry from the is selected, the execution will use the login shell of the user on the execution host.</dd>
@@ -181,20 +181,20 @@ description: "qalter – alter pbs batch job"
 <dt>-u user_list</dt>
 <dd> Replaces the user name under which the job is to run on the execution system.</dd>
 <dt>
-</dt><dd> The argument is of the form:<br />
- </i><code><br />
+</dt><dd> The argument is of the form:<br/>
+ </i><code><br/>
  Only one user name may be given for per specified host. Only one of the specifications may be supplied without the corresponding specification. That user name will be used for execution on any host not named in the argument list.</dd>
 <dt>
 </dt><dd> This attribute cannot be altered once the job has begun execution.</dd>
 <dt>-W additional_attributes</dt>
-<dd> The -W option allows for the modification of additional job attributes. The general syntax of the -W is in the form:<br />
- </code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-W attr_name=value[,attr_name=value&#8230;]<br />
+<dd> The -W option allows for the modification of additional job attributes. The general syntax of the -W is in the form:<br/>
+ </code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-W attr_name=value[,attr_name=value&#8230;]<br/>
  Note if white space occurs anywhere within the option argument string or the equal sign, &quot;=&quot;, occurs within an <i> string, then the string must be enclosed with either single or double quote marks.</dd>
 <dt>
 </dt><dd> PBS currently supports the following attributes within the -W option.</dd>
 <dt>
-</dt><dd> </i><code><br />
- Redefines the dependencies between this and other jobs. The </code><i> is in the form: </i><code><br />
+</dt><dd> </i><code><br/>
+ Redefines the dependencies between this and other jobs. The </code><i> is in the form: </i><code><br/>
  The </code><i>argument</i> is either a numeric count or a PBS job id according to <i>type .</i> If argument is a count, it must be greater than 0. If it is a job id and is not fully specified in the form: <code> it will be expanded according to the default server rules. If </code><i>argument</i> is null (the preceding colon need not be specified), the dependency of the corresponding type is cleared (unset).</dd>
 <dl>
 <dl>
@@ -226,19 +226,19 @@ description: "qalter – alter pbs batch job"
 </dt><dd> The job specified in any of the <code>before</code> forms must have the same owner as the job being altered.. Otherwise, the dependency will not take effect.</dd></dl>
 <p> Error processing of the existence, state, or condition of the job on which the newly submitted job is a deferred service, i.e. the check is performed after the job is queued. If an error is detected, the new job will be deleted by the server. Mail will be sent to the job submitter stating the error.</dl>
 <dt>
-</dt><dd> <code><br />
+</dt><dd> <code><br/>
  Alters the group name under which the job is to run on the execution system.</dd>
 <dt>
-</dt><dd> The </code><i> argument is of the form: </i><code><br />
+</dt><dd> The </code><i> argument is of the form: </i><code><br/>
  Only one group name may be given per specified host. Only one of the specifications may be supplied without the corresponding specification. That group name will used for execution on any host not named in the argument list.</dd>
 <dt>
 </dt><dd>
-<p> Alters which files are staged (copied) in before job start or staged out after the job completes execution. The </code><i> is in the form: </i><code><br />
+<p> Alters which files are staged (copied) in before job start or staged out after the job completes execution. The </code><i> is in the form: </i><code><br/>
  The name is the name on the system where the job executes. It may be an absolute path or a path relative to the home directory of the user. The name is the destination name on the host specified by The name may be absolute or relative to the user&#8217;s home directory on the destination host.</dd></dl>
 <p> </code></p>
 <h2>OPERANDS</h2>
-<p> The qalter command accepts one or more <i> operands of the form:<br />
- </i><code><br />
+<p> The qalter command accepts one or more <i> operands of the form:<br/>
+ </i><code><br/>
  </code></p>
 <h2>STANDARD ERROR</h2>
 <p> Any error condition, either in processing the options or the operands, or any error received in reply to the batch requests will result in a error message being written to standard error.</p>

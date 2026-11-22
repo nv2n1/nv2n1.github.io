@@ -16,7 +16,7 @@ description: "dictRemove – remove item from dictionary."
 BOOL dictRemove(dictCtx dict, const char *id);
 </pre>
 <h2>Arguments</h2>
-<p> dict &#8211; dictionary to search in.<br />
+<p> dict &#8211; dictionary to search in.<br/>
  id &#8211; identifier of item to remove. </p>
 <h2>Description</h2>
 <p> Removes item identified by &lt;id&gt; from &lt;dict&gt;. </p>

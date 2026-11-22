@@ -52,10 +52,10 @@ description: "autosp – preprocessor to generate note-spacing commands for Musi
 <dt>+</dt>
 <dd> <p> \ca, \cu, \cl, \ds result in \Notes; </p>
  </dd></dl>
-<p> and so on. <br />
+<p> and so on. <br/>
 &nbsp; The spacing for <i>beamed</i> notes is determined by the beam multiplicity, so that \ib... results in \Notes, \ibb... results in \notes, etc. </p>
 <p> Collective coding of note sequences (including accidentals and dots) is handled by expanding the sequence into a sequence of individual note commands. </p>
-<p> <code>autosp </code> scales notes by the relevant instrument-size value. <br />
+<p> <code>autosp </code> scales notes by the relevant instrument-size value. <br/>
 &nbsp;  </p>
 <h2>LIMITATIONS</h2>
 <p> <code>autosp</code> assumes that &amp; and | (rather than \nextinstrument and \nextstaff) are used to separate instruments and staffs. </p>

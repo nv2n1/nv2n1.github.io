@@ -92,7 +92,7 @@ Default hyphenation directory:    <i>LOUTLIB</i>/hyph
 Default character mappings dir.:  <i>LOUTLIB</i>/maps
 Default locales directory:        <i>LOUTLIB</i>/locale
 </pre>
-<p> The default library directory, usually <code>/usr/local/lib/lout</code>, can be changed by setting environment variable <font SIZE="-1"><code>LOUTLIB</code></font> to an alternative directory name.</p>
+<p> The default library directory, usually <code>/usr/local/lib/lout</code>, can be changed by setting environment variable <code>LOUTLIB</code> to an alternative directory name.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-prg2lout/">prg2lout</a></code>(1), <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1), <code>ghostview</code>(1)</p>
 <h2>REFERENCES</h2>

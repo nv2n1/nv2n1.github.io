@@ -74,11 +74,11 @@ description: "fig2mpdf – creation of multilayer pdf or eps figures from fig fi
 <p> The usage of this example file changes the font family to sans serif and adds an additional search path for includegraphics to the `figures&#8217; subdirectory. </p>
 <p>&nbsp;<wbr>&nbsp;\documentclass{article} </p>
 <p>&nbsp;<wbr>&nbsp; </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;\usepackage{german,amssymb,amsmath} </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;\renewcommand{\familydefault}{\sfdefault} </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;\AtBeginDocument{\graphicspath{{figures/}}} </p>
 <p> The following packages are generally used: <code>color</code>, <code>graphicx</code> and <code>epsfig</code>.  </p>
 <h2>Tex errors</h2>
@@ -87,9 +87,9 @@ description: "fig2mpdf – creation of multilayer pdf or eps figures from fig fi
 <p> In single layer mode for the resulting files the suffix fig is replaced by pdf (resp. eps) (i.e. foo.fig -&gt; foo.pdf). </p>
 <p> In multilayer mode the base name of the source fig files is extended by &#8216;-&lt;range&gt;&#8216; and the suffix is set to pdf (resp. eps). </p>
 <p> (i.e., foo.fig -&gt; foo-0.pdf, foo-1.pdf, foo-2.pdf, ... </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;or foo.fig -&gt;&nbsp;foo.page0.pdf, foo.page1.pdf, foo.page2.pdf, ... </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if the option&nbsp;<code>-G</code>&nbsp;is set).  </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-xfig/">xfig</a>(1)</i> <i><a href="/docs/linux/man/1-fig2dev/">fig2dev</a>(1)</i> <i><a href="/docs/linux/man/1-gawk/">gawk</a>(1)</i> <i><a href="/docs/linux/man/1-pdflatex/">pdflatex</a>(1)</i> <i><a href="/docs/linux/man/1-latex/">latex</a>(1)</i> <i><a href="/docs/linux/man/1-dvips/">dvips</a>(1)</i> </p>

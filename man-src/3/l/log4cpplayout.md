@@ -13,9 +13,9 @@ description: "log4cpp::Layout –"
 <p>#include &lt;Layout.hh&gt; </p>
 <p> Inherited by <code>log4cpp::BasicLayout</code>, <code>log4cpp::PassThroughLayout</code>, <code>log4cpp::PatternLayout</code>, and <code>log4cpp::SimpleLayout</code>.</p>
 <h3>Public Member Functions</h3>
-<p>virtual <code>~Layout</code> ()<br />
- <i>Destructor for </i><code>Layout</code>.<br />
- virtual std::string <code>format</code> (const <code>LoggingEvent</code> &amp;event)=0<br />
+<p>virtual <code>~Layout</code> ()<br/>
+ <i>Destructor for </i><code>Layout</code>.<br/>
+ virtual std::string <code>format</code> (const <code>LoggingEvent</code> &amp;event)=0<br/>
  <i>Formats the </i><code>LoggingEvent</code> data to a string that appenders can log.</p>
 <h2>Detailed Description</h2>
 <p>Extend this abstract class to create your own log layout format.</p>

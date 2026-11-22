@@ -31,7 +31,7 @@ description: "ftp – ARPANET file transfer program"
 <dt><code>-d</code></dt>
 <dd> Enables debugging.</dd>
 <dt><code>-g</code></dt>
-<dd> Disables file name globbing.<br />
+<dd> Disables file name globbing.<br/>
 &nbsp;<wbr>.It Fl Fl no-gss-bindings Don&#8217;t use GSS-API bindings when talking to peer. IP addresses will not be checked to ensure they match.</dd>
 <dt><code>&#8211;no-gss-delegate</code></dt>
 <dd> Disable delegation of GSSAPI credentials.</dd>

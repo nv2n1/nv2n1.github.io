@@ -33,47 +33,47 @@ description: "aggregate – optimise a list of route prefixes to help make nice 
 <p> <code>Aggregate</code> exits 0 on success, and &gt;0 if an error occurs. </p>
 <h2>EXAMPLES</h2>
 <p> The following list of prefixes: </p>
-<p> <code><br />
-&nbsp;<wbr>&nbsp;<wbr>193.58.204.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>193.58.208.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>193.193.160.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>193.193.168.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>193.243.164.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>194.126.128.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>194.126.132.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>194.126.134.0/23<br />
-&nbsp;<wbr>&nbsp;<wbr>194.151.128.0/19<br />
-&nbsp;<wbr>&nbsp;<wbr>195.42.240.0/21<br />
-&nbsp;<wbr>&nbsp;<wbr>195.240.0.0/16<br />
+<p> <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>193.58.204.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>193.58.208.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>193.193.160.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>193.193.168.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>193.243.164.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>194.126.128.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>194.126.132.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>194.126.134.0/23<br/>
+&nbsp;<wbr>&nbsp;<wbr>194.151.128.0/19<br/>
+&nbsp;<wbr>&nbsp;<wbr>195.42.240.0/21<br/>
+&nbsp;<wbr>&nbsp;<wbr>195.240.0.0/16<br/>
 &nbsp;<wbr>&nbsp;<wbr>195.241.0.0/16 </code> </p>
 <p> is optimised as followed by <code>aggregate</code> (output shown using the <i>-v</i> flag): </p>
-<p> <code><br />
-&nbsp;<wbr>&nbsp;<wbr>aggregate: maximum prefix length permitted will be 24<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0]&nbsp;<wbr>+&nbsp;<wbr>193.58.204.0/21<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1]&nbsp;<wbr>&#8211; 193.58.204.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2]&nbsp;<wbr>&#8211; 193.58.208.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>193.193.160.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>193.193.168.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>193.243.164.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0]&nbsp;<wbr>+&nbsp;<wbr>194.126.128.0/21<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>6]&nbsp;<wbr>&#8211; 194.126.128.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>7]&nbsp;<wbr>&#8211; 194.126.132.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>8]&nbsp;<wbr>&#8211; 194.126.134.0/23<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>9]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>194.151.128.0/19<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>10]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>195.42.240.0/21<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0]&nbsp;<wbr>+&nbsp;<wbr>195.240.0.0/15<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>11]&nbsp;<wbr>&#8211; 195.240.0.0/16<br />
+<p> <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>aggregate: maximum prefix length permitted will be 24<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0]&nbsp;<wbr>+&nbsp;<wbr>193.58.204.0/21<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1]&nbsp;<wbr>&#8211; 193.58.204.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2]&nbsp;<wbr>&#8211; 193.58.208.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>193.193.160.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>193.193.168.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>193.243.164.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0]&nbsp;<wbr>+&nbsp;<wbr>194.126.128.0/21<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>6]&nbsp;<wbr>&#8211; 194.126.128.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>7]&nbsp;<wbr>&#8211; 194.126.132.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>8]&nbsp;<wbr>&#8211; 194.126.134.0/23<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>9]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>194.151.128.0/19<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>10]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>195.42.240.0/21<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0]&nbsp;<wbr>+&nbsp;<wbr>195.240.0.0/15<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>11]&nbsp;<wbr>&#8211; 195.240.0.0/16<br/>
 &nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12]&nbsp;<wbr>&#8211; 195.241.0.0/16 </code> </p>
 <p> Note that 193.58.204.0/22 and 193.58.208.0/22 were combined under the single prefix 193.58.204.0/21, and 194.126.134.0/23 was suppressed because it was included in 194.126.132.0/22. The number in square brackets at the beginning of each line indicates the original line number, or zero for new prefixes that were introduced by <code>aggregate.</code> </p>
 <p> The output without the <i>-v</i> flag is as follows: </p>
-<p> <code><br />
-&nbsp;<wbr>&nbsp;<wbr>193.58.204.0/21<br />
-&nbsp;<wbr>&nbsp;<wbr>193.193.160.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>193.193.168.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>193.243.164.0/22<br />
-&nbsp;<wbr>&nbsp;<wbr>194.126.128.0/21<br />
-&nbsp;<wbr>&nbsp;<wbr>194.151.128.0/19<br />
-&nbsp;<wbr>&nbsp;<wbr>195.42.240.0/21<br />
+<p> <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>193.58.204.0/21<br/>
+&nbsp;<wbr>&nbsp;<wbr>193.193.160.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>193.193.168.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>193.243.164.0/22<br/>
+&nbsp;<wbr>&nbsp;<wbr>194.126.128.0/21<br/>
+&nbsp;<wbr>&nbsp;<wbr>194.151.128.0/19<br/>
+&nbsp;<wbr>&nbsp;<wbr>195.42.240.0/21<br/>
 &nbsp;<wbr>&nbsp;<wbr>195.240.0.0/15 </code> </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-aggregate-ios/">aggregate-ios</a>(1) </p>

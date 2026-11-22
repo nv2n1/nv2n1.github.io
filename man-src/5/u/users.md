@@ -21,43 +21,43 @@ description: "users – user authorization file for the FreeRADIUS server"
 <p>Additional operators other than <code>=</code> may be used for the attributes in either the check item, or reply item list. The following is a list of operators, and their meaning. </p>
 <dl>
 <dt><code>Attribute = Value</code></dt>
-<dd>Not allowed as a check item for RADIUS protocol attributes. It is allowed for server configuration attributes (Auth-Type, etc), and sets the value of on attribute, only if there is no other item of the same attribute.<br />
+<dd>Not allowed as a check item for RADIUS protocol attributes. It is allowed for server configuration attributes (Auth-Type, etc), and sets the value of on attribute, only if there is no other item of the same attribute.<br/>
  As a reply item, it means &quot;add the item to the reply list, but only if there is no other item of the same attribute.&quot; </dd>
 <dt><code>Attribute := Value</code></dt>
-<dd>Always matches as a check item, and replaces in the configuration items any attribute of the same name. If no attribute of that name appears in the request, then this attribute is added.<br />
+<dd>Always matches as a check item, and replaces in the configuration items any attribute of the same name. If no attribute of that name appears in the request, then this attribute is added.<br/>
  As a reply item, it has an identical meaning, but for the reply items, instead of the request items. </dd>
 <dt><code>Attribute == Value</code></dt>
-<dd>As a check item, it matches if the named attribute is present in the request, AND has the given value.<br />
+<dd>As a check item, it matches if the named attribute is present in the request, AND has the given value.<br/>
  Not allowed as a reply item. </dd>
 <dt><code>Attribute += Value</code></dt>
-<dd>Always matches as a check item, and adds the current attribute with value to the list of configuration items.<br />
+<dd>Always matches as a check item, and adds the current attribute with value to the list of configuration items.<br/>
  As a reply item, it has an identical meaning, but the attribute is added to the reply items. </dd>
 <dt><code>Attribute != Value</code></dt>
-<dd>As a check item, matches if the given attribute is in the request, AND does not have the given value.<br />
+<dd>As a check item, matches if the given attribute is in the request, AND does not have the given value.<br/>
  Not allowed as a reply item. </dd>
 <dt><code>Attribute &gt; Value</code></dt>
-<dd>As a check item, it matches if the request contains an attribute with a value greater than the one given.<br />
+<dd>As a check item, it matches if the request contains an attribute with a value greater than the one given.<br/>
  Not allowed as a reply item. </dd>
 <dt><code>Attribute &gt;= Value</code></dt>
-<dd>As a check item, it matches if the request contains an attribute with a value greater than, or equal to the one given.<br />
+<dd>As a check item, it matches if the request contains an attribute with a value greater than, or equal to the one given.<br/>
  Not allowed as a reply item. </dd>
 <dt><code>Attribute &lt; Value</code></dt>
-<dd>As a check item, it matches if the request contains an attribute with a value less than the one given.<br />
+<dd>As a check item, it matches if the request contains an attribute with a value less than the one given.<br/>
  Not allowed as a reply item. </dd>
 <dt><code>Attribute &lt;= Value</code></dt>
-<dd>As a check item, it matches if the request contains an attribute with a value less than, or equal to the one given.<br />
+<dd>As a check item, it matches if the request contains an attribute with a value less than, or equal to the one given.<br/>
  Not allowed as a reply item. </dd>
 <dt><code>Attribute =~ Expression</code></dt>
-<dd>As a check item, it matches if the request contains an attribute which matches the given regular expression. This operator may only be applied to string attributes.<br />
+<dd>As a check item, it matches if the request contains an attribute which matches the given regular expression. This operator may only be applied to string attributes.<br/>
  Not allowed as a reply item. </dd>
 <dt><code>Attribute !~ Expression</code></dt>
-<dd>As a check item, it matches if the request contains an attribute which does not match the given regular expression. This operator may only be applied to string attributes.<br />
+<dd>As a check item, it matches if the request contains an attribute which does not match the given regular expression. This operator may only be applied to string attributes.<br/>
  Not allowed as a reply item. </dd>
 <dt><code>Attribute =* Value</code></dt>
-<dd>As a check item, it matches if the request contains the named attribute, no matter what the value is.<br />
+<dd>As a check item, it matches if the request contains the named attribute, no matter what the value is.<br/>
  Not allowed as a reply item. </dd>
 <dt><code>Attribute !* Value</code></dt>
-<dd>As a check item, it matches if the request does not contain the named attribute, no matter what the value is.<br />
+<dd>As a check item, it matches if the request does not contain the named attribute, no matter what the value is.<br/>
  Not allowed as a reply item. </dd>
 </dl>
 <h2>Examples</h2>

@@ -10,7 +10,7 @@ description: "ztrttf.f –"
 <p>ztrttf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztrttf</code> (TRANSR, UPLO, N, A, LDA, ARF, INFO)<br />
+<p>subroutine <code>ztrttf</code> (TRANSR, UPLO, N, A, LDA, ARF, INFO)<br/>
  <i></i><code>ZTRTTF</code> copies a triangular matrix from the standard full format (TR) to the rectangular full packed format (TF).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztrttf (characterTRANSR, characterUPLO, integerN, complex*16, dimension( 0: lda-1, 0: * )A, integerLDA, complex*16, dimension( 0: * )ARF, integerINFO)</h3>

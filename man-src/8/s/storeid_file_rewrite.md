@@ -16,7 +16,7 @@ url: "/docs/linux/man/8-storeid_file_rewrite/"
 
 This program acts as a store_id helper program, rewriting URLs passed by Squid into storage-ids that can be used to achieve better caching for websites that use different URLs for the same content. 
 
- It takes a text file with two tab separated columns. Column 1: Regular expression to match against the <font SIZE="-1">URL</font> Column 2: Rewrite rule to generate a Store-ID Eg: ^http:\/\/[^\.]+\.dl\.sourceforge\.net\/(.*)<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a rel="nofollow" HREF="http://dl.sourceforge.net.squid.internal/$1">http://dl.sourceforge.net.squid.internal/$1</a>
+ It takes a text file with two tab separated columns. Column 1: Regular expression to match against the URL Column 2: Rewrite rule to generate a Store-ID Eg: ^http:\/\/[^\.]+\.dl\.sourceforge\.net\/(.*)<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a rel="nofollow" HREF="http://dl.sourceforge.net.squid.internal/$1">http://dl.sourceforge.net.squid.internal/$1</a>
  
 
  Rewrite rules are matched in the same order as they appear in the rules file. So for best performance, sort it in order of frequency of occurrence. 
@@ -70,4 +70,4 @@ Bug reports need to be made in English. See <a rel="nofollow" HREF="http://wiki.
 
 <h2>See Also</h2>
 
-squid (8), <font SIZE="-1">GPL \fIs0(7), The Squid wiki <a rel="nofollow" HREF="http://wiki.squid-cache.org/Features/StoreID">http://wiki.squid-cache.org/Features/StoreID</a> The Squid Configuration Manual <a rel="nofollow" HREF="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> 
+squid (8), GPL \fIs0(7), The Squid wiki <a rel="nofollow" HREF="http://wiki.squid-cache.org/Features/StoreID">http://wiki.squid-cache.org/Features/StoreID</a> The Squid Configuration Manual <a rel="nofollow" HREF="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> 

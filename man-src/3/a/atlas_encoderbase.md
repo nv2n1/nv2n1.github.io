@@ -12,8 +12,8 @@ description: "Atlas::EncoderBase – Base class forwarding to Atlas::Bridge as s
 <p>#include &lt;<a href="file:/usr/include/EncoderBase.h">EncoderBase.h</a>&gt; </p>
 <p> Inherited by <code>Atlas::Message::Encoder</code>, and <code>Atlas::Objects::ObjectsEncoder</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>EncoderBase</code> (<code>Atlas::Bridge</code> &amp;b)<br />
- <i>You will need to implement this in subclasses. </i><br />
+<p><code>EncoderBase</code> (<code>Atlas::Bridge</code> &amp;b)<br/>
+ <i>You will need to implement this in subclasses. </i><br/>
  void <code>streamBegin</code> () </p>
 <p> void <code>streamMessage</code> () </p>
 <p> void <code>streamEnd</code> () </p>
@@ -30,7 +30,7 @@ description: "Atlas::EncoderBase – Base class forwarding to Atlas::Bridge as s
 <p> void <code>listStringItem</code> (const std::string &amp;s) </p>
 <p> void <code>listEnd</code> () </p>
 <h3>Protected Attributes</h3>
-<p><code>Atlas::Bridge</code> &amp; <code>m_b</code><br />
+<p><code>Atlas::Bridge</code> &amp; <code>m_b</code><br/>
  <i>The bridge that requests are forwarded to. </i></p>
 <h2>Detailed Description</h2>
 <p>Base class forwarding to <code>Atlas::Bridge</code> as skeleton for other encoders. </p>

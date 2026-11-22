@@ -14,18 +14,18 @@ description: "~/.config/terminator/config – the config file for Terminator ter
 <p>Normally the config file will be ~/.config/terminator/config, but it may be overridden with $XDG_CONFIG_HOME (in which case it will be $XDG_CONFIG_HOME/terminator/config)</p>
 <h2>File Format</h2>
 <p>This is what a Terminator config file should look like: </p>
-<p>&nbsp;<wbr>&nbsp;#&nbsp;This is a comment<br />
-&nbsp;<wbr>&nbsp;[global_config]<br />
+<p>&nbsp;<wbr>&nbsp;#&nbsp;This is a comment<br/>
+&nbsp;<wbr>&nbsp;[global_config]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;focus&nbsp;=&nbsp;system </p>
-<p>&nbsp;<wbr>&nbsp;[keybindings]<br />
+<p>&nbsp;<wbr>&nbsp;[keybindings]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;full_screen&nbsp;=&nbsp;&lt;Ctrl&gt;&lt;Shift&gt;F11 </p>
-<p>&nbsp;<wbr>&nbsp;[profiles]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[[default]]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;font&nbsp;=&nbsp;Fixed 10<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;background_color&nbsp;=&nbsp;&quot;#000000&quot;&nbsp;#&nbsp;A comment<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;foreground_color&nbsp;=&nbsp;&quot;#FFFFFF&quot;&nbsp;#&nbsp;Note that hex colour values must be quoted<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;scrollback_lines&nbsp;=&nbsp;&#8216;500&#8217;&nbsp;#More comment. Single quotes are valid too<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cursor_blink&nbsp;=&nbsp;True<br />
+<p>&nbsp;<wbr>&nbsp;[profiles]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[[default]]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;font&nbsp;=&nbsp;Fixed 10<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;background_color&nbsp;=&nbsp;&quot;#000000&quot;&nbsp;#&nbsp;A comment<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;foreground_color&nbsp;=&nbsp;&quot;#FFFFFF&quot;&nbsp;#&nbsp;Note that hex colour values must be quoted<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;scrollback_lines&nbsp;=&nbsp;&#8216;500&#8217;&nbsp;#More comment. Single quotes are valid too<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cursor_blink&nbsp;=&nbsp;True<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;custom_command&nbsp;=&nbsp;&quot;echo&nbsp;\&quot;foo#bar\&quot;&quot;&nbsp;#Final comment &#8211; this will work as expected. </p>
 <p> Below are the individual sections that can exist in the config file:</p>
 <h2>global_config</h2>
@@ -266,12 +266,12 @@ description: "~/.config/terminator/config – the config file for Terminator ter
 <h2>layouts</h2>
 <p>This describes the layouts section of the config file. Like with the profiles, each layout should be defined as a sub-section with a name formatted like: <code>[[name]]</code>. </p>
 <p> Each object in a layout is a named sub-sub-section with various properties: </p>
-<p> [layouts]<br />
-&nbsp;<wbr>&nbsp;[[default]]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[[window0]]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;type&nbsp;=&nbsp;Window<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[[child1]]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;type&nbsp;=&nbsp;Terminal<br />
+<p> [layouts]<br/>
+&nbsp;<wbr>&nbsp;[[default]]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[[window0]]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;type&nbsp;=&nbsp;Window<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[[child1]]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;type&nbsp;=&nbsp;Terminal<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;parent&nbsp;=&nbsp;window0 </p>
 <p> Window objects may not have a parent attribute. <code>Every</code> other object must specify a parent. This is how the structure of the window is determined.</p>
 <h2>plugins</h2>

@@ -12,7 +12,7 @@ description: "sc::ALevelShift –"
 <p> Inherits <code>sc::LevelShift</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>ALevelShift</code> (<code>SCF</code> *) </p>
-<p> void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;)<br />
+<p> void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;)<br/>
  <i>This is the fallback routine to process blocks and is called by process_spec members that are not overridden. </i></p>
 <h2>Member Function Documentation</h2>
 <h3>void sc::ALevelShift::process (<code>SCMatrixBlockIter</code> &amp;) [virtual]</h3>

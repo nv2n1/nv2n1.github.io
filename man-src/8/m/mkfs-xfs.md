@@ -9,7 +9,7 @@ description: "mkfs.xfs – construct an XFS filesystem"
 
 <p>mkfs.xfs &#8211; construct an XFS filesystem</p>
 <h2>Synopsis</h2>
-<p><code>mkfs.xfs</code> [ <code>-b</code> <i>block_size</i> ] [ <code>-m</code> <i>global_metadata_options</i> ] [ <code>-d</code> <i>data_section_options</i> ] [ <code>-f</code> ] [ <code>-i</code> <i>inode_options</i> ] [ <code>-l</code> <i>log_section_options</i> ] [ <code>-n</code> <i>naming_options</i> ] [ <code>-p</code> <i>protofile</i> ] [ <code>-q</code> ] [ <code>-r</code> <i>realtime_section_options</i> ] [ <code>-s</code> <i>sector_size</i> ] [ <code>-L</code> <i>label</i> ] [ <code>-N</code> ] [ <code>-K</code> ] <i>device</i><br />
+<p><code>mkfs.xfs</code> [ <code>-b</code> <i>block_size</i> ] [ <code>-m</code> <i>global_metadata_options</i> ] [ <code>-d</code> <i>data_section_options</i> ] [ <code>-f</code> ] [ <code>-i</code> <i>inode_options</i> ] [ <code>-l</code> <i>log_section_options</i> ] [ <code>-n</code> <i>naming_options</i> ] [ <code>-p</code> <i>protofile</i> ] [ <code>-q</code> ] [ <code>-r</code> <i>realtime_section_options</i> ] [ <code>-s</code> <i>sector_size</i> ] [ <code>-L</code> <i>label</i> ] [ <code>-N</code> ] [ <code>-K</code> ] <i>device</i><br/>
  <code>mkfs.xfs -V</code></p>
 <h2>Description</h2>
 <p><code>mkfs.xfs</code> constructs an XFS filesystem by writing on a special file using the values found in the arguments of the command line. It is invoked automatically by <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8) when it is given the <code>-t xfs</code> option. </p>

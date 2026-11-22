@@ -15,7 +15,7 @@ description: "fontlint – check a font"
 <p> The program <code>fontlint</code> loads a font (or more than one), which may be in any format <i><a href="/docs/linux/man/1-fontforge/">fontforge</a></i>(1) can read, and checks the font for certain common errors </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> * Intersecting contours </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> * Incorrectly oriented contours </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> * Extrema not marked by points<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> * Extrema not marked by points<br/>
  And for PostScript fonts: </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> * Too many points in a glyph </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> * Too many hints in a glyph </p>
@@ -24,7 +24,7 @@ description: "fontlint – check a font"
 <p> None.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fontforge/">fontforge</a></code>(1) </p>
-<p> The HTML version of the <i>fontforge</i> manual at:<br />
+<p> The HTML version of the <i>fontforge</i> manual at:<br/>
  <a rel="nofollow" href="http://fontforge.sourceforge.net/">http://fontforge.sourceforge.net/</a></p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2007 by George Williams (gww [at] silcom.com). </p>

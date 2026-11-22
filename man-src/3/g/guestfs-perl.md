@@ -21,60 +21,60 @@ $g-&gt;shutdown();
 $g-&gt;close();
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> This manual page documents how to call libguestfs from the Perl programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3). To read the full Perl <font SIZE="-1">API,</font> see <i>Sys::Guestfs</i>(3).</p>
-<h3><font SIZE="-1">ERRORS</font></h3>
+<p> This manual page documents how to call libguestfs from the Perl programming language. This page just documents the differences from the C API and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3). To read the full Perl API, see <i>Sys::Guestfs</i>(3).</p>
+<h3>ERRORS</h3>
 <p> Errors from libguestfs functions turn into calls to <tt>&quot;croak&quot;</tt> (see <i>Carp</i>(3)).</p>
 <h2>EXAMPLE 1: CREATE A DISK IMAGE</h2>
 <p>#!/ usr / bin / env perl</p>
 <p>#Example showing how to create a disk image.</p>
-<p>use strict;<br />
-use warnings;<br />
+<p>use strict;<br/>
+use warnings;<br/>
 use Sys::Guestfs;</p>
 <p>my $output = &#8220;disk.img&#8221;;</p>
 <p>my $g = new Sys::Guestfs();</p>
-<p>#Create a raw &#8211; format sparse disk image, 512 MB in size.<br />
+<p>#Create a raw &#8211; format sparse disk image, 512 MB in size.<br/>
 $g-&gt;disk_create($output, &#8220;raw&#8221;, 512 * 1024 * 1024);</p>
-<p>#Set the trace flag so that we can see each libguestfs call.<br />
+<p>#Set the trace flag so that we can see each libguestfs call.<br/>
 $g-&gt;set_trace(1);</p>
-<p>#Attach the disk image to libguestfs.<br />
+<p>#Attach the disk image to libguestfs.<br/>
 $g-&gt;add_drive_opts($output, format = &gt; &#8220;raw&#8221;, readonly = &gt; 0);</p>
-<p>#Run the libguestfs back &#8211; end.<br />
+<p>#Run the libguestfs back &#8211; end.<br/>
 $g-&gt;launch();</p>
-<p>#Get the list of devices.Because we only added one drive<br />
-#above, we expect that this list should contain a single<br />
-#element.<br />
-my @devices = $g-&gt;list_devices();<br />
-if (@devices != 1) {<br />
-    die &#8220;error: expected a single device from list-devices&#8221;;<br />
+<p>#Get the list of devices.Because we only added one drive<br/>
+#above, we expect that this list should contain a single<br/>
+#element.<br/>
+my @devices = $g-&gt;list_devices();<br/>
+if (@devices != 1) {<br/>
+    die &#8220;error: expected a single device from list-devices&#8221;;<br/>
 }</p>
-<p>#Partition the disk as one single MBR partition.<br />
+<p>#Partition the disk as one single MBR partition.<br/>
 $g-&gt;part_disk($devices[0], &#8220;mbr&#8221;);</p>
-<p>#Get the list of partitions.We expect a single element, which<br />
-#is the partition we have just created.<br />
-my @partitions = $g-&gt;list_partitions();<br />
-if (@partitions != 1) {<br />
-    die &#8220;error: expected a single partition from list-partitions&#8221;;<br />
+<p>#Get the list of partitions.We expect a single element, which<br/>
+#is the partition we have just created.<br/>
+my @partitions = $g-&gt;list_partitions();<br/>
+if (@partitions != 1) {<br/>
+    die &#8220;error: expected a single partition from list-partitions&#8221;;<br/>
 }</p>
-<p>#Create a filesystem on the partition.<br />
+<p>#Create a filesystem on the partition.<br/>
 $g-&gt;mkfs(&#8220;ext4&#8221;, $partitions[0]);</p>
-<p>#Now mount the filesystem so that we can add files.<br />
+<p>#Now mount the filesystem so that we can add files.<br/>
 $g-&gt;mount($partitions[0], &#8220;/&#8221;);</p>
-<p>#Create some files and directories.<br />
-$g-&gt;touch(&#8220;/empty&#8221;);<br />
+<p>#Create some files and directories.<br/>
+$g-&gt;touch(&#8220;/empty&#8221;);<br/>
 my $message = &#8220;Hello, world
-&#8221;;<br />
-$g-&gt;write(&#8220;/hello&#8221;, $message);<br />
+&#8221;;<br/>
+$g-&gt;write(&#8220;/hello&#8221;, $message);<br/>
 $g-&gt;mkdir(&#8220;/foo&#8221;);</p>
-<p>#This one uploads the local file / etc / resolv.conf into<br />
-#the disk image.<br />
+<p>#This one uploads the local file / etc / resolv.conf into<br/>
+#the disk image.<br/>
 $g-&gt;upload(&#8220;/etc/resolv.conf&#8221;, &#8220;/foo/resolv.conf&#8221;);</p>
-<p>#Because we wrote to the disk and we want to detect write<br />
-#errors, call $g-&gt;shutdown.You don&#8217;t need to do this:<br />
-#$g-&gt;close will do it implicitly.<br />
+<p>#Because we wrote to the disk and we want to detect write<br/>
+#errors, call $g-&gt;shutdown.You don&#8217;t need to do this:<br/>
+#$g-&gt;close will do it implicitly.<br/>
 $g-&gt;shutdown();</p>
-<p>#Note also that handles are automatically closed if they are<br />
-#reaped by reference counting.You only need to call close<br />
-#if you want to close the handle right away.<br />
+<p>#Note also that handles are automatically closed if they are<br/>
+#reaped by reference counting.You only need to call close<br/>
+#if you want to close the handle right away.<br/>
 $g-&gt;close();</p>
 <h2>EXAMPLE 2: INSPECT A VIRTUAL MACHINE DISK IMAGE</h2>
 <pre><code>

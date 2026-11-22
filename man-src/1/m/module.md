@@ -21,13 +21,13 @@ description: "module – command interface to the Modules package"
 <p> The <code>module</code> alias or function executes the <code>modulecmd</code> program and has the shell evaluate the command&#8217;s output. The first argument to <code>modulecmd</code> specifies the type of shell. </p>
 <p> The initialization scripts are kept in <i>$MODULESHOME/init/&lt;shell&gt;</i> where <i>&lt;shell&gt;</i> is the name of the sourcing shell. The sh, csh, tcsh, bash, ksh, and zsh shells are supported by <code>modulecmd.</code> In addition, python, perl, and cmake &quot;shells&quot; are supported, which writes the environment changes to stdout as python, perl, or cmake code. </p>
 <p> The perl <i>module</i> command is set up with: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>use lib&nbsp;<wbr>$ENV{&#8216;MODULESHOME&#8217;}.&quot;/init&quot;;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>use lib&nbsp;<wbr>$ENV{&#8216;MODULESHOME&#8217;}.&quot;/init&quot;;<br/>
 &nbsp;<wbr>&nbsp;<wbr>use perl; </p>
 <p> And the python <i>module</i> command is defined with: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>import os;<br />
-&nbsp;<wbr>&nbsp;<wbr>if os.environ.has_key(&#8216;PYTHONPATH&#8217;):<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>import os;<br/>
+&nbsp;<wbr>&nbsp;<wbr>if os.environ.has_key(&#8216;PYTHONPATH&#8217;):<br/>
 &nbsp;<wbr>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>os.environ[&#8216;PYTHONPATH&#8217;]&nbsp;<wbr>+=&#8217;:&#8217;+os.environ[&#8216;MODULESHOME&#8217;]+&quot;/init&quot;;</p>
-<p>&nbsp;<wbr>&nbsp;<wbr>else:<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>else:<br/>
 &nbsp;<wbr>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>os.environ[&#8216;PYTHONPATH&#8217;]&nbsp;<wbr>=&nbsp;<wbr>os.environ[&#8216;MODULESHOME&#8217;]+&quot;/init&quot;;</p>
 <p>&nbsp;<wbr>&nbsp;<wbr>from python import module; </p>
 <h3>Modulecmd startup</h3>
@@ -73,7 +73,7 @@ Global RC file as specified by ${MODULERCFILE} or ${MODULESHOME} / etc / rc User
 <dl>
 </dl>
 <dt><i>&#8211;create, -c</i></dt>
-<dd> Create caches for <i>module avail</i> and <i>module apropos</i>. You must be granted write access to the ${<font SIZE="-1">MODULEHOME</font>}/modulefiles/ directory if you try to invoke <i>module</i> with the <i>-c</i> option.</dd>
+<dd> Create caches for <i>module avail</i> and <i>module apropos</i>. You must be granted write access to the ${MODULEHOME}/modulefiles/ directory if you try to invoke <i>module</i> with the <i>-c</i> option.</dd>
 <dl>
 </dl>
 <dt><i>&#8211;icase, -i</i></dt>
@@ -109,16 +109,16 @@ Global RC file as specified by ${MODULERCFILE} or ${MODULESHOME} / etc / rc User
 <dt><code>list</code></dt>
 <dd> List loaded modules.</dd>
 <dt><code>avail [path&#8230;]</code></dt>
-<dd> List all available modulefiles in the current <font SIZE="-1">MODULEPATH</font>, where the sorting order is given by the <font SIZE="-1">LC_COLLATE</font> locale environment variable. </dd>
-<p> All directories in the <font SIZE="-1">MODULEPATH</font> are recursively searched for files containing the <i>modulefile</i> magic cookie. </p>
-<p> If an argument is given, then each directory in the <font SIZE="-1">MODULEPATH</font> is searched for modulefiles whose pathname match the argument. </p>
+<dd> List all available modulefiles in the current MODULEPATH, where the sorting order is given by the LC_COLLATE locale environment variable. </dd>
+<p> All directories in the MODULEPATH are recursively searched for files containing the <i>modulefile</i> magic cookie. </p>
+<p> If an argument is given, then each directory in the MODULEPATH is searched for modulefiles whose pathname match the argument. </p>
 <p> Multiple versions of an application can be supported by creating a subdirectory for the application containing modulefiles for each version.</p>
 <dt><code>use [-a|&#8211;append] directory&#8230;</code></dt>
-<dd> Prepend one or more directories to the <font SIZE="-1">MODULEPATH</font> environment variable. The &#8211;append flag will append the directory to <font SIZE="-1">MODULEPATH</font>.</dd>
+<dd> Prepend one or more directories to the MODULEPATH environment variable. The &#8211;append flag will append the directory to MODULEPATH.</dd>
 <dt><code>unuse directory&#8230;</code></dt>
-<dd> Remove one or more directories from the <font SIZE="-1">MODULEPATH</font> environment variable.</dd>
+<dd> Remove one or more directories from the MODULEPATH environment variable.</dd>
 <dt><code>update</code></dt>
-<dd> Attempt to reload all loaded modulefiles. The environment will be reconfigured to match the environment saved in <i>${</i><font SIZE="-1"><i>HOME</i></font><i>}/.modulesbeginenv</i> (if BEGINENV=1) or the file pointed at by <i>$MODULESBEGINEV</i> (if BEGINENV=99) and the modulefiles will be reloaded. This is only valid if modules was configured with &#8211;enable-beginenv (which defines BEGINENV), otherwise this will cause a warning. <code>update</code> will only change the environment variables that the <i>modulefile</i>s set.</dd>
+<dd> Attempt to reload all loaded modulefiles. The environment will be reconfigured to match the environment saved in <i>${</i><i>HOME</i><i>}/.modulesbeginenv</i> (if BEGINENV=1) or the file pointed at by <i>$MODULESBEGINEV</i> (if BEGINENV=99) and the modulefiles will be reloaded. This is only valid if modules was configured with &#8211;enable-beginenv (which defines BEGINENV), otherwise this will cause a warning. <code>update</code> will only change the environment variables that the <i>modulefile</i>s set.</dd>
 <dt><code>clear</code></dt>
 <dd> Force the Modules package to believe that no modules are currently loaded.</dd>
 <dt><code>purge</code></dt>
@@ -132,11 +132,11 @@ Global RC file as specified by ${MODULERCFILE} or ${MODULESHOME} / etc / rc User
 </dd><dt><code>keyword string</code></dt>
 <dd> Seeks through the &#8216;whatis&#8217; informations of all modulefiles for the specified string. All <i>module-whatis</i> informations matching the <i>string</i> will be displayed.</dd>
 <dt><code>initadd modulefile&#8230;</code></dt>
-<dd> Add <i>modulefile</i>(s) to the shell&#8217;s initialization file in the user&#8217;s home directory. The startup files checked (in order) are:<br />
- csh &#8211; .modules, .cshrc(.ext), .csh_variables, and .login(.ext)<br />
- tcsh &#8211; .modules, .tcshrc, .cshrc(.ext), .csh_variables, and .login(.ext)<br />
- sh and ksh &#8211; .modules, .profile(.ext), and .kshenv(.ext)<br />
- bash &#8211; .modules, .bash_profile, .bash_login, .profile(.ext), and .bashrc(.ext)<br />
+<dd> Add <i>modulefile</i>(s) to the shell&#8217;s initialization file in the user&#8217;s home directory. The startup files checked (in order) are:<br/>
+ csh &#8211; .modules, .cshrc(.ext), .csh_variables, and .login(.ext)<br/>
+ tcsh &#8211; .modules, .tcshrc, .cshrc(.ext), .csh_variables, and .login(.ext)<br/>
+ sh and ksh &#8211; .modules, .profile(.ext), and .kshenv(.ext)<br/>
+ bash &#8211; .modules, .bash_profile, .bash_login, .profile(.ext), and .bashrc(.ext)<br/>
  zsh &#8211; .modules, .zcshrc(.ext), .zshenv(.ext), and .zlogin(.ext) </dd>
 <p> If a &#8216;module load&#8217; line is found in any of these files, the <i>modulefile</i>(s) is(are) appended to any existing list of modulefiles. The &#8216;module load&#8217; line must be located in at least one of the files listed above for any of the &#8216;init&#8217; sub-commands to work properly. If the &#8216;module load&#8217; line is found in multiple shell initialization files, all of the lines are changed.</p>
 <dt><code>initprepend modulefile [modulefile&#8230;]</code></dt>
@@ -155,38 +155,38 @@ Global RC file as specified by ${MODULERCFILE} or ${MODULESHOME} / etc / rc User
 <p> Environment variables are unset when unloading a <i>modulefile.</i> Thus, it is possible to <code>load</code> a <i>modulefile</i> and then <code>unload</code> it without having the environment variables return to their prior state. </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"></font><font SIZE="-2"><code>MODULESHOME</code></font></dt>
+<dt><code>MODULESHOME</code></dt>
 <dd> The location of the master Modules package file directory containing <code>module</code> command initialization scripts, the executable program <code>modulecmd,</code> and a directory containing a collection of master <i>modulefiles.</i></dd>
-<dt><font SIZE="-1"></font><font SIZE="-2"><code>MODULEPATH</code></font></dt>
-<dd> The path that the <code>module</code> command searches when looking for <i>modulefiles.</i> Typically, it is set to a default value by the bootstrap procedure. <font SIZE="-1">MODULEPATH</font> can be set using &#8216;module use&#8217; or by the module initialization script to search group or personal <i>modulefile</i> directories before or after the master <i>modulefile</i> directory.</dd>
-<dt><font SIZE="-1"></font><font SIZE="-2"><code>LOADEDMODULES</code></font></dt>
+<dt><code>MODULEPATH</code></dt>
+<dd> The path that the <code>module</code> command searches when looking for <i>modulefiles.</i> Typically, it is set to a default value by the bootstrap procedure. MODULEPATH can be set using &#8216;module use&#8217; or by the module initialization script to search group or personal <i>modulefile</i> directories before or after the master <i>modulefile</i> directory.</dd>
+<dt><code>LOADEDMODULES</code></dt>
 <dd> A colon separated list of all loaded <i>modulefiles.</i></dd>
-<dt><font SIZE="-1"></font><font SIZE="-2"><code>_LMFILES_</code></font></dt>
+<dt><code>_LMFILES_</code></dt>
 <dd> A colon separated list of the full pathname for all loaded <i>modulefiles.</i></dd>
-<dt><font SIZE="-1"></font><font SIZE="-2"><code>MODULESBEGINENV</code></font></dt>
+<dt><code>MODULESBEGINENV</code></dt>
 <dd> If modules has been configured (BEGINENV=99) to test for this environment variable, then if it exists, it is the name of the file to store the the initial shell environment. This environment variable will have embedded environment variables unrolled to one level. The contents of this variable is only used the first time <i>modules</i> is invoked.</dd>
-<dt><font SIZE="-1"></font><font SIZE="-2"><code>_MODULESBEGINENV_</code></font></dt>
+<dt><code>_MODULESBEGINENV_</code></dt>
 <dd> The filename of the file containing the initialization environment snapshot. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
 <dt><code>/usr/share/Modules</code></dt>
-<dd> The <font SIZE="-1">MODULESHOME</font> directory.</dd>
-<dt><code>${</code><font SIZE="-1"><code>MODULESHOME</code></font><code>}/etc/rc</code></dt>
-<dd> The system-wide <i>modules rc file.</i> The location of this file can be changed using the <font SIZE="-1">MODULERCFILE</font> environment variable as described above.</dd>
-<dt><code>${</code><font SIZE="-1"><code>HOME</code></font><code>}/.modulerc</code></dt>
+<dd> The MODULESHOME directory.</dd>
+<dt><code>${</code><code>MODULESHOME</code><code>}/etc/rc</code></dt>
+<dd> The system-wide <i>modules rc file.</i> The location of this file can be changed using the MODULERCFILE environment variable as described above.</dd>
+<dt><code>${</code><code>HOME</code><code>}/.modulerc</code></dt>
 <dd> The user specific <i>modules rc file.</i></dd>
-<dt><code>${</code><font SIZE="-1"><code>MODULESHOME</code></font><code>}/modulefiles</code></dt>
-<dd> The directory for system-wide <i>modulefiles.</i> The location of the directory can be changed using the <font SIZE="-1">MODULEPATH</font> environment variable as described above.</dd>
-<dt><code>${</code><font SIZE="-1"><code>MODULESHOME</code></font><code>}/bin/modulecmd</code></dt>
+<dt><code>${</code><code>MODULESHOME</code><code>}/modulefiles</code></dt>
+<dd> The directory for system-wide <i>modulefiles.</i> The location of the directory can be changed using the MODULEPATH environment variable as described above.</dd>
+<dt><code>${</code><code>MODULESHOME</code><code>}/bin/modulecmd</code></dt>
 <dd> The <i>modulefile</i> interpreter that gets executed upon each invocation of <code>module.</code></dd>
-<dt><code>${</code><font SIZE="-1"><code>MODULESHOME</code></font><code>}/init/</code><i>&lt;shell&gt;</i></dt>
+<dt><code>${</code><code>MODULESHOME</code><code>}/init/</code><i>&lt;shell&gt;</i></dt>
 <dd> The Modules package initialization file sourced into the user&#8217;s environment.</dd>
-<dt><code>${</code><font SIZE="-1"><code>MODULEPATH</code></font><code>}/.moduleavailcache</code></dt>
-<dd> File containing the cached list of all <i>modulefiles</i> for each directory in the <font SIZE="-1">MODULEPATH</font> (only when the avail cache is enabled via the configure option &#8211;enable-cache which sets CACHE_AVAIL).</dd>
-<dt><code>${</code><font SIZE="-1"><code>MODULEPATH</code></font><code>}/.moduleavailcachedir</code></dt>
+<dt><code>${</code><code>MODULEPATH</code><code>}/.moduleavailcache</code></dt>
+<dd> File containing the cached list of all <i>modulefiles</i> for each directory in the MODULEPATH (only when the avail cache is enabled via the configure option &#8211;enable-cache which sets CACHE_AVAIL).</dd>
+<dt><code>${</code><code>MODULEPATH</code><code>}/.moduleavailcachedir</code></dt>
 <dd> File containing the names and modification times for all sub-directories with an avail cache (see above).</dd>
-<dt><code>${</code><font SIZE="-1"><code>HOME</code></font><code>}/.modulesbeginenv</code></dt>
+<dt><code>${</code><code>HOME</code><code>}/.modulesbeginenv</code></dt>
 <dd> A snapshot of the user&#8217;s environment taken at Module initialization. This information is used by the <code>module update</code> sub-command (if BEGINENV=1), else</dd>
 <dt><code>$MODULESBEGINENV</code></dt>
 <dd> If this defines a valid filename, it serves the same purpose as above (if BEGINENV=99).</dd></dl>

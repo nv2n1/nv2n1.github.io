@@ -21,13 +21,13 @@ InterpolatedZeroInflationCurve (const Date &amp;referenceDate, const Calendar &a
 <p>const std::vector&lt; Time &gt; &amp; times () const</p>
 <p>const std::vector&lt; Rate &gt; &amp; rates () const</p>
 <p>std::vector&lt; std::pair&lt; Date, Rate &gt; &gt; nodes () const</p>
-<p>Protected Member Functions<br />
-InterpolatedZeroInflationCurve (const Date &amp;referenceDate, const Calendar &amp;calendar, const DayCounter &amp;dayCounter, const Period &amp;lag, Frequency frequency, Rate baseZeroRate, const Handle&lt; YieldTermStructure &gt; &amp;yTS, const Interpolator &amp;interpolator=Interpolator()) <code>InflationTermStructure interface</code><br />
+<p>Protected Member Functions<br/>
+InterpolatedZeroInflationCurve (const Date &amp;referenceDate, const Calendar &amp;calendar, const DayCounter &amp;dayCounter, const Period &amp;lag, Frequency frequency, Rate baseZeroRate, const Handle&lt; YieldTermStructure &gt; &amp;yTS, const Interpolator &amp;interpolator=Interpolator()) <code>InflationTermStructure interface</code><br/>
  const std::vector&lt; Date &gt; &amp; dates () const</p>
 <p>const std::vector&lt; Time &gt; &amp; times () const</p>
 <p>const std::vector&lt; Rate &gt; &amp; rates () const</p>
 <p>std::vector&lt; std::pair&lt; Date, Rate &gt; &gt; nodes () const</p>
-<p>Protected Member Functions<br />
+<p>Protected Member Functions<br/>
 InterpolatedZeroInflationCurve (const Date &amp;referenceDate, const Calendar &amp;calendar, const DayCounter &amp;dayCounter, const Period &amp;lag, Frequency frequency, Rate baseZeroRate, const Handle&lt; YieldTermStructure &gt; &amp;yTS, const Interpolator &amp;interpolator=Interpolator()) <code>Inspectors</code> </p>
 <pre><code>const std::vector&lt; Date &gt; &amp; dates () const
 const std::vector&lt; Time &gt; &amp; times () const
@@ -36,7 +36,7 @@ std::vector&lt; std::pair&lt; Date, Rate &gt; &gt; nodes () const
 Protected Member Functions
 InterpolatedZeroInflationCurve (const Date &amp;referenceDate, const Calendar &amp;calendar, const DayCounter &amp;dayCounter, const Period &amp;lag, Frequency frequency, Rate baseZeroRate, const Handle&lt; YieldTermStructure &gt; &amp;yTS, const Interpolator &amp;interpolator=Interpolator())</code></pre>
 <p> <code>ZeroInflationTermStructure Interface</code> </p>
-<p> Rate <code>zeroRateImpl</code> (Time t) const<br />
+<p> Rate <code>zeroRateImpl</code> (Time t) const<br/>
  <i>to be defined in derived classes </i></p>
 <h3>Protected Attributes</h3>
 <p>std::vector&lt; <code>Date</code> &gt; <code>dates_</code> </p>

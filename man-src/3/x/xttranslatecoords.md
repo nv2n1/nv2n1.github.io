@@ -27,5 +27,5 @@ description: "XtTranslateCoords – translate widget coordinates"
 <h2>Description</h2>
 <p>While <code>XtTranslateCoords</code> is similar to the Xlib <code>XTranslateCoordinates</code> function, it does not generate a server request because all the required information already is in the widget&#8217;s data structures.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

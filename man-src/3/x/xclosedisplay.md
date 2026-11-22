@@ -24,5 +24,5 @@ description: "XOpenDisplay, XCloseDisplay – connect or disconnect to X server"
 <p> The <code>XCloseDisplay</code> function closes the connection to the X server for the display specified in the <code>Display</code> structure and destroys all windows, resource IDs <code>Font</code>, <code>Pixmap</code>, <code>Colormap</code>, <code>Cursor</code>, and <code>GContext</code>), or other resources that the client has created on this display, unless the close-down mode of the resource has been changed (see <code>XSetCloseDownMode</code>). Therefore, these windows, resource IDs, and other resources should never be referenced again or an error will be generated. Before exiting, you should call <code>XCloseDisplay</code> explicitly so that any pending errors are reported as <code>XCloseDisplay</code> performs a final <code>XSync</code> operation. </p>
 <p> <code>XCloseDisplay</code> can generate a <code>BadGC</code> error.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), <a href="/docs/linux/man/3-xflush/">XFlush</a>(3), <a href="/docs/linux/man/3-xsetclosedownmode/">XSetCloseDownMode</a>(3)<br />
+<p><a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), <a href="/docs/linux/man/3-xflush/">XFlush</a>(3), <a href="/docs/linux/man/3-xsetclosedownmode/">XSetCloseDownMode</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

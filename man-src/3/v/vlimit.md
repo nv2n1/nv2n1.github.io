@@ -17,9 +17,9 @@ int prlimit(pid_t pid, int resource, const struct rlimit *new_limit,
             struct rlimit *old_limit);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>prlimit</code>(): _GNU_SOURCE</p>
 <h2>Description</h2>
-<p>The <code>getrlimit</code>() and <code>setrlimit</code>() system calls get and set resource limits. Each resource has an associated soft and hard limit, as defined by the <i>rlimit</i> structure: struct rlimit {<br />
-    rlim_t rlim_cur; /* Soft limit */<br />
-    rlim_t rlim_max; /* Hard limit (ceiling for rlim_cur) */<br />
+<p>The <code>getrlimit</code>() and <code>setrlimit</code>() system calls get and set resource limits. Each resource has an associated soft and hard limit, as defined by the <i>rlimit</i> structure: struct rlimit {<br/>
+    rlim_t rlim_cur; /* Soft limit */<br/>
+    rlim_t rlim_max; /* Hard limit (ceiling for rlim_cur) */<br/>
 }; The soft limit is the value that the kernel enforces for the corresponding resource. The hard limit acts as a ceiling for the soft limit: an unprivileged process may set only its soft limit to a value in the range from 0 up to the hard limit, and (irreversibly) lower its hard limit. A privileged process (under Linux: one with the <code>CAP_SYS_RESOURCE</code> capability in the initial user namespace) may make arbitrary changes to either limit value. The value <code>RLIM_INFINITY</code> denotes no limit on a resource (both in the structure returned by <code>getrlimit</code>() and in the structure passed to <code>setrlimit</code>()). The <i>resource</i> argument must be one of:</p>
 <dl>
 <dt><code>RLIMIT_AS</code></dt>
@@ -40,16 +40,16 @@ int prlimit(pid_t pid, int resource, const struct rlimit *new_limit,
 <dt><code>RLIMIT_MSGQUEUE</code> (since Linux 2.6.8)</dt>
 <dd>This is a limit on the number of bytes that can be allocated for POSIX message queues for the real user ID of the calling process. This limit is enforced for <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3). Each message queue that the user creates counts (until it is removed) against this limit according to the formula:</dd>
 <dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since Linux 3.5:</dd>
-<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;bytes&nbsp;=&nbsp;attr.mq_maxmsg&nbsp;*&nbsp;sizeof(struct msg_msg)&nbsp;+<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;min(attr.mq_maxmsg, MQ_PRIO_MAX)&nbsp;*<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sizeof(struct posix_msg_tree_node)+<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For overhead&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;attr.mq_maxmsg&nbsp;*&nbsp;attr.mq_msgsize;<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;bytes&nbsp;=&nbsp;attr.mq_maxmsg&nbsp;*&nbsp;sizeof(struct msg_msg)&nbsp;+<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;min(attr.mq_maxmsg, MQ_PRIO_MAX)&nbsp;*<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sizeof(struct posix_msg_tree_node)+<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For overhead&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;attr.mq_maxmsg&nbsp;*&nbsp;attr.mq_msgsize;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For message data&nbsp;*/</dd>
 <dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Linux 3.4 and earlier:</dd>
-<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;bytes&nbsp;=&nbsp;attr.mq_maxmsg&nbsp;*&nbsp;sizeof(struct msg_msg&nbsp;*)&nbsp;+<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For overhead&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;attr.mq_maxmsg&nbsp;*&nbsp;attr.mq_msgsize;<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;bytes&nbsp;=&nbsp;attr.mq_maxmsg&nbsp;*&nbsp;sizeof(struct msg_msg&nbsp;*)&nbsp;+<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For overhead&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;attr.mq_maxmsg&nbsp;*&nbsp;attr.mq_msgsize;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For message data&nbsp;*/</dd>
 <dd>where <i>attr</i> is the <i>mq_attr</i> structure specified as the fourth argument to <code><a href="/docs/linux/man/3-mq_open/">mq_open</a></code>(3), and the <i>msg_msg</i> and <i>posix_msg_tree_node</i> structures are kernel-internal structures.</dd>
 <dd>The &quot;overhead&quot; addend in the formula accounts for overhead bytes required by the implementation and ensures that the user cannot create an unlimited number of zero-length messages (such messages nevertheless each consume some system memory for bookkeeping overhead).</dd>
@@ -127,37 +127,37 @@ int prlimit(pid_t pid, int resource, const struct rlimit *new_limit,
 <p>Since version 2.13, the glibc <code>getrlimit</code>() and <code>setrlimit</code>() wrapper functions no longer invoke the corresponding system calls, but instead employ <code>prlimit</code>(), for the reasons described in BUGS. </p>
 <p> The name of the glibc wrapper function is <code>prlimit</code>(); the underlying system call is <code>prlimit64</code>().</p>
 <h2>Bugs</h2>
-<p>In older Linux kernels, the <code>SIGXCPU</code> and <code>SIGKILL</code> signals delivered when a process encountered the soft and hard <code>RLIMIT_CPU</code> limits were delivered one (CPU) second later than they should have been. This was fixed in kernel 2.6.8. In 2.6.x kernels before 2.6.17, a <code>RLIMIT_CPU</code> limit of 0 is wrongly treated as &quot;no limit&quot; (like <code>RLIM_INFINITY</code>). Since Linux 2.6.17, setting a limit of 0 does have an effect, but is actually treated as a limit of 1 second. A kernel bug means that <code>RLIMIT_RTPRIO</code> does not work in kernel 2.6.12; the problem is fixed in kernel 2.6.13. In kernel 2.6.12, there was an off-by-one mismatch between the priority ranges returned by <code><a href="/docs/linux/man/2-getpriority/">getpriority</a></code>(2) and <code>RLIMIT_NICE</code>. This had the effect that the actual ceiling for the nice value was calculated as <i>19 &#8211; rlim_cur</i>. This was fixed in kernel 2.6.13. Since Linux 2.6.12, if a process reaches its soft <code>RLIMIT_CPU</code> limit and has a handler installed for <code>SIGXCPU</code>, then, in addition to invoking the signal handler, the kernel increases the soft limit by one second. This behavior repeats if the process continues to consume CPU time, until the hard limit is reached, at which point the process is killed. Other implementations do not change the <code>RLIMIT_CPU</code> soft limit in this manner, and the Linux behavior is probably not standards conformant; portable applications should avoid relying on this Linux-specific behavior. The Linux-specific <code>RLIMIT_RTTIME</code> limit exhibits the same behavior when the soft limit is encountered. Kernels before 2.4.22 did not diagnose the error <code>EINVAL</code> for <code>setrlimit</code>() when <i>rlim-&gt;rlim_cur</i> was greater than <i>rlim-&gt;rlim_max</i>. Linux doesn&#8217;t return an error when an attempt to set<br />
+<p>In older Linux kernels, the <code>SIGXCPU</code> and <code>SIGKILL</code> signals delivered when a process encountered the soft and hard <code>RLIMIT_CPU</code> limits were delivered one (CPU) second later than they should have been. This was fixed in kernel 2.6.8. In 2.6.x kernels before 2.6.17, a <code>RLIMIT_CPU</code> limit of 0 is wrongly treated as &quot;no limit&quot; (like <code>RLIM_INFINITY</code>). Since Linux 2.6.17, setting a limit of 0 does have an effect, but is actually treated as a limit of 1 second. A kernel bug means that <code>RLIMIT_RTPRIO</code> does not work in kernel 2.6.12; the problem is fixed in kernel 2.6.13. In kernel 2.6.12, there was an off-by-one mismatch between the priority ranges returned by <code><a href="/docs/linux/man/2-getpriority/">getpriority</a></code>(2) and <code>RLIMIT_NICE</code>. This had the effect that the actual ceiling for the nice value was calculated as <i>19 &#8211; rlim_cur</i>. This was fixed in kernel 2.6.13. Since Linux 2.6.12, if a process reaches its soft <code>RLIMIT_CPU</code> limit and has a handler installed for <code>SIGXCPU</code>, then, in addition to invoking the signal handler, the kernel increases the soft limit by one second. This behavior repeats if the process continues to consume CPU time, until the hard limit is reached, at which point the process is killed. Other implementations do not change the <code>RLIMIT_CPU</code> soft limit in this manner, and the Linux behavior is probably not standards conformant; portable applications should avoid relying on this Linux-specific behavior. The Linux-specific <code>RLIMIT_RTTIME</code> limit exhibits the same behavior when the soft limit is encountered. Kernels before 2.4.22 did not diagnose the error <code>EINVAL</code> for <code>setrlimit</code>() when <i>rlim-&gt;rlim_cur</i> was greater than <i>rlim-&gt;rlim_max</i>. Linux doesn&#8217;t return an error when an attempt to set<br/>
 RLIMIT_CPU</p>
 <p>has failed, for compatibility reasons.</p>
 <p>Representation of large resource limit values on 32-bit platforms</p>
-<p>The glibc<br />
+<p>The glibc<br/>
 getrlimit()</p>
-<p>and<br />
+<p>and<br/>
 setrlimit()</p>
-<p>wrapper functions use a 64-bit<br />
+<p>wrapper functions use a 64-bit<br/>
 rlim_t</p>
-<p>data type, even on 32-bit platforms.<br />
-However, the<br />
+<p>data type, even on 32-bit platforms.<br/>
+However, the<br/>
 rlim_t</p>
-<p>data type used in the<br />
+<p>data type used in the<br/>
 getrlimit()</p>
-<p>and<br />
+<p>and<br/>
 setrlimit()</p>
-<p>system calls is a (32-bit)<br />
+<p>system calls is a (32-bit)<br/>
 unsigned long.</p>
-<p>Furthermore, in Linux,<br />
-the kernel represents resource limits on 32-bit platforms as<br />
+<p>Furthermore, in Linux,<br/>
+the kernel represents resource limits on 32-bit platforms as<br/>
 unsigned long.</p>
 <p>However, a 32-bit data type is not wide enough.</p>
-<p>The most pertinent limit here is<br />
+<p>The most pertinent limit here is<br/>
 RLIMIT_FSIZE,</p>
-<p>which specifies the maximum size to which a file can grow:<br />
-to be useful, this limit must be represented using a type<br />
-that is as wide as the type used to<br />
-represent file offsets&#8212;that is, as wide as a 64-bit<br />
+<p>which specifies the maximum size to which a file can grow:<br/>
+to be useful, this limit must be represented using a type<br/>
+that is as wide as the type used to<br/>
+represent file offsets&#8212;that is, as wide as a 64-bit<br/>
 off_t</p>
-<p>(assuming a program compiled with<br />
+<p>(assuming a program compiled with<br/>
 _FILE_OFFSET_BITS=64). To work around this kernel limitation, if a program tried to set a resource limit to a value larger than can be represented in a 32-bit <i>unsigned long</i>, then the glibc <code>setrlimit</code>() wrapper function silently converted the limit value to <code>RLIM_INFINITY</code>. In other words, the requested resource limit setting was silently ignored. Since version 2.13, glibc works around the limitations of the <code>getrlimit</code>() and <code>setrlimit</code>() system calls by implementing <code>setrlimit</code>() and <code>getrlimit</code>() as wrapper functions that call <code>prlimit</code>().</p>
 <h2>Examples</h2>
 <p>The program below demonstrates the use of <code>prlimit</code>(). </p>

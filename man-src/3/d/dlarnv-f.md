@@ -10,7 +10,7 @@ description: "dlarnv.f –"
 <p>dlarnv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlarnv</code> (IDIST, ISEED, N, X)<br />
+<p>subroutine <code>dlarnv</code> (IDIST, ISEED, N, X)<br/>
  <i></i><code>DLARNV</code> returns a vector of random numbers from a uniform or normal distribution.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarnv (integerIDIST, integer, dimension( 4 )ISEED, integerN, double precision, dimension( * )X)</h3>

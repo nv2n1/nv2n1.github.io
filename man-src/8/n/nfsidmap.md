@@ -9,11 +9,11 @@ description: "nfsidmap – The NFS idmapper upcall program"
 
 <p>nfsidmap &#8211; The NFS idmapper upcall program</p>
 <h2>Synopsis</h2>
-<p><code>nfsidmap [-v] [-t timeout] key desc</code><br />
- <code>nfsidmap [-v] [-c]</code><br />
- <code>nfsidmap [-v] [-u|-g|-r user]</code><br />
- <code>nfsidmap -d</code><br />
- <code>nfsidmap -l</code><br />
+<p><code>nfsidmap [-v] [-t timeout] key desc</code><br/>
+ <code>nfsidmap [-v] [-c]</code><br/>
+ <code>nfsidmap [-v] [-u|-g|-r user]</code><br/>
+ <code>nfsidmap -d</code><br/>
+ <code>nfsidmap -l</code><br/>
  <code>nfsidmap -h</code></p>
 <h2>Description</h2>
 <p>The NFSv4 protocol represents the local system&#8217;s UID and GID values on the wire as strings of the form <i>user [at] domain</i>. The process of translating from UID to string and string to UID is referred to as &quot;ID mapping.&quot; </p>

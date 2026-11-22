@@ -11,7 +11,7 @@ description: "stpmv.f –"
 <p> stpmv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>stpmv</code> (UPLO, TRANS, DIAG, N, AP, X, INCX)<br />
+<p> subroutine <code>stpmv</code> (UPLO, TRANS, DIAG, N, AP, X, INCX)<br/>
  <i></i><code>STPMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stpmv (characterUPLO, characterTRANS, characterDIAG, integerN, real, dimension(*)AP, real, dimension(*)X, integerINCX)</h3>

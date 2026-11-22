@@ -9,9 +9,9 @@ description: "iptunnel – Create and manage IP tunnels"
 
 <p>iptunnel &#8211; Create and manage IP tunnels</p>
 <h2>Synopsis</h2>
-<p><code>iptunnel</code> { add | change | del | show } [ NAME ]<br />
-&nbsp;<wbr>&nbsp;[&nbsp;mode&nbsp;{&nbsp;ipip | gre | sit&nbsp;}&nbsp;]&nbsp;[&nbsp;remote ADDR&nbsp;]&nbsp;[&nbsp;local ADDR&nbsp;]<br />
-&nbsp;<wbr>&nbsp;[&nbsp;[i|o]seq&nbsp;]&nbsp;[&nbsp;[i|o]key KEY&nbsp;]&nbsp;[&nbsp;[i|o]csum&nbsp;]<br />
+<p><code>iptunnel</code> { add | change | del | show } [ NAME ]<br/>
+&nbsp;<wbr>&nbsp;[&nbsp;mode&nbsp;{&nbsp;ipip | gre | sit&nbsp;}&nbsp;]&nbsp;[&nbsp;remote ADDR&nbsp;]&nbsp;[&nbsp;local ADDR&nbsp;]<br/>
+&nbsp;<wbr>&nbsp;[&nbsp;[i|o]seq&nbsp;]&nbsp;[&nbsp;[i|o]key KEY&nbsp;]&nbsp;[&nbsp;[i|o]csum&nbsp;]<br/>
 &nbsp;<wbr>&nbsp;[&nbsp;ttl TTL&nbsp;]&nbsp;[&nbsp;tos TOS&nbsp;]&nbsp;[&nbsp;nopmtudisc&nbsp;]&nbsp;[&nbsp;dev PHYS_DEV&nbsp;] <code>iptunnel</code> -V | &#8211;version </p>
 <pre><code>Where: NAME := STRING
 ADDR := { IP_ADDRESS | any }

@@ -11,7 +11,7 @@ description: "dpbtf2.f –"
 <p> dpbtf2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dpbtf2</code> (UPLO, N, KD, AB, LDAB, INFO)<br />
+<p> subroutine <code>dpbtf2</code> (UPLO, N, KD, AB, LDAB, INFO)<br/>
  <i></i><code>DPBTF2</code> computes the Cholesky factorization of a symmetric/Hermitian positive definite band matrix (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpbtf2 (characterUPLO, integerN, integerKD, double precision, dimension( ldab, * )AB, integerLDAB, integerINFO)</h3>

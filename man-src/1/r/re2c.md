@@ -226,8 +226,8 @@ yy5:
 <p> * { <i>C/C++ code</i> } </p>
 <p> * := <i>C/C++ code</i> </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p> <code>[^]</code> differs from <code>*</code>: <code>*</code> has the lowest priority, matches any code unit (either valid or invalid) and always consumes one character; <code>[^]</code> matches any valid code point (not code unit) and can consume multiple characters. In fact, when variable-length encoding is used, <code>*</code> is the only possible way to match invalid input character. </p>
  </dd></dl>

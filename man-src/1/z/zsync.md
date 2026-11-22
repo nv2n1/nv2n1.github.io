@@ -20,7 +20,7 @@ description: "zsync – Partial/differential file download client over HTTP"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-A</code> <i>hostname</i>=<i>username</i>:<i>password</i></dt>
-<dd> Specifies a username and password to be used with the given hostname. <code>-A</code> can be used multiple times (with different hostnames), in cases where e.g. the<br />
+<dd> Specifies a username and password to be used with the given hostname. <code>-A</code> can be used multiple times (with different hostnames), in cases where e.g. the<br/>
 &nbsp;.zsync file is on a different server from the download, or there are multiple download servers (there could be different auth details for different servers &#8211; and zsync never assumes that your password should be sent to a server other than the one named &#8211; otherwise redirects would be dangerous!).</dd>
 <dt><code>-i</code> <i>inputfile</i></dt>
 <dd> Specifies (extra) input files. <i>inputfile</i> is scanned to identify blocks in common with the target file and zsync uses any blocks found. Can be used multiple times.</dd>

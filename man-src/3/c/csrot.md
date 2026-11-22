@@ -11,7 +11,7 @@ description: "csrot.f –"
 <p> csrot.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>csrot</code> (N, CX, INCX, CY, INCY, C, S)<br />
+<p> subroutine <code>csrot</code> (N, CX, INCX, CY, INCY, C, S)<br/>
  <i></i><code>CSROT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine csrot (integerN, complex, dimension( * )CX, integerINCX, complex, dimension( * )CY, integerINCY, realC, realS)</h3>

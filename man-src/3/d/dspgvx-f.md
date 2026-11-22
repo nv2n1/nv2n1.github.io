@@ -10,7 +10,7 @@ description: "dspgvx.f –"
 <p>dspgvx.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dspgvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, AP, BP, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
+<p>subroutine <code>dspgvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, AP, BP, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br/>
  <i></i><code>DSPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dspgvx (integerITYPE, characterJOBZ, characterRANGE, characterUPLO, integerN, double precision, dimension( * )AP, double precision, dimension( * )BP, double precisionVL, double precisionVU, integerIL, integerIU, double precisionABSTOL, integerM, double precision, dimension( * )W, double precision, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integer, dimension( * )IFAIL, integerINFO)</h3>

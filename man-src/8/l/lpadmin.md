@@ -9,8 +9,8 @@ description: "lpadmin – configure cups printers and classes"
 
 <p>lpadmin &#8211; configure cups printers and classes</p>
 <h2>Synopsis</h2>
-<p><code>lpadmin</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] <code>-d</code> <i>destination</i><br />
- <code>lpadmin</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] <code>-p</code> <i>destination</i> [ <code>-R</code> <i>name-default</i> ] <i>option(s)</i><br />
+<p><code>lpadmin</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] <code>-d</code> <i>destination</i><br/>
+ <code>lpadmin</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] <code>-p</code> <i>destination</i> [ <code>-R</code> <i>name-default</i> ] <i>option(s)</i><br/>
  <code>lpadmin</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] <code>-x</code> <i>destination</i></p>
 <h2>Description</h2>
 <p><code>lpadmin</code> configures printer and class queues provided by CUPS. It can also be used to set the server default printer or class. </p>

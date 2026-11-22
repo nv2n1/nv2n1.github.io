@@ -11,7 +11,7 @@ description: "dlargv.f –"
 <p> dlargv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlargv</code> (N, X, INCX, Y, INCY, C, INCC)<br />
+<p> subroutine <code>dlargv</code> (N, X, INCX, Y, INCY, C, INCC)<br/>
  <i></i><code>DLARGV</code> generates a vector of plane rotations with real cosines and real sines.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlargv (integerN, double precision, dimension( * )X, integerINCX, double precision, dimension( * )Y, integerINCY, double precision, dimension( * )C, integerINCC)</h3>

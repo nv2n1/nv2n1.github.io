@@ -299,7 +299,7 @@ git blame -C -C -f $commit^! -- foo
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  For people who do parsing: to make it more robust, just ignore any lines between the first and last one (&quot;&lt;sha1&gt;&quot; and &quot;filename&quot; lines) where you do not recognize the tag words (or care about that particular one) at the beginning of the &quot;extended information&quot; lines. That way, if there is ever added information (like the commit encoding or extended commit commentary), a blame viewer will not care. </dd>
 </dl>
 </dl>

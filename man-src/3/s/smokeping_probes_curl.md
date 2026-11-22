@@ -9,7 +9,7 @@ url: "/docs/linux/man/3-smokeping_probes_curl/"
 Smokeping::probes::Curl - a 
 
 <a HREF="/docs/linux/man/1-curl/">curl</a>(1) probe for SmokePing
-<h2>Overview</h2>Fetches an <font SIZE="-1">HTTP</font> or <font SIZE="-1">HTTPS URL</font> using <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1).
+<h2>Overview</h2>Fetches an HTTP or HTTPS URL using <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1).
 <h2>Synopsis</h2><pre> *** Probes ***
  +Curl
  binary = /usr/bin/curl
@@ -57,17 +57,17 @@ Smokeping::probes::Curl - a
  Example value: 5 
  Default value: 5
 </dd><dt>offset
-</dt><dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as 'random', and the offset from the 'General' section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
+</dt><dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as 'random', and the offset from the 'General' section is used if nothing is specified here. Note that this does NOT influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
  Example value: 50%
 </dd><dt>step
-</dt><dd>Duration of the base interval that this probe should use, if different from the one specified in the 'Database' section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
+</dt><dd>Duration of the base interval that this probe should use, if different from the one specified in the 'Database' section. Note that the step in the RRD files is fixed when they are originally generated, and if you change the step parameter afterwards, you'll have to delete the old RRD files or somehow convert them. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
  Example value: 300</dd></dl>
  
 
  Supported target-specific variables:
 <dl COMPACT><dt>agent
-</dt><dd>The ``-A'' <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1) option. This is a full <font SIZE="-1">HTTP</font> User-Agent header including the words ``User-Agent:''. Note that it does not need any quotes around it. 
- Example value: User-Agent: Lynx/2.8.4rel.1 libwww-FM/2.14 <font SIZE="-1">SSL-MM/1.4.1</font> OpenSSL/0.9.6c
+</dt><dd>The ``-A'' <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1) option. This is a full HTTP User-Agent header including the words ``User-Agent:''. Note that it does not need any quotes around it. 
+ Example value: User-Agent: Lynx/2.8.4rel.1 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.6c
 </dd><dt>expect
 </dt><dd>Require the given text to appear somewhere in the response, otherwise probe is treated as a failure 
  Example value: Status: green 
@@ -82,34 +82,34 @@ Smokeping::probes::Curl - a
  Example value: / / 
  Default value: / /
 </dd><dt>follow_redirects
-</dt><dd>If this variable is set to 'yes', curl will follow any <font SIZE="-1">HTTP</font> redirection steps (the '-L' option). If set to 'no', <font SIZE="-1">HTTP</font> Location: headers will not be followed. See also 'include_redirects'. 
+</dt><dd>If this variable is set to 'yes', curl will follow any HTTP redirection steps (the '-L' option). If set to 'no', HTTP Location: headers will not be followed. See also 'include_redirects'. 
  Example value: yes 
  Default value: no
 </dd><dt>include_redirects
-</dt><dd>If this variable is set to 'yes', the measurement result will include the time spent on following any <font SIZE="-1">HTTP</font> redirection steps. If set to 'no', only the last step is measured. See also 'follow_redirects'. 
+</dt><dd>If this variable is set to 'yes', the measurement result will include the time spent on following any HTTP redirection steps. If set to 'no', only the last step is measured. See also 'follow_redirects'. 
  Example value: yes 
  Default value: no
 </dd><dt>insecure_ssl
-</dt><dd>The ``-k'' <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1) option. Accept <font SIZE="-1">SSL</font> connections that don't have a secure certificate chain to a trusted <font SIZE="-1">CA.</font> Note that if you are going to monitor https targets, you'll probably have to either enable this option or specify the <font SIZE="-1">CA</font> path to curl through extraargs below. For more info, see the <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1) manual page. 
+</dt><dd>The ``-k'' <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1) option. Accept SSL connections that don't have a secure certificate chain to a trusted CA. Note that if you are going to monitor https targets, you'll probably have to either enable this option or specify the CA path to curl through extraargs below. For more info, see the <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1) manual page. 
  Example value: 1
 </dd><dt>interface
-</dt><dd>The ``--interface'' <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1) option. Bind to a specific interface, <font SIZE="-1">IP</font> address or host name. 
+</dt><dd>The ``--interface'' <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1) option. Bind to a specific interface, IP address or host name. 
  Example value: eth0
 </dd><dt>pings
-</dt><dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. 
+</dt><dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the RRD files is fixed when they are originally generated, and if you change this parameter afterwards, you'll have to delete the old RRD files or somehow convert them. 
  Example value: 5
 </dd><dt>ssl2
-</dt><dd>The ``-2'' <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1) option. Force <font SIZE="-1">SSL2.</font> 
+</dt><dd>The ``-2'' <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1) option. Force SSL2. 
  Example value: 1
 </dd><dt>timeout
 </dt><dd>The ``-m'' <i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1) option. Maximum timeout in seconds. 
  Example value: 20 
  Default value: 10
 </dd><dt>urlformat
-</dt><dd>The template of the <font SIZE="-1">URL</font> to fetch. Can be any one that curl supports. Any occurrence of the string '%host%' will be replaced with the host to be probed. 
+</dt><dd>The template of the URL to fetch. Can be any one that curl supports. Any occurrence of the string '%host%' will be replaced with the host to be probed. 
  Example value: <a rel="nofollow" HREF="http://%host%/">http://%host%/</a> 
  This setting is mandatory.</dd></dl><h2>Authors</h2><pre> Gerald Combs &lt;gerald [AT] ethereal.com&gt;
- Niko Tyni &lt;ntyni [at] iki.fi&gt;</pre><h2>Notes</h2>You should consider setting a lower value for the <tt>&quot;pings&quot;</tt> variable than the default 20, as repetitive <font SIZE="-1">URL</font> fetching may be quite heavy on the server. 
+ Niko Tyni &lt;ntyni [at] iki.fi&gt;</pre><h2>Notes</h2>You should consider setting a lower value for the <tt>&quot;pings&quot;</tt> variable than the default 20, as repetitive URL fetching may be quite heavy on the server. 
 
- The <font SIZE="-1">URL</font> to be tested used to be specified by the variable 'url' in earlier versions of Smokeping, and the 'host' setting did not influence it in any way. The variable name has now been changed to 'urlformat', and it can (and in most cases should) contain a placeholder for the 'host' variable.
+ The URL to be tested used to be specified by the variable 'url' in earlier versions of Smokeping, and the 'host' setting did not influence it in any way. The variable name has now been changed to 'urlformat', and it can (and in most cases should) contain a placeholder for the 'host' variable.
 <h2>See Also</h2><i><a HREF="/docs/linux/man/1-curl/">curl</a></i>(1), &lt;<a rel="nofollow" HREF="http://curl.haxx.se/">http://curl.haxx.se/</a>&gt;

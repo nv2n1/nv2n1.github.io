@@ -23,8 +23,8 @@ description: "ext_unix_group_acl – Squid UNIX Group ACL helper"
 <h2>Configuration</h2>
 <p>This <code>squid.conf</code> example defines two Squid acls. <i>usergroup1</i> matches users in <i>group1</i> , and <i>usergroup2</i> matches users in <i>group2</i> or <i>group3</i></p>
 <dl>
-<dd><code>external_acl_type unix_group %LOGIN /usr/local/squid/libexec/ext_unix_group_acl -p</code><br />
- <code>acl usergroup1 external unix_group group1</code><br />
+<dd><code>external_acl_type unix_group %LOGIN /usr/local/squid/libexec/ext_unix_group_acl -p</code><br/>
+ <code>acl usergroup1 external unix_group group1</code><br/>
  <code>acl usergroup2 external unix_group group2 group3</code></dd></dl>
 <p> By default up to 11 groups can be matched in one acl (including commandline specified groups). This limit is defined by <code>MAX_GROUPS</code> in the source code.</p>
 <h2>Known Issues</h2>
@@ -33,10 +33,10 @@ description: "ext_unix_group_acl – Squid UNIX Group ACL helper"
 <p>This program was written by <i>Rodrigo Campos &lt;rodrigo [at] geekbunker.org&gt;</i> </p>
 <p> This manual was written by <i>Henrik Nordstrom &lt;hno [at] squid-cache.org&gt;</i></p>
 <h2>Copyright</h2>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br />
-&nbsp;<wbr>*<br />
-&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br />
-&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br/>
+&nbsp;<wbr>*<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br/>
+&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br/>
 &nbsp;<wbr>*&nbsp;<wbr>Please see the COPYING and CONTRIBUTORS files for details. </p>
 <p> This program and documentation is copyright to the authors named above. </p>
 <p> Distributed under the GNU General Public License (GNU GPL) version 2 or later (GPLv2+).</p>
@@ -49,6 +49,6 @@ description: "ext_unix_group_acl – Squid UNIX Group ACL helper"
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list</i> &lt;squid-dev [at] squid-cache.org&gt; </p>
 <p> Additionally bugs or bug-fixes can be reported to <i>Rodrigo Campos &lt;rodrigo [at] geekbunker.org&gt;</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code>GPL</code>(7),<br />
- The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br />
+<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code>GPL</code>(7),<br/>
+ The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br/>
  The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>

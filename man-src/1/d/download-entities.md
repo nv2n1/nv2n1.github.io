@@ -21,7 +21,7 @@ download-entities - download and parse XML Entity definitions
 
 <h2>DESCRIPTION</h2>
 
- This script downloads the definitions of <font SIZE="-1">XML</font> entities from <a rel="nofollow" HREF="http://www.w3.org/2003/entities/iso9573-2003/">http://www.w3.org/2003/entities/iso9573-2003/</a> or from whatever address you give it as an argument. The argument should be an <font SIZE="-1">URL </font>(that LWP::UserAgent::get can access) pointing to a document with (absolute or relative) references to files ending with the <tt>&quot;.ent&quot;</tt> suffix. These files are expected to be <font SIZE="-1">DTD</font>'s with lines like 
+ This script downloads the definitions of XML entities from <a rel="nofollow" HREF="http://www.w3.org/2003/entities/iso9573-2003/">http://www.w3.org/2003/entities/iso9573-2003/</a> or from whatever address you give it as an argument. The argument should be an URL (that LWP::UserAgent::get can access) pointing to a document with (absolute or relative) references to files ending with the <tt>&quot;.ent&quot;</tt> suffix. These files are expected to be DTD's with lines like 
 
  <pre>
  &lt;!ENTITY amp &quot;&amp;#38;&quot; &gt;
@@ -60,7 +60,7 @@ download-entities - download and parse XML Entity definitions
 
 <h3>Dependencies</h3>
 
- This script has dependencies that the <tt>&quot;XML::Entities&quot;</tt> module does not and are therefore not mentioned in the <font SIZE="-1">META</font>.yml file. These are <tt>&quot;LWP::UserAgent&quot;</tt>, <tt>&quot;File::Basename&quot;</tt> and <tt>&quot;Fatal&quot;</tt>.
+ This script has dependencies that the <tt>&quot;XML::Entities&quot;</tt> module does not and are therefore not mentioned in the META.yml file. These are <tt>&quot;LWP::UserAgent&quot;</tt>, <tt>&quot;File::Basename&quot;</tt> and <tt>&quot;Fatal&quot;</tt>.
 
 <h2>COPYRIGHT</h2>
 

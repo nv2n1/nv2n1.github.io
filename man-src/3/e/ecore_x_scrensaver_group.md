@@ -9,37 +9,37 @@ description: "X Shape extension – These functions use the shape extension of t
 
 <p>X Shape extension &#8211; These functions use the shape extension of the X server to change shape of given windows. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_x_screensaver_event_available_get</code> (void)<br />
- <i>Return whether the X server supports the ScrenSaver Extension. </i><br />
- EAPI void <code>ecore_x_screensaver_idle_time_prefetch</code> (void)<br />
- <i>Sends the QueryInfo request. </i><br />
- EAPI void <code>ecore_x_screensaver_idle_time_fetch</code> (void)<br />
- <i>Gets the reply of the QueryInfo request sent by </i><code>ecore_x_get_screensaver_prefetch()</code>.<br />
- EAPI int <code>ecore_x_screensaver_idle_time_get</code> (void)<br />
- <i>Get the number of seconds since the last input was received. </i><br />
- EAPI void <code>ecore_x_screensaver_set</code> (int timeout, int interval, int blank, int expose)<br />
- <i>Set the parameters of the screen saver. </i><br />
- EAPI void <code>ecore_x_get_screensaver_prefetch</code> (void)<br />
- <i>Sends the GetScreenSaver request. </i><br />
- EAPI void <code>ecore_x_get_screensaver_fetch</code> (void)<br />
- <i>Gets the reply of the GetScreenSaver request sent by </i><code>ecore_x_get_screensaver_prefetch()</code>.<br />
- EAPI void <code>ecore_x_screensaver_timeout_set</code> (int timeout)<br />
- <i>Set the timeout of the screen saver. </i><br />
- EAPI int <code>ecore_x_screensaver_timeout_get</code> (void)<br />
- <i>Get the timeout of the screen saver. </i><br />
- EAPI void <code>ecore_x_screensaver_interval_set</code> (int interval)<br />
- <i>Set the interval of the screen saver. </i><br />
- EAPI int <code>ecore_x_screensaver_interval_get</code> (void)<br />
- <i>Get the interval of the screen saver. </i><br />
- EAPI void <code>ecore_x_screensaver_blank_set</code> (int blank)<br />
- <i>Set the screen blanking. </i><br />
- EAPI int <code>ecore_x_screensaver_blank_get</code> (void)<br />
- <i>Get the screen blanking. </i><br />
- EAPI void <code>ecore_x_screensaver_expose_set</code> (int expose)<br />
- <i>Set the screen save control values. </i><br />
- EAPI int <code>ecore_x_screensaver_expose_get</code> (void)<br />
- <i>Get the screen save control values. </i><br />
- EAPI void <code>ecore_x_screensaver_event_listen_set</code> (int on)<br />
+<p>EAPI int <code>ecore_x_screensaver_event_available_get</code> (void)<br/>
+ <i>Return whether the X server supports the ScrenSaver Extension. </i><br/>
+ EAPI void <code>ecore_x_screensaver_idle_time_prefetch</code> (void)<br/>
+ <i>Sends the QueryInfo request. </i><br/>
+ EAPI void <code>ecore_x_screensaver_idle_time_fetch</code> (void)<br/>
+ <i>Gets the reply of the QueryInfo request sent by </i><code>ecore_x_get_screensaver_prefetch()</code>.<br/>
+ EAPI int <code>ecore_x_screensaver_idle_time_get</code> (void)<br/>
+ <i>Get the number of seconds since the last input was received. </i><br/>
+ EAPI void <code>ecore_x_screensaver_set</code> (int timeout, int interval, int blank, int expose)<br/>
+ <i>Set the parameters of the screen saver. </i><br/>
+ EAPI void <code>ecore_x_get_screensaver_prefetch</code> (void)<br/>
+ <i>Sends the GetScreenSaver request. </i><br/>
+ EAPI void <code>ecore_x_get_screensaver_fetch</code> (void)<br/>
+ <i>Gets the reply of the GetScreenSaver request sent by </i><code>ecore_x_get_screensaver_prefetch()</code>.<br/>
+ EAPI void <code>ecore_x_screensaver_timeout_set</code> (int timeout)<br/>
+ <i>Set the timeout of the screen saver. </i><br/>
+ EAPI int <code>ecore_x_screensaver_timeout_get</code> (void)<br/>
+ <i>Get the timeout of the screen saver. </i><br/>
+ EAPI void <code>ecore_x_screensaver_interval_set</code> (int interval)<br/>
+ <i>Set the interval of the screen saver. </i><br/>
+ EAPI int <code>ecore_x_screensaver_interval_get</code> (void)<br/>
+ <i>Get the interval of the screen saver. </i><br/>
+ EAPI void <code>ecore_x_screensaver_blank_set</code> (int blank)<br/>
+ <i>Set the screen blanking. </i><br/>
+ EAPI int <code>ecore_x_screensaver_blank_get</code> (void)<br/>
+ <i>Get the screen blanking. </i><br/>
+ EAPI void <code>ecore_x_screensaver_expose_set</code> (int expose)<br/>
+ <i>Set the screen save control values. </i><br/>
+ EAPI int <code>ecore_x_screensaver_expose_get</code> (void)<br/>
+ <i>Get the screen save control values. </i><br/>
+ EAPI void <code>ecore_x_screensaver_event_listen_set</code> (int on)<br/>
  <i>Specifies if the Screen Saver NotifyMask event should be generated. </i></p>
 <h2>Detailed Description</h2>
 <p>These functions use the shape extension of the X server to change shape of given windows.</p>
@@ -109,9 +109,9 @@ description: "X Shape extension – These functions use the shape extension of t
 <p>Set the parameters of the screen saver. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>timeout</i> The timeout, in second.<br />
- <i>interval</i> The interval, in seconds.<br />
- <i>blank</i> 0 to disable screen blanking, otherwise enable it.<br />
+<dd><i>timeout</i> The timeout, in second.<br/>
+ <i>interval</i> The interval, in seconds.<br/>
+ <i>blank</i> 0 to disable screen blanking, otherwise enable it.<br/>
  <i>expose</i> Allow Expose generation event or not.</dd></dl>
 <p> Set the parameters of the screen saver. timeout is the timeout, in seconds, until the screen saver turns on. interval is the interval, in seconds, between screen saver alterations. blank specifies how to enable screen blanking. expose specifies the screen save control values.</p>
 <h3>EAPI int ecore_x_screensaver_timeout_get (void)</h3>

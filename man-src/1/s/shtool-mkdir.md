@@ -38,6 +38,6 @@ description: "shtool mkdir – GNU shtool"
       :
 </pre>
 <h2>HISTORY</h2>
-<p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>mkdir</code> command was originally written for Public Domain by Noah Friedman and later revised by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1999 for inclusion into <font SIZE="-1"><code>GNU</code></font><code> shtool</code>.</p>
+<p> The <code>GNU</code><code> shtool</code> <code>mkdir</code> command was originally written for Public Domain by Noah Friedman and later revised by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1999 for inclusion into <code>GNU</code><code> shtool</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-mkdir/">mkdir</a></i>(1). </p>

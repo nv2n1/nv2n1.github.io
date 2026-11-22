@@ -10,7 +10,7 @@ description: "ctbcon.f –"
 <p>ctbcon.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ctbcon</code> (NORM, UPLO, DIAG, N, KD, AB, LDAB, RCOND, WORK, RWORK, INFO)<br />
+<p>subroutine <code>ctbcon</code> (NORM, UPLO, DIAG, N, KD, AB, LDAB, RCOND, WORK, RWORK, INFO)<br/>
  <i></i><code>CTBCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctbcon (characterNORM, characterUPLO, characterDIAG, integerN, integerKD, complex, dimension( ldab, * )AB, integerLDAB, realRCOND, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

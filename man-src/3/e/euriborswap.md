@@ -10,14 +10,14 @@ description: "ql/indexes/swap/euriborswap.hpp – Euribor Swap indexes."
 
 <p> ql/indexes/swap/euriborswap.hpp &#8211; Euribor Swap indexes. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/indexes/swapindex.hpp&gt;<br />
+<p> #include &lt;ql/indexes/swapindex.hpp&gt;<br/>
  #include &lt;ql/termstructures/yieldtermstructure.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>EuriborSwapIsdaFixA</code><br />
- <i>EuriborSwapIsdaFixA index base class </i><br />
- class <code>EuriborSwapIsdaFixB</code><br />
- <i>EuriborSwapIsdaFixB index base class </i><br />
- class <code>EuriborSwapIfrFix</code><br />
+<p> class <code>EuriborSwapIsdaFixA</code><br/>
+ <i>EuriborSwapIsdaFixA index base class </i><br/>
+ class <code>EuriborSwapIsdaFixB</code><br/>
+ <i>EuriborSwapIsdaFixB index base class </i><br/>
+ class <code>EuriborSwapIfrFix</code><br/>
  <i>EuriborSwapIfrFix index base class </i></p>
 <h2>Detailed Description</h2>
 <p> Euribor Swap indexes. </p>

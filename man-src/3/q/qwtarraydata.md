@@ -29,7 +29,7 @@ description: "QwtArrayData – Data class containing two QwtArray<double> object
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> Array of x values<br />
+<dd><i>x</i> Array of x values<br/>
  <i>y</i> Array of y values</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
@@ -38,8 +38,8 @@ description: "QwtArrayData – Data class containing two QwtArray<double> object
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> Array of x values<br />
- <i>y</i> Array of y values<br />
+<dd><i>x</i> Array of x values<br/>
+ <i>y</i> Array of y values<br/>
  <i>size</i> Size of the x and y arrays</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>

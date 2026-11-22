@@ -9,8 +9,8 @@ description: "mkbootdisk – creates a stand-alone boot floppy for the running s
 
 <p>mkbootdisk &#8211; creates a stand-alone boot floppy for the running system</p>
 <h2>Synopsis</h2>
-<p><code>mkbootdisk</code> [<code>&#8211;version</code>] [<code>&#8211;noprompt</code>] [<code>&#8211;verbose</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;device&nbsp;<wbr></code><i>devicefile</i>]&nbsp;<wbr>[<code>&#8211;size&nbsp;<wbr></code><i>size</i>]<br />
+<p><code>mkbootdisk</code> [<code>&#8211;version</code>] [<code>&#8211;noprompt</code>] [<code>&#8211;verbose</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;device&nbsp;<wbr></code><i>devicefile</i>]&nbsp;<wbr>[<code>&#8211;size&nbsp;<wbr></code><i>size</i>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;kernelargs&nbsp;<wbr></code><i>&lt;args&gt;</i>]&nbsp;<wbr>[<code>&#8211;iso</code>]&nbsp;<wbr><i>kernel</i> </p>
 <h2>Description</h2>
 <p><code>mkbootdisk</code> creates a boot floppy appropriate for the running system. The boot disk is entirely self-contained, and includes an initial ramdisk image which loads any necessary SCSI modules for the system. The created boot disk looks for the root filesystem on the device suggested by /etc/fstab. The only required argument is the kernel version to put onto the boot floppy. </p>

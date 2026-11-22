@@ -24,10 +24,10 @@ struct mntent *getmntent_r(FILE *streamp, struct mntent *mntbuf,
                            char *buf, int buflen);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>getmntent_r</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> <code>getmntent_r</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <p> These routines are used to access the filesystem description file <i>/etc/fstab</i> and the mounted filesystem description file <i>/etc/mtab</i>. </p>
@@ -38,12 +38,12 @@ struct mntent *getmntent_r(FILE *streamp, struct mntent *mntbuf,
 <p> The <code>hasmntopt</code>() function scans the <i>mnt_opts</i> field (see below) of the <i>mntent</i> structure <i>mnt</i> for a substring that matches <i>opt</i>. See <i>&lt;mntent.h&gt;</i> and <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) for valid mount options. </p>
 <p> The reentrant <code>getmntent_r</code>() function is similar to <code>getmntent</code>(), but stores the <i>struct mount</i> in the provided <i>*mntbuf</i> and stores the strings pointed to by the entries in that struct in the provided array <i>buf</i> of size <i>buflen</i>. </p>
 <p> The <i>mntent</i> structure is defined in <i>&lt;mntent.h&gt;</i> as follows: </p>
-<p> struct mntent {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*mnt_fsname;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;name of mounted filesystem&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*mnt_dir;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;filesystem path prefix&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*mnt_type;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;mount type&nbsp;(see mntent.h)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*mnt_opts;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;mount options&nbsp;(see mntent.h)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;mnt_freq;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;dump frequency in days&nbsp;*/<br />
+<p> struct mntent {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*mnt_fsname;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;name of mounted filesystem&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*mnt_dir;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;filesystem path prefix&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*mnt_type;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;mount type&nbsp;(see mntent.h)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*mnt_opts;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;mount options&nbsp;(see mntent.h)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;mnt_freq;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;dump frequency in days&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;mnt_passno;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;pass number on parallel fsck&nbsp;*/ }; </p>
 <p> Since fields in the mtab and fstab files are separated by whitespace, octal escapes are used to represent the characters space ( ), tab (	), newline (
 ), and backslash (\) in those files when they occur in one of the four strings in a <i>mntent</i> structure. The routines <code>addmntent</code>() and <code>getmntent</code>() will convert from string representation to escaped representation and back. When converting from escaped representation, the sequence \134 is also converted to a backslash.</p>

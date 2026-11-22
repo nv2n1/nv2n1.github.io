@@ -9,7 +9,7 @@ description: "xfs_db – debug an XFS filesystem"
 
 <p>xfs_db &#8211; debug an XFS filesystem</p>
 <h2>Synopsis</h2>
-<p><code>xfs_db</code> [ <code>-c</code> <i>cmd</i> ] &#8230; [ <code>-i</code>|<code>r</code>|<code>x</code>|<code>F</code> ] [ <code>-f</code> ] [ <code>-l</code> <i>logdev</i> ] [ <code>-p</code> <i>progname</i> ] <i>device</i><br />
+<p><code>xfs_db</code> [ <code>-c</code> <i>cmd</i> ] &#8230; [ <code>-i</code>|<code>r</code>|<code>x</code>|<code>F</code> ] [ <code>-f</code> ] [ <code>-l</code> <i>logdev</i> ] [ <code>-p</code> <i>progname</i> ] <i>device</i><br/>
  <code>xfs_db -V</code></p>
 <h2>Description</h2>
 <p><code>xfs_db</code> is used to examine an XFS filesystem. Under rare circumstances it can also be used to modify an XFS filesystem, but that task is normally left to <code><a href="/docs/linux/man/8-xfs_repair/">xfs_repair</a></code>(8) or to scripts such as <code><a href="/docs/linux/man/8-xfs_admin/">xfs_admin</a></code>(8) that run <code>xfs_db</code>. </p>

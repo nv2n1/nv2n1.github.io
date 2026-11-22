@@ -10,7 +10,7 @@ description: "ssbtrd.f –"
 <p>ssbtrd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssbtrd</code> (VECT, UPLO, N, KD, AB, LDAB, D, E, Q, LDQ, WORK, INFO)<br />
+<p>subroutine <code>ssbtrd</code> (VECT, UPLO, N, KD, AB, LDAB, D, E, Q, LDQ, WORK, INFO)<br/>
  <i></i><code>SSBTRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssbtrd (characterVECT, characterUPLO, integerN, integerKD, real, dimension( ldab, * )AB, integerLDAB, real, dimension( * )D, real, dimension( * )E, real, dimension( ldq, * )Q, integerLDQ, real, dimension( * )WORK, integerINFO)</h3>

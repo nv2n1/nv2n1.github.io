@@ -33,7 +33,7 @@ description: "fontimage – produce a font thumbnail image"
 <dd> Display the current version</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fontforge/">fontforge</a></code>(1) </p>
-<p> The HTML version of the <i>fontforge</i> manual at:<br />
+<p> The HTML version of the <i>fontforge</i> manual at:<br/>
  <a rel="nofollow" href="http://fontforge.sourceforge.net/">http://fontforge.sourceforge.net/</a></p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2006 by George Williams (gww [at] silcom.com). </p>

@@ -14,7 +14,7 @@ description: "dcb-dcbx – show / manipulate port DCBX (Data Center Bridging eXc
 dcbx
 { COMMAND | help }
 </code></pre>
-<p> <code>dcb dcbx show dev</code> DEV<br />
+<p> <code>dcb dcbx show dev</code> DEV<br/>
  <code>dcb dcbx set dev</code> DEV [ <code>host</code> ] [ <code>lld-managed</code> ] [ <code>cee</code> ] [ <code>ieee</code> ] [ <code>static</code> ] </p>
 <h2>Description</h2>
 <p>Data Center Bridging eXchange (DCBX) is a protocol used by DCB devices to exchange configuration information with directly connected peers. The Linux DCBX object is a 1-byte bitfield of flags that configure whether DCBX is implemented in the device or in the host, and which version of the protocol should be used. <code>dcb dcbx</code> is used to access the per-port Linux DCBX object. There are two principal modes of operation: in <code>host</code> mode, DCBX protocol is implemented by the host LLDP agent, and the DCB interfaces are used to propagate the negotiate parameters to capable devices. In <code>lld-managed</code> mode, the configuration is handled by the device, and DCB interfaces are used for inspection of negotiated parameters, and can also be used to set initial parameters. </p>
@@ -32,7 +32,7 @@ dcbx
 <p>Put the DCB engine into the &quot;host&quot; mode of operation, and use IEEE-standardized DCB interfaces: </p>
 <p> # dcb dcbx set dev eth0 host ieee </p>
 <p> Show what was set: </p>
-<p> # dcb dcbx show dev eth0<br />
+<p> # dcb dcbx show dev eth0<br/>
  host ieee</p>
 <h2>Exit Status</h2>
 <p>Exit status is 0 if command was successful or a positive integer upon failure.</p>

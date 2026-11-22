@@ -80,13 +80,13 @@ description: "gpg_web_selinux – Security Enhanced Linux Policy for the gpg_web
 <dl>
 <dt>Allow gpg_web servers to read the /var/gpg_web directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_t &quot;/var/gpg_web(/.*)?&quot;</code><br />
+<p> <code>semanage fcontext -a -t public_content_t &quot;/var/gpg_web(/.*)?&quot;</code><br/>
  <code>restorecon -F -R -v /var/gpg_web</code></p>
 <dl>
 <dt>Allow gpg_web servers to read and write /var/gpg_web/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the gpg_web_anon_write boolean.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/gpg_web/incoming(/.*)?&quot;</code><br />
- <code>restorecon -F -R -v /var/gpg_web/incoming</code><br />
+<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/gpg_web/incoming(/.*)?&quot;</code><br/>
+ <code>restorecon -F -R -v /var/gpg_web/incoming</code><br/>
  <code>setsebool -P gpg_web_anon_write 1</code> </p>
 <p> If you want to allow gpg web domain to modify public files used for public file transfer services., you must turn on the gpg_web_anon_write boolean. </p>
 <p> <code>setsebool -P gpg_web_anon_write 1</code></p>

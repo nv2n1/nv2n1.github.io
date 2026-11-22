@@ -10,7 +10,7 @@ description: "ssyevr.f –"
 <p>ssyevr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssyevr</code> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>ssyevr</code> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code> SSYEVR computes the eigenvalues and, optionally, the left and/or right eigenvectors for SY matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssyevr (characterJOBZ, characterRANGE, characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, realVL, realVU, integerIL, integerIU, realABSTOL, integerM, real, dimension( * )W, real, dimension( ldz, * )Z, integerLDZ, integer, dimension( * )ISUPPZ, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

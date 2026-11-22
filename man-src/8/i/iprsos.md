@@ -15,5 +15,5 @@ description: "iprsos – IBM Power RAID report generator"
 <h2>Files</h2>
 <p>A detailed report file is printed both at stdin and the /path/to/report/file specified by the user, with the information collected from the hardware and system information. If no files are used, the information will be only displayed at stdin.</p>
 <h2>Authors</h2>
-<p>Daniel B. Kreling &lt;kreling [at] linux.vnet.ibm.com&gt;<br />
+<p>Daniel B. Kreling &lt;kreling [at] linux.vnet.ibm.com&gt;<br/>
  Brian King &lt;brking [at] us.ibm.com&gt;</p>

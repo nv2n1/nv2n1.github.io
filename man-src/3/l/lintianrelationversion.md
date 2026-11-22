@@ -35,8 +35,8 @@ description: "Lintian::Relation::Version – Comparison operators on Debian vers
 <dd>Returns true if A is less than (<tt>&quot;&lt;&lt;&quot;</tt>) B and false otherwise.</dd>
 <dt>versions_gt(A, B)</dt>
 <dd>Returns true if A is greater than (<tt>&quot;&gt;&gt;&quot;</tt>) B and false otherwise.</dd>
-<dt>versions_compare(A, <font SIZE="-1">OP, B</font>)</dt>
-<dd>Returns true if A <font SIZE="-1">OP B,</font> where <font SIZE="-1">OP</font> is one of <tt>&quot;=&quot;</tt>, <tt>&quot;&lt;=&quot;</tt>, <tt>&quot;&gt;=&quot;</tt>, <tt>&quot;&lt;&lt;&quot;</tt>, or <tt>&quot;&gt;&gt;&quot;</tt>, and false otherwise.</dd>
+<dt>versions_compare(A, OP, B)</dt>
+<dd>Returns true if A OP B, where OP is one of <tt>&quot;=&quot;</tt>, <tt>&quot;&lt;=&quot;</tt>, <tt>&quot;&gt;=&quot;</tt>, <tt>&quot;&lt;&lt;&quot;</tt>, or <tt>&quot;&gt;&gt;&quot;</tt>, and false otherwise.</dd>
 <dt>versions_comparator (A, B)</dt>
 <dd>Returns -1, 0 or 1 if the version A is (respectively) less than, equal to or greater than B. This is useful for (e.g.) sorting a list of versions: </dd>
 <pre> foreach my $version (sort versions_comparator @versions) {

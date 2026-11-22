@@ -13,7 +13,7 @@ description: "pdbtool – An application to test and convert syslog-ng pattern d
 <dl>
 <dt> <code>pdbtool</code> [command] [options]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This manual page is only an abstract; for the complete documentation of syslog-ng and pdbtool, see m[blue]<code>The syslog-ng Administrator Guide</code>m[]<font SIZE="-2">[1]</font>. </dd>
+<dd>This manual page is only an abstract; for the complete documentation of syslog-ng and pdbtool, see m[blue]<code>The syslog-ng Administrator Guide</code>m[][1]. </dd>
 <p> The syslog-ng application can match the contents of the log messages to a database of predefined message patterns (also called patterndb). By comparing the messages to the known patterns, syslog-ng is able to identify the exact type of the messages, tag the messages, and sort them into message classes. The message classes can be used to classify the type of the event described in the log message. The functionality of the pattern database is similar to that of the logcheck project, but the syslog-ng approach is faster, scales better, and is much easier to maintain compared to the regular expressions of logcheck. </p>
 <p> The <code>pdbtool</code> application is a utility that can be used to: </p>
 <dl>
@@ -146,7 +146,7 @@ pdbtool match -p sshd.pdb \
 <h2>THE MERGE COMMAND</h2>
 <dl>
 <dt> <code>merge</code> [options]</dt></dl>
-<dd>Use the <code>merge</code> command to combine separate pattern database files into a single file (pattern databases are usually stored in separate files per applications to simplify maintenance). If a file uses an older database format, it is automatically updated to the latest format (V3). See the m[blue]<code>The syslog-ng Administrator Guide</code>m[]<font SIZE="-2">[1]</font> for details on the different pattern database versions. </dd>
+<dd>Use the <code>merge</code> command to combine separate pattern database files into a single file (pattern databases are usually stored in separate files per applications to simplify maintenance). If a file uses an older database format, it is automatically updated to the latest format (V3). See the m[blue]<code>The syslog-ng Administrator Guide</code>m[][1] for details on the different pattern database versions. </dd>
 <p> <code>&#8211;directory</code> or <code>-D</code></p>
 <dl>
 <dt>
@@ -175,7 +175,7 @@ pdbtool merge --recursive --directory /home/me/mypatterns/  --pdb /var/lib/syslo
 <h2>THE PATTERNIZE COMMAND</h2>
 <dl>
 <dt> <code>patternize</code> [options]</dt></dl>
-<dd>Automatically create a pattern database from a log file containing a large number of log messages. The resulting pattern database is printed to the standard output (stdout). The <code>pdbtool patternize</code> command uses a data clustering technique to find similar log messages and replacing the differing parts with <i>@ESTRING:: @</i> parsers. For details on pattern databases and message parsers, see the m[blue]<code>The syslog-ng Administrator Guide</code>m[]<font SIZE="-2">[1]</font>. The <code>patternize</code> command is available only in syslog-ng OSE version 3.2 and later. </dd>
+<dd>Automatically create a pattern database from a log file containing a large number of log messages. The resulting pattern database is printed to the standard output (stdout). The <code>pdbtool patternize</code> command uses a data clustering technique to find similar log messages and replacing the differing parts with <i>@ESTRING:: @</i> parsers. For details on pattern databases and message parsers, see the m[blue]<code>The syslog-ng Administrator Guide</code>m[][1]. The <code>patternize</code> command is available only in syslog-ng OSE version 3.2 and later. </dd>
 <p> <code>&#8211;file=&lt;path&gt;</code> or <code>-f</code></p>
 <dl>
 <dt>
@@ -225,12 +225,12 @@ pdbtool test --validate /home/me/mypatterndb.pdb
 <p> /home/algernon/install/syslog-ng/3.5/bin/pdbtool </p>
 <p> /home/algernon/install/syslog-ng/3.5/etc/syslog-ng/syslog-ng.conf</p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code>The syslog-ng Administrator Guide</code>m[]<font SIZE="-2">[1]</font> </p>
+<p> m[blue]<code>The syslog-ng Administrator Guide</code>m[][1] </p>
 <p> <code><a href="/docs/linux/man/5-syslog-ng-conf/">syslog-ng.conf</a></code>(5) </p>
 <p> <code><a href="/docs/linux/man/8-syslog-ng/">syslog-ng</a></code>(8) </p>
-<p> m[blue]<code>The syslog-ng OSE 3.3 Administrator Guide</code>m[]<font SIZE="-2">[1]</font> </p>
-<p> If you experience any problems or need help with syslog-ng, visit m[blue]<code>visit the syslog-ng wiki</code>m[]<font SIZE="-2">[2]</font> or the m[blue]<code>syslog-ng mailing list</code>m[]<font SIZE="-2">[3]</font>. </p>
-<p> For news and notifications about of syslog-ng, visit the m[blue]<code>syslog-ng Insider Blog</code>m[]<font SIZE="-2">[4]</font>.</p>
+<p> m[blue]<code>The syslog-ng OSE 3.3 Administrator Guide</code>m[][1] </p>
+<p> If you experience any problems or need help with syslog-ng, visit m[blue]<code>visit the syslog-ng wiki</code>m[][2] or the m[blue]<code>syslog-ng mailing list</code>m[][3]. </p>
+<p> For news and notifications about of syslog-ng, visit the m[blue]<code>syslog-ng Insider Blog</code>m[][4].</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by the BalaBit Documentation Team &lt;documentation [at] balabit.com&gt;.</p>
 <h2>COPYRIGHT</h2>
@@ -240,7 +240,7 @@ pdbtool test --validate /home/me/mypatterndb.pdb
 <dl>
 <dt> 1.</dt>
 <dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>The syslog-ng Administrator Guide</code><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>The syslog-ng Administrator Guide</code><br/>
 &nbsp;<wbr>&nbsp;<wbr></p>
 </dd><dl>
 <dt>

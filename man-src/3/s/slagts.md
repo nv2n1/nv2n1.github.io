@@ -11,7 +11,7 @@ description: "slagts.f –"
 <p> slagts.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slagts</code> (JOB, N, A, B, C, D, IN, Y, TOL, INFO)<br />
+<p> subroutine <code>slagts</code> (JOB, N, A, B, C, D, IN, Y, TOL, INFO)<br/>
  <i></i><code>SLAGTS</code> solves the system of equations (T-λI)x = y or (T-λI)Tx = y,where T is a general tridiagonal matrix and λ a scalar, using the LU factorization computed by slagtf.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slagts (integerJOB, integerN, real, dimension( * )A, real, dimension( * )B, real, dimension( * )C, real, dimension( * )D, integer, dimension( * )IN, real, dimension( * )Y, realTOL, integerINFO)</h3>

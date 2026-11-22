@@ -10,7 +10,7 @@ description: "ldns_zone_set_rrs, ldns_zone_set_soa"
 
 <p> ldns_zone_set_rrs, ldns_zone_set_soa </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_zone_set_rrs(ldns_zone *z, ldns_rr_list *rrlist); </p>

@@ -32,7 +32,7 @@ description: "myproxy-replicate – Stores data from the MyProxy master reposito
 <dt><code>-r</code> <i>dir</i>, <code>-storage</code> <i>dir</i></dt>
 <dd>Specifies the location of the credential storage directory. The directory must be accessible only by the user running the <code>myproxy-server</code> process for security reasons. Default: /var/lib/myproxy or /var/myproxy or <tt>$GLOBUS_LOCATION</tt>/var/myproxyA</dd>
 <dt><code>-c</code> <i>file</i>, <code>-config</code> <i>file</i></dt>
-<dd>Specifies the location of the myproxy-server configuration file. Default: /etc/myproxy-server.config or<br />
+<dd>Specifies the location of the myproxy-server configuration file. Default: /etc/myproxy-server.config or<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><tt>$GLOBUS_LOCA</tt>-TION/etc/myproxy-server.config</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-myproxy-init/">myproxy-init</a></i>(1) <i><a href="/docs/linux/man/1-myproxy-store/">myproxy-store</a></i>(1) <i><a href="/docs/linux/man/1-myproxy-retrieve/">myproxy-retrieve</a></i>(1) <i>myproxy-delegate</i>(1) <i><a href="/docs/linux/man/8-myproxy-server/">myproxy-server</a></i>(8) <i><a href="/docs/linux/man/5-myproxy-server-config/">myproxy-server.config</a></i>(5)</p>

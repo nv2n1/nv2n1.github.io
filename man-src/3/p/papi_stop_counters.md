@@ -16,15 +16,15 @@ description: "PAPI_stop_counters –"
 int PAPI_stop_counters( long long *values, int array_len );</pre>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>*values</i> an array where to put the counter values<br />
+<dd><i>*values</i> an array where to put the counter values<br/>
  <i>array_len</i> the number of items in the *values array</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
 <dd>After this function is called, the values are reset to zero.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
- <i>PAPI_ENOTRUN</i> The EventSet is not started yet.<br />
+<dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br/>
+ <i>PAPI_ENOTRUN</i> The EventSet is not started yet.<br/>
  <i>PAPI_ENOEVST</i> The EventSet has not been added yet.</dd></dl>
 <p> The <code>PAPI_stop_counters()</code> function stops the counters and copies the counts into the *values array. The counters must have been started by a previous call to <code>PAPI_start_counters()</code>. </p>
 <pre>int Events[2] = { PAPI_TOT_CYC, PAPI_TOT_INS };

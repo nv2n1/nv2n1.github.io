@@ -14,7 +14,7 @@ description: "QwtPoint3DSeriesData –"
 <p> Inherits <code>QwtArraySeriesData&lt; QwtPoint3D &gt;</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPoint3DSeriesData</code> (const QVector&lt; <code>QwtPoint3D</code> &gt; &amp;=QVector&lt; <code>QwtPoint3D</code> &gt;()) </p>
-<p> virtual QRectF <code>boundingRect</code> () const<br />
+<p> virtual QRectF <code>boundingRect</code> () const<br/>
  <i>Calculate the bounding rectangle. </i></p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>

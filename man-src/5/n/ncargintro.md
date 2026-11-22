@@ -63,6 +63,6 @@ description: "ncargintro – NCAR Graphics Overview"
 <p> Online documentation: </p>
 <p> <a rel="nofollow" href="http://ngwww.ucar.edu/ngdoc/ng/">http://ngwww.ucar.edu/ngdoc/ng/</a></p>
 <h2>Copyright</h2>
-<p>Copyright (C) 1987-2002<br />
- University Corporation for Atmospheric Research<br />
+<p>Copyright (C) 1987-2002<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement.</p>

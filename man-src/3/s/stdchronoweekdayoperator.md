@@ -9,12 +9,12 @@ description: "std::chrono::weekday::operator[] – std::chrono::weekday::operato
 
 <p>std::chrono::weekday::operator[] &#8211; std::chrono::weekday::operator[]</p>
 <h2>Synopsis</h2>
-<p>constexpr std::chrono::weekday_indexed operator[](unsigned index) const noexcept; <code>(1)</code> <i>(since C++20)</i><br />
-constexpr std::chrono::weekday_last operator[](std::chrono::last_spec) const noexcept; <code>(2)</code> <i>(since C++20)</i><br />
-1) Constructs a weekday_indexed from *this and index. The result represents the index-th weekday in some yet-to-be-specified month. If index is not in the range [1, 5] or if !ok() the values held in the result is unspecified.<br />
+<p>constexpr std::chrono::weekday_indexed operator[](unsigned index) const noexcept; <code>(1)</code> <i>(since C++20)</i><br/>
+constexpr std::chrono::weekday_last operator[](std::chrono::last_spec) const noexcept; <code>(2)</code> <i>(since C++20)</i><br/>
+1) Constructs a weekday_indexed from *this and index. The result represents the index-th weekday in some yet-to-be-specified month. If index is not in the range [1, 5] or if !ok() the values held in the result is unspecified.<br/>
 2) Constructs a weekday_last from *this. The result represents the last weekday in some yet-to-be-specified month. </p>
 <h2>Return value</h2>
-<p>1) std::chrono::weekday_indexed(*this, index)<br />
+<p>1) std::chrono::weekday_indexed(*this, index)<br/>
 2) std::chrono::weekday_last(*this) </p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -32,5 +32,5 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;2019-10-08<br />
+<p>&nbsp;<wbr>&nbsp;2019-10-08<br/>
 &nbsp;<wbr>&nbsp;2019-10-29</p>

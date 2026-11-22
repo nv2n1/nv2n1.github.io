@@ -37,14 +37,14 @@ description: "libesedb.h – Library to support the Extensible Storage Engine (E
 <p> None</p>
 <h2>NOTES</h2>
 <p> libesedb uses mainly UTF-8 encoded strings except for filenames, but provides several UTF-16 functions. </p>
-<p> ASCII strings in an EDB file contain an extended ASCII string using the codepage of the system it was created on. The function <i>libesedb_set_ascii_codepage</i><br />
+<p> ASCII strings in an EDB file contain an extended ASCII string using the codepage of the system it was created on. The function <i>libesedb_set_ascii_codepage</i><br/>
 &nbsp;<wbr>allows to set the required codepage for reading and writing. The default codepage is ASCII and replaces all extended characters to the Unicode replacement character&nbsp;<wbr>(U+fffd)&nbsp;<wbr>when reading and the ASCII substitude character&nbsp;<wbr>(0x1a)&nbsp;<wbr>when writing. </p>
-<p> libesedb allows to be compiled with wide character support. To compile libesedb with wide character support use <i>./configure &#8211;enable-wide-character-type=yes</i> or pass the definition <i>HAVE_WIDE_CHARACTER_TYPE</i><br />
+<p> libesedb allows to be compiled with wide character support. To compile libesedb with wide character support use <i>./configure &#8211;enable-wide-character-type=yes</i> or pass the definition <i>HAVE_WIDE_CHARACTER_TYPE</i><br/>
 &nbsp;<wbr>to the compiler&nbsp;<wbr>(i.e. in case of Microsoft Visual Studio&nbsp;<wbr>(MSVS)&nbsp;<wbr>C++). </p>
-<p> To have other code to determine if libesedb was compiled with wide character support it defines <i>LIBESEDB_HAVE_WIDE_CHARACTER_TYPE</i><br />
+<p> To have other code to determine if libesedb was compiled with wide character support it defines <i>LIBESEDB_HAVE_WIDE_CHARACTER_TYPE</i><br/>
 &nbsp;<wbr>in libesedb/features.h. </p>
 <p> libesedb allows to be compiled with chained IO support using libbfio. libesedb will automatically detect if a compatible version of libbfio is available. </p>
-<p> To have other code to determine if libesedb was compiled with libbfio support it defines <i>LIBESEDB_HAVE_BFIO</i><br />
+<p> To have other code to determine if libesedb was compiled with libbfio support it defines <i>LIBESEDB_HAVE_BFIO</i><br/>
 &nbsp;<wbr>in libesedb/features.h. </p>
 <h2>BUGS</h2>
 <p> Please report bugs of any kind to &lt;jbmetz [at] users.sourceforge.net&gt; or on the project website: <a rel="nofollow" href="http://libesedb.sourceforge.net/">http://libesedb.sourceforge.net/</a></p>

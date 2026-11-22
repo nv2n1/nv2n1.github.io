@@ -28,20 +28,20 @@ description: "zmq_unbind – Stop accepting connections on a socket"
 <dl>
 <dd>The provided <i>socket</i> was invalid.</dd></dl>
 <h2>Examples</h2>
-<p><code>Unbind a subscriber socket from a TCP transport</code>. /* Create a ZMQ_SUB socket */<br />
-void *socket = zmq_socket(context, ZMQ_SUB);<br />
-assert(socket);<br />
-/* Bind it to the system-assigned ephemeral port using a TCP transport */<br />
-rc = zmq_bind(socket, &quot;tcp://127.0.0.1:*&quot;);<br />
-assert(rc == 0);<br />
-/* Obtain real endpoint */<br />
-const size_t buf_size = 32;<br />
-char buf[buf_size];<br />
-rc = zmq_getsockopt(socket, ZMQ_LAST_ENDPOINT, buf, (size_t *)&amp;buf_size);<br />
-assert(rc == 0);<br />
-/* Unbind socket by real endpoint */<br />
-rc = zmq_unbind(socket, buf);<br />
-assert(rc == 0);<br />
+<p><code>Unbind a subscriber socket from a TCP transport</code>. /* Create a ZMQ_SUB socket */<br/>
+void *socket = zmq_socket(context, ZMQ_SUB);<br/>
+assert(socket);<br/>
+/* Bind it to the system-assigned ephemeral port using a TCP transport */<br/>
+rc = zmq_bind(socket, &quot;tcp://127.0.0.1:*&quot;);<br/>
+assert(rc == 0);<br/>
+/* Obtain real endpoint */<br/>
+const size_t buf_size = 32;<br/>
+char buf[buf_size];<br/>
+rc = zmq_getsockopt(socket, ZMQ_LAST_ENDPOINT, buf, (size_t *)&amp;buf_size);<br/>
+assert(rc == 0);<br/>
+/* Unbind socket by real endpoint */<br/>
+rc = zmq_unbind(socket, buf);<br/>
+assert(rc == 0);<br/>
  <code>Unbind wild-card * binded socket</code>. </p>
 <pre><code>/* Create a ZMQ_SUB socket */
 void *socket = zmq_socket(context, ZMQ_SUB);

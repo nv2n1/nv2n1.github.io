@@ -933,15 +933,15 @@ Found stream id 0xBE = Padding Stream
 <p> If you have any problems or suggestions feel free to mail me (Bernhard Praschinger): There is a lot of stuff added from the HINTS which Andrew Stevens created. Wolfgang Goeller and Steven M. Schultz checked the document for bugs and spelling mistakes. </p>
 <p> And to the people who have helped me with program descriptions and hints, <code>thanks</code></p>
 <h2>SEE ALSO</h2>
-<p> The mjpeg homepage is at:<br />
- <a rel="nofollow" href="http://mjpeg.sourceforge.net/">http://mjpeg.sourceforge.net/</a><br />
+<p> The mjpeg homepage is at:<br/>
+ <a rel="nofollow" href="http://mjpeg.sourceforge.net/">http://mjpeg.sourceforge.net/</a><br/>
  <a rel="nofollow" href="http://sourceforge.net/projects/mjpeg">http://sourceforge.net/projects/mjpeg</a> </p>
-<p> vcdimager is aviable at:<br />
+<p> vcdimager is aviable at:<br/>
  <a rel="nofollow" href="http://www.vcdimager.org/">http://www.vcdimager.org/</a> </p>
-<p> cdrdao is aviable at:<br />
+<p> cdrdao is aviable at:<br/>
  <a rel="nofollow" href="http://cdrdao.sourceforge.net/index.html">http://cdrdao.sourceforge.net/index.html</a> </p>
-<p> Linux Video Studio is aviable at:<br />
+<p> Linux Video Studio is aviable at:<br/>
  <a rel="nofollow" href="http://ronald.bitfreak.net">http://ronald.bitfreak.net</a> </p>
-<p> The lavtools:<br />
+<p> The lavtools:<br/>
  <code><a href="/docs/linux/man/1-jpeg2yuv/">jpeg2yuv</a>(1),</code> <code><a href="/docs/linux/man/1-lav2wav/">lav2wav</a>(1),</code> <code><a href="/docs/linux/man/1-lav2yuv/">lav2yuv</a>(1),</code> <code><a href="/docs/linux/man/1-lavpipe/">lavpipe</a>(1),</code> <code><a href="/docs/linux/man/1-lavplay/">lavplay</a>(1),</code> <code><a href="/docs/linux/man/1-lavrec/">lavrec</a>(1),</code> <code><a href="/docs/linux/man/1-lavtrans/">lavtrans</a>(1),</code> <code>lavinfo(1),</code> <code><a href="/docs/linux/man/1-mp2enc/">mp2enc</a>(1),</code> <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a>(1),</code> <code><a href="/docs/linux/man/1-mplex/">mplex</a>(1),</code> <code><a href="/docs/linux/man/1-ppmtoy4m/">ppmtoy4m</a></code>(1), <code><a href="/docs/linux/man/1-pnmtoy4m/">pnmtoy4m</a></code>(1), <code><a href="/docs/linux/man/1-yuv2lav/">yuv2lav</a>(1),</code> <code><a href="/docs/linux/man/1-yuvdenoise/">yuvdenoise</a>(1),</code> <code><a href="/docs/linux/man/1-yuvkineco/">yuvkineco</a>(1),</code> <code><a href="/docs/linux/man/1-yuvmedianfilter/">yuvmedianfilter</a>(1),</code> <code><a href="/docs/linux/man/1-yuvplay/">yuvplay</a>(1),</code> <code><a href="/docs/linux/man/1-yuvfps/">yuvfps</a>(1),</code> <code><a href="/docs/linux/man/1-yuvscaler/">yuvscaler</a>(1),</code> <code><a href="/docs/linux/man/1-yuvycsnoise/">yuvycsnoise</a>(1),</code> <code>y4mblack(1),</code> <code><a href="/docs/linux/man/1-y4mcolorbars/">y4mcolorbars</a>(1),</code> <code><a href="/docs/linux/man/1-y4mdenoise/">y4mdenoise</a>(1),</code> <code>y4mhist(1),</code> <code>y4minterlace(1),</code> <code>y4mshift(1),</code> <code>y4mstabilizer(1),</code> <code><a href="/docs/linux/man/1-y4mtopnm/">y4mtopnm</a>(1).</code> <code><a href="/docs/linux/man/1-y4mtoppm/">y4mtoppm</a>(1).</code> </p>
 <p> Tools without a man page: lavaddwaw, glav </p>

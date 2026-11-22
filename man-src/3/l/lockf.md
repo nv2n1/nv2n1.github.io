@@ -16,8 +16,8 @@ description: "lockf – apply, test or remove a POSIX lock on an open file"
 <p> <code>lockf</code>():</p>
 <dl>
 <dt>
-</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Apply, test or remove a POSIX lock on a section of an open file. The file is specified by <i>fd</i>, a file descriptor open for writing, the action by <i>cmd</i>, and the section consists of byte positions <i>pos</i>..<i>pos</i>+<i>len</i>-1 if <i>len</i> is positive, and <i>pos</i>&#8211;<i>len</i>..<i>pos</i>-1 if <i>len</i> is negative, where <i>pos</i> is the current file position, and if <i>len</i> is zero, the section extends from the current file position to infinity, encompassing the present and future end-of-file positions. In all cases, the section may extend past current end-of-file. </p>

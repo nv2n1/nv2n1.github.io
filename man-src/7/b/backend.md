@@ -99,7 +99,7 @@ int cupsSideChannelWrite(cups_sc_command_t command,
 <h2>Notes</h2>
 <p>CUPS printer drivers and backends are deprecated and will no longer be supported in a future feature release of CUPS. Printers that do not support IPP can be supported using applications such as <code><a href="/docs/linux/man/1-ippeveprinter/">ippeveprinter</a></code>(1).</p>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/1-cups/">cups</a></i>(1), <i><a href="/docs/linux/man/5-cups-files-conf/">cups-files.conf</a></i>(5), <i><a href="/docs/linux/man/8-cups-snmp/">cups-snmp</a></i>(8), <i><a href="/docs/linux/man/8-cupsd/">cupsd</a></i>(8), <i><a href="/docs/linux/man/7-filter/">filter</a></i>(7), <i><a href="/docs/linux/man/1-lp/">lp</a></i>(1), <i><a href="/docs/linux/man/8-lpinfo/">lpinfo</a></i>(8), <i><a href="/docs/linux/man/1-lpr/">lpr</a></i>(1),<br />
+<p><i><a href="/docs/linux/man/1-cups/">cups</a></i>(1), <i><a href="/docs/linux/man/5-cups-files-conf/">cups-files.conf</a></i>(5), <i><a href="/docs/linux/man/8-cups-snmp/">cups-snmp</a></i>(8), <i><a href="/docs/linux/man/8-cupsd/">cupsd</a></i>(8), <i><a href="/docs/linux/man/7-filter/">filter</a></i>(7), <i><a href="/docs/linux/man/1-lp/">lp</a></i>(1), <i><a href="/docs/linux/man/8-lpinfo/">lpinfo</a></i>(8), <i><a href="/docs/linux/man/1-lpr/">lpr</a></i>(1),<br/>
  CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2021-2022 by OpenPrinting.</p>

@@ -21,8 +21,8 @@ jstat[generalOption | outputOptions vmid[interval[s | ms][count]]]
 <dt>outputOptions</dt>
 <dd> One or more output options, consisting of a single <i>statOption</i>, plus any of the -t, -h, and -J options.</dd>
 <dt>vmid</dt>
-<dd> Virtual machine identifier, a string indicating the target Java virtual machine (JVM). The general syntax is<br />
-[protocol:][//]lvmid[@hostname[:port]/servername]<br />
+<dd> Virtual machine identifier, a string indicating the target Java virtual machine (JVM). The general syntax is<br/>
+[protocol:][//]lvmid[@hostname[:port]/servername]<br/>
  The syntax of the vmid string largely corresponds to the syntax of a URI. The <i>vmid</i> can vary from a simple integer representing a local JVM to a more complex construction specifying a communications protocol, port number, and other implementation-specific values. See Virtual Machine Identifier for details.</dd>
 <dt>interval[s|ms]</dt>
 <dd> Sampling interval in the specified units, seconds (s) or milliseconds (ms). Default units are milliseconds. Must be a positive integer. If specified, <code>jstat</code> will produce its output at each interval.</dd>

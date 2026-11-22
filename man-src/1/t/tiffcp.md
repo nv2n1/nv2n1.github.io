@@ -8,12 +8,12 @@ url: "/docs/linux/man/1-tiffcp/"
 description: "tiffcp – copy (and possibly convert) a TIFF file"
 ---
 
-<p> tiffcp &#8211; copy (and possibly convert) a <font SIZE="-1">TIFF</font> file</p>
+<p> tiffcp &#8211; copy (and possibly convert) a TIFF file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffcp</code> [ <i>options</i> ] <i>src1.tif &#8230; srcN.tif dst.tif</i></p>
 <h2>DESCRIPTION</h2>
-<p> <i>tiffcp</i> combines one or more files created according to the Tag Image File Format, Revision 6.0 into a single <font SIZE="-1">TIFF</font> file. Because the output file may be compressed using a different algorithm than the input files, <i>tiffcp</i> is most often used to convert between different compression schemes. </p>
-<p> By default, <i>tiffcp</i> will copy all the understood tags in a <font SIZE="-1">TIFF</font> directory of an input file to the associated directory in the output file. </p>
+<p> <i>tiffcp</i> combines one or more files created according to the Tag Image File Format, Revision 6.0 into a single TIFF file. Because the output file may be compressed using a different algorithm than the input files, <i>tiffcp</i> is most often used to convert between different compression schemes. </p>
+<p> By default, <i>tiffcp</i> will copy all the understood tags in a TIFF directory of an input file to the associated directory in the output file. </p>
 <p> <i>tiffcp</i> can be used to reorganize the storage characteristics of data in a file, but it is explicitly intended to not alter or convert the image data content in any way.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -28,15 +28,15 @@ description: "tiffcp – copy (and possibly convert) a TIFF file"
 <dt><code>-c</code></dt>
 <dd> Specify the compression to use for data written to the output file: <code>none </code> for no compression, <code>packbits</code> for PackBits compression, <code>lzw</code> for Lempel-Ziv &amp; Welch compression, <code>zip</code> for Deflate compression, <code>lzma</code> for LZMA2 compression, <code>jpeg</code> for baseline JPEG compression, <code>g3</code> for CCITT Group 3 (T.4) compression, and <code>g4</code> for CCITT Group 4 (T.6) compression. By default <i>tiffcp</i> will compress data according to the value of the <i>Compression</i> tag found in the source file.</dd>
 <dt>
-</dt><dd> The <font SIZE="-1">CCITT</font> Group 3 and Group 4 compression algorithms can only be used with bilevel data.</dd>
+</dt><dd> The CCITT Group 3 and Group 4 compression algorithms can only be used with bilevel data.</dd>
 <dt>
 </dt><dd> Group 3 compression can be specified together with several T.4-specific options: <code>1d</code> for 1-dimensional encoding, <code>2d</code> for 2-dimensional encoding, and <code>fill</code> to force each encoded scanline to be zero-filled so that the terminating EOL code lies on a byte boundary. Group 3-specific options are specified by appending a &#8220;:&#8221;-separated list to the &#8220;g3&#8221; option; e.g. <code>-c g3:2d:fill</code> to get 2D-encoded data with byte-aligned EOL codes.</dd>
 <dt>
-</dt><dd> <font SIZE="-1">LZW, Deflate</font> and <font SIZE="-1">LZMA2</font> compression can be specified together with a <i>predictor</i> value. A predictor value of 2 causes each scanline of the output image to undergo horizontal differencing before it is encoded; a value of 1 forces each scanline to be encoded without differencing. A value 3 is for floating point predictor which you can use if the encoded data are in floating point format. LZW-specific options are specified by appending a &#8220;:&#8221;-separated list to the &#8220;lzw&#8221; option; e.g. <code>-c lzw:2</code> for <font SIZE="-1">LZW</font> compression with horizontal differencing.</dd>
+</dt><dd> LZW, Deflate and LZMA2 compression can be specified together with a <i>predictor</i> value. A predictor value of 2 causes each scanline of the output image to undergo horizontal differencing before it is encoded; a value of 1 forces each scanline to be encoded without differencing. A value 3 is for floating point predictor which you can use if the encoded data are in floating point format. LZW-specific options are specified by appending a &#8220;:&#8221;-separated list to the &#8220;lzw&#8221; option; e.g. <code>-c lzw:2</code> for LZW compression with horizontal differencing.</dd>
 <dt>
-</dt><dd> <font SIZE="-1">Deflate</font> and <font SIZE="-1">LZMA2</font> encoders support various compression levels (or encoder presets) set as character &#8220;p&#8221; and a preset number. &#8220;p1&#8221; is the fastest one with the worst compression ratio and &#8220;p9&#8221; is the slowest but with the best possible ratio; e.g. <code>-c zip:3:p9</code> for <font SIZE="-1">Deflate</font> encoding with maximum compression level and floating point predictor.</dd>
+</dt><dd> Deflate and LZMA2 encoders support various compression levels (or encoder presets) set as character &#8220;p&#8221; and a preset number. &#8220;p1&#8221; is the fastest one with the worst compression ratio and &#8220;p9&#8221; is the slowest but with the best possible ratio; e.g. <code>-c zip:3:p9</code> for Deflate encoding with maximum compression level and floating point predictor.</dd>
 <dt><code>-f</code></dt>
-<dd> Specify the bit fill order to use in writing output data. By default, <i>tiffcp</i> will create a new file with the same fill order as the original. Specifying <code>-f lsb2msb</code> will force data to be written with the FillOrder tag set to <font SIZE="-1">LSB2MSB,</font> while <code>-f msb2lsb</code> will force data to be written with the FillOrder tag set to <font SIZE="-1">MSB2LSB.</font></dd>
+<dd> Specify the bit fill order to use in writing output data. By default, <i>tiffcp</i> will create a new file with the same fill order as the original. Specifying <code>-f lsb2msb</code> will force data to be written with the FillOrder tag set to LSB2MSB, while <code>-f msb2lsb</code> will force data to be written with the FillOrder tag set to MSB2LSB.</dd>
 <dt><code>-i</code></dt>
 <dd> Ignore non-fatal read errors and continue processing of the input file.</dd>
 <dt><code>-l</code></dt>
@@ -64,7 +64,7 @@ description: "tiffcp – copy (and possibly convert) a TIFF file"
 <dt><code>-,=</code><i>character</i></dt>
 <dd> substitute <i>character</i> for `,&#8217; in parsing image directory indices in files. This is necessary if filenames contain commas. Note that <code>-,=</code> with whitespace immediately following will disable the special meaning of the `,&#8217; entirely. See examples.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> The following concatenates two files and writes the result using <font SIZE="-1">LZW</font> encoding:</p>
+<p> The following concatenates two files and writes the result using LZW encoding:</p>
 <dl>
 <dt>
 </dt><dd>
@@ -72,7 +72,7 @@ description: "tiffcp – copy (and possibly convert) a TIFF file"
 tiffcp -c lzw a.tif b.tif result.tif
 </pre>
 </dd></dl>
-<p> To convert a G3 1d-encoded <font SIZE="-1">TIFF</font> to a single strip of G4-encoded data the following might be used:</p>
+<p> To convert a G3 1d-encoded TIFF to a single strip of G4-encoded data the following might be used:</p>
 <dl>
 <dt>
 </dt><dd>

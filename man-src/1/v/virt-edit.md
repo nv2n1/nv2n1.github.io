@@ -24,7 +24,7 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 <p> <tt>&quot;virt-edit&quot;</tt> is a command line tool to edit <tt>&quot;file&quot;</tt> where each <tt>&quot;file&quot;</tt> exists in the named virtual machine (or disk image). </p>
 <p> Multiple filenames can be given, in which case they are each edited in turn. Each filename must be a full path, starting at the root directory (starting with &#8216;/&#8217;). </p>
 <p> If you want to just view a file, use <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1). </p>
-<p> For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool (see &#8220;<font SIZE="-1">USING GUESTFISH&#8221;</font> below). </p>
+<p> For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool (see &#8220;USING GUESTFISH&#8221; below). </p>
 <p> <tt>&quot;virt-edit&quot;</tt> cannot be used to create a new file. <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) can do that and much more.</p>
 <h2>EXAMPLES</h2>
 <p> Edit the named files interactively: </p>
@@ -36,7 +36,7 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 <pre>
  virt-edit -d mywindomain 'c:utoexec.bat'
 </pre>
-<p> If Perl is installed, you can also edit files non-interactively (see &#8220;NON-INTERACTIVE <font SIZE="-1">EDITING&#8221;</font> below). To change the init default level to 5: </p>
+<p> If Perl is installed, you can also edit files non-interactively (see &#8220;NON-INTERACTIVE EDITING&#8221; below). To change the init default level to 5: </p>
 <pre>
  virt-edit -d mydomain /etc/inittab -e 's/^id:.*/id:5:initdefault:/'
 </pre>
@@ -49,10 +49,10 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 </dd><dt><code>&#8211;add</code> file</dt>
 <dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
+<dt><code>-a </code><code>URI</code></dt>
 <dd>
-</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+</dd><dt><code>&#8211;add </code><code>URI</code></dt>
+<dd> Add a remote disk. See &#8220;ADDING REMOTE STORAGE&#8221; in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
 <dt><code>-b</code> extension</dt>
 <dd>
 </dd><dt><code>&#8211;backup</code> extension</dt>
@@ -62,10 +62,10 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
  virt-edit -b .orig [etc]
 </pre>
 <p> By default, no backup file is made.</p>
-<dt><code>-c </code><font SIZE="-1"><code>URI</code></font></dt>
+<dt><code>-c </code><code>URI</code></dt>
 <dd>
-</dd><dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font></dt>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
+</dd><dt><code>&#8211;connect </code><code>URI</code></dt>
+<dd> If using libvirt, connect to the given <i></i><i>URI</i><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly, then libvirt is not used at all.</p>
 <dt><code>-d</code> guest</dt>
 <dd>
@@ -73,12 +73,12 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 <dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</dd>
 <dt><code>&#8211;echo-keys</code></dt>
 <dd> When prompting for keys and passphrases, virt-edit normally turns echoing off so you cannot see what you are typing. If you are not worried about Tempest attacks and there is no one else in the room you can specify this flag to see what you are typing.</dd>
-<dt><code>-e</code> <font SIZE="-1">EXPR</font></dt>
+<dt><code>-e</code> EXPR</dt>
 <dd>
-</dd><dt><code>&#8211;edit</code> <font SIZE="-1">EXPR</font></dt>
+</dd><dt><code>&#8211;edit</code> EXPR</dt>
 <dd>
-</dd><dt><code>&#8211;expr</code> <font SIZE="-1">EXPR</font></dt>
-<dd> Instead of launching the external editor, non-interactively apply the Perl expression <tt>&quot;EXPR&quot;</tt> to each line in the file. See &#8220;NON-INTERACTIVE <font SIZE="-1">EDITING&#8221;</font> below. </dd>
+</dd><dt><code>&#8211;expr</code> EXPR</dt>
+<dd> Instead of launching the external editor, non-interactively apply the Perl expression <tt>&quot;EXPR&quot;</tt> to each line in the file. See &#8220;NON-INTERACTIVE EDITING&#8221; below. </dd>
 <p> Be careful to properly quote the expression to prevent it from being altered by the shell. </p>
 <p> Note that this option is only available when Perl 5 is installed.</p>
 <dt><code>&#8211;format=raw|qcow2|..</code></dt>
@@ -94,7 +94,7 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
  virt-edit --format=raw -a disk.img --format -a another.img file
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
-<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
+<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (CVE-2010-3851).</p>
 <dt><code>&#8211;keys-from-stdin</code></dt>
 <dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</dd>
 <dt><code>-m dev[:mountpoint[:options[:fstype]]]</code></dt>
@@ -119,7 +119,7 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 </dd><dt><code>&#8211;version</code></dt>
 <dd> Display version number and exit.</dd>
 <dt><code>-x</code></dt>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
+<dd> Enable tracing of libguestfs API calls.</dd></dl>
 <h2>OLD-STYLE COMMAND LINE ARGUMENTS</h2>
 <p> Previous versions of virt-edit allowed you to write either: </p>
 <pre>
@@ -133,7 +133,7 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 <p> For compatibility the old style is still supported.</p>
 <h2>NON-INTERACTIVE EDITING</h2>
 <p> <tt>&quot;virt-edit&quot;</tt> normally calls out to <tt>$EDITOR</tt> (or vi) so the system administrator can interactively edit the file. </p>
-<p> There are two ways also to use <tt>&quot;virt-edit&quot;</tt> from scripts in order to make automated edits to files. (Note that although you <i>can</i> use <tt>&quot;virt-edit&quot;</tt> like this, it&#8217;s less error-prone to write scripts directly using the libguestfs <font SIZE="-1">API</font> and Augeas for configuration file editing.) </p>
+<p> There are two ways also to use <tt>&quot;virt-edit&quot;</tt> from scripts in order to make automated edits to files. (Note that although you <i>can</i> use <tt>&quot;virt-edit&quot;</tt> like this, it&#8217;s less error-prone to write scripts directly using the libguestfs API and Augeas for configuration file editing.) </p>
 <p> The first method is to temporarily set <tt>$EDITOR</tt> to any script or program you want to run. The script is invoked as <tt>&quot;$EDITOR tmpfile&quot;</tt> and it should update <tt>&quot;tmpfile&quot;</tt> in place however it likes. </p>
 <p> The second method is to use the <i>-e</i> parameter of <tt>&quot;virt-edit&quot;</tt> to run a short Perl snippet in the style of <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1). For example to replace all instances of <tt>&quot;foo&quot;</tt> with <tt>&quot;bar&quot;</tt> in a file: </p>
 <pre>
@@ -153,7 +153,7 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 <p> The variable <tt>$lineno</tt> contains the current line number. As is traditional, the first line in the file is number <tt>1</tt>. </p>
 <p> The return value from the expression is ignored, but the expression may call <tt>&quot;die&quot;</tt> in order to abort the whole program, leaving the original file untouched. </p>
 <p> Remember when matching the end of a line that <tt>$_</tt> may contain the final <tt>&quot;
-&quot;</tt>, or (for <font SIZE="-1">DOS</font> files) <tt>&quot;
+&quot;</tt>, or (for DOS files) <tt>&quot;
 &quot;</tt>, or if the file does not end with a newline then neither of these. Thus to match or substitute some text at the end of a line, use this regular expression: </p>
 <pre>
  /some text(
@@ -177,9 +177,9 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 <p> There are some known shortcomings:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> Some <font SIZE="-1">NTFS</font> symbolic links may not be followed correctly.</dd>
+<dd> Some NTFS symbolic links may not be followed correctly.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">NTFS</font> junction points that cross filesystems are not followed.</dd></dl>
+<dd> NTFS junction points that cross filesystems are not followed.</dd></dl>
 <h2>USING GUESTFISH</h2>
 <p> <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) is a more powerful, lower level tool which you can use when <tt>&quot;virt-edit&quot;</tt> doesn&#8217;t work. </p>
 <p> Using <tt>&quot;virt-edit&quot;</tt> is approximately equivalent to doing: </p>
@@ -212,9 +212,9 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009-2016 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

@@ -783,9 +783,9 @@ description: "groff_mm – memorandum macros for GNU roff"
 <dd>
 </dd><dl>
 <dd><code>Examples</code></dd>
-<dd>arg1	page number<br />
- arg1	arg2	page number<br />
- arg1	header mark<br />
+<dd>arg1	page number<br/>
+ arg1	arg2	page number<br/>
+ arg1	header mark<br/>
  arg1	page number	header mark</dd></dl>
 </dl>
 <dt><code>INDP</code></dt>
@@ -1915,5 +1915,5 @@ description: "groff_mm – memorandum macros for GNU roff"
 <h2>Authors</h2>
 <p>The GNU version of the <i>mm</i> macro package was written by J&ouml;rgen H&auml;gg of Lund, Sweden.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1), <code><a href="/docs/linux/man/1-tbl/">tbl</a></code>(1), <code><a href="/docs/linux/man/1-pic/">pic</a></code>(1), <code><a href="/docs/linux/man/1-eqn/">eqn</a></code>(1)<br />
+<p><code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1), <code><a href="/docs/linux/man/1-tbl/">tbl</a></code>(1), <code><a href="/docs/linux/man/1-pic/">pic</a></code>(1), <code><a href="/docs/linux/man/1-eqn/">eqn</a></code>(1)<br/>
  <code><a href="/docs/linux/man/7-groff_mmse/">groff_mmse</a></code>(7) (only in Swedish locales) </p>

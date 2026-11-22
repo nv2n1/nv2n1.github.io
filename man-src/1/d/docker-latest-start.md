@@ -14,14 +14,14 @@ description: "docker-start – Start one or more containers"
 <h2>DESCRIPTION</h2>
 <p> Start one or more containers. </p>
 <h2>OPTIONS</h2>
-<p> <code>-a</code>, <code>&#8211;attach</code>=<i>true</i>|<i>false</i><br />
-Attach container&#8217;s STDOUT and STDERR and forward all signals to the<br />
+<p> <code>-a</code>, <code>&#8211;attach</code>=<i>true</i>|<i>false</i><br/>
+Attach container&#8217;s STDOUT and STDERR and forward all signals to the<br/>
 process. The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>&#8211;detach-keys</code>=&quot;&quot;<br />
+<p> <code>&#8211;detach-keys</code>=&quot;&quot;<br/>
 Override the key sequence for detaching a container. Format is a single character&nbsp;<wbr>[a-Z]&nbsp;<wbr>or ctrl-&lt;value&gt;&nbsp;<wbr>where&nbsp;<wbr>&lt;value&gt;&nbsp;<wbr>is one of: a-z,&nbsp;<wbr>@,&nbsp;<wbr>^,&nbsp;<wbr>[, , or&nbsp;<wbr>_. </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-i</code>, <code>&#8211;interactive</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-i</code>, <code>&#8211;interactive</code>=<i>true</i>|<i>false</i><br/>
 Attach container&#8217;s STDIN. The default is&nbsp;<wbr><i>false</i>. </p>
 <h2>See also</h2>
 <p> <code><a href="/docs/linux/man/1-docker-stop/">docker-stop</a>(1)</code> to stop a container. </p>

@@ -17,8 +17,8 @@ sb
 OPTIONS := {
     -V[ersion] |
     -n[no-nice-names] }</code></pre>
-<p> <code>devlink sb show </code> [ <i>DEV</i> [ <code>sb</code> <i>SB_INDEX</i> ] ]<br />
- <code>devlink sb pool show </code> [ <i>DEV</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br />
+<p> <code>devlink sb show </code> [ <i>DEV</i> [ <code>sb</code> <i>SB_INDEX</i> ] ]<br/>
+ <code>devlink sb pool show </code> [ <i>DEV</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br/>
  <code>pool</code> <i>POOL_INDEX</i> ] </p>
 <pre><code>devlink sb pool set DEV
 [ sb
@@ -26,22 +26,22 @@ SB_INDEX ]
 pool POOL_INDEX
 size POOL_SIZE
 thtype { static | dynamic }</code></pre>
-<p> <code>devlink sb port pool show </code> [ <i>DEV/PORT_INDEX</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br />
- <code>pool</code> <i>POOL_INDEX</i> ]<br />
- <code>devlink sb port pool set </code><i>DEV/PORT_INDEX</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br />
- <code>pool</code><i> POOL_INDEX </i><br />
- <code>th</code><i> THRESHOLD </i><br />
- <code>devlink sb tc bind show </code> [ <i>DEV/PORT_INDEX</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br />
- <code>tc</code><i> TC_INDEX </i><br />
- <code>type</code> { <code>ingress</code> | <code>egress</code> } ]<br />
- <code>devlink sb tc bind set </code><i>DEV/PORT_INDEX</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br />
- <code>tc</code><i> TC_INDEX </i><br />
- <code>type</code> { <code>ingress</code> | <code>egress</code> }<br />
- <code>pool</code><i> POOL_INDEX </i><br />
- <code>th</code><i> THRESHOLD </i><br />
- <code>devlink sb occupancy show </code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } [ <code>sb</code> <i>SB_INDEX</i> ]<br />
- <code>devlink sb occupancy snapshot </code> <i>DEV</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br />
- <code>devlink sb occupancy clearmax </code> <i>DEV</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br />
+<p> <code>devlink sb port pool show </code> [ <i>DEV/PORT_INDEX</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br/>
+ <code>pool</code> <i>POOL_INDEX</i> ]<br/>
+ <code>devlink sb port pool set </code><i>DEV/PORT_INDEX</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br/>
+ <code>pool</code><i> POOL_INDEX </i><br/>
+ <code>th</code><i> THRESHOLD </i><br/>
+ <code>devlink sb tc bind show </code> [ <i>DEV/PORT_INDEX</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br/>
+ <code>tc</code><i> TC_INDEX </i><br/>
+ <code>type</code> { <code>ingress</code> | <code>egress</code> } ]<br/>
+ <code>devlink sb tc bind set </code><i>DEV/PORT_INDEX</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br/>
+ <code>tc</code><i> TC_INDEX </i><br/>
+ <code>type</code> { <code>ingress</code> | <code>egress</code> }<br/>
+ <code>pool</code><i> POOL_INDEX </i><br/>
+ <code>th</code><i> THRESHOLD </i><br/>
+ <code>devlink sb occupancy show </code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } [ <code>sb</code> <i>SB_INDEX</i> ]<br/>
+ <code>devlink sb occupancy snapshot </code> <i>DEV</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br/>
+ <code>devlink sb occupancy clearmax </code> <i>DEV</i> [ <code>sb</code> <i>SB_INDEX</i> ]<br/>
  <code>devlink sb help</code> </p>
 <h2>Description</h2>
 <h3>devlink sb show &#8211; display available shared buffers and their attributes</h3>
@@ -54,8 +54,8 @@ thtype { static | dynamic }</code></pre>
 <dt><code>size</code><i> POOL_SIZE</i></dt>
 <dd>size of the pool in Bytes.</dd>
 <dt><code>thtype</code> { <code>static</code> | <code>dynamic</code> }</dt>
-<dd>pool threshold type. <i>static</i> &#8211; Threshold values for the pool will be passed in Bytes. <i>dynamic</i> &#8211; Threshold values (&quot;to_alpha&quot;) for the pool will be used to compute alpha parameter according to formula:<br />
- alpha = 2 ^ (to_alpha &#8211; 10) The range of the passed value is between 0 to 20. The computed alpha is used to determine the maximum usage of the flow:<br />
+<dd>pool threshold type. <i>static</i> &#8211; Threshold values for the pool will be passed in Bytes. <i>dynamic</i> &#8211; Threshold values (&quot;to_alpha&quot;) for the pool will be used to compute alpha parameter according to formula:<br/>
+ alpha = 2 ^ (to_alpha &#8211; 10) The range of the passed value is between 0 to 20. The computed alpha is used to determine the maximum usage of the flow:<br/>
  max_usage = alpha / (1 + alpha) * Free_Buffer</dd></dl>
 <h3>devlink sb port pool show &#8211; display port-pool combinations and threshold for each</h3>
 <p><i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port.</p>
@@ -88,7 +88,7 @@ thtype { static | dynamic }</code></pre>
 <dt><code>th</code><i> THRESHOLD</i></dt>
 <dd>threshold value. Type of the value is either Bytes or &quot;to_alpha&quot;, depends on <code>thtype</code> set for the pool.</dd></dl>
 <h3>devlink sb occupancy show &#8211; display shared buffer occupancy values for device or port</h3>
-<p>This command is used to browse shared buffer occupancy values. Values are showed for every port-pool combination as well as for all port-TC combinations (with pool this port-TC is bound to). Format of value is:<br />
+<p>This command is used to browse shared buffer occupancy values. Values are showed for every port-pool combination as well as for all port-TC combinations (with pool this port-TC is bound to). Format of value is:<br/>
  current_value/max_value Note that before showing values, one has to issue <code>occupancy snapshot</code> command first. <i>DEV</i> &#8211; specifies the devlink device to show occupancy values for. <i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port to show occupancy values for.</p>
 <h3>devlink sb occupancy snapshot &#8211; take occupancy snapshot of shared buffer for device</h3>
 <p>This command is used to take a snapshot of shared buffer occupancy values. After that, the values can be showed using <code>occupancy show</code> command. <i>DEV</i> &#8211; specifies the devlink device to take occupancy snapshot on.</p>

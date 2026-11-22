@@ -54,35 +54,35 @@ input file format:
   # but unfortunately it does.
 </pre>
 <h3>processing options</h3>
-<p>planar configuration : +pr&#8211; planar &#8211; restore restore original planar configuration(default)<br />
-#If the compressed image is a color image, restore the planar<br />
-#configuration as described in the Planar Configuration attribute.<br />
-                       +<br />
-                       pa&#8211; planar &#8211; auto automatically determine planar configuration from SOP class and color space<br />
-#If the compressed image is a color image, store in color &#8211; by &#8211; plane<br />
-#planar configuration if required by the SOP class and photometric<br />
-#interpretation.Hardcopy Color images are always stored color &#8211; by &#8211;<br />
-#plane, and the revised Ultrasound image objects are stored color &#8211; by &#8211;<br />
-#plane if the color model is YBR_FULL.Everything else is stored<br />
-#color &#8211; by &#8211; pixel.<br />
-                       +<br />
-                       px&#8211; color &#8211; by &#8211; pixel always store color &#8211; by &#8211; pixel<br />
-#If the compressed image is a color image, store in color &#8211; by &#8211; pixel<br />
-#planar configuration.<br />
-                       +<br />
-                       pl&#8211; color &#8211; by &#8211; plane always store color &#8211; by &#8211; plane<br />
-#If the compressed image is a color image, store in color &#8211; by &#8211; plane<br />
-#planar configuration.<br />
-                       SOP Instance UID : +ud&#8211; uid<br />
-                                          &#8211;<br />
-                                          default keep same SOP Instance UID(default)<br />
-#Never assigns a new SOP instance UID.<br />
-                                          +<br />
-                                          ua&#8211; uid &#8211; always always assign new UID<br />
-#Always assigns a new SOP instance UID.<br />
-                                          other processing options : +io&#8211; ignore<br />
-                                                                     &#8211;<br />
-                                                                     offsettable<br />
+<p>planar configuration : +pr&#8211; planar &#8211; restore restore original planar configuration(default)<br/>
+#If the compressed image is a color image, restore the planar<br/>
+#configuration as described in the Planar Configuration attribute.<br/>
+                       +<br/>
+                       pa&#8211; planar &#8211; auto automatically determine planar configuration from SOP class and color space<br/>
+#If the compressed image is a color image, store in color &#8211; by &#8211; plane<br/>
+#planar configuration if required by the SOP class and photometric<br/>
+#interpretation.Hardcopy Color images are always stored color &#8211; by &#8211;<br/>
+#plane, and the revised Ultrasound image objects are stored color &#8211; by &#8211;<br/>
+#plane if the color model is YBR_FULL.Everything else is stored<br/>
+#color &#8211; by &#8211; pixel.<br/>
+                       +<br/>
+                       px&#8211; color &#8211; by &#8211; pixel always store color &#8211; by &#8211; pixel<br/>
+#If the compressed image is a color image, store in color &#8211; by &#8211; pixel<br/>
+#planar configuration.<br/>
+                       +<br/>
+                       pl&#8211; color &#8211; by &#8211; plane always store color &#8211; by &#8211; plane<br/>
+#If the compressed image is a color image, store in color &#8211; by &#8211; plane<br/>
+#planar configuration.<br/>
+                       SOP Instance UID : +ud&#8211; uid<br/>
+                                          &#8211;<br/>
+                                          default keep same SOP Instance UID(default)<br/>
+#Never assigns a new SOP instance UID.<br/>
+                                          +<br/>
+                                          ua&#8211; uid &#8211; always always assign new UID<br/>
+#Always assigns a new SOP instance UID.<br/>
+                                          other processing options : +io&#8211; ignore<br/>
+                                                                     &#8211;<br/>
+                                                                     offsettable<br/>
                                                                      ignore offset table when decompressing</p>
 <h3>output options</h3>
 <pre><code>

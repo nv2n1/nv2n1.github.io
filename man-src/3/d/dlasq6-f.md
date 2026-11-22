@@ -10,7 +10,7 @@ description: "dlasq6.f –"
 <p>dlasq6.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlasq6</code> (I0, N0, Z, PP, DMIN, DMIN1, DMIN2, DN, DNM1, DNM2)<br />
+<p>subroutine <code>dlasq6</code> (I0, N0, Z, PP, DMIN, DMIN1, DMIN2, DN, DNM1, DNM2)<br/>
  <i></i><code>DLASQ6</code> computes one dqd transform in ping-pong form. Used by sbdsqr and sstegr.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasq6 (integerI0, integerN0, double precision, dimension( * )Z, integerPP, double precisionDMIN, double precisionDMIN1, double precisionDMIN2, double precisionDN, double precisionDNM1, double precisionDNM2)</h3>

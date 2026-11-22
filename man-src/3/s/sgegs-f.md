@@ -10,7 +10,7 @@ description: "sgegs.f –"
 <p>sgegs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgegs</code> (JOBVSL, JOBVSR, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sgegs</code> (JOBVSL, JOBVSR, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, INFO)<br/>
  <i></i><code> SGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgegs (characterJOBVSL, characterJOBVSR, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( * )ALPHAR, real, dimension( * )ALPHAI, real, dimension( * )BETA, real, dimension( ldvsl, * )VSL, integerLDVSL, real, dimension( ldvsr, * )VSR, integerLDVSR, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

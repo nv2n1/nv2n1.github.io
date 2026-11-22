@@ -24,10 +24,10 @@ description: "xxqs_name_sxx_shepherd – xxQS_NAMExx single job-controlling agen
 <dt>100</dt>
 <dd>Job script, prolog and epilog: When <i>FORBID_APPERROR</i> is not set in the configuration (see the job gets re-queued. Otherwise see &quot;Other&quot;.</dd>
 <dt>Other</dt>
-<dd>Job script: This is the exit status of the job itself. No action is taken upon this exit status because the meaning of this exit status is not known.<br />
- Prolog, epilog and parallel start: The queue is set to error state and the job is re-queued.<br />
- Parallel stop: The queue is set to error state, but the job is not re-queued. It is assumed that the job itself ran successfully and only the clean up script failed.<br />
- Suspend, restart, terminate, clean, and migrate: Always successful.<br />
+<dd>Job script: This is the exit status of the job itself. No action is taken upon this exit status because the meaning of this exit status is not known.<br/>
+ Prolog, epilog and parallel start: The queue is set to error state and the job is re-queued.<br/>
+ Parallel stop: The queue is set to error state, but the job is not re-queued. It is assumed that the job itself ran successfully and only the clean up script failed.<br/>
+ Suspend, restart, terminate, clean, and migrate: Always successful.<br/>
  Checkpoint: Success, except for kernel checkpointing: checkpoint was not successful, did not happen (but migration will happen).</dd></dl>
 <p> For the meaning of the return codes of the shepherd itself (which are interpreted by see</p>
 <h2>Restrictions</h2>
@@ -46,7 +46,7 @@ description: "xxqs_name_sxx_shepherd – xxQS_NAMExx single job-controlling agen
 </dl>
 </dl>
 <dt><code>SGE_ENABLE_COREDUMP</code></dt>
-<dd>If set, enable core dumps on Linux when the admin_user is not root. Linux normally disables core dumps when the daemon has changed uid or gid. Setting SGE_ENABLE_COREDUMP in xxqs_name_sxx_execd&#8217;s environment defeats that to enable core dumps for debugging if they are otherwise allowed. This is typically not a big hazard with xxQS_NAME_Sxx, since most information is exposed in the spool area anyhow. Dumps will appear in the qmaster spool directory, which need not be world-readable.<br />
+<dd>If set, enable core dumps on Linux when the admin_user is not root. Linux normally disables core dumps when the daemon has changed uid or gid. Setting SGE_ENABLE_COREDUMP in xxqs_name_sxx_execd&#8217;s environment defeats that to enable core dumps for debugging if they are otherwise allowed. This is typically not a big hazard with xxQS_NAME_Sxx, since most information is exposed in the spool area anyhow. Dumps will appear in the qmaster spool directory, which need not be world-readable.<br/>
  On Solaris, may be used to enable such dumps.</dd>
 <dt><code>SGE_CGROUP_DIR</code></dt>
 <dd>If Linux cgroups handling is enabled, this variable names a directory under the cgroup mount point in which to create job-specific directories. The default is <code>sge.</code><i>SGE_CELL</i> so, for instance, the cpuset cgroup for a job might be <code>/sys/fs/cgroup/cpuset/sge.default/123</code>.</dd></dl>

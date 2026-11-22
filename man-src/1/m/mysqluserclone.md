@@ -82,7 +82,7 @@ description: "mysqluserclone – Clone Existing User to Create New User"
 <p> The account used to connect to the source server must have privileges to read the <code>mysql</code> database. </p>
 <p> The account used to connect to the destination server must have privileges to execute <code>CREATE USER</code> (and <code>DROP USER</code> if the <code>&#8211;force</code> option is given), and privileges to execute <code>GRANT</code> for all privileges to be granted to the new accounts. </p>
 <p> For the <code>&#8211;format</code> option, the permitted values are not case sensitive. In addition, values may be specified as any unambiguous prefix of a valid value. For example, <code>&#8211;format=g</code> specifies the grid format. An error occurs if a prefix matches more than one valid value. </p>
-<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br />
+<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br/>
 EXAMPLES </p>
 <p> To clone joe as sam and sally with passwords and logging in as root on the local machine, use this command: </p>
 <dl>

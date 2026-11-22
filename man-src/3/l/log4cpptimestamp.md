@@ -12,18 +12,18 @@ description: "log4cpp::TimeStamp –"
 <h2>Synopsis</h2>
 <p>#include &lt;TimeStamp.hh&gt;</p>
 <h3>Public Member Functions</h3>
-<p><code>TimeStamp</code> ()<br />
- <i>Constructs a </i><code>TimeStamp</code> representing &#8216;now&#8217;.<br />
- <code>TimeStamp</code> (unsigned int seconds, unsigned int microSeconds=0)<br />
- <i>Constructs a </i><code>TimeStamp</code> representing the given offset since the epoch ( 00:00:00 1970/1/1 UTC).<br />
- int <code>getSeconds</code> () const<br />
- <i>Returns the &#8216;seconds&#8217; part of the </i><code>TimeStamp</code>.<br />
- int <code>getMilliSeconds</code> () const<br />
- <i>Returns the &#8216;subseconds&#8217; part of the </i><code>TimeStamp</code> in milliseconds, <code>getMilliSeconds()</code> == <code>getMicroSeconds()</code> / 1000.<br />
- int <code>getMicroSeconds</code> () const<br />
+<p><code>TimeStamp</code> ()<br/>
+ <i>Constructs a </i><code>TimeStamp</code> representing &#8216;now&#8217;.<br/>
+ <code>TimeStamp</code> (unsigned int seconds, unsigned int microSeconds=0)<br/>
+ <i>Constructs a </i><code>TimeStamp</code> representing the given offset since the epoch ( 00:00:00 1970/1/1 UTC).<br/>
+ int <code>getSeconds</code> () const<br/>
+ <i>Returns the &#8216;seconds&#8217; part of the </i><code>TimeStamp</code>.<br/>
+ int <code>getMilliSeconds</code> () const<br/>
+ <i>Returns the &#8216;subseconds&#8217; part of the </i><code>TimeStamp</code> in milliseconds, <code>getMilliSeconds()</code> == <code>getMicroSeconds()</code> / 1000.<br/>
+ int <code>getMicroSeconds</code> () const<br/>
  <i>Returns the subsecond part of the </i><code>TimeStamp</code> in microseconds.</p>
 <h3>Static Public Member Functions</h3>
-<p>static const <code>TimeStamp</code> &amp; <code>getStartTime</code> ()<br />
+<p>static const <code>TimeStamp</code> &amp; <code>getStartTime</code> ()<br/>
  <i>Returns a </i><code>TimeStamp</code> representing the time at which the application started.</p>
 <h3>Protected Attributes</h3>
 <p>int <code>_seconds</code> </p>

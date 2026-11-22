@@ -25,8 +25,8 @@ description: "atomic-install – Execute Image Install Method"
 <h2>OPTIONS:</h2>
 <p> <code>-h</code> <code>&#8211;help</code> Print usage statement </p>
 <p> <code>&#8211;display</code> Display the image&#8217;s install options and environment variables populated into the install command. The install command will not execute if &#8211;display is specified. If &#8211;display is not specified the install command will execute. </p>
-<p> <code>-n</code> <code>&#8211;name</code>=&quot;&quot;<br />
-&nbsp;<wbr>Use this name for creating installed content for the container.<br />
+<p> <code>-n</code> <code>&#8211;name</code>=&quot;&quot;<br/>
+&nbsp;<wbr>Use this name for creating installed content for the container.<br/>
 &nbsp;<wbr>NAME will default to the IMAGENAME if it is not specified. </p>
 <p> <code>&#8211;rootfs=ROOTFS</code> Specify a ROOTFS folder, which can be an existing, expanded container/image, or a location which contains an existing root filesystem. The existing rootfs will be used as the new system container&#8217;s rootfs (read only), and thus the new container will only contain config and info files. </p>
 <p> <code>&#8211;set=NAME=VALUE</code> Set a value that is going to be used by a system container for its configuration and can be specified multiple times. It is used only by &#8211;system. OSTree is required for this feature to be available. </p>

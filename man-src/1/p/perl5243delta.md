@@ -13,11 +13,11 @@ description: "perl5243delta – what is new for perl v5.24.3"
 <p> This document describes differences between the 5.24.2 release and the 5.24.3 release. </p>
 <p> If you are upgrading from an earlier release such as 5.24.1, first read perl5242delta, which describes differences between 5.24.1 and 5.24.2.</p>
 <h2>Security</h2>
-<h3>[<font SIZE="-1">CVE-2017-12837</font>] Heap buffer overflow in regular expression compiler</h3>
+<h3>[CVE-2017-12837] Heap buffer overflow in regular expression compiler</h3>
 <p> Compiling certain regular expression patterns with the case-insensitive modifier could cause a heap buffer overflow and crash perl. This has now been fixed. [perl #131582] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131582">https://rt.perl.org/Public/Bug/Display.html?id=131582</a>&gt;</p>
-<h3>[<font SIZE="-1">CVE-2017-12883</font>] Buffer over-read in regular expression parser</h3>
+<h3>[CVE-2017-12883] Buffer over-read in regular expression parser</h3>
 <p> For certain types of syntax error in a regular expression pattern, the error message could either contain the contents of a random, possibly large, chunk of memory, or could crash perl. This has now been fixed. [perl #131598] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131598">https://rt.perl.org/Public/Bug/Display.html?id=131598</a>&gt;</p>
-<h3>[<font SIZE="-1">CVE-2017-12814</font>] $ENV{$key} stack buffer overflow on Windows</h3>
+<h3>[CVE-2017-12814] $ENV{$key} stack buffer overflow on Windows</h3>
 <p> A possible stack buffer overflow in the <tt>%ENV</tt> code on Windows has been fixed by removing the buffer completely since it was superfluous anyway. [perl #131665] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131665">https://rt.perl.org/Public/Bug/Display.html?id=131665</a>&gt;</p>
 <h2>Incompatible Changes</h2>
 <p> There are no changes intentionally incompatible with 5.24.2. If any exist, they are bugs, and we request that you submit a report. See &#8220;Reporting Bugs&#8221; below.</p>
@@ -27,14 +27,14 @@ description: "perl5243delta – what is new for perl v5.24.3"
 <dt>&bull;</dt>
 <dd> Module::CoreList has been upgraded from version 5.20170715_24 to 5.20170922_24.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">POSIX</font> has been upgraded from version 1.65 to 1.65_01.</dd>
+<dd> POSIX has been upgraded from version 1.65 to 1.65_01.</dd>
 <dt>&bull;</dt>
 <dd> Time::HiRes has been upgraded from version 1.9733 to 1.9741. </dd>
 <p> [perl #128427] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128427">https://rt.perl.org/Public/Bug/Display.html?id=128427</a>&gt; [perl #128445] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128445">https://rt.perl.org/Public/Bug/Display.html?id=128445</a>&gt; [perl #128972] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128972">https://rt.perl.org/Public/Bug/Display.html?id=128972</a>&gt; [cpan #120032] &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=120032">https://rt.cpan.org/Public/Bug/Display.html?id=120032</a>&gt;</dl>
 <h2>Configuration and Compilation</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> When building with <font SIZE="-1">GCC 6</font> and link-time optimization (the <code>-flto</code> option to <code>gcc</code>), <i>Configure</i> was treating all probed symbols as present on the system, regardless of whether they actually exist. This has been fixed. [perl #128131] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128131">https://rt.perl.org/Public/Bug/Display.html?id=128131</a>&gt;</dd>
+<dd> When building with GCC 6 and link-time optimization (the <code>-flto</code> option to <code>gcc</code>), <i>Configure</i> was treating all probed symbols as present on the system, regardless of whether they actually exist. This has been fixed. [perl #128131] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128131">https://rt.perl.org/Public/Bug/Display.html?id=128131</a>&gt;</dd>
 <dt>&bull;</dt>
 <dd> <i>Configure</i> now aborts if both <tt>&quot;-Duselongdouble&quot;</tt> and <tt>&quot;-Dusequadmath&quot;</tt> are requested. [perl #126203] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=126203">https://rt.perl.org/Public/Bug/Display.html?id=126203</a>&gt;</dd>
 <dt>&bull;</dt>
@@ -44,7 +44,7 @@ description: "perl5243delta – what is new for perl v5.24.3"
 <h2>Platform Support</h2>
 <h3>Platform-Specific Notes</h3>
 <dl>
-<dt><font SIZE="-1">VMS</font></dt>
+<dt>VMS</dt>
 <dd>
 </dd><dl>
 <dl>
@@ -58,7 +58,7 @@ description: "perl5243delta – what is new for perl v5.24.3"
 </dd><dl>
 <dl>
 <dt>&bull;</dt>
-<dd> Building <font SIZE="-1">XS</font> modules with <font SIZE="-1">GCC 6</font> in a 64-bit build of Perl failed due to incorrect mapping of <tt>&quot;strtoll&quot;</tt> and <tt>&quot;strtoull&quot;</tt>. This has now been fixed. [perl #131726] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131726">https://rt.perl.org/Public/Bug/Display.html?id=131726</a>&gt; [cpan #121683] &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=121683">https://rt.cpan.org/Public/Bug/Display.html?id=121683</a>&gt; [cpan #122353] &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=122353">https://rt.cpan.org/Public/Bug/Display.html?id=122353</a>&gt;</dd></dl>
+<dd> Building XS modules with GCC 6 in a 64-bit build of Perl failed due to incorrect mapping of <tt>&quot;strtoll&quot;</tt> and <tt>&quot;strtoull&quot;</tt>. This has now been fixed. [perl #131726] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=131726">https://rt.perl.org/Public/Bug/Display.html?id=131726</a>&gt; [cpan #121683] &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=121683">https://rt.cpan.org/Public/Bug/Display.html?id=121683</a>&gt; [cpan #122353] &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=122353">https://rt.cpan.org/Public/Bug/Display.html?id=122353</a>&gt;</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -80,7 +80,7 @@ description: "perl5243delta – what is new for perl v5.24.3"
 <dt>&bull;</dt>
 <dd> <tt>&quot;socket&quot;</tt> now leaves the error code returned by the system in <tt>$!</tt> on failure. [perl #128316] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128316">https://rt.perl.org/Public/Bug/Display.html?id=128316</a>&gt;</dd>
 <dt>&bull;</dt>
-<dd> Parsing bad <font SIZE="-1">POSIX</font> charclasses no longer leaks memory. [perl #128313] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128313">https://rt.perl.org/Public/Bug/Display.html?id=128313</a>&gt;</dd>
+<dd> Parsing bad POSIX charclasses no longer leaks memory. [perl #128313] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128313">https://rt.perl.org/Public/Bug/Display.html?id=128313</a>&gt;</dd>
 <dt>&bull;</dt>
 <dd> Since Perl 5.20, line numbers have been off by one when perl is invoked with the <code>-x</code> switch. This has been fixed. [perl #128508] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128508">https://rt.perl.org/Public/Bug/Display.html?id=128508</a>&gt;</dd>
 <dt>&bull;</dt>
@@ -98,7 +98,7 @@ description: "perl5243delta – what is new for perl v5.24.3"
 <dt>&bull;</dt>
 <dd> A regression in Perl 5.24 with <tt>&quot;tr/\N{U+...}/foo/&quot;</tt> when the code point was between 128 and 255 has been fixed. [perl #128734] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128734">https://rt.perl.org/Public/Bug/Display.html?id=128734</a>&gt;.</dd>
 <dt>&bull;</dt>
-<dd> Many issues relating to <tt>&quot;printf &quot;%a&quot;&quot;</tt> of hexadecimal floating point were fixed. In addition, the &#8220;subnormals&#8221; (formerly known as &#8220;denormals&#8221;) floating point numbers are now supported both with the plain <font SIZE="-1">IEEE 754</font> floating point numbers (64-bit or 128-bit) and the x86 80-bit &#8220;extended precision&#8221;. Note that subnormal hexadecimal floating point literals will give a warning about &#8220;exponent underflow&#8221;. [perl #128843] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128843">https://rt.perl.org/Public/Bug/Display.html?id=128843</a>&gt; [perl #128888] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128888">https://rt.perl.org/Public/Bug/Display.html?id=128888</a>&gt; [perl #128889] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128889">https://rt.perl.org/Public/Bug/Display.html?id=128889</a>&gt; [perl #128890] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128890">https://rt.perl.org/Public/Bug/Display.html?id=128890</a>&gt; [perl #128893] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128893">https://rt.perl.org/Public/Bug/Display.html?id=128893</a>&gt; [perl #128909] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128909">https://rt.perl.org/Public/Bug/Display.html?id=128909</a>&gt; [perl #128919] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128919">https://rt.perl.org/Public/Bug/Display.html?id=128919</a>&gt;</dd>
+<dd> Many issues relating to <tt>&quot;printf &quot;%a&quot;&quot;</tt> of hexadecimal floating point were fixed. In addition, the &#8220;subnormals&#8221; (formerly known as &#8220;denormals&#8221;) floating point numbers are now supported both with the plain IEEE 754 floating point numbers (64-bit or 128-bit) and the x86 80-bit &#8220;extended precision&#8221;. Note that subnormal hexadecimal floating point literals will give a warning about &#8220;exponent underflow&#8221;. [perl #128843] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128843">https://rt.perl.org/Public/Bug/Display.html?id=128843</a>&gt; [perl #128888] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128888">https://rt.perl.org/Public/Bug/Display.html?id=128888</a>&gt; [perl #128889] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128889">https://rt.perl.org/Public/Bug/Display.html?id=128889</a>&gt; [perl #128890] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128890">https://rt.perl.org/Public/Bug/Display.html?id=128890</a>&gt; [perl #128893] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128893">https://rt.perl.org/Public/Bug/Display.html?id=128893</a>&gt; [perl #128909] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128909">https://rt.perl.org/Public/Bug/Display.html?id=128909</a>&gt; [perl #128919] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128919">https://rt.perl.org/Public/Bug/Display.html?id=128919</a>&gt;</dd>
 <dt>&bull;</dt>
 <dd> The parser could sometimes crash if a bareword came after <tt>&quot;evalbytes&quot;</tt>. [perl #129196] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129196">https://rt.perl.org/Public/Bug/Display.html?id=129196</a>&gt;</dd>
 <dt>&bull;</dt>
@@ -109,16 +109,16 @@ description: "perl5243delta – what is new for perl v5.24.3"
 <p> Perl 5.24.3 represents approximately 2 months of development since Perl 5.24.2 and contains approximately 3,200 lines of changes across 120 files from 23 authors. </p>
 <p> Excluding auto-generated files, documentation and release tools, there were approximately 1,600 lines of changes to 56 .pm, .t, .c and .h files. </p>
 <p> Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.24.3: </p>
-<p> Aaron Crane, Craig A. Berry, Dagfinn Ilmari Mannsåker, Dan Collins, Daniel Dragan, Dave Cross, David Mitchell, Eric Herman, Father Chrysostomos, H.Merijn Brand, Hugo van der Sanden, James E Keenan, Jarkko Hietaniemi, John <font SIZE="-1">SJ</font> Anderson, Karl Williamson, Ken Brown, Lukas Mai, Matthew Horsfall, Stevan Little, Steve Hay, Steven Humphrey, Tony Cook, Yves Orton. </p>
+<p> Aaron Crane, Craig A. Berry, Dagfinn Ilmari Mannsåker, Dan Collins, Daniel Dragan, Dave Cross, David Mitchell, Eric Herman, Father Chrysostomos, H.Merijn Brand, Hugo van der Sanden, James E Keenan, Jarkko Hietaniemi, John SJ Anderson, Karl Williamson, Ken Brown, Lukas Mai, Matthew Horsfall, Stevan Little, Steve Hay, Steven Humphrey, Tony Cook, Yves Orton. </p>
 <p> The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. </p>
-<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.</p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish. </p>
+<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at &lt;<a rel="nofollow" href="https://rt.perl.org/">https://rt.perl.org/</a>&gt; . There may also be information at &lt;<a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a>&gt; , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications which make it inappropriate to send to a publicly archived mailing list, then see &#8220;<font SIZE="-1">SECURITY VULNERABILITY CONTACT INFORMATION&#8221;</font> in perlsec for details of how to report the issue.</p>
+<p> If the bug you are reporting has security implications which make it inappropriate to send to a publicly archived mailing list, then see &#8220;SECURITY VULNERABILITY CONTACT INFORMATION&#8221; in perlsec for details of how to report the issue.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

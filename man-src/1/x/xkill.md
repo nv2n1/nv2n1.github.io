@@ -36,5 +36,5 @@ description: "xkill – kill a client by its X resource"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xwininfo/">xwininfo</a>(1), <a href="/docs/linux/man/3-xkillclient/">XKillClient</a>(3), <a href="/docs/linux/man/3-xgetpointermapping/">XGetPointerMapping</a>(3), KillClient in the X Protocol Specification</p>
 <h2>AUTHOR</h2>
-<p> Jim Fulton, MIT X Consortium<br />
+<p> Jim Fulton, MIT X Consortium<br/>
  Dana Chee, Bellcore </p>

@@ -10,7 +10,7 @@ description: "ldns_key_rsa_key, ldns_key_dsa_key, ldns_key_algorithm, ldns_key_h
 
 <p> ldns_key_rsa_key, ldns_key_dsa_key, ldns_key_algorithm, ldns_key_hmac_key </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> RSA* ldns_key_rsa_key(const ldns_key *k); </p>

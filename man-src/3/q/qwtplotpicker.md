@@ -20,17 +20,17 @@ description: "QwtPlotPicker –"
 <p> void <code>appended</code> (const QPointF &amp;pos) </p>
 <p> void <code>moved</code> (const QPointF &amp;pos) </p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotPicker</code> (QWidget *<code>canvas</code>)<br />
- <i>Create a plot picker. </i><br />
- virtual <code>~QwtPlotPicker</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotPicker</code> (QWidget *<code>canvas</code>)<br/>
+ <i>Create a plot picker. </i><br/>
+ virtual <code>~QwtPlotPicker</code> ()<br/>
+ <i>Destructor. </i><br/>
  <code>QwtPlotPicker</code> (int <code>xAxis</code>, int <code>yAxis</code>, QWidget *) </p>
 <p> <code>QwtPlotPicker</code> (int <code>xAxis</code>, int <code>yAxis</code>, <code>RubberBand</code> <code>rubberBand</code>, <code>DisplayMode</code> <code>trackerMode</code>, QWidget *) </p>
 <p> virtual void <code>setAxis</code> (int <code>xAxis</code>, int <code>yAxis</code>) </p>
-<p> int <code>xAxis</code> () const<br />
- <i>Return x axis. </i><br />
- int <code>yAxis</code> () const<br />
- <i>Return y axis. </i><br />
+<p> int <code>xAxis</code> () const<br/>
+ <i>Return x axis. </i><br/>
+ int <code>yAxis</code> () const<br/>
+ <i>Return y axis. </i><br/>
  <code>QwtPlot</code> * <code>plot</code> () </p>
 <p> const <code>QwtPlot</code> * <code>plot</code> () const </p>
 <p> QWidget * <code>canvas</code> () </p>
@@ -42,8 +42,8 @@ description: "QwtPlotPicker –"
 <p> QPointF <code>invTransform</code> (const QPoint &amp;) const </p>
 <p> QPoint <code>transform</code> (const QPointF &amp;) const </p>
 <p> virtual <code>QwtText</code> <code>trackerText</code> (const QPoint &amp;) const </p>
-<p> virtual <code>QwtText</code> <code>trackerTextF</code> (const QPointF &amp;) const<br />
- <i>Translate a position into a position string. </i><br />
+<p> virtual <code>QwtText</code> <code>trackerTextF</code> (const QPointF &amp;) const<br/>
+ <i>Translate a position into a position string. </i><br/>
  virtual void <code>move</code> (const QPoint &amp;) </p>
 <p> virtual void <code>append</code> (const QPoint &amp;) </p>
 <p> virtual bool <code>end</code> (bool ok=true) </p>
@@ -64,8 +64,8 @@ description: "QwtPlotPicker –"
 <p>Create a plot picker </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xAxis</i> Set the x axis of the picker<br />
- <i>yAxis</i> Set the y axis of the picker<br />
+<dd><i>xAxis</i> Set the x axis of the picker<br/>
+ <i>yAxis</i> Set the y axis of the picker<br/>
  <i>canvas</i> Plot canvas to observe, also the parent object</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -74,10 +74,10 @@ description: "QwtPlotPicker –"
 <p>Create a plot picker </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xAxis</i> X axis of the picker<br />
- <i>yAxis</i> Y axis of the picker<br />
- <i>rubberBand</i> Rubber band style<br />
- <i>trackerMode</i> Tracker mode<br />
+<dd><i>xAxis</i> X axis of the picker<br/>
+ <i>yAxis</i> Y axis of the picker<br/>
+ <i>rubberBand</i> Rubber band style<br/>
+ <i>trackerMode</i> Tracker mode<br/>
  <i>canvas</i> Plot canvas to observe, also the parent object</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -192,7 +192,7 @@ description: "QwtPlotPicker –"
 <p>Set the x and y axes of the picker </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xAxis</i> X axis<br />
+<dd><i>xAxis</i> X axis<br/>
  <i>yAxis</i> Y axis</dd></dl>
 <p> Reimplemented in <code>QwtPlotZoomer</code>.</p>
 <h3><code>QwtText</code> QwtPlotPicker::trackerText (const QPoint &amp;pos) const [protected], [virtual]</h3>

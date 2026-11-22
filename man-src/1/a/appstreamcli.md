@@ -15,7 +15,7 @@ description: "appstreamcli – Handle AppStream metadata formats and query AppSt
 <h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>appstreamcli</code> command. </dd>
 <p> <code>appstreamcli</code> is a small helper tool to work with AppStream metadata and access the AppStream component index from the command-line. The AppStream component index contains a list of all available software components for your distribution, matched to their package names. It is generated using AppStream XML or Debian DEP-11 data, which is provided by your distributor. </p>
-<p> For more information about the AppStream project and the other components which are part of it, take a look at the AppStream pages at m[blue]<code>Freedesktop.org</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> For more information about the AppStream project and the other components which are part of it, take a look at the AppStream pages at m[blue]<code>Freedesktop.org</code>m[][1].</p>
 <h2>OPTIONS</h2>
 <p> <code>get </code><i>ID</i></p>
 <dl>
@@ -111,7 +111,7 @@ description: "appstreamcli – Handle AppStream metadata formats and query AppSt
 <dt>
 </dt><dd> Create a metainfo file template to be used by software projects. The <code>&#8211;from-desktop</code> option can be used to use a .desktop file as template for generating the example file. </dd>
 <p> The generated files contain example entries which need to be filed in with the actual desired values by the project author. </p>
-<p> The first <i>TYPE</i> parameter is the name of an AppStream component type. For a complete list check out m[blue]<code>the documentation</code>m[]<font SIZE="-2">[2]</font> or the help output of <code>appstreamcli</code> for this subcommand.</dl>
+<p> The first <i>TYPE</i> parameter is the name of an AppStream component type. For a complete list check out m[blue]<code>the documentation</code>m[][2] or the help output of <code>appstreamcli</code> for this subcommand.</dl>
 <p> <code>make-desktop-file </code><i>MI_FILE</i><i>DESKTOP_FILE</i></p>
 <dl>
 <dt>

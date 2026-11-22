@@ -111,5 +111,5 @@ ar ru libx.a x.o
 <h2>SEE ALSO</h2>
 <p> , as well as (GNU make manpage) and <i>The GNU Make Manual</i> in &lt;ge_root&gt;/3rd_party/qmake.</p>
 <h2>COPYRIGHT</h2>
-<p> <i>Qmake</i> contains portions of Gnu Make (<i>gmake</i>), which is the copyright of the Free Software Foundation, Inc., Boston, MA, and is protected by the Gnu General Public License.<br />
+<p> <i>Qmake</i> contains portions of Gnu Make (<i>gmake</i>), which is the copyright of the Free Software Foundation, Inc., Boston, MA, and is protected by the Gnu General Public License.<br/>
  See and the information provided in &lt;ge_root&gt;/3rd_party/qmake for a statement of further rights and permissions. </p>

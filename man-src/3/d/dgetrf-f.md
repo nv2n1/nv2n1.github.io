@@ -10,7 +10,7 @@ description: "dgetrf.f –"
 <p>dgetrf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgetrf</code> (M, N, A, LDA, IPIV, INFO)<br />
+<p>subroutine <code>dgetrf</code> (M, N, A, LDA, IPIV, INFO)<br/>
  <i></i><code>DGETRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgetrf (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integerINFO)</h3>

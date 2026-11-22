@@ -13,42 +13,42 @@ description: "add_mibdir, netsnmp_init_mib, shutdown_mib, netsnmp_read_module, r
 <p> <code>#include &lt;net-snmp/mib_api.h&gt;</code> </p>
 <h3>Initialisation and Shutdown</h3>
 <p> <code>int add_mibdir(const char *</code><i>dirname</i><code>);</code> </p>
-<p> <code>void netsnmp_init_mib(void);</code><br />
+<p> <code>void netsnmp_init_mib(void);</code><br/>
  <code>void shutdown_mib(void);</code></p>
 <h3>Reading and Parsing MIBs</h3>
-<p> <code>struct tree *netsnmp_read_module(const char *</code><i>name</i><code>);</code><br />
- <code>struct tree *read_mib(const char *</code><i>filename</i><code>);</code><br />
+<p> <code>struct tree *netsnmp_read_module(const char *</code><i>name</i><code>);</code><br/>
+ <code>struct tree *read_mib(const char *</code><i>filename</i><code>);</code><br/>
  <code>struct tree *read_all_mibs(void);</code> </p>
-<p> <code>int add_module_replacement(const char *</code><i>old_module</i><code>,</code><br />
- <code> const char *</code><i>new_module</i><code>,</code><br />
+<p> <code>int add_module_replacement(const char *</code><i>old_module</i><code>,</code><br/>
+ <code> const char *</code><i>new_module</i><code>,</code><br/>
  <code> const char *</code><i>tag</i><code>, int </code><i>len</i><code>);</code> </p>
-<p> <code>void snmp_set_mib_warnings(int </code><i>level</i><code>);</code><br />
- <code>void snmp_set_mib_errors(int </code><i>level</i><code>);</code><br />
+<p> <code>void snmp_set_mib_warnings(int </code><i>level</i><code>);</code><br/>
+ <code>void snmp_set_mib_errors(int </code><i>level</i><code>);</code><br/>
  <code>void snmp_set_save_descriptions(int </code><i>save</i><code>);</code></p>
 <h3>Searching the MIB Tree</h3>
-<p> <code>int read_objid(const char *</code><i>input</i><code>,</code><br />
- <code> oid *</code><i>objid</i><code>, size_t *</code><i>objidlen</i><code>);</code><br />
- <code>oid *snmp_parse_oid(const char *</code><i>input</i><code>,</code><br />
- <code> oid *</code><i>objid</i><code>, size_t *</code><i>objidlen</i><code>);</code><br />
- <code>int get_module_node(const char *</code><i>name</i><code>, const char *</code><i>module</i><code>,</code><br />
+<p> <code>int read_objid(const char *</code><i>input</i><code>,</code><br/>
+ <code> oid *</code><i>objid</i><code>, size_t *</code><i>objidlen</i><code>);</code><br/>
+ <code>oid *snmp_parse_oid(const char *</code><i>input</i><code>,</code><br/>
+ <code> oid *</code><i>objid</i><code>, size_t *</code><i>objidlen</i><code>);</code><br/>
+ <code>int get_module_node(const char *</code><i>name</i><code>, const char *</code><i>module</i><code>,</code><br/>
  <code> oid *</code><i>objid</i><code>, size_t *</code><i>objidlen</i><code>);</code></p>
 <h3>Output</h3>
 <p> <code>void print_mib(FILE *</code><i>fp</i><code>);</code> </p>
-<p> <code>void print_objid(const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>);</code><br />
- <code>void fprint_objid(FILE *</code><i>fp</i><code>,</code><br />
- <code> const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>);</code><br />
- <code>int snprint_objid(char *</code><i>buf</i><code>, size_t </code><i>len</i><code>,</code><br />
+<p> <code>void print_objid(const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>);</code><br/>
+ <code>void fprint_objid(FILE *</code><i>fp</i><code>,</code><br/>
+ <code> const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>);</code><br/>
+ <code>int snprint_objid(char *</code><i>buf</i><code>, size_t </code><i>len</i><code>,</code><br/>
  <code> const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>);</code> </p>
-<p> <code>void print_description(const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>, int </code><i>width</i><code>);</code><br />
- <code>void fprint_description(FILE *</code><i>fp</i><code>,</code><br />
- <code> const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>, int </code><i>width</i><code>);</code><br />
- <code>int snprint_description(char *</code><i>buf</i><code>, size_t </code><i>len</i><code>,</code><br />
+<p> <code>void print_description(const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>, int </code><i>width</i><code>);</code><br/>
+ <code>void fprint_description(FILE *</code><i>fp</i><code>,</code><br/>
+ <code> const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>, int </code><i>width</i><code>);</code><br/>
+ <code>int snprint_description(char *</code><i>buf</i><code>, size_t </code><i>len</i><code>,</code><br/>
  <code> const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>, int </code><i>width</i><code>);</code> </p>
 <h2>DESCRIPTION</h2>
 <p> The functions dealing with MIB modules fall into four groups &#8211; those dealing with initialisation and shutdown, with reading in and parsing MIB files, with searching the MIB tree, and output routines.</p>
 <h3>Initialisation and Shutdown</h3>
 <p> <code>add_mibdir</code> is used to add the specified directory to the path of locations which are searched for files containing MIB modules. Note that this does not actually load the MIB modules located in that directory, but is simply an initialisation step to make them available to <code>netsnmp_read_module</code>. This function returns a count of files found in the directory, or a -1 if there is an error. It should be called <i>before</i> invoking <code>netsnmp_init_mib</code>. </p>
-<p> <code>netsnmp_init_mib</code> configures the MIB directory search path (using <code>add_mibdir</code> ), sets up the internal MIB framework, and then loads the appropriate MIB modules (using <code>netsnmp_read_module</code> and <code>read_mib</code>). See the ENVIRONMENTAL VARIABLES section for details.<br />
+<p> <code>netsnmp_init_mib</code> configures the MIB directory search path (using <code>add_mibdir</code> ), sets up the internal MIB framework, and then loads the appropriate MIB modules (using <code>netsnmp_read_module</code> and <code>read_mib</code>). See the ENVIRONMENTAL VARIABLES section for details.<br/>
  It should be called before any other routine that manipulates or accesses the MIB tree (but after any additional <code>add_mibdir</code> calls). </p>
 <p> <code>shutdown_mib</code> will clear the information that was gathered by <code>netsnmp_read_module</code>, <code>add_mibdir</code> and <code>add_module_replacement</code>. It is strongly recommended that one does not invoke <code>shutdown_mib</code> while there are SNMP sessions being actively managed.</p>
 <h3>Reading and Parsing MIBs</h3>
@@ -98,7 +98,7 @@ description: "add_mibdir, netsnmp_init_mib, shutdown_mib, netsnmp_read_module, r
 <h3>Searching the MIB Tree</h3>
 <p> <code>read_objid</code> takes a string containing a textual version of an object identifier (in either numeric or descriptor form), and transforms this into the corresponding list of sub-identifiers. This is returned in the <i>output</i> parameter, with the number of sub-identifiers returned via <i>out_len</i>. When called, <i>out_len</i> must hold the maximum length of the <i>output</i> array. If multiple object identifiers are being processed, then this length should be reset before each call. This function returns a value of 1 if it succeeds in parsing the string and 0 otherwise. </p>
 <p> <code>snmp_parse_oid</code> is similar, but returns a pointer to the parsed OID buffer (or NULL). </p>
-<p> <code>get_module_node</code> takes a descriptor and the name of a module, and returns the corresponding oid list, in the same way as <code>read_objid</code> above.<br />
+<p> <code>get_module_node</code> takes a descriptor and the name of a module, and returns the corresponding oid list, in the same way as <code>read_objid</code> above.<br/>
  If the module name is specified as &quot;ANY&quot;, then this routine will assume that the descriptor given is unique within the tree, and will return the matching entry. If this assumption is invalid, then the behaviour as to which variable is returned is implementation dependent. </p>
 <h3>Output</h3>
 <p> <code>print_mib</code> will print out a representation of the currently active MIB tree to the specified FILE pointer. </p>
@@ -111,11 +111,11 @@ description: "add_mibdir, netsnmp_init_mib, shutdown_mib, netsnmp_read_module, r
 <p> The main use of environmental variables with respect to these API calls is to configure which MIB modules should be loaded, and where they are located.</p>
 <dl>
 <dt>MIBDIRS</dt>
-<dd> A colon separated list of directories to search for MIB modules.<br />
- Default: /usr/share/snmp/mibs<br />
+<dd> A colon separated list of directories to search for MIB modules.<br/>
+ Default: /usr/share/snmp/mibs<br/>
  Used by <code>init_mib</code>, <code>netsnmp_read_module</code>, <code>read_all_mibs</code> and (implicitly) by <code>read_mib</code>.</dd>
 <dt>MIBS</dt>
-<dd> A colon separated list of MIB modules to load.<br />
+<dd> A colon separated list of MIB modules to load.<br/>
  The default list of modules will depend on how the Net-SNMP software was originally compiled, but is typically: IP-MIB:IF-MIB:TCP-MIB:UDP-MIB:SNMPv2-MIB:RFC1213-MIB: UCD-SNMP-MIB:HOST-RESOURCES-MIB</dd>
 <dt>
 </dt><dd> If the value of the <code>MIBS</code> environmental variable starts with a &#8216;+&#8217; character, then these MIB modules will be added to the default list. Otherwise these modules (plus any that they IMPORT from) will be loaded <i>instead</i> of the default list.</dd>
@@ -124,8 +124,8 @@ description: "add_mibdir, netsnmp_init_mib, shutdown_mib, netsnmp_read_module, r
 <dt>
 </dt><dd> Used by <code>init_mib</code> only.</dd>
 <dt>MIBFILES</dt>
-<dd> A colon separated list of files to load.<br />
- Default: (none)<br />
+<dd> A colon separated list of files to load.<br/>
+ Default: (none)<br/>
  Used by <code>init_mib</code> only.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-snmp_api/">snmp_api</a></code>(3), <code>output_api</code>(3) </p>

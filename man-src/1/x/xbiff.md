@@ -101,5 +101,5 @@ description: "xbiff – mailbox flag for X"
 <h2>BUGS</h2>
 <p> The mailbox bitmaps are ugly.</p>
 <h2>AUTHOR</h2>
-<p> Jim Fulton, MIT X Consortium<br />
+<p> Jim Fulton, MIT X Consortium<br/>
  Additional hacks by Ralph Swick, DEC/MIT Project Athena </p>

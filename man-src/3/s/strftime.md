@@ -149,11 +149,11 @@ size_t strftime(char *s, size_t max, const char *format,
 <dd>Swap the case of the result string. (This flag works only with certain conversion specifier characters, and of these, it is only really useful with <code>%Z</code>.)</dd></dl>
 <p> An optional decimal width specifier may follow the (possibly absent) flag. If the natural size of the field is smaller than this width, then the result string is padded (on the left) to the specified width.</p>
 <h2>Bugs</h2>
-<p>If the output string would exceed <i>max</i> bytes, <i>errno</i> is <i>not</i> set. This makes it impossible to distinguish this error case from cases where the <i>format</i> string legitimately produces a zero-length output string. POSIX.1-2001 does <i>not</i> specify any <i>errno</i> settings for <code>strftime</code>(). Some buggy versions of <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) complain about the use of <code>%c</code>: <i>warning: `%c&#8217; yields only last 2 digits of year in some locales</i>. Of course programmers are encouraged to use <code>%c</code>, as it gives the preferred date and time representation. One meets all kinds of strange obfuscations to circumvent this <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) problem. A relatively clean one is to add an intermediate function size_t<br />
-my_strftime(char *s, size_t max, const char *fmt,<br />
-            const struct tm *tm)<br />
-{<br />
-    return strftime(s, max, fmt, tm);<br />
+<p>If the output string would exceed <i>max</i> bytes, <i>errno</i> is <i>not</i> set. This makes it impossible to distinguish this error case from cases where the <i>format</i> string legitimately produces a zero-length output string. POSIX.1-2001 does <i>not</i> specify any <i>errno</i> settings for <code>strftime</code>(). Some buggy versions of <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) complain about the use of <code>%c</code>: <i>warning: `%c&#8217; yields only last 2 digits of year in some locales</i>. Of course programmers are encouraged to use <code>%c</code>, as it gives the preferred date and time representation. One meets all kinds of strange obfuscations to circumvent this <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) problem. A relatively clean one is to add an intermediate function size_t<br/>
+my_strftime(char *s, size_t max, const char *fmt,<br/>
+            const struct tm *tm)<br/>
+{<br/>
+    return strftime(s, max, fmt, tm);<br/>
 } Nowadays, <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) provides the <i>-Wno-format-y2k</i> option to prevent the warning, so that the above workaround is no longer required.</p>
 <h2>Examples</h2>
 <p><code>RFC 2822-compliant date format</code> (with an English locale for %a and %b) &quot;%a,&nbsp;%d&nbsp;%b&nbsp;%Y&nbsp;%T&nbsp;%z&quot; <code>RFC 822-compliant date format</code> (with an English locale for %a and %b) &quot;%a,&nbsp;%d&nbsp;%b&nbsp;%y&nbsp;%T&nbsp;%z&quot;</p>

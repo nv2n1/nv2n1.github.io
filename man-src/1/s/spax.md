@@ -197,7 +197,7 @@ description: "pax – portable archive interchange"
 <p> </center> </p>
 <p> Any other &#8216;%&#8216; characters in string produce undefined results. </p>
 <p> If no -o exthdr.name= string is specified, <code>pax </code> shall use the following default value: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>%d/PaxHeaders.%p/%f </p>
  </dd></dl>
 <dt><code>globexthdr.name=</code><i>string</i></dt>
@@ -408,7 +408,7 @@ description: "pax – portable archive interchange"
 <dt><code>7.</code></dt>
 <dd> <p> An additional conversion specifier character, <code>T</code>, shall be used to specify time formats. The <code>T</code> conversion specifier character can be preceded by the sequence (<code>keyword=</code><i>subformat</i>), where <i>subformat</i> is a date format as defined by date operands. The default <i>keyword</i> shall be <code>mtime </code> and the default subformat shall be: </p>
  </dd></dl>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>%b&nbsp;<wbr>%e&nbsp;<wbr>%H:%M&nbsp;<wbr>%Y </p>
 <dl>
 <dt><code>8.</code></dt>
@@ -420,7 +420,7 @@ description: "pax – portable archive interchange"
 <dt><code>10.</code></dt>
 <dd> <p> An additional conversion specifier character, <code>F</code>, shall be used to specify a pathname. The <code>F</code> conversion character can be preceded by a sequence of comma-separated keywords: </p>
  </dd></dl>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(keyword[,keyword]&nbsp;<wbr>...&nbsp;<wbr>) </p>
 <dl>
 <dd> <p> The values for all the keywords that are non-null shall be concatenated together, each separated by a &#8216;/&#8216;. The default shall be (<code>path</code>) if the keyword path is defined; otherwise, the default shall be (<code>prefix, name</code>). </p>
@@ -429,7 +429,7 @@ description: "pax – portable archive interchange"
 <dt><code>11. </code></dt>
 <dd> <p> An additional conversion specifier character, <code>L</code>, shall be used to specify a symbolic line expansion. If the current file is a symbolic link, then <code>%L</code> shall expand to: </p>
  </dd></dl>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;%s -&gt;&nbsp;<wbr>%s&quot;,&nbsp;<wbr>&lt;value of keyword&gt;,&nbsp;<wbr>&lt;contents of link&gt; </p>
 <p> Otherwise, the <code>%L</code> conversion specification shall be the equivalent of <code>%F</code>. </p>
 <h2>OPERANDS</h2>
@@ -486,24 +486,24 @@ description: "pax – portable archive interchange"
 <h2>STDOUT</h2>
 <p> In <code>write </code> mode, if <code>-f </code> is not specified, the standard output shall be the archive formatted according to one of the specifications in the EXTENDED DESCRIPTION section, or some other implementation-defined format (see <code>-x</code><i> format</i><code>).</code> </p>
 <p> In <code>list </code> mode, when the <code>-o listopt= </code> format has been specified, the selected archive members shall be written to standard output using the format described under List Mode Format Specifications. In <code>list </code> mode without the <code>-o listopt= </code> format option, the table of contents of the selected archive members shall be written to standard output using the following format: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;%s\n&quot;,&nbsp;<wbr>&lt;pathname&gt; </p>
 <p> If the <code>-v </code> option is specified in <code>list </code> mode, the table of contents of the selected archive members shall be written to standard output using the following formats. </p>
 <p> For pathnames representing hard links to previous members of the archive: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;%s&nbsp;<wbr>==&nbsp;<wbr>%s\n&quot;,&nbsp;<wbr>&lt;ls -l listing&gt;,&nbsp;<wbr>&lt;linkname&gt; </p>
 <p> For all other pathnames: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;%s\n&quot;,&nbsp;<wbr>&lt;ls -l listing&gt; </p>
 <p> where <i>&lt;ls -l listing&gt;</i> shall be the format specified by the <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1) utility with the <code>-l </code> option. When writing pathnames in this format, it is unspecified what is written for fields for which the underlying archive format does not have the correct information, although the correct number of &lt;blank&gt;-separated fields shall be written. </p>
 <p> In <code>list </code> mode, standard output shall not be buffered more than a line at a time. </p>
 <h2>STDERR</h2>
 <p> If <code>-v </code> is specified in <code>read</code>, <code>write</code>, or <code>copy </code> modes, <code>pax </code> shall write the pathnames it processes to the standard error output using the following format: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;%s\n&quot;,&nbsp;<wbr>&lt;pathname&gt; </p>
 <p> These pathnames shall be written as soon as processing is begun on the file or archive member, and shall be flushed to standard error. The trailing &lt;newline&gt;, which shall not be buffered, is written when the file has been read or written. </p>
 <p> If the <code>-s </code> option is specified, and the replacement string has a trailing <code>&#8216;p&#8217;</code>, substitutions shall be written to standard error in the following format: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;%s&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>%s\n&quot;,&nbsp;<wbr>&lt;original pathname&gt;,&nbsp;<wbr>&lt;new pathname&gt; </p>
 <p> In all operating modes of <code>pax</code>, optional messages of unspecified format concerning the input archive format and volume number, the number of files, blocks, volumes, and media parts as well as other diagnostic messages may be written to standard error. </p>
 <p> In all formats, for both standard output and standard error, it is unspecified how non-printable characters in pathnames or link names are written. </p>
@@ -529,7 +529,7 @@ description: "pax – portable archive interchange"
 </dl>
 <p> At the end of the archive file there shall be two 512-byte blocks filled with binary zeros, interpreted as an end-of-archive indicator. </p>
 <p> A schematic of an example archive with global extended header records and two actual files is shown in <code>pax Format Archive</code> Example. In the example, the second file in the archive has no extended header preceding it, presumably because it has no need for extended attributes. </p>
-<p> <center> <code>Figure: pax Format Archive Example</code> <br />
+<p> <center> <code>Figure: pax Format Archive Example</code> <br/>
  </center> <center> </p>
 <table BORDER>
 <tr>
@@ -619,7 +619,7 @@ description: "pax – portable archive interchange"
 <h3>pax Extended Header</h3>
 <p> A <code>pax </code> extended header contains values that are inappropriate for the <code>ustar</code> header block because of limitations in that format: fields requiring a character encoding other than that described in the ISO/IEC 646:1991 standard, fields representing file attributes not described in the <code>ustar</code> header, and fields whose format or length do not fit the requirements of the <code>ustar</code> header. The values in an extended header add attributes to the following file (or files; see the description of the <i>typeflag </i> <code>g </code> header block) or override values in the following header block(s), as indicated in the following list of keywords. </p>
 <p> An extended header shall consist of one or more records, each constructed as follows: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;%d&nbsp;<wbr>%s=%s\n&quot;,&nbsp;<wbr>&lt;length&gt;,&nbsp;<wbr>&lt;keyword&gt;,&nbsp;<wbr>&lt;value&gt; </p>
 <p> The extended header records shall be encoded according to the ISO/IEC 10646-1:2000 standard (UTF-8). The <i>&lt;length&gt; </i> field, &lt;blank&gt;, equals sign, and &lt;newline&gt; shown shall be limited to the portable character set, as encoded in UTF-8. The <i>&lt;keyword&gt; </i> and <i>&lt;value&gt; </i> fields can be any UTF-8 characters. The <i>&lt;length&gt;</i> field shall be the decimal length of the extended header record in octets, including the trailing &lt;newline&gt;. </p>
 <p> The <i>&lt;keyword&gt;</i> field shall be one of the entries from the following list or a keyword provided as an implementation extension. Keywords consisting entirely of lowercase letters, digits, and periods are reserved for future standardization. A keyword shall not include an equals sign. (In the following list, the notations &quot;file(s)&quot; or &quot;block(s)&quot; is used to acknowledge that a keyword affects the following single file after a <i>typeflag </i> <code>x </code> extended header, but possibly multiple files after <i>typeflag </i> <code>g</code>. Any requirements in the list for <code>pax </code> to include a record when in <code>write</code> or <code>copy </code> mode shall apply only when such a record has not already been provided through the use of the <code>-o </code> option. When used in <code>copy</code> mode, <code>pax </code> shall behave as if an archive had been created with applicable extended header records and then extracted.) </p>
@@ -804,7 +804,7 @@ description: "pax – portable archive interchange"
 <p> A <code>ustar </code> archive tape or file shall contain a series of logical records. Each logical record shall be a fixed-size logical record of 512 octets (see below). Although this format may be thought of as being stored on 9-track industry-standard 12.7 mm (0.5 in) magnetic tape, other types of transportable media are not excluded. Each file archived shall be represented by a header logical record that describes the file, followed by zero or more logical records that give the contents of the file. At the end of the archive file there shall be two 512-octet logical records filled with binary zeros, interpreted as an end-of-archive indicator. </p>
 <p> The logical records may be grouped for physical I/O operations, as described under the <code>-b</code><i> blocksize </i> and <code>-x</code><i> ustar </i> options. Each group of logical records may be written with a single operation equivalent to the <code><a href="/docs/linux/man/2-write/">write</a></code>(2) function. On magnetic tape, the result of this write shall be a single tape physical block. The last physical block shall always be the full size, so logical records after the two zero logical records may contain undefined data. </p>
 <p> The header logical record shall be structured as shown in the following table. All lengths and offsets are in decimal. </p>
-<p> <center> <code>Table: ustar Header Block</code> <br />
+<p> <center> <code>Table: ustar Header Block</code> <br/>
  </center> <center> </p>
 <table BORDER>
 <tr>
@@ -925,7 +925,7 @@ description: "pax – portable archive interchange"
 <p> The <i>name </i> and the <i>prefix </i> fields shall produce the pathname of the file. A new pathname shall be formed, if <i>prefix </i> is not an empty string (its first character is not NUL), by concatenating <i>prefix</i> (up to the first NUL character), a slash character, and <i>name</i>; otherwise, <i>name</i> is used alone. In either case, <i>name </i> is terminated at the first NUL character. If <i>prefix </i> begins with a NUL character, it shall be ignored. In this manner, pathnames of at most 256 characters can be supported. If a pathname does not fit in the space provided, <code>pax </code> shall notify the user of the error, and shall not store any part of the file-header or data-on the medium. </p>
 <p> The <i>linkname </i> field, described below, shall not use the <i>prefix </i> to produce a pathname. As such, a <i>linkname </i> is limited to 100 characters. If the name does not fit in the space provided, <code>pax</code> shall notify the user of the error, and shall not attempt to store the link on the medium. </p>
 <p> The <i>mode </i> field provides 12 bits encoded in the ISO/IEC 646:1991 standard octal digit representation. The encoded bits shall represent the following values: </p>
-<p> <center> <code>Table: ustar mode Field</code> <br />
+<p> <center> <code>Table: ustar mode Field</code> <br/>
  </center> <center> </p>
 <table BORDER>
 <tr>
@@ -1060,7 +1060,7 @@ description: "pax – portable archive interchange"
 <p> The octet-oriented <code>cpio </code> archive format shall be a series of entries, each comprising a header that describes the file, the name of the file, and then the contents of the file. </p>
 <p> An archive may be recorded as a series of fixed-size blocks of octets. This blocking shall be used only to make physical I/O more efficient. The last group of blocks shall always be at the full size. </p>
 <p> For the octet-oriented <code>cpio </code> archive format, the individual entry information shall be in the order indicated and described by the following table; see also the <code>&lt;cpio.h&gt; </code> header. </p>
-<p> <center> <code>Table: Octet-Oriented cpio Archive Entry</code> <br />
+<p> <center> <code>Table: Octet-Oriented cpio Archive Entry</code> <br/>
  </center> <center> </p>
 <table BORDER>
 <tr>
@@ -1193,7 +1193,7 @@ description: "pax – portable archive interchange"
 <dd> <p> Contains the file type and access permissions as defined in the following table. </p>
  </dd>
 <dl>
-<dd> <p> <center> <code>Table: Values for cpio c_mode Field</code> <br />
+<dd> <p> <center> <code>Table: Values for cpio c_mode Field</code> <br/>
  </center> <center> </p>
 <table BORDER>
 <tr>
@@ -1399,10 +1399,10 @@ description: "pax – portable archive interchange"
 <h2>CONSEQUENCES OF ERRORS</h2>
 <p> If <code>pax </code> cannot create a file or a link when reading an archive or cannot find a file when writing an archive, or cannot preserve the user ID, group ID, or file mode when the <code>-p </code> option is specified, a diagnostic message shall be written to standard error and a non-zero exit status shall be returned, but processing shall continue. In the case where <code>pax </code> cannot create a link to a file, <code>pax </code> shall not, by default, create a second copy of the file. </p>
 <p> If the extraction of a file from an archive is prematurely terminated by a signal or error, <code>pax </code> may have only partially extracted the file or (if the <code>-n </code> option was not specified) may have extracted a file of the same name as that specified by the user, but which is not the file the user wanted. Additionally, the file modes of extracted directories may have additional bits from the S_IRWXU mask set as well as incorrect modification and access times. </p>
-<p> <br />
+<p> <br/>
  </p>
 <hr />
-<p> <br />
+<p> <br/>
  <i>The following sections are informative.</i> </p>
 <h2>APPLICATION USAGE</h2>
 <p> Caution is advised when using the <code>-a </code> option to append to a <i>cpio</i> format archive. If any of the files being appended happen to be given the same <i>c_dev </i> and <i>c_ino </i> values as a file in the existing part of the archive, then they may be treated as links to that file on extraction. Thus, it is risky to use <code>-a </code> with <i>cpio </i> format except when it is done on the same system that the original archive was created on, and with the same <code>pax </code> utility, and in the knowledge that there has been little or no file system activity since the original archive was created that could lead to any of the files appended being given the same <i>c_dev </i> and <i>c_ino </i> values as an unrelated file in the existing part of the archive. Also, when (intentionally) appending additional links to a file in the existing part of the archive, the <i>c_nlink </i> values in the modified archive can be smaller than the number of links to the file in the archive, which may mean that the links are not preserved on extraction. </p>
@@ -1420,31 +1420,31 @@ description: "pax – portable archive interchange"
 <p> The <code>cpio </code> and <code>ustar </code> formats can only support files up to 8589934592 bytes (8 * 2^30) in size. </p>
 <h2>EXAMPLES</h2>
 <p> The following command: </p>
-<p> <code><br />
+<p> <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pax -w -f&nbsp;<wbr>/dev/rmt/1m .</code> </p>
 <p> copies the contents of the current directory to tape drive 1, medium density (assuming historical System V device naming procedures-the historical BSD device name would be /dev/rmt9). </p>
 <p> The following commands: </p>
-<p> <code><br />
+<p> <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mkdir newdirpax -rw olddir newdir</code> </p>
 <p> copy the olddir directory hierarchy to newdir. </p>
-<p> <code><br />
+<p> <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pax -r -s&nbsp;<wbr>&#8216;,^//*usr//*,,&#8216;&nbsp;<wbr>-f a.pax</code> </p>
 <p> reads the archive a.pax, with all files rooted in /usr in the archive extracted relative to the current directory. </p>
 <p> Using the option: </p>
-<p> <code><br />
+<p> <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-o listopt=&quot;%M&nbsp;<wbr>%(atime)T&nbsp;<wbr>%(size)D&nbsp;<wbr>%(name)s&quot;</code> </p>
 <p> overrides the default output description in Standard Output and instead writes: </p>
-<p> <code><br />
+<p> <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-rw-rw--- Jan 12 15:53 1492&nbsp;<wbr>/usr/foo/bar</code> </p>
 <p> Using the options: </p>
-<p> <code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-o listopt=&#8216;%L\t%(size)D\n%.7&#8217;&nbsp;<wbr>\</code> <br />
- <code><br />
+<p> <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-o listopt=&#8216;%L\t%(size)D\n%.7&#8217;&nbsp;<wbr>\</code> <br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-o listopt=&#8216;(name)s\n%(atime)T\n%T&#8217;</code> </p>
 <p> overrides the default output description in Standard Output and instead writes: </p>
-<p> <code>/usr/foo/bar -&gt; /tmp 1492</code> <br />
- <code>/usr/fo</code> <br />
- <code>Jan 12 1991</code> <br />
+<p> <code>/usr/foo/bar -&gt; /tmp 1492</code> <br/>
+ <code>/usr/fo</code> <br/>
+ <code>Jan 12 1991</code> <br/>
  <code>Jan 31 15:53</code> </p>
 <h2>RATIONALE</h2>
 <p> The <code>pax</code> utility was new for the ISO POSIX-2:1993 standard. It represents a peaceful compromise between advocates of the historical <code>tar </code> and <code>cpio </code> utilities. </p>
@@ -1465,7 +1465,7 @@ description: "pax – portable archive interchange"
 <p> A single archive may span more than one file. It is suggested that implementations provide informative messages to the user on standard error whenever the archive file is changed. </p>
 <p> The <code>-d </code> option (do not create intermediate directories not listed in the archive) found in early proposals was originally provided as a complement to the historic <code>-d </code> option of <code>cpio</code>. It has been deleted. </p>
 <p> The <code>-s </code> option in early proposals specified a subset of the substitution command from the ed utility. As there was no reason for only a subset to be supported, the <code>-s </code> option is now compatible with the current ed specification. Since the delimiter can be any non-null character, the following usage with single spaces is valid: </p>
-<p> <code><br />
+<p> <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pax -s&nbsp;<wbr>&quot;&nbsp;<wbr>foo bar&nbsp;<wbr>&quot;&nbsp;<wbr>...</code> </p>
 <p> The <code>-t description is worded so as to note that this may cause the</code> access time update caused by some other activity (which occurs while the file is being read) to be overwritten. </p>
 <p> The default behavior of <code>pax </code> with regard to file modification times is the same as historical implementations of <code>tar</code>. It is not the historical behavior of <code>cpio</code>. </p>
@@ -1640,8 +1640,8 @@ description: "pax – portable archive interchange"
 <p> This provides for extensibility of the <code>cpio </code> format while allowing for the ability to read old archives. Files of an unknown type may be read as &quot;regular files&quot; on some implementations. On a system that does not support extended file types, the <code>pax </code> utility should do the best it can with the file and go on to the next. </p>
 <h2>FUTURE DIRECTIONS</h2>
 <p> None. </p>
-<p> <br />
- <i>End of informative sections.</i> <br />
+<p> <br/>
+ <i>End of informative sections.</i> <br/>
  </p>
 <hr />
 <h2>SEE ALSO</h2>

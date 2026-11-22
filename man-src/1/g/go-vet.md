@@ -13,9 +13,9 @@ description: "go-vet – report likely mistakes in packages"
 <p> <code>go vet</code> [<code>-n</code>] [<code>-x</code>] [<code>-vettool</code> <i>prog</i>] [<i>build flags</i>] [<i>vet flags</i>] [<i>packages</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> Vet runs the Go vet command on the packages named by the import paths. </p>
-<p> For more about vet and its flags, see &#8216;go doc cmd/vet&#8217;.<br />
- For more about specifying packages, see <code><a href="/docs/linux/man/7-go-packages/">go-packages</a></code>(7).<br />
- For a list of checkers and their flags, see &#8216;go tool vet help&#8217;.<br />
+<p> For more about vet and its flags, see &#8216;go doc cmd/vet&#8217;.<br/>
+ For more about specifying packages, see <code><a href="/docs/linux/man/7-go-packages/">go-packages</a></code>(7).<br/>
+ For a list of checkers and their flags, see &#8216;go tool vet help&#8217;.<br/>
  For details of a specific checker such as &#8216;printf&#8217;, see &#8216;go tool vet help printf&#8217;.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -24,7 +24,7 @@ description: "go-vet – report likely mistakes in packages"
 <dt><code>-x</code></dt>
 <dd> The -x flag prints commands as they are executed.</dd>
 <dt><code>-vettool=</code><i>prog</i></dt>
-<dd> The -vettool=prog flag selects a different analysis tool with alternative or additional checks.<br />
+<dd> The -vettool=prog flag selects a different analysis tool with alternative or additional checks.<br/>
  For example, the &#8216;shadow&#8217; analyzer can be built and run using these commands: </dd>
 <pre>
   go install golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow

@@ -9,11 +9,11 @@ description: "Virtual Machine Functions – Functions that deal with creating an
 
 <p>Virtual Machine Functions &#8211; Functions that deal with creating and destroying virtual machine sessions for a given program. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>embryo_program_vm_reset</code> (Embryo_Program *ep)<br />
- <i>Resets the current virtual machine session of the given program. </i><br />
- EAPI void <code>embryo_program_vm_push</code> (Embryo_Program *ep)<br />
- <i>Starts a new virtual machine session for the given program. </i><br />
- EAPI void <code>embryo_program_vm_pop</code> (Embryo_Program *ep)<br />
+<p>EAPI void <code>embryo_program_vm_reset</code> (Embryo_Program *ep)<br/>
+ <i>Resets the current virtual machine session of the given program. </i><br/>
+ EAPI void <code>embryo_program_vm_push</code> (Embryo_Program *ep)<br/>
+ <i>Starts a new virtual machine session for the given program. </i><br/>
+ EAPI void <code>embryo_program_vm_pop</code> (Embryo_Program *ep)<br/>
  <i>Frees the current virtual machine session associated with the given program. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that deal with creating and destroying virtual machine sessions for a given program. </p>

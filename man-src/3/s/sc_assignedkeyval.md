@@ -14,8 +14,8 @@ description: "sc::AssignedKeyVal –"
 #include &lt;keyval.h&gt;</code></pre>
 <p> Inherits <code>sc::KeyVal</code>.</p>
 <h3>Public Member Functions</h3>
-<p>void <code>clear</code> ()<br />
- <i>Erase all of the stored assignments. </i> <code>Assignments.</code><br />
+<p>void <code>clear</code> ()<br/>
+ <i>Erase all of the stored assignments. </i> <code>Assignments.</code><br/>
  Each of this routines assigns key to val. </p>
 <pre><code>void assign (const char *key, const Ref&lt; KeyValValue &gt; &amp;val)
 void assign (const char *key, double val)
@@ -26,9 +26,9 @@ void assign (const char *key, int val)
 void assign (const char *key, const char *val)
 void assign (const char *key, const Ref&lt; DescribedClass &gt; &amp;val)
 Protected Member Functions</code></pre>
-<p> int <code>key_exists</code> (const char *)<br />
- <i>Ultimately called by exists. </i><br />
- <code>Ref</code>&lt; <code>KeyValValue</code> &gt; <code>key_value</code> (const char *, const <code>KeyValValue</code> &amp;def)<br />
+<p> int <code>key_exists</code> (const char *)<br/>
+ <i>Ultimately called by exists. </i><br/>
+ <code>Ref</code>&lt; <code>KeyValValue</code> &gt; <code>key_value</code> (const char *, const <code>KeyValValue</code> &amp;def)<br/>
  <i>Ultimately called by value. </i></p>
 <h2>Detailed Description</h2>
 <p>This class allows keyval associations to be set up by the program, rather than determined by an external file.</p>

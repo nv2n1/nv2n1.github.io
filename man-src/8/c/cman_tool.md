@@ -11,24 +11,24 @@ description: "cman_tool – Cluster Management Tool"
 <h2>Synopsis</h2>
 <p><code>cman_tool join | leave | kill | expected | votes | version | wait | status | nodes | services | debug [options]</code></p>
 <h2>Description</h2>
-<p><code>cman_tool</code> is a program that manages the cluster management subsystem CMAN. cman_tool can be used to join the node to a cluster, leave the cluster, kill another cluster node or change the value of expected votes of a cluster.<br />
+<p><code>cman_tool</code> is a program that manages the cluster management subsystem CMAN. cman_tool can be used to join the node to a cluster, leave the cluster, kill another cluster node or change the value of expected votes of a cluster.<br/>
  Be careful that you understand the consequences of the commands issued via cman_tool as they can affect all nodes in your cluster. Most of the time the cman_tool will only be invoked from your startup and shutdown scripts.</p>
 <h2>Subcommands</h2>
 <dl>
 <dt><i>join</i></dt>
-<dd>This is the main use of cman_tool. It instructs the cluster manager to attempt to join an existing cluster or (if no existing cluster exists) then to form a new one on its own.<br />
+<dd>This is the main use of cman_tool. It instructs the cluster manager to attempt to join an existing cluster or (if no existing cluster exists) then to form a new one on its own.<br/>
  If no options are given to this command then it will take the cluster configuration information from cluster.conf. However, it is possible to provide all the information on the command-line or to override cluster.conf values by using the command line. </dd>
 <dt><i>leave</i></dt>
-<dd>Tells CMAN to leave the cluster. You cannot do this if there are subsystems (eg DLM, GFS) active. You should dismount all GFS filesystems, shutdown CLVM, fenced and anything else using the cluster manager before using <code>cman_tool leave.</code> Look at &#8216;cman_tool status&#8217; and group_tool to see how many (and which) subsystems are active.<br />
+<dd>Tells CMAN to leave the cluster. You cannot do this if there are subsystems (eg DLM, GFS) active. You should dismount all GFS filesystems, shutdown CLVM, fenced and anything else using the cluster manager before using <code>cman_tool leave.</code> Look at &#8216;cman_tool status&#8217; and group_tool to see how many (and which) subsystems are active.<br/>
  When a node leaves the cluster, the remaining nodes recalculate quorum and this may block cluster activity if the required number of votes is not present. If this node is to be down for an extended period of time and you need to keep the cluster running, add the <code>remove</code> option, and the remaining nodes will recalculate quorum such that activity can continue. </dd>
 <dt><i>kill</i></dt>
 <dd>Tells CMAN to kill another node in the cluster. This will cause the local node to send a &quot;KILL&quot; message to that node and it will shut down. Recovery will occur for the killed node as if it had failed. This is a sort of remote version of &quot;leave force&quot; so only use if if you really know what you are doing. </dd>
 <dt><i>expected</i></dt>
-<dd>Tells CMAN a new value of expected votes and instructs it to recalculate quorum based on this value.<br />
+<dd>Tells CMAN a new value of expected votes and instructs it to recalculate quorum based on this value.<br/>
  Use this option if your cluster has lost quorum due to nodes failing and you need to get it running again in a hurry. </dd>
 <dt><i>version</i></dt>
-<dd>Used alone this will report the major, minor, patch and config versions used by CMAN (also displayed in &#8216;cman_tool status&#8217;). It can also be used with -r to tell cluster members to update.<br />
- The argument to -r is the version number that cman should look for. If that version is not currently available then cman will poll for it. If a version of 0 is specified then cman will read the configuration file, validate it, distribute it around the cluster (if necessary) and activate it.<br />
+<dd>Used alone this will report the major, minor, patch and config versions used by CMAN (also displayed in &#8216;cman_tool status&#8217;). It can also be used with -r to tell cluster members to update.<br/>
+ The argument to -r is the version number that cman should look for. If that version is not currently available then cman will poll for it. If a version of 0 is specified then cman will read the configuration file, validate it, distribute it around the cluster (if necessary) and activate it.<br/>
  The -D flag can disable the validation stage. This is NOT recommended. </dd>
 <dt><i>wait </i></dt>
 <dd>Waits until the node is a member of the cluster and then returns. </dd>
@@ -103,22 +103,22 @@ description: "cman_tool – Cluster Management Tool"
 <dt><i>-t &lt;seconds&gt;</i></dt>
 <dd>If -w or -q is also specified then -t dictates the maximum amount of time cman_tool is prepared to wait. If the operation times out then a status of 2 is returned. Note that just because cman_tool has given up, does not mean that cman itself has stopped trying to join a cluster.</dd>
 <dt><i>-X</i></dt>
-<dd>Tells cman not to use the configuration file to get cluster information. If you use this option then cman will apply several defaults to the cluster to get it going. The cluster name will be &quot;RHCluster&quot;, node IDs will default to the IP address of the node and remote node names will show up as Node&lt;nodeid&gt;. All of these, apart from the node names can be overridden on the cman_tool command-line if required.<br />
- If you have to set up fence devices, services or anything else in cluster.conf then this option is probably not worthwhile to you &#8211; the extra readability of sensible node names and numbers will make it worth using cluster.conf for the cluster too. But for a simple failover cluster this might save you some effort.<br />
- On each node using this configuration you will need to have the same authorization key installed. To create this key run<br />
- corosync-keygen<br />
- mv /etc/ais/authkey /etc/cluster/cman_authkey<br />
+<dd>Tells cman not to use the configuration file to get cluster information. If you use this option then cman will apply several defaults to the cluster to get it going. The cluster name will be &quot;RHCluster&quot;, node IDs will default to the IP address of the node and remote node names will show up as Node&lt;nodeid&gt;. All of these, apart from the node names can be overridden on the cman_tool command-line if required.<br/>
+ If you have to set up fence devices, services or anything else in cluster.conf then this option is probably not worthwhile to you &#8211; the extra readability of sensible node names and numbers will make it worth using cluster.conf for the cluster too. But for a simple failover cluster this might save you some effort.<br/>
+ On each node using this configuration you will need to have the same authorization key installed. To create this key run<br/>
+ corosync-keygen<br/>
+ mv /etc/ais/authkey /etc/cluster/cman_authkey<br/>
  then copy that file to all nodes you want to join the cluster. </dd>
 <dt><i>-C</i></dt>
-<dd>Overrides the default configuration module. Usually cman uses xmlconfig (cluster.conf) to load its configuration. If you have your configuration database held elsewhere (eg LDAP) and have a configuration plugin for it, then you should specify the name of the module (see the documentation for the module for the name of it &#8211; it&#8217;s not necessarily the same as the filename) here.<br />
- It is possible to chain configuration modules by separating them with colons. So to add two modules (eg) &#8216;ldapconfig&#8217; and &#8216;ldappreproc&#8217; to the chain start cman with -C ldapconfig:ldappreproc<br />
+<dd>Overrides the default configuration module. Usually cman uses xmlconfig (cluster.conf) to load its configuration. If you have your configuration database held elsewhere (eg LDAP) and have a configuration plugin for it, then you should specify the name of the module (see the documentation for the module for the name of it &#8211; it&#8217;s not necessarily the same as the filename) here.<br/>
+ It is possible to chain configuration modules by separating them with colons. So to add two modules (eg) &#8216;ldapconfig&#8217; and &#8216;ldappreproc&#8217; to the chain start cman with -C ldapconfig:ldappreproc<br/>
  The default value for this is &#8216;xmlconfig&#8217;. Note that if the -X is on the command-line then -C will be ignored.</dd>
 <dt><i>-A</i></dt>
 <dd>Don&#8217;t load openais services. Normally cman_tool join will load the configuration module &#8216;openaisserviceenablestable&#8217; which will load the services installed by openais. If you don&#8217;t want to use these services or have not installed openais then this switch will disable them.</dd>
 <dt><i>-D</i></dt>
-<dd>Tells cman_tool whether to validate the configuration before loading or reloading it. By default the configuration <code>is</code> validated, which is equivalent to -Dfail.<br />
- -Dwarn will validate the configuration and print any messages arising, but will attempt to use it regardless of its validity.<br />
- -Dnone (or just -D) will skip the validation completely.<br />
+<dd>Tells cman_tool whether to validate the configuration before loading or reloading it. By default the configuration <code>is</code> validated, which is equivalent to -Dfail.<br/>
+ -Dwarn will validate the configuration and print any messages arising, but will attempt to use it regardless of its validity.<br/>
+ -Dnone (or just -D) will skip the validation completely.<br/>
  The -D switch does not take a space between -D and the parameter. so &#8216;-D fail&#8217; will cause an error. Use -Dfail.</dd></dl>
 <h2>Nodes Options</h2>
 <dl>
@@ -132,15 +132,15 @@ description: "cman_tool – Cluster Management Tool"
 <h2>Debug Options</h2>
 <dl>
 <dt><i>-d &lt;value&gt;</i></dt>
-<dd>The value is a bitmask of<br />
- 2 Barriers<br />
- 4 Membership messages<br />
- 8 Daemon operation, including command-line interaction<br />
- 16 Interaction with Corosync<br />
+<dd>The value is a bitmask of<br/>
+ 2 Barriers<br/>
+ 4 Membership messages<br/>
+ 8 Daemon operation, including command-line interaction<br/>
+ 16 Interaction with Corosync<br/>
  32 Startup debugging (cman_tool join operations only)
 </dd></dl>
 <h2>Notes</h2>
-<p>the <code>nodes</code> subcommand shows a list of nodes known to cman. the state is one of the following:<br />
+<p>the <code>nodes</code> subcommand shows a list of nodes known to cman. the state is one of the following:<br/>
  M<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The node is a member of the cluster</p>
 <p> X<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The node is not a member of the cluster</p>
 <p> d<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The node is known to the cluster but disallowed access to it.</p>
@@ -189,8 +189,8 @@ Node Sts Inc Joined Name
 <p>In this scenario we should kill the node node-02 and node-03. Of course, the 3 node cluster of node-01, node-04 &amp; node-05 should remain quorate and be able to fenced the two rejoined nodes anyway, but it is possible that the cluster has a qdisk setup that precludes this. </p>
 </dl>
 <h2>Configuration Systems</h2>
-<p>This section details how the configuration systems work in cman. You might need to know this if you are using the -C option to cman_tool, or writing your own configuration subsystem.<br />
- By default cman uses two configuration plugins to corosync. The first, &#8216;xmlconfig&#8217;, reads the configuration information stored in cluster.conf and stores it in an internal database, in the same schema as it finds in cluster.conf. The second plugin, &#8216;cmanpreconfig&#8217;, takes the information in that the database, adds several cman defaults, determines the corosync node name and nodeID and formats the information in a similar manner to <a href="/docs/linux/man/5-corosync-conf/">corosync.conf</a>(5). Corosync then reads those keys to start the cluster protocol. cmanpreconfig also reads several environment variables that might be set by cman_tool which can override information in the configuration.<br />
- In the absence of xmlconfig, ie when &#8216;cman_tool join&#8217; is run with -X switch (this removes xmlconfig from the module list), cmanpreconfig also generates several defaults so that the cluster can be got running without any configuration information &#8211; see above for the details.<br />
- Note that cmanpreconfig will not overwrite corosync keys that are explicitly set in the configuration file, allowing you to provide custom values for token timeouts etc, even though cman has its own defaults for some of those values. The exception to this is the node name/address and multicast values, which are always taken from the cman configuration keys.<br />
+<p>This section details how the configuration systems work in cman. You might need to know this if you are using the -C option to cman_tool, or writing your own configuration subsystem.<br/>
+ By default cman uses two configuration plugins to corosync. The first, &#8216;xmlconfig&#8217;, reads the configuration information stored in cluster.conf and stores it in an internal database, in the same schema as it finds in cluster.conf. The second plugin, &#8216;cmanpreconfig&#8217;, takes the information in that the database, adds several cman defaults, determines the corosync node name and nodeID and formats the information in a similar manner to <a href="/docs/linux/man/5-corosync-conf/">corosync.conf</a>(5). Corosync then reads those keys to start the cluster protocol. cmanpreconfig also reads several environment variables that might be set by cman_tool which can override information in the configuration.<br/>
+ In the absence of xmlconfig, ie when &#8216;cman_tool join&#8217; is run with -X switch (this removes xmlconfig from the module list), cmanpreconfig also generates several defaults so that the cluster can be got running without any configuration information &#8211; see above for the details.<br/>
+ Note that cmanpreconfig will not overwrite corosync keys that are explicitly set in the configuration file, allowing you to provide custom values for token timeouts etc, even though cman has its own defaults for some of those values. The exception to this is the node name/address and multicast values, which are always taken from the cman configuration keys.<br/>
  Most of the extra keys that cmanpreconfig adds are outside of the /cluster/ tree and will only be seen if you dump the whole of corosync&#8217;s object database. However it does add some keys into /cluster/cman that you would not normally see in a normal cluster.conf file. These are harmless, though could be confusing. The most obvious of these is the &quot;nodename&quot; option which is passed from cmanpreconfig to the name cman module, to save it recalculating the node name again.</p>

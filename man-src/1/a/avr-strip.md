@@ -10,27 +10,27 @@ description: "strip – Discard symbols from object files."
 
 <p> strip &#8211; Discard symbols from object files. </p>
 <h2>SYNOPSIS</h2>
-<p> strip [<code>-F</code> <i>bfdname</i> |<code>&#8211;target=</code><i>bfdname</i>]<br />
-[<code>-I</code>&nbsp;<wbr><i>bfdname</i>&nbsp;<wbr>|<code>&#8211;input-target=</code><i>bfdname</i>]<br />
-[<code>-O</code>&nbsp;<wbr><i>bfdname</i>&nbsp;<wbr>|<code>&#8211;output-target=</code><i>bfdname</i>]<br />
-[<code>-s</code>|<code>&#8211;strip-all</code>]<br />
-[<code>-S</code>|<code>-g</code>|<code>-d</code>|<code>&#8211;strip-debug</code>]<br />
-[<code>&#8211;strip-dwo</code>]<br />
-[<code>-K</code>&nbsp;<wbr><i>symbolname</i>&nbsp;<wbr>|<code>&#8211;keep-symbol=</code><i>symbolname</i>]<br />
-[<code>-N</code>&nbsp;<wbr><i>symbolname</i>&nbsp;<wbr>|<code>&#8211;strip-symbol=</code><i>symbolname</i>]<br />
-[<code>-w</code>|<code>&#8211;wildcard</code>]<br />
-[<code>-x</code>|<code>&#8211;discard-all</code>]&nbsp;<wbr>[<code>-X</code>&nbsp;<wbr>|<code>&#8211;discard-locals</code>]<br />
-[<code>-R</code>&nbsp;<wbr><i>sectionname</i>&nbsp;<wbr>|<code>&#8211;remove-section=</code><i>sectionname</i>]<br />
-[<code>-o</code>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-p</code>|<code>&#8211;preserve-dates</code>]<br />
-[<code>-D</code>|<code>&#8211;enable-deterministic-archives</code>]<br />
-[<code>-U</code>|<code>&#8211;disable-deterministic-archives</code>]<br />
-[<code>&#8211;keep-file-symbols</code>]<br />
-[<code>&#8211;only-keep-debug</code>]<br />
-[<code>-v</code>&nbsp;<wbr>|<code>&#8211;verbose</code>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br />
-[<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;info</code>]<br />
+<p> strip [<code>-F</code> <i>bfdname</i> |<code>&#8211;target=</code><i>bfdname</i>]<br/>
+[<code>-I</code>&nbsp;<wbr><i>bfdname</i>&nbsp;<wbr>|<code>&#8211;input-target=</code><i>bfdname</i>]<br/>
+[<code>-O</code>&nbsp;<wbr><i>bfdname</i>&nbsp;<wbr>|<code>&#8211;output-target=</code><i>bfdname</i>]<br/>
+[<code>-s</code>|<code>&#8211;strip-all</code>]<br/>
+[<code>-S</code>|<code>-g</code>|<code>-d</code>|<code>&#8211;strip-debug</code>]<br/>
+[<code>&#8211;strip-dwo</code>]<br/>
+[<code>-K</code>&nbsp;<wbr><i>symbolname</i>&nbsp;<wbr>|<code>&#8211;keep-symbol=</code><i>symbolname</i>]<br/>
+[<code>-N</code>&nbsp;<wbr><i>symbolname</i>&nbsp;<wbr>|<code>&#8211;strip-symbol=</code><i>symbolname</i>]<br/>
+[<code>-w</code>|<code>&#8211;wildcard</code>]<br/>
+[<code>-x</code>|<code>&#8211;discard-all</code>]&nbsp;<wbr>[<code>-X</code>&nbsp;<wbr>|<code>&#8211;discard-locals</code>]<br/>
+[<code>-R</code>&nbsp;<wbr><i>sectionname</i>&nbsp;<wbr>|<code>&#8211;remove-section=</code><i>sectionname</i>]<br/>
+[<code>-o</code>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-p</code>|<code>&#8211;preserve-dates</code>]<br/>
+[<code>-D</code>|<code>&#8211;enable-deterministic-archives</code>]<br/>
+[<code>-U</code>|<code>&#8211;disable-deterministic-archives</code>]<br/>
+[<code>&#8211;keep-file-symbols</code>]<br/>
+[<code>&#8211;only-keep-debug</code>]<br/>
+[<code>-v</code>&nbsp;<wbr>|<code>&#8211;verbose</code>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br/>
+[<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;info</code>]<br/>
 <i>objfile</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
-<p> <font SIZE="-1">GNU </font><code>strip</code> discards all symbols from object files <i>objfile</i>. The list of object files may include archives. At least one object file must be given. </p>
+<p> GNU <code>strip</code> discards all symbols from object files <i>objfile</i>. The list of object files may include archives. At least one object file must be given. </p>
 <p> <code>strip</code> modifies the files named in its argument, rather than writing modified copies under different names.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -67,7 +67,7 @@ description: "strip – Discard symbols from object files."
 </dd><dt><code>&#8211;strip-debug</code></dt>
 <dd> Remove debugging symbols only.</dd>
 <dt><code>&#8211;strip-dwo</code></dt>
-<dd> Remove the contents of all <font SIZE="-1">DWARF </font>.dwo sections, leaving the remaining debugging sections and all symbols intact. See the description of this option in the <code>objcopy</code> section for more information.</dd>
+<dd> Remove the contents of all DWARF .dwo sections, leaving the remaining debugging sections and all symbols intact. See the description of this option in the <code>objcopy</code> section for more information.</dd>
 <dt><code>&#8211;strip-unneeded</code></dt>
 <dd> Remove all symbols that are not needed for relocation processing.</dd>
 <dt><code>-K</code> <i>symbolname</i></dt>
@@ -92,7 +92,7 @@ description: "strip – Discard symbols from object files."
 <dt><code>-U</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-deterministic-archives</code></dt>
-<dd> Do <i>not</i> operate in <i>deterministic</i> mode. This is the inverse of the <code>-D</code> option, above: when copying archive members and writing the archive index, use their actual <font SIZE="-1">UID, GID,</font> timestamp, and file mode values. </dd>
+<dd> Do <i>not</i> operate in <i>deterministic</i> mode. This is the inverse of the <code>-D</code> option, above: when copying archive members and writing the archive index, use their actual UID, GID, timestamp, and file mode values. </dd>
 <p> This is the default unless <i>binutils</i> was configured with <code>&#8211;enable-deterministic-archives</code>.</p>
 <dt><code>-w</code></dt>
 <dd>
@@ -113,8 +113,8 @@ description: "strip – Discard symbols from object files."
 <dt><code>&#8211;keep-file-symbols</code></dt>
 <dd> When stripping a file, perhaps with <code>&#8211;strip-debug</code> or <code>&#8211;strip-unneeded</code>, retain any symbols specifying source file names, which would otherwise get stripped.</dd>
 <dt><code>&#8211;only-keep-debug</code></dt>
-<dd> Strip a file, removing contents of any sections that would not be stripped by <code>&#8211;strip-debug</code> and leaving the debugging sections intact. In <font SIZE="-1">ELF</font> files, this preserves all note sections in the output. </dd>
-<p> The intention is that this option will be used in conjunction with <code>&#8211;add-gnu-debuglink</code> to create a two part executable. One a stripped binary which will occupy less space in <font SIZE="-1">RAM</font> and in a distribution and the second a debugging information file which is only needed if debugging abilities are required. The suggested procedure to create these files is as follows:</p>
+<dd> Strip a file, removing contents of any sections that would not be stripped by <code>&#8211;strip-debug</code> and leaving the debugging sections intact. In ELF files, this preserves all note sections in the output. </dd>
+<p> The intention is that this option will be used in conjunction with <code>&#8211;add-gnu-debuglink</code> to create a two part executable. One a stripped binary which will occupy less space in RAM and in a distribution and the second a debugging information file which is only needed if debugging abilities are required. The suggested procedure to create these files is as follows:</p>
 <dl>
 <dl>
 <dt>1.&lt;Link the executable as normal. Assuming that is is called&gt;</dt>
@@ -160,4 +160,4 @@ description: "strip – Discard symbols from object files."
 <p> the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991-2013 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

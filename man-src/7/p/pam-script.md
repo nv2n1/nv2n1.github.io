@@ -11,8 +11,8 @@ description: "pam-script – a PAM module that can invoke scripts within the PAM
 <h2>Synopsis</h2>
 <p><code>pam-script.so</code> [<i>onerr=(success|fail)</i>][<i>dir=/some/path/</i>] </p>
 <h2>Description</h2>
-<p><code>pam-script</code> allows you to execute scripts during authorization, passwd changes, and on session opening or closing. Such scripts can perform necessary tasks or influence the outcome of the PAM stack. For example, if the following entry was included in <i>pam.conf</i><br />
-&nbsp;<wbr>&nbsp;<wbr>sshd<tt>&nbsp;<wbr>&nbsp;<wbr></tt>auth<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>required<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pam_script<br />
+<p><code>pam-script</code> allows you to execute scripts during authorization, passwd changes, and on session opening or closing. Such scripts can perform necessary tasks or influence the outcome of the PAM stack. For example, if the following entry was included in <i>pam.conf</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>sshd<tt>&nbsp;<wbr>&nbsp;<wbr></tt>auth<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>required<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pam_script<br/>
  then if the script, <i>pam_script_auth</i>, exits with a non-zero value this would cause the user to be denied SSH access to the machine. </p>
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
@@ -35,7 +35,7 @@ description: "pam-script – a PAM module that can invoke scripts within the PAM
 <p> All the scripts will be passed several environment variables: PAM_USER, PAM_RUSER, PAM_RHOST, PAM_SERVICE, PAM_AUTHTOK, PAM_TTY, and PAM_TYPE referring to the module-type. The pam_script.so arguments in the pam.conf will be passed on the command line, which can be used to modify the script behavior. </p>
 </dl>
 <h2>Files</h2>
-<p><code>/lib64/security/pam_script.so</code> &#8211; the PAM module<br />
+<p><code>/lib64/security/pam_script.so</code> &#8211; the PAM module<br/>
  <code>/etc</code> &#8211; where the scripts should be placed by default</p>
 <h2>Version</h2>
 <p>pam-script 1.1.8</p>

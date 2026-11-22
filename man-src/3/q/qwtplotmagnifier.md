@@ -14,18 +14,18 @@ description: "QwtPlotMagnifier –"
 <p> Inherits <code>QwtMagnifier</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPlotMagnifier</code> (QWidget *) </p>
-<p> virtual <code>~QwtPlotMagnifier</code> ()<br />
- <i>Destructor. </i><br />
- void <code>setAxisEnabled</code> (int axis, bool on)<br />
- <i>En/Disable an axis. </i><br />
+<p> virtual <code>~QwtPlotMagnifier</code> ()<br/>
+ <i>Destructor. </i><br/>
+ void <code>setAxisEnabled</code> (int axis, bool on)<br/>
+ <i>En/Disable an axis. </i><br/>
  bool <code>isAxisEnabled</code> (int axis) const </p>
-<p> QWidget * <code>canvas</code> ()<br />
- <i>Return observed plot canvas. </i><br />
- const QWidget * <code>canvas</code> () const<br />
- <i>Return Observed plot canvas. </i><br />
- <code>QwtPlot</code> * <code>plot</code> ()<br />
- <i>Return plot widget, containing the observed plot canvas. </i><br />
- const <code>QwtPlot</code> * <code>plot</code> () const<br />
+<p> QWidget * <code>canvas</code> ()<br/>
+ <i>Return observed plot canvas. </i><br/>
+ const QWidget * <code>canvas</code> () const<br/>
+ <i>Return Observed plot canvas. </i><br/>
+ <code>QwtPlot</code> * <code>plot</code> ()<br/>
+ <i>Return plot widget, containing the observed plot canvas. </i><br/>
+ const <code>QwtPlot</code> * <code>plot</code> () const<br/>
  <i>Return plot widget, containing the observed plot canvas. </i></p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>rescale</code> (double factor) </p>
@@ -64,7 +64,7 @@ description: "QwtPlotMagnifier –"
 <p>En/Disable an axis. Only Axes that are enabled will be zoomed. All other axes will remain unchanged. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> Axis, see <code>QwtPlot::Axis</code><br />
+<dd><i>axis</i> Axis, see <code>QwtPlot::Axis</code><br/>
  <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

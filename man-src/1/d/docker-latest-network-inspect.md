@@ -97,9 +97,9 @@ $ docker network create simple - network 69568e6336d8c96bbf57869030919f7c69524f7
 </code></pre>
 </dd></dl>
 <h2>OPTIONS</h2>
-<p> <code>-f</code>, <code>&#8211;format</code>=&quot;&quot;<br />
+<p> <code>-f</code>, <code>&#8211;format</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Format the output using the given go template. </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>HISTORY</h2>
 <p> OCT 2015, created by Mary Anthony &lt;mary [at] docker.com&gt; </p>

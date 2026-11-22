@@ -13,9 +13,9 @@ description: "pyreverse – parse python sources files and extract diagrams from
 <p> <code>pyreverse </code> <i>[options]</i> &lt;modules&gt; </p>
 <h2>DESCRIPTION</h2>
 <p> <code>pyreverse</code> is a python source analyzer. It parses a python packages and produces UML diagrams in different output formats. (dot, all formats available for dot, and vcg). With different options, you can have fine tuning on what and how modules, classes and attributes will be shown in the diagram. You can combine several modules in one project (except with <code>-c</code> ). </p>
-<p> If no -c and no &#8211;diadefs option specified, <code>pyreverse </code> will create<br />
-&nbsp;<wbr>&#8211; a diagram&nbsp;<wbr>&#8216;classes_&lt;name&gt;&#8217;&nbsp;<wbr>for the classes in&nbsp;<wbr>&lt;modules&gt;&nbsp;<wbr>and<br />
-(&nbsp;<wbr>if there is more than one module in&nbsp;<wbr>&lt;projects&gt;&nbsp;<wbr>)<br />
+<p> If no -c and no &#8211;diadefs option specified, <code>pyreverse </code> will create<br/>
+&nbsp;<wbr>&#8211; a diagram&nbsp;<wbr>&#8216;classes_&lt;name&gt;&#8217;&nbsp;<wbr>for the classes in&nbsp;<wbr>&lt;modules&gt;&nbsp;<wbr>and<br/>
+(&nbsp;<wbr>if there is more than one module in&nbsp;<wbr>&lt;projects&gt;&nbsp;<wbr>)<br/>
 &nbsp;<wbr>&#8211; a diagram&nbsp;<wbr>&#8216;packages_&lt;name&gt;&#8217;&nbsp;<wbr>for the package dependencies in&nbsp;<wbr>&lt;modules&gt;&nbsp;<wbr> </p>
 <p> With -c &lt;class&gt;, <code>pyreverse </code> creates a diagram for that &lt;class&gt; with filename &lt;class&gt;.&lt;format&gt;. You can do -c &lt;class1&gt; , -c &lt;class2&gt;. </p>
 <h2>OPTIONS</h2>
@@ -27,10 +27,10 @@ description: "pyreverse – parse python sources files and extract diagrams from
 <dt>-i&lt;file&gt;, &#8211;ignore=&lt;file&gt;</dt>
 <dd> add &lt;file&gt; (may be a directory) to the black list (not parsed)</dd>
 <dt>-f&lt;mode&gt;, &#8211;filter-mode=&lt;mode&gt;</dt>
-<dd> filter attributes and functions according to &lt;mode&gt;. You can combine modes using &#8216;+&#8217; like &#8216;SPECIAL+OTHER&#8217;. Correct modes are :<br />
-&nbsp;<wbr>&#8211;&nbsp;<wbr>&#8216;PUB_ONLY&#8217;&nbsp;<wbr>: filter all non public attributes&nbsp;<wbr>(default)<br />
-&nbsp;<wbr>&#8211;&nbsp;<wbr>&#8216;ALL&#8217;&nbsp;<wbr>: no filter<br />
-&nbsp;<wbr>&#8211;&nbsp;<wbr>&#8216;SPECIAL&#8217;&nbsp;<wbr>: filter Python special functions except constructor<br />
+<dd> filter attributes and functions according to &lt;mode&gt;. You can combine modes using &#8216;+&#8217; like &#8216;SPECIAL+OTHER&#8217;. Correct modes are :<br/>
+&nbsp;<wbr>&#8211;&nbsp;<wbr>&#8216;PUB_ONLY&#8217;&nbsp;<wbr>: filter all non public attributes&nbsp;<wbr>(default)<br/>
+&nbsp;<wbr>&#8211;&nbsp;<wbr>&#8216;ALL&#8217;&nbsp;<wbr>: no filter<br/>
+&nbsp;<wbr>&#8211;&nbsp;<wbr>&#8216;SPECIAL&#8217;&nbsp;<wbr>: filter Python special functions except constructor<br/>
 &nbsp;<wbr>&#8211;&nbsp;<wbr>&#8216;OTHER&#8217;&nbsp;<wbr>: filter protected and private attributes&nbsp;<wbr>[currentt: PUB_ONLY] </dd>
 <dt>-d&lt;file&gt;, &#8211;diadefs=&lt;file&gt;</dt>
 <dd> create diagram according to the diagrams definitions in &lt;file&gt;</dd>

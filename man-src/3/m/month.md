@@ -13,67 +13,67 @@ description: "QuantLib::Date – Concrete date class."
 <p> #include &lt;ql/time/date.hpp&gt; </p>
 <h3>Public Member Functions</h3>
 <p> <code>constructors</code> </p>
-<p> <code>Date</code> ()<br />
- <i>Default constructor returning a null date. </i><br />
- <code>Date</code> (<code>BigInteger</code> serialNumber)<br />
- <i>Constructor taking a serial number as given by Applix or Excel. </i><br />
- <code>Date</code> (Day d, <code>Month</code> m, Year y)<br />
+<p> <code>Date</code> ()<br/>
+ <i>Default constructor returning a null date. </i><br/>
+ <code>Date</code> (<code>BigInteger</code> serialNumber)<br/>
+ <i>Constructor taking a serial number as given by Applix or Excel. </i><br/>
+ <code>Date</code> (Day d, <code>Month</code> m, Year y)<br/>
  <i>More traditional constructor. </i> </p>
 <p> <code>inspectors</code> </p>
 <p> <code>Weekday</code> <code>weekday</code> () const </p>
 <p> Day <code>dayOfMonth</code> () const </p>
-<p> Day <code>dayOfYear</code> () const<br />
- <i>One-based (Jan 1st = 1). </i><br />
+<p> Day <code>dayOfYear</code> () const<br/>
+ <i>One-based (Jan 1st = 1). </i><br/>
  <code>Month</code> <code>month</code> () const </p>
 <p> Year <code>year</code> () const </p>
 <p> <code>BigInteger</code> <code>serialNumber</code> () const </p>
 <p> <code>date algebra</code> </p>
-<p> <code>Date</code> &amp; <code>operator+=</code> (<code>BigInteger</code> days)<br />
- <i>increments date by the given number of days </i><br />
- <code>Date</code> &amp; <code>operator+=</code> (const <code>Period</code> &amp;)<br />
- <i>increments date by the given period </i><br />
- <code>Date</code> &amp; <code>operator-=</code> (<code>BigInteger</code> days)<br />
- <i>decrement date by the given number of days </i><br />
- <code>Date</code> &amp; <code>operator-=</code> (const <code>Period</code> &amp;)<br />
- <i>decrements date by the given period </i><br />
- <code>Date</code> &amp; <code>operator++</code> ()<br />
- <i>1-day pre-increment </i><br />
- <code>Date</code> <code>operator++</code> (int)<br />
- <i>1-day post-increment </i><br />
- <code>Date</code> &amp; <code>operator&#8211;</code> ()<br />
- <i>1-day pre-decrement </i><br />
- <code>Date</code> <code>operator&#8211;</code> (int)<br />
- <i>1-day post-decrement </i><br />
- <code>Date</code> <code>operator+</code> (<code>BigInteger</code> days) const<br />
- <i>returns a new date incremented by the given number of days </i><br />
- <code>Date</code> <code>operator+</code> (const <code>Period</code> &amp;) const<br />
- <i>returns a new date incremented by the given period </i><br />
- <code>Date</code> <code>operator-</code> (<code>BigInteger</code> days) const<br />
- <i>returns a new date decremented by the given number of days </i><br />
- <code>Date</code> <code>operator-</code> (const <code>Period</code> &amp;) const<br />
+<p> <code>Date</code> &amp; <code>operator+=</code> (<code>BigInteger</code> days)<br/>
+ <i>increments date by the given number of days </i><br/>
+ <code>Date</code> &amp; <code>operator+=</code> (const <code>Period</code> &amp;)<br/>
+ <i>increments date by the given period </i><br/>
+ <code>Date</code> &amp; <code>operator-=</code> (<code>BigInteger</code> days)<br/>
+ <i>decrement date by the given number of days </i><br/>
+ <code>Date</code> &amp; <code>operator-=</code> (const <code>Period</code> &amp;)<br/>
+ <i>decrements date by the given period </i><br/>
+ <code>Date</code> &amp; <code>operator++</code> ()<br/>
+ <i>1-day pre-increment </i><br/>
+ <code>Date</code> <code>operator++</code> (int)<br/>
+ <i>1-day post-increment </i><br/>
+ <code>Date</code> &amp; <code>operator&#8211;</code> ()<br/>
+ <i>1-day pre-decrement </i><br/>
+ <code>Date</code> <code>operator&#8211;</code> (int)<br/>
+ <i>1-day post-decrement </i><br/>
+ <code>Date</code> <code>operator+</code> (<code>BigInteger</code> days) const<br/>
+ <i>returns a new date incremented by the given number of days </i><br/>
+ <code>Date</code> <code>operator+</code> (const <code>Period</code> &amp;) const<br/>
+ <i>returns a new date incremented by the given period </i><br/>
+ <code>Date</code> <code>operator-</code> (<code>BigInteger</code> days) const<br/>
+ <i>returns a new date decremented by the given number of days </i><br/>
+ <code>Date</code> <code>operator-</code> (const <code>Period</code> &amp;) const<br/>
  <i>returns a new date decremented by the given period </i></p>
 <h3>Static Public Member Functions</h3>
 <p> <code>static methods</code> </p>
-<p> static <code>Date</code> <code>todaysDate</code> ()<br />
- <i>today&#8217;s date. </i><br />
- static <code>Date</code> <code>minDate</code> ()<br />
- <i>earliest allowed date </i><br />
- static <code>Date</code> <code>maxDate</code> ()<br />
- <i>latest allowed date </i><br />
- static bool <code>isLeap</code> (Year y)<br />
- <i>whether the given year is a leap one </i><br />
- static <code>Date</code> <code>endOfMonth</code> (const <code>Date</code> &amp;d)<br />
- <i>last day of the month to which the given date belongs </i><br />
- static bool <code>isEndOfMonth</code> (const <code>Date</code> &amp;d)<br />
- <i>whether a date is the last day of its month </i><br />
- static <code>Date</code> <code>nextWeekday</code> (const <code>Date</code> &amp;d, <code>Weekday</code> w)<br />
- <i>next given weekday following or equal to the given date </i><br />
- static <code>Date</code> <code>nthWeekday</code> (Size n, <code>Weekday</code> w, <code>Month</code> m, Year y)<br />
+<p> static <code>Date</code> <code>todaysDate</code> ()<br/>
+ <i>today&#8217;s date. </i><br/>
+ static <code>Date</code> <code>minDate</code> ()<br/>
+ <i>earliest allowed date </i><br/>
+ static <code>Date</code> <code>maxDate</code> ()<br/>
+ <i>latest allowed date </i><br/>
+ static bool <code>isLeap</code> (Year y)<br/>
+ <i>whether the given year is a leap one </i><br/>
+ static <code>Date</code> <code>endOfMonth</code> (const <code>Date</code> &amp;d)<br/>
+ <i>last day of the month to which the given date belongs </i><br/>
+ static bool <code>isEndOfMonth</code> (const <code>Date</code> &amp;d)<br/>
+ <i>whether a date is the last day of its month </i><br/>
+ static <code>Date</code> <code>nextWeekday</code> (const <code>Date</code> &amp;d, <code>Weekday</code> w)<br/>
+ <i>next given weekday following or equal to the given date </i><br/>
+ static <code>Date</code> <code>nthWeekday</code> (Size n, <code>Weekday</code> w, <code>Month</code> m, Year y)<br/>
  <i>n-th given weekday in the given month and year </i></p>
 <h3>Related Functions</h3>
-<p> (Note that these are not member functions.)<br />
- <code>BigInteger</code> <code>operator-</code> (const <code>Date</code> &amp;, const <code>Date</code> &amp;)<br />
- <i>Difference in days between dates. </i><br />
+<p> (Note that these are not member functions.)<br/>
+ <code>BigInteger</code> <code>operator-</code> (const <code>Date</code> &amp;, const <code>Date</code> &amp;)<br/>
+ <i>Difference in days between dates. </i><br/>
  bool <code>operator==</code> (const <code>Date</code> &amp;, const <code>Date</code> &amp;) </p>
 <p> bool <code>operator!=</code> (const <code>Date</code> &amp;, const <code>Date</code> &amp;) </p>
 <p> bool <code>operator&lt;</code> (const <code>Date</code> &amp;, const <code>Date</code> &amp;) </p>

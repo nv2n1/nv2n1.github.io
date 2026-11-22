@@ -14,10 +14,10 @@ description: "sc::GaussianBasisSet –"
 #include &lt;gaussbas.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Classes</h3>
-<p>class <code>ValueData</code><br />
+<p>class <code>ValueData</code><br/>
  <i>This holds scratch data needed to compute basis function values. </i></p>
 <h3>Public Types</h3>
-<p>enum <code>UnitType</code> { <code>Unit</code> }<br />
+<p>enum <code>UnitType</code> { <code>Unit</code> }<br/>
  <i>This can be given to a CTOR to construct a unit basis function. </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>GaussianBasisSet (const Ref&lt; KeyVal &gt; &amp;)

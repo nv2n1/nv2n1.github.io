@@ -13,15 +13,15 @@ description: "geninfo – Generate tracefiles from .da files"
 <p> <code>geninfo</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;version</code>] [<code>-q</code>|<code>&#8211;quiet</code>] </p>
 <dl>
 <dt>
-</dt><dd> [<code>-i</code>|<code>&#8211;initial</code>] [<code>-t</code>|<code>&#8211;test-name</code> <i>test-name</i>]<br />
- [<code>-o</code>|<code>&#8211;output-filename</code> <i>filename</i>] [<code>-f</code>|<code>&#8211;follow</code>]<br />
- [<code>-b</code>|<code>&#8211;base-directory</code> <i>directory</i>]<br />
- [<code>&#8211;checksum</code>] [<code>&#8211;no-checksum</code>]<br />
- [<code>&#8211;compat-libtool</code>] [<code>&#8211;no-compat-libtool</code>]<br />
- [<code>&#8211;gcov-tool</code> <i>tool</i>] [<code>&#8211;ignore-errors</code> <i>errors</i>]<br />
- [<code>&#8211;no-recursion</code>] <i>directory</i> [<code>&#8211;external</code>] [<code>&#8211;no-external</code>]<br />
- [<code>&#8211;config-file</code> <i>config-file</i>] [<code>&#8211;no-markers</code>]<br />
- [<code>&#8211;derive-func-data</code>] [<code>&#8211;compat</code> <i>mode</i>=on|off|auto]<br />
+</dt><dd> [<code>-i</code>|<code>&#8211;initial</code>] [<code>-t</code>|<code>&#8211;test-name</code> <i>test-name</i>]<br/>
+ [<code>-o</code>|<code>&#8211;output-filename</code> <i>filename</i>] [<code>-f</code>|<code>&#8211;follow</code>]<br/>
+ [<code>-b</code>|<code>&#8211;base-directory</code> <i>directory</i>]<br/>
+ [<code>&#8211;checksum</code>] [<code>&#8211;no-checksum</code>]<br/>
+ [<code>&#8211;compat-libtool</code>] [<code>&#8211;no-compat-libtool</code>]<br/>
+ [<code>&#8211;gcov-tool</code> <i>tool</i>] [<code>&#8211;ignore-errors</code> <i>errors</i>]<br/>
+ [<code>&#8211;no-recursion</code>] <i>directory</i> [<code>&#8211;external</code>] [<code>&#8211;no-external</code>]<br/>
+ [<code>&#8211;config-file</code> <i>config-file</i>] [<code>&#8211;no-markers</code>]<br/>
+ [<code>&#8211;derive-func-data</code>] [<code>&#8211;compat</code> <i>mode</i>=on|off|auto]<br/>
  [<code>&#8211;rc</code> <i>keyword</i>=<i>value</i>]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>geninfo </code> converts all GCOV coverage data files found in <i>directory</i> into tracefiles, which the <code>genhtml</code> tool can convert to HTML output. </p>
@@ -46,7 +46,7 @@ description: "geninfo – Generate tracefiles from .da files"
 <dt>
 </dt><dd> Marks the end of an excluded section. The current line not part of this section.</dd></dl>
 <h2>OPTIONS</h2>
-<p> <code>-b</code> <i>directory</i><br />
+<p> <code>-b</code> <i>directory</i><br/>
  <code>&#8211;base-directory</code> <i>directory</i> </p>
 <dl>
 <dt>
@@ -58,7 +58,7 @@ description: "geninfo – Generate tracefiles from .da files"
 <p> In this example, use /home/user/project as base directory. </p>
 <p> This option is required when using geninfo on projects built with libtool or similar build environments that work with a base directory, i.e. environments, where the current working directory when invoking the compiler is not the same directory in which the source code file is located. </p>
 <p> Note that this option will not work in environments where multiple base directories are used. In that case use configuration file setting <code>geninfo_auto_base=1</code> (see <code><a href="/docs/linux/man/5-lcovrc/">lcovrc</a></code>(5)).</dl>
-<p> <code>&#8211;checksum</code><br />
+<p> <code>&#8211;checksum</code><br/>
  <code>&#8211;no-checksum</code> </p>
 <dl>
 <dt>
@@ -104,7 +104,7 @@ description: "geninfo – Generate tracefiles from .da files"
 </dt><dd> Enable this mode if you are capturing coverage data for a project that was built using a version of GCC 4.6 that contains a modification (split function checksums) of later GCC versions. Typical error messages when running geninfo on coverage data produced by such GCC versions are &#8216;out of memory&#8217; and &#8216;reached unexpected end of file&#8217;. </dd>
 <p> The default value for this setting is &#8216;auto&#8217;</dl>
 </dl>
-<p> <code>&#8211;compat-libtool</code><br />
+<p> <code>&#8211;compat-libtool</code><br/>
  <code>&#8211;no-compat-libtool</code> </p>
 <dl>
 <dt>
@@ -123,14 +123,14 @@ description: "geninfo – Generate tracefiles from .da files"
 <dt>
 </dt><dd> Calculate function coverage data from line coverage data. </dd>
 <p> Use this option to collect function coverage data, even if the version of the gcov tool installed on the test system does not provide this data. lcov will instead derive function coverage data from line coverage data and information about which lines belong to a function.</dl>
-<p> <code>&#8211;external</code><br />
+<p> <code>&#8211;external</code><br/>
  <code>&#8211;no-external</code> </p>
 <dl>
 <dt>
 </dt><dd> Specify whether to capture coverage data for external source files. </dd>
 <p> External source files are files which are not located in one of the directories specified by &#8211;directory or &#8211;base-directory. Use &#8211;external to include external source files while capturing coverage data or &#8211;no-external to ignore this data. </p>
 <p> Data for external source files is <code>included</code> by default.</dl>
-<p> <code>-f</code><br />
+<p> <code>-f</code><br/>
  <code>&#8211;follow</code></p>
 <dl>
 <dt>
@@ -139,7 +139,7 @@ description: "geninfo – Generate tracefiles from .da files"
 <dl>
 <dt>
 </dt><dd> Specify the location of the gcov tool.</dd></dl>
-<p> <code>-h</code><br />
+<p> <code>-h</code><br/>
  <code>&#8211;help</code></p>
 <dl>
 <dt>
@@ -152,7 +152,7 @@ description: "geninfo – Generate tracefiles from .da files"
 <p> <i>errors</i> can be a comma-separated list of the following keywords: </p>
 <p> <code>gcov:</code> the gcov tool returned with a non-zero return code. </p>
 <p> <code>source:</code> the source code file for a data set could not be found.</dl>
-<p> <code>-i</code><br />
+<p> <code>-i</code><br/>
  <code>&#8211;initial</code></p>
 <dl>
 <dt>
@@ -167,13 +167,13 @@ description: "geninfo – Generate tracefiles from .da files"
 <dl>
 <dt>
 </dt><dd> Use this option if you want to get coverage data for the specified directory only without processing subdirectories.</dd></dl>
-<p> <code>-o </code><i>output-filename</i><br />
+<p> <code>-o </code><i>output-filename</i><br/>
  <code>&#8211;output-filename </code><i>output-filename</i></p>
 <dl>
 <dt>
 </dt><dd> Write all data to <i>output-filename</i>. </dd>
 <p> If you want to have all data written to a single file (for easier handling), use this option to specify the respective filename. By default, one tracefile will be created for each processed .da file.</dl>
-<p> <code>-q</code><br />
+<p> <code>-q</code><br/>
  <code>&#8211;quiet</code></p>
 <dl>
 <dt>
@@ -184,13 +184,13 @@ description: "geninfo – Generate tracefiles from .da files"
 <dt>
 </dt><dd> Override a configuration directive. </dd>
 <p> Use this option to specify a <i>keyword</i>=<i>value</i> statement which overrides the corresponding configuration statement in the lcovrc configuration file. You can specify this option more than once to override multiple configuration statements. See <code><a href="/docs/linux/man/5-lcovrc/">lcovrc</a></code>(5) for a list of available keywords and their meaning.</dl>
-<p> <code>-t </code><i>testname</i><br />
+<p> <code>-t </code><i>testname</i><br/>
  <code>&#8211;test-name </code><i>testname</i></p>
 <dl>
 <dt>
 </dt><dd> Use test case name <i>testname</i> for resulting data. Valid test case names can consist of letters, decimal digits and the underscore character (&#8216;_&#8217;). </dd>
 <p> This proves useful when data from several test cases is merged (i.e. by simply concatenating the respective tracefiles) in which case a test name can be used to differentiate between data from each test case.</dl>
-<p> <code>-v</code><br />
+<p> <code>-v</code><br/>
  <code>&#8211;version</code></p>
 <dl>
 <dt>
@@ -214,19 +214,19 @@ description: "geninfo – Generate tracefiles from .da files"
 <p> Next, there is a list of execution counts for each instrumented function: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>FNDA:&lt;execution count&gt;,&lt;function name&gt; </p>
 <p> This list is followed by two lines containing the number of functions found and hit: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>FNF:&lt;number of functions found&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>FNF:&lt;number of functions found&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>FNH:&lt;number of function hit&gt; </p>
 <p> Branch coverage information is stored which one line per branch: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>BRDA:&lt;line number&gt;,&lt;block number&gt;,&lt;branch number&gt;,&lt;taken&gt; </p>
 <p> Block number and branch number are gcc internal IDs for the branch. Taken is either &#8216;-&#8216; if the basic block containing the branch was never executed or a number indicating how often that branch was taken. </p>
 <p> Branch coverage summaries are stored in two lines: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>BRF:&lt;number of branches found&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>BRF:&lt;number of branches found&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>BRH:&lt;number of branches hit&gt; </p>
 <p> Then there is a list of execution counts for each instrumented line (i.e. a line which resulted in executable code): </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>DA:&lt;line number&gt;,&lt;execution count&gt;[,&lt;checksum&gt;] </p>
 <p> Note that there may be an optional checksum present for each instrumented line. The current <code>geninfo</code> implementation uses an MD5 hash as checksumming algorithm. </p>
 <p> At the end of a section, there is a summary about how many lines were found and how many were actually instrumented: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>LH:&lt;number of lines with a non-zero execution count&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>LH:&lt;number of lines with a non-zero execution count&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>LF:&lt;number of instrumented lines&gt; </p>
 <p> Each sections ends with: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>end_of_record </p>

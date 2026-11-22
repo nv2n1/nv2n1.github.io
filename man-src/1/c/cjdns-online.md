@@ -24,10 +24,10 @@ systemctl enable cjdns-wait-online
 <h2>OPTIONS</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <code>-t</code>, <code>&#8211;timeout</code> &lt;timeout_value&gt;:<tt>&nbsp;<wbr></tt><br />
+<dd> <code>-t</code>, <code>&#8211;timeout</code> &lt;timeout_value&gt;:<tt>&nbsp;<wbr></tt><br/>
  time to wait in seconds, default 30</dd>
 <dt>&bull;</dt>
-<dd> <code>-x</code>, <code>&#8211;exit</code>:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br />
+<dd> <code>-x</code>, <code>&#8211;exit</code>:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br/>
  Exit immediately if cjdns is not online</dd>
 <dt>&bull;</dt>
 <dd> <code>-q</code>, <code>&#8211;quiet</code>: Don&#8217;t print anything</dd>
@@ -51,10 +51,10 @@ systemctl enable cjdns-wait-online
 <h2>OPTIONS</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <code>-t</code>, <code>&#8211;timeout</code> &lt;timeout_value&gt;:<tt>&nbsp;<wbr></tt><br />
+<dd> <code>-t</code>, <code>&#8211;timeout</code> &lt;timeout_value&gt;:<tt>&nbsp;<wbr></tt><br/>
  time to wait in seconds, default 30</dd>
 <dt>&bull;</dt>
-<dd> <code>-x</code>, <code>&#8211;exit</code>:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br />
+<dd> <code>-x</code>, <code>&#8211;exit</code>:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br/>
  Exit immediately if cjdns is not online</dd>
 <dt>&bull;</dt>
 <dd> <code>-q</code>, <code>&#8211;quiet</code>: Don&#8217;t print anything</dd>

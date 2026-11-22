@@ -114,29 +114,29 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
 <p>In the obsolete LinuxThreads implementation, each of the threads in a process has a different process ID. This is in violation of the POSIX threads specification, and is the source of many other nonconformances to the standard; see <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7).</p>
 <h2>Examples</h2>
 <p>The program below demonstrates the use of <code>pthread_create</code>(), as well as a number of other functions in the pthreads API. In the following run, on a system providing the NPTL threading implementation, the stack size defaults to the value given by the &quot;stack size&quot; resource limit: $<code> ulimit -s</code> 8192 # The stack size limit is 8 MB (0x800000 bytes) $<code> ./a.out hola salut servus</code> Thread 1: top of stack near 0xb7dd03b8; argv_string=hola Thread 2: top of stack near 0xb75cf3b8; argv_string=salut Thread 3: top of stack near 0xb6dce3b8; argv_string=servus Joined with thread 1; returned value was HOLA Joined with thread 2; returned value was SALUT Joined with thread 3; returned value was SERVUS In the next run, the program explicitly sets a stack size of 1 MB (using <code><a href="/docs/linux/man/3-pthread_attr_setstacksize/">pthread_attr_setstacksize</a></code>(3)) for the created threads: $ ./a.out -s 0x100000 hola salut servus</p>
-<p>Thread 1: top of stack near 0xb7d723b8; argv_string=hola<br />
-Thread 2: top of stack near 0xb7c713b8; argv_string=salut<br />
-Thread 3: top of stack near 0xb7b703b8; argv_string=servus<br />
-Joined with thread 1; returned value was HOLA<br />
-Joined with thread 2; returned value was SALUT<br />
+<p>Thread 1: top of stack near 0xb7d723b8; argv_string=hola<br/>
+Thread 2: top of stack near 0xb7c713b8; argv_string=salut<br/>
+Thread 3: top of stack near 0xb7b703b8; argv_string=servus<br/>
+Joined with thread 1; returned value was HOLA<br/>
+Joined with thread 2; returned value was SALUT<br/>
 Joined with thread 3; returned value was SERVUS</p>
 <p>Program source</p>
-<p>#include &lt;pthread.h&gt;<br />
-#include &lt;string.h&gt;<br />
-#include &lt;stdio.h&gt;<br />
-#include &lt;stdlib.h&gt;<br />
-#include &lt;unistd.h&gt;<br />
-#include &lt;errno.h&gt;<br />
-#include &lt;ctype.h&gt;<br />
-#define handle_error_en(en, msg) \<br />
-do { errno = en; perror(msg); exit(EXIT_FAILURE); } while (0)<br />
-#define handle_error(msg) \<br />
-do { perror(msg); exit(EXIT_FAILURE); } while (0)<br />
-struct thread_info {    /* Used as argument to thread_start() */<br />
-    pthread_t thread_id;        /* ID returned by pthread_create() */<br />
-    int       thread_num;       /* Application-defined thread # */<br />
-    char     *argv_string;      /* From command-line argument */<br />
-}; /* Thread start function: display address near top of our stack,<br />
+<p>#include &lt;pthread.h&gt;<br/>
+#include &lt;string.h&gt;<br/>
+#include &lt;stdio.h&gt;<br/>
+#include &lt;stdlib.h&gt;<br/>
+#include &lt;unistd.h&gt;<br/>
+#include &lt;errno.h&gt;<br/>
+#include &lt;ctype.h&gt;<br/>
+#define handle_error_en(en, msg) \<br/>
+do { errno = en; perror(msg); exit(EXIT_FAILURE); } while (0)<br/>
+#define handle_error(msg) \<br/>
+do { perror(msg); exit(EXIT_FAILURE); } while (0)<br/>
+struct thread_info {    /* Used as argument to thread_start() */<br/>
+    pthread_t thread_id;        /* ID returned by pthread_create() */<br/>
+    int       thread_num;       /* Application-defined thread # */<br/>
+    char     *argv_string;      /* From command-line argument */<br/>
+}; /* Thread start function: display address near top of our stack,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;and return upper-cased copy of argv_string&nbsp;*/ </p>
 <pre><code>static void *
 thread_start(void *arg)

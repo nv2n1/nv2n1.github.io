@@ -9,7 +9,7 @@ description: "schemagen – Java(TM) Architecture for XML Binding Schema Generat
 ---
 
 <p> schemagen &#8211; Java(TM) Architecture for XML Binding Schema Generator </p>
-<p> <code>Specification Version:</code> 2.1<br />
+<p> <code>Specification Version:</code> 2.1<br/>
  <code>Implementation Version:</code> 2.1.3 </p>
 <h2>Launching schemagen</h2>
 <p> The schema generator can be launched using the appropriate <i>schemagen</i> shell script in the <i>bin</i> directory for your platform. </p>

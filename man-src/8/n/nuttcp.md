@@ -9,19 +9,19 @@ description: "nuttcp – network performance measurement tool"
 
 <p>nuttcp &#8211; network performance measurement tool</p>
 <h2>Synopsis</h2>
-<p><code>nuttcp -h</code><br />
- <code>nuttcp -V</code><br />
+<p><code>nuttcp -h</code><br/>
+ <code>nuttcp -V</code><br/>
  <code>nuttcp -t</code> [&nbsp;<wbr><code>-bdDsuv</code><i></i>&nbsp;<wbr>] [&nbsp;<wbr><code>-c</code><i>dscp_value</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-l</code><i>buffer_len</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-n</code><i>num_bufs</i>&nbsp;<wbr>] </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [&nbsp;<wbr><code>-w</code><i>window_size</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-ws</code><i>server_window</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-wb</code><i></i>&nbsp;<wbr>] </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [&nbsp;<wbr><code>-p</code><i>data_port</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-P</code><i>control_port</i>&nbsp;<wbr>] </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [&nbsp;<wbr><code>-N</code><i>num_streams</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-R</code><i>xmit_rate_limit [m|g]</i>&nbsp;<wbr>] </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [&nbsp;<wbr><code>-T</code><i>xmit_timeout [m]</i>&nbsp;<wbr>] <i>host</i> [ <code>&lt;</code> <i>input</i> ]<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [&nbsp;<wbr><code>-T</code><i>xmit_timeout [m]</i>&nbsp;<wbr>] <i>host</i> [ <code>&lt;</code> <i>input</i> ]<br/>
  <code>nuttcp -r</code> [&nbsp;<wbr><code>-bBdsuv</code><i></i>&nbsp;<wbr>] [&nbsp;<wbr><code>-c</code><i>dscp_value</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-l</code><i>buffer_len</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-n</code><i>num_bufs</i>&nbsp;<wbr>] </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [&nbsp;<wbr><code>-w</code><i>window_size</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-ws</code><i>server_window</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-wb</code><i></i>&nbsp;<wbr>] </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [&nbsp;<wbr><code>-p</code><i>data_port</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-P</code><i>control_port</i>&nbsp;<wbr>] </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [&nbsp;<wbr><code>-N</code><i>num_streams</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-R</code><i>xmit_rate_limit [m|g]</i>&nbsp;<wbr>] </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [&nbsp;<wbr><code>-T</code><i>xmit_timeout [m]</i>&nbsp;<wbr>] [ <i>host</i> ] [ <code>&gt;</code> <i>output</i> ]<br />
- <code>nuttcp -S</code> [&nbsp;<wbr><code>-P</code><i>control_port</i>&nbsp;<wbr>]<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [&nbsp;<wbr><code>-T</code><i>xmit_timeout [m]</i>&nbsp;<wbr>] [ <i>host</i> ] [ <code>&gt;</code> <i>output</i> ]<br/>
+ <code>nuttcp -S</code> [&nbsp;<wbr><code>-P</code><i>control_port</i>&nbsp;<wbr>]<br/>
  <code>nuttcp -1</code> [&nbsp;<wbr><code>-P</code><i>control_port</i>&nbsp;<wbr>]</p>
 <h2>Description</h2>
 <p>nuttcp is a network performance measurement tool intended for use by network and system managers. Its most basic usage is to determine the raw TCP (or UDP) network layer throughput by transferring memory buffers from a source system across an interconnecting network to a destination system, either transferring data for a specified time interval, or alternatively transferring a specified number of bytes. In addition to reporting the achieved network throughput in Mbps, nuttcp also provides additional useful information related to the data transfer such as user, system, and wall-clock time, transmitter and receiver CPU utilization, and loss percentage (for UDP transfers). </p>

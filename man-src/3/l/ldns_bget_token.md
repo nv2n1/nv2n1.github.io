@@ -10,7 +10,7 @@ description: "ldns_bget_token, ldns_bgetc, ldns_bskipcs"
 
 <p> ldns_bget_token, ldns_bgetc, ldns_bskipcs </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ssize_t ldns_bget_token(ldns_buffer *b, char *token, const char *delim, size_t limit); </p>

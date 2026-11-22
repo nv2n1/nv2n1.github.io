@@ -12,7 +12,7 @@ description: "gdc – Client utility for GoodData on-demand Business Intelligenc
 <h2>SYNOPSIS</h2>
 <p> gdc [global options] &lt;command&gt; [command options]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>gdc</code> is the command-line and interactive client for GoodData REST-ful service <font SIZE="-1">API</font> built on top of WWW::GoodData client library.</p>
+<p> <code>gdc</code> is the command-line and interactive client for GoodData REST-ful service API built on top of WWW::GoodData client library.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
@@ -24,10 +24,10 @@ description: "gdc – Client utility for GoodData on-demand Business Intelligenc
 <dt><code>-p</code>, <code>&#8211;password</code></dt>
 <dd> Log in on start, provided <code>&#8211;user</code> option was set as well.</dd>
 <dt><code>-P</code>, <code>&#8211;project</code></dt>
-<dd> Project <font SIZE="-1">URI.</font> It is used as a default value for commands that accept project <font SIZE="-1">URI</font> option (such as <code>rmproject</code> and <code>lsreports</code>) and can be changed from within the shell (see <code>project</code> and <code>mkproject</code> commands). </dd>
-<p> No checking is done with the project <font SIZE="-1">URI</font> util a command that acts upon the project is issued.</p>
+<dd> Project URI. It is used as a default value for commands that accept project URI option (such as <code>rmproject</code> and <code>lsreports</code>) and can be changed from within the shell (see <code>project</code> and <code>mkproject</code> commands). </dd>
+<p> No checking is done with the project URI util a command that acts upon the project is issued.</p>
 <dt><code>-r</code>, <code>&#8211;root</code></dt>
-<dd> <font SIZE="-1">URL</font> of the service <font SIZE="-1">API</font> root. Defaults to &lt;<a rel="nofollow" href="https://secure.gooddata.com/gdc/">https://secure.gooddata.com/gdc/</a>&gt;.</dd></dl>
+<dd> URL of the service API root. Defaults to &lt;<a rel="nofollow" href="https://secure.gooddata.com/gdc/">https://secure.gooddata.com/gdc/</a>&gt;.</dd></dl>
 <h2>COMMANDS</h2>
 <h3>shell</h3>
 <p> Launch an interactive client session. </p>
@@ -44,10 +44,10 @@ description: "gdc – Client utility for GoodData on-demand Business Intelligenc
 <h3>logout</h3>
 <p> Drop credentials if user is logged in, otherwise do nothing. Automatically done upon utility exit.</p>
 <h3>project [uri]</h3>
-<p> Change or print the default project <font SIZE="-1">URI.</font> Default project is used by various commands involving projects, including <code>mkproject</code> and <code>rmproject</code>.</p>
+<p> Change or print the default project URI. Default project is used by various commands involving projects, including <code>mkproject</code> and <code>rmproject</code>.</p>
 <dl>
 <dt><code>-P</code>, <code>&#8211;project</code></dt>
-<dd> Project <font SIZE="-1">URI.</font> No checking is done with the project <font SIZE="-1">URI.</font></dd></dl>
+<dd> Project URI. No checking is done with the project URI.</dd></dl>
 <h3>lsprojects</h3>
 <p> Print a list of available projects.</p>
 <dl>
@@ -67,8 +67,8 @@ description: "gdc – Client utility for GoodData on-demand Business Intelligenc
 <p> Create user.</p>
 <dl>
 <dt><code>-d</code>, <code>&#8211;domain</code></dt>
-<dd> <font SIZE="-1">URI</font> of an user domain in which will be user created. </dd>
-<p> Defaults to <tt>&quot;/gdc/account/domains/default&quot;</tt>, which is almost definitely useless to you. Get a proper domain <font SIZE="-1">URI</font> from your support representative.</p>
+<dd> URI of an user domain in which will be user created. </dd>
+<p> Defaults to <tt>&quot;/gdc/account/domains/default&quot;</tt>, which is almost definitely useless to you. Get a proper domain URI from your support representative.</p>
 <dt><code>-e</code>, <code>&#8211;email</code></dt>
 <dd> User email.</dd>
 <dt><code>-l</code>, <code>&#8211;login</code></dt>
@@ -84,7 +84,7 @@ description: "gdc – Client utility for GoodData on-demand Business Intelligenc
 <dt><code>-c</code>, <code>&#8211;company</code></dt>
 <dd> User company.</dd>
 <dt><code>-o</code>, <code>&#8211;sso</code></dt>
-<dd> User company&#8217;s <font SIZE="-1">DNS</font> suffix, if <font SIZE="-1">SSO</font> is used.</dd></dl>
+<dd> User company&#8217;s DNS suffix, if SSO is used.</dd></dl>
 <h3>mkproject &lt;title&gt; [summary]</h3>
 <p> Create a project.</p>
 <dl>
@@ -111,33 +111,33 @@ description: "gdc – Client utility for GoodData on-demand Business Intelligenc
 <dt><code>-P</code>, <code>&#8211;project</code></dt>
 <dd> Set or override the project to act on. See global <code>&#8211;project</code> option for the detailed description.</dd>
 <dt><code>-r</code>, <code>&#8211;report</code></dt>
-<dd> Set report <font SIZE="-1">URI </font>(see <code>lsreports</code>).</dd>
+<dd> Set report URI (see <code>lsreports</code>).</dd>
 <dt><code>-f</code>, <code>&#8211;file</code></dt>
 <dd> File to place the result into.</dd>
 <dt><code>-F</code>, <code>&#8211;format</code></dt>
 <dd> One of <code>pdf</code>, <code>xls</code>, <code>png</code> (latter only valid for chart reports), Can be unspecified if file name ends with a dot and format name (extension).</dd></dl>
 <h3>model</h3>
-<p> Export a Logical Data Model (<font SIZE="-1">LDM</font>) picture in <font SIZE="-1">PNG</font> format into file.</p>
+<p> Export a Logical Data Model (LDM) picture in PNG format into file.</p>
 <dl>
 <dt><code>-P</code>, <code>&#8211;project</code></dt>
 <dd> Set or override the project to act on. See global <code>&#8211;project</code> option for the detailed description.</dd>
 <dt><code>-f</code>, <code>&#8211;file</code></dt>
 <dd> File to place the result into.</dd></dl>
 <h3>chmodel</h3>
-<p> Change a Logical Data Model (<font SIZE="-1">LDM</font>) with <font SIZE="-1">MAQL DDL</font> script. </p>
-<p> The <font SIZE="-1">MAQL</font> script can be either specified inline as argument to <code>chmodel</code>, or read from file specified with <code>&#8211;file</code> option (see below).</p>
+<p> Change a Logical Data Model (LDM) with MAQL DDL script. </p>
+<p> The MAQL script can be either specified inline as argument to <code>chmodel</code>, or read from file specified with <code>&#8211;file</code> option (see below).</p>
 <dl>
 <dt><code>-P</code>, <code>&#8211;project</code></dt>
 <dd> Set or override the project to act on. See global <code>&#8211;project</code> option for the detailed description.</dd>
 <dt><code>-f</code>, <code>&#8211;file</code></dt>
-<dd> Read <font SIZE="-1">MAQL</font> script from specified file.</dd></dl>
+<dd> Read MAQL script from specified file.</dd></dl>
 <h3>upload</h3>
 <p> Update data set with new data.</p>
 <dl>
 <dt><code>-P</code>, <code>&#8211;project</code></dt>
 <dd> Set or override the project to act on. See global <code>&#8211;project</code> option for the detailed description.</dd>
 <dt><code>-f</code>, <code>&#8211;file</code></dt>
-<dd> <font SIZE="-1">SLI</font> Manifest of the upload.</dd></dl>
+<dd> SLI Manifest of the upload.</dd></dl>
 <h3>mkobject &lt;type&gt; &lt;title&gt; &lt;expression&gt;</h3>
 <p> Create a new metadata object of a given type with expression as the only content.</p>
 <dl>
@@ -148,9 +148,9 @@ description: "gdc – Client utility for GoodData on-demand Business Intelligenc
 <dt><code>-s</code>, <code>&#8211;summary</code></dt>
 <dd> Descriptive summary of the object.</dd>
 <dt><code>-e</code>, <code>&#8211;expr</code></dt>
-<dd> Expression (typically <font SIZE="-1">MAQL</font>).</dd>
+<dd> Expression (typically MAQL).</dd>
 <dt><code>-u</code>, <code>&#8211;uri</code></dt>
-<dd> Instead of creating a new object, rewrite an old one with a given <font SIZE="-1">URI.</font></dd>
+<dd> Instead of creating a new object, rewrite an old one with a given URI.</dd>
 <dt><code>-P</code>, <code>&#8211;project</code></dt>
 <dd> Set or override the project to act on. See global <code>&#8211;project</code> option for the detailed description.</dd></dl>
 <h3>mkreportdef &lt;title&gt; [summary]</h3>
@@ -161,13 +161,13 @@ description: "gdc – Client utility for GoodData on-demand Business Intelligenc
 <dt><code>-s</code>, <code>&#8211;summary</code></dt>
 <dd> Descriptive summary of the object.</dd>
 <dt><code>-m</code>, <code>&#8211;metric</code></dt>
-<dd> Add a metric by its <font SIZE="-1">URL.</font></dd>
+<dd> Add a metric by its URL.</dd>
 <dt><code>-d</code>, <code>&#8211;dim</code></dt>
-<dd> Add an attribute to dimensionality by its <font SIZE="-1">URL.</font></dd>
+<dd> Add an attribute to dimensionality by its URL.</dd>
 <dt><code>-f</code>, <code>&#8211;filter</code></dt>
 <dd> Add a filter by its expression.</dd>
 <dt><code>-u</code>, <code>&#8211;uri</code></dt>
-<dd> Instead of creating a new object, rewrite an old one with a given <font SIZE="-1">URI.</font></dd>
+<dd> Instead of creating a new object, rewrite an old one with a given URI.</dd>
 <dt><code>-P</code>, <code>&#8211;project</code></dt>
 <dd> Set or override the project to act on. See global <code>&#8211;project</code> option for the detailed description.</dd></dl>
 <h3>help</h3>
@@ -175,13 +175,13 @@ description: "gdc – Client utility for GoodData on-demand Business Intelligenc
 <h2>SEE ALSO</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> &lt;<a rel="nofollow" href="https://secure.gooddata.com/gdc/">https://secure.gooddata.com/gdc/</a>&gt; &#8212; Browsable GoodData <font SIZE="-1">API</font></dd>
+<dd> &lt;<a rel="nofollow" href="https://secure.gooddata.com/gdc/">https://secure.gooddata.com/gdc/</a>&gt; &#8212; Browsable GoodData API</dd>
 <dt>&bull;</dt>
-<dd> &lt;<a rel="nofollow" href="http://developer.gooddata.com/api/maql-ddl.html">http://developer.gooddata.com/api/maql-ddl.html</a>&gt; &#8212; <font SIZE="-1">MAQL DDL</font> language documentation</dd>
+<dd> &lt;<a rel="nofollow" href="http://developer.gooddata.com/api/maql-ddl.html">http://developer.gooddata.com/api/maql-ddl.html</a>&gt; &#8212; MAQL DDL language documentation</dd>
 <dt>&bull;</dt>
 <dd> WWW::GoodData &#8212; Client library for GoodData</dd>
 <dt>&bull;</dt>
-<dd> LWP::UserAgent &#8212; Perl <font SIZE="-1">HTTP</font> client</dd></dl>
+<dd> LWP::UserAgent &#8212; Perl HTTP client</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2011, 2012, 2013 Lubomir Rintel </p>
 <p> Copyright 2012, 2013 Adam Stulpa, Tomas Janousek </p>

@@ -15,26 +15,26 @@ description: "sc::R12IntsAcc_MPIIOFile –"
 Public Member Functions</code></pre>
 <p> <code>R12IntsAcc_MPIIOFile</code> (<code>Ref</code>&lt; <code>MemoryGrp</code> &gt; &amp;mem, const char *filename, int num_te_types, int ni, int nj, int nx, int ny) </p>
 <p> <code>R12IntsAcc_MPIIOFile</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- void <code>store_pair_block</code> (int i, int j, double *ints)<br />
- <i>Stores an ij pair block of integrals to the file. </i><br />
- void <code>commit</code> ()<br />
- <i>Commit the content of the accumulator for reading &#8211; deactivate the associated </i><code>MemoryGrp</code> and activate the accumulator.<br />
- void <code>activate</code> ()<br />
- <i>Call when ready to read content. </i><br />
- void <code>deactivate</code> ()<br />
- <i>Done reading content &#8211; activate the associated </i><code>MemoryGrp</code> This is a collective operation.<br />
- void <code>release_pair_block</code> (int i, int j, <code>tbint_type</code> oper_type)<br />
- <i>Releases an ij pair block of integrals. </i><br />
- bool <code>is_local</code> (int i, int j) const<br />
- <i>Is this block stored locally? </i><br />
- bool <code>is_avail</code> (int i, int j) const<br />
- <i>In this implementation blocks are available everywhere. </i><br />
- bool <code>has_access</code> (int proc) const<br />
- <i>Does this task have access to all the integrals? </i><br />
- bool <code>can_restart</code> () const<br />
- <i>Can restart MPI-IO-based accumulator. </i><br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ void <code>store_pair_block</code> (int i, int j, double *ints)<br/>
+ <i>Stores an ij pair block of integrals to the file. </i><br/>
+ void <code>commit</code> ()<br/>
+ <i>Commit the content of the accumulator for reading &#8211; deactivate the associated </i><code>MemoryGrp</code> and activate the accumulator.<br/>
+ void <code>activate</code> ()<br/>
+ <i>Call when ready to read content. </i><br/>
+ void <code>deactivate</code> ()<br/>
+ <i>Done reading content &#8211; activate the associated </i><code>MemoryGrp</code> This is a collective operation.<br/>
+ void <code>release_pair_block</code> (int i, int j, <code>tbint_type</code> oper_type)<br/>
+ <i>Releases an ij pair block of integrals. </i><br/>
+ bool <code>is_local</code> (int i, int j) const<br/>
+ <i>Is this block stored locally? </i><br/>
+ bool <code>is_avail</code> (int i, int j) const<br/>
+ <i>In this implementation blocks are available everywhere. </i><br/>
+ bool <code>has_access</code> (int proc) const<br/>
+ <i>Does this task have access to all the integrals? </i><br/>
+ bool <code>can_restart</code> () const<br/>
+ <i>Can restart MPI-IO-based accumulator. </i><br/>
  int <code>ij_index</code> (int i, int j) const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void check_error_code_ (int errcod) const

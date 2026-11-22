@@ -16,7 +16,7 @@ description: "guestunmount – Unmount a guestmounted filesystem"
 </pre>
 <h2>DESCRIPTION</h2>
 <p> guestunmount is a utility to clean up mounted filesystems automatically. <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1) mounts filesystems using libguestfs. This program unmounts the filesystem when a program or script has finished with it. </p>
-<p> guestunmount is a wrapper around the <font SIZE="-1">FUSE </font><i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1) program, which must exist on the current <tt>&quot;PATH&quot;</tt>. </p>
+<p> guestunmount is a wrapper around the FUSE <i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1) program, which must exist on the current <tt>&quot;PATH&quot;</tt>. </p>
 <p> There are two ways to use guestunmount. When called as: </p>
 <pre>
  guestunmount mountpoint
@@ -27,7 +27,7 @@ description: "guestunmount – Unmount a guestmounted filesystem"
  guestunmount --fd=FD mountpoint
 </pre>
 <p> it waits until the pipe <tt>&quot;FD&quot;</tt> is closed. This can be used to monitor another process and clean up its mountpoint when that process exits, as described below.</p>
-<h3><font SIZE="-1">FROM PROGRAMS</font></h3>
+<h3>FROM PROGRAMS</h3>
 <p> You can just call <tt>&quot;guestunmount mountpoint&quot;</tt> from the program, but a more sophisticated way to use guestunmount is to have it monitor your program so it can clean up the mount point if your program exits unexpectedly. </p>
 <p> In the program, create a pipe (eg. by calling <i><a href="/docs/linux/man/2-pipe/">pipe</a></i>(2)). Let <tt>&quot;FD&quot;</tt> be the file descriptor number of the read side of the pipe (ie. <tt>&quot;pipefd[0]&quot;</tt>). </p>
 <p> After mounting the filesystem with <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1) (on <tt>&quot;mountpoint&quot;</tt>), fork and run guestunmount like this: </p>
@@ -38,7 +38,7 @@ description: "guestunmount – Unmount a guestmounted filesystem"
 <p> Now, when the write side of the pipe (ie. <tt>&quot;pipefd[1]&quot;</tt>) is closed for any reason, either explicitly or because the parent process exits, guestunmount notices and unmounts the mountpoint. </p>
 <p> If your operating system supports it, you should set the <tt>&quot;FD_CLOEXEC&quot;</tt> flag on the write side of the pipe. This is so that other child processes don&#8217;t inherit the file descriptor and keep it open. </p>
 <p> Guestunmount never daemonizes itself.</p>
-<h3><font SIZE="-1">FROM SHELL SCRIPTS</font></h3>
+<h3>FROM SHELL SCRIPTS</h3>
 <p> Since bash doesn&#8217;t provide a way to create an unnamed pipe, use a trap to call guestunmount on exit like this: </p>
 <pre>
  trap &quot;guestunmount mountpoint&quot; EXIT INT QUIT TERM
@@ -52,7 +52,7 @@ description: "guestunmount – Unmount a guestmounted filesystem"
 <dt><code>-q</code></dt>
 <dd>
 </dd><dt><code>&#8211;quiet</code></dt>
-<dd> Don&#8217;t display error messages from fusermount. The return status is still set (see &#8220;<font SIZE="-1">EXIT STATUS&#8221;</font> below).</dd>
+<dd> Don&#8217;t display error messages from fusermount. The return status is still set (see &#8220;EXIT STATUS&#8221; below).</dd>
 <dt><code>&#8211;no-retry</code></dt>
 <dd>
 </dd><dt><code>&#8211;retry=N</code></dt>
@@ -67,7 +67,7 @@ description: "guestunmount – Unmount a guestmounted filesystem"
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
 <dt>&quot;PATH&quot;</dt>
-<dd> The <i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1) program (supplied by <font SIZE="-1">FUSE</font>) must be available on the current <tt>&quot;PATH&quot;</tt>.</dd></dl>
+<dd> The <i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1) program (supplied by FUSE) must be available on the current <tt>&quot;PATH&quot;</tt>.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or one of the following error codes:</p>
 <dl>
@@ -78,15 +78,15 @@ description: "guestunmount – Unmount a guestmounted filesystem"
 <dt>3</dt>
 <dd> The mount point is not mounted.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1), <i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1), <i><a href="/docs/linux/man/2-pipe/">pipe</a></i>(2), &#8220;<font SIZE="-1">MOUNT LOCAL&#8221;</font> in <i>guestfs</i>(3), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://fuse.sf.net/.">http://fuse.sf.net/.</a></p>
+<p> <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1), <i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1), <i><a href="/docs/linux/man/2-pipe/">pipe</a></i>(2), &#8220;MOUNT LOCAL&#8221; in <i>guestfs</i>(3), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://fuse.sf.net/.">http://fuse.sf.net/.</a></p>
 <h2>AUTHORS</h2>
 <p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2013 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

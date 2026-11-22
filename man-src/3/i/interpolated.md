@@ -16,11 +16,11 @@ description: "QuantLib::InflationIndex – Base class for inflation-rate indexes
 <h3>Public Member Functions</h3>
 <p> <code>InflationIndex</code> (const std::string &amp;familyName, const <code>Region</code> &amp;region, bool revised, bool interpolated, <code>Frequency</code> frequency, const <code>Period</code> &amp;availabilitiyLag, const <code>Currency</code> &amp;currency) </p>
 <p> <code>Index interface</code> </p>
-<p> std::string <code>name</code> () const<br />
- <i>Returns the name of the index. </i><br />
+<p> std::string <code>name</code> () const<br/>
+ <i>Returns the name of the index. </i><br/>
  <code>Calendar</code> <code>fixingCalendar</code> () const </p>
-<p> bool <code>isValidFixingDate</code> (const <code>Date</code> &amp;fixingDate) const<br />
- <i>returns TRUE if the fixing date is a valid one </i><br />
+<p> bool <code>isValidFixingDate</code> (const <code>Date</code> &amp;fixingDate) const<br/>
+ <i>returns TRUE if the fixing date is a valid one </i><br/>
  virtual Rate <code>fixing</code> (const <code>Date</code> &amp;fixingDate, bool forecastTodaysFixing=false) const =0 </p>
 <p> void <code>addFixing</code> (const <code>Date</code> &amp;fixingDate, Rate fixing, bool forceOverwrite=false) </p>
 <p> <code>Observer interface</code> </p>

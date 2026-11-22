@@ -39,7 +39,7 @@ description: "fedfs-set-nsdb-params – send a FEDFS_SET_NSDB_PARAMS ADMIN proto
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that your domain&#8217;s NSDB hostname is <i>nsdb.example.net</i>. If the file server <i>fs.example.net</i> does not know about your NSDB, you can inform it with:</p>
 <dl>
-<dd>$ fedfs-set-nsdb-params -h fs.example.net -l nsdb.example.net<br />
+<dd>$ fedfs-set-nsdb-params -h fs.example.net -l nsdb.example.net<br/>
  Call completed successfully </dd>
 </dl>
 <p> The remote server <i>fs.example.net</i> now knows about the <i>nsdb.example.net</i> NSDB and can use it for resolving FedFS junctions. It will not use TLS when querying the NSDB to resolve junctions.</p>

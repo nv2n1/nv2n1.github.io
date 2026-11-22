@@ -10,9 +10,9 @@ description: "wbemexec – submit a CIM operation request to a CIM Server"
 
 <p> wbemexec &#8211; submit a CIM operation request to a CIM Server</p>
 <h2>SYNOPSIS</h2>
-<p> <code>wbemexec</code> [ <code>-h</code> hostname ] [ <code>-p</code> portnumber ] [ <code>-v</code> httpversion ]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-m</code>&nbsp;<wbr>httpmethod&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-t</code>&nbsp;<wbr>timeout&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-u</code>&nbsp;<wbr>username&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-w</code>&nbsp;<wbr>password&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-s</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;help</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;version</code>&nbsp;<wbr>]<br />
+<p> <code>wbemexec</code> [ <code>-h</code> hostname ] [ <code>-p</code> portnumber ] [ <code>-v</code> httpversion ]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-m</code>&nbsp;<wbr>httpmethod&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-t</code>&nbsp;<wbr>timeout&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-u</code>&nbsp;<wbr>username&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-w</code>&nbsp;<wbr>password&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-s</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;help</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;version</code>&nbsp;<wbr>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>inputfilepath&nbsp;<wbr>]</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>wbemexec </code> command provides a command line interface to a CIM Server. The input to the command consists of a CIM request encoded in XML. The request is submitted to the CIM Server for execution. If the HTTP response from the CIM Server contains a status code of 200 (OK), the result returned to stdout is the CIM response encoded in XML. Otherwise, the result returned to stdout is the HTTP response. Some types of invalid XML requests (e.g. missing PROTOCOLVERSION attribute or missing NAME attribute) are detected by <code>wbemexec,</code> and result in an error message from <code>wbemexec.</code> Other invalid XML requests (e.g. invalid CIMVERSION attribute value or missing XML version), are detected by the CIM Server, and result in an HTTP response, containing a non-Success status code, such as 501 (Not Implemented) or 400 (Bad Request). </p>

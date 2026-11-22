@@ -11,14 +11,14 @@ description: "GSI Authorization Callout Error API –"
 <p> GSI Authorization Callout Error API &#8211; </p>
 <p> Authorization Callout Error Objects.</p>
 <h3>Macros</h3>
-<p> #define <code>GLOBUS_GSI_AUTHZ_CALLOUT_ERROR_MODULE</code> (&amp;globus_gsi_authz_callout_error_module)<br />
- <i>Module descriptor. </i><br />
- #define <code>GLOBUS_GSI_AUTHZ_CALLOUT_ERROR</code>(__RESULT, __TYPE, __ERRSTR)<br />
- <i>Create an authorization callout error object. </i><br />
- #define <code>GLOBUS_GSI_AUTHZ_CALLOUT_ERRNO_ERROR</code>(__RESULT, __ERRNO)<br />
+<p> #define <code>GLOBUS_GSI_AUTHZ_CALLOUT_ERROR_MODULE</code> (&amp;globus_gsi_authz_callout_error_module)<br/>
+ <i>Module descriptor. </i><br/>
+ #define <code>GLOBUS_GSI_AUTHZ_CALLOUT_ERROR</code>(__RESULT, __TYPE, __ERRSTR)<br/>
+ <i>Create an authorization callout error object. </i><br/>
+ #define <code>GLOBUS_GSI_AUTHZ_CALLOUT_ERRNO_ERROR</code>(__RESULT, __ERRNO)<br/>
  <i>Create an authorization callout error object with an errno. </i></p>
 <h3>Enumerations</h3>
-<p> enum <code>globus_gsi_authz_callout_error_t</code> { <code>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_CALLOUT_ERROR</code> = 0, <code>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_DENIED_BY_CALLOUT</code> = 1, <code>GLOBUS_GSI_AUTHZ_CALLOUT_CONFIGURATION_ERROR</code> = 2, <code>GLOBUS_GSI_AUTHZ_CALLOUT_SYSTEM_ERROR</code> = 3, <code>GLOBUS_GSI_AUTHZ_CALLOUT_CREDENTIAL_ERROR</code> = 4, <code>GLOBUS_GSI_AUTHZ_CALLOUT_BAD_ARGUMENT_ERROR</code> = 5 }<br />
+<p> enum <code>globus_gsi_authz_callout_error_t</code> { <code>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_CALLOUT_ERROR</code> = 0, <code>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_DENIED_BY_CALLOUT</code> = 1, <code>GLOBUS_GSI_AUTHZ_CALLOUT_CONFIGURATION_ERROR</code> = 2, <code>GLOBUS_GSI_AUTHZ_CALLOUT_SYSTEM_ERROR</code> = 3, <code>GLOBUS_GSI_AUTHZ_CALLOUT_CREDENTIAL_ERROR</code> = 4, <code>GLOBUS_GSI_AUTHZ_CALLOUT_BAD_ARGUMENT_ERROR</code> = 5 }<br/>
  <i>Error codes. </i></p>
 <h2>Detailed Description</h2>
 <p> Authorization Callout Error Objects. </p>
@@ -29,15 +29,15 @@ description: "GSI Authorization Callout Error API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>__RESULT</i> A globus_result_t value pointing to a causal error. This will be modified by this macro to point to the new error object.<br />
+</dt><dd> <i>__RESULT</i> A globus_result_t value pointing to a causal error. This will be modified by this macro to point to the new error object.<br/>
  <i>__ERRNO</i> The errno value of this new error object.</dd></dl>
 <h3>#define GLOBUS_GSI_AUTHZ_CALLOUT_ERROR(__RESULT, __TYPE, __ERRSTR)</h3>
 <p> Create an authorization callout error object. Update the __RESULT parameter to contain a new globus_result_t value pointing to an authorization error of type __TYPE with the detail string __ERRSTR. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>__RESULT</i> A globus_result_t value pointing to a causal error. This will be modified by this macro to point to the new error object.<br />
- <i>__TYPE</i> The authorization error value from the globus_gsi_authz_callout_error_t enumeration.<br />
+</dt><dd> <i>__RESULT</i> A globus_result_t value pointing to a causal error. This will be modified by this macro to point to the new error object.<br/>
+ <i>__TYPE</i> The authorization error value from the globus_gsi_authz_callout_error_t enumeration.<br/>
  <i>__ERRSTR</i> A parenthesized printf string containing the description of the error</dd></dl>
 <h2>Enumeration Type Documentation</h2>
 <h3>enum <code>globus_gsi_authz_callout_error_t</code></h3>

@@ -13,8 +13,8 @@ description: "QwtPoint3D –"
 <p>#include &lt;qwt_point_3d.h&gt;</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPoint3D</code> () </p>
-<p> <code>QwtPoint3D</code> (double <code>x</code>, double <code>y</code>, double <code>z</code>)<br />
- <i>Constructs a point with coordinates specified by x, y and z. </i><br />
+<p> <code>QwtPoint3D</code> (double <code>x</code>, double <code>y</code>, double <code>z</code>)<br/>
+ <i>Constructs a point with coordinates specified by x, y and z. </i><br/>
  <code>QwtPoint3D</code> (const <code>QwtPoint3D</code> &amp;) </p>
 <p> <code>QwtPoint3D</code> (const QPointF &amp;) </p>
 <p> bool <code>isNull</code> () const </p>
@@ -24,12 +24,12 @@ description: "QwtPoint3D –"
 <p> double &amp; <code>rx</code> () </p>
 <p> double &amp; <code>ry</code> () </p>
 <p> double &amp; <code>rz</code> () </p>
-<p> void <code>setX</code> (double <code>x</code>)<br />
- <i>Sets the x-coordinate of the point to the value specified by x. </i><br />
- void <code>setY</code> (double <code>y</code>)<br />
- <i>Sets the y-coordinate of the point to the value specified by y. </i><br />
- void <code>setZ</code> (double <code>y</code>)<br />
- <i>Sets the z-coordinate of the point to the value specified by z. </i><br />
+<p> void <code>setX</code> (double <code>x</code>)<br/>
+ <i>Sets the x-coordinate of the point to the value specified by x. </i><br/>
+ void <code>setY</code> (double <code>y</code>)<br/>
+ <i>Sets the y-coordinate of the point to the value specified by y. </i><br/>
+ void <code>setZ</code> (double <code>y</code>)<br/>
+ <i>Sets the z-coordinate of the point to the value specified by z. </i><br/>
  QPointF <code>toPoint</code> () const </p>
 <p> bool <code>operator==</code> (const <code>QwtPoint3D</code> &amp;) const </p>
 <p> bool <code>operator!=</code> (const <code>QwtPoint3D</code> &amp;) const </p>

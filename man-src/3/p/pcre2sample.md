@@ -16,10 +16,10 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <p> If PCRE2 is installed in the standard include and library directories for your operating system, you should be able to compile the demonstration program using a command like this: </p>
 <p>&nbsp;<wbr>&nbsp;cc -o pcre2demo pcre2demo.c -lpcre2-8 </p>
 <p> If PCRE2 is installed elsewhere, you may need to add additional options to the command line. For example, on a Unix-like system that has PCRE2 installed in <i>/usr/local</i>, you can compile the demonstration program using a command like this: </p>
-<p>&nbsp;<wbr>&nbsp;cc -o pcre2demo -I/usr/local/include pcre2demo.c&nbsp;\<br />
+<p>&nbsp;<wbr>&nbsp;cc -o pcre2demo -I/usr/local/include pcre2demo.c&nbsp;\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-L/usr/local/lib -lpcre2-8 </p>
 <p> Once you have built the demonstration program, you can run simple tests like this: </p>
-<p>&nbsp;<wbr>&nbsp;./pcre2demo&nbsp;&#8216;cat|dog&#8217;&nbsp;&#8216;the cat sat on the mat&#8217;<br />
+<p>&nbsp;<wbr>&nbsp;./pcre2demo&nbsp;&#8216;cat|dog&#8217;&nbsp;&#8216;the cat sat on the mat&#8217;<br/>
 &nbsp;<wbr>&nbsp;./pcre2demo -g&nbsp;&#8216;cat|dog&#8217;&nbsp;&#8216;the dog sat on the cat&#8217; </p>
 <p> Note that there is a much more comprehensive test program, called <code>pcre2test</code>, which supports many more facilities for testing regular expressions using all three PCRE2 libraries (8-bit, 16-bit, and 32-bit, though not all three need be installed). The <code>pcre2demo</code> program is provided as a relatively simple coding example. </p>
 <p> If you try to run <code>pcre2demo</code> when PCRE2 is not installed in the standard library directory, you may get an error like this on some operating systems (e.g. Solaris): </p>

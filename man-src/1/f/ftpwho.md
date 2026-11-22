@@ -24,7 +24,7 @@ description: "ftpwho – show current process information for each FTP session"
 <dt><code>-v,&#8211;verbose</code></dt>
 <dd> Reports additional information for each connection, such as the remote host and current working directory. <code>-S,&#8211;server</code><i> server-name</i> Specify the ServerName for a specific virtual host. If used, <i>ftpwho</i> will only show session information for the given virtual host.</dd></dl>
 <h2>FILES</h2>
-<p> <code>/usr/bin/ftpwho</code><br />
+<p> <code>/usr/bin/ftpwho</code><br/>
  <code>/run/proftpd/proftpd.scoreboard</code></p>
 <h2>AUTHORS</h2>
 <p> ProFTPD is written and maintained by a number of people, full credits can be found on <code><a rel="nofollow" href="http://www.proftpd.org/credits.html">http://www.proftpd.org/credits.html</a></code></p>

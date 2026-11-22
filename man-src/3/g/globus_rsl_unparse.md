@@ -10,15 +10,15 @@ description: "RSL Display –"
 
 <p> RSL Display &#8211; </p>
 <h3>Functions</h3>
-<p> int <code>globus_rsl_value_print_recursive</code> (globus_rsl_value_t *globus_rsl_value_ptr)<br />
- <i>Print the value of a globus_rsl_value_t to standard output. </i><br />
- char * <code>globus_rsl_get_operator</code> (int my_op)<br />
- <i>Get the string representation of an RSL operator. </i><br />
- int <code>globus_rsl_print_recursive</code> (globus_rsl_t *ast_node)<br />
- <i>Print the value of an RSL syntax tree to standard output. </i><br />
- char * <code>globus_rsl_unparse</code> (globus_rsl_t *rsl_spec)<br />
- <i>Convert an RSL parse tree to a string. </i><br />
- char * <code>globus_rsl_value_unparse</code> (globus_rsl_value_t *rsl_value)<br />
+<p> int <code>globus_rsl_value_print_recursive</code> (globus_rsl_value_t *globus_rsl_value_ptr)<br/>
+ <i>Print the value of a globus_rsl_value_t to standard output. </i><br/>
+ char * <code>globus_rsl_get_operator</code> (int my_op)<br/>
+ <i>Get the string representation of an RSL operator. </i><br/>
+ int <code>globus_rsl_print_recursive</code> (globus_rsl_t *ast_node)<br/>
+ <i>Print the value of an RSL syntax tree to standard output. </i><br/>
+ char * <code>globus_rsl_unparse</code> (globus_rsl_t *rsl_spec)<br/>
+ <i>Convert an RSL parse tree to a string. </i><br/>
+ char * <code>globus_rsl_value_unparse</code> (globus_rsl_value_t *rsl_value)<br/>
  <i>Convert an RSL value pointer to a string. </i></p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>

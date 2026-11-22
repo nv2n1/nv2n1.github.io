@@ -25,7 +25,7 @@ description: "ftail – runs Frysk’s dogtail testsuite"
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-funit/">funit</a>(8) <a href="/docs/linux/man/1-frysk/">frysk</a>(1)</p>
 <h2>Bugs</h2>
-<p>Report bugs to m[blue]<code><a rel="nofollow" href="http://sources.redhat.com/frysk/">http://sources.redhat.com/frysk/</a></code>m[]<font SIZE="-2">[1]</font>.</p>
+<p>Report bugs to m[blue]<code><a rel="nofollow" href="http://sources.redhat.com/frysk/">http://sources.redhat.com/frysk/</a></code>m[][1].</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

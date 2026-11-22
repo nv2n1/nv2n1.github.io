@@ -13,79 +13,79 @@ description: "ANTLR3_BASE_RECOGNIZER_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3baserecognizer.h">antlr3baserecognizer.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> <code>ANTLR3_BOOLEAN</code>(* <code>alreadyParsedRule</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_MARKER</code> ruleIndex)<br />
- <i>Pointer to function that determines whether the rule has parsed input at the current index in the input stream. </i><br />
- void(* <code>beginBacktrack</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> level)<br />
- <i>Pointer to a function that is a hook to listen to token consumption during error recovery. </i><br />
- void(* <code>beginResync</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br />
- <i>Pointer to a function that is a hook to listen to token consumption during error recovery. </i><br />
- <code>pANTLR3_BITSET</code>(* <code>combineFollows</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_BOOLEAN</code> exact)<br />
- <i>Pointer to a function to combine follow bitsets. </i><br />
- <code>pANTLR3_BITSET</code>(* <code>computeCSRuleFollow</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br />
- <i>Pointer to a function that computes the context-sensitive FOLLOW set for the current rule. </i><br />
- <code>pANTLR3_BITSET</code>(* <code>computeErrorRecoverySet</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br />
- <i>Pointer to a function to computer the error recovery set for the current rule. </i><br />
- void(* <code>consumeUntil</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> tokenType)<br />
- <i>Pointer to function that consumes input until the next token matches the given token. </i><br />
- void(* <code>consumeUntilSet</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_BITSET</code> set)<br />
- <i>Pointer to function that consumes input until the next token matches one in the given set. </i><br />
- <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>debugger</code><br />
- <i>If set to something other than NULL, then this structure is points to an instance of the debugger interface. </i><br />
- void(* <code>displayRecognitionError</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_UINT8</code> *tokenNames)<br />
- <i>Pointer to a function that is called to display a recognition error message. </i><br />
- void(* <code>endBacktrack</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> level, <code>ANTLR3_BOOLEAN</code> successful)<br />
- <i>Pointer to a function that is a hook to listen to token consumption during error recovery. </i><br />
- void(* <code>endResync</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br />
- <i>Pointer to a function that is a hook to listen to token consumption during error recovery. </i><br />
- void(* <code>exConstruct</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br />
- <i>Pointer to a function that can construct a generic exception structure with such information as the input stream can provide. </i><br />
+<p> <code>ANTLR3_BOOLEAN</code>(* <code>alreadyParsedRule</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_MARKER</code> ruleIndex)<br/>
+ <i>Pointer to function that determines whether the rule has parsed input at the current index in the input stream. </i><br/>
+ void(* <code>beginBacktrack</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> level)<br/>
+ <i>Pointer to a function that is a hook to listen to token consumption during error recovery. </i><br/>
+ void(* <code>beginResync</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br/>
+ <i>Pointer to a function that is a hook to listen to token consumption during error recovery. </i><br/>
+ <code>pANTLR3_BITSET</code>(* <code>combineFollows</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_BOOLEAN</code> exact)<br/>
+ <i>Pointer to a function to combine follow bitsets. </i><br/>
+ <code>pANTLR3_BITSET</code>(* <code>computeCSRuleFollow</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br/>
+ <i>Pointer to a function that computes the context-sensitive FOLLOW set for the current rule. </i><br/>
+ <code>pANTLR3_BITSET</code>(* <code>computeErrorRecoverySet</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br/>
+ <i>Pointer to a function to computer the error recovery set for the current rule. </i><br/>
+ void(* <code>consumeUntil</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> tokenType)<br/>
+ <i>Pointer to function that consumes input until the next token matches the given token. </i><br/>
+ void(* <code>consumeUntilSet</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_BITSET</code> set)<br/>
+ <i>Pointer to function that consumes input until the next token matches one in the given set. </i><br/>
+ <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>debugger</code><br/>
+ <i>If set to something other than NULL, then this structure is points to an instance of the debugger interface. </i><br/>
+ void(* <code>displayRecognitionError</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_UINT8</code> *tokenNames)<br/>
+ <i>Pointer to a function that is called to display a recognition error message. </i><br/>
+ void(* <code>endBacktrack</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> level, <code>ANTLR3_BOOLEAN</code> successful)<br/>
+ <i>Pointer to a function that is a hook to listen to token consumption during error recovery. </i><br/>
+ void(* <code>endResync</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br/>
+ <i>Pointer to a function that is a hook to listen to token consumption during error recovery. </i><br/>
+ void(* <code>exConstruct</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br/>
+ <i>Pointer to a function that can construct a generic exception structure with such information as the input stream can provide. </i><br/>
  struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> <code>pANTLR3_BITSET_LIST</code> <code>follow</code> </p>
-<p> void(* <code>free</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br />
- <i>Pointer to a function that knows how to free the resources of a base recognizer. </i><br />
- void *(* <code>getCurrentInputSymbol</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_INT_STREAM</code> istream)<br />
- <i>Pointer to a function that returns the current input symbol. </i><br />
- void *(* <code>getMissingSymbol</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_INT_STREAM</code> istream, <code>pANTLR3_EXCEPTION</code> e, <code>ANTLR3_UINT32</code> expectedTokenType, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)<br />
- <i>Conjure up a missing token during error recovery. </i><br />
- <code>ANTLR3_UINT32</code>(* <code>getNumberOfSyntaxErrors</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br />
- <i>Get number of recognition errors (lexer, parser, tree parser). </i><br />
- <code>pANTLR3_STACK</code>(* <code>getRuleInvocationStack</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br />
- <i>Pointer to function that returns an ANTLR3_LIST of the strings that identify the rules in the parser that got you to this point. </i><br />
+<p> void(* <code>free</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br/>
+ <i>Pointer to a function that knows how to free the resources of a base recognizer. </i><br/>
+ void *(* <code>getCurrentInputSymbol</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_INT_STREAM</code> istream)<br/>
+ <i>Pointer to a function that returns the current input symbol. </i><br/>
+ void *(* <code>getMissingSymbol</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_INT_STREAM</code> istream, <code>pANTLR3_EXCEPTION</code> e, <code>ANTLR3_UINT32</code> expectedTokenType, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)<br/>
+ <i>Conjure up a missing token during error recovery. </i><br/>
+ <code>ANTLR3_UINT32</code>(* <code>getNumberOfSyntaxErrors</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br/>
+ <i>Get number of recognition errors (lexer, parser, tree parser). </i><br/>
+ <code>pANTLR3_STACK</code>(* <code>getRuleInvocationStack</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br/>
+ <i>Pointer to function that returns an ANTLR3_LIST of the strings that identify the rules in the parser that got you to this point. </i><br/>
  <code>pANTLR3_STACK</code>(* <code>getRuleInvocationStackNamed</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_UINT8</code> name) </p>
-<p> <code>ANTLR3_MARKER</code>(* <code>getRuleMemoization</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_INTKEY</code> ruleIndex, <code>ANTLR3_MARKER</code> ruleParseStart)<br />
- <i>Pointer to a function to return whether the rule has parsed input starting at the supplied start index before. </i><br />
- void *(* <code>match</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)<br />
- <i>Pointer to a function that matches the current input symbol against the supplied type. </i><br />
- void(* <code>matchAny</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br />
- <i>Pointer to a function that matches the next token/char in the input stream regardless of what it actually is. </i><br />
- void(* <code>memoize</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_MARKER</code> ruleIndex, <code>ANTLR3_MARKER</code> ruleParseStart)<br />
- <i>Pointer to function that records whether the rule has parsed the input at a current position successfully or not. </i><br />
- void(* <code>mismatch</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)<br />
- <i>Pointer to a function that works out what to do when a token mismatch occurs, so that Tree parsers can behave differently to other recognizers. </i><br />
- <code>ANTLR3_BOOLEAN</code>(* <code>mismatchIsMissingToken</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_INT_STREAM</code> input, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)<br />
- <i>Pointer to a function that decides if the current token is one that can logically follow the one we were looking for, in which case the one we were looking for is probably missing from the input. </i><br />
- <code>ANTLR3_BOOLEAN</code>(* <code>mismatchIsUnwantedToken</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_INT_STREAM</code> input, <code>ANTLR3_UINT32</code> ttype)<br />
- <i>Pointer to a function that decides if the token ahead of the current one is the one we were loking for, in which case the curernt one is very likely extraneous and can be reported that way. </i><br />
- struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> * <code>recognizer</code><br />
- <i>Pointer to common routine to handle single token insertion for recovery functions. </i><br />
- void(* <code>recover</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br />
- <i>Pointer to a function that recovers from an error found in the input stream. </i><br />
- void *(* <code>recoverFromMismatchedSet</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)<br />
- <i>Pointer to a function that recovers from a mismatched set in the token stream, in a similar manner to (*recoverFromMismatchedToken). </i><br />
- void *(* <code>recoverFromMismatchedToken</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)<br />
- <i>Pointer to a function that recovers from a mismatched token in the input stream. </i><br />
- void(* <code>reportError</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br />
- <i>Pointer to a function to call to report a recognition problem. </i><br />
- void(* <code>reset</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br />
- <i>Reset the recognizer. </i><br />
- <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> <code>state</code><br />
- <i>A pointer to the shared recognizer state, such that multiple recognizers can use the same inputs streams and so on (in the case of grammar inheritance for instance. </i><br />
- void * <code>super</code><br />
- <i>Whatever super structure is providing this interface needs a pointer to itself so that this can be passed back to it whenever the api functions are called back from here. </i><br />
- <code>ANTLR3_BOOLEAN</code>(* <code>synpred</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, void *ctx, void(*predicate)(void *ctx))<br />
- <i>Pointer to a function that returns whether the supplied grammar function will parse the current input stream or not. </i><br />
- <code>pANTLR3_HASH_TABLE</code>(* <code>toStrings</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_HASH_TABLE</code>)<br />
- <i>Pointer to a function that converts an ANLR3_LIST of tokens to an ANTLR3_LIST of string token names. </i><br />
- <code>ANTLR3_UINT32</code> <code>type</code><br />
+<p> <code>ANTLR3_MARKER</code>(* <code>getRuleMemoization</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_INTKEY</code> ruleIndex, <code>ANTLR3_MARKER</code> ruleParseStart)<br/>
+ <i>Pointer to a function to return whether the rule has parsed input starting at the supplied start index before. </i><br/>
+ void *(* <code>match</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)<br/>
+ <i>Pointer to a function that matches the current input symbol against the supplied type. </i><br/>
+ void(* <code>matchAny</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br/>
+ <i>Pointer to a function that matches the next token/char in the input stream regardless of what it actually is. </i><br/>
+ void(* <code>memoize</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_MARKER</code> ruleIndex, <code>ANTLR3_MARKER</code> ruleParseStart)<br/>
+ <i>Pointer to function that records whether the rule has parsed the input at a current position successfully or not. </i><br/>
+ void(* <code>mismatch</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)<br/>
+ <i>Pointer to a function that works out what to do when a token mismatch occurs, so that Tree parsers can behave differently to other recognizers. </i><br/>
+ <code>ANTLR3_BOOLEAN</code>(* <code>mismatchIsMissingToken</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_INT_STREAM</code> input, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)<br/>
+ <i>Pointer to a function that decides if the current token is one that can logically follow the one we were looking for, in which case the one we were looking for is probably missing from the input. </i><br/>
+ <code>ANTLR3_BOOLEAN</code>(* <code>mismatchIsUnwantedToken</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_INT_STREAM</code> input, <code>ANTLR3_UINT32</code> ttype)<br/>
+ <i>Pointer to a function that decides if the token ahead of the current one is the one we were loking for, in which case the curernt one is very likely extraneous and can be reported that way. </i><br/>
+ struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> * <code>recognizer</code><br/>
+ <i>Pointer to common routine to handle single token insertion for recovery functions. </i><br/>
+ void(* <code>recover</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br/>
+ <i>Pointer to a function that recovers from an error found in the input stream. </i><br/>
+ void *(* <code>recoverFromMismatchedSet</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)<br/>
+ <i>Pointer to a function that recovers from a mismatched set in the token stream, in a similar manner to (*recoverFromMismatchedToken). </i><br/>
+ void *(* <code>recoverFromMismatchedToken</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> <code>follow</code>)<br/>
+ <i>Pointer to a function that recovers from a mismatched token in the input stream. </i><br/>
+ void(* <code>reportError</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br/>
+ <i>Pointer to a function to call to report a recognition problem. </i><br/>
+ void(* <code>reset</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>)<br/>
+ <i>Reset the recognizer. </i><br/>
+ <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> <code>state</code><br/>
+ <i>A pointer to the shared recognizer state, such that multiple recognizers can use the same inputs streams and so on (in the case of grammar inheritance for instance. </i><br/>
+ void * <code>super</code><br/>
+ <i>Whatever super structure is providing this interface needs a pointer to itself so that this can be passed back to it whenever the api functions are called back from here. </i><br/>
+ <code>ANTLR3_BOOLEAN</code>(* <code>synpred</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, void *ctx, void(*predicate)(void *ctx))<br/>
+ <i>Pointer to a function that returns whether the supplied grammar function will parse the current input stream or not. </i><br/>
+ <code>pANTLR3_HASH_TABLE</code>(* <code>toStrings</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>pANTLR3_HASH_TABLE</code>)<br/>
+ <i>Pointer to a function that converts an ANLR3_LIST of tokens to an ANTLR3_LIST of string token names. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>type</code><br/>
  <i>Indicates the type of recognizer that we are an instance of. </i></p>
 <h2>Detailed Description</h2>
 <p> Base tracking context structure for all types of recognizers.</p>

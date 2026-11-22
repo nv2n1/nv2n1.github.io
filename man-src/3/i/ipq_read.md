@@ -10,7 +10,7 @@ description: "ipq_read — read queue messages from ip_queue and read into suppl
 
 <p> ipq_read &#8212; read queue messages from ip_queue and read into supplied buffer </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />
+<p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br/>
  <code>#include &lt;<a href="file:/usr/include/libipq.h">libipq.h</a>&gt;</code> </p>
 <p> <code>ssize_t ipq_read(const struct ipq_handle *</code><i>h</i><code>, unsigned char *</code><i>buf</i><code>, size_t </code><i>len</i><code>, int </code><i>timeout</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
@@ -20,8 +20,8 @@ description: "ipq_read — read queue messages from ip_queue and read into suppl
 <p> The <i>timeout</i> parameter may be used to set a timeout for the operation, specified in microseconds. This is implemented internally by the library via the <code>select</code> system call. A value of zero provides normal, backwards-compatible blocking behaviour with no timeout. A negative value causes the function to return immediately. </p>
 <p> Data returned via <i>buf</i> should not be accessed directly. Use the <code>ipq_message_type</code>, <code>ipq_get_packet</code>, and <code>ipq_get_msgerr</code> functions to access the queue message in the buffer.</p>
 <h2>RETURN VALUE</h2>
-<p> On failure, -1 is returned.<br />
- On success, a non-zero positive value is returned when no timeout value is specified.<br />
+<p> On failure, -1 is returned.<br/>
+ On success, a non-zero positive value is returned when no timeout value is specified.<br/>
  On success with a timeout value specified, zero is returned if no data was available to read, or if a non-blocked signal was caught. In the latter case, the global <code>errno</code> value will be set to <code>EINTR</code>.</p>
 <h2>ERRORS</h2>
 <p> On error, a descriptive error message will be available via the <code>ipq_errstr</code> function.</p>

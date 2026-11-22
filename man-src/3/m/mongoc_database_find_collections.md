@@ -27,7 +27,7 @@ mongoc_database_find_collections (mongoc_database_t * database,
 <h2>Errors</h2>
 <p>Errors are propagated via the <code>error</code> parameter. </p>
 <h2>Returns</h2>
-<p>A cursor where each result corresponds to the server&#8217;s representation of<br />
+<p>A cursor where each result corresponds to the server&#8217;s representation of<br/>
 &nbsp;<wbr>a collection in this database. </p>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

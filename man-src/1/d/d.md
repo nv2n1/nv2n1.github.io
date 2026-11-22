@@ -12,8 +12,8 @@ description: "d.zoom – Allows the user to change the current geographic region
 <h2>KEYWORDS</h2>
 <p> display</p>
 <h2>SYNOPSIS</h2>
-<p> <code>d.zoom</code><br />
- <code>d.zoom help</code><br />
+<p> <code>d.zoom</code><br/>
+ <code>d.zoom help</code><br/>
  <code>d.zoom</code> [-<code>fphjr</code>] <code>rast</code>=<i>string</i>[,<i>string</i>,&#8230;] [<code>vector</code>=<i>string</i>[,<i>string</i>,&#8230;]] [<code>zoom</code>=<i>float</i>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
 <h3>Flags:</h3>
 <dl>
@@ -48,8 +48,8 @@ description: "d.zoom – Allows the user to change the current geographic region
  Name of vector map</dd>
 <dt><code>zoom</code>=<i>float</i></dt>
 <dd>
- Magnification: &gt;1.0 zooms in, &lt;1.0 zooms out<br />
- Options: <i>0.001-1000.0</i><br />
+ Magnification: &gt;1.0 zooms in, &lt;1.0 zooms out<br/>
+ Options: <i>0.001-1000.0</i><br/>
  Default: <i>0.75</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>d.zoom</i> allows the user to interactively adjust the settings of the current geographic region using a pointing device such as a mouse. Like <i>g.region</i>, <i>d.zoom</i> re-defines the settings of the geographic region. However, <i>d.zoom</i> allows the user to change the current region settings interactively, by either outlining the new region perimeter with a mouse, unzoom or pan the region. The graphics display is updated by the module. </p>
@@ -58,12 +58,12 @@ description: "d.zoom – Allows the user to change the current geographic region
 <h2>NOTES</h2>
 <p> Although it is not necessary that the user display a map in the active display frame before running <i>d.zoom</i>, it is helpful to do this for reference. Using parameter <code>-f</code> integrate a pan function, <code>-h </code> facilitates the use for handhelds.</p>
 <h2>SEE ALSO</h2>
-<p> <i>d.erase</i><br />
- <i>d.rast</i><br />
- <i>d.vect</i><br />
+<p> <i>d.erase</i><br/>
+ <i>d.rast</i><br/>
+ <i>d.vect</i><br/>
  <i>g.region</i></p>
 <h2>AUTHOR</h2>
-<p> Michael Shapiro, U.S. Army Construction Engineering Research Laboratory<br />
+<p> Michael Shapiro, U.S. Army Construction Engineering Research Laboratory<br/>
  Improvements by Huidae Cho and Markus Neteler </p>
 <p> <i>Last changed: $Date: 2004-08-05 14:53:21 +0200 (Thu, 05 Aug 2004) $</i> </p>
 <p> Full index </p>

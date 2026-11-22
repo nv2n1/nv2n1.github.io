@@ -29,30 +29,30 @@ description: "PCRE – Perl-compatible regular expressions (original API)"
 <p> Another way that performance can be hit is by running a pattern that has a very large search tree against a string that will never match. Nested unlimited repeats in a pattern are a common example. PCRE provides some protection against this: see the PCRE_EXTRA_MATCH_LIMIT feature in the <code>pcreapi</code> page.</p>
 <h2>User Documentation</h2>
 <p>The user documentation for PCRE comprises a number of different sections. In the &quot;man&quot; format, each of these is a separate &quot;man page&quot;. In the HTML format, each is a separate page, linked from the index page. In the plain text format, the descriptions of the <code>pcregrep</code> and <code>pcretest</code> programs are in files called <code>pcregrep.txt</code> and <code>pcretest.txt</code>, respectively. The remaining sections, except for the <code>pcredemo</code> section (which is a program listing), are concatenated in <code>pcre.txt</code>, for ease of searching. The sections are as follows: </p>
-<p>&nbsp;<wbr>&nbsp;pcre&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;this document<br />
-&nbsp;<wbr>&nbsp;pcre-config&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;show PCRE installation configuration information<br />
-&nbsp;<wbr>&nbsp;pcre16&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the 16-bit library<br />
-&nbsp;<wbr>&nbsp;pcre32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the 32-bit library<br />
-&nbsp;<wbr>&nbsp;pcreapi&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of PCRE&#8217;s native C API<br />
-&nbsp;<wbr>&nbsp;pcrebuild&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;building PCRE<br />
-&nbsp;<wbr>&nbsp;pcrecallout&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the callout feature<br />
-&nbsp;<wbr>&nbsp;pcrecompat&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of Perl compatibility<br />
-&nbsp;<wbr>&nbsp;pcrecpp&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the C++&nbsp;wrapper for the 8-bit library<br />
-&nbsp;<wbr>&nbsp;pcredemo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a demonstration C program that uses PCRE<br />
-&nbsp;<wbr>&nbsp;pcregrep&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;description of the&nbsp;<code>pcregrep</code>&nbsp;command&nbsp;(8-bit only)<br />
-&nbsp;<wbr>&nbsp;pcrejit&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of the just-in-time optimization support<br />
-&nbsp;<wbr>&nbsp;pcrelimits&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of size and other limits<br />
-&nbsp;<wbr>&nbsp;pcrematching&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of the two matching algorithms<br />
-&nbsp;<wbr>&nbsp;pcrepartial&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the partial matching facility<br />
-&nbsp;<wbr>&nbsp;pcrepattern&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;syntax and semantics of supported<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;regular expressions<br />
-&nbsp;<wbr>&nbsp;pcreperform&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of performance issues<br />
-&nbsp;<wbr>&nbsp;pcreposix&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the POSIX-compatible C API for the 8-bit library<br />
-&nbsp;<wbr>&nbsp;pcreprecompile&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of saving and re-using precompiled patterns<br />
-&nbsp;<wbr>&nbsp;pcresample&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of the pcredemo program<br />
-&nbsp;<wbr>&nbsp;pcrestack&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of stack usage<br />
-&nbsp;<wbr>&nbsp;pcresyntax&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;quick syntax reference<br />
-&nbsp;<wbr>&nbsp;pcretest&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;description of the&nbsp;<code>pcretest</code>&nbsp;testing command<br />
+<p>&nbsp;<wbr>&nbsp;pcre&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;this document<br/>
+&nbsp;<wbr>&nbsp;pcre-config&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;show PCRE installation configuration information<br/>
+&nbsp;<wbr>&nbsp;pcre16&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the 16-bit library<br/>
+&nbsp;<wbr>&nbsp;pcre32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the 32-bit library<br/>
+&nbsp;<wbr>&nbsp;pcreapi&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of PCRE&#8217;s native C API<br/>
+&nbsp;<wbr>&nbsp;pcrebuild&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;building PCRE<br/>
+&nbsp;<wbr>&nbsp;pcrecallout&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the callout feature<br/>
+&nbsp;<wbr>&nbsp;pcrecompat&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of Perl compatibility<br/>
+&nbsp;<wbr>&nbsp;pcrecpp&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the C++&nbsp;wrapper for the 8-bit library<br/>
+&nbsp;<wbr>&nbsp;pcredemo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a demonstration C program that uses PCRE<br/>
+&nbsp;<wbr>&nbsp;pcregrep&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;description of the&nbsp;<code>pcregrep</code>&nbsp;command&nbsp;(8-bit only)<br/>
+&nbsp;<wbr>&nbsp;pcrejit&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of the just-in-time optimization support<br/>
+&nbsp;<wbr>&nbsp;pcrelimits&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of size and other limits<br/>
+&nbsp;<wbr>&nbsp;pcrematching&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of the two matching algorithms<br/>
+&nbsp;<wbr>&nbsp;pcrepartial&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the partial matching facility<br/>
+&nbsp;<wbr>&nbsp;pcrepattern&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;syntax and semantics of supported<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;regular expressions<br/>
+&nbsp;<wbr>&nbsp;pcreperform&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of performance issues<br/>
+&nbsp;<wbr>&nbsp;pcreposix&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the POSIX-compatible C API for the 8-bit library<br/>
+&nbsp;<wbr>&nbsp;pcreprecompile&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of saving and re-using precompiled patterns<br/>
+&nbsp;<wbr>&nbsp;pcresample&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of the pcredemo program<br/>
+&nbsp;<wbr>&nbsp;pcrestack&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of stack usage<br/>
+&nbsp;<wbr>&nbsp;pcresyntax&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;quick syntax reference<br/>
+&nbsp;<wbr>&nbsp;pcretest&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;description of the&nbsp;<code>pcretest</code>&nbsp;testing command<br/>
 &nbsp;<wbr>&nbsp;pcreunicode&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of Unicode and UTF-8/16/32 support </p>
 <p> In the &quot;man&quot; and HTML formats, there is also a short page for each C library function, listing its arguments and results.</p>
 <h2>Author</h2>

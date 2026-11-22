@@ -7,7 +7,7 @@ url: "/docs/linux/man/5-tcsd/"
 description: "tcsd.conf – configuration file for the trousers TCS daemon."
 ---
 
-<p>TCG Software Stack<br />
+<p>TCG Software Stack<br/>
  </center></p>
 <h2>Name</h2>
 <p>tcsd.conf &#8211; configuration file for the trousers TCS daemon.</p>

@@ -9,21 +9,21 @@ description: "Ecore Config Structures – Functions that are used to create stru
 
 <p>Ecore Config Structures &#8211; Functions that are used to create structures of properties. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_config_struct_create</code> (const char *key)<br />
- <i>Sets the indicated property to a structure if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_struct_int_add</code> (const char *key, const char *name, int val)<br />
- <i>Add an int property to the named structure. </i><br />
- EAPI int <code>ecore_config_struct_float_add</code> (const char *key, const char *name, float val)<br />
- <i>Add a float property to the named structure. </i><br />
- EAPI int <code>ecore_config_struct_string_add</code> (const char *key, const char *name, const char *val)<br />
- <i>Add a string property to the named structure. </i><br />
- EAPI int <code>ecore_config_struct_argb_add</code> (const char *key, const char *name, int a, int r, int g, int b)<br />
- <i>Add an argb property to the named structure. </i><br />
- EAPI int <code>ecore_config_struct_theme_add</code> (const char *key, const char *name, const char *val)<br />
- <i>Add a theme property to the named structure. </i><br />
- EAPI int <code>ecore_config_struct_boolean_add</code> (const char *key, const char *name, int val)<br />
- <i>Add a boolean property to the named structure. </i><br />
- EAPI int <code>ecore_config_struct_get</code> (const char *key, void *data)<br />
+<p>EAPI int <code>ecore_config_struct_create</code> (const char *key)<br/>
+ <i>Sets the indicated property to a structure if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_struct_int_add</code> (const char *key, const char *name, int val)<br/>
+ <i>Add an int property to the named structure. </i><br/>
+ EAPI int <code>ecore_config_struct_float_add</code> (const char *key, const char *name, float val)<br/>
+ <i>Add a float property to the named structure. </i><br/>
+ EAPI int <code>ecore_config_struct_string_add</code> (const char *key, const char *name, const char *val)<br/>
+ <i>Add a string property to the named structure. </i><br/>
+ EAPI int <code>ecore_config_struct_argb_add</code> (const char *key, const char *name, int a, int r, int g, int b)<br/>
+ <i>Add an argb property to the named structure. </i><br/>
+ EAPI int <code>ecore_config_struct_theme_add</code> (const char *key, const char *name, const char *val)<br/>
+ <i>Add a theme property to the named structure. </i><br/>
+ EAPI int <code>ecore_config_struct_boolean_add</code> (const char *key, const char *name, int val)<br/>
+ <i>Add a boolean property to the named structure. </i><br/>
+ EAPI int <code>ecore_config_struct_get</code> (const char *key, void *data)<br/>
  <i>Get the contents of a defined structure property and load it into the passed C struct. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that are used to create structures of properties.</p>
@@ -33,11 +33,11 @@ description: "Ecore Config Structures – Functions that are used to create stru
 <p> The property is set if it has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The key of the structure to add to.<br />
- <i>name</i> The name of the item to add &#8211; this will be appended to the key<br />
- <i>a</i> The alpha to default to<br />
- <i>r</i> The red to default to<br />
- <i>g</i> The green to default to<br />
+<dd><i>key</i> The key of the structure to add to.<br/>
+ <i>name</i> The name of the item to add &#8211; this will be appended to the key<br/>
+ <i>a</i> The alpha to default to<br/>
+ <i>r</i> The red to default to<br/>
+ <i>g</i> The green to default to<br/>
  <i>b</i> The blue to default to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -48,8 +48,8 @@ description: "Ecore Config Structures – Functions that are used to create stru
 <p> The property is set if it has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The key of the structure to add to.<br />
- <i>name</i> The name of the item to add &#8211; this will be appended to the key<br />
+<dd><i>key</i> The key of the structure to add to.<br/>
+ <i>name</i> The name of the item to add &#8211; this will be appended to the key<br/>
  <i>val</i> The boolean to default to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -69,8 +69,8 @@ description: "Ecore Config Structures – Functions that are used to create stru
 <p> The property is set if it has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The key of the structure to add to.<br />
- <i>name</i> The name of the item to add &#8211; this will be appended to the key<br />
+<dd><i>key</i> The key of the structure to add to.<br/>
+ <i>name</i> The name of the item to add &#8211; this will be appended to the key<br/>
  <i>val</i> The float to default to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -80,7 +80,7 @@ description: "Ecore Config Structures – Functions that are used to create stru
 <p>Get the contents of a defined structure property and load it into the passed C struct. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The name of the structure property to look up.<br />
+<dd><i>key</i> The name of the structure property to look up.<br/>
  <i>data</i> The struct to write into.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -91,8 +91,8 @@ description: "Ecore Config Structures – Functions that are used to create stru
 <p> The property is set if it has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The key of the structure to add to.<br />
- <i>name</i> The name of the item to add &#8211; this will be appended to the key<br />
+<dd><i>key</i> The key of the structure to add to.<br/>
+ <i>name</i> The name of the item to add &#8211; this will be appended to the key<br/>
  <i>val</i> the int to default to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -103,8 +103,8 @@ description: "Ecore Config Structures – Functions that are used to create stru
 <p> The property is set if it has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The key of the structure to add to.<br />
- <i>name</i> The name of the item to add &#8211; this will be appended to the key<br />
+<dd><i>key</i> The key of the structure to add to.<br/>
+ <i>name</i> The name of the item to add &#8211; this will be appended to the key<br/>
  <i>val</i> The string to default to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -115,8 +115,8 @@ description: "Ecore Config Structures – Functions that are used to create stru
 <p> The property is set if it has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The key of the structure to add to.<br />
- <i>name</i> The name of the item to add &#8211; this will be appended to the key<br />
+<dd><i>key</i> The key of the structure to add to.<br/>
+ <i>name</i> The name of the item to add &#8211; this will be appended to the key<br/>
  <i>val</i> The theme name to default to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

@@ -9,7 +9,7 @@ description: "firewalk – Active Reconnaissance Network Security Tool with Extr
 
 <p>firewalk &#8211; Active Reconnaissance Network Security Tool with Extreme Prejudice</p>
 <h2>Synopsis</h2>
-<p><code>firewalk</code> [-dhinprSsTtvx] target_gateway metric<br />
+<p><code>firewalk</code> [-dhinprSsTtvx] target_gateway metric<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></p>
 <h2>Description</h2>
 <p>Firewalk is an active reconnaissance network security tool that attempts to determine what layer 4 protocols a given IP forwarding device will pass. Firewalk works by sending out TCP or UDP packets with a TTL one greater than the targeted gateway. If the gateway allows the traffic, it will forward the packets to the next hop where they will expire and elicit an ICMP_TIME_EXCEEDED message. If the gateway hostdoes not allow the traffic, it will likely drop the packets on the floor and we will see no response. To get the correct IP TTL that will result in expired packets one beyond the gateway we need to ramp up hop-counts. We do this in the same manner that traceroute works. Once we have the gateway hopcount (at that point the scan is said to be `bound`) we can begin our scan. It is significant to note the fact that the ultimate destination host does not have to be reached. It just needs to be somewhere downstream, on the other side of the gateway, from the scanning host. Please see <a rel="nofollow" href="http://www.wiley.com/cda/product/0,,0471205443,00.html">http://www.wiley.com/cda/product/0,,0471205443,00.html</a> for more information on Firewalking and networking security tools in general. </p>

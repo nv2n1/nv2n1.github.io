@@ -10,7 +10,7 @@ description: "std::poisson_distribution< _IntType >::param_type –"
 <p>std::poisson_distribution&lt; _IntType &gt;::param_type &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Public Types</h3>
-<p>typedef <code>poisson_distribution</code><br />
+<p>typedef <code>poisson_distribution</code><br/>
  &lt; _IntType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>param_type (double __mean=1.0)

@@ -10,7 +10,7 @@ description: "zhbtrd.f –"
 <p>zhbtrd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhbtrd</code> (VECT, UPLO, N, KD, AB, LDAB, D, E, Q, LDQ, WORK, INFO)<br />
+<p>subroutine <code>zhbtrd</code> (VECT, UPLO, N, KD, AB, LDAB, D, E, Q, LDQ, WORK, INFO)<br/>
  <i></i><code>ZHBTRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhbtrd (characterVECT, characterUPLO, integerN, integerKD, complex*16, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )D, double precision, dimension( * )E, complex*16, dimension( ldq, * )Q, integerLDQ, complex*16, dimension( * )WORK, integerINFO)</h3>

@@ -108,36 +108,36 @@ description: "condor_who Display information about owners of jobs and jobs runni
 <h2>Examples</h2>
 <p> <i>Example 1</i> Sample output from the local machine, which is running a single HTCondor job. Note that the output of the PROGRAM field will be truncated to fit the display, similar to the artificial truncation shown in this example output. </p>
 <p> % condor_who </p>
-<p> OWNER CLIENT SLOT JOB RUNTIME PID PROGRAM<br />
+<p> OWNER CLIENT SLOT JOB RUNTIME PID PROGRAM<br/>
  smith1 [at] crane.cs.wisc.edu crane.cs.wisc.edu 2 320.0 0+00:00:08 7776 D:\scratch\condor\execut </p>
 <p> <i>Example 2</i> Verbose sample output. </p>
-<p> <br />
- % condor_who -verbose <br />
+<p> <br/>
+ % condor_who -verbose <br/>
  </p>
-<p> <br />
- LOG directory &quot;D:\scratch\condor\master\test/log&quot; <br />
+<p> <br/>
+ LOG directory &quot;D:\scratch\condor\master\test/log&quot; <br/>
  </p>
-<p> <br />
- Daemon PID Exit Addr Log, Log.Old <br />
- ------ --- ---- ---- ---, ------- <br />
- Collector 6788 &lt;128.105.136.32:7977&gt; CollectorLog, CollectorLog.old <br />
- Credd 8148 &lt;128.105.136.32:9620&gt; CredLog, CredLog.old <br />
- Master 5976 &lt;128.105.136.32:64980&gt; MasterLog, <br />
- Match MatchLog, MatchLog.old <br />
- Negotiator 6600 NegotiatorLog, NegotiatorLog.old <br />
- Schedd 6336 &lt;128.105.136.32:64985&gt; SchedLog, SchedLog.old <br />
- Shadow ShadowLog, <br />
- Slot1 StarterLog.slot1, <br />
- Slot2 7272 &lt;128.105.136.32:65026&gt; StarterLog.slot2, <br />
- Slot3 StarterLog.slot3, <br />
- Slot4 StarterLog.slot4, <br />
- SoftKill SoftKillLog, <br />
- Startd 7416 &lt;128.105.136.32:64984&gt; StartLog, StartLog.old <br />
- Starter StarterLog, <br />
- TOOL TOOLLog, <br />
+<p> <br/>
+ Daemon PID Exit Addr Log, Log.Old <br/>
+ ------ --- ---- ---- ---, ------- <br/>
+ Collector 6788 &lt;128.105.136.32:7977&gt; CollectorLog, CollectorLog.old <br/>
+ Credd 8148 &lt;128.105.136.32:9620&gt; CredLog, CredLog.old <br/>
+ Master 5976 &lt;128.105.136.32:64980&gt; MasterLog, <br/>
+ Match MatchLog, MatchLog.old <br/>
+ Negotiator 6600 NegotiatorLog, NegotiatorLog.old <br/>
+ Schedd 6336 &lt;128.105.136.32:64985&gt; SchedLog, SchedLog.old <br/>
+ Shadow ShadowLog, <br/>
+ Slot1 StarterLog.slot1, <br/>
+ Slot2 7272 &lt;128.105.136.32:65026&gt; StarterLog.slot2, <br/>
+ Slot3 StarterLog.slot3, <br/>
+ Slot4 StarterLog.slot4, <br/>
+ SoftKill SoftKillLog, <br/>
+ Startd 7416 &lt;128.105.136.32:64984&gt; StartLog, StartLog.old <br/>
+ Starter StarterLog, <br/>
+ TOOL TOOLLog, <br/>
  </p>
-<p> <br />
- OWNER CLIENT SLOT JOB RUNTIME PID PROGRAM <br />
+<p> <br/>
+ OWNER CLIENT SLOT JOB RUNTIME PID PROGRAM <br/>
  smith1 [at] crane.cs.wisc.edu crane.cs.wisc.edu 2 320.0 0+00:01:28 7776 D:\scratch\condor\execut </p>
 <h2>Exit Status</h2>
 <p> <i>condor_who</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>

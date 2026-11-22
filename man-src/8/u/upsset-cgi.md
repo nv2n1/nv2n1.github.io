@@ -11,7 +11,7 @@ description: "upsset.cgi – Web-based UPS administration program"
 <h2>Synopsis</h2>
 <p><code>upsset.cgi</code></p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  As a CGI program, this should be invoked through your web server. If you run it from the command line, it will sit there until you give it input resembling a POST request. </dd>
 <h2>Description</h2>
 <p><code>upsset.cgi</code> lets you access many administrative functions within the UPS software from your web browser. You can change settings and invoke instant commands where available.</p>
@@ -24,7 +24,7 @@ description: "upsset.cgi – Web-based UPS administration program"
 <p>Some UPS hardware also has provisions for performing certain actions at the user&#8217;s command. These include battery tests, battery calibration, front panel tests (beep!) and more. To access this section, do as above, but pick &quot;Commands&quot; as the function. </p>
 <p> If your UPS supports any instant commands, they will be listed in a chooser widget. Pick the one you like and &quot;Issue command&quot; to make it happen. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> some dangerous commands like &quot;Turn off load&quot; may not happen right away. This is a feature, not a bug. </p>
 </dl>
 <p> The apcsmart driver and some others require that you send this command twice within a short window in order to make it happen. This is to keep you from accidentally killing your systems by picking the wrong one. </p>

@@ -11,7 +11,7 @@ description: "slaqr4.f –"
 <p> slaqr4.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slaqr4</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, WR, WI, ILOZ, IHIZ, Z, LDZ, WORK, LWORK, INFO)<br />
+<p> subroutine <code>slaqr4</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, WR, WI, ILOZ, IHIZ, Z, LDZ, WORK, LWORK, INFO)<br/>
  <i></i><code>SLAQR4</code> computes the eigenvalues of a Hessenberg matrix, and optionally the matrices from the Schur decomposition.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaqr4 (logicalWANTT, logicalWANTZ, integerN, integerILO, integerIHI, real, dimension( ldh, * )H, integerLDH, real, dimension( * )WR, real, dimension( * )WI, integerILOZ, integerIHIZ, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

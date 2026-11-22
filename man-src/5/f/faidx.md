@@ -52,13 +52,13 @@ description: "faidx – an index enabling random access to FASTA and FASTQ files
 <h3>FASTA Files</h3>
 <p>In order to be indexed with <code>samtools faidx</code>, a FASTA file must be a text file of the form </p>
 <dl>
-<dd>&gt;<i>name</i> [<i>description</i>&#8230;]<br />
- ATGCATGCATGCATGCATGCATGCATGCAT<br />
- GCATGCATGCATGCATGCATGCATGCATGC<br />
- ATGCAT<br />
- &gt;<i>name</i> [<i>description</i>&#8230;]<br />
- ATGCATGCATGCAT<br />
- GCATGCATGCATGC<br />
+<dd>&gt;<i>name</i> [<i>description</i>&#8230;]<br/>
+ ATGCATGCATGCATGCATGCATGCATGCAT<br/>
+ GCATGCATGCATGCATGCATGCATGCATGC<br/>
+ ATGCAT<br/>
+ &gt;<i>name</i> [<i>description</i>&#8230;]<br/>
+ ATGCATGCATGCAT<br/>
+ GCATGCATGCATGC<br/>
  [&#8230;]</dd></dl>
 <p> In particular, each reference sequence must be &quot;well-formatted&quot;, i.e., all of its sequence lines must be the same length, apart from the final sequence line which may be shorter. (While this sequence line length must be the same within each sequence, it may vary between different reference sequences in the same FASTA file.) </p>
 <p> This also means that although the FASTA file may have Unix- or Windows-style or other line termination, the newline characters present must be consistent, at least within each reference sequence. </p>
@@ -66,31 +66,31 @@ description: "faidx – an index enabling random access to FASTA and FASTQ files
 <h3>FASTQ Files</h3>
 <p>FASTQ files for indexing work in the same way as the FASTA files. </p>
 <dl>
-<dd>@<i>name</i> [<i>description&#8230;]</i><br />
- ATGCATGCATGCATGCATGCATGCATGCAT<br />
- GCATGCATGCATGCATGCATGCATGCATGC<br />
- ATGCAT<br />
- +<br />
- FFFA@@FFFFFFFFFFHHB:::@BFFFFGG<br />
- HIHIIIIIIIIIIIIIIIIIIIIIIIFFFF<br />
- 8011&lt;&lt;<br />
- @<i>name</i> [<i>description&#8230;]</i><br />
- ATGCATGCATGCAT<br />
- GCATGCATGCATGC<br />
- +<br />
- IIA94445EEII==<br />
- =&gt;IIIIIIIIICCC<br />
+<dd>@<i>name</i> [<i>description&#8230;]</i><br/>
+ ATGCATGCATGCATGCATGCATGCATGCAT<br/>
+ GCATGCATGCATGCATGCATGCATGCATGC<br/>
+ ATGCAT<br/>
+ +<br/>
+ FFFA@@FFFFFFFFFFHHB:::@BFFFFGG<br/>
+ HIHIIIIIIIIIIIIIIIIIIIIIIIFFFF<br/>
+ 8011&lt;&lt;<br/>
+ @<i>name</i> [<i>description&#8230;]</i><br/>
+ ATGCATGCATGCAT<br/>
+ GCATGCATGCATGC<br/>
+ +<br/>
+ IIA94445EEII==<br/>
+ =&gt;IIIIIIIIICCC<br/>
  [&#8230;]</dd></dl>
 <p> Quality lines must be wrapped at the same length as the corresponding sequence lines.</p>
 <h2>Example</h2>
 <p>For example, given this FASTA file </p>
 <dl>
-<dd>&gt;one<br />
- ATGCATGCATGCATGCATGCATGCATGCAT<br />
- GCATGCATGCATGCATGCATGCATGCATGC<br />
- ATGCAT<br />
- &gt;two another chromosome<br />
- ATGCATGCATGCAT<br />
+<dd>&gt;one<br/>
+ ATGCATGCATGCATGCATGCATGCATGCAT<br/>
+ GCATGCATGCATGCATGCATGCATGCATGC<br/>
+ ATGCAT<br/>
+ &gt;two another chromosome<br/>
+ ATGCATGCATGCAT<br/>
  GCATGCATGCATGC
 </dd></dl>
 <p> formatted with Unix-style (LF) line termination, the corresponding fai index would be</p>
@@ -139,19 +139,19 @@ description: "faidx – an index enabling random access to FASTA and FASTQ files
 </dd></dl>
 <p> An example FASTQ file </p>
 <dl>
-<dd>@fastq1<br />
- ATGCATGCATGCATGCATGCATGCATGCAT<br />
- GCATGCATGCATGCATGCATGCATGCATGC<br />
- ATGCAT<br />
- +<br />
- FFFA@@FFFFFFFFFFHHB:::@BFFFFGG<br />
- HIHIIIIIIIIIIIIIIIIIIIIIIIFFFF<br />
- 8011&lt;&lt;<br />
- @fastq2<br />
- ATGCATGCATGCAT<br />
- GCATGCATGCATGC<br />
- +<br />
- IIA94445EEII==<br />
+<dd>@fastq1<br/>
+ ATGCATGCATGCATGCATGCATGCATGCAT<br/>
+ GCATGCATGCATGCATGCATGCATGCATGC<br/>
+ ATGCAT<br/>
+ +<br/>
+ FFFA@@FFFFFFFFFFHHB:::@BFFFFGG<br/>
+ HIHIIIIIIIIIIIIIIIIIIIIIIIFFFF<br/>
+ 8011&lt;&lt;<br/>
+ @fastq2<br/>
+ ATGCATGCATGCAT<br/>
+ GCATGCATGCATGC<br/>
+ +<br/>
+ IIA94445EEII==<br/>
  =&gt;IIIIIIIIICCC
 </dd></dl>
 <p> Formatted with Unix-style line termination would give this fai index</p>

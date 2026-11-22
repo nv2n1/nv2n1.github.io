@@ -23,7 +23,7 @@ union waffle_native_context *waffle_context_get_native(struct waffle_context *se
 <dl>
 <dd>Create a context for OpenGL rendering with the properties specified by <i>config</i>. </dd>
 <p> The returned context&#8217;s actual properties may differ from, but are guaranteed to be compatible with, the properties specified by <i>config</i>. See the section called &#8220;VERSION PROMOTION&#8221; below for details. </p>
-<p> If <i>share_ctx</i> is not null, then the newly created context is added to the share group of <i>share_ctx</i>. Some data, such as display lists, are shared among all contexts that belong to the same share group. For details on what data is shared, see the specification for the relevant native platform: the m[blue]<code>GLX 1.4 Specification</code>m[]<font SIZE="-2">[1]</font>, the m[blue]<code>EGL 1.4 Specification</code>m[]<font SIZE="-2">[2]</font>, or the m[blue]<code>CGL Reference</code>m[]<font SIZE="-2">[3]</font>.</dl>
+<p> If <i>share_ctx</i> is not null, then the newly created context is added to the share group of <i>share_ctx</i>. Some data, such as display lists, are shared among all contexts that belong to the same share group. For details on what data is shared, see the specification for the relevant native platform: the m[blue]<code>GLX 1.4 Specification</code>m[][1], the m[blue]<code>EGL 1.4 Specification</code>m[][2], or the m[blue]<code>CGL Reference</code>m[][3].</dl>
 <p> <code>waffle_context_destroy()</code></p>
 <dl>
 <dd>Destroy the context and release its memory.</dd></dl>

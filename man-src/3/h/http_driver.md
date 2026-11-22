@@ -11,7 +11,7 @@ description: "Globus XIO HTTP Driver –"
 <p> Globus XIO HTTP Driver &#8211; </p>
 <p> This driver implements the HTTP/1.0 and HTTP/1.1 protocols within the Globus XIO framework.</p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_xio_http_header_t</code><br />
+<p> struct <code>globus_xio_http_header_t</code><br/>
  <i>doxygen varargs filter stuff </i></p>
 <h3>Modules</h3>
 <p> <code>Opening/Closing</code> </p>

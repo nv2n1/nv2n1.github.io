@@ -44,7 +44,7 @@ stg[--version | --help] stg[--help&lt;command&gt; | &lt;command&gt; --help] stg&
 <dt>
 </dt><dd> Even if you have no &quot;upstream&quot; to send patches to, you can use StGit as a convenient way to modify the recent history of a Git branch. For example, instead of first committing change <i>A</i>, then change <i>B</i>, and then <i>A2</i> to fix <i>A</i> because it wasn&#8217;t quite right, you could incorporate the fix directly into <i>A</i>. This way of working results in a much more readable Git history than if you had immortalized every misstep you made on your way to the right solution. </dd>
 <p> Commands of interest in this workflow are e.g. uncommit, which can be used to move the patch stack base downwards &#8212; i.e., turn Git commits into StGit patches after the fact &#8212; and commit, its inverse.</dl>
-<p> For more information, see m[blue]<code>the tutorial</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> For more information, see m[blue]<code>the tutorial</code>m[][1].</p>
 <h3>Specifying patches</h3>
 <p> Many StGit commands take references to StGit patches as arguments. Patches in the stack are identified with short names, each of which must be unique in the stack. </p>
 <p> Patches in the current branch are simply referred to by their name. Some commands allow you to specify a patch in another branch of the repository; this is done by prefixing the patch name with the branch name and a colon (e.g. otherbranch:thatpatch).</p>

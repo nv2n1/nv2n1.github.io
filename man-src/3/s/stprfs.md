@@ -11,7 +11,7 @@ description: "stprfs.f –"
 <p> stprfs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>stprfs</code> (UPLO, TRANS, DIAG, N, NRHS, AP, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
+<p> subroutine <code>stprfs</code> (UPLO, TRANS, DIAG, N, NRHS, AP, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code>STPRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stprfs (characterUPLO, characterTRANS, characterDIAG, integerN, integerNRHS, real, dimension( * )AP, real, dimension( ldb, * )B, integerLDB, real, dimension( ldx, * )X, integerLDX, real, dimension( * )FERR, real, dimension( * )BERR, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

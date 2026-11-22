@@ -10,7 +10,7 @@ description: "dtrsna.f –"
 <p>dtrsna.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtrsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, IWORK, INFO)<br />
+<p>subroutine <code>dtrsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, IWORK, INFO)<br/>
  <i></i><code>DTRSNA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtrsna (characterJOB, characterHOWMNY, logical, dimension( * )SELECT, integerN, double precision, dimension( ldt, * )T, integerLDT, double precision, dimension( ldvl, * )VL, integerLDVL, double precision, dimension( ldvr, * )VR, integerLDVR, double precision, dimension( * )S, double precision, dimension( * )SEP, integerMM, integerM, double precision, dimension( ldwork, * )WORK, integerLDWORK, integer, dimension( * )IWORK, integerINFO)</h3>

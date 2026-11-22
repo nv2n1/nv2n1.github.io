@@ -9,10 +9,10 @@ description: "mode_end_call – At the end of a series of requests, call another
 
 <p>mode_end_call &#8211; At the end of a series of requests, call another handler hook.</p>
 <h3>Functions</h3>
-<p><code>netsnmp_mib_handler</code> * <code>netsnmp_get_mode_end_call_handler</code> (<code>netsnmp_mode_handler_list</code> *endlist)<br />
- <i>returns a mode_end_call handler that can be injected into a given handler chain. </i><br />
- <code>netsnmp_mode_handler_list</code> * <code>netsnmp_mode_end_call_add_mode_callback</code> (<code>netsnmp_mode_handler_list</code> *endlist, int mode, <code>netsnmp_mib_handler</code> *callbackh)<br />
- <i>adds a mode specific callback to the callback list. </i><br />
+<p><code>netsnmp_mib_handler</code> * <code>netsnmp_get_mode_end_call_handler</code> (<code>netsnmp_mode_handler_list</code> *endlist)<br/>
+ <i>returns a mode_end_call handler that can be injected into a given handler chain. </i><br/>
+ <code>netsnmp_mode_handler_list</code> * <code>netsnmp_mode_end_call_add_mode_callback</code> (<code>netsnmp_mode_handler_list</code> *endlist, int mode, <code>netsnmp_mib_handler</code> *callbackh)<br/>
+ <i>adds a mode specific callback to the callback list. </i><br/>
  int <code>netsnmp_mode_end_call_helper</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)</p>
 <h2>Detailed Description</h2>
 <p>At the end of a series of requests, call another handler hook. </p>
@@ -33,8 +33,8 @@ description: "mode_end_call – At the end of a series of requests, call another
 <p>adds a mode specific callback to the callback list. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>endlist</i> the information structure for the mode_end_call helper. Can be NULL to create a new list.<br />
- <i>mode</i> the mode to be called upon. A mode of NETSNMP_MODE_END_ALL_MODES = all modes.<br />
+<dd><i>endlist</i> the information structure for the mode_end_call helper. Can be NULL to create a new list.<br/>
+ <i>mode</i> the mode to be called upon. A mode of NETSNMP_MODE_END_ALL_MODES = all modes.<br/>
  <i>callbackh</i> the netsnmp_mib_handler callback to call.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

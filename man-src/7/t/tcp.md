@@ -311,12 +311,12 @@ error = ioctl(tcp_socket, ioctl_type, &amp;value);</code></pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/2-accept/">accept</a></code>(2), <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2), <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2), <code><a href="/docs/linux/man/2-listen/">listen</a></code>(2), <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2), <code><a href="/docs/linux/man/2-sendfile/">sendfile</a></code>(2), <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2), <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2), <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7), <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7) </p>
 <p> The kernel source file <i>Documentation/networking/ip-sysctl.txt</i>. </p>
-<p> RFC 793 for the TCP specification.<br />
- RFC 1122 for the TCP requirements and a description of the Nagle algorithm.<br />
- RFC 1323 for TCP timestamp and window scaling options.<br />
- RFC 1337 for a description of TIME_WAIT assassination hazards.<br />
- RFC 3168 for a description of Explicit Congestion Notification.<br />
- RFC 2581 for TCP congestion control algorithms.<br />
+<p> RFC 793 for the TCP specification.<br/>
+ RFC 1122 for the TCP requirements and a description of the Nagle algorithm.<br/>
+ RFC 1323 for TCP timestamp and window scaling options.<br/>
+ RFC 1337 for a description of TIME_WAIT assassination hazards.<br/>
+ RFC 3168 for a description of Explicit Congestion Notification.<br/>
+ RFC 2581 for TCP congestion control algorithms.<br/>
  RFC 2018 and RFC 2883 for SACK and extensions to SACK.</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

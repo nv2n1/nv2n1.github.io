@@ -30,8 +30,8 @@ description: "bbkeys – a general XWindow keygrabber"
 <dd> display help message </dd>
 </dl>
 <h2>FILES</h2>
-<p> <i></i><br />
- <i>$HOME/.bbkeysrc</i> maintains keybindings<br />
+<p> <i></i><br/>
+ <i>$HOME/.bbkeysrc</i> maintains keybindings<br/>
  See <i><a href="/docs/linux/man/5-bbkeysrc/">bbkeysrc</a>(5)</i> </p>
 <h2>VERSION</h2>
 <p> 0.9.0 </p>

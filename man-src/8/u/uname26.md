@@ -49,11 +49,11 @@ description: "setarch – change reported architecture in new program environmen
 <dt><code>-h</code>,<code> &#8211;help</code></dt>
 <dd>Display help text and exit.</dd></dl>
 <h2>Examples</h2>
-<p>setarch ppc32 rpmbuild &#8211;target=ppc &#8211;rebuild foo.src.rpm<br />
- setarch ppc32 -v -vL3 rpmbuild &#8211;target=ppc &#8211;rebuild bar.src.rpm<br />
+<p>setarch ppc32 rpmbuild &#8211;target=ppc &#8211;rebuild foo.src.rpm<br/>
+ setarch ppc32 -v -vL3 rpmbuild &#8211;target=ppc &#8211;rebuild bar.src.rpm<br/>
  setarch ppc32 &#8211;32bit rpmbuild &#8211;target=ppc &#8211;rebuild foo.src.rpm</p>
 <h2>Author</h2>
-<p>Elliot Lee<br />
+<p>Elliot Lee<br/>
  Jindrich Novy</p>
 <h2>Availability</h2>
 <p>The setarch command is part of the util-linux package and is available from Linux Kernel Archive</p>

@@ -11,7 +11,7 @@ description: "dlacpy.f –"
 <p> dlacpy.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlacpy</code> (UPLO, M, N, A, LDA, B, LDB)<br />
+<p> subroutine <code>dlacpy</code> (UPLO, M, N, A, LDA, B, LDB)<br/>
  <i></i><code>DLACPY</code> copies all or part of one two-dimensional array to another.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlacpy (characterUPLO, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB)</h3>

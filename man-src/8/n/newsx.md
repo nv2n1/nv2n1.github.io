@@ -125,10 +125,10 @@ description: "newsx – news server exchange; post and fetch news articles"
 <dt><code>&#8211;group</code><i> list</i></dt>
 <dd>Specify pattern for groups to be fetched that will apply in addition to the ones in <code>/usr/lib/news/newsfeeds</code>. The syntax is basically the same as for INN <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5). It is recommended to put <i>list</i> in single quotes, since shells may otherwise treat the ! character in strange ways. For a list that specifies only negations, an initial &#8216;*&#8217; clause will be assumed.</dd>
 <dt>This options is particularily useful to specify unsymmetric behaviour, i.e.</dt>
-<dd>groups where there will be outgoing traffic, but no incoming articles. For instance, to explicitly avoid fetching of control groups, use:<br />
+<dd>groups where there will be outgoing traffic, but no incoming articles. For instance, to explicitly avoid fetching of control groups, use:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &#8211;groups &#8216;!control.*&#8217;
 </dd></dl>
-<p> It can also be useful to specify that only a subset of groups should be fetched for the occasion, e.g:<br />
+<p> It can also be useful to specify that only a subset of groups should be fetched for the occasion, e.g:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &#8211;groups &#8216;comp.*,!*.advocacy&#8217;</p>
 <p> It is recommended to put the argument for &#8211;groups in single quotes.</p>
 <h2>General Options</h2>
@@ -381,19 +381,19 @@ description: "newsx – news server exchange; post and fetch news articles"
 <h2>Diagnostics</h2>
 <p><code>newsx</code> returns error codes as follows:</p>
 <dl>
-<dd>0 &#8211; Successful completion<br />
- 1 &#8211; General system error<br />
- 2 &#8211; Incorrect arguments supplied.<br />
- 3 &#8211; Error connecting to remote host<br />
- 4 &#8211; NNTP Protocol error<br />
- 5 &#8211; Errors accessing outgoing spool file.<br />
- 6 &#8211; Errors accessing host newsrc file.<br />
- 7 &#8211; Errors accessing incoming spool file.<br />
- 8 &#8211; Errors accessing local <i>active</i> and <i>sys</i> files.<br />
- 9 &#8211; Socket access error (e.g. connection timeout)<br />
- 10 &#8211; Errors accessing <i>authinfo</i> file.<br />
- 11 &#8211; Connect script failure.<br />
- 12 &#8211; Option -q did not find the message ID.<br />
+<dd>0 &#8211; Successful completion<br/>
+ 1 &#8211; General system error<br/>
+ 2 &#8211; Incorrect arguments supplied.<br/>
+ 3 &#8211; Error connecting to remote host<br/>
+ 4 &#8211; NNTP Protocol error<br/>
+ 5 &#8211; Errors accessing outgoing spool file.<br/>
+ 6 &#8211; Errors accessing host newsrc file.<br/>
+ 7 &#8211; Errors accessing incoming spool file.<br/>
+ 8 &#8211; Errors accessing local <i>active</i> and <i>sys</i> files.<br/>
+ 9 &#8211; Socket access error (e.g. connection timeout)<br/>
+ 10 &#8211; Errors accessing <i>authinfo</i> file.<br/>
+ 11 &#8211; Connect script failure.<br/>
+ 12 &#8211; Option -q did not find the message ID.<br/>
  13 &#8211; Wait for lock timed out.</dd></dl>
 <h2>Notes</h2>
 <p>Distribution fields are ignored by newsx, and the handling of them left to the news server. </p>
@@ -421,7 +421,7 @@ description: "newsx – news server exchange; post and fetch news articles"
 <dt>/usr/lib/news/active</dt>
 <dd>Local active file, contains a list over all currently active newsgroups in the local spool. This is used as a basis for constructing a list over which newsgroups will actually be requested.</dd>
 <dt>/usr/lib/news/sys</dt>
-<dd>Newsserver configuration file. This is used as a filter against the local <i>active</i> list, deciding which newsgroups which will actually be pulled. The basic format of each specification is:<br />
+<dd>Newsserver configuration file. This is used as a filter against the local <i>active</i> list, deciding which newsgroups which will actually be pulled. The basic format of each specification is:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>site</i>/<i>exclusions</i>:<i>grouplist</i>/<i>distlist</i>:<i>flags</i>:<i>cmd</i></dd>
 <dd>If the <i>exclusions</i> field is set to <code>newsx</code>, newsx will modify the path of incoming news to include the &quot;newsx&quot; pattern.</dd>
 <dd>The <i>site</i> field identifies the remote news source.</dd>
@@ -443,7 +443,7 @@ description: "newsx – news server exchange; post and fetch news articles"
 <dt>/usr/lib/news/active</dt>
 <dd>Local active file, contains a list over all currently active newsgroups in the local spool. This is used as a basis for constructing a list over which newsgroups will actually be requested.</dd>
 <dt>/usr/lib/news/newsfeeds</dt>
-<dd>Newsserver configuration file. This is used as a filter against the local <i>active</i> list, deciding which newsgroups which will actually be pulled. The basic format of each specification is:<br />
+<dd>Newsserver configuration file. This is used as a filter against the local <i>active</i> list, deciding which newsgroups which will actually be pulled. The basic format of each specification is:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>site</i>/<i>exclusions</i>:<i>grouplist</i>/<i>distlist</i>:<i>flags</i>:<i>param</i></dd>
 <dd>If the <i>exclusions</i> field is set to <code>newsx</code>, newsx will modify the path of incoming news to include the &quot;newsx&quot; pattern.</dd>
 <dd>The <i>site</i> field identifies the remote news source.</dd>
@@ -458,6 +458,6 @@ description: "newsx – news server exchange; post and fetch news articles"
 <h2>Author</h2>
 <p>Egil Kvaleberg &lt;egil [at] kvaleberg.no&gt;</p>
 <h2>See Also</h2>
-<p><i>newsq</i>(1), <i>in.hosts</i>(5) C News: <i>news</i>(5), <i>newsdb</i>(5), <i>newssys</i>(5), <i>rnews</i>(8) INN: <i><a href="/docs/linux/man/1-rnews/">rnews</a></i>(1), <i><a href="/docs/linux/man/1-inews/">inews</a></i>(1), <i>wildmat</i>(3), <i><a href="/docs/linux/man/5-active/">active</a></i>(5), <i><a href="/docs/linux/man/5-history/">history</a></i>(5), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8) RFC-977 &#8211; Network News Transfer Protocol (NNTP)<br />
- RFC-1036 &#8211; Usenet Article Format <a rel="nofollow" href="http://www.kvaleberg.com/ISP-Hookup-HOWTO.html">http://www.kvaleberg.com/ISP-Hookup-HOWTO.html</a><br />
+<p><i>newsq</i>(1), <i>in.hosts</i>(5) C News: <i>news</i>(5), <i>newsdb</i>(5), <i>newssys</i>(5), <i>rnews</i>(8) INN: <i><a href="/docs/linux/man/1-rnews/">rnews</a></i>(1), <i><a href="/docs/linux/man/1-inews/">inews</a></i>(1), <i>wildmat</i>(3), <i><a href="/docs/linux/man/5-active/">active</a></i>(5), <i><a href="/docs/linux/man/5-history/">history</a></i>(5), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8) RFC-977 &#8211; Network News Transfer Protocol (NNTP)<br/>
+ RFC-1036 &#8211; Usenet Article Format <a rel="nofollow" href="http://www.kvaleberg.com/ISP-Hookup-HOWTO.html">http://www.kvaleberg.com/ISP-Hookup-HOWTO.html</a><br/>
  <a rel="nofollow" href="http://www.kvaleberg.com/newsx.html">http://www.kvaleberg.com/newsx.html</a> </p>

@@ -11,7 +11,7 @@ description: "chesv.f –"
 <p> chesv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chesv</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, LWORK, INFO)<br />
+<p> subroutine <code>chesv</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, LWORK, INFO)<br/>
  <i></i><code> CHESV computes the solution to system of linear equations A * X = B for HE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chesv (characterUPLO, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex, dimension( ldb, * )B, integerLDB, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

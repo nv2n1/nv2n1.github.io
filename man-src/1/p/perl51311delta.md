@@ -39,15 +39,15 @@ perl51311delta - what is new for perl v5.13.11
 
  On Windows parent processes would not terminate until all forked childred had terminated first. However, <tt>&quot;kill('KILL', ...)&quot;</tt> is inherently unstable on pseudo-processes, and <tt>&quot;kill('TERM', ...)&quot;</tt> might not get delivered if the child if blocked in a system call. 
 
- To avoid the deadlock and still provide a safe mechanism to terminate the hosting process, Perl will now no longer wait for children that have been sent a <font SIZE="-1">SIGTERM</font> signal. It is up to the parent process to <i>waitpid()</i> for these children if child clean-up processing must be allowed to finish. However, it is also the responsibility of the parent then to avoid the deadlock by making sure the child process can't be blocked on I/O either. 
+ To avoid the deadlock and still provide a safe mechanism to terminate the hosting process, Perl will now no longer wait for children that have been sent a SIGTERM signal. It is up to the parent process to <i>waitpid()</i> for these children if child clean-up processing must be allowed to finish. However, it is also the responsibility of the parent then to avoid the deadlock by making sure the child process can't be blocked on I/O either. 
 
  See perlfork for more information about the <i>fork()</i> emulation on Windows.
 
 <h3>Perl source code is read in text mode on Windows</h3>
 
- Perl scripts used to be read in binary mode on Windows for the benefit of the ByteLoader module (which is no longer part of core Perl). This had the side effect of breaking various operations on the <font SIZE="-1">DATA</font> filehandle, including <i>seek()</i>/<i>tell()</i>, and even simply reading from <font SIZE="-1">DATA</font> after file handles have been flushed by a call to <i>system()</i>, backticks, <i>fork()</i> etc. 
+ Perl scripts used to be read in binary mode on Windows for the benefit of the ByteLoader module (which is no longer part of core Perl). This had the side effect of breaking various operations on the DATA filehandle, including <i>seek()</i>/<i>tell()</i>, and even simply reading from DATA after file handles have been flushed by a call to <i>system()</i>, backticks, <i>fork()</i> etc. 
 
- The default build options for Windows have been changed to read Perl source code on Windows in text mode now. Hopefully ByteLoader will be updated on <font SIZE="-1">CPAN</font> to automatically handle this situation.
+ The default build options for Windows have been changed to read Perl source code on Windows in text mode now. Hopefully ByteLoader will be updated on CPAN to automatically handle this situation.
 
 <h2>Performance Enhancements</h2>
 
@@ -78,7 +78,7 @@ perl51311delta - what is new for perl v5.13.11
 </dt><dd> <tt>&quot;Devel::DProf&quot;</tt> has been upgraded from version 20110225.01 to 20110228.00.
 </dd><dt>&bull;
 </dt><dd> <tt>&quot;Digest::SHA&quot;</tt> has been upgraded from version 5.50 to 5.61 
- New <font SIZE="-1">SHA-512/224</font> and <font SIZE="-1">SHA-512/256</font> transforms ref. <font SIZE="-1">NIST</font> Draft <font SIZE="-1">FIPS</font> 180-4 (February 2011)
+ New SHA-512/224 and SHA-512/256 transforms ref. NIST Draft FIPS 180-4 (February 2011)
 </dd><dt>&bull;
 </dt><dd> <tt>&quot;ExtUtils::Command&quot;</tt> has been upgraded from version 1.16 to 1.17.
 </dd><dt>&bull;
@@ -128,12 +128,12 @@ perl51311delta - what is new for perl v5.13.11
 </dt><dd> <tt>&quot;Test::Simple&quot;</tt> has been upgraded from version 0.97_01 to 0.98
 </dd><dt>&bull;
 </dt><dd> <tt>&quot;Tie::Hash::NamedCapture&quot;</tt> has been upgraded from version 0.07 to 0.08. 
- Some of the Perl code has been converted to <font SIZE="-1">XS</font> for efficency's sake.
+ Some of the Perl code has been converted to XS for efficency's sake.
 </dd><dt>&bull;
 </dt><dd> <tt>&quot;Tie::RefHash&quot;</tt> has been upgraded from version 1.38 to 1.39.
 </dd><dt>&bull;
 </dt><dd> <tt>&quot;Unicode::Collate&quot;</tt> has been upgraded from version 0.72 to 0.73 
- <font SIZE="-1">DUCET</font> has been updated for Unicode 6.0.0 as Collate/allkeys.txt and the default UCA_Version is 22.
+ DUCET has been updated for Unicode 6.0.0 as Collate/allkeys.txt and the default UCA_Version is 22.
 </dd><dt>&bull;
 </dt><dd> <tt>&quot;Unicode::UCD&quot;</tt> has been upgraded from version 0.31 to 0.32. This includes a number of bug fixes:
 </dd><dl>
@@ -147,9 +147,9 @@ perl51311delta - what is new for perl v5.13.11
 </dd><dt>&bull;
 </dt><dd> The Hangul syllable code points have the correct names, and their decompositions are always output without requiring Lingua::KO::Hangul::Util to be installed.
 </dd><dt>&bull;
-</dt><dd> The <font SIZE="-1">CJK</font> (Chinese-Japanese-Korean) code points U+2A700 - U+2B734 and U+2B740 - 2B81D are now properly handled.
+</dt><dd> The CJK (Chinese-Japanese-Korean) code points U+2A700 - U+2B734 and U+2B740 - 2B81D are now properly handled.
 </dd><dt>&bull;
-</dt><dd> The numeric values are now output for those <font SIZE="-1">CJK</font> code points that have them.
+</dt><dd> The numeric values are now output for those CJK code points that have them.
 </dd><dt>&bull;
 </dt><dd> The names that are output for code points with multiple aliases are now the corrected ones.</dd></dl>
 </dl>
@@ -176,7 +176,7 @@ perl51311delta - what is new for perl v5.13.11
  <i>perlfunc</i>
 <dl>
 <dt>&bull;
-</dt><dd> Clarified the order in which to check <tt>$@</tt> and <tt>$!</tt> after <tt>&quot;do FILE&quot;</tt>. (<font SIZE="-1">RT</font> #80626)</dd></dl>
+</dt><dd> Clarified the order in which to check <tt>$@</tt> and <tt>$!</tt> after <tt>&quot;do FILE&quot;</tt>. (RT #80626)</dd></dl>
 
 <h2>Diagnostics</h2>
 
@@ -232,7 +232,7 @@ print $d[0];
 </dd><dt>&bull;
 </dt><dd> <tt>&quot;sprintf&quot;</tt> now dies when passed a tainted scalar for the format. It did already die for arbitrary expressions, but not for simple scalars [perl #82250].
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">DESTROY</font> methods of objects implementing ties are no longer able to crash by accessing the tied variable through a weak reference [perl #86328].
+</dt><dd> DESTROY methods of objects implementing ties are no longer able to crash by accessing the tied variable through a weak reference [perl #86328].
 </dd><dt>&bull;
 </dt><dd> On Windows, calling kill(9, <tt>$child</tt>) on a pseudo-process created by the <i>fork()</i> emulation is inherently unstable. It can also be responsible for overriding the parent process exit code with a value of '9' if the parent terminates right after killing the child. This condition will now happen a lot less often than before. 
  See also ``<i>fork()</i> emulation will not wait for signalled children'' for a better way to terminate child processes that avoids deadlocks altogether.
@@ -252,15 +252,15 @@ print $d[0];
 
  If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. 
 
- If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN</font>.
+ If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.
 
 <h2>SEE ALSO</h2>
 
  The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. 
 
- The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. 
+ The <i></i><i>INSTALL</i><i></i> file for how to build Perl. 
 
- The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. 
+ The <i></i><i>README</i><i></i> file for general stuff. 
 
  The <i>Artistic</i> and <i>Copying</i> files for copyright information. 
 

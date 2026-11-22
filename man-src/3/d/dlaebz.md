@@ -11,7 +11,7 @@ description: "dlaebz.f –"
 <p> dlaebz.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlaebz</code> (IJOB, NITMAX, N, MMAX, MINP, NBMIN, ABSTOL, RELTOL, PIVMIN, D, E, E2, NVAL, AB, C, MOUT, NAB, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dlaebz</code> (IJOB, NITMAX, N, MMAX, MINP, NBMIN, ABSTOL, RELTOL, PIVMIN, D, E, E2, NVAL, AB, C, MOUT, NAB, WORK, IWORK, INFO)<br/>
  <i></i><code>DLAEBZ</code> computes the number of eigenvalues of a real symmetric tridiagonal matrix which are less than or equal to a given value, and performs other tasks required by the routine sstebz.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaebz (integerIJOB, integerNITMAX, integerN, integerMMAX, integerMINP, integerNBMIN, double precisionABSTOL, double precisionRELTOL, double precisionPIVMIN, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( * )E2, integer, dimension( * )NVAL, double precision, dimension( mmax, * )AB, double precision, dimension( * )C, integerMOUT, integer, dimension( mmax, * )NAB, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -181,26 +181,26 @@ description: "dlaebz.f –"
           If IJOB=3, MOUT will equal MINP.
 </pre>
 <p> <i>NAB</i> </p>
-<p>NAB is INTEGER array, dimension(MMAX, 2) If IJOB = 1, then on output NAB(i, j) will be set to N(AB(i,j)).<br />
-          If IJOB=2, then on input, NAB(i,j) should be set.  It must<br />
-             satisfy the condition:<br />
-             N(AB(i,1)) &lt;= NAB(i,1) &lt;= NAB(i,2) &lt;= N(AB(i,2)),<br />
-             which means that in interval i only eigenvalues<br />
-             NAB(i,1)+1,&#8230;,NAB(i,2) will be considered.  Usually,<br />
-             NAB(i,j)=N(AB(i,j)), from a previous call to DLAEBZ with<br />
-             IJOB=1.<br />
-             On output, NAB(i,j) will contain<br />
-             max(na(k),min(nb(k),N(AB(i,j)))), where k is the index of<br />
-             the input interval that the output interval<br />
-             (AB(j,1),AB(j,2)] came from, and na(k) and nb(k) are the<br />
-             the input values of NAB(k,1) and NAB(k,2).<br />
-          If IJOB=3, then on output, NAB(i,j) contains N(AB(i,j)),<br />
-             unless N(w) &gt; NVAL(i) for all search points  w , in which<br />
-             case NAB(i,1) will not be modified, i.e., the output<br />
-             value will be the same as the input value (modulo<br />
-             reorderings &#8212; see NVAL and AB), or unless N(w) &lt; NVAL(i)<br />
-             for all search points  w , in which case NAB(i,2) will<br />
-             not be modified.  Normally, NAB should be set to some<br />
+<p>NAB is INTEGER array, dimension(MMAX, 2) If IJOB = 1, then on output NAB(i, j) will be set to N(AB(i,j)).<br/>
+          If IJOB=2, then on input, NAB(i,j) should be set.  It must<br/>
+             satisfy the condition:<br/>
+             N(AB(i,1)) &lt;= NAB(i,1) &lt;= NAB(i,2) &lt;= N(AB(i,2)),<br/>
+             which means that in interval i only eigenvalues<br/>
+             NAB(i,1)+1,&#8230;,NAB(i,2) will be considered.  Usually,<br/>
+             NAB(i,j)=N(AB(i,j)), from a previous call to DLAEBZ with<br/>
+             IJOB=1.<br/>
+             On output, NAB(i,j) will contain<br/>
+             max(na(k),min(nb(k),N(AB(i,j)))), where k is the index of<br/>
+             the input interval that the output interval<br/>
+             (AB(j,1),AB(j,2)] came from, and na(k) and nb(k) are the<br/>
+             the input values of NAB(k,1) and NAB(k,2).<br/>
+          If IJOB=3, then on output, NAB(i,j) contains N(AB(i,j)),<br/>
+             unless N(w) &gt; NVAL(i) for all search points  w , in which<br/>
+             case NAB(i,1) will not be modified, i.e., the output<br/>
+             value will be the same as the input value (modulo<br/>
+             reorderings &#8212; see NVAL and AB), or unless N(w) &lt; NVAL(i)<br/>
+             for all search points  w , in which case NAB(i,2) will<br/>
+             not be modified.  Normally, NAB should be set to some<br/>
              distinctive value(s) before DLAEBZ is called.</p>
 <p> <i>WORK</i> </p>
 <pre>

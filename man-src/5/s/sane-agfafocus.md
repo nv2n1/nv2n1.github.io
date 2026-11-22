@@ -11,11 +11,11 @@ description: "sane-agfafocus – SANE backend for AGFA Focus flatbed scanners"
 <h2>Description</h2>
 <p>The <code>sane-agfafocus</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to AGFA Focus flatbed scanners. At present, the following scanners are supported from this backend:</p>
 <dl>
-<dd>AGFA Focus GS Scanner (6 bit gray scale) (untested)<br />
- AGFA Focus Lineart Scanner (lineart) (untested)<br />
- AGFA Focus II (8 bit gray scale) (untested)<br />
- AGFA Focus Color (24 bit color 3-pass)<br />
- AGFA Focus Color Plus (24 bit color 3-pass)<br />
+<dd>AGFA Focus GS Scanner (6 bit gray scale) (untested)<br/>
+ AGFA Focus Lineart Scanner (lineart) (untested)<br/>
+ AGFA Focus II (8 bit gray scale) (untested)<br/>
+ AGFA Focus Color (24 bit color 3-pass)<br/>
+ AGFA Focus Color Plus (24 bit color 3-pass)<br/>
  Siemens S9036 (8 bit gray scale) (untested)
 </dd></dl>
 <p> The driver supports line art, 6bpp and 8bpp gray, 18bpp and 24bpp color scans. If you own a scanner other than the ones listed above that works with this backend, please let us know by sending the scanner&#8217;s model name, SCSI id, and firmware revision to <i>sane-devel [at] alioth-lists.debian.net</i>. Have a look at <i><a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a></i> concerning subscription to sane-devel. All of these scanners are pre-SCSI-2, and do not even report properly to SCSI Inquiry. This is typically evident in SCSI bus scans, where the scanner will come up with only garbage as vendor and models strings. </p>
@@ -27,8 +27,8 @@ description: "sane-agfafocus – SANE backend for AGFA Focus flatbed scanners"
 <h2>Configuration</h2>
 <p>The contents of the <i>agfafocus.conf</i> file is a list of device names that correspond to AGFA Focus scanners. Empty lines and lines starting with a hash mark (#) are ignored. A sample configuration file is shown below: </p>
 <dl>
-<dd>/dev/scanner<br />
- # this is a comment<br />
+<dd>/dev/scanner<br/>
+ # this is a comment<br/>
  /dev/sge</dd></dl>
 <h2>Files</h2>
 <dl>

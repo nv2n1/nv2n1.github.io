@@ -12,9 +12,9 @@ description: "QuantLib::CliquetOption – cliquet (Ratchet) option"
 <p>#include &lt;ql/instruments/cliquetoption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::OneAssetOption</code>. </p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for cliquet option calculation </i><br />
- class <code>engine</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for cliquet option calculation </i><br/>
+ class <code>engine</code><br/>
  <i>Cliquet engine base class. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>CliquetOption</code> (const boost::shared_ptr&lt; <code>PercentageStrikePayoff</code> &gt; &amp;, const boost::shared_ptr&lt; <code>EuropeanExercise</code> &gt; &amp;maturity, const std::vector&lt; <code>Date</code> &gt; &amp;resetDates) </p>

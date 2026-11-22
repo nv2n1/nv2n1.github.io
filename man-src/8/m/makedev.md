@@ -9,8 +9,8 @@ description: "MAKEDEV – create devices"
 
 <p>MAKEDEV &#8211; create devices</p>
 <h2>Synopsis</h2>
-<p><code>cd /dev; ./MAKEDEV [ -n ] [ -v ] [ update ]</code><br />
- <code>cd /dev; ./MAKEDEV [ -n ] [ -v ] [ generic ] [ local ] [ group-keyword &#8230; device &#8230; ]</code><br />
+<p><code>cd /dev; ./MAKEDEV [ -n ] [ -v ] [ update ]</code><br/>
+ <code>cd /dev; ./MAKEDEV [ -n ] [ -v ] [ generic ] [ local ] [ group-keyword &#8230; device &#8230; ]</code><br/>
  <code>cd /dev; ./MAKEDEV [ -n ] [ -v ] [ -d ]</code><i> device &#8230;</i></p>
 <h2>Description</h2>
 <p><code>MAKEDEV</code> is a script that will create the devices in <code>/dev</code> used to interface with drivers in the kernel. </p>
@@ -197,7 +197,7 @@ description: "MAKEDEV – create devices"
 <dt><i>qic</i></dt>
 <dd>QIC-11, -24, -120, and -150 tapes. The devices created are <code>ntpqic11 tpqic11 ntpqic24 tpqic24 ntpqic120 tpqic120 ntpqic150</code> and <code>tpqic150</code> tape devices, along with <code>rmt8</code>, <code>rmt16</code>, <code>tape-d</code>, and <code>tape-reset</code>.</dd>
 <dt><i>ftape <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></i></dt>
-<dd>Floppy driver tapes (QIC-117). There are 4 methods of access depending on<br />
+<dd>Floppy driver tapes (QIC-117). There are 4 methods of access depending on<br/>
  the floppy tape drive. For each of access methods 0, 1, 2 and 3, the devices <code>qft</code><i>x</i> <code>zqft</code><i>x</i> and <code>rawqftx</code> (rewinding) and <code>nqft</code><i>x</i> <code>nzqft</code><i>x</i> <code>nrawqdt</code><i>x</i> (non-rewinding) are created. For compatibility, devices <code>ftape</code> and <code>nftape</code> are symlinks to <code>qft0</code> and <code>nqft0</code> respectively.</dd>
 <dt><code>ht0</code></dt>
 <dd>Creates IDE tape devices <code>ht0</code> and <code>nht0</code>.</dd>

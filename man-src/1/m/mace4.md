@@ -49,8 +49,8 @@ description: "mace4 – searches for finite countermodels of first-order stateme
 <dd> If the trace flag is set, detailed information about the search, including a trace of all assignments and backtracking, is printed to the standard output. This flag causes a lot of output, so it should be used only on small searches.</dd></dl>
 <p> There also exist a number of advanced options, which are used for experimentation with search methods. They can be ignored by nearly all users. For descriptions of these options, see the original <code>mace4</code> manual.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-prover9/">prover9</a></code>(1).<br />
- Full documentation for <code>mace4</code> is found in the <code>prover9</code> manual, available on Debian systems in the <i>prover9-doc</i> package at <i>/usr/share/doc/prover9-doc/manual/index.html</i>.<br />
+<p> <code><a href="/docs/linux/man/1-prover9/">prover9</a></code>(1).<br/>
+ Full documentation for <code>mace4</code> is found in the <code>prover9</code> manual, available on Debian systems in the <i>prover9-doc</i> package at <i>/usr/share/doc/prover9-doc/manual/index.html</i>.<br/>
  The original <code>mace4</code> manual, which can be downloaded at <a rel="nofollow" href="http://www.cs.unm.edu/~mccune/prover9/mace4.pdf">http://www.cs.unm.edu/~mccune/prover9/mace4.pdf</a></p>
 <h2>AUTHOR</h2>
 <p> <code>mace4</code> was written by William McCune &lt;mccune [at] cs.unm.edu&gt; </p>

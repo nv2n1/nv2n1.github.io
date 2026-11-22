@@ -19,30 +19,30 @@ description: "eneconv – converts energy files"
 <p> Reads one energy file and writes another, applying the <code> -dt</code>, <code> -offset</code>, <code> -t0</code> and <code> -settime</code> options and converting to a different format if necessary (indicated by file extentions). </p>
 <p> <code> -settime</code> is applied first, then <code> -dt</code>/<code> -offset</code> followed by <code> -b</code> and <code> -e</code> to select which frames to write.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> ener.edr</i> <code>Input, Mult.</code><br />
+<p> <code>-f</code><i> ener.edr</i> <code>Input, Mult.</code><br/>
 &nbsp;<wbr>Energy file: edr ene&nbsp;<wbr> </p>
-<p> <code>-o</code><i> fixed.edr</i> <code>Output</code><br />
+<p> <code>-o</code><i> fixed.edr</i> <code>Output</code><br/>
 &nbsp;<wbr>Energy file: edr ene&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> real</i><code> -1 </code><br />
+<p> <code>-b</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>First time to use </p>
-<p> <code>-e</code><i> real</i><code> -1 </code><br />
+<p> <code>-e</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Last time to use </p>
-<p> <code>-dt</code><i> real</i><code> 0 </code><br />
+<p> <code>-dt</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Only write out frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>offset </p>
-<p> <code>-offset</code><i> real</i><code> 0 </code><br />
+<p> <code>-offset</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Time offset for -dt option </p>
-<p> <code>-[no]settime</code><i>no </i><br />
+<p> <code>-[no]settime</code><i>no </i><br/>
 &nbsp;<wbr>Change starting time interactively </p>
-<p> <code>-[no]sort</code><i>yes </i><br />
+<p> <code>-[no]sort</code><i>yes </i><br/>
 &nbsp;<wbr>Sort energy files&nbsp;<wbr>(not frames) </p>
-<p> <code>-scalefac</code><i> real</i><code> 1 </code><br />
+<p> <code>-scalefac</code><i> real</i><code> 1 </code><br/>
 &nbsp;<wbr>Multiply energy component by this factor </p>
-<p> <code>-[no]error</code><i>yes </i><br />
+<p> <code>-[no]error</code><i>yes </i><br/>
 &nbsp;<wbr>Stop on errors in the file </p>
 <h2>KNOWN PROBLEMS</h2>
 <p> &#8211; When combining trajectories the sigma and E2 (necessary for statistics) are not updated correctly. Only the actual energy is correct. One thus has to compute statistics in another way. </p>

@@ -11,12 +11,12 @@ description: "pam – portable arbitrary map file format"
 <h2>Description</h2>
 <p>The PAM image format is a lowest common denominator 2 dimensional map format. It is designed to be used for any of myriad kinds of graphics, but can theoretically be used for any kind of data that is arranged as a two dimensional rectangular array. Actually, from another perspective it can be seen as a format for data arranged as a three dimensional array. This format does not define the meaning of the data at any particular point in the array. It could be red, green, and blue light intensities such that the array represents a visual image, or it could be the same red, green, and blue components plus a transparency component, or it could contain annual rainfalls for places on the surface of the Earth. Any process that uses the PAM format must further define the format to specify the meanings of the data. A PAM image describes a two dimensional grid of tuples. The tuples are arranged in rows and columns. The width of the image is the number of columns. The height of the image is the number of rows. All rows are the same width and all columns are the same height. The tuples may have any degree, but all tuples have the same degree. The degree of the tuples is called the depth of the image. Each member of a tuple is called a sample. A sample is an unsigned integer which represents a locus along a scale which starts at zero and ends at a certain maximum value greater than zero called the maxval. The maxval is the same for every sample in the image. The two dimensional array of all the Nth samples of each tuple is called the Nth plane or Nth channel of the image. Though the format does not assign any meaning to the tuple values, it does include an optional string that describes that meaning. The contents of this string, called the tuple type, are arbitrary from the point of view of the PAM format, but users of the format may assign meaning to it by convention so they can identify their particular implementations of the PAM format.</p>
 <h3>The Layout</h3>
-<p>A PAM file consists of a sequence of one or more PAM images. There are no data, delimiters, or padding before, after, or between images. Each PAM image consists of a header followed immediately by a raster. Here is an example header: <code>P7</code><br />
- <code>WIDTH 227</code><br />
- <code>HEIGHT 149</code><br />
- <code>DEPTH 3</code><br />
- <code>MAXVAL 255</code><br />
- <code>TUPLTYPE RGB</code><br />
+<p>A PAM file consists of a sequence of one or more PAM images. There are no data, delimiters, or padding before, after, or between images. Each PAM image consists of a header followed immediately by a raster. Here is an example header: <code>P7</code><br/>
+ <code>WIDTH 227</code><br/>
+ <code>HEIGHT 149</code><br/>
+ <code>DEPTH 3</code><br/>
+ <code>MAXVAL 255</code><br/>
+ <code>TUPLTYPE RGB</code><br/>
  <code>ENDHDR</code> The header begins with the ASCII characters &quot;P7&quot; followed by newline. This is the magic number. The header continues with an arbitrary number of lines of ASCII text. Each line ends with and is delimited by a newline character. Each header line consists of zero or more whitespace-delimited tokens or begins with &quot;#&quot;. If it begins with &quot;#&quot; it is a comment and the rest of this specification does not apply to it. A header line which has zero tokens is valid but has no meaning. The type of header line is identified by its first token, which is 8 characters or less:</p>
 <dl>
 <dt><code>ENDHDR </code></dt>

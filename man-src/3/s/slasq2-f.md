@@ -10,7 +10,7 @@ description: "slasq2.f –"
 <p>slasq2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slasq2</code> (N, Z, INFO)<br />
+<p>subroutine <code>slasq2</code> (N, Z, INFO)<br/>
  <i></i><code>SLASQ2</code> computes all the eigenvalues of the symmetric positive definite tridiagonal matrix associated with the qd Array Z to high relative accuracy. Used by sbdsqr and sstegr.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasq2 (integerN, real, dimension( * )Z, integerINFO)</h3>

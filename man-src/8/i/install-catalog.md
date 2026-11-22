@@ -9,9 +9,9 @@ description: "install-catalog – Manage a SGML or XML centralized catalog"
 
 <p>install-catalog &#8211; Manage a SGML or XML centralized catalog</p>
 <h2>Synopsis</h2>
-<p><code>install-catalog</code> [ <code>option </code>] <code>action </code><i> &#8230;</i> [ <code> [ -d] [ &#8211;delegate] </code>] [ <code> [ -a </code><i>centralized</i><i>ordinary</i><code>] [ &#8211;add </code><i>centralized</i><i>ordinary</i><code>]<br />
-&nbsp;<wbr>[&nbsp;<wbr>-r&nbsp;<wbr></code><i>centralized</i><code>&nbsp;<wbr></code><i>ordinary</i><code>]&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&#8211;remove&nbsp;<wbr></code><i>centralized</i><code>&nbsp;<wbr></code><i>ordinary</i><code>]&nbsp;<wbr><br />
-&nbsp;<wbr>[&nbsp;<wbr>-h]&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&#8211;help]&nbsp;<wbr><br />
+<p><code>install-catalog</code> [ <code>option </code>] <code>action </code><i> &#8230;</i> [ <code> [ -d] [ &#8211;delegate] </code>] [ <code> [ -a </code><i>centralized</i><i>ordinary</i><code>] [ &#8211;add </code><i>centralized</i><i>ordinary</i><code>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>-r&nbsp;<wbr></code><i>centralized</i><code>&nbsp;<wbr></code><i>ordinary</i><code>]&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&#8211;remove&nbsp;<wbr></code><i>centralized</i><code>&nbsp;<wbr></code><i>ordinary</i><code>]&nbsp;<wbr><br/>
+&nbsp;<wbr>[&nbsp;<wbr>-h]&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&#8211;help]&nbsp;<wbr><br/>
 &nbsp;<wbr>[&nbsp;<wbr>-v]&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&#8211;version]&nbsp;<wbr></code>]&nbsp;<wbr> </p>
 <h2>Description</h2>
 <p>This shell script allows to handle a centralized catalog referencing other &quot;ordinary&quot; SGML or XML Open Catalogs. </p>

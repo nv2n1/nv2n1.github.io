@@ -20,13 +20,13 @@ description: "ncdu – NCurses Disk Usage"
 <dd> Print a short help message and quit.</dd>
 <dt>-v</dt>
 <dd> Print ncdu version and quit.</dd>
-<dt>-f <i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
-<dd> Load the given file, which has earlier been created with the <tt>&quot;-o&quot;</tt> option. If <i></i><font SIZE="-1"><i>FILE</i></font><i></i> is equivalent to <tt>&quot;-&quot;</tt>, the file is read from standard input. </dd>
+<dt>-f <i></i><i>FILE</i><i></i></dt>
+<dd> Load the given file, which has earlier been created with the <tt>&quot;-o&quot;</tt> option. If <i></i><i>FILE</i><i></i> is equivalent to <tt>&quot;-&quot;</tt>, the file is read from standard input. </dd>
 <p> For the sake of preventing a screw-up, the current version of ncdu will assume that the directory information in the imported file does not represent the filesystem on which the file is being imported. That is, the refresh and file deletion options in the browser will be disabled.</p>
 <dt><i>dir</i></dt>
 <dd> Scan the given directory.</dd>
-<dt>-o <i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
-<dd> Export all necessary information to <i></i><font SIZE="-1"><i>FILE</i></font><i></i> instead of opening the browser interface. If <i></i><font SIZE="-1"><i>FILE</i></font><i></i> is <tt>&quot;-&quot;</tt>, the data is written to standard output. See the examples section below for some handy use cases. </dd>
+<dt>-o <i></i><i>FILE</i><i></i></dt>
+<dd> Export all necessary information to <i></i><i>FILE</i><i></i> instead of opening the browser interface. If <i></i><i>FILE</i><i></i> is <tt>&quot;-&quot;</tt>, the data is written to standard output. See the examples section below for some handy use cases. </dd>
 <p> Be warned that the exported data may grow quite large when exporting a directory with many files. 10.000 files will get you an export in the order of 600 to 700 KiB uncompressed, or a little over 100 KiB when compressed with gzip. This scales linearly, so be prepared to handle a few tens of megabytes when dealing with millions of files.</dl>
 <h3>Interface options</h3>
 <dl>
@@ -42,7 +42,7 @@ description: "ncdu – NCurses Disk Usage"
 <dt>-r</dt>
 <dd> Read-only mode. This will disable the built-in file deletion feature. This option has no effect when <tt>&quot;-o&quot;</tt> is used, because there will not be a browser interface in that case. It has no effect when <tt>&quot;-f&quot;</tt> is used, either, because the deletion feature is disabled in that case anyway.</dd>
 <dt>&#8211;si</dt>
-<dd> List sizes using base 10 prefixes, that is, powers of 1000 (<font SIZE="-1">KB, MB,</font> etc), as defined in the International System of Units (<font SIZE="-1">SI</font>), instead of the usual base 2 prefixes, that is, powers of 1024 (KiB, MiB, etc).</dd>
+<dd> List sizes using base 10 prefixes, that is, powers of 1000 (KB, MB, etc), as defined in the International System of Units (SI), instead of the usual base 2 prefixes, that is, powers of 1024 (KiB, MiB, etc).</dd>
 <dt>&#8211;confirm-quit</dt>
 <dd> Requires a confirmation before quitting ncdu. Very helpful when you accidentally press &#8216;q&#8217; during or after a very long scan.</dd></dl>
 <h3>Scan Options</h3>
@@ -50,12 +50,12 @@ description: "ncdu – NCurses Disk Usage"
 <dl>
 <dt>-x</dt>
 <dd> Do not cross filesystem boundaries, i.e. only count files and directories on the same filesystem as the directory being scanned.</dd>
-<dt>&#8211;exclude <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i></dt>
-<dd> Exclude files that match <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i>. The files will still be displayed by default, but are not counted towards the disk usage statistics. This argument can be added multiple times to add more patterns.</dd>
-<dt>-X <i></i><font SIZE="-1"><i>FILE</i></font><i></i>, &#8211;exclude-from <i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
-<dd> Exclude files that match any pattern in <i></i><font SIZE="-1"><i>FILE</i></font><i></i>. Patterns should be separated by a newline.</dd>
+<dt>&#8211;exclude <i></i><i>PATTERN</i><i></i></dt>
+<dd> Exclude files that match <i></i><i>PATTERN</i><i></i>. The files will still be displayed by default, but are not counted towards the disk usage statistics. This argument can be added multiple times to add more patterns.</dd>
+<dt>-X <i></i><i>FILE</i><i></i>, &#8211;exclude-from <i></i><i>FILE</i><i></i></dt>
+<dd> Exclude files that match any pattern in <i></i><i>FILE</i><i></i>. Patterns should be separated by a newline.</dd>
 <dt>&#8211;exclude-caches</dt>
-<dd> Exclude directories containing <font SIZE="-1">CACHEDIR.TAG. </font> The directories will still be displayed, but not their content, and they are not counted towards the disk usage statistics. See <a rel="nofollow" href="http://www.brynosaurus.com/cachedir/">http://www.brynosaurus.com/cachedir/</a></dd></dl>
+<dd> Exclude directories containing CACHEDIR.TAG.  The directories will still be displayed, but not their content, and they are not counted towards the disk usage statistics. See <a rel="nofollow" href="http://www.brynosaurus.com/cachedir/">http://www.brynosaurus.com/cachedir/</a></dd></dl>
 <h2>KEYS</h2>
 <dl>
 <dt>?</dt>

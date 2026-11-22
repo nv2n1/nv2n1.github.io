@@ -11,4 +11,4 @@ overlay-osc - implement OSC to manage overlays
 
 <h2>DESCRIPTION</h2>
 
- This extension implements some <font SIZE="-1">OSC</font> commands to display timed popups on the screen - useful for status displays from within scripts. You have to read the sources for more info.
+ This extension implements some OSC commands to display timed popups on the screen - useful for status displays from within scripts. You have to read the sources for more info.

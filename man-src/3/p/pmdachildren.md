@@ -9,8 +9,8 @@ description: "pmdaChildren – translate a PMID to a set of dynamic performance 
 
 <p><code>pmdaChildren</code> &#8211; translate a PMID to a set of dynamic performance metric names</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> int pmdaChildren(char *</code><i>name</i>, int <i>traverse</i>, char&nbsp;<wbr>***<i>offspring</i>, int&nbsp;<wbr>**<i>status</i>, pmdaExt&nbsp;<wbr>*<i>pmda</i>); </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>

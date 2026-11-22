@@ -12,48 +12,48 @@ description: "sc::DistSymmSCMatrix –"
 <p> Inherits <code>sc::SymmSCMatrix</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>DistSymmSCMatrix</code> (const <code>RefSCDimension</code> &amp;, <code>DistSCMatrixKit</code> *) </p>
-<p> double <code>get_element</code> (int, int) const<br />
- <i>Return or modify an element. </i><br />
+<p> double <code>get_element</code> (int, int) const<br/>
+ <i>Return or modify an element. </i><br/>
  void <code>set_element</code> (int, int, double) </p>
 <p> void <code>accumulate_element</code> (int, int, double) </p>
-<p> <code>SCMatrix</code> * <code>get_subblock</code> (int, int, int, int)<br />
- <i>Return a subblock of this. </i><br />
+<p> <code>SCMatrix</code> * <code>get_subblock</code> (int, int, int, int)<br/>
+ <i>Return a subblock of this. </i><br/>
  <code>SymmSCMatrix</code> * <code>get_subblock</code> (int, int) </p>
-<p> void <code>assign_subblock</code> (<code>SCMatrix</code> *, int, int, int, int)<br />
- <i>Assign m to a subblock of this. </i><br />
+<p> void <code>assign_subblock</code> (<code>SCMatrix</code> *, int, int, int, int)<br/>
+ <i>Assign m to a subblock of this. </i><br/>
  void <code>assign_subblock</code> (<code>SymmSCMatrix</code> *, int, int) </p>
-<p> void <code>accumulate_subblock</code> (<code>SCMatrix</code> *, int, int, int, int)<br />
- <i>Sum m into a subblock of this. </i><br />
+<p> void <code>accumulate_subblock</code> (<code>SCMatrix</code> *, int, int, int, int)<br/>
+ <i>Sum m into a subblock of this. </i><br/>
  void <code>accumulate_subblock</code> (<code>SymmSCMatrix</code> *, int, int) </p>
-<p> <code>SCVector</code> * <code>get_row</code> (int i)<br />
- <i>Return a row of this. </i><br />
- void <code>assign_row</code> (<code>SCVector</code> *v, int i)<br />
- <i>Assign v to a row of this. </i><br />
- void <code>accumulate_row</code> (<code>SCVector</code> *v, int i)<br />
- <i>Sum v to a row of this. </i><br />
+<p> <code>SCVector</code> * <code>get_row</code> (int i)<br/>
+ <i>Return a row of this. </i><br/>
+ void <code>assign_row</code> (<code>SCVector</code> *v, int i)<br/>
+ <i>Assign v to a row of this. </i><br/>
+ void <code>accumulate_row</code> (<code>SCVector</code> *v, int i)<br/>
+ <i>Sum v to a row of this. </i><br/>
  void <code>accumulate_product_rr</code> (<code>SCMatrix</code> *, <code>SCMatrix</code> *) </p>
 <p> void <code>accumulate</code> (const <code>SymmSCMatrix</code> *) </p>
-<p> double <code>invert_this</code> ()<br />
- <i>Invert this. </i><br />
+<p> double <code>invert_this</code> ()<br/>
+ <i>Invert this. </i><br/>
  double <code>solve_this</code> (<code>SCVector</code> *) </p>
-<p> double <code>trace</code> ()<br />
- <i>Return the trace. </i><br />
- double <code>determ_this</code> ()<br />
- <i>Return the determinant of this. this is overwritten. </i><br />
+<p> double <code>trace</code> ()<br/>
+ <i>Return the trace. </i><br/>
+ double <code>determ_this</code> ()<br/>
+ <i>Return the determinant of this. this is overwritten. </i><br/>
  void <code>gen_invert_this</code> () </p>
-<p> void <code>diagonalize</code> (<code>DiagSCMatrix</code> *, <code>SCMatrix</code> *)<br />
- <i>Diagonalize this, placing the eigenvalues in d and the eigenvectors in m. </i><br />
- void <code>accumulate_symmetric_sum</code> (<code>SCMatrix</code> *)<br />
- <i>Sum into this the products of various vectors or matrices. </i><br />
- void <code>element_op</code> (const <code>Ref</code>&lt; <code>SCElementOp</code> &gt; &amp;)<br />
- <i>Perform the element operation op on each element of this. </i><br />
+<p> void <code>diagonalize</code> (<code>DiagSCMatrix</code> *, <code>SCMatrix</code> *)<br/>
+ <i>Diagonalize this, placing the eigenvalues in d and the eigenvectors in m. </i><br/>
+ void <code>accumulate_symmetric_sum</code> (<code>SCMatrix</code> *)<br/>
+ <i>Sum into this the products of various vectors or matrices. </i><br/>
+ void <code>element_op</code> (const <code>Ref</code>&lt; <code>SCElementOp</code> &gt; &amp;)<br/>
+ <i>Perform the element operation op on each element of this. </i><br/>
  void <code>element_op</code> (const <code>Ref</code>&lt; <code>SCElementOp2</code> &gt; &amp;, <code>SymmSCMatrix</code> *) </p>
 <p> void <code>element_op</code> (const <code>Ref</code>&lt; <code>SCElementOp3</code> &gt; &amp;, <code>SymmSCMatrix</code> *, <code>SymmSCMatrix</code> *) </p>
 <p> virtual void <code>convert_accumulate</code> (<code>SymmSCMatrix</code> *) </p>
-<p> <code>Ref</code>&lt; <code>SCMatrixSubblockIter</code> &gt; <code>local_blocks</code> (SCMatrixSubblockIter::Access)<br />
- <i>Returns iterators for the local (rapidly accessible) blocks used in this matrix. </i><br />
- <code>Ref</code>&lt; <code>SCMatrixSubblockIter</code> &gt; <code>all_blocks</code> (SCMatrixSubblockIter::Access)<br />
- <i>Returns iterators for the all blocks used in this matrix. </i><br />
+<p> <code>Ref</code>&lt; <code>SCMatrixSubblockIter</code> &gt; <code>local_blocks</code> (SCMatrixSubblockIter::Access)<br/>
+ <i>Returns iterators for the local (rapidly accessible) blocks used in this matrix. </i><br/>
+ <code>Ref</code>&lt; <code>SCMatrixSubblockIter</code> &gt; <code>all_blocks</code> (SCMatrixSubblockIter::Access)<br/>
+ <i>Returns iterators for the all blocks used in this matrix. </i><br/>
  <code>Ref</code>&lt; <code>DistSCMatrixKit</code> &gt; <code>skit</code> ()</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void init_blocklist ()

@@ -45,23 +45,23 @@ description: "Key :: Basic Methods –"
 <h3>int keyCopy (Key * dest, const Key * source)Copy or Clear a key.</h3>
 <p> Most often you may prefer <code>keyDup()</code> which allocates a new key and returns a duplication of another key. </p>
 <p> But when you need to copy into an existing key, e.g. because it was passed by a pointer in a function you can do so: </p>
-<p>int h(Key *k)<br />
-{<br />
-    // receive key c<br />
-    keyCopy(k, c);<br />
-    // the caller will see the changed key k<br />
+<p>int h(Key *k)<br/>
+{<br/>
+    // receive key c<br/>
+    keyCopy(k, c);<br/>
+    // the caller will see the changed key k<br/>
 }</p>
 <p> The reference counter will not change for the destination key. Affiliation to keysets are also not affected. </p>
 <p> When you pass a NULL-pointer as source the data of dest will be cleaned completely and you get a fresh dest key. </p>
-<p>int g(Key *k)<br />
-{<br />
-    keyCopy(k, 0);<br />
-    // k is now an empty and fresh key<br />
+<p>int g(Key *k)<br/>
+{<br/>
+    keyCopy(k, 0);<br/>
+    // k is now an empty and fresh key<br/>
 }</p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>dest</i> the key which will be written to<br />
+</dt><dd> <i>dest</i> the key which will be written to<br/>
  <i>source</i> the key which should be copied or NULL to clean the destination key</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -110,22 +110,22 @@ description: "Key :: Basic Methods –"
 <h3>Key* keyDup (const Key * source)Return a duplicate of a key.</h3>
 <p> Memory will be allocated as needed for dynamic properties. </p>
 <p> The new key will not be member of any KeySet and will start with a new reference counter at 0. A subsequent <code>keyDel()</code> will delete the key. </p>
-<p>int f(const Key *source)<br />
-{<br />
-    Key *dup = keyDup(source);<br />
-    // work with duplicate<br />
-    keyDel(dup);<br />
-    // everything related to dup is freed<br />
-    // and source is unchanged<br />
+<p>int f(const Key *source)<br/>
+{<br/>
+    Key *dup = keyDup(source);<br/>
+    // work with duplicate<br/>
+    keyDel(dup);<br/>
+    // everything related to dup is freed<br/>
+    // and source is unchanged<br/>
 }</p>
 <p> Like for a new key after <code>keyNew()</code> a subsequent <code>ksAppend()</code> makes a KeySet to take care of the lifecycle of the key. </p>
-<p>int g(const Key *source, KeySet *ks)<br />
-{<br />
-    Key *dup = keyDup(source);<br />
-    // work with duplicate<br />
-    ksAppendKey(ks, dup);<br />
-    // ksDel(ks) will also free the duplicate<br />
-    // source remains unchanged.<br />
+<p>int g(const Key *source, KeySet *ks)<br/>
+{<br/>
+    Key *dup = keyDup(source);<br/>
+    // work with duplicate<br/>
+    ksAppendKey(ks, dup);<br/>
+    // ksDel(ks) will also free the duplicate<br/>
+    // source remains unchanged.<br/>
 }</p>
 <p> Duplication of keys should be preferred to <code>keyNew()</code>, because data like owner can be filled with a copy of the key instead of asking the environment. It can also be optimized in the checks, because the keyname is known to be valid. </p>
 <p> <code>Parameters:</code></p>
@@ -161,10 +161,10 @@ description: "Key :: Basic Methods –"
 </dt><dd> <code>keyIncRef()</code> and <code>keyDecRef()</code></dd></dl>
 <h3>ssize_t keyIncRef (Key * key)Increment the viability of a key object.</h3>
 <p> This function is intended for applications using their own reference counter for key objects. With it you can increment the reference and thus avoid destruction of the object in a subsequent <code>keyDel()</code>. </p>
-<p>Key *k;<br />
-keyInc(k);<br />
-function_that_keyDec(k);<br />
-// work with k<br />
+<p>Key *k;<br/>
+keyInc(k);<br/>
+function_that_keyDec(k);<br/>
+// work with k<br/>
 keyDel(k); // now really free it</p>
 <p> The reference counter can&#8217;t be incremented once it reached SSIZE_MAX. In that situation nothing will happen and SSIZE_MAX will be returned. </p>
 <p> <code>Returns:</code></p>
@@ -184,8 +184,8 @@ keyDel(k); // now really free it</p>
 <h3>Key* keyNew (const char * keyName, &#8230;)A practical way to fully create a Key object in one step.</h3>
 <p> This function tries to mimic the C++ way for constructors. </p>
 <p> To just get a key object, simple do: </p>
-<p>Key *k = keyNew(0);<br />
-// work with it<br />
+<p>Key *k = keyNew(0);<br/>
+// work with it<br/>
 keyDel(k);</p>
 <p> If you want the key object to contain a name, value, comment and other meta info read on. </p>
 <p> <code>Note:</code></p>
@@ -195,15 +195,15 @@ keyDel(k);</p>
 <p> Due to ABI compatibility, the Key structure is not defined in kdb.h, only declared. So you can only declare pointers to Keys in your program, and allocate and free memory for them with <code>keyNew()</code> and <code>keyDel()</code> respectively. See <a rel="nofollow" href="http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html#AEN135">http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html#AEN135</a> </p>
 <p> You can call it in many different ways depending on the attribute tags you pass as parameters. Tags are represented as the keyswitch_t values, and tell <code>keyNew()</code> which Key attribute comes next. </p>
 <p> The simplest and minimum way to use it is with no tags, only a key name: </p>
-<p>Key *nullKey, *emptyNamedKey;<br />
-// Create a key that has no name, is completely empty, but is initialized<br />
-nullKey = keyNew(0);<br />
-keyDel(nullKey);<br />
-// Is the same as above<br />
-nullKey = keyNew(&#8221;, KEY_END);<br />
-keyDel(nullKey);<br />
-// Create and initialize a key with a name and nothing else<br />
-emptyNamedKey = keyNew(&#8216;user/some/example&#8217;, KEY_END);<br />
+<p>Key *nullKey, *emptyNamedKey;<br/>
+// Create a key that has no name, is completely empty, but is initialized<br/>
+nullKey = keyNew(0);<br/>
+keyDel(nullKey);<br/>
+// Is the same as above<br/>
+nullKey = keyNew(&#8221;, KEY_END);<br/>
+keyDel(nullKey);<br/>
+// Create and initialize a key with a name and nothing else<br/>
+emptyNamedKey = keyNew(&#8216;user/some/example&#8217;, KEY_END);<br/>
 keyDel(emptyNamedKey);</p>
 <p> <code>keyNew()</code> allocates memory for a key object and cleans everything up. After that, it processes the given argument list. </p>
 <p> The Key attribute tags are the following:</p>
@@ -218,43 +218,43 @@ keyDel(emptyNamedKey);</p>
 <dd> keyswitch_t::KEY_VALUE </dd>
 <p>&nbsp;<wbr>Next parameter is a pointer to the value that will be set to the key If no keyswitch_t::KEY_TYPE was used before, keyswitch_t::KEY_TYPE_STRING is assumed. If KEY_TYPE was previously passed with a KEY_TYPE_BINARY, you should have passed KEY_SIZE before!&nbsp;<wbr>Otherwise it will be cut of with first&nbsp;<wbr>&nbsp;<wbr>\0 in string! </p>
 <dt>*</dt>
-<dd> <p> keyswitch_t::KEY_UID, keyswitch_t::KEY_GID <br />
- <br />
+<dd> <p> keyswitch_t::KEY_UID, keyswitch_t::KEY_GID <br/>
+ <br/>
 &nbsp;<wbr>Next parameter is taken as the UID&nbsp;<wbr>(uid_t)&nbsp;<wbr>or GID&nbsp;<wbr>(gid_t)&nbsp;<wbr>that will be defined on the key. See&nbsp;<wbr><code>keySetUID()</code>&nbsp;<wbr>and&nbsp;<wbr><code>keySetGID()</code>. </p>
  </dd>
 <dt>*</dt>
-<dd> <p> keyswitch_t::KEY_MODE <br />
- <br />
+<dd> <p> keyswitch_t::KEY_MODE <br/>
+ <br/>
 &nbsp;<wbr>Next parameter is taken as mode permissions&nbsp;<wbr>(mode_t)&nbsp;<wbr>to the key. See&nbsp;<wbr><code>keySetMode()</code>. </p>
  </dd>
 <dt>*</dt>
-<dd> <p> keyswitch_t::KEY_DIR <br />
- <br />
+<dd> <p> keyswitch_t::KEY_DIR <br/>
+ <br/>
 &nbsp;<wbr>Define that the key is a directory rather than a ordinary key. This means its executable bits in its mode are set. This option allows the key to have subkeys. See&nbsp;<wbr><code>keySetDir()</code>. </p>
  </dd>
 <dt>*</dt>
-<dd> <p> keyswitch_t::KEY_OWNER <br />
- <br />
+<dd> <p> keyswitch_t::KEY_OWNER <br/>
+ <br/>
 &nbsp;<wbr>Next parameter is the owner. See&nbsp;<wbr><code>keySetOwner()</code>. </p>
  </dd>
 <dt>*</dt>
-<dd> <p> keyswitch_t::KEY_COMMENT <br />
- <br />
+<dd> <p> keyswitch_t::KEY_COMMENT <br/>
+ <br/>
 &nbsp;<wbr>Next parameter is a comment. See&nbsp;<wbr><code>keySetComment()</code>. </p>
  </dd>
 <dt>*</dt>
-<dd> <p> keyswitch_t::KEY_REMOVE <br />
- <br />
+<dd> <p> keyswitch_t::KEY_REMOVE <br/>
+ <br/>
 &nbsp;<wbr>Mark the key to be removed instead of set it. See&nbsp;<wbr><code>keyRemove()</code>. </p>
  </dd>
 <dt>*</dt>
-<dd> <p> keyswitch_t::KEY_STAT <br />
- <br />
+<dd> <p> keyswitch_t::KEY_STAT <br/>
+ <br/>
 &nbsp;<wbr>Mark the key to be stated instead of get it. See&nbsp;<wbr><code>keyStat()</code>. </p>
  </dd>
 <dt>*</dt>
-<dd> <p> keyswitch_t::KEY_END <br />
- <br />
+<dd> <p> keyswitch_t::KEY_END <br/>
+ <br/>
 &nbsp;<wbr>Must be the last parameter passed to&nbsp;<wbr><code>keyNew()</code>. It is always required, unless the keyName is 0. </p>
  </dd></dl>
 <p> <code>Example:</code>.RS 4 </p>

@@ -11,7 +11,7 @@ description: "clacrm.f –"
 <p> clacrm.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clacrm</code> (M, N, A, LDA, B, LDB, C, LDC, RWORK)<br />
+<p> subroutine <code>clacrm</code> (M, N, A, LDA, B, LDB, C, LDC, RWORK)<br/>
  <i></i><code>CLACRM</code> multiplies a complex matrix by a square real matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clacrm (integerM, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, complex, dimension( ldc, * )C, integerLDC, real, dimension( * )RWORK)</h3>

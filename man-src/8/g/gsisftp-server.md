@@ -9,7 +9,7 @@ description: "sftp-server – SFTP server subsystem"
 
 <p><code>sftp-server</code> &#8211; SFTP server subsystem</p>
 <h2>Synopsis</h2>
-<p><code>sftp-server</code> -words [-<code>ehR</code> ] [-<code>d </code><i>start_directory</i> ] [-<code>f </code><i>log_facility</i> ] [-<code>l </code><i>log_level</i> ] [-<code>P </code><i>blacklisted_requests</i> ] [-<code>p </code><i>whitelisted_requests</i> ] [-<code>u </code><i>umask</i> ] [-<code>m </code><i>force_file_perms</i> ]<br />
+<p><code>sftp-server</code> -words [-<code>ehR</code> ] [-<code>d </code><i>start_directory</i> ] [-<code>f </code><i>log_facility</i> ] [-<code>l </code><i>log_level</i> ] [-<code>P </code><i>blacklisted_requests</i> ] [-<code>p </code><i>whitelisted_requests</i> ] [-<code>u </code><i>umask</i> ] [-<code>m </code><i>force_file_perms</i> ]<br/>
 <code>sftp-server</code> &#8211;<code>Q </code><i>protocol_feature</i></p>
 <h2>Description</h2>
 <p><code>sftp-server</code> is a program that speaks the server side of SFTP protocol to stdout and expects client requests from stdin. <code>sftp-server</code> is not intended to be called directly, but from <a href="/docs/linux/man/8-sshd/">sshd</a>(8) using the <code>Subsystem</code> option. </p>

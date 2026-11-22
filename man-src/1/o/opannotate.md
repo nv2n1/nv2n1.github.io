@@ -39,9 +39,9 @@ description: "opannotate – produce source or assembly annotated with profile d
 <dd> Only include symbols in the given comma-separated list. </dd>
 <dt><code>&#8211;objdump-params [params]</code></dt>
 <dd> Pass the given parameters as extra values when calling objdump. If more than one option is to be passed to objdump, the parameters must be enclosed in a quoted string. </dd>
-<p> An example of where this option is useful is when your toolchain does not automatically recognize instructions that are specific to your processor. For example, on IBM POWER7/RHEL 6, objdump must be told that a binary file may have POWER7-specific instructions. The opannotate option to show the POWER7-specific instructions is:<br />
+<p> An example of where this option is useful is when your toolchain does not automatically recognize instructions that are specific to your processor. For example, on IBM POWER7/RHEL 6, objdump must be told that a binary file may have POWER7-specific instructions. The opannotate option to show the POWER7-specific instructions is:<br/>
 &#8211;objdump-params=-Mpower7 </p>
-<p> The opannotate option to show the POWER7-specific instructions, the source code (&#8211;source) and the line numbers (-l) would be:<br />
+<p> The opannotate option to show the POWER7-specific instructions, the source code (&#8211;source) and the line numbers (-l) would be:<br/>
 &#8211;objdump-params=&quot;-Mpower7 -l &#8211;source&quot; </p>
 <dt><code>&#8211;output-dir / -o [dir]</code></dt>
 <dd> Output directory. This makes opannotate output one annotated file for each source file. This option can&#8217;t be used in conjunction with &#8211;assembly. </dd>

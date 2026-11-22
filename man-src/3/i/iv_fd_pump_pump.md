@@ -20,10 +20,10 @@ struct iv_fd_pump {
     unsigned int flags;
 };
 </code></pre>
-<p> <code>void IV_FD_PUMP_INIT(struct iv_fd_pump *</code><i>this</i><code>);</code><br />
- <code>void iv_fd_pump_init(struct iv_fd_pump *</code><i>this</i><code>);</code><br />
- <code>void iv_fd_pump_destroy(struct iv_fd_pump *</code><i>this</i><code>);</code><br />
- <code>int iv_fd_pump_pump(struct iv_fd_pump *</code><i>this</i><code>);</code><br />
+<p> <code>void IV_FD_PUMP_INIT(struct iv_fd_pump *</code><i>this</i><code>);</code><br/>
+ <code>void iv_fd_pump_init(struct iv_fd_pump *</code><i>this</i><code>);</code><br/>
+ <code>void iv_fd_pump_destroy(struct iv_fd_pump *</code><i>this</i><code>);</code><br/>
+ <code>int iv_fd_pump_pump(struct iv_fd_pump *</code><i>this</i><code>);</code><br/>
  <code>int iv_fd_pump_is_done(struct iv_fd_pump *</code><i>this</i><code>);</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>iv_fd_pump</code> provides a way for moving data between two file descriptors. </p>

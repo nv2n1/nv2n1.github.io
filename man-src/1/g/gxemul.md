@@ -10,8 +10,8 @@ description: "gxemul – an experimental framework for full-system machine emula
 
 <p> <code>gxemul</code> &#8211; an experimental framework for full-system machine emulation</p>
 <h2>SYNOPSIS</h2>
-<p> [machine, other, and general options] [file <i>&#8230;</i> ]<br />
- [general options] <i>@configfile</i><br />
+<p> [machine, other, and general options] [file <i>&#8230;</i> ]<br/>
+ [general options] <i>@configfile</i><br/>
  [userland, other, and general options] <i>file </i>[<i>args &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> is a framework for full-system computer architecture emulation. Several processor architectures and machine types have been implemented. It is working well enough to allow unmodified &quot;guest&quot; operating systems (e.g. NetBSD) to run inside the emulator, as if they were running on real hardware. </p>

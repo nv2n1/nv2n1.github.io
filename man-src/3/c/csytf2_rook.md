@@ -11,7 +11,7 @@ description: "csytf2_rook.f –"
 <p> csytf2_rook.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>csytf2_rook</code> (UPLO, N, A, LDA, IPIV, INFO)<br />
+<p> subroutine <code>csytf2_rook</code> (UPLO, N, A, LDA, IPIV, INFO)<br/>
  <i></i><code>CSYTF2_ROOK</code> computes the factorization of a complex symmetric indefinite matrix using the bounded Bunch-Kaufman (&#8216;rook&#8217;) diagonal pivoting method (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine csytf2_rook (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integerINFO)</h3>

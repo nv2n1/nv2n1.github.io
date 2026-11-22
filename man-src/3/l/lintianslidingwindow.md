@@ -26,9 +26,9 @@ description: "Lintian::SlidingWindow – Lintian interface to sliding window mat
 <p>Lintian::SlidingWindow provides a way of matching some pattern, including multi line pattern, without needing to fully load the file in memory.</p>
 <h2>Class Methods</h2>
 <dl COMPACT>
-<dt>new(HANDLE[, BLOCKSUB[, <font SIZE="-1">BLOCKSIZE</font>]])</dt>
-<dd>Create a new sliding window by reading from a given <font SIZE="-1">HANDLE,</font> which must be open for reading. Optionally run <font SIZE="-1">BLOCKSUB</font> against each block. Note that <font SIZE="-1">BLOCKSUB</font> should apply transform byte by byte and does not depend of context. </dd>
-<p> Each window consists of up to two blocks of <font SIZE="-1">BLOCKSIZE</font> characters.</dl>
+<dt>new(HANDLE[, BLOCKSUB[, BLOCKSIZE]])</dt>
+<dd>Create a new sliding window by reading from a given HANDLE, which must be open for reading. Optionally run BLOCKSUB against each block. Note that BLOCKSUB should apply transform byte by byte and does not depend of context. </dd>
+<p> Each window consists of up to two blocks of BLOCKSIZE characters.</dl>
 <h2>Instance Methods</h2>
 <dl COMPACT>
 <dt>readwindow</dt>
@@ -40,6 +40,6 @@ description: "Lintian::SlidingWindow – Lintian interface to sliding window mat
 <dt>no data type specified</dt>
 <dd></dd></dl>
 <h2>Author</h2>
-<p>Originally written by Bastien <font SIZE="-1">ROUCARIES</font> for Lintian.</p>
+<p>Originally written by Bastien ROUCARIES for Lintian.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-lintian/">lintian</a></code>(1)</p>

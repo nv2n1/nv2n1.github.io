@@ -34,8 +34,8 @@ description: "Diffie-Hellman functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>dh</i> the local peer DH parameters.<br />
- <i>pub_key</i> the remote peer public key parameters.<br />
+</dt><dd> <i>dh</i> the local peer DH parameters.<br/>
+ <i>pub_key</i> the remote peer public key parameters.<br/>
  <i>codes</i> return that the failures of the pub_key are.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -54,8 +54,8 @@ description: "Diffie-Hellman functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>shared_key</i> the resulting shared key, need to be at least <code>DH_size()</code> large.<br />
- <i>peer_pub_key</i> the peer&#8217;s public key.<br />
+</dt><dd> <i>shared_key</i> the resulting shared key, need to be at least <code>DH_size()</code> large.<br/>
+ <i>peer_pub_key</i> the peer&#8217;s public key.<br/>
  <i>dh</i> the dh key pair.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -83,9 +83,9 @@ description: "Diffie-Hellman functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>dh</i> The DH object to generate parameters for.<br />
- <i>prime_len</i> length of the prime<br />
- <i>generator</i> generator, g<br />
+</dt><dd> <i>dh</i> The DH object to generate parameters for.<br/>
+ <i>prime_len</i> length of the prime<br/>
+ <i>generator</i> generator, g<br/>
  <i>cb</i> Callback parameters to show progress, can be NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -102,7 +102,7 @@ description: "Diffie-Hellman functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>dh</i> DH object.<br />
+</dt><dd> <i>dh</i> DH object.<br/>
  <i>idx</i> index to get the data for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -147,8 +147,8 @@ description: "Diffie-Hellman functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>dh</i> DH object.<br />
- <i>idx</i> index to set the data for.<br />
+</dt><dd> <i>dh</i> DH object.<br/>
+ <i>idx</i> index to set the data for.<br/>
  <i>data</i> data to store for the index idx.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -159,7 +159,7 @@ description: "Diffie-Hellman functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>dh</i> dh parameter.<br />
+</dt><dd> <i>dh</i> dh parameter.<br/>
  <i>method</i> the new method for the DH parameter.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

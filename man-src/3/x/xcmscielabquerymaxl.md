@@ -32,5 +32,5 @@ description: "XcmsCIELabQueryMaxC, XcmsCIELabQueryMaxL, XcmsCIELabQueryMaxLC, Xc
 <p> The <code>XcmsCIELabQueryMaxLC</code> function, given a hue angle, finds the point of maximum chroma displayable by the screen. It returns this point in CIE L*a*b* coordinates. </p>
 <p> The <code>XcmsCIELabQueryMinL</code> function, given a hue angle and chroma, finds the point of minimum lightness (L*) displayable by the screen. It returns this point in CIE L*a*b* coordinates. An <code>XcmsFailure</code> return value usually indicates that the given chroma is beyond maximum for the given hue angle.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcmscieluvquerymaxc/">XcmsCIELuvQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmstekhvcquerymaxc/">XcmsTekHVCQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmsqueryblack/">XcmsQueryBlack</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcmscieluvquerymaxc/">XcmsCIELuvQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmstekhvcquerymaxc/">XcmsTekHVCQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmsqueryblack/">XcmsQueryBlack</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

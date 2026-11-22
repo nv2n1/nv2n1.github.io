@@ -13,18 +13,18 @@ description: "QwtPlotTradingCurve –"
 <p>#include &lt;qwt_plot_tradingcurve.h&gt; </p>
 <p> Inherits <code>QwtPlotSeriesItem</code>, and <code>QwtSeriesStore&lt; QwtOHLCSample &gt;</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>SymbolStyle</code> { <code>NoSymbol</code> = -1, <code>Bar</code>, <code>CandleStick</code>, <code>UserSymbol</code> = 100 }<br />
- <i>Symbol styles. </i><br />
- enum <code>Direction</code> { <code>Increasing</code>, <code>Decreasing</code> }<br />
- <i>Direction of a price movement. </i><br />
+<p>enum <code>SymbolStyle</code> { <code>NoSymbol</code> = -1, <code>Bar</code>, <code>CandleStick</code>, <code>UserSymbol</code> = 100 }<br/>
+ <i>Symbol styles. </i><br/>
+ enum <code>Direction</code> { <code>Increasing</code>, <code>Decreasing</code> }<br/>
+ <i>Direction of a price movement. </i><br/>
  enum <code>PaintAttribute</code> { <code>ClipSymbols</code> = 0x01 } </p>
-<p> typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br />
+<p> typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br/>
  <i>Paint attributes. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPlotTradingCurve</code> (const QString &amp;<code>title</code>=QString::null) </p>
 <p> <code>QwtPlotTradingCurve</code> (const <code>QwtText</code> &amp;<code>title</code>) </p>
-<p> virtual <code>~QwtPlotTradingCurve</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtPlotTradingCurve</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
 <p> void <code>setPaintAttribute</code> (<code>PaintAttribute</code>, bool on=true) </p>
 <p> bool <code>testPaintAttribute</code> (<code>PaintAttribute</code>) const </p>
@@ -33,13 +33,13 @@ description: "QwtPlotTradingCurve –"
 <p> void <code>setSymbolStyle</code> (<code>SymbolStyle</code> style) </p>
 <p> <code>SymbolStyle</code> <code>symbolStyle</code> () const </p>
 <p> void <code>setSymbolPen</code> (const QColor &amp;, qreal width=0.0, Qt::PenStyle=Qt::SolidLine) </p>
-<p> void <code>setSymbolPen</code> (const QPen &amp;)<br />
- <i>Set the symbol pen. </i><br />
+<p> void <code>setSymbolPen</code> (const QPen &amp;)<br/>
+ <i>Set the symbol pen. </i><br/>
  QPen <code>symbolPen</code> () const </p>
 <p> void <code>setSymbolBrush</code> (<code>Direction</code>, const QBrush &amp;) </p>
 <p> QBrush <code>symbolBrush</code> (<code>Direction</code>) const </p>
-<p> void <code>setSymbolExtent</code> (double width)<br />
- <i>Set the extent of the symbol. </i><br />
+<p> void <code>setSymbolExtent</code> (double width)<br/>
+ <i>Set the extent of the symbol. </i><br/>
  double <code>symbolExtent</code> () const </p>
 <p> void <code>setMinSymbolWidth</code> (double) </p>
 <p> double <code>minSymbolWidth</code> () const </p>
@@ -49,15 +49,15 @@ description: "QwtPlotTradingCurve –"
 <p> virtual QRectF <code>boundingRect</code> () const </p>
 <p> virtual <code>QwtGraphic</code> <code>legendIcon</code> (int index, const QSizeF &amp;) const </p>
 <h3>Protected Member Functions</h3>
-<p>void <code>init</code> ()<br />
- <i>Initialize internal members. </i><br />
+<p>void <code>init</code> ()<br/>
+ <i>Initialize internal members. </i><br/>
  virtual void <code>drawSymbols</code> (QPainter *, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const </p>
-<p> virtual void <code>drawUserSymbol</code> (QPainter *, <code>SymbolStyle</code>, const <code>QwtOHLCSample</code> &amp;, Qt::Orientation, bool inverted, double width) const<br />
- <i>Draw a symbol for a symbol style &gt;= UserSymbol. </i><br />
- void <code>drawBar</code> (QPainter *painter, const <code>QwtOHLCSample</code> &amp;, Qt::Orientation, bool inverted, double width) const<br />
- <i>Draw a bar. </i><br />
- void <code>drawCandleStick</code> (QPainter *, const <code>QwtOHLCSample</code> &amp;, Qt::Orientation, double width) const<br />
- <i>Draw a candle stick. </i><br />
+<p> virtual void <code>drawUserSymbol</code> (QPainter *, <code>SymbolStyle</code>, const <code>QwtOHLCSample</code> &amp;, Qt::Orientation, bool inverted, double width) const<br/>
+ <i>Draw a symbol for a symbol style &gt;= UserSymbol. </i><br/>
+ void <code>drawBar</code> (QPainter *painter, const <code>QwtOHLCSample</code> &amp;, Qt::Orientation, bool inverted, double width) const<br/>
+ <i>Draw a bar. </i><br/>
+ void <code>drawCandleStick</code> (QPainter *, const <code>QwtOHLCSample</code> &amp;, Qt::Orientation, double width) const<br/>
+ <i>Draw a candle stick. </i><br/>
  virtual double <code>scaledSymbolWidth</code> (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect) const </p>
 <h2>Detailed Description</h2>
 <p><code>QwtPlotTradingCurve</code> illustrates movements in the price of a financial instrument over time. </p>
@@ -128,10 +128,10 @@ description: "QwtPlotTradingCurve –"
 <p>Draw a bar. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Qt painter, initialized with pen/brush<br />
- <i>sample</i> Sample, already translated into paint device coordinates<br />
- <i>orientation</i> Vertical or horizontal<br />
- <i>inverted</i> When inverted is false the open tick is painted to the left/top, otherwise it is painted right/bottom. The close tick is painted in the opposite direction of the open tick. painted in the opposite d opposite direction.<br />
+<dd><i>painter</i> Qt painter, initialized with pen/brush<br/>
+ <i>sample</i> Sample, already translated into paint device coordinates<br/>
+ <i>orientation</i> Vertical or horizontal<br/>
+ <i>inverted</i> When inverted is false the open tick is painted to the left/top, otherwise it is painted right/bottom. The close tick is painted in the opposite direction of the open tick. painted in the opposite d opposite direction.<br/>
  <i>width</i> Width or height of the candle, depending on the orientation</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -140,9 +140,9 @@ description: "QwtPlotTradingCurve –"
 <p>Draw a candle stick. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Qt painter, initialized with pen/brush<br />
- <i>sample</i> Samples already translated into paint device coordinates<br />
- <i>orientation</i> Vertical or horizontal<br />
+<dd><i>painter</i> Qt painter, initialized with pen/brush<br/>
+ <i>sample</i> Samples already translated into paint device coordinates<br/>
+ <i>orientation</i> Vertical or horizontal<br/>
  <i>width</i> Width or height of the candle, depending on the orientation</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -151,11 +151,11 @@ description: "QwtPlotTradingCurve –"
 <p>Draw an interval of the curve </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> Index of the first point to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> Index of the first point to be painted<br/>
  <i>to</i> Index of the last point to be painted. If to &lt; 0 the curve will be painted to its last point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -165,11 +165,11 @@ description: "QwtPlotTradingCurve –"
 <p>Draw symbols </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> Index of the first point to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> Index of the first point to be painted<br/>
  <i>to</i> Index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -178,11 +178,11 @@ description: "QwtPlotTradingCurve –"
 <p>Draw a symbol for a symbol style &gt;= UserSymbol. The implementation does nothing and is intended to be overloaded </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Qt painter, initialized with pen/brush<br />
- <i>symbolStyle</i> Symbol style<br />
- <i>sample</i> Samples already translated into paint device coordinates<br />
- <i>orientation</i> Vertical or horizontal<br />
- <i>inverted</i> True, when the opposite scale ( Qt::Vertical: x, Qt::Horizontal: y ) is increasing in the opposite direction as QPainter coordinates.<br />
+<dd><i>painter</i> Qt painter, initialized with pen/brush<br/>
+ <i>symbolStyle</i> Symbol style<br/>
+ <i>sample</i> Samples already translated into paint device coordinates<br/>
+ <i>orientation</i> Vertical or horizontal<br/>
+ <i>inverted</i> True, when the opposite scale ( Qt::Vertical: x, Qt::Horizontal: y ) is increasing in the opposite direction as QPainter coordinates.<br/>
  <i>symbolWidth</i> Width of the symbol in paint device coordinates</dd></dl>
 <h3><code>QwtGraphic</code> QwtPlotTradingCurve::legendIcon (intindex, const QSizeF &amp;size) const [virtual]</h3>
 <p><code>Returns:</code></p>
@@ -190,7 +190,7 @@ description: "QwtPlotTradingCurve –"
 <dd>A rectangle filled with the color of the symbol pen</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index of the legend entry ( usually there is only one )<br />
+<dd><i>index</i> Index of the legend entry ( usually there is only one )<br/>
  <i>size</i> Icon size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -220,8 +220,8 @@ description: "QwtPlotTradingCurve –"
 <p> The width is calculated by scaling the symbol extent into paint device coordinates bounded by the minimum/maximum symbol width. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
+<dd><i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
  <i>canvasRect</i> Contents rectangle of the canvas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -250,7 +250,7 @@ description: "QwtPlotTradingCurve –"
 <p>Specify an attribute how to draw the curve </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Paint attribute<br />
+<dd><i>attribute</i> Paint attribute<br/>
  <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -276,7 +276,7 @@ description: "QwtPlotTradingCurve –"
 <p>Set the symbol brush </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>direction</i> Direction type<br />
+<dd><i>direction</i> Direction type<br/>
  <i>brush</i> Brush used to fill the body of all candlestick symbols with the direction</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -294,8 +294,8 @@ description: "QwtPlotTradingCurve –"
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Pen color<br />
- <i>width</i> Pen width<br />
+<dd><i>color</i> Pen color<br/>
+ <i>width</i> Pen width<br/>
  <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

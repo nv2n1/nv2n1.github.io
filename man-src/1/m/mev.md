@@ -45,7 +45,7 @@ description: "mev – a program to report mouse events"
 <h2>BUGS</h2>
 <p> Beginning with release 1.16, <code>mev</code> no longer works under xterm. Please use the <code>rmev</code> program (provided in the <code>sample</code> directory) to watch gpm events under xterm or rxvt. <code>rmev</code> also displays keyboard events besides mouse events. </p>
 <h2>AUTHOR</h2>
-<p> Alessandro Rubini &lt;rubini [at] linux.it&gt;<br />
+<p> Alessandro Rubini &lt;rubini [at] linux.it&gt;<br/>
  Ian Zimmerman &lt;itz [at] speakeasy.org&gt; </p>
 <h2>FILES</h2>
 <pre>

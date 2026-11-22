@@ -27,7 +27,7 @@ char *setlocale(int category, const char *locale);</code></pre>
 </tr>
 <tr VALIGN=top>
 <td><code>LC_ADDRESS</code></td>
-<td> Formatting of addresses and<br />
+<td> Formatting of addresses and<br/>
  geography-related items (*)
 </td>
 </tr>
@@ -48,7 +48,7 @@ char *setlocale(int category, const char *locale);</code></pre>
 </tr>
 <tr VALIGN=top>
 <td><code>LC_MEASUREMENT</code></td>
-<td> Settings related to measurements<br />
+<td> Settings related to measurements<br/>
  (metric versus US customary) (*)
 </td>
 </tr>

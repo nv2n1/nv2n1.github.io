@@ -24,8 +24,8 @@ description: "guestfs-testing – manual testing of libguestfs, you can help!"
  libguestfs-test-tool
 </pre>
 <p> This command does a very simple, non-destructive test that basic libguestfs is functioning. You don&#8217;t need to run it as root. </p>
-<p> If it <i>doesn&#8217;t</i> print <tt>&quot;===== TEST FINISHED OK =====&quot;</tt>, report it as a bug. It is very important that you include the <code>complete, unedited</code> output of <tt>&quot;libguestfs-test-tool&quot;</tt> in your bug report. See the &#8220;<font SIZE="-1">BUGS&#8221;</font> section at the end of this page.</p>
-<h3>Check <font SIZE="-1">KVM</font> acceleration is being used.</h3>
+<p> If it <i>doesn&#8217;t</i> print <tt>&quot;===== TEST FINISHED OK =====&quot;</tt>, report it as a bug. It is very important that you include the <code>complete, unedited</code> output of <tt>&quot;libguestfs-test-tool&quot;</tt> in your bug report. See the &#8220;BUGS&#8221; section at the end of this page.</p>
+<h3>Check KVM acceleration is being used.</h3>
 <p> If your host has hardware virt acceleration, then with a hot cache libguestfs should be able to start up in a few seconds. Run the following command a few times: </p>
 <pre>
  time guestfish -a /dev/null run
@@ -72,11 +72,11 @@ description: "guestfs-testing – manual testing of libguestfs, you can help!"
 <pre>
  export LIBGUESTFS_BACKEND=direct
 </pre>
-<p> If you have a disk image available over <font SIZE="-1">HTTP/FTP,</font> try to open it. </p>
+<p> If you have a disk image available over HTTP/FTP, try to open it. </p>
 <pre>
  guestfish --ro -i --format=raw -a <a rel="nofollow" href="http://www.example.com/disk.img">http://www.example.com/disk.img</a>
 </pre>
-<p> For <font SIZE="-1">SSH</font> you will need to make sure that ssh-agent is set up so you don&#8217;t need a password to log in to the remote machine. Then a command similar to this should work: </p>
+<p> For SSH you will need to make sure that ssh-agent is set up so you don&#8217;t need a password to log in to the remote machine. Then a command similar to this should work: </p>
 <pre>
  guestfish --ro -i --format=raw \
    -a <a href="ssh://remote.example.com/path/to/disk.img">ssh://remote.example.com/path/to/disk.img</a>
@@ -133,7 +133,7 @@ description: "guestfs-testing – manual testing of libguestfs, you can help!"
 <dt>&bull;</dt>
 <dd> Any action such as booting the guest will write log files causing the numbers to change.</dd></dl>
 <p> We don’t guarantee that the numbers will be identical even under these circumstances. They should be similar. It would indicate a bug if you saw greatly differing numbers.</p>
-<h3>Try importing virt-df <font SIZE="-1">CSV</font> output into a spreadsheet or database.</h3>
+<h3>Try importing virt-df CSV output into a spreadsheet or database.</h3>
 <p> Run: </p>
 <pre>
  virt-df --csv &gt; /tmp/report.csv
@@ -141,7 +141,7 @@ description: "guestfs-testing – manual testing of libguestfs, you can help!"
 <p> Now try to load this into your favorite spreadsheet or database. Are the results reproduced faithfully in the spreadsheet/database? </p>
 <p> <a rel="nofollow" href="http://www.postgresql.org/docs/8.1/static/sql-copy.html">http://www.postgresql.org/docs/8.1/static/sql-copy.html</a> <a rel="nofollow" href="http://dev.mysql.com/doc/refman/5.1/en/load-data.html">http://dev.mysql.com/doc/refman/5.1/en/load-data.html</a></p>
 <h3><code>*</code> Edit a file in a <code>shut off</code> guest.</h3>
-<p> <code><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></code>(1) can edit files in guests. Try this command on a <font SIZE="-1">RHEL</font> or Fedora guest: </p>
+<p> <code><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></code>(1) can edit files in guests. Try this command on a RHEL or Fedora guest: </p>
 <pre>
  virt-edit LinuxGuest /etc/sysconfig/network
 </pre>
@@ -272,9 +272,9 @@ truncate - s 30G newdisk.img virt - filesystems - a / path / to / olddisk.img-- 
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2011-2012 Red Hat Inc.  </p>
 <h2>LICENSE</h2>
-<p> This library is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> Lesser General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This library is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> See the <font SIZE="-1">GNU</font> Lesser General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA</font>  </p>
+<p> This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details. </p>
+<p> You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA  </p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

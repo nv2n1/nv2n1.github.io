@@ -10,7 +10,7 @@ description: "ldns_fget_token, ldns_fskipcs"
 
 <p> ldns_fget_token, ldns_fskipcs </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ssize_t ldns_fget_token(FILE *f, char *token, const char *delim, size_t limit); </p>

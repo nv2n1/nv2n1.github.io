@@ -30,10 +30,10 @@ description: "insync-headless – command line interface for the Insync process"
 <dl>
 <dt><code>insync-headless </code><i>add_account </i><code>[OPTION]&#8230;</dt>
 <dd> Add account to Insync. </dd>
-<p> Arguments:<br />
- -a, &#8211;auth-code AUTH_CODE &#8211; Code to authorize Insync to access your account. To get it, go to <a rel="nofollow" href="https://insynchq.com/auth">https://insynchq.com/auth</a> and follow the prompts. If not given, Insync will open an external browser where you can login.<br />
- -p, &#8211;path PATH &#8211; Path where Insync folder for account will be placed. If not given, will default to ~/&lt;email address&gt;.<br />
- -e, &#8211;export-option EXPORT_OPTION &#8211; Set if account will download Google format files as Open Document formats (.odt), MS Office formats (.docx), or as links (.gddoc). Choices are &quot;open-document&quot;, &quot;ms-office&quot;, and &quot;link&quot;. Defaults to &quot;link&quot;.<br />
+<p> Arguments:<br/>
+ -a, &#8211;auth-code AUTH_CODE &#8211; Code to authorize Insync to access your account. To get it, go to <a rel="nofollow" href="https://insynchq.com/auth">https://insynchq.com/auth</a> and follow the prompts. If not given, Insync will open an external browser where you can login.<br/>
+ -p, &#8211;path PATH &#8211; Path where Insync folder for account will be placed. If not given, will default to ~/&lt;email address&gt;.<br/>
+ -e, &#8211;export-option EXPORT_OPTION &#8211; Set if account will download Google format files as Open Document formats (.odt), MS Office formats (.docx), or as links (.gddoc). Choices are &quot;open-document&quot;, &quot;ms-office&quot;, and &quot;link&quot;. Defaults to &quot;link&quot;.<br/>
  -n, &#8211;no-download &#8211; Set if Insync should not download files when adding account. Files to be synced can be set later with the manage_selective_sync command.</p>
 <dt>insync-headless </code><i>get_account_information</dt>
 <dd> Show information for connected acounts.</dd>
@@ -57,7 +57,7 @@ description: "insync-headless – command line interface for the Insync process"
 <dt>insync-headless </code><i>start </i><code>[OPTION]&#8230;</dt>
 <dd> Start Insync. </dd>
 <p> Options: </p>
-<p> &#8211;no-daemon &#8211; don&#8217;t detach from the terminal, log output to stdout<br />
+<p> &#8211;no-daemon &#8211; don&#8217;t detach from the terminal, log output to stdout<br/>
  &#8212;synchronous-full &#8211; sets synchronous flag of sqlite to FULL instead of the default NORMAL; makes sqlite transactions safer but causes extreme slowdown for others</dl>
 <p> </code></p>
 <h3><code>File commands</code></h3>
@@ -90,11 +90,11 @@ description: "insync-headless – command line interface for the Insync process"
 <dt></i><code>insync-headless </code><i>set_proxy </i><code>MODE [TYPE HOST PORT [USERNAME PASSWORD]]</dt>
 <dd> Set proxy config. </dd>
 <p> Arguments: </p>
-<p> MODE &#8211; Can be SYSTEM, NONE, or MANUAL. If SYSTEM or NONE, the next items are not required.<br />
- TYPE &#8211; Can be HTTP, SOCKS4, or SOCKS5.<br />
- HOST &#8211; Proxy host.<br />
- PORT &#8211; Proxy port.<br />
- USERNAME &#8211; Username for proxy authentication.<br />
+<p> MODE &#8211; Can be SYSTEM, NONE, or MANUAL. If SYSTEM or NONE, the next items are not required.<br/>
+ TYPE &#8211; Can be HTTP, SOCKS4, or SOCKS5.<br/>
+ HOST &#8211; Proxy host.<br/>
+ PORT &#8211; Proxy port.<br/>
+ USERNAME &#8211; Username for proxy authentication.<br/>
  PASSWORD &#8211; Password for proxy authentication.</dl>
 <p> </code></p>
 <h3><code>Selective sync commands</code></h3>
@@ -135,8 +135,8 @@ description: "insync-headless – command line interface for the Insync process"
 <dd> Retry all errors.</dd></dl>
 <p> </i></p>
 <h2>BUGS</h2>
-<p> Please report bugs to support [at] insynchq.com.<br />
- How-to guides: &lt;<a rel="nofollow" href="https://help.insynchq.com">https://help.insynchq.com</a>&gt;.<br />
+<p> Please report bugs to support [at] insynchq.com.<br/>
+ How-to guides: &lt;<a rel="nofollow" href="https://help.insynchq.com">https://help.insynchq.com</a>&gt;.<br/>
  Support forums: &lt;<a rel="nofollow" href="https://forums.insynchq.com">https://forums.insynchq.com</a>&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Created by the Insync team.</p>

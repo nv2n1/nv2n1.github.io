@@ -28,5 +28,5 @@ int *<i>major_version_return</i>, int *<i>minor_version_return</i>);
 <p> To get the list of reserved colormap entries, use <i>XcupGetReservedColormapEntries.</i> </p>
 <p> To allocate one or more read-only color cells with RGB values, use <i>XcupStoreColors.</i></p>
 <h2>See Also</h2>
-<p><code>XcupGetReservedColormapEntries</code>(3Xext), <code>XcupStoreColors</code>(3Xext),<br />
+<p><code>XcupGetReservedColormapEntries</code>(3Xext), <code>XcupStoreColors</code>(3Xext),<br/>
  <i>Colormap Utilization Policy and Extension</i></p>

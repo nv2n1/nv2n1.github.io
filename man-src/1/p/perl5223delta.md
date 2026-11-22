@@ -61,7 +61,7 @@ my $can_foo = eval
 <dt>&bull;</dt>
 <dd> bignum has been upgraded from version 0.39 to 0.39_01.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">CPAN</font> has been upgraded from version 2.11 to 2.11_01.</dd>
+<dd> CPAN has been upgraded from version 2.11 to 2.11_01.</dd>
 <dt>&bull;</dt>
 <dd> Digest has been upgraded from version 1.17 to 1.17_01.</dd>
 <dt>&bull;</dt>
@@ -79,13 +79,13 @@ my $can_foo = eval
 <dt>&bull;</dt>
 <dd> HTTP::Tiny has been upgraded from version 0.054 to 0.054_01.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">IO</font> has been upgraded from version 1.35 to 1.35_01.</dd>
+<dd> IO has been upgraded from version 1.35 to 1.35_01.</dd>
 <dt>&bull;</dt>
 <dd> The IO-Compress modules have been upgraded from version 2.068 to 2.068_001.</dd>
 <dt>&bull;</dt>
 <dd> IPC::Cmd has been upgraded from version 0.92 to 0.92_01.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">JSON::PP</font> has been upgraded from version 2.27300 to 2.27300_01.</dd>
+<dd> JSON::PP has been upgraded from version 2.27300 to 2.27300_01.</dd>
 <dt>&bull;</dt>
 <dd> Locale::Maketext has been upgraded from version 1.26 to 1.26_01.</dd>
 <dt>&bull;</dt>
@@ -136,14 +136,14 @@ my $can_foo = eval
 <p> Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.22.3: </p>
 <p> Aaron Crane, Abigail, Alex Vandiver, Aristotle Pagaltzis, Chad Granum, Chris &#8216;BinGOs&#8217; Williams, Craig A. Berry, David Mitchell, Father Chrysostomos, James E Keenan, Jarkko Hietaniemi, Karen Etheridge, Karl Williamson, Matthew Horsfall, Niko Tyni, Ricardo Signes, Sawyer X, Stevan Little, Steve Hay, Tony Cook. </p>
 <p> The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. </p>
-<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.</p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish. </p>
+<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the Perl bug database at <a rel="nofollow" href="https://rt.perl.org/">https://rt.perl.org/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font></p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

@@ -83,28 +83,28 @@ exit
     disconnect
         ...
 </code></pre>
-<p> The following script reads a password, and then runs a program every hour that demands a password each time it is run. The script supplies the password so that you only have to type it once. (See the <code>stty</code> command which demonstrates how to turn off password echoing.)<br />
-    send_user &#8220;password?\ &#8221;<br />
+<p> The following script reads a password, and then runs a program every hour that demands a password each time it is run. The script supplies the password so that you only have to type it once. (See the <code>stty</code> command which demonstrates how to turn off password echoing.)<br/>
+    send_user &#8220;password?\ &#8221;<br/>
     expect_user -re &#8220;(.*)
-&#8221;<br />
-    for<br />
-    {<br />
-    }<br />
-    1 {}<br />
-    {<br />
-        if {<br />
-            [fork] != 0<br />
-        }<br />
-        {<br />
-            sleep 3600;<br />
-            continue<br />
-        }<br />
-        disconnect<br />
-            spawn priv_prog<br />
+&#8221;<br/>
+    for<br/>
+    {<br/>
+    }<br/>
+    1 {}<br/>
+    {<br/>
+        if {<br/>
+            [fork] != 0<br/>
+        }<br/>
+        {<br/>
+            sleep 3600;<br/>
+            continue<br/>
+        }<br/>
+        disconnect<br/>
+            spawn priv_prog<br/>
                 expect Password : send &#8220;$expect_out(1,string)
-&#8221;<br />
-                                      &#8230;exit<br />
-    }<br />
+&#8221;<br/>
+                                      &#8230;exit<br/>
+    }<br/>
  An advantage to using <code>disconnect</code> over the shell asynchronous process feature (&amp;) is that <code>Expect</code> can save the terminal parameters prior to disconnection, and then later apply them to new ptys. With &amp;, <code>Expect</code> does not have a chance to read the terminal&#8217;s parameters since the terminal is already disconnected by the time <code>Expect</code> receives control.</p>
 <dt><code>exit</code><i> [-opts] [status]</i></dt>
 <dd> causes <code>Expect</code> to exit or otherwise prepare to do so. </dd>
@@ -161,35 +161,35 @@ exit
 <dt>
 </dt><dd> Patterns are specified in three ways. By default, patterns are specified as with Tcl&#8217;s <code>string match</code> command. (Such patterns are also similar to C-shell regular expressions usually referred to as &quot;glob&quot; patterns). The <code>-gl</code> flag may may be used to protect patterns that might otherwise match <code>expect</code> flags from doing so. Any pattern beginning with a &quot;-&quot; should be protected this way. (All strings starting with &quot;-&quot; are reserved for future options.) </dd>
 <dt>
-</dt><dd> For example, the following fragment looks for a successful login. (Note that <code>abort</code> is presumed to be a procedure defined elsewhere in the script.)<br />
-expect<br />
-{<br />
-    busy<br />
-    {<br />
+</dt><dd> For example, the following fragment looks for a successful login. (Note that <code>abort</code> is presumed to be a procedure defined elsewhere in the script.)<br/>
+expect<br/>
+{<br/>
+    busy<br/>
+    {<br/>
         puts busy
-;<br />
-        exp_continue<br />
-    }<br />
-    failed abort<br />
-        &#8220;invalid password&#8221; abort<br />
-            timeout abort<br />
-                connected<br />
-}<br />
+;<br/>
+        exp_continue<br/>
+    }<br/>
+    failed abort<br/>
+        &#8220;invalid password&#8221; abort<br/>
+            timeout abort<br/>
+                connected<br/>
+}<br/>
  Quotes are necessary on the fourth pattern since it contains a space, which would otherwise separate the pattern from the action. Patterns with the same action (such as the 3rd and 4th) require listing the actions again. This can be avoid by using regexp-style patterns (see below). More information on forming glob-style patterns can be found in the Tcl manual.</dd>
 <dt>
-</dt><dd> Regexp-style patterns follow the syntax defined by Tcl&#8217;s <code>regexp</code> (short for &quot;regular expression&quot;) command. regexp patterns are introduced with the flag <code>-re</code>. The previous example can be rewritten using a regexp as:<br />
-expect<br />
-{<br />
-    busy<br />
-    {<br />
+</dt><dd> Regexp-style patterns follow the syntax defined by Tcl&#8217;s <code>regexp</code> (short for &quot;regular expression&quot;) command. regexp patterns are introduced with the flag <code>-re</code>. The previous example can be rewritten using a regexp as:<br/>
+expect<br/>
+{<br/>
+    busy<br/>
+    {<br/>
         puts busy
-;<br />
-        exp_continue<br />
-    }<br />
-    -re &#8220;failed|invalid password&#8221; abort<br />
-        timeout abort<br />
-            connected<br />
-}<br />
+;<br/>
+        exp_continue<br/>
+    }<br/>
+    -re &#8220;failed|invalid password&#8221; abort<br/>
+        timeout abort<br/>
+            connected<br/>
+}<br/>
  Both types of patterns are &quot;unanchored&quot;. This means that patterns do not have to match the entire string, but can begin and end the match anywhere in the string (as long as everything else matches). Use ^ to match the beginning of a string, and $ to match the end. Note that if you do not wait for the end of a string, your responses can easily end up in the middle of the string as they are echoed from the spawned process. While still producing correct results, the output can look unnatural. Thus, use of $ is encouraged if you can exactly describe the characters at the end of a string. </dd>
 <p> Note that in many editors, the ^ and $ match the beginning and end of lines respectively. However, because expect is not line oriented, these characters match the beginning and end of the data (as opposed to lines) currently in the expect matching buffer. (Also, see the note below on &quot;system indigestion.&quot;) </p>
 <p> The <code>-ex</code> flag causes the pattern to be matched as an &quot;exact&quot; string. No interpretation of *, ^, etc is made (although the usual Tcl conventions must still be observed). Exact patterns are always unanchored. </p>
@@ -234,63 +234,63 @@ expect<br />
 <p> The spawn id associated with the matching output (or eof or full_buffer) is stored in <i>expect_out(spawn_id)</i>. </p>
 <p> The <code>-timeout</code> flag causes the current expect command to use the following value as a timeout instead of using the value of the timeout variable. </p>
 <p> By default, patterns are matched against output from the current process, however the <code>-i</code> flag declares the output from the named spawn_id list be matched against any following patterns (up to the next <code>-i</code>). The spawn_id list should either be a whitespace separated list of spawn_ids or a variable referring to such a list of spawn_ids. </p>
-<p> For example, the following example waits for &quot;connected&quot; from the current process, or &quot;busy&quot;, &quot;failed&quot; or &quot;invalid password&quot; from the spawn_id named by $proc2.<br />
-expect<br />
-{<br />
-    -i $proc2 busy<br />
-    {<br />
+<p> For example, the following example waits for &quot;connected&quot; from the current process, or &quot;busy&quot;, &quot;failed&quot; or &quot;invalid password&quot; from the spawn_id named by $proc2.<br/>
+expect<br/>
+{<br/>
+    -i $proc2 busy<br/>
+    {<br/>
         puts busy
-;<br />
-        exp_continue<br />
-    }<br />
-    -re &#8220;failed|invalid password&#8221; abort<br />
-        timeout abort<br />
-            connected<br />
-}<br />
+;<br/>
+        exp_continue<br/>
+    }<br/>
+    -re &#8220;failed|invalid password&#8221; abort<br/>
+        timeout abort<br/>
+            connected<br/>
+}<br/>
  The value of the global variable <i>any_spawn_id</i> may be used to match patterns to any spawn_ids that are named with all other <code>-i</code> flags in the current <code>expect</code> command. The spawn_id from a <code>-i</code> flag with no associated pattern (i.e., followed immediately by another <code>-i</code>) is made available to any other patterns in the same <code>expect</code> command associated with <i>any_spawn_id.</i> </p>
 <p> The <code>-i</code> flag may also name a global variable in which case the variable is read for a list of spawn ids. The variable is reread whenever it changes. This provides a way of changing the I/O source while the command is in execution. Spawn ids provided this way are called &quot;indirect&quot; spawn ids. </p>
 <p> Actions such as <code>break</code> and <code>continue</code> cause control structures (i.e., <code>for</code>, <code>proc</code>) to behave in the usual way. The command <code>exp_continue</code> allows <code>expect</code> itself to continue executing rather than returning as it normally would.</p>
 <dt>
-</dt><dd> This is useful for avoiding explicit loops or repeated expect statements. The following example is part of a fragment to automate rlogin. The <code>exp_continue</code> avoids having to write a second <code>expect</code> statement (to look for the prompt again) if the rlogin prompts for a password.<br />
-expect<br />
-{<br />
-Password : {<br />
+</dt><dd> This is useful for avoiding explicit loops or repeated expect statements. The following example is part of a fragment to automate rlogin. The <code>exp_continue</code> avoids having to write a second <code>expect</code> statement (to look for the prompt again) if the rlogin prompts for a password.<br/>
+expect<br/>
+{<br/>
+Password : {<br/>
     stty &#8211; echo send_user &#8220;password (for $user) on $host: &#8221; expect_user &#8211; re &#8220;(.*)
 &#8221; send_user &#8220;
 &#8221; send &#8220;$expect_out(1,string)
-&#8221; stty echo exp_continue<br />
-}<br />
-    incorrect{<br />
+&#8221; stty echo exp_continue<br/>
+}<br/>
+    incorrect{<br/>
         send_user &#8220;invalid password or account
-&#8221; exit} timeout{<br />
+&#8221; exit} timeout{<br/>
         send_user &#8220;connection to $host timed out
-&#8221; exit} eof{<br />
-        send_user<br />
-        &#8220;connection to host failed: $expect_out(buffer)&#8221; exit} &#8211;<br />
-        re $prompt<br />
-}<br />
- For example, the following fragment might help a user guide an interaction that is already totally automated. In this case, the terminal is put into raw mode. If the user presses &quot;+&quot;, a variable is incremented. If &quot;p&quot; is pressed, several returns are sent to the process, perhaps to poke it in some way, and &quot;i&quot; lets the user interact with the process, effectively stealing away control from the script. In each case, the <code>exp_continue</code> allows the current <code>expect</code> to continue pattern matching after executing the current action.<br />
-stty raw &#8211; echo<br />
-               expect_after<br />
-{<br />
-    -i $user_spawn_id<br />
-        &#8220;p&#8221;<br />
-    {<br />
+&#8221; exit} eof{<br/>
+        send_user<br/>
+        &#8220;connection to host failed: $expect_out(buffer)&#8221; exit} &#8211;<br/>
+        re $prompt<br/>
+}<br/>
+ For example, the following fragment might help a user guide an interaction that is already totally automated. In this case, the terminal is put into raw mode. If the user presses &quot;+&quot;, a variable is incremented. If &quot;p&quot; is pressed, several returns are sent to the process, perhaps to poke it in some way, and &quot;i&quot; lets the user interact with the process, effectively stealing away control from the script. In each case, the <code>exp_continue</code> allows the current <code>expect</code> to continue pattern matching after executing the current action.<br/>
+stty raw &#8211; echo<br/>
+               expect_after<br/>
+{<br/>
+    -i $user_spawn_id<br/>
+        &#8220;p&#8221;<br/>
+    {<br/>
         send &#8220;
-&#8221;;<br />
-        exp_continue<br />
-    }<br />
-    &#8220;+&#8221;<br />
-    {<br />
-        incr foo;<br />
-        exp_continue<br />
-    }<br />
-    &#8220;i&#8221;<br />
-    {<br />
-        interact;<br />
-        exp_continue<br />
-    }<br />
-    &#8220;quit&#8221; exit<br />
+&#8221;;<br/>
+        exp_continue<br/>
+    }<br/>
+    &#8220;+&#8221;<br/>
+    {<br/>
+        incr foo;<br/>
+        exp_continue<br/>
+    }<br/>
+    &#8220;i&#8221;<br/>
+    {<br/>
+        interact;<br/>
+        exp_continue<br/>
+    }<br/>
+    &#8220;quit&#8221; exit<br/>
 }</dd>
 <dt>
 </dt><dd> By default, <code>exp_continue</code> resets the timeout timer. The timer is not restarted, if <code>exp_continue</code> is called with the <code>-continue_timer</code> flag.</dd>
@@ -328,29 +328,29 @@ stty raw &#8211; echo<br />
 <dt>
 </dt><dd> If the arguments to the entire <code>interact</code> statement require more than one line, all the arguments may be &quot;braced&quot; into one so as to avoid terminating each line with a backslash. In this one case, the usual Tcl substitutions will occur despite the braces.</dd>
 <dt>
-</dt><dd> For example, the following command runs interact with the following string-body pairs defined: When ^Z is pressed, <code>Expect</code> is suspended. (The <code>-reset</code> flag restores the terminal modes.) When ^A is pressed, the user sees &quot;you typed a control-A&quot; and the process is sent a ^A. When $ is pressed, the user sees the date. When ^C is pressed, <code>Expect</code> exits. If &quot;foo&quot; is entered, the user sees &quot;bar&quot;. When ~~ is pressed, the <code>Expect</code> interpreter runs interactively.<br />
-set CTRLZ  interact<br />
-{<br />
-    -reset $CTRLZ<br />
-    {<br />
-        exec kill &#8211; STOP[pid]<br />
-    }<br />
-    <br />
-    {<br />
+</dt><dd> For example, the following command runs interact with the following string-body pairs defined: When ^Z is pressed, <code>Expect</code> is suspended. (The <code>-reset</code> flag restores the terminal modes.) When ^A is pressed, the user sees &quot;you typed a control-A&quot; and the process is sent a ^A. When $ is pressed, the user sees the date. When ^C is pressed, <code>Expect</code> exits. If &quot;foo&quot; is entered, the user sees &quot;bar&quot;. When ~~ is pressed, the <code>Expect</code> interpreter runs interactively.<br/>
+set CTRLZ  interact<br/>
+{<br/>
+    -reset $CTRLZ<br/>
+    {<br/>
+        exec kill &#8211; STOP[pid]<br/>
+    }<br/>
+    <br/>
+    {<br/>
         send_user &#8220;you typed a control-A
-&#8221;;<br />
-        send &#8220;&#8221;<br />
-    }<br />
-    $<br />
-    {<br />
-        send_user &#8220;The date is [clock format [clock seconds]].&#8221;<br />
-    }<br />
-     exit<br />
-        foo<br />
-    {<br />
-        send_user &#8220;bar&#8221;<br />
-    }<br />
-    ~~<br />
+&#8221;;<br/>
+        send &#8220;&#8221;<br/>
+    }<br/>
+    $<br/>
+    {<br/>
+        send_user &#8220;The date is [clock format [clock seconds]].&#8221;<br/>
+    }<br/>
+     exit<br/>
+        foo<br/>
+    {<br/>
+        send_user &#8220;bar&#8221;<br/>
+    }<br/>
+    ~~<br/>
 }</dd>
 <dt>
 </dt><dd> In string-body pairs, strings are matched in the order they are listed as arguments. Strings that partially match are not sent to the current process in anticipation of the remainder coming. If characters are then entered such that there can no longer possibly be a match, only the part of the string will be sent to the process that cannot possibly begin another match. Thus, strings that are substrings of partial matches can match later, if the original strings that was attempting to be match ultimately fails.</dd>
@@ -376,19 +376,19 @@ set CTRLZ  interact<br />
 <dt>
 </dt><dd> The <code>-echo</code> flag sends characters that match the following pattern back to the process that generated them as each character is read. This may be useful when the user needs to see feedback from partially typed patterns.</dd>
 <dt>
-</dt><dd> If a pattern is being echoed but eventually fails to match, the characters are sent to the spawned process. If the spawned process then echoes them, the user will see the characters twice. <code>-echo</code> is probably only appropriate in situations where the user is unlikely to not complete the pattern. For example, the following excerpt is from rftp, the recursive-ftp script, where the user is prompted to enter ~g, ~p, or ~l, to get, put, or list the current directory recursively. These are so far away from the normal ftp commands, that the user is unlikely to type ~ followed by anything else, except mistakenly, in which case, they&#8217;ll probably just ignore the result anyway.<br />
-interact<br />
-{<br />
-    -echo ~g{getcurdirectory 1} &#8211; echo ~l{getcurdirectory 0} &#8211; echo ~p<br />
-    {<br />
-        putcurdirectory<br />
-    }<br />
-}<br />
+</dt><dd> If a pattern is being echoed but eventually fails to match, the characters are sent to the spawned process. If the spawned process then echoes them, the user will see the characters twice. <code>-echo</code> is probably only appropriate in situations where the user is unlikely to not complete the pattern. For example, the following excerpt is from rftp, the recursive-ftp script, where the user is prompted to enter ~g, ~p, or ~l, to get, put, or list the current directory recursively. These are so far away from the normal ftp commands, that the user is unlikely to type ~ followed by anything else, except mistakenly, in which case, they&#8217;ll probably just ignore the result anyway.<br/>
+interact<br/>
+{<br/>
+    -echo ~g{getcurdirectory 1} &#8211; echo ~l{getcurdirectory 0} &#8211; echo ~p<br/>
+    {<br/>
+        putcurdirectory<br/>
+    }<br/>
+}<br/>
  The <code>-nobuffer</code> flag sends characters that match the following pattern on to the output process as characters are read. </dd>
-<p> This is useful when you wish to let a program echo back the pattern. For example, the following might be used to monitor where a person is dialing (a Hayes-style modem). Each time &quot;atd&quot; is seen the script logs the rest of the line.<br />
-proc lognumber{} {<br />
+<p> This is useful when you wish to let a program echo back the pattern. For example, the following might be used to monitor where a person is dialing (a Hayes-style modem). Each time &quot;atd&quot; is seen the script logs the rest of the line.<br/>
+proc lognumber{} {<br/>
     interact &#8211; nobuffer &#8211; re &#8220;(.*)
-&#8221; return puts $log &#8220;[clock format [clock seconds]]: dialed $interact_out(1,string)&#8221;} interact &#8211;<br />
+&#8221; return puts $log &#8220;[clock format [clock seconds]]: dialed $interact_out(1,string)&#8221;} interact &#8211;<br/>
     nobuffer &#8220;atd&#8221; lognumber</p>
 <dt>
 </dt><dd> During <code>interact</code>, previous use of <code>log_user</code> is ignored. In particular, <code>interact</code> will force its output to be logged (sent to the standard output) since it is presumed the user doesn&#8217;t wish to interact blindly.</dd>
@@ -510,17 +510,17 @@ proc lognumber{} {<br />
 </dt><dd> <i>user_spawn_id</i> is a global variable containing a descriptor which refers to the user. For example, when <i>spawn_id</i> is set to this value, <code>expect</code> behaves like <code>expect_user</code>. </dd>
 <p> <i>error_spawn_id</i> is a global variable containing a descriptor which refers to the standard error. For example, when <i>spawn_id</i> is set to this value, <code>send</code> behaves like <code>send_error</code>.</p>
 <dt>
-</dt><dd> <i>tty_spawn_id</i> is a global variable containing a descriptor which refers to /dev/tty. If /dev/tty does not exist (such as in a cron, at, or batch script), then <i>tty_spawn_id</i> is not defined. This may be tested as:<br />
-if {<br />
-    [info vars tty_spawn_id]<br />
-}<br />
-{<br />
-#/ dev / tty exists<br />
-}<br />
-else<br />
-{<br />
-#/ dev / tty doesn&#8217;t exist<br />
-#probably in cron, batch, or at script<br />
+</dt><dd> <i>tty_spawn_id</i> is a global variable containing a descriptor which refers to /dev/tty. If /dev/tty does not exist (such as in a cron, at, or batch script), then <i>tty_spawn_id</i> is not defined. This may be tested as:<br/>
+if {<br/>
+    [info vars tty_spawn_id]<br/>
+}<br/>
+{<br/>
+#/ dev / tty exists<br/>
+}<br/>
+else<br/>
+{<br/>
+#/ dev / tty doesn&#8217;t exist<br/>
+#probably in cron, batch, or at script<br/>
 }</dd>
 <dt>
 </dt><dd> <code>spawn</code> returns the UNIX process id. If no process is spawned, 0 is returned. The variable <i>spawn_out(slave,name)</i> is set to the name of the pty slave device.</dd>
@@ -611,13 +611,13 @@ else<br />
 </pre>
 <p> The debugger trap can be changed by setting the environment variable EXPECT_DEBUG_INIT to a new trap command. </p>
 <p> You can, of course, override both of these just by adding trap commands to your script. In particular, if you have your own &quot;trap exit SIGINT&quot;, this will override the debugger trap. This is useful if you want to prevent users from getting to the debugger at all. </p>
-<p> If you want to define your own trap on SIGINT but still trap to the debugger when it is running, use:<br />
-if {<br />
-    ![exp_debug]<br />
-}<br />
-{<br />
-    trap mystuff SIGINT<br />
-}<br />
+<p> If you want to define your own trap on SIGINT but still trap to the debugger when it is running, use:<br/>
+if {<br/>
+    ![exp_debug]<br/>
+}<br/>
+{<br/>
+    trap mystuff SIGINT<br/>
+}<br/>
  Alternatively, you can trap to the debugger using some other signal. </p>
 <p> <code>trap</code> will not let you override the action for SIGALRM as this is used internally to <code>Expect</code>. The disconnect command sets SIGALRM to SIG_IGN (ignore). You can reenable this as long as you disable it during subsequent spawn commands. </p>
 <p> See signal(3) for more info.</p>
@@ -673,18 +673,18 @@ if {<br />
 </pre>
 <p> will fail. To avoid this, invoke non-interactive programs with <code>exec</code> rather than <code>spawn</code>. While such situations are conceivable, in practice I have never encountered a situation in which the final output of a truly interactive program would be lost due to this behavior. </p>
 <p> On the other hand, Cray UNICOS ptys throw away any unread output immediately after the process has closed the file descriptor. I have reported this to Cray and they are working on a fix. </p>
-<p> Sometimes a delay is required between a prompt and a response, such as when a tty interface is changing UART settings or matching baud rates by looking for start/stop bits. Usually, all this is require is to sleep for a second or two. A more robust technique is to retry until the hardware is ready to receive input. The following example uses both strategies:<br />
+<p> Sometimes a delay is required between a prompt and a response, such as when a tty interface is changing UART settings or matching baud rates by looking for start/stop bits. Usually, all this is require is to sleep for a second or two. A more robust technique is to retry until the hardware is ready to receive input. The following example uses both strategies:<br/>
 send &#8220;speed 9600
-&#8221;;<br />
-sleep 1 expect<br />
-{<br />
-    timeout<br />
-    {<br />
+&#8221;;<br/>
+sleep 1 expect<br/>
+{<br/>
+    timeout<br/>
+    {<br/>
         send &#8220;
-&#8221;;<br />
-        exp_continue<br />
-    }<br />
-    $prompt<br />
+&#8221;;<br/>
+        exp_continue<br/>
+    }<br/>
+    $prompt<br/>
 }</p>
 <p> trap -code will not work with any command that sits in Tcl&#8217;s event loop, such as sleep. The problem is that in the event loop, Tcl discards the return codes from async event handlers. A workaround is to set a flag in the trap code. Then check the flag immediately after the command (i.e., sleep). </p>
 <p> The expect_background command ignores -timeout arguments and has no concept of timeouts in general. </p>
@@ -713,14 +713,14 @@ bar&quot;. </p>
 <p> Create the <code>Expect</code> script (that contains the secret data) as usual. Make its permissions be 750 (-rwxr-x&#8212;) and owned by a trusted group, i.e., a group which is allowed to read it. If necessary, create a new group for this purpose. Next, create a /bin/sh script with permissions 2751 (-rwxr-s&#8211;x) owned by the same group as before. </p>
 <p> The result is a script which may be executed (and read) by anyone. When invoked, it runs the <code>Expect</code> script.</p>
 <h2>SEE ALSO</h2>
-<p> <code>Tcl</code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3)<br />
- <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, pp. 602, ISBN 1-56592-090-2, O&#8217;Reilly and Associates, 1995.<br />
- <i>&quot;expect: Curing Those Uncontrollable Fits of Interactivity&quot; </i>by Don Libes, Proceedings of the Summer 1990 USENIX Conference, Anaheim, California, June 11-15, 1990.<br />
- <i>&quot;Using</i> <code>expect</code> to Automate System Administration Tasks&quot; by Don Libes, Proceedings of the 1990 USENIX Large Installation Systems Administration Conference, Colorado Springs, Colorado, October 17-19, 1990.<br />
- <i>&quot;Tcl: An Embeddable Command Language&quot; </i>by John Ousterhout, Proceedings of the Winter 1990 USENIX Conference, Washington, D.C., January 22-26, 1990.<br />
- <i>&quot;expect: Scripts for Controlling Interactive Programs&quot; </i>by Don Libes, Computing Systems, Vol. 4, No. 2, University of California Press Journals, November 1991.<br />
- <i>&quot;Regression Testing and Conformance Testing Interactive Programs&quot;, </i>by Don Libes, Proceedings of the Summer 1992 USENIX Conference, pp. 135-144, San Antonio, TX, June 12-15, 1992.<br />
- <i>&quot;Kibitz &#8211; Connecting Multiple Interactive Programs Together&quot;, </i>by Don Libes, Software &#8211; Practice &amp; Experience, John Wiley &amp; Sons, West Sussex, England, Vol. 23, No. 5, May, 1993.<br />
+<p> <code>Tcl</code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3)<br/>
+ <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, pp. 602, ISBN 1-56592-090-2, O&#8217;Reilly and Associates, 1995.<br/>
+ <i>&quot;expect: Curing Those Uncontrollable Fits of Interactivity&quot; </i>by Don Libes, Proceedings of the Summer 1990 USENIX Conference, Anaheim, California, June 11-15, 1990.<br/>
+ <i>&quot;Using</i> <code>expect</code> to Automate System Administration Tasks&quot; by Don Libes, Proceedings of the 1990 USENIX Large Installation Systems Administration Conference, Colorado Springs, Colorado, October 17-19, 1990.<br/>
+ <i>&quot;Tcl: An Embeddable Command Language&quot; </i>by John Ousterhout, Proceedings of the Winter 1990 USENIX Conference, Washington, D.C., January 22-26, 1990.<br/>
+ <i>&quot;expect: Scripts for Controlling Interactive Programs&quot; </i>by Don Libes, Computing Systems, Vol. 4, No. 2, University of California Press Journals, November 1991.<br/>
+ <i>&quot;Regression Testing and Conformance Testing Interactive Programs&quot;, </i>by Don Libes, Proceedings of the Summer 1992 USENIX Conference, pp. 135-144, San Antonio, TX, June 12-15, 1992.<br/>
+ <i>&quot;Kibitz &#8211; Connecting Multiple Interactive Programs Together&quot;, </i>by Don Libes, Software &#8211; Practice &amp; Experience, John Wiley &amp; Sons, West Sussex, England, Vol. 23, No. 5, May, 1993.<br/>
  <i>&quot;A Debugger for Tcl Applications&quot;, </i>by Don Libes, Proceedings of the 1993 Tcl/Tk Workshop, Berkeley, CA, June 10-11, 1993.</p>
 <h2>AUTHOR</h2>
 <p> Don Libes, National Institute of Standards and Technology</p>

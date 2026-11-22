@@ -13,37 +13,37 @@ description: "log4cpp::Appender –"
 <p>#include &lt;Appender.hh&gt; </p>
 <p> Inherited by <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>Public Member Functions</h3>
-<p>virtual <code>~Appender</code> ()<br />
- <i>Destructor for </i><code>Appender</code>.<br />
- virtual void <code>doAppend</code> (const <code>LoggingEvent</code> &amp;event)=0<br />
- <i>Log in </i><code>Appender</code> specific way.<br />
- virtual bool <code>reopen</code> ()=0<br />
- <i>Reopens the output destination of this </i><code>Appender</code>, e.g.<br />
- virtual void <code>close</code> ()=0<br />
- <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i><br />
- virtual bool <code>requiresLayout</code> () const =0<br />
- <i>Check if the appender uses a layout. </i><br />
- virtual void <code>setLayout</code> (<code>Layout</code> *layout)=0<br />
- <i>Set the </i><code>Layout</code> for this appender.<br />
- const std::string &amp; <code>getName</code> () const<br />
- <i>Get the name of this appender. </i><br />
- virtual void <code>setThreshold</code> (<code>Priority::Value</code> priority)=0<br />
- <i>Set the threshold priority of this </i><code>Appender</code>.<br />
- virtual <code>Priority::Value</code> <code>getThreshold</code> ()=0<br />
- <i>Get the threshold priority of this </i><code>Appender</code>.<br />
- virtual void <code>setFilter</code> (<code>Filter</code> *filter)=0<br />
- <i>Set a </i><code>Filter</code> for this appender.<br />
- virtual <code>Filter</code> * <code>getFilter</code> ()=0<br />
+<p>virtual <code>~Appender</code> ()<br/>
+ <i>Destructor for </i><code>Appender</code>.<br/>
+ virtual void <code>doAppend</code> (const <code>LoggingEvent</code> &amp;event)=0<br/>
+ <i>Log in </i><code>Appender</code> specific way.<br/>
+ virtual bool <code>reopen</code> ()=0<br/>
+ <i>Reopens the output destination of this </i><code>Appender</code>, e.g.<br/>
+ virtual void <code>close</code> ()=0<br/>
+ <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i><br/>
+ virtual bool <code>requiresLayout</code> () const =0<br/>
+ <i>Check if the appender uses a layout. </i><br/>
+ virtual void <code>setLayout</code> (<code>Layout</code> *layout)=0<br/>
+ <i>Set the </i><code>Layout</code> for this appender.<br/>
+ const std::string &amp; <code>getName</code> () const<br/>
+ <i>Get the name of this appender. </i><br/>
+ virtual void <code>setThreshold</code> (<code>Priority::Value</code> priority)=0<br/>
+ <i>Set the threshold priority of this </i><code>Appender</code>.<br/>
+ virtual <code>Priority::Value</code> <code>getThreshold</code> ()=0<br/>
+ <i>Get the threshold priority of this </i><code>Appender</code>.<br/>
+ virtual void <code>setFilter</code> (<code>Filter</code> *filter)=0<br/>
+ <i>Set a </i><code>Filter</code> for this appender.<br/>
+ virtual <code>Filter</code> * <code>getFilter</code> ()=0<br/>
  <i>Get the </i><code>Filter</code> for this appender.</p>
 <h3>Static Public Member Functions</h3>
-<p>static <code>Appender</code> * <code>getAppender</code> (const std::string &amp;name)<br />
- <i>Get a pointer to an exitsing </i><code>Appender</code>.<br />
- static bool <code>reopenAll</code> ()<br />
- <i>Call </i><code>reopen()</code> on all existing Appenders.<br />
- static void <code>closeAll</code> ()<br />
+<p>static <code>Appender</code> * <code>getAppender</code> (const std::string &amp;name)<br/>
+ <i>Get a pointer to an exitsing </i><code>Appender</code>.<br/>
+ static bool <code>reopenAll</code> ()<br/>
+ <i>Call </i><code>reopen()</code> on all existing Appenders.<br/>
+ static void <code>closeAll</code> ()<br/>
  <i>Call </i><code>reopen()</code> on all existing Appenders.</p>
 <h3>Protected Member Functions</h3>
-<p><code>Appender</code> (const std::string &amp;name)<br />
+<p><code>Appender</code> (const std::string &amp;name)<br/>
  <i>Constructor for </i><code>Appender</code>.</p>
 <h2>Detailed Description</h2>
 <p>Implement this interface for your own strategies for printing log statements.</p>

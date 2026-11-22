@@ -14,9 +14,9 @@ description: "perl5222delta – what is new for perl v5.22.2"
 <p> If you are upgrading from an earlier release such as 5.22.0, first read perl5221delta, which describes differences between 5.22.0 and 5.22.1.  </p>
 <h2>Security</h2>
 <h3>Fix out of boundary access in Win32 path handling</h3>
-<p> This is <font SIZE="-1">CVE-2015-8608.</font> For more information see [perl #126755] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=126755">https://rt.perl.org/Ticket/Display.html?id=126755</a>&gt;.  </p>
+<p> This is CVE-2015-8608. For more information see [perl #126755] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=126755">https://rt.perl.org/Ticket/Display.html?id=126755</a>&gt;.  </p>
 <h3>Fix loss of taint in canonpath()</h3>
-<p> This is <font SIZE="-1">CVE-2015-8607.</font> For more information see [perl #126862] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=126862">https://rt.perl.org/Ticket/Display.html?id=126862</a>&gt;.  </p>
+<p> This is CVE-2015-8607. For more information see [perl #126862] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=126862">https://rt.perl.org/Ticket/Display.html?id=126862</a>&gt;.  </p>
 <a href="/docs/linux/man/3-mkstemp/"></a><h3>Set proper umask before calling mkstemp (3)</h3>
 <p> In 5.22.0 perl started setting umask to <code>0600</code> before calling <code><a href="/docs/linux/man/3-mkstemp/">mkstemp</a>(3)</code> and restoring it afterwards. This wrongfully tells <code><a href="/docs/linux/man/2-open/">open</a>(2)</code> to strip the owner read and write bits from the given mode before applying it, rather than the intended negation of leaving only those bits in place. </p>
 <p> Systems that use mode <code>0666</code> in <code><a href="/docs/linux/man/3-mkstemp/">mkstemp</a>(3)</code> (like old versions of glibc) create a file with permissions <code>0066</code>, leaving world read and write permissions regardless of current umask. </p>
@@ -28,7 +28,7 @@ description: "perl5222delta – what is new for perl v5.22.2"
 <h3>Remove duplicate environment variables from environ</h3>
 <p> Previously, if an environment variable appeared more than once in <code>&quot;environ[]&quot;</code>, <code>%ENV</code> would contain the last entry for that name, while a typical <code>&quot;getenv()&quot;</code> would return the first entry. We now make sure <code>%ENV</code> contains the same as what <code>&quot;getenv()&quot;</code> returns. </p>
 <p> Secondly, we now remove duplicates from <code>&quot;environ[]&quot;</code>, so if a setting with that name is set in <code>%ENV</code> we won&#8217;t pass an unsafe value to a child process. </p>
-<p> This is <font SIZE="-1">CVE-2016-2381.</font>  </p>
+<p> This is CVE-2016-2381.  </p>
 <h2>Incompatible Changes</h2>
 <p> There are no changes intentionally incompatible with Perl 5.22.1. If any exist, they are bugs, and we request that you submit a report. See ``Reporting Bugs&#8217;&#8216; below.  </p>
 <h2>Modules and Pragmata</h2>
@@ -62,7 +62,7 @@ description: "perl5222delta – what is new for perl v5.22.2"
 <p> [perl #122287] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122287">https://rt.perl.org/Ticket/Display.html?id=122287</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <i>Configure</i> no longer probes for <i>libnm</i> by default. Originally this was the ``New Math&#8217;&#8216; library, but the name has been re-used by the <font SIZE="-1">GNOME</font> NetworkManager. </p>
+<dd> <p> <i>Configure</i> no longer probes for <i>libnm</i> by default. Originally this was the ``New Math&#8217;&#8216; library, but the name has been re-used by the GNOME NetworkManager. </p>
 <p> [perl #127131] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=127131">https://rt.perl.org/Ticket/Display.html?id=127131</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
@@ -78,9 +78,9 @@ description: "perl5222delta – what is new for perl v5.22.2"
 <dd> <p> Compiling perl with <code>-Dusecbacktrace</code> on Darwin now works again. </p>
 <p> [perl #127764] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=127764">https://rt.perl.org/Ticket/Display.html?id=127764</a>&gt; </p>
  </dd>
-<dt><font SIZE="-1">OS</font> X/Darwin</dt>
-<dd> <p> Builds with both <code>-DDEBUGGING</code> and threading enabled would fail with a ``panic: free from wrong pool&#8217;&#8216; error when built or tested from Terminal on <font SIZE="-1">OS X.</font> This was caused by perl&#8217;s internal management of the environment conflicting with an atfork handler using the libc <code>&quot;setenv()&quot;</code> function to update the environment. </p>
-<p> Perl now uses <code>&quot;setenv()&quot;</code>/<code>&quot;unsetenv()&quot;</code> to update the environment on <font SIZE="-1">OS X.</font> </p>
+<dt>OS X/Darwin</dt>
+<dd> <p> Builds with both <code>-DDEBUGGING</code> and threading enabled would fail with a ``panic: free from wrong pool&#8217;&#8216; error when built or tested from Terminal on OS X. This was caused by perl&#8217;s internal management of the environment conflicting with an atfork handler using the libc <code>&quot;setenv()&quot;</code> function to update the environment. </p>
+<p> Perl now uses <code>&quot;setenv()&quot;</code>/<code>&quot;unsetenv()&quot;</code> to update the environment on OS X. </p>
 <p> [perl #126240] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=126240">https://rt.perl.org/Ticket/Display.html?id=126240</a>&gt; </p>
  </dd>
 <dt>ppc64el</dt>
@@ -154,14 +154,14 @@ description: "perl5222delta – what is new for perl v5.22.2"
 <p> Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.22.2: </p>
 <p> Aaron Crane, Abigail, Andreas König, Aristotle Pagaltzis, Chris &#8216;BinGOs&#8217; Williams, Craig A. Berry, Dagfinn Ilmari Mannsåker, David Golden, David Mitchell, H.Merijn Brand, James E Keenan, Jarkko Hietaniemi, Karen Etheridge, Karl Williamson, Matthew Horsfall, Niko Tyni, Ricardo Signes, Sawyer X, Stevan Little, Steve Hay, Todd Rinaldo, Tony Cook, Vladimir Timofeev, Yves Orton. </p>
 <p> The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. </p>
-<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.  </p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish. </p>
+<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.  </p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="https://rt.perl.org/">https://rt.perl.org/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font>  </p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

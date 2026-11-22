@@ -10,15 +10,15 @@ description: "nvidia-settings – configure the NVIDIA graphics driver"
 
 <p> nvidia-settings &#8211; configure the NVIDIA graphics driver </p>
 <h2>SYNOPSIS</h2>
-<p> <code>nvidia-settings [</code><i>options</i><code>]</code><br />
- <code>nvidia-settings [</code><i>options</i><code>] &#8211;no-config</code><br />
- <code>nvidia-settings [</code><i>options</i><code>] &#8211;load-config-only</code><br />
- <code>nvidia-settings [</code><i>options</i><code>] {&#8211;query=</code><i>attr</i><code> | &#8211;assign=</code><i>attr</i><code>=</code><i>value</i><code>} &#8230;</code><br />
+<p> <code>nvidia-settings [</code><i>options</i><code>]</code><br/>
+ <code>nvidia-settings [</code><i>options</i><code>] &#8211;no-config</code><br/>
+ <code>nvidia-settings [</code><i>options</i><code>] &#8211;load-config-only</code><br/>
+ <code>nvidia-settings [</code><i>options</i><code>] {&#8211;query=</code><i>attr</i><code> | &#8211;assign=</code><i>attr</i><code>=</code><i>value</i><code>} &#8230;</code><br/>
  <code>nvidia-settings [</code><i>options</i><code>] &#8211;glxinfo</code> </p>
-<p> Options: <code>[-vh] [&#8211;config=</code><i>configfile</i><code>] [-c </code><i>ctrl-display</i><code>]</code><br />
- <i> </i><code>[&#8211;verbose=</code>{<i>none </i>|<i> errors </i>|<i> deprecations </i>|<i> warnings </i>|<i> all</i>}<code>]</code><br />
+<p> Options: <code>[-vh] [&#8211;config=</code><i>configfile</i><code>] [-c </code><i>ctrl-display</i><code>]</code><br/>
+ <i> </i><code>[&#8211;verbose=</code>{<i>none </i>|<i> errors </i>|<i> deprecations </i>|<i> warnings </i>|<i> all</i>}<code>]</code><br/>
  <i> </i><code>[&#8211;describe=</code>{<i>all </i>|<i> list </i>|<i> attribute_name</i>}<code>]</code> </p>
-<p> <i>attr</i> has the form:<br />
+<p> <i>attr</i> has the form:<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <i>DISPLAY</i><code>/</code><i>attribute_name</i><code>[</code><i>display_devices</i><code>]</code></p>
 <h2>DESCRIPTION</h2>
 <p> The <code>nvidia-settings</code> utility is a tool for configuring the NVIDIA graphics driver. It operates by communicating with the NVIDIA X driver, querying and updating state as appropriate. This communication is done via the NV-CONTROL, GLX, XVideo, and RandR X extensions. </p>
@@ -53,9 +53,9 @@ description: "nvidia-settings – configure the NVIDIA graphics driver"
 <p> for lists of targets for each target type. </p>
 <p> The [{display devices}] portion is also optional; if it is not specified, then the attribute is assigned to all display devices. </p>
 <p> Some examples: </p>
-<p>&nbsp;<wbr>&nbsp;-a FSAA=5<br />
-&nbsp;<wbr>&nbsp;-a localhost:0.0/DigitalVibrance[CRT-0]=0<br />
-&nbsp;<wbr>&nbsp;&#8211;assign=&quot;SyncToVBlank=1&quot;<br />
+<p>&nbsp;<wbr>&nbsp;-a FSAA=5<br/>
+&nbsp;<wbr>&nbsp;-a localhost:0.0/DigitalVibrance[CRT-0]=0<br/>
+&nbsp;<wbr>&nbsp;&#8211;assign=&quot;SyncToVBlank=1&quot;<br/>
 &nbsp;<wbr>&nbsp;-a&nbsp;[gpu:0]/DigitalVibrance[DFP-1]=63 </p>
 <dt><code>-q </code><i>QUERY</i><code>, &#8211;query=</code><i>QUERY</i></dt>
 <dd> The <i>QUERY</i> argument to the <code>&#8216;&#8211;query&#8217;</code> command line option is of the form: </dd>
@@ -164,8 +164,8 @@ description: "nvidia-settings – configure the NVIDIA graphics driver"
 <pre><code>
 nvidia - settings-- query 0 / VideoRam nvidia - settings-- query localhost : 0.0 / VideoRam nvidia - settings-- query [screen:0] / VideoRam nvidia - settings-- query localhost : 0 [screen:0] / VideoRam
 </code></pre>
-<p> To address GPU 0 instead, you can use either of:<br />
-nvidia &#8211; settings&#8211; query [gpu:0] / VideoRam nvidia &#8211; settings&#8211; query localhost : 0 [gpu:0] / VideoRam<br />
+<p> To address GPU 0 instead, you can use either of:<br/>
+nvidia &#8211; settings&#8211; query [gpu:0] / VideoRam nvidia &#8211; settings&#8211; query localhost : 0 [gpu:0] / VideoRam<br/>
  Note that if a target specification is present, it will override any X screen specified in the display name as the target to process. For example, the following query would address GPU 0, and not X screen 1: </p>
 <pre>
         nvidia-settings --query localhost:0.1[gpu:0]/VideoRam
@@ -197,8 +197,8 @@ nvidia &#8211; settings&#8211; query [gpu:0] / VideoRam nvidia &#8211; settings&
 <pre>
         nvidia-settings --query all
 </pre>
-<p> for what targets types can be used with each attribute. See the output of<br />
-nvidia &#8211; settings&#8211; query screens&#8211; query gpus&#8211; query framelocks&#8211; query fans&#8211; query thermalsensors&#8211; query svps&#8211; query dpys<br />
+<p> for what targets types can be used with each attribute. See the output of<br/>
+nvidia &#8211; settings&#8211; query screens&#8211; query gpus&#8211; query framelocks&#8211; query fans&#8211; query thermalsensors&#8211; query svps&#8211; query dpys<br/>
  for lists of targets for each target type. </p>
 <p> To enable support for the &quot;GPUGraphicsClockOffset&quot; and &quot;GPUMemoryTransferRateOffset&quot; attributes, ensure that the &quot;Coolbits&quot; X configuration option includes the value &quot;8&quot; in the bitmask. For more details, refer to the documentation of the &quot;Coolbits&quot; option in the NVIDIA driver README. Query the &quot;GPUPerfModes&quot; string attribute to see a list of the available performance modes: </p>
 <pre>
@@ -277,7 +277,7 @@ nvidia - settings-- assign FSAA = 2 nvidia - settings-- assign[CRT - 1] / Digita
 <dt><code>nvidia-settings &#8211;assign RedGamma=2.0 &#8211;assign BlueGamma=2.0 &#8211;assign GreenGamma=2.0</code></dt>
 <dd> Set the gamma of the screen to 2.0.</dd></dl>
 <h2>AUTHOR</h2>
-<p> Aaron Plattner<br />
+<p> Aaron Plattner<br/>
  NVIDIA Corporation</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nvidia-xconfig/">nvidia-xconfig</a></code>(1), <code>nvidia-installer</code>(1)</p>

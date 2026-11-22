@@ -10,57 +10,57 @@ description: "Callback Data Functions –"
 
 <p> Callback Data Functions &#8211; </p>
 <h3>Typedefs</h3>
-<p> typedef struct<br />
+<p> typedef struct<br/>
  globus_l_gsi_callback_data_s * <code>globus_gsi_callback_data_t</code>&quot; </p>
 <h3>Functions</h3>
-<p> globus_result_t <code>globus_gsi_callback_data_init</code> (<code>globus_gsi_callback_data_t</code> *callback_data)<br />
- <i>Initialize a callback data structure. </i><br />
- globus_result_t <code>globus_gsi_callback_data_destroy</code> (<code>globus_gsi_callback_data_t</code> callback_data)<br />
- <i>Initialize a callback data structure. </i><br />
- globus_result_t <code>globus_gsi_callback_data_copy</code> (<code>globus_gsi_callback_data_t</code> source, <code>globus_gsi_callback_data_t</code> *dest)<br />
- <i>Copy a callback data structure. </i><br />
- globus_result_t <code>globus_gsi_callback_get_cert_depth</code> (<code>globus_gsi_callback_data_t</code> callback_data, int *cert_depth)<br />
- <i>Getting the certificate chain depth. </i><br />
- globus_result_t <code>globus_gsi_callback_set_cert_depth</code> (<code>globus_gsi_callback_data_t</code> callback_data, int cert_depth)<br />
- <i>Set the certificate chain depth. </i><br />
- globus_result_t <code>globus_gsi_callback_get_proxy_depth</code> (<code>globus_gsi_callback_data_t</code> callback_data, int *proxy_depth)<br />
- <i>Get the &#8216;proxy chain&#8217; depth. </i><br />
- globus_result_t <code>globus_gsi_callback_set_proxy_depth</code> (<code>globus_gsi_callback_data_t</code> callback_data, int proxy_depth)<br />
- <i>Set the &#8216;proxy chain&#8217; depth. </i><br />
- globus_result_t <code>globus_gsi_callback_get_cert_type</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_gsi_cert_utils_cert_type_t *cert_type)<br />
- <i>Get the certificate type. </i><br />
- globus_result_t <code>globus_gsi_callback_set_cert_type</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_gsi_cert_utils_cert_type_t cert_type)<br />
- <i>Set the certificate type. </i><br />
- globus_result_t <code>globus_gsi_callback_get_cert_chain</code> (<code>globus_gsi_callback_data_t</code> callback_data, STACK_OF(X509)**cert_chain)<br />
- <i>Get the certificate chain. </i><br />
- globus_result_t <code>globus_gsi_callback_set_cert_chain</code> (<code>globus_gsi_callback_data_t</code> callback_data, STACK_OF(X509)*cert_chain)<br />
- <i>Set the certificate chain. </i><br />
- globus_result_t <code>globus_gsi_callback_get_multiple_limited_proxy_ok</code> (<code>globus_gsi_callback_data_t</code> callback_data, int *multiple_limited_proxy_ok)<br />
- <i>Get the limited proxy handling setting. </i><br />
- globus_result_t <code>globus_gsi_callback_set_multiple_limited_proxy_ok</code> (<code>globus_gsi_callback_data_t</code> callback_data, int multiple_limited_proxy_ok)<br />
- <i>Set the limited proxy handling setting. </i><br />
- globus_result_t <code>globus_gsi_callback_get_extension_oids</code> (<code>globus_gsi_callback_data_t</code> callback_data, void **extension_oids)<br />
- <i>Get X.509 extension OIDs. </i><br />
- globus_result_t <code>globus_gsi_callback_set_extension_oids</code> (<code>globus_gsi_callback_data_t</code> callback_data, void *extension_oids)<br />
- <i>Set X.509 extension OIDs. </i><br />
- globus_result_t <code>globus_gsi_callback_get_cert_dir</code> (<code>globus_gsi_callback_data_t</code> callback_data, char **cert_dir)<br />
- <i>Get the trusted certificate directory. </i><br />
- globus_result_t <code>globus_gsi_callback_set_cert_dir</code> (<code>globus_gsi_callback_data_t</code> callback_data, char *cert_dir)<br />
- <i>Set the trusted certificate directory. </i><br />
- globus_result_t <code>globus_gsi_callback_get_extension_cb</code> (<code>globus_gsi_callback_data_t</code> callback_data, <code>globus_gsi_extension_callback_t</code> *extension_cb)<br />
- <i>Get the unknown X.509 extension callback. </i><br />
+<p> globus_result_t <code>globus_gsi_callback_data_init</code> (<code>globus_gsi_callback_data_t</code> *callback_data)<br/>
+ <i>Initialize a callback data structure. </i><br/>
+ globus_result_t <code>globus_gsi_callback_data_destroy</code> (<code>globus_gsi_callback_data_t</code> callback_data)<br/>
+ <i>Initialize a callback data structure. </i><br/>
+ globus_result_t <code>globus_gsi_callback_data_copy</code> (<code>globus_gsi_callback_data_t</code> source, <code>globus_gsi_callback_data_t</code> *dest)<br/>
+ <i>Copy a callback data structure. </i><br/>
+ globus_result_t <code>globus_gsi_callback_get_cert_depth</code> (<code>globus_gsi_callback_data_t</code> callback_data, int *cert_depth)<br/>
+ <i>Getting the certificate chain depth. </i><br/>
+ globus_result_t <code>globus_gsi_callback_set_cert_depth</code> (<code>globus_gsi_callback_data_t</code> callback_data, int cert_depth)<br/>
+ <i>Set the certificate chain depth. </i><br/>
+ globus_result_t <code>globus_gsi_callback_get_proxy_depth</code> (<code>globus_gsi_callback_data_t</code> callback_data, int *proxy_depth)<br/>
+ <i>Get the &#8216;proxy chain&#8217; depth. </i><br/>
+ globus_result_t <code>globus_gsi_callback_set_proxy_depth</code> (<code>globus_gsi_callback_data_t</code> callback_data, int proxy_depth)<br/>
+ <i>Set the &#8216;proxy chain&#8217; depth. </i><br/>
+ globus_result_t <code>globus_gsi_callback_get_cert_type</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_gsi_cert_utils_cert_type_t *cert_type)<br/>
+ <i>Get the certificate type. </i><br/>
+ globus_result_t <code>globus_gsi_callback_set_cert_type</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_gsi_cert_utils_cert_type_t cert_type)<br/>
+ <i>Set the certificate type. </i><br/>
+ globus_result_t <code>globus_gsi_callback_get_cert_chain</code> (<code>globus_gsi_callback_data_t</code> callback_data, STACK_OF(X509)**cert_chain)<br/>
+ <i>Get the certificate chain. </i><br/>
+ globus_result_t <code>globus_gsi_callback_set_cert_chain</code> (<code>globus_gsi_callback_data_t</code> callback_data, STACK_OF(X509)*cert_chain)<br/>
+ <i>Set the certificate chain. </i><br/>
+ globus_result_t <code>globus_gsi_callback_get_multiple_limited_proxy_ok</code> (<code>globus_gsi_callback_data_t</code> callback_data, int *multiple_limited_proxy_ok)<br/>
+ <i>Get the limited proxy handling setting. </i><br/>
+ globus_result_t <code>globus_gsi_callback_set_multiple_limited_proxy_ok</code> (<code>globus_gsi_callback_data_t</code> callback_data, int multiple_limited_proxy_ok)<br/>
+ <i>Set the limited proxy handling setting. </i><br/>
+ globus_result_t <code>globus_gsi_callback_get_extension_oids</code> (<code>globus_gsi_callback_data_t</code> callback_data, void **extension_oids)<br/>
+ <i>Get X.509 extension OIDs. </i><br/>
+ globus_result_t <code>globus_gsi_callback_set_extension_oids</code> (<code>globus_gsi_callback_data_t</code> callback_data, void *extension_oids)<br/>
+ <i>Set X.509 extension OIDs. </i><br/>
+ globus_result_t <code>globus_gsi_callback_get_cert_dir</code> (<code>globus_gsi_callback_data_t</code> callback_data, char **cert_dir)<br/>
+ <i>Get the trusted certificate directory. </i><br/>
+ globus_result_t <code>globus_gsi_callback_set_cert_dir</code> (<code>globus_gsi_callback_data_t</code> callback_data, char *cert_dir)<br/>
+ <i>Set the trusted certificate directory. </i><br/>
+ globus_result_t <code>globus_gsi_callback_get_extension_cb</code> (<code>globus_gsi_callback_data_t</code> callback_data, <code>globus_gsi_extension_callback_t</code> *extension_cb)<br/>
+ <i>Get the unknown X.509 extension callback. </i><br/>
  globus_result_t <code>globus_gsi_callback_set_extension_cb</code> (<code>globus_gsi_callback_data_t</code> callback_data, <code>globus_gsi_extension_callback_t</code> extension_cb) </p>
-<p> globus_result_t <code>globus_gsi_callback_get_error</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_result_t *error)<br />
- <i>Get error status. </i><br />
- globus_result_t <code>globus_gsi_callback_set_error</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_result_t error)<br />
- <i>Set error status. </i><br />
- globus_result_t <code>globus_gsi_callback_get_check_policy_for_self_signed_certs</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_bool_t *check)<br />
- <i>Get the self-signed policy checking flag. </i><br />
- globus_result_t <code>globus_gsi_callback_set_check_policy_for_self_signed_certs</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_bool_t check)<br />
- <i>Set the self-signed policy checking flag. </i><br />
- globus_result_t <code>globus_gsi_callback_get_allow_missing_signing_policy</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_bool_t *allow)<br />
- <i>Get the &#8216;allow missing signing policy&#8217; flag. </i><br />
- globus_result_t <code>globus_gsi_callback_set_allow_missing_signing_policy</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_bool_t allow)<br />
+<p> globus_result_t <code>globus_gsi_callback_get_error</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_result_t *error)<br/>
+ <i>Get error status. </i><br/>
+ globus_result_t <code>globus_gsi_callback_set_error</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_result_t error)<br/>
+ <i>Set error status. </i><br/>
+ globus_result_t <code>globus_gsi_callback_get_check_policy_for_self_signed_certs</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_bool_t *check)<br/>
+ <i>Get the self-signed policy checking flag. </i><br/>
+ globus_result_t <code>globus_gsi_callback_set_check_policy_for_self_signed_certs</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_bool_t check)<br/>
+ <i>Set the self-signed policy checking flag. </i><br/>
+ globus_result_t <code>globus_gsi_callback_get_allow_missing_signing_policy</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_bool_t *allow)<br/>
+ <i>Get the &#8216;allow missing signing policy&#8217; flag. </i><br/>
+ globus_result_t <code>globus_gsi_callback_set_allow_missing_signing_policy</code> (<code>globus_gsi_callback_data_t</code> callback_data, globus_bool_t allow)<br/>
  <i>Set the &#8216;allow missing signing policy&#8217; flag. </i></p>
 <h2>Detailed Description</h2>
 <p> Functions that deal with the data structure that contains state associated with the path validation callback.</p>
@@ -73,7 +73,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>source</i> The structure to be copied<br />
+</dt><dd> <i>source</i> The structure to be copied<br/>
  <i>dest</i> The destination of the copy</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -104,7 +104,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the error from<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the error from<br/>
  <i>allow</i> Contains the value of the flag upon successful return.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -119,7 +119,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to retrieve the certificate chain from.<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to retrieve the certificate chain from.<br/>
  <i>cert_chain</i> Contains the certificate chain upon successful return</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -130,7 +130,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to retrieve the depth from<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to retrieve the depth from<br/>
  <i>cert_depth</i> The returned certificate chain depth</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -141,7 +141,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the trusted certificates directory from.<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the trusted certificates directory from.<br/>
  <i>cert_dir</i> Contains the path to the trusted certificate directory upon successful return.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -152,7 +152,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to retrieve the certificate type from<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to retrieve the certificate type from<br/>
  <i>cert_type</i> Variable containing the certificate type on return</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -163,7 +163,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the error from<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the error from<br/>
  <i>check</i> Contains the value of the flag upon successful return.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -178,7 +178,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the error from<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the error from<br/>
  <i>error</i> Contains the error upon successful return.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -189,7 +189,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the callback information from<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the callback information from<br/>
  <i>extension_cb</i> Contains the extension callback upon successful return.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -200,7 +200,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the array of extension OIDs from.<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the array of extension OIDs from.<br/>
  <i>extension_oids</i> Contains the list of extension OIDs upon successful return.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -211,7 +211,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the limited proxy setting from<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the limited proxy setting from<br/>
  <i>multiple_limited_proxy_ok</i> Contains the value of the setting upon successful return.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -222,7 +222,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to retrieve the depth from<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to retrieve the depth from<br/>
  <i>proxy_depth</i> The returned &#8216;proxy chain&#8217; depth</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -233,7 +233,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the error on<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the error on<br/>
  <i>allow</i> New value of the flag</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -248,7 +248,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the certificate chain on<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the certificate chain on<br/>
  <i>cert_chain</i> The certificate chain</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -259,7 +259,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to retrieve the depth from<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to retrieve the depth from<br/>
  <i>cert_depth</i> The certificate chain depth</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -270,7 +270,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the trusted certificates directory on.<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the trusted certificates directory on.<br/>
  <i>cert_dir</i> The path to the trusted certificate directory</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -281,7 +281,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the certificate type on<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the certificate type on<br/>
  <i>cert_type</i> The certificate type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -292,7 +292,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the error on<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the error on<br/>
  <i>check</i> New value of the flag</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -307,7 +307,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the error on<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the error on<br/>
  <i>error</i> The error</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -319,7 +319,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the callback information on<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the callback information on<br/>
  <i>extension_cb</i> The extension callback</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -330,7 +330,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the array of extension OIDs from.<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to get the array of extension OIDs from.<br/>
  <i>extension_oids</i> The list of extension OIDs</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -341,7 +341,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the limited proxy setting on<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to set the limited proxy setting on<br/>
  <i>multiple_limited_proxy_ok</i> The value of the setting</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -352,7 +352,7 @@ description: "Callback Data Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to retrieve the depth from<br />
+</dt><dd> <i>callback_data</i> The globus_gsi_callback_data_t to retrieve the depth from<br/>
  <i>proxy_depth</i> The &#8216;proxy chain&#8217; depth</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

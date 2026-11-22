@@ -11,27 +11,27 @@ description: "std::__detail::_Nfa –"
 <h2>Synopsis</h2>
 <p> Inherits <code>std::__detail::_Automaton</code>, and <code>std::vector&lt; _State &gt;</code>.</p>
 <h3>Public Types</h3>
-<p>typedef<br />
+<p>typedef<br/>
  <code>regex_constants::syntax_option_type</code> <code>_FlagT</code>&quot; </p>
 <p> typedef unsigned int <code>_SizeT</code> </p>
 <p> typedef <code>_State</code> <code>_StateT</code> </p>
 <p> typedef <code>std::allocator</code>&lt; <code>_State</code> &gt; <code>allocator_type</code> </p>
-<p> typedef<br />
- __gnu_cxx::__normal_iterator<br />
+<p> typedef<br/>
+ __gnu_cxx::__normal_iterator<br/>
  &lt; const_pointer, <code>vector</code> &gt; <code>const_iterator</code>&quot; </p>
-<p> typedef<br />
+<p> typedef<br/>
  _Alloc_traits::const_pointer <code>const_pointer</code>&quot; </p>
-<p> typedef<br />
+<p> typedef<br/>
  _Alloc_traits::const_reference <code>const_reference</code>&quot; </p>
-<p> typedef <code>std::reverse_iterator</code><br />
+<p> typedef <code>std::reverse_iterator</code><br/>
  &lt; const_iterator &gt; <code>const_reverse_iterator</code>&quot; </p>
 <p> typedef ptrdiff_t <code>difference_type</code> </p>
-<p> typedef<br />
- __gnu_cxx::__normal_iterator<br />
+<p> typedef<br/>
+ __gnu_cxx::__normal_iterator<br/>
  &lt; pointer, <code>vector</code> &gt; <code>iterator</code>&quot; </p>
 <p> typedef _Base::pointer <code>pointer</code> </p>
 <p> typedef _Alloc_traits::reference <code>reference</code> </p>
-<p> typedef <code>std::reverse_iterator</code><br />
+<p> typedef <code>std::reverse_iterator</code><br/>
  &lt; iterator &gt; <code>reverse_iterator</code>&quot; </p>
 <p> typedef size_t <code>size_type</code> </p>
 <p> typedef <code>_State</code> <code>value_type</code></p>
@@ -147,7 +147,7 @@ description: "std::__detail::_Nfa –"
 <p>Assigns a given value to a vector. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__n</i> Number of elements to be assigned.<br />
+<dd><i>__n</i> Number of elements to be assigned.<br/>
  <i>__val</i> Value to be assigned.</dd></dl>
 <p> This function fills a vector with <i>__n</i> copies of the given value. Note that the assignment completely changes the vector and that the resulting vector&#8217;s size is the same as the number of elements assigned. Old data may be lost. </p>
 <p> Definition at line 479 of file stl_vector.h.</p>
@@ -155,7 +155,7 @@ description: "std::__detail::_Nfa –"
 <p>Assigns a range to a vector. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__first</i> An input iterator.<br />
+<dd><i>__first</i> An input iterator.<br/>
  <i>__last</i> An input iterator.</dd></dl>
 <p> This function fills a vector with copies of the elements in the range [__first,__last). </p>
 <p> Note that the assignment completely changes the vector and that the resulting vector&#8217;s size is the same as the number of elements assigned. Old data may be lost. </p>
@@ -239,7 +239,7 @@ description: "std::__detail::_Nfa –"
 <p>Inserts an object in vector before specified iterator. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__position</i> An iterator into the vector.<br />
+<dd><i>__position</i> An iterator into the vector.<br/>
  <i>__args</i> Arguments.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -269,7 +269,7 @@ description: "std::__detail::_Nfa –"
 <p>Remove a range of elements. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__first</i> Iterator pointing to the first element to be erased.<br />
+<dd><i>__first</i> Iterator pointing to the first element to be erased.<br/>
  <i>__last</i> Iterator pointing to one past the last element to be erased.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -288,7 +288,7 @@ description: "std::__detail::_Nfa –"
 <p>Inserts given value into vector before specified iterator. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__position</i> An iterator into the vector.<br />
+<dd><i>__position</i> An iterator into the vector.<br/>
  <i>__x</i> Data to be inserted.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -298,7 +298,7 @@ description: "std::__detail::_Nfa –"
 <p>Inserts given rvalue into vector before specified iterator. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__position</i> An iterator into the vector.<br />
+<dd><i>__position</i> An iterator into the vector.<br/>
  <i>__x</i> Data to be inserted.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -310,7 +310,7 @@ description: "std::__detail::_Nfa –"
 <p>Inserts an initializer_list into the vector. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__position</i> An iterator into the vector.<br />
+<dd><i>__position</i> An iterator into the vector.<br/>
  <i>__l</i> An initializer_list.</dd></dl>
 <p> This function will insert copies of the data in the initializer_list <i>l</i> into the vector before the location specified by <i>position</i>. </p>
 <p> Note that this kind of operation could be expensive for a vector and if it is frequently used the user should consider using std::list. </p>
@@ -320,8 +320,8 @@ description: "std::__detail::_Nfa –"
 <p>Inserts a number of copies of given data into the vector. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__position</i> An iterator into the vector.<br />
- <i>__n</i> Number of elements to be inserted.<br />
+<dd><i>__position</i> An iterator into the vector.<br/>
+ <i>__n</i> Number of elements to be inserted.<br/>
  <i>__x</i> Data to be inserted.</dd></dl>
 <p> This function will insert a specified number of copies of the given data before the location specified by <i>position</i>. </p>
 <p> Note that this kind of operation could be expensive for a vector and if it is frequently used the user should consider using std::list. </p>
@@ -330,8 +330,8 @@ description: "std::__detail::_Nfa –"
 <p>Inserts a range into the vector. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__position</i> An iterator into the vector.<br />
- <i>__first</i> An input iterator.<br />
+<dd><i>__position</i> An iterator into the vector.<br/>
+ <i>__first</i> An input iterator.<br/>
  <i>__last</i> An input iterator.</dd></dl>
 <p> This function will insert copies of the data in the range [__first,__last) into the vector before the location specified by <i>pos</i>. </p>
 <p> Note that this kind of operation could be expensive for a vector and if it is frequently used the user should consider using std::list. </p>
@@ -410,7 +410,7 @@ description: "std::__detail::_Nfa –"
 <p>Resizes the vector to the specified number of elements. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__new_size</i> Number of elements the vector should contain.<br />
+<dd><i>__new_size</i> Number of elements the vector should contain.<br/>
  <i>__x</i> Data with which new elements should be populated.</dd></dl>
 <p> This function will resize the vector to the specified number of elements. If the number is smaller than the vector&#8217;s current size the vector is truncated, otherwise the vector is extended and new elements are populated with given data. </p>
 <p> Definition at line 684 of file stl_vector.h. </p>
@@ -426,7 +426,7 @@ description: "std::__detail::_Nfa –"
 <p>Creates a vector with default constructed elements. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__n</i> The number of elements to initially create.<br />
+<dd><i>__n</i> The number of elements to initially create.<br/>
  <i>__a</i> An allocator.</dd></dl>
 <p> This constructor fills the vector with <i>__n</i> default constructed elements. </p>
 <p> Definition at line 270 of file stl_vector.h.</p>

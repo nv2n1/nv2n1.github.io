@@ -11,7 +11,7 @@ perlbook - Books about and related to Perl
 
 <h2>DESCRIPTION</h2>
 
- There are many books on Perl and Perl-related. A few of these are good, some are <font SIZE="-1">OK,</font> but many aren't worth your money. There is a list of these books, some with extensive reviews, at &lt;<a rel="nofollow" HREF="http://books.perl.org/">http://books.perl.org/</a>&gt; . We list some of the books here, and while listing a book implies our endorsement, don't think that not including a book means anything. 
+ There are many books on Perl and Perl-related. A few of these are good, some are OK, but many aren't worth your money. There is a list of these books, some with extensive reviews, at &lt;<a rel="nofollow" HREF="http://books.perl.org/">http://books.perl.org/</a>&gt; . We list some of the books here, and while listing a book implies our endorsement, don't think that not including a book means anything. 
 
  Most of these books are available online through Safari Books Online ( &lt;<a rel="nofollow" HREF="http://safaribooksonline.com/">http://safaribooksonline.com/</a>&gt; ).
 
@@ -112,7 +112,7 @@ by brian d foy
 <h3>Task-Oriented</h3>
 
 <dl>
-<dt><i>Writing Perl Modules for </i><font SIZE="-1"><i>CPAN</i></font><i></i>
+<dt><i>Writing Perl Modules for </i><i>CPAN</i><i></i>
 </dt><dd> <pre>
  by Sam Tregar
  ISBN 1-59059-018-X [1st edition August 2002 &amp; ebook]
@@ -127,7 +127,7 @@ by Tom Christiansen and Nathan Torkington,
 </dd><dt><i>Automating System Administration with Perl</i>
 </dt><dd> 
 by David N.Blank - Edelman ISBN 978 - 0 - 596 - 00639 - 6 [2nd edition May 2009] ISBN 978 - 0 - 596 - 80251 - 6 [ebook] http: // oreilly.com/catalog/9780596006396
-</dd><dt><i>Real World </i><font SIZE="-1"><i>SQL</i></font><i> Server Administration with Perl</i>
+</dd><dt><i>Real World </i><i>SQL</i><i> Server Administration with Perl</i>
 </dt><dd> <pre>
  by Linchi Shea
  ISBN 1-59059-097-X [1st edition July 2003 &amp; ebook]
@@ -142,7 +142,7 @@ by David N.Blank - Edelman ISBN 978 - 0 - 596 - 00639 - 6 [2nd edition May 2009]
 by Jan Goyvaerts and Steven Levithan
         ISBN 978 -
     1 - 4493 - 1943 - 4 [2nd edition August 2012] ISBN 978 - 1 - 4493 - 2747 - 7 [ebook] http: // shop.oreilly.com/product/0636920023630.do
-</dd><dt><i>Programming the Perl </i><font SIZE="-1"><i>DBI</i></font><i></i>
+</dd><dt><i>Programming the Perl </i><i>DBI</i><i></i>
 </dt><dd> 
 by Tim Bunce and Alligator Descartes
         ISBN 978 -
@@ -215,7 +215,7 @@ by Steve Lidie and Nancy Walsh
 
 <h3>Other interesting, non-Perl books</h3>
 
- You might notice several familiar Perl concepts in this collection of <font SIZE="-1">ACM</font> columns from Jon Bentley. The similarity to the title of the major Perl book (which came later) is not completely accidental:
+ You might notice several familiar Perl concepts in this collection of ACM columns from Jon Bentley. The similarity to the title of the major Perl book (which came later) is not completely accidental:
 <dl>
 <dt><i>Programming Pearls</i>
 </dt><dd> <pre>

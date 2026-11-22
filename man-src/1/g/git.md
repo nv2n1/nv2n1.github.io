@@ -19,7 +19,7 @@ git[--version][--help][-C&lt;path&gt;][-c &lt; name &gt;= &lt;value&gt;]
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals. </p>
-<p> See <code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7) to get started, then see <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7) for a useful minimum set of commands. The m[blue]<code>Git User&#8217;s Manual</code>m[]<font SIZE="-2">[1]</font> has a more in-depth introduction. </p>
+<p> See <code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7) to get started, then see <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7) for a useful minimum set of commands. The m[blue]<code>Git User&#8217;s Manual</code>m[][1] has a more in-depth introduction. </p>
 <p> After you mastered the basic concepts, you can come back to this page to learn what commands Git offers. You can learn more about individual Git commands with &quot;git help command&quot;. <code><a href="/docs/linux/man/7-gitcli/">gitcli</a></code>(7) manual page gives you an overview of the command-line command syntax. </p>
 <p> A formatted and hyperlinked copy of the latest Git documentation can be viewed at m[blue]<code><a rel="nofollow" href="https://git.github.io/htmldocs/git.html">https://git.github.io/htmldocs/git.html</a></code>m[] or m[blue]<code><a rel="nofollow" href="https://git-scm.com/docs">https://git-scm.com/docs</a></code>m[].</p>
 <h2>OPTIONS</h2>
@@ -1135,15 +1135,15 @@ path old-file old-hex old-mode new-file new-hex new-mode
 <p> Alternatively, if the variable is set to an absolute path (starting with a <i>/</i> character), Git will interpret this as a file path and will try to append the trace messages to it. If the path already exists and is a directory, the trace messages will be written to files (one per process) in that directory, named according to the last component of the SID and an optional counter (to avoid filename collisions). </p>
 <p> In addition, if the variable is set to <code>af_unix:[&lt;socket_type&gt;:]&lt;absolute-pathname&gt;</code>, Git will try to open the path as a Unix Domain Socket. The socket type can be either <code>stream</code> or <code>dgram</code>. </p>
 <p> Unsetting the variable, or setting it to empty, &quot;0&quot; or &quot;false&quot; (case insensitive) disables trace messages. </p>
-<p> See m[blue]<code>Trace2 documentation</code>m[]<font SIZE="-2">[2]</font> for full details.</dl>
+<p> See m[blue]<code>Trace2 documentation</code>m[][2] for full details.</dl>
 <p> <code>GIT_TRACE2_EVENT</code></p>
 <dl>
 <dt>
-</dt><dd> This setting writes a JSON-based format that is suited for machine interpretation. See <code>GIT_TRACE2</code> for available trace output options and m[blue]<code>Trace2 documentation</code>m[]<font SIZE="-2">[2]</font> for full details.</dd></dl>
+</dt><dd> This setting writes a JSON-based format that is suited for machine interpretation. See <code>GIT_TRACE2</code> for available trace output options and m[blue]<code>Trace2 documentation</code>m[][2] for full details.</dd></dl>
 <p> <code>GIT_TRACE2_PERF</code></p>
 <dl>
 <dt>
-</dt><dd> In addition to the text-based messages available in <code>GIT_TRACE2</code>, this setting writes a column-based format for understanding nesting regions. See <code>GIT_TRACE2</code> for available trace output options and m[blue]<code>Trace2 documentation</code>m[]<font SIZE="-2">[2]</font> for full details.</dd></dl>
+</dt><dd> In addition to the text-based messages available in <code>GIT_TRACE2</code>, this setting writes a column-based format for understanding nesting regions. See <code>GIT_TRACE2</code> for available trace output options and m[blue]<code>Trace2 documentation</code>m[][2] for full details.</dd></dl>
 <p> <code>GIT_TRACE_REDACT</code></p>
 <dl>
 <dt>
@@ -1200,7 +1200,7 @@ path old-file old-hex old-mode new-file new-hex new-mode
 <dt>
 </dt><dd> If set to <code>yes</code>, print an ellipsis following an (abbreviated) SHA-1 value. This affects indications of detached HEADs (<code><a href="/docs/linux/man/1-git-checkout/">git-checkout</a></code>(1)) and the raw diff output (<code><a href="/docs/linux/man/1-git-diff/">git-diff</a></code>(1)). Printing an ellipsis in the cases mentioned is no longer considered adequate and support for it is likely to be removed in the foreseeable future (along with the variable).</dd></dl>
 <h2>DISCUSSION</h2>
-<p> More detail on the following is available from the m[blue]<code>Git concepts chapter of the user-manual</code>m[]<font SIZE="-2">[3]</font> and <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7). </p>
+<p> More detail on the following is available from the m[blue]<code>Git concepts chapter of the user-manual</code>m[][3] and <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7). </p>
 <p> A Git project normally consists of a working directory with a &quot;.git&quot; subdirectory at the top level. The .git directory contains, among other things, a compressed object database representing the complete history of the project, an &quot;index&quot; file which links that history to the current contents of the working tree, and named pointers into that history such as tags and branch heads. </p>
 <p> The object database contains objects of three main types: blobs, which hold file data; trees, which point to blobs and other trees to build up directory hierarchies; and commits, which each reference a single tree and some number of parent commits. </p>
 <p> The commit, equivalent to what other systems call a &quot;changeset&quot; or &quot;version&quot;, represents a step in the project&#8217;s history, and each parent represents an immediately preceding step. Commits with more than one parent represent merges of independent lines of development. </p>
@@ -1211,19 +1211,19 @@ path old-file old-hex old-mode new-file new-hex new-mode
 <p> The index is also capable of storing multiple entries (called &quot;stages&quot;) for a given pathname. These stages are used to hold the various unmerged version of a file when a merge is in progress.</p>
 <h2>FURTHER DOCUMENTATION</h2>
 <p> See the references in the &quot;description&quot; section to get started using Git. The following is probably more detail than necessary for a first-time user. </p>
-<p> The m[blue]<code>Git concepts chapter of the user-manual</code>m[]<font SIZE="-2">[3]</font> and <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7) both provide introductions to the underlying Git architecture. </p>
+<p> The m[blue]<code>Git concepts chapter of the user-manual</code>m[][3] and <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7) both provide introductions to the underlying Git architecture. </p>
 <p> See <code><a href="/docs/linux/man/7-gitworkflows/">gitworkflows</a></code>(7) for an overview of recommended workflows. </p>
-<p> See also the m[blue]<code>howto</code>m[]<font SIZE="-2">[4]</font> documents for some useful examples. </p>
-<p> The internals are documented in the m[blue]<code>Git API documentation</code>m[]<font SIZE="-2">[5]</font>. </p>
+<p> See also the m[blue]<code>howto</code>m[][4] documents for some useful examples. </p>
+<p> The internals are documented in the m[blue]<code>Git API documentation</code>m[][5]. </p>
 <p> Users migrating from CVS may also want to read <code><a href="/docs/linux/man/7-gitcvs-migration/">gitcvs-migration</a></code>(7).</p>
 <h2>AUTHORS</h2>
-<p> Git was started by Linus Torvalds, and is currently maintained by Junio C Hamano. Numerous contributions have come from the Git mailing list &lt;m[blue]<code>git [at] vger.kernel.org</code>m[]<font SIZE="-2">[6]</font>&gt;. m[blue]<code><a rel="nofollow" href="http://www.openhub.net/p/git/contributors/summary">http://www.openhub.net/p/git/contributors/summary</a></code>m[] gives you a more complete list of contributors. </p>
+<p> Git was started by Linus Torvalds, and is currently maintained by Junio C Hamano. Numerous contributions have come from the Git mailing list &lt;m[blue]<code>git [at] vger.kernel.org</code>m[][6]&gt;. m[blue]<code><a rel="nofollow" href="http://www.openhub.net/p/git/contributors/summary">http://www.openhub.net/p/git/contributors/summary</a></code>m[] gives you a more complete list of contributors. </p>
 <p> If you have a clone of git.git itself, the output of <code><a href="/docs/linux/man/1-git-shortlog/">git-shortlog</a></code>(1) and <code><a href="/docs/linux/man/1-git-blame/">git-blame</a></code>(1) can show you the authors for specific parts of the project.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to the Git mailing list &lt;m[blue]<code>git [at] vger.kernel.org</code>m[]<font SIZE="-2">[6]</font>&gt; where the development and maintenance is primarily done. You do not have to be subscribed to the list to send a message there. See the list archive at m[blue]<code><a rel="nofollow" href="https://lore.kernel.org/git">https://lore.kernel.org/git</a></code>m[] for previous bug reports and other discussions. </p>
-<p> Issues which are security relevant should be disclosed privately to the Git Security mailing list &lt;m[blue]<code>git-security [at] googlegroups.com</code>m[]<font SIZE="-2">[7]</font>&gt;.</p>
+<p> Report bugs to the Git mailing list &lt;m[blue]<code>git [at] vger.kernel.org</code>m[][6]&gt; where the development and maintenance is primarily done. You do not have to be subscribed to the list to send a message there. See the list archive at m[blue]<code><a rel="nofollow" href="https://lore.kernel.org/git">https://lore.kernel.org/git</a></code>m[] for previous bug reports and other discussions. </p>
+<p> Issues which are security relevant should be disclosed privately to the Git Security mailing list &lt;m[blue]<code>git-security [at] googlegroups.com</code>m[][7]&gt;.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7), <code><a href="/docs/linux/man/7-gittutorial-2/">gittutorial-2</a></code>(7), <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7), <code><a href="/docs/linux/man/7-gitcvs-migration/">gitcvs-migration</a></code>(7), <code><a href="/docs/linux/man/7-gitglossary/">gitglossary</a></code>(7), <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7), <code><a href="/docs/linux/man/7-gitcli/">gitcli</a></code>(7), m[blue]<code>The Git User&#8217;s Manual</code>m[]<font SIZE="-2">[1]</font>, <code><a href="/docs/linux/man/7-gitworkflows/">gitworkflows</a></code>(7)</p>
+<p> <code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7), <code><a href="/docs/linux/man/7-gittutorial-2/">gittutorial-2</a></code>(7), <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7), <code><a href="/docs/linux/man/7-gitcvs-migration/">gitcvs-migration</a></code>(7), <code><a href="/docs/linux/man/7-gitglossary/">gitglossary</a></code>(7), <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7), <code><a href="/docs/linux/man/7-gitcli/">gitcli</a></code>(7), m[blue]<code>The Git User&#8217;s Manual</code>m[][1], <code><a href="/docs/linux/man/7-gitworkflows/">gitworkflows</a></code>(7)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>NOTES</h2>

@@ -81,12 +81,12 @@ ipa[options][-c FILE][-e KEY = VAL] COMMAND[parameters]
 <dd> Display objects as they are stored in the backing store. Disables formatting and attribute labels.</dd>
 <dt><code>&#8211;rights</code></dt>
 <dd> Display effective rights on all attributes of the entry. You also have to specify <code>&#8211;all</code> for this to work. User rights are returned as Python dictionary where index is the name of an attribute and value is a unicode string composed (hence the u&#8217;xxxx&#8217; format) of letters specified below. Note that user rights are primarily used for internal purposes of CLI and WebUI. </dd>
-<p> r &#8211; read<br />
- s &#8211; search<br />
- w &#8211; write<br />
- o &#8211; obliterate (delete)<br />
- c &#8211; compare<br />
- W &#8211; self-write<br />
+<p> r &#8211; read<br/>
+ s &#8211; search<br/>
+ w &#8211; write<br/>
+ o &#8211; obliterate (delete)<br/>
+ c &#8211; compare<br/>
+ W &#8211; self-write<br/>
  O &#8211; self-obliterate </p>
 </dl>
 <h2>EXAMPLES</h2>

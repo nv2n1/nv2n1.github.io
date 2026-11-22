@@ -13,7 +13,7 @@ description: "mtools – utilities to access DOS disks in Unix."
 <p> Mtools is a collection of tools to allow Unix systems to manipulate MS-DOS files: read, write, and move around files on an MS-DOS file system (typically a floppy disk). Where reasonable, each program attempts to emulate the MS-DOS equivalent command. However, unnecessary restrictions and oddities of DOS are not emulated. For instance, it is possible to move subdirectories from one subdirectory to another. </p>
 <p> Mtools is sufficient to give access to MS-DOS file systems. For instance, commands such as <tt>mdir a:</tt> work on the <tt>a:</tt> floppy without any preliminary mounting or initialization (assuming the default <tt>&infin;/etc/mtools.confIntegral</tt> works on your machine). With mtools, one can change floppies too without unmounting and mounting. </p>
 <h2>Where to get mtools</h2>
-<p> Mtools can be found at the following places (and their mirrors):<br />
+<p> Mtools can be found at the following places (and their mirrors):<br/>
 &nbsp; </p>
 <pre>
 <code><a rel="nofollow" href="http://ftp.gnu.org/gnu/mtools/mtools-4.0.24.tar.gz">http://ftp.gnu.org/gnu/mtools/mtools-4.0.24.tar.gz</a>
@@ -22,7 +22,7 @@ description: "mtools – utilities to access DOS disks in Unix."
 <a href="ftp://ibiblio.unc.edu/pub/Linux/utils/disk-management/mtools-4.0.24.tar.gz">ftp://ibiblio.unc.edu/pub/Linux/utils/disk-management/mtools-4.0.24.tar.gz</a>
 </code></pre>
 <p>&nbsp; </p>
-<p> Before reporting a bug, make sure that it has not yet been fixed in the Alpha patches which can be found at:<br />
+<p> Before reporting a bug, make sure that it has not yet been fixed in the Alpha patches which can be found at:<br/>
 &nbsp; </p>
 <pre>
 <code><a rel="nofollow" href="http://ftp.gnu.org/gnu/mtools/">http://ftp.gnu.org/gnu/mtools/</a>
@@ -42,7 +42,7 @@ description: "mtools – utilities to access DOS disks in Unix."
 <h3>Drive letters</h3>
 <p> The meaning of the drive letters depends on the target architectures. However, on most target architectures, drive A is the first floppy drive, drive B is the second floppy drive (if available), drive J is a Jaz drive (if available), and drive Z is a Zip drive (if available). On those systems where the device name is derived from the SCSI id, the Jaz drive is assumed to be at SCSI target 4, and the Zip at SCSI target 5 (factory default settings). On Linux, both drives are assumed to be the second drive on the SCSI bus (/dev/sdb). The default settings can be changes using a configuration file (see section Configuration). </p>
 <p> The drive letter : (colon) has a special meaning. It is used to access image files which are directly specified on the command line using the <tt>-i</tt> options. </p>
-<p> Example:<br />
+<p> Example:<br/>
 &nbsp; </p>
 <pre>
 <code> mcopy -i my-image-file.bin ::file1 ::file2 .
@@ -50,7 +50,7 @@ description: "mtools – utilities to access DOS disks in Unix."
 <p>&nbsp; </p>
 <p> This copies <tt>file1</tt> and <tt>file2</tt> from the image file (<tt>my-image-file.bin</tt>) to the <tt>/tmp</tt> directory. </p>
 <p> You can also supply an offset within the image file by including <tt>@@</tt><i>offset</i> into the file name. </p>
-<p> Example:<br />
+<p> Example:<br/>
 &nbsp; </p>
 <pre>
 <code> mcopy -i my-image-file.bin@@1M ::file1 ::file2 .
@@ -60,7 +60,7 @@ description: "mtools – utilities to access DOS disks in Unix."
 <h3>Current working directory</h3>
 <p> The <tt>mcd</tt> command (&infin;mcdIntegral) is used to establish the device and the current working directory (relative to the MS-DOS file system), otherwise the default is assumed to be <tt>A:/</tt>. However, unlike MS-DOS, there is only one working directory for all drives, and not one per drive. </p>
 <h3>VFAT-style long file names</h3>
-<p> This version of mtools supports VFAT style long filenames. If a Unix filename is too long to fit in a short DOS name, it is stored as a VFAT long name, and a companion short name is generated. This short name is what you see when you examine the disk with a pre-7.0 version of DOS.<br />
+<p> This version of mtools supports VFAT style long filenames. If a Unix filename is too long to fit in a short DOS name, it is stored as a VFAT long name, and a companion short name is generated. This short name is what you see when you examine the disk with a pre-7.0 version of DOS.<br/>
 &nbsp;The following table shows some examples of short names: </p>
 <p>&nbsp; </p>
 <pre><code>
@@ -84,12 +84,12 @@ hot+cold        HOT_CO~1        illegal character
 <dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> The name is shortened so as to fit in the 8+3 limitation</dd></dl>
 <p>&nbsp;The initial Unix-style file name&nbsp;(whether long or short)&nbsp;is also called the <i>primary</i> name, and the derived short name is also called the <i>secondary</i> name. </p>
-<p>&nbsp;Example:<br />
+<p>&nbsp;Example:<br/>
 &nbsp; </p>
 <pre>
 <code> mcopy /etc/motd a:Reallylongname
 </code></pre>
-<p>&nbsp; Mtools creates a VFAT entry for Reallylongname, and uses REALLYLO as a short name. Reallylongname is the primary name, and REALLYLO is the secondary name.<br />
+<p>&nbsp; Mtools creates a VFAT entry for Reallylongname, and uses REALLYLO as a short name. Reallylongname is the primary name, and REALLYLO is the secondary name.<br/>
 &nbsp; </p>
 <pre>
 <code> mcopy /etc/motd a:motd
@@ -154,7 +154,7 @@ ab:c            ab_c-1          illegal character
 <p> The VFAT file system allows you to store the case of a filename in the attribute byte, if all letters of the filename are the same case, and if all letters of the extension are the same case too. Mtools uses this information when displaying the files, and also to generate the Unix filename when mcopying to a Unix directory. This may have unexpected results when applied to files written using an pre-7.0 version of DOS: Indeed, the old style filenames map to all upper case. This is different from the behavior of the old version of mtools which used to generate lower case Unix filenames. </p>
 <h3>high capacity formats</h3>
 <p> Mtools supports a number of formats which allow storage of more data on disk than usual. Due to different operating system abilities, these formats are not supported on all operating systems. Mtools recognizes these formats transparently where supported. </p>
-<p> In order to format these disks, you need to use an operating system specific tool. For Linux, suitable floppy tools can be found in the <tt>fdutils</tt> package at the following locations~:<br />
+<p> In order to format these disks, you need to use an operating system specific tool. For Linux, suitable floppy tools can be found in the <tt>fdutils</tt> package at the following locations~:<br/>
 &nbsp; </p>
 <pre>
 <tt><a href="ftp://www.tux.org/pub/knaff/fdutils/.">ftp://www.tux.org/pub/knaff/fdutils/.</a>

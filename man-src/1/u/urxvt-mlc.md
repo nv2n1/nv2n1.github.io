@@ -30,7 +30,7 @@ description: "urxvt-mlc – control the urxvt-mld daemon"
 <h2>ENVIRONMENT</h2>
 <p> All environment variables of the current process will be made available to the new instance, and will be interpreted as if <code>urxvt-ml</code> were started directly.</p>
 <dl>
-<dt><font SIZE="-1"><code>RXVT_SOCKET</code></font></dt>
-<dd> Both urxvt-mlc and urxvt-mld use the environment variable <i></i><font SIZE="-1"><i>RXVT_SOCKET</i></font><i></i> to create a listening socket and to contact the urxvt-mld, respectively. If the variable is missing, <i></i>$HOME<i>/.urxvt/urxvtd-&lt;nodename&gt;</i> is used. The variable must specify the absolute path of the socket to create.</dd></dl>
+<dt><code>RXVT_SOCKET</code></dt>
+<dd> Both urxvt-mlc and urxvt-mld use the environment variable <i></i><i>RXVT_SOCKET</i><i></i> to create a listening socket and to contact the urxvt-mld, respectively. If the variable is missing, <i></i>$HOME<i>/.urxvt/urxvtd-&lt;nodename&gt;</i> is used. The variable must specify the absolute path of the socket to create.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-urxvt-ml/">urxvt-ml</a>(7), <a href="/docs/linux/man/1-urxvt-mld/">urxvt-mld</a>(1) </p>

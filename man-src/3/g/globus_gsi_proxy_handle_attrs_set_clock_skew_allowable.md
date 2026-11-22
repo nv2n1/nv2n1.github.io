@@ -10,35 +10,35 @@ description: "Handle Attributes –"
 
 <p> Handle Attributes &#8211; </p>
 <h3>Typedefs</h3>
-<p> typedef struct<br />
- globus_l_gsi_proxy_handle_attrs_s * <code>globus_gsi_proxy_handle_attrs_t</code>&quot;<br />
+<p> typedef struct<br/>
+ globus_l_gsi_proxy_handle_attrs_s * <code>globus_gsi_proxy_handle_attrs_t</code>&quot;<br/>
  <i>Handle Attributes. </i></p>
 <h3>Functions</h3>
-<p> globus_result_t <code>globus_gsi_proxy_handle_attrs_init</code> (<code>globus_gsi_proxy_handle_attrs_t</code> *handle_attrs)<br />
- <i>Initialize Attributes. </i><br />
- globus_result_t <code>globus_gsi_proxy_handle_attrs_destroy</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs)<br />
- <i>Destroy attributes. </i><br />
- globus_result_t <code>globus_gsi_proxy_handle_attrs_set_keybits</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, int bits)<br />
- <i>Set Key Bits. </i><br />
- globus_result_t <code>globus_gsi_proxy_handle_attrs_get_keybits</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, int *bits)<br />
- <i>Get Key Bits. </i><br />
- globus_result_t <code>globus_gsi_proxy_handle_attrs_set_init_prime</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, int prime)<br />
- <i>Set Initial Prime Number. </i><br />
- globus_result_t <code>globus_gsi_proxy_handle_attrs_get_init_prime</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, int *prime)<br />
- <i>Get Initial Prime Number. </i><br />
- globus_result_t <code>globus_gsi_proxy_handle_attrs_set_signing_algorithm</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, const EVP_MD *algorithm)<br />
- <i>Set Signing Algorithm. </i><br />
- globus_result_t <code>globus_gsi_proxy_handle_attrs_get_signing_algorithm</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, const EVP_MD **algorithm)<br />
- <i>Get Signing Algorithm. </i><br />
- globus_result_t <code>globus_gsi_proxy_handle_attrs_set_clock_skew_allowable</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, int skew)<br />
- <i>Set Clock Skew Allowable. </i><br />
- globus_result_t <code>globus_gsi_proxy_handle_attrs_get_clock_skew_allowable</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, int *skew)<br />
- <i>Get Clock Skew Allowable. </i><br />
- globus_result_t <code>globus_gsi_proxy_handle_attrs_get_key_gen_callback</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, void(**callback)(int, int, void *))<br />
- <i>Get Key Gen Callback. </i><br />
- globus_result_t <code>globus_gsi_proxy_handle_attrs_set_key_gen_callback</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, void(*callback)(int, int, void *))<br />
- <i>Set Key Gen Callback. </i><br />
- globus_result_t <code>globus_gsi_proxy_handle_attrs_copy</code> (<code>globus_gsi_proxy_handle_attrs_t</code> a, <code>globus_gsi_proxy_handle_attrs_t</code> *b)<br />
+<p> globus_result_t <code>globus_gsi_proxy_handle_attrs_init</code> (<code>globus_gsi_proxy_handle_attrs_t</code> *handle_attrs)<br/>
+ <i>Initialize Attributes. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_handle_attrs_destroy</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs)<br/>
+ <i>Destroy attributes. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_handle_attrs_set_keybits</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, int bits)<br/>
+ <i>Set Key Bits. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_handle_attrs_get_keybits</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, int *bits)<br/>
+ <i>Get Key Bits. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_handle_attrs_set_init_prime</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, int prime)<br/>
+ <i>Set Initial Prime Number. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_handle_attrs_get_init_prime</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, int *prime)<br/>
+ <i>Get Initial Prime Number. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_handle_attrs_set_signing_algorithm</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, const EVP_MD *algorithm)<br/>
+ <i>Set Signing Algorithm. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_handle_attrs_get_signing_algorithm</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, const EVP_MD **algorithm)<br/>
+ <i>Get Signing Algorithm. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_handle_attrs_set_clock_skew_allowable</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, int skew)<br/>
+ <i>Set Clock Skew Allowable. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_handle_attrs_get_clock_skew_allowable</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, int *skew)<br/>
+ <i>Get Clock Skew Allowable. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_handle_attrs_get_key_gen_callback</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, void(**callback)(int, int, void *))<br/>
+ <i>Get Key Gen Callback. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_handle_attrs_set_key_gen_callback</code> (<code>globus_gsi_proxy_handle_attrs_t</code> handle_attrs, void(*callback)(int, int, void *))<br/>
+ <i>Set Key Gen Callback. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_handle_attrs_copy</code> (<code>globus_gsi_proxy_handle_attrs_t</code> a, <code>globus_gsi_proxy_handle_attrs_t</code> *b)<br/>
  <i>Copy Attributes. </i></p>
 <h2>Detailed Description</h2>
 <p> Handle attributes are used to control additional features of the GSI Proxy handle. These features are operation independent. </p>
@@ -60,7 +60,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>a</i> The handle attributes to copy<br />
+</dt><dd> <i>a</i> The handle attributes to copy<br/>
  <i>b</i> The copy</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -85,7 +85,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> The handle_attrs to get the clock skew from<br />
+</dt><dd> <i>handle_attrs</i> The handle_attrs to get the clock skew from<br/>
  <i>skew</i> The allowable clock skew (in seconds) to get from the proxy certificate request. This value gets set by the function, so it needs to be a pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -96,7 +96,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> The attributes to get the initial prime number from<br />
+</dt><dd> <i>handle_attrs</i> The attributes to get the initial prime number from<br/>
  <i>prime</i> The initial prime number taken from the attributes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -107,7 +107,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> The handle_attrs to get the callback from<br />
+</dt><dd> <i>handle_attrs</i> The handle_attrs to get the callback from<br/>
  <i>callback</i> The callback from the handle attributes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -118,7 +118,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> the attributes to get the key length from<br />
+</dt><dd> <i>handle_attrs</i> the attributes to get the key length from<br/>
  <i>bits</i> the length of the key pair in bits</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -129,7 +129,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> The proxy handle_attrs to get the signing algorithm of<br />
+</dt><dd> <i>handle_attrs</i> The proxy handle_attrs to get the signing algorithm of<br/>
  <i>algorithm</i> Parameter used to return the signing algorithm used</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -156,7 +156,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> the handle_attrs containing the clock skew to be set<br />
+</dt><dd> <i>handle_attrs</i> the handle_attrs containing the clock skew to be set<br/>
  <i>skew</i> the amount to skew by (in seconds)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -167,7 +167,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> The attributes to set<br />
+</dt><dd> <i>handle_attrs</i> The attributes to set<br/>
  <i>prime</i> The prime number to set it to This value needs to be a prime number</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -178,7 +178,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> The handle_attrs to get the callback from<br />
+</dt><dd> <i>handle_attrs</i> The handle_attrs to get the callback from<br/>
  <i>callback</i> The callback from the handle attributes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -189,7 +189,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> the attributes to set<br />
+</dt><dd> <i>handle_attrs</i> the attributes to set<br/>
  <i>bits</i> the length to set it to (usually 1024)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -200,7 +200,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> The proxy handle to set the signing algorithm of<br />
+</dt><dd> <i>handle_attrs</i> The proxy handle to set the signing algorithm of<br/>
  <i>algorithm</i> The signing algorithm to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

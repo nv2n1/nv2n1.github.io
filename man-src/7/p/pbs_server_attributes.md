@@ -13,23 +13,23 @@ description: "pbs_server_attributes – pbs server attributes"
 <dl>
 <dd><i></dd>
 <dl>
-<dt>accounting_keep_days</i><font SIZE="+1"><i></i></dt>
+<dt>accounting_keep_days</i><i></i></dt>
 <dd>This defines the number of days that accounting files will be kept. Default value: unset &#8211; pbs_server will never delete accounting files Format: integer <i></dd>
-<dt>acl_group_sloppy</i></font><font SIZE="+2"><i></i></dt>
+<dt>acl_group_sloppy</i><i></i></dt>
 <dd>This is a default value for the queue attribute of the same name. Format: boolean, &quot;TRUE&quot;, &quot;True&quot;, &quot;true&quot;, &quot;Y&quot;, &quot;y&quot;, &quot;1&quot;, &quot;FALSE&quot;, &quot;False&quot;, &quot;false&quot;, &quot;N&quot;, &quot;n&quot;, &quot;0&quot;; default value: false = disabled. <i></dd>
-<dt>acl_host_enable</i></font><font SIZE="+3"><i></i></dt>
+<dt>acl_host_enable</i><i></i></dt>
 <dd>Attribute which when true directs the server to use the <i>acl_hosts</i> access control lists. Requires full manager privilege to set or alter. Format: boolean, &quot;TRUE&quot;, &quot;True&quot;, &quot;true&quot;, &quot;Y&quot;, &quot;y&quot;, &quot;1&quot;, &quot;FALSE&quot;, &quot;False&quot;, &quot;false&quot;, &quot;N&quot;, &quot;n&quot;, &quot;0&quot;; default value: false = disabled. <i></dd>
-<dt>acl_hosts</i></font><font SIZE="+4"><i></i></dt>
+<dt>acl_hosts</i><i></i></dt>
 <dd>List of hosts which may request services from this server. This list contains the network name of the hosts. Local requests, i.e. from the server&#8217;s host itself, are aways accepted even if the host is not included in the list. See section 10.1, Authorization, in the PBS External Reference Specification. Requires full manager privilege to set or alter. Format: &quot;[+|-]hostname.domain[,&#8230;]&quot;; default value: all hosts. <i></dd>
-<dt>acl_logic_or</i></font><font SIZE="+5"><i></i></dt>
+<dt>acl_logic_or</i><i></i></dt>
 <dd>This is a default value for the queue attribute of the same name. Format: boolean, &quot;TRUE&quot;, &quot;True&quot;, &quot;true&quot;, &quot;Y&quot;, &quot;y&quot;, &quot;1&quot;, &quot;FALSE&quot;, &quot;False&quot;, &quot;false&quot;, &quot;N&quot;, &quot;n&quot;, &quot;0&quot;; default value: false = disabled. <i></dd>
-<dt>acl_user_enable</i></font><font SIZE="+6"><i></i></dt>
+<dt>acl_user_enable</i><i></i></dt>
 <dd>Attribute which when true directs the server to use the server level <i>acl_users</i> access list. Requires full manager privilege to set or alter. Format: boolean (see acl_group_enable); default value: disabled. <i></dd>
-<dt>acl_users</i></font><font SIZE="+7"><i></i></dt>
+<dt>acl_users</i><i></i></dt>
 <dd>List of users allowed or denied the ability to make any requests of this server. See section 10.1, Authorization, in the PBS External Reference Specification. If acl_user_enable is set to true, only users listed in acl_users may submit to or execute jobs in the queue. Requires full manager privilege to set or alter. Format: &quot;[+|-]user[@host][,&#8230;]&quot;; default value: all users allowed. <i></dd>
-<dt>acl_roots</i></font><font SIZE="+8"><i></i></dt>
+<dt>acl_roots</i><i></i></dt>
 <dd>List of super users who may submit to and execute jobs at this server. If the job execution id would be zero (0), then the job owner, root [at] host, must be listed in this access control list or the job is rejected. Format: &quot;[+|-]user[@host][,&#8230;]&quot;; default value: no root jobs allowed. <i></dd>
-<dt>allow_node_submit</i></font><font SIZE="+9"><i></i></dt>
+<dt>allow_node_submit</i><i></i></dt>
 <dd>Allow job submissions from compute nodes regardless of ruserok(). Requires full manager privilege to set or alter. Format: boolean; default value: disabled. <i></dd>
 <dt>allow_proxy_user</i></dt>
 <dd>Specifies users can proxy from one user to another. Proxy requests will be either validated by ruserok() or by the scheduler. Format: boolean; default value: false. <i></dd>
@@ -60,14 +60,14 @@ description: "pbs_server_attributes – pbs server attributes"
 <dt>job_start_timeout</i></dt>
 <dd>Specifies the pbs_server to pbs_mom TCP socket timeout in seconds that is used when the pbs_server sends a job start to the pbs_mom. It is useful when the mom has extra overhead involved in starting jobs. If not specified then the tcp_timeout value is used. <i></dd>
 <dt>job_stat_rate</i></dt>
-<dd>Moderates how often job stat requests will be issued from pbs_server to the MOM daemons. If poll_jobs is unset or false, then all jobs that haven&#8217;t been updated in job_stat_rate seconds will trigger a stat request. If poll_jobs is true, then all jobs will be updated every job_stat_rate.<br />
+<dd>Moderates how often job stat requests will be issued from pbs_server to the MOM daemons. If poll_jobs is unset or false, then all jobs that haven&#8217;t been updated in job_stat_rate seconds will trigger a stat request. If poll_jobs is true, then all jobs will be updated every job_stat_rate.<br/>
 &nbsp;<wbr>(see poll_jobs)&nbsp;<wbr>&nbsp;<wbr>On active clusters, 60 or 120 might be reasonable. Default value: 45 seconds (PBS_RESTAT_JOB in server_limits.h) Minimum value: 4 seconds (PBS_JOBSTAT_MIN in server_limits.h) <i></dd>
 <dt>keep_completed</i></dt>
 <dd>Number of seconds to retain completed jobs in the C state. This is overridden by the execution queue attribute of the same name. Format: integer; default value: 0. <i></dd>
 <dt>kill_delay</i></dt>
 <dd>The amount of the time delay between the sending of SIGTERM and SIGKILL when a qdel command is issued against a running job. This is overridden by the execution queue attribute of the same name. Format: integer seconds; default value: 2 seconds. <i></dd>
 <dt>lock_file</i></dt>
-<dd>Specifies the name and location of the lock file used to determine which high availability server should be active.<br />
+<dd>Specifies the name and location of the lock file used to determine which high availability server should be active.<br/>
  If a full path is specified, it is used verbatim by TORQUE. If a relative path is specified, TORQUE will prefix it with $TORQUE_HOME/server_priv. Format: string; default value: $TORQUE_HOME/server_priv/server.lock <i></dd>
 <dt>lock_file_update_time</i></dt>
 <dd>Specifies how often (in seconds) the thread will update the lockfile. (for threaded high availability) Format: integer; default value: 3 <i></dd>
@@ -183,8 +183,8 @@ Exec host: %h
 <dt>np_default</i></dt>
 <dd>np_default allows the administrator to unify the number of processors (np) on all nodes. The value can be dynamically changed. A value of 0 tells pbs_server to use the value of np found in the nodes file. The maximum value is 32767. Format: integer; default value: not used. <i></dd>
 <dt>operators</i></dt>
-<dd>List of users granted batch operator privileges. Format of the list is identical with <i> </i></font><font SIZE="+8"><i> above. Requires full manager privilege to set or alter. Default value: root on the local host.</dd>
-<dt>owner_purge</i></font><font SIZE="+9"><i></i></dt>
+<dd>List of users granted batch operator privileges. Format of the list is identical with <i> </i><i> above. Requires full manager privilege to set or alter. Default value: root on the local host.</dd>
+<dt>owner_purge</i><i></i></dt>
 <dd>Allows job owners to forcibly purge their own jobs from the server. This short-circuits the normal flow of events and is hightly discouraged. Default value: unset <i></dd>
 <dt>poll_jobs</i></dt>
 <dd>Controls how pbs_server will send job status requests to MOMs. When unset or false, statjob requests from clients (ie: qstat(1B) or the scheduler) may trigger job status requests to MOMs and and must wait until the MOMs have replied; this is suitable for small to medium sized clusters. When set to true, pbs_server will send periodic job status requests; this is suitable for busy clusters with lots of jobs, lots of clients, qstat(1B) is too slow, or your scheduler times out. (see job_stat_rate) Default value: TRUE <i></dd>
@@ -201,7 +201,7 @@ Exec host: %h
 <dt>sched_version</i></dt>
 <dd>A string specifying the scheduler version. Schedulers should check this string when starting and not become active if the wrong string is found. This is ignored by pbs_server. <i></dd>
 <dt>scheduler_iteration</i></dt>
-<dd>The time, in seconds, between iterations of attempts by the batch server to schedule jobs. On each iteration, the server examines the available resources and runnable jobs to see if a job can be initiated. This examination also occurs whenever a running batch job terminates or a new job is placed in the queued state in an execution queue. Format: integer seconds; default value: 10 minutes, set by </font><font SIZE="+8"><code>{PBS_SCHEDULE_CYCLE}</code></font><font SIZE="+9"> in server_limits.h. <i></dd>
+<dd>The time, in seconds, between iterations of attempts by the batch server to schedule jobs. On each iteration, the server examines the available resources and runnable jobs to see if a job can be initiated. This examination also occurs whenever a running batch job terminates or a new job is placed in the queued state in an execution queue. Format: integer seconds; default value: 10 minutes, set by <code>{PBS_SCHEDULE_CYCLE}</code> in server_limits.h. <i></dd>
 <dt>scheduling</i></dt>
 <dd>Controls if the server will request job scheduling by the PBS job scheduler. If true, the scheduler will be called as required; if false, the scheduler will not be called and no job will be placed into execution unless the server is directed to do so by an operator or administrator. Setting or resetting this attribute to true results in an immediate call to the scheduler. For more information, see the section <code>Scheduler &#8211; Server Interaction</code> in the PBS Administrator Guide. Format: boolean (see acl_host_enable); default value: value of -a option when server is invoked, if -a is not specified, the value is recovered from the prior server run. If it has never been set, the value is &quot;false&quot;. <i></dd>
 <dt>server_name</i></dt>
@@ -243,6 +243,6 @@ Exec host: %h
 <dt>total_jobs</i></dt>
 <dd>The total number of jobs currently managed by the server.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h2>See Also</h2>
 <p>the PBS ERS, qmgr(1B), pbs_resources(7B) </p>

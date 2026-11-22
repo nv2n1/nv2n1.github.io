@@ -20,8 +20,8 @@ ssize_t vmsplice(int fd, const struct iovec *iov,
 <h2>DESCRIPTION</h2>
 <p> If <i>fd</i> is opened for writing, the <code>vmsplice</code>() system call maps <i>nr_segs</i> ranges of user memory described by <i>iov</i> into a pipe. If <i>fd</i> is opened for reading, the <code>vmsplice</code>() system call fills <i>nr_segs</i> ranges of user memory described by <i>iov</i> from a pipe. The file descriptor <i>fd</i> must refer to a pipe. </p>
 <p> The pointer <i>iov</i> points to an array of <i>iovec</i> structures as defined in <i>&lt;sys/uio.h&gt;</i>: </p>
-<p> struct iovec {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;*iov_base;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Starting address&nbsp;*/<br />
+<p> struct iovec {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;*iov_base;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Starting address&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t iov_len;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of bytes&nbsp;*/ }; </p>
 <p> The <i>flags</i> argument is a bit mask that is composed by ORing together zero or more of the following values:</p>
 <dl>

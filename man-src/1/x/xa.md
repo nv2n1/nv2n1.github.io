@@ -213,7 +213,7 @@ description: "xa – 6502/R65C02/65816 cross-assembler"
 <p> For reasons of memory and complexity, the full breadth of the <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) syntax is not fully supported. In particular, macro definitions may not be forward-defined (i.e., a macro definition can only reference a previously defined macro definition), except for macro functions, where recursive evaluation is supported; e.g., to <code>#define WW AA</code> , <code>AA</code> must have already been defined. Certain other directives are not supported, nor are most standard pre-defined macros, and there are other limits on evaluation and line length. Because the maintainers of <code>xa</code> recognize that some files will require more complicated preparsing than the built-in preprocessor can supply, the preprocessor will accept <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1)-style line/filename/flags output. When these lines are seen in the input file, <code>xa</code> will treat them as <code>cc</code> would, except that flags are ignored. <code>xa</code> does not accept files on standard input for parsing reasons, so you should dump your <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) output to an intermediate temporary file, such as</p>
 <dl>
 <dt>
-</dt><dd> <code>cc -E test.s &gt; test.xa</code><br />
+</dt><dd> <code>cc -E test.s &gt; test.xa</code><br/>
  <code>xa test.xa</code></dd></dl>
 <p> No special arguments need to be passed to <code>xa</code>; the presence of <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) output is detected automatically. </p>
 <p> Note that passing your file through <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) may interfere with <code>xa</code>&#8216;s own preprocessor directives. In this case, to mask directives from <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1), use the <code>-p</code> option to specify an alternative character instead of <code>#</code>, such as the tilde (e.g., <code>-p&#8217;~&#8217;</code> ). With this option and argument specified, then instead of <code>#include</code>, for example, you can also use <code>~include</code>, in addition to <code>#include </code> (which will also still be accepted by the <code>xa</code> preprocessor, assuming any survive <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1)). Any character can be used, although frankly pathologic choices may lead to amusing and frustrating glitches during parsing. You can also use this option to defer preprocessor directives that <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) may interpret too early until the file actually gets to <code>xa</code> itself for processing. </p>
@@ -247,12 +247,12 @@ description: "xa – 6502/R65C02/65816 cross-assembler"
 <p> <code>#iflused</code> and <code>#ifldef</code> are useful for building up a library based on labels. For example, you might use something like this in your library&#8217;s code:</p>
 <dl>
 <dt>
-</dt><dd> <code>#iflused label</code><br />
- <code>#ifldef label</code><br />
- <code>#echo label already defined, library function label cannot be inserted</code><br />
- <code>#else</code><br />
- <code>label /* your code */</code><br />
- <code>#endif</code><br />
+</dt><dd> <code>#iflused label</code><br/>
+ <code>#ifldef label</code><br/>
+ <code>#echo label already defined, library function label cannot be inserted</code><br/>
+ <code>#else</code><br/>
+ <code>label /* your code */</code><br/>
+ <code>#endif</code><br/>
  <code>#endif</code> </dd>
 </dl>
 <h2>ENVIRONMENT</h2>

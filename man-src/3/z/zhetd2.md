@@ -10,7 +10,7 @@ description: "zhetd2.f –"
 <p>zhetd2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhetd2</code> (UPLO, N, A, LDA, D, E, TAU, INFO)<br />
+<p>subroutine <code>zhetd2</code> (UPLO, N, A, LDA, D, E, TAU, INFO)<br/>
  <i></i><code>ZHETD2</code> reduces a Hermitian matrix to real symmetric tridiagonal form by an unitary similarity transformation (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhetd2 (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, double precision, dimension( * )D, double precision, dimension( * )E, complex*16, dimension( * )TAU, integerINFO)</h3>

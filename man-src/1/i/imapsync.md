@@ -23,7 +23,7 @@ To synchronize the source imap account
 
 <h2>REQUIRED ARGUMENTS</h2>
 
- The required argmuments are the six values, three on each sides, needed to login into the <font SIZE="-1">IMAP</font> servers, a host, a username, and a password, two times.
+ The required argmuments are the six values, three on each sides, needed to login into the IMAP servers, a host, a username, and a password, two times.
 
 <h2>INSTALL</h2>
 
@@ -315,7 +315,7 @@ To synchronize the source imap account
   imapsync
 </pre> 
 
- or read the previous section named <font SIZE="-1">USAGE,</font> 
+ or read the previous section named USAGE, 
 
  or read <a rel="nofollow" HREF="http://imapsync.lamiral.info/OPTIONS">http://imapsync.lamiral.info/OPTIONS</a>
 
@@ -339,13 +339,13 @@ imapsync-- host1 imap.src.fr-- user1 buddy-- password1 secret1-- host2 imap.dest
 
  You can use --passfile1 instead of --password1 to give the password since it is safer. With --password1 option any user on your host can see the password by using the 'ps auxwwww' command. Using a variable (like <tt>$PASSWORD1</tt>) is also dangerous because of the 'ps auxwwwwe' command. So, saving the password in a well protected file (600 or rw-------) is the best solution. 
 
- imasync is not totally protected against sniffers on the network since passwords may be transferred in plain text if <font SIZE="-1">CRAM-MD5</font> is not supported by your imap servers. Use --ssl1 (or --tls1) and --ssl2 (or --tls2) to enable encryption on host1 and host2. 
+ imasync is not totally protected against sniffers on the network since passwords may be transferred in plain text if CRAM-MD5 is not supported by your imap servers. Use --ssl1 (or --tls1) and --ssl2 (or --tls2) to enable encryption on host1 and host2. 
 
- You may authenticate as one user (typically an admin user), but be authorized as someone else, which means you don't need to know every user's personal password. Specify --authuser1 ``adminuser'' to enable this on host1. In this case, --authmech1 <font SIZE="-1">PLAIN</font> will be used by default since it is the only way to go for now. So don't use --authmech1 <font SIZE="-1">SOMETHING</font> with --authuser1 ``adminuser'', it will not work. Same behavior with the --authuser2 option. Authenticate with an admin account must be supported by your imap server to work with imapsync. 
+ You may authenticate as one user (typically an admin user), but be authorized as someone else, which means you don't need to know every user's personal password. Specify --authuser1 ``adminuser'' to enable this on host1. In this case, --authmech1 PLAIN will be used by default since it is the only way to go for now. So don't use --authmech1 SOMETHING with --authuser1 ``adminuser'', it will not work. Same behavior with the --authuser2 option. Authenticate with an admin account must be supported by your imap server to work with imapsync. 
 
- When working on Sun/iPlanet/Netscape <font SIZE="-1">IMAP</font> servers you must use --proxyauth1 to enable administrative user to masquerade as another user. Can also be used on destination server with --proxyauth2 
+ When working on Sun/iPlanet/Netscape IMAP servers you must use --proxyauth1 to enable administrative user to masquerade as another user. Can also be used on destination server with --proxyauth2 
 
- You can authenticate with <font SIZE="-1">OAUTH</font> when transfering from Google Apps. The consumer key will be the domain part of the --user, and the --password will be used as the consumer secret. It does not work with Google Apps free edition.
+ You can authenticate with OAUTH when transfering from Google Apps. The consumer key will be the domain part of the --user, and the --password will be used as the consumer secret. It does not work with Google Apps free edition.
 
 <h2>EXIT STATUS</h2>
 
@@ -361,7 +361,7 @@ imapsync-- host1 imap.src.fr-- user1 buddy-- password1 secret1-- host2 imap.dest
 
 <h2>LICENSE AND COPYRIGHT</h2>
 
- imapsync is free, open, public but not always gratis software cover by the <font SIZE="-1">NOLIMIT</font> Public License. See the <font SIZE="-1">LICENSE</font> file included in the distribution or just read this simple sentence as it is the licence text: 
+ imapsync is free, open, public but not always gratis software cover by the NOLIMIT Public License. See the LICENSE file included in the distribution or just read this simple sentence as it is the licence text: 
 
  <pre>
  &quot;No limit to do anything with this work and this license.&quot;
@@ -391,11 +391,11 @@ imapsync-- host1 imap.src.fr-- user1 buddy-- password1 secret1-- host2 imap.dest
 
 <h2>AUTHOR</h2>
 
- Gilles <font SIZE="-1">LAMIRAL</font> &lt;gilles.lamiral [at] laposte.net&gt; 
+ Gilles LAMIRAL &lt;gilles.lamiral [at] laposte.net&gt; 
 
  Feedback good or bad is very often welcome. 
 
- Gilles <font SIZE="-1">LAMIRAL</font> earns his living by writing, installing, configuring and teaching free, open and often gratis softwares. It used to be ``always gratis'' but now it is ``often'' because imapsync is sold by its author, a good way to stay maintening and supporting free open public softwares (see the license) over decades.
+ Gilles LAMIRAL earns his living by writing, installing, configuring and teaching free, open and often gratis softwares. It used to be ``always gratis'' but now it is ``often'' because imapsync is sold by its author, a good way to stay maintening and supporting free open public softwares (see the license) over decades.
 
 <h2>BUGS AND LIMITATIONS</h2>
 
@@ -403,7 +403,7 @@ imapsync-- host1 imap.src.fr-- user1 buddy-- password1 secret1-- host2 imap.dest
 
  Report any bugs or feature requests to the public mailing-list or to the author. 
 
- Before reporting bugs, read the FAQs, the <font SIZE="-1">README</font> and the <font SIZE="-1">TODO</font> files. <a rel="nofollow" HREF="http://imapsync.lamiral.info/">http://imapsync.lamiral.info/</a> 
+ Before reporting bugs, read the FAQs, the README and the TODO files. <a rel="nofollow" HREF="http://imapsync.lamiral.info/">http://imapsync.lamiral.info/</a> 
 
  Upgrade to last imapsync release, maybe the bug is already fixed. 
 
@@ -471,7 +471,7 @@ FOR / F "tokens=1,2,3,4 delims=; eol=#" % % G IN(file.txt) DO imapsync ^
 
 <h2>HACKING</h2>
 
- Feel free to hack imapsync as the <font SIZE="-1">NOLIMIT</font> license permits it.
+ Feel free to hack imapsync as the NOLIMIT license permits it.
 
 <h2>LINKS</h2>
 

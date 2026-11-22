@@ -81,12 +81,12 @@ description: "nload – displays the current network usage"
 </dl>
 <h2>VERSION</h2>
 <p> This manual page describes version 0.7.4 of <code>nload</code>. </p>
-<p> For updates, look at the nload homepage:<br />
+<p> For updates, look at the nload homepage:<br/>
  <code><a rel="nofollow" href="http://www.roland-riegel.de/nload/">http://www.roland-riegel.de/nload/</a></code> </p>
 <h2>HELP</h2>
-<p> If you need help, either contact me directly (see below) or write to the nload-user mailing list at<br />
- <code>nload-user [at] lists.sourceforge.net</code><br />
- after having subscribed at<br />
+<p> If you need help, either contact me directly (see below) or write to the nload-user mailing list at<br/>
+ <code>nload-user [at] lists.sourceforge.net</code><br/>
+ after having subscribed at<br/>
  <code><a rel="nofollow" href="https://lists.sourceforge.net/lists/listinfo/nload-user">https://lists.sourceforge.net/lists/listinfo/nload-user</a></code>. </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2001 &#8211; 2012 Roland Riegel &lt;feedback [at] roland-riegel.de&gt; </p>

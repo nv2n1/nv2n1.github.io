@@ -12,35 +12,35 @@ description: "include/antlr3commontoken.h –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt; </p>
 <h3>Data Structures</h3>
-<p>struct <code>ANTLR3_COMMON_TOKEN_struct</code><br />
- <i>The definition of an ANTLR3 common token structure, which all implementations of a token stream should provide, installing any further structures in the custom pointer element of this structure. </i><br />
- struct <code>ANTLR3_TOKEN_FACTORY_struct</code><br />
+<p>struct <code>ANTLR3_COMMON_TOKEN_struct</code><br/>
+ <i>The definition of an ANTLR3 common token structure, which all implementations of a token stream should provide, installing any further structures in the custom pointer element of this structure. </i><br/>
+ struct <code>ANTLR3_TOKEN_FACTORY_struct</code><br/>
  <i>ANTLR3 Token factory interface to create lots of tokens efficiently rather than creating and freeing lots of little bits of memory. </i></p>
 <h3>Defines</h3>
 <p>#define <code>ANTLR3_EOR_TOKEN_TYPE</code> 1 </p>
-<p> #define <code>ANTLR3_FACTORY_POOL_SIZE</code> 1024<br />
- <i>How many tokens to allocate at once in the token factory. </i><br />
- #define <code>ANTLR3_MIN_TOKEN_TYPE</code> ANTLR3_TOKEN_UP + 1<br />
- <i>First token that can be used by users/generated code. </i><br />
+<p> #define <code>ANTLR3_FACTORY_POOL_SIZE</code> 1024<br/>
+ <i>How many tokens to allocate at once in the token factory. </i><br/>
+ #define <code>ANTLR3_MIN_TOKEN_TYPE</code> ANTLR3_TOKEN_UP + 1<br/>
+ <i>First token that can be used by users/generated code. </i><br/>
  #define <code>ANTLR3_TEXT_CHARP</code> 1 </p>
 <p> #define <code>ANTLR3_TEXT_NONE</code> 0 </p>
 <p> #define <code>ANTLR3_TEXT_STRING</code> 2 </p>
-<p> #define <code>ANTLR3_TOKEN_DEFAULT_CHANNEL</code> 0<br />
- <i>Default channel for a token. </i><br />
- #define <code>ANTLR3_TOKEN_DOWN</code> 2<br />
- <i>Imaginary token type to cause a traversal of child nodes in a tree parser. </i><br />
- #define <code>ANTLR3_TOKEN_EOF</code> (ANTLR3_CHARSTREAM_EOF &amp; 0xFFFFFFFF)<br />
- <i>End of file token. </i><br />
- #define <code>ANTLR3_TOKEN_INVALID</code> 0<br />
- <i>Indicator of an invalid token. </i><br />
- #define <code>ANTLR3_TOKEN_UP</code> 3<br />
- <i>Imaginary token type to signal the end of a stream of child nodes. </i><br />
- #define <code>HIDDEN</code> 99<br />
+<p> #define <code>ANTLR3_TOKEN_DEFAULT_CHANNEL</code> 0<br/>
+ <i>Default channel for a token. </i><br/>
+ #define <code>ANTLR3_TOKEN_DOWN</code> 2<br/>
+ <i>Imaginary token type to cause a traversal of child nodes in a tree parser. </i><br/>
+ #define <code>ANTLR3_TOKEN_EOF</code> (ANTLR3_CHARSTREAM_EOF &amp; 0xFFFFFFFF)<br/>
+ <i>End of file token. </i><br/>
+ #define <code>ANTLR3_TOKEN_INVALID</code> 0<br/>
+ <i>Indicator of an invalid token. </i><br/>
+ #define <code>ANTLR3_TOKEN_UP</code> 3<br/>
+ <i>Imaginary token type to signal the end of a stream of child nodes. </i><br/>
+ #define <code>HIDDEN</code> 99<br/>
  <i>Reserved channel number for a HIDDEN token &#8211; a token that is hidden from the parser. </i></p>
 <h3>Typedefs</h3>
-<p>typedef struct <code>ANTLR3_COMMON_TOKEN_struct</code> <code>ANTLR3_COMMON_TOKEN</code><br />
- <i>The definition of an ANTLR3 common token structure, which all implementations of a token stream should provide, installing any further structures in the custom pointer element of this structure. </i><br />
- typedef struct <code>ANTLR3_TOKEN_FACTORY_struct</code> <code>ANTLR3_TOKEN_FACTORY</code><br />
+<p>typedef struct <code>ANTLR3_COMMON_TOKEN_struct</code> <code>ANTLR3_COMMON_TOKEN</code><br/>
+ <i>The definition of an ANTLR3 common token structure, which all implementations of a token stream should provide, installing any further structures in the custom pointer element of this structure. </i><br/>
+ typedef struct <code>ANTLR3_TOKEN_FACTORY_struct</code> <code>ANTLR3_TOKEN_FACTORY</code><br/>
  <i>ANTLR3 Token factory interface to create lots of tokens efficiently rather than creating and freeing lots of little bits of memory. </i></p>
 <h2>Detailed Description</h2>
 <p>Defines the interface for a common token. </p>

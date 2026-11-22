@@ -10,7 +10,7 @@ description: "zlargv.f –"
 <p>zlargv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlargv</code> (N, X, INCX, Y, INCY, C, INCC)<br />
+<p>subroutine <code>zlargv</code> (N, X, INCX, Y, INCY, C, INCC)<br/>
  <i></i><code>ZLARGV</code> generates a vector of plane rotations with real cosines and complex sines.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlargv (integerN, complex*16, dimension( * )X, integerINCX, complex*16, dimension( * )Y, integerINCY, double precision, dimension( * )C, integerINCC)</h3>

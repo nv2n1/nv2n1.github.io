@@ -24,18 +24,18 @@ moar-- version
 
  moar respects the following environment variables:
 <dl>
-<dt><font SIZE="-1">MVM_JIT_DISABLE</font>
-</dt><dd> Disables the just-in-time compiler (<font SIZE="-1">JIT</font>). This is ignored if MoarVM was built without <font SIZE="-1">JIT</font> support.
-</dd><dt><font SIZE="-1">MVM_SPESH_DISABLE</font>
+<dt>MVM_JIT_DISABLE
+</dt><dd> Disables the just-in-time compiler (JIT). This is ignored if MoarVM was built without JIT support.
+</dd><dt>MVM_SPESH_DISABLE
 </dt><dd> Disables the runtime bytecode specializer / optimizer.
-</dd><dt><font SIZE="-1">MVM_SPESH_INLINE_DISABLE</font>
+</dd><dt>MVM_SPESH_INLINE_DISABLE
 </dt><dd> Disables inlining of call frames inside the bytecode specializer.
-</dd><dt><font SIZE="-1">MVM_SPESH_OSR_DISABLE</font>
+</dd><dt>MVM_SPESH_OSR_DISABLE
 </dt><dd> Disables the on-stack replacement feature of the bytecode specializer.
-</dd><dt><font SIZE="-1">MVM_CROSS_THREAD_WRITE_LOG</font>
+</dd><dt>MVM_CROSS_THREAD_WRITE_LOG
 </dt><dd> Tells MoarVM to insert instrumentation to detect when a thread does a write to an object it didn't allocate and doesn't have a lock for.
-</dd><dt><font SIZE="-1">MVM_CROSS_THREAD_WRITE_LOG_INCLUDE_LOCKED</font>
-</dt><dd> Same as <font SIZE="-1">MVM_CROSS_THREAD_WRITE_LOG,</font> except objects that are locked are included as well.</dd></dl>
+</dd><dt>MVM_CROSS_THREAD_WRITE_LOG_INCLUDE_LOCKED
+</dt><dd> Same as MVM_CROSS_THREAD_WRITE_LOG, except objects that are locked are included as well.</dd></dl>
 
 <h2>REPORTING BUGS</h2>
 
@@ -43,6 +43,6 @@ moar-- version
 
 <h2>COPYRIGHT</h2>
 
- Copyright (C) 2012-2014 by the MoarVM contributors. See the <i></i><font SIZE="-1"><i>CREDITS</i></font><i></i> file for a list of contributors. 
+ Copyright (C) 2012-2014 by the MoarVM contributors. See the <i></i><i>CREDITS</i><i></i> file for a list of contributors. 
 
  License: Artistic License 2.0. See the file <i>Artistic2.txt</i> for more information.

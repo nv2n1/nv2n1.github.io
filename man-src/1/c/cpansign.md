@@ -26,7 +26,7 @@ cpansign - CPAN signature management utility
 
 <h2>DESCRIPTION</h2>
 
- This utility lets you create and verify <font SIZE="-1">SIGNATURE</font> files.
+ This utility lets you create and verify SIGNATURE files.
 
 <h2>SEE ALSO</h2>
 

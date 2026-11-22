@@ -10,7 +10,7 @@ description: "sgbcon.f –"
 <p>sgbcon.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgbcon</code> (NORM, N, KL, KU, AB, LDAB, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p>subroutine <code>sgbcon</code> (NORM, N, KL, KU, AB, LDAB, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>SGBCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgbcon (characterNORM, integerN, integerKL, integerKU, real, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, realANORM, realRCOND, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

@@ -10,10 +10,10 @@ description: "pnmtopng – convert a portable anymap into a Portable Network Gra
 
 <p> pnmtopng &#8211; convert a portable anymap into a Portable Network Graphics file </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pnmtopng</code> [-verbose] [-downscale] [-interlace] [-alpha file]<br />
- [-transparent [=]color] [-background color] [-gamma value]<br />
- [-hist] [-chroma wx wy rx ry gx gy bx by] [-phys x y unit]<br />
- [-text file] [-ztxt file] [-time [yy]yy-mm-dd hh:mm:ss]<br />
+<p> <code>pnmtopng</code> [-verbose] [-downscale] [-interlace] [-alpha file]<br/>
+ [-transparent [=]color] [-background color] [-gamma value]<br/>
+ [-hist] [-chroma wx wy rx ry gx gy bx by] [-phys x y unit]<br/>
+ [-text file] [-ztxt file] [-time [yy]yy-mm-dd hh:mm:ss]<br/>
  [-filter type] [-compression level] [-force] [<i>pnmfile</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces a Portable Network Graphics file as output. </p>
@@ -45,16 +45,16 @@ description: "pnmtopng – convert a portable anymap into a Portable Network Gra
 <dt><code>-phys x y unit</code></dt>
 <dd> When your image should not be displayed with square but with rectangular pixels this option should be used to create a pHYS chunk. When the unit-value is 0 the x and y only gives the ratio of pixel width and height. When it is 1 the x and y specify the number of pixels per meter.</dd>
 <dt><code>-text file</code></dt>
-<dd> Allows to include comments in the text-chunk of the <i>png-file.</i> The format of the text-file is as follows: when the first column does not contain a blank or a tab, the first word is considered to be the keyword. For keywords to contain spaces, enclose them in double-quotes.<br />
+<dd> Allows to include comments in the text-chunk of the <i>png-file.</i> The format of the text-file is as follows: when the first column does not contain a blank or a tab, the first word is considered to be the keyword. For keywords to contain spaces, enclose them in double-quotes.<br/>
  When the first character on a line is a blank or tab, the rest of the line is a new line of the current comment. Note that the initial spaces are not considered to be part of the comment line. </dd>
-<p> Here is an example:<br />
- &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
- Title PNG-file<br />
- Author your name<br />
- Description how to include a text-chunk<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;into a PNG file<br />
- &quot;Creation date&quot; 3-feb-1987<br />
- Software pnmtopng<br />
+<p> Here is an example:<br/>
+ &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br/>
+ Title PNG-file<br/>
+ Author your name<br/>
+ Description how to include a text-chunk<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;into a PNG file<br/>
+ &quot;Creation date&quot; 3-feb-1987<br/>
+ Software pnmtopng<br/>
  &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p>
 <dt><code>-ztxt file</code></dt>
 <dd> The same as -text, but now the text will be compressed.</dd>

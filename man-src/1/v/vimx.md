@@ -10,13 +10,13 @@ description: "vim – Vi IMproved, a programmer’s text editor"
 
 <p> vim &#8211; Vi IMproved, a programmer&#8217;s text editor</p>
 <h2>SYNOPSIS</h2>
-<p> <code>vim</code> [options] [file ..]<br />
- <code>vim</code> [options] &#8211;<br />
- <code>vim</code> [options] -t tag<br />
+<p> <code>vim</code> [options] [file ..]<br/>
+ <code>vim</code> [options] &#8211;<br/>
+ <code>vim</code> [options] -t tag<br/>
  <code>vim</code> [options] -q [errorfile] </p>
-<p> <code>ex</code> <code>gex</code><br />
- <code>view</code><br />
- <code>gvim</code> <code>gview</code> <code>vimx</code> <code>evim</code> <code>eview</code><br />
+<p> <code>ex</code> <code>gex</code><br/>
+ <code>view</code><br/>
+ <code>gvim</code> <code>gview</code> <code>vimx</code> <code>evim</code> <code>eview</code><br/>
  <code>rvim</code> <code>rview</code> <code>rgvim</code> <code>rgview</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>Vim</code> is a text editor that is upwards compatible to Vi. It can be used to edit all kinds of plain text. It is especially useful for editing programs. </p>
@@ -64,7 +64,7 @@ description: "vim – Vi IMproved, a programmer’s text editor"
 <dt>+{command}</dt>
 <dd>
 </dd><dt>-c {command}</dt>
-<dd> {command} will be executed after the first file has been read. {command} is interpreted as an Ex command. If the {command} contains spaces it must be enclosed in double quotes (this depends on the shell that is used). Example: Vim &quot;+set si&quot; main.c<br />
+<dd> {command} will be executed after the first file has been read. {command} is interpreted as an Ex command. If the {command} contains spaces it must be enclosed in double quotes (this depends on the shell that is used). Example: Vim &quot;+set si&quot; main.c<br/>
  Note: You can use up to 10 &quot;+&quot; or &quot;-c&quot; commands.</dd>
 <dt>-S {file}</dt>
 <dd> {file} will be sourced after the first file has been read. This is equivalent to -c &quot;source {file}&quot;. {file} cannot start with &#8216;-&#8216;. If {file} is omitted &quot;Session.vim&quot; is used (only works when -S is the last argument).</dd>
@@ -218,12 +218,12 @@ description: "vim – Vi IMproved, a programmer’s text editor"
 <dd> Script to detect the type of a file by its contents. See &quot;:help &#8216;filetype&#8217;&quot;.</dd>
 <dt>/usr/share/vim/vim80/print/*.ps</dt>
 <dd> Files used for PostScript printing.</dd></dl>
-<p> For recent info read the VIM home page:<br />
+<p> For recent info read the VIM home page:<br/>
  &lt;URL:<a rel="nofollow" href="http://www.vim.org/">http://www.vim.org/</a>&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-vimtutor/">vimtutor</a>(1)</p>
 <h2>AUTHOR</h2>
-<p> Most of <code>Vim</code> was made by Bram Moolenaar, with a lot of help from others. See &quot;:help credits&quot; in <code>Vim.</code><br />
+<p> Most of <code>Vim</code> was made by Bram Moolenaar, with a lot of help from others. See &quot;:help credits&quot; in <code>Vim.</code><br/>
  <code>Vim</code> is based on Stevie, worked on by: Tim Thompson, Tony Andrews and G.R. (Fred) Walter. Although hardly any of the original code remains.</p>
 <h2>BUGS</h2>
 <p> Probably. See &quot;:help todo&quot; for a list of known problems. </p>

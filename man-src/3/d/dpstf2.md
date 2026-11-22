@@ -11,7 +11,7 @@ description: "dpstf2.f –"
 <p> dpstf2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dpstf2</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br />
+<p> subroutine <code>dpstf2</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br/>
  <i></i><code>DPSTF2</code> computes the Cholesky factorization with complete pivoting of a real symmetric or complex Hermitian positive semi-definite matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpstf2 (characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, integer, dimension( n )PIV, integerRANK, double precisionTOL, double precision, dimension( 2*n )WORK, integerINFO)</h3>

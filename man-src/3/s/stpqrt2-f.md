@@ -10,7 +10,7 @@ description: "stpqrt2.f –"
 <p>stpqrt2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>stpqrt2</code> (M, N, L, A, LDA, B, LDB, T, LDT, INFO)<br />
+<p>subroutine <code>stpqrt2</code> (M, N, L, A, LDA, B, LDB, T, LDT, INFO)<br/>
  <i></i><code>STPQRT2</code> computes a QR factorization of a real or complex &#8216;triangular-pentagonal&#8217; matrix, which is composed of a triangular block and a pentagonal block, using the compact WY representation for Q.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stpqrt2 (integerM, integerN, integerL, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( ldt, * )T, integerLDT, integerINFO)</h3>

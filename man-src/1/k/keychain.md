@@ -13,7 +13,7 @@ description: "keychain – re-use ssh-agent and/or gpg-agent between logins"
 <p> keychain&nbsp;<wbr>[&nbsp;<wbr>-hkQqV&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;clear &#8211;help &#8211;ignore-missing &#8211;noask &#8211;nocolor &#8211;nogui &#8211;nolock &#8211;quick &#8211;quiet &#8211;version&nbsp;<wbr>] [&nbsp;<wbr>&#8211;agents&nbsp;<wbr><i>list</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;attempts&nbsp;<wbr><i>num</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;dir&nbsp;<wbr><i>dirname</i>&nbsp;<wbr>] [&nbsp;<wbr>&#8211;host&nbsp;<wbr><i>name</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;lockwait&nbsp;<wbr><i>seconds</i>&nbsp;<wbr>] [&nbsp;<wbr>&#8211;stop&nbsp;<wbr><i>which</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;timeout&nbsp;<wbr><i>minutes</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>keys&#8230;&nbsp;<wbr>]</p>
 <h2>DESCRIPTION</h2>
 <p> keychain is a manager for ssh-agent, typically run from ~/.bash_profile. It allows your shells and cron jobs to share a single ssh-agent process. By default, the ssh-agent started by keychain is long-running and will continue to run, even after you have logged out from the system. If you want to change this behavior, take a look at the &#8211;clear and &#8211;timeout options, described below. </p>
-<p> When keychain is run, it checks for a running ssh-agent, otherwise it starts one. It saves the ssh-agent environment variables to ~/.keychain/${<font SIZE="-1">HOSTNAME</font>}-sh, so that subsequent logins and non-interactive shells such as cron jobs can source the file and make passwordless ssh connections. In addition, when keychain runs, it verifies that the key files specified on the command-line are known to ssh-agent, otherwise it loads them, prompting you for a password if necessary. </p>
+<p> When keychain is run, it checks for a running ssh-agent, otherwise it starts one. It saves the ssh-agent environment variables to ~/.keychain/${HOSTNAME}-sh, so that subsequent logins and non-interactive shells such as cron jobs can source the file and make passwordless ssh connections. In addition, when keychain runs, it verifies that the key files specified on the command-line are known to ssh-agent, otherwise it loads them, prompting you for a password if necessary. </p>
 <p> Keychain also supports gpg-agent in the same ways that ssh-agent is supported. By default keychain attempts to start all available agents but will fall back to only gpg-agent or only ssh-agent if either is unavailable. You can specifically limit keychain using the &#8211;agents option. </p>
 <p> keychain supports most UNIX-like operating systems, including Cygwin. It works with Bourne-compatible, csh-compatible and fish shells.</p>
 <h2>OPTIONS</h2>
@@ -25,13 +25,13 @@ description: "keychain – re-use ssh-agent and/or gpg-agent between logins"
 <dt><code>&#8211;clear</code></dt>
 <dd> Delete all of ssh-agent&#8217;s keys. Typically this is used in .bash_profile. The theory behind this is that keychain should assume that you are an intruder until proven otherwise. However, while this option increases security, it still allows your cron jobs to use your ssh keys when you&#8217;re logged out.</dd>
 <dt><code>&#8211;confirm</code></dt>
-<dd> Keys are subject to interactive confirmation by the <font SIZE="-1">SSH_ASKPASS</font> program before being used for authentication. See the -c option for <i><a href="/docs/linux/man/1-ssh-add/">ssh-add</a></i>(1).</dd>
+<dd> Keys are subject to interactive confirmation by the SSH_ASKPASS program before being used for authentication. See the -c option for <i><a href="/docs/linux/man/1-ssh-add/">ssh-add</a></i>(1).</dd>
 <dt><code>&#8211;dir</code> <i>dirname</i></dt>
 <dd> Keychain will use dirname rather than <tt>$HOME</tt>/.keychain</dd>
 <dt><code>&#8211;eval</code></dt>
-<dd> Keychain will print lines to be evaluated in the shell on stdout. It respects the <font SIZE="-1">SHELL</font> environment variable to determine if Bourne shell or C shell output is expected.</dd>
+<dd> Keychain will print lines to be evaluated in the shell on stdout. It respects the SHELL environment variable to determine if Bourne shell or C shell output is expected.</dd>
 <dt><code>&#8211;env</code> <i>filename</i></dt>
-<dd> After parsing options, keychain will load additional environment settings from &#8220;filename&#8221;. By default, if &#8220;&#8211;env&#8221; is not given, then keychain will attempt to load from ~/.keychain/[hostname]-env or alternatively ~/.keychain/env. The purpose of this file is to override settings such as <font SIZE="-1">PATH</font>, in case ssh is stored in a non-standard place.</dd>
+<dd> After parsing options, keychain will load additional environment settings from &#8220;filename&#8221;. By default, if &#8220;&#8211;env&#8221; is not given, then keychain will attempt to load from ~/.keychain/[hostname]-env or alternatively ~/.keychain/env. The purpose of this file is to override settings such as PATH, in case ssh is stored in a non-standard place.</dd>
 <dt><code>-h &#8211;help</code></dt>
 <dd> Show help that looks remarkably like this man-page.</dd>
 <dt><code>&#8211;host</code> <i>name</i></dt>
@@ -43,9 +43,9 @@ description: "keychain – re-use ssh-agent and/or gpg-agent between logins"
 <dl>
 <dl>
 <dt><code>local</code></dt>
-<dd> Inherit when a pid (e.g. <font SIZE="-1">SSH_AGENT_PID</font>) is set in the environment. This disallows inheriting a forwarded agent.</dd>
+<dd> Inherit when a pid (e.g. SSH_AGENT_PID) is set in the environment. This disallows inheriting a forwarded agent.</dd>
 <dt><code>any</code></dt>
-<dd> Inherit when a sock (e.g. <font SIZE="-1">SSH_AUTH_SOCK</font>) is set in the environment. This allows inheriting a forwarded agent.</dd>
+<dd> Inherit when a sock (e.g. SSH_AUTH_SOCK) is set in the environment. This allows inheriting a forwarded agent.</dd>
 <dt><code>local-once</code></dt>
 <dd> Same as &#8220;local&#8221;, but only inherit if keychain isn&#8217;t already providing an agent.</dd>
 <dt><code>any-once</code></dt>
@@ -62,7 +62,7 @@ description: "keychain – re-use ssh-agent and/or gpg-agent between logins"
 <dt><code>&#8211;nocolor</code></dt>
 <dd> Disable color hilighting for non ANSI-compatible terms.</dd>
 <dt><code>&#8211;nogui</code></dt>
-<dd> Don&#8217;t honor <font SIZE="-1">SSH_ASKPASS</font>, if it is set. This will cause ssh-add to prompt on the terminal instead of using a graphical program.</dd>
+<dd> Don&#8217;t honor SSH_ASKPASS, if it is set. This will cause ssh-add to prompt on the terminal instead of using a graphical program.</dd>
 <dt><code>&#8211;noinherit</code></dt>
 <dd> Don&#8217;t inherit any agent processes, overriding the default &#8220;&#8211;inherit local-once&#8221;</dd>
 <dt><code>&#8211;nolock</code></dt>

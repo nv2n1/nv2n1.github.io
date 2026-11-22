@@ -9,13 +9,13 @@ description: "Hash Destruction Functions – Functions that destroy hash tables 
 
 <p>Hash Destruction Functions &#8211; Functions that destroy hash tables and their contents. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_hash_free_key_cb_set</code> (Ecore_Hash *hash, Ecore_Free_Cb function)<br />
- <i>Sets the function to destroy the keys of the given hash. </i><br />
- EAPI int <code>ecore_hash_free_value_cb_set</code> (Ecore_Hash *hash, Ecore_Free_Cb function)<br />
- <i>Sets the function to destroy the values in the given hash. </i><br />
- EAPI void <code>ecore_hash_destroy</code> (Ecore_Hash *hash)<br />
- <i>Frees the hash table and the data contained inside it. </i><br />
- EAPI int <code>ecore_hash_count</code> (Ecore_Hash *hash)<br />
+<p>EAPI int <code>ecore_hash_free_key_cb_set</code> (Ecore_Hash *hash, Ecore_Free_Cb function)<br/>
+ <i>Sets the function to destroy the keys of the given hash. </i><br/>
+ EAPI int <code>ecore_hash_free_value_cb_set</code> (Ecore_Hash *hash, Ecore_Free_Cb function)<br/>
+ <i>Sets the function to destroy the values in the given hash. </i><br/>
+ EAPI void <code>ecore_hash_destroy</code> (Ecore_Hash *hash)<br/>
+ <i>Frees the hash table and the data contained inside it. </i><br/>
+ EAPI int <code>ecore_hash_count</code> (Ecore_Hash *hash)<br/>
  <i>Counts the number of nodes in a hash table. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that destroy hash tables and their contents.</p>
@@ -41,7 +41,7 @@ description: "Hash Destruction Functions – Functions that destroy hash tables 
 <p>Sets the function to destroy the keys of the given hash. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash.<br />
+<dd><i>hash</i> The given hash.<br/>
  <i>function</i> The function used to free the node keys. NULL is a valid value and means that no function will be called.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -51,7 +51,7 @@ description: "Hash Destruction Functions – Functions that destroy hash tables 
 <p>Sets the function to destroy the values in the given hash. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash.<br />
+<dd><i>hash</i> The given hash.<br/>
  <i>function</i> The function that will free the node values. NULL is a valid value and means that no function will be called.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

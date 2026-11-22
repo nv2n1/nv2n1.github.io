@@ -19,10 +19,10 @@ description: "yuv2lav – encodes lavtool’s raw YUV frame streams into MJPEG f
 <dt><code>-o</code><i>&nbsp;<wbr>output-file</i></dt>
 <dd> This (compulsorary) option sets the name of the file that yuv2lav will write its output to. If the output file contains a % (e.g. file%02d.avi), the output will be written to multiple files in case this is necessary (file00.avi, file01.avi and so on). </dd>
 <dt><code>-f</code><code>&nbsp;<wbr>a</code>|<code>A</code>|<code>q</code></dt>
-<dd> This sets the output file format, which has to be one of<br />
- <code>&nbsp;<wbr>a</code> &#8211; for AVI file output,<br />
- <code>&nbsp;<wbr>A</code> &#8211; for AVI with reversed fields,<br />
- <code>&nbsp;<wbr>q</code> &#8211; for Quicktime output or<br />
+<dd> This sets the output file format, which has to be one of<br/>
+ <code>&nbsp;<wbr>a</code> &#8211; for AVI file output,<br/>
+ <code>&nbsp;<wbr>A</code> &#8211; for AVI with reversed fields,<br/>
+ <code>&nbsp;<wbr>q</code> &#8211; for Quicktime output or<br/>
  AVI with reversed field of course only makes sense if yuv2lav&#8217;s feed is an interlaced video source and should only be needed if you experience frame reversal problems in your output. If you don&#8217;t use that option yuv2lav will set the output format to AVI if the last 3 char are avi, or to Quicktime if you use mov. If you use the -f option it overides the setting in the filename</dd>
 <dt><code>-q</code><i>&nbsp;<wbr>num</i></dt>
 <dd> This option specifies the JPEG encoding quality as passed through to libjpeg. The default value is 80, <i>num</i> must lie within 24&#8230;100 inclusive (think of it as percentage values, although with a lossy compression algorithm like JPEG, keeping 100% of the original quality is of course not really possible). </dd>
@@ -49,7 +49,7 @@ description: "yuv2lav – encodes lavtool’s raw YUV frame streams into MJPEG f
 <h2>BUGS</h2>
 <p> If you experience any problems with this tool, please feel free to contact the developers (see below). </p>
 <h2>AUTHOR</h2>
-<p> This man page was written by pHilipp Zabel.<br />
+<p> This man page was written by pHilipp Zabel.<br/>
  If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is: </p>
 <p>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <p> For more info, see our website at </p>

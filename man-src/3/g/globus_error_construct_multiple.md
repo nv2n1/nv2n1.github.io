@@ -11,8 +11,8 @@ description: "globus_error_generic.h –"
 <p> globus_error_generic.h &#8211; </p>
 <p> Globus Error API.</p>
 <h2>SYNOPSIS</h2>
-<p> #include &#8216;globus_object.h&#8217;<br />
- #include &#8216;globus_module.h&#8217;<br />
+<p> #include &#8216;globus_object.h&#8217;<br/>
+ #include &#8216;globus_module.h&#8217;<br/>
  #include &lt;stdarg.h&gt; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_ERROR_TYPE_GLOBUS</code> </p>
@@ -43,7 +43,7 @@ description: "globus_error_generic.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The error chain that originated from this module. The top error object in the chain will be one created by this module and have a type of &#8216;type&#8217;; The remaining objects are the same as the cause chain used at creation time. The user can use globus_error_get_type(error) to get the error code (for GLOBUS_ERROR_TYPE_GLOBUS objects)<br />
+</dt><dd> <i>error</i> The error chain that originated from this module. The top error object in the chain will be one created by this module and have a type of &#8216;type&#8217;; The remaining objects are the same as the cause chain used at creation time. The user can use globus_error_get_type(error) to get the error code (for GLOBUS_ERROR_TYPE_GLOBUS objects)<br/>
  <i>type</i> The error object type for the top object in the error chain (e.g. GLOBUS_ERROR_TYPE_GLOBUS, GLOBUS_ERROR_TYPE_ERRNO)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -57,8 +57,8 @@ description: "globus_error_generic.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>base_source</i> Pointer to the originating module.<br />
- <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module. <code>globus_error_match()</code> will match against this type, but not of the contained chains.<br />
+</dt><dd> <i>base_source</i> Pointer to the originating module.<br/>
+ <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module. <code>globus_error_match()</code> will match against this type, but not of the contained chains.<br/>
  <i>fmt</i> a printf style format string describing the multiple errors</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -79,8 +79,8 @@ description: "globus_error_generic.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>multiple_error</i> The error to add the chain to. Must have been created with <code>globus_error_construct_multiple()</code><br />
- <i>chain</i> The chain to add to this error. This error object assumes control over &#8216;chain&#8221;s memory after this call.<br />
+</dt><dd> <i>multiple_error</i> The error to add the chain to. Must have been created with <code>globus_error_construct_multiple()</code><br/>
+ <i>chain</i> The chain to add to this error. This error object assumes control over &#8216;chain&#8221;s memory after this call.<br/>
  <i>fmt</i> a printf style format string describing this chain</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

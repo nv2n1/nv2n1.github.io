@@ -11,7 +11,7 @@ description: "ctfttp.f –"
 <p> ctfttp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctfttp</code> (TRANSR, UPLO, N, ARF, AP, INFO)<br />
+<p> subroutine <code>ctfttp</code> (TRANSR, UPLO, N, ARF, AP, INFO)<br/>
  <i></i><code>CTFTTP</code> copies a triangular matrix from the rectangular full packed format (TF) to the standard packed format (TP).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctfttp (characterTRANSR, characterUPLO, integerN, complex, dimension( 0: * )ARF, complex, dimension( 0: * )AP, integerINFO)</h3>

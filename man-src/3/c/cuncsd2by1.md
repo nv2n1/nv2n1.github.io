@@ -11,7 +11,7 @@ description: "cuncsd2by1.f –"
 <p> cuncsd2by1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cuncsd2by1</code> (JOBU1, JOBU2, JOBV1T, M, P, Q, X11, LDX11, X21, LDX21, THETA, U1, LDU1, U2, LDU2, V1T, LDV1T, WORK, LWORK, RWORK, LRWORK, IWORK, INFO)<br />
+<p> subroutine <code>cuncsd2by1</code> (JOBU1, JOBU2, JOBV1T, M, P, Q, X11, LDX11, X21, LDX21, THETA, U1, LDU1, U2, LDU2, V1T, LDV1T, WORK, LWORK, RWORK, LRWORK, IWORK, INFO)<br/>
  <i></i><code>CUNCSD2BY1</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cuncsd2by1 (characterJOBU1, characterJOBU2, characterJOBV1T, integerM, integerP, integerQ, complex, dimension(ldx11,*)X11, integerLDX11, complex, dimension(ldx21,*)X21, integerLDX21, real, dimension(*)THETA, complex, dimension(ldu1,*)U1, integerLDU1, complex, dimension(ldu2,*)U2, integerLDU2, complex, dimension(ldv1t,*)V1T, integerLDV1T, complex, dimension(*)WORK, integerLWORK, real, dimension(*)RWORK, integerLRWORK, integer, dimension(*)IWORK, integerINFO)</h3>
@@ -163,7 +163,7 @@ otherwise : U1 is not computed.
 aram[out] IWORK
  nsion (M-MIN(P,M-P,Q,M-Q))
 </pre>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  <i>INFO</i> </p>
 <pre>
           INFO is INTEGER

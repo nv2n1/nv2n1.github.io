@@ -61,7 +61,7 @@ description: "milter-greylist – grey listing filter for sendmail"
 <dd>sets the minimum delay between the first attempt and the time the message can be accepted. Default is 30 minutes. A suffix can be added to specify seconds (s), minutes (m), hours (h), days (d) or weeks (w). Without any suffix, values are treated as seconds. Equivalent to the <i>greylist</i> option in the configuration file.</dd></dl>
 <h2>Greylist Mx Sync</h2>
 <p><code>milter-greylist</code> is now able to sync the greylist between multiple MX. In order to enable this feature, you need to list the peer MXs in <code><a href="/docs/linux/man/5-greylist-conf/">greylist.conf</a>(5)</code> like this: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>peer 192.0.2.17<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>peer 192.0.2.17<br/>
 &nbsp;<wbr>&nbsp;<wbr>peer 192.0.2.18 </p>
 <p> When peers are configured, <code>milter-greylist</code> will listen on the port defined for the mxglsync service in <i>/etc/services </i> (defaults to 5252), and it will connect to peers at this port. Each time an entry is added or deleted on one MX, it will be propagated to the others. </p>
 <p> The protocol is quite simple, just telnet to your MX at port 5252, and type <i>help</i> to see how it works. Note that connections will only be accepted from peer MXs, even localhost will be rejected (and don&#8217;t ever add localhost as a peer for MX sync, as you will cause each entry in the greylist to be added twice). </p>

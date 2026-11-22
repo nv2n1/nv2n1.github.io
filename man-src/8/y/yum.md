@@ -11,45 +11,45 @@ description: "yum – Yellowdog Updater Modified"
 <h2>Synopsis</h2>
 <p><code>yum</code> [options] [command] [package &#8230;]</p>
 <h2>Description</h2>
-<p><code>yum</code> is an interactive, rpm based, package manager. It can automatically perform system updates, including dependency analysis and obsolete processing based on &quot;repository&quot; metadata. It can also perform installation of new packages, removal of old packages and perform queries on the installed and/or available packages among many other commands/services (see below). <code>yum</code> is similar to other high level package managers like apt-get and smart. While there are some graphical interfaces directly to the <code>yum</code> code, more recent graphical interface development is happening with PackageKit and the gnome-packagekit application. <i>command</i> is one of:<br />
- <i></i> * install package1 [package2] [&#8230;]<br />
- <i></i> * update [package1] [package2] [&#8230;]<br />
- <i></i> * update-to [package1] [package2] [&#8230;]<br />
- <i></i> * update-minimal [package1] [package2] [&#8230;]<br />
- <i></i> * check-update<br />
- <i></i> * upgrade [package1] [package2] [&#8230;]<br />
- <i></i> * upgrade-to [package1] [package2] [&#8230;]<br />
- <i></i> * distribution-synchronization [package1] [package2] [&#8230;]<br />
- <i></i> * remove | erase package1 [package2] [&#8230;]<br />
- <i></i> * autoremove [package1] [&#8230;]<br />
- <i></i> * list [&#8230;]<br />
- <i></i> * info [&#8230;]<br />
- <i></i> * provides | whatprovides feature1 [feature2] [&#8230;]<br />
- <i></i> * clean [ packages | metadata | expire-cache | rpmdb | plugins | all ]<br />
- <i></i> * makecache [fast]<br />
- <i></i> * groups [&#8230;]<br />
- <i></i> * search string1 [string2] [&#8230;]<br />
- <i></i> * shell [filename]<br />
- <i></i> * resolvedep dep1 [dep2] [&#8230;]<br />
-&nbsp;<wbr>(maintained for legacy reasons only &#8211; use repoquery or yum provides)<br />
- <i></i> * localinstall rpmfile1 [rpmfile2] [&#8230;]<br />
-&nbsp;<wbr>(maintained for legacy reasons only &#8211; use install)<br />
- <i></i> * localupdate rpmfile1 [rpmfile2] [&#8230;]<br />
-&nbsp;<wbr>(maintained for legacy reasons only &#8211; use update)<br />
- <i></i> * reinstall package1 [package2] [&#8230;]<br />
- <i></i> * downgrade package1 [package2] [&#8230;]<br />
- <i></i> * deplist package1 [package2] [&#8230;]<br />
- <i></i> * repolist [all|enabled|disabled]<br />
- <i></i> * repoinfo [all|enabled|disabled]<br />
- <i></i> * repository-packages &lt;enabled-repoid&gt; &lt;install|remove|remove-or-reinstall|remove-or-distribution-synchronization&gt; [package2] [&#8230;]<br />
- <i></i> * version [ all | installed | available | group-* | nogroups* | grouplist | groupinfo ]<br />
- <i></i> * history [info|list|packages-list|packages-info|summary|addon-info|redo|undo|rollback|new|sync|stats]<br />
- <i></i> * load-transaction [txfile]<br />
- <i></i> * updateinfo [summary | list | info | remove-pkgs-ts | exclude-updates | exclude-all | check-running-kernel]<br />
- <i></i> * fssnapshot [summary | list | have-space | create | delete]<br />
- <i></i> * fs [filters | refilter | refilter-cleanup | du]<br />
- <i></i> * check<br />
- <i></i> * help [command]<br />
+<p><code>yum</code> is an interactive, rpm based, package manager. It can automatically perform system updates, including dependency analysis and obsolete processing based on &quot;repository&quot; metadata. It can also perform installation of new packages, removal of old packages and perform queries on the installed and/or available packages among many other commands/services (see below). <code>yum</code> is similar to other high level package managers like apt-get and smart. While there are some graphical interfaces directly to the <code>yum</code> code, more recent graphical interface development is happening with PackageKit and the gnome-packagekit application. <i>command</i> is one of:<br/>
+ <i></i> * install package1 [package2] [&#8230;]<br/>
+ <i></i> * update [package1] [package2] [&#8230;]<br/>
+ <i></i> * update-to [package1] [package2] [&#8230;]<br/>
+ <i></i> * update-minimal [package1] [package2] [&#8230;]<br/>
+ <i></i> * check-update<br/>
+ <i></i> * upgrade [package1] [package2] [&#8230;]<br/>
+ <i></i> * upgrade-to [package1] [package2] [&#8230;]<br/>
+ <i></i> * distribution-synchronization [package1] [package2] [&#8230;]<br/>
+ <i></i> * remove | erase package1 [package2] [&#8230;]<br/>
+ <i></i> * autoremove [package1] [&#8230;]<br/>
+ <i></i> * list [&#8230;]<br/>
+ <i></i> * info [&#8230;]<br/>
+ <i></i> * provides | whatprovides feature1 [feature2] [&#8230;]<br/>
+ <i></i> * clean [ packages | metadata | expire-cache | rpmdb | plugins | all ]<br/>
+ <i></i> * makecache [fast]<br/>
+ <i></i> * groups [&#8230;]<br/>
+ <i></i> * search string1 [string2] [&#8230;]<br/>
+ <i></i> * shell [filename]<br/>
+ <i></i> * resolvedep dep1 [dep2] [&#8230;]<br/>
+&nbsp;<wbr>(maintained for legacy reasons only &#8211; use repoquery or yum provides)<br/>
+ <i></i> * localinstall rpmfile1 [rpmfile2] [&#8230;]<br/>
+&nbsp;<wbr>(maintained for legacy reasons only &#8211; use install)<br/>
+ <i></i> * localupdate rpmfile1 [rpmfile2] [&#8230;]<br/>
+&nbsp;<wbr>(maintained for legacy reasons only &#8211; use update)<br/>
+ <i></i> * reinstall package1 [package2] [&#8230;]<br/>
+ <i></i> * downgrade package1 [package2] [&#8230;]<br/>
+ <i></i> * deplist package1 [package2] [&#8230;]<br/>
+ <i></i> * repolist [all|enabled|disabled]<br/>
+ <i></i> * repoinfo [all|enabled|disabled]<br/>
+ <i></i> * repository-packages &lt;enabled-repoid&gt; &lt;install|remove|remove-or-reinstall|remove-or-distribution-synchronization&gt; [package2] [&#8230;]<br/>
+ <i></i> * version [ all | installed | available | group-* | nogroups* | grouplist | groupinfo ]<br/>
+ <i></i> * history [info|list|packages-list|packages-info|summary|addon-info|redo|undo|rollback|new|sync|stats]<br/>
+ <i></i> * load-transaction [txfile]<br/>
+ <i></i> * updateinfo [summary | list | info | remove-pkgs-ts | exclude-updates | exclude-all | check-running-kernel]<br/>
+ <i></i> * fssnapshot [summary | list | have-space | create | delete]<br/>
+ <i></i> * fs [filters | refilter | refilter-cleanup | du]<br/>
+ <i></i> * check<br/>
+ <i></i> * help [command]<br/>
  Unless the &#8211;help or -h option is given, one of the above commands must be present. Repository configuration is honored in all operations.</p>
 <dl>
 <dt><code>install</code></dt>
@@ -101,8 +101,8 @@ description: "yum – Yellowdog Updater Modified"
 <dd>Is used to download and make usable all the metadata for the currently enabled <code>yum</code> repos. If the argument &quot;fast&quot; is passed, then we just try to make sure the repos. are current (much like &quot;yum clean expire-cache&quot;).</dd>
 <dd>
 </dd><dt><code>groups</code></dt>
-<dd>A command, new in 3.4.2, that collects all the subcommands that act on groups together. Note that recent yum using distributions (Fedora-19+, RHEL-7+) have configured group_command=objects which changes how group commands act in some important ways. &quot;<code>group install</code>&quot; is used to install all of the individual packages in a group, of the specified types (this works as if you&#8217;d taken each of those package names and put them on the command line for a &quot;yum install&quot; command).<br />
-&nbsp;<wbr>The group_package_types configuration option specifies which types will be installed.<br />
+<dd>A command, new in 3.4.2, that collects all the subcommands that act on groups together. Note that recent yum using distributions (Fedora-19+, RHEL-7+) have configured group_command=objects which changes how group commands act in some important ways. &quot;<code>group install</code>&quot; is used to install all of the individual packages in a group, of the specified types (this works as if you&#8217;d taken each of those package names and put them on the command line for a &quot;yum install&quot; command).<br/>
+&nbsp;<wbr>The group_package_types configuration option specifies which types will be installed.<br/>
 &nbsp;<wbr>If you wish to&nbsp;<wbr>&quot;reinstall&quot;&nbsp;<wbr>a group so that you get a package that is currently blacklisted the easiest way to do that currently is to install the package manually and then run &quot;groups mark packages-sync mygroup mypackagename&quot; (or use yumdb to set the group_member of the package(s)). &quot;<code>group update</code>&quot; is just an alias for group install, when using group_command=compat. This will install packages in the group not already installed and upgrade existing packages. With group_command=simple it will just upgrade already installed packages. With group_command=objects it will try to upgrade the group object, installing any available packages not blacklisted (marked &#8216;-&#8216; in group info) and will upgrade the installed packages. &quot;<code>group list</code>&quot; is used to list the available groups from all <code>yum</code> repos. When group_command=objects the group is installed if the user explicitly installed it (or used the group mark* commands to mark it installed). It does not need to have any packages installed. When not using group_command=objects groups are shown as &quot;installed&quot; if all mandatory packages are installed, or if a group doesn&#8217;t have any mandatory packages then it is installed if any of the optional or default package are installed (when not in group_command=objects mode). You can pass optional arguments to the list/summary commands: installed, available, environment, language, packages, hidden and ids (or any of those prefixed by &quot;no&quot; to turn them off again). Note that groups that are available but hidden will not be listed unless &#8216;hidden&#8217; keyword is passed to the command. If you pass the -v option, to enable verbose mode, then the groupids are displayed by default (but &quot;yum group list ids&quot; is often easier to read). &quot;<code>group remove</code>&quot; is used to remove all of the packages in a group, unlike &quot;groupinstall&quot; this will remove everything regardless of group_package_types. It is worth pointing out that packages can be in more than one group, so &quot;group install X Y&quot; followed by &quot;group remove Y&quot; does not do give you the same result as &quot;group install X&quot;. The groupremove_leaf_only configuration changes the behaviour of this command to only remove packages which aren&#8217;t required by something else. &quot;<code>group info</code>&quot; is used to give the description and package list of a group (and which type those packages are marked as). Note that you can use the yum-filter-data and yum-list-data plugins to get/use the data the other way around (i.e. what groups own packages need updating). If you pass the -v option, to enable verbose mode, then the package names are matched against installed/available packages similar to the list command. When using group_command=objects, the info command will display markers next to each package saying how that package relates to the group object. The meaning of these markers is: </dd>
 <pre><code>&quot;-&quot; = Package isn't installed, and won't be installed as part of the group (Eg.  &quot;yum group install foo -pkgA&quot; or &quot;yum group install foo; yum remove pkgA&quot; … this will have pkgA marked as '-')
 &quot;+&quot; = Package isn't installed, but will be the next time you run &quot;yum upgrade&quot; or &quot;yum group upgrade foo&quot;
@@ -152,68 +152,68 @@ swap -- group remove foo-grp -- group install bar-grp</pre>
 <dd>Produces a &quot;version&quot; of the rpmdb, and of the enabled repositories if &quot;all&quot; is given as the first argument. You can also specify version groups in the version-groups configuration file. If you pass -v, for verbose mode, more information is listed. The version is calculated by taking an SHA1 hash of the packages (in sorted order), and the checksum_type/checksum_data entries from the yumdb. Note that this rpmdb version is now also used significantly within yum (esp. in yum history). The version command will now show &quot;groups&quot; of packages as a separate version, and so takes sub-commands: &quot;version grouplist&quot; &#8211; List the defined version groups. &quot;version groupinfo&quot; &#8211; Get the complete list of packages within one or more version groups. &quot;version installed&quot; &#8211; This is the default, only show the version information for installed packages. &quot;version available&quot; &#8211; Only show the version information for available packages. &quot;version all&quot; &#8211; Show the version information for installed and available packages. &quot;version nogroups | nogroups-*&quot; &#8211; Just show the main version information. &quot;version group-*&quot; &#8211; Just show the grouped version information, if more arguments are given then only show the data for those groups.</dd>
 <dd>
 </dd><dt><code>history</code></dt>
-<dd>The history command allows the user to view what has happened in past transactions (assuming the history_record config. option is set). You can use info/list/packages-list/packages-info/summary to view what happened, undo/redo/rollback to act on that information and new to start a new history file. The info/list/summary commands take either a transaction id or a package (with wildcards, as in <code>Specifying package names</code>), all three can also be passed no arguments. list can be passed the keyword &quot;all&quot; to list all the transactions. The info command can also take ranges of transaction ids, of the form start..end, which will then display a merged history as if all the transactions in the range had happened at once.<br />
- Eg. &quot;history info 1..4&quot; will merge the first four transactions and display them as a single transaction. The packages-list/packages-info commands takes a package (with wildcards, as in <code>Specifying package names</code>). And show data from the point of view of that package. The undo/redo/rollback commands take either a single transaction id or the keyword last and an offset from the last transaction (Eg. if you&#8217;ve done 250 transactions, &quot;last&quot; refers to transaction 250, and &quot;last-4&quot; refers to transaction 246). The redo command can also take some optional arguments before you specify the transaction. &quot;force-reinstall&quot; tells it reinstall any packages that were installed in that transaction (via install, upgrade or downgrade). &quot;force-remove&quot; tells it to forcibly remove any packages that were updated or downgraded. The undo/redo commands act on the specified transaction, undo&#8217;ing or repeating the work of that transaction. While the rollback command will undo all transactions up to the point of the specified transaction. For example, if you have 3 transactions, where package A; B and C where installed respectively. Then &quot;undo 1&quot; will try to remove package A, &quot;redo 1&quot; will try to install package A (if it is not still installed), and &quot;rollback 1&quot; will try to remove packages B and C. Note that after a &quot;rollback 1&quot; you will have a fourth transaction, although the ending rpmdb version (see: yum version) should be the same in transactions 1 and 4. The addon-info command takes a transaction ID, and the packages-list command takes a package (with wildcards). The stats command shows some statistics about the current history DB. The sync commands allows you to change the rpmdb/yumdb data stored for any installed packages, to whatever is in the current rpmdb/yumdb (this is mostly useful when this data was not stored when the package went into the history DB). In &quot;history list&quot; you can change the behaviour of the 2nd column via the configuration option history_list_view. In &quot;history list&quot; output the Altered column also gives some extra information if there was something not good with the transaction (this is also shown at the end of the package column in the packages-list command).<br />
- <i></i><code>&gt;</code> &#8211; The rpmdb was changed, outside yum, after the transaction.<br />
- <i></i><code>&lt;</code> &#8211; The rpmdb was changed, outside yum, before the transaction.<br />
- <i></i><code>*</code> &#8211; The transaction aborted before completion.<br />
- <i></i><code>#</code> &#8211; The transaction completed, but with a non-zero status.<br />
- <i></i><code>E</code> &#8211; The transaction completed fine, but had warning/error output during the transaction.<br />
- <i></i><code>P</code> &#8211; The transaction completed fine, but problems already existed in the rpmdb.<br />
+<dd>The history command allows the user to view what has happened in past transactions (assuming the history_record config. option is set). You can use info/list/packages-list/packages-info/summary to view what happened, undo/redo/rollback to act on that information and new to start a new history file. The info/list/summary commands take either a transaction id or a package (with wildcards, as in <code>Specifying package names</code>), all three can also be passed no arguments. list can be passed the keyword &quot;all&quot; to list all the transactions. The info command can also take ranges of transaction ids, of the form start..end, which will then display a merged history as if all the transactions in the range had happened at once.<br/>
+ Eg. &quot;history info 1..4&quot; will merge the first four transactions and display them as a single transaction. The packages-list/packages-info commands takes a package (with wildcards, as in <code>Specifying package names</code>). And show data from the point of view of that package. The undo/redo/rollback commands take either a single transaction id or the keyword last and an offset from the last transaction (Eg. if you&#8217;ve done 250 transactions, &quot;last&quot; refers to transaction 250, and &quot;last-4&quot; refers to transaction 246). The redo command can also take some optional arguments before you specify the transaction. &quot;force-reinstall&quot; tells it reinstall any packages that were installed in that transaction (via install, upgrade or downgrade). &quot;force-remove&quot; tells it to forcibly remove any packages that were updated or downgraded. The undo/redo commands act on the specified transaction, undo&#8217;ing or repeating the work of that transaction. While the rollback command will undo all transactions up to the point of the specified transaction. For example, if you have 3 transactions, where package A; B and C where installed respectively. Then &quot;undo 1&quot; will try to remove package A, &quot;redo 1&quot; will try to install package A (if it is not still installed), and &quot;rollback 1&quot; will try to remove packages B and C. Note that after a &quot;rollback 1&quot; you will have a fourth transaction, although the ending rpmdb version (see: yum version) should be the same in transactions 1 and 4. The addon-info command takes a transaction ID, and the packages-list command takes a package (with wildcards). The stats command shows some statistics about the current history DB. The sync commands allows you to change the rpmdb/yumdb data stored for any installed packages, to whatever is in the current rpmdb/yumdb (this is mostly useful when this data was not stored when the package went into the history DB). In &quot;history list&quot; you can change the behaviour of the 2nd column via the configuration option history_list_view. In &quot;history list&quot; output the Altered column also gives some extra information if there was something not good with the transaction (this is also shown at the end of the package column in the packages-list command).<br/>
+ <i></i><code>&gt;</code> &#8211; The rpmdb was changed, outside yum, after the transaction.<br/>
+ <i></i><code>&lt;</code> &#8211; The rpmdb was changed, outside yum, before the transaction.<br/>
+ <i></i><code>*</code> &#8211; The transaction aborted before completion.<br/>
+ <i></i><code>#</code> &#8211; The transaction completed, but with a non-zero status.<br/>
+ <i></i><code>E</code> &#8211; The transaction completed fine, but had warning/error output during the transaction.<br/>
+ <i></i><code>P</code> &#8211; The transaction completed fine, but problems already existed in the rpmdb.<br/>
  <i></i><code>s</code> &#8211; The transaction completed fine, but &#8211;skip-broken was enabled and had to skip some packages. </dd>
 <dd>
 </dd><dt><code>load-transaction</code></dt>
 <dd>This command will re-load a saved yum transaction file, this allows you to run a transaction on one machine and then use it on another. The two common ways to get a saved yum transaction file are from &quot;yum -q history addon-info last saved_tx&quot; or via the automatic saves in $TMPDIR/yum_save_tx.* when a transaction is solved but not run. Running the command without an argument, or a directory as an argument will try and list the possible files available to load. Showing if the packages are still available, if the rpmdb matches the current rpmdb, how many transaction install/removes members are in the saved transaction and what the filename is.</dd>
 <dd>
 </dd><dt><code>updateinfo</code></dt>
-<dd>This command has a bunch of sub-commands to act on the updateinfo in the repositories. The simplest commands are:<br />
- <i></i> yum updateinfo info [all | available | installed | updates]<br />
- <i></i> yum updateinfo list [all | available | installed | updates]<br />
- <i></i> yum updateinfo [summary] [all | available | installed | updates]<br />
+<dd>This command has a bunch of sub-commands to act on the updateinfo in the repositories. The simplest commands are:<br/>
+ <i></i> yum updateinfo info [all | available | installed | updates]<br/>
+ <i></i> yum updateinfo list [all | available | installed | updates]<br/>
+ <i></i> yum updateinfo [summary] [all | available | installed | updates]<br/>
  which all display information about the available update information relevant to your machine (including anything installed, if you supply &quot;all&quot;). </dd>
-<p> <i></i> <code>* updates</code> Is used to display information about advisories for packages that can be updated. This is the default.<br />
- <i></i> <code>* installed</code> Is used to display information only about installed advisories.<br />
- <i></i> <code>* available</code> Is used to display information about advisories for packages available for updating or installation.<br />
- <i></i> <code>* all</code> Is used to display information about both installed and available advisories.<br />
+<p> <i></i> <code>* updates</code> Is used to display information about advisories for packages that can be updated. This is the default.<br/>
+ <i></i> <code>* installed</code> Is used to display information only about installed advisories.<br/>
+ <i></i> <code>* available</code> Is used to display information about advisories for packages available for updating or installation.<br/>
+ <i></i> <code>* all</code> Is used to display information about both installed and available advisories.<br/>
  They all take as arguments: </p>
-<p> <i></i> <code>* &lt;advisory&gt; [advisory&#8230;]</code> Is used to display information about one or more advisories.<br />
- <i></i> <code>* &lt;package&gt; [package&#8230;]</code> Is used to display information about one or more packages.<br />
- <i></i> <code>* bugzillas / bzs</code> Is the subset of the updateinfo information, pertaining to the bugzillas.<br />
- <i></i> <code>* cves</code> Is the subset of the updateinfo information, pertaining to the CVEs.<br />
- <i></i> <code>* enhancement</code> Is the subset of the updateinfo information, pertaining to enhancements.<br />
- <i></i> <code>* bugfix</code> Is the subset of the updateinfo information, pertaining to bugfixes.<br />
- <i></i> <code>* security / sec</code> Is the subset of the updateinfo information, pertaining to security.<br />
- <i></i> <code>* severity / sev</code> Include security relevant packages of this severity.<br />
- <i></i> <code>* recommended</code> Is the subset of the updateinfo information, pertaining to recommended updates.<br />
- <i></i> <code>* new-packages</code> Is the subset of the updateinfo information, pertaining to new packages. These are packages which weren&#8217;t available at the initial release of your distribution.<br />
- There are also three sub-commands to remove packages when using &quot;yum shell&quot;, they are:<br />
- <i></i> yum updateinfo remove-pkgs-ts<br />
- <i></i> yum updateinfo exclude-updates<br />
- <i></i> yum updateinfo exclude-all<br />
+<p> <i></i> <code>* &lt;advisory&gt; [advisory&#8230;]</code> Is used to display information about one or more advisories.<br/>
+ <i></i> <code>* &lt;package&gt; [package&#8230;]</code> Is used to display information about one or more packages.<br/>
+ <i></i> <code>* bugzillas / bzs</code> Is the subset of the updateinfo information, pertaining to the bugzillas.<br/>
+ <i></i> <code>* cves</code> Is the subset of the updateinfo information, pertaining to the CVEs.<br/>
+ <i></i> <code>* enhancement</code> Is the subset of the updateinfo information, pertaining to enhancements.<br/>
+ <i></i> <code>* bugfix</code> Is the subset of the updateinfo information, pertaining to bugfixes.<br/>
+ <i></i> <code>* security / sec</code> Is the subset of the updateinfo information, pertaining to security.<br/>
+ <i></i> <code>* severity / sev</code> Include security relevant packages of this severity.<br/>
+ <i></i> <code>* recommended</code> Is the subset of the updateinfo information, pertaining to recommended updates.<br/>
+ <i></i> <code>* new-packages</code> Is the subset of the updateinfo information, pertaining to new packages. These are packages which weren&#8217;t available at the initial release of your distribution.<br/>
+ There are also three sub-commands to remove packages when using &quot;yum shell&quot;, they are:<br/>
+ <i></i> yum updateinfo remove-pkgs-ts<br/>
+ <i></i> yum updateinfo exclude-updates<br/>
+ <i></i> yum updateinfo exclude-all<br/>
  they all take the following arguments: </p>
 <pre><code>* [bzs=foo] [advisories=foo] [cves=foo] [security-severity=foo] [security] [bugfix]</code></pre>
-<p> and finally there is a command to manually check the running kernel against updateinfo data:<br />
+<p> and finally there is a command to manually check the running kernel against updateinfo data:<br/>
  <i></i> yum updateinfo check-running-kernel </p>
 <dd>
 </dd><dt><code>fssnapshot</code> or <code>fssnap</code></dt>
-<dd>This command has a few sub-commands to act on the LVM data of the host, to list snapshots and to create and remove them. The simplest commands, to display information about the configured LVM snapshotable devices, are:<br />
- <i></i> yum fssnapshot [summary]<br />
- <i></i> yum fssnapshot list<br />
- <i></i> yum fssnapshot have-space<br />
- then you can create and delete snapshots using:<br />
- <i></i> yum fssnapshot create<br />
+<dd>This command has a few sub-commands to act on the LVM data of the host, to list snapshots and to create and remove them. The simplest commands, to display information about the configured LVM snapshotable devices, are:<br/>
+ <i></i> yum fssnapshot [summary]<br/>
+ <i></i> yum fssnapshot list<br/>
+ <i></i> yum fssnapshot have-space<br/>
+ then you can create and delete snapshots using:<br/>
+ <i></i> yum fssnapshot create<br/>
  <i></i> yum fssnapshot delete &lt;device(s)&gt; </dd>
 <p> Configuration Options: <code>fssnap_automatic_pre</code>, <code>fssnap_automatic_post</code>, <code>fssnap_automatic_keep</code>, <code>fssnap_percentage</code>, <code>fssnap_devices</code>, <code>fssnap_abort_on_errors</code></p>
 <dd>
 </dd><dt><code>fs</code></dt>
-<dd>This command has a few sub-commands to act on the filesystem data of the host, mainly for removing languages/documentation for minimal installs:<br />
- <i></i> yum fs filters<br />
- <i></i> yum fs filter languages en:es<br />
- <i></i> yum fs filter documentation<br />
- <i></i> yum fs refilter [package(s)]<br />
- <i></i> yum fs refilter-cleanup [package(s)]<br />
- <i></i> yum fs du [path]<br />
- <i></i> yum fs status [path]<br />
+<dd>This command has a few sub-commands to act on the filesystem data of the host, mainly for removing languages/documentation for minimal installs:<br/>
+ <i></i> yum fs filters<br/>
+ <i></i> yum fs filter languages en:es<br/>
+ <i></i> yum fs filter documentation<br/>
+ <i></i> yum fs refilter [package(s)]<br/>
+ <i></i> yum fs refilter-cleanup [package(s)]<br/>
+ <i></i> yum fs du [path]<br/>
+ <i></i> yum fs status [path]<br/>
  <i></i> yum fs diff [path] the first 3 being a simple interface to change yum.conf altering the tsflags and override_install_langs configurations. The refilter command is an optimized way of calling &quot;yum reinstall&quot; to reinstall the packages with the new filters applied. The refilter-cleanup command is needed because rpm doesn&#8217;t actually remove the files on reinstall, as it should. And the du/status/diff commands are included so you can easily see the space used/saved and any other changes.</dd>
 <dd>
 </dd><dt><code>check</code></dt>
@@ -228,10 +228,10 @@ swap -- group remove foo-grp -- group install bar-grp</pre>
 <dt><code>-h, &#8211;help</code></dt>
 <dd>Help; display a help message and then quit.</dd>
 <dt><code>-y, &#8211;assumeyes</code></dt>
-<dd>Assume yes; assume that the answer to any question which would be asked is yes.<br />
+<dd>Assume yes; assume that the answer to any question which would be asked is yes.<br/>
  Configuration Option: <code>assumeyes</code></dd>
 <dt><code>&#8211;assumeno</code></dt>
-<dd>Assume no; assume that the answer to any question which would be asked is no. This option overrides assumeyes, but is still subject to alwaysprompt.<br />
+<dd>Assume no; assume that the answer to any question which would be asked is no. This option overrides assumeyes, but is still subject to alwaysprompt.<br/>
  Configuration Option: <code>assumeno</code></dd>
 <dt><code>-c, &#8211;config=[config file]</code></dt>
 <dd>Specifies the config file location &#8211; can take HTTP and FTP URLs and local file paths. </dd>
@@ -240,13 +240,13 @@ swap -- group remove foo-grp -- group install bar-grp</pre>
 <dt><code>-v, &#8211;verbose</code></dt>
 <dd>Run with a lot of debugging output. </dd>
 <dt><code>-d, &#8211;debuglevel=[number]</code></dt>
-<dd>Sets the debugging level to [number] &#8211; turns up or down the amount of things that are printed. Practical range: 0 &#8211; 10<br />
+<dd>Sets the debugging level to [number] &#8211; turns up or down the amount of things that are printed. Practical range: 0 &#8211; 10<br/>
  Configuration Option: <code>debuglevel</code></dd>
 <dt><code>-e, &#8211;errorlevel=[number]</code></dt>
-<dd>Sets the error level to [number] Practical range 0 &#8211; 10. 0 means print only critical errors about which you must be told. 1 means print all errors, even ones that are not overly important. 1+ means print more errors (if any) -e 0 is good for cron jobs.<br />
+<dd>Sets the error level to [number] Practical range 0 &#8211; 10. 0 means print only critical errors about which you must be told. 1 means print all errors, even ones that are not overly important. 1+ means print more errors (if any) -e 0 is good for cron jobs.<br/>
  Configuration Option: <code>errorlevel</code></dd>
 <dt><code>&#8211;rpmverbosity=[name]</code></dt>
-<dd>Sets the debug level to [name] for rpm scriptlets. &#8216;info&#8217; is the default, other options are: &#8216;critical&#8217;, &#8217;emergency&#8217;, &#8216;error&#8217;, &#8216;warn&#8217; and &#8216;debug&#8217;.<br />
+<dd>Sets the debug level to [name] for rpm scriptlets. &#8216;info&#8217; is the default, other options are: &#8216;critical&#8217;, &#8217;emergency&#8217;, &#8216;error&#8217;, &#8216;warn&#8217; and &#8216;debug&#8217;.<br/>
  Configuration Option: <code>rpmverbosity</code></dd>
 <dt><code>-R, &#8211;randomwait=[time in minutes]</code></dt>
 <dd>Sets the maximum amount of time yum will wait before performing a command &#8211; it randomizes over the time.</dd>
@@ -257,16 +257,16 @@ swap -- group remove foo-grp -- group install bar-grp</pre>
 <dt><code>&#8211;showduplicates</code></dt>
 <dd>Doesn&#8217;t limit packages to their latest versions in the info, list and search commands (will also affect plugins which use the doPackageLists() API).</dd>
 <dt><code>&#8211;installroot=root</code></dt>
-<dd>Specifies an alternative installroot, relative to which all packages will be installed. Think of this like doing &quot;chroot &lt;root&gt; yum&quot; except using &#8211;installroot allows yum to work before the chroot is created. Note: You may also want to use the option &#8211;releasever=/ when creating the installroot as otherwise the $releasever value is taken from the rpmdb within the installroot (and thus. will be empty, before creation).<br />
+<dd>Specifies an alternative installroot, relative to which all packages will be installed. Think of this like doing &quot;chroot &lt;root&gt; yum&quot; except using &#8211;installroot allows yum to work before the chroot is created. Note: You may also want to use the option &#8211;releasever=/ when creating the installroot as otherwise the $releasever value is taken from the rpmdb within the installroot (and thus. will be empty, before creation).<br/>
  Configuration Option: <code>installroot</code></dd>
 <dt><code>&#8211;enablerepo=repoidglob</code></dt>
-<dd>Enables specific repositories by id or glob that have been disabled in the configuration file using the enabled=0 option.<br />
+<dd>Enables specific repositories by id or glob that have been disabled in the configuration file using the enabled=0 option.<br/>
  Configuration Option: <code>enabled</code></dd>
 <dt><code>&#8211;disablerepo=repoidglob</code></dt>
-<dd>Disables specific repositories by id or glob.<br />
+<dd>Disables specific repositories by id or glob.<br/>
  Configuration Option: <code>enabled</code></dd>
 <dt><code>&#8211;obsoletes</code></dt>
-<dd>This option only has affect for an update, it enables <code>yum</code>&#8216;s obsoletes processing logic. For more information see the <code>update</code> command above.<br />
+<dd>This option only has affect for an update, it enables <code>yum</code>&#8216;s obsoletes processing logic. For more information see the <code>update</code> command above.<br/>
  Configuration Option: <code>obsoletes</code></dd>
 <dt><code>-x, &#8211;exclude=package</code></dt>
 <dd>Exclude a specific package by name or glob from all repositories, so yum works as if that package was never in the repositories. This is commonly used so a package isn&#8217;t upgraded or installed accidentally, but can be used to remove packages in any way that &quot;yum list&quot; will show packages. </dd>
@@ -274,24 +274,24 @@ swap -- group remove foo-grp -- group install bar-grp</pre>
 <dt><code>&#8211;color=[always|auto|never]</code></dt>
 <dd>Display colorized output automatically, depending on the output terminal, always (using ANSI codes) or never. Note that some commands (Eg. list and info) will do a little extra work when color is enabled. Configuration Option: <code>color</code> </dd>
 <dt><code>&#8211;disableexcludes=[all|main|repoid]</code></dt>
-<dd>Disable the excludes defined in your config files. Takes one of three options:<br />
- all == disable all excludes<br />
- main == disable excludes defined in [main] in yum.conf<br />
+<dd>Disable the excludes defined in your config files. Takes one of three options:<br/>
+ all == disable all excludes<br/>
+ main == disable excludes defined in [main] in yum.conf<br/>
  repoid == disable excludes defined for that repo </dd>
 <dt><code>&#8211;disableincludes=[all|repoid]</code></dt>
-<dd>Disable the includes defined in your config files. Takes one of two options:<br />
- all == disable all includes<br />
+<dd>Disable the includes defined in your config files. Takes one of two options:<br/>
+ all == disable all includes<br/>
  repoid == disable includes defined for that repo </dd>
 <dt><code>&#8211;disableplugin=plugin</code></dt>
 <dd>Run with one or more plugins disabled, the argument is a comma separated list of wildcards to match against plugin names. </dd>
 <dt><code>&#8211;noplugins</code></dt>
-<dd>Run with all plugins disabled.<br />
+<dd>Run with all plugins disabled.<br/>
  Configuration Option: <code>plugins</code></dd>
 <dt><code>&#8211;nogpgcheck</code></dt>
-<dd>Run with GPG signature checking disabled.<br />
+<dd>Run with GPG signature checking disabled.<br/>
  Configuration Option: <code>gpgcheck</code></dd>
 <dt><code>&#8211;skip-broken</code></dt>
-<dd>Resolve depsolve problems by removing packages that are causing problems from the transaction.<br />
+<dd>Resolve depsolve problems by removing packages that are causing problems from the transaction.<br/>
  Configuration Option: <code>skip_broken</code> </dd>
 <dt><code>&#8211;releasever=version</code></dt>
 <dd>Pretend the current release version is the given string. This is very useful when combined with &#8211;installroot. You can also use &#8211;releasever=/ to take the releasever information from outside the installroot. Note that with the default upstream cachedir, of /var/cache/yum, using this option will corrupt your cache (and you can use $releasever in your cachedir configuration to stop this).</dd></dl>
@@ -352,16 +352,16 @@ swap -- group remove foo-grp -- group install bar-grp</pre>
 <h2>Specifying Package Names</h2>
 <p>A package can be referred to for install, update, remove, list, info etc with any of the following as well as globs of any of the following:</p>
 <dl>
-<dd><code>name</code><br />
- <code>name.arch</code><br />
- <code>name-ver</code><br />
- <code>name-ver-rel</code><br />
- <code>name-ver-rel.arch</code><br />
- <code>name-epoch:ver-rel.arch</code><br />
+<dd><code>name</code><br/>
+ <code>name.arch</code><br/>
+ <code>name-ver</code><br/>
+ <code>name-ver-rel</code><br/>
+ <code>name-ver-rel.arch</code><br/>
+ <code>name-epoch:ver-rel.arch</code><br/>
  <code>epoch:name-ver-rel.arch</code></dd>
-<dd>For example: <code>yum remove kernel-2.4.1-10.i686</code><br />
+<dd>For example: <code>yum remove kernel-2.4.1-10.i686</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>this will remove this specific kernel-ver-rel.arch.</dd>
-<dd>Or: <code>yum list available &#8216;foo*&#8217;</code><br />
+<dd>Or: <code>yum list available &#8216;foo*&#8217;</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>will list all available packages that match&nbsp;<wbr>&#8216;foo*&#8217;.&nbsp;<wbr>(The single quotes will keep your shell from expanding the globs.)</dd>
 <dd></dd></dl>
 <h2>Clean Options</h2>
@@ -427,7 +427,7 @@ swap -- group remove foo-grp -- group install bar-grp</pre>
 <p> 2. The global <code>plugins</code> option in /etc/yum.conf must be set to `1&#8242;. </p>
 <p> 3. A configuration file for the plugin must exist in /etc/yum/pluginconf.d/&lt;plugin_name&gt;.conf and the <code>enabled</code> setting in this file must set to `1&#8242;. The minimal content for such a configuration file is:</p>
 <dl>
-<dd>[main]<br />
+<dd>[main]<br/>
  enabled = 1</dd></dl>
 <p> See the <code>yum.conf(5)</code> man page for more information on plugin related configuration options.</p>
 <h2>Files</h2>

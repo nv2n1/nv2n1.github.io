@@ -16,7 +16,7 @@ pm_which - find installed modules
     Returns the path to the given module(s)
 </pre>
 
-<h2><font SIZE="-1">OPTIONS</font></h2>
+<h2>OPTIONS</h2>
 
  <pre><code>
 - q, --quiet Just print paths - p, --paths Just convert the module name into a relative path - a, --all Print all paths, not just the first one found - n, --namespace Print all modules in the given namespace - m Only print module names, not paths - V Show module version - I libpath Add a path to search(like perl - I) - d, --dump Dump paths that would be searched(@INC by default) - h, --help Print this message - v, --version Print version information - Read modules from stdin, one per line
@@ -124,7 +124,7 @@ $ pm_which - V MyModule MyModule - / path / to / MyModule.pm[1.00] $ pm_which - 
 
 <dl>
 <dt>*
-</dt><dd> 0 - Everything was <font SIZE="-1">OK</font>
+</dt><dd> 0 - Everything was OK
 </dd><dt>*
 </dt><dd> 1 - Initialisation failed (bad switches?)
 </dd><dt>*

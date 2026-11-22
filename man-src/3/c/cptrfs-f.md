@@ -10,7 +10,7 @@ description: "cptrfs.f –"
 <p>cptrfs.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cptrfs</code> (UPLO, N, NRHS, D, E, DF, EF, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
+<p>subroutine <code>cptrfs</code> (UPLO, N, NRHS, D, E, DF, EF, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br/>
  <i></i><code>CPTRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cptrfs (characterUPLO, integerN, integerNRHS, real, dimension( * )D, complex, dimension( * )E, real, dimension( * )DF, complex, dimension( * )EF, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldx, * )X, integerLDX, real, dimension( * )FERR, real, dimension( * )BERR, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

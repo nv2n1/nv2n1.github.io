@@ -10,48 +10,48 @@ description: "Globus Callback API –"
 
 <p> Globus Callback API &#8211; </p>
 <h3>Convenience Macros</h3>
-<p> #define <code>globus_callback_poll</code>(a)<br />
- <i>Poll the global callback space. </i><br />
- #define <code>globus_poll_blocking</code>()<br />
- <i>Blocking poll of the global callback space. </i><br />
- #define <code>globus_poll_nonblocking</code>()<br />
- <i>Nonblocking poll of the global callback space. </i><br />
- #define <code>globus_poll</code>()<br />
- <i>Nonblocking poll of the global callback space. </i><br />
- #define <code>globus_signal_poll</code>()<br />
- <i>Wake up callback polling thread. </i><br />
- #define <code>globus_callback_register_oneshot</code>(callback_handle,delay_time,callback_func,callback_user_arg)<br />
- <i>Register a oneshot function in the global callback space. </i><br />
- #define <code>globus_callback_register_periodic</code>(callback_handle,delay_time,period,callback_func,callback_user_arg)<br />
- <i>Register a periodic function in the global callback space. </i><br />
- #define <code>globus_callback_register_signal_handler</code>(signum,persist,callback_func,callback_user_arg)<br />
+<p> #define <code>globus_callback_poll</code>(a)<br/>
+ <i>Poll the global callback space. </i><br/>
+ #define <code>globus_poll_blocking</code>()<br/>
+ <i>Blocking poll of the global callback space. </i><br/>
+ #define <code>globus_poll_nonblocking</code>()<br/>
+ <i>Nonblocking poll of the global callback space. </i><br/>
+ #define <code>globus_poll</code>()<br/>
+ <i>Nonblocking poll of the global callback space. </i><br/>
+ #define <code>globus_signal_poll</code>()<br/>
+ <i>Wake up callback polling thread. </i><br/>
+ #define <code>globus_callback_register_oneshot</code>(callback_handle,delay_time,callback_func,callback_user_arg)<br/>
+ <i>Register a oneshot function in the global callback space. </i><br/>
+ #define <code>globus_callback_register_periodic</code>(callback_handle,delay_time,period,callback_func,callback_user_arg)<br/>
+ <i>Register a periodic function in the global callback space. </i><br/>
+ #define <code>globus_callback_register_signal_handler</code>(signum,persist,callback_func,callback_user_arg)<br/>
  <i>Register a signal handler in the global callback space. </i></p>
 <h3>Callback Prototypes</h3>
-<p> typedef void(* <code>globus_callback_func_t</code> )(void *user_arg)<br />
+<p> typedef void(* <code>globus_callback_func_t</code> )(void *user_arg)<br/>
  <i>Globus callback prototype. </i></p>
 <h3>Oneshot Callbacks</h3>
-<p> <code>globus_result_t</code> <code>globus_callback_space_register_oneshot</code> (<code>globus_callback_handle_t</code> *callback_handle, const globus_reltime_t *delay_time, <code>globus_callback_func_t</code> callback_func, void *callback_user_arg, <code>globus_callback_space_t</code> space)<br />
+<p> <code>globus_result_t</code> <code>globus_callback_space_register_oneshot</code> (<code>globus_callback_handle_t</code> *callback_handle, const globus_reltime_t *delay_time, <code>globus_callback_func_t</code> callback_func, void *callback_user_arg, <code>globus_callback_space_t</code> space)<br/>
  <i>Register a oneshot some delay from now. </i></p>
 <h3>Periodic Callbacks</h3>
-<p> <code>globus_result_t</code> <code>globus_callback_space_register_periodic</code> (<code>globus_callback_handle_t</code> *callback_handle, const globus_reltime_t *delay_time, const globus_reltime_t *period, <code>globus_callback_func_t</code> callback_func, void *callback_user_arg, <code>globus_callback_space_t</code> space)<br />
- <i>Register a periodic callback. </i><br />
- <code>globus_result_t</code> <code>globus_callback_unregister</code> (<code>globus_callback_handle_t</code> callback_handle, <code>globus_callback_func_t</code> unregister_callback, void *unreg_arg, <code>globus_bool_t</code> *active)<br />
- <i>Unregister a callback. </i><br />
- <code>globus_result_t</code> <code>globus_callback_adjust_oneshot</code> (<code>globus_callback_handle_t</code> callback_handle, const globus_reltime_t *new_delay)<br />
- <i>Adjust the delay of a oneshot callback. </i><br />
- <code>globus_result_t</code> <code>globus_callback_adjust_period</code> (<code>globus_callback_handle_t</code> callback_handle, const globus_reltime_t *new_period)<br />
+<p> <code>globus_result_t</code> <code>globus_callback_space_register_periodic</code> (<code>globus_callback_handle_t</code> *callback_handle, const globus_reltime_t *delay_time, const globus_reltime_t *period, <code>globus_callback_func_t</code> callback_func, void *callback_user_arg, <code>globus_callback_space_t</code> space)<br/>
+ <i>Register a periodic callback. </i><br/>
+ <code>globus_result_t</code> <code>globus_callback_unregister</code> (<code>globus_callback_handle_t</code> callback_handle, <code>globus_callback_func_t</code> unregister_callback, void *unreg_arg, <code>globus_bool_t</code> *active)<br/>
+ <i>Unregister a callback. </i><br/>
+ <code>globus_result_t</code> <code>globus_callback_adjust_oneshot</code> (<code>globus_callback_handle_t</code> callback_handle, const globus_reltime_t *new_delay)<br/>
+ <i>Adjust the delay of a oneshot callback. </i><br/>
+ <code>globus_result_t</code> <code>globus_callback_adjust_period</code> (<code>globus_callback_handle_t</code> callback_handle, const globus_reltime_t *new_period)<br/>
  <i>Adjust the period of a periodic callback. </i></p>
 <h3>Callback Polling</h3>
-<p> void <code>globus_callback_space_poll</code> (const globus_abstime_t *timestop, <code>globus_callback_space_t</code> space)<br />
- <i>Poll for ready callbacks. </i><br />
- void <code>globus_callback_signal_poll</code> ()<br />
+<p> void <code>globus_callback_space_poll</code> (const globus_abstime_t *timestop, <code>globus_callback_space_t</code> space)<br/>
+ <i>Poll for ready callbacks. </i><br/>
+ void <code>globus_callback_signal_poll</code> ()<br/>
  <i>Signal the poll. </i></p>
 <h3>Miscellaneous</h3>
-<p> <code>globus_bool_t</code> <code>globus_callback_get_timeout</code> (globus_reltime_t *time_left)<br />
- <i>Get the amount of time left in a callback. </i><br />
- <code>globus_bool_t</code> <code>globus_callback_has_time_expired</code> ()<br />
- <i>See if there is remaining time in a callback. </i><br />
- <code>globus_bool_t</code> <code>globus_callback_was_restarted</code> ()<br />
+<p> <code>globus_bool_t</code> <code>globus_callback_get_timeout</code> (globus_reltime_t *time_left)<br/>
+ <i>Get the amount of time left in a callback. </i><br/>
+ <code>globus_bool_t</code> <code>globus_callback_has_time_expired</code> ()<br/>
+ <i>See if there is remaining time in a callback. </i><br/>
+ <code>globus_bool_t</code> <code>globus_callback_was_restarted</code> ()<br/>
  <i>See if a callback has been restarted. </i></p>
 <h2>Detailed Description</h2>
 <h2>Macro Definition Documentation</h2>
@@ -132,7 +132,7 @@ description: "Globus Callback API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_handle</i> the handle received from a <code>globus_callback_space_register_oneshot()</code> call<br />
+</dt><dd> <i>callback_handle</i> the handle received from a <code>globus_callback_space_register_oneshot()</code> call<br/>
  <i>new_delay</i> The new delay from now. If NULL, then callback will be fired as soon as possible.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -155,7 +155,7 @@ description: "Globus Callback API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_handle</i> the handle received from a <code>globus_callback_space_register_periodic()</code> call<br />
+</dt><dd> <i>callback_handle</i> the handle received from a <code>globus_callback_space_register_periodic()</code> call<br/>
  <i>new_period</i> The new period. If NULL or globus_i_reltime_infinity, then callback will be &#8216;suspended&#8217; as soon as the last running instance of it returns.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -217,7 +217,7 @@ description: "Globus Callback API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>timestop</i> The time to block until. If this is NULL or less than the cuurent time, an attempt to fire only ready callbacks is made (no blocking).<br />
+</dt><dd> <i>timestop</i> The time to block until. If this is NULL or less than the cuurent time, an attempt to fire only ready callbacks is made (no blocking).<br/>
  <i>space</i> The callback space to poll. Note: regardless of what space is passed here, the &#8216;global&#8217; space is also always polled.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -235,10 +235,10 @@ description: "Globus Callback API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_handle</i> Storage for a handle. This may be NULL. If it is NOT NULL, you must unregister the callback to reclaim resources.<br />
- <i>delay_time</i> The relative time from now to fire this callback. If NULL, will fire as soon as possible<br />
- <i>callback_func</i> the user func to call<br />
- <i>callback_user_arg</i> user arg that will be passed to callback<br />
+</dt><dd> <i>callback_handle</i> Storage for a handle. This may be NULL. If it is NOT NULL, you must unregister the callback to reclaim resources.<br/>
+ <i>delay_time</i> The relative time from now to fire this callback. If NULL, will fire as soon as possible<br/>
+ <i>callback_func</i> the user func to call<br/>
+ <i>callback_user_arg</i> user arg that will be passed to callback<br/>
  <i>space</i> The space with which to register this callback</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -260,11 +260,11 @@ description: "Globus Callback API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_handle</i> Storage for a handle. This may be NULL. If it is NOT NULL, you must cancel the periodic to reclaim resources.<br />
- <i>delay_time</i> The relative time from now to fire this callback. If NULL, will fire the first callback as soon as possible<br />
- <i>period</i> The relative period of this callback<br />
- <i>callback_func</i> the user func to call<br />
- <i>callback_user_arg</i> user arg that will be passed to callback<br />
+</dt><dd> <i>callback_handle</i> Storage for a handle. This may be NULL. If it is NOT NULL, you must cancel the periodic to reclaim resources.<br/>
+ <i>delay_time</i> The relative time from now to fire this callback. If NULL, will fire the first callback as soon as possible<br/>
+ <i>period</i> The relative period of this callback<br/>
+ <i>callback_func</i> the user func to call<br/>
+ <i>callback_user_arg</i> user arg that will be passed to callback<br/>
  <i>space</i> The space with which to register this callback</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -289,9 +289,9 @@ description: "Globus Callback API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>callback_handle</i> the handle received from a globus_callback_space_register_*() call<br />
- <i>unregister_callback</i> the function to call when the callback has been canceled and there are no running instances of it. This will be delivered to the same space used in the register call.<br />
- <i>unreg_arg</i> user arg that will be passed to the unregister callback<br />
+</dt><dd> <i>callback_handle</i> the handle received from a globus_callback_space_register_*() call<br/>
+ <i>unregister_callback</i> the function to call when the callback has been canceled and there are no running instances of it. This will be delivered to the same space used in the register call.<br/>
+ <i>unreg_arg</i> user arg that will be passed to the unregister callback<br/>
  <i>active</i> storage for an indication of whether the callback was running when this call was made</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

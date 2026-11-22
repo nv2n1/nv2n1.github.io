@@ -13,10 +13,10 @@ description: "zmq_msg_init_size – initialise 0MQ message of a specified size"
 <h2>Description</h2>
 <p>The <i>zmq_msg_init_size()</i> function shall allocate any resources required to store a message <i>size</i> bytes long and initialise the message object referenced by <i>msg</i> to represent the newly allocated message. The implementation shall choose whether to store message content on the stack (small messages) or on the heap (large messages). For performance reasons <i>zmq_msg_init_size()</i> shall not clear the message data.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  Never access <i>zmq_msg_t</i> members directly, instead always use the <i>zmq_msg</i> family of functions. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  The functions <i>zmq_msg_init()</i>, <i>zmq_msg_init_data()</i> and <i>zmq_msg_init_size()</i> are mutually exclusive. Never initialize the same <i>zmq_msg_t</i> twice. </dd>
 <h2>Return Value</h2>
 <p>The <i>zmq_msg_init_size()</i> function shall return zero if successful. Otherwise it shall return -1 and set <i>errno</i> to one of the values defined below.</p>

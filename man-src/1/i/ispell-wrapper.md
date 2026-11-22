@@ -28,12 +28,12 @@ ispell - wrapper[--emacs = name][--language = regexp][--dry - run][ispell option
 <dt>2)</dt>
 <dd> By matching the regexp given in option &#8211;language to the list of installed languages in the system.</dd>
 <dt>3)</dt>
-<dd> By matching the regexp stored in the environment variable <font SIZE="-1">ISPELLDEFAULT</font> to the list of installed languages in the system.</dd>
+<dd> By matching the regexp stored in the environment variable ISPELLDEFAULT to the list of installed languages in the system.</dd>
 <dt>4)</dt>
 <dd> By using the value stored in the user-specific file ~/.ispell-default (use <code><a href="/docs/linux/man/1-select-default-iwrap/">select-default-iwrap</a></code>(1) to set it).</dd>
 <dt>5)</dt>
 <dd> By using the value stored in the site-wide file /etc/dictionaries-common/ispell-default (use <code><a href="/docs/linux/man/8-select-default-ispell/">select-default-ispell</a></code>(8) as superuser to set it).</dd></dl>
-<p> Note: regexp matches are case-insensitive and the <font SIZE="-1">ISO-8859-1</font> special characters are transformed into their <font SIZE="-1">ASCII</font> equivalents. German ess-zet is equivalent to the character &#8220;s&#8221; and the ae ligature to the character &#8220;e&#8221;.</p>
+<p> Note: regexp matches are case-insensitive and the ISO-8859-1 special characters are transformed into their ASCII equivalents. German ess-zet is equivalent to the character &#8220;s&#8221; and the ae ligature to the character &#8220;e&#8221;.</p>
 <h2>EXAMPLE</h2>
 <p> Let us say that the following dictionaries are installed in the system (as appearing in the Debconf question at installation time): </p>
 <pre>
@@ -42,15 +42,15 @@ ispell - wrapper[--emacs = name][--language = regexp][--dry - run][ispell option
     portugu&ecirc;s (European Portuguese)
     portugu&ecirc;s brasileiro (Brazilian Portuguese)
 </pre>
-<p> Choosing the regexp (either in the &#8211;language option or in the environment variable <font SIZE="-1">ISPELLDEFAULT</font>) to be &#8220;span&#8221; will yield an error, since two languages will match (&#8220;castellano&#8221; and &#8220;castellano8&#8221;). However, if the regexp is &#8220;span.*8&#8221;, the language &#8220;castellano8 (Spanish 8 bit)&#8221; will be chosen.</p>
+<p> Choosing the regexp (either in the &#8211;language option or in the environment variable ISPELLDEFAULT) to be &#8220;span&#8221; will yield an error, since two languages will match (&#8220;castellano&#8221; and &#8220;castellano8&#8221;). However, if the regexp is &#8220;span.*8&#8221;, the language &#8220;castellano8 (Spanish 8 bit)&#8221; will be chosen.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1">ISPELLDEFAULT</font></dt>
+<dt>ISPELLDEFAULT</dt>
 <dd> Regexp that matches the name of the default language to use, if no &#8211;language option is given.</dd></dl>
 <h2>FILES</h2>
 <dl>
 <dt>$HOME/.ispell-default</dt>
-<dd> Contains the name of the language to use, if no &#8211;language option is given or if the <font SIZE="-1">ISPELLDEFAULT</font> environment variable is not set. This is a user-specific choice.</dd>
+<dd> Contains the name of the language to use, if no &#8211;language option is given or if the ISPELLDEFAULT environment variable is not set. This is a user-specific choice.</dd>
 <dt>/etc/dictionaries-common/ispell-default</dt>
 <dd> Name of the language to use when everything above is not set. This is a system-wide setting.</dd></dl>
 <h2>SEE ALSO</h2>

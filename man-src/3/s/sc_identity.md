@@ -14,7 +14,7 @@ description: "sc::Identity –"
 #include &lt;identity.h&gt;</code></pre>
 <p> Inherited by <code>sc::ClassDesc</code>, and <code>sc::RefCount</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>Identifier</code> <code>identifier</code> ()<br />
+<p><code>Identifier</code> <code>identifier</code> ()<br/>
  <i>Return the </i><code>Identifier</code> for this argument.</p>
 <h2>Detailed Description</h2>
 <p><code>Identity</code> gives objects a unique identity and ordering relationship relative to all other objects. </p>

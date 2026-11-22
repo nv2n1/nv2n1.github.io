@@ -37,9 +37,9 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the ntlm v1 key<br />
- <i>len</i> length of key<br />
- <i>session</i> generated session nonce, should be freed with <code>heim_ntlm_free_buf()</code>.<br />
+</dt><dd> <i>key</i> the ntlm v1 key<br/>
+ <i>len</i> length of key<br/>
+ <i>session</i> generated session nonce, should be freed with <code>heim_ntlm_free_buf()</code>.<br/>
  <i>master</i> calculated session master key, should be freed with <code>heim_ntlm_free_buf()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -50,10 +50,10 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the NTLMv2 key<br />
- <i>len</i> length of key<br />
- <i>blob</i> the NTLMv2 &#8216;blob&#8217;<br />
- <i>session</i> generated session nonce, should be freed with <code>heim_ntlm_free_buf()</code>.<br />
+</dt><dd> <i>key</i> the NTLMv2 key<br/>
+ <i>len</i> length of key<br/>
+ <i>blob</i> the NTLMv2 &#8216;blob&#8217;<br/>
+ <i>session</i> generated session nonce, should be freed with <code>heim_ntlm_free_buf()</code>.<br/>
  <i>master</i> calculated session master key, should be freed with <code>heim_ntlm_free_buf()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -64,13 +64,13 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the ntlm key<br />
- <i>len</i> length of key<br />
- <i>username</i> name of the user, as sent in the message, assumed to be in UTF8.<br />
- <i>target</i> the name of the target, assumed to be in UTF8.<br />
- <i>serverchallenge</i> challenge as sent by the server in the type2 message.<br />
- <i>infotarget</i> infotarget as sent by the server in the type2 message.<br />
- <i>ntlmv2</i> calculated session key<br />
+</dt><dd> <i>key</i> the ntlm key<br/>
+ <i>len</i> length of key<br/>
+ <i>username</i> name of the user, as sent in the message, assumed to be in UTF8.<br/>
+ <i>target</i> the name of the target, assumed to be in UTF8.<br/>
+ <i>serverchallenge</i> challenge as sent by the server in the type2 message.<br/>
+ <i>infotarget</i> infotarget as sent by the server in the type2 message.<br/>
+ <i>ntlmv2</i> calculated session key<br/>
  <i>answer</i> ntlm response answer, should be freed with <code>heim_ntlm_free_buf()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -81,9 +81,9 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the ntlm v1 key<br />
- <i>len</i> length of key<br />
- <i>challenge</i> sent by the server<br />
+</dt><dd> <i>key</i> the ntlm v1 key<br/>
+ <i>len</i> length of key<br/>
+ <i>challenge</i> sent by the server<br/>
  <i>answer</i> calculated answer, should be freed with <code>heim_ntlm_free_buf()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -95,13 +95,13 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the ntlm key<br />
- <i>len</i> length of key<br />
- <i>username</i> name of the user, as sent in the message, assumed to be in UTF8.<br />
- <i>target</i> the name of the target, assumed to be in UTF8.<br />
- <i>serverchallenge</i> challenge as sent by the server in the type2 message.<br />
- <i>infotarget</i> infotarget as sent by the server in the type2 message.<br />
- <i>ntlmv2</i> calculated session key<br />
+</dt><dd> <i>key</i> the ntlm key<br/>
+ <i>len</i> length of key<br/>
+ <i>username</i> name of the user, as sent in the message, assumed to be in UTF8.<br/>
+ <i>target</i> the name of the target, assumed to be in UTF8.<br/>
+ <i>serverchallenge</i> challenge as sent by the server in the type2 message.<br/>
+ <i>infotarget</i> infotarget as sent by the server in the type2 message.<br/>
+ <i>ntlmv2</i> calculated session key<br/>
  <i>answer</i> ntlm response answer, should be freed with <code>heim_ntlm_free_buf()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -113,8 +113,8 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> input data buffer with the encode NTLM targetinfo message<br />
- <i>ucs2</i> if the strings should be encoded with ucs2 (selected by flag in message).<br />
+</dt><dd> <i>data</i> input data buffer with the encode NTLM targetinfo message<br/>
+ <i>ucs2</i> if the strings should be encoded with ucs2 (selected by flag in message).<br/>
  <i>ti</i> the decoded target info, should be freed with <code>heim_ntlm_free_targetinfo()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -126,8 +126,8 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ti</i> the ntlm_targetinfo message to encode.<br />
- <i>ucs2</i> ignored<br />
+</dt><dd> <i>ti</i> the ntlm_targetinfo message to encode.<br/>
+ <i>ucs2</i> ignored<br/>
  <i>data</i> is the return buffer with the encoded message, should be freed with <code>heim_ntlm_free_buf()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -139,7 +139,7 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>type1</i> the <code>ntlm_type1</code> message to encode.<br />
+</dt><dd> <i>type1</i> the <code>ntlm_type1</code> message to encode.<br/>
  <i>data</i> is the return buffer with the encoded message, should be freed with <code>heim_ntlm_free_buf()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -151,7 +151,7 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>type2</i> the <code>ntlm_type2</code> message to encode.<br />
+</dt><dd> <i>type2</i> the <code>ntlm_type2</code> message to encode.<br/>
  <i>data</i> is the return buffer with the encoded message, should be freed with <code>heim_ntlm_free_buf()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -163,7 +163,7 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>type3</i> the <code>ntlm_type3</code> message to encode.<br />
+</dt><dd> <i>type3</i> the <code>ntlm_type3</code> message to encode.<br/>
  <i>data</i> is the return buffer with the encoded message, should be freed with <code>heim_ntlm_free_buf()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -210,8 +210,8 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>baseKey</i> the sessionBaseKey<br />
- <i>encryptedSession</i> encrypted session, type3.session field.<br />
+</dt><dd> <i>baseKey</i> the sessionBaseKey<br/>
+ <i>encryptedSession</i> encrypted session, type3.session field.<br/>
  <i>session</i> generated session nonce, should be freed with <code>heim_ntlm_free_buf()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -222,7 +222,7 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>password</i> password to calcute the key for.<br />
+</dt><dd> <i>password</i> password to calcute the key for.<br/>
  <i>key</i> calcuted key, should be freed with <code>heim_ntlm_free_buf()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -234,11 +234,11 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the ntlm key<br />
- <i>len</i> length of key<br />
- <i>username</i> name of the user, as sent in the message, assumed to be in UTF8.<br />
- <i>target</i> the name of the target, assumed to be in UTF8.<br />
- <i>upper_case_target</i> upper case the target, should not be used only for legacy systems<br />
+</dt><dd> <i>key</i> the ntlm key<br/>
+ <i>len</i> length of key<br/>
+ <i>username</i> name of the user, as sent in the message, assumed to be in UTF8.<br/>
+ <i>target</i> the name of the target, assumed to be in UTF8.<br/>
+ <i>upper_case_target</i> upper case the target, should not be used only for legacy systems<br/>
  <i>ntlmv2</i> the ntlmv2 session key</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -249,14 +249,14 @@ description: "Heimdal NTLM library –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the ntlm key<br />
- <i>len</i> length of key<br />
- <i>username</i> name of the user, as sent in the message, assumed to be in UTF8.<br />
- <i>target</i> the name of the target, assumed to be in UTF8.<br />
- <i>now</i> the time now (0 if the library should pick it up itself)<br />
- <i>serverchallenge</i> challenge as sent by the server in the type2 message.<br />
- <i>answer</i> ntlm response answer, should be freed with <code>heim_ntlm_free_buf()</code>.<br />
- <i>infotarget</i> infotarget as sent by the server in the type2 message.<br />
+</dt><dd> <i>key</i> the ntlm key<br/>
+ <i>len</i> length of key<br/>
+ <i>username</i> name of the user, as sent in the message, assumed to be in UTF8.<br/>
+ <i>target</i> the name of the target, assumed to be in UTF8.<br/>
+ <i>now</i> the time now (0 if the library should pick it up itself)<br/>
+ <i>serverchallenge</i> challenge as sent by the server in the type2 message.<br/>
+ <i>answer</i> ntlm response answer, should be freed with <code>heim_ntlm_free_buf()</code>.<br/>
+ <i>infotarget</i> infotarget as sent by the server in the type2 message.<br/>
  <i>ntlmv2</i> calculated session key</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

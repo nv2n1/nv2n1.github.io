@@ -18,19 +18,19 @@ description: "std::experimental::filesystem::path::operator= – std::experiment
     (2)(filesystem TS)
         path &amp;
         operator=(const Source &amp;source);</code></pre>
-<p>1) Replaces the contents of *this with a copy of the contents of p.<br />
-2) Replaces the contents of *this with p, possibly using move semantics: p is left in valid, but unspecified state.<br />
+<p>1) Replaces the contents of *this with a copy of the contents of p.<br/>
+2) Replaces the contents of *this with p, possibly using move semantics: p is left in valid, but unspecified state.<br/>
 3) Replaces the contents of *this with a new path value constructed from source as if by overload <code>(4)</code> of the path_constructor. Equivalent to assign(source). </p>
 <h2>Parameters</h2>
-<p>p &#8211; a path to assign<br />
+<p>p &#8211; a path to assign<br/>
 source &#8211; a std::basic_string, pointer to a null-terminated character/wide character string, or an input iterator that points to a null-terminated character/wide character sequence. The character type must be one of char, char16_t, char32_t, wchar_t</p>
 <h2>Return value</h2>
 <p>*this </p>
 <h2>Exceptions</h2>
-<p>1) <i>(none)</i><br />
-2)<br />
-noexcept specification:<br />
-noexcept<br />
+<p>1) <i>(none)</i><br/>
+2)<br/>
+noexcept specification:<br/>
+noexcept<br/>
 3) <i>(none)</i></p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -45,7 +45,7 @@ int main()
 }
 </code></pre>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;assigns contents<br />
-assign <i>(public member function)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constructs a path<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;assigns contents<br/>
+assign <i>(public member function)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constructs a path<br/>
 constructor <i>(public member function)</i> </p>

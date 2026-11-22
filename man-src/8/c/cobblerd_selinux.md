@@ -179,13 +179,13 @@ description: "cobblerd_selinux – Security Enhanced Linux Policy for the cobble
 <dl>
 <dt>Allow cobblerd servers to read the /var/cobblerd directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_t &quot;/var/cobblerd(/.*)?&quot;</code><br />
+<p> <code>semanage fcontext -a -t public_content_t &quot;/var/cobblerd(/.*)?&quot;</code><br/>
  <code>restorecon -F -R -v /var/cobblerd</code></p>
 <dl>
 <dt>Allow cobblerd servers to read and write /var/cobblerd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the cobblerd_anon_write boolean.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/cobblerd/incoming(/.*)?&quot;</code><br />
- <code>restorecon -F -R -v /var/cobblerd/incoming</code><br />
+<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/cobblerd/incoming(/.*)?&quot;</code><br/>
+ <code>restorecon -F -R -v /var/cobblerd/incoming</code><br/>
  <code>setsebool -P cobblerd_anon_write 1</code> </p>
 <p> If you want to determine whether Cobbler can modify public files used for public file transfer services., you must turn on the cobbler_anon_write boolean. </p>
 <p> <code>setsebool -P cobbler_anon_write 1</code></p>

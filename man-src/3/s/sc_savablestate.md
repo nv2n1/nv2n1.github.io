@@ -32,7 +32,7 @@ Like restore_state, but keyword is used to override values while restoring.
 static SavableState * dir_restore_state (StateIn &amp;si, const char *objectname, const char *keyword=0)
 Protected Member Functions</code></pre>
 <p> <code>SavableState</code> (const <code>SavableState</code> &amp;) </p>
-<p> <code>SavableState</code> (<code>StateIn</code> &amp;)<br />
+<p> <code>SavableState</code> (<code>StateIn</code> &amp;)<br/>
  <i>Each derived class </i><code>StateIn</code> CTOR handles the restore corresponding to calling save_object_state, save_vbase_state, and save_data_state listed above.</p>
 <h2>Detailed Description</h2>
 <p>Base class for objects that can save/restore state.</p>

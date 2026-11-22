@@ -53,7 +53,7 @@ description: "acpid – Advanced Configuration and Power Interface event daemon"
 <dd>This option defines the pseudo-action which tells <code>acpid</code> to abort all processing of an event, including client notifications. Default is <i>&lt;drop&gt;</i>.</dd>
 <dt><code>-t</code><i></i>, <code>&#8211;tpmutefix</code></dt>
 <dd>This option enables special handling of the mute button for certain ThinkPad models with mute LEDs that get out of sync with the mute state when the mute button is held down. With this option, the mute button will generate the following events in sync with the number of presses (and, by extension, the state of the LED):</dd>
-<dd>button/mute MUTE (key pressed) K<br />
+<dd>button/mute MUTE (key pressed) K<br/>
  button/mute MUTE (key released) K</dd>
 <dt><code>-v</code><i></i>, <code>&#8211;version</code></dt>
 <dd>Print version information and exit.</dd>
@@ -77,11 +77,11 @@ action=/etc/acpi/power.sh &quot;%e&quot;</code></pre>
 <h2>Dependencies</h2>
 <p><code>acpid</code> should work on any linux kernel released since 2003.</p>
 <h2>Files</h2>
-<p><code>/proc/acpi/event</code><br />
- <code>/dev/input/event*</code><br />
- <code>/etc/acpi/</code><br />
- <code>/var/run/acpid.socket</code><br />
- <code>/var/run/acpid.pid</code><br />
+<p><code>/proc/acpi/event</code><br/>
+ <code>/dev/input/event*</code><br/>
+ <code>/etc/acpi/</code><br/>
+ <code>/var/run/acpid.socket</code><br/>
+ <code>/var/run/acpid.pid</code><br/>
  <code>/var/lock/acpid</code></p>
 <h2>Bugs</h2>
 <p>There are no known bugs. To file bug reports, see <code>PROJECT WEBSITE</code> below.</p>
@@ -90,6 +90,6 @@ action=/etc/acpi/power.sh &quot;%e&quot;</code></pre>
 <h2>Project Website</h2>
 <p><a rel="nofollow" href="http://sourceforge.net/projects/acpid2/">http://sourceforge.net/projects/acpid2/</a></p>
 <h2>Authors</h2>
-<p>Ted Felix &lt;ted [at] tedfelix.com&gt;<br />
- Tim Hockin &lt;thockin [at] hockin.org&gt;<br />
+<p>Ted Felix &lt;ted [at] tedfelix.com&gt;<br/>
+ Tim Hockin &lt;thockin [at] hockin.org&gt;<br/>
  Andrew Henroid</p>

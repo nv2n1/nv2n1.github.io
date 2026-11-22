@@ -10,7 +10,7 @@ description: "slaisnan.f –"
 <p>slaisnan.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>LOGICAL function <code>slaisnan</code> (SIN1, SIN2)<br />
+<p>LOGICAL function <code>slaisnan</code> (SIN1, SIN2)<br/>
  <i></i><code>SLAISNAN</code> tests input for NaN by comparing two arguments for inequality.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>LOGICAL function slaisnan (realSIN1, realSIN2)</h3>

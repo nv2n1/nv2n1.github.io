@@ -7,11 +7,11 @@ url: "/docs/linux/man/3-pj_init/"
 description: "pj_init – initialize cartographic projection pj_init_plus – initialize cartographic projection pj_fwd – forward cartographic projection pj_inv – inverse cartographic projection pj_transform – trans..."
 ---
 
-<p>pj_init &#8211; initialize cartographic projection<br />
- pj_init_plus &#8211; initialize cartographic projection<br />
- pj_fwd &#8211; forward cartographic projection<br />
- pj_inv &#8211; inverse cartographic projection<br />
- pj_transform &#8211; transform between coordinate systems<br />
+<p>pj_init &#8211; initialize cartographic projection<br/>
+ pj_init_plus &#8211; initialize cartographic projection<br/>
+ pj_fwd &#8211; forward cartographic projection<br/>
+ pj_inv &#8211; inverse cartographic projection<br/>
+ pj_transform &#8211; transform between coordinate systems<br/>
  pj_free &#8211; de-initialize projection</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;proj_api.h&gt;
@@ -52,7 +52,7 @@ main(int argc, char **argv) {
 <h2>Library</h2>
 <p>libproj.a &#8211; library of projections and support procedures</p>
 <h2>See Also</h2>
-<p><code><a rel="nofollow" href="http://proj.osgeo.org/ProjAPI,">http://proj.osgeo.org/ProjAPI,</a> proj(1U),</code><br />
+<p><code><a rel="nofollow" href="http://proj.osgeo.org/ProjAPI,">http://proj.osgeo.org/ProjAPI,</a> proj(1U),</code><br/>
  <i>Cartographic Projection Procedures for the UNIX Environment&#8212;A User&#8217;s Manual,</i> (Evenden, 1990, Open-file report 90-284).</p>
 <h2>Home Page</h2>
 <p><a rel="nofollow" href="http://proj.osgeo.org">http://proj.osgeo.org</a></p>

@@ -22,50 +22,50 @@ description: "g_sorient – analyzes solvent orientation around solutes"
 <p> <code> -co</code>: the sum over all solvent molecules within distance r of cos(theta1) and 3cos2(theta2)-1 as a function of r. </p>
 <p> <code> -rc</code>: the distribution of the solvent molecules as a function of r</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br/>
 &nbsp;<wbr>Structure+mass(db): tpr tpb tpa gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-o</code><i> sori.xvg</i> <code>Output</code><br />
+<p> <code>-o</code><i> sori.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-no</code><i> snor.xvg</i> <code>Output</code><br />
+<p> <code>-no</code><i> snor.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-ro</code><i> sord.xvg</i> <code>Output</code><br />
+<p> <code>-ro</code><i> sord.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-co</code><i> scum.xvg</i> <code>Output</code><br />
+<p> <code>-co</code><i> scum.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-rc</code><i> scount.xvg</i> <code>Output</code><br />
+<p> <code>-rc</code><i> scount.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-[no]com</code><i>no </i><br />
+<p> <code>-[no]com</code><i>no </i><br/>
 &nbsp;<wbr>Use the center of mass as the reference postion </p>
-<p> <code>-[no]v23</code><i>no </i><br />
+<p> <code>-[no]v23</code><i>no </i><br/>
 &nbsp;<wbr>Use the vector between atoms 2 and 3 </p>
-<p> <code>-rmin</code><i> real</i><code> 0 </code><br />
+<p> <code>-rmin</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Minimum distance&nbsp;<wbr>(nm) </p>
-<p> <code>-rmax</code><i> real</i><code> 0.5 </code><br />
+<p> <code>-rmax</code><i> real</i><code> 0.5 </code><br/>
 &nbsp;<wbr>Maximum distance&nbsp;<wbr>(nm) </p>
-<p> <code>-cbin</code><i> real</i><code> 0.02 </code><br />
+<p> <code>-cbin</code><i> real</i><code> 0.02 </code><br/>
 &nbsp;<wbr>Binwidth for the cosine </p>
-<p> <code>-rbin</code><i> real</i><code> 0.02 </code><br />
+<p> <code>-rbin</code><i> real</i><code> 0.02 </code><br/>
 &nbsp;<wbr>Binwidth for r&nbsp;<wbr>(nm) </p>
-<p> <code>-[no]pbc</code><i>no </i><br />
+<p> <code>-[no]pbc</code><i>no </i><br/>
 &nbsp;<wbr>Check PBC for the center of mass calculation. Only necessary when your reference group consists of several molecules. </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

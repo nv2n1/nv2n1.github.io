@@ -30,9 +30,9 @@ description: "Enchant – a spellchecker"
 <h2>ENCHANT ORDERING FILE</h2>
 <p> Enchant has a global and a per-user ordering file named <i>enchant.ordering</i>. It lets the user specify which spelling backend to use for individual languages in the case when you care which backend gets used. The global file is located in <i>$(datadir)/enchant</i> and the per-user file is located in <i>~/.enchant</i>. The per-user file takes precedence, if found. </p>
 <p> The ordering file takes the form language_tag:&lt;comma-separated list of spelling backends&gt;. I am currently aware of the following backends: aspell, myspell, ispell, uspell, hspell, voikko, and zemberek. &#8216;*&#8217; is used to mean &quot;use this ordering for all languages, unless instructed otherwise.&quot; For example: </p>
-<p> *:aspell,myspell,ispell<br />
- en:aspell,myspell,ispell<br />
- en_UK:myspell,aspell,ispell<br />
+<p> *:aspell,myspell,ispell<br/>
+ en:aspell,myspell,ispell<br/>
+ en_UK:myspell,aspell,ispell<br/>
  fr:myspell,ispell:aspell</p>
 <h2>DIRECTORIES IMPORTANT TO ENCHANT</h2>
 <p> Unless configured otherwise, Enchant&#8217;s Myspell, Ispell, and Uspell backends will look for dictionaries in directories specific to Enchant, and will not use your system-wide installed dictionaries. This is for pragmatic reasons since many distributions install these dictionaries into different locations. </p>
@@ -43,6 +43,6 @@ description: "Enchant – a spellchecker"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-aspell/">aspell</a>(1),</code> <code>ispell(1),</code></p>
 <h2>AUTHOR</h2>
-<p>&nbsp;Dom Lachowicz<br />
-&nbsp;WEB:&nbsp;<a rel="nofollow" href="http://www.abisource.com/enchant/">http://www.abisource.com/enchant/</a><br />
+<p>&nbsp;Dom Lachowicz<br/>
+&nbsp;WEB:&nbsp;<a rel="nofollow" href="http://www.abisource.com/enchant/">http://www.abisource.com/enchant/</a><br/>
 &nbsp;MAIL: domlachowicz [at] gmail.com </p>

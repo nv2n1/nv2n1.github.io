@@ -14,8 +14,8 @@ description: "ql/experimental/credit/randomdefaultmodel.hpp – Random default-t
 #include &lt;ql/experimental/credit/pool.hpp&gt;
 #include &lt;ql/experimental/credit/onefactorcopula.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>RandomDefaultModel</code><br />
- <i>Base class for random default models. </i><br />
+<p>class <code>RandomDefaultModel</code><br/>
+ <i>Base class for random default models. </i><br/>
  class <code>GaussianRandomDefaultModel</code></p>
 <h2>Detailed Description</h2>
 <p>Random default-time scenarios for a pool of credit names.</p>

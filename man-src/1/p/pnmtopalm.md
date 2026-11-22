@@ -10,7 +10,7 @@ description: "pnmtopalm – convert a portable anymap into a Palm pixmap"
 
 <p> pnmtopalm &#8211; convert a portable anymap into a Palm pixmap</p>
 <h2>SYNOPSIS</h2>
-<p> <code>pnmtopalm</code> [<code>-verbose</code>] [<code>-depth</code> <i>N</i>] [<code>-maxdepth</code> <i>N</i>] [<code>-colormap</code>] [<code>-transparent</code> <i>color</i>] [<code>-offset</code>]<br />
+<p> <code>pnmtopalm</code> [<code>-verbose</code>] [<code>-depth</code> <i>N</i>] [<code>-maxdepth</code> <i>N</i>] [<code>-colormap</code>] [<code>-transparent</code> <i>color</i>] [<code>-offset</code>]<br/>
  [<code>-rle-compression</code>|<code>-scanline-compression</code>] [<i>pnmfile</i>] </p>
 <h2>DESCRIPTION</h2>
 <p> Reads a PNM image as input, from stdin or <i>pnmfile</i>. Produces a Palm pixmap as output. </p>
@@ -40,5 +40,5 @@ description: "pnmtopalm – convert a portable anymap into a Palm pixmap"
 <p> An additional compression format, <code>packbits</code>, was added with PalmOS 4.0. This package should be updated to be able to generate that. </p>
 <p> Palm pixmaps may contains multiple renditions of the same pixmap, in different depths. To construct an N-multiple-rendition Palm pixmap with <code>pnmtopalm</code>, first construct renditions 1 through N-1 using the <code>-offset</code> option, then construct the Nth pixmap without the <code>-offset </code> option. Then concatenate the individual renditions together in a single file using <code>cat</code>. </p>
 <h2>AUTHORS</h2>
-<p> This program was originally written as ppmtoTbmp.c, by Ian Goldberg and George Caswell. It was completely re-written by Bill Janssen to add color, compression, and transparency function.<br />
+<p> This program was originally written as ppmtoTbmp.c, by Ian Goldberg and George Caswell. It was completely re-written by Bill Janssen to add color, compression, and transparency function.<br/>
  Copyright 1995-2001 by Ian Goldberg, George Caswell, and Bill Janssen. </p>

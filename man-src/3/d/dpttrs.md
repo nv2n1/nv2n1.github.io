@@ -11,7 +11,7 @@ description: "dpttrs.f –"
 <p> dpttrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dpttrs</code> (N, NRHS, D, E, B, LDB, INFO)<br />
+<p> subroutine <code>dpttrs</code> (N, NRHS, D, E, B, LDB, INFO)<br/>
  <i></i><code>DPTTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpttrs (integerN, integerNRHS, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

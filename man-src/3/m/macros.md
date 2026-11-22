@@ -13,11 +13,11 @@ description: "QuantLib macros –"
 <p> <code>Numeric limits</code> </p>
 <p> <code>Debugging macros</code> </p>
 <h3>Defines</h3>
-<p> #define <code>QL_VERSION</code> &#8216;0.9.7&#8217;<br />
- <i>version string </i><br />
- #define <code>QL_HEX_VERSION</code> 0x000907f0<br />
- <i>version hexadecimal number </i><br />
- #define <code>QL_LIB_VERSION</code> &#8216;0_9_7&#8217;<br />
+<p> #define <code>QL_VERSION</code> &#8216;0.9.7&#8217;<br/>
+ <i>version string </i><br/>
+ #define <code>QL_HEX_VERSION</code> 0x000907f0<br/>
+ <i>version hexadecimal number </i><br/>
+ #define <code>QL_LIB_VERSION</code> &#8216;0_9_7&#8217;<br/>
  <i>version string for output lib name </i></p>
 <h2>Detailed Description</h2>
 <p> Global definitions and a few macros which help porting the code to different compilers.</p>

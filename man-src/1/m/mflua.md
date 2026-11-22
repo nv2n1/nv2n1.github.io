@@ -10,8 +10,8 @@ description: "mflua, mflua-nowin, mfluajit, mfluajit-nowin – implementation of
 
 <p> mflua, mflua-nowin, mfluajit, mfluajit-nowin &#8211; implementation of META-FONT with Lua embedded for better extraction of information from METAFONT. </p>
 <h2>SYNOPSIS</h2>
-<p> <code>mflua</code> [<i>,OPTION/</i>]&#8230; [<i>,MFNAME/</i>[<i>,.mf/</i>]] [<i>,COMMANDS/</i>]<br />
- <code>mflua</code> [<i>,OPTION/</i>]&#8230; <i>,FIRST-LINE/</i><br />
+<p> <code>mflua</code> [<i>,OPTION/</i>]&#8230; [<i>,MFNAME/</i>[<i>,.mf/</i>]] [<i>,COMMANDS/</i>]<br/>
+ <code>mflua</code> [<i>,OPTION/</i>]&#8230; <i>,FIRST-LINE/</i><br/>
  <code>mflua</code> [<i>,OPTION/</i>]&#8230; <i>,&amp;BASE ARGS/</i></p>
 <h2>DESCRIPTION</h2>
 <dl>
@@ -41,8 +41,8 @@ description: "mflua, mflua-nowin, mfluajit, mfluajit-nowin – implementation of
 <p> <code>-version</code> output version information and exit</p>
 <h2>REPORTING BUGS</h2>
 <p> Email bug reports to luigi.scarso [at] gmail.com. </p>
-<p> kpathsea version 6.3.2<br />
- Copyright 2020 L. Scarso.<br />
- There is NO warranty. Redistribution of this software is covered by the terms of both the MFLua copyright and the Lesser GNU General Public License.<br />
- For more information about these matters, see the file named COPYING and the MFLua source.<br />
+<p> kpathsea version 6.3.2<br/>
+ Copyright 2020 L. Scarso.<br/>
+ There is NO warranty. Redistribution of this software is covered by the terms of both the MFLua copyright and the Lesser GNU General Public License.<br/>
+ For more information about these matters, see the file named COPYING and the MFLua source.<br/>
  Primary author of MFLua: L. Scarso. </p>

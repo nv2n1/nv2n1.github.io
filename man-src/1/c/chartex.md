@@ -38,5 +38,5 @@ description: "chartex – A utility to extract charts from an Excel file for ins
 <h2>VERSION</h2>
 <p> Version 0.02.</p>
 <h2>COPYRIGHT</h2>
-<p> X <font SIZE="-1">MMV,</font> John McNamara. </p>
+<p> X MMV, John McNamara. </p>
 <p> All Rights Reserved. This program is free software. It may be used, redistributed and/or modified under the same terms as Perl itself. </p>

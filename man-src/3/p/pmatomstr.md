@@ -10,7 +10,7 @@ description: "pmAtomStr, pmAtomStr_r – convert a performance metric value into
 <p><code>pmAtomStr</code>, <code>pmAtomStr_r</code> &#8211; convert a performance metric value into a string</p>
 <h2>C Synopsis</h2>
 <p><code> #include &lt;pcp/pmapi.h&gt; </p>
-<p> const char *pmAtomStr(const pmAtomValue *</code><i>avp</i>, int <i>type</i>);<br />
+<p> const char *pmAtomStr(const pmAtomValue *</code><i>avp</i>, int <i>type</i>);<br/>
  char *pmAtomStr_r(const pmAtomValue *<i>avp</i>, int <i>type</i>, char *<i>buf</i>, int <i>buflen</i>); </p>
 <p> cc &#8230; -lpcp</p>
 <h2>Description</h2>

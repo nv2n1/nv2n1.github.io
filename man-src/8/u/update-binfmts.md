@@ -10,20 +10,20 @@ description: "update-binfmts – maintain registry of executable binary formats"
 
 <p> <code>update-binfmts</code> - maintain registry of executable binary formats </p>
 
-<p> <code>update\-binfmts</code> [<i>options</i> ] -<code>-install</code> <i>name path spec</i> <br />
- <br />
-<code>update\-binfmts</code> [<i>options</i> ] -<code>-remove</code> <i>name path</i> <br />
- <br />
-<code>update\-binfmts</code> [<i>options</i> ] -<code>-import</code> [<i>name</i> ] <br />
- <br />
-<code>update\-binfmts</code> [<i>options</i> ] -<code>-unimport</code> [<i>name</i> ] <br />
- <br />
-<code>update\-binfmts</code> [<i>options</i> ] -<code>-display</code> [<i>name</i> ] <br />
- <br />
-<code>update\-binfmts</code> [<i>options</i> ] -<code>-enable</code> [<i>name</i> ] <br />
- <br />
-<code>update\-binfmts</code> [<i>options</i> ] -<code>-disable</code> [<i>name</i> ] <br />
- <br />
+<p> <code>update\-binfmts</code> [<i>options</i> ] -<code>-install</code> <i>name path spec</i> <br/>
+ <br/>
+<code>update\-binfmts</code> [<i>options</i> ] -<code>-remove</code> <i>name path</i> <br/>
+ <br/>
+<code>update\-binfmts</code> [<i>options</i> ] -<code>-import</code> [<i>name</i> ] <br/>
+ <br/>
+<code>update\-binfmts</code> [<i>options</i> ] -<code>-unimport</code> [<i>name</i> ] <br/>
+ <br/>
+<code>update\-binfmts</code> [<i>options</i> ] -<code>-display</code> [<i>name</i> ] <br/>
+ <br/>
+<code>update\-binfmts</code> [<i>options</i> ] -<code>-enable</code> [<i>name</i> ] <br/>
+ <br/>
+<code>update\-binfmts</code> [<i>options</i> ] -<code>-disable</code> [<i>name</i> ] <br/>
+ <br/>
 <code>update\-binfmts</code> [<i>options</i> ] -<code>-find</code> [<i>path</i> ]  </p>
 <h2>DESCRIPTION</h2>
 <p> Versions 2.1.43 and later of the Linux kernel have contained the binfmt_misc module. This enables a system administrator to register interpreters for various binary formats based on a magic number or their file extension, and cause the appropriate interpreter to be invoked whenever a matching file is executed. Think of it as a more flexible version of the #! executable interpreter mechanism, or as something which can behave a little like &quot;associations&quot; in certain other operating systems (though in GNU/Linux the tendency is to keep this sort of thing somewhere else, like your file manager). <code>update\-binfmts</code> manages a persistent database of these interpreters. </p>

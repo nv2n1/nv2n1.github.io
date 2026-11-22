@@ -11,7 +11,7 @@ description: "upsstats.cgi – Web-based UPS status viewer"
 <h2>Synopsis</h2>
 <p><code>upsstats.cgi</code></p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  As a CGI program, this should be invoked through your web server. If you run it from the command line, it will either complain about unauthorized access or spew a bunch of HTML at you. </dd>
 <h2>Description</h2>
 <p><code>upsstats.cgi</code> uses template files to build web pages containing status information from UPS hardware. It can repeat sections of those template files to monitor several UPSes simultaneously, or focus on a single UPS. </p>

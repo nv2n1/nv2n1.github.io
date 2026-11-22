@@ -42,5 +42,5 @@ description: "lwres – introduction to the lightweight resolver library"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-lwres_gethostent/">lwres_gethostent</a></code>(3), <code><a href="/docs/linux/man/3-lwres_getipnode/">lwres_getipnode</a></code>(3), <code><a href="/docs/linux/man/3-lwres_getnameinfo/">lwres_getnameinfo</a></code>(3), <code><a href="/docs/linux/man/3-lwres_noop/">lwres_noop</a></code>(3), <code><a href="/docs/linux/man/3-lwres_gabn/">lwres_gabn</a></code>(3), <code><a href="/docs/linux/man/3-lwres_gnba/">lwres_gnba</a></code>(3), <code><a href="/docs/linux/man/3-lwres_context/">lwres_context</a></code>(3), <code><a href="/docs/linux/man/3-lwres_config/">lwres_config</a></code>(3), <code><a href="/docs/linux/man/5-resolver/">resolver</a></code>(5), <code><a href="/docs/linux/man/8-lwresd/">lwresd</a></code>(8).</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001 Internet Software Consortium. </p>

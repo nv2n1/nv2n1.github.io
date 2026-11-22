@@ -10,61 +10,61 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 
 <p> ggzcore.h &#8211; The interface for the ggzcore library used by GGZ clients. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdarg.h&gt;<br />
- #include &lt;sys/types.h&gt;<br />
+<p> #include &lt;stdarg.h&gt;<br/>
+ #include &lt;sys/types.h&gt;<br/>
  #include &lt;ggz_common.h&gt; </p>
 <h3>Defines</h3>
 <p> #define <code>GGZCORE_VERSION_MAJOR</code> 0 </p>
 <p> #define <code>GGZCORE_VERSION_MINOR</code> 0 </p>
 <p> #define <code>GGZCORE_VERSION_MICRO</code> 11 </p>
 <p> #define <code>GGZCORE_VERSION_IFACE</code> &#8216;7:0:0&#8217; </p>
-<p> #define <code>GGZCORE_DBG_CONF</code> &#8216;GGZCORE:CONF&#8217;<br />
- <i>ggz_debug debugging type for configuration system. </i><br />
- #define <code>GGZCORE_DBG_GAME</code> &#8216;GGZCORE:GAME&#8217;<br />
- <i>ggz_debug debugging type for game communication. </i><br />
- #define <code>GGZCORE_DBG_HOOK</code> &#8216;GGZCORE:HOOK&#8217;<br />
- <i>ggz_debug debugging type for hook system. </i><br />
- #define <code>GGZCORE_DBG_MODULE</code> &#8216;GGZCORE:MODULE&#8217;<br />
- <i>ggz_debug debugging type for accessing modules. </i><br />
- #define <code>GGZCORE_DBG_NET</code> &#8216;GGZCORE:NET&#8217;<br />
- <i>ggz_debug debugging type for network interaction. </i><br />
- #define <code>GGZCORE_DBG_POLL</code> &#8216;GGZCORE:POLL&#8217;<br />
- <i>ggz_debug debugging type for debugging while polling. </i><br />
- #define <code>GGZCORE_DBG_ROOM</code> &#8216;GGZCORE:ROOM&#8217;<br />
- <i>ggz_debug debugging type for room events and data. </i><br />
- #define <code>GGZCORE_DBG_SERVER</code> &#8216;GGZCORE:SERVER&#8217;<br />
- <i>ggz_debug debugging type for server events and data. </i><br />
- #define <code>GGZCORE_DBG_STATE</code> &#8216;GGZCORE:STATE&#8217;<br />
- <i>ggz_debug debugging type for state changes. </i><br />
- #define <code>GGZCORE_DBG_TABLE</code> &#8216;GGZCORE:TABLE&#8217;<br />
- <i>ggz_debug debugging type for table data. </i><br />
- #define <code>GGZCORE_DBG_XML</code> &#8216;GGZCORE:XML&#8217;<br />
- <i>ggz_debug debugging type for XML processing. </i><br />
- #define <code>ggzcore_server_get_channel</code>(server) (-1)<br />
- <i>Deprecated function. Do not use. </i><br />
- #define <code>ggzcore_server_create_channel</code>(server) (void)0<br />
- <i>Deprecated function. Do not use. </i><br />
+<p> #define <code>GGZCORE_DBG_CONF</code> &#8216;GGZCORE:CONF&#8217;<br/>
+ <i>ggz_debug debugging type for configuration system. </i><br/>
+ #define <code>GGZCORE_DBG_GAME</code> &#8216;GGZCORE:GAME&#8217;<br/>
+ <i>ggz_debug debugging type for game communication. </i><br/>
+ #define <code>GGZCORE_DBG_HOOK</code> &#8216;GGZCORE:HOOK&#8217;<br/>
+ <i>ggz_debug debugging type for hook system. </i><br/>
+ #define <code>GGZCORE_DBG_MODULE</code> &#8216;GGZCORE:MODULE&#8217;<br/>
+ <i>ggz_debug debugging type for accessing modules. </i><br/>
+ #define <code>GGZCORE_DBG_NET</code> &#8216;GGZCORE:NET&#8217;<br/>
+ <i>ggz_debug debugging type for network interaction. </i><br/>
+ #define <code>GGZCORE_DBG_POLL</code> &#8216;GGZCORE:POLL&#8217;<br/>
+ <i>ggz_debug debugging type for debugging while polling. </i><br/>
+ #define <code>GGZCORE_DBG_ROOM</code> &#8216;GGZCORE:ROOM&#8217;<br/>
+ <i>ggz_debug debugging type for room events and data. </i><br/>
+ #define <code>GGZCORE_DBG_SERVER</code> &#8216;GGZCORE:SERVER&#8217;<br/>
+ <i>ggz_debug debugging type for server events and data. </i><br/>
+ #define <code>GGZCORE_DBG_STATE</code> &#8216;GGZCORE:STATE&#8217;<br/>
+ <i>ggz_debug debugging type for state changes. </i><br/>
+ #define <code>GGZCORE_DBG_TABLE</code> &#8216;GGZCORE:TABLE&#8217;<br/>
+ <i>ggz_debug debugging type for table data. </i><br/>
+ #define <code>GGZCORE_DBG_XML</code> &#8216;GGZCORE:XML&#8217;<br/>
+ <i>ggz_debug debugging type for XML processing. </i><br/>
+ #define <code>ggzcore_server_get_channel</code>(server) (-1)<br/>
+ <i>Deprecated function. Do not use. </i><br/>
+ #define <code>ggzcore_server_create_channel</code>(server) (void)0<br/>
+ <i>Deprecated function. Do not use. </i><br/>
  #define <code>ggzcore_module_launch</code>(m) ((int)(-1)) </p>
-<p> #define <code>ggzcore_game_set_server_fd</code>(game, fd) (void)0<br />
+<p> #define <code>ggzcore_game_set_server_fd</code>(game, fd) (void)0<br/>
  <i>Deprecated function. Do not use. </i></p>
 <h3>Typedefs</h3>
 <p> typedef <code>_GGZOptions</code> <code>GGZOptions</code> </p>
 <p> typedef <code>GGZHookReturn</code>(* <code>GGZHookFunc</code> )(unsigned int id, const void *event_data, const void *user_data) </p>
-<p> typedef void(* <code>GGZDestroyFunc</code> )(void *data)<br />
- <i>GGZ object destroy function type. </i><br />
- typedef _GGZServer <code>GGZServer</code><br />
- <i>A server object containing all information about a connection. </i><br />
- typedef _GGZRoom <code>GGZRoom</code><br />
- <i>Contains information about a single room on a server. </i><br />
- typedef _GGZPlayer <code>GGZPlayer</code><br />
- <i>Contains information about a single player. </i><br />
- typedef _GGZTable <code>GGZTable</code><br />
- <i>Contains information about a single table. </i><br />
- typedef _GGZGameType <code>GGZGameType</code><br />
- <i>Contains information about a _game type_. </i><br />
- typedef _GGZModule <code>GGZModule</code><br />
- <i>Contains information about a single module. A game module, on the client, is an executable designed to play a game. Each game type may have many modules that play it. </i><br />
- typedef _GGZGame <code>GGZGame</code><br />
+<p> typedef void(* <code>GGZDestroyFunc</code> )(void *data)<br/>
+ <i>GGZ object destroy function type. </i><br/>
+ typedef _GGZServer <code>GGZServer</code><br/>
+ <i>A server object containing all information about a connection. </i><br/>
+ typedef _GGZRoom <code>GGZRoom</code><br/>
+ <i>Contains information about a single room on a server. </i><br/>
+ typedef _GGZPlayer <code>GGZPlayer</code><br/>
+ <i>Contains information about a single player. </i><br/>
+ typedef _GGZTable <code>GGZTable</code><br/>
+ <i>Contains information about a single table. </i><br/>
+ typedef _GGZGameType <code>GGZGameType</code><br/>
+ <i>Contains information about a _game type_. </i><br/>
+ typedef _GGZModule <code>GGZModule</code><br/>
+ <i>Contains information about a single module. A game module, on the client, is an executable designed to play a game. Each game type may have many modules that play it. </i><br/>
+ typedef _GGZGame <code>GGZGame</code><br/>
  <i>Contains information about a single game table. This contains information about a table we are present at or are about to launch. It is thus associated with both a GGZTable and a GGZModule. </i></p>
 <h3>Enumerations</h3>
 <p> enum <code>GGZOptionFlags</code> { <code>GGZ_OPT_PARSER</code> = 0x0001, <code>GGZ_OPT_MODULES</code> = 0x0002, <code>GGZ_OPT_THREADED_IO</code> = 0x0004, <code>GGZ_OPT_EMBEDDED</code> = 0x0008, <code>GGZ_OPT_RECONNECT</code> = 0x0010 } </p>
@@ -73,216 +73,216 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> enum <code>GGZServerEvent</code> { <code>GGZ_CONNECTED</code>, <code>GGZ_CONNECT_FAIL</code>, <code>GGZ_NEGOTIATED</code>, <code>GGZ_NEGOTIATE_FAIL</code>, <code>GGZ_LOGGED_IN</code>, <code>GGZ_LOGIN_FAIL</code>, <code>GGZ_MOTD_LOADED</code>, <code>GGZ_ROOM_LIST</code>, <code>GGZ_TYPE_LIST</code>, <code>GGZ_SERVER_PLAYERS_CHANGED</code>, <code>GGZ_ENTERED</code>, <code>GGZ_ENTER_FAIL</code>, <code>GGZ_LOGOUT</code>, <code>GGZ_NET_ERROR</code>, <code>GGZ_PROTOCOL_ERROR</code>, <code>GGZ_CHAT_FAIL</code>, <code>GGZ_STATE_CHANGE</code>, <code>GGZ_CHANNEL_CONNECTED</code>, <code>GGZ_CHANNEL_READY</code>, <code>GGZ_CHANNEL_FAIL</code>, <code>GGZ_NUM_SERVER_EVENTS</code> } </p>
 <p> enum <code>GGZRoomEvent</code> { <code>GGZ_PLAYER_LIST</code>, <code>GGZ_TABLE_LIST</code>, <code>GGZ_CHAT_EVENT</code>, <code>GGZ_ROOM_ENTER</code>, <code>GGZ_ROOM_LEAVE</code>, <code>GGZ_TABLE_UPDATE</code>, <code>GGZ_TABLE_LAUNCHED</code>, <code>GGZ_TABLE_LAUNCH_FAIL</code>, <code>GGZ_TABLE_JOINED</code>, <code>GGZ_TABLE_JOIN_FAIL</code>, <code>GGZ_TABLE_LEFT</code>, <code>GGZ_TABLE_LEAVE_FAIL</code>, <code>GGZ_PLAYER_LAG</code>, <code>GGZ_PLAYER_STATS</code>, <code>GGZ_PLAYER_COUNT</code> } </p>
 <p> enum <code>GGZGameEvent</code> { <code>GGZ_GAME_LAUNCHED</code>, <code>GGZ_GAME_LAUNCH_FAIL</code>, <code>GGZ_GAME_NEGOTIATED</code>, <code>GGZ_GAME_NEGOTIATE_FAIL</code>, <code>GGZ_GAME_PLAYING</code> } </p>
-<p> enum <code>GGZStateID</code> { <code>GGZ_STATE_OFFLINE</code>, <code>GGZ_STATE_CONNECTING</code>, <code>GGZ_STATE_RECONNECTING</code>, <code>GGZ_STATE_ONLINE</code>, <code>GGZ_STATE_LOGGING_IN</code>, <code>GGZ_STATE_LOGGED_IN</code>, <code>GGZ_STATE_ENTERING_ROOM</code>, <code>GGZ_STATE_IN_ROOM</code>, <code>GGZ_STATE_BETWEEN_ROOMS</code>, <code>GGZ_STATE_LAUNCHING_TABLE</code>, <code>GGZ_STATE_JOINING_TABLE</code>, <code>GGZ_STATE_AT_TABLE</code>, <code>GGZ_STATE_LEAVING_TABLE</code>, <code>GGZ_STATE_LOGGING_OUT</code> }<br />
- <i>The states a server connection may be in. </i><br />
- enum <code>GGZModuleEnvironment</code> { <code>GGZ_ENVIRONMENT_PASSIVE</code>, <code>GGZ_ENVIRONMENT_CONSOLE</code>, <code>GGZ_ENVIRONMENT_FRAMEBUFFER</code>, <code>GGZ_ENVIRONMENT_XWINDOW</code>, <code>GGZ_ENVIRONMENT_XFULLSCREEN</code> }<br />
+<p> enum <code>GGZStateID</code> { <code>GGZ_STATE_OFFLINE</code>, <code>GGZ_STATE_CONNECTING</code>, <code>GGZ_STATE_RECONNECTING</code>, <code>GGZ_STATE_ONLINE</code>, <code>GGZ_STATE_LOGGING_IN</code>, <code>GGZ_STATE_LOGGED_IN</code>, <code>GGZ_STATE_ENTERING_ROOM</code>, <code>GGZ_STATE_IN_ROOM</code>, <code>GGZ_STATE_BETWEEN_ROOMS</code>, <code>GGZ_STATE_LAUNCHING_TABLE</code>, <code>GGZ_STATE_JOINING_TABLE</code>, <code>GGZ_STATE_AT_TABLE</code>, <code>GGZ_STATE_LEAVING_TABLE</code>, <code>GGZ_STATE_LOGGING_OUT</code> }<br/>
+ <i>The states a server connection may be in. </i><br/>
+ enum <code>GGZModuleEnvironment</code> { <code>GGZ_ENVIRONMENT_PASSIVE</code>, <code>GGZ_ENVIRONMENT_CONSOLE</code>, <code>GGZ_ENVIRONMENT_FRAMEBUFFER</code>, <code>GGZ_ENVIRONMENT_XWINDOW</code>, <code>GGZ_ENVIRONMENT_XFULLSCREEN</code> }<br/>
  <i>The environment a game frontend expects. </i></p>
 <h3>Functions</h3>
 <p> int <code>ggzcore_init</code> (<code>GGZOptions</code> options) </p>
 <p> void <code>ggzcore_reload</code> (void) </p>
 <p> void <code>ggzcore_destroy</code> (void) </p>
-<p> <code>GGZServer</code> * <code>ggzcore_server_new</code> (void)<br />
- <i>Create a new server object. </i><br />
- int <code>ggzcore_server_reset</code> (<code>GGZServer</code> *server)<br />
- <i>Reset the server object. </i><br />
- int <code>ggzcore_server_add_event_hook</code> (<code>GGZServer</code> *server, const <code>GGZServerEvent</code> event, const <code>GGZHookFunc</code> func)<br />
- <i>Register a callback handler for a server event. </i><br />
- int <code>ggzcore_server_add_event_hook_full</code> (<code>GGZServer</code> *server, const <code>GGZServerEvent</code> event, const <code>GGZHookFunc</code> func, const void *data)<br />
- <i>Register a callback handler for a server event. </i><br />
- int <code>ggzcore_server_remove_event_hook</code> (<code>GGZServer</code> *server, const <code>GGZServerEvent</code> event, const <code>GGZHookFunc</code> func)<br />
- <i>Remove a single hook function from an event&#8217;s hook list. </i><br />
- int <code>ggzcore_server_remove_event_hook_id</code> (<code>GGZServer</code> *server, const <code>GGZServerEvent</code> event, const unsigned int hook_id)<br />
- <i>Remove a hook function with given ID from the event&#8217;s hook list. </i><br />
- int <code>ggzcore_server_set_hostinfo</code> (<code>GGZServer</code> *server, const char *host, const unsigned int port, const unsigned int use_tls)<br />
- <i>Set host info for connecting to the server. </i><br />
- int <code>ggzcore_server_set_logininfo</code> (<code>GGZServer</code> *server, const <code>GGZLoginType</code> type, const char *handle, const char *password, const char *email)<br />
- <i>Set login info for logging in to the server. </i><br />
- int <code>ggzcore_server_log_session</code> (<code>GGZServer</code> *server, const char *filename)<br />
- <i>Initiate logging of ggzcore events. </i><br />
- const char * <code>ggzcore_server_get_host</code> (const <code>GGZServer</code> *server)<br />
- <i>Get the hostname of the server. </i><br />
- int <code>ggzcore_server_get_port</code> (const <code>GGZServer</code> *server)<br />
- <i>Get the port of the server. </i><br />
- <code>GGZLoginType</code> <code>ggzcore_server_get_type</code> (const <code>GGZServer</code> *server)<br />
- <i>Get the login type being used for this server. </i><br />
- const char * <code>ggzcore_server_get_handle</code> (const <code>GGZServer</code> *server)<br />
- <i>Get the handle being used for this server. </i><br />
- const char * <code>ggzcore_server_get_password</code> (const <code>GGZServer</code> *server)<br />
- <i>Get the password being used for this server. </i><br />
- int <code>ggzcore_server_get_fd</code> (const <code>GGZServer</code> *server)<br />
- <i>Get the socket used for connection with the server. </i><br />
- <code>GGZStateID</code> <code>ggzcore_server_get_state</code> (const <code>GGZServer</code> *server)<br />
- <i>Get the state of the server connection. </i><br />
- int <code>ggzcore_server_get_tls</code> (const <code>GGZServer</code> *server)<br />
- <i>Get the current TLS status of this server. </i><br />
- int <code>ggzcore_server_get_num_players</code> (const <code>GGZServer</code> *server)<br />
- <i>Get the total number of players on the server. </i><br />
- int <code>ggzcore_server_get_num_rooms</code> (const <code>GGZServer</code> *server)<br />
- <i>Return the number of rooms on the server, or -1 on error. </i><br />
- <code>GGZRoom</code> * <code>ggzcore_server_get_cur_room</code> (const <code>GGZServer</code> *server)<br />
- <i>Return the current room, or NULL if there is none. </i><br />
- <code>GGZRoom</code> * <code>ggzcore_server_get_nth_room</code> (const <code>GGZServer</code> *server, const unsigned int num)<br />
- <i>Return the nth room on the server, or NULL on error. </i><br />
- int <code>ggzcore_server_get_num_gametypes</code> (const <code>GGZServer</code> *server)<br />
- <i>Return the overall number of game types on the server. </i><br />
- <code>GGZGameType</code> * <code>ggzcore_server_get_nth_gametype</code> (const <code>GGZServer</code> *server, const unsigned int num)<br />
- <i>Get the nth gametype, or NULL on error. </i><br />
- <code>GGZGame</code> * <code>ggzcore_server_get_cur_game</code> (const <code>GGZServer</code> *server)<br />
- <i>Return the player&#8217;s current game. </i><br />
- int <code>ggzcore_server_is_online</code> (const <code>GGZServer</code> *server)<br />
- <i>Return TRUE iff the server is online (connected?). </i><br />
- int <code>ggzcore_server_is_logged_in</code> (const <code>GGZServer</code> *server)<br />
- <i>Return TRUE iff we are logged into the server. </i><br />
- int <code>ggzcore_server_is_in_room</code> (const <code>GGZServer</code> *server)<br />
- <i>Return TRUE iff we are in a room on the server. </i><br />
- int <code>ggzcore_server_is_at_table</code> (const <code>GGZServer</code> *server)<br />
- <i>Return TRUE iff we are at a table on the server. </i><br />
- int <code>ggzcore_server_connect</code> (<code>GGZServer</code> *server)<br />
- <i>Connect to the server. </i><br />
- int <code>ggzcore_server_login</code> (<code>GGZServer</code> *server)<br />
- <i>Log in to the server. </i><br />
- int <code>ggzcore_server_motd</code> (<code>GGZServer</code> *server)<br />
- <i>Request the MOTD from the server. </i><br />
- int <code>ggzcore_server_list_rooms</code> (<code>GGZServer</code> *server, const int type, const char verbose)<br />
- <i>Request room list. </i><br />
- int <code>ggzcore_server_list_gametypes</code> (<code>GGZServer</code> *server, const char verbose)<br />
- <i>Request game type list. </i><br />
- int <code>ggzcore_server_join_room</code> (<code>GGZServer</code> *server, const unsigned int room)<br />
- <i>Join a room on the server. </i><br />
- int <code>ggzcore_server_logout</code> (<code>GGZServer</code> *server)<br />
- <i>Log out of a server. </i><br />
- int <code>ggzcore_server_disconnect</code> (<code>GGZServer</code> *server)<br />
- <i>Disconnect from a server after having logged out. </i><br />
- int <code>ggzcore_server_data_is_pending</code> (<code>GGZServer</code> *server)<br />
- <i>Check for data pending from the server socket. </i><br />
- int <code>ggzcore_server_read_data</code> (<code>GGZServer</code> *server, int fd)<br />
- <i>Read data for the server on the specified FD. </i><br />
- void <code>ggzcore_server_free</code> (<code>GGZServer</code> *server)<br />
- <i>Free GGZServer object and accompanying data. </i><br />
- <code>GGZRoom</code> * <code>ggzcore_room_new</code> (void)<br />
- <i>Allocate space for a new room object. </i><br />
- int <code>ggzcore_room_init</code> (<code>GGZRoom</code> *room, <code>GGZServer</code> *server, const unsigned int id, const char *name, const unsigned int game, const char *desc)<br />
- <i>Initialize room object. </i><br />
- void <code>ggzcore_room_free</code> (<code>GGZRoom</code> *room)<br />
- <i>De-allocate room object and its children. </i><br />
- <code>GGZServer</code> * <code>ggzcore_room_get_server</code> (<code>GGZRoom</code> *room)<br />
- <i>Return the server for this room (or NULL on error). </i><br />
- int <code>ggzcore_room_get_id</code> (const <code>GGZRoom</code> *room)<br />
- <i>Return the ID number of the room (or negative on error). </i><br />
- char * <code>ggzcore_room_get_name</code> (<code>GGZRoom</code> *room)<br />
- <i>Return the name of the room (or NULL on error). </i><br />
- char * <code>ggzcore_room_get_desc</code> (<code>GGZRoom</code> *room)<br />
- <i>Return the description of the room (or NULL on error). </i><br />
- <code>GGZGameType</code> * <code>ggzcore_room_get_gametype</code> (<code>GGZRoom</code> *room)<br />
- <i>Return the type of game played in this room (or NULL on error). </i><br />
- int <code>ggzcore_room_get_num_players</code> (<code>GGZRoom</code> *room)<br />
- <i>Return the number of players in the room (or negative on error). </i><br />
- <code>GGZPlayer</code> * <code>ggzcore_room_get_nth_player</code> (<code>GGZRoom</code> *room, const unsigned int num)<br />
- <i>Return the nth player in the room (or NULL on error). </i><br />
- int <code>ggzcore_room_get_num_tables</code> (<code>GGZRoom</code> *room)<br />
- <i>Return the number of tables in the room (or negative on error). </i><br />
- <code>GGZTable</code> * <code>ggzcore_room_get_nth_table</code> (<code>GGZRoom</code> *room, const unsigned int num)<br />
- <i>Return the nth table in the room (or NULL on error). </i><br />
- <code>GGZTable</code> * <code>ggzcore_room_get_table_by_id</code> (<code>GGZRoom</code> *room, const unsigned int id)<br />
- <i>Return the table in this room with matching ID (NULL on error). </i><br />
- int <code>ggzcore_room_add_event_hook</code> (<code>GGZRoom</code> *room, const <code>GGZRoomEvent</code> event, const <code>GGZHookFunc</code> func)<br />
- <i>Register a handler (hook) for the room event. </i><br />
- int <code>ggzcore_room_add_event_hook_full</code> (<code>GGZRoom</code> *room, const <code>GGZRoomEvent</code> event, const <code>GGZHookFunc</code> func, const void *data)<br />
- <i>Register a handler (hook) for thee room event, with data. </i><br />
- int <code>ggzcore_room_remove_event_hook</code> (<code>GGZRoom</code> *room, const <code>GGZRoomEvent</code> event, const <code>GGZHookFunc</code> func)<br />
- <i>Remove a hook from an event. </i><br />
- int <code>ggzcore_room_remove_event_hook_id</code> (<code>GGZRoom</code> *room, const <code>GGZRoomEvent</code> event, const unsigned int hook_id)<br />
- <i>Remove a hook from an event, by ID. </i><br />
- int <code>ggzcore_room_list_players</code> (<code>GGZRoom</code> *room)<br />
- <i>Call to request a list of players in the room. </i><br />
- int <code>ggzcore_room_list_tables</code> (<code>GGZRoom</code> *room, const int type, const char global)<br />
- <i>Call to request a list of tables in the room. </i><br />
- int <code>ggzcore_room_chat</code> (<code>GGZRoom</code> *room, const GGZChatType opcode, const char *player, const char *msg)<br />
- <i>Chat! </i><br />
- int <code>ggzcore_room_launch_table</code> (<code>GGZRoom</code> *room, <code>GGZTable</code> *table)<br />
- <i>Launch a table in the room. </i><br />
- int <code>ggzcore_room_join_table</code> (<code>GGZRoom</code> *room, const unsigned int table_id, int spectator)<br />
- <i>Join a table in the room, so that you can then play at it. </i><br />
- int <code>ggzcore_room_leave_table</code> (<code>GGZRoom</code> *room, int force)<br />
- <i>Leave the table you are currently playing at. </i><br />
- char * <code>ggzcore_player_get_name</code> (const <code>GGZPlayer</code> *player)<br />
- <i>Return the name of the player. </i><br />
- GGZPlayerType <code>ggzcore_player_get_type</code> (const <code>GGZPlayer</code> *player)<br />
- <i>Return the type of the player (admin/registered/guest). </i><br />
- <code>GGZRoom</code> * <code>ggzcore_player_get_room</code> (const <code>GGZPlayer</code> *player)<br />
- <i>Return the player&#8217;s room, or NULL if none. </i><br />
- <code>GGZTable</code> * <code>ggzcore_player_get_table</code> (const <code>GGZPlayer</code> *player)<br />
- <i>Return the player&#8217;s table, or NULL if none. </i><br />
- int <code>ggzcore_player_get_lag</code> (const <code>GGZPlayer</code> *player)<br />
- <i>Return the player&#8217;s lag class (1..5). </i><br />
- int <code>ggzcore_player_get_record</code> (const <code>GGZPlayer</code> *player, int *wins, int *losses, int *ties, int *forfeits)<br />
- <i>Get the player&#8217;s win-loss record. </i><br />
- int <code>ggzcore_player_get_rating</code> (const <code>GGZPlayer</code> *player, int *rating)<br />
- <i>Get the player&#8217;s rating. </i><br />
- int <code>ggzcore_player_get_ranking</code> (const <code>GGZPlayer</code> *player, int *ranking)<br />
- <i>Get the player&#8217;s ranking. </i><br />
- int <code>ggzcore_player_get_highscore</code> (const <code>GGZPlayer</code> *player, int *highscore)<br />
- <i>Get the player&#8217;s highscore. </i><br />
- <code>GGZTable</code> * <code>ggzcore_table_new</code> (void)<br />
- <i>Create a new table object. </i><br />
- int <code>ggzcore_table_init</code> (<code>GGZTable</code> *table, const <code>GGZGameType</code> *gametype, const char *desc, const unsigned int num_seats)<br />
- <i>Set data on a table object. </i><br />
- void <code>ggzcore_table_free</code> (<code>GGZTable</code> *table)<br />
- <i>Free the table object. </i><br />
- int <code>ggzcore_table_set_seat</code> (<code>GGZTable</code> *table, const unsigned int seat, GGZSeatType type, const char *name)<br />
- <i>Set a seat type at a table, pre-launch. </i><br />
- int <code>ggzcore_table_remove_player</code> (<code>GGZTable</code> *table, char *name)<br />
- <i>Find and remove the player from the table. </i><br />
- int <code>ggzcore_table_get_id</code> (const <code>GGZTable</code> *table)<br />
- <i>Return the ID of the table. </i><br />
- const <code>GGZRoom</code> * <code>ggzcore_table_get_room</code> (const <code>GGZTable</code> *table)<br />
- <i>Return the room this table is in. </i><br />
- const <code>GGZGameType</code> * <code>ggzcore_table_get_type</code> (const <code>GGZTable</code> *table)<br />
- <i>Return the game type of the table. </i><br />
- const char * <code>ggzcore_table_get_desc</code> (const <code>GGZTable</code> *table)<br />
- <i>Return the table&#8217;s description (or NULL). </i><br />
- GGZTableState <code>ggzcore_table_get_state</code> (const <code>GGZTable</code> *table)<br />
- <i>Return the state of the table. </i><br />
- int <code>ggzcore_table_get_num_seats</code> (const <code>GGZTable</code> *table)<br />
- <i>Return the number of seats at the table. </i><br />
- int <code>ggzcore_table_set_desc</code> (<code>GGZTable</code> *table, const char *desc)<br />
- <i>Set the table description. </i><br />
- int <code>ggzcore_table_get_seat_count</code> (const <code>GGZTable</code> *table, GGZSeatType type)<br />
- <i>Count the seats of the given type. </i><br />
- const char * <code>ggzcore_table_get_nth_player_name</code> (const <code>GGZTable</code> *table, const unsigned int num)<br />
- <i>Return the name of a player at the table, or NULL on error. </i><br />
- int <code>ggzcore_table_get_num_spectator_seats</code> (const <code>GGZTable</code> *table)<br />
- <i>Return the number of spectator seats at the table, or -1. </i><br />
- const char * <code>ggzcore_table_get_nth_spectator_name</code> (const <code>GGZTable</code> *table, const unsigned int num)<br />
- <i>Return the name of the nth spectator, or NULL if seat is empty. </i><br />
- GGZSeatType <code>ggzcore_table_get_nth_player_type</code> (const <code>GGZTable</code> *table, const unsigned int num)<br />
- <i>Return the type of a player at the table, or GGZ_PLAYER_NONE on error. </i><br />
- unsigned int <code>ggzcore_gametype_get_id</code> (const <code>GGZGameType</code> *type)<br />
- <i>Get the ID of this gametype. </i><br />
- const char * <code>ggzcore_gametype_get_name</code> (const <code>GGZGameType</code> *type)<br />
- <i>Get the name of the game type. </i><br />
- const char * <code>ggzcore_gametype_get_prot_engine</code> (const <code>GGZGameType</code> *type)<br />
- <i>Get the protocol &#8216;engine&#8217; used by the game type. </i><br />
- const char * <code>ggzcore_gametype_get_prot_version</code> (const <code>GGZGameType</code> *type)<br />
- <i>Get the version of the protocol the game uses. </i><br />
- const char * <code>ggzcore_gametype_get_version</code> (const <code>GGZGameType</code> *type)<br />
- <i>Get the version of the game itself. </i><br />
- const char * <code>ggzcore_gametype_get_author</code> (const <code>GGZGameType</code> *type)<br />
- <i>Get the author of the game. </i><br />
- const char * <code>ggzcore_gametype_get_url</code> (const <code>GGZGameType</code> *type)<br />
- <i>Get a URL for more info about the game. </i><br />
- const char * <code>ggzcore_gametype_get_desc</code> (const <code>GGZGameType</code> *type)<br />
- <i>Get a description of the game. </i><br />
- int <code>ggzcore_gametype_get_max_players</code> (const <code>GGZGameType</code> *type)<br />
- <i>Get the maximum number of players the game can support. </i><br />
- int <code>ggzcore_gametype_get_max_bots</code> (const <code>GGZGameType</code> *type)<br />
- <i>Get the maximum number of bots the game can support. </i><br />
- int <code>ggzcore_gametype_get_spectators_allowed</code> (const <code>GGZGameType</code> *type)<br />
- <i>Return TRUE iff spectators are allowed for this game type. </i><br />
- int <code>ggzcore_gametype_num_players_is_valid</code> (const <code>GGZGameType</code> *type, unsigned int num)<br />
- <i>Return TRUE iff the given number of players is valid. </i><br />
- int <code>ggzcore_gametype_num_bots_is_valid</code> (const <code>GGZGameType</code> *type, unsigned int num)<br />
- <i>Return TRUE iff the given number of bots is valid. </i><br />
+<p> <code>GGZServer</code> * <code>ggzcore_server_new</code> (void)<br/>
+ <i>Create a new server object. </i><br/>
+ int <code>ggzcore_server_reset</code> (<code>GGZServer</code> *server)<br/>
+ <i>Reset the server object. </i><br/>
+ int <code>ggzcore_server_add_event_hook</code> (<code>GGZServer</code> *server, const <code>GGZServerEvent</code> event, const <code>GGZHookFunc</code> func)<br/>
+ <i>Register a callback handler for a server event. </i><br/>
+ int <code>ggzcore_server_add_event_hook_full</code> (<code>GGZServer</code> *server, const <code>GGZServerEvent</code> event, const <code>GGZHookFunc</code> func, const void *data)<br/>
+ <i>Register a callback handler for a server event. </i><br/>
+ int <code>ggzcore_server_remove_event_hook</code> (<code>GGZServer</code> *server, const <code>GGZServerEvent</code> event, const <code>GGZHookFunc</code> func)<br/>
+ <i>Remove a single hook function from an event&#8217;s hook list. </i><br/>
+ int <code>ggzcore_server_remove_event_hook_id</code> (<code>GGZServer</code> *server, const <code>GGZServerEvent</code> event, const unsigned int hook_id)<br/>
+ <i>Remove a hook function with given ID from the event&#8217;s hook list. </i><br/>
+ int <code>ggzcore_server_set_hostinfo</code> (<code>GGZServer</code> *server, const char *host, const unsigned int port, const unsigned int use_tls)<br/>
+ <i>Set host info for connecting to the server. </i><br/>
+ int <code>ggzcore_server_set_logininfo</code> (<code>GGZServer</code> *server, const <code>GGZLoginType</code> type, const char *handle, const char *password, const char *email)<br/>
+ <i>Set login info for logging in to the server. </i><br/>
+ int <code>ggzcore_server_log_session</code> (<code>GGZServer</code> *server, const char *filename)<br/>
+ <i>Initiate logging of ggzcore events. </i><br/>
+ const char * <code>ggzcore_server_get_host</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Get the hostname of the server. </i><br/>
+ int <code>ggzcore_server_get_port</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Get the port of the server. </i><br/>
+ <code>GGZLoginType</code> <code>ggzcore_server_get_type</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Get the login type being used for this server. </i><br/>
+ const char * <code>ggzcore_server_get_handle</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Get the handle being used for this server. </i><br/>
+ const char * <code>ggzcore_server_get_password</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Get the password being used for this server. </i><br/>
+ int <code>ggzcore_server_get_fd</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Get the socket used for connection with the server. </i><br/>
+ <code>GGZStateID</code> <code>ggzcore_server_get_state</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Get the state of the server connection. </i><br/>
+ int <code>ggzcore_server_get_tls</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Get the current TLS status of this server. </i><br/>
+ int <code>ggzcore_server_get_num_players</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Get the total number of players on the server. </i><br/>
+ int <code>ggzcore_server_get_num_rooms</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Return the number of rooms on the server, or -1 on error. </i><br/>
+ <code>GGZRoom</code> * <code>ggzcore_server_get_cur_room</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Return the current room, or NULL if there is none. </i><br/>
+ <code>GGZRoom</code> * <code>ggzcore_server_get_nth_room</code> (const <code>GGZServer</code> *server, const unsigned int num)<br/>
+ <i>Return the nth room on the server, or NULL on error. </i><br/>
+ int <code>ggzcore_server_get_num_gametypes</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Return the overall number of game types on the server. </i><br/>
+ <code>GGZGameType</code> * <code>ggzcore_server_get_nth_gametype</code> (const <code>GGZServer</code> *server, const unsigned int num)<br/>
+ <i>Get the nth gametype, or NULL on error. </i><br/>
+ <code>GGZGame</code> * <code>ggzcore_server_get_cur_game</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Return the player&#8217;s current game. </i><br/>
+ int <code>ggzcore_server_is_online</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Return TRUE iff the server is online (connected?). </i><br/>
+ int <code>ggzcore_server_is_logged_in</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Return TRUE iff we are logged into the server. </i><br/>
+ int <code>ggzcore_server_is_in_room</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Return TRUE iff we are in a room on the server. </i><br/>
+ int <code>ggzcore_server_is_at_table</code> (const <code>GGZServer</code> *server)<br/>
+ <i>Return TRUE iff we are at a table on the server. </i><br/>
+ int <code>ggzcore_server_connect</code> (<code>GGZServer</code> *server)<br/>
+ <i>Connect to the server. </i><br/>
+ int <code>ggzcore_server_login</code> (<code>GGZServer</code> *server)<br/>
+ <i>Log in to the server. </i><br/>
+ int <code>ggzcore_server_motd</code> (<code>GGZServer</code> *server)<br/>
+ <i>Request the MOTD from the server. </i><br/>
+ int <code>ggzcore_server_list_rooms</code> (<code>GGZServer</code> *server, const int type, const char verbose)<br/>
+ <i>Request room list. </i><br/>
+ int <code>ggzcore_server_list_gametypes</code> (<code>GGZServer</code> *server, const char verbose)<br/>
+ <i>Request game type list. </i><br/>
+ int <code>ggzcore_server_join_room</code> (<code>GGZServer</code> *server, const unsigned int room)<br/>
+ <i>Join a room on the server. </i><br/>
+ int <code>ggzcore_server_logout</code> (<code>GGZServer</code> *server)<br/>
+ <i>Log out of a server. </i><br/>
+ int <code>ggzcore_server_disconnect</code> (<code>GGZServer</code> *server)<br/>
+ <i>Disconnect from a server after having logged out. </i><br/>
+ int <code>ggzcore_server_data_is_pending</code> (<code>GGZServer</code> *server)<br/>
+ <i>Check for data pending from the server socket. </i><br/>
+ int <code>ggzcore_server_read_data</code> (<code>GGZServer</code> *server, int fd)<br/>
+ <i>Read data for the server on the specified FD. </i><br/>
+ void <code>ggzcore_server_free</code> (<code>GGZServer</code> *server)<br/>
+ <i>Free GGZServer object and accompanying data. </i><br/>
+ <code>GGZRoom</code> * <code>ggzcore_room_new</code> (void)<br/>
+ <i>Allocate space for a new room object. </i><br/>
+ int <code>ggzcore_room_init</code> (<code>GGZRoom</code> *room, <code>GGZServer</code> *server, const unsigned int id, const char *name, const unsigned int game, const char *desc)<br/>
+ <i>Initialize room object. </i><br/>
+ void <code>ggzcore_room_free</code> (<code>GGZRoom</code> *room)<br/>
+ <i>De-allocate room object and its children. </i><br/>
+ <code>GGZServer</code> * <code>ggzcore_room_get_server</code> (<code>GGZRoom</code> *room)<br/>
+ <i>Return the server for this room (or NULL on error). </i><br/>
+ int <code>ggzcore_room_get_id</code> (const <code>GGZRoom</code> *room)<br/>
+ <i>Return the ID number of the room (or negative on error). </i><br/>
+ char * <code>ggzcore_room_get_name</code> (<code>GGZRoom</code> *room)<br/>
+ <i>Return the name of the room (or NULL on error). </i><br/>
+ char * <code>ggzcore_room_get_desc</code> (<code>GGZRoom</code> *room)<br/>
+ <i>Return the description of the room (or NULL on error). </i><br/>
+ <code>GGZGameType</code> * <code>ggzcore_room_get_gametype</code> (<code>GGZRoom</code> *room)<br/>
+ <i>Return the type of game played in this room (or NULL on error). </i><br/>
+ int <code>ggzcore_room_get_num_players</code> (<code>GGZRoom</code> *room)<br/>
+ <i>Return the number of players in the room (or negative on error). </i><br/>
+ <code>GGZPlayer</code> * <code>ggzcore_room_get_nth_player</code> (<code>GGZRoom</code> *room, const unsigned int num)<br/>
+ <i>Return the nth player in the room (or NULL on error). </i><br/>
+ int <code>ggzcore_room_get_num_tables</code> (<code>GGZRoom</code> *room)<br/>
+ <i>Return the number of tables in the room (or negative on error). </i><br/>
+ <code>GGZTable</code> * <code>ggzcore_room_get_nth_table</code> (<code>GGZRoom</code> *room, const unsigned int num)<br/>
+ <i>Return the nth table in the room (or NULL on error). </i><br/>
+ <code>GGZTable</code> * <code>ggzcore_room_get_table_by_id</code> (<code>GGZRoom</code> *room, const unsigned int id)<br/>
+ <i>Return the table in this room with matching ID (NULL on error). </i><br/>
+ int <code>ggzcore_room_add_event_hook</code> (<code>GGZRoom</code> *room, const <code>GGZRoomEvent</code> event, const <code>GGZHookFunc</code> func)<br/>
+ <i>Register a handler (hook) for the room event. </i><br/>
+ int <code>ggzcore_room_add_event_hook_full</code> (<code>GGZRoom</code> *room, const <code>GGZRoomEvent</code> event, const <code>GGZHookFunc</code> func, const void *data)<br/>
+ <i>Register a handler (hook) for thee room event, with data. </i><br/>
+ int <code>ggzcore_room_remove_event_hook</code> (<code>GGZRoom</code> *room, const <code>GGZRoomEvent</code> event, const <code>GGZHookFunc</code> func)<br/>
+ <i>Remove a hook from an event. </i><br/>
+ int <code>ggzcore_room_remove_event_hook_id</code> (<code>GGZRoom</code> *room, const <code>GGZRoomEvent</code> event, const unsigned int hook_id)<br/>
+ <i>Remove a hook from an event, by ID. </i><br/>
+ int <code>ggzcore_room_list_players</code> (<code>GGZRoom</code> *room)<br/>
+ <i>Call to request a list of players in the room. </i><br/>
+ int <code>ggzcore_room_list_tables</code> (<code>GGZRoom</code> *room, const int type, const char global)<br/>
+ <i>Call to request a list of tables in the room. </i><br/>
+ int <code>ggzcore_room_chat</code> (<code>GGZRoom</code> *room, const GGZChatType opcode, const char *player, const char *msg)<br/>
+ <i>Chat! </i><br/>
+ int <code>ggzcore_room_launch_table</code> (<code>GGZRoom</code> *room, <code>GGZTable</code> *table)<br/>
+ <i>Launch a table in the room. </i><br/>
+ int <code>ggzcore_room_join_table</code> (<code>GGZRoom</code> *room, const unsigned int table_id, int spectator)<br/>
+ <i>Join a table in the room, so that you can then play at it. </i><br/>
+ int <code>ggzcore_room_leave_table</code> (<code>GGZRoom</code> *room, int force)<br/>
+ <i>Leave the table you are currently playing at. </i><br/>
+ char * <code>ggzcore_player_get_name</code> (const <code>GGZPlayer</code> *player)<br/>
+ <i>Return the name of the player. </i><br/>
+ GGZPlayerType <code>ggzcore_player_get_type</code> (const <code>GGZPlayer</code> *player)<br/>
+ <i>Return the type of the player (admin/registered/guest). </i><br/>
+ <code>GGZRoom</code> * <code>ggzcore_player_get_room</code> (const <code>GGZPlayer</code> *player)<br/>
+ <i>Return the player&#8217;s room, or NULL if none. </i><br/>
+ <code>GGZTable</code> * <code>ggzcore_player_get_table</code> (const <code>GGZPlayer</code> *player)<br/>
+ <i>Return the player&#8217;s table, or NULL if none. </i><br/>
+ int <code>ggzcore_player_get_lag</code> (const <code>GGZPlayer</code> *player)<br/>
+ <i>Return the player&#8217;s lag class (1..5). </i><br/>
+ int <code>ggzcore_player_get_record</code> (const <code>GGZPlayer</code> *player, int *wins, int *losses, int *ties, int *forfeits)<br/>
+ <i>Get the player&#8217;s win-loss record. </i><br/>
+ int <code>ggzcore_player_get_rating</code> (const <code>GGZPlayer</code> *player, int *rating)<br/>
+ <i>Get the player&#8217;s rating. </i><br/>
+ int <code>ggzcore_player_get_ranking</code> (const <code>GGZPlayer</code> *player, int *ranking)<br/>
+ <i>Get the player&#8217;s ranking. </i><br/>
+ int <code>ggzcore_player_get_highscore</code> (const <code>GGZPlayer</code> *player, int *highscore)<br/>
+ <i>Get the player&#8217;s highscore. </i><br/>
+ <code>GGZTable</code> * <code>ggzcore_table_new</code> (void)<br/>
+ <i>Create a new table object. </i><br/>
+ int <code>ggzcore_table_init</code> (<code>GGZTable</code> *table, const <code>GGZGameType</code> *gametype, const char *desc, const unsigned int num_seats)<br/>
+ <i>Set data on a table object. </i><br/>
+ void <code>ggzcore_table_free</code> (<code>GGZTable</code> *table)<br/>
+ <i>Free the table object. </i><br/>
+ int <code>ggzcore_table_set_seat</code> (<code>GGZTable</code> *table, const unsigned int seat, GGZSeatType type, const char *name)<br/>
+ <i>Set a seat type at a table, pre-launch. </i><br/>
+ int <code>ggzcore_table_remove_player</code> (<code>GGZTable</code> *table, char *name)<br/>
+ <i>Find and remove the player from the table. </i><br/>
+ int <code>ggzcore_table_get_id</code> (const <code>GGZTable</code> *table)<br/>
+ <i>Return the ID of the table. </i><br/>
+ const <code>GGZRoom</code> * <code>ggzcore_table_get_room</code> (const <code>GGZTable</code> *table)<br/>
+ <i>Return the room this table is in. </i><br/>
+ const <code>GGZGameType</code> * <code>ggzcore_table_get_type</code> (const <code>GGZTable</code> *table)<br/>
+ <i>Return the game type of the table. </i><br/>
+ const char * <code>ggzcore_table_get_desc</code> (const <code>GGZTable</code> *table)<br/>
+ <i>Return the table&#8217;s description (or NULL). </i><br/>
+ GGZTableState <code>ggzcore_table_get_state</code> (const <code>GGZTable</code> *table)<br/>
+ <i>Return the state of the table. </i><br/>
+ int <code>ggzcore_table_get_num_seats</code> (const <code>GGZTable</code> *table)<br/>
+ <i>Return the number of seats at the table. </i><br/>
+ int <code>ggzcore_table_set_desc</code> (<code>GGZTable</code> *table, const char *desc)<br/>
+ <i>Set the table description. </i><br/>
+ int <code>ggzcore_table_get_seat_count</code> (const <code>GGZTable</code> *table, GGZSeatType type)<br/>
+ <i>Count the seats of the given type. </i><br/>
+ const char * <code>ggzcore_table_get_nth_player_name</code> (const <code>GGZTable</code> *table, const unsigned int num)<br/>
+ <i>Return the name of a player at the table, or NULL on error. </i><br/>
+ int <code>ggzcore_table_get_num_spectator_seats</code> (const <code>GGZTable</code> *table)<br/>
+ <i>Return the number of spectator seats at the table, or -1. </i><br/>
+ const char * <code>ggzcore_table_get_nth_spectator_name</code> (const <code>GGZTable</code> *table, const unsigned int num)<br/>
+ <i>Return the name of the nth spectator, or NULL if seat is empty. </i><br/>
+ GGZSeatType <code>ggzcore_table_get_nth_player_type</code> (const <code>GGZTable</code> *table, const unsigned int num)<br/>
+ <i>Return the type of a player at the table, or GGZ_PLAYER_NONE on error. </i><br/>
+ unsigned int <code>ggzcore_gametype_get_id</code> (const <code>GGZGameType</code> *type)<br/>
+ <i>Get the ID of this gametype. </i><br/>
+ const char * <code>ggzcore_gametype_get_name</code> (const <code>GGZGameType</code> *type)<br/>
+ <i>Get the name of the game type. </i><br/>
+ const char * <code>ggzcore_gametype_get_prot_engine</code> (const <code>GGZGameType</code> *type)<br/>
+ <i>Get the protocol &#8216;engine&#8217; used by the game type. </i><br/>
+ const char * <code>ggzcore_gametype_get_prot_version</code> (const <code>GGZGameType</code> *type)<br/>
+ <i>Get the version of the protocol the game uses. </i><br/>
+ const char * <code>ggzcore_gametype_get_version</code> (const <code>GGZGameType</code> *type)<br/>
+ <i>Get the version of the game itself. </i><br/>
+ const char * <code>ggzcore_gametype_get_author</code> (const <code>GGZGameType</code> *type)<br/>
+ <i>Get the author of the game. </i><br/>
+ const char * <code>ggzcore_gametype_get_url</code> (const <code>GGZGameType</code> *type)<br/>
+ <i>Get a URL for more info about the game. </i><br/>
+ const char * <code>ggzcore_gametype_get_desc</code> (const <code>GGZGameType</code> *type)<br/>
+ <i>Get a description of the game. </i><br/>
+ int <code>ggzcore_gametype_get_max_players</code> (const <code>GGZGameType</code> *type)<br/>
+ <i>Get the maximum number of players the game can support. </i><br/>
+ int <code>ggzcore_gametype_get_max_bots</code> (const <code>GGZGameType</code> *type)<br/>
+ <i>Get the maximum number of bots the game can support. </i><br/>
+ int <code>ggzcore_gametype_get_spectators_allowed</code> (const <code>GGZGameType</code> *type)<br/>
+ <i>Return TRUE iff spectators are allowed for this game type. </i><br/>
+ int <code>ggzcore_gametype_num_players_is_valid</code> (const <code>GGZGameType</code> *type, unsigned int num)<br/>
+ <i>Return TRUE iff the given number of players is valid. </i><br/>
+ int <code>ggzcore_gametype_num_bots_is_valid</code> (const <code>GGZGameType</code> *type, unsigned int num)<br/>
+ <i>Return TRUE iff the given number of bots is valid. </i><br/>
  int <code>ggzcore_conf_initialize</code> (const char *g_path, const char *u_path) </p>
 <p> int <code>ggzcore_conf_write_string</code> (const char *section, const char *key, const char *value) </p>
 <p> int <code>ggzcore_conf_write_int</code> (const char *section, const char *key, int value) </p>
@@ -293,55 +293,55 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> int <code>ggzcore_conf_remove_section</code> (const char *section) </p>
 <p> int <code>ggzcore_conf_remove_key</code> (const char *section, const char *key) </p>
 <p> int <code>ggzcore_conf_commit</code> (void) </p>
-<p> unsigned int <code>ggzcore_module_get_num</code> (void)<br />
- <i>This returns the number of registered modules. </i><br />
+<p> unsigned int <code>ggzcore_module_get_num</code> (void)<br/>
+ <i>This returns the number of registered modules. </i><br/>
  int <code>ggzcore_module_add</code> (const char *name, const char *version, const char *prot_engine, const char *prot_version, const char *author, const char *frontend, const char *url, const char *exe_path, const char *icon_path, const char *help_path, <code>GGZModuleEnvironment</code> environment) </p>
-<p> int <code>ggzcore_module_get_num_by_type</code> (const char *game, const char *engine, const char *version)<br />
- <i>Returns how many modules support this game and protocol. </i><br />
- <code>GGZModule</code> * <code>ggzcore_module_get_nth_by_type</code> (const char *game, const char *engine, const char *version, const unsigned int num)<br />
- <i>Returns n-th module that supports this game and protocol. </i><br />
- const char * <code>ggzcore_module_get_name</code> (<code>GGZModule</code> *module)<br />
- <i>Return the name of the module. </i><br />
- const char * <code>ggzcore_module_get_version</code> (<code>GGZModule</code> *module)<br />
- <i>Return the (game?) version of the module. </i><br />
- const char * <code>ggzcore_module_get_prot_engine</code> (<code>GGZModule</code> *module)<br />
- <i>Return the name of the module&#8217;s protocol engine. </i><br />
- const char * <code>ggzcore_module_get_prot_version</code> (<code>GGZModule</code> *module)<br />
- <i>Return the version of the module&#8217;s protocol engine. </i><br />
- const char * <code>ggzcore_module_get_author</code> (<code>GGZModule</code> *module)<br />
- <i>Return the author of the module. </i><br />
- const char * <code>ggzcore_module_get_frontend</code> (<code>GGZModule</code> *module)<br />
- <i>Return the module&#8217;s frontend type. </i><br />
- const char * <code>ggzcore_module_get_url</code> (<code>GGZModule</code> *module)<br />
- <i>Return the URL associated with the module. </i><br />
+<p> int <code>ggzcore_module_get_num_by_type</code> (const char *game, const char *engine, const char *version)<br/>
+ <i>Returns how many modules support this game and protocol. </i><br/>
+ <code>GGZModule</code> * <code>ggzcore_module_get_nth_by_type</code> (const char *game, const char *engine, const char *version, const unsigned int num)<br/>
+ <i>Returns n-th module that supports this game and protocol. </i><br/>
+ const char * <code>ggzcore_module_get_name</code> (<code>GGZModule</code> *module)<br/>
+ <i>Return the name of the module. </i><br/>
+ const char * <code>ggzcore_module_get_version</code> (<code>GGZModule</code> *module)<br/>
+ <i>Return the (game?) version of the module. </i><br/>
+ const char * <code>ggzcore_module_get_prot_engine</code> (<code>GGZModule</code> *module)<br/>
+ <i>Return the name of the module&#8217;s protocol engine. </i><br/>
+ const char * <code>ggzcore_module_get_prot_version</code> (<code>GGZModule</code> *module)<br/>
+ <i>Return the version of the module&#8217;s protocol engine. </i><br/>
+ const char * <code>ggzcore_module_get_author</code> (<code>GGZModule</code> *module)<br/>
+ <i>Return the author of the module. </i><br/>
+ const char * <code>ggzcore_module_get_frontend</code> (<code>GGZModule</code> *module)<br/>
+ <i>Return the module&#8217;s frontend type. </i><br/>
+ const char * <code>ggzcore_module_get_url</code> (<code>GGZModule</code> *module)<br/>
+ <i>Return the URL associated with the module. </i><br/>
  const char * <code>ggzcore_module_get_icon_path</code> (<code>GGZModule</code> *module) </p>
-<p> const char * <code>ggzcore_module_get_help_path</code> (<code>GGZModule</code> *module)<br />
- <i>Return the help path of the module (?). </i><br />
- char ** <code>ggzcore_module_get_argv</code> (<code>GGZModule</code> *module)<br />
- <i>Return the executable arguments for the module. See exec(). </i><br />
- <code>GGZModuleEnvironment</code> <code>ggzcore_module_get_environment</code> (<code>GGZModule</code> *module)<br />
- <i>Return the preferred environment type. </i><br />
- <code>GGZGame</code> * <code>ggzcore_game_new</code> (void)<br />
- <i>Make a new game object. </i><br />
- int <code>ggzcore_game_init</code> (<code>GGZGame</code> *game, <code>GGZServer</code> *server, <code>GGZModule</code> *module)<br />
- <i>Initialize the game object. </i><br />
- void <code>ggzcore_game_free</code> (<code>GGZGame</code> *game)<br />
- <i>Free the game object. </i><br />
- int <code>ggzcore_game_add_event_hook</code> (<code>GGZGame</code> *game, const <code>GGZGameEvent</code> event, const <code>GGZHookFunc</code> func)<br />
- <i>Register a hook for a game event. </i><br />
- int <code>ggzcore_game_add_event_hook_full</code> (<code>GGZGame</code> *game, const <code>GGZGameEvent</code> event, const <code>GGZHookFunc</code> func, const void *data)<br />
- <i>Register a hook for a game event. </i><br />
- int <code>ggzcore_game_remove_event_hook</code> (<code>GGZGame</code> *game, const <code>GGZGameEvent</code> event, const <code>GGZHookFunc</code> func)<br />
- <i>Remove a hook from a game event. </i><br />
- int <code>ggzcore_game_remove_event_hook_id</code> (<code>GGZGame</code> *game, const <code>GGZGameEvent</code> event, const unsigned int hook_id)<br />
- <i>Remove a specified hook from a game event. </i><br />
- int <code>ggzcore_game_get_control_fd</code> (<code>GGZGame</code> *game)<br />
- <i>Return the control (ggzmod) socket for the game. </i><br />
- <code>GGZModule</code> * <code>ggzcore_game_get_module</code> (<code>GGZGame</code> *game)<br />
- <i>Return the module set for the game. </i><br />
- int <code>ggzcore_game_launch</code> (<code>GGZGame</code> *game)<br />
- <i>Launch thee game! </i><br />
- int <code>ggzcore_game_read_data</code> (<code>GGZGame</code> *game)<br />
+<p> const char * <code>ggzcore_module_get_help_path</code> (<code>GGZModule</code> *module)<br/>
+ <i>Return the help path of the module (?). </i><br/>
+ char ** <code>ggzcore_module_get_argv</code> (<code>GGZModule</code> *module)<br/>
+ <i>Return the executable arguments for the module. See exec(). </i><br/>
+ <code>GGZModuleEnvironment</code> <code>ggzcore_module_get_environment</code> (<code>GGZModule</code> *module)<br/>
+ <i>Return the preferred environment type. </i><br/>
+ <code>GGZGame</code> * <code>ggzcore_game_new</code> (void)<br/>
+ <i>Make a new game object. </i><br/>
+ int <code>ggzcore_game_init</code> (<code>GGZGame</code> *game, <code>GGZServer</code> *server, <code>GGZModule</code> *module)<br/>
+ <i>Initialize the game object. </i><br/>
+ void <code>ggzcore_game_free</code> (<code>GGZGame</code> *game)<br/>
+ <i>Free the game object. </i><br/>
+ int <code>ggzcore_game_add_event_hook</code> (<code>GGZGame</code> *game, const <code>GGZGameEvent</code> event, const <code>GGZHookFunc</code> func)<br/>
+ <i>Register a hook for a game event. </i><br/>
+ int <code>ggzcore_game_add_event_hook_full</code> (<code>GGZGame</code> *game, const <code>GGZGameEvent</code> event, const <code>GGZHookFunc</code> func, const void *data)<br/>
+ <i>Register a hook for a game event. </i><br/>
+ int <code>ggzcore_game_remove_event_hook</code> (<code>GGZGame</code> *game, const <code>GGZGameEvent</code> event, const <code>GGZHookFunc</code> func)<br/>
+ <i>Remove a hook from a game event. </i><br/>
+ int <code>ggzcore_game_remove_event_hook_id</code> (<code>GGZGame</code> *game, const <code>GGZGameEvent</code> event, const unsigned int hook_id)<br/>
+ <i>Remove a specified hook from a game event. </i><br/>
+ int <code>ggzcore_game_get_control_fd</code> (<code>GGZGame</code> *game)<br/>
+ <i>Return the control (ggzmod) socket for the game. </i><br/>
+ <code>GGZModule</code> * <code>ggzcore_game_get_module</code> (<code>GGZGame</code> *game)<br/>
+ <i>Return the module set for the game. </i><br/>
+ int <code>ggzcore_game_launch</code> (<code>GGZGame</code> *game)<br/>
+ <i>Launch thee game! </i><br/>
+ int <code>ggzcore_game_read_data</code> (<code>GGZGame</code> *game)<br/>
  <i>Read data from the game. When data is pending on the control socket, call this function. </i></p>
 <h2>Detailed Description</h2>
 <p> The interface for the ggzcore library used by GGZ clients. </p>
@@ -957,8 +957,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>section</i> section to get value from<br />
- <i>key</i> key value was stored under<br />
+</dt><dd> <i>section</i> section to get value from<br/>
+ <i>key</i> key value was stored under<br/>
  <i>def</i> default value to return if none is found</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -973,9 +973,9 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>section</i> section to get value from<br />
- <i>key</i> key value was stored under<br />
- <i>argcp</i> ptr to int which will receive the list entry count<br />
+</dt><dd> <i>section</i> section to get value from<br/>
+ <i>key</i> key value was stored under<br/>
+ <i>argcp</i> ptr to int which will receive the list entry count<br/>
  <i>argvp</i> a pointer to a dynamically allocated array that <code>ggzcore_conf_read_list()</code> will build</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -986,8 +986,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>section</i> section to get value from<br />
- <i>key</i> key value was stored under<br />
+</dt><dd> <i>section</i> section to get value from<br/>
+ <i>key</i> key value was stored under<br/>
  <i>def</i> default value to return if none is found</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1002,7 +1002,7 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>section</i> section to remove<br />
+</dt><dd> <i>section</i> section to remove<br/>
  <i>key</i> key entry to remove</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1023,8 +1023,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>section</i> section to store value in<br />
- <i>key</i> key to store value under<br />
+</dt><dd> <i>section</i> section to store value in<br/>
+ <i>key</i> key to store value under<br/>
  <i>value</i> value to store</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1035,9 +1035,9 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>section</i> section to store value in<br />
- <i>key</i> key to store value under<br />
- <i>argc</i> count of string arguments in list<br />
+</dt><dd> <i>section</i> section to store value in<br/>
+ <i>key</i> key to store value under<br/>
+ <i>argc</i> count of string arguments in list<br/>
  <i>argv</i> array of NULL terminated strings</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1048,8 +1048,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>section</i> section to store value in<br />
- <i>key</i> key to store value under<br />
+</dt><dd> <i>section</i> section to store value in<br/>
+ <i>key</i> key to store value under<br/>
  <i>value</i> value to store</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1159,8 +1159,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>room</i> The room object to associate the hook with.<br />
- <i>event</i> The event the handler is going to be &#8216;hooked&#8217; onto.<br />
+</dt><dd> <i>room</i> The room object to associate the hook with.<br/>
+ <i>event</i> The event the handler is going to be &#8216;hooked&#8217; onto.<br/>
  <i>func</i> The event handler itself. This is called during the event.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1178,9 +1178,9 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>room</i> The room object to associate the hook with.<br />
- <i>event</i> The event the handler is going to be &#8216;hooked&#8217; onto.<br />
- <i>func</i> The event handler itself. This is called during the event.<br />
+</dt><dd> <i>room</i> The room object to associate the hook with.<br/>
+ <i>event</i> The event the handler is going to be &#8216;hooked&#8217; onto.<br/>
+ <i>func</i> The event handler itself. This is called during the event.<br/>
  <i>data</i> The user data associated with the hook.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1195,9 +1195,9 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>room</i> Your current room.<br />
- <i>opcode</i> The chat type.<br />
- <i>player</i> The name of the target player (only for certain chat types)<br />
+</dt><dd> <i>room</i> Your current room.<br/>
+ <i>opcode</i> The chat type.<br/>
+ <i>player</i> The name of the target player (only for certain chat types)<br/>
  <i>msg</i> The text of the chat message (some chat types don&#8217;t need it)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1212,8 +1212,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>room</i> Your current room.<br />
- <i>table_id</i> The table to join.<br />
+</dt><dd> <i>room</i> Your current room.<br/>
+ <i>table_id</i> The table to join.<br/>
  <i>spectator</i> TRUE if you wish to spectate, FALSE if you want to play</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1225,7 +1225,7 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>room</i> Your current room.<br />
+</dt><dd> <i>room</i> Your current room.<br/>
  <i>table</i> The table to launch.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1237,7 +1237,7 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>room</i> Your current room.<br />
+</dt><dd> <i>room</i> Your current room.<br/>
  <i>force</i> TRUE to force the leave, FALSE to leave it up to ggzd</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1254,8 +1254,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>room</i> Your current room<br />
- <i>type</i> currently ignored (???)<br />
+</dt><dd> <i>room</i> Your current room<br/>
+ <i>type</i> currently ignored (???)<br/>
  <i>global</i> currently ignored (???)</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
@@ -1267,8 +1267,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>room</i> The room object to associate the hook with.<br />
- <i>event</i> The event the handler is to be unhooked from.<br />
+</dt><dd> <i>room</i> The room object to associate the hook with.<br/>
+ <i>event</i> The event the handler is to be unhooked from.<br/>
  <i>func</i> The event handler function to remove.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1284,8 +1284,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>room</i> The room object to associate the hook with.<br />
- <i>event</i> The event the handler is to be unhooked from.<br />
+</dt><dd> <i>room</i> The room object to associate the hook with.<br/>
+ <i>event</i> The event the handler is to be unhooked from.<br/>
  <i>id</i> The ID of the hook to remove, as returned by the add function return 0 on success, negative on failure</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
@@ -1297,8 +1297,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> The GGZ server object.<br />
- <i>event</i> The server event to be handled.<br />
+</dt><dd> <i>server</i> The GGZ server object.<br/>
+ <i>event</i> The server event to be handled.<br/>
  <i>func</i> The handler function to be called when the event occurs.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1476,7 +1476,7 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> The GGZ server object.<br />
+</dt><dd> <i>server</i> The GGZ server object.<br/>
  <i>room</i> The number of the room to join.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1487,7 +1487,7 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> The GGZ server object.<br />
+</dt><dd> <i>server</i> The GGZ server object.<br/>
  <i>verbose</i> Receive detailed gametype information or not.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1502,8 +1502,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> The GGZ server object.<br />
- <i>type</i> Not used yet.<br />
+</dt><dd> <i>server</i> The GGZ server object.<br/>
+ <i>type</i> Not used yet.<br/>
  <i>verbose</i> Receive all information about a room or only the essentials.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1519,7 +1519,7 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> The GGZ server object.<br />
+</dt><dd> <i>server</i> The GGZ server object.<br/>
  <i>filename</i> The file the messages are written to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1555,8 +1555,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> The GGZ server object.<br />
- <i>event</i> The server event the hook is associated with.<br />
+</dt><dd> <i>server</i> The GGZ server object.<br/>
+ <i>event</i> The server event the hook is associated with.<br/>
  <i>func</i> The function to be removed from the hook list.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1575,8 +1575,8 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> The GGZ server object.<br />
- <i>event</i> The server event the hook is associated with.<br />
+</dt><dd> <i>server</i> The GGZ server object.<br/>
+ <i>event</i> The server event the hook is associated with.<br/>
  <i>hook_id</i> The ID of the hook event.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1599,9 +1599,9 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> The GGZ server object.<br />
- <i>host</i> A string containing the hostname.<br />
- <i>port</i> The port to connect to.<br />
+</dt><dd> <i>server</i> The GGZ server object.<br/>
+ <i>host</i> A string containing the hostname.<br/>
+ <i>port</i> The port to connect to.<br/>
  <i>use_tls</i> If set, the connection will be encrypted.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1621,10 +1621,10 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> The GGZ server object.<br />
- <i>type</i> The type of login to attempt.<br />
- <i>handle</i> The username to use with the server.<br />
- <i>password</i> The password to use (may be NULL with some login types).<br />
+</dt><dd> <i>server</i> The GGZ server object.<br/>
+ <i>type</i> The type of login to attempt.<br/>
+ <i>handle</i> The username to use with the server.<br/>
+ <i>password</i> The password to use (may be NULL with some login types).<br/>
  <i>email</i> The email address to use (may be NULL with some login types).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1636,7 +1636,7 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>table</i> A GGZ table.<br />
+</dt><dd> <i>table</i> A GGZ table.<br/>
  <i>type</i> A GGZSeatType.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1660,9 +1660,9 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>table</i> The table object to change.<br />
- <i>seat</i> The seat number at the table to change.<br />
- <i>type</i> The type of seat to make it (open, reserved, or bot).<br />
+</dt><dd> <i>table</i> The table object to change.<br/>
+ <i>seat</i> The seat number at the table to change.<br/>
+ <i>type</i> The type of seat to make it (open, reserved, or bot).<br/>
  <i>name</i> The name of the seat (must be valid for reserved seats).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

@@ -13,7 +13,7 @@ description: "btrfs-check – check or repair a btrfs filesystem"
 <h2>Description</h2>
 <p>The filesystem checker is used to verify structural integrity of a filesystem and attempt to repair it if requested. It is recommended to unmount the filesystem prior to running the check, but it is possible to start checking a mounted filesystem (see <i>&#8211;force</i>). By default, <code>btrfs check</code> will not modify the device but you can reaffirm that by the option <i>&#8211;readonly</i>. <code>btrfsck</code> is an alias of <code>btrfs check</code> command and is now deprecated.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Do not use <i>&#8211;repair</i> unless you are advised to do so by a developer or an experienced user, and then only after having accepted that no <i>fsck</i> successfully repair all types of filesystem corruption. Eg. some other software or hardware bugs can fatally damage a volume.  The structural integrity check verifies if internal filesystem objects or data structures satisfy the constraints, point to the right objects or are correctly connected together. There are several cross checks that can detect wrong reference counts of shared extents, backreferences, missing extents of inodes, directory and inode connectivity etc. The amount of memory required can be high, depending on the size of the filesystem, similarly the run time. Check the modes that can also affect that.</dd>
 <h2>Safe Or Advisory Options</h2>
 <p>-b|&#8211;backup</p>
@@ -56,7 +56,7 @@ description: "btrfs-check – check or repair a btrfs filesystem"
 <dl>
 <dd>enable the repair mode and attempt to fix problems where possible </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  there&#8217;s a warning and 10 second delay when this option is run without <i>&#8211;force</i> to give users a chance to think twice before running repair, the warnings in documentation have shown to be insufficient </dd>
 </dl>
 </dl>
@@ -64,7 +64,7 @@ description: "btrfs-check – check or repair a btrfs filesystem"
 <dl>
 <dd>create a new checksum tree and recalculate checksums in all files </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Do not blindly use this option to fix checksum mismatch problems. </dd>
 </dl>
 </dl>
@@ -72,7 +72,7 @@ description: "btrfs-check – check or repair a btrfs filesystem"
 <dl>
 <dd>build the extent tree from scratch </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Do not use unless you know what you&#8217;re doing. </dd>
 </dl>
 </dl>
@@ -87,7 +87,7 @@ description: "btrfs-check – check or repair a btrfs filesystem"
 <dl>
 <dd>This mode is supposed to address the high memory consumption at the cost of increased IO when it needs to re-read blocks. This may increase run time. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  <i>lowmem</i> mode does not work with <i>&#8211;repair</i> yet, and is still considered experimental. </dd>
 </dl>
 </dl>

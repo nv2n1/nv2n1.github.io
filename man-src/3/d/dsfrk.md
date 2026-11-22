@@ -11,7 +11,7 @@ description: "dsfrk.f –"
 <p> dsfrk.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dsfrk</code> (TRANSR, UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C)<br />
+<p> subroutine <code>dsfrk</code> (TRANSR, UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C)<br/>
  <i></i><code>DSFRK</code> performs a symmetric rank-k operation for matrix in RFP format.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsfrk (characterTRANSR, characterUPLO, characterTRANS, integerN, integerK, double precisionALPHA, double precision, dimension( lda, * )A, integerLDA, double precisionBETA, double precision, dimension( * )C)</h3>

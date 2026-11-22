@@ -27,7 +27,7 @@ description: "argus.conf – argus resource file."
 <h2>Argus_Monitor_Id</h2>
 <p>Argus Monitor Data is uniquely identifiable based on the source identifier that is included in each output record. This is to allow you to work with Argus Data from multiple monitors at the same time. The ID is 32 bits long, and so legitimate values are 0 &#8211; 4294967296 but argus also supports IP addresses as values. The configuration allows for you to use host names, however, do have some understanding how `hostname` will be resolved by the nameserver before commiting to this strategy completely. </p>
 <p> Commandline equivalent -e </p>
-<p> <code>ARGUS_MONITOR_ID</code>=`hostname`<br />
+<p> <code>ARGUS_MONITOR_ID</code>=`hostname`<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></p>
 <h2>Argus_Access_Port</h2>
 <p>Argus monitors can provide a real-time remote access port for collecting Argus data. This is a TCP based port service and the default port number is tcp/561, the &quot;experimental monitor&quot; service. This feature is disabled by default, and can be forced off by setting it to zero (0). </p>
@@ -54,8 +54,8 @@ description: "argus.conf – argus resource file."
 <h2>Argus_Max_Instances</h2>
 <p>There can be any number of Argus Monitors running on a single system. While this is a blessing for some, this does cause some confusion in traditonal system administration tasks, such as pid file creation and failure recover methods. If you plan on having a more than one argus daemon running on your system, say, monitoring different interfaces, then set this variable to the number of daemons you expect to support. </p>
 <p> Commandline equivalent -I </p>
-<p> <code>ARGUS_MAX_INSTANCES=</code>1<br />
-&nbsp;<wbr><br />
+<p> <code>ARGUS_MAX_INSTANCES=</code>1<br/>
+&nbsp;<wbr><br/>
 &nbsp;<wbr></p>
 <h2>Argus_Set_Pid</h2>
 <p>When Argus is configured to run as a daemon, with the -d option, Argus can store its pid in a file, to aid in managing the running daemon. Creating a system pid file requires priviledges that may not be appropriate for all cases. To assist in managing pid file creation and support, argus </p>
@@ -66,9 +66,9 @@ description: "argus.conf – argus resource file."
 <h2>Argus_Pid_Filename</h2>
 <p>Argus has a mechanism for generating pid filenames, but in some circumstances, being able to specify the pid filename is required due to permission restriction or just out of convenience. If this file exists, argus will read the pid that the file contains, and test if that process is running. If not, the old pid is replaced, and argus continues to run. </p>
 <p> When this variable is set, argus assumes &quot;-I 1&quot; and &quot;-c&quot;. </p>
-<p> Commandline equivalent -n &lt;pid file&gt;<br />
+<p> Commandline equivalent -n &lt;pid file&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr> </p>
-<p> <code>ARGUS_PID_FILENAME</code>=/var/run/argus.pid<br />
+<p> <code>ARGUS_PID_FILENAME</code>=/var/run/argus.pid<br/>
 &nbsp;<wbr></p>
 <h2>Argus_Go_Promiscuous</h2>
 <p>By default, Argus will put its interface in promiscuous mode in order to monitor all the traffic that can be collected. This can put an undo load on systems. </p>

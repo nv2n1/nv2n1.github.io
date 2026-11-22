@@ -118,15 +118,15 @@ description: "ipa-replica-manage – Manage an IPA replica"
 <dl>
 <dt>List all masters:</dt>
 <dd>
-&nbsp;<wbr>#&nbsp;<wbr>ipa-replica-manage list<br />
-&nbsp;<wbr>srv1.example.com: master<br />
-&nbsp;<wbr>srv2.example.com: master<br />
-&nbsp;<wbr>srv3.example.com: master<br />
+&nbsp;<wbr>#&nbsp;<wbr>ipa-replica-manage list<br/>
+&nbsp;<wbr>srv1.example.com: master<br/>
+&nbsp;<wbr>srv2.example.com: master<br/>
+&nbsp;<wbr>srv3.example.com: master<br/>
 &nbsp;<wbr>srv4.example.com: master</dd>
 <dt>List a server&#8217;s replication agreements.</dt>
 <dd>
-&nbsp;<wbr>#&nbsp;<wbr>ipa-replica-manage list srv1.example.com<br />
-&nbsp;<wbr>srv2.example.com: replica<br />
+&nbsp;<wbr>#&nbsp;<wbr>ipa-replica-manage list srv1.example.com<br/>
+&nbsp;<wbr>srv2.example.com: replica<br/>
 &nbsp;<wbr>srv3.example.com: replica</dd>
 <dt>Re-initialize a replica:</dt>
 <dd>
@@ -145,11 +145,11 @@ description: "ipa-replica-manage – Manage an IPA replica"
 <dd>
 </dd><dt>List the replication IDs in use:</dt>
 <dd>
-&nbsp;<wbr>#&nbsp;<wbr>ipa-replica-manage list-ruv<br />
-&nbsp;<wbr>Replica Update Vectors:<br />
-&nbsp;<wbr>&nbsp;<wbr>srv1.example.com:389: 7<br />
-&nbsp;<wbr>&nbsp;<wbr>srv2.example.com:389: 4<br />
-&nbsp;<wbr>Certificate Server Replica Update Vectors:<br />
+&nbsp;<wbr>#&nbsp;<wbr>ipa-replica-manage list-ruv<br/>
+&nbsp;<wbr>Replica Update Vectors:<br/>
+&nbsp;<wbr>&nbsp;<wbr>srv1.example.com:389: 7<br/>
+&nbsp;<wbr>&nbsp;<wbr>srv2.example.com:389: 4<br/>
+&nbsp;<wbr>Certificate Server Replica Update Vectors:<br/>
 &nbsp;<wbr>&nbsp;<wbr>srv1.example.com:389: 9</dd>
 <dt>Remove references to an orphaned and deleted master:</dt>
 <dd>

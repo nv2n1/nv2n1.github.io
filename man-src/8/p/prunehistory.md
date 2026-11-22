@@ -20,7 +20,7 @@ description: "prunehistory – Remove tokens from Usenet history file"
 <dt><code>-f</code> <i>filename</i></dt>
 <dd>The default name of the <i>history</i> file is <i>pathdb</i>/history; to specify a different name, use the <code>-f</code> flag.</dd></dl>
 <h2>History</h2>
-<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
+<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to POD by Julien Elie. </p>
 <p> <tt>$Id:</tt> prunehistory.pod 9448 2012-12-07 19:01:58Z eagle $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/3-dbz/">dbz</a></i>(3), <i><a href="/docs/linux/man/5-history/">history</a></i>(5), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8). </p>

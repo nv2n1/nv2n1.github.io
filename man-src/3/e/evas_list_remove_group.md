@@ -9,11 +9,11 @@ description: "Linked List Remove Functions – Functions that remove data from l
 
 <p>Linked List Remove Functions &#8211; Functions that remove data from linked lists. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Evas_List</code> * <code>evas_list_remove</code> (<code>Evas_List</code> *list, const void *data)<br />
- <i>Removes the first instance of the specified data from the given list. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_list_remove_list</code> (<code>Evas_List</code> *list, <code>Evas_List</code> *remove_list)<br />
- <i>Removes the specified data. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_list_free</code> (<code>Evas_List</code> *list)<br />
+<p>EAPI <code>Evas_List</code> * <code>evas_list_remove</code> (<code>Evas_List</code> *list, const void *data)<br/>
+ <i>Removes the first instance of the specified data from the given list. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_list_remove_list</code> (<code>Evas_List</code> *list, <code>Evas_List</code> *remove_list)<br/>
+ <i>Removes the specified data. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_list_free</code> (<code>Evas_List</code> *list)<br/>
  <i>Free an entire list and all the nodes, ignoring the data contained. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that remove data from linked lists.</p>
@@ -38,7 +38,7 @@ description: "Linked List Remove Functions – Functions that remove data from l
 <p> If the specified data is not in the given list, nothing is done. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given list.<br />
+<dd><i>list</i> The given list.<br/>
  <i>data</i> The specified data.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -50,7 +50,7 @@ description: "Linked List Remove Functions – Functions that remove data from l
 <p> Remove a specified member from a list </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list handle to remove remove_list from<br />
+<dd><i>list</i> The list handle to remove remove_list from<br/>
  <i>remove_list</i> The list node which is to be removed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

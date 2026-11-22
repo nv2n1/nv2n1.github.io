@@ -40,7 +40,7 @@ description: "tcxmlcheck – Check information in smil input file"
 <p> <code>tcxmlcheck -i filename.smil -B -V</code> </p>
 <p> Retrive the content from the share memory related to <code>filename.smil</code> (used only by transcode at run time). </p>
 <h2>AUTHORS</h2>
-<p> <code>tcxmlcheck</code> was written by Marzio Malanchini<br />
+<p> <code>tcxmlcheck</code> was written by Marzio Malanchini<br/>
  &lt;marzio_malanchini [at] vodafone.it&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) </p>

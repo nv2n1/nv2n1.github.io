@@ -249,7 +249,7 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <h3>RAP VALIDATE <i>user</i> [<i>password</i>]</h3>
 <p>Validate whether the specified user can log in to the remote server. If the password is not specified on the commandline, it will be prompted. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Currently NOT implemented. </p>
 </dl>
 <h3>Rap Groupmember</h3>
@@ -262,20 +262,20 @@ description: "net – Tool for administration of Samba and remote CIFS servers."
 <h3>RAP ADMIN <i>command</i></h3>
 <p>Execute the specified <i>command</i> on the remote server. Only works with OS/2 servers. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Currently NOT implemented. </p>
 </dl>
 <h3>Rap Service</h3>
 <h3>RAP SERVICE START NAME [arguments&#8230;]</h3>
 <p>Start the specified service on the remote server. Not implemented yet. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Currently NOT implemented. </p>
 </dl>
 <h3>Rap Service Stop</h3>
 <p>Stop the specified service on the remote server. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Currently NOT implemented. </p>
 </dl>
 <h3>RAP PASSWORD <i>USER</i> <i>OLDPASS</i> <i>NEWPASS</i></h3>

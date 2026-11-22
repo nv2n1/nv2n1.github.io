@@ -14,7 +14,7 @@ description: "QuantLib::GapPayoff – Binary gap payoff."
 <p> Inherits <code>QuantLib::StrikedTypePayoff</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>GapPayoff</code> (Option::Type type, Real strike, Real secondStrike) </p>
-<p> Real <code>secondStrike</code> () const<br />
+<p> Real <code>secondStrike</code> () const<br/>
  <code>Payoff interface</code> </p>
 <p> std::string <code>name</code> () const </p>
 <p> std::string <code>description</code> () const </p>

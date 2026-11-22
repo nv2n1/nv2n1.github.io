@@ -54,7 +54,7 @@ description: "ipv6logstats – Takes http log data from stdin and print a statis
 <dt><code>[-p|&#8211;prefix</code> <i>TOKEN</i><code>]</code></dt>
 <dd>print token as prefix (1)</dd>
 <dt><code>[-s|&#8211;simple]</code></dt>
-<dd>disable extended statistic (CountryCode/ASN)<br />
+<dd>disable extended statistic (CountryCode/ASN)<br/>
 &nbsp;<wbr>(1)&nbsp;<wbr>unsupported for CountryCode&nbsp;<wbr>&amp;&nbsp;<wbr>ASN statistics </dd>
 </dl>
 <h2>Examples</h2>

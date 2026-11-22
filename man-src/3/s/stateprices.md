@@ -22,7 +22,7 @@ Protected Attributes</code></pre>
 <h3>Public Member Functions</h3>
 <p><code>TreeLattice</code> (const <code>TimeGrid</code> &amp;timeGrid, Size n) </p>
 <p> const <code>Array</code> &amp; <code>statePrices</code> (Size i) const </p>
-<p> void <code>stepback</code> (Size i, const <code>Array</code> &amp;values, <code>Array</code> &amp;newValues) const<br />
+<p> void <code>stepback</code> (Size i, const <code>Array</code> &amp;values, <code>Array</code> &amp;newValues) const<br/>
  <code>Lattice interface</code> </p>
 <pre><code>void initialize (DiscretizedAsset &amp;, Time t) const
 initialize an asset at the given time.

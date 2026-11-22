@@ -16,36 +16,36 @@ description: "QwtAbstractSlider –"
 <h3>Public Slots</h3>
 <p>void <code>setValue</code> (double val) </p>
 <h3>Signals</h3>
-<p>void <code>valueChanged</code> (double <code>value</code>)<br />
- <i>Notify a change of value. </i><br />
+<p>void <code>valueChanged</code> (double <code>value</code>)<br/>
+ <i>Notify a change of value. </i><br/>
  void <code>sliderPressed</code> () </p>
 <p> void <code>sliderReleased</code> () </p>
 <p> void <code>sliderMoved</code> (double <code>value</code>) </p>
 <h3>Public Member Functions</h3>
-<p><code>QwtAbstractSlider</code> (QWidget *parent=NULL)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtAbstractSlider</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtAbstractSlider</code> (QWidget *parent=NULL)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtAbstractSlider</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setValid</code> (bool) </p>
 <p> bool <code>isValid</code> () const </p>
-<p> double <code>value</code> () const<br />
- <i>Returns the current value. </i><br />
+<p> double <code>value</code> () const<br/>
+ <i>Returns the current value. </i><br/>
  void <code>setWrapping</code> (bool) </p>
 <p> bool <code>wrapping</code> () const </p>
-<p> void <code>setTotalSteps</code> (uint)<br />
- <i>Set the number of steps. </i><br />
+<p> void <code>setTotalSteps</code> (uint)<br/>
+ <i>Set the number of steps. </i><br/>
  uint <code>totalSteps</code> () const </p>
-<p> void <code>setSingleSteps</code> (uint)<br />
- <i>Set the number of steps for a single increment. </i><br />
+<p> void <code>setSingleSteps</code> (uint)<br/>
+ <i>Set the number of steps for a single increment. </i><br/>
  uint <code>singleSteps</code> () const </p>
-<p> void <code>setPageSteps</code> (uint)<br />
- <i>Set the number of steps for a page increment. </i><br />
+<p> void <code>setPageSteps</code> (uint)<br/>
+ <i>Set the number of steps for a page increment. </i><br/>
  uint <code>pageSteps</code> () const </p>
-<p> void <code>setStepAlignment</code> (bool)<br />
- <i>Enable step alignment. </i><br />
+<p> void <code>setStepAlignment</code> (bool)<br/>
+ <i>Enable step alignment. </i><br/>
  bool <code>stepAlignment</code> () const </p>
-<p> void <code>setTracking</code> (bool)<br />
- <i>Enables or disables tracking. </i><br />
+<p> void <code>setTracking</code> (bool)<br/>
+ <i>Enables or disables tracking. </i><br/>
  bool <code>isTracking</code> () const </p>
 <p> void <code>setReadOnly</code> (bool) </p>
 <p> bool <code>isReadOnly</code> () const </p>
@@ -57,14 +57,14 @@ description: "QwtAbstractSlider –"
 <p> virtual void <code>mouseMoveEvent</code> (QMouseEvent *) </p>
 <p> virtual void <code>keyPressEvent</code> (QKeyEvent *) </p>
 <p> virtual void <code>wheelEvent</code> (QWheelEvent *) </p>
-<p> virtual bool <code>isScrollPosition</code> (const QPoint &amp;pos) const =0<br />
- <i>Determine what to do when the user presses a mouse button. </i><br />
- virtual double <code>scrolledTo</code> (const QPoint &amp;pos) const =0<br />
- <i>Determine the value for a new position of the movable part of the slider. </i><br />
+<p> virtual bool <code>isScrollPosition</code> (const QPoint &amp;pos) const =0<br/>
+ <i>Determine what to do when the user presses a mouse button. </i><br/>
+ virtual double <code>scrolledTo</code> (const QPoint &amp;pos) const =0<br/>
+ <i>Determine the value for a new position of the movable part of the slider. </i><br/>
  void <code>incrementValue</code> (int numSteps) </p>
 <p> virtual void <code>scaleChange</code> () </p>
-<p> virtual void <code>sliderChange</code> ()<br />
- <i>Calling update() </i><br />
+<p> virtual void <code>sliderChange</code> ()<br/>
+ <i>Calling update() </i><br/>
  double <code>incrementedValue</code> (double <code>value</code>, int stepCount) const </p>
 <h2>Detailed Description</h2>
 <p>An abstract base class for slider widgets with a scale. </p>
@@ -83,7 +83,7 @@ description: "QwtAbstractSlider –"
 <p>Increment a value </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value<br />
+<dd><i>value</i> Value<br/>
  <i>stepCount</i> Number of steps</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

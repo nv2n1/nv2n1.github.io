@@ -10,10 +10,10 @@ description: "grmic – Generate stubs for Remote Method Invocation"
 
 <p> grmic &#8211; Generate stubs for Remote Method Invocation </p>
 <h2>SYNOPSIS</h2>
-<p> <code>grmic</code> [<font SIZE="-1"><code>OPTION</code></font>] &#8230; <i>class</i> &#8230;</p>
+<p> <code>grmic</code> [<code>OPTION</code>] &#8230; <i>class</i> &#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>grmic</code> is a utility included with <tt>&quot;libgcj&quot;</tt> which generates stubs for remote objects. </p>
-<p> Note that this program isn&#8217;t yet fully compatible with the <font SIZE="-1">JDK</font> <code>grmic</code>. Some options, such as <code>-classpath</code>, are recognized but currently ignored. We have left these options undocumented for now. </p>
+<p> Note that this program isn&#8217;t yet fully compatible with the JDK <code>grmic</code>. Some options, such as <code>-classpath</code>, are recognized but currently ignored. We have left these options undocumented for now. </p>
 <p> Long options can also be given with a GNU-style leading <code>&#8212;</code>. For instance, <code>&#8211;help</code> is accepted.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -40,12 +40,12 @@ description: "grmic – Generate stubs for Remote Method Invocation"
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, the Front-Cover Texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the man page <i>gfdl</i>(7). </p>
-<p> (a) The <font SIZE="-1">FSF</font>&#8216;s Front-Cover Text is: </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, the Front-Cover Texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the man page <i>gfdl</i>(7). </p>
+<p> (a) The FSF&#8216;s Front-Cover Text is: </p>
 <pre>
      A GNU Manual
 </pre>
-<p> (b) The <font SIZE="-1">FSF</font>&#8216;s Back-Cover Text is: </p>
+<p> (b) The FSF&#8216;s Back-Cover Text is: </p>
 <pre>
      You have freedom to copy and modify this GNU Manual, like GNU
      software.  Copies published by the Free Software Foundation raise

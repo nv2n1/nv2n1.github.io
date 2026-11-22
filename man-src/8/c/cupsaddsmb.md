@@ -9,7 +9,7 @@ description: "cupsaddsmb – export printers to samba for windows clients"
 
 <p>cupsaddsmb &#8211; export printers to samba for windows clients</p>
 <h2>Synopsis</h2>
-<p><code>cupsaddsmb</code> [ <code>-H</code> <i>samba-server</i> ] [ <code>-U</code> <i>samba-user[%samba-password]</i> ] [ <code>-h</code> <i>cups-server[:port]</i> ] [ <code>-v</code> ] <code>-a</code><br />
+<p><code>cupsaddsmb</code> [ <code>-H</code> <i>samba-server</i> ] [ <code>-U</code> <i>samba-user[%samba-password]</i> ] [ <code>-h</code> <i>cups-server[:port]</i> ] [ <code>-v</code> ] <code>-a</code><br/>
  <code>cupsaddsmb</code> [ <code>-H</code> <i>samba-server</i> ] [ <code>-U</code> <i>samba-user[%samba-password]</i> ] [ <code>-h</code> <i>cups-server[:port]</i> ] [ <code>-v</code> ] <i>printer</i> [ &#8230; <i>printer</i> ]</p>
 <h2>Description</h2>
 <p>The <code>cupsaddsmb</code> program exports printers to the SAMBA software (version 2.2.0 or higher) for use with Windows clients. Depending on the SAMBA configuration, you may need to provide a password to export the printers. This program requires the Windows printer driver files described below.</p>

@@ -10,7 +10,7 @@ description: "std::binomial_distribution< _IntType >::param_type –"
 <p>std::binomial_distribution&lt; _IntType &gt;::param_type &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Public Types</h3>
-<p>typedef <code>binomial_distribution</code><br />
+<p>typedef <code>binomial_distribution</code><br/>
  &lt; _IntType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <p><code>_M_p</code> (__p) </p>

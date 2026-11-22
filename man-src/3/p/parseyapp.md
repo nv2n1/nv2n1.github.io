@@ -19,7 +19,7 @@ description: "Parse::Yapp – Perl extension for generating and using LALR parse
  $data=$parser-&gt;YYData-&gt;{DATA}[0];</pre>
 <h2>Description</h2>
 <p>Parse::Yapp (Yet Another Perl Parser compiler) is a collection of modules that let you generate and use yacc like thread safe (reentrant) parsers with perl object oriented interface. </p>
-<p> The script yapp is a front-end to the Parse::Yapp module and let you easily create a Perl <font SIZE="-1">OO</font> parser from an input grammar file.</p>
+<p> The script yapp is a front-end to the Parse::Yapp module and let you easily create a Perl OO parser from an input grammar file.</p>
 <h3>The Grammar file</h3>
 <dl COMPACT>
 <dt>&quot;Comments&quot;</dt>
@@ -30,7 +30,7 @@ description: "Parse::Yapp – Perl extension for generating and using LALR parse
 <p> Non-terminals and symbolic tokens share the same identifier syntax: </p>
 <pre> [A-Za-z][A-Za-z0-9_]*</pre>
 <p>String literals are enclosed in single quotes and can contain almost anything. They will be output to your parser file double-quoted, making any special character as such. &#8216;&quot;&#8217;, &#8216;$&#8217; and &#8216;@&#8217; will be automatically quoted with &#8216;\&#8217;, making their writing more natural. On the other hand, if you need a single quote inside your literal, just quote it with &#8216;\&#8217;. </p>
-<p> You cannot have a literal <i>&#8216;error&#8217;</i> in your grammar as it would confuse the driver with the <i>error</i> token. Use a symbolic token instead. In case you inadvertently use it, this will produce a warning telling you you should have written it <i>error</i> and will treat it as if it were the <i>error</i> token, which is certainly <font SIZE="-1">NOT</font> what you meant.</p>
+<p> You cannot have a literal <i>&#8216;error&#8217;</i> in your grammar as it would confuse the driver with the <i>error</i> token. Use a symbolic token instead. In case you inadvertently use it, this will produce a warning telling you you should have written it <i>error</i> and will treat it as if it were the <i>error</i> token, which is certainly NOT what you meant.</p>
 <dt>&quot;Grammar file syntax&quot;</dt>
 <dd>It is very close to yacc syntax (in fact, <i>Parse::Yapp</i> should compile a clean <i>yacc</i> grammar without any modification, whereas the opposite is not true). </dd>
 <p> This file is divided in three sections, separated by <tt>&quot;%%&quot;</tt>: </p>
@@ -104,7 +104,7 @@ description: "Parse::Yapp – Perl extension for generating and using LALR parse
  $_[0]-&gt;YYExpect
  $_[0]-&gt;YYLexer</pre>
 <p>return respectivly the current input token that made the parse fail, its semantic value (both can be used to modify their values too, but <i>know what you are doing</i> ! See <i>Error reporting routine</i> section for an example), a list which contains the tokens the parser expected when the failure occured and a reference to the lexer routine. </p>
-<p> Note that if <tt>&quot;$_[0]-&gt;YYCurtok&quot;</tt> is declared as a <tt>%nonassoc</tt> token, it can be included in <tt>&quot;$_[0]-&gt;YYExpect&quot;</tt> list whenever the input try to use it in an associative way. This is not a bug: the token <font SIZE="-1">IS</font> expected to report an error if encountered. </p>
+<p> Note that if <tt>&quot;$_[0]-&gt;YYCurtok&quot;</tt> is declared as a <tt>%nonassoc</tt> token, it can be included in <tt>&quot;$_[0]-&gt;YYExpect&quot;</tt> list whenever the input try to use it in an associative way. This is not a bug: the token IS expected to report an error if encountered. </p>
 <p> To detect such a thing in your error reporting sub, the following example should do the trick: </p>
 <pre> grep { $_[0]-&gt;YYCurtok eq $_ } $_[0]-&gt;YYExpect
  and do {
@@ -116,11 +116,11 @@ description: "Parse::Yapp – Perl extension for generating and using LALR parse
 <p> There is also a provision for a user data area in the parser object, accessed by the method: </p>
 <pre> $_[0]-&gt;YYData</pre>
 <p>which returns a reference to an anonymous hash, which let you have all of your parsing data held inside the object (see the Calc.yp or ParseYapp.yp files in the distribution for some examples). That&#8217;s how you can make you parser module reentrant: all of your module states and variables are held inside the parser object. </p>
-<p> Note: unfortunatly, method calls in Perl have a lot of overhead,<br />
-and when YYData is used, it may be called a huge number<br />
-of times. If your are not a&nbsp;<wbr>*real*&nbsp;<wbr>purist and efficiency<br />
-is your concern, you may access directly the user-space<br />
-in the object:&nbsp;<wbr><tt>$parser</tt>-&gt;{<font SIZE="-1">USER</font>}&nbsp;<wbr>wich is a reference to an<br />
+<p> Note: unfortunatly, method calls in Perl have a lot of overhead,<br/>
+and when YYData is used, it may be called a huge number<br/>
+of times. If your are not a&nbsp;<wbr>*real*&nbsp;<wbr>purist and efficiency<br/>
+is your concern, you may access directly the user-space<br/>
+in the object:&nbsp;<wbr><tt>$parser</tt>-&gt;{USER}&nbsp;<wbr>wich is a reference to an<br/>
 anonymous hash array, and then benchmark. </p>
 <p> If no action is specified for a rule, the equivalant of a default action is run, which returns the first parameter: </p>
 <pre> { $_[1] }</pre>
@@ -152,7 +152,7 @@ or
 <p>When the lexer reach the end of input, it must return the <tt>''</tt> empty token with an undef value: </p>
 <pre> ( '', undef )</pre>
 <p>Note that your lexer should <i>never</i> return <tt>'error'</tt> as token value: for the driver, this is the error token used for error recovery and would lead to odd reactions. </p>
-<p> Now that you have your lexer written, maybe you will need to output meaningful error messages, instead of the default which is to print &#8216;Parse error.&#8217; on <font SIZE="-1">STDERR.</font> </p>
+<p> Now that you have your lexer written, maybe you will need to output meaningful error messages, instead of the default which is to print &#8216;Parse error.&#8217; on STDERR. </p>
 <p> So you will need an Error reporting sub.</p>
 <dt>&quot;Error reporting routine&quot;</dt>
 <dd>If you want one, write it knowing that it is passed as parameter the parser object. So you can share information whith the lexer routine quite easily. </dd>
@@ -192,7 +192,7 @@ or
  0x10 Error Recovery tracing</pre>
 <p>To have a full debugging ouput, use </p>
 <pre> debug =&gt; 0x1F</pre>
-<p>Debugging output is sent to <font SIZE="-1">STDERR,</font> and be aware that it can produce <tt>&quot;huge&quot;</tt> outputs.</p>
+<p>Debugging output is sent to STDERR, and be aware that it can produce <tt>&quot;huge&quot;</tt> outputs.</p>
 <dt>&quot;Standalone Parsers&quot;</dt>
 <dd>By default, the parser modules generated will need the Parse::Yapp module installed on the system to run. They use the Parse::Yapp::Driver which can be safely shared between parsers in the same script. </dd>
 <p> In the case you&#8217;d prefer to have a standalone module generated, use the <tt>&quot;-s&quot;</tt> switch with yapp: this will automagically copy the driver code into your module so you can use/distribute it without the need of the Parse::Yapp module, making it really a <tt>&quot;Standalone Parser&quot;</tt>. </p>
@@ -207,7 +207,7 @@ or
 <p><i><a href="/docs/linux/man/1-yapp/">yapp</a></i>(1) <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1) <i><a href="/docs/linux/man/1-yacc/">yacc</a></i>(1) <i><a href="/docs/linux/man/1-bison/">bison</a></i>(1).</p>
 <h2>Copyright</h2>
 <p>The Parse::Yapp module and its related modules and shell scripts are copyright (c) 1998-2001 Francois Desarmenien, France. All rights reserved. </p>
-<p> You may use and distribute them under the terms of either the <font SIZE="-1">GNU</font> General Public License or the Artistic License, as specified in the Perl <font SIZE="-1">README</font> file. </p>
+<p> You may use and distribute them under the terms of either the GNU General Public License or the Artistic License, as specified in the Perl README file. </p>
 <p> If you use the &#8220;standalone parser&#8221; option so people don&#8217;t need to install Parse::Yapp on their systems in order to run you software, this copyright noticed should be included in your software copyright too, and the copyright notice in the embedded driver should be left untouched.</p>
 <h2>Pod Errors</h2>
 <p>Hey! <code>The above document had some coding errors, which are explained below:</code></p>

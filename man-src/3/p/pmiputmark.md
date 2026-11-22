@@ -9,8 +9,8 @@ description: "pmiPutMark – write a <mark> record to a PCP archive"
 
 <p><code>pmiPutMark</code> &#8211; write a <i>&lt;mark&gt;</i> record to a PCP archive</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/import.h&gt; </p>
 <p> int pmiPutMark(void); </p>
 <p> cc &#8230; -lpcp_import -lpcp </code></p>

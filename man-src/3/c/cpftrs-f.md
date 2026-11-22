@@ -10,7 +10,7 @@ description: "cpftrs.f –"
 <p>cpftrs.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cpftrs</code> (TRANSR, UPLO, N, NRHS, A, B, LDB, INFO)<br />
+<p>subroutine <code>cpftrs</code> (TRANSR, UPLO, N, NRHS, A, B, LDB, INFO)<br/>
  <i></i><code>CPFTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpftrs (characterTRANSR, characterUPLO, integerN, integerNRHS, complex, dimension( 0: * )A, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

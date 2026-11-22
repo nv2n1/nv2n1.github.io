@@ -32,7 +32,7 @@ check_updates[OPTIONS] - ?, --usage Print usage information - h, --help Print de
                                                                                                                                --warning = INTEGER Exit with WARNING status if more than INTEGER non - security updates are available - c, --critical = INTEGER Exit with CRITICAL status if more than INTEGER non - security updates are available-- security - only Ignores non - security updates - a, --yum - arguments = STRING Specifies additional arguments for Yum.Arguments containing spaces must be quoted(e.g., ./ check_updates - a "-d 20") - t, --timeout = INTEGER Seconds before plugin times out(default:15) - v, --verbose Show details for command - line debugging(can repeat up to 3 times)
 </code></pre> 
 
- Security updates always force a <font SIZE="-1">CRITICAL</font> state
+ Security updates always force a CRITICAL state
 
 <h2>SECURITY UPDATES</h2>
 
@@ -50,7 +50,7 @@ check_updates[OPTIONS] - ?, --usage Print usage information - h, --help Print de
 
 <h2>EXIT STATUS</h2>
 
- 0 if <font SIZE="-1">OK, 1</font> in case of a warning, 2 in case of a critical status and 3 in case of an unkown problem
+ 0 if OK, 1 in case of a warning, 2 in case of a critical status and 3 in case of an unkown problem
 
 <h2>DEPENDENCIES</h2>
 
@@ -69,7 +69,7 @@ check_updates[OPTIONS] - ?, --usage Print usage information - h, --help Print de
 </dd><dt>&bull;
 </dt><dd> Monitoring::Plugin::Threshold
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">POSIX</font>
+</dt><dd> POSIX
 </dd><dt>&bull;
 </dt><dd> Readonly</dd></dl>
 
@@ -112,13 +112,13 @@ check_updates[OPTIONS] - ?, --usage Print usage information - h, --help Print de
 
  Copyright (c) 2007-2016, Matteo Corti 
 
- This module is free software; you can redistribute it and/or modify it under the terms of <font SIZE="-1">GNU</font> general public license (gpl) version 3 or (at your option) any later version. See the <font SIZE="-1">LICENSE</font> file for details.
+ This module is free software; you can redistribute it and/or modify it under the terms of GNU general public license (gpl) version 3 or (at your option) any later version. See the LICENSE file for details.
 
 <h2>DISCLAIMER OF WARRANTY</h2>
 
- <font SIZE="-1">BECAUSE THIS SOFTWARE IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY FOR THE SOFTWARE, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE SOFTWARE ``AS IS'' WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH YOU. SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR, OR CORRECTION.</font> 
+ BECAUSE THIS SOFTWARE IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY FOR THE SOFTWARE, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE SOFTWARE ``AS IS'' WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH YOU. SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR, OR CORRECTION. 
 
- <font SIZE="-1">IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE THE SOFTWARE AS PERMITTED BY THE ABOVE LICENCE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE </font>(<font SIZE="-1">INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE</font>), <font SIZE="-1">EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</font>
+ IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE THE SOFTWARE AS PERMITTED BY THE ABOVE LICENCE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
 <h2>ACKNOWLEDGMENTS</h2>
 
@@ -131,7 +131,7 @@ check_updates[OPTIONS] - ?, --usage Print usage information - h, --help Print de
 </dd><dt>&bull;
 </dt><dd> Jose Pedro Oliveria for the build and release fixes
 </dd><dt>&bull;
-</dt><dd> Tomas Edwardsson for a patch fixing the detection of <font SIZE="-1">RH EL 6</font> systems
+</dt><dd> Tomas Edwardsson for a patch fixing the detection of RH EL 6 systems
 </dd><dt>&bull;
 </dt><dd> Cott Lang for the Amazon Linux patch
 </dd><dt>&bull;
@@ -139,7 +139,7 @@ check_updates[OPTIONS] - ?, --usage Print usage information - h, --help Print de
 </dd><dt>&bull;
 </dt><dd> Franky Van Liedekerke for the perfomance data and security plugin patch and for the openvz kernels patch
 </dd><dt>&bull;
-</dt><dd> Andreas Dijkman for the Oracle <font SIZE="-1">UEK</font> patch
+</dt><dd> Andreas Dijkman for the Oracle UEK patch
 </dd><dt>&bull;
 </dt><dd> PhiBo (<a rel="nofollow" HREF="https://github.com/phibos)">https://github.com/phibos)</a> for the --boot-check-warning patch 
 </dd></dl>

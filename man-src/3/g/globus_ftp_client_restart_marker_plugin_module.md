@@ -11,8 +11,8 @@ description: "Restart Marker Plugin –"
 <h3>Macros</h3>
 <p>#define <code>GLOBUS_FTP_CLIENT_RESTART_MARKER_PLUGIN_MODULE</code> (&amp;globus_i_ftp_client_restart_marker_plugin_module) </p>
 <h3>Typedefs</h3>
-<p>typedef globus_bool_t(* <code>globus_ftp_client_restart_marker_plugin_begin_cb_t</code> )(void *user_arg, <code>globus_ftp_client_handle_t</code> *handle, const char *source_url, const char *dest_url, <code>globus_ftp_client_restart_marker_t</code> *user_saved_marker)<br />
- <i>Transfer begin callback. </i><br />
+<p>typedef globus_bool_t(* <code>globus_ftp_client_restart_marker_plugin_begin_cb_t</code> )(void *user_arg, <code>globus_ftp_client_handle_t</code> *handle, const char *source_url, const char *dest_url, <code>globus_ftp_client_restart_marker_t</code> *user_saved_marker)<br/>
+ <i>Transfer begin callback. </i><br/>
  typedef void(* <code>globus_ftp_client_restart_marker_plugin_marker_cb_t</code> )(void *user_arg, <code>globus_ftp_client_handle_t</code> *handle, <code>globus_ftp_client_restart_marker_t</code> *marker) </p>
 <p> typedef void(* <code>globus_ftp_client_restart_marker_plugin_complete_cb_t</code> )(void *user_arg, <code>globus_ftp_client_handle_t</code> *handle, globus_object_t *error, const char *error_url) </p>
 <h3>Functions</h3>
@@ -30,10 +30,10 @@ description: "Restart Marker Plugin –"
 <p> In any case, this is also an opportunity for the user to set up any storage in anticipation of restart markers for this transfer. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>handle</i> this the client handle that this transfer will be occurring on<br />
- <i>user_arg</i> this is the user_arg passed to the init func<br />
- <i>source_url</i> source of the transfer (GLOBUS_NULL if &#8216;put&#8217;)<br />
- <i>dest_url</i> dest of the transfer (GLOBUS_NULL if &#8216;get&#8217;)<br />
+<dd><i>handle</i> this the client handle that this transfer will be occurring on<br/>
+ <i>user_arg</i> this is the user_arg passed to the init func<br/>
+ <i>source_url</i> source of the transfer (GLOBUS_NULL if &#8216;put&#8217;)<br/>
+ <i>dest_url</i> dest of the transfer (GLOBUS_NULL if &#8216;get&#8217;)<br/>
  <i>user_saved_marker</i> pointer to an unitialized restart marker</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -49,9 +49,9 @@ description: "Restart Marker Plugin –"
 <p> This callback will be called upon transfer completion (successful or otherwise) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>handle</i> this the client handle that this transfer was occurring on<br />
- <i>user_arg</i> this is the user_arg passed to the init func<br />
- <i>error</i> the error object indicating what went wrong (GLOBUS_NULL on success)<br />
+<dd><i>handle</i> this the client handle that this transfer was occurring on<br/>
+ <i>user_arg</i> this is the user_arg passed to the init func<br/>
+ <i>error</i> the error object indicating what went wrong (GLOBUS_NULL on success)<br/>
  <i>error_url</i> the url which is the source of the above error (GLOBUS_NULL on success)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -67,8 +67,8 @@ description: "Restart Marker Plugin –"
 <p> The intended use for this callback is to allow the user to store this marker (most likely in place of any previous marker) in a format that the &#8216;begin_cb&#8217; can parse and pass back. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>handle</i> this the client handle that this transfer is occurring on<br />
- <i>user_arg</i> this is the user_arg passed to the init func<br />
+<dd><i>handle</i> this the client handle that this transfer is occurring on<br/>
+ <i>user_arg</i> this is the user_arg passed to the init func<br/>
  <i>marker</i> the restart marker that has been received. Thsi marker is owned by the caller. The user must use the copy method to keep it. Note: this restart marker currently contains all ranges received as of yet. Should I instead only pass a marker with the ranges just made available? If so, the user may need a way to combine restart markers (globus_ftp_client_restart_marker_combine)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -98,10 +98,10 @@ description: "Restart Marker Plugin –"
 <p> This function initializes a restart marker plugin. Any params except for the plugin may be GLOBUS_NULL </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i> a pointer to a plugin type to be initialized<br />
- <i>user_arg</i> a pointer to some user specific data that will be provided to all callbacks<br />
- <i>begin_cb</i> the callback to be called upon the start of a transfer<br />
- <i>marker_cb</i> the callback to be called with every restart marker received<br />
+<dd><i>plugin</i> a pointer to a plugin type to be initialized<br/>
+ <i>user_arg</i> a pointer to some user specific data that will be provided to all callbacks<br/>
+ <i>begin_cb</i> the callback to be called upon the start of a transfer<br/>
+ <i>marker_cb</i> the callback to be called with every restart marker received<br/>
  <i>complete_cb</i> the callback to be called to indicate transfer completion</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

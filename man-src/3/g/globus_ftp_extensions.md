@@ -348,8 +348,8 @@ Code     Meaning
 <dt>&bull;</dt>
 <dd> The sender communicates end of file by sending an EOF message to all servers receiving data. The EOF message format follows.</dd></dl>
 <p> Extended Block EOF Header </p>
-<p>+ &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8211; / &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; / &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | Descriptor | unused | EOD count expected |<br />
-    | 8 bits | 64 bits | 64 bits |<br />
+<p>+ &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8211; / &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; / &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | Descriptor | unused | EOD count expected |<br/>
+    | 8 bits | 64 bits | 64 bits |<br/>
     +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8211; / &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; / &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+</p>
 <p> EOF Descriptor. The EOF header descriptor has the same definition as the regular data message header described above. </p>
 <p> EOD Count Expected. This 64 bit field represents the total number of data connections that will be established with the server receiving the file. This number is used by the receiver to determine it has received all of the data. When the number of EOD messages received equals the number represented by the &#8216;EOD Count Expected&#8217; field the receiver has hit end of file. </p>

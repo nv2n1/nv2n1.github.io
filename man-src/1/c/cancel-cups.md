@@ -36,7 +36,7 @@ description: "cancel – cancel jobs"
 <h2>NOTES</h2>
 <p> Administrators wishing to prevent unauthorized cancellation of jobs via the <i>-u</i> option should require authentication for Cancel-Jobs operations in <i><a href="/docs/linux/man/5-cupsd-conf/">cupsd.conf</a>(5)</i>.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-lp/">lp</a>(1)</i>, <i><a href="/docs/linux/man/8-lpmove/">lpmove</a>(8)</i>, <i><a href="/docs/linux/man/1-lpstat/">lpstat</a>(1)</i>,<br />
+<p> <i><a href="/docs/linux/man/1-lp/">lp</a>(1)</i>, <i><a href="/docs/linux/man/8-lpmove/">lpmove</a>(8)</i>, <i><a href="/docs/linux/man/1-lpstat/">lpstat</a>(1)</i>,<br/>
  <a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2007-2013 by Apple Inc. </p>

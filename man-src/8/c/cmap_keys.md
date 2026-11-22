@@ -104,14 +104,14 @@ description: "cmap_keys – Overview of keys stored in the Configuration Map"
 <h2>Dynamic Add/Remove Of Udpu Node</h2>
 <p>Eg. To add the node with address 10.34.38.108 and nodeid 3. This node is called NEW and it&#8217;s not running corosync yet. </p>
 <p> * Find a node position in the node list which is not used yet. It&#8217;s recommended that you use highest_number + 1. Let&#8217;s say output of corosync-cmapctl looks like: </p>
-<p> nodelist.local_node_pos (u32) = 1<br />
- nodelist.node.0.nodeid (u32) = 1<br />
- nodelist.node.0.ring0_addr (str) = 10.34.38.106<br />
- nodelist.node.1.nodeid (u32) = 2<br />
+<p> nodelist.local_node_pos (u32) = 1<br/>
+ nodelist.node.0.nodeid (u32) = 1<br/>
+ nodelist.node.0.ring0_addr (str) = 10.34.38.106<br/>
+ nodelist.node.1.nodeid (u32) = 2<br/>
  nodelist.node.1.ring0_addr (str) = 10.34.38.107 </p>
 <p> So next node position will be 2. </p>
 <p> * Add all entries needed for the node on all running nodes, as: </p>
-<p> # corosync-cmapctl -s nodelist.node.2.nodeid u32 3<br />
+<p> # corosync-cmapctl -s nodelist.node.2.nodeid u32 3<br/>
  # corosync-cmapctl -s nodelist.node.2.ring0_addr str 10.34.38.108 </p>
 <p> Always add the ring0_addr key last. The Corosync engine on all nodes should reply with <i>notice [TOTEM ] adding new UDPU member {10.34.38.108}</i> message. </p>
 <p> * Add node information to the configuration file on all nodes so that it will survive a restart of corosync. </p>

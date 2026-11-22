@@ -11,7 +11,7 @@ description: "dlamchtst.f –"
 <p> dlamchtst.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> program <code>__dlamchtst.f__</code><br />
+<p> program <code>__dlamchtst.f__</code><br/>
  <i></i><code>DLAMCHTST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>program __dlamchtst.f__ ()</h3>

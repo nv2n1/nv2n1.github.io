@@ -16,47 +16,47 @@ description: "QwtSymbol –"
 <p> enum <code>CachePolicy</code> { <code>NoCache</code>, <code>Cache</code>, <code>AutoCache</code> } </p>
 <h3>Public Member Functions</h3>
 <p><code>QwtSymbol</code> (<code>Style</code>=<code>NoSymbol</code>) </p>
-<p> <code>QwtSymbol</code> (<code>Style</code>, const QBrush &amp;, const QPen &amp;, const QSize &amp;)<br />
- <i>Constructor. </i><br />
- <code>QwtSymbol</code> (const QPainterPath &amp;, const QBrush &amp;, const QPen &amp;)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtSymbol</code> ()<br />
- <i>Destructor. </i><br />
+<p> <code>QwtSymbol</code> (<code>Style</code>, const QBrush &amp;, const QPen &amp;, const QSize &amp;)<br/>
+ <i>Constructor. </i><br/>
+ <code>QwtSymbol</code> (const QPainterPath &amp;, const QBrush &amp;, const QPen &amp;)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtSymbol</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setCachePolicy</code> (<code>CachePolicy</code>) </p>
 <p> <code>CachePolicy</code> <code>cachePolicy</code> () const </p>
 <p> void <code>setSize</code> (const QSize &amp;) </p>
-<p> void <code>setSize</code> (int width, int height=-1)<br />
- <i>Specify the symbol&#8217;s size. </i><br />
+<p> void <code>setSize</code> (int width, int height=-1)<br/>
+ <i>Specify the symbol&#8217;s size. </i><br/>
  const QSize &amp; <code>size</code> () const </p>
-<p> void <code>setPinPoint</code> (const QPointF &amp;pos, bool enable=true)<br />
- <i>Set and enable a pin point. </i><br />
+<p> void <code>setPinPoint</code> (const QPointF &amp;pos, bool enable=true)<br/>
+ <i>Set and enable a pin point. </i><br/>
  QPointF <code>pinPoint</code> () const </p>
 <p> void <code>setPinPointEnabled</code> (bool) </p>
 <p> bool <code>isPinPointEnabled</code> () const </p>
-<p> virtual void <code>setColor</code> (const QColor &amp;)<br />
- <i>Set the color of the symbol. </i><br />
- void <code>setBrush</code> (const QBrush &amp;b)<br />
- <i>Assign a brush. </i><br />
+<p> virtual void <code>setColor</code> (const QColor &amp;)<br/>
+ <i>Set the color of the symbol. </i><br/>
+ void <code>setBrush</code> (const QBrush &amp;b)<br/>
+ <i>Assign a brush. </i><br/>
  const QBrush &amp; <code>brush</code> () const </p>
 <p> void <code>setPen</code> (const QColor &amp;, qreal width=0.0, Qt::PenStyle=Qt::SolidLine) </p>
 <p> void <code>setPen</code> (const QPen &amp;) </p>
 <p> const QPen &amp; <code>pen</code> () const </p>
 <p> void <code>setStyle</code> (<code>Style</code>) </p>
 <p> <code>Style</code> <code>style</code> () const </p>
-<p> void <code>setPath</code> (const QPainterPath &amp;)<br />
- <i>Set a painter path as symbol. </i><br />
+<p> void <code>setPath</code> (const QPainterPath &amp;)<br/>
+ <i>Set a painter path as symbol. </i><br/>
  const QPainterPath &amp; <code>path</code> () const </p>
 <p> void <code>setPixmap</code> (const QPixmap &amp;) </p>
 <p> const QPixmap &amp; <code>pixmap</code> () const </p>
 <p> void <code>setGraphic</code> (const <code>QwtGraphic</code> &amp;) </p>
 <p> const <code>QwtGraphic</code> &amp; <code>graphic</code> () const </p>
 <p> void <code>setSvgDocument</code> (const QByteArray &amp;) </p>
-<p> void <code>drawSymbol</code> (QPainter *, const QRectF &amp;) const<br />
- <i>Draw the symbol into a rectangle. </i><br />
- void <code>drawSymbol</code> (QPainter *, const QPointF &amp;) const<br />
- <i>Draw the symbol at a specified position. </i><br />
- void <code>drawSymbols</code> (QPainter *, const QPolygonF &amp;) const<br />
- <i>Draw symbols at the specified points. </i><br />
+<p> void <code>drawSymbol</code> (QPainter *, const QRectF &amp;) const<br/>
+ <i>Draw the symbol into a rectangle. </i><br/>
+ void <code>drawSymbol</code> (QPainter *, const QPointF &amp;) const<br/>
+ <i>Draw the symbol at a specified position. </i><br/>
+ void <code>drawSymbols</code> (QPainter *, const QPolygonF &amp;) const<br/>
+ <i>Draw symbols at the specified points. </i><br/>
  void <code>drawSymbols</code> (QPainter *, const QPointF *, int numPoints) const </p>
 <p> virtual QRect <code>boundingRect</code> () const </p>
 <p> void <code>invalidateCache</code> () </p>
@@ -165,9 +165,9 @@ description: "QwtSymbol –"
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>style</i> Symbol Style<br />
- <i>brush</i> brush to fill the interior<br />
- <i>pen</i> outline pen<br />
+<dd><i>style</i> Symbol Style<br/>
+ <i>brush</i> brush to fill the interior<br/>
+ <i>pen</i> outline pen<br/>
  <i>size</i> size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -176,8 +176,8 @@ description: "QwtSymbol –"
 <p>Constructor. The symbol gets initialized by a painter path. The style is set to <code>QwtSymbol::Path</code>, the size is set to empty ( the path is displayed unscaled ). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>path</i> painter path<br />
- <i>brush</i> brush to fill the interior<br />
+<dd><i>path</i> painter path<br/>
+ <i>brush</i> brush to fill the interior<br/>
  <i>pen</i> outline pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -207,27 +207,27 @@ description: "QwtSymbol –"
 <p> This method is primarily intended for drawing a symbol to the legend. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>rect</i> Target rectangle for the symbol</dd></dl>
 <h3>void QwtSymbol::drawSymbol (QPainter *painter, const QPointF &amp;pos) const [inline]</h3>
 <p>Draw the symbol at a specified position. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>pos</i> Position of the symbol in screen coordinates</dd></dl>
 <h3>void QwtSymbol::drawSymbols (QPainter *painter, const QPolygonF &amp;points) const [inline]</h3>
 <p>Draw symbols at the specified points. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>points</i> Positions of the symbols in screen coordinates</dd></dl>
 <h3>void QwtSymbol::drawSymbols (QPainter *painter, const QPointF *points, intnumPoints) const</h3>
 <p>Render an array of symbols </p>
 <p> Painting several symbols is more effective than drawing symbols one by one, as a couple of layout calculations and setting of pen/brush can be done once for the complete array. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>points</i> Array of points<br />
+<dd><i>painter</i> Painter<br/>
+ <i>points</i> Array of points<br/>
  <i>numPoints</i> Number of points</dd></dl>
 <h3>const <code>QwtGraphic</code> &amp; QwtSymbol::graphic () const</h3>
 <p><code>Returns:</code></p>
@@ -281,8 +281,8 @@ description: "QwtSymbol –"
 <p>Render the symbol to series of points </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Qt painter<br />
- <i>points</i> Positions of the symbols<br />
+<dd><i>painter</i> Qt painter<br/>
+ <i>points</i> Positions of the symbols<br/>
  <i>numPoints</i> Number of points</dd></dl>
 <h3>void QwtSymbol::setBrush (const QBrush &amp;brush)</h3>
 <p>Assign a brush. The brush is used to draw the interior of the symbol. </p>
@@ -358,8 +358,8 @@ setSize( 10, 14 );</pre>
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Pen color<br />
- <i>width</i> Pen width<br />
+<dd><i>color</i> Pen color<br/>
+ <i>width</i> Pen width<br/>
  <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -377,7 +377,7 @@ setSize( 10, 14 );</pre>
 <p>Set and enable a pin point. The position of a complex symbol is not always aligned to its center ( f.e an arrow, where the peak points to a position ). The pin point defines the position inside of a Pixmap, Graphic, SvgDocument or PainterPath symbol where the represented point has to be aligned to. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Position<br />
+<dd><i>pos</i> Position<br/>
  <i>enable</i> En/Disable the pin point alignment</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -414,7 +414,7 @@ setSize( 10, 14 );</pre>
 <p>Specify the symbol&#8217;s size. If the &#8216;h&#8217; parameter is left out or less than 0, and the &#8216;w&#8217; parameter is greater than or equal to 0, the symbol size will be set to (w,w). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Width<br />
+<dd><i>width</i> Width<br/>
  <i>height</i> Height (defaults to -1)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

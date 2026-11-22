@@ -10,7 +10,7 @@ description: "pgmcrater – create cratered terrain by fractal forgery"
 
 <p> pgmcrater &#8211; create cratered terrain by fractal forgery </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pgmcrater</code><br />
+<p> <code>pgmcrater</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-number</code> <i>n</i>] [<code>-height</code>|<code>-ysize</code> <i>s</i>] [<code>-width</code>|<code>-xsize</code> <i>s</i>] [<code>-gamma</code> <i>g</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. </p>
 <h2>DESCRIPTION</h2>

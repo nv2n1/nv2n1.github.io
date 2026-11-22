@@ -11,19 +11,19 @@ description: "std::bad_typeid – std::bad_typeid"
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;typeinfo&gt;
 class bad_typeid : public std::exception;</code></pre>
-<p>An exception of this type is thrown when a typeid operator is applied to a dereferenced null pointer value of a polymorphic type.<br />
-&nbsp;std-bad typeid-inheritance.svg<br />
+<p>An exception of this type is thrown when a typeid operator is applied to a dereferenced null pointer value of a polymorphic type.<br/>
+&nbsp;std-bad typeid-inheritance.svg<br/>
 Inheritance diagram </p>
 <h2>Member functions</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constructs a new bad_typeid object<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constructs a new bad_typeid object<br/>
 constructor <i>(public member function)</i> </p>
 <p>Inherited from std::exception</p>
 <h2>Member functions</h2>
-<p>destructor destroys the exception object<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual public member function of std::exception)</i><br />
+<p>destructor destroys the exception object<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual public member function of std::exception)</i><br/>
 <code>[virtual]</code> </p>
-<p>what returns an explanatory string<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual public member function of std::exception)</i><br />
+<p>what returns an explanatory string<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual public member function of std::exception)</i><br/>
 <code>[virtual]</code></p>
 <h2>Example</h2>
 <p>// Run this code </p>

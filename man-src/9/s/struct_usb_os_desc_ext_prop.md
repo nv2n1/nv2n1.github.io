@@ -55,5 +55,5 @@ description: "struct_usb_os_desc_ext_prop – describes one “Extended Property
 <dd> <p> Author. </p>
  </dd></dl>
 <h2>COPYRIGHT</h2>
-<p> <br />
+<p> <br/>
  </p>

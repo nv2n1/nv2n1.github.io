@@ -33,7 +33,7 @@ description: "ClipIt – Lightweight GTK+ Clipboard Manager"
 <dl>
 <dt>Put text in the clipboard</dt>
 <dd>
-&nbsp;<wbr>echo&nbsp;<wbr>&quot;copied to clipboard&quot;&nbsp;<wbr>| clipit<br />
+&nbsp;<wbr>echo&nbsp;<wbr>&quot;copied to clipboard&quot;&nbsp;<wbr>| clipit<br/>
 &nbsp;<wbr>clipit&nbsp;<wbr>&quot;copied to clipboard&quot;</dd>
 <dt>Put text in the clipboard and print the clipboard contents</dt>
 <dd>

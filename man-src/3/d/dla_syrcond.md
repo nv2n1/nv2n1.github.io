@@ -11,7 +11,7 @@ description: "dla_syrcond.f –"
 <p> dla_syrcond.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dla_syrcond</code> (UPLO, N, A, LDA, AF, LDAF, IPIV, CMODE, C, INFO, WORK, IWORK)<br />
+<p> DOUBLE PRECISION function <code>dla_syrcond</code> (UPLO, N, A, LDA, AF, LDAF, IPIV, CMODE, C, INFO, WORK, IWORK)<br/>
  <i></i><code>DLA_SYRCOND</code> estimates the Skeel condition number for a symmetric indefinite matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dla_syrcond (characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, integerCMODE, double precision, dimension( * )C, integerINFO, double precision, dimension( * )WORK, integer, dimension( * )IWORK)</h3>

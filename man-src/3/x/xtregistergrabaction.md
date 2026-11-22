@@ -27,5 +27,5 @@ description: "XtRegisterGrabAction – register button and key grabs"
 <h2>Description</h2>
 <p><code>XtRegisterGrabAction</code> adds the specified <i>action_proc</i> to a list known to the translation manager.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

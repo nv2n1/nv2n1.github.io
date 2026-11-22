@@ -321,20 +321,20 @@ description: "opafequery"
 <dt>clrVfPortCounters</dt>
 <dd>Clears VF port counters of fabric port. Requires -l <i>lid</i>, -N <i>port</i>, -e <i>select</i>, and -V <i>vfName</i> options.</dd></dl>
 <h2>Examples</h2>
-<p>opafequery -o saclassPortInfo<br />
- opafequery -h stewie -o paclassPortInfo<br />
- opafequery -a 172.21.2.155 -o saclassPortInfo<br />
- opafequery -o groupList<br />
- opafequery -o groupInfo -g All<br />
- opafequery -o groupConfig -g All<br />
- opafequery -h stewie -o groupInfo -g All<br />
- opafequery -a 172.21.2.155 -o groupInfo -g All<br />
- opafequery -o portCounters -l 1 -N 1 -d 1<br />
- opafequery -o portCounters -l 1 -N 1 -d 1 -e 0x20000000d02 -O 1<br />
- opafequery -o pmConfig<br />
- opafequery -o freezeImage 0x20000000d02<br />
- opafequery -o releaseImage -b 0xd01<br />
- opafequery -o renewImage -b 0xd01<br />
- opafequery -o moveFreeze -b 0xd01 -m 0x20000000d02 -M -2<br />
- opafequery -o focusPorts -g All -f 0x00030001 -w 0 -r 20<br />
+<p>opafequery -o saclassPortInfo<br/>
+ opafequery -h stewie -o paclassPortInfo<br/>
+ opafequery -a 172.21.2.155 -o saclassPortInfo<br/>
+ opafequery -o groupList<br/>
+ opafequery -o groupInfo -g All<br/>
+ opafequery -o groupConfig -g All<br/>
+ opafequery -h stewie -o groupInfo -g All<br/>
+ opafequery -a 172.21.2.155 -o groupInfo -g All<br/>
+ opafequery -o portCounters -l 1 -N 1 -d 1<br/>
+ opafequery -o portCounters -l 1 -N 1 -d 1 -e 0x20000000d02 -O 1<br/>
+ opafequery -o pmConfig<br/>
+ opafequery -o freezeImage 0x20000000d02<br/>
+ opafequery -o releaseImage -b 0xd01<br/>
+ opafequery -o renewImage -b 0xd01<br/>
+ opafequery -o moveFreeze -b 0xd01 -m 0x20000000d02 -M -2<br/>
+ opafequery -o focusPorts -g All -f 0x00030001 -w 0 -r 20<br/>
  opafequery -o imageInfo -b 0x20000000d02 </p>

@@ -64,6 +64,6 @@ Instrument   velocity range 2
 <dd> Same as <code>-M</code> but then for drum banks. </dd>
 </dl>
 <h2>AUTHORS</h2>
-<p> Greg Lee &lt;greg [at] ling.lll.hawaii.edu&gt;<br />
- SoundFont loader based on code provided by George Foot.<br />
+<p> Greg Lee &lt;greg [at] ling.lll.hawaii.edu&gt;<br/>
+ SoundFont loader based on code provided by George Foot.<br/>
  SoundFont file extension written by Takashi Iwai &lt;iwai [at] dragon.mm.t.u-tokyo.ac.jp&gt; </p>

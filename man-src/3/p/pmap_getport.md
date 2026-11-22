@@ -277,42 +277,42 @@ description: "rpc – library routines for remote procedure calls"
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>auth_destroy</code>(), <code>authnone_create</code>(),<br />
- <code>authunix_create</code>(),<br />
- <code>authunix_create_default</code>(),<br />
- <code>callrpc</code>(), <code>clnt_broadcast</code>(),<br />
- <code>clnt_call</code>(), <code>clnt_destroy</code>(),<br />
- <code>clnt_create</code>(), <code>clnt_control</code>(),<br />
- <code>clnt_freeres</code>(), <code>clnt_geterr</code>(),<br />
- <code>clnt_pcreateerror</code>(), <code>clnt_perrno</code>(),<br />
- <code>clnt_perror</code>(),<br />
- <code>clnt_spcreateerror</code>(),<br />
- <code>clnt_sperrno</code>(), <code>clnt_sperror</code>(),<br />
- <code>clntraw_create</code>(), <code>clnttcp_create</code>(),<br />
- <code>clntudp_create</code>(),<br />
- <code>clntudp_bufcreate</code>(),<br />
- <code>get_myaddress</code>(), <code>pmap_getmaps</code>(),<br />
- <code>pmap_getport</code>(), <code>pmap_rmtcall</code>(),<br />
- <code>pmap_set</code>(), <code>pmap_unset</code>(),<br />
- <code>registerrpc</code>(), <code>svc_destroy</code>(),<br />
- <code>svc_freeargs</code>(), <code>svc_getargs</code>(),<br />
- <code>svc_getcaller</code>(), <code>svc_getreqset</code>(),<br />
- <code>svc_getreq</code>(), <code>svc_register</code>(),<br />
- <code>svc_run</code>(), <code>svc_sendreply</code>(),<br />
- <code>svc_unregister</code>(), <code>svcerr_auth</code>(),<br />
- <code>svcerr_decode</code>(), <code>svcerr_noproc</code>(),<br />
- <code>svcerr_noprog</code>(), <code>svcerr_progvers</code>(),<br />
- <code>svcerr_systemerr</code>(), <code>svcerr_weakauth</code>(),<br />
- <code>svcfd_create</code>(), <code>svcraw_create</code>(),<br />
- <code>svctcp_create</code>(),<br />
- <code>svcudp_bufcreate</code>(),<br />
- <code>svcudp_create</code>(), <code>xdr_accepted_reply</code>(),<br />
- <code>xdr_authunix_parms</code>(),<br />
- <code>xdr_callhdr</code>(),<br />
- <code>xdr_callmsg</code>(), <code>xdr_opaque_auth</code>(),<br />
- <code>xdr_pmap</code>(), <code>xdr_pmaplist</code>(),<br />
- <code>xdr_rejected_reply</code>(),<br />
- <code>xdr_replymsg</code>(),<br />
+<td> <code>auth_destroy</code>(), <code>authnone_create</code>(),<br/>
+ <code>authunix_create</code>(),<br/>
+ <code>authunix_create_default</code>(),<br/>
+ <code>callrpc</code>(), <code>clnt_broadcast</code>(),<br/>
+ <code>clnt_call</code>(), <code>clnt_destroy</code>(),<br/>
+ <code>clnt_create</code>(), <code>clnt_control</code>(),<br/>
+ <code>clnt_freeres</code>(), <code>clnt_geterr</code>(),<br/>
+ <code>clnt_pcreateerror</code>(), <code>clnt_perrno</code>(),<br/>
+ <code>clnt_perror</code>(),<br/>
+ <code>clnt_spcreateerror</code>(),<br/>
+ <code>clnt_sperrno</code>(), <code>clnt_sperror</code>(),<br/>
+ <code>clntraw_create</code>(), <code>clnttcp_create</code>(),<br/>
+ <code>clntudp_create</code>(),<br/>
+ <code>clntudp_bufcreate</code>(),<br/>
+ <code>get_myaddress</code>(), <code>pmap_getmaps</code>(),<br/>
+ <code>pmap_getport</code>(), <code>pmap_rmtcall</code>(),<br/>
+ <code>pmap_set</code>(), <code>pmap_unset</code>(),<br/>
+ <code>registerrpc</code>(), <code>svc_destroy</code>(),<br/>
+ <code>svc_freeargs</code>(), <code>svc_getargs</code>(),<br/>
+ <code>svc_getcaller</code>(), <code>svc_getreqset</code>(),<br/>
+ <code>svc_getreq</code>(), <code>svc_register</code>(),<br/>
+ <code>svc_run</code>(), <code>svc_sendreply</code>(),<br/>
+ <code>svc_unregister</code>(), <code>svcerr_auth</code>(),<br/>
+ <code>svcerr_decode</code>(), <code>svcerr_noproc</code>(),<br/>
+ <code>svcerr_noprog</code>(), <code>svcerr_progvers</code>(),<br/>
+ <code>svcerr_systemerr</code>(), <code>svcerr_weakauth</code>(),<br/>
+ <code>svcfd_create</code>(), <code>svcraw_create</code>(),<br/>
+ <code>svctcp_create</code>(),<br/>
+ <code>svcudp_bufcreate</code>(),<br/>
+ <code>svcudp_create</code>(), <code>xdr_accepted_reply</code>(),<br/>
+ <code>xdr_authunix_parms</code>(),<br/>
+ <code>xdr_callhdr</code>(),<br/>
+ <code>xdr_callmsg</code>(), <code>xdr_opaque_auth</code>(),<br/>
+ <code>xdr_pmap</code>(), <code>xdr_pmaplist</code>(),<br/>
+ <code>xdr_rejected_reply</code>(),<br/>
+ <code>xdr_replymsg</code>(),<br/>
  <code>xprt_register</code>(), <code>xprt_unregister</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe
@@ -323,8 +323,8 @@ description: "rpc – library routines for remote procedure calls"
 <p><code><a href="/docs/linux/man/3-xdr/">xdr</a></code>(3) </p>
 <p> The following manuals:</p>
 <dl>
-<dd>Remote Procedure Calls: Protocol Specification<br />
- Remote Procedure Call Programming Guide<br />
+<dd>Remote Procedure Calls: Protocol Specification<br/>
+ Remote Procedure Call Programming Guide<br/>
  rpcgen Programming Guide
 </dd></dl>
 <p> <i>RPC: Remote Procedure Call Protocol Specification</i>, RFC 1050, Sun Microsystems, Inc., USC-ISI.</p>

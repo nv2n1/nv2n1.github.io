@@ -10,7 +10,7 @@ description: "cl-dump – Dump and decode Directory Server replication change lo
 
 <p> cl-dump &#8211; Dump and decode Directory Server replication change log </p>
 <h2>SYNOPSIS</h2>
-<p> <code>cl-dump</code> [<i>-h host</i>] [<i>-p port</i>] [<i>-D bind-dn</i>] -w bind-password | -P bind-cert<br />
+<p> <code>cl-dump</code> [<i>-h host</i>] [<i>-p port</i>] [<i>-D bind-dn</i>] -w bind-password | -P bind-cert<br/>
 &nbsp;<wbr>[<i>-r replica-roots</i>]&nbsp;<wbr>[<i>-o output-file</i>]&nbsp;<wbr>[<i>-c</i>]&nbsp;<wbr>[<i>-v</i>] </p>
 <p> <code>cl-dump</code> -i changelog-ldif-file-with-base64encoding [<i>-o output-file</i>] [<i>-c</i>] </p>
 <h2>DESCRIPTION</h2>
@@ -47,7 +47,7 @@ description: "cl-dump – Dump and decode Directory Server replication change lo
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="https://fedorahosted.org/389/newticket.">https://fedorahosted.org/389/newticket.</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001 Sun Microsystems, Inc. Used by permission.<br />
- Copyright &#169; 2008 Red Hat, Inc.<br />
- This manual page was written by Michele Baldessari &lt;michele [at] pupazzo.org&gt;, for the Debian project (but may be used by others).<br />
+<p> Copyright &#169; 2001 Sun Microsystems, Inc. Used by permission.<br/>
+ Copyright &#169; 2008 Red Hat, Inc.<br/>
+ This manual page was written by Michele Baldessari &lt;michele [at] pupazzo.org&gt;, for the Debian project (but may be used by others).<br/>
  This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. This license is essentially the GNU General Public License version 2 with an exception for plug-in distribution. </p>

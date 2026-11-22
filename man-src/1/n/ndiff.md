@@ -216,7 +216,7 @@ then
 <h2>BUGS</h2>
 <p> Report bugs to the nmap-dev mailing list at &lt;dev [at] nmap.org&gt;.</p>
 <h2>HISTORY</h2>
-<p> Ndiff started as a project by Michael Pattrick during the 2008 Google Summer of Code. Michael designed the program and led the discussion of its output formats. He wrote versions of the program in Perl and C++, but the summer ended shortly after it was decided to rewrite the program in Python for the sake of Windows (and Zenmap) compatibility. This Python version was written by David Fifield. James Levine m[blue]<code>released</code>m[]<font SIZE="-2">[1]</font> a Perl script named Ndiff with similar functionality in 2000.</p>
+<p> Ndiff started as a project by Michael Pattrick during the 2008 Google Summer of Code. Michael designed the program and led the discussion of its output formats. He wrote versions of the program in Perl and C++, but the summer ended shortly after it was decided to rewrite the program in Python for the sake of Windows (and Zenmap) compatibility. This Python version was written by David Fifield. James Levine m[blue]<code>released</code>m[][1] a Perl script named Ndiff with similar functionality in 2000.</p>
 <h2>AUTHORS</h2>
 <p> David Fifield &lt;david [at] bamsoftware.com&gt; </p>
 <p> Michael Pattrick &lt;mpattrick [at] rhinovirus.org&gt;</p>

@@ -194,8 +194,8 @@ description: "rsyncd.conf – configuration file for rsync in daemon mode"
 <dd>Note IPv6 link-local addresses can have a scope in the address specification:</dd>
 <dd>
 </dd><dl>
-<dd><tt> fe80::1%link1</tt><br />
- <tt> fe80::%link1/64</tt><br />
+<dd><tt> fe80::1%link1</tt><br/>
+ <tt> fe80::%link1/64</tt><br/>
  <tt> fe80::%link1/ffff:ffff:ffff:ffff::</tt>
 </dd></dl>
 <dd>You can also combine &quot;hosts allow&quot; with a separate &quot;hosts deny&quot; parameter. If both parameters are specified then the &quot;hosts allow&quot; parameter is checked first and a match results in the client being able to connect. The &quot;hosts deny&quot; parameter is then checked and a match means that the host is rejected. If the host does not match either the &quot;hosts allow&quot; or the &quot;hosts deny&quot; patterns then it is allowed to connect.</dd>
@@ -375,7 +375,7 @@ pid file = /var/run/rsyncd.pid
  secrets file = /etc/rsyncd.secrets</pre>
 <p>The /etc/rsyncd.secrets file would look something like this:</p>
 <dl>
-<dd><tt>tridge:mypass</tt><br />
+<dd><tt>tridge:mypass</tt><br/>
  <tt>susan:herpass</tt>
 </dd></dl>
 <h2>Files</h2>

@@ -11,7 +11,7 @@ description: "dsptrd.f –"
 <p> dsptrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dsptrd</code> (UPLO, N, AP, D, E, TAU, INFO)<br />
+<p> subroutine <code>dsptrd</code> (UPLO, N, AP, D, E, TAU, INFO)<br/>
  <i></i><code>DSPTRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsptrd (characterUPLO, integerN, double precision, dimension( * )AP, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( * )TAU, integerINFO)</h3>

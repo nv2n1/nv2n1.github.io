@@ -11,7 +11,7 @@ description: "globus_logging.h –"
 <p> globus_logging.h &#8211; </p>
 <p> Debug Logging.</p>
 <h2>SYNOPSIS</h2>
-<p> #include &#8216;globus_common_include.h&#8217;<br />
+<p> #include &#8216;globus_common_include.h&#8217;<br/>
  #include &#8216;globus_time.h&#8217; </p>
 <h3>Functions</h3>
 <p> void <code>globus_logging_update_pid</code> (void) </p>

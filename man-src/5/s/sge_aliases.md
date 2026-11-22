@@ -20,7 +20,7 @@ description: "xxqs_name_sxx_aliases – xxQS_NAMExx path aliases file format"
 <dd>The first string specifies a source path, the second a submit host, the third an execution host, and the fourth the source path replacement.</dd>
 <dt>&bull;</dt>
 <dd>Both the submit and the execution host entries may consist of only a &#8216;*&#8217; sign which matches any host.</dd></dl>
-<p> If the<br />
+<p> If the<br/>
 &nbsp;<i>-cwd</i>&nbsp;flag is specified&nbsp;(and only if &#8211; otherwise the user&#8217;s home directory on the execution host is selected to execute the job), the path aliasing mechanism is activated, and the files are processed as follows:</p>
 <dl>
 <dt>&bull;</dt>

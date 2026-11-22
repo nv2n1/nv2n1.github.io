@@ -37,10 +37,10 @@ description: "pmiostat, pcp-iostat – performance metrics i/o statistics tool"
 <dt><code>-z</code></dt>
 <dd> Change the reporting timezone to the local timezone at the host that is the source of the performance metrics, as identified via either the <code>-h</code> or <code>-a</code> options. When replaying a PCP archive that was captured in a foreign timezone, the <code>-z</code> option would almost always be used (the default reporting timezone is the local timezone, which may not be the same as the timezone of the PCP archive).</dd>
 <dt><code>-x</code></dt>
-<dd> Specifies a comma separated list of one or more extended reporting options as follows:<br />
- <code>dm</code> &#8211; report statistics for device-mapper logical devices instead of scsi devices,<br />
- <code>t</code> &#8211; prefix every line in the report with a timestamp in <i><a href="/docs/linux/man/3-ctime/">ctime</a></i>(3) format,<br />
- <code>h</code> &#8211; omit the heading, which is otherwise reported every 24 samples,<br />
+<dd> Specifies a comma separated list of one or more extended reporting options as follows:<br/>
+ <code>dm</code> &#8211; report statistics for device-mapper logical devices instead of scsi devices,<br/>
+ <code>t</code> &#8211; prefix every line in the report with a timestamp in <i><a href="/docs/linux/man/3-ctime/">ctime</a></i>(3) format,<br/>
+ <code>h</code> &#8211; omit the heading, which is otherwise reported every 24 samples,<br/>
  <code>noidle</code> &#8211; Do not display statistics for idle devices.</dd></dl>
 <h2>REPORT</h2>
 <p> The columns in the <code>pcp-iostat</code> report have the following interpretation :</p>

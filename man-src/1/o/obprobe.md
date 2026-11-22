@@ -36,7 +36,7 @@ description: "obprobe – create electrostatic probe grid"
 <p> The obprobe program was contributed by An Tim Vandermeersch. </p>
 <p> An -nosplit Open Babel is developed by a cast of many, including currrent maintainers An Geoff Hutchison , An Chris Morley , An Michael Banck , and innumerable others who have contributed fixes and additions. For more contributors to Open Babel, see &lt;<code><a rel="nofollow" href="http://openbabel.org/wiki/THANKS">http://openbabel.org/wiki/THANKS</a></code>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2006-2008 by Tim Vandermeersch<br />
+<p> Copyright (C) 2006-2008 by Tim Vandermeersch<br/>
  Some portions Copyright (C) 2004-2008 by Geoffrey R. Hutchison and other contributors. </p>
 <p>&nbsp;<wbr>This program is free software;&nbsp;<wbr>you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation version 2 of the License. </p>
 <p>&nbsp;<wbr>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>

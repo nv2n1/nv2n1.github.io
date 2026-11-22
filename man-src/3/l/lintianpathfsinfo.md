@@ -16,11 +16,11 @@ Lintian::Path::FSInfo - File System information for Lintian::Path
  } else {
  # The &quot;root&quot; dir is undefined and paths starting with &quot;/&quot; *cannot*
  # be resolved.
- }</pre><h2>Class Methods</h2><dl COMPACT><dt>new(<font SIZE="-1">OPTS</font>)
-</dt><dd>Internal constructor (used by Lintian::Collect::Package)</dd></dl><h2>Instance Methods</h2><dl COMPACT><dt>_underlying_fs_path(<font SIZE="-1">PATH</font>)
-</dt><dd>Given <font SIZE="-1">PATH,</font> a Lintian::Path, obtain the underlying file system path that it represents.
-</dd><dt>_file_info(<font SIZE="-1">PATH</font>)
-</dt><dd>Given <font SIZE="-1">PATH,</font> a Lintian::Path, obtain the output from <i><a HREF="/docs/linux/man/1-file/">file</a></i>(1) about the file, if it has been collected. Throws an error if it not available.
+ }</pre><h2>Class Methods</h2><dl COMPACT><dt>new(OPTS)
+</dt><dd>Internal constructor (used by Lintian::Collect::Package)</dd></dl><h2>Instance Methods</h2><dl COMPACT><dt>_underlying_fs_path(PATH)
+</dt><dd>Given PATH, a Lintian::Path, obtain the underlying file system path that it represents.
+</dd><dt>_file_info(PATH)
+</dt><dd>Given PATH, a Lintian::Path, obtain the output from <i><a HREF="/docs/linux/man/1-file/">file</a></i>(1) about the file, if it has been collected. Throws an error if it not available.
 </dd><dt>has_anchored_root_dir
 </dt><dd>Returns a truth value if the ``root'' directory is anchored and is defined by the path string ``/''. In such cases, paths starting with ``/'' are well-defined semantically and are relative to the root directory rather than the ``current'' directory. 
  On the other hand, if this returns a non-truth value, the ``root'' directory is <i>not</i> well-defined and no path starting with ``/'' can be resolved logically.</dd></dl><h2>Author</h2>Originally written by Niels Thykier &lt;niels [at] thykier.net&gt; for Lintian.

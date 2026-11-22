@@ -33,28 +33,28 @@ unsigned int RTA_SPACE(unsigned int length);</code></pre>
 <h2>Bugs</h2>
 <p>This manual page is incomplete.</p>
 <h2>Examples</h2>
-<p>Creating a rtnetlink message to set the MTU of a device: struct {<br />
-    struct nlmsghdr nh;<br />
-    struct ifinfomsg if;<br />
-    char attrbuf[512];<br />
-} req;<br />
-struct rtattr *rta;<br />
-unsigned int mtu = 1000;<br />
-int rtnetlink_sk = socket(AF_NETLINK, SOCK_DGRAM, NETLINK_ROUTE);<br />
-memset(&amp;req, 0, sizeof(req));<br />
-req.nh.nlmsg_len = NLMSG_LENGTH(sizeof(req.if));<br />
-req.nh.nlmsg_flags = NLM_F_REQUEST;<br />
-req.nh.nlmsg_type = RTM_NEWLINK;<br />
-req.if.ifi_family = AF_UNSPEC;<br />
-req.if.ifi_index = INTERFACE_INDEX;<br />
-req.if.ifi_change = 0xffffffff; /* ??? */<br />
-rta = (struct rtattr *)(((char *)&amp;req) +<br />
-                        NLMSG_ALIGN(req.nh.nlmsg_len));<br />
-rta-&gt;rta_type = IFLA_MTU;<br />
-rta-&gt;rta_len = RTA_LENGTH(sizeof(mtu));<br />
-req.nh.nlmsg_len = NLMSG_ALIGN(req.nh.nlmsg_len) +<br />
-                   RTA_LENGTH(sizeof(mtu));<br />
-memcpy(RTA_DATA(rta), &amp;mtu, sizeof(mtu));<br />
+<p>Creating a rtnetlink message to set the MTU of a device: struct {<br/>
+    struct nlmsghdr nh;<br/>
+    struct ifinfomsg if;<br/>
+    char attrbuf[512];<br/>
+} req;<br/>
+struct rtattr *rta;<br/>
+unsigned int mtu = 1000;<br/>
+int rtnetlink_sk = socket(AF_NETLINK, SOCK_DGRAM, NETLINK_ROUTE);<br/>
+memset(&amp;req, 0, sizeof(req));<br/>
+req.nh.nlmsg_len = NLMSG_LENGTH(sizeof(req.if));<br/>
+req.nh.nlmsg_flags = NLM_F_REQUEST;<br/>
+req.nh.nlmsg_type = RTM_NEWLINK;<br/>
+req.if.ifi_family = AF_UNSPEC;<br/>
+req.if.ifi_index = INTERFACE_INDEX;<br/>
+req.if.ifi_change = 0xffffffff; /* ??? */<br/>
+rta = (struct rtattr *)(((char *)&amp;req) +<br/>
+                        NLMSG_ALIGN(req.nh.nlmsg_len));<br/>
+rta-&gt;rta_type = IFLA_MTU;<br/>
+rta-&gt;rta_len = RTA_LENGTH(sizeof(mtu));<br/>
+req.nh.nlmsg_len = NLMSG_ALIGN(req.nh.nlmsg_len) +<br/>
+                   RTA_LENGTH(sizeof(mtu));<br/>
+memcpy(RTA_DATA(rta), &amp;mtu, sizeof(mtu));<br/>
 send(rtnetlink_sk, &amp;req, req.nh.nlmsg_len, 0); &#8230; </p>
 <pre><code>struct {
     struct nlmsghdr nh;

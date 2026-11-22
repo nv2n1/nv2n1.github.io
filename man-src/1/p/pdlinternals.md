@@ -10,8 +10,8 @@ description: "PDL::Internals – description of some aspects of the current inte
 <p>PDL::Internals &#8211; description of some aspects of the current internals </p>
 <h2>Description</h2>
 <h3>Intro</h3>
-<p>This document explains various aspects of the current implementation of <font SIZE="-1">PDL.</font> If you just want to use <font SIZE="-1">PDL</font> for something, you definitely do not need to read this. Even if you want to interface your C routines to <font SIZE="-1">PDL</font> or create new <font SIZE="-1">PDL::PP</font> functions, you do not need to read this man page (though it may be informative). This document is primarily intended for people interested in debugging or changing the internals of <font SIZE="-1">PDL.</font> To read this, a good understanding of the C language and programming and data structures in general is required, as well as some Perl understanding. If you read through this document and understand all of it and are able to point what any part of this document refers to in the <font SIZE="-1">PDL</font> core sources and additionally struggle to understand <font SIZE="-1">PDL::PP</font>, you will be awarded the title &#8220;<font SIZE="-1">PDL</font> Guru&#8221; (of course, the current version of this document is so incomplete that this is next to impossible from just these notes). </p>
-<p> <code>Warning:</code> If it seems that this document has gotten out of date, please inform the <font SIZE="-1">PDL</font> porters email list (pdl-porters [at] jach.hawaii.edu). This may well happen.</p>
+<p>This document explains various aspects of the current implementation of PDL. If you just want to use PDL for something, you definitely do not need to read this. Even if you want to interface your C routines to PDL or create new PDL::PP functions, you do not need to read this man page (though it may be informative). This document is primarily intended for people interested in debugging or changing the internals of PDL. To read this, a good understanding of the C language and programming and data structures in general is required, as well as some Perl understanding. If you read through this document and understand all of it and are able to point what any part of this document refers to in the PDL core sources and additionally struggle to understand PDL::PP, you will be awarded the title &#8220;PDL Guru&#8221; (of course, the current version of this document is so incomplete that this is next to impossible from just these notes). </p>
+<p> <code>Warning:</code> If it seems that this document has gotten out of date, please inform the PDL porters email list (pdl-porters [at] jach.hawaii.edu). This may well happen.</p>
 <h3>Piddles</h3>
 <p>The pdl data object is generally an opaque scalar reference into a pdl structure in memory. Alternatively, it may be a hash reference with the <tt>&quot;PDL&quot;</tt> field containing the scalar reference (this makes overloading piddles easy, see PDL::Objects). You can easily find out at the Perl level which type of piddle you are dealing with. The example code below demonstrates how to do it: </p>
 <pre> # check if this a piddle
@@ -27,7 +27,7 @@ description: "PDL::Internals – description of some aspects of the current inte
  print &quot;This is a scalar ref that points to address $$pdl in memory
 &quot;;
  }</pre>
-<p>The scalar reference points to the numeric address of a C structure of type <tt>&quot;pdl&quot;</tt> which is defined in <i>pdl.h</i>. The mapping between the object at the Perl level and the C structure containing the actual data and structural that makes up a piddle is done by the <font SIZE="-1">PDL</font> typemap. The functions used in the <font SIZE="-1">PDL</font> typemap are defined pretty much at the top of the file <i>pdlcore.h</i>. So what does the structure look like: </p>
+<p>The scalar reference points to the numeric address of a C structure of type <tt>&quot;pdl&quot;</tt> which is defined in <i>pdl.h</i>. The mapping between the object at the Perl level and the C structure containing the actual data and structural that makes up a piddle is done by the PDL typemap. The functions used in the PDL typemap are defined pretty much at the top of the file <i>pdlcore.h</i>. So what does the structure look like: </p>
 <pre> struct pdl {
  unsigned long magicno; /* Always stores PDL_MAGICNO as a sanity check */
  /* This is first so most pointer accesses to wrong type are caught */
@@ -65,7 +65,7 @@ description: "PDL::Internals – description of some aspects of the current inte
 <dt>Data storage</dt>
 <dd>We are going to start with some of the simpler members: first of all, there is the member </dd>
 <pre> void *datasv;</pre>
-<p>which is really a pointer to a Perl <font SIZE="-1">SV</font> structure (<tt>&quot;SV *&quot;</tt>). The <font SIZE="-1">SV</font> is expected to be representing a string, in which the data of the piddle is stored in a tightly packed form. This pointer counts as a reference to the <font SIZE="-1">SV</font> so the reference count has been incremented when the <tt>&quot;SV *&quot;</tt> was placed here (this reference count business has to do with Perl&#8217;s garbage collection mechanism &#8212; don&#8217;t worry if this doesn&#8217;t mean much to you). This pointer is allowed to have the value <tt>&quot;NULL&quot;</tt> which means that there is no actual Perl <font SIZE="-1">SV</font> for this data &#8211; for instance, the data might be allocated by a <tt>&quot;mmap&quot;</tt> operation. Note the use of an SV* was purely for convenience, it allows easy transformation of packed data from files into piddles. Other implementations are not excluded. </p>
+<p>which is really a pointer to a Perl SV structure (<tt>&quot;SV *&quot;</tt>). The SV is expected to be representing a string, in which the data of the piddle is stored in a tightly packed form. This pointer counts as a reference to the SV so the reference count has been incremented when the <tt>&quot;SV *&quot;</tt> was placed here (this reference count business has to do with Perl&#8217;s garbage collection mechanism &#8212; don&#8217;t worry if this doesn&#8217;t mean much to you). This pointer is allowed to have the value <tt>&quot;NULL&quot;</tt> which means that there is no actual Perl SV for this data &#8211; for instance, the data might be allocated by a <tt>&quot;mmap&quot;</tt> operation. Note the use of an SV* was purely for convenience, it allows easy transformation of packed data from files into piddles. Other implementations are not excluded. </p>
 <p> The actual pointer to data is stored in the member </p>
 <pre> void *data;</pre>
 <p>which contains a pointer to a memory area with space for </p>
@@ -92,7 +92,7 @@ description: "PDL::Internals – description of some aspects of the current inte
  }</pre>
 <p>but this is not always the right thing to do, at least without checking for certain things first.</p>
 <dt>Default storage</dt>
-<dd>Since the vast majority of piddles don&#8217;t have more than 6 dimensions, it is more efficient to have default storage for the dimensions and dimincs inside the <font SIZE="-1">PDL</font> struct. </dd>
+<dd>Since the vast majority of piddles don&#8217;t have more than 6 dimensions, it is more efficient to have default storage for the dimensions and dimincs inside the PDL struct. </dd>
 <pre> PDL_Indx def_dims[PDL_NDIMS]; 
  PDL_Indx def_dimincs[PDL_NDIMS];</pre>
 <p>The <tt>&quot;dims&quot;</tt> and <tt>&quot;dimincs&quot;</tt> may be set to point to the beginning of these arrays if <tt>&quot;ndims&quot;</tt> is smaller than or equal to the compile-time constant <tt>&quot;PDL_NDIMS&quot;</tt>. This is important to note when freeing a piddle struct. The same applies for the threadids: </p>
@@ -100,7 +100,7 @@ description: "PDL::Internals – description of some aspects of the current inte
 <dt>Magic</dt>
 <dd>It is possible to attach magic to piddles, much like Perl&#8217;s own magic mechanism. If the member pointer </dd>
 <pre> struct pdl_magic *magic;</pre>
-<p>is nonzero, the <font SIZE="-1">PDL</font> has some magic attached to it. The implementation of magic can be gleaned from the file <i>pdlmagic.c</i> in the distribution.</p>
+<p>is nonzero, the PDL has some magic attached to it. The implementation of magic can be gleaned from the file <i>pdlmagic.c</i> in the distribution.</p>
 <dt>State</dt>
 <dd>One of the first members of the structure is </dd>
 <pre> int state;</pre>
@@ -122,7 +122,7 @@ description: "PDL::Internals – description of some aspects of the current inte
 <pre> void *hdrsv;</pre>
 <p>which is just for use by the user to hook up arbitrary data with this sv. This one is generally manipulated through sethdr and gethdr calls.</dl>
 <h3>Smart references and transformations: slicing and dicing</h3>
-<p>Smart references and most other fundamental functions operating on piddles are implemented via <i>transformations</i> (Aas mentioned above) which are represented by the type <tt>&quot;pdl_trans&quot;</tt> in <font SIZE="-1">PDL.</font> </p>
+<p>Smart references and most other fundamental functions operating on piddles are implemented via <i>transformations</i> (Aas mentioned above) which are represented by the type <tt>&quot;pdl_trans&quot;</tt> in PDL. </p>
 <p> A transformation links input and output piddles and contains all the infrastructure that defines how</p>
 <dl>
 <dt>&bull;</dt>
@@ -131,16 +131,16 @@ description: "PDL::Internals – description of some aspects of the current inte
 <dd>changes in smartly linked output piddles (e.g. the <i>child</i> of a sliced <i>parent</i> piddle) are flown back to the input piddle in transformations where this is supported (the most often used example being <tt>&quot;slice&quot;</tt> here).</dd>
 <dt>&bull;</dt>
 <dd>datatype and size of output piddles that need to be created are obtained</dd></dl>
-<p> In general, executing a <font SIZE="-1">PDL</font> function on a group of piddles results in creation of a transformation of the requested type that links all input and output arguments (at least those that are piddles). In <font SIZE="-1">PDL</font> functions that support data flow between input and output args (e.g. <tt>&quot;slice&quot;</tt>, <tt>&quot;index&quot;</tt>) this transformation links <i>parent</i> (input) and <i>child</i> (output) piddles permanently until either the link is explicitly broken by user request (<tt>&quot;sever&quot;</tt> at the Perl level) or all parents and children have been destroyed. In those cases the transformation is lazy-evaluated, e.g. only executed when piddle values are actually accessed. </p>
+<p> In general, executing a PDL function on a group of piddles results in creation of a transformation of the requested type that links all input and output arguments (at least those that are piddles). In PDL functions that support data flow between input and output args (e.g. <tt>&quot;slice&quot;</tt>, <tt>&quot;index&quot;</tt>) this transformation links <i>parent</i> (input) and <i>child</i> (output) piddles permanently until either the link is explicitly broken by user request (<tt>&quot;sever&quot;</tt> at the Perl level) or all parents and children have been destroyed. In those cases the transformation is lazy-evaluated, e.g. only executed when piddle values are actually accessed. </p>
 <p> In <i>non-flowing</i> functions, for example addition (<tt>&quot;+&quot;</tt>) and inner products (<tt>&quot;inner&quot;</tt>), the transformation is installed just as in flowing functions but then the transformation is immediately executed and destroyed (breaking the link between input and output args) before the function returns. </p>
 <p> It should be noted that the close link between input and output args of a flowing function (like slice) requires that piddle objects that are linked in such a way be kept alive beyond the point where they have gone out of scope from the point of view of Perl: </p>
 <pre> $a = zeroes(20);
  $b = $a-&gt;slice('2:4');
  undef $a; # last reference to $a is now destroyed</pre>
-<p>Although <tt>$a</tt> should now be destroyed according to Perl&#8217;s rules the underlying <tt>&quot;pdl&quot;</tt> structure must actually only be freed when <tt>$b</tt> also goes out of scope (since it still references internally some of <tt>$a</tt>&#8216;s data). This example demonstrates that such a dataflow paradigm between <font SIZE="-1">PDL</font> objects necessitates a special destruction algorithm that takes the links between piddles into account and couples the lifespan of those objects. The non-trivial algorithm is implemented in the function <tt>&quot;pdl_destroy&quot;</tt> in <i>pdlapi.c</i>. In fact, most of the code in <i>pdlapi.c</i> and <i>pdlfamily.c</i> is concerned with making sure that piddles (<tt>&quot;pdl *&quot;</tt>s) are created, updated and freed at the right times depending on interactions with other piddles via <font SIZE="-1">PDL</font> transformations (remember, <tt>&quot;pdl_trans&quot;</tt>).</p>
+<p>Although <tt>$a</tt> should now be destroyed according to Perl&#8217;s rules the underlying <tt>&quot;pdl&quot;</tt> structure must actually only be freed when <tt>$b</tt> also goes out of scope (since it still references internally some of <tt>$a</tt>&#8216;s data). This example demonstrates that such a dataflow paradigm between PDL objects necessitates a special destruction algorithm that takes the links between piddles into account and couples the lifespan of those objects. The non-trivial algorithm is implemented in the function <tt>&quot;pdl_destroy&quot;</tt> in <i>pdlapi.c</i>. In fact, most of the code in <i>pdlapi.c</i> and <i>pdlfamily.c</i> is concerned with making sure that piddles (<tt>&quot;pdl *&quot;</tt>s) are created, updated and freed at the right times depending on interactions with other piddles via PDL transformations (remember, <tt>&quot;pdl_trans&quot;</tt>).</p>
 <h3>Accessing children and parents of a piddle</h3>
 <p>When piddles are dynamically linked via transformations as suggested above input and output piddles are referred to as parents and children, respectively. </p>
-<p> An example of processing the children of a piddle is provided by the <tt>&quot;baddata&quot;</tt> method of PDL::Bad (only available if you have compiled <font SIZE="-1">PDL</font> with the <tt>&quot;WITH_BADVAL&quot;</tt> option set to 1, but still useful as an example!). </p>
+<p> An example of processing the children of a piddle is provided by the <tt>&quot;baddata&quot;</tt> method of PDL::Bad (only available if you have compiled PDL with the <tt>&quot;WITH_BADVAL&quot;</tt> option set to 1, but still useful as an example!). </p>
 <p> Consider the following situation: </p>
 <pre> pdl&gt; $a = rvals(7,7,Centre=&gt;[3,4]);
  pdl&gt; $b = $a-&gt;slice('2:4,3:5');
@@ -207,7 +207,7 @@ description: "PDL::Internals – description of some aspects of the current inte
 <pre> short flags;</pre>
 <p>and the datatype </p>
 <pre> int __datatype;</pre>
-<p>of the trans (to which all piddles must be converted unless they are explicitly typed, <font SIZE="-1">PDL</font> functions created with <font SIZE="-1">PDL::PP</font> make sure that these conversions are done as necessary). Most important is the pointer to the vtable (virtual table) that contains the actual functionality </p>
+<p>of the trans (to which all piddles must be converted unless they are explicitly typed, PDL functions created with PDL::PP make sure that these conversions are done as necessary). Most important is the pointer to the vtable (virtual table) that contains the actual functionality </p>
 <pre> pdl_transvtable *vtable;</pre>
 <p>The vtable structure in turn looks something like (slightly simplified from <i>pdl.h</i> for clarity) </p>
 <pre> typedef struct pdl_transvtable {
@@ -227,22 +227,22 @@ description: "PDL::Internals – description of some aspects of the current inte
  } pdl_transvtable;</pre>
 <p>We focus on the callback functions: </p>
 <pre> void (*redodims)(pdl_trans *tr);</pre>
-<p><tt>&quot;redodims&quot;</tt> will work out the dimensions of piddles that need to be created and is called from within the <font SIZE="-1">API</font> function that should be called to ensure that the dimensions of a piddle are accessible (<i>pdlapi.c</i>): </p>
+<p><tt>&quot;redodims&quot;</tt> will work out the dimensions of piddles that need to be created and is called from within the API function that should be called to ensure that the dimensions of a piddle are accessible (<i>pdlapi.c</i>): </p>
 <pre> void pdl_make_physdims(pdl *it)</pre>
-<p><tt>&quot;readdata&quot;</tt> and <tt>&quot;writebackdata&quot;</tt> are responsible for the actual computations of the child data from the parents or parent data from those of the children, respectively (the dataflow aspect). The <font SIZE="-1">PDL</font> core makes sure that these are called as needed when piddle data is accessed (lazy-evaluation). The general <font SIZE="-1">API</font> function to ensure that a piddle is up-to-date is </p>
+<p><tt>&quot;readdata&quot;</tt> and <tt>&quot;writebackdata&quot;</tt> are responsible for the actual computations of the child data from the parents or parent data from those of the children, respectively (the dataflow aspect). The PDL core makes sure that these are called as needed when piddle data is accessed (lazy-evaluation). The general API function to ensure that a piddle is up-to-date is </p>
 <pre> void pdl_make_physvaffine(pdl *it)</pre>
-<p>which should be called before accessing piddle data from <font SIZE="-1">XS/C </font>(see <i>Core.xs</i> for some examples). </p>
-<p> <tt>&quot;freetrans&quot;</tt> frees dynamically allocated memory associated with the trans as needed and <tt>&quot;copy&quot;</tt> can copy the transformation. Again, functions built with <font SIZE="-1">PDL::PP</font> make sure that copying and freeing via these callbacks happens at the right times. (If they fail to do that we have got a memory leak &#8212; this has happened in the past ;). </p>
-<p> The transformation and vtable code is hardly ever written by hand but rather generated by <font SIZE="-1">PDL::PP</font> from concise descriptions. </p>
+<p>which should be called before accessing piddle data from XS/C (see <i>Core.xs</i> for some examples). </p>
+<p> <tt>&quot;freetrans&quot;</tt> frees dynamically allocated memory associated with the trans as needed and <tt>&quot;copy&quot;</tt> can copy the transformation. Again, functions built with PDL::PP make sure that copying and freeing via these callbacks happens at the right times. (If they fail to do that we have got a memory leak &#8212; this has happened in the past ;). </p>
+<p> The transformation and vtable code is hardly ever written by hand but rather generated by PDL::PP from concise descriptions. </p>
 <p> Certain types of transformations can be optimized very efficiently obviating the need for explicit <tt>&quot;readdata&quot;</tt> and <tt>&quot;writebackdata&quot;</tt> methods. Those transformations are called <i>pdl_vaffine</i>. Most dimension manipulating functions (e.g., <tt>&quot;slice&quot;</tt>, <tt>&quot;xchg&quot;</tt>) belong to this class. </p>
-<p> The basic trick is that parent and child of such a transformation work on the same (shared) block of data which they just choose to interpret differently (by using different <tt>&quot;dims&quot;</tt>, <tt>&quot;dimincs&quot;</tt> and <tt>&quot;offs&quot;</tt> on the same data, compare the <tt>&quot;pdl&quot;</tt> structure above). Each operation on a piddle sharing data with another one in this way is therefore automatically flown from child to parent and back &#8212; after all they are reading and writing the same block of memory. This is currently not Perl thread safe &#8212; no big loss since the whole <font SIZE="-1">PDL</font> core is not reentrant (Perl threading <tt>&quot;!=&quot;</tt> <font SIZE="-1">PDL</font> threading!).</p>
+<p> The basic trick is that parent and child of such a transformation work on the same (shared) block of data which they just choose to interpret differently (by using different <tt>&quot;dims&quot;</tt>, <tt>&quot;dimincs&quot;</tt> and <tt>&quot;offs&quot;</tt> on the same data, compare the <tt>&quot;pdl&quot;</tt> structure above). Each operation on a piddle sharing data with another one in this way is therefore automatically flown from child to parent and back &#8212; after all they are reading and writing the same block of memory. This is currently not Perl thread safe &#8212; no big loss since the whole PDL core is not reentrant (Perl threading <tt>&quot;!=&quot;</tt> PDL threading!).</p>
 <h3>Signatures: threading over elementary operations</h3>
-<p>Most of that functionality of <font SIZE="-1">PDL</font> threading (automatic iteration of elementary operations over multi-dim piddles) is implemented in the file <i>pdlthread.c</i>. </p>
-<p> The <font SIZE="-1">PDL::PP</font> generated functions (in particular the <tt>&quot;readdata&quot;</tt> and <tt>&quot;writebackdata&quot;</tt> callbacks) use this infrastructure to make sure that the fundamental operation implemented by the trans is performed in agreement with <font SIZE="-1">PDL</font>&#8216;s threading semantics.</p>
-<h3>Defining new <font SIZE="-1">PDL</font> functions &#8212; Glue code generation</h3>
-<p>Please, see <font SIZE="-1">PDL::PP</font> and examples in the <font SIZE="-1">PDL</font> distribution. Implementation and syntax are currently far from perfect but it does a good job!</p>
+<p>Most of that functionality of PDL threading (automatic iteration of elementary operations over multi-dim piddles) is implemented in the file <i>pdlthread.c</i>. </p>
+<p> The PDL::PP generated functions (in particular the <tt>&quot;readdata&quot;</tt> and <tt>&quot;writebackdata&quot;</tt> callbacks) use this infrastructure to make sure that the fundamental operation implemented by the trans is performed in agreement with PDL&#8216;s threading semantics.</p>
+<h3>Defining new PDL functions &#8212; Glue code generation</h3>
+<p>Please, see PDL::PP and examples in the PDL distribution. Implementation and syntax are currently far from perfect but it does a good job!</p>
 <h3>The Core struct</h3>
-<p>As discussed in <font SIZE="-1">PDL::API</font>, <font SIZE="-1">PDL</font> uses a pointer to a structure to allow <font SIZE="-1">PDL</font> modules access to its core routines. The definition of this structure (the <tt>&quot;Core&quot;</tt> struct) is in <i>pdlcore.h</i> (created by <i>pdlcore.h.PL</i> in <i>Basic/Core</i>) and looks something like </p>
+<p>As discussed in PDL::API, PDL uses a pointer to a structure to allow PDL modules access to its core routines. The definition of this structure (the <tt>&quot;Core&quot;</tt> struct) is in <i>pdlcore.h</i> (created by <i>pdlcore.h.PL</i> in <i>Basic/Core</i>) and looks something like </p>
 <pre> /* Structure to hold pointers core PDL routines so as to be used by 
  * many modules
  */
@@ -261,17 +261,17 @@ description: "PDL::Internals – description of some aspects of the current inte
  ...
  }
  typedef struct Core Core;</pre>
-<p>The first field of the structure (<tt>&quot;Version&quot;</tt>) is used to ensure consistency between modules at run time; the following code is placed in the <font SIZE="-1">BOOT</font> section of the generated xs code: </p>
+<p>The first field of the structure (<tt>&quot;Version&quot;</tt>) is used to ensure consistency between modules at run time; the following code is placed in the BOOT section of the generated xs code: </p>
 <pre> if (PDL-&gt;Version != PDL_CORE_VERSION)
  Perl_croak(aTHX_ &quot;Foo needs to be recompiled against the newly installed PDL&quot;);</pre>
 <p>If you add a new field to the <i>Core</i> struct you should:</p>
 <dl>
 <dt>&bull;</dt>
-<dd>discuss it on the pdl porters email list (pdl-porters [at] jach.hawaii.edu) [with the possibility of making your changes to a separate branch of the <font SIZE="-1">CVS</font> tree if it&#8217;s a change that will take time to complete]</dd>
+<dd>discuss it on the pdl porters email list (pdl-porters [at] jach.hawaii.edu) [with the possibility of making your changes to a separate branch of the CVS tree if it&#8217;s a change that will take time to complete]</dd>
 <dt>&bull;</dt>
 <dd>increase by 1 the value of the <tt>$pdl_core_version</tt> variable in <i>pdlcore.h.PL</i>. This sets the value of the <tt>&quot;PDL_CORE_VERSION&quot;</tt> C macro used to populate the Version field</dd>
 <dt>&bull;</dt>
-<dd>add documentation (e.g. to <font SIZE="-1">PDL::API</font>) if it&#8217;s a &#8220;useful&#8221; function for external module writers (as well as ensuring the code is as well documented as the rest of <font SIZE="-1">PDL </font>;)</dd></dl>
+<dd>add documentation (e.g. to PDL::API) if it&#8217;s a &#8220;useful&#8221; function for external module writers (as well as ensuring the code is as well documented as the rest of PDL ;)</dd></dl>
 <h2>Bugs</h2>
 <p>This description is far from perfect. If you need more details or something is still unclear please ask on the pdl-porters mailing list (pdl-porters [at] jach.hawaii.edu).</p>
 <h2>Author</h2>

@@ -12,7 +12,7 @@ description: "hugin_hdrmerge – Merge overlapping images"
 <h2>SYNOPSIS</h2>
 <p> <code>hugin_hdrmerge</code> [options] <code>-o</code> <i>output.exr</i> <i>input-files</i></p>
 <h2>DESCRIPTION</h2>
-<p> <font SIZE="-1">TODO.</font></p>
+<p> TODO.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-o</code> <i>prefix</i></dt>
@@ -61,7 +61,7 @@ description: "hugin_hdrmerge – Merge overlapping images"
 <dd> Export each initial weight to &lt;input_file_paths&gt;_iw.&lt;ext&gt;</dd>
 <dt><code>-l</code></dt>
 <dd> Load a previously exported initial weight with respect to the input file names </dd>
-<p> <font SIZE="-1">NOTE:</font> if both <code>-e</code> and <code>-l</code> options are on, the program will calculate and save the initial weights, then wait until user indicates that it can continue by loading the previously saved weights</p>
+<p> NOTE: if both <code>-e</code> and <code>-l</code> options are on, the program will calculate and save the initial weights, then wait until user indicates that it can continue by loading the previously saved weights</p>
 <dt><code>-v</code></dt>
 <dd> Verbose, print progress messages, repeat for even more verbose output</dd>
 <dt><code>-h</code></dt>

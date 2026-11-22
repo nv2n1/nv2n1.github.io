@@ -9,43 +9,43 @@ description: "X DPMS Extension Functions – Functions related to the X DPMS ext
 
 <p>X DPMS Extension Functions &#8211; Functions related to the X DPMS extension. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_x_dpms_query</code> (void)<br />
- <i>Checks if the DPMS extension is available or not. </i><br />
- EAPI void <code>ecore_x_dpms_capable_get_prefetch</code> (void)<br />
- <i>Sends the DPMSCapable request. </i><br />
- EAPI void <code>ecore_x_dpms_capable_get_fetch</code> (void)<br />
- <i>Gets the reply of the DPMSCapable request sent by </i><code>ecore_x_dpms_capable_get_prefetch()</code>.<br />
- EAPI int <code>ecore_x_dpms_capable_get</code> (void)<br />
- <i>Checks if the X server is capable of DPMS. </i><br />
- EAPI void <code>ecore_x_dpms_enable_get_prefetch</code> (void)<br />
- <i>Sends the DPMSInfo request. </i><br />
- EAPI void <code>ecore_x_dpms_enable_get_fetch</code> (void)<br />
- <i>Gets the reply of the DPMSInfo request sent by </i><code>ecore_x_dpms_enable_get_prefetch()</code>.<br />
- EAPI int <code>ecore_x_dpms_enable_get</code> (void)<br />
- <i>Checks the DPMS state of the display. </i><br />
- EAPI void <code>ecore_x_dpms_enabled_set</code> (int enabled)<br />
- <i>Sets the DPMS state of the display. </i><br />
- EAPI int <code>ecore_x_dpms_timeouts_set</code> (unsigned int standby, unsigned int suspend, unsigned int off)<br />
- <i>Sets the timeouts. </i><br />
- EAPI void <code>ecore_x_dpms_timeouts_get_prefetch</code> (void)<br />
- <i>Sends the DPMSGetTimeouts request. </i><br />
- EAPI void <code>ecore_x_dpms_timeouts_get_fetch</code> (void)<br />
- <i>Gets the reply of the DPMSGetTimeouts request sent by </i><code>ecore_x_dpms_timeouts_get_prefetch()</code>.<br />
- EAPI void <code>ecore_x_dpms_timeouts_get</code> (unsigned int *standby, unsigned int *suspend, unsigned int *off)<br />
- <i>Gets the timeouts. </i><br />
- EAPI unsigned int <code>ecore_x_dpms_timeout_standby_get</code> (void)<br />
- <i>Returns the amount of time of inactivity before standby mode is invoked. </i><br />
- EAPI unsigned int <code>ecore_x_dpms_timeout_suspend_get</code> (void)<br />
- <i>Returns the amount of time of inactivity before the second level of power saving is invoked. </i><br />
- EAPI unsigned int <code>ecore_x_dpms_timeout_off_get</code> (void)<br />
- <i>Returns the amount of time of inactivity before the third and final level of power saving is invoked. </i><br />
- EAPI void <code>ecore_x_dpms_timeout_standby_set</code> (unsigned int new_standby)<br />
- <i>Sets the standby timeout (in unit of seconds). </i><br />
- EAPI void <code>ecore_x_dpms_timeout_suspend_set</code> (unsigned int new_suspend)<br />
- <i>Sets the suspend timeout (in unit of seconds). </i><br />
- EAPI void <code>ecore_x_dpms_timeout_off_set</code> (unsigned int new_off)<br />
- <i>Sets the off timeout (in unit of seconds). </i><br />
- EAPI int <code>ecore_x_dpms_enabled_get</code> (void)<br />
+<p>EAPI int <code>ecore_x_dpms_query</code> (void)<br/>
+ <i>Checks if the DPMS extension is available or not. </i><br/>
+ EAPI void <code>ecore_x_dpms_capable_get_prefetch</code> (void)<br/>
+ <i>Sends the DPMSCapable request. </i><br/>
+ EAPI void <code>ecore_x_dpms_capable_get_fetch</code> (void)<br/>
+ <i>Gets the reply of the DPMSCapable request sent by </i><code>ecore_x_dpms_capable_get_prefetch()</code>.<br/>
+ EAPI int <code>ecore_x_dpms_capable_get</code> (void)<br/>
+ <i>Checks if the X server is capable of DPMS. </i><br/>
+ EAPI void <code>ecore_x_dpms_enable_get_prefetch</code> (void)<br/>
+ <i>Sends the DPMSInfo request. </i><br/>
+ EAPI void <code>ecore_x_dpms_enable_get_fetch</code> (void)<br/>
+ <i>Gets the reply of the DPMSInfo request sent by </i><code>ecore_x_dpms_enable_get_prefetch()</code>.<br/>
+ EAPI int <code>ecore_x_dpms_enable_get</code> (void)<br/>
+ <i>Checks the DPMS state of the display. </i><br/>
+ EAPI void <code>ecore_x_dpms_enabled_set</code> (int enabled)<br/>
+ <i>Sets the DPMS state of the display. </i><br/>
+ EAPI int <code>ecore_x_dpms_timeouts_set</code> (unsigned int standby, unsigned int suspend, unsigned int off)<br/>
+ <i>Sets the timeouts. </i><br/>
+ EAPI void <code>ecore_x_dpms_timeouts_get_prefetch</code> (void)<br/>
+ <i>Sends the DPMSGetTimeouts request. </i><br/>
+ EAPI void <code>ecore_x_dpms_timeouts_get_fetch</code> (void)<br/>
+ <i>Gets the reply of the DPMSGetTimeouts request sent by </i><code>ecore_x_dpms_timeouts_get_prefetch()</code>.<br/>
+ EAPI void <code>ecore_x_dpms_timeouts_get</code> (unsigned int *standby, unsigned int *suspend, unsigned int *off)<br/>
+ <i>Gets the timeouts. </i><br/>
+ EAPI unsigned int <code>ecore_x_dpms_timeout_standby_get</code> (void)<br/>
+ <i>Returns the amount of time of inactivity before standby mode is invoked. </i><br/>
+ EAPI unsigned int <code>ecore_x_dpms_timeout_suspend_get</code> (void)<br/>
+ <i>Returns the amount of time of inactivity before the second level of power saving is invoked. </i><br/>
+ EAPI unsigned int <code>ecore_x_dpms_timeout_off_get</code> (void)<br/>
+ <i>Returns the amount of time of inactivity before the third and final level of power saving is invoked. </i><br/>
+ EAPI void <code>ecore_x_dpms_timeout_standby_set</code> (unsigned int new_standby)<br/>
+ <i>Sets the standby timeout (in unit of seconds). </i><br/>
+ EAPI void <code>ecore_x_dpms_timeout_suspend_set</code> (unsigned int new_suspend)<br/>
+ <i>Sets the suspend timeout (in unit of seconds). </i><br/>
+ EAPI void <code>ecore_x_dpms_timeout_off_set</code> (unsigned int new_off)<br/>
+ <i>Sets the off timeout (in unit of seconds). </i><br/>
+ EAPI int <code>ecore_x_dpms_enabled_get</code> (void)<br/>
  <i>Checks the DPMS state of the display. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions related to the X DPMS extension.</p>
@@ -144,16 +144,16 @@ description: "X DPMS Extension Functions – Functions related to the X DPMS ext
 <p> The values are in unit of seconds. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>standby</i> Amount of time of inactivity before standby mode will be invoked.<br />
- <i>suspend</i> Amount of time of inactivity before the screen is placed into suspend mode.<br />
+<dd><i>standby</i> Amount of time of inactivity before standby mode will be invoked.<br/>
+ <i>suspend</i> Amount of time of inactivity before the screen is placed into suspend mode.<br/>
  <i>off</i> Amount of time of inactivity before the monitor is shut off.</dd></dl>
 <h3>EAPI int ecore_x_dpms_timeouts_set (unsigned int standby, unsigned int suspend, unsigned int off)</h3>
 <p>Sets the timeouts. </p>
 <p> The values are in unit of seconds. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>standby</i> Amount of time of inactivity before standby mode will be invoked.<br />
- <i>suspend</i> Amount of time of inactivity before the screen is placed into suspend mode.<br />
+<dd><i>standby</i> Amount of time of inactivity before standby mode will be invoked.<br/>
+ <i>suspend</i> Amount of time of inactivity before the screen is placed into suspend mode.<br/>
  <i>off</i> Amount of time of inactivity before the monitor is shut off.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -161,8 +161,8 @@ description: "X DPMS Extension Functions – Functions related to the X DPMS ext
 <p> The values are in unit of seconds. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>standby</i> Amount of time of inactivity before standby mode will be invoked.<br />
- <i>suspend</i> Amount of time of inactivity before the screen is placed into suspend mode.<br />
+<dd><i>standby</i> Amount of time of inactivity before standby mode will be invoked.<br/>
+ <i>suspend</i> Amount of time of inactivity before the screen is placed into suspend mode.<br/>
  <i>off</i> Amount of time of inactivity before the monitor is shut off.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

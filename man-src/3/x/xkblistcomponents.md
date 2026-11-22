@@ -10,7 +10,7 @@ description: "XkbListComponents – List of components for one or more component
 <p>XkbListComponents &#8211; List of components for one or more component types </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbComponentListPtr XkbListComponents</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>XkbComponentNamesPtr </code><i>ptrns</i><code>,</code> <code>int *</code><i>max_inout</i><code>);</code><br />
+<dt> <code>XkbComponentListPtr XkbListComponents</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>XkbComponentNamesPtr </code><i>ptrns</i><code>,</code> <code>int *</code><i>max_inout</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

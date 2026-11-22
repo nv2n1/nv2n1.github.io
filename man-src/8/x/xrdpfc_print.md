@@ -38,5 +38,5 @@ description: "xrdpfc_print – print content of ProxyFileCache meta data"
 <h2>License</h2>
 <p>License terms can be displayed by typing &quot;<code>xrootd -H</code>&quot;.</p>
 <h2>Support Level</h2>
-<p>The <code>xrdpfc_print</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
+<p>The <code>xrdpfc_print</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br/>
  </center></p>

@@ -133,7 +133,7 @@ description: "org.freedesktop.import1 – The D-Bus interface of systemd-importd
  --object-path /org/freedesktop/import1/transfer/_1</pre>
 </dd></dl>
 <h2>Versioning</h2>
-<p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[][1].</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

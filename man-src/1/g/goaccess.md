@@ -102,14 +102,14 @@ description: "goaccess – fast web log analyzer and interactive viewer."
 </dt><dd> In addition to specifying the raw log/date/time formats, for simplicity, any of the following predefined log format names can be supplied to the log/date/time-format variables. GoAccess can also handle one predefined name in one variable and another predefined name in another variable.</dd>
 <dt>
 </dt><dd>
-&nbsp;<wbr>&nbsp;<wbr>COMBINED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Combined Log Format,<br />
-&nbsp;<wbr>&nbsp;<wbr>VCOMBINED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Combined Log Format with Virtual Host,<br />
-&nbsp;<wbr>&nbsp;<wbr>COMMON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Common Log Format,<br />
-&nbsp;<wbr>&nbsp;<wbr>VCOMMON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Common Log Format with Virtual Host,<br />
-&nbsp;<wbr>&nbsp;<wbr>W3C&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; W3C Extended Log File Format,<br />
-&nbsp;<wbr>&nbsp;<wbr>SQUID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Native Squid Log Format,<br />
-&nbsp;<wbr>&nbsp;<wbr>CLOUDFRONT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Amazon CloudFront Web Distribution,<br />
-&nbsp;<wbr>&nbsp;<wbr>CLOUDSTORAGE &#8211; Google Cloud Storage,<br />
+&nbsp;<wbr>&nbsp;<wbr>COMBINED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Combined Log Format,<br/>
+&nbsp;<wbr>&nbsp;<wbr>VCOMBINED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Combined Log Format with Virtual Host,<br/>
+&nbsp;<wbr>&nbsp;<wbr>COMMON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Common Log Format,<br/>
+&nbsp;<wbr>&nbsp;<wbr>VCOMMON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Common Log Format with Virtual Host,<br/>
+&nbsp;<wbr>&nbsp;<wbr>W3C&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; W3C Extended Log File Format,<br/>
+&nbsp;<wbr>&nbsp;<wbr>SQUID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Native Squid Log Format,<br/>
+&nbsp;<wbr>&nbsp;<wbr>CLOUDFRONT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Amazon CloudFront Web Distribution,<br/>
+&nbsp;<wbr>&nbsp;<wbr>CLOUDSTORAGE &#8211; Google Cloud Storage,<br/>
 &nbsp;<wbr>&nbsp;<wbr>AWSELB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Amazon Elastic Load Balancing,</dd>
 <dt><code>-a &#8211;agent-list</dt>
 <dd> Enable a list of user-agents by host. For faster parsing, do not enable this flag.</dd>
@@ -122,10 +122,10 @@ description: "goaccess – fast web log analyzer and interactive viewer."
 <dt>-e &#8211;exclude-ip=&lt;IP|IP-range&gt;</dt>
 <dd> Exclude an IPv4 or IPv6 from being counted. Ranges can be included as well using a dash in between the IPs (start-end).</dd>
 <dt>
-</dt><dd> </code><i>Examples:</i><br />
-&nbsp;<wbr>&nbsp;<wbr>exclude-ip 127.0.0.1<br />
-&nbsp;<wbr>&nbsp;<wbr>exclude-ip 192.168.0.1-192.168.0.100<br />
-&nbsp;<wbr>&nbsp;<wbr>exclude-ip ::1<br />
+</dt><dd> </code><i>Examples:</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>exclude-ip 127.0.0.1<br/>
+&nbsp;<wbr>&nbsp;<wbr>exclude-ip 192.168.0.1-192.168.0.100<br/>
+&nbsp;<wbr>&nbsp;<wbr>exclude-ip ::1<br/>
 &nbsp;<wbr>&nbsp;<wbr>exclude-ip 0:0:0:0:0:ffff:808:804-0:0:0:0:0:ffff:808:808</dd>
 <dt><code>-g &#8211;std-geoip</dt>
 <dd> Standard GeoIP database for less memory usage.</dd>
@@ -149,8 +149,8 @@ description: "goaccess – fast web log analyzer and interactive viewer."
 <dd> Write output to stdout given one of the following files and the corresponding extension for the output format:</dd>
 <dt>
 </dt><dd>
-&nbsp;<wbr>&nbsp;<wbr>/path/file.csv&nbsp;<wbr>&nbsp;<wbr>&#8211; Comma-separated values&nbsp;<wbr>(CSV)<br />
-&nbsp;<wbr>&nbsp;<wbr>/path/file.json &#8211; JSON&nbsp;<wbr>(JavaScript Object Notation)<br />
+&nbsp;<wbr>&nbsp;<wbr>/path/file.csv&nbsp;<wbr>&nbsp;<wbr>&#8211; Comma-separated values&nbsp;<wbr>(CSV)<br/>
+&nbsp;<wbr>&nbsp;<wbr>/path/file.json &#8211; JSON&nbsp;<wbr>(JavaScript Object Notation)<br/>
 &nbsp;<wbr>&nbsp;<wbr>/path/file.html &#8211; HTML</dd>
 <dt>-s &#8211;storage</dt>
 <dd> Display current storage method. i.e., B+ Tree, Hash.</dd>
@@ -172,37 +172,37 @@ description: "goaccess – fast web log analyzer and interactive viewer."
 <dd> Include static files that contain a query string.</dd>
 <dt>&#8212;color=&lt;fg:bg[attrs, PANEL]&gt;</dt>
 <dd> Specify custom colors for the terminal output. </dd>
-<p> </code><i>Color Syntax</i><br />
+<p> </code><i>Color Syntax</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>DEFINITION space/tab colorFG#:colorBG#&nbsp;<wbr>[attributes,PANEL] </p>
-<p>&nbsp;<wbr>FG#&nbsp;<wbr>=&nbsp;<wbr>foreground color&nbsp;<wbr>[-1&#8230;255]&nbsp;<wbr>(-1&nbsp;<wbr>=&nbsp;<wbr>default term color)<br />
+<p>&nbsp;<wbr>FG#&nbsp;<wbr>=&nbsp;<wbr>foreground color&nbsp;<wbr>[-1&#8230;255]&nbsp;<wbr>(-1&nbsp;<wbr>=&nbsp;<wbr>default term color)<br/>
 &nbsp;<wbr>BG#&nbsp;<wbr>=&nbsp;<wbr>background color&nbsp;<wbr>[-1&#8230;255]&nbsp;<wbr>(-1&nbsp;<wbr>=&nbsp;<wbr>default term color) </p>
 <p> Optionally, it is possible to apply color attributes (multiple attributes are comma separated), such as: <i>bold,</i> <i>underline,</i> <i>normal,</i> <i>reverse,</i> <i>blink</i> </p>
 <p> If desired, it is possible to apply custom colors per panel, that is, a metric in the REQUESTS panel can be of color A, while the same metric in the BROWSERS panel can be of color B. </p>
-<p> <i>Available color definitions:</i><br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_HITS<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_VISITORS<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_DATA<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_BW<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_AVGTS<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_CUMTS<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_MAXTS<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_PROT<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_MTHD<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_PERC<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_PERC_MAX<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_PANEL_COLS<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_BARS<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_ERROR<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_SELECTED<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_PANEL_ACTIVE<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_PANEL_HEADER<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_PANEL_DESC<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_OVERALL_LBLS<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_OVERALL_VALS<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_OVERALL_PATH<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_ACTIVE_LABEL<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_BG<br />
-&nbsp;<wbr>&nbsp;<wbr>COLOR_DEFAULT<br />
+<p> <i>Available color definitions:</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_HITS<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_VISITORS<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_DATA<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_BW<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_AVGTS<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_CUMTS<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_MAXTS<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_PROT<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_MTHD<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_PERC<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_MTRC_PERC_MAX<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_PANEL_COLS<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_BARS<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_ERROR<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_SELECTED<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_PANEL_ACTIVE<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_PANEL_HEADER<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_PANEL_DESC<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_OVERALL_LBLS<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_OVERALL_VALS<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_OVERALL_PATH<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_ACTIVE_LABEL<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_BG<br/>
+&nbsp;<wbr>&nbsp;<wbr>COLOR_DEFAULT<br/>
 &nbsp;<wbr>&nbsp;<wbr>COLOR_PROGRESS </p>
 <p> See configuration file for a sample color scheme.</p>
 <dt><code>&#8211;color-scheme=&lt;1|2|3&gt;</dt>
@@ -218,20 +218,20 @@ description: "goaccess – fast web log analyzer and interactive viewer."
 <dt>&#8211;enable-panel=&lt;PANEL&gt;</dt>
 <dd> Enable parsing and displaying the given panel.</dd>
 <dt>
-</dt><dd> </code><i>Available panels:</i><br />
-&nbsp;<wbr>&nbsp;<wbr>VISITORS<br />
-&nbsp;<wbr>&nbsp;<wbr>REQUESTS<br />
-&nbsp;<wbr>&nbsp;<wbr>REQUESTS_STATIC<br />
-&nbsp;<wbr>&nbsp;<wbr>NOT_FOUND<br />
-&nbsp;<wbr>&nbsp;<wbr>HOSTS<br />
-&nbsp;<wbr>&nbsp;<wbr>OS<br />
-&nbsp;<wbr>&nbsp;<wbr>BROWSERS<br />
-&nbsp;<wbr>&nbsp;<wbr>VISIT_TIMES<br />
-&nbsp;<wbr>&nbsp;<wbr>VIRTUAL_HOSTS<br />
-&nbsp;<wbr>&nbsp;<wbr>REFERRERS<br />
-&nbsp;<wbr>&nbsp;<wbr>REFERRING_SITES<br />
-&nbsp;<wbr>&nbsp;<wbr>KEYPHRASES<br />
-&nbsp;<wbr>&nbsp;<wbr>GEO_LOCATION<br />
+</dt><dd> </code><i>Available panels:</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>VISITORS<br/>
+&nbsp;<wbr>&nbsp;<wbr>REQUESTS<br/>
+&nbsp;<wbr>&nbsp;<wbr>REQUESTS_STATIC<br/>
+&nbsp;<wbr>&nbsp;<wbr>NOT_FOUND<br/>
+&nbsp;<wbr>&nbsp;<wbr>HOSTS<br/>
+&nbsp;<wbr>&nbsp;<wbr>OS<br/>
+&nbsp;<wbr>&nbsp;<wbr>BROWSERS<br/>
+&nbsp;<wbr>&nbsp;<wbr>VISIT_TIMES<br/>
+&nbsp;<wbr>&nbsp;<wbr>VIRTUAL_HOSTS<br/>
+&nbsp;<wbr>&nbsp;<wbr>REFERRERS<br/>
+&nbsp;<wbr>&nbsp;<wbr>REFERRING_SITES<br/>
+&nbsp;<wbr>&nbsp;<wbr>KEYPHRASES<br/>
+&nbsp;<wbr>&nbsp;<wbr>GEO_LOCATION<br/>
 &nbsp;<wbr>&nbsp;<wbr>STATUS_CODES</dd>
 <dt><code>&#8211;hour-spec=&lt;hr|min&gt;</dt>
 <dd> Set the time specificity to either hour (default) or min to display the tenth of a minute appended to the hour.</dd>
@@ -248,20 +248,20 @@ description: "goaccess – fast web log analyzer and interactive viewer."
 <dt>&#8211;ignore-panel=&lt;PANEL&gt;</dt>
 <dd> Ignore parsing and displaying the given panel.</dd>
 <dt>
-</dt><dd> </code><i>Available panels:</i><br />
-&nbsp;<wbr>&nbsp;<wbr>VISITORS<br />
-&nbsp;<wbr>&nbsp;<wbr>REQUESTS<br />
-&nbsp;<wbr>&nbsp;<wbr>REQUESTS_STATIC<br />
-&nbsp;<wbr>&nbsp;<wbr>NOT_FOUND<br />
-&nbsp;<wbr>&nbsp;<wbr>HOSTS<br />
-&nbsp;<wbr>&nbsp;<wbr>OS<br />
-&nbsp;<wbr>&nbsp;<wbr>BROWSERS<br />
-&nbsp;<wbr>&nbsp;<wbr>VISIT_TIMES<br />
-&nbsp;<wbr>&nbsp;<wbr>VIRTUAL_HOSTS<br />
-&nbsp;<wbr>&nbsp;<wbr>REFERRERS<br />
-&nbsp;<wbr>&nbsp;<wbr>REFERRING_SITES<br />
-&nbsp;<wbr>&nbsp;<wbr>KEYPHRASES<br />
-&nbsp;<wbr>&nbsp;<wbr>GEO_LOCATION<br />
+</dt><dd> </code><i>Available panels:</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>VISITORS<br/>
+&nbsp;<wbr>&nbsp;<wbr>REQUESTS<br/>
+&nbsp;<wbr>&nbsp;<wbr>REQUESTS_STATIC<br/>
+&nbsp;<wbr>&nbsp;<wbr>NOT_FOUND<br/>
+&nbsp;<wbr>&nbsp;<wbr>HOSTS<br/>
+&nbsp;<wbr>&nbsp;<wbr>OS<br/>
+&nbsp;<wbr>&nbsp;<wbr>BROWSERS<br/>
+&nbsp;<wbr>&nbsp;<wbr>VISIT_TIMES<br/>
+&nbsp;<wbr>&nbsp;<wbr>VIRTUAL_HOSTS<br/>
+&nbsp;<wbr>&nbsp;<wbr>REFERRERS<br/>
+&nbsp;<wbr>&nbsp;<wbr>REFERRING_SITES<br/>
+&nbsp;<wbr>&nbsp;<wbr>KEYPHRASES<br/>
+&nbsp;<wbr>&nbsp;<wbr>GEO_LOCATION<br/>
 &nbsp;<wbr>&nbsp;<wbr>STATUS_CODES</dd>
 <dt><code>&#8211;ignore-referer=&lt;referer&gt;</dt>
 <dd> Ignore referers from being counted. Wildcards allowed. e.g., </code><i>*.domain.com</i> <i>ww?.domain.*</i></dd>
@@ -302,19 +302,19 @@ description: "goaccess – fast web log analyzer and interactive viewer."
 <dt>&#8211;sort-panel=&lt;PANEL,FIELD,ORDER&gt;</dt>
 <dd> Sort panel on initial load. Sort options are separated by comma. Options are in the form: PANEL,METRIC,ORDER</dd>
 <dt>
-</dt><dd> </code><i>Available metrics:</i><br />
-&nbsp;<wbr>&nbsp;<wbr>BY_HITS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by hits<br />
-&nbsp;<wbr>&nbsp;<wbr>BY_VISITORS &#8211; Sort by unique visitors<br />
-&nbsp;<wbr>&nbsp;<wbr>BY_DATA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by data<br />
-&nbsp;<wbr>&nbsp;<wbr>BY_BW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by bandwidth<br />
-&nbsp;<wbr>&nbsp;<wbr>BY_AVGTS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by average time served<br />
-&nbsp;<wbr>&nbsp;<wbr>BY_CUMTS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by cumulative time served<br />
-&nbsp;<wbr>&nbsp;<wbr>BY_MAXTS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by maximum time served<br />
-&nbsp;<wbr>&nbsp;<wbr>BY_PROT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by http protocol<br />
+</dt><dd> </code><i>Available metrics:</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>BY_HITS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by hits<br/>
+&nbsp;<wbr>&nbsp;<wbr>BY_VISITORS &#8211; Sort by unique visitors<br/>
+&nbsp;<wbr>&nbsp;<wbr>BY_DATA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by data<br/>
+&nbsp;<wbr>&nbsp;<wbr>BY_BW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by bandwidth<br/>
+&nbsp;<wbr>&nbsp;<wbr>BY_AVGTS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by average time served<br/>
+&nbsp;<wbr>&nbsp;<wbr>BY_CUMTS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by cumulative time served<br/>
+&nbsp;<wbr>&nbsp;<wbr>BY_MAXTS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by maximum time served<br/>
+&nbsp;<wbr>&nbsp;<wbr>BY_PROT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by http protocol<br/>
 &nbsp;<wbr>&nbsp;<wbr>BY_MTHD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; Sort by http method</dd>
 <dt>
-</dt><dd> <i>Available orders:</i><br />
-&nbsp;<wbr>&nbsp;<wbr>ASC<br />
+</dt><dd> <i>Available orders:</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>ASC<br/>
 &nbsp;<wbr>&nbsp;<wbr>DESC</dd>
 <dt><code>&#8211;ws-url=&lt;url[:port]&gt;</dt>
 <dd> URL to which the WebSocket server responds. This is the URL supplied to the WebSocket constructor on the client side.</dd>
@@ -573,12 +573,12 @@ description: "goaccess – fast web log analyzer and interactive viewer."
 <p> For instance:</p>
 <dl>
 <dt>
-</dt><dd> // last month access log<br />
+</dt><dd> // last month access log<br/>
  goaccess -f access.log.1 &#8211;keep-db-files</dd></dl>
 <p> then, load it with</p>
 <dl>
 <dt>
-</dt><dd> // append this month access log, and preserve new data<br />
+</dt><dd> // append this month access log, and preserve new data<br/>
  goaccess -f access.log &#8211;load-from-disk &#8211;keep-db-files</dd></dl>
 <p> To read persisted data only (without parsing new data)</p>
 <dl>

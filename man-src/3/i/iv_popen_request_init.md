@@ -15,8 +15,8 @@ description: "IV_POPEN_REQUEST_INIT, iv_popen_request_submit, iv_popen_request_c
  char **argv;
  char *type;
 };</pre>
-<p><code>void IV_POPEN_REQUEST_INIT(struct iv_popen_request *</code><i>this</i><code>);</code><br />
- <code>int iv_popen_request_submit(struct iv_popen_request *</code><i>this</i><code>);</code><br />
+<p><code>void IV_POPEN_REQUEST_INIT(struct iv_popen_request *</code><i>this</i><code>);</code><br/>
+ <code>int iv_popen_request_submit(struct iv_popen_request *</code><i>this</i><code>);</code><br/>
  <code>void iv_popen_request_close(struct iv_popen_request *</code><i>this</i><code>);</code> </p>
 <h2>Description</h2>
 <p><code>iv_popen</code> provides <code>ivykis</code>(3) applications with an asynchronous version of <code><a href="/docs/linux/man/3-popen/">popen</a></code>(3) that is integrated with the ivykis event loop. </p>

@@ -29,7 +29,7 @@ description: "xdpr – dump an X window directly to a printer"
 <dt><code>la100</code></dt>
 <dd> Digital LA100</dd>
 <dt><code>ljet</code></dt>
-<dd> HP LaserJet series and other monochrome PCL devices such as ThinkJet, QuietJet, RuggedWriter, <font SIZE="-1">HP</font>2560 series, and HP 2930 series printers</dd>
+<dd> HP LaserJet series and other monochrome PCL devices such as ThinkJet, QuietJet, RuggedWriter, HP2560 series, and HP 2930 series printers</dd>
 <dt><code>ln03</code></dt>
 <dd> Digital LN03</dd>
 <dt><code>pjet</code></dt>
@@ -55,9 +55,9 @@ description: "xdpr – dump an X window directly to a printer"
 <dt>PRINTER</dt>
 <dd> which printer to use by default.</dd></dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright X Consortium<br />
+<p> Copyright X Consortium<br/>
  See <i>X(1)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHORS</h2>
-<p> Paul Boutin, MIT Project Athena<br />
- Michael R. Gretzinger, MIT Project Athena<br />
+<p> Paul Boutin, MIT Project Athena<br/>
+ Michael R. Gretzinger, MIT Project Athena<br/>
  Jim Gettys, MIT Project Athena </p>

@@ -13,7 +13,7 @@ description: "Atlas::Objects::NoSuchAttrException – An exception indicating th
 <p> Inherits <code>Atlas::Exception</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>NoSuchAttrException</code> (const std::string &amp;name) </p>
-<p> const std::string &amp; <code>getName</code> () const<br />
+<p> const std::string &amp; <code>getName</code> () const<br/>
  <i>Get the name of the attribute which does not exist. </i></p>
 <h2>Detailed Description</h2>
 <p>An exception indicating the requested attribute does not exist. </p>

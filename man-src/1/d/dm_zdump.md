@@ -19,7 +19,7 @@ dm_zdump[-v][-c YEAR][ZONE ZONE...]
 
 <h2>DESCRIPTION</h2>
 
- This displays the current time in each <font SIZE="-1">ZONE</font> named on the command line unless the -v option is given.
+ This displays the current time in each ZONE named on the command line unless the -v option is given.
 <dl>
 <dt>-h, --help
 </dt><dd> Print online help.
@@ -27,8 +27,8 @@ dm_zdump[-v][-c YEAR][ZONE ZONE...]
 </dt><dd> This displays all critical dates (i.e. the times when a time change occurs due to the timezone description) for each of the timezones listed (or the local timezone if none are listed). 
  Each critical date is printed as two lines of output: the last second before the change occurs, and the first second of the new time. 
  By default, all critical dates from Jan 1, 0001 until the year 20 years in the future are printed, but this can be changed with the -c option.
-</dd><dt>-c, --cutoff <font SIZE="-1">YEAR</font>
-</dt><dd> This specifies the cutoff year. All critical dates up to the start of <font SIZE="-1">YEAR</font> are given. The <font SIZE="-1">GMT</font> time Jan 01, <font SIZE="-1">YEAR</font> at 00:00:00 is the cutoff time.</dd></dl>
+</dd><dt>-c, --cutoff YEAR
+</dt><dd> This specifies the cutoff year. All critical dates up to the start of YEAR are given. The GMT time Jan 01, YEAR at 00:00:00 is the cutoff time.</dd></dl>
 
 <h2>KNOWN BUGS</h2>
 

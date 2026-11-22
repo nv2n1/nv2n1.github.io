@@ -11,7 +11,7 @@ description: "dsytri_rook.f –"
 <p> dsytri_rook.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dsytri_rook</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br />
+<p> subroutine <code>dsytri_rook</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br/>
  <i></i><code>DSYTRI_ROOK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsytri_rook (characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, double precision, dimension( * )WORK, integerINFO)</h3>

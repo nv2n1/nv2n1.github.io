@@ -23,7 +23,7 @@ OPTIONS := {
     -p[retty] |
     -j[son] |
     -o[neline] }</code></pre>
-<p> <code>bridge link set</code> <code>dev</code> <i>DEV</i> [ <code>cost</code> <i>COST</i> ] [ <code>priority</code> <i>PRIO</i> ] [ <code>state</code> <i>STATE</i> ] [ <code>guard</code> { <code>on</code> | <code>off</code> } ] [ <code>hairpin</code> { <code>on</code> | <code>off</code> } ] [ <code>fastleave</code> { <code>on</code> | <code>off</code> } ] [ <code>root_block</code> { <code>on</code> | <code>off</code> } ] [ <code>learning</code> { <code>on</code> | <code>off</code> } ] [ <code>learning_sync</code> { <code>on</code> | <code>off</code> } ] [ <code>flood</code> { <code>on</code> | <code>off</code> } ] [ <code>hwmode</code> { <code>vepa</code> | <code>veb</code> } ] [ <code>mcast_flood</code> { <code>on</code> | <code>off</code> } ] [ <code>mcast_to_unicast</code> { <code>on</code> | <code>off</code> } ] [ <code>neigh_suppress</code> { <code>on</code> | <code>off</code> } ] [ <code>vlan_tunnel</code> { <code>on</code> | <code>off</code> } ] [ <code>isolated</code> { <code>on</code> | <code>off</code> } ] [ <code>backup_port</code> <i>DEVICE</i> ] [ <code>nobackup_port</code> ] [ <code>self</code> ] [ <code>master</code> ]<br />
+<p> <code>bridge link set</code> <code>dev</code> <i>DEV</i> [ <code>cost</code> <i>COST</i> ] [ <code>priority</code> <i>PRIO</i> ] [ <code>state</code> <i>STATE</i> ] [ <code>guard</code> { <code>on</code> | <code>off</code> } ] [ <code>hairpin</code> { <code>on</code> | <code>off</code> } ] [ <code>fastleave</code> { <code>on</code> | <code>off</code> } ] [ <code>root_block</code> { <code>on</code> | <code>off</code> } ] [ <code>learning</code> { <code>on</code> | <code>off</code> } ] [ <code>learning_sync</code> { <code>on</code> | <code>off</code> } ] [ <code>flood</code> { <code>on</code> | <code>off</code> } ] [ <code>hwmode</code> { <code>vepa</code> | <code>veb</code> } ] [ <code>mcast_flood</code> { <code>on</code> | <code>off</code> } ] [ <code>mcast_to_unicast</code> { <code>on</code> | <code>off</code> } ] [ <code>neigh_suppress</code> { <code>on</code> | <code>off</code> } ] [ <code>vlan_tunnel</code> { <code>on</code> | <code>off</code> } ] [ <code>isolated</code> { <code>on</code> | <code>off</code> } ] [ <code>backup_port</code> <i>DEVICE</i> ] [ <code>nobackup_port</code> ] [ <code>self</code> ] [ <code>master</code> ]<br/>
  <code>bridge link</code> [ <code>show</code> ] [ <code>dev</code> <i>DEV</i> ] </p>
 <pre><code>bridge fdb { add | append | del | replace }
 LLADDR
@@ -43,13 +43,13 @@ VNI ] { [
     DEVICE ] |
     nhid
     NHID }</code></pre>
-<p> <code>bridge fdb</code> [ [ <code>show</code> ] [ <code>br</code> <i>BRDEV</i> ] [ <code>brport</code> <i>DEV</i> ] [ <code>vlan</code> <i>VID</i> ] [ <code>state</code> <i>STATE</i> ] [ <code>dynamic</code> <i>] ]</i><br />
- <code>bridge fdb get</code> [ <code>to</code> <i>]</i> <i>LLADDR [ </i> <code>br</code> <i>BRDEV</i> ] <code>{ brport | dev }</code> <i>DEV</i> [ <code>vlan</code> <i>VID</i> ] [ <code>vni</code> <i>VNI</i> ] [ <code>self</code> ] [ <code>master</code> ] [ <code>dynamic</code> ]<br />
- <code>bridge mdb</code> { <code>add</code> | <code>del</code> } <code>dev</code> <i>DEV</i> <code>port</code> <i>PORT</i> <code>grp</code> <i>GROUP</i> [ <code>src</code> <i>SOURCE</i> ] [ <code>permanent</code> | <code>temp</code> ] [ <code>vid</code> <i>VID</i> ]<br />
- <code>bridge mdb show </code>[ <code>dev</code> <i>DEV</i> ]<br />
- <code>bridge vlan</code> { <code>add</code> | <code>del</code> } <code>dev</code> <i>DEV</i> <code>vid</code> <i>VID</i> [ <code>tunnel_info</code> <i>TUNNEL_ID</i> ] [ <code>pvid</code> ] [ <code>untagged</code> ] [ <code>self</code> ] [ <code>master</code> ]<br />
- <code>bridge vlan set</code> <code>dev</code> <i>DEV</i> <code>vid</code> <i>VID</i> [ <code>state</code> <i>STP_STATE</i> ]<br />
- <code>bridge vlan</code> [ <code>show</code> | <code>tunnelshow</code> ] [ <code>dev</code> <i>DEV</i> ]<br />
+<p> <code>bridge fdb</code> [ [ <code>show</code> ] [ <code>br</code> <i>BRDEV</i> ] [ <code>brport</code> <i>DEV</i> ] [ <code>vlan</code> <i>VID</i> ] [ <code>state</code> <i>STATE</i> ] [ <code>dynamic</code> <i>] ]</i><br/>
+ <code>bridge fdb get</code> [ <code>to</code> <i>]</i> <i>LLADDR [ </i> <code>br</code> <i>BRDEV</i> ] <code>{ brport | dev }</code> <i>DEV</i> [ <code>vlan</code> <i>VID</i> ] [ <code>vni</code> <i>VNI</i> ] [ <code>self</code> ] [ <code>master</code> ] [ <code>dynamic</code> ]<br/>
+ <code>bridge mdb</code> { <code>add</code> | <code>del</code> } <code>dev</code> <i>DEV</i> <code>port</code> <i>PORT</i> <code>grp</code> <i>GROUP</i> [ <code>src</code> <i>SOURCE</i> ] [ <code>permanent</code> | <code>temp</code> ] [ <code>vid</code> <i>VID</i> ]<br/>
+ <code>bridge mdb show </code>[ <code>dev</code> <i>DEV</i> ]<br/>
+ <code>bridge vlan</code> { <code>add</code> | <code>del</code> } <code>dev</code> <i>DEV</i> <code>vid</code> <i>VID</i> [ <code>tunnel_info</code> <i>TUNNEL_ID</i> ] [ <code>pvid</code> ] [ <code>untagged</code> ] [ <code>self</code> ] [ <code>master</code> ]<br/>
+ <code>bridge vlan set</code> <code>dev</code> <i>DEV</i> <code>vid</code> <i>VID</i> [ <code>state</code> <i>STP_STATE</i> ]<br/>
+ <code>bridge vlan</code> [ <code>show</code> | <code>tunnelshow</code> ] [ <code>dev</code> <i>DEV</i> ]<br/>
  <code>bridge monitor</code> [ <code>all</code> | <code>neigh</code> | <code>link</code> | <code>mdb</code> | <code>vlan</code> ] </p>
 <h2>Options</h2>
 <dl>

@@ -12,9 +12,9 @@ description: "QuantLib::DividendBarrierOption – Single-asset barrier option wi
 <p>#include &lt;ql/experimental/finitedifferences/dividendbarrieroption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::BarrierOption</code>. </p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for dividend barrier option calculation </i><br />
- class <code>engine</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for dividend barrier option calculation </i><br/>
+ class <code>engine</code><br/>
  <i>Dividend-barrier-option engine base class </i></p>
 <h3>Public Member Functions</h3>
 <p><code>DividendBarrierOption</code> (Barrier::Type barrierType, <code>Real</code> barrier, <code>Real</code> rebate, const boost::shared_ptr&lt; <code>StrikedTypePayoff</code> &gt; &amp;payoff, const boost::shared_ptr&lt; <code>Exercise</code> &gt; &amp;exercise, const std::vector&lt; <code>Date</code> &gt; &amp;dividendDates, const std::vector&lt; <code>Real</code> &gt; &amp;dividends) </p>

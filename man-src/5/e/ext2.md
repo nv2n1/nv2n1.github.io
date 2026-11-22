@@ -7,8 +7,8 @@ url: "/docs/linux/man/5-ext2/"
 description: "ext2 – the second extended file system ext3 – the third extended file system ext4 – the fourth extended file system"
 ---
 
-<p>ext2 &#8211; the second extended file system<br />
- ext3 &#8211; the third extended file system<br />
+<p>ext2 &#8211; the second extended file system<br/>
+ ext3 &#8211; the third extended file system<br/>
  ext4 &#8211; the fourth extended file system</p>
 <h2>Description</h2>
 <p>The second, third, and fourth extended file systems, or ext2, ext3, and ext4 as they are commonly known, are Linux file systems that have historically been the default file system for many Linux distributions. They are general purpose file systems that have been designed for extensibility and backwards compatibility. In particular, file systems previously intended for use with the ext2 and ext3 file systems can be mounted using the ext4 file system driver, and indeed in many modern Linux distributions, the ext4 file system driver has been configured to handle mount requests for ext2 and ext3 file systems.</p>

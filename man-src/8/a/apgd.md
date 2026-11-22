@@ -11,10 +11,10 @@ description: "apgd – server that generates several random passwords"
 <h2>Synopsis</h2>
 <p><code>apgd</code> [<code>-a algorithm</code>] [<code>-M mode</code>] [<code>-E char_string</code>] [<code>-n num_of_pass</code>] [<code>-m min_pass_len</code>] [<code>-x max_pass_len</code>] [<code>-r</code> <i>dictfile</i>] [<code>-b</code> <i>filter_file</i>] [<code>-p min_substr_len</code>] [<code>-k</code>] [<code>-t</code>] [<code>-l</code>] </p>
 <h2>Description</h2>
-<p><code>apgd</code> program is a server that supports <code>Password Generation Protocol</code> described in <code>RFC972.</code> It uses several password generation algorithms (currently two) and a built-in pseudo random number generator. <code>apgd</code> is normally invoked by the Internet superserver (see <code>inetd</code> (8)) for requests to connect to the pwdgen port (pwdgen port is 129 according to <code>RFC1700</code> ) as indicated by the <i>/etc/services</i> file (see <code>services</code> (5)). Default algorithm is pronounceable password generation algorithm designed by <code>Morrie Gasser</code> and described in <code>A Random Word Generator For Pronounceable Passwords</code> <i>National Technical Information Service (NTIS)</i> <code>AD-A-017676.</code> The original paper is very old and had never been put online, so I have to use <i>NIST</i> implementation described in <code>FIPS-181.</code> Another algorithm is simple random character generation algorithm, but it uses four user-defined symbol sets to produce random password. It means that user can choose type of symbols that should appear in password. Symbol sets are: numeric symbol set <i>(0,&#8230;,9)</i> , capital letters symbol set <i>(A,&#8230;,Z)</i> , small letters symbol set <i>(a,&#8230;,z)</i> and special symbols symbol set <i>(#,@,!,&#8230;).</i> Built-in pseudo random number generator is an implementation of algorithm described in <code>Appendix C of ANSI X9.17</code> or <code>RFC1750</code> with exception that it uses <i>CAST</i> or <i>SHA-1</i> instead of <i>Triple DES.</i> It uses local time with precision of microseconds (see <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2)) and <i>/dev/random</i> (if available) to produce initial random seed. <code>apgd</code> also have the ability to check generated password quality using dictionary. You can use this ability if you specify command-line option <code>-r</code> <i>dictfile</i> or <code>-b</code> <i>filtername</i> where <i>dictfile</i> is dictionary file name and <i>filtername</i> is the name of Bloom filter file. In that dictionary you may place words (one per line) that should not appear as generated passwords. For example: user names common words, etc. You even can use one of the dictionaries that come with <i>dictionary password crackers.</i> Bloom filter file should be created with <code><a href="/docs/linux/man/1-apgbfm/">apgbfm</a></code>(1) utility included in apg distribution. In future releases I plan to implement some other techniques to check passwords just to make life easier. <code>apgd</code> has the ability log user password generation activity and internal debug information. It does this using<br />
+<p><code>apgd</code> program is a server that supports <code>Password Generation Protocol</code> described in <code>RFC972.</code> It uses several password generation algorithms (currently two) and a built-in pseudo random number generator. <code>apgd</code> is normally invoked by the Internet superserver (see <code>inetd</code> (8)) for requests to connect to the pwdgen port (pwdgen port is 129 according to <code>RFC1700</code> ) as indicated by the <i>/etc/services</i> file (see <code>services</code> (5)). Default algorithm is pronounceable password generation algorithm designed by <code>Morrie Gasser</code> and described in <code>A Random Word Generator For Pronounceable Passwords</code> <i>National Technical Information Service (NTIS)</i> <code>AD-A-017676.</code> The original paper is very old and had never been put online, so I have to use <i>NIST</i> implementation described in <code>FIPS-181.</code> Another algorithm is simple random character generation algorithm, but it uses four user-defined symbol sets to produce random password. It means that user can choose type of symbols that should appear in password. Symbol sets are: numeric symbol set <i>(0,&#8230;,9)</i> , capital letters symbol set <i>(A,&#8230;,Z)</i> , small letters symbol set <i>(a,&#8230;,z)</i> and special symbols symbol set <i>(#,@,!,&#8230;).</i> Built-in pseudo random number generator is an implementation of algorithm described in <code>Appendix C of ANSI X9.17</code> or <code>RFC1750</code> with exception that it uses <i>CAST</i> or <i>SHA-1</i> instead of <i>Triple DES.</i> It uses local time with precision of microseconds (see <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2)) and <i>/dev/random</i> (if available) to produce initial random seed. <code>apgd</code> also have the ability to check generated password quality using dictionary. You can use this ability if you specify command-line option <code>-r</code> <i>dictfile</i> or <code>-b</code> <i>filtername</i> where <i>dictfile</i> is dictionary file name and <i>filtername</i> is the name of Bloom filter file. In that dictionary you may place words (one per line) that should not appear as generated passwords. For example: user names common words, etc. You even can use one of the dictionaries that come with <i>dictionary password crackers.</i> Bloom filter file should be created with <code><a href="/docs/linux/man/1-apgbfm/">apgbfm</a></code>(1) utility included in apg distribution. In future releases I plan to implement some other techniques to check passwords just to make life easier. <code>apgd</code> has the ability log user password generation activity and internal debug information. It does this using<br/>
  <i>facility</i> = <i>daemon</i></p>
 <dl>
-<dd><i>priority</i> = <i>info</i> for user password generation activity logging<br />
+<dd><i>priority</i> = <i>info</i> for user password generation activity logging<br/>
  <i>priority</i> = <i>debug</i> for internal debug information
 </dd></dl>
 <p> See the <code>syslogd</code>(8) and <code>syslog.conf</code>(5) man pages for information on how to configure your syslog daemon. </p>
@@ -24,7 +24,7 @@ description: "apgd – server that generates several random passwords"
 <dt><code>-a algorithm</code></dt>
 <dd>use <code>algorithm</code> for password generation.</dd>
 <dl>
-<dd><code>0</code> &#8211; (default) pronounceable password generation<br />
+<dd><code>0</code> &#8211; (default) pronounceable password generation<br/>
  <code>1</code> &#8211; random character password generation</dd></dl>
 <dt><code>-n num_of_pass</code></dt>
 <dd>generate <code>num_of_pass</code> number of passwords. Default is 6.</dd>
@@ -58,21 +58,21 @@ description: "apgd – server that generates several random passwords"
 </dl>
 <dl>
 <dd><code>mode</code> can not be more than 4 characters in length. </dd>
-<p> <code>Note:</code><br />
+<p> <code>Note:</code><br/>
  Usage of L, M, N, C will slow down password generation process. </p>
-<p> <code>Examples:</code><br />
+<p> <code>Examples:</code><br/>
  <code>-M sncl</code> or <code>-M SNCL</code> or <code>-M Cn</code></dl>
 <dt><code>-E char_string</code></dt>
 <dd>exclude characters in <code>char_string</code> from password generation process (in pronounceable password generation mode you can not exclude small letters). To include special symbols that can be recognized by shell (apostrophe, quotes, dollar sign, etc.) in <code>char_string</code> use the backslashed versions.</dd>
 <dl>
 <dd><code>Examples:</code> </dd>
-<p> Command <code>apgd -a 1 -M n -n 3 -m 8 -e 23456789</code> will generate a set of passwords that will look like this<br />
- <code>10100110</code><br />
- <code>01111000</code><br />
+<p> Command <code>apgd -a 1 -M n -n 3 -m 8 -e 23456789</code> will generate a set of passwords that will look like this<br/>
+ <code>10100110</code><br/>
+ <code>01111000</code><br/>
  <code>11011101</code> </p>
-<p> Command <code>apgd -a 1 -M nc -n 3 -m 26 -e GHIJKLMNOPQRSTUVWXYZ</code> will generate a set of passwords that will look like this<br />
- <code>16A1653CD4DE5E7BD9584A3476</code><br />
- <code>C8F78E06944AFD57FB9CB882BC</code><br />
+<p> Command <code>apgd -a 1 -M nc -n 3 -m 26 -e GHIJKLMNOPQRSTUVWXYZ</code> will generate a set of passwords that will look like this<br/>
+ <code>16A1653CD4DE5E7BD9584A3476</code><br/>
+ <code>C8F78E06944AFD57FB9CB882BC</code><br/>
  <code>8C8DF37CD792D36D056BBD5002</code>
 </dl>
 </dl>
@@ -107,5 +107,5 @@ description: "apgd – server that generates several random passwords"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-apg/">apg</a></code>(1), <code><a href="/docs/linux/man/1-apgbfm/">apgbfm</a></code>(1)</p>
 <h2>Author</h2>
-<p>Adel I. Mirzazhanov, &lt;a-del [at] iname.com&gt;<br />
+<p>Adel I. Mirzazhanov, &lt;a-del [at] iname.com&gt;<br/>
  Project home page: <a rel="nofollow" href="http://www.adel.nursat.kz/apg/">http://www.adel.nursat.kz/apg/</a></p>

@@ -23,18 +23,18 @@ description: "get_auditfail_action – Get failure_action tunable value"
 <h2>ERRORS</h2>
 <p> An error is returned if there is an error reading <code>/etc/libaudit.conf</code> or if the failure_action tunable is not found in the file. </p>
 <h2>EXAMPLES</h2>
-<p>&nbsp;<wbr>/*&nbsp;<wbr>Sample code&nbsp;<wbr>*/<br />
+<p>&nbsp;<wbr>/*&nbsp;<wbr>Sample code&nbsp;<wbr>*/<br/>
 &nbsp;<wbr>auditfail_t failmode;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
-<p>&nbsp;<wbr>if&nbsp;<wbr>((fd&nbsp;<wbr>=&nbsp;<wbr>audit_open()&nbsp;<wbr>)&nbsp;<wbr>&lt;&nbsp;<wbr>0&nbsp;<wbr>)&nbsp;<wbr>{<br />
+<p>&nbsp;<wbr>if&nbsp;<wbr>((fd&nbsp;<wbr>=&nbsp;<wbr>audit_open()&nbsp;<wbr>)&nbsp;<wbr>&lt;&nbsp;<wbr>0&nbsp;<wbr>)&nbsp;<wbr>{<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fprintf&nbsp;<wbr>(stderr,&nbsp;<wbr>&quot;Cannot open netlink audit socket&quot;); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Get the failure_action&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>if&nbsp;<wbr>((rc&nbsp;<wbr>=&nbsp;<wbr>get_auditfail_action(&amp;failmode))&nbsp;<wbr>==&nbsp;<wbr>0)&nbsp;<wbr>{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>if&nbsp;<wbr>(failmode&nbsp;<wbr>==&nbsp;<wbr>FAIL_LOG)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fprintf&nbsp;<wbr>(stderr,&nbsp;<wbr>&quot;Audit subsystem unavailable&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>else if&nbsp;<wbr>(failmode&nbsp;<wbr>==&nbsp;<wbr>FAIL_TERMINATE)&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>exit&nbsp;<wbr>(1);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>If failmode&nbsp;<wbr>==&nbsp;<wbr>FAIL_IGNORE, do nothing&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>}<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Get the failure_action&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>if&nbsp;<wbr>((rc&nbsp;<wbr>=&nbsp;<wbr>get_auditfail_action(&amp;failmode))&nbsp;<wbr>==&nbsp;<wbr>0)&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>if&nbsp;<wbr>(failmode&nbsp;<wbr>==&nbsp;<wbr>FAIL_LOG)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fprintf&nbsp;<wbr>(stderr,&nbsp;<wbr>&quot;Audit subsystem unavailable&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>else if&nbsp;<wbr>(failmode&nbsp;<wbr>==&nbsp;<wbr>FAIL_TERMINATE)&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>exit&nbsp;<wbr>(1);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>If failmode&nbsp;<wbr>==&nbsp;<wbr>FAIL_IGNORE, do nothing&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>}<br/>
 &nbsp;<wbr>} </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-audit_open/">audit_open</a></code>(3), <code><a href="/docs/linux/man/8-auditd/">auditd</a></code>(8). </p>

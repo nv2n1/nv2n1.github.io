@@ -22,7 +22,7 @@ description: "ptaskset (python-schedutils) – set or get the affinity of a proc
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-taskset/">taskset</a></code>(1)</p>
 <h2>AUTHOR</h2>
-<p> ptaskset was written by Arnaldo Carvalho de Melo &lt;acme [at] redhat.com&gt;<br />
+<p> ptaskset was written by Arnaldo Carvalho de Melo &lt;acme [at] redhat.com&gt;<br/>
  as part of python-schedutils </p>
 <p> This manual page was written by John Kacur &lt;jkacur [at] redhat.com&gt; </p>
 <p> Report bugs and send patches to &lt;tuna-devel [at] lists.fedorahosted.org&gt; </p>

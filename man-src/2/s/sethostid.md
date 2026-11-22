@@ -11,7 +11,7 @@ description: "gethostid, sethostid – get or set the unique identifier of the c
 <p> gethostid, sethostid &#8211; get or set the unique identifier of the current host </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
-<p> <code>long gethostid(void);</code><br />
+<p> <code>long gethostid(void);</code><br/>
  <code>int sethostid(long </code><i>hostid</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>gethostid</code>():</p>

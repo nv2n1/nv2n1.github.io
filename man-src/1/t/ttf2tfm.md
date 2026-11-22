@@ -10,7 +10,7 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 
 <p> ttf2tfm &#8211; build TeX metric files from a TrueType font </p>
 <h2>SYNOPSIS</h2>
-<p> <code>ttf2tfm</code> <i>ttffile</i>[<code>.ttf</code>|<code>.ttc</code>] [<code>-c</code><i>&nbsp;caps-height-factor</i>] [<code>-e</code><i>&nbsp;extension-factor</i>] [<code>-E</code><i>&nbsp;encoding-id</i>] [<code>-f</code><i>&nbsp;font-index</i>] [<code>-l</code>] [<code>-L&nbsp;</code><i>ligature-file</i>[<i>.sfd</i>]] [<code>-n</code>] [<code>-N</code>] [<code>-O</code>] [<code>-p&nbsp;</code><i>inencfile</i>[<i>.enc</i>]] [<code>-P</code><i>&nbsp;platform-id</i>] [<code>-q</code>] [<code>-r</code><i>&nbsp;old-glyphname new-glyphname</i>] [<code>-R&nbsp;</code><i>replacement-file</i>[<i>.rpl</i>]] [<code>-s</code><i>&nbsp;slant-factor</i>] [<code>-t&nbsp;</code><i>outencfile</i>[<i>.enc</i>]] [<code>-T&nbsp;</code><i>inoutencfile</i>[<i>.enc</i>]] [<code>-u</code>] [<code>-v&nbsp;</code><i>vplfile</i>[<i>.vpl</i>]] [<code>-V&nbsp;</code><i>scvplfile</i>[<i>.vpl</i>]] [<code>-w</code>] [<code>-x</code>] [<code>-y</code><i>&nbsp;vertical-shift-factor</i>] [<i>tfmfile</i>[<i>.tfm</i>]]<br />
+<p> <code>ttf2tfm</code> <i>ttffile</i>[<code>.ttf</code>|<code>.ttc</code>] [<code>-c</code><i>&nbsp;caps-height-factor</i>] [<code>-e</code><i>&nbsp;extension-factor</i>] [<code>-E</code><i>&nbsp;encoding-id</i>] [<code>-f</code><i>&nbsp;font-index</i>] [<code>-l</code>] [<code>-L&nbsp;</code><i>ligature-file</i>[<i>.sfd</i>]] [<code>-n</code>] [<code>-N</code>] [<code>-O</code>] [<code>-p&nbsp;</code><i>inencfile</i>[<i>.enc</i>]] [<code>-P</code><i>&nbsp;platform-id</i>] [<code>-q</code>] [<code>-r</code><i>&nbsp;old-glyphname new-glyphname</i>] [<code>-R&nbsp;</code><i>replacement-file</i>[<i>.rpl</i>]] [<code>-s</code><i>&nbsp;slant-factor</i>] [<code>-t&nbsp;</code><i>outencfile</i>[<i>.enc</i>]] [<code>-T&nbsp;</code><i>inoutencfile</i>[<i>.enc</i>]] [<code>-u</code>] [<code>-v&nbsp;</code><i>vplfile</i>[<i>.vpl</i>]] [<code>-V&nbsp;</code><i>scvplfile</i>[<i>.vpl</i>]] [<code>-w</code>] [<code>-x</code>] [<code>-y</code><i>&nbsp;vertical-shift-factor</i>] [<i>tfmfile</i>[<i>.tfm</i>]]<br/>
  <code>ttf2tfm &#8211;version</code> | <code>&#8211;help</code></p>
 <h2>DESCRIPTION</h2>
 <p> This program extracts the metric and kerning information of a TrueType font and converts it into metric files usable by TeX (quite similar to <code>afm2tfm</code> which is part of the <code>dvips</code> package; please consult its info files for more details on the various parameters (especially encoding files). </p>
@@ -432,8 +432,8 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 <dt><i>&lt;whitespace&gt;</i>&nbsp;:=</dt>
 <dd> space, formfeed, carriage return, horizontal and vertical tabs &#8212; no newline characters.</dd>
 <dt><i>&lt;ranges&gt;</i>&nbsp;:=</dt>
-<dd> <i>&lt;ranges&gt; &lt;whitespace&gt; &lt;codepoint&gt;</i>&nbsp;|<br />
- <i>&lt;ranges&gt; &lt;whitespace&gt; &lt;range&gt;</i>&nbsp;|<br />
+<dd> <i>&lt;ranges&gt; &lt;whitespace&gt; &lt;codepoint&gt;</i>&nbsp;|<br/>
+ <i>&lt;ranges&gt; &lt;whitespace&gt; &lt;range&gt;</i>&nbsp;|<br/>
  <i>&lt;ranges&gt; &lt;whitespace&gt; &lt;offset&gt; &lt;whitespace&gt; &lt;range&gt;</i></dd>
 <dt><i>&lt;codepoint&gt;</i>&nbsp;:=</dt>
 <dd> <i>&lt;number&gt;</i> </dd>
@@ -564,10 +564,10 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 <p> The optimal solution is to increase the value of <i>max_header_bytes</i> in the file (and probably too) to, say, 400 and recompile <code>vptovf</code> (and <code>pltotf</code>). Otherwise you&#8217;ll get some (harmless) error messages like </p>
 <p> which can be safely ignored.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ttf2pk/">ttf2pk</a></code>(1), <code><a href="/docs/linux/man/1-afm2tfm/">afm2tfm</a></code>(1), <code><a href="/docs/linux/man/1-vptovf/">vptovf</a></code>(1),<br />
+<p> <code><a href="/docs/linux/man/1-ttf2pk/">ttf2pk</a></code>(1), <code><a href="/docs/linux/man/1-afm2tfm/">afm2tfm</a></code>(1), <code><a href="/docs/linux/man/1-vptovf/">vptovf</a></code>(1),<br/>
  the info pages for <code>dvips</code> and <code>kpathsea</code></p>
 <h2>AVAILABILITY</h2>
 <p> <code>ttf2tfm</code> is part of the FreeType 1 package, a high quality TrueType rendering library.</p>
 <h2>AUTHORS</h2>
-<p> Werner LEMBERG<br />
+<p> Werner LEMBERG<br/>
  Fr&eacute;d&eacute;ric LOYER </p>

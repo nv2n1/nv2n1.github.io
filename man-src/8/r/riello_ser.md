@@ -11,7 +11,7 @@ description: "riello_ser – Driver for Riello UPS Protocol UPS equipment"
 <h2>Synopsis</h2>
 <p><code>riello_ser</code> -h <code>riello_ser</code> -a <i>UPS_NAME</i> [<i>OPTIONS</i>]</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  This man page only documents the hardware-specific features of the riello_ser driver. For information about the core driver, see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8). </dd>
 <h2>Supported Hardware</h2>
 <p>riello_ser supports all recent Riello UPS, Aros UPS models which use the Riello UPS GPSER and SENTR protocols. </p>

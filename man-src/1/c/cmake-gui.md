@@ -63,12 +63,12 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
 <dt><code>add_custom_command</code></dt>
 <dd> Add a custom build rule to the generated build system. </dd>
 <p> There are two main signatures for add_custom_command The first signature is for adding a custom command to produce an output. </p>
-<p>add_custom_command(OUTPUT output1[output2&#8230;] COMMAND command1[ARGS][args1&#8230;]<br />
-                                                              [COMMAND command2[ARGS][args2&#8230;]&#8230;]<br />
-                                                              [MAIN_DEPENDENCY depend]<br />
-                                                              [DEPENDS[depends&#8230;]]<br />
-                                                              [IMPLICIT_DEPENDS&lt;lang1&gt; depend1&#8230;]<br />
-                                                              [WORKING_DIRECTORY dir]<br />
+<p>add_custom_command(OUTPUT output1[output2&#8230;] COMMAND command1[ARGS][args1&#8230;]<br/>
+                                                              [COMMAND command2[ARGS][args2&#8230;]&#8230;]<br/>
+                                                              [MAIN_DEPENDENCY depend]<br/>
+                                                              [DEPENDS[depends&#8230;]]<br/>
+                                                              [IMPLICIT_DEPENDS&lt;lang1&gt; depend1&#8230;]<br/>
+                                                              [WORKING_DIRECTORY dir]<br/>
                                                               [COMMENT comment][VERBATIM][APPEND])</p>
 <p> This defines a command to generate specified OUTPUT file(s). A target created in the same directory (CMakeLists.txt file) that specifies any output of the custom command as a source file is given a rule to generate the file using the command at build time. If an output name is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory. Note that MAIN_DEPENDENCY is completely optional and is used as a suggestion to visual studio about where to hang the custom command. In makefile terms this creates a new target in the following form: </p>
 <pre>
@@ -77,8 +77,8 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
 </pre>
 <p> If more than one command is specified they will be executed in order. The optional ARGS argument is for backward compatibility and will be ignored. </p>
 <p> The second signature adds a custom command to a target such as a library or executable. This is useful for performing an operation before or after building the target. The command becomes part of the target and will only execute when the target itself is built. If the target is already built, the command will not execute. </p>
-<p>add_custom_command(TARGET target<br />
-                       PRE_BUILD |<br />
+<p>add_custom_command(TARGET target<br/>
+                       PRE_BUILD |<br/>
                    PRE_LINK | POST_BUILD COMMAND command1[ARGS][args1&#8230;][COMMAND command2[ARGS][args2&#8230;]&#8230;][WORKING_DIRECTORY dir][COMMENT comment][VERBATIM])</p>
 <p> This defines a new command that will be associated with building the specified target. When the command will happen is determined by which of the following is specified: </p>
 <pre>
@@ -95,11 +95,11 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
 <p> The DEPENDS option specifies files on which the command depends. If any dependency is an OUTPUT of another custom command in the same directory (CMakeLists.txt file) CMake automatically brings the other custom command into the target in which this command is built. If DEPENDS specifies any target (created by an ADD_* command) a target-level dependency is created to make sure the target is built before any target using this custom command. Additionally, if the target is an executable or library a file-level dependency is created to cause the custom command to re-run whenever the target is recompiled. </p>
 <dt><code>add_custom_target</code></dt>
 <dd> Add a target with no output so it will always be built. </dd>
-<p>add_custom_target(Name[ALL][command1[args1&#8230;]]<br />
-                      [COMMAND command2[args2&#8230;]&#8230;]<br />
-                      [DEPENDS depend depend depend&#8230;]<br />
-                      [WORKING_DIRECTORY dir]<br />
-                      [COMMENT comment][VERBATIM]<br />
+<p>add_custom_target(Name[ALL][command1[args1&#8230;]]<br/>
+                      [COMMAND command2[args2&#8230;]&#8230;]<br/>
+                      [DEPENDS depend depend depend&#8230;]<br/>
+                      [WORKING_DIRECTORY dir]<br/>
+                      [COMMENT comment][VERBATIM]<br/>
                       [SOURCES src1[src2&#8230;]])</p>
 <p> Adds a target with the given name that executes the given commands. The target has no output file and is ALWAYS CONSIDERED OUT OF DATE even if the commands try to create a file with the name of the target. Use ADD_CUSTOM_COMMAND to generate a file with dependencies. By default nothing depends on the custom target. Use ADD_DEPENDENCIES to add dependencies to or from other targets. If the ALL option is specified it indicates that this target should be added to the default build target so that it will be run every time (the command cannot be called ALL). The command and arguments are optional and if not specified an empty target will be created. If WORKING_DIRECTORY is set, then the command will be run in that directory. If COMMENT is set, the value will be displayed as a message before the commands are executed at build time. Dependencies listed with the DEPENDS argument may reference files and outputs of custom commands created with add_custom_command() in the same directory (CMakeLists.txt file). </p>
 <p> If VERBATIM is given then all arguments to the commands will be escaped properly for the build tool so that the invoked command receives each argument unchanged. Note that one level of escapes is still used by the CMake language processor before add_custom_target even sees the arguments. Use of VERBATIM is recommended as it enables correct behavior. When VERBATIM is not given the behavior is platform specific because there is no protection of tool-specific special characters. </p>
@@ -144,7 +144,7 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
 <p> An IMPORTED library target references a library file located outside the project. No rules are generated to build it. The target name has scope in the directory in which it is created and below. It may be referenced like any target built within the project. IMPORTED libraries are useful for convenient reference from commands like target_link_libraries. Details about the imported library are specified by setting properties whose names begin in &quot;IMPORTED_&quot;. The most important such property is IMPORTED_LOCATION (and its per-configuration version IMPORTED_LOCATION_&lt;CONFIG&gt;) which specifies the location of the main library file on disk. See documentation of the IMPORTED_* properties for more information. </p>
 <dt><code>add_subdirectory</code></dt>
 <dd> Add a subdirectory to the build. </dd>
-<p>add_subdirectory(source_dir[binary_dir]<br />
+<p>add_subdirectory(source_dir[binary_dir]<br/>
                            [EXCLUDE_FROM_ALL])</p>
 <p> Add a subdirectory to the build. The source_dir specifies the directory in which the source CmakeLists.txt and code files are located. If it is a relative path it will be evaluated with respect to the current directory (the typical usage), but it may also be an absolute path. The binary_dir specifies the directory in which to place the output files. If it is a relative path it will be evaluated with respect to the current output directory, but it may also be an absolute path. If binary_dir is not specified, the value of source_dir, before expanding any relative path, will be used (the typical usage). The CMakeLists.txt file in the specified source directory will be processed immediately by CMake before processing in the current input file continues beyond this command. </p>
 <p> If the EXCLUDE_FROM_ALL argument is provided then targets in the subdirectory will not be included in the ALL target of the parent directory by default, and will be excluded from IDE project files. Users must explicitly build targets in the subdirectory. This is meant for use when the subdirectory contains a separate part of the project that is useful but not necessary, such as a set of examples. Typically the subdirectory should contain its own project() command invocation so that a full build system will be generated in the subdirectory (such as a VS IDE solution file). Note that inter-target dependencies supercede this exclusion. If a target built by the parent project depends on a target in the subdirectory, the dependee target will be included in the parent project build system to satisfy the dependency. </p>
@@ -175,7 +175,7 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
 <p> Sets the given &lt;variable&gt; to a string containing the command that will build this project from the root of the build tree using the build tool given by &lt;makecommand&gt;. &lt;makecommand&gt; should be msdev, nmake, make or one of the end user build tools. This is useful for configuring testing systems. </p>
 <dt><code>cmake_minimum_required</code></dt>
 <dd> Set the minimum required version of cmake for a project. </dd>
-<p>cmake_minimum_required(VERSION major[.minor[.patch]]<br />
+<p>cmake_minimum_required(VERSION major[.minor[.patch]]<br/>
                                     [FATAL_ERROR])</p>
 <p> If the current version of CMake is lower than that required it will stop processing the project and report an error. When a version higher than 2.4 is specified the command implicitly invokes </p>
 <p>cmake_policy(VERSION major[.minor[.patch]])</p>
@@ -211,7 +211,7 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
 <p> Functions and macros record policy settings when they are created and use the pre-record policies when they are invoked. If the function or macro implementation sets policies, the changes automatically propagate up through callers until they reach the closest nested policy stack entry. </p>
 <dt><code>configure_file</code></dt>
 <dd> Copy a file to another location and modify its contents. </dd>
-<p>configure_file(InputFile OutputFile<br />
+<p>configure_file(InputFile OutputFile<br/>
                    [COPYONLY][ESCAPE_QUOTES][@ONLY])</p>
 <p> The Input and Output files have to have full paths. This command replaces any variables in the input file referenced as ${VAR} or @VAR@ with their values as determined by CMake. If a variable is not defined, it will be replaced with nothing. If COPYONLY is specified, then no variable expansion will take place. If ESCAPE_QUOTES is specified then any substituted quotes will be C-style escaped. The file will be configured with the current values of CMake variables. If @ONLY is specified, only variables of the form @VAR@ will be replaces and ${VAR} will be ignored. This is useful for configuring scripts that use ${VAR}. Any occurrences of #cmakedefine VAR will be replaced with either #define VAR or /* #undef VAR */ depending on the setting of VAR in CMake </p>
 <dt><code>create_test_sourcelist</code></dt>
@@ -303,47 +303,47 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
 <p> See the while command. </p>
 <dt><code>execute_process</code></dt>
 <dd> Execute one or more child processes. </dd>
-<p>  execute_process(COMMAND &lt;cmd1&gt; [args1&#8230;]]<br />
-                  [COMMAND &lt;cmd2&gt; [args2&#8230;] [&#8230;]]<br />
-                  [WORKING_DIRECTORY &lt;directory&gt;]<br />
-                  [TIMEOUT &lt;seconds&gt;]<br />
-                  [RESULT_VARIABLE &lt;variable&gt;]<br />
-                  [OUTPUT_VARIABLE &lt;variable&gt;]<br />
-                  [ERROR_VARIABLE &lt;variable&gt;]<br />
-                  [INPUT_FILE &lt;file&gt;]<br />
-                  [OUTPUT_FILE &lt;file&gt;]<br />
-                  [ERROR_FILE &lt;file&gt;]<br />
-                  [OUTPUT_QUIET]<br />
-                  [ERROR_QUIET]<br />
-                  [OUTPUT_STRIP_TRAILING_WHITESPACE]<br />
+<p>  execute_process(COMMAND &lt;cmd1&gt; [args1&#8230;]]<br/>
+                  [COMMAND &lt;cmd2&gt; [args2&#8230;] [&#8230;]]<br/>
+                  [WORKING_DIRECTORY &lt;directory&gt;]<br/>
+                  [TIMEOUT &lt;seconds&gt;]<br/>
+                  [RESULT_VARIABLE &lt;variable&gt;]<br/>
+                  [OUTPUT_VARIABLE &lt;variable&gt;]<br/>
+                  [ERROR_VARIABLE &lt;variable&gt;]<br/>
+                  [INPUT_FILE &lt;file&gt;]<br/>
+                  [OUTPUT_FILE &lt;file&gt;]<br/>
+                  [ERROR_FILE &lt;file&gt;]<br/>
+                  [OUTPUT_QUIET]<br/>
+                  [ERROR_QUIET]<br/>
+                  [OUTPUT_STRIP_TRAILING_WHITESPACE]<br/>
                   [ERROR_STRIP_TRAILING_WHITESPACE])</p>
 <p> Runs the given sequence of one or more commands with the standard output of each process piped to the standard input of the next. A single standard error pipe is used for all processes. If WORKING_DIRECTORY is given the named directory will be set as the current working directory of the child processes. If TIMEOUT is given the child processes will be terminated if they do not finish in the specified number of seconds (fractions are allowed). If RESULT_VARIABLE is given the variable will be set to contain the result of running the processes. This will be an integer return code from the last child or a string describing an error condition. If OUTPUT_VARIABLE or ERROR_VARIABLE are given the variable named will be set with the contents of the standard output and standard error pipes respectively. If the same variable is named for both pipes their output will be merged in the order produced. If INPUT_FILE, OUTPUT_FILE, or ERROR_FILE is given the file named will be attached to the standard input of the first process, standard output of the last process, or standard error of all processes respectively. If OUTPUT_QUIET or ERROR_QUIET is given then the standard output or standard error results will be quietly ignored. If more than one OUTPUT_* or ERROR_* option is given for the same pipe the precedence is not specified. If no OUTPUT_* or ERROR_* options are given the output will be shared with the corresponding pipes of the CMake process itself. </p>
 <p> The execute_process command is a newer more powerful version of exec_program, but the old command has been kept for compatibility. </p>
 <dt><code>export</code></dt>
 <dd> Export targets from the build tree for use by outside projects. </dd>
-<p>export(TARGETS[target1[target2[&#8230;]]][NAMESPACE&lt;namespace&gt;]<br />
+<p>export(TARGETS[target1[target2[&#8230;]]][NAMESPACE&lt;namespace&gt;]<br/>
               [APPEND] FILE&lt;filename&gt;)</p>
 <p> Create a file &lt;filename&gt; that may be included by outside projects to import targets from the current project&#8217;s build tree. This is useful during cross-compiling to build utility executables that can run on the host platform in one project and then import them into another project being compiled for the target platform. If the NAMESPACE option is given the &lt;namespace&gt; string will be prepended to all target names written to the file. If the APPEND option is given the generated code will be appended to the file instead of overwriting it. If a library target is included in the export but a target to which it links is not included the behavior is unspecified. </p>
 <p> The file created by this command is specific to the build tree and should never be installed. See the install(EXPORT) command to export targets from an installation tree. </p>
 <dt><code>file</code></dt>
 <dd> File manipulation command. </dd>
-<p>file(WRITE filename &#8220;message to write&#8221; &#8230;)<br />
-    file(APPEND filename &#8220;message to write&#8221; &#8230;)<br />
-        file(READ filename variable[LIMIT numBytes][OFFSET offset][HEX])<br />
-            file(STRINGS filename variable[LIMIT_COUNT num]<br />
-                                          [LIMIT_INPUT numBytes][LIMIT_OUTPUT numBytes]<br />
-                                          [LENGTH_MINIMUM numBytes][LENGTH_MAXIMUM numBytes]<br />
-                                          [NEWLINE_CONSUME][REGEX regex]<br />
-                                          [NO_HEX_CONVERSION])<br />
-                file(GLOB variable[RELATIVE path][globbing expressions]&#8230;)<br />
-                    file(GLOB_RECURSE variable[RELATIVE path]<br />
-                                              [FOLLOW_SYMLINKS][globbing expressions]&#8230;)<br />
-                        file(REMOVE[file1&#8230;])<br />
-                            file(REMOVE_RECURSE[file1&#8230;])<br />
-                                file(MAKE_DIRECTORY[directory1 directory2&#8230;])<br />
-                                    file(RELATIVE_PATH variable directory file)<br />
-                                        file(TO_CMAKE_PATH path result)<br />
-                                            file(TO_NATIVE_PATH path result)<br />
+<p>file(WRITE filename &#8220;message to write&#8221; &#8230;)<br/>
+    file(APPEND filename &#8220;message to write&#8221; &#8230;)<br/>
+        file(READ filename variable[LIMIT numBytes][OFFSET offset][HEX])<br/>
+            file(STRINGS filename variable[LIMIT_COUNT num]<br/>
+                                          [LIMIT_INPUT numBytes][LIMIT_OUTPUT numBytes]<br/>
+                                          [LENGTH_MINIMUM numBytes][LENGTH_MAXIMUM numBytes]<br/>
+                                          [NEWLINE_CONSUME][REGEX regex]<br/>
+                                          [NO_HEX_CONVERSION])<br/>
+                file(GLOB variable[RELATIVE path][globbing expressions]&#8230;)<br/>
+                    file(GLOB_RECURSE variable[RELATIVE path]<br/>
+                                              [FOLLOW_SYMLINKS][globbing expressions]&#8230;)<br/>
+                        file(REMOVE[file1&#8230;])<br/>
+                            file(REMOVE_RECURSE[file1&#8230;])<br/>
+                                file(MAKE_DIRECTORY[directory1 directory2&#8230;])<br/>
+                                    file(RELATIVE_PATH variable directory file)<br/>
+                                        file(TO_CMAKE_PATH path result)<br/>
+                                            file(TO_NATIVE_PATH path result)<br/>
                                                 file(DOWNLOAD url file[TIMEOUT timeout][STATUS status][LOG log])</p>
 <p> WRITE will write a message into a file called &#8216;filename&#8217;. It overwrites the file if it already exists, and creates the file if it does not exist. </p>
 <p> APPEND will write a message into a file same as WRITE, except it will append it to the end of the file </p>
@@ -380,21 +380,21 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
    find_path(&lt;VAR&gt; name1 [path1 path2 ...])
 </pre>
 <p> This is the short-hand signature for the command that is sufficient in many cases. It is the same as find_path(&lt;VAR&gt; name1 [PATHS path1 path2 &#8230;]) </p>
-<p>find_path(<br />
-    &lt;VAR&gt;<br />
-        name |<br />
-    NAMES name1[name2&#8230;]<br />
-               [HINTS path1[path2&#8230; ENV var]]<br />
-               [PATHS path1[path2&#8230; ENV var]]<br />
-               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br />
-               [DOC &#8220;cache documentation string&#8221;]<br />
-               [NO_DEFAULT_PATH]<br />
-               [NO_CMAKE_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_PATH]<br />
-               [NO_SYSTEM_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_SYSTEM_PATH]<br />
-               [CMAKE_FIND_ROOT_PATH_BOTH |<br />
-                ONLY_CMAKE_FIND_ROOT_PATH |<br />
+<p>find_path(<br/>
+    &lt;VAR&gt;<br/>
+        name |<br/>
+    NAMES name1[name2&#8230;]<br/>
+               [HINTS path1[path2&#8230; ENV var]]<br/>
+               [PATHS path1[path2&#8230; ENV var]]<br/>
+               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br/>
+               [DOC &#8220;cache documentation string&#8221;]<br/>
+               [NO_DEFAULT_PATH]<br/>
+               [NO_CMAKE_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_PATH]<br/>
+               [NO_SYSTEM_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_SYSTEM_PATH]<br/>
+               [CMAKE_FIND_ROOT_PATH_BOTH |<br/>
+                ONLY_CMAKE_FIND_ROOT_PATH |<br/>
                 NO_CMAKE_FIND_ROOT_PATH])</p>
 <p> This command is used to find a full path to named file. A cache entry named by &lt;VAR&gt; is created to store the result of this command. If the full path to a file is found the result is stored in the variable and the search will not be repeated unless the variable is cleared. If nothing is found, the result will be &lt;VAR&gt;-NOTFOUND, and the search will be attempted again the next time find_path is invoked with the same variable. The name of the full path to a file that is searched for is specified by the names listed after the NAMES argument. Additional search locations can be specified after the PATHS argument. If ENV var is found in the HINTS or PATHS section the environment variable var will be read and converted from a system environment variable to a cmake style list of paths. For example ENV PATH would be a way to list the system path variable. The argument after DOC will be used for the documentation string in the cache. PATH_SUFFIXES specifies additional subdirectories to check below each search path. </p>
 <p> If NO_DEFAULT_PATH is specified, then no additional paths are added to the search. If NO_DEFAULT_PATH is not specified, the search process is as follows: </p>
@@ -454,21 +454,21 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
    find_library(&lt;VAR&gt; name1 [path1 path2 ...])
 </pre>
 <p> This is the short-hand signature for the command that is sufficient in many cases. It is the same as find_library(&lt;VAR&gt; name1 [PATHS path1 path2 &#8230;]) </p>
-<p>find_library(<br />
-    &lt;VAR&gt;<br />
-        name |<br />
-    NAMES name1[name2&#8230;]<br />
-               [HINTS path1[path2&#8230; ENV var]]<br />
-               [PATHS path1[path2&#8230; ENV var]]<br />
-               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br />
-               [DOC &#8220;cache documentation string&#8221;]<br />
-               [NO_DEFAULT_PATH]<br />
-               [NO_CMAKE_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_PATH]<br />
-               [NO_SYSTEM_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_SYSTEM_PATH]<br />
-               [CMAKE_FIND_ROOT_PATH_BOTH |<br />
-                ONLY_CMAKE_FIND_ROOT_PATH |<br />
+<p>find_library(<br/>
+    &lt;VAR&gt;<br/>
+        name |<br/>
+    NAMES name1[name2&#8230;]<br/>
+               [HINTS path1[path2&#8230; ENV var]]<br/>
+               [PATHS path1[path2&#8230; ENV var]]<br/>
+               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br/>
+               [DOC &#8220;cache documentation string&#8221;]<br/>
+               [NO_DEFAULT_PATH]<br/>
+               [NO_CMAKE_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_PATH]<br/>
+               [NO_SYSTEM_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_SYSTEM_PATH]<br/>
+               [CMAKE_FIND_ROOT_PATH_BOTH |<br/>
+                ONLY_CMAKE_FIND_ROOT_PATH |<br/>
                 NO_CMAKE_FIND_ROOT_PATH])</p>
 <p> This command is used to find a library. A cache entry named by &lt;VAR&gt; is created to store the result of this command. If the library is found the result is stored in the variable and the search will not be repeated unless the variable is cleared. If nothing is found, the result will be &lt;VAR&gt;-NOTFOUND, and the search will be attempted again the next time find_library is invoked with the same variable. The name of the library that is searched for is specified by the names listed after the NAMES argument. Additional search locations can be specified after the PATHS argument. If ENV var is found in the HINTS or PATHS section the environment variable var will be read and converted from a system environment variable to a cmake style list of paths. For example ENV PATH would be a way to list the system path variable. The argument after DOC will be used for the documentation string in the cache. PATH_SUFFIXES specifies additional subdirectories to check below each search path. </p>
 <p> If NO_DEFAULT_PATH is specified, then no additional paths are added to the search. If NO_DEFAULT_PATH is not specified, the search process is as follows: </p>
@@ -525,36 +525,36 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
 <p> If the library found is a framework, then VAR will be set to the full path to the framework &lt;fullPath&gt;/A.framework. When a full path to a framework is used as a library, CMake will use a -framework A, and a -F&lt;fullPath&gt; to link the framework to the target. </p>
 <dt><code>find_package</code></dt>
 <dd> Load settings for an external project. </dd>
-<p>find_package(&lt;package&gt;[version][EXACT][QUIET]<br />
+<p>find_package(&lt;package&gt;[version][EXACT][QUIET]<br/>
              [[REQUIRED | COMPONENTS] [components&#8230;]][NO_POLICY_SCOPE])</p>
 <p> Finds and loads settings from an external project. &lt;package&gt;_FOUND will be set to indicate whether the package was found. When the package is found package-specific information is provided through variables documented by the package itself. The QUIET option disables messages if the package cannot be found. The REQUIRED option stops processing with an error message if the package cannot be found. A package-specific list of components may be listed after the REQUIRED option or after the COMPONENTS option if no REQUIRED option is given. The [version] argument requests a version with which the package found should be compatible (format is major[.minor[.patch[.tweak]]]). The EXACT option requests that the version be matched exactly. If no [version] is given to a recursive invocation inside a find-module, the [version] and EXACT arguments are forwarded automatically from the outer call. Version support is currently provided only on a package-by-package basis (details below). </p>
 <p> User code should generally look for packages using the above simple signature. The remainder of this command documentation specifies the full command signature and details of the search process. Project maintainers wishing to provide a package to be found by this command are encouraged to read on. </p>
 <p> The command has two modes by which it searches for packages: &quot;Module&quot; mode and &quot;Config&quot; mode. Module mode is available when the command is invoked with the above reduced signature. CMake searches for a file called &quot;Find&lt;package&gt;.cmake&quot; in the CMAKE_MODULE_PATH followed by the CMake installation. If the file is found, it is read and processed by CMake. It is responsible for finding the package, checking the version, and producing any needed messages. Many find-modules provide limited or no support for versioning; check the module documentation. If no module is found the command proceeds to Config mode. </p>
 <p> The complete Config mode command signature is: </p>
-<p>find_package(&lt;package&gt;[version][EXACT][QUIET]<br />
-             [[REQUIRED | COMPONENTS] [components&#8230;]][NO_MODULE]<br />
-                      [NO_POLICY_SCOPE]<br />
-                      [NAMES name1[name2&#8230;]]<br />
-                      [CONFIGS config1[config2&#8230;]]<br />
-                      [HINTS path1[path2&#8230;]]<br />
-                      [PATHS path1[path2&#8230;]]<br />
-                      [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br />
-                      [NO_DEFAULT_PATH]<br />
-                      [NO_CMAKE_ENVIRONMENT_PATH]<br />
-                      [NO_CMAKE_PATH]<br />
-                      [NO_SYSTEM_ENVIRONMENT_PATH]<br />
-                      [NO_CMAKE_BUILDS_PATH]<br />
-                      [NO_CMAKE_SYSTEM_PATH]<br />
-                      [CMAKE_FIND_ROOT_PATH_BOTH |<br />
-                       ONLY_CMAKE_FIND_ROOT_PATH |<br />
+<p>find_package(&lt;package&gt;[version][EXACT][QUIET]<br/>
+             [[REQUIRED | COMPONENTS] [components&#8230;]][NO_MODULE]<br/>
+                      [NO_POLICY_SCOPE]<br/>
+                      [NAMES name1[name2&#8230;]]<br/>
+                      [CONFIGS config1[config2&#8230;]]<br/>
+                      [HINTS path1[path2&#8230;]]<br/>
+                      [PATHS path1[path2&#8230;]]<br/>
+                      [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br/>
+                      [NO_DEFAULT_PATH]<br/>
+                      [NO_CMAKE_ENVIRONMENT_PATH]<br/>
+                      [NO_CMAKE_PATH]<br/>
+                      [NO_SYSTEM_ENVIRONMENT_PATH]<br/>
+                      [NO_CMAKE_BUILDS_PATH]<br/>
+                      [NO_CMAKE_SYSTEM_PATH]<br/>
+                      [CMAKE_FIND_ROOT_PATH_BOTH |<br/>
+                       ONLY_CMAKE_FIND_ROOT_PATH |<br/>
                        NO_CMAKE_FIND_ROOT_PATH])</p>
 <p> The NO_MODULE option may be used to skip Module mode explicitly. It is also implied by use of options not specified in the reduced signature. </p>
 <p> Config mode attempts to locate a configuration file provided by the package to be found. A cache entry called &lt;package&gt;_DIR is created to hold the directory containing the file. By default the command searches for a package with the name &lt;package&gt;. If the NAMES option is given the names following it are used instead of &lt;package&gt;. The command searches for a file called &quot;&lt;name&gt;Config.cmake&quot; or &quot;&lt;lower-case-name&gt;-config.cmake&quot; for each name specified. A replacement set of possible configuration file names may be given using the CONFIGS option. The search procedure is specified below. Once found, the configuration file is read and processed by CMake. Since the file is provided by the package it already knows the location of package contents. The full path to the configuration file is stored in the cmake variable &lt;package&gt;_CONFIG. </p>
 <p> If the package configuration file cannot be found CMake will generate an error describing the problem unless the QUIET argument is specified. If REQUIRED is specified and the package is not found a fatal error is generated and the configure step stops executing. If &lt;package&gt;_DIR has been set to a directory not containing a configuration file CMake will ignore it and search from scratch. </p>
 <p> When the [version] argument is given Config mode will only find a version of the package that claims compatibility with the requested version (format is major[.minor[.patch[.tweak]]]). If the EXACT option is given only a version of the package claiming an exact match of the requested version may be found. CMake does not establish any convention for the meaning of version numbers. Package version numbers are checked by &quot;version&quot; files provided by the packages themselves. For a candidate package confguration file &quot;&lt;config-file&gt;.cmake&quot; the corresponding version file is located next to it and named either &quot;&lt;config-file&gt;-version.cmake&quot; or &quot;&lt;config-file&gt;Version.cmake&quot;. If no such version file is available then the configuration file is assumed to not be compatible with any requested version. When a version file is found it is loaded to check the requested version number. The version file is loaded in a nested scope in which the following variables have been defined: </p>
-<p>PACKAGE_FIND_NAME = the&lt;package&gt; name<br />
-    PACKAGE_FIND_VERSION = full requested version string<br />
-        PACKAGE_FIND_VERSION_MAJOR = major version if requested,<br />
+<p>PACKAGE_FIND_NAME = the&lt;package&gt; name<br/>
+    PACKAGE_FIND_VERSION = full requested version string<br/>
+        PACKAGE_FIND_VERSION_MAJOR = major version if requested,<br/>
     else 0 PACKAGE_FIND_VERSION_MINOR = minor version if requested, else 0 PACKAGE_FIND_VERSION_PATCH = patch version if requested, else 0 PACKAGE_FIND_VERSION_TWEAK = tweak version if requested, else 0 PACKAGE_FIND_VERSION_COUNT = number of version components, 0 to 4</p>
 <p> The version file checks whether it satisfies the requested version and sets these variables: </p>
 <pre>
@@ -564,11 +564,11 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
   PACKAGE_VERSION_UNSUITABLE = true if unsuitable as any version
 </pre>
 <p> These variables are checked by the find_package command to determine whether the configuration file provides an acceptable version. They are not available after the find_package call returns. If the version is acceptable the following variables are set: </p>
-<p>  &lt;package&gt;_VERSION       = full provided version string<br />
-  &lt;package&gt;_VERSION_MAJOR = major version if provided, else 0<br />
-  &lt;package&gt;_VERSION_MINOR = minor version if provided, else 0<br />
-  &lt;package&gt;_VERSION_PATCH = patch version if provided, else 0<br />
-  &lt;package&gt;_VERSION_TWEAK = tweak version if provided, else 0<br />
+<p>  &lt;package&gt;_VERSION       = full provided version string<br/>
+  &lt;package&gt;_VERSION_MAJOR = major version if provided, else 0<br/>
+  &lt;package&gt;_VERSION_MINOR = minor version if provided, else 0<br/>
+  &lt;package&gt;_VERSION_PATCH = patch version if provided, else 0<br/>
+  &lt;package&gt;_VERSION_TWEAK = tweak version if provided, else 0<br/>
   &lt;package&gt;_VERSION_COUNT = number of version components, 0 to 4</p>
 <p> and the corresponding package configuration file is loaded. When multiple package configuration files are available whose version files claim compatibility with the version requested it is unspecified which one is chosen. No attempt is made to choose a highest or closest version number. </p>
 <p> Config mode provides an elaborate interface and search procedure. Much of the interface is provided for completeness and for use internally by find-modules loaded by Module mode. Most user code should simply call </p>
@@ -653,21 +653,21 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
    find_path(&lt;VAR&gt; name1 [path1 path2 ...])
 </pre>
 <p> This is the short-hand signature for the command that is sufficient in many cases. It is the same as find_path(&lt;VAR&gt; name1 [PATHS path1 path2 &#8230;]) </p>
-<p>find_path(<br />
-    &lt;VAR&gt;<br />
-        name |<br />
-    NAMES name1[name2&#8230;]<br />
-               [HINTS path1[path2&#8230; ENV var]]<br />
-               [PATHS path1[path2&#8230; ENV var]]<br />
-               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br />
-               [DOC &#8220;cache documentation string&#8221;]<br />
-               [NO_DEFAULT_PATH]<br />
-               [NO_CMAKE_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_PATH]<br />
-               [NO_SYSTEM_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_SYSTEM_PATH]<br />
-               [CMAKE_FIND_ROOT_PATH_BOTH |<br />
-                ONLY_CMAKE_FIND_ROOT_PATH |<br />
+<p>find_path(<br/>
+    &lt;VAR&gt;<br/>
+        name |<br/>
+    NAMES name1[name2&#8230;]<br/>
+               [HINTS path1[path2&#8230; ENV var]]<br/>
+               [PATHS path1[path2&#8230; ENV var]]<br/>
+               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br/>
+               [DOC &#8220;cache documentation string&#8221;]<br/>
+               [NO_DEFAULT_PATH]<br/>
+               [NO_CMAKE_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_PATH]<br/>
+               [NO_SYSTEM_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_SYSTEM_PATH]<br/>
+               [CMAKE_FIND_ROOT_PATH_BOTH |<br/>
+                ONLY_CMAKE_FIND_ROOT_PATH |<br/>
                 NO_CMAKE_FIND_ROOT_PATH])</p>
 <p> This command is used to find a directory containing the named file. A cache entry named by &lt;VAR&gt; is created to store the result of this command. If the file in a directory is found the result is stored in the variable and the search will not be repeated unless the variable is cleared. If nothing is found, the result will be &lt;VAR&gt;-NOTFOUND, and the search will be attempted again the next time find_path is invoked with the same variable. The name of the file in a directory that is searched for is specified by the names listed after the NAMES argument. Additional search locations can be specified after the PATHS argument. If ENV var is found in the HINTS or PATHS section the environment variable var will be read and converted from a system environment variable to a cmake style list of paths. For example ENV PATH would be a way to list the system path variable. The argument after DOC will be used for the documentation string in the cache. PATH_SUFFIXES specifies additional subdirectories to check below each search path. </p>
 <p> If NO_DEFAULT_PATH is specified, then no additional paths are added to the search. If NO_DEFAULT_PATH is not specified, the search process is as follows: </p>
@@ -728,21 +728,21 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
    find_program(&lt;VAR&gt; name1 [path1 path2 ...])
 </pre>
 <p> This is the short-hand signature for the command that is sufficient in many cases. It is the same as find_program(&lt;VAR&gt; name1 [PATHS path1 path2 &#8230;]) </p>
-<p>find_program(<br />
-    &lt;VAR&gt;<br />
-        name |<br />
-    NAMES name1[name2&#8230;]<br />
-               [HINTS path1[path2&#8230; ENV var]]<br />
-               [PATHS path1[path2&#8230; ENV var]]<br />
-               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br />
-               [DOC &#8220;cache documentation string&#8221;]<br />
-               [NO_DEFAULT_PATH]<br />
-               [NO_CMAKE_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_PATH]<br />
-               [NO_SYSTEM_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_SYSTEM_PATH]<br />
-               [CMAKE_FIND_ROOT_PATH_BOTH |<br />
-                ONLY_CMAKE_FIND_ROOT_PATH |<br />
+<p>find_program(<br/>
+    &lt;VAR&gt;<br/>
+        name |<br/>
+    NAMES name1[name2&#8230;]<br/>
+               [HINTS path1[path2&#8230; ENV var]]<br/>
+               [PATHS path1[path2&#8230; ENV var]]<br/>
+               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br/>
+               [DOC &#8220;cache documentation string&#8221;]<br/>
+               [NO_DEFAULT_PATH]<br/>
+               [NO_CMAKE_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_PATH]<br/>
+               [NO_SYSTEM_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_SYSTEM_PATH]<br/>
+               [CMAKE_FIND_ROOT_PATH_BOTH |<br/>
+                ONLY_CMAKE_FIND_ROOT_PATH |<br/>
                 NO_CMAKE_FIND_ROOT_PATH])</p>
 <p> This command is used to find a program. A cache entry named by &lt;VAR&gt; is created to store the result of this command. If the program is found the result is stored in the variable and the search will not be repeated unless the variable is cleared. If nothing is found, the result will be &lt;VAR&gt;-NOTFOUND, and the search will be attempted again the next time find_program is invoked with the same variable. The name of the program that is searched for is specified by the names listed after the NAMES argument. Additional search locations can be specified after the PATHS argument. If ENV var is found in the HINTS or PATHS section the environment variable var will be read and converted from a system environment variable to a cmake style list of paths. For example ENV PATH would be a way to list the system path variable. The argument after DOC will be used for the documentation string in the cache. PATH_SUFFIXES specifies additional subdirectories to check below each search path. </p>
 <p> If NO_DEFAULT_PATH is specified, then no additional paths are added to the search. If NO_DEFAULT_PATH is not specified, the search process is as follows: </p>
@@ -820,8 +820,8 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
 <p> * The third optional number is the increment used to iterate from the first number to the second number. </p>
 <dt><code>function</code></dt>
 <dd> Start recording a function for later invocation as a command. </dd>
-<p>function(&lt;name&gt;[arg1[arg2[arg3&#8230;]]])<br />
-    COMMAND1(ARGS&#8230;)<br />
+<p>function(&lt;name&gt;[arg1[arg2[arg3&#8230;]]])<br/>
+    COMMAND1(ARGS&#8230;)<br/>
         COMMAND2(ARGS&#8230;)&#8230; endfunction(&lt;name&gt;)</p>
 <p> Define a function named &lt;name&gt; that takes arguments named arg1 arg2 arg3 (&#8230;). Commands listed after function, but before the matching endfunction, are not invoked until the function is invoked. When it is invoked, the commands recorded in the function are first modified by replacing formal parameters (${arg1}) with the arguments passed, and then invoked as normal commands. In addition to referencing the formal parameters you can reference the variable ARGC which will be set to the number of arguments passed into the function as well as ARGV0 ARGV1 ARGV2 &#8230; which will have the actual values of the arguments passed in. This facilitates creating functions with optional arguments. Additionally ARGV holds the list of all arguments given to the function and ARGN holds the list of argument pass the last expected argument. </p>
 <p> See the cmake_policy() command documentation for the behavior of policies inside functions. </p>
@@ -845,19 +845,19 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
                          [CACHE])
 </pre>
 <p> Set VarName to be the path (PATH), file name (NAME), file extension (EXT), file name without extension (NAME_WE) of FileName, the full path (ABSOLUTE), or the full path with all symlinks resolved (REALPATH). Note that the path is converted to Unix slashes format and has no trailing slashes. The longest file extension is always considered. If the optional CACHE argument is specified, the result variable is added to the cache. </p>
-<p>get_filename_component(VarName FileName<br />
-                           PROGRAM[PROGRAM_ARGS ArgVar]<br />
+<p>get_filename_component(VarName FileName<br/>
+                           PROGRAM[PROGRAM_ARGS ArgVar]<br/>
                                   [CACHE])</p>
 <p> The program in FileName will be found in the system search path or left as a full path. If PROGRAM_ARGS is present with PROGRAM, then any command-line arguments present in the FileName string are split from the program name and stored in ArgVar. This is used to separate a program name from its arguments in a command line string. </p>
 <dt><code>get_property</code></dt>
 <dd> Get a property. </dd>
-<p>get_property(&lt;variable&gt;<br />
-             &lt;GLOBAL |<br />
-              DIRECTORY[dir] |<br />
-              TARGET&lt;target&gt; |<br />
-              SOURCE&lt;source&gt; |<br />
-              TEST&lt;test&gt; |<br />
-              VARIABLE&gt;<br />
+<p>get_property(&lt;variable&gt;<br/>
+             &lt;GLOBAL |<br/>
+              DIRECTORY[dir] |<br/>
+              TARGET&lt;target&gt; |<br/>
+              SOURCE&lt;source&gt; |<br/>
+              TEST&lt;test&gt; |<br/>
+              VARIABLE&gt;<br/>
                  PROPERTY&lt;name&gt;[SET | DEFINED | BRIEF_DOCS | FULL_DOCS])</p>
 <p> Get one property from one object in a scope. The first argument specifies the variable in which to store the result. The second argument determines the scope from which to get the property. It must be one of the following: </p>
 <p> GLOBAL scope is unique and does not accept a name. </p>
@@ -887,16 +887,16 @@ cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[
 <p> Get a property from the Test. The value of the property is stored in the variable VAR. If the property is not found, CMake will report an error. For a list of standard properties you can type cmake &#8211;help-property-list </p>
 <dt><code>if</code></dt>
 <dd> Conditionally execute a group of commands. </dd>
-<p>if (expression)<br />
-#then section.<br />
-    COMMAND1(ARGS&#8230;)<br />
-COMMAND2(ARGS&#8230;)<br />
-&#8230; elseif(expression2)<br />
-#elseif section.<br />
-    COMMAND1(ARGS&#8230;)<br />
-        COMMAND2(ARGS&#8230;)&#8230; else(expression)<br />
-#else section.<br />
-            COMMAND1(ARGS&#8230;)<br />
+<p>if (expression)<br/>
+#then section.<br/>
+    COMMAND1(ARGS&#8230;)<br/>
+COMMAND2(ARGS&#8230;)<br/>
+&#8230; elseif(expression2)<br/>
+#elseif section.<br/>
+    COMMAND1(ARGS&#8230;)<br/>
+        COMMAND2(ARGS&#8230;)&#8230; else(expression)<br/>
+#else section.<br/>
+            COMMAND1(ARGS&#8230;)<br/>
                 COMMAND2(ARGS&#8230;)&#8230; endif(expression)</p>
 <p> Evaluates the given expression. If the result is true, the commands in the THEN section are invoked. Otherwise, the commands in the else section are invoked. The elseif and else sections are optional. You may have multiple elseif clauses. Note that the same expression must be given to if, and endif. Long expressions can be used and the order or precedence is that the EXISTS, COMMAND, and DEFINED operators will be evaluated first. Then any EQUAL, LESS, GREATER, STRLESS, STRGREATER, STREQUAL, MATCHES will be evaluated. Then NOT operators and finally AND, OR operators will be evaluated. Possible expressions are: </p>
 <pre>
@@ -949,18 +949,18 @@ COMMAND2(ARGS&#8230;)<br />
   if(string MATCHES regex)
 </pre>
 <p> True if the given string or variable&#8217;s value matches the given regular expression. </p>
-<p>if (variable LESS number)<br />
-    if (string LESS number)<br />
-        if (variable GREATER number)<br />
-            if (string GREATER number)<br />
-                if (variable EQUAL number)<br />
+<p>if (variable LESS number)<br/>
+    if (string LESS number)<br/>
+        if (variable GREATER number)<br/>
+            if (string GREATER number)<br/>
+                if (variable EQUAL number)<br/>
                     if (string EQUAL number)</p>
 <p> True if the given string or variable&#8217;s value is a valid number and the inequality or equality is true. </p>
-<p>if (variable STRLESS string)<br />
-    if (string STRLESS string)<br />
-        if (variable STRGREATER string)<br />
-            if (string STRGREATER string)<br />
-                if (variable STREQUAL string)<br />
+<p>if (variable STRLESS string)<br/>
+    if (string STRLESS string)<br/>
+        if (variable STRGREATER string)<br/>
+            if (string STRGREATER string)<br/>
+                if (variable STREQUAL string)<br/>
                     if (string STREQUAL string)</p>
 <p> True if the given string or variable&#8217;s value is lexicographically less (or greater, or equal) than the string on the right. </p>
 <pre>
@@ -975,7 +975,7 @@ COMMAND2(ARGS&#8230;)<br />
 <p> True if the given variable is defined. It does not matter if the variable is true or false just if it has been set. </p>
 <dt><code>include</code></dt>
 <dd> Read CMake listfile code from the given file. </dd>
-<p>include(&lt;file | module&gt;[OPTIONAL][RESULT_VARIABLE&lt;VAR&gt;]<br />
+<p>include(&lt;file | module&gt;[OPTIONAL][RESULT_VARIABLE&lt;VAR&gt;]<br/>
                        [NO_POLICY_SCOPE])</p>
 <p> Reads CMake listfile code from the given file. Commands in the file are processed immediately as if they were written in place of the include command. If OPTIONAL is present, then no error is raised if the file does not exist. If RESULT_VARIABLE is given the variable will be set to the full filename which has been included or NOTFOUND if it failed. </p>
 <p> If a module is specified instead of a file, the file with name &lt;modulename&gt;.cmake is searched in the CMAKE_MODULE_PATH. </p>
@@ -1012,14 +1012,14 @@ COMMAND2(ARGS&#8230;)<br />
 <p> The RENAME argument specifies a name for an installed file that may be different from the original file. Renaming is allowed only when a single file is installed by the command. </p>
 <p> The OPTIONAL argument specifies that it is not an error if the file to be installed does not exist. </p>
 <p> The TARGETS signature: </p>
-<p>install(TARGETS targets&#8230;[EXPORT&lt;export &#8211; name&gt;]<br />
-                          [[ARCHIVE | LIBRARY | RUNTIME | FRAMEWORK | BUNDLE |<br />
-                              PRIVATE_HEADER | PUBLIC_HEADER |<br />
-                              RESOURCE]<br />
-                               [DESTINATION&lt;dir&gt;]<br />
-                               [PERMISSIONS permissions&#8230;]<br />
-                               [CONFIGURATIONS[Debug | Release | &#8230;]]<br />
-                               [COMPONENT&lt;component&gt;]<br />
+<p>install(TARGETS targets&#8230;[EXPORT&lt;export &#8211; name&gt;]<br/>
+                          [[ARCHIVE | LIBRARY | RUNTIME | FRAMEWORK | BUNDLE |<br/>
+                              PRIVATE_HEADER | PUBLIC_HEADER |<br/>
+                              RESOURCE]<br/>
+                               [DESTINATION&lt;dir&gt;]<br/>
+                               [PERMISSIONS permissions&#8230;]<br/>
+                               [CONFIGURATIONS[Debug | Release | &#8230;]]<br/>
+                               [COMPONENT&lt;component&gt;]<br/>
                                [OPTIONAL][NAMELINK_ONLY | NAMELINK_SKIP]][&#8230;])</p>
 <p> The TARGETS form specifies rules for installing targets from a project. There are five kinds of target files that may be installed: ARCHIVE, LIBRARY, RUNTIME, FRAMEWORK, and BUNDLE. Executables are treated as RUNTIME targets, except that those marked with the MACOSX_BUNDLE property are treated as BUNDLE targets on OS X. Static libraries are always treated as ARCHIVE targets. Module libraries are always treated as LIBRARY targets. For non-DLL platforms shared libraries are treated as LIBRARY targets, except that those marked with the FRAMEWORK property are treated as FRAMEWORK targets on OS X. For DLL platforms the DLL part of a shared library is treated as a RUNTIME target and the corresponding import library is treated as an ARCHIVE target. All Windows-based systems including Cygwin are DLL platforms. The ARCHIVE, LIBRARY, RUNTIME, and FRAMEWORK arguments change the type of target to which the subsequent properties apply. If none is given the installation properties apply to all target types. If only one is given then only targets of that type will be installed (which can be used to install just a DLL or just an import library). </p>
 <p> The PRIVATE_HEADER, PUBLIC_HEADER, and RESOURCE arguments cause subsequent properties to be applied to installing a FRAMEWORK shared library target&#8217;s associated files on non-Apple platforms. Rules defined by these arguments are ignored on Apple platforms because the associated files are installed into the appropriate locations inside the framework folder. See documentation of the PRIVATE_HEADER, PUBLIC_HEADER, and RESOURCE target properties for details. </p>
@@ -1040,24 +1040,24 @@ COMMAND2(ARGS&#8230;)<br />
 <p> The EXPORT option associates the installed target files with an export called &lt;export-name&gt;. It must appear before any RUNTIME, LIBRARY, or ARCHIVE options. See documentation of the install(EXPORT &#8230;) signature below for details. </p>
 <p> Installing a target with EXCLUDE_FROM_ALL set to true has undefined behavior. </p>
 <p> The FILES signature: </p>
-<p>install(FILES files&#8230; DESTINATION&lt;dir&gt;[PERMISSIONS permissions&#8230;]<br />
-                                       [CONFIGURATIONS[Debug | Release | &#8230;]]<br />
-                                       [COMPONENT&lt;component&gt;]<br />
+<p>install(FILES files&#8230; DESTINATION&lt;dir&gt;[PERMISSIONS permissions&#8230;]<br/>
+                                       [CONFIGURATIONS[Debug | Release | &#8230;]]<br/>
+                                       [COMPONENT&lt;component&gt;]<br/>
                                        [RENAME&lt;name&gt;][OPTIONAL])</p>
 <p> The FILES form specifies rules for installing files for a project. File names given as relative paths are interpreted with respect to the current source directory. Files installed by this form are by default given permissions OWNER_WRITE, OWNER_READ, GROUP_READ, and WORLD_READ if no PERMISSIONS argument is given. </p>
 <p> The PROGRAMS signature: </p>
-<p>install(PROGRAMS files&#8230; DESTINATION&lt;dir&gt;[PERMISSIONS permissions&#8230;]<br />
-                                          [CONFIGURATIONS[Debug | Release | &#8230;]]<br />
-                                          [COMPONENT&lt;component&gt;]<br />
+<p>install(PROGRAMS files&#8230; DESTINATION&lt;dir&gt;[PERMISSIONS permissions&#8230;]<br/>
+                                          [CONFIGURATIONS[Debug | Release | &#8230;]]<br/>
+                                          [COMPONENT&lt;component&gt;]<br/>
                                           [RENAME&lt;name&gt;][OPTIONAL])</p>
 <p> The PROGRAMS form is identical to the FILES form except that the default permissions for the installed file also include OWNER_EXECUTE, GROUP_EXECUTE, and WORLD_EXECUTE. This form is intended to install programs that are not targets, such as shell scripts. Use the TARGETS form to install targets built within the project. </p>
 <p> The DIRECTORY signature: </p>
-<p>install(DIRECTORY dirs&#8230; DESTINATION&lt;dir&gt;[FILE_PERMISSIONS permissions&#8230;]<br />
-                                          [DIRECTORY_PERMISSIONS permissions&#8230;]<br />
-                                          [USE_SOURCE_PERMISSIONS]<br />
-                                          [CONFIGURATIONS[Debug | Release | &#8230;]]<br />
-                                          [COMPONENT&lt;component&gt;][FILES_MATCHING]<br />
-                                          [[PATTERN&lt;pattern&gt; | REGEX&lt;regex&gt;]<br />
+<p>install(DIRECTORY dirs&#8230; DESTINATION&lt;dir&gt;[FILE_PERMISSIONS permissions&#8230;]<br/>
+                                          [DIRECTORY_PERMISSIONS permissions&#8230;]<br/>
+                                          [USE_SOURCE_PERMISSIONS]<br/>
+                                          [CONFIGURATIONS[Debug | Release | &#8230;]]<br/>
+                                          [COMPONENT&lt;component&gt;][FILES_MATCHING]<br/>
+                                          [[PATTERN&lt;pattern&gt; | REGEX&lt;regex&gt;]<br/>
                                                [EXCLUDE][PERMISSIONS permissions&#8230;]][&#8230;])</p>
 <p> The DIRECTORY form installs contents of one or more directories to a given destination. The directory structure is copied verbatim to the destination. The last component of each directory name is appended to the destination directory but a trailing slash may be used to avoid this because it leaves the last component empty. Directory names given as relative paths are interpreted with respect to the current source directory. If no input directory names are given the destination directory will be created but nothing will be installed into it. The FILE_PERMISSIONS and DIRECTORY_PERMISSIONS options specify permissions given to files and directories in the destination. If USE_SOURCE_PERMISSIONS is specified and FILE_PERMISSIONS is not, file permissions will be copied from the source directory structure. If no permissions are specified files will be given the default permissions specified in the FILES form of the command, and the directories will be given the default permissions specified in the PROGRAMS form of the command. </p>
 <p> Installation of directories may be controlled with fine granularity using the PATTERN or REGEX options. These &quot;match&quot; options specify a globbing pattern or regular expression to match directories or files encountered within input directories. They may be used to apply certain options (see below) to a subset of the files and directories encountered. The full path to each input file or directory (with forward slashes) is matched against the expression. A PATTERN will match only complete file names: the portion of the full path matching the pattern must occur at the end of the file name and be preceded by a slash. A REGEX will match any portion of the full path but it may use &#8216;/&#8217; and &#8216;$&#8217; to simulate the PATTERN behavior. By default all files and directories are installed whether or not they are matched. The FILES_MATCHING option may be given before the first match option to disable installation of files (but not directories) not matched by any expression. For example, the code </p>
@@ -1083,9 +1083,9 @@ COMMAND2(ARGS&#8230;)<br />
 </pre>
 <p> will print a message during installation. </p>
 <p> The EXPORT signature: </p>
-<p>install(EXPORT&lt;export &#8211; name&gt; DESTINATION&lt;dir&gt;[NAMESPACE&lt;namespace&gt;][FILE&lt;name&gt;.cmake]<br />
-                                              [PERMISSIONS permissions&#8230;]<br />
-                                              [CONFIGURATIONS[Debug | Release | &#8230;]]<br />
+<p>install(EXPORT&lt;export &#8211; name&gt; DESTINATION&lt;dir&gt;[NAMESPACE&lt;namespace&gt;][FILE&lt;name&gt;.cmake]<br/>
+                                              [PERMISSIONS permissions&#8230;]<br/>
+                                              [CONFIGURATIONS[Debug | Release | &#8230;]]<br/>
                                               [COMPONENT&lt;component&gt;])</p>
 <p> The EXPORT form generates and installs a CMake file containing code to import targets from the installation tree into another project. Target installations are associated with the export &lt;export-name&gt; using the EXPORT option of the install(TARGETS &#8230;) signature documented above. The NAMESPACE option will prepend &lt;namespace&gt; to the target names as they are written to the import file. By default the generated file will be called &lt;export-name&gt;.cmake but the FILE option may be used to specify a different name. The value given to the FILE option must be a file name with the &quot;.cmake&quot; extension. If a CONFIGURATIONS option is given then the file will only be installed when one of the named configurations is installed. Additionally, the generated import file will reference only the matching target configurations. If a COMPONENT option is specified that does not match that given to the targets associated with &lt;export-name&gt; the behavior is undefined. If a library target is included in the export but a target to which it links is not included the behavior is unspecified. </p>
 <p> The EXPORT form is useful to help outside projects use targets built and installed by the current project. For example, the code </p>
@@ -1103,15 +1103,15 @@ COMMAND2(ARGS&#8230;)<br />
 <p> Specify the paths in which the linker should search for libraries. The command will apply only to targets created after it is called. For historical reasons, relative paths given to this command are passed to the linker unchanged (unlike many CMake commands which interpret them relative to the current source directory). </p>
 <dt><code>list</code></dt>
 <dd> List operations. </dd>
-<p>list(LENGTH&lt;list&gt;&lt;output variable&gt;)<br />
-    list(GET&lt;list&gt;&lt;element index&gt;[&lt;element index&gt;&#8230;]&lt;output variable&gt;)<br />
-        list(APPEND&lt;list&gt;&lt;element&gt;[&lt;element&gt;&#8230;])<br />
-            list(FIND&lt;list&gt;&lt;value&gt;&lt;output variable&gt;)<br />
-                list(INSERT&lt;list&gt;&lt;element_index&gt;&lt;element&gt;[&lt;element&gt;&#8230;])<br />
-                    list(REMOVE_ITEM&lt;list&gt;&lt;value&gt;[&lt;value&gt;&#8230;])<br />
-                        list(REMOVE_AT&lt;list&gt;&lt;index&gt;[&lt;index&gt;&#8230;])<br />
-                            list(REMOVE_DUPLICATES&lt;list&gt;)<br />
-                                list(REVERSE&lt;list&gt;)<br />
+<p>list(LENGTH&lt;list&gt;&lt;output variable&gt;)<br/>
+    list(GET&lt;list&gt;&lt;element index&gt;[&lt;element index&gt;&#8230;]&lt;output variable&gt;)<br/>
+        list(APPEND&lt;list&gt;&lt;element&gt;[&lt;element&gt;&#8230;])<br/>
+            list(FIND&lt;list&gt;&lt;value&gt;&lt;output variable&gt;)<br/>
+                list(INSERT&lt;list&gt;&lt;element_index&gt;&lt;element&gt;[&lt;element&gt;&#8230;])<br/>
+                    list(REMOVE_ITEM&lt;list&gt;&lt;value&gt;[&lt;value&gt;&#8230;])<br/>
+                        list(REMOVE_AT&lt;list&gt;&lt;index&gt;[&lt;index&gt;&#8230;])<br/>
+                            list(REMOVE_DUPLICATES&lt;list&gt;)<br/>
+                                list(REVERSE&lt;list&gt;)<br/>
                                     list(SORT&lt;list&gt;)</p>
 <p> LENGTH will return a given list&#8217;s length. </p>
 <p> GET will return list of elements specified by indices from the list. </p>
@@ -1131,7 +1131,7 @@ COMMAND2(ARGS&#8230;)<br />
              prefix entry1...)
 </pre>
 <p> Read the cache and store the requested entries in variables with their name prefixed with the given prefix. This only reads the values, and does not create entries in the local project&#8217;s cache. </p>
-<p>load_cache(pathToCacheFile[EXCLUDE entry1&#8230;]<br />
+<p>load_cache(pathToCacheFile[EXCLUDE entry1&#8230;]<br/>
                           [INCLUDE_INTERNALS entry1&#8230;])</p>
 <p> Load in the values from another cache and store them in the local project&#8217;s cache as internal entries. This is useful for a project that depends on another project built in a different tree. EXCLUDE option can be used to provide a list of entries to be excluded. INCLUDE_INTERNALS can be used to provide a list of internal entries to be included. Normally, no internal entries are brought in. Use of this form of the command is strongly discouraged, but it is provided for backward compatibility. </p>
 <dt><code>load_command</code></dt>
@@ -1146,8 +1146,8 @@ COMMAND2(ARGS&#8230;)<br />
 <p> will be set to the full path of the module that was loaded. Otherwise the variable will not be set. </p>
 <dt><code>macro</code></dt>
 <dd> Start recording a macro for later invocation as a command. </dd>
-<p>macro(&lt;name&gt;[arg1[arg2[arg3&#8230;]]])<br />
-    COMMAND1(ARGS&#8230;)<br />
+<p>macro(&lt;name&gt;[arg1[arg2[arg3&#8230;]]])<br/>
+    COMMAND1(ARGS&#8230;)<br/>
         COMMAND2(ARGS&#8230;)&#8230; endmacro(&lt;name&gt;)</p>
 <p> Define a macro named &lt;name&gt; that takes arguments named arg1 arg2 arg3 (&#8230;). Commands listed after macro, but before the matching endmacro, are not invoked until the macro is invoked. When it is invoked, the commands recorded in the macro are first modified by replacing formal parameters (${arg1}) with the arguments passed, and then invoked as normal commands. In addition to referencing the formal parameters you can reference the values ${ARGC} which will be set to the number of arguments passed into the function as well as ${ARGV0} ${ARGV1} ${ARGV2} &#8230; which will have the actual values of the arguments passed in. This facilitates creating macros with optional arguments. Additionally ${ARGV} holds the list of all arguments given to the macro and ${ARGN} holds the list of argument pass the last expected argument. Note that the parameters to a macro and values such as ARGN are not variables in the usual CMake sense. They are string replacements much like the c preprocessor would do with a macro. If you want true CMake variables you should look at the function command. </p>
 <p> See the cmake_policy() command documentation for the behavior of policies inside macros. </p>
@@ -1254,10 +1254,10 @@ COMMAND2(ARGS&#8230;)<br />
 <p> ADDITIONAL_MAKE_CLEAN_FILES is a list of files that will be cleaned as a part of &quot;make clean&quot; stage. </p>
 <dt><code>set_property</code></dt>
 <dd> Set a named property in a given scope. </dd>
-<p>set_property(&lt;GLOBAL |<br />
-              DIRECTORY[dir] |<br />
-              TARGET[target1[target2&#8230;]] |<br />
-              SOURCE[src1[src2&#8230;]] |<br />
+<p>set_property(&lt;GLOBAL |<br/>
+              DIRECTORY[dir] |<br/>
+              TARGET[target1[target2&#8230;]] |<br/>
+              SOURCE[src1[src2&#8230;]] |<br/>
               TEST[test1[test2&#8230;]]&gt;[APPEND] PROPERTY&lt;name&gt;[value1[value2&#8230;]])</p>
 <p> Set one property on zero or more objects of a scope. The first argument determines the scope in which the property is set. It must be one of the following: </p>
 <p> GLOBAL scope is unique and does not accept a name. </p>
@@ -1325,27 +1325,27 @@ COMMAND2(ARGS&#8230;)<br />
 </pre>
 <dt><code>string</code></dt>
 <dd> String operations. </dd>
-<p>string(REGEX MATCH&lt;regular_expression&gt;<br />
-       &lt;output variable&gt;&lt;input&gt;[&lt;input&gt;&#8230;])<br />
-    string(REGEX MATCHALL&lt;regular_expression&gt;<br />
-           &lt;output variable&gt;&lt;input&gt;[&lt;input&gt;&#8230;])<br />
-        string(REGEX REPLACE&lt;regular_expression&gt;<br />
-               &lt;replace_expression&gt;&lt;output variable&gt;<br />
-               &lt;input&gt;[&lt;input&gt;&#8230;])<br />
-            string(REPLACE&lt;match_string&gt;<br />
-                   &lt;replace_string&gt;&lt;output variable&gt;<br />
-                   &lt;input&gt;[&lt;input&gt;&#8230;])<br />
-                string(COMPARE EQUAL&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br />
-                    string(COMPARE NOTEQUAL&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br />
-                        string(COMPARE LESS&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br />
-                            string(COMPARE GREATER&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br />
-                                string(ASCII&lt;number&gt;[&lt;number&gt;&#8230;]&lt;output variable&gt;)<br />
-                                    string(CONFIGURE&lt;string1&gt;&lt;output variable&gt;[@ONLY][ESCAPE_QUOTES])<br />
-                                        string(TOUPPER&lt;string1&gt;&lt;output variable&gt;)<br />
-                                            string(TOLOWER&lt;string1&gt;&lt;output variable&gt;)<br />
-                                                string(LENGTH&lt;string&gt;&lt;output variable&gt;)<br />
-                                                    string(SUBSTRING&lt;string&gt;&lt;begin&gt;&lt;length&gt;&lt;output variable&gt;)<br />
-                                                        string(STRIP&lt;string&gt;&lt;output variable&gt;)<br />
+<p>string(REGEX MATCH&lt;regular_expression&gt;<br/>
+       &lt;output variable&gt;&lt;input&gt;[&lt;input&gt;&#8230;])<br/>
+    string(REGEX MATCHALL&lt;regular_expression&gt;<br/>
+           &lt;output variable&gt;&lt;input&gt;[&lt;input&gt;&#8230;])<br/>
+        string(REGEX REPLACE&lt;regular_expression&gt;<br/>
+               &lt;replace_expression&gt;&lt;output variable&gt;<br/>
+               &lt;input&gt;[&lt;input&gt;&#8230;])<br/>
+            string(REPLACE&lt;match_string&gt;<br/>
+                   &lt;replace_string&gt;&lt;output variable&gt;<br/>
+                   &lt;input&gt;[&lt;input&gt;&#8230;])<br/>
+                string(COMPARE EQUAL&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br/>
+                    string(COMPARE NOTEQUAL&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br/>
+                        string(COMPARE LESS&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br/>
+                            string(COMPARE GREATER&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br/>
+                                string(ASCII&lt;number&gt;[&lt;number&gt;&#8230;]&lt;output variable&gt;)<br/>
+                                    string(CONFIGURE&lt;string1&gt;&lt;output variable&gt;[@ONLY][ESCAPE_QUOTES])<br/>
+                                        string(TOUPPER&lt;string1&gt;&lt;output variable&gt;)<br/>
+                                            string(TOLOWER&lt;string1&gt;&lt;output variable&gt;)<br/>
+                                                string(LENGTH&lt;string&gt;&lt;output variable&gt;)<br/>
+                                                    string(SUBSTRING&lt;string&gt;&lt;begin&gt;&lt;length&gt;&lt;output variable&gt;)<br/>
+                                                        string(STRIP&lt;string&gt;&lt;output variable&gt;)<br/>
                                                             string(RANDOM[LENGTH&lt;length&gt;][ALPHABET&lt;alphabet&gt;]&lt;output variable&gt;)</p>
 <p> REGEX MATCH will match the regular expression once and store the match in the output variable. </p>
 <p> REGEX MATCHALL will match the regular expression as many times as possible and store the matches in the output variable as a list. </p>
@@ -1360,64 +1360,64 @@ COMMAND2(ARGS&#8230;)<br />
 <p> STRIP will return a substring of a given string with leading and trailing spaces removed. </p>
 <p> RANDOM will return a random string of given length consisting of characters from the given alphabet. Default length is 5 characters and default alphabet is all numbers and upper and lower case letters. </p>
 <p> The following characters have special meaning in regular expressions: </p>
-<p>^Matches at beginning of a line<br />
-     $ Matches at end of a line<br />
-         .Matches any single character<br />
-             [] Matches any<br />
-             character(s)<br />
-inside the brackets<br />
-            [^] Matches any<br />
-            character(s) not inside the brackets<br />
-        &#8211; Matches any character in range on either side of a dash<br />
-              * Matches preceding pattern zero<br />
-    or more times + Matches preceding pattern one or more times<br />
-    ? Matches preceding pattern zero or once only<br />
-                                            | Matches a pattern on either side of the |<br />
-                                            () Saves a matched subexpression,<br />
-    which can be referenced<br />
-        in the REGEX REPLACE operation.Additionally it is saved<br />
-        by all regular expression<br />
-        &#8211; related commands,<br />
-    including<br />
-    e.g.if (MATCHES),<br />
+<p>^Matches at beginning of a line<br/>
+     $ Matches at end of a line<br/>
+         .Matches any single character<br/>
+             [] Matches any<br/>
+             character(s)<br/>
+inside the brackets<br/>
+            [^] Matches any<br/>
+            character(s) not inside the brackets<br/>
+        &#8211; Matches any character in range on either side of a dash<br/>
+              * Matches preceding pattern zero<br/>
+    or more times + Matches preceding pattern one or more times<br/>
+    ? Matches preceding pattern zero or once only<br/>
+                                            | Matches a pattern on either side of the |<br/>
+                                            () Saves a matched subexpression,<br/>
+    which can be referenced<br/>
+        in the REGEX REPLACE operation.Additionally it is saved<br/>
+        by all regular expression<br/>
+        &#8211; related commands,<br/>
+    including<br/>
+    e.g.if (MATCHES),<br/>
     in the variables CMAKE_MATCH_(0..9).</p>
 <dt><code>target_link_libraries</code></dt>
 <dd> Link a target to given libraries. </dd>
-<p>target_link_libraries(&lt;target&gt;[lib1[lib2[&#8230;]]]<br />
+<p>target_link_libraries(&lt;target&gt;[lib1[lib2[&#8230;]]]<br/>
                       [[debug | optimized | general]&lt;lib&gt;]&#8230;)</p>
 <p> Specify a list of libraries to be linked into the specified target. If any library name matches that of a target in the current project a dependency will automatically be added in the build system to make sure the library being linked is up-to-date before the target links. </p>
 <p> A &quot;debug&quot;, &quot;optimized&quot;, or &quot;general&quot; keyword indicates that the library immediately following it is to be used only for the corresponding build configuration. The &quot;debug&quot; keyword corresponds to the Debug configuration (or to configurations named in the DEBUG_CONFIGURATIONS global property if it is set). The &quot;optimized&quot; keyword corresponds to all other configurations. The &quot;general&quot; keyword corresponds to all configurations, and is purely optional (assumed if omitted). Higher granularity may be achieved for per-configuration rules by creating and linking to IMPORTED library targets. See the IMPORTED mode of the add_library command for more information. </p>
 <p> Library dependencies are transitive by default. When this target is linked into another target then the libraries linked to this target will appear on the link line for the other target too. See the LINK_INTERFACE_LIBRARIES target property to override the set of transitive link dependencies for a target. </p>
-<p>target_link_libraries(&lt;target&gt; LINK_INTERFACE_LIBRARIES<br />
+<p>target_link_libraries(&lt;target&gt; LINK_INTERFACE_LIBRARIES<br/>
                       [[debug | optimized | general]&lt;lib&gt;]&#8230;)</p>
 <p> The LINK_INTERFACE_LIBRARIES mode appends the libraries to the LINK_INTERFACE_LIBRARIES and its per-configuration equivalent target properties instead of using them for linking. Libraries specified as &quot;debug&quot; are appended to the the LINK_INTERFACE_LIBRARIES_DEBUG property (or to the properties corresponding to configurations listed in the DEBUG_CONFIGURATIONS global property if it is set). Libraries specified as &quot;optimized&quot; are appended to the the LINK_INTERFACE_LIBRARIES property. Libraries specified as &quot;general&quot; (or without any keyword) are treated as if specified for both &quot;debug&quot; and &quot;optimized&quot;. </p>
 <dt><code>try_compile</code></dt>
 <dd> Try compiling some code. </dd>
-<p>try_compile(RESULT_VAR bindir srcdir<br />
-                projectName&lt;targetname&gt;[CMAKE_FLAGS&lt;Flags&gt;]<br />
+<p>try_compile(RESULT_VAR bindir srcdir<br/>
+                projectName&lt;targetname&gt;[CMAKE_FLAGS&lt;Flags&gt;]<br/>
                                        [OUTPUT_VARIABLE var])</p>
 <p> Try compiling a program. In this form, srcdir should contain a complete CMake project with a CMakeLists.txt file and all sources. The bindir and srcdir will not be deleted after this command is run. If &lt;target name&gt; is specified then build just that target otherwise the all or ALL_BUILD target is built. </p>
-<p>  try_compile(RESULT_VAR bindir srcfile<br />
-              [CMAKE_FLAGS &lt;Flags&gt;]<br />
-              [COMPILE_DEFINITIONS &lt;flags&gt; &#8230;]<br />
-              [OUTPUT_VARIABLE var]<br />
+<p>  try_compile(RESULT_VAR bindir srcfile<br/>
+              [CMAKE_FLAGS &lt;Flags&gt;]<br/>
+              [COMPILE_DEFINITIONS &lt;flags&gt; &#8230;]<br/>
+              [OUTPUT_VARIABLE var]<br/>
               [COPY_FILE &lt;filename&gt; )</p>
 <p> Try compiling a srcfile. In this case, the user need only supply a source file. CMake will create the appropriate CMakeLists.txt file to build the source. If COPY_FILE is used, the compiled file will be copied to the given file. </p>
 <p> In this version all files in bindir/CMakeFiles/CMakeTmp, will be cleaned automatically, for debugging a &#8211;debug-trycompile can be passed to cmake to avoid the clean. Some extra flags that can be included are, INCLUDE_DIRECTORIES, LINK_DIRECTORIES, and LINK_LIBRARIES. COMPILE_DEFINITIONS are -Ddefinition that will be passed to the compile line. try_compile creates a CMakeList.txt file on the fly that looks like this: </p>
-<p>add_definitions(&lt;expanded COMPILE_DEFINITIONS from calling cmake&gt;)<br />
-    include_directories(${INCLUDE_DIRECTORIES})<br />
-        link_directories(${LINK_DIRECTORIES})<br />
-            add_executable(cmTryCompileExec sources)<br />
+<p>add_definitions(&lt;expanded COMPILE_DEFINITIONS from calling cmake&gt;)<br/>
+    include_directories(${INCLUDE_DIRECTORIES})<br/>
+        link_directories(${LINK_DIRECTORIES})<br/>
+            add_executable(cmTryCompileExec sources)<br/>
                 target_link_libraries(cmTryCompileExec ${LINK_LIBRARIES})</p>
 <p> In both versions of the command, if OUTPUT_VARIABLE is specified, then the output from the build process is stored in the given variable. Return the success or failure in RESULT_VAR. CMAKE_FLAGS can be used to pass -DVAR:TYPE=VALUE flags to the cmake that is run during the build. </p>
 <dt><code>try_run</code></dt>
 <dd> Try compiling and then running some code. </dd>
-<p>try_run(RUN_RESULT_VAR COMPILE_RESULT_VAR<br />
-            bindir srcfile[CMAKE_FLAGS&lt;Flags&gt;]<br />
-                          [COMPILE_DEFINITIONS&lt;flags&gt;]<br />
-                          [COMPILE_OUTPUT_VARIABLE comp]<br />
-                          [RUN_OUTPUT_VARIABLE run]<br />
-                          [OUTPUT_VARIABLE var]<br />
+<p>try_run(RUN_RESULT_VAR COMPILE_RESULT_VAR<br/>
+            bindir srcfile[CMAKE_FLAGS&lt;Flags&gt;]<br/>
+                          [COMPILE_DEFINITIONS&lt;flags&gt;]<br/>
+                          [COMPILE_OUTPUT_VARIABLE comp]<br/>
+                          [RUN_OUTPUT_VARIABLE run]<br/>
+                          [OUTPUT_VARIABLE var]<br/>
                           [ARGS&lt;arg1&gt;&lt;arg2&gt;&#8230;])</p>
 <p> Try compiling a srcfile. Return TRUE or FALSE for success or failure in COMPILE_RESULT_VAR. Then if the compile succeeded, run the executable and return its exit code in RUN_RESULT_VAR. If the executable was built, but failed to run, then RUN_RESULT_VAR will be set to FAILED_TO_RUN. COMPILE_OUTPUT_VARIABLE specifies the variable where the output from the compile step goes. RUN_OUTPUT_VARIABLE specifies the variable where the output from the running executable goes. </p>
 <p> For compatibility reasons OUTPUT_VARIABLE is still supported, which gives you the output from the compile and run step combined. </p>
@@ -1893,9 +1893,9 @@ inside the brackets<br />
 <dt><code>exec_program</code></dt>
 <dd> Deprecated. Use the execute_process() command instead. </dd>
 <p> Run an executable program during the processing of the CMakeList.txt file. </p>
-<p>exec_program(Executable[directory in which to run]<br />
-                       [ARGS&lt;arguments to executable&gt;]<br />
-                       [OUTPUT_VARIABLE&lt;var&gt;]<br />
+<p>exec_program(Executable[directory in which to run]<br/>
+                       [ARGS&lt;arguments to executable&gt;]<br/>
+                       [OUTPUT_VARIABLE&lt;var&gt;]<br/>
                        [RETURN_VALUE&lt;var&gt;])</p>
 <p> The executable is run in the optionally specified directory. The executable can include arguments if it is double quoted, but it is better to use the optional ARGS argument to specify arguments to the program. This is because cmake will then be able to escape spaces in the executable path. An optional argument OUTPUT_VARIABLE specifies a variable in which to store the output. To capture the return value of the execution, provide a RETURN_VALUE. If OUTPUT_VARIABLE is specified, then no output will go to the stdout/stderr of the console running cmake. </p>
 <dt><code>export_library_dependencies</code></dt>
@@ -1925,7 +1925,7 @@ inside the brackets<br />
 <dt><code>install_programs</code></dt>
 <dd> Deprecated. Use the install(PROGRAMS ) command instead. </dd>
 <p> This command has been superceded by the install command. It is provided for compatibility with older CMake code. The FILES form is directly replaced by the PROGRAMS form of the INSTALL command. The regexp form can be expressed more clearly using the GLOB form of the FILE command. </p>
-<p>install_programs(&lt;dir&gt; file1 file2[file3&#8230;])<br />
+<p>install_programs(&lt;dir&gt; file1 file2[file3&#8230;])<br/>
     install_programs(&lt;dir&gt; FILES file1[file2&#8230;])</p>
 <p> Create rules to install the listed programs into the given directory. Use the FILES argument to guarantee that the file list version of the command will be used even when there is only one argument. </p>
 <pre>
@@ -2334,14 +2334,14 @@ inside the brackets<br />
    cpack_add_component - Describes a CPack installation component
    named by the COMPONENT argument to a CMake INSTALL command.
 </pre>
-<p>cpack_add_component(compname<br />
-                        [DISPLAY_NAME name]<br />
-                        [DESCRIPTION description]<br />
-                        [HIDDEN | REQUIRED | DISABLED]<br />
-                        [GROUP group]<br />
-                        [DEPENDS comp1 comp2&#8230;]<br />
-                        [INSTALL_TYPES type1 type2&#8230;]<br />
-                        [DOWNLOADED]<br />
+<p>cpack_add_component(compname<br/>
+                        [DISPLAY_NAME name]<br/>
+                        [DESCRIPTION description]<br/>
+                        [HIDDEN | REQUIRED | DISABLED]<br/>
+                        [GROUP group]<br/>
+                        [DEPENDS comp1 comp2&#8230;]<br/>
+                        [INSTALL_TYPES type1 type2&#8230;]<br/>
+                        [DOWNLOADED]<br/>
                         [ARCHIVE_FILE filename])</p>
 <pre>
    The cmake_add_component command describes an installation
@@ -2416,11 +2416,11 @@ inside the brackets<br />
    cpack_add_component_group - Describes a group of related CPack
    installation components.
 </pre>
-<p>cpack_add_component_group(groupname<br />
-                              [DISPLAY_NAME name]<br />
-                              [DESCRIPTION description]<br />
-                              [PARENT_GROUP parent]<br />
-                              [EXPANDED]<br />
+<p>cpack_add_component_group(groupname<br/>
+                              [DISPLAY_NAME name]<br/>
+                              [DESCRIPTION description]<br/>
+                              [PARENT_GROUP parent]<br/>
+                              [EXPANDED]<br/>
                               [BOLD_TITLE])</p>
 <pre>
    The cpack_add_component_group describes a group of installation
@@ -2469,13 +2469,13 @@ inside the brackets<br />
      cpack_add_install_type(typename
                             [DISPLAY_NAME name])   
 </pre>
-<p>   The cpack_add_install_type command identifies a set of preselected<br />
-   components that represents a common use case for an<br />
-   application. For example, a &#8220;Developer&#8221; install type might include<br />
-   an application along with its header and library files, while an<br />
-   &#8220;End user&#8221; install type might just include the application&#8217;s<br />
-   executable. Each component identifies itself with one or more<br />
-   install types via the INSTALL_TYPES argument to<br />
+<p>   The cpack_add_install_type command identifies a set of preselected<br/>
+   components that represents a common use case for an<br/>
+   application. For example, a &#8220;Developer&#8221; install type might include<br/>
+   an application along with its header and library files, while an<br/>
+   &#8220;End user&#8221; install type might just include the application&#8217;s<br/>
+   executable. Each component identifies itself with one or more<br/>
+   install types via the INSTALL_TYPES argument to<br/>
    cpack_add_component.</p>
 <pre>
    DISPLAY_NAME is the displayed name of the install type, which will
@@ -2486,9 +2486,9 @@ inside the brackets<br />
    cpack_configure_downloads - Configure CPack to download selected
    components on-the-fly as part of the installation process.
 </pre>
-<p>cpack_configure_downloads(site<br />
-                              [UPLOAD_DIRECTORY dirname]<br />
-                              [ALL]<br />
+<p>cpack_configure_downloads(site<br/>
+                              [UPLOAD_DIRECTORY dirname]<br/>
+                              [ALL]<br/>
                               [ADD_REMOVE | NO_ADD_REMOVE])</p>
 <pre>
    The cpack_configure_downloads command configures installation-time
@@ -2751,10 +2751,10 @@ inside the brackets<br />
   CHECK_TYPE_SIZE(TYPE VARIABLE [BUILTIN_TYPES_ONLY])
 </pre>
 <p> Check if the type exists and determine size of type. if the type exists, the size will be stored to the variable. This also calls check_include_file for sys/types.h stdint.h and stddef.h, setting HAVE_SYS_TYPES_H, HAVE_STDINT_H, and HAVE_STDDEF_H. This is because many types are stored in these include files. </p>
-<p>  VARIABLE &#8211; variable to store size if the type exists.<br />
-  HAVE_${VARIABLE} &#8211; does the variable exists or not<br />
-  BUILTIN_TYPES_ONLY &#8211; The third argument is optional and if<br />
-                       it is set to the string BUILTIN_TYPES_ONLY<br />
+<p>  VARIABLE &#8211; variable to store size if the type exists.<br/>
+  HAVE_${VARIABLE} &#8211; does the variable exists or not<br/>
+  BUILTIN_TYPES_ONLY &#8211; The third argument is optional and if<br/>
+                       it is set to the string BUILTIN_TYPES_ONLY<br/>
                        this macro will not check for any header files.</p>
 <p> The following variables may be set before calling this macro to modify the way the check is run: </p>
 <pre>
@@ -2833,19 +2833,19 @@ inside the brackets<br />
 <dd> Find BLAS library </dd>
 <p> This module finds an installed fortran library that implements the BLAS linear-algebra interface (see <a rel="nofollow" href="http://www.netlib.org/blas/">http://www.netlib.org/blas/</a>). The list of libraries searched for is taken from the autoconf macro file, acx_blas.m4 (distributed at <a href="http://ac-archive.sourceforge.net/ac-archive/acx_blas.html">http://ac-archive.sourceforge.net/ac-archive/acx_blas.html</a>). </p>
 <p> This module sets the following variables: </p>
-<p>  BLAS_FOUND &#8211; set to true if a library implementing the BLAS interface<br />
-    is found<br />
-  BLAS_LINKER_FLAGS &#8211; uncached list of required linker flags (excluding -l<br />
-    and -L).<br />
-  BLAS_LIBRARIES &#8211; uncached list of libraries (using full path name) to<br />
-    link against to use BLAS<br />
-  BLAS95_LIBRARIES &#8211; uncached list of libraries (using full path name)<br />
-    to link against to use BLAS95 interface<br />
-  BLAS95_FOUND &#8211; set to true if a library implementing the BLAS f95 interface<br />
-    is found<br />
-  BLA_STATIC  if set on this determines what kind of linkage we do (static)<br />
-  BLA_VENDOR  if set checks only the specified vendor, if not set checks<br />
-     all the posibilities<br />
+<p>  BLAS_FOUND &#8211; set to true if a library implementing the BLAS interface<br/>
+    is found<br/>
+  BLAS_LINKER_FLAGS &#8211; uncached list of required linker flags (excluding -l<br/>
+    and -L).<br/>
+  BLAS_LIBRARIES &#8211; uncached list of libraries (using full path name) to<br/>
+    link against to use BLAS<br/>
+  BLAS95_LIBRARIES &#8211; uncached list of libraries (using full path name)<br/>
+    to link against to use BLAS95 interface<br/>
+  BLAS95_FOUND &#8211; set to true if a library implementing the BLAS f95 interface<br/>
+    is found<br/>
+  BLA_STATIC  if set on this determines what kind of linkage we do (static)<br/>
+  BLA_VENDOR  if set checks only the specified vendor, if not set checks<br/>
+     all the posibilities<br/>
   BLA_F95     if set on tries to find the f95 interfaces for BLAS/LAPACK</p>
 <p> ######### ## List of vendors (BLA_VENDOR) valid in this module # ATLAS, PhiPACK,CXML,DXML,SunPerf,SCSL,SGIMATH,IBMESSL,Intel10_32 (intel mkl v10 32 bit),Intel10_64lp (intel mkl v10 64 bit,lp thread model, lp64 model), # Intel( older versions of mkl 32 and 64 bit), ACML,Apple, NAS, Generic C/CXX should be enabled to use Intel mkl </p>
 <dt><code>FindBZip2</code></dt>
@@ -2862,9 +2862,9 @@ inside the brackets<br />
 <dd> Try to find Boost include dirs and libraries </dd>
 <p> Usage of this module as follows: </p>
 <p> == Using Header-Only libraries from within Boost: == </p>
-<p>find_package(Boost 1.36.0) if (Boost_FOUND)<br />
-    include_directories(${Boost_INCLUDE_DIRS})<br />
-        add_executable(foo foo.cc)<br />
+<p>find_package(Boost 1.36.0) if (Boost_FOUND)<br/>
+    include_directories(${Boost_INCLUDE_DIRS})<br/>
+        add_executable(foo foo.cc)<br/>
             endif()</p>
 <p> == Using actual libraries from within Boost: == </p>
 <pre>
@@ -2872,10 +2872,10 @@ inside the brackets<br />
    set(Boost_USE_MULTITHREADED ON)
    find_package( Boost 1.36.0 COMPONENTS date_time filesystem system ... )
 </pre>
-<p>if (Boost_FOUND)<br />
-include_directories(${Boost_INCLUDE_DIRS})<br />
-    add_executable(foo foo.cc)<br />
-        target_link_libraries(foo ${Boost_LIBRARIES})<br />
+<p>if (Boost_FOUND)<br/>
+include_directories(${Boost_INCLUDE_DIRS})<br/>
+    add_executable(foo foo.cc)<br/>
+        target_link_libraries(foo ${Boost_LIBRARIES})<br/>
             endif()</p>
 <p> The components list needs to contain actual names of boost libraries only, such as &quot;date_time&quot; for &quot;libboost_date_time&quot;. If you&#8217;re using parts of Boost that contain header files only (e.g. foreach) you do not need to specify COMPONENTS. </p>
 <p> You should provide a minimum version number that should be used. If you provide this version number and specify the REQUIRED attribute, this module will fail if it can&#8217;t find the specified or a later version. If you specify a version number this is automatically put into the considered list of version numbers and thus doesn&#8217;t need to be specified in the Boost_ADDITIONAL_VERSIONS variable (see below). </p>
@@ -2975,8 +2975,8 @@ include_directories(${Boost_INCLUDE_DIRS})<br />
    Boost_MINOR_VERSION                 minor version number of boost
    Boost_SUBMINOR_VERSION              subminor version number of boost
 </pre>
-<p>Boost_LIB_DIAGNOSTIC_DEFINITIONS[WIN32 Only] You can call<br />
-add_definitions(${Boost_LIB_DIAGNOSTIC_DEFINTIIONS})<br />
+<p>Boost_LIB_DIAGNOSTIC_DEFINITIONS[WIN32 Only] You can call<br/>
+add_definitions(${Boost_LIB_DIAGNOSTIC_DEFINTIIONS})<br/>
     to have diagnostic information about Boost&#8217;s automatic linking outputted during compilation time.</p>
 <p> For each component you specify in find_package(), the following (UPPER-CASE) variables are set. You can use these variables if you would like to pick and choose components for your targets instead of just using Boost_LIBRARIES. </p>
 <pre>
@@ -2988,8 +2988,8 @@ add_definitions(${Boost_LIB_DIAGNOSTIC_DEFINTIIONS})<br />
                                        when needed).
 </pre>
 <p> ===================================================================== </p>
-<p>Copyright(c) 2006 &#8211; 2008 Andreas Schneider&lt;mail[at] cynapses.org&gt; Copyright(c) 2007 Wengo<br />
-    Copyright(c) 2007 Mike Jackson<br />
+<p>Copyright(c) 2006 &#8211; 2008 Andreas Schneider&lt;mail[at] cynapses.org&gt; Copyright(c) 2007 Wengo<br/>
+    Copyright(c) 2007 Mike Jackson<br/>
     Copyright(c) 2008 Andreas Pakulat&lt;apaku[at] gmx.de&gt;</p>
 <pre>
   Redistribution AND use is allowed according to the terms of the New
@@ -3021,8 +3021,8 @@ add_definitions(${Boost_LIB_DIAGNOSTIC_DEFINTIIONS})<br />
    CVS_FOUND - true if the command line client was found
 </pre>
 <p> Example usage: </p>
-<p>find_package(CVS) if (CVS_FOUND)<br />
-    message(&#8220;CVS found: ${CVS_EXECUTABLE}&#8221;)<br />
+<p>find_package(CVS) if (CVS_FOUND)<br/>
+    message(&#8220;CVS found: ${CVS_EXECUTABLE}&#8221;)<br/>
         endif(CVS_FOUND)</p>
 </dd><dt><code>FindCoin3D</code></dt>
 <dd> Find Coin3D (Open Inventor) </dd>
@@ -3045,13 +3045,13 @@ add_definitions(${Boost_LIB_DIAGNOSTIC_DEFINTIIONS})<br />
 </pre>
 <dt><code>FindCurses</code></dt>
 <dd> Find the curses include file and library </dd>
-<p>  CURSES_FOUND &#8211; system has Curses<br />
-  CURSES_INCLUDE_DIR &#8211; the Curses include directory<br />
-  CURSES_LIBRARIES &#8211; The libraries needed to use Curses<br />
-  CURSES_HAVE_CURSES_H &#8211; true if curses.h is available<br />
-  CURSES_HAVE_NCURSES_H &#8211; true if ncurses.h is available<br />
-  CURSES_HAVE_NCURSES_NCURSES_H &#8211; true if ncurses/ncurses.h is available<br />
-  CURSES_HAVE_NCURSES_CURSES_H &#8211; true if ncurses/curses.h is available<br />
+<p>  CURSES_FOUND &#8211; system has Curses<br/>
+  CURSES_INCLUDE_DIR &#8211; the Curses include directory<br/>
+  CURSES_LIBRARIES &#8211; The libraries needed to use Curses<br/>
+  CURSES_HAVE_CURSES_H &#8211; true if curses.h is available<br/>
+  CURSES_HAVE_NCURSES_H &#8211; true if ncurses.h is available<br/>
+  CURSES_HAVE_NCURSES_NCURSES_H &#8211; true if ncurses/ncurses.h is available<br/>
+  CURSES_HAVE_NCURSES_CURSES_H &#8211; true if ncurses/curses.h is available<br/>
   CURSES_LIBRARY &#8211; set for backwards compatibility with 2.4 CMake</p>
 <p> Set CURSES_NEED_NCURSES to TRUE before the FIND_PACKAGE() command if NCurses functionality is required. </p>
 <dt><code>FindCxxTest</code></dt>
@@ -3075,13 +3075,13 @@ add_definitions(${Boost_LIB_DIAGNOSTIC_DEFINTIIONS})<br />
        The python-based test generator.
 </pre>
 <p> MACROS for use by CMake users: </p>
-<p>CXXTEST_ADD_TEST(&lt;test_name&gt;&lt;gen_source_file&gt;&lt;input_files_to_testgen&#8230;&gt;)<br />
-Creates a CxxTest runner and adds it to the CTest testing suite<br />
-    Parameters : test_name The name of the test<br />
-                     gen_source_file The generated source filename to be generated by CxxTest<br />
-                         input_files_to_testgen The list of header files containing the<br />
+<p>CXXTEST_ADD_TEST(&lt;test_name&gt;&lt;gen_source_file&gt;&lt;input_files_to_testgen&#8230;&gt;)<br/>
+Creates a CxxTest runner and adds it to the CTest testing suite<br/>
+    Parameters : test_name The name of the test<br/>
+                     gen_source_file The generated source filename to be generated by CxxTest<br/>
+                         input_files_to_testgen The list of header files containing the<br/>
                              CxxTest::TestSuite&#8217;s to be included in this runner</p>
-<p>#== == == == == == ==<br />
+<p>#== == == == == == ==<br/>
                  Example Usage:</p>
 <pre>
            FIND_PACKAGE(CxxTest)
@@ -3100,14 +3100,14 @@ Creates a CxxTest runner and adds it to the CTest testing suite<br />
       Example foo_test.h:
 </pre>
 <p>#include &lt;cxxtest/TestSuite.h&gt;</p>
-<p>class MyTestSuite : public CxxTest::TestSuite<br />
-{<br />
-  public:<br />
-    void testAddition(void)<br />
-    {<br />
-        TS_ASSERT(1 + 1 &gt; 1);<br />
-        TS_ASSERT_EQUALS(1 + 1, 2);<br />
-    }<br />
+<p>class MyTestSuite : public CxxTest::TestSuite<br/>
+{<br/>
+  public:<br/>
+    void testAddition(void)<br/>
+    {<br/>
+        TS_ASSERT(1 + 1 &gt; 1);<br/>
+        TS_ASSERT_EQUALS(1 + 1, 2);<br/>
+    }<br/>
 };</p>
 <p> FindCxxTest.cmake Copyright (c) 2008 </p>
 <pre>
@@ -3342,12 +3342,12 @@ Creates a CxxTest runner and adds it to the CTest testing suite<br />
 <dt><code>FindJNI</code></dt>
 <dd> Find JNI java libraries. </dd>
 <p> This module finds if Java is installed and determines where the include files and libraries are. It also determines what the name of the library is. This code sets the following variables: </p>
-<p>JNI_INCLUDE_DIRS = the include dirs to use<br />
-    JNI_LIBRARIES = the libraries to use<br />
-        JAVA_AWT_LIBRARY = the path to the jawt library<br />
-            JAVA_JVM_LIBRARY = the path to the jvm library<br />
-                JAVA_INCLUDE_PATH = the include path to jni.h<br />
-                                        JAVA_INCLUDE_PATH2 = the include path to jni_md.h<br />
+<p>JNI_INCLUDE_DIRS = the include dirs to use<br/>
+    JNI_LIBRARIES = the libraries to use<br/>
+        JAVA_AWT_LIBRARY = the path to the jawt library<br/>
+            JAVA_JVM_LIBRARY = the path to the jvm library<br/>
+                JAVA_INCLUDE_PATH = the include path to jni.h<br/>
+                                        JAVA_INCLUDE_PATH2 = the include path to jni_md.h<br/>
                                                                  JAVA_AWT_INCLUDE_PATH = the include path to jawt.h</p>
 <dt><code>FindJPEG</code></dt>
 <dd> Find JPEG </dd>
@@ -3380,14 +3380,14 @@ Creates a CxxTest runner and adds it to the CTest testing suite<br />
 <dt><code>FindKDE3</code></dt>
 <dd> Find the KDE3 include and library dirs, KDE preprocessors and define a some macros </dd>
 <p> This module defines the following variables: </p>
-<p>  KDE3_DEFINITIONS         &#8211; compiler definitions required for compiling KDE software<br />
-  KDE3_INCLUDE_DIR         &#8211; the KDE include directory<br />
-  KDE3_INCLUDE_DIRS        &#8211; the KDE and the Qt include directory, for use with INCLUDE_DIRECTORIES()<br />
-  KDE3_LIB_DIR             &#8211; the directory where the KDE libraries are installed, for use with LINK_DIRECTORIES()<br />
-  QT_AND_KDECORE_LIBS      &#8211; this contains both the Qt and the kdecore library<br />
-  KDE3_DCOPIDL_EXECUTABLE  &#8211; the dcopidl executable<br />
-  KDE3_DCOPIDL2CPP_EXECUTABLE &#8211; the dcopidl2cpp executable<br />
-  KDE3_KCFGC_EXECUTABLE    &#8211; the kconfig_compiler executable<br />
+<p>  KDE3_DEFINITIONS         &#8211; compiler definitions required for compiling KDE software<br/>
+  KDE3_INCLUDE_DIR         &#8211; the KDE include directory<br/>
+  KDE3_INCLUDE_DIRS        &#8211; the KDE and the Qt include directory, for use with INCLUDE_DIRECTORIES()<br/>
+  KDE3_LIB_DIR             &#8211; the directory where the KDE libraries are installed, for use with LINK_DIRECTORIES()<br/>
+  QT_AND_KDECORE_LIBS      &#8211; this contains both the Qt and the kdecore library<br/>
+  KDE3_DCOPIDL_EXECUTABLE  &#8211; the dcopidl executable<br/>
+  KDE3_DCOPIDL2CPP_EXECUTABLE &#8211; the dcopidl2cpp executable<br/>
+  KDE3_KCFGC_EXECUTABLE    &#8211; the kconfig_compiler executable<br/>
   KDE3_FOUND               &#8211; set to TRUE if all of the above has been found</p>
 <p> The following user adjustable options are provided: </p>
 <pre>
@@ -3459,19 +3459,19 @@ Creates a CxxTest runner and adds it to the CTest testing suite<br />
 <p> This module finds an installed fortran library that implements the LAPACK linear-algebra interface (see <a rel="nofollow" href="http://www.netlib.org/lapack/">http://www.netlib.org/lapack/</a>). </p>
 <p> The approach follows that taken for the autoconf macro file, acx_lapack.m4 (distributed at <a rel="nofollow" href="http://ac-archive.sourceforge.net/ac-archive/acx_lapack.html">http://ac-archive.sourceforge.net/ac-archive/acx_lapack.html</a>). </p>
 <p> This module sets the following variables: </p>
-<p>  LAPACK_FOUND &#8211; set to true if a library implementing the LAPACK interface<br />
-    is found<br />
-  LAPACK_LINKER_FLAGS &#8211; uncached list of required linker flags (excluding -l<br />
-    and -L).<br />
-  LAPACK_LIBRARIES &#8211; uncached list of libraries (using full path name) to<br />
-    link against to use LAPACK<br />
-  LAPACK95_LIBRARIES &#8211; uncached list of libraries (using full path name) to<br />
-    link against to use LAPACK95<br />
-  LAPACK95_FOUND &#8211; set to true if a library implementing the LAPACK f95<br />
-    interface is found<br />
-  BLA_STATIC  if set on this determines what kind of linkage we do (static)<br />
-  BLA_VENDOR  if set checks only the specified vendor, if not set checks<br />
-     all the posibilities<br />
+<p>  LAPACK_FOUND &#8211; set to true if a library implementing the LAPACK interface<br/>
+    is found<br/>
+  LAPACK_LINKER_FLAGS &#8211; uncached list of required linker flags (excluding -l<br/>
+    and -L).<br/>
+  LAPACK_LIBRARIES &#8211; uncached list of libraries (using full path name) to<br/>
+    link against to use LAPACK<br/>
+  LAPACK95_LIBRARIES &#8211; uncached list of libraries (using full path name) to<br/>
+    link against to use LAPACK95<br/>
+  LAPACK95_FOUND &#8211; set to true if a library implementing the LAPACK f95<br/>
+    interface is found<br/>
+  BLA_STATIC  if set on this determines what kind of linkage we do (static)<br/>
+  BLA_VENDOR  if set checks only the specified vendor, if not set checks<br/>
+     all the posibilities<br/>
   BLA_F95     if set on tries to find the f95 interfaces for BLAS/LAPACK</p>
 <p> ## List of vendors (BLA_VENDOR) valid in this module # Intel(mkl), ACML,Apple, NAS, Generic </p>
 <dt><code>FindLATEX</code></dt>
@@ -3568,24 +3568,24 @@ Creates a CxxTest runner and adds it to the CTest testing suite<br />
 <dd> Message Passing Interface (MPI) module. </dd>
 <p> The Message Passing Interface (MPI) is a library used to write high-performance parallel applications that use message passing, and is typically deployed on a cluster. MPI is a standard interface (defined by the MPI forum) for which many implementations are available. All of these implementations have somewhat different compilation approaches (different include paths, libraries to link against, etc.), and this module tries to smooth out those differences. </p>
 <p> This module will set the following variables: </p>
-<p>   MPI_FOUND                  TRUE if we have found MPI<br />
-   MPI_COMPILE_FLAGS          Compilation flags for MPI programs<br />
-   MPI_INCLUDE_PATH           Include path(s) for MPI header<br />
-   MPI_LINK_FLAGS             Linking flags for MPI programs<br />
-   MPI_LIBRARY                First MPI library to link against (cached)<br />
-   MPI_EXTRA_LIBRARY Extra MPI libraries to link against(cached)<br />
-   MPI_LIBRARIES              All libraries to link MPI programs against<br />
-   MPIEXEC                    Executable for running MPI programs<br />
-   MPIEXEC_NUMPROC_FLAG       Flag to pass to MPIEXEC before giving it the<br />
-                              number of processors to run on<br />
-   MPIEXEC_PREFLAGS           Flags to pass to MPIEXEC directly before the<br />
-                              executable to run.<br />
+<p>   MPI_FOUND                  TRUE if we have found MPI<br/>
+   MPI_COMPILE_FLAGS          Compilation flags for MPI programs<br/>
+   MPI_INCLUDE_PATH           Include path(s) for MPI header<br/>
+   MPI_LINK_FLAGS             Linking flags for MPI programs<br/>
+   MPI_LIBRARY                First MPI library to link against (cached)<br/>
+   MPI_EXTRA_LIBRARY Extra MPI libraries to link against(cached)<br/>
+   MPI_LIBRARIES              All libraries to link MPI programs against<br/>
+   MPIEXEC                    Executable for running MPI programs<br/>
+   MPIEXEC_NUMPROC_FLAG       Flag to pass to MPIEXEC before giving it the<br/>
+                              number of processors to run on<br/>
+   MPIEXEC_PREFLAGS           Flags to pass to MPIEXEC directly before the<br/>
+                              executable to run.<br/>
    MPIEXEC_POSTFLAGS          Flags to pass to MPIEXEC after all other flags.</p>
 <p> This module will attempt to auto-detect these settings, first by looking for a MPI compiler, which many MPI implementations provide as a pass-through to the native compiler to simplify the compilation of MPI programs. The MPI compiler is stored in the cache variable MPI_COMPILER, and will attempt to look for commonly-named drivers mpic++, mpicxx, mpiCC, or mpicc. If the compiler driver is found and recognized, it will be used to set all of the module variables. To skip this auto-detection, set MPI_LIBRARY and MPI_INCLUDE_PATH in the CMake cache. </p>
 <p> If no compiler driver is found or the compiler driver is not recognized, this module will then search for common include paths and library names to try to detect MPI. </p>
 <p> If CMake initially finds a different MPI than was intended, and you want to use the MPI compiler auto-detection for a different MPI implementation, set MPI_COMPILER to the MPI compiler driver you want to use (e.g., mpicxx) and then set MPI_LIBRARY to the string MPI_LIBRARY-NOTFOUND. When you re-configure, auto-detection of MPI will run again with the newly-specified MPI_COMPILER. </p>
 <p> When using MPIEXEC to execute MPI applications, you should typically use all of the MPIEXEC flags as follows: </p>
-<p>${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} PROCS ${MPIEXEC_PREFLAGS} EXECUTABLE<br />
+<p>${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} PROCS ${MPIEXEC_PREFLAGS} EXECUTABLE<br/>
     ${MPIEXEC_POSTFLAGS} ARGS</p>
 <p> where PROCS is the number of processors on which to execute the program, EXECUTABLE is the MPI program, and ARGS are the arguments to pass to the MPI program. </p>
 <dt><code>FindMatlab</code></dt>
@@ -3756,10 +3756,10 @@ Creates a CxxTest runner and adds it to the CTest testing suite<br />
 <p> FIND_PACKAGE_MESSAGE(&lt;name&gt; &quot;message for user&quot; &quot;find result details&quot;) </p>
 <p> This macro is intended to be used in FindXXX.cmake modules files. It will print a message once for each unique find result. This is useful for telling the user where a package was found. The first argument specifies the name (XXX) of the package. The second argument specifies the message to display. The third argument lists details about the find result so that if they change the message will be displayed again. The macro also obeys the QUIET argument to the find_package command. </p>
 <p> Example: </p>
-<p>IF(X11_FOUND)<br />
-FIND_PACKAGE_MESSAGE(X11 &#8220;Found X11: ${X11_X11_LIB}&#8221;<br />
-                         &#8220;[${X11_X11_LIB}][${X11_INCLUDE_DIR}]&#8221;)<br />
-ELSE(X11_FOUND)<br />
+<p>IF(X11_FOUND)<br/>
+FIND_PACKAGE_MESSAGE(X11 &#8220;Found X11: ${X11_X11_LIB}&#8221;<br/>
+                         &#8220;[${X11_X11_LIB}][${X11_INCLUDE_DIR}]&#8221;)<br/>
+ELSE(X11_FOUND)<br/>
 &#8230; ENDIF(X11_FOUND)</p>
 </dd><dt><code>FindPerl</code></dt>
 <dd> Find perl </dd>
@@ -3790,9 +3790,9 @@ ELSE(X11_FOUND)<br />
 <dt><code>FindPkgConfig</code></dt>
 <dd> a pkg-config module for CMake </dd>
 <p> Usage: </p>
-<p>   pkg_check_modules(&lt;PREFIX&gt; [REQUIRED] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br />
+<p>   pkg_check_modules(&lt;PREFIX&gt; [REQUIRED] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br/>
      checks for all the given modules</p>
-<p>   pkg_search_module(&lt;PREFIX&gt; [REQUIRED] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br />
+<p>   pkg_search_module(&lt;PREFIX&gt; [REQUIRED] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br/>
      checks for given modules and uses the first working one</p>
 <p> When the &#8216;REQUIRED&#8217; argument was set, macros will fail with an error when module(s) could not be found </p>
 <p> It sets the following variables: </p>
@@ -3811,7 +3811,7 @@ ELSE(X11_FOUND)<br />
    &lt;XPREFIX&gt;_CFLAGS         ... all required cflags
    &lt;XPREFIX&gt;_CFLAGS_OTHER   ... the other compiler flags
 </pre>
-<p>   &lt;XPREFIX&gt; = &lt;PREFIX&gt;        for common case<br />
+<p>   &lt;XPREFIX&gt; = &lt;PREFIX&gt;        for common case<br/>
    &lt;XPREFIX&gt; = &lt;PREFIX&gt;_STATIC for static linking</p>
 <p> There are some special variables whose prefix depends on the count of given modules. When there is only one module, &lt;PREFIX&gt; stays unchanged. When there are multiple modules, the prefix will be changed to &lt;PREFIX&gt;_&lt;MODNAME&gt;: </p>
 <pre>
@@ -3841,13 +3841,13 @@ ELSE(X11_FOUND)<br />
        FOO_glib-2.0_VERSION=2.10.3
        FOO_gtk+-2.0_VERSION=2.8.20
 </pre>
-<p>pkg_check_modules(XRENDER REQUIRED xrender)<br />
-    defines e.g. : XRENDER_LIBRARIES = Xrender;<br />
-X11<br />
-    XRENDER_STATIC_LIBRARIES = Xrender;<br />
-X11;<br />
-pthread;<br />
-Xau;<br />
+<p>pkg_check_modules(XRENDER REQUIRED xrender)<br/>
+    defines e.g. : XRENDER_LIBRARIES = Xrender;<br/>
+X11<br/>
+    XRENDER_STATIC_LIBRARIES = Xrender;<br/>
+X11;<br/>
+pthread;<br/>
+Xau;<br/>
 Xdmcp</p>
 <pre>
    pkg_search_module (BAR     libxml-2.0 libxml2 libxml&gt;=2)
@@ -3911,9 +3911,9 @@ Xdmcp</p>
 <dd> Find QT 4 </dd>
 <p> This module can be used to find Qt4. The most important issue is that the Qt4 qmake is available via the system path. This qmake is then used to detect basically everything else. This module defines a number of key variables and macros. The variable QT_USE_FILE is set which is the path to a CMake file that can be included to compile Qt 4 applications and libraries. It sets up the compilation environment for include directories, preprocessor defines and populates a QT_LIBRARIES variable. </p>
 <p> Typical usage could be something like: </p>
-<p>find_package(Qt4 4.4.3 COMPONENTS QtCore QtGui QtXml REQUIRED)<br />
-    include(${QT_USE_FILE})<br />
-        add_executable(myexe main.cpp)<br />
+<p>find_package(Qt4 4.4.3 COMPONENTS QtCore QtGui QtXml REQUIRED)<br/>
+    include(${QT_USE_FILE})<br/>
+        add_executable(myexe main.cpp)<br/>
             target_link_libraries(myexe ${QT_LIBRARIES})</p>
 <p> When using the components argument, QT_USE_QT* variables are automatically set for the QT_USE_FILE to pick up. If one wishes to manually set them, the available ones to set include: </p>
 <pre>
@@ -3968,17 +3968,17 @@ Xdmcp</p>
         Use this if for some reason QT4_WRAP_CPP() isn't appropriate, e.g.
         because you need a custom filename for the moc file or something similar.
 </pre>
-<p>  macro QT4_AUTOMOC(sourcefile1 sourcefile2 &#8230; )<br />
-        This macro is still experimental.<br />
-        It can be used to have moc automatically handled.<br />
-        So if you have the files foo.h and foo.cpp, and in foo.h a<br />
-        a class uses the Q_OBJECT macro, moc has to run on it. If you don&#8217;t<br />
-        want to use QT4_WRAP_CPP() (which is reliable and mature), you can insert<br />
-#include &#8220;foo.moc&#8221;<br />
-        in foo.cpp and then give foo.cpp as argument to QT4_AUTOMOC(). This will the<br />
-        scan all listed files at cmake-time for such included moc files and if it finds<br />
-        them cause a rule to be generated to run moc at build time on the<br />
-        accompanying header file foo.h.<br />
+<p>  macro QT4_AUTOMOC(sourcefile1 sourcefile2 &#8230; )<br/>
+        This macro is still experimental.<br/>
+        It can be used to have moc automatically handled.<br/>
+        So if you have the files foo.h and foo.cpp, and in foo.h a<br/>
+        a class uses the Q_OBJECT macro, moc has to run on it. If you don&#8217;t<br/>
+        want to use QT4_WRAP_CPP() (which is reliable and mature), you can insert<br/>
+#include &#8220;foo.moc&#8221;<br/>
+        in foo.cpp and then give foo.cpp as argument to QT4_AUTOMOC(). This will the<br/>
+        scan all listed files at cmake-time for such included moc files and if it finds<br/>
+        them cause a rule to be generated to run moc at build time on the<br/>
+        accompanying header file foo.h.<br/>
         If a source file has the SKIP_AUTOMOC property set it will be ignored by this macro.</p>
 <pre>
   macro QT4_ADD_DBUS_INTERFACE(outfiles interface basename)
@@ -3992,12 +3992,12 @@ Xdmcp</p>
         for all listed interface xml files
         the name will be automatically determined from the name of the xml file
 </pre>
-<p>macro QT4_ADD_DBUS_ADAPTOR(outfiles xmlfile parentheader parentclassname[basename])<br />
-    create a dbus adaptor(header and implementation file) from the xml file<br />
-    describing the interface,<br />
-    and add it to the list of sources.The adaptor<br />
-        forwards the calls to a parent class,<br />
-    defined in parentheader and named<br />
+<p>macro QT4_ADD_DBUS_ADAPTOR(outfiles xmlfile parentheader parentclassname[basename])<br/>
+    create a dbus adaptor(header and implementation file) from the xml file<br/>
+    describing the interface,<br/>
+    and add it to the list of sources.The adaptor<br/>
+        forwards the calls to a parent class,<br/>
+    defined in parentheader and named<br/>
     parentclassname.The name of the generated files will be&lt;basename&gt; adaptor.{cpp, h} where basename is the basename of the xml file.</p>
 <pre>
   macro QT4_GENERATE_DBUS_INTERFACE( header [interfacename] )
@@ -4040,51 +4040,51 @@ Xdmcp</p>
   QT_VERSION_MINOR The minor version of Qt found.
   QT_VERSION_PATCH The patch version of Qt found.
 </pre>
-<p>QT_EDITION Set to the edition of Qt(i.e.DesktopLight)<br />
-        QT_EDITION_DESKTOPLIGHT True if QT_EDITION<br />
-    == DesktopLight<br />
-       QT_QTCORE_FOUND True if QtCore was found.QT_QTGUI_FOUND True if QtGui was found.QT_QT3SUPPORT_FOUND True if Qt3Support was found.QT_QTASSISTANT_FOUND True if QtAssistant was found.QT_QAXCONTAINER_FOUND True if QAxContainer was found(Windows only)<br />
-           .QT_QAXSERVER_FOUND True if QAxServer was found(Windows only)<br />
+<p>QT_EDITION Set to the edition of Qt(i.e.DesktopLight)<br/>
+        QT_EDITION_DESKTOPLIGHT True if QT_EDITION<br/>
+    == DesktopLight<br/>
+       QT_QTCORE_FOUND True if QtCore was found.QT_QTGUI_FOUND True if QtGui was found.QT_QT3SUPPORT_FOUND True if Qt3Support was found.QT_QTASSISTANT_FOUND True if QtAssistant was found.QT_QAXCONTAINER_FOUND True if QAxContainer was found(Windows only)<br/>
+           .QT_QAXSERVER_FOUND True if QAxServer was found(Windows only)<br/>
            .QT_QTDBUS_FOUND True if QtDBus was found.QT_QTDESIGNER_FOUND True if QtDesigner was found.QT_QTDESIGNERCOMPONENTS True if QtDesignerComponents was found.QT_QTMOTIF_FOUND True if QtMotif was found.QT_QTNETWORK_FOUND True if QtNetwork was found.QT_QTNSPLUGIN_FOUND True if QtNsPlugin was found.QT_QTOPENGL_FOUND True if QtOpenGL was found.QT_QTSQL_FOUND True if QtSql was found.QT_QTXML_FOUND True if QtXml was found.QT_QTSVG_FOUND True if QtSvg was found.QT_QTSCRIPT_FOUND True if QtScript was found.QT_QTTEST_FOUND True if QtTest was found.QT_QTUITOOLS_FOUND True if QtUiTools was found.QT_QTASSISTANTCLIENT_FOUND True if QtAssistantClient was found.QT_QTHELP_FOUND True if QtHelp was found.QT_QTWEBKIT_FOUND True if QtWebKit was found.QT_QTXMLPATTERNS_FOUND True if QtXmlPatterns was found.QT_PHONON_FOUND True if phonon was found.</p>
 <p>QT_DEFINITIONS Definitions to use when compiling code that uses Qt.You do not need to use this if you include QT_USE_FILE.The QT_USE_FILE will also define QT_DEBUG and QT_NO_DEBUG to fit your current build type.Those are not contained in QT_DEFINITIONS.</p>
-<p>                                                                                                                                                                        QT_INCLUDES List of paths to all include directories of Qt4 QT_INCLUDE_DIR and<br />
-    QT_QTCORE_INCLUDE_DIR are<br />
-        always in this variable even if NOTFOUND,<br />
-    all other INCLUDE_DIRS are<br />
+<p>                                                                                                                                                                        QT_INCLUDES List of paths to all include directories of Qt4 QT_INCLUDE_DIR and<br/>
+    QT_QTCORE_INCLUDE_DIR are<br/>
+        always in this variable even if NOTFOUND,<br/>
+    all other INCLUDE_DIRS are<br/>
         only added if they are found.You do not need to use this if you include QT_USE_FILE.</p>
 <pre>
   Include directories for the Qt modules are listed here.
   You do not need to use these variables if you include QT_USE_FILE.
 </pre>
-<p>  QT_INCLUDE_DIR              Path to &#8220;include&#8221; of Qt4<br />
-  QT_QT3SUPPORT_INCLUDE_DIR   Path to &#8220;include/Qt3Support&#8221;<br />
-  QT_QTASSISTANT_INCLUDE_DIR  Path to &#8220;include/QtAssistant&#8221;<br />
-  QT_QAXCONTAINER_INCLUDE_DIR  Path to &#8220;include/ActiveQt&#8221; (Windows only)<br />
-  QT_QAXSERVER_INCLUDE_DIR  Path to &#8220;include/ActiveQt&#8221; (Windows only)<br />
-  QT_QTCORE_INCLUDE_DIR       Path to &#8220;include/QtCore&#8221;<br />
-  QT_QTDESIGNER_INCLUDE_DIR   Path to &#8220;include/QtDesigner&#8221;<br />
-  QT_QTDESIGNERCOMPONENTS_INCLUDE_DIR   Path to &#8220;include/QtDesigner&#8221;<br />
-  QT_QTDBUS_INCLUDE_DIR       Path to &#8220;include/QtDBus&#8221;<br />
-  QT_QTGUI_INCLUDE_DIR        Path to &#8220;include/QtGui&#8221;<br />
-  QT_QTMOTIF_INCLUDE_DIR      Path to &#8220;include/QtMotif&#8221;<br />
-  QT_QTNETWORK_INCLUDE_DIR    Path to &#8220;include/QtNetwork&#8221;<br />
-  QT_QTNSPLUGIN_INCLUDE_DIR   Path to &#8220;include/QtNsPlugin&#8221;<br />
-  QT_QTOPENGL_INCLUDE_DIR     Path to &#8220;include/QtOpenGL&#8221;<br />
-  QT_QTSQL_INCLUDE_DIR        Path to &#8220;include/QtSql&#8221;<br />
-  QT_QTXML_INCLUDE_DIR        Path to &#8220;include/QtXml&#8221;<br />
-  QT_QTSVG_INCLUDE_DIR        Path to &#8220;include/QtSvg&#8221;<br />
-  QT_QTSCRIPT_INCLUDE_DIR     Path to &#8220;include/QtScript&#8221;<br />
-  QT_QTTEST_INCLUDE_DIR       Path to &#8220;include/QtTest&#8221;<br />
-  QT_QTASSISTANTCLIENT_INCLUDE_DIR       Path to &#8220;include/QtAssistant&#8221;<br />
-  QT_QTHELP_INCLUDE_DIR       Path to &#8220;include/QtHelp&#8221;<br />
-  QT_QTWEBKIT_INCLUDE_DIR     Path to &#8220;include/QtWebKit&#8221;<br />
-  QT_QTXMLPATTERNS_INCLUDE_DIR  Path to &#8220;include/QtXmlPatterns&#8221;<br />
+<p>  QT_INCLUDE_DIR              Path to &#8220;include&#8221; of Qt4<br/>
+  QT_QT3SUPPORT_INCLUDE_DIR   Path to &#8220;include/Qt3Support&#8221;<br/>
+  QT_QTASSISTANT_INCLUDE_DIR  Path to &#8220;include/QtAssistant&#8221;<br/>
+  QT_QAXCONTAINER_INCLUDE_DIR  Path to &#8220;include/ActiveQt&#8221; (Windows only)<br/>
+  QT_QAXSERVER_INCLUDE_DIR  Path to &#8220;include/ActiveQt&#8221; (Windows only)<br/>
+  QT_QTCORE_INCLUDE_DIR       Path to &#8220;include/QtCore&#8221;<br/>
+  QT_QTDESIGNER_INCLUDE_DIR   Path to &#8220;include/QtDesigner&#8221;<br/>
+  QT_QTDESIGNERCOMPONENTS_INCLUDE_DIR   Path to &#8220;include/QtDesigner&#8221;<br/>
+  QT_QTDBUS_INCLUDE_DIR       Path to &#8220;include/QtDBus&#8221;<br/>
+  QT_QTGUI_INCLUDE_DIR        Path to &#8220;include/QtGui&#8221;<br/>
+  QT_QTMOTIF_INCLUDE_DIR      Path to &#8220;include/QtMotif&#8221;<br/>
+  QT_QTNETWORK_INCLUDE_DIR    Path to &#8220;include/QtNetwork&#8221;<br/>
+  QT_QTNSPLUGIN_INCLUDE_DIR   Path to &#8220;include/QtNsPlugin&#8221;<br/>
+  QT_QTOPENGL_INCLUDE_DIR     Path to &#8220;include/QtOpenGL&#8221;<br/>
+  QT_QTSQL_INCLUDE_DIR        Path to &#8220;include/QtSql&#8221;<br/>
+  QT_QTXML_INCLUDE_DIR        Path to &#8220;include/QtXml&#8221;<br/>
+  QT_QTSVG_INCLUDE_DIR        Path to &#8220;include/QtSvg&#8221;<br/>
+  QT_QTSCRIPT_INCLUDE_DIR     Path to &#8220;include/QtScript&#8221;<br/>
+  QT_QTTEST_INCLUDE_DIR       Path to &#8220;include/QtTest&#8221;<br/>
+  QT_QTASSISTANTCLIENT_INCLUDE_DIR       Path to &#8220;include/QtAssistant&#8221;<br/>
+  QT_QTHELP_INCLUDE_DIR       Path to &#8220;include/QtHelp&#8221;<br/>
+  QT_QTWEBKIT_INCLUDE_DIR     Path to &#8220;include/QtWebKit&#8221;<br/>
+  QT_QTXMLPATTERNS_INCLUDE_DIR  Path to &#8220;include/QtXmlPatterns&#8221;<br/>
   QT_PHONON_INCLUDE_DIR       Path to &#8220;include/phonon&#8221;</p>
-<p>  QT_BINARY_DIR               Path to &#8220;bin&#8221; of Qt4<br />
-  QT_LIBRARY_DIR              Path to &#8220;lib&#8221; of Qt4<br />
-  QT_PLUGINS_DIR              Path to &#8220;plugins&#8221; for Qt4<br />
-  QT_TRANSLATIONS_DIR         Path to &#8220;translations&#8221; of Qt4<br />
-  QT_DOC_DIR                  Path to &#8220;doc&#8221; of Qt4<br />
+<p>  QT_BINARY_DIR               Path to &#8220;bin&#8221; of Qt4<br/>
+  QT_LIBRARY_DIR              Path to &#8220;lib&#8221; of Qt4<br/>
+  QT_PLUGINS_DIR              Path to &#8220;plugins&#8221; for Qt4<br/>
+  QT_TRANSLATIONS_DIR         Path to &#8220;translations&#8221; of Qt4<br/>
+  QT_DOC_DIR                  Path to &#8220;doc&#8221; of Qt4<br/>
   QT_MKSPECS_DIR              Path to &#8220;mkspecs&#8221; of Qt4</p>
 <p> The Qt toolkit may contain both debug and release libraries. In that case, the following library variables will contain both. You do not need to use these variables if you include QT_USE_FILE, and use QT_LIBRARIES. </p>
 <pre>
@@ -4248,12 +4248,12 @@ Xdmcp</p>
   &lt;var-prefix&gt;_WC_INFO - output of command `svn info &lt;dir&gt;'
 </pre>
 <p> Example usage: </p>
-<p>FIND_PACKAGE(Subversion)<br />
-IF(Subversion_FOUND)<br />
-Subversion_WC_INFO(${PROJECT_SOURCE_DIR} Project)<br />
-    MESSAGE(&#8220;Current revision is ${Project_WC_REVISION}&#8221;)<br />
-        Subversion_WC_LOG(${PROJECT_SOURCE_DIR} Project)<br />
-            MESSAGE(&#8220;Last changed log is ${Project_LAST_CHANGED_LOG}&#8221;)<br />
+<p>FIND_PACKAGE(Subversion)<br/>
+IF(Subversion_FOUND)<br/>
+Subversion_WC_INFO(${PROJECT_SOURCE_DIR} Project)<br/>
+    MESSAGE(&#8220;Current revision is ${Project_WC_REVISION}&#8221;)<br/>
+        Subversion_WC_LOG(${PROJECT_SOURCE_DIR} Project)<br/>
+            MESSAGE(&#8220;Last changed log is ${Project_LAST_CHANGED_LOG}&#8221;)<br/>
                 ENDIF(Subversion_FOUND)</p>
 <dt><code>FindTCL</code></dt>
 <dd> TK_INTERNAL_PATH was removed. </dd>
@@ -4614,46 +4614,46 @@ Subversion_WC_INFO(${PROJECT_SOURCE_DIR} Project)<br />
   wxWidgets_USE_STATIC
 </pre>
 <p> The following are set after the configuration is done for both windows and unix style: </p>
-<p>  wxWidgets_FOUND            &#8211; Set to TRUE if wxWidgets was found.<br />
-  wxWidgets_INCLUDE_DIRS     &#8211; Include directories for WIN32<br />
-                               i.e., where to find &#8220;wx/wx.h&#8221; and<br />
-                               &#8220;wx/setup.h&#8221;; possibly empty for unices.<br />
-  wxWidgets_LIBRARIES        &#8211; Path to the wxWidgets libraries.<br />
-  wxWidgets_LIBRARY_DIRS     &#8211; compile time link dirs, useful for<br />
-                               rpath on UNIX. Typically an empty string<br />
-                               in WIN32 environment.<br />
-  wxWidgets_DEFINITIONS      &#8211; Contains defines required to compile/link<br />
-                               against WX, e.g. -DWXUSINGDLL<br />
-  wxWidgets_CXX_FLAGS        &#8211; Include dirs and ompiler flags for<br />
-                               unices, empty on WIN32. Esentially<br />
-                               &#8220;`wx-config &#8211;cxxflags`&#8221;.<br />
+<p>  wxWidgets_FOUND            &#8211; Set to TRUE if wxWidgets was found.<br/>
+  wxWidgets_INCLUDE_DIRS     &#8211; Include directories for WIN32<br/>
+                               i.e., where to find &#8220;wx/wx.h&#8221; and<br/>
+                               &#8220;wx/setup.h&#8221;; possibly empty for unices.<br/>
+  wxWidgets_LIBRARIES        &#8211; Path to the wxWidgets libraries.<br/>
+  wxWidgets_LIBRARY_DIRS     &#8211; compile time link dirs, useful for<br/>
+                               rpath on UNIX. Typically an empty string<br/>
+                               in WIN32 environment.<br/>
+  wxWidgets_DEFINITIONS      &#8211; Contains defines required to compile/link<br/>
+                               against WX, e.g. -DWXUSINGDLL<br/>
+  wxWidgets_CXX_FLAGS        &#8211; Include dirs and ompiler flags for<br/>
+                               unices, empty on WIN32. Esentially<br/>
+                               &#8220;`wx-config &#8211;cxxflags`&#8221;.<br/>
   wxWidgets_USE_FILE         &#8211; Convenience include file.</p>
 <p> Sample usage: </p>
-<p>FIND_PACKAGE(wxWidgets COMPONENTS base core gl net)<br />
-IF(wxWidgets_FOUND)<br />
-INCLUDE(${wxWidgets_USE_FILE})<br />
-#and for each of your dependant executable / library targets:<br />
-TARGET_LINK_LIBRARIES(&lt;YourTarget&gt; ${wxWidgets_LIBRARIES})<br />
+<p>FIND_PACKAGE(wxWidgets COMPONENTS base core gl net)<br/>
+IF(wxWidgets_FOUND)<br/>
+INCLUDE(${wxWidgets_USE_FILE})<br/>
+#and for each of your dependant executable / library targets:<br/>
+TARGET_LINK_LIBRARIES(&lt;YourTarget&gt; ${wxWidgets_LIBRARIES})<br/>
 ENDIF(wxWidgets_FOUND)</p>
 <p> If wxWidgets is required (i.e., not an optional part): </p>
-<p>FIND_PACKAGE(wxWidgets REQUIRED base core gl net)<br />
-INCLUDE(${wxWidgets_USE_FILE})<br />
-#and for each of your dependant executable / library targets:<br />
+<p>FIND_PACKAGE(wxWidgets REQUIRED base core gl net)<br/>
+INCLUDE(${wxWidgets_USE_FILE})<br/>
+#and for each of your dependant executable / library targets:<br/>
 TARGET_LINK_LIBRARIES(&lt;YourTarget&gt; ${wxWidgets_LIBRARIES})</p>
 <dt><code>FindwxWindows</code></dt>
 <dd> Find wxWindows (wxWidgets) installation </dd>
 <p> This module finds if wxWindows/wxWidgets is installed and determines where the include files and libraries are. It also determines what the name of the library is. Please note this file is DEPRECATED and replaced by FindwxWidgets.cmake. This code sets the following variables: </p>
-<p>  WXWINDOWS_FOUND     = system has WxWindows<br />
-  WXWINDOWS_LIBRARIES = path to the wxWindows libraries<br />
-                        on Unix/Linux with additional<br />
-                        linker flags from<br />
-                        &#8220;wx-config &#8211;libs&#8221;<br />
-  CMAKE_WXWINDOWS_CXX_FLAGS  = Compiler flags for wxWindows,<br />
-                               essentially &#8220;`wx-config &#8211;cxxflags`&#8221;<br />
-                               on Linux<br />
-  WXWINDOWS_INCLUDE_DIR      = where to find &#8220;wx/wx.h&#8221; and &#8220;wx/setup.h&#8221;<br />
-  WXWINDOWS_LINK_DIRECTORIES = link directories, useful for rpath on<br />
-                                Unix<br />
+<p>  WXWINDOWS_FOUND     = system has WxWindows<br/>
+  WXWINDOWS_LIBRARIES = path to the wxWindows libraries<br/>
+                        on Unix/Linux with additional<br/>
+                        linker flags from<br/>
+                        &#8220;wx-config &#8211;libs&#8221;<br/>
+  CMAKE_WXWINDOWS_CXX_FLAGS  = Compiler flags for wxWindows,<br/>
+                               essentially &#8220;`wx-config &#8211;cxxflags`&#8221;<br/>
+                               on Linux<br/>
+  WXWINDOWS_INCLUDE_DIR      = where to find &#8220;wx/wx.h&#8221; and &#8220;wx/setup.h&#8221;<br/>
+  WXWINDOWS_LINK_DIRECTORIES = link directories, useful for rpath on<br/>
+                                Unix<br/>
   WXWINDOWS_DEFINITIONS      = extra defines</p>
 <p> OPTIONS If you need OpenGL support please </p>
 <pre>
@@ -4795,9 +4795,9 @@ TARGET_LINK_LIBRARIES(&lt;YourTarget&gt; ${wxWidgets_LIBRARIES})</p>
 <dt><code>UseSWIG</code></dt>
 <dd> SWIG module for CMake </dd>
 <p> Defines the following macros: </p>
-<p>SWIG_ADD_MODULE(name language[files])<br />
-&#8211; Define swig module with given name and specified language<br />
-    SWIG_LINK_LIBRARIES(name[libraries]) &#8211;<br />
+<p>SWIG_ADD_MODULE(name language[files])<br/>
+&#8211; Define swig module with given name and specified language<br/>
+    SWIG_LINK_LIBRARIES(name[libraries]) &#8211;<br/>
     Link libraries to swig module</p>
 <p> All other macros are for internal use only. To get the actual name of the swig module, use: ${SWIG_MODULE_name_REAL_NAME}. Set Source files properties such as CPLUSPLUS and SWIG_FLAGS to specify special behavior of SWIG. Also global CMAKE_SWIG_FLAGS can be used to add special flags to all swig calls. Another special variable is CMAKE_SWIG_OUTDIR, it allows one to specify where to write all the swig generated module (swig -outdir option) The name-specific variable SWIG_MODULE_&lt;name&gt;_EXTRA_DEPS may be used to specify extra dependencies for the generated modules. </p>
 <dt><code>Use_wxWindows</code></dt>

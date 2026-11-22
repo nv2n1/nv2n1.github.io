@@ -11,17 +11,17 @@ description: "dlamchf77.f –"
 <p> dlamchf77.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dlamch</code> (CMACH)<br />
- <i></i><code>DLAMCHF77</code> deprecated<br />
- subroutine <code>dlamc1</code> (BETA, T, RND, IEEE1)<br />
- <i></i><code>DLAMC1</code><br />
- subroutine <code>dlamc2</code> (BETA, T, RND, EPS, EMIN, RMIN, EMAX, RMAX)<br />
- <i></i><code>DLAMC2</code><br />
- DOUBLE PRECISION function <code>dlamc3</code> (A, B)<br />
- <i></i><code>DLAMC3</code><br />
- subroutine <code>dlamc4</code> (EMIN, START, BASE)<br />
- <i></i><code>DLAMC4</code><br />
- subroutine <code>dlamc5</code> (BETA, P, EMIN, IEEE, EMAX, RMAX)<br />
+<p> DOUBLE PRECISION function <code>dlamch</code> (CMACH)<br/>
+ <i></i><code>DLAMCHF77</code> deprecated<br/>
+ subroutine <code>dlamc1</code> (BETA, T, RND, IEEE1)<br/>
+ <i></i><code>DLAMC1</code><br/>
+ subroutine <code>dlamc2</code> (BETA, T, RND, EPS, EMIN, RMIN, EMAX, RMAX)<br/>
+ <i></i><code>DLAMC2</code><br/>
+ DOUBLE PRECISION function <code>dlamc3</code> (A, B)<br/>
+ <i></i><code>DLAMC3</code><br/>
+ subroutine <code>dlamc4</code> (EMIN, START, BASE)<br/>
+ <i></i><code>DLAMC4</code><br/>
+ subroutine <code>dlamc5</code> (BETA, P, EMIN, IEEE, EMAX, RMAX)<br/>
  <i></i><code>DLAMC5</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlamc1 (integerBETA, integerT, logicalRND, logicalIEEE1)</h3>
@@ -151,7 +151,7 @@ description: "dlamchf77.f –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>A</i><br />
+</dt><dd> <i>A</i><br/>
  <i>B</i> </dd>
 <pre>
           The values A and B.

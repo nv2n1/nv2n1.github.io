@@ -11,11 +11,11 @@ description: "S-nail [v14.9.23] – send and receive Internet mail"
 <p> <code>S-nail [v14.9.23]</code> - send and receive Internet mail </p>
 <h2>SYNOPSIS</h2>
 <p> <code>s-nail</code> [-<code>DdEFinv~#</code> ] [-<code>: </code><i>spec</i> ] [-<code>A </code><i>account</i> ] [: <code>-a </code><i>attachment </i><code>:</code> ] [: <code>-b </code><i>bcc-addr </i><code>:</code> ] [: <code>-C </code><i>field: body </i><code>:</code> ] [: <code>-c </code><i>cc-addr </i><code>:</code> ] [-<code>M </code><i>type | -</i><code>m </code><i>file | -</i><code>q </code><i>file | -</i><code>t</code> ] [-<code>r </code><i>from-addr</i> ] [: <code>-S&nbsp; </code><i>var </i>[<code>= </code><i>value </i><code>: </code>] ] [-<code>s </code><i>subject</i> ] [: <code>-T </code><i>field: addr </i><code>:</code> ] [: <code>-X </code><i>cmd </i><code>:</code> ] [: <code>-Y </code><i>cmd </i><code>:</code> ] [-<code>.</code> ] : <i>to-addr </i><code>:</code> [-<code>-~ : </code><i>mta-option </i><code>:</code> ] </p>
-<p> <br />
-<code>s-nail</code> [-<code>DdEeHiNnRv~#</code> ] [-<code>: </code><i>spec</i> ] [-<code>A </code><i>account</i> ] [: <code>-C </code><i>field: body </i><code>:</code> ] [-<code>L </code><i>spec</i> ] [-<code>r </code><i>from-addr</i> ] [: <code>-S&nbsp; </code><i>var </i>[<code>= </code><i>value </i><code>: </code>] ] [-<code>u </code><i>user</i> ] [: <code>-X </code><i>cmd </i><code>:</code> ] [: <code>-Y </code><i>cmd </i><code>:</code> ] [-<code>-~ : </code><i>mta-option </i><code>:</code> ] <br />
+<p> <br/>
+<code>s-nail</code> [-<code>DdEeHiNnRv~#</code> ] [-<code>: </code><i>spec</i> ] [-<code>A </code><i>account</i> ] [: <code>-C </code><i>field: body </i><code>:</code> ] [-<code>L </code><i>spec</i> ] [-<code>r </code><i>from-addr</i> ] [: <code>-S&nbsp; </code><i>var </i>[<code>= </code><i>value </i><code>: </code>] ] [-<code>u </code><i>user</i> ] [: <code>-X </code><i>cmd </i><code>:</code> ] [: <code>-Y </code><i>cmd </i><code>:</code> ] [-<code>-~ : </code><i>mta-option </i><code>:</code> ] <br/>
 <code>s-nail</code> [-<code>DdEeHiNnRv~#</code> ] [-<code>: </code><i>spec</i> ] [-<code>A </code><i>account</i> ] [: <code>-C </code><i>field: body </i><code>:</code> ] -<code>f</code> [-<code>L </code><i>spec</i> ] [-<code>r </code><i>from-addr</i> ] [: <code>-S&nbsp; </code><i>var </i>[<code>= </code><i>value </i><code>: </code>] ] [: <code>-X </code><i>cmd </i><code>:</code> ] [: <code>-Y </code><i>cmd </i><code>:</code> ] [<i>file</i> ] [-<code>-~ : </code><i>mta-option </i><code>:</code> ] </p>
-<p> <br />
-<code>s-nail</code> -<code>h | --help</code> <br />
+<p> <br/>
+<code>s-nail</code> -<code>h | --help</code> <br/>
 <code>s-nail</code> -<code>V | --version</code>  </p>
 <h2>DESCRIPTION</h2>
 <blockquote><p> <code>Note:</code> S-nail (S-nail) will see major changes in v15.0 (circa 2022). Some backward incompatibilities cannot be avoided. Sx COMMANDS change to Sx Shell-style argument quoting , and shell metacharacters will become (more) meaningful. Some commands accept new syntax today via <code>wysh</code> ( Sx Command modifiers ) Behaviour is flagged [v15-compat] and [no v15-compat], <code>set ting</code> <i>v15-compat</i> ( Sx INTERNAL VARIABLES will choose new behaviour when applicable; giving it a value makes <code>wysh</code> an implied default. [Obsolete] flags what will vanish. </p>
@@ -31,7 +31,7 @@ description: "S-nail [v14.9.23] – send and receive Internet mail"
 <dd> <p> Activate user <code>account</code> <i>name</i> after program startup is complete (resource files loaded, only -<code>X</code> commands are to be executed), and switch to its Sx primary system mailbox (most likely the <i>inbox )</i> If activation fails the program e <code>xit s if used non-interactively, or if any of</code> <i>errexit</i> or <i>posix</i> are set. </p>
  </dd>
 <dt><code>-a </code><i>file </i>[<i>=input-charset </i>[<i>#output-charset </i>] ] </dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>&nbsp;Fl Fl attach Ns&nbsp;=.. (Send mode) Attach <i>file</i> For (Compose mode) opportunities refer to <code>~@</code> and <code>~^</code> <i>file</i> is subject to tilde expansion (see Sx Filename transformations and <code>folder )</code> if it is not accessible but contains a `=&#8216; character, anything before the last `=&#8216; will be used as the filename, anything thereafter as a character set specification, as shown. </p>
 <p> If only an input character set is specified, the input side is fixed, and no character set conversion will be applied; an empty or the special string hyphen-minus `-&#8216; is taken for <i>ttycharset</i> (the default). If an output character set has also been specified the desired conversion is performed immediately, not considering file type and content, except for an empty string or hyphen-minus `-&#8216; , which select the default conversion algorithm (see Sx Character sets ) : no immediate conversion is performed, <i>file</i> and its contents will be MIME-classified ( Sx HTML mail and MIME attachments , The mime.types files) first --- only the latter mode is available unless <i>features</i> includes `,+iconv,&#8216; </p>
  </dd>
@@ -720,7 +720,7 @@ $ s-nail -Sspam-interface=spamc -Sspam-maxsize=500000 \
 set folder-hook-SOMEFOLDER=spamdelhook
 </code></pre>
 </blockquote>
-<p> See also the documentation for the variables <i>spam-interface , spam-maxsize</i> <i>spamc-command , spamc-arguments , spamc-user</i> <i>spamfilter-ham , spamfilter-noham , spamfilter-nospam ,</i> <br />
+<p> See also the documentation for the variables <i>spam-interface , spam-maxsize</i> <i>spamc-command , spamc-arguments , spamc-user</i> <i>spamfilter-ham , spamfilter-noham , spamfilter-nospam ,</i> <br/>
 &nbsp;<wbr>&nbsp;spamfilter-rate and <i>spamfilter-rate-scanscore</i>  </p>
 <h2>COMMANDS</h2>
 <p> S-nail reads input in lines. An unquoted reverse solidus `\&#8216; at the end of a command line ``escapes&#8217;&#8216; the newline character: it is discarded and the next line of input is used as a follow-up line, with all leading whitespace removed; once an entire line is completed, the whitespace characters <code>space , tabulator , newline</code> as well as those defined by the variable <i>ifs</i> are removed from the beginning and end. Placing any whitespace characters at the beginning of a line will prevent a possible addition of the command line to the [Option]al <code>history</code> </p>
@@ -2406,7 +2406,7 @@ call work 0
 <dd> <p> (Read-only) Addresses for contact per email and web, respectively, for bug reports, suggestions, or anything else regarding S-nail. The former can be used directly: `?&#8216; Ns Ic eval Ns Ic mail Ns $contact-mail . </p>
  </dd>
 <dt><i>content-description-forwarded-message</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;content-description-quote-attachment ,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;content-description-smime-message ,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;content-description-smime-signature [Option](partially) Strings which will be placed in according `Content-Description:&#8216; headers if non-empty. They all have default values, for example `Forwarded&#8217; message . </p>
  </dd>
 <dt><i>crt</i></dt>
@@ -3212,7 +3212,7 @@ $ s-nail -Ssocks-proxy=[socks5://]localhost:10000
 <dd> <p> Interaction with <a href="/docs/linux/man/1-spamc/">spamc</a>(1) from the <a href="/docs/linux/man/1-spamassassin/">spamassassin</a>(1) ( Lk <a rel="nofollow" href="http://spamassassin.apache.org">http://spamassassin.apache.org</a> SpamAssassin suite. Different to the generic filter interface S-nail will automatically add the correct arguments for a given command and has the necessary knowledge to parse the program&#8217;s output. A default value for <i>spamc-command</i> will have been compiled into the S-nail binary if <a href="/docs/linux/man/1-spamc/">spamc</a>(1) has been found in <code>PATH</code> during compilation. Shall it be necessary to define a specific connection type (rather than using a configuration file for that), the variable <i>spamc-arguments</i> can be used as in for example `-d&#8217; server.example.com -p 783 . It is also possible to specify a per-user configuration via <i>spamc-user</i> Note that this interface does not inspect the `is-spam&#8217; flag of a message for the command <code>spamforget</code> </p>
  </dd>
 <dt><code>`filter&#8217; </code></dt>
-<dd> <p> generic spam filter support via freely configurable hooks. This interface is meant for programs like <a href="/docs/linux/man/1-bogofilter/">bogofilter</a>(1) and requires according behaviour in respect to the hooks&#8217; exit status for at least the command <code>spamrate</code> ( `0&#8217; meaning a message is spam, `1&#8217; for non-spam, `2&#8217; for unsure and any other return value indicating a hard error); since the hooks can include shell code snippets diverting behaviour can be intercepted as necessary. The hooks are <i>spamfilter-ham , spamfilter-noham , spamfilter-nospam ,</i> <br />
+<dd> <p> generic spam filter support via freely configurable hooks. This interface is meant for programs like <a href="/docs/linux/man/1-bogofilter/">bogofilter</a>(1) and requires according behaviour in respect to the hooks&#8217; exit status for at least the command <code>spamrate</code> ( `0&#8217; meaning a message is spam, `1&#8217; for non-spam, `2&#8217; for unsure and any other return value indicating a hard error); since the hooks can include shell code snippets diverting behaviour can be intercepted as necessary. The hooks are <i>spamfilter-ham , spamfilter-noham , spamfilter-nospam ,</i> <br/>
 &nbsp;<wbr>&nbsp;spamfilter-rate and <i>spamfilter-spam</i> the manual section Sx Handling spam contains examples for some programs. The process environment of the hooks will have the variable <code>MAILX_FILENAME_GENERATED</code> set. Note that spam score support for <code>spamrate</code> is not supported unless the [Option]tional regular expression support is available and the <i>spamfilter-rate-scanscore</i> variable is set. </p>
  </dd></dl>
 <dt><i>spam-maxsize</i></dt>
@@ -3228,20 +3228,20 @@ $ s-nail -Ssocks-proxy=[socks5://]localhost:10000
 <dd> <p> [Option] Specify a username for per-user configuration files for the `spamc&#8217; <i>spam-interface</i> If this is set to the empty string then S-nail will use the name of the current <i>user</i> </p>
  </dd>
 <dt><i>spamfilter-ham , spamfilter-noham</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>&nbsp;spamfilter-nospam , spamfilter-rate , spamfilter-spam [Option] Command and argument hooks for the `filter&#8217; <i>spam-interface</i> The manual section Sx Handling spam contains examples for some programs. </p>
  </dd>
 <dt><i>spamfilter-rate-scanscore</i></dt>
 <dd> <p> [Option] Because of the generic nature of the `filter&#8217; <i>spam-interface</i> spam scores are not supported for it by default, but if the [Option]nal regular expression support is available then setting this variable can be used to overcome this restriction. It is interpreted as follows: first a number (digits) is parsed that must be followed by a semicolon `;&#8216; and an extended regular expression. Then the latter is used to parse the first output line of the <i>spamfilter-rate</i> hook, and, in case the evaluation is successful, the group that has been specified via the number is interpreted as a floating point scan score. </p>
  </dd>
-<dt><i>ssl-ca-dir-USER [at] HOST , ssl-ca-dir-HOST , ssl-ca-dir ,<br />
+<dt><i>ssl-ca-dir-USER [at] HOST , ssl-ca-dir-HOST , ssl-ca-dir ,<br/>
 &nbsp;<wbr>&nbsp;ssl-ca-file-USER [at] HOST , ssl-ca-file-HOST , ssl-ca-file</i></dt>
 <dd> <p> [Obsolete][Option] Predecessors of <i>tls-ca-file</i> <i>tls-ca-dir</i> </p>
  </dd>
 <dt><i>ssl-ca-flags-USER [at] HOST , ssl-ca-flags-HOST , ssl-ca-flags</i></dt>
 <dd> <p> [Obsolete][Option] Predecessor of <i>tls-ca-flags</i> </p>
  </dd>
-<dt><i>ssl-ca-no-defaults-USER [at] HOST , ssl-ca-no-defaults-HOST ,<br />
+<dt><i>ssl-ca-no-defaults-USER [at] HOST , ssl-ca-no-defaults-HOST ,<br/>
 &nbsp;<wbr>&nbsp;ssl-ca-no-defaults</i></dt>
 <dd> <p> [Obsolete](Boolean)[Option] Predecessor of <i>tls-ca-no-defaults</i> </p>
  </dd>
@@ -3254,7 +3254,7 @@ $ s-nail -Ssocks-proxy=[socks5://]localhost:10000
 <dt><i>ssl-config-file</i></dt>
 <dd> <p> [Obsolete][Option] Predecessor of <i>tls-config-file</i> </p>
  </dd>
-<dt><i>ssl-config-module-USER [at] HOST , ssl-config-module-HOST ,<br />
+<dt><i>ssl-config-module-USER [at] HOST , ssl-config-module-HOST ,<br/>
 &nbsp;<wbr>&nbsp;ssl-config-module</i></dt>
 <dd> <p> [Obsolete][Option] Predecessor of <i>tls-config-module</i> </p>
  </dd>
@@ -3346,7 +3346,7 @@ $ s-nail -Ssocks-proxy=[socks5://]localhost:10000
 <dt><i>termcap-disable</i></dt>
 <dd> <p> [Option] Disable any interaction with a terminal control library. If set only some generic fallback built-ins and possibly the content of <i>termcap</i> describe the terminal to S-nail. <code>Note</code> this variable will only be queried once at program startup and can thus only be specified in resource files or on the command line. </p>
  </dd>
-<dt><i>tls-ca-dir-USER [at] HOST , tls-ca-dir-HOST , tls-ca-dir ,<br />
+<dt><i>tls-ca-dir-USER [at] HOST , tls-ca-dir-HOST , tls-ca-dir ,<br/>
 &nbsp;<wbr>&nbsp;tls-ca-file-USER [at] HOST , tls-ca-file-HOST , tls-ca-file</i></dt>
 <dd> <p> [Option] Directory and file, respectively, for pools of trusted CA certificates in PEM (Privacy Enhanced Mail) format, for the purpose of verification of TLS server certificates. Concurrent use is possible, the file is loaded once needed first, the directory lookup is performed anew as a last resort whenever necessary. The CA certificate pool built into the TLS library can be disabled via <i>tls-ca-no-defaults</i> further fine-tuning is possible via <i>tls-ca-flags</i> The directory search requires special filename conventions, please see SSL_CTX_load_verify_locations3 and verify(1) (or c_rehash1). </p>
  </dd>
@@ -3369,14 +3369,14 @@ $ s-nail -Ssocks-proxy=[socks5://]localhost:10000
 <dt><code>trusted-first</code></dt>
 <dd> <p> Try building a chain using issuers in the trusted store first to avoid problems with server-sent legacy intermediate certificates. Newer versions of OpenSSL support alternative chain checking and enable it by default, resulting in the same behaviour; also see <code>no-alt-chains</code> </p>
  </dd></dl>
-<dt><i>tls-ca-no-defaults-USER [at] HOST , tls-ca-no-defaults-HOST ,<br />
+<dt><i>tls-ca-no-defaults-USER [at] HOST , tls-ca-no-defaults-HOST ,<br/>
 &nbsp;<wbr>&nbsp;tls-ca-no-defaults</i></dt>
 <dd> <p> (Boolean)[Option] Do not load the default CA locations that are built into the used to TLS library to verify TLS server certificates. </p>
  </dd>
 <dt><i>tls-config-file</i></dt>
 <dd> <p> [Option] If this variable is set CONF_modules_load_file3 (if announced via `,+modules-load-file,&#8216; in <i>tls-features</i> is used to allow resource file based configuration of the TLS library. This happens once the library is used first, which may also be early during startup (logged with <i>verbose )</i> If a non-empty value is given then the given file, after performing Sx Filename transformations , will be used instead of the TLS libraries global default, and it is an error if the file cannot be loaded. The application name will always be passed as `s-nail&#8217; Some TLS libraries support application-specific configuration via resource files loaded like this, please see <i>tls-config-module</i> </p>
  </dd>
-<dt><i>tls-config-module-USER [at] HOST , tls-config-module-HOST ,<br />
+<dt><i>tls-config-module-USER [at] HOST , tls-config-module-HOST ,<br/>
 &nbsp;<wbr>&nbsp;tls-config-module</i></dt>
 <dd> <p> [Option] If file based application-specific configuration via <i>tls-config-file</i> is available, announced as `,+ctx-config,&#8216; by <i>tls-features</i> indicating availability of SSL_CTX_config3, then, it becomes possible to use a central TLS configuration file for all programs, including s-nail, for example </p>
 <blockquote><pre><code># Register a configuration section for s-nail
@@ -3441,7 +3441,7 @@ Options = Bugs
 <dd> <p> [Option] It is possible to replace the verification of the connection peer certificate against the entire local pool of CAs (for more see Sx Encrypted network communication ) with the comparison against a precalculated certificate message digest, the so-called fingerprint, to be specified as the used <i>tls-fingerprint-digest</i> This fingerprint can for example be calculated with `<code>tls</code> &#8216; Ns &nbsp;fingerprint HOST . </p>
  </dd>
 <dt><i>tls-fingerprint-digest-USER [at] HOST , tls-fingerprint-digest-HOST</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>&nbsp;tls-fingerprint-digest [Option] The message digest to be used when creating TLS certificate fingerprints, the defaults, if available, in test order, being `BLAKE2s256&#8217; , `SHA256&#8217; For the complete list of digest algorithms refer to <i>smime-sign-digest</i> </p>
  </dd>
 <dt><i>tls-rand-file</i></dt>
@@ -3475,7 +3475,7 @@ Options = Bugs
 <dd> <p> Verbose mode enables logging of informational context messages. Historically a (Boolean) variable, this can either be set multiple times (what the command line option -<code>v</code> uses), or be assigned a numeric value in order to increase verbosity. Assigning the value 0 disables verbosity and thus (almost) equals <code>unset</code> The maximum number is 3. Also see <i>debug</i> </p>
  </dd>
 <dt><i>version , version-date</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>&nbsp;version-hexnum , version-major , version-minor , version-update (Read-only) S-nail version information: the first variable is a string with the complete version identification, the second the release date in ISO 8601 notation without time. The third is a 32-bit hexadecimal number with the upper 8 bits storing the major, followed by the minor and update version numbers which occupy 12 bits each. The latter three variables contain only decimal digits: the major, minor and update version numbers. The output of the command <code>version</code> will include this information. </p>
  </dd>
 <dt><i>writebackedited</i></dt>
@@ -3667,7 +3667,7 @@ set debug \
 <dd> <p> A program that can be used to edit a body or body part in the given format. (Currently unused.) </p>
  </dd>
 <dt><code>nametemplate</code></dt>
-<dd> <p> This field specifies a filename format for the `%s&#8217; format used in the shell command fields, in which `%s&#8217; will be replaced by a random string. (The filename is also stored in and passed to subprocesses via <code>MAILX_FILENAME_TEMPORARY .</code> The standard says this is ``only expected to be relevant in environments&#8217;&#8216; <br />
+<dd> <p> This field specifies a filename format for the `%s&#8217; format used in the shell command fields, in which `%s&#8217; will be replaced by a random string. (The filename is also stored in and passed to subprocesses via <code>MAILX_FILENAME_TEMPORARY .</code> The standard says this is ``only expected to be relevant in environments&#8217;&#8216; <br/>
 &nbsp;<wbr>&nbsp;where filename extensions are meaningful , and so this field is ignored unless the `%s&#8217; is a prefix, optionally followed by (ASCII) alphabetic and numeric characters, the underscore and the period. For example, to specify that a JPG file is to be passed to an image viewer with a name ending in `.jpg&#8217; , `nametemplate=%s.jpg&#8217; can be used. </p>
  </dd>
 <dt><code>needsterminal</code></dt>

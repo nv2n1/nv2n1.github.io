@@ -22,7 +22,7 @@ description: "systemd-nspawn – Spawn a namespace container for debugging, test
 <p> Use a tool like <code><a href="/docs/linux/man/8-yum/">yum</a></code>(8), <code><a href="/docs/linux/man/8-debootstrap/">debootstrap</a></code>(8), or <code>pacman</code>(8) to set up an OS directory tree suitable as file system hierarchy for <code>systemd-nspawn</code> containers. </p>
 <p> Note that <code>systemd-nspawn</code> will mount file systems private to the container to /dev, /run and similar. These will not be visible outside of the container, and their contents will be lost when the container exits. </p>
 <p> Note that running two <code>systemd-nspawn</code> containers from the same directory tree will not make processes in them see each other. The PID namespace separation of the two containers is complete and the containers will share very few runtime objects except for the underlying file system. Use <code><a href="/docs/linux/man/1-machinectl/">machinectl</a></code>(1)&#8217;s <code>login</code> command to request an additional login prompt in a running container. </p>
-<p> <code>systemd-nspawn</code> implements the m[blue]<code>Container Interface</code>m[]<font SIZE="-2">[1]</font> specification. </p>
+<p> <code>systemd-nspawn</code> implements the m[blue]<code>Container Interface</code>m[][1] specification. </p>
 <p> As a safety check <code>systemd-nspawn</code> will verify the existence of /usr/lib/os-release or /etc/os-release in the container tree before starting the container (see <code><a href="/docs/linux/man/5-os-release/">os-release</a></code>(5)). It might be necessary to add this file to the container tree manually if the OS of the container is too old to contain this file out-of-the-box.</p>
 <h2>OPTIONS</h2>
 <p> If option <code>-b</code> is specified, the arguments are used as arguments for the init binary. Otherwise, <i>COMMAND</i> specifies the program to launch in the container, and the remaining arguments are used as arguments for this program. If <code>-b</code> is not used and no arguments are specifed, a shell is launched in the container. </p>
@@ -52,7 +52,7 @@ description: "systemd-nspawn – Spawn a namespace container for debugging, test
 </dt><dd> &bull; A GUID partition table (GPT) with a single partition of type 0fc63daf-8483-4772-8e79-3d69d8477de4.</dd></dl>
 <dl>
 <dt>
-</dt><dd> &bull; A GUID partition table (GPT) with a marked root partition which is mounted as the root directory of the container. Optionally, GPT images may contain a home and/or a server data partition which are mounted to the appropriate places in the container. All these partitions must be identified by the partition types defined by the m[blue]<code>Discoverable Partitions Specification</code>m[]<font SIZE="-2">[2]</font>.</dd></dl>
+</dt><dd> &bull; A GUID partition table (GPT) with a marked root partition which is mounted as the root directory of the container. Optionally, GPT images may contain a home and/or a server data partition which are mounted to the appropriate places in the container. All these partitions must be identified by the partition types defined by the m[blue]<code>Discoverable Partitions Specification</code>m[][2].</dd></dl>
 <p> Any other partitions, such as foreign partitions, swap partitions or EFI system partitions are not mounted. May not be specified together with <code>&#8211;directory=</code>, <code>&#8211;template=</code> or <code>&#8211;ephemeral</code>.</dl>
 <p> <code>-b</code>, <code>&#8211;boot</code></p>
 <dl>

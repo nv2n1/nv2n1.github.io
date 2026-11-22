@@ -15,11 +15,11 @@ description: "sc::PumaThreadGrp –"
 <p> Inherits <code>sc::ThreadGrp</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>PumaThreadGrp</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> int <code>start_threads</code> ()<br />
- <i>Starts the threads running. </i><br />
- int <code>wait_threads</code> ()<br />
- <i>Wait for all the threads to complete. </i><br />
- <code>Ref</code>&lt; <code>ThreadLock</code> &gt; <code>new_lock</code> ()<br />
+<p> int <code>start_threads</code> ()<br/>
+ <i>Starts the threads running. </i><br/>
+ int <code>wait_threads</code> ()<br/>
+ <i>Wait for all the threads to complete. </i><br/>
+ <code>Ref</code>&lt; <code>ThreadLock</code> &gt; <code>new_lock</code> ()<br/>
  <i>Return a local object. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>PumaThreadGrp</code> class privides a concrete thread group appropriate for the intel teraflops machine.</p>

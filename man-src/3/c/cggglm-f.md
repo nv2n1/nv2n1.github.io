@@ -10,7 +10,7 @@ description: "cggglm.f –"
 <p>cggglm.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cggglm</code> (N, M, P, A, LDA, B, LDB, D, X, Y, WORK, LWORK, INFO)<br />
+<p>subroutine <code>cggglm</code> (N, M, P, A, LDA, B, LDB, D, X, Y, WORK, LWORK, INFO)<br/>
  <i></i><code> CGGEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cggglm (integerN, integerM, integerP, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( * )D, complex, dimension( * )X, complex, dimension( * )Y, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

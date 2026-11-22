@@ -12,19 +12,19 @@ description: "HAProxy – fast and reliable http reverse proxy and load balancer
 <h2>SYNOPSIS</h2>
 <p> haproxy -f &lt;configuration file&gt; [-L&nbsp;<wbr>&lt;name&gt;] [-n maxconn] [-N maxconn] [-C&nbsp;<wbr>&lt;dir&gt;] [-v|-vv] [-d] [-D] [-q] [-V] [-c] [-p&nbsp;<wbr>&lt;pidfile&gt;] [-dk] [-ds] [-de] [-dp] [-db] [-dM[&lt;byte&gt;]] [-m&nbsp;<wbr>&lt;megs&gt;] [{-sf|-st}&nbsp;<wbr>pidlist&#8230;] </p>
 <h2>DESCRIPTION</h2>
-<p> HAProxy is a TCP/HTTP reverse proxy which is particularly suited for high availability environments. Indeed, it can:<br />
-&nbsp;<wbr>&#8211; route HTTP requests depending on statically assigned cookies&nbsp;<wbr>;<br />
-&nbsp;<wbr>&#8211; spread the load among several servers while assuring server<br />
-persistence through the use of HTTP cookies&nbsp;<wbr>;<br />
-&nbsp;<wbr>&#8211; switch to backup servers in the event a main one fails&nbsp;<wbr>;<br />
-&nbsp;<wbr>&#8211; accept connections to special ports dedicated to service<br />
-monitoring&nbsp;<wbr>;<br />
-&nbsp;<wbr>&#8211; stop accepting connections without breaking existing ones&nbsp;<wbr>;<br />
-&nbsp;<wbr>&#8211; add/modify/delete HTTP headers both ways&nbsp;<wbr>;<br />
-&nbsp;<wbr>&#8211; block requests matching a particular pattern&nbsp;<wbr>;<br />
-&nbsp;<wbr>&#8211; hold clients to the right application server depending on<br />
-application cookies<br />
-&nbsp;<wbr>&#8211; report detailed status as HTML pages to authenticated users from an<br />
+<p> HAProxy is a TCP/HTTP reverse proxy which is particularly suited for high availability environments. Indeed, it can:<br/>
+&nbsp;<wbr>&#8211; route HTTP requests depending on statically assigned cookies&nbsp;<wbr>;<br/>
+&nbsp;<wbr>&#8211; spread the load among several servers while assuring server<br/>
+persistence through the use of HTTP cookies&nbsp;<wbr>;<br/>
+&nbsp;<wbr>&#8211; switch to backup servers in the event a main one fails&nbsp;<wbr>;<br/>
+&nbsp;<wbr>&#8211; accept connections to special ports dedicated to service<br/>
+monitoring&nbsp;<wbr>;<br/>
+&nbsp;<wbr>&#8211; stop accepting connections without breaking existing ones&nbsp;<wbr>;<br/>
+&nbsp;<wbr>&#8211; add/modify/delete HTTP headers both ways&nbsp;<wbr>;<br/>
+&nbsp;<wbr>&#8211; block requests matching a particular pattern&nbsp;<wbr>;<br/>
+&nbsp;<wbr>&#8211; hold clients to the right application server depending on<br/>
+application cookies<br/>
+&nbsp;<wbr>&#8211; report detailed status as HTML pages to authenticated users from an<br/>
 URI intercepted from the application. </p>
 <p> It needs very little resource. Its event-driven architecture allows it to easily handle thousands of simultaneous connections on hundreds of instances without risking the system&#8217;s stability. </p>
 <h2>OPTIONS</h2>

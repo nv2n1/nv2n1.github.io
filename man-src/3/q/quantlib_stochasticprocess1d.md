@@ -13,16 +13,16 @@ description: "QuantLib::StochasticProcess1D – 1-dimensional stochastic process
 <p> Inherits <code>QuantLib::StochasticProcess</code>. </p>
 <p> Inherited by HelperProcess, <code>ForwardMeasureProcess1D</code>, <code>GeneralizedBlackScholesProcess</code>, <code>GeometricBrownianMotionProcess</code>, <code>HullWhiteProcess</code>, <code>Merton76Process</code>, <code>OrnsteinUhlenbeckProcess</code>, and <code>SquareRootProcess</code>. </p>
 <h3>Classes</h3>
-<p>class <code>discretization</code><br />
+<p>class <code>discretization</code><br/>
  <i></i><code>discretization</code> of a 1-D stochastic process</p>
 <h3>Public Member Functions</h3>
 <p><code>1-D stochastic process interface</code> </p>
-<p> virtual Real <code>x0</code> () const =0<br />
- <i>returns the initial value of the state variable </i><br />
- virtual Real <code>drift</code> (Time t, Real x) const =0<br />
- <i>returns the drift part of the equation, i.e. $ mu(t, x_t) $ </i><br />
- virtual Real <code>diffusion</code> (Time t, Real x) const =0<br />
- <i>returns the diffusion part of the equation, i.e. $ igma(t, x_t) $ </i><br />
+<p> virtual Real <code>x0</code> () const =0<br/>
+ <i>returns the initial value of the state variable </i><br/>
+ virtual Real <code>drift</code> (Time t, Real x) const =0<br/>
+ <i>returns the drift part of the equation, i.e. $ mu(t, x_t) $ </i><br/>
+ virtual Real <code>diffusion</code> (Time t, Real x) const =0<br/>
+ <i>returns the diffusion part of the equation, i.e. $ igma(t, x_t) $ </i><br/>
  virtual Real <code>expectation</code> (Time t0, Real x0, Time dt) const </p>
 <p> virtual Real <code>stdDeviation</code> (Time t0, Real x0, Time dt) const </p>
 <p> virtual Real <code>variance</code> (Time t0, Real x0, Time dt) const </p>

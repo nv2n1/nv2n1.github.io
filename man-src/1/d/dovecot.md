@@ -10,14 +10,14 @@ description: "dovecot – a secure and highly configurable IMAP and POP3 server"
 
 <p> dovecot &#8211; a secure and highly configurable IMAP and POP3 server</p>
 <h2>SYNOPSIS</h2>
-<p> <code>dovecot</code> [<code>-Fp</code>] [<code>-c</code> <i>config-file</i>]<br />
- <code>dovecot -a</code> [<code>-c</code> <i>config-file</i>]<br />
- <code>dovecot -n</code> [<code>-c</code> <i>config-file</i>]<br />
- <code>dovecot &#8211;build-options</code><br />
- <code>dovecot &#8211;help</code><br />
- <code>dovecot &#8211;hostdomain</code><br />
- <code>dovecot &#8211;version</code><br />
- <code>dovecot reload</code><br />
+<p> <code>dovecot</code> [<code>-Fp</code>] [<code>-c</code> <i>config-file</i>]<br/>
+ <code>dovecot -a</code> [<code>-c</code> <i>config-file</i>]<br/>
+ <code>dovecot -n</code> [<code>-c</code> <i>config-file</i>]<br/>
+ <code>dovecot &#8211;build-options</code><br/>
+ <code>dovecot &#8211;help</code><br/>
+ <code>dovecot &#8211;hostdomain</code><br/>
+ <code>dovecot &#8211;version</code><br/>
+ <code>dovecot reload</code><br/>
  <code>dovecot stop</code></p>
 <h2>DESCRIPTION</h2>
 <p> Dovecot is an open source IMAP and POP3 server for Linux/UNIX-like systems, written with security primarily in mind. Dovecot is an excellent choice for both small and large installations. It&#8217;s fast, simple to set up, requires no special administration and it uses very little memory.</p>
@@ -47,7 +47,7 @@ description: "dovecot – a secure and highly configurable IMAP and POP3 server"
 <dd> Force <code>dovecot</code> to reload its configuration.</dd>
 <dt><code>stop</code></dt>
 <dd> Shutdown <code>dovecot</code> and all its child processes.</dd></dl>
-<p> When <i>shutdown_clients</i> is set to <code>no</code>, existing sessions will continue to use the old settings, after a <code>dovecot reload</code>. Also all sessions will keep alive after a <code>dovecot stop</code>.<br />
+<p> When <i>shutdown_clients</i> is set to <code>no</code>, existing sessions will continue to use the old settings, after a <code>dovecot reload</code>. Also all sessions will keep alive after a <code>dovecot stop</code>.<br/>
  By default all active sessions will be shut down.</p>
 <h2>SIGNALS</h2>
 <p> Dovecot handles the following <i>signals</i> as described:</p>

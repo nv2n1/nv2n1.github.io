@@ -13,31 +13,31 @@ description: "QwtPlotLayout –"
 <p>#include &lt;qwt_plot_layout.h&gt;</p>
 <h3>Public Types</h3>
 <p>enum <code>Option</code> { <code>AlignScales</code> = 0x01, <code>IgnoreScrollbars</code> = 0x02, <code>IgnoreFrames</code> = 0x04, <code>IgnoreLegend</code> = 0x08, <code>IgnoreTitle</code> = 0x10, <code>IgnoreFooter</code> = 0x20 } </p>
-<p> typedef QFlags&lt; <code>Option</code> &gt; <code>Options</code><br />
+<p> typedef QFlags&lt; <code>Option</code> &gt; <code>Options</code><br/>
  <i>Layout options. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotLayout</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPlotLayout</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotLayout</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPlotLayout</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setCanvasMargin</code> (int margin, int axis=-1) </p>
 <p> int <code>canvasMargin</code> (int axis) const </p>
-<p> void <code>setAlignCanvasToScales</code> (bool)<br />
- <i>Set the align-canvas-to-axis-scales flag for all axes. </i><br />
+<p> void <code>setAlignCanvasToScales</code> (bool)<br/>
+ <i>Set the align-canvas-to-axis-scales flag for all axes. </i><br/>
  void <code>setAlignCanvasToScale</code> (int axisId, bool) </p>
 <p> bool <code>alignCanvasToScale</code> (int axisId) const </p>
 <p> void <code>setSpacing</code> (int) </p>
 <p> int <code>spacing</code> () const </p>
-<p> void <code>setLegendPosition</code> (<code>QwtPlot::LegendPosition</code> pos, double ratio)<br />
- <i>Specify the position of the legend. </i><br />
- void <code>setLegendPosition</code> (<code>QwtPlot::LegendPosition</code> pos)<br />
- <i>Specify the position of the legend. </i><br />
+<p> void <code>setLegendPosition</code> (<code>QwtPlot::LegendPosition</code> pos, double ratio)<br/>
+ <i>Specify the position of the legend. </i><br/>
+ void <code>setLegendPosition</code> (<code>QwtPlot::LegendPosition</code> pos)<br/>
+ <i>Specify the position of the legend. </i><br/>
  <code>QwtPlot::LegendPosition</code> <code>legendPosition</code> () const </p>
 <p> void <code>setLegendRatio</code> (double ratio) </p>
 <p> double <code>legendRatio</code> () const </p>
 <p> virtual QSize <code>minimumSizeHint</code> (const <code>QwtPlot</code> *) const </p>
-<p> virtual void <code>activate</code> (const <code>QwtPlot</code> *, const QRectF &amp;rect, <code>Options</code> options=0x00)<br />
- <i>Recalculate the geometry of all components. </i><br />
+<p> virtual void <code>activate</code> (const <code>QwtPlot</code> *, const QRectF &amp;rect, <code>Options</code> options=0x00)<br/>
+ <i>Recalculate the geometry of all components. </i><br/>
  virtual void <code>invalidate</code> () </p>
 <p> QRectF <code>titleRect</code> () const </p>
 <p> QRectF <code>footerRect</code> () const </p>
@@ -45,16 +45,16 @@ description: "QwtPlotLayout –"
 <p> QRectF <code>scaleRect</code> (int axis) const </p>
 <p> QRectF <code>canvasRect</code> () const </p>
 <h3>Protected Member Functions</h3>
-<p>void <code>setTitleRect</code> (const QRectF &amp;)<br />
- <i>Set the geometry for the title. </i><br />
- void <code>setFooterRect</code> (const QRectF &amp;)<br />
- <i>Set the geometry for the footer. </i><br />
- void <code>setLegendRect</code> (const QRectF &amp;)<br />
- <i>Set the geometry for the legend. </i><br />
- void <code>setScaleRect</code> (int axis, const QRectF &amp;)<br />
- <i>Set the geometry for an axis. </i><br />
- void <code>setCanvasRect</code> (const QRectF &amp;)<br />
- <i>Set the geometry for the canvas. </i><br />
+<p>void <code>setTitleRect</code> (const QRectF &amp;)<br/>
+ <i>Set the geometry for the title. </i><br/>
+ void <code>setFooterRect</code> (const QRectF &amp;)<br/>
+ <i>Set the geometry for the footer. </i><br/>
+ void <code>setLegendRect</code> (const QRectF &amp;)<br/>
+ <i>Set the geometry for the legend. </i><br/>
+ void <code>setScaleRect</code> (int axis, const QRectF &amp;)<br/>
+ <i>Set the geometry for an axis. </i><br/>
+ void <code>setCanvasRect</code> (const QRectF &amp;)<br/>
+ <i>Set the geometry for the canvas. </i><br/>
  QRectF <code>layoutLegend</code> (<code>Options</code> options, const QRectF &amp;) const </p>
 <p> QRectF <code>alignLegend</code> (const QRectF &amp;<code>canvasRect</code>, const QRectF &amp;<code>legendRect</code>) const </p>
 <p> void <code>expandLineBreaks</code> (<code>Options</code> options, const QRectF &amp;rect, int &amp;dimTitle, int &amp;dimFooter, int dimAxes[<code>QwtPlot::axisCnt</code>]) const </p>
@@ -90,8 +90,8 @@ description: "QwtPlotLayout –"
 <p>Recalculate the geometry of all components. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plot</i> Plot to be layout<br />
- <i>plotRect</i> Rectangle where to place the components<br />
+<dd><i>plot</i> Plot to be layout<br/>
+ <i>plotRect</i> Rectangle where to place the components<br/>
  <i>options</i> Layout options</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -116,7 +116,7 @@ description: "QwtPlotLayout –"
 <p>Align the legend to the canvas </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>canvasRect</i> Geometry of the canvas<br />
+<dd><i>canvasRect</i> Geometry of the canvas<br/>
  <i>legendRect</i> Maximum geometry for the legend</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -125,8 +125,8 @@ description: "QwtPlotLayout –"
 <p>Align the ticks of the axis to the canvas borders using the empty corners. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>options</i> Layout options<br />
- <i>canvasRect</i> Geometry of the canvas ( IN/OUT )<br />
+<dd><i>options</i> Layout options<br/>
+ <i>canvasRect</i> Geometry of the canvas ( IN/OUT )<br/>
  <i>scaleRect</i> Geometries of the scales ( IN/OUT )</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -152,10 +152,10 @@ description: "QwtPlotLayout –"
 <p>Expand all line breaks in text labels, and calculate the height of their widgets in orientation of the text. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>options</i> Options how to layout the legend<br />
- <i>rect</i> Bounding rectangle for title, footer, axes and canvas.<br />
- <i>dimTitle</i> Expanded height of the title widget<br />
- <i>dimFooter</i> Expanded height of the footer widget<br />
+<dd><i>options</i> Options how to layout the legend<br/>
+ <i>rect</i> Bounding rectangle for title, footer, axes and canvas.<br/>
+ <i>dimTitle</i> Expanded height of the title widget<br/>
+ <i>dimFooter</i> Expanded height of the footer widget<br/>
  <i>dimAxis</i> Expanded heights of the axis in axis orientation.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -176,7 +176,7 @@ description: "QwtPlotLayout –"
 <p>Find the geometry for the legend </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>options</i> Options how to layout the legend<br />
+<dd><i>options</i> Options how to layout the legend<br/>
  <i>rect</i> Rectangle where to place the legend</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -235,7 +235,7 @@ description: "QwtPlotLayout –"
 <p> The axisId parameter is somehow confusing as it identifies a border of the plot and not the axes, that are aligned. F.e when <code>QwtPlot::yLeft</code> is set, the left end of the the x-axes ( <code>QwtPlot::xTop</code>, <code>QwtPlot::xBottom</code> ) is aligned. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>on</i> New align-canvas-to-axis-scales setting</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -255,7 +255,7 @@ description: "QwtPlotLayout –"
 <p>Change a margin of the canvas. The margin is the space above/below the scale ticks. A negative margin will be set to -1, excluding the borders of the scales. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>margin</i> New margin<br />
+<dd><i>margin</i> New margin<br/>
  <i>axis</i> One of <code>QwtPlot::Axis</code>. Specifies where the position of the margin. -1 means margin at all borders.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -277,7 +277,7 @@ description: "QwtPlotLayout –"
 <p>Specify the position of the legend. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> The legend&#8217;s position.<br />
+<dd><i>pos</i> The legend&#8217;s position.<br/>
  <i>ratio</i> Ratio between legend and the bounding rectangle of title, footer, canvas and axes. The legend will be shrunk if it would need more space than the given ratio. The ratio is limited to ]0.0 .. 1.0]. In case of &lt;= 0.0 it will be reset to the default ratio. The default vertical/horizontal ratio is 0.33/0.5.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -307,7 +307,7 @@ description: "QwtPlotLayout –"
 <p>Set the geometry for an axis. This method is intended to be used from derived layouts overloading <code>activate()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> Axis index<br />
+<dd><i>axis</i> Axis index<br/>
  <i>rect</i> Rectangle for the scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

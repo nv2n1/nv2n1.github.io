@@ -46,24 +46,24 @@ talloc_free(str2); /* we can not use free() on str2 */
 <dd> it creates a more natural way of managing data structures.</dd></dl>
 <h3>Example</h3>
 <p> We have a structure that stores basic information about a user &#8211; his/her name, identification number and groups he/she is a member of: </p>
-<p>struct user {<br />
-    uid_t uid;<br />
-    char *username;<br />
-    size_t num_groups;<br />
-    char **groups;<br />
+<p>struct user {<br/>
+    uid_t uid;<br/>
+    char *username;<br/>
+    size_t num_groups;<br/>
+    char **groups;<br/>
 };</p>
 <p> We will allocate this structure using talloc. The result will be the following context tree: </p>
-<p>/* create new top level context */<br />
-struct user *user = talloc(NULL, struct user);<br />
-user-&gt;uid = 1000;<br />
-user-&gt;num_groups = N;<br />
-/* make user the parent of following contexts */<br />
-user-&gt;username = talloc_strdup(user, &#8220;Test user&#8221;);<br />
-user-&gt;groups = talloc_array(user, char *, user-&gt;num_groups);<br />
-for (i = 0; i &lt; user-&gt;num_groups; i++) {<br />
-    /* make user-&gt;groups the parent of following context */<br />
-    user-&gt;groups[i] = talloc_asprintf(user-&gt;groups,<br />
-                                      &#8220;Test group %d&#8221;, i);<br />
+<p>/* create new top level context */<br/>
+struct user *user = talloc(NULL, struct user);<br/>
+user-&gt;uid = 1000;<br/>
+user-&gt;num_groups = N;<br/>
+/* make user the parent of following contexts */<br/>
+user-&gt;username = talloc_strdup(user, &#8220;Test user&#8221;);<br/>
+user-&gt;groups = talloc_array(user, char *, user-&gt;num_groups);<br/>
+for (i = 0; i &lt; user-&gt;num_groups; i++) {<br/>
+    /* make user-&gt;groups the parent of following context */<br/>
+    user-&gt;groups[i] = talloc_asprintf(user-&gt;groups,<br/>
+                                      &#8220;Test group %d&#8221;, i);<br/>
 }</p>
 <p> This way, we have gained a lot of additional capabilities, one of which is very simple deallocation of the structure and all of its elements. </p>
 <p> With the C standard library we need first to iterate over the array of groups and free every element separately. Then we must deallocate the array that stores them. Next we deallocate the username and as the last step free the structure itself. But with talloc, the only operation we need to execute is freeing the structure context. Its descendants will be freed automatically. </p>
@@ -78,13 +78,13 @@ talloc_free(user);
 <h3>Type-safe functions</h3>
 <p> It allocates the size that is necessary for the given type and returns a new, properly-casted pointer. This is the preferred way to create a new context as we can rely on the compiler to detect type mismatches. </p>
 <p> The name of the context is automatically set to the name of the data type which is used to simulate a dynamic type system. </p>
-<p>struct user *user = talloc(ctx, struct user);<br />
-/* initialize to default values */<br />
-user-&gt;uid = 0;<br />
-user-&gt;name = NULL;<br />
-user-&gt;num_groups = 0;<br />
-user-&gt;groups = NULL;<br />
-/* or we can achieve the same result with */<br />
+<p>struct user *user = talloc(ctx, struct user);<br/>
+/* initialize to default values */<br/>
+user-&gt;uid = 0;<br/>
+user-&gt;name = NULL;<br/>
+user-&gt;num_groups = 0;<br/>
+user-&gt;groups = NULL;<br/>
+/* or we can achieve the same result with */<br/>
 struct user *user_zero = talloc_zero(ctx, struct user);</p>
 <h3>Zero-length contexts</h3>
 <p> The zero-length context is basically a context without any special semantical meaning. We can use it the same way as any other context. The only difference is that it consists only of the meta data about the context. Therefore, it is strictly of type TALLOC_CTX*. It is often used in cases where we want to aggregate several data structures under one parent (zero-length) context, such as a temporary context to contain memory needed within a single function that is not interesting to the caller. Allocating on a zero-length temporary context will make clean-up of the function simpler. </p>

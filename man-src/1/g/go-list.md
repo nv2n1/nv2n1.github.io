@@ -12,7 +12,7 @@ description: "go-list – list packages or modules"
 <h2>SYNOPSIS</h2>
 <p> <code>go list</code> [<code>-f</code> <i>format</i>] [<code>-json</code>] [<code>-m</code>] [<i>list flags</i>] [<i>build flags</i>] [<i>packages</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> List lists the packages named by the import paths, one per line.<br />
+<p> List lists the packages named by the import paths, one per line.<br/>
  The most commonly-used flags are -f and -json, which control the form of the output printed for each package. Other list flags, documented below, control more specific details. </p>
 <p> The default output shows the package import path: </p>
 <pre>
@@ -93,26 +93,26 @@ type Package struct {
 </code></pre>
 <p> Packages stored in vendor directories report an ImportPath that includes the path to the vendor directory (for example, &quot;d/vendor/p&quot; instead of &quot;p&quot;), so that the ImportPath uniquely identifies a given copy of a package. The Imports, Deps, TestImports, and XTestImports lists also contain these expanded import paths. See golang.org/s/go15vendor for more about vendoring. </p>
 <p> The error information, if any, is </p>
-<p>type PackageError struct {<br />
-    ImportStack[] string // shortest path from package named on command line to this one<br />
-        Pos string       // position of error (if present, file:line:col)<br />
-            Err string   // the error itself<br />
+<p>type PackageError struct {<br/>
+    ImportStack[] string // shortest path from package named on command line to this one<br/>
+        Pos string       // position of error (if present, file:line:col)<br/>
+            Err string   // the error itself<br/>
 }</p>
 <p> The module information is a Module struct, defined in the discussion of list -m below. </p>
 <p> The template function &quot;join&quot; calls strings.Join. </p>
 <p> The template function &quot;context&quot; returns the build context, defined as: </p>
-<p>type Context struct {<br />
-    GOARCH string                                                // target architecture<br />
-        GOOS string                                              // target operating system<br />
-            GOROOT string                                        // Go root<br />
-                GOPATH string                                    // Go path<br />
-                    CgoEnabled bool                              // whether cgo can be used<br />
-                        UseAllFiles bool                         // use files regardless of +build lines, file names<br />
-                            Compiler string                      // compiler to assume when computing target paths<br />
-                                BuildTags[] string               // build constraints to match in +build lines<br />
-                                    ToolTags[] string            // toolchain-specific build constraints<br />
-                                        ReleaseTags[] string     // releases the current release is compatible with<br />
-                                            InstallSuffix string // suffix to use in the name of the install dir<br />
+<p>type Context struct {<br/>
+    GOARCH string                                                // target architecture<br/>
+        GOOS string                                              // target operating system<br/>
+            GOROOT string                                        // Go root<br/>
+                GOPATH string                                    // Go path<br/>
+                    CgoEnabled bool                              // whether cgo can be used<br/>
+                        UseAllFiles bool                         // use files regardless of +build lines, file names<br/>
+                            Compiler string                      // compiler to assume when computing target paths<br/>
+                                BuildTags[] string               // build constraints to match in +build lines<br/>
+                                    ToolTags[] string            // toolchain-specific build constraints<br/>
+                                        ReleaseTags[] string     // releases the current release is compatible with<br/>
+                                            InstallSuffix string // suffix to use in the name of the install dir<br/>
 }</p>
 <p> For more information about the meaning of these fields see the documentation for the go/build package&#8217;s Context type.</p>
 <dt><code>-json</code></dt>
@@ -135,21 +135,21 @@ type Package struct {
 <dt><code>-m</code></dt>
 <dd> The -m flag causes list to list modules instead of packages. </dd>
 <p> When listing modules, the -f flag still specifies a format template applied to a Go struct, but now a Module struct: </p>
-<p>type Module struct {<br />
-    Path string                                                    // module path<br />
-        Version string                                             // module version<br />
-            Versions[] string                                      // available module versions (with -versions)<br />
-                Replace *Module                                    // replaced by this module<br />
-                    Time *time.Time                                // time version was created<br />
-                        Update *Module                             // available update, if any (with -u)<br />
-                            Main bool                              // is this the main module?<br />
-                                Indirect bool                      // is this module only an indirect dependency of main module?<br />
-                                    Dir string                     // directory holding files for this module, if any<br />
-                                        GoMod string               // path to go.mod file used when loading this module, if any<br />
-                                            GoVersion string       // go version used in module<br />
-                                                Error *ModuleError // error loading module<br />
-} type ModuleError struct {<br />
-    Err string // the error itself<br />
+<p>type Module struct {<br/>
+    Path string                                                    // module path<br/>
+        Version string                                             // module version<br/>
+            Versions[] string                                      // available module versions (with -versions)<br/>
+                Replace *Module                                    // replaced by this module<br/>
+                    Time *time.Time                                // time version was created<br/>
+                        Update *Module                             // available update, if any (with -u)<br/>
+                            Main bool                              // is this the main module?<br/>
+                                Indirect bool                      // is this module only an indirect dependency of main module?<br/>
+                                    Dir string                     // directory holding files for this module, if any<br/>
+                                        GoMod string               // path to go.mod file used when loading this module, if any<br/>
+                                            GoVersion string       // go version used in module<br/>
+                                                Error *ModuleError // error loading module<br/>
+} type ModuleError struct {<br/>
+    Err string // the error itself<br/>
 }</p>
 <p> The file GoMod refers to may be outside the module directory if the module is in the module cache or if the -modfile flag is used. </p>
 <p> The default output is to print the module path and then information about the version and replacement if any. For example, &#8216;go list -m all&#8217; might print: </p>

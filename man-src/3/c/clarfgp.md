@@ -11,7 +11,7 @@ description: "clarfgp.f –"
 <p> clarfgp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clarfgp</code> (N, ALPHA, X, INCX, TAU)<br />
+<p> subroutine <code>clarfgp</code> (N, ALPHA, X, INCX, TAU)<br/>
  <i></i><code>CLARFGP</code> generates an elementary reflector (Householder matrix) with non-negatibe beta.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clarfgp (integerN, complexALPHA, complex, dimension( * )X, integerINCX, complexTAU)</h3>

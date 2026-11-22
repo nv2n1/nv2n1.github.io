@@ -15,13 +15,13 @@ struct remctl *remctl_new(void);</code></pre>
 
 <h2>Description</h2>
 
-<i>remctl_new()</i> creates a new remctl client. The resulting remctl struct is opaque from the perspective of the caller, but should be the first argument to all subsequent calls into the remctl <font SIZE="-1">API. </font> Normally, the next call after <i>remctl_new()</i> would be <i>remctl_open()</i> to connect to a remote server. 
+<i>remctl_new()</i> creates a new remctl client. The resulting remctl struct is opaque from the perspective of the caller, but should be the first argument to all subsequent calls into the remctl API.  Normally, the next call after <i>remctl_new()</i> would be <i>remctl_open()</i> to connect to a remote server. 
 
  The resulting struct should be freed by calling <i>remctl_close()</i>.
 
 <h2>Return Value</h2>
 
-<i>remctl_new()</i> returns a pointer to an opaque remctl struct on success and <font SIZE="-1">NULL</font> on failure. If it returns <font SIZE="-1">NULL,</font> errno will be set to an appropriate error code (normally <font SIZE="-1">ENOMEM</font>).
+<i>remctl_new()</i> returns a pointer to an opaque remctl struct on success and NULL on failure. If it returns NULL, errno will be set to an appropriate error code (normally ENOMEM).
 
 <h2>Compatibility</h2>
 

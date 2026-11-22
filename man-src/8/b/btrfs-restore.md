@@ -13,7 +13,7 @@ description: "btrfs-restore – try to restore files from a damaged btrfs filesy
 <h2>Description</h2>
 <p><code>btrfs restore</code> is used to try to salvage files from a damaged filesystem and restore them into <i>&lt;path&gt;</i> or just list the subvolume tree roots. The filesystem image is not modified. If the filesystem is damaged and cannot be repaired by the other tools (<code><a href="/docs/linux/man/8-btrfs-check/">btrfs-check</a></code>(8) or <code><a href="/docs/linux/man/8-btrfs-rescue/">btrfs-rescue</a></code>(8)), <code>btrfs restore</code> could be used to retrieve file data, as far as the metadata are readable. The checks done by restore are less strict and the process is usually able to get far enough to retrieve data from the whole filesystem. This comes at a cost that some data might be incomplete or from older versions if they&#8217;re available. There are several options to attempt restoration of various file metadata type. You can try a dry run first to see how well the process goes and use further options to extend the set of restored metadata. For images with damaged tree structures, there are several options to point the process to some spare copy.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  It is recommended to read the following btrfs wiki page if your data is not salvaged with default option: m[blue]<code><a rel="nofollow" href="https://btrfs.wiki.kernel.org/index.php/Restore">https://btrfs.wiki.kernel.org/index.php/Restore</a></code>m[] </dd>
 <h2>Options</h2>
 <p>-s|&#8211;snapshots</p>

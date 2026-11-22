@@ -60,9 +60,9 @@ description: "Suil –"
 <p>Create a new UI host descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>write_func</i> Function to send a value to a plugin port.<br />
- <i>index_func</i> Function to get the index for a port by symbol.<br />
- <i>subscribe_func</i> Function to subscribe to port updates.<br />
+<dd><i>write_func</i> Function to send a value to a plugin port.<br/>
+ <i>index_func</i> Function to get the index for a port by symbol.<br/>
+ <i>subscribe_func</i> Function to subscribe to port updates.<br/>
  <i>unsubscribe_func</i> Function to unsubscribe from port updates.</dd></dl>
 <h3>void suil_host_set_touch_func (<code>SuilHost</code> *host, <code>SuilTouchFunc</code>touch_func)</h3>
 <p>Set a touch function for a host descriptor. Note this function will only be called if the UI supports it.</p>
@@ -72,7 +72,7 @@ description: "Suil –"
 <p>Check if suil can wrap a UI type. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>host_type_uri</i> The URI of the desired widget type of the host, corresponding to the type_uri parameter of <code>suil_instance_new()</code>.<br />
+<dd><i>host_type_uri</i> The URI of the desired widget type of the host, corresponding to the type_uri parameter of <code>suil_instance_new()</code>.<br/>
  <i>ui_type_uri</i> The URI of the UI widget type.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -82,14 +82,14 @@ description: "Suil –"
 <p> Note that some situations (Gtk in Qt, Windows in Gtk) require a parent container to be passed as a feature with URI LV2_UI__parent (<a rel="nofollow" href="http://lv2plug.in/ns/extensions/ui#ui)">http://lv2plug.in/ns/extensions/ui#ui)</a> in order to work correctly. The data must point to a single child container of the host widget set. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>host</i> Host descriptor.<br />
- <i>controller</i> Opaque host controller pointer.<br />
- <i>container_type_uri</i> URI of the desired host container widget type.<br />
- <i>plugin_uri</i> URI of the plugin to instantiate this UI for.<br />
- <i>ui_uri</i> URI of the specifically desired UI.<br />
- <i>ui_type_uri</i> URI of the actual UI widget type.<br />
- <i>ui_bundle_path</i> Path of the UI bundle.<br />
- <i>ui_binary_path</i> Path of the UI binary.<br />
+<dd><i>host</i> Host descriptor.<br/>
+ <i>controller</i> Opaque host controller pointer.<br/>
+ <i>container_type_uri</i> URI of the desired host container widget type.<br/>
+ <i>plugin_uri</i> URI of the plugin to instantiate this UI for.<br/>
+ <i>ui_uri</i> URI of the specifically desired UI.<br/>
+ <i>ui_type_uri</i> URI of the actual UI widget type.<br/>
+ <i>ui_bundle_path</i> Path of the UI bundle.<br/>
+ <i>ui_binary_path</i> Path of the UI binary.<br/>
  <i>features</i> NULL-terminated array of supported features, or NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -105,10 +105,10 @@ description: "Suil –"
 <p>Notify the UI about a change in a plugin port. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>instance</i> UI instance.<br />
- <i>port_index</i> Index of the port which has changed.<br />
- <i>buffer_size</i> Size of buffer in bytes.<br />
- <i>format</i> Format of buffer (mapped URI, or 0 for float).<br />
+<dd><i>instance</i> UI instance.<br/>
+ <i>port_index</i> Index of the port which has changed.<br/>
+ <i>buffer_size</i> Size of buffer in bytes.<br/>
+ <i>format</i> Format of buffer (mapped URI, or 0 for float).<br/>
  <i>buffer</i> Change data, e.g. the new port value.</dd></dl>
 <p> This function can be used to notify the UI about any port change, but in the simplest case is used to set the value of lv2:ControlPort ports. For simplicity, this is a special case where format is 0, buffer_size is 4, and buffer should point to a single float. </p>
 <p> The buffer must be valid only for the duration of this call, the UI must not keep a reference to it.</p>

@@ -43,7 +43,7 @@ description: "cupsctl – configure cupsd.conf options"
 <h2>Known Issues</h2>
 <p>You cannot set the Listen or Port directives using <code>cupsctl</code>.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-cupsd-conf/">cupsd.conf</a></code>(5), <code><a href="/docs/linux/man/8-cupsd/">cupsd</a></code>(8),<br />
+<p><code><a href="/docs/linux/man/5-cupsd-conf/">cupsd.conf</a></code>(5), <code><a href="/docs/linux/man/8-cupsd/">cupsd</a></code>(8),<br/>
  CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2021-2022 by OpenPrinting.</p>

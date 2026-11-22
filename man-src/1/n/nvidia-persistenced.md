@@ -50,7 +50,7 @@ description: "nvidia-persistenced – A daemon to maintain persistent software s
 <dd> Starts the NVIDIA Persistence Daemon so that it will run as user &#8216;foo&#8217;. </dd>
 </dl>
 <h2>AUTHOR</h2>
-<p> Will Davis<br />
+<p> Will Davis<br/>
  NVIDIA Corporation </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nvidia-smi/">nvidia-smi</a></code>(1), <code>nvidia-modprobe</code>(1) </p>

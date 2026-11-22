@@ -10,7 +10,7 @@ description: "zdotu.f –"
 <p>zdotu.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>COMPLEX *16 function <code>zdotu</code> (N, ZX, INCX, ZY, INCY)<br />
+<p>COMPLEX *16 function <code>zdotu</code> (N, ZX, INCX, ZY, INCY)<br/>
  <i></i><code>ZDOTU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>COMPLEX*16 function zdotu (integerN, complex*16, dimension(*)ZX, integerINCX, complex*16, dimension(*)ZY, integerINCY)</h3>

@@ -80,11 +80,11 @@ int gethostbyname2_r(const char *name, int af,
 <p> The <code><a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a></code>(5) file is the modern way of controlling the order of host lookups. </p>
 <p> In glibc 2.4 and earlier, the <i>order</i> keyword was used to control the order of host lookups as defined in <i>/etc/host.conf</i> (<code><a href="/docs/linux/man/5-host-conf/">host.conf</a></code>(5)). </p>
 <p> The <i>hostent</i> structure is defined in <i>&lt;netdb.h&gt;</i> as follows: </p>
-<p> struct hostent {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*h_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;official name of host&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;**h_aliases;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;alias list&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;h_addrtype;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;host address type&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;h_length;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;length of address&nbsp;*/<br />
+<p> struct hostent {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*h_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;official name of host&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;**h_aliases;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;alias list&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;h_addrtype;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;host address type&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;h_length;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;length of address&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;**h_addr_list;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;list of addresses&nbsp;*/ } #define h_addr h_addr_list[0] /* for backward compatibility */ </p>
 <p> The members of the <i>hostent</i> structure are:</p>
 <dl>
@@ -133,28 +133,28 @@ int gethostbyname2_r(const char *name, int af,
 <tr VALIGN=top>
 <td> <code>gethostbyname</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:hostbyname env<br />
+<td> MT-Unsafe race:hostbyname env<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>gethostbyaddr</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:hostbyaddr env<br />
+<td> MT-Unsafe race:hostbyaddr env<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>sethostent</code>(),<br />
- <code>endhostent</code>(),<br />
+<td> <code>sethostent</code>(),<br/>
+ <code>endhostent</code>(),<br/>
  <code>gethostent_r</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:hostent env<br />
+<td> MT-Unsafe race:hostent env<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>herror</code>(),<br />
+<td> <code>herror</code>(),<br/>
  <code>hstrerror</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe
@@ -163,14 +163,14 @@ int gethostbyname2_r(const char *name, int af,
 <tr VALIGN=top>
 <td> <code>gethostent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:hostent<br />
+<td> MT-Unsafe race:hostent<br/>
  race:hostentbuf env locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>gethostbyname2</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:hostbyname2<br />
+<td> MT-Unsafe race:hostbyname2<br/>
  env locale
 </td>
 </tr>

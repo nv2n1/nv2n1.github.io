@@ -12,9 +12,9 @@ description: "unexpunge – restore expunged (but yet unremoved) messages"
 
 <p>unexpunge &#8211; restore expunged (but yet unremoved) messages</p>
 <h2>Synopsis</h2>
-<p><code>unexpunge</code> [ <code>-C</code> <i>config-file</i> ] <code>-l</code> <i>mailbox</i><br />
- <code>unexpunge</code> [ <code>-C</code> <i>config-file</i> ] <code>-t time-interval</code> [ <code>-d</code> ] [ <code>-v</code> ] <i>mailbox</i><br />
- <code>unexpunge</code> [ <code>-C</code> <i>config-file</i> ] <code>-a</code> [ <code>-d</code> ] [ <code>-v</code> ] <i>mailbox</i><br />
+<p><code>unexpunge</code> [ <code>-C</code> <i>config-file</i> ] <code>-l</code> <i>mailbox</i><br/>
+ <code>unexpunge</code> [ <code>-C</code> <i>config-file</i> ] <code>-t time-interval</code> [ <code>-d</code> ] [ <code>-v</code> ] <i>mailbox</i><br/>
+ <code>unexpunge</code> [ <code>-C</code> <i>config-file</i> ] <code>-a</code> [ <code>-d</code> ] [ <code>-v</code> ] <i>mailbox</i><br/>
  <code>unexpunge</code> [ <code>-C</code> <i>config-file</i> ] <code>-u</code> [ <code>-d</code> ] [ <code>-v</code> ] <i>mailbox uid</i>&#8230;</p>
 <h2>Description</h2>
 <p><i>Unexpunge</i> is used to restore expunged messages which have yet to be removed from the Cyrus mailspool. This utility is only useful when the server is configured to use <code>delayed</code> expunge. </p>

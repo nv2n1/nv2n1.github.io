@@ -20,9 +20,9 @@ description: "krb5plugin_kuserok_ftable_desc –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>init</i> Plugin initialization function (see <a href="/docs/linux/man/7-krb5-plugin/">krb5-plugin</a>(7))<br />
- <i>minor_version</i> The plugin minor version number (0)<br />
- <i>fini</i> Plugin finalization function<br />
+</dt><dd> <i>init</i> Plugin initialization function (see <a href="/docs/linux/man/7-krb5-plugin/">krb5-plugin</a>(7))<br/>
+ <i>minor_version</i> The plugin minor version number (0)<br/>
+ <i>fini</i> Plugin finalization function<br/>
  <i>kuserok</i> Plugin kuserok function</dd></dl>
 <p> The kuserok field is the plugin entry point that performs the traditional kuserok operation however the plugin desires. It is invoked in no particular order relative to other kuserok plugins, but it has a &#8216;rule&#8217; argument that indicates which plugin is intended to act on the rule. The plugin kuserok function must return KRB5_PLUGIN_NO_HANDLE if the rule is not applicable to it. </p>
 <p> The plugin kuserok function has the following arguments, in this order: </p>

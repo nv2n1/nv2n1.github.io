@@ -10,7 +10,7 @@ description: "clanhf.f –"
 <p>clanhf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>clanhf</code> (NORM, TRANSR, UPLO, N, A, WORK)<br />
+<p>REAL function <code>clanhf</code> (NORM, TRANSR, UPLO, N, A, WORK)<br/>
  <i></i><code>CLANHF</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a Hermitian matrix in RFP format.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function clanhf (characterNORM, characterTRANSR, characterUPLO, integerN, complex, dimension( 0: * )A, real, dimension( 0: * )WORK)</h3>

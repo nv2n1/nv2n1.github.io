@@ -293,7 +293,7 @@ Private | Shared 1 | 2 Anonymous.stack |
 <dt>
 &nbsp;6.<code>&nbsp;COMMAND&nbsp;<wbr>&nbsp;&#8212;&nbsp;<wbr>&nbsp;Command Name</code>&nbsp;or Command<code>&nbsp;Line&nbsp;</code></dt>
 <dd> Display the command line used to start a task or the name of the associated program. You toggle between command<i> line</i> and<i> name</i> with `c&#8217;, which is both a command-line option and an interactive command. </dd>
-<p> When you&#8217;ve chosen to display command lines, processes without a command line (like kernel threads) will be shown with only the program name in brackets, as in this example:<br />
+<p> When you&#8217;ve chosen to display command lines, processes without a command line (like kernel threads) will be shown with only the program name in brackets, as in this example:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[kthreadd] </p>
 <p> This field may also be impacted by the forest view display mode. See the `V&#8217; interactive command for additional information regarding that mode. </p>
 <p> <code>Note</code>: The COMMAND field, unlike most columns, is not fixed-width. When displayed, it plus any other variable width columns will be allocated all remaining screen width (up to the maximum 512 characters). Even so, such variable width fields could still suffer truncation. This is especially true for this field when command lines are being displayed (the `c&#8217; interactive command.) See topic 5c. SCROLLING a Window for additional information on accessing any truncated data. </p>
@@ -353,13 +353,13 @@ Private | Shared 1 | 2 Anonymous.stack |
 <dt>28.<code> RUSER &nbsp;&#8212;&nbsp; Real User Name </code></dt>
 <dd> The<i> real</i> user name. </dd>
 <dt>29.<code> S &nbsp;&#8212;&nbsp; Process Status </code></dt>
-<dd> The status of the task which can be one of:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>D</code>&nbsp;=&nbsp;uninterruptible sleep<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>I</code>&nbsp;=&nbsp;idle<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>R</code>&nbsp;=&nbsp;running<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>S</code>&nbsp;=&nbsp;sleeping<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>T</code>&nbsp;=&nbsp;stopped by job control signal<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>t</code>&nbsp;=&nbsp;stopped by debugger during trace<br />
+<dd> The status of the task which can be one of:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>D</code>&nbsp;=&nbsp;uninterruptible sleep<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>I</code>&nbsp;=&nbsp;idle<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>R</code>&nbsp;=&nbsp;running<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>S</code>&nbsp;=&nbsp;sleeping<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>T</code>&nbsp;=&nbsp;stopped by job control signal<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>t</code>&nbsp;=&nbsp;stopped by debugger during trace<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>Z</code>&nbsp;=&nbsp;zombie </dd>
 <p> Tasks shown as running should be more properly thought of as ready to run &nbsp;&#8212;&nbsp; their task_struct is simply represented on the Linux run-queue. Even without a true SMP machine, you may see numerous tasks in this state depending on top&#8217;s delay interval and nice value. </p>
 <dt>30.<code> SHR &nbsp;&#8212;&nbsp; Shared Memory Size (KiB) </code></dt>
@@ -623,8 +623,8 @@ Private | Shared 1 | 2 Anonymous.stack |
 <dt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>b</code>&nbsp;<wbr>&nbsp;:<i>Bold/Reverse</i> toggle</dt>
 <dd> This command will impact how the `x&#8217; and `y&#8217; toggles are displayed. It may also impact the summary area when a bar graph has been selected for cpu states or memory usage via the `t&#8217; or `m&#8217; toggles. </dd>
 <dt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>x</code>&nbsp;<wbr>&nbsp;:<i>Column-Highlight</i> toggle</dt>
-<dd> Changes highlighting for the current sort field. If you forget which field is being sorted this command can serve as a quick visual reminder, providing the sort field is being displayed. The sort field might<i> not</i> be visible because:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1)&nbsp;there is insufficient<i>&nbsp;Screen Width&nbsp;</i><br />
+<dd> Changes highlighting for the current sort field. If you forget which field is being sorted this command can serve as a quick visual reminder, providing the sort field is being displayed. The sort field might<i> not</i> be visible because:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1)&nbsp;there is insufficient<i>&nbsp;Screen Width&nbsp;</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2)&nbsp;the&nbsp;`f&#8217;&nbsp;interactive command turned it&nbsp;<i>Off</i> </dd>
 <p> <code>Note</code>: Whenever Searching and/or Other Filtering is active in a window, column highlighting is temporarily disabled. See the notes at the end of topics 5d. SEARCHING and 5e. FILTERING for an explanation why. </p>
 <dt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>y</code>&nbsp;<wbr>&nbsp;:<i>Row-Highlight</i> toggle</dt>
@@ -681,8 +681,8 @@ Private | Shared 1 | 2 Anonymous.stack |
       T         TIME+                         Yes
 </pre>
 <p> Before using any of the following sort provisions, top suggests that you temporarily turn on column highlighting using the `x&#8217; interactive command. That will help ensure that the actual sort environment matches your intent. </p>
-<p> The following interactive commands will<code> only</code> be honored when the current sort field is<code> visible</code>. The sort field might<i> not</i> be visible because:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1)&nbsp;there is insufficient<i>&nbsp;Screen Width&nbsp;</i><br />
+<p> The following interactive commands will<code> only</code> be honored when the current sort field is<code> visible</code>. The sort field might<i> not</i> be visible because:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1)&nbsp;there is insufficient<i>&nbsp;Screen Width&nbsp;</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2)&nbsp;the&nbsp;`f&#8217;&nbsp;interactive command turned it&nbsp;<i>Off</i> </p>
 <dl>
 <dt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>&lt;</code>&nbsp;<wbr>&nbsp;:<i>Move-Sort-Field-Left </i></dt>

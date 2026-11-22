@@ -10,12 +10,12 @@ description: "ql/math/interpolations/convexmonotoneinterpolation.hpp – convex 
 
 <p> ql/math/interpolations/convexmonotoneinterpolation.hpp &#8211; convex monotone interpolation method </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/math/interpolation.hpp&gt;<br />
+<p> #include &lt;ql/math/interpolation.hpp&gt;<br/>
  #include &lt;map&gt; </p>
 <h3>Classes</h3>
-<p> class <code>ConvexMonotoneInterpolation&lt; I1, I2 &gt;</code><br />
- <i>Convex monotone yield-curve interpolation method. </i><br />
- class <code>ConvexMonotone</code><br />
+<p> class <code>ConvexMonotoneInterpolation&lt; I1, I2 &gt;</code><br/>
+ <i>Convex monotone yield-curve interpolation method. </i><br/>
+ class <code>ConvexMonotone</code><br/>
  <i>Convex-monotone interpolation factory and traits. </i></p>
 <h2>Detailed Description</h2>
 <p> convex monotone interpolation method </p>

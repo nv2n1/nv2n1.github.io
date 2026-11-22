@@ -10,7 +10,7 @@ description: "ibdmtr – Fabric Trace Route"
 
 <p> <code>ibdmtr</code> &#8211; Fabric Trace Route</p>
 <h2>SYNOPSYS</h2>
-<p> ibdmtr [-v][-h] {-c &lt;cbaling file&gt;|-t &lt;topo file&gt;} -s &lt;sm node name&gt;<br />
+<p> ibdmtr [-v][-h] {-c &lt;cbaling file&gt;|-t &lt;topo file&gt;} -s &lt;sm node name&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>-p&nbsp;<wbr>&lt;sm port num&gt;&nbsp;<wbr>-d&nbsp;<wbr>&lt;comma-sep-dr-path&gt;</p>
 <h2>DESCRIPTION</h2>
 <p> This utility parses a cabling list or topology file describing the systems connections that make a fabric. Then it start following the direct route provided and print out the systems and nodes on the route.</p>
@@ -40,7 +40,7 @@ description: "ibdmtr – Fabric Trace Route"
 <dd>
 </dd><dl>
 <dl>
-<dt>The name of the <font SIZE="-1">SM</font> node (not system). E.g. <font SIZE="-1">OSM/U1</font>.</dt>
+<dt>The name of the SM node (not system). E.g. OSM/U1.</dt>
 <dd></dd></dl>
 </dl>
 <dl>
@@ -49,7 +49,7 @@ description: "ibdmtr – Fabric Trace Route"
 <dd>
 </dd><dl>
 <dl>
-<dt>The number of the <font SIZE="-1">SM</font> node port the <font SIZE="-1">SM</font> is attached to</dt>
+<dt>The number of the SM node port the SM is attached to</dt>
 <dd></dd></dl>
 </dl>
 <dl>
@@ -86,4 +86,4 @@ description: "ibdmtr – Fabric Trace Route"
 </dl>
 </dl>
 <h2>AUTHOR</h2>
-<p> Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il </p>
+<p> Eitan Zahavi, Mellanox Technologies LTD, eitan [at] mellanox.co.il </p>

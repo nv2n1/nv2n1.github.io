@@ -39,7 +39,7 @@ description: "nsend – Send messages to users or groups"
 <dl>
 <dt>
 </dt><dd> <code>message</code> is the message to be sent. Please note that this has to be a single command line argument. If you want to send a message that contains spaces, you have to quote them on the command line. For example, to annoy your system administrator, you should try </dd>
-<p>nsend supervisor&nbsp;<wbr>&#8216;I know how this works!&#8217;<br />
+<p>nsend supervisor&nbsp;<wbr>&#8216;I know how this works!&#8217;<br/>
  Program first searches (wildcards allowed) bindery with <i>recipients name</i> and <i>type</i>. If <code>user</code> is found, message is sent to this user, if <code>group</code> is found, message is sent to this group. Other object types are ignored. If no suitable object was found in this phase, <code>connection list</code> for specified object is retrieved (no wildcards allowed) and message is sent to this object (including <code>print servers</code> and so on). No expansions on <code>group</code> is done this time.</dl>
 <p> <code>-a</code></p>
 <dl>
@@ -67,12 +67,12 @@ description: "nsend – Send messages to users or groups"
 <dt>
 </dt><dd> By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C</code>.</dd></dl>
 <h2>BUGS</h2>
-<p> Directory services connection are not supported yet.<br />
- Options <code>-c</code>, <code>-i</code> and <code>-o</code> cannot be used together.<br />
+<p> Directory services connection are not supported yet.<br/>
+ Options <code>-c</code>, <code>-i</code> and <code>-o</code> cannot be used together.<br/>
  If user is specified multiple times (using wildcards in group specification or by repeating same number in <code>-c</code>), message is delivered multiple times to him. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-nwclient/">nwclient</a>(5), <a href="/docs/linux/man/1-nprint/">nprint</a>(1), <a href="/docs/linux/man/1-slist/">slist</a>(1), <a href="/docs/linux/man/8-ncpmount/">ncpmount</a>(8), <a href="/docs/linux/man/8-ncpumount/">ncpumount</a>(8)</code> </p>
 <h2>CREDITS</h2>
-<p> nsend was written by looking at mars_nwe&#8217;s message handling. Thanks to Martin Stover &lt;mstover [at] freeway.de&gt;.<br />
- Support for Netware groups by Philippe Andersson &lt;philippe_andersson [at] ste.scitex.com&gt;.<br />
+<p> nsend was written by looking at mars_nwe&#8217;s message handling. Thanks to Martin Stover &lt;mstover [at] freeway.de&gt;.<br/>
+ Support for Netware groups by Philippe Andersson &lt;philippe_andersson [at] ste.scitex.com&gt;.<br/>
  Support for connections greater than 255 by Petr Vandrovec &lt;vandrove [at] vc.cvut.cz&gt;. </p>

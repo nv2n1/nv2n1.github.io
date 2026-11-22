@@ -41,7 +41,7 @@ Nping done: 2 IP addresses pinged in 4.01 seconds
 </code></pre>
  </dd></dl>
 <p> The newest version of Nping can be obtained with Nmap at m[blue]<code><a rel="nofollow" href="https://nmap.org">https://nmap.org</a></code>m[]. The newest version of this man page is available at m[blue]<code><a rel="nofollow" href="https://nmap.org/book/nping-man.html">https://nmap.org/book/nping-man.html</a></code>m[]. </p>
-<p> --&gt; <br />
+<p> --&gt; <br/>
 &nbsp;<wbr>&nbsp;.SH&nbsp;&quot;OPTIONS SUMMARY&quot; </p>
 <p> This options summary is printed when Nping is run with no arguments. It helps people remember the most common options, but is no substitute for the in-depth documentation in the rest of this manual. Some obscure options aren&#8217;t even included here. </p>
 <dl>
@@ -339,11 +339,11 @@ SENT (4.0330s) TCP 192.168.0.21 &gt; 3.3.3.3:139
 <h2>ICMP MODE</h2>
 <p> <code>--icmp-type </code><i>type</i> (ICMP type) </p>
 <dl>
-<dd> <p> This option specifies which type of ICMP messages should be generated. <i>type</i> can be supplied in two different ways. You can use the m[blue]<code>official type numbers assigned by IANA</code>m[]<font SIZE="-2">[1]</font> (e.g. <code>--icmp-type 8</code> for ICMP Echo Request), or you can use any of the mnemonics listed in the section called "ICMP Types". </p>
+<dd> <p> This option specifies which type of ICMP messages should be generated. <i>type</i> can be supplied in two different ways. You can use the m[blue]<code>official type numbers assigned by IANA</code>m[][1] (e.g. <code>--icmp-type 8</code> for ICMP Echo Request), or you can use any of the mnemonics listed in the section called "ICMP Types". </p>
  </dd></dl>
 <p> <code>--icmp-code </code><i>code</i> (ICMP code) </p>
 <dl>
-<dd> <p> This option specifies which ICMP code should be included in the generated ICMP messages. <i>code</i> can be supplied in two different ways. You can use the m[blue]<code>official code numbers assigned by IANA</code>m[]<font SIZE="-2">[1]</font> (e.g. <code>--icmp-code 1</code> for Fragment Reassembly Time Exceeded), or you can use any of the mnemonics listed in the section called "ICMP Codes". </p>
+<dd> <p> This option specifies which ICMP code should be included in the generated ICMP messages. <i>code</i> can be supplied in two different ways. You can use the m[blue]<code>official code numbers assigned by IANA</code>m[][1] (e.g. <code>--icmp-code 1</code> for Fragment Reassembly Time Exceeded), or you can use any of the mnemonics listed in the section called "ICMP Codes". </p>
  </dd></dl>
 <p> <code>--icmp-id </code><i>id</i> (ICMP identifier) </p>
 <dl>
@@ -449,8 +449,8 @@ SENT (4.0330s) TCP 192.168.0.21 &gt; 3.3.3.3:139
  </dd></dl>
 <h3>ICMP Codes</h3>
 <p> These identifiers may be used as mnemonics for the ICMP code numbers given to the <code>--icmp-code</code> option. They are listed by the ICMP type they correspond to. </p>
-<p> <br />
- <font SIZE="+1"> <code>Destination Unreachable</code> </p>
+<p> <br/>
+  <code>Destination Unreachable</code> </p>
 <dl>
 <dd> <p> network-unreachable, netw-unr, net </p>
  </dd>
@@ -518,8 +518,8 @@ SENT (4.0330s) TCP 192.168.0.21 &gt; 3.3.3.3:139
 <dd> <p> Code 15. Precedence value in the IP TOS field is lower than the minimum allowed for the network. </p>
  </dd></dl>
 </dl>
-<p> <br />
- </font><font SIZE="+2"> <code>Redirect</code> </p>
+<p> <br/>
+  <code>Redirect</code> </p>
 <dl>
 <dd> <p> redirect-network, redi-net, net </p>
  </dd>
@@ -539,8 +539,8 @@ SENT (4.0330s) TCP 192.168.0.21 &gt; 3.3.3.3:139
 <dd> <p> Code 3. Redirect all future datagrams with the same destination host and IP TOS value as the original datagram, to the router specified in the Address field. </p>
  </dd></dl>
 </dl>
-<p> <br />
- </font><font SIZE="+3"> <code>Router Advertisement</code> </p>
+<p> <br/>
+  <code>Router Advertisement</code> </p>
 <dl>
 <dd> <p> normal-advertisement, norm-adv, normal, zero, default, def </p>
  </dd>
@@ -552,8 +552,8 @@ SENT (4.0330s) TCP 192.168.0.21 &gt; 3.3.3.3:139
 <dd> <p> Code 16. Used for Mobile IP. The mobility agent does not route common traffic. All foreign agents must forward to a default router any datagrams received from a registered mobile node </p>
  </dd></dl>
 </dl>
-<p> <br />
- </font><font SIZE="+4"> <code>Time Exceeded</code> </p>
+<p> <br/>
+  <code>Time Exceeded</code> </p>
 <dl>
 <dd> <p> ttl-exceeded-in-transit, ttl-exc, ttl-transit </p>
  </dd>
@@ -565,8 +565,8 @@ SENT (4.0330s) TCP 192.168.0.21 &gt; 3.3.3.3:139
 <dd> <p> Code 1. Fragment reassembly time has been exceeded. </p>
  </dd></dl>
 </dl>
-<p> <br />
- </font><font SIZE="+5"> <code>Parameter Problem</code> </p>
+<p> <br/>
+  <code>Parameter Problem</code> </p>
 <dl>
 <dd> <p> pointer-indicates-error, poin-ind, pointer </p>
  </dd>
@@ -582,11 +582,11 @@ SENT (4.0330s) TCP 192.168.0.21 &gt; 3.3.3.3:139
 <dd> <p> Code 2. The length of the IP datagram is incorrect. </p>
  </dd></dl>
 </dl>
-<p> </font> </p>
+<p>  </p>
 <h2>ARP MODE</h2>
 <p> <code>--arp-type </code><i>type</i> (ICMP Type) </p>
 <dl>
-<dd> <p> This option specifies which type of ARP messages should be generated. <i>type</i> can be supplied in two different ways. You can use the m[blue]<code>official numbers assigned by IANA</code>m[]<font SIZE="-2">[2]</font> (e.g. <code>--arp-type 1</code> for ARP Request), or you can use one of the mnemonics from the section called "ARP Types". </p>
+<dd> <p> This option specifies which type of ARP messages should be generated. <i>type</i> can be supplied in two different ways. You can use the m[blue]<code>official numbers assigned by IANA</code>m[][2] (e.g. <code>--arp-type 1</code> for ARP Request), or you can use one of the mnemonics from the section called "ARP Types". </p>
  </dd></dl>
 <p> <code>--arp-sender-mac </code><i>mac</i> (Sender MAC address) </p>
 <dl>
@@ -730,7 +730,7 @@ SENT (4.0330s) TCP 192.168.0.21 &gt; 3.3.3.3:139
  </dd></dl>
 <p> <code>--ether-type </code><i>type</i> (Ethertype) </p>
 <dl>
-<dd> <p> This option sets the Ethertype field of the ethernet frame. The Ethertype is used to indicate which protocol is encapsulated in the payload. <i>type</i> can be supplied in two different ways. You can use the m[blue]<code>official numbers listed by the IEEE</code>m[]<font SIZE="-2">[3]</font> (e.g. <code>--ether-type 0x0800</code> for IP version 4), or one of the mnemonics from the section called "Ethernet Types". </p>
+<dd> <p> This option sets the Ethertype field of the ethernet frame. The Ethertype is used to indicate which protocol is encapsulated in the payload. <i>type</i> can be supplied in two different ways. You can use the m[blue]<code>official numbers listed by the IEEE</code>m[][3] (e.g. <code>--ether-type 0x0800</code> for IP version 4), or one of the mnemonics from the section called "Ethernet Types". </p>
  </dd></dl>
 <h3>Ethernet Types</h3>
 <p> These identifiers may be used as mnemonics for the Ethertype numbers given to the <code>--arp-type</code> option. </p>

@@ -10,7 +10,7 @@ description: "ztrsyl.f –"
 <p>ztrsyl.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztrsyl</code> (TRANA, TRANB, ISGN, M, N, A, LDA, B, LDB, C, LDC, SCALE, INFO)<br />
+<p>subroutine <code>ztrsyl</code> (TRANA, TRANB, ISGN, M, N, A, LDA, B, LDB, C, LDC, SCALE, INFO)<br/>
  <i></i><code>ZTRSYL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztrsyl (characterTRANA, characterTRANB, integerISGN, integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldc, * )C, integerLDC, double precisionSCALE, integerINFO)</h3>

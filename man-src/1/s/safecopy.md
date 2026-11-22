@@ -48,7 +48,7 @@ description: "safecopy – rescue data from a source that causes IO errors"
 <dt><code>-b</code> &lt;<i>size</i>&gt;</dt>
 <dd> Blocksize for default read operations. Set this to the physical sectorsize of your media.</dd>
 <dt>
-</dt><dd> <code>Default</code>: 1*<br />
+</dt><dd> <code>Default</code>: 1*<br/>
  Hardware block size if reported by OS, otherwise 4096</dd>
 <dt><code>-f</code> &lt;<i>size</i>&gt;</dt>
 <dd> Blocksize in bytes when skipping over badblocks. Higher settings put less strain on your hardware, but you might miss good areas in between two bad ones.</dd>
@@ -70,16 +70,16 @@ description: "safecopy – rescue data from a source that causes IO errors"
 <dd> Use low level device calls as specified:</dd>
 <dt>
 </dt><dd> 0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Do not use low level device calls</dd>
-<p> 1<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Attempt low level device calls<br />
- for error recovery only<br />
- 2<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Always use low level device calls<br />
+<p> 1<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Attempt low level device calls<br/>
+ for error recovery only<br/>
+ 2<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Always use low level device calls<br/>
  if available</p>
 <dt>
 </dt><dd> Supported low level features in this version are:</dd>
 <dt>
-</dt><dd> SYSTEM DEVICE TYPE FEATURE<br />
- Linux cdrom/dvd bus/device reset<br />
- Linux cdrom read sector in raw mode<br />
+</dt><dd> SYSTEM DEVICE TYPE FEATURE<br/>
+ Linux cdrom/dvd bus/device reset<br/>
+ Linux cdrom read sector in raw mode<br/>
  Linux floppy controller reset, twaddle</dd>
 <dt>
 </dt><dd> <code>Default</code>: 1</dd>
@@ -114,7 +114,7 @@ description: "safecopy – rescue data from a source that causes IO errors"
 <dt>
 </dt><dd> <code>Default</code>: Blocksize as specified by -b</dd>
 <dt><code>-c</code> &lt;<i>blocks</i>&gt;</dt>
-<dd> Continue copying at this position. This allows continuing if the output is a block device with a fixed size as opposed to a growable file, where safecopy cannot determine how far it already got. The blocksize used is the same as for the -I option.<br />
+<dd> Continue copying at this position. This allows continuing if the output is a block device with a fixed size as opposed to a growable file, where safecopy cannot determine how far it already got. The blocksize used is the same as for the -I option.<br/>
  -c 0 will continue at the current destination size.</dd>
 <dt>
 </dt><dd> <code>Implies</code>: -I /dev/null if -I is not specified</dd>
@@ -143,7 +143,7 @@ description: "safecopy – rescue data from a source that causes IO errors"
 <dt>
 </dt><dd> <code>Default</code>: none</dd>
 <dt><code>&#8211;debug</code> &lt;<i>level</i>&gt;</dt>
-<dd> Enable debug output. Level is a bit field, add values together for more information:<br />
+<dd> Enable debug output. Level is a bit field, add values together for more information:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>program flow: <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>IO control: <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>2</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>badblock marking:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>4</p>
@@ -204,7 +204,7 @@ description: "safecopy – rescue data from a source that causes IO errors"
 <dt>&#8211; resurrect data as thoroughly as possible?</dt>
 <dd>
 </dd><dt>
-</dt><dd> <code>safecopy</code> source dest -f 1* -R 8 -Z 2<br />
+</dt><dd> <code>safecopy</code> source dest -f 1* -R 8 -Z 2<br/>
  (assuming logical misalignment of blocks to sectors)</dd>
 <dt>
 </dt><dd> <code>safecopy</code> source dest -f 1* -r 1 -R 8 -Z 2</dd>
@@ -217,7 +217,7 @@ description: "safecopy – rescue data from a source that causes IO errors"
 <dt>&#8211; resurrect some data fast, then read more data thoroughly later:</dt>
 <dd>
 </dd><dt>
-</dt><dd> <code>safecopy</code> source dest -f 10% -R 0 -Z 0 -o badblockfile<br />
+</dt><dd> <code>safecopy</code> source dest -f 10% -R 0 -Z 0 -o badblockfile<br/>
  <code>safecopy</code> source dest -f 1* -R 8 -Z 2 -I badblockfile</dd>
 <dt>
 </dt><dd> <i>Alternate approach using the new preset features:</i></dd>
@@ -228,57 +228,57 @@ description: "safecopy – rescue data from a source that causes IO errors"
 <dt>
 </dt><dd> <code>safecopy</code> source dest &#8211;stage3</dd>
 <dt>&#8211; utilize some friends CD-ROM drives to complete the data from my damaged CD:</dt>
-<dd> <code>safecopy</code> /dev/mydrive imagefile &lt;someoptions&gt; -b &lt;myblocksize&gt; -o myblockfile<br />
- <code>safecopy</code> /dev/otherdrive imagefile &lt;someoptions&gt; -b &lt;otherblocksize&gt; -I myblockfile -i &lt;myblocksize&gt; -o otherblockfile<br />
+<dd> <code>safecopy</code> /dev/mydrive imagefile &lt;someoptions&gt; -b &lt;myblocksize&gt; -o myblockfile<br/>
+ <code>safecopy</code> /dev/otherdrive imagefile &lt;someoptions&gt; -b &lt;otherblocksize&gt; -I myblockfile -i &lt;myblocksize&gt; -o otherblockfile<br/>
  <code>safecopy</code> /dev/anotherdrive imagefile &lt;someoptions&gt; -b &lt;anotherblocksize&gt; -I otherblockfile -i &lt;otherblocksize&gt;</dd>
 <dt>&#8211; interrupt and later resume a data rescue operation:</dt>
-<dd> <code>safecopy</code> source dest<br />
- <code>&lt;CTRL+C&gt;</code> (safecopy aborts)<br />
+<dd> <code>safecopy</code> source dest<br/>
+ <code>&lt;CTRL+C&gt;</code> (safecopy aborts)<br/>
  <code>safecopy</code> source dest -I /dev/null</dd>
 <dt>&#8211; interrupt and later resume a data rescue operation with correct badblocks output:</dt>
-<dd> <code>safecopy</code> source dest &lt;options&gt; -o badblockfile<br />
- <code>&lt;CTRL+C&gt;</code> (safecopy aborts)<br />
- <code>mv</code> badblockfile savedbadblockfile<br />
- <code>safecopy</code> source dest -I /dev/null -o badblockfile<br />
+<dd> <code>safecopy</code> source dest &lt;options&gt; -o badblockfile<br/>
+ <code>&lt;CTRL+C&gt;</code> (safecopy aborts)<br/>
+ <code>mv</code> badblockfile savedbadblockfile<br/>
+ <code>safecopy</code> source dest -I /dev/null -o badblockfile<br/>
  <code>cat</code> badblockfile &gt;&gt;savedbadblockfile</dd>
 <dt>&#8211; interrupt and resume in incremental mode:</dt>
 <dd>
- (this needs a bit of bash scripting to get the correct badblock lists)<br />
- <code>safecopy</code> source dest &lt;options&gt; -o badblockfile1<br />
- <code>safecopy</code> source dest &lt;options&gt; -I badblockfile1 -o badblockfile2<br />
- <code>&lt;CTRL+C&gt;</code> (safecopy aborts)<br />
- latest=$( tail -n 1 badblockfile2 )<br />
- if [ -z $latest ]; then latest=-1; fi;<br />
- cat badblockfile1 | while read block; do<br />
+ (this needs a bit of bash scripting to get the correct badblock lists)<br/>
+ <code>safecopy</code> source dest &lt;options&gt; -o badblockfile1<br/>
+ <code>safecopy</code> source dest &lt;options&gt; -I badblockfile1 -o badblockfile2<br/>
+ <code>&lt;CTRL+C&gt;</code> (safecopy aborts)<br/>
+ latest=$( tail -n 1 badblockfile2 )<br/>
+ if [ -z $latest ]; then latest=-1; fi;<br/>
+ cat badblockfile1 | while read block; do<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[ $block -gt $latest ] &amp;&amp; echo $block &gt;&gt;badblockfile2;</dd>
-<p> done;<br />
+<p> done;<br/>
  <code>safecopy</code> source dest &lt;options&gt; -I badblockfile2 -o badblockfile3</p>
 <dt>&#8211; find the corrupted files on a partially successful rescued file system:</dt>
-<dd> <code>safecopy</code> /dev/filesystem image -M CoRrUpTeD<br />
- <code>fsck</code> image<br />
- <code>mount</code> -o loop image /mnt/mountpoint<br />
- <code>grep</code> -R /mnt/mountpoint &quot;CoRrUpTeD&quot;<br />
+<dd> <code>safecopy</code> /dev/filesystem image -M CoRrUpTeD<br/>
+ <code>fsck</code> image<br/>
+ <code>mount</code> -o loop image /mnt/mountpoint<br/>
+ <code>grep</code> -R /mnt/mountpoint &quot;CoRrUpTeD&quot;<br/>
  (hint: this might not find all affected files if the unreadable parts are smaller in size than your marker string)</dd>
 <dt>&#8211; exclude the previously known badblocks list of a filesystem from filesystem image creation:</dt>
-<dd> <code>dumpe2fs</code> -b /dev/filesystem &gt;badblocklist<br />
+<dd> <code>dumpe2fs</code> -b /dev/filesystem &gt;badblocklist<br/>
  <code>safecopy</code> /dev/filesystem image -X badblocklist -x &lt;blocksize of your fs&gt;</dd>
 <dt>&#8211; create an image of a device that starts at X and is Y in size:</dt>
 <dd> <code>safecopy</code> /dev/filesystem -b &lt;bsize&gt; -s &lt;X/bsize&gt; -l &lt;Y/bsize&gt;</dd>
 <dt>&#8211; combine two partial images of rescued data without access to the actual (damaged) source data:</dt>
 <dd> (This is a bit tricky. You need to get badblocks lists for both files somehow to make safecopy know where the missing data is. If you used the -M (mark) feature you might be able to automatically compute these, however this feature is not provided by safecopy. Lets assume you have two badblocks files.</dd>
 <dt>
-</dt><dd> you have:<br />
- image1.dat<br />
- image1.badblocks (blocksize1)<br />
- image2.dat<br />
+</dt><dd> you have:<br/>
+ image1.dat<br/>
+ image1.badblocks (blocksize1)<br/>
+ image2.dat<br/>
  image2.badblocks (blocksize2)</dd>
 <dt>
 </dt><dd> The file size of image1 needs to be greater or equal to that of image2. (If not, swap them) )</dd>
 <dt>
-</dt><dd> <code>cp</code> image2.dat combined.dat<br />
- <code>safecopy</code> image1.dat combined.dat -I image2.badblocks -i blocksize2 -X image1.badblocks -x blocksize1<br />
- (This gets you the combined data, but no output badblocklist. The resulting badblocks list would be the badblocks that are<br />
- a: in both badblocks lists, or<br />
+</dt><dd> <code>cp</code> image2.dat combined.dat<br/>
+ <code>safecopy</code> image1.dat combined.dat -I image2.badblocks -i blocksize2 -X image1.badblocks -x blocksize1<br/>
+ (This gets you the combined data, but no output badblocklist. The resulting badblocks list would be the badblocks that are<br/>
+ a: in both badblocks lists, or<br/>
  b: in image1.badblocks and beyond the file size of image2 It should be reasonably easy to solve this logic in a short shell script. One day this might be shipped with safecopy, until then consider this your chance to contribute to a random open source project.)</dd>
 <dt>&#8211; rescue data of a tape device:</dt>
 <dd> If the tape device driver supports lseek(), treat it as any file, otherwise utilize the &quot;-S&quot; option of safecopy with a to be self-written script to skip over the bad blocks. (for example using &quot;mt seek&quot;) Make sure your tape device doesn&#8217;t auto-rewind on close. Send me feedback if you had any luck doing so, so I can update this documentation. </dd>
@@ -300,12 +300,12 @@ description: "safecopy – rescue data from a source that causes IO errors"
 <dt>A:</dt>
 <dd> Try making a backup image on many different computers and drives. The abilities to read from bad media vary extremely. I have a 6 year old Lite On CDRW drive, that even reads deeply and purposely scratched CDs (as in with my key, to make it unreadable) flawlessly. A CDRW drive of the same age at work doesn&#8217;t read any data from that part of the CD at all, while most DVD and combo drives have bad blocks every couple hundred bytes. Make full use of safecopys RAW access features if applicable. (-L 2 option)</dd>
 <dt>
-</dt><dd> As a general guideline: -CDRW drives usually do better than read-only CD drives.<br />
- -CD only drives sometimes do better on CDs than DVD drives.<br />
- -PC drives are sometimes better than laptop ones.<br />
- -A drive with a clean lens does better than a dirtball.<br />
- -Cleaning up CDs helps.<br />
- -Unless you use chemicals.<br />
+</dt><dd> As a general guideline: -CDRW drives usually do better than read-only CD drives.<br/>
+ -CD only drives sometimes do better on CDs than DVD drives.<br/>
+ -PC drives are sometimes better than laptop ones.<br/>
+ -A drive with a clean lens does better than a dirtball.<br/>
+ -Cleaning up CDs helps.<br/>
+ -Unless you use chemicals.<br/>
  -Using sticky tape on a CD will rip of the reflective layer permanently rendering the disk unreadable.</dd></dl>
 <dl>
 <dt>Q:</dt>
@@ -342,15 +342,15 @@ description: "safecopy – rescue data from a source that causes IO errors"
 </dt><dd> <code>!!!</code> If the data is really important, go to a professional data recovery specialist right away, before doing further damage to the drive. </dd>
 </dl>
 <h2>EXIT STATUS</h2>
-<p> safecopy returns 0 (zero) if there were no unrecoverable errors.<br />
- safecopy returns 1 if some data could not be recovered.<br />
+<p> safecopy returns 0 (zero) if there were no unrecoverable errors.<br/>
+ safecopy returns 1 if some data could not be recovered.<br/>
  safecopy returns 2 in case the copying was aborted due to error or signal. </p>
 <h2>AUTHORS</h2>
 <p> safecopy and its manpage have been designed and written by CorvusCorax. </p>
 <h2>BUGS</h2>
 <p> Please use the project page on sourceforge &lt;<a rel="nofollow" href="http://www.sf.net/projects/safecopy">http://www.sf.net/projects/safecopy</a>&gt; to get in contact with project development if you encounter bugs or want to contribute to safecopy. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2009 CorvusCorax<br />
+<p> Copyright &#169; 2009 CorvusCorax<br/>
  This is free software. You may redistribute copies of it under the terms of the GNU General Public License version 2 or above. &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law. </p>
 <h2>SEE ALSO</h2>
 <p> Programs with a similar scope are among others</p>

@@ -26,5 +26,5 @@ description: "mktexmf – create a Metafont source file"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mktexpk/">mktexpk</a></code>(1), <code><a href="/docs/linux/man/1-mktextfm/">mktextfm</a></code>(1).</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to: tex-k [at] tug.org (<a rel="nofollow" href="https://lists.tug.org/tex-k)">https://lists.tug.org/tex-k)</a><br />
+<p> Report bugs to: tex-k [at] tug.org (<a rel="nofollow" href="https://lists.tug.org/tex-k)">https://lists.tug.org/tex-k)</a><br/>
  TeX Live home page: <a rel="nofollow" href="https://tug.org/texlive/">https://tug.org/texlive/</a> </p>

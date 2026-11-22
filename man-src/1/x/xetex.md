@@ -26,12 +26,12 @@ description: "xetex – extended TeX with native support for Unicode, OpenType, 
 <dd> Set pdf media size to <i>string</i>.</dd></dl>
 <p> Removals: <code>-draftmode</code>, <code>-enc</code>, <code>-ipc</code>, <code>-ipc-start</code>, <code>-translate-file</code>.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-etex/">etex</a></code>(1), <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1).<br />
- Home page: &lt;<a rel="nofollow" href="https://tug.org/xetex">https://tug.org/xetex</a>&gt;<br />
- CTAN page: &lt;<a rel="nofollow" href="https://ctan.org/pkg/xetex">https://ctan.org/pkg/xetex</a>&gt;<br />
+<p> <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-etex/">etex</a></code>(1), <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1).<br/>
+ Home page: &lt;<a rel="nofollow" href="https://tug.org/xetex">https://tug.org/xetex</a>&gt;<br/>
+ CTAN page: &lt;<a rel="nofollow" href="https://ctan.org/pkg/xetex">https://ctan.org/pkg/xetex</a>&gt;<br/>
  Reference manual: &lt;<a rel="nofollow" href="https://ctan.org/pkg/xetexref">https://ctan.org/pkg/xetexref</a>&gt;</p>
 <h2>AUTHORS</h2>
-<p> XeTeX is maintained by Jonathan Kew and others.<br />
- Public discussion list: &lt;<a rel="nofollow" href="http://lists.tug.org/xetex">http://lists.tug.org/xetex</a>&gt;<br />
+<p> XeTeX is maintained by Jonathan Kew and others.<br/>
+ Public discussion list: &lt;<a rel="nofollow" href="http://lists.tug.org/xetex">http://lists.tug.org/xetex</a>&gt;<br/>
  Bug reports: &lt;<a rel="nofollow" href="http://sourceforge.net/p/xetex/bugs/">http://sourceforge.net/p/xetex/bugs/</a>&gt; </p>
 <p> This manual page was written by Karl Berry. It is released to the public domain. </p>

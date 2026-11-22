@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-ice-insight/"
 description: "ice-gdb – JTAG ICE frontend for avr-gdb ice-insight – JTAG ICE frontend for avr-insight"
 ---
 
-<p> ice-gdb &#8211; JTAG ICE frontend for avr-gdb<br />
+<p> ice-gdb &#8211; JTAG ICE frontend for avr-gdb<br/>
  ice-insight &#8211; JTAG ICE frontend for avr-insight </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ice-gdb/ice-insight</code> [<code>&#8211;debugger</code> <i>debugger</i>] [<code>&#8211;capture</code>] [<code>&#8211;ignore-intr</code>] [<code>&#8211;external</code>] [<i>gdb_arguments</i>]</p>

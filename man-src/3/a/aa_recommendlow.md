@@ -11,8 +11,8 @@ description: "aa_recommendlow – Add the given driver to the end of list of rec
 <p> aa_recommendlow &#8211; Add the given driver to the end of list of recommended drivers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
-<p> void aa_recommendlow<br />
- (<br />
+<p> void aa_recommendlow<br/>
+ (<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>aa_linkedlist **l,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>const char *name</p>
 <p> ); </code></p>

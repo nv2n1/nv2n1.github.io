@@ -11,7 +11,7 @@ description: "clanhb.f –"
 <p> clanhb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>clanhb</code> (NORM, UPLO, N, K, AB, LDAB, WORK)<br />
+<p> REAL function <code>clanhb</code> (NORM, UPLO, N, K, AB, LDAB, WORK)<br/>
  <i></i><code>CLANHB</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a Hermitian band matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function clanhb (characterNORM, characterUPLO, integerN, integerK, complex, dimension( ldab, * )AB, integerLDAB, real, dimension( * )WORK)</h3>

@@ -12,7 +12,7 @@ description: "QuantLib::OptimizationMethod – Abstract class for constrained op
 <p>#include &lt;ql/math/optimization/method.hpp&gt; </p>
 <p> Inherited by <code>LevenbergMarquardt</code>, LineSearchBasedMethod, and <code>Simplex</code>. </p>
 <h3>Public Member Functions</h3>
-<p>virtual EndCriteria::Type <code>minimize</code> (<code>Problem</code> &amp;P, const <code>EndCriteria</code> &amp;endCriteria)=0<br />
+<p>virtual EndCriteria::Type <code>minimize</code> (<code>Problem</code> &amp;P, const <code>EndCriteria</code> &amp;endCriteria)=0<br/>
  <i>minimize the optimization problem P </i></p>
 <h2>Detailed Description</h2>
 <p>Abstract class for constrained optimization method. </p>

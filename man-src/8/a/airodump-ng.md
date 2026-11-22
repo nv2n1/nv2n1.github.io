@@ -49,7 +49,7 @@ description: "airodump-ng – a wireless packet capture tool for aircrack-ng"
 <dt><i>-W, &#8211;wps</i></dt>
 <dd>Display a WPS column with WPS version, config method(s), AP Setup Locked obtained from APs beacon or probe response (if any).</dd>
 <dt><i>&#8211;output-format &lt;formats&gt;</i></dt>
-<dd>Define the formats to use (separated by a comma). Possible values are: pcap, ivs, csv, gps, kismet, netxml. The default values are: pcap, csv, kismet, kismet-newcore. &#8216;pcap&#8217; is for recording a capture in pcap format, &#8216;ivs&#8217; is for ivs format (it is a shortcut for &#8211;ivs). &#8216;csv&#8217; will create an airodump-ng CSV file, &#8216;kismet&#8217; will create a kismet csv file and &#8216;kismet-newcore&#8217; will create the kismet netxml file. &#8216;gps&#8217; is a shortcut for &#8211;gps.<br />
+<dd>Define the formats to use (separated by a comma). Possible values are: pcap, ivs, csv, gps, kismet, netxml. The default values are: pcap, csv, kismet, kismet-newcore. &#8216;pcap&#8217; is for recording a capture in pcap format, &#8216;ivs&#8217; is for ivs format (it is a shortcut for &#8211;ivs). &#8216;csv&#8217; will create an airodump-ng CSV file, &#8216;kismet&#8217; will create a kismet csv file and &#8216;kismet-newcore&#8217; will create the kismet netxml file. &#8216;gps&#8217; is a shortcut for &#8211;gps.<br/>
  Theses values can be combined with the exception of ivs and pcap.</dd>
 <dt><i>-I &lt;seconds&gt;, &#8211;write-interval &lt;seconds&gt;</i></dt>
 <dd>Output file(s) write interval for CSV, Kismet CSV and Kismet NetXML in seconds (minimum: 1 second). By default: 5 seconds. Note that an interval too small might slow down airodump-ng.</dd>
@@ -96,17 +96,17 @@ description: "airodump-ng – a wireless packet capture tool for aircrack-ng"
 <h2>Examples</h2>
 <p><code>airodump-ng</code> &#8211;band bg ath0 </p>
 <p> Here is an example screenshot: </p>
-<p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />
+<p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br/>
  CH 9 ][ Elapsed: 1 min ][ 2007-04-26 17:41 ][ BAT: 2 hours 10 mins ][ WPA handshake: 00:14:6C:7E:40:80 </p>
 <p> BSSID PWR RXQ Beacons #Data, #/s CH MB ENC CIPHER AUTH ESSID </p>
-<p> 00:09:5B:1C:AA:1D 11 16 10 0 0 11 54. OPN &lt;length: 7&gt;<br />
- 00:14:6C:7A:41:81 34 100 57 14 1 9 11 WEP WEP bigbear<br />
+<p> 00:09:5B:1C:AA:1D 11 16 10 0 0 11 54. OPN &lt;length: 7&gt;<br/>
+ 00:14:6C:7A:41:81 34 100 57 14 1 9 11 WEP WEP bigbear<br/>
  00:14:6C:7E:40:80 32 100 752 73 2 9 54 WPA TKIP PSK teddy </p>
 <p> BSSID STATION PWR Rate Lost Frames Probes </p>
-<p> 00:14:6C:7A:41:81 00:0F:B5:32:31:31 51 11-11 2 14 bigbear<br />
- (not associated) 00:14:A4:3F:8D:13 19 11-11 0 4 mossy<br />
- 00:14:6C:7A:41:81 00:0C:41:52:D1:D1 -1 11-2 0 5 bigbear<br />
- 00:14:6C:7E:40:80 00:0F:B5:FD:FB:C2 35 36-24 0 99 teddy<br />
+<p> 00:14:6C:7A:41:81 00:0F:B5:32:31:31 51 11-11 2 14 bigbear<br/>
+ (not associated) 00:14:A4:3F:8D:13 19 11-11 0 4 mossy<br/>
+ 00:14:6C:7A:41:81 00:0C:41:52:D1:D1 -1 11-2 0 5 bigbear<br/>
+ 00:14:6C:7E:40:80 00:0F:B5:FD:FB:C2 35 36-24 0 99 teddy<br/>
  &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; </p>
 <dl>
 <dt><i>BSSID</i></dt>
@@ -149,24 +149,24 @@ description: "airodump-ng – a wireless packet capture tool for aircrack-ng"
 <h2>Author</h2>
 <p>This manual page was written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-airbase-ng/">airbase-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-aireplay-ng/">aireplay-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airmon-ng/">airmon-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airserv-ng/">airserv-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airtun-ng/">airtun-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-besside-ng/">besside-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-easside-ng/">easside-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-tkiptun-ng/">tkiptun-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-wesside-ng/">wesside-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-besside-ng-crawler/">besside-ng-crawler</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
+<p><code><a href="/docs/linux/man/8-airbase-ng/">airbase-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-aireplay-ng/">aireplay-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airmon-ng/">airmon-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airserv-ng/">airserv-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airtun-ng/">airtun-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-besside-ng/">besside-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-easside-ng/">easside-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-tkiptun-ng/">tkiptun-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-wesside-ng/">wesside-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-besside-ng-crawler/">besside-ng-crawler</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br/>
  <code><a href="/docs/linux/man/1-wpaclean/">wpaclean</a>(1)</code> </p>

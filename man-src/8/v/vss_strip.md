@@ -9,7 +9,7 @@ description: "vss_strip – program for extracting file data from a file contain
 
 <p>vss_strip &#8211; program for extracting file data from a file containing VSS headers</p>
 <h2>Synopsis</h2>
-<p><code>vss_strip</code> [<i>options</i>]<br />
+<p><code>vss_strip</code> [<i>options</i>]<br/>
  A program for extracting file data from a file containing VSS headers. This program comes with the burp backup and restore package. </p>
 <h2>Options</h2>
 <dl>

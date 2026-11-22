@@ -21,7 +21,7 @@ description: "conntrack – shorewall6 conntrack file"
 <dd>&bull; in FORMAT 3, the SOURCE column accepts no zone name; rather the ACTION column allows a SUFFIX that determines the chain(s) that the generated rule will be added to.</dd></dl>
 <p> When an entry in the following form is encountered, the format of the following entries are assumed to be of the specified <i>format</i>.</p>
 <dl>
-<dd><code>?FORMAT</code><br />
+<dd><code>?FORMAT</code><br/>
 <i>format</i></dd></dl>
 <p> where <i>format</i> is either <code>1</code>,<code>2</code> or <code>3</code>. </p>
 <p> Format 3 was introduced in Shorewall 4.5.10. </p>
@@ -88,9 +88,9 @@ description: "conntrack – shorewall6 conntrack file"
 <dd>&bull; <code>IP6TABLES</code>(<i>target</i>) </dd>
 <p> Added in Shorewall 4.6.0. Allows you to specify any iptables <i>target</i> with target options (e.g., &quot;IP6TABLES(AUDIT &#8211;type drop)&quot;). If the target is not one recognized by Shorewall, the following error message will be issued:</p>
 <dl>
-<dd>ERROR: Unknown target<br />
+<dd>ERROR: Unknown target<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(<i>target</i>)</dd></dl>
-<p> This error message may be eliminated by adding <i>target</i> as a builtin action in m[blue]<code><a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5)</code>m[]<font SIZE="-2">[1]</font>.</dl>
+<p> This error message may be eliminated by adding <i>target</i> as a builtin action in m[blue]<code><a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5)</code>m[][1].</dl>
 <dl>
 <dd>&bull; <code>LOG</code> </dd>
 <p> Added in Shoreawll 4.6.0. Logs the packet using the specified <i>log-level</i> and<i> log-tag </i>(if any). If no log-level is specified, then &#8216;info&#8217; is assumed.</dl>
@@ -111,16 +111,16 @@ description: "conntrack – shorewall6 conntrack file"
 </dl>
 <p> SOURCE (formats 1 and 2) &#8211; <i>zone</i>[:<i>interface</i>][:<i>address-list</i>]</p>
 <dl>
-<dd>where <i>zone</i> is the name of a zone, <i>interface</i> is an interface to that zone, and <i>address-list</i> is a comma-separated list of addresses (may contain exclusion &#8211; see m[blue]<code>shorewall6-exclusion</code>m[]<font SIZE="-2">[2]</font> (5)). </dd>
+<dd>where <i>zone</i> is the name of a zone, <i>interface</i> is an interface to that zone, and <i>address-list</i> is a comma-separated list of addresses (may contain exclusion &#8211; see m[blue]<code>shorewall6-exclusion</code>m[][2] (5)). </dd>
 <p> Beginning with Shorewall 4.5.7, <code>all</code> can be used as the <i>zone</i> name to mean all zones. </p>
 <p> Beginning with Shorewall 4.5.10, <code>all-</code> can be used as the <i>zone</i> name to mean all off-firewall zones.</dl>
 <p> SOURCE (format 3) &#8211; {-|<i>interface</i>[:<i>address-list</i>]|<i>address-list</i>}</p>
 <dl>
-<dd>Where <i>interface</i> is an interface to that zone, and <i>address-list</i> is a comma-separated list of addresses (may contain exclusion &#8211; see m[blue]<code>shorewall6-exclusion</code>m[]<font SIZE="-2">[2]</font> (5)). </dd>
+<dd>Where <i>interface</i> is an interface to that zone, and <i>address-list</i> is a comma-separated list of addresses (may contain exclusion &#8211; see m[blue]<code>shorewall6-exclusion</code>m[][2] (5)). </dd>
 <p> COMMENT is only allowed in format 1; the remainder of the line is treated as a comment that will be associated with the generated rule(s).</dl>
 <p> DEST &#8211; {-|<i>interface</i>[:<i>address-list</i>]|<i>address-list</i>}</p>
 <dl>
-<dd>where <i>address-list</i> is a comma-separated list of addresses (may contain exclusion &#8211; see m[blue]<code>shorewall6-exclusion</code>m[]<font SIZE="-2">[2]</font> (5)).</dd></dl>
+<dd>where <i>address-list</i> is a comma-separated list of addresses (may contain exclusion &#8211; see m[blue]<code>shorewall6-exclusion</code>m[][2] (5)).</dd></dl>
 <p> PROTO &#8211; <i>protocol-name-or-number</i>[,&#8230;]</p>
 <dl>
 <dd>A protocol name from /etc/protocols or a protocol number. </dd>
@@ -147,11 +147,11 @@ description: "conntrack – shorewall6 conntrack file"
 <p> Within the <i>switch-name</i>, &#8216;@0&#8217; and &#8216;@{0}&#8217; are replaced by the name of the chain to which the rule is a added. The <i>switch-name</i> (after &#8216;@&#8230;&#8217; expansion) must begin with a letter and be composed of letters, decimal digits, underscores or hyphens. Switch names must be 30 characters or less in length. </p>
 <p> Switches are normally <code>off</code>. To turn a switch <code>on</code>:</p>
 <dl>
-<dd><code>echo 1 &gt;<br />
+<dd><code>echo 1 &gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/proc/net/nf_condition/</code><i>switch-name</i></dd></dl>
 <p> To turn it <code>off</code> again:</p>
 <dl>
-<dd><code>echo 0 &gt;<br />
+<dd><code>echo 0 &gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/proc/net/nf_condition/</code><i>switch-name</i></dd></dl>
 <p> Switch settings are retained over <code>shorewall6 restart</code>. </p>
 <p> When the <i>switch-name</i> is followed by <code>=0</code> or <code>=1</code>, then the switch is initialized to off or on respectively by the <code>start</code> command. Other commands do not affect the switch setting.</dl>
@@ -184,7 +184,7 @@ DROP:PO - 2001:1.2.3::4</pre>
 <h2>Files</h2>
 <p>/etc/shorewall6/notrack</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[3]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][3] </p>
 <p> <a href="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a href="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), <a href="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a href="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5), shorewall6-ipsec(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5),<a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), shorewall6-proxyarp(5), <a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), shorewall6-routestopped(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a href="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall6-mangle/">shorewall6-mangle</a>(5), shorewall6-tos(5), <a href="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall-zones/">shorewall-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

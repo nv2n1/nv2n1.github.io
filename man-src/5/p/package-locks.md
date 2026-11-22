@@ -28,15 +28,15 @@ description: "package-locks – An explanation of npm lockfiles"
         &quot;B&quot;: &quot;&lt;0.1.0&quot;
     }
 }</code></pre>
-<p> package B: {<br />
-    &quot;name&quot;: &quot;B&quot;,<br />
-    &quot;version&quot;: &quot;0.0.1&quot;,<br />
-    &quot;dependencies&quot;: {<br />
-        &quot;C&quot;: &quot;&lt;0.1.0&quot;<br />
-    }<br />
-} and package C: {<br />
-    &quot;name&quot;: &quot;C&quot;,<br />
-    &quot;version&quot;: &quot;0.0.1&quot;<br />
+<p> package B: {<br/>
+    &quot;name&quot;: &quot;B&quot;,<br/>
+    &quot;version&quot;: &quot;0.0.1&quot;,<br/>
+    &quot;dependencies&quot;: {<br/>
+        &quot;C&quot;: &quot;&lt;0.1.0&quot;<br/>
+    }<br/>
+} and package C: {<br/>
+    &quot;name&quot;: &quot;C&quot;,<br/>
+    &quot;version&quot;: &quot;0.0.1&quot;<br/>
 } If these are the only versions of A, B, and C available in the registry, then a normal <code>npm install A</code> will install:</p>
 <dl>
 <dd>

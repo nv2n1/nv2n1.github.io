@@ -10,7 +10,7 @@ description: "XkbKeyNumActions – Computes the number of actions associated wit
 <p>XkbKeyNumActions &#8211; Computes the number of actions associated with the key corresponding to keycode </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>int XkbKeyNumActions</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br />
+<dt> <code>int XkbKeyNumActions</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

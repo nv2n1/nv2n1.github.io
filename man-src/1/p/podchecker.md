@@ -20,16 +20,16 @@ description: "podchecker – check the syntax of POD format documentation files"
 <dt><code>-warnings</code> <code>-nowarnings</code></dt>
 <dd> Turn on/off printing of warnings. Repeating <code>-warnings</code> increases the warning level, i.e. more warnings are printed. Currently increasing to level two causes flagging of unescaped &#8220;&lt;,&gt;&#8221; characters.</dd>
 <dt><i>file</i></dt>
-<dd> The pathname of a <font SIZE="-1">POD</font> file to syntax-check (defaults to standard input).</dd></dl>
+<dd> The pathname of a POD file to syntax-check (defaults to standard input).</dd></dl>
 <h2>DESCRIPTION</h2>
-<p> <code>podchecker</code> will read the given input files looking for <font SIZE="-1">POD</font> syntax errors in the <font SIZE="-1">POD</font> documentation and will print any errors it find to <font SIZE="-1">STDERR.</font> At the end, it will print a status message indicating the number of errors found. </p>
+<p> <code>podchecker</code> will read the given input files looking for POD syntax errors in the POD documentation and will print any errors it find to STDERR. At the end, it will print a status message indicating the number of errors found. </p>
 <p> Directories are ignored, an appropriate warning message is printed. </p>
 <p> <code>podchecker</code> invokes the <code>podchecker()</code> function exported by <code>Pod::Checker</code> Please see &#8220;<code>podchecker()</code>&#8221; in Pod::Checker for more details.</p>
 <h2>RETURN VALUE</h2>
-<p> <code>podchecker</code> returns a 0 (zero) exit status if all specified <font SIZE="-1">POD</font> files are ok.</p>
+<p> <code>podchecker</code> returns a 0 (zero) exit status if all specified POD files are ok.</p>
 <h2>ERRORS</h2>
-<p> <code>podchecker</code> returns the exit status 1 if at least one of the given <font SIZE="-1">POD</font> files has syntax errors. </p>
-<p> The status 2 indicates that at least one of the specified files does not contain <i>any</i> <font SIZE="-1">POD</font> commands. </p>
+<p> <code>podchecker</code> returns the exit status 1 if at least one of the given POD files has syntax errors. </p>
+<p> The status 2 indicates that at least one of the specified files does not contain <i>any</i> POD commands. </p>
 <p> Status 1 overrides status 2. If you want unambiguous results, call <code>podchecker</code> with one single argument only.</p>
 <h2>SEE ALSO</h2>
 <p> Pod::Simple and Pod::Checker</p>

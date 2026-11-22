@@ -11,7 +11,7 @@ description: "dlarfg.f –"
 <p> dlarfg.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlarfg</code> (N, ALPHA, X, INCX, TAU)<br />
+<p> subroutine <code>dlarfg</code> (N, ALPHA, X, INCX, TAU)<br/>
  <i></i><code>DLARFG</code> generates an elementary reflector (Householder matrix).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarfg (integerN, double precisionALPHA, double precision, dimension( * )X, integerINCX, double precisionTAU)</h3>

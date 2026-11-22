@@ -10,7 +10,7 @@ description: "iodbctest, iodbctestw – iODBC Demonstration programs"
 
 <p> iodbctest, iodbctestw &#8211; iODBC Demonstration programs</p>
 <h2>SYNOPSIS</h2>
-<p> <code>iodbctest</code> [<code>&quot;DSN=xxxx[;UID=xxxx][;PWD=xxxx][;OPT=value]&quot;</code>]<br />
+<p> <code>iodbctest</code> [<code>&quot;DSN=xxxx[;UID=xxxx][;PWD=xxxx][;OPT=value]&quot;</code>]<br/>
  <code>iodbctestw</code> [<code>&quot;DSN=xxxx[;UID=xxxx][;PWD=xxxx][;OPT=value]&quot;</code>] </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>iodbctest</code> program and <code>iodbtestw</code> programs are simple ODBC sample programs, showing the strength of the ODBC API to connect to any ODBC enabled database, issue SQL commands and retrieve the query results. </p>

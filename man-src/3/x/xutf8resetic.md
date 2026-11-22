@@ -23,5 +23,5 @@ description: "XmbResetIC, XwcResetIC, Xutf8ResetIC – reset the state of an inp
 <p> The client should free the returned string by calling <code>XFree</code>. </p>
 <p> The function <code>Xutf8ResetIC</code> is an extension introduced by The XFree86 Project, Inc., in their 4.0.2 release. Its presence is indicated by the macro <code>X_HAVE_UTF8_STRING</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcreateic/">XCreateIC</a>(3), <a href="/docs/linux/man/3-xopenim/">XOpenIM</a>(3), <a href="/docs/linux/man/3-xseticfocus/">XSetICFocus</a>(3), <a href="/docs/linux/man/3-xseticvalues/">XSetICValues</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcreateic/">XCreateIC</a>(3), <a href="/docs/linux/man/3-xopenim/">XOpenIM</a>(3), <a href="/docs/linux/man/3-xseticfocus/">XSetICFocus</a>(3), <a href="/docs/linux/man/3-xseticvalues/">XSetICValues</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

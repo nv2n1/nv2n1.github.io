@@ -13,8 +13,8 @@ description: "glutPostWindowOverlayRedisplay – Posts a redisplay to the indica
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutPostWindowOverlayRedisplay int ID</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>ID Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>ID Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>A window ID.</p>
 <h2>Description</h2>
 <p>This function lets you post an overlay update to the overlay of any arbitrary window. </p>

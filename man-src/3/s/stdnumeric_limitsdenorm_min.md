@@ -13,31 +13,31 @@ description: "std::numeric_limits<T>::denorm_min – std::numeric_limits<T>::den
 static constexpr T denorm_min() noexcept;  (since C++11)</code></pre>
 <p>Returns the minimum positive subnormal_value of the type T, if std::numeric_limits&lt;T&gt;::has_denorm != std::denorm_absent, otherwise returns std::numeric_limits&lt;T&gt;::min(). Only meaningful for floating-point types. </p>
 <h2>Return value</h2>
-<p>T std::numeric_limits&lt;T&gt;::denorm_min()<br />
-/* non-specialized */ T()<br />
-bool false<br />
-char 0<br />
-signed char 0<br />
-unsigned char 0<br />
-wchar_t 0<br />
-char8_t 0<br />
-char16_t 0<br />
-char32_t 0<br />
-short 0<br />
-unsigned short 0<br />
-int 0<br />
-unsigned int 0<br />
-long 0<br />
-unsigned long 0<br />
-long long 0<br />
-unsigned long long 0<br />
-float 2-149<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if std::numeric_limits&lt;float&gt;::is_iec559 == true<br />
-double 2-1074<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if std::numeric_limits&lt;double&gt;::is_iec559 == true<br />
+<p>T std::numeric_limits&lt;T&gt;::denorm_min()<br/>
+/* non-specialized */ T()<br/>
+bool false<br/>
+char 0<br/>
+signed char 0<br/>
+unsigned char 0<br/>
+wchar_t 0<br/>
+char8_t 0<br/>
+char16_t 0<br/>
+char32_t 0<br/>
+short 0<br/>
+unsigned short 0<br/>
+int 0<br/>
+unsigned int 0<br/>
+long 0<br/>
+unsigned long 0<br/>
+long long 0<br/>
+unsigned long long 0<br/>
+float 2-149<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if std::numeric_limits&lt;float&gt;::is_iec559 == true<br/>
+double 2-1074<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if std::numeric_limits&lt;double&gt;::is_iec559 == true<br/>
 long double /* implementation-defined */ </p>
 <h2>Example</h2>
-<p>Demonstates the underlying bit structure of the denorm_min() and prints the values<br />
+<p>Demonstates the underlying bit structure of the denorm_min() and prints the values<br/>
  // Run this code </p>
 <pre><code>#include &lt;cassert&gt;
 #include &lt;cstdint&gt;
@@ -70,12 +70,12 @@ int main()
 <p>&nbsp;<wbr>&nbsp;double<tt> </tt>min()<tt> </tt><tt> </tt>denorm_min()</p>
 <p>&nbsp;<wbr>&nbsp;<tt> </tt>2.22507e-308<tt> </tt>4.94066e-324</p>
 <h2>See also</h2>
-<p>min returns the smallest finite value of the given type<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
-<code>[static]</code><br />
-has_denorm identifies the denormalization style used by the floating-point type<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br />
-<code>[static]</code><br />
-lowest returns the lowest finite value of the given type<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>min returns the smallest finite value of the given type<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
+<code>[static]</code><br/>
+has_denorm identifies the denormalization style used by the floating-point type<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br/>
+<code>[static]</code><br/>
+lowest returns the lowest finite value of the given type<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> <i>(C++11)</i> </p>

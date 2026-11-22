@@ -10,7 +10,7 @@ description: "ioping – simple disk I/O latency monitoring tool"
 
 <p> ioping &#8211; simple disk I/O latency monitoring tool</p>
 <h2>SYNOPSYS</h2>
-<p> [ <code>-ABCDLRWGYykq</code> ] [ <code>-c </code><i>count</i> ] [ <code>-i </code><i>interval</i> ] [ <code>-l </code><i>speed</i> ] [ <code>-t </code><i>time</i> ] [ <code>-T </code><i>time</i> ] [ <code>-s </code><i>size</i> ] [ <code>-S </code><i>wsize</i> ] [ <code>-o </code><i>offset</i> ] [ <code>-w </code><i>deadline</i> ] [ <code>-p </code><i>period</i> ] [ <code>-P </code><i>period</i> ] <i>directory</i>|<i>file</i>|<i>device</i><br />
+<p> [ <code>-ABCDLRWGYykq</code> ] [ <code>-c </code><i>count</i> ] [ <code>-i </code><i>interval</i> ] [ <code>-l </code><i>speed</i> ] [ <code>-t </code><i>time</i> ] [ <code>-T </code><i>time</i> ] [ <code>-s </code><i>size</i> ] [ <code>-S </code><i>wsize</i> ] [ <code>-o </code><i>offset</i> ] [ <code>-w </code><i>deadline</i> ] [ <code>-p </code><i>period</i> ] [ <code>-P </code><i>period</i> ] <i>directory</i>|<i>file</i>|<i>device</i><br/>
  <code>-h</code> | <code>-v</code> </p>
 <h2>DESCRIPTION</h2>
 <p> This tool generates various I/O patterns and lets you monitor I/O speed and latency in real time.</p>
@@ -113,19 +113,19 @@ description: "ioping – simple disk I/O latency monitoring tool"
 <dt><code>3</code></dt>
 <dd> Error during runtime.</dd></dl>
 <h2>RAW STATISTICS</h2>
-<p> <code>ioping -p 100 -c 200 -i 0 -q .</code><br />
- <tt>100 26694 3746 15344272 188 267 1923 228 100 26694<br />
- 100 24165 4138 16950134 190 242 2348 214 100 24165<br />
+<p> <code>ioping -p 100 -c 200 -i 0 -q .</code><br/>
+ <tt>100 26694 3746 15344272 188 267 1923 228 100 26694<br/>
+ 100 24165 4138 16950134 190 242 2348 214 100 24165<br/>
  (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) </p>
-<p> (1) count of requests in statistics<br />
- (2) running time (usec)<br />
- (3) requests per second (iops)<br />
- (4) transfer speed (bytes/sec)<br />
- (5) minimal request time (usec)<br />
- (6) average request time (usec)<br />
- (7) maximum request time (usec)<br />
- (8) request time standard deviation (usec)<br />
- (9) total requests (including too slow and too fast)<br />
+<p> (1) count of requests in statistics<br/>
+ (2) running time (usec)<br/>
+ (3) requests per second (iops)<br/>
+ (4) transfer speed (bytes/sec)<br/>
+ (5) minimal request time (usec)<br/>
+ (6) average request time (usec)<br/>
+ (7) maximum request time (usec)<br/>
+ (8) request time standard deviation (usec)<br/>
+ (9) total requests (including too slow and too fast)<br/>
  (10) total running time (usec) </tt></p>
 <h2>EXAMPLES</h2>
 <dl>
@@ -143,5 +143,5 @@ description: "ioping – simple disk I/O latency monitoring tool"
 <p> <code><a href="/docs/linux/man/1-iostat/">iostat</a></code>(1), <code><a href="/docs/linux/man/1-dd/">dd</a></code>(1), <code><a href="/docs/linux/man/1-fio/">fio</a></code>(1), <code><a href="/docs/linux/man/1-dbench/">dbench</a></code>(1), <code>fsstress,</code> <code>xfstests,</code> <code><a href="/docs/linux/man/8-hdparm/">hdparm</a></code>(8), <code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8),</p>
 <h2>HOMEPAGE</h2>
 <h2>AUTHORS</h2>
-<p> This program was written by Konstantin Khlebnikov<br />
+<p> This program was written by Konstantin Khlebnikov<br/>
  Man-page was written by Kir Kolyshkin </p>

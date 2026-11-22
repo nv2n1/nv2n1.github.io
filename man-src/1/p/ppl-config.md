@@ -76,7 +76,7 @@ description: "ppl-config – obtain information about an installation of the Par
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;ppl-devel [at] cs.unipr.it&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2001-2010 Roberto Bagnara &lt;bagnara [at] cs.unipr.it&gt; Copyright (C) 2010-2011 BUGSENG srl (<a rel="nofollow" href="http://bugseng.com)">http://bugseng.com)</a><br />
+<p> Copyright (C) 2001-2010 Roberto Bagnara &lt;bagnara [at] cs.unipr.it&gt; Copyright (C) 2010-2011 BUGSENG srl (<a rel="nofollow" href="http://bugseng.com)">http://bugseng.com)</a><br/>
  This is free software; see the file <code>COPYING</code> in the source distribution or use the command <code>ppl-config &#8211;copying</code> to obtain the copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code>libppl(3)</code> </p>

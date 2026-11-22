@@ -36,7 +36,7 @@ description: "hosts.equiv – list of hosts and users that are granted \"trusted
 <p> Allow <i>user</i> from <i>host</i> to log in as any non-root user: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;host user </p>
 <p> Allow all users with matching local accounts from <i>host</i> to log in except for <i>baduser</i>: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;host -baduser<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;host -baduser<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;host </p>
 <p> Deny all users from <i>host</i>: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-host </p>
@@ -48,7 +48,7 @@ description: "hosts.equiv – list of hosts and users that are granted \"trusted
 <p> Allow all users in a <i>netgroup</i> to log in from <i>host</i> as any non-root user: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;host&nbsp;+@netgroup </p>
 <p> Allow all users with matching local accounts on all hosts in a <i>netgroup</i> except <i>baduser</i>: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;+@netgroup -baduser<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;+@netgroup -baduser<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;+@netgroup </p>
 <p> Note: the deny statements must always precede the allow statements because the file is processed sequentially until the first matching rule is found.</p>
 <h2>See Also</h2>

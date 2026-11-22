@@ -102,9 +102,9 @@ AddToFunc DeiconifyAndRaise
 # pretend to be a taskbar
 *FvwmWinList: NoIconAction SendToModule FvwmAnimate animate</pre>
 <h2>Author</h2>
-<p>Mike Finger (mfinger [at] mermaid.micro.umn.edu)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(Mike_Finger [at] atk.com)<br />
+<p>Mike Finger (mfinger [at] mermaid.micro.umn.edu)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(Mike_Finger [at] atk.com)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(doodman on IRC, check the&nbsp;<wbr>#linux channel) </p>
-<p> Various Patches by<br />
-John Heidemann&nbsp;<wbr>&lt;johnh [at] ficus.CS.UCLA.EDU&gt;&nbsp;<wbr>and<br />
+<p> Various Patches by<br/>
+John Heidemann&nbsp;<wbr>&lt;johnh [at] ficus.CS.UCLA.EDU&gt;&nbsp;<wbr>and<br/>
 Jason L Tibbitts&nbsp;<wbr>&lt;tibbs [at] tcamc.uh.edu&gt;.</p>

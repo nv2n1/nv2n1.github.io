@@ -87,7 +87,7 @@ description: "Attributes and Cntls –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>header_name</i> Name of the HTTP header to set.<br />
+</dt><dd> <i>header_name</i> Name of the HTTP header to set.<br/>
  <i>header_value</i> Value of the HTTP header</dd></dl>
 <p> Certain headers will cause the HTTP driver to behave differently than normal. This must be called before </p>
 <dl>
@@ -115,7 +115,7 @@ description: "Attributes and Cntls –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>header_name</i> Name of the HTTP header to set.<br />
+</dt><dd> <i>header_name</i> Name of the HTTP header to set.<br/>
  <i>header_value</i> Value of the HTTP header</dd></dl>
 <p> Certain headers will cause changes in how the HTTP protocol will be handled. These include:</p>
 <dl>

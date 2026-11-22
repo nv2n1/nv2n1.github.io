@@ -11,7 +11,7 @@ description: "izmax1.f –"
 <p> izmax1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> INTEGER function <code>izmax1</code> (N, CX, INCX)<br />
+<p> INTEGER function <code>izmax1</code> (N, CX, INCX)<br/>
  <i></i><code>IZMAX1</code> finds the index of the vector element whose real part has maximum absolute value.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function izmax1 (integerN, complex*16, dimension( * )CX, integerINCX)</h3>

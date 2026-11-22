@@ -22,16 +22,16 @@ int fchmodat(int dirfd, const char *pathname, mode_t mode, int flags);
 <p> <code>fchmod</code>():</p>
 <dl>
 <dt>
-</dt><dd> Since glibc 2.24:<br />
+</dt><dd> Since glibc 2.24:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L </dd>
-<p> Glibc 2.19 to 2.23<br />
+<p> Glibc 2.19 to 2.23<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE </p>
-<p> Glibc 2.16 to 2.19:<br />
+<p> Glibc 2.16 to 2.19:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_POSIX_C_SOURCE </p>
-<p> Glibc 2.12 to 2.16:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 ||<br />
+<p> Glibc 2.12 to 2.16:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 ||<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L </p>
-<p> Glibc 2.11 and earlier:<br />
+<p> Glibc 2.11 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
 <p> <code>fchmodat</code>():</p>
 <dl>

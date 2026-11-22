@@ -355,61 +355,61 @@ are:
 <dt><code>ackdat</code></dt>
 <dd> TCP connection setup time, the time between the SYN_ACK and the ACK packets.</dd>
 <dt><code>tcpopt</code></dt>
-<dd> The TCP connection options seen at initiation. The <i>tcpopt</i> indicator consists of a fixed length field, that reports presence of any of the TCP options that argus tracks The format is:<br />
- M            &#8211;  Maxiumum Segment Size<br />
-  w           &#8211;  Window Scale<br />
-   s          &#8211;  Selective ACK OK<br />
-    S         &#8211;  Selective ACK<br />
-     e        &#8211;  TCP Echo<br />
-      E       &#8211;  TCP Echo Reply<br />
-       T      &#8211;  TCP Timestamp<br />
-        c     &#8211;  TCP CC<br />
-         N    &#8211;  TCP CC New<br />
-          O   &#8211;  TCP CC Echo<br />
-           S  &#8211;  Source Explicit Congestion Notification<br />
-            D &#8211;  Destination Explicit Congestion Notification<br />
-inode<br />
-ICMP intermediate node.<br />
-offset<br />
-record byte offset in file or stream.<br />
-smeansz<br />
-Mean of the flow packet size transmitted by the src (initiator).<br />
-dmeansz<br />
-Mean of the flow packet size transmitted by the dst (target).<br />
-spktsz<br />
-histogram for the src packet size distribution<br />
-smaxsz<br />
-maximum packet size for traffic transmitted by the src.<br />
-dpktsz<br />
-histogram for the dst packet size distribution<br />
-dmaxsz<br />
-maximum packet size for traffic transmitted by the dst.<br />
-sminsz<br />
-minimum packet size for traffic transmitted by the src.<br />
-dminsz<br />
-minimum packet size for traffic transmitted by the dst.<br />
-dminsz<br />
+<dd> The TCP connection options seen at initiation. The <i>tcpopt</i> indicator consists of a fixed length field, that reports presence of any of the TCP options that argus tracks The format is:<br/>
+ M            &#8211;  Maxiumum Segment Size<br/>
+  w           &#8211;  Window Scale<br/>
+   s          &#8211;  Selective ACK OK<br/>
+    S         &#8211;  Selective ACK<br/>
+     e        &#8211;  TCP Echo<br/>
+      E       &#8211;  TCP Echo Reply<br/>
+       T      &#8211;  TCP Timestamp<br/>
+        c     &#8211;  TCP CC<br/>
+         N    &#8211;  TCP CC New<br/>
+          O   &#8211;  TCP CC Echo<br/>
+           S  &#8211;  Source Explicit Congestion Notification<br/>
+            D &#8211;  Destination Explicit Congestion Notification<br/>
+inode<br/>
+ICMP intermediate node.<br/>
+offset<br/>
+record byte offset in file or stream.<br/>
+smeansz<br/>
+Mean of the flow packet size transmitted by the src (initiator).<br/>
+dmeansz<br/>
+Mean of the flow packet size transmitted by the dst (target).<br/>
+spktsz<br/>
+histogram for the src packet size distribution<br/>
+smaxsz<br/>
+maximum packet size for traffic transmitted by the src.<br/>
+dpktsz<br/>
+histogram for the dst packet size distribution<br/>
+dmaxsz<br/>
+maximum packet size for traffic transmitted by the dst.<br/>
+sminsz<br/>
+minimum packet size for traffic transmitted by the src.<br/>
+dminsz<br/>
+minimum packet size for traffic transmitted by the dst.<br/>
+dminsz<br/>
 minimum packet size for traffic transmitted by the dst.</dd>
-<p>Examles are:<br />
-   -s saddr      print only the source address.<br />
-   -s -bytes     removes the bytes field from list.<br />
-   -s +2srcid    adds the source identifier as the 2nd field.<br />
-   -s spkts:18   prints src pkt count with a column width of 18.<br />
+<p>Examles are:<br/>
+   -s saddr      print only the source address.<br/>
+   -s -bytes     removes the bytes field from list.<br/>
+   -s +2srcid    adds the source identifier as the 2nd field.<br/>
+   -s spkts:18   prints src pkt count with a column width of 18.<br/>
    -s smpls      print the local mpls label in the flow.
 </dl>
 <dt><code>-S &lt;[URI://][user[:pass]@]host[:portnum]&gt;</code></dt>
 <dd> Specify a remote source of flow data. Read flow data from various data format and transport strategies, using the URI format to indicate the type of flow data record of interest (argus-tcp, argus-udp, cisco, jflow, sflow) and the source, as a name or an addresss, providing an option user and password for protected access. Use the optional &#8216;:portnum&#8217; to specify a port number other than the default; 561. </dd>
-<p> Examles are:<br />
-&#8211; S localhost request remote argus records from localhost, using default methods.- S user[at] localhost request argus records from localhost, as &#8216;user&#8217;.- S user:pass[at] localhost request argus records from localhost, as &#8216;user&#8217;, with &#8216;pass&#8217; password.- S 192.168.0.4:12345 request via TCP argus records from 192.168.0.4, port 12345. &#8211; S argus: // user@anubis       request argus records from anubis, via TCP port 561, as &#8216;user&#8217;.<br />
-                                                                                                                                                                                                                                                                                                                                                    -S argus &#8211;<br />
-                                                                                                                                                             tcp: // thoth:12345   request argus records via TCP from thoth, port 12345.<br />
-                                                                                                                                                                 -S argus &#8211;<br />
-                                                                                                                                                             udp: // set:12345     request argus records via UDP from set, port 12345.<br />
-                                                                                                                                                                 -S<br />
-                                                                                                                                                           cisco: // any:9996          read cisco netflow records from AF_ANY, on port 9996.<br />
-                                                                                                                                                               -S<br />
-                                                                                                                                                           jflow: // 10.0.0.2:9898     read jflow records sent to 10.0.0.2, on port 9898.<br />
-                                                                                                                                                               -S<br />
+<p> Examles are:<br/>
+&#8211; S localhost request remote argus records from localhost, using default methods.- S user[at] localhost request argus records from localhost, as &#8216;user&#8217;.- S user:pass[at] localhost request argus records from localhost, as &#8216;user&#8217;, with &#8216;pass&#8217; password.- S 192.168.0.4:12345 request via TCP argus records from 192.168.0.4, port 12345. &#8211; S argus: // user@anubis       request argus records from anubis, via TCP port 561, as &#8216;user&#8217;.<br/>
+                                                                                                                                                                                                                                                                                                                                                    -S argus &#8211;<br/>
+                                                                                                                                                             tcp: // thoth:12345   request argus records via TCP from thoth, port 12345.<br/>
+                                                                                                                                                                 -S argus &#8211;<br/>
+                                                                                                                                                             udp: // set:12345     request argus records via UDP from set, port 12345.<br/>
+                                                                                                                                                                 -S<br/>
+                                                                                                                                                           cisco: // any:9996          read cisco netflow records from AF_ANY, on port 9996.<br/>
+                                                                                                                                                               -S<br/>
+                                                                                                                                                           jflow: // 10.0.0.2:9898     read jflow records sent to 10.0.0.2, on port 9898.<br/>
+                                                                                                                                                               -S<br/>
                                                                                                                                                            sflow: // localhost:6343    read sflow records sent to localhost interface, port 6343.</p>
 <dt><code>-t &lt;timerange&gt;</code></dt>
 <dd> Specify the <code>&lt;time range&gt;</code> for matching <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> records. This option supports a high degree of flexibility in specifing explicit and relative time ranges with support for time field wildcarding. </dd>
@@ -848,8 +848,8 @@ Carter Bullard (carter [at] qosient.com).
 <p> <code>/etc/ra.conf</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-rarc/">rarc</a></code>(5) <code><a href="/docs/linux/man/8-argus/">argus</a></code>(8) </p>
-<p> Postel, Jon, <i>Internet Protocol,</i> <font SIZE="-1">RFC</font> 791, Network Information Center, <font SIZE="-1">SRI</font> International, Menlo Park, Calif., May 1981. </p>
-<p> Postel, Jon, <i>Internet Control Message Protocol</i>, <font SIZE="-1">RFC</font> 792, Network Information Center, SRI International, Menlo Park, Calif., May 1981. </p>
-<p> Postel, Jon, <i>Transmission Control Protocol</i>, <font SIZE="-1">RFC</font> 793, Network Information Center, SRI International, Menlo Park, Calif., May 1981. </p>
-<p> Postel, Jon, <i>User Datagram Protocol</i>, <font SIZE="-1">RFC</font> 768, Network Information Center, SRI International, Menlo Park, Calif., May 1980. </p>
+<p> Postel, Jon, <i>Internet Protocol,</i> RFC 791, Network Information Center, SRI International, Menlo Park, Calif., May 1981. </p>
+<p> Postel, Jon, <i>Internet Control Message Protocol</i>, RFC 792, Network Information Center, SRI International, Menlo Park, Calif., May 1981. </p>
+<p> Postel, Jon, <i>Transmission Control Protocol</i>, RFC 793, Network Information Center, SRI International, Menlo Park, Calif., May 1981. </p>
+<p> Postel, Jon, <i>User Datagram Protocol</i>, RFC 768, Network Information Center, SRI International, Menlo Park, Calif., May 1980. </p>
 <p> McCanne, Steven, and Van Jacobson, <i>The BSD Packet Filter: A New Architecture for User-level Capture</i>, Lawrwnce Berkeley Laboratory, One Cyclotron Road, Berkeley, Calif., 94720, December 1992. </p>

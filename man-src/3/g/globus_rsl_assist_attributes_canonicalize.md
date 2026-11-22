@@ -10,9 +10,9 @@ description: "RSL Helper Functions –"
 
 <p> RSL Helper Functions &#8211; </p>
 <h3>Functions</h3>
-<p> int <code>globus_rsl_assist_attributes_canonicalize</code> (globus_rsl_t *rsl)<br />
- <i>Canonicalize all attribute names in an RSL parse tree. </i><br />
- void <code>globus_rsl_assist_string_canonicalize</code> (char *ptr)<br />
+<p> int <code>globus_rsl_assist_attributes_canonicalize</code> (globus_rsl_t *rsl)<br/>
+ <i>Canonicalize all attribute names in an RSL parse tree. </i><br/>
+ void <code>globus_rsl_assist_string_canonicalize</code> (char *ptr)<br/>
  <i>Canonicalize an attribute name. </i></p>
 <h2>Detailed Description</h2>
 <p> The rsl_assist library provide a set of functions to canonicalize RSL parse trees or strings.</p>
@@ -30,7 +30,7 @@ description: "RSL Helper Functions –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>GLOBUS_FAILURE</i> Failure</dd></dl>
 <h3>void globus_rsl_assist_string_canonicalize (char *ptr)</h3>
 <p> Canonicalize an attribute name. The <code>globus_rsl_assist_string_canonicalize()</code> function modifies the NULL-terminated string pointed to by its <i>ptr</i> parameter so that it is in canonical form. The canonical form is all lower-case with all underscore characters removed. </p>

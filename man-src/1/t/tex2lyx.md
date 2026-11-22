@@ -15,7 +15,7 @@ description: "tex2lyx – translate well-behaved LaTeX into LyX"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-c</code></dt>
-<dd> <p> Class. By default, when <code>tex2lyx</code> sees a <code>\documentclass{foo}</code> command, it creates a file of textclass ``foo&#8217;&#8216; and reads the LyX layout file for that class (something like /usr/local/share/lyx/layouts/foo.layout <font SIZE="-1">OR</font> <font SIZE="-1"><code>HOME</code></font>/.lyx/layouts/foo.layout). Use <code>-c</code> to declare a different textclass (and read a different layout file). </p>
+<dd> <p> Class. By default, when <code>tex2lyx</code> sees a <code>\documentclass{foo}</code> command, it creates a file of textclass ``foo&#8217;&#8216; and reads the LyX layout file for that class (something like /usr/local/share/lyx/layouts/foo.layout OR <code>HOME</code>/.lyx/layouts/foo.layout). Use <code>-c</code> to declare a different textclass (and read a different layout file). </p>
  </dd>
 <dd> <p> This option is needed if the input file is a LaTeX fragment, with no preamble matter or <code>\begin{document}</code> command. LyX files created by <code>tex2lyx</code> from partial files can be included in an existing LyX file using the ``Include LyX File&#8217;&#8216; command from LyX&#8217;s Insert menu. </p>
  </dd>
@@ -81,7 +81,7 @@ description: "tex2lyx – translate well-behaved LaTeX into LyX"
 <dt>&bull;</dt>
 <dd> <p> Run <code>tex2lyx</code>. </p>
  </dd>
-<dd> <p> <code>tex2lyx</code> will inform you of its progress and give any warnings to stderr, so if you don&#8217;t want any output at all, try (in csh) `tex2lyx foo.tex &gt;&amp; /dev/null&#8217;. You should <font SIZE="-1">NOT</font> redirect standard output to <i>foo.lyx</i>. </p>
+<dd> <p> <code>tex2lyx</code> will inform you of its progress and give any warnings to stderr, so if you don&#8217;t want any output at all, try (in csh) `tex2lyx foo.tex &gt;&amp; /dev/null&#8217;. You should NOT redirect standard output to <i>foo.lyx</i>. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Run LyX (version 2.1 or later) on the resulting .lyx file. </p>
@@ -91,12 +91,12 @@ description: "tex2lyx – translate well-behaved LaTeX into LyX"
 <dt>&bull;</dt>
 <dd> <p> Transform things have been inserted as TeX code manually to LyX features, if possible. </p>
  </dd>
-<dd> <p> As mentioned above, you should be able to print out the LyX file even without doing this. However, changing a command in TeX code to the corresponding LyX object will allow you to take advantage of LyX&#8217;s <font SIZE="-1">WYSIWYM</font> editing. </p>
+<dd> <p> As mentioned above, you should be able to print out the LyX file even without doing this. However, changing a command in TeX code to the corresponding LyX object will allow you to take advantage of LyX&#8217;s WYSIWYM editing. </p>
  </dd>
-<dd> <p> <code>tex2lyx</code> is not guaranteed to create a LyX file which generates exactly the same output as the LaTeX file, although its goal is to achieve this. <code>tex2lyx</code> will generally err on the side of translating less to ensure that the resulting output files are accurate, even though this leads to more TeX code and less <font SIZE="-1">WYSIWYM</font>. </p>
+<dd> <p> <code>tex2lyx</code> is not guaranteed to create a LyX file which generates exactly the same output as the LaTeX file, although its goal is to achieve this. <code>tex2lyx</code> will generally err on the side of translating less to ensure that the resulting output files are accurate, even though this leads to more TeX code and less WYSIWYM. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">PROOFREAD</font> <font SIZE="-1">THE</font> <font SIZE="-1">DOCUMENT</font>!! </p>
+<dd> <p> PROOFREAD THE DOCUMENT!! </p>
  </dd>
 <dd> <p> I&#8217;m sure you were planning on doing this anyway, but it&#8217;s particularly important after translating a LaTeX document. <code>tex2lyx</code> is better at ``macro-translating&#8217;&#8216; (translating the whole document) than ``micro-translating&#8217;&#8216; (translating every little detail). For example, you may see extra spaces or deleted spaces. Space handling has improved, but it&#8217;s not perfect. </p>
  </dd></dl>
@@ -154,7 +154,7 @@ description: "tex2lyx – translate well-behaved LaTeX into LyX"
 <p> Some of this support may not be 100% yet. See below for details </p>
 <p> <code>tex2lyx</code> copies math (almost) verbatim from your LaTeX file. Luckily, LyX reads in LaTeX math, so (almost) any math which is supported by LyX should work just fine. </p>
 <p> <code>tex2lyx</code> will copy any preamble commands (i.e., anything before <code>\begin{document}</code>) verbatim. Fancy stuff you&#8217;ve got in your preamble should thus be conserved in printed documents, although it will not of course show up in the LyX window. Check Document-&gt;Settings-&gt;LaTeX Preamble to see the result.  </p>
-<font SIZE="-1"></font><h3>What tex2lyx Can't Handle --- But it's OK</h3>
+<h3>What tex2lyx Can't Handle --- But it's OK</h3>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> some spacing commands (<code>\hspace</code>, <code>\pagebreak</code> and <code>\linebreak</code>) </p>
@@ -169,7 +169,7 @@ description: "tex2lyx – translate well-behaved LaTeX into LyX"
 <dd> <p> unknown (e.g., user-defined) environments and commands </p>
  </dd></dl>
 <p> <code>tex2lyx</code> copies unknown commands, along with their arguments, verbatim into the LyX file. Also, if it sees a <code>\begin{foo}</code> where it doesn&#8217;t recognize the ``foo&#8217;&#8216; environment, it will copy verbatim until it sees <code>\end{foo}</code> (unless you use the <code>-r</code> option). Most of these unknown commands won&#8217;t cause <code>tex2lyx</code> to break; they&#8217;ll merely require you to do some editing once you&#8217;ve loaded the file up in LyX. That should be less painful than editing either the .tex or the .lyx file using a text editor.  </p>
-<font SIZE="-1"></font><h3>What tex2lyx Handles Badly --- aka BUGS</h3>
+<h3>What tex2lyx Handles Badly --- aka BUGS</h3>
 <p> Since <code>tex2lyx</code> is relatively new, it&#8217;s got a number of problems. As it matures, these bugs will be squished. </p>
 <dl>
 <dt>&bull;</dt>
@@ -183,10 +183,10 @@ description: "tex2lyx – translate well-behaved LaTeX into LyX"
 <dt>&bull;</dt>
 <dd> <p> The foil document class has a couple of bugs. <code>tex2lyx</code> may do weird things with optional arguments to <code>\foilhead</code> commands. Also, it may handle <code>\begin{dinglist}</code> incorrectly (although the stuff in the environment should translate normally). </p>
  </dd></dl>
-<p> All known bugs of <code>tex2lyx</code> can be found on <i></i><font SIZE="-1"><i><a rel="nofollow" href="http://www.lyx.org/trac/wiki/BugTrackerHome">http://www.lyx.org/trac/wiki/BugTrackerHome</a></i></font><i></i>. </p>
-<p> <code>tex2lyx</code> is rather robust. As mentioned above, it may not translate your file perfectly, but the result should be usable and it shouldn&#8217;t crash. If you encounter problems---and the problem is not one of those mentioned above or on <i></i><font SIZE="-1"><i><a rel="nofollow" href="http://www.lyx.org/trac/wiki/BugTrackerHome">http://www.lyx.org/trac/wiki/BugTrackerHome</a></i></font><i></i>---please report the issue as described in the section on <i>Bug Reports</i>.  </p>
+<p> All known bugs of <code>tex2lyx</code> can be found on <i></i><i><a rel="nofollow" href="http://www.lyx.org/trac/wiki/BugTrackerHome">http://www.lyx.org/trac/wiki/BugTrackerHome</a></i><i></i>. </p>
+<p> <code>tex2lyx</code> is rather robust. As mentioned above, it may not translate your file perfectly, but the result should be usable and it shouldn&#8217;t crash. If you encounter problems---and the problem is not one of those mentioned above or on <i></i><i><a rel="nofollow" href="http://www.lyx.org/trac/wiki/BugTrackerHome">http://www.lyx.org/trac/wiki/BugTrackerHome</a></i><i></i>---please report the issue as described in the section on <i>Bug Reports</i>.  </p>
 <h3>What LyX Can't Handle</h3>
-<p> LyX itself is missing a couple of features, such that even if <code>tex2lyx</code> translates things perfectly, LyX may still have trouble reading it. If you really need these features, you can export your final document as LaTeX, and put them back in. See <i></i><font SIZE="-1"><i>BUGS</i></font><i></i> for more details on these bugs. </p>
+<p> LyX itself is missing a couple of features, such that even if <code>tex2lyx</code> translates things perfectly, LyX may still have trouble reading it. If you really need these features, you can export your final document as LaTeX, and put them back in. See <i></i><i>BUGS</i><i></i> for more details on these bugs. </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> For a number of commands (such as <code>\\</code>), LyX does not support the optional argument. <code>tex2lyx</code> will automatically discard the optional arguments with a warning to stdout. LyX also ignores the width argument for the thebibliography environment. </p>
@@ -221,39 +221,39 @@ description: "tex2lyx – translate well-behaved LaTeX into LyX"
 <dt><code>LYX_DIR_21x</code></dt>
 <dd> <p> can be used to specify which system directory to use. </p>
  </dd></dl>
-<p> The system directory is determined by searching for the file &quot;chkconfig.ltx&quot;. Directories are searched in this order: <br />
- 1) -sysdir command line parameter <br />
- 2) LYX_DIR_21x environment variable <br />
- 3) Maybe &lt;path of binary&gt;/TOP_SRCDIR/lib <br />
- 4) &lt;path of binary&gt;/../share/&lt;name of binary&gt;/ <br />
+<p> The system directory is determined by searching for the file &quot;chkconfig.ltx&quot;. Directories are searched in this order: <br/>
+ 1) -sysdir command line parameter <br/>
+ 2) LYX_DIR_21x environment variable <br/>
+ 3) Maybe &lt;path of binary&gt;/TOP_SRCDIR/lib <br/>
+ 4) &lt;path of binary&gt;/../share/&lt;name of binary&gt;/ <br/>
  5) hardcoded lyx_dir (at build time: /usr/share/lyx) </p>
 <dl>
 <dt><code>LYX_USERDIR_21x</code></dt>
 <dd> <p> can be used to specify which user directory to use. </p>
  </dd></dl>
-<p> The user directory is, in order of precedence: <br />
- 1) -userdir command line parameter <br />
- 2) LYX_USERDIR_21x environment variable <br />
+<p> The user directory is, in order of precedence: <br/>
+ 1) -userdir command line parameter <br/>
+ 2) LYX_USERDIR_21x environment variable <br/>
  3) $HOME/.&lt;name of binary&gt; if no explicit setting is made  </p>
 <h2>FILES</h2>
-<p> If <i></i><font SIZE="-1"><i>LIBDIR</i></font><i></i> is the system-wide LyX directory and <i></i><font SIZE="-1"><i>MY_LYXDIR</i></font><i></i> is your personal LyX directory, then the following files are read by tex2lyx: </p>
+<p> If <i></i><i>LIBDIR</i><i></i> is the system-wide LyX directory and <i></i><i>MY_LYXDIR</i><i></i> is your personal LyX directory, then the following files are read by tex2lyx: </p>
 <dl>
-<dt><i></i><font SIZE="-1"><i>MY_LYXDIR</i></font><i></i>/layouts/*.layout</dt>
+<dt><i></i><i>MY_LYXDIR</i><i></i>/layouts/*.layout</dt>
 <dd> <p> User&#8217;s personal layout files for document classes </p>
  </dd>
-<dt><i></i><font SIZE="-1"><i>MY_LYXDIR</i></font><i></i>/syntax.default</dt>
+<dt><i></i><i>MY_LYXDIR</i><i></i>/syntax.default</dt>
 <dd> <p> User&#8217;s personal syntax file </p>
  </dd>
-<dt><i></i><font SIZE="-1"><i>MY_LYXDIR</i></font><i></i>/encodings</dt>
+<dt><i></i><i>MY_LYXDIR</i><i></i>/encodings</dt>
 <dd> <p> User&#8217;s personal encoding definition file </p>
  </dd>
-<dt><i></i><font SIZE="-1"><i>LIBDIR</i></font><i></i>/layouts/*.layout</dt>
+<dt><i></i><i>LIBDIR</i><i></i>/layouts/*.layout</dt>
 <dd> <p> System-wide layout files for document classes </p>
  </dd>
-<dt><i></i><font SIZE="-1"><i>LIBDIR</i></font><i></i>/lib/syntax.default</dt>
+<dt><i></i><i>LIBDIR</i><i></i>/lib/syntax.default</dt>
 <dd> <p> System-wide LaTeX syntax file </p>
  </dd>
-<dt><i></i><font SIZE="-1"><i>LIBDIR</i></font><i></i>/lib/encodings</dt>
+<dt><i></i><i>LIBDIR</i><i></i>/lib/encodings</dt>
 <dd> <p> System-wide encoding definition file </p>
  </dd></dl>
 <h2>SEE ALSO</h2>

@@ -68,7 +68,7 @@ description: "savage – S3 Savage video driver"
 <dt><code>Option &#34;UseBIOS&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Enable or disable use of the video BIOS to change modes. Ordinarily, the <code>savage </code> driver tries to use the video BIOS to do mode switches. This generally produces the best results with the mobile chips (/MX and /IX), since the BIOS knows how to handle the critical but unusual timing requirements of the various LCD panels supported by the chip. To do this, the driver searches through the BIOS mode list, looking for the mode which most closely matches the xorg.conf mode line. Some purists find this scheme objectionable. If you would rather have the <code>savage</code> driver use your mode line timing exactly, turn off the UseBios option. <code>Note:</code> Use of the BIOS is required for dualhead operation. Default: on (use the BIOS).</dd>
 <dt><code>Option &#34;IgnoreEDID&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
-<dd>Do not use EDID data for mode validation, but DDC is still used for monitor detection. This is different from NoDDC option.<br />
+<dd>Do not use EDID data for mode validation, but DDC is still used for monitor detection. This is different from NoDDC option.<br/>
  The default value is <code>off.</code></dd>
 <dt><code>Option &#34;ShadowStatus&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Enables the use of a shadow status register. There is a chip bug in the Savage graphics engine that can cause a bus lock when reading the engine status register under heavy load, such as when scrolling text or dragging windows. The bug affects about 4% of all Savage users without DRI and a large fraction of users with DRI. If your system hangs regularly while scrolling text or dragging windows, try turning this option on. This uses an alternate method of reading the engine status which is slightly more expensive, but avoids the problem. When DRI is enabled then the default is &#34;on&#34; (use shadow status), otherwise the default is &#34;off&#34; (use normal status register).</dd>
@@ -77,32 +77,32 @@ description: "savage – S3 Savage video driver"
 <dt><code>Option &#34;BCIforXv&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Use the BCI to copy and reformat Xv pixel data. Using the BCI for Xv causes graphics artifacts on some chips. This option only applies to Savage4 and prosavage/twister chips. On some combinations of chipsets and video players, BCI formatting might actually be slower than software formatting (&#34;AGPforXv&#34; might help in this case). BCI formatting can only be used on video data with a width that is a multiple of 16 pixels (which is the vast majority of videos). Other widths are handled through software formatting. Default: on for prosavage and twister (use BCI for Xv); off for savage4 (do not use the BCI for Xv).</dd>
 <dt><code>Option &#34;AGPforXv&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
-<dd>Instructs the BCI Xv pixel formatter to use AGP memory as a scratch buffer. Ordinarily the BCI formatter uses a an area in framebuffer memory to hold YV12 planar data to be converted for display. This requires a somewhat expensive upload of YV12 data to framebuffer memory. The &#34;AGPforXv&#34; option causes the BCI formatter to place the YV12 data in AGP memory instead, which can be uploaded faster than the framebuffer. Use of this option cuts upload overhead by 25% according to benchmarks. This option also smooths out most of the shearing present when using BCI for pixel conversion. Currently this option is <code>experimental</code> and is disabled by default. Video width restrictions that apply to &#34;BCIforXv&#34; also apply here. Only valid when &#34;DRI&#34; and &#34;BCIforXv&#34; are both active, and only on AGP chipsets. Default: &#34;off&#34;.<br />
+<dd>Instructs the BCI Xv pixel formatter to use AGP memory as a scratch buffer. Ordinarily the BCI formatter uses a an area in framebuffer memory to hold YV12 planar data to be converted for display. This requires a somewhat expensive upload of YV12 data to framebuffer memory. The &#34;AGPforXv&#34; option causes the BCI formatter to place the YV12 data in AGP memory instead, which can be uploaded faster than the framebuffer. Use of this option cuts upload overhead by 25% according to benchmarks. This option also smooths out most of the shearing present when using BCI for pixel conversion. Currently this option is <code>experimental</code> and is disabled by default. Video width restrictions that apply to &#34;BCIforXv&#34; also apply here. Only valid when &#34;DRI&#34; and &#34;BCIforXv&#34; are both active, and only on AGP chipsets. Default: &#34;off&#34;.<br/>
  If &#34;AccelMethod&#34; is set to &#34;EXA&#34; and &#34;AGPforXv&#34; is enabled, then the driver will also attempt to reuse the AGP scratch buffer for UploadToScreen acceleration.</dd>
 <dt><code>Option &#34;AGPMode&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
-<dd>Set AGP data transfer rate. (used only when DRI is enabled)<br />
- 1 &#8212; x1 (default)<br />
- 2 &#8212; x2<br />
- 4 &#8212; x4<br />
+<dd>Set AGP data transfer rate. (used only when DRI is enabled)<br/>
+ 1 &#8212; x1 (default)<br/>
+ 2 &#8212; x2<br/>
+ 4 &#8212; x4<br/>
  others &#8212; invalid</dd>
 <dt><code>Option &#34;AGPSize&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
 <dd>The amount of AGP memory that will allocated for DMA and textures in MB. Valid sizes are 4, 8, 16, 32, 64, 128 and 256. The default is 16MB.</dd>
 <dt><code>Option &#34;DmaMode&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
-<dd>This option influences in which way DMA (direct memory access) is used by the kernel and 3D drivers.<br />
- Any &#8212; Try command DMA first, then vertex DMA (default)<br />
- Command &#8212; Only use command DMA or don&#8217;t use DMA at all<br />
- Vertex &#8212; Only use vertex DMA or don&#8217;t use DMA at all<br />
- None &#8212; Disable DMA<br />
+<dd>This option influences in which way DMA (direct memory access) is used by the kernel and 3D drivers.<br/>
+ Any &#8212; Try command DMA first, then vertex DMA (default)<br/>
+ Command &#8212; Only use command DMA or don&#8217;t use DMA at all<br/>
+ Vertex &#8212; Only use vertex DMA or don&#8217;t use DMA at all<br/>
+ None &#8212; Disable DMA<br/>
  Command and vertex DMA cannot be enabled at the same time. Which DMA mode is actually used in the end also depends on the DRM version (only &gt;= 2.4.0 supports command DMA) and the hardware (Savage3D/MX/IX doesn&#8217;t support command DMA).</dd>
 <dt><code>Option &#34;DmaType&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
-<dd>The type of memory that will be used by the 3D driver for DMA (direct memory access).<br />
- PCI &#8212; PCI memory (default on PCI cards)<br />
- AGP &#8212; AGP memory (default on AGP cards)<br />
+<dd>The type of memory that will be used by the 3D driver for DMA (direct memory access).<br/>
+ PCI &#8212; PCI memory (default on PCI cards)<br/>
+ AGP &#8212; AGP memory (default on AGP cards)<br/>
  &#34;AGP&#34; only works if you have an AGP card.</dd>
 <dt><code>Option &#34;BusType&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
-<dd>The bus type that will be used to access the graphics card.<br />
- PCI &#8212; PCI bus (default)<br />
- AGP &#8212; AGP bus<br />
+<dd>The bus type that will be used to access the graphics card.<br/>
+ PCI &#8212; PCI bus (default)<br/>
+ AGP &#8212; AGP bus<br/>
  &#34;AGP&#34; only works if you have an AGP card. If you choose &#34;PCI&#34; on an AGP card the AGP bus speed is not set and no AGP aperture is allocated. This implies <code>DmaType</code> &#34;PCI&#34;.</dd>
 <dt><code>Option &#34;DRI&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Enable DRI support. This option allows you to enable or disable the DRI. Default: &#34;on&#34; (enable DRI).</dd></dl>

@@ -9,7 +9,7 @@ description: "umount.davfs – Umount-helper to unmount a davfs2 file system"
 
 <p>umount.davfs &#8211; Umount-helper to unmount a davfs2 file system </p>
 <h2>Synopsis</h2>
-<p><code>umount.davfs [-h | &#8211;help] [-V | &#8211;version]</code><br />
+<p><code>umount.davfs [-h | &#8211;help] [-V | &#8211;version]</code><br/>
  <code>umount </code><i>dir</i> </p>
 <h2>SYNOPSIS (root only)</h2>
 <p><code>umount.davfs </code><i>dir</i></p>

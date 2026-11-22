@@ -11,7 +11,7 @@ description: "stgex2.f –"
 <p> stgex2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>stgex2</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, J1, N1, N2, WORK, LWORK, INFO)<br />
+<p> subroutine <code>stgex2</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, J1, N1, N2, WORK, LWORK, INFO)<br/>
  <i></i><code>STGEX2</code> swaps adjacent diagonal blocks in an upper (quasi) triangular matrix pair by an orthogonal equivalence transformation.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stgex2 (logicalWANTQ, logicalWANTZ, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( ldq, * )Q, integerLDQ, real, dimension( ldz, * )Z, integerLDZ, integerJ1, integerN1, integerN2, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

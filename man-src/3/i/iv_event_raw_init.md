@@ -14,9 +14,9 @@ description: "IV_EVENT_RAW_INIT, iv_event_raw_register, iv_event_raw_unregister,
  void *cookie;
  void (*handler)(void *);
 };</pre>
-<p><code>void IV_EVENT_RAW_INIT(struct iv_event_raw *</code><i>this</i><code>);</code><br />
- <code>int iv_event_raw_register(struct iv_event_raw *</code><i>this</i><code>);</code><br />
- <code>void iv_event_raw_unregister(struct iv_event_raw *</code><i>this</i><code>);</code><br />
+<p><code>void IV_EVENT_RAW_INIT(struct iv_event_raw *</code><i>this</i><code>);</code><br/>
+ <code>int iv_event_raw_register(struct iv_event_raw *</code><i>this</i><code>);</code><br/>
+ <code>void iv_event_raw_unregister(struct iv_event_raw *</code><i>this</i><code>);</code><br/>
  <code>void iv_event_raw_post(struct iv_event_raw *</code><i>this</i><code>);</code> </p>
 <h2>Description</h2>
 <p><code>iv_event_raw</code> provides a way for delivering events to <code>ivykis</code>(3) recipients across thread and process boundaries. </p>

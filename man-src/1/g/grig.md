@@ -48,11 +48,11 @@ description: "grig – graphical user interface for the Ham Radio Control Librar
 <p> It is usually enough to specify the model ID and the DEVICE. </p>
 <p> If you start grig without any options it will use the Dummy backend and set the debug level to 0 (RIG_DEBUG_NONE). If you do not specify the transfer rate for the serial port, the default serial speed will be used by the backend and even if you specify a value, it can be overridden by the backend. If you omit the radio device (port) grig will use <i>/dev/ttyS0</i> or <i>localhost</i> if the selected radio is RPC-rig. </p>
 <h2>DEBUG LEVELS</h2>
-<p> 0 No debug, keep quiet.<br />
- 1 Serious bug.<br />
- 2 Error case (e.g. protocol, memory allocation).<br />
- 3 Warnings.<br />
- 4 Verbose information.<br />
+<p> 0 No debug, keep quiet.<br/>
+ 1 Serious bug.<br/>
+ 2 Error case (e.g. protocol, memory allocation).<br/>
+ 3 Warnings.<br/>
+ 4 Verbose information.<br/>
  5 Trace. </p>
 <p> Grig has its own debug message handler, which will manage messages from hamlib too. The messages are printed to STDERR by default but they can be redirected to a file. In bash shell you would write something like: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>grig&nbsp;<wbr>[options]&nbsp;<wbr>2&gt;&nbsp;<wbr>grig.log </p>
@@ -62,7 +62,7 @@ description: "grig – graphical user interface for the Ham Radio Control Librar
 <h2>KNOWN BUGS AND LIMITATIONS</h2>
 <dl>
 <dt>Buffer Overflow in Radio</dt>
-<dd> By default, grig tries to execute rig commands as fast as possible in order to achieve an almost real-time remote control experience. This strategy has turned out to cause problems with some radios, probably because these radios acknowledge the reception of a command before executing them, whereby the next command will be sent before the previous one has terminated. To avoid any possible buffer overflow in these situations, one can try to experiment with the -D or &#8211;delay command line argument, which will put the specified delay in between each executed command. The default value is 10 milliseconds and the smallest possible value is 1 millisecond (if one specifies 0 millisecond on the command line, the default value will be<br />
+<dd> By default, grig tries to execute rig commands as fast as possible in order to achieve an almost real-time remote control experience. This strategy has turned out to cause problems with some radios, probably because these radios acknowledge the reception of a command before executing them, whereby the next command will be sent before the previous one has terminated. To avoid any possible buffer overflow in these situations, one can try to experiment with the -D or &#8211;delay command line argument, which will put the specified delay in between each executed command. The default value is 10 milliseconds and the smallest possible value is 1 millisecond (if one specifies 0 millisecond on the command line, the default value will be<br/>
 &nbsp;<wbr>used). If you find a value which is better for your radio than the default value, please let us know about it.</dd>
 <dt>Daemon Never Starts on FreeBSD</dt>
 <dd> There have been reports on that the new, thread-based daemon process is never started on FreeBSD, while the old, timeout-based daemon worked fine. It is therefore possible to choose the two ways to run the daemon process. The default is the new thread based daemon, but if you use FreeBSD and nothing seems to work after start-up you can select the timout-based daemon with the -n or &#8211;nothread command line option.</dd>
@@ -78,10 +78,10 @@ description: "grig – graphical user interface for the Ham Radio Control Librar
 <h2>AUTHOR</h2>
 <p> Written by Alexandru Csete, OZ9AEC. </p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to <code>&lt;groundstation-developer [at] lists.sourcforge.net&gt;</code>.<br />
+<p> Report bugs to <code>&lt;groundstation-developer [at] lists.sourcforge.net&gt;</code>.<br/>
  Bugs related to hamlib should be reported directly to the hamlib developers at <code>&lt;hamlib-developer [at] lists.sourceforge.net&gt;</code>. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2006 Alexandru Csete.<br />
+<p> Copyright &#169; 2001-2006 Alexandru Csete.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rigctl/">rigctl</a></code>(1) </p>

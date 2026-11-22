@@ -53,9 +53,9 @@ description: "pmdaproc – process performance metrics domain agent (PMDA)"
 <dd> <code>#this is a comment</code> (from <code>#</code> to the end of the line).</dd>
 <dt>Examples</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>cpuburn&nbsp;<wbr>&gt;&nbsp;<wbr>0.2&nbsp;<wbr>#&nbsp;<wbr>cpu utilization of more than 20%<br />
-&nbsp;<wbr>&nbsp;<wbr>cpuburn&nbsp;<wbr>&gt;&nbsp;<wbr>0.2&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>uname&nbsp;<wbr>==&nbsp;<wbr>&quot;root&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>cpuburn&nbsp;<wbr>&gt;&nbsp;<wbr>0.2&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>(uname&nbsp;<wbr>==&nbsp;<wbr>&quot;root&quot;&nbsp;<wbr>|| uname&nbsp;<wbr>==&nbsp;<wbr>&quot;hot&quot;)<br />
+&nbsp;<wbr>&nbsp;<wbr>cpuburn&nbsp;<wbr>&gt;&nbsp;<wbr>0.2&nbsp;<wbr>#&nbsp;<wbr>cpu utilization of more than 20%<br/>
+&nbsp;<wbr>&nbsp;<wbr>cpuburn&nbsp;<wbr>&gt;&nbsp;<wbr>0.2&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>uname&nbsp;<wbr>==&nbsp;<wbr>&quot;root&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>cpuburn&nbsp;<wbr>&gt;&nbsp;<wbr>0.2&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>(uname&nbsp;<wbr>==&nbsp;<wbr>&quot;root&quot;&nbsp;<wbr>|| uname&nbsp;<wbr>==&nbsp;<wbr>&quot;hot&quot;)<br/>
 &nbsp;<wbr>&nbsp;<wbr>psargs&nbsp;<wbr>~&nbsp;<wbr>/pmda/&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>cpuburn&nbsp;<wbr>&gt;&nbsp;<wbr>0.4 </dd>
 </dl>
 <p> The <code>hotproc.predicate</code> metrics may be used to see what the values of the reserved variables are that were used by the predicate at the last refresh. They do not cover the reserved variables which are already exported elsewhere. A <code>hotproc.predicate</code> metric may not have a value if it is not referenced in the configuration predicate. </p>
@@ -64,7 +64,7 @@ description: "pmdaproc – process performance metrics domain agent (PMDA)"
 <dl>
 <dt>Examples</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>pmstore hotproc.control.config&nbsp;<wbr>&#8216;fname&nbsp;<wbr>==&nbsp;<wbr>&quot;mingetty&quot;&#8217;<br />
+&nbsp;<wbr>&nbsp;<wbr>pmstore hotproc.control.config&nbsp;<wbr>&#8216;fname&nbsp;<wbr>==&nbsp;<wbr>&quot;mingetty&quot;&#8217;<br/>
 &nbsp;<wbr>&nbsp;<wbr>pmstore hotproc.control.config&nbsp;<wbr>&#8216;uid&nbsp;<wbr>==&nbsp;<wbr>0&#8242;</dd>
 <dt>To force the config file to be reloaded:</dt>
 <dd>

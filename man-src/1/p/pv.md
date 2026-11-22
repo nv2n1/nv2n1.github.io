@@ -10,7 +10,7 @@ description: "pv – monitor the progress of data through a pipe"
 
 <p> pv &#8211; monitor the progress of data through a pipe </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pv</code> [<i>OPTION</i>] [<i>FILE</i>]&#8230;<br />
+<p> <code>pv</code> [<i>OPTION</i>] [<i>FILE</i>]&#8230;<br/>
  <code>pv</code> [<i>-h</i>|<i>-V</i>] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>pv</code> shows the progress of data through a pipeline by giving information such as time elapsed, percentage completed (with progress bar), current throughput rate, total data transferred, and ETA. </p>
@@ -24,13 +24,13 @@ description: "pv – monitor the progress of data through a pipe"
 <dl>
 <dt>
 </dt><dd> <code>cat file | pv -s 12345 | nc -w 1 somewhere.com 3000</code></dd></dl>
-<p> A more complicated example using numeric output to feed into the <code><a href="/docs/linux/man/1-dialog/">dialog</a></code>(1) program for a full-screen progress display:<br />
+<p> A more complicated example using numeric output to feed into the <code><a href="/docs/linux/man/1-dialog/">dialog</a></code>(1) program for a full-screen progress display:<br/>
 &nbsp;</p>
 <dl>
 <dt>
-</dt><dd> <code>(tar cf &#8211; . \</code><br />
- <code> | pv -n -s $(du -sb . | awk &#8216;{print $1}&#8217;) \</code><br />
- <code> | gzip -9 &gt; out.tgz) 2&gt;&amp;1 \</code><br />
+</dt><dd> <code>(tar cf &#8211; . \</code><br/>
+ <code> | pv -n -s $(du -sb . | awk &#8216;{print $1}&#8217;) \</code><br/>
+ <code> | gzip -9 &gt; out.tgz) 2&gt;&amp;1 \</code><br/>
  <code>| dialog &#8211;gauge &#8216;Progress&#8217; 7 70</code></dd></dl>
 <p> Taking an image of a disk, skipping errors: </p>
 <dl>

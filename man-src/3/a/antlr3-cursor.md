@@ -14,41 +14,41 @@ description: "ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct –"
 <p> #include &lt;<a href="file:/usr/include/antlr3rewritestreams.h">antlr3rewritestreams.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> void *(* <code>_next</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream) </p>
-<p> <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>adaptor</code><br />
- <i>Pointer to the tree adaptor in use for this stream. </i><br />
- void(* <code>add</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream, void *el, void(ANTLR3_CDECL *freePtr)(void *))<br />
- <i>Add a new pANTLR3_BASE_TREE to this stream. </i><br />
- <code>ANTLR3_UINT32</code> <code>cursor</code><br />
- <i>Cursor 0..n-1. </i><br />
- <code>ANTLR3_BOOLEAN</code> <code>dirty</code><br />
- <i>Once a node / subtree has been used in a stream, it must be dup&#8217;ed from then on. </i><br />
- void *(* <code>dup</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream, void *el)<br />
- <i>When constructing trees, sometimes we need to dup a token or AST subtree. </i><br />
- void * <code>elementDescription</code><br />
- <i>The element or stream description; usually has name of the token or rule reference that this list tracks. </i><br />
- <code>pANTLR3_VECTOR</code> <code>elements</code><br />
- <i>The list of tokens or subtrees we are tracking. </i><br />
+<p> <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>adaptor</code><br/>
+ <i>Pointer to the tree adaptor in use for this stream. </i><br/>
+ void(* <code>add</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream, void *el, void(ANTLR3_CDECL *freePtr)(void *))<br/>
+ <i>Add a new pANTLR3_BASE_TREE to this stream. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>cursor</code><br/>
+ <i>Cursor 0..n-1. </i><br/>
+ <code>ANTLR3_BOOLEAN</code> <code>dirty</code><br/>
+ <i>Once a node / subtree has been used in a stream, it must be dup&#8217;ed from then on. </i><br/>
+ void *(* <code>dup</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream, void *el)<br/>
+ <i>When constructing trees, sometimes we need to dup a token or AST subtree. </i><br/>
+ void * <code>elementDescription</code><br/>
+ <i>The element or stream description; usually has name of the token or rule reference that this list tracks. </i><br/>
+ <code>pANTLR3_VECTOR</code> <code>elements</code><br/>
+ <i>The list of tokens or subtrees we are tracking. </i><br/>
  void(* <code>free</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream) </p>
-<p> <code>ANTLR3_BOOLEAN</code> <code>freeElements</code><br />
- <i>Indicates whether we should free the vector or it was supplied to us. </i><br />
- void *(* <code>getDescription</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream)<br />
- <i>Returns the description string if there is one available (check for NULL). </i><br />
- <code>ANTLR3_BOOLEAN</code>(* <code>hasNext</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream)<br />
- <i>Returns ANTLR3_TRUE if there is a next element available. </i><br />
- void *(* <code>next</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream)<br />
- <i>Return the next element in the stream. </i><br />
- <code>pANTLR3_BASE_TREE</code>(* <code>nextNode</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream)<br />
- <i>Treat next element as a single node even if it&#8217;s a subtree. </i><br />
+<p> <code>ANTLR3_BOOLEAN</code> <code>freeElements</code><br/>
+ <i>Indicates whether we should free the vector or it was supplied to us. </i><br/>
+ void *(* <code>getDescription</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream)<br/>
+ <i>Returns the description string if there is one available (check for NULL). </i><br/>
+ <code>ANTLR3_BOOLEAN</code>(* <code>hasNext</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream)<br/>
+ <i>Returns ANTLR3_TRUE if there is a next element available. </i><br/>
+ void *(* <code>next</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream)<br/>
+ <i>Return the next element in the stream. </i><br/>
+ <code>pANTLR3_BASE_TREE</code>(* <code>nextNode</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream)<br/>
+ <i>Treat next element as a single node even if it&#8217;s a subtree. </i><br/>
  void *(* <code>nextToken</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream) </p>
 <p> <code>pANTLR3_BASE_TREE</code>(* <code>nextTree</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream) </p>
 <p> <code>pANTLR3_BASE_RECOGNIZER</code> <code>rec</code> </p>
-<p> void(* <code>reset</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream)<br />
- <i>Reset the condition of this stream so that it appears we have not consumed any of its elements. </i><br />
- void * <code>singleElement</code><br />
- <i>Track single elements w/o creating a list. </i><br />
- <code>ANTLR3_UINT32</code>(* <code>size</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream)<br />
- <i>Number of elements available in the stream. </i><br />
- <code>pANTLR3_BASE_TREE</code>(* <code>toTree</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream, void *el)<br />
+<p> void(* <code>reset</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream)<br/>
+ <i>Reset the condition of this stream so that it appears we have not consumed any of its elements. </i><br/>
+ void * <code>singleElement</code><br/>
+ <i>Track single elements w/o creating a list. </i><br/>
+ <code>ANTLR3_UINT32</code>(* <code>size</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream)<br/>
+ <i>Number of elements available in the stream. </i><br/>
+ <code>pANTLR3_BASE_TREE</code>(* <code>toTree</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream, void *el)<br/>
  <i>Ensure stream emits trees; tokens must be converted to AST nodes. </i></p>
 <h2>Detailed Description</h2>
 <p> A generic list of elements tracked in an alternative to be used in a -&gt; rewrite rule. </p>

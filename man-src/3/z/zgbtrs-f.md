@@ -10,7 +10,7 @@ description: "zgbtrs.f –"
 <p>zgbtrs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgbtrs</code> (TRANS, N, KL, KU, NRHS, AB, LDAB, IPIV, B, LDB, INFO)<br />
+<p>subroutine <code>zgbtrs</code> (TRANS, N, KL, KU, NRHS, AB, LDAB, IPIV, B, LDB, INFO)<br/>
  <i></i><code>ZGBTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgbtrs (characterTRANS, integerN, integerKL, integerKU, integerNRHS, complex*16, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

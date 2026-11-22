@@ -13,7 +13,7 @@ description: "pk12util – Export and import keys and certificate to or from a P
 <dl>
 <dt> <code>pk12util</code> [-i p12File|-l p12File|-o p12File] [-d&nbsp;<wbr>[sql:]directory] [-h tokenname] [-P dbprefix] [-r] [-v] [-k slotPasswordFile|-K slotPassword] [-w p12filePasswordFile|-W p12filePassword]</dt></dl>
 <h2>STATUS</h2>
-<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
+<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[][1]</dd>
 <h2>DESCRIPTION</h2>
 <p> The PKCS #12 utility, <code>pk12util</code>, enables sharing certificates among any server that supports PKCS#12. The tool can import certificates and keys from PKCS#12 files into security databases, export certificates, and list certificates and keys.</p>
 <h2>OPTIONS AND ARGUMENTS</h2>

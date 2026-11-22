@@ -95,7 +95,7 @@ description: "ipv6calc – format and calculate IPv6/IPv4/MAC"
 <p> <code> &#8211;ipv4_to_6to4addr</code> (-I ipv4 -O ipv6addr -A conv6to4) </p>
 <p> See inline help or documentation for more.</p>
 <h2>Reporting Bugs</h2>
-<p>Report bugs to &lt;ipv6calc [at] lists.deepspace6.net&gt; or to the authors.<br />
+<p>Report bugs to &lt;ipv6calc [at] lists.deepspace6.net&gt; or to the authors.<br/>
  Homepage: <a rel="nofollow" href="http://www.deepspace6.net/projects/ipv6calc.html">http://www.deepspace6.net/projects/ipv6calc.html</a></p>
 <h2>Examples</h2>
 <p>To run this program the standard way type: </p>

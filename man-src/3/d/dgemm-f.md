@@ -10,7 +10,7 @@ description: "dgemm.f –"
 <p>dgemm.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgemm</code> (TRANSA, TRANSB, M, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
+<p>subroutine <code>dgemm</code> (TRANSA, TRANSB, M, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br/>
  <i></i><code>DGEMM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgemm (characterTRANSA, characterTRANSB, integerM, integerN, integerK, double precisionALPHA, double precision, dimension(lda,*)A, integerLDA, double precision, dimension(ldb,*)B, integerLDB, double precisionBETA, double precision, dimension(ldc,*)C, integerLDC)</h3>

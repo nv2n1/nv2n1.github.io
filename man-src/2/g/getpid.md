@@ -10,9 +10,9 @@ description: "getpid, getppid – get process identification"
 
 <p> getpid, getppid &#8211; get process identification </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;unistd.h&gt;</code> </p>
-<p> <code>pid_t getpid(void);</code><br />
+<p> <code>pid_t getpid(void);</code><br/>
  <code>pid_t getppid(void);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>getpid</code>() returns the process ID (PID) of the calling process. (This is often used by routines that generate unique temporary filenames.) </p>

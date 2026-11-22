@@ -10,7 +10,7 @@ description: "XkbGetDeviceLedInfo – Query the indicator names, maps, and state
 <p>XkbGetDeviceLedInfo &#8211; Query the indicator names, maps, and state associated with an LED feedback of an input extension device </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetDeviceLedInfo</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>unsigned int </code><i>led_class</i><code>,</code> <code>unsigned int </code><i>led_id</i><code>,</code> <code>unsigned int </code><i>which</i><code>);</code><br />
+<dt> <code>Status XkbGetDeviceLedInfo</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>unsigned int </code><i>led_class</i><code>,</code> <code>unsigned int </code><i>led_id</i><code>,</code> <code>unsigned int </code><i>which</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

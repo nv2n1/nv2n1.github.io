@@ -11,12 +11,12 @@ description: "slapd-null – Null backend to slapd"
 <h2>Synopsis</h2>
 <p>/etc/openldap/slapd.conf</p>
 <h2>Description</h2>
-<p>The Null backend to <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) is surely the most useful part of <code>slapd</code>:<br />
- &#8211; Searches return success but no entries.<br />
- &#8211; Compares return compareFalse.<br />
- &#8211; Updates return success (unless readonly is on) but do nothing.<br />
- &#8211; Binds other than as the rootdn fail unless the database option &quot;bind on&quot; is given.<br />
- &#8211; The <code><a href="/docs/linux/man/8-slapadd/">slapadd</a></code>(8) and <code><a href="/docs/linux/man/8-slapcat/">slapcat</a></code>(8) tools are equally exciting.<br />
+<p>The Null backend to <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) is surely the most useful part of <code>slapd</code>:<br/>
+ &#8211; Searches return success but no entries.<br/>
+ &#8211; Compares return compareFalse.<br/>
+ &#8211; Updates return success (unless readonly is on) but do nothing.<br/>
+ &#8211; Binds other than as the rootdn fail unless the database option &quot;bind on&quot; is given.<br/>
+ &#8211; The <code><a href="/docs/linux/man/8-slapadd/">slapadd</a></code>(8) and <code><a href="/docs/linux/man/8-slapcat/">slapcat</a></code>(8) tools are equally exciting.<br/>
  Inspired by the /dev/null device.</p>
 <h2>Configuration</h2>
 <p>This <code>slapd.conf</code> option applies to the NULL backend database. That is, it must follow a &quot;database null&quot; line and come before any subsequent &quot;database&quot; lines. Other database options are described in the <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) manual page.</p>

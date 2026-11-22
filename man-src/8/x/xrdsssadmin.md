@@ -12,7 +12,7 @@ description: "xrdsssadmin – administer simple shared secret keytables"
 <pre><code>xrdsssadmin</code> [<i>options</i>] <i>command</i> [<i>file</i>]</pre>
 <h2>Description</h2>
 <p>The <code>xrdsssadmin</code> utility displays and maintains keytables for the simple shared secret (<code>sss</code>) security protocol. Complete HTML documentation can be found at </p>
-<p> <center> <a rel="nofollow" href="http://xrootd.org/doc/prod/sec_config.htm">http://xrootd.org/doc/prod/sec_config.htm</a><br />
+<p> <center> <a rel="nofollow" href="http://xrootd.org/doc/prod/sec_config.htm">http://xrootd.org/doc/prod/sec_config.htm</a><br/>
  </center></p>
 <h2>Notes</h2>
 <p>Documentation for all components associated with <code>xrdsssadmin</code> can be found at <a rel="nofollow" href="http://xrootd.org/docs.html">http://xrootd.org/docs.html</a></p>
@@ -21,5 +21,5 @@ description: "xrdsssadmin – administer simple shared secret keytables"
 <h2>License</h2>
 <p>License terms can be displayed by typing &quot;<code>xrootd -H</code>&quot;.</p>
 <h2>Support Level</h2>
-<p>The <code>xrdsssadmin</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
+<p>The <code>xrdsssadmin</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br/>
  </center></p>

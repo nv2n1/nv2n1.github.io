@@ -49,10 +49,10 @@ description: "ppmrough – create PPM image of two colors with a ragged border b
 <dt><code>-height=</code><i>pixels</i></dt>
 <dd> Specifies the height of the image (default: 100). </dd>
 <dt><code>-bg=</code><i>color</i></dt>
-<dd> Background color. Specify this the same way you specify a color with<br />
+<dd> Background color. Specify this the same way you specify a color with<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>ppmmake</code>.&nbsp;<wbr>&nbsp;<wbr>Default is black. </dd>
 <dt><code>-fg=</code><i>color</i></dt>
-<dd> Foreground color. Specify this the same way you specify a color with<br />
+<dd> Foreground color. Specify this the same way you specify a color with<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>ppmmake</code>.&nbsp;<wbr>&nbsp;<wbr>Default is white. </dd>
 <dt><code>-var=</code><i>pixels</i></dt>
 <dd>

@@ -15,9 +15,9 @@ description: "QuantLib::EurodollarFuturesImpliedStdDevQuote – quote for the Eu
 <h3>Public Member Functions</h3>
 <p> <code>EurodollarFuturesImpliedStdDevQuote</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;forward, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;callPrice, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;putPrice, <code>Real</code> strike, <code>Real</code> guess=.15, <code>Real</code> accuracy=1.0e-6, Natural maxIter=100) </p>
 <p> <code>Quote interface</code> </p>
-<p> <code>Real</code> <code>value</code> () const<br />
- <i>returns the current value </i><br />
- bool <code>isValid</code> () const<br />
+<p> <code>Real</code> <code>value</code> () const<br/>
+ <i>returns the current value </i><br/>
+ bool <code>isValid</code> () const<br/>
  <i>returns true if the </i><code>Quote</code> holds a valid value</p>
 <h3>Protected Member Functions</h3>
 <p> void <code>performCalculations</code> () const </p>

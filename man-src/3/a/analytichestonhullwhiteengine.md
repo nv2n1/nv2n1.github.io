@@ -10,11 +10,11 @@ description: "ql/pricingengines/vanilla/analytichestonhullwhiteengine.hpp – an
 
 <p> ql/pricingengines/vanilla/analytichestonhullwhiteengine.hpp &#8211; analytic heston engine incl. stochastic interest rates </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/models/equity/hestonmodel.hpp&gt;<br />
- #include &lt;ql/models/shortrate/onefactormodels/hullwhite.hpp&gt;<br />
+<p> #include &lt;ql/models/equity/hestonmodel.hpp&gt;<br/>
+ #include &lt;ql/models/shortrate/onefactormodels/hullwhite.hpp&gt;<br/>
  #include &lt;ql/pricingengines/vanilla/analytichestonengine.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>AnalyticHestonHullWhiteEngine</code><br />
+<p> class <code>AnalyticHestonHullWhiteEngine</code><br/>
  <i>Analytic Heston engine incl. stochastic interest rates. </i></p>
 <h2>Detailed Description</h2>
 <p> analytic heston engine incl. stochastic interest rates </p>

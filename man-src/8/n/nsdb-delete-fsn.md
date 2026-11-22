@@ -86,11 +86,11 @@ description: "nsdb-delete-fsn – delete a fileset name (FSN) record from an NSD
 </dl>
 <p> Further suppose the NSDB <i>nsdb.example.net:389</i> has an NSDB Container Entry whose distinguished name is <i>o=fedfs</i>. To delete the corresponding FSN record, you might use:</p>
 <dl>
-<dd>$ nsdb-delete-fsn -D cn=Manager -e o=fedfs \<br />
+<dd>$ nsdb-delete-fsn -D cn=Manager -e o=fedfs \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-l nsdb.example.net \</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>8e246ddc-7b46-11e0-8252-000c297fd679</p>
-<p> Enter NSDB password:<br />
- Successfully deleted FSN record<br />
+<p> Enter NSDB password:<br/>
+ Successfully deleted FSN record<br/>
 &nbsp;<wbr>&nbsp;<wbr>fedfsFsnUuid=8e246ddc-7b46-11e0-8252-000c297fd679,o=fedfs </p>
 </dl>
 <p> In this example, all FSL child records for this FSN record are also removed.</p>

@@ -73,60 +73,60 @@ description: "ldclt – load test program for LDAP"
 <dt><code>-e</code></dt>
 <dd> Execution parameters:</dd>
 <dt>
-</dt><dd> <code>add</code> ldap_add() entries.<br />
- <code>append</code> entries to the genldif file.<br />
- <code>ascii</code> ascii 7-bits strings.<br />
- <code>attreplace=name:mask</code> replace attribute of existing entry.<br />
- <code>attrlist=name:name:name</code> specify list of attribs to retrieve<br />
- <code>attrsonly=0|1</code> ldap_search() parameter. Set 0 to read values.<br />
- <code>bindeach</code> ldap_bind() for each operation.<br />
- <code>bindonly</code> only bind/unbind, no other operation is performed.<br />
- <code>close</code> will close() the fd, rather than ldap_unbind().<br />
- <code>cltcertname=name</code> name of the SSL client certificate<br />
- <code>commoncounter</code> all threads share the same counter.<br />
- <code>counteach</code> count each operation not only successful ones.<br />
- <code>delete</code> ldap_delete() entries.<br />
- <code>dontsleeponserverdown</code> will loop very fast if server down.<br />
- <code>emailPerson</code> objectclass=emailPerson (<code>-e</code> add only).<br />
- <code>esearch</code> exact search.<br />
- <code>genldif=filename</code> generates a ldif file<br />
- <code>imagesdir=path</code> specify where are the images.<br />
- <code>incr</code> incremental values.<br />
- <code>inetOrgPerson</code> objectclass=inetOrgPerson (<code>-e</code> add only).<br />
- <code>keydbfile=file</code> filename of the key database<br />
- <code>keydbpin=password</code> password for accessing the key database<br />
- <code>noglobalstats</code> don&#8217;t print periodical global statistics<br />
- <code>noloop</code> does not loop the incremental numbers.<br />
- <code>object=filename</code> build object from input file<br />
- <code>person</code> objectclass=person (<code>-e</code> add only).<br />
- <code>random</code> random filters, etc&#8230;<br />
- <code>randomattrlist=name:name:name</code> random select attrib in the list<br />
- <code>randombase</code> random base DN.<br />
- <code>randombaselow=value</code> low value for random generator.<br />
- <code>randombasehigh=value</code> high value for random generator.<br />
- <code>randombinddn</code> random bind DN.<br />
- <code>randombinddnfromfile=fine</code> retrieve bind DN &amp; passwd from file<br />
- <code>randombinddnlow=value</code> low value for random generator.<br />
- <code>randombinddnhigh=value</code> high value for random generator.<br />
- <code>rdn=attrname:value</code> alternate for <code>-f</code>.<br />
- <code>referral=on|off|rebind</code> change referral behaviour.<br />
- <code>scalab01</code> activates scalab01 scenario.<br />
- <code>scalab01_cnxduration</code> maximum connection duration.<br />
- <code>scalab01_maxcnxnb</code> modem pool size.<br />
- <code>scalab01_wait</code> sleep() between 2 attempts to connect.<br />
- <code>smoothshutdown</code> main thread waits till the worker threads exit.<br />
- <code>string</code> create random strings rather than random numbers.<br />
- <code>v2</code> ldap v2.<br />
- <code>withnewparent</code> rename with newparent specified as argument.<br />
- <code>randomauthid</code> random SASL Authid.<br />
- <code>randomauthidlow=value</code> low value for random SASL Authid.<br />
+</dt><dd> <code>add</code> ldap_add() entries.<br/>
+ <code>append</code> entries to the genldif file.<br/>
+ <code>ascii</code> ascii 7-bits strings.<br/>
+ <code>attreplace=name:mask</code> replace attribute of existing entry.<br/>
+ <code>attrlist=name:name:name</code> specify list of attribs to retrieve<br/>
+ <code>attrsonly=0|1</code> ldap_search() parameter. Set 0 to read values.<br/>
+ <code>bindeach</code> ldap_bind() for each operation.<br/>
+ <code>bindonly</code> only bind/unbind, no other operation is performed.<br/>
+ <code>close</code> will close() the fd, rather than ldap_unbind().<br/>
+ <code>cltcertname=name</code> name of the SSL client certificate<br/>
+ <code>commoncounter</code> all threads share the same counter.<br/>
+ <code>counteach</code> count each operation not only successful ones.<br/>
+ <code>delete</code> ldap_delete() entries.<br/>
+ <code>dontsleeponserverdown</code> will loop very fast if server down.<br/>
+ <code>emailPerson</code> objectclass=emailPerson (<code>-e</code> add only).<br/>
+ <code>esearch</code> exact search.<br/>
+ <code>genldif=filename</code> generates a ldif file<br/>
+ <code>imagesdir=path</code> specify where are the images.<br/>
+ <code>incr</code> incremental values.<br/>
+ <code>inetOrgPerson</code> objectclass=inetOrgPerson (<code>-e</code> add only).<br/>
+ <code>keydbfile=file</code> filename of the key database<br/>
+ <code>keydbpin=password</code> password for accessing the key database<br/>
+ <code>noglobalstats</code> don&#8217;t print periodical global statistics<br/>
+ <code>noloop</code> does not loop the incremental numbers.<br/>
+ <code>object=filename</code> build object from input file<br/>
+ <code>person</code> objectclass=person (<code>-e</code> add only).<br/>
+ <code>random</code> random filters, etc&#8230;<br/>
+ <code>randomattrlist=name:name:name</code> random select attrib in the list<br/>
+ <code>randombase</code> random base DN.<br/>
+ <code>randombaselow=value</code> low value for random generator.<br/>
+ <code>randombasehigh=value</code> high value for random generator.<br/>
+ <code>randombinddn</code> random bind DN.<br/>
+ <code>randombinddnfromfile=fine</code> retrieve bind DN &amp; passwd from file<br/>
+ <code>randombinddnlow=value</code> low value for random generator.<br/>
+ <code>randombinddnhigh=value</code> high value for random generator.<br/>
+ <code>rdn=attrname:value</code> alternate for <code>-f</code>.<br/>
+ <code>referral=on|off|rebind</code> change referral behaviour.<br/>
+ <code>scalab01</code> activates scalab01 scenario.<br/>
+ <code>scalab01_cnxduration</code> maximum connection duration.<br/>
+ <code>scalab01_maxcnxnb</code> modem pool size.<br/>
+ <code>scalab01_wait</code> sleep() between 2 attempts to connect.<br/>
+ <code>smoothshutdown</code> main thread waits till the worker threads exit.<br/>
+ <code>string</code> create random strings rather than random numbers.<br/>
+ <code>v2</code> ldap v2.<br/>
+ <code>withnewparent</code> rename with newparent specified as argument.<br/>
+ <code>randomauthid</code> random SASL Authid.<br/>
+ <code>randomauthidlow=value</code> low value for random SASL Authid.<br/>
  <code>randomauthidhigh=value</code> high value for random SASL Authid.</dd></dl>
 <h2>AUTHOR</h2>
 <p> ldclt was written by the 389 Project.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="https://fedorahosted.org/389/newticket.">https://fedorahosted.org/389/newticket.</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001 Sun Microsystems, Inc. Used by permission.<br />
- Copyright &#169; 2008 Red Hat, Inc.<br />
- This manual page was written by Michele Baldessari &lt;michele [at] pupazzo.org&gt;, for the Debian project (but may be used by others).<br />
+<p> Copyright &#169; 2001 Sun Microsystems, Inc. Used by permission.<br/>
+ Copyright &#169; 2008 Red Hat, Inc.<br/>
+ This manual page was written by Michele Baldessari &lt;michele [at] pupazzo.org&gt;, for the Debian project (but may be used by others).<br/>
  This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. This license is essentially the GNU General Public License version 2 with an exception for plug-in distribution. </p>

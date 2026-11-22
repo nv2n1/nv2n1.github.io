@@ -20,7 +20,7 @@ description: "/etc/isdn/isdnlog.users – user base isdnlog config file"
 <dt><code>ALL</code></dt>
 <dd>All of the privileges below are given. Should only be given to root. </dd>
 <dt><code>MSN=msn[,msn&#8230;]</code></dt>
-<dd>Only information about events concerning the specified msns is given. This includes incoming and outgoing calls, and protocol information. Any number of msns may be given. Wildcards (such as used in isdn.conf) are permitted. With &quot;MSN=*&quot; all msns are allowed.<br />
+<dd>Only information about events concerning the specified msns is given. This includes incoming and outgoing calls, and protocol information. Any number of msns may be given. Wildcards (such as used in isdn.conf) are permitted. With &quot;MSN=*&quot; all msns are allowed.<br/>
  Unknown numbers (e.g. from outgoing calls from other isdn devices or incoming calls from analog connections) cannot be specified with MSN=. The only way to allow these calls to be seen is by giving &quot;MSN=*&quot;. </dd>
 <dt><code>PROTOCOL</code></dt>
 <dd>The information specified to isdnlog by the -xX flag (see <a href="/docs/linux/man/8-isdnlog/">isdnlog</a>(8)) is allowed. </dd>
@@ -29,12 +29,12 @@ description: "/etc/isdn/isdnlog.users – user base isdnlog config file"
 <dt><code>ADDRESSBOOK</code> (planned)</dt>
 <dd>This makes it possible to retrieve / store information about a caller or called number.</dd></dl>
 </dl>
-<p> <code>Users</code><br />
+<p> <code>Users</code><br/>
  At the beginning of the file it is possible to specify users with hostnames: </p>
 <pre>fred [at] vom.jupiter MSN=4711?
 root [at] host1.at.home ALL</pre>
 <p>Here the user &quot;fred&quot; can only connect to isdnlog from the host &quot;vom.jupiter&quot;. Similarly, the user &quot;root&quot; is only allowed when on host &quot;host1.at.home&quot;. </p>
-<p> <code>Groups</code><br />
+<p> <code>Groups</code><br/>
  After the lines with hostnames, it is possible to define groups of users and hostnames. A group looks like a section as described in <a href="/docs/linux/man/5-isdn-conf/">isdn.conf</a>(5). It begins with a line such as: </p>
 <p> [My_Group] </p>
 <p> and ends with the beginning of the next group or the end of the file. Group names are not case sensitive. In fact, group names are not actually used (except for <code>[world]</code>, see below). </p>

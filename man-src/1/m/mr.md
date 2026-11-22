@@ -59,7 +59,7 @@ description: "mr – a tool to manage all your version control repos"
 <dt>log</dt>
 <dd> Show the commit log.</dd>
 <dt>grep pattern</dt>
-<dd> Searches for a pattern in each repository using the grep subcommand. Uses ack-grep on <font SIZE="-1">VCS</font> that do not have their own.</dd>
+<dd> Searches for a pattern in each repository using the grep subcommand. Uses ack-grep on VCS that do not have their own.</dd>
 <dt>run command [param &#8230;]</dt>
 <dd> Runs the specified command in each repository.</dd></dl>
 <p> These commands are also available:</p>
@@ -69,8 +69,8 @@ description: "mr – a tool to manage all your version control repos"
 <p> <code>mr</code> understands several types of sources:</p>
 <dl>
 <dl>
-<dt><font SIZE="-1">URL</font> for curl</dt>
-<dd> <tt>&quot;src&quot;</tt> may be an <font SIZE="-1">URL</font> understood by <code>curl</code>.</dd>
+<dt>URL for curl</dt>
+<dd> <tt>&quot;src&quot;</tt> may be an URL understood by <code>curl</code>.</dd>
 <dt>copy via ssh</dt>
 <dd> To use <code>scp</code> to download, the <tt>&quot;src&quot;</tt> may have the form <tt>&quot;<a href="ssh://[user@]host:file">ssh://[user@]host:file</a>&quot;</tt>.</dd>
 <dt>local file</dt>
@@ -142,7 +142,7 @@ description: "mr – a tool to manage all your version control repos"
 <dt>-k</dt>
 <dd>
 </dd><dt>&#8211;insecure</dt>
-<dd> Accept untrusted <font SIZE="-1">SSL</font> certificates when bootstrapping.</dd>
+<dd> Accept untrusted SSL certificates when bootstrapping.</dd>
 <dt>-s</dt>
 <dd>
 </dd><dt>&#8211;stats</dt>
@@ -179,14 +179,14 @@ description: "mr – a tool to manage all your version control repos"
                                                                                        2.6 &amp;&amp;
                                                                        git checkout - b mybranch origin / master
 </code></pre>
-<p> The <i>.mrconfig</i> file uses a variant of the <font SIZE="-1">INI</font> file format. Lines starting with &#8220;#&#8221; are comments. Values can be continued to the following line by indenting the line with whitespace. </p>
+<p> The <i>.mrconfig</i> file uses a variant of the INI file format. Lines starting with &#8220;#&#8221; are comments. Values can be continued to the following line by indenting the line with whitespace. </p>
 <p> The <tt>&quot;DEFAULT&quot;</tt> section allows setting default values for the sections that come after it. </p>
 <p> The <tt>&quot;ALIAS&quot;</tt> section allows adding aliases for actions. Each setting is an alias, and its value is the action to use. </p>
 <p> All other sections add repositories. The section header specifies the directory where the repository is located. This is relative to the directory that contains the mrconfig file, but you can also choose to use absolute paths. (Note that you can use environment variables in section names; they will be passed through the shell for expansion. For example, <tt>&quot;[$HOSTNAME]&quot;</tt>, or <tt>&quot;[${HOSTNAME}foo]&quot;</tt>). </p>
 <p> Within a section, each setting defines a shell command to run to handle a given action. mr contains default handlers for &#8220;update&#8221;, &#8220;status&#8221;, &#8220;commit&#8221;, and other standard actions. </p>
 <p> Normally you only need to specify what to do for &#8220;checkout&#8221;. Here you specify the command to run in order to create a checkout of the repository. The command will be run in the parent directory, and must create the repository&#8217;s directory. So use <tt>&quot;git clone&quot;</tt>, <tt>&quot;svn checkout&quot;</tt>, <tt>&quot;bzr branch&quot;</tt> or <tt>&quot;bzr checkout&quot;</tt> (for a bound branch), etc. </p>
 <p> Note that these shell commands are run in a <tt>&quot;set -e&quot;</tt> shell environment, where any additional parameters you pass are available in <tt>$@</tt>. All commands other than &#8220;checkout&#8221; are run inside the repository, though not necessarily at the top of it. </p>
-<p> The <tt>&quot;MR_REPO&quot;</tt> environment variable is set to the path to the top of the repository. (For the &#8220;register&#8221; action, &#8220;<font SIZE="-1">MR_REPO&#8221;</font> is instead set to the basename of the directory that should be created when checking the repository out.) </p>
+<p> The <tt>&quot;MR_REPO&quot;</tt> environment variable is set to the path to the top of the repository. (For the &#8220;register&#8221; action, &#8220;MR_REPO&#8221; is instead set to the basename of the directory that should be created when checking the repository out.) </p>
 <p> The <tt>&quot;MR_CONFIG&quot;</tt> environment variable is set to the .mrconfig file that defines the repo being acted on, or, if the repo is not yet in a config file, the <i>.mrconfig</i> file that should be modified to register the repo. </p>
 <p> The <tt>&quot;MR_ACTION&quot;</tt> environment variable is set to the command being run (update, checkout, etc). </p>
 <p> A few settings have special meanings:</p>
@@ -229,7 +229,7 @@ description: "mr – a tool to manage all your version control repos"
 <p> Note that running more than 10 jobs at a time is likely to run afoul of ssh connection limits. Running between 3 and 5 jobs at a time will yield a good speedup in updates without loading the machine too much.</p>
 <dt>VCS_action</dt>
 <dd> When looking for a command to run for a given action, mr first looks for a setting with the same name as the action. If that is not found, it looks for a setting named &#8220;VCS_action&#8221; (substituting in the name of the version control system and the action). </dd>
-<p> Internally, mr has settings for &#8220;git_update&#8221;, &#8220;svn_update&#8221;, etc. To change the action that is performed for a given version control system, you can override these <font SIZE="-1">VCS</font> specific actions. To add a new version control system, you can just add <font SIZE="-1">VCS</font> specific actions for it.</p>
+<p> Internally, mr has settings for &#8220;git_update&#8221;, &#8220;svn_update&#8221;, etc. To change the action that is performed for a given version control system, you can override these VCS specific actions. To add a new version control system, you can just add VCS specific actions for it.</p>
 <dt>pre_ and post_</dt>
 <dd> If &#8220;pre_action&#8221; is set, its command is run before mr performs the specified action. Similarly, &#8220;post_action&#8221; commands are run after mr successfully performs the specified action. For example, &#8220;pre_commit&#8221; is run before committing; &#8220;post_update&#8221; is run after updating.</dd>
 <dt>_append</dt>
@@ -247,5 +247,5 @@ description: "mr – a tool to manage all your version control repos"
 <p> mr returns nonzero if a command failed in any of the repositories.</p>
 <h2>AUTHOR</h2>
 <p> Copyright 2007-2011 Joey Hess &lt;joey [at] kitenet.net&gt; </p>
-<p> Licensed under the <font SIZE="-1">GNU GPL</font> version 2 or higher. </p>
+<p> Licensed under the GNU GPL version 2 or higher. </p>
 <p> <a rel="nofollow" href="http://myrepos.branchable.com/">http://myrepos.branchable.com/</a> </p>

@@ -14,9 +14,9 @@ description: "gsl-randist – generate random samples from various distributions
 <h2>DESCRIPTION</h2>
 <p> <code>gsl-randist </code> is a demonstration program for the GNU Scientific Library. It generates n random samples from the distribution DIST using the distribution parameters param1, param2, &#8230;</p>
 <h2>EXAMPLE</h2>
-<p> Here is an example. We generate 10000 random samples from a Cauchy distribution with a width of 30 and histogram them over the range -100 to 100, using 200 bins.<br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>gsl-randist 0 10000 cauchy 30 | gsl-histogram -100 100 200&nbsp;<wbr>&gt;&nbsp;<wbr>histogram.dat<br />
+<p> Here is an example. We generate 10000 random samples from a Cauchy distribution with a width of 30 and histogram them over the range -100 to 100, using 200 bins.<br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>gsl-randist 0 10000 cauchy 30 | gsl-histogram -100 100 200&nbsp;<wbr>&gt;&nbsp;<wbr>histogram.dat<br/>
 &nbsp;<wbr> A plot of the resulting histogram will show the familiar shape of the Cauchy distribution with fluctuations caused by the finite sample size. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>awk&nbsp;<wbr>&#8216;{print&nbsp;<wbr>$1,&nbsp;<wbr>$3&nbsp;<wbr>;&nbsp;<wbr>print&nbsp;<wbr>$2,&nbsp;<wbr>$3}&#8217;&nbsp;<wbr>histogram.dat | graph -T X </p>
 <h2>SEE ALSO</h2>

@@ -9,7 +9,7 @@ description: "update-language, update-fmtutil, update-fmtlang – update various
 
 <p>update-language, update-fmtutil, update-fmtlang &#8211; update various TeX-related configuration files</p>
 <h2>Synopsis</h2>
-<p><code>update-language</code> [<i>options</i>]<br />
+<p><code>update-language</code> [<i>options</i>]<br/>
  <code>update-fmtutil</code> [<i>options</i>] </p>
 <h2>Description</h2>
 <p>This manual page explains briefly the usage of the three TeX configuration update programs <code>update-language</code> and <code>update-fmtutil</code>. </p>

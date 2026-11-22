@@ -19,7 +19,7 @@ description: "ts – timestamp input"
 <p> If the -i or -s switch is passed, ts reports incremental timestamps instead of absolute ones. The default format changes to &#8220;%H:%M:%S&#8221;, and &#8220;%.S&#8221; and &#8220;%.s&#8221; can be used as well. In case of -i, every timestamp will be the time elapsed since the last timestamp. In case of -s, the time elapsed since start of the program is used. </p>
 <p> The -m switch makes the system&#8217;s monotonic clock be used.</p>
 <h2>ENVIRONMENT</h2>
-<p> The standard <font SIZE="-1">TZ</font> environment variable controls what time zone dates are assumed to be in, if a timezone is not specified as part of the date.</p>
+<p> The standard TZ environment variable controls what time zone dates are assumed to be in, if a timezone is not specified as part of the date.</p>
 <h2>AUTHOR</h2>
 <p> Copyright 2006 by Joey Hess &lt;id [at] joeyh.name&gt; </p>
-<p> Licensed under the <font SIZE="-1">GNU GPL.</font> </p>
+<p> Licensed under the GNU GPL. </p>

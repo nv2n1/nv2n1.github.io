@@ -15,7 +15,7 @@ int remctl_set_source_ip(struct remctl *r, const char *source);</code></pre>
 
 <h2>Description</h2>
 
-<i>remctl_set_source_ip()</i> sets the source <font SIZE="-1">IP</font> address for subsequent calls to <i>remctl_open()</i> on the same struct remctl object. Call this function before <i>remctl_open()</i> if remctl client connections need to come from a specific source <font SIZE="-1">IP.</font> 
+<i>remctl_set_source_ip()</i> sets the source IP address for subsequent calls to <i>remctl_open()</i> on the same struct remctl object. Call this function before <i>remctl_open()</i> if remctl client connections need to come from a specific source IP. 
 
  The <i>source</i> parameter may be an IPv4 or IPv6 address (assuming the host supports IPv6). 
 

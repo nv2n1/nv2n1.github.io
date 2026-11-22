@@ -10,8 +10,8 @@ description: "node – server-side JavaScript runtime"
 
 <p> <code>node</code> &#8211; server-side JavaScript runtime </p>
 <h2>SYNOPSIS</h2>
-<p> <code>node</code> [<i>options</i> ] [<i>v8-options</i> ] [-<code>e </code><i>string | script.js | &#8211; </i> ] [- ] [<i>arguments &#8230;</i> ]<br />
-<code>node</code> <code>inspect</code> [-<code>e </code><i>string | script.js | &#8211;</i><code>| </code><i>&lt;host&gt;:&lt;port&gt;</i> ] <i>&#8230;</i><br />
+<p> <code>node</code> [<i>options</i> ] [<i>v8-options</i> ] [-<code>e </code><i>string | script.js | &#8211; </i> ] [- ] [<i>arguments &#8230;</i> ]<br/>
+<code>node</code> <code>inspect</code> [-<code>e </code><i>string | script.js | &#8211;</i><code>| </code><i>&lt;host&gt;:&lt;port&gt;</i> ] <i>&#8230;</i><br/>
 <code>node</code> [-<code>-v8-options</code> ]</p>
 <h2>DESCRIPTION</h2>
 <p> Node.js is a set of libraries for JavaScript which allows it to be used outside of the browser. It is primarily focused on creating simple, easy-to-build network clients and servers. </p>

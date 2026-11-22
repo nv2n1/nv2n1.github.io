@@ -13,18 +13,18 @@ description: "QuantLib::HazardRateStructure – hazard-rate adapter for default-
 <p> Inherits <code>QuantLib::DefaultProbabilityTermStructure</code>. </p>
 <p> Inherited by <code>FlatHazardRate</code>, and <code>InterpolatedHazardRateCurve&lt; Interpolator &gt;</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors</code><br />
+<p><code>Constructors</code><br/>
  See the <code>TermStructure</code> documentation for issues regarding constructors. </p>
-<p> <code>HazardRateStructure</code> (const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
- <i>default constructor </i><br />
- <code>HazardRateStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
- <i>initialize with a fixed reference date </i><br />
- <code>HazardRateStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;cal, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
+<p> <code>HazardRateStructure</code> (const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
+ <i>default constructor </i><br/>
+ <code>HazardRateStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
+ <i>initialize with a fixed reference date </i><br/>
+ <code>HazardRateStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;cal, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
  <i>calculate the reference date based on the global evaluation date </i></p>
 <h3>Protected Member Functions</h3>
-<p>Probability <code>survivalProbabilityImpl</code> (Time) const<br />
- <i>probability of survival between today (t = 0) and a given time </i><br />
- <code>Real</code> <code>defaultDensityImpl</code> (Time) const<br />
+<p>Probability <code>survivalProbabilityImpl</code> (Time) const<br/>
+ <i>probability of survival between today (t = 0) and a given time </i><br/>
+ <code>Real</code> <code>defaultDensityImpl</code> (Time) const<br/>
  <i>instantaneous default density at a given time </i></p>
 <h2>Detailed Description</h2>
 <p>hazard-rate adapter for default-probability term structures</p>

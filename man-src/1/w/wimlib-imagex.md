@@ -10,21 +10,21 @@ description: "wimlib-imagex – Extract, create, modify, or mount a WIM (Windows
 
 <p> wimlib-imagex &#8211; Extract, create, modify, or mount a WIM (Windows Imaging Format) archive</p>
 <h2>SYNOPSIS</h2>
-<p> <code>wimlib-imagex append</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex apply</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex capture</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex delete</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex dir</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex export</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex extract</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex info</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex join</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex mount</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex mountrw</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex optimize</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex split</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex unmount</code> <i>arguments&#8230;</i><br />
- <code>wimlib-imagex update</code> <i>arguments&#8230;</i><br />
+<p> <code>wimlib-imagex append</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex apply</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex capture</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex delete</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex dir</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex export</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex extract</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex info</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex join</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex mount</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex mountrw</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex optimize</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex split</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex unmount</code> <i>arguments&#8230;</i><br/>
+ <code>wimlib-imagex update</code> <i>arguments&#8230;</i><br/>
  <code>wimlib-imagex verify</code> <i>arguments&#8230;</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>wimlib-imagex</code> deals with archives in the Windows Imaging Format (WIM). Its interface is similar to Microsoft&#8217;s ImageX, but <code>wimlib-imagex</code> is cross-platform and has useful improvements and extensions. </p>
@@ -39,55 +39,55 @@ description: "wimlib-imagex – Extract, create, modify, or mount a WIM (Windows
 <p> The following are some of the general features, or use cases, currently supported by <code>wimlib-imagex</code>, and pointers to the relevant commands:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> Display information about a WIM file<br />
+<dd> Display information about a WIM file<br/>
 &nbsp;<wbr>(<code>wimlib-imagex info</code>)</dd>
 <dt>&bull;</dt>
-<dd> List the files in a WIM image<br />
+<dd> List the files in a WIM image<br/>
 &nbsp;<wbr>(<code>wimlib-imagex dir</code>)</dd>
 <dt>&bull;</dt>
-<dd> Extract, or &quot;apply&quot;, a full WIM image<br />
+<dd> Extract, or &quot;apply&quot;, a full WIM image<br/>
 &nbsp;<wbr>(<code>wimlib-imagex apply</code>)</dd>
 <dt>&bull;</dt>
-<dd> Extract files or directories from a WIM image<br />
+<dd> Extract files or directories from a WIM image<br/>
 &nbsp;<wbr>(<code>wimlib-imagex extract</code>)</dd>
 <dt>&bull;</dt>
-<dd> Capture a WIM image and save it to a new WIM file<br />
+<dd> Capture a WIM image and save it to a new WIM file<br/>
 &nbsp;<wbr>(<code>wimlib-imagex capture</code>)</dd>
 <dt>&bull;</dt>
-<dd> Capture a WIM image and append it to an existing WIM file<br />
+<dd> Capture a WIM image and append it to an existing WIM file<br/>
 &nbsp;<wbr>(<code>wimlib-imagex append</code>)</dd>
 <dt>&bull;</dt>
-<dd> Modify a WIM image by adding, deleting, or renaming files<br />
+<dd> Modify a WIM image by adding, deleting, or renaming files<br/>
 &nbsp;<wbr>(<code>wimlib-imagex update</code>)</dd>
 <dt>&bull;</dt>
-<dd> (Linux only) Mount a WIM image read-only<br />
+<dd> (Linux only) Mount a WIM image read-only<br/>
 &nbsp;<wbr>(<code>wimlib-imagex mount</code>)</dd>
 <dt>&bull;</dt>
-<dd> (Linux only) Mount a WIM image read-write<br />
+<dd> (Linux only) Mount a WIM image read-write<br/>
 &nbsp;<wbr>(<code>wimlib-imagex mountrw</code>)</dd>
 <dt>&bull;</dt>
-<dd> Delete an image from a WIM file<br />
+<dd> Delete an image from a WIM file<br/>
 &nbsp;<wbr>(<code>wimlib-imagex delete</code>)</dd>
 <dt>&bull;</dt>
-<dd> Export image(s) from a WIM file<br />
+<dd> Export image(s) from a WIM file<br/>
 &nbsp;<wbr>(<code>wimlib-imagex export</code>)</dd>
 <dt>&bull;</dt>
-<dd> Change the name or description of a WIM image<br />
+<dd> Change the name or description of a WIM image<br/>
 &nbsp;<wbr>(<code>wimlib-imagex info</code>)</dd>
 <dt>&bull;</dt>
-<dd> Change the bootable image index of a WIM file<br />
+<dd> Change the bootable image index of a WIM file<br/>
 &nbsp;<wbr>(<code>wimlib-imagex info</code>)</dd>
 <dt>&bull;</dt>
-<dd> Rebuild, and optionally recompress, a WIM file<br />
+<dd> Rebuild, and optionally recompress, a WIM file<br/>
 &nbsp;<wbr>(<code>wimlib-imagex optimize</code>)</dd>
 <dt>&bull;</dt>
-<dd> Split a WIM file into multiple parts<br />
+<dd> Split a WIM file into multiple parts<br/>
 &nbsp;<wbr>(<code>wimlib-imagex split</code>)</dd>
 <dt>&bull;</dt>
-<dd> Join a split WIM<br />
+<dd> Join a split WIM<br/>
 &nbsp;<wbr>(<code>wimlib-imagex join</code>)</dd>
 <dt>&bull;</dt>
-<dd> Verify a WIM file<br />
+<dd> Verify a WIM file<br/>
 &nbsp;<wbr>(<code>wimlib-imagex verify</code>)</dd></dl>
 <h2>DETAILED FEATURES</h2>
 <p> This section presents some of the interesting features of <code>wimlib-imagex</code> in more detail.</p>

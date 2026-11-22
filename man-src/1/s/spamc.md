@@ -14,31 +14,31 @@ description: "spamc – client for spamd"
 <dt>spamc [options] &lt; message</dt>
 <dd></dd></dl>
 <h2>DESCRIPTION</h2>
-<p> Spamc is the client half of the spamc/spamd pair. It should be used in place of <tt>&quot;spamassassin&quot;</tt> in scripts to process mail. It will read the mail from <font SIZE="-1">STDIN,</font> and spool it to its connection to spamd, then read the result back and print it to <font SIZE="-1">STDOUT. </font> Spamc has extremely low overhead in loading, so it should be much faster to load than the whole spamassassin program. </p>
-<p> See the <i></i><font SIZE="-1"><i>README</i></font><i></i> file in the <i>spamd</i> directory of the SpamAssassin distribution for more details.</p>
+<p> Spamc is the client half of the spamc/spamd pair. It should be used in place of <tt>&quot;spamassassin&quot;</tt> in scripts to process mail. It will read the mail from STDIN, and spool it to its connection to spamd, then read the result back and print it to STDOUT.  Spamc has extremely low overhead in loading, so it should be much faster to load than the whole spamassassin program. </p>
+<p> See the <i></i><i>README</i><i></i> file in the <i>spamd</i> directory of the SpamAssassin distribution for more details.</p>
 <h2>OPTIONS</h2>
-<p> All options detailed below can be passed as command line arguments, or be contained in a configuration file, as described in the <font SIZE="-1"><code>CONFIGURATION FILE</code></font> section below. </p>
+<p> All options detailed below can be passed as command line arguments, or be contained in a configuration file, as described in the <code>CONFIGURATION FILE</code> section below. </p>
 <p> Note that the long options, a la <tt>&quot;--long-options&quot;</tt>, are new as of SpamAssassin 3.2.0, and were not available in earlier versions.</p>
 <dl>
 <dt><code>-B</code>, <code>&#8211;bsmtp</code></dt>
-<dd> Assume input is a single BSMTP-formatted message. In other words, spamc will pull out everything between the <font SIZE="-1">DATA</font> line and the lone-dot line to feed to spamd, and will place the spamd output back in the same envelope (thus, any <font SIZE="-1">SIZE</font> extension in your <font SIZE="-1">BSMTP</font> file will cause many problems).</dd>
+<dd> Assume input is a single BSMTP-formatted message. In other words, spamc will pull out everything between the DATA line and the lone-dot line to feed to spamd, and will place the spamd output back in the same envelope (thus, any SIZE extension in your BSMTP file will cause many problems).</dd>
 <dt><code>-c</code>, <code>&#8211;check</code></dt>
 <dd> Just check if the message is spam or not. Set process exitcode to 1 if message is spam, 0 if not spam or processing failure occurs. Will print score/threshold to stdout (as ints) or 0/0 if there was an error. Combining <code>-c</code> and <code>-E</code> is a no-op, since <code>-c</code> implies the behaviour of <code>-E</code>.</dd>
 <dt><code>-d</code> <i>host[,host2]</i>, <code>&#8211;dest</code>=<i>host[,host2]</i></dt>
-<dd> In <font SIZE="-1">TCP/IP</font> mode, connect to spamd server on given host (default: localhost). Several hosts can be specified if separated by commas. </dd>
+<dd> In TCP/IP mode, connect to spamd server on given host (default: localhost). Several hosts can be specified if separated by commas. </dd>
 <p> If <i>host</i> resolves to multiple addresses, then spamc will fail-over to the other addresses, if the first one cannot be connected to. It will first try all addresses of one host before it tries the next one in the list. Note that this fail-over behaviour is incompatible with <code>-x</code>; if that switch is used, fail-over will not occur.</p>
 <dt><code>-e</code> <i>command</i> <i>[args]</i>, <code>&#8211;pipe-to</code> <i>command</i> <i>[args]</i></dt>
 <dd> Instead of writing to stdout, pipe the output to <i>command</i>&#8216;s standard input. Note that there is a very slight chance mail will be lost here, because if the fork-and-exec fails there&#8217;s no place to put the mail message. </dd>
-<p> Note that this must be the <font SIZE="-1">LAST</font> command line option, as everything after the <code>-e</code> is taken as arguments to the command (it&#8217;s like <i>rxvt</i> or <i>xterm</i>). </p>
+<p> Note that this must be the LAST command line option, as everything after the <code>-e</code> is taken as arguments to the command (it&#8217;s like <i>rxvt</i> or <i>xterm</i>). </p>
 <p> This option is not supported on Win32 platforms.</p>
 <dt><code>-E</code>, <code>&#8211;exitcode</code></dt>
 <dd> Filter according to the other options, but set the process exitcode to 1 if message is spam, 0 if not spam or processing failure occurs.</dd>
 <dt><code>-F</code> <i>/path/to/file</i>, <code>&#8211;config</code>=<i>path</i></dt>
-<dd> Specify a configuration file to read additional command-line flags from. See <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</dd>
+<dd> Specify a configuration file to read additional command-line flags from. See <code>CONFIGURATION FILE</code> below.</dd>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Print this help message and terminate without action.</dd>
 <dt><code>-H</code>, <code>&#8211;randomize</code></dt>
-<dd> For <font SIZE="-1">TCP/IP</font> sockets, randomize the <font SIZE="-1">IP</font> addresses returned for the hosts given by the <code>-d</code> switch. This provides for a simple kind of load balancing. It will try only three times though.</dd>
+<dd> For TCP/IP sockets, randomize the IP addresses returned for the hosts given by the <code>-d</code> switch. This provides for a simple kind of load balancing. It will try only three times though.</dd>
 <dt><code>-l</code>, <code>&#8211;log-to-stderr</code></dt>
 <dd> Send log messages to stderr, instead of to the syslog.</dd>
 <dt><code>-L</code> <i>learn type</i>, <code>&#8211;learntype</code>=<i>type</i></dt>
@@ -48,7 +48,7 @@ description: "spamc – client for spamd"
 <dd> Report or revoke a message to one of the configured collaborative filtering databases. The <tt>&quot;report type&quot;</tt> can be either report or revoke. </dd>
 <p> Note that the <tt>&quot;spamd&quot;</tt> must run with the <tt>&quot;--allow-tell&quot;</tt> option for this to work.</p>
 <dt><code>-p</code> <i>port</i>, <code>&#8211;port</code>=<i>port</i></dt>
-<dd> In <font SIZE="-1">TCP/IP</font> mode, connect to spamd server listening on given port (default: 783).</dd>
+<dd> In TCP/IP mode, connect to spamd server listening on given port (default: 783).</dd>
 <dt><code>-r</code>, <code>&#8211;full-spam</code></dt>
 <dd> Just output the SpamAssassin report text to stdout, if the message is spam. If the message is ham (non-spam), nothing will be printed. The first line of the output is the message score and the threshold, in this format: </dd>
 <pre>
@@ -57,18 +57,18 @@ description: "spamc – client for spamd"
 <dt><code>-R</code>, <code>&#8211;full</code></dt>
 <dd> Just output the SpamAssassin report text to stdout, for all messages. See <code>-r</code> for details of the output format used.</dd>
 <dt><code>-s</code> <i>max_size</i>, <code>&#8211;max-size</code>=<i>max_size</i></dt>
-<dd> Set the maximum message size which will be sent to spamd &#8212; any bigger than this threshold and the message will be returned unprocessed (default: 500 <font SIZE="-1">KB</font>). If spamc gets handed a message bigger than this, it won&#8217;t be passed to spamd. The maximum message size is 256 <font SIZE="-1">MB.</font> </dd>
+<dd> Set the maximum message size which will be sent to spamd &#8212; any bigger than this threshold and the message will be returned unprocessed (default: 500 KB). If spamc gets handed a message bigger than this, it won&#8217;t be passed to spamd. The maximum message size is 256 MB. </dd>
 <p> The size is specified in bytes, as a positive integer greater than 0. For example, <code>-s 500000</code>.</p>
 <dt><code>&#8211;connect-retries</code>=<i>retries</i></dt>
 <dd> Retry connecting to spamd <i>retries</i> times. The default is 3 times.</dd>
 <dt><code>&#8211;retry-sleep</code>=<i>sleep</i></dt>
 <dd> Sleep for <i>sleep</i> seconds between attempts to connect to spamd. The default is 1 second.</dd>
 <dt><code>&#8211;filter-retries</code>=<i>retries</i></dt>
-<dd> Retry filtering <i>retries</i> times if the spamd process fails (usually times out). This differs from <code>&#8211;connect-retries</code> in that it times out the transaction after the <font SIZE="-1">TCP</font> connection has been established successfully. The default is 1 time (ie. one attempt and no retries).</dd>
+<dd> Retry filtering <i>retries</i> times if the spamd process fails (usually times out). This differs from <code>&#8211;connect-retries</code> in that it times out the transaction after the TCP connection has been established successfully. The default is 1 time (ie. one attempt and no retries).</dd>
 <dt><code>&#8211;filter-retry-sleep</code>=<i>sleep</i></dt>
 <dd> Sleep for <i>sleep</i> seconds between failed spamd filtering attempts. The default is 1 second.</dd>
 <dt><code>-S</code>, <code>&#8211;ssl</code>, <code>&#8211;ssl</code>=<i>sslversion</i></dt>
-<dd> If spamc was built with support for <font SIZE="-1">SSL,</font> encrypt data to and from the spamd process with <font SIZE="-1">SSL</font>; spamd must support <font SIZE="-1">SSL</font> as well. <i>sslversion</i> specifies the <font SIZE="-1">SSL</font> protocol version to use, either <tt>&quot;sslv3&quot;</tt>, or <tt>&quot;tlsv1&quot;</tt>. The default, is <tt>&quot;sslv3&quot;</tt>.</dd>
+<dd> If spamc was built with support for SSL, encrypt data to and from the spamd process with SSL; spamd must support SSL as well. <i>sslversion</i> specifies the SSL protocol version to use, either <tt>&quot;sslv3&quot;</tt>, or <tt>&quot;tlsv1&quot;</tt>. The default, is <tt>&quot;sslv3&quot;</tt>.</dd>
 <dt><code>-t</code> <i>timeout</i>, <code>&#8211;timeout</code>=<i>timeout</i></dt>
 <dd> Set the timeout for spamc-to-spamd communications (default: 600, 0 disables). If spamd takes longer than this many seconds to reply to a message, spamc will abort the connection and treat this as a failure to connect; in other words the message will be returned unprocessed.</dd>
 <dt><code>-n</code> <i>timeout</i>, <code>&#8211;connect-timeout</code>=<i>timeout</i></dt>
@@ -76,19 +76,19 @@ description: "spamc – client for spamd"
 <dt><code>-u</code> <i>username</i>, <code>&#8211;username</code>=<i>username</i></dt>
 <dd> To have spamd use per-user-config files, run spamc as the user whose config files spamd should load; by default the effective user-ID is sent to spamd. If you&#8217;re running spamc as some other user, though, (eg. root, mail, nobody, cyrus, etc.) then you may use this flag to override the default.</dd>
 <dt><code>-U</code> <i>socketpath</i>, <code>&#8211;socket</code>=<i>path</i></dt>
-<dd> Connect to <tt>&quot;spamd&quot;</tt> via <font SIZE="-1">UNIX</font> domain socket <i>socketpath</i> instead of a <font SIZE="-1">TCP/IP</font> connection. </dd>
+<dd> Connect to <tt>&quot;spamd&quot;</tt> via UNIX domain socket <i>socketpath</i> instead of a TCP/IP connection. </dd>
 <p> This option is not supported on Win32 platforms.</p>
 <dt><code>-V</code>, <code>&#8211;version</code></dt>
-<dd> Report the version of this <tt>&quot;spamc&quot;</tt> client. If built with <font SIZE="-1">SSL</font> support, an additional line will be included noting this, like so: </dd>
+<dd> Report the version of this <tt>&quot;spamc&quot;</tt> client. If built with SSL support, an additional line will be included noting this, like so: </dd>
 <pre>
   SpamAssassin Client version 3.0.0-rc4
     compiled with SSL support (OpenSSL 0.9.7d 17 Mar 2004)
 </pre>
 <dt><code>-x</code>, <code>&#8211;no-safe-fallback</code></dt>
-<dd> Disables the &#8216;safe fallback&#8217; error-recovery method, which passes through the unaltered message if an error occurs. Instead, exit with an error code, and let the <font SIZE="-1">MTA</font> queue up the mails for a retry later. See also &#8220;<font SIZE="-1">EXIT CODES&#8221;</font>. </dd>
-<p> This also disables the <font SIZE="-1">TCP</font> fail-over behaviour from <code>-d</code>.</p>
+<dd> Disables the &#8216;safe fallback&#8217; error-recovery method, which passes through the unaltered message if an error occurs. Instead, exit with an error code, and let the MTA queue up the mails for a retry later. See also &#8220;EXIT CODES&#8221;. </dd>
+<p> This also disables the TCP fail-over behaviour from <code>-d</code>.</p>
 <dt><code>-X</code>, <code>&#8211;unavailable-tempfail</code></dt>
-<dd> When disabling &#8216;safe fallback&#8217; with <code>-x</code>, this option will turn <font SIZE="-1">EX_UNAVAILABLE</font> errors into <font SIZE="-1">EX_TEMPFAIL.</font> This may allow your <font SIZE="-1">MTA</font> to defer mails with a temporary <font SIZE="-1">SMTP</font> error instead of bouncing them with a permanent <font SIZE="-1">SMTP</font> error. See also &#8220;<font SIZE="-1">EXIT CODES&#8221;</font>.</dd>
+<dd> When disabling &#8216;safe fallback&#8217; with <code>-x</code>, this option will turn EX_UNAVAILABLE errors into EX_TEMPFAIL. This may allow your MTA to defer mails with a temporary SMTP error instead of bouncing them with a permanent SMTP error. See also &#8220;EXIT CODES&#8221;.</dd>
 <dt><code>-y</code>, <code>&#8211;tests</code></dt>
 <dd> Just output the names of the tests hit to stdout, on one line, separated by commas.</dd>
 <dt><code>-K</code></dt>

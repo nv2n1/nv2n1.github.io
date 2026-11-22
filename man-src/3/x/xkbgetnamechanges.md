@@ -10,7 +10,7 @@ description: "XkbGetNameChanges – Update the local copy of the keyboard descri
 <p>XkbGetNameChanges &#8211; Update the local copy of the keyboard description with the actual values of the results of one or more calls to <i>XkbNoteNameChanges</i> </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetNameChanges</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbNameChangesPtr </code><i>changes</i><code>);</code><br />
+<dt> <code>Status XkbGetNameChanges</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbNameChangesPtr </code><i>changes</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

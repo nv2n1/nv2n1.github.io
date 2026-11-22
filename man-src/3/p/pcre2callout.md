@@ -15,11 +15,11 @@ int pcre2_callout_enumerate(const pcre2_code *code,
                             int (*callback)(pcre2_callout_enumerate_block *, void *),
                             void *user_data);</code></pre>
 <h2>Description</h2>
-<p>PCRE2 provides a feature called &quot;callout&quot;, which is a means of temporarily passing control to the caller of PCRE2 in the middle of pattern matching. The caller of PCRE2 provides an external function by putting its entry point in a match context (see <code>pcre2_set_callout()</code> in the <code>pcre2api</code> documentation). When using the <code>pcre2_substitute()</code> function, an additional callout feature is available. This does a callout after each change to the subject string and is described in the <code>pcre2api</code> documentation; the rest of this document is concerned with callouts during pattern matching. Within a regular expression, (?C&lt;arg&gt;) indicates a point at which the external function is to be called. Different callout points can be identified by putting a number less than 256 after the letter C. The default value is zero. Alternatively, the argument may be a delimited string. The starting delimiter must be one of ` &#8216; &quot; ^ % # $ { and the ending delimiter is the same as the start, except for {, where the ending delimiter is }. If the ending delimiter is needed within the string, it must be doubled. For example, this pattern has two callout points:<br />
-&nbsp;<wbr>&nbsp;(?C1)abc(?C&quot;some&nbsp;&quot;&quot;arbitrary&quot;&quot;&nbsp;text&quot;)def If the PCRE2_AUTO_CALLOUT option bit is set when a pattern is compiled, PCRE2 automatically inserts callouts, all with number 255, before each item in the pattern except for immediately before or after an explicit callout. For example, if PCRE2_AUTO_CALLOUT is used with the pattern<br />
-&nbsp;<wbr>&nbsp;A(?C3)B it is processed as if it were<br />
-&nbsp;<wbr>&nbsp;(?C255)A(?C3)B(?C255) Here is a more complicated example:<br />
-&nbsp;<wbr>&nbsp;A(\d{2}|&#8211;) With PCRE2_AUTO_CALLOUT, this pattern is processed as if it were<br />
+<p>PCRE2 provides a feature called &quot;callout&quot;, which is a means of temporarily passing control to the caller of PCRE2 in the middle of pattern matching. The caller of PCRE2 provides an external function by putting its entry point in a match context (see <code>pcre2_set_callout()</code> in the <code>pcre2api</code> documentation). When using the <code>pcre2_substitute()</code> function, an additional callout feature is available. This does a callout after each change to the subject string and is described in the <code>pcre2api</code> documentation; the rest of this document is concerned with callouts during pattern matching. Within a regular expression, (?C&lt;arg&gt;) indicates a point at which the external function is to be called. Different callout points can be identified by putting a number less than 256 after the letter C. The default value is zero. Alternatively, the argument may be a delimited string. The starting delimiter must be one of ` &#8216; &quot; ^ % # $ { and the ending delimiter is the same as the start, except for {, where the ending delimiter is }. If the ending delimiter is needed within the string, it must be doubled. For example, this pattern has two callout points:<br/>
+&nbsp;<wbr>&nbsp;(?C1)abc(?C&quot;some&nbsp;&quot;&quot;arbitrary&quot;&quot;&nbsp;text&quot;)def If the PCRE2_AUTO_CALLOUT option bit is set when a pattern is compiled, PCRE2 automatically inserts callouts, all with number 255, before each item in the pattern except for immediately before or after an explicit callout. For example, if PCRE2_AUTO_CALLOUT is used with the pattern<br/>
+&nbsp;<wbr>&nbsp;A(?C3)B it is processed as if it were<br/>
+&nbsp;<wbr>&nbsp;(?C255)A(?C3)B(?C255) Here is a more complicated example:<br/>
+&nbsp;<wbr>&nbsp;A(\d{2}|&#8211;) With PCRE2_AUTO_CALLOUT, this pattern is processed as if it were<br/>
 &nbsp;<wbr>&nbsp;(?C255)A(?C255)((?C255)\d{2}(?C255)|(?C255)-(?C255)-(?C255))(?C255) Notice that there is a callout before and after each parenthesis and alternation bar. If the pattern contains a conditional group whose condition is an assertion, an automatic callout is inserted immediately before the condition. Such a callout may also be inserted explicitly, for example: </p>
 <pre><code>(?(?C9)(?=a)ab|de)  (?(?C%text%)(?!=d)ab|de)</code></pre>
 <p> This applies only to assertion conditions (because they are themselves independent groups). Callouts can be useful for tracking the progress of pattern matching. The <code>pcre2test</code> program has a pattern qualifier (/auto_callout) that sets automatic callouts. When any callouts are present, the output from <code>pcre2test</code> indicates how the pattern is being matched. This is useful information when you are trying to optimize the performance of a particular pattern.</p>
@@ -27,38 +27,38 @@ int pcre2_callout_enumerate(const pcre2_code *code,
 <p>You should be aware that, because of optimizations in the way PCRE2 compiles and matches patterns, callouts sometimes do not happen exactly as you might expect.</p>
 <h3>Auto-possessification</h3>
 <p>At compile time, PCRE2 &quot;auto-possessifies&quot; repeated items when it knows that what follows cannot be part of the repeat. For example, a+[bc] is compiled as if it were a++[bc]. The <code>pcre2test</code> output when this pattern is compiled with PCRE2_ANCHORED and PCRE2_AUTO_CALLOUT and then applied to the string &quot;aaaa&quot; is: </p>
-<p>&nbsp;<wbr>&nbsp;&#8212;&gt;aaaa<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a+<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br />
+<p>&nbsp;<wbr>&nbsp;&#8212;&gt;aaaa<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a+<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br/>
 &nbsp;<wbr>&nbsp;No match </p>
 <p> This indicates that when matching [bc] fails, there is no backtracking into a+ (because it is being treated as a++) and therefore the callouts that would be taken for the backtracks do not occur. You can disable the auto-possessify feature by passing PCRE2_NO_AUTO_POSSESS to <code>pcre2_compile()</code>, or starting the pattern with (*NO_AUTO_POSSESS). In this case, the output changes to this: </p>
-<p>&nbsp;<wbr>&nbsp;&#8212;&gt;aaaa<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a+<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br />
+<p>&nbsp;<wbr>&nbsp;&#8212;&gt;aaaa<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a+<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br/>
 &nbsp;<wbr>&nbsp;No match </p>
 <p> This time, when matching [bc] fails, the matcher backtracks into a+ and tries again, repeatedly, until a+ itself fails.</p>
 <h3>Automatic .* anchoring</h3>
 <p>By default, an optimization is applied when .* is the first significant item in a pattern. If PCRE2_DOTALL is set, so that the dot can match any character, the pattern is automatically anchored. If PCRE2_DOTALL is not set, a match can start only after an internal newline or at the beginning of the subject, and <code>pcre2_compile()</code> remembers this. If a pattern has more than one top-level branch, automatic anchoring occurs if all branches are anchorable. </p>
 <p> This optimization is disabled, however, if .* is in an atomic group or if there is a backreference to the capture group in which it appears. It is also disabled if the pattern contains (*PRUNE) or (*SKIP). However, the presence of callouts does not affect it. </p>
 <p> For example, if the pattern .*\d is compiled with PCRE2_AUTO_CALLOUT and applied to the string &quot;aa&quot;, the <code>pcre2test</code> output is: </p>
-<p>&nbsp;<wbr>&nbsp;&#8212;&gt;aa<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.*<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br />
+<p>&nbsp;<wbr>&nbsp;&#8212;&gt;aa<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.*<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br/>
 &nbsp;<wbr>&nbsp;No match </p>
 <p> This shows that all match attempts start at the beginning of the subject. In other words, the pattern is anchored. You can disable this optimization by passing PCRE2_NO_DOTSTAR_ANCHOR to <code>pcre2_compile()</code>, or starting the pattern with (*NO_DOTSTAR_ANCHOR). In this case, the output changes to: </p>
-<p>&nbsp;<wbr>&nbsp;&#8212;&gt;aa<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.*<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.*<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;<wbr>&nbsp;^^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br />
+<p>&nbsp;<wbr>&nbsp;&#8212;&gt;aa<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.*<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.*<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;<wbr>&nbsp;^^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+2&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\d<br/>
 &nbsp;<wbr>&nbsp;No match </p>
 <p> This shows more match attempts, starting at the second subject character. Another optimization, described in the next section, means that there is no subsequent attempt to match with an empty subject.</p>
 <h3>Other optimizations</h3>
@@ -69,21 +69,21 @@ int pcre2_callout_enumerate(const pcre2_code *code,
 <p> You can disable these optimizations by passing the PCRE2_NO_START_OPTIMIZE option to <code>pcre2_compile()</code>, or by starting the pattern with (*NO_START_OPT). This slows down the matching process, but does ensure that callouts such as the example above are obeyed.</p>
 <h2>The Callout Interface</h2>
 <p>During matching, when PCRE2 reaches a callout point, if an external function is provided in the match context, it is called. This applies to both normal, DFA, and JIT matching. The first argument to the callout function is a pointer to a <code>pcre2_callout</code> block. The second argument is the void * callout data that was supplied when the callout was set up by calling <code>pcre2_set_callout()</code> (see the <code>pcre2api</code> documentation). The callout block structure contains the following fields, not necessarily in this order: </p>
-<p>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>version</i>;<br />
-&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>callout_number</i>;<br />
-&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>capture_top</i>;<br />
-&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>capture_last</i>;<br />
-&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>callout_flags</i>;<br />
-&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;*<i>offset_vector</i>;<br />
-&nbsp;<wbr>&nbsp;PCRE2_SPTR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>mark</i>;<br />
-&nbsp;<wbr>&nbsp;PCRE2_SPTR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>subject</i>;<br />
-&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>subject_length</i>;<br />
-&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>start_match</i>;<br />
-&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>current_position</i>;<br />
-&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>pattern_position</i>;<br />
-&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>next_item_length</i>;<br />
-&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>callout_string_offset</i>;<br />
-&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>callout_string_length</i>;<br />
+<p>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>version</i>;<br/>
+&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>callout_number</i>;<br/>
+&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>capture_top</i>;<br/>
+&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>capture_last</i>;<br/>
+&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>callout_flags</i>;<br/>
+&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;*<i>offset_vector</i>;<br/>
+&nbsp;<wbr>&nbsp;PCRE2_SPTR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>mark</i>;<br/>
+&nbsp;<wbr>&nbsp;PCRE2_SPTR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>subject</i>;<br/>
+&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>subject_length</i>;<br/>
+&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>start_match</i>;<br/>
+&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>current_position</i>;<br/>
+&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>pattern_position</i>;<br/>
+&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>next_item_length</i>;<br/>
+&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>callout_string_offset</i>;<br/>
+&nbsp;<wbr>&nbsp;PCRE2_SIZE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>callout_string_length</i>;<br/>
 &nbsp;<wbr>&nbsp;PCRE2_SPTR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>callout_string</i>; </p>
 <p> The <i>version</i> field contains the version number of the block format. The current version is 2; the three callout string fields were added for version 1, and the <i>callout_flags</i> field for version 2. If you are writing an application that might use an earlier release of PCRE2, you should check the version number before accessing any of these fields. The version number will increase in future if more fields are added, but the intention is never to remove any of the existing fields.</p>
 <h3>Fields for numerical callouts</h3>
@@ -120,12 +120,12 @@ int pcre2_callout_enumerate(const pcre2_code *code,
 <code> int (*</code><i>callback</i>)(pcre2_callout_enumerate_block *, void *),
 <code> void *</code><i>user_data</i>);</pre>
 <p>A script language that supports the use of string arguments in callouts might like to scan all the callouts in a pattern before running the match. This can be done by calling <code>pcre2_callout_enumerate()</code>. The first argument is a pointer to a compiled pattern, the second points to a callback function, and the third is arbitrary user data. The callback function is called for every callout in the pattern in the order in which they appear. Its first argument is a pointer to a callout enumeration block, and its second argument is the <i>user_data</i> value that was passed to <code>pcre2_callout_enumerate()</code>. The data block contains the following fields: </p>
-<p>&nbsp;<wbr>&nbsp;<i>version</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Block version number<br />
-&nbsp;<wbr>&nbsp;<i>pattern_position</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Offset to next item in pattern<br />
-&nbsp;<wbr>&nbsp;<i>next_item_length</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Length of next item in pattern<br />
-&nbsp;<wbr>&nbsp;<i>callout_number</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Number for numbered callouts<br />
-&nbsp;<wbr>&nbsp;<i>callout_string_offset</i>&nbsp;<wbr>&nbsp;Offset to string within pattern<br />
-&nbsp;<wbr>&nbsp;<i>callout_string_length</i>&nbsp;<wbr>&nbsp;Length of callout string<br />
+<p>&nbsp;<wbr>&nbsp;<i>version</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Block version number<br/>
+&nbsp;<wbr>&nbsp;<i>pattern_position</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Offset to next item in pattern<br/>
+&nbsp;<wbr>&nbsp;<i>next_item_length</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Length of next item in pattern<br/>
+&nbsp;<wbr>&nbsp;<i>callout_number</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Number for numbered callouts<br/>
+&nbsp;<wbr>&nbsp;<i>callout_string_offset</i>&nbsp;<wbr>&nbsp;Offset to string within pattern<br/>
+&nbsp;<wbr>&nbsp;<i>callout_string_length</i>&nbsp;<wbr>&nbsp;Length of callout string<br/>
 &nbsp;<wbr>&nbsp;<i>callout_string</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Points to callout string or is NULL </p>
 <p> The version number is currently 0. It will increase if new fields are ever added to the block. The remaining fields are the same as their namesakes in the <code>pcre2_callout</code> block that is used for callouts during matching, as described above. </p>
 <p> Note that the value of <i>pattern_position</i> is unique for each callout. However, if a callout occurs inside a group that is quantified with a non-zero minimum or a fixed maximum, the group is replicated inside the compiled pattern. For example, a pattern such as /(a){2}/ is compiled as if it were /(a)(a)/. This means that the callout will be enumerated more than once, but with the same value for <i>pattern_position</i> in each case. </p>

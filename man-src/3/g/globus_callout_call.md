@@ -27,7 +27,7 @@ description: "Callout Invocation –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A configured callout handle<br />
+</dt><dd> <i>handle</i> A configured callout handle<br/>
  <i>type</i> The abstract type of the callout that is to be invoked</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -36,10 +36,10 @@ description: "Callout Invocation –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_CALLOUT_ERROR_TYPE_NOT_REGISTERED</i> Callout type not registered<br />
- <i>GLOBUS_CALLOUT_ERROR_CALLOUT_ERROR</i> Callout function error<br />
- <i>GLOBUS_CALLOUT_ERROR_WITH_DL</i> Error with dlopen or dlsym<br />
- <i>GLOBUS_CALLOUT_ERROR_WITH_HASHTABLE</i> Error caching dlopen handle<br />
+</dt><dd> <i>GLOBUS_CALLOUT_ERROR_TYPE_NOT_REGISTERED</i> Callout type not registered<br/>
+ <i>GLOBUS_CALLOUT_ERROR_CALLOUT_ERROR</i> Callout function error<br/>
+ <i>GLOBUS_CALLOUT_ERROR_WITH_DL</i> Error with dlopen or dlsym<br/>
+ <i>GLOBUS_CALLOUT_ERROR_WITH_HASHTABLE</i> Error caching dlopen handle<br/>
  <i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY</i> Out of memory</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_callout from the source code. </p>

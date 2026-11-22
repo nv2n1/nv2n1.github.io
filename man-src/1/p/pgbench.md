@@ -44,7 +44,7 @@ pgbench -i [ <i>other-options</i> ] <i>dbname</i>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Caution</code> </font> </dd>
+  <code>Caution</code>  </dd>
 <p> pgbench -i creates four tables pgbench_accounts, pgbench_branches, pgbench_history, and pgbench_tellers, destroying any existing tables of these names. Be very careful to use another database if you have tables having these names! </p>
 </dl>
 <p> At the default &#8220;scale factor&#8221; of 1, the tables initially contain this many rows: </p>
@@ -291,22 +291,22 @@ pgbench [ <i>options</i> ] <i>dbname</i>
 <dl>
 <dt>
 </dt><dd>
-\set nbranches : scale<br />
-\set ntellers 10 * : scale<br />
-\set naccounts 100000 * : scale<br />
-\setrandom aid 1 : naccounts<br />
-\setrandom bid 1 : nbranches<br />
-\setrandom tid 1 : ntellers<br />
-\setrandom delta &#8211; 5000 5000 BEGIN;<br />
-UPDATE pgbench_accounts SET abalance = abalance + : delta WHERE aid = : aid;<br />
-SELECT abalance FROM pgbench_accounts WHERE aid = : aid;<br />
-UPDATE pgbench_tellers SET tbalance = tbalance + : delta WHERE tid = : tid;<br />
-UPDATE pgbench_branches SET bbalance = bbalance + : delta WHERE bid = : bid;<br />
-INSERT INTO pgbench_history(tid, bid, aid, delta, mtime) VALUES(<br />
-    : tid,<br />
-    : bid,<br />
-    : aid,<br />
-    : delta, CURRENT_TIMESTAMP);<br />
+\set nbranches : scale<br/>
+\set ntellers 10 * : scale<br/>
+\set naccounts 100000 * : scale<br/>
+\setrandom aid 1 : naccounts<br/>
+\setrandom bid 1 : nbranches<br/>
+\setrandom tid 1 : ntellers<br/>
+\setrandom delta &#8211; 5000 5000 BEGIN;<br/>
+UPDATE pgbench_accounts SET abalance = abalance + : delta WHERE aid = : aid;<br/>
+SELECT abalance FROM pgbench_accounts WHERE aid = : aid;<br/>
+UPDATE pgbench_tellers SET tbalance = tbalance + : delta WHERE tid = : tid;<br/>
+UPDATE pgbench_branches SET bbalance = bbalance + : delta WHERE bid = : bid;<br/>
+INSERT INTO pgbench_history(tid, bid, aid, delta, mtime) VALUES(<br/>
+    : tid,<br/>
+    : bid,<br/>
+    : aid,<br/>
+    : delta, CURRENT_TIMESTAMP);<br/>
 END;
 </dd></dl>
 <p> This script allows each iteration of the transaction to reference different, randomly-chosen rows. (This example also shows why it&#8217;s important for each client session to have its own variables &#8212; otherwise they&#8217;d not be independently touching different rows.)</p>

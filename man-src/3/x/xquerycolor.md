@@ -45,7 +45,7 @@ description: "XQueryColor, XQueryColors, XLookupColor, XParseColor – obtain co
 <h2>Color Names</h2>
 <p>An RGB Device specification is identified by the prefix &#8220;rgb:&#8221; and conforms to the following syntax: </p>
 <p> rgb:<i>&lt;red&gt;/&lt;green&gt;/&lt;blue&gt;</i> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>&lt;red&gt;</i>,&nbsp;<i>&lt;green&gt;</i>,&nbsp;<i>&lt;blue&gt;</i>&nbsp;:=&nbsp;<i>h</i>&nbsp;|&nbsp;<i>hh</i>&nbsp;|&nbsp;<i>hhh</i>&nbsp;|&nbsp;<i>hhhh</i><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>&lt;red&gt;</i>,&nbsp;<i>&lt;green&gt;</i>,&nbsp;<i>&lt;blue&gt;</i>&nbsp;:=&nbsp;<i>h</i>&nbsp;|&nbsp;<i>hh</i>&nbsp;|&nbsp;<i>hhh</i>&nbsp;|&nbsp;<i>hhhh</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>h</i>&nbsp;:=&nbsp;single hexadecimal digits&nbsp;(case insignificant) </p>
 <p> Note that <i>h</i> indicates the value scaled in 4 bits, <i>hh</i> the value scaled in 8 bits, <i>hhh</i> the value scaled in 12 bits, and <i>hhhh</i> the value scaled in 16 bits, respectively. </p>
 <p> For backward compatibility, an older syntax for RGB Device is supported, but its continued use is not encouraged. The syntax is an initial sharp sign character followed by a numeric specification, in one of the following formats: </p>
@@ -85,5 +85,5 @@ description: "XQueryColor, XQueryColors, XLookupColor, XParseColor – obtain co
 <dt><code>BadValue</code></dt>
 <dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xalloccolor/">XAllocColor</a>(3), <a href="/docs/linux/man/3-xcreatecolormap/">XCreateColormap</a>(3), <a href="/docs/linux/man/3-xstorecolors/">XStoreColors</a>(3)<br />
+<p><a href="/docs/linux/man/3-xalloccolor/">XAllocColor</a>(3), <a href="/docs/linux/man/3-xcreatecolormap/">XCreateColormap</a>(3), <a href="/docs/linux/man/3-xstorecolors/">XStoreColors</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

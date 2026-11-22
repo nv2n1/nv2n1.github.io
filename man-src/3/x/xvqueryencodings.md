@@ -23,13 +23,13 @@ description: "XvQueryEncodings – return list of encodings for an adaptor"
 <dd>A pointer to where the number of encodings supported by the adaptor is written.</dd>
 <dt><i>pp_encoding_info</i></dt>
 <dd>A pointer to where the list of returned encoding information is returned. XvEncodingInfo has the following structure: </dd>
-<p>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br />
-XvEncodingID encoding_id;<br />
-char&nbsp;<wbr>*name;<br />
-unsigned long width;<br />
-unsigned long height;<br />
-XvRational rate;<br />
-unsigned long num_encodings;<br />
+<p>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br/>
+XvEncodingID encoding_id;<br/>
+char&nbsp;<wbr>*name;<br/>
+unsigned long width;<br/>
+unsigned long height;<br/>
+XvRational rate;<br/>
+unsigned long num_encodings;<br/>
 &nbsp;<wbr>}&nbsp;<wbr>XvEncodingInfo; </p>
 <dt><i>encoding_id</i></dt>
 <dd>Specifies the encoding-id of the encoding. The encoding-id is used to identify an encoding when a port&#8217;s encoding attribute is changed.</dd>
@@ -40,9 +40,9 @@ unsigned long num_encodings;<br />
 <dt><i>rate</i></dt>
 <dd>The field rate of the decoded video.</dd></dl>
 <p> The XvRational structure is used to specify a fractional number. It has the following structure: </p>
-<p>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br />
-int numerator;<br />
-int denominator;<br />
+<p>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br/>
+int numerator;<br/>
+int denominator;<br/>
 &nbsp;<wbr>}&nbsp;<wbr>XvRational; </p>
 <p> The <i>numerator</i> and <i>denominator</i> fields specify the appropriate parts of a fractional number.</p>
 <h2>Description</h2>

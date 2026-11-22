@@ -19,7 +19,7 @@ mkdir - p - m 700 ~ /.arch - params / signing / echo 'tla-gpg-check gpg_command=
                                                                                                                                              echo 'gpg --clearsign --use-agent' &gt; ~ /.arch - params / signing /= default
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tla/">tla</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-tla/">tla</a></code>(1)<br/>
  <a rel="nofollow" href="http://www.gnuarch.org/gnuarchwiki/ArchiveSigning">http://www.gnuarch.org/gnuarchwiki/ArchiveSigning</a></p>
 <h2>AUTHOR</h2>
 <p> tla-gpg-check was written by Tom Lord. </p>

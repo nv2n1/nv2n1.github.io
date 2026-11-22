@@ -20,7 +20,7 @@ description: "piconv —"
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> <code>piconv</code> is perl version of <code>iconv</code>, a character encoding converter widely available for various Unixen today. This script was primarily a technology demonstrator for Perl 5.8.0, but you can use piconv in the place of iconv for virtually any case. </p>
-<p> piconv converts the character encoding of either <font SIZE="-1">STDIN</font> or files specified in the argument and prints out to <font SIZE="-1">STDOUT.</font> </p>
+<p> piconv converts the character encoding of either STDIN or files specified in the argument and prints out to STDOUT. </p>
 <p> Here is the list of options. Some options can be in short format (-f) or long (--from) one. </p>
 <dl>
 <dt>-f,--from <i>from_encoding</i></dt>
@@ -34,7 +34,7 @@ description: "piconv —"
 <dd> <p> uses <i>string</i> instead of file for the source of text. </p>
  </dd>
 <dt>-l,--list</dt>
-<dd> <p> Lists all available encodings, one per line, in case-insensitive order. Note that only the canonical names are listed; many aliases exist. For example, the names are case-insensitive, and many standard and common aliases work, such as ``latin1&#8217;&#8216; for ``<font SIZE="-1">ISO-8859-1&#8217;&#8216;,</font> or ``ibm850&#8217;&#8216; instead of ``cp850&#8217;&#8216;, or ``winlatin1&#8217;&#8216; for ``cp1252&#8217;&#8216;. See Encode::Supported for a full discussion. </p>
+<dd> <p> Lists all available encodings, one per line, in case-insensitive order. Note that only the canonical names are listed; many aliases exist. For example, the names are case-insensitive, and many standard and common aliases work, such as ``latin1&#8217;&#8216; for ``ISO-8859-1&#8217;&#8216;, or ``ibm850&#8217;&#8216; instead of ``cp850&#8217;&#8216;, or ``winlatin1&#8217;&#8216; for ``cp1252&#8217;&#8216;. See Encode::Supported for a full discussion. </p>
  </dd>
 <dt>-r,--resolve <i>encoding_alias</i></dt>
 <dd> <p> Resolve <i>encoding_alias</i> to Encode canonical encoding name. </p>
@@ -46,13 +46,13 @@ description: "piconv —"
 <dd> <p> Same as <code>&quot;-C 1&quot;</code>. </p>
  </dd>
 <dt>-p,--perlqq</dt>
-<dd> <p> Transliterate characters missing in encoding to \x{<font SIZE="-1">HHHH</font>} where <font SIZE="-1">HHHH</font> is the hexadecimal Unicode code point. </p>
+<dd> <p> Transliterate characters missing in encoding to \x{HHHH} where HHHH is the hexadecimal Unicode code point. </p>
  </dd>
 <dt>--htmlcref</dt>
-<dd> <p> Transliterate characters missing in encoding to &amp;#NNN; where <font SIZE="-1">NNN</font> is the decimal Unicode code point. </p>
+<dd> <p> Transliterate characters missing in encoding to &amp;#NNN; where NNN is the decimal Unicode code point. </p>
  </dd>
 <dt>--xmlcref</dt>
-<dd> <p> Transliterate characters missing in encoding to &amp;#xHHHH; where <font SIZE="-1">HHHH</font> is the hexadecimal Unicode code point. </p>
+<dd> <p> Transliterate characters missing in encoding to &amp;#xHHHH; where HHHH is the hexadecimal Unicode code point. </p>
  </dd>
 <dt>-h,--help</dt>
 <dd> <p> Show usage. </p>
@@ -73,8 +73,8 @@ description: "piconv —"
 <dd> <p> Input strings are <code>decode()</code>d then <code>encode()</code>d. A straight two-step implementation. </p>
  </dd>
 <dt>perlio</dt>
-<dd> <p> The new perlIO layer is used. <font SIZE="-1">NI-S</font>&#8216; favorite. </p>
-<p> You should use this option if you are using <font SIZE="-1">UTF-16</font> and others which linefeed is not $/. </p>
+<dd> <p> The new perlIO layer is used. NI-S&#8216; favorite. </p>
+<p> You should use this option if you are using UTF-16 and others which linefeed is not $/. </p>
  </dd></dl>
 </dl>
 <dl>

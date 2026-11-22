@@ -20,11 +20,11 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <p> Unlike the original rxvt, <code>rxvt-unicode</code> stores all text in Unicode internally. That means it can store and display most scripts in the world. Being a terminal emulator, however, some things are very difficult, especially cursive scripts such as arabic, vertically written scripts like mongolian or scripts requiring extremely complex combining rules, like tibetan or devanagari. Don&#8217;t expect pretty output when using these scripts. Most other scripts, latin, cyrillic, kanji, thai etc. should work fine, though. A somewhat difficult case are right-to-left scripts, such as hebrew: <code>rxvt-unicode</code> adopts the view that bidirectional algorithms belong in the application, not the terminal emulator (too many things --- such as cursor-movement while editing --- break otherwise), but that might change. </p>
 <p> If you are looking for a terminal that supports more exotic scripts, let me recommend <code>&quot;mlterm&quot;</code>, which is a very user friendly, lean and clean terminal emulator. In fact, the reason rxvt-unicode was born was solely because the author couldn&#8217;t get <code>&quot;mlterm&quot;</code> to use one font for latin1 and another for japanese. </p>
 <p> Therefore another design rationale was the use of multiple fonts to display characters: The idea of a single unicode font which many other programs force onto its users never made sense to me: You should be able to choose any font for any script freely. </p>
-<p> Apart from that, rxvt-unicode is also much better internationalised than its predecessor, supports things such as <font SIZE="-1">XFT</font> and <font SIZE="-1">ISO 14755</font> that are handy in i18n-environments, is faster, and has a lot bugs less than the original rxvt. This all in addition to dozens of other small improvements. </p>
+<p> Apart from that, rxvt-unicode is also much better internationalised than its predecessor, supports things such as XFT and ISO 14755 that are handy in i18n-environments, is faster, and has a lot bugs less than the original rxvt. This all in addition to dozens of other small improvements. </p>
 <p> It is still faithfully following the original rxvt idea of being lean and nice on resources: for example, you can still configure rxvt-unicode without most of its features to get a lean binary. It also comes with a client/daemon pair that lets you open any number of terminal windows from within a single process, which makes startup time very fast and drastically reduces memory usage. See <a href="/docs/linux/man/1-urxvt256c-mld/">urxvt256c-mld</a>(1) (daemon) and <a href="/docs/linux/man/1-urxvt256c-mlc/">urxvt256c-mlc</a>(1) (client). </p>
 <p> It also makes technical information about escape sequences (which have been extended) more accessible: see <a href="/docs/linux/man/7-urxvt256c-ml/">urxvt256c-ml</a>(7) for technical reference documentation (escape sequences etc.).  </p>
 <h2>OPTIONS</h2>
-<p> The <code>urxvt256c-ml</code> options (mostly a subset of <i>xterm</i>&#8216;s) are listed below. In keeping with the smaller-is-better philosophy, options may be eliminated or default values chosen at compile-time, so options and defaults listed may not accurately reflect the version installed on your system. `urxvt256c-ml -h&#8217; gives a list of major compile-time options on the <i>Options</i> line. Option descriptions may be prefixed with which compile option each is dependent upon. e.g. `Compile <i></i><font SIZE="-1"><i>XIM</i></font><i></i>:&#8216; requires <i></i><font SIZE="-1"><i>XIM</i></font><i></i> on the <i>Options</i> line. Note: `urxvt256c-ml -help&#8217; gives a list of all command-line options compiled into your version. </p>
+<p> The <code>urxvt256c-ml</code> options (mostly a subset of <i>xterm</i>&#8216;s) are listed below. In keeping with the smaller-is-better philosophy, options may be eliminated or default values chosen at compile-time, so options and defaults listed may not accurately reflect the version installed on your system. `urxvt256c-ml -h&#8217; gives a list of major compile-time options on the <i>Options</i> line. Option descriptions may be prefixed with which compile option each is dependent upon. e.g. `Compile <i></i><i>XIM</i><i></i>:&#8216; requires <i></i><i>XIM</i><i></i> on the <i>Options</i> line. Note: `urxvt256c-ml -help&#8217; gives a list of all command-line options compiled into your version. </p>
 <p> Note that <code>urxvt256c-ml</code> permits the resource name to be used as a long-option (--/++ option) so the potential command-line options are far greater than those listed. For example: `urxvt256c-ml --loginShell --color1 Orange&#8217;. </p>
 <p> The following options are available: </p>
 <dl>
@@ -32,7 +32,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <dd> <p> Print out a message describing available options. </p>
  </dd>
 <dt><code>-display</code><i>displayname</i></dt>
-<dd> <p> Attempt to open a window on the named X display (the older form <code>-d</code> is still respected. but deprecated). In the absence of this option, the display specified by the <font SIZE="-1"><code>DISPLAY</code></font> environment variable is used. </p>
+<dd> <p> Attempt to open a window on the named X display (the older form <code>-d</code> is still respected. but deprecated). In the absence of this option, the display specified by the <code>DISPLAY</code> environment variable is used. </p>
  </dd>
 <dt><code>-depth</code><i>bitdepth</i></dt>
 <dd> <p> Compile <i>frills</i>: Attempt to find a visual with the given bit depth; resource <code>depth</code>. </p>
@@ -86,7 +86,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <pre><code>   urxvt256c-ml -fn &quot;xft:Bitstream Vera Sans Mono:pixelsize=15&quot;
    urxvt256c-ml -fn &quot;9x15bold,xft:Bitstream Vera Sans Mono&quot;
 </code></pre>
-<p> See also the question ``How does rxvt-unicode choose fonts?&#8216;&#8216; in the <font SIZE="-1">FAQ</font> section of <a href="/docs/linux/man/7-urxvt256c-ml/">urxvt256c-ml</a>(7). </p>
+<p> See also the question ``How does rxvt-unicode choose fonts?&#8216;&#8216; in the FAQ section of <a href="/docs/linux/man/7-urxvt256c-ml/">urxvt256c-ml</a>(7). </p>
  </dd>
 <dt><code>-fb</code><i>fontlist</i></dt>
 <dd> <p> Compile <i>font-styles</i>: The bold font list to use when <code>bold</code> characters are to be printed. See resource <code>boldFont</code> for details. </p>
@@ -125,7 +125,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <dd> <p> Display rxvt (non XTerm/NeXT) scrollbar without/with a trough; resource <code>scrollBar_floating</code>. </p>
  </dd>
 <dt><code>-si</code>|<code>+si</code></dt>
-<dd> <p> Turn on/off scroll-to-bottom on <font SIZE="-1">TTY</font> output inhibit; resource <code>scrollTtyOutput</code> has opposite effect. </p>
+<dd> <p> Turn on/off scroll-to-bottom on TTY output inhibit; resource <code>scrollTtyOutput</code> has opposite effect. </p>
  </dd>
 <dt><code>-sk</code>|<code>+sk</code></dt>
 <dd> <p> Turn on/off scroll-to-bottom on keypress; resource <code>scrollTtyKeypress</code>. </p>
@@ -155,7 +155,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <dd> <p> Compile <i>frills</i>: External border of <i>number</i> pixels. Also, <code>-bw</code> and <code>-borderwidth</code>. See resource entry for limits; resource <code>externalBorder</code>. </p>
  </dd>
 <dt><code>-bl</code></dt>
-<dd> <p> Compile <i>frills</i>: Set <font SIZE="-1">MWM</font> hints to request a borderless window, i.e. if honoured by the <font SIZE="-1">WM,</font> the rxvt-unicode window will not have window decorations; resource <code>borderLess</code>. If the window manager does not support <font SIZE="-1">MWM</font> hints (e.g. kwin), enables override-redirect mode. </p>
+<dd> <p> Compile <i>frills</i>: Set MWM hints to request a borderless window, i.e. if honoured by the WM, the rxvt-unicode window will not have window decorations; resource <code>borderLess</code>. If the window manager does not support MWM hints (e.g. kwin), enables override-redirect mode. </p>
  </dd>
 <dt><code>-override-redirect</code></dt>
 <dd> <p> Compile <i>frills</i>: Sets override-redirect on the window; resource <code>override-redirect</code>. </p>
@@ -173,10 +173,10 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <dd> <p> Compile <i>frills</i>: Amount to adjust the computed character width by to control overall letter spacing. Negative values will tighten up the letter spacing, positive values will space letters out more. Useful to work around odd font metrics; resource <code>letterSpace</code>. </p>
  </dd>
 <dt><code>-tn</code><i>termname</i></dt>
-<dd> <p> This option specifies the name of the terminal type to be set in the <font SIZE="-1"><code>TERM</code></font> environment variable. This terminal type must exist in the <i><a href="/docs/linux/man/5-termcap/">termcap</a>(5)</i> database and should have <i>li#</i> and <i>co#</i> entries; resource <code>termName</code>. </p>
+<dd> <p> This option specifies the name of the terminal type to be set in the <code>TERM</code> environment variable. This terminal type must exist in the <i><a href="/docs/linux/man/5-termcap/">termcap</a>(5)</i> database and should have <i>li#</i> and <i>co#</i> entries; resource <code>termName</code>. </p>
  </dd>
 <dt><code>-e</code><i>command [arguments]</i></dt>
-<dd> <p> Run the command with its command-line arguments in the <code>urxvt256c-ml</code> window; also sets the window title and icon name to be the basename of the program being executed if neither <i>-title</i> (<i>-T</i>) nor <i>-n</i> are given on the command line. If this option is used, it must be the last on the command-line. If there is no <code>-e</code> option then the default is to run the program specified by the <font SIZE="-1"><code>SHELL</code></font> environment variable or, failing that, <i><a href="/docs/linux/man/1-sh/">sh</a>(1)</i>. </p>
+<dd> <p> Run the command with its command-line arguments in the <code>urxvt256c-ml</code> window; also sets the window title and icon name to be the basename of the program being executed if neither <i>-title</i> (<i>-T</i>) nor <i>-n</i> are given on the command line. If this option is used, it must be the last on the command-line. If there is no <code>-e</code> option then the default is to run the program specified by the <code>SHELL</code> environment variable or, failing that, <i><a href="/docs/linux/man/1-sh/">sh</a>(1)</i>. </p>
 <p> Please note that you must specify a program with arguments. If you want to run shell commands, you have to specify the shell, like this: </p>
 <pre><code>  urxvt256c-ml -e sh -c &quot;shell commands&quot;
 </code></pre>
@@ -191,13 +191,13 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <dd> <p> Capture system console messages. </p>
  </dd>
 <dt><code>-pt</code><i>style</i></dt>
-<dd> <p> Compile <i></i><font SIZE="-1"><i>XIM</i></font><i></i>: input style for input method; <code>OverTheSpot</code>, <code>OffTheSpot</code>, <code>Root</code>; resource <code>preeditType</code>. </p>
+<dd> <p> Compile <i></i><i>XIM</i><i></i>: input style for input method; <code>OverTheSpot</code>, <code>OffTheSpot</code>, <code>Root</code>; resource <code>preeditType</code>. </p>
  </dd>
 <dt><code>-im</code><i>text</i></dt>
-<dd> <p> Compile <i></i><font SIZE="-1"><i>XIM</i></font><i></i>: input method name. resource <code>inputMethod</code>. </p>
+<dd> <p> Compile <i></i><i>XIM</i><i></i>: input method name. resource <code>inputMethod</code>. </p>
  </dd>
 <dt><code>-imlocale</code><i>string</i></dt>
-<dd> <p> The locale to use for opening the <font SIZE="-1">IM.</font> You can use an <code>&quot;LC_CTYPE&quot;</code> of e.g. <code>&quot;de_DE.UTF-8&quot;</code> for normal text processing but <code>&quot;ja_JP.EUC-JP&quot;</code> for the input extension to be able to input japanese characters while staying in another locale. resource <code>imLocale</code>. </p>
+<dd> <p> The locale to use for opening the IM. You can use an <code>&quot;LC_CTYPE&quot;</code> of e.g. <code>&quot;de_DE.UTF-8&quot;</code> for normal text processing but <code>&quot;ja_JP.EUC-JP&quot;</code> for the input extension to be able to input japanese characters while staying in another locale. resource <code>imLocale</code>. </p>
  </dd>
 <dt><code>-imfont</code><i>fontset</i></dt>
 <dd> <p> Set the font set to use for the X Input Method, see resource <code>imFont</code> for more info. </p>
@@ -244,7 +244,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 </code></pre>
  </dd>
 <dt><code>-pty-fd</code><i>file descriptor</i></dt>
-<dd> <p> Tells urxvt256c-ml <font SIZE="-1">NOT</font> to execute any commands or create a new pty/tty pair but instead use the given file descriptor as the tty master. This is useful if you want to drive urxvt256c-ml as a generic terminal emulator without having to run a program within it. </p>
+<dd> <p> Tells urxvt256c-ml NOT to execute any commands or create a new pty/tty pair but instead use the given file descriptor as the tty master. This is useful if you want to drive urxvt256c-ml as a generic terminal emulator without having to run a program within it. </p>
 <p> If this switch is given, urxvt256c-ml will not create any utmp/wtmp entries and will not tinker with pty/tty permissions - you have to do that yourself if you want that. </p>
 <p> As an extremely special case, specifying <code>&quot;-1&quot;</code> will completely suppress pty/tty operations, which is probably only useful in conjunction with some perl extension that manages the terminal. </p>
 <p> Here is a example in perl that illustrates how this option can be used (a longer example is in <i>doc/pty-fd</i>): </p>
@@ -290,7 +290,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <dd> <p> Use the specified colour as the window&#8217;s foreground colour [default Black]; option <code>-fg</code>. </p>
  </dd>
 <dt><code>color</code><i>n</i><code>:</code><i>colour</i></dt>
-<dd> <p> Use the specified colour for the colour value <i>n</i>, where 0-7 corresponds to low-intensity (normal) colours and 8-15 corresponds to high-intensity (bold = bright foreground, blink = bright background) colours. The canonical names are as follows: 0=black, 1=red, 2=green, 3=yellow, 4=blue, 5=magenta, 6=cyan, 7=white, but the actual colour names used are listed in the <font SIZE="-1"><code>COLOURS AND GRAPHICS</code></font> section. </p>
+<dd> <p> Use the specified colour for the colour value <i>n</i>, where 0-7 corresponds to low-intensity (normal) colours and 8-15 corresponds to high-intensity (bold = bright foreground, blink = bright background) colours. The canonical names are as follows: 0=black, 1=red, 2=green, 3=yellow, 4=blue, 5=magenta, 6=cyan, 7=white, but the actual colour names used are listed in the <code>COLOURS AND GRAPHICS</code> section. </p>
 <p> Colours higher than 15 cannot be set using resources (yet), but can be changed using an escape command (see <a href="/docs/linux/man/7-urxvt256c-ml/">urxvt256c-ml</a>(7)). </p>
 <p> Colours 16-79 form a standard 4x4x4 colour cube (the same as xterm with 88 colour support). Colours 80-87 are evenly spaces grey steps. </p>
  </dd>
@@ -318,7 +318,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <dd> <p> Use the specified colour for the colour of the cursor text. For this to take effect, <code>cursorColor</code> must also be specified. The default is to use the background colour. </p>
  </dd>
 <dt><code>reverseVideo:</code><i>boolean</i></dt>
-<dd> <p> <code>True</code>: simulate reverse video by foreground and background colours; option <code>-rv</code>. <code>False</code>: regular screen colours [default]; option <code>+rv</code>. See note in <font SIZE="-1"><code>COLOURS AND GRAPHICS</code></font> section. </p>
+<dd> <p> <code>True</code>: simulate reverse video by foreground and background colours; option <code>-rv</code>. <code>False</code>: regular screen colours [default]; option <code>+rv</code>. See note in <code>COLOURS AND GRAPHICS</code> section. </p>
  </dd>
 <dt><code>jumpScroll:</code><i>boolean</i></dt>
 <dd> <p> <code>True</code>: specify that jump scrolling should be used. When receiving lots of lines, urxvt256c-ml will only scroll once a whole screen height of lines has been read, resulting in fewer updates while still displaying every received line; option <code>-j</code>. </p>
@@ -348,7 +348,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
  </dd>
 <dt><code>font:</code><i>fontlist</i></dt>
 <dd> <p> Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters. The first font defines the cell size for characters; other fonts might be smaller, but not (in general) larger. A (hopefully) reasonable default font list is always appended to it; option <code>-fn</code>. </p>
-<p> Each font can either be a standard X11 core font (<font SIZE="-1">XLFD</font>) name, with optional prefix <code>&quot;x:&quot;</code> or a Xft font (Compile <i>xft</i>), prefixed with <code>&quot;xft:&quot;</code>. </p>
+<p> Each font can either be a standard X11 core font (XLFD) name, with optional prefix <code>&quot;x:&quot;</code> or a Xft font (Compile <i>xft</i>), prefixed with <code>&quot;xft:&quot;</code>. </p>
 <p> In addition, each font can be prefixed with additional hints and specifications enclosed in square brackets (<code>&quot;[]&quot;</code>). The only available hint currently is <code>&quot;codeset=codeset-name&quot;</code>, and this is only used for Xft fonts. </p>
 <p> For example, this font resource </p>
 <pre><code>   URxvt.font: 9x15bold,\
@@ -359,7 +359,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 </code></pre>
 <p> specifies five fonts to be used. The first one is <code>&quot;9x15bold&quot;</code> (actually the iso8859-1 version of the second font), which is the base font (because it is named first) and thus defines the character cell grid to be 9 pixels wide and 15 pixels high. </p>
 <p> The second font is just used to add additional unicode characters not in the base font, likewise the third, which is unfortunately non-bold, but the bold version of the font does contain fewer characters, so this is a useful supplement. </p>
-<p> The third font is an Xft font with aliasing turned off, and the characters are limited to the <font SIZE="-1"><code>JIS 0208</code></font> codeset (i.e. japanese kanji). The font contains other characters, but we are not interested in them. </p>
+<p> The third font is an Xft font with aliasing turned off, and the characters are limited to the <code>JIS 0208</code> codeset (i.e. japanese kanji). The font contains other characters, but we are not interested in them. </p>
 <p> The last font is a useful catch-all font that supplies most of the remaining unicode characters. </p>
  </dd>
 <dt><code>boldFont:</code><i>fontlist</i></dt>
@@ -445,13 +445,13 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <dd> <p> External border of <i>number</i> pixels. This resource is limited to 100; option <code>-w</code>, <code>-bw</code>, <code>-borderwidth</code>. </p>
  </dd>
 <dt><code>borderLess:</code><i>boolean</i></dt>
-<dd> <p> Set <font SIZE="-1">MWM</font> hints to request a borderless window, i.e. if honoured by the <font SIZE="-1">WM,</font> the rxvt-unicode window will not have window decorations; option <code>-bl</code>. </p>
+<dd> <p> Set MWM hints to request a borderless window, i.e. if honoured by the WM, the rxvt-unicode window will not have window decorations; option <code>-bl</code>. </p>
  </dd>
 <dt><code>skipBuiltinGlyphs:</code><i>boolean</i></dt>
 <dd> <p> Compile <i>frills</i>: Disable the usage of the built-in block graphics/line drawing characters and just rely on what the specified fonts provide. Use this if you have a good font and want to use its block graphic glyphs; option <code>-sbg</code>. </p>
  </dd>
 <dt><code>termName:</code><i>termname</i></dt>
-<dd> <p> Specifies the terminal type name to be set in the <font SIZE="-1"><code>TERM</code></font> environment variable; option <code>-tn</code>. </p>
+<dd> <p> Specifies the terminal type name to be set in the <code>TERM</code> environment variable; option <code>-tn</code>. </p>
  </dd>
 <dt><code>lineSpace:</code><i>number</i></dt>
 <dd> <p> Specifies number of lines (pixel height) to insert between each row of the display [default 0]; option <code>-lsp</code>. </p>
@@ -484,16 +484,16 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <dd> <p> Specifies number of seconds before blanking the pointer [default 2]. Use a large number (e.g. <code>987654321</code>) to effectively disable the timeout. </p>
  </dd>
 <dt><code>backspacekey:</code><i>string</i></dt>
-<dd> <p> The string to send when the backspace key is pressed. If set to <font SIZE="-1"><code>DEC</code></font> or unset it will send <code>Delete</code> (code 127) or, with control, <code>Backspace</code> (code 8) - which can be reversed with the appropriate <font SIZE="-1">DEC</font> private mode escape sequence. </p>
+<dd> <p> The string to send when the backspace key is pressed. If set to <code>DEC</code> or unset it will send <code>Delete</code> (code 127) or, with control, <code>Backspace</code> (code 8) - which can be reversed with the appropriate DEC private mode escape sequence. </p>
  </dd>
 <dt><code>deletekey:</code><i>string</i></dt>
 <dd> <p> The string to send when the delete key (not the keypad delete key) is pressed. If unset it will send the sequence traditionally associated with the <code>Execute</code> key. </p>
  </dd>
 <dt><code>cutchars:</code><i>string</i></dt>
 <dd> <p> The characters used as delimiters for double-click word selection (whitespace delimiting is added automatically if resource is given). </p>
-<p> When the perl selection extension is in use (the default if compiled in, see the urxvt256c-ml <i>perl</i>(3) manpage), a suitable regex using these characters will be created (if the resource exists, otherwise, no regex will be created). In this mode, characters outside <font SIZE="-1">ISO-8859-1</font> can be used. </p>
-<p> When the selection extension is not used, only <font SIZE="-1">ISO-8859-1</font> characters can be used. If not specified, the built-in default is used: </p>
-<p> <font SIZE="-1"><code>BACKSLASH</code></font><code> `&quot;&#8216;&amp;()*,;&lt;=&gt;?@[]^{|}</code> </p>
+<p> When the perl selection extension is in use (the default if compiled in, see the urxvt256c-ml <i>perl</i>(3) manpage), a suitable regex using these characters will be created (if the resource exists, otherwise, no regex will be created). In this mode, characters outside ISO-8859-1 can be used. </p>
+<p> When the selection extension is not used, only ISO-8859-1 characters can be used. If not specified, the built-in default is used: </p>
+<p> <code>BACKSLASH</code><code> `&quot;&#8216;&amp;()*,;&lt;=&gt;?@[]^{|}</code> </p>
  </dd>
 <dt><code>preeditType:</code><i>style</i></dt>
 <dd> <p> <code>OverTheSpot</code>, <code>OffTheSpot</code>, <code>Root</code>; option <code>-pt</code>. </p>
@@ -502,10 +502,10 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <dd> <p> <i>name</i> of inputMethod to use; option <code>-im</code>. </p>
  </dd>
 <dt><code>imLocale:</code><i>name</i></dt>
-<dd> <p> The locale to use for opening the <font SIZE="-1">IM.</font> You can use an <code>&quot;LC_CTYPE&quot;</code> of e.g. <code>&quot;de_DE.UTF-8&quot;</code> for normal text processing but <code>&quot;ja_JP.EUC-JP&quot;</code> for the input extension to be able to input japanese characters while staying in another locale; option <code>-imlocale</code>. </p>
+<dd> <p> The locale to use for opening the IM. You can use an <code>&quot;LC_CTYPE&quot;</code> of e.g. <code>&quot;de_DE.UTF-8&quot;</code> for normal text processing but <code>&quot;ja_JP.EUC-JP&quot;</code> for the input extension to be able to input japanese characters while staying in another locale; option <code>-imlocale</code>. </p>
  </dd>
 <dt><code>imFont:</code><i>fontset</i></dt>
-<dd> <p> Specify the font-set used for <font SIZE="-1">XIM</font> styles <code>&quot;OverTheSpot&quot;</code> or <code>&quot;OffTheSpot&quot;</code>. It must be a standard X font set (<font SIZE="-1">XLFD</font> patterns separated by commas), i.e. it&#8217;s not in the same format as the other font lists used in urxvt256c-ml. The default will be set-up to chose *any* suitable found found, preferably one or two pixels differing in size to the base font. option <code>-imfont</code>. </p>
+<dd> <p> Specify the font-set used for XIM styles <code>&quot;OverTheSpot&quot;</code> or <code>&quot;OffTheSpot&quot;</code>. It must be a standard X font set (XLFD patterns separated by commas), i.e. it&#8217;s not in the same format as the other font lists used in urxvt256c-ml. The default will be set-up to chose *any* suitable found found, preferably one or two pixels differing in size to the base font. option <code>-imfont</code>. </p>
  </dd>
 <dt><code>tripleclickwords:</code><i>boolean</i></dt>
 <dd> <p> Change the meaning of triple-click selection with the left mouse button. Instead of selecting a full line it will extend the selection to the end of the logical line only; option <code>-tcw</code>. </p>
@@ -518,7 +518,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <dd> <p> Set the key to be interpreted as the Meta key to: <code>alt</code>, <code>meta</code>, <code>hyper</code>, <code>super</code>, <code>mod1</code>, <code>mod2</code>, <code>mod3</code>, <code>mod4</code>, <code>mod5</code>; option <code>-mod</code>. </p>
  </dd>
 <dt><code>answerbackString:</code><i>string</i></dt>
-<dd> <p> Specify the reply rxvt-unicode sends to the shell when an <font SIZE="-1">ENQ </font>(control-E) character is passed through. It may contain escape values as described in the entry on <code>keysym</code> following. </p>
+<dd> <p> Specify the reply rxvt-unicode sends to the shell when an ENQ (control-E) character is passed through. It may contain escape values as described in the entry on <code>keysym</code> following. </p>
  </dd>
 <dt><code>secondaryScreen:</code><i>boolean</i></dt>
 <dd> <p> Turn on/off secondary screen (default enabled). </p>
@@ -539,10 +539,10 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <pre><code>   (modifiers-)key
 </code></pre>
 <p> Where <i>modifiers</i> can be any combination of <code>ISOLevel3</code>, <code>AppKeypad</code>, <code>Control</code>, <code>NumLock</code>, <code>Shift</code>, <code>Meta</code>, <code>Lock</code>, <code>Mod1</code>, <code>Mod2</code>, <code>Mod3</code>, <code>Mod4</code>, <code>Mod5</code>, and the abbreviated <code>I</code>, <code>K</code>, <code>C</code>, <code>N</code>, <code>S</code>, <code>M</code>, <code>A</code>, <code>L</code>, <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>. </p>
-<p> The <code>NumLock</code>, <code>Meta</code> and <code>ISOLevel3</code> modifiers are usually aliased to whatever modifier the NumLock key, Meta/Alt keys or <font SIZE="-1">ISO</font> Level3 Shift/AltGr keys are being mapped. <code>AppKeypad</code> is a synthetic modifier mapped to the current application keymap mode state. </p>
+<p> The <code>NumLock</code>, <code>Meta</code> and <code>ISOLevel3</code> modifiers are usually aliased to whatever modifier the NumLock key, Meta/Alt keys or ISO Level3 Shift/AltGr keys are being mapped. <code>AppKeypad</code> is a synthetic modifier mapped to the current application keymap mode state. </p>
 <p> Due the the large number of modifier combinations, a key mapping will match if <i>at least</i> the specified identifiers are being set, and no other key mappings with those and more bits are being defined. That means that defining a mapping for <code>&quot;a&quot;</code> will automatically provide definitions for <code>&quot;Meta-a&quot;</code>, <code>&quot;Shift-a&quot;</code> and so on, unless some of those are defined mappings themselves. See the <code>&quot;builtin:&quot;</code> action, below, for a way to work around this when this is a problem. </p>
 <p> The spelling of <i>key</i> depends on your implementation of X. An easy way to find a key name is to use the <code><a href="/docs/linux/man/1-xev/">xev</a></code>(1) command. You can find a list by looking for the <code>&quot;XK_&quot;</code> macros in the <code>X11/keysymdef.h</code> include file (omit the <code>&quot;XK_&quot;</code> prefix). Alternatively you can specify <i>key</i> by its hex keysym value (<code>0x0000 - 0xFFFF</code>). </p>
-<p> As with any resource value, the <i>action</i> string may contain backslash escape sequences (<code>&quot;\n&quot;</code>: newline, <code>&quot;\\&quot;</code>: backslash, <code>&quot;\000&quot;</code>: octal number), see <font SIZE="-1">RESOURCES</font> in <code>&quot;man 7 X&quot;</code> for further details. </p>
+<p> As with any resource value, the <i>action</i> string may contain backslash escape sequences (<code>&quot;\n&quot;</code>: newline, <code>&quot;\\&quot;</code>: backslash, <code>&quot;\000&quot;</code>: octal number), see RESOURCES in <code>&quot;man 7 X&quot;</code> for further details. </p>
 <p> An action starts with an action prefix that selects a certain type of action, followed by a colon. An action string without colons is interpreted as a literal string to pass to the tty (as if it was prefixed with <code>&quot;string:&quot;</code>). </p>
 <p> The following action prefixes are known - extensions can provide additional prefixes: </p>
  </dd>
@@ -565,7 +565,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 </code></pre>
  </dd>
 <dt>command:STRING</dt>
-<dd> <p> If <i>action</i> takes the form of <code>&quot;command:STRING&quot;</code>, the specified <font SIZE="-1"><code>STRING</code></font> is interpreted and executed as urxvt256c-ml&#8217;s control sequence (basically the opposite of <code>&quot;string:&quot;</code> - instead of sending it to the program running in the terminal, it will be treated as if it were program output). This is most useful to feed command sequences into urxvt256c-ml. </p>
+<dd> <p> If <i>action</i> takes the form of <code>&quot;command:STRING&quot;</code>, the specified <code>STRING</code> is interpreted and executed as urxvt256c-ml&#8217;s control sequence (basically the opposite of <code>&quot;string:&quot;</code> - instead of sending it to the program running in the terminal, it will be treated as if it were program output). This is most useful to feed command sequences into urxvt256c-ml. </p>
 <p> For example the following means &quot;change the current locale to <code>&quot;zh_CN.GBK&quot;</code> when Control-Meta-c is being pressed&quot;: </p>
 <pre><code>  URxvt.keysym.M-C-c: command:\033]701;zh_CN.GBK\007
 </code></pre>
@@ -598,10 +598,10 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
    URxvt.keysym.C-M-v: builtin-string:
 </code></pre>
  </dd>
-<dt><font SIZE="-1">EXTENSION:STRING</font></dt>
-<dd> <p> An action of this form invokes the action <font SIZE="-1"><code>STRING</code></font>, if any, provided by the urxvt256c-ml <i>perl</i>(3) extension <font SIZE="-1"><code>EXTENSION</code></font>. The extension will be loaded automatically if necessary. </p>
+<dt>EXTENSION:STRING</dt>
+<dd> <p> An action of this form invokes the action <code>STRING</code>, if any, provided by the urxvt256c-ml <i>perl</i>(3) extension <code>EXTENSION</code>. The extension will be loaded automatically if necessary. </p>
 <p> Not all extensions define actions, but popular extensions that do include the <i>selection</i> and <i>matcher</i> extensions (documented in their own manpages, urxvt256c-ml-<i>selection</i>(1) and urxvt256c-ml-<i>matcher</i>(1), respectively). </p>
-<p> From the silly examples department, this will rot13-``encrypt&#8217;&#8216; urxvt256c-ml&#8217;s selection when Alt-Control-c is pressed on typical <font SIZE="-1">PC</font> keyboards: </p>
+<p> From the silly examples department, this will rot13-``encrypt&#8217;&#8216; urxvt256c-ml&#8217;s selection when Alt-Control-c is pressed on typical PC keyboards: </p>
 <pre><code>  URxvt.keysym.M-C-c: selection:rot13
 </code></pre>
  </dd>
@@ -640,19 +640,19 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 </code></pre>
  </dd>
 <dt><code>url-launcher</code>: <i>string</i></dt>
-<dd> <p> Specifies the program to be started with a <font SIZE="-1">URL</font> argument. Used by the <code>&quot;selection-popup&quot;</code> and <code>&quot;matcher&quot;</code> perl extensions. </p>
+<dd> <p> Specifies the program to be started with a URL argument. Used by the <code>&quot;selection-popup&quot;</code> and <code>&quot;matcher&quot;</code> perl extensions. </p>
  </dd>
 <dt><code>transient-for</code>: <i>windowid</i></dt>
-<dd> <p> Compile <i>frills</i>: Sets the <font SIZE="-1">WM_TRANSIENT_FOR</font> property to the given window id. </p>
+<dd> <p> Compile <i>frills</i>: Sets the WM_TRANSIENT_FOR property to the given window id. </p>
  </dd>
 <dt><code>override-redirect</code>: <i>boolean</i></dt>
 <dd> <p> Compile <i>frills</i>: Sets override-redirect for the terminal window, making it almost invisible to window managers; option <code>-override-redirect</code>. </p>
  </dd>
 <dt><code>iso14755:</code><i>boolean</i></dt>
-<dd> <p> Turn on/off <font SIZE="-1">ISO 14755 </font>(default enabled). </p>
+<dd> <p> Turn on/off ISO 14755 (default enabled). </p>
  </dd>
 <dt><code>iso14755_52:</code><i>boolean</i></dt>
-<dd> <p> Turn on/off <font SIZE="-1">ISO 14755 5.2</font> mode (default enabled). </p>
+<dd> <p> Turn on/off ISO 14755 5.2 mode (default enabled). </p>
  </dd></dl>
 <h2>BACKGROUND IMAGE OPTIONS AND RESOURCES</h2>
 <dl>
@@ -730,7 +730,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <p> Scroll down with <code>Button1</code> (<code>xterm-scrollbar</code>) or <code>Shift-Next</code>. Scroll up with <code>Button3</code> (<code>xterm-scrollbar</code>) or <code>Shift-Prior</code>. Continuous scroll with <code>Button2</code>.  </p>
 <h2>MOUSE REPORTING</h2>
 <p> To temporarily override mouse reporting, for either the scrollbar or the normal text selection/insertion, hold either the Shift or the Meta (Alt) key while performing the desired mouse action. </p>
-<p> If mouse reporting mode is active, the normal scrollbar actions are disabled --- on the assumption that we are using a fullscreen application. Instead, pressing Button1 and Button3 sends <font SIZE="-1"><code>ESC</code></font><code> [ 6 ~</code> (Next) and <font SIZE="-1"><code>ESC</code></font><code> [ 5 ~</code> (Prior), respectively. Similarly, clicking on the up and down arrows sends <font SIZE="-1"><code>ESC</code></font><code> [ A</code> (Up) and <font SIZE="-1"><code>ESC</code></font><code> [ B</code> (Down), respectively.  </p>
+<p> If mouse reporting mode is active, the normal scrollbar actions are disabled --- on the assumption that we are using a fullscreen application. Instead, pressing Button1 and Button3 sends <code>ESC</code><code> [ 6 ~</code> (Next) and <code>ESC</code><code> [ 5 ~</code> (Prior), respectively. Similarly, clicking on the up and down arrows sends <code>ESC</code><code> [ A</code> (Up) and <code>ESC</code><code> [ B</code> (Down), respectively.  </p>
 <h2>THE SELECTION: SELECTING AND PASTING TEXT</h2>
 <p> The behaviour of text selection and insertion/pasting mechanism is similar to <i><a href="/docs/linux/man/1-xterm/">xterm</a></i>(1). </p>
 <dl>
@@ -739,9 +739,9 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <p> Starting a selection while pressing the <code>Meta</code> key (or <code>Meta+Ctrl</code> keys) (Compile: <i>frills</i>) will create a rectangular selection instead of a normal one. In this mode, every selected row becomes its own line in the selection, and trailing whitespace is visually underlined and removed from the selection. </p>
  </dd>
 <dt><code>Pasting</code>:</dt>
-<dd> <p> Pressing and releasing the Middle mouse button in an <code>urxvt256c-ml</code> window causes the value of the <font SIZE="-1">PRIMARY</font> selection (or <font SIZE="-1">CLIPBOARD</font> with the <code>Meta</code> modifier) to be inserted as if it had been typed on the keyboard. </p>
-<p> Pressing <code>Shift-Insert</code> causes the value of the <font SIZE="-1">PRIMARY</font> selection to be inserted too. </p>
-<p> rxvt-unicode also provides the bindings <code>Ctrl-Meta-c</code> and &lt;Ctrl-Meta-v&gt; to interact with the <font SIZE="-1">CLIPBOARD</font> selection. The first binding causes the value of the internal selection to be copied to the <font SIZE="-1">CLIPBOARD</font> selection, while the second binding causes the value of the <font SIZE="-1">CLIPBOARD</font> selection to be inserted. </p>
+<dd> <p> Pressing and releasing the Middle mouse button in an <code>urxvt256c-ml</code> window causes the value of the PRIMARY selection (or CLIPBOARD with the <code>Meta</code> modifier) to be inserted as if it had been typed on the keyboard. </p>
+<p> Pressing <code>Shift-Insert</code> causes the value of the PRIMARY selection to be inserted too. </p>
+<p> rxvt-unicode also provides the bindings <code>Ctrl-Meta-c</code> and &lt;Ctrl-Meta-v&gt; to interact with the CLIPBOARD selection. The first binding causes the value of the internal selection to be copied to the CLIPBOARD selection, while the second binding causes the value of the CLIPBOARD selection to be inserted. </p>
  </dd></dl>
 <h2>CHANGING FONTS</h2>
 <p> Changing fonts (or font sizes, respectively) via the keypad is not yet supported in rxvt-unicode. Bug me if you need this. </p>
@@ -754,7 +754,7 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 </code></pre>
 <p> rxvt-unicode will automatically re-apply these fonts to the output so far.  </p>
 <h2>ISO 14755 SUPPORT</h2>
-<p> <font SIZE="-1">ISO 14755</font> is a standard for entering and viewing unicode characters and character codes using the keyboard. It consists of 4 parts. The first part is available if rxvt-unicode has been compiled with <code>&quot;--enable-frills&quot;</code>, the rest is available when rxvt-unicode was compiled with <code>&quot;--enable-iso14755&quot;</code>. </p>
+<p> ISO 14755 is a standard for entering and viewing unicode characters and character codes using the keyboard. It consists of 4 parts. The first part is available if rxvt-unicode has been compiled with <code>&quot;--enable-frills&quot;</code>, the rest is available when rxvt-unicode was compiled with <code>&quot;--enable-iso14755&quot;</code>. </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> 5.1: Basic method </p>
@@ -777,12 +777,12 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 <p> You enter this mode by holding down <code>&quot;Control&quot;</code> and <code>&quot;Shift&quot;</code> together, then pressing and holding the left mouse button and moving around. The unicode hex code(s) (it might be a combining character) of the character under the pointer is displayed until you release <code>&quot;Control&quot;</code> and <code>&quot;Shift&quot;</code>. </p>
 <p> In addition to the hex codes it will display the font used to draw this character - due to implementation reasons, characters combined with combining characters, line drawing characters and unknown characters will always be drawn using the built-in support font. </p>
  </dd></dl>
-<p> With respect to conformance, rxvt-unicode is supposed to be compliant to both scenario A and B of <font SIZE="-1">ISO 14755,</font> including part 5.2.  </p>
+<p> With respect to conformance, rxvt-unicode is supposed to be compliant to both scenario A and B of ISO 14755, including part 5.2.  </p>
 <h2>LOGIN STAMP</h2>
 <p> <code>urxvt256c-ml</code> tries to write an entry into the <i><a href="/docs/linux/man/5-utmp/">utmp</a></i>(5) file so that it can be seen via the <i><a href="/docs/linux/man/1-who/">who</a>(1)</i> command, and can accept messages. To allow this feature, <code>urxvt256c-ml</code> may need to be installed setuid root on some systems or setgid to root or to some other group on others.  </p>
 <h2>COLOURS AND GRAPHICS</h2>
-<p> In addition to the default foreground and background colours, <code>urxvt256c-ml</code> can display up to 88/256 colours: 8 <font SIZE="-1">ANSI</font> colours plus high-intensity (potentially bold/blink) versions of the same, and 72 (or 240 in 256 colour mode) colours arranged in an 4x4x4 (or 6x6x6) colour <font SIZE="-1">RGB</font> cube plus a 8 (24) colour greyscale ramp. </p>
-<p> Here is a list of the <font SIZE="-1">ANSI</font> colours with their names. </p>
+<p> In addition to the default foreground and background colours, <code>urxvt256c-ml</code> can display up to 88/256 colours: 8 ANSI colours plus high-intensity (potentially bold/blink) versions of the same, and 72 (or 240 in 256 colour mode) colours arranged in an 4x4x4 (or 6x6x6) colour RGB cube plus a 8 (24) colour greyscale ramp. </p>
+<p> Here is a list of the ANSI colours with their names. </p>
 <table>
 <tr VALIGN=top>
 <td>color0</td>
@@ -895,69 +895,69 @@ description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X wi
 </table>
 <p> It is also possible to specify the colour values of <code>foreground</code>, <code>background</code>, <code>cursorColor</code>, <code>cursorColor2</code>, <code>colorBD</code>, <code>colorUL</code> as a number 0-15, as a convenient shorthand to reference the colour name of color0-color15. </p>
 <p> The following text gives values for the standard 88 colour mode (and values for the 256 colour mode in parentheses). </p>
-<p> The <font SIZE="-1">RGB</font> cube uses indices 16..79 (16..231) using the following formulas: </p>
+<p> The RGB cube uses indices 16..79 (16..231) using the following formulas: </p>
 <pre><code>   index_88 = (r * 4 + g) * 4 + b + 16 # r, g, b = 0..3
    index_256 = (r * 6 + g) * 6 + b + 16 # r, g, b = 0..5
 </code></pre>
-<p> The grayscale ramp uses indices 80..87 (232..239), from 10% to 90% in 10% steps (1/26 to 25/26 in 1/26 steps) - black and white are already part of the <font SIZE="-1">RGB</font> cube. </p>
+<p> The grayscale ramp uses indices 80..87 (232..239), from 10% to 90% in 10% steps (1/26 to 25/26 in 1/26 steps) - black and white are already part of the RGB cube. </p>
 <p> Together, all those colours implement the 88 (256) colour xterm colours. Only the first 16 can be changed using resources currently, the rest can only be changed via command sequences (``escape codes&#8217;&#8216;). </p>
-<p> Applications are advised to use terminfo or command sequences to discover number and <font SIZE="-1">RGB</font> values of all colours (yes, you can query this...). </p>
+<p> Applications are advised to use terminfo or command sequences to discover number and RGB values of all colours (yes, you can query this...). </p>
 <p> Note that <code>-rv</code> (<code>``reverseVideo: True&#8217;&#8216;</code>) simulates reverse video by always swapping the foreground/background colours. This is in contrast to <i><a href="/docs/linux/man/1-xterm/">xterm</a></i>(1) where the colours are only swapped if they have not otherwise been specified. For example, </p>
 <pre><code>   urxvt256c-ml -fg Black -bg White -rv
 </code></pre>
 <p> would yield White on Black, while on <i><a href="/docs/linux/man/1-xterm/">xterm</a></i>(1) it would yield Black on White.  </p>
-<font SIZE="-1"></font><h3>ALPHA CHANNEL SUPPORT</h3>
+<h3>ALPHA CHANNEL SUPPORT</h3>
 <p> If Xft support has been compiled in and as long as Xft/Xrender/X don&#8217;t get their act together, rxvt-unicode will do its own alpha channel management: </p>
 <p> You can prefix any colour with an opaqueness percentage enclosed in brackets, i.e. <code>&quot;[percent]&quot;</code>, where <code>&quot;percent&quot;</code> is a decimal percentage (0-100) that specifies the opacity of the colour, where <code>0</code> is completely transparent and <code>100</code> is completely opaque. For example, <code>&quot;[50]red&quot;</code> is a half-transparent red, while <code>&quot;[95]#00ff00&quot;</code> is an almost opaque green. This is the recommended format to specify transparency values, and works with all ways to specify a colour. </p>
 <p> For complete control, rxvt-unicode also supports <code>&quot;rgba:rrrr/gggg/bbbb/aaaa&quot;</code> (exactly four hex digits/component) colour specifications, where the additional <code>&quot;aaaa&quot;</code> component specifies opacity (alpha) values. The minimum value of <code>0000</code> is completely transparent, while <code>&quot;ffff&quot;</code> is completely opaque). The two example colours from earlier could also be specified as <code>&quot;rgba:ff00/0000/0000/8000&quot;</code> and <code>&quot;rgba:0000/ff00/0000/f332&quot;</code>. </p>
-<p> You probably need to specify <code>``-depth 32&#8217;&#8216;</code>, too, to force a visual with alpha channels, and have the luck that your X-server uses <font SIZE="-1">ARGB</font> pixel layout, as X is far from just supporting <font SIZE="-1">ARGB</font> visuals out of the box, and rxvt-unicode just fudges around. </p>
+<p> You probably need to specify <code>``-depth 32&#8217;&#8216;</code>, too, to force a visual with alpha channels, and have the luck that your X-server uses ARGB pixel layout, as X is far from just supporting ARGB visuals out of the box, and rxvt-unicode just fudges around. </p>
 <p> For example, the following selects an almost completely transparent black background, and an almost opaque pink foreground: </p>
 <pre><code>   urxvt256c-ml -depth 32 -bg rgba:0000/0000/0000/4444 -fg &quot;[80]pink&quot;
 </code></pre>
 <p> When not using a background image, then the interpretation of the alpha channel is up to your compositing manager (most interpret it as transparency of course). </p>
-<p> When using a background pixmap or pseudo-transparency, then the background colour will always behave as if it were completely transparent (so the background image shows instead), regardless of how it was specified, while other colours will either be transparent as specified (the background image will show through) on servers supporting the <font SIZE="-1">RENDER</font> extension, or fully opaque on servers not supporting the <font SIZE="-1">RENDER EXTENSION.</font> </p>
-<p> Please note that due to bugs in Xft, specifying alpha values might result in garbage being displayed when the X-server does not support the <font SIZE="-1">RENDER</font> extension.  </p>
+<p> When using a background pixmap or pseudo-transparency, then the background colour will always behave as if it were completely transparent (so the background image shows instead), regardless of how it was specified, while other colours will either be transparent as specified (the background image will show through) on servers supporting the RENDER extension, or fully opaque on servers not supporting the RENDER EXTENSION. </p>
+<p> Please note that due to bugs in Xft, specifying alpha values might result in garbage being displayed when the X-server does not support the RENDER extension.  </p>
 <h2>ENVIRONMENT</h2>
 <p> <code>urxvt256c-ml</code> sets and/or uses the following environment variables: </p>
 <dl>
-<dt><font SIZE="-1"><code>TERM</code></font></dt>
+<dt><code>TERM</code></dt>
 <dd> <p> Normally set to <code>&quot;rxvt-unicode&quot;</code>, unless overwritten at configure time, via resources or on the command line. </p>
  </dd>
-<dt><font SIZE="-1"><code>COLORTERM</code></font></dt>
+<dt><code>COLORTERM</code></dt>
 <dd> <p> Either <code>&quot;rxvt&quot;</code>, <code>&quot;rxvt-xpm&quot;</code>, depending on whether urxvt256c-ml was compiled with background image support, and optionally with the added extension <code>&quot;-mono&quot;</code> to indicate that rxvt-unicode runs on a monochrome screen. </p>
  </dd>
-<dt><font SIZE="-1"><code>COLORFGBG</code></font></dt>
+<dt><code>COLORFGBG</code></dt>
 <dd> <p> Set to a string of the form <code>&quot;fg;bg&quot;</code> or <code>&quot;fg;xpm;bg&quot;</code>, where <code>&quot;fg&quot;</code> is the colour code used as default foreground/text colour (or the string <code>&quot;default&quot;</code> to indicate that the default-colour escape sequence is to be used), <code>&quot;bg&quot;</code> is the colour code used as default background colour (or the string <code>&quot;default&quot;</code>), and <code>&quot;xpm&quot;</code> is the string <code>&quot;default&quot;</code> if urxvt256c-ml was compiled with background image support. Libraries like <code>&quot;ncurses&quot;</code> and <code>&quot;slang&quot;</code> can (and do) use this information to optimize screen output. </p>
  </dd>
-<dt><font SIZE="-1"><code>WINDOWID</code></font></dt>
-<dd> <p> Set to the (decimal) X Window <font SIZE="-1">ID</font> of the urxvt256c-ml window (the toplevel window, which usually has subwindows for the scrollbar, the terminal window and so on). </p>
+<dt><code>WINDOWID</code></dt>
+<dd> <p> Set to the (decimal) X Window ID of the urxvt256c-ml window (the toplevel window, which usually has subwindows for the scrollbar, the terminal window and so on). </p>
  </dd>
-<dt><font SIZE="-1"><code>TERMINFO</code></font></dt>
+<dt><code>TERMINFO</code></dt>
 <dd> <p> Set to the terminfo directory iff urxvt256c-ml was configured with <code>&quot;--with-terminfo=PATH&quot;</code>. </p>
  </dd>
-<dt><font SIZE="-1"><code>DISPLAY</code></font></dt>
+<dt><code>DISPLAY</code></dt>
 <dd> <p> Used by urxvt256c-ml to connect to the display and set to the correct display in its child processes if <code>&quot;-display&quot;</code> isn&#8217;t used to override. It defaults to <code>&quot;:0&quot;</code> if it doesn&#8217;t exist. </p>
  </dd>
-<dt><font SIZE="-1"><code>SHELL</code></font></dt>
+<dt><code>SHELL</code></dt>
 <dd> <p> The shell to be used for command execution, defaults to <code>&quot;/bin/sh&quot;</code>. </p>
  </dd>
-<dt><font SIZE="-1"><code>RXVT_SOCKET</code></font> [<i>sic</i>]</dt>
+<dt><code>RXVT_SOCKET</code> [<i>sic</i>]</dt>
 <dd> <p> The unix domain socket path used by <a href="/docs/linux/man/1-urxvt256c-mlc/">urxvt256c-mlc</a>(1) and <a href="/docs/linux/man/1-urxvt256c-mld/">urxvt256c-mld</a>(1). </p>
 <p> Default <i></i>$HOME <i>/.urxvt/urxvtd-&lt;nodename&gt;</i>. </p>
  </dd>
-<dt><font SIZE="-1"><code>URXVT_PERL_LIB</code></font></dt>
+<dt><code>URXVT_PERL_LIB</code></dt>
 <dd> <p> Additional <i>:</i>-separated library search path for perl extensions. Will be searched after <code>-perl-lib</code> but before <i>~/.urxvt/ext</i> and the system library directory. </p>
  </dd>
-<dt><font SIZE="-1"><code>URXVT_PERL_VERBOSITY</code></font></dt>
+<dt><code>URXVT_PERL_VERBOSITY</code></dt>
 <dd> <p> See <a href="/docs/linux/man/3-urxvt256c-mlperl/">urxvt256c-mlperl</a>(3). </p>
  </dd>
-<dt><font SIZE="-1"><code>HOME</code></font></dt>
+<dt><code>HOME</code></dt>
 <dd> <p> Used to locate the default directory for the unix domain socket for daemon communications and to locate various resource files (such as <code>&quot;.Xdefaults&quot;</code>) </p>
  </dd>
-<dt><font SIZE="-1"><code>XAPPLRESDIR</code></font></dt>
+<dt><code>XAPPLRESDIR</code></dt>
 <dd> <p> Directory where application-specific X resource files are located. </p>
  </dd>
-<dt><font SIZE="-1"><code>XENVIRONMENT</code></font></dt>
+<dt><code>XENVIRONMENT</code></dt>
 <dd> <p> If set and accessible, gives the name of a X resource file to be loaded by urxvt256c-ml. </p>
  </dd></dl>
 <h2>FILES</h2>

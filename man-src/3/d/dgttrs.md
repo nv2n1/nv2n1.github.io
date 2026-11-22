@@ -11,7 +11,7 @@ description: "dgttrs.f –"
 <p> dgttrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgttrs</code> (TRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB, INFO)<br />
+<p> subroutine <code>dgttrs</code> (TRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB, INFO)<br/>
  <i></i><code>DGTTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgttrs (characterTRANS, integerN, integerNRHS, double precision, dimension( * )DL, double precision, dimension( * )D, double precision, dimension( * )DU, double precision, dimension( * )DU2, integer, dimension( * )IPIV, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

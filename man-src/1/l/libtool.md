@@ -10,13 +10,13 @@ description: "libtool – manual page for libtool 2.4.2"
 
 <p> libtool &#8211; manual page for libtool 2.4.2</p>
 <h2>SYNOPSIS</h2>
-<p> <code>libtool</code> [<i>OPTION</i>]&#8230; [<i>MODE-ARG</i>]&#8230;<br />
- <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=compile COMPILE-COMMAND</i>&#8230; <i>SOURCEFILE</i><br />
- <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=link LINK-COMMAND</i>&#8230;<br />
- <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=execute COMMAND </i>[<i>ARGS</i>]&#8230;<br />
- <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=install INSTALL-COMMAND</i>&#8230;<br />
- <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=finish </i>[<i>LIBDIR</i>]&#8230;<br />
- <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=uninstall RM </i>[<i>RM-OPTION</i>]&#8230; <i>FILE</i>&#8230;<br />
+<p> <code>libtool</code> [<i>OPTION</i>]&#8230; [<i>MODE-ARG</i>]&#8230;<br/>
+ <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=compile COMPILE-COMMAND</i>&#8230; <i>SOURCEFILE</i><br/>
+ <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=link LINK-COMMAND</i>&#8230;<br/>
+ <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=execute COMMAND </i>[<i>ARGS</i>]&#8230;<br/>
+ <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=install INSTALL-COMMAND</i>&#8230;<br/>
+ <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=finish </i>[<i>LIBDIR</i>]&#8230;<br/>
+ <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=uninstall RM </i>[<i>RM-OPTION</i>]&#8230; <i>FILE</i>&#8230;<br/>
  <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=clean RM </i>[<i>RM-OPTION</i>]&#8230; <i>FILE</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> Provide generalized library-building support services.</p>
@@ -211,7 +211,7 @@ description: "libtool – manual page for libtool 2.4.2"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-libtool [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2011 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 2011 Free Software Foundation, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>libtool</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtool</code> programs are properly installed at your site, the command</p>

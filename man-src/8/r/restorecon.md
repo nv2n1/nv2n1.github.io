@@ -31,7 +31,7 @@ description: "restorecon – restore file(s) default SELinux security contexts."
 <dt><code>-p</code></dt>
 <dd>show progress by printing * every 1024 files. (If you relabel the entire OS, this will show you the percentage complete.)</dd>
 <dt><code>-R, -r</code></dt>
-<dd>change files and directories file labels recursively (descend directories).<br />
+<dd>change files and directories file labels recursively (descend directories).<br/>
  <code>Note: restorecon reports warnings on paths without default labels only if called non-recursively or in verbose mode.</code></dd>
 <dt><code>-v</code></dt>
 <dd>show changes in file labels, if type or role are going to be changed.</dd>

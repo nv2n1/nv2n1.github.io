@@ -34,16 +34,16 @@ perf script [-s[Perl]:script[.pl]]
 <dl>
 <dt>
 </dt><dd>
-.ft C<br />
-    format : field : unsigned short common_type;<br />
-field : unsigned char common_flags;<br />
-field : unsigned char common_preempt_count;<br />
-field : int common_pid;<br />
-field : char comm[TASK_COMM_LEN];<br />
-field : pid_t pid;<br />
-field : int prio;<br />
-field : int success;<br />
-field : int target_cpu;<br />
+.ft C<br/>
+    format : field : unsigned short common_type;<br/>
+field : unsigned char common_flags;<br/>
+field : unsigned char common_preempt_count;<br/>
+field : int common_pid;<br/>
+field : char comm[TASK_COMM_LEN];<br/>
+field : pid_t pid;<br/>
+field : int prio;<br/>
+field : int success;<br/>
+field : int target_cpu;<br/>
 .ft
 </dd></dl>
 <p> The handler function for this event would be defined as: </p>

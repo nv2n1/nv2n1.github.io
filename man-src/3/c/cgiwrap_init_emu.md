@@ -19,13 +19,13 @@ void cgiwrap_init_emu(void *data, READ_FUNC read_cb,
                       PUTENV_FUNC putenv_cb, ITERENV_FUNC iterenv_cb);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> data &#8211; user data to be passed to the specified callbacks<br />
- read_cb &#8211; a cb to replace fread(stdin)<br />
- writef_cb &#8211; a cb to repalce fprintf(stdout)<br />
- write_cb &#8211; a cb to replace fwrite(stdout)<br />
- getenv_cb &#8211; a cb to replace getenv<br />
- putenv_cb &#8211; a cb to replace putenv<br />
- iterenv_cb &#8211; a cb to replace the default environment iteration<br />
+<p> data &#8211; user data to be passed to the specified callbacks<br/>
+ read_cb &#8211; a cb to replace fread(stdin)<br/>
+ writef_cb &#8211; a cb to repalce fprintf(stdout)<br/>
+ write_cb &#8211; a cb to replace fwrite(stdout)<br/>
+ getenv_cb &#8211; a cb to replace getenv<br/>
+ putenv_cb &#8211; a cb to replace putenv<br/>
+ iterenv_cb &#8211; a cb to replace the default environment iteration<br/>
  function (which just wraps walking the envp array) </p>
 <h2>DESCRIPTION</h2>
 <p> cgiwrap_init_emu sets up the cgiwrap subsystem for use in an emulated environment where you are providing routines to use in place of the standard routines, ie when used to interface with a server or scripting language. See cgi/cgiwrap.h for the exact definitions of the callback functions. </p>

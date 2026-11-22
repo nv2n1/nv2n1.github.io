@@ -81,7 +81,7 @@ perf bench[&lt;common options&gt;]&lt;subsystem&gt;&lt;suite&gt;[&lt;options&gt;
 <dl>
 <dt>
 </dt><dd> Suite for evaluating performance of scheduler and IPC mechanisms. Based on hackbench by Rusty Russell.</dd></dl>
-<p> <font SIZE="+1"> <code>Options of messaging</code></p>
+<p>  <code>Options of messaging</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -102,11 +102,11 @@ perf bench[&lt;common options&gt;]&lt;subsystem&gt;&lt;suite&gt;[&lt;options&gt;
 <dt>
 </dt><dd> Specify number of loops</dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Example of messaging</code></p>
+<p>  <code>Example of messaging</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 .ft C
 % perf bench sched messaging                 # run with default
@@ -125,7 +125,7 @@ options (20 sender and receiver processes per group)
 <dt>
 </dt><dd> Suite for pipe() system call. Based on pipe-test-1m.c by Ingo Molnar.</dd></dl>
 </dl>
-<p> <font SIZE="+1"> <code>Options of pipe</code></p>
+<p>  <code>Options of pipe</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -134,11 +134,11 @@ options (20 sender and receiver processes per group)
 <dt>
 </dt><dd> Specify number of loops.</dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Example of pipe</code></p>
+<p>  <code>Example of pipe</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 .ft C
 % perf bench sched pipe
@@ -160,7 +160,7 @@ options (20 sender and receiver processes per group)
 <dl>
 <dt>
 </dt><dd> Suite for evaluating performance of simple memory copy in various ways.</dd></dl>
-<p> <font SIZE="+1"> <code>Options of memcpy</code></p>
+<p>  <code>Options of memcpy</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -193,7 +193,7 @@ options (20 sender and receiver processes per group)
 <dt>
 </dt><dd> Suite for evaluating performance of simple memory set in various ways.</dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Options of memset</code></p>
+<p>  <code>Options of memset</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -222,7 +222,7 @@ options (20 sender and receiver processes per group)
 <dt>
 </dt><dd> Show only the result without page faults before memset.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>SUITES FOR <i>numa</i></h3>
 <p> <code>mem</code></p>
 <dl>

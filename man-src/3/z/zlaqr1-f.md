@@ -10,7 +10,7 @@ description: "zlaqr1.f –"
 <p>zlaqr1.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaqr1</code> (N, H, LDH, S1, S2, V)<br />
+<p>subroutine <code>zlaqr1</code> (N, H, LDH, S1, S2, V)<br/>
  <i></i><code>ZLAQR1</code> sets a scalar multiple of the first column of the product of 2-by-2 or 3-by-3 matrix H and specified shifts.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaqr1 (integerN, complex*16, dimension( ldh, * )H, integerLDH, complex*16S1, complex*16S2, complex*16, dimension( * )V)</h3>

@@ -10,11 +10,11 @@ description: "ql/instruments/impliedvolatility.hpp – Utilities for implied-vol
 
 <p> ql/instruments/impliedvolatility.hpp &#8211; Utilities for implied-volatility calculation. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instrument.hpp&gt;<br />
- #include &lt;ql/quotes/simplequote.hpp&gt;<br />
+<p> #include &lt;ql/instrument.hpp&gt;<br/>
+ #include &lt;ql/quotes/simplequote.hpp&gt;<br/>
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>ImpliedVolatilityHelper</code><br />
+<p> class <code>ImpliedVolatilityHelper</code><br/>
  <i>helper class for one-asset implied-volatility calculation </i></p>
 <h2>Detailed Description</h2>
 <p> Utilities for implied-volatility calculation. </p>

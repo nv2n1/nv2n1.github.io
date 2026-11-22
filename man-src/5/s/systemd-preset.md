@@ -70,7 +70,7 @@ disable *</pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/1-systemd-delta/">systemd-delta</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/7-daemon/">daemon</a></code>(7) has a discussion of packaging scriptlets. </p>
-<p> Fedora page introducing the use of presets: m[blue]<code>Features/PackagePresets</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> Fedora page introducing the use of presets: m[blue]<code>Features/PackagePresets</code>m[][1].</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

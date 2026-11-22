@@ -76,7 +76,7 @@ description: "gst-launch-1.0 – build and run a GStreamer pipeline"
 <p> Creates an element of type ELEMENTTYPE and sets the PROPERTIES. </p>
 <p> <code>Properties</code> </p>
 <p> PROPERTY=VALUE &#8230; </p>
-<p> Sets the property to the specified value. You can use <code><a href="/docs/linux/man/1-gst-inspect-1-0/">gst-inspect-1.0</a></code>(1) to find out about properties and allowed values of different elements.<br />
+<p> Sets the property to the specified value. You can use <code><a href="/docs/linux/man/1-gst-inspect-1-0/">gst-inspect-1.0</a></code>(1) to find out about properties and allowed values of different elements.<br/>
  Enumeration properties can be set by name, nick or value. </p>
 <p> <code>Presets</code> </p>
 <p> @preset=&lt;preset name&gt; &#8230; </p>
@@ -86,126 +86,126 @@ description: "gst-launch-1.0 – build and run a GStreamer pipeline"
 <p> Specifies that a bin of type BINTYPE is created and the given properties are set. Every element between the braces is put into the bin. Please note the dot that has to be used after the BINTYPE. You will almost never need this functionality, it is only really useful for applications using the gst_launch_parse() API with &#8216;bin&#8217; as bintype. That way it is possible to build partial pipelines instead of a full-fledged top-level pipeline. </p>
 <p> <code>Links</code> </p>
 <p> <i>[[SRCELEMENT].[PAD1,&#8230;]]</i> ! <i>[[SINKELEMENT].[PAD1,&#8230;]]</i> <i>[[SRCELEMENT].[PAD1,&#8230;]]</i> ! CAPS ! <i>[[SINKELEMENT].[PAD1,&#8230;]]</i> <i>[[SRCELEMENT].[PAD1,&#8230;]]</i> : <i>[[SINKELEMENT].[PAD1,&#8230;]]</i> <i>[[SRCELEMENT].[PAD1,&#8230;]]</i> : CAPS : <i>[[SINKELEMENT].[PAD1,&#8230;]]</i> </p>
-<p> Links the element with name SRCELEMENT to the element with name SINKELEMENT, using the caps specified in CAPS as a filter. Names can be set on elements with the name property. If the name is omitted, the element that was specified directly in front of or after the link is used. This works across bins. If a padname is given, the link is done with these pads. If no pad names are given all possibilities are tried and a matching pad is used. If multiple padnames are given, both sides must have the same number of pads specified and multiple links are done in the given order.<br />
- So the simplest link is a simple exclamation mark, that links the element to the left of it to the element right of it.<br />
+<p> Links the element with name SRCELEMENT to the element with name SINKELEMENT, using the caps specified in CAPS as a filter. Names can be set on elements with the name property. If the name is omitted, the element that was specified directly in front of or after the link is used. This works across bins. If a padname is given, the link is done with these pads. If no pad names are given all possibilities are tried and a matching pad is used. If multiple padnames are given, both sides must have the same number of pads specified and multiple links are done in the given order.<br/>
+ So the simplest link is a simple exclamation mark, that links the element to the left of it to the element right of it.<br/>
  Linking using the : operator attempts to link all possible pads between the elements </p>
 <p> <code>Caps</code> </p>
 <p> MEDIATYPE <i>[, PROPERTY[, PROPERTY &#8230;]]]</i> <i>[; CAPS[; CAPS &#8230;]]</i> </p>
 <p> Creates a capability with the given media type and optionally with given properties. The media type can be escaped using &quot; or &#8216;. If you want to chain caps, you can add more caps in the same format afterwards. </p>
 <p> <code>Properties</code> </p>
-<p> NAME=<i>[(TYPE)]</i>VALUE<br />
+<p> NAME=<i>[(TYPE)]</i>VALUE<br/>
  in lists and ranges: <i>[(TYPE)]</i>VALUE </p>
-<p> Sets the requested property in capabilities. The name is an alphanumeric value and the type can have the following case-insensitive values:<br />
- &#8211; <code>i</code> or <code>int</code> for integer values or ranges<br />
- &#8211; <code>f</code> or <code>float</code> for float values or ranges<br />
- &#8211; <code>b</code>, <code>bool</code> or <code>boolean</code> for boolean values<br />
- &#8211; <code>s</code>, <code>str</code> or <code>string</code> for strings<br />
- &#8211; <code>fraction</code> for fractions (framerate, pixel-aspect-ratio)<br />
- &#8211; <code>l</code> or <code>list</code> for lists<br />
- If no type was given, the following order is tried: integer, float, boolean, string.<br />
- Integer values must be parsable by <code>strtol()</code>, floats by <code>strtod()</code>. FOURCC values may either be integers or strings. Boolean values are (case insensitive) <i>yes</i>, <i>no</i>, <i>true</i> or <i>false</i> and may like strings be escaped with &quot; or &#8216;.<br />
- Ranges are in this format: [ VALUE, VALUE ]<br />
+<p> Sets the requested property in capabilities. The name is an alphanumeric value and the type can have the following case-insensitive values:<br/>
+ &#8211; <code>i</code> or <code>int</code> for integer values or ranges<br/>
+ &#8211; <code>f</code> or <code>float</code> for float values or ranges<br/>
+ &#8211; <code>b</code>, <code>bool</code> or <code>boolean</code> for boolean values<br/>
+ &#8211; <code>s</code>, <code>str</code> or <code>string</code> for strings<br/>
+ &#8211; <code>fraction</code> for fractions (framerate, pixel-aspect-ratio)<br/>
+ &#8211; <code>l</code> or <code>list</code> for lists<br/>
+ If no type was given, the following order is tried: integer, float, boolean, string.<br/>
+ Integer values must be parsable by <code>strtol()</code>, floats by <code>strtod()</code>. FOURCC values may either be integers or strings. Boolean values are (case insensitive) <i>yes</i>, <i>no</i>, <i>true</i> or <i>false</i> and may like strings be escaped with &quot; or &#8216;.<br/>
+ Ranges are in this format: [ VALUE, VALUE ]<br/>
  Lists use this format: { VALUE <i>[, VALUE &#8230;]</i> } </p>
 <h2>Pipeline Examples</h2>
 <p>The examples below assume that you have the correct plug-ins available. In general, &quot;pulsesink&quot; can be substituted with another audio output plug-in such as &quot;alsasink&quot; or &quot;osxaudiosink&quot; Likewise, &quot;xvimagesink&quot; can be substituted with &quot;ximagesink&quot;, &quot;glimagesink&quot;, or &quot;osxvideosink&quot;. Keep in mind though that different sinks might accept different formats and even the same sink might accept different formats on different machines, so you might need to add converter elements like audioconvert and audioresample (for audio) or videoconvert (for video) in front of the sink to make things work. </p>
 <p> <code>Audio playback</code> </p>
-<p> Play the mp3 music file &quot;music.mp3&quot; using a libmpg123-based plug-in and output to an Pulseaudio device<br />
- <code><br />
+<p> Play the mp3 music file &quot;music.mp3&quot; using a libmpg123-based plug-in and output to an Pulseaudio device<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=music.mp3&nbsp;!&nbsp;mpegaudioparse&nbsp;!&nbsp;mpg123audiodec&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;audioresample&nbsp;!&nbsp;pulsesink</code> </p>
-<p> Play an Ogg Vorbis format file<br />
- <code><br />
+<p> Play an Ogg Vorbis format file<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=music.ogg&nbsp;!&nbsp;oggdemux&nbsp;!&nbsp;vorbisdec&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;audioresample&nbsp;!&nbsp;pulsesink</code> </p>
-<p> Play an mp3 file or an http stream using GIO<br />
- <code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 giosrc location=music.mp3&nbsp;!&nbsp;mpegaudioparse&nbsp;!&nbsp;mpg123audiodec&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;pulsesink</code><br />
- <code><br />
+<p> Play an mp3 file or an http stream using GIO<br/>
+ <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 giosrc location=music.mp3&nbsp;!&nbsp;mpegaudioparse&nbsp;!&nbsp;mpg123audiodec&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;pulsesink</code><br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 giosrc location=<a rel="nofollow" href="http://domain.com/music.mp3">http://domain.com/music.mp3</a>&nbsp;!&nbsp;mpegaudioparse&nbsp;!&nbsp;mpg123audiodec&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;audioresample&nbsp;!&nbsp;pulsesink</code> </p>
-<p> Use GIO to play an mp3 file located on an SMB server<br />
- <code><br />
+<p> Use GIO to play an mp3 file located on an SMB server<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 giosrc location=<a href="smb://computer/music.mp3">smb://computer/music.mp3</a>&nbsp;!&nbsp;mpegaudioparse&nbsp;!&nbsp;mpg123audiodec&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;audioresample&nbsp;!&nbsp;pulsesink</code> </p>
 <p> <code>Format conversion</code> </p>
-<p> Convert an mp3 music file to an Ogg Vorbis file<br />
- <code><br />
+<p> Convert an mp3 music file to an Ogg Vorbis file<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=music.mp3&nbsp;!&nbsp;mpegaudioparse&nbsp;!&nbsp;mpg123audiodec&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;vorbisenc&nbsp;!&nbsp;oggmux&nbsp;!&nbsp;filesink location=music.ogg</code> </p>
-<p> Convert to the FLAC format<br />
- <code><br />
+<p> Convert to the FLAC format<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=music.mp3&nbsp;!&nbsp;mpegaudioparse&nbsp;!&nbsp;mpg123audiodec&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;flacenc&nbsp;!&nbsp;filesink location=test.flac</code> </p>
 <p> <code>Other</code> </p>
-<p> Plays a .WAV file that contains raw audio data (PCM).<br />
- <code><br />
+<p> Plays a .WAV file that contains raw audio data (PCM).<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=music.wav&nbsp;!&nbsp;wavparse&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;audioresample&nbsp;!&nbsp;pulsesink</code> </p>
-<p> Convert a .WAV file containing raw audio data into an Ogg Vorbis or mp3 file<br />
- <code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=music.wav&nbsp;!&nbsp;wavparse&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;vorbisenc&nbsp;!&nbsp;oggmux&nbsp;!&nbsp;filesink location=music.ogg</code><br />
- <code><br />
+<p> Convert a .WAV file containing raw audio data into an Ogg Vorbis or mp3 file<br/>
+ <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=music.wav&nbsp;!&nbsp;wavparse&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;vorbisenc&nbsp;!&nbsp;oggmux&nbsp;!&nbsp;filesink location=music.ogg</code><br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=music.wav&nbsp;!&nbsp;wavparse&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;lamemp3enc&nbsp;!&nbsp;filesink location=music.mp3</code> </p>
-<p> Rips all tracks from compact disc and convert them into a single mp3 file<br />
- <code><br />
+<p> Rips all tracks from compact disc and convert them into a single mp3 file<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 cdparanoiasrc mode=continuous&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;lamemp3enc&nbsp;!&nbsp;mpegaudioparse&nbsp;!&nbsp;id3v2mux&nbsp;!&nbsp;filesink location=cd.mp3</code> </p>
-<p> Rips track 5 from the CD and converts it into a single mp3 file<br />
- <code><br />
+<p> Rips track 5 from the CD and converts it into a single mp3 file<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 cdparanoiasrc track=5&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;lamemp3enc&nbsp;!&nbsp;mpegaudioparse&nbsp;!&nbsp;id3v2mux&nbsp;!&nbsp;filesink location=track5.mp3</code> </p>
-<p> Using <code><a href="/docs/linux/man/1-gst-inspect-1-0/">gst-inspect-1.0</a></code>(1), it is possible to discover settings like the above for cdparanoiasrc that will tell it to rip the entire cd or only tracks of it. Alternatively, you can use an URI and gst-launch-1.0 will find an element (such as cdparanoia) that supports that protocol for you, e.g.: <code><br />
+<p> Using <code><a href="/docs/linux/man/1-gst-inspect-1-0/">gst-inspect-1.0</a></code>(1), it is possible to discover settings like the above for cdparanoiasrc that will tell it to rip the entire cd or only tracks of it. Alternatively, you can use an URI and gst-launch-1.0 will find an element (such as cdparanoia) that supports that protocol for you, e.g.: <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0&nbsp;<a href="cdda://5">cdda://5</a>&nbsp;!&nbsp;lamemp3enc vbr=new vbr-quality=6&nbsp;!&nbsp;filesink location=track5.mp3</code> </p>
-<p> Records sound from your audio input and encodes it into an ogg file<br />
- <code><br />
+<p> Records sound from your audio input and encodes it into an ogg file<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 pulsesrc&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;vorbisenc&nbsp;!&nbsp;oggmux&nbsp;!&nbsp;filesink location=input.ogg</code> </p>
 <p> <code>Video</code> </p>
-<p> Display only the video portion of an MPEG-1 video file, outputting to an X display window<br />
- <code><br />
+<p> Display only the video portion of an MPEG-1 video file, outputting to an X display window<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=JB_FF9_TheGravityOfLove.mpg&nbsp;!&nbsp;dvddemux&nbsp;!&nbsp;mpegvideoparse&nbsp;!&nbsp;mpeg2dec&nbsp;!&nbsp;xvimagesink</code> </p>
-<p> Display the video portion of a .vob file (used on DVDs), outputting to an SDL window<br />
- <code><br />
+<p> Display the video portion of a .vob file (used on DVDs), outputting to an SDL window<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=/flflfj.vob&nbsp;!&nbsp;dvddemux&nbsp;!&nbsp;mpegvideoparse&nbsp;!&nbsp;mpeg2dec&nbsp;!&nbsp;sdlvideosink</code> </p>
-<p> Play both video and audio portions of an MPEG movie<br />
- <code><br />
+<p> Play both video and audio portions of an MPEG movie<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=movie.mpg&nbsp;!&nbsp;dvddemux name=demuxer&nbsp;<wbr>&nbsp;demuxer.&nbsp;!&nbsp;queue&nbsp;!&nbsp;mpegvideoparse&nbsp;!&nbsp;mpeg2dec&nbsp;!&nbsp;sdlvideosink&nbsp;<wbr>&nbsp;demuxer.&nbsp;!&nbsp;queue&nbsp;!&nbsp;mpegaudioparse&nbsp;!&nbsp;mpg123audiodec&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;audioresample&nbsp;!&nbsp;pulsesink</code> </p>
-<p> Play an AVI movie with an external text subtitle stream<br />
- <code><br />
+<p> Play an AVI movie with an external text subtitle stream<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=movie.mpg&nbsp;!&nbsp;mpegdemux name=demuxer demuxer.&nbsp;!&nbsp;queue&nbsp;!&nbsp;mpegvideoparse&nbsp;!&nbsp;mpeg2dec&nbsp;!&nbsp;videoconvert&nbsp;!&nbsp;sdlvideosink&nbsp;<wbr>&nbsp;<wbr>&nbsp;demuxer.&nbsp;!&nbsp;queue&nbsp;!&nbsp;mpegaudioparse&nbsp;!&nbsp;mpg123audiodec&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;audioresample&nbsp;!&nbsp;pulsesink</code> </p>
-<p> This example also shows how to refer to specific pads by name if an element (here: textoverlay) has multiple sink or source pads.<br />
- <code><br />
+<p> This example also shows how to refer to specific pads by name if an element (here: textoverlay) has multiple sink or source pads.<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 textoverlay name=overlay&nbsp;!&nbsp;videoconvert&nbsp;!&nbsp;videoscale&nbsp;!&nbsp;<wbr>&nbsp;autovideosink&nbsp;<wbr>&nbsp;<wbr>&nbsp;filesrc location=movie.avi&nbsp;!&nbsp;decodebin&nbsp;!&nbsp;videoconvert&nbsp;!&nbsp;overlay.video_sink&nbsp;<wbr>&nbsp;<wbr>&nbsp;filesrc location=movie.srt&nbsp;!&nbsp;subparse&nbsp;!&nbsp;overlay.text_sink</code> </p>
-<p> Play an AVI movie with an external text subtitle stream using playbin<br />
- <code><br />
+<p> Play an AVI movie with an external text subtitle stream using playbin<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 playbin uri=file:///path/to/movie.avi suburi=file:///path/to/movie.srt</code> </p>
 <p> <code>Network streaming</code> </p>
 <p> Stream video using RTP and network elements. </p>
-<p> This command would be run on the transmitter<br />
- <code><br />
+<p> This command would be run on the transmitter<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 v4l2src&nbsp;!&nbsp;video/x-raw,width=128,height=96,format=UYVY&nbsp;!&nbsp;videoconvert&nbsp;!&nbsp;ffenc_h263&nbsp;!&nbsp;video/x-h263&nbsp;!&nbsp;rtph263ppay pt=96&nbsp;!&nbsp;udpsink host=192.168.1.1 port=5000</code> </p>
-<p> Use this command on the receiver<br />
- <code><br />
+<p> Use this command on the receiver<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 udpsrc port=5000&nbsp;!&nbsp;application/x-rtp, clock-rate=90000,payload=96&nbsp;!&nbsp;rtph263pdepay queue-delay=0&nbsp;!&nbsp;ffdec_h263&nbsp;!&nbsp;xvimagesink</code> </p>
 <p> <code>Diagnostic</code> </p>
-<p> Generate a null stream and ignore it (and print out details).<br />
- <code><br />
+<p> Generate a null stream and ignore it (and print out details).<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 -v fakesrc num-buffers=16&nbsp;!&nbsp;fakesink</code> </p>
-<p> Generate a pure sine tone to test the audio output<br />
- <code><br />
+<p> Generate a pure sine tone to test the audio output<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 audiotestsrc&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;audioresample&nbsp;!&nbsp;pulsesink</code> </p>
-<p> Generate a familiar test pattern to test the video output<br />
- <code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 videotestsrc&nbsp;!&nbsp;xvimagesink</code><br />
- <code><br />
+<p> Generate a familiar test pattern to test the video output<br/>
+ <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 videotestsrc&nbsp;!&nbsp;xvimagesink</code><br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 videotestsrc&nbsp;!&nbsp;ximagesink</code> </p>
 <p> <code>Automatic linking</code> </p>
 <p> You can use the decodebin element to automatically select the right elements to get a working pipeline. </p>
-<p> Play any supported audio format<br />
- <code><br />
+<p> Play any supported audio format<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=musicfile&nbsp;!&nbsp;decodebin&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;audioresample&nbsp;!&nbsp;pulsesink</code> </p>
-<p> Play any supported video format with video and audio output. Threads are used automatically. To make this even easier, you can use the playbin element:<br />
- <code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=videofile&nbsp;!&nbsp;decodebin name=decoder decoder.&nbsp;!&nbsp;queue&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;audioresample&nbsp;!&nbsp;pulsesink&nbsp;<wbr>&nbsp;<wbr>&nbsp;decoder.&nbsp;!&nbsp;<wbr>&nbsp;videoconvert&nbsp;!&nbsp;xvimagesink</code><br />
- <code><br />
+<p> Play any supported video format with video and audio output. Threads are used automatically. To make this even easier, you can use the playbin element:<br/>
+ <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 filesrc location=videofile&nbsp;!&nbsp;decodebin name=decoder decoder.&nbsp;!&nbsp;queue&nbsp;!&nbsp;audioconvert&nbsp;!&nbsp;audioresample&nbsp;!&nbsp;pulsesink&nbsp;<wbr>&nbsp;<wbr>&nbsp;decoder.&nbsp;!&nbsp;<wbr>&nbsp;videoconvert&nbsp;!&nbsp;xvimagesink</code><br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 playbin uri=file:///home/joe/foo.avi</code> </p>
 <p> <code>Filtered connections</code> </p>
 <p> These examples show you how to use filtered caps. </p>
-<p> Show a test image and use the YUY2 or YV12 video format for this.<br />
- <code><br />
+<p> Show a test image and use the YUY2 or YV12 video format for this.<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 videotestsrc&nbsp;!&nbsp;&#8216;video/x-raw,format=YUY2;video/x-raw,format=YV12&#8217;&nbsp;!&nbsp;xvimagesink</code> </p>
-<p> Record audio and write it to a .wav file. Force usage of signed 16 to 32 bit samples and a sample rate between 32kHz and 64KHz.<br />
- <code><br />
+<p> Record audio and write it to a .wav file. Force usage of signed 16 to 32 bit samples and a sample rate between 32kHz and 64KHz.<br/>
+ <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gst-launch-1.0 pulsesrc&nbsp;!&nbsp;<wbr>&nbsp;&#8216;audio/x-raw,rate=[32000,64000],format={S16LE,S24LE,S32LE}&#8217;&nbsp;!&nbsp;wavenc&nbsp;!&nbsp;filesink location=recording.wav</code> </p>
 <h2>Environment Variables</h2>
 <dl>
@@ -214,7 +214,7 @@ description: "gst-launch-1.0 – build and run a GStreamer pipeline"
 <dt><code>GST_DEBUG_NO_COLOR</code></dt>
 <dd>When this environment variable is set, coloured debug output is disabled.</dd>
 <dt><code>GST_DEBUG_DUMP_DOT_DIR</code></dt>
-<dd>When set to a filesystem path, store &#8216;dot&#8217; files of pipeline graphs there. These can then later be converted into an image using the &#8216;dot&#8217; utility from the graphviz set of tools, like this: dot foo.dot -Tsvg -o foo.svg (png or jpg are also possible as output format). There is also a utility called &#8216;xdot&#8217; which allows you to view the .dot file directly without converting it first.<br />
+<dd>When set to a filesystem path, store &#8216;dot&#8217; files of pipeline graphs there. These can then later be converted into an image using the &#8216;dot&#8217; utility from the graphviz set of tools, like this: dot foo.dot -Tsvg -o foo.svg (png or jpg are also possible as output format). There is also a utility called &#8216;xdot&#8217; which allows you to view the .dot file directly without converting it first.<br/>
  When the pipeline changes state through NULL to PLAYING and back to NULL, a dot file is generated on each state change. To write a snapshot of the pipeline state, send a SIGHUP to the process.</dd>
 <dt><code>GST_REGISTRY</code></dt>
 <dd>Path of the plugin registry file. Default is ~/.cache/gstreamer-1.0/registry-CPU.bin where CPU is the machine/cpu type GStreamer was compiled for, e.g. &#8216;i486&#8217;, &#8216;i686&#8217;, &#8216;x86-64&#8217;, &#8216;ppc&#8217;, etc. (check the output of &quot;uname -i&quot; and &quot;uname -m&quot; for details).</dd>

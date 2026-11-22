@@ -83,13 +83,13 @@ description: "pg_dump – extract a PostgreSQL database into a script file or ot
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  When <code>-n</code> is specified, pg_dump makes no attempt to dump any other database objects that the selected schema(s) might depend upon. Therefore, there is no guarantee that the results of a specific-schema dump can be successfully restored by themselves into a clean database. </dd>
 </dl>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  Non-schema objects such as blobs are not dumped when <code>-n</code> is specified. You can add blobs back to the dump with the <code>&#8211;blobs</code> switch. </dd>
 </dl>
 </dl>
@@ -130,13 +130,13 @@ description: "pg_dump – extract a PostgreSQL database into a script file or ot
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  When <code>-t</code> is specified, pg_dump makes no attempt to dump any other database objects that the selected table(s) might depend upon. Therefore, there is no guarantee that the results of a specific-table dump can be successfully restored by themselves into a clean database. </dd>
 </dl>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  The behavior of the <code>-t</code> switch is not entirely upward compatible with pre-8.2 PostgreSQL versions. Formerly, writing -t tab would dump all tables named tab, but now it just dumps whichever one is visible in your default search path. To get the old behavior you can write -t &#8216;*.tab&#8217;. Also, you must write something like -t sch.tab to select a table in a particular schema, rather than the old locution of -n sch -t tab. </dd>
 </dl>
 </dl>

@@ -9,7 +9,7 @@ description: "crond – daemon to execute scheduled commands"
 
 <p>crond &#8211; daemon to execute scheduled commands</p>
 <h2>Synopsis</h2>
-<p><code>crond</code> [<code>-c</code> | <code>-h</code> | <code>-i</code> | <code>-n</code> | <code>-p</code> | <code>-P</code> | <code>-s</code> | <code>-m</code><i>&lt;mail</i><code>command&gt;</code>]<br />
+<p><code>crond</code> [<code>-c</code> | <code>-h</code> | <code>-i</code> | <code>-n</code> | <code>-p</code> | <code>-P</code> | <code>-s</code> | <code>-m</code><i>&lt;mail</i><code>command&gt;</code>]<br/>
  <code>crond</code> <code>-x</code> [ext,sch,proc,pars,load,misc,test,bit]</p>
 <h2>Description</h2>
 <p><i>Cron</i> is started from <i>/etc/rc.d/init.d</i> or <i>/etc/init.d</i> when classical sysvinit scripts are used. In case systemd is enabled, then unit file is installed into <i>/lib/systemd/system/crond.service</i> and daemon is started by <i>systemctl start crond.service</i> command. It returns immediately, thus, there is no need to need to start it with the &#8216;&amp;&#8217; parameter. </p>
@@ -65,6 +65,6 @@ description: "crond – daemon to execute scheduled commands"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-crontab/">crontab</a></code>(1), <code><a href="/docs/linux/man/5-crontab/">crontab</a></code>(5), <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7), <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8)</p>
 <h2>Author</h2>
-<p>Paul Vixie<br />
- Marcela Mašláňová<br />
+<p>Paul Vixie<br/>
+ Marcela Mašláňová<br/>
  Colin Dean</p>

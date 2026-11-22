@@ -10,7 +10,7 @@ description: "zgbtrf.f –"
 <p>zgbtrf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgbtrf</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br />
+<p>subroutine <code>zgbtrf</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br/>
  <i></i><code>ZGBTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgbtrf (integerM, integerN, integerKL, integerKU, complex*16, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, integerINFO)</h3>

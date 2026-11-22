@@ -9,8 +9,8 @@ description: "pmiSetHostname – set the source host name for a LOGIMPORT archiv
 
 <p><code>pmiSetHostname</code> &#8211; set the source host name for a LOGIMPORT archive</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/import.h&gt; </p>
 <p> int pmiSetHostname(const char *</code><i>value</i>); </p>
 <p> cc &#8230; -lpcp_import -lpcp</p>

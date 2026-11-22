@@ -62,7 +62,7 @@ description: "ppmcie – draw a CIE color chart as a PPM image"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmdither/">ppmdither</a></code>(1), <code><a href="/docs/linux/man/1-ppmquant/">ppmquant</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
 <h2>AUTHOR</h2>
-<p> <center> Copyright (C) 1995 by John Walker (kelvin [at] fourmilab.ch)<br />
- WWW home page: <a rel="nofollow" href="http://www.fourmilab.ch/">http://www.fourmilab.ch/</a><br />
+<p> <center> Copyright (C) 1995 by John Walker (kelvin [at] fourmilab.ch)<br/>
+ WWW home page: <a rel="nofollow" href="http://www.fourmilab.ch/">http://www.fourmilab.ch/</a><br/>
  </center> </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, without any conditions or restrictions. This software is provided &#8220;as is&#8221; without express or implied warranty. </p>

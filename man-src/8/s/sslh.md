@@ -8,13 +8,13 @@ url: "/docs/linux/man/8-sslh/"
 
 <pre> sslh - protocol demultiplexer</pre>
 <h2>Synopsis</h2>
-<p>sslh [<code>-F</code> <i>config file</i>] [ <code>-t</code> <i>num</i> ] [<code>&#8211;transparent</code>] [<code>-p</code> <i>listening address</i> [<code>-p</code> <i>listening address</i> &#8230;] [<code>&#8211;ssl</code> <i>target address for </i><font SIZE="-1"><i>SSL</i></font><i></i>] [<code>&#8211;ssh</code> <i>target address for </i><font SIZE="-1"><i>SSH</i></font><i></i>] [<code>&#8211;openvpn</code> <i>target address for OpenVPN</i>] [<code>&#8211;http</code> <i>target address for </i><font SIZE="-1"><i>HTTP</i></font><i></i>] [<code>&#8211;anyprot</code> <i>default target address</i>] [<code>&#8211;on-timeout</code> <i>protocol name</i>] [<code>-u</code> <i>username</i>] [<code>-P</code> <i>pidfile</i>] [-v] [-i] [-V] [-f] [-n]</p>
+<p>sslh [<code>-F</code> <i>config file</i>] [ <code>-t</code> <i>num</i> ] [<code>&#8211;transparent</code>] [<code>-p</code> <i>listening address</i> [<code>-p</code> <i>listening address</i> &#8230;] [<code>&#8211;ssl</code> <i>target address for </i><i>SSL</i><i></i>] [<code>&#8211;ssh</code> <i>target address for </i><i>SSH</i><i></i>] [<code>&#8211;openvpn</code> <i>target address for OpenVPN</i>] [<code>&#8211;http</code> <i>target address for </i><i>HTTP</i><i></i>] [<code>&#8211;anyprot</code> <i>default target address</i>] [<code>&#8211;on-timeout</code> <i>protocol name</i>] [<code>-u</code> <i>username</i>] [<code>-P</code> <i>pidfile</i>] [-v] [-i] [-V] [-f] [-n]</p>
 <h2>Description</h2>
 <p><code>sslh</code> accepts connections on specified ports, and forwards them further based on tests performed on the first data packet sent by the remote client. </p>
-<p> Probes for <font SIZE="-1">HTTP, SSL, SSH,</font> OpenVPN, tinc, <font SIZE="-1">XMPP</font> are implemented, and any other protocol that can be tested using a regular expression, can be recognised. A typical use case is to allow serving several services on port 443 (e.g. to connect to ssh from inside a corporate firewall, which almost never block port 443) while still serving <font SIZE="-1">HTTPS</font> on that port. </p>
-<p> Hence <code>sslh</code> acts as a protocol demultiplexer, or a switchboard. Its name comes from its original function to serve <font SIZE="-1">SSH</font> and <font SIZE="-1">HTTPS</font> on the same port.</p>
+<p> Probes for HTTP, SSL, SSH, OpenVPN, tinc, XMPP are implemented, and any other protocol that can be tested using a regular expression, can be recognised. A typical use case is to allow serving several services on port 443 (e.g. to connect to ssh from inside a corporate firewall, which almost never block port 443) while still serving HTTPS on that port. </p>
+<p> Hence <code>sslh</code> acts as a protocol demultiplexer, or a switchboard. Its name comes from its original function to serve SSH and HTTPS on the same port.</p>
 <h3>Libwrap support</h3>
-<p>One drawback of <code>sslh</code> is that the servers do not see the original <font SIZE="-1">IP</font> address of the client anymore, as the connection is forwarded through <code>sslh</code>. </p>
+<p>One drawback of <code>sslh</code> is that the servers do not see the original IP address of the client anymore, as the connection is forwarded through <code>sslh</code>. </p>
 <p> For this reason, <code>sslh</code> can be compiled with <code>libwrap</code> to check accesses defined in <i>/etc/hosts.allow</i> and <i>/etc/hosts.deny</i>. Libwrap services can be defined using the configuration file.</p>
 <h3>Configuration file</h3>
 <p>A configuration file can be supplied to <code>sslh</code>. Command line arguments override file settings. <code>sslh</code> uses <code>libconfig</code> to parse the configuration file, so the general file format is indicated in &lt;<a rel="nofollow" href="http://www.hyperrealm.com/libconfig/libconfig_manual.html">http://www.hyperrealm.com/libconfig/libconfig_manual.html</a>&gt;. Please refer to the example configuration file provided with <code>sslh</code> for the specific format (Options have the same names as on the command line, except for the list of listen ports and the list of protocols). </p>
@@ -23,34 +23,34 @@ url: "/docs/linux/man/8-sslh/"
 <p>When receiving an incoming connection, <code>sslh</code> will read the first bytes sent be the connecting client. It will then probe for the protocol in the order specified on the command line (or the configuration file). Therefore <code>&#8211;anyprot</code> should alway be used last, as it always succeeds and further protocols will never be tried. </p>
 <p> If no data is sent by the client, <code>sslh</code> will eventually time out and connect to the protocol specified with <code>&#8211;on-timeout</code>, or <i>ssh</i> if none is specified.</p>
 <h3>Logging</h3>
-<p>As a security/authorization program, <code>sslh</code> logs to the <font SIZE="-1">LOG_AUTH</font> facility, with priority <font SIZE="-1">LOG_INFO</font> for normal connections and <font SIZE="-1">LOG_ERR</font> for failures.</p>
+<p>As a security/authorization program, <code>sslh</code> logs to the LOG_AUTH facility, with priority LOG_INFO for normal connections and LOG_ERR for failures.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-F</code> <i>filename</i>, <code>&#8211;config</code> <i>filename</i></dt>
 <dd>Uses <i>filename</i> has configuration file. If other command-line options are specified, they will override the configuration file&#8217;s settings.</dd>
 <dt><code>-t</code> <i>num</i>, <code>&#8211;timeout</code> <i>num</i></dt>
-<dd>Timeout before forwarding the connection to the timeout protocol (which should usually be <font SIZE="-1">SSH</font>). Default is 2s.</dd>
+<dd>Timeout before forwarding the connection to the timeout protocol (which should usually be SSH). Default is 2s.</dd>
 <dt><code>&#8211;on-timeout</code> <i>protocol name</i></dt>
 <dd>Name of the protocol to connect to after the timeout period is over. Default is &#8216;ssh&#8217;.</dd>
 <dt><code>&#8211;transparent</code></dt>
-<dd>Makes <code>sslh</code> behave as a transparent proxy, i.e. the receiving service sees the original client&#8217;s <font SIZE="-1">IP</font> address. This works on Linux only and involves <code>iptables</code> settings. Refer to the <font SIZE="-1">README</font> for more information.</dd>
+<dd>Makes <code>sslh</code> behave as a transparent proxy, i.e. the receiving service sees the original client&#8217;s IP address. This works on Linux only and involves <code>iptables</code> settings. Refer to the README for more information.</dd>
 <dt><code>-p</code> <i>listening address</i>, <code>&#8211;listen</code> <i>listening address</i></dt>
-<dd>Interface and port on which to listen, e.g. <i>foobar:443</i>, where <i>foobar</i> is the name of an interface (typically the <font SIZE="-1">IP</font> address on which the Internet connection ends up). </dd>
+<dd>Interface and port on which to listen, e.g. <i>foobar:443</i>, where <i>foobar</i> is the name of an interface (typically the IP address on which the Internet connection ends up). </dd>
 <p> This can be specified several times to bind <code>sslh</code> to several addresses.</p>
 <dt><code>&#8211;ssl</code> <i>target address</i></dt>
 <dd>
 </dd><dt><code>&#8211;tls</code> <i>target address</i></dt>
-<dd>Interface and port on which to forward <font SIZE="-1">SSL</font> connection, typically <i>localhost:443</i>. </dd>
+<dd>Interface and port on which to forward SSL connection, typically <i>localhost:443</i>. </dd>
 <p> Note that you can set <code>sslh</code> to listen on <i>ext_ip:443</i> and <code>httpd</code> to listen on <i>localhost:443</i>: this allows clients inside your network to just connect directly to <code>httpd</code>. </p>
-<p> Also, <code>sslh</code> probes for SSLv3 (or TLSv1) handshake and will reject connections from clients requesting SSLv2. This is compliant to <font SIZE="-1">RFC6176</font> which prohibits the usage of SSLv2. If you wish to accept SSLv2, use <code>&#8211;default</code> instead.</p>
+<p> Also, <code>sslh</code> probes for SSLv3 (or TLSv1) handshake and will reject connections from clients requesting SSLv2. This is compliant to RFC6176 which prohibits the usage of SSLv2. If you wish to accept SSLv2, use <code>&#8211;default</code> instead.</p>
 <dt><code>&#8211;ssh</code> <i>target address</i></dt>
-<dd>Interface and port on which to forward <font SIZE="-1">SSH</font> connections, typically <i>localhost:22</i>.</dd>
+<dd>Interface and port on which to forward SSH connections, typically <i>localhost:22</i>.</dd>
 <dt><code>&#8211;openvpn</code> <i>target address</i></dt>
 <dd>Interface and port on which to forward OpenVPN connections, typically <i>localhost:1194</i>.</dd>
 <dt><code>&#8211;xmpp</code> <i>target address</i></dt>
-<dd>Interface and port on which to forward <font SIZE="-1">XMPP</font> connections, typically <i>localhost:5222</i>.</dd>
+<dd>Interface and port on which to forward XMPP connections, typically <i>localhost:5222</i>.</dd>
 <dt><code>&#8211;http</code> <i>target address</i></dt>
-<dd>Interface and port on which to forward <font SIZE="-1">HTTP</font> connections, typically <i>localhost:80</i>.</dd>
+<dd>Interface and port on which to forward HTTP connections, typically <i>localhost:80</i>.</dd>
 <dt><code>&#8211;tinc</code> <i>target address</i></dt>
 <dd>Interface and port on which to forward tinc connections, typically <i>localhost:655</i>. </dd>
 <p> This is experimental. If you use this feature, please report the results (even if it works!)</p>
@@ -59,15 +59,15 @@ url: "/docs/linux/man/8-sslh/"
 <dt><code>-v</code>, <code>&#8211;verbose</code></dt>
 <dd>Increase verboseness.</dd>
 <dt><code>-n</code>, <code>&#8211;numeric</code></dt>
-<dd>Do not attempt to resolve hostnames: logs will contain <font SIZE="-1">IP</font> addresses. This is mostly useful if the system&#8217;s <font SIZE="-1">DNS</font> is slow and running the <i>sslh-select</i> variant, as <font SIZE="-1">DNS</font> requests will hang all connections.</dd>
+<dd>Do not attempt to resolve hostnames: logs will contain IP addresses. This is mostly useful if the system&#8217;s DNS is slow and running the <i>sslh-select</i> variant, as DNS requests will hang all connections.</dd>
 <dt><code>-V</code></dt>
 <dd>Prints <code>sslh</code> version.</dd>
 <dt><code>-u</code> <i>username</i>, <code>&#8211;user</code> <i>username</i></dt>
 <dd>Requires to run under the specified username.</dd>
 <dt><code>-P</code> <i>pidfile</i>, <code>&#8211;pidfile</code> <i>pidfile</i></dt>
-<dd>Specifies a file in which to write the <font SIZE="-1">PID</font> of the main server.</dd>
+<dd>Specifies a file in which to write the PID of the main server.</dd>
 <dt><code>-i</code>, <code>&#8211;inetd</code></dt>
-<dd>Runs as an <i>inetd</i> server. Options <code>-P</code> (<font SIZE="-1">PID</font> file), <code>-p</code> (listen address), <code>-u</code> (user) are ignored.</dd>
+<dd>Runs as an <i>inetd</i> server. Options <code>-P</code> (PID file), <code>-p</code> (listen address), <code>-u</code> (user) are ignored.</dd>
 <dt><code>-f</code>, <code>&#8211;foreground</code></dt>
 <dd>Runs in foreground. The server will not fork and will remain connected to the terminal. Messages normally sent to <code>syslog</code> will also be sent to <i>stderr</i>.</dd>
 <dt><code>&#8211;background</code></dt>
@@ -77,7 +77,7 @@ url: "/docs/linux/man/8-sslh/"
 <dt><i>/usr/lib/systemd/system/sslh.service</i></dt>
 <dd>Systemd unit to control the daemon.</dd>
 <dt><i>/etc/sysconfig/sslh</i></dt>
-<dd>Server configuration. These are environment variables loaded by the start-up script and passed to <code>sslh</code> as command-line arguments. Refer to the <font SIZE="-1">OPTIONS</font> section for a detailed explanation of the variables used by <code>sslh</code>.</dd></dl>
+<dd>Server configuration. These are environment variables loaded by the start-up script and passed to <code>sslh</code> as command-line arguments. Refer to the OPTIONS section for a detailed explanation of the variables used by <code>sslh</code>.</dd></dl>
 <h2>See Also</h2>
 <p>Last version available from &lt;<a rel="nofollow" href="http://www.rutschle.net/tech/sslh">http://www.rutschle.net/tech/sslh</a>&gt;, and can be tracked from &lt;<a rel="nofollow" href="http://freecode.com/projects/sslh">http://freecode.com/projects/sslh</a>&gt;.</p>
 <h2>Author</h2>

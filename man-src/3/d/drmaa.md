@@ -10,24 +10,24 @@ description: "DRMAA interface. –"
 
 <p> DRMAA interface. &#8211; </p>
 <h3>Modules</h3>
-<p> <code>Vector iteration functions.</code><br />
- <i>The drmaa_get_next_X</i>() functions SHALL store up to <i>value_len</i> bytes of the next attribute name / attribute value / job identifier from the <i>values</i> opaque string vector in the <i>value</i> buffer.<br />
- <code>Job template operations.</code><br />
+<p> <code>Vector iteration functions.</code><br/>
+ <i>The drmaa_get_next_X</i>() functions SHALL store up to <i>value_len</i> bytes of the next attribute name / attribute value / job identifier from the <i>values</i> opaque string vector in the <i>value</i> buffer.<br/>
+ <code>Job template operations.</code><br/>
  <i>The function drmaa_allocate_job_template() SHALL allocate a new job template, returned in jt</i>.</p>
 <h3>Functions</h3>
-<p> int <code>drmaa_init</code> (const char *contact, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_init()</code> function SHALL initialize DRMAA library and create a new DRMAA session, using the contact parameter, if provided, to determine to which DRMS to connect.<br />
- int <code>drmaa_exit</code> (char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_exit()</code> function SHALL disengage from DRMAA library and allow the DRMAA library to perform any necessary internal cleanup.<br />
- int <code>drmaa_get_attribute</code> (<code>drmaa_job_template_t</code> *jt, const char *name, char *value, size_t value_len, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The function </i><code>drmaa_get_attribute()</code> SHALL fill the <i>value</i> buffer with up to <i>value_len</i> characters of the scalar attribute, <i>name&#8217;s</i>, value in the given job template.<br />
- int <code>drmaa_set_vector_attribute</code> (<code>drmaa_job_template_t</code> *jt, const char *name, const char *value[], char *error_diagnosis, size_t error_diag_len)<br />
- <i>The function </i><code>drmaa_set_vector_attribute()</code> SHALL set the vector attribute, <i>name</i>, in the job template, <i>jt</i>, to the value(s), <i>value</i>.<br />
- int <code>drmaa_get_vector_attribute</code> (<code>drmaa_job_template_t</code> *jt, const char *name, <code>drmaa_attr_values_t</code> **values, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The function </i><code>drmaa_get_vector_attribute()</code> SHALL store in <i>values</i> an opaque values string vector containing the values of the vector attribute, <i>name&#8217;s</i>, value in the given job template.<br />
- int <code>drmaa_get_attribute_names</code> (<code>drmaa_attr_names_t</code> **values, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The function </i><code>drmaa_get_attribute_names()</code> SHALL return the set of supported scalar attribute names in an opaque names string vector stored in <i>values</i>.<br />
- int <code>drmaa_get_vector_attribute_names</code> (<code>drmaa_attr_names_t</code> **values, char *error_diagnosis, size_t error_diag_len)<br />
+<p> int <code>drmaa_init</code> (const char *contact, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_init()</code> function SHALL initialize DRMAA library and create a new DRMAA session, using the contact parameter, if provided, to determine to which DRMS to connect.<br/>
+ int <code>drmaa_exit</code> (char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_exit()</code> function SHALL disengage from DRMAA library and allow the DRMAA library to perform any necessary internal cleanup.<br/>
+ int <code>drmaa_get_attribute</code> (<code>drmaa_job_template_t</code> *jt, const char *name, char *value, size_t value_len, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The function </i><code>drmaa_get_attribute()</code> SHALL fill the <i>value</i> buffer with up to <i>value_len</i> characters of the scalar attribute, <i>name&#8217;s</i>, value in the given job template.<br/>
+ int <code>drmaa_set_vector_attribute</code> (<code>drmaa_job_template_t</code> *jt, const char *name, const char *value[], char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The function </i><code>drmaa_set_vector_attribute()</code> SHALL set the vector attribute, <i>name</i>, in the job template, <i>jt</i>, to the value(s), <i>value</i>.<br/>
+ int <code>drmaa_get_vector_attribute</code> (<code>drmaa_job_template_t</code> *jt, const char *name, <code>drmaa_attr_values_t</code> **values, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The function </i><code>drmaa_get_vector_attribute()</code> SHALL store in <i>values</i> an opaque values string vector containing the values of the vector attribute, <i>name&#8217;s</i>, value in the given job template.<br/>
+ int <code>drmaa_get_attribute_names</code> (<code>drmaa_attr_names_t</code> **values, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The function </i><code>drmaa_get_attribute_names()</code> SHALL return the set of supported scalar attribute names in an opaque names string vector stored in <i>values</i>.<br/>
+ int <code>drmaa_get_vector_attribute_names</code> (<code>drmaa_attr_names_t</code> **values, char *error_diagnosis, size_t error_diag_len)<br/>
  <i>The function </i><code>drmaa_get_vector_attribute_names()</code> SHALL return the set of supported vector attribute names in an opaque names string vector stored in <i>values</i>.</p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>

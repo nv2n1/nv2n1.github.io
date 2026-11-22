@@ -14,11 +14,11 @@ description: "org.debian.apt – the main interface of aptdaemon"
 <h3>Methods</h3>
 <dl>
 <dt><code>AddRepository </code></dt>
-<dd><code>AddRepository (in &#8216;s&#8217; </code><i>type</i><code>,</code><br />
- <code> in &#8216;s&#8217; </code><i>uri</i><code>,</code><br />
- <code> in &#8216;s&#8217; </code><i>dist</i><code>,</code><br />
- <code> in &#8216;as&#8217; </code><i>comps</i><code>,</code><br />
- <code> in &#8216;s&#8217; </code><i>comment</i><code>,</code><br />
+<dd><code>AddRepository (in &#8216;s&#8217; </code><i>type</i><code>,</code><br/>
+ <code> in &#8216;s&#8217; </code><i>uri</i><code>,</code><br/>
+ <code> in &#8216;s&#8217; </code><i>dist</i><code>,</code><br/>
+ <code> in &#8216;as&#8217; </code><i>comps</i><code>,</code><br/>
+ <code> in &#8216;s&#8217; </code><i>comment</i><code>,</code><br/>
  <code> in &#8216;s&#8217; </code><i>sourcesfile</i><code>)</code></dd>
 <dl>
 <dd>Add a new repository to the sources list file. The repository has to define the type (e.g. deb or deb-src), uri (e.g. <a rel="nofollow" href="http://archive.debian.org/debian">http://archive.debian.org/debian</a>), the distribution (e.g. stable) and a list of components (e.g. main). </dd>
@@ -48,63 +48,63 @@ description: "org.debian.apt – the main interface of aptdaemon"
 <dl>
 <dd>Return the id of a newly created transaction which will fetch the latest meta data from the repositories and rebuild the cache of available and installed packages.</dd></dl>
 <dt><code>UpdateCachePartially</code></dt>
-<dd><code>UpdateCachePartially (in &#8216;s&#8217; </code><i>sources_list</i><code>,</code><br />
+<dd><code>UpdateCachePartially (in &#8216;s&#8217; </code><i>sources_list</i><code>,</code><br/>
  <code> out &#8216;s&#8217; </code><i>tid</i><code>)</code></dd>
 <dl>
 <dd>Return the id of a newly created transaction which will fetch the latest meta data from the repositories specified in the given sources.list snippet only and rebuild the cache of available and installed packages.</dd></dl>
 <dt><code>InstallPackages</code></dt>
-<dd><code>InstallPackages (in &#8216;as&#8217; </code><i>package_names</i><code>,</code><br />
+<dd><code>InstallPackages (in &#8216;as&#8217; </code><i>package_names</i><code>,</code><br/>
  <code> out &#8216;s&#8217; </code><i>tid</i><code>)</code></dd>
 <dl>
 <dd>Return the id of a newly created transaction which will install the packages of the given names. </dd>
 <p> Optionally the to be installed version can be specified by appending a &quot;=&quot; and the version to the package name, e.g. &quot;xterm=256-1&quot;.</dl>
 <dt><code>InstallFile</code></dt>
-<dd><code>InstallFile (in &#8216;s&#8217; </code><i>path</i><code>,</code><br />
+<dd><code>InstallFile (in &#8216;s&#8217; </code><i>path</i><code>,</code><br/>
  <code> out &#8216;s&#8217; </code><i>tid</i><code>)</code></dd>
 <dl>
 <dd>Return the id of a newly create transaction which will install a local *.deb package file at the given <i>path</i>.</dd></dl>
 <dt><code>UpgradePackages</code></dt>
-<dd><code>UpgradePackages (in &#8216;as&#8217; </code><i>package_names</i><code>,</code><br />
+<dd><code>UpgradePackages (in &#8216;as&#8217; </code><i>package_names</i><code>,</code><br/>
  <code> out &#8216;s&#8217; </code><i>tid</i><code>)</code></dd>
 <dl>
 <dd>Return the id of a newly created transaction which will upgrade the packages of the given names to their latest version. </dd>
 <p> Optionally the to be installed version can be specified by appending a &quot;=&quot; and the version to the package name, e.g. &quot;xterm=256-1&quot;.</dl>
 <dt><code>RemovePackages</code></dt>
-<dd><code>RemovePackages (in &#8216;as&#8217; </code><i>package_names</i><code>,</code><br />
+<dd><code>RemovePackages (in &#8216;as&#8217; </code><i>package_names</i><code>,</code><br/>
  <code> out &#8216;s&#8217; </code><i>tid</i><code>)</code></dd>
 <dl>
 <dd>Return the id of a newly created transaction which will remove the packages of the given names. </dd>
 <p> Optionally the version of the to be removed packages can be specified by appending a &quot;=&quot; and the version to the package name, e.g. &quot;xterm=256-1&quot;.</dl>
 <dt><code>UpgradeSystem</code></dt>
-<dd><code>UpgradeSystem (in &#8216;b&#8217; </code><i>safe_mode</i><code>,</code><br />
+<dd><code>UpgradeSystem (in &#8216;b&#8217; </code><i>safe_mode</i><code>,</code><br/>
  <code> out &#8216;s&#8217; </code><i>tid</i><code>)</code></dd>
 <dl>
 <dd>Return the id of a newly created transaction which will upgrade the whole system. </dd>
 <p> If in safe mode only already installed packages will be updated. Updates which require to remove installed packages or to install additional packages will be skipped.</dl>
 <dt><code>CommitPackages</code></dt>
-<dd><code>CommitPackages (in &#8216;as&#8217; </code><i>install</i><code>,</code><br />
- <code> in &#8216;as&#8217; </code><i>reinstall,</i><br />
- <code> in &#8216;as&#8217; </code><i>remove,</i><br />
- <code> in &#8216;as&#8217; </code><i>purge,</i><br />
- <code> in &#8216;as&#8217; </code><i>upgrade</i><code>,</code><br />
- <code> in &#8216;as&#8217; </code><i>downgrade</i><code>,</code><br />
+<dd><code>CommitPackages (in &#8216;as&#8217; </code><i>install</i><code>,</code><br/>
+ <code> in &#8216;as&#8217; </code><i>reinstall,</i><br/>
+ <code> in &#8216;as&#8217; </code><i>remove,</i><br/>
+ <code> in &#8216;as&#8217; </code><i>purge,</i><br/>
+ <code> in &#8216;as&#8217; </code><i>upgrade</i><code>,</code><br/>
+ <code> in &#8216;as&#8217; </code><i>downgrade</i><code>,</code><br/>
  <code> out &#8216;s&#8217; </code><i>tid</i><code>)</code></dd>
 <dl>
 <dd>Return the id of a newly created transaction which will perform a complex install/removal task at once. <i>Install</i>, <i>reinstall</i>, <i>remove</i>, <i>purge</i> and <i>upgrade</i> are lists of package names. </dd>
 <p> Optionally the version of the to be removed packages or the version of the package which should be installed can be specified by appending a &quot;=&quot; and the version to the package name, e.g. &quot;xterm=256-1&quot;.</dl>
 <dt><code>AddVendorKeyFromFile</code></dt>
-<dd><code>AddVendorKeyFromFile (in &#8216;s&#8217; </code><i>path</i><code>,</code><br />
+<dd><code>AddVendorKeyFromFile (in &#8216;s&#8217; </code><i>path</i><code>,</code><br/>
  <code> out &#8216;s&#8217; </code><i>tid</i><code>)</code></dd>
 <dl>
 <dd>Return the id of a newly created transaction which will install the public GnuPG key at the given <i>path</i> to the list of trusted software vendors. The list will be used to authenticate packages.</dd></dl>
 <dt><code>AddVendorKeyFromKeyserver</code></dt>
-<dd><code>AddVendorKeyFromKeyserver (in &#8216;s&#8217; </code><i>keyid</i><code>,</code><br />
- <code> in &#8216;s&#8217; </code><i>keyserver,</i><br />
+<dd><code>AddVendorKeyFromKeyserver (in &#8216;s&#8217; </code><i>keyid</i><code>,</code><br/>
+ <code> in &#8216;s&#8217; </code><i>keyserver,</i><br/>
  <code> out &#8216;s&#8217; </code><i>tid</i><code>)</code></dd>
 <dl>
 <dd>Return the id of a newly created transaction which will download and install the public GnuPG key of the <i>keyid</i> from the given <i>keyserver</i> to the list of trusted software vendors. The list will be used to authenticate packages.</dd></dl>
 <dt><code>RemoveVendorKey</code></dt>
-<dd><code>RemoveVendorKey (in &#8216;s&#8217; </code><i>fingerprint</i><code>,</code><br />
+<dd><code>RemoveVendorKey (in &#8216;s&#8217; </code><i>fingerprint</i><code>,</code><br/>
  <code> out &#8216;s&#8217; </code><i>tid</i><code>)</code></dd>
 <dl>
 <dd>Return the id of a newly created transaction which will remove the public GnuPG key with the given <i>fingerprint</i> from the list of trusted software vendors. The list will be used to authenticate packages.</dd></dl>
@@ -120,7 +120,7 @@ description: "org.debian.apt – the main interface of aptdaemon"
 <h3>Signals</h3>
 <dl>
 <dt><code>ActiveTransactionsChanged</code></dt>
-<dd><code>ActiveTransactionsChanged (&#8216;s&#8217; </code><i>active</i><code>,</code><br />
+<dd><code>ActiveTransactionsChanged (&#8216;s&#8217; </code><i>active</i><code>,</code><br/>
  <code> &#8216;as&#8217; </code><i>queued</i><code>)</code></dd>
 <dl>
 <dd>The signal is used to report changes of the currently running or queued transactions. If there&#8217;s any active transaction active will be an empty string.</dd></dl>

@@ -13,10 +13,10 @@ description: "sc::SymmSCMatrixSCExtrapError –"
 <h3>Public Member Functions</h3>
 <p><code>SymmSCMatrixSCExtrapError</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>SymmSCMatrixSCExtrapError</code> (const <code>RefSymmSCMatrix</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- double <code>error</code> ()<br />
- <i>Returns some measure of the total error. </i><br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ double <code>error</code> ()<br/>
+ <i>Returns some measure of the total error. </i><br/>
  double <code>scalar_product</code> (const <code>Ref</code>&lt; <code>SCExtrapError</code> &gt; &amp;)</p>
 <h2>Member Function Documentation</h2>
 <h3>void sc::SymmSCMatrixSCExtrapError::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>

@@ -16,17 +16,17 @@ description: "pdldoc – shell interface to PDL documentation"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-h</code> help</dt>
-<dd> print documentation about a <font SIZE="-1">PDL</font> function or module or show a <font SIZE="-1">PDL</font> manual. This is the default option.</dd>
+<dd> print documentation about a PDL function or module or show a PDL manual. This is the default option.</dd>
 <dt><code>-a</code> apropos</dt>
-<dd> Regex search <font SIZE="-1">PDL</font> documentation database.</dd>
+<dd> Regex search PDL documentation database.</dd>
 <dt><code>-b</code> badinfo</dt>
 <dd> Information on the support for bad values provided by the function.</dd>
 <dt><code>-s</code> sig</dt>
-<dd> prints signature of <font SIZE="-1">PDL</font> function.</dd>
+<dd> prints signature of PDL function.</dd>
 <dt><code>-u</code> usage</dt>
-<dd> Prints usage information for a <font SIZE="-1">PDL</font> function.</dd>
+<dd> Prints usage information for a PDL function.</dd>
 <dt>$PDL::Config{PDLDOC_IGNORE_AUTOLOADER}</dt>
-<dd> This <font SIZE="-1">PDL</font> configuration variable may be set in the perldl.conf file to disable runtime search for documentation in PDL::AutoLoader files.</dd></dl>
+<dd> This PDL configuration variable may be set in the perldl.conf file to disable runtime search for documentation in PDL::AutoLoader files.</dd></dl>
 <h2>VERSION</h2>
 <p> This is pdldoc version 0.3.</p>
 <h2>AUTHOR</h2>

@@ -86,12 +86,12 @@ set yPos 0 set xPos 0 trace variable xtermArgs r traceArgs
 }
 </code></pre>
 <p> The xtermArgs variable in the code above is the variable corresponding to the -xa argument. </p>
-<p> xterms can be also be created directly. The following command file creates three xterms overlapped horizontally:<br />
-set xPos 0 foreach name{bud dexter hotdog}<br />
-{<br />
-    set ::xtermArgs &#8220;-geometry 80&#215;12+$xPos+0 -font 6&#215;10&#8221; set ::xtermNames $name<br />
-        xtermStartAll<br />
-            incr xPos 300<br />
+<p> xterms can be also be created directly. The following command file creates three xterms overlapped horizontally:<br/>
+set xPos 0 foreach name{bud dexter hotdog}<br/>
+{<br/>
+    set ::xtermArgs &#8220;-geometry 80&#215;12+$xPos+0 -font 6&#215;10&#8221; set ::xtermNames $name<br/>
+        xtermStartAll<br/>
+            incr xPos 300<br/>
 }</p>
 <h2>USAGE SUGGESTION &#8211; SELECTING HOSTS BY NICKNAME</h2>
 <p> The following .multixtermrc shows an example of changing the default handling of the arguments from hostnames to a filename containing hostnames: </p>
@@ -118,14 +118,14 @@ switch
 <p> Multixterm can only control new xterms that multixterm itself has started. </p>
 <p> As a convenience, the File menu shows a limited number of files. To show all the files, use File-&gt;Open. </p>
 <h2>FILES</h2>
-<p> $DOTDIR/.multixtermrc initial command file<br />
- ~/.multixtermrc fallback command file<br />
+<p> $DOTDIR/.multixtermrc initial command file<br/>
+ ~/.multixtermrc fallback command file<br/>
  ~/lib/multixterm/ default command file directory </p>
 <h2>BUGS</h2>
 <p> If multixterm is killed using an uncatchable kill, the xterms are not killed. This appears to be a bug in xterm itself. </p>
 <p> Send/expect sequences can be done in multixterm command files. However, due to the richness of the possibilities, to document it properly would take more time than the author has at present. </p>
 <h2>REQUIREMENTS</h2>
-<p> Requires Expect 5.36.0 or later.<br />
+<p> Requires Expect 5.36.0 or later.<br/>
  Requires Tk 8.3.3 or later. </p>
 <h2>VERSION</h2>
 <p> This man page describes version 1.8 of multixterm. </p>

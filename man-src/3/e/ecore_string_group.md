@@ -9,9 +9,9 @@ description: "String Instance Functions – These functions allow you to store o
 
 <p>String Instance Functions &#8211; These functions allow you to store one copy of a string, and use it throughout your program. </p>
 <h3>Functions</h3>
-<p>EAPI const char * <code>ecore_string_instance</code> (const char *string)<br />
- <i>Retrieves an instance of a string for use in an ecore program. </i><br />
- EAPI void <code>ecore_string_release</code> (const char *string)<br />
+<p>EAPI const char * <code>ecore_string_instance</code> (const char *string)<br/>
+ <i>Retrieves an instance of a string for use in an ecore program. </i><br/>
+ EAPI void <code>ecore_string_release</code> (const char *string)<br/>
  <i>Notes that the given string has lost an instance. </i></p>
 <h2>Detailed Description</h2>
 <p>These functions allow you to store one copy of a string, and use it throughout your program. </p>

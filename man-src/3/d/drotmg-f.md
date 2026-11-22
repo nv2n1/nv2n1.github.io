@@ -10,7 +10,7 @@ description: "drotmg.f –"
 <p>drotmg.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>drotmg</code> (DD1, DD2, DX1, DY1, DPARAM)<br />
+<p>subroutine <code>drotmg</code> (DD1, DD2, DX1, DY1, DPARAM)<br/>
  <i></i><code>DROTMG</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine drotmg (double precisionDD1, double precisionDD2, double precisionDX1, double precisionDY1, double precision, dimension(5)DPARAM)</h3>

@@ -13,11 +13,11 @@ description: "glutPositionWindow – Request to change the position of the curre
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutPositionWindow int x int y</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>x Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>x Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Requested horizontal position of the current window </p>
-<p> Bf Em<br />
-&nbsp;<wbr>y Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>y Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Requested vertical position of the current window</p>
 <h2>Description</h2>
 <p>The glutPositionWindow() function requests that the window system position a top-level or subwindow relative to the top-left corner. Subwindows are typically resized and repositioned in response to window resize events. </p>

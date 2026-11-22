@@ -14,7 +14,7 @@ description: "QuantLib::TypePayoff – Intermediate class for put/call payoffs."
 <p> Inherits <code>QuantLib::Payoff</code>. Inherited by <code>FloatingTypePayoff</code>, and <code>StrikedTypePayoff</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>TypePayoff</code> (Option::Type type) </p>
-<p> Option::Type <code>optionType</code> () const<br />
+<p> Option::Type <code>optionType</code> () const<br/>
  <code>Payoff interface</code> </p>
 <p> std::string <code>description</code> () const</p>
 <h3>Protected Attributes</h3>

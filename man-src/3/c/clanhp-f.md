@@ -10,7 +10,7 @@ description: "clanhp.f –"
 <p>clanhp.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>clanhp</code> (NORM, UPLO, N, AP, WORK)<br />
+<p>REAL function <code>clanhp</code> (NORM, UPLO, N, AP, WORK)<br/>
  <i></i><code>CLANHP</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a complex Hermitian matrix supplied in packed form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function clanhp (characterNORM, characterUPLO, integerN, complex, dimension( * )AP, real, dimension( * )WORK)</h3>

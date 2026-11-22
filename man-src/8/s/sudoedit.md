@@ -11,10 +11,10 @@ description: "sudo sudoedit – execute a command as another user"
 <h2>Name</h2>
 <p><code>sudo</code> <code>sudoedit</code> &#8211; execute a command as another user</p>
 <h2>Synopsis</h2>
-<p><code>sudo</code> &#8211;<code>h | K | k | V</code><br />
-<code>sudo</code> &#8211;<code>v</code> [-<code>ABknS</code> ] [-<code>g </code><i>group</i> ] [-<code>h </code><i>host</i> ] [-<code>p </code><i>prompt</i> ] [-<code>u </code><i>user</i> ]<br />
-<code>sudo</code> &#8211;<code>l</code> [-<code>ABknS</code> ] [-<code>g </code><i>group</i> ] [-<code>h </code><i>host</i> ] [-<code>p </code><i>prompt</i> ] [-<code>U </code><i>user</i> ] [-<code>u </code><i>user</i> ] [<i>command</i> ]<br />
-<code>sudo</code> [-<code>ABbEHnPS</code> ] [-<code>C </code><i>num</i> ] [-<code>D </code><i>directory</i> ] [-<code>g </code><i>group</i> ] [-<code>h </code><i>host</i> ] [-<code>p </code><i>prompt</i> ] [-<code>R </code><i>directory</i> ] [-<code>r </code><i>role</i> ] [-<code>t </code><i>type</i> ] [-<code>T </code><i>timeout</i> ] [-<code>u </code><i>user</i> ] [<i>VAR </i><code>= </code><i>value</i> ] [-<code>i | s</code> ] [<i>command</i> ]<br />
+<p><code>sudo</code> &#8211;<code>h | K | k | V</code><br/>
+<code>sudo</code> &#8211;<code>v</code> [-<code>ABknS</code> ] [-<code>g </code><i>group</i> ] [-<code>h </code><i>host</i> ] [-<code>p </code><i>prompt</i> ] [-<code>u </code><i>user</i> ]<br/>
+<code>sudo</code> &#8211;<code>l</code> [-<code>ABknS</code> ] [-<code>g </code><i>group</i> ] [-<code>h </code><i>host</i> ] [-<code>p </code><i>prompt</i> ] [-<code>U </code><i>user</i> ] [-<code>u </code><i>user</i> ] [<i>command</i> ]<br/>
+<code>sudo</code> [-<code>ABbEHnPS</code> ] [-<code>C </code><i>num</i> ] [-<code>D </code><i>directory</i> ] [-<code>g </code><i>group</i> ] [-<code>h </code><i>host</i> ] [-<code>p </code><i>prompt</i> ] [-<code>R </code><i>directory</i> ] [-<code>r </code><i>role</i> ] [-<code>t </code><i>type</i> ] [-<code>T </code><i>timeout</i> ] [-<code>u </code><i>user</i> ] [<i>VAR </i><code>= </code><i>value</i> ] [-<code>i | s</code> ] [<i>command</i> ]<br/>
 <code>sudoedit</code> [-<code>ABknS</code> ] [-<code>C </code><i>num</i> ] [-<code>D </code><i>directory</i> ] [-<code>g </code><i>group</i> ] [-<code>h </code><i>host</i> ] [-<code>p </code><i>prompt</i> ] [-<code>R </code><i>directory</i> ] [-<code>r </code><i>role</i> ] [-<code>t </code><i>type</i> ] [-<code>T </code><i>timeout</i> ] [-<code>u </code><i>user</i> ] <i>file &#8230;</i></p>
 <h2>Description</h2>
 <p><code>sudo</code> allows a permitted user to execute a <i>command</i> as the superuser or another user, as specified by the security policy. The invoking user&#8217;s real (<i>not </i><code>effective</code> ) user-ID is used to determine the user name with which to query the security policy. </p>

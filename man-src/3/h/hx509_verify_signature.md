@@ -18,10 +18,10 @@ description: "hx509 crypto functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>signer</i> the certificate that made the signature.<br />
- <i>alg</i> algorthm that was used to sign the data.<br />
- <i>data</i> the data that was signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>signer</i> the certificate that made the signature.<br/>
+ <i>alg</i> algorthm that was used to sign the data.<br/>
+ <i>data</i> the data that was signed.<br/>
  <i>sig</i> the sigature to verify.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

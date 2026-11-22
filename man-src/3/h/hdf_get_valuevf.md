@@ -17,8 +17,8 @@ description: "hdf_get_valuevf – Return the value of a node in the data set"
 char *hdf_get_valuevf(HDF *hdf, const char *namefmt, va_list ap);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf -&gt; the dataset node to start from<br />
- namefmt -&gt; the format string<br />
+<p> hdf -&gt; the dataset node to start from<br/>
+ namefmt -&gt; the format string<br/>
  ap -&gt; va_list of varargs </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_get_valuevf walks the data set pointed to by hdf via namefmt printf expanded with varargs ap, and returns the string value located there, or NULL if it doesn&#8217;t exist. This differs from hdf_get_value in that there is no default value possible. </p>

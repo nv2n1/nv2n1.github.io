@@ -11,8 +11,8 @@ description: "iv_init, iv_deinit, iv_inited – initialise and deinitialise ivyk
 <p> iv_init, iv_deinit, iv_inited &#8211; initialise and deinitialise ivykis</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>
-<p> <code>void iv_init(void);</code><br />
- <code>void iv_deinit(void);</code><br />
+<p> <code>void iv_init(void);</code><br/>
+ <code>void iv_deinit(void);</code><br/>
  <code>int iv_inited(void);</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>iv_init</code> initialises the current thread&#8217;s ivykis event loop. </p>

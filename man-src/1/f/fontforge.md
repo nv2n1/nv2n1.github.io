@@ -22,7 +22,7 @@ description: "fontforge – create and modify PostScript, TrueType and SVG fonts
 <dd>
 </dd><dt><i>fontforge</i> spline font database (.sfd)</dt>
 <dd>
-</dd><dt>P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font>, which includes:</dt>
+</dd><dt>POSTSCRIPT, which includes:</dt>
 <dd>
 </dd><dl>
 <dl>
@@ -32,9 +32,9 @@ description: "fontforge – create and modify PostScript, TrueType and SVG fonts
 <dd>
 </dd><dt>CID-keyed fonts, Adobe convention used primarily for Asian characters (.cid, .otf)</dt>
 <dd>
-</dd><dt>P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> Type 0 (.ps)</dt>
+</dd><dt>POSTSCRIPT Type 0 (.ps)</dt>
 <dd>
-</dd><dt>P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> Type 3 (.ps)</dt>
+</dd><dt>POSTSCRIPT Type 3 (.ps)</dt>
 <dd></dd></dl>
 </dl>
 <dt>Scaleable vector graphics fonts (.svg)</dt>

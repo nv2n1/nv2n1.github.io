@@ -13,7 +13,7 @@ description: "readdir_r – read a directory"
 int readdir_r(DIR *dirp, struct dirent *entry, struct dirent **result);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>readdir_r</code>():</p>
 <dl>
-<dd>_POSIX_C_SOURCE<br />
+<dd>_POSIX_C_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>This function is deprecated; use <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3) instead. </p>

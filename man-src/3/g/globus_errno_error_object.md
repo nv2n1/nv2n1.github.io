@@ -27,8 +27,8 @@ description: "Error Construction –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>base_source</i> Pointer to the originating module.<br />
- <i>base_cause</i> The error object causing the error. If this is the original error, this parameter may be NULL.<br />
+</dt><dd> <i>base_source</i> Pointer to the originating module.<br/>
+ <i>base_cause</i> The error object causing the error. If this is the original error, this parameter may be NULL.<br/>
  <i>system_errno</i> The system errno.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -39,9 +39,9 @@ description: "Error Construction –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The previously allocated error object.<br />
- <i>base_source</i> Pointer to the originating module.<br />
- <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br />
+</dt><dd> <i>error</i> The previously allocated error object.<br/>
+ <i>base_source</i> Pointer to the originating module.<br/>
+ <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br/>
  <i>system_errno</i> The system errno.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

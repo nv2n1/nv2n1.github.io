@@ -11,12 +11,12 @@ description: "std::btowc – std::btowc"
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cwchar&gt;
     std::wint_t btowc(int c);</code></pre>
-<p>Widens a single-byte character c to its wide character equivalent.<br />
+<p>Widens a single-byte character c to its wide character equivalent.<br/>
 Most multibyte character encodings use single-byte codes to represent the characters from the ASCII character set. This function may be used to convert such characters to wchar_t. </p>
 <h2>Parameters</h2>
 <p>c &#8211; single-byte character to widen</p>
 <h2>Return value</h2>
-<p>WEOF if c is EOF.<br />
+<p>WEOF if c is EOF.<br/>
 Wide character representation of c if (unsigned char)c is a valid single-byte character in the initial shift state, WEOF otherwise. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -52,17 +52,17 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;In Lithuanian ISO-8859-4 locale:<br />
-&nbsp;<wbr>&nbsp;The single-byte character 0x41 widens to 0x41<br />
-&nbsp;<wbr>&nbsp;The single-byte character 0xdf widens to 0xdf<br />
-&nbsp;<wbr>&nbsp;The single-byte character 0xf9 widens to 0x173<br />
-&nbsp;<wbr>&nbsp;In Lithuanian UTF-8 locale:<br />
-&nbsp;<wbr>&nbsp;The single-byte character 0x41 widens to 0x41<br />
-&nbsp;<wbr>&nbsp;The single-byte character 0xdf failed to widen<br />
+<p>&nbsp;<wbr>&nbsp;In Lithuanian ISO-8859-4 locale:<br/>
+&nbsp;<wbr>&nbsp;The single-byte character 0x41 widens to 0x41<br/>
+&nbsp;<wbr>&nbsp;The single-byte character 0xdf widens to 0xdf<br/>
+&nbsp;<wbr>&nbsp;The single-byte character 0xf9 widens to 0x173<br/>
+&nbsp;<wbr>&nbsp;In Lithuanian UTF-8 locale:<br/>
+&nbsp;<wbr>&nbsp;The single-byte character 0x41 widens to 0x41<br/>
+&nbsp;<wbr>&nbsp;The single-byte character 0xdf failed to widen<br/>
 &nbsp;<wbr>&nbsp;The single-byte character 0xf9 failed to widen</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;narrows a wide character to a single-byte narrow character, if possible<br />
-wctob <i>(function)</i><br />
-do_widen converts a character or characters from char to charT<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::ctype&lt;CharT&gt;)</i><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;narrows a wide character to a single-byte narrow character, if possible<br/>
+wctob <i>(function)</i><br/>
+do_widen converts a character or characters from char to charT<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::ctype&lt;CharT&gt;)</i><br/>
 <code>[virtual]</code> </p>

@@ -15,7 +15,7 @@ description: "log4cpp::BasicLayout –"
 <h3>Public Member Functions</h3>
 <p><code>BasicLayout</code> () </p>
 <p> virtual <code>~BasicLayout</code> () </p>
-<p> virtual std::string <code>format</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p> virtual std::string <code>format</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Formats the </i><code>LoggingEvent</code> in <code>BasicLayout</code> style: </p>
 <p>&nbsp;<wbr>&#8216;timeStamp priority category ndc: message&#8217;.&nbsp;<wbr>&quot;</p>
 <h2>Detailed Description</h2>

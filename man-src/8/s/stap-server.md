@@ -107,10 +107,10 @@ LOG_FILE=/tmp/stap-server/log</pre>
 <dt><code>ARCH</code></dt>
 <dd>Specifies the target architecture for this server and corresponds to the <code>-a</code> option (see <i>OPTIONS</i>). If <code>ARCH</code> is not set, the architecture of the host will be used. </dd>
 <dt><code>RELEASE</code></dt>
-<dd>Specifies the kernel release for this server and corresponds to the <code>-r</code> option (see <i>OPTIONS</i>). If <code>RELEASE</code> is not set, the release of the kernel running on the host will be used.<br />
+<dd>Specifies the kernel release for this server and corresponds to the <code>-r</code> option (see <i>OPTIONS</i>). If <code>RELEASE</code> is not set, the release of the kernel running on the host will be used.<br/>
 &nbsp;<wbr></dd>
 <dt><code>BUILD</code></dt>
-<dd>Specifies options to be passed to the <i>make</i> process used by <i>systemtap</i> to build kernel modules. This an array variable with each element corresponding to a <code>-B</code> option (see <i>OPTIONS</i>). Using the form <code>BUILD=STRING</code> clears the array and sets the first element to <code>STRING</code>. Using the form <code>BUILD+=STRING</code> adds <code>STRING</code> as an additional element to the array.<br />
+<dd>Specifies options to be passed to the <i>make</i> process used by <i>systemtap</i> to build kernel modules. This an array variable with each element corresponding to a <code>-B</code> option (see <i>OPTIONS</i>). Using the form <code>BUILD=STRING</code> clears the array and sets the first element to <code>STRING</code>. Using the form <code>BUILD+=STRING</code> adds <code>STRING</code> as an additional element to the array.<br/>
 &nbsp;<wbr></dd>
 <dt><code>INCLUDE</code></dt>
 <dd>Specifies a list of directories to be searched by the server for tapsets. This is an array variable with each element corresponding to a <code>-I</code> option (see <i>OPTIONS</i>). Using the form <code>INCLUDE=PATH</code> clears the array and sets the first element to <code>PATH</code>. Using the form <code>INCLUDE+=PATH</code> adds <code>PATH</code> as an additional element to the array. </dd>

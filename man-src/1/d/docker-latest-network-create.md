@@ -83,29 +83,29 @@ $ docker network create - d overlay-- subnet = 192.168.0.0 / 16 --subnet = 192.1
 <h3>Network internal mode</h3>
 <p> By default, when you connect a container to an overlay network, Docker also connects a bridge network to it to provide external connectivity. If you want to create an externally isolated overlay network, you can specify the &#8211;internal option. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;aux-address</code>=map[]<br />
+<p> <code>&#8211;aux-address</code>=map[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Auxiliary IPv4 or IPv6 addresses used by network driver </p>
-<p> <code>-d</code>, <code>&#8211;driver</code>=<i>DRIVER</i><br />
+<p> <code>-d</code>, <code>&#8211;driver</code>=<i>DRIVER</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Driver to manage the Network bridge or overlay. The default is bridge. </p>
-<p> <code>&#8211;gateway</code>=[]<br />
+<p> <code>&#8211;gateway</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>IPv4 or IPv6 Gateway for the master subnet </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage </p>
-<p> <code>&#8211;internal</code><br />
+<p> <code>&#8211;internal</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Restrict external access to the network </p>
-<p> <code>&#8211;ip-range</code>=[]<br />
+<p> <code>&#8211;ip-range</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Allocate container ip from a sub-range </p>
-<p> <code>&#8211;ipam-driver</code>=<i>default</i><br />
+<p> <code>&#8211;ipam-driver</code>=<i>default</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>IP Address Management Driver </p>
-<p> <code>&#8211;ipam-opt</code>=map[]<br />
+<p> <code>&#8211;ipam-opt</code>=map[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Set custom IPAM driver options </p>
-<p> <code>&#8211;ipv6</code><br />
+<p> <code>&#8211;ipv6</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Enable IPv6 networking </p>
-<p> <code>&#8211;label</code>=<i>label</i><br />
+<p> <code>&#8211;label</code>=<i>label</i><br/>
 Set metadata for a network </p>
-<p> <code>-o</code>, <code>&#8211;opt</code>=map[]<br />
+<p> <code>-o</code>, <code>&#8211;opt</code>=map[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Set custom driver options </p>
-<p> <code>&#8211;subnet</code>=[]<br />
+<p> <code>&#8211;subnet</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Subnet in CIDR format that represents a network segment </p>
 <h2>HISTORY</h2>
 <p> OCT 2015, created by Mary Anthony &lt;mary [at] docker.com&gt; </p>

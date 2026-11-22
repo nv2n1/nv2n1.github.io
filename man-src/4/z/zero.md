@@ -14,7 +14,7 @@ description: "null, zero – data sink"
 <p> These devices are typically created by: </p>
 <p> mknod -m 666 /dev/null c 1 3 mknod -m 666 /dev/zero c 1 5 chown root:root /dev/null /dev/zero  </p>
 <h2>FILES</h2>
-<p> <i>/dev/null</i> <br />
+<p> <i>/dev/null</i> <br/>
  <i>/dev/zero</i>  </p>
 <h2>NOTES</h2>
 <p> If these devices are not writable and readable for all users, many programs will act strangely. </p>

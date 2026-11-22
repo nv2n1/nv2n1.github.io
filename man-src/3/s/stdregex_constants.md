@@ -23,9 +23,9 @@ description: "std::regex_constants –"
 <p> constexpr <code>syntax_option_type</code> <code>grep</code> </p>
 <p> constexpr <code>syntax_option_type</code> <code>egrep</code></p>
 <h3>5.2 Matching Rules</h3>
-<p>Matching a regular expression against a sequence of characters [first, last) proceeds according to the rules of the grammar specified for the regular expression object, modified according to the effects listed below for any bitmask elements set.<br />
+<p>Matching a regular expression against a sequence of characters [first, last) proceeds according to the rules of the grammar specified for the regular expression object, modified according to the effects listed below for any bitmask elements set.<br/>
  enum <code>__match_flag</code> { <code>_S_not_bol</code>, <code>_S_not_eol</code>, <code>_S_not_bow</code>, <code>_S_not_eow</code>, <code>_S_any</code>, <code>_S_not_null</code>, <code>_S_continuous</code>, <code>_S_prev_avail</code>, <code>_S_sed</code>, <code>_S_no_copy</code>, <code>_S_first_only</code>, <code>_S_match_flag_last</code> } </p>
-<p> typedef std::bitset<br />
+<p> typedef std::bitset<br/>
  &lt; _S_match_flag_last &gt; <code>match_flag_type</code>&quot; </p>
 <p> constexpr <code>match_flag_type</code> <code>match_default</code> </p>
 <p> constexpr <code>match_flag_type</code> <code>match_not_bol</code> </p>

@@ -10,9 +10,9 @@ description: "stellarium – A real-time realistic planetarium"
 
 <p> stellarium &#8211; A real-time realistic planetarium </p>
 <h2>SYNOPSIS</h2>
-<p> stellarium [<font SIZE="-1"><code>OPTIONS</code></font>]</p>
+<p> stellarium [<code>OPTIONS</code>]</p>
 <h2>DESCRIPTION</h2>
-<p> Stellarium is a free <font SIZE="-1">GPL</font> software which renders realistic skies in real time with OpenGL. It is available for Linux/Unix, Windows and MacOSX. With Stellarium, you really see what you can see with your eyes, binoculars or a small telescope.</p>
+<p> Stellarium is a free GPL software which renders realistic skies in real time with OpenGL. It is available for Linux/Unix, Windows and MacOSX. With Stellarium, you really see what you can see with your eyes, binoculars or a small telescope.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-v, &#8211;version</code></dt>
@@ -56,7 +56,7 @@ description: "stellarium – A real-time realistic planetarium"
 <dt>not 0</dt>
 <dd> Some sort of error.</dd></dl>
 <h2>FILES</h2>
-<p> Note: file locations on non-*nix operating systems (include <font SIZE="-1">OSX</font>) may vary. Please refer to the Stellarium User Guide for more details, as well as information on how to customise the Stellarium data files.</p>
+<p> Note: file locations on non-*nix operating systems (include OSX) may vary. Please refer to the Stellarium User Guide for more details, as well as information on how to customise the Stellarium data files.</p>
 <dl>
 <dt><i>/usr/share/stellarium/</i></dt>
 <dd> This is the Installation Data Directory set at compile-time.</dd>
@@ -79,9 +79,9 @@ description: "stellarium – A real-time realistic planetarium"
 <p> Support Requests: &lt;<a rel="nofollow" href="https://answers.launchpad.net/stellarium">https://answers.launchpad.net/stellarium</a>&gt; </p>
 <p> Bug Tracker: &lt;<a rel="nofollow" href="https://bugs.launchpad.net/stellarium">https://bugs.launchpad.net/stellarium</a>&gt;</p>
 <dt>The Stellarium User Guide</dt>
-<dd> Visit the downloads page to get a <font SIZE="-1">PDF</font> copy of the Stellarium User Guide.</dd></dl>
+<dd> Visit the downloads page to get a PDF copy of the Stellarium User Guide.</dd></dl>
 <h2>BUGS</h2>
-<p> Please report bugs using the bug tracker link in the <font SIZE="-1">NOTES</font> section of this page.</p>
+<p> Please report bugs using the bug tracker link in the NOTES section of this page.</p>
 <h2>AUTHOR</h2>
 <p> Fabien Chereau, Rob Spearman, Johan Meuris, Matthew Gates, Johannes Gajdosik, Nigel Kerr, Andras Mohari, Bogdan Marinov, Timothy Reaves, Mike Storm, Diego Marcos, Guillaume Chereau, Alexander Wolf, Georg Zotti </p>
 <p> x14817 </p>

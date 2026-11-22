@@ -62,9 +62,9 @@ git archimport[-h][-v][-o][-a][-f][-T][-D depth][-t tempdir]&lt;archive / branch
 <dt>
 </dt><dd> Archive/branch identifier in a format that tla log understands.</dd></dl>
 <h2>AUTHOR</h2>
-<p> Written by Martin Langhoff &lt;m[blue]<code>martin [at] catalyst.net.nz</code>m[]<font SIZE="-2">[1]</font>&gt;.</p>
+<p> Written by Martin Langhoff &lt;m[blue]<code>martin [at] catalyst.net.nz</code>m[][1]&gt;.</p>
 <h2>DOCUMENTATION</h2>
-<p> Documentation by Junio C Hamano, Martin Langhoff and the git-list &lt;m[blue]<code>git [at] vger.kernel.org</code>m[]<font SIZE="-2">[2]</font>&gt;.</p>
+<p> Documentation by Junio C Hamano, Martin Langhoff and the git-list &lt;m[blue]<code>git [at] vger.kernel.org</code>m[][2]&gt;.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>NOTES</h2>

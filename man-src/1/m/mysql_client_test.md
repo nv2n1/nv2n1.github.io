@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-mysql_client_test/"
 description: "mysql_client_test – test client API mysql_client_test_embedded – test client API for embedded server"
 ---
 
-<p> mysql_client_test &#8211; test client API<br />
+<p> mysql_client_test &#8211; test client API<br/>
  mysql_client_test_embedded &#8211; test client API for embedded server </p>
 <h2>SYNOPSIS</h2>
 <dl>

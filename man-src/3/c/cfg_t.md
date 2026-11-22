@@ -12,19 +12,19 @@ description: "cfg_t – Data structure holding information about a ‘section’
 <h2>SYNOPSIS</h2>
 <p> #include &lt;confuse.h&gt; </p>
 <h3>Data Fields</h3>
-<p> cfg_flag_t <code>flags</code><br />
- <i>Any flags passed to </i><code>cfg_init()</code>.<br />
- char * <code>name</code><br />
- <i>The name of this section, the root section returned from </i><code>cfg_init()</code> is always named &#8216;root&#8217;.<br />
- <code>cfg_opt_t</code> * <code>opts</code><br />
- <i>Array of options. </i><br />
- char * <code>title</code><br />
- <i>Optional title for this section, only set if CFGF_TITLE flag is set. </i><br />
- char * <code>filename</code><br />
- <i>Name of the file being parsed. </i><br />
- int <code>line</code><br />
- <i>Line number in the config file. </i><br />
- <code>cfg_errfunc_t</code> <code>errfunc</code><br />
+<p> cfg_flag_t <code>flags</code><br/>
+ <i>Any flags passed to </i><code>cfg_init()</code>.<br/>
+ char * <code>name</code><br/>
+ <i>The name of this section, the root section returned from </i><code>cfg_init()</code> is always named &#8216;root&#8217;.<br/>
+ <code>cfg_opt_t</code> * <code>opts</code><br/>
+ <i>Array of options. </i><br/>
+ char * <code>title</code><br/>
+ <i>Optional title for this section, only set if CFGF_TITLE flag is set. </i><br/>
+ char * <code>filename</code><br/>
+ <i>Name of the file being parsed. </i><br/>
+ int <code>line</code><br/>
+ <i>Line number in the config file. </i><br/>
+ <code>cfg_errfunc_t</code> <code>errfunc</code><br/>
  <i>This function (if set with cfg_set_error_function) is called for any error message. </i></p>
 <h2>Detailed Description</h2>
 <p> Data structure holding information about a &#8216;section&#8217;. </p>

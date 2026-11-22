@@ -11,7 +11,7 @@ description: "stow – software package installation manager"
 <h2>Synopsis</h2>
 <p>stow [ options ] package &#8230;</p>
 <h2>Description</h2>
-<p>This manual page describes <font SIZE="-1">GNU</font> Stow <tt>@VERSION</tt>@, a program for managing the installation of software packages. This is not the definitive documentation for stow; for that, see the info manual. </p>
+<p>This manual page describes GNU Stow <tt>@VERSION</tt>@, a program for managing the installation of software packages. This is not the definitive documentation for stow; for that, see the info manual. </p>
 <p> Stow is a tool for managing the installation of multiple software packages in the same run-time directory tree. One historical difficulty of this task has been the need to administer, upgrade, install, and remove files in independent packages without confusing them with other files sharing the same filesystem space. For instance, it is common to install Perl and Emacs in <i>/usr/local</i>. When one does so, one winds up (as of Perl 4.036 and Emacs 19.22) with the following files in <i>/usr/local/man/man1</i>: <i>a2p.1</i>; <i>ctags.1</i>; <i>emacs.1</i>; <i>etags.1</i>; <i>h2ph.1</i>; <i>perl.1</i>; and <i>s2p.1</i>. Now suppose it&#8217;s time to uninstall Perl. Which man pages get removed? Obviously <i>perl.1</i> is one of them, but it should not be the administrator&#8217;s responsibility to memorize the ownership of individual files by separate packages. </p>
 <p> The approach used by Stow is to install each package into its own tree, then use symbolic links to make it appear as though the files are installed in the common tree. Administration can be performed in the package&#8217;s private tree in isolation from clutter from other packages. Stow can then be used to update the symbolic links. The structure of each private tree should reflect the desired structure in the common tree; i.e. (in the typical case) there should be a <i>bin</i> directory containing executables, a <i>man/man1</i> directory containing section 1 man pages, and so on. </p>
 <p> Stow was inspired by Carnegie Mellon&#8217;s Depot program, but is substantially simpler and safer. Whereas Depot required database files to keep things in sync, Stow stores no extra state between runs, so there&#8217;s no danger (as there was in Depot) of mangling directories when file hierarchies don&#8217;t match the database. Also unlike Depot, Stow will never delete any files, directories, or links that appear in a Stow directory (e.g., <i>/usr/local/stow/emacs</i>), so it&#8217;s always possible to rebuild the target tree (e.g., <i>/usr/local</i>).</p>
@@ -30,11 +30,11 @@ description: "stow – software package installation manager"
 <dd>
 </dd><dt>&#8211;no</dt>
 <dd>Do not perform any operations that modify the filesystem; merely show what would happen.</dd>
-<dt>-d <font SIZE="-1">DIR</font></dt>
+<dt>-d DIR</dt>
 <dd>
 </dd><dt>&#8211;dir=DIR</dt>
 <dd>Set the stow directory to <tt>&quot;DIR&quot;</tt> instead of the current directory. This also has the effect of making the default target directory be the parent of <tt>&quot;DIR&quot;</tt>.</dd>
-<dt>-t <font SIZE="-1">DIR</font></dt>
+<dt>-t DIR</dt>
 <dd>
 </dd><dt>&#8211;target=DIR</dt>
 <dd>Set the target directory to <tt>&quot;DIR&quot;</tt> instead of the parent of the stow directory.</dd>
@@ -100,9 +100,9 @@ description: "stow – software package installation manager"
 <dt>&bull;</dt>
 <dd>When using multiple stow directories (see &#8220;Multiple stow directories&#8221; in the info manual), Stow fails to &#8220;split open&#8221; tree-folding symlinks (see &#8220;Installing packages&#8221; in the info manual) that point into a stow directory which is not the one in use by the current Stow command. Before failing, it should search the target of the link to see whether any element of the path contains a <i>.stow</i> file. If it finds one, it can &#8220;learn&#8221; about the cooperating stow directory to short-circuit the <i>.stow</i> search the next time it encounters a tree-folding symlink.</dd></dl>
 <h2>Author</h2>
-<p>This man page was originally constructed by Charles Briscoe-Smith from parts of Stow&#8217;s info manual, and then converted to <font SIZE="-1">POD</font> format by Adam Spiers. The info manual contains the following notice, which, as it says, applies to this manual page, too. The text of the section entitled &#8220;<font SIZE="-1">GNU</font> General Public License&#8221; can be found in the file <i>/usr/share/common-licenses/GPL</i> on any Debian GNU/Linux system. If you don&#8217;t have access to a Debian system, or the <font SIZE="-1">GPL</font> is not there, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, <font SIZE="-1">MA</font>, 02111-1307, <font SIZE="-1">USA</font>.</p>
+<p>This man page was originally constructed by Charles Briscoe-Smith from parts of Stow&#8217;s info manual, and then converted to POD format by Adam Spiers. The info manual contains the following notice, which, as it says, applies to this manual page, too. The text of the section entitled &#8220;GNU General Public License&#8221; can be found in the file <i>/usr/share/common-licenses/GPL</i> on any Debian GNU/Linux system. If you don&#8217;t have access to a Debian system, or the GPL is not there, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA, 02111-1307, USA.</p>
 <h2>Copyright</h2>
 <p>Copyright (C) 1993, 1994, 1995, 1996 by Bob Glickstein &lt;bobg+stow [at] zanshin.com&gt;; 2000, 2001 by Guillaume Morin; 2007 by Kahlil Hodgson; 2011 by Adam Spiers; and others. </p>
 <p> Permission is granted to make and distribute verbatim copies of this manual provided the copyright notice and this permission notice are preserved on all copies. </p>
-<p> Permission is granted to copy and distribute modified versions of this manual under the conditions for verbatim copying, provided also that the section entitled &#8220;<font SIZE="-1">GNU</font> General Public License&#8221; is included with the modified manual, and provided that the entire resulting derived work is distributed under the terms of a permission notice identical to this one. </p>
+<p> Permission is granted to copy and distribute modified versions of this manual under the conditions for verbatim copying, provided also that the section entitled &#8220;GNU General Public License&#8221; is included with the modified manual, and provided that the entire resulting derived work is distributed under the terms of a permission notice identical to this one. </p>
 <p> Permission is granted to copy and distribute translations of this manual into another language, under the above conditions for modified versions, except that this permission notice may be stated in a translation approved by the Free Software Foundation.</p>

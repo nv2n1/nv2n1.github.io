@@ -11,7 +11,7 @@ description: "dtrsna.f –"
 <p> dtrsna.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtrsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, IWORK, INFO)<br />
+<p> subroutine <code>dtrsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, IWORK, INFO)<br/>
  <i></i><code>DTRSNA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtrsna (characterJOB, characterHOWMNY, logical, dimension( * )SELECT, integerN, double precision, dimension( ldt, * )T, integerLDT, double precision, dimension( ldvl, * )VL, integerLDVL, double precision, dimension( ldvr, * )VR, integerLDVR, double precision, dimension( * )S, double precision, dimension( * )SEP, integerMM, integerM, double precision, dimension( ldwork, * )WORK, integerLDWORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -88,8 +88,8 @@ description: "dtrsna.f –"
           If JOB = 'V', VL is not referenced.
 </pre>
 <p> <i>LDVL</i> </p>
-<p>LDVL is INTEGER<br />
-        The leading dimension of the array VL.LDVL &gt;= 1;<br />
+<p>LDVL is INTEGER<br/>
+        The leading dimension of the array VL.LDVL &gt;= 1;<br/>
 and if JOB = &#8216;E&#8217; or &#8216;B&#8217;, LDVL &gt;= N.</p>
 <p> <i>VR</i> </p>
 <pre>
@@ -102,8 +102,8 @@ and if JOB = &#8216;E&#8217; or &#8216;B&#8217;, LDVL &gt;= N.</p>
           If JOB = 'V', VR is not referenced.
 </pre>
 <p> <i>LDVR</i> </p>
-<p>LDVR is INTEGER<br />
-        The leading dimension of the array VR.LDVR &gt;= 1;<br />
+<p>LDVR is INTEGER<br/>
+        The leading dimension of the array VR.LDVR &gt;= 1;<br/>
 and if JOB = &#8216;E&#8217; or &#8216;B&#8217;, LDVR &gt;= N.</p>
 <p> <i>S</i> </p>
 <pre>

@@ -27,7 +27,7 @@ description: "html2textrc – formatting properties file for"
 <dt>(5)</dt>
 <dd>optional space,</dd>
 <dt>(6)</dt>
-<dd>the property value as described below.<br />
+<dd>the property value as described below.<br/>
  Everything up to the next newline is interpreted <i>literary</i> as the value of the specified element. Literary meant leading white-space must be quoted with backslashes (i.e. &quot;\ &quot;). Be aware not to include unwanted trailing white-space characters.</dd></dl>
 <h2>Options</h2>
 <p>The following is the list of valid formatting properties, together with their default values. If the <code>-style</code> command line option of <code><a href="/docs/linux/man/1-html2text/">html2text</a></code>(1) is used, different default values apply. </p>
@@ -82,8 +82,8 @@ description: "html2textrc – formatting properties file for"
 <dt><code>IMG.alt.{prefix suffix} = {[ ]}</code></dt>
 <dd>Specifies how the values (if any) of IMG elements&#8217; &quot;ALT&quot; attributes are marked. (String.)</dd></dl>
 <h2>Author</h2>
-<p>Current maintainer and primary download location for <code>html2text</code> is:<br />
- Martin Bayer &lt;mbayer [at] zedat.fu-berlin.de&gt;<br />
+<p>Current maintainer and primary download location for <code>html2text</code> is:<br/>
+ Martin Bayer &lt;mbayer [at] zedat.fu-berlin.de&gt;<br/>
  <a rel="nofollow" href="http://userpage.fu-berlin.de/~mbayer/tools/">http://userpage.fu-berlin.de/~mbayer/tools/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-html2text/">html2text</a></code>(1) </p>

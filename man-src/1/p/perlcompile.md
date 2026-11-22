@@ -123,7 +123,7 @@ $ perl - MO = Deparse, -p - e 'print "Hello, world
 <dt>B::Concise</dt>
 <dd> This module prints a concise (but complete) version of the Perl parse tree. Its output is more customizable than the one of B::Terse or B::Debug (and it can emulate them). This module is useful for people who are writing their own back end, or who are learning about the Perl internals. It&#8217;s not useful to the average programmer.</dd>
 <dt>B::Debug</dt>
-<dd> This module dumps the Perl parse tree in verbose detail to <font SIZE="-1">STDOUT</font>. It&#8217;s useful for people who are writing their own back end, or who are learning about the Perl internals. It&#8217;s not useful to the average programmer.</dd>
+<dd> This module dumps the Perl parse tree in verbose detail to STDOUT. It&#8217;s useful for people who are writing their own back end, or who are learning about the Perl internals. It&#8217;s not useful to the average programmer.</dd>
 <dt>B::Deparse</dt>
 <dd> This module produces Perl source code from the compiled parse tree. It is useful in debugging and deconstructing other people&#8217;s code, also as a pretty-printer for your own source. See &#8220;The Decompiling Back End&#8221; for details about usage.</dd>
 <dt>B::Lint</dt>
@@ -137,7 +137,7 @@ $ perl - MO = Deparse, -p - e 'print "Hello, world
 <pre>
   $ perl -MO=Showlex myperlprogram
 </pre>
-<p> [<font SIZE="-1">BROKEN</font>]</p>
+<p> [BROKEN]</p>
 <dt>B::Terse</dt>
 <dd> This module prints the contents of the parse tree, but without as much information as B::Debug. For comparison, <tt>&quot;print &quot;Hello, world.&quot;&quot;</tt> produced 96 lines of output from B::Debug, but only 6 from B::Terse. </dd>
 <p> This module is useful for people who are writing their own back end, or who are learning about the Perl internals. It&#8217;s not useful to the average programmer.</p>

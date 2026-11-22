@@ -8,7 +8,7 @@ url: "/docs/linux/man/3-memkind_arena/"
 description: "memkind_arena.h – jemalloc arena allocation memkind operations. Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible change..."
 ---
 
-<p> memkind_arena.h &#8211; jemalloc arena allocation memkind operations.<br />
+<p> memkind_arena.h &#8211; jemalloc arena allocation memkind operations.<br/>
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

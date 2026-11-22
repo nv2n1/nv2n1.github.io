@@ -10,7 +10,7 @@ description: "zlarnv.f –"
 <p>zlarnv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlarnv</code> (IDIST, ISEED, N, X)<br />
+<p>subroutine <code>zlarnv</code> (IDIST, ISEED, N, X)<br/>
  <i></i><code>ZLARNV</code> returns a vector of random numbers from a uniform or normal distribution.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlarnv (integerIDIST, integer, dimension( 4 )ISEED, integerN, complex*16, dimension( * )X)</h3>

@@ -9,48 +9,48 @@ description: "table – Helps you implement a table."
 
 <p>table &#8211; Helps you implement a table.</p>
 <h3>Modules</h3>
-<p><code>table_array</code><br />
- <i>Helps you implement a table when data can be stored locally. </i><br />
- <code>table_container</code><br />
- <i>Helps you implement a table when data can be found via a netsnmp_container. </i><br />
- <code>table_data</code><br />
- <i>Helps you implement a table with datamatted storage. </i><br />
- <code>generic_table_API</code><br />
- <i>General requirements for a table helper. </i><br />
- <code>table_iterator</code><br />
- <i>The table iterator helper is designed to simplify the task of writing a table handler for the net-snmp agent when the data being accessed is not in an oid sorted form and must be accessed externally. </i><br />
- <code>table_row</code><br />
- <i>Helps you implement a table shared across two or more subagents, or otherwise split into individual row slices. </i><br />
- <code>tdata</code><br />
+<p><code>table_array</code><br/>
+ <i>Helps you implement a table when data can be stored locally. </i><br/>
+ <code>table_container</code><br/>
+ <i>Helps you implement a table when data can be found via a netsnmp_container. </i><br/>
+ <code>table_data</code><br/>
+ <i>Helps you implement a table with datamatted storage. </i><br/>
+ <code>generic_table_API</code><br/>
+ <i>General requirements for a table helper. </i><br/>
+ <code>table_iterator</code><br/>
+ <i>The table iterator helper is designed to simplify the task of writing a table handler for the net-snmp agent when the data being accessed is not in an oid sorted form and must be accessed externally. </i><br/>
+ <code>table_row</code><br/>
+ <i>Helps you implement a table shared across two or more subagents, or otherwise split into individual row slices. </i><br/>
+ <code>tdata</code><br/>
  <i>Implement a table with datamatted storage. </i></p>
 <h3>Defines</h3>
 <pre><code>#define SPARSE_TABLE_HANDLER_NAME   'sparse_table'
 Functions</code></pre>
-<p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_table_handler</code> (<code>netsnmp_table_registration_info</code> *tabreq)<br />
- <i>Given a netsnmp_table_registration_info object, creates a table handler. </i><br />
- int <code>netsnmp_register_table</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_table_registration_info</code> *tabreq)<br />
- <i>creates a table handler given the netsnmp_table_registration_info object, inserts it into the request chain and then calls </i><code>netsnmp_register_handler()</code> to register the table into the agent.<br />
- NETSNMP_INLINE <code>netsnmp_table_request_info</code> * <code>netsnmp_extract_table_info</code> (<code>netsnmp_request_info</code> *request)<br />
- <i>Extracts the processed table information from a given request. </i><br />
- <code>netsnmp_table_registration_info</code> * <code>netsnmp_find_table_registration_info</code> (<code>netsnmp_handler_registration</code> *reginfo)<br />
- <i>extracts the registered netsnmp_table_registration_info object from a netsnmp_handler_registration object </i><br />
- int <code>table_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)<br />
- <i>implements the table helper handler </i><br />
- <code>netsnmp_mib_handler</code> * <code>netsnmp_sparse_table_handler_get</code> (void)<br />
- <i>create sparse table handler </i><br />
- int <code>netsnmp_sparse_table_register</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_table_registration_info</code> *tabreq)<br />
- <i>creates a table handler given the netsnmp_table_registration_info object, inserts it into the request chain and then calls </i><code>netsnmp_register_handler()</code> to register the table into the agent.<br />
- int <code>netsnmp_table_build_result</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_request_info</code> *reqinfo, <code>netsnmp_table_request_info</code> *table_info, u_char type, u_char *result, size_t result_len)<br />
- <i>Builds the result to be returned to the agent given the table information. </i><br />
- int <code>netsnmp_table_build_oid</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_request_info</code> *reqinfo, <code>netsnmp_table_request_info</code> *table_info)<br />
- <i>given a registration info object, a request object and the table info object it builds the request-&gt;requestvb-&gt;name oid from the index values and column information found in the table_info object. </i><br />
- int <code>netsnmp_table_build_oid_from_index</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_request_info</code> *reqinfo, <code>netsnmp_table_request_info</code> *table_info)<br />
- <i>given a registration info object, a request object and the table info object it builds the request-&gt;requestvb-&gt;name oid from the index values and column information found in the table_info object. </i><br />
- int <code>netsnmp_update_variable_list_from_index</code> (<code>netsnmp_table_request_info</code> *tri)<br />
- <i>parses an OID into table indexses </i><br />
- int <code>netsnmp_update_indexes_from_variable_list</code> (<code>netsnmp_table_request_info</code> *tri)<br />
- <i>builds an oid given a set of indexes. </i><br />
- int <code>netsnmp_check_getnext_reply</code> (<code>netsnmp_request_info</code> *request, oid *prefix, size_t prefix_len, <code>netsnmp_variable_list</code> *newvar, <code>netsnmp_variable_list</code> **outvar)<br />
+<p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_table_handler</code> (<code>netsnmp_table_registration_info</code> *tabreq)<br/>
+ <i>Given a netsnmp_table_registration_info object, creates a table handler. </i><br/>
+ int <code>netsnmp_register_table</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_table_registration_info</code> *tabreq)<br/>
+ <i>creates a table handler given the netsnmp_table_registration_info object, inserts it into the request chain and then calls </i><code>netsnmp_register_handler()</code> to register the table into the agent.<br/>
+ NETSNMP_INLINE <code>netsnmp_table_request_info</code> * <code>netsnmp_extract_table_info</code> (<code>netsnmp_request_info</code> *request)<br/>
+ <i>Extracts the processed table information from a given request. </i><br/>
+ <code>netsnmp_table_registration_info</code> * <code>netsnmp_find_table_registration_info</code> (<code>netsnmp_handler_registration</code> *reginfo)<br/>
+ <i>extracts the registered netsnmp_table_registration_info object from a netsnmp_handler_registration object </i><br/>
+ int <code>table_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)<br/>
+ <i>implements the table helper handler </i><br/>
+ <code>netsnmp_mib_handler</code> * <code>netsnmp_sparse_table_handler_get</code> (void)<br/>
+ <i>create sparse table handler </i><br/>
+ int <code>netsnmp_sparse_table_register</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_table_registration_info</code> *tabreq)<br/>
+ <i>creates a table handler given the netsnmp_table_registration_info object, inserts it into the request chain and then calls </i><code>netsnmp_register_handler()</code> to register the table into the agent.<br/>
+ int <code>netsnmp_table_build_result</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_request_info</code> *reqinfo, <code>netsnmp_table_request_info</code> *table_info, u_char type, u_char *result, size_t result_len)<br/>
+ <i>Builds the result to be returned to the agent given the table information. </i><br/>
+ int <code>netsnmp_table_build_oid</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_request_info</code> *reqinfo, <code>netsnmp_table_request_info</code> *table_info)<br/>
+ <i>given a registration info object, a request object and the table info object it builds the request-&gt;requestvb-&gt;name oid from the index values and column information found in the table_info object. </i><br/>
+ int <code>netsnmp_table_build_oid_from_index</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_request_info</code> *reqinfo, <code>netsnmp_table_request_info</code> *table_info)<br/>
+ <i>given a registration info object, a request object and the table info object it builds the request-&gt;requestvb-&gt;name oid from the index values and column information found in the table_info object. </i><br/>
+ int <code>netsnmp_update_variable_list_from_index</code> (<code>netsnmp_table_request_info</code> *tri)<br/>
+ <i>parses an OID into table indexses </i><br/>
+ int <code>netsnmp_update_indexes_from_variable_list</code> (<code>netsnmp_table_request_info</code> *tri)<br/>
+ <i>builds an oid given a set of indexes. </i><br/>
+ int <code>netsnmp_check_getnext_reply</code> (<code>netsnmp_request_info</code> *request, oid *prefix, size_t prefix_len, <code>netsnmp_variable_list</code> *newvar, <code>netsnmp_variable_list</code> **outvar)<br/>
  <i>checks the original request against the current data being passed in if its greater than the request oid but less than the current valid return, set the current valid return to the new value. </i></p>
 <h2>Detailed Description</h2>
 <p>Helps you implement a table. </p>

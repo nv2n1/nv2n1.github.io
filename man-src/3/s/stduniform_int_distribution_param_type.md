@@ -10,8 +10,8 @@ description: "std::uniform_int_distribution< _IntType >::param_type –"
 <p>std::uniform_int_distribution&lt; _IntType &gt;::param_type &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Public Types</h3>
-<p>typedef<br />
- <code>uniform_int_distribution</code><br />
+<p>typedef<br/>
+ <code>uniform_int_distribution</code><br/>
  &lt; _IntType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>param_type (_IntType __a=0, _IntType __b=std::numeric_limits&lt; _IntType &gt;::max())

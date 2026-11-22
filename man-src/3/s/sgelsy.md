@@ -11,7 +11,7 @@ description: "sgelsy.f –"
 <p> sgelsy.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgelsy</code> (M, N, NRHS, A, LDA, B, LDB, JPVT, RCOND, RANK, WORK, LWORK, INFO)<br />
+<p> subroutine <code>sgelsy</code> (M, N, NRHS, A, LDA, B, LDB, JPVT, RCOND, RANK, WORK, LWORK, INFO)<br/>
  <i></i><code> SGELSY solves overdetermined or underdetermined systems for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgelsy (integerM, integerN, integerNRHS, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, integer, dimension( * )JPVT, realRCOND, integerRANK, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

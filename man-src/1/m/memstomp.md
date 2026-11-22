@@ -28,5 +28,5 @@ description: "memstomp – detect function calls with overlapping memory regions
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-memcpy/">memcpy</a></code>(3), <code><a href="/docs/linux/man/3-memccpy/">memccpy</a></code>(3), <code><a href="/docs/linux/man/3-mempcpy/">mempcpy</a></code>(3), <code><a href="/docs/linux/man/3-strcpy/">strcpy</a></code>(3), <code><a href="/docs/linux/man/3-stpcpy/">stpcpy</a></code>(3), <code><a href="/docs/linux/man/3-strncpy/">strncpy</a></code>(3), <code><a href="/docs/linux/man/3-stpncpy/">stpncpy</a></code>(3), <code><a href="/docs/linux/man/3-strcat/">strcat</a></code>(3), <code><a href="/docs/linux/man/3-strncat/">strncat</a></code>(3), <code><a href="/docs/linux/man/3-wmemcpy/">wmemcpy</a></code>(3), <code><a href="/docs/linux/man/3-wmempcpy/">wmempcpy</a></code>(3), <code><a href="/docs/linux/man/3-wcscpy/">wcscpy</a></code>(3), <code><a href="/docs/linux/man/3-wcsncpy/">wcsncpy</a></code>(3), <code><a href="/docs/linux/man/3-wcscat/">wcscat</a></code>(3), <code><a href="/docs/linux/man/3-wcsncat/">wcsncat</a></code>(3)</p>
 <h2>AUTHORS</h2>
-<p> Lennart Poettering &lt;lennart [at] poettering.net&gt;<br />
+<p> Lennart Poettering &lt;lennart [at] poettering.net&gt;<br/>
  William Cohen &lt;wcohen [at] redhat.com&gt; </p>

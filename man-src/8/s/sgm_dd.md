@@ -100,7 +100,7 @@ description: "sgm_dd – copy data to and from files and devices, especially SCS
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2000-2012 Douglas Gilbert<br />
+<p>Copyright &#169; 2000-2012 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p>The simplest variant of this utility is called <code>sg_dd.</code> A POSIX threads version of this utility called <code>sgp_dd</code> is in the sg3_utils package. The lmbench package contains <code>lmdd</code> which is also interesting. <code><a href="/docs/linux/man/8-raw/">raw</a>(8), <a href="/docs/linux/man/1-dd/">dd</a>(1)</code> </p>

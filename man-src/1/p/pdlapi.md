@@ -8,11 +8,11 @@ url: "/docs/linux/man/1-pdlapi/"
 
 PDL::API - making piddles from Perl and C/XS code 
 
-<h2>Description</h2>A simple cookbook how to create piddles manually. It covers both the Perl and the C/XS level. Additionally, it describes the <font SIZE="-1">PDL</font> core routines that can be accessed from other modules. These routines basically define the <font SIZE="-1">PDL API.</font> If you need to access piddles from C/XS you probably need to know about these functions.
+<h2>Description</h2>A simple cookbook how to create piddles manually. It covers both the Perl and the C/XS level. Additionally, it describes the PDL core routines that can be accessed from other modules. These routines basically define the PDL API. If you need to access piddles from C/XS you probably need to know about these functions.
 <h2>Synopsis</h2><pre> use PDL;
  sub mkmypiddle {
  ...
- }</pre><h2>Creating a piddle manually from Perl</h2>Sometimes you want to create a piddle <i>manually</i> from binary data. You can do that at the Perl level. Examples in the distribution include some of the <font SIZE="-1">IO</font> routines. The code snippet below illustrates the required steps. 
+ }</pre><h2>Creating a piddle manually from Perl</h2>Sometimes you want to create a piddle <i>manually</i> from binary data. You can do that at the Perl level. Examples in the distribution include some of the IO routines. The code snippet below illustrates the required steps. 
 
  <pre> use Carp;
  sub mkmypiddle {
@@ -32,7 +32,7 @@ PDL::API - making piddles from Perl and C/XS code
  close $file;
  $pdl-&gt;upd_data();
  return $pdl;
- }</pre><h2>Creating a piddle in C</h2>The following example creates a piddle at the C level. We use the <tt>&quot;Inline&quot;</tt> module which is really the way to interface Perl and C these days. Note the use of the <tt>&quot;PDL_INCLUDE&quot;</tt>, <tt>&quot;PDL_TYPEMAP&quot;</tt>, <tt>&quot;PDL_AUTO_INCLUDE&quot;</tt> and <tt>&quot;PDL_BOOT&quot;</tt> functions that were imported from <tt>&quot;PDL::Core::Dev&quot;</tt>. They are used in conjunction with an Inline Config call to ensure that the <font SIZE="-1">PDL</font> typemap, the <font SIZE="-1">PDL</font> include files and the <font SIZE="-1">PDL</font> Core routines are found during compilation and later runtime execution. 
+ }</pre><h2>Creating a piddle in C</h2>The following example creates a piddle at the C level. We use the <tt>&quot;Inline&quot;</tt> module which is really the way to interface Perl and C these days. Note the use of the <tt>&quot;PDL_INCLUDE&quot;</tt>, <tt>&quot;PDL_TYPEMAP&quot;</tt>, <tt>&quot;PDL_AUTO_INCLUDE&quot;</tt> and <tt>&quot;PDL_BOOT&quot;</tt> functions that were imported from <tt>&quot;PDL::Core::Dev&quot;</tt>. They are used in conjunction with an Inline Config call to ensure that the PDL typemap, the PDL include files and the PDL Core routines are found during compilation and later runtime execution. 
 
  <pre> use PDL::LiteF;
  use PDL::Core::Dev;
@@ -65,7 +65,7 @@ PDL::API - making piddles from Perl and C/XS code
  for (i=0;i&lt;5*5*5;i++)
  dataf[i] = i; /* the data must be initialized ! */
  return p;
- }</pre><h3>Wrapping your own data into a piddle</h3>Sometimes you obtain a chunk of data from another source, for example an image processing library, etc. All you want to do in that case is wrap your data into a piddle struct at the C level. Examples using this approach can be found in the <font SIZE="-1">IO</font> modules (where FastRaw and FlexRaw use it for mmapped access) and the Gimp Perl module (that uses it to wrap Gimp pixel regions into piddles). The following script demonstrates a simple example: 
+ }</pre><h3>Wrapping your own data into a piddle</h3>Sometimes you obtain a chunk of data from another source, for example an image processing library, etc. All you want to do in that case is wrap your data into a piddle struct at the C level. Examples using this approach can be found in the IO modules (where FastRaw and FlexRaw use it for mmapped access) and the Gimp Perl module (that uses it to wrap Gimp pixel regions into piddles). The following script demonstrates a simple example: 
 
  <pre> use PDL::LiteF;
  use PDL::Core::Dev;
@@ -152,7 +152,7 @@ PDL::API - making piddles from Perl and C/XS code
  p = pdl_wrap((void *) mkramp(), PDL_B, dims, 2, 
  delete_myramp,0); /* the delparam is abitrarily set to 0 */
  return p;
- }</pre><h2>The gory details</h2><h3>The Core struct --- getting at <font SIZE="-1">PDL</font> core routines at runtime</h3><font SIZE="-1">PDL</font> uses a technique similar to that employed by the Tk modules to let other modules use its core routines. A pointer to all shared core <font SIZE="-1">PDL</font> routines is stored in the <tt>$PDL::SHARE</tt> variable. <font SIZE="-1">XS</font> code should get hold of this pointer at boot time so that the rest of the C/XS code can then use that pointer for access at run time. This initial loading of the pointer is most easily achieved using the functions <tt>&quot;PDL_AUTO_INCLUDE&quot;</tt> and <tt>&quot;PDL_BOOT&quot;</tt> that are defined and exported by <tt>&quot;PDL::Core::Dev&quot;</tt>. Typical usage with the Inline module has already been demonstrated: 
+ }</pre><h2>The gory details</h2><h3>The Core struct --- getting at PDL core routines at runtime</h3>PDL uses a technique similar to that employed by the Tk modules to let other modules use its core routines. A pointer to all shared core PDL routines is stored in the <tt>$PDL::SHARE</tt> variable. XS code should get hold of this pointer at boot time so that the rest of the C/XS code can then use that pointer for access at run time. This initial loading of the pointer is most easily achieved using the functions <tt>&quot;PDL_AUTO_INCLUDE&quot;</tt> and <tt>&quot;PDL_BOOT&quot;</tt> that are defined and exported by <tt>&quot;PDL::Core::Dev&quot;</tt>. Typical usage with the Inline module has already been demonstrated: 
 
  <pre> use Inline C =&gt; Config =&gt;
  INC =&gt; &amp;PDL_INCLUDE,
@@ -163,7 +163,7 @@ PDL::API - making piddles from Perl and C/XS code
  <pre> print PDL_AUTO_INCLUDE;
  #include &lt;pdlcore.h&gt;
  static Core* PDL; /* Structure holds core C functions */
- static SV* CoreSV; /* Gets pointer to Perl var holding core structure */</pre>The code returned by <tt>&quot;PDL_BOOT&quot;</tt> retrieves the <tt>$PDL::SHARE</tt> variable and initializes the pointer to the <tt>&quot;Core&quot;</tt> struct. For those who know their way around the Perl <font SIZE="-1">API</font> here is the code: 
+ static SV* CoreSV; /* Gets pointer to Perl var holding core structure */</pre>The code returned by <tt>&quot;PDL_BOOT&quot;</tt> retrieves the <tt>$PDL::SHARE</tt> variable and initializes the pointer to the <tt>&quot;Core&quot;</tt> struct. For those who know their way around the Perl API here is the code: 
 
  <pre> print PDL_BOOT;
  perl_require_pv (&quot;PDL::Core&quot;); /* make sure PDL::Core is loaded */
@@ -227,8 +227,8 @@ PDL::API - making piddles from Perl and C/XS code
 </dd><dt>&bull;
 </dt><dd><tt>&quot;void pdl_barf(const char* pat,...)&quot;</tt> and <tt>&quot;void pdl_warn(const char* pat,...)&quot;</tt> 
  These are C-code equivalents of <tt>&quot;barf&quot;</tt> and <tt>&quot;warn&quot;</tt>. They include special handling of error or warning messages during pthreading (i.e. processor multi-threading) that defer the messages until after pthreading is completed. When pthreading is complete, perl's <tt>&quot;barf&quot;</tt> or <tt>&quot;warn&quot;</tt> is called with the deferred messages. This is needed to keep from calling perl's <tt>&quot;barf&quot;</tt> or <tt>&quot;warn&quot;</tt> during pthreading, which can cause segfaults. 
- Note that <tt>&quot;barf&quot;</tt> and <tt>&quot;warn&quot;</tt> have been redefined (using c-preprocessor macros) in pdlcore.h to <tt>&quot;PDL-&gt;barf&quot;</tt> and <tt>&quot;PDL-&gt;warn&quot;</tt>. This is to keep any <font SIZE="-1">XS</font> or <font SIZE="-1">PP</font> code from calling perl's <tt>&quot;barf&quot;</tt> or <tt>&quot;warn&quot;</tt> directly, which can cause segfaults during pthreading. 
- See PDL::ParallelCPU for more information on pthreading.</dd></dl><h2>See Also</h2><font SIZE="-1">PDL</font> 
+ Note that <tt>&quot;barf&quot;</tt> and <tt>&quot;warn&quot;</tt> have been redefined (using c-preprocessor macros) in pdlcore.h to <tt>&quot;PDL-&gt;barf&quot;</tt> and <tt>&quot;PDL-&gt;warn&quot;</tt>. This is to keep any XS or PP code from calling perl's <tt>&quot;barf&quot;</tt> or <tt>&quot;warn&quot;</tt> directly, which can cause segfaults during pthreading. 
+ See PDL::ParallelCPU for more information on pthreading.</dd></dl><h2>See Also</h2>PDL 
 
  Inline
 <h2>Bugs</h2>This manpage is still under development. Feedback and corrections are welcome.

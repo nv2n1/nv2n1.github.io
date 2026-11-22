@@ -65,7 +65,7 @@ Func -- Fedora Unified Network Controller.
 
  You will notice that the syntax for using one of these helper modules varies slightly from just using ``call'' directly. 
 
- For example ``show'' can be used to show remote data. The normal command &quot;func '*' command would dump a very large amount of data, while the show command can mine only a few details. This might make things more readable, for instance, when not going through the Python <font SIZE="-1">API</font> (where you would not care). 
+ For example ``show'' can be used to show remote data. The normal command &quot;func '*' command would dump a very large amount of data, while the show command can mine only a few details. This might make things more readable, for instance, when not going through the Python API (where you would not care). 
 
  func ``*.example.org'' show hardware --help 
 

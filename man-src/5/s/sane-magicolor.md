@@ -12,9 +12,9 @@ description: "sane-magicolor – SANE backend for KONICA MINOLTA magicolor scann
 <p>The <code>sane-magicolor</code> backend supports KONICA MINOLTA magicolor scanners connected via USB or LAN. Currently, only the magicolor 1690MF device is supported, no other devices with the same scanning protocol are known.</p>
 <h2>Supported Devices</h2>
 <p>The following scanner should work with this backend: </p>
-<p> Device Details<br />
- &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />
- Vendor: KONICA MINOLTA<br />
+<p> Device Details<br/>
+ &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br/>
+ Vendor: KONICA MINOLTA<br/>
  Model: magicolor 1690MF</p>
 <h2>Configuration</h2>
 <p>This section describes the backend&#8217;s configuration file entries. The file is located at:</p>
@@ -22,9 +22,9 @@ description: "sane-magicolor – SANE backend for KONICA MINOLTA magicolor scann
 <dd><i>/etc/sane.d/magicolor.conf</i></dd></dl>
 <p> For a proper setup, at least one of the following entries are needed:</p>
 <dl>
-<dd><i>net autodiscovery</i><br />
- <i>net [IP ADDRESS] [DEVICE-ID]</i><br />
- <i>usb</i><br />
+<dd><i>net autodiscovery</i><br/>
+ <i>net [IP ADDRESS] [DEVICE-ID]</i><br/>
+ <i>usb</i><br/>
  <i>usb [VENDOR-ID] [DEVICE-ID]</i> </dd>
 </dl>
 <h2>Files</h2>
@@ -49,7 +49,7 @@ description: "sane-magicolor – SANE backend for KONICA MINOLTA magicolor scann
 <p>Large color scans may sometimes timeout due to unknown reasons (the scanner simply stops returning data). </p>
 <p> Cancelling large scans may lock up the scanner.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7),<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7),<br/>
  <i><a rel="nofollow" href="http://wiki.kainhofer.com/hardware/magicolor_scan">http://wiki.kainhofer.com/hardware/magicolor_scan</a></i> </p>
 <h2>Author</h2>
 <p>Reinhold Kainhofer &lt;<i>reinhold [at] kainhofer.com</i>&gt;</p>

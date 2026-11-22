@@ -17,8 +17,8 @@ description: "ogmsplit – Split OGG/OGM files into sevaral smaller OGG/OGM file
 <dt>inname</dt>
 <dd> Use &#8216;<i>inname</i>&#8216; as the source.</dd>
 <dt><code>-o</code>, <code>&#8211;output</code> <i>out</i></dt>
-<dd> Use &#8216;<i>out</i>&#8216; as the base name. Ascending part numbers will be appended to it. Default is &#8216;<i>inname</i>&#8216;. Examples:<br />
- 1) If <code>-o</code> <i>output.ogg</i> is given on the command line then <code>ogmsplit</code> will create <i>output-000001.ogg</i>, <i>output-000002.ogg</i> and so on.<br />
+<dd> Use &#8216;<i>out</i>&#8216; as the base name. Ascending part numbers will be appended to it. Default is &#8216;<i>inname</i>&#8216;. Examples:<br/>
+ 1) If <code>-o</code> <i>output.ogg</i> is given on the command line then <code>ogmsplit</code> will create <i>output-000001.ogg</i>, <i>output-000002.ogg</i> and so on.<br/>
  2) If no <code>-o</code> option is given and the input&#8217;s name is <i>movie.ogm</i> then <code>ogmsplit</code> will create <i>movie-000001.ogm</i> and so on.</dd></dl>
 <p> The operation mode can be set with exactly one of <code>-s</code>, <code>-t,</code> <code>-c</code> or <code>-p</code>. The default mode is to split by size (<code>-s</code>).</p>
 <dl>
@@ -43,22 +43,22 @@ description: "ogmsplit – Split OGG/OGM files into sevaral smaller OGG/OGM file
 <dt><code>-V</code>, <code>&#8211;version</code></dt>
 <dd> Show version information.</dd></dl>
 <h2>CHAPTER INFORMATION</h2>
-<p> <code>ogmsplit</code> correctly handles chapter information. During the first pass the chapter information, if any is present, will be adjusted to match the output files generated. Chapters that are not contained in the current output file are removed entirely. The other chapters are renumbered to start at 1, and their timestamps will be recalculated.<br />
+<p> <code>ogmsplit</code> correctly handles chapter information. During the first pass the chapter information, if any is present, will be adjusted to match the output files generated. Chapters that are not contained in the current output file are removed entirely. The other chapters are renumbered to start at 1, and their timestamps will be recalculated.<br/>
  Example: If your source file contains these four chapters: </p>
-<p> CHAPTER01=00:00:00.000<br />
- CHAPTER01NAME=Chapter 01<br />
- CHAPTER02=00:10:00.000<br />
- CHAPTER02NAME=Chapter 02<br />
- CHAPTER03=00:20:00.000<br />
- CHAPTER03NAME=Chapter 03<br />
- CHAPTER04=00:25:00.000<br />
+<p> CHAPTER01=00:00:00.000<br/>
+ CHAPTER01NAME=Chapter 01<br/>
+ CHAPTER02=00:10:00.000<br/>
+ CHAPTER02NAME=Chapter 02<br/>
+ CHAPTER03=00:20:00.000<br/>
+ CHAPTER03NAME=Chapter 03<br/>
+ CHAPTER04=00:25:00.000<br/>
  CHAPTER04NAME=Chapter 04 </p>
 <p> and you split after 15 minutes, then the first output file will only contain the first two chapters as shown above, and the second output file will contain the following two chapters and the remaining part of the first: </p>
-<p> CHAPTER01=00:00:00.000<br />
- CHAPTER01NAME=Chapter 02 (continued)<br />
- CHAPTER02=00:05:00.000<br />
- CHAPTER02NAME=Chapter 03<br />
- CHAPTER03=00:10:00.000<br />
+<p> CHAPTER01=00:00:00.000<br/>
+ CHAPTER01NAME=Chapter 02 (continued)<br/>
+ CHAPTER02=00:05:00.000<br/>
+ CHAPTER02NAME=Chapter 03<br/>
+ CHAPTER03=00:10:00.000<br/>
  CHAPTER03NAME=Chapter 04 </p>
 <p> Note that only variable names are changed, not the chapter names themselves. The exception is the first chapter of the second and following files where &quot;(continued)&quot; is appended in order to indicate that this is not the start of this chapter. If you want to change them as well you&#8217;ll have to remerge the resulting file with a new chapter file.</p>
 <h2>AUTHOR</h2>

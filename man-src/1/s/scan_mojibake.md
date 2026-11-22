@@ -21,7 +21,7 @@ scan_mojibake - scan Perl source and report bad character encoding
 
 <h2>DESCRIPTION</h2>
 
- Standalone <font SIZE="-1">CLI</font> wrapper for the Test::Mojibake module. 
+ Standalone CLI wrapper for the Test::Mojibake module. 
 
  Does exactly the same as: 
 

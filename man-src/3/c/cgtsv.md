@@ -11,7 +11,7 @@ description: "cgtsv.f –"
 <p> cgtsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgtsv</code> (N, NRHS, DL, D, DU, B, LDB, INFO)<br />
+<p> subroutine <code>cgtsv</code> (N, NRHS, DL, D, DU, B, LDB, INFO)<br/>
  <i></i><code> CGTSV computes the solution to system of linear equations A * X = B for GT matrices </code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgtsv (integerN, integerNRHS, complex, dimension( * )DL, complex, dimension( * )D, complex, dimension( * )DU, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

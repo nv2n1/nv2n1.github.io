@@ -35,7 +35,7 @@ BeakerLib - journal - journalling functionality
     rlJournalEnd
 </pre> 
 
- Run on the very end of your script to print summary of the whole test run, generate <font SIZE="-1">OUTPUTFILE</font> and include journal in Beaker logs. 
+ Run on the very end of your script to print summary of the whole test run, generate OUTPUTFILE and include journal in Beaker logs. 
 
  <i>rlJournalPrint</i> 
 
@@ -90,7 +90,7 @@ BeakerLib - journal - journalling functionality
 </pre>
 <dl>
 <dt>--full-journal
-</dt><dd> With this option, additional items like some <font SIZE="-1">HW</font> information will be printed in the journal.</dd></dl>
+</dt><dd> With this option, additional items like some HW information will be printed in the journal.</dd></dl>
  
 
  Example: 

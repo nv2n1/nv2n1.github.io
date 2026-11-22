@@ -11,7 +11,7 @@ description: "sla_syrcond.f –"
 <p> sla_syrcond.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>sla_syrcond</code> (UPLO, N, A, LDA, AF, LDAF, IPIV, CMODE, C, INFO, WORK, IWORK)<br />
+<p> REAL function <code>sla_syrcond</code> (UPLO, N, A, LDA, AF, LDAF, IPIV, CMODE, C, INFO, WORK, IWORK)<br/>
  <i></i><code>SLA_SYRCOND</code> estimates the Skeel condition number for a symmetric indefinite matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function sla_syrcond (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, integerCMODE, real, dimension( * )C, integerINFO, real, dimension( * )WORK, integer, dimension( * )IWORK)</h3>

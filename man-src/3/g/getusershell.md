@@ -45,7 +45,7 @@ Since glibc 2.21 : _DEFAULT_SOURCE
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>getusershell</code>(), <code>setusershell</code>(),<br />
+<td> <code>getusershell</code>(), <code>setusershell</code>(),<br/>
  <code>endusershell</code>() </td>
 <td>Thread safety</td>
 <td>MT-Unsafe

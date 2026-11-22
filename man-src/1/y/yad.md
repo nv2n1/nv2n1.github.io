@@ -281,27 +281,27 @@ description: "yad – display GTK+ dialogs in shell scripts"
 <h3>Form options</h3>
 <dl>
 <dt><code>&#8211;field=</code><i>LABEL[:TYPE]</i></dt>
-<dd> Add field to form. Type may be <i>H</i>, <i>RO</i>, <i>NUM</i>, <i>CHK</i>, <i>CB</i>, <i>CBE</i>, <i>CE</i>, <i>FL</i>, <i>SFL</i>, <i>DIR</i>, <i>CDIR</i>, <i>FN</i>, <i>MFL</i>, <i>MDIR</i>, <i>DT</i>, <i>SCL</i>, <i>CLR</i>, <i>BTN</i>, <i>FBTN</i>, <i>LBL</i> or <i>TXT</i>.<br />
- <code>H</code> &#8211; hidden field type. All characters are displayed as the invisible char.<br />
- <code>RO</code> &#8211; field is in read-only mode.<br />
- <code>NUM</code> &#8211; field is a numeric. Initial value format for this field is <i>VALUE[!RANGE[!STEP![PREC]]]</i>, where <i>RANGE</i> must be in form <i>MIN..MAX</i>. `!&#8217; is a default item separator. <i>PREC</i> is a precision for decimals.<br />
- <code>CHK</code> &#8211; checkbox field. Initial value is a case insensitive boolean constant (<i>TRUE</i> or <i>FALSE</i>).<br />
- <code>CB</code> &#8211; combo-box field. Initial value is a list <i>VAL1!VAL2!&#8230;</i>. The separator is the same as in <i>NUM</i> field. Value started with `^&#8217; threats as default for combo-box.<br />
- <code>CBE</code> &#8211; editable combo-box field. Initial value same as for combo-box.<br />
- <code>CE</code> &#8211; entry with completion. Initial value same as for combo-box.<br />
- <code>FL</code> &#8211; file selection button.<br />
- <code>SFL</code> &#8211; field for create file.<br />
- <code>DIR</code> &#8211; directory selection button.<br />
- <code>CDIR</code> &#8211; field for create folder.<br />
- <code>FN</code> &#8211; font selection button. Initial value same as in font dialog.<br />
- <code>MFL</code> &#8211; select multiple files. Value of this field is a list of files separated by <i>item-separator</i>.<br />
- <code>MDIR</code> &#8211; select multiple folders. Value of this field is a list of folders separated by <i>item-separator</i>.<br />
- <code>DT</code> &#8211; date field.<br />
- <code>SCL</code> &#8211; scale field. Value of this field in a range 0..100.<br />
- <code>CLR</code> &#8211; color selection button. Output values for this field generates in the same manner as for color dialog.<br />
- <code>BTN</code> &#8211; button field. Label may be in form text in a form <i>LABEL[!ICON[!TOOLTIP]]</i> where `!&#8217; is an item separator. <i>LABEL</i> is a text of button label or gtk stock id. <i>ICON</i> is a buttons icon (stock id or file name). <i>TOOLTIP</i> is an optional text for popup help string. Initial value is a command which is running when button is clicked. A special sympols <i>%N</i> in command are replaced by value of field <i>N</i>. If command starts with <i>@</i>, the output of command will be parsed and lines started with number and colon will be treats as a new field values. A quoting style for value when <i>sh -c</i> is used &#8211; a single quotes around command and double quotes around -c argument<br />
- <code>FBTN</code> &#8211; same as button field, but with full relief of a button.<br />
- <code>LBL</code> &#8211; text label. If field name is empty, horizontal separator line will be shown.<br />
+<dd> Add field to form. Type may be <i>H</i>, <i>RO</i>, <i>NUM</i>, <i>CHK</i>, <i>CB</i>, <i>CBE</i>, <i>CE</i>, <i>FL</i>, <i>SFL</i>, <i>DIR</i>, <i>CDIR</i>, <i>FN</i>, <i>MFL</i>, <i>MDIR</i>, <i>DT</i>, <i>SCL</i>, <i>CLR</i>, <i>BTN</i>, <i>FBTN</i>, <i>LBL</i> or <i>TXT</i>.<br/>
+ <code>H</code> &#8211; hidden field type. All characters are displayed as the invisible char.<br/>
+ <code>RO</code> &#8211; field is in read-only mode.<br/>
+ <code>NUM</code> &#8211; field is a numeric. Initial value format for this field is <i>VALUE[!RANGE[!STEP![PREC]]]</i>, where <i>RANGE</i> must be in form <i>MIN..MAX</i>. `!&#8217; is a default item separator. <i>PREC</i> is a precision for decimals.<br/>
+ <code>CHK</code> &#8211; checkbox field. Initial value is a case insensitive boolean constant (<i>TRUE</i> or <i>FALSE</i>).<br/>
+ <code>CB</code> &#8211; combo-box field. Initial value is a list <i>VAL1!VAL2!&#8230;</i>. The separator is the same as in <i>NUM</i> field. Value started with `^&#8217; threats as default for combo-box.<br/>
+ <code>CBE</code> &#8211; editable combo-box field. Initial value same as for combo-box.<br/>
+ <code>CE</code> &#8211; entry with completion. Initial value same as for combo-box.<br/>
+ <code>FL</code> &#8211; file selection button.<br/>
+ <code>SFL</code> &#8211; field for create file.<br/>
+ <code>DIR</code> &#8211; directory selection button.<br/>
+ <code>CDIR</code> &#8211; field for create folder.<br/>
+ <code>FN</code> &#8211; font selection button. Initial value same as in font dialog.<br/>
+ <code>MFL</code> &#8211; select multiple files. Value of this field is a list of files separated by <i>item-separator</i>.<br/>
+ <code>MDIR</code> &#8211; select multiple folders. Value of this field is a list of folders separated by <i>item-separator</i>.<br/>
+ <code>DT</code> &#8211; date field.<br/>
+ <code>SCL</code> &#8211; scale field. Value of this field in a range 0..100.<br/>
+ <code>CLR</code> &#8211; color selection button. Output values for this field generates in the same manner as for color dialog.<br/>
+ <code>BTN</code> &#8211; button field. Label may be in form text in a form <i>LABEL[!ICON[!TOOLTIP]]</i> where `!&#8217; is an item separator. <i>LABEL</i> is a text of button label or gtk stock id. <i>ICON</i> is a buttons icon (stock id or file name). <i>TOOLTIP</i> is an optional text for popup help string. Initial value is a command which is running when button is clicked. A special sympols <i>%N</i> in command are replaced by value of field <i>N</i>. If command starts with <i>@</i>, the output of command will be parsed and lines started with number and colon will be treats as a new field values. A quoting style for value when <i>sh -c</i> is used &#8211; a single quotes around command and double quotes around -c argument<br/>
+ <code>FBTN</code> &#8211; same as button field, but with full relief of a button.<br/>
+ <code>LBL</code> &#8211; text label. If field name is empty, horizontal separator line will be shown.<br/>
  <code>TXT</code> &#8211; multiline text entry. This field is always occupy all of form width. </dd>
 <p> Without type field will be a simple text entry.</p>
 <dt><code>&#8211;align=</code><i>TYPE</i></dt>

@@ -10,112 +10,112 @@ description: "Heimdal Kerberos 5 storage functions –"
 
 <p> Heimdal Kerberos 5 storage functions &#8211; </p>
 <h3>Functions</h3>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_address</code> (krb5_storage *, krb5_address *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_addrs</code> (krb5_storage *, krb5_addresses *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_authdata</code> (krb5_storage *, krb5_authdata *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_creds</code> (krb5_storage *, krb5_creds *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_creds_tag</code> (krb5_storage *, krb5_creds *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_data</code> (krb5_storage *, krb5_data *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_int16</code> (krb5_storage *, int16_t *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_int32</code> (krb5_storage *, int32_t *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_int8</code> (krb5_storage *, int8_t *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_keyblock</code> (krb5_storage *, krb5_keyblock *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_principal</code> (krb5_storage *, krb5_principal *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_string</code> (krb5_storage *, char **)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_stringz</code> (krb5_storage *, char **)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_times</code> (krb5_storage *, krb5_times *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_uint16</code> (krb5_storage *, uint16_t *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_uint32</code> (krb5_storage *, uint32_t *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ret_uint8</code> (krb5_storage *, uint8_t *)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_storage_clear_flags</code> (krb5_storage *, krb5_flags)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_storage<br />
+<p> KRB5_LIB_FUNCTION krb5_storage<br/>
  *KRB5_LIB_CALL <code>krb5_storage_emem</code> (void)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_storage_free</code> (krb5_storage *)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_storage<br />
+<p> KRB5_LIB_FUNCTION krb5_storage<br/>
  *KRB5_LIB_CALL <code>krb5_storage_from_data</code> (krb5_data *)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_storage<br />
+<p> KRB5_LIB_FUNCTION krb5_storage<br/>
  *KRB5_LIB_CALL <code>krb5_storage_from_fd</code> (int)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_storage<br />
+<p> KRB5_LIB_FUNCTION krb5_storage<br/>
  *KRB5_LIB_CALL <code>krb5_storage_from_mem</code> (void *, size_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_storage<br />
+<p> KRB5_LIB_FUNCTION krb5_storage<br/>
  *KRB5_LIB_CALL <code>krb5_storage_from_readonly_mem</code> (const void *, size_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_storage<br />
+<p> KRB5_LIB_FUNCTION krb5_storage<br/>
  *KRB5_LIB_CALL <code>krb5_storage_from_socket</code> (krb5_socket_t)&quot; </p>
 <p> KRB5_LIB_FUNCTION int KRB5_LIB_CALL <code>krb5_storage_fsync</code> (krb5_storage *) </p>
-<p> KRB5_LIB_FUNCTION krb5_flags<br />
+<p> KRB5_LIB_FUNCTION krb5_flags<br/>
  KRB5_LIB_CALL <code>krb5_storage_get_byteorder</code> (krb5_storage *)&quot; </p>
 <p> KRB5_LIB_FUNCTION int KRB5_LIB_CALL <code>krb5_storage_get_eof_code</code> (krb5_storage *) </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_storage_is_flags</code> (krb5_storage *, krb5_flags)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_ssize_t<br />
+<p> KRB5_LIB_FUNCTION krb5_ssize_t<br/>
  KRB5_LIB_CALL <code>krb5_storage_read</code> (krb5_storage *, void *, size_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION off_t<br />
+<p> KRB5_LIB_FUNCTION off_t<br/>
  KRB5_LIB_CALL <code>krb5_storage_seek</code> (krb5_storage *, off_t, int)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_storage_set_byteorder</code> (krb5_storage *, krb5_flags)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_storage_set_eof_code</code> (krb5_storage *, int)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_storage_set_flags</code> (krb5_storage *, krb5_flags)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_storage_set_max_alloc</code> (krb5_storage *, size_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_storage_to_data</code> (krb5_storage *, krb5_data *)&quot; </p>
 <p> KRB5_LIB_FUNCTION int KRB5_LIB_CALL <code>krb5_storage_truncate</code> (krb5_storage *, off_t) </p>
-<p> KRB5_LIB_FUNCTION krb5_ssize_t<br />
+<p> KRB5_LIB_FUNCTION krb5_ssize_t<br/>
  KRB5_LIB_CALL <code>krb5_storage_write</code> (krb5_storage *, const void *, size_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_address</code> (krb5_storage *, krb5_address)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_addrs</code> (krb5_storage *, krb5_addresses)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_authdata</code> (krb5_storage *, krb5_authdata)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_creds</code> (krb5_storage *, krb5_creds *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_creds_tag</code> (krb5_storage *, krb5_creds *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_data</code> (krb5_storage *, krb5_data)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_int16</code> (krb5_storage *, int16_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_int32</code> (krb5_storage *, int32_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_int8</code> (krb5_storage *, int8_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_keyblock</code> (krb5_storage *, krb5_keyblock)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_principal</code> (krb5_storage *, krb5_const_principal)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_string</code> (krb5_storage *, const char *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_stringz</code> (krb5_storage *, const char *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_times</code> (krb5_storage *, krb5_times)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_uint16</code> (krb5_storage *, uint16_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_uint32</code> (krb5_storage *, uint32_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_store_uint8</code> (krb5_storage *, uint8_t)&quot; </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -124,7 +124,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>adr</i> the address block read from storage</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -135,7 +135,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>adr</i> the addresses block read from storage</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -146,7 +146,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>auth</i> the auth data block read from storage</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -157,7 +157,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>creds</i> the credentials block read from storage</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -168,7 +168,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>creds</i> the credentials block read from storage</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -179,7 +179,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to read from<br />
+</dt><dd> <i>sp</i> the storage buffer to read from<br/>
  <i>data</i> the parsed data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -190,7 +190,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to write too<br />
+</dt><dd> <i>sp</i> the storage to write too<br/>
  <i>value</i> the value read from the buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -201,7 +201,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to write too<br />
+</dt><dd> <i>sp</i> the storage to write too<br/>
  <i>value</i> the value read from the buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -212,7 +212,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to write too<br />
+</dt><dd> <i>sp</i> the storage to write too<br/>
  <i>value</i> the value read from the buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -223,7 +223,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>p</i> the keyblock read from storage, free using <code>krb5_free_keyblock()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -234,7 +234,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to read from<br />
+</dt><dd> <i>sp</i> the storage buffer to read from<br/>
  <i>princ</i> the parsed principal</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -245,7 +245,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to read from<br />
+</dt><dd> <i>sp</i> the storage buffer to read from<br/>
  <i>string</i> the parsed string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -256,7 +256,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to read from<br />
+</dt><dd> <i>sp</i> the storage buffer to read from<br/>
  <i>string</i> the parsed string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -267,7 +267,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>times</i> the times block read from storage</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -278,7 +278,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to write too<br />
+</dt><dd> <i>sp</i> the storage to write too<br/>
  <i>value</i> the value read from the buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -289,7 +289,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to write too<br />
+</dt><dd> <i>sp</i> the storage to write too<br/>
  <i>value</i> the value read from the buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -300,7 +300,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to write too<br />
+</dt><dd> <i>sp</i> the storage to write too<br/>
  <i>value</i> the value read from the buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -311,7 +311,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to clear the flags on<br />
+</dt><dd> <i>sp</i> the storage buffer to clear the flags on<br/>
  <i>flags</i> the flags to clear</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_storage *KRB5_LIB_CALL krb5_storage_emem (void)</h3>
 <p> Create a elastic (allocating) memory storage backend. Memory is allocated on demand. Free returned krb5_storage with <code>krb5_storage_free()</code>. </p>
@@ -430,7 +430,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to check flags on<br />
+</dt><dd> <i>sp</i> the storage buffer to check flags on<br/>
  <i>flags</i> The flags to test for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -441,8 +441,8 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to read from<br />
- <i>buf</i> the buffer to store the data in<br />
+</dt><dd> <i>sp</i> the storage buffer to read from<br/>
+ <i>buf</i> the buffer to store the data in<br/>
  <i>len</i> the length to read</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -453,8 +453,8 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to seek in.<br />
- <i>offset</i> the offset to seek<br />
+</dt><dd> <i>sp</i> the storage buffer to seek in.<br/>
+ <i>offset</i> the offset to seek<br/>
  <i>whence</i> relateive searching, SEEK_CUR from the current position, SEEK_END from the end, SEEK_SET absolute from the start.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -465,7 +465,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to set the byte order for.<br />
+</dt><dd> <i>sp</i> the storage buffer to set the byte order for.<br/>
  <i>byteorder</i> the new byte order.</dd></dl>
 <p> The byte order are: KRB5_STORAGE_BYTEORDER_BE, KRB5_STORAGE_BYTEORDER_LE and KRB5_STORAGE_BYTEORDER_HOST.</p>
 <h3>KRB5_LIB_FUNCTION void KRB5_LIB_CALL krb5_storage_set_eof_code (krb5_storage *sp, intcode)</h3>
@@ -473,28 +473,28 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage<br />
+</dt><dd> <i>sp</i> the storage<br/>
  <i>code</i> the error code to return on end of storage</dd></dl>
 <h3>KRB5_LIB_FUNCTION void KRB5_LIB_CALL krb5_storage_set_flags (krb5_storage *sp, krb5_flagsflags)</h3>
 <p> Add the flags on a storage buffer by or-ing in the flags to the buffer. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to set the flags on<br />
+</dt><dd> <i>sp</i> the storage buffer to set the flags on<br/>
  <i>flags</i> the flags to set</dd></dl>
 <h3>KRB5_LIB_FUNCTION void KRB5_LIB_CALL krb5_storage_set_max_alloc (krb5_storage *sp, size_tsize)</h3>
 <p> Set the max alloc value </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer set the max allow for<br />
+</dt><dd> <i>sp</i> the storage buffer set the max allow for<br/>
  <i>size</i> maximum size to allocate, use 0 to remove limit</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_storage_to_data (krb5_storage *sp, krb5_data *data)</h3>
 <p> Copy the contnent of storage </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to copy to a data<br />
+</dt><dd> <i>sp</i> the storage to copy to a data<br/>
  <i>data</i> the copied data, free with <code>krb5_data_free()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -505,7 +505,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to truncate.<br />
+</dt><dd> <i>sp</i> the storage buffer to truncate.<br/>
  <i>offset</i> the offset to truncate too.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -516,8 +516,8 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
- <i>buf</i> the buffer to write to the storage buffer<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
+ <i>buf</i> the buffer to write to the storage buffer<br/>
  <i>len</i> the length to write</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -528,7 +528,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>p</i> the address block to write.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -539,7 +539,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>p</i> the addresses block to write.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -550,7 +550,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>auth</i> the auth data block to write.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -561,7 +561,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>creds</i> the creds block to write.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -572,7 +572,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>creds</i> the creds block to write.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -583,7 +583,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>data</i> the buffer to store.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -594,7 +594,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to write too<br />
+</dt><dd> <i>sp</i> the storage to write too<br/>
  <i>value</i> the value to store</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -605,7 +605,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to write too<br />
+</dt><dd> <i>sp</i> the storage to write too<br/>
  <i>value</i> the value to store</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -616,7 +616,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to write too<br />
+</dt><dd> <i>sp</i> the storage to write too<br/>
  <i>value</i> the value to store</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -627,7 +627,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>p</i> the keyblock to write</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -638,7 +638,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>p</i> the principal block to write.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -649,7 +649,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>s</i> the string to store.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -660,7 +660,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>s</i> the string to store.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -671,7 +671,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage buffer to write to<br />
+</dt><dd> <i>sp</i> the storage buffer to write to<br/>
  <i>times</i> the times block to write.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -682,7 +682,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to write too<br />
+</dt><dd> <i>sp</i> the storage to write too<br/>
  <i>value</i> the value to store</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -693,7 +693,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to write too<br />
+</dt><dd> <i>sp</i> the storage to write too<br/>
  <i>value</i> the value to store</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -704,7 +704,7 @@ description: "Heimdal Kerberos 5 storage functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>sp</i> the storage to write too<br />
+</dt><dd> <i>sp</i> the storage to write too<br/>
  <i>value</i> the value to store</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

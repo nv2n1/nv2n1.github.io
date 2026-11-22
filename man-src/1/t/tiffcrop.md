@@ -8,11 +8,11 @@ url: "/docs/linux/man/1-tiffcrop/"
 description: "tiffcrop – select, copy, crop, convert, extract, and/or process one or more TIFF files."
 ---
 
-<p> tiffcrop &#8211; select, copy, crop, convert, extract, and/or process one or more <font SIZE="-1">TIFF</font> files.</p>
+<p> tiffcrop &#8211; select, copy, crop, convert, extract, and/or process one or more TIFF files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffcrop</code> [ <i>options</i> ] <i>src1.tif &#8230; srcN.tif dst.tif</i></p>
 <h2>DESCRIPTION</h2>
-<p> <i>Tiffcrop</i> processes one or more files created according to the Tag Image File Format, Revision 6.0, specification into one or more <font SIZE="-1">TIFF</font> file(s). <i>Tiffcrop</i> is most often used to extract portions of an image for processing with bar code recognizer or OCR software when that software cannot restrict the region of interest to a specific portion of the image or to improve efficiency when the regions of interest must be rotated. It can also be used to subdivide all or part of a processed image into smaller sections and export individual images or sections of images as separate files or separate images within one or more files derived from the original input image or images. </p>
+<p> <i>Tiffcrop</i> processes one or more files created according to the Tag Image File Format, Revision 6.0, specification into one or more TIFF file(s). <i>Tiffcrop</i> is most often used to extract portions of an image for processing with bar code recognizer or OCR software when that software cannot restrict the region of interest to a specific portion of the image or to improve efficiency when the regions of interest must be rotated. It can also be used to subdivide all or part of a processed image into smaller sections and export individual images or sections of images as separate files or separate images within one or more files derived from the original input image or images. </p>
 <p> The available functions can be grouped broadly into three classes:</p>
 <dl>
 <dt>
@@ -24,7 +24,7 @@ description: "tiffcrop – select, copy, crop, convert, extract, and/or process 
 <p> Functions are applied to the input image(s) in the following order: cropping, fixed area extraction, zone and region extraction, inversion, mirroring, rotation. </p>
 <p> Functions are applied to the output image(s) in the following order: export mode options for grouping zones, regions, or images into one or more files, <i>or</i> row and column divisions with output margins, <i>or</i> page size divisions with page orientation options. </p>
 <p> Finally, strip, tile, byte order, output resolution, and compression options are applied to all output images. </p>
-<p> The output file(s) may be organized and compressed using a different algorithm from the input files. By default, <i>tiffcrop</i> will copy all the understood tags in a <font SIZE="-1">TIFF</font> directory of an input file to the associated directory in the output file. Options can be used to force the resultant image to be written as strips or tiles of data, respectively. </p>
+<p> The output file(s) may be organized and compressed using a different algorithm from the input files. By default, <i>tiffcrop</i> will copy all the understood tags in a TIFF directory of an input file to the associated directory in the output file. Options can be used to force the resultant image to be written as strips or tiles of data, respectively. </p>
 <p> <i>Tiffcrop</i> can be used to reorganize the storage characteristics of data in a file, and to reorganize, extract, rotate, and otherwise process the image data as specified at the same time whereas tiffcp does not alter the image data within the file. </p>
 <p> Using the options for selecting individual input images and the options for exporting images and/or segments defined as zones or regions of each input image, <i>tiffcrop</i> can perform the functions of tiffcp and tiffsplit in a single pass while applying multiple operations to individual selections or images. </p>
 <h2>OPTIONS</h2>
@@ -89,13 +89,13 @@ description: "tiffcrop – select, copy, crop, convert, extract, and/or process 
 <dt><code>-c</code></dt>
 <dd> Specify the compression to use for data written to the output file: <code>none </code> for no compression, <code>packbits</code> for PackBits compression, <code>lzw</code> for Lempel-Ziv &amp; Welch compression, <code>jpeg </code> for baseline JPEG compression. <code>zip</code> for Deflate compression, <code>g3</code> for CCITT Group 3 (T.4) compression, and <code>g4</code> for CCITT Group 4 (T.6) compression. By default <i>tiffcrop</i> will compress data according to the value of the <i>Compression</i> tag found in the source file.</dd>
 <dt>
-</dt><dd> The <font SIZE="-1">CCITT</font> Group 3 and Group 4 compression algorithms can only be used with bilevel data.</dd>
+</dt><dd> The CCITT Group 3 and Group 4 compression algorithms can only be used with bilevel data.</dd>
 <dt>
 </dt><dd> Group 3 compression can be specified together with several T.4-specific options: <code>1d</code> for 1-dimensional encoding, <code>2d</code> for 2-dimensional encoding, and <code>fill</code> to force each encoded scanline to be zero-filled so that the terminating EOL code lies on a byte boundary. Group 3-specific options are specified by appending a &#8220;:&#8221;-separated list to the &#8220;g3&#8221; option; e.g. <code>-c g3:2d:fill</code> to get 2D-encoded data with byte-aligned EOL codes.</dd>
 <dt>
-</dt><dd> <font SIZE="-1">LZW</font> compression can be specified together with a <i>predictor</i> value. A predictor value of 2 causes each scanline of the output image to undergo horizontal differencing before it is encoded; a value of 1 forces each scanline to be encoded without differencing. LZW-specific options are specified by appending a &#8220;:&#8221;-separated list to the &#8220;lzw&#8221; option; e.g. <code>-c lzw:2</code> for <font SIZE="-1">LZW</font> compression with horizontal differencing.</dd>
+</dt><dd> LZW compression can be specified together with a <i>predictor</i> value. A predictor value of 2 causes each scanline of the output image to undergo horizontal differencing before it is encoded; a value of 1 forces each scanline to be encoded without differencing. LZW-specific options are specified by appending a &#8220;:&#8221;-separated list to the &#8220;lzw&#8221; option; e.g. <code>-c lzw:2</code> for LZW compression with horizontal differencing.</dd>
 <dt><code>-f</code></dt>
-<dd> Specify the bit fill order to use in writing output data. By default, <i>tiffcrop</i> will create a new file with the same fill order as the original. Specifying <code>-f lsb2msb</code> will force data to be written with the FillOrder tag set to <font SIZE="-1">LSB2MSB,</font> while <code>-f msb2lsb</code> will force data to be written with the FillOrder tag set to <font SIZE="-1">MSB2LSB.</font></dd>
+<dd> Specify the bit fill order to use in writing output data. By default, <i>tiffcrop</i> will create a new file with the same fill order as the original. Specifying <code>-f lsb2msb</code> will force data to be written with the FillOrder tag set to LSB2MSB, while <code>-f msb2lsb</code> will force data to be written with the FillOrder tag set to MSB2LSB.</dd>
 <dt><code>-i</code></dt>
 <dd> Ignore non-fatal read errors and continue processing of the input file.</dd>
 <dt><code>-l</code></dt>
@@ -130,10 +130,10 @@ description: "tiffcrop – select, copy, crop, convert, extract, and/or process 
 </dt><dd> When dump files are being written, each image will be written to a separate file with the name built by adding a numeric sequence value to the dumpname and an extension of .txt for ASCII dumps or .bin for binary dumps. </dd>
 <p> The four debug/dump options are independent, though it makes little sense to specify a dump file without specifying a detail level.</p>
 <dt>
-</dt><dd> Note: Tiffcrop may be compiled with -DDEVELMODE to enable additional very<br />
+</dt><dd> Note: Tiffcrop may be compiled with -DDEVELMODE to enable additional very<br/>
 &nbsp;<wbr>low level debug reporting.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> The following concatenates two files and writes the result using <font SIZE="-1">LZW</font> encoding:</p>
+<p> The following concatenates two files and writes the result using LZW encoding:</p>
 <dl>
 <dt>
 </dt><dd>
@@ -141,7 +141,7 @@ description: "tiffcrop – select, copy, crop, convert, extract, and/or process 
 tiffcrop -c lzw a.tif b.tif result.tif
 </pre>
 </dd></dl>
-<p> To convert a G3 1d-encoded <font SIZE="-1">TIFF</font> to a single strip of G4-encoded data the following might be used:</p>
+<p> To convert a G3 1d-encoded TIFF to a single strip of G4-encoded data the following might be used:</p>
 <dl>
 <dt>
 </dt><dd>

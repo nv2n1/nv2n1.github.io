@@ -10,8 +10,8 @@ description: "xxd – make a hexdump or do the reverse."
 
 <p> <i>xxd</i> &#8211; make a hexdump or do the reverse. </p>
 <h2>SYNOPSIS</h2>
-<p> <code>xxd</code> -h[elp]<br />
- <code>xxd</code> [options] [infile [outfile]]<br />
+<p> <code>xxd</code> -h[elp]<br/>
+ <code>xxd</code> [options] [infile [outfile]]<br/>
  <code>xxd</code> -r[evert] [options] [infile [outfile]]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>xxd</i> creates a hex dump of a given file or standard input. It can also convert a hex dump back to its original binary form. Like <code>uuencode</code>(1) and <code>uudecode</code>(1) it allows the transmission of binary data in a `mail-safe&#8217; ASCII representation, but has the advantage of decoding to standard output. Moreover, it can be used to perform binary file patching.</p>
@@ -57,70 +57,70 @@ description: "xxd – make a hexdump or do the reverse."
 <p> <i>xxd -r</i> has some builtin magic while evaluating line number information. If the output file is seekable, then the linenumbers at the start of each hexdump line may be out of order, lines may be missing, or overlapping. In these cases xxd will <a href="/docs/linux/man/2-lseek/">lseek</a>(2) to the next position. If the output file is not seekable, only gaps are allowed, which will be filled by null-bytes. </p>
 <p> <i>xxd -r</i> never generates parse errors. Garbage is silently skipped. </p>
 <p> When editing hexdumps, please note that <i>xxd -r</i> skips everything on the input line after reading enough columns of hexadecimal data (see option -c). This also means, that changes to the printable ascii (or ebcdic) columns are always ignored. Reverting a plain (or postscript) style hexdump with xxd -r -p does not depend on the correct number of columns. Here anything that looks like a pair of hex-digits is interpreted. </p>
-<p> Note the difference between<br />
- <i>% xxd -i file</i><br />
- and<br />
+<p> Note the difference between<br/>
+ <i>% xxd -i file</i><br/>
+ and<br/>
  <i>% xxd -i &lt; file</i> </p>
 <p> <i>xxd -s +seek</i> may be different from <i>xxd -s seek</i>, as <a href="/docs/linux/man/2-lseek/">lseek</a>(2) is used to &quot;rewind&quot; input. A &#8216;+&#8217; makes a difference if the input source is stdin, and if stdin&#8217;s file position is not at the start of the file by the time xxd is started and given its input. The following examples may help to clarify (or further confuse!)&#8230; </p>
-<p> Rewind stdin before reading; needed because the `cat&#8217; has already read to the end of stdin.<br />
+<p> Rewind stdin before reading; needed because the `cat&#8217; has already read to the end of stdin.<br/>
  <i>% sh -c &quot;cat &gt; plain_copy; xxd -s 0 &gt; hex_copy&quot; &lt; file</i> </p>
-<p> Hexdump from file position 0x480 (=1024+128) onwards. The `+&#8217; sign means &quot;relative to the current position&quot;, thus the `128&#8242; adds to the 1k where dd left off.<br />
+<p> Hexdump from file position 0x480 (=1024+128) onwards. The `+&#8217; sign means &quot;relative to the current position&quot;, thus the `128&#8242; adds to the 1k where dd left off.<br/>
  <i>% sh -c &quot;dd of=plain_snippet bs=1k count=1; xxd -s +128 &gt; hex_snippet&quot; &lt; file</i> </p>
-<p> Hexdump from file position 0x100 ( = 1024-768) on.<br />
+<p> Hexdump from file position 0x100 ( = 1024-768) on.<br/>
  <i>% sh -c &quot;dd of=plain_snippet bs=1k count=1; xxd -s +-768 &gt; hex_snippet&quot; &lt; file</i> </p>
 <p> However, this is a rare situation and the use of `+&#8217; is rarely needed. The author prefers to monitor the effect of xxd with <a href="/docs/linux/man/1-strace/">strace</a>(1) or truss(1), whenever -s is used.</p>
 <h2>EXAMPLES</h2>
-<p> Print everything but the first three lines (hex 0x30 bytes) of <code>file</code>.<br />
+<p> Print everything but the first three lines (hex 0x30 bytes) of <code>file</code>.<br/>
  <i>% xxd -s 0x30 file</i> </p>
-<p> Print 3 lines (hex 0x30 bytes) from the end of <code>file</code>.<br />
+<p> Print 3 lines (hex 0x30 bytes) from the end of <code>file</code>.<br/>
  <i>% xxd -s -0x30 file</i> </p>
-<p> Print 120 bytes as continuous hexdump with 20 octets per line.<br />
- <i>% xxd -l 120 -ps -c 20 xxd.1</i><br />
- 2e54482058584420312022417567757374203139<br />
- 39362220224d616e75616c207061676520666f72<br />
- 20787864220a2e5c220a2e5c222032317374204d<br />
- 617920313939360a2e5c22204d616e2070616765<br />
- 20617574686f723a0a2e5c2220202020546f6e79<br />
+<p> Print 120 bytes as continuous hexdump with 20 octets per line.<br/>
+ <i>% xxd -l 120 -ps -c 20 xxd.1</i><br/>
+ 2e54482058584420312022417567757374203139<br/>
+ 39362220224d616e75616c207061676520666f72<br/>
+ 20787864220a2e5c220a2e5c222032317374204d<br/>
+ 617920313939360a2e5c22204d616e2070616765<br/>
+ 20617574686f723a0a2e5c2220202020546f6e79<br/>
  204e7567656e74203c746f6e79407363746e7567 </p>
-<p> Hexdump the first 120 bytes of this man page with 12 octets per line.<br />
- <i>% xxd -l 120 -c 12 xxd.1</i><br />
- 0000000: 2e54 4820 5858 4420 3120 2241 .TH XXD 1 &quot;A<br />
- 000000c: 7567 7573 7420 3139 3936 2220 ugust 1996&quot;<br />
- 0000018: 224d 616e 7561 6c20 7061 6765 &quot;Manual page<br />
- 0000024: 2066 6f72 2078 7864 220a 2e5c for xxd&quot;..\<br />
- 0000030: 220a 2e5c 2220 3231 7374 204d &quot;..\&quot; 21st M<br />
- 000003c: 6179 2031 3939 360a 2e5c 2220 ay 1996..\&quot;<br />
- 0000048: 4d61 6e20 7061 6765 2061 7574 Man page aut<br />
- 0000054: 686f 723a 0a2e 5c22 2020 2020 hor:..\&quot;<br />
- 0000060: 546f 6e79 204e 7567 656e 7420 Tony Nugent<br />
+<p> Hexdump the first 120 bytes of this man page with 12 octets per line.<br/>
+ <i>% xxd -l 120 -c 12 xxd.1</i><br/>
+ 0000000: 2e54 4820 5858 4420 3120 2241 .TH XXD 1 &quot;A<br/>
+ 000000c: 7567 7573 7420 3139 3936 2220 ugust 1996&quot;<br/>
+ 0000018: 224d 616e 7561 6c20 7061 6765 &quot;Manual page<br/>
+ 0000024: 2066 6f72 2078 7864 220a 2e5c for xxd&quot;..\<br/>
+ 0000030: 220a 2e5c 2220 3231 7374 204d &quot;..\&quot; 21st M<br/>
+ 000003c: 6179 2031 3939 360a 2e5c 2220 ay 1996..\&quot;<br/>
+ 0000048: 4d61 6e20 7061 6765 2061 7574 Man page aut<br/>
+ 0000054: 686f 723a 0a2e 5c22 2020 2020 hor:..\&quot;<br/>
+ 0000060: 546f 6e79 204e 7567 656e 7420 Tony Nugent<br/>
  000006c: 3c74 6f6e 7940 7363 746e 7567 &lt;tony [at] sctnug </p>
-<p> Display just the date from the file xxd.1<br />
- <i>% xxd -s 0x36 -l 13 -c 13 xxd.1</i><br />
+<p> Display just the date from the file xxd.1<br/>
+ <i>% xxd -s 0x36 -l 13 -c 13 xxd.1</i><br/>
  0000036: 3231 7374 204d 6179 2031 3939 36 21st May 1996 </p>
-<p> Copy <code>input_file</code> to <code>output_file</code> and prepend 100 bytes of value 0x00.<br />
+<p> Copy <code>input_file</code> to <code>output_file</code> and prepend 100 bytes of value 0x00.<br/>
  <i>% xxd input_file | xxd -r -s 100 &gt; output_file</i> </p>
-<p> Patch the date in the file xxd.1<br />
- <i>% echo &quot;0000037: 3574 68&quot; | xxd -r &#8211; xxd.1</i><br />
- <i>% xxd -s 0x36 -l 13 -c 13 xxd.1</i><br />
+<p> Patch the date in the file xxd.1<br/>
+ <i>% echo &quot;0000037: 3574 68&quot; | xxd -r &#8211; xxd.1</i><br/>
+ <i>% xxd -s 0x36 -l 13 -c 13 xxd.1</i><br/>
  0000036: 3235 7468 204d 6179 2031 3939 36 25th May 1996 </p>
-<p> Create a 65537 byte file with all bytes 0x00, except for the last one which is &#8216;A&#8217; (hex 0x41).<br />
+<p> Create a 65537 byte file with all bytes 0x00, except for the last one which is &#8216;A&#8217; (hex 0x41).<br/>
  <i>% echo &quot;010000: 41&quot; | xxd -r &gt; file</i> </p>
-<p> Hexdump this file with autoskip.<br />
- <i>% xxd -a -c 12 file</i><br />
- 0000000: 0000 0000 0000 0000 0000 0000 &#8230;&#8230;&#8230;&#8230;<br />
- *<br />
+<p> Hexdump this file with autoskip.<br/>
+ <i>% xxd -a -c 12 file</i><br/>
+ 0000000: 0000 0000 0000 0000 0000 0000 &#8230;&#8230;&#8230;&#8230;<br/>
+ *<br/>
  000fffc: 0000 0000 40 &#8230;.A </p>
-<p> Create a 1 byte file containing a single &#8216;A&#8217; character. The number after &#8216;-r -s&#8217; adds to the linenumbers found in the file; in effect, the leading bytes are suppressed.<br />
+<p> Create a 1 byte file containing a single &#8216;A&#8217; character. The number after &#8216;-r -s&#8217; adds to the linenumbers found in the file; in effect, the leading bytes are suppressed.<br/>
  <i>% echo &quot;010000: 41&quot; | xxd -r -s -0x10000 &gt; file</i> </p>
-<p> Use xxd as a filter within an editor such as <code><a href="/docs/linux/man/1-vim/">vim</a>(1)</code> to hexdump a region marked between `a&#8217; and `z&#8217;.<br />
+<p> Use xxd as a filter within an editor such as <code><a href="/docs/linux/man/1-vim/">vim</a>(1)</code> to hexdump a region marked between `a&#8217; and `z&#8217;.<br/>
  <i>:&#8217;a,&#8217;z!xxd</i> </p>
-<p> Use xxd as a filter within an editor such as <code><a href="/docs/linux/man/1-vim/">vim</a>(1)</code> to recover a binary hexdump marked between `a&#8217; and `z&#8217;.<br />
+<p> Use xxd as a filter within an editor such as <code><a href="/docs/linux/man/1-vim/">vim</a>(1)</code> to recover a binary hexdump marked between `a&#8217; and `z&#8217;.<br/>
  <i>:&#8217;a,&#8217;z!xxd -r</i> </p>
-<p> Use xxd as a filter within an editor such as <code><a href="/docs/linux/man/1-vim/">vim</a>(1)</code> to recover one line of a hexdump. Move the cursor over the line and type:<br />
+<p> Use xxd as a filter within an editor such as <code><a href="/docs/linux/man/1-vim/">vim</a>(1)</code> to recover one line of a hexdump. Move the cursor over the line and type:<br/>
  <i>!!xxd -r</i> </p>
-<p> Read single characters from a serial line<br />
- <i>% xxd -c1 &lt; /dev/term/b &amp;</i><br />
- <i>% stty &lt; /dev/term/b -echo -opost -isig -icanon min 1</i><br />
+<p> Read single characters from a serial line<br/>
+ <i>% xxd -c1 &lt; /dev/term/b &amp;</i><br/>
+ <i>% stty &lt; /dev/term/b -echo -opost -isig -icanon min 1</i><br/>
  <i>% echo -n foo &gt; /dev/term/b</i> </p>
 <h2>RETURN VALUES</h2>
 <p> The following error values are returned:</p>
@@ -144,11 +144,11 @@ description: "xxd – make a hexdump or do the reverse."
 <h2>VERSION</h2>
 <p> This manual page documents xxd version 1.7</p>
 <h2>AUTHOR</h2>
-<p> (c) 1990-1997 by Juergen Weigert<br />
+<p> (c) 1990-1997 by Juergen Weigert<br/>
  &lt;jnweiger [at] informatik.uni-erlangen.de&gt; </p>
-<p> Distribute freely and credit me,<br />
- make money and share with me,<br />
+<p> Distribute freely and credit me,<br/>
+ make money and share with me,<br/>
  lose money and don&#8217;t ask me. </p>
-<p> Manual page started by Tony Nugent<br />
- &lt;tony [at] sctnugen.ppp.gu.edu.au&gt; &lt;T.Nugent [at] sct.gu.edu.au&gt;<br />
+<p> Manual page started by Tony Nugent<br/>
+ &lt;tony [at] sctnugen.ppp.gu.edu.au&gt; &lt;T.Nugent [at] sct.gu.edu.au&gt;<br/>
  Small changes by Bram Moolenaar. Edited by Juergen Weigert. </p>

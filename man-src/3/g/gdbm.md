@@ -34,25 +34,25 @@ int gdbm_fdesc(GDBM_FILE dbf);
 </code></pre>
 <h3>DBM Compatability routines:</h3>
 <p> <code>#include &lt;dbm.h&gt;</code> </p>
-<p> <code>int dbminit (const char *</code><i>name</i><code>);</code><br />
- <code>int store (datum </code><i>key</i><code>, datum </code><i>content</i><code>);</code><br />
- <code>datum fetch (datum </code><i>key</i><code>);</code><br />
- <code>int delete (datum </code><i>key</i><code>);</code><br />
- <code>datum firstkey (void);</code><br />
- <code>datum nextkey (datum </code><i>key</i><code>);</code><br />
+<p> <code>int dbminit (const char *</code><i>name</i><code>);</code><br/>
+ <code>int store (datum </code><i>key</i><code>, datum </code><i>content</i><code>);</code><br/>
+ <code>datum fetch (datum </code><i>key</i><code>);</code><br/>
+ <code>int delete (datum </code><i>key</i><code>);</code><br/>
+ <code>datum firstkey (void);</code><br/>
+ <code>datum nextkey (datum </code><i>key</i><code>);</code><br/>
  <code>int dbmclose (void);</code> </p>
 <h3>NDBM Compatability routines:</h3>
 <p> <code>#include &lt;ndbm.h&gt;</code> </p>
-<p> <code>DBM *dbm_open (const char *</code><i>name</i><code>, int </code><i>flags</i><code>, int </code><i>mode</i><code>);</code><br />
- <code>void dbm_close (DBM *</code><i>file</i><code>);</code> <code>datum</code><i>dbm_fetch</i><code>(DBM</code><i>* file ,</i><code>datum</code><i> key );</i><br />
- <code>int dbm_store (DBM *</code><i>file</i><code>, datum </code><i>key</i><code>, datum </code><i>content</i><code>, int </code><i>flags</i><code>);</code><br />
- <code>int dbm_delete (DBM *</code><i>file</i><code>, datum </code><i>key</i><code>);</code><br />
- <code>datum dbm_firstkey (DBM *</code><i>file</i><code>);</code><br />
- <code>datum dbm_nextkey (DBM *</code><i>file</i><code>, datum </code><i>key</i><code>);</code><br />
- <code>int dbm_error (DBM *</code><i>file</i><code>);</code><br />
- <code>int dbm_clearerr (DBM *</code><i>file</i><code>);</code><br />
- <code>int dbm_pagfno (DBM *</code><i>file</i><code>);</code><br />
- <code>int dbm_dirfno (DBM *</code><i>file</i><code>);</code><br />
+<p> <code>DBM *dbm_open (const char *</code><i>name</i><code>, int </code><i>flags</i><code>, int </code><i>mode</i><code>);</code><br/>
+ <code>void dbm_close (DBM *</code><i>file</i><code>);</code> <code>datum</code><i>dbm_fetch</i><code>(DBM</code><i>* file ,</i><code>datum</code><i> key );</i><br/>
+ <code>int dbm_store (DBM *</code><i>file</i><code>, datum </code><i>key</i><code>, datum </code><i>content</i><code>, int </code><i>flags</i><code>);</code><br/>
+ <code>int dbm_delete (DBM *</code><i>file</i><code>, datum </code><i>key</i><code>);</code><br/>
+ <code>datum dbm_firstkey (DBM *</code><i>file</i><code>);</code><br/>
+ <code>datum dbm_nextkey (DBM *</code><i>file</i><code>, datum </code><i>key</i><code>);</code><br/>
+ <code>int dbm_error (DBM *</code><i>file</i><code>);</code><br/>
+ <code>int dbm_clearerr (DBM *</code><i>file</i><code>);</code><br/>
+ <code>int dbm_pagfno (DBM *</code><i>file</i><code>);</code><br/>
+ <code>int dbm_dirfno (DBM *</code><i>file</i><code>);</code><br/>
  <code>int dbm_rdonly (DBM *</code><i>file</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>GNU dbm</code> is a library of routines that manages data files that contain key/data pairs. The access provided is that of storing, retrieval, and deletion by key and a non-sorted traversal of all keys. A process is allowed to use multiple data files at the same time. </p>
@@ -60,8 +60,8 @@ int gdbm_fdesc(GDBM_FILE dbf);
 <p>&nbsp;<wbr>&nbsp;<wbr><code>info gdbm</code> </p>
 <p> Should any discrepancies occur between this manpage and the <code>GDBM Manual</code>, the later shall be considered the authoritative source. </p>
 <p> A process that opens a gdbm file is designated as a &quot;reader&quot; or a &quot;writer&quot;. Only one writer may open a gdbm file and many readers may open the file. Readers and writers can not open the gdbm file at the same time. The procedure for opening a gdbm file is: </p>
-<p> <code>GDBM_FILE gdbm_open (const char *</code><i>name</i><code>, int </code><i>block_size</i><code>, </code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>int </code><i>flags</i><code>, int </code><i>mode</i><code>, </code><br />
+<p> <code>GDBM_FILE gdbm_open (const char *</code><i>name</i><code>, int </code><i>block_size</i><code>, </code><br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>int </code><i>flags</i><code>, int </code><i>mode</i><code>, </code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>void (*</code><i>fatal_func</i><code>)(const char *));</code> </p>
 <p> <i>Name</i> is the name of the file (the complete name, gdbm does not append any characters to this name). <i>Block_size</i> is the size of a single transfer from disk to memory. This parameter is ignored unless the file is a new file. The minimum size is 512. If it is less than 512, dbm will use the stat block size for the file system. <i>Read_write</i> can have one of the following values:</p>
 <dl>
@@ -110,21 +110,21 @@ int gdbm_fdesc(GDBM_FILE dbf);
 <p> <i>Dbf</i> is the pointer returned by <code>gdbm_open</code>. <i>Key</i> is the key data. </p>
 <p> The return value is -1 if the item is not present or the requester is a reader. The return value is 0 if there was a successful delete. </p>
 <p> The next two routines allow for accessing all items in the database. This access is not key sequential, but it is guaranteed to visit every key in the database once. (The order has to do with the hash values.) </p>
-<p> <code>datum gdbm_firstkey (GDBM_FILE </code><i>dbf</i><code>);</code><br />
+<p> <code>datum gdbm_firstkey (GDBM_FILE </code><i>dbf</i><code>);</code><br/>
  <code>datum gdbm_nextkey (GDBM_FILE </code><i>dbf</i><code>, datum </code><i>key</i><code>);</code> </p>
 <p> <i>Dbf</i> is the pointer returned by <code>gdbm_open</code>. <i>Key</i> is the key data. </p>
 <p> The return values are both of type <code>datum</code>. If the <i>dptr</i> element of the return value is NULL, there is no first key or next key. Again notice that <i>dptr</i> points to data allocated by <code><a href="/docs/linux/man/3-malloc/">malloc</a>(3)</code> and <code>gdbm</code> will not free it for you. </p>
 <p> These functions were intended to visit the database in read-only algorithms, for instance, to validate the database or similar operations. </p>
 <p> File `visiting&#8217; is based on a `hash table&#8217;. <i>gdbm_delete</i> re-arranges the hash table to make sure that any collisions in the table do not leave some item `un-findable&#8217;. The original key order is NOT guaranteed to remain unchanged in ALL instances. It is possible that some key will not be visited if a loop like the following is executed: </p>
-<p>key = gdbm_firstkey(dbf);<br />
-while (key.dptr) {<br />
-    nextkey = gdbm_nextkey(dbf, key);<br />
-    if (some condition)<br />
-        gdbm_delete(dbf, key);<br />
-    free(key.dptr);<br />
-    key = nextkey;<br />
+<p>key = gdbm_firstkey(dbf);<br/>
+while (key.dptr) {<br/>
+    nextkey = gdbm_nextkey(dbf, key);<br/>
+    if (some condition)<br/>
+        gdbm_delete(dbf, key);<br/>
+    free(key.dptr);<br/>
+    key = nextkey;<br/>
 }</p>
-<p> The following routine should be used very infrequently.<br />
+<p> The following routine should be used very infrequently.<br/>
 &nbsp;<wbr>&nbsp;<wbr> <code>int gdbm_reorganize (GDBM_FILE </code><i>dbf</i><code>);</code> </p>
 <p> If you have had a lot of deletions and would like to shrink the space used by the <code>gdbm</code> file, this routine will reorganize the database. <code>Gdbm</code> will not shorten the length of a <code>gdbm</code> file except by using this reorganization. (Deleted file space will be reused.) </p>
 <p> Unless your database was opened with the <code>GDBM_SYNC</code> flag, <code>gdbm</code> does not wait for writes to be flushed to the disk before continuing. The following routine can be used to guarantee that the database is physically written to the disk file. </p>
@@ -184,11 +184,11 @@ gcc -o prog proc.c -lgdbm -lgdbm_compat
 <h2>CONTACTS</h2>
 <p> You may contact the original author by: </p>
 <p>e-mail:&nbsp;<wbr>&nbsp;<wbr>phil [at] cs.wwu.edu </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>us-mail:&nbsp;<wbr>&nbsp;<wbr>Philip A. Nelson<br />
- Computer Science Department<br />
- Western Washington University<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>us-mail:&nbsp;<wbr>&nbsp;<wbr>Philip A. Nelson<br/>
+ Computer Science Department<br/>
+ Western Washington University<br/>
  Bellingham, WA 98226 </p>
 <p> You may contact the current maintainers by: </p>
-<p>e-mail:&nbsp;<wbr>&nbsp;<wbr>downsj [at] downsj.com<br />
- and<br />
+<p>e-mail:&nbsp;<wbr>&nbsp;<wbr>downsj [at] downsj.com<br/>
+ and<br/>
 e-mail:&nbsp;<wbr>&nbsp;<wbr>gray [at] gnu.org </p>

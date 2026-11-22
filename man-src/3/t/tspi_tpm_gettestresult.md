@@ -29,9 +29,9 @@ description: "Tspi_TPM_GetTestResult- get manufacturer specific information rega
 <h2>Return Codes</h2>
 <p><code>Tspi_TPM_GetTestResult</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dt>TSS_E_INVALID_HANDLE</dt>
 <dd><code>hTPM</code> is not a valid handle to the TPM object.</dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An error occurred internal to the TSS. </dd>
 </dl>
 <h2>Conforming To</h2>

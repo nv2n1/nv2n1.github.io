@@ -10,8 +10,8 @@ description: "pro – Manage Ubuntu Pro services from Canonical"
 
 <p> pro &#8211; Manage Ubuntu Pro services from Canonical </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pro</code> &lt;command&gt; [&lt;args&gt;]<br />
- <code>ua</code> &lt;command&gt; [&lt;args&gt;]<br />
+<p> <code>pro</code> &lt;command&gt; [&lt;args&gt;]<br/>
+ <code>ua</code> &lt;command&gt; [&lt;args&gt;]<br/>
  <code>ubuntu-advantage</code> &lt;command&gt; [&lt;args&gt;] </p>
 <h2>DESCRIPTION</h2>
 <p> Ubuntu Pro is a collection of services offered by Canonical to Ubuntu users. The Ubuntu Pro command line tool is used to attach a system to an Ubuntu Pro contract to then enable and disable services from Canonical. The available commands and services are described in more detail below. </p>
@@ -20,16 +20,16 @@ description: "pro – Manage Ubuntu Pro services from Canonical"
 <dt><code>attach</code> [&#8211;no-auto-enable] [&#8211;attach-config=/path/to/file.yaml] &lt;token&gt;</dt>
 <dd> Connect an Ubuntu Pro support contract to this machine. </dd>
 <p> The <i>token</i> parameter can be obtained from <a rel="nofollow" href="https://auth.contracts.canonical.com/.">https://auth.contracts.canonical.com/.</a> </p>
-<p> The <i>&#8211;attach-config</i> option can be used to provide a file with the token and optionally, a list of services to enable after attaching. The <i>token</i> parameter should not be used if this option is provided. An attach config file looks like the following:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;token: YOUR_TOKEN_HERE&nbsp;<wbr>&nbsp;#&nbsp;required<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;enable_services:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;optional list of service names to auto-enable<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; esm-infra<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; esm-apps<br />
+<p> The <i>&#8211;attach-config</i> option can be used to provide a file with the token and optionally, a list of services to enable after attaching. The <i>token</i> parameter should not be used if this option is provided. An attach config file looks like the following:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;token: YOUR_TOKEN_HERE&nbsp;<wbr>&nbsp;#&nbsp;required<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;enable_services:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;optional list of service names to auto-enable<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; esm-infra<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; esm-apps<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; cis </p>
 <p> The optional <i>&#8211;no-auto-enable</i> flag will disable the automatic enablement of recommended entitlements which usually happens immediately after a successful attach. </p>
-<p> The exit code can be:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: on successful attach<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1: in case of any error while trying to attach<br />
+<p> The exit code can be:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: on successful attach<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1: in case of any error while trying to attach<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2: if the machine is already attached </p>
 <dt><code>collect-logs [-o &lt;file&gt;| &#8211;output &lt;file&gt;]</code></dt>
 <dd> Create a tarball with all relevant logs and debug data. </dd>
@@ -43,9 +43,9 @@ description: "pro – Manage Ubuntu Pro services from Canonical"
 <dt><code>fix</code> &lt;security_issue&gt;</dt>
 <dd> Fix a CVE or USN on the system by upgrading the appropriate package(s). </dd>
 <p> &lt;security_issue&gt; can be any of the following formats: CVE-yyyy-nnnn, CVE-yyyy-nnnnnnn, or USN-nnnn-dd. </p>
-<p> The exit code can be 0, 1, or 2.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: the fix was successfully applied<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1: the fix cannot be applied<br />
+<p> The exit code can be 0, 1, or 2.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: the fix was successfully applied<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1: the fix cannot be applied<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2: the fix was applied but requires a reboot before it takes effect </p>
 <dt><code>refresh</code></dt>
 <dd> Refresh contract and service details from Canonical. </dd>

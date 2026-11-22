@@ -25,9 +25,9 @@ perlintro -- a brief introduction and overview of Perl
 
 <h3>What is Perl?</h3>
 
- Perl is a general-purpose programming language originally developed for text manipulation and now used for a wide range of tasks including system administration, web development, network programming, <font SIZE="-1">GUI</font> development, and more. 
+ Perl is a general-purpose programming language originally developed for text manipulation and now used for a wide range of tasks including system administration, web development, network programming, GUI development, and more. 
 
- The language is intended to be practical (easy to use, efficient, complete) rather than beautiful (tiny, elegant, minimal). Its major features are that it's easy to use, supports both procedural and object-oriented (<font SIZE="-1">OO</font>) programming, has powerful built-in support for text processing, and has one of the world's most impressive collections of third-party modules. 
+ The language is intended to be practical (easy to use, efficient, complete) rather than beautiful (tiny, elegant, minimal). Its major features are that it's easy to use, supports both procedural and object-oriented (OO) programming, has powerful built-in support for text processing, and has one of the world's most impressive collections of third-party modules. 
 
  Different definitions of Perl are given in perl, perlfaq1 and no doubt other places. From this we can determine that Perl is different things to different people, but that lots of people think it's at least worth writing about.
 
@@ -49,7 +49,7 @@ perlintro -- a brief introduction and overview of Perl
 
  (This start line assumes you have the <b>env</b> program. You can also put directly the path to your perl executable, like in <tt>&quot;#!/usr/bin/perl&quot;</tt>). 
 
- For more information, including instructions for other platforms such as Windows and Mac <font SIZE="-1">OS,</font> read perlrun.
+ For more information, including instructions for other platforms such as Windows and Mac OS, read perlrun.
 
 <h3>Safety net</h3>
 
@@ -541,23 +541,23 @@ sub square
 
  For more information on writing subroutines, see perlsub.
 
-<h3><font SIZE="-1">OO</font> Perl</h3>
+<h3>OO Perl</h3>
 
- <font SIZE="-1">OO</font> Perl is relatively simple and is implemented using references which know what sort of object they are based on Perl's concept of packages. However, <font SIZE="-1">OO</font> Perl is largely beyond the scope of this document. Read perlootut and perlobj. 
+ OO Perl is relatively simple and is implemented using references which know what sort of object they are based on Perl's concept of packages. However, OO Perl is largely beyond the scope of this document. Read perlootut and perlobj. 
 
- As a beginning Perl programmer, your most common use of <font SIZE="-1">OO</font> Perl will be in using third-party modules, which are documented below.
+ As a beginning Perl programmer, your most common use of OO Perl will be in using third-party modules, which are documented below.
 
 <h3>Using Perl modules</h3>
 
- Perl modules provide a range of features to help you avoid reinventing the wheel, and can be downloaded from <font SIZE="-1">CPAN</font> ( &lt;<a rel="nofollow" HREF="http://www.cpan.org/">http://www.cpan.org/</a>&gt; ). A number of popular modules are included with the Perl distribution itself. 
+ Perl modules provide a range of features to help you avoid reinventing the wheel, and can be downloaded from CPAN ( &lt;<a rel="nofollow" HREF="http://www.cpan.org/">http://www.cpan.org/</a>&gt; ). A number of popular modules are included with the Perl distribution itself. 
 
- Categories of modules range from text manipulation to network protocols to database integration to graphics. A categorized list of modules is also available from <font SIZE="-1">CPAN.</font> 
+ Categories of modules range from text manipulation to network protocols to database integration to graphics. A categorized list of modules is also available from CPAN. 
 
- To learn how to install modules you download from <font SIZE="-1">CPAN,</font> read perlmodinstall. 
+ To learn how to install modules you download from CPAN, read perlmodinstall. 
 
- To learn how to use a particular module, use <tt>&quot;perldoc </tt>Module::Name<tt>&quot;</tt>. Typically you will want to <tt>&quot;use </tt>Module::Name<tt>&quot;</tt>, which will then give you access to exported functions or an <font SIZE="-1">OO</font> interface to the module. 
+ To learn how to use a particular module, use <tt>&quot;perldoc </tt>Module::Name<tt>&quot;</tt>. Typically you will want to <tt>&quot;use </tt>Module::Name<tt>&quot;</tt>, which will then give you access to exported functions or an OO interface to the module. 
 
- perlfaq contains questions and answers related to many common tasks, and often provides suggestions for good <font SIZE="-1">CPAN</font> modules to use. 
+ perlfaq contains questions and answers related to many common tasks, and often provides suggestions for good CPAN modules to use. 
 
  perlmod describes Perl modules in general. perlmodlib lists the modules which came with your Perl installation. 
 

@@ -12,16 +12,16 @@ description: "selabel_get_digests_all_partial_matches – retrieve the partial m
 <pre><code>#include &lt;stdbool.h&gt;
 #include &lt;selinux/selinux.h&gt;
 #include &lt;selinux/label.h&gt;</code></pre>
-<p> <code>bool selabel_get_digests_all_partial_matches(</code> <code>struct selabel_handle *</code><i>hnd</i><code>,</code><br />
- <code>const char *</code><i>key</i><code>,</code><br />
- <code>uint8_t **</code><i>calculated_digest</i><code>,</code><br />
- <code>uint8_t **</code><i>xattr_digest</i><code>,</code><br />
+<p> <code>bool selabel_get_digests_all_partial_matches(</code> <code>struct selabel_handle *</code><i>hnd</i><code>,</code><br/>
+ <code>const char *</code><i>key</i><code>,</code><br/>
+ <code>uint8_t **</code><i>calculated_digest</i><code>,</code><br/>
+ <code>uint8_t **</code><i>xattr_digest</i><code>,</code><br/>
  <code>size_t *</code><i>digest_len</i><code>);</code></p>
 <h2>Description</h2>
-<p><code>selabel_get_digests_all_partial_matches</code>() retrieves the file_contexts partial matches digest and the xattr digest that applies to the supplied path on the handle <i>hnd</i>.<br />
- The <i>key</i> parameter is the path to retrieve the digests.<br />
- The <i>calculated_digest</i> is a pointer to the <i>key</i> calculated file_contexts digest of all applicable partial matches, or NULL if none exist. The caller must <code><a href="/docs/linux/man/3-free/">free</a></code>(3) the buffer.<br />
- The <i>xattr_digest</i> is a pointer to the <i>key</i> <code><a href="/docs/linux/man/7-xattr/">xattr</a></code>(7) stored digest, or NULL if it does not exist. The caller must <code><a href="/docs/linux/man/3-free/">free</a></code>(3) the buffer.<br />
+<p><code>selabel_get_digests_all_partial_matches</code>() retrieves the file_contexts partial matches digest and the xattr digest that applies to the supplied path on the handle <i>hnd</i>.<br/>
+ The <i>key</i> parameter is the path to retrieve the digests.<br/>
+ The <i>calculated_digest</i> is a pointer to the <i>key</i> calculated file_contexts digest of all applicable partial matches, or NULL if none exist. The caller must <code><a href="/docs/linux/man/3-free/">free</a></code>(3) the buffer.<br/>
+ The <i>xattr_digest</i> is a pointer to the <i>key</i> <code><a href="/docs/linux/man/7-xattr/">xattr</a></code>(7) stored digest, or NULL if it does not exist. The caller must <code><a href="/docs/linux/man/3-free/">free</a></code>(3) the buffer.<br/>
  The <i>digest_len</i> is the length of the digests that will always be returned (even if both are NULL). Note that if both digests are returned, they will always be the same length. </p>
 <h2>Return Value</h2>
 <p>TRUE if the digests match or FALSE if they do not or either or both are missing. </p>

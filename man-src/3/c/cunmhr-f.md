@@ -10,7 +10,7 @@ description: "cunmhr.f –"
 <p>cunmhr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cunmhr</code> (SIDE, TRANS, M, N, ILO, IHI, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
+<p>subroutine <code>cunmhr</code> (SIDE, TRANS, M, N, ILO, IHI, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br/>
  <i></i><code>CUNMHR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cunmhr (characterSIDE, characterTRANS, integerM, integerN, integerILO, integerIHI, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( ldc, * )C, integerLDC, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

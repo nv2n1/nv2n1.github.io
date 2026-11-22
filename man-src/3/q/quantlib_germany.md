@@ -12,7 +12,7 @@ description: "QuantLib::Germany – German calendars."
 <p> #include &lt;ql/time/calendars/germany.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Calendar</code>. </p>
 <h3>Public Types</h3>
-<p> enum <code>Market</code> { <code>Settlement</code>, <code>FrankfurtStockExchange</code>, <code>Xetra</code>, <code>Eurex</code> }<br />
+<p> enum <code>Market</code> { <code>Settlement</code>, <code>FrankfurtStockExchange</code>, <code>Xetra</code>, <code>Eurex</code> }<br/>
  <i>German calendars. </i></p>
 <h3>Public Member Functions</h3>
 <p> <code>Germany</code> (<code>Market</code> market=FrankfurtStockExchange) </p>

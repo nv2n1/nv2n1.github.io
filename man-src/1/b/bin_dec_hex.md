@@ -112,7 +112,7 @@ bin_dec_hex - How to use binary, decimal, and hexadecimal notation.
 
  You can see why binary and hexadecimal can be converted quickly: For each hexadecimal digit there are exactly four binary digits. Take a binary number: take four digits from the right and make a hexadecimal digit from it (see the table above). Repeat this until there are no more digits. And the other way around: Take a hexadecimal number. For each digit, write down its binary equivalent. 
 
- Computers (or rather the parsers running on them) would have a hard time converting a number like 1234(16). Therefore hexadecimal numbers are specified with a prefix. This prefix depends on the language you're writing in. Some of the prefixes are ``0x'' for C, ``$'' for Pascal, ``#'' for <font SIZE="-1">HTML</font>. It is common to assume that if a number starts with a zero, it is octal. It does not matter what is used as long as you know what it is. I will use ``0x'' for hexadecimal, ``%'' for binary and ``0'' for octal. The following numbers are all the same, just their representation (base) is different: 021 0x11 17 <tt>%00010001</tt> 
+ Computers (or rather the parsers running on them) would have a hard time converting a number like 1234(16). Therefore hexadecimal numbers are specified with a prefix. This prefix depends on the language you're writing in. Some of the prefixes are ``0x'' for C, ``$'' for Pascal, ``#'' for HTML. It is common to assume that if a number starts with a zero, it is octal. It does not matter what is used as long as you know what it is. I will use ``0x'' for hexadecimal, ``%'' for binary and ``0'' for octal. The following numbers are all the same, just their representation (base) is different: 021 0x11 17 <tt>%00010001</tt> 
 
  To do arithmetics and conversions you need to understand one more thing. It is something you already know but perhaps you do not ``see'' it yet: 
 
@@ -136,7 +136,7 @@ bin_dec_hex - How to use binary, decimal, and hexadecimal notation.
 
  where ^ means ``to the power of''. 
 
- We are using the base 10, and the positions 0,1,2 and 3. The right-most position should <font SIZE="-1">NOT</font> be multiplied with 10. The second from the right should be multiplied one time with 10. The third from the right is multiplied with 10 two times. This continues for whatever positions are used. 
+ We are using the base 10, and the positions 0,1,2 and 3. The right-most position should NOT be multiplied with 10. The second from the right should be multiplied one time with 10. The third from the right is multiplied with 10 two times. This continues for whatever positions are used. 
 
  It is the same in all other representations: 
 

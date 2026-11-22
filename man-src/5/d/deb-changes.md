@@ -13,7 +13,7 @@ description: "deb-changes – Debian changes file format"
 <h2>Description</h2>
 <p>Each Debian upload is composed of a .changes control file, which contains a number of fields in <code><a href="/docs/linux/man/5-deb822/">deb822</a></code>(5) format. </p>
 <p> Each field begins with a tag, such as <code>Source</code> or <code>Binary</code> (case insensitive), followed by a colon, and the body of the field (case sensitive unless stated otherwise). Fields are delimited only by field tags. In other words, field text may be multiple lines in length, but the installation tools will generally join lines when processing the body of the field (except in case of the multiline fields <code>Description</code>, <code>Changes</code>, <code>Files</code>, <code>Checksums-Sha1</code> and <code>Checksums-Sha256</code>, see below). </p>
-<p> The control data might be enclosed in an OpenPGP <font SIZE="-1">ASCII</font> Armored signature, as specified in <font SIZE="-1">RFC4880.</font></p>
+<p> The control data might be enclosed in an OpenPGP ASCII Armored signature, as specified in RFC4880.</p>
 <h2>Fields</h2>
 <dl>
 <dt><code>Format:</code> <i>format-version</i> (required)</dt>
@@ -62,7 +62,7 @@ description: "deb-changes – Debian changes file format"
 </dd><dt><code>Checksums-Sha256:</code> (required)</dt>
 <dd>
 </dd><dt> <i>checksum</i> <i>size</i> <i>filename</i></dt>
-<dd>These multiline fields contain a list of files with a checksum and size for each one. These fields have the same syntax and differ only in the checksum algorithm used: <font SIZE="-1">SHA-1</font> for <code>Checksums-Sha1</code> and <font SIZE="-1">SHA-256</font> for <code>Checksums-Sha256</code>. </dd>
+<dd>These multiline fields contain a list of files with a checksum and size for each one. These fields have the same syntax and differ only in the checksum algorithm used: SHA-1 for <code>Checksums-Sha1</code> and SHA-256 for <code>Checksums-Sha256</code>. </dd>
 <p> The first line of the field value (the part on the same line as the field name followed by a colon) is always empty. The content of the field is expressed as continuation lines, one line per file. Each line consists of space-separated entries describing the file: the checksum, the file size, and the file name. </p>
 <p> These fields list all files that make up the upload. The list of files in these fields must match the list of files in the <code>Files</code> field and the other related <code>Checksums</code> fields.</dl>
 <h2>Bugs</h2>

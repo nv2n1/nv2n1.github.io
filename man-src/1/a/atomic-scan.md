@@ -15,21 +15,21 @@ description: "atomic-scan – Scan for CVEs in a container or image"
 <p> <code>atomic scan</code> will scan the a container or image looking for known Common Vulnerabilities and Exposures(CVEs) by default. It can also scan paths on the host filesystem as well using the <i>&#8211;rootfs</i> option. </p>
 <p> The architecture for <i>atomic scan</i> is very plug-in friendly. You can define additional scanners to use via the plug-in interface. To list the available scanners setup on your system, you can use <i>&#8211;list</i>. To use a different scanner, you simple pass its name with the <i>&#8211;scanner</i> switch. You can also select a different scan type using the <i>&#8211;scan_type</i> switch. </p>
 <h2>OPTIONS</h2>
-<p> <code>-h</code> <code>&#8211;help</code><br />
+<p> <code>-h</code> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <p> <code>&#8211;verbose</code> Show more verbose output. Specifically the stdout from the image scanner itself. </p>
 <p> <code>&#8211;list</code> Show all scanners configured for atomic and their scan types. </p>
 <p> <code>&#8211;scanner</code> Select as scanner other than the default. </p>
 <p> <code>&#8211;scan_type</code> Select a scan_type other than the default. </p>
-<p> <code>&#8211;all</code><br />
+<p> <code>&#8211;all</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Instead of providing image or container names, scan all images&nbsp;<wbr>(excluding intermediate image layers)&nbsp;<wbr>and containers </p>
-<p> <code>&#8211;images</code><br />
+<p> <code>&#8211;images</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Scan all images&nbsp;<wbr>(excluding intermediate layers).&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Similar to the results of docker images. </p>
-<p> <code>&#8211;containers</code><br />
+<p> <code>&#8211;containers</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Scan all containers.&nbsp;<wbr>&nbsp;<wbr>Similar to the results of docker ps -a </p>
-<p> <code>&#8211;rootfs</code><br />
-&nbsp;<wbr>&nbsp;<wbr>Rootfs path to scan.&nbsp;<wbr>&nbsp;<wbr>Can provide&nbsp;<wbr><i>&#8211;rootfs</i>&nbsp;<wbr>multiple times.<br />
-&nbsp;<wbr>&nbsp;<wbr>Note: SELinux separation will be disabled for &#8211;rootfs scans, but all other container<br />
+<p> <code>&#8211;rootfs</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>Rootfs path to scan.&nbsp;<wbr>&nbsp;<wbr>Can provide&nbsp;<wbr><i>&#8211;rootfs</i>&nbsp;<wbr>multiple times.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Note: SELinux separation will be disabled for &#8211;rootfs scans, but all other container<br/>
 &nbsp;<wbr>&nbsp;<wbr>separation will still be in place. </p>
 <h2>EXAMPLES</h2>
 <p> List all the scanners atomic knows about and display their default scan types. </p>

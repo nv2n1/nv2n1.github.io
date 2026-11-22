@@ -50,13 +50,13 @@ description: "opacmdall (Linux and Switch) Executes a command on all hosts or In
 </dl>
 <h2>Examples</h2>
 <h2>Operations on Host</h2>
-<p>opacmdall date<br />
- opacmdall &#8216;uname -a&#8217;<br />
- opacmdall -h &#8216;elrond arwen&#8217; date<br />
+<p>opacmdall date<br/>
+ opacmdall &#8216;uname -a&#8217;<br/>
+ opacmdall -h &#8216;elrond arwen&#8217; date<br/>
  HOSTS=&#8217;elrond arwen&#8217; opacmdall date</p>
 <h2>Operations on Chassis</h2>
-<p>opacmdall -C &#8216;ismPortStats -noprompt&#8217;<br />
- opacmdall -C -H &#8216;chassis1 chassis2&#8242; ismPortStats -noprompt#8217#8217;<br />
+<p>opacmdall -C &#8216;ismPortStats -noprompt&#8217;<br/>
+ opacmdall -C -H &#8216;chassis1 chassis2&#8242; ismPortStats -noprompt#8217#8217;<br/>
  CHASSIS=&#8217;chassis1 chassis2&#8217; opacmdall ismPortStats -noprompt#8217#8217;</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

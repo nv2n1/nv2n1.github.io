@@ -24,7 +24,7 @@ dbsort[-M MemLimit][-T TemporaryDirectory][-nNrR] column[column...]
 <dt><code>-M MaxMemBytes</code></dt>
 <dd> Specify an approximate limit on memory usage (in bytes). Larger values allow faster sorting because more operations happen in-memory, provided you have enough memory.</dd>
 <dt><code>-T TmpDir</code></dt>
-<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd>
+<dd> where to put tmp files. Also uses environment variable TMPDIR, if -T is not specified. Default is /tmp.</dd>
 <dt>&lt;&#8211;parallelism&gt; N</dt>
 <dd> Allow up to N merges to happen in parallel. Default is the number of CPUs in the machine.</dd></dl>
 <p> Sort specification options (can be interspersed with column names):</p>
@@ -77,4 +77,4 @@ dbsort[-M MemLimit][-T TemporaryDirectory][-nNrR] column[column...]
 <p> <i><a href="/docs/linux/man/1-dbmerge/">dbmerge</a></i>(1), <i><a href="/docs/linux/man/1-dbmapreduce/">dbmapreduce</a></i>(1), <i>Fsdb</i>(3)</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

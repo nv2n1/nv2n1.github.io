@@ -19,7 +19,7 @@ url: "/docs/linux/man/1-xml_merge/"
 
 <dl>
 <dt>-o &lt;output_file&gt;
-</dt><dd> unless this option is used the program output goes to <font SIZE="-1">STDOUT</font>
+</dt><dd> unless this option is used the program output goes to STDOUT
 </dd><dt>-i
 </dt><dd> the files use XInclude instead of processing instructions (they were created using the <tt>&quot;-i&quot;</tt> option in <tt>&quot;xml_split&quot;</tt>)
 </dd><dt>-v

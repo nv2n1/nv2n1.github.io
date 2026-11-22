@@ -47,7 +47,7 @@ description: "dhclient.conf – DHCP client configuration file"
 <p>By default X = 10000 and Y = 100, this will cause the client to select a lease with more bindings over a lease with less bindings but more addresses. The weightings were changed as part of implementing RFC 7550. Previously they were X = 50 and Y = 100 meaning more addresses were preferred over more bindings. If you wish to continue using the old style you may do so by editing the file includes/site.h and uncommenting the define for USE_ORIGINAL_CLIENT_LEASE_WEIGHTS.</p>
 <h2>Lease Requirements And Requests</h2>
 <p>The DHCP protocol allows the client to request that the server send it specific information, and not send it other information that it is not prepared to accept. The protocol also allows the client to reject offers from servers if they don&#8217;t contain information the client needs, or if the information provided is not satisfactory. </p>
-<p> There is a variety of data contained in offers that DHCP servers send to DHCP clients. The data that can be specifically requested is what are called <i>DHCP Options</i>. DHCP Options are defined in<br />
+<p> There is a variety of data contained in offers that DHCP servers send to DHCP clients. The data that can be specifically requested is what are called <i>DHCP Options</i>. DHCP Options are defined in<br/>
 &nbsp;<code><a href="/docs/linux/man/5-dhcp-options/">dhcp-options</a>(5)</code>. </p>
 <p> <i>The</i> <code>request</code> <i>statement</i> </p>
 <p>&nbsp;<code>[&nbsp;also&nbsp;]&nbsp;request&nbsp;[&nbsp;[&nbsp;</code><i>option-space</i>&nbsp;.&nbsp;]&nbsp;<i>option</i>&nbsp;]&nbsp;[<code>,</code><i>&nbsp;&#8230;&nbsp;]</i><code>;</code> </p>

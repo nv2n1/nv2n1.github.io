@@ -9,12 +9,12 @@ description: "setkey – manually manipulate the IPsec SA/SP database"
 
 <p><code>setkey</code> &#8211; manually manipulate the IPsec SA/SP database</p>
 <h2>Synopsis</h2>
-<p><code>setkey</code> [-<code>knrv</code> ] <i>file &#8230;</i><br />
-<code>setkey</code> [-<code>knrv</code> ] &#8211;<code>c</code><br />
-<code>setkey</code> [-<code>krv</code> ] &#8211;<code>f </code><i>filename</i><br />
-<code>setkey</code> [-<code>aklPrv</code> ] &#8211;<code>D</code><br />
-<code>setkey</code> [-<code>Pvp</code> ] &#8211;<code>F</code><br />
-<code>setkey</code> [-<code>H</code> ] &#8211;<code>x</code><br />
+<p><code>setkey</code> [-<code>knrv</code> ] <i>file &#8230;</i><br/>
+<code>setkey</code> [-<code>knrv</code> ] &#8211;<code>c</code><br/>
+<code>setkey</code> [-<code>krv</code> ] &#8211;<code>f </code><i>filename</i><br/>
+<code>setkey</code> [-<code>aklPrv</code> ] &#8211;<code>D</code><br/>
+<code>setkey</code> [-<code>Pvp</code> ] &#8211;<code>F</code><br/>
+<code>setkey</code> [-<code>H</code> ] &#8211;<code>x</code><br/>
 <code>setkey</code> [-<code>?V</code> ]</p>
 <h2>Description</h2>
 <p><code>setkey</code> adds, updates, dumps, or flushes Security Association Database (SAD) entries as well as Security Policy Database (SPD) entries in the kernel. <code>setkey</code> takes a series of operations from standard input Po if invoked with &#8211;<code>c</code> Pc or the file named <i>filename</i> Po if invoked with &#8211;<code>f </code><i>filename</i> Pc .</p>

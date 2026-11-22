@@ -24,11 +24,11 @@ unsigned char *CMSG_DATA(struct cmsghdr *cmsg);
 <p> These macros are used to create and access control messages (also called ancillary data) that are not a part of the socket payload. This control information may include the interface the packet was received on, various rarely used header fields, an extended error description, a set of file descriptors, or UNIX credentials. For instance, control messages can be used to send additional header fields such as IP options. Ancillary data is sent by calling <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2) and received by calling <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2). See their manual pages for more information. </p>
 <p> Ancillary data is a sequence of <i>cmsghdr</i> structures with appended data. See the specific protocol man pages for the available control message types. The maximum ancillary buffer size allowed per socket can be set using <i>/proc/sys/net/core/optmem_max</i>; see <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7). </p>
 <p> The <i>cmsghdr</i> structure is defined as follows: </p>
-<p> struct cmsghdr {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t cmsg_len;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Data byte count, including header<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(type is socklen_t in POSIX)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cmsg_level;&nbsp;<wbr>&nbsp;/*&nbsp;Originating protocol&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cmsg_type;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Protocol-specific type&nbsp;*/ /* followed by<br />
+<p> struct cmsghdr {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t cmsg_len;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Data byte count, including header<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(type is socklen_t in POSIX)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cmsg_level;&nbsp;<wbr>&nbsp;/*&nbsp;Originating protocol&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cmsg_type;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Protocol-specific type&nbsp;*/ /* followed by<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char cmsg_data[];&nbsp;*/ }; </p>
 <p> The sequence of <i>cmsghdr</i> structures should never be accessed directly. Instead, use only the following macros:</p>
 <dl>
@@ -57,21 +57,21 @@ unsigned char *CMSG_DATA(struct cmsghdr *cmsg);
 <p> This code looks for the <code>IP_TTL</code> option in a received ancillary buffer: </p>
 <p> struct msghdr msgh; struct cmsghdr *cmsg; int received_ttl; </p>
 <p> /* Receive auxiliary data in msgh */ </p>
-<p> for (cmsg = CMSG_FIRSTHDR(&amp;msgh); cmsg != NULL;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cmsg&nbsp;=&nbsp;CMSG_NXTHDR(&amp;msgh, cmsg))&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(cmsg-&gt;cmsg_level&nbsp;==&nbsp;IPPROTO_IP<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&amp;&amp;&nbsp;cmsg-&gt;cmsg_type&nbsp;==&nbsp;IP_TTL)&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memcpy(&amp;receive_ttl, CMSG_DATA(cmsg), sizeof(received_ttl));<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;break;<br />
+<p> for (cmsg = CMSG_FIRSTHDR(&amp;msgh); cmsg != NULL;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cmsg&nbsp;=&nbsp;CMSG_NXTHDR(&amp;msgh, cmsg))&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(cmsg-&gt;cmsg_level&nbsp;==&nbsp;IPPROTO_IP<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&amp;&amp;&nbsp;cmsg-&gt;cmsg_type&nbsp;==&nbsp;IP_TTL)&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memcpy(&amp;receive_ttl, CMSG_DATA(cmsg), sizeof(received_ttl));<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;break;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} } </p>
-<p> if (cmsg == NULL) {<br />
+<p> if (cmsg == NULL) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Error: IP_TTL not enabled or small buffer or I/O error&nbsp;*/ } </p>
 <p> The code below passes an array of file descriptors over a UNIX domain socket using <code>SCM_RIGHTS</code>: </p>
-<p> struct msghdr msg = { 0 }; struct cmsghdr *cmsg; int myfds[NUM_FD]; /* Contains the file descriptors to pass */ char iobuf[1]; struct iovec io = {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.iov_base&nbsp;=&nbsp;iobuf,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.iov_len&nbsp;=&nbsp;sizeof(iobuf) }; union { /* Ancillary data buffer, wrapped in a union<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in order to ensure it is suitably aligned&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char buf[CMSG_SPACE(sizeof(myfds))];<br />
+<p> struct msghdr msg = { 0 }; struct cmsghdr *cmsg; int myfds[NUM_FD]; /* Contains the file descriptors to pass */ char iobuf[1]; struct iovec io = {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.iov_base&nbsp;=&nbsp;iobuf,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.iov_len&nbsp;=&nbsp;sizeof(iobuf) }; union { /* Ancillary data buffer, wrapped in a union<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in order to ensure it is suitably aligned&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char buf[CMSG_SPACE(sizeof(myfds))];<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct cmsghdr align; } u; </p>
 <p> msg.msg_iov = &amp;io; msg.msg_iovlen = 1; msg.msg_control = u.buf; msg.msg_controllen = sizeof(u.buf); cmsg = CMSG_FIRSTHDR(&amp;msg); cmsg-&gt;cmsg_level = SOL_SOCKET; cmsg-&gt;cmsg_type = SCM_RIGHTS; cmsg-&gt;cmsg_len = CMSG_LEN(sizeof(myfds)); memcpy(CMSG_DATA(cmsg), myfds, sizeof(myfds));</p>
 <h2>SEE ALSO</h2>

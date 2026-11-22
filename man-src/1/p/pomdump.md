@@ -17,7 +17,7 @@ pomdump - dump the POM parse tree for a POD document
 
 <h2>DESCRIPTION</h2>
 
- This script uses Pod::POM to parse a Pod document and then invokes the dump method on the top level node, resulting in a visualization of the structure of the <font SIZE="-1">POD</font> document (the parse tree).
+ This script uses Pod::POM to parse a Pod document and then invokes the dump method on the top level node, resulting in a visualization of the structure of the POD document (the parse tree).
 
 <h2>AUTHOR</h2>
 

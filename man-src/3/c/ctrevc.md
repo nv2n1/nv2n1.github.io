@@ -11,7 +11,7 @@ description: "ctrevc.f –"
 <p> ctrevc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctrevc</code> (SIDE, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, MM, M, WORK, RWORK, INFO)<br />
+<p> subroutine <code>ctrevc</code> (SIDE, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, MM, M, WORK, RWORK, INFO)<br/>
  <i></i><code>CTREVC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctrevc (characterSIDE, characterHOWMNY, logical, dimension( * )SELECT, integerN, complex, dimension( ldt, * )T, integerLDT, complex, dimension( ldvl, * )VL, integerLDVL, complex, dimension( ldvr, * )VR, integerLDVR, integerMM, integerM, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>
@@ -98,10 +98,10 @@ if HOWMNY
           SIDE = 'L' or 'B', LDVL &gt;= N.
 </pre>
 <p> <i>VR</i> </p>
-<p>VR is COMPLEX array, dimension(LDVR, MM) On entry, if SIDE = &#8216;R&#8217; or &#8216;B&#8217; and HOWMNY = &#8216;B&#8217;, VR must contain an N &#8211; by &#8211; N matrix Q(usually the unitary matrix Q of Schur vectors returned by CHSEQR).On exit, if SIDE = &#8216;R&#8217; or &#8216;B&#8217;, VR contains : if HOWMNY = &#8216;A&#8217;, the matrix X of right eigenvectors of T;<br />
-if HOWMNY<br />
-    = &#8216;B&#8217;, the matrix Q *X;<br />
-if HOWMNY<br />
+<p>VR is COMPLEX array, dimension(LDVR, MM) On entry, if SIDE = &#8216;R&#8217; or &#8216;B&#8217; and HOWMNY = &#8216;B&#8217;, VR must contain an N &#8211; by &#8211; N matrix Q(usually the unitary matrix Q of Schur vectors returned by CHSEQR).On exit, if SIDE = &#8216;R&#8217; or &#8216;B&#8217;, VR contains : if HOWMNY = &#8216;A&#8217;, the matrix X of right eigenvectors of T;<br/>
+if HOWMNY<br/>
+    = &#8216;B&#8217;, the matrix Q *X;<br/>
+if HOWMNY<br/>
 = &#8216;S&#8217;, the right eigenvectors of T specified by SELECT, stored consecutively in the columns of VR, in the same order as their eigenvalues.Not referenced if SIDE = &#8216;L&#8217;.</p>
 <p> <i>LDVR</i> </p>
 <pre><code>

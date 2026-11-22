@@ -10,9 +10,9 @@ description: "getpriority, setpriority – get/set program scheduling priority"
 
 <p> getpriority, setpriority &#8211; get/set program scheduling priority </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/time.h&gt;</code><br />
+<p> <code>#include &lt;sys/time.h&gt;</code><br/>
  <code>#include &lt;sys/resource.h&gt;</code> </p>
-<p> <code>int getpriority(int </code><i>which</i><code>, id_t </code><i>who</i><code>);</code><br />
+<p> <code>int getpriority(int </code><i>which</i><code>, id_t </code><i>who</i><code>);</code><br/>
  <code>int setpriority(int </code><i>which</i><code>, id_t </code><i>who</i><code>, int </code><i>prio</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
 <p> The scheduling priority of the process, process group, or user, as indicated by <i>which</i> and <i>who</i> is obtained with the <code>getpriority</code>() call and set with the <code>setpriority</code>() call. The process attribute dealt with by these system calls is the same attribute (also known as the &quot;nice&quot; value) that is dealt with by <code><a href="/docs/linux/man/2-nice/">nice</a></code>(2). </p>

@@ -37,16 +37,16 @@ description: "gnutls_ocsp_resp_get_single – API function"
 <dt>unsigned int * revocation_reason</dt>
 <dd> revocation reason, a <code>gnutls_x509_crl_reason_t</code> enum.</dd></dl>
 <h2>DESCRIPTION</h2>
-<p> This function will return the certificate information of the<br />
+<p> This function will return the certificate information of the<br/>
 &nbsp;<wbr><i>indx</i>&nbsp;<wbr>&#8216;ed response in the Basic OCSP Response&nbsp;<wbr>&nbsp;<wbr><i>resp</i>&nbsp;<wbr>.&nbsp;<wbr>&nbsp;<wbr>The information returned corresponds to the OCSP SingleResponse structure except the final singleExtensions. </p>
 <p> Each of the pointers to output variables may be NULL to indicate that the caller is not interested in that value.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned. If you have reached the last CertID available <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br/>
  Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>

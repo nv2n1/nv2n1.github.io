@@ -12,24 +12,24 @@ description: "std::__debug::unordered_multimap< _Key, _Tp, _Hash, _Pred, _Alloc 
 <p> Inherits unordered_multimap&lt; _Key, _Tp, _Hash, _Pred, _Alloc &gt;, and <code>__gnu_debug::_Safe_unordered_container&lt; unordered_multimap&lt; _Key, _Tp, _Hash, _Pred, _Alloc &gt; &gt;</code>.</p>
 <h3>Public Types</h3>
 <p>typedef _Base::allocator_type <code>allocator_type</code> </p>
-<p> typedef<br />
- <code>__gnu_debug::_Safe_iterator</code><br />
- &lt; _Base_const_iterator,<br />
+<p> typedef<br/>
+ <code>__gnu_debug::_Safe_iterator</code><br/>
+ &lt; _Base_const_iterator,<br/>
  <code>unordered_multimap</code> &gt; <code>const_iterator</code>&quot; </p>
-<p> typedef<br />
- <code>__gnu_debug::_Safe_local_iterator</code><br />
- &lt; _Base_const_local_iterator,<br />
+<p> typedef<br/>
+ <code>__gnu_debug::_Safe_local_iterator</code><br/>
+ &lt; _Base_const_local_iterator,<br/>
  <code>unordered_multimap</code> &gt; <code>const_local_iterator</code>&quot; </p>
 <p> typedef _Base::hasher <code>hasher</code> </p>
-<p> typedef<br />
- <code>__gnu_debug::_Safe_iterator</code><br />
- &lt; _Base_iterator,<br />
+<p> typedef<br/>
+ <code>__gnu_debug::_Safe_iterator</code><br/>
+ &lt; _Base_iterator,<br/>
  <code>unordered_multimap</code> &gt; <code>iterator</code>&quot; </p>
 <p> typedef _Base::key_equal <code>key_equal</code> </p>
 <p> typedef _Base::key_type <code>key_type</code> </p>
-<p> typedef<br />
- <code>__gnu_debug::_Safe_local_iterator</code><br />
- &lt; _Base_local_iterator,<br />
+<p> typedef<br/>
+ <code>__gnu_debug::_Safe_local_iterator</code><br/>
+ &lt; _Base_local_iterator,<br/>
  <code>unordered_multimap</code> &gt; <code>local_iterator</code>&quot; </p>
 <p> typedef _Base::size_type <code>size_type</code> </p>
 <p> typedef _Base::value_type <code>value_type</code></p>

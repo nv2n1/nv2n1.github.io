@@ -26,13 +26,13 @@ description: "tcfilters – shorewall6 u32/basic classifier rules file"
 <p> The columns in the file are as follows (where the column name is followed by a different name in parentheses, the different name is used in the alternate specification syntax). </p>
 <p> <code>CLASS</code> &#8211; <i>interface</i><code>:</code><i>class</i></p>
 <dl>
-<dd>The name or number of an interface defined in m[blue]<code>shorewall6-tcdevices</code>m[]<font SIZE="-2">[1]</font>(5) followed by a <i>class</i> number defined for that interface in m[blue]<code>shorewall6-tcclasses</code>m[]<font SIZE="-2">[2]</font>(5).</dd></dl>
+<dd>The name or number of an interface defined in m[blue]<code>shorewall6-tcdevices</code>m[][1](5) followed by a <i>class</i> number defined for that interface in m[blue]<code>shorewall6-tcclasses</code>m[][2](5).</dd></dl>
 <p> <code>SOURCE</code> &#8211; {<code>&#8211;</code>|<i>address</i>|+<i>ipset</i>}</p>
 <dl>
-<dd>Source of the packet. May be a host or network <i>address</i>. DNS names are not allowed. Beginning with Shorewall 4.6.0, an ipset name (prefixed with &#8216;+&#8217;) may be used if your kernel and ip6tables have the Basic Ematchcapability and you set BASIC_FILTERS=Yes in m[blue]<code>shorewall6.conf (5)</code>m[]<font SIZE="-2">[3]</font>. The ipset name may optionally be followed by a number or a comma separated list of src and/or dst enclosed in square brackets ([&#8230;]). See m[blue]<code><a href="/docs/linux/man/5-shorewall6-ipsets/">shorewall6-ipsets</a>(5)</code>m[]<font SIZE="-2">[4]</font> for details.</dd></dl>
+<dd>Source of the packet. May be a host or network <i>address</i>. DNS names are not allowed. Beginning with Shorewall 4.6.0, an ipset name (prefixed with &#8216;+&#8217;) may be used if your kernel and ip6tables have the Basic Ematchcapability and you set BASIC_FILTERS=Yes in m[blue]<code>shorewall6.conf (5)</code>m[][3]. The ipset name may optionally be followed by a number or a comma separated list of src and/or dst enclosed in square brackets ([&#8230;]). See m[blue]<code><a href="/docs/linux/man/5-shorewall6-ipsets/">shorewall6-ipsets</a>(5)</code>m[][4] for details.</dd></dl>
 <p> <code>DEST</code> &#8211; {<code>&#8211;</code>|<i>address</i>|+<i>ipset</i>}</p>
 <dl>
-<dd>Destination of the packet. May be a host or network <i>address</i>. DNS names are not allowed. Beginning with Shorewall 4.6.0, an ipset name (prefixed with &#8216;+&#8217;) may be used if your kernel and ip6tables have the Basic Ematch capability and you set BASIC_FILTERS=Yes in m[blue]<code>shorewall6.conf (5)</code>m[]<font SIZE="-2">[3]</font>. The ipset name may optionally be followed by a number or a comma separated list of src and/or dst enclosed in square brackets ([&#8230;]). See m[blue]<code><a href="/docs/linux/man/5-shorewall6-ipsets/">shorewall6-ipsets</a>(5)</code>m[]<font SIZE="-2">[4]</font> for details.</dd></dl>
+<dd>Destination of the packet. May be a host or network <i>address</i>. DNS names are not allowed. Beginning with Shorewall 4.6.0, an ipset name (prefixed with &#8216;+&#8217;) may be used if your kernel and ip6tables have the Basic Ematch capability and you set BASIC_FILTERS=Yes in m[blue]<code>shorewall6.conf (5)</code>m[][3]. The ipset name may optionally be followed by a number or a comma separated list of src and/or dst enclosed in square brackets ([&#8230;]). See m[blue]<code><a href="/docs/linux/man/5-shorewall6-ipsets/">shorewall6-ipsets</a>(5)</code>m[][4] for details.</dd></dl>
 <p> <code>PROTO</code> &#8211; {<code>&#8211;</code>|{<i>protocol-number</i>|<i>protocol-name</i>|<code>all}</code>[,&#8230;]}</p>
 <dl>
 <dd>Protocol. </dd>
@@ -117,7 +117,7 @@ description: "tcfilters – shorewall6 u32/basic classifier rules file"
 <h2>Files</h2>
 <p>/etc/shorewall6/tcfilters</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/traffic_shaping.htm">http://www.shorewall.net/traffic_shaping.htm</a></code>m[]<font SIZE="-2">[5]</font> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MultiISP.html">http://www.shorewall.net/MultiISP.html</a></code>m[]<font SIZE="-2">[6]</font> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/PacketMarking.html">http://www.shorewall.net/PacketMarking.html</a></code>m[]<font SIZE="-2">[7]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/traffic_shaping.htm">http://www.shorewall.net/traffic_shaping.htm</a></code>m[][5] m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MultiISP.html">http://www.shorewall.net/MultiISP.html</a></code>m[][6] m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/PacketMarking.html">http://www.shorewall.net/PacketMarking.html</a></code>m[][7] </p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

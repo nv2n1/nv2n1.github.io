@@ -19,14 +19,14 @@ description: "ncrcat – netCDF Record Concatenator"
 <p> Concatenate files <code>85.nc</code>, <code>86.nc</code>, &nbsp;<wbr>&#8230;&nbsp;<wbr> <code>89.nc</code> along the record dimension, and store the results in <code>8589.nc</code>:</p>
 <dl>
 <dt>
-</dt><dd> ncrcat 85.nc 86.nc 87.nc 88.nc 89.nc 8589.nc<br />
- ncrcat 8[56789].nc 8589.nc<br />
+</dt><dd> ncrcat 85.nc 86.nc 87.nc 88.nc 89.nc 8589.nc<br/>
+ ncrcat 8[56789].nc 8589.nc<br/>
  ncrcat -n 5,2,1 85.nc 8589.nc</dd></dl>
 <p> These three methods produce identical answers. </p>
 <p> Assume the files <code>85.nc</code>, <code>86.nc</code>, &nbsp;<wbr>&#8230;&nbsp;<wbr> <code>89.nc</code> each contain a record coordinate <i>time</i> of length 12 defined such that the third record in <code>86.nc</code> contains data from March 1986, etc. NCO knows how to hyperslab the record dimension across files. Thus, to concatenate data from December, 1985&#8211;February, 1986:</p>
 <dl>
 <dt>
-</dt><dd> ncrcat -d time,11,13 85.nc 86.nc 87.nc 8512_8602.nc<br />
+</dt><dd> ncrcat -d time,11,13 85.nc 86.nc 87.nc 8512_8602.nc<br/>
  ncrcat -F -d time,12,14 85.nc 86.nc 87.nc 8512_8602.nc</dd></dl>
 <p> The file <code>87.nc</code> is superfluous, but does not cause an error. The <code>-F</code> turns on the Fortran (1-based) indexing convention. </p>
 <p> The following uses the <i>stride</i> option to concatenate all the March temperature data from multiple input files into a single output file</p>
@@ -42,7 +42,7 @@ description: "ncrcat – netCDF Record Concatenator"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;<a rel="nofollow" href="http://sf.net/bugs/?group_id=3331">http://sf.net/bugs/?group_id=3331</a>&gt;. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1995-2014 Charlie Zender<br />
+<p> Copyright &#169; 1995-2014 Charlie Zender<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>NCO</code> is maintained as a Texinfo manual called the <code>NCO User&#8217;s Guide.</code> Because <code>NCO</code> is mathematical in nature, the documentation includes TeX-intensive portions not viewable on character-based displays. Hence the only complete and authoritative versions of the <code>NCO User&#8217;s Guide </code> are the PDF (recommended), DVI, and Postscript versions at &lt;<a rel="nofollow" href="http://nco.sf.net/nco.pdf">http://nco.sf.net/nco.pdf</a>&gt;, &lt;<a href="http://nco.sf.net/nco.dvi">http://nco.sf.net/nco.dvi</a>&gt;, and &lt;<a rel="nofollow" href="http://nco.sf.net/nco.ps">http://nco.sf.net/nco.ps</a>&gt;, respectively. HTML and XML versions are available at &lt;<a rel="nofollow" href="http://nco.sf.net/nco.html">http://nco.sf.net/nco.html</a>&gt; and &lt;<a rel="nofollow" href="http://nco.sf.net/nco.xml">http://nco.sf.net/nco.xml</a>&gt;, respectively. </p>

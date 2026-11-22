@@ -13,9 +13,9 @@ description: "globus_i_ftp_client_data_target_t –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;globus_i_ftp_client.h&gt;</p>
 <h3>Data Fields</h3>
-<p> struct<br />
+<p> struct<br/>
  <code>globus_i_ftp_client_target_s</code> * <code>source</code>&quot; </p>
-<p> struct<br />
+<p> struct<br/>
  <code>globus_i_ftp_client_target_s</code> * <code>dest</code>&quot; </p>
 <p> globus_i_ftp_client_operation_t <code>operation</code> </p>
 <h2>Detailed Description</h2>

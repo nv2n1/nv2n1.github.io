@@ -26,30 +26,30 @@ description: "MP4Client – GPAC MPEG-4 command-line Player"
 <dt><code>-log-file FILE</code></dt>
 <dd> specifies where to write logs. Default is stdout. Same as -lf.</dd>
 <dt><code>-logs TOOLS</code></dt>
-<dd> sets log tools and levels, formatted as a &#8216;:&#8217;-separated list of toolX[:toolZ]@level. By default all errors are logged. level can be one of quiet, error, warning, info or debug. tool can be:<br />
- core: libgpac core<br />
- coding: bitstream formats (audio, video, scene)<br />
- container: container formats (ISO File, MPEG-2 TS, AVI, &#8230;)<br />
- network: network data exept RTP trafic<br />
- rtp: rtp trafic<br />
- author: authoring tools (hint, import, export)<br />
- sync: terminal sync layer<br />
- codec: terminal codec messages<br />
- parser: scene parsers (svg, xmt, bt) and other<br />
- media: terminal media object management<br />
- scene: scene graph and scene manager<br />
- script: scripting engine messages<br />
- interact: interaction engine (events, scripts, etc)<br />
- smil: SMIL timing engine<br />
- compose: composition engine (2D, 3D, etc)<br />
- mmio: Audio/Video HW I/O management<br />
- rti: various run-time stats<br />
- cache: HTTP cache subsystem<br />
- audio: Audio renderer and mixers<br />
- mem: GPAC memory tracker<br />
- module: GPAC modules debugging<br />
- mutex: mutex<br />
- none: no tool logged<br />
+<dd> sets log tools and levels, formatted as a &#8216;:&#8217;-separated list of toolX[:toolZ]@level. By default all errors are logged. level can be one of quiet, error, warning, info or debug. tool can be:<br/>
+ core: libgpac core<br/>
+ coding: bitstream formats (audio, video, scene)<br/>
+ container: container formats (ISO File, MPEG-2 TS, AVI, &#8230;)<br/>
+ network: network data exept RTP trafic<br/>
+ rtp: rtp trafic<br/>
+ author: authoring tools (hint, import, export)<br/>
+ sync: terminal sync layer<br/>
+ codec: terminal codec messages<br/>
+ parser: scene parsers (svg, xmt, bt) and other<br/>
+ media: terminal media object management<br/>
+ scene: scene graph and scene manager<br/>
+ script: scripting engine messages<br/>
+ interact: interaction engine (events, scripts, etc)<br/>
+ smil: SMIL timing engine<br/>
+ compose: composition engine (2D, 3D, etc)<br/>
+ mmio: Audio/Video HW I/O management<br/>
+ rti: various run-time stats<br/>
+ cache: HTTP cache subsystem<br/>
+ audio: Audio renderer and mixers<br/>
+ mem: GPAC memory tracker<br/>
+ module: GPAC modules debugging<br/>
+ mutex: mutex<br/>
+ none: no tool logged<br/>
  all: all tools logged &#8211; other tools can be specified afterwards.
 </dd></dl>
 <h2>PLAYBACK OPTIONS</h2>

@@ -11,7 +11,7 @@ description: "dlasd2.f –"
 <p> dlasd2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlasd2</code> (NL, NR, SQRE, K, D, Z, ALPHA, BETA, U, LDU, VT, LDVT, DSIGMA, U2, LDU2, VT2, LDVT2, IDXP, IDX, IDXC, IDXQ, COLTYP, INFO)<br />
+<p> subroutine <code>dlasd2</code> (NL, NR, SQRE, K, D, Z, ALPHA, BETA, U, LDU, VT, LDVT, DSIGMA, U2, LDU2, VT2, LDVT2, IDXP, IDX, IDXC, IDXQ, COLTYP, INFO)<br/>
  <i></i><code>DLASD2</code> merges the two sets of singular values together into a single sorted set. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasd2 (integerNL, integerNR, integerSQRE, integerK, double precision, dimension( * )D, double precision, dimension( * )Z, double precisionALPHA, double precisionBETA, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldvt, * )VT, integerLDVT, double precision, dimension( * )DSIGMA, double precision, dimension( ldu2, * )U2, integerLDU2, double precision, dimension( ldvt2, * )VT2, integerLDVT2, integer, dimension( * )IDXP, integer, dimension( * )IDX, integer, dimension( * )IDXC, integer, dimension( * )IDXQ, integer, dimension( * )COLTYP, integerINFO)</h3>

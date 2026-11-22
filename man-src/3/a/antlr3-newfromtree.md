@@ -15,8 +15,8 @@ description: "src/antlr3commontree.c –"
 <p> ANTLR3_API <code>pANTLR3_COMMON_TREE</code> <code>antlr3CommonTreeNew</code> () </p>
 <p> ANTLR3_API <code>pANTLR3_COMMON_TREE</code> <code>antlr3CommonTreeNewFromToken</code> (<code>pANTLR3_COMMON_TOKEN</code> token) </p>
 <p> ANTLR3_API void <code>antlr3SetCTAPI</code> (<code>pANTLR3_COMMON_TREE</code> tree) </p>
-<p> static void <code>createChildrenList</code> (<code>pANTLR3_BASE_TREE</code> tree)<br />
- <i>Create a new vector for holding child nodes using the inbuilt vector factory. </i><br />
+<p> static void <code>createChildrenList</code> (<code>pANTLR3_BASE_TREE</code> tree)<br/>
+ <i>Create a new vector for holding child nodes using the inbuilt vector factory. </i><br/>
  static <code>pANTLR3_BASE_TREE</code> <code>dupNode</code> (<code>pANTLR3_BASE_TREE</code> tree) </p>
 <p> static void <code>factoryClose</code> (<code>pANTLR3_ARBORETUM</code> factory) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>getCharPositionInLine</code> (<code>pANTLR3_BASE_TREE</code> tree) </p>
@@ -31,8 +31,8 @@ description: "src/antlr3commontree.c –"
 <p> static <code>pANTLR3_BASE_TREE</code> <code>newFromTree</code> (<code>pANTLR3_ARBORETUM</code> factory, <code>pANTLR3_COMMON_TREE</code> tree) </p>
 <p> static void <code>newPool</code> (<code>pANTLR3_ARBORETUM</code> factory) </p>
 <p> static <code>pANTLR3_BASE_TREE</code> <code>newPoolTree</code> (<code>pANTLR3_ARBORETUM</code> factory) </p>
-<p> static void <code>reuse</code> (<code>pANTLR3_BASE_TREE</code> tree)<br />
- <i>Clean up any child vector that the tree might have, so it can be reused, then add it into the reuse stack. </i><br />
+<p> static void <code>reuse</code> (<code>pANTLR3_BASE_TREE</code> tree)<br/>
+ <i>Clean up any child vector that the tree might have, so it can be reused, then add it into the reuse stack. </i><br/>
  static void <code>setChildIndex</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>ANTLR3_INT32</code> i) </p>
 <p> static void <code>setParent</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>pANTLR3_BASE_TREE</code> parent) </p>
 <p> static <code>pANTLR3_STRING</code> <code>toString</code> (<code>pANTLR3_BASE_TREE</code> tree) </p>

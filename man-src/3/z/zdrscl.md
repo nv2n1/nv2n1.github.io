@@ -10,7 +10,7 @@ description: "zdrscl.f –"
 <p>zdrscl.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zdrscl</code> (N, SA, SX, INCX)<br />
+<p>subroutine <code>zdrscl</code> (N, SA, SX, INCX)<br/>
  <i></i><code>ZDRSCL</code> multiplies a vector by the reciprocal of a real scalar.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zdrscl (integerN, double precisionSA, complex*16, dimension( * )SX, integerINCX)</h3>

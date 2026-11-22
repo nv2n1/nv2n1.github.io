@@ -13,12 +13,12 @@ description: "ubuntu-report-show – Only collect and display metrics without se
 <h2>Description</h2>
 <p>Only collect and display metrics without sending </p>
 <h2>Options</h2>
-<p><code>-h</code>, <code>&#8211;help</code>[=false]<br />
+<p><code>-h</code>, <code>&#8211;help</code>[=false]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;help for show</p>
 <h2>Options Inherited From Parent Commands</h2>
-<p><code>-f</code>, <code>&#8211;force</code>[=false]<br />
+<p><code>-f</code>, <code>&#8211;force</code>[=false]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;collect and send new report even if already reported </p>
-<p> <code>-v</code>, <code>&#8211;verbose</code>[=0]<br />
+<p> <code>-v</code>, <code>&#8211;verbose</code>[=0]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;issue INFO&nbsp;(-v)&nbsp;and DEBUG&nbsp;(-vv)&nbsp;output</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-ubuntu-report/">ubuntu-report</a>(3)</code> </p>

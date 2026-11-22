@@ -10,7 +10,7 @@ description: "zhpgst.f –"
 <p>zhpgst.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhpgst</code> (ITYPE, UPLO, N, AP, BP, INFO)<br />
+<p>subroutine <code>zhpgst</code> (ITYPE, UPLO, N, AP, BP, INFO)<br/>
  <i></i><code>ZHPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhpgst (integerITYPE, characterUPLO, integerN, complex*16, dimension( * )AP, complex*16, dimension( * )BP, integerINFO)</h3>

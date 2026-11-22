@@ -11,8 +11,8 @@ description: "cabs, cabsf, cabsl – absolute value of a complex number"
 <p> cabs, cabsf, cabsl &#8211; absolute value of a complex number </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double cabs(double complex </code><i>z</i><code>);</code><br />
- <code>float cabsf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double cabs(double complex </code><i>z</i><code>);</code><br/>
+ <code>float cabsf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double cabsl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

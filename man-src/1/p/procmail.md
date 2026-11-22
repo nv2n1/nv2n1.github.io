@@ -10,12 +10,12 @@ description: "procmail – autonomous mail processor"
 
 <p> procmail &#8211; autonomous mail processor </p>
 <h2>SYNOPSIS</h2>
-<p> <code>procmail</code> [<code>-ptoY</code>] [<code>-f </code><i>fromwhom</i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<i>parameter</i><code>=</code>value |<i> rcfile</i>] &#8230;<br />
- <code>procmail</code> [<code>-toY</code>] [<code>-f </code><i>fromwhom</i>] [<code>-a </code><i>argument</i>] &#8230;<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <code>-d</code> <i>recipient</i> &#8230;<br />
- <code>procmail</code> [<code>-ptY</code>] <code>-m</code> [<i>parameter</i><code>=</code>value] &#8230; <i>rcfile</i><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<i>argument</i>] &#8230;<br />
+<p> <code>procmail</code> [<code>-ptoY</code>] [<code>-f </code><i>fromwhom</i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<i>parameter</i><code>=</code>value |<i> rcfile</i>] &#8230;<br/>
+ <code>procmail</code> [<code>-toY</code>] [<code>-f </code><i>fromwhom</i>] [<code>-a </code><i>argument</i>] &#8230;<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <code>-d</code> <i>recipient</i> &#8230;<br/>
+ <code>procmail</code> [<code>-ptY</code>] <code>-m</code> [<i>parameter</i><code>=</code>value] &#8230; <i>rcfile</i><br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<i>argument</i>] &#8230;<br/>
  <code>procmail</code> <code>-v</code> </p>
 <h2>DESCRIPTION</h2>
 <p> For a quick start, see <code>NOTES</code> at the end. </p>
@@ -27,22 +27,22 @@ description: "procmail – autonomous mail processor"
 <p> The weighted scoring technique is described in detail in the <code><a href="/docs/linux/man/5-procmailsc/">procmailsc</a></code>(5) man page. </p>
 <p> Examples for rcfile recipes can be looked up in the <code><a href="/docs/linux/man/5-procmailex/">procmailex</a></code>(5) man page. </p>
 <h3>Signals</h3>
-<p> Tp 1.2i <code>TERMINATE</code> Terminate prematurely and requeue the mail.<br />
- Tp <code>HANGUP</code> Terminate prematurely and bounce the mail.<br />
- Tp <code>INTERRUPT</code> Terminate prematurely and bounce the mail.<br />
- Tp <code>QUIT</code> Terminate prematurely and silently lose the mail.<br />
- Tp <code>ALARM</code> Force a timeout (see <code>TIMEOUT).</code><br />
- Tp <code>USR1</code> Equivalent to a <code>VERBOSE</code>=off.<br />
+<p> Tp 1.2i <code>TERMINATE</code> Terminate prematurely and requeue the mail.<br/>
+ Tp <code>HANGUP</code> Terminate prematurely and bounce the mail.<br/>
+ Tp <code>INTERRUPT</code> Terminate prematurely and bounce the mail.<br/>
+ Tp <code>QUIT</code> Terminate prematurely and silently lose the mail.<br/>
+ Tp <code>ALARM</code> Force a timeout (see <code>TIMEOUT).</code><br/>
+ Tp <code>USR1</code> Equivalent to a <code>VERBOSE</code>=off.<br/>
  Tp <code>USR2</code> Equivalent to a <code>VERBOSE</code>=on. </p>
 <h2>OPTIONS</h2>
-<p> Tp 0.5i <code>-v</code> Procmail will print its version number, display its compile time configuration and exit.<br />
- Tp <code>-p</code> Preserve any old environment. Normally procmail clears the environment upon startup, except for the value of TZ. However, in any case: any default values will override any preexisting environment variables, i.e., procmail will not pay any attention to any predefined environment variables, it will happily overwrite them with its own defaults. For the list of environment variables that procmail will preset see the <code><a href="/docs/linux/man/5-procmailrc/">procmailrc</a></code>(5) man page. If both -p and -m are specified, the list of preset environment variables shrinks to just: LOGNAME, HOME, SHELL, ORGMAIL and MAILDIR.<br />
- Tp <code>-t</code> Make procmail fail softly, i.e., if procmail cannot deliver the mail to any of the destinations you gave, the mail will not bounce, but will return to the mailqueue. Another delivery-attempt will be made at some time in the future.<br />
- Tp <i></i><code>-f</code> fromwhom Causes procmail to regenerate the leading `From &#8216; line with <i>fromwhom</i> as the sender (instead of -f one could use the alternate and obsolete -r). If <i>fromwhom</i> consists merely of a single `-&#8216;, then procmail will only update the timestamp on the `From &#8216; line (if present, if not, it will generate a new one).<br />
- Tp <code>-o</code> Instead of allowing anyone to generate `From &#8216; lines, simply override the fakes.<br />
- Tp <code>-Y</code> Assume traditional Berkeley mailbox format, ignore any <code>Content-Length:</code> fields.<br />
- Tp <i></i><code>-a</code> argument This will set $1 to be equal to <i>argument</i>. Each succeeding <i></i><code>-a</code> argument will set the next number variable ($2, $3, etc). It can be used to pass meta information along to procmail. This is typically done by passing along the $@x information from the sendmail mailer rule.<br />
- Tp <i></i><code>-d</code> recipient &#8230; This turns on explicit delivery mode, delivery will be to the local user <i>recipient</i>. This, of course, only is possible if procmail has root privileges (or if procmail is already running with the recipient&#8217;s euid and egid). Procmail will setuid to the intended recipients and delivers the mail as if it were invoked by the recipient with no arguments (i.e., if no rcfile is found, delivery is like ordinary mail). This option is incompatible with <code>-p</code>.<br />
+<p> Tp 0.5i <code>-v</code> Procmail will print its version number, display its compile time configuration and exit.<br/>
+ Tp <code>-p</code> Preserve any old environment. Normally procmail clears the environment upon startup, except for the value of TZ. However, in any case: any default values will override any preexisting environment variables, i.e., procmail will not pay any attention to any predefined environment variables, it will happily overwrite them with its own defaults. For the list of environment variables that procmail will preset see the <code><a href="/docs/linux/man/5-procmailrc/">procmailrc</a></code>(5) man page. If both -p and -m are specified, the list of preset environment variables shrinks to just: LOGNAME, HOME, SHELL, ORGMAIL and MAILDIR.<br/>
+ Tp <code>-t</code> Make procmail fail softly, i.e., if procmail cannot deliver the mail to any of the destinations you gave, the mail will not bounce, but will return to the mailqueue. Another delivery-attempt will be made at some time in the future.<br/>
+ Tp <i></i><code>-f</code> fromwhom Causes procmail to regenerate the leading `From &#8216; line with <i>fromwhom</i> as the sender (instead of -f one could use the alternate and obsolete -r). If <i>fromwhom</i> consists merely of a single `-&#8216;, then procmail will only update the timestamp on the `From &#8216; line (if present, if not, it will generate a new one).<br/>
+ Tp <code>-o</code> Instead of allowing anyone to generate `From &#8216; lines, simply override the fakes.<br/>
+ Tp <code>-Y</code> Assume traditional Berkeley mailbox format, ignore any <code>Content-Length:</code> fields.<br/>
+ Tp <i></i><code>-a</code> argument This will set $1 to be equal to <i>argument</i>. Each succeeding <i></i><code>-a</code> argument will set the next number variable ($2, $3, etc). It can be used to pass meta information along to procmail. This is typically done by passing along the $@x information from the sendmail mailer rule.<br/>
+ Tp <i></i><code>-d</code> recipient &#8230; This turns on explicit delivery mode, delivery will be to the local user <i>recipient</i>. This, of course, only is possible if procmail has root privileges (or if procmail is already running with the recipient&#8217;s euid and egid). Procmail will setuid to the intended recipients and delivers the mail as if it were invoked by the recipient with no arguments (i.e., if no rcfile is found, delivery is like ordinary mail). This option is incompatible with <code>-p</code>.<br/>
  Tp <code>-m</code> Turns procmail into a general purpose mail filter. In this mode one rcfile must be specified on the command line. After the rcfile, procmail will accept an unlimited number of arguments. If the rcfile is an absolute path starting with <code>/etc/procmailrcs/</code> without backward references (i.e. the parent directory cannot be mentioned) procmail will, only if no security violations are found, take on the identity of the owner of the rcfile (or symbolic link). For some advanced usage of this option you should look in the <code>EXAMPLES</code> section below. </p>
 <h2>ARGUMENTS</h2>
 <p> Any arguments containing an &#8216;=&#8217; are considered to be environment variable assignments, they will <i>all</i> be evaluated after the default values have been assigned and before the first rcfile is opened. </p>
@@ -78,96 +78,96 @@ SHIFT = 1                       # remove it from $@
 </pre>
 <p> Do watch out when sending mail from within the /etc/procmailrcs/some.rc file, if you send mail to addresses which match the first rule again, you could be creating an endless mail loop. </p>
 <h2>FILES</h2>
-<p> Tp 2.3i <code>/etc/passwd</code> to set the recipient&#8217;s LOGNAME, HOME and SHELL variable defaults<br />
- Tp <code>/var/mail/$LOGNAME</code> system mailbox; both the system mailbox and the immediate directory it is in will be created every time procmail starts and either one is not present<br />
- Tp <code>/etc/procmailrc</code> initial global rcfile<br />
- Tp <code>/etc/procmailrcs/</code> special privileges path for rcfiles<br />
- Tp <code>$HOME/.procmailrc</code> default rcfile<br />
- Tp <code>/var/mail/$LOGNAME.lock</code> lockfile for the system mailbox (not automatically used by procmail, unless $DEFAULT equals /var/mail/$LOGNAME and procmail is delivering to $DEFAULT)<br />
- Tp <code>/usr/sbin/sendmail</code> default mail forwarder<br />
+<p> Tp 2.3i <code>/etc/passwd</code> to set the recipient&#8217;s LOGNAME, HOME and SHELL variable defaults<br/>
+ Tp <code>/var/mail/$LOGNAME</code> system mailbox; both the system mailbox and the immediate directory it is in will be created every time procmail starts and either one is not present<br/>
+ Tp <code>/etc/procmailrc</code> initial global rcfile<br/>
+ Tp <code>/etc/procmailrcs/</code> special privileges path for rcfiles<br/>
+ Tp <code>$HOME/.procmailrc</code> default rcfile<br/>
+ Tp <code>/var/mail/$LOGNAME.lock</code> lockfile for the system mailbox (not automatically used by procmail, unless $DEFAULT equals /var/mail/$LOGNAME and procmail is delivering to $DEFAULT)<br/>
+ Tp <code>/usr/sbin/sendmail</code> default mail forwarder<br/>
  Tp <code>_????`hostname`</code> temporary `unique&#8217; zero-length files created by procmail </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-procmailrc/">procmailrc</a></code>(5), <code><a href="/docs/linux/man/5-procmailsc/">procmailsc</a></code>(5), <code><a href="/docs/linux/man/5-procmailex/">procmailex</a></code>(5), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/1-mailx/">mailx</a></code>(1), <code><a href="/docs/linux/man/1-uucp/">uucp</a></code>(1), <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5), <code>sendmail</code>(8), <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code>biff</code>(1), <code>comsat</code>(8), <code><a href="/docs/linux/man/1-lockfile/">lockfile</a></code>(1), <code><a href="/docs/linux/man/1-formail/">formail</a></code>(1), <code>cron</code>(1) </p>
 <h2>DIAGNOSTICS</h2>
-<p> Tp 2.3i Autoforwarding mailbox found The system mailbox had its suid or sgid bit set, procmail terminates with EX_NOUSER assuming that this mailbox must not be delivered to.<br />
- Tp Bad substitution of &quot;x&quot; Not a valid environment variable name specified.<br />
- Tp Closing brace unexpected There was no corresponding opening brace (nesting block).<br />
- Tp Conflicting options Not all option combinations are useful<br />
- Tp Conflicting x suppressed Flag x is not compatible with some other flag on this recipe.<br />
- Tp Couldn&#8217;t create &quot;x&quot; The system mailbox was missing and could not/will not be created.<br />
- Tp Couldn&#8217;t create maildir part &quot;x&quot; The maildir folder &quot;x&quot; is missing one or more required subdirectories and procmail could not create them.<br />
- Tp Couldn&#8217;t create or rename temp file &quot;x&quot; An error occurred in the mechanics of delivering to the directory folder &quot;x&quot;.<br />
- Tp Couldn&#8217;t determine implicit lockfile from &quot;x&quot; There were no `&gt;&gt;&#8217; redirectors to be found, using simply `$LOCKEXT&#8217; as locallockfile.<br />
- Tp Couldn&#8217;t read &quot;x&quot; Procmail was unable to open an rcfile or it was not a regular file, or procmail couldn&#8217;t open an MH directory to find the highest numbered file.<br />
- Tp Couldn&#8217;t unlock &quot;x&quot; Lockfile was already gone, or write permission to the directory where the lockfile is has been denied.<br />
- Tp Deadlock attempted on &quot;x&quot; The locallockfile specified on this recipe is equal to a still active $LOCKFILE.<br />
- Tp Denying special privileges for &quot;x&quot; Procmail will not take on the identity that comes with the rcfile because a security violation was found (e.g. <code>-p</code> or variable assignments on the command line) or procmail had insufficient privileges to do so.<br />
- Tp Descriptor &quot;x&quot; was not open As procmail was started, stdin, stdout or stderr was not connected (possibly an attempt to subvert security)<br />
- Tp Enforcing stricter permissions on &quot;x&quot; The system mailbox of the recipient was found to be unsecured, procmail secured it.<br />
- Tp Error while writing to &quot;x&quot; Nonexistent subdirectory, no write permission, pipe died or disk full.<br />
- Tp Exceeded LINEBUF Buffer overflow detected, LINEBUF was too small, PROCMAIL_OVERFLOW has been set.<br />
- Tp MAILDIR is not an absolute path<br />
- Tp MAILDIR path too long<br />
- Tp ORGMAIL is not an absolute path<br />
- Tp ORGMAIL path too long<br />
- Tp default rcfile is not an absolute path<br />
- Tp default rcfile path too long The specified item&#8217;s full path, when expanded, was longer than LINEBUF or didn&#8217;t start with a file separator.<br />
- Tp Excessive output quenched from &quot;x&quot; The program or filter &quot;x&quot; tried to produce too much output for the current LINEBUF, the rest was discarded and PROCMAIL_OVERFLOW has been set.<br />
- Tp Extraneous x ignored The action line or other flags on this recipe makes flag x meaningless.<br />
- Tp Failed forking &quot;x&quot; Process table is full (and NORESRETRY has been exhausted).<br />
- Tp Failed to execute &quot;x&quot; Program not in path, or not executable.<br />
- Tp Forced unlock denied on &quot;x&quot; No write permission in the directory where <code>lockfile</code> &quot;x&quot; resides, or more than one procmail trying to force a lock at exactly the same time.<br />
- Tp Forcing lock on &quot;x&quot; <code>Lockfile</code> &quot;x&quot; is going to be removed by force because of a timeout (see also: <code>LOCKTIMEOUT</code>).<br />
- Tp Incomplete recipe The start of a recipe was found, but it stranded in an EOF.<br />
- Tp Insufficient privileges Procmail either needs root privileges, or must have the right (e)uid <code>and</code> (e)gid to run in delivery mode. The mail will bounce.<br />
- Tp Invalid regexp &quot;x&quot; The regular expression &quot;x&quot; contains errors (most likely some missing or extraneous parens).<br />
- Tp Kernel-lock failed While trying to use the kernel-supported locking calls, one of them failed (usually indicates an OS error), procmail ignores this error and proceeds.<br />
- Tp Kernel-unlock failed See above.<br />
- Tp Lock failure on &quot;x&quot; Can only occur if you specify some real weird (and illegal) lockfilenames or if the <code>lockfile</code> could not be created because of insufficient permissions or nonexistent subdirectories.<br />
- Tp Lost &quot;x&quot; Procmail tried to clone itself but could not find back rcfile &quot;x&quot; (it either got removed or it was a relative path and you changed directory since procmail opened it last time).<br />
- Tp Missing action The current recipe was found to be incomplete.<br />
- Tp Missing closing brace A nesting block was started, but never finished.<br />
- Tp Missing name The -f option needs an extra argument.<br />
- Tp Missing argument You specified the -a option but forgot the argument.<br />
- Tp Missing rcfile You specified the -m option, procmail expects the name of an rcfile as argument.<br />
- Tp Missing recipient You specified the -d option or called procmail under a different name, it expects one or more recipients as arguments.<br />
- Tp No space left to finish writing &quot;x&quot; The filesystem containing &quot;x&quot; does not have enough free space to permit delivery of the message to the file.<br />
- Tp Out of memory The system is out of swap space (and NORESRETRY has been exhausted).<br />
- Tp Processing continued The unrecognised options on the command line are ignored, proceeding as usual.<br />
- Tp Program failure (nnn) of &quot;x&quot; Program that was started by procmail returned nnn instead of EXIT_SUCCESS (=0); if nnn is negative, then this is the signal the program died on.<br />
- Tp Quota exceeded while writing &quot;x&quot; The filesize quota for the recipient on the filesystem containing &quot;x&quot; does not permit delivering the message to the file.<br />
- Tp Renaming bogus &quot;x&quot; into &quot;x&quot; The system mailbox of the recipient was found to be bogus, procmail performed evasive actions.<br />
- Tp Rescue of unfiltered data succeeded/failed A filter returned unsuccessfully, procmail tried to get back the original text.<br />
- Tp Skipped: &quot;x&quot; Couldn&#8217;t do anything with &quot;x&quot; in the rcfile (syntax error), ignoring it.<br />
- Tp Suspicious rcfile &quot;x&quot; The owner of the rcfile was not the recipient or root, the file was world writable, or the directory that contained it was world writable, or this was the default rcfile ($HOME/.procmailrc) and either it was group writable or the directory that contained it was group writable (the rcfile was not used).<br />
- Tp Terminating prematurely whilst waiting for &#8230; Procmail received a signal while it was waiting for &#8230;<br />
- Tp Timeout, terminating &quot;x&quot; Timeout has occurred on program or filter &quot;x&quot;.<br />
- Tp Timeout, was waiting for &quot;x&quot; Timeout has occurred on program, filter or file &quot;x&quot;. If it was a program or filter, then it didn&#8217;t seem to be running anymore.<br />
- Tp Truncated file to former size The file could not be delivered to successfully, so the file was truncated to its former size.<br />
- Tp Truncating &quot;x&quot; and retrying lock &quot;x&quot; does not seem to be a valid filename or the file is not empty.<br />
- Tp Unable to treat as directory &quot;x&quot; Either the suffix on &quot;x&quot; would indicate that it should be an MH or maildir folder, or it was listed as an second folder into which to link, but it already exists and is not a directory.<br />
- Tp Unexpected EOL Missing closing quote, or trying to escape EOF.<br />
+<p> Tp 2.3i Autoforwarding mailbox found The system mailbox had its suid or sgid bit set, procmail terminates with EX_NOUSER assuming that this mailbox must not be delivered to.<br/>
+ Tp Bad substitution of &quot;x&quot; Not a valid environment variable name specified.<br/>
+ Tp Closing brace unexpected There was no corresponding opening brace (nesting block).<br/>
+ Tp Conflicting options Not all option combinations are useful<br/>
+ Tp Conflicting x suppressed Flag x is not compatible with some other flag on this recipe.<br/>
+ Tp Couldn&#8217;t create &quot;x&quot; The system mailbox was missing and could not/will not be created.<br/>
+ Tp Couldn&#8217;t create maildir part &quot;x&quot; The maildir folder &quot;x&quot; is missing one or more required subdirectories and procmail could not create them.<br/>
+ Tp Couldn&#8217;t create or rename temp file &quot;x&quot; An error occurred in the mechanics of delivering to the directory folder &quot;x&quot;.<br/>
+ Tp Couldn&#8217;t determine implicit lockfile from &quot;x&quot; There were no `&gt;&gt;&#8217; redirectors to be found, using simply `$LOCKEXT&#8217; as locallockfile.<br/>
+ Tp Couldn&#8217;t read &quot;x&quot; Procmail was unable to open an rcfile or it was not a regular file, or procmail couldn&#8217;t open an MH directory to find the highest numbered file.<br/>
+ Tp Couldn&#8217;t unlock &quot;x&quot; Lockfile was already gone, or write permission to the directory where the lockfile is has been denied.<br/>
+ Tp Deadlock attempted on &quot;x&quot; The locallockfile specified on this recipe is equal to a still active $LOCKFILE.<br/>
+ Tp Denying special privileges for &quot;x&quot; Procmail will not take on the identity that comes with the rcfile because a security violation was found (e.g. <code>-p</code> or variable assignments on the command line) or procmail had insufficient privileges to do so.<br/>
+ Tp Descriptor &quot;x&quot; was not open As procmail was started, stdin, stdout or stderr was not connected (possibly an attempt to subvert security)<br/>
+ Tp Enforcing stricter permissions on &quot;x&quot; The system mailbox of the recipient was found to be unsecured, procmail secured it.<br/>
+ Tp Error while writing to &quot;x&quot; Nonexistent subdirectory, no write permission, pipe died or disk full.<br/>
+ Tp Exceeded LINEBUF Buffer overflow detected, LINEBUF was too small, PROCMAIL_OVERFLOW has been set.<br/>
+ Tp MAILDIR is not an absolute path<br/>
+ Tp MAILDIR path too long<br/>
+ Tp ORGMAIL is not an absolute path<br/>
+ Tp ORGMAIL path too long<br/>
+ Tp default rcfile is not an absolute path<br/>
+ Tp default rcfile path too long The specified item&#8217;s full path, when expanded, was longer than LINEBUF or didn&#8217;t start with a file separator.<br/>
+ Tp Excessive output quenched from &quot;x&quot; The program or filter &quot;x&quot; tried to produce too much output for the current LINEBUF, the rest was discarded and PROCMAIL_OVERFLOW has been set.<br/>
+ Tp Extraneous x ignored The action line or other flags on this recipe makes flag x meaningless.<br/>
+ Tp Failed forking &quot;x&quot; Process table is full (and NORESRETRY has been exhausted).<br/>
+ Tp Failed to execute &quot;x&quot; Program not in path, or not executable.<br/>
+ Tp Forced unlock denied on &quot;x&quot; No write permission in the directory where <code>lockfile</code> &quot;x&quot; resides, or more than one procmail trying to force a lock at exactly the same time.<br/>
+ Tp Forcing lock on &quot;x&quot; <code>Lockfile</code> &quot;x&quot; is going to be removed by force because of a timeout (see also: <code>LOCKTIMEOUT</code>).<br/>
+ Tp Incomplete recipe The start of a recipe was found, but it stranded in an EOF.<br/>
+ Tp Insufficient privileges Procmail either needs root privileges, or must have the right (e)uid <code>and</code> (e)gid to run in delivery mode. The mail will bounce.<br/>
+ Tp Invalid regexp &quot;x&quot; The regular expression &quot;x&quot; contains errors (most likely some missing or extraneous parens).<br/>
+ Tp Kernel-lock failed While trying to use the kernel-supported locking calls, one of them failed (usually indicates an OS error), procmail ignores this error and proceeds.<br/>
+ Tp Kernel-unlock failed See above.<br/>
+ Tp Lock failure on &quot;x&quot; Can only occur if you specify some real weird (and illegal) lockfilenames or if the <code>lockfile</code> could not be created because of insufficient permissions or nonexistent subdirectories.<br/>
+ Tp Lost &quot;x&quot; Procmail tried to clone itself but could not find back rcfile &quot;x&quot; (it either got removed or it was a relative path and you changed directory since procmail opened it last time).<br/>
+ Tp Missing action The current recipe was found to be incomplete.<br/>
+ Tp Missing closing brace A nesting block was started, but never finished.<br/>
+ Tp Missing name The -f option needs an extra argument.<br/>
+ Tp Missing argument You specified the -a option but forgot the argument.<br/>
+ Tp Missing rcfile You specified the -m option, procmail expects the name of an rcfile as argument.<br/>
+ Tp Missing recipient You specified the -d option or called procmail under a different name, it expects one or more recipients as arguments.<br/>
+ Tp No space left to finish writing &quot;x&quot; The filesystem containing &quot;x&quot; does not have enough free space to permit delivery of the message to the file.<br/>
+ Tp Out of memory The system is out of swap space (and NORESRETRY has been exhausted).<br/>
+ Tp Processing continued The unrecognised options on the command line are ignored, proceeding as usual.<br/>
+ Tp Program failure (nnn) of &quot;x&quot; Program that was started by procmail returned nnn instead of EXIT_SUCCESS (=0); if nnn is negative, then this is the signal the program died on.<br/>
+ Tp Quota exceeded while writing &quot;x&quot; The filesize quota for the recipient on the filesystem containing &quot;x&quot; does not permit delivering the message to the file.<br/>
+ Tp Renaming bogus &quot;x&quot; into &quot;x&quot; The system mailbox of the recipient was found to be bogus, procmail performed evasive actions.<br/>
+ Tp Rescue of unfiltered data succeeded/failed A filter returned unsuccessfully, procmail tried to get back the original text.<br/>
+ Tp Skipped: &quot;x&quot; Couldn&#8217;t do anything with &quot;x&quot; in the rcfile (syntax error), ignoring it.<br/>
+ Tp Suspicious rcfile &quot;x&quot; The owner of the rcfile was not the recipient or root, the file was world writable, or the directory that contained it was world writable, or this was the default rcfile ($HOME/.procmailrc) and either it was group writable or the directory that contained it was group writable (the rcfile was not used).<br/>
+ Tp Terminating prematurely whilst waiting for &#8230; Procmail received a signal while it was waiting for &#8230;<br/>
+ Tp Timeout, terminating &quot;x&quot; Timeout has occurred on program or filter &quot;x&quot;.<br/>
+ Tp Timeout, was waiting for &quot;x&quot; Timeout has occurred on program, filter or file &quot;x&quot;. If it was a program or filter, then it didn&#8217;t seem to be running anymore.<br/>
+ Tp Truncated file to former size The file could not be delivered to successfully, so the file was truncated to its former size.<br/>
+ Tp Truncating &quot;x&quot; and retrying lock &quot;x&quot; does not seem to be a valid filename or the file is not empty.<br/>
+ Tp Unable to treat as directory &quot;x&quot; Either the suffix on &quot;x&quot; would indicate that it should be an MH or maildir folder, or it was listed as an second folder into which to link, but it already exists and is not a directory.<br/>
+ Tp Unexpected EOL Missing closing quote, or trying to escape EOF.<br/>
  Tp Unknown user &quot;x&quot; The specified recipient does not have a corresponding uid. </p>
 <h2>EXTENDED DIAGNOSTICS</h2>
-<p> Extended diagnostics can be turned on and off through setting the VERBOSE variable.<br />
- Tp 2.3i [pid] time &amp; date Procmail&#8217;s pid and a timestamp. Generated whenever procmail logs a diagnostic and at least a second has elapsed since the last timestamp.<br />
- Tp Acquiring kernel-lock Procmail now tries to kernel-lock the most recently opened file (descriptor).<br />
- Tp Assigning &quot;x&quot; Environment variable assignment.<br />
- Tp Assuming identity of the recipient, VERBOSE=off Dropping all privileges (if any), implicitly turns off extended diagnostics.<br />
- Tp Bypassed locking &quot;x&quot; The mail spool directory was not accessible to procmail, it relied solely on kernel locks.<br />
- Tp Executing &quot;x&quot; Starting program &quot;x&quot;. If it is started by procmail directly (without an intermediate shell), procmail will show where it separated the arguments by inserting commas.<br />
- Tp HOST mismatched &quot;x&quot; This host was called &quot;x&quot;, HOST contained something else.<br />
- Tp Locking &quot;x&quot; Creating lockfile &quot;x&quot;.<br />
- Tp Linking to &quot;x&quot; Creating a hardlink between directory folders.<br />
- Tp Match on &quot;x&quot; Condition matched.<br />
- Tp Matched &quot;x&quot; Assigned &quot;x&quot; to <code>MATCH</code>.<br />
- Tp No match on &quot;x&quot; Condition didn&#8217;t match, recipe skipped.<br />
- Tp Non-zero exitcode (nnn) by &quot;x&quot; Program that was started by procmail as a condition or as the action of a recipe with the `W&#8217; flag returned nnn instead of EXIT_SUCCESS (=0); the usage indicates that this is not an entirely unexpected condition.<br />
- Tp Notified comsat: &quot;$LOGNAME [at] offset:file&quot; Sent comsat/biff a notice that mail arrived for user $LOGNAME at `offset&#8217; in `file&#8217;.<br />
- Tp Opening &quot;x&quot; Opening file &quot;x&quot; for appending.<br />
- Tp Rcfile: &quot;x&quot; Rcfile changed to &quot;x&quot;.<br />
- Tp Reiterating kernel-lock While attempting several locking methods, one of these failed. Procmail will reiterate until they all succeed in rapid succession.<br />
- Tp Score: added newtotal &quot;x&quot; This condition scored `added&#8217; points, which resulted in a `newtotal&#8217; score.<br />
+<p> Extended diagnostics can be turned on and off through setting the VERBOSE variable.<br/>
+ Tp 2.3i [pid] time &amp; date Procmail&#8217;s pid and a timestamp. Generated whenever procmail logs a diagnostic and at least a second has elapsed since the last timestamp.<br/>
+ Tp Acquiring kernel-lock Procmail now tries to kernel-lock the most recently opened file (descriptor).<br/>
+ Tp Assigning &quot;x&quot; Environment variable assignment.<br/>
+ Tp Assuming identity of the recipient, VERBOSE=off Dropping all privileges (if any), implicitly turns off extended diagnostics.<br/>
+ Tp Bypassed locking &quot;x&quot; The mail spool directory was not accessible to procmail, it relied solely on kernel locks.<br/>
+ Tp Executing &quot;x&quot; Starting program &quot;x&quot;. If it is started by procmail directly (without an intermediate shell), procmail will show where it separated the arguments by inserting commas.<br/>
+ Tp HOST mismatched &quot;x&quot; This host was called &quot;x&quot;, HOST contained something else.<br/>
+ Tp Locking &quot;x&quot; Creating lockfile &quot;x&quot;.<br/>
+ Tp Linking to &quot;x&quot; Creating a hardlink between directory folders.<br/>
+ Tp Match on &quot;x&quot; Condition matched.<br/>
+ Tp Matched &quot;x&quot; Assigned &quot;x&quot; to <code>MATCH</code>.<br/>
+ Tp No match on &quot;x&quot; Condition didn&#8217;t match, recipe skipped.<br/>
+ Tp Non-zero exitcode (nnn) by &quot;x&quot; Program that was started by procmail as a condition or as the action of a recipe with the `W&#8217; flag returned nnn instead of EXIT_SUCCESS (=0); the usage indicates that this is not an entirely unexpected condition.<br/>
+ Tp Notified comsat: &quot;$LOGNAME [at] offset:file&quot; Sent comsat/biff a notice that mail arrived for user $LOGNAME at `offset&#8217; in `file&#8217;.<br/>
+ Tp Opening &quot;x&quot; Opening file &quot;x&quot; for appending.<br/>
+ Tp Rcfile: &quot;x&quot; Rcfile changed to &quot;x&quot;.<br/>
+ Tp Reiterating kernel-lock While attempting several locking methods, one of these failed. Procmail will reiterate until they all succeed in rapid succession.<br/>
+ Tp Score: added newtotal &quot;x&quot; This condition scored `added&#8217; points, which resulted in a `newtotal&#8217; score.<br/>
  Tp Unlocking &quot;x&quot; Removing lockfile &quot;x&quot; again. </p>
 <h2>WARNINGS</h2>
 <p> You should create a shell script that uses <code><a href="/docs/linux/man/1-lockfile/">lockfile</a></code>(1) before invoking your mail shell on any mailbox file other than the system mailbox (unless of course, your mail shell uses the same lockfiles (local or global) you specified in your rcfile). </p>

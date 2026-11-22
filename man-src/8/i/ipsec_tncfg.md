@@ -12,12 +12,12 @@ description: "ipsec_tncfg – manipulate KLIPS virtual interfaces"
 <dl>
 <dt> <code>ipsec</code> tncfg</dt>
 <dd>
-</dd><dd>ipsec tncfg &#8211;create <i>virtual</i><br />
- ipsec tncfg &#8211;delete <i>virtual</i><br />
- ipsec tncfg &#8211;attach &#8211;virtual <i>virtual</i> &#8211;physical <i>physical</i><br />
- ipsec tncfg &#8211;detach &#8211;virtual <i>virtual</i><br />
- ipsec tncfg &#8211;clear<br />
- ipsec tncfg &#8211;version<br />
+</dd><dd>ipsec tncfg &#8211;create <i>virtual</i><br/>
+ ipsec tncfg &#8211;delete <i>virtual</i><br/>
+ ipsec tncfg &#8211;attach &#8211;virtual <i>virtual</i> &#8211;physical <i>physical</i><br/>
+ ipsec tncfg &#8211;detach &#8211;virtual <i>virtual</i><br/>
+ ipsec tncfg &#8211;clear<br/>
+ ipsec tncfg &#8211;version<br/>
  ipsec tncfg &#8211;help</dd></dl>
 <h2>Klips</h2>
 <p>Note that tncfg is only supported on the KLIPS stack which uses ipsecX interfaces bound to physical interfaces</p>

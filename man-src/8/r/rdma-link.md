@@ -17,9 +17,9 @@ link
 OPTIONS := {
     -V[ersion] |
     -d[etails] }</code></pre>
-<p> <code>rdma link show</code> [ <i>DEV/PORT_INDEX</i> ]<br />
- <code>rdma link add</code> <code>NAME</code> <code>type</code> <code>TYPE</code> <code>netdev</code> <code>NETDEV</code><br />
- <code>rdma link delete</code> NAME<br />
+<p> <code>rdma link show</code> [ <i>DEV/PORT_INDEX</i> ]<br/>
+ <code>rdma link add</code> <code>NAME</code> <code>type</code> <code>TYPE</code> <code>netdev</code> <code>NETDEV</code><br/>
+ <code>rdma link delete</code> NAME<br/>
  <code>rdma link help</code> </p>
 <h2>Description</h2>
 <h3>rdma link show &#8211; display rdma link attributes</h3>

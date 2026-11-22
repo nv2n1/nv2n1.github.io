@@ -25,9 +25,9 @@ description: "mybashburn – it can burn data cds/dvds and create mp3/ogg/flac."
 <h2>COPYRIGHT</h2>
 <p> This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>AUTHORS</h2>
-<p> Wilmer Jaramillo M. &lt;wilmer [at] fedoraproject.org&gt;<br />
+<p> Wilmer Jaramillo M. &lt;wilmer [at] fedoraproject.org&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>by&nbsp;<wbr><code>MyBashBurn Full Dialog Box</code>&nbsp;<wbr>and this man. </p>
-<p> Anders Linden &lt;anders.linden [at] gmail.com&gt;<br />
+<p> Anders Linden &lt;anders.linden [at] gmail.com&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>by&nbsp;<wbr><code>BashBurn Core</code>. </p>
 <p> Thanks all users and developers of BashBurn. </p>
 <p> This man was written for Fedora but also can be used for others. </p>

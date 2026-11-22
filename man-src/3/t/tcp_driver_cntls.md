@@ -200,7 +200,7 @@ description: "Attributes and Cntls –"
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the tcp port range to confine the server to. Used only on attrs for <code>globus_xio_server_create()</code> where no specific service or port has been set. It overrides the range set in the GLOBUS_TCP_PORT_RANGE env variable. If &#8216;restrict port&#8217; is true, the server&#8217;s listening port will be constrained to the range specified. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>listener_min_port</i> The lower bound on the listener port. (default 0 &#8212; no bound)<br />
+<dd><i>listener_min_port</i> The lower bound on the listener port. (default 0 &#8212; no bound)<br/>
  <i>listener_max_port</i> The upper bound on the listener port. (default 0 &#8212; no bound)</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
@@ -209,7 +209,7 @@ description: "Attributes and Cntls –"
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, GLOBUS_XIO_TCP_GET_LISTEN_RANGE, int * listener_min_port_out, int * listener_max_port_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the tcp port range on an attr. <code>Parameters:</code></p>
 <dl>
-<dd><i>listener_min_port_out</i> The lower bound will be stored here.<br />
+<dd><i>listener_min_port_out</i> The lower bound will be stored here.<br/>
  <i>listener_max_port_out</i> The upper bound will be stored here.</dd></dl>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, GLOBUS_XIO_TCP_GET_HANDLE, globus_xio_system_socket_t * handle_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the tcp socket handle on an attr, handle, or server. <code>Parameters:</code></p>
@@ -275,7 +275,7 @@ description: "Attributes and Cntls –"
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the tcp port range to confine the server to. Used only on attrs for <code>globus_xio_register_open()</code>. It overrides the range set in the GLOBUS_TCP_SOURCE_RANGE env variable. If &#8216;restrict port&#8217; is true, the connecting socket&#8217;s local port will be constrained to the range specified. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>connector_min_port</i> The lower bound on the listener port. (default 0 &#8212; no bound)<br />
+<dd><i>connector_min_port</i> The lower bound on the listener port. (default 0 &#8212; no bound)<br/>
  <i>connector_max_port</i> The upper bound on the listener port. (default 0 &#8212; no bound)</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
@@ -283,7 +283,7 @@ description: "Attributes and Cntls –"
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, GLOBUS_XIO_TCP_GET_CONNECT_RANGE, int * connector_min_port_out, int * connector_max_port_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the tcp source port range on an attr. <code>Parameters:</code></p>
 <dl>
-<dd><i>connector_min_port_out</i> The lower bound will be stored here.<br />
+<dd><i>connector_min_port_out</i> The lower bound will be stored here.<br/>
  <i>connector_max_port_out</i> The upper bound will be stored here.</dd></dl>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, GLOBUS_XIO_TCP_SET_KEEPALIVE, globus_bool_t keepalive)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Enable tcp keepalive. Used on attrs for <code>globus_xio_server_create()</code>, <code>globus_xio_register_open()</code> and with <code>globus_xio_handle_cntl()</code> to determine whether or not to periodically send &#8216;keepalive&#8217; messages on a connected socket handle. This may enable earlier detection of broken connections. </p>
@@ -309,23 +309,23 @@ description: "Attributes and Cntls –"
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set tcp linger. Used on attrs for <code>globus_xio_server_create()</code>, <code>globus_xio_register_open()</code> and with <code>globus_xio_handle_cntl()</code> to determine what to do when data is in the socket&#8217;s buffer when the socket is closed. If linger is set to true, then the close operation will block until the socket buffers are empty, or the linger_time has expired. If this is enabled, any data remaining after the linger time has expired, will be discarded. If this is disabled, close finishes immediately, but the OS will still attempt to transmit the remaining data. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>linger</i> GLOBUS_TRUE to enable, GLOBUS_FALSE to disable (default)<br />
+<dd><i>linger</i> GLOBUS_TRUE to enable, GLOBUS_FALSE to disable (default)<br/>
  <i>linger_time</i> The time (in seconds) to block at close time if linger is true and data is queued in the socket buffer.</dd></dl>
 <h3>globus_result_t globus_xio_handle_cntl (handle, driver, GLOBUS_XIO_TCP_SET_LINGER, globus_bool_t linger, int linger_time)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set tcp linger. Used on attrs for <code>globus_xio_server_create()</code>, <code>globus_xio_register_open()</code> and with <code>globus_xio_handle_cntl()</code> to determine what to do when data is in the socket&#8217;s buffer when the socket is closed. If linger is set to true, then the close operation will block until the socket buffers are empty, or the linger_time has expired. If this is enabled, any data remaining after the linger time has expired, will be discarded. If this is disabled, close finishes immediately, but the OS will still attempt to transmit the remaining data. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>linger</i> GLOBUS_TRUE to enable, GLOBUS_FALSE to disable (default)<br />
+<dd><i>linger</i> GLOBUS_TRUE to enable, GLOBUS_FALSE to disable (default)<br/>
  <i>linger_time</i> The time (in seconds) to block at close time if linger is true and data is queued in the socket buffer.</dd></dl>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, GLOBUS_XIO_TCP_GET_LINGER, globus_bool_t * linger_out, int * linger_time_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the tcp linger flag and time. <code>Parameters:</code></p>
 <dl>
-<dd><i>linger_out</i> The linger flag will be stored here.<br />
+<dd><i>linger_out</i> The linger flag will be stored here.<br/>
  <i>linger_time_out</i> The linger time will be set here.</dd></dl>
 <h3>globus_result_t globus_xio_handle_cntl (handle, driver, GLOBUS_XIO_TCP_GET_LINGER, globus_bool_t * linger_out, int * linger_time_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the tcp linger flag and time. <code>Parameters:</code></p>
 <dl>
-<dd><i>linger_out</i> The linger flag will be stored here.<br />
+<dd><i>linger_out</i> The linger flag will be stored here.<br/>
  <i>linger_time_out</i> The linger time will be set here.</dd></dl>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, GLOBUS_XIO_TCP_SET_OOBINLINE, globus_bool_t oobinline)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Receive out of band data (tcp urgent data) in normal stream. Used on attrs for <code>globus_xio_server_create()</code>, <code>globus_xio_register_open()</code> and with <code>globus_xio_handle_cntl()</code> to choose whether out-of-band data is received in the normal data queue. (Currently, there is no other way to receive OOB data) </p>

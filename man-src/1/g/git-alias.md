@@ -10,8 +10,8 @@ description: "git-alias – Define, search and show aliases"
 
 <p> <code>git-alias</code> &#8211; Define, search and show aliases</p>
 <h2>SYNOPSIS</h2>
-<p> <code>git-alias</code><br />
- <code>git-alias</code> &lt;search-pattern&gt;<br />
+<p> <code>git-alias</code><br/>
+ <code>git-alias</code> &lt;search-pattern&gt;<br/>
  <code>git-alias</code> &lt;alias-name&gt; &lt;command&gt;</p>
 <h2>DESCRIPTION</h2>
 <p> List all aliases, show one alias, or set one (global) alias.</p>

@@ -10,7 +10,7 @@ description: "XkbAddGeomShape – Add a shape to a keyboard geometry"
 <p>XkbAddGeomShape &#8211; Add a shape to a keyboard geometry </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbShapePtr XkbAddGeomShape</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>Atom </code><i>name</i><code>,</code> <code>int </code><i>sz_outlines</i><code>);</code><br />
+<dt> <code>XkbShapePtr XkbAddGeomShape</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>Atom </code><i>name</i><code>,</code> <code>int </code><i>sz_outlines</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

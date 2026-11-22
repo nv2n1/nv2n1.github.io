@@ -47,15 +47,15 @@ description: "proftpd – Professional configurable, secure file transfer protoc
 <dt><code>-6,&#8211;ipv6</code></dt>
 <dd>Support IPv6 connections and lookup of IPv6 addresses for server DNS names. This is enabled by default, if the <code>&#8211;enable-ipv6</code> configure option is used.</dd></dl>
 <h2>Files</h2>
-<p><code>/usr/sbin/proftpd</code><br />
- <code>/etc/proftpd.conf</code><br />
- <code>/usr/bin/ftpwho</code><br />
- <code>/usr/bin/ftpcount</code><br />
- <code>/usr/bin/ftptop</code><br />
- <code>/usr/sbin/ftpshut</code><br />
- <code>/etc/ftpusers</code><br />
- <code>/var/log/xferlog</code><br />
- <code>/run/proftpd/proftpd.pid</code><br />
+<p><code>/usr/sbin/proftpd</code><br/>
+ <code>/etc/proftpd.conf</code><br/>
+ <code>/usr/bin/ftpwho</code><br/>
+ <code>/usr/bin/ftpcount</code><br/>
+ <code>/usr/bin/ftptop</code><br/>
+ <code>/usr/sbin/ftpshut</code><br/>
+ <code>/etc/ftpusers</code><br/>
+ <code>/var/log/xferlog</code><br/>
+ <code>/run/proftpd/proftpd.pid</code><br/>
  <code>/run/proftpd/proftpd.scoreboard</code></p>
 <h2>Authors</h2>
 <p>ProFTPD is written and maintained by a number of people, full credits can be found on <code><a rel="nofollow" href="http://www.proftpd.org/credits.html">http://www.proftpd.org/credits.html</a></code></p>

@@ -10,16 +10,16 @@ description: "tcpdump – dump traffic on a network"
 <p>tcpdump &#8211; dump traffic on a network</p>
 <h2>Synopsis</h2>
 <p><code>tcpdump</code> [ <code>-AbdDefhHIJKlLnNOpqStuUvxX#</code> ] [ <code>-B</code> <i>buffer_size</i> ] </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-c</code> <i>count</i> ] [ <code>&#8211;count</code> ] [ <code>-C</code> <i>file_size</i> ]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-E</code> <i>spi [at] ipaddr algo:secret,&#8230;</i> ]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-F</code> <i>file</i> ] [ <code>-G</code> <i>rotate_seconds</i> ] [ <code>-i</code> <i>interface</i> ]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>&#8211;immediate-mode</code> ] [ <code>-j</code> <i>tstamp_type</i> ] [ <code>-m</code> <i>module</i> ]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-M</code> <i>secret</i> ] [ <code>&#8211;number</code> ] [ <code>&#8211;print</code> ] [ <code>-Q</code> <i>in|out|inout</i> ]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-r</code> <i>file</i> ] [ <code>-s</code> <i>snaplen</i> ] [ <code>-T</code> <i>type</i> ] [ <code>&#8211;version</code> ]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-V</code> <i>file</i> ] [ <code>-w</code> <i>file</i> ] [ <code>-W</code> <i>filecount</i> ] [ <code>-y</code> <i>datalinktype</i> ]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-z</code> <i>postrotate-command</i> ] [ <code>-Z</code> <i>user</i> ]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>&#8211;time-stamp-precision=</code><i>tstamp_precision</i> ]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>&#8211;micro</code> ] [ <code>&#8211;nano</code> ]<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-c</code> <i>count</i> ] [ <code>&#8211;count</code> ] [ <code>-C</code> <i>file_size</i> ]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-E</code> <i>spi [at] ipaddr algo:secret,&#8230;</i> ]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-F</code> <i>file</i> ] [ <code>-G</code> <i>rotate_seconds</i> ] [ <code>-i</code> <i>interface</i> ]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>&#8211;immediate-mode</code> ] [ <code>-j</code> <i>tstamp_type</i> ] [ <code>-m</code> <i>module</i> ]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-M</code> <i>secret</i> ] [ <code>&#8211;number</code> ] [ <code>&#8211;print</code> ] [ <code>-Q</code> <i>in|out|inout</i> ]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-r</code> <i>file</i> ] [ <code>-s</code> <i>snaplen</i> ] [ <code>-T</code> <i>type</i> ] [ <code>&#8211;version</code> ]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-V</code> <i>file</i> ] [ <code>-w</code> <i>file</i> ] [ <code>-W</code> <i>filecount</i> ] [ <code>-y</code> <i>datalinktype</i> ]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>-z</code> <i>postrotate-command</i> ] [ <code>-Z</code> <i>user</i> ]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>&#8211;time-stamp-precision=</code><i>tstamp_precision</i> ]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <code>&#8211;micro</code> ] [ <code>&#8211;nano</code> ]<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [ <i>expression</i> ]</p>
 <h2>Description</h2>
 <p><i>Tcpdump</i> prints out a description of the contents of packets on a network interface that match the Boolean <i>expression</i>; the description is preceded by a time stamp, printed, by default, as hours, minutes, seconds, and fractions of a second since midnight. It can also be run with the <code>-w</code> flag, which causes it to save the packet data to a file for later analysis, and/or with the <code>-r</code> flag, which causes it to read from a saved packet file rather than to read packets from a network interface. It can also be run with the <code>-V</code> flag, which causes it to read a list of saved packet files. In all cases, only packets that match <i>expression</i> will be processed by <i>tcpdump</i>. </p>
@@ -477,12 +477,12 @@ IP csam.login &gt; rtsg.1023: Flags [P.], seq 3:4, ack 21, win 4077, urg 1, leng
 <dd>( ( value of octet 13 ) AND ( 2 ) ) == ( 2 )</dd></dl>
 <p> This points us to the <i>tcpdump</i> filter expression</p>
 <dl>
-<dd><code><br />
+<dd><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tcpdump -i xl0&nbsp;&#8216;tcp[13]&nbsp;&amp;&nbsp;2&nbsp;==&nbsp;2&#8217;</code></dd></dl>
 <p> Some offsets and field values may be expressed as names rather than as numeric values. For example tcp[13] may be replaced with tcp[tcpflags]. The following TCP flag field values are also available: tcp-fin, tcp-syn, tcp-rst, tcp-push, tcp-ack, tcp-urg. </p>
 <p> This can be demonstrated as:</p>
 <dl>
-<dd><code><br />
+<dd><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tcpdump -i xl0&nbsp;&#8216;tcp[tcpflags]&nbsp;&amp;&nbsp;tcp-push&nbsp;!=&nbsp;0&#8217;</code></dd></dl>
 <p> Note that you should use single quotes or a backslash in the expression to hide the AND (&#8216;&amp;&#8217;) special character from the shell. </p>
 <p> <code>UDP Packets</code> </p>

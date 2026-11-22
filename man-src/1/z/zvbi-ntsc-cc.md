@@ -14,8 +14,8 @@ description: "zvbi-ntsc-cc – closed caption decoder"
 <h2>DESCRIPTION</h2>
 <p> <code>zvbi-ntsc-cc</code> reads vbi data from /dev/vbi and decodes the enclosed cc data. Start it with &#8216;-h&#8217; to get a list of cmd line options.</p>
 <h2>AUTHORS</h2>
-<p> timecop [at] japan.co.jp<br />
- Mike Baker &lt;mbm [at] linux.com&gt;<br />
+<p> timecop [at] japan.co.jp<br/>
+ Mike Baker &lt;mbm [at] linux.com&gt;<br/>
  Adam &lt;adam [at] cfar.umd.edu&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

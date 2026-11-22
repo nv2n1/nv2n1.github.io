@@ -11,7 +11,7 @@ description: "idamax.f –"
 <p> idamax.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> INTEGER function <code>idamax</code> (N, DX, INCX)<br />
+<p> INTEGER function <code>idamax</code> (N, DX, INCX)<br/>
  <i></i><code>IDAMAX</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function idamax (integerN, double precision, dimension(*)DX, integerINCX)</h3>

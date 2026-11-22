@@ -12,7 +12,7 @@ description: "cpaldjvu – DjVuDocument encoder for low-color images."
 <h2>SYNOPSIS</h2>
 <p> <code>cpaldjvu [</code><i>options</i><code>] </code><i>inputppmfile</i><i>outputdjvufile</i> </p>
 <h2>DESCRIPTION</h2>
-<p> Program <code>cpaldjvu</code> is a DjVuDocument encoder for images containing few colors. It performs best on images containing large solid color areas such as screen dumps. Compression ratios on such images can be much higher than those achieved by <font SIZE="-1">GIF</font> or <font SIZE="-1">PNG</font> compression. </p>
+<p> Program <code>cpaldjvu</code> is a DjVuDocument encoder for images containing few colors. It performs best on images containing large solid color areas such as screen dumps. Compression ratios on such images can be much higher than those achieved by GIF or PNG compression. </p>
 <p> This program works by first reducing the number of distinct colors to a small specified value using a simple color quantization algorithm. The dominant color is encoded into the background layer. The other colors are encoded into the foreground layer. </p>
 <h2>OPTIONS</h2>
 <dl>

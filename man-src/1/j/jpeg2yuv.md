@@ -23,24 +23,24 @@ description: "jpeg2yuv – Convert jpeg images to the yuv format."
 <dt><code>-A</code><i> ratio</i></dt>
 <dd> Sample aspect ratio. Default is square pixels (1:1)</dd>
 <dt><code>-I</code><i> num</i></dt>
-<dd> interlacing mode: p = none / progressive<br />
- t = top field first<br />
- b = bottom field first<br />
+<dd> interlacing mode: p = none / progressive<br/>
+ t = top field first<br/>
+ b = bottom field first<br/>
  No default, this option has to be specified.</dd>
 <dt><code>-L</code><i> num</i></dt>
-<dd> 0 = non-interlaced (two successive fields per JPEG file)<br />
+<dd> 0 = non-interlaced (two successive fields per JPEG file)<br/>
  1 = interlaced fields</dd>
 <dt><code>-l</code><i> num</i></dt>
-<dd> Specifies the number of loops (default: 0 loops )<br />
+<dd> Specifies the number of loops (default: 0 loops )<br/>
  When this option is not used the given range of images is only processed once. If you use this option with num of -1 jpeg2yuv will loop forever writing the image to stdout. When you use n &gt; 0 it will loop n-times till it finishes.</dd>
 <dt><code>-n</code><i> num</i></dt>
 <dd> Specifies the number of frames to process. (default: all = -1)</dd>
 <dt><code>-j</code><i> {1}%{2}d{3}</i></dt>
-<dd> Read JPEG frames with the name components as follows:<br />
-&nbsp;<wbr>{1}&nbsp;<wbr>JPEG filename prefix&nbsp;<wbr>(e g: picture_&nbsp;<wbr>)<br />
-&nbsp;<wbr>{2}&nbsp;<wbr>Counting placeholder&nbsp;<wbr>(like in C, printf, eg 06&nbsp;<wbr>))<br />
+<dd> Read JPEG frames with the name components as follows:<br/>
+&nbsp;<wbr>{1}&nbsp;<wbr>JPEG filename prefix&nbsp;<wbr>(e g: picture_&nbsp;<wbr>)<br/>
+&nbsp;<wbr>{2}&nbsp;<wbr>Counting placeholder&nbsp;<wbr>(like in C, printf, eg 06&nbsp;<wbr>))<br/>
 &nbsp;<wbr>{3}&nbsp;<wbr>File extension. Something like this: .jpg A correct description of the files could look like this: picture_%06d.jpg </dd>
-<p> If this option is omited, the filenames are read from stdin. For example:<br />
+<p> If this option is omited, the filenames are read from stdin. For example:<br/>
 &nbsp;<wbr>$ls&nbsp;<wbr>*jpg | jpeg2yuv -f 25 -I p&nbsp;<wbr>&gt;&nbsp;<wbr>result.yuv</p>
 <dt><code>-R</code><i> 1 or 0</i></dt>
 <dd> rescale YUV color values from 0-255 to 16-235 (default: 1)</dd>
@@ -50,8 +50,8 @@ description: "jpeg2yuv – Convert jpeg images to the yuv format."
 <h2>BUGS</h2>
 <p> The frame rate description seems not to be up to date. The NTSC integer ratios seem not to be supported. As a workaround specify a PAL (25) or FILM (24) and set the right frame rate in mpeg2enc with the -F option. </p>
 <h2>AUTHOR</h2>
-<p> This man page was written by Bernhard Praschinger.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was written by Bernhard Praschinger.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

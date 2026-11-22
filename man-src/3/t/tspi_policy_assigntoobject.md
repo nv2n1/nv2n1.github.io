@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-tspi_policy_assigntoobject/"
 description: "Tspi_Policy_AssignToObject – assign a policy to an object"
 ---
 
-<p>TCG Software Stack Developers Reference<br />
+<p>TCG Software Stack Developers Reference<br/>
  </center></p>
 <h2>Name</h2>
 <p>Tspi_Policy_AssignToObject &#8211; assign a policy to an object </p>
@@ -30,9 +30,9 @@ description: "Tspi_Policy_AssignToObject – assign a policy to an object"
 <h2>Return Codes</h2>
 <p><code>Tspi_Policy_AssignToObject</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dt>TSS_E_INVALID_HANDLE</dt>
 <dd><i>hPolicy</i> is not a valid handle. </dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An internal SW error has been detected. </dd>
 </dl>
 <h2>Conforming To</h2>

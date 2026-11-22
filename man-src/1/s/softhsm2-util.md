@@ -11,9 +11,9 @@ description: "softhsm2-util – support tool for libsofthsm2"
 <p> softhsm2-util &#8211; support tool for libsofthsm2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>softhsm2-util &#8211;show-slots</code> </p>
-<p> <code>softhsm2-util &#8211;init-token</code> <code>&#8211;slot</code> <i>number</i> <code>&#8211;label</code> <i>text</i> \<br />
+<p> <code>softhsm2-util &#8211;init-token</code> <code>&#8211;slot</code> <i>number</i> <code>&#8211;label</code> <i>text</i> \<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [<code>&#8211;so-pin</code> <i>PIN</i> <code>&#8211;pin</code> <i>PIN</i>] </p>
-<p> <code>softhsm2-util &#8211;import</code> <i>path</i> [<code>&#8211;file-pin</code> <i>PIN</i>] <code>&#8211;slot</code> <i>number</i> \<br />
+<p> <code>softhsm2-util &#8211;import</code> <i>path</i> [<code>&#8211;file-pin</code> <i>PIN</i>] <code>&#8211;slot</code> <i>number</i> \<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [<code>&#8211;pin</code> <i>PIN</i> <code>&#8211;no-public-key]</code> <code>&#8211;label</code> <i>text</i> <code>&#8211;id</code> <i>hex</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>softhsm2-util</code> is a support tool mainly for libsofthsm2. It can also be used with other PKCS#11 libraries by using the option <code>&#8211;module</code> </p>
@@ -27,10 +27,10 @@ description: "softhsm2-util – support tool for libsofthsm2"
 <dt><code>&#8211;help</code>, <code>-h</code></dt>
 <dd> Show the help information.</dd>
 <dt><code>&#8211;import </code><i>path</i></dt>
-<dd> Import a key pair from the given <i>path</i>. The file must be in PKCS#8-format.<br />
+<dd> Import a key pair from the given <i>path</i>. The file must be in PKCS#8-format.<br/>
  Use with <code>&#8211;file-pin</code>, <code>&#8211;slot</code>, <code>&#8211;pin</code>, <code>&#8211;no-public-key</code>, <code>&#8211;label</code>, and <code>&#8211;id</code>.</dd>
 <dt><code>&#8211;init-token</code></dt>
-<dd> Initialize the token at a given slot. If the token is already initialized then this command will reinitialize it, thus erasing all the objects in the token. The matching Security Officer (SO) PIN must also be provided when doing reinitialization.<br />
+<dd> Initialize the token at a given slot. If the token is already initialized then this command will reinitialize it, thus erasing all the objects in the token. The matching Security Officer (SO) PIN must also be provided when doing reinitialization.<br/>
  Use with <code>&#8211;slot</code> or <code>&#8211;free</code>, <code>&#8211;label</code>, <code>&#8211;so-pin</code>, and <code>&#8211;pin</code>.</dd></dl>
 <dl>
 <dt><code>&#8211;show-slots</code></dt>

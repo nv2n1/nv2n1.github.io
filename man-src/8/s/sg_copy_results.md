@@ -47,23 +47,23 @@ description: "sg_copy_results – send SCSI RECEIVE COPY RESULTS command (XCOPY 
 <h2>Notes</h2>
 <p>Decoding of <i>RECEIVE DATA</i> service action is not implemented.</p>
 <h2>Examples</h2>
-<p>Query the operating parameters for a device: # sg_copy_results -p /dev/sdo<br />
- Receive copy results (report operating parameters):<br />
-&nbsp;<wbr>Supports no list identifier: no<br />
-&nbsp;<wbr>Maximum target descriptor count: 2<br />
-&nbsp;<wbr>Maximum segment descriptor count: 1<br />
-&nbsp;<wbr>Maximum descriptor list length: 92 bytes<br />
-&nbsp;<wbr>Maximum segment length: 33553920 bytes<br />
-&nbsp;<wbr>Inline data not supported<br />
-&nbsp;<wbr>Held data limit: 0 bytes<br />
-&nbsp;<wbr>Maximum stream device transfer size: 0 bytes<br />
-&nbsp;<wbr>Total concurrent copies: 0<br />
-&nbsp;<wbr>Maximum concurrent copies: 255<br />
-&nbsp;<wbr>Data segment granularity: 512 bytes<br />
-&nbsp;<wbr>Inline data granularity: 1 bytes<br />
-&nbsp;<wbr>Held data granularity: 1 bytes<br />
-&nbsp;<wbr>Implemented descriptor list:<br />
-&nbsp;<wbr>&nbsp;<wbr>Segment descriptor 0x02: Copy from block device to block device<br />
+<p>Query the operating parameters for a device: # sg_copy_results -p /dev/sdo<br/>
+ Receive copy results (report operating parameters):<br/>
+&nbsp;<wbr>Supports no list identifier: no<br/>
+&nbsp;<wbr>Maximum target descriptor count: 2<br/>
+&nbsp;<wbr>Maximum segment descriptor count: 1<br/>
+&nbsp;<wbr>Maximum descriptor list length: 92 bytes<br/>
+&nbsp;<wbr>Maximum segment length: 33553920 bytes<br/>
+&nbsp;<wbr>Inline data not supported<br/>
+&nbsp;<wbr>Held data limit: 0 bytes<br/>
+&nbsp;<wbr>Maximum stream device transfer size: 0 bytes<br/>
+&nbsp;<wbr>Total concurrent copies: 0<br/>
+&nbsp;<wbr>Maximum concurrent copies: 255<br/>
+&nbsp;<wbr>Data segment granularity: 512 bytes<br/>
+&nbsp;<wbr>Inline data granularity: 1 bytes<br/>
+&nbsp;<wbr>Held data granularity: 1 bytes<br/>
+&nbsp;<wbr>Implemented descriptor list:<br/>
+&nbsp;<wbr>&nbsp;<wbr>Segment descriptor 0x02: Copy from block device to block device<br/>
 &nbsp;<wbr>&nbsp;<wbr>Target descriptor 0xe4: Identification descriptor </p>
 <h2>Exit Status</h2>
 <p>The exit status of sg_copy_results is 0 when it is successful. Otherwise see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>
@@ -72,7 +72,7 @@ description: "sg_copy_results – send SCSI RECEIVE COPY RESULTS command (XCOPY 
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2012-2013 Hannes Reinecke and Douglas Gilbert<br />
+<p>Copyright &#169; 2012-2013 Hannes Reinecke and Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_xcopy(sg3_utils)</code> </p>

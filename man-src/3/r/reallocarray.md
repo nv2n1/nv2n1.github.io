@@ -15,10 +15,10 @@ void free(void *ptr);
 void *calloc(size_t nmemb, size_t size);
 void *realloc(void *ptr, size_t size);
 void *reallocarray(void *ptr, size_t nmemb, size_t size);</code></pre>
-<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>reallocarray</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.29:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.28 and earlier:<br />
+<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>reallocarray</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.29:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.28 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_GNU_SOURCE</p>
 <h2>Description</h2>
 <p>The <code>malloc</code>() function allocates <i>size</i> bytes and returns a pointer to the allocated memory. <i>The memory is not initialized</i>. If <i>size</i> is 0, then <code>malloc</code>() returns either NULL, or a unique pointer value that can later be successfully passed to <code>free</code>(). The <code>free</code>() function frees the memory space pointed to by <i>ptr</i>, which must have been returned by a previous call to <code>malloc</code>(), <code>calloc</code>(), or <code>realloc</code>(). Otherwise, or if <i>free(ptr)</i> has already been called before, undefined behavior occurs. If <i>ptr</i> is NULL, no operation is performed. The <code>calloc</code>() function allocates memory for an array of <i>nmemb</i> elements of <i>size</i> bytes each and returns a pointer to the allocated memory. The memory is set to zero. If <i>nmemb</i> or <i>size</i> is 0, then <code>calloc</code>() returns either NULL, or a unique pointer value that can later be successfully passed to <code>free</code>(). If the multiplication of <i>nmemb</i> and <i>size</i> would result in integer overflow, then <code>calloc</code>() returns an error. By contrast, an integer overflow would not be detected in the following call to <code>malloc</code>(), with the result that an incorrectly sized block of memory would be allocated: realloc(ptr, nmemb * size); The <code>realloc</code>() function changes the size of the memory block pointed to by <i>ptr</i> to <i>size</i> bytes. The contents will be unchanged in the range from the start of the region up to the minimum of the old and new sizes. If the new size is larger than the old size, the added memory will <i>not</i> be initialized. If <i>ptr</i> is NULL, then the call is equivalent to <i>malloc(size)</i>, for all values of <i>size</i>; if <i>size</i> is equal to zero, and <i>ptr</i> is not NULL, then the call is equivalent to <i>free(ptr)</i>. Unless <i>ptr</i> is NULL, it must have been returned by an earlier call to <code>malloc</code>(), <code>calloc</code>(), or <code>realloc</code>(). If the area pointed to was moved, a <i>free(ptr)</i> is done. The <code>reallocarray</code>() function changes the size of the memory block pointed to by <i>ptr</i> to be large enough for an array of <i>nmemb</i> elements, each of which is <i>size</i> bytes. It is equivalent to the call </p>
@@ -46,7 +46,7 @@ void *reallocarray(void *ptr, size_t nmemb, size_t size);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>malloc</code>(), <code>free</code>(),<br />
+<td> <code>malloc</code>(), <code>free</code>(),<br/>
  <code>calloc</code>(), <code>realloc</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

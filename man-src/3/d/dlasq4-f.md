@@ -10,7 +10,7 @@ description: "dlasq4.f –"
 <p>dlasq4.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlasq4</code> (I0, N0, Z, PP, N0IN, DMIN, DMIN1, DMIN2, DN, DN1, DN2, TAU, TTYPE, G)<br />
+<p> subroutine <code>dlasq4</code> (I0, N0, Z, PP, N0IN, DMIN, DMIN1, DMIN2, DN, DN1, DN2, TAU, TTYPE, G)<br/>
  <i></i><code>DLASQ4</code> computes an approximation to the smallest eigenvalue using values of d from the previous transform. Used by sbdsqr.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasq4 (integerI0, integerN0, double precision, dimension( * )Z, integerPP, integerN0IN, double precisionDMIN, double precisionDMIN1, double precisionDMIN2, double precisionDN, double precisionDN1, double precisionDN2, double precisionTAU, integerTTYPE, double precisionG)</h3>

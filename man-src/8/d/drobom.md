@@ -37,12 +37,12 @@ description: "drobom – CLI for managing data robotics (drobo) storage units"
 <dt>diag</dt>
 <dd>dump diagnostics file into /tmp directory</dd>
 <dt>diagprint &lt;diagdumpfile&gt;</dt>
-<dd>print diagnostics file to standard output<br />
+<dd>print diagnostics file to standard output<br/>
  &lt;diagdumpfile&gt; the diagnostic dump file to read.</dd>
 <dt>fwcheck query drobo.com for updates to firmware for the given Drobo</dt>
 <dd>
 </dd><dt>fwload &lt;fwimage&gt;</dt>
-<dd>load a specific firmware for the given Drobo. Arguments:<br />
+<dd>load a specific firmware for the given Drobo. Arguments:<br/>
  &lt;fwimage&gt; the firmware file to load.</dd>
 <dt>fwupgrade</dt>
 <dd>upgrade the firmware to the latest and greatest, recommended by DRI</dd>

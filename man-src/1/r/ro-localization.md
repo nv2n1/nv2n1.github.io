@@ -20,8 +20,8 @@ description: "ro-localization – Monte-Carlo localization for beacon range-only
 <p> The application wiki page at <a rel="nofollow" href="http://babel.isa.uma.es/mrpt/index.php/Applications">http://babel.isa.uma.es/mrpt/index.php/Applications</a> </p>
 <p> <code>pf-localization</code></p>
 <h2>AUTHORS</h2>
-<p> <code>ro-localization</code> is part of the Mobile Robot Programming Toolkit (<font SIZE="-1">MRPT</font>), and was originally written by the <font SIZE="-1">MAPIR</font> laboratory (University of Malaga). </p>
+<p> <code>ro-localization</code> is part of the Mobile Robot Programming Toolkit (MRPT), and was originally written by the MAPIR laboratory (University of Malaga). </p>
 <p> This manual page was written by Jose Luis Blanco &lt;joseluisblancoc [at] gmail.com&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 3, or (at your option) any later version. </p>
-<p> On Debian GNU/Linux systems, the complete text of the <font SIZE="-1">GNU</font> General Public License can be found in `/usr/share/common-licenses/GPL&#8217;. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3, or (at your option) any later version. </p>
+<p> On Debian GNU/Linux systems, the complete text of the GNU General Public License can be found in `/usr/share/common-licenses/GPL&#8217;. </p>

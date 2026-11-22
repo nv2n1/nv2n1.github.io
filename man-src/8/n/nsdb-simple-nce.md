@@ -73,8 +73,8 @@ description: "nsdb-simple-nce – Create a simple NSDB Container Entry"
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that you want to make the LDAP server <i>ldap.example.net</i> into an NSDB. Ensure the LDAP server has the FedFS schema installed. The naming context &quot;dc=example,dc=net&quot; must exist, and must have an entry associated with it. Then you might use:</p>
 <dl>
-<dd>$ nsdb-simple-nce -l ldap.example.net -D cn=Manager dc=example,dc=net<br />
- Enter NSDB password:<br />
+<dd>$ nsdb-simple-nce -l ldap.example.net -D cn=Manager dc=example,dc=net<br/>
+ Enter NSDB password:<br/>
  Successfully created simple NCE </dd>
 </dl>
 <p> The distinguished name of the new NCE is &quot;ou=fedfs,dc=example,dc=net&quot;. The naming context &quot;dc=example,dc=net&quot; is updated to refer NSDB clients to the &quot;ou=fedfs,dc=example,dc=net&quot; entry. </p>

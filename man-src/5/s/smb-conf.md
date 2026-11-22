@@ -107,7 +107,7 @@ m[blue]<code>printable = yes</code>m[]</pre>
 <p> Each alias should be an acceptable printer name for your printing subsystem. In the [global] section, specify the new file as your printcap. The server will only recognize names found in your pseudo-printcap, which of course can contain whatever aliases you like. The same technique could be used simply to limit access to a subset of your local printers. </p>
 <p> An alias, by the way, is defined as any component of the first entry of a printcap record. Records are separated by newlines, components (if there are more than one) are separated by vertical bar symbols (|). </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> On SYSV systems which use lpstat to determine what printers are defined on the system you may be able to use printcap name = lpstat to automatically obtain a list of printers. See the printcap name option for more details. </p>
 </dl>
 <h2>Usershares</h2>
@@ -1090,7 +1090,7 @@ df &quot;$1&quot; | tail -1 | awk '{print $(NF-4),$(NF-2)}'</pre>
 <dl>
 <dd>Enabling this parameter will disable netbios support in Samba. Netbios is the only available form of browsing in all windows versions except for 2000 and XP. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Clients that only support netbios won&#8217;t be able to see your samba server when netbios support is disabled. </dd>
 </dl>
 <p> Default: <i>disable netbios</i><i> = </i><i>no</i><i> </i></dl>
@@ -1125,11 +1125,11 @@ df &quot;$1&quot; | tail -1 | awk '{print $(NF-4),$(NF-2)}'</pre>
 <dl>
 <dd>When enabled (the default is disabled) unused dynamic dns records are periodically removed. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  This option should not be enabled for installations created with versions of samba before 4.9. Doing this will result in the loss of static DNS entries. This is due to a bug in previous versions of samba (BUG 12451) which marked dynamic DNS records as static and static records as dynamic. </dd>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If one record for a DNS name is static (non-aging) then no other record for that DNS name will be scavenged. </dd>
 </dl>
 <p> Default: <i>dns zone scavenging</i><i> = </i><i>no</i><i> </i></dl>
@@ -1462,7 +1462,7 @@ df &quot;$1&quot; | tail -1 | awk '{print $(NF-4),$(NF-2)}'</pre>
 </dd></dl>
 <p> and the program will extract the servername from before the first &#8216;:&#8217;. There should probably be a better parsing system that copes with different map formats and also Amd (another automounter) maps. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  A working NIS client is required on the system for this option to work. </dd>
 </dl>
 <p> Default: <i>homedir map</i><i> = </i><i></i><i> </i> </p>
@@ -1498,7 +1498,7 @@ df &quot;$1&quot; | tail -1 | awk '{print $(NF-4),$(NF-2)}'</pre>
 <p> hosts allow = @foonet </p>
 <p> hosts deny = pirate </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Note that access still requires suitable user-level passwords. </dd>
 </dl>
 <p> See <code><a href="/docs/linux/man/1-testparm/">testparm</a></code>(1) for a way of testing your host access to see if it does what you expect. </p>
@@ -2145,7 +2145,7 @@ df &quot;$1&quot; | tail -1 | awk '{print $(NF-4),$(NF-2)}'</pre>
 <p> Windows clients can sometimes maintain a connection to the [homes] share, even though there is no user logged in. Therefore, it is vital that the logon path does not include a reference to the homes share (i.e. setting this parameter to \%N\homes\profile_path will cause problems). </p>
 <p> This option takes the standard substitutions, allowing you to have separate logon scripts for each user or machine. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Do not quote the value. Setting this as &#8220;\%N\profile\%U&#8221; will break profile handling. Where the tdbsam or ldapsam passdb backend is used, at the time the user account is created the value configured for this parameter is written to the passdb backend and that value will over-ride the parameter value present in the smb.conf file. Any error present in the passdb backend account record must be editted using the appropriate tool (pdbedit on the command-line, or any other locally provided system tool). </dd>
 </dl>
 <p> Note that this option is only useful if Samba is set up as a domain controller. </p>

@@ -17,10 +17,10 @@ dpipe
     help }
 OPTIONS := {
     -V[ersion] }</code></pre>
-<p> <code>devlink dpipe table show </code><i>DEV</i> [ <code>name</code> <i>TABLE_NAME</i> ]<br />
- <code>devlink dpipe table set </code><i>DEV</i> <code>name</code><i> TABLE_NAME </i><br />
- <code>devlink dpipe table dump </code><i>DEV</i> <code>name</code><i> TABLE_NAME </i><br />
- <code>devlink dpipe header show </code><i>DEV</i><br />
+<p> <code>devlink dpipe table show </code><i>DEV</i> [ <code>name</code> <i>TABLE_NAME</i> ]<br/>
+ <code>devlink dpipe table set </code><i>DEV</i> <code>name</code><i> TABLE_NAME </i><br/>
+ <code>devlink dpipe table dump </code><i>DEV</i> <code>name</code><i> TABLE_NAME </i><br/>
+ <code>devlink dpipe header show </code><i>DEV</i><br/>
  <code>devlink dpipe help</code> </p>
 <h2>Description</h2>
 <h3>devlink dpipe table show &#8211; display devlink dpipe table attributes</h3>

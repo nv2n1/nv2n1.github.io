@@ -10,7 +10,7 @@ description: "ilaenv.f –"
 <p>ilaenv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>INTEGER function <code>ilaenv</code> (ISPEC, NAME, OPTS, N1, N2, N3, N4)<br />
+<p>INTEGER function <code>ilaenv</code> (ISPEC, NAME, OPTS, N1, N2, N3, N4)<br/>
  <i></i><code>ILAENV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function ilaenv (integerISPEC, character*( * )NAME, character*( * )OPTS, integerN1, integerN2, integerN3, integerN4)</h3>

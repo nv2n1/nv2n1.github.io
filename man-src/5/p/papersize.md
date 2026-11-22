@@ -22,5 +22,5 @@ description: "papersize – specify preferred paper size"
 <h2>Documentation</h2>
 <p>Yves Arrouye &lt;arrouye [at] debian.org&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-paperconf/">paperconf</a></code>(1)<br />
+<p><code><a href="/docs/linux/man/1-paperconf/">paperconf</a></code>(1)<br/>
  <code><a href="/docs/linux/man/8-paperconfig/">paperconfig</a></code>(8) </p>

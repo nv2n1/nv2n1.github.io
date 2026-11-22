@@ -37,16 +37,16 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;default precision <code>(6)</code>: 3.14159<br />
-&nbsp;<wbr>&nbsp;std::setprecision<code>(10)</code>: 3.141592654<br />
+<p>&nbsp;<wbr>&nbsp;default precision <code>(6)</code>: 3.14159<br/>
+&nbsp;<wbr>&nbsp;std::setprecision<code>(10)</code>: 3.141592654<br/>
 &nbsp;<wbr>&nbsp;max precision: 3.141592653589793239</p>
 <h2>See also</h2>
-<p>fixed<br />
-scientific<br />
-hexfloat<br />
-defaultfloat changes formatting used for floating-point I/O<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br />
-<i>(C++11)</i><br />
-<i>(C++11)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;manages decimal precision of floating point operations<br />
+<p>fixed<br/>
+scientific<br/>
+hexfloat<br/>
+defaultfloat changes formatting used for floating-point I/O<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br/>
+<i>(C++11)</i><br/>
+<i>(C++11)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;manages decimal precision of floating point operations<br/>
 precision <i>(public member function of std::ios_base)</i> </p>

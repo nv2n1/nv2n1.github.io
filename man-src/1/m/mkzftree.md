@@ -54,7 +54,7 @@ description: "mkzftree – Create a zisofs/RockRidge compressed file tree"
 <h2>AUTHOR</h2>
 <p> Written by H. Peter Anvin &lt;hpa [at] zytor.com&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2002 H. Peter Anvin.<br />
+<p> Copyright &#169; 2001-2002 H. Peter Anvin.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code>mkisofs</code>(8) </p>

@@ -235,7 +235,7 @@ description: "gt – version of TiMidity MIDI to WAVE converter and player"
 <p> <code>NOTE:</code> Whenever any filename ends in one of the compiled-in compression identifiers, such as <i>.gz</i>, or <i>.sht</i>, <i>gt</i> will pipe the file through the appropriate decompressor. MIDI files often compress very well, so the ability to handle compressed files can be useful. </p>
 <p> The special filename &#8220;-&#8221; can be used on the command line to indicate that a MIDI file should be read from stdin. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1995 Tuukka Toivonen.<br />
+<p> Copyright (C) 1995 Tuukka Toivonen.<br/>
  See AUTHORS below for additional copyrights. </p>
 <p> gt/TiMidity is free software; you can redistribute it and/or modify it under the terms of the <i>GNU General Public License</i> as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
 <p> TiMidity is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <i>GNU General Public License</i> for more details.</p>
@@ -245,24 +245,24 @@ description: "gt – version of TiMidity MIDI to WAVE converter and player"
 <p> 8-bit and low-rate output sounds worse than it should. </p>
 <p> Eats more CPU time than a small CPU-time-eating animal.</p>
 <h2>AUTHORS</h2>
-<p> Tuukka Toivonen &lt;toivonen [at] clinet.fi&gt;<br />
- Surround sound, reading extended GUS patches implemented by Greg Lee.<br />
- HP-UX audio code, X-Motif interface, icons and antialiasing filter by Vincent Pagel &lt;pagel [at] loria.fr&gt;<br />
- Tcl/Tk interface and AWE SoundFont support by Takashi Iwai &lt;iwai [at] dragon.mm.t.u-tokyo.ac.jp&gt;<br />
- Windows 95/NT audio code by Davide Moretti &lt;dmoretti [at] iper.net&gt;<br />
- DEC audio code by Chi Ming HUNG &lt;cmhung [at] insti.physics.sunysb.edu&gt;<br />
- S-Lang user interface by Riccardo Facchetti &lt;riccardo [at] cdc8g5.cdc.polimi.it&gt;<br />
- IW patchset support, karaoke, AWE/XG enhancements, much reworking of the code by Greg Lee &lt;lee [at] hawaii.edu&gt;, &lt;greg [at] ling.lll.hawaii.edu&gt;<br />
- KDE user interface &quot;KMidi&quot; Copyright (C) 1997 Bernd Johannes Wuebben &lt;wuebben [at] math.cornell.edu&gt;<br />
- Effects filter by Nicolas Witczak &lt;witczak [at] geocities.fr&gt;, see URL <i><a rel="nofollow" href="http://www.geocities.com/SiliconValley/Lab/6307/">http://www.geocities.com/SiliconValley/Lab/6307/</a></i>).<br />
- Portamento, mod wheel, and other enhancements from TiMidity++ Copyright (C) 1999 Masanao Izumo &lt;mo [at] goice.co.jp&gt;. See URL <i><a rel="nofollow" href="http://www.goice.co.jp/member/mo/hack-progs/timidity.html">http://www.goice.co.jp/member/mo/hack-progs/timidity.html</a></i>.<br />
- alsa driver Copyright (C) 1999 Masanao Izumo &lt;mo [at] goice.co.jp&gt;<br />
- bsd20 driver Written by Yamate Keiichiro &lt;keiich-y [at] is.aist-nara.ac.jp&gt;<br />
- esd driver by Avatar &lt;avatar [at] deva.net&gt;<br />
- hpux_d driver Copyright 1997 Lawrence T. Hoff<br />
- nas driver Copyright (C) 1999 Michael Haardt &lt;michael [at] moria.de&gt;<br />
- XAW Interface from Tomokazu Harada &lt;harada [at] prince.pe.u-tokyo.ac.jp&gt; and Yoshishige Arai &lt;ryo2 [at] on.rim.or.jp&gt;<br />
- GTK+ interface by Glenn Trigg 29 Oct 1998<br />
- The autoconf script is (C)Copyright 1998 by Hiroshi Takekawa &lt;t80679 [at] hongo.ecc.u-tokyo.ac.jp&gt;, modified for automake by Isaku Yamahata &lt;yamahata [at] kusm.kyoto-u.ac.jp&gt;, modified for automake by Masanao Izumo &lt;mo [at] goice.co.jp&gt; (1998.11).<br />
- The m4 autoconf definitions: Configure paths for ESD by Manish Singh 98-9-30, stolen back from Frank Belew, stolen from Manish Singh, Shamelessly stolen from Owen Taylor.<br />
+<p> Tuukka Toivonen &lt;toivonen [at] clinet.fi&gt;<br/>
+ Surround sound, reading extended GUS patches implemented by Greg Lee.<br/>
+ HP-UX audio code, X-Motif interface, icons and antialiasing filter by Vincent Pagel &lt;pagel [at] loria.fr&gt;<br/>
+ Tcl/Tk interface and AWE SoundFont support by Takashi Iwai &lt;iwai [at] dragon.mm.t.u-tokyo.ac.jp&gt;<br/>
+ Windows 95/NT audio code by Davide Moretti &lt;dmoretti [at] iper.net&gt;<br/>
+ DEC audio code by Chi Ming HUNG &lt;cmhung [at] insti.physics.sunysb.edu&gt;<br/>
+ S-Lang user interface by Riccardo Facchetti &lt;riccardo [at] cdc8g5.cdc.polimi.it&gt;<br/>
+ IW patchset support, karaoke, AWE/XG enhancements, much reworking of the code by Greg Lee &lt;lee [at] hawaii.edu&gt;, &lt;greg [at] ling.lll.hawaii.edu&gt;<br/>
+ KDE user interface &quot;KMidi&quot; Copyright (C) 1997 Bernd Johannes Wuebben &lt;wuebben [at] math.cornell.edu&gt;<br/>
+ Effects filter by Nicolas Witczak &lt;witczak [at] geocities.fr&gt;, see URL <i><a rel="nofollow" href="http://www.geocities.com/SiliconValley/Lab/6307/">http://www.geocities.com/SiliconValley/Lab/6307/</a></i>).<br/>
+ Portamento, mod wheel, and other enhancements from TiMidity++ Copyright (C) 1999 Masanao Izumo &lt;mo [at] goice.co.jp&gt;. See URL <i><a rel="nofollow" href="http://www.goice.co.jp/member/mo/hack-progs/timidity.html">http://www.goice.co.jp/member/mo/hack-progs/timidity.html</a></i>.<br/>
+ alsa driver Copyright (C) 1999 Masanao Izumo &lt;mo [at] goice.co.jp&gt;<br/>
+ bsd20 driver Written by Yamate Keiichiro &lt;keiich-y [at] is.aist-nara.ac.jp&gt;<br/>
+ esd driver by Avatar &lt;avatar [at] deva.net&gt;<br/>
+ hpux_d driver Copyright 1997 Lawrence T. Hoff<br/>
+ nas driver Copyright (C) 1999 Michael Haardt &lt;michael [at] moria.de&gt;<br/>
+ XAW Interface from Tomokazu Harada &lt;harada [at] prince.pe.u-tokyo.ac.jp&gt; and Yoshishige Arai &lt;ryo2 [at] on.rim.or.jp&gt;<br/>
+ GTK+ interface by Glenn Trigg 29 Oct 1998<br/>
+ The autoconf script is (C)Copyright 1998 by Hiroshi Takekawa &lt;t80679 [at] hongo.ecc.u-tokyo.ac.jp&gt;, modified for automake by Isaku Yamahata &lt;yamahata [at] kusm.kyoto-u.ac.jp&gt;, modified for automake by Masanao Izumo &lt;mo [at] goice.co.jp&gt; (1998.11).<br/>
+ The m4 autoconf definitions: Configure paths for ESD by Manish Singh 98-9-30, stolen back from Frank Belew, stolen from Manish Singh, Shamelessly stolen from Owen Taylor.<br/>
  Configure Paths for Alsa by Christopher Lansdown (lansdoct [at] cs.alfred.edu), 29/10/1998, modified for TiMidity++ by Isaku Yamahata(yamahata [at] kusm.kyoto-u.ac.jp), 16/12/1998. </p>

@@ -16,30 +16,30 @@ description: "docker-update – Update configuration of one or more containers"
 <p> With the exception of the &#8211;kernel-memory value, you can specify these options on a running or a stopped container. You can only update &#8211;kernel-memory on a stopped container. When you run docker update on stopped container, the next time you restart it, the container uses those values. </p>
 <p> Another configuration you can change with this command is restart policy, new restart policy will take effect instantly after you run docker update on a container. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;blkio-weight</code>=0<br />
+<p> <code>&#8211;blkio-weight</code>=0<br/>
 Block IO weight&nbsp;<wbr>(relative weight)&nbsp;<wbr>accepts a weight value between 10 and 1000. </p>
-<p> <code>&#8211;cpu-shares</code>=0<br />
+<p> <code>&#8211;cpu-shares</code>=0<br/>
 CPU shares&nbsp;<wbr>(relative weight) </p>
-<p> <code>&#8211;cpu-period</code>=0<br />
+<p> <code>&#8211;cpu-period</code>=0<br/>
 Limit the CPU CFS&nbsp;<wbr>(Completely Fair Scheduler)&nbsp;<wbr>period </p>
-<p> <code>&#8211;cpu-quota</code>=0<br />
+<p> <code>&#8211;cpu-quota</code>=0<br/>
 Limit the CPU CFS&nbsp;<wbr>(Completely Fair Scheduler)&nbsp;<wbr>quota </p>
-<p> <code>&#8211;cpuset-cpus</code>=&quot;&quot;<br />
+<p> <code>&#8211;cpuset-cpus</code>=&quot;&quot;<br/>
 CPUs in which to allow execution&nbsp;<wbr>(0-3, 0,1) </p>
-<p> <code>&#8211;cpuset-mems</code>=&quot;&quot;<br />
+<p> <code>&#8211;cpuset-mems</code>=&quot;&quot;<br/>
 Memory nodes(MEMs)&nbsp;<wbr>in which to allow execution&nbsp;<wbr>(0-3, 0,1). Only effective on NUMA systems. </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 Print usage statement </p>
-<p> <code>&#8211;kernel-memory</code>=&quot;&quot;<br />
+<p> <code>&#8211;kernel-memory</code>=&quot;&quot;<br/>
 Kernel memory limit&nbsp;<wbr>(format:&nbsp;<wbr>&lt;number&gt;[&lt;unit&gt;], where unit&nbsp;<wbr>=&nbsp;<wbr>b, k, m or g) </p>
 <p> Note that you can not update kernel memory to a running container, it can only be updated to a stopped container, and affect after it&#8217;s started. </p>
-<p> <code>-m</code>, <code>&#8211;memory</code>=&quot;&quot;<br />
+<p> <code>-m</code>, <code>&#8211;memory</code>=&quot;&quot;<br/>
 Memory limit&nbsp;<wbr>(format:&nbsp;<wbr>&lt;number&gt;&lt;optional unit&gt;, where unit&nbsp;<wbr>=&nbsp;<wbr>b, k, m or g) </p>
-<p> <code>&#8211;memory-reservation</code>=&quot;&quot;<br />
+<p> <code>&#8211;memory-reservation</code>=&quot;&quot;<br/>
 Memory soft limit&nbsp;<wbr>(format:&nbsp;<wbr>&lt;number&gt;[&lt;unit&gt;], where unit&nbsp;<wbr>=&nbsp;<wbr>b, k, m or g) </p>
-<p> <code>&#8211;memory-swap</code>=&quot;&quot;<br />
+<p> <code>&#8211;memory-swap</code>=&quot;&quot;<br/>
 Total memory limit&nbsp;<wbr>(memory&nbsp;<wbr>+&nbsp;<wbr>swap) </p>
-<p> <code>&#8211;restart</code>=&quot;&quot;<br />
+<p> <code>&#8211;restart</code>=&quot;&quot;<br/>
 Restart policy to apply when a container exits&nbsp;<wbr>(no, on-failure[:max-retry], always, unless-stopped). </p>
 <h2>EXAMPLES</h2>
 <p> The following sections illustrate ways to use this command. </p>

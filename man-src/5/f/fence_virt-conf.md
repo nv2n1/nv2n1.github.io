@@ -58,13 +58,13 @@ description: "fence_virt.conf – configuration file for fence_virtd"
 </dl>
 <h3>serial</h3>
 <p>The serial listener plugin utilizes libvirt&#8217;s serial (or VMChannel) mapping to listen for requests. When using the serial listener, it is necessary to add a serial port (preferably pointing to /dev/ttyS1) or a channel (preferrably pointing to 10.0.2.179:1229) to the libvirt domain description. Note that only type <code>unix</code> , mode <code>bind</code> serial ports and channels are supported. Example libvirt XML: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&lt;<code>serial</code>&nbsp;<wbr>type=&#8217;unix&#8217;&gt;<br />
-&nbsp;<wbr>&lt;source mode=&#8217;bind&#8217;&nbsp;<wbr>path=&#8217;/sandbox/guests/fence_socket_molly&#8217;/&gt;<br />
-&nbsp;<wbr>&lt;target port=&#8217;1&#8217;/&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;/serial&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;<code>channel</code>&nbsp;<wbr>type=&#8217;unix&#8217;&gt;<br />
-&nbsp;<wbr>&lt;source mode=&#8217;bind&#8217;&nbsp;<wbr>path=&#8217;/sandbox/guests/fence_molly_vmchannel&#8217;/&gt;<br />
-&nbsp;<wbr>&lt;target type=&#8217;guestfwd&#8217;&nbsp;<wbr>address=&#8217;10.0.2.179&#8242;&nbsp;<wbr>port=&#8217;1229&#8217;/&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&lt;<code>serial</code>&nbsp;<wbr>type=&#8217;unix&#8217;&gt;<br/>
+&nbsp;<wbr>&lt;source mode=&#8217;bind&#8217;&nbsp;<wbr>path=&#8217;/sandbox/guests/fence_socket_molly&#8217;/&gt;<br/>
+&nbsp;<wbr>&lt;target port=&#8217;1&#8217;/&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;/serial&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;<code>channel</code>&nbsp;<wbr>type=&#8217;unix&#8217;&gt;<br/>
+&nbsp;<wbr>&lt;source mode=&#8217;bind&#8217;&nbsp;<wbr>path=&#8217;/sandbox/guests/fence_molly_vmchannel&#8217;/&gt;<br/>
+&nbsp;<wbr>&lt;target type=&#8217;guestfwd&#8217;&nbsp;<wbr>address=&#8217;10.0.2.179&#8242;&nbsp;<wbr>port=&#8217;1229&#8217;/&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;/channel&gt; </p>
 <dl>
 <dt><code>uri</code></dt>
@@ -76,13 +76,13 @@ description: "fence_virt.conf – configuration file for fence_virtd"
 </dl>
 <h3>tcp</h3>
 <p>The tcp plugin was designed to be used with vios-proxy. vios-proxy uses a virtio-serial channel to proxy TCP connections between guests and a host. In order to use the tcp plugin, vios-proxy-host must be running on all the physical cluster nodes, and vios-proxy-guest must be running on all guest cluster nodes. Prior to running vios-proxy-host or vios-proxy-guest, the virtio-serial channel and host sockets must be configured for all guest domains. Example libvirt XML: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&lt;<code>controller</code>&nbsp;<wbr>type=&#8217;virtio-serial&#8217;&nbsp;<wbr>index=&#8217;0&#8242;&gt;<br />
-&nbsp;<wbr>&lt;address type=&#8217;pci&#8217;&nbsp;<wbr>domain=&#8217;0x0000&#8242;&nbsp;<wbr>bus=&#8217;0x00&#8242;&nbsp;<wbr>slot=&#8217;0x08&#8242;&nbsp;<wbr>function=&#8217;0x0&#8217;/&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&lt;<code>controller</code>&nbsp;<wbr>type=&#8217;virtio-serial&#8217;&nbsp;<wbr>index=&#8217;0&#8242;&gt;<br/>
+&nbsp;<wbr>&lt;address type=&#8217;pci&#8217;&nbsp;<wbr>domain=&#8217;0x0000&#8242;&nbsp;<wbr>bus=&#8217;0x00&#8242;&nbsp;<wbr>slot=&#8217;0x08&#8242;&nbsp;<wbr>function=&#8217;0x0&#8217;/&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;/controller&gt; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&lt;<code>channel</code>&nbsp;<wbr>type=&#8217;unix&#8217;&gt;<br />
-&nbsp;<wbr>&lt;source mode=&#8217;bind&#8217;&nbsp;<wbr>path=&#8217;/sandbox/fence_virt/guests/fence_socket_guest1&#8242;&nbsp;<wbr>id=&#8217;guest1&#8217;/&gt;<br />
-&nbsp;<wbr>&lt;target type=&#8217;virtio&#8217;&nbsp;<wbr>name=&#8217;org.redhat.fencevirt.node.1&#8217;/&gt;<br />
-&nbsp;<wbr>&lt;address type=&#8217;virtio-serial&#8217;&nbsp;<wbr>controller=&#8217;0&#8242;&nbsp;<wbr>bus=&#8217;0&#8242;&nbsp;<wbr>port=&#8217;1&#8217;/&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&lt;<code>channel</code>&nbsp;<wbr>type=&#8217;unix&#8217;&gt;<br/>
+&nbsp;<wbr>&lt;source mode=&#8217;bind&#8217;&nbsp;<wbr>path=&#8217;/sandbox/fence_virt/guests/fence_socket_guest1&#8242;&nbsp;<wbr>id=&#8217;guest1&#8217;/&gt;<br/>
+&nbsp;<wbr>&lt;target type=&#8217;virtio&#8217;&nbsp;<wbr>name=&#8217;org.redhat.fencevirt.node.1&#8217;/&gt;<br/>
+&nbsp;<wbr>&lt;address type=&#8217;virtio-serial&#8217;&nbsp;<wbr>controller=&#8217;0&#8242;&nbsp;<wbr>bus=&#8217;0&#8242;&nbsp;<wbr>port=&#8217;1&#8217;/&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;/channel&gt; </p>
 <dl>
 <dt><code>key_file</code></dt>
@@ -139,10 +139,10 @@ description: "fence_virt.conf – configuration file for fence_virtd"
 <dd>defines an IP which is allowed to send fencing requests for members of this group (e.g. for multicast). It is highly recommended that this be used in conjunction with a key file. </dd>
 </dl>
 <h2>Example</h2>
-<p>fence_virtd {<br />
-    listener = &quot;multicast&quot;;<br />
+<p>fence_virtd {<br/>
+    listener = &quot;multicast&quot;;<br/>
     backend = &quot;checkpoint&quot;;</p>
-<p>}<br />
+<p>}<br/>
 &nbsp;<wbr>#&nbsp;<wbr>this is the listeners section </p>
 <pre><code>listeners {
     multicast {

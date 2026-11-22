@@ -11,7 +11,7 @@ description: "slagv2.f –"
 <p> slagv2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slagv2</code> (A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, CSL, SNL, CSR, SNR)<br />
+<p> subroutine <code>slagv2</code> (A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, CSL, SNL, CSR, SNR)<br/>
  <i></i><code>SLAGV2</code> computes the Generalized Schur factorization of a real 2-by-2 matrix pencil (A,B) where B is upper triangular.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slagv2 (real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( 2 )ALPHAR, real, dimension( 2 )ALPHAI, real, dimension( 2 )BETA, realCSL, realSNL, realCSR, realSNR)</h3>

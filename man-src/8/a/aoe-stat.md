@@ -17,7 +17,7 @@ description: "aoe-stat – print aoe device status report"
 <p> For each AoE device the kernel has discovered, there is one row in the script&#8217;s output. Each row has the following columns.</p>
 <dl>
 <dt><code>devicename</code></dt>
-<dd>The device name is of the form <i>eX.Y,</i><br />
+<dd>The device name is of the form <i>eX.Y,</i><br/>
 &nbsp;<wbr>with&nbsp;<wbr> <i>X</i> being the AoE device shelf address, and <i>Y </i> being the AoE slot address.</dd>
 <dt><code>size</code></dt>
 <dd>The size of the AoE device is in gigabytes (billions of bytes).</dd>

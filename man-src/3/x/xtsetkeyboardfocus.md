@@ -31,6 +31,6 @@ description: "XtSetKeyboardFocus – focus events on a child widget"
 <p> When there is a modal cascade, a widget W receives keyboard events if an ancestor of W is in the active subset of the modal cascade and one or more of the previous conditions is <code>True</code>. </p>
 <p> When subtree or one of its descendants acquires the X input focus or the pointer moves into the subtree such that keyboard events would now be delivered to subtree, a <code>FocusIn</code> event is generated for the descendant if <code>FocusNotify</code> events have been selected by the descendant. Similarly, when W loses the X input focus or the keyboard focus for one of its ancestors, a <code>FocusOut</code> event is generated for descendant if <code>FocusNotify</code> events have been selected by the descendant.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtcallacceptfocus/">XtCallAcceptFocus</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtcallacceptfocus/">XtCallAcceptFocus</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

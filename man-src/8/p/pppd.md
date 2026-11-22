@@ -463,23 +463,23 @@ description: "pppd – Point-to-Point Protocol Daemon"
 <dd>pppd call isp</dd></dl>
 <p> where the /etc/ppp/peers/isp file is set up by the system administrator to contain something like this:</p>
 <dl>
-<dd>ttyS0 19200 crtscts<br />
- connect &#8216;/usr/sbin/chat -v -f /etc/ppp/chat-isp&#8217;<br />
+<dd>ttyS0 19200 crtscts<br/>
+ connect &#8216;/usr/sbin/chat -v -f /etc/ppp/chat-isp&#8217;<br/>
  noauth</dd></dl>
 <p> In this example, we are using chat to dial the ISP&#8217;s modem and go through any logon sequence required. The /etc/ppp/chat-isp file contains the script used by chat; it could for example contain something like this:</p>
 <dl>
-<dd>ABORT &quot;NO CARRIER&quot;<br />
- ABORT &quot;NO DIALTONE&quot;<br />
- ABORT &quot;ERROR&quot;<br />
- ABORT &quot;NO ANSWER&quot;<br />
- ABORT &quot;BUSY&quot;<br />
- ABORT &quot;Username/Password Incorrect&quot;<br />
- &quot;&quot; &quot;at&quot;<br />
- OK &quot;at&amp;d0&amp;c1&quot;<br />
- OK &quot;atdt2468135&quot;<br />
- &quot;name:&quot; &quot;^Umyuserid&quot;<br />
- &quot;word:&quot; &quot;\qmypassword&quot;<br />
- &quot;ispts&quot; &quot;\q^Uppp&quot;<br />
+<dd>ABORT &quot;NO CARRIER&quot;<br/>
+ ABORT &quot;NO DIALTONE&quot;<br/>
+ ABORT &quot;ERROR&quot;<br/>
+ ABORT &quot;NO ANSWER&quot;<br/>
+ ABORT &quot;BUSY&quot;<br/>
+ ABORT &quot;Username/Password Incorrect&quot;<br/>
+ &quot;&quot; &quot;at&quot;<br/>
+ OK &quot;at&amp;d0&amp;c1&quot;<br/>
+ OK &quot;atdt2468135&quot;<br/>
+ &quot;name:&quot; &quot;^Umyuserid&quot;<br/>
+ &quot;word:&quot; &quot;\qmypassword&quot;<br/>
+ &quot;ispts&quot; &quot;\q^Uppp&quot;<br/>
  &quot;~-^Uppp-~&quot;</dd></dl>
 <p> See the <a href="/docs/linux/man/8-chat/">chat</a>(8) man page for details of chat scripts. </p>
 <p> Pppd can also be used to provide a dial-in ppp service for users. If the users already have login accounts, the simplest way to set up the ppp service is to let the users log in to their accounts and run pppd (installed setuid-root) with a command such as</p>
@@ -597,9 +597,9 @@ description: "pppd – Point-to-Point Protocol Daemon"
 <dd>A program or script which is executed when the link is available for sending and receiving IPX packets (that is, IPXCP has come up). It is executed with the parameters</dd>
 <dd><i>interface-name tty-device speed network-number local-IPX-node-address remote-IPX-node-address local-IPX-routing-protocol remote-IPX-routing-protocol local-IPX-router-name remote-IPX-router-name ipparam pppd-pid</i></dd>
 <dd>The local-IPX-routing-protocol and remote-IPX-routing-protocol field may be one of the following:</dd>
-<dd>NONE to indicate that there is no routing protocol<br />
- RIP to indicate that RIP/SAP should be used<br />
- NLSP to indicate that Novell NLSP should be used<br />
+<dd>NONE to indicate that there is no routing protocol<br/>
+ RIP to indicate that RIP/SAP should be used<br/>
+ NLSP to indicate that Novell NLSP should be used<br/>
  RIP NLSP to indicate that both RIP/SAP and NLSP should be used</dd>
 <dt><code>/etc/ppp/ipx-down</code></dt>
 <dd>A program or script which is executed when the link is no longer available for sending and receiving IPX packets. This script can be used for undoing the effects of the /etc/ppp/ipx-up script. It is invoked in the same manner and with the same parameters as the ipx-up script.</dd></dl>
@@ -665,26 +665,26 @@ description: "pppd – Point-to-Point Protocol Daemon"
 <p>Paul Mackerras (paulus [at] samba.org), based on earlier work by Drew Perkins, Brad Clements, Karl Fox, Greg Christy, and Brad Parker.</p>
 <h2>Copyright</h2>
 <p>Pppd is copyrighted and made available under conditions which provide that it may be copied and used in source or binary forms provided that the conditions listed below are met. Portions of pppd are covered by the following copyright notices: </p>
-<p> Copyright (c) 1984-2000 Carnegie Mellon University. All rights reserved.<br />
- Copyright (c) 1993-2004 Paul Mackerras. All rights reserved.<br />
- Copyright (c) 1995 Pedro Roque Marques. All rights reserved.<br />
- Copyright (c) 1995 Eric Rosenquist. All rights reserved.<br />
- Copyright (c) 1999 Tommi Komulainen. All rights reserved.<br />
- Copyright (C) Andrew Tridgell 1999<br />
- Copyright (c) 2000 by Sun Microsystems, Inc. All rights reserved.<br />
- Copyright (c) 2001 by Sun Microsystems, Inc. All rights reserved.<br />
+<p> Copyright (c) 1984-2000 Carnegie Mellon University. All rights reserved.<br/>
+ Copyright (c) 1993-2004 Paul Mackerras. All rights reserved.<br/>
+ Copyright (c) 1995 Pedro Roque Marques. All rights reserved.<br/>
+ Copyright (c) 1995 Eric Rosenquist. All rights reserved.<br/>
+ Copyright (c) 1999 Tommi Komulainen. All rights reserved.<br/>
+ Copyright (C) Andrew Tridgell 1999<br/>
+ Copyright (c) 2000 by Sun Microsystems, Inc. All rights reserved.<br/>
+ Copyright (c) 2001 by Sun Microsystems, Inc. All rights reserved.<br/>
  Copyright (c) 2002 Google, Inc. All rights reserved. </p>
 <p> The copyright notices contain the following statements. </p>
 <p> Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: </p>
-<p> 1. Redistributions of source code must retain the above copyright<br />
+<p> 1. Redistributions of source code must retain the above copyright<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;notice, this list of conditions and the following disclaimer. </p>
-<p> 2. Redistributions in binary form must reproduce the above copyright<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;notice, this list of conditions and the following disclaimer in<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;the documentation and/or other materials provided with the<br />
+<p> 2. Redistributions in binary form must reproduce the above copyright<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;notice, this list of conditions and the following disclaimer in<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;the documentation and/or other materials provided with the<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;distribution. </p>
-<p> 3. The name &quot;Carnegie Mellon University&quot; must not be used to<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;endorse or promote products derived from this software without<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;prior written permission. For permission or any legal<br />
+<p> 3. The name &quot;Carnegie Mellon University&quot; must not be used to<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;endorse or promote products derived from this software without<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;prior written permission. For permission or any legal<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;details, please contact </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Office of Technology Transfer </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Carnegie Mellon University </p>
@@ -692,18 +692,18 @@ description: "pppd – Point-to-Point Protocol Daemon"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Pittsburgh, PA&nbsp;<wbr>&nbsp;15213-3890 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(412)&nbsp;268-4387, fax:&nbsp;(412)&nbsp;268-7395 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tech-transfer [at] andrew.cmu.edu </p>
-<p> 3b. The name(s) of the authors of this software must not be used to<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;endorse or promote products derived from this software without<br />
+<p> 3b. The name(s) of the authors of this software must not be used to<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;endorse or promote products derived from this software without<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;prior written permission. </p>
-<p> 4. Redistributions of any form whatsoever must retain the following<br />
+<p> 4. Redistributions of any form whatsoever must retain the following<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;acknowledgements: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;This product includes software developed by Computing Services<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;This product includes software developed by Computing Services<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;at Carnegie Mellon University&nbsp;(<a rel="nofollow" href="http://www.cmu.edu/computing/">http://www.cmu.edu/computing/</a>).&quot; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;This product includes software developed by Paul Mackerras<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;This product includes software developed by Paul Mackerras<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&lt;paulus [at] samba.org&gt;&quot;. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;This product includes software developed by Pedro Roque Marques<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;This product includes software developed by Pedro Roque Marques<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&lt;pedro_m [at] yahoo.com&gt;&quot;. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;This product includes software developed by Tommi Komulainen<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;This product includes software developed by Tommi Komulainen<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&lt;Tommi.Komulainen [at] iki.fi&gt;&quot;. </p>
 <p> CARNEGIE MELLON UNIVERSITY DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL CARNEGIE MELLON UNIVERSITY BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. </p>
 <p> THE AUTHORS OF THIS SOFTWARE DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</p>

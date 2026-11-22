@@ -10,7 +10,7 @@ description: "fork – create a child process"
 
 <p> fork &#8211; create a child process </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>pid_t fork(void);</code></p>
 <h2>DESCRIPTION</h2>

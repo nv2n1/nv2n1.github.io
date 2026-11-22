@@ -13,15 +13,15 @@ description: "drmaa_job_template_s –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;drmaa_impl.h&gt;</p>
 <h3>Data Fields</h3>
-<p> <code>drmaa_session_t</code> * <code>session</code><br />
- <i>DRMAA session in which job template was created. </i><br />
- <code>drmaa_job_template_t</code> * <code>prev</code><br />
- <i>Previous job template in list. </i><br />
- <code>drmaa_job_template_t</code> * <code>next</code><br />
- <i>Next job template in list. </i><br />
- void ** <code>attrib</code><br />
- <i>Table of DRMAA attributes. </i><br />
- pthread_mutex_t <code>mutex</code><br />
+<p> <code>drmaa_session_t</code> * <code>session</code><br/>
+ <i>DRMAA session in which job template was created. </i><br/>
+ <code>drmaa_job_template_t</code> * <code>prev</code><br/>
+ <i>Previous job template in list. </i><br/>
+ <code>drmaa_job_template_t</code> * <code>next</code><br/>
+ <i>Next job template in list. </i><br/>
+ void ** <code>attrib</code><br/>
+ <i>Table of DRMAA attributes. </i><br/>
+ pthread_mutex_t <code>mutex</code><br/>
  <i>Mutex for accessing job attributes. </i></p>
 <h2>Detailed Description</h2>
 <p> Job template data. </p>

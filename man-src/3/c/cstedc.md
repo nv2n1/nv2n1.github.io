@@ -11,7 +11,7 @@ description: "cstedc.f –"
 <p> cstedc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cstedc</code> (COMPZ, N, D, E, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />
+<p> subroutine <code>cstedc</code> (COMPZ, N, D, E, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>CSTEDC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cstedc (characterCOMPZ, integerN, real, dimension( * )D, real, dimension( * )E, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerLRWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>
@@ -80,20 +80,20 @@ Z is COMPLEX array, dimension(LDZ, N) On entry, if COMPZ = 'V', then Z contains 
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>          LWORK is INTEGER<br />
-          The dimension of the array WORK.<br />
-          If COMPZ = &#8216;N&#8217; or &#8216;I&#8217;, or N &lt;= 1, LWORK must be at least 1.<br />
-          If COMPZ = &#8216;V&#8217; and N &gt; 1, LWORK must be at least N*N.<br />
-          Note that for COMPZ = &#8216;V&#8217;, then if N is less than or<br />
-          equal to the minimum divide size, usually 25, then LWORK need<br />
-          only be 1.<br />
-          If LWORK = -1, then a workspace query is assumed;<br />
-          the routine<br />
-              only calculates the optimal sizes of the WORK,<br />
-              RWORK and<br />
-                  IWORK arrays,<br />
-              returns these values as the first entries of<br />
-                  the WORK,<br />
+<p>          LWORK is INTEGER<br/>
+          The dimension of the array WORK.<br/>
+          If COMPZ = &#8216;N&#8217; or &#8216;I&#8217;, or N &lt;= 1, LWORK must be at least 1.<br/>
+          If COMPZ = &#8216;V&#8217; and N &gt; 1, LWORK must be at least N*N.<br/>
+          Note that for COMPZ = &#8216;V&#8217;, then if N is less than or<br/>
+          equal to the minimum divide size, usually 25, then LWORK need<br/>
+          only be 1.<br/>
+          If LWORK = -1, then a workspace query is assumed;<br/>
+          the routine<br/>
+              only calculates the optimal sizes of the WORK,<br/>
+              RWORK and<br/>
+                  IWORK arrays,<br/>
+              returns these values as the first entries of<br/>
+                  the WORK,<br/>
               RWORK and IWORK arrays, and no error message related to LWORK or LRWORK or LIWORK is issued by XERBLA.</p>
 <p> <i>RWORK</i> </p>
 <pre>
@@ -101,25 +101,25 @@ Z is COMPLEX array, dimension(LDZ, N) On entry, if COMPZ = 'V', then Z contains 
           On exit, if INFO = 0, RWORK(1) returns the optimal LRWORK.
 </pre>
 <p> <i>LRWORK</i> </p>
-<p>          LRWORK is INTEGER<br />
-          The dimension of the array RWORK.<br />
-          If COMPZ = &#8216;N&#8217; or N &lt;= 1, LRWORK must be at least 1.<br />
-          If COMPZ = &#8216;V&#8217; and N &gt; 1, LRWORK must be at least<br />
-                         1 + 3*N + 2*N*lg N + 4*N**2 ,<br />
-                         where lg( N ) = smallest integer k such<br />
-                         that 2**k &gt;= N.<br />
-          If COMPZ = &#8216;I&#8217; and N &gt; 1, LRWORK must be at least<br />
-                         1 + 4*N + 2*N**2 .<br />
-          Note that for COMPZ = &#8216;I&#8217; or &#8216;V&#8217;, then if N is less than or<br />
-          equal to the minimum divide size, usually 25, then LRWORK<br />
-          need only be max(1,2*(N-1)).<br />
-          If LRWORK = -1, then a workspace query is assumed;<br />
-          the<br />
-              routine only calculates the optimal sizes of the WORK,<br />
-              RWORK<br />
-                  and IWORK arrays,<br />
-              returns these values as the first entries<br />
-                  of the WORK,<br />
+<p>          LRWORK is INTEGER<br/>
+          The dimension of the array RWORK.<br/>
+          If COMPZ = &#8216;N&#8217; or N &lt;= 1, LRWORK must be at least 1.<br/>
+          If COMPZ = &#8216;V&#8217; and N &gt; 1, LRWORK must be at least<br/>
+                         1 + 3*N + 2*N*lg N + 4*N**2 ,<br/>
+                         where lg( N ) = smallest integer k such<br/>
+                         that 2**k &gt;= N.<br/>
+          If COMPZ = &#8216;I&#8217; and N &gt; 1, LRWORK must be at least<br/>
+                         1 + 4*N + 2*N**2 .<br/>
+          Note that for COMPZ = &#8216;I&#8217; or &#8216;V&#8217;, then if N is less than or<br/>
+          equal to the minimum divide size, usually 25, then LRWORK<br/>
+          need only be max(1,2*(N-1)).<br/>
+          If LRWORK = -1, then a workspace query is assumed;<br/>
+          the<br/>
+              routine only calculates the optimal sizes of the WORK,<br/>
+              RWORK<br/>
+                  and IWORK arrays,<br/>
+              returns these values as the first entries<br/>
+                  of the WORK,<br/>
               RWORK and IWORK arrays, and no error message related to LWORK or LRWORK or LIWORK is issued by XERBLA.</p>
 <p> <i>IWORK</i> </p>
 <pre>

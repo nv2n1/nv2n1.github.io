@@ -11,7 +11,7 @@ description: "strsen.f –"
 <p> strsen.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>strsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, WR, WI, M, S, SEP, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p> subroutine <code>strsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, WR, WI, M, S, SEP, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>STRSEN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine strsen (characterJOB, characterCOMPQ, logical, dimension( * )SELECT, integerN, real, dimension( ldt, * )T, integerLDT, real, dimension( ldq, * )Q, integerLDQ, real, dimension( * )WR, real, dimension( * )WI, integerM, realS, realSEP, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>
@@ -85,13 +85,13 @@ description: "strsen.f –"
           The leading dimension of the array T. LDT &gt;= max(1,N).
 </pre>
 <p> <i>Q</i> </p>
-<p>Q is REAL array, dimension(LDQ, N) On entry, if COMPQ = &#8216;V&#8217;, the matrix Q of Schur vectors.On exit, if COMPQ = &#8216;V&#8217;, Q has been postmultiplied by the orthogonal transformation matrix which reorders T; the<br />
-          leading M columns of Q form an orthonormal basis for the<br />
-          specified invariant subspace.<br />
+<p>Q is REAL array, dimension(LDQ, N) On entry, if COMPQ = &#8216;V&#8217;, the matrix Q of Schur vectors.On exit, if COMPQ = &#8216;V&#8217;, Q has been postmultiplied by the orthogonal transformation matrix which reorders T; the<br/>
+          leading M columns of Q form an orthonormal basis for the<br/>
+          specified invariant subspace.<br/>
           If COMPQ = &#8216;N&#8217;, Q is not referenced.</p>
 <p> <i>LDQ</i> </p>
-<p>LDQ is INTEGER<br />
-        The leading dimension of the array Q.LDQ &gt;= 1;<br />
+<p>LDQ is INTEGER<br/>
+        The leading dimension of the array Q.LDQ &gt;= 1;<br/>
 and if COMPQ = &#8216;V&#8217;, LDQ &gt;= N.</p>
 <p> <i>WR</i> </p>
 <pre>
@@ -137,15 +137,15 @@ and if COMPQ = &#8216;V&#8217;, LDQ &gt;= N.</p>
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>LWORK is INTEGER<br />
-    The dimension of the array WORK.If JOB = &#8216;N&#8217;,<br />
-                                       LWORK &gt;= max(1, N);<br />
-if JOB<br />
-    = &#8216;E&#8217;, LWORK &gt;= max(1, M *(N &#8211; M));<br />
-if JOB<br />
-    = &#8216;V&#8217; or &#8216;B&#8217;, LWORK &gt;= max(1, 2 * M * (N &#8211; M)).If LWORK = -1, then a workspace query is assumed;<br />
-the routine<br />
-    only calculates the optimal size of the WORK array,<br />
+<p>LWORK is INTEGER<br/>
+    The dimension of the array WORK.If JOB = &#8216;N&#8217;,<br/>
+                                       LWORK &gt;= max(1, N);<br/>
+if JOB<br/>
+    = &#8216;E&#8217;, LWORK &gt;= max(1, M *(N &#8211; M));<br/>
+if JOB<br/>
+    = &#8216;V&#8217; or &#8216;B&#8217;, LWORK &gt;= max(1, 2 * M * (N &#8211; M)).If LWORK = -1, then a workspace query is assumed;<br/>
+the routine<br/>
+    only calculates the optimal size of the WORK array,<br/>
     returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>IWORK</i> </p>
 <pre>
@@ -153,13 +153,13 @@ the routine<br />
           On exit, if INFO = 0, IWORK(1) returns the optimal LIWORK.
 </pre>
 <p> <i>LIWORK</i> </p>
-<p>LIWORK is INTEGER<br />
-    The dimension of the array IWORK.If JOB = &#8216;N&#8217; or &#8216;E&#8217;,<br />
-                                        LIWORK &gt;= 1;<br />
-if JOB<br />
-    = &#8216;V&#8217; or &#8216;B&#8217;, LIWORK &gt;= max(1, M *(N &#8211; M)).If LIWORK = -1, then a workspace query is assumed;<br />
-the<br />
-    routine only calculates the optimal size of the IWORK array,<br />
+<p>LIWORK is INTEGER<br/>
+    The dimension of the array IWORK.If JOB = &#8216;N&#8217; or &#8216;E&#8217;,<br/>
+                                        LIWORK &gt;= 1;<br/>
+if JOB<br/>
+    = &#8216;V&#8217; or &#8216;B&#8217;, LIWORK &gt;= max(1, M *(N &#8211; M)).If LIWORK = -1, then a workspace query is assumed;<br/>
+the<br/>
+    routine only calculates the optimal size of the IWORK array,<br/>
     returns this value as the first entry of the IWORK array, and no error message related to LIWORK is issued by XERBLA.</p>
 <p> <i>INFO</i> </p>
 <pre><code>

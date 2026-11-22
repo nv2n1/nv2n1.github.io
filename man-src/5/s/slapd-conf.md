@@ -39,7 +39,7 @@ description: "slapd.conf – configuration file for slapd, the stand-alone LDAP 
 <dd>Define tagging attribute options or option tag/range prefixes. Options must not end with `-&#8216;, prefixes must end with `-&#8216;. The `lang-&#8216; prefix is predefined. If you use the <code>attributeoptions</code> directive, `lang-&#8216; will no longer be defined and you must specify it explicitly if you want it defined. </dd>
 <p> An attribute description with a tagging option is a subtype of that attribute description without the option. Except for that, options defined this way have no special semantics. Prefixes defined this way work like the `lang-&#8216; options: They define a prefix for tagging options starting with the prefix. That is, if you define the prefix `x-foo-&#8216;, you can use the option `x-foo-bar&#8217;. Furthermore, in a search or compare, a prefix or range name (with a trailing `-&#8216;) matches all options starting with that name, as well as the option with the range name sans the trailing `-&#8216;. That is, `x-foo-bar-&#8216; matches `x-foo-bar&#8217; and `x-foo-bar-baz&#8217;. </p>
 <p> RFC 4520 reserves options beginning with `x-&#8216; for private experiments. Other options should be registered with IANA, see RFC 4520 section 3.5. OpenLDAP also has the `binary&#8217; option built in, but this is a transfer option, not a tagging option.</p>
-<dt> <code>attributetype (&nbsp;<wbr>&lt;oid&gt;<br />
+<dt> <code>attributetype (&nbsp;<wbr>&lt;oid&gt;<br/>
 &nbsp;<wbr>[NAME&nbsp;<wbr>&lt;name&gt;]&nbsp;<wbr>[DESC&nbsp;<wbr>&lt;description&gt;]&nbsp;<wbr>[OBSOLETE]&nbsp;<wbr>[SUP&nbsp;<wbr>&lt;oid&gt;]&nbsp;<wbr>[EQUALITY&nbsp;<wbr>&lt;oid&gt;]&nbsp;<wbr>[ORDERING&nbsp;<wbr>&lt;oid&gt;]&nbsp;<wbr>[SUBSTR&nbsp;<wbr>&lt;oid&gt;]&nbsp;<wbr>[SYNTAX&nbsp;<wbr>&lt;oidlen&gt;]&nbsp;<wbr>[SINGLE-VALUE]&nbsp;<wbr>[COLLECTIVE]&nbsp;<wbr>[NO-USER-MODIFICATION]&nbsp;<wbr>[USAGE&nbsp;<wbr>&lt;attributeUsage&gt;]&nbsp;<wbr>)</code></dt>
 <dl>
 <dd>
@@ -113,7 +113,7 @@ description: "slapd.conf – configuration file for slapd, the stand-alone LDAP 
 <dd>Specify a default search base to use when client submits a non-base search request with an empty base DN. Base scoped search requests with an empty base DN are not affected.</dd>
 <dt><code>disallow &lt;features&gt;</code></dt>
 <dd>Specify a set of features (separated by white space) to disallow (default none). <code>bind_anon</code> disables acceptance of anonymous bind requests. Note that this setting does not prohibit anonymous directory access (See &quot;require authc&quot;). <code>bind_simple</code> disables simple (bind) authentication. <code>tls_2_anon</code> disables forcing session to anonymous status (see also <code>tls_authc</code>) upon StartTLS operation receipt. <code>tls_authc</code> disallows the StartTLS operation if authenticated (see also <code>tls_2_anon</code>). <code>proxy_authz_non_critical</code> disables acceptance of the proxied authorization control (RFC4370) when criticality is FALSE. <code>dontusecopy_non_critical</code> disables acceptance of the dontUseCopy control (a work in progress) when criticality is FALSE.</dd>
-<dt> <code>ditcontentrule (&nbsp;<wbr>&lt;oid&gt;<br />
+<dt> <code>ditcontentrule (&nbsp;<wbr>&lt;oid&gt;<br/>
 &nbsp;<wbr>[NAME&nbsp;<wbr>&lt;name&gt;]&nbsp;<wbr>[DESC&nbsp;<wbr>&lt;description&gt;]&nbsp;<wbr>[OBSOLETE]&nbsp;<wbr>[AUX&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>[MUST&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>[MAY&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>[NOT&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>)</code></dt>
 <dl>
 <dd>
@@ -137,7 +137,7 @@ description: "slapd.conf – configuration file for slapd, the stand-alone LDAP 
 </dl>
 <p> Note: Indexing support depends on the particular backend in use. Also, changing these settings will generally require deleting any indices that depend on these parameters and recreating them with <code><a href="/docs/linux/man/8-slapindex/">slapindex</a></code>(8). </p>
 <dl>
-<dt> <code>ldapsyntax (&nbsp;<wbr>&lt;oid&gt;<br />
+<dt> <code>ldapsyntax (&nbsp;<wbr>&lt;oid&gt;<br/>
 &nbsp;<wbr>[DESC&nbsp;<wbr>&lt;description&gt;]&nbsp;<wbr>[X-SUBST&nbsp;<wbr>&lt;substitute-syntax&gt;]&nbsp;<wbr>)</code></dt>
 <dl>
 <dd>
@@ -196,7 +196,7 @@ description: "slapd.conf – configuration file for slapd, the stand-alone LDAP 
 <dd>Specify the name of a dynamically loadable module to load. The filename may be an absolute path name or a simple filename. Non-absolute names are searched for in the directories specified by the <code>modulepath</code> option. This option and the <code>modulepath</code> option are only usable if slapd was compiled with &#8211;enable-modules.</dd>
 <dt><code>modulepath &lt;pathspec&gt;</code></dt>
 <dd>Specify a list of directories to search for loadable modules. Typically the path is colon-separated but this depends on the operating system. The default is /usr/lib64/openldap, which is where the standard OpenLDAP install will place its modules.</dd>
-<dt> <code>objectclass (&nbsp;<wbr>&lt;oid&gt;<br />
+<dt> <code>objectclass (&nbsp;<wbr>&lt;oid&gt;<br/>
 &nbsp;<wbr>[NAME&nbsp;<wbr>&lt;name&gt;]&nbsp;<wbr>[DESC&nbsp;<wbr>&lt;description&gt;]&nbsp;<wbr>[OBSOLETE]&nbsp;<wbr>[SUP&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>[{&nbsp;<wbr>ABSTRACT | STRUCTURAL | AUXILIARY&nbsp;<wbr>}]&nbsp;<wbr>[MUST&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>[MAY&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>)</code></dt>
 <dl>
 <dd>
@@ -223,8 +223,8 @@ description: "slapd.conf – configuration file for slapd, the stand-alone LDAP 
 <dd>Enable/disable client name unverified reverse lookup (default is <code>off</code> if compiled with &#8211;enable-rlookups).</dd>
 <dt><code>rootDSE &lt;file&gt;</code></dt>
 <dd>Specify the name of an <a href="/docs/linux/man/5-ldif/">LDIF</a>(5) file containing user defined attributes for the root DSE. These attributes are returned in addition to the attributes normally produced by slapd. </dd>
-<p> The root DSE is an entry with information about the server and its capabilities, in operational attributes. It has the empty DN, and can be read with e.g.:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> ldapsearch -x -b &quot;&quot; -s base &quot;+&quot;<br />
+<p> The root DSE is an entry with information about the server and its capabilities, in operational attributes. It has the empty DN, and can be read with e.g.:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> ldapsearch -x -b &quot;&quot; -s base &quot;+&quot;<br/>
  See RFC 4512 section 5.1 for details.</p>
 <dt><code>sasl-auxprops &lt;plugin&gt; [&#8230;]</code></dt>
 <dd>Specify which auxprop plugins to use for authentication lookups. The default is empty, which just uses slapd&#8217;s internal support. Usually no other auxprop plugins are needed.</dd>

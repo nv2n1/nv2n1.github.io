@@ -13,9 +13,9 @@ description: "ql/methods/finitedifferences/stepcondition.hpp – conditions to b
 #include &lt;ql/math/array.hpp&gt;
 #include &lt;ql/instruments/payoffs.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>StepCondition&lt; array_type &gt;</code><br />
- <i>condition to be applied at every time step </i><br />
- class <code>NullCondition&lt; array_type &gt;</code><br />
+<p>class <code>StepCondition&lt; array_type &gt;</code><br/>
+ <i>condition to be applied at every time step </i><br/>
+ class <code>NullCondition&lt; array_type &gt;</code><br/>
  <i>null step condition </i></p>
 <h2>Detailed Description</h2>
 <p>conditions to be applied at every time step</p>

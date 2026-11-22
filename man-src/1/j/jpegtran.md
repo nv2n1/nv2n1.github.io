@@ -111,7 +111,7 @@ description: "jpegtran – lossless transformation of JPEG files"
 <dt><code>JPEGMEM</code></dt>
 <dd> If this environment variable is set, its value is the default memory limit. The value is specified as described for the <code>-maxmemory</code> switch. <code>JPEGMEM</code> overrides the default value specified when the program was compiled, and itself is overridden by an explicit <code>-maxmemory</code>.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-cjpeg/">cjpeg</a></code>(1), <code><a href="/docs/linux/man/1-djpeg/">djpeg</a></code>(1), <code><a href="/docs/linux/man/1-rdjpgcom/">rdjpgcom</a></code>(1), <code><a href="/docs/linux/man/1-wrjpgcom/">wrjpgcom</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-cjpeg/">cjpeg</a></code>(1), <code><a href="/docs/linux/man/1-djpeg/">djpeg</a></code>(1), <code><a href="/docs/linux/man/1-rdjpgcom/">rdjpgcom</a></code>(1), <code><a href="/docs/linux/man/1-wrjpgcom/">wrjpgcom</a></code>(1)<br/>
  Wallace, Gregory K. &quot;The JPEG Still Picture Compression Standard&quot;, Communications of the ACM, April 1991 (vol. 34, no. 4), pp. 30-44.</p>
 <h2>AUTHOR</h2>
 <p> Independent JPEG Group </p>

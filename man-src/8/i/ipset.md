@@ -421,7 +421,7 @@ OPTIONS := { -exist | -output { plain | save | xml } | -quiet | -resolve | -sort
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/8-ip6tables/">ip6tables</a></code>(8) <code><a href="/docs/linux/man/8-iptables-extensions/">iptables-extensions</a></code>(8)</p>
 <h2>Authors</h2>
-<p>Jozsef Kadlecsik wrote ipset, which is based on ippool by Joakim Axelsson, Patrick Schaaf and Martin Josefsson.<br />
+<p>Jozsef Kadlecsik wrote ipset, which is based on ippool by Joakim Axelsson, Patrick Schaaf and Martin Josefsson.<br/>
  Sven Wegener wrote the iptreemap type.</p>
 <h2>Last Remark</h2>
 <p><code>I stand on the shoulders of giants.</code></p>

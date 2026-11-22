@@ -10,7 +10,7 @@ description: "dsprfs.f –"
 <p>dsprfs.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dsprfs</code> (UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dsprfs</code> (UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code>DSPRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsprfs (characterUPLO, integerN, integerNRHS, double precision, dimension( * )AP, double precision, dimension( * )AFP, integer, dimension( * )IPIV, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldx, * )X, integerLDX, double precision, dimension( * )FERR, double precision, dimension( * )BERR, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

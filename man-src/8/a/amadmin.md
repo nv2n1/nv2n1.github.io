@@ -99,7 +99,7 @@ description: "amadmin – administrative interface to control Amanda backups"
 <dl>
 <dd>Delete the specified <i>disks</i> on <i>hostname</i> from the Amanda database. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If you do not also remove the disk from the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) file, Amanda will treat it as a new disk during the next run. </dd>
 </dl>
 </dl>

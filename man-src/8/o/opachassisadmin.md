@@ -208,10 +208,10 @@ description: "opachassisadmin"
 <p> For more information on the operations that can be performed, see <i>Operation Details</i> </p>
 </dl>
 <h2>Example</h2>
-<p>opachassisadmin -c reboot<br />
- opachassisadmin -P /root/ChassisFw4.2.0.0.1 upgrade<br />
- opachassisadmin -H &#8216;chassis1 chassis2&#8242; reboot<br />
- CHASSIS=&#8217;chassis1 chassis2&#8217; opachassis_admin reboot<br />
+<p>opachassisadmin -c reboot<br/>
+ opachassisadmin -P /root/ChassisFw4.2.0.0.1 upgrade<br/>
+ opachassisadmin -H &#8216;chassis1 chassis2&#8242; reboot<br/>
+ CHASSIS=&#8217;chassis1 chassis2&#8217; opachassis_admin reboot<br/>
  opachassisadmin -a run -P &#8216;*.pkg&#8217; upgrade</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

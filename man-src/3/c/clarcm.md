@@ -11,7 +11,7 @@ description: "clarcm.f –"
 <p> clarcm.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clarcm</code> (M, N, A, LDA, B, LDB, C, LDC, RWORK)<br />
+<p> subroutine <code>clarcm</code> (M, N, A, LDA, B, LDB, C, LDC, RWORK)<br/>
  <i></i><code>CLARCM</code> copies all or part of a real two-dimensional array to a complex array.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clarcm (integerM, integerN, real, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldc, * )C, integerLDC, real, dimension( * )RWORK)</h3>

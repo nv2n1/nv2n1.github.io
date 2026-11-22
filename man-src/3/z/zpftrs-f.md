@@ -10,7 +10,7 @@ description: "zpftrs.f –"
 <p>zpftrs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zpftrs</code> (TRANSR, UPLO, N, NRHS, A, B, LDB, INFO)<br />
+<p>subroutine <code>zpftrs</code> (TRANSR, UPLO, N, NRHS, A, B, LDB, INFO)<br/>
  <i></i><code>ZPFTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zpftrs (characterTRANSR, characterUPLO, integerN, integerNRHS, complex*16, dimension( 0: * )A, complex*16, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

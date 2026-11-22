@@ -10,11 +10,11 @@ description: "mxmldoc – mini-xml documentation generator"
 
 <p> mxmldoc &#8211; mini-xml documentation generator</p>
 <h2>SYNOPSIS</h2>
-<p> <code>mxmldoc</code> &#8211;no-output [ <i>filename.xml</i> ] <i>source file(s)</i> ]<br />
- <code>mxmldoc</code> [ &#8211;footer <i>footerfile</i> ] [ &#8211;header <i>headerfile</i> ] [ &#8211;intro <i>introfile</i> ] [ &#8211;section <i>section</i> ] [ &#8211;title <i>title</i> ] [ <i>filename.xml</i> ] [ <i>source file(s)</i> ] &gt; <i>filename.html</i><br />
- <code>mxmldoc</code> &#8211;docset <i>directory.docset</i> [ &#8211;docversion <i>version</i> ] [ &#8211;feedname <i>name</i> ] [ &#8211;feedurl <i>url</i> ] [ &#8211;footer <i>footerfile</i> ] [ &#8211;header <i>headerfile</i> ] [ &#8211;intro <i>introfile</i> ] [ &#8211;section <i>section</i> ] [ &#8211;title <i>title</i> ] [ <i>filename.xml</i> ] [ <i>source file(s)</i> ]<br />
- <code>mxmldoc</code> &#8211;tokens <i>path</i> [ <i>filename.xml</i> ] [ <i>source file(s)</i> ] &gt; tokens.xml<br />
- <code>mxmldoc</code> &#8211;framed <i>basename</i> [ &#8211;footer <i>footerfile</i> ] [ &#8211;header <i>headerfile</i> ] [ &#8211;intro <i>introfile</i> ] [ &#8211;section <i>section</i> ] [ &#8211;title <i>title</i> ] [ <i>filename.xml</i> ] [ <i>source file(s)</i> ]<br />
+<p> <code>mxmldoc</code> &#8211;no-output [ <i>filename.xml</i> ] <i>source file(s)</i> ]<br/>
+ <code>mxmldoc</code> [ &#8211;footer <i>footerfile</i> ] [ &#8211;header <i>headerfile</i> ] [ &#8211;intro <i>introfile</i> ] [ &#8211;section <i>section</i> ] [ &#8211;title <i>title</i> ] [ <i>filename.xml</i> ] [ <i>source file(s)</i> ] &gt; <i>filename.html</i><br/>
+ <code>mxmldoc</code> &#8211;docset <i>directory.docset</i> [ &#8211;docversion <i>version</i> ] [ &#8211;feedname <i>name</i> ] [ &#8211;feedurl <i>url</i> ] [ &#8211;footer <i>footerfile</i> ] [ &#8211;header <i>headerfile</i> ] [ &#8211;intro <i>introfile</i> ] [ &#8211;section <i>section</i> ] [ &#8211;title <i>title</i> ] [ <i>filename.xml</i> ] [ <i>source file(s)</i> ]<br/>
+ <code>mxmldoc</code> &#8211;tokens <i>path</i> [ <i>filename.xml</i> ] [ <i>source file(s)</i> ] &gt; tokens.xml<br/>
+ <code>mxmldoc</code> &#8211;framed <i>basename</i> [ &#8211;footer <i>footerfile</i> ] [ &#8211;header <i>headerfile</i> ] [ &#8211;intro <i>introfile</i> ] [ &#8211;section <i>section</i> ] [ &#8211;title <i>title</i> ] [ <i>filename.xml</i> ] [ <i>source file(s)</i> ]<br/>
  <code>mxmldoc</code> [ &#8211;footer <i>footerfile</i> ] [ &#8211;header <i>headerfile</i> ] [ &#8211;intro <i>introfile</i> ] &#8211;man <i>manpage</i> [ &#8211;section <i>section</i> ] [ &#8211;title <i>title</i> ] [ <i>filename.xml</i> ] [ <i>source file(s)</i> ] &gt; <i>filename.man</i></p>
 <h2>DESCRIPTION</h2>
 <p> <i>mxmldoc</i> scans the specified C and C++ source files to produce an XML representation of globally accessible classes, constants, enumerations, functions, structures, typedefs, unions, and variables &#8211; the XML file is updated as necessary. By default, a HTML representation of the XML file is written to the standard output. Use the <i>&#8211;no-output</i> option to disable the HTML output. </p>

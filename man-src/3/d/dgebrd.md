@@ -11,7 +11,7 @@ description: "dgebrd.f –"
 <p> dgebrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgebrd</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dgebrd</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, LWORK, INFO)<br/>
  <i></i><code>DGEBRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgebrd (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( * )TAUQ, double precision, dimension( * )TAUP, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -70,9 +70,9 @@ the
           D(i) = A(i,i).
 </pre>
 <p> <i>E</i> </p>
-<p>          E is DOUBLE PRECISION array, dimension (min(M,N)-1)<br />
-          The off-diagonal elements of the bidiagonal matrix B:<br />
-          if m &gt;= n, E(i) = A(i,i+1) for i = 1,2,&#8230;,n-1;<br />
+<p>          E is DOUBLE PRECISION array, dimension (min(M,N)-1)<br/>
+          The off-diagonal elements of the bidiagonal matrix B:<br/>
+          if m &gt;= n, E(i) = A(i,i+1) for i = 1,2,&#8230;,n-1;<br/>
           if m &lt; n, E(i) = A(i+1,i) for i = 1,2,&#8230;,m-1.</p>
 <p> <i>TAUQ</i> </p>
 <pre>

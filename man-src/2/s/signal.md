@@ -14,7 +14,7 @@ description: "signal – ANSI C signal handling"
 <p> <code>typedef void (*sighandler_t)(int);</code> </p>
 <p> <code>sighandler_t signal(int </code><i>signum</i><code>, sighandler_t </code><i>handler</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
-<p> <code>WARNING</code>:<br />
+<p> <code>WARNING</code>:<br/>
 &nbsp;the behavior of <code>signal</code>() varies across UNIX versions, and has also varied historically across different versions of Linux. <code>Avoid its use</code>: use <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2) instead. See <i>Portability</i> below. </p>
 <p> <code>signal</code>() sets the disposition of the signal <i>signum</i> to <i>handler</i>, which is either <code>SIG_IGN</code>, <code>SIG_DFL</code>, or the address of a programmer-defined function (a &quot;signal handler&quot;). </p>
 <p> If the signal <i>signum</i> is delivered to the process, then one of the following happens:</p>

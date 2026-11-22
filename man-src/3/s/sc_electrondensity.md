@@ -18,7 +18,7 @@ description: "sc::ElectronDensity –"
 <p> <code>ElectronDensity</code> (const <code>Ref</code>&lt; <code>Wavefunction</code> &gt; &amp;) </p>
 <p> virtual void <code>boundingbox</code> (double valuemin, double valuemax, <code>SCVector3</code> &amp;p1, <code>SCVector3</code> &amp;p2)</p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>compute</code> ()<br />
+<p>virtual void <code>compute</code> ()<br/>
  <i>Recompute at least the results that have compute true and are not already computed. </i></p>
 <h3>Protected Attributes</h3>
 <p><code>Ref</code>&lt; <code>Wavefunction</code> &gt; <code>wfn_</code></p>

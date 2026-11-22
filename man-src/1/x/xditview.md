@@ -134,11 +134,11 @@ S2 - *-symbol -
 <h2>ORIGIN</h2>
 <p> Portions of this program originated in <i>xtroff which was derived</i> from <i>suntroff.</i></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 1994 X Consortium<br />
+<p> Copyright 1994 X Consortium<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a></i>(7) for a full statement of rights and permissions.</p>
 <h2>AUTHORS</h2>
-<p> Keith Packard (MIT X Consortium)<br />
- Richard L. Hyde (Purdue)<br />
- David Slattengren (Berkeley)<br />
- Malcom Slaney (Schlumberger Palo Alto Research)<br />
+<p> Keith Packard (MIT X Consortium)<br/>
+ Richard L. Hyde (Purdue)<br/>
+ David Slattengren (Berkeley)<br/>
+ Malcom Slaney (Schlumberger Palo Alto Research)<br/>
  Mark Moraes (University of Toronto) </p>

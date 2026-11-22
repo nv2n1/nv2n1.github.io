@@ -10,7 +10,7 @@ description: "XkbSARedirectSetVMods – Sets the vmods0 and vmods1 of act from v
 <p>XkbSARedirectSetVMods &#8211; Sets the vmods0 and vmods1 of act from v </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbSARedirectSetVMods</code> <code>(XkbRedirectKeyAction </code><i>act</i><code>,</code> <code>unsigned int </code><i>v</i><code>);</code><br />
+<dt> <code>void XkbSARedirectSetVMods</code> <code>(XkbRedirectKeyAction </code><i>act</i><code>,</code> <code>unsigned int </code><i>v</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

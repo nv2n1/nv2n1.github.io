@@ -10,16 +10,16 @@ description: "reboot – reboot or enable/disable Ctrl-Alt-Del"
 
 <p> reboot &#8211; reboot or enable/disable Ctrl-Alt-Del </p>
 <h2>SYNOPSIS</h2>
-<p> /* Since kernel version 2.1.30 there are symbolic names LINUX_REBOOT_*<br />
+<p> /* Since kernel version 2.1.30 there are symbolic names LINUX_REBOOT_*<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;for the constants and a fourth argument to the call:&nbsp;*/ </p>
-<p> <code>#include &lt;unistd.h&gt;</code><br />
+<p> <code>#include &lt;unistd.h&gt;</code><br/>
  <code>#include &lt;linux/reboot.h&gt;</code> </p>
 <p> <code>int reboot(int </code><i>magic</i><code>, int </code><i>magic2</i><code>, int </code><i>cmd</i><code>, void *</code><i>arg</i><code>);</code> </p>
-<p> /* Under glibc and most alternative libc&#8217;s (including uclibc, dietlibc,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;musl and a few others), some of the constants involved have gotten<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;symbolic names RB_*, and the library call is a 1-argument<br />
+<p> /* Under glibc and most alternative libc&#8217;s (including uclibc, dietlibc,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;musl and a few others), some of the constants involved have gotten<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;symbolic names RB_*, and the library call is a 1-argument<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;wrapper around the system call:&nbsp;*/ </p>
-<p> <code>#include &lt;unistd.h&gt;</code><br />
+<p> <code>#include &lt;unistd.h&gt;</code><br/>
  <code>#include &lt;sys/reboot.h&gt;</code> </p>
 <p> <code>int reboot(int </code><i>cmd</i><code>);</code></p>
 <h2>DESCRIPTION</h2>

@@ -16,34 +16,34 @@ description: "QwtTextLabel –"
 <h3>Public Slots</h3>
 <p>void <code>setText</code> (const QString &amp;, <code>QwtText::TextFormat</code> textFormat=<code>QwtText::AutoText</code>) </p>
 <p> virtual void <code>setText</code> (const <code>QwtText</code> &amp;) </p>
-<p> void <code>clear</code> ()<br />
+<p> void <code>clear</code> ()<br/>
  <i>Clear the text and all </i><code>QwtText</code> attributes.</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtTextLabel</code> (QWidget *parent=NULL) </p>
 <p> <code>QwtTextLabel</code> (const <code>QwtText</code> &amp;, QWidget *parent=NULL) </p>
-<p> virtual <code>~QwtTextLabel</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtTextLabel</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setPlainText</code> (const QString &amp;) </p>
 <p> QString <code>plainText</code> () const </p>
-<p> const <code>QwtText</code> &amp; <code>text</code> () const<br />
- <i>Return the text. </i><br />
- int <code>indent</code> () const<br />
- <i>Return label&#8217;s text indent in pixels. </i><br />
+<p> const <code>QwtText</code> &amp; <code>text</code> () const<br/>
+ <i>Return the text. </i><br/>
+ int <code>indent</code> () const<br/>
+ <i>Return label&#8217;s text indent in pixels. </i><br/>
  void <code>setIndent</code> (int) </p>
-<p> int <code>margin</code> () const<br />
- <i>Return label&#8217;s text indent in pixels. </i><br />
+<p> int <code>margin</code> () const<br/>
+ <i>Return label&#8217;s text indent in pixels. </i><br/>
  void <code>setMargin</code> (int) </p>
-<p> virtual QSize <code>sizeHint</code> () const<br />
- <i>Return label&#8217;s margin in pixels. </i><br />
- virtual QSize <code>minimumSizeHint</code> () const<br />
- <i>Return a minimum size hint. </i><br />
+<p> virtual QSize <code>sizeHint</code> () const<br/>
+ <i>Return label&#8217;s margin in pixels. </i><br/>
+ virtual QSize <code>minimumSizeHint</code> () const<br/>
+ <i>Return a minimum size hint. </i><br/>
  virtual int <code>heightForWidth</code> (int) const </p>
 <p> QRect <code>textRect</code> () const </p>
-<p> virtual void <code>drawText</code> (QPainter *, const QRectF &amp;)<br />
+<p> virtual void <code>drawText</code> (QPainter *, const QRectF &amp;)<br/>
  <i>Redraw the text. </i></p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>paintEvent</code> (QPaintEvent *e) </p>
-<p> virtual void <code>drawContents</code> (QPainter *)<br />
+<p> virtual void <code>drawContents</code> (QPainter *)<br/>
  <i>Redraw the text and focus indicator. </i></p>
 <h2>Detailed Description</h2>
 <p>A Widget which displays a <code>QwtText</code>.</p>
@@ -57,7 +57,7 @@ description: "QwtTextLabel –"
 <p>Constructs a label that displays the text, text </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget<br />
+<dd><i>parent</i> Parent widget<br/>
  <i>text</i> Text</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>int QwtTextLabel::heightForWidth (intwidth) const [virtual]</h3>
@@ -100,7 +100,7 @@ description: "QwtTextLabel –"
 <p>Change the label&#8217;s text, keeping all other <code>QwtText</code> attributes </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>text</i> New text<br />
+<dd><i>text</i> New text<br/>
  <i>textFormat</i> Format of text</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

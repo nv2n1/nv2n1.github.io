@@ -30,11 +30,11 @@ description: "axfer-transfer – transferrer of audio data frame for sound devic
 <p> Filepath is handled as a path relative to current working directory of run time if it&#8217;s not full path from root directory. </p>
 <p> The standard input or output is used if filepath is not specified or given as <i>&#8216;-&#8216;</i> . </p>
 <p> For playback transmission, container format of given <i>filepath</i> is detected automatically and metadata is used for parameters of sample format, channels, rate, duration. If nothing detected, content of given file path is handled as raw data. In this case, the parameters should be indicated as options. </p>
-<p> Multiple <i>filepaths</i> are allowed with <i>-I</i> | <i>&#8211;separate-channels</i> option. In this case, standard input and output is not available. The same <i>filepath</i> is not allowed except for paths listed below:<br />
-&nbsp;&#8211;&nbsp;/dev/null<br />
-&nbsp;&#8211;&nbsp;/dev/zero<br />
-&nbsp;&#8211;&nbsp;/dev/full<br />
-&nbsp;&#8211;&nbsp;/dev/random<br />
+<p> Multiple <i>filepaths</i> are allowed with <i>-I</i> | <i>&#8211;separate-channels</i> option. In this case, standard input and output is not available. The same <i>filepath</i> is not allowed except for paths listed below:<br/>
+&nbsp;&#8211;&nbsp;/dev/null<br/>
+&nbsp;&#8211;&nbsp;/dev/zero<br/>
+&nbsp;&#8211;&nbsp;/dev/full<br/>
+&nbsp;&#8211;&nbsp;/dev/random<br/>
 &nbsp;&#8211;&nbsp;/dev/urandom </p>
 <h3>Common options</h3>
 <dl>
@@ -50,44 +50,44 @@ description: "axfer-transfer – transferrer of audio data frame for sound devic
 <dd> Interrupt after transmission of # number of data frames. A value of zero means infinity. The default is zero, so if this options is omitted then the transmission process will run until it is killed. Either <i>-d</i> or <i>-s</i> option is available exclusively. </dd>
 <dt><code>-f, &#8211;format=FORMAT</code></dt>
 <dd> Indicate format of audio sample. This is required for capture transmission, or playback transmission with files including raw audio data. </dd>
-<p> Available sample format is listed below:<br />
-&nbsp;&#8211;&nbsp;[S8|U8|S16|U16|S32|U32][_LE|_BE]<br />
-&nbsp;&#8211;&nbsp;[S24|U24][_LE|_BE]<br />
-&nbsp;&#8211; FLOAT[_LE|_BE]<br />
-&nbsp;&#8211; FLOAT64[_LE|_BE]<br />
-&nbsp;&#8211; IEC958_SUBFRAME[_LE|_BE]<br />
-&nbsp;&#8211; MU_LAW<br />
-&nbsp;&#8211; A_LAW<br />
-&nbsp;&#8211;&nbsp;[S20|U20][_LE|_BE]<br />
-&nbsp;&#8211;&nbsp;[S24|U24][_3LE|_3BE]<br />
-&nbsp;&#8211;&nbsp;[S20|U20][_3LE|_3BE]<br />
-&nbsp;&#8211;&nbsp;[S18|U18][_3LE|_3BE]<br />
-&nbsp;&#8211; DSD_U8<br />
+<p> Available sample format is listed below:<br/>
+&nbsp;&#8211;&nbsp;[S8|U8|S16|U16|S32|U32][_LE|_BE]<br/>
+&nbsp;&#8211;&nbsp;[S24|U24][_LE|_BE]<br/>
+&nbsp;&#8211; FLOAT[_LE|_BE]<br/>
+&nbsp;&#8211; FLOAT64[_LE|_BE]<br/>
+&nbsp;&#8211; IEC958_SUBFRAME[_LE|_BE]<br/>
+&nbsp;&#8211; MU_LAW<br/>
+&nbsp;&#8211; A_LAW<br/>
+&nbsp;&#8211;&nbsp;[S20|U20][_LE|_BE]<br/>
+&nbsp;&#8211;&nbsp;[S24|U24][_3LE|_3BE]<br/>
+&nbsp;&#8211;&nbsp;[S20|U20][_3LE|_3BE]<br/>
+&nbsp;&#8211;&nbsp;[S18|U18][_3LE|_3BE]<br/>
+&nbsp;&#8211; DSD_U8<br/>
 &nbsp;&#8211; DSD_[U16|U32][_LE|_BE] </p>
 <p> If endian-ness is omitted, host endian-ness is used. </p>
-<p> Some special formats are available:<br />
-&nbsp;&#8211; cd&nbsp;(16 bit little endian, 44100, stereo)&nbsp;[=&nbsp;-f S16_LE -c 2 -r 44100]<br />
-&nbsp;&#8211; cdr&nbsp;(16 bit big endian, 44100, stereo)&nbsp;[=&nbsp;-f S16_BE -c 2 -f 44100]<br />
+<p> Some special formats are available:<br/>
+&nbsp;&#8211; cd&nbsp;(16 bit little endian, 44100, stereo)&nbsp;[=&nbsp;-f S16_LE -c 2 -r 44100]<br/>
+&nbsp;&#8211; cdr&nbsp;(16 bit big endian, 44100, stereo)&nbsp;[=&nbsp;-f S16_BE -c 2 -f 44100]<br/>
 &nbsp;&#8211; dat&nbsp;(16 bit little endian, 48000, stereo)&nbsp;[=&nbsp;-f S16_LE -c 2 -r 48000] </p>
 <p> If omitted, <i>U8</i> is used as a default. Actual available formats are restricted by each transmission backend. </p>
 <p> Unavailable sample format is listed below. These format has size of data frame unaligned to byte unit. </p>
-<p>&nbsp;&#8211; IMA_ADPCM<br />
-&nbsp;&#8211; MPEG<br />
-&nbsp;&#8211; GSM<br />
-&nbsp;&#8211; SPECIAL<br />
-&nbsp;&#8211; G723_24<br />
-&nbsp;&#8211; G723_24_1B<br />
-&nbsp;&#8211; G723_40<br />
+<p>&nbsp;&#8211; IMA_ADPCM<br/>
+&nbsp;&#8211; MPEG<br/>
+&nbsp;&#8211; GSM<br/>
+&nbsp;&#8211; SPECIAL<br/>
+&nbsp;&#8211; G723_24<br/>
+&nbsp;&#8211; G723_24_1B<br/>
+&nbsp;&#8211; G723_40<br/>
 &nbsp;&#8211; G723_40_1B </p>
 <dt><code>-c, &#8211;channels=#</code></dt>
 <dd> Indicate the number of audio data samples per frame. This is required for capture transmission, or playback transmission with files including raw audio data. The value should be between <i>1 to</i> <i>256</i> . If omitted, <i>1</i> is used as a default. </dd>
 <dt><code>-r, &#8211;rate=#</code></dt>
 <dd> Indicate the number of audio data frame per second. This is required for capture transmission, or playback transmission with files including raw audio data. If the value is less than <i>1000</i> , it&#8217;s interpreted by <i>kHz</i> unit. The value should be between <i>2000</i> and <i>192000</i> . If omitted, <i>8000</i> is used as a default. </dd>
 <dt><code>-t, &#8211;file-type=TYPE</code></dt>
-<dd> Indicate the type of file. This is required for capture transmission. Available types are listed below:<br />
-&nbsp;&#8211; wav: Microsoft/IBM RIFF/Wave format<br />
-&nbsp;&#8211; au, sparc: Sparc AU format<br />
-&nbsp;&#8211; voc: Creative Tech. voice format<br />
+<dd> Indicate the type of file. This is required for capture transmission. Available types are listed below:<br/>
+&nbsp;&#8211; wav: Microsoft/IBM RIFF/Wave format<br/>
+&nbsp;&#8211; au, sparc: Sparc AU format<br/>
+&nbsp;&#8211; voc: Creative Tech. voice format<br/>
 &nbsp;&#8211; raw: raw data </dd>
 <p> When nothing is indicated, for capture transmission, the type is decided according to suffix of <i>filepath</i> , and <i>raw</i> type is used for fallback. </p>
 <dt><code>-I, &#8211;separate-channels</code></dt>
@@ -96,7 +96,7 @@ description: "axfer-transfer – transferrer of audio data frame for sound devic
 <dd> Dump hardware parameters and finish run time if backend supports it. </dd>
 <dt><code>&#8211;xfer-backend=BACKEND</code></dt>
 <dd> Select backend of transmission from a list below. The default is libasound. </dd>
-<p>&nbsp;&#8211; libasound<br />
+<p>&nbsp;&#8211; libasound<br/>
 &nbsp;&#8211; libffado&nbsp;(optional if compiled) </p>
 </dl>
 <h3>Backend options for libasound</h3>
@@ -267,7 +267,7 @@ description: "axfer-transfer – transferrer of audio data frame for sound devic
 <h3>Care of copying audio data frame</h3>
 <p> Between the <i>xfer</i> module and <i>mapper</i> module, a pointer to buffer including audio data frames is passed. This buffer has two shapes for interleaved and non-interleaved order. For the former, the pointer points to one buffer. For the latter, the pointer points to an array in which each element points to one buffer. Between the <i>mapper</i> module and <i>container</i> module, a pointer to one buffer is passed because supported media containers including raw type store audio data frames in interleaved order. </p>
 <p> In passing audio data frame between the modules, axfer is programmed to avoid copying between a buffer to another buffer as much as possible. For example, in some scenarios below, no copying occurs between modules. </p>
-<p>&nbsp;&#8211; xfer(mmap/interleaved), mapper(single), container(any)<br />
+<p>&nbsp;&#8211; xfer(mmap/interleaved), mapper(single), container(any)<br/>
 &nbsp;&#8211; xfer(mmap/non-interleaved), mapper(multiple), containers(any) </p>
 <h3>Unit test</h3>
 <p> For each of the <i>mapper</i> and <i>container</i> module, unit test is available. To run the tests, execute below command: </p>

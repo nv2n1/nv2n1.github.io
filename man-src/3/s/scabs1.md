@@ -11,7 +11,7 @@ description: "scabs1.f –"
 <p> scabs1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>scabs1</code> (Z)<br />
+<p> REAL function <code>scabs1</code> (Z)<br/>
  <i></i><code>SCABS1</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function scabs1 (complexZ)</h3>

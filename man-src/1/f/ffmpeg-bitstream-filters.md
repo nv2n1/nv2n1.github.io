@@ -22,20 +22,20 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </code></pre>
 <p> Below is a description of the currently available bitstream filters, with their parameters, if any.</p>
 <h3>aac_adtstoasc</h3>
-<p> Convert <font SIZE="-1">MPEG-2/4 AAC ADTS</font> to an <font SIZE="-1">MPEG-4</font> Audio Specific Configuration bitstream. </p>
-<p> This filter creates an <font SIZE="-1">MPEG-4</font> AudioSpecificConfig from an <font SIZE="-1">MPEG-2/4 ADTS</font> header and removes the <font SIZE="-1">ADTS</font> header. </p>
-<p> This filter is required for example when copying an <font SIZE="-1">AAC</font> stream from a raw <font SIZE="-1">ADTS AAC</font> or an MPEG-TS container to <font SIZE="-1">MP4A-LATM,</font> to an <font SIZE="-1">FLV</font> file, or to <font SIZE="-1">MOV/MP4</font> files and related formats such as 3GP or M4A. Please note that it is auto-inserted for <font SIZE="-1">MP4A-LATM</font> and <font SIZE="-1">MOV/MP4</font> and related formats.</p>
+<p> Convert MPEG-2/4 AAC ADTS to an MPEG-4 Audio Specific Configuration bitstream. </p>
+<p> This filter creates an MPEG-4 AudioSpecificConfig from an MPEG-2/4 ADTS header and removes the ADTS header. </p>
+<p> This filter is required for example when copying an AAC stream from a raw ADTS AAC or an MPEG-TS container to MP4A-LATM, to an FLV file, or to MOV/MP4 files and related formats such as 3GP or M4A. Please note that it is auto-inserted for MP4A-LATM and MOV/MP4 and related formats.</p>
 <h3>av1_metadata</h3>
-<p> Modify metadata embedded in an <font SIZE="-1">AV1</font> stream.</p>
+<p> Modify metadata embedded in an AV1 stream.</p>
 <dl>
 <dt><code>td</code></dt>
 <dd> Insert or remove temporal delimiter OBUs in all temporal units of the stream.</dd>
 <dl>
 <dl>
 <dt><code>insert</code></dt>
-<dd> Insert a <font SIZE="-1">TD</font> at the beginning of every <font SIZE="-1">TU</font> which does not already have one.</dd>
+<dd> Insert a TD at the beginning of every TU which does not already have one.</dd>
 <dt><code>remove</code></dt>
-<dd> Remove the <font SIZE="-1">TD</font> from the beginning of every <font SIZE="-1">TU</font> which has one.</dd></dl>
+<dd> Remove the TD from the beginning of every TU which has one.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -44,9 +44,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><code>transfer_characteristics</code></dt>
 <dd>
 </dd><dt><code>matrix_coefficients</code></dt>
-<dd> Set the color description fields in the stream (see <font SIZE="-1">AV1</font> section 6.4.2).</dd>
+<dd> Set the color description fields in the stream (see AV1 section 6.4.2).</dd>
 <dt><code>color_range</code></dt>
-<dd> Set the color range in the stream (see <font SIZE="-1">AV1</font> section 6.4.2; note that this cannot be set for streams using <font SIZE="-1">BT.709</font> primaries, sRGB transfer characteristic and identity (<font SIZE="-1">RGB</font>) matrix coefficients).</dd>
+<dd> Set the color range in the stream (see AV1 section 6.4.2; note that this cannot be set for streams using BT.709 primaries, sRGB transfer characteristic and identity (RGB) matrix coefficients).</dd>
 <dl>
 <dl>
 <dt><code>tv</code></dt>
@@ -57,11 +57,11 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dl>
 </dl>
 <dt><code>chroma_sample_position</code></dt>
-<dd> Set the chroma sample location in the stream (see <font SIZE="-1">AV1</font> section 6.4.2). This can only be set for 4:2:0 streams.</dd>
+<dd> Set the chroma sample location in the stream (see AV1 section 6.4.2). This can only be set for 4:2:0 streams.</dd>
 <dl>
 <dl>
 <dt><code>vertical</code></dt>
-<dd> Left position (matching the default in <font SIZE="-1">MPEG-2</font> and H.264).</dd>
+<dd> Left position (matching the default in MPEG-2 and H.264).</dd>
 <dt><code>colocated</code></dt>
 <dd> Top-left position.</dd></dl>
 </dl>
@@ -76,7 +76,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <h3>chomp</h3>
 <p> Remove zero padding at the end of a packet.</p>
 <h3>dca_core</h3>
-<p> Extract the core from a <font SIZE="-1">DCA/DTS</font> stream, dropping extensions such as DTS-HD.</p>
+<p> Extract the core from a DCA/DTS stream, dropping extensions such as DTS-HD.</p>
 <h3>dump_extra</h3>
 <p> Add extradata to the beginning of the filtered packets except when said packets already exactly begin with the extradata that is intended to be added.</p>
 <dl>
@@ -105,7 +105,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <p> Extract the core from a E-AC-3 stream, dropping extra channels.</p>
 <h3>extract_extradata</h3>
 <p> Extract the in-band extradata. </p>
-<p> Certain codecs allow the long-term headers (e.g. <font SIZE="-1">MPEG-2</font> sequence headers, or H.264/HEVC (<font SIZE="-1">VPS/</font>)SPS/PPS) to be transmitted either &#8220;in-band&#8221; (i.e. as a part of the bitstream containing the coded frames) or &#8220;out of band&#8221; (e.g. on the container level). This latter form is called &#8220;extradata&#8221; in FFmpeg terminology. </p>
+<p> Certain codecs allow the long-term headers (e.g. MPEG-2 sequence headers, or H.264/HEVC (VPS/)SPS/PPS) to be transmitted either &#8220;in-band&#8221; (i.e. as a part of the bitstream containing the coded frames) or &#8220;out of band&#8221; (e.g. on the container level). This latter form is called &#8220;extradata&#8221; in FFmpeg terminology. </p>
 <p> This bitstream filter detects the in-band headers and makes them available as extradata.</p>
 <dl>
 <dt><code>remove</code></dt>
@@ -118,16 +118,16 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dt><code>remove_types</code></dt>
 <dd> Identical to <code>pass_types</code>, except the units in the given set removed and all others passed through.</dd></dl>
 <p> Extradata is unchanged by this transformation, but note that if the stream contains inline parameter sets then the output may be unusable if they are removed. </p>
-<p> For example, to remove all non-VCL <font SIZE="-1">NAL</font> units from an H.264 stream: </p>
+<p> For example, to remove all non-VCL NAL units from an H.264 stream: </p>
 <pre>
         ffmpeg -i INPUT -c:v copy -bsf:v 'filter_units=pass_types=1-5' OUTPUT
 </pre>
-<p> To remove all AUDs, <font SIZE="-1">SEI</font> and filler from an H.265 stream: </p>
+<p> To remove all AUDs, SEI and filler from an H.265 stream: </p>
 <pre>
         ffmpeg -i INPUT -c:v copy -bsf:v 'filter_units=remove_types=35|38-40' OUTPUT
 </pre>
 <h3>hapqa_extract</h3>
-<p> Extract Rgb or Alpha part of an <font SIZE="-1">HAPQA</font> file, without recompression, in order to create an <font SIZE="-1">HAPQ</font> or an HAPAlphaOnly file.</p>
+<p> Extract Rgb or Alpha part of an HAPQA file, without recompression, in order to create an HAPQ or an HAPAlphaOnly file.</p>
 <dl>
 <dt><code>texture</code></dt>
 <dd> Specifies the texture to keep.</dd>
@@ -141,11 +141,11 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dl>
 </dl>
 </dl>
-<p> Convert <font SIZE="-1">HAPQA</font> to <font SIZE="-1">HAPQ</font> </p>
+<p> Convert HAPQA to HAPQ </p>
 <pre>
         ffmpeg -i hapqa_inputfile.mov -c copy -bsf:v hapqa_extract=texture=color -tag:v HapY -metadata:s:v:0 encoder=&quot;HAPQ&quot; hapq_file.mov
 </pre>
-<p> Convert <font SIZE="-1">HAPQA</font> to HAPAlphaOnly </p>
+<p> Convert HAPQA to HAPAlphaOnly </p>
 <pre>
         ffmpeg -i hapqa_inputfile.mov -c copy -bsf:v hapqa_extract=texture=alpha -tag:v HapA -metadata:s:v:0 encoder=&quot;HAPAlpha Only&quot; hapalphaonly_file.mov
 </pre>
@@ -153,7 +153,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <p> Modify metadata embedded in an H.264 stream.</p>
 <dl>
 <dt><code>aud</code></dt>
-<dd> Insert or remove <font SIZE="-1">AUD NAL</font> units in all access units of the stream.</dd>
+<dd> Insert or remove AUD NAL units in all access units of the stream.</dd>
 <dl>
 <dl>
 <dt><code>insert</code></dt>
@@ -164,7 +164,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dl>
 </dl>
 <dt><code>sample_aspect_ratio</code></dt>
-<dd> Set the sample aspect ratio of the stream in the <font SIZE="-1">VUI</font> parameters.</dd>
+<dd> Set the sample aspect ratio of the stream in the VUI parameters.</dd>
 <dt><code>overscan_appropriate_flag</code></dt>
 <dd> Set whether the stream is suitable for display using overscan or not (see H.264 section E.2.1).</dd>
 <dt><code>video_format</code></dt>
@@ -180,7 +180,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dt><code>chroma_sample_loc_type</code></dt>
 <dd> Set the chroma sample location in the stream (see H.264 section E.2.1 and figure E-1).</dd>
 <dt><code>tick_rate</code></dt>
-<dd> Set the tick rate (num_units_in_tick / time_scale) in the <font SIZE="-1">VUI</font> parameters. This is the smallest time unit representable in the stream, and in many cases represents the field rate of the stream (double the frame rate).</dd>
+<dd> Set the tick rate (num_units_in_tick / time_scale) in the VUI parameters. This is the smallest time unit representable in the stream, and in many cases represents the field rate of the stream (double the frame rate).</dd>
 <dt><code>fixed_frame_rate_flag</code></dt>
 <dd> Set whether the stream has fixed framerate &#8211; typically this indicates that the framerate is exactly half the tick rate, but the exact meaning is dependent on interlacing and the picture structure (see H.264 section E.2.1 and table E-6).</dd>
 <dt><code>crop_left</code></dt>
@@ -190,32 +190,32 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><code>crop_top</code></dt>
 <dd>
 </dd><dt><code>crop_bottom</code></dt>
-<dd> Set the frame cropping offsets in the <font SIZE="-1">SPS.</font> These values will replace the current ones if the stream is already cropped. </dd>
+<dd> Set the frame cropping offsets in the SPS. These values will replace the current ones if the stream is already cropped. </dd>
 <p> These fields are set in pixels. Note that some sizes may not be representable if the chroma is subsampled or the stream is interlaced (see H.264 section 7.4.2.1.1).</p>
 <dt><code>sei_user_data</code></dt>
-<dd> Insert a string as <font SIZE="-1">SEI</font> unregistered user data. The argument must be of the form <i>UUID+string</i>, where the <font SIZE="-1">UUID</font> is as hex digits possibly separated by hyphens, and the string can be anything. </dd>
-<p> For example, <code>086f3693-b7b3-4f2c-9653-21492feee5b8+hello</code> will insert the string &#8220;hello&#8221; associated with the given <font SIZE="-1">UUID.</font></p>
+<dd> Insert a string as SEI unregistered user data. The argument must be of the form <i>UUID+string</i>, where the UUID is as hex digits possibly separated by hyphens, and the string can be anything. </dd>
+<p> For example, <code>086f3693-b7b3-4f2c-9653-21492feee5b8+hello</code> will insert the string &#8220;hello&#8221; associated with the given UUID.</p>
 <dt><code>delete_filler</code></dt>
-<dd> Deletes both filler <font SIZE="-1">NAL</font> units and filler <font SIZE="-1">SEI</font> messages.</dd>
+<dd> Deletes both filler NAL units and filler SEI messages.</dd>
 <dt><code>level</code></dt>
-<dd> Set the level in the <font SIZE="-1">SPS.</font> Refer to H.264 section A.3 and tables A-1 to A-5. </dd>
+<dd> Set the level in the SPS. Refer to H.264 section A.3 and tables A-1 to A-5. </dd>
 <p> The argument must be the name of a level (for example, <code>4.2</code>), a level_idc value (for example, <code>42</code>), or the special name <code>auto</code> indicating that the filter should attempt to guess the level from the input stream properties.</dl>
 <h3>h264_mp4toannexb</h3>
 <p> Convert an H.264 bitstream from length prefixed mode to start code prefixed mode (as defined in the Annex B of the ITU-T H.264 specification). </p>
-<p> This is required by some streaming formats, typically the <font SIZE="-1">MPEG-2</font> transport stream format (muxer <tt>&quot;mpegts&quot;</tt>). </p>
-<p> For example to remux an <font SIZE="-1">MP4</font> file containing an H.264 stream to mpegts format with <code>ffmpeg</code>, you can use the command: </p>
+<p> This is required by some streaming formats, typically the MPEG-2 transport stream format (muxer <tt>&quot;mpegts&quot;</tt>). </p>
+<p> For example to remux an MP4 file containing an H.264 stream to mpegts format with <code>ffmpeg</code>, you can use the command: </p>
 <pre>
         ffmpeg -i INPUT.mp4 -codec copy -bsf:v h264_mp4toannexb OUTPUT.ts
 </pre>
 <p> Please note that this filter is auto-inserted for MPEG-TS (muxer <tt>&quot;mpegts&quot;</tt>) and raw H.264 (muxer <tt>&quot;h264&quot;</tt>) output formats.</p>
 <h3>h264_redundant_pps</h3>
 <p> This applies a specific fixup to some Blu-ray streams which contain redundant PPSs modifying irrelevant parameters of the stream which confuse other transformations which require correct extradata. </p>
-<p> A new single global <font SIZE="-1">PPS</font> is created, and all of the redundant PPSs within the stream are removed.</p>
+<p> A new single global PPS is created, and all of the redundant PPSs within the stream are removed.</p>
 <h3>hevc_metadata</h3>
-<p> Modify metadata embedded in an <font SIZE="-1">HEVC</font> stream.</p>
+<p> Modify metadata embedded in an HEVC stream.</p>
 <dl>
 <dt><code>aud</code></dt>
-<dd> Insert or remove <font SIZE="-1">AUD NAL</font> units in all access units of the stream.</dd>
+<dd> Insert or remove AUD NAL units in all access units of the stream.</dd>
 <dl>
 <dl>
 <dt><code>insert</code></dt>
@@ -226,7 +226,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dl>
 </dl>
 <dt><code>sample_aspect_ratio</code></dt>
-<dd> Set the sample aspect ratio in the stream in the <font SIZE="-1">VUI</font> parameters.</dd>
+<dd> Set the sample aspect ratio in the stream in the VUI parameters.</dd>
 <dt><code>video_format</code></dt>
 <dd>
 </dd><dt><code>video_full_range_flag</code></dt>
@@ -240,9 +240,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dt><code>chroma_sample_loc_type</code></dt>
 <dd> Set the chroma sample location in the stream (see H.265 section E.3.1 and figure E.1).</dd>
 <dt><code>tick_rate</code></dt>
-<dd> Set the tick rate in the <font SIZE="-1">VPS</font> and <font SIZE="-1">VUI</font> parameters (num_units_in_tick / time_scale). Combined with <code>num_ticks_poc_diff_one</code>, this can set a constant framerate in the stream. Note that it is likely to be overridden by container parameters when the stream is in a container.</dd>
+<dd> Set the tick rate in the VPS and VUI parameters (num_units_in_tick / time_scale). Combined with <code>num_ticks_poc_diff_one</code>, this can set a constant framerate in the stream. Note that it is likely to be overridden by container parameters when the stream is in a container.</dd>
 <dt><code>num_ticks_poc_diff_one</code></dt>
-<dd> Set poc_proportional_to_timing_flag in <font SIZE="-1">VPS</font> and <font SIZE="-1">VUI</font> and use this value to set num_ticks_poc_diff_one_minus1 (see H.265 sections 7.4.3.1 and E.3.1). Ignored if <code>tick_rate</code> is not also set.</dd>
+<dd> Set poc_proportional_to_timing_flag in VPS and VUI and use this value to set num_ticks_poc_diff_one_minus1 (see H.265 sections 7.4.3.1 and E.3.1). Ignored if <code>tick_rate</code> is not also set.</dd>
 <dt><code>crop_left</code></dt>
 <dd>
 </dd><dt><code>crop_right</code></dt>
@@ -250,48 +250,48 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><code>crop_top</code></dt>
 <dd>
 </dd><dt><code>crop_bottom</code></dt>
-<dd> Set the conformance window cropping offsets in the <font SIZE="-1">SPS.</font> These values will replace the current ones if the stream is already cropped. </dd>
+<dd> Set the conformance window cropping offsets in the SPS. These values will replace the current ones if the stream is already cropped. </dd>
 <p> These fields are set in pixels. Note that some sizes may not be representable if the chroma is subsampled (H.265 section 7.4.3.2.1).</p>
 <dt><code>level</code></dt>
-<dd> Set the level in the <font SIZE="-1">VPS</font> and <font SIZE="-1">SPS.</font> See H.265 section A.4 and tables A.6 and A.7. </dd>
+<dd> Set the level in the VPS and SPS. See H.265 section A.4 and tables A.6 and A.7. </dd>
 <p> The argument must be the name of a level (for example, <code>5.1</code>), a <i>general_level_idc</i> value (for example, <code>153</code> for level 5.1), or the special name <code>auto</code> indicating that the filter should attempt to guess the level from the input stream properties.</dl>
 <h3>hevc_mp4toannexb</h3>
-<p> Convert an <font SIZE="-1">HEVC/H.265</font> bitstream from length prefixed mode to start code prefixed mode (as defined in the Annex B of the ITU-T H.265 specification). </p>
-<p> This is required by some streaming formats, typically the <font SIZE="-1">MPEG-2</font> transport stream format (muxer <tt>&quot;mpegts&quot;</tt>). </p>
-<p> For example to remux an <font SIZE="-1">MP4</font> file containing an <font SIZE="-1">HEVC</font> stream to mpegts format with <code>ffmpeg</code>, you can use the command: </p>
+<p> Convert an HEVC/H.265 bitstream from length prefixed mode to start code prefixed mode (as defined in the Annex B of the ITU-T H.265 specification). </p>
+<p> This is required by some streaming formats, typically the MPEG-2 transport stream format (muxer <tt>&quot;mpegts&quot;</tt>). </p>
+<p> For example to remux an MP4 file containing an HEVC stream to mpegts format with <code>ffmpeg</code>, you can use the command: </p>
 <pre>
         ffmpeg -i INPUT.mp4 -codec copy -bsf:v hevc_mp4toannexb OUTPUT.ts
 </pre>
-<p> Please note that this filter is auto-inserted for MPEG-TS (muxer <tt>&quot;mpegts&quot;</tt>) and raw <font SIZE="-1">HEVC/H.265</font> (muxer <tt>&quot;h265&quot;</tt> or <tt>&quot;hevc&quot;</tt>) output formats.</p>
+<p> Please note that this filter is auto-inserted for MPEG-TS (muxer <tt>&quot;mpegts&quot;</tt>) and raw HEVC/H.265 (muxer <tt>&quot;h265&quot;</tt> or <tt>&quot;hevc&quot;</tt>) output formats.</p>
 <h3>imxdump</h3>
-<p> Modifies the bitstream to fit in <font SIZE="-1">MOV</font> and to be usable by the Final Cut Pro decoder. This filter only applies to the mpeg2video codec, and is likely not needed for Final Cut Pro 7 and newer with the appropriate <code>-tag:v</code>. </p>
-<p> For example, to remux 30 MB/sec <font SIZE="-1">NTSC IMX</font> to <font SIZE="-1">MOV:</font> </p>
+<p> Modifies the bitstream to fit in MOV and to be usable by the Final Cut Pro decoder. This filter only applies to the mpeg2video codec, and is likely not needed for Final Cut Pro 7 and newer with the appropriate <code>-tag:v</code>. </p>
+<p> For example, to remux 30 MB/sec NTSC IMX to MOV: </p>
 <pre>
         ffmpeg -i input.mxf -c copy -bsf:v imxdump -tag:v mx3n output.mov
 </pre>
 <h3>mjpeg2jpeg</h3>
-<p> Convert <font SIZE="-1">MJPEG/AVI1</font> packets to full <font SIZE="-1">JPEG/JFIF</font> packets. </p>
-<p> <font SIZE="-1">MJPEG</font> is a video codec wherein each video frame is essentially a <font SIZE="-1">JPEG</font> image. The individual frames can be extracted without loss, e.g. by </p>
+<p> Convert MJPEG/AVI1 packets to full JPEG/JFIF packets. </p>
+<p> MJPEG is a video codec wherein each video frame is essentially a JPEG image. The individual frames can be extracted without loss, e.g. by </p>
 <pre>
         ffmpeg -i ../some_mjpeg.avi -c:v copy frames_%d.jpg
 </pre>
-<p> Unfortunately, these chunks are incomplete <font SIZE="-1">JPEG</font> images, because they lack the <font SIZE="-1">DHT</font> segment required for decoding. Quoting from &lt;<code><a rel="nofollow" href="http://www.digitalpreservation.gov/formats/fdd/fdd000063.shtml">http://www.digitalpreservation.gov/formats/fdd/fdd000063.shtml</a></code>&gt;: </p>
-<p> Avery Lee, writing in the rec.video.desktop newsgroup in 2001, commented that &#8220;<font SIZE="-1">MJPEG,</font> or at least the <font SIZE="-1">MJPEG</font> in AVIs having the <font SIZE="-1">MJPG</font> fourcc, is restricted <font SIZE="-1">JPEG</font> with a fixed &#8212; and *omitted* &#8212; Huffman table. The <font SIZE="-1">JPEG</font> must be YCbCr colorspace, it must be 4:2:2, and it must use basic Huffman encoding, not arithmetic or progressive. . . . You can indeed extract the <font SIZE="-1">MJPEG</font> frames and decode them with a regular <font SIZE="-1">JPEG</font> decoder, but you have to prepend the <font SIZE="-1">DHT</font> segment to them, or else the decoder won&#8217;t have any idea how to decompress the data. The exact table necessary is given in the OpenDML spec.&#8221; </p>
-<p> This bitstream filter patches the header of frames extracted from an <font SIZE="-1">MJPEG</font> stream (carrying the <font SIZE="-1">AVI1</font> header <font SIZE="-1">ID</font> and lacking a <font SIZE="-1">DHT</font> segment) to produce fully qualified <font SIZE="-1">JPEG</font> images. </p>
+<p> Unfortunately, these chunks are incomplete JPEG images, because they lack the DHT segment required for decoding. Quoting from &lt;<code><a rel="nofollow" href="http://www.digitalpreservation.gov/formats/fdd/fdd000063.shtml">http://www.digitalpreservation.gov/formats/fdd/fdd000063.shtml</a></code>&gt;: </p>
+<p> Avery Lee, writing in the rec.video.desktop newsgroup in 2001, commented that &#8220;MJPEG, or at least the MJPEG in AVIs having the MJPG fourcc, is restricted JPEG with a fixed &#8212; and *omitted* &#8212; Huffman table. The JPEG must be YCbCr colorspace, it must be 4:2:2, and it must use basic Huffman encoding, not arithmetic or progressive. . . . You can indeed extract the MJPEG frames and decode them with a regular JPEG decoder, but you have to prepend the DHT segment to them, or else the decoder won&#8217;t have any idea how to decompress the data. The exact table necessary is given in the OpenDML spec.&#8221; </p>
+<p> This bitstream filter patches the header of frames extracted from an MJPEG stream (carrying the AVI1 header ID and lacking a DHT segment) to produce fully qualified JPEG images. </p>
 <pre>
         ffmpeg -i mjpeg-movie.avi -c:v copy -bsf:v mjpeg2jpeg frame_%d.jpg
         exiftran -i -9 frame*.jpg
         ffmpeg -i frame_%d.jpg -c:v copy rotated.avi
 </pre>
 <h3>mjpegadump</h3>
-<p> Add an <font SIZE="-1">MJPEG A</font> header to the bitstream, to enable decoding by Quicktime.</p>
+<p> Add an MJPEG A header to the bitstream, to enable decoding by Quicktime.</p>
 <h3>mov2textsub</h3>
-<p> Extract a representable text file from <font SIZE="-1">MOV</font> subtitles, stripping the metadata header from each subtitle packet. </p>
+<p> Extract a representable text file from MOV subtitles, stripping the metadata header from each subtitle packet. </p>
 <p> See also the <code>text2movsub</code> filter.</p>
 <h3>mp3decomp</h3>
-<p> Decompress non-standard compressed <font SIZE="-1">MP3</font> audio headers.</p>
+<p> Decompress non-standard compressed MP3 audio headers.</p>
 <h3>mpeg2_metadata</h3>
-<p> Modify metadata embedded in an <font SIZE="-1">MPEG-2</font> stream.</p>
+<p> Modify metadata embedded in an MPEG-2 stream.</p>
 <dl>
 <dt><code>display_aspect_ratio</code></dt>
 <dd> Set the display aspect ratio in the stream. </dd>
@@ -321,8 +321,8 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dd> Set the colour description in the stream (see H.262 section 6.3.6 and tables 6-7, 6-8 and 6-9).</dd></dl>
 <h3>mpeg4_unpack_bframes</h3>
 <p> Unpack DivX-style packed B-frames. </p>
-<p> DivX-style packed B-frames are not valid <font SIZE="-1">MPEG-4</font> and were only a workaround for the broken Video for Windows subsystem. They use more space, can cause minor <font SIZE="-1">AV</font> sync issues, require more <font SIZE="-1">CPU</font> power to decode (unless the player has some decoded picture queue to compensate the 2,0,2,0 frame per packet style) and cause trouble if copied into a standard container like mp4 or mpeg-ps/ts, because <font SIZE="-1">MPEG-4</font> decoders may not be able to decode them, since they are not valid <font SIZE="-1">MPEG-4.</font> </p>
-<p> For example to fix an <font SIZE="-1">AVI</font> file containing an <font SIZE="-1">MPEG-4</font> stream with DivX-style packed B-frames using <code>ffmpeg</code>, you can use the command: </p>
+<p> DivX-style packed B-frames are not valid MPEG-4 and were only a workaround for the broken Video for Windows subsystem. They use more space, can cause minor AV sync issues, require more CPU power to decode (unless the player has some decoded picture queue to compensate the 2,0,2,0 frame per packet style) and cause trouble if copied into a standard container like mp4 or mpeg-ps/ts, because MPEG-4 decoders may not be able to decode them, since they are not valid MPEG-4. </p>
+<p> For example to fix an AVI file containing an MPEG-4 stream with DivX-style packed B-frames using <code>ffmpeg</code>, you can use the command: </p>
 <pre>
         ffmpeg -i INPUT.avi -codec copy -bsf:v mpeg4_unpack_bframes OUTPUT.avi
 </pre>
@@ -341,7 +341,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <h3>null</h3>
 <p> This bitstream filter passes the packets through unchanged.</p>
 <h3>pcm_rechunk</h3>
-<p> Repacketize <font SIZE="-1">PCM</font> audio to a fixed number of samples per packet or a fixed packet rate per second. This is similar to the <code>asetnsamples audio filter</code> but works on audio packets instead of audio frames.</p>
+<p> Repacketize PCM audio to a fixed number of samples per packet or a fixed packet rate per second. This is similar to the <code>asetnsamples audio filter</code> but works on audio packets instead of audio frames.</p>
 <dl>
 <dt><code>nb_out_samples, n</code></dt>
 <dd> Set the number of samples per each output audio packet. The number is intended as the number of samples <i>per each channel</i>. Default value is 1024.</dd>
@@ -349,7 +349,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dd> If set to 1, the filter will pad the last audio packet with silence, so that it will contain the same number of samples (or roughly the same number of samples, see <code>frame_rate</code>) as the previous ones. Default value is 1.</dd>
 <dt><code>frame_rate, r</code></dt>
 <dd> This option makes the filter output a fixed number of packets per second instead of a fixed number of samples per packet. If the audio sample rate is not divisible by the frame rate then the number of samples will not be constant but will vary slightly so that each packet will start as close to the frame boundary as possible. Using this option has precedence over <code>nb_out_samples</code>.</dd></dl>
-<p> You can generate the well known 1602-1601-1602-1601-1602 pattern of 48kHz audio for <font SIZE="-1">NTSC</font> frame rate using the <code>frame_rate</code> option. </p>
+<p> You can generate the well known 1602-1601-1602-1601-1602 pattern of 48kHz audio for NTSC frame rate using the <code>frame_rate</code> option. </p>
 <pre>
         ffmpeg -f lavfi -i sine=r=48000:d=1 -c pcm_s16le -bsf pcm_rechunk=r=30000/1001 -f framecrc -
 </pre>
@@ -367,13 +367,13 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><code>bt709</code></dt>
 <dd>
 </dd><dt><code>bt470bg</code></dt>
-<dd> <font SIZE="-1">BT601 625</font></dd>
+<dd> BT601 625</dd>
 <dt><code>smpte170m</code></dt>
-<dd> <font SIZE="-1">BT601 525</font></dd>
+<dd> BT601 525</dd>
 <dt><code>bt2020</code></dt>
 <dd>
 </dd><dt><code>smpte431</code></dt>
-<dd> <font SIZE="-1">DCI P3</font></dd>
+<dd> DCI P3</dd>
 <dt><code>smpte432</code></dt>
 <dd> P3 D65</dd></dl>
 </dl>
@@ -388,11 +388,11 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dt><code>unknown</code></dt>
 <dd>
 </dd><dt><code>bt709</code></dt>
-<dd> <font SIZE="-1">BT 601, BT 709, BT 2020</font></dd>
+<dd> BT 601, BT 709, BT 2020</dd>
 <dt><code>smpte2084</code></dt>
-<dd> <font SIZE="-1">SMPTE ST 2084</font></dd>
+<dd> SMPTE ST 2084</dd>
 <dt><code>arib-std-b67</code></dt>
-<dd> <font SIZE="-1">ARIB STD-B67</font></dd></dl>
+<dd> ARIB STD-B67</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -407,7 +407,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><code>bt709</code></dt>
 <dd>
 </dd><dt><code>smpte170m</code></dt>
-<dd> <font SIZE="-1">BT 601</font></dd>
+<dd> BT 601</dd>
 <dt><code>bt2020nc</code></dt>
 <dd></dd></dl>
 </dl>
@@ -441,7 +441,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dl>
 </dl>
 <h3>setts</h3>
-<p> Set <font SIZE="-1">PTS</font> and <font SIZE="-1">DTS</font> in packets. </p>
+<p> Set PTS and DTS in packets. </p>
 <p> It accepts the following parameters:</p>
 <dl>
 <dt><code>ts</code></dt>
@@ -449,48 +449,48 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><code>pts</code></dt>
 <dd>
 </dd><dt><code>dts</code></dt>
-<dd> Set expressions for <font SIZE="-1">PTS, DTS</font> or both.</dd></dl>
-<p> The expressions are evaluated through the eval <font SIZE="-1">API</font> and can contain the following constants:</p>
+<dd> Set expressions for PTS, DTS or both.</dd></dl>
+<p> The expressions are evaluated through the eval API and can contain the following constants:</p>
 <dl>
 <dt><code>N</code></dt>
 <dd> The count of the input packet. Starting from 0.</dd>
-<dt><font SIZE="-1"><code>TS</code></font></dt>
+<dt><code>TS</code></dt>
 <dd> The demux timestamp in input in case of <tt>&quot;ts&quot;</tt> or <tt>&quot;dts&quot;</tt> option or presentation timestamp in case of <tt>&quot;pts&quot;</tt> option.</dd>
-<dt><font SIZE="-1"><code>POS</code></font></dt>
+<dt><code>POS</code></dt>
 <dd> The original position in the file of the packet, or undefined if undefined for the current packet</dd>
-<dt><font SIZE="-1"><code>DTS</code></font></dt>
+<dt><code>DTS</code></dt>
 <dd> The demux timestamp in input.</dd>
-<dt><font SIZE="-1"><code>PTS</code></font></dt>
+<dt><code>PTS</code></dt>
 <dd> The presentation timestamp in input.</dd>
-<dt><font SIZE="-1"><code>STARTDTS</code></font></dt>
-<dd> The <font SIZE="-1">DTS</font> of the first packet.</dd>
-<dt><font SIZE="-1"><code>STARTPTS</code></font></dt>
-<dd> The <font SIZE="-1">PTS</font> of the first packet.</dd>
-<dt><font SIZE="-1"><code>PREV_INDTS</code></font></dt>
-<dd> The previous input <font SIZE="-1">DTS.</font></dd>
-<dt><font SIZE="-1"><code>PREV_INPTS</code></font></dt>
-<dd> The previous input <font SIZE="-1">PTS.</font></dd>
-<dt><font SIZE="-1"><code>PREV_OUTDTS</code></font></dt>
-<dd> The previous output <font SIZE="-1">DTS.</font></dd>
-<dt><font SIZE="-1"><code>PREV_OUTPTS</code></font></dt>
-<dd> The previous output <font SIZE="-1">PTS.</font></dd>
-<dt><font SIZE="-1"><code>TB</code></font></dt>
+<dt><code>STARTDTS</code></dt>
+<dd> The DTS of the first packet.</dd>
+<dt><code>STARTPTS</code></dt>
+<dd> The PTS of the first packet.</dd>
+<dt><code>PREV_INDTS</code></dt>
+<dd> The previous input DTS.</dd>
+<dt><code>PREV_INPTS</code></dt>
+<dd> The previous input PTS.</dd>
+<dt><code>PREV_OUTDTS</code></dt>
+<dd> The previous output DTS.</dd>
+<dt><code>PREV_OUTPTS</code></dt>
+<dd> The previous output PTS.</dd>
+<dt><code>TB</code></dt>
 <dd> The timebase of stream packet belongs.</dd>
-<dt><font SIZE="-1"><code>SR</code></font></dt>
+<dt><code>SR</code></dt>
 <dd> The sample rate of stream packet belongs.</dd></dl>
 <h3>text2movsub</h3>
-<p> Convert text subtitles to <font SIZE="-1">MOV</font> subtitles (as used by the <tt>&quot;mov_text&quot;</tt> codec) with metadata headers. </p>
+<p> Convert text subtitles to MOV subtitles (as used by the <tt>&quot;mov_text&quot;</tt> codec) with metadata headers. </p>
 <p> See also the <code>mov2textsub</code> filter.</p>
 <h3>trace_headers</h3>
 <p> Log trace output containing all syntax elements in the coded stream headers (everything above the level of individual coded blocks). This can be useful for debugging low-level stream issues. </p>
-<p> Supports <font SIZE="-1">AV1, H.264, H.265,</font> (M)JPEG, <font SIZE="-1">MPEG-2</font> and <font SIZE="-1">VP9,</font> but depending on the build only a subset of these may be available.</p>
+<p> Supports AV1, H.264, H.265, (M)JPEG, MPEG-2 and VP9, but depending on the build only a subset of these may be available.</p>
 <h3>truehd_core</h3>
-<p> Extract the core from a TrueHD stream, dropping <font SIZE="-1">ATMOS</font> data.</p>
+<p> Extract the core from a TrueHD stream, dropping ATMOS data.</p>
 <h3>vp9_metadata</h3>
-<p> Modify metadata embedded in a <font SIZE="-1">VP9</font> stream.</p>
+<p> Modify metadata embedded in a VP9 stream.</p>
 <dl>
 <dt><code>color_space</code></dt>
-<dd> Set the color space value in the frame header. Note that any frame set to <font SIZE="-1">RGB</font> will be implicitly set to <font SIZE="-1">PC</font> range and that <font SIZE="-1">RGB</font> is incompatible with profiles 0 and 2.</dd>
+<dd> Set the color space value in the frame header. Note that any frame set to RGB will be implicitly set to PC range and that RGB is incompatible with profiles 0 and 2.</dd>
 <dl>
 <dl>
 <dt><code>unknown</code></dt>
@@ -523,14 +523,14 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dl>
 </dl>
 <h3>vp9_superframe</h3>
-<p> Merge <font SIZE="-1">VP9</font> invisible (alt-ref) frames back into <font SIZE="-1">VP9</font> superframes. This fixes merging of split/segmented <font SIZE="-1">VP9</font> streams where the alt-ref frame was split from its visible counterpart.</p>
+<p> Merge VP9 invisible (alt-ref) frames back into VP9 superframes. This fixes merging of split/segmented VP9 streams where the alt-ref frame was split from its visible counterpart.</p>
 <h3>vp9_superframe_split</h3>
-<p> Split <font SIZE="-1">VP9</font> superframes into single frames.</p>
+<p> Split VP9 superframes into single frames.</p>
 <h3>vp9_raw_reorder</h3>
-<p> Given a <font SIZE="-1">VP9</font> stream with correct timestamps but possibly out of order, insert additional show-existing-frame packets to correct the ordering.</p>
+<p> Given a VP9 stream with correct timestamps but possibly out of order, insert additional show-existing-frame packets to correct the ordering.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ffmpeg/">ffmpeg</a></code>(1), <code><a href="/docs/linux/man/1-ffplay/">ffplay</a></code>(1), <code><a href="/docs/linux/man/1-ffprobe/">ffprobe</a></code>(1), <code><a href="/docs/linux/man/3-libavcodec/">libavcodec</a></code>(3)</p>
 <h2>AUTHORS</h2>
 <p> The FFmpeg developers. </p>
 <p> For details about the authorship, see the Git history of the project (<a href="git://source.ffmpeg.org/ffmpeg">git://source.ffmpeg.org/ffmpeg</a>), e.g. by typing the command <code>git log</code> in the FFmpeg source directory, or browsing the online repository at &lt;<code><a rel="nofollow" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a></code>&gt;. </p>
-<p> Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. </p>
+<p> Maintainers for the specific components are listed in the file <i></i><i>MAINTAINERS</i><i></i> in the source code tree. </p>

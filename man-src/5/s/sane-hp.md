@@ -34,7 +34,7 @@ ScanJet 6350C C7670A SCSI/USB
 ScanJet 6390C C7670A SCSI/USB
 PhotoSmart C5100A R029,R030,R032 SCSI</pre>
 </dd></dl>
-<p> Support for models 5100C/5200C connected to the parallel port requires the ppSCSI driver available at <i><a rel="nofollow" href="http://cyberelk.net/tim/parport/ppscsi.html">http://cyberelk.net/tim/parport/ppscsi.html</a></i> and <i><a rel="nofollow" href="http://penguin-breeder.org/kernel/download/">http://penguin-breeder.org/kernel/download/</a></i>. Support for models 5200C/62X0C/63X0C connected to the USB require the kernel scanner driver or libusb. See <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) for more details. The <code>sane-hp</code> backend no longer supports OfficeJet multi-function peripherals. For these devices use the external &quot;hpoj&quot; backend in version 0.90 and later of the &quot;HP OfficeJet Linux driver&quot;, available at<br />
+<p> Support for models 5100C/5200C connected to the parallel port requires the ppSCSI driver available at <i><a rel="nofollow" href="http://cyberelk.net/tim/parport/ppscsi.html">http://cyberelk.net/tim/parport/ppscsi.html</a></i> and <i><a rel="nofollow" href="http://penguin-breeder.org/kernel/download/">http://penguin-breeder.org/kernel/download/</a></i>. Support for models 5200C/62X0C/63X0C connected to the USB require the kernel scanner driver or libusb. See <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) for more details. The <code>sane-hp</code> backend no longer supports OfficeJet multi-function peripherals. For these devices use the external &quot;hpoj&quot; backend in version 0.90 and later of the &quot;HP OfficeJet Linux driver&quot;, available at<br/>
  <i><a rel="nofollow" href="http://hpoj.sourceforge.net">http://hpoj.sourceforge.net</a></i> Because Hewlett-Packard does no longer produce scanners that support SCL (beside the OfficeJets), the above list of supported scanners is complete. Other HP scanners are not supported by the <code>sane-hp</code> backend, but might be supported by another one. See <i><a rel="nofollow" href="http://www.sane-project.org/">http://www.sane-project.org/</a></i>. You can also watch the sane-devel mailing list at <i><a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a></i>. More details about the hp backend can be found on its homepage <i><a rel="nofollow" href="http://www.kirchgessner.net/sane.html">http://www.kirchgessner.net/sane.html</a></i>. </p>
 <h2>Device Names</h2>
 <p>This backend expects device names of the form: </p>
@@ -105,6 +105,6 @@ option connect-device</pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) </p>
 <h2>Author</h2>
-<p>The sane-hp backend was written by Geoffrey T. Dairiki.<br />
+<p>The sane-hp backend was written by Geoffrey T. Dairiki.<br/>
  HP PhotoSmart PhotoScanner support by Peter Kirchgessner.</p>
 </dl>

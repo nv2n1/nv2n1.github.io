@@ -26,90 +26,90 @@ description: "g_energy – writes energies to xvg files and displays averages"
 <p> Delta S(N,p,T) = S(N,p,T) &#8211; S_idgas(N,p,T) = (Upot + pV &#8211; Delta G)/T </p>
 <p> When a second energy file is specified (<code> -f2</code>), a free energy difference is calculated dF = -kT ln e -(EB-EA)/kT A , where EA and EB are the energies from the first and second energy files, and the average is over the ensemble A. <code> NOTE</code> that the energies must both be calculated from the same trajectory.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> ener.edr</i> <code>Input</code><br />
+<p> <code>-f</code><i> ener.edr</i> <code>Input</code><br/>
 &nbsp;<wbr>Energy file: edr ene&nbsp;<wbr> </p>
-<p> <code>-f2</code><i> ener.edr</i> <code>Input, Opt.</code><br />
+<p> <code>-f2</code><i> ener.edr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Energy file: edr ene&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Run input file: tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-o</code><i> energy.xvg</i> <code>Output</code><br />
+<p> <code>-o</code><i> energy.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-viol</code><i> violaver.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-viol</code><i> violaver.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-pairs</code><i> pairs.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-pairs</code><i> pairs.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-ora</code><i> orienta.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-ora</code><i> orienta.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-ort</code><i> orientt.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-ort</code><i> orientt.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-oda</code><i> orideva.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-oda</code><i> orideva.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-odr</code><i> oridevr.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-odr</code><i> oridevr.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-odt</code><i> oridevt.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-odt</code><i> oridevt.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-oten</code><i> oriten.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-oten</code><i> oriten.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-corr</code><i> enecorr.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-corr</code><i> enecorr.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-vis</code><i> visco.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-vis</code><i> visco.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-ravg</code><i> runavgdf.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-ravg</code><i> runavgdf.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-[no]fee</code><i>no </i><br />
+<p> <code>-[no]fee</code><i>no </i><br/>
 &nbsp;<wbr>Do a free energy estimate </p>
-<p> <code>-fetemp</code><i> real</i><code> 300 </code><br />
+<p> <code>-fetemp</code><i> real</i><code> 300 </code><br/>
 &nbsp;<wbr>Reference temperature for free energy calculation </p>
-<p> <code>-zero</code><i> real</i><code> 0 </code><br />
+<p> <code>-zero</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Subtract a zero-point energy </p>
-<p> <code>-[no]sum</code><i>no </i><br />
+<p> <code>-[no]sum</code><i>no </i><br/>
 &nbsp;<wbr>Sum the energy terms selected rather than display them all </p>
-<p> <code>-[no]dp</code><i>no </i><br />
+<p> <code>-[no]dp</code><i>no </i><br/>
 &nbsp;<wbr>Print energies in high precision </p>
-<p> <code>-[no]mutot</code><i>no </i><br />
+<p> <code>-[no]mutot</code><i>no </i><br/>
 &nbsp;<wbr>Compute the total dipole moment from the components </p>
-<p> <code>-[no]uni</code><i>yes </i><br />
+<p> <code>-[no]uni</code><i>yes </i><br/>
 &nbsp;<wbr>Skip non-uniformly spaced frames </p>
-<p> <code>-skip</code><i> int</i><code> 0</code><br />
+<p> <code>-skip</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Skip number of frames between data points </p>
-<p> <code>-[no]aver</code><i>no </i><br />
+<p> <code>-[no]aver</code><i>no </i><br/>
 &nbsp;<wbr>Print also the X1,t and sigma1,t, only if only 1 energy is requested </p>
-<p> <code>-nmol</code><i> int</i><code> 1</code><br />
+<p> <code>-nmol</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>Number of molecules in your sample: the energies are divided by this number </p>
-<p> <code>-ndf</code><i> int</i><code> 3</code><br />
+<p> <code>-ndf</code><i> int</i><code> 3</code><br/>
 &nbsp;<wbr>Number of degrees of freedom per molecule. Necessary for calculating the heat capacity </p>
-<p> <code>-[no]fluc</code><i>no </i><br />
+<p> <code>-[no]fluc</code><i>no </i><br/>
 &nbsp;<wbr>Calculate autocorrelation of energy fluctuations rather than energy itself </p>
-<p> <code>-[no]orinst</code><i>no </i><br />
+<p> <code>-[no]orinst</code><i>no </i><br/>
 &nbsp;<wbr>Analyse instantaneous orientation data </p>
-<p> <code>-[no]ovec</code><i>no </i><br />
+<p> <code>-[no]ovec</code><i>no </i><br/>
 &nbsp;<wbr>Also plot the eigenvectors with -oten </p>
-<p> <code>-acflen</code><i> int</i><code> -1</code><br />
+<p> <code>-acflen</code><i> int</i><code> -1</code><br/>
 &nbsp;<wbr>Length of the ACF, default is half the number of frames </p>
-<p> <code>-[no]normalize</code><i>yes </i><br />
+<p> <code>-[no]normalize</code><i>yes </i><br/>
 &nbsp;<wbr>Normalize ACF </p>
-<p> <code>-P</code><i> enum</i><code> 0</code><br />
+<p> <code>-P</code><i> enum</i><code> 0</code><br/>
 &nbsp;<wbr>Order of Legendre polynomial for ACF&nbsp;<wbr>(0 indicates none):&nbsp;<wbr><code>&nbsp;<wbr>0</code>,&nbsp;<wbr><code>&nbsp;<wbr>1</code>,&nbsp;<wbr><code>&nbsp;<wbr>2</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>3</code> </p>
-<p> <code>-fitfn</code><i> enum</i><code> none</code><br />
+<p> <code>-fitfn</code><i> enum</i><code> none</code><br/>
 &nbsp;<wbr>Fit function:&nbsp;<wbr><code>&nbsp;<wbr>none</code>,&nbsp;<wbr><code>&nbsp;<wbr>exp</code>,&nbsp;<wbr><code>&nbsp;<wbr>aexp</code>,&nbsp;<wbr><code>&nbsp;<wbr>exp_exp</code>,&nbsp;<wbr><code>&nbsp;<wbr>vac</code>,&nbsp;<wbr><code>&nbsp;<wbr>exp5</code>,&nbsp;<wbr><code>&nbsp;<wbr>exp7</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>exp9</code> </p>
-<p> <code>-ncskip</code><i> int</i><code> 0</code><br />
+<p> <code>-ncskip</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Skip N points in the output file of correlation functions </p>
-<p> <code>-beginfit</code><i> real</i><code> 0 </code><br />
+<p> <code>-beginfit</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Time where to begin the exponential fit of the correlation function </p>
-<p> <code>-endfit</code><i> real</i><code> -1 </code><br />
+<p> <code>-endfit</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Time where to end the exponential fit of the correlation function, -1 is till the end </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

@@ -21,7 +21,7 @@ description: "dh_ucf – register configuration files with ucf"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-A</code>, <code>&#8211;all</code></dt>
-<dd> Install all files specified by command line parameters in <font SIZE="-1">ALL</font> packages acted on.</dd>
+<dd> Install all files specified by command line parameters in ALL packages acted on.</dd>
 <dt><code>-n</code>, <code>&#8211;no-scripts</code></dt>
 <dd> Do not modify <i>postinst</i>/<i>postrm</i> scripts. Turns this command into a no-op.</dd>
 <dt><i>file</i> &#8230;</dt>

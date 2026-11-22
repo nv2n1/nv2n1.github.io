@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-gpt-build/"
 description: "gpt-build – Builds and installs GPT source packages and bundles."
 ---
 
-<p><code>gpt-build</code> &#8211; Builds and installs <font SIZE="-1">GPT</font> source packages and bundles.</p>
+<p><code>gpt-build</code> &#8211; Builds and installs GPT source packages and bundles.</p>
 <h2>Synopsis</h2>
 <p><code>gpt-build</code> [options] [macros] [source packages] flavors &#8230; </p>
 <pre> Options:
@@ -61,17 +61,17 @@ description: "gpt-build – Builds and installs GPT source packages and bundles.
 <dt><code>-coresrc</code></dt>
 <dd>Use this version of globus_core source rather than the one found in <tt>$GPT_LOCATION</tt>/share/globus/globus_core-src.tar.gz.</dd>
 <dt><code>-disable-version-checking</code></dt>
-<dd><font SIZE="-1">GPT</font> 1.x scripts neglected to check the version numbers of packages during dependency checks. Because of this <font SIZE="-1">GPT</font> bundles were released that have errors in their dependency data. This flag is provided so that these packages can still be used. <font SIZE="-1"><code>NOTE</code></font> that once this flag is used, the version checking is disabled <code>permanently</code> for the installation pointed to by <tt>$GLOBUS_LOCATION</tt>. This condition can only be removed by deleting the file <tt>$GLOBUS_LOCATION</tt>/share/globus/disable_version_checking.</dd>
+<dd>GPT 1.x scripts neglected to check the version numbers of packages during dependency checks. Because of this GPT bundles were released that have errors in their dependency data. This flag is provided so that these packages can still be used. <code>NOTE</code> that once this flag is used, the version checking is disabled <code>permanently</code> for the installation pointed to by <tt>$GLOBUS_LOCATION</tt>. This condition can only be removed by deleting the file <tt>$GLOBUS_LOCATION</tt>/share/globus/disable_version_checking.</dd>
 <dt><code>-flavor-cfg=FILE</code></dt>
-<dd>Use the flavor configurations found in <font SIZE="-1">FILE</font>. The default configuration file is <tt>$GPT_LOCATION</tt>/share/globus/globus_flavor_labels.conf</dd>
+<dd>Use the flavor configurations found in FILE. The default configuration file is <tt>$GPT_LOCATION</tt>/share/globus/globus_flavor_labels.conf</dd>
 <dt><code>-logdir=DIRECTORY</code></dt>
-<dd>Store package logs of build messages in <font SIZE="-1">DIRECTORY</font>. This option also sets -verbose. The default directory is ./logs.</dd>
+<dd>Store package logs of build messages in DIRECTORY. This option also sets -verbose. The default directory is ./logs.</dd>
 <dt><code>-help</code></dt>
 <dd>Print a brief help message and exits.</dd>
 <dt><code>-man</code></dt>
 <dd>Prints the manual page and exits.</dd>
 <dt><code>-version</code></dt>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
+<dd>Prints the version of GPT and exits.</dd></dl>
 <h2>Macros</h2>
 <p>Build macros are perl routines and variables that are used by gpt-build while building packages. These macros are embedded in the build instructions part of the package&#8217;s metadata file. Some of these macros can be set from the command line using the following format: </p>
 <pre> &lt;NAME&gt;_GPTMACRO='new value'</pre>

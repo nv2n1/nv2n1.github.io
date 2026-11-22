@@ -29,17 +29,17 @@ description: "pnmstitch – stitch together two panoramic (side-by-side) photogr
 </dd><dt><code>-xrightpos=</code><i>column</i></dt>
 <dd>
 </dd><dt><code>-yrightpos=</code><i>row</i></dt>
-<dd> These are constraints on where <code>pnmstitch</code> stitches the images together. For the <code>LinearSliver</code> method, <i>column</i> and <i>row</i> tell what location in the right hand image matches up to the top right corner of the left hand image.<br />
+<dd> These are constraints on where <code>pnmstitch</code> stitches the images together. For the <code>LinearSliver</code> method, <i>column</i> and <i>row</i> tell what location in the right hand image matches up to the top right corner of the left hand image.<br/>
 &nbsp;<wbr>&nbsp;<wbr></dd>
 <dt><code>-stitcher=</code>{<code>RotateSliver</code>,<code>BiLinearSliver</code>,</dt>
 <dd> <code>LinearSliver</code>} The default is <code>RotateSliver</code>. </dd>
 <dt><code>-filter=</code>{<code>LineAtATime</code>,<code>HorizontalCrop</code>}</dt>
-<dd> No details available.<br />
+<dd> No details available.<br/>
 &nbsp;<wbr>&nbsp;<wbr></dd>
 <dt><code>-output=</code><i>output_filespec</i></dt>
 <dd> Name of output file. If you don&#8217;t specify this option, the output image goes to Standard Output. </dd>
 <dt><code>-verbose</code></dt>
-<dd> This option causes <code>pnmstitch</code> to issue messages to Standard Error about the stitching process.<br />
+<dd> This option causes <code>pnmstitch</code> to issue messages to Standard Error about the stitching process.<br/>
 &nbsp;<wbr>&nbsp;<wbr> </dd>
 </dl>
 <h2>SEE ALSO</h2>

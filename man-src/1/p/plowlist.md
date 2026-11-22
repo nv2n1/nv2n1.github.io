@@ -90,11 +90,11 @@ description: "plowlist – List links from shared folders websites"
 <h2>EXAMPLES</h2>
 <h3>1) List links providing shared folder URL(s)</h3>
 <p> $ plowlist <a rel="nofollow" href="http://rapidgator.net/folder/1689302/Test.html">http://rapidgator.net/folder/1689302/Test.html</a> </p>
-<p> # First URL is processed, then the second one (this is not parallel) $ plowlist <a rel="nofollow" href="http://www.mediafire.com/?qouncpzfe74s9">http://www.mediafire.com/?qouncpzfe74s9</a> \<br />
+<p> # First URL is processed, then the second one (this is not parallel) $ plowlist <a rel="nofollow" href="http://www.mediafire.com/?qouncpzfe74s9">http://www.mediafire.com/?qouncpzfe74s9</a> \<br/>
 &nbsp;<wbr><a rel="nofollow" href="http://www.sendspace.com/folder/5njdw7">http://www.sendspace.com/folder/5njdw7</a></p>
 <h3>2) Custom results format</h3>
 <p> # List to give to plowdown (only links, no filenames) $ plowlist &#8211;printf &#8216;%u%n&#8217; <a rel="nofollow" href="http://www.sendspace.com/folder/5njdw7">http://www.sendspace.com/folder/5njdw7</a> &gt;mylist.txt </p>
-<p> # vBulletin &quot;BB&quot; syntax $ plowlist &#8211;printf &#8216;[url=%u]%f[/url]%n&#8217; \<br />
+<p> # vBulletin &quot;BB&quot; syntax $ plowlist &#8211;printf &#8216;[url=%u]%f[/url]%n&#8217; \<br/>
 &nbsp;<wbr><a rel="nofollow" href="http://www.sendspace.com/folder/5njdw7">http://www.sendspace.com/folder/5njdw7</a>&nbsp;<wbr>&gt;mylist.txt </p>
 <h2>FILES</h2>
 <dl>

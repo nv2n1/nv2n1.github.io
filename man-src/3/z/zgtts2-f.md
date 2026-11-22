@@ -10,7 +10,7 @@ description: "zgtts2.f –"
 <p>zgtts2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgtts2</code> (ITRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB)<br />
+<p>subroutine <code>zgtts2</code> (ITRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB)<br/>
  <i></i><code>ZGTTS2</code> solves a system of linear equations with a tridiagonal matrix using the LU factorization computed by sgttrf.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgtts2 (integerITRANS, integerN, integerNRHS, complex*16, dimension( * )DL, complex*16, dimension( * )D, complex*16, dimension( * )DU, complex*16, dimension( * )DU2, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB)</h3>

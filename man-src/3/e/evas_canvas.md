@@ -9,9 +9,9 @@ description: "Evas Canvas – Functions that deal with the basic evas object."
 
 <p>Evas Canvas &#8211; Functions that deal with the basic evas object. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Evas</code> * <code>evas_new</code> (void)<br />
- <i>Creates a new empty evas. </i><br />
- EAPI void <code>evas_free</code> (<code>Evas</code> *e)<br />
+<p>EAPI <code>Evas</code> * <code>evas_new</code> (void)<br/>
+ <i>Creates a new empty evas. </i><br/>
+ EAPI void <code>evas_free</code> (<code>Evas</code> *e)<br/>
  <i>Frees the given evas and any objects created on it. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that deal with the basic evas object. </p>

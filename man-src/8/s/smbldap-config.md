@@ -14,4 +14,4 @@ smbldap-config
 
 <h2>Description</h2>
 
-An interactive script to configure the smbldap-tools to work with your existing <font SIZE="-1">LDAP</font> server(s). Before running it, you should ensure that your samba controller is up and running, and that the domain <font SIZE="-1">SID</font> is defined (you can check it by running 'net getlocalsid'). 
+An interactive script to configure the smbldap-tools to work with your existing LDAP server(s). Before running it, you should ensure that your samba controller is up and running, and that the domain SID is defined (you can check it by running 'net getlocalsid'). 

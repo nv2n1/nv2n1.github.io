@@ -39,7 +39,7 @@ description: "nmblookup4 – NetBIOS over TCP/IP client used to lookup NetBIOS n
 <p> -B &lt;broadcast address&gt;</p>
 <dl>
 <dt>
-</dt><dd> Send the query to the given broadcast address. Without this option the default behavior of nmblookup4 is to send the query to the broadcast address of the network interfaces as either auto-detected or defined in the m[blue]<i>interfaces</i>m[]<font SIZE="-2">[1]</font> parameter of the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) file.</dd></dl>
+</dt><dd> Send the query to the given broadcast address. Without this option the default behavior of nmblookup4 is to send the query to the broadcast address of the network interfaces as either auto-detected or defined in the m[blue]<i>interfaces</i>m[][1] parameter of the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) file.</dd></dl>
 <p> -U &lt;unicast address&gt;</p>
 <dl>
 <dt>
@@ -70,7 +70,7 @@ description: "nmblookup4 – NetBIOS over TCP/IP client used to lookup NetBIOS n
 <p> <code><a href="/docs/linux/man/8-nmbd/">nmbd</a></code>(8), <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7), and <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5).</p>
 <h2>AUTHOR</h2>
 <p> The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed. </p>
-<p> The original Samba man pages were written by Karl Auer. The man page sources were converted to YODL format (another excellent piece of Open Source software, available at m[blue]<code><a href="ftp://ftp.icce.rug.nl/pub/unix/">ftp://ftp.icce.rug.nl/pub/unix/</a></code>m[]<font SIZE="-2">[2]</font>) and updated for the Samba 2.0 release by Jeremy Allison. The conversion to DocBook for Samba 2.2 was done by Gerald Carter. The conversion to DocBook XML 4.2 for Samba 3.0 was done by Alexander Bokovoy.</p>
+<p> The original Samba man pages were written by Karl Auer. The man page sources were converted to YODL format (another excellent piece of Open Source software, available at m[blue]<code><a href="ftp://ftp.icce.rug.nl/pub/unix/">ftp://ftp.icce.rug.nl/pub/unix/</a></code>m[][2]) and updated for the Samba 2.0 release by Jeremy Allison. The conversion to DocBook for Samba 2.2 was done by Gerald Carter. The conversion to DocBook XML 4.2 for Samba 3.0 was done by Alexander Bokovoy.</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

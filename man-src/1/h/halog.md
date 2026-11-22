@@ -10,7 +10,7 @@ description: "halog – HAProxy log statistics reporter"
 
 <p> halog &#8211; HAProxy log statistics reporter</p>
 <h2>SYNOPSIS</h2>
-<p> <code>halog</code> [<i>-h|&#8211;help</i>]<br />
+<p> <code>halog</code> [<i>-h|&#8211;help</i>]<br/>
  <code>halog</code> [<i>options</i>] &lt;LOGFILE</p>
 <h2>DESCRIPTION</h2>
 <p> <code>halog</code> reads HAProxy log data from stdin and extracts and displays lines matching user-specified criteria.</p>
@@ -54,7 +54,7 @@ description: "halog – HAProxy log statistics reporter"
 <dt><code>-srv</code></dt>
 <dd> Output statistics per server (time, requests, errors)</dd>
 <dt><code>-u</code>*</dt>
-<dd> Output statistics per URL (time, requests, errors)<br />
+<dd> Output statistics per URL (time, requests, errors)<br/>
  Additional characters indicate the output sorting key:</dd>
 <dl>
 <dl>

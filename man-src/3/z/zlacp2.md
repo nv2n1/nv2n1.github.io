@@ -10,7 +10,7 @@ description: "zlacp2.f –"
 <p>zlacp2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlacp2</code> (UPLO, M, N, A, LDA, B, LDB)<br />
+<p>subroutine <code>zlacp2</code> (UPLO, M, N, A, LDA, B, LDB)<br/>
  <i></i><code>ZLACP2</code> copies all or part of a real two-dimensional array to a complex array.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlacp2 (characterUPLO, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB)</h3>

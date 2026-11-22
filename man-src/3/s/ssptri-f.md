@@ -10,7 +10,7 @@ description: "ssptri.f –"
 <p>ssptri.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssptri</code> (UPLO, N, AP, IPIV, WORK, INFO)<br />
+<p>subroutine <code>ssptri</code> (UPLO, N, AP, IPIV, WORK, INFO)<br/>
  <i></i><code>SSPTRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssptri (characterUPLO, integerN, real, dimension( * )AP, integer, dimension( * )IPIV, real, dimension( * )WORK, integerINFO)</h3>

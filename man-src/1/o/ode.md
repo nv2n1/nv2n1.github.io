@@ -13,7 +13,7 @@ description: "ode – numerical solution of ordinary differential equations"
 <p> <code>ode</code> [ <i>options</i> ] [ <i>file</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>ode</code> is a tool that solves, by numerical integration, the initial value problem for a specified system of first-order ordinary differential equations. Three distinct numerical integration schemes are available: Runge-Kutta-Fehlberg (the default), Adams-Moulton, and Euler. The Adams-Moulton and Runge-Kutta schemes are available with adaptive step size. </p>
-<p> The operation of <code>ode</code> is specified by a program, written in its input language. The program is simply a list of expressions for the derivatives of the variables to be integrated, together with some control statements. Some examples are given in the <font SIZE="-1"><code>EXAMPLES </code></font> section. </p>
+<p> The operation of <code>ode</code> is specified by a program, written in its input language. The program is simply a list of expressions for the derivatives of the variables to be integrated, together with some control statements. Some examples are given in the <code>EXAMPLES </code> section. </p>
 <p> <code>ode</code> reads the program from the specified file, or from standard input if no file name is given. If reading from standard input, <code>ode</code> will stop reading and exit when it sees a single period on a line by itself. </p>
 <p> At each time step, the values of variables specified in the program are written to standard output. So a table of values will be produced, with each column showing the evolution of a variable. If there are only two columns, the output can be piped to <code>graph</code>(1) or a similar plotting program.</p>
 <h2>OPTIONS</h2>
@@ -88,19 +88,19 @@ description: "ode – numerical solution of ordinary differential equations"
 <p> The program </p>
 <dl>
 <dt>
-</dt><dd> <code>y&#8217; = y</code><br />
- <code>y = 1</code><br />
- <code>print t, y</code><br />
+</dt><dd> <code>y&#8217; = y</code><br/>
+ <code>y = 1</code><br/>
+ <code>print t, y</code><br/>
  <code>step 0, 1</code></dd></dl>
 <p> solves an initial value problem whose solution is <i>y=e^t</i>. When <code>ode</code> runs this program, it will write two columns of numbers to standard output. Each line will show the value of the independent variable <i>t</i>, and the variable <i>y</i>, as <i>t</i> is stepped from 0 to 1. </p>
 <p> A more sophisticated example would be </p>
 <dl>
 <dt>
-</dt><dd> <code>sine&#8217; = cosine</code><br />
- <code>cosine&#8217; = -sine</code><br />
- <code>sine = 0</code><br />
- <code>cosine = 1</code><br />
- <code>print t, sine</code><br />
+</dt><dd> <code>sine&#8217; = cosine</code><br/>
+ <code>cosine&#8217; = -sine</code><br/>
+ <code>sine = 0</code><br/>
+ <code>cosine = 1</code><br/>
+ <code>print t, sine</code><br/>
  <code>step 0, 2*PI</code></dd></dl>
 <p> This program solves an initial value problem for a system of two differential equations. The initial value problem turns out to define the sine and cosine functions. The program steps the system over a full period.</p>
 <h2>AUTHORS</h2>

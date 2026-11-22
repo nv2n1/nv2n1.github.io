@@ -29,12 +29,12 @@ description: "perl581delta – what is new for perl v5.8.1"
 <p> <code>Perl has never guaranteed any ordering of the hash keys</code>, and the ordering has already changed several times during the lifetime of Perl 5. Also, the ordering of hash keys has always been, and continues to be, affected by the insertion order. </p>
 <p> The added randomness may affect applications. </p>
 <p> One possible scenario is when output of an application has included hash data. For example, if you have used the Data::Dumper module to dump data into different files, and then compared the files to see whether the data has changed, now you will have false positives since the order in which hashes are dumped will vary. In general the cure is to sort the keys (or the values); in particular for Data::Dumper to use the <code>&quot;Sortkeys&quot;</code> option. If some particular order is really important, use tied hashes: for example the Tie::IxHash module which by default preserves the order in which the hash elements were added. </p>
-<p> More subtle problem is reliance on the order of ``global destruction&#8217;&#8216;. That is what happens at the end of execution: Perl destroys all data structures, including user data. If your destructors (the <font SIZE="-1">DESTROY</font> subroutines) have assumed any particular ordering to the global destruction, there might be problems ahead. For example, in a destructor of one object you cannot assume that objects of any other class are still available, unless you hold a reference to them. If the environment variable <font SIZE="-1">PERL_DESTRUCT_LEVEL</font> is set to a non-zero value, or if Perl is exiting a spawned thread, it will also destruct the ordinary references and the symbol tables that are no longer in use. You can&#8217;t call a class method or an ordinary function on a class that has been collected that way. </p>
+<p> More subtle problem is reliance on the order of ``global destruction&#8217;&#8216;. That is what happens at the end of execution: Perl destroys all data structures, including user data. If your destructors (the DESTROY subroutines) have assumed any particular ordering to the global destruction, there might be problems ahead. For example, in a destructor of one object you cannot assume that objects of any other class are still available, unless you hold a reference to them. If the environment variable PERL_DESTRUCT_LEVEL is set to a non-zero value, or if Perl is exiting a spawned thread, it will also destruct the ordinary references and the symbol tables that are no longer in use. You can&#8217;t call a class method or an ordinary function on a class that has been collected that way. </p>
 <p> The hash randomisation is certain to reveal hidden assumptions about some particular ordering of hash elements, and outright bugs: it revealed a few bugs in the Perl core and core modules. </p>
-<p> To disable the hash randomisation in runtime, set the environment variable <font SIZE="-1">PERL_HASH_SEED</font> to 0 (zero) before running Perl (for more information see ``<font SIZE="-1">PERL_HASH_SEED&#8217;&#8216;</font> in perlrun), or to disable the feature completely in compile time, compile with <code>&quot;-DNO_HASH_SEED&quot;</code> (see <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i>). </p>
+<p> To disable the hash randomisation in runtime, set the environment variable PERL_HASH_SEED to 0 (zero) before running Perl (for more information see ``PERL_HASH_SEED&#8217;&#8216; in perlrun), or to disable the feature completely in compile time, compile with <code>&quot;-DNO_HASH_SEED&quot;</code> (see <i></i><i>INSTALL</i><i></i>). </p>
 <p> See ``Algorithmic Complexity Attacks&#8217;&#8216; in perlsec for the original rationale behind this change.  </p>
-<font SIZE="-1"></font><h3>UTF-8 On Filehandles No Longer Activated By Locale</h3>
-<p> In Perl 5.8.0 all filehandles, including the standard filehandles, were implicitly set to be in Unicode <font SIZE="-1">UTF-8</font> if the locale settings indicated the use of <font SIZE="-1">UTF-8.</font> This feature caused too many problems, so the feature was turned off and redesigned: see ``Core Enhancements&#8217;&#8216;.  </p>
+<h3>UTF-8 On Filehandles No Longer Activated By Locale</h3>
+<p> In Perl 5.8.0 all filehandles, including the standard filehandles, were implicitly set to be in Unicode UTF-8 if the locale settings indicated the use of UTF-8. This feature caused too many problems, so the feature was turned off and redesigned: see ``Core Enhancements&#8217;&#8216;.  </p>
 <h3>Single-number v-strings are no longer v-strings before =&gt;</h3>
 <p> The version strings or v-strings (see ``Version Strings&#8217;&#8216; in perldata) feature introduced in Perl 5.6.0 has been a source of some confusion--- especially when the user did not want to use it, but Perl thought it knew better. Especially troublesome has been the feature that before a ``=&gt;&#8216;&#8216; a version string (a ``v&#8217;&#8216; followed by digits) has been interpreted as a v-string instead of a string literal. In other words: </p>
 <pre><code>        %h = ( v65 =&gt; 42 );
@@ -42,27 +42,27 @@ description: "perl581delta – what is new for perl v5.8.1"
 <p> has meant since Perl 5.6.0 </p>
 <pre><code>        %h = ( 'A' =&gt; 42 );
 </code></pre>
-<p> (at least in platforms of <font SIZE="-1">ASCII</font> progeny) Perl 5.8.1 restores the more natural interpretation </p>
+<p> (at least in platforms of ASCII progeny) Perl 5.8.1 restores the more natural interpretation </p>
 <pre><code>        %h = ( 'v65' =&gt; 42 );
 </code></pre>
 <p> The multi-number v-strings like v65.66 and 65.66.67 still continue to be v-strings in Perl 5.8.  </p>
 <h3>(Win32) The -C Switch Has Been Repurposed</h3>
 <p> The -C switch has changed in an incompatible way. The old semantics of this switch only made sense in Win32 and only in the ``use utf8&#8217;&#8216; universe in 5.6.x releases, and do not make sense for the Unicode implementation in 5.8.0. Since this switch could not have been used by anyone, it has been repurposed. The behavior that this switch enabled in 5.6.x releases may be supported in a transparent, data-dependent fashion in a future release. </p>
-<p> For the new life of this switch, see ``<font SIZE="-1">UTF-8</font> no longer default under <font SIZE="-1">UTF-8</font> locales&#8217;&#8216;, and ``-C&#8217;&#8216; in perlrun.  </p>
+<p> For the new life of this switch, see ``UTF-8 no longer default under UTF-8 locales&#8217;&#8216;, and ``-C&#8217;&#8216; in perlrun.  </p>
 <h3>(Win32) The /d Switch Of cmd.exe</h3>
-<p> Perl 5.8.1 uses the /d switch when running the cmd.exe shell internally for <code>system()</code>, backticks, and when opening pipes to external programs. The extra switch disables the execution of AutoRun commands from the registry, which is generally considered undesirable when running external programs. If you wish to retain compatibility with the older behavior, set <font SIZE="-1">PERL5SHELL</font> in your environment to <code>&quot;cmd /x/c&quot;</code>.  </p>
+<p> Perl 5.8.1 uses the /d switch when running the cmd.exe shell internally for <code>system()</code>, backticks, and when opening pipes to external programs. The extra switch disables the execution of AutoRun commands from the registry, which is generally considered undesirable when running external programs. If you wish to retain compatibility with the older behavior, set PERL5SHELL in your environment to <code>&quot;cmd /x/c&quot;</code>.  </p>
 <h2>Core Enhancements</h2>
-<font SIZE="-1"></font><font SIZE="-1"></font><h3>UTF-8 no longer default under UTF-8 locales</h3>
-<p> In Perl 5.8.0 many Unicode features were introduced. One of them was found to be of more nuisance than benefit: the automagic (and silent) ``UTF-8-ification&#8217;&#8216; of filehandles, including the standard filehandles, if the user&#8217;s locale settings indicated use of <font SIZE="-1">UTF-8.</font> </p>
-<p> For example, if you had <code>&quot;en_US.UTF-8&quot;</code> as your locale, your <font SIZE="-1">STDIN</font> and <font SIZE="-1">STDOUT</font> were automatically ``<font SIZE="-1">UTF-8&#8217;&#8216;,</font> in other words an implicit binmode(..., ``:utf8&#8217;&#8216;) was made. This meant that trying to print, say, <code>chr</code>(0xff), ended up printing the bytes 0xc3 0xbf. Hardly what you had in mind unless you were aware of this feature of Perl 5.8.0. The problem is that the vast majority of people weren&#8217;t: for example in RedHat releases 8 and 9 the <code>default</code> locale setting is <font SIZE="-1">UTF-8,</font> so all RedHat users got <font SIZE="-1">UTF-8</font> filehandles, whether they wanted it or not. The pain was intensified by the Unicode implementation of Perl 5.8.0 (still) having nasty bugs, especially related to the use of s/// and tr///. (Bugs that have been fixed in 5.8.1) </p>
-<p> Therefore a decision was made to backtrack the feature and change it from implicit silent default to explicit conscious option. The new Perl command line option <code>&quot;-C&quot;</code> and its counterpart environment variable <font SIZE="-1">PERL_UNICODE</font> can now be used to control how Perl and Unicode interact at interfaces like I/O and for example the command line arguments. See ``-C&#8217;&#8216; in perlrun and ``<font SIZE="-1">PERL_UNICODE&#8217;&#8216;</font> in perlrun for more information.  </p>
+<h3>UTF-8 no longer default under UTF-8 locales</h3>
+<p> In Perl 5.8.0 many Unicode features were introduced. One of them was found to be of more nuisance than benefit: the automagic (and silent) ``UTF-8-ification&#8217;&#8216; of filehandles, including the standard filehandles, if the user&#8217;s locale settings indicated use of UTF-8. </p>
+<p> For example, if you had <code>&quot;en_US.UTF-8&quot;</code> as your locale, your STDIN and STDOUT were automatically ``UTF-8&#8217;&#8216;, in other words an implicit binmode(..., ``:utf8&#8217;&#8216;) was made. This meant that trying to print, say, <code>chr</code>(0xff), ended up printing the bytes 0xc3 0xbf. Hardly what you had in mind unless you were aware of this feature of Perl 5.8.0. The problem is that the vast majority of people weren&#8217;t: for example in RedHat releases 8 and 9 the <code>default</code> locale setting is UTF-8, so all RedHat users got UTF-8 filehandles, whether they wanted it or not. The pain was intensified by the Unicode implementation of Perl 5.8.0 (still) having nasty bugs, especially related to the use of s/// and tr///. (Bugs that have been fixed in 5.8.1) </p>
+<p> Therefore a decision was made to backtrack the feature and change it from implicit silent default to explicit conscious option. The new Perl command line option <code>&quot;-C&quot;</code> and its counterpart environment variable PERL_UNICODE can now be used to control how Perl and Unicode interact at interfaces like I/O and for example the command line arguments. See ``-C&#8217;&#8216; in perlrun and ``PERL_UNICODE&#8217;&#8216; in perlrun for more information.  </p>
 <h3>Unsafe signals again available</h3>
 <p> In Perl 5.8.0 the so-called ``safe signals&#8217;&#8216; were introduced. This means that Perl no longer handles signals immediately but instead ``between opcodes&#8217;&#8216;, when it is safe to do so. The earlier immediate handling easily could corrupt the internal state of Perl, resulting in mysterious crashes. </p>
 <p> However, the new safer model has its problems too. Because now an opcode, a basic unit of Perl execution, is never interrupted but instead let to run to completion, certain operations that can take a long time now really do take a long time. For example, certain network operations have their own blocking and timeout mechanisms, and being able to interrupt them immediately would be nice. </p>
-<p> Therefore perl 5.8.1 introduces a ``backdoor&#8217;&#8216; to restore the pre-5.8.0 (pre-5.7.3, really) signal behaviour. Just set the environment variable <font SIZE="-1">PERL_SIGNALS</font> to <code>&quot;unsafe&quot;</code>, and the old immediate (and unsafe) signal handling behaviour returns. See ``<font SIZE="-1">PERL_SIGNALS&#8217;&#8216;</font> in perlrun and ``Deferred Signals (Safe Signals)&#8216;&#8216; in perlipc. </p>
-<p> In completely unrelated news, you can now use safe signals with POSIX::SigAction. See ``POSIX::SigAction&#8217;&#8216; in <font SIZE="-1">POSIX</font>.  </p>
+<p> Therefore perl 5.8.1 introduces a ``backdoor&#8217;&#8216; to restore the pre-5.8.0 (pre-5.7.3, really) signal behaviour. Just set the environment variable PERL_SIGNALS to <code>&quot;unsafe&quot;</code>, and the old immediate (and unsafe) signal handling behaviour returns. See ``PERL_SIGNALS&#8217;&#8216; in perlrun and ``Deferred Signals (Safe Signals)&#8216;&#8216; in perlipc. </p>
+<p> In completely unrelated news, you can now use safe signals with POSIX::SigAction. See ``POSIX::SigAction&#8217;&#8216; in POSIX.  </p>
 <h3>Tied Arrays with Negative Array Indices</h3>
-<p> Formerly, the indices passed to <code>&quot;FETCH&quot;</code>, <code>&quot;STORE&quot;</code>, <code>&quot;EXISTS&quot;</code>, and <code>&quot;DELETE&quot;</code> methods in tied array class were always non-negative. If the actual argument was negative, Perl would call <font SIZE="-1">FETCHSIZE</font> implicitly and add the result to the index before passing the result to the tied array method. This behaviour is now optional. If the tied array class contains a package variable named <code>$NEGATIVE_INDICES</code> which is set to a true value, negative values will be passed to <code>&quot;FETCH&quot;</code>, <code>&quot;STORE&quot;</code>, <code>&quot;EXISTS&quot;</code>, and <code>&quot;DELETE&quot;</code> unchanged.  </p>
+<p> Formerly, the indices passed to <code>&quot;FETCH&quot;</code>, <code>&quot;STORE&quot;</code>, <code>&quot;EXISTS&quot;</code>, and <code>&quot;DELETE&quot;</code> methods in tied array class were always non-negative. If the actual argument was negative, Perl would call FETCHSIZE implicitly and add the result to the index before passing the result to the tied array method. This behaviour is now optional. If the tied array class contains a package variable named <code>$NEGATIVE_INDICES</code> which is set to a true value, negative values will be passed to <code>&quot;FETCH&quot;</code>, <code>&quot;STORE&quot;</code>, <code>&quot;EXISTS&quot;</code>, and <code>&quot;DELETE&quot;</code> unchanged.  </p>
 <h3>local ${$x}</h3>
 <p> The syntaxes </p>
 <pre><code>        local ${$x}
@@ -89,10 +89,10 @@ description: "perl581delta – what is new for perl v5.8.1"
 </code></pre>
 <h3>Miscellaneous Enhancements</h3>
 <p> <code>&quot;map&quot;</code> in void context is no longer expensive. <code>&quot;map&quot;</code> is now context aware, and will not construct a list if called in void context. </p>
-<p> If a socket gets closed by the server while printing to it, the client now gets a <font SIZE="-1">SIGPIPE.</font> While this new feature was not planned, it fell naturally out of PerlIO changes, and is to be considered an accidental feature. </p>
-<p> PerlIO::get_layers(<font SIZE="-1">FH</font>) returns the names of the PerlIO layers active on a filehandle. </p>
-<p> PerlIO::via layers can now have an optional <font SIZE="-1">UTF8</font> method to indicate whether the layer wants to ``auto-:utf8&#8217;&#8216; the stream. </p>
-<p> <code>utf8::is_utf8()</code> has been added as a quick way to test whether a scalar is encoded internally in <font SIZE="-1">UTF-8</font> (Unicode).  </p>
+<p> If a socket gets closed by the server while printing to it, the client now gets a SIGPIPE. While this new feature was not planned, it fell naturally out of PerlIO changes, and is to be considered an accidental feature. </p>
+<p> PerlIO::get_layers(FH) returns the names of the PerlIO layers active on a filehandle. </p>
+<p> PerlIO::via layers can now have an optional UTF8 method to indicate whether the layer wants to ``auto-:utf8&#8217;&#8216; the stream. </p>
+<p> <code>utf8::is_utf8()</code> has been added as a quick way to test whether a scalar is encoded internally in UTF-8 (Unicode).  </p>
 <h2>Modules and Pragmata</h2>
 <h3>Updated Modules And Pragmata</h3>
 <p> The following modules and pragmata have been updated since Perl 5.8.0: </p>
@@ -115,13 +115,13 @@ description: "perl581delta – what is new for perl v5.8.1"
 <dt>bytes</dt>
 <dd> <p> Now has bytes::substr. </p>
  </dd>
-<dt><font SIZE="-1">CGI</font></dt>
+<dt>CGI</dt>
 <dd>  </dd>
 <dt>charnames</dt>
 <dd> <p> One can now have custom character name aliases. </p>
  </dd>
-<dt><font SIZE="-1">CPAN</font></dt>
-<dd> <p> There is now a simple command line frontend to the <font SIZE="-1">CPAN</font>.pm module called <i>cpan</i>. </p>
+<dt>CPAN</dt>
+<dd> <p> There is now a simple command line frontend to the CPAN.pm module called <i>cpan</i>. </p>
  </dd>
 <dt>Data::Dumper</dt>
 <dd> <p> A new option, Pair, allows choosing the separator between hash keys and values. </p>
@@ -133,9 +133,9 @@ description: "perl581delta – what is new for perl v5.8.1"
 <dt>Digest::MD5</dt>
 <dd>  </dd>
 <dt>Encode</dt>
-<dd> <p> Significant updates on the encoding pragma functionality (tr/// and the <font SIZE="-1">DATA</font> filehandle, formats). </p>
+<dd> <p> Significant updates on the encoding pragma functionality (tr/// and the DATA filehandle, formats). </p>
 <p> If a filehandle has been marked as to have an encoding, unmappable characters are detected already during input, not later (when the corrupted data is being used). </p>
-<p> The <font SIZE="-1">ISO 8859-6</font> conversion table has been corrected (the 0x30..0x39 erroneously mapped to U+0660..U+0669, instead of U+0030..U+0039). The <font SIZE="-1">GSM 03.38</font> conversion did not handle escape sequences correctly. The <font SIZE="-1">UTF-7</font> encoding has been added (making Encode feature-complete with Unicode::String). </p>
+<p> The ISO 8859-6 conversion table has been corrected (the 0x30..0x39 erroneously mapped to U+0660..U+0669, instead of U+0030..U+0039). The GSM 03.38 conversion did not handle escape sequences correctly. The UTF-7 encoding has been added (making Encode feature-complete with Unicode::String). </p>
  </dd>
 <dt>fields</dt>
 <dd>  </dd>
@@ -148,7 +148,7 @@ description: "perl581delta – what is new for perl v5.8.1"
  </dd>
 <dt>MIME::Base64</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">NEXT</font></dt>
+<dt>NEXT</dt>
 <dd> <p> Diamond inheritance now works. </p>
  </dd>
 <dt>Net::Ping</dt>
@@ -228,42 +228,42 @@ description: "perl581delta – what is new for perl v5.8.1"
 <p> perl58delta has been added: it is the perldelta of 5.8.0, detailing the differences between 5.6.0 and 5.8.0. </p>
 <p> perlartistic has been added: it is the Artistic License in pod format, making it easier for modules to refer to it. </p>
 <p> perlcheat has been added: it is a Perl cheat sheet. </p>
-<p> perlgpl has been added: it is the <font SIZE="-1">GNU</font> General Public License in pod format, making it easier for modules to refer to it. </p>
-<p> perlmacosx has been added to tell about the installation and use of Perl in Mac <font SIZE="-1">OS X.</font> </p>
-<p> perlos400 has been added to tell about the installation and use of Perl in <font SIZE="-1">OS/400 PASE.</font> </p>
+<p> perlgpl has been added: it is the GNU General Public License in pod format, making it easier for modules to refer to it. </p>
+<p> perlmacosx has been added to tell about the installation and use of Perl in Mac OS X. </p>
+<p> perlos400 has been added to tell about the installation and use of Perl in OS/400 PASE. </p>
 <p> perlreref has been added: it is a regular expressions quick reference.  </p>
 <h2>Installation and Configuration Improvements</h2>
 <p> The Unix standard Perl location, <i>/usr/bin/perl</i>, is no longer overwritten by default if it exists. This change was very prudent because so many Unix vendors already provide a <i>/usr/bin/perl</i>, but simultaneously many system utilities may depend on that exact version of Perl, so better not to overwrite it. </p>
-<p> One can now specify installation directories for site and vendor man and <font SIZE="-1">HTML</font> pages, and site and vendor scripts. See <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i>. </p>
-<p> One can now specify a destination directory for Perl installation by specifying the <font SIZE="-1">DESTDIR</font> variable for <code>&quot;make install&quot;</code>. (This feature is slightly different from the previous <code>&quot;Configure -Dinstallprefix=...&quot;</code>.) See <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i>. </p>
+<p> One can now specify installation directories for site and vendor man and HTML pages, and site and vendor scripts. See <i></i><i>INSTALL</i><i></i>. </p>
+<p> One can now specify a destination directory for Perl installation by specifying the DESTDIR variable for <code>&quot;make install&quot;</code>. (This feature is slightly different from the previous <code>&quot;Configure -Dinstallprefix=...&quot;</code>.) See <i></i><i>INSTALL</i><i></i>. </p>
 <p> gcc versions 3.x introduced a new warning that caused a lot of noise during Perl compilation: <code>&quot;gcc -Ialreadyknowndirectory (warning: changing search order)&quot;</code>. This warning has now been avoided by Configure weeding out such directories before the compilation. </p>
-<p> One can now build subsets of Perl core modules by using the Configure flags <code>&quot;-Dnoextensions=...&quot;</code> and <code>&quot;-Donlyextensions=...&quot;</code>, see <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i>.  </p>
+<p> One can now build subsets of Perl core modules by using the Configure flags <code>&quot;-Dnoextensions=...&quot;</code> and <code>&quot;-Donlyextensions=...&quot;</code>, see <i></i><i>INSTALL</i><i></i>.  </p>
 <h3>Platform-specific enhancements</h3>
 <p> In Cygwin Perl can now be built with threads (<code>&quot;Configure -Duseithreads&quot;</code>). This works with both Cygwin 1.3.22 and Cygwin 1.5.3. </p>
 <p> In newer FreeBSD releases Perl 5.8.0 compilation failed because of trying to use <i>malloc.h</i>, which in FreeBSD is just a dummy file, and a fatal error to even try to use. Now <i>malloc.h</i> is not used. </p>
 <p> Perl is now known to build also in Hitachi HI-UXMPP. </p>
 <p> Perl is now known to build again in LynxOS. </p>
-<p> Mac <font SIZE="-1">OS X</font> now installs with Perl version number embedded in installation directory names for easier upgrading of user-compiled Perl, and the installation directories in general are more standard. In other words, the default installation no longer breaks the Apple-provided Perl. On the other hand, with <code>&quot;Configure -Dprefix=/usr&quot;</code> you can now really replace the Apple-supplied Perl (<code>please be careful</code>). </p>
-<p> Mac <font SIZE="-1">OS X</font> now builds Perl statically by default. This change was done mainly for faster startup times. The Apple-provided Perl is still dynamically linked and shared, and you can enable the sharedness for your own Perl builds by <code>&quot;Configure -Duseshrplib&quot;</code>. </p>
-<p> Perl has been ported to <font SIZE="-1">IBM</font>&#8216;s <font SIZE="-1">OS/400 PASE</font> environment. The best way to build a Perl for <font SIZE="-1">PASE</font> is to use an <font SIZE="-1">AIX</font> host as a cross-compilation environment. See <font SIZE="-1">README</font>.os400. </p>
-<p> Yet another cross-compilation option has been added: now Perl builds on OpenZaurus, a Linux distribution based on Mandrake + Embedix for the Sharp Zaurus <font SIZE="-1">PDA.</font> See the Cross/README file. </p>
+<p> Mac OS X now installs with Perl version number embedded in installation directory names for easier upgrading of user-compiled Perl, and the installation directories in general are more standard. In other words, the default installation no longer breaks the Apple-provided Perl. On the other hand, with <code>&quot;Configure -Dprefix=/usr&quot;</code> you can now really replace the Apple-supplied Perl (<code>please be careful</code>). </p>
+<p> Mac OS X now builds Perl statically by default. This change was done mainly for faster startup times. The Apple-provided Perl is still dynamically linked and shared, and you can enable the sharedness for your own Perl builds by <code>&quot;Configure -Duseshrplib&quot;</code>. </p>
+<p> Perl has been ported to IBM&#8216;s OS/400 PASE environment. The best way to build a Perl for PASE is to use an AIX host as a cross-compilation environment. See README.os400. </p>
+<p> Yet another cross-compilation option has been added: now Perl builds on OpenZaurus, a Linux distribution based on Mandrake + Embedix for the Sharp Zaurus PDA. See the Cross/README file. </p>
 <p> Tru64 when using gcc 3 drops the optimisation for <i>toke.c</i> to <code>&quot;-O2&quot;</code> because of gigantic memory use with the default <code>&quot;-O3&quot;</code>. </p>
 <p> Tru64 can now build Perl with the newer Berkeley DBs. </p>
-<p> Building Perl on WinCE has been much enhanced, see <i></i><font SIZE="-1"><i>README</i></font><i>.ce</i> and <i></i><font SIZE="-1"><i>README</i></font><i>.perlce</i>.  </p>
+<p> Building Perl on WinCE has been much enhanced, see <i></i><i>README</i><i>.ce</i> and <i></i><i>README</i><i>.perlce</i>.  </p>
 <h2>Selected Bug Fixes</h2>
 <h3>Closures, eval and lexicals</h3>
 <p> There have been many fixes in the area of anonymous subs, lexicals and closures. Although this means that Perl is now more ``correct&#8217;&#8216;, it is possible that some existing code will break that happens to rely on the faulty behaviour. In practice this is unlikely unless your code contains a very complex nesting of anonymous subs, evals and lexicals.  </p>
 <h3>Generic fixes</h3>
-<p> If an input filehandle is marked <code>&quot;:utf8&quot;</code> and Perl sees illegal <font SIZE="-1">UTF-8</font> coming in when doing <code>&quot;&lt;FH&gt;&quot;</code>, if warnings are enabled a warning is immediately given - instead of being silent about it and Perl being unhappy about the broken data later. (The <code>&quot;:encoding(utf8)&quot;</code> layer also works the same way.) </p>
-<p> binmode(<font SIZE="-1">SOCKET,</font> ``:utf8&#8217;&#8216;) only worked on the input side, not on the output side of the socket. Now it works both ways. </p>
+<p> If an input filehandle is marked <code>&quot;:utf8&quot;</code> and Perl sees illegal UTF-8 coming in when doing <code>&quot;&lt;FH&gt;&quot;</code>, if warnings are enabled a warning is immediately given - instead of being silent about it and Perl being unhappy about the broken data later. (The <code>&quot;:encoding(utf8)&quot;</code> layer also works the same way.) </p>
+<p> binmode(SOCKET, ``:utf8&#8217;&#8216;) only worked on the input side, not on the output side of the socket. Now it works both ways. </p>
 <p> For threaded Perls certain system database functions like <code>getpwent()</code> and <code>getgrent()</code> now grow their result buffer dynamically, instead of failing. This means that at sites with lots of users and groups the functions no longer fail by returning only partial results. </p>
 <p> Perl 5.8.0 had accidentally broken the capability for users to define their own uppercase&lt;-&gt;lowercase Unicode mappings (as advertised by the Camel). This feature has been fixed and is also documented better. </p>
 <p> In 5.8.0 this </p>
 <pre><code>        $some_unicode .= &lt;FH&gt;;
 </code></pre>
 <p> didn&#8217;t work correctly but instead corrupted the data. This has now been fixed. </p>
-<p> Tied methods like <font SIZE="-1">FETCH</font> etc. may now safely access tied values, i.e. resulting in a recursive call to <font SIZE="-1">FETCH</font> etc. Remember to break the recursion, though. </p>
-<p> At startup Perl blocks the <font SIZE="-1">SIGFPE</font> signal away since there isn&#8217;t much Perl can do about it. Previously this blocking was in effect also for programs executed from within Perl. Now Perl restores the original <font SIZE="-1">SIGFPE</font> handling routine, whatever it was, before running external programs. </p>
+<p> Tied methods like FETCH etc. may now safely access tied values, i.e. resulting in a recursive call to FETCH etc. Remember to break the recursion, though. </p>
+<p> At startup Perl blocks the SIGFPE signal away since there isn&#8217;t much Perl can do about it. Previously this blocking was in effect also for programs executed from within Perl. Now Perl restores the original SIGFPE handling routine, whatever it was, before running external programs. </p>
 <p> Linenumbers in Perl scripts may now be greater than 65536, or 2**16. (Perl scripts have always been able to be larger than that, it&#8217;s just that the linenumber for reported errors and warnings have ``wrapped around&#8217;&#8216;.) While scripts that large usually indicate a need to rethink your code a bit, such Perl scripts do exist, for example as results from generated code. Now linenumbers can go all the way to 4294967296, or 2**32.  </p>
 <h3>Platform-specific fixes</h3>
 <p> Linux </p>
@@ -276,7 +276,7 @@ description: "perl581delta – what is new for perl v5.8.1"
 <dt>&bull;</dt>
 <dd> <p> Setting <code>$0</code> now works. </p>
  </dd></dl>
-<p> <font SIZE="-1">VMS</font> </p>
+<p> VMS </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> Configuration now tests for the presence of <code>&quot;poll()&quot;</code>, and IO::Poll now uses the vendor-supplied function if detected. </p>
@@ -285,10 +285,10 @@ description: "perl581delta – what is new for perl v5.8.1"
 <dd> <p> A rare access violation at Perl start-up could occur if the Perl image was installed with privileges or if there was an identifier with the subsystem attribute set in the process&#8217;s rightslist. Either of these circumstances triggered tainting code that contained a pointer bug. The faulty pointer arithmetic has been fixed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The length limit on values (not keys) in the <code>%ENV</code> hash has been raised from 255 bytes to 32640 bytes (except when the <font SIZE="-1">PERL_ENV_TABLES</font> setting overrides the default use of logical names for <code>%ENV</code>). If it is necessary to access these long values from outside Perl, be aware that they are implemented using search list logical names that store the value in pieces, each 255-byte piece (up to 128 of them) being an element in the search list. When doing a lookup in <code>%ENV</code> from within Perl, the elements are combined into a single value. The existing VMS-specific ability to access individual elements of a search list logical name via the <code>$ENV</code>{&#8216;foo;N&#8217;} syntax (where N is the search list index) is unimpaired. </p>
+<dd> <p> The length limit on values (not keys) in the <code>%ENV</code> hash has been raised from 255 bytes to 32640 bytes (except when the PERL_ENV_TABLES setting overrides the default use of logical names for <code>%ENV</code>). If it is necessary to access these long values from outside Perl, be aware that they are implemented using search list logical names that store the value in pieces, each 255-byte piece (up to 128 of them) being an element in the search list. When doing a lookup in <code>%ENV</code> from within Perl, the elements are combined into a single value. The existing VMS-specific ability to access individual elements of a search list logical name via the <code>$ENV</code>{&#8216;foo;N&#8217;} syntax (where N is the search list index) is unimpaired. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The piping implementation now uses local rather than global <font SIZE="-1">DCL</font> symbols for inter-process communication. </p>
+<dd> <p> The piping implementation now uses local rather than global DCL symbols for inter-process communication. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> File::Find could become confused when navigating to a relative directory whose name collided with a logical name. This problem has been corrected by adding directory syntax to relative path names, thus preventing logical name translation. </p>
@@ -311,7 +311,7 @@ description: "perl581delta – what is new for perl v5.8.1"
 <dd> <p> The four-argument form of <code>select()</code> did not preserve $! (errno) properly when there were errors in the underlying call. This is now fixed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The ``<font SIZE="-1">CR CR LF&#8217;&#8216;</font> problem of has been fixed, binmode(<font SIZE="-1">FH,</font> ``:crlf&#8217;&#8216;) is now effectively a no-op. </p>
+<dd> <p> The ``CR CR LF&#8217;&#8216; problem of has been fixed, binmode(FH, ``:crlf&#8217;&#8216;) is now effectively a no-op. </p>
  </dd></dl>
 <h2>New or Changed Diagnostics</h2>
 <p> All the warnings related to <code>pack()</code> and <code>unpack()</code> were made more informative and consistent.  </p>
@@ -337,7 +337,7 @@ description: "perl581delta – what is new for perl v5.8.1"
 <p> If you think this </p>
 <pre><code>    $x &amp; $y == 0
 </code></pre>
-<p> tests whether the bitwise <font SIZE="-1">AND</font> of <code>$x</code> and <code>$y</code> is zero, you will like this warning.  </p>
+<p> tests whether the bitwise AND of <code>$x</code> and <code>$y</code> is zero, you will like this warning.  </p>
 <h3>New Pseudo-hashes are deprecated</h3>
 <p> This warning should have been already in 5.8.0, since they are.  </p>
 <code></code><h3>New read() on %s filehandle %s</h3>
@@ -351,17 +351,17 @@ description: "perl581delta – what is new for perl v5.8.1"
 <h3>New Use of freed value in iteration</h3>
 <p> Something modified the values being iterated over. This is not good.  </p>
 <h2>Changed Internals</h2>
-<p> These news matter to you only if you either write <font SIZE="-1">XS</font> code or like to know about or hack Perl internals (using Devel::Peek or any of the <code>&quot;B::&quot;</code> modules counts), or like to run Perl with the <code>&quot;-D&quot;</code> option. </p>
-<p> The embedding examples of perlembed have been reviewed to be up to date and consistent: for example, the correct use of <font SIZE="-1"><code>PERL_SYS_INIT3</code></font><code>()</code> and <font SIZE="-1"><code>PERL_SYS_TERM</code></font><code>()</code>. </p>
+<p> These news matter to you only if you either write XS code or like to know about or hack Perl internals (using Devel::Peek or any of the <code>&quot;B::&quot;</code> modules counts), or like to run Perl with the <code>&quot;-D&quot;</code> option. </p>
+<p> The embedding examples of perlembed have been reviewed to be up to date and consistent: for example, the correct use of <code>PERL_SYS_INIT3</code><code>()</code> and <code>PERL_SYS_TERM</code><code>()</code>. </p>
 <p> Extensive reworking of the pad code (the code responsible for lexical variables) has been conducted by Dave Mitchell. </p>
 <p> Extensive work on the v-strings by John Peacock. </p>
-<p> <font SIZE="-1">UTF-8</font> length and position cache: to speed up the handling of Unicode (<font SIZE="-1">UTF-8</font>) scalars, a cache was introduced. Potential problems exist if an extension bypasses the official APIs and directly modifies the <font SIZE="-1">PV</font> of an <font SIZE="-1">SV:</font> the <font SIZE="-1">UTF-8</font> cache does not get cleared as it should. </p>
+<p> UTF-8 length and position cache: to speed up the handling of Unicode (UTF-8) scalars, a cache was introduced. Potential problems exist if an extension bypasses the official APIs and directly modifies the PV of an SV: the UTF-8 cache does not get cleared as it should. </p>
 <p> APIs obsoleted in Perl 5.8.0, like sv_2pv, sv_catpvn, sv_catsv, sv_setsv, are again available. </p>
 <p> Certain Perl core C APIs like cxinc and regatom are no longer available at all to code outside the Perl core of the Perl core extensions. This is intentional. They never should have been available with the shorter names, and if you application depends on them, you should (be ashamed and) contact perl5-porters to discuss what are the proper APIs. </p>
-<p> Certain Perl core C APIs like <code>&quot;Perl_list&quot;</code> are no longer available without their <code>&quot;Perl_&quot;</code> prefix. If your <font SIZE="-1">XS</font> module stops working because some functions cannot be found, in many cases a simple fix is to add the <code>&quot;Perl_&quot;</code> prefix to the function and the thread context <code>&quot;aTHX_&quot;</code> as the first argument of the function call. This is also how it should always have been done: letting the Perl_-less forms to leak from the core was an accident. For cleaner embedding you can also force this for all APIs by defining at compile time the cpp define <font SIZE="-1">PERL_NO_SHORT_NAMES.</font> </p>
+<p> Certain Perl core C APIs like <code>&quot;Perl_list&quot;</code> are no longer available without their <code>&quot;Perl_&quot;</code> prefix. If your XS module stops working because some functions cannot be found, in many cases a simple fix is to add the <code>&quot;Perl_&quot;</code> prefix to the function and the thread context <code>&quot;aTHX_&quot;</code> as the first argument of the function call. This is also how it should always have been done: letting the Perl_-less forms to leak from the core was an accident. For cleaner embedding you can also force this for all APIs by defining at compile time the cpp define PERL_NO_SHORT_NAMES. </p>
 <p> <code>Perl_save_bool()</code> has been added. </p>
 <p> Regexp objects (those created with <code>&quot;qr&quot;</code>) now have S-magic rather than R-magic. This fixed regexps of the form /...(??{...;$x})/ to no longer ignore changes made to <code>$x</code>. The S-magic avoids dropping the caching optimization and making (??{...}) constructs obscenely slow (and consequently useless). See also ``Magic Variables&#8217;&#8216; in perlguts. Regexp::Copy was affected by this change. </p>
-<p> The Perl internal debugging macros <font SIZE="-1"><code>DEBUG</code></font><code>()</code> and <font SIZE="-1"><code>DEB</code></font><code>()</code> have been renamed to <font SIZE="-1"><code>PERL_DEBUG</code></font><code>()</code> and <font SIZE="-1"><code>PERL_DEB</code></font><code>()</code> to avoid namespace conflicts. </p>
+<p> The Perl internal debugging macros <code>DEBUG</code><code>()</code> and <code>DEB</code><code>()</code> have been renamed to <code>PERL_DEBUG</code><code>()</code> and <code>PERL_DEB</code><code>()</code> to avoid namespace conflicts. </p>
 <p> <code>&quot;-DL&quot;</code> removed (the leaktest had been broken and unsupported for years, use alternative debugging mallocs or tools like valgrind and Purify). </p>
 <p> Verbose modifier <code>&quot;v&quot;</code> added for <code>&quot;-DXv&quot;</code> and <code>&quot;-Dsv&quot;</code>, see perlrun.  </p>
 <h2>New Tests</h2>
@@ -369,7 +369,7 @@ description: "perl581delta – what is new for perl v5.8.1"
 <h2>Known Problems</h2>
 <p> The hash randomisation mentioned in ``Incompatible Changes&#8217;&#8216; is definitely problematic: it will wake dormant bugs and shake out bad assumptions. </p>
 <p> If you want to use mod_perl 2.x with Perl 5.8.1, you will need mod_perl-1.99_10 or higher. Earlier versions of mod_perl 2.x do not work with the randomised hashes. (mod_perl 1.x works fine.) You will also need Apache::Test 1.04 or higher. </p>
-<p> Many of the rarer platforms that worked 100% or pretty close to it with perl 5.8.0 have been left a little bit untended since their maintainers have been otherwise busy lately, and therefore there will be more failures on those platforms. Such platforms include Mac <font SIZE="-1">OS</font> Classic, <font SIZE="-1">IBM</font> z/OS (and other <font SIZE="-1">EBCDIC</font> platforms), and NetWare. The most common Perl platforms (Unix and Unix-like, Microsoft platforms, and <font SIZE="-1">VMS</font>) have large enough testing and expert population that they are doing well.  </p>
+<p> Many of the rarer platforms that worked 100% or pretty close to it with perl 5.8.0 have been left a little bit untended since their maintainers have been otherwise busy lately, and therefore there will be more failures on those platforms. Such platforms include Mac OS Classic, IBM z/OS (and other EBCDIC platforms), and NetWare. The most common Perl platforms (Unix and Unix-like, Microsoft platforms, and VMS) have large enough testing and expert population that they are doing well.  </p>
 <h3>Tied hashes in scalar context</h3>
 <p> Tied hashes do not currently return anything useful in scalar context, for example when used as boolean tests: </p>
 <pre><code>        if (%tied_hash) { ... }
@@ -377,17 +377,17 @@ description: "perl581delta – what is new for perl v5.8.1"
 <p> The current nonsensical behaviour is always to return false, regardless of whether the hash is empty or has elements. </p>
 <p> The root cause is that there is no interface for the implementors of tied hashes to implement the behaviour of a hash in scalar context.  </p>
 <h3>Net::Ping 450_service and 510_ping_udp failures</h3>
-<p> The subtests 9 and 18 of lib/Net/Ping/t/450_service.t, and the subtest 2 of lib/Net/Ping/t/510_ping_udp.t might fail if you have an unusual networking setup. For example in the latter case the test is trying to send a <font SIZE="-1">UDP</font> ping to the <font SIZE="-1">IP</font> address 127.0.0.1.  </p>
+<p> The subtests 9 and 18 of lib/Net/Ping/t/450_service.t, and the subtest 2 of lib/Net/Ping/t/510_ping_udp.t might fail if you have an unusual networking setup. For example in the latter case the test is trying to send a UDP ping to the IP address 127.0.0.1.  </p>
 <h3>B::C</h3>
 <p> The C-generating compiler backend B::C (the frontend being <code>&quot;perlcc -c&quot;</code>) is even more broken than it used to be because of the extensive lexical variable changes. (The good news is that B::Bytecode and ByteLoader are better than they used to be.)  </p>
 <h2>Platform Specific Problems</h2>
-<font SIZE="-1"></font><h3>EBCDIC Platforms</h3>
-<p> <font SIZE="-1">IBM</font> z/OS and other <font SIZE="-1">EBCDIC</font> platforms continue to be problematic regarding Unicode support. Many Unicode tests are skipped when they really should be fixed.  </p>
+<h3>EBCDIC Platforms</h3>
+<p> IBM z/OS and other EBCDIC platforms continue to be problematic regarding Unicode support. Many Unicode tests are skipped when they really should be fixed.  </p>
 <h3>Cygwin 1.5 problems</h3>
-<p> In Cygwin 1.5 the <i>io/tell</i> and <i>op/sysio</i> tests have failures for some yet unknown reason. In 1.5.5 the threads tests stress_cv, stress_re, and stress_string are failing unless the environment variable <font SIZE="-1">PERLIO</font> is set to ``perlio&#8217;&#8216; (which makes also the io/tell failure go away). </p>
+<p> In Cygwin 1.5 the <i>io/tell</i> and <i>op/sysio</i> tests have failures for some yet unknown reason. In 1.5.5 the threads tests stress_cv, stress_re, and stress_string are failing unless the environment variable PERLIO is set to ``perlio&#8217;&#8216; (which makes also the io/tell failure go away). </p>
 <p> Perl 5.8.1 does build and work well with Cygwin 1.3: with (uname -a) <code>&quot;CYGWIN_NT-5.0 ... 1.3.22(0.78/3/2) 2003-03-18 09:20 i686 ...&quot;</code> a 100% ``make test&#8217;&#8216; was achieved with <code>&quot;Configure -des -Duseithreads&quot;</code>.  </p>
-<font SIZE="-1"></font><h3>HP-UX: HP cc warnings about sendfile and sendpath</h3>
-<p> With certain <font SIZE="-1">HP C</font> compiler releases (e.g. B.11.11.02) you will get many warnings like this (lines wrapped for easier reading): </p>
+<h3>HP-UX: HP cc warnings about sendfile and sendpath</h3>
+<p> With certain HP C compiler releases (e.g. B.11.11.02) you will get many warnings like this (lines wrapped for easier reading): </p>
 <pre><code>  cc: &quot;/usr/include/sys/socket.h&quot;, line 504: warning 562:
     Redeclaration of &quot;sendfile&quot; with a different storage class specifier:
       &quot;sendfile&quot; will have internal linkage.
@@ -396,11 +396,11 @@ description: "perl581delta – what is new for perl v5.8.1"
       &quot;sendpath&quot; will have internal linkage.
 </code></pre>
 <p> The warnings show up both during the build of Perl and during certain lib/ExtUtils tests that invoke the C compiler. The warning, however, is not serious and can be ignored.  </p>
-<font SIZE="-1"></font><h3>IRIX: t/uni/tr_7jis.t falsely failing</h3>
-<p> The test t/uni/tr_7jis.t is known to report failure under &#8216;make test&#8217; or the test harness with certain releases of <font SIZE="-1">IRIX</font> (at least <font SIZE="-1">IRIX 6.5</font> and MIPSpro Compilers Version 7.3.1.1m), but if run manually the test fully passes.  </p>
-<font SIZE="-1"></font><h3>Mac OS X: no usemymalloc</h3>
-<p> The Perl malloc (<code>&quot;-Dusemymalloc&quot;</code>) does not work at all in Mac <font SIZE="-1">OS X.</font> This is not that serious, though, since the native malloc works just fine.  </p>
-<font SIZE="-1"></font><h3>Tru64: No threaded builds with GNU cc (gcc)</h3>
+<h3>IRIX: t/uni/tr_7jis.t falsely failing</h3>
+<p> The test t/uni/tr_7jis.t is known to report failure under &#8216;make test&#8217; or the test harness with certain releases of IRIX (at least IRIX 6.5 and MIPSpro Compilers Version 7.3.1.1m), but if run manually the test fully passes.  </p>
+<h3>Mac OS X: no usemymalloc</h3>
+<p> The Perl malloc (<code>&quot;-Dusemymalloc&quot;</code>) does not work at all in Mac OS X. This is not that serious, though, since the native malloc works just fine.  </p>
+<h3>Tru64: No threaded builds with GNU cc (gcc)</h3>
 <p> In the latest Tru64 releases (e.g. v5.1B or later) gcc cannot be used to compile a threaded Perl (-Duseithreads) because the system <code>&quot;&lt;pthread.h&gt;&quot;</code> file doesn&#8217;t know about gcc.  </p>
 <h3>Win32: sysopen, sysread, syswrite</h3>
 <p> As of the 5.8.0 release, <code>sysopen()</code>/<code>sysread()</code>/<code>syswrite()</code> do not behave like they used to in 5.6.1 and earlier with respect to ``text&#8217;&#8216; mode. These built-ins now always operate in ``binary&#8217;&#8216; mode (even if <code>sysopen()</code> was passed the O_TEXT flag, or if <code>binmode()</code> was used on the file handle). Note that this issue should only make a difference for disk files, as sockets and pipes have always been in ``binary&#8217;&#8216; mode in the Windows port. As this behavior is currently considered a bug, compatible behavior may be re-introduced in a future release. Until then, the use of <code>sysopen()</code>, <code>sysread()</code> and <code>syswrite()</code> is not supported for ``text&#8217;&#8216; mode operations.  </p>
@@ -426,7 +426,7 @@ description: "perl581delta – what is new for perl v5.8.1"
 <p> instead of </p>
 <pre><code>   $c = $d unless defined $c;
 </code></pre>
-<p> The operator will have the same precedence and associativity as <code>&quot;||&quot;</code>. A source code patch against the Perl 5.8.1 sources will be available in <font SIZE="-1">CPAN</font> as <i>authors/id/H/HM/HMBRAND/dor-5.8.1.diff</i>. </p>
+<p> The operator will have the same precedence and associativity as <code>&quot;||&quot;</code>. A source code patch against the Perl 5.8.1 sources will be available in CPAN as <i>authors/id/H/HM/HMBRAND/dor-5.8.1.diff</i>. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;unpack()&quot;</code> will default to unpacking the <code>$_</code>. </p>
@@ -435,7 +435,7 @@ description: "perl581delta – what is new for perl v5.8.1"
 <dd> <p> Various Copy-On-Write techniques will be investigated in hopes of speeding up Perl. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">CPANPLUS,</font> Inline, and Module::Build will become core modules. </p>
+<dd> <p> CPANPLUS, Inline, and Module::Build will become core modules. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The ability to write true lexically scoped pragmas will be introduced. </p>
@@ -460,6 +460,6 @@ description: "perl581delta – what is new for perl v5.8.1"
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. You can browse and search the Perl 5 bugs at <a rel="nofollow" href="http://bugs.perl.org/">http://bugs.perl.org/</a>  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

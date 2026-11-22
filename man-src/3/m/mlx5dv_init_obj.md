@@ -119,7 +119,7 @@ MLX5DV_OBJ_PD = 1 &lt;&lt; 6,
 <h2>Return Value</h2>
 <p>0 on success or the value of errno on failure (which indicates the failure reason).</p>
 <h2>Notes</h2>
-<p>&nbsp;*&nbsp;The information if doorbell is blueflame is based on mlx5dv_qp-&gt;bf-&gt;size, in case of 0 it&#8217;s not a BF.<br />
+<p>&nbsp;*&nbsp;The information if doorbell is blueflame is based on mlx5dv_qp-&gt;bf-&gt;size, in case of 0 it&#8217;s not a BF.<br/>
 &nbsp;*&nbsp;Compatibility masks&nbsp;(comp_mask)&nbsp;are in/out fields.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-mlx5dv/">mlx5dv</a></code>(7)</p>

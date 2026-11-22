@@ -189,7 +189,7 @@ description: "smartd.conf – SMART Disk Monitoring Daemon Configuration File"
 <p> <i>intelliprop,N[+TYPE]</i> &#8211; the device consists of multiple ATA disks connected to an Intelliprop controller. The integer N is the port number from 0 to 3 of the ATA drive to be targeted. Please see the <code><a href="/docs/linux/man/8-smartctl/">smartctl</a></code>(8) man page for further details. </p>
 <p> <i>jmb39x,N[,sLBA][,force][+TYPE]</i> &#8211; [NEW EXPERIMENTAL SMARTD FEATURE] the device consists of multiple SATA disks connected to a JMicron JMB39x RAID port multiplier. The integer N is the port number from 0 to 4. Please see the <code><a href="/docs/linux/man/8-smartctl/">smartctl</a></code>(8) man page for further details. </p>
 <p> <i>ignore</i> &#8211; the device specified by this configuration entry should be ignored. This allows to ignore specific devices which are detected by a following DEVICESCAN configuration line. It may also be used to temporary disable longer multi-line configuration entries. This Directive may be used in conjunction with the other &#8216;-d&#8217; Directives. </p>
-<p> <i>removable</i> &#8211; the device or its media is removable. This indicates to <code>smartd</code> that it should continue (instead of exiting, which is the default behavior) if the device does not appear to be present when <code>smartd</code> is started. This directive also suppresses warning emails and repeated log messages if the device is removed after startup. This Directive may be used in conjunction with the other &#8216;-d&#8217; Directives.<br />
+<p> <i>removable</i> &#8211; the device or its media is removable. This indicates to <code>smartd</code> that it should continue (instead of exiting, which is the default behavior) if the device does not appear to be present when <code>smartd</code> is started. This directive also suppresses warning emails and repeated log messages if the device is removed after startup. This Directive may be used in conjunction with the other &#8216;-d&#8217; Directives.<br/>
  <code>WARNING: Removing a device and connecting a different one to same interface is not supported and may result in bogus warnings until smartd is restarted.</code></p>
 <dt><code>-n POWERMODE[,N][,q]</code></dt>
 <dd>[ATA only] This &#8216;nocheck&#8217; Directive is used to prevent a disk from being spun-up when it is periodically polled by <code>smartd</code>. </dd>
@@ -257,17 +257,17 @@ description: "smartd.conf – SMART Disk Monitoring Daemon Configuration File"
 <dd>is the hour of the day, written with two decimal digits, and given in hours after midnight. The range is 00 (midnight to just before 1 am) to 23 (11pm to just before midnight) inclusive. Do <code>not</code> use a single decimal digit or the match will always fail!</dd></dl>
 </dl>
 <dd>Some examples follow. In reading these, keep in mind that in extended regular expressions a dot <code>&#8216;.&#8217;</code> matches any single character, and a parenthetical expression such as <code>&#8216;(A|B|C)&#8217;</code> denotes any one of the three possibilities <code>A</code>, <code>B</code>, or <code>C</code>. </dd>
-<p> To schedule a short Self-Test between 2-3 am every morning, use:<br />
- <code> -s S/../.././02</code><br />
- To schedule a long Self-Test between 4-5 am every Sunday morning, use:<br />
- <code> -s L/../../7/04</code><br />
- To schedule a long Self-Test between 10-11 pm on the first and fifteenth day of each month, use:<br />
- <code> -s L/../(01|15)/./22</code><br />
- To schedule an Offline Immediate test after every midnight, 6 am, noon, and 6 pm, plus a Short Self-Test daily at 1-2 am and a Long Self-Test every Saturday at 3-4 am, use:<br />
- <code> -s (O/../.././(00|06|12|18)|S/../.././01|L/../../6/03)</code><br />
+<p> To schedule a short Self-Test between 2-3 am every morning, use:<br/>
+ <code> -s S/../.././02</code><br/>
+ To schedule a long Self-Test between 4-5 am every Sunday morning, use:<br/>
+ <code> -s L/../../7/04</code><br/>
+ To schedule a long Self-Test between 10-11 pm on the first and fifteenth day of each month, use:<br/>
+ <code> -s L/../(01|15)/./22</code><br/>
+ To schedule an Offline Immediate test after every midnight, 6 am, noon, and 6 pm, plus a Short Self-Test daily at 1-2 am and a Long Self-Test every Saturday at 3-4 am, use:<br/>
+ <code> -s (O/../.././(00|06|12|18)|S/../.././01|L/../../6/03)</code><br/>
  If Long Self-Tests of a large disks take longer than the system uptime, a full disk test can be performed by several Selective Self-Tests. To setup a full test of a 1 TB disk within 20 days (one 50 GB span each day), run this command once: </p>
 <pre> smartctl -t select,0-99999999 /dev/sda</pre>
-<p>To run the next test spans on Monday-Friday between 12-13 am, run smartd with this directive:<br />
+<p>To run the next test spans on Monday-Friday between 12-13 am, run smartd with this directive:<br/>
  <code> -s n/../../[1-5]/12</code> </p>
 <p> Scheduled tests are run immediately following the regularly-scheduled device polling, if the current local date, time, and test type, match <code>REGEXP</code>. By default the regularly-scheduled device polling occurs every thirty minutes after starting <code>smartd</code>. Take caution if you use the &#8216;-i&#8217; option to make this polling interval more than sixty minutes: the poll times may fail to coincide with any of the testing times that you have specified with <code>REGEXP</code>. In this case the test will be run following the next device polling. </p>
 <p> Before running an offline or self-test, <code>smartd</code> checks to be sure that a self-test is not already running. If a self-test <code>is</code> already running, then this running self test will <code>not</code> be interrupted to begin another test. </p>
@@ -314,19 +314,19 @@ description: "smartd.conf – SMART Disk Monitoring Daemon Configuration File"
 <dt><code>SMARTD_DEVICEINFO</code></dt>
 <dd>is set to device identify information. It includes most of the info printed by <code>smartctl -i</code> but uses a brief single line format. This device info is also logged when <code>smartd</code> starts up. The string contains space characters and is NOT quoted.</dd>
 <dt><code>SMARTD_FAILTYPE</code></dt>
-<dd>gives the reason for the warning or message email. The possible values that it takes and their meanings are:<br />
- <i>EmailTest</i>: this is an email test message.<br />
- <i>Health</i>: the SMART health status indicates imminent failure.<br />
- <i>Usage</i>: a usage Attribute has failed.<br />
- <i>SelfTest</i>: the number of self-test failures has increased.<br />
- <i>ErrorCount</i>: the number of errors in the ATA error log has increased.<br />
- <i>CurrentPendingSector</i>: one of more disk sectors could not be read and are marked to be reallocated (replaced with spare sectors).<br />
- <i>OfflineUncorrectableSector</i>: during off-line testing, or self-testing, one or more disk sectors could not be read.<br />
- <i>Temperature</i>: Temperature reached critical limit (see -W directive).<br />
- <i>FailedHealthCheck</i>: the SMART health status command failed.<br />
- <i>FailedReadSmartData</i>: the command to read SMART Attribute data failed.<br />
- <i>FailedReadSmartErrorLog</i>: the command to read the SMART error log failed.<br />
- <i>FailedReadSmartSelfTestLog</i>: the command to read the SMART self-test log failed.<br />
+<dd>gives the reason for the warning or message email. The possible values that it takes and their meanings are:<br/>
+ <i>EmailTest</i>: this is an email test message.<br/>
+ <i>Health</i>: the SMART health status indicates imminent failure.<br/>
+ <i>Usage</i>: a usage Attribute has failed.<br/>
+ <i>SelfTest</i>: the number of self-test failures has increased.<br/>
+ <i>ErrorCount</i>: the number of errors in the ATA error log has increased.<br/>
+ <i>CurrentPendingSector</i>: one of more disk sectors could not be read and are marked to be reallocated (replaced with spare sectors).<br/>
+ <i>OfflineUncorrectableSector</i>: during off-line testing, or self-testing, one or more disk sectors could not be read.<br/>
+ <i>Temperature</i>: Temperature reached critical limit (see -W directive).<br/>
+ <i>FailedHealthCheck</i>: the SMART health status command failed.<br/>
+ <i>FailedReadSmartData</i>: the command to read SMART Attribute data failed.<br/>
+ <i>FailedReadSmartErrorLog</i>: the command to read the SMART error log failed.<br/>
+ <i>FailedReadSmartSelfTestLog</i>: the command to read the SMART self-test log failed.<br/>
  <i>FailedOpenDevice</i>: the open() command to the device failed.</dd>
 <dt><code>SMARTD_ADDRESS</code></dt>
 <dd>is determined by the address argument ADD of the &#8216;-m&#8217; Directive. If ADD is <code>&lt;nomailer&gt;</code>, then <code>SMARTD_ADDRESS</code> is not set. Otherwise, it is set to the comma-separated-list of email addresses given by the argument ADD, with the commas replaced by spaces (example:admin [at] example.com root). If more than one email address is given, then this string will contain space characters and is NOT quoted, so to use it in a shell script you may want to enclose it in double quotes.</dd>
@@ -335,7 +335,7 @@ description: "smartd.conf – SMART Disk Monitoring Daemon Configuration File"
 <dt><code>SMARTD_FULLMESSAGE</code></dt>
 <dd>is set to the contents of the entire email warning message string from <code>smartd</code>. This message string contains space and return characters and is NOT quoted. So to use $SMARTD_FULLMESSAGE in a shell script you should probably enclose it in double quotes.</dd>
 <dt><code>SMARTD_TFIRST</code></dt>
-<dd>is a text string giving the time and date at which the first problem of this type was reported. This text string contains space characters and no newlines, and is NOT quoted. For example:<br />
+<dd>is a text string giving the time and date at which the first problem of this type was reported. This text string contains space characters and no newlines, and is NOT quoted. For example:<br/>
  Sun Feb 9 14:58:19 2003 CST</dd>
 <dt><code>SMARTD_TFIRSTEPOCH</code></dt>
 <dd>is an integer, which is the unix epoch (number of seconds since Jan 1, 1970) for <code>SMARTD_TFIRST</code>.</dd>
@@ -346,9 +346,9 @@ description: "smartd.conf – SMART Disk Monitoring Daemon Configuration File"
 </dl>
 <dd>If the &#8216;-m ADD&#8217; Directive is given with a normal address argument, then the executable pointed to by PATH will be run in a shell with STDIN receiving the body of the email message, and with the same command-line arguments: </dd>
 <pre>&nbsp;<wbr>&nbsp;-s &quot;$SMARTD_SUBJECT&quot; $SMARTD_ADDRESS</pre>
-<p>that would normally be provided to &#8216;mail&#8217;. Examples include:<br />
- <code>-m user [at] home -M exec /usr/bin/mail</code><br />
- <code>-m admin [at] work -M exec /usr/local/bin/mailto</code><br />
+<p>that would normally be provided to &#8216;mail&#8217;. Examples include:<br/>
+ <code>-m user [at] home -M exec /usr/bin/mail</code><br/>
+ <code>-m admin [at] work -M exec /usr/local/bin/mailto</code><br/>
  <code>-m root -M exec /Example_1/shell/script/below</code> </p>
 <p> If the &#8216;-m ADD&#8217; Directive is given with the special address argument <code>&lt;nomailer&gt;</code> then the executable pointed to by PATH is run in a shell with <code>no</code> STDIN and <code>no</code> command-line arguments, for example: </p>
 <pre>&nbsp;<wbr>&nbsp;-m &lt;nomailer&gt; -M exec /Example_2/shell/script/below</pre>
@@ -393,13 +393,13 @@ description: "smartd.conf – SMART Disk Monitoring Daemon Configuration File"
 <p> The warning email counter is reset if the temperature dropped below <code>INFO</code> or <code>CRIT</code>-5 if <code>INFO</code> is not specified. </p>
 <p> If this directive is used in conjunction with state persistence (&#8216;-s&#8217; option), the min and max temperature values are preserved across boot cycles. The minimum temperature value is not updated during the first 30 minutes after startup. </p>
 <p> To disable any of the 3 reports, set the corresponding limit to 0. Trailing zero arguments may be omitted. By default, all temperature reports are disabled (&#8216;-W 0&#8217;). </p>
-<p> To track temperature changes of at least 2 degrees, use:<br />
- <code>-W 2</code><br />
- To log informal messages on temperatures of at least 40 degrees, use:<br />
- <code>-W 0,40</code><br />
- For warning messages/mails on temperatures of at least 45 degrees, use:<br />
- <code>-W 0,0,45</code><br />
- To combine all of the above reports, use:<br />
+<p> To track temperature changes of at least 2 degrees, use:<br/>
+ <code>-W 2</code><br/>
+ To log informal messages on temperatures of at least 40 degrees, use:<br/>
+ <code>-W 0,40</code><br/>
+ For warning messages/mails on temperatures of at least 45 degrees, use:<br/>
+ <code>-W 0,0,45</code><br/>
+ To combine all of the above reports, use:<br/>
  <code>-W 2,40,45</code> </p>
 <p> For ATA devices, smartd interprets Attribute 194 or 190 as Temperature Celsius by default. This can be changed to Attribute 9 or 220 by the drive database or by the &#8216;-v 9,temp&#8217; or &#8216;-v 220,temp&#8217; directive. </p>
 <p> For NVMe devices, smartd checks the maximum of the Composite Temperature value and all Temperature Sensor values reported by SMART/Health Information log.</p>
@@ -431,8 +431,8 @@ description: "smartd.conf – SMART Disk Monitoring Daemon Configuration File"
 <dd>Comment: ignore the remainder of the line.</dd>
 <dt><code>\</code></dt>
 <dd>Continuation character: if this is the last non-white or non-comment character on a line, then the following line is a continuation of the current one.</dd></dl>
-<p> If you are not sure which Directives to use, I suggest experimenting for a few minutes with <code>smartctl</code> to see what SMART functionality your disk(s) support(s). If you do not like voluminous syslog messages, a good choice of <code>smartd</code> configuration file Directives might be:<br />
- <code>-H -l selftest -l error -f</code>.<br />
+<p> If you are not sure which Directives to use, I suggest experimenting for a few minutes with <code>smartctl</code> to see what SMART functionality your disk(s) support(s). If you do not like voluminous syslog messages, a good choice of <code>smartd</code> configuration file Directives might be:<br/>
+ <code>-H -l selftest -l error -f</code>.<br/>
  If you want more frequent information, use: <code>-a</code>. </p>
 <dl>
 <dt><code>EXAMPLES OF SHELL SCRIPTS FOR &#8216;-M exec&#8217;</code></dt>
@@ -471,5 +471,5 @@ sleep 30
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-smartd/">smartd</a></code>(8), <code><a href="/docs/linux/man/8-smartctl/">smartctl</a></code>(8), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7). </p>
 <h2>Package Version</h2>
-<p>smartmontools-7.1 2019-12-30 r5022<br />
+<p>smartmontools-7.1 2019-12-30 r5022<br/>
  $Id: smartd.conf.5.in 5004 2019-12-13 20:20:45Z chrfranke $</p>

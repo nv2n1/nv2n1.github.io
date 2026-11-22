@@ -25,7 +25,7 @@ description: "gnutls_register_md5_handler – API function"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-gnutls [at] gnu.org&gt;. GnuTLS home page: <a rel="nofollow" href="http://www.gnu.org/software/gnutls/">http://www.gnu.org/software/gnutls/</a> General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2008 Free Software Foundation.<br />
+<p> Copyright &#169; 2008 Free Software Foundation.<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>

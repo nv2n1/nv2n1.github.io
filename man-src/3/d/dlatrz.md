@@ -11,7 +11,7 @@ description: "dlatrz.f –"
 <p> dlatrz.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlatrz</code> (M, N, L, A, LDA, TAU, WORK)<br />
+<p> subroutine <code>dlatrz</code> (M, N, L, A, LDA, TAU, WORK)<br/>
  <i></i><code>DLATRZ</code> factors an upper trapezoidal matrix by means of orthogonal transformations.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlatrz (integerM, integerN, integerL, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAU, double precision, dimension( * )WORK)</h3>

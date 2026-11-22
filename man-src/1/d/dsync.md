@@ -10,7 +10,7 @@ description: "dsync – Dovecot’s mailbox synchronization utility"
 
 <p> dsync &#8211; Dovecot&#8217;s mailbox synchronization utility</p>
 <h2>SYNOPSIS</h2>
-<p> <code>dsync</code> [<i>options</i>] <code>mirror&nbsp;<wbr></code><i>location2</i><br />
+<p> <code>dsync</code> [<i>options</i>] <code>mirror&nbsp;<wbr></code><i>location2</i><br/>
  <code>dsync</code> [<i>options</i>] <code>backup&nbsp;<wbr></code><i>location2</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>dsync</code> is Dovecot&#8217;s mailbox synchronization utility. It can be used for several different use cases: Two-way synchronization of mailboxes in different servers (via <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1)), creating backups of mails to a remote server, and convert mailboxes from/to different mailbox formats. </p>

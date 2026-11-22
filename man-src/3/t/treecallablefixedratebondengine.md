@@ -14,7 +14,7 @@ description: "QuantLib::TreeCallableFixedRateBondEngine – Numerical lattice en
 <p> Inherited by <code>TreeCallableZeroCouponBondEngine</code>. </p>
 <h3>Public Member Functions</h3>
 <p>void <code>calculate</code> () const </p>
-<p> <code>Constructors</code><br />
+<p> <code>Constructors</code><br/>
  <code>Note:</code></p>
 <dl COMPACT>
 <dd>the term structure is only needed when the short-rate model cannot provide one itself.</dd></dl>

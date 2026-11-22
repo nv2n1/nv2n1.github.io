@@ -10,21 +10,21 @@ description: "virt-clone – clone existing virtual machine images"
 
 <p> virt-clone &#8211; clone existing virtual machine images </p>
 <h2>SYNOPSIS</h2>
-<p> <code>virt-clone</code> [<font SIZE="-1">OPTION</font>]&#8230;</p>
+<p> <code>virt-clone</code> [OPTION]&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>virt-clone</code> is a command line tool for cloning existing virtual machine images using the <tt>&quot;libvirt&quot;</tt> hypervisor management library. It will copy the disk images of any existing virtual machine, and define a new guest with an identical virtual hardware configuration. Elements which require uniqueness will be updated to avoid a clash between old and new guests. </p>
 <p> By default, virt-clone will show an error if the necessary information to clone the guest is not provided. The &#8211;auto-clone option will generate all needed input, aside from the source guest to clone. </p>
-<p> Please note, virt-clone does not change anything _inside_ the guest <font SIZE="-1">OS,</font> it only duplicates disks and does host side changes. So things like changing passwords, changing static <font SIZE="-1">IP</font> address, etc are outside the scope of this tool. For these types of changes, please see <code>virt-sysprep</code>.</p>
+<p> Please note, virt-clone does not change anything _inside_ the guest OS, it only duplicates disks and does host side changes. So things like changing passwords, changing static IP address, etc are outside the scope of this tool. For these types of changes, please see <code>virt-sysprep</code>.</p>
 <h2>GENERAL OPTIONS</h2>
 <p> Most options are not required. Minimum requirements are &#8211;original or &#8211;original-xml (to specify the guest to clone), &#8211;name, and appropriate storage options via -file.</p>
 <dl>
-<dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
+<dt><code>&#8211;connect</code> URI</dt>
 <dd> Connect to a non-default hypervisor. See <i><a href="/docs/linux/man/1-virt-install/">virt-install</a></i>(1) for details</dd>
-<dt><code>-o</code> <font SIZE="-1">ORIGINAL_GUEST</font></dt>
+<dt><code>-o</code> ORIGINAL_GUEST</dt>
 <dd>
-</dd><dt><code>&#8211;original</code> <font SIZE="-1">ORIGINAL_GUEST</font></dt>
+</dd><dt><code>&#8211;original</code> ORIGINAL_GUEST</dt>
 <dd> Name of the original guest to be cloned. This guest must be shut off or paused since it is not possible to safely clone active guests at this time.</dd>
-<dt><code>&#8211;original-xml</code> <font SIZE="-1">ORIGINAL_XML</font></dt>
+<dt><code>&#8211;original-xml</code> ORIGINAL_XML</dt>
 <dd> Libvirt guest xml file to use as the original guest. The guest does not need to be defined on the libvirt connection. This takes the place of the <tt>&quot;--original&quot;</tt> parameter.</dd>
 <dt><code>&#8211;auto-clone</code></dt>
 <dd> Generate a new guest name, and paths for new storage. </dd>
@@ -36,32 +36,32 @@ description: "virt-clone – clone existing virtual machine images"
   Generated disk path  : /home/user/foobar-clone.img
 </pre>
 <p> If generated names collide with existing VMs or storage, a number is appended, such as foobar-clone-1.img, or MyVM-clone-3.</p>
-<dt><code>-n</code> <font SIZE="-1">NAME</font></dt>
+<dt><code>-n</code> NAME</dt>
 <dd>
-</dd><dt><code>&#8211;name</code> <font SIZE="-1">NAME</font></dt>
+</dd><dt><code>&#8211;name</code> NAME</dt>
 <dd> Name of the new guest virtual machine instance. This must be unique amongst all guests known to the hypervisor connection, including those not currently active.</dd>
-<dt><code>-u</code> <font SIZE="-1">UUID</font></dt>
+<dt><code>-u</code> UUID</dt>
 <dd>
-</dd><dt><code>&#8211;uuid</code> <font SIZE="-1">UUID</font></dt>
-<dd> <font SIZE="-1">UUID</font> for the guest; if none is given a random <font SIZE="-1">UUID</font> will be generated. If you specify <font SIZE="-1">UUID,</font> you should use a 32-digit hexadecimal number. <font SIZE="-1">UUID</font> are intended to be unique across the entire data center, and indeed world. Bear this in mind if manually specifying a <font SIZE="-1">UUID</font></dd>
-<dt><code>-f</code> <font SIZE="-1">DISKFILE</font></dt>
+</dd><dt><code>&#8211;uuid</code> UUID</dt>
+<dd> UUID for the guest; if none is given a random UUID will be generated. If you specify UUID, you should use a 32-digit hexadecimal number. UUID are intended to be unique across the entire data center, and indeed world. Bear this in mind if manually specifying a UUID</dd>
+<dt><code>-f</code> DISKFILE</dt>
 <dd>
-</dd><dt><code>&#8211;file</code> <font SIZE="-1">DISKFILE</font></dt>
+</dd><dt><code>&#8211;file</code> DISKFILE</dt>
 <dd> Path to the file, disk partition, or logical volume to use as the backing store for the new guest&#8217;s virtual disk. If the original guest has multiple disks, this parameter must be repeated multiple times, once per disk in the original virtual machine.</dd>
-<dt><code>&#8211;force-copy</code> <font SIZE="-1">TARGET</font></dt>
+<dt><code>&#8211;force-copy</code> TARGET</dt>
 <dd> Force cloning the passed disk target (&#8216;hdc&#8217;, &#8216;sda&#8217;, etc.). By default, <tt>&quot;virt-clone&quot;</tt> will skip certain disks, such as those marked &#8216;readonly&#8217; or &#8216;shareable&#8217;.</dd>
 <dt><code>&#8211;nonsparse</code></dt>
 <dd> Fully allocate the new storage if the path being cloned is a sparse file. See <i><a href="/docs/linux/man/1-virt-install/">virt-install</a></i>(1) for more details on sparse vs. nonsparse.</dd>
 <dt><code>&#8211;preserve-data</code></dt>
-<dd> No storage is cloned: disk images specific by &#8211;file are preserved as is, and referenced in the new clone <font SIZE="-1">XML.</font> This is useful if you want to clone a <font SIZE="-1">VM XML</font> template, but not the storage contents.</dd>
+<dd> No storage is cloned: disk images specific by &#8211;file are preserved as is, and referenced in the new clone XML. This is useful if you want to clone a VM XML template, but not the storage contents.</dd>
 <dt><code>&#8211;reflink</code></dt>
-<dd> When &#8211;reflink is specified, perform a lightweight copy. This is much faster if source images and destination images are all on the same btrfs filesystem. If <font SIZE="-1">COW</font> copy is not possible, then virt-clone fails.</dd>
-<dt><code>-m</code> <font SIZE="-1">MAC</font></dt>
+<dd> When &#8211;reflink is specified, perform a lightweight copy. This is much faster if source images and destination images are all on the same btrfs filesystem. If COW copy is not possible, then virt-clone fails.</dd>
+<dt><code>-m</code> MAC</dt>
 <dd>
-</dd><dt><code>&#8211;mac</code> <font SIZE="-1">MAC</font></dt>
-<dd> Fixed <font SIZE="-1">MAC</font> address for the guest; If this parameter is omitted, or the value <tt>&quot;RANDOM&quot;</tt> is specified a suitable address will be randomly generated. Addresses are applied sequentially to the networks as they are listed in the original guest <font SIZE="-1">XML.</font></dd>
+</dd><dt><code>&#8211;mac</code> MAC</dt>
+<dd> Fixed MAC address for the guest; If this parameter is omitted, or the value <tt>&quot;RANDOM&quot;</tt> is specified a suitable address will be randomly generated. Addresses are applied sequentially to the networks as they are listed in the original guest XML.</dd>
 <dt><code>&#8211;print-xml</code></dt>
-<dd> Print the generated clone <font SIZE="-1">XML</font> and exit without cloning.</dd>
+<dd> Print the generated clone XML and exit without cloning.</dd>
 <dt><code>&#8211;replace</code></dt>
 <dd> Shutdown and remove any existing guest with the passed <tt>&quot;--name&quot;</tt> before cloning the original guest.</dd>
 <dt><code>-h</code></dt>
@@ -94,7 +94,7 @@ description: "virt-clone – clone existing virtual machine images"
        --name newdemo \
        --file /var/lib/xen/images/newdemo.img
 </pre>
-<p> Clone a <font SIZE="-1">QEMU</font> guest with multiple disks </p>
+<p> Clone a QEMU guest with multiple disks </p>
 <pre><code>
 #virt - clone-- connect qemu: ///system \
        --original demo \
@@ -113,6 +113,6 @@ description: "virt-clone – clone existing virtual machine images"
 <h2>BUGS</h2>
 <p> Please see <a rel="nofollow" href="http://virt-manager.org/page/BugReporting">http://virt-manager.org/page/BugReporting</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) Fujitsu Limited, Copyright (C) Red Hat, Inc, and various contributors. This is free software. You may redistribute copies of it under the terms of the <font SIZE="-1">GNU</font> General Public License <tt>&quot;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&quot;</tt>. There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law.</p>
+<p> Copyright (C) Fujitsu Limited, Copyright (C) Red Hat, Inc, and various contributors. This is free software. You may redistribute copies of it under the terms of the GNU General Public License <tt>&quot;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&quot;</tt>. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <tt>&quot;<a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a>(1)&quot;</tt>, <tt><a href="/docs/linux/man/1-virsh/">virsh</a>(1)</tt>, <tt>&quot;<a href="/docs/linux/man/1-virt-install/">virt-install</a>(1)&quot;</tt>, <tt>&quot;<a href="/docs/linux/man/1-virt-manager/">virt-manager</a>(1)&quot;</tt>, the project website <tt>&quot;<a rel="nofollow" href="http://virt-manager.org">http://virt-manager.org</a>&quot;</tt> </p>

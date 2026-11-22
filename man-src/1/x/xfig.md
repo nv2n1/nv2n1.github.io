@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-xfig/"
 description: "xfig – Facility for Interactive Generation of figures under X11 Version 3.2.7b"
 ---
 
-<p> xfig &#8211; Facility for Interactive Generation of figures under X11<br />
+<p> xfig &#8211; Facility for Interactive Generation of figures under X11<br/>
  Version 3.2.7b </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfig</code> [<i>options</i>] [<i>file</i>]</p>
@@ -225,7 +225,7 @@ xpm               X11 Pixmap
 <p> <code>-lan</code>[<code>dscape</code>]</p>
 <dl>
 <dt>
-</dt><dd> Make <i>xfig</i> come up in landscape mode (10.5&quot; x 8&quot;). This is the default; however as the orientation is stored with Fig files, when you load a Fig file the orientation will change as required. This is only true for files of version 3.0 or higher.<br />
+</dt><dd> Make <i>xfig</i> come up in landscape mode (10.5&quot; x 8&quot;). This is the default; however as the orientation is stored with Fig files, when you load a Fig file the orientation will change as required. This is only true for files of version 3.0 or higher.<br/>
  See also -portrait.</dd></dl>
 <p> <code>-lat</code>[<code>exfonts</code>]</p>
 <dl>
@@ -385,7 +385,7 @@ b0         JIS B0     1030mm x 1456mm
 <p> <code>-showl</code>[<code>engths</code>]</p>
 <dl>
 <dt>
-</dt><dd> Makes <i>xfig</i> show the lengths of lines being drawn, in red text near the line itself. Also, when points are moved or added. In addition, imagine a triangle formed with the line segment as the hypotenuse, and a vertical and horizontal line forming the other two sides. These lines and their lengths are also drawn in red as the point is moved or added. This mode is ignored when drawing in freehand mode.<br />
+</dt><dd> Makes <i>xfig</i> show the lengths of lines being drawn, in red text near the line itself. Also, when points are moved or added. In addition, imagine a triangle formed with the line segment as the hypotenuse, and a vertical and horizontal line forming the other two sides. These lines and their lengths are also drawn in red as the point is moved or added. This mode is ignored when drawing in freehand mode.<br/>
  This flag may be toggled by pressing &lt;Meta&gt;i (default).</dd></dl>
 <p> <code>-shown</code>[<code>ums</code>]</p>
 <dl>
@@ -470,7 +470,7 @@ b0         JIS B0     1030mm x 1456mm
 <p> <code>-update</code> <i>file [ file &#8230; ]</i></p>
 <dl>
 <dt>
-</dt><dd> Run xfig in an &quot;update&quot; mode, where it will read each Fig file specified on the command line and write it out to the original file, in the current file format for the version of xfig being run. The original Fig file will be preserved with the suffix <i>.bak</i> attached to the name.<br />
+</dt><dd> Run xfig in an &quot;update&quot; mode, where it will read each Fig file specified on the command line and write it out to the original file, in the current file format for the version of xfig being run. The original Fig file will be preserved with the suffix <i>.bak</i> attached to the name.<br/>
  In this mode, xfig doesn&#8217;t connect the X server, so no window is opened, and it exits when finished.</dd></dl>
 <p> <code>-users</code>[<code>cale</code>] <i>scale</i></p>
 <dl>
@@ -593,7 +593,7 @@ visual string * -visual
             to see what visuals and depths are supported.
 </code></pre>
 <h2>BUGS and RESTRICTIONS</h2>
-<p> Please send bug reports, fixes, new features etc. to:<br />
+<p> Please send bug reports, fixes, new features etc. to:<br/>
  thomas.loimer [at] tuwien.ac.at </p>
 <p> Because of the difference of some fonts in some X servers and the PostScript fonts on printers, text alignment can be problematic. </p>
 <p> Not all operations employ smart redrawing of objects which are altered as a by product of the operation. You may need to use <i>Redraw</i> in these cases. </p>
@@ -649,95 +649,95 @@ express or implied warranty.
 <h2>AUTHORS</h2>
 <p> Many people have contributed to <i>xfig</i>. Here is a list of the people who have contributed the most (in chronological order): </p>
 <p> <code>Version 1:</code> </p>
-<p> Original author:<br />
+<p> Original author:<br/>
  Supoj Sutanthavibul, University of Texas at Austin </p>
-<p> The <i>LaTeX</i> line drawing modes were contributed by:<br />
+<p> The <i>LaTeX</i> line drawing modes were contributed by:<br/>
  Frank Schmuck, Cornell University </p>
-<p> Original X11 port by:<br />
+<p> Original X11 port by:<br/>
  Ken Yap, Rochester </p>
-<p> Variable window sizes, cleanup of X11 port, right hand side panel:<br />
+<p> Variable window sizes, cleanup of X11 port, right hand side panel:<br/>
  Dana Chee, Bellcore </p>
-<p> Cleanup of color port to X11 by:<br />
+<p> Cleanup of color port to X11 by:<br/>
  John T. Kohl, MIT </p>
 <p> <code>Version 2.0:</code> </p>
-<p> Area fill, multiple line thicknesses, multiple fonts and font sizes, bottom panel, line style/thickness, (and anything else that wasn&#8217;t written by the others) by:<br />
- Brian Smith<br />
- (standard disclaimer applies)<br />
+<p> Area fill, multiple line thicknesses, multiple fonts and font sizes, bottom panel, line style/thickness, (and anything else that wasn&#8217;t written by the others) by:<br/>
+ Brian Smith<br/>
+ (standard disclaimer applies)<br/>
  (bvsmith [at] lbl.gov) </p>
-<p> Popup change-object menu by:<br />
- Jon Tombs<br />
+<p> Popup change-object menu by:<br/>
+ Jon Tombs<br/>
  Frank Schmuck </p>
-<p> Zooming and panning functions, shift key select mechanism by:<br />
- Dieter Pellkofer<br />
+<p> Zooming and panning functions, shift key select mechanism by:<br/>
+ Dieter Pellkofer<br/>
  Henning Spruth </p>
-<p> Depth feature by:<br />
+<p> Depth feature by:<br/>
  Mike Lutz </p>
-<p> Cut/Paste by:<br />
+<p> Cut/Paste by:<br/>
  Tom Tkacik </p>
 <p> <code>Version 2.1:</code> </p>
 <p> Indicator panel, file menu popup, print menu popup, panning with rulers, mouse function window, regular polygon, rubberbanding of circles/ellipses, filled splines on canvas, dashed/dotted splines on canvas, update button, arbitrary angle rotation of objects, alignment in compound, object scaling, constrained copy/move, corner markers for compound, context sensitive corner markers, smarter redraw, undo for compound and point move for boxes, cancel object creation, point positioning to three resolutions, <i>TransFig</i> scalable text, hidden text, special text, save of figure on crash by: </p>
-<p> Paul King (king [at] cs.uq.oz.au)<br />
- with help from:<br />
+<p> Paul King (king [at] cs.uq.oz.au)<br/>
+ with help from:<br/>
  Brian Smith and Micah Beck (beck [at] cs.utk.edu) </p>
-<p> Encapsulated <i>PostScript</i> importing by:<br />
+<p> Encapsulated <i>PostScript</i> importing by:<br/>
  Brian Boyter </p>
-<p> Pan/zoom with ctrl key/mouse by:<br />
+<p> Pan/zoom with ctrl key/mouse by:<br/>
  Henning Spruth </p>
-<p> International characters by:<br />
+<p> International characters by:<br/>
  Herve Soulard </p>
-<p> Directory Browser based on XDir by:<br />
+<p> Directory Browser based on XDir by:<br/>
  Win Treese, Digital Equipment Corporation </p>
-<p> Rotated ellipses by:<br />
+<p> Rotated ellipses by:<br/>
  James Tough, Dept. of Computer Science, Heriot-Watt University, Scotland </p>
-<p> Rotated text from the <i>xvertext</i> package by:<br />
+<p> Rotated text from the <i>xvertext</i> package by:<br/>
  Alan Richardson, Space Science Centre, School of MAPS, University of Sussex </p>
-<p> Popup scale menu and dynamic switching between inches and cm by:<br />
+<p> Popup scale menu and dynamic switching between inches and cm by:<br/>
  Paul King (king [at] cs.uq.oz.au) </p>
-<p> Extensive man page formatting revisions by:<br />
+<p> Extensive man page formatting revisions by:<br/>
  David W. Sanderson </p>
-<p> Display Postscript code for IBM RS/6000 by:<br />
+<p> Display Postscript code for IBM RS/6000 by:<br/>
  Dave Hale (dhale [at] green.mines.colorado.edu) </p>
 <p> <code>Version 3.0:</code> </p>
-<p> New arrowhead types, separate pen/fill colors, new file protocol, more colors with extended color popup panel, new arc style, new fill patterns (bricks, etc), new line join and cap styles, export offset and file load offset, XPM import, XBM import and export (and anything else that wasn&#8217;t written by the others) by:<br />
- Brian Smith<br />
+<p> New arrowhead types, separate pen/fill colors, new file protocol, more colors with extended color popup panel, new arc style, new fill patterns (bricks, etc), new line join and cap styles, export offset and file load offset, XPM import, XBM import and export (and anything else that wasn&#8217;t written by the others) by:<br/>
+ Brian Smith<br/>
  (Note: the color popup panel was based on <i>xcoloredit</i> by Richard Hesketh) </p>
-<p> GIF header reading code by:<br />
+<p> GIF header reading code by:<br/>
  David Koblas from the giftoppm part of the pbmplus package </p>
-<p> XPM export code (using XPM3 libraries) by:<br />
+<p> XPM export code (using XPM3 libraries) by:<br/>
  Karel van Houten (K.H.C.vanHouten [at] research.ptt.nl) </p>
-<p> Higher figure resolution (1200dpi) by:<br />
+<p> Higher figure resolution (1200dpi) by:<br/>
  Ross Martin (martin [at] trcsun3.eas.asu.edu) </p>
-<p> Color quantization using neural network by:<br />
- Anthony Dekker (dekker [at] ACM.org)<br />
+<p> Color quantization using neural network by:<br/>
+ Anthony Dekker (dekker [at] ACM.org)<br/>
  [NEUQUANT Neural-Net quantization algorithm by Anthony Dekker, 1994. See &#8220;Kohonen neural networks for optimal colour quantization&#8221; in &#8220;Network: Computation in Neural Systems&#8221; Vol. 5 (1994) pp 351-367. for a discussion of the algorithm.] </p>
 <p> Floyd-Steinberg algorithm for dithering color images on monochrome displays lifted from the Pbmplus package by Jef Poskanser. </p>
-<p> rotate/flip objects around/about selected anchor point and multiple copies of objects by:<br />
+<p> rotate/flip objects around/about selected anchor point and multiple copies of objects by:<br/>
  Uwe Bonnes (bon [at] lte.e-technik.uni-erlangen.de) </p>
-<p> Input tablet extension by:<br />
+<p> Input tablet extension by:<br/>
  Greg LaCoste (greg [at] seismo.do.usbr.gov) </p>
 <p> <code>Version 3.1:</code> </p>
 <p> The only difference between protocol version 3.0 and version 3.1 is that the position of the &#8220;magnet&#8221; has been shifted by 14 fig units. In the 2.1 and older versions of xfig the grid was in multiples of 5 fig units, but they were on intervals 4, 9, 14, 19, etc. When version 3.0 was created, coordinates were simply multiplied by the ratio of the resolutions (1200/80 = 15) so values like 4 became 60 instead of 74 ((4+1)*15 &#8211; 1). </p>
 <p> The JPEG import/export code uses the Independent JPEG Group software (see jpeg/README for details) </p>
-<p> Image browser, editor and screen capture features by:<br />
+<p> Image browser, editor and screen capture features by:<br/>
  Jim Daley (jdaley [at] cix.compulink.co.uk) </p>
 <p> <code>Version 3.2:</code> </p>
-<p> The changes to the version 3.2 file protocol are the addition of the paper size, print/export magnification, single/multiple page indicator and a transparent color name used for GIF export to the header of the file.<br />
+<p> The changes to the version 3.2 file protocol are the addition of the paper size, print/export magnification, single/multiple page indicator and a transparent color name used for GIF export to the header of the file.<br/>
  The other difference in the version 3.2 protocol is the mathematical model used for splines. The new version uses X-splines which allows the user to mix interpolation and approximation points in a same curve. More precisely, it means that an X-spline curve is neither an interpolated spline nor an approximated one, it is BOTH (the behaviour of each point is controlled by one single parameter called &#8220;shape factor&#8221;). For additional information about X-splines, see: </p>
-<p>&nbsp;<wbr>&nbsp;&quot;X-Splines: A Spline Model Designed for the End User&quot;<br />
-&nbsp;<wbr>&nbsp;by C. Blanc and C. Schlick, Proceedings of SIGGRAPH&#8217;95<br />
+<p>&nbsp;<wbr>&nbsp;&quot;X-Splines: A Spline Model Designed for the End User&quot;<br/>
+&nbsp;<wbr>&nbsp;by C. Blanc and C. Schlick, Proceedings of SIGGRAPH&#8217;95<br/>
 &nbsp;<wbr>&nbsp;<a rel="nofollow" href="http://dept-info.labri.u-bordeaux.fr/~schlick/DOC/sig1.html">http://dept-info.labri.u-bordeaux.fr/~schlick/DOC/sig1.html</a> </p>
 <p> Caveat: Because previous spline models (quadratic B-splines and Bezier with hidden points) are no longer supported, curves that are present in version 3.1 and older files are automatically converted to X-splines. This translation is only an approximation process. It means that the converted curves are not exactly the same as the original ones. Though they are usually very close, some hand-fitting may be needed in some pathological cases. </p>
-<p> Inclusion of X-splines by:<br />
- Carole Blanc (blanc [at] labri.u-bordeaux.fr)<br />
- Christophe Schlick (schlick [at] labri.u-bordeaux.fr)<br />
+<p> Inclusion of X-splines by:<br/>
+ Carole Blanc (blanc [at] labri.u-bordeaux.fr)<br/>
+ Christophe Schlick (schlick [at] labri.u-bordeaux.fr)<br/>
  Note: the initial implementation was done by C. Feuille, S. Grosbois, L. Maziere and L. Minihot as a student practice (Universite Bordeaux, France). </p>
-<p> Open/close compound feature written by<br />
+<p> Open/close compound feature written by<br/>
  Bill Taylor (bill [at] mainstream.com) </p>
-<p> Library feature written by<br />
+<p> Library feature written by<br/>
  Stephane Mancini (mancini [at] elecsrv.enst.fr) (object preview by Brian V. Smith) </p>
-<p> The library objects in the Electrical and Logic libraries were done by<br />
+<p> The library objects in the Electrical and Logic libraries were done by<br/>
  Peter Hiscocks (phiscock [at] ee.ryerson.ca) </p>
-<p> The library objects in the Computer, Networks, and Hospital-Equipment libraries were extracted from the clipart example files by<br />
+<p> The library objects in the Computer, Networks, and Hospital-Equipment libraries were extracted from the clipart example files by<br/>
  Bill Chimiak (chim [at] bgsm.edu) </p>
 <p> <code>Version 3.2.3 and newer:</code> </p>
 <p> Please see the CHANGES file for credits for newer releases.</p>

@@ -11,7 +11,7 @@ description: "slatzm.f –"
 <p> slatzm.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slatzm</code> (SIDE, M, N, V, INCV, TAU, C1, C2, LDC, WORK)<br />
+<p> subroutine <code>slatzm</code> (SIDE, M, N, V, INCV, TAU, C1, C2, LDC, WORK)<br/>
  <i></i><code>SLATZM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slatzm (characterSIDE, integerM, integerN, real, dimension( * )V, integerINCV, realTAU, real, dimension( ldc, * )C1, real, dimension( ldc, * )C2, integerLDC, real, dimension( * )WORK)</h3>
@@ -65,9 +65,9 @@ This routine is deprecated and has been replaced by routine SORMRZ.SLATZM applie
           The value tau in the representation of P.
 </pre>
 <p> <i>C1</i> </p>
-<p>C1 is REAL array, dimension(LDC, N) if SIDE = &#8216;L'(M, 1) if SIDE = &#8216;R&#8217; On entry, the n &#8211; vector C1 if SIDE = &#8216;L&#8217;, or the m &#8211; vector C1<br />
-                                                                                                                         if SIDE = &#8216;R&#8217;.On exit,<br />
-                                       the first row of P *C if SIDE = &#8216;L&#8217;, or the first<br />
+<p>C1 is REAL array, dimension(LDC, N) if SIDE = &#8216;L'(M, 1) if SIDE = &#8216;R&#8217; On entry, the n &#8211; vector C1 if SIDE = &#8216;L&#8217;, or the m &#8211; vector C1<br/>
+                                                                                                                         if SIDE = &#8216;R&#8217;.On exit,<br/>
+                                       the first row of P *C if SIDE = &#8216;L&#8217;, or the first<br/>
                                                                                 column of C *P if SIDE = &#8216;R&#8217;.</p>
 <p> <i>C2</i> </p>
 <pre><code>

@@ -135,7 +135,7 @@ description: "Source-highlight – convert source code to syntax highlighted doc
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-source-highlight at gnu.org&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1999-2008 Lorenzo Bettini &lt;<a rel="nofollow" href="http://www.lorenzobettini.it">http://www.lorenzobettini.it</a>&gt; This program comes with ABSOLUTELY NO WARRANTY.<br />
+<p> Copyright &#169; 1999-2008 Lorenzo Bettini &lt;<a rel="nofollow" href="http://www.lorenzobettini.it">http://www.lorenzobettini.it</a>&gt; This program comes with ABSOLUTELY NO WARRANTY.<br/>
  This is free software; you may redistribute copies of the program under the terms of the GNU General Public License. For more information about these matters, see the file named COPYING.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>Source-highlight</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>Source-highlight</code> programs are properly installed at your site, the command</p>

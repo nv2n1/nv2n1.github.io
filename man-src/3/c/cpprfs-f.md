@@ -10,7 +10,7 @@ description: "cpprfs.f –"
 <p>cpprfs.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cpprfs</code> (UPLO, N, NRHS, AP, AFP, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
+<p>subroutine <code>cpprfs</code> (UPLO, N, NRHS, AP, AFP, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br/>
  <i></i><code>CPPRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpprfs (characterUPLO, integerN, integerNRHS, complex, dimension( * )AP, complex, dimension( * )AFP, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldx, * )X, integerLDX, real, dimension( * )FERR, real, dimension( * )BERR, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

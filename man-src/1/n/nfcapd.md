@@ -93,7 +93,7 @@ description: "nfcapd – netflow capture daemon"
 <p> 32 NAT Block port allocation &#8211; block start, end step and size </p>
 <p> nprobe extensions </p>
 <p> 64 nprobe client/server/application latency&quot;}, </p>
-<p> <code>IMPORTANT: </code> By default only extension 1 and 2 are selected Extensions can be added/deleted by specifying a &#8216;,&#8217; separated list of extension ids. Each id may be prepended by an optional sign +/- to add or remove a given id from the extension list. Shortcuts: The string &#8216;all&#8217; means all extensions. The strings<br />
+<p> <code>IMPORTANT: </code> By default only extension 1 and 2 are selected Extensions can be added/deleted by specifying a &#8216;,&#8217; separated list of extension ids. Each id may be prepended by an optional sign +/- to add or remove a given id from the extension list. Shortcuts: The string &#8216;all&#8217; means all extensions. The strings<br/>
 &nbsp;<wbr>&#8216;nsel&#8217;&nbsp;<wbr>and&nbsp;<wbr>&#8216;nel&#8217;&nbsp;<wbr>enable all NSEL or NEL extensions respectively. </p>
 <p> Examples: </p>
 <p> -T all Enables all possible extensions. </p>

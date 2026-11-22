@@ -21,14 +21,14 @@ description: "bzz – DjVu general purpose compression utility."
 <dt><code>-d</code></dt>
 <dd> Decoding mode.</dd>
 <dt><code>-e</code><i>[blocksize]</i></dt>
-<dd> Encoding mode. The optional argument <i>blocksize</i> specifies the size of the input file blocks processed by the Burrows-Wheeler transform expressed in kilobytes. The default block sizes is 2048 <font SIZE="-1">KB.</font> The maximal block size is 4096 <font SIZE="-1">KB.</font> Specifying a larger block size usually produces higher compression ratios and increases the memory requirements of both the encoder and decoder. It is useless to specify a block size that is larger than the input file. </dd>
+<dd> Encoding mode. The optional argument <i>blocksize</i> specifies the size of the input file blocks processed by the Burrows-Wheeler transform expressed in kilobytes. The default block sizes is 2048 KB. The maximal block size is 4096 KB. Specifying a larger block size usually produces higher compression ratios and increases the memory requirements of both the encoder and decoder. It is useless to specify a block size that is larger than the input file. </dd>
 </dl>
 <h2>ALGORITHMS</h2>
 <p> The Burrows-Wheeler transform is performed using a combination of the Karp-Miller-Rosenberg and the Bentley-Sedgewick algorithms. This is comparable to (Sadakane, DCC 98) with a slightly more flexible ranking scheme. Symbols are then ordered according to a running estimate of their occurrence frequencies. The symbol ranks are then coded using a simple fixed tree and the ZP binary adaptive coder (Bottou, DCC 98). </p>
 <p> The Burrows-Wheeler transform is also used in the well known compressor <code>bzip2</code>. The originality of <code>bzz</code> is the use of the ZP adaptive coder. The adaptation noise can cost up to 5 percent in file size, but this penalty is usually offset by the benefits of adaptation. </p>
 <h2>PERFORMANCE</h2>
-<p> The following table shows comparative results (in bits per character) on the Canterbury Corpus ( <code><a rel="nofollow" href="http://corpus.canterbury.ac.nz">http://corpus.canterbury.ac.nz</a></code> ). The very good <code>bzz</code> performance on the spreadsheet file <i>excl</i> puts the weighted average ahead of much more sophisticated compressors such as <code>fsmx</code>. <font SIZE="-2"> </p>
-<p> </font><center></p>
+<p> The following table shows comparative results (in bits per character) on the Canterbury Corpus ( <code><a rel="nofollow" href="http://corpus.canterbury.ac.nz">http://corpus.canterbury.ac.nz</a></code> ). The very good <code>bzz</code> performance on the spreadsheet file <i>excl</i> puts the weighted average ahead of much more sophisticated compressors such as <code>fsmx</code>.  </p>
+<p> <center></p>
 <table BORDER>
 <tr>
 <td>
@@ -164,8 +164,8 @@ description: "bzz – DjVu general purpose compression utility."
 </tr>
 </table>
 </table>
-<p></center> <font SIZE="-2"> </p>
-<p> Note that DjVu contributors have several entries in this table. Program <code>compress</code> was written some time ago by Joe Orost. Program <code>ppmd</code> is an improvement of the </font><font SIZE="-3">PPM-C</font> method invented by Paul Howard. </p>
+<p></center>  </p>
+<p> Note that DjVu contributors have several entries in this table. Program <code>compress</code> was written some time ago by Joe Orost. Program <code>ppmd</code> is an improvement of the PPM-C method invented by Paul Howard. </p>
 <h2>CREDITS</h2>
 <p> Program <code>bzz </code> was written by L&eacute;on Bottou &lt;leonb [at] users.sourceforge.net&gt; and was then improved by Andrei Erofeev &lt;andrew_erofeev [at] yahoo.com&gt;, Bill Riemers &lt;docbill [at] sourceforge.net&gt; and many others. </p>
 <h2>SEE ALSO</h2>

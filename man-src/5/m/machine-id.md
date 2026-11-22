@@ -39,7 +39,7 @@ description: "machine-id – Local machine ID configuration file"
 <dd>4. If /etc/machine-id already contains a valid machine-id, this is not a first boot.</dd></dl>
 <p> If by any of the above rules, a first boot is detected, units with <i>ConditionFirstBoot=yes</i> will be run.</p>
 <h2>Relation To Osf Uuids</h2>
-<p>Note that the machine ID historically is not an OSF UUID as defined by m[blue]<code>RFC 4122</code>m[]<font SIZE="-2">[1]</font>, nor a Microsoft GUID; however, starting with systemd v30, newly generated machine IDs do qualify as Variant 1 Version 4 UUIDs, as per RFC 4122. </p>
+<p>Note that the machine ID historically is not an OSF UUID as defined by m[blue]<code>RFC 4122</code>m[][1], nor a Microsoft GUID; however, starting with systemd v30, newly generated machine IDs do qualify as Variant 1 Version 4 UUIDs, as per RFC 4122. </p>
 <p> In order to maintain compatibility with existing installations, an application requiring a strictly RFC 4122 compliant UUID should decode the machine ID, and then (non-reversibly) apply the following operations to turn it into a valid RFC 4122 Variant 1 Version 4 UUID. With &quot;id&quot; being an unsigned character array: </p>
 <dl>
 <dd>

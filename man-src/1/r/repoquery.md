@@ -10,7 +10,7 @@ description: "repoquery – query information from Yum repositories"
 
 <p> repoquery &#8211; query information from Yum repositories</p>
 <h2>SYNOPSIS</h2>
-<p> <code>repoquery</code> [options] &lt;item &#8230;&gt;<br />
+<p> <code>repoquery</code> [options] &lt;item &#8230;&gt;<br/>
  <code>repoquery</code> -a [options]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>repoquery</code> is a program for querying information from YUM repositories similarly to rpm queries. </p>
@@ -151,7 +151,7 @@ description: "repoquery – query information from Yum repositories"
 <dt>List build requirements from &#8216;anaconda&#8217; source rpm:</dt>
 <dd> <code>repoquery &#8211;requires anaconda.src</code></dd>
 <dt>List packages which BuildRequire gail-devel</dt>
-<dd> <code>repoquery &#8211;archlist=src &#8211;whatrequires gail-devel</code><br />
+<dd> <code>repoquery &#8211;archlist=src &#8211;whatrequires gail-devel</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>NB: This command will only work if you have repositories enabled which include srpms. </dd>
 </dl>
 <h2>MISC</h2>
@@ -160,15 +160,15 @@ description: "repoquery – query information from Yum repositories"
 <dd> A package can be referred to in all queries with any of the following:</dd>
 <dt>
 </dt><dd>
- <code>name</code><br />
- <code>name.arch</code><br />
- <code>name-ver</code><br />
- <code>name-ver-rel</code><br />
- <code>name-ver-rel.arch</code><br />
- <code>name-epoch:ver-rel.arch</code><br />
+ <code>name</code><br/>
+ <code>name.arch</code><br/>
+ <code>name-ver</code><br/>
+ <code>name-ver-rel</code><br/>
+ <code>name-ver-rel.arch</code><br/>
+ <code>name-epoch:ver-rel.arch</code><br/>
  <code>epoch:name-ver-rel.arch</code></dd>
 <dt>
-</dt><dd> For example: <code>repoquery -l kernel-2.4.1-10.i686</code><br />
+</dt><dd> For example: <code>repoquery -l kernel-2.4.1-10.i686</code><br/>
  Additionally wildcards (shell-style globs) can be used. </dd>
 </dl>
 <h2>FILES</h2>

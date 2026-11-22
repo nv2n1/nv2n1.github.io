@@ -10,7 +10,7 @@ description: "zlasyf_rook.f –"
 <p>zlasyf_rook.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlasyf_rook</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />
+<p>subroutine <code>zlasyf_rook</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br/>
  <i></i><code>ZLASYF_ROOK</code> computes a partial factorization of a complex symmetric matrix using the bounded Bunch-Kaufman (&#8216;rook&#8217;) diagonal pivoting method.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlasyf_rook (characterUPLO, integerN, integerNB, integerKB, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( ldw, * )W, integerLDW, integerINFO)</h3>

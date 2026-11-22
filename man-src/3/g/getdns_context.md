@@ -13,34 +13,34 @@ description: "getdns_context, getdns_context_create, getdns_context_create_with_
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_create</code> (getdns_context ** context,</p>
 <dl>
 <dt>
 </dt><dd>
  int set_from_os)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_create_with_memory_functions</code> (getdns_context ** context,</p>
 <dl>
 <dt>
 </dt><dd>
- int set_from_os,<br />
- void *(*malloc) (size_t),<br />
- void *(*realloc) (void *, size_t),<br />
+ int set_from_os,<br/>
+ void *(*malloc) (size_t),<br/>
+ void *(*realloc) (void *, size_t),<br/>
  void (*free) (void *))</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_create_with_extended_memory_functions</code> (getdns_context **context,</p>
 <dl>
 <dt>
 </dt><dd>
- int set_from_os,<br />
- void *userarg,<br />
- void *(*malloc) (void *userarg, size_t),<br />
- void *(*realloc) (void *userarg, void *, size_t),<br />
+ int set_from_os,<br/>
+ void *userarg,<br/>
+ void *(*malloc) (void *userarg, size_t),<br/>
+ void *(*realloc) (void *userarg, void *, size_t),<br/>
  void (*free) (void *userarg, void *))</dd></dl>
-<p> void<br />
+<p> void<br/>
  <code>getdns_context_destroy</code> (getdns_context *context) </p>
-<p> getdns_dict *<br />
+<p> getdns_dict *<br/>
  <code>getdns_context_get_api_information</code> (getdns_context *context) </p>
 <h2>DESCRIPTION</h2>
 <p> Calls to getdns functions require a DNS context, which is a group of API settings that affect how DNS calls are made. For most applications, a default context is sufficient. </p>
@@ -95,7 +95,7 @@ description: "getdns_context, getdns_context_create, getdns_context_create_with_
 <h2>EXAMPLES</h2>
 <p> TBD </p>
 <h2>FILES</h2>
-<p> /etc/hosts<br />
+<p> /etc/hosts<br/>
  /etc/resolv.conf </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_address/">getdns_address</a></code>(3), <code><a href="/docs/linux/man/3-getdns_address_sync/">getdns_address_sync</a></code>(3), <code><a href="/docs/linux/man/3-getdns_context_set/">getdns_context_set</a></code>(3), <code><a href="/docs/linux/man/3-getdns_context_set_context_update_callback/">getdns_context_set_context_update_callback</a></code>(3), <code><a href="/docs/linux/man/3-getdns_general/">getdns_general</a></code>(3), <code><a href="/docs/linux/man/3-getdns_general_sync/">getdns_general_sync</a></code>(3), <code><a href="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a></code>(3), <code><a href="/docs/linux/man/3-getdns_hostname_sync/">getdns_hostname_sync</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service/">getdns_service</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service_sync/">getdns_service_sync</a></code>(3). </p>

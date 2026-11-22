@@ -33,8 +33,8 @@ description: "perl5136delta – what is new for perl v5.13.6"
 <p> It is now safe to use regular expressions within <tt>&quot;(?{...})&quot;</tt> and <tt>&quot;(??{...})&quot;</tt> code blocks inside regular expressions. </p>
 <p> These block are still experimental, however, and still have problems with lexical (<tt>&quot;my&quot;</tt>) variables, lexical pragmata and abnormal exiting.</p>
 <h3>Custom per-subroutine check hooks</h3>
-<p> <font SIZE="-1">XS</font> code in an extension module can now annotate a subroutine (whether implemented in <font SIZE="-1">XS</font> or in Perl) so that nominated <font SIZE="-1">XS</font> code will be called at compile time (specifically as part of op checking) to change the op tree of that subroutine. The compile-time check function (supplied by the extension module) can implement argument processing that can&#8217;t be expressed as a prototype, generate customised compile-time warnings, perform constant folding for a pure function, inline a subroutine consisting of sufficiently simple ops, replace the whole call with a custom op, and so on. This was previously all possible by hooking the <tt>&quot;entersub&quot;</tt> op checker, but the new mechanism makes it easy to tie the hook to a specific subroutine. See &#8220;cv_set_call_checker&#8221; in perlapi. </p>
-<p> To help in writing custom check hooks, several subtasks within standard <tt>&quot;entersub&quot;</tt> op checking have been separated out and exposed in the <font SIZE="-1">API</font>.</p>
+<p> XS code in an extension module can now annotate a subroutine (whether implemented in XS or in Perl) so that nominated XS code will be called at compile time (specifically as part of op checking) to change the op tree of that subroutine. The compile-time check function (supplied by the extension module) can implement argument processing that can&#8217;t be expressed as a prototype, generate customised compile-time warnings, perform constant folding for a pure function, inline a subroutine consisting of sufficiently simple ops, replace the whole call with a custom op, and so on. This was previously all possible by hooking the <tt>&quot;entersub&quot;</tt> op checker, but the new mechanism makes it easy to tie the hook to a specific subroutine. See &#8220;cv_set_call_checker&#8221; in perlapi. </p>
+<p> To help in writing custom check hooks, several subtasks within standard <tt>&quot;entersub&quot;</tt> op checking have been separated out and exposed in the API.</p>
 <h3>Return value of delete $+{&#8230;}</h3>
 <p> Custom regular expression engines can now determine the return value of <tt>&quot;delete&quot;</tt> on an entry of <tt>&quot;%+&quot;</tt> or <tt>&quot;%-&quot;</tt>.</p>
 <h3>keys, values work on arrays</h3>
@@ -63,11 +63,11 @@ my($pat, $mods) = regexp_pattern($re_ref);
 <p> The unary negation operator <tt>&quot;-&quot;</tt> now treats strings that look like numbers as numbers [perl #57706] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=57706">http://rt.perl.org/rt3/Public/Bug/Display.html?id=57706</a>&gt;.</p>
 <h3>Negative zero</h3>
 <p> Negative zero (-0.0), when converted to a string, now becomes &#8220;0&#8221; on all platforms. It used to become &#8220;-0&#8221; on some, but &#8220;0&#8221; on others. </p>
-<p> If you still need to determine whether a zero is negative, use <tt>&quot;sprintf(&quot;%g&quot;, $zero) =~ /^-/&quot;</tt> or the Data::Float module on <font SIZE="-1">CPAN</font>.</p>
+<p> If you still need to determine whether a zero is negative, use <tt>&quot;sprintf(&quot;%g&quot;, $zero) =~ /^-/&quot;</tt> or the Data::Float module on CPAN.</p>
 <h2>Performance Enhancements</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> The bulk of the <tt>&quot;Tie::Hash::NamedCapture&quot;</tt> module used to be in the perl core. It has now been moved to an <font SIZE="-1">XS</font> module, to reduce the overhead for programs that do not use <tt>&quot;%+&quot;</tt> or <tt>&quot;%-&quot;</tt>.</dd>
+<dd> The bulk of the <tt>&quot;Tie::Hash::NamedCapture&quot;</tt> module used to be in the perl core. It has now been moved to an XS module, to reduce the overhead for programs that do not use <tt>&quot;%+&quot;</tt> or <tt>&quot;%-&quot;</tt>.</dd>
 <dt>&bull;</dt>
 <dd> Eliminate <tt>&quot;PL_*&quot;</tt> accessor functions under ithreads. </dd>
 <p> When <tt>&quot;MULTIPLICITY&quot;</tt> was first developed, and interpreter state moved into an interpreter struct, thread and interpreter local <tt>&quot;PL_*&quot;</tt> variables were defined as macros that called accessor functions, returning the address of the value, outside of the perl core. The intent was to allow members within the interpreter struct to change size without breaking binary compatibility, so that bug fixes could be merged to a maintenance branch that necessitated such a size change. </p>
@@ -103,13 +103,13 @@ my($pat, $mods) = regexp_pattern($re_ref);
 <dd> <tt>&quot;IPC::Cmd&quot;</tt> has been upgraded from version 0.60 to 0.64</dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;IPC::Open3&quot;</tt> has been upgraded from version 1.06 to 1.07. </dd>
-<p> The internal <tt>&quot;xclose&quot;</tt> routine now knows how to handle file descriptors, as documented, so duplicating <font SIZE="-1">STDIN</font> in a child process using its file descriptor now works [perl #76474] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3//Public/Bug/Display.html?id=71710">http://rt.perl.org/rt3//Public/Bug/Display.html?id=71710</a>&gt;.</p>
+<p> The internal <tt>&quot;xclose&quot;</tt> routine now knows how to handle file descriptors, as documented, so duplicating STDIN in a child process using its file descriptor now works [perl #76474] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3//Public/Bug/Display.html?id=71710">http://rt.perl.org/rt3//Public/Bug/Display.html?id=71710</a>&gt;.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Locale::Codes&quot;</tt> has been upgraded from version 3.13 to 3.14.</dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Locale::Maketext&quot;</tt> has been upgraded from version 1.15 to 1.16. </dd>
-<p> It fixes an infinite loop in <tt>&quot;Locale::Maketext::Guts::_compile()&quot;</tt> when working with tainted values (<font SIZE="-1">CPAN</font> <font SIZE="-1">RT</font> #40727 &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=40727">https://rt.cpan.org/Public/Bug/Display.html?id=40727</a>&gt;). </p>
-<p> <tt>&quot;-&gt;maketext&quot;</tt> calls will now backup and restore <tt>$@</tt> so that error messages are not suppressed (<font SIZE="-1">CPAN</font> <font SIZE="-1">RT</font> #34182 &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=34182">https://rt.cpan.org/Public/Bug/Display.html?id=34182</a>&gt;).</p>
+<p> It fixes an infinite loop in <tt>&quot;Locale::Maketext::Guts::_compile()&quot;</tt> when working with tainted values (CPAN RT #40727 &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=40727">https://rt.cpan.org/Public/Bug/Display.html?id=40727</a>&gt;). </p>
+<p> <tt>&quot;-&gt;maketext&quot;</tt> calls will now backup and restore <tt>$@</tt> so that error messages are not suppressed (CPAN RT #34182 &lt;<a rel="nofollow" href="https://rt.cpan.org/Public/Bug/Display.html?id=34182">https://rt.cpan.org/Public/Bug/Display.html?id=34182</a>&gt;).</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Math::BigInt&quot;</tt> has been upgraded from version 1.95 to 1.97. </dd>
 <p> This prevents <tt>&quot;sqrt($int)&quot;</tt> from crashing under <tt>&quot;use bigrat;&quot;</tt> [perl #73534] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3//Public/Bug/Display.html?id=73534">http://rt.perl.org/rt3//Public/Bug/Display.html?id=73534</a>&gt;.</p>
@@ -170,18 +170,18 @@ my($pat, $mods) = regexp_pattern($re_ref);
 <h2>Platform Support</h2>
 <h3>Platform-Specific Notes</h3>
 <dl>
-<dt><font SIZE="-1">IRIX</font></dt>
-<dd> Conversion of strings to floating-point numbers is now more accurate on <font SIZE="-1">IRIX</font> systems [perl #32380] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3//Public/Bug/Display.html?id=32380">http://rt.perl.org/rt3//Public/Bug/Display.html?id=32380</a>&gt;.</dd>
-<dt>Mac <font SIZE="-1">OS</font> X</dt>
-<dd> Early versions of Mac <font SIZE="-1">OS</font> X (Darwin) had buggy implementations of the <tt>&quot;setregid&quot;</tt>, <tt>&quot;setreuid&quot;</tt>, <tt>&quot;setrgid&quot;</tt> and <tt>&quot;setruid&quot;</tt> functions, so perl would pretend they did not exist. </dd>
-<p> These functions are now recognised on Mac <font SIZE="-1">OS</font> 10.5 (Leopard; Darwin 9) and higher, as they have been fixed [perl #72990] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3//Public/Bug/Display.html?id=72990">http://rt.perl.org/rt3//Public/Bug/Display.html?id=72990</a>&gt;.</p>
+<dt>IRIX</dt>
+<dd> Conversion of strings to floating-point numbers is now more accurate on IRIX systems [perl #32380] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3//Public/Bug/Display.html?id=32380">http://rt.perl.org/rt3//Public/Bug/Display.html?id=32380</a>&gt;.</dd>
+<dt>Mac OS X</dt>
+<dd> Early versions of Mac OS X (Darwin) had buggy implementations of the <tt>&quot;setregid&quot;</tt>, <tt>&quot;setreuid&quot;</tt>, <tt>&quot;setrgid&quot;</tt> and <tt>&quot;setruid&quot;</tt> functions, so perl would pretend they did not exist. </dd>
+<p> These functions are now recognised on Mac OS 10.5 (Leopard; Darwin 9) and higher, as they have been fixed [perl #72990] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3//Public/Bug/Display.html?id=72990">http://rt.perl.org/rt3//Public/Bug/Display.html?id=72990</a>&gt;.</p>
 <dt>OpenVOS</dt>
-<dd> perl now builds again with OpenVOS (formerly known as Stratus <font SIZE="-1">VOS</font>) [perl #78132] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3//Public/Bug/Display.html?id=78132">http://rt.perl.org/rt3//Public/Bug/Display.html?id=78132</a>&gt;.</dd>
-<dt><font SIZE="-1">VMS</font></dt>
-<dd> The shortening of symbols longer than 31 characters in the C sources is now done by the compiler rather than by xsubpp (which could only do so for generated symbols in <font SIZE="-1">XS</font> code).</dd>
+<dd> perl now builds again with OpenVOS (formerly known as Stratus VOS) [perl #78132] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3//Public/Bug/Display.html?id=78132">http://rt.perl.org/rt3//Public/Bug/Display.html?id=78132</a>&gt;.</dd>
+<dt>VMS</dt>
+<dd> The shortening of symbols longer than 31 characters in the C sources is now done by the compiler rather than by xsubpp (which could only do so for generated symbols in XS code).</dd>
 <dt>Windows</dt>
 <dd> <tt>$Config{gccversion}</tt> is now set correctly when perl is built using the mingw64 compiler from &lt;<a rel="nofollow" href="http://mingw64.org">http://mingw64.org</a>&gt; [perl #73754] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3//Public/Bug/Display.html?id=73754">http://rt.perl.org/rt3//Public/Bug/Display.html?id=73754</a>&gt;. </dd>
-<p> The build process proceeds more smoothly with mingw and dmake when <i>C:\MSYSin</i> is in the <font SIZE="-1">PATH</font>, due to a <tt>&quot;Cwd&quot;</tt> fix.</dl>
+<p> The build process proceeds more smoothly with mingw and dmake when <i>C:\MSYSin</i> is in the PATH, due to a <tt>&quot;Cwd&quot;</tt> fix.</dl>
 <h2>Internal Changes</h2>
 <dl>
 <dt>&bull;</dt>
@@ -196,19 +196,19 @@ my($pat, $mods) = regexp_pattern($re_ref);
 <dd> A new macro, <tt>&quot;SvTRUE_nomg&quot;</tt>, has been added. </dd>
 <p> This is like <tt>&quot;SvTRUE&quot;</tt>, except that it does not process magic. It uses the new <tt>&quot;sv_2bool_flags&quot;</tt> function.</p>
 <dt>&bull;</dt>
-<dd> <tt>&quot;sv_catsv_flags&quot;</tt> no longer calls <tt>&quot;mg_get&quot;</tt> on its second argument (the source string) if the flags passed to it do not include <font SIZE="-1">SV_GMAGIC</font>. So it now matches the documentation.</dd>
+<dd> <tt>&quot;sv_catsv_flags&quot;</tt> no longer calls <tt>&quot;mg_get&quot;</tt> on its second argument (the source string) if the flags passed to it do not include SV_GMAGIC. So it now matches the documentation.</dd>
 <dt>&bull;</dt>
 <dd> A new interface has been added for custom check hooks on subroutines. See &#8220;Custom per-subroutine check hooks&#8221;, above.</dd>
 <dt>&bull;</dt>
-<dd> List op building functions have been added to the <font SIZE="-1">API</font>. See op_append_elem, op_append_list, and op_prepend_elem.</dd>
+<dd> List op building functions have been added to the API. See op_append_elem, op_append_list, and op_prepend_elem.</dd>
 <dt>&bull;</dt>
-<dd> The <font SIZE="-1">LINKLIST</font> macro, part of op building that constructs the execution-order op chain, has been added to the <font SIZE="-1">API</font>.</dd>
+<dd> The LINKLIST macro, part of op building that constructs the execution-order op chain, has been added to the API.</dd>
 <dt>&bull;</dt>
 <dd> Many functions ending with pvn now have equivalent pv/pvs/sv versions.</dd>
 <dt>&bull;</dt>
-<dd> The <tt>&quot;save_freeop&quot;</tt>, <tt>&quot;save_op&quot;</tt>, <tt>&quot;save_pushi32ptr&quot;</tt> and <tt>&quot;save_pushptrptr&quot;</tt> functions have been added to the <font SIZE="-1">API</font>.</dd>
+<dd> The <tt>&quot;save_freeop&quot;</tt>, <tt>&quot;save_op&quot;</tt>, <tt>&quot;save_pushi32ptr&quot;</tt> and <tt>&quot;save_pushptrptr&quot;</tt> functions have been added to the API.</dd>
 <dt>&bull;</dt>
-<dd> The new <font SIZE="-1">API</font> function <tt>&quot;parse_stmtseq()&quot;</tt> parses a sequence of statements, up to closing brace or <font SIZE="-1">EOF</font>.</dd></dl>
+<dd> The new API function <tt>&quot;parse_stmtseq()&quot;</tt> parses a sequence of statements, up to closing brace or EOF.</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
 <dt>&bull;</dt>
@@ -238,7 +238,7 @@ my($pat, $mods) = regexp_pattern($re_ref);
 <dt>&bull;</dt>
 <dd> The <tt>&quot;-C&quot;</tt> command line option can now be followed by other options [perl #72434] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3//Public/Bug/Display.html?id=72434">http://rt.perl.org/rt3//Public/Bug/Display.html?id=72434</a>&gt;.</dd>
 <dt>&bull;</dt>
-<dd> Assigning a glob to a <font SIZE="-1">PVLV</font> used to convert it to a plain string. Now it works correctly, and a <font SIZE="-1">PVLV</font> can hold a glob. This would happen when a nonexistent hash or array element was passed to a subroutine: </dd>
+<dd> Assigning a glob to a PVLV used to convert it to a plain string. Now it works correctly, and a PVLV can hold a glob. This would happen when a nonexistent hash or array element was passed to a subroutine: </dd>
 <pre><code>
 sub
 {
@@ -274,7 +274,7 @@ sub
 <dd> The interpreter no longer crashes when freeing deeply-nested arrays of arrays. Hashes have not been fixed yet [perl #44225] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=44225">http://rt.perl.org/rt3/Public/Bug/Display.html?id=44225</a>&gt;.</dd>
 <dt>&bull;</dt>
 <dd> The mechanism for freeing objects in globs used to leave dangling pointers to freed SVs, meaning Perl users could see corrupted state during destruction. </dd>
-<p> Perl now only frees the affected slots of the <font SIZE="-1">GV</font>, rather than freeing the <font SIZE="-1">GV</font> itself. This makes sure that there are no dangling refs or corrupted state during destruction.</p>
+<p> Perl now only frees the affected slots of the GV, rather than freeing the GV itself. This makes sure that there are no dangling refs or corrupted state during destruction.</p>
 <dt>&bull;</dt>
 <dd> The typeglob <tt>&quot;*,&quot;</tt>, which holds the scalar variable <tt>$,</tt> (output field separator), had the wrong reference count in child threads.</dd>
 <dt>&bull;</dt>
@@ -282,7 +282,7 @@ sub
 <dt>&bull;</dt>
 <dd> <tt>&quot;use v5.8&quot;</tt> no longer leaks memory [perl #78436] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78436">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78436</a>&gt;.</dd>
 <dt>&bull;</dt>
-<dd> The <font SIZE="-1">XS</font> multicall <font SIZE="-1">API</font> no longer causes subroutines to lose reference counts if called via the multicall interface from within those very subroutines. This affects modules like List::Util. Calling one of its functions with an active subroutine as the first argument could cause a crash [perl #78070] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78070">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78070</a>&gt;.</dd></dl>
+<dd> The XS multicall API no longer causes subroutines to lose reference counts if called via the multicall interface from within those very subroutines. This affects modules like List::Util. Calling one of its functions with an active subroutine as the first argument could cause a crash [perl #78070] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78070">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78070</a>&gt;.</dd></dl>
 <h2>Errata</h2>
 <dl>
 <dt>&bull;</dt>
@@ -290,13 +290,13 @@ sub
 <h2>Acknowledgements</h2>
 <p> Perl 5.13.6 represents approximately one month of development since Perl 5.13.5 and contains 67920 lines of changes across 566 files from 47 authors and committers: </p>
 <p> A. Sinan Unur, Aaron Crane, Alex Davies, Ali Polatel, Allen Smith, Andrew Rodland, Andy Dougherty, Ben Morrow, brian d foy, Casey West, Chip Salzenberg, Chris &#8216;BinGOs&#8217; Williams, Craig A. Berry, David Golden, David Mitchell, Eric Brine, Father Chrysostomos, Florian Ragwitz, George Greer, gregor herrmann, Jan Dubois, Jerry D. Hedden, Jesse Vincent, Joshua Pritikin, Karl Williamson, kmx, Michael G Schwern, Mike Kelly, Nicholas Clark, Paul Green, Rafael Garcia-Suarez, Renee Baecker, Ricardo Signes, Sisyphus, Slaven Rezic, Steffen Mu.ller, Steve Hay, Sullivan Beck, Tatsuhiko Miyagawa, Todd Rinaldo, Tony Cook, Tye McQueen, Vernon Lyon, Walt Mankowski, Zefram, Zsban Ambrus, var Arnfjo.rd<i>&#8211;</i> Bjarmason. </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish.</p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish.</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN</font>.</p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

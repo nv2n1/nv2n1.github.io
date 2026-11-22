@@ -10,7 +10,7 @@ description: "dtgsen.f –"
 <p>dtgsen.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtgsen</code> (IJOB, WANTQ, WANTZ, SELECT, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, Q, LDQ, Z, LDZ, M, PL, PR, DIF, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>dtgsen</code> (IJOB, WANTQ, WANTZ, SELECT, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, Q, LDQ, Z, LDZ, M, PL, PR, DIF, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>DTGSEN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtgsen (integerIJOB, logicalWANTQ, logicalWANTZ, logical, dimension( * )SELECT, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )ALPHAR, double precision, dimension( * )ALPHAI, double precision, dimension( * )BETA, double precision, dimension( ldq, * )Q, integerLDQ, double precision, dimension( ldz, * )Z, integerLDZ, integerM, double precisionPL, double precisionPR, double precision, dimension( * )DIF, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>
@@ -138,7 +138,7 @@ description: "dtgsen.f –"
  spaces (deflating subspaces). 0 &lt;= M &lt;= N.</pre>
 <p><i>PL</i> </p>
 <pre> PL is DOUBLE PRECISION</pre>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  <i>PR</i> </p>
 <pre> PR is DOUBLE PRECISION
  If IJOB = 1, 4 or 5, PL, PR are lower bounds on the

@@ -11,7 +11,7 @@ description: "libssh2_knownhost_del – delete a known host entry"
 <p> libssh2_knownhost_del &#8211; delete a known host entry</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
-<p> int libssh2_knownhost_del(LIBSSH2_KNOWNHOSTS *hosts,<br />
+<p> int libssh2_knownhost_del(LIBSSH2_KNOWNHOSTS *hosts,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>struct libssh2_knownhost&nbsp;<wbr>*entry);</p>
 <h2>DESCRIPTION</h2>
 <p> Delete a known host entry from the collection of known hosts. </p>

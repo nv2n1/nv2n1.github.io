@@ -11,7 +11,7 @@ perlothrtut - old tutorial on threads in Perl
 
 <h2>DESCRIPTION</h2>
 
- <font SIZE="-1"><b>WARNING</b></font>: This tutorial describes the old-style thread model that was introduced in release 5.005. This model is deprecated, and has been removed for version 5.10. The interfaces described here were considered experimental, and are likely to be buggy. 
+ <b>WARNING</b>: This tutorial describes the old-style thread model that was introduced in release 5.005. This model is deprecated, and has been removed for version 5.10. The interfaces described here were considered experimental, and are likely to be buggy. 
 
  For information about the new interpreter threads (``ithreads'') model, see the <i>perlthrtut</i> tutorial, and the threads and threads::shared modules. 
 
@@ -31,7 +31,7 @@ perlothrtut - old tutorial on threads in Perl
 
  The boss/worker model usually has one `boss' thread and one or more `worker' threads. The boss thread gathers or generates tasks that need to be done, then parcels those tasks out to the appropriate worker thread. 
 
- This model is common in <font SIZE="-1">GUI</font> and server programs, where a main thread waits for some event and then passes that event to the appropriate worker threads for processing. Once the event has been passed on, the boss thread goes back to waiting for another event. 
+ This model is common in GUI and server programs, where a main thread waits for some event and then passes that event to the appropriate worker threads for processing. Once the event has been passed on, the boss thread goes back to waiting for another event. 
 
  The boss thread does relatively little work. While tasks aren't necessarily performed faster than with any other method, it tends to have the best user-response times.
 
@@ -51,43 +51,43 @@ perlothrtut - old tutorial on threads in Perl
 
 <h2>Native threads</h2>
 
- There are several different ways to implement threads on a system. How threads are implemented depends both on the vendor and, in some cases, the version of the operating system. Often the first implementation will be relatively simple, but later versions of the <font SIZE="-1">OS</font> will be more sophisticated. 
+ There are several different ways to implement threads on a system. How threads are implemented depends both on the vendor and, in some cases, the version of the operating system. Often the first implementation will be relatively simple, but later versions of the OS will be more sophisticated. 
 
  While the information in this section is useful, it's not necessary, so you can skip it if you don't feel up to it. 
 
  There are three basic categories of threads-user-mode threads, kernel threads, and multiprocessor kernel threads. 
 
- User-mode threads are threads that live entirely within a program and its libraries. In this model, the <font SIZE="-1">OS</font> knows nothing about threads. As far as it's concerned, your process is just a process. 
+ User-mode threads are threads that live entirely within a program and its libraries. In this model, the OS knows nothing about threads. As far as it's concerned, your process is just a process. 
 
- This is the easiest way to implement threads, and the way most OSes start. The big disadvantage is that, since the <font SIZE="-1">OS</font> knows nothing about threads, if one thread blocks they all do. Typical blocking activities include most system calls, most I/O, and things like <i>sleep()</i>. 
+ This is the easiest way to implement threads, and the way most OSes start. The big disadvantage is that, since the OS knows nothing about threads, if one thread blocks they all do. Typical blocking activities include most system calls, most I/O, and things like <i>sleep()</i>. 
 
- Kernel threads are the next step in thread evolution. The <font SIZE="-1">OS</font> knows about kernel threads, and makes allowances for them. The main difference between a kernel thread and a user-mode thread is blocking. With kernel threads, things that block a single thread don't block other threads. This is not the case with user-mode threads, where the kernel blocks at the process level and not the thread level. 
+ Kernel threads are the next step in thread evolution. The OS knows about kernel threads, and makes allowances for them. The main difference between a kernel thread and a user-mode thread is blocking. With kernel threads, things that block a single thread don't block other threads. This is not the case with user-mode threads, where the kernel blocks at the process level and not the thread level. 
 
  This is a big step forward, and can give a threaded program quite a performance boost over non-threaded programs. Threads that block performing I/O, for example, won't block threads that are doing other things. Each process still has only one thread running at once, though, regardless of how many CPUs a system might have. 
 
  Since kernel threading can interrupt a thread at any time, they will uncover some of the implicit locking assumptions you may make in your program. For example, something as simple as <tt>&quot;$a = $a + 2&quot;</tt> can behave unpredictably with kernel threads if <tt>$a</tt> is visible to other threads, as another thread may have changed <tt>$a</tt> between the time it was fetched on the right hand side and the time the new value is stored. 
 
- Multiprocessor Kernel Threads are the final step in thread support. With multiprocessor kernel threads on a machine with multiple CPUs, the <font SIZE="-1">OS</font> may schedule two or more threads to run simultaneously on different CPUs. 
+ Multiprocessor Kernel Threads are the final step in thread support. With multiprocessor kernel threads on a machine with multiple CPUs, the OS may schedule two or more threads to run simultaneously on different CPUs. 
 
  This can give a serious performance boost to your threaded program, since more than one thread will be executing at the same time. As a tradeoff, though, any of those nagging synchronization issues that might not have shown with basic kernel threads will appear with a vengeance. 
 
- In addition to the different levels of <font SIZE="-1">OS</font> involvement in threads, different OSes (and different thread implementations for a particular <font SIZE="-1">OS</font>) allocate <font SIZE="-1">CPU</font> cycles to threads in different ways. 
+ In addition to the different levels of OS involvement in threads, different OSes (and different thread implementations for a particular OS) allocate CPU cycles to threads in different ways. 
 
- Cooperative multitasking systems have running threads give up control if one of two things happen. If a thread calls a yield function, it gives up control. It also gives up control if the thread does something that would cause it to block, such as perform I/O. In a cooperative multitasking implementation, one thread can starve all the others for <font SIZE="-1">CPU</font> time if it so chooses. 
+ Cooperative multitasking systems have running threads give up control if one of two things happen. If a thread calls a yield function, it gives up control. It also gives up control if the thread does something that would cause it to block, such as perform I/O. In a cooperative multitasking implementation, one thread can starve all the others for CPU time if it so chooses. 
 
- Preemptive multitasking systems interrupt threads at regular intervals while the system decides which thread should run next. In a preemptive multitasking system, one thread usually won't monopolize the <font SIZE="-1">CPU</font>. 
+ Preemptive multitasking systems interrupt threads at regular intervals while the system decides which thread should run next. In a preemptive multitasking system, one thread usually won't monopolize the CPU. 
 
  On some systems, there can be cooperative and preemptive threads running simultaneously. (Threads running with realtime priorities often behave cooperatively, for example, while threads running at normal priorities behave preemptively.)
 
 <h2>What kind of threads are perl threads?</h2>
 
- If you have experience with other thread implementations, you might find that things aren't quite what you expect. It's very important to remember when dealing with Perl threads that Perl Threads Are Not X Threads, for all values of X. They aren't <font SIZE="-1">POSIX</font> threads, or DecThreads, or Java's Green threads, or Win32 threads. There are similarities, and the broad concepts are the same, but if you start looking for implementation details you're going to be either disappointed or confused. Possibly both. 
+ If you have experience with other thread implementations, you might find that things aren't quite what you expect. It's very important to remember when dealing with Perl threads that Perl Threads Are Not X Threads, for all values of X. They aren't POSIX threads, or DecThreads, or Java's Green threads, or Win32 threads. There are similarities, and the broad concepts are the same, but if you start looking for implementation details you're going to be either disappointed or confused. Possibly both. 
 
- This is not to say that Perl threads are completely different from everything that's ever come before---they're not. Perl's threading model owes a lot to other thread models, especially <font SIZE="-1">POSIX</font>. Just as Perl is not C, though, Perl threads are not <font SIZE="-1">POSIX</font> threads. So if you find yourself looking for mutexes, or thread priorities, it's time to step back a bit and think about what you want to do and how Perl can do it.
+ This is not to say that Perl threads are completely different from everything that's ever come before---they're not. Perl's threading model owes a lot to other thread models, especially POSIX. Just as Perl is not C, though, Perl threads are not POSIX threads. So if you find yourself looking for mutexes, or thread priorities, it's time to step back a bit and think about what you want to do and how Perl can do it.
 
 <h2>Threadsafe Modules</h2>
 
- The addition of threads has changed Perl's internals substantially. There are implications for people who write modules---especially modules with <font SIZE="-1">XS</font> code or external libraries. While most modules won't encounter any problems, modules that aren't explicitly tagged as thread-safe should be tested before being used in production code. 
+ The addition of threads has changed Perl's internals substantially. There are implications for people who write modules---especially modules with XS code or external libraries. While most modules won't encounter any problems, modules that aren't explicitly tagged as thread-safe should be tested before being used in production code. 
 
  Not all modules that you might use are thread-safe, and you should always assume a module is unsafe unless the documentation says otherwise. This includes modules that are distributed as part of the core. Threads are a beta feature, and even some of the standard modules aren't thread-safe. 
 
@@ -186,7 +186,7 @@ print "All done\n";
 
 <h2>Giving up control</h2>
 
- There are times when you may find it useful to have a thread explicitly give up the <font SIZE="-1">CPU</font> to another thread. Your threading package might not support preemptive multitasking for threads, for example, or you may be doing something compute-intensive and want to make sure that the user-interface thread gets called frequently. Regardless, there are times that you might want a thread to give up the processor. 
+ There are times when you may find it useful to have a thread explicitly give up the CPU to another thread. Your threading package might not support preemptive multitasking for threads, for example, or you may be doing something compute-intensive and want to make sure that the user-interface thread gets called frequently. Regardless, there are times that you might want a thread to give up the processor. 
 
  Perl's threading package provides the <i>yield()</i> function that does this. <i>yield()</i> is pretty straightforward, and works like this: 
 
@@ -233,7 +233,7 @@ sub sub1
 }
  
 
- In the example above, the <i>join()</i> method returns as soon as the thread ends. In addition to waiting for a thread to finish and gathering up any values that the thread might have returned, <i>join()</i> also performs any <font SIZE="-1">OS</font> cleanup necessary for the thread. That cleanup might be important, especially for long-running programs that spawn lots of threads. If you don't want the return values and don't want to wait for the thread to finish, you should call the <i>detach()</i> method instead. <i>detach()</i> is covered later in the article.
+ In the example above, the <i>join()</i> method returns as soon as the thread ends. In addition to waiting for a thread to finish and gathering up any values that the thread might have returned, <i>join()</i> also performs any OS cleanup necessary for the thread. That cleanup might be important, especially for long-running programs that spawn lots of threads. If you don't want the return values and don't want to wait for the thread to finish, you should call the <i>detach()</i> method instead. <i>detach()</i> is covered later in the article.
 
 <h2>Errors In Threads</h2>
 
@@ -472,7 +472,7 @@ sub sample_sub
 </dt><dd> By default, semaphores behave like locks, letting only one thread <i>down()</i> them at a time. However, there are other uses for semaphores. 
  Each semaphore has a counter attached to it. <i>down()</i> decrements the counter and <i>up()</i> increments the counter. By default, semaphores are created with the counter set to one, <i>down()</i> decrements by one, and <i>up()</i> increments by one. If <i>down()</i> attempts to decrement the counter below zero, it blocks until the counter is large enough. Note that while a semaphore can be created with a starting count of zero, any <i>up()</i> or <i>down()</i> always changes the counter by at least one. <tt>$semaphore</tt>-&gt;<i>down</i>(0) is the same as <tt>$semaphore</tt>-&gt;<i>down</i>(1). 
  The question, of course, is why would you do something like this? Why create a semaphore with a starting count that's not one, or why decrement/increment it by more than one? The answer is resource availability. Many resources that you want to manage access for can be safely used by more than one thread at once. 
- For example, let's take a <font SIZE="-1">GUI</font> driven program. It has a semaphore that it uses to synchronize access to the display, so only one thread is ever drawing at once. Handy, but of course you don't want any thread to start drawing until things are properly set up. In this case, you can create a semaphore with a counter set to zero, and up it when things are ready for drawing. 
+ For example, let's take a GUI driven program. It has a semaphore that it uses to synchronize access to the display, so only one thread is ever drawing at once. Handy, but of course you don't want any thread to start drawing until things are properly set up. In this case, you can create a semaphore with a counter set to zero, and up it when things are ready for drawing. 
  Semaphores with counters greater than one are also useful for establishing quotas. Say, for example, that you have a number of threads that can do I/O at once. You don't want all the threads reading or writing at once though, since that can potentially swamp your I/O channels, or deplete your process' quota of filehandles. You can use a semaphore initialized to the number of concurrent I/O requests (or open files) that you want at any one time, and have your threads quietly block and unblock themselves. 
  Larger increments or decrements are handy in those cases where a thread needs to check out or return a number of resources at once.</dd></dl>
 
@@ -611,7 +611,7 @@ sub sub1
 
 <h2>Thread IDs</h2>
 
- <i>tid()</i> is a thread object method that returns the thread <font SIZE="-1">ID</font> of the thread the object represents. Thread IDs are integers, with the main thread in a program being 0. Currently Perl assigns a unique tid to every thread ever created in your program, assigning the first thread to be created a tid of 1, and increasing the tid by 1 for each new thread that's created.
+ <i>tid()</i> is a thread object method that returns the thread ID of the thread the object represents. Thread IDs are integers, with the main thread in a program being 0. Currently Perl assigns a unique tid to every thread ever created in your program, assigning the first thread to be created a tid of 1, and increasing the tid by 1 for each new thread that's created.
 
 <h2>Are These Threads The Same?</h2>
 
@@ -710,25 +710,25 @@ foreach
 
  Robbins, Kay. A., and Steven Robbins. Practical Unix Programming: A Guide to Concurrency, Communication, and Multithreading. Prentice-Hall, 1996. 
 
- Lewis, Bill, and Daniel J. Berg. Multithreaded Programming with Pthreads. Prentice Hall, 1997, <font SIZE="-1">ISBN</font> 0-13-443698-9 (a well-written introduction to threads). 
+ Lewis, Bill, and Daniel J. Berg. Multithreaded Programming with Pthreads. Prentice Hall, 1997, ISBN 0-13-443698-9 (a well-written introduction to threads). 
 
- Nelson, Greg (editor). Systems Programming with Modula-3. Prentice Hall, 1991, <font SIZE="-1">ISBN</font> 0-13-590464-1. 
+ Nelson, Greg (editor). Systems Programming with Modula-3. Prentice Hall, 1991, ISBN 0-13-590464-1. 
 
- Nichols, Bradford, Dick Buttlar, and Jacqueline Proulx Farrell. Pthreads Programming. O'Reilly &amp; Associates, 1996, <font SIZE="-1">ISBN</font> 156592-115-1 (covers <font SIZE="-1">POSIX</font> threads).
+ Nichols, Bradford, Dick Buttlar, and Jacqueline Proulx Farrell. Pthreads Programming. O'Reilly &amp; Associates, 1996, ISBN 156592-115-1 (covers POSIX threads).
 
 <h2>OS-Related References</h2>
 
- Boykin, Joseph, David Kirschen, Alan Langerman, and Susan LoVerso. Programming under Mach. Addison-Wesley, 1994, <font SIZE="-1">ISBN</font> 0-201-52739-1. 
+ Boykin, Joseph, David Kirschen, Alan Langerman, and Susan LoVerso. Programming under Mach. Addison-Wesley, 1994, ISBN 0-201-52739-1. 
 
- Tanenbaum, Andrew S. Distributed Operating Systems. Prentice Hall, 1995, <font SIZE="-1">ISBN</font> 0-13-219908-4 (great textbook). 
+ Tanenbaum, Andrew S. Distributed Operating Systems. Prentice Hall, 1995, ISBN 0-13-219908-4 (great textbook). 
 
- Silberschatz, Abraham, and Peter B. Galvin. Operating System Concepts, 4th ed. Addison-Wesley, 1995, <font SIZE="-1">ISBN</font> 0-201-59292-4
+ Silberschatz, Abraham, and Peter B. Galvin. Operating System Concepts, 4th ed. Addison-Wesley, 1995, ISBN 0-201-59292-4
 
 <h2>Other References</h2>
 
- Arnold, Ken and James Gosling. The Java Programming Language, 2nd ed. Addison-Wesley, 1998, <font SIZE="-1">ISBN</font> 0-201-31006-6. 
+ Arnold, Ken and James Gosling. The Java Programming Language, 2nd ed. Addison-Wesley, 1998, ISBN 0-201-31006-6. 
 
- Le Sergent, T. and B. Berthomieu. ``Incremental MultiThreaded Garbage Collection on Virtually Shared Memory Architectures'' in Memory Management: Proc. of the International Workshop <font SIZE="-1">IWMM</font> 92, St. Malo, France, September 1992, Yves Bekkers and Jacques Cohen, eds. Springer, 1992, <font SIZE="-1">ISBN</font> 3540-55940-X (real-life thread applications).
+ Le Sergent, T. and B. Berthomieu. ``Incremental MultiThreaded Garbage Collection on Virtually Shared Memory Architectures'' in Memory Management: Proc. of the International Workshop IWMM 92, St. Malo, France, September 1992, Yves Bekkers and Jacques Cohen, eds. Springer, 1992, ISBN 3540-55940-X (real-life thread applications).
 
 <h2>Acknowledgements</h2>
 

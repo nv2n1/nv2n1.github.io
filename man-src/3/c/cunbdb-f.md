@@ -10,7 +10,7 @@ description: "cunbdb.f –"
 <p>cunbdb.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cunbdb</code> (TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, PHI, TAUP1, TAUP2, TAUQ1, TAUQ2, WORK, LWORK, INFO)<br />
+<p>subroutine <code>cunbdb</code> (TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, PHI, TAUP1, TAUP2, TAUQ1, TAUQ2, WORK, LWORK, INFO)<br/>
  <i></i><code>CUNBDB</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cunbdb (characterTRANS, characterSIGNS, integerM, integerP, integerQ, complex, dimension( ldx11, * )X11, integerLDX11, complex, dimension( ldx12, * )X12, integerLDX12, complex, dimension( ldx21, * )X21, integerLDX21, complex, dimension( ldx22, * )X22, integerLDX22, real, dimension( * )THETA, real, dimension( * )PHI, complex, dimension( * )TAUP1, complex, dimension( * )TAUP2, complex, dimension( * )TAUQ1, complex, dimension( * )TAUQ2, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

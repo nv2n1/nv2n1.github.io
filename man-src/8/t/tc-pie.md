@@ -11,10 +11,10 @@ description: "PIE – Proportional Integral controller-Enhanced AQM algorithm"
 <h2>Synopsis</h2>
 <p><code>tc qdisc &#8230; pie</code> [ <code>limit</code> PACKETS ] [ <code>target</code> TIME ] [ <code>tupdate</code> TIME ] [ <code>alpha</code> int ] [ <code>beta</code> int ] [ <code>ecn</code> | <code>noecn</code> ] [ <code>bytemode</code> | <code>nobytemode</code> ] [ <code>dq_rate_estimator</code> | <code>no_dq_rate_estimator</code> ] </p>
 <h2>Description</h2>
-<p>Proportional Integral controller-Enhanced (PIE) is a control theoretic active queue management scheme. It is based on the proportional integral controller but aims to control delay. The main design goals are<br />
-&nbsp;o Low latency control<br />
-&nbsp;o High link utilization<br />
-&nbsp;o Simple implementation<br />
+<p>Proportional Integral controller-Enhanced (PIE) is a control theoretic active queue management scheme. It is based on the proportional integral controller but aims to control delay. The main design goals are<br/>
+&nbsp;o Low latency control<br/>
+&nbsp;o High link utilization<br/>
+&nbsp;o Simple implementation<br/>
 &nbsp;o Guaranteed stability and fast responsiveness </p>
 <h2>Algorithm</h2>
 <p>PIE is designed to control delay effectively. First, an average dequeue rate is estimated based on the standing queue. The rate is used to calculate the current delay. Then, on a periodic basis, the delay is used to calculate the dropping probability. Finally, on arrival, a packet is dropped (or marked) based on this probability. </p>
@@ -39,33 +39,33 @@ description: "PIE – Proportional Integral controller-Enhanced AQM algorithm"
 <h3>dq_rate_estimator | no_dq_rate_estimator</h3>
 <p>is used to calculate delay using Little&#8217;s law. <code>dq_rate_estimator</code> to turn on dq_rate_estimator, <code>no_dq_rate_estimator</code> to turn off no_dq_rate_estimator. By default, <code>dq_rate_estimator</code> is turned off.</p>
 <h2>Examples</h2>
-<p>&nbsp;#&nbsp;tc qdisc add dev eth0 root pie<br />
-&nbsp;#&nbsp;tc -s qdisc show<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;qdisc pie 8036: dev eth0 root refcnt 2 limit 1000p target 15.0ms tupdate 16.0ms alpha 2 beta 20<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 31216108 bytes 20800 pkt&nbsp;(dropped 80, overlimits 0 requeues 0)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 16654b 11p requeues 0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;prob 0.006161 delay 15666us<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pkts_in 20811 overlimit 0 dropped 80 maxq 50 ecn_mark 0<br />
-&nbsp;#&nbsp;tc qdisc add dev eth0 root pie dq_rate_estimator<br />
-&nbsp;#&nbsp;tc -s qdisc show<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;qdisc pie 8036: dev eth0 root refcnt 2 limit 1000p target 15.0ms tupdate 16.0ms alpha 2 beta 20<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 63947420 bytes 42414 pkt&nbsp;(dropped 41, overlimits 0 requeues 0)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 271006b 179p requeues 0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;prob 0.000092 delay 22200us avg_dq_rate 12145996<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pkts_in 41 overlimit 343 dropped 0 maxq 50 ecn_mark 0<br />
-&nbsp;#&nbsp;tc qdisc add dev eth0 root pie limit 100 target 20ms tupdate 30ms ecn<br />
-&nbsp;#&nbsp;tc -s qdisc show<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;qdisc pie 8036: dev eth0 root refcnt 2 limit 100p target 20.0ms tupdate 32.0ms alpha 2 beta 20 ecn<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 6591724 bytes 4442 pkt&nbsp;(dropped 27, overlimits 0 requeues 0)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 18168b 12p requeues 0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;prob 0.008845 delay 11348us<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pkts_in 4454 overlimit 0 dropped 27 maxq 65 ecn_mark 0<br />
-&nbsp;#&nbsp;tc qdisc add dev eth0 root pie limit 100 target 50ms tupdate 30ms bytemode<br />
-&nbsp;#&nbsp;tc -s qdisc show<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;qdisc pie 8036: dev eth0 root refcnt 2 limit 100p target 50.0ms tupdate 32.0ms alpha 2 beta 20 bytemode<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 1616274 bytes 1137 pkt&nbsp;(dropped 0, overlimits 0 requeues 0)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 13626b 9p requeues 0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;prob 0.000000 delay 0us<br />
+<p>&nbsp;#&nbsp;tc qdisc add dev eth0 root pie<br/>
+&nbsp;#&nbsp;tc -s qdisc show<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;qdisc pie 8036: dev eth0 root refcnt 2 limit 1000p target 15.0ms tupdate 16.0ms alpha 2 beta 20<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 31216108 bytes 20800 pkt&nbsp;(dropped 80, overlimits 0 requeues 0)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 16654b 11p requeues 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;prob 0.006161 delay 15666us<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pkts_in 20811 overlimit 0 dropped 80 maxq 50 ecn_mark 0<br/>
+&nbsp;#&nbsp;tc qdisc add dev eth0 root pie dq_rate_estimator<br/>
+&nbsp;#&nbsp;tc -s qdisc show<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;qdisc pie 8036: dev eth0 root refcnt 2 limit 1000p target 15.0ms tupdate 16.0ms alpha 2 beta 20<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 63947420 bytes 42414 pkt&nbsp;(dropped 41, overlimits 0 requeues 0)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 271006b 179p requeues 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;prob 0.000092 delay 22200us avg_dq_rate 12145996<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pkts_in 41 overlimit 343 dropped 0 maxq 50 ecn_mark 0<br/>
+&nbsp;#&nbsp;tc qdisc add dev eth0 root pie limit 100 target 20ms tupdate 30ms ecn<br/>
+&nbsp;#&nbsp;tc -s qdisc show<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;qdisc pie 8036: dev eth0 root refcnt 2 limit 100p target 20.0ms tupdate 32.0ms alpha 2 beta 20 ecn<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 6591724 bytes 4442 pkt&nbsp;(dropped 27, overlimits 0 requeues 0)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 18168b 12p requeues 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;prob 0.008845 delay 11348us<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pkts_in 4454 overlimit 0 dropped 27 maxq 65 ecn_mark 0<br/>
+&nbsp;#&nbsp;tc qdisc add dev eth0 root pie limit 100 target 50ms tupdate 30ms bytemode<br/>
+&nbsp;#&nbsp;tc -s qdisc show<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;qdisc pie 8036: dev eth0 root refcnt 2 limit 100p target 50.0ms tupdate 32.0ms alpha 2 beta 20 bytemode<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 1616274 bytes 1137 pkt&nbsp;(dropped 0, overlimits 0 requeues 0)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 13626b 9p requeues 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;prob 0.000000 delay 0us<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pkts_in 1146 overlimit 0 dropped 0 maxq 23 ecn_mark 0 </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-codel/">tc-codel</a></code>(8) <code><a href="/docs/linux/man/8-tc-red/">tc-red</a></code>(8) </p>

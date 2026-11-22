@@ -13,28 +13,28 @@ description: "log4cpp::NTEventLogAppender –"
 <p>#include &lt;NTEventLogAppender.hh&gt; </p>
 <p> Inherits <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>NTEventLogAppender</code> (const std::string &amp;name, const std::string &amp;sourceName)<br />
- <i>Instantiate an </i><code>NTEventLogAppender</code> with given name and source.<br />
+<p><code>NTEventLogAppender</code> (const std::string &amp;name, const std::string &amp;sourceName)<br/>
+ <i>Instantiate an </i><code>NTEventLogAppender</code> with given name and source.<br/>
  virtual <code>~NTEventLogAppender</code> () </p>
-<p> virtual bool <code>reopen</code> ()<br />
- <i>Calls </i><code>open()</code> and <code>close()</code><br />
- virtual void <code>close</code> ()<br />
- <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i><br />
- virtual bool <code>requiresLayout</code> () const<br />
- <i>The </i><code>NTEventLogAppender</code> does its own <code>Layout</code>.<br />
- virtual void <code>setLayout</code> (<code>Layout</code> *layout)<br />
+<p> virtual bool <code>reopen</code> ()<br/>
+ <i>Calls </i><code>open()</code> and <code>close()</code><br/>
+ virtual void <code>close</code> ()<br/>
+ <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i><br/>
+ virtual bool <code>requiresLayout</code> () const<br/>
+ <i>The </i><code>NTEventLogAppender</code> does its own <code>Layout</code>.<br/>
+ virtual void <code>setLayout</code> (<code>Layout</code> *layout)<br/>
  <i>Set the </i><code>Layout</code> for this appender.</p>
 <h3>Protected Member Functions</h3>
-<p>WORD <code>getCategory</code> (<code>Priority::Value</code> priority)<br />
- <i>Convert </i><code>log4cpp</code> <code>Priority</code> to an EventLog category.<br />
- WORD <code>getType</code> (<code>Priority::Value</code> priority)<br />
- <i>Convert </i><code>log4cpp</code> <code>Priority</code> to an EventLog type.<br />
+<p>WORD <code>getCategory</code> (<code>Priority::Value</code> priority)<br/>
+ <i>Convert </i><code>log4cpp</code> <code>Priority</code> to an EventLog category.<br/>
+ WORD <code>getType</code> (<code>Priority::Value</code> priority)<br/>
+ <i>Convert </i><code>log4cpp</code> <code>Priority</code> to an EventLog type.<br/>
  HKEY <code>regGetKey</code> (TCHAR *subkey, DWORD *disposition) </p>
 <p> void <code>regSetString</code> (HKEY hkey, TCHAR *name, TCHAR *value) </p>
 <p> void <code>regSetDword</code> (HKEY hkey, TCHAR *name, DWORD value) </p>
 <p> void <code>addRegistryInfo</code> (const char *source) </p>
 <p> virtual void <code>open</code> () </p>
-<p> virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p> virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Sends a </i><code>LoggingEvent</code> to NT Event log.</p>
 <h3>Protected Attributes</h3>
 <p>HANDLE <code>_hEventSource</code> </p>
@@ -49,7 +49,7 @@ description: "log4cpp::NTEventLogAppender –"
 <p>Instantiate an <code>NTEventLogAppender</code> with given name and source. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> The name of the <code>Appender</code><br />
+<dd><i>name</i> The name of the <code>Appender</code><br/>
  <i>sourceName</i> The source name to log</dd></dl>
 <h3>log4cpp::NTEventLogAppender::~NTEventLogAppender () [virtual]</h3>
 <h2>Member Function Documentation</h2>

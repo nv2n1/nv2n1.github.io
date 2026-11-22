@@ -15,16 +15,16 @@ description: "ipsilon-server-install – Configure an Ipsilon Identity Provider 
 <p> Configure an Ipsilon instance to provide identity services using any of the supported and enabled protocols. </p>
 <p> Ipsilon uses a plugable framework so some options may not be available, depending on what plugins have been installed. </p>
 <p> Ipsilon supports three types of plugins: </p>
-<p> 1. Authentication provider plugins &#8211; implements an authentication protocol such as SAML 2, OpenID or Persona. At least one needs to be enabled.<br />
- 2. Login plugins &#8211; mechanisms for authenticating including GSSAPI, LDAP, PAM, etc. At least one should be enabled.<br />
+<p> 1. Authentication provider plugins &#8211; implements an authentication protocol such as SAML 2, OpenID or Persona. At least one needs to be enabled.<br/>
+ 2. Login plugins &#8211; mechanisms for authenticating including GSSAPI, LDAP, PAM, etc. At least one should be enabled.<br/>
  3. Info plugins &#8211; sources where additional attributes of the user may be obtained. </p>
 <p> There are also environment helper options which aid in configuring the Identity Provider for a particular environment, such as a FreeIPA domain. </p>
 <p> The installation details are logged to /var/log/ipsilon-install.log.</p>
 <h2>DATABASES</h2>
 <p> Ipsilon stores configuration and session information in database tables. By default, a set of sqlite databases are used. If a full RDBMS is desired then the <code>&#8211;database-url</code> and/or <code>*-dburi</code> options can be used to provide the database URIs. This should probably be used in load-balanced situations so all servers can use the same database. </p>
-<p> An example of a specific URI is<br />
+<p> An example of a specific URI is<br/>
  &#8211;users_dburi=postgresql://@dbserver.example.com:45432/users </p>
-<p> The templatized version would be<br />
+<p> The templatized version would be<br/>
  &#8211;database-url=postgresql://@dbserver.example.com:45432/%(dbname)s</p>
 <h2>OPTIONS</h2>
 <h3>BASIC OPTIONS</h3>

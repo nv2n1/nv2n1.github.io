@@ -15,7 +15,7 @@ description: "gdbus-codegen – D-Bus code and documentation generator"
 <h2>DESCRIPTION</h2>
 <p> <code>gdbus-codegen</code></p>
 <dd>is used to generate code and/or documentation for one or more D-Bus interfaces. </dd>
-<p> <code>gdbus-codegen</code> reads m[blue]<code>D-Bus Introspection XML</code>m[]<font SIZE="-2">[1]</font> from files passed as additional arguments on the command line and generates output files. It currently supports generating C source code (via <code>&#8211;body</code>) or header (via <code>&#8211;header</code>) and Docbook XML (via <code>&#8211;generate-docbook</code>). Alternatively, more restricted C source code and headers can be generated, which just contain the interface information (as <code>GDBusInterfaceInfo</code> structures) using <code>&#8211;interface-info-body</code> and <code>&#8211;interface-info-header</code>.</p>
+<p> <code>gdbus-codegen</code> reads m[blue]<code>D-Bus Introspection XML</code>m[][1] from files passed as additional arguments on the command line and generates output files. It currently supports generating C source code (via <code>&#8211;body</code>) or header (via <code>&#8211;header</code>) and Docbook XML (via <code>&#8211;generate-docbook</code>). Alternatively, more restricted C source code and headers can be generated, which just contain the interface information (as <code>GDBusInterfaceInfo</code> structures) using <code>&#8211;interface-info-body</code> and <code>&#8211;interface-info-header</code>.</p>
 <h2>GENERATING C CODE</h2>
 <p> When generating C code, a #GInterface -derived type is generated for each D-Bus interface. Additionally, for every generated type, <code>FooBar</code>, two concrete instantiable types, <code>FooBarProxy</code> and <code>FooBarSkeleton</code>, implementing said interface are also generated. The former is derived from #GDBusProxy and intended for use on the client side while the latter is derived from the #GDBusInterfaceSkeleton type making it easy to export on a #GDBusConnection either directly or via a #GDBusObjectManagerServer instance. </p>
 <p> For C code generation either <code>&#8211;body</code> that generates source code, <code>&#8211;header</code> that generates headers, <code>&#8211;interface-info-body</code> that generates interface information source code, or <code>&#8211;interface-info-header</code> that generates interface information headers, can be used. These options must be used along with <code>&#8211;output</code>, which is used to specify the file to output to. </p>
@@ -25,7 +25,7 @@ description: "gdbus-codegen – D-Bus code and documentation generator"
 <p> Two forms of the name are used &#8211; the CamelCase form and the lower-case form. The CamelCase form is used for the #GType and struct name, while lower-case form is used in function names. The lower-case form is calculated by converting from CamelCase to lower-case and inserting underscores at word boundaries (using certain heuristics). </p>
 <p> If the value given by the org.gtk.GDBus.C.Name annotation or the <code>&#8211;c-namespace</code> option contains an underscore (sometimes called <i>Ugly_Case</i>), then the camel-case name is derived by removing all underscores, and the lower-case name is derived by lower-casing the string. This is useful in some situations where abbreviations are used. For example, if the annotation is used on the interface net.MyCorp.MyApp.iSCSITarget with the value iSCSI_Target the CamelCase form is iSCSITarget while the lower-case form is iscsi_target. If the annotation is used on the method EjectTheiPod with the value Eject_The_iPod, the lower-case form is eject_the_ipod.</p>
 <h2>GENERATING DOCBOOK DOCUMENTATION</h2>
-<p> Each generated Docbook XML file (see the <code>&#8211;generate-docbook</code> option for details) is a m[blue]<code>RefEntry</code>m[]<font SIZE="-2">[2]</font> article describing the D-Bus interface.</p>
+<p> Each generated Docbook XML file (see the <code>&#8211;generate-docbook</code> option for details) is a m[blue]<code>RefEntry</code>m[][2] article describing the D-Bus interface.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported: </p>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
@@ -39,7 +39,7 @@ description: "gdbus-codegen – D-Bus code and documentation generator"
 <p> <code>&#8211;interface-prefix</code> <i>org.project.Prefix.</i></p>
 <dl>
 <dt>
-</dt><dd> A prefix to strip from all D-Bus interface names when calculating the typename for the C binding and the Docbook m[blue]<code>sortas attribute</code>m[]<font SIZE="-2">[3]</font>.</dd></dl>
+</dt><dd> A prefix to strip from all D-Bus interface names when calculating the typename for the C binding and the Docbook m[blue]<code>sortas attribute</code>m[][3].</dd></dl>
 <p> <code>&#8211;generate-docbook</code> <i>OUTFILES</i></p>
 <dl>
 <dt>
@@ -53,11 +53,11 @@ description: "gdbus-codegen – D-Bus code and documentation generator"
 <p> <code>&#8211;c-namespace</code> <i>YourProject</i></p>
 <dl>
 <dt>
-</dt><dd> The namespace to use for generated C code. This is expected to be in m[blue]<code>CamelCase</code>m[]<font SIZE="-2">[4]</font> or <i>Ugly_Case</i> (see above).</dd></dl>
+</dt><dd> The namespace to use for generated C code. This is expected to be in m[blue]<code>CamelCase</code>m[][4] or <i>Ugly_Case</i> (see above).</dd></dl>
 <p> <code>&#8211;pragma-once</code></p>
 <dl>
 <dt>
-</dt><dd> If this option is passed, the m[blue]<code>#pragma once</code>m[]<font SIZE="-2">[5]</font> preprocessor directive is used instead of include guards.</dd></dl>
+</dt><dd> If this option is passed, the m[blue]<code>#pragma once</code>m[][5] preprocessor directive is used instead of include guards.</dd></dl>
 <p> <code>&#8211;c-generate-object-manager</code></p>
 <dl>
 <dt>
@@ -125,7 +125,7 @@ gdbus - codegen-- c - namespace MyApp-- generate - c - code myapp - generated-- 
 <p> org.freedesktop.DBus.Deprecated</p>
 <dl>
 <dt>
-</dt><dd> Can be used on any &lt;interface&gt;, &lt;method&gt;, &lt;signal&gt; and &lt;property&gt; element to specify that the element is deprecated if its value is true. Note that this annotation is defined in the m[blue]<code>D-Bus specification</code>m[]<font SIZE="-2">[1]</font> and can only assume the values true and false. In particular, you cannot specify the version that the element was deprecated in nor any helpful deprecation message. Such information should be added to the element documentation instead. </dd>
+</dt><dd> Can be used on any &lt;interface&gt;, &lt;method&gt;, &lt;signal&gt; and &lt;property&gt; element to specify that the element is deprecated if its value is true. Note that this annotation is defined in the m[blue]<code>D-Bus specification</code>m[][1] and can only assume the values true and false. In particular, you cannot specify the version that the element was deprecated in nor any helpful deprecation message. Such information should be added to the element documentation instead. </dd>
 <p> When generating C code, this annotation is used to add #G_GNUC_DEPRECATED to generated functions for the element. </p>
 <p> When generating Docbook XML, a deprecation warning will appear along the documentation for the element.</dl>
 <p> org.gtk.GDBus.Since</p>
@@ -145,7 +145,7 @@ gdbus - codegen-- c - namespace MyApp-- generate - c - code myapp - generated-- 
 <p> org.gtk.GDBus.C.Name</p>
 <dl>
 <dt>
-</dt><dd> Can be used on any &lt;interface&gt;, &lt;method&gt;, &lt;signal&gt; and &lt;property&gt; element to specify the name to use when generating C code. The value is expected to be in m[blue]<code>CamelCase</code>m[]<font SIZE="-2">[4]</font> or <i>Ugly_Case</i> (see above).</dd></dl>
+</dt><dd> Can be used on any &lt;interface&gt;, &lt;method&gt;, &lt;signal&gt; and &lt;property&gt; element to specify the name to use when generating C code. The value is expected to be in m[blue]<code>CamelCase</code>m[][4] or <i>Ugly_Case</i> (see above).</dd></dl>
 <p> org.gtk.GDBus.C.ForceGVariant</p>
 <dl>
 <dt>
@@ -154,8 +154,8 @@ gdbus - codegen-- c - namespace MyApp-- generate - c - code myapp - generated-- 
 <dl>
 <dt>
 </dt><dd> If set to a non-empty string, the generated code will include parameters to exchange file descriptors using the #GUnixFDList type. This annotation can be used on &lt;method&gt; elements.</dd></dl>
-<p> As an easier alternative to using the org.gtk.GDBus.DocString annotation, note that parser used by <code>gdbus-codegen</code> parses XML comments in a way similar to m[blue]<code>gtk-doc</code>m[]<font SIZE="-2">[6]</font>: </p>
-<p> Note that @since can be used in any inline documentation bit (e.g. for interfaces, methods, signals and properties) to set the org.gtk.GDBus.Since annotation. For the org.gtk.GDBus.DocString annotation (and inline comments), note that substrings of the form #net.Corp.Bar, net.Corp.Bar.FooMethod(), #net.Corp.Bar::BarSignal and #net.Corp.InlineDocs:BazProperty are all expanded to links to the respective interface, method, signal and property. Additionally, substrings starting with @ and % characters are rendered as m[blue]<code>parameter</code>m[]<font SIZE="-2">[7]</font> and m[blue]<code>constant</code>m[]<font SIZE="-2">[8]</font> respectively. </p>
+<p> As an easier alternative to using the org.gtk.GDBus.DocString annotation, note that parser used by <code>gdbus-codegen</code> parses XML comments in a way similar to m[blue]<code>gtk-doc</code>m[][6]: </p>
+<p> Note that @since can be used in any inline documentation bit (e.g. for interfaces, methods, signals and properties) to set the org.gtk.GDBus.Since annotation. For the org.gtk.GDBus.DocString annotation (and inline comments), note that substrings of the form #net.Corp.Bar, net.Corp.Bar.FooMethod(), #net.Corp.Bar::BarSignal and #net.Corp.InlineDocs:BazProperty are all expanded to links to the respective interface, method, signal and property. Additionally, substrings starting with @ and % characters are rendered as m[blue]<code>parameter</code>m[][7] and m[blue]<code>constant</code>m[][8] respectively. </p>
 <p> If both XML comments and org.gtk.GDBus.DocString or org.gtk.GDBus.DocString.Short annotations are present, the latter wins.</p>
 <h2>EXAMPLE</h2>
 <p> Consider the following D-Bus Introspection XML. </p>
@@ -194,85 +194,85 @@ gdbus-codegen --generate-c-code myapp-generated       \
 <dl>
 <dt>
 </dt><dd>
-/* GType macros for the three generated types */<br />
-#define MY_APP_TYPE_FROBBER (my_app_frobber_get_type())<br />
-#define MY_APP_TYPE_FROBBER_SKELETON (my_app_frobber_skeleton_get_type())<br />
-#define MY_APP_TYPE_FROBBER_PROXY (my_app_frobber_proxy_get_type())<br />
-typedef struct _MyAppFrobber MyAppFrobber; /* Dummy typedef */<br />
-typedef struct<br />
-{<br />
-    GTypeInterface parent_iface;<br />
-    /* Signal handler for the ::notification signal */<br />
-    void (*notification)(MyAppFrobber *proxy,<br />
-                         GVariant *icon_blob,<br />
-                         gint height,<br />
-                         const gchar *const *messages);<br />
-    /* Signal handler for the ::handle-hello-world signal */<br />
-    gboolean (*handle_hello_world)(MyAppFrobber *proxy,<br />
-                                   GDBusMethodInvocation *invocation,<br />
-                                   const gchar *greeting);<br />
-} MyAppFrobberIface;<br />
-/* Asynchronously calls HelloWorld() */<br />
-void my_app_frobber_call_hello_world(MyAppFrobber *proxy,<br />
-                                     const gchar *greeting,<br />
-                                     GCancellable *cancellable,<br />
-                                     GAsyncReadyCallback callback,<br />
-                                     gpointer user_data);<br />
-gboolean<br />
-my_app_frobber_call_hello_world_finish(MyAppFrobber *proxy,<br />
-                                       gchar **out_response,<br />
-                                       GAsyncResult *res,<br />
-                                       GError **error);<br />
-/* Synchronously calls HelloWorld(). Blocks calling thread. */<br />
-gboolean<br />
-my_app_frobber_call_hello_world_sync(MyAppFrobber *proxy,<br />
-                                     const gchar *greeting,<br />
-                                     gchar **out_response,<br />
-                                     GCancellable *cancellable,<br />
-                                     GError **error);<br />
-/* Completes handling the HelloWorld() method call */<br />
-void my_app_frobber_complete_hello_world(MyAppFrobber *object,<br />
-                                         GDBusMethodInvocation *invocation,<br />
-                                         const gchar *response);<br />
-/* Emits the ::notification signal / Notification() D-Bus signal */<br />
-void my_app_frobber_emit_notification(MyAppFrobber *object,<br />
-                                      GVariant *icon_blob,<br />
-                                      gint height,<br />
-                                      const gchar *const *messages);<br />
-/* Gets the :verbose GObject property / Verbose D-Bus property.<br />
- * Does no blocking I/O.<br />
- */<br />
-gboolean my_app_frobber_get_verbose(MyAppFrobber *object);<br />
-/* Sets the :verbose GObject property / Verbose D-Bus property.<br />
- * Does no blocking I/O.<br />
- */<br />
-void my_app_frobber_set_verbose(MyAppFrobber *object,<br />
-                                gboolean value);<br />
-/* Gets the interface info */<br />
-GDBusInterfaceInfo *my_app_frobber_interface_info(void);<br />
-/* Creates a new skeleton object, ready to be exported */<br />
-MyAppFrobber *my_app_frobber_skeleton_new(void);<br />
-/* Client-side proxy constructors.<br />
- *<br />
- * Additionally, _new_for_bus(), _new_for_bus_finish() and<br />
- * _new_for_bus_sync() proxy constructors are also generated.<br />
- */<br />
-void my_app_frobber_proxy_new(GDBusConnection *connection,<br />
-                              GDBusProxyFlags flags,<br />
-                              const gchar *name,<br />
-                              const gchar *object_path,<br />
-                              GCancellable *cancellable,<br />
-                              GAsyncReadyCallback callback,<br />
-                              gpointer user_data);<br />
-MyAppFrobber *<br />
-my_app_frobber_proxy_new_finish(GAsyncResult *res,<br />
-                                GError **error);<br />
-MyAppFrobber *<br />
-my_app_frobber_proxy_new_sync(GDBusConnection *connection,<br />
-                              GDBusProxyFlags flags,<br />
-                              const gchar *name,<br />
-                              const gchar *object_path,<br />
-                              GCancellable *cancellable,<br />
+/* GType macros for the three generated types */<br/>
+#define MY_APP_TYPE_FROBBER (my_app_frobber_get_type())<br/>
+#define MY_APP_TYPE_FROBBER_SKELETON (my_app_frobber_skeleton_get_type())<br/>
+#define MY_APP_TYPE_FROBBER_PROXY (my_app_frobber_proxy_get_type())<br/>
+typedef struct _MyAppFrobber MyAppFrobber; /* Dummy typedef */<br/>
+typedef struct<br/>
+{<br/>
+    GTypeInterface parent_iface;<br/>
+    /* Signal handler for the ::notification signal */<br/>
+    void (*notification)(MyAppFrobber *proxy,<br/>
+                         GVariant *icon_blob,<br/>
+                         gint height,<br/>
+                         const gchar *const *messages);<br/>
+    /* Signal handler for the ::handle-hello-world signal */<br/>
+    gboolean (*handle_hello_world)(MyAppFrobber *proxy,<br/>
+                                   GDBusMethodInvocation *invocation,<br/>
+                                   const gchar *greeting);<br/>
+} MyAppFrobberIface;<br/>
+/* Asynchronously calls HelloWorld() */<br/>
+void my_app_frobber_call_hello_world(MyAppFrobber *proxy,<br/>
+                                     const gchar *greeting,<br/>
+                                     GCancellable *cancellable,<br/>
+                                     GAsyncReadyCallback callback,<br/>
+                                     gpointer user_data);<br/>
+gboolean<br/>
+my_app_frobber_call_hello_world_finish(MyAppFrobber *proxy,<br/>
+                                       gchar **out_response,<br/>
+                                       GAsyncResult *res,<br/>
+                                       GError **error);<br/>
+/* Synchronously calls HelloWorld(). Blocks calling thread. */<br/>
+gboolean<br/>
+my_app_frobber_call_hello_world_sync(MyAppFrobber *proxy,<br/>
+                                     const gchar *greeting,<br/>
+                                     gchar **out_response,<br/>
+                                     GCancellable *cancellable,<br/>
+                                     GError **error);<br/>
+/* Completes handling the HelloWorld() method call */<br/>
+void my_app_frobber_complete_hello_world(MyAppFrobber *object,<br/>
+                                         GDBusMethodInvocation *invocation,<br/>
+                                         const gchar *response);<br/>
+/* Emits the ::notification signal / Notification() D-Bus signal */<br/>
+void my_app_frobber_emit_notification(MyAppFrobber *object,<br/>
+                                      GVariant *icon_blob,<br/>
+                                      gint height,<br/>
+                                      const gchar *const *messages);<br/>
+/* Gets the :verbose GObject property / Verbose D-Bus property.<br/>
+ * Does no blocking I/O.<br/>
+ */<br/>
+gboolean my_app_frobber_get_verbose(MyAppFrobber *object);<br/>
+/* Sets the :verbose GObject property / Verbose D-Bus property.<br/>
+ * Does no blocking I/O.<br/>
+ */<br/>
+void my_app_frobber_set_verbose(MyAppFrobber *object,<br/>
+                                gboolean value);<br/>
+/* Gets the interface info */<br/>
+GDBusInterfaceInfo *my_app_frobber_interface_info(void);<br/>
+/* Creates a new skeleton object, ready to be exported */<br/>
+MyAppFrobber *my_app_frobber_skeleton_new(void);<br/>
+/* Client-side proxy constructors.<br/>
+ *<br/>
+ * Additionally, _new_for_bus(), _new_for_bus_finish() and<br/>
+ * _new_for_bus_sync() proxy constructors are also generated.<br/>
+ */<br/>
+void my_app_frobber_proxy_new(GDBusConnection *connection,<br/>
+                              GDBusProxyFlags flags,<br/>
+                              const gchar *name,<br/>
+                              const gchar *object_path,<br/>
+                              GCancellable *cancellable,<br/>
+                              GAsyncReadyCallback callback,<br/>
+                              gpointer user_data);<br/>
+MyAppFrobber *<br/>
+my_app_frobber_proxy_new_finish(GAsyncResult *res,<br/>
+                                GError **error);<br/>
+MyAppFrobber *<br/>
+my_app_frobber_proxy_new_sync(GDBusConnection *connection,<br/>
+                              GDBusProxyFlags flags,<br/>
+                              const gchar *name,<br/>
+                              const gchar *object_path,<br/>
+                              GCancellable *cancellable,<br/>
                               GError **error);
 </dd></dl>
 <p> Thus, for every D-Bus method, there will be three C functions for calling the method, one #GObject signal for handling an incoming call and one C function for completing an incoming call. For every D-Bus signal, there&#8217;s one #GObject signal and one C function for emitting it. For every D-Bus property, two C functions are generated (one setter, one getter) and one #GObject property. The following table summarizes the generated facilities and where they are applicable: </p>
@@ -319,21 +319,21 @@ my_app_frobber_proxy_new_sync(GDBusConnection *connection,<br />
 <dl>
 <dt>
 </dt><dd>
-MyAppFrobber *proxy;<br />
-GError *error;<br />
-error = NULL;<br />
-proxy = my_app_frobber_proxy_new_for_bus_sync(<br />
-    G_BUS_TYPE_SESSION,<br />
-    G_DBUS_PROXY_FLAGS_NONE,<br />
-    &#8220;net.Corp.MyApp&#8221;,              /* bus name */<br />
-    &#8220;/net/Corp/MyApp/SomeFrobber&#8221;, /* object */<br />
-    NULL,                          /* GCancellable* */<br />
-    &amp;error);<br />
-/* do stuff with proxy */<br />
+MyAppFrobber *proxy;<br/>
+GError *error;<br/>
+error = NULL;<br/>
+proxy = my_app_frobber_proxy_new_for_bus_sync(<br/>
+    G_BUS_TYPE_SESSION,<br/>
+    G_DBUS_PROXY_FLAGS_NONE,<br/>
+    &#8220;net.Corp.MyApp&#8221;,              /* bus name */<br/>
+    &#8220;/net/Corp/MyApp/SomeFrobber&#8221;, /* object */<br/>
+    NULL,                          /* GCancellable* */<br/>
+    &amp;error);<br/>
+/* do stuff with proxy */<br/>
 g_object_unref(proxy);
 </dd></dl>
 <p> Instead of using the generic #GDBusProxy facilities, one can use the generated methods such as <code>my_app_frobber_call_hello_world()</code> to invoke the <code>net.Corp.MyApp.Frobber.HelloWorld()</code> D-Bus method, connect to the <code>::notification</code> GObject signal to receive the <code>net.Corp.MyApp.Frobber::Notication</code> D-Bus signal and get/set the <i>net.Corp.MyApp.Frobber:Verbose</i> D-Bus Property using either the GObject property <i>:verbose</i> or the <code>my_app_get_verbose()</code> and <code>my_app_set_verbose()</code> methods. Use the standard #GObject::notify signal to listen to property changes. </p>
-<p> Note that all property access is via #GDBusProxy &#8216;s property cache so no I/O is ever done when reading properties. Also note that setting a property will cause the m[blue]<code>org.freedesktop.DBus.Properties.Set</code>m[]<font SIZE="-2">[9]</font> method to be called on the remote object. This call, however, is asynchronous so setting a property won&#8217;t block. Further, the change is delayed and no error checking is possible.</p>
+<p> Note that all property access is via #GDBusProxy &#8216;s property cache so no I/O is ever done when reading properties. Also note that setting a property will cause the m[blue]<code>org.freedesktop.DBus.Properties.Set</code>m[][9] method to be called on the remote object. This call, however, is asynchronous so setting a property won&#8217;t block. Further, the change is delayed and no error checking is possible.</p>
 <h3>Server-side usage</h3>
 <p> The generated <code>MyAppFrobber</code> interface is designed so it is easy to implement it in a #GObject subclass. For example, to handle <code>HelloWorld()</code> method invocations, set the vfunc for <code>handle_hello_hello_world()</code> in the <code>MyAppFrobberIface</code> structure. Similarly, to handle the <i>net.Corp.MyApp.Frobber:Verbose</i> property override the <i>:verbose</i> #GObject property from the subclass. To emit a signal, use e.g. <code>my_app_emit_signal()</code> or g_signal_emit_by_name(). </p>
 <p> Instead of subclassing, it is often easier to use the generated <code>MyAppFrobberSkeleton</code> subclass. To handle incoming method calls, use <code>g_signal_connect()</code> with the <code>::handle-*</code> signals and instead of overriding #GObject &#8216;s <code>get_property()</code> and <code>set_property()</code> vfuncs, use g_object_get() and g_object_set() or the generated property getters and setters (the generated class has an internal property bag implementation). </p>
@@ -376,14 +376,14 @@ if (!g_dbus_interface_skeleton_export(G_DBUS_INTERFACE_SKELETON(interface),
 }
 </code></pre>
 </dd></dl>
-<p> To facilitate atomic changesets (multiple properties changing at the same time), #GObject::notify signals are queued up when received. The queue is drained in an idle handler (which is called from the thread-default main loop of the thread where the skeleton object was constructed) and will cause emissions of the m[blue]<code>org.freedesktop.DBus.Properties::PropertiesChanged</code>m[]<font SIZE="-2">[9]</font> signal with all the properties that have changed. Use g_dbus_interface_skeleton_flush() or g_dbus_object_skeleton_flush() to empty the queue immediately. Use g_object_freeze_notify() and g_object_thaw_notify() for atomic changesets if on a different thread.</p>
+<p> To facilitate atomic changesets (multiple properties changing at the same time), #GObject::notify signals are queued up when received. The queue is drained in an idle handler (which is called from the thread-default main loop of the thread where the skeleton object was constructed) and will cause emissions of the m[blue]<code>org.freedesktop.DBus.Properties::PropertiesChanged</code>m[][9] signal with all the properties that have changed. Use g_dbus_interface_skeleton_flush() or g_dbus_object_skeleton_flush() to empty the queue immediately. Use g_object_freeze_notify() and g_object_thaw_notify() for atomic changesets if on a different thread.</p>
 <h2>C TYPE MAPPING</h2>
 <p> Scalar types (type-strings &#8216;b&#8217;, &#8216;y&#8217;, &#8216;n&#8217;, &#8216;q&#8217;, &#8216;i&#8217;, &#8216;u&#8217;, &#8216;x&#8217;, &#8216;t&#8217; and &#8216;d&#8217;) ), strings (type-strings &#8216;s&#8217;, &#8216;ay&#8217;, &#8216;o&#8217; and &#8216;g&#8217;) and arrays of string (type-strings &#8216;as&#8217;, &#8216;ao&#8217; and &#8216;aay&#8217;) are mapped to the natural types, e.g. #gboolean, #gdouble, #gint, gchar*, gchar** and so on. Everything else is mapped to the #GVariant type. </p>
 <p> This automatic mapping can be turned off by using the annotation org.gtk.GDBus.C.ForceGVariant &#8211; if used then a #GVariant is always exchanged instead of the corresponding native C type. This annotation may be convenient to use when using bytestrings (type-string &#8216;ay&#8217;) for data that could have embedded NUL bytes.</p>
 <h2>STABILITY GUARANTEES</h2>
 <p> The generated C functions are guaranteed to not change their ABI that is, if a method, signal or property does not change its signature in the introspection XML, the generated C functions will not change its C ABI either. The ABI of the generated instance and class structures will be preserved as well. </p>
 <p> The ABI of the generated #GType s will be preserved only if the org.gtk.GDBus.Since annotation is used judiciously &#8212; this is because the VTable for the #GInterface relies on functions pointers for signal handlers. Specifically, if a D-Bus method, property or signal or is added to a D-Bus interface, then ABI of the generated #GInterface type is preserved if, and only if, each added method, property signal is annotated with they org.gtk.GDBus.Since annotation using a greater version number than previous versions. </p>
-<p> The generated C code currently happens to be annotated with m[blue]<code>gtk-doc</code>m[]<font SIZE="-2">[6]</font> / m[blue]<code>GObject Introspection</code>m[]<font SIZE="-2">[10]</font> comments / annotations. The layout and contents might change in the future so no guarantees about e.g. SECTION usage etc. is given. </p>
+<p> The generated C code currently happens to be annotated with m[blue]<code>gtk-doc</code>m[][6] / m[blue]<code>GObject Introspection</code>m[][10] comments / annotations. The layout and contents might change in the future so no guarantees about e.g. SECTION usage etc. is given. </p>
 <p> While the generated Docbook for D-Bus interfaces isn&#8217;t expected to change, no guarantees are given at this point. </p>
 <p> It is important to note that the generated code should not be checked into revision control systems, nor it should be included in distributed source archives.</p>
 <h2>BUGS</h2>

@@ -29,7 +29,7 @@ description: "Marco – The MATE Window Manager"
 <dt><code>&#8211;sm-client-id=ID</code></dt>
 <dd> Specify a session management ID.</dd>
 <dt><code>&#8211;sm-save-file=FILENAME</code></dt>
-<dd> Restore from a session management savefile.<br />
+<dd> Restore from a session management savefile.<br/>
  If no path is specified <code>marco</code> will look in ~/.config/mate-session/saved-session/</dd>
 <dt><code>-c, &#8211;composite</code></dt>
 <dd> Turn compositing ON. You may also use this option to start <code>marco</code> with composite &quot;true transparency&quot; effects.</dd>

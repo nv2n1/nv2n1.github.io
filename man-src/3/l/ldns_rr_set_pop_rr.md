@@ -10,7 +10,7 @@ description: "ldns_rr_set_push_rr, ldns_rr_set_pop_rr"
 
 <p> ldns_rr_set_push_rr, ldns_rr_set_pop_rr </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_rr_set_push_rr(ldns_rr_list *rr_list, ldns_rr *rr); </p>

@@ -9,7 +9,7 @@ description: "plipconfig – fine tune PLIP device parameters"
 
 <p>plipconfig &#8211; fine tune PLIP device parameters</p>
 <h2>Synopsis</h2>
-<p><code>plipconfig interface</code> [<code>nibble</code> <i>NN</i>] [<code>trigger</code> <i>NN</i>]<br />
+<p><code>plipconfig interface</code> [<code>nibble</code> <i>NN</i>] [<code>trigger</code> <i>NN</i>]<br/>
  <code>plipconfig</code> [<code>-V</code>] [<code>&#8211;version</code>] [<code>-h</code>] [<code>&#8211;help</code>]</p>
 <h2>Description</h2>
 <p><code>Plipconfig</code> is used to (hopefully) improve PLIP performance by changing the default timing parameters used by the PLIP protocol. Results are dependent on the parallel port hardware, cable, and the CPU speed of each machine on each end of the PLIP link. </p>

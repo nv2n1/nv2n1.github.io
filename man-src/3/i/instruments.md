@@ -10,93 +10,93 @@ description: "Financial instruments –"
 
 <p> Financial instruments &#8211; </p>
 <h3>Classes</h3>
-<p> class <code>DigitalCoupon</code><br />
- <i>Digital-payoff coupon. </i><br />
- class <code>CallableBond</code><br />
- <i>Callable bond base class. </i><br />
- class <code>CallableFixedRateBond</code><br />
- <i>callable/puttable fixed rate bond </i><br />
- class <code>CallableZeroCouponBond</code><br />
- <i>callable/puttable zero coupon bond </i><br />
- class <code>Commodity</code><br />
- <i></i><code>Commodity</code> base class.<br />
- class <code>EnergyCommodity</code><br />
- <i>Energy commodity class. </i><br />
- class <code>EnergyFuture</code><br />
- <i>Energy future. </i><br />
- class <code>DividendBarrierOption</code><br />
- <i>Single-asset barrier option with discrete dividends. </i><br />
- class <code>VarianceOption</code><br />
- <i>Variance option. </i><br />
- class <code>ContinuousAveragingAsianOption</code><br />
- <i>Continuous-averaging Asian option. </i><br />
- class <code>DiscreteAveragingAsianOption</code><br />
- <i>Discrete-averaging Asian option. </i><br />
- class <code>AssetSwap</code><br />
- <i>Bullet bond vs Libor swap. </i><br />
- class <code>BarrierOption</code><br />
- <i>Barrier option on a single asset. </i><br />
- class <code>BasketOption</code><br />
- <i></i><code>Basket</code> option on a number of assets.<br />
- class <code>Bond</code><br />
- <i>Base bond class. </i><br />
- class <code>CmsRateBond</code><br />
- <i>CMS-rate bond. </i><br />
- class <code>FixedRateBond</code><br />
- <i>fixed-rate bond </i><br />
- class <code>FloatingRateBond</code><br />
- <i>floating-rate bond (possibly capped and/or floored) </i><br />
- class <code>ZeroCouponBond</code><br />
- <i>zero-coupon bond </i><br />
- class <code>CapFloor</code><br />
- <i>Base class for cap-like instruments. </i><br />
- class <code>Cap</code><br />
- <i>Concrete cap class. </i><br />
- class <code>Floor</code><br />
- <i>Concrete floor class. </i><br />
- class <code>Collar</code><br />
- <i>Concrete collar class. </i><br />
- class <code>CliquetOption</code><br />
- <i>cliquet (Ratchet) option </i><br />
- class <code>CompositeInstrument</code><br />
- <i>Composite instrument </i><br />
- class <code>CreditDefaultSwap</code><br />
- <i>Credit default swap. </i><br />
- class <code>DividendVanillaOption</code><br />
- <i>Single-asset vanilla option (no barriers) with discrete dividends. </i><br />
- class <code>EuropeanOption</code><br />
- <i>European option on a single asset. </i><br />
- class <code>FixedRateBondForward</code><br />
- <i>Forward contract on a fixed-rate bond </i><br />
- class <code>Forward</code><br />
- <i>Abstract base forward class. </i><br />
- class <code>ForwardVanillaOption</code><br />
- <i>Forward version of a vanilla option </i><br />
- class <code>InflationSwap</code><br />
- <i>Abstract base class for inflation swaps. </i><br />
- class <code>ContinuousFloatingLookbackOption</code><br />
- <i>Continuous-floating lookback option. </i><br />
- class <code>ContinuousFixedLookbackOption</code><br />
- <i>Continuous-fixed lookback option. </i><br />
- class <code>PagodaOption</code><br />
- <i>Roofed Asian option on a number of assets. </i><br />
- class <code>QuantoBarrierOption</code><br />
- <i>Quanto version of a barrier option. </i><br />
- class <code>QuantoForwardVanillaOption</code><br />
- <i>Quanto version of a forward vanilla option. </i><br />
- class <code>QuantoVanillaOption</code><br />
- <i>quanto version of a vanilla option </i><br />
- class <code>Stock</code><br />
- <i>Simple stock class. </i><br />
- class <code>Swap</code><br />
- <i>Interest rate swap. </i><br />
- class <code>Swaption</code><br />
- <i>Swaption class </i><br />
- class <code>VanillaOption</code><br />
- <i>Vanilla option (no discrete dividends, no barriers) on a single asset. </i><br />
- class <code>VanillaSwap</code><br />
- <i>Plain-vanilla swap. </i><br />
- class <code>VarianceSwap</code><br />
+<p> class <code>DigitalCoupon</code><br/>
+ <i>Digital-payoff coupon. </i><br/>
+ class <code>CallableBond</code><br/>
+ <i>Callable bond base class. </i><br/>
+ class <code>CallableFixedRateBond</code><br/>
+ <i>callable/puttable fixed rate bond </i><br/>
+ class <code>CallableZeroCouponBond</code><br/>
+ <i>callable/puttable zero coupon bond </i><br/>
+ class <code>Commodity</code><br/>
+ <i></i><code>Commodity</code> base class.<br/>
+ class <code>EnergyCommodity</code><br/>
+ <i>Energy commodity class. </i><br/>
+ class <code>EnergyFuture</code><br/>
+ <i>Energy future. </i><br/>
+ class <code>DividendBarrierOption</code><br/>
+ <i>Single-asset barrier option with discrete dividends. </i><br/>
+ class <code>VarianceOption</code><br/>
+ <i>Variance option. </i><br/>
+ class <code>ContinuousAveragingAsianOption</code><br/>
+ <i>Continuous-averaging Asian option. </i><br/>
+ class <code>DiscreteAveragingAsianOption</code><br/>
+ <i>Discrete-averaging Asian option. </i><br/>
+ class <code>AssetSwap</code><br/>
+ <i>Bullet bond vs Libor swap. </i><br/>
+ class <code>BarrierOption</code><br/>
+ <i>Barrier option on a single asset. </i><br/>
+ class <code>BasketOption</code><br/>
+ <i></i><code>Basket</code> option on a number of assets.<br/>
+ class <code>Bond</code><br/>
+ <i>Base bond class. </i><br/>
+ class <code>CmsRateBond</code><br/>
+ <i>CMS-rate bond. </i><br/>
+ class <code>FixedRateBond</code><br/>
+ <i>fixed-rate bond </i><br/>
+ class <code>FloatingRateBond</code><br/>
+ <i>floating-rate bond (possibly capped and/or floored) </i><br/>
+ class <code>ZeroCouponBond</code><br/>
+ <i>zero-coupon bond </i><br/>
+ class <code>CapFloor</code><br/>
+ <i>Base class for cap-like instruments. </i><br/>
+ class <code>Cap</code><br/>
+ <i>Concrete cap class. </i><br/>
+ class <code>Floor</code><br/>
+ <i>Concrete floor class. </i><br/>
+ class <code>Collar</code><br/>
+ <i>Concrete collar class. </i><br/>
+ class <code>CliquetOption</code><br/>
+ <i>cliquet (Ratchet) option </i><br/>
+ class <code>CompositeInstrument</code><br/>
+ <i>Composite instrument </i><br/>
+ class <code>CreditDefaultSwap</code><br/>
+ <i>Credit default swap. </i><br/>
+ class <code>DividendVanillaOption</code><br/>
+ <i>Single-asset vanilla option (no barriers) with discrete dividends. </i><br/>
+ class <code>EuropeanOption</code><br/>
+ <i>European option on a single asset. </i><br/>
+ class <code>FixedRateBondForward</code><br/>
+ <i>Forward contract on a fixed-rate bond </i><br/>
+ class <code>Forward</code><br/>
+ <i>Abstract base forward class. </i><br/>
+ class <code>ForwardVanillaOption</code><br/>
+ <i>Forward version of a vanilla option </i><br/>
+ class <code>InflationSwap</code><br/>
+ <i>Abstract base class for inflation swaps. </i><br/>
+ class <code>ContinuousFloatingLookbackOption</code><br/>
+ <i>Continuous-floating lookback option. </i><br/>
+ class <code>ContinuousFixedLookbackOption</code><br/>
+ <i>Continuous-fixed lookback option. </i><br/>
+ class <code>PagodaOption</code><br/>
+ <i>Roofed Asian option on a number of assets. </i><br/>
+ class <code>QuantoBarrierOption</code><br/>
+ <i>Quanto version of a barrier option. </i><br/>
+ class <code>QuantoForwardVanillaOption</code><br/>
+ <i>Quanto version of a forward vanilla option. </i><br/>
+ class <code>QuantoVanillaOption</code><br/>
+ <i>quanto version of a vanilla option </i><br/>
+ class <code>Stock</code><br/>
+ <i>Simple stock class. </i><br/>
+ class <code>Swap</code><br/>
+ <i>Interest rate swap. </i><br/>
+ class <code>Swaption</code><br/>
+ <i>Swaption class </i><br/>
+ class <code>VanillaOption</code><br/>
+ <i>Vanilla option (no discrete dividends, no barriers) on a single asset. </i><br/>
+ class <code>VanillaSwap</code><br/>
+ <i>Plain-vanilla swap. </i><br/>
+ class <code>VarianceSwap</code><br/>
  <i>Variance swap. </i></p>
 <h2>Detailed Description</h2>
 <p> Since version 0.3.4, the Instrument class was reworked as shown in the following figure. </p>

@@ -54,9 +54,9 @@ description: "eurephiadm – eurephia administration utility"
 <dd>All database arguments the database driver requires must be set here. See the man page for the corresponding database driver for more information about valid options.</dd>
 <dt><code>log</code></dt>
 <dd>Defines how to log. If a file name is given, logging will be sent to this log file. Other valid values are:</dd>
-<dd><code>stderr:</code> or <code>stdout:</code><br />
+<dd><code>stderr:</code> or <code>stdout:</code><br/>
  Logging will go directly to stderr or stdout</dd>
-<dd><code>syslog:[local0..local7 | daemon | authpriv]</code><br />
+<dd><code>syslog:[local0..local7 | daemon | authpriv]</code><br/>
  Logging will be sent to syslog. The default syslog destination is daemon<code>.</dd>
 <dt>log_level</code></dt>
 <dd>Sets the log verbosity. Normally the values will be from 0 to 10, where 0 is as little logging as possible and 10 is very verbose. If eurephiadm or the database driver is compiled with debug logging, values up to 50 will be valid.</dd>

@@ -10,20 +10,20 @@ description: "hwlocality_object_strings – Manipulating Object Type, Sets and A
 
 <p> hwlocality_object_strings - Manipulating Object Type, Sets and Attributes as Strings </p>
 <h3>Functions</h3>
-<p> <br />
- const char * <code>hwloc_obj_type_string</code> (<code>hwloc_obj_type_t</code> type) <br />
- <br />
- int <code>hwloc_obj_type_sscanf</code> (const char *string, <code>hwloc_obj_type_t</code> *typep, int *depthattrp, void *typeattrp, size_t typeattrsize) <br />
- <br />
- int <code>hwloc_obj_type_snprintf</code> (char *restrict string, size_t size, <code>hwloc_obj_t</code> obj, int verbose) <br />
- <br />
- int <code>hwloc_obj_attr_snprintf</code> (char *restrict string, size_t size, <code>hwloc_obj_t</code> obj, const char *restrict separator, int verbose) <br />
- <br />
- int <code>hwloc_obj_cpuset_snprintf</code> (char *restrict str, size_t size, size_t nobj, const <code>hwloc_obj_t</code> *restrict objs) <br />
- <br />
- static const char * <code>hwloc_obj_get_info_by_name</code> (<code>hwloc_obj_t</code> obj, const char *name) <br />
- <br />
- void <code>hwloc_obj_add_info</code> (<code>hwloc_obj_t</code> obj, const char *name, const char *value) <br />
+<p> <br/>
+ const char * <code>hwloc_obj_type_string</code> (<code>hwloc_obj_type_t</code> type) <br/>
+ <br/>
+ int <code>hwloc_obj_type_sscanf</code> (const char *string, <code>hwloc_obj_type_t</code> *typep, int *depthattrp, void *typeattrp, size_t typeattrsize) <br/>
+ <br/>
+ int <code>hwloc_obj_type_snprintf</code> (char *restrict string, size_t size, <code>hwloc_obj_t</code> obj, int verbose) <br/>
+ <br/>
+ int <code>hwloc_obj_attr_snprintf</code> (char *restrict string, size_t size, <code>hwloc_obj_t</code> obj, const char *restrict separator, int verbose) <br/>
+ <br/>
+ int <code>hwloc_obj_cpuset_snprintf</code> (char *restrict str, size_t size, size_t nobj, const <code>hwloc_obj_t</code> *restrict objs) <br/>
+ <br/>
+ static const char * <code>hwloc_obj_get_info_by_name</code> (<code>hwloc_obj_t</code> obj, const char *name) <br/>
+ <br/>
+ void <code>hwloc_obj_add_info</code> (<code>hwloc_obj_t</code> obj, const char *name, const char *value) <br/>
   </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>

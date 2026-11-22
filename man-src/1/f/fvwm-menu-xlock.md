@@ -24,7 +24,7 @@ description: "fvwm-menu-xlock – builds xlock menu definition for fvwm"
 <dt><code>&#8211;title</code> title</dt>
 <dd> define menu title in the following argument. Default is &#8220;XLock Modes&#8221;.</dd>
 <dt><code>&#8211;item</code> format</dt>
-<dd> define menu item format in the following argument, default is &#8216;%n	(%d)&#8217;. <font SIZE="-1">TAB</font> can be specified as &#8216;	&#8217;, but in .fvwm2rc you should specify a double backslash or a real <font SIZE="-1">TAB</font>. </dd>
+<dd> define menu item format in the following argument, default is &#8216;%n	(%d)&#8217;. TAB can be specified as &#8216;	&#8217;, but in .fvwm2rc you should specify a double backslash or a real TAB. </dd>
 <p> Format specifiers: </p>
 <pre>
   %n - mode name
@@ -57,7 +57,7 @@ PipeRead 'fvwm-menu-xlock --name MenuSSaver --title "Screensaver" \
 <p> Charles K. Hines &lt;chuck_hines [at] vnet.ibm.com&gt;, initial version. </p>
 <p> Mikhael Goikhman &lt;migo [at] homemail.com&gt;, from 24 Feb 1999.</p>
 <h2>COPYING</h2>
-<p> The script is distributed by the same terms as fvwm itself. See <font SIZE="-1">GNU</font> General Public License for details.</p>
+<p> The script is distributed by the same terms as fvwm itself. See GNU General Public License for details.</p>
 <h2>BUGS</h2>
 <p> Depends on the output of xlock. Will produce an empty menu if the structure of the output is changed. </p>
 <p> Report bugs to fvwm-bug [at] fvwm.org. </p>

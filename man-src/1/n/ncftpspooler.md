@@ -52,15 +52,15 @@ description: "ncftpspooler – Global batch FTP job processor daemon"
 <dl>
 <dt>
 </dt><dd>
-<p> # This is a NcFTP spool file entry.<br />
- job-name=g-20011016-100656-008299-1<br />
- op=get<br />
- hostname=<a href="ftp://ftp.freebsd.org">ftp.freebsd.org</a><br />
- xtype=I<br />
- passive=1<br />
- remote-dir=pub/FreeBSD<br />
- local-dir=/tmp<br />
- remote-file=README.TXT<br />
+<p> # This is a NcFTP spool file entry.<br/>
+ job-name=g-20011016-100656-008299-1<br/>
+ op=get<br/>
+ hostname=<a href="ftp://ftp.freebsd.org">ftp.freebsd.org</a><br/>
+ xtype=I<br/>
+ passive=1<br/>
+ remote-dir=pub/FreeBSD<br/>
+ local-dir=/tmp<br/>
+ remote-file=README.TXT<br/>
  local-file=readme.txt
 </dd></dl>
 <p> Job files are flexible since they follow an easy-to-use format and do not have many requirements, but there are a few mandatory parameters that must appear for the spooler to be able to process the job.</p>
@@ -130,15 +130,15 @@ description: "ncftpspooler – Global batch FTP job processor daemon"
 <dt>
 </dt><dd>
 <p> #!/usr/bin/perl -w </p>
-<p> my ($line);<br />
+<p> my ($line);<br/>
  my (%params) = (); </p>
-<p> while (defined($line = &lt;STDIN&gt;)) {<br />
+<p> while (defined($line = &lt;STDIN&gt;)) {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>$params{$1}&nbsp;<wbr>=&nbsp;<wbr>$2</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>if&nbsp;<wbr>($line&nbsp;<wbr>=~&nbsp;<wbr>/^([^=\#\s]+)=(.*)/);</p>
 <p> } </p>
 <p> if ((defined($params{&quot;result&quot;})) &amp;&amp; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>($params{&quot;result&quot;}&nbsp;<wbr>=~&nbsp;<wbr>/^Succeeded/))<br />
- {<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>($params{&quot;result&quot;}&nbsp;<wbr>=~&nbsp;<wbr>/^Succeeded/))<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>open(LOG, &quot;&gt;&gt; /var/log/ncftp_spooler.log&quot;)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>or <a href="/docs/linux/man/1-exit/">exit</a>(1);</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>print LOG &quot;DOWNLOAD&quot; if ($params{&quot;op&quot;} eq &quot;get&quot;);</p>

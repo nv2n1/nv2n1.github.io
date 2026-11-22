@@ -10,7 +10,7 @@ description: "XkbVirtualModsToReal – Determines the mapping of virtual modifie
 <p>XkbVirtualModsToReal &#8211; Determines the mapping of virtual modifiers to core X protocol modifiers </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbVirtualModsToReal</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>virtual_mask</i><code>,</code> <code>unsigned int *</code><i>mask_rtrn</i><code>);</code><br />
+<dt> <code>Bool XkbVirtualModsToReal</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>virtual_mask</i><code>,</code> <code>unsigned int *</code><i>mask_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

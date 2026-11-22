@@ -43,7 +43,7 @@ description: "DPMSSetTimeouts – permits applications to set the timeout values
 <dd>The <i>DPMSSetTimeouts</i> function returns TRUE when the function has succeeded.</dd></dl>
 <h2>Errors</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">BadValue</font></dt>
+<dt>BadValue</dt>
 <dd>An argument is out of range.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-dpmscapable/">DPMSCapable</a></code>(3), <code><a href="/docs/linux/man/3-dpmsinfo/">DPMSInfo</a></code>(3), <code><a href="/docs/linux/man/3-dpmsgettimeouts/">DPMSGetTimeouts</a></code>(3)</p>

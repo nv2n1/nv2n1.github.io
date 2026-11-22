@@ -10,17 +10,17 @@ description: "RSL Constructors –"
 
 <p> RSL Constructors &#8211; </p>
 <h3>Functions</h3>
-<p> globus_rsl_t * <code>globus_rsl_make_boolean</code> (int operator, globus_list_t *children)<br />
- <i>RSL boolean constructor. </i><br />
- globus_rsl_t * <code>globus_rsl_make_relation</code> (int operator, char *attributename, globus_rsl_value_t *value_sequence)<br />
- <i>RSL relation constructor. </i><br />
- globus_rsl_value_t * <code>globus_rsl_value_make_literal</code> (char *string)<br />
- <i>RSL literal constructor. </i><br />
- globus_rsl_value_t * <code>globus_rsl_value_make_sequence</code> (globus_list_t *value_list)<br />
- <i>RSL value sequence constructor. </i><br />
- globus_rsl_value_t * <code>globus_rsl_value_make_variable</code> (globus_rsl_value_t *sequence)<br />
- <i>RSL variable reference constructor. </i><br />
- globus_rsl_value_t * <code>globus_rsl_value_make_concatenation</code> (globus_rsl_value_t *left_value, globus_rsl_value_t *right_value)<br />
+<p> globus_rsl_t * <code>globus_rsl_make_boolean</code> (int operator, globus_list_t *children)<br/>
+ <i>RSL boolean constructor. </i><br/>
+ globus_rsl_t * <code>globus_rsl_make_relation</code> (int operator, char *attributename, globus_rsl_value_t *value_sequence)<br/>
+ <i>RSL relation constructor. </i><br/>
+ globus_rsl_value_t * <code>globus_rsl_value_make_literal</code> (char *string)<br/>
+ <i>RSL literal constructor. </i><br/>
+ globus_rsl_value_t * <code>globus_rsl_value_make_sequence</code> (globus_list_t *value_list)<br/>
+ <i>RSL value sequence constructor. </i><br/>
+ globus_rsl_value_t * <code>globus_rsl_value_make_variable</code> (globus_rsl_value_t *sequence)<br/>
+ <i>RSL variable reference constructor. </i><br/>
+ globus_rsl_value_t * <code>globus_rsl_value_make_concatenation</code> (globus_rsl_value_t *left_value, globus_rsl_value_t *right_value)<br/>
  <i>RSL concatenation constructor. </i></p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -29,7 +29,7 @@ description: "RSL Constructors –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>operator</i> The boolean RSL operator to use to join the RSL parse tree list pointed to by the <i>children</i> parameter. This value must be one of GLOBUS_RSL_AND, GLOBUS_RSL_OR, GLOBUS_RSL_MULTIREQ in order to create a valid RSL tree.<br />
+</dt><dd> <i>operator</i> The boolean RSL operator to use to join the RSL parse tree list pointed to by the <i>children</i> parameter. This value must be one of GLOBUS_RSL_AND, GLOBUS_RSL_OR, GLOBUS_RSL_MULTIREQ in order to create a valid RSL tree.<br/>
  <i>children</i> Pointer to a list of RSL syntax trees to combine with the boolean operation described by the <i>operator</i> parameter.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -40,8 +40,8 @@ description: "RSL Constructors –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>operator</i> The RSL operator to use to relate the RSL attribute name pointed to by the <i>attributename</i> parameter and the values pointed to by the <i>value_sequence</i> parameter. This value must be one of GLOBUS_RSL_EQ, GLOBUS_RSL_NEQ, GLOBUS_RSL_GT, GLOBUS_RSL_GTEQ, GLOBUS_RSL_LT, or GLOBUS_RSL_LTEQ in order to create a valid RSL node.<br />
- <i>attributename</i> Pointer to a string naming the attribute of the new RSL relation.<br />
+</dt><dd> <i>operator</i> The RSL operator to use to relate the RSL attribute name pointed to by the <i>attributename</i> parameter and the values pointed to by the <i>value_sequence</i> parameter. This value must be one of GLOBUS_RSL_EQ, GLOBUS_RSL_NEQ, GLOBUS_RSL_GT, GLOBUS_RSL_GTEQ, GLOBUS_RSL_LT, or GLOBUS_RSL_LTEQ in order to create a valid RSL node.<br/>
+ <i>attributename</i> Pointer to a string naming the attribute of the new RSL relation.<br/>
  <i>value_sequence</i> Pointer to a sequence of RSL values to use in the new RSL relation.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -52,7 +52,7 @@ description: "RSL Constructors –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>left_value</i> A pointer to a RSL value to act as the left side of the concatenation. This must be a string literal or variable reference.<br />
+</dt><dd> <i>left_value</i> A pointer to a RSL value to act as the left side of the concatenation. This must be a string literal or variable reference.<br/>
  <i>right_value</i> A pointer to a RSL value to act as the right side of the concatenation. This must be a string literal or variable reference.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

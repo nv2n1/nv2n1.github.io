@@ -115,10 +115,10 @@ description: "dirmngr – CRL and OCSP daemon"
 <pre> keyserver <a href="ldaps://ldap.example.com/????bindname=uid=USERNAME">ldaps://ldap.example.com/????bindname=uid=USERNAME</a>
  %2Cou=GnuPG%20Users%2Cdc=example%2Cdc=com,password=PASSWORD</pre>
 </dd></dl>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Put this all on one line without any spaces and keep the&nbsp;&#8216;%2C&#8217;&nbsp;as given.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Replace USERNAME, PASSWORD, and the&nbsp;&#8216;dc&#8217;&nbsp;parts according to the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;instructions received from the LDAP administrator.&nbsp;<wbr>&nbsp;Note that only<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;simple authentication&nbsp;(i.e. cleartext passwords)&nbsp;is supported and thus<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Put this all on one line without any spaces and keep the&nbsp;&#8216;%2C&#8217;&nbsp;as given.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Replace USERNAME, PASSWORD, and the&nbsp;&#8216;dc&#8217;&nbsp;parts according to the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;instructions received from the LDAP administrator.&nbsp;<wbr>&nbsp;Note that only<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;simple authentication&nbsp;(i.e. cleartext passwords)&nbsp;is supported and thus<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;using ldaps is strongly suggested. </p>
 <dt><code>&#8211;nameserver </code><i>ipaddr</i></dt>
 <dd>In &#8220;Tor mode&#8221; Dirmngr uses a public resolver via Tor to resolve DNS names. If the default public resolver, which is <code>8.8.8.8</code>, shall not be used a different one can be given using this option. Note that a numerical IP address must be given (IPv6 or IPv4) and that no error checking is done for <i>ipaddr</i>. </dd>

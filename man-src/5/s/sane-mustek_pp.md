@@ -70,11 +70,11 @@ Cybercom
 <dl>
 <dt> <code>&lt;driver&gt;</code></dt>
 <dd>is the driver to use for this device. Currently available drivers are:</dd>
-<dd><code>cis600</code> : for 600 CP, 96 CP &amp; OEM versions<br />
- <code>cis1200</code> : for 1200 CP &amp; OEM versions<br />
- <code>cis1200+</code> : for 1200 CP+ &amp; OEM versions<br />
+<dd><code>cis600</code> : for 600 CP, 96 CP &amp; OEM versions<br/>
+ <code>cis1200</code> : for 1200 CP &amp; OEM versions<br/>
+ <code>cis1200+</code> : for 1200 CP+ &amp; OEM versions<br/>
  <code>ccd300</code> : for 600 IIIE P &amp; OEM version</dd>
-<dd><code>Choosing the wrong driver can damage your scanner!</code><br />
+<dd><code>Choosing the wrong driver can damage your scanner!</code><br/>
  Especially, using the 1200CP settings on a 600CP can be harmful. If the scanner starts making a loud noise, turn it off immediately !!!</dd></dl>
 <p> Using the cis600 driver on a 1200CP or a 1200CP+ is probably not dangerous. The cis1200+ driver also works for the 1200CP, and using the cis1200 driver on a 1200CP+ will typically result in scans that cover only half of the width of the scan area (also not dangerous). </p>
 <p> If unsure about the exact model of your OEM version, check the optical resolution in the manual or on the box: the 600CP has a maximum optical resolution of 300&#215;600 DPI, whereas the 1200CP and 1200CP+ have a maximum optical resolution of 600&#215;1200 DPI. </p>
@@ -92,18 +92,18 @@ Cybercom
 <h3>Common options</h3>
 <dl>
 <dt><code>bw &lt;value&gt;</code></dt>
-<dd>Black/white discrimination value to be used during lineart scanning. Pixel values below this value are assumed to be black, values above are assumed to be white.<br />
- Default value: 127<br />
- Minimum: 0<br />
+<dd>Black/white discrimination value to be used during lineart scanning. Pixel values below this value are assumed to be black, values above are assumed to be white.<br/>
+ Default value: 127<br/>
+ Minimum: 0<br/>
  Maximum: 255 </dd>
 <p> Example: option bw 150 </p>
 </dl>
 <h3>CIS driver options</h3>
 <dl>
 <dt><code>top_adjust &lt;value&gt;</code></dt>
-<dd>Vertical adjustment of the origin, expressed in millimeter (floating point). This option can be used to calibrate the position of the origin, within certain limits. Note that CIS scanners are probably temperature sensitive, and that a certain inaccuracy may be hard to avoid. Differences in offset between runs in the order of 1 to 2 mm are not unusual.<br />
- Default value: 0.0<br />
- Minimum: -5.0<br />
+<dd>Vertical adjustment of the origin, expressed in millimeter (floating point). This option can be used to calibrate the position of the origin, within certain limits. Note that CIS scanners are probably temperature sensitive, and that a certain inaccuracy may be hard to avoid. Differences in offset between runs in the order of 1 to 2 mm are not unusual.<br/>
+ Default value: 0.0<br/>
+ Minimum: -5.0<br/>
  Maximum: 5.0 </dd>
 <p> Example: option top_adjust -2.5</p>
 <dt><code>slow_skip</code></dt>
@@ -113,8 +113,8 @@ Cybercom
 <dt><code>engine_delay &lt;value&gt;</code></dt>
 <dd>Under normal circumstances, it is sufficient for the driver to wait for the scanner signaling that the engine is stable, before a new engine command can be transmitted. In rare cases, certain scanners and/or parallel port chipsets appear to prevent reliable detection of the engine state. As a result, engine commands are transmitted too soon and the movement of the scanner head becomes unreliable. Inaccuracies ranging up to 10 cm over the whole vertical scan range have been reported. To work around this problem, the engine_delay option can be set. If it is set, the driver waits an additional amount of time after every engine command, equal to the engine_delay parameter, expressed in milliseconds. It practice an engine_delay of 1 ms is usually sufficient. The maximum delay is 100 ms. </dd>
 <p> Note that every additional ms of delay can add up to 14 seconds to the total scanning time (highest resolution), so an as small as possible value is preferred. </p>
-<p> Default value: 0<br />
- Minimum: 0<br />
+<p> Default value: 0<br/>
+ Minimum: 0<br/>
  Maximum: 100 </p>
 <p> Example: option engine_delay 1 </p>
 </dl>
@@ -122,14 +122,14 @@ Cybercom
 <dl>
 <dt><code>top &lt;value&gt;</code></dt>
 <dd>Number of scanlines to skip to the start of the scan area. The number can be any positive integer. Values known to me are 47 and 56. </dd>
-<p> Default value: 47<br />
- Minimum: 0<br />
+<p> Default value: 47<br/>
+ Minimum: 0<br/>
  Maximum: none </p>
 <p> Example: option top 56</p>
 <dt><code>waitbank &lt;value&gt;</code></dt>
 <dd>The number of usecs to wait for a bank change. You should not touch this value actually. May be any positive integer </dd>
-<p> Default value: 700<br />
- Minimum: 0<br />
+<p> Default value: 700<br/>
+ Minimum: 0<br/>
  Maximum: none </p>
 <p> Example: option waitbank 700</dl>
 <p> A sample configuration file is shown below: </p>

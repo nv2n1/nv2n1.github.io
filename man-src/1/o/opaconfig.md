@@ -11,11 +11,11 @@ description: "opaconfig"
 <p> opaconfig </p>
 <p> <code>(Switch and Host)</code> Configures the Intel(R) Omni-Path Fabric Suite FastFabric.</p>
 <h2>Syntax</h2>
-<p> opaconfig [-r <i>root</i>] [-v|-vv] [-u|-s|-e <i>comp</i>] [-E#8217#160; <i>comp</i>] [-D <i>comp</i>]<br />
+<p> opaconfig [-r <i>root</i>] [-v|-vv] [-u|-s|-e <i>comp</i>] [-E#8217#160; <i>comp</i>] [-D <i>comp</i>]<br/>
  [&#8211;user_queries|&#8211;no_user_queries] [&#8211;answer <i>keyword=value</i>] </p>
-<p> or<br />
+<p> or<br/>
  opaconfig -C </p>
-<p> or<br />
+<p> or<br/>
  opaconfig -V</p>
 <h2>Options</h2>
 <dl>
@@ -73,12 +73,12 @@ description: "opaconfig"
 </dl>
 </dl>
 <h2>Example</h2>
-<p> # opaconfig<br />
+<p> # opaconfig<br/>
  Intel OPA <i>x.x.x.x.x</i> Software </p>
-<p> #8217#160; 1) Show Installed Software<br />
- #8217#160; 2) Reconfigure OFED IP over IB<br />
- #8217#160; 3) Reconfigure Driver Autostart<br />
- #8217#160; 4) Generate Supporting Information for Problem Report<br />
- #8217#160; 5) FastFabric (Host/Chassis/Switch Setup/Admin)<br />
+<p> #8217#160; 1) Show Installed Software<br/>
+ #8217#160; 2) Reconfigure OFED IP over IB<br/>
+ #8217#160; 3) Reconfigure Driver Autostart<br/>
+ #8217#160; 4) Generate Supporting Information for Problem Report<br/>
+ #8217#160; 5) FastFabric (Host/Chassis/Switch Setup/Admin)<br/>
  #8217#160; 6) Uninstall Software </p>
 <p> #8217#160; X) Exit </p>

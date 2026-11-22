@@ -16,7 +16,7 @@ description: "csv_to_db – convert comma-separated-value data into fsdb"
 <h2>DESCRIPTION</h2>
 <p> Converts a comma-separated-value data stream to Fsdb format. </p>
 <p> The input is CSV-format (<i>not</i> fsdb). The first row is taken to be the names of the columns. </p>
-<p> The output is two-space-separated fsdb. (Someday more general field separators should be supported.) Fsdb fields are normalized version of the <font SIZE="-1">CSV</font> file: spaces are converted to single underscores. </p>
+<p> The output is two-space-separated fsdb. (Someday more general field separators should be supported.) Fsdb fields are normalized version of the CSV file: spaces are converted to single underscores. </p>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
 <dt><code>-d</code></dt>
@@ -53,4 +53,4 @@ description: "csv_to_db – convert comma-separated-value data into fsdb"
 <p> Fsdb. db_to_csv.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2008 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

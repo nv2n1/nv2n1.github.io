@@ -78,7 +78,7 @@ shell &gt; mysqladmin[options] command[command - arg][command[command - arg]]...
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font><br />
+  <code>Warning</code> <br/>
  Setting a password using <code>mysqladmin</code> should be considered <i>insecure</i>. On some systems, your password becomes visible to system status programs such as <code>ps</code> that may be invoked by other users to display command lines. MySQL clients typically overwrite the command-line password argument with zeros during their initialization sequence. However, there is still a brief interval during which the value is visible. Also, on some systems this overwriting strategy is ineffective and the password remains visible to <code>ps</code>. (SystemV Unix systems and perhaps others are subject to this problem.) </dd>
 </dl>
 <p> If the <i>new_password</i> value contains spaces or other characters that are special to your command interpreter, you need to enclose it within quotation marks. On Windows, be sure to use double quotation marks rather than single quotation marks; single quotation marks are not stripped from the password, but rather are interpreted as part of the password. For example: </p>
@@ -93,7 +93,7 @@ shell&gt; <code>mysqladmin password &quot;my new password&quot;</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Caution</code> </font><br />
+  <code>Caution</code> <br/>
  Do not use this command used if the server was started with the <code>&#8211;skip-grant-tables</code> option. No password change will be applied. This is true even if you precede the password command with flush-privileges on the same command line to re-enable the grant tables because the flush operation occurs after you connect. However, you can use <code>mysqladmin flush-privileges</code> to re-enable the grant table and then use a separate <code>mysqladmin password</code> command to change the password. </dd>
 </dl>
 </dl>
@@ -356,7 +356,7 @@ shell &gt; mysqladmin proc stat + -- --+-- -- -- -+-- -- -- -- -- -+-- --+-- -- 
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If the OpenSSL FIPS Object Module is not available, the only permitted value for <code>&#8211;ssl-fips-mode</code> is OFF. In this case, setting <code>&#8211;ssl-fips-mode</code> to ON or STRICT causes the client to produce a warning at startup and to operate in non-FIPS mode. </dd>
 </dl>
 </dl>

@@ -23,12 +23,12 @@ sort the data set in increasing order</code></pre>
 <p>typedef Real <code>value_type</code></p>
 <h3>Public Member Functions</h3>
 <p><code>Inspectors</code> </p>
-<p> Size <code>samples</code> () const<br />
- <i>number of samples collected </i><br />
- const std::vector&lt; std::pair&lt; Real, Real &gt; &gt; &amp; <code>data</code> () const<br />
- <i>collected data </i><br />
- Real <code>weightSum</code> () const<br />
- <i>sum of data weights </i><br />
+<p> Size <code>samples</code> () const<br/>
+ <i>number of samples collected </i><br/>
+ const std::vector&lt; std::pair&lt; Real, Real &gt; &gt; &amp; <code>data</code> () const<br/>
+ <i>collected data </i><br/>
+ Real <code>weightSum</code> () const<br/>
+ <i>sum of data weights </i><br/>
  Real <code>mean</code> () const </p>
 <p> Real <code>variance</code> () const </p>
 <p> Real <code>standardDeviation</code> () const </p>
@@ -39,7 +39,7 @@ sort the data set in increasing order</code></pre>
 <p> Real <code>max</code> () const </p>
 <p> template&lt;class Func , class Predicate &gt; std::pair&lt; Real, Size &gt; <code>expectationValue</code> (const Func &amp;f, const Predicate &amp;inRange) const </p>
 <p> Real <code>percentile</code> (Real y) const </p>
-<p> Real <code>topPercentile</code> (Real y) const<br />
+<p> Real <code>topPercentile</code> (Real y) const<br/>
  <code>Modifiers</code> </p>
 <pre><code>void add (Real value, Real weight=1.0)
 adds a datum to the set, possibly with a weight

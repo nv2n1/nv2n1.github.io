@@ -10,7 +10,7 @@ description: "sgetf2.f –"
 <p>sgetf2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgetf2</code> (M, N, A, LDA, IPIV, INFO)<br />
+<p>subroutine <code>sgetf2</code> (M, N, A, LDA, IPIV, INFO)<br/>
  <i></i><code>SGETF2</code> computes the LU factorization of a general m-by-n matrix using partial pivoting with row interchanges (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgetf2 (integerM, integerN, real, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integerINFO)</h3>

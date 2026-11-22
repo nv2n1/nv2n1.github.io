@@ -74,149 +74,149 @@ description: "cpuid – Dump CPUID information for each CPU"
 <dl>
 <dt>
 </dt><dd>
- 241618: Intel Processor Identification and the CPUID Instruction, Application Note 485<br />
- 242480: Pentium Processor Specification Update<br />
- 242689: Pentium Pro Processor Specification Update<br />
- 243326: 60- and 66-MHz Pentium Processor Specification Update<br />
- 243337: Intel Pentium II Processor Specification Update<br />
- 243748: Intel Celeron Processor Specification Update<br />
- 243776: Intel Pentium II Xeon Processor Specification Update<br />
- 243887: Mobile Intel Pentium II Processor Specification Update<br />
- 244444: Mobile Intel Celeron Processor at 466 MHz, 433 MHz, 400 MHz, 366 MHz, 333 MHz, 300 MHz, and 266 MHz Specification Update<br />
- 244453: Intel Pentium III Processor Specification Update<br />
- 244460: Intel Pentium III Xeon Processor Specification Update<br />
- 245306: Mobile Intel Pentium III Processor and Mobile Intel Pentium III Processor-M Specification Update<br />
- 245421: Mobile Intel Celeron Processor (0.18u and 0.13u) Specification Update<br />
- 249199: Intel Pentium 4 Processor Specification Update<br />
- 249678: Intel Xeon Processor Specification Update<br />
- 250721: Mobile Intel Pentium 4 Processor-M Specification Update<br />
- 251309: Mobile Intel Celeron Processor on .13 Micron Process in Micro-FCPGA Package Specification Update<br />
- 252665: Intel Pentium M Processor Specification Update<br />
- 253176: Mobile Intel Pentium 4 Processor with 533 MHz System Bus Specification Update<br />
- 253666: 64 and IA-32 Architectures Software Developer&#8217;s Manual Volume 2A: Instruction Set Reference, A-M.<br />
- 276613: Detecting Multi-Core Processor Topology in an IA-32 Platform by Khang Nguyen and Shihjong Kuo<br />
- 290741: Intel Xeon Processor MP Specification Update<br />
- 290749: Intel Celeron Processor in the 478-Pin Package Specification Update<br />
- 300303: Intel Celeron M Processor Specification Update<br />
- 302209: Intel Pentium M Processor on 90nm Process with 2-MB L2 Cache Specification Update<br />
- 302352: Intel Pentium 4 Processor on 90 nm Process Specification Update<br />
- 302354: Intel Celeron D Processor 3xx Sequence Specification Update<br />
- 302402: Intel Xeon Processor with 800 MHz System Bus<br />
- 302441: Mobile Intel Pentium 4 Processor supporting Hyper-Threading Technology on 90-nm process technology Specification Update<br />
- 306752: 64-bit Intel Xeon Processor MP with 1 MB L2 Cache Specification Update<br />
- 306757: 64-bit Intel Xeon Processor MP with up to 8 MB L3 Cache Specification Update<br />
- 306832: Intel Pentium Processor Extreme Edition and Intel Pentium D Processor Specification Update<br />
- 309159: Dual-Core Intel Xeon Processor 2.80 GHz Specification Update<br />
- 309222: Intel Core Duo Processor and Intel Core Solo Processor on 65 nm Process Specification Update<br />
- 309627: Dual-Core Intel Xeon Processor 7000 Sequence Specification Update<br />
- 311827: Intel Celeron D Processor 300 Sequence Specification Update<br />
- 313065: Dual-Core Intel Xeon Processor 5000 Series Specification Update<br />
- 313279: Intel Core 2 Extreme Processor X6800 and Intel Core 2 Duo Desktop Processor E6000 Sequence Specification Update<br />
- 313356: Dual-Core Intel Xeon Processor 5100 Series Specification Update<br />
- 314554: Dual-Core Intel Xeon Processor 7100 Series Specification Update<br />
- 314916: Dual-Core Intel Xeon Processor 3000 Series Specification Update<br />
- 313515: Intel Pentium Dual-Core Processor Specification Update<br />
- 316134: Quad-Core Intel Xeon Processor 3200 Series Specification Update<br />
- 316964: Intel Celeron Processor 400 Series Specification Update<br />
- 316982: Intel Pentium Dual-Core Desktop Processor E2000 Series Specification Update<br />
- 317667: Intel Celeron Processor 500 Series Specification Update<br />
- 318081: Intel Xeon Processor 7200 and 7300 Series Specification Update<br />
- 318547: Intel Celeron Processor 200 Sequence Specification Update<br />
- 318585: Intel Xeon Processor 5400 Series Specification Update<br />
- 318586: Intel Xeon Processor 5200 Series Specification Update<br />
- 318727: Intel Core 2 Extreme Processor QX9000 Series and Intel Core 2 Quad Processor Q9000, Q9000S, Q8000, Q8000S Series Specification Update<br />
- 318733: Intel Core 2 Duo Processor E8000 and E7000 Series Specification Update<br />
- 318915: Intel Core 2 Duo Processor and Intel Core 2 Extreme Processor on 45-nm Process Specification Update<br />
- 318925: Intel Celeron Dual-Core Processor E1000 Series Specification Update<br />
- 319006: Dual-Core Intel Xeon Processor 3100 Series Specification Update<br />
- 319007: Quad-Core Intel Xeon Processor 3300 Series Specification Update<br />
- 319129: Intel Core 2 Extreme Processor QX9775 Specification Update<br />
- 319433: Intel Architecture Instruction Set Extensions Programming Reference<br />
- 319536: Intel Atom Processor Z5xx Series Specification Update<br />
- 319735: Intel Celeron Dual-Core Processor T1x00 Series Specification Update<br />
- 319978: Intel Atom Processor 200 Series Specification Update<br />
- 320047: Intel Atom Processor N270 Series Specification Update<br />
- 320121: Intel Core 2 Extreme Quad-Core Mobile Processor, Intel Core 2 Quad Mobile Processor, Intel Core 2 Extreme Mobile Processor, Intel Core 2 Duo Mobile Processor, Intel Core 2 Solo Mobile Processor and Intel Celeron Processor on 45-nm Process Specification Update<br />
- 320257: Intel EP80579 Integrated Processor Product Line Specification Update<br />
- 320336: Intel Xeon Processor 7400 Series Specification Update<br />
- 320468: Intel Pentium Dual-Core E6000 and E5000 Series Specification Update<br />
- 320529: Intel Atom Processor 300 Series Specification Update<br />
- 320767: Intel Core i7-900 Mobile Processor Extreme Edition Series, Intel Core i7-800 and i7-700 Mobile Processor Series Specification Update<br />
- 320836: Intel Core i7-900 Desktop Processor Extreme Edition Series and Intel Core i7-900 Desktop Processor Series Specification Update<br />
- 321324: Intel Xeon Processor 5500 Series Specification Update<br />
- 321333: Intel Xeon Processor 3500 Series Specification Update<br />
- 322166: Intel Core i7-800 and i5-700 Desktop Processor Series Specification Update<br />
- 322373: Intel Xeon Processor 3400 Series Specification Update<br />
- 322568: Intel Celeron Processor E3x00 Series Specification Update<br />
- 322849: Intel Atom Processor N400 Series Specification Update<br />
- 322861: Intel Atom Processor D400 Series (Single Core) Specification Update<br />
- 322862: Intel Atom Processor D500 Series (Dual Core) Specification Update<br />
- 322814: Intel Core i7-600, i5-500, i5-400 and i3-300 Mobile Processor Series Specification Update<br />
- 322911: Intel Core i5-600, i3-500 Desktop Processor Series and Intel Pentium Processor G6950 Specification Update<br />
- 323056: Intel Xeon Processor L3406 Specification Update<br />
- 323179: Intel Core i7-660UE, i7-620LE/UE, i7-610E, i5-520E, i3-330E and Intel Celeron Processor P4505, U3405 Series Datasheet Addendum Specification Update<br />
- 323105: Intel Xeon Processor C5500/C3500 Series Specification Update<br />
- 323254: Intel Core i7-900 Desktop Processor Extreme Edition Series and Intel Core i7-900 Desktop Processor Series on 32-nm Process Specification Update<br />
- 323338: Intel Xeon Processor 3600 Series Specification Update<br />
- 323344: Intel Xeon Processor 7500 Series Specification Update<br />
- 323372: Intel Xeon Processor 5600 Series Specification Update<br />
- 323874: Intel Pentium P6000 and U5000 Mobile Processor Series Specification Update<br />
- 324209: Intel Atom Processor E6xx Series Specification Update<br />
- 324341: Intel Atom Processor N500 Series Specification Update<br />
- Intel 64 Architecture Processor Topology Enumeration (Whitepaper)<br />
- 324456: Intel Celeron Mobile Processor P4000 and U3000 Series Specification Update<br />
- 324643: 2nd Generation Intel Core Processor Family Desktop Specification Update<br />
- 324827: 2nd Generation Intel Core Processor Family Mobile Specification Update<br />
- 325122: Intel Xeon Processor E7-8800 / 4800 / 2800 Product Families Specification Update<br />
- 325307: Intel Atom Processor Z600 Series Specification Update<br />
- 325462: Intel 64 and IA-32 Architectures Software Developer&#8217;s Manual Combined Volumes: 1, 2A, 2B, 2C, 3A, 3B, and 3C<br />
- 325630: Intel Atom Processor Z6xx Series Specification Update<br />
- 326140: Intel Atom Processor N2000 and D2000 Series Specification Update<br />
- 326198: Intel Core i7 Processor Family for the LGA-2011 Socket Specification Update<br />
- 326510: Intel Xeon Processor E5 Family Specification Update<br />
- 326766: Desktop 3rd Generation Intel Core Processor Family Specification Update<br />
- 326770: Mobile 3rd Generation Intel Core Processor Family Specification Update<br />
- 326774: Intel Xeon Processor E3-1200 v2 Product Family Specification Update<br />
- 328205: Intel Xeon Phi Coprocessor x100 Product Family Specification Update<br />
- 328899: Desktop 4th Generation Intel Core Processor Family Specification Update<br />
- 328903: Mobile 4th Generation Intel Core Processor Family Specification Update<br />
- 328908: Intel Xeon Processor E3-1200 v3 Product Family Specification Update<br />
- 329460: Intel Atom Processor C2000 Product Family Specification Update<br />
- 330785: Intel Xeon Processor E5 v3 Product Family Specification Update<br />
- 330836: Intel Core M Processor Family Specification Update<br />
- 330841: Intel Core i7 Processor Family for LGA2011-v3 Socket Specification Update<br />
- 332054: Intel Xeon Processor D-1500 Product Family Specification Update<br />
- 332067: Intel Atom Z8000 Processor Series Specification Update<br />
- 332095: Intel N-Series Intel Pentium Processors and Intel Celeron Processors Specification Update<br />
- 332317: Intel Xeon Processor E7 v3 Product Family Specification Update<br />
+ 241618: Intel Processor Identification and the CPUID Instruction, Application Note 485<br/>
+ 242480: Pentium Processor Specification Update<br/>
+ 242689: Pentium Pro Processor Specification Update<br/>
+ 243326: 60- and 66-MHz Pentium Processor Specification Update<br/>
+ 243337: Intel Pentium II Processor Specification Update<br/>
+ 243748: Intel Celeron Processor Specification Update<br/>
+ 243776: Intel Pentium II Xeon Processor Specification Update<br/>
+ 243887: Mobile Intel Pentium II Processor Specification Update<br/>
+ 244444: Mobile Intel Celeron Processor at 466 MHz, 433 MHz, 400 MHz, 366 MHz, 333 MHz, 300 MHz, and 266 MHz Specification Update<br/>
+ 244453: Intel Pentium III Processor Specification Update<br/>
+ 244460: Intel Pentium III Xeon Processor Specification Update<br/>
+ 245306: Mobile Intel Pentium III Processor and Mobile Intel Pentium III Processor-M Specification Update<br/>
+ 245421: Mobile Intel Celeron Processor (0.18u and 0.13u) Specification Update<br/>
+ 249199: Intel Pentium 4 Processor Specification Update<br/>
+ 249678: Intel Xeon Processor Specification Update<br/>
+ 250721: Mobile Intel Pentium 4 Processor-M Specification Update<br/>
+ 251309: Mobile Intel Celeron Processor on .13 Micron Process in Micro-FCPGA Package Specification Update<br/>
+ 252665: Intel Pentium M Processor Specification Update<br/>
+ 253176: Mobile Intel Pentium 4 Processor with 533 MHz System Bus Specification Update<br/>
+ 253666: 64 and IA-32 Architectures Software Developer&#8217;s Manual Volume 2A: Instruction Set Reference, A-M.<br/>
+ 276613: Detecting Multi-Core Processor Topology in an IA-32 Platform by Khang Nguyen and Shihjong Kuo<br/>
+ 290741: Intel Xeon Processor MP Specification Update<br/>
+ 290749: Intel Celeron Processor in the 478-Pin Package Specification Update<br/>
+ 300303: Intel Celeron M Processor Specification Update<br/>
+ 302209: Intel Pentium M Processor on 90nm Process with 2-MB L2 Cache Specification Update<br/>
+ 302352: Intel Pentium 4 Processor on 90 nm Process Specification Update<br/>
+ 302354: Intel Celeron D Processor 3xx Sequence Specification Update<br/>
+ 302402: Intel Xeon Processor with 800 MHz System Bus<br/>
+ 302441: Mobile Intel Pentium 4 Processor supporting Hyper-Threading Technology on 90-nm process technology Specification Update<br/>
+ 306752: 64-bit Intel Xeon Processor MP with 1 MB L2 Cache Specification Update<br/>
+ 306757: 64-bit Intel Xeon Processor MP with up to 8 MB L3 Cache Specification Update<br/>
+ 306832: Intel Pentium Processor Extreme Edition and Intel Pentium D Processor Specification Update<br/>
+ 309159: Dual-Core Intel Xeon Processor 2.80 GHz Specification Update<br/>
+ 309222: Intel Core Duo Processor and Intel Core Solo Processor on 65 nm Process Specification Update<br/>
+ 309627: Dual-Core Intel Xeon Processor 7000 Sequence Specification Update<br/>
+ 311827: Intel Celeron D Processor 300 Sequence Specification Update<br/>
+ 313065: Dual-Core Intel Xeon Processor 5000 Series Specification Update<br/>
+ 313279: Intel Core 2 Extreme Processor X6800 and Intel Core 2 Duo Desktop Processor E6000 Sequence Specification Update<br/>
+ 313356: Dual-Core Intel Xeon Processor 5100 Series Specification Update<br/>
+ 314554: Dual-Core Intel Xeon Processor 7100 Series Specification Update<br/>
+ 314916: Dual-Core Intel Xeon Processor 3000 Series Specification Update<br/>
+ 313515: Intel Pentium Dual-Core Processor Specification Update<br/>
+ 316134: Quad-Core Intel Xeon Processor 3200 Series Specification Update<br/>
+ 316964: Intel Celeron Processor 400 Series Specification Update<br/>
+ 316982: Intel Pentium Dual-Core Desktop Processor E2000 Series Specification Update<br/>
+ 317667: Intel Celeron Processor 500 Series Specification Update<br/>
+ 318081: Intel Xeon Processor 7200 and 7300 Series Specification Update<br/>
+ 318547: Intel Celeron Processor 200 Sequence Specification Update<br/>
+ 318585: Intel Xeon Processor 5400 Series Specification Update<br/>
+ 318586: Intel Xeon Processor 5200 Series Specification Update<br/>
+ 318727: Intel Core 2 Extreme Processor QX9000 Series and Intel Core 2 Quad Processor Q9000, Q9000S, Q8000, Q8000S Series Specification Update<br/>
+ 318733: Intel Core 2 Duo Processor E8000 and E7000 Series Specification Update<br/>
+ 318915: Intel Core 2 Duo Processor and Intel Core 2 Extreme Processor on 45-nm Process Specification Update<br/>
+ 318925: Intel Celeron Dual-Core Processor E1000 Series Specification Update<br/>
+ 319006: Dual-Core Intel Xeon Processor 3100 Series Specification Update<br/>
+ 319007: Quad-Core Intel Xeon Processor 3300 Series Specification Update<br/>
+ 319129: Intel Core 2 Extreme Processor QX9775 Specification Update<br/>
+ 319433: Intel Architecture Instruction Set Extensions Programming Reference<br/>
+ 319536: Intel Atom Processor Z5xx Series Specification Update<br/>
+ 319735: Intel Celeron Dual-Core Processor T1x00 Series Specification Update<br/>
+ 319978: Intel Atom Processor 200 Series Specification Update<br/>
+ 320047: Intel Atom Processor N270 Series Specification Update<br/>
+ 320121: Intel Core 2 Extreme Quad-Core Mobile Processor, Intel Core 2 Quad Mobile Processor, Intel Core 2 Extreme Mobile Processor, Intel Core 2 Duo Mobile Processor, Intel Core 2 Solo Mobile Processor and Intel Celeron Processor on 45-nm Process Specification Update<br/>
+ 320257: Intel EP80579 Integrated Processor Product Line Specification Update<br/>
+ 320336: Intel Xeon Processor 7400 Series Specification Update<br/>
+ 320468: Intel Pentium Dual-Core E6000 and E5000 Series Specification Update<br/>
+ 320529: Intel Atom Processor 300 Series Specification Update<br/>
+ 320767: Intel Core i7-900 Mobile Processor Extreme Edition Series, Intel Core i7-800 and i7-700 Mobile Processor Series Specification Update<br/>
+ 320836: Intel Core i7-900 Desktop Processor Extreme Edition Series and Intel Core i7-900 Desktop Processor Series Specification Update<br/>
+ 321324: Intel Xeon Processor 5500 Series Specification Update<br/>
+ 321333: Intel Xeon Processor 3500 Series Specification Update<br/>
+ 322166: Intel Core i7-800 and i5-700 Desktop Processor Series Specification Update<br/>
+ 322373: Intel Xeon Processor 3400 Series Specification Update<br/>
+ 322568: Intel Celeron Processor E3x00 Series Specification Update<br/>
+ 322849: Intel Atom Processor N400 Series Specification Update<br/>
+ 322861: Intel Atom Processor D400 Series (Single Core) Specification Update<br/>
+ 322862: Intel Atom Processor D500 Series (Dual Core) Specification Update<br/>
+ 322814: Intel Core i7-600, i5-500, i5-400 and i3-300 Mobile Processor Series Specification Update<br/>
+ 322911: Intel Core i5-600, i3-500 Desktop Processor Series and Intel Pentium Processor G6950 Specification Update<br/>
+ 323056: Intel Xeon Processor L3406 Specification Update<br/>
+ 323179: Intel Core i7-660UE, i7-620LE/UE, i7-610E, i5-520E, i3-330E and Intel Celeron Processor P4505, U3405 Series Datasheet Addendum Specification Update<br/>
+ 323105: Intel Xeon Processor C5500/C3500 Series Specification Update<br/>
+ 323254: Intel Core i7-900 Desktop Processor Extreme Edition Series and Intel Core i7-900 Desktop Processor Series on 32-nm Process Specification Update<br/>
+ 323338: Intel Xeon Processor 3600 Series Specification Update<br/>
+ 323344: Intel Xeon Processor 7500 Series Specification Update<br/>
+ 323372: Intel Xeon Processor 5600 Series Specification Update<br/>
+ 323874: Intel Pentium P6000 and U5000 Mobile Processor Series Specification Update<br/>
+ 324209: Intel Atom Processor E6xx Series Specification Update<br/>
+ 324341: Intel Atom Processor N500 Series Specification Update<br/>
+ Intel 64 Architecture Processor Topology Enumeration (Whitepaper)<br/>
+ 324456: Intel Celeron Mobile Processor P4000 and U3000 Series Specification Update<br/>
+ 324643: 2nd Generation Intel Core Processor Family Desktop Specification Update<br/>
+ 324827: 2nd Generation Intel Core Processor Family Mobile Specification Update<br/>
+ 325122: Intel Xeon Processor E7-8800 / 4800 / 2800 Product Families Specification Update<br/>
+ 325307: Intel Atom Processor Z600 Series Specification Update<br/>
+ 325462: Intel 64 and IA-32 Architectures Software Developer&#8217;s Manual Combined Volumes: 1, 2A, 2B, 2C, 3A, 3B, and 3C<br/>
+ 325630: Intel Atom Processor Z6xx Series Specification Update<br/>
+ 326140: Intel Atom Processor N2000 and D2000 Series Specification Update<br/>
+ 326198: Intel Core i7 Processor Family for the LGA-2011 Socket Specification Update<br/>
+ 326510: Intel Xeon Processor E5 Family Specification Update<br/>
+ 326766: Desktop 3rd Generation Intel Core Processor Family Specification Update<br/>
+ 326770: Mobile 3rd Generation Intel Core Processor Family Specification Update<br/>
+ 326774: Intel Xeon Processor E3-1200 v2 Product Family Specification Update<br/>
+ 328205: Intel Xeon Phi Coprocessor x100 Product Family Specification Update<br/>
+ 328899: Desktop 4th Generation Intel Core Processor Family Specification Update<br/>
+ 328903: Mobile 4th Generation Intel Core Processor Family Specification Update<br/>
+ 328908: Intel Xeon Processor E3-1200 v3 Product Family Specification Update<br/>
+ 329460: Intel Atom Processor C2000 Product Family Specification Update<br/>
+ 330785: Intel Xeon Processor E5 v3 Product Family Specification Update<br/>
+ 330836: Intel Core M Processor Family Specification Update<br/>
+ 330841: Intel Core i7 Processor Family for LGA2011-v3 Socket Specification Update<br/>
+ 332054: Intel Xeon Processor D-1500 Product Family Specification Update<br/>
+ 332067: Intel Atom Z8000 Processor Series Specification Update<br/>
+ 332095: Intel N-Series Intel Pentium Processors and Intel Celeron Processors Specification Update<br/>
+ 332317: Intel Xeon Processor E7 v3 Product Family Specification Update<br/>
  332381: Mobile/Desktop 5th Generation Intel Core Processor Family Specification Update</dd></dl>
 <p> Information on the CPUID instruction and on specific CPUs is available from the following documents from Advanced Micro Devices, Inc. &lt;<a rel="nofollow" href="http://www.amd.com/us-en/Processors/TechnicalResources">http://www.amd.com/us-en/Processors/TechnicalResources</a>&gt;, with the specified Publication Numbers: </p>
 <dl>
 <dt>
 </dt><dd>
- 20734: AMD Processor Recognition Application Note<br />
- 21266: AMD-K6 Processor Revision Guide Model 6<br />
- 21641: AMD-K6-2 Processor Revision Guide Model 8<br />
- 21846: AMD-K6 Processor Revision Guide Model 7<br />
- 22473: AMD-K6-III Processor Revision Guide Model 9<br />
- 23614: AMD Athlon Processor Model 4 Revision Guide<br />
- 23865: AMD Duron Processor Model 3 Revision Guide<br />
- 24332: AMD Athlon Processor Model 6 Revision Guide<br />
- 24806: AMD Duron Processor Model 7 Revision Guide<br />
- 25481: CPUID Specification<br />
- 25703: AMD Athlon Processor Model 8 Revision Guide<br />
- 25759: Revision Guide for AMD Athlon 64 and AMD Opteron Processors<br />
- 26094: BIOS and Kernel Developer&#8217;s Guide for AMD Athlon 64 and AMD Opteron Processors<br />
- 27532: AMD Athlon Processor Model 10 Revision Guide<br />
- 31177H: AMD Geode NX Processors Data Book<br />
- 31610: Revision Guide for AMD NPT Family 0Fh Processors<br />
- 33234F: AMD Geode LX Processors Data Book<br />
- 41322: Revision Guide for AMD Family 10h Processors<br />
- 41788: Revision Guide for AMD Family 11h Processors<br />
- 44739: Revision Guide for AMD Family 12h Processors<br />
- 47534: Revision Guide for AMD Family 14h Models 00h-0Fh Processors<br />
- 48063: Revision Guide for AMD Family 15h Models 00h-0Fh Processors<br />
- 48931: Revision Guide for AMD Family 15h Models 10h-1Fh Processors<br />
+ 20734: AMD Processor Recognition Application Note<br/>
+ 21266: AMD-K6 Processor Revision Guide Model 6<br/>
+ 21641: AMD-K6-2 Processor Revision Guide Model 8<br/>
+ 21846: AMD-K6 Processor Revision Guide Model 7<br/>
+ 22473: AMD-K6-III Processor Revision Guide Model 9<br/>
+ 23614: AMD Athlon Processor Model 4 Revision Guide<br/>
+ 23865: AMD Duron Processor Model 3 Revision Guide<br/>
+ 24332: AMD Athlon Processor Model 6 Revision Guide<br/>
+ 24806: AMD Duron Processor Model 7 Revision Guide<br/>
+ 25481: CPUID Specification<br/>
+ 25703: AMD Athlon Processor Model 8 Revision Guide<br/>
+ 25759: Revision Guide for AMD Athlon 64 and AMD Opteron Processors<br/>
+ 26094: BIOS and Kernel Developer&#8217;s Guide for AMD Athlon 64 and AMD Opteron Processors<br/>
+ 27532: AMD Athlon Processor Model 10 Revision Guide<br/>
+ 31177H: AMD Geode NX Processors Data Book<br/>
+ 31610: Revision Guide for AMD NPT Family 0Fh Processors<br/>
+ 33234F: AMD Geode LX Processors Data Book<br/>
+ 41322: Revision Guide for AMD Family 10h Processors<br/>
+ 41788: Revision Guide for AMD Family 11h Processors<br/>
+ 44739: Revision Guide for AMD Family 12h Processors<br/>
+ 47534: Revision Guide for AMD Family 14h Models 00h-0Fh Processors<br/>
+ 48063: Revision Guide for AMD Family 15h Models 00h-0Fh Processors<br/>
+ 48931: Revision Guide for AMD Family 15h Models 10h-1Fh Processors<br/>
  51810: Revision Guide for AMD Family 16h Models 00h-0Fh Processors</dd></dl>
 <p> Information on the CPUID instruction and on specific CPUs is available from the following documents from Transmeta Corporation &lt;<a rel="nofollow" href="http://www.transmeta.com/crusoe_docs/Crusoe_CPUID_5-7-02.pdf">http://www.transmeta.com/crusoe_docs/Crusoe_CPUID_5-7-02.pdf</a>&gt;: </p>
 <dl>
@@ -229,9 +229,9 @@ description: "cpuid – Dump CPUID information for each CPU"
 <p> Also, information is available from the following web sites: </p>
 <dl>
 <dt>
-</dt><dd> &lt;<a rel="nofollow" href="http://www.sandpile.org/ia32/cpuid.htm">http://www.sandpile.org/ia32/cpuid.htm</a>&gt;<br />
- &lt;<a rel="nofollow" href="http://en.wikipedia.org/wiki/List_of_Intel_microprocessors">http://en.wikipedia.org/wiki/List_of_Intel_microprocessors</a>&gt;<br />
- &lt;<a rel="nofollow" href="http://en.wikipedia.org/wiki/List_of_AMD_microprocessors">http://en.wikipedia.org/wiki/List_of_AMD_microprocessors</a>&gt;<br />
+</dt><dd> &lt;<a rel="nofollow" href="http://www.sandpile.org/ia32/cpuid.htm">http://www.sandpile.org/ia32/cpuid.htm</a>&gt;<br/>
+ &lt;<a rel="nofollow" href="http://en.wikipedia.org/wiki/List_of_Intel_microprocessors">http://en.wikipedia.org/wiki/List_of_Intel_microprocessors</a>&gt;<br/>
+ &lt;<a rel="nofollow" href="http://en.wikipedia.org/wiki/List_of_AMD_microprocessors">http://en.wikipedia.org/wiki/List_of_AMD_microprocessors</a>&gt;<br/>
  &lt;<a rel="nofollow" href="http://en.wikipedia.org/wiki/Category:X86_microprocessors">http://en.wikipedia.org/wiki/Category:X86_microprocessors</a>&gt;</dd></dl>
 <h2>AUTHOR</h2>
 <p> Todd Allen &lt;cpuid [at] etallen.com&gt; </p>

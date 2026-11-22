@@ -120,7 +120,7 @@ Mouse 3 R C Module FvwmPager -transient</pre>
 <dd>Defines the distance the pointer has to be moved before a window being dragged with button 2 is actually moved. The default value is three pixels. If the pointer moved less that this amount the window snaps back to its original position when the button is released. If <i>pixels</i> is less than zero the default value is used. The value set with the <i>MoveThreshold</i> command in fvwm is inherited by FvwmPager but can be overridden with this option. </dd>
 <dt>*FvwmPager: SloppyFocus</dt>
 <dd>If the SloppyFocus option is used, you do not need to click into the mini window in the pager to give the real window the focus. Simply putting the pointer over the window inside the pager is enough. </dd>
-<p> Note: This option interferes slightly with the MouseFocus and SloppyFocus styles of fvwm. Sometimes, if you click into the pager window to change pages or desks and then move the pointer<tt>&nbsp;<wbr></tt>to<br />
+<p> Note: This option interferes slightly with the MouseFocus and SloppyFocus styles of fvwm. Sometimes, if you click into the pager window to change pages or desks and then move the pointer<tt>&nbsp;<wbr></tt>to<br/>
  a place on the screen where a window of the new page will appear, this new window does not get the input focus. This may happen if you drag the pointer over one of the mini windows in the pager. There is nothing that can be done about this &#8211; except not using SloppyFocus in the pager. </p>
 <dt>*FvwmPager: SolidSeparators</dt>
 <dd>By default the pages of the virtual desktop are separated by dashed lines in the pager window. This option causes FvwmPager to use solid lines instead. </dd>
@@ -158,8 +158,8 @@ Mouse 3 R C Module FvwmPager -transient</pre>
 <dd>Tells FvwmPager to not show the windows that are using the WindowListSkip style. </dd>
 </dl>
 <h2>Author</h2>
-<p>Robert Nation<br />
- DeskColor patch contributed by Alan Wild<br />
- MiniIcons &amp; WindowColors patch contributed by Rob Whapham<br />
- Balloons patch by Ric Lister &lt;ric [at] giccs.georgetown.edu&gt;<br />
+<p>Robert Nation<br/>
+ DeskColor patch contributed by Alan Wild<br/>
+ MiniIcons &amp; WindowColors patch contributed by Rob Whapham<br/>
+ Balloons patch by Ric Lister &lt;ric [at] giccs.georgetown.edu&gt;<br/>
  fvwm-workers: Dominik, Olivier, Hippo and others.</p>

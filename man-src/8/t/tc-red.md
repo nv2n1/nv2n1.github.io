@@ -55,8 +55,8 @@ description: "red – Random Early Detection"
 <dd>The associated block is executed when packets are marked in ECN mode. </dd>
 </dl>
 <h2>Example</h2>
-<p># tc qdisc add dev eth0 parent 1:1 handle 10: red<br />
-&nbsp;limit 400000 min 30000 max 90000 avpkt 1000<br />
+<p># tc qdisc add dev eth0 parent 1:1 handle 10: red<br/>
+&nbsp;limit 400000 min 30000 max 90000 avpkt 1000<br/>
 &nbsp;burst 55 ecn adaptive bandwidth 10Mbit </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-choke/">tc-choke</a></code>(8) </p>

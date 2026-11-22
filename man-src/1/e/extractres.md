@@ -13,7 +13,7 @@ description: "extractres – filter to extract resources from a PostScript docum
 <p> <code>extractres </code> [ <code>-m</code> ] &lt; <i>document.ps</i> &gt; <i>output.ps</i></p>
 <h2>DESCRIPTION</h2>
 <p> <i>Extractres</i> extracts resources (fonts, procsets, patterns, files, etc) appearing in a PostScript document, and puts appropriate <i>%%IncludeResource</i> comments in the document prologue. The extracted resources are written to files with the same name as the resource, and an appropriate extension. The pipeline </p>
-<p> <center> extractres file.ps | includeres &gt;out.ps<br />
+<p> <center> extractres file.ps | includeres &gt;out.ps<br/>
  </center> </p>
 <p> will move all resources appearing in a document to the document prologue, removing redundant copies. The output file can then be put through page re-arrangement filters such as <i>psnup</i> or <i>pstops</i> safely. </p>
 <p> The <code>-m</code> option combines the resources of the same name into one file; this must be used for some programs which download fonts a bit at a time.</p>

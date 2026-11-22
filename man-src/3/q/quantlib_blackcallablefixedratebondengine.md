@@ -13,10 +13,10 @@ description: "QuantLib::BlackCallableFixedRateBondEngine – Black-formula calla
 <p> Inherits <code>QuantLib::CallableBond::engine</code>. </p>
 <p> Inherited by <code>BlackCallableZeroCouponBondEngine</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>BlackCallableFixedRateBondEngine</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;fwdYieldVol, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve)<br />
- <i>volatility is the quoted fwd yield volatility, not price vol </i><br />
- <code>BlackCallableFixedRateBondEngine</code> (const <code>Handle</code>&lt; <code>CallableBondVolatilityStructure</code> &gt; &amp;yieldVolStructure, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve)<br />
- <i>volatility is the quoted fwd yield volatility, not price vol </i><br />
+<p><code>BlackCallableFixedRateBondEngine</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;fwdYieldVol, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve)<br/>
+ <i>volatility is the quoted fwd yield volatility, not price vol </i><br/>
+ <code>BlackCallableFixedRateBondEngine</code> (const <code>Handle</code>&lt; <code>CallableBondVolatilityStructure</code> &gt; &amp;yieldVolStructure, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve)<br/>
+ <i>volatility is the quoted fwd yield volatility, not price vol </i><br/>
  void <code>calculate</code> () const </p>
 <h2>Detailed Description</h2>
 <p>Black-formula callable fixed rate bond engine. </p>

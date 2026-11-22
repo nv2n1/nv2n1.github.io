@@ -33,72 +33,72 @@ description: "g_anaeig – analyzes the eigenvectors"
 <p> where M1 and M2 are the two covariance matrices and tr is the trace of a matrix. The numbers are proportional to the overlap of the square root of the fluctuations. The normalized overlap is the most useful number, it is 1 for identical matrices and 0 when the sampled subspaces are orthogonal. </p>
 <p> When the <code> -entropy</code> flag is given an entropy estimate will be computed based on the Quasiharmonic approach and based on Schlitter&#8217;s formula.</p>
 <h2>FILES</h2>
-<p> <code>-v</code><i> eigenvec.trr</i> <code>Input</code><br />
+<p> <code>-v</code><i> eigenvec.trr</i> <code>Input</code><br/>
 &nbsp;<wbr>Full precision trajectory: trr trj cpt&nbsp;<wbr> </p>
-<p> <code>-v2</code><i> eigenvec2.trr</i> <code>Input, Opt.</code><br />
+<p> <code>-v2</code><i> eigenvec2.trr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Full precision trajectory: trr trj cpt&nbsp;<wbr> </p>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input, Opt.</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure+mass(db): tpr tpb tpa gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-eig</code><i> eigenval.xvg</i> <code>Input, Opt.</code><br />
+<p> <code>-eig</code><i> eigenval.xvg</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-eig2</code><i> eigenval2.xvg</i> <code>Input, Opt.</code><br />
+<p> <code>-eig2</code><i> eigenval2.xvg</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-comp</code><i> eigcomp.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-comp</code><i> eigcomp.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-rmsf</code><i> eigrmsf.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-rmsf</code><i> eigrmsf.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-proj</code><i> proj.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-proj</code><i> proj.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-2d</code><i> 2dproj.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-2d</code><i> 2dproj.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-3d</code><i> 3dproj.pdb</i> <code>Output, Opt.</code><br />
+<p> <code>-3d</code><i> 3dproj.pdb</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-filt</code><i> filtered.xtc</i> <code>Output, Opt.</code><br />
+<p> <code>-filt</code><i> filtered.xtc</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-extr</code><i> extreme.pdb</i> <code>Output, Opt.</code><br />
+<p> <code>-extr</code><i> extreme.pdb</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-over</code><i> overlap.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-over</code><i> overlap.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-inpr</code><i> inprod.xpm</i> <code>Output, Opt.</code><br />
+<p> <code>-inpr</code><i> inprod.xpm</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-tu</code><i> enum</i><code> ps</code><br />
+<p> <code>-tu</code><i> enum</i><code> ps</code><br/>
 &nbsp;<wbr>Time unit:&nbsp;<wbr><code>&nbsp;<wbr>ps</code>,&nbsp;<wbr><code>&nbsp;<wbr>fs</code>,&nbsp;<wbr><code>&nbsp;<wbr>ns</code>,&nbsp;<wbr><code>&nbsp;<wbr>us</code>,&nbsp;<wbr><code>&nbsp;<wbr>ms</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>s</code> </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-first</code><i> int</i><code> 1</code><br />
+<p> <code>-first</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>First eigenvector for analysis&nbsp;<wbr>(-1 is select) </p>
-<p> <code>-last</code><i> int</i><code> 8</code><br />
+<p> <code>-last</code><i> int</i><code> 8</code><br/>
 &nbsp;<wbr>Last eigenvector for analysis&nbsp;<wbr>(-1 is till the last) </p>
-<p> <code>-skip</code><i> int</i><code> 1</code><br />
+<p> <code>-skip</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>Only analyse every nr-th frame </p>
-<p> <code>-max</code><i> real</i><code> 0 </code><br />
+<p> <code>-max</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Maximum for projection of the eigenvector on the average structure, max=0 gives the extremes </p>
-<p> <code>-nframes</code><i> int</i><code> 2</code><br />
+<p> <code>-nframes</code><i> int</i><code> 2</code><br/>
 &nbsp;<wbr>Number of frames for the extremes output </p>
-<p> <code>-[no]split</code><i>no </i><br />
+<p> <code>-[no]split</code><i>no </i><br/>
 &nbsp;<wbr>Split eigenvector projections where time is zero </p>
-<p> <code>-[no]entropy</code><i>no </i><br />
+<p> <code>-[no]entropy</code><i>no </i><br/>
 &nbsp;<wbr>Compute entropy according to the Quasiharmonic formula or Schlitter&#8217;s method. </p>
-<p> <code>-temp</code><i> real</i><code> 298.15</code><br />
+<p> <code>-temp</code><i> real</i><code> 298.15</code><br/>
 &nbsp;<wbr>Temperature for entropy calculations </p>
-<p> <code>-nevskip</code><i> int</i><code> 6</code><br />
+<p> <code>-nevskip</code><i> int</i><code> 6</code><br/>
 &nbsp;<wbr>Number of eigenvalues to skip when computing the entropy due to the quasi harmonic approximation. When you do a rotational and/or translational fit prior to the covariance analysis, you get 3 or 6 eigenvalues that are very close to zero, and which should not be taken into account when computing the entropy. </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

@@ -29,7 +29,7 @@ bool unicode::iconvert::convert(const std::string &amp;text, const std::string &
 <dd>&bull; Initialize a vector of unicode characters, passed by reference, by converting a text string in a given character set to unicode.</dd></dl>
 <p> These functions use <code>iconv</code>(3), and can use any character set that&#8217;s supported by <code>iconv</code>(3). Use <i>unicode::ucs_2</i> and <i>unicode::ucs_4</i> to specify the 16 and the 32 bit unicode octet in native byte order. Use <i>unicode::utf_8</i> and <i>unicode::iso_8859_1</i> to specify these two standard character sets. The overloaded versions that pass a reference to a bool set the flag to true if some characters could not be converted. The overloaded version that initializes a unicode vector returns the bool flag, instead.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7), <code>unicode::convert::convert_tocase</code>(3), <code><a href="/docs/linux/man/3-unicode_convert/">unicode_convert</a></code>(3), m[blue]<code>iconv</code>(3)m[]<font SIZE="-2">[1]</font>.</p>
+<p><code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7), <code>unicode::convert::convert_tocase</code>(3), <code><a href="/docs/linux/man/3-unicode_convert/">unicode_convert</a></code>(3), m[blue]<code>iconv</code>(3)m[][1].</p>
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>

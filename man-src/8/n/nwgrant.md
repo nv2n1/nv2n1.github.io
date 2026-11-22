@@ -40,14 +40,14 @@ description: "nwgrant – Add Trustee Rights to a directory"
 <p> <code>-r</code> <i>rights</i></p>
 <dl>
 <dd>You must tell <code>nwgrant</code> which rights it should grant to the bindery object. The new rights for the object is specified by <i>rights,</i> which can be either a hexadecimal number representing the sum of all the individual rights to be granted or a string containing characters representing each right. If rights are represented in string format then the string must be bounded with square brackets. Characters within the brackets may be in any order and in either case. Spaces are allowed between the brackets &#8211; in which case the entire string should be quoted. Hexadecimal and character values for the rights are shown in this table: </dd>
-<p>&nbsp;<wbr>00&nbsp;<wbr>=&nbsp;<wbr>no access<br />
-&nbsp;<wbr>01&nbsp;<wbr>=&nbsp;<wbr>read access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>R<br />
-&nbsp;<wbr>02&nbsp;<wbr>=&nbsp;<wbr>write access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>W<br />
-&nbsp;<wbr>08&nbsp;<wbr>=&nbsp;<wbr>create access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>C<br />
-&nbsp;<wbr>10&nbsp;<wbr>=&nbsp;<wbr>delete access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>E<br />
-&nbsp;<wbr>20&nbsp;<wbr>=&nbsp;<wbr>ownership access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>A<br />
-&nbsp;<wbr>40&nbsp;<wbr>=&nbsp;<wbr>search access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>F<br />
-&nbsp;<wbr>80&nbsp;<wbr>=&nbsp;<wbr>modify access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>M<br />
+<p>&nbsp;<wbr>00&nbsp;<wbr>=&nbsp;<wbr>no access<br/>
+&nbsp;<wbr>01&nbsp;<wbr>=&nbsp;<wbr>read access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>R<br/>
+&nbsp;<wbr>02&nbsp;<wbr>=&nbsp;<wbr>write access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>W<br/>
+&nbsp;<wbr>08&nbsp;<wbr>=&nbsp;<wbr>create access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>C<br/>
+&nbsp;<wbr>10&nbsp;<wbr>=&nbsp;<wbr>delete access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>E<br/>
+&nbsp;<wbr>20&nbsp;<wbr>=&nbsp;<wbr>ownership access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>A<br/>
+&nbsp;<wbr>40&nbsp;<wbr>=&nbsp;<wbr>search access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>F<br/>
+&nbsp;<wbr>80&nbsp;<wbr>=&nbsp;<wbr>modify access&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>M<br/>
 100&nbsp;<wbr>=&nbsp;<wbr>supervisory access&nbsp;<wbr>=&nbsp;<wbr>S </p>
 <p> for a possible total of &quot;1fb&quot; or &quot;[SRWCEMFA]&quot; for all rights.</dl>
 <p> <code>file/directory</code></p>

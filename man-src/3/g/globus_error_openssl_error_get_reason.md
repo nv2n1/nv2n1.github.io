@@ -10,8 +10,8 @@ description: "globus_error_openssl.h – Globus Generic Error."
 
 <p> globus_error_openssl.h &#8211; Globus Generic Error.</p>
 <h2>SYNOPSIS</h2>
-<p> #include &#8216;globus_common.h&#8217;<br />
- #include &#8216;globus_error_generic.h&#8217;<br />
+<p> #include &#8216;globus_common.h&#8217;<br/>
+ #include &#8216;globus_error_generic.h&#8217;<br/>
  #include &#8216;openssl/err.h&#8217; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_GSI_OPENSSL_ERROR_MODULE</code> </p>

@@ -13,7 +13,7 @@ description: "includeres – filter to include resources in a PostScript documen
 <p> <code>includeres </code> &lt; <i>document.ps</i> &gt; <i>output.ps</i></p>
 <h2>DESCRIPTION</h2>
 <p> <i>Includeres</i> includes resources (fonts, procsets, patterns, files, etc) in place of <i>%%IncludeResource</i> comments in a PostScript document. The resources are searched for in the current directory and the system default directory under the resource name, and with an appropriate extension. The pipeline </p>
-<p> <center> extractres file.ps | includeres &gt;out.ps<br />
+<p> <center> extractres file.ps | includeres &gt;out.ps<br/>
  </center> </p>
 <p> will move all resources appearing in a document to the document prologue, removing redundant copies. The output file can then be put through page re-arrangement filters such as <i>psnup</i> or <i>pstops</i> safely.</p>
 <h2>FILES</h2>

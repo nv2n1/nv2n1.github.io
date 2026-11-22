@@ -105,16 +105,16 @@ $ tree -aL 2
 <p> <code>NOTE:</code> Catkin utilizes an &quot;out-of-source&quot; and &quot;aggregated&quot; build pattern. This means that not only will temporary or final build products never be placed in a package&#8217;s source directory (or anywhere in the <code>source space</code> for that matter), but also all build directories are aggregated in the <code>build space</code> and all final build products (executables, libraries, etc.) will be put in the <code>devel space</code>.</p>
 <h3>Building the Workspace</h3>
 <p> Since the catkin workspace has already been initialized, you can call <code>catkin build</code> from any directory contained within it. If it had not been initialized, then <code>catkin build</code> would need to be called from the workspace root. Based on the default configuration, it will locate the packages in the <code>source space</code> and build each of them. </p>
-<p>$ catkin build&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Profile : default Extending : None<br />
-                                                                                                                                            Workspace : /<br />
-                                                                                                                                                        tmp / path / to / my_catkin_ws Source Space : [exists] / tmp / path / to / my_catkin_ws / src Build Space : [missing] / tmp / path / to / my_catkin_ws / build Devel Space : [missing] / tmp / path / to / my_catkin_ws / devel Install Space : [missing] / tmp / path / to / my_catkin_ws / install DESTDIR : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Isolate Develspaces : False Install Packages : False Isolate Installs : False&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Additional CMake Args : None Additional Make Args : None Additional catkin Make Args : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Workspace configuration appears valid.&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Found &#8216;3&#8217; packages in 0.0 seconds.Starting ==<br />
-    &gt; another_one<br />
-            Starting ==<br />
-    &gt; pkg_a<br />
-            Starting ==<br />
-    &gt; pkg_b<br />
-            Finished &lt;= = pkg_b[2.0 seconds] Finished &lt;= = another_one[2.0 seconds] Finished &lt;= = pkg_a[3.4 seconds]<br />
-                                                                                                       [build] Finished.<br />
+<p>$ catkin build&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Profile : default Extending : None<br/>
+                                                                                                                                            Workspace : /<br/>
+                                                                                                                                                        tmp / path / to / my_catkin_ws Source Space : [exists] / tmp / path / to / my_catkin_ws / src Build Space : [missing] / tmp / path / to / my_catkin_ws / build Devel Space : [missing] / tmp / path / to / my_catkin_ws / devel Install Space : [missing] / tmp / path / to / my_catkin_ws / install DESTDIR : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Isolate Develspaces : False Install Packages : False Isolate Installs : False&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Additional CMake Args : None Additional Make Args : None Additional catkin Make Args : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Workspace configuration appears valid.&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Found &#8216;3&#8217; packages in 0.0 seconds.Starting ==<br/>
+    &gt; another_one<br/>
+            Starting ==<br/>
+    &gt; pkg_a<br/>
+            Starting ==<br/>
+    &gt; pkg_b<br/>
+            Finished &lt;= = pkg_b[2.0 seconds] Finished &lt;= = another_one[2.0 seconds] Finished &lt;= = pkg_a[3.4 seconds]<br/>
+                                                                                                       [build] Finished.<br/>
                                                                                                            [build] Runtime : 3.4 seconds</p>
 <p> Calling <code>catkin build</code> will generate <code>build</code> and <code>devel</code> directories (as described in the config summary above) and result in a directory structure like the following (to one level deep): </p>
 <pre>
@@ -462,15 +462,15 @@ Extending:        [explicit] /tmp/path/to/other_ws
 <dl>
 <dt><code>Create Debug and Release profiles and then build them in independent build and devel spaces:</code></dt>
 <dd>
-<p>catkin config&#8211; profile debug &#8211; x _debug&#8211; cmake &#8211; args &#8211; DCMAKE_BUILD_TYPE = Debug<br />
-                                                                                  catkin config&#8211; profile release &#8211;<br />
-                                                                              x _release&#8211; cmake &#8211; args &#8211; DCMAKE_BUILD_TYPE = Release<br />
-                                                                                  catkin build&#8211; profile debug<br />
+<p>catkin config&#8211; profile debug &#8211; x _debug&#8211; cmake &#8211; args &#8211; DCMAKE_BUILD_TYPE = Debug<br/>
+                                                                                  catkin config&#8211; profile release &#8211;<br/>
+                                                                              x _release&#8211; cmake &#8211; args &#8211; DCMAKE_BUILD_TYPE = Release<br/>
+                                                                                  catkin build&#8211; profile debug<br/>
                                                                                       catkin build&#8211; profile release</p>
 </dd><dt><code>Quickly build a package from scratch to make sure all of its dependencies are satisfied, then clean it:</code></dt>
 <dd>
-<p>catkin config&#8211; profile my_pkg &#8211; x _my_pkg_test<br />
-                                     catkin build&#8211; profile my_pkg my_pkg<br />
+<p>catkin config&#8211; profile my_pkg &#8211; x _my_pkg_test<br/>
+                                     catkin build&#8211; profile my_pkg my_pkg<br/>
                                          catkin clean&#8211; profile my_pkg&#8211; all
 </dd></dl>
 <h3>Manipulating Workspace Chaining</h3>
@@ -607,17 +607,17 @@ Total packages: 1
 </pre>
 <h3>Build Products</h3>
 <p> At this point the workspace has not been modified, but once we tell the <code>build</code> verb to actually build the workspace then directories for a <code>build space</code> and a <code>devel space</code> will be created: </p>
-<p>$ catkin build<br />
-    Creating buildspace directory,<br />
-    &#8216;/tmp/path/to/my_catkin_ws/build&#8217; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Profile : default Extending : None<br />
-                                                                                                                                                                    Workspace : /<br />
-                                                                                                                                                                                tmp / path / to / my_catkin_ws Source Space : [exists] / tmp / path / to / my_catkin_ws / src Build Space : [missing] / tmp / path / to / my_catkin_ws / build Devel Space : [missing] / tmp / path / to / my_catkin_ws / devel Install Space : [missing] / tmp / path / to / my_catkin_ws / install DESTDIR : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Isolate Develspaces : False Install Packages : False Isolate Installs : False&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Additional CMake Args : None Additional Make Args : None Additional catkin Make Args : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Whitelisted Packages : None Blacklisted Packages : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Workspace configuration appears valid.&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Found &#8217;36&#8217; packages in 0.0 seconds.Starting ==<br />
-        &gt; catkin<br />
-                Starting ==<br />
-        &gt; console_bridge<br />
-                Finished &lt;= = catkin[2.4 seconds]&#8230;.<br />
-                                  [build] Finished.<br />
-                                      [build] Runtime : 3 minutes and<br />
+<p>$ catkin build<br/>
+    Creating buildspace directory,<br/>
+    &#8216;/tmp/path/to/my_catkin_ws/build&#8217; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Profile : default Extending : None<br/>
+                                                                                                                                                                    Workspace : /<br/>
+                                                                                                                                                                                tmp / path / to / my_catkin_ws Source Space : [exists] / tmp / path / to / my_catkin_ws / src Build Space : [missing] / tmp / path / to / my_catkin_ws / build Devel Space : [missing] / tmp / path / to / my_catkin_ws / devel Install Space : [missing] / tmp / path / to / my_catkin_ws / install DESTDIR : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Isolate Develspaces : False Install Packages : False Isolate Installs : False&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Additional CMake Args : None Additional Make Args : None Additional catkin Make Args : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Whitelisted Packages : None Blacklisted Packages : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Workspace configuration appears valid.&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Found &#8217;36&#8217; packages in 0.0 seconds.Starting ==<br/>
+        &gt; catkin<br/>
+                Starting ==<br/>
+        &gt; console_bridge<br/>
+                Finished &lt;= = catkin[2.4 seconds]&#8230;.<br/>
+                                  [build] Finished.<br/>
+                                      [build] Runtime : 3 minutes and<br/>
                               54.6 seconds</p>
 <p> Since no packages were given as arguments, <code>catkin build</code> built all of the packages in the workspace. </p>
 <p> As shown above, after the build finishes, we now have a <code>build space</code> with a folder containing the intermediate build products for each package and a <code>devel space</code> with an FHS layout into which all the final build products have been written. </p>
@@ -675,57 +675,57 @@ Total packages: 1
 <p> This status line can be disabled by passing the <code>&#8211;no-status</code> option to <code>catkin build</code>.</dl>
 <h3>Package Build Messages</h3>
 <p> Normally, unless an error occurs, the output from each package&#8217;s build proces is collected but not printed to the console. All that is printed is a pair of messages designating the start and end of a package&#8217;s build. This is formatted like the following for the <code>genmsg</code> package: </p>
-<p>Starting == &gt; genmsg<br />
+<p>Starting == &gt; genmsg<br/>
                     Finished &lt;= = genmsg[2.4 seconds]</p>
 <p> However, if you would like to see more of the messages from the underlying buildsystem, you can invoke the <code>-v</code> or <code>&#8211;verbose</code> option. This will print the normal message when a package build starts and finished as well as the output of each build command in a block, once it finishes: </p>
-<p>Starting ==&gt; catkin<br />
-[catkin]: ==&gt; &#8216;/path/to/my_catkin_ws/build/catkin/build_env.sh /usr/local/bin/cmake /path/to/my_catkin_ws/src/catkin -DCATKIN_DEVEL_PREFIX=/path/to/my_catkin_ws/devel/catkin -DCMAKE_INSTALL_PREFIX=/path/to/my_catkin_ws/install&#8217; in &#8216;/path/to/my_catkin_ws/build/catkin&#8217;<br />
-&#8212; The C compiler identification is Clang 5.0.0<br />
-&#8212; The CXX compiler identification is Clang 5.0.0<br />
-&#8212; Check for working C compiler: /usr/bin/cc<br />
-&#8212; Check for working C compiler: /usr/bin/cc &#8212; works<br />
-&#8212; Detecting C compiler ABI info<br />
-&#8212; Detecting C compiler ABI info &#8211; done<br />
-&#8212; Check for working CXX compiler: /usr/bin/c++<br />
-&#8212; Check for working CXX compiler: /usr/bin/c++ &#8212; works<br />
-&#8212; Detecting CXX compiler ABI info<br />
-&#8212; Detecting CXX compiler ABI info &#8211; done<br />
-&#8212; Using CATKIN_DEVEL_PREFIX: /path/to/my_catkin_ws/devel/catkin<br />
-&#8212; Using CMAKE_PREFIX_PATH: /path/to/my_catkin_ws/install<br />
-&#8212; This workspace overlays: /path/to/my_catkin_ws/install<br />
-&#8212; Found PythonInterp: /usr/bin/python (found version &#8220;2.7.5&#8221;)<br />
-&#8212; Using PYTHON_EXECUTABLE: /usr/bin/python<br />
-&#8212; Python version: 2.7<br />
-&#8212; Using default Python package layout<br />
-&#8212; Found PY_em: /Library/Python/2.7/site-packages/em.pyc<br />
-&#8212; Using CATKIN_ENABLE_TESTING: ON<br />
-&#8212; Call enable_testing()<br />
-&#8212; Using CATKIN_TEST_RESULTS_DIR: /path/to/my_catkin_ws/build/catkin/test_results<br />
-&#8212; Found gtest: gtests will be built<br />
-&#8212; catkin 0.5.86<br />
-&#8212; Configuring done<br />
-&#8212; Generating done<br />
-&#8212; Build files have been written to: /path/to/my_catkin_ws/build/catkin<br />
-[catkin]: &lt;== &#8216;/path/to/my_catkin_ws/build/catkin/build_env.sh /usr/local/bin/cmake /path/to/my_catkin_ws/src/catkin -DCATKIN_DEVEL_PREFIX=/path/to/my_catkin_ws/devel/catkin -DCMAKE_INSTALL_PREFIX=/path/to/my_catkin_ws/install&#8217; finished with return code &#8216;0&#8217;<br />
-[catkin]: ==&gt; &#8216;/path/to/my_catkin_ws/build/catkin/build_env.sh /usr/bin/make -j4 -l4&#8217; in &#8216;/path/to/my_catkin_ws/build/catkin&#8217;<br />
-[catkin]: &lt;== &#8216;/path/to/my_catkin_ws/build/catkin/build_env.sh /usr/bin/make -j4 -l4&#8217; finished with return code &#8216;0&#8217;<br />
-[catkin]: ==&gt; &#8216;/path/to/my_catkin_ws/build/catkin/build_env.sh /usr/bin/make install&#8217; in &#8216;/path/to/my_catkin_ws/build/catkin&#8217;<br />
-Install the project&#8230;<br />
-&#8212; Install configuration: &#8220;&#8221;<br />
-&#8230; truncated for brevity<br />
-[catkin]: &lt;== &#8216;/path/to/my_catkin_ws/build/catkin/build_env.sh /usr/bin/make install&#8217; finished with return code &#8216;0&#8217;<br />
+<p>Starting ==&gt; catkin<br/>
+[catkin]: ==&gt; &#8216;/path/to/my_catkin_ws/build/catkin/build_env.sh /usr/local/bin/cmake /path/to/my_catkin_ws/src/catkin -DCATKIN_DEVEL_PREFIX=/path/to/my_catkin_ws/devel/catkin -DCMAKE_INSTALL_PREFIX=/path/to/my_catkin_ws/install&#8217; in &#8216;/path/to/my_catkin_ws/build/catkin&#8217;<br/>
+&#8212; The C compiler identification is Clang 5.0.0<br/>
+&#8212; The CXX compiler identification is Clang 5.0.0<br/>
+&#8212; Check for working C compiler: /usr/bin/cc<br/>
+&#8212; Check for working C compiler: /usr/bin/cc &#8212; works<br/>
+&#8212; Detecting C compiler ABI info<br/>
+&#8212; Detecting C compiler ABI info &#8211; done<br/>
+&#8212; Check for working CXX compiler: /usr/bin/c++<br/>
+&#8212; Check for working CXX compiler: /usr/bin/c++ &#8212; works<br/>
+&#8212; Detecting CXX compiler ABI info<br/>
+&#8212; Detecting CXX compiler ABI info &#8211; done<br/>
+&#8212; Using CATKIN_DEVEL_PREFIX: /path/to/my_catkin_ws/devel/catkin<br/>
+&#8212; Using CMAKE_PREFIX_PATH: /path/to/my_catkin_ws/install<br/>
+&#8212; This workspace overlays: /path/to/my_catkin_ws/install<br/>
+&#8212; Found PythonInterp: /usr/bin/python (found version &#8220;2.7.5&#8221;)<br/>
+&#8212; Using PYTHON_EXECUTABLE: /usr/bin/python<br/>
+&#8212; Python version: 2.7<br/>
+&#8212; Using default Python package layout<br/>
+&#8212; Found PY_em: /Library/Python/2.7/site-packages/em.pyc<br/>
+&#8212; Using CATKIN_ENABLE_TESTING: ON<br/>
+&#8212; Call enable_testing()<br/>
+&#8212; Using CATKIN_TEST_RESULTS_DIR: /path/to/my_catkin_ws/build/catkin/test_results<br/>
+&#8212; Found gtest: gtests will be built<br/>
+&#8212; catkin 0.5.86<br/>
+&#8212; Configuring done<br/>
+&#8212; Generating done<br/>
+&#8212; Build files have been written to: /path/to/my_catkin_ws/build/catkin<br/>
+[catkin]: &lt;== &#8216;/path/to/my_catkin_ws/build/catkin/build_env.sh /usr/local/bin/cmake /path/to/my_catkin_ws/src/catkin -DCATKIN_DEVEL_PREFIX=/path/to/my_catkin_ws/devel/catkin -DCMAKE_INSTALL_PREFIX=/path/to/my_catkin_ws/install&#8217; finished with return code &#8216;0&#8217;<br/>
+[catkin]: ==&gt; &#8216;/path/to/my_catkin_ws/build/catkin/build_env.sh /usr/bin/make -j4 -l4&#8217; in &#8216;/path/to/my_catkin_ws/build/catkin&#8217;<br/>
+[catkin]: &lt;== &#8216;/path/to/my_catkin_ws/build/catkin/build_env.sh /usr/bin/make -j4 -l4&#8217; finished with return code &#8216;0&#8217;<br/>
+[catkin]: ==&gt; &#8216;/path/to/my_catkin_ws/build/catkin/build_env.sh /usr/bin/make install&#8217; in &#8216;/path/to/my_catkin_ws/build/catkin&#8217;<br/>
+Install the project&#8230;<br/>
+&#8212; Install configuration: &#8220;&#8221;<br/>
+&#8230; truncated for brevity<br/>
+[catkin]: &lt;== &#8216;/path/to/my_catkin_ws/build/catkin/build_env.sh /usr/bin/make install&#8217; finished with return code &#8216;0&#8217;<br/>
 Finished &lt;== catkin [ 3.4 seconds ]</p>
 <p> <code>NOTE:</code> The printing of these command outputs maybe be interleaved with commands from other package builds if more than one package is being built at the same time. </p>
 <p> If you want to see the output from commands streaming to the screen, then you can use the <code>-i</code> or <code>&#8211;interleave</code> option. This option will cause the output from commands to be pushed to the screen immediately, instead of buffering until the command finishes. This ends up being pretty confusing, so when interleaved output is used <code>catkin build</code> prefixes each line with <code>[&lt;package name&gt;]:</code> like this: </p>
-<p>[roscpp_traits]: ==&gt; &#8216;/Users/william/my_catkin_ws/build/roscpp_traits/build_env.sh /usr/bin/make cmake_check_build_system&#8217; in &#8216;/Users/william/my_catkin_ws/build/roscpp_traits&#8217;<br />
-[ros_tutorials]: &#8212; The CXX compiler identification is Clang 5.0.0<br />
-[ros_tutorials]: &#8212; Check for working C compiler: /usr/bin/cc<br />
-[roscpp_traits]: ==&gt; &#8216;/Users/william/my_catkin_ws/build/roscpp_traits/build_env.sh /usr/bin/make -j4 -l4&#8217; in &#8216;/Users/william/my_catkin_ws/build/roscpp_traits&#8217;<br />
-[rosbuild]: ==&gt; &#8216;/Users/william/my_catkin_ws/build/rosbuild/build_env.sh /usr/bin/make -j4 -l4&#8217; in &#8216;/Users/william/my_catkin_ws/build/rosbuild&#8217;<br />
-[rosclean]: &#8212; The C compiler identification is Clang 5.0.0<br />
-[ros_tutorials]: &#8212; Check for working C compiler: /usr/bin/cc &#8212; works<br />
-[ros_tutorials]: &#8212; Detecting C compiler ABI info<br />
-[rosclean]: &#8212; The CXX compiler identification is Clang 5.0.0<br />
+<p>[roscpp_traits]: ==&gt; &#8216;/Users/william/my_catkin_ws/build/roscpp_traits/build_env.sh /usr/bin/make cmake_check_build_system&#8217; in &#8216;/Users/william/my_catkin_ws/build/roscpp_traits&#8217;<br/>
+[ros_tutorials]: &#8212; The CXX compiler identification is Clang 5.0.0<br/>
+[ros_tutorials]: &#8212; Check for working C compiler: /usr/bin/cc<br/>
+[roscpp_traits]: ==&gt; &#8216;/Users/william/my_catkin_ws/build/roscpp_traits/build_env.sh /usr/bin/make -j4 -l4&#8217; in &#8216;/Users/william/my_catkin_ws/build/roscpp_traits&#8217;<br/>
+[rosbuild]: ==&gt; &#8216;/Users/william/my_catkin_ws/build/rosbuild/build_env.sh /usr/bin/make -j4 -l4&#8217; in &#8216;/Users/william/my_catkin_ws/build/rosbuild&#8217;<br/>
+[rosclean]: &#8212; The C compiler identification is Clang 5.0.0<br/>
+[ros_tutorials]: &#8212; Check for working C compiler: /usr/bin/cc &#8212; works<br/>
+[ros_tutorials]: &#8212; Detecting C compiler ABI info<br/>
+[rosclean]: &#8212; The CXX compiler identification is Clang 5.0.0<br/>
 [rosclean]: &#8212; Check for working C compiler: /usr/bin/cc</p>
 <p> <code>NOTE:</code> When you use <code>-p 1</code> and <code>-v</code> at the same time, <code>-i</code> is implicitly added.</p>
 <h3>Running Tests Built in a Workspace</h3>
@@ -747,12 +747,12 @@ $ catkin run_tests --no-deps --this
 $ catkin build [...] --make-args test
 </pre>
 <p> If you want to run tests for just one package, then you should build that package and this narrow down the build to just that package with the additional make argument: </p>
-<p>$ # First build the package<br />
-$ catkin build package<br />
-&#8230;<br />
-$ # Then run its tests<br />
-$ catkin build package &#8211;no-deps &#8211;catkin-make-args run_tests<br />
-$ # Or for non-catkin packages<br />
+<p>$ # First build the package<br/>
+$ catkin build package<br/>
+&#8230;<br/>
+$ # Then run its tests<br/>
+$ catkin build package &#8211;no-deps &#8211;catkin-make-args run_tests<br/>
+$ # Or for non-catkin packages<br/>
 $ catkin build package &#8211;no-deps &#8211;make-args test</p>
 <p> For catkin packages and the <code>run_tests</code> target, failing tests will not result in an non-zero exit code. So if you want to check for failing tests, use the <code>catkin_test_results</code> command like this: </p>
 <pre>
@@ -768,141 +768,141 @@ $ catkin build -v --cmake-args -DCMAKE_C_FLAGS=&quot;-Wall -W -Wno-unused-parame
 <h3>Debugging Build Errors</h3>
 <p> As mentioned above, by default the output from each build is optimistically hidden to give a clean overview of the workspace build, but when there is a problem with a build a few things happen. </p>
 <p> First, the package with a failure prints the failing command&#8217;s output to the screen between some enclosing lines: </p>
-<p>[rospack] : == &gt; &#8216;/path/to/my_catkin_ws/build/rospack/build_env.sh /usr/bin/make -j4 -l4&#8217; in &#8216;/path/to/my_catkin_ws/build/rospack&#8217;<br />
-                       [66 % ] Built target rospack<br />
-                           make[1] : ***[CMakeFiles / rosstackexe.dir / all] Interrupt : 2 make[1] : ***[CMakeFiles / rospackexe.dir / all] Interrupt : 2 make : ***[all] Interrupt : 2<br />
+<p>[rospack] : == &gt; &#8216;/path/to/my_catkin_ws/build/rospack/build_env.sh /usr/bin/make -j4 -l4&#8217; in &#8216;/path/to/my_catkin_ws/build/rospack&#8217;<br/>
+                       [66 % ] Built target rospack<br/>
+                           make[1] : ***[CMakeFiles / rosstackexe.dir / all] Interrupt : 2 make[1] : ***[CMakeFiles / rospackexe.dir / all] Interrupt : 2 make : ***[all] Interrupt : 2<br/>
                                                                                                                                                                      [rospack] : &lt;= = &#8216;/path/to/my_catkin_ws/build/rospack/build_env.sh /usr/bin/make -j4 -l4&#8217; failed with return code &#8216;-2&#8217;</p>
 <p> And the status line is updated to reflect that that package has run into an issue by placing a <code>!</code> in front of it: </p>
 <p>[build &#8211; 1.7][!cpp_common][!rospack][genlisp &#8211; 0.3][1 / 1 Active | 10 / 23 Completed]</p>
 <p> Then the <code>catkin build</code> command waits for the rest of the currently still building packages to finish (without starting new package builds) and then summarizes the errors for you: </p>
-<p>[build] There were &#8216;2&#8217; errors : Failed to build package &#8216;cpp_common&#8217; because the following command :<br />
-#Command run in directory : / path / to / my_catkin_ws / build / cpp_common<br />
-    /<br />
-    path / to / my_catkin_ws / build / cpp_common / build_env.sh / usr / bin / make &#8211;<br />
-    j4 &#8211; l4 Exited with return code : -2 Failed to build package &#8216;rospack&#8217; because the following command :<br />
-#Command run in directory : / path / to / my_catkin_ws / build / rospack<br />
-    /<br />
-    path / to / my_catkin_ws / build / rospack / build_env.sh / usr / bin / make &#8211;<br />
+<p>[build] There were &#8216;2&#8217; errors : Failed to build package &#8216;cpp_common&#8217; because the following command :<br/>
+#Command run in directory : / path / to / my_catkin_ws / build / cpp_common<br/>
+    /<br/>
+    path / to / my_catkin_ws / build / cpp_common / build_env.sh / usr / bin / make &#8211;<br/>
+    j4 &#8211; l4 Exited with return code : -2 Failed to build package &#8216;rospack&#8217; because the following command :<br/>
+#Command run in directory : / path / to / my_catkin_ws / build / rospack<br/>
+    /<br/>
+    path / to / my_catkin_ws / build / rospack / build_env.sh / usr / bin / make &#8211;<br/>
     j4 &#8211; l4 Exited with return code : -2 Build summary : Successful catkin Successful genmsg&#8230; Failed cpp_common Failed rospack Not built roscpp_serialization Not built roscpp&#8230;</p>
 <p> Packages marked as <i>Not built</i> were requested, but not yet built because catkin stopped due to failed packages. </p>
 <p> To try to build as many requested packages as possible (instead of stopping after the first package failed), you can pass the <code>&#8211;continue-on-failure</code> option. Then the <code>catkin build</code> command will then continue building packages whose dependencies built successfully </p>
 <p> If you don&#8217;t want to scroll back up to find the error amongst the other output, you can <code>cat</code> the whole build log out of the <code>build_logs</code> folder in the <code>build space</code>: </p>
-<p>$ cat build / build_logs / rospack.log[rospack] : == &gt; &#8216;/path/to/my_catkin_ws/build/rospack/build_env.sh /usr/bin/make cmake_check_build_system&#8217; in &#8216;/path/to/my_catkin_ws/build/rospack&#8217;<br />
-                                                             [rospack] : &lt;= = &#8216;/path/to/my_catkin_ws/build/rospack/build_env.sh /usr/bin/make cmake_check_build_system&#8217; finished with return code &#8216;0&#8217;<br />
-                                                                                  [rospack] : == &gt; &#8216;/path/to/my_catkin_ws/build/rospack/build_env.sh /usr/bin/make -j4 -l4&#8217; in &#8216;/path/to/my_catkin_ws/build/rospack&#8217;<br />
-                                                                                                         [66 % ] Built target rospack<br />
-                                                                                                             make[1] : ***[CMakeFiles / rosstackexe.dir / all] Interrupt : 2 make[1] : ***[CMakeFiles / rospackexe.dir / all] Interrupt : 2 make : ***[all] Interrupt : 2<br />
+<p>$ cat build / build_logs / rospack.log[rospack] : == &gt; &#8216;/path/to/my_catkin_ws/build/rospack/build_env.sh /usr/bin/make cmake_check_build_system&#8217; in &#8216;/path/to/my_catkin_ws/build/rospack&#8217;<br/>
+                                                             [rospack] : &lt;= = &#8216;/path/to/my_catkin_ws/build/rospack/build_env.sh /usr/bin/make cmake_check_build_system&#8217; finished with return code &#8216;0&#8217;<br/>
+                                                                                  [rospack] : == &gt; &#8216;/path/to/my_catkin_ws/build/rospack/build_env.sh /usr/bin/make -j4 -l4&#8217; in &#8216;/path/to/my_catkin_ws/build/rospack&#8217;<br/>
+                                                                                                         [66 % ] Built target rospack<br/>
+                                                                                                             make[1] : ***[CMakeFiles / rosstackexe.dir / all] Interrupt : 2 make[1] : ***[CMakeFiles / rospackexe.dir / all] Interrupt : 2 make : ***[all] Interrupt : 2<br/>
                                                                                                                                                                                                                                                        [rospack] : &lt;= = &#8216;/path/to/my_catkin_ws/build/rospack/build_env.sh /usr/bin/make -j4 -l4&#8217; failed with return code &#8216;-2&#8217;</p>
 <h3>Full Command-Line Interface</h3>
-<p>usage: catkin build [-h] [&#8211;workspace WORKSPACE] [&#8211;profile PROFILE]<br />
-                    [&#8211;dry-run] [&#8211;this] [&#8211;no-deps]<br />
-                    [&#8211;start-with PKGNAME | &#8211;start-with-this | &#8211;continue-on-failure]<br />
-                    [&#8211;force-cmake] [&#8211;no-install-lock] [&#8211;save-config]<br />
-                    [&#8211;parallel-jobs PARALLEL_JOBS]<br />
-                    [&#8211;cmake-args ARG [ARG &#8230;] | &#8211;no-cmake-args]<br />
-                    [&#8211;make-args ARG [ARG &#8230;] | &#8211;no-make-args]<br />
-                    [&#8211;catkin-make-args ARG [ARG &#8230;] | &#8211;no-catkin-make-args]<br />
-                    [&#8211;verbose] [&#8211;interleave-output] [&#8211;no-status] [&#8211;no-notify]<br />
-                    [PKGNAME [PKGNAME &#8230;]]<br />
-Build one or more packages in a catkin workspace. This invokes `CMake`,<br />
-`make`, and optionally `make install` for either all or the specified packages<br />
-in a catkin workspace. Arguments passed to this verb can temporarily override<br />
-persistent options stored in the catkin profile config. If you want to save<br />
-these options, use the &#8211;save-config argument. To see the current config, use<br />
-the `catkin config` command.<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;workspace WORKSPACE, -w WORKSPACE<br />
-                        The path to the catkin_tools workspace or a directory<br />
-                        contained within it (default: &#8220;.&#8221;)<br />
-  &#8211;profile PROFILE     The name of a config profile to use (default: active<br />
-                        profile)<br />
-  &#8211;dry-run, -n         List the packages which will be built with the given<br />
-                        arguments without building them.<br />
-Packages:<br />
-  Control which packages get built.<br />
-  PKGNAME               Workspace packages to build, package dependencies are<br />
-                        built as well unless &#8211;no-deps is used. If no packages<br />
-                        are given, then all the packages are built.<br />
-  &#8211;this                Build the package containing the current working<br />
-                        directory.<br />
-  &#8211;no-deps             Only build specified packages, not their dependencies.<br />
-  &#8211;start-with PKGNAME  Build a given package and those which depend on it,<br />
-                        skipping any before it.<br />
-  &#8211;start-with-this     Similar to &#8211;start-with, starting with the package<br />
-                        containing the current directory.<br />
-  &#8211;continue-on-failure, -c<br />
-                        Try to continue building packages whose dependencies<br />
-                        built successfully even if some other requested<br />
-                        packages fail to build.<br />
-Build:<br />
-  Control the build behavior.<br />
-  &#8211;force-cmake         Runs cmake explicitly for each catkin package.<br />
-  &#8211;no-install-lock     Prevents serialization of the install steps, which is<br />
-                        on by default to prevent file install collisions<br />
-Config:<br />
-  Parameters for the underlying buildsystem.<br />
-  &#8211;save-config         Save any configuration options in this section for the<br />
-                        next build invocation.<br />
-  &#8211;parallel-jobs PARALLEL_JOBS, &#8211;parallel PARALLEL_JOBS, -p PARALLEL_JOBS<br />
-                        Maximum number of packages which could be built in<br />
-                        parallel (default is cpu count)<br />
-  &#8211;cmake-args ARG [ARG &#8230;]<br />
-                        Arbitrary arguments which are passes to CMake. It<br />
-                        collects all of following arguments until a &#8220;&#8211;&#8221; is<br />
-                        read.<br />
-  &#8211;no-cmake-args       Pass no additional arguments to CMake.<br />
-  &#8211;make-args ARG [ARG &#8230;]<br />
-                        Arbitrary arguments which are passes to make.It<br />
-                        collects all of following arguments until a &#8220;&#8211;&#8221; is<br />
-                        read.<br />
-  &#8211;no-make-args        Pass no additional arguments to make (does not affect<br />
-                        &#8211;catkin-make-args).<br />
-  &#8211;catkin-make-args ARG [ARG &#8230;]<br />
-                        Arbitrary arguments which are passes to make but only<br />
-                        for catkin packages.It collects all of following<br />
-                        arguments until a &#8220;&#8211;&#8221; is read.<br />
-  &#8211;no-catkin-make-args<br />
-                        Pass no additional arguments to make for catkin<br />
-                        packages (does not affect &#8211;make-args).<br />
-Interface:<br />
-  The behavior of the command-line interface.<br />
-  &#8211;verbose, -v         Print output from commands in ordered blocks once the<br />
-                        command finishes.<br />
-  &#8211;interleave-output, -i<br />
-                        Prevents ordering of command output when multiple<br />
-                        commands are running at the same time.<br />
-  &#8211;no-status           Suppresses status line, useful in situations where<br />
-                        carriage return is not properly supported.<br />
+<p>usage: catkin build [-h] [&#8211;workspace WORKSPACE] [&#8211;profile PROFILE]<br/>
+                    [&#8211;dry-run] [&#8211;this] [&#8211;no-deps]<br/>
+                    [&#8211;start-with PKGNAME | &#8211;start-with-this | &#8211;continue-on-failure]<br/>
+                    [&#8211;force-cmake] [&#8211;no-install-lock] [&#8211;save-config]<br/>
+                    [&#8211;parallel-jobs PARALLEL_JOBS]<br/>
+                    [&#8211;cmake-args ARG [ARG &#8230;] | &#8211;no-cmake-args]<br/>
+                    [&#8211;make-args ARG [ARG &#8230;] | &#8211;no-make-args]<br/>
+                    [&#8211;catkin-make-args ARG [ARG &#8230;] | &#8211;no-catkin-make-args]<br/>
+                    [&#8211;verbose] [&#8211;interleave-output] [&#8211;no-status] [&#8211;no-notify]<br/>
+                    [PKGNAME [PKGNAME &#8230;]]<br/>
+Build one or more packages in a catkin workspace. This invokes `CMake`,<br/>
+`make`, and optionally `make install` for either all or the specified packages<br/>
+in a catkin workspace. Arguments passed to this verb can temporarily override<br/>
+persistent options stored in the catkin profile config. If you want to save<br/>
+these options, use the &#8211;save-config argument. To see the current config, use<br/>
+the `catkin config` command.<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;workspace WORKSPACE, -w WORKSPACE<br/>
+                        The path to the catkin_tools workspace or a directory<br/>
+                        contained within it (default: &#8220;.&#8221;)<br/>
+  &#8211;profile PROFILE     The name of a config profile to use (default: active<br/>
+                        profile)<br/>
+  &#8211;dry-run, -n         List the packages which will be built with the given<br/>
+                        arguments without building them.<br/>
+Packages:<br/>
+  Control which packages get built.<br/>
+  PKGNAME               Workspace packages to build, package dependencies are<br/>
+                        built as well unless &#8211;no-deps is used. If no packages<br/>
+                        are given, then all the packages are built.<br/>
+  &#8211;this                Build the package containing the current working<br/>
+                        directory.<br/>
+  &#8211;no-deps             Only build specified packages, not their dependencies.<br/>
+  &#8211;start-with PKGNAME  Build a given package and those which depend on it,<br/>
+                        skipping any before it.<br/>
+  &#8211;start-with-this     Similar to &#8211;start-with, starting with the package<br/>
+                        containing the current directory.<br/>
+  &#8211;continue-on-failure, -c<br/>
+                        Try to continue building packages whose dependencies<br/>
+                        built successfully even if some other requested<br/>
+                        packages fail to build.<br/>
+Build:<br/>
+  Control the build behavior.<br/>
+  &#8211;force-cmake         Runs cmake explicitly for each catkin package.<br/>
+  &#8211;no-install-lock     Prevents serialization of the install steps, which is<br/>
+                        on by default to prevent file install collisions<br/>
+Config:<br/>
+  Parameters for the underlying buildsystem.<br/>
+  &#8211;save-config         Save any configuration options in this section for the<br/>
+                        next build invocation.<br/>
+  &#8211;parallel-jobs PARALLEL_JOBS, &#8211;parallel PARALLEL_JOBS, -p PARALLEL_JOBS<br/>
+                        Maximum number of packages which could be built in<br/>
+                        parallel (default is cpu count)<br/>
+  &#8211;cmake-args ARG [ARG &#8230;]<br/>
+                        Arbitrary arguments which are passes to CMake. It<br/>
+                        collects all of following arguments until a &#8220;&#8211;&#8221; is<br/>
+                        read.<br/>
+  &#8211;no-cmake-args       Pass no additional arguments to CMake.<br/>
+  &#8211;make-args ARG [ARG &#8230;]<br/>
+                        Arbitrary arguments which are passes to make.It<br/>
+                        collects all of following arguments until a &#8220;&#8211;&#8221; is<br/>
+                        read.<br/>
+  &#8211;no-make-args        Pass no additional arguments to make (does not affect<br/>
+                        &#8211;catkin-make-args).<br/>
+  &#8211;catkin-make-args ARG [ARG &#8230;]<br/>
+                        Arbitrary arguments which are passes to make but only<br/>
+                        for catkin packages.It collects all of following<br/>
+                        arguments until a &#8220;&#8211;&#8221; is read.<br/>
+  &#8211;no-catkin-make-args<br/>
+                        Pass no additional arguments to make for catkin<br/>
+                        packages (does not affect &#8211;make-args).<br/>
+Interface:<br/>
+  The behavior of the command-line interface.<br/>
+  &#8211;verbose, -v         Print output from commands in ordered blocks once the<br/>
+                        command finishes.<br/>
+  &#8211;interleave-output, -i<br/>
+                        Prevents ordering of command output when multiple<br/>
+                        commands are running at the same time.<br/>
+  &#8211;no-status           Suppresses status line, useful in situations where<br/>
+                        carriage return is not properly supported.<br/>
   &#8211;no-notify           Suppresses system popup notification.</p>
 <h2>CATKIN CLEAN &#8212; CLEAN BUILD PRODUCTS</h2>
 <p> The <code>clean</code> verb makes it easier and safer to clean various products of a catkin workspace. In addition to removing entire <code>build</code>, <code>devel</code>, and <code>install spaces</code>, it also gives you more fine-grained control over removing just parts of these directories. </p>
 <p> The <code>clean</code> verb is context-aware, but in order to work, it must be given the path to an initialized catkin workspace, or called from a path contained in an initialized catkin workspace. This is because the paths to the relevant spaces are contained in a workspace&#8217;s metadata directory.</p>
 <h3>Full Command-Line Interface</h3>
-<p>usage: catkin clean [-h] [&#8211;workspace WORKSPACE] [&#8211;profile PROFILE] [-a] [-b]<br />
-                    [-d] [-i] [-c] [-o]<br />
-Deletes various products of the build verb.<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;workspace WORKSPACE, -w WORKSPACE<br />
-                        The path to the catkin_tools workspace or a directory<br />
-                        contained within it (default: &#8220;.&#8221;)<br />
-  &#8211;profile PROFILE     The name of a config profile to use (default: active<br />
-                        profile)<br />
-Basic:<br />
-  Clean workspace subdirectories.<br />
-  -a, &#8211;all             Remove all of the *spaces associated with the given or<br />
-                        active profile. This will remove everything but the<br />
-                        source space and the hidden .catkin_tools directory.<br />
-  -b, &#8211;build           Remove the buildspace.<br />
-  -d, &#8211;devel           Remove the develspace.<br />
-  -i, &#8211;install         Remove the installspace.<br />
-Advanced:<br />
-  Clean only specific parts of the workspace.<br />
-  -c, &#8211;cmake-cache     Clear the CMakeCache for each package, but leave build<br />
-                        and devel spaces.<br />
-  -o, &#8211;orphans         Remove only build directories whose source packages<br />
-                        are no longer enabled or in the source space. This<br />
+<p>usage: catkin clean [-h] [&#8211;workspace WORKSPACE] [&#8211;profile PROFILE] [-a] [-b]<br/>
+                    [-d] [-i] [-c] [-o]<br/>
+Deletes various products of the build verb.<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;workspace WORKSPACE, -w WORKSPACE<br/>
+                        The path to the catkin_tools workspace or a directory<br/>
+                        contained within it (default: &#8220;.&#8221;)<br/>
+  &#8211;profile PROFILE     The name of a config profile to use (default: active<br/>
+                        profile)<br/>
+Basic:<br/>
+  Clean workspace subdirectories.<br/>
+  -a, &#8211;all             Remove all of the *spaces associated with the given or<br/>
+                        active profile. This will remove everything but the<br/>
+                        source space and the hidden .catkin_tools directory.<br/>
+  -b, &#8211;build           Remove the buildspace.<br/>
+  -d, &#8211;devel           Remove the develspace.<br/>
+  -i, &#8211;install         Remove the installspace.<br/>
+Advanced:<br/>
+  Clean only specific parts of the workspace.<br/>
+  -c, &#8211;cmake-cache     Clear the CMakeCache for each package, but leave build<br/>
+                        and devel spaces.<br/>
+  -o, &#8211;orphans         Remove only build directories whose source packages<br/>
+                        are no longer enabled or in the source space. This<br/>
                         might require &#8211;force-cmake on the next build.</p>
 <h2>CATKIN CONFIG &#8212; CONFIGURE A WORKSPACE</h2>
 <p> The <code>config</code> verb can be used to both view and mapiulate a workspace&#8217;s configuration options. These options include all of the elements listed in thr configuration summary. </p>
@@ -938,14 +938,14 @@ lib            setup.bash     setup.sh       setup.zsh      share
 <p> Note that in case the desired parent workspace is different from one already being used, using the <code>&#8211;extend</code> argument also necessitates cleaning the setup files from your workspace with <code>catkin clean</code>. </p>
 <p> For example, regardless of your current environment variable settings (like <code>$CMAKE_PREFIX_PATH</code>), this will build your workspace against the <code>/opt/ros/hydro</code> install space. </p>
 <p> First start with an empty <code>CMAKE_PREFIX_PATH</code> and initialize, build, and source a workspace: </p>
-<p>$ echo $CMAKE_PREFIX_PATH<br />
-        $ mkdir &#8211;<br />
+<p>$ echo $CMAKE_PREFIX_PATH<br/>
+        $ mkdir &#8211;<br/>
     p / tmp / path / to / my_catkin_ws / src $ cd / tmp / path / to / my_catkin_ws $ catkin init&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Profile : default Extending : None Workspace : / tmp / path / to / my_catkin_ws&#8230; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Workspace configuration appears valid.&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;$ cd / tmp / path / to / my_catkin_ws $ catkin create pkg aaa $ catkin create pkg bbb $ catkin create pkg ccc $ catkin build&#8230; $ source devel / setup.bash $ echo $CMAKE_PREFIX_PATH / tmp / path / to / my_catkin_ws / devel $ catkin config&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Profile : default Extending : None Workspace : / tmp / path / to / my_catkin_ws&#8230; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Workspace configuration appears valid.&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;</p>
 <p> At this point you have a workspace which doesn&#8217;t extend anything. If you realize this after the fact, you can explicitly tell it to extend another workspace. Suppose you wanted to extend a standard ROS system install like <code>/opt/ros/hydro</code>. This can be done with the <code>&#8211;extend</code> option: </p>
-<p>$ catkin config&#8211; extend / opt / ros / hydro&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Profile : default Extending : [explicit] / opt / ros / hydro Workspace : / tmp / path / to / my_catkin_ws Source Space : [exists] / tmp / path / to / my_catkin_ws / src Build Space : [missing] / tmp / path / to / my_catkin_ws / build Devel Space : [missing] / tmp / path / to / my_catkin_ws / devel Install Space : [missing] / tmp / path / to / my_catkin_ws / install DESTDIR : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Isolate Develspaces : False Install Packages : False Isolate Installs : False&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Additional CMake Args : None Additional Make Args : None Additional catkin Make Args : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Whitelisted Packages : None Blacklisted Packages : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Workspace configuration appears valid.&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;$ catkin clean&#8211; setup &#8211; files<br />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        $ catkin build&#8230; $ source devel /<br />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    setup.bash<br />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        $ echo $CMAKE_PREFIX_PATH /<br />
+<p>$ catkin config&#8211; extend / opt / ros / hydro&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Profile : default Extending : [explicit] / opt / ros / hydro Workspace : / tmp / path / to / my_catkin_ws Source Space : [exists] / tmp / path / to / my_catkin_ws / src Build Space : [missing] / tmp / path / to / my_catkin_ws / build Devel Space : [missing] / tmp / path / to / my_catkin_ws / devel Install Space : [missing] / tmp / path / to / my_catkin_ws / install DESTDIR : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Isolate Develspaces : False Install Packages : False Isolate Installs : False&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Additional CMake Args : None Additional Make Args : None Additional catkin Make Args : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Whitelisted Packages : None Blacklisted Packages : None&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Workspace configuration appears valid.&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;$ catkin clean&#8211; setup &#8211; files<br/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        $ catkin build&#8230; $ source devel /<br/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    setup.bash<br/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        $ echo $CMAKE_PREFIX_PATH /<br/>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     tmp / path / to / my_catkin_ws : / opt / ros / hydro</p>
 <h3>Whitelisting and Blacklisting Packages</h3>
 <p> Packages can be added to a package <i>whitelist</i> or <i>blacklist</i> in order to change which packages get built. If the <i>whitelist</i> is non-empty, then a call to <code>catkin build</code> with no specific package names will only build the packages on the <i>whitelist</i>. This means that you can still build packages not on the <i>whitelist</i>, but only if they are named explicitly or are dependencies of other whitelisted packages. </p>
@@ -963,188 +963,188 @@ catkin config --no-blacklist
 </pre>
 <p> Note that you can still build packages on the blacklist and whitelist by passing their names to <code>catkin build</code> explicitly.</p>
 <h3>Full Command-Line Interface</h3>
-<p>usage: catkin config [-h] [&#8211;workspace WORKSPACE] [&#8211;profile PROFILE]<br />
-                     [&#8211;append-args | &#8211;remove-args] [&#8211;init]<br />
-                     [&#8211;extend EXTEND_PATH | &#8211;no-extend] [&#8211;mkdirs]<br />
-                     [&#8211;whitelist PKG [PKG &#8230;] | &#8211;no-whitelist]<br />
-                     [&#8211;blacklist PKG [PKG &#8230;] | &#8211;no-blacklist]<br />
-                     [-s SOURCE_SPACE | &#8211;default-source-space]<br />
-                     [-b BUILD_SPACE | &#8211;default-build-space]<br />
-                     [-d DEVEL_SPACE | &#8211;default-devel-space]<br />
-                     [-i INSTALL_SPACE | &#8211;default-install-space]<br />
-                     [-x SPACE_SUFFIX] [&#8211;isolate-devel | &#8211;merge-devel]<br />
-                     [&#8211;install | &#8211;no-install]<br />
-                     [&#8211;isolate-install | &#8211;merge-install]<br />
-                     [&#8211;parallel-jobs PARALLEL_JOBS]<br />
-                     [&#8211;cmake-args ARG [ARG &#8230;] | &#8211;no-cmake-args]<br />
-                     [&#8211;make-args ARG [ARG &#8230;] | &#8211;no-make-args]<br />
-                     [&#8211;catkin-make-args ARG [ARG &#8230;] |<br />
-                     &#8211;no-catkin-make-args]<br />
-This verb is used to configure a catkin workspace&#8217;s configuration and layout.<br />
-Calling `catkin config` with no arguments will display the current config and<br />
-affect no changes if a config already exists for the current workspace and<br />
-profile.<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;workspace WORKSPACE, -w WORKSPACE<br />
-                        The path to the catkin_tools workspace or a directory<br />
-                        contained within it (default: &#8220;.&#8221;)<br />
-  &#8211;profile PROFILE     The name of a config profile to use (default: active<br />
-                        profile)<br />
-Behavior:<br />
-  Options affecting argument handling.<br />
-  &#8211;append-args, -a     For list-type arguments, append elements.<br />
-  &#8211;remove-args, -r     For list-type arguments, remove elements.<br />
-Workspace Context:<br />
-  Options affecting the context of the workspace.<br />
-  &#8211;init                Initialize a workspace if it does not yet exist.<br />
-  &#8211;extend EXTEND_PATH, -e EXTEND_PATH<br />
-                        Explicitly extend the result-space of another catkin<br />
-                        workspace, overriding the value of $CMAKE_PREFIX_PATH.<br />
-  &#8211;no-extend           Un-set the explicit extension of another workspace as<br />
-                        set by &#8211;extend.<br />
-  &#8211;mkdirs              Create directories required by the configuration (e.g.<br />
-                        source space) if they do not already exist.<br />
-Package Build Defaults:<br />
-  Packages to include or exclude from default build behavior.<br />
-  &#8211;whitelist PKG [PKG &#8230;]<br />
-                        Set the packages on the whitelist. If the whitelist is<br />
-                        non-empty, only the packages on the whitelist are<br />
-                        built with a bare call to `catkin build`.<br />
-  &#8211;no-whitelist        Clear all packages from the whitelist.<br />
-  &#8211;blacklist PKG [PKG &#8230;]<br />
-                        Set the packages on the blacklist. Packages on the<br />
-                        blacklist are not built with a bare call to `catkin<br />
-                        build`.<br />
-  &#8211;no-blacklist        Clear all packages from the blacklist.<br />
-Spaces:<br />
-  Location of parts of the catkin workspace.<br />
-  -s SOURCE_SPACE, &#8211;source-space SOURCE_SPACE<br />
-                        The path to the source space.<br />
-  &#8211;default-source-space<br />
-                        Use the default path to the source space (&#8220;src&#8221;)<br />
-  -b BUILD_SPACE, &#8211;build-space BUILD_SPACE<br />
-                        The path to the build space.<br />
-  &#8211;default-build-space<br />
-                        Use the default path to the build space (&#8220;build&#8221;)<br />
-  -d DEVEL_SPACE, &#8211;devel-space DEVEL_SPACE<br />
-                        Sets the target devel space<br />
-  &#8211;default-devel-space<br />
-                        Sets the default target devel space (&#8220;devel&#8221;)<br />
-  -i INSTALL_SPACE, &#8211;install-space INSTALL_SPACE<br />
-                        Sets the target install space<br />
-  &#8211;default-install-space<br />
-                        Sets the default target install space (&#8220;install&#8221;)<br />
-  -x SPACE_SUFFIX, &#8211;space-suffix SPACE_SUFFIX<br />
-                        Suffix for build, devel, and install space if they are<br />
-                        not otherwise explicitly set.<br />
-Devel Space:<br />
-  Options for configuring the structure of the devel space.<br />
-  &#8211;isolate-devel       Build products from each catkin package into isolated<br />
-                        devel spaces.<br />
-  &#8211;merge-devel         Build products from each catkin package into a single<br />
-                        merged devel spaces.<br />
-Install Space:<br />
-  Options for configuring the structure of the install space.<br />
-  &#8211;install             Causes each package to be installed to the install<br />
-                        space.<br />
-  &#8211;no-install          Disables installing each package into the install<br />
-                        space.<br />
-  &#8211;isolate-install     Install each catkin package into a separate install<br />
-                        space.<br />
-  &#8211;merge-install       Install each catkin package into a single merged<br />
-                        install space.<br />
-Build Options:<br />
-  Options for configuring the way packages are built.<br />
-  &#8211;parallel-jobs PARALLEL_JOBS, &#8211;parallel PARALLEL_JOBS, -p PARALLEL_JOBS<br />
-                        Maximum number of packages which could be built in<br />
-                        parallel (default is cpu count)<br />
-  &#8211;cmake-args ARG [ARG &#8230;]<br />
-                        Arbitrary arguments which are passes to CMake. It must<br />
-                        be passed after other arguments since it collects all<br />
-                        following options.<br />
-  &#8211;no-cmake-args       Pass no additional arguments to CMake.<br />
-  &#8211;make-args ARG [ARG &#8230;]<br />
-                        Arbitrary arguments which are passes to make.It must<br />
-                        be passed after other arguments since it collects all<br />
-                        following options.<br />
-  &#8211;no-make-args        Pass no additional arguments to make (does not affect<br />
-                        &#8211;catkin-make-args).<br />
-  &#8211;catkin-make-args ARG [ARG &#8230;]<br />
-                        Arbitrary arguments which are passes to make but only<br />
-                        for catkin packages.It must be passed after other<br />
-                        arguments since it collects all following options.<br />
-  &#8211;no-catkin-make-args<br />
-                        Pass no additional arguments to make for catkin<br />
+<p>usage: catkin config [-h] [&#8211;workspace WORKSPACE] [&#8211;profile PROFILE]<br/>
+                     [&#8211;append-args | &#8211;remove-args] [&#8211;init]<br/>
+                     [&#8211;extend EXTEND_PATH | &#8211;no-extend] [&#8211;mkdirs]<br/>
+                     [&#8211;whitelist PKG [PKG &#8230;] | &#8211;no-whitelist]<br/>
+                     [&#8211;blacklist PKG [PKG &#8230;] | &#8211;no-blacklist]<br/>
+                     [-s SOURCE_SPACE | &#8211;default-source-space]<br/>
+                     [-b BUILD_SPACE | &#8211;default-build-space]<br/>
+                     [-d DEVEL_SPACE | &#8211;default-devel-space]<br/>
+                     [-i INSTALL_SPACE | &#8211;default-install-space]<br/>
+                     [-x SPACE_SUFFIX] [&#8211;isolate-devel | &#8211;merge-devel]<br/>
+                     [&#8211;install | &#8211;no-install]<br/>
+                     [&#8211;isolate-install | &#8211;merge-install]<br/>
+                     [&#8211;parallel-jobs PARALLEL_JOBS]<br/>
+                     [&#8211;cmake-args ARG [ARG &#8230;] | &#8211;no-cmake-args]<br/>
+                     [&#8211;make-args ARG [ARG &#8230;] | &#8211;no-make-args]<br/>
+                     [&#8211;catkin-make-args ARG [ARG &#8230;] |<br/>
+                     &#8211;no-catkin-make-args]<br/>
+This verb is used to configure a catkin workspace&#8217;s configuration and layout.<br/>
+Calling `catkin config` with no arguments will display the current config and<br/>
+affect no changes if a config already exists for the current workspace and<br/>
+profile.<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;workspace WORKSPACE, -w WORKSPACE<br/>
+                        The path to the catkin_tools workspace or a directory<br/>
+                        contained within it (default: &#8220;.&#8221;)<br/>
+  &#8211;profile PROFILE     The name of a config profile to use (default: active<br/>
+                        profile)<br/>
+Behavior:<br/>
+  Options affecting argument handling.<br/>
+  &#8211;append-args, -a     For list-type arguments, append elements.<br/>
+  &#8211;remove-args, -r     For list-type arguments, remove elements.<br/>
+Workspace Context:<br/>
+  Options affecting the context of the workspace.<br/>
+  &#8211;init                Initialize a workspace if it does not yet exist.<br/>
+  &#8211;extend EXTEND_PATH, -e EXTEND_PATH<br/>
+                        Explicitly extend the result-space of another catkin<br/>
+                        workspace, overriding the value of $CMAKE_PREFIX_PATH.<br/>
+  &#8211;no-extend           Un-set the explicit extension of another workspace as<br/>
+                        set by &#8211;extend.<br/>
+  &#8211;mkdirs              Create directories required by the configuration (e.g.<br/>
+                        source space) if they do not already exist.<br/>
+Package Build Defaults:<br/>
+  Packages to include or exclude from default build behavior.<br/>
+  &#8211;whitelist PKG [PKG &#8230;]<br/>
+                        Set the packages on the whitelist. If the whitelist is<br/>
+                        non-empty, only the packages on the whitelist are<br/>
+                        built with a bare call to `catkin build`.<br/>
+  &#8211;no-whitelist        Clear all packages from the whitelist.<br/>
+  &#8211;blacklist PKG [PKG &#8230;]<br/>
+                        Set the packages on the blacklist. Packages on the<br/>
+                        blacklist are not built with a bare call to `catkin<br/>
+                        build`.<br/>
+  &#8211;no-blacklist        Clear all packages from the blacklist.<br/>
+Spaces:<br/>
+  Location of parts of the catkin workspace.<br/>
+  -s SOURCE_SPACE, &#8211;source-space SOURCE_SPACE<br/>
+                        The path to the source space.<br/>
+  &#8211;default-source-space<br/>
+                        Use the default path to the source space (&#8220;src&#8221;)<br/>
+  -b BUILD_SPACE, &#8211;build-space BUILD_SPACE<br/>
+                        The path to the build space.<br/>
+  &#8211;default-build-space<br/>
+                        Use the default path to the build space (&#8220;build&#8221;)<br/>
+  -d DEVEL_SPACE, &#8211;devel-space DEVEL_SPACE<br/>
+                        Sets the target devel space<br/>
+  &#8211;default-devel-space<br/>
+                        Sets the default target devel space (&#8220;devel&#8221;)<br/>
+  -i INSTALL_SPACE, &#8211;install-space INSTALL_SPACE<br/>
+                        Sets the target install space<br/>
+  &#8211;default-install-space<br/>
+                        Sets the default target install space (&#8220;install&#8221;)<br/>
+  -x SPACE_SUFFIX, &#8211;space-suffix SPACE_SUFFIX<br/>
+                        Suffix for build, devel, and install space if they are<br/>
+                        not otherwise explicitly set.<br/>
+Devel Space:<br/>
+  Options for configuring the structure of the devel space.<br/>
+  &#8211;isolate-devel       Build products from each catkin package into isolated<br/>
+                        devel spaces.<br/>
+  &#8211;merge-devel         Build products from each catkin package into a single<br/>
+                        merged devel spaces.<br/>
+Install Space:<br/>
+  Options for configuring the structure of the install space.<br/>
+  &#8211;install             Causes each package to be installed to the install<br/>
+                        space.<br/>
+  &#8211;no-install          Disables installing each package into the install<br/>
+                        space.<br/>
+  &#8211;isolate-install     Install each catkin package into a separate install<br/>
+                        space.<br/>
+  &#8211;merge-install       Install each catkin package into a single merged<br/>
+                        install space.<br/>
+Build Options:<br/>
+  Options for configuring the way packages are built.<br/>
+  &#8211;parallel-jobs PARALLEL_JOBS, &#8211;parallel PARALLEL_JOBS, -p PARALLEL_JOBS<br/>
+                        Maximum number of packages which could be built in<br/>
+                        parallel (default is cpu count)<br/>
+  &#8211;cmake-args ARG [ARG &#8230;]<br/>
+                        Arbitrary arguments which are passes to CMake. It must<br/>
+                        be passed after other arguments since it collects all<br/>
+                        following options.<br/>
+  &#8211;no-cmake-args       Pass no additional arguments to CMake.<br/>
+  &#8211;make-args ARG [ARG &#8230;]<br/>
+                        Arbitrary arguments which are passes to make.It must<br/>
+                        be passed after other arguments since it collects all<br/>
+                        following options.<br/>
+  &#8211;no-make-args        Pass no additional arguments to make (does not affect<br/>
+                        &#8211;catkin-make-args).<br/>
+  &#8211;catkin-make-args ARG [ARG &#8230;]<br/>
+                        Arbitrary arguments which are passes to make but only<br/>
+                        for catkin packages.It must be passed after other<br/>
+                        arguments since it collects all following options.<br/>
+  &#8211;no-catkin-make-args<br/>
+                        Pass no additional arguments to make for catkin<br/>
                         packages (does not affect &#8211;make-args).</p>
 <h2>CATKIN CREATE &#8212; CREATE PACKAGES</h2>
 <p> This verb enables you to quickly create workspace elements like boilerplate Catkin packages.</p>
 <h3>Full Command-Line Interface</h3>
-<p>usage : catkin create[-h]{pkg}&#8230; Creates a catkin workspace<br />
-            positional arguments : {pkg} sub &#8211;<br />
-                                   command help<br />
-                                       pkg Create a catkin package.optional arguments : -h,<br />
+<p>usage : catkin create[-h]{pkg}&#8230; Creates a catkin workspace<br/>
+            positional arguments : {pkg} sub &#8211;<br/>
+                                   command help<br/>
+                                       pkg Create a catkin package.optional arguments : -h,<br/>
     &#8211;help show this help message and exit</p>
-<p>usage: catkin create pkg [-h] [&#8211;rosdistro ROSDISTRO] [-v MAJOR.MINOR.PATCH]<br />
-                         [-l LICENSE] [-m NAME EMAIL] [-a NAME EMAIL]<br />
-                         [-d DESCRIPTION] [&#8211;catkin-deps [DEP [DEP &#8230;]]]<br />
-                         [&#8211;system-deps [DEP [DEP &#8230;]]]<br />
-                         [&#8211;boost-components [COMP [COMP &#8230;]]]<br />
-                         PKGNAME<br />
-Create a new Catkin package. Note that while the default options used by this<br />
-command are sufficient for prototyping and local usage, it is important that<br />
-any publically-available packages have a valid license and a valid maintainer<br />
-e-mail address.<br />
-positional arguments:<br />
-  PKGNAME               The name of the package to create. This name should be<br />
-                        completely lower-case with individual words separated<br />
-                        by undercores.<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;rosdistro ROSDISTRO<br />
-                        The ROS distro (default: environment variable<br />
-                        ROS_DISTRO if defined)<br />
-Package Metadata:<br />
-  -v MAJOR.MINOR.PATCH, &#8211;version MAJOR.MINOR.PATCH<br />
-                        Initial package version. (default 0.0.0)<br />
-  -l LICENSE, &#8211;license LICENSE<br />
-                        The software license under which the code is<br />
-                        distributed, such as BSD, MIT, GPLv3, or others.<br />
-                        (default: &#8220;TODO&#8221;)<br />
-  -m NAME EMAIL, &#8211;maintainer NAME EMAIL<br />
-                        A maintainer who is responsible for the package.<br />
-                        (default: [username, username [at] todo.todo]) (multiple<br />
-                        allowed)<br />
-  -a NAME EMAIL, &#8211;author NAME EMAIL<br />
-                        An author who contributed to the package. (default: no<br />
-                        additional authors) (multiple allowed)<br />
-  -d DESCRIPTION, &#8211;description DESCRIPTION<br />
-                        Description of the package. (default: empty)<br />
-Package Dependencies:<br />
-  &#8211;catkin-deps [DEP [DEP &#8230;]], -c [DEP [DEP &#8230;]]<br />
-                        The names of one or more Catkin dependencies. These<br />
-                        are Catkin-based packages which are either built as<br />
-                        source or installed by your system&#8217;s package manager.<br />
-  &#8211;system-deps [DEP [DEP &#8230;]], -s [DEP [DEP &#8230;]]<br />
-                        The names of one or more system dependencies. These<br />
-                        are other packages installed by your operating<br />
-                        system&#8217;s package manager.<br />
-C++ Options:<br />
-  &#8211;boost-components [COMP [COMP &#8230;]]<br />
+<p>usage: catkin create pkg [-h] [&#8211;rosdistro ROSDISTRO] [-v MAJOR.MINOR.PATCH]<br/>
+                         [-l LICENSE] [-m NAME EMAIL] [-a NAME EMAIL]<br/>
+                         [-d DESCRIPTION] [&#8211;catkin-deps [DEP [DEP &#8230;]]]<br/>
+                         [&#8211;system-deps [DEP [DEP &#8230;]]]<br/>
+                         [&#8211;boost-components [COMP [COMP &#8230;]]]<br/>
+                         PKGNAME<br/>
+Create a new Catkin package. Note that while the default options used by this<br/>
+command are sufficient for prototyping and local usage, it is important that<br/>
+any publically-available packages have a valid license and a valid maintainer<br/>
+e-mail address.<br/>
+positional arguments:<br/>
+  PKGNAME               The name of the package to create. This name should be<br/>
+                        completely lower-case with individual words separated<br/>
+                        by undercores.<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;rosdistro ROSDISTRO<br/>
+                        The ROS distro (default: environment variable<br/>
+                        ROS_DISTRO if defined)<br/>
+Package Metadata:<br/>
+  -v MAJOR.MINOR.PATCH, &#8211;version MAJOR.MINOR.PATCH<br/>
+                        Initial package version. (default 0.0.0)<br/>
+  -l LICENSE, &#8211;license LICENSE<br/>
+                        The software license under which the code is<br/>
+                        distributed, such as BSD, MIT, GPLv3, or others.<br/>
+                        (default: &#8220;TODO&#8221;)<br/>
+  -m NAME EMAIL, &#8211;maintainer NAME EMAIL<br/>
+                        A maintainer who is responsible for the package.<br/>
+                        (default: [username, username [at] todo.todo]) (multiple<br/>
+                        allowed)<br/>
+  -a NAME EMAIL, &#8211;author NAME EMAIL<br/>
+                        An author who contributed to the package. (default: no<br/>
+                        additional authors) (multiple allowed)<br/>
+  -d DESCRIPTION, &#8211;description DESCRIPTION<br/>
+                        Description of the package. (default: empty)<br/>
+Package Dependencies:<br/>
+  &#8211;catkin-deps [DEP [DEP &#8230;]], -c [DEP [DEP &#8230;]]<br/>
+                        The names of one or more Catkin dependencies. These<br/>
+                        are Catkin-based packages which are either built as<br/>
+                        source or installed by your system&#8217;s package manager.<br/>
+  &#8211;system-deps [DEP [DEP &#8230;]], -s [DEP [DEP &#8230;]]<br/>
+                        The names of one or more system dependencies. These<br/>
+                        are other packages installed by your operating<br/>
+                        system&#8217;s package manager.<br/>
+C++ Options:<br/>
+  &#8211;boost-components [COMP [COMP &#8230;]]<br/>
                         One or more boost components used by the package.</p>
 <h2>CATKIN INIT &#8212; INITIALIZE A WORKSPACE</h2>
 <p> The <code>init</code> verb is the simplest way to &quot;initialize&quot; a catkin workspace so that it can be automatically detected automatically by other verbs which need to know the location of the workspace root. </p>
 <p> This verb does not store any configuration information, but simply creates the hidden <code>.catkin_tools</code> directory in the specified workspace. If you want to initialize a workspace simultaneously with an initial config, see the <code>&#8211;init</code> option for the <code>config</code> verb. </p>
 <p> Catkin workspaces can be initialized anywhere. The only constraint is that catkin workspaces cannot contain other catkin workspaces. If you call <code>caktin init</code> and it reports an error saying that the given directory is already contained in a workspace, you can call <code>catkin config</code> to determine the root of that workspace.</p>
 <h3>Full Command-Line Interface</h3>
-<p>usage: catkin init [-h] [&#8211;workspace WORKSPACE] [&#8211;profile PROFILE] [&#8211;reset]<br />
-Initializes a given folder as a catkin workspace<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;workspace WORKSPACE, -w WORKSPACE<br />
-                        The path to the catkin_tools workspace or a directory<br />
-                        contained within it (default: &#8220;.&#8221;)<br />
-  &#8211;reset               Reset (delete) all of the metadata for the given<br />
+<p>usage: catkin init [-h] [&#8211;workspace WORKSPACE] [&#8211;profile PROFILE] [&#8211;reset]<br/>
+Initializes a given folder as a catkin workspace<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;workspace WORKSPACE, -w WORKSPACE<br/>
+                        The path to the catkin_tools workspace or a directory<br/>
+                        contained within it (default: &#8220;.&#8221;)<br/>
+  &#8211;reset               Reset (delete) all of the metadata for the given<br/>
                         workspace.</p>
 <h2>CATKIN LIST &#8212; LIST PACKAGE INFO</h2>
 <p> The <code>list</code> verb for the <code>catkin</code> command is used to find and list information about catkin packages. By default, it will list the packages in the workspace containing the current working directoy. It can also be used to list the packages in any other arbitrary directory.</p>
@@ -1153,18 +1153,18 @@ optional arguments:<br />
 <h3>Using Unformatted Output in Shell Scripts</h3>
 <p> <code>catkin list &#8211;unformatted</code> is useful for automating shell scripts in UNIX pipe-based programs.</p>
 <h3>Full Command-Line Interface</h3>
-<p>usage : catkin list[-h][&#8211;deps][&#8211;depends &#8211; on[DEPENDS_ON[DEPENDS_ON&#8230;]]]<br />
-                   [folders[folders&#8230;]] Lists catkin packages in the workspace or<br />
-        other arbitray folders.positional arguments : folders Folders in which to find packages.(default<br />
-                                                                                                 : cwd)<br />
-                                                          optional arguments : -h,<br />
-    &#8211;help show this help message and exit<br />
-    &#8212; deps,<br />
-    &#8211;dependencies<br />
-        List dependencies of each package.&#8211;depends<br />
-        &#8211; on[DEPENDS_ON[DEPENDS_ON&#8230;]] List all packages that depend on supplied argument<br />
-          package(s)<br />
-              .&#8211;quiet Don&#8217;t print out detected package warnings. &#8211;unformatted,<br />
+<p>usage : catkin list[-h][&#8211;deps][&#8211;depends &#8211; on[DEPENDS_ON[DEPENDS_ON&#8230;]]]<br/>
+                   [folders[folders&#8230;]] Lists catkin packages in the workspace or<br/>
+        other arbitray folders.positional arguments : folders Folders in which to find packages.(default<br/>
+                                                                                                 : cwd)<br/>
+                                                          optional arguments : -h,<br/>
+    &#8211;help show this help message and exit<br/>
+    &#8212; deps,<br/>
+    &#8211;dependencies<br/>
+        List dependencies of each package.&#8211;depends<br/>
+        &#8211; on[DEPENDS_ON[DEPENDS_ON&#8230;]] List all packages that depend on supplied argument<br/>
+          package(s)<br/>
+              .&#8211;quiet Don&#8217;t print out detected package warnings. &#8211;unformatted,<br/>
     -u Print list without punctuation and additional details.</p>
 <h2>CATKIN PROFILE &#8212; MANAGE PROFILES</h2>
 <p> Many verbs contain a <code>&#8211;profile</code> option, which selects which configuration profile to use, without which it will use the &quot;active&quot; profile. The <code>profile</code> verb enables you to manager the available profiles as well as set the &quot;active&quot; profile when using other verbs. </p>
@@ -1198,46 +1198,46 @@ settings will automatically by applied to a new profile called `default`.
 <p> Note that while the profile named <code>alternate</code> has been configured, it is still not <i>active</i>, so any calls to catkin-verbs without an explicit <code>&#8211;profile alternate</code> option will still use the profile named <code>default</code>.</p>
 <h3>Explicitly Creating Profiles</h3>
 <p> Profiles can also be added explicitly with the <code>add</code> command. This profile can be initialized with configuration information from either the default settings or another profile. </p>
-<p>$ catkin profile list<br />
-        [profile] Available profiles : -alternate &#8211;<br />
-                                       default(active)<br />
-                                           $ catkin profile add alternate_2&#8211; copy alternate<br />
-                                               [profile] Created a new profile named alternate_2 based on profile alternate<br />
-                                                   [profile] Available profiles : -alternate<br />
-                                                                                  &#8211;<br />
-                                                                                  alternate_2<br />
-                                                                                  &#8211;<br />
+<p>$ catkin profile list<br/>
+        [profile] Available profiles : -alternate &#8211;<br/>
+                                       default(active)<br/>
+                                           $ catkin profile add alternate_2&#8211; copy alternate<br/>
+                                               [profile] Created a new profile named alternate_2 based on profile alternate<br/>
+                                                   [profile] Available profiles : -alternate<br/>
+                                                                                  &#8211;<br/>
+                                                                                  alternate_2<br/>
+                                                                                  &#8211;<br/>
                                                                                   default(active)</p>
 <h3>Setting the Active Profile</h3>
 <p> The active profile can be easily set with the <code>set</code> sub-command. Suppose a workspace has the following profiles: </p>
-<p>$ catkin profile list<br />
-        [profile] Available profiles : -alternate &#8211;<br />
-                                       alternate_2 &#8211; default(active) $ catkin profile set alternate_2[profile] Activated catkin metadata profile : alternate_2[profile] Available profiles : -alternate<br />
-                                                                                                                                                                                             &#8211;<br />
+<p>$ catkin profile list<br/>
+        [profile] Available profiles : -alternate &#8211;<br/>
+                                       alternate_2 &#8211; default(active) $ catkin profile set alternate_2[profile] Activated catkin metadata profile : alternate_2[profile] Available profiles : -alternate<br/>
+                                                                                                                                                                                             &#8211;<br/>
                                                                                                                                                                                              alternate_2(active) &#8211; default</p>
 <h3>Renaming and Removing Profiles</h3>
 <p> The <code>profile</code> verb can also be used for renaming and removing profiles: </p>
-<p>$ catkin profile list<br />
-        [profile] Available profiles : -alternate &#8211;<br />
-                                       alternate_2(active) &#8211; default $ catkin profile rename alternate_2 alternate2[profile] Renamed profile alternate_2 to alternate2[profile] Available profiles : -alternate<br />
-                                                                                                                                                                                                     &#8211;<br />
+<p>$ catkin profile list<br/>
+        [profile] Available profiles : -alternate &#8211;<br/>
+                                       alternate_2(active) &#8211; default $ catkin profile rename alternate_2 alternate2[profile] Renamed profile alternate_2 to alternate2[profile] Available profiles : -alternate<br/>
+                                                                                                                                                                                                     &#8211;<br/>
                                                                                                                                                                                                      alternate2(active) &#8211; default $ catkin profile remove alterate[profile] Removed profile : alternate[profile] Available profiles : -alternate2(active) &#8211; default</p>
 <h3>Full Command-Line Interface</h3>
-<p>usage: catkin profile [-h] [&#8211;workspace WORKSPACE]<br />
-                      {list,set,add,rename,remove} &#8230;<br />
-Manage metadata profiles for a catkin workspace<br />
-positional arguments:<br />
-  {list,set,add,rename,remove}<br />
-                        sub-command help<br />
-    list                List the available profiles.<br />
-    set                 Set the active profile by name.<br />
-    add                 Add a new profile by name.<br />
-    rename              Rename a given profile.<br />
-    remove              Remove a profile by name.<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;workspace WORKSPACE, -w WORKSPACE<br />
-                        The path to the catkin workspace. Default: current<br />
+<p>usage: catkin profile [-h] [&#8211;workspace WORKSPACE]<br/>
+                      {list,set,add,rename,remove} &#8230;<br/>
+Manage metadata profiles for a catkin workspace<br/>
+positional arguments:<br/>
+  {list,set,add,rename,remove}<br/>
+                        sub-command help<br/>
+    list                List the available profiles.<br/>
+    set                 Set the active profile by name.<br/>
+    add                 Add a new profile by name.<br/>
+    rename              Rename a given profile.<br/>
+    remove              Remove a profile by name.<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;workspace WORKSPACE, -w WORKSPACE<br/>
+                        The path to the catkin workspace. Default: current<br/>
                         working directory</p>
 <h3><code>catkin profile list</code></h3>
 <pre>
@@ -1254,18 +1254,18 @@ optional arguments:
   -h, --help  show this help message and exit
 </pre>
 <h3><code>catkin profile add</code></h3>
-<p>usage : catkin profile add[-h][-f][&#8211;copy BASE_PROFILE | &#8211;copy &#8211; active] name<br />
-            positional arguments : name The new profile name.optional arguments : -h,<br />
-    &#8211;help show this help message and exit &#8211; f, &#8211;force Overwrite an existing profile.&#8211;copy BASE_PROFILE Copy the settings from an existing profile.(default<br />
-                                                                                                                                                      : None)&#8211; copy<br />
+<p>usage : catkin profile add[-h][-f][&#8211;copy BASE_PROFILE | &#8211;copy &#8211; active] name<br/>
+            positional arguments : name The new profile name.optional arguments : -h,<br/>
+    &#8211;help show this help message and exit &#8211; f, &#8211;force Overwrite an existing profile.&#8211;copy BASE_PROFILE Copy the settings from an existing profile.(default<br/>
+                                                                                                                                                      : None)&#8211; copy<br/>
                                                     &#8211; active Copy the settings from the active profile.</p>
 <h3><code>catkin profile rename</code></h3>
-<p>usage: catkin profile rename [-h] [-f] current_name new_name<br />
-positional arguments:<br />
-  current_name  The current name of the profile to be renamed.<br />
-  new_name      The new name for the profile.<br />
-optional arguments:<br />
-  -h, &#8211;help    show this help message and exit<br />
+<p>usage: catkin profile rename [-h] [-f] current_name new_name<br/>
+positional arguments:<br/>
+  current_name  The current name of the profile to be renamed.<br/>
+  new_name      The new name for the profile.<br/>
+optional arguments:<br/>
+  -h, &#8211;help    show this help message and exit<br/>
   -f, &#8211;force   Overwrite an existing profile.</p>
 <h3><code>catkin profile remove</code></h3>
 <p>usage : catkin profile remove[-h][name[name&#8230;]] positional arguments : name One or more profile names to remove.optional arguments : -h, &#8211;help show this help message and exit</p>
@@ -1306,7 +1306,7 @@ install: config --install
 &lt;ALIAS&gt;: &lt;EXPRESSION&gt;
 </pre>
 <p> For example, aliases which configure a workspace profile so that it ignores the value of the <code>CMAKE_PREFIX_PATH</code> environment variable, and instead <i>extends</i> one or another ROS install spaces could be defined as follows: </p>
-<p>#~/.config / catkin / verb_aliases / 10 &#8211; ros &#8211; distro &#8211; aliases.yaml<br />
+<p>#~/.config / catkin / verb_aliases / 10 &#8211; ros &#8211; distro &#8211; aliases.yaml<br/>
 extend &#8211; sys : config&#8211; profile sys&#8211; extend / opt / ros / hydro &#8211; x _sys extend &#8211; overlay : config&#8211; profile overlay&#8211; extend ~ / ros / hydro / install &#8211; x _overlay</p>
 <p> After defining these aliases, one could use them with optional additional options and build a given configuration profile. </p>
 <pre>
@@ -1334,14 +1334,14 @@ ls: null
 <p>$ catkin bt == &gt; Expanding alias &#8216;bt&#8217; from &#8216;catkin bt&#8217; to &#8216;catkin b &#8211;this&#8217; == &gt; Expanding alias &#8216;b&#8217; from &#8216;catkin b &#8211;this&#8217; to &#8216;catkin build &#8211;this&#8217; &#8230;</p>
 <h2>EXTENDING THE CATKIN COMMAND</h2>
 <p> The <code>catkin</code> command is setup to be easily extended using the <code>setuptools</code> notion of <code>entry_points</code>, see: <i><a rel="nofollow" href="http://guide.python-distribute.org/creation.html#entry-points">http://guide.python-distribute.org/creation.html#entry-points</a></i> By using the <code>entry_points</code> extensions to the <code>catkin</code> command can be made within the <code>catkin_tools</code> package or an external package. Regardless of what package the <code>entry_point</code> is defined in, it will be defined in the <code>setup.py</code> of that package, and will take this form: </p>
-<p>from setuptools import setup<br />
-setup(<br />
-    &#8230; entry_points = {<br />
-        &#8230; &#8216;catkin_tools.commands.catkin.verbs&#8217; : [<br />
-#Example from catkin_tools&#8217; setup.py:<br />
-#&#8217;list = catkin_tools.verbs.catkin_list:description&#8217;,<br />
-            &#8216;my_verb = my_package.some.module:description&#8217;,<br />
-        ],<br />
+<p>from setuptools import setup<br/>
+setup(<br/>
+    &#8230; entry_points = {<br/>
+        &#8230; &#8216;catkin_tools.commands.catkin.verbs&#8217; : [<br/>
+#Example from catkin_tools&#8217; setup.py:<br/>
+#&#8217;list = catkin_tools.verbs.catkin_list:description&#8217;,<br/>
+            &#8216;my_verb = my_package.some.module:description&#8217;,<br/>
+        ],<br/>
     }, )</p>
 <p> This entry in the <code>setup.py</code> places a file in the <code>PYTHONPATH</code> when either the <code>install</code> or the <code>develop</code> verb is given to <code>setup.py</code>. This file relates the key (in this case <code>my_verb</code>) to a module and attribute (in this case <code>my_package.some.module</code> and <code>description</code>). Then the <code>catkin</code> command will use the <code>pkg_resources</code> modules to retrieve these mapping at run time. Any entry for the <code>catkin_tools.commands.catkin.verbs</code> group must point to a <code>description</code> attribute of a module, where the <code>description</code> attribute is a <code>dict</code>. The <code>description</code> <code>dict</code> should take this form (the description from the <code>build</code> verb for example): </p>
 <pre>
@@ -1374,22 +1374,22 @@ def prepare_arguments(parser):
 </pre>
 <p> The above example is a snippet from the <code>build</code> verb&#8217;s <code>prepare_arguments</code> function. The purpose of this function is to take a given <code>ArgumentParser</code> object, which was created by the <code>catkin</code> command, and add this verb&#8217;s <code>argparse</code> arguments to it and then return it. </p>
 <p> Finally, the <code>argument_preprocessor</code> command is an optional entry in the <code>description</code> <code>dict</code> which has this signature: </p>
-<p>def argument_preprocessor(args)<br />
-    : &#8220;&#8221;<br />
-      &#8220;Processes the arguments for the build verb, before being passed to argparse&#8221;<br />
-      &#8220;&#8221;<br />
-#CMake / make pass &#8211; through flags collect dashed options.They require special<br />
-#handling or argparse will complain about unrecognized options.<br />
-      args = sys.argv [1:] if args is None else args<br />
-             extract_make_args = extract_cmake_and_make_and_catkin_make_arguments args,<br />
-      cmake_args, make_args, catkin_make_args = extract_make_args(args)<br />
-#Extract make jobs flags.<br />
-                                 jobs_flags = extract_jobs_flags(&#8216; &#8216;.join(args)) if jobs_flags : args = re.sub(jobs_flags, &#8221;, &#8216; &#8216;.join(args)).split() jobs_flags = jobs_flags.split()<br />
-                                                                                                                                                                        extras = {<br />
-                                     &#8216;cmake_args&#8217; : cmake_args,<br />
-                                     &#8216;make_args&#8217; : make_args + (jobs_flags or []),<br />
-                                     &#8216;catkin_make_args&#8217; : catkin_make_args,<br />
-                                 } return args,<br />
+<p>def argument_preprocessor(args)<br/>
+    : &#8220;&#8221;<br/>
+      &#8220;Processes the arguments for the build verb, before being passed to argparse&#8221;<br/>
+      &#8220;&#8221;<br/>
+#CMake / make pass &#8211; through flags collect dashed options.They require special<br/>
+#handling or argparse will complain about unrecognized options.<br/>
+      args = sys.argv [1:] if args is None else args<br/>
+             extract_make_args = extract_cmake_and_make_and_catkin_make_arguments args,<br/>
+      cmake_args, make_args, catkin_make_args = extract_make_args(args)<br/>
+#Extract make jobs flags.<br/>
+                                 jobs_flags = extract_jobs_flags(&#8216; &#8216;.join(args)) if jobs_flags : args = re.sub(jobs_flags, &#8221;, &#8216; &#8216;.join(args)).split() jobs_flags = jobs_flags.split()<br/>
+                                                                                                                                                                        extras = {<br/>
+                                     &#8216;cmake_args&#8217; : cmake_args,<br/>
+                                     &#8216;make_args&#8217; : make_args + (jobs_flags or []),<br/>
+                                     &#8216;catkin_make_args&#8217; : catkin_make_args,<br/>
+                                 } return args,<br/>
       extras</p>
 <p> The above example is the <code>argument_preprocessor</code> function for the <code>build</code> verb. The purpose of the <code>argument_preprocessor</code> callable is to allow the verb to preprocess its own arguments before they are passed to <code>argparse</code>. In the case of the <code>build</code> verb, it is extracting the CMake and Make arguments before having them passed to <code>argparse</code>. The input parameter to this function is the list of arguments which come after the verb, and this function is only called when this verb has been detected as the first positional argument to the <code>catkin</code> command. So, you do not need to worry about making sure the arguments you just got are yours. This function should return a tuple where the first item in the tuple is the potentially modified list of arguments, and the second item is a dictionary of keys and values which should be added as attributes to the <code>opts</code> parameter which is later passed to the <code>main</code> callable. In this way you can take the arguments for your verb, parse them, remove some, add some or whatever, then you can additionally return extra information which needs to get passed around the <code>argparse</code> <code>parse_args</code> function. Most verbs should not need to do this, and in fact the built-in <code>list</code> verb&#8217;s <code>description</code> <code>dict</code> does not include one: </p>
 <pre>

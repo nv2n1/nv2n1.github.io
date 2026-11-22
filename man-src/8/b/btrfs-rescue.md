@@ -28,7 +28,7 @@ description: "btrfs-rescue – Recover a damaged btrfs filesystem"
 <dd>help.</dd></dl>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Since <code>chunk-recover</code> will scan the whole device, it will be <code>VERY</code> slow especially executed on a large device. </p>
 </dl>
 <p> <code>fix-device-size</code> <i>&lt;device&gt;</i></p>
@@ -62,7 +62,7 @@ description: "btrfs-rescue – Recover a damaged btrfs filesystem"
 <p> This command will clear the filesystem log tree. This may fix a specific set of problem when the filesystem mount fails due to the log replay. See below for sample stacktraces that may show up in system log. </p>
 <p> The common case where this happens was fixed a long time ago, so it is unlikely that you will see this particular problem, but the command is kept around. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  clearing the log may lead to loss of changes that were made since the last transaction commit. This may be up to 30 seconds (default commit period) or less if the commit was implied by other filesystem activity. </dd>
 </dl>
 <p> One can determine whether <code>zero-log</code> is needed according to the kernel backtrace: </p>

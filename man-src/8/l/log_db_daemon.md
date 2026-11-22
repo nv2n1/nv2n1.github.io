@@ -9,13 +9,13 @@ description: "log_db_daemon – Database logging daemon for Squid"
 
 <p>log_db_daemon &#8211; Database logging daemon for Squid</p>
 <h2>Synopsis</h2>
-<p>log_db_daemon <font SIZE="-1">DSN</font> [options]</p>
+<p>log_db_daemon DSN [options]</p>
 <h2>Descriptoin</h2>
 <p>This program writes Squid access.log entries to a database. Presently only accepts the <code>squid</code> native format</p>
 <dl>
-<dt><font SIZE="-1"><code>DSN</code></font></dt>
-<dd>Database <font SIZE="-1">DSN</font> encoded as a path. This is sent as the access_log file path. </dd>
-<p> Sample configuration:<br />
+<dt><code>DSN</code></dt>
+<dd>Database DSN encoded as a path. This is sent as the access_log file path. </dd>
+<p> Sample configuration:<br/>
 &nbsp;<wbr>&nbsp;<wbr>access_log daemon:/host/database/table/username/password squid </p>
 <pre> to leave a parameter unspecified use a double slash:
  access_log <a href="daemon://database/table/username/password">daemon://database/table/username/password</a> squid</pre>
@@ -59,7 +59,7 @@ description: "log_db_daemon – Database logging daemon for Squid"
 <p> Create the user: </p>
 <pre> GRANT INSERT,SELECT,CREATE ON squid_log.* TO 'squid'@'localhost' IDENTIFIED BY 'squid';
  FLUSH PRIVILEGES;</pre>
-<p>Note that only <font SIZE="-1">CREATE, INSERT</font> and <font SIZE="-1">SELECT</font> privileges are granted to the &#8216;squid&#8217; user. This ensures that the logfile daemon script cannot change or modify the log entries. </p>
+<p>Note that only CREATE, INSERT and SELECT privileges are granted to the &#8216;squid&#8217; user. This ensures that the logfile daemon script cannot change or modify the log entries. </p>
 <p> <i>Table</i> </p>
 <p> The Daemon will attempt to initialize this table if none exists when it starts. </p>
 <p> The table created should look like: </p>
@@ -178,8 +178,8 @@ description: "log_db_daemon – Database logging daemon for Squid"
  ORDER BY 2 DESC;</pre>
 </dd></dl>
 <h3>Speed issues</h3>
-<p>The MyISAM storage engine is known to be faster than the InnoDB one, so although it doesn&#8217;t support transactions and referential integrity, it might be more appropriate in this scenario. You might want to append &#8220;ENGINE=MYISAM&#8221; at the end of the table creation code in the above <font SIZE="-1">SQL</font> script. </p>
-<p> Indexes should be created according to the queries that are more frequently run. The <font SIZE="-1">DDL</font> script only creates an implicit index for the primary key column.</p>
+<p>The MyISAM storage engine is known to be faster than the InnoDB one, so although it doesn&#8217;t support transactions and referential integrity, it might be more appropriate in this scenario. You might want to append &#8220;ENGINE=MYISAM&#8221; at the end of the table creation code in the above SQL script. </p>
+<p> Indexes should be created according to the queries that are more frequently run. The DDL script only creates an implicit index for the primary key column.</p>
 <h2>Todo</h2>
 <h3>Table cleanup</h3>
 <p>This script currently implements only the <tt>&quot;L&quot;</tt> (i.e. &#8220;append a line to the log&#8221;) command, therefore the log lines are never purged from the table. This approach has an obvious scalability problem. </p>

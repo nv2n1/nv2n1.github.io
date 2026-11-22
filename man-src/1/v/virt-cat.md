@@ -21,9 +21,9 @@ virt - cat[--options] - d domname file[file...] virt - cat[--options] - a disk.i
 <h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-cat&quot;</tt> is a command line tool to display the contents of <tt>&quot;file&quot;</tt> where <tt>&quot;file&quot;</tt> exists in the named virtual machine (or disk image). </p>
 <p> Multiple filenames can be given, in which case they are concatenated together. Each filename must be a full path, starting at the root directory (starting with &#8216;/&#8217;). </p>
-<p> <tt>&quot;virt-cat&quot;</tt> can be used to quickly view a file. To edit a file, use <tt>&quot;virt-edit&quot;</tt>. For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool (see &#8220;<font SIZE="-1">USING GUESTFISH&#8221;</font> below).</p>
+<p> <tt>&quot;virt-cat&quot;</tt> can be used to quickly view a file. To edit a file, use <tt>&quot;virt-edit&quot;</tt>. For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool (see &#8220;USING GUESTFISH&#8221; below).</p>
 <h2>EXAMPLES</h2>
-<p> Display <i>/etc/fstab</i> file from inside the libvirt <font SIZE="-1">VM</font> called <tt>&quot;mydomain&quot;</tt>: </p>
+<p> Display <i>/etc/fstab</i> file from inside the libvirt VM called <tt>&quot;mydomain&quot;</tt>: </p>
 <pre>
  virt-cat -d mydomain /etc/fstab
 </pre>
@@ -50,14 +50,14 @@ virt - cat[--options] - d domname file[file...] virt - cat[--options] - a disk.i
 </dd><dt><code>&#8211;add</code> file</dt>
 <dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
+<dt><code>-a </code><code>URI</code></dt>
 <dd>
-</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
-<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
+</dd><dt><code>&#8211;add </code><code>URI</code></dt>
+<dd> Add a remote disk. See &#8220;ADDING REMOTE STORAGE&#8221; in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>-c</code> URI</dt>
 <dd>
-</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
+</dd><dt><code>&#8211;connect</code> URI</dt>
+<dd> If using libvirt, connect to the given <i></i><i>URI</i><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
 <dt><code>-d</code> guest</dt>
 <dd>
@@ -78,7 +78,7 @@ virt - cat[--options] - d domname file[file...] virt - cat[--options] - a disk.i
  virt-cat --format=raw -a disk.img --format -a another.img file
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
-<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
+<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (CVE-2010-3851).</p>
 <dt><code>&#8211;keys-from-stdin</code></dt>
 <dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</dd>
 <dt><code>-m dev[:mountpoint[:options[:fstype]]]</code></dt>
@@ -103,7 +103,7 @@ virt - cat[--options] - d domname file[file...] virt - cat[--options] - a disk.i
 </dd><dt><code>&#8211;version</code></dt>
 <dd> Display version number and exit.</dd>
 <dt><code>-x</code></dt>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
+<dd> Enable tracing of libguestfs API calls.</dd></dl>
 <h2>OLD-STYLE COMMAND LINE ARGUMENTS</h2>
 <p> Previous versions of virt-cat allowed you to write either: </p>
 <pre>
@@ -130,9 +130,9 @@ virt - cat[--options] - d domname file[file...] virt - cat[--options] - a disk.i
 <p> There are some known shortcomings:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> Some <font SIZE="-1">NTFS</font> symbolic links may not be followed correctly.</dd>
+<dd> Some NTFS symbolic links may not be followed correctly.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">NTFS</font> junction points that cross filesystems are not followed.</dd></dl>
+<dd> NTFS junction points that cross filesystems are not followed.</dd></dl>
 <h2>USING GUESTFISH</h2>
 <p> <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) is a more powerful, lower level tool which you can use when <tt>&quot;virt-cat&quot;</tt> doesn&#8217;t work. </p>
 <p> Using <tt>&quot;virt-cat&quot;</tt> is approximately equivalent to doing: </p>
@@ -154,9 +154,9 @@ virt - cat[--options] - d domname file[file...] virt - cat[--options] - a disk.i
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2010-2012 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

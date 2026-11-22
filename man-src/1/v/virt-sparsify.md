@@ -17,10 +17,10 @@ virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - plac
 <p> Using <tt>&quot;virt-sparsify&quot;</tt> on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently.</p>
 <h2>DESCRIPTION</h2>
 <p> Virt-sparsify is a tool which can make a virtual machine disk (or any disk image) sparse a.k.a. thin-provisioned. This means that free space within the disk image can be converted back to free space on the host. </p>
-<p> Virt-sparsify can locate and sparsify free space in most filesystems (eg. ext2/3/4, btrfs, <font SIZE="-1">NTFS,</font> etc.), and also in <font SIZE="-1">LVM</font> physical volumes. </p>
+<p> Virt-sparsify can locate and sparsify free space in most filesystems (eg. ext2/3/4, btrfs, NTFS, etc.), and also in LVM physical volumes. </p>
 <p> Virt-sparsify can also convert between some disk formats, for example converting a raw disk image to a thin-provisioned qcow2 image. </p>
 <p> Virt-sparsify can operate on any disk image, not just ones from virtual machines. However if a virtual machine has multiple disks and uses volume management, then virt-sparsify will work but not be very effective (<a rel="nofollow" href="http://bugzilla.redhat.com/887826">http://bugzilla.redhat.com/887826</a>).</p>
-<h3><font SIZE="-1">IMPORTANT NOTE ABOUT SPARSE OUTPUT IMAGES</font></h3>
+<h3>IMPORTANT NOTE ABOUT SPARSE OUTPUT IMAGES</h3>
 <p> If the input is raw, then the default output is raw sparse. <code>You must check the output size using a tool that understands sparseness</code> such as <tt>&quot;du -sh&quot;</tt>. It can make a huge difference: </p>
 <pre>
  $ ls -lh test1.img
@@ -29,7 +29,7 @@ virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - plac
  3.6M   test1.img
 </pre>
 <p> (Compare the apparent size <code>100M</code> vs the actual size <code>3.6M</code>)</p>
-<h3><font SIZE="-1">IMPORTANT LIMITATIONS</font></h3>
+<h3>IMPORTANT LIMITATIONS</h3>
 <dl>
 <dt>&bull;</dt>
 <dd> The virtual machine <i>must be shut down</i> before using this tool.</dd>
@@ -75,7 +75,7 @@ virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - plac
 </dd><dt><code>&#8211;check-tmpdir warn</code></dt>
 <dd>
 </dd><dt><code>&#8211;check-tmpdir fail</code></dt>
-<dd> Check if &#8220;<font SIZE="-1">TMPDIR&#8221;</font> or <i>&#8211;tmp</i> directory has enough space to complete the operation. This is just an estimate. </dd>
+<dd> Check if &#8220;TMPDIR&#8221; or <i>&#8211;tmp</i> directory has enough space to complete the operation. This is just an estimate. </dd>
 <p> If the check indicates a problem, then you can either:</p>
 <dl>
 <dl>
@@ -95,7 +95,7 @@ virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - plac
 <dt><code>&#8211;colors</code></dt>
 <dd>
 </dd><dt><code>&#8211;colours</code></dt>
-<dd> Use <font SIZE="-1">ANSI</font> colour sequences to colourize messages. This is the default when the output is a tty. If the output of the program is redirected to a file, <font SIZE="-1">ANSI</font> colour sequences are disabled unless you use this option.</dd>
+<dd> Use ANSI colour sequences to colourize messages. This is the default when the output is a tty. If the output of the program is redirected to a file, ANSI colour sequences are disabled unless you use this option.</dd>
 <dt><code>&#8211;compress</code></dt>
 <dd> Compress the output file. This <i>only</i> works if the output format is <tt>&quot;qcow2&quot;</tt>. </dd>
 <p> You cannot use this option and <i>&#8211;in-place</i> together.</p>
@@ -126,9 +126,9 @@ virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - plac
 <p> In the second form, this ignores the named volume group. Use the volume group name without the <i>/dev/</i> prefix, eg. <i>&#8211;ignore vg_foo</i> </p>
 <p> You can give this option multiple times.</p>
 <dt><code>&#8211;in-place</code></dt>
-<dd> Do in-place sparsification instead of copying sparsification. See &#8220;IN-PLACE <font SIZE="-1">SPARSIFICATION&#8221;</font> below.</dd>
+<dd> Do in-place sparsification instead of copying sparsification. See &#8220;IN-PLACE SPARSIFICATION&#8221; below.</dd>
 <dt><code>&#8211;machine-readable</code></dt>
-<dd> This option is used to make the output more machine friendly when being parsed by other programs. See &#8220;<font SIZE="-1">MACHINE READABLE OUTPUT&#8221;</font> below.</dd>
+<dd> This option is used to make the output more machine friendly when being parsed by other programs. See &#8220;MACHINE READABLE OUTPUT&#8221; below.</dd>
 <dt><code>-o</code> option[,option,&#8230;]</dt>
 <dd> Pass <i>-o</i> option(s) to the <i><a href="/docs/linux/man/1-qemu-img/">qemu-img</a></i>(1) command to fine-tune the output format. Options available depend on the output format (see <i>&#8211;convert</i>) and the installed version of the qemu-img program. </dd>
 <p> You should use <i>-o</i> at most once. To pass multiple options, separate them with commas, eg: </p>
@@ -144,9 +144,9 @@ virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - plac
 <dt><code>&#8211;tmp</code> block_device</dt>
 <dd>
 </dd><dt><code>&#8211;tmp</code> dir</dt>
-<dd> In copying mode only, use the named device or directory as the location of the temporary overlay (see also &#8220;<font SIZE="-1">TMPDIR&#8221;</font> below). </dd>
+<dd> In copying mode only, use the named device or directory as the location of the temporary overlay (see also &#8220;TMPDIR&#8221; below). </dd>
 <p> If the parameter given is a block device, then the block device is written to directly. <code>Note this erases the existing contents of the block device</code>. </p>
-<p> If the parameter is a directory, then this is the same as setting the &#8220;<font SIZE="-1">TMPDIR&#8221;</font> environment variable. </p>
+<p> If the parameter is a directory, then this is the same as setting the &#8220;TMPDIR&#8221; environment variable. </p>
 <p> You cannot use this option and <i>&#8211;in-place</i> together.</p>
 <dt><code>&#8211;tmp</code> prebuilt:file</dt>
 <dd> In copying mode only, the specialized option <i>&#8211;tmp prebuilt:file</i> (where <tt>&quot;prebuilt:&quot;</tt> is a literal string) causes virt-sparsify to use the qcow2 <tt>&quot;file&quot;</tt> as temporary space.</dd>
@@ -172,7 +172,7 @@ virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - plac
 </dd><dt><code>&#8211;version</code></dt>
 <dd> Display version number and exit.</dd>
 <dt><code>-x</code></dt>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd>
+<dd> Enable tracing of libguestfs API calls.</dd>
 <dt><code>&#8211;zero</code> partition</dt>
 <dd>
 </dd><dt><code>&#8211;zero</code> logvol</dt>
@@ -210,20 +210,20 @@ virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - plac
 <dd> The calling program should treat messages sent to stderr as error messages. In addition, virt-sparsify exits with a non-zero status code if there was a fatal error.</dd></dl>
 <p> All versions of virt-sparsify have supported the <i>&#8211;machine-readable</i> option.</p>
 <h2>WINDOWS 8</h2>
-<p> Windows 8 &#8220;fast startup&#8221; can prevent virt-sparsify from working. See &#8220;<font SIZE="-1">WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8221;</font> in <i>guestfs</i>(3).</p>
+<p> Windows 8 &#8220;fast startup&#8221; can prevent virt-sparsify from working. See &#8220;WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8221; in <i>guestfs</i>(3).</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><font SIZE="-1">TMPDIR</font></dt>
+<dt>TMPDIR</dt>
 <dd> Location of the temporary directory used for the potentially large temporary overlay file. </dd>
 <p> In virt-sparsify ≥ 1.28, you can override this environment variable using the <i>&#8211;tmp</i> option. </p>
 <p> You should ensure there is enough free space in the worst case for a full copy of the source disk (<i>virtual</i> size), or else set <tt>$TMPDIR</tt> to point to another directory that has enough space. </p>
 <p> This defaults to <i>/tmp</i>. </p>
-<p> Note that if <tt>$TMPDIR</tt> is a tmpfs (eg. if <i>/tmp</i> is on tmpfs, or if you use <tt>&quot;TMPDIR=/dev/shm&quot;</tt>), tmpfs defaults to a maximum size of <i>half</i> of physical <font SIZE="-1">RAM. </font> If virt-sparsify exceeds this, it will hang. The solution is either to use a real disk, or to increase the maximum size of the tmpfs mountpoint, eg: </p>
+<p> Note that if <tt>$TMPDIR</tt> is a tmpfs (eg. if <i>/tmp</i> is on tmpfs, or if you use <tt>&quot;TMPDIR=/dev/shm&quot;</tt>), tmpfs defaults to a maximum size of <i>half</i> of physical RAM.  If virt-sparsify exceeds this, it will hang. The solution is either to use a real disk, or to increase the maximum size of the tmpfs mountpoint, eg: </p>
 <pre>
  mount -o remount,size=10G /tmp
 </pre>
 <p> If you are using the <i>&#8211;in-place</i> option, then large amounts of temporary space are <code>not</code> required.</dl>
-<p> For other environment variables, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3).</p>
+<p> For other environment variables, see &#8220;ENVIRONMENT VARIABLES&#8221; in <i>guestfs</i>(3).</p>
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if the operation completed without errors. (This doesn&#8217;t necessarily mean that space could be freed up.) </p>
 <p> A non-zero exit code indicates an error. </p>
@@ -235,9 +235,9 @@ virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - plac
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2011-2016 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

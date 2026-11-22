@@ -13,10 +13,10 @@ description: "zmq_msg_copy – copy content of a message to another message"
 <h2>Description</h2>
 <p>The <i>zmq_msg_copy()</i> function shall copy the message object referenced by <i>src</i> to the message object referenced by <i>dest</i>. The original content of <i>dest</i>, if any, shall be released. You must initialize <i>dest</i> before copying to it.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  The implementation may choose not to physically copy the message content, rather to share the underlying buffer between <i>src</i> and <i>dest</i>. Avoid modifying message content after a message has been copied with <i>zmq_msg_copy()</i>, doing so can result in undefined behaviour. If what you need is an actual hard copy, allocate a new message using <i>zmq_msg_init_size()</i> and copy the message content using <i>memcpy()</i>. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  Never access <i>zmq_msg_t</i> members directly, instead always use the <i>zmq_msg</i> family of functions. </dd>
 <h2>Return Value</h2>
 <p>The <i>zmq_msg_copy()</i> function shall return zero if successful. Otherwise it shall return -1 and set <i>errno</i> to one of the values defined below.</p>

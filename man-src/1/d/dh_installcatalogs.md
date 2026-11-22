@@ -12,7 +12,7 @@ description: "dh_installcatalogs – install and register SGML Catalogs"
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installcatalogs</code> [<i>debhelper options</i>] [<code>-n</code>]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>dh_installcatalogs</code> is a debhelper program that installs and registers <font SIZE="-1">SGML</font> catalogs. It complies with the Debian <font SIZE="-1">XML/SGML</font> policy. </p>
+<p> <code>dh_installcatalogs</code> is a debhelper program that installs and registers SGML catalogs. It complies with the Debian XML/SGML policy. </p>
 <p> Catalogs will be registered in a supercatalog, in <i>/etc/sgml/package.cat</i>. </p>
 <p> This command automatically adds maintainer script snippets for registering and unregistering the catalogs and supercatalogs (unless <code>-n</code> is used). These snippets are inserted into the maintainer scripts and the <code>triggers</code> file by <code>dh_installdeb</code>; see <i><a href="/docs/linux/man/1-dh_installdeb/">dh_installdeb</a></i>(1) for an explanation of Debhelper maintainer script snippets. </p>
 <p> A dependency on <code>sgml-base</code> will be added to <code>${misc:Depends}</code>, so be sure your package uses that variable in <i>debian/control</i>.</p>

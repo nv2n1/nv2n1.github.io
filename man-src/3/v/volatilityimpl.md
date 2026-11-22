@@ -32,7 +32,7 @@ Volatility volatilityImpl (const Date &amp;, const Period &amp;, Rate) const</co
 <p><code>CallableBondConstantVolatility</code> (const <code>Date</code> &amp;referenceDate, <code>Volatility</code> volatility, const <code>DayCounter</code> &amp;dayCounter) </p>
 <p> <code>CallableBondConstantVolatility</code> (const <code>Date</code> &amp;referenceDate, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;volatility, const <code>DayCounter</code> &amp;dayCounter) </p>
 <p> <code>CallableBondConstantVolatility</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, <code>Volatility</code> volatility, const <code>DayCounter</code> &amp;dayCounter) </p>
-<p> <code>CallableBondConstantVolatility</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;volatility, const <code>DayCounter</code> &amp;dayCounter)<br />
+<p> <code>CallableBondConstantVolatility</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;volatility, const <code>DayCounter</code> &amp;dayCounter)<br/>
  <code>TermStructure interface</code> </p>
 <pre><code>DayCounter dayCounter () const
 the day counter used for date/time conversion

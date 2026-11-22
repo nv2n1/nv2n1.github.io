@@ -10,7 +10,7 @@ description: "ggzmod.h – Common functions for interfacing a game server and GG
 
 <p> ggzmod.h &#8211; Common functions for interfacing a game server and GGZ. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ggz.h&gt;<br />
+<p> #include &lt;ggz.h&gt;<br/>
  #include &lt;ggz_common.h&gt; </p>
 <h3>Defines</h3>
 <p> #define <code>GGZMOD_VERSION_MAJOR</code> 0 </p>
@@ -18,81 +18,81 @@ description: "ggzmod.h – Common functions for interfacing a game server and GG
 <p> #define <code>GGZMOD_VERSION_MICRO</code> 11 </p>
 <p> #define <code>GGZMOD_VERSION_IFACE</code> &#8216;3:1:1&#8217; </p>
 <h3>Typedefs</h3>
-<p> typedef <code>GGZMod</code> <code>GGZMod</code><br />
- <i>A GGZmod object, used for tracking a ggz&lt;-&gt;table connection. </i><br />
- typedef void(* <code>GGZModHandler</code> )(<code>GGZMod</code> *mod, <code>GGZModEvent</code> e, const void *data)<br />
+<p> typedef <code>GGZMod</code> <code>GGZMod</code><br/>
+ <i>A GGZmod object, used for tracking a ggz&lt;-&gt;table connection. </i><br/>
+ typedef void(* <code>GGZModHandler</code> )(<code>GGZMod</code> *mod, <code>GGZModEvent</code> e, const void *data)<br/>
  <i>Event handler prototype. </i></p>
 <h3>Enumerations</h3>
-<p> enum <code>GGZModState</code> { <code>GGZMOD_STATE_CREATED</code>, <code>GGZMOD_STATE_CONNECTED</code>, <code>GGZMOD_STATE_WAITING</code>, <code>GGZMOD_STATE_PLAYING</code>, <code>GGZMOD_STATE_DONE</code> }<br />
- <i>Table states. </i><br />
- enum <code>GGZModEvent</code> { <code>GGZMOD_EVENT_STATE</code>, <code>GGZMOD_EVENT_SERVER</code>, <code>GGZMOD_EVENT_PLAYER</code>, <code>GGZMOD_EVENT_SEAT</code>, <code>GGZMOD_EVENT_SPECTATOR_SEAT</code>, <code>GGZMOD_EVENT_CHAT</code>, <code>GGZMOD_EVENT_STATS</code>, <code>GGZMOD_EVENT_ERROR</code> }<br />
- <i>Callback events. </i><br />
- enum <code>GGZModType</code> { <code>GGZMOD_GGZ</code>, <code>GGZMOD_GAME</code> }<br />
+<p> enum <code>GGZModState</code> { <code>GGZMOD_STATE_CREATED</code>, <code>GGZMOD_STATE_CONNECTED</code>, <code>GGZMOD_STATE_WAITING</code>, <code>GGZMOD_STATE_PLAYING</code>, <code>GGZMOD_STATE_DONE</code> }<br/>
+ <i>Table states. </i><br/>
+ enum <code>GGZModEvent</code> { <code>GGZMOD_EVENT_STATE</code>, <code>GGZMOD_EVENT_SERVER</code>, <code>GGZMOD_EVENT_PLAYER</code>, <code>GGZMOD_EVENT_SEAT</code>, <code>GGZMOD_EVENT_SPECTATOR_SEAT</code>, <code>GGZMOD_EVENT_CHAT</code>, <code>GGZMOD_EVENT_STATS</code>, <code>GGZMOD_EVENT_ERROR</code> }<br/>
+ <i>Callback events. </i><br/>
+ enum <code>GGZModType</code> { <code>GGZMOD_GGZ</code>, <code>GGZMOD_GAME</code> }<br/>
  <i>The &#8216;type&#8217; of ggzmod. </i></p>
 <h3>Functions</h3>
-<p> <code>GGZMod</code> * <code>ggzmod_new</code> (<code>GGZModType</code> type)<br />
- <i>Create a new ggzmod object. </i><br />
- void <code>ggzmod_free</code> (<code>GGZMod</code> *ggzmod)<br />
- <i>Destroy a finished ggzmod object. </i><br />
- int <code>ggzmod_get_fd</code> (<code>GGZMod</code> *ggzmod)<br />
- <i>Get the file descriptor for the GGZMod socket. </i><br />
- <code>GGZModType</code> <code>ggzmod_get_type</code> (<code>GGZMod</code> *ggzmod)<br />
- <i>Get the type of the ggzmod object. </i><br />
- <code>GGZModState</code> <code>ggzmod_get_state</code> (<code>GGZMod</code> *ggzmod)<br />
- <i>Get the current state of the table. </i><br />
- int <code>ggzmod_get_server_fd</code> (<code>GGZMod</code> *ggzmod)<br />
- <i>Get the fd of the game server connection. </i><br />
- int <code>ggzmod_get_num_seats</code> (<code>GGZMod</code> *ggzmod)<br />
- <i>Get the total number of seats at the table. </i><br />
- <code>GGZSeat</code> <code>ggzmod_get_seat</code> (<code>GGZMod</code> *ggzmod, int seat)<br />
- <i>Get all data for the specified seat. </i><br />
- int <code>ggzmod_get_num_spectator_seats</code> (<code>GGZMod</code> *ggzmod)<br />
- <i>Get the maximum number of spectators. This function returns the maximum number of spectator seats available. A game can use this to iterate over the spectator seats to look for spectators occupying them. Since spectators may come and go at any point and there is no limit on the number of spectators, you should consider this value to be dynamic and call this function again each time you&#8217;re looking for spectators. </i><br />
- <code>GGZSpectatorSeat</code> <code>ggzmod_get_spectator_seat</code> (<code>GGZMod</code> *ggzmod, int seat)<br />
- <i>Get a spectator&#8217;s data. </i><br />
- const char * <code>ggzmod_get_player</code> (<code>GGZMod</code> *ggzmod, int *is_spectator, int *seat_num)<br />
- <i>Get data about this player. </i><br />
- void * <code>ggzmod_get_gamedata</code> (<code>GGZMod</code> *ggzmod)<br />
- <i>Return gamedata pointer. </i><br />
- void <code>ggzmod_set_gamedata</code> (<code>GGZMod</code> *ggzmod, void *data)<br />
- <i>Set gamedata pointer. </i><br />
- void <code>ggzmod_set_handler</code> (<code>GGZMod</code> *ggzmod, <code>GGZModEvent</code> e, <code>GGZModHandler</code> func)<br />
- <i>Set a handler for the given event. </i><br />
- int <code>ggzmod_dispatch</code> (<code>GGZMod</code> *ggzmod)<br />
- <i>Check for and handle input. </i><br />
- int <code>ggzmod_set_state</code> (<code>GGZMod</code> *ggzmod, <code>GGZModState</code> state)<br />
- <i>Change the table&#8217;s state. </i><br />
- int <code>ggzmod_connect</code> (<code>GGZMod</code> *ggzmod)<br />
- <i>Connect to ggz. </i><br />
- int <code>ggzmod_disconnect</code> (<code>GGZMod</code> *ggzmod)<br />
- <i>Disconnect from ggz. </i><br />
- void <code>ggzmod_request_stand</code> (<code>GGZMod</code> *ggzmod)<br />
- <i>Stand up (move from your seat into a spectator seat). </i><br />
- void <code>ggzmod_request_sit</code> (<code>GGZMod</code> *ggzmod, int seat_num)<br />
- <i>Sit down (move from a spectator seat into a player seat). </i><br />
- void <code>ggzmod_request_boot</code> (<code>GGZMod</code> *ggzmod, const char *name)<br />
- <i>Boot a player. Only the game host may do this. </i><br />
- void <code>ggzmod_request_bot</code> (<code>GGZMod</code> *ggzmod, int seat_num)<br />
- <i>Change the requested seat from an opean seat to a bot. </i><br />
- void <code>ggzmod_request_open</code> (<code>GGZMod</code> *ggzmod, int seat_num)<br />
- <i>Change the requested seat from a bot to an open seat. </i><br />
- void <code>ggzmod_request_chat</code> (<code>GGZMod</code> *ggzmod, const char *chat_msg)<br />
- <i>Chat! This initiates a table chat. </i><br />
- int <code>ggzmod_player_get_record</code> (<code>GGZMod</code> *ggzmod, <code>GGZSeat</code> *seat, int *wins, int *losses, int *ties, int *forfeits)<br />
- <i>Get the player&#8217;s win-loss record. </i><br />
- int <code>ggzmod_player_get_rating</code> (<code>GGZMod</code> *ggzmod, <code>GGZSeat</code> *seat, int *rating)<br />
- <i>Get the player&#8217;s rating. </i><br />
- int <code>ggzmod_player_get_ranking</code> (<code>GGZMod</code> *ggzmod, <code>GGZSeat</code> *seat, int *ranking)<br />
- <i>Get the player&#8217;s ranking. </i><br />
- int <code>ggzmod_player_get_highscore</code> (<code>GGZMod</code> *ggzmod, <code>GGZSeat</code> *seat, int *highscore)<br />
- <i>Get the player&#8217;s highscore. </i><br />
- int <code>ggzmod_spectator_get_record</code> (<code>GGZMod</code> *ggzmod, <code>GGZSpectatorSeat</code> *seat, int *wins, int *losses, int *ties, int *forfeits)<br />
- <i>Get the spectator&#8217;s win-loss record. </i><br />
- int <code>ggzmod_spectator_get_rating</code> (<code>GGZMod</code> *ggzmod, <code>GGZSpectatorSeat</code> *seat, int *rating)<br />
- <i>Get the spectator&#8217;s rating. </i><br />
- int <code>ggzmod_spectator_get_ranking</code> (<code>GGZMod</code> *ggzmod, <code>GGZSpectatorSeat</code> *seat, int *ranking)<br />
- <i>Get the spectator&#8217;s ranking. </i><br />
- int <code>ggzmod_spectator_get_highscore</code> (<code>GGZMod</code> *ggzmod, <code>GGZSpectatorSeat</code> *seat, int *highscore)<br />
+<p> <code>GGZMod</code> * <code>ggzmod_new</code> (<code>GGZModType</code> type)<br/>
+ <i>Create a new ggzmod object. </i><br/>
+ void <code>ggzmod_free</code> (<code>GGZMod</code> *ggzmod)<br/>
+ <i>Destroy a finished ggzmod object. </i><br/>
+ int <code>ggzmod_get_fd</code> (<code>GGZMod</code> *ggzmod)<br/>
+ <i>Get the file descriptor for the GGZMod socket. </i><br/>
+ <code>GGZModType</code> <code>ggzmod_get_type</code> (<code>GGZMod</code> *ggzmod)<br/>
+ <i>Get the type of the ggzmod object. </i><br/>
+ <code>GGZModState</code> <code>ggzmod_get_state</code> (<code>GGZMod</code> *ggzmod)<br/>
+ <i>Get the current state of the table. </i><br/>
+ int <code>ggzmod_get_server_fd</code> (<code>GGZMod</code> *ggzmod)<br/>
+ <i>Get the fd of the game server connection. </i><br/>
+ int <code>ggzmod_get_num_seats</code> (<code>GGZMod</code> *ggzmod)<br/>
+ <i>Get the total number of seats at the table. </i><br/>
+ <code>GGZSeat</code> <code>ggzmod_get_seat</code> (<code>GGZMod</code> *ggzmod, int seat)<br/>
+ <i>Get all data for the specified seat. </i><br/>
+ int <code>ggzmod_get_num_spectator_seats</code> (<code>GGZMod</code> *ggzmod)<br/>
+ <i>Get the maximum number of spectators. This function returns the maximum number of spectator seats available. A game can use this to iterate over the spectator seats to look for spectators occupying them. Since spectators may come and go at any point and there is no limit on the number of spectators, you should consider this value to be dynamic and call this function again each time you&#8217;re looking for spectators. </i><br/>
+ <code>GGZSpectatorSeat</code> <code>ggzmod_get_spectator_seat</code> (<code>GGZMod</code> *ggzmod, int seat)<br/>
+ <i>Get a spectator&#8217;s data. </i><br/>
+ const char * <code>ggzmod_get_player</code> (<code>GGZMod</code> *ggzmod, int *is_spectator, int *seat_num)<br/>
+ <i>Get data about this player. </i><br/>
+ void * <code>ggzmod_get_gamedata</code> (<code>GGZMod</code> *ggzmod)<br/>
+ <i>Return gamedata pointer. </i><br/>
+ void <code>ggzmod_set_gamedata</code> (<code>GGZMod</code> *ggzmod, void *data)<br/>
+ <i>Set gamedata pointer. </i><br/>
+ void <code>ggzmod_set_handler</code> (<code>GGZMod</code> *ggzmod, <code>GGZModEvent</code> e, <code>GGZModHandler</code> func)<br/>
+ <i>Set a handler for the given event. </i><br/>
+ int <code>ggzmod_dispatch</code> (<code>GGZMod</code> *ggzmod)<br/>
+ <i>Check for and handle input. </i><br/>
+ int <code>ggzmod_set_state</code> (<code>GGZMod</code> *ggzmod, <code>GGZModState</code> state)<br/>
+ <i>Change the table&#8217;s state. </i><br/>
+ int <code>ggzmod_connect</code> (<code>GGZMod</code> *ggzmod)<br/>
+ <i>Connect to ggz. </i><br/>
+ int <code>ggzmod_disconnect</code> (<code>GGZMod</code> *ggzmod)<br/>
+ <i>Disconnect from ggz. </i><br/>
+ void <code>ggzmod_request_stand</code> (<code>GGZMod</code> *ggzmod)<br/>
+ <i>Stand up (move from your seat into a spectator seat). </i><br/>
+ void <code>ggzmod_request_sit</code> (<code>GGZMod</code> *ggzmod, int seat_num)<br/>
+ <i>Sit down (move from a spectator seat into a player seat). </i><br/>
+ void <code>ggzmod_request_boot</code> (<code>GGZMod</code> *ggzmod, const char *name)<br/>
+ <i>Boot a player. Only the game host may do this. </i><br/>
+ void <code>ggzmod_request_bot</code> (<code>GGZMod</code> *ggzmod, int seat_num)<br/>
+ <i>Change the requested seat from an opean seat to a bot. </i><br/>
+ void <code>ggzmod_request_open</code> (<code>GGZMod</code> *ggzmod, int seat_num)<br/>
+ <i>Change the requested seat from a bot to an open seat. </i><br/>
+ void <code>ggzmod_request_chat</code> (<code>GGZMod</code> *ggzmod, const char *chat_msg)<br/>
+ <i>Chat! This initiates a table chat. </i><br/>
+ int <code>ggzmod_player_get_record</code> (<code>GGZMod</code> *ggzmod, <code>GGZSeat</code> *seat, int *wins, int *losses, int *ties, int *forfeits)<br/>
+ <i>Get the player&#8217;s win-loss record. </i><br/>
+ int <code>ggzmod_player_get_rating</code> (<code>GGZMod</code> *ggzmod, <code>GGZSeat</code> *seat, int *rating)<br/>
+ <i>Get the player&#8217;s rating. </i><br/>
+ int <code>ggzmod_player_get_ranking</code> (<code>GGZMod</code> *ggzmod, <code>GGZSeat</code> *seat, int *ranking)<br/>
+ <i>Get the player&#8217;s ranking. </i><br/>
+ int <code>ggzmod_player_get_highscore</code> (<code>GGZMod</code> *ggzmod, <code>GGZSeat</code> *seat, int *highscore)<br/>
+ <i>Get the player&#8217;s highscore. </i><br/>
+ int <code>ggzmod_spectator_get_record</code> (<code>GGZMod</code> *ggzmod, <code>GGZSpectatorSeat</code> *seat, int *wins, int *losses, int *ties, int *forfeits)<br/>
+ <i>Get the spectator&#8217;s win-loss record. </i><br/>
+ int <code>ggzmod_spectator_get_rating</code> (<code>GGZMod</code> *ggzmod, <code>GGZSpectatorSeat</code> *seat, int *rating)<br/>
+ <i>Get the spectator&#8217;s rating. </i><br/>
+ int <code>ggzmod_spectator_get_ranking</code> (<code>GGZMod</code> *ggzmod, <code>GGZSpectatorSeat</code> *seat, int *ranking)<br/>
+ <i>Get the spectator&#8217;s ranking. </i><br/>
+ int <code>ggzmod_spectator_get_highscore</code> (<code>GGZMod</code> *ggzmod, <code>GGZSpectatorSeat</code> *seat, int *highscore)<br/>
  <i>Get the spectator&#8217;s highscore. </i></p>
 <h2>Detailed Description</h2>
 <p> Common functions for interfacing a game server and GGZ. </p>
@@ -110,8 +110,8 @@ description: "ggzmod.h – Common functions for interfacing a game server and GG
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>mod</i> The ggzmod state object.<br />
- <i>e</i> The event that has occured.<br />
+</dt><dd> <i>mod</i> The ggzmod state object.<br/>
+ <i>e</i> The event that has occured.<br/>
  <i>data</i> Pointer to additional data for the event. The additional data will be of the following form:</dd>
 <dl>
 <dt>&bull;</dt>
@@ -312,8 +312,8 @@ description: "ggzmod.h – Common functions for interfacing a game server and GG
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ggzmod</i> The GGZMod object.<br />
- <i>is_spectator</i> Will be set to TRUE iff player is spectating.<br />
+</dt><dd> <i>ggzmod</i> The GGZMod object.<br/>
+ <i>is_spectator</i> Will be set to TRUE iff player is spectating.<br/>
  <i>seat_num</i> Will be set to the number of our (spectator) seat.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -324,7 +324,7 @@ description: "ggzmod.h – Common functions for interfacing a game server and GG
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ggzmod</i> The GGZMod object.<br />
+</dt><dd> <i>ggzmod</i> The GGZMod object.<br/>
  <i>seat</i> The seat number (0..(number of seats &#8211; 1)).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -345,7 +345,7 @@ description: "ggzmod.h – Common functions for interfacing a game server and GG
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ggzmod</i> The GGZMod object.<br />
+</dt><dd> <i>ggzmod</i> The GGZMod object.<br/>
  <i>seat</i> The number, between 0 and (number of spectators &#8211; 1).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -411,21 +411,21 @@ description: "ggzmod.h – Common functions for interfacing a game server and GG
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ggzmod</i> The ggzmod object.<br />
+</dt><dd> <i>ggzmod</i> The ggzmod object.<br/>
  <i>name</i> The name of the player to boot.</dd></dl>
 <h3>void ggzmod_request_bot (<code>GGZMod</code> * ggzmod, int seat_num)</h3>
 <p> Change the requested seat from an opean seat to a bot. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ggzmod</i> The ggzmod object.<br />
+</dt><dd> <i>ggzmod</i> The ggzmod object.<br/>
  <i>seat_num</i> The number of the seat to toggle.</dd></dl>
 <h3>void ggzmod_request_chat (<code>GGZMod</code> * ggzmod, const char * chat_msg)</h3>
 <p> Chat! This initiates a table chat. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ggzmod</i> The ggzmod object.<br />
+</dt><dd> <i>ggzmod</i> The ggzmod object.<br/>
  <i>chat_msg</i> The chat message.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -436,14 +436,14 @@ description: "ggzmod.h – Common functions for interfacing a game server and GG
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ggzmod</i> The ggzmod object.<br />
+</dt><dd> <i>ggzmod</i> The ggzmod object.<br/>
  <i>seat_num</i> The number of the seat to toggle.</dd></dl>
 <h3>void ggzmod_request_sit (<code>GGZMod</code> * ggzmod, int seat_num)</h3>
 <p> Sit down (move from a spectator seat into a player seat). </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ggzmod</i> The ggzmod object.<br />
+</dt><dd> <i>ggzmod</i> The ggzmod object.<br/>
  <i>seat_num</i> The seat to sit in.</dd></dl>
 <h3>void ggzmod_request_stand (<code>GGZMod</code> * ggzmod)</h3>
 <p> Stand up (move from your seat into a spectator seat). </p>
@@ -456,7 +456,7 @@ description: "ggzmod.h – Common functions for interfacing a game server and GG
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ggzmod</i> The GGZMod object.<br />
+</dt><dd> <i>ggzmod</i> The GGZMod object.<br/>
  <i>data</i> The gamedata block (or NULL for none).</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
@@ -468,8 +468,8 @@ description: "ggzmod.h – Common functions for interfacing a game server and GG
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ggzmod</i> The GGZmod object.<br />
- <i>e</i> The GGZmod event.<br />
+</dt><dd> <i>ggzmod</i> The GGZmod object.<br/>
+ <i>e</i> The GGZmod event.<br/>
  <i>func</i> The handler function being registered.</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
@@ -481,7 +481,7 @@ description: "ggzmod.h – Common functions for interfacing a game server and GG
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ggzmod</i> The ggzmod object.<br />
+</dt><dd> <i>ggzmod</i> The ggzmod object.<br/>
  <i>state</i> The new state.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

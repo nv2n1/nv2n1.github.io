@@ -14,8 +14,8 @@ description: "dhcp_release – Release a DHCP lease on a the local dnsmasq DHCP 
 <h2>DESCRIPTION</h2>
 <p> A utility which forces the DHCP server running on this machine to release a DHCP lease. </p>
 <p> Send a DHCPRELEASE message via the specified interface to tell the local DHCP server to delete a particular lease. </p>
-<p> The interface argument is the interface in which a DHCP request _would_ be received if it was coming from the client, rather than being faked up here.<br />
- The address argument is a dotted-quad IP addresses and mandatory.<br />
+<p> The interface argument is the interface in which a DHCP request _would_ be received if it was coming from the client, rather than being faked up here.<br/>
+ The address argument is a dotted-quad IP addresses and mandatory.<br/>
  The MAC address is colon separated hex, and is mandatory. It may be prefixed by an address-type byte followed by -, eg </p>
 <p> 10-11:22:33:44:55:66 </p>
 <p> but if the address-type byte is missing it is assumed to be 1, the type for ethernet. This encoding is the one used in dnsmasq lease files. </p>

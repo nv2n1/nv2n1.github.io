@@ -11,80 +11,80 @@ description: "WFMath::RotMatrix – A dim dimensional rotation matrix. Technical
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/rotmatrix.h">rotmatrix.h</a>&gt; </p>
 <h3>Public Member Functions</h3>
-<p><code>RotMatrix</code> &amp; <code>identity</code> ()<br />
- <i>set the matrix to the identity matrix </i><br />
- <code>CoordType</code> <code>elem</code> (const int i, const int j) const<br />
- <i>get the (i, j) element of the matrix </i><br />
- bool <code>setVals</code> (const <code>CoordType</code> vals[dim][dim], double precision=WFMATH_EPSILON)<br />
- <i>Set the values of the elements of the matrix. </i><br />
- bool <code>setVals</code> (const <code>CoordType</code> vals[dim *dim], double precision=WFMATH_EPSILON)<br />
- <i>Set the values of the elements of the matrix. </i><br />
- <code>Vector</code>&lt; dim &gt; <code>row</code> (const int i) const<br />
- <i>Get a copy of the i&#8217;th row as a </i><code>Vector</code>.<br />
- <code>Vector</code>&lt; dim &gt; <code>column</code> (const int i) const<br />
- <i>Get a copy of the i&#8217;th column as a </i><code>Vector</code>.<br />
- <code>CoordType</code> <code>trace</code> () const<br />
- <i>Get the trace of the matrix. </i><br />
- <code>CoordType</code> <code>determinant</code> () const<br />
- <i>Get the determinant of the matrix. </i><br />
- <code>RotMatrix</code> <code>inverse</code> () const<br />
- <i>Get the inverse of the matrix. </i><br />
- bool <code>parity</code> () const<br />
- <i>Get the parity of the matrix. </i><br />
- <code>RotMatrix</code> &amp; <code>rotation</code> (const int i, const int j, <code>CoordType</code> theta)<br />
- <i>set the matrix to a rotation by the angle theta in the (i, j) plane </i><br />
- <code>RotMatrix</code> &amp; <code>rotation</code> (const <code>Vector</code>&lt; dim &gt; &amp;v1, const <code>Vector</code>&lt; dim &gt; &amp;v2, <code>CoordType</code> theta)<br />
- <i>set the matrix to a rotation by the angle theta in the v1, v2 plane </i><br />
- <code>RotMatrix</code> &amp; <code>rotation</code> (const <code>Vector</code>&lt; dim &gt; &amp;from, const <code>Vector</code>&lt; dim &gt; &amp;to)<br />
- <i>set the matrix to a rotation which will move &#8216;from&#8217; to lie parallel to &#8216;to&#8217; </i><br />
- <code>RotMatrix</code> &amp; <code>mirror</code> (const int i)<br />
- <i>set the matrix to a mirror perpendicular to the i&#8217;th axis </i><br />
- <code>RotMatrix</code> &amp; <code>mirror</code> (const <code>Vector</code>&lt; dim &gt; &amp;v)<br />
- <i>set the matrix to a mirror perpendicular to the </i><code>Vector</code> v<br />
- <code>RotMatrix</code> &amp; <code>mirror</code> ()<br />
- <i>set the matrix to mirror all axes </i><br />
- <code>RotMatrix</code> &amp; <code>rotate</code> (const <code>RotMatrix</code> &amp;m)<br />
- <i>rotate the matrix using another matrix </i><br />
- void <code>normalize</code> ()<br />
- <i>normalize to remove accumulated round-off error </i><br />
- unsigned <code>age</code> () const<br />
- <i>current round-off age </i><br />
- <code>RotMatrix</code> (const <code>Quaternion</code> &amp;q, const bool not_flip=true)<br />
- <i>3D only: Construct a </i><code>RotMatrix</code> from a <code>Quaternion</code><br />
- <code>RotMatrix</code>&lt; 2 &gt; &amp; <code>rotation</code> (<code>CoordType</code> theta)<br />
- <i>2D only: Construct a </i><code>RotMatrix</code> from an angle theta<br />
- <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>rotationX</code> (<code>CoordType</code> theta)<br />
- <i>3D only: set a </i><code>RotMatrix</code> to a rotation about the x axis by angle theta<br />
- <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>rotationY</code> (<code>CoordType</code> theta)<br />
- <i>3D only: set a </i><code>RotMatrix</code> to a rotation about the y axis by angle theta<br />
- <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>rotationZ</code> (<code>CoordType</code> theta)<br />
- <i>3D only: set a </i><code>RotMatrix</code> to a rotation about the z axis by angle theta<br />
- <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>rotation</code> (const <code>Vector</code>&lt; 3 &gt; &amp;axis, <code>CoordType</code> theta)<br />
- <i>3D only: set a </i><code>RotMatrix</code> to a rotation about the axis given by the <code>Vector</code><br />
- <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>rotation</code> (const <code>Vector</code>&lt; 3 &gt; &amp;axis)<br />
- <i>3D only: set a </i><code>RotMatrix</code> to a rotation about the axis given by the <code>Vector</code><br />
- <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>fromQuaternion</code> (const <code>Quaternion</code> &amp;q, const bool not_flip=true)<br />
- <i>3D only: set a </i><code>RotMatrix</code> from a <code>Quaternion</code><br />
- <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>rotate</code> (const <code>Quaternion</code> &amp;)<br />
- <i>rotate the matrix using the quaternion </i><br />
- <code>RotMatrix</code> &amp; <code>mirrorX</code> ()<br />
- <i>set a </i><code>RotMatrix</code> to a mirror perpendicular to the x axis<br />
- <code>RotMatrix</code> &amp; <code>mirrorY</code> ()<br />
- <i>set a </i><code>RotMatrix</code> to a mirror perpendicular to the y axis<br />
- <code>RotMatrix</code> &amp; <code>mirrorZ</code> ()<br />
+<p><code>RotMatrix</code> &amp; <code>identity</code> ()<br/>
+ <i>set the matrix to the identity matrix </i><br/>
+ <code>CoordType</code> <code>elem</code> (const int i, const int j) const<br/>
+ <i>get the (i, j) element of the matrix </i><br/>
+ bool <code>setVals</code> (const <code>CoordType</code> vals[dim][dim], double precision=WFMATH_EPSILON)<br/>
+ <i>Set the values of the elements of the matrix. </i><br/>
+ bool <code>setVals</code> (const <code>CoordType</code> vals[dim *dim], double precision=WFMATH_EPSILON)<br/>
+ <i>Set the values of the elements of the matrix. </i><br/>
+ <code>Vector</code>&lt; dim &gt; <code>row</code> (const int i) const<br/>
+ <i>Get a copy of the i&#8217;th row as a </i><code>Vector</code>.<br/>
+ <code>Vector</code>&lt; dim &gt; <code>column</code> (const int i) const<br/>
+ <i>Get a copy of the i&#8217;th column as a </i><code>Vector</code>.<br/>
+ <code>CoordType</code> <code>trace</code> () const<br/>
+ <i>Get the trace of the matrix. </i><br/>
+ <code>CoordType</code> <code>determinant</code> () const<br/>
+ <i>Get the determinant of the matrix. </i><br/>
+ <code>RotMatrix</code> <code>inverse</code> () const<br/>
+ <i>Get the inverse of the matrix. </i><br/>
+ bool <code>parity</code> () const<br/>
+ <i>Get the parity of the matrix. </i><br/>
+ <code>RotMatrix</code> &amp; <code>rotation</code> (const int i, const int j, <code>CoordType</code> theta)<br/>
+ <i>set the matrix to a rotation by the angle theta in the (i, j) plane </i><br/>
+ <code>RotMatrix</code> &amp; <code>rotation</code> (const <code>Vector</code>&lt; dim &gt; &amp;v1, const <code>Vector</code>&lt; dim &gt; &amp;v2, <code>CoordType</code> theta)<br/>
+ <i>set the matrix to a rotation by the angle theta in the v1, v2 plane </i><br/>
+ <code>RotMatrix</code> &amp; <code>rotation</code> (const <code>Vector</code>&lt; dim &gt; &amp;from, const <code>Vector</code>&lt; dim &gt; &amp;to)<br/>
+ <i>set the matrix to a rotation which will move &#8216;from&#8217; to lie parallel to &#8216;to&#8217; </i><br/>
+ <code>RotMatrix</code> &amp; <code>mirror</code> (const int i)<br/>
+ <i>set the matrix to a mirror perpendicular to the i&#8217;th axis </i><br/>
+ <code>RotMatrix</code> &amp; <code>mirror</code> (const <code>Vector</code>&lt; dim &gt; &amp;v)<br/>
+ <i>set the matrix to a mirror perpendicular to the </i><code>Vector</code> v<br/>
+ <code>RotMatrix</code> &amp; <code>mirror</code> ()<br/>
+ <i>set the matrix to mirror all axes </i><br/>
+ <code>RotMatrix</code> &amp; <code>rotate</code> (const <code>RotMatrix</code> &amp;m)<br/>
+ <i>rotate the matrix using another matrix </i><br/>
+ void <code>normalize</code> ()<br/>
+ <i>normalize to remove accumulated round-off error </i><br/>
+ unsigned <code>age</code> () const<br/>
+ <i>current round-off age </i><br/>
+ <code>RotMatrix</code> (const <code>Quaternion</code> &amp;q, const bool not_flip=true)<br/>
+ <i>3D only: Construct a </i><code>RotMatrix</code> from a <code>Quaternion</code><br/>
+ <code>RotMatrix</code>&lt; 2 &gt; &amp; <code>rotation</code> (<code>CoordType</code> theta)<br/>
+ <i>2D only: Construct a </i><code>RotMatrix</code> from an angle theta<br/>
+ <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>rotationX</code> (<code>CoordType</code> theta)<br/>
+ <i>3D only: set a </i><code>RotMatrix</code> to a rotation about the x axis by angle theta<br/>
+ <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>rotationY</code> (<code>CoordType</code> theta)<br/>
+ <i>3D only: set a </i><code>RotMatrix</code> to a rotation about the y axis by angle theta<br/>
+ <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>rotationZ</code> (<code>CoordType</code> theta)<br/>
+ <i>3D only: set a </i><code>RotMatrix</code> to a rotation about the z axis by angle theta<br/>
+ <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>rotation</code> (const <code>Vector</code>&lt; 3 &gt; &amp;axis, <code>CoordType</code> theta)<br/>
+ <i>3D only: set a </i><code>RotMatrix</code> to a rotation about the axis given by the <code>Vector</code><br/>
+ <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>rotation</code> (const <code>Vector</code>&lt; 3 &gt; &amp;axis)<br/>
+ <i>3D only: set a </i><code>RotMatrix</code> to a rotation about the axis given by the <code>Vector</code><br/>
+ <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>fromQuaternion</code> (const <code>Quaternion</code> &amp;q, const bool not_flip=true)<br/>
+ <i>3D only: set a </i><code>RotMatrix</code> from a <code>Quaternion</code><br/>
+ <code>RotMatrix</code>&lt; 3 &gt; &amp; <code>rotate</code> (const <code>Quaternion</code> &amp;)<br/>
+ <i>rotate the matrix using the quaternion </i><br/>
+ <code>RotMatrix</code> &amp; <code>mirrorX</code> ()<br/>
+ <i>set a </i><code>RotMatrix</code> to a mirror perpendicular to the x axis<br/>
+ <code>RotMatrix</code> &amp; <code>mirrorY</code> ()<br/>
+ <i>set a </i><code>RotMatrix</code> to a mirror perpendicular to the y axis<br/>
+ <code>RotMatrix</code> &amp; <code>mirrorZ</code> ()<br/>
  <i>set a </i><code>RotMatrix</code> to a mirror perpendicular to the z axis</p>
 <h3>Friends</h3>
-<p><code>RotMatrix</code> <code>Prod</code> (const <code>RotMatrix</code> &amp;m1, const <code>RotMatrix</code> &amp;m2)<br />
- <i>returns m1 * m2 </i><br />
- <code>RotMatrix</code> <code>ProdInv</code> (const <code>RotMatrix</code> &amp;m1, const <code>RotMatrix</code> &amp;m2)<br />
- <i>returns m1 * m2^-1 </i><br />
- <code>RotMatrix</code> <code>InvProd</code> (const <code>RotMatrix</code> &amp;m1, const <code>RotMatrix</code> &amp;m2)<br />
- <i>returns m1^-1 * m2 </i><br />
- <code>RotMatrix</code> <code>InvProdInv</code> (const <code>RotMatrix</code> &amp;m1, const <code>RotMatrix</code> &amp;m2)<br />
- <i>returns m1^-1 * m2^-1 </i><br />
- <code>Vector</code>&lt; dim &gt; <code>Prod</code> (const <code>RotMatrix</code> &amp;m, const <code>Vector</code>&lt; dim &gt; &amp;v)<br />
- <i>returns m * v </i><br />
- <code>Vector</code>&lt; dim &gt; <code>InvProd</code> (const <code>RotMatrix</code> &amp;m, const <code>Vector</code>&lt; dim &gt; &amp;v)<br />
+<p><code>RotMatrix</code> <code>Prod</code> (const <code>RotMatrix</code> &amp;m1, const <code>RotMatrix</code> &amp;m2)<br/>
+ <i>returns m1 * m2 </i><br/>
+ <code>RotMatrix</code> <code>ProdInv</code> (const <code>RotMatrix</code> &amp;m1, const <code>RotMatrix</code> &amp;m2)<br/>
+ <i>returns m1 * m2^-1 </i><br/>
+ <code>RotMatrix</code> <code>InvProd</code> (const <code>RotMatrix</code> &amp;m1, const <code>RotMatrix</code> &amp;m2)<br/>
+ <i>returns m1^-1 * m2 </i><br/>
+ <code>RotMatrix</code> <code>InvProdInv</code> (const <code>RotMatrix</code> &amp;m1, const <code>RotMatrix</code> &amp;m2)<br/>
+ <i>returns m1^-1 * m2^-1 </i><br/>
+ <code>Vector</code>&lt; dim &gt; <code>Prod</code> (const <code>RotMatrix</code> &amp;m, const <code>Vector</code>&lt; dim &gt; &amp;v)<br/>
+ <i>returns m * v </i><br/>
+ <code>Vector</code>&lt; dim &gt; <code>InvProd</code> (const <code>RotMatrix</code> &amp;m, const <code>Vector</code>&lt; dim &gt; &amp;v)<br/>
  <i>returns m^-1 * v </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;const int dim&gt; class WFMath::RotMatrix&lt; dim &gt;</h3>

@@ -9,7 +9,7 @@ description: "path_to_handle, path_to_fshandle, fd_to_handle, handle_to_fshandle
 
 <p>path_to_handle, path_to_fshandle, fd_to_handle, handle_to_fshandle, open_by_handle, readlink_by_handle, attr_multi_by_handle, attr_list_by_handle, fssetdm_by_handle, free_handle, getparents_by_handle, getparentpaths_by_handle &#8211; file handle operations</p>
 <h2>C Synopsis</h2>
-<p><code>#include &lt;sys/types.h&gt;</code><br />
+<p><code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;xfs/handle.h&gt;</code></p>
 <dl>
 <dt> <code>int path_to_handle(char *</code><i>path</i><code>, void **</code><i>hanp</i><code>, size_t *</code><i>hlen</i><code>);</code></dt>

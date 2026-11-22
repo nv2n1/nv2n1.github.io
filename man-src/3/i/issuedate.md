@@ -13,12 +13,12 @@ description: "QuantLib::Bond – Base bond class."
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <p> Inherited by <code>AmortizingCmsRateBond</code>, <code>AmortizingFixedRateBond</code>, <code>AmortizingFloatingRateBond</code>, <code>CallableBond</code>, <code>CmsRateBond</code>, <code>ConvertibleBond</code>, <code>FixedRateBond</code>, <code>FloatingRateBond</code>, and <code>ZeroCouponBond</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>Bond</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const <code>Date</code> &amp;issueDate=<code>Date</code>(), const Leg &amp;coupons=Leg())<br />
- <i>constructor for amortizing or non-amortizing bonds. </i><br />
- <code>Bond</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, <code>Real</code> faceAmount, const <code>Date</code> &amp;maturityDate, const <code>Date</code> &amp;issueDate=<code>Date</code>(), const Leg &amp;cashflows=Leg())<br />
- <i>old constructor for non amortizing bonds. </i><br />
+<p><code>Bond</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const <code>Date</code> &amp;issueDate=<code>Date</code>(), const Leg &amp;coupons=Leg())<br/>
+ <i>constructor for amortizing or non-amortizing bonds. </i><br/>
+ <code>Bond</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, <code>Real</code> faceAmount, const <code>Date</code> &amp;maturityDate, const <code>Date</code> &amp;issueDate=<code>Date</code>(), const Leg &amp;cashflows=Leg())<br/>
+ <i>old constructor for non amortizing bonds. </i><br/>
  virtual <code>Rate</code> <code>nextCoupon</code> (<code>Date</code> d=<code>Date</code>()) const </p>
-<p> <code>Rate</code> <code>previousCoupon</code> (<code>Date</code> d=<code>Date</code>()) const<br />
+<p> <code>Rate</code> <code>previousCoupon</code> (<code>Date</code> d=<code>Date</code>()) const<br/>
  <i>Previous coupon already paid at a given date. </i> </p>
 <p> <code>Inspectors</code> </p>
 <p> <code>Natural</code> <code>settlementDays</code> () const </p>
@@ -33,29 +33,29 @@ description: "QuantLib::Bond – Base bond class."
 <p> <code>Date</code> <code>issueDate</code> () const </p>
 <p> <code>Date</code> <code>settlementDate</code> (const <code>Date</code> &amp;d=<code>Date</code>()) const </p>
 <p> <code>Calculations</code> </p>
-<p> <code>Real</code> <code>cleanPrice</code> () const<br />
- <i>theoretical clean price </i><br />
- <code>Real</code> <code>dirtyPrice</code> () const<br />
- <i>theoretical dirty price </i><br />
- <code>Real</code> <code>settlementValue</code> () const<br />
- <i>theoretical settlement value </i><br />
- <code>Rate</code> <code>yield</code> (const <code>DayCounter</code> &amp;dc, Compounding comp, <code>Frequency</code> freq, <code>Real</code> accuracy=1.0e-8, Size maxEvaluations=100) const<br />
- <i>theoretical bond yield </i><br />
- <code>Real</code> <code>cleanPrice</code> (<code>Rate</code> yield, const <code>DayCounter</code> &amp;dc, Compounding comp, <code>Frequency</code> freq, <code>Date</code> settlementDate=<code>Date</code>()) const<br />
- <i>clean price given a yield and settlement date </i><br />
- <code>Real</code> <code>dirtyPrice</code> (<code>Rate</code> yield, const <code>DayCounter</code> &amp;dc, Compounding comp, <code>Frequency</code> freq, <code>Date</code> settlementDate=<code>Date</code>()) const<br />
- <i>dirty price given a yield and settlement date </i><br />
- <code>Real</code> <code>settlementValue</code> (<code>Real</code> cleanPrice) const<br />
- <i>settlement value as a function of the clean price </i><br />
- <code>Rate</code> <code>yield</code> (<code>Real</code> cleanPrice, const <code>DayCounter</code> &amp;dc, Compounding comp, <code>Frequency</code> freq, <code>Date</code> settlementDate=<code>Date</code>(), <code>Real</code> accuracy=1.0e-8, Size maxEvaluations=100) const<br />
- <i>yield given a (clean) price and settlement date </i><br />
- <code>Real</code> <code>cleanPriceFromZSpread</code> (<code>Spread</code> zSpread, const <code>DayCounter</code> &amp;dc, Compounding comp, <code>Frequency</code> freq, <code>Date</code> settlementDate=<code>Date</code>()) const<br />
- <i>clean price given Z-spread </i><br />
- <code>Real</code> <code>dirtyPriceFromZSpread</code> (<code>Spread</code> zSpread, const <code>DayCounter</code> &amp;dc, Compounding comp, <code>Frequency</code> freq, <code>Date</code> settlementDate=<code>Date</code>()) const<br />
- <i>dirty price given Z-spread </i><br />
- virtual <code>Real</code> <code>accruedAmount</code> (<code>Date</code> d=<code>Date</code>()) const<br />
- <i>accrued amount at a given date </i><br />
- bool <code>isExpired</code> () const<br />
+<p> <code>Real</code> <code>cleanPrice</code> () const<br/>
+ <i>theoretical clean price </i><br/>
+ <code>Real</code> <code>dirtyPrice</code> () const<br/>
+ <i>theoretical dirty price </i><br/>
+ <code>Real</code> <code>settlementValue</code> () const<br/>
+ <i>theoretical settlement value </i><br/>
+ <code>Rate</code> <code>yield</code> (const <code>DayCounter</code> &amp;dc, Compounding comp, <code>Frequency</code> freq, <code>Real</code> accuracy=1.0e-8, Size maxEvaluations=100) const<br/>
+ <i>theoretical bond yield </i><br/>
+ <code>Real</code> <code>cleanPrice</code> (<code>Rate</code> yield, const <code>DayCounter</code> &amp;dc, Compounding comp, <code>Frequency</code> freq, <code>Date</code> settlementDate=<code>Date</code>()) const<br/>
+ <i>clean price given a yield and settlement date </i><br/>
+ <code>Real</code> <code>dirtyPrice</code> (<code>Rate</code> yield, const <code>DayCounter</code> &amp;dc, Compounding comp, <code>Frequency</code> freq, <code>Date</code> settlementDate=<code>Date</code>()) const<br/>
+ <i>dirty price given a yield and settlement date </i><br/>
+ <code>Real</code> <code>settlementValue</code> (<code>Real</code> cleanPrice) const<br/>
+ <i>settlement value as a function of the clean price </i><br/>
+ <code>Rate</code> <code>yield</code> (<code>Real</code> cleanPrice, const <code>DayCounter</code> &amp;dc, Compounding comp, <code>Frequency</code> freq, <code>Date</code> settlementDate=<code>Date</code>(), <code>Real</code> accuracy=1.0e-8, Size maxEvaluations=100) const<br/>
+ <i>yield given a (clean) price and settlement date </i><br/>
+ <code>Real</code> <code>cleanPriceFromZSpread</code> (<code>Spread</code> zSpread, const <code>DayCounter</code> &amp;dc, Compounding comp, <code>Frequency</code> freq, <code>Date</code> settlementDate=<code>Date</code>()) const<br/>
+ <i>clean price given Z-spread </i><br/>
+ <code>Real</code> <code>dirtyPriceFromZSpread</code> (<code>Spread</code> zSpread, const <code>DayCounter</code> &amp;dc, Compounding comp, <code>Frequency</code> freq, <code>Date</code> settlementDate=<code>Date</code>()) const<br/>
+ <i>dirty price given Z-spread </i><br/>
+ virtual <code>Real</code> <code>accruedAmount</code> (<code>Date</code> d=<code>Date</code>()) const<br/>
+ <i>accrued amount at a given date </i><br/>
+ bool <code>isExpired</code> () const<br/>
  <i>returns whether the instrument is still tradable. </i></p>
 <h3>Protected Member Functions</h3>
 <p>void <code>setupExpired</code> () const </p>

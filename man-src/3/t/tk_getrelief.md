@@ -22,7 +22,7 @@ const char *
 <dd>Tcl_Obj <i>*objPtr</i> (in/out) String value contains name of relief, one of &#8220;flat&#8221;, &#8220;groove&#8221;, &#8220;raised&#8221;, &#8220;ridge&#8221;, &#8220;solid&#8221;, or &#8220;sunken&#8221;; the internal rep will be modified to cache corresponding relief value.</dd>
 <dd>char <i>*string</i> (in) Same as <i>objPtr</i> except description of relief is passed as a string.</dd>
 <dd>int <i>*reliefPtr</i> (out) Pointer to location in which to store relief value corresponding to <i>objPtr</i> or <i>name</i>.</dd>
-<dd>const char<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>*name</i><br />
+<dd>const char<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>*name</i><br/>
  Name of the relief.</dd>
 <dd>int <i>relief</i> (in) Relief value (one of <code>TK_RELIEF_FLAT</code>, <code>TK_RELIEF_RAISED</code>, <code>TK_RELIEF_SUNKEN</code>, <code>TK_RELIEF_GROOVE</code>, <code>TK_RELIEF_SOLID</code>, or <code>TK_RELIEF_RIDGE</code>).
 </dd></dl>

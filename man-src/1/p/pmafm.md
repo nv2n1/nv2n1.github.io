@@ -46,7 +46,7 @@ description: "pmafm – Performance Co-Pilot archive folio manager"
  Echo on standard output the <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1) commands required to remove all of the physical files associated with this archive folio.</dd>
 <dt><code>repeat</code> <i>tool</i> [<i>arg</i> &#8230;]</dt>
 <dd> Execute the known PCP <i>tool</i> once per selected archive. For example, the command </dd>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> repeat pmval -t60 kernel.all.load<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> repeat pmval -t60 kernel.all.load<br/>
  would run <code>pmval</code>(1) once per archive, with an appropriate <code>-a</code> argument.</p>
 <dt><code>replay</code></dt>
 <dd>

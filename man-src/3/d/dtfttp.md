@@ -11,7 +11,7 @@ description: "dtfttp.f –"
 <p> dtfttp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtfttp</code> (TRANSR, UPLO, N, ARF, AP, INFO)<br />
+<p> subroutine <code>dtfttp</code> (TRANSR, UPLO, N, ARF, AP, INFO)<br/>
  <i></i><code>DTFTTP</code> copies a triangular matrix from the rectangular full packed format (TF) to the standard packed format (TP).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtfttp (characterTRANSR, characterUPLO, integerN, double precision, dimension( 0: * )ARF, double precision, dimension( 0: * )AP, integerINFO)</h3>

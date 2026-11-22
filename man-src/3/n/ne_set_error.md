@@ -19,8 +19,8 @@ void ne_set_error(ne_sesssion *session, const char *format, ...);</code></pre>
 <h2>Return Value</h2>
 <p><code>ne_set_error</code> returns a constant NUL-terminated string. In the default English locale, the returned string will <i>not</i> have a terminating &#8220;.&#8221; period character.</p>
 <h2>Examples</h2>
-<p>Retrieve the current error string: ne_session *sess = ne_session_create(&#8230;);<br />
-&#8230;<br />
+<p>Retrieve the current error string: ne_session *sess = ne_session_create(&#8230;);<br/>
+&#8230;<br/>
 ne_set_error(sess, &quot;Response missing header %s&quot;, &quot;somestring&quot;); Set a new error string: </p>
 <pre><code>ne_session *sess = ne_session_create(...);
 ...

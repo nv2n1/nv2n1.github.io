@@ -9,15 +9,15 @@ description: "ql/experimental/commodities/energycommodity.hpp – Energy commodi
 
 <p>ql/experimental/commodities/energycommodity.hpp &#8211; Energy commodity. </p>
 <h2>Synopsis</h2>
-<p>#include &lt;ql/experimental/commodities/commodity.hpp&gt;<br />
- #include &lt;ql/experimental/commodities/commoditytype.hpp&gt;<br />
- #include &lt;ql/experimental/commodities/commodityunitcost.hpp&gt;<br />
- #include &lt;ql/experimental/commodities/unitofmeasure.hpp&gt;<br />
- #include &lt;ql/experimental/commodities/quantity.hpp&gt;<br />
- #include &lt;ql/time/date.hpp&gt;<br />
+<p>#include &lt;ql/experimental/commodities/commodity.hpp&gt;<br/>
+ #include &lt;ql/experimental/commodities/commoditytype.hpp&gt;<br/>
+ #include &lt;ql/experimental/commodities/commodityunitcost.hpp&gt;<br/>
+ #include &lt;ql/experimental/commodities/unitofmeasure.hpp&gt;<br/>
+ #include &lt;ql/experimental/commodities/quantity.hpp&gt;<br/>
+ #include &lt;ql/time/date.hpp&gt;<br/>
  #include &lt;ql/money.hpp&gt; </p>
 <h3>Classes</h3>
-<p>class <code>EnergyCommodity</code><br />
+<p>class <code>EnergyCommodity</code><br/>
  <i>Energy commodity class. </i></p>
 <h3>Typedefs</h3>
 <p>typedef std::map&lt; Date, EnergyDailyPosition &gt; <code>EnergyDailyPositions</code> </p>

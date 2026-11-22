@@ -103,11 +103,11 @@ description: "BibTool – BibTeX file manipulation tool"
 <dt><i>/usr/local/lib/BibTool/*.rsc</i></dt>
 <dd> The BibTool resource files included in the original distribution.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-bibtex/">bibtex</a></i>(1), <i><a href="/docs/linux/man/1-latex/">latex</a></i>(1), <i><a href="/docs/linux/man/1-tex/">tex</a></i>(1)<br />
+<p> <i><a href="/docs/linux/man/1-bibtex/">bibtex</a></i>(1), <i><a href="/docs/linux/man/1-latex/">latex</a></i>(1), <i><a href="/docs/linux/man/1-tex/">tex</a></i>(1)<br/>
  The <i>BibTool Manual</i>.</p>
 <h2>BUGS</h2>
-<p> Some arrays are allocated statically which may result in an overflow.<br />
- Most memory is allocated but not returned to the OS: A garbage collection algorithm might be integrated in a future release.<br />
+<p> Some arrays are allocated statically which may result in an overflow.<br/>
+ Most memory is allocated but not returned to the OS: A garbage collection algorithm might be integrated in a future release.<br/>
  This man page is updated only occasionally, so it is very likely out of date. For complete, current documentation, refer to the <i>BibTool Manual</i> which is distributed as LaTeX source file (<code>bibtool.tex</code>) in the original <code>BibTool</code> source distribution.</p>
 <h2>AUTHOR</h2>
 <p> BibTool is designed and maintained by Gerd Neugebauer. </p>

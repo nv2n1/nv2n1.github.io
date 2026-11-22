@@ -34,25 +34,25 @@ description: "pamsumm – Summarize the samples in a Netpbm image arithmetically
 <p> This option makes the summary function arithmetic maximum. </p>
 </dd><dt><code>-normalize</code></dt>
 <dd>
-<p> This option causes each sample to be normalized to a fraction<br />
-&nbsp;<wbr>&nbsp;<wbr>(in the range 0..1)&nbsp;<wbr>so the result is independent of the image&#8217;s<br />
-&nbsp;<wbr>&nbsp;<wbr>maxval.&nbsp;<wbr>&nbsp;<wbr>E.g. if you request the mean of an image which has maxval<br />
-&nbsp;<wbr>&nbsp;<wbr>200 and all the samples have value 50,&nbsp;<wbr><code>pamsumm</code>&nbsp;<wbr>will give you<br />
+<p> This option causes each sample to be normalized to a fraction<br/>
+&nbsp;<wbr>&nbsp;<wbr>(in the range 0..1)&nbsp;<wbr>so the result is independent of the image&#8217;s<br/>
+&nbsp;<wbr>&nbsp;<wbr>maxval.&nbsp;<wbr>&nbsp;<wbr>E.g. if you request the mean of an image which has maxval<br/>
+&nbsp;<wbr>&nbsp;<wbr>200 and all the samples have value 50,&nbsp;<wbr><code>pamsumm</code>&nbsp;<wbr>will give you<br/>
 &nbsp;<wbr>&nbsp;<wbr>50 as an answer.&nbsp;<wbr>&nbsp;<wbr>But&nbsp;<wbr><code>pamsumm -normalize</code>&nbsp;<wbr>will give you .25. </p>
-<p> If instead you want a result that is independent of maxval but still<br />
-&nbsp;<wbr>&nbsp;<wbr>in integers, you can use&nbsp;<wbr><code>pamdepth</code>&nbsp;<wbr>to convert the input to some<br />
-&nbsp;<wbr>&nbsp;<wbr>standard maxval and not use&nbsp;<wbr><code>-normalize</code>.&nbsp;<wbr>&nbsp;<wbr>For example, if you want<br />
+<p> If instead you want a result that is independent of maxval but still<br/>
+&nbsp;<wbr>&nbsp;<wbr>in integers, you can use&nbsp;<wbr><code>pamdepth</code>&nbsp;<wbr>to convert the input to some<br/>
+&nbsp;<wbr>&nbsp;<wbr>standard maxval and not use&nbsp;<wbr><code>-normalize</code>.&nbsp;<wbr>&nbsp;<wbr>For example, if you want<br/>
 &nbsp;<wbr>&nbsp;<wbr>the mean brightness of a PPM image, on a scale of 0 to 99, do </p>
 <pre>
 <tt>
     pamdepth 99 myimage.ppm | pamsumm -mean
 </tt>
 </pre>
-<p> This option was new in Netpbm 10.22 (April 2004)<br />
+<p> This option was new in Netpbm 10.22 (April 2004)<br/>
 &nbsp;<wbr>&nbsp;<wbr></p>
 </dd><dt><code>-brief</code></dt>
 <dd>
-<p> This option causes <code>pamsumm</code> to display the answer as a bare<br />
+<p> This option causes <code>pamsumm</code> to display the answer as a bare<br/>
 &nbsp;<wbr>&nbsp;<wbr>number, rather than in a complete sentence. </p>
 <p> This option was new in Netpbm 10.22 (April 2004) </p>
 </dd></dl>

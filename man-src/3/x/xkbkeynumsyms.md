@@ -10,7 +10,7 @@ description: "XkbKeyNumSyms – Returns the total number of keysyms for the key 
 <p>XkbKeyNumSyms &#8211; Returns the total number of keysyms for the key corresponding to <i>keycode</i> </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>int XkbKeyNumSyms</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br />
+<dt> <code>int XkbKeyNumSyms</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

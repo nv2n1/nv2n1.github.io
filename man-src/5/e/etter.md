@@ -27,7 +27,7 @@ entry = value
 </dd><dt><code>arp_storm_delay</code></dt>
 <dd>The value represents the milliseconds to wait between two consecutive packets during the initial ARP scan. You can increment this value to be less aggressive at startup. The randomized scan plus a high delay can fool some types of ARP scan detectors.</dd>
 <dt><code>arp_poison_warm_up</code></dt>
-<dd>When the poisoning process starts, the inter-packet delay is low for the first 5 poisons (to be sure the poisoning process has been successful). After the first 5 poisons, the delay is incremented (to keep up the poisoning). This variable controls the delay for the first 5 poisons. The value is in seconds.<br />
+<dd>When the poisoning process starts, the inter-packet delay is low for the first 5 poisons (to be sure the poisoning process has been successful). After the first 5 poisons, the delay is incremented (to keep up the poisoning). This variable controls the delay for the first 5 poisons. The value is in seconds.<br/>
  The same delay is used when the victims are restored to the original associations (RE-ARPing) when ettercap is closed.</dd>
 <dt><code>arp_poison_delay</code></dt>
 <dd>This variable controls the poisoning delay after the first 5 poisons. The value is expressed in seconds. You can increase this value (to try to fool the IDS) up to the timeout of the ARP cache (which depends on the poisoned operating system).</dd>
@@ -70,20 +70,20 @@ entry = value
 <dt><code>skip_forwarded</code></dt>
 <dd>If you set this value to 0 you will sniff even packets forwarded by ettercap or by the kernel. It will generate packets duplicates in conjuction with arp mitm method (for example). It could be useful while running ettercap in unoffensive mode on a host with more than one network interface (waiting for the multiple-interface feature&#8230;)</dd>
 <dt><code>checksum_warning</code></dt>
-<dd>If you set the value to 0 the messages about incorrect checksums will not be displayed in the user messages windows (nor logged to a file with -m).<br />
+<dd>If you set the value to 0 the messages about incorrect checksums will not be displayed in the user messages windows (nor logged to a file with -m).<br/>
  Note that this option won&#8217;t disable the check on the packets, but only prevent the message to be displayed (see below).</dd>
 <dt><code>checksum_check</code></dt>
 <dd>This option is used to completely disable the check on the checksum of the packets that ettercap receives. The check on the packets is performed to avoid ettercap spotting thru bad checsum packets (see Phrack 60.12). If you disable the check, you will be able to sniff even bad checksummed packet, but you will be spotted if someone is searching for you&#8230;</dd>
 <dt><code>[dissectors]</code></dt>
 <dd>
 </dd><dt><code>protocol_name</code></dt>
-<dd>This value represents the port on which the protocol dissector has to be bound. A value of 0 will disable the dissector. The name of the variable is the same of the protocol name. You can specify a non standard port for each dissector as well as multiple ports. The syntax for multiport selection is the following: port1,port2,port3,&#8230;<br />
+<dd>This value represents the port on which the protocol dissector has to be bound. A value of 0 will disable the dissector. The name of the variable is the same of the protocol name. You can specify a non standard port for each dissector as well as multiple ports. The syntax for multiport selection is the following: port1,port2,port3,&#8230;<br/>
  NOTE: some dissectors are conditionally compiled . This means that depending on the libraries found in your system some dissectors will be enabled and some others will not. By default etter.conf contains all supported dissectors. if you got a &quot;FATAL: Dissector &quot;xxx&quot; does not exists (etter.conf line yy)&quot; error, you have to comment out the yy line in etter.conf.</dd>
 <dt><code>[curses]</code></dt>
 <dd>
 </dd><dt><code>color</code></dt>
-<dd>You can customize the colors of the curses GUI.<br />
- Simply set a field to one of the following values and look at the GUI aspect :)<br />
+<dd>You can customize the colors of the curses GUI.<br/>
+ Simply set a field to one of the following values and look at the GUI aspect :)<br/>
  Here is a list of values: 0 Black, 1 Red, 2 Green, 3 Yellow, 4 Blue, 5 Magenta, 6 Cyan, 7 White</dd>
 <dt><code>[strings]</code></dt>
 <dd>

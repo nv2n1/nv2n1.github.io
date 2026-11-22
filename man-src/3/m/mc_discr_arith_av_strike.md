@@ -10,10 +10,10 @@ description: "ql/pricingengines/asian/mc_discr_arith_av_strike.hpp – Monte Car
 
 <p> ql/pricingengines/asian/mc_discr_arith_av_strike.hpp &#8211; Monte Carlo engine for discrete arithmetic average-strike Asian. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/pricingengines/asian/mcdiscreteasianengine.hpp&gt;<br />
+<p> #include &lt;ql/pricingengines/asian/mcdiscreteasianengine.hpp&gt;<br/>
  #include &lt;ql/exercise.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>MCDiscreteArithmeticASEngine&lt; RNG, S &gt;</code><br />
+<p> class <code>MCDiscreteArithmeticASEngine&lt; RNG, S &gt;</code><br/>
  <i>Monte Carlo pricing engine for discrete arithmetic average-strike Asian. </i></p>
 <h2>Detailed Description</h2>
 <p> Monte Carlo engine for discrete arithmetic average-strike Asian. </p>

@@ -30,21 +30,21 @@ description: "CMCIClientFT.getClass() – Get class as reference"
 <p>When successful the <code>CMCIClientFT.getClass()</code> function returns a pointer to a CMPIConstClass object and sets a successful status code in <i>rc</i>. When unsuccessful it returns NULL and sets the <i>rc</i> argument with the error code and and corresponding error string.</p>
 <h2>Errors</h2>
 <h2>Examples</h2>
-<p>CMCIClient&nbsp;<wbr>*cc;<br />
-CMPIObjectPath&nbsp;<wbr>*&nbsp;<wbr>objectpath;<br />
-CMPIInstance&nbsp;<wbr>*&nbsp;<wbr>instance;<br />
-CMPIEnumeration&nbsp;<wbr>*&nbsp;<wbr>enumeration;<br />
-CMPIClass&nbsp;<wbr>*class;<br />
+<p>CMCIClient&nbsp;<wbr>*cc;<br/>
+CMPIObjectPath&nbsp;<wbr>*&nbsp;<wbr>objectpath;<br/>
+CMPIInstance&nbsp;<wbr>*&nbsp;<wbr>instance;<br/>
+CMPIEnumeration&nbsp;<wbr>*&nbsp;<wbr>enumeration;<br/>
+CMPIClass&nbsp;<wbr>*class;<br/>
 CMPIStatus status; </p>
-<p>/*&nbsp;<wbr>Setup a conncetion to the CIMOM&nbsp;<wbr>*/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<p>/*&nbsp;<wbr>Setup a conncetion to the CIMOM&nbsp;<wbr>*/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 cc&nbsp;<wbr>=&nbsp;<wbr>cmciConnect(&quot;localhost&quot;, NULL, NULL, NULL, NULL, NULL); </p>
-<p>objectpath&nbsp;<wbr>=&nbsp;<wbr>newCMPIObjectPath(&quot;root/cimv2&quot;,&nbsp;<wbr>&quot;Linux_ComputerSystem&quot;, NULL);<br />
+<p>objectpath&nbsp;<wbr>=&nbsp;<wbr>newCMPIObjectPath(&quot;root/cimv2&quot;,&nbsp;<wbr>&quot;Linux_ComputerSystem&quot;, NULL);<br/>
 class&nbsp;<wbr>=&nbsp;<wbr>cc-&gt;ft-&gt;getClass(cc, objectpath, 0, NULL,&nbsp;<wbr>&amp;status); </p>
-<p>if&nbsp;<wbr>(!status.rc)&nbsp;<wbr>{ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>fprintf(stderr, &quot;operation error code %d description %s,<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>status.rc, status.msg-&gt;hdl);<br />
+<p>if&nbsp;<wbr>(!status.rc)&nbsp;<wbr>{ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>fprintf(stderr, &quot;operation error code %d description %s,<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>status.rc, status.msg-&gt;hdl);<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>abort();</p>
 <p>}</p>
 <h2>Conforming To</h2>
 <h2>See Also</h2>
-<p>Common Manageability Programming Interface (CMPI) &#8211; OpenGroup,<br />
+<p>Common Manageability Programming Interface (CMPI) &#8211; OpenGroup,<br/>
  <a href="/docs/linux/man/3-cmciclient/">CMCIClient</a>(3), CMPIConstClass(3), <a href="/docs/linux/man/3-cmpiobjectpath/">CMPIObjectPath</a>(3), CMPIFlags(3), <a href="/docs/linux/man/3-cmpistatus/">CMPIStatus</a>(3)</p>

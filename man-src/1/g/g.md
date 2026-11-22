@@ -12,8 +12,8 @@ description: "g.version – Displays version and copyright information."
 <h2>KEYWORDS</h2>
 <p> general</p>
 <h2>SYNOPSIS</h2>
-<p> <code>g.version</code><br />
- <code>g.version help</code><br />
+<p> <code>g.version</code><br/>
+ <code>g.version help</code><br/>
  <code>g.version</code> [-<code>cb</code>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
 <h3>Flags:</h3>
 <dl>

@@ -10,10 +10,10 @@ description: "ql/experimental/varianceoption/integralhestonvarianceoptionengine.
 
 <p> ql/experimental/varianceoption/integralhestonvarianceoptionengine.hpp &#8211; integral Heston-model variance-option engine </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/experimental/varianceoption/varianceoption.hpp&gt;<br />
+<p> #include &lt;ql/experimental/varianceoption/varianceoption.hpp&gt;<br/>
  #include &lt;ql/processes/hestonprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>IntegralHestonVarianceOptionEngine</code><br />
+<p> class <code>IntegralHestonVarianceOptionEngine</code><br/>
  <i>integral Heston-model variance-option engine </i></p>
 <h2>Detailed Description</h2>
 <p> integral Heston-model variance-option engine </p>

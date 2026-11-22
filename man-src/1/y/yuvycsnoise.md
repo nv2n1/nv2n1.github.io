@@ -19,14 +19,14 @@ description: "yuvycsnoise – Noise filter specialized for NTSC Y/C separation n
 <dt><code>-t</code></dt>
 <dd> test. Instead of noise reduction, noises will be marked as black pixel.</dd>
 <dt><code>-m</code><i>&nbsp;<wbr>METHOD</i></dt>
-<dd> (default: <code>tbic</code>).<br />
- Select method. <i>METHOD</i> is string in which each character mean method.<br />
-&nbsp;<wbr><code>t</code>:&nbsp;<wbr>&#8216;triframe&#8217;&nbsp;<wbr>method of luma noise reduction.<br />
-&nbsp;<wbr><code>b</code>:&nbsp;<wbr>&#8216;biframe&#8217;&nbsp;<wbr>method of luma noise reduction.<br />
-&nbsp;<wbr><code>i</code>:&nbsp;<wbr>&#8216;infield&#8217;&nbsp;<wbr>method of luma noise reduction.<br />
+<dd> (default: <code>tbic</code>).<br/>
+ Select method. <i>METHOD</i> is string in which each character mean method.<br/>
+&nbsp;<wbr><code>t</code>:&nbsp;<wbr>&#8216;triframe&#8217;&nbsp;<wbr>method of luma noise reduction.<br/>
+&nbsp;<wbr><code>b</code>:&nbsp;<wbr>&#8216;biframe&#8217;&nbsp;<wbr>method of luma noise reduction.<br/>
+&nbsp;<wbr><code>i</code>:&nbsp;<wbr>&#8216;infield&#8217;&nbsp;<wbr>method of luma noise reduction.<br/>
 &nbsp;<wbr><code>c</code>: chroma noise reduction. use 3 frames as&nbsp;<wbr>&#8216;triframe&#8217;.</dd>
 <dt><code>-S</code><i>&nbsp;<wbr>MIN</i></dt>
-<dd> (default: 4).<br />
+<dd> (default: 4).<br/>
  Set minimum threshold of luma/chroma difference which is treated as noise.</dd>
 <dt><code>-T</code><i>&nbsp;<wbr>ERRT</i>[,<i>MAXT</i>]</dt>
 <dd> (default: 32,255).</dd>
@@ -35,12 +35,12 @@ description: "yuvycsnoise – Noise filter specialized for NTSC Y/C separation n
 <dt><code>-I</code><i>&nbsp;<wbr>ERRI</i>[,<i>MAXI</i>]</dt>
 <dd> (default: 16,255).</dd>
 <dt><code>-C</code><i>&nbsp;<wbr>ERRC</i>[,<i>MAXC</i>]</dt>
-<dd> (default: 12,255).<br />
+<dd> (default: 12,255).<br/>
  Set threshold of luma/chroma difference of each methods. <i>ERRx</i> is maximum error of luma/chroma of pixels around target pixel, which should be same if target contain noise. <i>MAXx</i> is maximum threshold of luma/chroma difference of target pixel from luma/chroma after noise reduced. </dd>
 </dl>
 <h2>AUTHOR</h2>
-<p> <code>yuvycsnoise</code> was written by Kawamata/Hitoshi.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> <code>yuvycsnoise</code> was written by Kawamata/Hitoshi.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

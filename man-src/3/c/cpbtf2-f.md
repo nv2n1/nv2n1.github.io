@@ -10,7 +10,7 @@ description: "cpbtf2.f –"
 <p>cpbtf2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cpbtf2</code> (UPLO, N, KD, AB, LDAB, INFO)<br />
+<p>subroutine <code>cpbtf2</code> (UPLO, N, KD, AB, LDAB, INFO)<br/>
  <i></i><code>CPBTF2</code> computes the Cholesky factorization of a symmetric/Hermitian positive definite band matrix (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpbtf2 (characterUPLO, integerN, integerKD, complex, dimension( ldab, * )AB, integerLDAB, integerINFO)</h3>

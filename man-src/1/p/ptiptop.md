@@ -30,7 +30,7 @@ description: "tiptop – display hardware performance counters for Linux tasks"
 <dt>&#8211;<code>c</code></dt>
 <dd> display the command line of the task instead of its name. (toggle) </dd>
 <dt>&#8212;<code>cpu-min</code> VALUE</dt>
-<dd> %CPU activity threshold. Below this value, a task is considered<br />
+<dd> %CPU activity threshold. Below this value, a task is considered<br/>
 &nbsp;<wbr>idle and is not reported&nbsp;<wbr>(unless idle-mode is on, see flag -i). </dd>
 <dt>&#8211;<code>d</code> VALUE</dt>
 <dd> Specify the delay between refreshes. VALUE can be fractional. It must be larger than 0.01. </dd>
@@ -132,15 +132,15 @@ See file /proc/sys/kernel/perf_event_paranoid
 <dd> The root of the xml tree is tiptop. &lt;tiptop&gt; &#8230; &lt;/tiptop&gt; </dd>
 <dt>Options</dt>
 <dd> Options can be specified on an &lt;options&gt; block. </dd>
-<p> &lt;options&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;option name=&quot;option1&quot;&nbsp;<wbr>value=&quot;value_option1&quot;/&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;option name=&quot;option2&quot;&nbsp;<wbr>value=&quot;value_option2&quot;/&gt;<br />
+<p> &lt;options&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;option name=&quot;option1&quot;&nbsp;<wbr>value=&quot;value_option1&quot;/&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;option name=&quot;option2&quot;&nbsp;<wbr>value=&quot;value_option2&quot;/&gt;<br/>
 &nbsp;<wbr>&#8230; &lt;/options&gt; </p>
 <p> Recognized options listed below, with their corresponding command line option. </p>
 <p> cpu_threshold (&#8211;cpu-min), delay (-d), idle (-i), max_iter (-n), show_cmdline (-c), show_epoch (&#8211;epoch), show_kernel (-K), show_timestamp (&#8211;timestamp), show_threads (-H), show_user (-U), watch_name (-w), sticky (&#8211;sticky), watch_uid (-w) </p>
 <dt>Screens</dt>
 <dd> Screens are defined inside a &lt;screen&gt; block. A screen is made of counters and columns. A screen has a name and an optional description. </dd>
-<p> &lt;screen name=&quot;my_screen&quot; desc=&quot;what this screen is about&quot;&gt;<br />
+<p> &lt;screen name=&quot;my_screen&quot; desc=&quot;what this screen is about&quot;&gt;<br/>
 &nbsp;<wbr>&#8230;. &lt;/screen&gt; </p>
 <p> Counters must provide an alias (used for further reference) and a configuration. The configuration is either a predefined value, or the actual value that must be provided to the perf_even_open system call (typically found in vendor architecture manuals). </p>
 <p> Predefined values are: CPU_CYCLES, INSTRUCTIONS, CACHE_REFERENCES, CACHE_MISSES, BRANCH_INSTRUCTIONS, BRANCH_MISSES, and BUS_CYCLES. </p>
@@ -229,7 +229,7 @@ See file /proc/sys/kernel/perf_event_paranoid
 <p> Attaching counters to processes may fail for various reasons, such as asking for more than available in hardware (tiptop does not implement sampling), or reaching the maximum number of open files. In these cases, you may consider filtering the processes (see flags -u, -p). </p>
 <p> To mitigate the limitation of the maximum number of open files, tiptop tries to close the events attached to idle processes. If this is a problem, see the flag &#8211;no-collect. </p>
 <h2>BUGS</h2>
-<p> Send bug reports to:<br />
+<p> Send bug reports to:<br/>
 Erven Rohou&nbsp;<wbr>&lt;erven.rohou [at] inria.fr&gt; </p>
 <h2>AUTHOR</h2>
 <p> Written by Erven Rohou. </p>

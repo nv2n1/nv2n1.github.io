@@ -15,11 +15,11 @@ description: "pamtopfm – Convert PFM (Portable Float Map) image to Netpbm form
 <h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pfmtopam</code> reads a PFM (Portable Float Map) image and converts it to PAM. </p>
-<p> See <code><a href="/docs/linux/man/1-pamtopfm/">pamtopfm</a></code>(1)<br />
+<p> See <code><a href="/docs/linux/man/1-pamtopfm/">pamtopfm</a></code>(1)<br/>
 &nbsp;<wbr>for a description of PFM. </p>
 <p> If you want one of the older, more portable Netpbm formats, run the output through <code>pamtopnm</code>. </p>
 <p> <code>pamtopfm</code> creates a PAM with tuple type &#8216;RGB&#8217; or &#8216;GRAYSCALE&#8217; depending on whether or not the PFM is in the color subformat. </p>
-<p> Use <code><a href="/docs/linux/man/1-pamtopfm/">pamtopfm</a></code>(1)<br />
+<p> Use <code><a href="/docs/linux/man/1-pamtopfm/">pamtopfm</a></code>(1)<br/>
 &nbsp;<wbr>to convert a PFM image to Netpbm format. </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -28,7 +28,7 @@ description: "pamtopfm – Convert PFM (Portable Float Map) image to Netpbm form
 <p> This specifies the maxval for the PAM. Default is 255. </p>
 </dd><dt><code>-verbose</code></dt>
 <dd>
-<p> This causes <code>pfmtopam</code> to display messages describing<br />
+<p> This causes <code>pfmtopam</code> to display messages describing<br/>
 &nbsp;<wbr>&nbsp;<wbr>the PFM input file. </p>
 </dd></dl>
 <h2>SEE ALSO</h2>

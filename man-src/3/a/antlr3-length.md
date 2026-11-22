@@ -12,9 +12,9 @@ description: "ANTLR3_BITSET_LIST_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3bitset.h">antlr3bitset.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> <code>pANTLR3_BITWORD</code> <code>bits</code><br />
- <i>Pointer to the allocated array of bits for this bit set, which is an array of 64 bit elements (of the architecture). </i><br />
- <code>ANTLR3_UINT32</code> <code>length</code><br />
+<p> <code>pANTLR3_BITWORD</code> <code>bits</code><br/>
+ <i>Pointer to the allocated array of bits for this bit set, which is an array of 64 bit elements (of the architecture). </i><br/>
+ <code>ANTLR3_UINT32</code> <code>length</code><br/>
  <i>Length of the current bit set in ANTLR3_UINT64 units. </i></p>
 <h2>Field Documentation</h2>
 <h3><code>pANTLR3_BITWORD</code> <code>ANTLR3_BITSET_LIST_struct::bits</code></h3>

@@ -84,9 +84,9 @@ description: "grops – PostScript driver for groff"
 <p> If the file containing a downloadable font or imported document conforms to the Adobe Document Structuring Conventions, then <code>grops</code> interprets any comments in the files sufficiently to ensure that its own output is conforming. It also supplies any needed font resources that are listed in the <i>download</i> file as well as any needed file resources. It is also able to handle inter-resource dependencies. For example, suppose that you have a downloadable font called Garamond, and also a downloadable font called Garamond-Outline which depends on Garamond (typically it would be defined to copy Garamond&#8217;s font dictionary, and change the PaintType), then it is necessary for Garamond to appear before Garamond-Outline in the PostScript document. <code>grops</code> handles this automatically provided that the downloadable font file for Garamond-Outline indicates its dependence on Garamond by means of the Document Structuring Conventions, for example by beginning with the following lines</p>
 <dl>
 <dt>
-</dt><dd> <code>%!PS-Adobe-3.0 Resource-Font</code><br />
- <code>%%DocumentNeededResources: font Garamond</code><br />
- <code>%%EndComments</code><br />
+</dt><dd> <code>%!PS-Adobe-3.0 Resource-Font</code><br/>
+ <code>%%DocumentNeededResources: font Garamond</code><br/>
+ <code>%%EndComments</code><br/>
  <code>%%IncludeResource: font Garamond</code></dd></dl>
 <p> In this case both Garamond and Garamond-Outline would need to be listed in the <i>download</i> file. A downloadable font should not include its own name in a <code>%%DocumentSuppliedResources</code> comment. </p>
 <p> <code>grops</code> does not interpret <code>%%DocumentFonts</code> comments. The <code>%%DocumentNeededResources</code>, <code>%%DocumentSuppliedResources</code>, <code>%%IncludeResource</code>, <code>%%BeginResource</code>, and <code>%%EndResource</code> comments (or possibly the old <code>%%DocumentNeededFonts</code>, <code>%%DocumentSuppliedFonts</code>, <code>%%IncludeFont</code>, <code>%%BeginFont</code>, and <code>%%EndFont</code> comments) should be used. </p>
@@ -111,7 +111,7 @@ description: "grops – PostScript driver for groff"
 <dl>
 <dl>
 <dt>
-</dt><dd> <code>.nr x 1i</code><br />
+</dt><dd> <code>.nr x 1i</code><br/>
  <code>\X&#8217;ps: exec 
 x u 0 rlineto stroke&#8217;</code>
 </dd></dl>

@@ -42,5 +42,5 @@ sg_reset: completed host reset</code></pre>
 <h2>Authors</h2>
 <p>Written by Douglas Gilbert.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 1999-2013 Douglas Gilbert<br />
+<p>Copyright &#169; 1999-2013 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>

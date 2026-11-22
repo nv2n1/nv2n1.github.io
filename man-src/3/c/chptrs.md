@@ -11,7 +11,7 @@ description: "chptrs.f –"
 <p> chptrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chptrs</code> (UPLO, N, NRHS, AP, IPIV, B, LDB, INFO)<br />
+<p> subroutine <code>chptrs</code> (UPLO, N, NRHS, AP, IPIV, B, LDB, INFO)<br/>
  <i></i><code>CHPTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chptrs (characterUPLO, integerN, integerNRHS, complex, dimension( * )AP, integer, dimension( * )IPIV, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

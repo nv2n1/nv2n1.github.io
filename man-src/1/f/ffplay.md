@@ -12,10 +12,10 @@ description: "ffplay – FFplay media player"
 <h2>SYNOPSIS</h2>
 <p> ffplay [<i>options</i>] [<i>input_url</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> FFplay is a very simple and portable media player using the FFmpeg libraries and the <font SIZE="-1">SDL</font> library. It is mostly used as a testbed for the various FFmpeg APIs.</p>
+<p> FFplay is a very simple and portable media player using the FFmpeg libraries and the SDL library. It is mostly used as a testbed for the various FFmpeg APIs.</p>
 <h2>OPTIONS</h2>
-<p> All the numerical options, if not specified otherwise, accept a string representing a number as input, which may be followed by one of the <font SIZE="-1">SI</font> unit prefixes, for example: &#8216;K&#8217;, &#8216;M&#8217;, or &#8216;G&#8217;. </p>
-<p> If &#8216;i&#8217; is appended to the <font SIZE="-1">SI</font> unit prefix, the complete prefix will be interpreted as a unit prefix for binary multiples, which are based on powers of 1024 instead of powers of 1000. Appending &#8216;B&#8217; to the <font SIZE="-1">SI</font> unit prefix multiplies the value by 8. This allows using, for example: &#8216;<font SIZE="-1">KB</font>&#8216;, &#8216;MiB&#8217;, &#8216;G&#8217; and &#8216;B&#8217; as number suffixes. </p>
+<p> All the numerical options, if not specified otherwise, accept a string representing a number as input, which may be followed by one of the SI unit prefixes, for example: &#8216;K&#8217;, &#8216;M&#8217;, or &#8216;G&#8217;. </p>
+<p> If &#8216;i&#8217; is appended to the SI unit prefix, the complete prefix will be interpreted as a unit prefix for binary multiples, which are based on powers of 1024 instead of powers of 1000. Appending &#8216;B&#8217; to the SI unit prefix multiplies the value by 8. This allows using, for example: &#8216;KB&#8216;, &#8216;MiB&#8217;, &#8216;G&#8217; and &#8216;B&#8217; as number suffixes. </p>
 <p> Options which do not take arguments are boolean options, and set the corresponding value to true. They can be set to false by prefixing the option name with &#8220;no&#8221;. For example using &#8220;-nofoo&#8221; will set the boolean option with name &#8220;foo&#8221; to false.</p>
 <h3>Stream specifiers</h3>
 <p> Some options are applied per-stream, e.g. bitrate or codec. Stream specifiers are used to precisely specify which stream(s) a given option belongs to. </p>
@@ -25,13 +25,13 @@ description: "ffplay – FFplay media player"
 <p> Possible forms of stream specifiers are:</p>
 <dl>
 <dt><i>stream_index</i></dt>
-<dd> Matches the stream with this index. E.g. <tt>&quot;-threads:1 4&quot;</tt> would set the thread count for the second stream to 4. If <i>stream_index</i> is used as an additional stream specifier (see below), then it selects stream number <i>stream_index</i> from the matching streams. Stream numbering is based on the order of the streams as detected by libavformat except when a program <font SIZE="-1">ID</font> is also specified. In this case it is based on the ordering of the streams in the program.</dd>
+<dd> Matches the stream with this index. E.g. <tt>&quot;-threads:1 4&quot;</tt> would set the thread count for the second stream to 4. If <i>stream_index</i> is used as an additional stream specifier (see below), then it selects stream number <i>stream_index</i> from the matching streams. Stream numbering is based on the order of the streams as detected by libavformat except when a program ID is also specified. In this case it is based on the ordering of the streams in the program.</dd>
 <dt><i>stream_type</i><code>[:</code><i>additional_stream_specifier</i><code>]</code></dt>
 <dd> <i>stream_type</i> is one of following: &#8216;v&#8217; or &#8216;V&#8217; for video, &#8216;a&#8217; for audio, &#8216;s&#8217; for subtitle, &#8216;d&#8217; for data, and &#8216;t&#8217; for attachments. &#8216;v&#8217; matches all video streams, &#8216;V&#8217; only matches video streams which are not attached pictures, video thumbnails or cover arts. If <i>additional_stream_specifier</i> is used, then it matches streams which both have this type and match the <i>additional_stream_specifier</i>. Otherwise, it matches all streams of the specified type.</dd>
 <dt><code>p:</code><i>program_id</i><code>[:</code><i>additional_stream_specifier</i><code>]</code></dt>
 <dd> Matches streams which are in the program with the id <i>program_id</i>. If <i>additional_stream_specifier</i> is used, then it matches streams which both are part of the program and match the <i>additional_stream_specifier</i>.</dd>
 <dt><code>#</code><i>stream_id</i> <code>or i:</code><i>stream_id</i></dt>
-<dd> Match the stream by stream id (e.g. <font SIZE="-1">PID</font> in MPEG-TS container).</dd>
+<dd> Match the stream by stream id (e.g. PID in MPEG-TS container).</dd>
 <dt><code>m:</code><i>key</i><code>[:</code><i>value</i><code>]</code></dt>
 <dd> Matches streams with the metadata tag <i>key</i> having the specified value. If <i>value</i> is not given, matches streams that contain the given tag with any value.</dd>
 <dt><code>u</code></dt>
@@ -157,10 +157,10 @@ description: "ffplay – FFplay media player"
 <pre>
         ffmpeg [...] -loglevel +repeat
 </pre>
-<p> By default the program logs to stderr. If coloring is supported by the terminal, colors are used to mark errors and warnings. Log coloring can be disabled setting the environment variable <font SIZE="-1"><code>AV_LOG_FORCE_NOCOLOR</code></font>, or can be forced setting the environment variable <font SIZE="-1"><code>AV_LOG_FORCE_COLOR</code></font>.</dd></dl>
+<p> By default the program logs to stderr. If coloring is supported by the terminal, colors are used to mark errors and warnings. Log coloring can be disabled setting the environment variable <code>AV_LOG_FORCE_NOCOLOR</code>, or can be forced setting the environment variable <code>AV_LOG_FORCE_COLOR</code>.</dd></dl>
 <dt><code>-report</code></dt>
 <dd> Dump full command line and log output to a file named <tt>&quot;</tt>program<tt>-</tt>YYYYMMDD<tt>-</tt>HHMMSS<tt>.log&quot;</tt> in the current directory. This file can be useful for bug reports. It also implies <tt>&quot;-loglevel debug&quot;</tt>. </dd>
-<p> Setting the environment variable <font SIZE="-1"><code>FFREPORT</code></font> to any value has the same effect. If the value is a &#8216;:&#8217;-separated key=value sequence, these options will affect the report; option values must be escaped if they contain special characters or the options delimiter &#8216;:&#8217; (see the &#8220;Quoting and escaping&#8221; section in the ffmpeg-utils manual). </p>
+<p> Setting the environment variable <code>FFREPORT</code> to any value has the same effect. If the value is a &#8216;:&#8217;-separated key=value sequence, these options will affect the report; option values must be escaped if they contain special characters or the options delimiter &#8216;:&#8217; (see the &#8220;Quoting and escaping&#8221; section in the ffmpeg-utils manual). </p>
 <p> The following options are recognized:</p>
 <dl>
 <dl>
@@ -239,7 +239,7 @@ description: "ffplay – FFplay media player"
 </dl>
 <dl>
 </dl>
-<dt><font SIZE="-1"><code>ARM</code></font></dt>
+<dt><code>ARM</code></dt>
 <dd>
 </dd><dl>
 <dl>
@@ -310,7 +310,7 @@ description: "ffplay – FFplay media player"
 <dl>
 </dl>
 <dt><code>-max_alloc</code> <i>bytes</i></dt>
-<dd> Set the maximum size limit for allocating a block on the heap by ffmpeg&#8217;s family of malloc functions. Exercise <code>extreme caution</code> when using this option. Don&#8217;t use if you do not understand the full consequence of doing so. Default is <font SIZE="-1">INT_MAX.</font></dd></dl>
+<dd> Set the maximum size limit for allocating a block on the heap by ffmpeg&#8217;s family of malloc functions. Exercise <code>extreme caution</code> when using this option. Don&#8217;t use if you do not understand the full consequence of doing so. Default is INT_MAX.</dd></dl>
 <h3>AVOptions</h3>
 <p> These options are provided directly by the libavformat, libavdevice and libavcodec libraries. To see the list of available AVOptions, use the <code>-help</code> option. They are separated into two categories:</p>
 <dl>
@@ -318,7 +318,7 @@ description: "ffplay – FFplay media player"
 <dd> These options can be set for any container, codec or device. Generic options are listed under AVFormatContext options for containers/devices and under AVCodecContext options for codecs.</dd>
 <dt><code>private</code></dt>
 <dd> These options are specific to the given container, device or codec. Private options are listed under their corresponding containers/devices/codecs.</dd></dl>
-<p> For example to write an ID3v2.3 header instead of a default ID3v2.4 to an <font SIZE="-1">MP3</font> file, use the <code>id3v2_version</code> private option of the <font SIZE="-1">MP3</font> muxer: </p>
+<p> For example to write an ID3v2.3 header instead of a default ID3v2.4 to an MP3 file, use the <code>id3v2_version</code> private option of the MP3 muxer: </p>
 <pre>
         ffmpeg -i input.flac -id3v2_version 3 out.mp3
 </pre>
@@ -336,7 +336,7 @@ description: "ffplay – FFplay media player"
 <dt><code>-y</code> <i>height</i></dt>
 <dd> Force displayed height.</dd>
 <dt><code>-s</code> <i>size</i></dt>
-<dd> Set frame size (WxH or abbreviation), needed for videos which do not contain a header with the frame size like raw <font SIZE="-1">YUV.</font> This option has been deprecated in favor of private options, try -video_size.</dd>
+<dd> Set frame size (WxH or abbreviation), needed for videos which do not contain a header with the frame size like raw YUV. This option has been deprecated in favor of private options, try -video_size.</dd>
 <dt><code>-fs</code></dt>
 <dd> Start in fullscreen mode.</dd>
 <dt><code>-an</code></dt>
@@ -360,7 +360,7 @@ description: "ffplay – FFplay media player"
 <dt><code>-noborder</code></dt>
 <dd> Borderless window.</dd>
 <dt><code>-alwaysontop</code></dt>
-<dd> Window always on top. Available on: X11 with <font SIZE="-1">SDL</font> &gt;= 2.0.5, Windows <font SIZE="-1">SDL</font> &gt;= 2.0.6.</dd>
+<dd> Window always on top. Available on: X11 with SDL &gt;= 2.0.5, Windows SDL &gt;= 2.0.6.</dd>
 <dt><code>-volume</code></dt>
 <dd> Set the startup volume. 0 means silence, 100 means no volume reduction or amplification. Negative values are treated as 0, values above 100 are treated as 100.</dd>
 <dt><code>-f</code> <i>fmt</i></dt>
@@ -382,7 +382,7 @@ description: "ffplay – FFplay media player"
 <dt><code>1, waves</code></dt>
 <dd> show audio waves</dd>
 <dt><code>2, rdft</code></dt>
-<dd> show audio frequency band using <font SIZE="-1">RDFT</font> ((Inverse) Real Discrete Fourier Transform)</dd></dl>
+<dd> show audio frequency band using RDFT ((Inverse) Real Discrete Fourier Transform)</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -439,11 +439,11 @@ description: "ffplay – FFplay media player"
 <dd> Defines how many threads are used to process a filter pipeline. Each pipeline will produce a thread pool with this many threads available for parallel processing. The default is 0 which means that the thread count will be determined by the number of available CPUs.</dd></dl>
 <h3>While playing</h3>
 <dl>
-<dt><code>q, </code><font SIZE="-1"><code>ESC</code></font></dt>
+<dt><code>q, </code><code>ESC</code></dt>
 <dd> Quit.</dd>
 <dt><code>f</code></dt>
 <dd> Toggle full screen.</dd>
-<dt><code>p, </code><font SIZE="-1"><code>SPC</code></font></dt>
+<dt><code>p, </code><code>SPC</code></dt>
 <dd> Pause.</dd>
 <dt><code>m</code></dt>
 <dd> Toggle mute.</dd>
@@ -479,4 +479,4 @@ description: "ffplay – FFplay media player"
 <h2>AUTHORS</h2>
 <p> The FFmpeg developers. </p>
 <p> For details about the authorship, see the Git history of the project (<a href="git://source.ffmpeg.org/ffmpeg">git://source.ffmpeg.org/ffmpeg</a>), e.g. by typing the command <code>git log</code> in the FFmpeg source directory, or browsing the online repository at &lt;<code><a rel="nofollow" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a></code>&gt;. </p>
-<p> Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. </p>
+<p> Maintainers for the specific components are listed in the file <i></i><i>MAINTAINERS</i><i></i> in the source code tree. </p>

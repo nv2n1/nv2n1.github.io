@@ -11,8 +11,8 @@ description: "sane-tamarack – SANE backend for Tamarack flatbed scanners"
 <h2>Description</h2>
 <p>The <code>sane-tamarack</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to the following Tamarack flatbed scanners:</p>
 <dl>
-<dd>Artiscan 6000C<br />
- Artiscan 8000C<br />
+<dd>Artiscan 6000C<br/>
+ Artiscan 8000C<br/>
  Artiscan 12000C
 </dd></dl>
 <h2>Device Names</h2>

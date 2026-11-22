@@ -11,7 +11,7 @@ description: "ident – nnrpd ident resolver"
 <h2>Synopsis</h2>
 <p><code>ident</code> [<code>-p</code> <i>port</i>] [<code>-t</code>]</p>
 <h2>Description</h2>
-<p>This program attempts to resolve usernames for <code>nnrpd</code> by using the ident protocol to query the remote host. It contacts the remote host using either IPv4 or IPv6 depending on which protocol was used for the incoming <font SIZE="-1">NNTP</font> connection.</p>
+<p>This program attempts to resolve usernames for <code>nnrpd</code> by using the ident protocol to query the remote host. It contacts the remote host using either IPv4 or IPv6 depending on which protocol was used for the incoming NNTP connection.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-p</code> <i>port</i></dt>

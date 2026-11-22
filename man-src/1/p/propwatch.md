@@ -35,5 +35,5 @@ description: "propwatch – a tool to monitor X11 properties"
 <h2>AUTHOR</h2>
 <p> Gerd Knorr &lt;kraxel [at] bytesex.org&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1997-2003 Gerd Knorr<br />
+<p> Copyright (C) 1997-2003 Gerd Knorr<br/>
  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

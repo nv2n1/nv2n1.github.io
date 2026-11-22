@@ -131,6 +131,6 @@ description: "CGM_open, CGM_close, CGM_lseek, CGM_read, CGM_write, CGM_directory
 <p>CGMs with more the one metafile stored in the are not guaranteed to work. </p>
 <p> Should not have to explicitly flush the output buffer for <code>CGM_getInstr</code>. This should be handled automatically when the file is closed.</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 1987-2009<br />
+<p>Copyright (C) 1987-2009<br/>
  University Corporation for Atmospheric Research </p>
 <p> The use of this Software is governed by a License Agreement.</p>

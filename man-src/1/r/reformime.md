@@ -15,7 +15,7 @@ description: "reformime – MIME E-mail reformatting tool"
 <h2>DESCRIPTION</h2>
 <p> <code>reformime</code></p>
 <dd>is a utility for reformatting MIME messages. </dd>
-<p> Generally, <code>reformime</code> expects to see an m[blue]<code>RFC 2045</code>m[]<font SIZE="-2">[1]</font> compliant message on standard input, except in few cases such as the <code>-m</code> option. </p>
+<p> Generally, <code>reformime</code> expects to see an m[blue]<code>RFC 2045</code>m[][1] compliant message on standard input, except in few cases such as the <code>-m</code> option. </p>
 <p> If no options are given, <code>reformime</code> prints the MIME structure of the message. The output consists of so-called &quot;MIME reference tags&quot;, one per line. For example: </p>
 <dl>
 <dt>
@@ -52,7 +52,7 @@ description: "reformime – MIME E-mail reformatting tool"
 <p> -d</p>
 <dl>
 <dt>
-</dt><dd> Parse a delivery status notification MIME message (m[blue]<code>RFC 1894</code>m[]<font SIZE="-2">[2]</font>). <code>reformime</code> expects to see on standard input a MIME message that consists of a delivery status notification, as defined by RFC 1894. <code>reformime</code> reads the message and prints on standard output a list of addresses and their corresponding delivery status, as specified in the delivery status notification. Each line printed by <code>reformime</code> consists of a delivery status, a space, and the address. <code>reformime</code> then terminates with a 0 exit status. <code>reformime</code> produces no output and terminates with an exit status of 1 if the standard input does not contain a delivery status notification.</dd></dl>
+</dt><dd> Parse a delivery status notification MIME message (m[blue]<code>RFC 1894</code>m[][2]). <code>reformime</code> expects to see on standard input a MIME message that consists of a delivery status notification, as defined by RFC 1894. <code>reformime</code> reads the message and prints on standard output a list of addresses and their corresponding delivery status, as specified in the delivery status notification. Each line printed by <code>reformime</code> consists of a delivery status, a space, and the address. <code>reformime</code> then terminates with a 0 exit status. <code>reformime</code> produces no output and terminates with an exit status of 1 if the standard input does not contain a delivery status notification.</dd></dl>
 <p> -D</p>
 <dl>
 <dt>
@@ -72,7 +72,7 @@ description: "reformime – MIME E-mail reformatting tool"
 <p> -r</p>
 <dl>
 <dt>
-</dt><dd> Rewrite message, adding or standardizing m[blue]<code>RFC 2045</code>m[]<font SIZE="-2">[1]</font> MIME headers.</dd></dl>
+</dt><dd> Rewrite message, adding or standardizing m[blue]<code>RFC 2045</code>m[][1] MIME headers.</dd></dl>
 <p> -r7</p>
 <dl>
 <dt>
@@ -119,7 +119,7 @@ reformime -xfiles-
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> <code>reformime</code> extracts every MIME section in the message unless the <code>-s</code> option is specified. This includes even the text/plain MIME content that usually precedes a binary attachment. </p>
 </dl>
 <h3>Adding RFC 2045 MIME headers</h3>
@@ -167,7 +167,7 @@ Hóla!
 </dt><dd> This &#8220;undocumented&#8221; option reads a MIME message on standard input, and converts its contents to an UTF-8-encoded character stream, which is written to standard output. </dd>
 <p> The standard output receives a concatenated amalgam of the headers and &#8220;text&#8221; MIME object data. It is meant to be used as part of a generic search function. This option decodes various kinds of header MIME encoding, the quoted-printable and base64 transfer encodings of &#8220;text&#8221; MIME objects.</dl>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[]<font SIZE="-2">[3]</font>, <code>sendmail</code>(8), m[blue]<code><a href="/docs/linux/man/1-mailbot/">mailbot</a></code>(1)m[]<font SIZE="-2">[4]</font>, m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[5]</font>, m[blue]<code>maildropfilter</code>(5)m[]<font SIZE="-2">[6]</font>, <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code>sendmail</code>(8).</p>
+<p> m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[][3], <code>sendmail</code>(8), m[blue]<code><a href="/docs/linux/man/1-mailbot/">mailbot</a></code>(1)m[][4], m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[][5], m[blue]<code>maildropfilter</code>(5)m[][6], <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code>sendmail</code>(8).</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>

@@ -158,38 +158,38 @@ description: "ser2net – Serial to network proxy"
 <h2>FILENAME, BANNER, AND STRING FORMATTING</h2>
 <p> Filenames, banners, and open/close string may contain normal &quot;C&quot; escape sequences and a large number of other escape sequences, too: </p>
 <dl>
-<dd> <p> \a - bell <br />
- \b - backspace <br />
- \f - form feed <br />
- \n - newline <br />
- \r - carriage return <br />
- \t - tab <br />
- \v - vertical tab <br />
- \\ - \ <br />
- \? - ? <br />
- \&#8216; - &#8216; <br />
- \&quot; - &quot; <br />
- \nnn - octal value for nnn <br />
- \xXX - hex value for XX <br />
- \d - The device name (/dev/ttyS0, etc.) <br />
- \p - TCP port number <br />
- \B - The serial port parameters (eg 9600N81) <br />
- \Y -&gt; year <br />
- \y -&gt; day of the year (days since Jan 1) <br />
- \M -&gt; month (Jan, Feb, Mar, etc.) <br />
- \m -&gt; month (as a number) <br />
- \A -&gt; day of the week (Mon, Tue, etc.) <br />
- \D -&gt; day of the month <br />
- \e -&gt; epoc (seconds since Jan 1, 1970) <br />
- \U -&gt; microseconds in the current second <br />
- \p -&gt; local port number <br />
- \d -&gt; local device name <br />
- \I -&gt; remote IP address (in dot format) <br />
- \H -&gt; hour (24-hour time) <br />
- \h -&gt; hour (12-hour time) <br />
- \i -&gt; minute <br />
- \S -&gt; second <br />
- \q -&gt; am/pm <br />
+<dd> <p> \a - bell <br/>
+ \b - backspace <br/>
+ \f - form feed <br/>
+ \n - newline <br/>
+ \r - carriage return <br/>
+ \t - tab <br/>
+ \v - vertical tab <br/>
+ \\ - \ <br/>
+ \? - ? <br/>
+ \&#8216; - &#8216; <br/>
+ \&quot; - &quot; <br/>
+ \nnn - octal value for nnn <br/>
+ \xXX - hex value for XX <br/>
+ \d - The device name (/dev/ttyS0, etc.) <br/>
+ \p - TCP port number <br/>
+ \B - The serial port parameters (eg 9600N81) <br/>
+ \Y -&gt; year <br/>
+ \y -&gt; day of the year (days since Jan 1) <br/>
+ \M -&gt; month (Jan, Feb, Mar, etc.) <br/>
+ \m -&gt; month (as a number) <br/>
+ \A -&gt; day of the week (Mon, Tue, etc.) <br/>
+ \D -&gt; day of the month <br/>
+ \e -&gt; epoc (seconds since Jan 1, 1970) <br/>
+ \U -&gt; microseconds in the current second <br/>
+ \p -&gt; local port number <br/>
+ \d -&gt; local device name <br/>
+ \I -&gt; remote IP address (in dot format) <br/>
+ \H -&gt; hour (24-hour time) <br/>
+ \h -&gt; hour (12-hour time) <br/>
+ \i -&gt; minute <br/>
+ \S -&gt; second <br/>
+ \q -&gt; am/pm <br/>
  \P -&gt; AM/PM </p>
  </dd></dl>
 <p>In addition, for backwards compatibility because filenames and banners used to have different formatting, \s is the serial port parameters if in a banner and seconds if in a filename. Use of this is discouraged as it may change in the future. </p>

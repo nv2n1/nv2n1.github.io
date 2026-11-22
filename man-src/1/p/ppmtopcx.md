@@ -36,5 +36,5 @@ description: "ppmtopcx – convert a portable pixmap into a PCX file"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcxtoppm/">pcxtoppm</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
 <h2>AUTHORS</h2>
-<p> Copyright (C) 1994 by Ingo Wilken (Ingo.Wilken [at] informatik.uni-oldenburg.de)<br />
+<p> Copyright (C) 1994 by Ingo Wilken (Ingo.Wilken [at] informatik.uni-oldenburg.de)<br/>
  Based on previous work by Michael Davidson. </p>

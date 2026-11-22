@@ -71,7 +71,7 @@ ksDel(myConfig); // delete keyset and all keys appended
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ks</i> the KeySet that will receive the keys<br />
+</dt><dd> <i>ks</i> the KeySet that will receive the keys<br/>
  <i>toAppend</i> the KeySet that provides the keys that will be transfered</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
@@ -90,7 +90,7 @@ ksDel(myConfig); // delete keyset and all keys appended
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ks</i> KeySet that will receive the key<br />
+</dt><dd> <i>ks</i> KeySet that will receive the key<br/>
  <i>toAppend</i> Key that will be appended to ks</dd></dl>
 <p> <code>See also:</code></p>
 <dl>
@@ -102,17 +102,17 @@ ksDel(myConfig); // delete keyset and all keys appended
 <p> You can also use it to clear a keyset when you pass a NULL pointer as source. </p>
 <p> Note that all keys in dest will be deleted. Afterwards the content of the source will be added to the destination and the <code>ksCurrent()</code> is set properly in dest. </p>
 <p> A flat copy is made, so the keys will not be duplicated, but there reference counter is updated, so both keysets need to be <code>ksDel()</code>. </p>
-<p>int f(KeySet *ks)<br />
-{<br />
-    KeySet *c = ksNew(20, &#8230;, KS_END);<br />
-    // c receives keys<br />
-    ksCopy(ks, c); // pass the keyset to the caller<br />
-    ksDel(c);<br />
+<p>int f(KeySet *ks)<br/>
+{<br/>
+    KeySet *c = ksNew(20, &#8230;, KS_END);<br/>
+    // c receives keys<br/>
+    ksCopy(ks, c); // pass the keyset to the caller<br/>
+    ksDel(c);<br/>
 } // caller needs to ksDel (ks)</p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>source</i> has to be an initialized source KeySet or NULL<br />
+</dt><dd> <i>source</i> has to be an initialized source KeySet or NULL<br/>
  <i>dest</i> has to be an initialized KeySet where to write the keys</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -186,26 +186,26 @@ ksDel(myConfig); // delete keyset and all keys appended
 </dt><dd> Cursors are getting invalid when the key was <code>ksPop()</code>ed or <code>ksLookup()</code> with KDB_O_POP was used.</dd></dl>
 <h2>Read ahead</h2>
 <p> With the cursors it is possible to read ahead in a keyset: </p>
-<p>cursor_t jump;<br />
-ksRewind(ks);<br />
-while ((key = keyNext(ks)) != 0) {<br />
-    // now mark this key<br />
-    jump = ksGetCursor(ks);<br />
-    // code..<br />
-    keyNext(ks); // now browse on<br />
-    // use ksCurrent(ks) to check the keys<br />
-    // code..<br />
-    // jump back to the position marked before<br />
-    ksSetCursor(ks, jump);<br />
+<p>cursor_t jump;<br/>
+ksRewind(ks);<br/>
+while ((key = keyNext(ks)) != 0) {<br/>
+    // now mark this key<br/>
+    jump = ksGetCursor(ks);<br/>
+    // code..<br/>
+    keyNext(ks); // now browse on<br/>
+    // use ksCurrent(ks) to check the keys<br/>
+    // code..<br/>
+    // jump back to the position marked before<br/>
+    ksSetCursor(ks, jump);<br/>
 }</p>
 <h2>Restoring state</h2>
 <p> It can also be used to restore the state of a keyset in a function </p>
-<p>int f(KeySet *ks)<br />
-{<br />
-    cursor_t state = ksGetCursor(ks);<br />
-    // work with keyset<br />
-    // now bring the keyset to the state before<br />
-    ksSetCursor(ks, state);<br />
+<p>int f(KeySet *ks)<br/>
+{<br/>
+    cursor_t state = ksGetCursor(ks);<br/>
+    // work with keyset<br/>
+    // now bring the keyset to the state before<br/>
+    ksSetCursor(ks, state);<br/>
 }</p>
 <p> It is of course possible to make the KeySet const and cast its const away to set the cursor. Another way to achieve the same is to <code>ksDup()</code> the keyset, but it is not as efficient. </p>
 <p> An invalid cursor will be returned directly after <code>ksRewind()</code>. When you set an invalid cursor <code>ksCurrent()</code> is 0 and <code>ksNext()</code> == <code>ksHead()</code>. </p>
@@ -264,11 +264,11 @@ while ((key = keyNext(ks)) != 0) {<br />
 <h2>Usage</h2>
 <p> If found, ks internal cursor will be positioned in the matched key (also accessible by <code>ksCurrent()</code>), and a pointer to the Key is returned. If not found, ks internal cursor will not move, and a NULL pointer is returned. </p>
 <p> Cascading is done if the first character is a /. This leads to ignoring the prefix like system/ and user/. </p>
-<p>if (kdbGet(handle, &#8216;user/myapp&#8217;, myConfig, 0) == -1)<br />
-    ErrorHandler(&#8216;Could not get Keys&#8217;);<br />
-if (kdbGet(handle, &#8216;system/myapp&#8217;, myConfig, 0) == -1)<br />
-    ErrorHandler(&#8216;Could not get Keys&#8217;);<br />
-if ((myKey = ksLookup(myConfig, key, 0)) == NULL)<br />
+<p>if (kdbGet(handle, &#8216;user/myapp&#8217;, myConfig, 0) == -1)<br/>
+    ErrorHandler(&#8216;Could not get Keys&#8217;);<br/>
+if (kdbGet(handle, &#8216;system/myapp&#8217;, myConfig, 0) == -1)<br/>
+    ErrorHandler(&#8216;Could not get Keys&#8217;);<br/>
+if ((myKey = ksLookup(myConfig, key, 0)) == NULL)<br/>
     ErrorHandler(&#8216;Could not Lookup Key&#8217;);</p>
 <p> This is the way multi user Programs should get there configuration and search after the values. It is guaranteed that more namespaces can be added easily and that all values can be set by admin and user.</p>
 <h3>KDB_O_NOALL</h3>
@@ -292,27 +292,27 @@ if ((myKey = ksLookup(myConfig, key, 0)) == NULL)<br />
 </dt><dd> Never use <code>ksLookup()</code> with KDB_O_POP and <code>ksAppendKey()</code> or <code>ksAppend()</code> together in a loop. Otherwise <code>ksLookup()</code> will need to resort the keyset every iteration and spend 99.96% of the time in <code>ksSort()</code> (benchmarked with above 500k iterations).</dd></dl>
 <p> You can solve this problem by using KDB_O_NOALL, risking you have to iterate n^2 instead of n. </p>
 <p> The more elegant way is to separate the keyset you use for <code>ksLookup()</code> and <code>ksAppendKey()</code>: </p>
-<p>int f(KeySet *iterator, KeySet *lookup)<br />
-{<br />
-    KeySet *append = ksNew(ksGetSize(lookup), KS_END);<br />
-    Key *key;<br />
-    Key *current;<br />
-    ksRewind(iterator);<br />
-    while (current = ksNext(iterator)) {<br />
-        key = ksLookup(lookup, current, KDB_O_POP);<br />
-        // do something&#8230;<br />
-        ksAppendKey(append, key); // now append it to append, not lookup!<br />
-        keyDel(key);              // make sure to ALWAYS delete poped keys.<br />
-    }<br />
-    ksAppend(lookup, append);<br />
-    // now lookup needs to be sorted only once, append never<br />
-    ksDel(append);<br />
+<p>int f(KeySet *iterator, KeySet *lookup)<br/>
+{<br/>
+    KeySet *append = ksNew(ksGetSize(lookup), KS_END);<br/>
+    Key *key;<br/>
+    Key *current;<br/>
+    ksRewind(iterator);<br/>
+    while (current = ksNext(iterator)) {<br/>
+        key = ksLookup(lookup, current, KDB_O_POP);<br/>
+        // do something&#8230;<br/>
+        ksAppendKey(append, key); // now append it to append, not lookup!<br/>
+        keyDel(key);              // make sure to ALWAYS delete poped keys.<br/>
+    }<br/>
+    ksAppend(lookup, append);<br/>
+    // now lookup needs to be sorted only once, append never<br/>
+    ksDel(append);<br/>
 }</p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ks</i> where to look for<br />
- <i>key</i> the key object you are looking for<br />
+</dt><dd> <i>ks</i> where to look for<br/>
+ <i>key</i> the key object you are looking for<br/>
  <i>options</i> some KDB_O_* option bits:</dd>
 <dl>
 <dt>*</dt>
@@ -348,9 +348,9 @@ if ((myKey = ksLookup(myConfig, key, 0)) == NULL)<br />
 <p> If found, ks internal cursor will be positioned in the matched key (also accessible by <code>ksCurrent()</code>), and a pointer to the Key is returned. If not found, ks internal cursor will not move, and a NULL pointer is returned.</p>
 <h2>Cascading</h2>
 <p> Cascading is done if the first character is a /. This leads to ignoring the prefix like system/ and user/. </p>
-<p>if (kdbGetByName(handle, &#8216;/sw/myapp/current&#8217;, myConfig, 0) == -1)<br />
-    ErrorHandler(&#8216;Could not get Keys&#8217;);<br />
-if ((myKey = ksLookupByName(myConfig, &#8216;/myapp/current/key&#8217;, 0)) == NULL)<br />
+<p>if (kdbGetByName(handle, &#8216;/sw/myapp/current&#8217;, myConfig, 0) == -1)<br/>
+    ErrorHandler(&#8216;Could not get Keys&#8217;);<br/>
+if ((myKey = ksLookupByName(myConfig, &#8216;/myapp/current/key&#8217;, 0)) == NULL)<br/>
     ErrorHandler(&#8216;Could not Lookup Key&#8217;);</p>
 <p> This is the way multi user Programs should get there configuration and search after the values. It is guaranteed that more namespaces can be added easily and that all values can be set by admin and user.</p>
 <h2>Full Search</h2>
@@ -359,8 +359,8 @@ if ((myKey = ksLookupByName(myConfig, &#8216;/myapp/current/key&#8217;, 0)) == N
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ks</i> where to look for<br />
- <i>name</i> key name you are looking for<br />
+</dt><dd> <i>ks</i> where to look for<br/>
+ <i>name</i> key name you are looking for<br/>
  <i>options</i> some KDB_O_* option bits:</dd>
 <dl>
 <dt>*</dt>
@@ -394,22 +394,22 @@ if ((myKey = ksLookupByName(myConfig, &#8216;/myapp/current/key&#8217;, 0)) == N
 <p> Objects created with <code>ksNew()</code> must be destroyed with <code>ksDel()</code>. </p>
 <p> You can use a various long list of parameters to preload the keyset with a list of keys. Either your first and only parameter is 0 or your last parameter must be KEY_END. </p>
 <p> For most uses </p>
-<p>KeySet *keys = ksNew(0);<br />
-// work with it<br />
+<p>KeySet *keys = ksNew(0);<br/>
+// work with it<br/>
 ksDel(keys);</p>
 <p>&nbsp;<wbr>goes ok, the alloc size will be 16, defined in kdbprivate.h. The alloc size will be doubled whenever size reaches alloc size, so it also performs out large keysets. </p>
 <p> But if you have any clue how large your keyset may be you should read the next statements. </p>
 <p> If you want a keyset with length 15 (because you know of your application that you normally need about 12 up to 14 keys), use: </p>
-<p>KeySet *keys = ksNew(15, KS_END);<br />
-// work with it<br />
+<p>KeySet *keys = ksNew(15, KS_END);<br/>
+// work with it<br/>
 ksDel(keys);</p>
 <p> If you start having 3 keys, and your application needs approximately 200-500 keys, you can use: </p>
-<p>KeySet *config = ksNew(500,<br />
-                       keyNew(&#8216;user/sw/app/fixedConfiguration/key1&#8217;, KEY_SWITCH_VALUE, &#8216;value1&#8217;, 0),<br />
-                       keyNew(&#8216;user/sw/app/fixedConfiguration/key2&#8217;, KEY_SWITCH_VALUE, &#8216;value2&#8217;, 0),<br />
-                       keyNew(&#8216;user/sw/app/fixedConfiguration/key3&#8217;, KEY_SWITCH_VALUE, &#8216;value3&#8217;, 0),<br />
-                       KS_END); // don&#8217;t forget the KS_END at the end!<br />
-// work with it<br />
+<p>KeySet *config = ksNew(500,<br/>
+                       keyNew(&#8216;user/sw/app/fixedConfiguration/key1&#8217;, KEY_SWITCH_VALUE, &#8216;value1&#8217;, 0),<br/>
+                       keyNew(&#8216;user/sw/app/fixedConfiguration/key2&#8217;, KEY_SWITCH_VALUE, &#8216;value2&#8217;, 0),<br/>
+                       keyNew(&#8216;user/sw/app/fixedConfiguration/key3&#8217;, KEY_SWITCH_VALUE, &#8216;value3&#8217;, 0),<br/>
+                       KS_END); // don&#8217;t forget the KS_END at the end!<br/>
+// work with it<br/>
 ksDel(config);</p>
 <p>&nbsp;<wbr>Alloc size is 500, the size of the keyset will be 3 after ksNew. This means the keyset will reallocate when appending more than 497 keys. </p>
 <p> The main benefit of taking a list of variant length parameters is to be able to have one C-Statement for any possible KeySet. </p>
@@ -457,16 +457,16 @@ ksDel(config);</p>
 <dl>
 <dt>
 </dt><dd> You need to <code>keyDel()</code> the key afterwards, if you don&#8217;t append it to another keyset. It has the same semantics like a key allocated with <code>keyNew()</code> or <code>keyDup()</code>.</dd></dl>
-<p>ks1 = ksNew(0);<br />
-ks2 = ksNew(0);<br />
-k1 = keyNew(0);       // ref counter 0<br />
-ksAppendKey(ks1, k1); // ref counter 1<br />
-ksAppendKey(ks2, k1); // ref counter 2<br />
-k1 = ksPop(ks1);      // ref counter 1<br />
-k1 = ksPop(ks2);      // ref counter 0, like after keyNew()<br />
-ksAppendKey(ks1, k1); // ref counter 1<br />
-ksDel(ks1);           // key is deleted too<br />
-ksDel(ks2);<br />
+<p>ks1 = ksNew(0);<br/>
+ks2 = ksNew(0);<br/>
+k1 = keyNew(0);       // ref counter 0<br/>
+ksAppendKey(ks1, k1); // ref counter 1<br/>
+ksAppendKey(ks2, k1); // ref counter 2<br/>
+k1 = ksPop(ks1);      // ref counter 1<br/>
+k1 = ksPop(ks2);      // ref counter 0, like after keyNew()<br/>
+ksAppendKey(ks1, k1); // ref counter 1<br/>
+ksDel(ks1);           // key is deleted too<br/>
+ksDel(ks2);<br/>
 *</p>
 <p> <code>Returns:</code></p>
 <dl>
@@ -484,8 +484,8 @@ ksDel(ks2);<br />
 <p> commandList() for an example</dl>
 <h3>int ksRewind (KeySet * ks)Rewinds the KeySet internal cursor.</h3>
 <p> Use it to set the cursor to the beginning of the KeySet. <code>ksCurrent()</code> will then always return NULL afterwards. So you want to <code>ksNext()</code> first. </p>
-<p>ksRewind(ks);<br />
-while ((key = keyNext(ks)) != 0) {<br />
+<p>ksRewind(ks);<br/>
+while ((key = keyNext(ks)) != 0) {<br/>
 }</p>
 <p> <code>Parameters:</code></p>
 <dl>
@@ -506,18 +506,18 @@ while ((key = keyNext(ks)) != 0) {<br />
 <dl>
 <dt>
 </dt><dd> Cursors may get invalid when the key was <code>ksPop()</code>ed or <code>ksLookup()</code> was used together with KDB_O_POP.</dd></dl>
-<p>cursor_t cursor;<br />
-// key now in any position here<br />
-cursor = ksGetCursor(ks);<br />
-while ((key = keyNext(ks)) != 0) {<br />
-}<br />
-ksSetCursor(ks, cursor); // reset state<br />
+<p>cursor_t cursor;<br/>
+// key now in any position here<br/>
+cursor = ksGetCursor(ks);<br/>
+while ((key = keyNext(ks)) != 0) {<br/>
+}<br/>
+ksSetCursor(ks, cursor); // reset state<br/>
 ksCurrent(ks);           // in same position as before</p>
 <p> An invalid cursor will set the keyset to its beginning like <code>ksRewind()</code>. When you set an invalid cursor <code>ksCurrent()</code> is 0 and <code>ksNext()</code> == <code>ksHead()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cursor</i> the cursor to use<br />
+</dt><dd> <i>cursor</i> the cursor to use<br/>
  <i>ks</i> the keyset object to work with</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -533,9 +533,9 @@ ksCurrent(ks);           // in same position as before</p>
 <p> You need <code>ksSort()</code> only in few cases directly.</p>
 <h2>Don&#8217;t need to sort before using ksLookup</h2>
 <p> You don&#8217;t need it if you just just <code>kdbGet()</code> and subsequent <code>ksLookup()</code>. </p>
-<p>KeySet *ks = ksNew(0);<br />
-kdbGet(h, ks, k, 0);<br />
-// ksPop(), ksAppend() and ksAppendKey() allowed here<br />
+<p>KeySet *ks = ksNew(0);<br/>
+kdbGet(h, ks, k, 0);<br/>
+// ksPop(), ksAppend() and ksAppendKey() allowed here<br/>
 ksLookup(ks, s, 0); // you dont need to sort ks</p>
 <p> This is because the KeySet tracks if it needs to be sorted and <code>ksLookup()</code> will sort when needed.</p>
 <h2>Sort when iterating</h2>

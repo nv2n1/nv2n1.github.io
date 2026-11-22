@@ -26,7 +26,7 @@ description: "perl5221delta – what is new for perl v5.22.1"
 <dd> <p> PerlIO::scalar has been upgraded from version 0.22 to 0.23. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">POSIX</font> has been upgraded from version 1.53 to 1.53_01. </p>
+<dd> <p> POSIX has been upgraded from version 1.53 to 1.53_01. </p>
 <p> If <code>&quot;POSIX::strerror&quot;</code> was passed <code>$!</code> as its argument then it accidentally cleared <code>$!</code>. This has been fixed. [perl #126229] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=126229">https://rt.perl.org/Ticket/Display.html?id=126229</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
@@ -70,19 +70,19 @@ description: "perl5221delta – what is new for perl v5.22.1"
 <h2>Platform Support</h2>
 <h3>Platform-Specific Notes</h3>
 <dl>
-<dt><font SIZE="-1">IRIX</font></dt>
+<dt>IRIX</dt>
 <dd>  </dd>
 <dl>
 <dd>  </dd>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Under some circumstances <font SIZE="-1">IRIX</font> stdio <code>fgetc()</code> and <code>fread()</code> set the errno to <code>&quot;ENOENT&quot;</code>, which made no sense according to either <font SIZE="-1">IRIX</font> or <font SIZE="-1">POSIX</font> docs. Errno is now cleared in such cases. [perl #123977] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123977">https://rt.perl.org/Ticket/Display.html?id=123977</a>&gt; </p>
+<dd> <p> Under some circumstances IRIX stdio <code>fgetc()</code> and <code>fread()</code> set the errno to <code>&quot;ENOENT&quot;</code>, which made no sense according to either IRIX or POSIX docs. Errno is now cleared in such cases. [perl #123977] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123977">https://rt.perl.org/Ticket/Display.html?id=123977</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Problems when multiplying long doubles by infinity have been fixed. [perl #126396] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=126396">https://rt.perl.org/Ticket/Display.html?id=126396</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> All tests pass now on <font SIZE="-1">IRIX</font> with the default build configuration. </p>
+<dd> <p> All tests pass now on IRIX with the default build configuration. </p>
  </dd></dl>
 </dl>
 <dl>
@@ -94,7 +94,7 @@ description: "perl5221delta – what is new for perl v5.22.1"
 <dd> <p> <code>&quot;qr/(?[ () ])/&quot;</code> no longer segfaults, giving a syntax error message instead. [perl #125805] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=125805">https://rt.perl.org/Ticket/Display.html?id=125805</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Regular expression possessive quantifier Perl 5.20 regression now fixed. <code>&quot;qr/&quot;</code><i></i><font SIZE="-1"><i>PAT</i></font><i></i><code>&quot;{&quot;</code><i>min</i>,<i>max</i><code>&quot;}+&quot;</code><code>&quot;/&quot;</code> is supposed to behave identically to <code>&quot;qr/(?&gt;&quot;</code><i></i><font SIZE="-1"><i>PAT</i></font><i></i><code>&quot;{&quot;</code><i>min</i>,<i>max</i><code>&quot;})/&quot;</code>. Since Perl 5.20, this didn&#8217;t work if <i>min</i> and <i>max</i> were equal. [perl #125825] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=125825">https://rt.perl.org/Ticket/Display.html?id=125825</a>&gt; </p>
+<dd> <p> Regular expression possessive quantifier Perl 5.20 regression now fixed. <code>&quot;qr/&quot;</code><i></i><i>PAT</i><i></i><code>&quot;{&quot;</code><i>min</i>,<i>max</i><code>&quot;}+&quot;</code><code>&quot;/&quot;</code> is supposed to behave identically to <code>&quot;qr/(?&gt;&quot;</code><i></i><i>PAT</i><i></i><code>&quot;{&quot;</code><i>min</i>,<i>max</i><code>&quot;})/&quot;</code>. Since Perl 5.20, this didn&#8217;t work if <i>min</i> and <i>max</i> were equal. [perl #125825] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=125825">https://rt.perl.org/Ticket/Display.html?id=125825</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Certain syntax errors in ``Extended Bracketed Character Classes&#8217;&#8216; in perlrecharclass caused panics instead of the proper error message. This has now been fixed. [perl #126481] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=126481">https://rt.perl.org/Ticket/Display.html?id=126481</a>&gt; </p>
@@ -141,14 +141,14 @@ description: "perl5221delta – what is new for perl v5.22.1"
 <p> Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.22.1: </p>
 <p> Aaron Crane, Abigail, Andy Broad, Aristotle Pagaltzis, Chase Whitener, Chris &#8216;BinGOs&#8217; Williams, Craig A. Berry, Daniel Dragan, David Mitchell, Father Chrysostomos, Herbert Breunung, Hugo van der Sanden, James E Keenan, Jan Dubois, Jarkko Hietaniemi, Karen Etheridge, Karl Williamson, Lukas Mai, Matthew Horsfall, Peter Martini, Rafael Garcia-Suarez, Ricardo Signes, Shlomi Fish, Sisyphus, Steve Hay, Tony Cook, Victor Adam. </p>
 <p> The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. </p>
-<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.  </p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish. </p>
+<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.  </p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="https://rt.perl.org/">https://rt.perl.org/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font>  </p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

@@ -86,7 +86,7 @@ $ docker network create-- driver = bridge-- subnet = 172.28.0.0 / 16 --ip - rang
 <dl>
 <dt>
 </dt><dd>
-<p>$ docker network create &#8211; d overlay&#8211; subnet = 192.168.0.0 / 16 &#8211;subnet = 192.170.0.0 / 16 &#8211;gateway = 192.168.0.100 \<br />
+<p>$ docker network create &#8211; d overlay&#8211; subnet = 192.168.0.0 / 16 &#8211;subnet = 192.170.0.0 / 16 &#8211;gateway = 192.168.0.100 \<br/>
   &#8211;gateway = 192.170.0.100 &#8211;ip &#8211; range = 192.168.1.0 / 24 &#8211;aux &#8211; address = &#8220;my-router=192.168.1.5&#8221; &#8211;aux &#8211; address = &#8220;my-switch=192.168.1.6&#8221; &#8211;aux &#8211; address = &#8220;my-printer=192.170.1.5&#8221; &#8211;aux &#8211; address = &#8220;my-nas=192.170.1.6&#8221; my &#8211; multihost &#8211; network
 </dd></dl>
 <p> Be sure that your subnetworks do not overlap. If they do, the network create fails and Engine returns an error. </p>

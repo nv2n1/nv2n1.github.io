@@ -39,12 +39,12 @@ description: "mkmanifest – makes list of file names and their DOS 8+3 equivale
   capital
 </code></pre>
 <p>&nbsp; </p>
-<p> The command:<br />
+<p> The command:<br/>
 &nbsp; </p>
 <pre>
 <code>mkmanifest very_long_name 2.many.dots illegal: good.c prn.dev Capital &gt;manifest
 </code></pre>
-<p>&nbsp; would produce the following:<br />
+<p>&nbsp; would produce the following:<br/>
 &nbsp; </p>
 <pre>
 <code>  mv very_lon very_long_name
@@ -64,7 +64,7 @@ description: "mkmanifest – makes list of file names and their DOS 8+3 equivale
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation. However, this process is only approximative, and some items, such as crossreferences, footnotes and indices are lost in this translation process. Indeed, these items have no appropriate representation in the manpage format. Moreover, not all information has been translated into the manpage version. Thus I strongly advise you to use the original texinfo doc. See the end of this manpage for instructions how to view the texinfo doc.</p>
 <dl>
 <dt>* &nbsp;<wbr>&nbsp;</dt>
-<dd> To generate a printable copy from the texinfo doc, run the following commands:<br />
+<dd> To generate a printable copy from the texinfo doc, run the following commands:<br/>
 &nbsp; </dd>
 <pre>
 <code>    ./configure; make dvi; dvips mtools.dvi
@@ -73,7 +73,7 @@ description: "mkmanifest – makes list of file names and their DOS 8+3 equivale
 <p>&nbsp;</p>
 <dl>
 <dt>* &nbsp;<wbr>&nbsp;</dt>
-<dd> To generate a html copy, run:<br />
+<dd> To generate a html copy, run:<br/>
 &nbsp; </dd>
 <pre>
 <code>    ./configure; make html
@@ -82,7 +82,7 @@ description: "mkmanifest – makes list of file names and their DOS 8+3 equivale
 <p>&nbsp; A premade html can be found at <tt>&infin;<a rel="nofollow" href="http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral">http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral</a></tt></p>
 <dl>
 <dt>* &nbsp;<wbr>&nbsp;</dt>
-<dd> To generate an info copy (browsable using emacs&#8217; info mode), run:<br />
+<dd> To generate an info copy (browsable using emacs&#8217; info mode), run:<br/>
 &nbsp; </dd>
 <pre>
 <code>    ./configure; make info

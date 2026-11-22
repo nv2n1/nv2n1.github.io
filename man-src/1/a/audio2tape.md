@@ -35,7 +35,7 @@ description: "audio2tape – Sinclair ZX Spectrum audio to tape file converter"
 <p> None known.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-fuse/">fuse</a></i>(1), <i><a href="/docs/linux/man/1-fuse-utils/">fuse-utils</a></i>(1), <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3), <i><a href="/docs/linux/man/1-listbasic/">listbasic</a></i>(1), <i><a href="/docs/linux/man/1-tapeconv/">tapeconv</a></i>(1), <i><a href="/docs/linux/man/1-tzxlist/">tzxlist</a></i>(1), <i><a href="/docs/linux/man/1-snap2tzx/">snap2tzx</a></i>(1), <i><a href="/docs/linux/man/1-tape2wav/">tape2wav</a></i>(1) </p>
-<p> The comp.sys.sinclair Spectrum FAQ, at<br />
+<p> The comp.sys.sinclair Spectrum FAQ, at<br/>
  <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/index.html">http://www.worldofspectrum.org/faq/index.html</a></i>.</p>
 <h2>AUTHOR</h2>
 <p> Fredrick Meunier (fredm [at] spamcop.net). </p>

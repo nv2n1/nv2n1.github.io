@@ -10,7 +10,7 @@ description: "zgeesx.f –"
 <p>zgeesx.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgeesx</code> (JOBVS, SORT, SELECT, SENSE, N, A, LDA, SDIM, W, VS, LDVS, RCONDE, RCONDV, WORK, LWORK, RWORK, BWORK, INFO)<br />
+<p>subroutine <code>zgeesx</code> (JOBVS, SORT, SELECT, SENSE, N, A, LDA, SDIM, W, VS, LDVS, RCONDE, RCONDV, WORK, LWORK, RWORK, BWORK, INFO)<br/>
  <i></i><code> ZGEESX computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgeesx (characterJOBVS, characterSORT, logical, externalSELECT, characterSENSE, integerN, complex*16, dimension( lda, * )A, integerLDA, integerSDIM, complex*16, dimension( * )W, complex*16, dimension( ldvs, * )VS, integerLDVS, double precisionRCONDE, double precisionRCONDV, complex*16, dimension( * )WORK, integerLWORK, double precision, dimension( * )RWORK, logical, dimension( * )BWORK, integerINFO)</h3>

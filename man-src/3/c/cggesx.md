@@ -11,7 +11,7 @@ description: "cggesx.f –"
 <p> cggesx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cggesx</code> (JOBVSL, JOBVSR, SORT, SELCTG, SENSE, N, A, LDA, B, LDB, SDIM, ALPHA, BETA, VSL, LDVSL, VSR, LDVSR, RCONDE, RCONDV, WORK, LWORK, RWORK, IWORK, LIWORK, BWORK, INFO)<br />
+<p> subroutine <code>cggesx</code> (JOBVSL, JOBVSR, SORT, SELCTG, SENSE, N, A, LDA, B, LDB, SDIM, ALPHA, BETA, VSL, LDVSL, VSR, LDVSR, RCONDE, RCONDV, WORK, LWORK, RWORK, IWORK, LIWORK, BWORK, INFO)<br/>
  <i></i><code> CGGESX computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cggesx (characterJOBVSL, characterJOBVSR, characterSORT, logical, externalSELCTG, characterSENSE, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, integerSDIM, complex, dimension( * )ALPHA, complex, dimension( * )BETA, complex, dimension( ldvsl, * )VSL, integerLDVSL, complex, dimension( ldvsr, * )VSR, integerLDVSR, real, dimension( 2 )RCONDE, real, dimension( 2 )RCONDV, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integer, dimension( * )IWORK, integerLIWORK, logical, dimension( * )BWORK, integerINFO)</h3>
@@ -84,10 +84,10 @@ description: "cggesx.f –"
           case INFO is set to N+3 see INFO below).
 </pre>
 <p> <i>SENSE</i> </p>
-<p>SENSE is CHARACTER * 1 Determines which reciprocal condition numbers are computed.= &#8216;N&#8217; : None are computed;<br />
-          = &#8216;E&#8217; : Computed for average of selected eigenvalues only;<br />
-          = &#8216;V&#8217; : Computed for selected deflating subspaces only;<br />
-          = &#8216;B&#8217; : Computed for both.<br />
+<p>SENSE is CHARACTER * 1 Determines which reciprocal condition numbers are computed.= &#8216;N&#8217; : None are computed;<br/>
+          = &#8216;E&#8217; : Computed for average of selected eigenvalues only;<br/>
+          = &#8216;V&#8217; : Computed for selected deflating subspaces only;<br/>
+          = &#8216;B&#8217; : Computed for both.<br/>
           If SENSE = &#8216;E&#8217;, &#8216;V&#8217;, or &#8216;B&#8217;, SORT must equal &#8216;S&#8217;.</p>
 <p> <i>N</i> </p>
 <pre>

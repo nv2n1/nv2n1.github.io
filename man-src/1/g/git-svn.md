@@ -271,7 +271,7 @@ git config --get-all svn-remote.&lt;name&gt;.commiturl
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  SVN itself only stores times in UTC and nothing else. The regular svn client converts the UTC time to the local time (or based on the TZ= environment). This command has the same behaviour. </dd>
 </dl>
 <p> Any other arguments are passed directly to <i>git log</i></dl>
@@ -376,7 +376,7 @@ git svn fetch
 <dt>
 </dt><dd>
 r1&#8211; &#8211; r2 &#8216;&#8211;r3&#8217; remotes / git &#8211; svn</dd>
-<p>                                     r2&#8211; &#8211;<br />
+<p>                                     r2&#8211; &#8211;<br/>
     r3&#8211; &#8211; A&#8211; &#8211; B master
 </dl>
 <p> Then fixup &quot;master&quot; with <i>git rebase</i>. Do NOT use <i>git merge</i> or your history will not be compatible with a future <i>dcommit</i>! </p>
@@ -629,25 +629,25 @@ config key: svn.followparent
 <dl>
 <dt>
 </dt><dd>
-#Do the initial import on a server<br />
-ssh server &#8220;cd /pub &amp;&amp; git svn clone http://svn.example.com/project<br />
-#Clone locally &#8211; make sure the refs / remotes / space matches the server<br />
-        mkdir project<br />
-            cd project<br />
-                git init<br />
-                    git remote add origin server : /<br />
-                                                   pub / project git config&#8211; replace &#8211;<br />
-    all remote.origin.fetch &#8216;+refs/remotes/*:refs/remotes/*&#8217; git fetch<br />
-#Prevent fetch / pull from remote Git server in the future,<br />
-#we only want to use git svn for future updates<br />
-        git config&#8211; remove &#8211;<br />
-    section remote.origin<br />
-#Create a local branch from one of the branches just fetched<br />
-        git checkout &#8211;<br />
-    b master FETCH_HEAD<br />
-#Initialize &#8216;git svn&#8217; locally(be sure to use the same URL and -T / -b / -t options as were used on server)<br />
-        git svn init http : // svn.example.com/project<br />
-#Pull the latest changes from Subversion<br />
+#Do the initial import on a server<br/>
+ssh server &#8220;cd /pub &amp;&amp; git svn clone http://svn.example.com/project<br/>
+#Clone locally &#8211; make sure the refs / remotes / space matches the server<br/>
+        mkdir project<br/>
+            cd project<br/>
+                git init<br/>
+                    git remote add origin server : /<br/>
+                                                   pub / project git config&#8211; replace &#8211;<br/>
+    all remote.origin.fetch &#8216;+refs/remotes/*:refs/remotes/*&#8217; git fetch<br/>
+#Prevent fetch / pull from remote Git server in the future,<br/>
+#we only want to use git svn for future updates<br/>
+        git config&#8211; remove &#8211;<br/>
+    section remote.origin<br/>
+#Create a local branch from one of the branches just fetched<br/>
+        git checkout &#8211;<br/>
+    b master FETCH_HEAD<br/>
+#Initialize &#8216;git svn&#8217; locally(be sure to use the same URL and -T / -b / -t options as were used on server)<br/>
+        git svn init http : // svn.example.com/project<br/>
+#Pull the latest changes from Subversion<br/>
                             git svn rebase
 </dd></dl>
 <h2>REBASE VS. PULL/MERGE</h2>

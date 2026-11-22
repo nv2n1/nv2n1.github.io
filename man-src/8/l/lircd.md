@@ -100,6 +100,6 @@ description: "lircd – LIRC daemon decodes infrared signals and provides them o
 <h2>Daemons</h2>
 <p>lircd is a daemon. You should start it in some init script depending on your system. Besides the preferred systemd setup which is installed by default there are also example scripts for other distros and init systems in the contrib directory.</p>
 <h2>See Also</h2>
-<p>irdb-get(1)<br />
- lirc-setup(1)<br />
+<p>irdb-get(1)<br/>
+ lirc-setup(1)<br/>
  <a href="/docs/linux/man/5-lircd-conf/">lircd.conf</a>(5) </p>

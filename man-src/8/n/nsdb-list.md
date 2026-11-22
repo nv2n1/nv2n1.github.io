@@ -70,7 +70,7 @@ description: "nsdb-list – list file set name and location entries on an NSDB"
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that you want to know if the LDAP server <i>ldap.example.net</i> is an NSDB. Use:</p>
 <dl>
-<dd>$ nsdb-list -l ldap.example.net -e o=fedfs<br />
+<dd>$ nsdb-list -l ldap.example.net -e o=fedfs<br/>
  NSDB: ldap.example.net:389 </dd>
 <pre><code>NCE: o=fedfs</code></pre>
 <p>&nbsp;<wbr>FSN UUID: c1c21720-1fcd-4ad6-a837-f57af4cf2972 </p>

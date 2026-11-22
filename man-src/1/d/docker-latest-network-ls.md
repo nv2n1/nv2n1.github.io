@@ -153,13 +153,13 @@ $ docker network rm `docker network ls --filter type=custom -q`
 </dd></dl>
 <p> A warning will be issued when trying to remove a network that has containers attached. </p>
 <h2>OPTIONS</h2>
-<p> <code>-f</code>, <code>&#8211;filter</code>=<i>[]</i><br />
+<p> <code>-f</code>, <code>&#8211;filter</code>=<i>[]</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>filter output based on conditions provided. </p>
-<p> <code>&#8211;no-trunc</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;no-trunc</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Do not truncate the output </p>
-<p> <code>-q</code>, <code>&#8211;quiet</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-q</code>, <code>&#8211;quiet</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Only display network IDs </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>HISTORY</h2>
 <p> OCT 2015, created by Mary Anthony &lt;mary [at] docker.com&gt; </p>

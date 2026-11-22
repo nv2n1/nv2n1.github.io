@@ -11,7 +11,7 @@ description: "iv_thread_create, iv_thread_set_debug_state – ivykis thread conv
 <p> iv_thread_create, iv_thread_set_debug_state &#8211; ivykis thread convenience functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_thread.h&gt;</code> </p>
-<p> <code>int iv_thread_create(char *</code><i>name</i><code>, void (*</code><i>start_routine</i><code>)(void *), void *</code><i>arg</i><code>);</code><br />
+<p> <code>int iv_thread_create(char *</code><i>name</i><code>, void (*</code><i>start_routine</i><code>)(void *), void *</code><i>arg</i><code>);</code><br/>
  <code>void iv_thread_set_debug_state(int </code><i>state</i><code>);</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>iv_thread_create</code> is a wrapper around <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3) which will maintain an ivykis main loop reference in the calling thread (which must be an <code>ivykis</code>(3) thread, i.e. have had <code>iv_init</code>(3) called in it) for as long as the created thread is alive. </p>

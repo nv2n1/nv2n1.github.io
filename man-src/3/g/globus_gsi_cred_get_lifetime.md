@@ -10,56 +10,56 @@ description: "Credential Handle Management –"
 
 <p> Credential Handle Management &#8211; </p>
 <h3>Typedefs</h3>
-<p> typedef struct<br />
+<p> typedef struct<br/>
  globus_l_gsi_cred_handle_s * <code>globus_gsi_cred_handle_t</code>&quot; </p>
 <h3>Functions</h3>
-<p> globus_result_t <code>globus_gsi_cred_handle_init</code> (<code>globus_gsi_cred_handle_t</code> *handle, <code>globus_gsi_cred_handle_attrs_t</code> handle_attrs)<br />
- <i>Initialize a Handle. </i><br />
- globus_result_t <code>globus_gsi_cred_handle_destroy</code> (<code>globus_gsi_cred_handle_t</code> handle)<br />
- <i>Destroy the credential handle. </i><br />
- globus_result_t <code>globus_gsi_cred_handle_copy</code> (<code>globus_gsi_cred_handle_t</code> source, <code>globus_gsi_cred_handle_t</code> *dest)<br />
- <i>Copy a handle. </i><br />
- globus_result_t <code>globus_gsi_cred_get_handle_attrs</code> (<code>globus_gsi_cred_handle_t</code> handle, <code>globus_gsi_cred_handle_attrs_t</code> *attrs)<br />
- <i>Get the handle attributes. </i><br />
- globus_result_t <code>globus_gsi_cred_get_goodtill</code> (<code>globus_gsi_cred_handle_t</code> cred_handle, time_t *goodtill)<br />
- <i>Get credential expiration. </i><br />
- globus_result_t <code>globus_gsi_cred_get_lifetime</code> (<code>globus_gsi_cred_handle_t</code> cred_handle, time_t *lifetime)<br />
- <i>Get credential lifetime. </i><br />
- globus_result_t <code>globus_gsi_cred_get_key_bits</code> (<code>globus_gsi_cred_handle_t</code> cred_handle, int *key_bits)<br />
- <i>Get credential strength. </i><br />
- globus_result_t <code>globus_gsi_cred_set_cert</code> (<code>globus_gsi_cred_handle_t</code> handle, X509 *cert)<br />
- <i>Set the credential&#8217;s certificate. </i><br />
- globus_result_t <code>globus_gsi_cred_get_cert</code> (<code>globus_gsi_cred_handle_t</code> handle, X509 **cert)<br />
- <i>Get the credential&#8217;s certificate. </i><br />
- globus_result_t <code>globus_gsi_cred_set_key</code> (<code>globus_gsi_cred_handle_t</code> handle, EVP_PKEY *key)<br />
- <i>Set the credential&#8217;s private key. </i><br />
- globus_result_t <code>globus_gsi_cred_get_key</code> (<code>globus_gsi_cred_handle_t</code> handle, EVP_PKEY **key)<br />
- <i>Get the credential&#8217;s private key. </i><br />
- globus_result_t <code>globus_gsi_cred_set_cert_chain</code> (<code>globus_gsi_cred_handle_t</code> handle, STACK_OF(X509)*cert_chain)<br />
- <i>Set the certificate chain. </i><br />
- globus_result_t <code>globus_gsi_cred_get_cert_chain</code> (<code>globus_gsi_cred_handle_t</code> handle, STACK_OF(X509)**cert_chain)<br />
- <i>Get the certificate chain. </i><br />
- globus_result_t <code>globus_gsi_cred_get_X509_subject_name</code> (<code>globus_gsi_cred_handle_t</code> handle, X509_NAME **subject_name)<br />
- <i>Get credential subject name. </i><br />
- globus_result_t <code>globus_gsi_cred_get_X509_identity_name</code> (<code>globus_gsi_cred_handle_t</code> handle, X509_NAME **identity_name)<br />
- <i>Get X.509 identity. </i><br />
- globus_result_t <code>globus_gsi_cred_get_subject_name</code> (<code>globus_gsi_cred_handle_t</code> handle, char **subject_name)<br />
- <i>Get credential subject name. </i><br />
- globus_result_t <code>globus_gsi_cred_get_policies</code> (<code>globus_gsi_cred_handle_t</code> handle, STACK **policies)<br />
- <i>Get certificate chain policies. </i><br />
- globus_result_t <code>globus_gsi_cred_get_policy_languages</code> (<code>globus_gsi_cred_handle_t</code> handle, STACK_OF(ASN1_OBJECT)**policy_languages)<br />
- <i>Get certificate chain policy languages. </i><br />
- globus_result_t <code>globus_gsi_cred_get_X509_issuer_name</code> (<code>globus_gsi_cred_handle_t</code> handle, X509_NAME **issuer_name)<br />
- <i>Get credential issuer name object. </i><br />
- globus_result_t <code>globus_gsi_cred_get_issuer_name</code> (<code>globus_gsi_cred_handle_t</code> handle, char **issuer_name)<br />
- <i>Get issuer name. </i><br />
- globus_result_t <code>globus_gsi_cred_get_identity_name</code> (<code>globus_gsi_cred_handle_t</code> handle, char **identity_name)<br />
- <i>Get identity name. </i><br />
- globus_result_t <code>globus_gsi_cred_verify_cert_chain</code> (<code>globus_gsi_cred_handle_t</code> cred_handle, globus_gsi_callback_data_t callback_data)<br />
- <i>Verify credential. </i><br />
- globus_result_t <code>globus_gsi_cred_verify_cert_chain_when</code> (<code>globus_gsi_cred_handle_t</code> cred_handle, globus_gsi_callback_data_t callback_data_in, time_t check_time)<br />
- <i>Verify credential at a specific time. </i><br />
- globus_result_t <code>globus_gsi_cred_verify</code> (<code>globus_gsi_cred_handle_t</code> handle)<br />
+<p> globus_result_t <code>globus_gsi_cred_handle_init</code> (<code>globus_gsi_cred_handle_t</code> *handle, <code>globus_gsi_cred_handle_attrs_t</code> handle_attrs)<br/>
+ <i>Initialize a Handle. </i><br/>
+ globus_result_t <code>globus_gsi_cred_handle_destroy</code> (<code>globus_gsi_cred_handle_t</code> handle)<br/>
+ <i>Destroy the credential handle. </i><br/>
+ globus_result_t <code>globus_gsi_cred_handle_copy</code> (<code>globus_gsi_cred_handle_t</code> source, <code>globus_gsi_cred_handle_t</code> *dest)<br/>
+ <i>Copy a handle. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_handle_attrs</code> (<code>globus_gsi_cred_handle_t</code> handle, <code>globus_gsi_cred_handle_attrs_t</code> *attrs)<br/>
+ <i>Get the handle attributes. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_goodtill</code> (<code>globus_gsi_cred_handle_t</code> cred_handle, time_t *goodtill)<br/>
+ <i>Get credential expiration. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_lifetime</code> (<code>globus_gsi_cred_handle_t</code> cred_handle, time_t *lifetime)<br/>
+ <i>Get credential lifetime. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_key_bits</code> (<code>globus_gsi_cred_handle_t</code> cred_handle, int *key_bits)<br/>
+ <i>Get credential strength. </i><br/>
+ globus_result_t <code>globus_gsi_cred_set_cert</code> (<code>globus_gsi_cred_handle_t</code> handle, X509 *cert)<br/>
+ <i>Set the credential&#8217;s certificate. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_cert</code> (<code>globus_gsi_cred_handle_t</code> handle, X509 **cert)<br/>
+ <i>Get the credential&#8217;s certificate. </i><br/>
+ globus_result_t <code>globus_gsi_cred_set_key</code> (<code>globus_gsi_cred_handle_t</code> handle, EVP_PKEY *key)<br/>
+ <i>Set the credential&#8217;s private key. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_key</code> (<code>globus_gsi_cred_handle_t</code> handle, EVP_PKEY **key)<br/>
+ <i>Get the credential&#8217;s private key. </i><br/>
+ globus_result_t <code>globus_gsi_cred_set_cert_chain</code> (<code>globus_gsi_cred_handle_t</code> handle, STACK_OF(X509)*cert_chain)<br/>
+ <i>Set the certificate chain. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_cert_chain</code> (<code>globus_gsi_cred_handle_t</code> handle, STACK_OF(X509)**cert_chain)<br/>
+ <i>Get the certificate chain. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_X509_subject_name</code> (<code>globus_gsi_cred_handle_t</code> handle, X509_NAME **subject_name)<br/>
+ <i>Get credential subject name. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_X509_identity_name</code> (<code>globus_gsi_cred_handle_t</code> handle, X509_NAME **identity_name)<br/>
+ <i>Get X.509 identity. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_subject_name</code> (<code>globus_gsi_cred_handle_t</code> handle, char **subject_name)<br/>
+ <i>Get credential subject name. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_policies</code> (<code>globus_gsi_cred_handle_t</code> handle, STACK **policies)<br/>
+ <i>Get certificate chain policies. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_policy_languages</code> (<code>globus_gsi_cred_handle_t</code> handle, STACK_OF(ASN1_OBJECT)**policy_languages)<br/>
+ <i>Get certificate chain policy languages. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_X509_issuer_name</code> (<code>globus_gsi_cred_handle_t</code> handle, X509_NAME **issuer_name)<br/>
+ <i>Get credential issuer name object. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_issuer_name</code> (<code>globus_gsi_cred_handle_t</code> handle, char **issuer_name)<br/>
+ <i>Get issuer name. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_identity_name</code> (<code>globus_gsi_cred_handle_t</code> handle, char **identity_name)<br/>
+ <i>Get identity name. </i><br/>
+ globus_result_t <code>globus_gsi_cred_verify_cert_chain</code> (<code>globus_gsi_cred_handle_t</code> cred_handle, globus_gsi_callback_data_t callback_data)<br/>
+ <i>Verify credential. </i><br/>
+ globus_result_t <code>globus_gsi_cred_verify_cert_chain_when</code> (<code>globus_gsi_cred_handle_t</code> cred_handle, globus_gsi_callback_data_t callback_data_in, time_t check_time)<br/>
+ <i>Verify credential at a specific time. </i><br/>
+ globus_result_t <code>globus_gsi_cred_verify</code> (<code>globus_gsi_cred_handle_t</code> handle)<br/>
  <i>Verify a credential. </i></p>
 <h2>Detailed Description</h2>
 <p> Create/Destroy/Modify a GSI Credential Handle. </p>
@@ -79,7 +79,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle to get the certificate from<br />
+</dt><dd> <i>handle</i> The credential handle to get the certificate from<br/>
  <i>cert</i> The resulting X509 certificate, a duplicate of the certificate in the credential handle. This variable should be freed when the user is finished with it using the function X509_free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -90,7 +90,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle containing the certificate chain to get<br />
+</dt><dd> <i>handle</i> The credential handle containing the certificate chain to get<br/>
  <i>cert_chain</i> The certificate chain to set as a duplicate of the cert chain in the credential handle. This variable (or the variable it points to) needs to be freed when the user is finished with it using sk_X509_free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -101,7 +101,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cred_handle</i> The credential handle to retrieve the expiration time from<br />
+</dt><dd> <i>cred_handle</i> The credential handle to retrieve the expiration time from<br/>
  <i>goodtill</i> Contains the expiration time on return</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -112,7 +112,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle to retrieve the attributes from<br />
+</dt><dd> <i>handle</i> The credential handle to retrieve the attributes from<br/>
  <i>attrs</i> Contains the credential attributes on return</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -123,7 +123,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle containing the certificate to get the identity of<br />
+</dt><dd> <i>handle</i> The credential handle containing the certificate to get the identity of<br/>
  <i>identity_name</i> The identity certificate&#8217;s subject name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -134,7 +134,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle containing the certificate to get the issuer of<br />
+</dt><dd> <i>handle</i> The credential handle containing the certificate to get the issuer of<br/>
  <i>issuer_name</i> The issuer certificate&#8217;s subject name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -145,7 +145,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle containing the private key to get<br />
+</dt><dd> <i>handle</i> The credential handle containing the private key to get<br/>
  <i>key</i> The private key which after this function returns is set to a duplicate of the private key of the credential handle. This variable needs to be freed by the user when it is no longer used via the function EVP_PKEY_free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -156,7 +156,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cred_handle</i> The credential handle to retrieve the strength from<br />
+</dt><dd> <i>cred_handle</i> The credential handle to retrieve the strength from<br/>
  <i>key_bits</i> Contains the number of bits in the key on return</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -167,7 +167,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cred_handle</i> The credential handle to retrieve the lifetime from<br />
+</dt><dd> <i>cred_handle</i> The credential handle to retrieve the lifetime from<br/>
  <i>lifetime</i> Contains the lifetime on return</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -178,7 +178,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> the handle to get the cert chain containing the policies<br />
+</dt><dd> <i>handle</i> the handle to get the cert chain containing the policies<br/>
  <i>policies</i> the stack of policies retrieved from the handle&#8217;s cert chain</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -189,7 +189,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> the handle to get the cert chain containing the policies<br />
+</dt><dd> <i>handle</i> the handle to get the cert chain containing the policies<br/>
  <i>policy_languages</i> the stack of policies retrieved from the handle&#8217;s cert chain</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -200,7 +200,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle containing the certificate to get the subject name of<br />
+</dt><dd> <i>handle</i> The credential handle containing the certificate to get the subject name of<br/>
  <i>subject_name</i> The subject name as a string. This should be freed using OPENSSL_free() when the user is finished with it</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -211,7 +211,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle containing the certificate to get the identity from<br />
+</dt><dd> <i>handle</i> The credential handle containing the certificate to get the identity from<br/>
  <i>identity_name</i> The identity certificate&#8217;s X509 subject name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -222,7 +222,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle containing the certificate to get the issuer name of<br />
+</dt><dd> <i>handle</i> The credential handle containing the certificate to get the issuer name of<br/>
  <i>issuer_name</i> The issuer name as an X509_NAME object. This should be freed using X509_NAME_free when the user is finished with it</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -233,7 +233,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle containing the certificate to get the subject name of<br />
+</dt><dd> <i>handle</i> The credential handle containing the certificate to get the subject name of<br/>
  <i>subject_name</i> The subject name as an X509_NAME object. This should be freed using X509_NAME_free when the user is finished with it</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -244,7 +244,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>source</i> The handle to be copied<br />
+</dt><dd> <i>source</i> The handle to be copied<br/>
  <i>dest</i> The destination of the copy</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -265,7 +265,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle to be initialized<br />
+</dt><dd> <i>handle</i> The handle to be initialized<br/>
  <i>handle_attrs</i> The immutable attributes of the handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -276,7 +276,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle to set the certificate on<br />
+</dt><dd> <i>handle</i> The credential handle to set the certificate on<br/>
  <i>cert</i> The X509 cert to set in the cred handle. The cert passed in can be NULL which will set the cert in the handle to NULL, freeing the current cert in the handle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -287,7 +287,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle containing the certificate chain field to set<br />
+</dt><dd> <i>handle</i> The handle containing the certificate chain field to set<br/>
  <i>cert_chain</i> The certificate chain to set the handle&#8217;s certificate chain to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -298,7 +298,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle on which to set the key.<br />
+</dt><dd> <i>handle</i> The handle on which to set the key.<br/>
  <i>key</i> The private key to set the handle&#8217;s key to. This value can be NULL, in which case the current handle&#8217;s key is freed.</dd></dl>
 <h3>globus_result_t globus_gsi_cred_verify (<code>globus_gsi_cred_handle_t</code>handle)</h3>
 <p> Verify a credential. This function checks that the certificate is signed by the public key of the issuer cert (the first cert in the chain). Note that this function DOES NOT check the private key or the public of the certificate, as stated in a previous version of the documentation. </p>
@@ -315,7 +315,7 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cred_handle</i> The credential handle containing the certificate chain to be validated<br />
+</dt><dd> <i>cred_handle</i> The credential handle containing the certificate chain to be validated<br/>
  <i>callback_data</i> A initialized callback data structure</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -326,8 +326,8 @@ description: "Credential Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cred_handle</i> The credential handle containing the certificate chain to be validated<br />
- <i>callback_data_in</i> A callback data structure. If NULL, one will be initialized with only the default cert dir set.<br />
+</dt><dd> <i>cred_handle</i> The credential handle containing the certificate chain to be validated<br/>
+ <i>callback_data_in</i> A callback data structure. If NULL, one will be initialized with only the default cert dir set.<br/>
  <i>check_time</i> Check if the cert chain was valid at this time. Set to 0 to use a time that the cert is valid, essentially bypassing the expiration check.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

@@ -10,7 +10,7 @@ description: "XkbSetDetectableAutorepeat – Sets DetectableAutorepeat"
 <p>XkbSetDetectableAutorepeat &#8211; Sets DetectableAutorepeat</p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbSetDetectableAutorepeat</code> <code>(Display *</code><i>display</i><code>,</code> <code>Bool </code><i>detectable</i><code>,</code> <code>Bool *</code><i>supported_rtrn</i><code>);</code><br />
+<dt> <code>Bool XkbSetDetectableAutorepeat</code> <code>(Display *</code><i>display</i><code>,</code> <code>Bool </code><i>detectable</i><code>,</code> <code>Bool *</code><i>supported_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

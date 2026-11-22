@@ -16,13 +16,13 @@ With <i>po4a-build</i>, <i>po4a</i> also includes support for adding translation
 
 <h2>Layout</h2>
 
-Documentation translation should <font SIZE="-1">NOT</font> use the same <i>po/</i> directory as the runtime translation. Whilst runtime translation can use directories other than <i>po/</i>, it is usually easiest to go with the convention.
+Documentation translation should NOT use the same <i>po/</i> directory as the runtime translation. Whilst runtime translation can use directories other than <i>po/</i>, it is usually easiest to go with the convention.
 
 <h2>Multiple languages</h2>
 
-Just a word on packages that use scripts in multiple programming languages. A common mix is Perl and shell. Note bene: gettext <font SIZE="-1">WILL</font> get confused and omit strings from one or other language unless file extensions are used for whichever is the least problematic language. 
+Just a word on packages that use scripts in multiple programming languages. A common mix is Perl and shell. Note bene: gettext WILL get confused and omit strings from one or other language unless file extensions are used for whichever is the least problematic language. 
 
- When using multiple languages, experiment with various settings in <i>po/Makevars</i> until you get all the strings you need in the <font SIZE="-1">POT</font> file. 
+ When using multiple languages, experiment with various settings in <i>po/Makevars</i> until you get all the strings you need in the POT file. 
 
  In particular, specifying two languages in <i>po/Makevars</i> can be problematic. Instead of: 
 
@@ -34,14 +34,14 @@ Just a word on packages that use scripts in multiple programming languages. A co
 <h2>Populating po/</h2>
 
 So, create your top level <i>po/</i> directory and then use the example files in <i>/usr/share/doc/po4a/examples/</i> to populate it.
-<dl><dt><font SIZE="-1">LINGUAS</font>
-</dt><dd>Must exist, even if empty. Consists of a list of translations - each line not starting with a '#' must match an existing <font SIZE="-1">PO</font> file. e.g. if <i></i><font SIZE="-1"><i>LINGUAS</i></font><i></i> contains a single line, 'fr', an <i>fr.po</i> file must exist alongside the <i></i><font SIZE="-1"><i>LINGUAS</i></font><i></i> file. 
+<dl><dt>LINGUAS
+</dt><dd>Must exist, even if empty. Consists of a list of translations - each line not starting with a '#' must match an existing PO file. e.g. if <i></i><i>LINGUAS</i><i></i> contains a single line, 'fr', an <i>fr.po</i> file must exist alongside the <i></i><i>LINGUAS</i><i></i> file. 
  <pre> $ cat po/LINGUAS
  cs
  de
  fr
- $</pre>By convention, the <i></i><font SIZE="-1"><i>LINGUAS</i></font><i></i> file is sorted alphabetically but that is a manual process.
-</dd><dt><font SIZE="-1">POTFILES</font>.in
+ $</pre>By convention, the <i></i><i>LINGUAS</i><i></i> file is sorted alphabetically but that is a manual process.
+</dd><dt>POTFILES.in
 </dt><dd>The list of files containing the messages that need to be translated at runtime - i.e. your scripts. If you've used the top level <i>po/</i> directory, the paths should be relative to the top level directory, not the <i>po/</i> directory itself. 
  <pre> $ ls -l
  myscript.pl
@@ -53,7 +53,7 @@ So, create your top level <i>po/</i> directory and then use the example files in
  myscript.pl
  another.pl
  foo/support.pl
- $</pre>Note that it is explicitly supported that the scripts themselves can contain strings for both runtime and documentation translation, e.g. using gettext functions for runtime and embedded <font SIZE="-1">POD</font> content for documentation. So it is not a problem to have the same file listed in <i>po/POTFILES.in</i> and <i>doc/po4a-build.conf</i>
+ $</pre>Note that it is explicitly supported that the scripts themselves can contain strings for both runtime and documentation translation, e.g. using gettext functions for runtime and embedded POD content for documentation. So it is not a problem to have the same file listed in <i>po/POTFILES.in</i> and <i>doc/po4a-build.conf</i>
 </dd><dt>Makevars-perl.example
 </dt><dd>If your scripts are in Perl, copy this example file as <i>po/Makevars</i> and edit it to suit.
 </dd><dt>Makevars-shell.example
@@ -74,9 +74,9 @@ These snippets need to be added to your top level Makefile or whatever other met
 
 <h2>Maintenance</h2>
 
-Runtime translation isn't quite as easy as <i>po4a-build</i> in that adding a new translation does require editing <i>po/LINGUAS</i>, but apart from that, updating translations is merely a case of replacing the relevant <font SIZE="-1">PO</font> file with the new version. 
+Runtime translation isn't quite as easy as <i>po4a-build</i> in that adding a new translation does require editing <i>po/LINGUAS</i>, but apart from that, updating translations is merely a case of replacing the relevant PO file with the new version. 
 
- Depending on how you prepare your source tarball, you may also need to list new <font SIZE="-1">PO</font> files in the <i></i><font SIZE="-1"><i>MANIFEST</i></font><i></i> file or add to the script(s) that prepare the tarball. (That also applies to <i>po4a-build</i>.) 
+ Depending on how you prepare your source tarball, you may also need to list new PO files in the <i></i><i>MANIFEST</i><i></i> file or add to the script(s) that prepare the tarball. (That also applies to <i>po4a-build</i>.) 
 
  Any <i>*.mo</i> or <i>*.gmo</i> files in <i>po/</i> can be deleted / cleaned up.
 

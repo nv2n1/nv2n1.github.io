@@ -15,7 +15,7 @@ description: "fido is a realish-time log watchdog and alert daemon."
 <p> fido is a multi-threaded daemon that can watch several files at once. It looks for patterns that you configure and executes scripts or programs in the event of a match. <tt>fido</tt> works in &#8220;realish-time&#8221; in that it is about a second or so behind the clock.</p>
 <h2>OPTIONS</h2>
 <p> <code>Option Syntax</code> </p>
-<p> Since <tt>fido</tt> uses <font SIZE="-1">GNU</font> getopt to process command-line arguments, every option has a long form along with the short one. Long options are more convenient to remember, but take time to type. You may freely mix different option styles, i.e., </p>
+<p> Since <tt>fido</tt> uses GNU getopt to process command-line arguments, every option has a long form along with the short one. Long options are more convenient to remember, but take time to type. You may freely mix different option styles, i.e., </p>
 <pre>
   $ fido -d --pid=/var/run/fido.pid
 </pre>
@@ -28,32 +28,32 @@ description: "fido is a realish-time log watchdog and alert daemon."
 <dt><code>-C</code>, <code>&#8211;config</code></dt>
 <dd> Prints the default values for all configurable settings. Values are read from the active resource file and command line arguements.</dd>
 <dt><code>-f /path/file</code>, <code>&#8211;file=/path/file</code></dt>
-<dd> This option can be used to specify a <tt>fido</tt> config file. If none is selected it will attempt to load <font SIZE="-1">FIDORC</font> as an <font SIZE="-1">ENV</font> variable. If <font SIZE="-1">FIDORC</font> is not set, then it will attempt the following files in this order: </dd>
+<dd> This option can be used to specify a <tt>fido</tt> config file. If none is selected it will attempt to load FIDORC as an ENV variable. If FIDORC is not set, then it will attempt the following files in this order: </dd>
 <pre>
   /etc/fido/fido.conf
   /etc/fido.conf 
   /usr/local/etc/fido.conf 
   /usr/local/etc/fido/fido.conf
 </pre>
-<p> At this point, if fido hasn&#8217;t found a config file, it will try to run off command line arguments. <font SIZE="-1">NOTE:</font> Command line arguments take precedent over config file settings.</p>
+<p> At this point, if fido hasn&#8217;t found a config file, it will try to run off command line arguments. NOTE: Command line arguments take precedent over config file settings.</p>
 <dt><code>-d</code>, <code>&#8211;daemon</code></dt>
 <dd> This options tells fido to run in the background as a daemon. This is a default option so select this to override the config file. </dd>
-<p> Sets the network protocol to <font SIZE="-1">ICMP</font>. During a netscan, <tt>fido</tt> can use either <font SIZE="-1">ICMP</font> echo (default) or <font SIZE="-1">TCP/IP</font> connect for discovery. This option sets the protocol to <font SIZE="-1">ICMP</font>. This option is like pinging hosts on a network with the ping utility. <font SIZE="-1">ICMP</font> requires raw sockets. Therefore, <tt>fido</tt> must either be run as root or setuid root. (see <font SIZE="-1">ERRORS</font> below).</p>
+<p> Sets the network protocol to ICMP. During a netscan, <tt>fido</tt> can use either ICMP echo (default) or TCP/IP connect for discovery. This option sets the protocol to ICMP. This option is like pinging hosts on a network with the ping utility. ICMP requires raw sockets. Therefore, <tt>fido</tt> must either be run as root or setuid root. (see ERRORS below).</p>
 <dt><code>-p /path/file</code>, <code>&#8211;pid=/path/file</code></dt>
 <dd> By default, <tt>fido</tt> writes a pid file to /var/run/fido.pid You may override that location with this option, <tt>fido</tt> &#8211;pid=/var/lib/run/fido.pid</dd>
-<dt><code>-l </code><font SIZE="-1"><code>VAL</code></font>, <code>&#8211;log=VAL</code></dt>
+<dt><code>-l </code><code>VAL</code>, <code>&#8211;log=VAL</code></dt>
 <dd> Use this option to specify a logging method. The values can be &#8220;/path/to/file&#8221; or &#8220;syslog&#8221; <tt>fido</tt> can either log its messages to syslog or it can use its own internal logging mechanism to write to a specified file.</dd></dl>
 <h2>CONFIG FILE</h2>
 <dl>
 <dt>
-</dt><dd> fido&#8217;s configurable options can be set and stored in config files. All stored settings can be overridden with command line arguments. If a logging mechanism is set in config file, it can be overridden with &#8211;log. <tt>fido</tt> reads config files in a priortized fashion. The <font SIZE="-1">ENV</font> variable <font SIZE="-1">FIDORC</font> is the highest. That is followed by &#8216;-f /path/file&#8217; and by the system defaults: </dd>
+</dt><dd> fido&#8217;s configurable options can be set and stored in config files. All stored settings can be overridden with command line arguments. If a logging mechanism is set in config file, it can be overridden with &#8211;log. <tt>fido</tt> reads config files in a priortized fashion. The ENV variable FIDORC is the highest. That is followed by &#8216;-f /path/file&#8217; and by the system defaults: </dd>
 <pre>
   /etc/fido/fido.conf
   /etc/fido.conf
   /usr/local/etc/fido.conf
   /usr/local/etc/fido/fido.conf
 </pre>
-<p> Here is an example that sets an <font SIZE="-1">ENV</font> variable and invokes the program: </p>
+<p> Here is an example that sets an ENV variable and invokes the program: </p>
 <pre>
   $ FIDORC=/home/jeff/haha fido -d
 </pre>
@@ -70,5 +70,5 @@ description: "fido is a realish-time log watchdog and alert daemon."
 <dl>
 <dt>
 </dt><dd> Copyright (C) <tt>2000-2014</tt> by <tt>Jeffrey Fulmer, et al.</tt> </dd>
-<p> This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. </p>
+<p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
 </dl>

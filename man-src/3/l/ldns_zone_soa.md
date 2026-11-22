@@ -10,7 +10,7 @@ description: "ldns_zone_rrs, ldns_zone_soa"
 
 <p> ldns_zone_rrs, ldns_zone_soa </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr_list * ldns_zone_rrs(const ldns_zone *z); </p>

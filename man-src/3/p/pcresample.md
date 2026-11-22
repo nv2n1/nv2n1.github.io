@@ -15,11 +15,11 @@ description: "PCRE – Perl-compatible regular expressions"
 <p> If PCRE is installed in the standard include and library directories for your operating system, you should be able to compile the demonstration program using this command: </p>
 <p>&nbsp;<wbr>&nbsp;gcc -o pcredemo pcredemo.c -lpcre </p>
 <p> If PCRE is installed elsewhere, you may need to add additional options to the command line. For example, on a Unix-like system that has PCRE installed in <i>/usr/local</i>, you can compile the demonstration program using a command like this: </p>
-<p>&nbsp;<wbr>&nbsp;gcc -o pcredemo -I/usr/local/include pcredemo.c&nbsp;\<br />
+<p>&nbsp;<wbr>&nbsp;gcc -o pcredemo -I/usr/local/include pcredemo.c&nbsp;\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-L/usr/local/lib -lpcre </p>
 <p> In a Windows environment, if you want to statically link the program against a non-dll <code>pcre.a</code> file, you must uncomment the line that defines PCRE_STATIC before including <code>pcre.h</code>, because otherwise the <code>pcre_malloc()</code> and <code>pcre_free()</code> exported functions will be declared <code>__declspec(dllimport)</code>, with unwanted results. </p>
 <p> Once you have compiled and linked the demonstration program, you can run simple tests like this: </p>
-<p>&nbsp;<wbr>&nbsp;./pcredemo&nbsp;&#8216;cat|dog&#8217;&nbsp;&#8216;the cat sat on the mat&#8217;<br />
+<p>&nbsp;<wbr>&nbsp;./pcredemo&nbsp;&#8216;cat|dog&#8217;&nbsp;&#8216;the cat sat on the mat&#8217;<br/>
 &nbsp;<wbr>&nbsp;./pcredemo -g&nbsp;&#8216;cat|dog&#8217;&nbsp;&#8216;the dog sat on the cat&#8217; </p>
 <p> Note that there is a much more comprehensive test program, called <code>pcretest</code>, which supports many more facilities for testing regular expressions and both PCRE libraries. The <code>pcredemo</code> program is provided as a simple coding example. </p>
 <p> If you try to run <code>pcredemo</code> when PCRE is not installed in the standard library directory, you may get an error like this on some operating systems (e.g. Solaris): </p>

@@ -10,7 +10,7 @@ description: "zgelsd.f –"
 <p>zgelsd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgelsd</code> (M, N, NRHS, A, LDA, B, LDB, S, RCOND, RANK, WORK, LWORK, RWORK, IWORK, INFO)<br />
+<p>subroutine <code>zgelsd</code> (M, N, NRHS, A, LDA, B, LDB, S, RCOND, RANK, WORK, LWORK, RWORK, IWORK, INFO)<br/>
  <i></i><code> ZGELSD computes the minimum-norm solution to a linear least squares problem for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgelsd (integerM, integerN, integerNRHS, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, double precision, dimension( * )S, double precisionRCOND, integerRANK, complex*16, dimension( * )WORK, integerLWORK, double precision, dimension( * )RWORK, integer, dimension( * )IWORK, integerINFO)</h3>

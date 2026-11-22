@@ -22,5 +22,5 @@ int oath_done(void);</code></pre>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;oath-toolkit-help [at] nongnu.org&gt;. liboath home page: <a rel="nofollow" href="http://www.gnu.org/software/liboath/">http://www.gnu.org/software/liboath/</a> General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a></p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2009-2012 Simon Josefsson.<br />
+<p>Copyright &#169; 2009-2012 Simon Josefsson.<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>

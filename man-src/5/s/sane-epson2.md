@@ -115,7 +115,7 @@ V750 USB, IEEE-1394</pre>
 <p>The configuration file <i>/etc/sane.d/epson2.conf</i> specifies the device(s) that the backend will use. Possible connection types are:</p>
 <dl>
 <dt><code>SCSI</code></dt>
-<dd>This is the default, and if nothing else is specified the backend software will open a given path as SCSI device. More information about valid syntax for SCSI devices can be found in <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5).<br />
+<dd>This is the default, and if nothing else is specified the backend software will open a given path as SCSI device. More information about valid syntax for SCSI devices can be found in <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5).<br/>
  Usually SCSI scanners are configured with a line &quot;scsi EPSON&quot; in this file. In some cases it may be necessary to only use the string &quot;scsi&quot; (e.g. for the GT-6500).</dd>
 <dt><code>PIO &#8211; Parallel Interface</code></dt>
 <dd>The parallel interface can be configured in two ways: An integer value starting at the beginning of a line will be interpreted as the IO address of the parallel port. To make it clearer that a configured IO address is a parallel port the port address can be preceded by the string &quot;PIO&quot;. The PIO connection does not use a special device file in the <i>/dev</i> directory. The IO address can be specified in hex mode (prefixed with &quot;0x&quot;).</dd>

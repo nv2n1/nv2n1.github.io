@@ -65,19 +65,19 @@ int dup3(int oldfd, int newfd, int flags);
 <h2>NOTES</h2>
 <p> The error returned by <code>dup2</code>() is different from that returned by <code>fcntl(</code>&#8230;, <code>F_DUPFD</code>, &#8230;<code>)</code> when <i>newfd</i> is out of range. On some systems, <code>dup2</code>() also sometimes returns <code>EINVAL</code> like <code>F_DUPFD</code>. </p>
 <p> If <i>newfd</i> was open, any errors that would have been reported at <code><a href="/docs/linux/man/2-close/">close</a></code>(2) time are lost. If this is of concern, then&#8212;unless the program is single-threaded and does not allocate file descriptors in signal handlers&#8212;the correct approach is <i>not</i> to close <i>newfd</i> before calling <code>dup2</code>(), because of the race condition described above. Instead, code something like the following could be used: </p>
-<p> /* Obtain a duplicate of &#8216;newfd&#8217; that can subsequently<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;be used to check for close()&nbsp;errors;&nbsp;an EBADF error<br />
+<p> /* Obtain a duplicate of &#8216;newfd&#8217; that can subsequently<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;be used to check for close()&nbsp;errors;&nbsp;an EBADF error<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;means that&nbsp;&#8216;newfd&#8217;&nbsp;was not open.&nbsp;*/ </p>
-<p> tmpfd = dup(newfd); if (tmpfd == -1 &amp;&amp; errno != EBADF) {<br />
+<p> tmpfd = dup(newfd); if (tmpfd == -1 &amp;&amp; errno != EBADF) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Handle unexpected dup()&nbsp;error&nbsp;*/ } </p>
 <p> /* Atomically duplicate &#8216;oldfd&#8217; on &#8216;newfd&#8217; */ </p>
-<p> if (dup2(oldfd, newfd) == -1) {<br />
+<p> if (dup2(oldfd, newfd) == -1) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Handle dup2()&nbsp;error&nbsp;*/ } </p>
-<p> /* Now check for close() errors on the file originally<br />
+<p> /* Now check for close() errors on the file originally<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;referred to by&nbsp;&#8216;newfd&#8217;&nbsp;*/ </p>
-<p> if (tmpfd != -1) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(close(tmpfd)&nbsp;==&nbsp;-1)&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Handle errors from close&nbsp;*/<br />
+<p> if (tmpfd != -1) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(close(tmpfd)&nbsp;==&nbsp;-1)&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Handle errors from close&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} }</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-close/">close</a></code>(2), <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), <code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/2-pidfd_getfd/">pidfd_getfd</a></code>(2)</p>

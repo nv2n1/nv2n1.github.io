@@ -17,9 +17,9 @@ description: "hdf_set_symlink – Set part of the tree to link to another"
 NEOERR *hdf_set_symlink(HDF *hdf, const char *src, const char *dest);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf -&gt; the dataset node<br />
- src -&gt; the source node name<br />
- dest -&gt; the destination node name (from the top of the<br />
+<p> hdf -&gt; the dataset node<br/>
+ src -&gt; the source node name<br/>
+ dest -&gt; the destination node name (from the top of the<br/>
  dataset, not relative names) </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_set_symlink creates a link between two sections of an HDF dataset. The link is &quot;by name&quot; hence the term &quot;symlink&quot;. This means that the destination node does not need to exist. Any attempt to access the source node will cause the function to walk to the dest node, and then continue walking from there. Using symlinks can &quot;hide&quot; values in the dataset since you won&#8217;t be able to access any children of the linked node directly, though dumps and other things which access the data structure directly will bypass the symlink. Use this feature sparingly as its likely to surprise you. </p>

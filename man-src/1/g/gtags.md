@@ -99,7 +99,7 @@ description: "gtags – create tag files for global."
 <p> Verbose message has important level. The most important level is 0, the second is 1 and so on. All the message has level numbers leading blanks.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gtags-parser/">gtags-parser</a></code>(1), <code><a href="/docs/linux/man/1-global/">global</a></code>(1), <code><a href="/docs/linux/man/1-htags/">htags</a></code>(1). </p>
-<p> GNU GLOBAL source code tag system<br />
+<p> GNU GLOBAL source code tag system<br/>
  (<a rel="nofollow" href="http://www.gnu.org/software/global/">http://www.gnu.org/software/global/</a>).</p>
 <h2>BUG</h2>
 <p> &#8216;GTAGS&#8217;, &#8216;GRTAGS&#8217; and &#8216;GSYMS&#8217; are very large. In advance of using this command, check the space of your disk. </p>

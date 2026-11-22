@@ -10,7 +10,7 @@ description: "xmessage – display a message or query in a window (X-based /bin/
 
 <p> xmessage &#8211; display a message or query in a window (X-based /bin/echo) </p>
 <h2>SYNOPSIS</h2>
-<p> <code>xmessage</code> [ <code>-buttons</code> <i>label1</i>[<code>:</code>value1]<code>,</code>label2[<code>:</code>value2]<code>,</code> &#8230; ] [ <i>options</i> ] <code>-file</code> <i>filename</i><br />
+<p> <code>xmessage</code> [ <code>-buttons</code> <i>label1</i>[<code>:</code>value1]<code>,</code>label2[<code>:</code>value2]<code>,</code> &#8230; ] [ <i>options</i> ] <code>-file</code> <i>filename</i><br/>
  <code>xmessage</code> [ <code>-buttons</code> <i>label1</i>[<code>:</code>value1]<code>,</code>label2[<code>:</code>value2]<code>,</code> &#8230; ] [ <i>options</i> ] <i>message</i> &#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> The <i>xmessage</i> program displays a window containing a message from the command line, a file, or standard input. Along the lower edge of the message is row of buttons; clicking the left mouse button on any of these buttons will cause <i>xmessage</i> to exit. Which button was pressed is returned in the exit status and, optionally, by writing the label of the button to standard output. </p>
@@ -77,5 +77,5 @@ Xmessage (xmessage)
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-x/">X</a></i>(7), <i><a href="/docs/linux/man/1-echo/">echo</a></i>(1), <i><a href="/docs/linux/man/1-cat/">cat</a></i>(1) </p>
 <h2>AUTHORS</h2>
-<p> Chris Peterson, MIT Project Athena<br />
+<p> Chris Peterson, MIT Project Athena<br/>
  Stephen Gildea, X Consortium </p>

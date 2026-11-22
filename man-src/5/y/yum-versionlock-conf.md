@@ -27,7 +27,7 @@ description: "yum-versionlock.conf(5)"
 <dd>This option is a string with points to the file which will have the versionlock information in it. Note that the file <code>has</code> to exist (or the versionlock plugin will make yum exit). However it can be empty.</dd></dl>
 <h2>Author</h2>
 <dl>
-<dd>Chitlesh Goorah &lt;chitlesh [at] fedoraproject.org&gt;<br />
+<dd>Chitlesh Goorah &lt;chitlesh [at] fedoraproject.org&gt;<br/>
  James Antill &lt;james [at] fedoraproject.org&gt;</dd>
 <dl>
 <dd></dd></dl>

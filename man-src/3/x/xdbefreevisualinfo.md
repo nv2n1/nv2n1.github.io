@@ -10,7 +10,7 @@ description: "XdbeFreeVisualInfo – frees information returned by XdbeGetVisual
 <p>XdbeFreeVisualInfo &#8211; frees information returned by <code>XdbeGetVisualInfo().</code> </p>
 <h2>Synopsis</h2>
 <p>#include &lt;X11/extensions/Xdbe.h&gt; </p>
-<p> void XdbeFreeVisualInfo(<br />
+<p> void XdbeFreeVisualInfo(<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;XdbeScreenVisualInfo&nbsp;*visual_info)</p>
 <h2>Description</h2>
 <p>This function frees the list of XdbeScreenVisualInfo returned by the function <code>XdbeGetVisualInfo().</code></p>

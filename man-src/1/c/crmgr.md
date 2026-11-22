@@ -10,18 +10,18 @@ description: "crmgr – administration utility for QDBM Curia"
 
 <p> crmgr &#8211; administration utility for QDBM Curia </p>
 <h2>SYNOPSIS</h2>
-<p> <code>crmgr create</code> [-s] [-bnum <i>num</i> ] [-dnum <i>num</i>] <i>name</i><br />
- <code>crmgr put</code> [-kx|-ki] [-vx|-vi|-vf] [-keep|-cat] [-lob] [-na] <i>name</i> <i>key</i> <i>val</i><br />
- <code>crmgr out</code> [-kx|-ki] [-lob] <i>name</i> <i>key</i><br />
- <code>crmgr get</code> [-nl] [-kx|-ki] [-start <i>num</i>] [-max <i>num</i>] [-ox] [-lob] [-n] <i>name</i> <i>key</i><br />
- <code>crmgr list</code> [-nl] [-k|-v] [-ox] <i>name</i><br />
- <code>crmgr optimize</code> [-bnum <i>num</i>] [-na] <i>name</i><br />
- <code>crmgr inform</code> [-nl] <i>name</i><br />
- <code>crmgr remove</code> <i>name</i><br />
- <code>crmgr repair</code> <i>name</i><br />
- <code>crmgr exportdb</code> <i>name dir</i><br />
- <code>crmgr importdb</code> <i>name dir</i><br />
- <code>crmgr snaffle</code> [-kx|-ki] [-ox] [-n] <i>name</i> <i>key</i><br />
+<p> <code>crmgr create</code> [-s] [-bnum <i>num</i> ] [-dnum <i>num</i>] <i>name</i><br/>
+ <code>crmgr put</code> [-kx|-ki] [-vx|-vi|-vf] [-keep|-cat] [-lob] [-na] <i>name</i> <i>key</i> <i>val</i><br/>
+ <code>crmgr out</code> [-kx|-ki] [-lob] <i>name</i> <i>key</i><br/>
+ <code>crmgr get</code> [-nl] [-kx|-ki] [-start <i>num</i>] [-max <i>num</i>] [-ox] [-lob] [-n] <i>name</i> <i>key</i><br/>
+ <code>crmgr list</code> [-nl] [-k|-v] [-ox] <i>name</i><br/>
+ <code>crmgr optimize</code> [-bnum <i>num</i>] [-na] <i>name</i><br/>
+ <code>crmgr inform</code> [-nl] <i>name</i><br/>
+ <code>crmgr remove</code> <i>name</i><br/>
+ <code>crmgr repair</code> <i>name</i><br/>
+ <code>crmgr exportdb</code> <i>name dir</i><br/>
+ <code>crmgr importdb</code> <i>name dir</i><br/>
+ <code>crmgr snaffle</code> [-kx|-ki] [-ox] [-n] <i>name</i> <i>key</i><br/>
  <code>crmgr version</code></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>crmgr</code> commands. </p>

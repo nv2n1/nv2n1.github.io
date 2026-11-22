@@ -91,9 +91,9 @@ description: "megatec_usb – Driver for Megatec protocol based USB UPS equipmen
 <p> Some models report a bogus value for the beeper status (will always be &quot;enabled&quot; or &quot;disabled&quot;). So, the &quot;beeper.toggle&quot; command may appear to have no effect in the status reported by the driver when, in fact, it is working fine. </p>
 <p> The temperature value is also known to be bogus in some models.</p>
 <h2>Authors</h2>
-<p>Carlos Rodrigues &lt;carlos.efr at mail.telepac.pt&gt;<br />
- Andrey Lelikov &lt;nut-driver at lelik.org&gt;<br />
- Alexander Gordeev &lt;lasaine at lvk.cs.msu.su&gt;<br />
+<p>Carlos Rodrigues &lt;carlos.efr at mail.telepac.pt&gt;<br/>
+ Andrey Lelikov &lt;nut-driver at lelik.org&gt;<br/>
+ Alexander Gordeev &lt;lasaine at lvk.cs.msu.su&gt;<br/>
  Jon Gough &lt;jon.gough at eclipsesystems.com.au&gt;</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-megatec/">megatec</a></code>(8), <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8), <code><a href="/docs/linux/man/8-upsc/">upsc</a></code>(8), <code><a href="/docs/linux/man/8-upscmd/">upscmd</a></code>(8), <code><a href="/docs/linux/man/8-upsrw/">upsrw</a></code>(8)</p>

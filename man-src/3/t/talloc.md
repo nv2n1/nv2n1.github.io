@@ -9,13 +9,13 @@ description: "The talloc API – talloc is a hierarchical, reference counted mem
 
 <p>The talloc API &#8211; talloc is a hierarchical, reference counted memory pool system with destructors.</p>
 <h3>Modules</h3>
-<p><code>The talloc reference function.</code><br />
- <i>This module contains the definitions around talloc references. </i><br />
- <code>The talloc array functions</code><br />
- <i>Talloc contains some handy helpers for handling Arrays conveniently. </i><br />
- <code>The talloc string functions.</code><br />
- <i>talloc string allocation and manipulation functions. </i><br />
- <code>The talloc debugging support functions</code><br />
+<p><code>The talloc reference function.</code><br/>
+ <i>This module contains the definitions around talloc references. </i><br/>
+ <code>The talloc array functions</code><br/>
+ <i>Talloc contains some handy helpers for handling Arrays conveniently. </i><br/>
+ <code>The talloc string functions.</code><br/>
+ <i>talloc string allocation and manipulation functions. </i><br/>
+ <code>The talloc debugging support functions</code><br/>
  <i>To aid memory debugging, talloc contains routines to inspect the currently allocated memory hierarchy. </i></p>
 <h3>Macros</h3>
 <pre><code>#define TALLOC_FREE(ctx)      \
@@ -27,68 +27,68 @@ description: "The talloc API – talloc is a hierarchical, reference counted mem
     } while (0)
 Free a talloc chunk and NULL out the pointer.
     Typedefs</code></pre>
-<p> typedef void <code>TALLOC_CTX</code><br />
+<p> typedef void <code>TALLOC_CTX</code><br/>
  <i>Define a talloc parent type. </i></p>
 <h3>Functions</h3>
-<p>void * <code>talloc</code> (const void *ctx,#type)<br />
- <i>Create a new talloc context. </i><br />
- void * <code>talloc_init</code> (const char *fmt,&#8230;)<br />
- <i>Create a new top level talloc context. </i><br />
- int <code>talloc_free</code> (void *ptr)<br />
- <i>Free a chunk of talloc memory. </i><br />
- void <code>talloc_free_children</code> (void *ptr)<br />
- <i>Free a talloc chunk&#8217;s children. </i><br />
- void <code>talloc_set_destructor</code> (const void *ptr, int(*destructor)(void *))<br />
- <i>Assign a destructor function to be called when a chunk is freed. </i><br />
- void * <code>talloc_steal</code> (const void *new_ctx, const void *ptr)<br />
- <i>Change a talloc chunk&#8217;s parent. </i><br />
- const char * <code>talloc_set_name</code> (const void *ptr, const char *fmt,&#8230;)<br />
- <i>Assign a name to a talloc chunk. </i><br />
- void * <code>talloc_move</code> (const void *new_ctx, void **pptr)<br />
- <i>Change a talloc chunk&#8217;s parent. </i><br />
- void <code>talloc_set_name_const</code> (const void *ptr, const char *name)<br />
- <i>Assign a name to a talloc chunk. </i><br />
- void * <code>talloc_named</code> (const void *context, size_t size, const char *fmt,&#8230;)<br />
- <i>Create a named talloc chunk. </i><br />
- void * <code>talloc_named_const</code> (const void *context, size_t size, const char *name)<br />
- <i>Basic routine to allocate a chunk of memory. </i><br />
- void * <code>talloc_size</code> (const void *ctx, size_t size)<br />
- <i>Untyped allocation. </i><br />
- void * <code>talloc_ptrtype</code> (const void *ctx,#type)<br />
- <i>Allocate into a typed pointer. </i><br />
- void * <code>talloc_new</code> (const void *ctx)<br />
- <i>Allocate a new 0-sized talloc chunk. </i><br />
- void * <code>talloc_zero</code> (const void *ctx,#type)<br />
- <i>Allocate a 0-initizialized structure. </i><br />
- void * <code>talloc_zero_size</code> (const void *ctx, size_t size)<br />
- <i>Allocate untyped, 0-initialized memory. </i><br />
- const char * <code>talloc_get_name</code> (const void *ptr)<br />
- <i>Return the name of a talloc chunk. </i><br />
- void * <code>talloc_check_name</code> (const void *ptr, const char *name)<br />
- <i>Verify that a talloc chunk carries a specified name. </i><br />
- void * <code>talloc_parent</code> (const void *ptr)<br />
- <i>Get the parent chunk of a pointer. </i><br />
- const char * <code>talloc_parent_name</code> (const void *ptr)<br />
- <i>Get a talloc chunk&#8217;s parent name. </i><br />
- size_t <code>talloc_total_size</code> (const void *ptr)<br />
- <i>Get the total size of a talloc chunk including its children. </i><br />
- size_t <code>talloc_total_blocks</code> (const void *ptr)<br />
- <i>Get the number of talloc chunks hanging off a chunk. </i><br />
- void * <code>talloc_memdup</code> (const void *t, const void *p, size_t size)<br />
- <i>Duplicate a memory area into a talloc chunk. </i><br />
- void <code>talloc_set_type</code> (const char *ptr,#type)<br />
- <i>Assign a type to a talloc chunk. </i><br />
- type * <code>talloc_get_type</code> (const void *ptr,#type)<br />
- <i>Get a typed pointer out of a talloc pointer. </i><br />
- void * <code>talloc_get_type_abort</code> (const void *ptr,#type)<br />
- <i>Safely turn a void pointer into a typed pointer. </i><br />
- void * <code>talloc_find_parent_byname</code> (const void *ctx, const char *name)<br />
- <i>Find a parent context by name. </i><br />
- void * <code>talloc_find_parent_bytype</code> (const void *ptr,#type)<br />
- <i>Find a parent context by type. </i><br />
- void * <code>talloc_pool</code> (const void *context, size_t size)<br />
- <i>Allocate a talloc pool. </i><br />
- void * <code>talloc_pooled_object</code> (const void *ctx,#type, unsigned num_subobjects, size_t total_subobjects_size)<br />
+<p>void * <code>talloc</code> (const void *ctx,#type)<br/>
+ <i>Create a new talloc context. </i><br/>
+ void * <code>talloc_init</code> (const char *fmt,&#8230;)<br/>
+ <i>Create a new top level talloc context. </i><br/>
+ int <code>talloc_free</code> (void *ptr)<br/>
+ <i>Free a chunk of talloc memory. </i><br/>
+ void <code>talloc_free_children</code> (void *ptr)<br/>
+ <i>Free a talloc chunk&#8217;s children. </i><br/>
+ void <code>talloc_set_destructor</code> (const void *ptr, int(*destructor)(void *))<br/>
+ <i>Assign a destructor function to be called when a chunk is freed. </i><br/>
+ void * <code>talloc_steal</code> (const void *new_ctx, const void *ptr)<br/>
+ <i>Change a talloc chunk&#8217;s parent. </i><br/>
+ const char * <code>talloc_set_name</code> (const void *ptr, const char *fmt,&#8230;)<br/>
+ <i>Assign a name to a talloc chunk. </i><br/>
+ void * <code>talloc_move</code> (const void *new_ctx, void **pptr)<br/>
+ <i>Change a talloc chunk&#8217;s parent. </i><br/>
+ void <code>talloc_set_name_const</code> (const void *ptr, const char *name)<br/>
+ <i>Assign a name to a talloc chunk. </i><br/>
+ void * <code>talloc_named</code> (const void *context, size_t size, const char *fmt,&#8230;)<br/>
+ <i>Create a named talloc chunk. </i><br/>
+ void * <code>talloc_named_const</code> (const void *context, size_t size, const char *name)<br/>
+ <i>Basic routine to allocate a chunk of memory. </i><br/>
+ void * <code>talloc_size</code> (const void *ctx, size_t size)<br/>
+ <i>Untyped allocation. </i><br/>
+ void * <code>talloc_ptrtype</code> (const void *ctx,#type)<br/>
+ <i>Allocate into a typed pointer. </i><br/>
+ void * <code>talloc_new</code> (const void *ctx)<br/>
+ <i>Allocate a new 0-sized talloc chunk. </i><br/>
+ void * <code>talloc_zero</code> (const void *ctx,#type)<br/>
+ <i>Allocate a 0-initizialized structure. </i><br/>
+ void * <code>talloc_zero_size</code> (const void *ctx, size_t size)<br/>
+ <i>Allocate untyped, 0-initialized memory. </i><br/>
+ const char * <code>talloc_get_name</code> (const void *ptr)<br/>
+ <i>Return the name of a talloc chunk. </i><br/>
+ void * <code>talloc_check_name</code> (const void *ptr, const char *name)<br/>
+ <i>Verify that a talloc chunk carries a specified name. </i><br/>
+ void * <code>talloc_parent</code> (const void *ptr)<br/>
+ <i>Get the parent chunk of a pointer. </i><br/>
+ const char * <code>talloc_parent_name</code> (const void *ptr)<br/>
+ <i>Get a talloc chunk&#8217;s parent name. </i><br/>
+ size_t <code>talloc_total_size</code> (const void *ptr)<br/>
+ <i>Get the total size of a talloc chunk including its children. </i><br/>
+ size_t <code>talloc_total_blocks</code> (const void *ptr)<br/>
+ <i>Get the number of talloc chunks hanging off a chunk. </i><br/>
+ void * <code>talloc_memdup</code> (const void *t, const void *p, size_t size)<br/>
+ <i>Duplicate a memory area into a talloc chunk. </i><br/>
+ void <code>talloc_set_type</code> (const char *ptr,#type)<br/>
+ <i>Assign a type to a talloc chunk. </i><br/>
+ type * <code>talloc_get_type</code> (const void *ptr,#type)<br/>
+ <i>Get a typed pointer out of a talloc pointer. </i><br/>
+ void * <code>talloc_get_type_abort</code> (const void *ptr,#type)<br/>
+ <i>Safely turn a void pointer into a typed pointer. </i><br/>
+ void * <code>talloc_find_parent_byname</code> (const void *ctx, const char *name)<br/>
+ <i>Find a parent context by name. </i><br/>
+ void * <code>talloc_find_parent_bytype</code> (const void *ptr,#type)<br/>
+ <i>Find a parent context by type. </i><br/>
+ void * <code>talloc_pool</code> (const void *context, size_t size)<br/>
+ <i>Allocate a talloc pool. </i><br/>
+ void * <code>talloc_pooled_object</code> (const void *ctx,#type, unsigned num_subobjects, size_t total_subobjects_size)<br/>
  <i>Allocate a talloc object as/with an additional pool. </i></p>
 <h2>Detailed Description</h2>
 <p>talloc is a hierarchical, reference counted memory pool system with destructors. </p>
@@ -119,7 +119,7 @@ Free a talloc chunk and NULL out the pointer.
 <p> The returned pointer is a &#8216;child&#8217; of the supplied context. This means that if you <code>talloc_free()</code> the context then the new child disappears as well. Alternatively you can free just the child. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> A talloc context to create a new reference on or NULL to create a new top level context.<br />
+<dd><i>ctx</i> A talloc context to create a new reference on or NULL to create a new top level context.<br/>
  <i>type</i> The type of memory to allocate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -139,7 +139,7 @@ Free a talloc chunk and NULL out the pointer.
 <p>Verify that a talloc chunk carries a specified name. This function checks if a pointer has the specified name. If it does then the pointer is returned. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The talloc chunk to check.<br />
+<dd><i>ptr</i> The talloc chunk to check.<br/>
  <i>name</i> The name to check against.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -148,7 +148,7 @@ Free a talloc chunk and NULL out the pointer.
 <p>Find a parent context by name. Find a parent memory context of the current context that has the given name. This can be very useful in complex programs where it may be difficult to pass all information down to the level you need, but you know the structure you want is a parent of another context. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The talloc chunk to start from.<br />
+<dd><i>ctx</i> The talloc chunk to start from.<br/>
  <i>name</i> The name of the parent we look for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -158,7 +158,7 @@ Free a talloc chunk and NULL out the pointer.
 <p> Like <code>talloc_find_parent_byname()</code> but takes a type, making it typesafe. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The talloc chunk to start from.<br />
+<dd><i>ptr</i> The talloc chunk to start from.<br/>
  <i>type</i> The type of the parent to look for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -215,7 +215,7 @@ Free a talloc chunk and NULL out the pointer.
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The talloc pointer to check.<br />
+<dd><i>ptr</i> The talloc pointer to check.<br/>
  <i>type</i> The type to check against.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -224,7 +224,7 @@ Free a talloc chunk and NULL out the pointer.
 <p>Safely turn a void pointer into a typed pointer. This macro is used together with talloc(mem_ctx, struct foo). If you had to assign the talloc chunk pointer to some void pointer variable, <code>talloc_get_type_abort()</code> is the recommended way to get the convert the void pointer back to a typed pointer. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The void pointer to convert.<br />
+<dd><i>ptr</i> The void pointer to convert.<br/>
  <i>type</i> The type that this chunk contains</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -236,7 +236,7 @@ Free a talloc chunk and NULL out the pointer.
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>fmt</i> Format string for the name.<br />
+<dd><i>fmt</i> Format string for the name.<br/>
  <i>&#8230;</i> Additional printf-style arguments.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -251,8 +251,8 @@ Free a talloc chunk and NULL out the pointer.
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>t</i> The talloc context to hang the result off.<br />
- <i>p</i> The memory chunk you want to duplicate.<br />
+<dd><i>t</i> The talloc context to hang the result off.<br/>
+ <i>p</i> The memory chunk you want to duplicate.<br/>
  <i>size</i> Number of char&#8217;s that you want copy.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -268,7 +268,7 @@ Free a talloc chunk and NULL out the pointer.
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>new_ctx</i> The new parent context.<br />
+<dd><i>new_ctx</i> The new parent context.<br/>
  <i>pptr</i> Pointer to the talloc chunk to move.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -280,9 +280,9 @@ Free a talloc chunk and NULL out the pointer.
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The talloc context to hang the result off.<br />
- <i>size</i> Number of char&#8217;s that you want to allocate.<br />
- <i>fmt</i> Format string for the name.<br />
+<dd><i>context</i> The talloc context to hang the result off.<br/>
+ <i>size</i> Number of char&#8217;s that you want to allocate.<br/>
+ <i>fmt</i> Format string for the name.<br/>
  <i>&#8230;</i> Additional printf-style arguments.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -297,8 +297,8 @@ Free a talloc chunk and NULL out the pointer.
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The parent context.<br />
- <i>size</i> The number of char&#8217;s that we want to allocate.<br />
+<dd><i>context</i> The parent context.<br/>
+ <i>size</i> The number of char&#8217;s that we want to allocate.<br/>
  <i>name</i> The name the talloc block has.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -336,7 +336,7 @@ Free a talloc chunk and NULL out the pointer.
 <p> The downside of a talloc pool is that if you <code>talloc_move()</code> a child of a talloc pool to a talloc parent outside the pool, the whole pool memory is not <a href="/docs/linux/man/3-free/">free</a>(3)&#8217;ed until that moved chunk is also <code>talloc_free()</code>ed. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The talloc context to hang the result off.<br />
+<dd><i>context</i> The talloc context to hang the result off.<br/>
  <i>size</i> Size of the talloc pool.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -345,9 +345,9 @@ Free a talloc chunk and NULL out the pointer.
 <p>Allocate a talloc object as/with an additional pool. This is like <code>talloc_pool()</code>, but&#8217;s it&#8217;s more flexible and allows an object to be a pool for its children. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The talloc context to hang the result off.<br />
- <i>type</i> The type that we want to allocate.<br />
- <i>num_subobjects</i> The expected number of subobjects, which will be allocated within the pool. This allocates space for talloc_chunk headers.<br />
+<dd><i>ctx</i> The talloc context to hang the result off.<br/>
+ <i>type</i> The type that we want to allocate.<br/>
+ <i>num_subobjects</i> The expected number of subobjects, which will be allocated within the pool. This allocates space for talloc_chunk headers.<br/>
  <i>total_subobjects_size</i> The size that all subobjects can use in total.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -356,7 +356,7 @@ Free a talloc chunk and NULL out the pointer.
 <p>Allocate into a typed pointer. The <code>talloc_ptrtype()</code> macro should be used when you have a pointer and want to allocate memory to point at with this pointer. When compiling with gcc &gt;= 3 it is typesafe. Note this is a wrapper of <code>talloc_size()</code> and <code>talloc_get_name()</code> will return the current location in the source file and not the type. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The talloc context to hang the result off.<br />
+<dd><i>ctx</i> The talloc context to hang the result off.<br/>
  <i>type</i> The pointer you want to assign the result to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -373,7 +373,7 @@ Free a talloc chunk and NULL out the pointer.
 <p> If your destructor attempts to <code>talloc_free()</code> the pointer that it is the destructor for then <code>talloc_free()</code> will return -1 and the free will be ignored. This would be a pointless operation anyway, as the destructor is only called when the memory is just about to go away. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The talloc chunk to add a destructor to.<br />
+<dd><i>ptr</i> The talloc chunk to add a destructor to.<br/>
  <i>destructor</i> The destructor function to be called. NULL to remove it.</dd></dl>
 <p> Example: </p>
 <pre>* static int destroy_fd(int *fd) {
@@ -405,8 +405,8 @@ Free a talloc chunk and NULL out the pointer.
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The talloc chunk to assign a name to.<br />
- <i>fmt</i> Format string for the name.<br />
+<dd><i>ptr</i> The talloc chunk to assign a name to.<br/>
+ <i>fmt</i> Format string for the name.<br/>
  <i>&#8230;</i> Add printf-style additional arguments.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -419,7 +419,7 @@ Free a talloc chunk and NULL out the pointer.
 <p> This function does not allocate any memory. It just copies the supplied pointer into the internal representation of the talloc ptr. This means you must not pass a name pointer to memory that will disappear before the ptr is freed with <code>talloc_free()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The talloc chunk to assign a name to.<br />
+<dd><i>ptr</i> The talloc chunk to assign a name to.<br/>
  <i>name</i> Format string for the name.</dd></dl>
 <h3>void talloc_set_type (const char *ptr, #type)</h3>
 <p>Assign a type to a talloc chunk. This macro allows you to force the name of a pointer to be of a particular type. This can be used in conjunction with <code>talloc_get_type()</code> to do type checking on void* pointers. </p>
@@ -428,14 +428,14 @@ Free a talloc chunk and NULL out the pointer.
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The talloc chunk to assign the type to.<br />
+<dd><i>ptr</i> The talloc chunk to assign the type to.<br/>
  <i>type</i> The type to assign.</dd></dl>
 <h3>void* talloc_size (const void *ctx, size_tsize)</h3>
 <p>Untyped allocation. The function should be used when you don&#8217;t have a convenient type to pass to <code>talloc()</code>. Unlike <code>talloc()</code>, it is not type safe (as it returns a void *), so you are on your own for type checking. </p>
 <p> Best to use <code>talloc()</code> or <code>talloc_array()</code> instead. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The talloc context to hang the result off.<br />
+<dd><i>ctx</i> The talloc context to hang the result off.<br/>
  <i>size</i> Number of char&#8217;s that you want to allocate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -455,7 +455,7 @@ Free a talloc chunk and NULL out the pointer.
 <p>To unambiguously change the parent of a pointer please see the function <code>talloc_reparent()</code>. See the <code>talloc_set_log_fn()</code> documentation for more information on talloc logging. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>new_ctx</i> The new parent context.<br />
+<dd><i>new_ctx</i> The new parent context.<br/>
  <i>ptr</i> The talloc chunk to move.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -488,7 +488,7 @@ Free a talloc chunk and NULL out the pointer.
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The talloc context to hang the result off.<br />
+<dd><i>ctx</i> The talloc context to hang the result off.<br/>
  <i>type</i> The type that we want to allocate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -507,7 +507,7 @@ Free a talloc chunk and NULL out the pointer.
 <p>Allocate untyped, 0-initialized memory. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The talloc context to hang the result off.<br />
+<dd><i>ctx</i> The talloc context to hang the result off.<br/>
  <i>size</i> Number of char&#8217;s that you want to allocate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

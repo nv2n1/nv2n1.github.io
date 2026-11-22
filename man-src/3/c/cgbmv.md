@@ -11,7 +11,7 @@ description: "cgbmv.f –"
 <p> cgbmv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgbmv</code> (TRANS, M, N, KL, KU, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p> subroutine <code>cgbmv</code> (TRANS, M, N, KL, KU, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>CGBMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgbmv (characterTRANS, integerM, integerN, integerKL, integerKU, complexALPHA, complex, dimension(lda,*)A, integerLDA, complex, dimension(*)X, integerINCX, complexBETA, complex, dimension(*)Y, integerINCY)</h3>

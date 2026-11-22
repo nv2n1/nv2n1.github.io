@@ -49,15 +49,15 @@ description: "ipmiutil_sunoem – OEM commands for Sun servers"
 <dt><i>set</i> <code>sensorid</code> <code>ledmode</code> [<code>ledtype</code>]</dt>
 <dd>Set status of a particular LED described by a Generic Device Locator record in the SDR. A sensorid of <i>all</i> will set the status of all available LEDS to the specified <i>ledmode</i> and <i>ledtype</i>.</dd>
 <dt>LED Mode is required for set operations:</dt>
-<dd><i>OFF</i> Off<br />
- <i>ON</i> Steady On<br />
- <i>STANDBY</i> 100ms on 2900ms off blink rate<br />
- <i>SLOW</i> 1HZ blink rate<br />
+<dd><i>OFF</i> Off<br/>
+ <i>ON</i> Steady On<br/>
+ <i>STANDBY</i> 100ms on 2900ms off blink rate<br/>
+ <i>SLOW</i> 1HZ blink rate<br/>
  <i>FAST</i> 4HZ blink rate</dd>
 <dt>LED Type is optional:</dt>
-<dd><i>OK2RM</i> Ok to Remove<br />
- <i>SERVICE</i> Service Required<br />
- <i>ACT</i> Activity<br />
+<dd><i>OK2RM</i> Ok to Remove<br/>
+ <i>SERVICE</i> Service Required<br/>
+ <i>ACT</i> Activity<br/>
  <i>LOCATE</i> Locate </dd>
 </dl>
 </dl>

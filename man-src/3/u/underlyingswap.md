@@ -13,10 +13,10 @@ description: "QuantLib::SwapIndex – base class for swap-rate indexes"
 #include &lt;ql/indexes/swapindex.hpp&gt;</code></pre>
 <p> Inherits <code>QuantLib::InterestRateIndex</code>. Inherited by <code>ChfLiborSwapIsdaFix</code>, <code>EuriborSwapIfrFix</code>, <code>EuriborSwapIsdaFixA</code>, <code>EuriborSwapIsdaFixB</code>, <code>EurLiborSwapIfrFix</code>, <code>EurLiborSwapIsdaFixA</code>, <code>EurLiborSwapIsdaFixB</code>, <code>GbpLiborSwapIsdaFix</code>, <code>JpyLiborSwapIsdaFixAm</code>, <code>JpyLiborSwapIsdaFixPm</code>, <code>UsdLiborSwapIsdaFixAm</code>, and <code>UsdLiborSwapIsdaFixPm</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>SwapIndex</code> (const std::string &amp;familyName, const <code>Period</code> &amp;tenor, <code>Natural</code> settlementDays, <code>Currency</code> currency, const <code>Calendar</code> &amp;calendar, const <code>Period</code> &amp;fixedLegTenor, <code>BusinessDayConvention</code> fixedLegConvention, const <code>DayCounter</code> &amp;fixedLegDayCounter, const boost::shared_ptr&lt; <code>IborIndex</code> &gt; &amp;iborIndex)<br />
+<p><code>SwapIndex</code> (const std::string &amp;familyName, const <code>Period</code> &amp;tenor, <code>Natural</code> settlementDays, <code>Currency</code> currency, const <code>Calendar</code> &amp;calendar, const <code>Period</code> &amp;fixedLegTenor, <code>BusinessDayConvention</code> fixedLegConvention, const <code>DayCounter</code> &amp;fixedLegDayCounter, const boost::shared_ptr&lt; <code>IborIndex</code> &gt; &amp;iborIndex)<br/>
  <code>InterestRateIndex interface</code> </p>
 <p> <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>termStructure</code> () const </p>
-<p> <code>Date</code> <code>maturityDate</code> (const <code>Date</code> &amp;valueDate) const<br />
+<p> <code>Date</code> <code>maturityDate</code> (const <code>Date</code> &amp;valueDate) const<br/>
  <code>Inspectors</code> </p>
 <p> <code>Period</code> <code>fixedLegTenor</code> () const </p>
 <p> <code>BusinessDayConvention</code> <code>fixedLegConvention</code> () const </p>

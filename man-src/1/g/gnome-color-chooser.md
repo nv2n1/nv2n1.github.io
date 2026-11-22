@@ -15,10 +15,10 @@ description: "gnome-color-chooser – GTK+/GNOME desktop appearance customizatio
 <p> GNOME Color Chooser is an application for customizing the appearance of the GNOME desktop. </p>
 <p> Filename: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Theme to open&nbsp;<wbr>(*.gnomecc) </p>
-<p> Features:<br />
- * change colors and sizes of GTK+ widgets<br />
- * colorize desktop icons<br />
- * configure installed GTK+ engines and let your current theme be drawn<br />
+<p> Features:<br/>
+ * change colors and sizes of GTK+ widgets<br/>
+ * colorize desktop icons<br/>
+ * configure installed GTK+ engines and let your current theme be drawn<br/>
 &nbsp;<wbr>&nbsp;<wbr>by an installed GTK+&nbsp;<wbr>engine of your choice</p>
 <h2>OPTIONS</h2>
 <p> GNOME Color Chooser follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
@@ -36,5 +36,5 @@ description: "gnome-color-chooser – GTK+/GNOME desktop appearance customizatio
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://gnomecc.sourceforge.net/">http://gnomecc.sourceforge.net/</a></p>
 <h2>AUTHOR</h2>
-<p> This manual page was written by<br />
+<p> This manual page was written by<br/>
  Werner Pantke &lt;gnome-color-chooser [at] punk-ass-bitch.org&gt; . </p>

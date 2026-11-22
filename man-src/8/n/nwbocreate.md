@@ -41,14 +41,14 @@ description: "nwbocreate – Create a NetWare Bindery Object"
 <p> <code>-w</code> <i>write-flag</i></p>
 <dl>
 <dd>Read security and write security may each have one of the following values: </dd>
-<p>&nbsp;<wbr>ANYONE:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Anyone may access the object<br />
-&nbsp;<wbr>LOGGED:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Anyone who is logged in may access the&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>object<br />
-&nbsp;<wbr>OBJECT:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Anyone who is logged in as the object or<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SUPERVISOR equivalent may access the&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>object<br />
-&nbsp;<wbr>SUPERVISOR: Anyone who is logged in as SUPERVISOR&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>equivalent may access the object<br />
+<p>&nbsp;<wbr>ANYONE:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Anyone may access the object<br/>
+&nbsp;<wbr>LOGGED:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Anyone who is logged in may access the&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>object<br/>
+&nbsp;<wbr>OBJECT:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Anyone who is logged in as the object or<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SUPERVISOR equivalent may access the&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>object<br/>
+&nbsp;<wbr>SUPERVISOR: Anyone who is logged in as SUPERVISOR&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>equivalent may access the object<br/>
 &nbsp;<wbr>NETWARE:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Only the Bindery may access the object</dl>
 <h2>Authors</h2>
 <p>nwbocreate was written by Volker Lendecke with the corresponding Caldera utility in mind. See the Changes file of ncpfs for other contributors.</p>

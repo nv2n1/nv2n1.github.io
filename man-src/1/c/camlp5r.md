@@ -8,22 +8,22 @@ url: "/docs/linux/man/1-camlp5r/"
 description: "camlp5 – Pre-Precessor-Pretty-Printer for OCaml mkcamlp5 – Create custom camlp5 mkcamlp5.opt – Create custom camlp5 (native code) ocpp5 – Universal preprocessor"
 ---
 
-<p> camlp5 &#8211; Pre-Precessor-Pretty-Printer for OCaml<br />
- mkcamlp5 &#8211; Create custom camlp5<br />
- mkcamlp5.opt &#8211; Create custom camlp5 (native code)<br />
+<p> camlp5 &#8211; Pre-Precessor-Pretty-Printer for OCaml<br/>
+ mkcamlp5 &#8211; Create custom camlp5<br/>
+ mkcamlp5.opt &#8211; Create custom camlp5 (native code)<br/>
  ocpp5 &#8211; Universal preprocessor </p>
 <h2>SYNOPSIS</h2>
-<p> <code>camlp5</code> [ load-options ] [&#8211;] [ other-options ]<br />
- <code>camlp5o</code> [ load-options ] [&#8211;] [ other-options ]<br />
- <code>camlp5r</code> [ load-options ] [&#8211;] [ other-options ]<br />
- <code>camlp5sch</code> [ load-options ] [&#8211;] [ other-options ]<br />
- <code>camlp5o.cma</code><br />
- <code>camlp5r.cma</code><br />
- <code>camlp5sch.cma</code><br />
- <code>mkcamlp5</code><br />
- <code>mkcamlp5.opt</code><br />
+<p> <code>camlp5</code> [ load-options ] [&#8211;] [ other-options ]<br/>
+ <code>camlp5o</code> [ load-options ] [&#8211;] [ other-options ]<br/>
+ <code>camlp5r</code> [ load-options ] [&#8211;] [ other-options ]<br/>
+ <code>camlp5sch</code> [ load-options ] [&#8211;] [ other-options ]<br/>
+ <code>camlp5o.cma</code><br/>
+ <code>camlp5r.cma</code><br/>
+ <code>camlp5sch.cma</code><br/>
+ <code>mkcamlp5</code><br/>
+ <code>mkcamlp5.opt</code><br/>
  <code>ocpp5</code> [ load-options ] file </p>
-<p> <code>camlp5o.opt</code> [&#8211;] [ other-options ]<br />
+<p> <code>camlp5o.opt</code> [&#8211;] [ other-options ]<br/>
  <code>camlp5r.opt</code> [&#8211;] [ other-options ] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>camlp5</code> is a Pre-Processor-Pretty-Printer for OCaml, parsing a source file and printing some result on standard output. </p>
@@ -162,10 +162,10 @@ description: "camlp5 – Pre-Precessor-Pretty-Printer for OCaml mkcamlp5 – Cre
 <dd> Set the maximum stalling value. </dd>
 </dl>
 <h2>FILES</h2>
-<p> Library directory of camlp5 in the present installation:<br />
+<p> Library directory of camlp5 in the present installation:<br/>
  /usr/lib64/ocaml/camlp5 </p>
 <h2>SEE ALSO</h2>
-<p> Camlp5 &#8211; Reference Manual<br />
+<p> Camlp5 &#8211; Reference Manual<br/>
  <a href="/docs/linux/man/1-ocamlc/">ocamlc</a>(1), <a href="/docs/linux/man/1-ocaml/">ocaml</a>(1), <a href="/docs/linux/man/1-ocamlmktop/">ocamlmktop</a>(1). </p>
 <h2>AUTHOR</h2>
 <p> Daniel de Rauglaudre, INRIA Rocquencourt. </p>

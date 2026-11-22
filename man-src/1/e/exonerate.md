@@ -255,7 +255,7 @@ description: "exonerate – a generic tool for sequence comparison"
 }&quot;</code> </p>
 <dl>
 <dt><code>-n | &#8211;bestn &lt;number&gt;</code></dt>
-<dd> Report the best N results for each query. (Only results scoring better than the score threshold<br />
+<dd> Report the best N results for each query. (Only results scoring better than the score threshold<br/>
 &nbsp;<wbr>will be reported). The option reduces the amount of output generated, and also allows exonerate to speed up the search.</dd>
 <dt><code>-S | &#8211;subopt &lt;boolean&gt;</code></dt>
 <dd> This option allows for the reporting of (Waterman-Eggert style) suboptimal alignments. (It is on by default.) All suboptimal (ie. non-intersecting) alignments will be reported for each pair of sequences scoring at least the threshold provided by <code>&#8211;score.</code> </dd>

@@ -13,9 +13,9 @@ description: "QuantLib::ContinuousFloatingLookbackOption – Continuous-floating
 <p> #include &lt;ql/instruments/lookbackoption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::OneAssetOption</code>. </p>
 <h3>Classes</h3>
-<p> class <code>arguments</code><br />
- <i>Arguments for continuous floating lookback option calculation </i><br />
- class <code>engine</code><br />
+<p> class <code>arguments</code><br/>
+ <i>Arguments for continuous floating lookback option calculation </i><br/>
+ class <code>engine</code><br/>
  <i>Continuous floating lookback engine base class </i></p>
 <h3>Public Member Functions</h3>
 <p> <code>ContinuousFloatingLookbackOption</code> (<code>Real</code> currentMinmax, const boost::shared_ptr&lt; <code>TypePayoff</code> &gt; &amp;payoff, const boost::shared_ptr&lt; <code>Exercise</code> &gt; &amp;exercise) </p>

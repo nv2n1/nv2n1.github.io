@@ -88,14 +88,14 @@ description: "nsdb-create-fsl – create a fileset location (FSL) record on an N
 </dl>
 <p> Further suppose the NSDB <i>nsdb.example.net:389</i> has an NSDB Container Entry whose distinguished name is <i>o=fedfs</i>, and that an FSN record for the above UUID already exists. Finally, a replica of this fileset exists at <i>fileserver.example.net:/export/path</i>. To create a corresponding FSL record, you might use:</p>
 <dl>
-<dd>$ nsdb-create-fsl -D cn=Manager -e o=fedfs \<br />
+<dd>$ nsdb-create-fsl -D cn=Manager -e o=fedfs \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-l nsdb.example.net \</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>8e246ddc-7b46-11e0-8252-000c297fd679 \</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>323c5068-7c11-11e0-8d38-000c297fd679 \</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>fileserver.example.net /export/path</p>
-<p> Enter NSDB password:<br />
- Successfully created FSL record<br />
-&nbsp;<wbr>&nbsp;<wbr>fedfsFslUuid=323c5068-7c11-11e0-8d38-000c297fd679,<br />
+<p> Enter NSDB password:<br/>
+ Successfully created FSL record<br/>
+&nbsp;<wbr>&nbsp;<wbr>fedfsFslUuid=323c5068-7c11-11e0-8d38-000c297fd679,<br/>
 &nbsp;<wbr>&nbsp;<wbr>fedfsFsnUuid=8e246ddc-7b46-11e0-8252-000c297fd679,o=fedfs </p>
 </dl>
 <p> A new unpopulated NFS FSL record is created on <i>nsdb.example.net:389</i> as a child of the FSN record with a distinguished name of</p>

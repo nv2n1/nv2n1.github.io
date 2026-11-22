@@ -10,14 +10,14 @@ description: "simul-gridmap – Robot dataset simulator from a gridmap and a pre
 
 <p> simul-gridmap &#8211; Robot dataset simulator from a gridmap and a predefined robot path </p>
 <h2>SYNOPSIS</h2>
-<p> simul-gridmap <i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i></p>
+<p> simul-gridmap <i></i><i>OPTIONS</i><i></i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>simul-gridmap</code> is a command-line application which generates a synthetic rawlog of a simulated robot as it follows a path (given by the <i>poses.txt</i> file) and takes measurements from a laser scanner in a world defined through an occupancy grid map.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code> produce help message </p>
 <p> <code>&#8211;grid</code> arg grid map file (*.gridmap or *.gridmap.gz) </p>
 <p> <code>&#8211;poses</code> arg poses text file, one &#8216;time x y phi&#8217; line per pose </p>
-<p> <code>&#8211;out-rawlog</code> arg the output rawlog to generate from which to take noisy<br />
+<p> <code>&#8211;out-rawlog</code> arg the output rawlog to generate from which to take noisy<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>odometry </p>
 <p> <code>&#8211;in-rawlog</code> arg (optional) the rawlog from which to take noisy odometry </p>
 <p> <code>&#8211;ranges</code> arg (=361) number of laser ranges per scan (default=361) </p>
@@ -30,8 +30,8 @@ description: "simul-gridmap – Robot dataset simulator from a gridmap and a pre
 <h2>SEE ALSO</h2>
 <p> The application wiki page at <a rel="nofollow" href="http://babel.isa.uma.es/mrpt/index.php/Applications">http://babel.isa.uma.es/mrpt/index.php/Applications</a></p>
 <h2>AUTHORS</h2>
-<p> <code>simul-gridmap</code> is part of the Mobile Robot Programming Toolkit (<font SIZE="-1">MRPT</font>), and was originally written by the <font SIZE="-1">MAPIR</font> laboratory (University of Malaga). </p>
+<p> <code>simul-gridmap</code> is part of the Mobile Robot Programming Toolkit (MRPT), and was originally written by the MAPIR laboratory (University of Malaga). </p>
 <p> This manual page was written by Jose Luis Blanco &lt;joseluisblancoc [at] gmail.com&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 3, or (at your option) any later version. </p>
-<p> On Debian GNU/Linux systems, the complete text of the <font SIZE="-1">GNU</font> General Public License can be found in `/usr/share/common-licenses/GPL&#8217;. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3, or (at your option) any later version. </p>
+<p> On Debian GNU/Linux systems, the complete text of the GNU General Public License can be found in `/usr/share/common-licenses/GPL&#8217;. </p>

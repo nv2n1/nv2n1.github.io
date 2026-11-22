@@ -11,7 +11,7 @@ description: "globus_time.h –"
 <p> globus_time.h &#8211; </p>
 <p> Time Types and Macros.</p>
 <h2>SYNOPSIS</h2>
-<p> #include &#8216;globus_types.h&#8217;<br />
+<p> #include &#8216;globus_types.h&#8217;<br/>
  #include &lt;time.h&gt; </p>
 <h3>Macros</h3>
 <p> #define <code>GlobusTimeAbstimeSet</code>(Abstime, Sec, USec) </p>
@@ -46,108 +46,108 @@ description: "globus_time.h –"
 <p> Copy the absolute time</p>
 <h3>#define GlobusTimeAbstimeDiff(Reltime, T1, T2)</h3>
 <p> <code>Value:</code> </p>
-<p>{<br />
-    int __res = globus_abstime_cmp(&amp;(T1), &amp;(T2));<br />
-    if (__res &lt; 0) {<br />
-        (Reltime).tv_sec = (T2).tv_sec &#8211; (T1).tv_sec;<br />
-        (Reltime).tv_usec = (((T2).tv_nsec &#8211; (T1).tv_nsec) / 1000);<br />
-        if ((Reltime).tv_usec &lt; 0) {<br />
-            (Reltime).tv_sec&#8211;;<br />
-            (Reltime).tv_usec += 1000000;<br />
-        }<br />
-    } else if (__res &gt; 0) {<br />
-        (Reltime).tv_sec = (T1).tv_sec &#8211; (T2).tv_sec;<br />
-        (Reltime).tv_usec = (((T1).tv_nsec &#8211; (T2).tv_nsec) / 1000);<br />
-        if ((Reltime).tv_usec &lt; 0) {<br />
-            (Reltime).tv_sec&#8211;;<br />
-            (Reltime).tv_usec += 1000000;<br />
-        }<br />
-    } else {<br />
-        (Reltime).tv_sec = 0;<br />
-        (Reltime).tv_usec = 0;<br />
-    }<br />
-}<br />
+<p>{<br/>
+    int __res = globus_abstime_cmp(&amp;(T1), &amp;(T2));<br/>
+    if (__res &lt; 0) {<br/>
+        (Reltime).tv_sec = (T2).tv_sec &#8211; (T1).tv_sec;<br/>
+        (Reltime).tv_usec = (((T2).tv_nsec &#8211; (T1).tv_nsec) / 1000);<br/>
+        if ((Reltime).tv_usec &lt; 0) {<br/>
+            (Reltime).tv_sec&#8211;;<br/>
+            (Reltime).tv_usec += 1000000;<br/>
+        }<br/>
+    } else if (__res &gt; 0) {<br/>
+        (Reltime).tv_sec = (T1).tv_sec &#8211; (T2).tv_sec;<br/>
+        (Reltime).tv_usec = (((T1).tv_nsec &#8211; (T2).tv_nsec) / 1000);<br/>
+        if ((Reltime).tv_usec &lt; 0) {<br/>
+            (Reltime).tv_sec&#8211;;<br/>
+            (Reltime).tv_usec += 1000000;<br/>
+        }<br/>
+    } else {<br/>
+        (Reltime).tv_sec = 0;<br/>
+        (Reltime).tv_usec = 0;<br/>
+    }<br/>
+}<br/>
  Find the difference between the 2 absolute times.</p>
 <h3>#define GlobusTimeAbstimeGet(Abstime, Sec, USec)</h3>
 <p> <code>Value:</code> </p>
-<p>{<br />
-    Sec = (Abstime).tv_sec;<br />
-    USec = ((Abstime).tv_nsec / 1000);<br />
-}<br />
+<p>{<br/>
+    Sec = (Abstime).tv_sec;<br/>
+    USec = ((Abstime).tv_nsec / 1000);<br/>
+}<br/>
  Seperates abstime structure into its components,sec and usec.</p>
 <h3>#define GlobusTimeAbstimeGetCurrent(Abstime)</h3>
 <p> <code>Value:</code> </p>
-<p>{<br />
-    struct timeval __time;<br />
-    gettimeofday(&amp;__time, GLOBUS_NULL);<br />
-    (Abstime).tv_sec = __time.tv_sec;<br />
-    (Abstime).tv_nsec = (__time.tv_usec * 1000);<br />
-}<br />
+<p>{<br/>
+    struct timeval __time;<br/>
+    gettimeofday(&amp;__time, GLOBUS_NULL);<br/>
+    (Abstime).tv_sec = __time.tv_sec;<br/>
+    (Abstime).tv_nsec = (__time.tv_usec * 1000);<br/>
+}<br/>
  Get the current time</p>
 <h3>#define GlobusTimeAbstimeInc(Abstime, Reltime)</h3>
 <p> <code>Value:</code> </p>
-<p>{<br />
-    (Abstime).tv_nsec += ((Reltime).tv_usec * 1000);<br />
-    if ((Abstime).tv_nsec &gt;= 1000000000) {<br />
-        (Abstime).tv_sec++;<br />
-        (Abstime).tv_nsec -= 1000000000;<br />
-    }<br />
-    (Abstime).tv_sec += (Reltime).tv_sec;<br />
-}<br />
+<p>{<br/>
+    (Abstime).tv_nsec += ((Reltime).tv_usec * 1000);<br/>
+    if ((Abstime).tv_nsec &gt;= 1000000000) {<br/>
+        (Abstime).tv_sec++;<br/>
+        (Abstime).tv_nsec -= 1000000000;<br/>
+    }<br/>
+    (Abstime).tv_sec += (Reltime).tv_sec;<br/>
+}<br/>
  Add reltime to abstime</p>
 <h3>#define GlobusTimeAbstimeSet(Abstime, Sec, USec)</h3>
 <p> <code>Value:</code> </p>
-<p>{<br />
-    GlobusTimeAbstimeGetCurrent(Abstime);<br />
-    (Abstime).tv_nsec += (USec * 1000);<br />
-    if ((Abstime).tv_nsec &gt;= 1000000000) {<br />
-        (Abstime).tv_sec += ((Abstime).tv_nsec / 1000000000);<br />
-        (Abstime).tv_nsec = (Abstime).tv_nsec % 1000000000;<br />
-    }<br />
-    (Abstime).tv_sec += Sec;<br />
-}<br />
+<p>{<br/>
+    GlobusTimeAbstimeGetCurrent(Abstime);<br/>
+    (Abstime).tv_nsec += (USec * 1000);<br/>
+    if ((Abstime).tv_nsec &gt;= 1000000000) {<br/>
+        (Abstime).tv_sec += ((Abstime).tv_nsec / 1000000000);<br/>
+        (Abstime).tv_nsec = (Abstime).tv_nsec % 1000000000;<br/>
+    }<br/>
+    (Abstime).tv_sec += Sec;<br/>
+}<br/>
  Set the abstime structure to the sec and usec parameter values.</p>
 <h3>#define GlobusTimeReltimeCopy(Dest, Src)</h3>
 <p> <code>Value:</code> </p>
-<p>{<br />
-    (Dest).tv_sec = (Src).tv_sec;<br />
-    (Dest).tv_usec = (Src).tv_usec;<br />
-}<br />
+<p>{<br/>
+    (Dest).tv_sec = (Src).tv_sec;<br/>
+    (Dest).tv_usec = (Src).tv_usec;<br/>
+}<br/>
  Copy the relative time</p>
 <h3>#define GlobusTimeReltimeDivide(Reltime, Factor)</h3>
 <p> <code>Value:</code> </p>
-<p>{<br />
-    (Reltime).tv_usec /= Factor;<br />
-    (Reltime).tv_sec /= Factor;<br />
-}<br />
+<p>{<br/>
+    (Reltime).tv_usec /= Factor;<br/>
+    (Reltime).tv_sec /= Factor;<br/>
+}<br/>
  divide the reltime by factor</p>
 <h3>#define GlobusTimeReltimeMultiply(Reltime, Factor)</h3>
 <p> <code>Value:</code> </p>
-<p>{<br />
-    (Reltime).tv_usec *= Factor;<br />
-    (Reltime).tv_sec *= Factor;<br />
-    if ((Reltime).tv_usec &gt;= 1000000) {<br />
-        (Reltime).tv_sec += ((Reltime).tv_usec / 1000000);<br />
-        (Reltime).tv_usec = (Reltime).tv_usec % 1000000;<br />
-    }<br />
-}<br />
+<p>{<br/>
+    (Reltime).tv_usec *= Factor;<br/>
+    (Reltime).tv_sec *= Factor;<br/>
+    if ((Reltime).tv_usec &gt;= 1000000) {<br/>
+        (Reltime).tv_sec += ((Reltime).tv_usec / 1000000);<br/>
+        (Reltime).tv_usec = (Reltime).tv_usec % 1000000;<br/>
+    }<br/>
+}<br/>
  Multiple the reltime by factor</p>
 <h3>#define GlobusTimeReltimeSet(Reltime, Sec, USec)</h3>
 <p> <code>Value:</code> </p>
-<p>{<br />
-    (Reltime).tv_usec = (USec);<br />
-    (Reltime).tv_sec = Sec;<br />
-    if ((Reltime).tv_usec &gt;= 1000000) {<br />
-        (Reltime).tv_sec += ((Reltime).tv_usec / 1000000);<br />
-        (Reltime).tv_usec = (Reltime).tv_usec % 1000000;<br />
-    }<br />
-}<br />
+<p>{<br/>
+    (Reltime).tv_usec = (USec);<br/>
+    (Reltime).tv_sec = Sec;<br/>
+    if ((Reltime).tv_usec &gt;= 1000000) {<br/>
+        (Reltime).tv_sec += ((Reltime).tv_usec / 1000000);<br/>
+        (Reltime).tv_usec = (Reltime).tv_usec % 1000000;<br/>
+    }<br/>
+}<br/>
  Set the reltime structure to the sec and usec parameter values.</p>
 <h3>#define GlobusTimeReltimeToMilliSec(Milliseconds, Reltime)</h3>
 <p> <code>Value:</code> </p>
-<p>{<br />
-    Milliseconds = ((Reltime).tv_sec * 1000) + ((Reltime).tv_usec) / 1000;<br />
-}<br />
+<p>{<br/>
+    Milliseconds = ((Reltime).tv_sec * 1000) + ((Reltime).tv_usec) / 1000;<br/>
+}<br/>
  Convert a relative time into a long in millisec units</p>
 <h3>#define GlobusTimeReltimeToUSec(SlpInt, Reltime)</h3>
 <p> <code>Value:</code> </p>

@@ -24,7 +24,7 @@ description: "pamtohtmltbl – convert pnm/pam visual image to an HTML table"
 <dd> This option indicates that pixels of the specified color are to be transparent in the HTML table. The table cell for a pixel of this color will have no background color specified. </dd>
 <p> Specify the color (<i>color</i>) as described for the argument of the <code>ppm_parsecolor()</code> library routine . </p>
 <dt><code>-verbose</code></dt>
-<dd> This option causes <code>pamtohtmltbl</code> to display messages about the conversion process.<br />
+<dd> This option causes <code>pamtohtmltbl</code> to display messages about the conversion process.<br/>
 &nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>pnm</code>(1) </p>

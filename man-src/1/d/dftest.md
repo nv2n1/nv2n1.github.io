@@ -18,7 +18,7 @@ description: "dftest – Shows display filter byte-code, for debugging dfilter r
 <dt>filter</dt>
 <dd> The display filter expression. If needed it has to be quoted.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> Show how the <font SIZE="-1">IP</font> protocol is filtered: </p>
+<p> Show how the IP protocol is filtered: </p>
 <pre>
     dftest ip
 </pre>

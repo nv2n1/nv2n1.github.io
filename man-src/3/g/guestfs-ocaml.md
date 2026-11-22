@@ -24,8 +24,8 @@ g #launch();
 ocamlfind opt prog.ml - package guestfs - linkpkg - o prog or : ocamlopt - I + guestfs mlguestfs.cmxa prog.ml - o prog
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> This manual page documents how to call libguestfs from the OCaml programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3).</p>
-<h3><font SIZE="-1">PROGRAMMING STYLES</font></h3>
+<p> This manual page documents how to call libguestfs from the OCaml programming language. This page just documents the differences from the C API and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3).</p>
+<h3>PROGRAMMING STYLES</h3>
 <p> There are two different programming styles supported by the OCaml bindings. You can use a module style, with each C function mapped to an OCaml function: </p>
 <p>int guestfs_set_verbose(guestfs_h *g, int flag);</p>
 <p> becomes: </p>
@@ -37,111 +37,111 @@ ocamlfind opt prog.ml - package guestfs - linkpkg - o prog or : ocamlopt - I + g
  method set_verbose : bool -&gt; unit
 </pre>
 <p> The object-oriented style is usually briefer, and the minor performance penalty isn&#8217;t noticeable in the general overhead of performing libguestfs functions.</p>
-<h3><font SIZE="-1">CLOSING THE HANDLE</font></h3>
+<h3>CLOSING THE HANDLE</h3>
 <p> The handle is closed when it is reaped by the garbage collector. Because libguestfs handles include a lot of state, it is also possible to close (and hence free) them explicitly by calling <tt>&quot;Guestfs.close&quot;</tt> or the <tt>&quot;#close&quot;</tt> method.</p>
-<h3><font SIZE="-1">EXCEPTIONS</font></h3>
+<h3>EXCEPTIONS</h3>
 <p> Errors from libguestfs functions are mapped into the <tt>&quot;Guestfs.Error&quot;</tt> exception. This has a single parameter which is the error message (a string). </p>
 <p> Calling any function/method on a closed handle raises <tt>&quot;Guestfs.Handle_closed&quot;</tt>. The single parameter is the name of the function that you called.</p>
 <h2>EXAMPLE: CREATE A DISK IMAGE</h2>
 <p>(*Example showing how to create a disk image.*)</p>
-<p>    open Unix<br />
+<p>    open Unix<br/>
     open Printf</p>
 <p>    let output = &#8220;disk.img&#8221;</p>
-<p>    let() =<br />
+<p>    let() =<br/>
         let g = new Guestfs.guestfs() in</p>
-<p>                (*Create a raw &#8211; format sparse disk image, 512 MB in size.*)<br />
+<p>                (*Create a raw &#8211; format sparse disk image, 512 MB in size.*)<br/>
                     g #disk_create output &#8220;raw&#8221;(Int64.of_int(512 * 1024 * 1024));</p>
-<p>(*Set the trace flag so that we can see each libguestfs call.*)<br />
+<p>(*Set the trace flag so that we can see each libguestfs call.*)<br/>
     g #set_trace true;</p>
-<p>(*Attach the disk image to libguestfs.*)<br />
+<p>(*Attach the disk image to libguestfs.*)<br/>
     g #add_drive_opts ~format : &#8220;raw&#8221; ~readonly : false output;</p>
-<p>(*Run the libguestfs back &#8211; end.*)<br />
+<p>(*Run the libguestfs back &#8211; end.*)<br/>
     g #launch();</p>
-<p>(*Get the list of devices.Because we only added one drive<br />
-      *above,<br />
- we expect that this list should contain a single<br />
-     *element.<br />
-         *)<br />
-    let devices = g #list_devices() in<br />
-                  if Array.length devices&lt;&gt; 1 then<br />
+<p>(*Get the list of devices.Because we only added one drive<br/>
+      *above,<br/>
+ we expect that this list should contain a single<br/>
+     *element.<br/>
+         *)<br/>
+    let devices = g #list_devices() in<br/>
+                  if Array.length devices&lt;&gt; 1 then<br/>
                   failwith &#8220;error: expected a single device from list-devices&#8221;;</p>
-<p>(*Partition the disk as one single MBR partition.*)<br />
+<p>(*Partition the disk as one single MBR partition.*)<br/>
     g #part_disk devices.(0) &#8220;mbr&#8221;;</p>
-<p>(*Get the list of partitions.We expect a single element, which<br />
-                                                             *is the partition we have just created.<br />
-                                                                 *)<br />
-    let partitions = g #list_partitions() in<br />
-                     if Array.length partitions&lt;&gt; 1 then<br />
+<p>(*Get the list of partitions.We expect a single element, which<br/>
+                                                             *is the partition we have just created.<br/>
+                                                                 *)<br/>
+    let partitions = g #list_partitions() in<br/>
+                     if Array.length partitions&lt;&gt; 1 then<br/>
                      failwith &#8220;error: expected a single partition from list-partitions&#8221;;</p>
-<p>(*Create a filesystem on the partition.*)<br />
+<p>(*Create a filesystem on the partition.*)<br/>
     g #mkfs &#8220;ext4&#8221; partitions.(0);</p>
-<p>(*Now mount the filesystem so that we can add files.*)<br />
+<p>(*Now mount the filesystem so that we can add files.*)<br/>
     g #mount partitions.(0) &#8220;/&#8221;;</p>
-<p>(*Create some files and directories.*)<br />
-    g #touch &#8220;/empty&#8221;;<br />
+<p>(*Create some files and directories.*)<br/>
+    g #touch &#8220;/empty&#8221;;<br/>
 let message = &#8220;Hello, world
-&#8221; in<br />
-    g #write &#8220;/hello&#8221; message;<br />
+&#8221; in<br/>
+    g #write &#8220;/hello&#8221; message;<br/>
 g #mkdir &#8220;/foo&#8221;;</p>
-<p>(*This one uploads the local file / etc / resolv.conf into * the disk image.*)<br />
-    g #upload &#8220;/etc/resolv.conf&#8221;<br />
+<p>(*This one uploads the local file / etc / resolv.conf into * the disk image.*)<br/>
+    g #upload &#8220;/etc/resolv.conf&#8221;<br/>
               &#8220;/foo/resolv.conf&#8221;;</p>
-<p>(*Because we wrote to the disk and we want to detect write<br />
-     *errors,<br />
- call g #shutdown.You don&#8217;t need to do this:<br />
-     *g #close will do it implicitly.<br />
-         *)<br />
+<p>(*Because we wrote to the disk and we want to detect write<br/>
+     *errors,<br/>
+ call g #shutdown.You don&#8217;t need to do this:<br/>
+     *g #close will do it implicitly.<br/>
+         *)<br/>
     g #shutdown();</p>
-<p>(*Note also that handles are automatically closed if they are<br />
-      *reaped by the garbage collector.You only need to call close<br />
-          *if you want to close the handle right away.<br />
-              *)<br />
+<p>(*Note also that handles are automatically closed if they are<br/>
+      *reaped by the garbage collector.You only need to call close<br/>
+          *if you want to close the handle right away.<br/>
+              *)<br/>
     g #close()</p>
 <h2>EXAMPLE: INSPECT A VIRTUAL MACHINE DISK IMAGE</h2>
 <p>(*Example showing how to inspect a virtual machine disk.*)</p>
 <p>    open Printf</p>
-<p>    let disk =<br />
-        if Array.length Sys.argv = 2 then<br />
+<p>    let disk =<br/>
+        if Array.length Sys.argv = 2 then<br/>
                                    Sys.argv.(1) else failwith &#8220;usage: inspect_vm disk.img&#8221;</p>
-<p>                                   let() =<br />
+<p>                                   let() =<br/>
             let g = new Guestfs.guestfs() in</p>
-<p>                    (*Attach the disk image read &#8211; only to libguestfs.*)<br />
-                        g #add_drive_opts(*~format<br />
+<p>                    (*Attach the disk image read &#8211; only to libguestfs.*)<br/>
+                        g #add_drive_opts(*~format<br/>
                                           : &#8220;raw&#8221; *) ~readonly : true disk;</p>
-<p>(*Run the libguestfs back &#8211; end.*)<br />
+<p>(*Run the libguestfs back &#8211; end.*)<br/>
     g #launch();</p>
-<p>   (* Ask libguestfs to inspect for operating systems. *)<br />
-   let roots = g#inspect_os () in<br />
-   if Array.length roots = 0 then<br />
+<p>   (* Ask libguestfs to inspect for operating systems. *)<br/>
+   let roots = g#inspect_os () in<br/>
+   if Array.length roots = 0 then<br/>
      failwith &#8220;inspect_vm: no operating systems found&#8221;;</p>
-<p>   Array.iter(<br />
+<p>   Array.iter(<br/>
        fun root-&gt;printf &#8220;Root device: %s
 &#8221; root;</p>
-<p>       (*Print basic information about the operating system.*)<br />
+<p>       (*Print basic information about the operating system.*)<br/>
            printf &#8221;  Product name: %s
-&#8221;(g #inspect_get_product_name root);<br />
+&#8221;(g #inspect_get_product_name root);<br/>
        printf &#8221;  Version:      %d.%d
-&#8221;(g #inspect_get_major_version root)(g #inspect_get_minor_version root);<br />
+&#8221;(g #inspect_get_major_version root)(g #inspect_get_minor_version root);<br/>
        printf &#8221;  Type:         %s
-&#8221;(g #inspect_get_type root);<br />
+&#8221;(g #inspect_get_type root);<br/>
        printf &#8221;  Distro:       %s
 &#8221;(g #inspect_get_distro root);</p>
-<p>       (*Mount up the disks, like guestfish &#8211; i.* *Sort keys by length, shortest first, so that we end up *mounting the filesystems in the correct order.*)<br />
-           let mps = g #inspect_get_mountpoints root in<br />
-               let cmp(a, _)(b, _) =<br />
-                   compare(String.length a)(String.length b) in<br />
-                       let mps = List.sort cmp mps in<br />
-                                     List.iter(<br />
-                                         fun(mp, dev)-&gt;try g #mount_ro dev mp<br />
+<p>       (*Mount up the disks, like guestfish &#8211; i.* *Sort keys by length, shortest first, so that we end up *mounting the filesystems in the correct order.*)<br/>
+           let mps = g #inspect_get_mountpoints root in<br/>
+               let cmp(a, _)(b, _) =<br/>
+                   compare(String.length a)(String.length b) in<br/>
+                       let mps = List.sort cmp mps in<br/>
+                                     List.iter(<br/>
+                                         fun(mp, dev)-&gt;try g #mount_ro dev mp<br/>
                                              with Guestfs.Error msg-&gt;eprintf &#8220;%s (ignored)
 &#8221; msg) mps;</p>
-<p>       (*If / etc / issue.net file exists, print up to 3 lines.*)<br />
-           let filename = &#8220;/etc/issue.net&#8221; in if g #is_file filename then(<br />
+<p>       (*If / etc / issue.net file exists, print up to 3 lines.*)<br/>
+           let filename = &#8220;/etc/issue.net&#8221; in if g #is_file filename then(<br/>
                printf &#8220;&#8212; %s &#8212;
-&#8221; filename;<br />
-               let lines = g #head_n 3 filename in<br />
+&#8221; filename;<br/>
+               let lines = g #head_n 3 filename in<br/>
                                Array.iter print_endline lines);</p>
-<p>       (*Unmount everything.*)<br />
+<p>       (*Unmount everything.*)<br/>
            g #umount_all()) roots</p>
 <h2>EXAMPLE: ENABLE DEBUGGING AND LOGGING</h2>
 <pre><code>

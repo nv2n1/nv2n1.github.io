@@ -59,13 +59,13 @@ description: "odfmeta – List or change the metadata of an ODF file"
 <h2>Examples</h2>
 <dl>
 <dt>
-</dt><dd> <font SIZE="-1"> </font></dd>
+</dt><dd>  </dd>
 <pre>
 odfmeta -l odf-file.odt
 odfmeta -I &quot;title:The Little Engine That Could&quot; -A subject:I-think-I-can -o newfile.odt source.odt
 </pre>
-<p> <font SIZE="+1"></dl>
-<p> </font></p>
+<p> </dl>
+<p> </p>
 <h2>See Also</h2>
 <p> <code><a href="/docs/linux/man/1-formail/">formail</a></code>(1), <code><a href="/docs/linux/man/1-id3tag/">id3tag</a></code>(1)</p>
 <h2>Bugs</h2>

@@ -13,17 +13,17 @@ description: "sc::TranslateDataIn –"
 <pre><code>
 #include &lt;translate.h&gt;
 Public Member Functions</code></pre>
-<p> <code>TranslateDataIn</code> (<code>StateIn</code> *s, <code>TranslateData</code> *t)<br />
- <i>Input data will come from s. </i><br />
- virtual int <code>get</code> (char *, int)<br />
- <i>Read and translate data. </i><br />
+<p> <code>TranslateDataIn</code> (<code>StateIn</code> *s, <code>TranslateData</code> *t)<br/>
+ <i>Input data will come from s. </i><br/>
+ virtual int <code>get</code> (char *, int)<br/>
+ <i>Read and translate data. </i><br/>
  virtual int <code>get</code> (short *, int) </p>
 <p> virtual int <code>get</code> (unsigned int *, int) </p>
 <p> virtual int <code>get</code> (int *, int) </p>
 <p> virtual int <code>get</code> (long *, int) </p>
 <p> virtual int <code>get</code> (float *, int) </p>
 <p> virtual int <code>get</code> (double *, int) </p>
-<p> <code>TranslateData</code> * <code>translator</code> ()<br />
+<p> <code>TranslateData</code> * <code>translator</code> ()<br/>
  <i>Return the translator. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>int getv (void *d, int s)</code></pre>

@@ -10,11 +10,11 @@ description: "man – an interface to the system reference manuals"
 
 <p> man &#8211; an interface to the system reference manuals </p>
 <h2>SYNOPSIS</h2>
-<p> <code>man</code> [<i>man options</i>] [[<i>section</i>] <i>page</i>&nbsp;&#8230;]&nbsp;&#8230;<br />
- <code>man</code> <code>-k</code> [<i>apropos options</i>] <i>regexp</i> &#8230;<br />
- <code>man</code> <code>-K</code> [<i>man options</i>] [<i>section</i>] <i>term</i>&nbsp;&#8230;<br />
- <code>man</code> <code>-f</code> [<i>whatis</i> <i>options</i>] <i>page</i> &#8230;<br />
- <code>man</code> <code>-l</code> [<i>man options</i>] <i>file</i> &#8230;<br />
+<p> <code>man</code> [<i>man options</i>] [[<i>section</i>] <i>page</i>&nbsp;&#8230;]&nbsp;&#8230;<br/>
+ <code>man</code> <code>-k</code> [<i>apropos options</i>] <i>regexp</i> &#8230;<br/>
+ <code>man</code> <code>-K</code> [<i>man options</i>] [<i>section</i>] <i>term</i>&nbsp;&#8230;<br/>
+ <code>man</code> <code>-f</code> [<i>whatis</i> <i>options</i>] <i>page</i> &#8230;<br/>
+ <code>man</code> <code>-l</code> [<i>man options</i>] <i>file</i> &#8230;<br/>
  <code>man</code> <code>-w</code>|<code>-W</code> [<i>man options</i>] <i>page</i> &#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>man</code> is the system&#8217;s manual pager. Each <i>page</i> argument given to <code>man</code> is normally the name of a program, utility or function. The <i>manual page</i> associated with each of these arguments is then found and displayed. A <i>section</i>, if provided, will direct <code>man</code> to look only in that <i>section</i> of the manual. The default action is to search in all of the available <i>sections</i> following a pre-defined order (see <code>DEFAULTS</code>), and to show only the first <i>page</i> found, even if <i>page</i> exists in several <i>sections</i>. </p>
@@ -230,8 +230,8 @@ description: "man – an interface to the system reference manuals"
 <p> <code> Manual page</code><i> name</i><code>(</code><i>sec</i><code>) line</code><i> x</i> </p>
 <p> where <i>name</i> denotes the manual page name, <i>sec</i> denotes the section it was found under and <i>x</i> the current line number. This is achieved by using the $<code>LESS</code> environment variable. </p>
 <p> Supplying <code>-r</code> with a string will override this default. The string may contain the text <code>$MAN_PN</code> which will be expanded to the name of the current manual page and its section name surrounded by &quot;(&quot; and &quot;)&quot;. The string used to produce the default could be expressed as </p>
-<p> <code>\&nbsp;Manual\&nbsp;page\&nbsp;\$MAN_PN\&nbsp;?ltline\&nbsp;%lt?L/%L.:</code><br />
- <code>byte\&nbsp;%bB?s/%s..?\&nbsp;(END):?pB\&nbsp;%pB\%..</code><br />
+<p> <code>\&nbsp;Manual\&nbsp;page\&nbsp;\$MAN_PN\&nbsp;?ltline\&nbsp;%lt?L/%L.:</code><br/>
+ <code>byte\&nbsp;%bB?s/%s..?\&nbsp;(END):?pB\&nbsp;%pB\%..</code><br/>
  <code>(press h for help or q to quit)</code> </p>
 <p> It is broken into three lines here for the sake of readability only. For its meaning see the <code><a href="/docs/linux/man/1-less/">less</a></code>(1) manual page. The prompt string is first evaluated by the shell. All double quotes, back-quotes and backslashes in the prompt must be escaped by a preceding backslash. The prompt string may end in an escaped $ which may be followed by further options for less. By default <code>man</code> sets the <code>-ix8</code> options. </p>
 <p> The $<code>MANLESS</code> environment variable described below may be used to set a default prompt string if none is supplied on the command line.</p>
@@ -371,5 +371,5 @@ description: "man – an interface to the system reference manuals"
 <p> 30th October 1996 &#8211; 30th March 2001: Fabrizio Polacco &lt;fpolacco [at] debian.org&gt; maintained and enhanced this package for the Debian project, with the help of all the community. </p>
 <p> 31st March 2001 &#8211; present day: Colin Watson &lt;cjwatson [at] debian.org&gt; is now developing and maintaining man-db.</p>
 <h2>BUGS</h2>
-<p> <a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br />
+<p> <a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br/>
  <a rel="nofollow" href="https://savannah.nongnu.org/bugs/?group=man-db">https://savannah.nongnu.org/bugs/?group=man-db</a> </p>

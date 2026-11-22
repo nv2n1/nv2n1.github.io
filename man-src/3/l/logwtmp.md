@@ -33,7 +33,7 @@ void logwtmp(const char *line, const char *name, const char *host);
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>updwtmp</code>(),<br />
+<td> <code>updwtmp</code>(),<br/>
  <code>logwtmp</code>() </td>
 <td>Thread safety</td>
 <td>MT-Unsafe sig:ALRM timer

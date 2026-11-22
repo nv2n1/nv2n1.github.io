@@ -16,8 +16,8 @@ description: "IV_SIGNAL_INIT, iv_signal_register, iv_signal_unregister – ivyki
  void *cookie;
  void (*handler)(void *);
 };</pre>
-<p><code>void IV_SIGNAL_INIT(struct iv_signal *</code><i>this</i><code>);</code><br />
- <code>int iv_signal_register(struct iv_signal *</code><i>this</i><code>);</code><br />
+<p><code>void IV_SIGNAL_INIT(struct iv_signal *</code><i>this</i><code>);</code><br/>
+ <code>int iv_signal_register(struct iv_signal *</code><i>this</i><code>);</code><br/>
  <code>void iv_signal_unregister(struct iv_signal *</code><i>this</i><code>);</code> </p>
 <h2>Description</h2>
 <p><code>iv_signal</code> provides a way for <code>ivykis</code>(3) applications to handle POSIX signals, by integrating them with the ivykis event loop. </p>

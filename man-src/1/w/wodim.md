@@ -258,7 +258,7 @@ description: "wodim – write data to optical disk media"
 <p> If used together with the <code>-audio</code> option, <code>wodim</code> may be used to write audio CDs from a pipe from <code>icedax</code> if you call <code>wodim</code> with the <code>*.inf</code> files as track parameter list instead of using audio files. The audio data is read from <code>stdin</code> in this case. See <code>EXAMPLES</code> section below. <code>wodim</code> first verifies that <code>stdin</code> is not connected to a terminal and runs some heuristic consistency checks on the <code>*.inf</code> files and then sets the track lengths from the information in the <code>*.inf</code> files. </p>
 <p> If you like to write from <code>stdin</code>, make sure that wodim is called with a large enough FIFO size, reduce the write speed to a value below the read speed of the source drive and switch the burn-free option for the recording drive on.</p>
 <dt><code>defpregap=</code>#</dt>
-<dd> Set the default pre-gap size for all tracks except track number 1. This option currently only makes sense with the TEAC drive when creating track-at-once disks without the 2 second silence before each track.<br />
+<dd> Set the default pre-gap size for all tracks except track number 1. This option currently only makes sense with the TEAC drive when creating track-at-once disks without the 2 second silence before each track.<br/>
  This option may go away in future.</dd>
 <dt><code>-packet</code></dt>
 <dd> Set <code>Packet writing mode. </code> This is an experimental interface.</dd>
@@ -326,7 +326,7 @@ description: "wodim – write data to optical disk media"
 <dt><code>-noshorttrack</code></dt>
 <dd> Re-enforce the Red Book track length standard. Tracks must be at least 4 seconds.</dd>
 <dt><code>pregap=</code>#</dt>
-<dd> Set the pre-gap size for the next track. This option currently only makes sense with the TEAC drive when creating track-at-once disks without the 2 second silence before each track.<br />
+<dd> Set the pre-gap size for the next track. This option currently only makes sense with the TEAC drive when creating track-at-once disks without the 2 second silence before each track.<br/>
  This option may go away in future.</dd>
 <dt><code>-preemp</code></dt>
 <dd> If this flag is present, all TOC entries for subsequent audio tracks will indicate that the audio data has been sampled with 50/15 microsec pre-emphasis. The data, however is not modified during the process of transferring from file to disk. This option has no effect on data tracks.</dd>
@@ -339,8 +339,8 @@ description: "wodim – write data to optical disk media"
 <dt><code>-scms</code></dt>
 <dd> If this flag is present, all TOC entries for subsequent audio tracks of the resulting CD will indicate that the audio data has no permission to be copied anymore.</dd>
 <dt><code>tsize=</code>#</dt>
-<dd> If the master image for the next track has been stored on a raw disk, use this option to specify the valid amount of data on this disk. If the image of the next track is stored in a regular file, the size of that file is taken to determine the length of this track. If the track contains an ISO 9660 filesystem image use the <i>-isosize</i> option to determine the length of that filesystem image.<br />
- In Disk at Once mode and with some drives that use the TEAC programming interface, even in Track at Once mode, <code>wodim</code> needs to know the size of each track before starting to write the disk. wodim now checks this and aborts before starting to write. If this happens you will need to run <code>genisoimage -print-size</code> before and use the output (with `s&#8217; appended) as an argument to the <code>tsize</code>= option of <code>wodim</code> (e.g. tsize=250000s).<br />
+<dd> If the master image for the next track has been stored on a raw disk, use this option to specify the valid amount of data on this disk. If the image of the next track is stored in a regular file, the size of that file is taken to determine the length of this track. If the track contains an ISO 9660 filesystem image use the <i>-isosize</i> option to determine the length of that filesystem image.<br/>
+ In Disk at Once mode and with some drives that use the TEAC programming interface, even in Track at Once mode, <code>wodim</code> needs to know the size of each track before starting to write the disk. wodim now checks this and aborts before starting to write. If this happens you will need to run <code>genisoimage -print-size</code> before and use the output (with `s&#8217; appended) as an argument to the <code>tsize</code>= option of <code>wodim</code> (e.g. tsize=250000s).<br/>
  See <code>fs</code>= option for possible arguments. </dd>
 </dl>
 <h2>EXAMPLES</h2>
@@ -359,7 +359,7 @@ description: "wodim – write data to optical disk media"
 <p> If the overall speed of the system is sufficient and the structure of the filesystem is not too complex, wodim will run without creating an image of the ISO 9660 filesystem. Simply run the pipeline: </p>
 <p>&nbsp;<wbr>genisoimage -R&nbsp;<wbr>/master/tree | wodim -v fs=6m speed=2 dev=2,0 &#8211; </p>
 <p> The recommended minimum FIFO size for running this pipeline is 4 MBytes. As the default FIFO size is 4 MB, the <code>fs=</code> option needs only be present if you want to use a different FIFO size. If your system is loaded, you should run genisoimage in the real time class too. To raise the priority of <code>genisoimage</code> replace the command </p>
-<p>&nbsp;<wbr>genisoimage -R&nbsp;<wbr>/master/tree<br />
+<p>&nbsp;<wbr>genisoimage -R&nbsp;<wbr>/master/tree<br/>
  by </p>
 <p>&nbsp;<wbr>priocntl -e -c RT -p 59 genisoimage -R&nbsp;<wbr>/master/tree </p>
 <p> on Solaris and by </p>
@@ -421,7 +421,7 @@ description: "wodim – write data to optical disk media"
 <h2>FILES</h2>
 <dl>
 <dt>/etc/wodim.conf</dt>
-<dd> Default values can be set for the following options in /etc/wodim.conf. For example: <font SIZE="-1">CDR_FIFOSIZE=8m</font> or <font SIZE="-1">CDR_SPEED=2</font></dd>
+<dd> Default values can be set for the following options in /etc/wodim.conf. For example: CDR_FIFOSIZE=8m or CDR_SPEED=2</dd>
 <dl>
 <dl>
 <dt>CDR_DEVICE</dt>
@@ -533,7 +533,7 @@ cmd finished after 0.002s timeout 40s
  For the first FIFO implementation.</dd>
 <dt>Dave Platt<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>(dplatt [at] feghoot.ml.org)</dt>
 <dd>
- For creating the experimental packet writing support,<br />
+ For creating the experimental packet writing support,<br/>
  the first implementation of CD-RW blanking support, the first .wav file decoder and many nice discussions on cdrecord.</dd>
 <dt>Chris P. Ross (cross [at] eng.us.uu.net)</dt>
 <dd>
@@ -560,7 +560,7 @@ D-13353 Berlin
 Germany
 </pre>
 <p> This application is derived from &quot;cdrecord&quot; as included in the cdrtools package [1] created by Joerg Schilling, who deserves most of the credit for its success. However, he is not involved into the development of this spinoff and therefore he shall not be held responsible for any problems caused by it. Do not refer to this application as &quot;cdrecord&quot;, do not try to get support for wodim by contacting the original authors. </p>
-<p> Additional information can be found on:<br />
+<p> Additional information can be found on:<br/>
  <a rel="nofollow" href="https://alioth.debian.org/projects/debburn/">https://alioth.debian.org/projects/debburn/</a> </p>
 <p> If you have support questions, send them to </p>
 <p> <code>debburn-devel [at] lists.alioth.debian.org</code> </p>

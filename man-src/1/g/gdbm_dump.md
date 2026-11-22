@@ -31,6 +31,6 @@ description: "gdbm_dump – dump a GDBM database to a file"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-gdbm [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2013 Free Software Foundation, Inc<br />
- License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 2013 Free Software Foundation, Inc<br/>
+ License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>

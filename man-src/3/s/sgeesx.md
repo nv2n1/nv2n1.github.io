@@ -11,7 +11,7 @@ description: "sgeesx.f –"
 <p> sgeesx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgeesx</code> (JOBVS, SORT, SELECT, SENSE, N, A, LDA, SDIM, WR, WI, VS, LDVS, RCONDE, RCONDV, WORK, LWORK, IWORK, LIWORK, BWORK, INFO)<br />
+<p> subroutine <code>sgeesx</code> (JOBVS, SORT, SELECT, SENSE, N, A, LDA, SDIM, WR, WI, VS, LDVS, RCONDE, RCONDV, WORK, LWORK, IWORK, LIWORK, BWORK, INFO)<br/>
  <i></i><code> SGEESX computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgeesx (characterJOBVS, characterSORT, logical, externalSELECT, characterSENSE, integerN, real, dimension( lda, * )A, integerLDA, integerSDIM, real, dimension( * )WR, real, dimension( * )WI, real, dimension( ldvs, * )VS, integerLDVS, realRCONDE, realRCONDV, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, logical, dimension( * )BWORK, integerINFO)</h3>
@@ -60,20 +60,20 @@ description: "sgeesx.f –"
           = 'S': Eigenvalues are ordered (see SELECT).
 </pre>
 <p> <i>SELECT</i> </p>
-<p>          SELECT is procedure) LOGICAL FUNCTION of two REAL arguments<br />
-          SELECT must be declared EXTERNAL in the calling subroutine.<br />
-          If SORT = &#8216;S&#8217;, SELECT is used to select eigenvalues to sort<br />
-          to the top left of the Schur form.<br />
-          If SORT = &#8216;N&#8217;, SELECT is not referenced.<br />
-          An eigenvalue WR(j)+sqrt(-1)*WI(j)<br />
-          is selected if SELECT (WR(j), WI(j)) is true;<br />
-          i.e., if either one of a complex conjugate pair of eigenvalues is selected, then both are.Note that a selected complex eigenvalue may no longer satisfy SELECT(WR(j), WI(j)) =.TRUE.after ordering, since ordering may change the value of complex eigenvalues(especially if the eigenvalue is ill &#8211; conditioned);<br />
+<p>          SELECT is procedure) LOGICAL FUNCTION of two REAL arguments<br/>
+          SELECT must be declared EXTERNAL in the calling subroutine.<br/>
+          If SORT = &#8216;S&#8217;, SELECT is used to select eigenvalues to sort<br/>
+          to the top left of the Schur form.<br/>
+          If SORT = &#8216;N&#8217;, SELECT is not referenced.<br/>
+          An eigenvalue WR(j)+sqrt(-1)*WI(j)<br/>
+          is selected if SELECT (WR(j), WI(j)) is true;<br/>
+          i.e., if either one of a complex conjugate pair of eigenvalues is selected, then both are.Note that a selected complex eigenvalue may no longer satisfy SELECT(WR(j), WI(j)) =.TRUE.after ordering, since ordering may change the value of complex eigenvalues(especially if the eigenvalue is ill &#8211; conditioned);<br/>
           in this case INFO may be set to N + 3(see INFO below).</p>
 <p> <i>SENSE</i> </p>
-<p>SENSE is CHARACTER * 1 Determines which reciprocal condition numbers are computed.= &#8216;N&#8217; : None are computed;<br />
-          = &#8216;E&#8217;: Computed for average of selected eigenvalues only;<br />
-          = &#8216;V&#8217;: Computed for selected right invariant subspace only;<br />
-          = &#8216;B&#8217;: Computed for both.<br />
+<p>SENSE is CHARACTER * 1 Determines which reciprocal condition numbers are computed.= &#8216;N&#8217; : None are computed;<br/>
+          = &#8216;E&#8217;: Computed for average of selected eigenvalues only;<br/>
+          = &#8216;V&#8217;: Computed for selected right invariant subspace only;<br/>
+          = &#8216;B&#8217;: Computed for both.<br/>
           If SENSE = &#8216;E&#8217;, &#8216;V&#8217; or &#8216;B&#8217;, SORT must equal &#8216;S&#8217;.</p>
 <p> <i>N</i> </p>
 <pre>
@@ -146,17 +146,17 @@ description: "sgeesx.f –"
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>LWORK is INTEGER<br />
-        The dimension of the array WORK.LWORK &gt;= max(1, 3 * N).Also,<br />
-    if SENSE = &#8216;E&#8217; or &#8216;V&#8217; or &#8216;B&#8217;,<br />
-       LWORK &gt;= N + 2 * SDIM *(N &#8211; SDIM), where SDIM is the number of selected eigenvalues computed by this routine.Note that N + 2 * SDIM *(N &#8211; SDIM) &lt;= N + N *N / 2. Note also that an error is only returned if LWORK &lt; max(1, 3 * N), but if SENSE = &#8216;E&#8217; or &#8216;V&#8217; or &#8216;B&#8217; this may not be large enough.For good performance, LWORK must generally be larger.If LWORK = -1, then a workspace query is assumed;<br />
-the routine<br />
-    only calculates upper bounds on the optimal sizes of the<br />
-        arrays WORK and IWORK,<br />
-    returns these values as the first<br />
-        entries of the WORK and IWORK arrays,<br />
-    and no error messages<br />
-            related to LWORK or<br />
+<p>LWORK is INTEGER<br/>
+        The dimension of the array WORK.LWORK &gt;= max(1, 3 * N).Also,<br/>
+    if SENSE = &#8216;E&#8217; or &#8216;V&#8217; or &#8216;B&#8217;,<br/>
+       LWORK &gt;= N + 2 * SDIM *(N &#8211; SDIM), where SDIM is the number of selected eigenvalues computed by this routine.Note that N + 2 * SDIM *(N &#8211; SDIM) &lt;= N + N *N / 2. Note also that an error is only returned if LWORK &lt; max(1, 3 * N), but if SENSE = &#8216;E&#8217; or &#8216;V&#8217; or &#8216;B&#8217; this may not be large enough.For good performance, LWORK must generally be larger.If LWORK = -1, then a workspace query is assumed;<br/>
+the routine<br/>
+    only calculates upper bounds on the optimal sizes of the<br/>
+        arrays WORK and IWORK,<br/>
+    returns these values as the first<br/>
+        entries of the WORK and IWORK arrays,<br/>
+    and no error messages<br/>
+            related to LWORK or<br/>
         LIWORK are issued by XERBLA.</p>
 <p> <i>IWORK</i> </p>
 <pre>
@@ -164,17 +164,17 @@ the routine<br />
           On exit, if INFO = 0, IWORK(1) returns the optimal LIWORK.
 </pre>
 <p> <i>LIWORK</i> </p>
-<p>LIWORK is INTEGER<br />
-        The dimension of the array IWORK.LIWORK &gt;= 1;<br />
-if SENSE<br />
-    = &#8216;V&#8217; or &#8216;B&#8217;, LIWORK &gt;= SDIM *(N &#8211; SDIM).Note that SDIM *(N &#8211; SDIM) &lt;= N *N / 4. Note also that an error is only returned if LIWORK &lt; 1, but if SENSE = &#8216;V&#8217; or &#8216;B&#8217; this may not be large enough.If LIWORK = -1, then a workspace query is assumed;<br />
-the<br />
-    routine only calculates upper bounds on the optimal sizes of<br />
-        the arrays WORK and IWORK,<br />
-    returns these values as the first<br />
-        entries of the WORK and IWORK arrays,<br />
-    and no error messages<br />
-            related to LWORK or<br />
+<p>LIWORK is INTEGER<br/>
+        The dimension of the array IWORK.LIWORK &gt;= 1;<br/>
+if SENSE<br/>
+    = &#8216;V&#8217; or &#8216;B&#8217;, LIWORK &gt;= SDIM *(N &#8211; SDIM).Note that SDIM *(N &#8211; SDIM) &lt;= N *N / 4. Note also that an error is only returned if LIWORK &lt; 1, but if SENSE = &#8216;V&#8217; or &#8216;B&#8217; this may not be large enough.If LIWORK = -1, then a workspace query is assumed;<br/>
+the<br/>
+    routine only calculates upper bounds on the optimal sizes of<br/>
+        the arrays WORK and IWORK,<br/>
+    returns these values as the first<br/>
+        entries of the WORK and IWORK arrays,<br/>
+    and no error messages<br/>
+            related to LWORK or<br/>
         LIWORK are issued by XERBLA.</p>
 <p> <i>BWORK</i> </p>
 <pre>

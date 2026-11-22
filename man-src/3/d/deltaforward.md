@@ -13,13 +13,13 @@ description: "QuantLib::OneAssetOption – Base class for options on a single as
 <p> Inherits <code>QuantLib::Option</code>. </p>
 <p> Inherited by <code>BarrierOption</code>, <code>CliquetOption</code>, <code>ContinuousAveragingAsianOption</code>, <code>ContinuousFixedLookbackOption</code>, <code>ContinuousFloatingLookbackOption</code>, option, <code>DiscreteAveragingAsianOption</code>, <code>DividendVanillaOption</code>, <code>ForwardVanillaOption</code>, <code>QuantoVanillaOption</code>, and <code>VanillaOption</code>. </p>
 <h3>Classes</h3>
-<p>class <code>results</code><br />
+<p>class <code>results</code><br/>
  <i>Results from single-asset option calculation </i></p>
 <h3>Public Member Functions</h3>
 <p><code>OneAssetOption</code> (const boost::shared_ptr&lt; <code>Payoff</code> &gt; &amp;, const boost::shared_ptr&lt; <code>Exercise</code> &gt; &amp;) </p>
 <p> void <code>fetchResults</code> (const PricingEngine::results *) const </p>
 <p> <code>Instrument interface</code> </p>
-<p> bool <code>isExpired</code> () const<br />
+<p> bool <code>isExpired</code> () const<br/>
  <i>returns whether the instrument is still tradable. </i> </p>
 <p> <code>greeks</code> </p>
 <p> <code>Real</code> <code>delta</code> () const </p>

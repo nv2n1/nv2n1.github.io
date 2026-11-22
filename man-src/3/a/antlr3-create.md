@@ -13,21 +13,21 @@ description: "src/antlr3commontreeadaptor.c –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontreeadaptor.h">antlr3commontreeadaptor.h</a>&gt; </p>
 <h3>Functions</h3>
-<p> ANTLR3_API <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>ANTLR3_TREE_ADAPTORDebugNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)<br />
- <i>Debugging version of the tree adaptor (not normally called as generated code calls setDebugEventListener instead which changes a normal token stream to a debugging stream and means that a user&#8217;s instantiation code does not need to be changed just to debug with AW. </i><br />
- ANTLR3_API <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>ANTLR3_TREE_ADAPTORNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory)<br />
- <i>Create a new tree adaptor. </i><br />
+<p> ANTLR3_API <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>ANTLR3_TREE_ADAPTORDebugNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)<br/>
+ <i>Debugging version of the tree adaptor (not normally called as generated code calls setDebugEventListener instead which changes a normal token stream to a debugging stream and means that a user&#8217;s instantiation code does not need to be changed just to debug with AW. </i><br/>
+ ANTLR3_API <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>ANTLR3_TREE_ADAPTORNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory)<br/>
+ <i>Create a new tree adaptor. </i><br/>
  static <code>pANTLR3_BASE_TREE</code> <code>create</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adpator, <code>pANTLR3_COMMON_TOKEN</code> payload) </p>
-<p> static <code>pANTLR3_COMMON_TOKEN</code> <code>createToken</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>ANTLR3_UINT32</code> tokenType, <code>pANTLR3_UINT8</code> text)<br />
- <i>Tell me how to create a token for use with imaginary token nodes. </i><br />
- static <code>pANTLR3_COMMON_TOKEN</code> <code>createTokenFromToken</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_COMMON_TOKEN</code> fromToken)<br />
- <i>Tell me how to create a token for use with imaginary token nodes. </i><br />
+<p> static <code>pANTLR3_COMMON_TOKEN</code> <code>createToken</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>ANTLR3_UINT32</code> tokenType, <code>pANTLR3_UINT8</code> text)<br/>
+ <i>Tell me how to create a token for use with imaginary token nodes. </i><br/>
+ static <code>pANTLR3_COMMON_TOKEN</code> <code>createTokenFromToken</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_COMMON_TOKEN</code> fromToken)<br/>
+ <i>Tell me how to create a token for use with imaginary token nodes. </i><br/>
  static void <code>ctaFree</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor) </p>
 <p> static <code>pANTLR3_BASE_TREE</code> <code>dbgCreate</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_COMMON_TOKEN</code> payload) </p>
 <p> static void <code>dbgSetTokenBoundaries</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>pANTLR3_COMMON_TOKEN</code> startToken, <code>pANTLR3_COMMON_TOKEN</code> stopToken) </p>
 <p> static void <code>deleteChild</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>ANTLR3_UINT32</code> i) </p>
-<p> static <code>pANTLR3_BASE_TREE</code> <code>dupNode</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> treeNode)<br />
- <i>Duplicate the supplied node. </i><br />
+<p> static <code>pANTLR3_BASE_TREE</code> <code>dupNode</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> treeNode)<br/>
+ <i>Duplicate the supplied node. </i><br/>
  static <code>pANTLR3_BASE_TREE</code> <code>errorNode</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_TOKEN_STREAM</code> ctnstream, <code>pANTLR3_COMMON_TOKEN</code> startToken, <code>pANTLR3_COMMON_TOKEN</code> stopToken, <code>pANTLR3_EXCEPTION</code> e) </p>
 <p> static <code>pANTLR3_BASE_TREE</code> <code>getChild</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>ANTLR3_UINT32</code> i) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>getChildCount</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t) </p>
@@ -41,10 +41,10 @@ description: "src/antlr3commontreeadaptor.c –"
 <p> static void <code>replaceChildren</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> parent, <code>ANTLR3_INT32</code> startChildIndex, <code>ANTLR3_INT32</code> stopChildIndex, <code>pANTLR3_BASE_TREE</code> t) </p>
 <p> static void <code>setChild</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>ANTLR3_UINT32</code> i, <code>pANTLR3_BASE_TREE</code> child) </p>
 <p> static void <code>setChildIndex</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>ANTLR3_INT32</code> i) </p>
-<p> static void <code>setDebugEventListener</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)<br />
- <i>Causes an existing common tree adaptor to become a debug version. </i><br />
+<p> static void <code>setDebugEventListener</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)<br/>
+ <i>Causes an existing common tree adaptor to become a debug version. </i><br/>
  static void <code>setParent</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> child, <code>pANTLR3_BASE_TREE</code> parent) </p>
-<p> static void <code>setTokenBoundaries</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>pANTLR3_COMMON_TOKEN</code> startToken, <code>pANTLR3_COMMON_TOKEN</code> stopToken)<br />
+<p> static void <code>setTokenBoundaries</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>pANTLR3_COMMON_TOKEN</code> startToken, <code>pANTLR3_COMMON_TOKEN</code> stopToken)<br/>
  <i>Track start/stop token for subtree root created for a rule. </i></p>
 <h2>Detailed Description</h2>
 <p> This is the standard tree adaptor used by the C runtime unless the grammar source file says to use anything different. </p>

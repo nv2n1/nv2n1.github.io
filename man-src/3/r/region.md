@@ -14,15 +14,15 @@ description: "ql/indexes/region.hpp – Region, i.e. geographical area, specific
 #include &lt;boost/shared_ptr.hpp&gt;
 #include &lt;string&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>Region</code><br />
- <i></i><code>Region</code> class, used for inflation applicability.<br />
- class <code>AustraliaRegion</code><br />
- <i></i><code>Australia</code> as geographical/economic region.<br />
- class <code>EURegion</code><br />
- <i>European Union as geographical/economic region. </i><br />
- class <code>FranceRegion</code><br />
- <i>France as geographical/economic region. </i><br />
- class <code>UKRegion</code><br />
+<p>class <code>Region</code><br/>
+ <i></i><code>Region</code> class, used for inflation applicability.<br/>
+ class <code>AustraliaRegion</code><br/>
+ <i></i><code>Australia</code> as geographical/economic region.<br/>
+ class <code>EURegion</code><br/>
+ <i>European Union as geographical/economic region. </i><br/>
+ class <code>FranceRegion</code><br/>
+ <i>France as geographical/economic region. </i><br/>
+ class <code>UKRegion</code><br/>
  <i>United Kingdom as geographical/economic region. </i></p>
 <h2>Detailed Description</h2>
 <p>Region, i.e. geographical area, specification.</p>

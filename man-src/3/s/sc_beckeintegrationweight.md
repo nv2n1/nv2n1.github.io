@@ -16,13 +16,13 @@ description: "sc::BeckeIntegrationWeight –"
 <h3>Public Member Functions</h3>
 <p><code>BeckeIntegrationWeight</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
 <p> <code>BeckeIntegrationWeight</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- void <code>init</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, double tolerance)<br />
- <i>Initialize the integration weight object. </i><br />
- void <code>done</code> ()<br />
- <i>Called when finished with the integration weight object. </i><br />
- double <code>w</code> (int center, <code>SCVector3</code> &amp;<code>point</code>, double *grad_w=0)<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ void <code>init</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, double tolerance)<br/>
+ <i>Initialize the integration weight object. </i><br/>
+ void <code>done</code> ()<br/>
+ <i>Called when finished with the integration weight object. </i><br/>
+ double <code>w</code> (int center, <code>SCVector3</code> &amp;<code>point</code>, double *grad_w=0)<br/>
  <i>Computes the weight for a given center at a given </i><code>point</code> in space.</p>
 <h2>Detailed Description</h2>
 <p>Implements Becke&#8217;s integration weight scheme.</p>

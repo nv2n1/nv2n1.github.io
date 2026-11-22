@@ -16,7 +16,7 @@ description: "sysadm_u – General system administration role – Security Enhan
 <p>The SELinux user sysadm can execute sudo. </p>
 <p> You can set up sudo to allow sysadm to transition to an administrative domain: </p>
 <p> Add one or more of the following record to sudoers using visudo. </p>
-<p> USERNAME ALL=(ALL) ROLE=user_r TYPE=user_t COMMAND<br />
+<p> USERNAME ALL=(ALL) ROLE=user_r TYPE=user_t COMMAND<br/>
  sudo will run COMMAND as sysadm_u:user_r:user_t:LEVEL </p>
 <p> You might also need to add one or more of these new roles to your SELinux user record. </p>
 <p> List the SELinux roles your SELinux user can reach by executing: </p>
@@ -24,7 +24,7 @@ description: "sysadm_u – General system administration role – Security Enhan
 <p> Modify the roles list and add sysadm_r to this list. </p>
 <p> <code>$ semanage user -m -R &#8216;sysadm_r user_r staff_r secadm_r auditadm_r&#8217; sysadm_u</code> </p>
 <p> For more details you can see semanage man page. </p>
-<p> USERNAME ALL=(ALL) ROLE=staff_r TYPE=staff_t COMMAND<br />
+<p> USERNAME ALL=(ALL) ROLE=staff_r TYPE=staff_t COMMAND<br/>
  sudo will run COMMAND as sysadm_u:staff_r:staff_t:LEVEL </p>
 <p> You might also need to add one or more of these new roles to your SELinux user record. </p>
 <p> List the SELinux roles your SELinux user can reach by executing: </p>
@@ -32,7 +32,7 @@ description: "sysadm_u – General system administration role – Security Enhan
 <p> Modify the roles list and add sysadm_r to this list. </p>
 <p> <code>$ semanage user -m -R &#8216;sysadm_r user_r staff_r secadm_r auditadm_r&#8217; sysadm_u</code> </p>
 <p> For more details you can see semanage man page. </p>
-<p> USERNAME ALL=(ALL) ROLE=secadm_r TYPE=secadm_t COMMAND<br />
+<p> USERNAME ALL=(ALL) ROLE=secadm_r TYPE=secadm_t COMMAND<br/>
  sudo will run COMMAND as sysadm_u:secadm_r:secadm_t:LEVEL </p>
 <p> You might also need to add one or more of these new roles to your SELinux user record. </p>
 <p> List the SELinux roles your SELinux user can reach by executing: </p>
@@ -40,7 +40,7 @@ description: "sysadm_u – General system administration role – Security Enhan
 <p> Modify the roles list and add sysadm_r to this list. </p>
 <p> <code>$ semanage user -m -R &#8216;sysadm_r user_r staff_r secadm_r auditadm_r&#8217; sysadm_u</code> </p>
 <p> For more details you can see semanage man page. </p>
-<p> USERNAME ALL=(ALL) ROLE=auditadm_r TYPE=auditadm_t COMMAND<br />
+<p> USERNAME ALL=(ALL) ROLE=auditadm_r TYPE=auditadm_t COMMAND<br/>
  sudo will run COMMAND as sysadm_u:auditadm_r:auditadm_t:LEVEL </p>
 <p> You might also need to add one or more of these new roles to your SELinux user record. </p>
 <p> List the SELinux roles your SELinux user can reach by executing: </p>

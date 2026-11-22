@@ -11,7 +11,7 @@ description: "sggsvp.f –"
 <p> sggsvp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sggsvp</code> (JOBU, JOBV, JOBQ, M, P, N, A, LDA, B, LDB, TOLA, TOLB, K, L, U, LDU, V, LDV, Q, LDQ, IWORK, TAU, WORK, INFO)<br />
+<p> subroutine <code>sggsvp</code> (JOBU, JOBV, JOBQ, M, P, N, A, LDA, B, LDB, TOLA, TOLB, K, L, U, LDU, V, LDV, Q, LDQ, IWORK, TAU, WORK, INFO)<br/>
  <i></i><code>SGGSVP</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sggsvp (characterJOBU, characterJOBV, characterJOBQ, integerM, integerP, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, realTOLA, realTOLB, integerK, integerL, real, dimension( ldu, * )U, integerLDU, real, dimension( ldv, * )V, integerLDV, real, dimension( ldq, * )Q, integerLDQ, integer, dimension( * )IWORK, real, dimension( * )TAU, real, dimension( * )WORK, integerINFO)</h3>
@@ -130,8 +130,8 @@ M - K(0 0 A23) N - K - L K L V **T *B *Q = L(0 0 B13)
           If JOBU = 'N', U is not referenced.
 </pre>
 <p> <i>LDU</i> </p>
-<p>LDU is INTEGER<br />
-        The leading dimension of the array U.LDU &gt;= max(1, M) if JOBU = &#8216;U&#8217;;<br />
+<p>LDU is INTEGER<br/>
+        The leading dimension of the array U.LDU &gt;= max(1, M) if JOBU = &#8216;U&#8217;;<br/>
 LDU &gt;= 1 otherwise.</p>
 <p> <i>V</i> </p>
 <pre>
@@ -140,8 +140,8 @@ LDU &gt;= 1 otherwise.</p>
           If JOBV = 'N', V is not referenced.
 </pre>
 <p> <i>LDV</i> </p>
-<p>LDV is INTEGER<br />
-        The leading dimension of the array V.LDV &gt;= max(1, P) if JOBV = &#8216;V&#8217;;<br />
+<p>LDV is INTEGER<br/>
+        The leading dimension of the array V.LDV &gt;= max(1, P) if JOBV = &#8216;V&#8217;;<br/>
 LDV &gt;= 1 otherwise.</p>
 <p> <i>Q</i> </p>
 <pre>

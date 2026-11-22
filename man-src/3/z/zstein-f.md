@@ -10,7 +10,7 @@ description: "zstein.f –"
 <p>zstein.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zstein</code> (N, D, E, M, W, IBLOCK, ISPLIT, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
+<p>subroutine <code>zstein</code> (N, D, E, M, W, IBLOCK, ISPLIT, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br/>
  <i></i><code>ZSTEIN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zstein (integerN, double precision, dimension( * )D, double precision, dimension( * )E, integerM, double precision, dimension( * )W, integer, dimension( * )IBLOCK, integer, dimension( * )ISPLIT, complex*16, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integer, dimension( * )IFAIL, integerINFO)</h3>

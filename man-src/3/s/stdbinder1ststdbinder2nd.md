@@ -9,9 +9,9 @@ description: "std::binder1st,std::binder2nd – std::binder1st,std::binder2nd"
 
 <p>std::binder1st,std::binder2nd &#8211; std::binder1st,std::binder2nd</p>
 <h2>Synopsis</h2>
-<p>template&lt; class Fn &gt;<br />
-class binder1st : public std::unary_function&lt;typename Fn::second_argument_type,<br />
-typename Fn::result_type&gt; {<br />
+<p>template&lt; class Fn &gt;<br/>
+class binder1st : public std::unary_function&lt;typename Fn::second_argument_type,<br/>
+typename Fn::result_type&gt; {<br/>
 protected: </p>
 <pre><code>Fn op;
 typename Fn::first_argument_type value;
@@ -21,26 +21,26 @@ public:
               const typename Fn::first_argument_type &amp;value);
 typename Fn::result_type
 operator()(const typename Fn::second_argument_type &amp;x) const;</code></pre>
-<p>typename Fn::result_type<br />
-operator()(typename Fn::second_argument_type&amp; x) const;<br />
-};<br />
-template&lt; class Fn &gt;<br />
-class binder2nd : public unary_function&lt;typename Fn::first_argument_type,<br />
-typename Fn::result_type&gt; {<br />
-protected:<br />
-Fn op;<br />
-typename Fn::second_argument_type value;<br />
-public:<br />
-binder2nd(const Fn&amp; fn, <code>(2)</code> (deprecated in C++11)<br />
+<p>typename Fn::result_type<br/>
+operator()(typename Fn::second_argument_type&amp; x) const;<br/>
+};<br/>
+template&lt; class Fn &gt;<br/>
+class binder2nd : public unary_function&lt;typename Fn::first_argument_type,<br/>
+typename Fn::result_type&gt; {<br/>
+protected:<br/>
+Fn op;<br/>
+typename Fn::second_argument_type value;<br/>
+public:<br/>
+binder2nd(const Fn&amp; fn, <code>(2)</code> (deprecated in C++11)<br/>
 const typename Fn::second_argument_type&amp; value); (removed in C++17) typename Fn::result_type</p>
-<p>operator()(const typename Fn::first_argument_type &amp;x) const;<br />
+<p>operator()(const typename Fn::first_argument_type &amp;x) const;<br/>
 typename Fn::result_type</p>
-<p>operator()(typename Fn::first_argument_type &amp;x) const;<br />
-}<br />
-;<br />
-A function object that binds an argument to a binary function.<br />
-The value of the parameter is passed to the object at the construction time and stored within the object. Whenever the function object is invoked though operator(), the stored value is passed as one of the arguments, the other argument is passed as an argument of operator(). The resulting function object is an unary function.<br />
-1) Binds the first parameter to the value value given at the construction of the object.<br />
+<p>operator()(typename Fn::first_argument_type &amp;x) const;<br/>
+}<br/>
+;<br/>
+A function object that binds an argument to a binary function.<br/>
+The value of the parameter is passed to the object at the construction time and stored within the object. Whenever the function object is invoked though operator(), the stored value is passed as one of the arguments, the other argument is passed as an argument of operator(). The resulting function object is an unary function.<br/>
+1) Binds the first parameter to the value value given at the construction of the object.<br/>
 2) Binds the second parameter to the value value given at the construction of the object. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -63,13 +63,13 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;0 deg = 0 rad (using binder) 0 rad (using lambda)<br />
-&nbsp;<wbr>&nbsp;30 deg = 0.523599 rad (using binder) 0.523599 rad (using lambda)<br />
-&nbsp;<wbr>&nbsp;45 deg = 0.785398 rad (using binder) 0.785398 rad (using lambda)<br />
-&nbsp;<wbr>&nbsp;60 deg = 1.0472 rad (using binder) 1.0472 rad (using lambda)<br />
-&nbsp;<wbr>&nbsp;90 deg = 1.5708 rad (using binder) 1.5708 rad (using lambda)<br />
+<p>&nbsp;<wbr>&nbsp;0 deg = 0 rad (using binder) 0 rad (using lambda)<br/>
+&nbsp;<wbr>&nbsp;30 deg = 0.523599 rad (using binder) 0.523599 rad (using lambda)<br/>
+&nbsp;<wbr>&nbsp;45 deg = 0.785398 rad (using binder) 0.785398 rad (using lambda)<br/>
+&nbsp;<wbr>&nbsp;60 deg = 1.0472 rad (using binder) 1.0472 rad (using lambda)<br/>
+&nbsp;<wbr>&nbsp;90 deg = 1.5708 rad (using binder) 1.5708 rad (using lambda)<br/>
 &nbsp;<wbr>&nbsp;180 deg = 3.14159 rad (using binder) 3.14159 rad (using lambda)</p>
 <h2>See also</h2>
-<p>bind1st binds one argument to a binary function<br />
-bind2nd <i>(function template)</i><br />
+<p>bind1st binds one argument to a binary function<br/>
+bind2nd <i>(function template)</i><br/>
 (deprecated in C++11)(removed in C++17) </p>

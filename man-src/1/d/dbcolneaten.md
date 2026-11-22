@@ -17,7 +17,7 @@ description: "dbcolneaten – pretty-print columns of Fsdb data (assuming a mono
 <pre>
     field op value
 </pre>
-<p> <font SIZE="-1">OP</font> is &gt;=, =, or &lt;= specifying that the width of that <font SIZE="-1">FIELD</font> must be more, equal, or less than that <font SIZE="-1">VALUE</font> </p>
+<p> OP is &gt;=, =, or &lt;= specifying that the width of that FIELD must be more, equal, or less than that VALUE </p>
 <p> dbcolneaten runs in O(1) memory but disk space proportional to the size of data.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -69,4 +69,4 @@ description: "dbcolneaten – pretty-print columns of Fsdb data (assuming a mono
 <p> Fsdb.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

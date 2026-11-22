@@ -18,10 +18,10 @@ description: "qrsub – Submit an Advance Reservation (AR) to xxQS_NAMExx."
 <p> Note: To make AR behavior predictable, it is necessary to have reserved resources available at the time of AR start. This is done by keeping jobs with a unlimited runtime limit separated from ARs, and not considering resources used by such jobs for reservation. </p>
 <p> Note: Resource Quotas are not considered for AR queue selection, nor for jobs requesting an AR. </p>
 <p> When an AR was successfully added to the xxQS_NAMExx queuing system <i>qrsub</i> returns a unique integer ID referring to the the newly created AR. The highest AR ID is 9999999. If the highest ID is reached, a wraparound happens and the next unused ID, starting with 1, will be used. </p>
-<p> For <i>qrsub</i>, the administrator and the user may define default request files (analogous to xxQS_NAMExx_request for qsub), which can contain any of the possible command line options.<br />
- A cluster wide default request file is optional. If such a default request file is used, it must be placed under<br />
- $xxQS_NAME_Sxx_ROOT/$xxQS_NAME_Sxx_CELL/common/sge_ar_request (global defaults file).<br />
- A user private default request file is optional. If it is used, it must be placed under<br />
+<p> For <i>qrsub</i>, the administrator and the user may define default request files (analogous to xxQS_NAMExx_request for qsub), which can contain any of the possible command line options.<br/>
+ A cluster wide default request file is optional. If such a default request file is used, it must be placed under<br/>
+ $xxQS_NAME_Sxx_ROOT/$xxQS_NAME_Sxx_CELL/common/sge_ar_request (global defaults file).<br/>
+ A user private default request file is optional. If it is used, it must be placed under<br/>
  $HOME/.sge_ar_request (user private defaults file).</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -37,12 +37,12 @@ description: "qrsub – Submit an Advance Reservation (AR) to xxQS_NAMExx."
 <dd> Defines the end date and time of an AR. The use of &quot;<code>-e date_time</code>&quot; is optional if &quot;<code>-d time</code>&quot; is requested. For details about &quot;<code>date_time</code>&quot; definition please see</dd>
 <dt><code>-he y</code>[<code>es</code>]|<code>n</code>[<code>o</code>]</dt>
 <dd> Specifies the behavior when the AR goes into an error state. The AR goes into error state when a reserved host goes into unknown state, a queue error happens, or when a queue is disabled or suspended. </dd>
-<p> A hard error, &quot;<code>-he yes</code>&quot;, means as long as the AR is in error state no jobs using the AR will be scheduled. If soft error, &quot;<code>-he no</code>&quot;, is specified the AR stays usable with the remaining resources.<br />
+<p> A hard error, &quot;<code>-he yes</code>&quot;, means as long as the AR is in error state no jobs using the AR will be scheduled. If soft error, &quot;<code>-he no</code>&quot;, is specified the AR stays usable with the remaining resources.<br/>
  By default soft error handling is used. </p>
 <dt><code>-help</code></dt>
 <dd> Prints a list of all options.</dd>
 <dt><code>-l</code> <i>resource</i><code>=</code><i>value</i><code>,</code>&#8230;</dt>
-<dd> Creates an AR in a xxQS_NAMExx queue, providing the given resource request list. describes how a list of available resources and their associated valid value specifiers can be obtained.<br />
+<dd> Creates an AR in a xxQS_NAMExx queue, providing the given resource request list. describes how a list of available resources and their associated valid value specifiers can be obtained.<br/>
  There may be multiple <code>-l</code> switches in a single command.</dd>
 <dt><code>-m b</code>|<code>e</code>|<code>a</code>|<code>n</code></dt>
 <dd> Defines or redefines under which circumstances mail is to be sent to the AR owner or to the users defined with the <code>-M</code> option described below. The option arguments have the following meaning: </dd>
@@ -58,7 +58,7 @@ description: "qrsub – Submit an Advance Reservation (AR) to xxQS_NAMExx."
 <dd> Only meaningful for a parallel AR request together with the -pe option. </dd>
 <p> This option is used to reserve the proper queues to match this request if it would be requested by a qsub. A more detailed description of <i>wc_queue_list</i> can be found in</p>
 <dt><code>-now y</code>[<code>es</code>]|<code>n</code>[<code>o</code>]</dt>
-<dd> This option affects the queue selection for reservation.<br />
+<dd> This option affects the queue selection for reservation.<br/>
  With the &quot;<code>-now y</code>&quot; option, only queues with the qtype &quot;INTERACTIVE&quot; assigned will be considered for reservation. &quot;<code>-now n</code>&quot; is the default for <i>qrsub</i>.</dd>
 <dt><code>-N</code> <i>name</i></dt>
 <dd> The name of the AR. The name, if requested, must conform to &quot;<i>name</i>&quot; as defined in Invalid names will be denied at submit time.</dd>
@@ -76,7 +76,7 @@ description: "qrsub – Submit an Advance Reservation (AR) to xxQS_NAMExx."
 <dt><code>-q</code> <i>wc_queue_list</i></dt>
 <dd> Defines or redefines a list of cluster queues, queue domains or queue instances that may be reserved by the AR. Please find a description of <i>wc_queue_list</i> in This parameter has all the properties of a resource request and will be merged with requirements derived from the <code>-l</code> option described above.</dd>
 <dt><code>-u</code> [<i>username</i>|<code>@</code><i>access_list</i>],&#8230;</dt>
-<dd> Defines the users allowed to submit jobs requesting the AR. The access is specified by a comma-separated list containing UNIX users or ACLs (see An ACL is differentiated from a UNIX user name by prefixing the ACL name with an &#8216;@&#8217; sign.<br />
+<dd> Defines the users allowed to submit jobs requesting the AR. The access is specified by a comma-separated list containing UNIX users or ACLs (see An ACL is differentiated from a UNIX user name by prefixing the ACL name with an &#8216;@&#8217; sign.<br/>
  By default only the AR owner is allowed to submit jobs requesting the AR. </dd>
 <p> Note: Only queues where all users specified in the list have access are considered for reservation (see</dl>
 <h2>ENVIRONMENT VARIABLES</h2>

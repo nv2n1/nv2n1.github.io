@@ -11,7 +11,7 @@ description: "dtrsyl.f –"
 <p> dtrsyl.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtrsyl</code> (TRANA, TRANB, ISGN, M, N, A, LDA, B, LDB, C, LDC, SCALE, INFO)<br />
+<p> subroutine <code>dtrsyl</code> (TRANA, TRANB, ISGN, M, N, A, LDA, B, LDB, C, LDC, SCALE, INFO)<br/>
  <i></i><code>DTRSYL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtrsyl (characterTRANA, characterTRANB, integerISGN, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldc, * )C, integerLDC, double precisionSCALE, integerINFO)</h3>

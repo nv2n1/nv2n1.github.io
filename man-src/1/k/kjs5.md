@@ -53,7 +53,7 @@ JS&gt;
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-kjscmd5/">kjscmd5</a></i>(1)</p>
 <h2>BUGS</h2>
-<p> Please use m[blue]<code>KDE&#8217;s bugtracker</code>m[]<font SIZE="-2">[1]</font> to report bugs.</p>
+<p> Please use m[blue]<code>KDE&#8217;s bugtracker</code>m[][1] to report bugs.</p>
 <h2>AUTHOR</h2>
 <p> <code>Harri Porten</code> &lt;porten [at] kde.org&gt;</p>
 <dl>

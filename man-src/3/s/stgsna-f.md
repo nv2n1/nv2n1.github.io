@@ -10,7 +10,7 @@ description: "stgsna.f –"
 <p>stgsna.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>stgsna</code> (JOB, HOWMNY, SELECT, N, A, LDA, B, LDB, VL, LDVL, VR, LDVR, S, DIF, MM, M, WORK, LWORK, IWORK, INFO)<br />
+<p>subroutine <code>stgsna</code> (JOB, HOWMNY, SELECT, N, A, LDA, B, LDB, VL, LDVL, VR, LDVR, S, DIF, MM, M, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>STGSNA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stgsna (characterJOB, characterHOWMNY, logical, dimension( * )SELECT, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( ldvl, * )VL, integerLDVL, real, dimension( ldvr, * )VR, integerLDVR, real, dimension( * )S, real, dimension( * )DIF, integerMM, integerM, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>

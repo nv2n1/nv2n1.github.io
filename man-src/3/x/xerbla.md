@@ -11,7 +11,7 @@ description: "xerbla.f –"
 <p> xerbla.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>xerbla</code> (SRNAME, INFO)<br />
+<p> subroutine <code>xerbla</code> (SRNAME, INFO)<br/>
  <i></i><code>XERBLA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine xerbla (character*(*)SRNAME, integerINFO)</h3>

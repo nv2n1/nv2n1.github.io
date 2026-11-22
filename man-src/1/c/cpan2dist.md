@@ -150,6 +150,6 @@ Usage : cpan2dist[--format FMT][OPTS] Mod::Name[Mod::Name, ...] cpan2dist[--form
 
 <h2>COPYRIGHT</h2>
 
- The <font SIZE="-1">CPAN++</font> interface (of which this module is a part of) is copyright (c) 2001 - 2007, Jos Boumans &lt;kane [at] cpan.org&gt;. All rights reserved. 
+ The CPAN++ interface (of which this module is a part of) is copyright (c) 2001 - 2007, Jos Boumans &lt;kane [at] cpan.org&gt;. All rights reserved. 
 
  This library is free software; you may redistribute and/or modify it under the same terms as Perl itself.

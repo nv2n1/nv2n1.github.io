@@ -14,7 +14,7 @@ description: "metalink_piece_hash_t – The structure that holds hash value of a
 <h2>DESCRIPTION</h2>
 <p> <code>metalink_piece_hash_t</code> is a structure that holds a hash value of a piece. </p>
 <h2>STRUCTURE MEMBERS</h2>
-<p> int piece;<br />
+<p> int piece;<br/>
  char *hash; </p>
 <h3>type</h3>
 <p> Index of a piece starting 0. </p>

@@ -9,7 +9,7 @@ description: "png – Portable Network Graphics (PNG) format"
 
 <p>png &#8211; Portable Network Graphics (PNG) format</p>
 <h2>Description</h2>
-<p>PNG (Portable Network Graphics) is an extensible file format for the lossless, portable, well-compressed storage of raster images. PNG provides a patent-free replacement for GIF and can also replace many common uses of TIFF. Indexed-color, grayscale, and truecolor images are supported, plus an optional alpha channel. Sample depths range from 1 to 16 bits.<br />
+<p>PNG (Portable Network Graphics) is an extensible file format for the lossless, portable, well-compressed storage of raster images. PNG provides a patent-free replacement for GIF and can also replace many common uses of TIFF. Indexed-color, grayscale, and truecolor images are supported, plus an optional alpha channel. Sample depths range from 1 to 16 bits.<br/>
  PNG is designed to work well in online viewing applications, such as the World Wide Web, so it is fully streamable with a progressive display option. PNG is robust, providing both full file integrity checking and fast, simple detection of common transmission errors. Also, PNG can store gamma and chromaticity data for improved color matching on heterogeneous platforms. </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-libpng/">libpng</a>(3),</code> <a href="/docs/linux/man/3-libpngpf/">libpngpf</a>(3),<code> <a href="/docs/linux/man/3-zlib/">zlib</a>(3),</code> deflate(5),and<code> zlib(5)</code> </p>
@@ -20,8 +20,8 @@ description: "png – Portable Network Graphics (PNG) format"
 <p> PNG 1.0 specification, October 1996:</p>
 <dl>
 <dd>RFC 2083</dd>
-<dd><a href="ftp://ds.internic.net/rfc/rfc2083.txt">ftp://ds.internic.net/rfc/rfc2083.txt</a><br />
- or (as a W3C Recommendation) at<br />
+<dd><a href="ftp://ds.internic.net/rfc/rfc2083.txt">ftp://ds.internic.net/rfc/rfc2083.txt</a><br/>
+ or (as a W3C Recommendation) at<br/>
  <a rel="nofollow" href="http://www.w3.org/TR/REC-png.html">http://www.w3.org/TR/REC-png.html</a></dd></dl>
 <h2>Authors</h2>
 <p>This man page: Glenn Randers-Pehrson </p>

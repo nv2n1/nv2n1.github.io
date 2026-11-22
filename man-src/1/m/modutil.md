@@ -13,7 +13,7 @@ description: "modutil – Manage PKCS #11 module information within the security
 <dl>
 <dt> <code>modutil</code> [<i>options</i>] [[<i>arguments</i>]]</dt></dl>
 <h2>STATUS</h2>
-<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
+<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[][1]</dd>
 <h2>DESCRIPTION</h2>
 <p> The Security Module Database Tool, <code>modutil</code>, is a command-line utility for managing PKCS #11 module information both within secmod.db files and within hardware tokens. <code>modutil</code> can add and delete PKCS #11 modules, change passwords on security databases, set defaults, list module contents, enable or disable slots, enable or disable FIPS 140-2 compliance, and assign default providers for cryptographic operations. This tool can also create certificate, key, and module security database files. </p>
 <p> The tasks associated with security module database management are part of a process that typically also involves managing key databases and certificate databases.</p>
@@ -190,68 +190,68 @@ Module &quot;Example PKCS #11 Module&quot; added to database.
 <dl>
 <dt>
 </dt><dd>
-Platforms<br />
-{<br />
-Linux:<br />
-    5.4.08 : x86<br />
-    {<br />
-        ModuleName{&#8220;Example PKCS #11 Module&#8221;} ModuleFile{crypto.so} DefaultMechanismFlags{0x0000} CipherEnableFlags{0x0000} Files<br />
-        {<br />
-            crypto.so<br />
-            {<br />
-                Path<br />
-                {<br />
-                    / tmp / crypto.so<br />
-                }<br />
-            }<br />
-            setup.sh<br />
-            {<br />
-                Executable<br />
-                    Path<br />
-                {<br />
-                    / tmp / setup.sh<br />
-                }<br />
-            }<br />
-        }<br />
-    }<br />
-Linux:<br />
-    6.0.0 : x86<br />
-    {<br />
-        EquivalentPlatform<br />
-        {<br />
-        Linux:<br />
-            5.4.08 : x86<br />
-        }<br />
-    }<br />
+Platforms<br/>
+{<br/>
+Linux:<br/>
+    5.4.08 : x86<br/>
+    {<br/>
+        ModuleName{&#8220;Example PKCS #11 Module&#8221;} ModuleFile{crypto.so} DefaultMechanismFlags{0x0000} CipherEnableFlags{0x0000} Files<br/>
+        {<br/>
+            crypto.so<br/>
+            {<br/>
+                Path<br/>
+                {<br/>
+                    / tmp / crypto.so<br/>
+                }<br/>
+            }<br/>
+            setup.sh<br/>
+            {<br/>
+                Executable<br/>
+                    Path<br/>
+                {<br/>
+                    / tmp / setup.sh<br/>
+                }<br/>
+            }<br/>
+        }<br/>
+    }<br/>
+Linux:<br/>
+    6.0.0 : x86<br/>
+    {<br/>
+        EquivalentPlatform<br/>
+        {<br/>
+        Linux:<br/>
+            5.4.08 : x86<br/>
+        }<br/>
+    }<br/>
 }
 </dd></dl>
 <p> Both the install script and the required libraries must be bundled in a JAR file, which is specified with the <code>-jar</code> argument. </p>
 <dl>
 <dt>
 </dt><dd>
-modutil -dbdir sql:/home/mt&#8221;jar-install-filey/sharednssdb -jar install.jar -installdir sql:/home/my/sharednssdb<br />
-This installation JAR file was signed by:<br />
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
-**SUBJECT NAME**<br />
-C=US, ST=California, L=Mountain View, CN=Cryptorific Inc., OU=Digital ID<br />
-Class 3 &#8211; Netscape Object Signing, OU=&#8221;www.verisign.com/repository/CPS<br />
-Incorp. by Ref.,LIAB.LTD(c)9 6&#8243;, OU=www.verisign.com/CPS Incorp.by Ref<br />
-. LIABILITY LTD.(c)97 VeriSign, OU=VeriSign Object Signing CA &#8211; Class 3<br />
-Organization, OU=&#8221;VeriSign, Inc.&#8221;, O=VeriSign Trust Network **ISSUER<br />
-NAME**, OU=www.verisign.com/CPS Incorp.by Ref. LIABILITY LTD.(c)97<br />
-VeriSign, OU=VeriSign Object Signing CA &#8211; Class 3 Organization,<br />
-OU=&#8221;VeriSign, Inc.&#8221;, O=VeriSign Trust Network<br />
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
-Do you wish to continue this installation? (y/n) y<br />
-Using installer script &#8220;installer_script&#8221;<br />
-Successfully parsed installation script<br />
-Current platform is Linux:5.4.08:x86<br />
-Using installation parameters for platform Linux:5.4.08:x86<br />
-Installed file crypto.so to /tmp/crypto.so<br />
-Installed file setup.sh to ./pk11inst.dir/setup.sh<br />
-Executing &#8220;./pk11inst.dir/setup.sh&#8221;&#8230;<br />
-&#8220;./pk11inst.dir/setup.sh&#8221; executed successfully<br />
-Installed module &#8220;Example PKCS #11 Module&#8221; into module database<br />
+modutil -dbdir sql:/home/mt&#8221;jar-install-filey/sharednssdb -jar install.jar -installdir sql:/home/my/sharednssdb<br/>
+This installation JAR file was signed by:<br/>
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br/>
+**SUBJECT NAME**<br/>
+C=US, ST=California, L=Mountain View, CN=Cryptorific Inc., OU=Digital ID<br/>
+Class 3 &#8211; Netscape Object Signing, OU=&#8221;www.verisign.com/repository/CPS<br/>
+Incorp. by Ref.,LIAB.LTD(c)9 6&#8243;, OU=www.verisign.com/CPS Incorp.by Ref<br/>
+. LIABILITY LTD.(c)97 VeriSign, OU=VeriSign Object Signing CA &#8211; Class 3<br/>
+Organization, OU=&#8221;VeriSign, Inc.&#8221;, O=VeriSign Trust Network **ISSUER<br/>
+NAME**, OU=www.verisign.com/CPS Incorp.by Ref. LIABILITY LTD.(c)97<br/>
+VeriSign, OU=VeriSign Object Signing CA &#8211; Class 3 Organization,<br/>
+OU=&#8221;VeriSign, Inc.&#8221;, O=VeriSign Trust Network<br/>
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br/>
+Do you wish to continue this installation? (y/n) y<br/>
+Using installer script &#8220;installer_script&#8221;<br/>
+Successfully parsed installation script<br/>
+Current platform is Linux:5.4.08:x86<br/>
+Using installation parameters for platform Linux:5.4.08:x86<br/>
+Installed file crypto.so to /tmp/crypto.so<br/>
+Installed file setup.sh to ./pk11inst.dir/setup.sh<br/>
+Executing &#8220;./pk11inst.dir/setup.sh&#8221;&#8230;<br/>
+&#8220;./pk11inst.dir/setup.sh&#8221; executed successfully<br/>
+Installed module &#8220;Example PKCS #11 Module&#8221; into module database<br/>
 Installation completed successfully
 </dd></dl>
 <p> <code>Adding Module Spec</code> </p>
@@ -407,73 +407,73 @@ Token &quot;Communicator Certificate DB&quot; password changed successfully.
 <dl>
 <dt>
 </dt><dd>
-ForwardCompatible{IRIX : 6.2 : mips SUNOS : 5.5.1 : sparc} Platforms<br />
-{<br />
-    WINNT::x86<br />
-    {<br />
-        ModuleName{&#8220;Example Module&#8221;} ModuleFile{win32 / fort32.dll} DefaultMechanismFlags{0x0001} DefaultCipherFlags{0x0001} Files<br />
-        {<br />
-            win32 / setup.exe<br />
-            {<br />
-                Executable<br />
-                    RelativePath<br />
-                {<br />
-                    % temp % / setup.exe<br />
-                }<br />
-            }<br />
-            win32 / setup.hlp<br />
-            {<br />
-                RelativePath<br />
-                {<br />
-                    % temp % / setup.hlp<br />
-                }<br />
-            }<br />
-            win32 / setup.cab<br />
-            {<br />
-                RelativePath<br />
-                {<br />
-                    % temp % / setup.cab<br />
-                }<br />
-            }<br />
-        }<br />
-    }<br />
-    WIN95::x86<br />
-    {<br />
-        EquivalentPlatform<br />
-        {<br />
-            WINNT::x86<br />
-        }<br />
-    }<br />
-SUNOS:<br />
-    5.5.1 : sparc<br />
-    {<br />
-        ModuleName{&#8220;Example UNIX Module&#8221;} ModuleFile{unix / fort.so} DefaultMechanismFlags{0x0001} CipherEnableFlags{0x0001} Files<br />
-        {<br />
-            unix / fort.so<br />
-            {<br />
-                RelativePath{ % root % / lib / fort.so} AbsolutePath{ / usr / local / netscape / lib / fort.so} FilePermissions<br />
-                {<br />
-                    555<br />
-                }<br />
-            }<br />
-            xplat / instr.html<br />
-            {<br />
-                RelativePath{ % root % / docs / inst.html} AbsolutePath{ / usr / local / netscape / docs / inst.html} FilePermissions<br />
-                {<br />
-                    555<br />
-                }<br />
-            }<br />
-        }<br />
-    }<br />
-IRIX:<br />
-    6.2 : mips<br />
-    {<br />
-        EquivalentPlatform<br />
-        {<br />
-        SUNOS:<br />
-            5.5.1 : sparc<br />
-        }<br />
-    }<br />
+ForwardCompatible{IRIX : 6.2 : mips SUNOS : 5.5.1 : sparc} Platforms<br/>
+{<br/>
+    WINNT::x86<br/>
+    {<br/>
+        ModuleName{&#8220;Example Module&#8221;} ModuleFile{win32 / fort32.dll} DefaultMechanismFlags{0x0001} DefaultCipherFlags{0x0001} Files<br/>
+        {<br/>
+            win32 / setup.exe<br/>
+            {<br/>
+                Executable<br/>
+                    RelativePath<br/>
+                {<br/>
+                    % temp % / setup.exe<br/>
+                }<br/>
+            }<br/>
+            win32 / setup.hlp<br/>
+            {<br/>
+                RelativePath<br/>
+                {<br/>
+                    % temp % / setup.hlp<br/>
+                }<br/>
+            }<br/>
+            win32 / setup.cab<br/>
+            {<br/>
+                RelativePath<br/>
+                {<br/>
+                    % temp % / setup.cab<br/>
+                }<br/>
+            }<br/>
+        }<br/>
+    }<br/>
+    WIN95::x86<br/>
+    {<br/>
+        EquivalentPlatform<br/>
+        {<br/>
+            WINNT::x86<br/>
+        }<br/>
+    }<br/>
+SUNOS:<br/>
+    5.5.1 : sparc<br/>
+    {<br/>
+        ModuleName{&#8220;Example UNIX Module&#8221;} ModuleFile{unix / fort.so} DefaultMechanismFlags{0x0001} CipherEnableFlags{0x0001} Files<br/>
+        {<br/>
+            unix / fort.so<br/>
+            {<br/>
+                RelativePath{ % root % / lib / fort.so} AbsolutePath{ / usr / local / netscape / lib / fort.so} FilePermissions<br/>
+                {<br/>
+                    555<br/>
+                }<br/>
+            }<br/>
+            xplat / instr.html<br/>
+            {<br/>
+                RelativePath{ % root % / docs / inst.html} AbsolutePath{ / usr / local / netscape / docs / inst.html} FilePermissions<br/>
+                {<br/>
+                    555<br/>
+                }<br/>
+            }<br/>
+        }<br/>
+    }<br/>
+IRIX:<br/>
+    6.2 : mips<br/>
+    {<br/>
+        EquivalentPlatform<br/>
+        {<br/>
+        SUNOS:<br/>
+            5.5.1 : sparc<br/>
+        }<br/>
+    }<br/>
 }
 </dd></dl>
 <p> <code>Script Grammar</code> </p>

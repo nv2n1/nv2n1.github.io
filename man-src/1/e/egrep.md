@@ -10,8 +10,8 @@ description: "grep, egrep, fgrep, rgrep – print lines that match patterns"
 
 <p> grep, egrep, fgrep, rgrep &#8211; print lines that match patterns </p>
 <h2>SYNOPSIS</h2>
-<p> <code>grep</code> [<i>OPTION</i>&#8230;] <i>PATTERNS</i> [<i>FILE</i>&#8230;]<br />
- <code>grep</code> [<i>OPTION</i>&#8230;] <code>-e</code> <i>PATTERNS</i> &#8230; [<i>FILE</i>&#8230;]<br />
+<p> <code>grep</code> [<i>OPTION</i>&#8230;] <i>PATTERNS</i> [<i>FILE</i>&#8230;]<br/>
+ <code>grep</code> [<i>OPTION</i>&#8230;] <code>-e</code> <i>PATTERNS</i> &#8230; [<i>FILE</i>&#8230;]<br/>
  <code>grep</code> [<i>OPTION</i>&#8230;] <code>-f</code> <i>PATTERN_FILE</i> &#8230; [<i>FILE</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>grep</code> searches for <i>PATTERNS</i> in each <i>FILE</i>. <i>PATTERNS</i> is one or more patterns separated by newline characters, and <code>grep</code> prints each line that matches a pattern. Typically <i>PATTERNS</i> should be quoted when <code>grep</code> is used in a shell command. </p>

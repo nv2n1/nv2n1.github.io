@@ -85,12 +85,12 @@ description: "ioctl_console – ioctls for console terminal and virtual consoles
 <dt><code>PIO_FONTX</code></dt>
 <dd> Sets screen font and associated rendering information. <i>argp</i> points to a</dd>
 <dt>
-</dt><dd> struct consolefontdesc {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short charcount;&nbsp;<wbr>&nbsp;/*&nbsp;characters in font<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(256 or 512)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short charheight;&nbsp;/*&nbsp;scan lines per<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;character&nbsp;(1-32)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*chardata;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;font data in<br />
+</dt><dd> struct consolefontdesc {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short charcount;&nbsp;<wbr>&nbsp;/*&nbsp;characters in font<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(256 or 512)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short charheight;&nbsp;/*&nbsp;scan lines per<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;character&nbsp;(1-32)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*chardata;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;font data in<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;expanded form&nbsp;*/ };</dd>
 <dt>
 </dt><dd> If necessary, the screen will be appropriately resized, and <code>SIGWINCH</code> sent to the appropriate processes. This call also invalidates the Unicode mapping. (Since Linux 1.3.1.)</dd>
@@ -107,14 +107,14 @@ description: "ioctl_console – ioctls for console terminal and virtual consoles
 <dt><code>GIO_UNIMAP</code></dt>
 <dd> Get Unicode-to-font mapping from kernel. <i>argp</i> points to a</dd>
 <dt>
-</dt><dd> struct unimapdesc {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short&nbsp;<wbr>&nbsp;entry_ct;<br />
+</dt><dd> struct unimapdesc {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short&nbsp;<wbr>&nbsp;entry_ct;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct unipair&nbsp;*entries; };</dd>
 <dt>
 </dt><dd> where <i>entries</i> points to an array of</dd>
 <dt>
-</dt><dd> struct unipair {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short unicode;<br />
+</dt><dd> struct unipair {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short unicode;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short fontpos; };</dd>
 <dt>
 </dt><dd> (Since Linux 1.1.92.)</dd>
@@ -123,9 +123,9 @@ description: "ioctl_console – ioctls for console terminal and virtual consoles
 <dt><code>PIO_UNIMAPCLR</code></dt>
 <dd> Clear table, possibly advise hash algorithm. <i>argp</i> points to a</dd>
 <dt>
-</dt><dd> struct unimapinit {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short advised_hashsize;&nbsp;<wbr>&nbsp;/*&nbsp;0 if no opinion&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short advised_hashstep;&nbsp;<wbr>&nbsp;/*&nbsp;0 if no opinion&nbsp;*/<br />
+</dt><dd> struct unimapinit {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short advised_hashsize;&nbsp;<wbr>&nbsp;/*&nbsp;0 if no opinion&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short advised_hashstep;&nbsp;<wbr>&nbsp;/*&nbsp;0 if no opinion&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short advised_hashlevel;&nbsp;/*&nbsp;0 if no opinion&nbsp;*/ };</dd>
 <dt>
 </dt><dd> (Since Linux 1.1.92.)</dd>
@@ -181,9 +181,9 @@ description: "ioctl_console – ioctls for console terminal and virtual consoles
 <dt><code>KDGKBENT</code></dt>
 <dd> Gets one entry in key translation table (keycode to action code). <i>argp</i> points to a</dd>
 <dt>
-</dt><dd> struct kbentry {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;kb_table;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;kb_index;<br />
+</dt><dd> struct kbentry {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;kb_table;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;kb_index;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short kb_value; };</dd>
 <dt>
 </dt><dd> with the first two members filled in: <i>kb_table</i> selects the key table (0 &lt;= <i>kb_table</i> &lt; MAX_NR_KEYMAPS), and <i>kb_index</i> is the keycode (0 &lt;= <i>kb_index</i> &lt; NR_KEYS). <i>kb_value</i> is set to the corresponding action code, or K_HOLE if there is no such key, or K_NOSUCHMAP if <i>kb_table</i> is invalid.</dd>
@@ -192,8 +192,8 @@ description: "ioctl_console – ioctls for console terminal and virtual consoles
 <dt><code>KDGKBSENT</code></dt>
 <dd> Gets one function key string. <i>argp</i> points to a</dd>
 <dt>
-</dt><dd> struct kbsentry {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char kb_func;<br />
+</dt><dd> struct kbsentry {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char kb_func;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char kb_string[512]; };</dd>
 <dt>
 </dt><dd> <i>kb_string</i> is set to the (null-terminated) string corresponding to the <i>kb_func</i>th function key action code.</dd>
@@ -202,21 +202,21 @@ description: "ioctl_console – ioctls for console terminal and virtual consoles
 <dt><code>KDGKBDIACR</code></dt>
 <dd> Read kernel accent table. <i>argp</i> points to a</dd>
 <dt>
-</dt><dd> struct kbdiacrs {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;<wbr>&nbsp;kb_cnt;<br />
+</dt><dd> struct kbdiacrs {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;<wbr>&nbsp;kb_cnt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct kbdiacr kbdiacr[256]; };</dd>
 <dt>
 </dt><dd> where <i>kb_cnt</i> is the number of entries in the array, each of which is a</dd>
 <dt>
-</dt><dd> struct kbdiacr {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char diacr;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char base;<br />
+</dt><dd> struct kbdiacr {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char diacr;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char base;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char result; };</dd>
 <dt><code>KDGETKEYCODE</code></dt>
 <dd> Read kernel keycode table entry (scan code to keycode). <i>argp</i> points to a</dd>
 <dt>
-</dt><dd> struct kbkeycode {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int scancode;<br />
+</dt><dd> struct kbkeycode {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int scancode;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int keycode; };</dd>
 <dt>
 </dt><dd> <i>keycode</i> is set to correspond to the given <i>scancode</i>. (89 &lt;= <i>scancode</i> &lt;= 255 only. For 1 &lt;= <i>scancode</i> &lt;= 88, <i>keycode</i>==<i>scancode</i>.) (Since Linux 1.1.63.)</dd>
@@ -229,11 +229,11 @@ description: "ioctl_console – ioctls for console terminal and virtual consoles
 <dt><code>VT_GETMODE</code></dt>
 <dd> Get mode of active vt. <i>argp</i> points to a</dd>
 <dt>
-</dt><dd> struct vt_mode {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;mode;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;vt mode&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;waitv;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;if set, hang on writes if not active&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short relsig;&nbsp;<wbr>&nbsp;/*&nbsp;signal to raise on release req&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short acqsig;&nbsp;<wbr>&nbsp;/*&nbsp;signal to raise on acquisition&nbsp;*/<br />
+</dt><dd> struct vt_mode {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;mode;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;vt mode&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;waitv;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;if set, hang on writes if not active&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short relsig;&nbsp;<wbr>&nbsp;/*&nbsp;signal to raise on release req&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short acqsig;&nbsp;<wbr>&nbsp;/*&nbsp;signal to raise on acquisition&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short frsig;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;unused&nbsp;(set to 0)&nbsp;*/ };</dd>
 <dt>
 </dt><dd> which is set to the mode of the active vt. <i>mode</i> is set to one of these values: </dd>
@@ -259,9 +259,9 @@ description: "ioctl_console – ioctls for console terminal and virtual consoles
 <dt><code>VT_GETSTATE</code></dt>
 <dd> Get global vt state info. <i>argp</i> points to a</dd>
 <dt>
-</dt><dd> struct vt_stat {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_active;&nbsp;<wbr>&nbsp;/*&nbsp;active vt&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_signal;&nbsp;<wbr>&nbsp;/*&nbsp;signal to send&nbsp;*/<br />
+</dt><dd> struct vt_stat {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_active;&nbsp;<wbr>&nbsp;/*&nbsp;active vt&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_signal;&nbsp;<wbr>&nbsp;/*&nbsp;signal to send&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_state;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;vt bit mask&nbsp;*/ };</dd>
 <dt>
 </dt><dd> For each vt in use, the corresponding bit in the <i>v_state</i> member is set. (Kernels 1.0 through 1.1.92.)</dd>
@@ -276,25 +276,25 @@ description: "ioctl_console – ioctls for console terminal and virtual consoles
 <dt><code>VT_RESIZE</code></dt>
 <dd> Set the kernel&#8217;s idea of screensize. <i>argp</i> points to a</dd>
 <dt>
-</dt><dd> struct vt_sizes {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_rows;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;#&nbsp;rows&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_cols;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;#&nbsp;columns&nbsp;*/<br />
+</dt><dd> struct vt_sizes {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_rows;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;#&nbsp;rows&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_cols;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;#&nbsp;columns&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_scrollsize;&nbsp;/*&nbsp;no longer used&nbsp;*/ };</dd>
 <dt>
 </dt><dd> Note that this does not change the videomode. See <code><a href="/docs/linux/man/8-resizecons/">resizecons</a></code>(8). (Since Linux 1.1.54.)</dd>
 <dt><code>VT_RESIZEX</code></dt>
 <dd> Set the kernel&#8217;s idea of various screen parameters. <i>argp</i> points to a</dd>
 <dt>
-</dt><dd> struct vt_consize {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_rows;&nbsp;<wbr>&nbsp;/*&nbsp;number of rows&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_cols;&nbsp;<wbr>&nbsp;/*&nbsp;number of columns&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_vlin;&nbsp;<wbr>&nbsp;/*&nbsp;number of pixel rows<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;on screen&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_clin;&nbsp;<wbr>&nbsp;/*&nbsp;number of pixel rows<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;per character&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_vcol;&nbsp;<wbr>&nbsp;/*&nbsp;number of pixel columns<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;on screen&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_ccol;&nbsp;<wbr>&nbsp;/*&nbsp;number of pixel columns<br />
+</dt><dd> struct vt_consize {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_rows;&nbsp;<wbr>&nbsp;/*&nbsp;number of rows&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_cols;&nbsp;<wbr>&nbsp;/*&nbsp;number of columns&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_vlin;&nbsp;<wbr>&nbsp;/*&nbsp;number of pixel rows<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;on screen&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_clin;&nbsp;<wbr>&nbsp;/*&nbsp;number of pixel rows<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;per character&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_vcol;&nbsp;<wbr>&nbsp;/*&nbsp;number of pixel columns<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;on screen&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short v_ccol;&nbsp;<wbr>&nbsp;/*&nbsp;number of pixel columns<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;per character&nbsp;*/ };</dd>
 <dt>
 </dt><dd> Any parameter may be set to zero, indicating &quot;no change&quot;, but if multiple parameters are set, they must be self-consistent. Note that this does not change the videomode. See <code><a href="/docs/linux/man/8-resizecons/">resizecons</a></code>(8). (Since Linux 1.3.3.)</dd></dl>
@@ -307,9 +307,9 @@ description: "ioctl_console – ioctls for console terminal and virtual consoles
 <dt><code>TIOCLINUX, subcode=2</code></dt>
 <dd> Set selection. <i>argp</i> points to a</dd>
 <dt>
-</dt><dd> struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;subcode;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short xs, ys, xe, ye;<br />
+</dt><dd> struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;subcode;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short xs, ys, xe, ye;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short sel_mode; };</dd>
 <dt>
 </dt><dd> <i>xs</i> and <i>ys</i> are the starting column and row. <i>xe</i> and <i>ye</i> are the ending column and row. (Upper left corner is row=column=1.) <i>sel_mode</i> is 0 for character-by-character selection, 1 for word-by-word selection, or 2 for line-by-line selection. The indicated screen characters are highlighted and saved in the static array sel_buffer in <i>devices/char/console.c</i>.</dd>

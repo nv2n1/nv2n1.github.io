@@ -11,7 +11,7 @@ description: "cpbstf.f –"
 <p> cpbstf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cpbstf</code> (UPLO, N, KD, AB, LDAB, INFO)<br />
+<p> subroutine <code>cpbstf</code> (UPLO, N, KD, AB, LDAB, INFO)<br/>
  <i></i><code>CPBSTF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpbstf (characterUPLO, integerN, integerKD, complex, dimension( ldab, * )AB, integerLDAB, integerINFO)</h3>
@@ -70,10 +70,10 @@ description: "cpbstf.f –"
           The leading dimension of the array AB.  LDAB &gt;= KD+1.
 </pre>
 <p> <i>INFO</i> </p>
-<p>INFO is INTEGER = 0 : successful exit &lt; 0 : if INFO = -i, the i &#8211; th argument had an illegal value &gt; 0 : if INFO = i, the factorization could not be completed,<br />
-        because the updated element a(i, i)<br />
-was negative;<br />
-the<br />
+<p>INFO is INTEGER = 0 : successful exit &lt; 0 : if INFO = -i, the i &#8211; th argument had an illegal value &gt; 0 : if INFO = i, the factorization could not be completed,<br/>
+        because the updated element a(i, i)<br/>
+was negative;<br/>
+the<br/>
     matrix A is not positive definite.</p>
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>

@@ -10,10 +10,10 @@ description: "mrtg-reference – MRTG 2.17.4 configuration reference"
 
 <p> mrtg-reference &#8211; MRTG 2.17.4 configuration reference </p>
 <h2>OVERVIEW</h2>
-<p> The runtime behaviour of <font SIZE="-1">MRTG</font> is governed by a configuration file. Run-of-the-mill configuration files can be generated with <code>cfgmaker</code>. (Check cfgmaker). But for more elaborate configurations some hand-tuning is required. </p>
+<p> The runtime behaviour of MRTG is governed by a configuration file. Run-of-the-mill configuration files can be generated with <code>cfgmaker</code>. (Check cfgmaker). But for more elaborate configurations some hand-tuning is required. </p>
 <p> This document describes all the configuration options understood by the mrtg software.</p>
 <h2>SYNTAX</h2>
-<p> <font SIZE="-1">MRTG</font> configuration file syntax follows some simple rules:</p>
+<p> MRTG configuration file syntax follows some simple rules:</p>
 <dl>
 <dt>&bull;</dt>
 <dd> Keywords must start at the beginning of a line.</dd>
@@ -47,7 +47,7 @@ description: "mrtg-reference – MRTG 2.17.4 configuration reference"
 <h2>OPTIONAL GLOBAL KEYWORDS</h2>
 <h3>HtmlDir</h3>
 <p> HtmlDir specifies the directory where the html (or shtml, but we&#8217;ll get on to those later) lives. </p>
-<p> <font SIZE="-1">NOTE:</font> Workdir overrides the settings for htmldir, imagedir and logdir. </p>
+<p> NOTE: Workdir overrides the settings for htmldir, imagedir and logdir. </p>
 <p> Example: </p>
 <pre>
  Htmldir: /www/mrtg/
@@ -64,25 +64,25 @@ description: "mrtg-reference – MRTG 2.17.4 configuration reference"
 <pre>
  Logdir: /www/mrtg/logs
 </pre>
-<h3>Forks (<font SIZE="-1">UNIX</font> only)</h3>
-<p> With system that supports fork (<font SIZE="-1">UNIX</font> for example), mrtg can fork itself into multiple instances while it is acquiring data via snmp. </p>
+<h3>Forks (UNIX only)</h3>
+<p> With system that supports fork (UNIX for example), mrtg can fork itself into multiple instances while it is acquiring data via snmp. </p>
 <p> For situations with high latency or a great number of devices this will speed things up considerably. It will not make things faster, though, if you query a single switch sitting next door. </p>
-<p> As far as I know <font SIZE="-1">NT</font> can not fork so this option is not available on <font SIZE="-1">NT</font>. </p>
+<p> As far as I know NT can not fork so this option is not available on NT. </p>
 <p> Example: </p>
 <pre>
  Forks: 4
 </pre>
 <h3>EnableIPv6</h3>
-<p> When set to yes, IPv6 support is enabled if the required libraries are present (see the mrtg-ipv6 manpage). When IPv6 is enabled, mrtg can talk to routers using <font SIZE="-1">SNMP</font> over IPv6 and targets may be specified by their numeric IPv6 addresses as well as by hostname or IPv4 address. </p>
+<p> When set to yes, IPv6 support is enabled if the required libraries are present (see the mrtg-ipv6 manpage). When IPv6 is enabled, mrtg can talk to routers using SNMP over IPv6 and targets may be specified by their numeric IPv6 addresses as well as by hostname or IPv4 address. </p>
 <p> If IPv6 is enabled and the target is a hostname, mrtg will try to resolve the hostname to an IPv6 address and, if this fails, to an IPv4 address. Note that mrtg will only use IPv4 if you specify an IPv4 address or a hostname with no corresponding IPv6 address; it will not fall back to IPv4 if it simply fails to communicate with the target using IPv6. This is by design. </p>
-<p> Note that many routers do not currently support <font SIZE="-1">SNMP</font> over IPv6. Use the <i>IPv4Only</i> per target option for these routers. </p>
+<p> Note that many routers do not currently support SNMP over IPv6. Use the <i>IPv4Only</i> per target option for these routers. </p>
 <p> IPv6 is disabled by default. </p>
 <p> Example: </p>
 <pre>
  EnableIPv6: Yes
 </pre>
 <h3>EnableSnmpV3</h3>
-<p> When set to yes, uses the Net::SNMP module instead of the <font SIZE="-1">SNMP_SESSION</font> module for generating snmp queries. This allows the use of SNMPv3 if other snmpv3 parameters are set. </p>
+<p> When set to yes, uses the Net::SNMP module instead of the SNMP_SESSION module for generating snmp queries. This allows the use of SNMPv3 if other snmpv3 parameters are set. </p>
 <p> SNMPv3 is disabled by default. </p>
 <p> Example: </p>
 <pre>
@@ -98,9 +98,9 @@ description: "mrtg-reference – MRTG 2.17.4 configuration reference"
 <p> How often do you call mrtg? The default is 5 minutes. If you call it less often, you should specify it here. This does two things:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> The generated <font SIZE="-1">HTML</font> page contains the right information about the calling interval &#8230;</dd>
+<dd> The generated HTML page contains the right information about the calling interval &#8230;</dd>
 <dt>&bull;</dt>
-<dd> A <font SIZE="-1">META</font> header in the generated <font SIZE="-1">HTML</font> page will instruct caches about the time-to-live of this page &#8230;..</dd></dl>
+<dd> A META header in the generated HTML page will instruct caches about the time-to-live of this page &#8230;..</dd></dl>
 <p> In this example, we tell mrtg that we will be calling it every 10 minutes. If you are calling mrtg every 5 minutes, you can leave this line commented out. </p>
 <p> Example: </p>
 <pre>
@@ -112,7 +112,7 @@ description: "mrtg-reference – MRTG 2.17.4 configuration reference"
 </pre>
 <p> Down to 1 second. Note though, setting the Interval for an rrdtool/mrtg setup will influence the initial creation of the database. If you change the interval later, all existing databases will remain at the resolution they were initially created with. Also note that you must make sure that your mrtg-rrd Web-frontend can deal with this kind of Interval setting.</p>
 <h3>MaxAge</h3>
-<p> <font SIZE="-1">MRTG</font> relies heavily on the real time clock of your computer. If the time is set to a wrong value, especially if it is advanced far into the future, this will cause mrtg to expire lots of supposedly old data from the log files. </p>
+<p> MRTG relies heavily on the real time clock of your computer. If the time is set to a wrong value, especially if it is advanced far into the future, this will cause mrtg to expire lots of supposedly old data from the log files. </p>
 <p> To prevent this, you can add a &#8216;reasonability&#8217; check by specifying a maximum age for log files. If a file seems to be older, mrtg will not touch it but complain instead, giving you a chance to investigate the cause. </p>
 <p> Example: </p>
 <pre>
@@ -120,21 +120,21 @@ description: "mrtg-reference – MRTG 2.17.4 configuration reference"
 </pre>
 <p> The example above will make mrtg refuse to update log files older than 2 hours (7200 seconds).</p>
 <h3>WriteExpires</h3>
-<p> With this switch mrtg will generate .meta files for <font SIZE="-1">CERN</font> and Apache servers which contain Expiration tags for the html and gif files. The *.meta files will be created in the same directory as the other files, so you will have to set &#8220;MetaDir .&#8221; and &#8220;MetaFiles on&#8221; in your apache.conf or .htaccess file for this to work </p>
-<p> <font SIZE="-1">NOTE:</font> If you are running Apache-1.2 or later, you can use the mod_expire to achieve the same effect &#8230; see the file htaccess.txt </p>
+<p> With this switch mrtg will generate .meta files for CERN and Apache servers which contain Expiration tags for the html and gif files. The *.meta files will be created in the same directory as the other files, so you will have to set &#8220;MetaDir .&#8221; and &#8220;MetaFiles on&#8221; in your apache.conf or .htaccess file for this to work </p>
+<p> NOTE: If you are running Apache-1.2 or later, you can use the mod_expire to achieve the same effect &#8230; see the file htaccess.txt </p>
 <p> Example: </p>
 <pre>
  WriteExpires: Yes
 </pre>
 <h3>NoMib2</h3>
-<p> Normally we ask the <font SIZE="-1">SNMP</font> device for &#8216;sysUptime&#8217; and &#8216;sysName&#8217; properties. Some do not have these. If you want to avoid getting complaints from mrtg about these missing properties, specify the nomib2 option. </p>
-<p> An example of agents which do not implement base mib2 attributes are Computer Associates &#8211; Unicenter <font SIZE="-1">TNG</font> Agents. <font SIZE="-1">CA</font> relies on using the base <font SIZE="-1">OS</font> <font SIZE="-1">SNMP</font> agent in addition to its own agents to supplement the management of a system. </p>
+<p> Normally we ask the SNMP device for &#8216;sysUptime&#8217; and &#8216;sysName&#8217; properties. Some do not have these. If you want to avoid getting complaints from mrtg about these missing properties, specify the nomib2 option. </p>
+<p> An example of agents which do not implement base mib2 attributes are Computer Associates &#8211; Unicenter TNG Agents. CA relies on using the base OS SNMP agent in addition to its own agents to supplement the management of a system. </p>
 <p> Example: </p>
 <pre>
  NoMib2: Yes
 </pre>
 <h3>SingleRequest</h3>
-<p> Some <font SIZE="-1">SNMP</font> implementations can not deal with requests asking for multiple snmp variables in one go. Set this in your cfg file to force mrtg to only ask for one variable per request. </p>
+<p> Some SNMP implementations can not deal with requests asking for multiple snmp variables in one go. Set this in your cfg file to force mrtg to only ask for one variable per request. </p>
 <p> Examples </p>
 <pre>
  SingleRequest: Yes
@@ -150,14 +150,14 @@ description: "mrtg-reference – MRTG 2.17.4 configuration reference"
  lenient_source_port_matching =&gt; 0,
  lenient_source_address_matching =&gt; 1
 </pre>
-<p> The values behind the options indicate the current default value. Note that these settings <font SIZE="-1">OVERRIDE</font> the per target timeout settings. </p>
+<p> The values behind the options indicate the current default value. Note that these settings OVERRIDE the per target timeout settings. </p>
 <p> A per-target SnmpOptions[] keyword will override the global settings. That keyword is primarily for SNMPv3. </p>
-<p> The 16bit request ids are the only way to query the broken <font SIZE="-1">SNMP</font> implementation of <font SIZE="-1">SMC</font> Barricade routers. </p>
+<p> The 16bit request ids are the only way to query the broken SNMP implementation of SMC Barricade routers. </p>
 <p> Example: </p>
 <pre>
  SnmpOptions: retries =&gt; 2, only_ip_address_matching =&gt; 0
 </pre>
-<p> Note that <font SIZE="-1">AS/400</font> snmp seems to be broken in a way which prevents mrtg from working with it unless </p>
+<p> Note that AS/400 snmp seems to be broken in a way which prevents mrtg from working with it unless </p>
 <pre>
  SnmpOptions: lenient_source_port_matching =&gt; 1
 </pre>
@@ -169,7 +169,7 @@ description: "mrtg-reference – MRTG 2.17.4 configuration reference"
  IconDir: /mrtgicons/
 </pre>
 <h3>LoadMIBs</h3>
-<p> Load the <font SIZE="-1">MIB</font> file(s) specified and make its OIDs available as symbolic names. For better efficiancy, a cache of MIBs is maintained in the WorkDir. </p>
+<p> Load the MIB file(s) specified and make its OIDs available as symbolic names. For better efficiancy, a cache of MIBs is maintained in the WorkDir. </p>
 <p> Example: </p>
 <pre>
  LoadMIBs: /dept/net/mibs/netapp.mib,/usr/local/lib/ft100m.mib
@@ -201,23 +201,23 @@ description: "mrtg-reference – MRTG 2.17.4 configuration reference"
  PathAdd: /usr/local/rrdtool/bin/
 </pre>
 <h3>RRDCached</h3>
-<p> If you are running RRDTool 1.4 or later with <code>rrdcached</code>, then you can configure <font SIZE="-1">MRTG</font> to take advantage of this for updates, either by using the <font SIZE="-1">RRDCACHED_ADDRESS</font> environment variable, or by setting the RRDCached keyword in the configuration file. Note that, if both are set, the configuration file keyword will take precedence. </p>
-<p> Only <font SIZE="-1">UNIX</font> domain sockets are fully supported prior to RRDTool v1.5, and you should note that using RRDCached mode will disable all Threshold checking normally done by <font SIZE="-1">MRTG</font>. Appropriate warning messages will be printed if necessary. </p>
+<p> If you are running RRDTool 1.4 or later with <code>rrdcached</code>, then you can configure MRTG to take advantage of this for updates, either by using the RRDCACHED_ADDRESS environment variable, or by setting the RRDCached keyword in the configuration file. Note that, if both are set, the configuration file keyword will take precedence. </p>
+<p> Only UNIX domain sockets are fully supported prior to RRDTool v1.5, and you should note that using RRDCached mode will disable all Threshold checking normally done by MRTG. Appropriate warning messages will be printed if necessary. </p>
 <p> Examples: </p>
 <pre>
  RRDCached: unix:/var/tmp/rrdcached.sock
  RRDCached: localhost:42217
 </pre>
 <h3>RunAsDaemon</h3>
-<p> The RunAsDaemon keyword enables daemon mode operation. The purpose of daemon mode is that <font SIZE="-1">MRTG</font> is launched once and not repeatedly (as it is with cron). This behavior saves computing resourses as loading and parsing of configuration files happens only once on startup, and if the configuration file is modified. </p>
-<p> Using daemon mode <font SIZE="-1">MRTG</font> itself is responible for timing the measurement intervals. Therfore its important to set the Interval keyword to an apropiate value. </p>
-<p> Note that when using daemon mode <font SIZE="-1">MRTG</font> should no longer be started from cron as each new process runs forever. Instead <font SIZE="-1">MRTG</font> should be started from the command prompt or by a system startup script. </p>
-<p> If you want mrtg to run under a particular user and group (it is not recomended to run <font SIZE="-1">MRTG</font> as root) then you can use the <code>&#8211;user=</code><i>user_name</i> and <code>&#8211;group=</code><i>group_name</i> options on the mrtg commandline. </p>
+<p> The RunAsDaemon keyword enables daemon mode operation. The purpose of daemon mode is that MRTG is launched once and not repeatedly (as it is with cron). This behavior saves computing resourses as loading and parsing of configuration files happens only once on startup, and if the configuration file is modified. </p>
+<p> Using daemon mode MRTG itself is responible for timing the measurement intervals. Therfore its important to set the Interval keyword to an apropiate value. </p>
+<p> Note that when using daemon mode MRTG should no longer be started from cron as each new process runs forever. Instead MRTG should be started from the command prompt or by a system startup script. </p>
+<p> If you want mrtg to run under a particular user and group (it is not recomended to run MRTG as root) then you can use the <code>&#8211;user=</code><i>user_name</i> and <code>&#8211;group=</code><i>group_name</i> options on the mrtg commandline. </p>
 <pre>
  mrtg --user=mrtg_user --group=mrtg_group mrtg.cfg
 </pre>
 <p> Also note that in daemon mode restarting the process is required in order to activate changes in the config file. </p>
-<p> Under <font SIZE="-1">UNIX</font>, the Daemon switch causes mrtg to fork into background after checking its config file. On Windows <font SIZE="-1">NT</font> the <font SIZE="-1">MRTG</font> process will detach from the console, but because the <font SIZE="-1">NT/2000</font> shell waits for its children you have to use this special start sequence when you launch the program: </p>
+<p> Under UNIX, the Daemon switch causes mrtg to fork into background after checking its config file. On Windows NT the MRTG process will detach from the console, but because the NT/2000 shell waits for its children you have to use this special start sequence when you launch the program: </p>
 <pre>
  start /b perl mrtg mrtg.cfg
 </pre>
@@ -227,16 +227,16 @@ description: "mrtg-reference – MRTG 2.17.4 configuration reference"
  RunAsDaemon: Yes
  Interval:    5
 </pre>
-<p> This makes <font SIZE="-1">MRTG</font> run as a daemon beginning data collection every 5 minutes </p>
+<p> This makes MRTG run as a daemon beginning data collection every 5 minutes </p>
 <p> If you are daemontools and still want to run mrtg as a daemon you can additionally specify </p>
 <pre>
  NoDetach:     Yes
 </pre>
 <p> this will make mrtg run but without detaching it from the terminal. </p>
-<p> If the modification date on the configuration file changes during operation, then <font SIZE="-1">MRTG</font> will re-read the configuration on the next polling cycle. Note that sub-files which are included from the main configuration do not have their modification times monitored, only the top-level file is so checked.</p>
+<p> If the modification date on the configuration file changes during operation, then MRTG will re-read the configuration on the next polling cycle. Note that sub-files which are included from the main configuration do not have their modification times monitored, only the top-level file is so checked.</p>
 <h3>ConversionCode</h3>
-<p> Some devices may produce non-numeric values that would nevertheless be useful to graph with <font SIZE="-1">MRTG</font> if those values could be converted to numbers. The ConversionCode keyword specifies the path to a file containing Perl code to perform such conversions. The code in this file must consist of one or more Perl subroutines. Each subroutine must accept a single string argument and return a single numeric value. When RRDtool is in use, a decimal value may be returned. When the name of one of these subroutines is specified in a target definition (see below), <font SIZE="-1">MRTG</font> calls it twice for that target, once to convert the the input value being monitored and a second time to convert the output value. The subroutine must return an undefined value if the conversion fails. In case of failure, a warning may be posted to the <font SIZE="-1">MRTG</font> log file using Perl&#8217;s warn function. <font SIZE="-1">MRTG</font> imports the subroutines into a separate name space (package MRTGConversion), so the user need not worry about pollution of <font SIZE="-1">MRTG</font>&#8216;s global name space. <font SIZE="-1">MRTG</font> automatically prepends this package declaration to the user-supplied code. </p>
-<p> Example: Suppose a particular <font SIZE="-1">OID</font> returns a character string whose length is proportional to the value to be monitored. To convert this string to a number that can be graphed by <font SIZE="-1">MRTG</font>, create a file arbitrarily named &#8220;MyConversions.pl&#8221; containing the following code: </p>
+<p> Some devices may produce non-numeric values that would nevertheless be useful to graph with MRTG if those values could be converted to numbers. The ConversionCode keyword specifies the path to a file containing Perl code to perform such conversions. The code in this file must consist of one or more Perl subroutines. Each subroutine must accept a single string argument and return a single numeric value. When RRDtool is in use, a decimal value may be returned. When the name of one of these subroutines is specified in a target definition (see below), MRTG calls it twice for that target, once to convert the the input value being monitored and a second time to convert the output value. The subroutine must return an undefined value if the conversion fails. In case of failure, a warning may be posted to the MRTG log file using Perl&#8217;s warn function. MRTG imports the subroutines into a separate name space (package MRTGConversion), so the user need not worry about pollution of MRTG&#8216;s global name space. MRTG automatically prepends this package declaration to the user-supplied code. </p>
+<p> Example: Suppose a particular OID returns a character string whose length is proportional to the value to be monitored. To convert this string to a number that can be graphed by MRTG, create a file arbitrarily named &#8220;MyConversions.pl&#8221; containing the following code: </p>
 <pre><code>
 #Return the length of the string argument
 sub Length2Int
@@ -245,11 +245,11 @@ sub Length2Int
     return length($value);
 }
 </code></pre>
-<p> Then include the following global keyword in the <font SIZE="-1">MRTG</font> configuration file (assuming that the conversion code file is saved in the mrtg/bin directory along with mrtg itself): </p>
+<p> Then include the following global keyword in the MRTG configuration file (assuming that the conversion code file is saved in the mrtg/bin directory along with mrtg itself): </p>
 <pre>
  ConversionCode: MyConversions.pl
 </pre>
-<p> This will cause <font SIZE="-1">MRTG</font> to include the definition of the subroutine Length2Int in its execution environment. Length2Int can then be invoked on any target by appending &#8220;|Length2Int&#8221; to the target definition as follows: </p>
+<p> This will cause MRTG to include the definition of the subroutine Length2Int in its execution environment. Length2Int can then be invoked on any target by appending &#8220;|Length2Int&#8221; to the target definition as follows: </p>
 <p>Target[myrouter] : 1.3.6.1.4.1.999.1 &amp; 1.3.6.1.4.1.999.1 : public[at] mydevice | Length2Int</p>
 <p> See &#8220;Extended Host Name Syntax&#8221; below for complete target definition syntax information.</p>
 <h2>PER TARGET CONFIGURATION</h2>
@@ -258,7 +258,7 @@ sub Length2Int
 <p> With the <i>Target</i> keyword you tell mrtg what it should monitor. The <i>Target</i> keyword takes arguments in a wide range of formats:</p>
 <dl>
 <dt>Basic</dt>
-<dd> The most basic format is &#8220;port:community [at] router&#8221; This will generate a traffic graph for the interface &#8216;port&#8217; of the host &#8216;router&#8217; (dns name or <font SIZE="-1">IP</font> address) and it will use the community &#8216;community&#8217; (snmp password) for the snmp query. </dd>
+<dd> The most basic format is &#8220;port:community [at] router&#8221; This will generate a traffic graph for the interface &#8216;port&#8217; of the host &#8216;router&#8217; (dns name or IP address) and it will use the community &#8216;community&#8217; (snmp password) for the snmp query. </dd>
 <p> Example: </p>
 <p>Target[myrouter] : 2 : public[at] wellfleet &#8211; fddi.domain</p>
 <p> If your community contains a &#8220;@&#8221; or a &#8220; &#8221; these characters must be escaped with a &#8220;\&#8221;. </p>
@@ -271,48 +271,48 @@ sub Length2Int
 <p>Target[myrouter] : 2 : public[at] router1:: :: : 2</p>
 <dt>SNMPv3</dt>
 <dd> As an alternative to SNMPv2c, SNMPv3 provides access to the ifHC* counters, along with encryption. Not all devices support SNMPv3, and you will also need the perl Net::SNMP library in order to use it. It is recommended that cfgmaker be used to generate configurations involving SNMPv3, as it will check if the Net::SNMP library is loadable, and will switch to SNMPv2c if v3 is unavailable. </dd>
-<p> <font SIZE="-1">SNMP</font> v3 requires additional authentication parameters, passed using the SnmpOptions[] per-target keyword. </p>
-<p> Example:<br />
-&nbsp;<wbr>&nbsp;<wbr>Target[myrouter]: 2:router1:::::3<br />
+<p> SNMP v3 requires additional authentication parameters, passed using the SnmpOptions[] per-target keyword. </p>
+<p> Example:<br/>
+&nbsp;<wbr>&nbsp;<wbr>Target[myrouter]: 2:router1:::::3<br/>
 &nbsp;<wbr>&nbsp;<wbr>SnmpOptions[myrouter]: username=&gt;&#8217;user1&#8242;</p>
 <dt>noHC</dt>
 <dd> Not all routers that support SNMPv2 or SNMPv3 provide the ifHC* counters on every interface. The noHC[] per-target keyword signals that the low-speed counters ifInOctets and ifOutOctets should be queried instead. cfgmaker will automatically insert this tag if SNMPv2 or SNMPv3 is specified but the ifHC* counters are unavailable. </dd>
-<p> Example:<br />
-&nbsp;<wbr>&nbsp;<wbr>Target[myrouter]:&nbsp;<wbr>#Bri0:router1:::::3<br />
-&nbsp;<wbr>&nbsp;<wbr>SnmpOptions[myrouter]: username=&gt;&#8217;user1&#8242;<br />
+<p> Example:<br/>
+&nbsp;<wbr>&nbsp;<wbr>Target[myrouter]:&nbsp;<wbr>#Bri0:router1:::::3<br/>
+&nbsp;<wbr>&nbsp;<wbr>SnmpOptions[myrouter]: username=&gt;&#8217;user1&#8242;<br/>
 &nbsp;<wbr>&nbsp;<wbr>noHC[myrouter]: yes</p>
 <dt>Reversing</dt>
 <dd> Sometimes you are sitting on the wrong side of the link, and you would like to have mrtg report Incoming traffic as Outgoing and vice versa. This can be achieved by adding the &#8216;-&#8216; sign in front of the &#8220;Target&#8221; description. It flips the incoming and outgoing traffic rates. </dd>
 <p> Example: </p>
 <p>Target[ezci] : -1 : public[at] ezci &#8211; ether.domain</p>
 <dt>Explicit OIDs</dt>
-<dd> You can also explicitly define which <font SIZE="-1">OID</font> to query by using the following syntax &#8216;OID_1&amp;OID_2:community [at] router&#8217; The following example will retrieve error counts for input and output on interface 1. <font SIZE="-1">MRTG</font> needs to graph two variables, so you need to specify two <font SIZE="-1">OID</font>&#8216;s such as temperature and humidity or error input and error output. </dd>
+<dd> You can also explicitly define which OID to query by using the following syntax &#8216;OID_1&amp;OID_2:community [at] router&#8217; The following example will retrieve error counts for input and output on interface 1. MRTG needs to graph two variables, so you need to specify two OID&#8216;s such as temperature and humidity or error input and error output. </dd>
 <p> Example: </p>
 <p>Target[myrouter] : 1.3.6.1.2.1.2.2.1.14.1 &amp; 1.3.6.1.2.1.2.2.1.20.1 : public[at] myrouter</p>
-<dt><font SIZE="-1">MIB</font> Variables</dt>
-<dd> <font SIZE="-1">MRTG</font> knows a number of symbolic <font SIZE="-1">SNMP</font> variable names. See the file mibhelp.txt for a list of known names. One example are the ifInErrors and ifOutErrors. This means you can specify the above as: </dd>
+<dt>MIB Variables</dt>
+<dd> MRTG knows a number of symbolic SNMP variable names. See the file mibhelp.txt for a list of known names. One example are the ifInErrors and ifOutErrors. This means you can specify the above as: </dd>
 <p> Example: </p>
 <p>Target[myrouter] : ifInErrors .1 &amp; ifOutErrors .1 : public[at] myrouter</p>
 <dt>SnmpWalk</dt>
-<dd> It may be that you want to monitor an snmp object that is only reachable by &#8216;walking&#8217;. You can get mrtg to walk by prepending the <font SIZE="-1">OID</font> with the string <code>WaLK</code> or if you want a particular entry from the table returned by the walk you can use <code>WaLK</code><i>x</i> where <i>x</i> is a number starting from 0 (!). </dd>
+<dd> It may be that you want to monitor an snmp object that is only reachable by &#8216;walking&#8217;. You can get mrtg to walk by prepending the OID with the string <code>WaLK</code> or if you want a particular entry from the table returned by the walk you can use <code>WaLK</code><i>x</i> where <i>x</i> is a number starting from 0 (!). </dd>
 <p> Example: </p>
 <p>Target[myrouter] : WaLKstrangeOid .1 &amp; WaLKstrangeOid .2 : public[at] myrouter Target[myrouter] : WaLK3strangeOid .1 &amp; WaLK4strangeOid .2 : public[at] myrouter</p>
 <dt>SnmpGetNext</dt>
-<dd> A special case of an snmp object that is only reachable by &#8216;walking&#8217; occurs when a single snmpgetnext will return the correct value, but snmpwalk fails. This may occur with snmp V2 or V3, as the snmpgetbulk method is used in these versions. You can get mrtg to use getnext instead of getbulk by prepending the <font SIZE="-1">OID</font> with the string <code>GeTNEXT</code>. </dd>
+<dd> A special case of an snmp object that is only reachable by &#8216;walking&#8217; occurs when a single snmpgetnext will return the correct value, but snmpwalk fails. This may occur with snmp V2 or V3, as the snmpgetbulk method is used in these versions. You can get mrtg to use getnext instead of getbulk by prepending the OID with the string <code>GeTNEXT</code>. </dd>
 <p> Example: </p>
 <p>Target[myrouter] : GeTNEXTstrangeOid &amp;GeTNEXTstrangeOid : public[at] myrouter</p>
-<dt>Counted <font SIZE="-1">SNMP</font> Walk</dt>
-<dd> In other situations, an snmpwalk is needed to count rows, but the actual data is uninteresting. For example, counting the number of mac-addresses in a <font SIZE="-1">CAM</font> table, or the number of simultaneous dialup sessions. You can get <font SIZE="-1">MRTG</font> to count the number of instances by prepending the <font SIZE="-1">OID</font> with the string <code>CnTWaLK</code>. The following will retrieve the number of simultaneous <font SIZE="-1">VOIP</font> calls on some routers: </dd>
+<dt>Counted SNMP Walk</dt>
+<dd> In other situations, an snmpwalk is needed to count rows, but the actual data is uninteresting. For example, counting the number of mac-addresses in a CAM table, or the number of simultaneous dialup sessions. You can get MRTG to count the number of instances by prepending the OID with the string <code>CnTWaLK</code>. The following will retrieve the number of simultaneous VOIP calls on some routers: </dd>
 <p> Example: </p>
 <p>Target[myrouter] : CnTWaLK1 .3.6.1.4.1.9.10.55.1.1.1.1.3 &amp; CnTWaLK1 .3.6.1.4.1.9.10.55.1.1.1.1.3 : public[at] myrouter</p>
-<dt>Interface by <font SIZE="-1">IP</font></dt>
-<dd> Sometimes <font SIZE="-1">SNMP</font> interface index can change, like when new interfaces are added or removed. This can cause all Target entries in your config file to become offset, causing <font SIZE="-1">MRTG</font> to graphs wrong instances etc. <font SIZE="-1">MRTG</font> supports <font SIZE="-1">IP</font> address instead of ifindex in target definition. Then <font SIZE="-1">MRTG</font> will query snmp device and try to map <font SIZE="-1">IP</font> address to the current ifindex. You can use <font SIZE="-1">IP</font> addresses in every type of target definition by adding <font SIZE="-1">IP</font> address of the numbered interface after <font SIZE="-1">OID</font> and separation char &#8216;/&#8217;. </dd>
-<p> Make sure that the given <font SIZE="-1">IP</font> address is used on your same target router, especially when graphing two different OIDs and/or interface split by &#8216;&amp;&#8217; delimiter. </p>
+<dt>Interface by IP</dt>
+<dd> Sometimes SNMP interface index can change, like when new interfaces are added or removed. This can cause all Target entries in your config file to become offset, causing MRTG to graphs wrong instances etc. MRTG supports IP address instead of ifindex in target definition. Then MRTG will query snmp device and try to map IP address to the current ifindex. You can use IP addresses in every type of target definition by adding IP address of the numbered interface after OID and separation char &#8216;/&#8217;. </dd>
+<p> Make sure that the given IP address is used on your same target router, especially when graphing two different OIDs and/or interface split by &#8216;&amp;&#8217; delimiter. </p>
 <p> You can tell cfgmaker to generate such references with the option <code>&#8211;ifref=ip</code>. </p>
 <p> Example: </p>
 <p>Target[myrouter] : / 1.2.3.4 : public[at] wellfleet &#8211; fddi.domain Target[ezci] : &#8211; / 1.2.3.4 : public[at] ezci &#8211; ether.domain Target[myrouter] : ifInErrors / 1.2.3.4 &amp; ifOutErrors / 1.2.3.4 : public[at] myrouter</p>
 <dt>Interface by Description</dt>
-<dd> If you can not use <font SIZE="-1">IP</font> addresses you might want to use the interface names. This works similar to the <font SIZE="-1">IP</font> address aproach except that the prefix to use is a \ instead of a / </dd>
+<dd> If you can not use IP addresses you might want to use the interface names. This works similar to the IP address aproach except that the prefix to use is a \ instead of a / </dd>
 <p> You can tell cfgmaker to generate such references with the option <code>&#8211;ifref=descr</code>. </p>
 <p> Example: </p>
 <p>Target[myrouter] : \My &#8211; Interface2 : public[at] wellfleet &#8211; fddi.domain Target[ezci] : -\My &#8211; Interface2 : public[at] ezci &#8211; ether.domain Target[myrouter] : ifInErrors\My &#8211; If2 &amp;ifOutErrors\My &#8211; If3 : public[at] myrouter</p>
@@ -327,8 +327,8 @@ sub Length2Int
 <p>Target[myrouter] : #\:\ fun : public[at] hello.router</p>
 <p> Note that the # sign will be interpreted as a comment character if it is the first non white-space character on the line.</p>
 <dt>Interface by Ethernet Address</dt>
-<dd> When the <font SIZE="-1">SNMP</font> interface index changes, you can key that interface by its &#8216;Physical Address&#8217;, sometimes called a &#8216;hard address&#8217;, which is the <font SIZE="-1">SNMP</font> variable &#8216;ifPhysAddress&#8217;. Internally, <font SIZE="-1">MRTG</font> matches the Physical Address from the *.cfg file to its current index, and then uses that index for the rest of the session. </dd>
-<p> You can use the Physical Address in every type of target definition by adding the Physical Address after the <font SIZE="-1">OID</font> and the separation char &#8216;!&#8217; (analogous to the <font SIZE="-1">IP</font> address option). The Physical address is specified as &#8216;-&#8216; delimited octets, such as &#8220;0a-0-f1-5-23-18&#8221; (omit the double quotes). Note that some routers use the same Hardware Ethernet Address for all of their Interfaces which prevents unique interface identification. Mrtg will notice such problems and alert you. </p>
+<dd> When the SNMP interface index changes, you can key that interface by its &#8216;Physical Address&#8217;, sometimes called a &#8216;hard address&#8217;, which is the SNMP variable &#8216;ifPhysAddress&#8217;. Internally, MRTG matches the Physical Address from the *.cfg file to its current index, and then uses that index for the rest of the session. </dd>
+<p> You can use the Physical Address in every type of target definition by adding the Physical Address after the OID and the separation char &#8216;!&#8217; (analogous to the IP address option). The Physical address is specified as &#8216;-&#8216; delimited octets, such as &#8220;0a-0-f1-5-23-18&#8221; (omit the double quotes). Note that some routers use the same Hardware Ethernet Address for all of their Interfaces which prevents unique interface identification. Mrtg will notice such problems and alert you. </p>
 <p> You can tell cfgmaker to generate configuration files with hardware ethernet address references by using the option <code>&#8211;ifref=eth</code>. </p>
 <p> Example: </p>
 <p>Target[myrouter] : !0a &#8211; 0b &#8211; 0c &#8211; 0d : public[at] wellfleet &#8211; fddi.domain Target[ezci] : -!0 &#8211; f &#8211; bb &#8211; 05 &#8211; 71 &#8211; 22 : public[at] ezci &#8211; ether.domain Target[myrouter] : 1.3.6.1.2.1.2.2.1.14 !0a &#8211; 00 &#8211; 10 &#8211; 23 &#8211; 44 &#8211; 51 &amp; *BREAK * 1.3.6.1.2.1.2.2.1.14 !0a &#8211; 00 &#8211; 10 &#8211; 23 &#8211; 44 &#8211; 51 : public[at] myrouter Target[myrouter] : ifInErrors !0a &#8211; 00 &#8211; 10 &#8211; 23 &#8211; 44 &#8211; 51 &amp; *BREAK * ifOutErrors !0a &#8211; 00 &#8211; 10 &#8211; 23 &#8211; 44 &#8211; 51 : public[at] myrouter</p>
@@ -339,22 +339,22 @@ sub Length2Int
 <p> Example: </p>
 <p>Target[myrouter] : % 13 : public[at] wellfleet &#8211; fddi.domain Target[ezci] : &#8211; % 13 : public[at] ezci &#8211; ether.domain Target[myrouter] : ifInErrors % 13 &amp; ifOutErrors % 14 : public[at] myrouter</p>
 <dt>Extended positioning of ifIndex</dt>
-<dd> There are OIDs that contain the interface index at some inner position within the <font SIZE="-1">OID</font>. To use the above mentioned Interface by IP/Description/Name/Type methods in the target definition the keyword &#8216;IndexPOS&#8217; can be used to indicate the position of ifIndex. If &#8216;IndexPOS&#8217; is not used the ifIndex will be appended at the end of the <font SIZE="-1">OID</font>. </dd>
+<dd> There are OIDs that contain the interface index at some inner position within the OID. To use the above mentioned Interface by IP/Description/Name/Type methods in the target definition the keyword &#8216;IndexPOS&#8217; can be used to indicate the position of ifIndex. If &#8216;IndexPOS&#8217; is not used the ifIndex will be appended at the end of the OID. </dd>
 <p> Example: </p>
 <p>Target[myrouter] : OID.IndexPOS .1 / 1.2.3.4 &amp; OID.IndexPOS .1 / 1.2.3.4 : public[at] myrouter</p>
-<p> Replace <font SIZE="-1">OID</font> by your numeric <font SIZE="-1">OID</font>.</p>
+<p> Replace OID by your numeric OID.</p>
 <dt>Extended Host Name Syntax</dt>
-<dd> In all places where &#8220;community [at] router&#8221; is accepted, you can add additional parameters for the <font SIZE="-1">SNMP</font> communication using colon-separated suffixes. You can also append a pipe symbol ( | ) and the name of a numeric conversion subroutine as described under the global keyword &#8220;ConversionCode&#8221; above. The full syntax is as follows: </dd>
+<dd> In all places where &#8220;community [at] router&#8221; is accepted, you can add additional parameters for the SNMP communication using colon-separated suffixes. You can also append a pipe symbol ( | ) and the name of a numeric conversion subroutine as described under the global keyword &#8220;ConversionCode&#8221; above. The full syntax is as follows: </dd>
 <p>community[at] router[:[port][:[timeout][:[retries][:[backoff][:[version]][| name]]]]]</p>
 <p> where the meaning of each parameter is as follows:</p>
 <dl>
 <dl>
 <dt>port</dt>
-<dd> the <font SIZE="-1">UDP</font> port under which to contact the <font SIZE="-1">SNMP</font> agent (default: 161) </dd>
+<dd> the UDP port under which to contact the SNMP agent (default: 161) </dd>
 <p> The complete syntax of the port parameter is </p>
 <p>remote_port[!local_address[!local_port]]</p>
-<p> Some machines have additional security features that only allow <font SIZE="-1">SNMP</font> queries to come from certain <font SIZE="-1">IP</font> addresses. If the host doing the query has multiple interface, it may be necessary to specify the interface the query should come from. </p>
-<p> The port parameter allows the specification of the port of the machine being queried. In addition, the <font SIZE="-1">IP</font> address (or hostname) and port of the machine doing the query may be specified. </p>
+<p> Some machines have additional security features that only allow SNMP queries to come from certain IP addresses. If the host doing the query has multiple interface, it may be necessary to specify the interface the query should come from. </p>
+<p> The port parameter allows the specification of the port of the machine being queried. In addition, the IP address (or hostname) and port of the machine doing the query may be specified. </p>
 <p> Examples: </p>
 <pre>
  somehost
@@ -364,24 +364,24 @@ sub Length2Int
  somehost:!!4000 use port 4000 as source
 </pre>
 <dt>timeout</dt>
-<dd> initial timeout for <font SIZE="-1">SNMP</font> queries, in seconds (default: 2.0)</dd>
+<dd> initial timeout for SNMP queries, in seconds (default: 2.0)</dd>
 <dt>retries</dt>
 <dd> number of times a timed-out request will be retried (default: 5)</dd>
 <dt>backoff</dt>
 <dd> factor by which the timeout is multiplied on every retry (default: 1.0).</dd>
 <dt>version</dt>
-<dd> for <font SIZE="-1">SNMP</font> version. If you have a fast router you might want to put a &#8216;2&#8217; here. For authenticated or encrypted <font SIZE="-1">SNMP</font>, you can try to put a &#8216;3&#8217; here. This will make mrtg try to poll the 64 bit counters and thus prevent excessive counter wrapping. Not all routers support this though. <font SIZE="-1">SNMP</font> v3 requires additional setup, see SnmpOptions[] for full details. </dd>
+<dd> for SNMP version. If you have a fast router you might want to put a &#8216;2&#8217; here. For authenticated or encrypted SNMP, you can try to put a &#8216;3&#8217; here. This will make mrtg try to poll the 64 bit counters and thus prevent excessive counter wrapping. Not all routers support this though. SNMP v3 requires additional setup, see SnmpOptions[] for full details. </dd>
 <p> Example: </p>
 <pre>
  3:public [at] router1:::::2
 </pre>
 <dt>name</dt>
-<dd> the name of the subroutine that <font SIZE="-1">MRTG</font> will call to convert the input and output values to integers. See the complete example under the global keyword &#8220;ConversionCode&#8221; above. </dd>
+<dd> the name of the subroutine that MRTG will call to convert the input and output values to integers. See the complete example under the global keyword &#8220;ConversionCode&#8221; above. </dd>
 <p> Example: </p>
 <pre>
  1.3.6.1.4.1.999.1&amp;1.3.6.1.4.1.999.2:public [at] mydevice:161::::2|Length2Int
 </pre>
-<p> This would retrieve values from the <font SIZE="-1">OID</font> 1.3.6.1.4.1.999.1 for input and .2 for output on mydevice using <font SIZE="-1">UDP</font> port 161 and <font SIZE="-1">SNMP</font> version 2, and would execute the user-defined numeric conversion subroutine Length2Int to convert those values to integers.</dl>
+<p> This would retrieve values from the OID 1.3.6.1.4.1.999.1 for input and .2 for output on mydevice using UDP port 161 and SNMP version 2, and would execute the user-defined numeric conversion subroutine Length2Int to convert those values to integers.</dl>
 </dl>
 <dl>
 <dt>
@@ -389,7 +389,7 @@ sub Length2Int
 <p> A value that equals the default value can be omitted. Trailing colons can be omitted, too. The pipe symbol followed by the name parameter, if present, must come at the end. There must be no spaces around the colons or pipe symbol. </p>
 <p> Example: </p>
 <p>Target[ezci] : 1 : public[at] ezci &#8211; ether.domain : 9161 ::4</p>
-<p> This would refer to the input/output octet counters for the interface with <i>ifIndex 1</i> on <i>ezci-ether.domain</i>, as known by the <font SIZE="-1">SNMP</font> agent listening on <font SIZE="-1">UDP</font> port 9161. The standard initial timeout (2.0 seconds) is used, but the number of retries is set to four. The backoff value is the default.</dd></dl>
+<p> This would refer to the input/output octet counters for the interface with <i>ifIndex 1</i> on <i>ezci-ether.domain</i>, as known by the SNMP agent listening on UDP port 9161. The standard initial timeout (2.0 seconds) is used, but the number of retries is set to four. The backoff value is the default.</dd></dl>
 <dt>Numeric IPv6 addresses</dt>
 <dd> If IPv6 is enabled you may also specify a target using its IPv6 address. To avoid ambiguity with the port number, numeric IPv6 addresses must be placed in square brackets. </dd>
 <p> Example: </p>
@@ -418,44 +418,44 @@ sub Length2Int
 </pre>
 <p> Note the use of the backticks (`), not apostrophes (&#8216;) around the command. </p>
 <p> If you want to use a backtick in the command name this can be done but you must escape it with a backslash &#8230; </p>
-<p> If your script does not have any data to return but does not want mrtg to complain about invalid data, it can return &#8216;<font SIZE="-1">UNKNOWN</font>&#8216; instead of a number. Note though that only rrdtool is realy equipped to handle unknown data well.</dd></dl>
+<p> If your script does not have any data to return but does not want mrtg to complain about invalid data, it can return &#8216;UNKNOWN&#8216; instead of a number. Note though that only rrdtool is realy equipped to handle unknown data well.</dd></dl>
 <dt>Multi Target Syntax</dt>
-<dd> You can also combine several target definitions in a mathematical expression. Any syntactically correct expression that the Perl interpreter can evaluate to will work. An expression could be used, for example, to aggregate both B channels in an <font SIZE="-1">ISDN</font> connection or to calculate the percentage hard disk utilization of a server from the absolute used space and total capacity. </dd>
+<dd> You can also combine several target definitions in a mathematical expression. Any syntactically correct expression that the Perl interpreter can evaluate to will work. An expression could be used, for example, to aggregate both B channels in an ISDN connection or to calculate the percentage hard disk utilization of a server from the absolute used space and total capacity. </dd>
 <p> Examples: </p>
-<p>Target[myrouter] : 2 : public[at] wellfleetA + 1 : public[at] wellfleetA<br />
-                                                       Target[myrouter] : .1.3.6.1.4.1.999.1 &amp;<br />
-    .1.3.6.1.4.1.999.2 : public[at] mydevice /<br />
-                         .1.3.6.1.4.1.999.3 &amp;<br />
+<p>Target[myrouter] : 2 : public[at] wellfleetA + 1 : public[at] wellfleetA<br/>
+                                                       Target[myrouter] : .1.3.6.1.4.1.999.1 &amp;<br/>
+    .1.3.6.1.4.1.999.2 : public[at] mydevice /<br/>
+                         .1.3.6.1.4.1.999.3 &amp;<br/>
     .1.3.6.1.4.1.999.4 : public[at] mydevice * 100</p>
 <p> Note that whitespace must surround each target definition in the expression. Target definitions themselves must not contain whitespace, except in interface descriptions and interface names, where each whitespace character is escaped by a backslash. </p>
-<p> <font SIZE="-1">MRTG</font> automatically rounds the result of the expression to an integer unless RRDTool logging is in use and the gauge option is in effect for the target. Internally <font SIZE="-1">MRTG</font> uses Perl&#8217;s Math::BigFloat package to calculate the result of the expression with 40 digits of precision. Even in extreme cases, where, for example, you take the difference of two 64-bit integers, the result of the expression should be accurate.</p>
-<dt><font SIZE="-1">SNMP</font> Request Optimization</dt>
-<dd> <font SIZE="-1">MRTG</font> is designed to economize on its <font SIZE="-1">SNMP</font> requests. Where a target definition appears more than once in the configuration file, <font SIZE="-1">MRTG</font> requests the data from the device only once per round of data collection and uses the collected data for each instance of a particular target. Recognition of two target definitions as being identical is based on a simple string match rather than any kind of deeper semantic analysis. </dd>
+<p> MRTG automatically rounds the result of the expression to an integer unless RRDTool logging is in use and the gauge option is in effect for the target. Internally MRTG uses Perl&#8217;s Math::BigFloat package to calculate the result of the expression with 40 digits of precision. Even in extreme cases, where, for example, you take the difference of two 64-bit integers, the result of the expression should be accurate.</p>
+<dt>SNMP Request Optimization</dt>
+<dd> MRTG is designed to economize on its SNMP requests. Where a target definition appears more than once in the configuration file, MRTG requests the data from the device only once per round of data collection and uses the collected data for each instance of a particular target. Recognition of two target definitions as being identical is based on a simple string match rather than any kind of deeper semantic analysis. </dd>
 <p> Example: </p>
-<p>Target[Targ1] : 1 : public[at] CiscoA<br />
-                        Target[Targ2] : 2 : public[at] CiscoA<br />
-                                                Target[Targ3] : 1 : public[at] CiscoA +<br />
-                                                                    2 : public[at] CiscoA<br />
+<p>Target[Targ1] : 1 : public[at] CiscoA<br/>
+                        Target[Targ2] : 2 : public[at] CiscoA<br/>
+                                                Target[Targ3] : 1 : public[at] CiscoA +<br/>
+                                                                    2 : public[at] CiscoA<br/>
                                                                             Target[Targ4] : 1 : public[at] CISCOA</p>
-<p> This results in a total of three <font SIZE="-1">SNMP</font> requests. Data for 1:public [at] CiscoA and 2:public [at] CiscoA are requested only once each, and used for Targ1, Targ2, and Targ3. Targ4 causes another <font SIZE="-1">SNMP</font> request for 1:public [at] CISCOA, which is not recognized as being identical to 1:public [at] CiscoA.</dl>
+<p> This results in a total of three SNMP requests. Data for 1:public [at] CiscoA and 2:public [at] CiscoA are requested only once each, and used for Targ1, Targ2, and Targ3. Targ4 causes another SNMP request for 1:public [at] CISCOA, which is not recognized as being identical to 1:public [at] CiscoA.</dl>
 <h3>MaxBytes</h3>
 <p> The maximum value either of the two variables monitored are allowed to reach. For monitoring router traffic this is normally the bytes per second this interface port can carry. </p>
 <p> If a number higher than <i>MaxBytes</i> is returned, it is ignored. Also read the section on <i>AbsMax</i> for further info. The <i>MaxBytes</i> value is also used in calculating the Y range for unscaled graphs (see the section on <i>Unscaled</i>). </p>
-<p> Since most links are rated in bits per second, you need to divide their maximum bandwidth (in bits) by eight (8) in order to get bytes per second. This is very important to make your unscaled graphs display realistic information. T1 = 193000, 56K = 7000, 10 <font SIZE="-1">MB</font> Ethernet = 1250000, 100 <font SIZE="-1">MB</font> Ethernet = 12500000. The <i>MaxBytes</i> value will be used by mrtg to decide whether it got a valid response from the router. </p>
+<p> Since most links are rated in bits per second, you need to divide their maximum bandwidth (in bits) by eight (8) in order to get bytes per second. This is very important to make your unscaled graphs display realistic information. T1 = 193000, 56K = 7000, 10 MB Ethernet = 1250000, 100 MB Ethernet = 12500000. The <i>MaxBytes</i> value will be used by mrtg to decide whether it got a valid response from the router. </p>
 <p> If you need two different MaxBytes values for the two monitored variables, you can use MaxBytes1 and MaxBytes2 instead of MaxBytes. </p>
 <p> Example: </p>
 <pre>
  MaxBytes[myrouter]: 1250000
 </pre>
 <h3>Title</h3>
-<p> Title for the <font SIZE="-1">HTML</font> page which gets generated for the graph. </p>
+<p> Title for the HTML page which gets generated for the graph. </p>
 <p> Example: </p>
 <pre>
  Title[myrouter]: Traffic Analysis for Our Nice Company
 </pre>
 <h2>OPTIONAL PER TARGET KEYWORDS</h2>
 <h3>PageTop</h3>
-<p> Things to add to the top of the generated <font SIZE="-1">HTML</font> page. Note that you can have several lines of text as long as the first column is empty. </p>
+<p> Things to add to the top of the generated HTML page. Note that you can have several lines of text as long as the first column is empty. </p>
 <p> Note that the continuation lines will all end up on the same line in the html page. If you want linebreaks in the generated html use the &#8216;
 &#8217; sequence. </p>
 <p> Example: </p>
@@ -468,29 +468,29 @@ sub Length2Int
 <h3>RouterUptime</h3>
 <p> In cases where you calculate the used bandwidth from several interfaces you normally don&#8217;t get the router uptime and router name displayed on the web page. </p>
 <p> If these interfaces are on the same router and the uptime and name should be displayed you have to specify its community and address again with the <i>RouterUptime</i> keyword. </p>
-<p> If you want to use a special <font SIZE="-1">OID</font> for querying the router uptime, use prepend the oid. </p>
+<p> If you want to use a special OID for querying the router uptime, use prepend the oid. </p>
 <p> Example: </p>
 <p>Target[kacisco.comp.edu] : 1 : public[at] 194.64.66.250 + 2 : public[at] 194.64.66.250 RouterUptime[kacisco.comp.edu] : public[at] 194.64.66.250 RouterUptime[kacisco.comp.edu] : hrSystemUptime .0 : public[at] 194.64.66.250</p>
 <h3>RouterName</h3>
-<p> If the default name of the router is incorrect/uninformative, you can use RouterName to specify a different <font SIZE="-1">OID</font> on either the same or a different host. </p>
-<p> A practical example: sysName on BayTech <font SIZE="-1">DS72</font> units always display &#8220;ds72&#8221;, no matter what you set the Unit <font SIZE="-1">ID</font> to be. Instead, the Unit <font SIZE="-1">ID</font> is stored at 1.3.6.1.4.1.4779.1.1.3.0, so we can have <font SIZE="-1">MRTG</font> display this instead of sysName. </p>
+<p> If the default name of the router is incorrect/uninformative, you can use RouterName to specify a different OID on either the same or a different host. </p>
+<p> A practical example: sysName on BayTech DS72 units always display &#8220;ds72&#8221;, no matter what you set the Unit ID to be. Instead, the Unit ID is stored at 1.3.6.1.4.1.4779.1.1.3.0, so we can have MRTG display this instead of sysName. </p>
 <p> Example: </p>
 <pre>
  RouterName[kacisco.comp.edu]: 1.3.6.1.4.1.4779.1.1.3.0
 </pre>
-<p> A different <font SIZE="-1">OID</font> on a different host can also be specified: </p>
+<p> A different OID on a different host can also be specified: </p>
 <p>RouterName[kacisco.comp.edu] : 1.3.6.1.4.1.4779.1.1.3.0 : public[at] 194.64.66.251</p>
 <h3>MaxBytes1</h3>
 <p> Same as MaxBytes, for variable 1.</p>
 <h3>MaxBytes2</h3>
 <p> Same as MaxBytes, for variable 2.</p>
 <h3>IPv4Only</h3>
-<p> Many IPv6 routers do not currently support <font SIZE="-1">SNMP</font> over IPv6 and must be monitored using IPv4. The IPv4Only option forces mrtg to use IPv4 when communicating with the target, even if IPv6 is enabled. This is useful if the target is a hostname with both IPv4 and IPv6 addresses; without the IPv4Only keyword, monitoring such a router will not work if IPv6 is enabled. </p>
+<p> Many IPv6 routers do not currently support SNMP over IPv6 and must be monitored using IPv4. The IPv4Only option forces mrtg to use IPv4 when communicating with the target, even if IPv6 is enabled. This is useful if the target is a hostname with both IPv4 and IPv6 addresses; without the IPv4Only keyword, monitoring such a router will not work if IPv6 is enabled. </p>
 <p> If set to no (the default), mrtg will use IPv6 unless the target has no IPv6 addresses, in which case it will use IPv4. If set to yes, mrtg will only use IPv4. </p>
 <p> Note that if this option is set to yes and the target does not have an IPv4 address, communication with the target will fail. </p>
 <p> This option has no effect if IPv6 is not enabled. </p>
 <p> Example: </p>
-<p>Target[v4onlyrouter_1] : 1 : public[at] v4onlyrouter<br />
+<p>Target[v4onlyrouter_1] : 1 : public[at] v4onlyrouter<br/>
                                  IPv4Only[v4onlyrouter_1] : Yes</p>
 <h3>SnmpOptions (V3)</h3>
 <p> SNMPv3 requires a fairly rich set of options. This per-target keyword allows access to the User Security Model of SNMPv3. Options are listed in the same syntax as a perl hash. </p>
@@ -512,9 +512,9 @@ sub Length2Int
 </pre>
 <dt>Priv</dt>
 <dd> Both Authentication and Privacy is defined. The default privacy protocol is des. </dd>
-<p> Example:<br />
-&nbsp;<wbr>SnmpOptions[myrouter]: authkey=&gt;&#8217;0x1e93ab5a396e2af234c8920e61cfe2028072c0e2&#8242;,<br />
-authprotocol=&gt;&#8217;sha&#8217;,privprotocol=&gt;&#8217;des&#8217;,username=&gt;&#8217;user1&#8242;,<br />
+<p> Example:<br/>
+&nbsp;<wbr>SnmpOptions[myrouter]: authkey=&gt;&#8217;0x1e93ab5a396e2af234c8920e61cfe2028072c0e2&#8242;,<br/>
+authprotocol=&gt;&#8217;sha&#8217;,privprotocol=&gt;&#8217;des&#8217;,username=&gt;&#8217;user1&#8242;,<br/>
 privkey=&gt;&#8217;0x498d74940c5872ed387201d74b9b25e2&#8242;</dl>
 <p> <i>snmp options</i> </p>
 <p> The following option keywords are recognized:</p>
@@ -522,7 +522,7 @@ privkey=&gt;&#8217;0x498d74940c5872ed387201d74b9b25e2&#8242;</dl>
 <dt>username</dt>
 <dd> The user associated with the User Security Model</dd>
 <dt>contextname</dt>
-<dd> An <font SIZE="-1">SNMP</font> agent can define multiple contexts. This keyword allows them to be polled.</dd>
+<dd> An SNMP agent can define multiple contexts. This keyword allows them to be polled.</dd>
 <dt>contextengineid</dt>
 <dd> A unique 24-byte string identifying the snmp-agent.</dd>
 <dt>authpassword</dt>
@@ -530,7 +530,7 @@ privkey=&gt;&#8217;0x498d74940c5872ed387201d74b9b25e2&#8242;</dl>
 <dt>authkey</dt>
 <dd> A md5 or sha hash of the plain-text password, along with the engineid. Use the snmpkey commandline program to generate this hash, or use Net::SNMP::Security::USM in a script.</dd>
 <dt>authprotocol {sha|md5}</dt>
-<dd> The hashing algorithm defined on the <font SIZE="-1">SNMP</font> client. Defaults to md5.</dd>
+<dd> The hashing algorithm defined on the SNMP client. Defaults to md5.</dd>
 <dt>privpassword</dt>
 <dd> A plaintext pre-shared key for encrypting snmp packets in Priv mode.</dd>
 <dt>privkey</dt>
@@ -538,7 +538,7 @@ privkey=&gt;&#8217;0x498d74940c5872ed387201d74b9b25e2&#8242;</dl>
 <dt>privprotocol {des|3desede|aescfb128|aescfb192|aescfb256}</dt>
 <dd> Specifies the encryption method defined on the snmp agent. The default is des.</dd></dl>
 <h3>PageFoot</h3>
-<p> Things to add to the bottom of the generated <font SIZE="-1">HTML</font> page. Note that you can have several lines of text as long as the first column is empty. </p>
+<p> Things to add to the bottom of the generated HTML page. Note that you can have several lines of text as long as the first column is empty. </p>
 <p> Note that the continuation lines will all end up on the same line in the html page. If you want linebreaks in the generated html use the &#8216;
 &#8217; sequence. </p>
 <p> The material will be added just before the &lt;/BODY&gt; tag: </p>
@@ -580,13 +580,13 @@ privkey=&gt;&#8217;0x498d74940c5872ed387201d74b9b25e2&#8242;</dl>
  Suppress[myrouter]: y
 </pre>
 <h3>Extension</h3>
-<p> By default, mrtg creates .html files. Use this option to tell mrtg to use a different extension. For example you could set the extension to php3, then you will be able to enclose <font SIZE="-1">PHP</font> tags into the output (useful for getting a router name out of a database). </p>
+<p> By default, mrtg creates .html files. Use this option to tell mrtg to use a different extension. For example you could set the extension to php3, then you will be able to enclose PHP tags into the output (useful for getting a router name out of a database). </p>
 <p> Example: </p>
 <pre>
  Extension[myrouter]: phtml
 </pre>
 <h3>Directory</h3>
-<p> By default, mrtg puts all the files that it generates for each target (the GIFs, the <font SIZE="-1">HTML</font> page, the log file, etc.) in <i>WorkDir</i>. </p>
+<p> By default, mrtg puts all the files that it generates for each target (the GIFs, the HTML page, the log file, etc.) in <i>WorkDir</i>. </p>
 <p> If the <i>Directory</i> option is specified, the files are instead put into a directory under <i>WorkDir</i> or Log-, Image- and HtmlDir). (For example the <i>Directory</i> option below would cause all the files for a target myrouter to be put into directory /usr/tardis/pub/www/stats/mrtg/myrouter/ .) </p>
 <p> The directory must already exist; mrtg will not create it. </p>
 <p> Example: </p>
@@ -594,7 +594,7 @@ privkey=&gt;&#8217;0x498d74940c5872ed387201d74b9b25e2&#8242;</dl>
  WorkDir: /usr/tardis/pub/www/stats/mrtg
  Directory[myrouter]: myrouter
 </pre>
-<p> <font SIZE="-1">NOTE:</font> the Directory option must always be &#8216;relative&#8217; or bad things will happen.</p>
+<p> NOTE: the Directory option must always be &#8216;relative&#8217; or bad things will happen.</p>
 <h3>Clonedirectory</h3>
 <p> If the <i>Directory</i> option is specified, the <i>Clonedirectory</i> option will copy all the contents of <i>Directory</i> to the <i>Clonedirectory</i>. </p>
 <p> Example: </p>
@@ -602,9 +602,9 @@ privkey=&gt;&#8217;0x498d74940c5872ed387201d74b9b25e2&#8242;</dl>
 <p> Optionally the target name can be changed in the cloning process. </p>
 <p> Example: </p>
 <p>WorkDir : / usr / tardis / pub / www / stats / mrtg Directory[myrouter] : myrouter Clonedirectory[myrouter] : myclonedirectory mynewtarget</p>
-<p> <font SIZE="-1">NOTE1:</font> The clone directory must already exist; mrtg will not create it. </p>
-<p> <font SIZE="-1">NOTE2:</font> The Clonedirectory option must also always be &#8216;relative&#8217; or bad things will happen. </p>
-<p> <font SIZE="-1">NOTE3:</font> This requires the File::Copy module</p>
+<p> NOTE1: The clone directory must already exist; mrtg will not create it. </p>
+<p> NOTE2: The Clonedirectory option must also always be &#8216;relative&#8217; or bad things will happen. </p>
+<p> NOTE3: This requires the File::Copy module</p>
 <h3>XSize and YSize</h3>
 <p> By default mrtgs graphs are 100 by 400 pixels wide (plus some more for the labels. In the example we get almost square graphs &#8230; </p>
 <p> Note: XSize must be between 20 and 600; YSize must be larger than 20 </p>
@@ -663,34 +663,34 @@ privkey=&gt;&#8217;0x498d74940c5872ed387201d74b9b25e2&#8242;</dl>
 <dt>dorelpercent</dt>
 <dd> The relative percentage of IN-traffic to OUT-traffic is calculated and displayed in the graph as an additional line. Note: Only a fixed scale is available (from 0 to 100%). Therefore if IN-traffic is greater than OUT-traffic then 100% is displayed. If you suspect that your IN-traffic is not always less than or equal to your OUT-traffic you are urged to not use this options. Note: If you use this option in combination with the <i>Colours</i> options, a fifth colour-name colour-value pair is required there.</dd>
 <dt>avgpeak</dt>
-<dd> There are some ISPs who use the average Peak values to bill their customers. Using this option <font SIZE="-1">MRTG</font> displays these values for each graph. The value is built by averaging the max 5 minute traffic average for each &#8216;step&#8217; shown in the graph. For the Weekly graph this means that it builds the average of all 2 hour intervals 5 minute peak values. (Confused? Thought so!)</dd>
+<dd> There are some ISPs who use the average Peak values to bill their customers. Using this option MRTG displays these values for each graph. The value is built by averaging the max 5 minute traffic average for each &#8216;step&#8217; shown in the graph. For the Weekly graph this means that it builds the average of all 2 hour intervals 5 minute peak values. (Confused? Thought so!)</dd>
 <dt>gauge</dt>
 <dd> Treat the values gathered from target as &#8216;current status&#8217; measurements and not as ever incrementing counters. This would be useful to monitor things like disk space, processor load, temperature, and the like &#8230; </dd>
-<p> In the absence of &#8216;gauge&#8217; or &#8216;absolute&#8217; options, <font SIZE="-1">MRTG</font> treats variables as a counters and calculates the difference between the current and the previous value and divides that by the elapsed time between the last two readings to get the value to be plotted.</p>
+<p> In the absence of &#8216;gauge&#8217; or &#8216;absolute&#8217; options, MRTG treats variables as a counters and calculates the difference between the current and the previous value and divides that by the elapsed time between the last two readings to get the value to be plotted.</p>
 <dt>absolute</dt>
 <dd> This is for counter type data sources which reset their value when they are read. This means that rateup does not have to build the difference between the current and the last value read from the data source. The value obtained is still divided by the elapsed time between the current and the last reading, which makes it different from the &#8216;gauge&#8217; option. Useful for external data gatherers.</dd>
 <dt>derive</dt>
-<dd> If you are using rrdtool as logger/grapher you can use a third type of data source. Derive is like counter, except that it is not required to go <font SIZE="-1">UP</font> all the time. It is useful for situations where the change of some value should be graphed.</dd>
+<dd> If you are using rrdtool as logger/grapher you can use a third type of data source. Derive is like counter, except that it is not required to go UP all the time. It is useful for situations where the change of some value should be graphed.</dd>
 <dt>unknaszero</dt>
 <dd> Log unknown data as zero instead of the default behaviour of repeating the last value seen. Be careful with this, often a flat line in the graph is much more obvious than a line at 0.</dd>
 <dt>withzeroes</dt>
 <dd> Normally we ignore all values which are zero when calculating the average transfer rate on a line. If this is not desirable use this option.</dd>
 <dt>noborder</dt>
-<dd> If you are using rateup to log data, <font SIZE="-1">MRTG</font> will create the graph images. Normally these images have a shaded border around them. If you do not want the border to be drawn, enable this option. This option has no effect if you are not using rateup.</dd>
+<dd> If you are using rateup to log data, MRTG will create the graph images. Normally these images have a shaded border around them. If you do not want the border to be drawn, enable this option. This option has no effect if you are not using rateup.</dd>
 <dt>noarrow</dt>
 <dd> As with the option above, this effects rateup graph generation only. Normally rateup will generate graphs with a small arrow showing the direction of the data. If you do not want this arrow to be drawn, enable this option. This option has no effect if you are not using rateup.</dd>
 <dt>noi</dt>
-<dd> When using rateup for graph generation, you can use this option to stop rateup drawing a graph for the &#8216;I&#8217; or first variable. This also removes entries for this variable in the <font SIZE="-1">HTML</font> page <font SIZE="-1">MRTG</font> generates, and will remove the peaks for this variable if they are enabled. This allows you to hide this data, or can be very useful if you are only graphing one line of data rather than two. This option is not destructive &#8211; any data received for the the variable continued to be logged, it just isn&#8217;t shown.</dd>
+<dd> When using rateup for graph generation, you can use this option to stop rateup drawing a graph for the &#8216;I&#8217; or first variable. This also removes entries for this variable in the HTML page MRTG generates, and will remove the peaks for this variable if they are enabled. This allows you to hide this data, or can be very useful if you are only graphing one line of data rather than two. This option is not destructive &#8211; any data received for the the variable continued to be logged, it just isn&#8217;t shown.</dd>
 <dt>noo</dt>
 <dd> Same as above, except relating to the &#8216;O&#8217; or second variable.</dd>
 <dt>nobanner</dt>
-<dd> When using rateup for graph generation, this option disables <font SIZE="-1">MRTG</font> adding the <font SIZE="-1">MRTG</font> banner to the <font SIZE="-1">HTML</font> pages it generates.</dd>
+<dd> When using rateup for graph generation, this option disables MRTG adding the MRTG banner to the HTML pages it generates.</dd>
 <dt>nolegend</dt>
-<dd> When using rateup for graph generation, this option will stop <font SIZE="-1">MRTG</font> from creating a legend at the bottom of the <font SIZE="-1">HTML</font> pages it generates.</dd>
+<dd> When using rateup for graph generation, this option will stop MRTG from creating a legend at the bottom of the HTML pages it generates.</dd>
 <dt>printrouter</dt>
 <dd> When using rateup for graph generation, this option will print the router name in the graph it generates. This option is overridden by the value of PNGTitle if one is given</dd>
 <dt>pngdate</dt>
-<dd> When using rateup for graph generation, this option will print a timestamp in the graph it generates, including a timezone if one is specified by the &#8216;Timezone&#8217; parameter. This is aequivalent to setting TimeStrPost[x]: <font SIZE="-1">RU</font></dd>
+<dd> When using rateup for graph generation, this option will print a timestamp in the graph it generates, including a timezone if one is specified by the &#8216;Timezone&#8217; parameter. This is aequivalent to setting TimeStrPost[x]: RU</dd>
 <dt>logscale</dt>
 <dd> The <code>logscale</code> option causes rateup to display the data with the Y axis scaled logarithmically. Doing so allows the normal traffic to occupy the majority of the vertical range, while still showing any spikes at their full height. </dd>
 <p> <code>logscale</code> displays all the available data and will always produce well-behaved graphs. People often consider a logarithmically scaled graph counterintuitive, however, and thus hard to interpret.</p>
@@ -714,11 +714,11 @@ privkey=&gt;&#8217;0x498d74940c5872ed387201d74b9b25e2&#8242;</dl>
 <h3>kMG</h3>
 <p> Change the default multiplier prefixes (,k,M,G,T,P). In the tag <i>ShortLegend</i> define only the basic units. Format: Comma separated list of prefixed. Two consecutive commas or a comma at start or end of the line gives no prefix on this item. If you do not want prefixes, just put two consecutive commas. If you want to skip a magnitude select &#8216;-&#8216; as value. </p>
 <p> Example: velocity in nm/s (nanometers per second) displayed in nm/h. </p>
-<p>ShortLegend[myrouter] : m / h<br />
-                                kMG[myrouter] : n,<br />
+<p>ShortLegend[myrouter] : m / h<br/>
+                                kMG[myrouter] : n,<br/>
     u, m, , k, M, G, T, P options[myrouter] : perhour</p>
 <h3>Colours</h3>
-<p> The <i>Colours</i> tag allows you to override the default colour scheme. Note: All 4 of the required colours must be specified here. The colour name (&#8216;Colourx&#8217; below) is the legend name displayed, while the <font SIZE="-1">RGB</font> value is the real colour used for the display, both on the graph and in the html doc. </p>
+<p> The <i>Colours</i> tag allows you to override the default colour scheme. Note: All 4 of the required colours must be specified here. The colour name (&#8216;Colourx&#8217; below) is the legend name displayed, while the RGB value is the real colour used for the display, both on the graph and in the html doc. </p>
 <p> Format is: Col1#RRGGBB,Col2#RRGGBB,Col3#RRGGBB,Col4#RRGGBB </p>
 <p> Important: If you use the <i>dorelpercent</i> options tag a fifth colour name colour value pair is required: Col1#RRGGBB,Col2#RRGGBB,Col3#RRGGBB,Col4#RRGGBB,Col5#RRGGBB</p>
 <dl>
@@ -730,20 +730,20 @@ privkey=&gt;&#8217;0x498d74940c5872ed387201d74b9b25e2&#8242;</dl>
 <dd> Max first variable (input).</dd>
 <dt>Colour4</dt>
 <dd> Max second variable (output).</dd>
-<dt><font SIZE="-1">RRGGBB</font></dt>
+<dt>RRGGBB</dt>
 <dd> 2 digit hex values for Red, Green and Blue.</dd></dl>
 <p> Example: </p>
 <pre>
  Colours[myrouter]: GREEN#00eb0c,BLUE#1000ff,DARK GREEN#006600,VIOLET#ff00ff
 </pre>
 <h3>Background</h3>
-<p> With the <i>Background</i> tag you can configure the background colour of the generated <font SIZE="-1">HTML</font> page. </p>
+<p> With the <i>Background</i> tag you can configure the background colour of the generated HTML page. </p>
 <p> Example: </p>
 <pre>
  Background[myrouter]: #a0a0a0a
 </pre>
 <h3>YLegend, ShortLegend, Legend[1234]</h3>
-<p> The following keywords allow you to override the text displayed for the various legends of the graph and in the <font SIZE="-1">HTML</font> document:</p>
+<p> The following keywords allow you to override the text displayed for the various legends of the graph and in the HTML document:</p>
 <dl>
 <dt>YLegend</dt>
 <dd> The Y-axis label of the graph. Note that a text which is too long to fit in the graph will be silently ignored.</dd>
@@ -752,15 +752,15 @@ privkey=&gt;&#8217;0x498d74940c5872ed387201d74b9b25e2&#8242;</dl>
 <dt>Legend[1234IO]</dt>
 <dd> The strings for the colour legend.</dd></dl>
 <p> Example: </p>
-<p>YLegend[myrouter] : Bits per Second<br />
-                        ShortLegend[myrouter] : b /<br />
-                                                s<br />
-                                                    Legend1[myrouter] : Incoming Traffic in Bits per Second<br />
-                                                                            Legend2[myrouter] : Outgoing Traffic in Bits per Second<br />
-                                                                                                    Legend3[myrouter] : Maximal 5 Minute Incoming Traffic<br />
-                                                                                                                            Legend4[myrouter] : Maximal 5 Minute Outgoing Traffic<br />
-                                                                                                                                                    LegendI[myrouter] : &amp;nbsp;<br />
-In : LegendO[myrouter] : &amp;nbsp;<br />
+<p>YLegend[myrouter] : Bits per Second<br/>
+                        ShortLegend[myrouter] : b /<br/>
+                                                s<br/>
+                                                    Legend1[myrouter] : Incoming Traffic in Bits per Second<br/>
+                                                                            Legend2[myrouter] : Outgoing Traffic in Bits per Second<br/>
+                                                                                                    Legend3[myrouter] : Maximal 5 Minute Incoming Traffic<br/>
+                                                                                                                            Legend4[myrouter] : Maximal 5 Minute Outgoing Traffic<br/>
+                                                                                                                                                    LegendI[myrouter] : &amp;nbsp;<br/>
+In : LegendO[myrouter] : &amp;nbsp;<br/>
 Out:</p>
 <p> Note, if <i>LegendI</i> or <i>LegendO</i> are set to an empty string with </p>
 <pre>
@@ -768,15 +768,15 @@ Out:</p>
 </pre>
 <p> The corresponding line below the graph will not be printed at all.</p>
 <h3>Timezone</h3>
-<p> If you live in an international world, you might want to generate the graphs in different timezones. This is set in the <font SIZE="-1">TZ</font> variable. Under certain operating systems like Solaris, this will provoke the localtime call to give the time in the selected timezone. </p>
+<p> If you live in an international world, you might want to generate the graphs in different timezones. This is set in the TZ variable. Under certain operating systems like Solaris, this will provoke the localtime call to give the time in the selected timezone. </p>
 <p> Example: </p>
 <pre>
  Timezone[myrouter]: Japan
 </pre>
-<p> The Timezone is the standard timezone of your system, ie Japan, Hongkong, <font SIZE="-1">GMT</font>, <font SIZE="-1">GMT+1</font> etc etc.</p>
+<p> The Timezone is the standard timezone of your system, ie Japan, Hongkong, GMT, GMT+1 etc etc.</p>
 <h3>Weekformat</h3>
-<p> By default, mrtg (actually rateup) uses the <i><a href="/docs/linux/man/3-strftime/">strftime</a></i>(3) &#8216;%V&#8217; option to format week numbers in the monthly graphs. The exact semantics of this format option vary between systems. If you find that the week numbers are wrong, and your system&#8217;s <i><a href="/docs/linux/man/3-strftime/">strftime</a></i>(3) routine supports it, you can try another format option. The <font SIZE="-1">POSIX</font> &#8216;%V&#8217; option correspond to the widely used <font SIZE="-1">ISO</font> 8601 week numbering standard. The week format character should be specified as a single letter; either W, V, or U. </p>
-<p> The <font SIZE="-1">UNIX</font> version of rateup uses the libc implementation of strftime. On Windows, the native strftime implementation does not know about <tt>%V</tt>. So there we use a different implementation of strftime that does support <tt>%V</tt>. </p>
+<p> By default, mrtg (actually rateup) uses the <i><a href="/docs/linux/man/3-strftime/">strftime</a></i>(3) &#8216;%V&#8217; option to format week numbers in the monthly graphs. The exact semantics of this format option vary between systems. If you find that the week numbers are wrong, and your system&#8217;s <i><a href="/docs/linux/man/3-strftime/">strftime</a></i>(3) routine supports it, you can try another format option. The POSIX &#8216;%V&#8217; option correspond to the widely used ISO 8601 week numbering standard. The week format character should be specified as a single letter; either W, V, or U. </p>
+<p> The UNIX version of rateup uses the libc implementation of strftime. On Windows, the native strftime implementation does not know about <tt>%V</tt>. So there we use a different implementation of strftime that does support <tt>%V</tt>. </p>
 <p> Example: </p>
 <pre>
  Weekformat[myrouter]: W
@@ -788,32 +788,32 @@ Out:</p>
  RRDRowCount[myrouter]: 1600
 </pre>
 <h3>RRDRowCount30m</h3>
-<p> As per RRDRowCount, but for the <font SIZE="-1">RRA</font>&#8216;s -typically- used for 30 minute data. Even so, you must still take the base interval into account. Leaving out this keyword will force the old default of 800 rows. </p>
+<p> As per RRDRowCount, but for the RRA&#8216;s -typically- used for 30 minute data. Even so, you must still take the base interval into account. Leaving out this keyword will force the old default of 800 rows. </p>
 <p> Example: </p>
 <pre>
  RRDRowCount30m[myrouter]: 800
 </pre>
 <h3>RRDRowCount2h</h3>
-<p> As per RRDRowCount, but for the <font SIZE="-1">RRA</font>&#8216;s -typically- used for 2 hour data. Even so, you must still take the base interval into account. Leaving out this keyword will force the old default of 800 rows. </p>
+<p> As per RRDRowCount, but for the RRA&#8216;s -typically- used for 2 hour data. Even so, you must still take the base interval into account. Leaving out this keyword will force the old default of 800 rows. </p>
 <p> Example: </p>
 <pre>
  RRDRowCount2h[myrouter]: 400
 </pre>
 <h3>RRDRowCount1d</h3>
-<p> As per RRDRowCount, but for the <font SIZE="-1">RRA</font>&#8216;s -typically- used for 1 day data. Even so, you must still take the base interval into account. Leaving out this keyword will force the old default of 800 rows. </p>
+<p> As per RRDRowCount, but for the RRA&#8216;s -typically- used for 1 day data. Even so, you must still take the base interval into account. Leaving out this keyword will force the old default of 800 rows. </p>
 <p> Example: </p>
 <pre>
  RRDRowCount1d[myrouter]: 200
 </pre>
 <h3>RRDHWRRAs</h3>
-<p> Normally the RRDs created by <font SIZE="-1">MRTG</font> will just contain the information gathered directly from the respective target. With this option you can tap into rrdtools advanced aberrant behaviour detection module based on Holt-Winters forecasting. The RRDHWRRAs property specifies the Holt-Winters RRAs as described in the rrdcreate manual page. </p>
+<p> Normally the RRDs created by MRTG will just contain the information gathered directly from the respective target. With this option you can tap into rrdtools advanced aberrant behaviour detection module based on Holt-Winters forecasting. The RRDHWRRAs property specifies the Holt-Winters RRAs as described in the rrdcreate manual page. </p>
 <p> Note, this setting will only affect newly created RRDs (targets). </p>
 <p> Example: </p>
 <pre>
  RRDHWRRAs[myrouter]: RRA:HWPREDICT:1440:0.1:0.0035:288
 </pre>
 <h3>TimeStrPos</h3>
-<p> This defines placement of the timestamp string on the image. Possible values are <font SIZE="-1">RU</font>, <font SIZE="-1">LU</font>, <font SIZE="-1">RL</font>, <font SIZE="-1">LL</font> (which stand, respectively, for RightUpper, LeftUpper, RightLower and LeftLower corner) and <font SIZE="-1">NO</font> (for no timestamp). By default, no timestamp is placed on the image. </p>
+<p> This defines placement of the timestamp string on the image. Possible values are RU, LU, RL, LL (which stand, respectively, for RightUpper, LeftUpper, RightLower and LeftLower corner) and NO (for no timestamp). By default, no timestamp is placed on the image. </p>
 <p> Example: </p>
 <pre>
  TimeStrPos[myrouter]: RU
@@ -827,50 +827,50 @@ Out:</p>
 <h2>THRESHOLD CHECKING</h2>
 <p> Through its threshold checking functionality mrtg is able to detect threshold problems for the various targets and can call external scripts to handle those problems (e.g. send email or a page to an administrator). </p>
 <p> Threshold checking is configured through the following parameters:</p>
-<h3>ThreshDir (<font SIZE="-1">GLOBAL</font>)</h3>
-<p> By defining ThreshDir to point to a writable directory, <font SIZE="-1">MRTG</font> will only alert you when a threshold boundary has been crossed. </p>
+<h3>ThreshDir (GLOBAL)</h3>
+<p> By defining ThreshDir to point to a writable directory, MRTG will only alert you when a threshold boundary has been crossed. </p>
 <p> Example: </p>
 <pre>
  ThreshDir: /var/mrtg/thresh
 </pre>
-<h3>ThreshHyst (<font SIZE="-1">GLOBAL</font>)</h3>
+<h3>ThreshHyst (GLOBAL)</h3>
 <p> If a threshold is broken, and you have a threshdir defined, then mrtg will send mail once the threshold becomes &#8216;unborken&#8217; to avoid situations where broken and unbroken messages get sent in close succession, we only send an unbroken message once the curent value is 0.1 (10%) away from the threshold. using the ThreshHyst config variable you can customize this value. </p>
 <p> Example for 5%: </p>
 <pre>
  ThreshHyst: 0.05
 </pre>
-<h3>ThreshMailServer (<font SIZE="-1">GLOBAL</font>)</h3>
-<p> Adderss of an <font SIZE="-1">SMTP</font> server which is going to accept mail about Thresholds being broken and unbroken.</p>
-<h3>ThreshMailSender (<font SIZE="-1">GLOBAL</font>)</h3>
+<h3>ThreshMailServer (GLOBAL)</h3>
+<p> Adderss of an SMTP server which is going to accept mail about Thresholds being broken and unbroken.</p>
+<h3>ThreshMailSender (GLOBAL)</h3>
 <p> What is the sender address of the threshold mail. </p>
 <p> Example: </p>
 <pre>
  ThreshMailSender: mrtg [at] example.com
 </pre>
-<h3>ThreshMailAddress (<font SIZE="-1">PER</font> <font SIZE="-1">TARGET</font>)</h3>
+<h3>ThreshMailAddress (PER TARGET)</h3>
 <p> Email address for Threshold related Mails. This will only work if a mailserver has been configured. </p>
 <p> Example: </p>
-<p>ThreshMailAddress[_] : admin[at] example.com<br />
+<p>ThreshMailAddress[_] : admin[at] example.com<br/>
                            ThreshMailAddress[router]:</p>
 <p> This would bring threshold releaed mail to all but the target called &#8216;router&#8217;.</p>
-<h3>ThreshMinI (<font SIZE="-1">PER</font> <font SIZE="-1">TARGET</font>)</h3>
+<h3>ThreshMinI (PER TARGET)</h3>
 <p> This is the minimum acceptable value for the Input (first) parameter. If the parameter falls below this value, the program specified in ThreshProgI will be run and a mail will be sent to the ThreshMailAddress if specified. If the value ends in &#8216;%&#8217; then the threshold is defined relative to MaxBytes.</p>
-<h3>ThreshMaxI (<font SIZE="-1">PER</font> <font SIZE="-1">TARGET</font>)</h3>
+<h3>ThreshMaxI (PER TARGET)</h3>
 <p> Works the same as TheshMinI but it acts when the value is higher than ThreshMaxI.</p>
-<h3>ThreshDesc (<font SIZE="-1">PER</font> <font SIZE="-1">TARGET</font>)</h3>
-<p> Its value will be assigned to the environment variable <font SIZE="-1">THRESH_DESC</font> before any of the programs mentioned below are called. The programs can use the value of this variable to produce more user-friendly output.</p>
-<h3>ThreshProgI (<font SIZE="-1">PER</font> <font SIZE="-1">TARGET</font>)</h3>
-<p> This defines a program to be run if ThreshMinI or ThreshMaxI is broken. <font SIZE="-1">MRTG</font> passes 3 arguments: the <tt>$router</tt> variable, the threshold value broken, and the current parameter value.</p>
-<h3>ThreshProgOKI (<font SIZE="-1">PER</font> <font SIZE="-1">TARGET</font>)</h3>
-<p> This defines a program to be run if the parameter is currently <font SIZE="-1">OK</font> (based on ThreshMinI and ThreshMaxI), but wasn&#8217;t <font SIZE="-1">OK</font> on the previous running &#8212; based on the files found in ThreshDir. <font SIZE="-1">MRTG</font> passes 3 arguments: the <tt>$router</tt> variable the unbroken threshold value, and the current parameter value.</p>
+<h3>ThreshDesc (PER TARGET)</h3>
+<p> Its value will be assigned to the environment variable THRESH_DESC before any of the programs mentioned below are called. The programs can use the value of this variable to produce more user-friendly output.</p>
+<h3>ThreshProgI (PER TARGET)</h3>
+<p> This defines a program to be run if ThreshMinI or ThreshMaxI is broken. MRTG passes 3 arguments: the <tt>$router</tt> variable, the threshold value broken, and the current parameter value.</p>
+<h3>ThreshProgOKI (PER TARGET)</h3>
+<p> This defines a program to be run if the parameter is currently OK (based on ThreshMinI and ThreshMaxI), but wasn&#8217;t OK on the previous running &#8212; based on the files found in ThreshDir. MRTG passes 3 arguments: the <tt>$router</tt> variable the unbroken threshold value, and the current parameter value.</p>
 <h3>ThreshMinO, ThreshMaxO, ThreshProgO, and ThreshProgOKO</h3>
 <p> These work the same as their *I counterparts, except on the Output (second) parameter.</p>
 <h3>SetEnv</h3>
 <p> When calling threshold scripts from within your cfg file you might want to pass some data on to the script. This can be done with the SetEnv configuration option which takes a series of environment variable assignments. Note that the quotes are mandatory. This does not work for external scripts. It is not possible to set environment variables per target. </p>
 <p> Example: </p>
 <p>SetEnv[myrouter] : EMAIL = &#8220;contact_email [at] someplace.net&#8221; HOST = &#8220;www.some_server.net&#8221;</p>
-<h3><font SIZE="-1">HW</font> Failure Bassed Threshold Checking</h3>
-<p> When using rrd based logging with <font SIZE="-1">HW</font> RRAs defined. You can use the confidence bounds violations stored in the <font SIZE="-1">FAILURES</font> <font SIZE="-1">RRA</font> for threshold based alerts. </p>
+<h3>HW Failure Bassed Threshold Checking</h3>
+<p> When using rrd based logging with HW RRAs defined. You can use the confidence bounds violations stored in the FAILURES RRA for threshold based alerts. </p>
 <p> There the all target specific threshold variables have a Hold-Winters counterpart: </p>
 <pre>
  ThreshMailAddress -&gt; HWThreshMailAddress
@@ -881,23 +881,23 @@ Out:</p>
 <pre>
  ThreshHyst        -&gt; HWThreshHyst
 </pre>
-<p> And HWThreshDesc sets the <font SIZE="-1">HWTHRESH_DESC</font> variable.</p>
+<p> And HWThreshDesc sets the HWTHRESH_DESC variable.</p>
 <h2>PER TARGET DEFAULT VALUES</h2>
 <h3>Pre- and Postfix</h3>
-<p> To save yourself some typing you can define a target called &#8216;^&#8217;. The text of every Keyword you define for this target will be <font SIZE="-1">PREPENDED</font> to the corresponding Keyword of all the targets defined below this line. The same goes for a Target called &#8216;$&#8217; but its text will be <font SIZE="-1">APPENDED</font>. </p>
+<p> To save yourself some typing you can define a target called &#8216;^&#8217;. The text of every Keyword you define for this target will be PREPENDED to the corresponding Keyword of all the targets defined below this line. The same goes for a Target called &#8216;$&#8217; but its text will be APPENDED. </p>
 <p> Note that a space is inserted between the prepended text and the Keyword value, as well as between the Keyword value and the appended text. This works well for text-valued Keywords, but is not very useful for other Keywords. See the &#8220;default&#8221; target description below. </p>
 <p> The example will make mrtg use a common header and a common contact person in all the pages generated from targets defined later in this file. </p>
 <p> Example: </p>
-<p>PageTop[^] : &lt;H1&gt; NoWhere Unis Traffic Stats&lt;/ H1&gt;&lt;HR&gt;<br />
+<p>PageTop[^] : &lt;H1&gt; NoWhere Unis Traffic Stats&lt;/ H1&gt;&lt;HR&gt;<br/>
                  PageTop[$] : Contact Peter Norton if you have any questions&lt;HR&gt;</p>
 <p> To remove the prepend/append value, specify an empty value, e.g.: </p>
 <p>PageTop[^] : PageTop[$]:</p>
 <h3>NoSpaceChar</h3>
-<p> With <font SIZE="-1">PREPEND</font> and <font SIZE="-1">APPEND</font> (see below) there is normally a space inserted between the local value and the <font SIZE="-1">PRE-</font> or <font SIZE="-1">APPEND</font> value. Sometimes this is not desirable. You can use the global option <i>NoSpaceChar</i> to define a character which can be mentioned at the end of a $ or ^ definition in order to supress the space. </p>
+<p> With PREPEND and APPEND (see below) there is normally a space inserted between the local value and the PRE- or APPEND value. Sometimes this is not desirable. You can use the global option <i>NoSpaceChar</i> to define a character which can be mentioned at the end of a $ or ^ definition in order to supress the space. </p>
 <p> Example: </p>
-<p>NoSpaceChar : ~Target[^] : 1.3.6.1.4.1.482.50.2.4.20.0 &amp; 1.3.6.1.4.1.482.50.2.4.21.0 : get @~Target[a] : a.tolna.net<br />
-                                                                                                             Target[b] : b.tolna.net<br />
-                                                                                                                             Target[c] : c.tolna.net<br />
+<p>NoSpaceChar : ~Target[^] : 1.3.6.1.4.1.482.50.2.4.20.0 &amp; 1.3.6.1.4.1.482.50.2.4.21.0 : get @~Target[a] : a.tolna.net<br/>
+                                                                                                             Target[b] : b.tolna.net<br/>
+                                                                                                                             Target[c] : c.tolna.net<br/>
                                                                                                                                              Target[d] : d.tolna.net</p>
 <h3>Default Values</h3>
 <p> The target name &#8216;_&#8217; specifies a default value for that Keyword. In the absence of explicit Keyword value, the prepended and the appended keyword value, the default value will be used. </p>
@@ -909,9 +909,9 @@ Out:</p>
 </pre>
 <p> There can be several instances of setting the default/prepend/append values in the configuration file. The later setting replaces the previous one for the rest of the configuration file. The default/prepend/append values used for a given keyword/target pair are the ones that were in effect at the point in the configuration file where the target was mentioned for the first time. </p>
 <p> Example: </p>
-<p> MaxBytes[_]: 1250000<br />
- Target[myrouter.somplace.edu.2]: 2:public [at] myrouter.somplace.edu<br />
- MaxBytes[_]: 8000<br />
+<p> MaxBytes[_]: 1250000<br/>
+ Target[myrouter.somplace.edu.2]: 2:public [at] myrouter.somplace.edu<br/>
+ MaxBytes[_]: 8000<br/>
  Title[myrouter.somplace.edu.2]: Traffic Analysis for myrouter.somplace.edu IF 2</p>
 <p> The default <i>MaxBytes</i> for the target myrouter.someplace.edu.2 in the above example will be 1250000, which was in effect where the target name myrouter.someplace.edu.2 first appeared in the config file.</p>
 <h2>COMMAND LINE OPTIONS</h2>
@@ -924,11 +924,11 @@ Out:</p>
 <dd> Use an alternate confcache-file (the default is to use the configuration-file appended with <tt>&quot;.ok&quot;</tt>)</dd>
 <dt><code>&#8211;logging</code> <i>filename</i>|<code>eventlog</code></dt>
 <dd> If this is set to writable filename, all output from mrtg (warnings, debug messages, errors) will go to <i>filename</i>. If you are running on Win32 you can specify <code>eventlog</code> instead of a filename which will send all error to the windows event log. </dd>
-<p> <font SIZE="-1"><code>NOTE:</code></font> Note, there is no Message <font SIZE="-1">DLL</font> for mrtg included with mrtg. This has the side effect that the windows event logger will display a nice message with every entry in the event log, complaing about the fact that mrtg has no message dll. If you go to the mrtg contrib download area (on the website) you will find the mrtg-message-dll.zip which does contain such a thing.</p>
+<p> <code>NOTE:</code> Note, there is no Message DLL for mrtg included with mrtg. This has the side effect that the windows event logger will display a nice message with every entry in the event log, complaing about the fact that mrtg has no message dll. If you go to the mrtg contrib download area (on the website) you will find the mrtg-message-dll.zip which does contain such a thing.</p>
 <dt><code>&#8211;daemon</code></dt>
-<dd> Put <font SIZE="-1">MRTG</font> into the background, running as a daemon. This works the same way as the config file option, but the switch is required for proper <font SIZE="-1">FHS</font> operation (because /var/run is writable only by root)</dd>
+<dd> Put MRTG into the background, running as a daemon. This works the same way as the config file option, but the switch is required for proper FHS operation (because /var/run is writable only by root)</dd>
 <dt><code>&#8211;fhs</code></dt>
-<dd> Configure all mrtg paths to conform to the <font SIZE="-1">FHS</font> specification; <a rel="nofollow" href="http://www.pathname.com/fhs/">http://www.pathname.com/fhs/</a></dd>
+<dd> Configure all mrtg paths to conform to the FHS specification; <a rel="nofollow" href="http://www.pathname.com/fhs/">http://www.pathname.com/fhs/</a></dd>
 <dt><code>&#8211;check</code></dt>
 <dd> Only check the cfg file for errors. Do not do anything.</dd>
 <dt><code>&#8211;pid-file=s</code></dt>
@@ -964,10 +964,10 @@ Out:</p>
 </pre>
 <h2>EXAMPLES</h2>
 <h3>Minimal mrtg.cfg</h3>
-<p> WorkDir: /usr/tardis/pub/www/stats/mrtg<br />
- Target[r1]: 2:public [at] myrouter.somplace.edu<br />
- MaxBytes[r1]: 8000<br />
- Title[r1]: Traffic Analysis ISDN<br />
+<p> WorkDir: /usr/tardis/pub/www/stats/mrtg<br/>
+ Target[r1]: 2:public [at] myrouter.somplace.edu<br/>
+ MaxBytes[r1]: 8000<br/>
+ Title[r1]: Traffic Analysis ISDN<br/>
  PageTop[r1]: &lt;H1&gt;Stats for our ISDN Line&lt;/H1&gt;</p>
 <h3>Cfg for several Routers.</h3>
 <pre><code>

@@ -39,12 +39,12 @@ description: "xvkbd – virtual keyboard for X window system"
 <h2>Word Completion</h2>
 <p> Choosing ``<i>Word Completion...</i>&#8216;&#8216; in the main menu will popup the <i>Word Completion</i> panel. </p>
 <p> When you entered characters by clicked keys on the <i>xvkbd</i> window as usual while the <i>Word Completion</i> panel open, words started with the characters will be listed in the panel, and you can enter the remaining characters of the selected word by clicking one of the words in the list. </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;When&nbsp;``<i>Integrate Completion Panel?</i>&#8216;&#8216;&nbsp;on the property panel is set on, <br />
-&nbsp;<wbr>&nbsp;completion panel will be displayed on the main window when required. <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;When&nbsp;``<i>Integrate Completion Panel?</i>&#8216;&#8216;&nbsp;on the property panel is set on, <br/>
+&nbsp;<wbr>&nbsp;completion panel will be displayed on the main window when required. <br/>
 &nbsp;<wbr>&nbsp;.PP The dictionary (list of words) file is <code>/usr/share/xvkbd/words.english</code> by default, but it can be changed with <i>Static Dictionary</i> on the property panel. </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;In addition,&nbsp;<i>xvkbd</i>&nbsp;records the used words and those scores in&nbsp;<code>$HOME/.xvkbd.words</code>. <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;In addition,&nbsp;<i>xvkbd</i>&nbsp;records the used words and those scores in&nbsp;<code>$HOME/.xvkbd.words</code>. <br/>
 &nbsp;<wbr>&nbsp;  </p>
 <h2>Main Menu</h2>
 <p> Pressing the ``xvkbd&#8217;&#8216; logo on the main keyboard (placed near left-bottom corner in the default configuration) will popup the main menu. </p>
@@ -124,36 +124,36 @@ description: "xvkbd – virtual keyboard for X window system"
  </dd>
 <dt><i>Completion:</i></dt>
 <dd>  </dd>
-<dt><br />
+<dt><br/>
 &nbsp;<wbr>&nbsp;<i>Static Dictionary</i></dt>
-<dd> <p> <br />
-&nbsp;<wbr>&nbsp;Set the filename to be used for word completion. <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;This setting take precedence over the&nbsp;`<code>xvkbd.dictFile</code>&#8216;&nbsp;resource <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;and the&nbsp;<code>-dict</code>&nbsp;option. <br />
+<dd> <p> <br/>
+&nbsp;<wbr>&nbsp;Set the filename to be used for word completion. <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;This setting take precedence over the&nbsp;`<code>xvkbd.dictFile</code>&#8216;&nbsp;resource <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;and the&nbsp;<code>-dict</code>&nbsp;option. <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Default:&nbsp;<code>/usr/share/xvkbd/words.english</code> </p>
  </dd>
-<dt><br />
+<dt><br/>
 &nbsp;<wbr>&nbsp;<i>Dynamic Dictionary Weight</i></dt>
-<dd> <p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;This parameter controls&nbsp;&quot;learning&quot;&nbsp;of recently used words. <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;When this value is set 0,&nbsp;<i>xvkbd</i>&nbsp;will not learn used words. <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;With higher value setting,&nbsp;<i>xvkbd</i>&nbsp;will quickly <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;learn the used words and effectively ignores frequency information <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in the Static Dictionary. <br />
+<dd> <p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;This parameter controls&nbsp;&quot;learning&quot;&nbsp;of recently used words. <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;When this value is set 0,&nbsp;<i>xvkbd</i>&nbsp;will not learn used words. <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;With higher value setting,&nbsp;<i>xvkbd</i>&nbsp;will quickly <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;learn the used words and effectively ignores frequency information <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in the Static Dictionary. <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Default: 1. </p>
  </dd>
-<dt><br />
+<dt><br/>
 &nbsp;<wbr>&nbsp;<i>Insert Blank after Completion?&quot;</i></dt>
-<dd> <p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;If this button is set on, <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>xvkbd</i>&nbsp;will insert blank&nbsp;(&#8216;&nbsp;&#8216;)&nbsp;automatically after word completion <br />
+<dd> <p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;If this button is set on, <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>xvkbd</i>&nbsp;will insert blank&nbsp;(&#8216;&nbsp;&#8216;)&nbsp;automatically after word completion <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if the next character is not blank nor punctuations. </p>
  </dd>
-<dt><br />
+<dt><br/>
 &nbsp;<wbr>&nbsp;<i>Integrate Completion Panel?&quot;</i></dt>
-<dd> <p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;If this button is set on, <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;word completion panel will be inegrated at top of the main window <br />
+<dd> <p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;If this button is set on, <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;word completion panel will be inegrated at top of the main window <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;and will be activated when required. </p>
  </dd></dl>
 <h2>Options</h2>
@@ -247,7 +247,7 @@ description: "xvkbd – virtual keyboard for X window system"
 <dd> <p> <code>\M</code> - Meta (modify the next character) </p>
  </dd>
 <dt> - </dt>
-<dd> <p> <code>\W</code> - Super (modify the next character) <br />
+<dd> <p> <code>\W</code> - Super (modify the next character) <br/>
 &nbsp;<wbr>&nbsp;.IP&nbsp;&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-&nbsp;&quot;&nbsp;6 <code>\[</code><i>keysym</i><code>]</code> - the keysym <i>keysym</i> (e.g., <code>\[Left]</code>), which will be processed in the similar matter with other general characters </p>
  </dd>
 <dt> - </dt>
@@ -289,7 +289,7 @@ description: "xvkbd – virtual keyboard for X window system"
 <p> will enter the string ``<code>abc</code>&#8216;&#8216; to the ``Search Term&#8217;&#8216; field of a <code>xarchie</code> window. </p>
  </dd>
 <dt><code>-remote-display </code><i>display</i></dt>
-<dd> <p> Specify the display (in the meaning of the X Window System) to connect; <br />
+<dd> <p> Specify the display (in the meaning of the X Window System) to connect; <br/>
 &nbsp;<wbr>&nbsp;see also&nbsp;<i>Connect to Remote Display...</i>. </p>
  </dd>
 <dt><code>-true-keypad</code></dt>
@@ -401,16 +401,16 @@ description: "xvkbd – virtual keyboard for X window system"
 <h2>Download</h2>
 <dl>
 <dt><i>Latest Official Release</i></dt>
-<dd> <p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <i><a rel="nofollow" href="http://t-sato.in.coocan.jp/xvkbd/xvkbd-4.0.tar.gz">http://t-sato.in.coocan.jp/xvkbd/xvkbd-4.0.tar.gz</a></i> <br />
+<dd> <p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <i><a rel="nofollow" href="http://t-sato.in.coocan.jp/xvkbd/xvkbd-4.0.tar.gz">http://t-sato.in.coocan.jp/xvkbd/xvkbd-4.0.tar.gz</a></i> <br/>
  - source of version 4.0 (2019-08-31) </p>
  </dd>
 <dt>previous release</dt>
-<dd> <p> <a rel="nofollow" href="http://t-sato.in.coocan.jp/xvkbd/xvkbd-3.9.tar.gz">http://t-sato.in.coocan.jp/xvkbd/xvkbd-3.9.tar.gz</a> <br />
+<dd> <p> <a rel="nofollow" href="http://t-sato.in.coocan.jp/xvkbd/xvkbd-3.9.tar.gz">http://t-sato.in.coocan.jp/xvkbd/xvkbd-3.9.tar.gz</a> <br/>
  - source of version 3.9 (2018-02-25) </p>
-<p> <a rel="nofollow" href="http://t-sato.in.coocan.jp/xvkbd/xvkbd-3.8.tar.gz">http://t-sato.in.coocan.jp/xvkbd/xvkbd-3.8.tar.gz</a> <br />
+<p> <a rel="nofollow" href="http://t-sato.in.coocan.jp/xvkbd/xvkbd-3.8.tar.gz">http://t-sato.in.coocan.jp/xvkbd/xvkbd-3.8.tar.gz</a> <br/>
  - source of version 3.8 (2017-06-06) </p>
-<p> <a rel="nofollow" href="http://t-sato.in.coocan.jp/xvkbd/xvkbd-3.7.tar.gz">http://t-sato.in.coocan.jp/xvkbd/xvkbd-3.7.tar.gz</a> <br />
+<p> <a rel="nofollow" href="http://t-sato.in.coocan.jp/xvkbd/xvkbd-3.7.tar.gz">http://t-sato.in.coocan.jp/xvkbd/xvkbd-3.7.tar.gz</a> <br/>
  - source of version 3.7 (2015-09-12) </p>
  </dd></dl>
 <p> <i>xvkbd</i> is distributed under the terms of the GNU General Public License. </p>
@@ -506,19 +506,19 @@ description: "xvkbd – virtual keyboard for X window system"
 <dd> <p> list of labels displayed on the keys </p>
  </dd>
 <dt><code>xvkbd.NormalKeyLabels</code></dt>
-<dd> <p> list of labels displayed on the keys <br />
+<dd> <p> list of labels displayed on the keys <br/>
 &nbsp;<wbr>&nbsp;when neither of&nbsp;<i>Shift</i>&nbsp;and&nbsp;<i>AltGr</i>&nbsp;are selected. </p>
  </dd>
 <dt><code>xvkbd.ShiftKeyLabels</code></dt>
-<dd> <p> list of labels displayed on the keys <br />
+<dd> <p> list of labels displayed on the keys <br/>
 &nbsp;<wbr>&nbsp;when&nbsp;<i>Shift</i>&nbsp;is selected </p>
  </dd>
 <dt><code>xvkbd.AltgrKeyLabels</code></dt>
-<dd> <p> list of labels displayed on the keys <br />
+<dd> <p> list of labels displayed on the keys <br/>
 &nbsp;<wbr>&nbsp;when&nbsp;<i>AltGr</i>&nbsp;is selected </p>
  </dd>
 <dt><code>xvkbd.ShiftAltgrKeyLabels</code></dt>
-<dd> <p> list of labels displayed on the keys <br />
+<dd> <p> list of labels displayed on the keys <br/>
 &nbsp;<wbr>&nbsp;when both&nbsp;<i>AltGr</i>&nbsp;and&nbsp;<i>Shift</i>&nbsp;are selected </p>
  </dd></dl>
 <p> Four resources to set labels on the keys (<code>xvkbd.NormalKeyLabels</code>, <code>xvkbd.ShiftKeyLabels</code>, <code>xvkbd.AltgrKeyLabels</code> and <code>xvkbd.ShiftAltgrKeyLabels</code>) will be used instead of <code>xvkbd.KeyLabels</code> when <code>xvkbd.modalKeytop</code> resoruce is set <code>true</code>. </p>

@@ -21,14 +21,14 @@ Protected Attributes</code></pre>
 <p>template&lt;class Sequence &gt; void add (const Sequence &amp;sample, Real weight=1.0)</p>
 <p>template&lt;class Iterator &gt; void add (Iterator begin, Iterator end, Real weight=1.0)</p>
 <p>Protected Attributes <code>inspectors</code> </p>
-<p> Size <code>size</code> () const<br />
+<p> Size <code>size</code> () const<br/>
  <code>covariance and correlation</code> </p>
-<p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>covariance</code> () const<br />
- <i>returns the covariance </i><code>Matrix</code><br />
- <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>correlation</code> () const<br />
+<p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>covariance</code> () const<br/>
+ <i>returns the covariance </i><code>Matrix</code><br/>
+ <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>correlation</code> () const<br/>
  <i>returns the correlation </i><code>Matrix</code> <code>1-D inspectors lifted from underlying statistics class</code> </p>
 <p> Size <code>samples</code> () const </p>
-<p> Real <code>weightSum</code> () const<br />
+<p> Real <code>weightSum</code> () const<br/>
  <code>N-D inspectors lifted from underlying statistics class</code> </p>
 <p> std::vector&lt; Real &gt; <code>mean</code> () const </p>
 <p> std::vector&lt; Real &gt; <code>variance</code> () const </p>
@@ -54,7 +54,7 @@ Protected Attributes</code></pre>
 <p> std::vector&lt; Real &gt; <code>gaussianShortfall</code> (Real target) const </p>
 <p> std::vector&lt; Real &gt; <code>shortfall</code> (Real target) const </p>
 <p> std::vector&lt; Real &gt; <code>gaussianAverageShortfall</code> (Real target) const </p>
-<p> std::vector&lt; Real &gt; <code>averageShortfall</code> (Real target) const<br />
+<p> std::vector&lt; Real &gt; <code>averageShortfall</code> (Real target) const<br/>
  <code>Modifiers</code> </p>
 <pre><code>void reset (Size dimension=0)
 template&lt;class Sequence &gt; void add (const Sequence &amp;sample, Real weight=1.0)

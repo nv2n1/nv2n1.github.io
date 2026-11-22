@@ -10,7 +10,7 @@ description: "dlaic1.f –"
 <p>dlaic1.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlaic1</code> (JOB, J, X, SEST, W, GAMMA, SESTPR, S, C)<br />
+<p>subroutine <code>dlaic1</code> (JOB, J, X, SEST, W, GAMMA, SESTPR, S, C)<br/>
  <i></i><code>DLAIC1</code> applies one step of incremental condition estimation.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaic1 (integerJOB, integerJ, double precision, dimension( j )X, double precisionSEST, double precision, dimension( j )W, double precisionGAMMA, double precisionSESTPR, double precisionS, double precisionC)</h3>

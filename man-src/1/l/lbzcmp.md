@@ -10,7 +10,7 @@ description: "lbzcmp, lbzdiff – compare compressed files"
 
 <p> lbzcmp, lbzdiff &#8211; compare compressed files</p>
 <h2>SYNOPSIS</h2>
-<p> <code>lbzcmp</code> [ cmp_options ] file1 [ file2 ]<br />
+<p> <code>lbzcmp</code> [ cmp_options ] file1 [ file2 ]<br/>
  <code>lbzdiff</code> [ diff_options ] file1 [ file2 ]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Zcmp</i> and <i>lbzdiff</i> are used to invoke the <i>cmp</i> or the <i>diff</i> program on files compressed via <i>lbzip2</i>. All options specified are passed directly to <i>cmp</i> or <i>diff</i>. If only <i>file1</i> is specified, it is compared to the uncompressed contents of <i>file1</i>.bz2. If two files are specified, their contents (uncompressed if necessary) are fed to <i>cmp</i> or <i>diff</i>. The input files are not modified. The exit status from <i>cmp</i> or <i>diff</i> is preserved.</p>

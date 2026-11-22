@@ -10,7 +10,7 @@ description: "clarf.f –"
 <p>clarf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>clarf</code> (SIDE, M, N, V, INCV, TAU, C, LDC, WORK)<br />
+<p>subroutine <code>clarf</code> (SIDE, M, N, V, INCV, TAU, C, LDC, WORK)<br/>
  <i></i><code>CLARF</code> applies an elementary reflector to a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clarf (characterSIDE, integerM, integerN, complex, dimension( * )V, integerINCV, complexTAU, complex, dimension( ldc, * )C, integerLDC, complex, dimension( * )WORK)</h3>

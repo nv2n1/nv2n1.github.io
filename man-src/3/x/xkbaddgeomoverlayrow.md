@@ -10,7 +10,7 @@ description: "XkbAddGeomOverlayRow – Add a row to an existing overlay"
 <p>XkbAddGeomOverlayRow &#8211; Add a row to an existing overlay </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbOverlayRowPtr XkbAddGeomOverlayRow</code> <code>(XkbOverlayPtr </code><i>overlay</i><code>,</code> <code>XkbRowPtr </code><i>row_under</i><code>,</code> <code>int </code><i>sz_keys</i><code>);</code><br />
+<dt> <code>XkbOverlayRowPtr XkbAddGeomOverlayRow</code> <code>(XkbOverlayPtr </code><i>overlay</i><code>,</code> <code>XkbRowPtr </code><i>row_under</i><code>,</code> <code>int </code><i>sz_keys</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

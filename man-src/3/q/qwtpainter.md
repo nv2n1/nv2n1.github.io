@@ -12,76 +12,76 @@ description: "QwtPainter –"
 <h2>Synopsis</h2>
 <p>#include &lt;qwt_painter.h&gt;</p>
 <h3>Static Public Member Functions</h3>
-<p>static void <code>setPolylineSplitting</code> (bool)<br />
- <i>En/Disable line splitting for the raster paint engine. </i><br />
+<p>static void <code>setPolylineSplitting</code> (bool)<br/>
+ <i>En/Disable line splitting for the raster paint engine. </i><br/>
  static bool <code>polylineSplitting</code> () </p>
 <p> static void <code>setRoundingAlignment</code> (bool) </p>
 <p> static bool <code>roundingAlignment</code> () </p>
 <p> static bool <code>roundingAlignment</code> (QPainter *) </p>
-<p> static void <code>drawText</code> (QPainter *, double x, double y, const QString &amp;)<br />
- <i>Wrapper for QPainter::drawText() </i><br />
- static void <code>drawText</code> (QPainter *, const QPointF &amp;, const QString &amp;)<br />
- <i>Wrapper for QPainter::drawText() </i><br />
- static void <code>drawText</code> (QPainter *, double x, double y, double w, double h, int flags, const QString &amp;)<br />
- <i>Wrapper for QPainter::drawText() </i><br />
- static void <code>drawText</code> (QPainter *, const QRectF &amp;, int flags, const QString &amp;)<br />
- <i>Wrapper for QPainter::drawText() </i><br />
+<p> static void <code>drawText</code> (QPainter *, double x, double y, const QString &amp;)<br/>
+ <i>Wrapper for QPainter::drawText() </i><br/>
+ static void <code>drawText</code> (QPainter *, const QPointF &amp;, const QString &amp;)<br/>
+ <i>Wrapper for QPainter::drawText() </i><br/>
+ static void <code>drawText</code> (QPainter *, double x, double y, double w, double h, int flags, const QString &amp;)<br/>
+ <i>Wrapper for QPainter::drawText() </i><br/>
+ static void <code>drawText</code> (QPainter *, const QRectF &amp;, int flags, const QString &amp;)<br/>
+ <i>Wrapper for QPainter::drawText() </i><br/>
  static void <code>drawSimpleRichText</code> (QPainter *, const QRectF &amp;, int flags, const QTextDocument &amp;) </p>
-<p> static void <code>drawRect</code> (QPainter *, double x, double y, double w, double h)<br />
- <i>Wrapper for QPainter::drawRect() </i><br />
- static void <code>drawRect</code> (QPainter *, const QRectF &amp;rect)<br />
- <i>Wrapper for QPainter::drawRect() </i><br />
- static void <code>fillRect</code> (QPainter *, const QRectF &amp;, const QBrush &amp;)<br />
- <i>Wrapper for QPainter::fillRect() </i><br />
- static void <code>drawEllipse</code> (QPainter *, const QRectF &amp;)<br />
- <i>Wrapper for QPainter::drawEllipse() </i><br />
- static void <code>drawPie</code> (QPainter *, const QRectF &amp;r, int a, int alen)<br />
- <i>Wrapper for QPainter::drawPie() </i><br />
- static void <code>drawLine</code> (QPainter *, double x1, double y1, double x2, double y2)<br />
- <i>Wrapper for QPainter::drawLine() </i><br />
- static void <code>drawLine</code> (QPainter *, const QPointF &amp;p1, const QPointF &amp;p2)<br />
- <i>Wrapper for QPainter::drawLine() </i><br />
- static void <code>drawLine</code> (QPainter *, const QLineF &amp;)<br />
- <i>Wrapper for QPainter::drawLine() </i><br />
- static void <code>drawPolygon</code> (QPainter *, const QPolygonF &amp;)<br />
- <i>Wrapper for QPainter::drawPolygon() </i><br />
- static void <code>drawPolyline</code> (QPainter *, const QPolygonF &amp;)<br />
- <i>Wrapper for QPainter::drawPolyline() </i><br />
- static void <code>drawPolyline</code> (QPainter *, const QPointF *, int pointCount)<br />
- <i>Wrapper for QPainter::drawPolyline() </i><br />
- static void <code>drawPolygon</code> (QPainter *, const QPolygon &amp;)<br />
- <i>Wrapper for QPainter::drawPolygon() </i><br />
- static void <code>drawPolyline</code> (QPainter *, const QPolygon &amp;)<br />
- <i>Wrapper for QPainter::drawPolyline() </i><br />
- static void <code>drawPolyline</code> (QPainter *, const QPoint *, int pointCount)<br />
- <i>Wrapper for QPainter::drawPolyline() </i><br />
- static void <code>drawPoint</code> (QPainter *, const QPoint &amp;)<br />
- <i>Wrapper for QPainter::drawPoint() </i><br />
- static void <code>drawPoints</code> (QPainter *, const QPolygon &amp;)<br />
- <i>Wrapper for QPainter::drawPoints() </i><br />
- static void <code>drawPoints</code> (QPainter *, const QPoint *, int pointCount)<br />
- <i>Wrapper for QPainter::drawPoints() </i><br />
- static void <code>drawPoint</code> (QPainter *, double x, double y)<br />
- <i>Wrapper for QPainter::drawPoint() </i><br />
- static void <code>drawPoint</code> (QPainter *, const QPointF &amp;)<br />
- <i>Wrapper for QPainter::drawPoint() </i><br />
- static void <code>drawPoints</code> (QPainter *, const QPolygonF &amp;)<br />
- <i>Wrapper for QPainter::drawPoints() </i><br />
- static void <code>drawPoints</code> (QPainter *, const QPointF *, int pointCount)<br />
- <i>Wrapper for QPainter::drawPoints() </i><br />
- static void <code>drawPath</code> (QPainter *, const QPainterPath &amp;)<br />
- <i>Wrapper for QPainter::drawPath() </i><br />
- static void <code>drawImage</code> (QPainter *, const QRectF &amp;, const QImage &amp;)<br />
- <i>Wrapper for QPainter::drawImage() </i><br />
- static void <code>drawPixmap</code> (QPainter *, const QRectF &amp;, const QPixmap &amp;)<br />
- <i>Wrapper for QPainter::drawPixmap() </i><br />
+<p> static void <code>drawRect</code> (QPainter *, double x, double y, double w, double h)<br/>
+ <i>Wrapper for QPainter::drawRect() </i><br/>
+ static void <code>drawRect</code> (QPainter *, const QRectF &amp;rect)<br/>
+ <i>Wrapper for QPainter::drawRect() </i><br/>
+ static void <code>fillRect</code> (QPainter *, const QRectF &amp;, const QBrush &amp;)<br/>
+ <i>Wrapper for QPainter::fillRect() </i><br/>
+ static void <code>drawEllipse</code> (QPainter *, const QRectF &amp;)<br/>
+ <i>Wrapper for QPainter::drawEllipse() </i><br/>
+ static void <code>drawPie</code> (QPainter *, const QRectF &amp;r, int a, int alen)<br/>
+ <i>Wrapper for QPainter::drawPie() </i><br/>
+ static void <code>drawLine</code> (QPainter *, double x1, double y1, double x2, double y2)<br/>
+ <i>Wrapper for QPainter::drawLine() </i><br/>
+ static void <code>drawLine</code> (QPainter *, const QPointF &amp;p1, const QPointF &amp;p2)<br/>
+ <i>Wrapper for QPainter::drawLine() </i><br/>
+ static void <code>drawLine</code> (QPainter *, const QLineF &amp;)<br/>
+ <i>Wrapper for QPainter::drawLine() </i><br/>
+ static void <code>drawPolygon</code> (QPainter *, const QPolygonF &amp;)<br/>
+ <i>Wrapper for QPainter::drawPolygon() </i><br/>
+ static void <code>drawPolyline</code> (QPainter *, const QPolygonF &amp;)<br/>
+ <i>Wrapper for QPainter::drawPolyline() </i><br/>
+ static void <code>drawPolyline</code> (QPainter *, const QPointF *, int pointCount)<br/>
+ <i>Wrapper for QPainter::drawPolyline() </i><br/>
+ static void <code>drawPolygon</code> (QPainter *, const QPolygon &amp;)<br/>
+ <i>Wrapper for QPainter::drawPolygon() </i><br/>
+ static void <code>drawPolyline</code> (QPainter *, const QPolygon &amp;)<br/>
+ <i>Wrapper for QPainter::drawPolyline() </i><br/>
+ static void <code>drawPolyline</code> (QPainter *, const QPoint *, int pointCount)<br/>
+ <i>Wrapper for QPainter::drawPolyline() </i><br/>
+ static void <code>drawPoint</code> (QPainter *, const QPoint &amp;)<br/>
+ <i>Wrapper for QPainter::drawPoint() </i><br/>
+ static void <code>drawPoints</code> (QPainter *, const QPolygon &amp;)<br/>
+ <i>Wrapper for QPainter::drawPoints() </i><br/>
+ static void <code>drawPoints</code> (QPainter *, const QPoint *, int pointCount)<br/>
+ <i>Wrapper for QPainter::drawPoints() </i><br/>
+ static void <code>drawPoint</code> (QPainter *, double x, double y)<br/>
+ <i>Wrapper for QPainter::drawPoint() </i><br/>
+ static void <code>drawPoint</code> (QPainter *, const QPointF &amp;)<br/>
+ <i>Wrapper for QPainter::drawPoint() </i><br/>
+ static void <code>drawPoints</code> (QPainter *, const QPolygonF &amp;)<br/>
+ <i>Wrapper for QPainter::drawPoints() </i><br/>
+ static void <code>drawPoints</code> (QPainter *, const QPointF *, int pointCount)<br/>
+ <i>Wrapper for QPainter::drawPoints() </i><br/>
+ static void <code>drawPath</code> (QPainter *, const QPainterPath &amp;)<br/>
+ <i>Wrapper for QPainter::drawPath() </i><br/>
+ static void <code>drawImage</code> (QPainter *, const QRectF &amp;, const QImage &amp;)<br/>
+ <i>Wrapper for QPainter::drawImage() </i><br/>
+ static void <code>drawPixmap</code> (QPainter *, const QRectF &amp;, const QPixmap &amp;)<br/>
+ <i>Wrapper for QPainter::drawPixmap() </i><br/>
  static void <code>drawRoundFrame</code> (QPainter *, const QRectF &amp;, const QPalette &amp;, int lineWidth, int frameStyle) </p>
 <p> static void <code>drawRoundedFrame</code> (QPainter *, const QRectF &amp;, double xRadius, double yRadius, const QPalette &amp;, int lineWidth, int frameStyle) </p>
 <p> static void <code>drawFrame</code> (QPainter *, const QRectF &amp;rect, const QPalette &amp;palette, QPalette::ColorRole foregroundRole, int lineWidth, int midLineWidth, int frameStyle) </p>
-<p> static void <code>drawFocusRect</code> (QPainter *, const QWidget *)<br />
- <i>Draw a focus rectangle on a widget using its style. </i><br />
- static void <code>drawFocusRect</code> (QPainter *, const QWidget *, const QRect &amp;)<br />
- <i>Draw a focus rectangle on a widget using its style. </i><br />
+<p> static void <code>drawFocusRect</code> (QPainter *, const QWidget *)<br/>
+ <i>Draw a focus rectangle on a widget using its style. </i><br/>
+ static void <code>drawFocusRect</code> (QPainter *, const QWidget *, const QRect &amp;)<br/>
+ <i>Draw a focus rectangle on a widget using its style. </i><br/>
  static void <code>drawColorBar</code> (QPainter *painter, const <code>QwtColorMap</code> &amp;, const <code>QwtInterval</code> &amp;, const <code>QwtScaleMap</code> &amp;, Qt::Orientation, const QRectF &amp;) </p>
 <p> static bool <code>isAligning</code> (QPainter *painter) </p>
 <p> static bool <code>isX11GraphicsSystem</code> () </p>
@@ -97,14 +97,14 @@ description: "QwtPainter –"
 <dd>A pixmap that can be used as backing store</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>widget</i> Widget, for which the backinstore is intended<br />
+<dd><i>widget</i> Widget, for which the backinstore is intended<br/>
  <i>size</i> Size of the pixmap</dd></dl>
 <h3>void QwtPainter::drawBackgound (QPainter *painter, const QRectF &amp;rect, const QWidget *widget) [static]</h3>
 <p>Fill rect with the background of a widget </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>rect</i> Rectangle to be filled<br />
+<dd><i>painter</i> Painter<br/>
+ <i>rect</i> Rectangle to be filled<br/>
  <i>widget</i> Widget</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -113,58 +113,58 @@ description: "QwtPainter –"
 <p>Draw a color bar into a rectangle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>colorMap</i> Color map<br />
- <i>interval</i> Value range<br />
- <i>scaleMap</i> Scale map<br />
- <i>orientation</i> Orientation<br />
+<dd><i>painter</i> Painter<br/>
+ <i>colorMap</i> Color map<br/>
+ <i>interval</i> Value range<br/>
+ <i>scaleMap</i> Scale map<br/>
+ <i>orientation</i> Orientation<br/>
  <i>rect</i> Traget rectangle</dd></dl>
 <h3>void QwtPainter::drawFrame (QPainter *painter, const QRectF &amp;rect, const QPalette &amp;palette, QPalette::ColorRoleforegroundRole, intframeWidth, intmidLineWidth, intframeStyle) [static]</h3>
 <p>Draw a rectangular frame </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>rect</i> Frame rectangle<br />
- <i>palette</i> Palette<br />
- <i>foregroundRole</i> Foreground role used for QFrame::Plain<br />
- <i>frameWidth</i> Frame width<br />
- <i>midLineWidth</i> Used for QFrame::Box<br />
+<dd><i>painter</i> Painter<br/>
+ <i>rect</i> Frame rectangle<br/>
+ <i>palette</i> Palette<br/>
+ <i>foregroundRole</i> Foreground role used for QFrame::Plain<br/>
+ <i>frameWidth</i> Frame width<br/>
+ <i>midLineWidth</i> Used for QFrame::Box<br/>
  <i>frameStyle</i> bitwise OR´ed value of QFrame::Shape and QFrame::Shadow</dd></dl>
 <h3>void QwtPainter::drawRoundedFrame (QPainter *painter, const QRectF &amp;rect, doublexRadius, doubleyRadius, const QPalette &amp;palette, intlineWidth, intframeStyle) [static]</h3>
 <p>Draw a rectangular frame with rounded borders </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>rect</i> Frame rectangle<br />
- <i>xRadius</i> x-radius of the ellipses defining the corners<br />
- <i>yRadius</i> y-radius of the ellipses defining the corners<br />
- <i>palette</i> QPalette::WindowText is used for plain borders QPalette::Dark and QPalette::Light for raised or sunken borders<br />
- <i>lineWidth</i> Line width<br />
+<dd><i>painter</i> Painter<br/>
+ <i>rect</i> Frame rectangle<br/>
+ <i>xRadius</i> x-radius of the ellipses defining the corners<br/>
+ <i>yRadius</i> y-radius of the ellipses defining the corners<br/>
+ <i>palette</i> QPalette::WindowText is used for plain borders QPalette::Dark and QPalette::Light for raised or sunken borders<br/>
+ <i>lineWidth</i> Line width<br/>
  <i>frameStyle</i> bitwise OR´ed value of QFrame::Shape and QFrame::Shadow</dd></dl>
 <h3>void QwtPainter::drawRoundFrame (QPainter *painter, const QRectF &amp;rect, const QPalette &amp;palette, intlineWidth, intframeStyle) [static]</h3>
 <p>Draw a round frame </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>rect</i> Frame rectangle<br />
- <i>palette</i> QPalette::WindowText is used for plain borders QPalette::Dark and QPalette::Light for raised or sunken borders<br />
- <i>lineWidth</i> Line width<br />
+<dd><i>painter</i> Painter<br/>
+ <i>rect</i> Frame rectangle<br/>
+ <i>palette</i> QPalette::WindowText is used for plain borders QPalette::Dark and QPalette::Light for raised or sunken borders<br/>
+ <i>lineWidth</i> Line width<br/>
  <i>frameStyle</i> bitwise OR´ed value of QFrame::Shape and QFrame::Shadow</dd></dl>
 <h3>void QwtPainter::drawSimpleRichText (QPainter *painter, const QRectF &amp;rect, intflags, const QTextDocument &amp;text) [static]</h3>
 <p>Draw a text document into a rectangle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>rect</i> Traget rectangle<br />
- <i>flags</i> Alignments/Text flags, see QPainter::drawText()<br />
+<dd><i>painter</i> Painter<br/>
+ <i>rect</i> Traget rectangle<br/>
+ <i>flags</i> Alignments/Text flags, see QPainter::drawText()<br/>
  <i>text</i> Text document</dd></dl>
 <h3>void QwtPainter::fillPixmap (const QWidget *widget, QPixmap &amp;pixmap, const QPoint &amp;offset = QPoint()) [static]</h3>
 <p>Fill a pixmap with the content of a widget </p>
 <p> In Qt &gt;= 5.0 QPixmap::fill() is a nop, in Qt 4.x it is buggy for backgrounds with gradients. Thus <code>fillPixmap()</code> offers an alternative implementation. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>widget</i> Widget<br />
- <i>pixmap</i> Pixmap to be filled<br />
+<dd><i>widget</i> Widget<br/>
+ <i>pixmap</i> Pixmap to be filled<br/>
  <i>offset</i> Offset</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

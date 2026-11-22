@@ -9,7 +9,7 @@ description: "basic_radius_auth – Squid RADIUS authentication helper"
 
 <p>basic_radius_auth &#8211; Squid RADIUS authentication helper</p>
 <h2>Synopsis</h2>
-<p><code>basic_radius_auth</code> <code>-f</code> config file<br />
+<p><code>basic_radius_auth</code> <code>-f</code> config file<br/>
  <code>basic_radius_auth</code> <code>-h server name</code> <code>port</code> <code>] [-i </code> identifier <code>] -w </code> secret <code>[-t </code> timeout <code>]</code></p>
 <h2>Description</h2>
 <p><code>basic_radius_auth</code> allows Squid to connect to a RADIUS server to validate the user name and password of Basic HTTP authentication.</p>
@@ -45,10 +45,10 @@ description: "basic_radius_auth – Squid RADIUS authentication helper"
 <p> With contributions from many others. </p>
 <p> This manual was written by <i>Henrik Nordstrom &lt;hno [at] squid-cache.org&gt;</i></p>
 <h2>Copyright</h2>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br />
-&nbsp;<wbr>*<br />
-&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br />
-&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br/>
+&nbsp;<wbr>*<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br/>
+&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br/>
 &nbsp;<wbr>*&nbsp;<wbr>Please see the COPYING and CONTRIBUTORS files for details. </p>
 <p> This program and documentation is copyright to the authors named above. </p>
 <p> Distributed under the GNU General Public License (GNU GPL) version 2 or later (GPLv2+).</p>
@@ -61,7 +61,7 @@ description: "basic_radius_auth – Squid RADIUS authentication helper"
 <p> Report serious security bugs to <i>Squid Bugs &lt;squid-bugs [at] squid-cache.org&gt;</i> </p>
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list</i> &lt;squid-dev [at] squid-cache.org&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code>GPL</code>(7),<br />
- <code>RFC2058</code> &#8211; Remote Authentication Dial In User Service (RADIUS)<br />
- The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br />
+<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code>GPL</code>(7),<br/>
+ <code>RFC2058</code> &#8211; Remote Authentication Dial In User Service (RADIUS)<br/>
+ The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br/>
  The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>

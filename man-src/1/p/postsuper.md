@@ -10,8 +10,8 @@ description: "postsuper – Postfix superintendent"
 
 <p> postsuper &#8211; Postfix superintendent </p>
 <h2>SYNOPSIS</h2>
-<p> <code>postsuper</code> [<code>-psSv</code>] [<code>-c </code><i>config_dir</i>] [<code>-d </code><i>queue_id</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-h&nbsp;</code><i>queue_id</i>]&nbsp;[<code>-H&nbsp;</code><i>queue_id</i>]<br />
+<p> <code>postsuper</code> [<code>-psSv</code>] [<code>-c </code><i>config_dir</i>] [<code>-d </code><i>queue_id</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-h&nbsp;</code><i>queue_id</i>]&nbsp;[<code>-H&nbsp;</code><i>queue_id</i>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-r&nbsp;</code><i>queue_id</i>]&nbsp;[<i>directory &#8230;</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-postsuper/">postsuper</a></code>(1) command does maintenance jobs on the Postfix queue. Use of the command is restricted to the superuser. See the <code><a href="/docs/linux/man/1-postqueue/">postqueue</a></code>(1) command for unprivileged queue operations such as listing or flushing the mail queue. </p>

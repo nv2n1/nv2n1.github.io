@@ -169,7 +169,7 @@ description: "Highlight – a universal sourcecode to formatted text converter"
 <dt> -n, &#8211;line-number[=0]</dt>
 <dd> number all output lines, optional padding</dd>
 <dt>&#8211;line-number-ref[=p]</dt>
-<dd> number all output lines and generate an anchor, made of the specified prefix<br />
+<dd> number all output lines and generate an anchor, made of the specified prefix<br/>
 &nbsp;<wbr>p&nbsp;<wbr>+&nbsp;<wbr>the line number&nbsp;<wbr>&nbsp;<wbr>(default=&#8217;line&#8217;)</dd>
 <dt>&#8211;output-dir=path</dt>
 <dd>

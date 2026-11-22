@@ -470,10 +470,10 @@ description: "groff_mom – groff “mom” macros; “mom” is a “roff” la
 <dd> <p>A hanging indent looks like this: </p>
  </dd>
 <dl>
-<dd> <p> <code> The thousand injuries of Fortunato I had borne as best I <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;could, but when he ventured upon insult, I vowed <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;revenge.&nbsp;<wbr>&nbsp;You who so well know the nature of my soul <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;will not suppose, however, that I gave utterance to a <br />
+<dd> <p> <code> The thousand injuries of Fortunato I had borne as best I <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;could, but when he ventured upon insult, I vowed <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;revenge.&nbsp;<wbr>&nbsp;You who so well know the nature of my soul <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;will not suppose, however, that I gave utterance to a <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;threat, at length I would be avenged </p>
  </dd></dl>
 <p> The first line of text </code><i>hangs</i> outside the <i>left margin</i>. </p>
@@ -621,8 +621,8 @@ description: "groff_mom – groff “mom” macros; “mom” is a “roff” la
  </dd></dl>
 <p>Now suppose you also want to set the top margin, say, at 1-1/2 inches. <i>&lt;tm&gt;</i> comes after <i>&lt;rm&gt;</i> in the optional arguments, but you can&#8217;t skip over any arguments, therefore to set the top margin, you must also give a right margin. The <code>.PAGE</code> macro would look like this: </p>
 <dl>
-<dd> <p> .PAGE 11i 17i 1i 1i 1.5i <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|&nbsp;<wbr>&nbsp;<wbr>&nbsp;| required right---+ +---top margin <br />
+<dd> <p> .PAGE 11i 17i 1i 1i 1.5i <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|&nbsp;<wbr>&nbsp;<wbr>&nbsp;| required right---+ +---top margin <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;margin </p>
  </dd></dl>
 <p>Clearly, <code>.PAGE</code> is best used when you want a convenient way to tell <code>mom</code> just the dimensions of your printer sheet (width and length), or when you want to tell her everything about the page (dimensions and all the margins), for example </p>
@@ -762,9 +762,9 @@ description: "groff_mom – groff “mom” macros; “mom” is a “roff” la
  </dd></dl>
 <p> produces, on output </p>
 <dl>
-<dd> <p> <code>Carrots Potatoes Broccoli <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$1.99/5 lbs <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$0.25/lb <br />
+<dd> <p> <code>Carrots Potatoes Broccoli <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$1.99/5 lbs <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$0.25/lb <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$0.99/bunch </p>
  </dd></dl>
 </dl>

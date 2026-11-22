@@ -19,11 +19,11 @@ struct aliasent *getaliasbyname(const char *name);
 int getaliasbyname_r(const char *name, struct aliasent *result,
                      char *buffer, size_t buflen, struct aliasent **res);</code></pre>
 <h2>Description</h2>
-<p>One of the databases available with the Name Service Switch (NSS) is the aliases database, that contains mail aliases. (To find out which databases are supported, try <i>getent &#8211;help</i>.) Six functions are provided to access the aliases database. The <code>getaliasent</code>() function returns a pointer to a structure containing the group information from the aliases database. The first time it is called it returns the first entry; thereafter, it returns successive entries. The <code>setaliasent</code>() function rewinds the file pointer to the beginning of the aliases database. The <code>endaliasent</code>() function closes the aliases database. <code>getaliasent_r</code>() is the reentrant version of the previous function. The requested structure is stored via the first argument but the programmer needs to fill the other arguments also. Not providing enough space causes the function to fail. The function <code>getaliasbyname</code>() takes the name argument and searches the aliases database. The entry is returned as a pointer to a <i>struct aliasent</i>. <code>getaliasbyname_r</code>() is the reentrant version of the previous function. The requested structure is stored via the second argument but the programmer needs to fill the other arguments also. Not providing enough space causes the function to fail. The <i>struct aliasent</i> is defined in <i>&lt;aliases.h&gt;</i>: struct aliasent {<br />
-    char *alias_name; /* alias name */<br />
-    size_t alias_members_len;<br />
-    char **alias_members; /* alias name list */<br />
-    int alias_local;<br />
+<p>One of the databases available with the Name Service Switch (NSS) is the aliases database, that contains mail aliases. (To find out which databases are supported, try <i>getent &#8211;help</i>.) Six functions are provided to access the aliases database. The <code>getaliasent</code>() function returns a pointer to a structure containing the group information from the aliases database. The first time it is called it returns the first entry; thereafter, it returns successive entries. The <code>setaliasent</code>() function rewinds the file pointer to the beginning of the aliases database. The <code>endaliasent</code>() function closes the aliases database. <code>getaliasent_r</code>() is the reentrant version of the previous function. The requested structure is stored via the first argument but the programmer needs to fill the other arguments also. Not providing enough space causes the function to fail. The function <code>getaliasbyname</code>() takes the name argument and searches the aliases database. The entry is returned as a pointer to a <i>struct aliasent</i>. <code>getaliasbyname_r</code>() is the reentrant version of the previous function. The requested structure is stored via the second argument but the programmer needs to fill the other arguments also. Not providing enough space causes the function to fail. The <i>struct aliasent</i> is defined in <i>&lt;aliases.h&gt;</i>: struct aliasent {<br/>
+    char *alias_name; /* alias name */<br/>
+    size_t alias_members_len;<br/>
+    char **alias_members; /* alias name list */<br/>
+    int alias_local;<br/>
 };</p>
 <h2>Return Value</h2>
 <p>The functions <code>getaliasent_r</code>() and <code>getaliasbyname_r</code>() return a nonzero value on error.</p>
@@ -52,10 +52,10 @@ int getaliasbyname_r(const char *name, struct aliasent *result,
 </tr>
 </table>
 <h2>Conforming To</h2>
-<p>These routines are glibc-specific. The NeXT system has similar routines: #include &lt;aliasdb.h&gt;<br />
-void alias_setent(void);<br />
-void alias_endent(void);<br />
-alias_ent *alias_getent(void);<br />
+<p>These routines are glibc-specific. The NeXT system has similar routines: #include &lt;aliasdb.h&gt;<br/>
+void alias_setent(void);<br/>
+void alias_endent(void);<br/>
+alias_ent *alias_getent(void);<br/>
 alias_ent *alias_getbyname(char *name);</p>
 <h2>Examples</h2>
 <p>The following example compiles with <i>gcc example.c -o example</i>. It will dump all names in the alias database. </p>

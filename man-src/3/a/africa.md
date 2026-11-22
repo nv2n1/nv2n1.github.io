@@ -12,7 +12,7 @@ description: "ql/currencies/africa.hpp – African currencies."
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/currency.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>ZARCurrency</code><br />
+<p> class <code>ZARCurrency</code><br/>
  <i>South-African rand. </i></p>
 <h2>Detailed Description</h2>
 <p> African currencies. </p>

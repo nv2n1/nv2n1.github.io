@@ -94,12 +94,12 @@ pnm_freepamrow(tuplerow);
 <p> On output, NULL means no comments. </p>
 <p> On input, libnetpbm mallocs storage for the comments and placed the pointer at *comment_p. Caller must free it. NULL means libnetpbm does not return comments and does not allocate any storage. </p>
 <p> Examples: </p>
-<p>const char *comments;<br />
-&#8230; pam.comment_p = &amp;comments;<br />
-pnm_readpaminit(fileP, &amp;pam, PAM_STRUCT_SIZE(comment_p));<br />
+<p>const char *comments;<br/>
+&#8230; pam.comment_p = &amp;comments;<br/>
+pnm_readpaminit(fileP, &amp;pam, PAM_STRUCT_SIZE(comment_p));<br/>
 printf(&#8216;The comments are:
-&#8217;);<br />
-printf(&#8216;%s&#8217;, comments)<br />
+&#8217;);<br/>
+printf(&#8216;%s&#8217;, comments)<br/>
     free(comments);</p>
 <pre><code>
 const char *comments;
@@ -119,7 +119,7 @@ free(comments);
 <p> The pnm functions choose between plain and raw based on the <i>forceplain</i> parameter that every write-type pnm function has. If this boolean value is true, the function writes the plain version of the format specified by the format code. If it is false, the function writes the raw version of the format specified by the format code. </p>
 <p> We are trying to stamp out the older plain formats, so it would be a wise choice not to write a program that sets <i>forceplain</i> true under any circumstance. A user who needs a plain format can use the <code>pnmtoplainpnm</code> program to convert the output of your program to plain format. </p>
 <h3>Reference</h3>
-<p> The <code>Libnetpbm</code>Netpbm<code>Image</code> Processing Manual (1)<br />
+<p> The <code>Libnetpbm</code>Netpbm<code>Image</code> Processing Manual (1)<br/>
 &nbsp;<wbr>describes the the&nbsp;<wbr><code>libnetpbm</code>&nbsp;<wbr>functions for processing image data. </p>
 <p> The <code>Libnetpbm</code>Utility<code>Manual</code>(1) </p>
 <p> describes the functions that are not specifically related to the Netpbm image formats. </p>

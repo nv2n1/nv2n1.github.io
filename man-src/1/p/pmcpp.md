@@ -19,36 +19,36 @@ description: "pmcpp – simple preprocessor for the Performance Co-Pilot"
 <p> <code>pmcpp</code> accepts the following directives in the input stream (like <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1)):</p>
 <dl>
 <dt>&bull;</dt>
-<dd> <code>#include &quot;</code><i>filename</i><code>&quot;</code><br />
- or<br />
- <code>#include &lt;</code><i>filename</i><code>&gt;</code><br />
+<dd> <code>#include &quot;</code><i>filename</i><code>&quot;</code><br/>
+ or<br/>
+ <code>#include &lt;</code><i>filename</i><code>&gt;</code><br/>
  In either case the directory search path for <i>filename</i> tries <i>filename</i> first, then the directory for the command line <i>infile</i> (if any), followed by any directories named in <code>-I</code> command line arguments, and finally the <code>$PCP_VAR_DIR/pmns</code> directory (the latter is for backwards compatibility with earlier versions of <code>pmcpp</code> and the implied used from <code><a href="/docs/linux/man/3-pmloadasciinamespace/">pmLoadASCIINameSpace</a></code>(3)). <code>#include</code> directives may be nested, up to a maximum depth of 5.</dd>
 <dt>&bull;</dt>
-<dd> <code>#shell &quot;</code><i>command</i><code>&quot;</code><br />
- or<br />
- <code>#shell &#8216;</code><i>command</i><code>&#8216;<br />
+<dd> <code>#shell &quot;</code><i>command</i><code>&quot;</code><br/>
+ or<br/>
+ <code>#shell &#8216;</code><i>command</i><code>&#8216;<br/>
  The shell </code><i>command</i> will be executed and the standard output is inserted into the stream of data to be processed by <code>pmcpp</code>. Functionally this is similar to a <code>#include</code> directive, except input lines are read from a <i>command</i> rather than a file. The <code>#shell</code> directive is most useful for including or excluding <code>#define</code> or <code>#undef</code> directives based on run-time logic in the <i>command</i>.</dd>
 <dt>&bull;</dt>
-<dd> <code>#define </code><i>name value</i><br />
- or<br />
- <code>#define </code><i>name </i><code>&quot;</code><i>value</i><code>&quot;</code><br />
- or<br />
- <code>#define </code><i>name </i><code>&#8216;</code><i>value</i><code>&#8216;</code><br />
+<dd> <code>#define </code><i>name value</i><br/>
+ or<br/>
+ <code>#define </code><i>name </i><code>&quot;</code><i>value</i><code>&quot;</code><br/>
+ or<br/>
+ <code>#define </code><i>name </i><code>&#8216;</code><i>value</i><code>&#8216;</code><br/>
  Defines a value for the macro <i>name</i> which must be a valid C-style name, so leading alphabetic or underscore followed by zero or more alphanumerics or underscores. <i>value</i> is optional (and defaults to an empty string). There is no character escape mechanism, but either single quotes or double quotes may be used to define a <i>value</i> with special characters or embedded horizontal white space (no newlines).</dd>
 <dt>&bull;</dt>
-<dd> <code>#undef </code><i>name</i><br />
+<dd> <code>#undef </code><i>name</i><br/>
  Removes the macro definition, if any, for <i>name</i>.</dd>
 <dt>&bull;</dt>
-<dd> <code>#ifdef </code><i>name</i><br />
- &#8230;<br />
- <code>#endif</code><br />
- or<br />
- <code>#ifndef </code><i>name</i><br />
- &#8230;<br />
- <code>#endif</code><br />
+<dd> <code>#ifdef </code><i>name</i><br/>
+ &#8230;<br/>
+ <code>#endif</code><br/>
+ or<br/>
+ <code>#ifndef </code><i>name</i><br/>
+ &#8230;<br/>
+ <code>#endif</code><br/>
  The enclosing lines will be stripped or included, depending if the macro <i>name</i> is defined or not.</dd>
 <dt>&bull;</dt>
-<dd> <code>#else</code><br />
+<dd> <code>#else</code><br/>
  Within a <code>#ifdef</code> or <code>#ifndef</code> block, <code>#else</code> may be used to delimit lines to be included if the preceding &#8220;if&#8221; condition is false.</dd></dl>
 <p> Macro substitution is achieved by breaking the input stream into words separated by white space or characters that are not valid in a macro name, i.e. not alphanumeric and not underscore. Each word is checked and if it matches a macro name, the word is replaced by the macro value, otherwise the word is unchanged. </p>
 <p> There is generally one output line for each input line, although the line may be empty if the text has been stripped due to the handling of comments or conditional directives. When there is a change in the input stream, an additional output line is generated of the form: </p>
@@ -67,8 +67,8 @@ description: "pmcpp – simple preprocessor for the Performance Co-Pilot"
 <dt>&bull;</dt>
 <dd> Macros with parameters &#8211; the <code>pmcpp</code> macros support only parameterless string substitution.</dd>
 <dt>&bull;</dt>
-<dd> <code>#if </code><i>expr</i><br />
- &#8230;<br />
+<dd> <code>#if </code><i>expr</i><br/>
+ &#8230;<br/>
  <code>#endif</code></dd>
 <dt>&bull;</dt>
 <dd> Nested use of <code>#ifdef</code> or <code>#ifndef</code>.</dd>

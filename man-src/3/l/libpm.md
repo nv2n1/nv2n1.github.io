@@ -21,7 +21,7 @@ description: "Table Of Contents"
 <p> <code>Description</code> </p>
 <p> All Netpbm programs must call <code>pm_proginit()</code> just after startup, before they process their arguments. <code>pm_proginit()</code>, among other things, processes Netpbm universal arguments and removes them from the argument list. </p>
 <p> A program that isn&#8217;t a Netpbm program, but just uses <code>libnetpbm</code> services, need not invoke <code>pm_proginit</code>. But such a program must invoke <code>pm_init()</code>. </p>
-<p> By &#8216;Netpbm program,&#8217; we mean a program that is part of the Netpbm package or is intended to act like one. <code>pm_proginit()</code> does things that all Netpbm programs do by convention. For example, it scans the argument list for<br />
+<p> By &#8216;Netpbm program,&#8217; we mean a program that is part of the Netpbm package or is intended to act like one. <code>pm_proginit()</code> does things that all Netpbm programs do by convention. For example, it scans the argument list for<br/>
 &nbsp;<wbr>common options , handles them, and removes them from the argument list. Ergo, if you want your program to have the same common options as those in the Netpbm package, you might use <code>pm_proginit()</code>, and if you don&#8217;t, you must not. </p>
 <p> <code>pm_proginit()</code> is primarily intended for Netpbm developers, so you should not expect it to have stable function across releases, and you must go to the comments in the source code to see exactly what it does. </p>
 <p> Any program that uses <code>libnetpbm</code> but does not call <code>pm_proginit</code> (i.e. is not a Netpbm program) must call <code>pm_init()</code>. The conventional place to do this is at the very beginning of the program. This sets up some program-global variables for use by the <code>libnetpbm</code> functions. </p>
@@ -97,14 +97,14 @@ description: "Table Of Contents"
 <p> The obvious way is with a number that is directly proportional to the light intensity (e.g. 10 means twice as many milliwatts per square centimeter as 5). There are two problems with this: </p>
 <dl>
 <dt>&bull;</dt>
-<dd> To the human eye, a 1 milliwatt per square centimeter difference<br />
-&nbsp;<wbr>in a bright image is much less apparent than a 1 milliwatt per<br />
-&nbsp;<wbr>square centimeter difference in a dark image.&nbsp;<wbr>&nbsp;<wbr>So if you have<br />
-&nbsp;<wbr>a fixed number of bits in which to store the intensity value,<br />
-&nbsp;<wbr>you&#8217;re wasting resolution at the bright end and skimping on it at<br />
+<dd> To the human eye, a 1 milliwatt per square centimeter difference<br/>
+&nbsp;<wbr>in a bright image is much less apparent than a 1 milliwatt per<br/>
+&nbsp;<wbr>square centimeter difference in a dark image.&nbsp;<wbr>&nbsp;<wbr>So if you have<br/>
+&nbsp;<wbr>a fixed number of bits in which to store the intensity value,<br/>
+&nbsp;<wbr>you&#8217;re wasting resolution at the bright end and skimping on it at<br/>
 &nbsp;<wbr>the dark end.</dd>
 <dt>&bull;</dt>
-<dd> Monitor inputs and camera outputs aren&#8217;t directly proportional to<br />
+<dd> Monitor inputs and camera outputs aren&#8217;t directly proportional to<br/>
 &nbsp;<wbr>the light intensity they project or detect. </dd>
 </dl>
 <p> For these reasons, light intensities are often represented in graphics processing by an exponential scale. The transfer function is called a gamma function and the resulting numbers are called gamma-corrected or gamma-adjusted. There are various gamma functions. The Netpbm formats specify that intensities are represented by gamma-adjusted numbers of a particular gamma transfer function. </p>

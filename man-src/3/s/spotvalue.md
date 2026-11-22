@@ -10,34 +10,34 @@ description: "QuantLib::FixedRateBondForward – Forward contract on a fixed-rat
 
 <p>QuantLib::FixedRateBondForward &#8211; Forward contract on a fixed-rate bond </p>
 
-<p> <br />
+<p> <br/>
  </p>
 <p>#include &lt;ql/instruments/fixedratebondforward.hpp&gt; </p>
 <p>Inherits <code>QuantLib::Forward</code>. </p>
 <h3>Public Member Functions</h3>
-<p> <code>Constructors</code> <br />
+<p> <code>Constructors</code> <br/>
  </p>
-<p> <br />
- <code>FixedRateBondForward</code> (const <code>Date</code> &amp;valueDate, const <code>Date</code> &amp;maturityDate, Position::Type type, <code>Real</code> strike, <code>Natural</code> settlementDays, const <code>DayCounter</code> &amp;dayCounter, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> businessDayConvention, const boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; &amp;fixedCouponBond, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;(), const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;incomeDiscountCurve=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;()) <br />
+<p> <br/>
+ <code>FixedRateBondForward</code> (const <code>Date</code> &amp;valueDate, const <code>Date</code> &amp;maturityDate, Position::Type type, <code>Real</code> strike, <code>Natural</code> settlementDays, const <code>DayCounter</code> &amp;dayCounter, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> businessDayConvention, const boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; &amp;fixedCouponBond, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;(), const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;incomeDiscountCurve=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;()) <br/>
  </p>
-<p> <code>Calculations</code> <br />
+<p> <code>Calculations</code> <br/>
  </p>
-<p> <br />
- <code>Real</code> <code>forwardPrice</code> () const <br />
- <i>(dirty) forward bond price </i> <br />
- <code>Real</code> <code>cleanForwardPrice</code> () const <br />
- <i>(dirty) forward bond price minus accrued on bond at delivery </i> <br />
- <code>Real</code> <code>spotIncome</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;incomeDiscountCurve) const <br />
- <i>NPV of bond coupons discounted using incomeDiscountCurve. </i> <br />
- <code>Real</code> <code>spotValue</code> () const <br />
+<p> <br/>
+ <code>Real</code> <code>forwardPrice</code> () const <br/>
+ <i>(dirty) forward bond price </i> <br/>
+ <code>Real</code> <code>cleanForwardPrice</code> () const <br/>
+ <i>(dirty) forward bond price minus accrued on bond at delivery </i> <br/>
+ <code>Real</code> <code>spotIncome</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;incomeDiscountCurve) const <br/>
+ <i>NPV of bond coupons discounted using incomeDiscountCurve. </i> <br/>
+ <code>Real</code> <code>spotValue</code> () const <br/>
  <i>NPV of underlying bond. </i>  </p>
 <h3>Protected Member Functions</h3>
-<p> <br />
- void <code>performCalculations</code> () const <br />
+<p> <br/>
+ void <code>performCalculations</code> () const <br/>
   </p>
 <h3>Protected Attributes</h3>
-<p> <br />
- boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; <code>fixedCouponBond_</code> <br />
+<p> <br/>
+ boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; <code>fixedCouponBond_</code> <br/>
   </p>
 <h2>Detailed Description</h2>
 <p>Forward contract on a fixed-rate bond </p>

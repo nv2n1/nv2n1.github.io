@@ -10,15 +10,15 @@ description: "size – list section sizes and total size of binary files"
 
 <p> size &#8211; list section sizes and total size of binary files </p>
 <h2>SYNOPSIS</h2>
-<p> size [<code>-A</code>|<code>-B</code>|<code>-G</code>|<code>&#8211;format=</code><i>compatibility</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;help</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-d</code>|<code>-o</code>|<code>-x</code>|<code>&#8211;radix=</code><i>number</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;common</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>|<code>&#8211;totals</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;target=</code><i>bfdname</i>]&nbsp;[<code>-V</code>|<code>&#8211;version</code>]<br />
+<p> size [<code>-A</code>|<code>-B</code>|<code>-G</code>|<code>&#8211;format=</code><i>compatibility</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;help</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-d</code>|<code>-o</code>|<code>-x</code>|<code>&#8211;radix=</code><i>number</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;common</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>|<code>&#8211;totals</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;target=</code><i>bfdname</i>]&nbsp;[<code>-V</code>|<code>&#8211;version</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<i>objfile</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
-<p> The <font SIZE="-1">GNU</font> <code>size</code> utility lists the section sizes and the total size for each of the binary files <i>objfile</i> on its argument list. By default, one line of output is generated for each file or each module if the file is an archive. </p>
+<p> The GNU <code>size</code> utility lists the section sizes and the total size for each of the binary files <i>objfile</i> on its argument list. By default, one line of output is generated for each file or each module if the file is an archive. </p>
 <p> <i>objfile</i>&#8230; are the files to be examined. If none are specified, the file <tt>&quot;a.out&quot;</tt> will be used instead.</p>
 <h2>OPTIONS</h2>
 <p> The command-line options have the following meanings:</p>
@@ -30,7 +30,7 @@ description: "size – list section sizes and total size of binary files"
 </dd><dt><code>-G</code></dt>
 <dd>
 </dd><dt><code>&#8211;format=</code><i>compatibility</i></dt>
-<dd> Using one of these options, you can choose whether the output from <font SIZE="-1">GNU</font> <code>size</code> resembles output from System V <code>size</code> (using <code>-A</code>, or <code>&#8211;format=sysv</code>), or Berkeley <code>size</code> (using <code>-B</code>, or <code>&#8211;format=berkeley</code>). The default is the one-line format similar to Berkeley&#8217;s. Alternatively, you can choose the <font SIZE="-1">GNU</font> format output (using <code>-G</code>, or <code>&#8211;format=gnu</code>), this is similar to Berkeley&#8217;s output format, but sizes are counted differently. </dd>
+<dd> Using one of these options, you can choose whether the output from GNU <code>size</code> resembles output from System V <code>size</code> (using <code>-A</code>, or <code>&#8211;format=sysv</code>), or Berkeley <code>size</code> (using <code>-B</code>, or <code>&#8211;format=berkeley</code>). The default is the one-line format similar to Berkeley&#8217;s. Alternatively, you can choose the GNU format output (using <code>-G</code>, or <code>&#8211;format=gnu</code>), this is similar to Berkeley&#8217;s output format, but sizes are counted differently. </dd>
 <p> Here is an example of the Berkeley (default) format of output from <code>size</code>: </p>
 <pre>
         $ size --format=Berkeley ranlib size
@@ -39,7 +39,7 @@ description: "size – list section sizes and total size of binary files"
          294880   81920   11888  388688   5ee50 size
 </pre>
 <p> The Berkeley style output counts read only data in the <tt>&quot;text&quot;</tt> column, not in the <tt>&quot;data&quot;</tt> column, the <tt>&quot;dec&quot;</tt> and <tt>&quot;hex&quot;</tt> columns both display the sum of the <tt>&quot;text&quot;</tt>, <tt>&quot;data&quot;</tt>, and <tt>&quot;bss&quot;</tt> columns in decimal and hexadecimal respectively. </p>
-<p> The <font SIZE="-1">GNU</font> format counts read only data in the <tt>&quot;data&quot;</tt> column, not the <tt>&quot;text&quot;</tt> column, and only displays the sum of the <tt>&quot;text&quot;</tt>, <tt>&quot;data&quot;</tt>, and <tt>&quot;bss&quot;</tt> columns once, in the <tt>&quot;total&quot;</tt> column. The <code>&#8211;radix</code> option can be used to change the number base for all columns. Here is the same data displayed with <font SIZE="-1">GNU</font> conventions: </p>
+<p> The GNU format counts read only data in the <tt>&quot;data&quot;</tt> column, not the <tt>&quot;text&quot;</tt> column, and only displays the sum of the <tt>&quot;text&quot;</tt>, <tt>&quot;data&quot;</tt>, and <tt>&quot;bss&quot;</tt> columns once, in the <tt>&quot;total&quot;</tt> column. The <code>&#8211;radix</code> option can be used to change the number base for all columns. Here is the same data displayed with GNU conventions: </p>
 <pre>
         $ size --format=GNU ranlib size
               text       data        bss      total filename
@@ -73,11 +73,11 @@ description: "size – list section sizes and total size of binary files"
 </dd><dt><code>&#8211;radix=</code><i>number</i></dt>
 <dd> Using one of these options, you can control whether the size of each section is given in decimal (<code>-d</code>, or <code>&#8211;radix=10</code>); octal (<code>-o</code>, or <code>&#8211;radix=8</code>); or hexadecimal (<code>-x</code>, or <code>&#8211;radix=16</code>). In <code>&#8211;radix=</code><i>number</i>, only the three values (8, 10, 16) are supported. The total size is always given in two radices; decimal and hexadecimal for <code>-d</code> or <code>-x</code> output, or octal and hexadecimal if you&#8217;re using <code>-o</code>.</dd>
 <dt><code>&#8211;common</code></dt>
-<dd> Print total size of common symbols in each file. When using Berkeley or <font SIZE="-1">GNU</font> format these are included in the bss size.</dd>
+<dd> Print total size of common symbols in each file. When using Berkeley or GNU format these are included in the bss size.</dd>
 <dt><code>-t</code></dt>
 <dd>
 </dd><dt><code>&#8211;totals</code></dt>
-<dd> Show totals of all objects listed (Berkeley or <font SIZE="-1">GNU</font> format mode only).</dd>
+<dd> Show totals of all objects listed (Berkeley or GNU format mode only).</dd>
 <dt><code>&#8211;target=</code><i>bfdname</i></dt>
 <dd> Specify that the object-code format for <i>objfile</i> is <i>bfdname</i>. This option may not be necessary; <code>size</code> can automatically recognize many formats.</dd>
 <dt><code>-V</code></dt>
@@ -91,4 +91,4 @@ description: "size – list section sizes and total size of binary files"
 <p> <code><a href="/docs/linux/man/1-ar/">ar</a></code>(1), <code><a href="/docs/linux/man/1-objdump/">objdump</a></code>(1), <code><a href="/docs/linux/man/1-readelf/">readelf</a></code>(1), and the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991-2022 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

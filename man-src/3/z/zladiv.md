@@ -10,7 +10,7 @@ description: "zladiv.f –"
 <p>zladiv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>COMPLEX *16 function <code>zladiv</code> (X, Y)<br />
+<p>COMPLEX *16 function <code>zladiv</code> (X, Y)<br/>
  <i></i><code>ZLADIV</code> performs complex division in real arithmetic, avoiding unnecessary overflow.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>COMPLEX*16 function zladiv (complex*16X, complex*16Y)</h3>

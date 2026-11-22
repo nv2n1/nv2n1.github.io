@@ -10,24 +10,24 @@ description: "hydra – a very fast network logon cracker which support many dif
 
 <p> hydra &#8211; a very fast network logon cracker which support many different services</p>
 <h2>SYNOPSIS</h2>
-<p> <code>hydra</code><br />
-&nbsp;<wbr>[[[-l LOGIN|-L FILE]&nbsp;<wbr>[-p PASS|-P FILE|-x OPT]]&nbsp;<wbr>|&nbsp;<wbr>[-C FILE]]&nbsp;<wbr>[-e nsr]<br />
-&nbsp;<wbr>[-u]&nbsp;<wbr>[-f]&nbsp;<wbr>[-F]&nbsp;<wbr>[-M FILE]&nbsp;<wbr>[-o FILE]&nbsp;<wbr>[-t TASKS]&nbsp;<wbr>[-w TIME]&nbsp;<wbr>[-W TIME]<br />
-&nbsp;<wbr>[-s PORT]&nbsp;<wbr>[-S]&nbsp;<wbr>[-4/6]&nbsp;<wbr>[-vV]&nbsp;<wbr>[-d]<br />
+<p> <code>hydra</code><br/>
+&nbsp;<wbr>[[[-l LOGIN|-L FILE]&nbsp;<wbr>[-p PASS|-P FILE|-x OPT]]&nbsp;<wbr>|&nbsp;<wbr>[-C FILE]]&nbsp;<wbr>[-e nsr]<br/>
+&nbsp;<wbr>[-u]&nbsp;<wbr>[-f]&nbsp;<wbr>[-F]&nbsp;<wbr>[-M FILE]&nbsp;<wbr>[-o FILE]&nbsp;<wbr>[-t TASKS]&nbsp;<wbr>[-w TIME]&nbsp;<wbr>[-W TIME]<br/>
+&nbsp;<wbr>[-s PORT]&nbsp;<wbr>[-S]&nbsp;<wbr>[-4/6]&nbsp;<wbr>[-vV]&nbsp;<wbr>[-d]<br/>
 &nbsp;<wbr>server service&nbsp;<wbr>[OPTIONAL_SERVICE_PARAMETER] </p>
 <h2>DESCRIPTION</h2>
 <p> Hydra is a parallized login cracker which supports numerous protocols to attack. New modules are easy to add, beside that, it is flexible and very fast. </p>
 <p> This tool gives researchers and security consultants the possiblity to show how easy it would be to gain unauthorized access from remote to a system. </p>
-<p> Currently this tool supports:<br />
-&nbsp;<wbr>AFP, Cisco AAA, Cisco auth, Cisco enable, CVS, Firebird, FTP, FTPS,&nbsp;<wbr><br />
-&nbsp;<wbr>HTTP-FORM-GET, HTTP-FORM-POST, HTTP-GET, HTTP-HEAD, HTTP-PROXY,<br />
-&nbsp;<wbr>HTTP-PROXY-URLENUM, ICQ, IMAP, IRC, LDAP2, LDAP3, MS-SQL, MYSQL, NCP, NNTP,<br />
-&nbsp;<wbr>Oracle, Oracle-Listener, Oracle-SID, PC-Anywhere, PCNFS, POP3, POSTGRES,<br />
-&nbsp;<wbr>RDP, REXEC, RLOGIN, RSH, SAP/R3, SIP, SMB, SMTP, SMTP-Enum, SNMP,<br />
-&nbsp;<wbr>SOCKS5, SSH(v1 and v2), SSHKEY, Subversion, Teamspeak&nbsp;<wbr>(TS2), Telnet,<br />
-&nbsp;<wbr>VMware-Auth, VNC and XMPP.<br />
-&nbsp;<wbr>For most protocols, SSL mode is available&nbsp;<wbr>(e.g. https-get, ftp-ssl, etc.)<br />
-&nbsp;<wbr>If not all necessary libraries are found during compile time, your<br />
+<p> Currently this tool supports:<br/>
+&nbsp;<wbr>AFP, Cisco AAA, Cisco auth, Cisco enable, CVS, Firebird, FTP, FTPS,&nbsp;<wbr><br/>
+&nbsp;<wbr>HTTP-FORM-GET, HTTP-FORM-POST, HTTP-GET, HTTP-HEAD, HTTP-PROXY,<br/>
+&nbsp;<wbr>HTTP-PROXY-URLENUM, ICQ, IMAP, IRC, LDAP2, LDAP3, MS-SQL, MYSQL, NCP, NNTP,<br/>
+&nbsp;<wbr>Oracle, Oracle-Listener, Oracle-SID, PC-Anywhere, PCNFS, POP3, POSTGRES,<br/>
+&nbsp;<wbr>RDP, REXEC, RLOGIN, RSH, SAP/R3, SIP, SMB, SMTP, SMTP-Enum, SNMP,<br/>
+&nbsp;<wbr>SOCKS5, SSH(v1 and v2), SSHKEY, Subversion, Teamspeak&nbsp;<wbr>(TS2), Telnet,<br/>
+&nbsp;<wbr>VMware-Auth, VNC and XMPP.<br/>
+&nbsp;<wbr>For most protocols, SSL mode is available&nbsp;<wbr>(e.g. https-get, ftp-ssl, etc.)<br/>
+&nbsp;<wbr>If not all necessary libraries are found during compile time, your<br/>
 &nbsp;<wbr>available services will be less. Type&nbsp;<wbr>&quot;hydra&quot;&nbsp;<wbr>to see what is available.</p>
 <h2>Options</h2>
 <dl>
@@ -36,7 +36,7 @@ description: "hydra – a very fast network logon cracker which support many dif
 <dt><code>service</code></dt>
 <dd> a service to attack, see the list of protocols available</dd>
 <dt><code>OPTIONAL SERVICE PARAMETER</code></dt>
-<dd> Some modules have optional or mandatory options. type &quot;hydra -U &lt;servicename&gt;&quot;<br />
+<dd> Some modules have optional or mandatory options. type &quot;hydra -U &lt;servicename&gt;&quot;<br/>
 &nbsp;<wbr>to get help on on the options of a service.</dd>
 <dt><code>-R </code></dt>
 <dd> restore a previously aborted session. Requires a hydra.restore file was written. No other options are allowed when using -R</dd>
@@ -49,11 +49,11 @@ description: "hydra – a very fast network logon cracker which support many dif
 <dt><code>-p PASS</code></dt>
 <dd> or -P FILE try password PASS, or load several passwords from FILE</dd>
 <dt><code>-x min:max:charset</code></dt>
-<dd> generate passwords from min to max length. charset can contain 1<br />
-&nbsp;<wbr>for numbers, a for lowcase and A for upcase characters.<br />
-&nbsp;<wbr>Any other character is added is put to the list.&nbsp;<wbr><br />
-Example: 1:2:a1%.<br />
-The generated passwords will be of length 1 to 2 and contain<br />
+<dd> generate passwords from min to max length. charset can contain 1<br/>
+&nbsp;<wbr>for numbers, a for lowcase and A for upcase characters.<br/>
+&nbsp;<wbr>Any other character is added is put to the list.&nbsp;<wbr><br/>
+Example: 1:2:a1%.<br/>
+The generated passwords will be of length 1 to 2 and contain<br/>
 lowcase letters, numbers and/or percent signs and dots.</dd>
 <dt><code>-e nsr</code></dt>
 <dd> additional checks, &quot;n&quot; for null password, &quot;s&quot; try login as pass, &quot;r&quot; try the reverse login as pass</dd>
@@ -82,7 +82,7 @@ lowcase letters, numbers and/or percent signs and dots.</dd>
 <dt><code>-h, &#8211;help</code></dt>
 <dd> Show summary of options.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xhydra/">xhydra</a></code>(1), <code><a href="/docs/linux/man/1-pw-inspector/">pw-inspector</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-xhydra/">xhydra</a></code>(1), <code><a href="/docs/linux/man/1-pw-inspector/">pw-inspector</a></code>(1).<br/>
  The programs are documented fully by van Hauser &lt;vh [at] thc.org&gt;</p>
 <h2>AUTHOR</h2>
 <p> hydra was written by van Hauser / THC &lt;vh [at] thc.org&gt; </p>

@@ -27,7 +27,7 @@ description: "phar, phar.phar – PHAR (PHP archive) command line tool"
 <dt><code>-a </code><i>alias</i></dt>
 <dd> Provide an <i>alias</i> name for the phar file.</dd>
 <dt><code>-c </code><i>algo</i></dt>
-<dd> Compression algorithm (see <font SIZE="-1"><code>COMPRESSION</code> </font> )</dd>
+<dd> Compression algorithm (see <code>COMPRESSION</code>  )</dd>
 <dt><code>-i </code><i>regex</i></dt>
 <dd> Specifies a regular expression for input files.</dd>
 <dt><code>-l </code><i>level</i></dt>
@@ -40,7 +40,7 @@ description: "phar, phar.phar – PHAR (PHP archive) command line tool"
 <p> Required arguments:</p>
 <dl COMPACT>
 <dt><code>-c </code><i>algo</i></dt>
-<dd> Compression algorithm (see <font SIZE="-1"><code>COMPRESSION</code> </font> )</dd>
+<dd> Compression algorithm (see <code>COMPRESSION</code>  )</dd>
 <dt><code>-f </code><i>file</i></dt>
 <dd> Specifies the phar <i>file</i> to work on.</dd></dl>
 <p> Optional arguments:</p>
@@ -165,9 +165,9 @@ description: "phar, phar.phar – PHAR (PHP archive) command line tool"
 <dt><code>-b </code><i>bang</i></dt>
 <dd> Hash-bang line to start the archive (e.g. #!/usr/bin/php). The hash mark itself &#8216;#!&#8217; and the newline character are optional.</dd>
 <dt><code>-c </code><i>algo</i></dt>
-<dd> Compression algorithm (see <font SIZE="-1"><code>COMPRESSION</code> </font> )</dd>
+<dd> Compression algorithm (see <code>COMPRESSION</code>  )</dd>
 <dt><code>-h </code><i>hash</i></dt>
-<dd> Selects the <i>hash</i> algorithm (see <font SIZE="-1"><code>HASH</code> </font> )</dd>
+<dd> Selects the <i>hash</i> algorithm (see <code>HASH</code>  )</dd>
 <dt><code>-i </code><i>regex</i></dt>
 <dd> Specifies a regular expression for input files.</dd>
 <dt><code>-l </code><i>level</i></dt>
@@ -188,7 +188,7 @@ description: "phar, phar.phar – PHAR (PHP archive) command line tool"
 <dt><code>-f </code><i>file</i></dt>
 <dd> Specifies the phar <i>file</i> to work on.</dd>
 <dt><code>-h </code><i>hash</i></dt>
-<dd> Selects the <i>hash</i> algorithm (see <font SIZE="-1"><code>HASH</code> </font> )</dd></dl>
+<dd> Selects the <i>hash</i> algorithm (see <code>HASH</code>  )</dd></dl>
 <p> Optional arguments:</p>
 <dl COMPACT>
 <dt><code>-y </code><i>key</i></dt>

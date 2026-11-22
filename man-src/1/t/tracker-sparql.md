@@ -53,21 +53,21 @@ Properties: 2
 <p> If no <i>class</i> is given, the entire tree is shown. </p>
 <p> The <code>&#8211;search</code> command line option can be used to highlight parts of the tree you&#8217;re looking for. The search is case insensitive. </p>
 <p> The <code>&#8211;properties</code> command line option can be used to show properties for each class displayed, for example: </p>
-<p>$ tracker sparql &#8211; t nfo : FileDataObject &#8211; p ROOT + &#8211;rdfs : Resource(C) | &#8212; &gt; http :                                                                                                                                                                                                     // purl.org/dc/elements/1.1/contributor (P)<br />
-                                                                                        | &#8212; &gt; http :                                                                                                                                                                                       // purl.org/dc/elements/1.1/coverage (P)<br />
-                                                                                                      | &#8212; &gt; http :                                                                                                                                                                         // purl.org/dc/elements/1.1/creator (P)<br />
-                                                                                                                    | &#8212; &gt; http :                                                                                                                                                           // purl.org/dc/elements/1.1/date (P)<br />
-                                                                                                                                  | &#8212; &gt; http :                                                                                                                                             // purl.org/dc/elements/1.1/description (P)<br />
-                                                                                                                                                | &#8212; &gt; http :                                                                                                                               // purl.org/dc/elements/1.1/format (P)<br />
-                                                                                                                                                              | &#8212; &gt; http :                                                                                                                 // purl.org/dc/elements/1.1/identifier (P)<br />
-                                                                                                                                                                            | &#8212; &gt; http :                                                                                                   // purl.org/dc/elements/1.1/language (P)<br />
-                                                                                                                                                                                          | &#8212; &gt; http :                                                                                     // purl.org/dc/elements/1.1/publisher (P)<br />
-                                                                                                                                                                                                        | &#8212; &gt; http :                                                                       // purl.org/dc/elements/1.1/relation (P)<br />
-                                                                                                                                                                                                                      | &#8212; &gt; http :                                                         // purl.org/dc/elements/1.1/rights (P)<br />
-                                                                                                                                                                                                                                    | &#8212; &gt; http :                                           // purl.org/dc/elements/1.1/source (P)<br />
-                                                                                                                                                                                                                                                  | &#8212; &gt; http :                             // purl.org/dc/elements/1.1/subject (P)<br />
-                                                                                                                                                                                                                                                                | &#8212; &gt; http :               // purl.org/dc/elements/1.1/title (P)<br />
-                                                                                                                                                                                                                                                                              | &#8212; &gt; http : // purl.org/dc/elements/1.1/type (P)<br />
+<p>$ tracker sparql &#8211; t nfo : FileDataObject &#8211; p ROOT + &#8211;rdfs : Resource(C) | &#8212; &gt; http :                                                                                                                                                                                                     // purl.org/dc/elements/1.1/contributor (P)<br/>
+                                                                                        | &#8212; &gt; http :                                                                                                                                                                                       // purl.org/dc/elements/1.1/coverage (P)<br/>
+                                                                                                      | &#8212; &gt; http :                                                                                                                                                                         // purl.org/dc/elements/1.1/creator (P)<br/>
+                                                                                                                    | &#8212; &gt; http :                                                                                                                                                           // purl.org/dc/elements/1.1/date (P)<br/>
+                                                                                                                                  | &#8212; &gt; http :                                                                                                                                             // purl.org/dc/elements/1.1/description (P)<br/>
+                                                                                                                                                | &#8212; &gt; http :                                                                                                                               // purl.org/dc/elements/1.1/format (P)<br/>
+                                                                                                                                                              | &#8212; &gt; http :                                                                                                                 // purl.org/dc/elements/1.1/identifier (P)<br/>
+                                                                                                                                                                            | &#8212; &gt; http :                                                                                                   // purl.org/dc/elements/1.1/language (P)<br/>
+                                                                                                                                                                                          | &#8212; &gt; http :                                                                                     // purl.org/dc/elements/1.1/publisher (P)<br/>
+                                                                                                                                                                                                        | &#8212; &gt; http :                                                                       // purl.org/dc/elements/1.1/relation (P)<br/>
+                                                                                                                                                                                                                      | &#8212; &gt; http :                                                         // purl.org/dc/elements/1.1/rights (P)<br/>
+                                                                                                                                                                                                                                    | &#8212; &gt; http :                                           // purl.org/dc/elements/1.1/source (P)<br/>
+                                                                                                                                                                                                                                                  | &#8212; &gt; http :                             // purl.org/dc/elements/1.1/subject (P)<br/>
+                                                                                                                                                                                                                                                                | &#8212; &gt; http :               // purl.org/dc/elements/1.1/title (P)<br/>
+                                                                                                                                                                                                                                                                              | &#8212; &gt; http : // purl.org/dc/elements/1.1/type (P)<br/>
                                                                                                                                                                                                                                                                                             | &#8212; &gt; nao : deprecated(P) | &#8212; &gt; nao : hasTag(P) | &#8212; &gt; nao : identifier(P) | &#8212; &gt; nao : isRelated(P) | &#8212; &gt; nao : lastModified(P) | &#8212; &gt; nao : numericRating(P) | &#8212; &gt; rdf : type(P) | &#8212; &gt; rdfs : comment(P) | &#8212; &gt; rdfs : label(P) | &#8212; &gt; tracker : added(P) | &#8212; &gt; tracker : damaged(P) | &#8212; &gt; tracker : modified(P) | +&#8211;nie : DataObject(C) | | &#8212; &gt; nfo : belongsToContainer(P) | | &#8212; &gt; nie : byteSize(P) | | &#8212; &gt; nie : created(P) | | &#8212; &gt; nie : dataSource(P) | | &#8212; &gt; nie : interpretedAs(P) | | &#8212; &gt; nie : isPartOf(P) | | &#8212; &gt; nie : lastRefreshed(P) | | &#8212; &gt; nie : url(P) | | &#8212; &gt; tracker : available(P) | | +&#8211;nfo : FileDataObject(C) | | | &#8212; &gt; nfo : fileCreated(P) | | | &#8212; &gt; nfo : fileLastAccessed(P) | | | &#8212; &gt; nfo : fileLastModified(P) | | | &#8212; &gt; nfo : fileName(P) | | | &#8212; &gt; nfo : fileOwner(P) | | | &#8212; &gt; nfo : fileSize(P) | | | &#8212; &gt; nfo : hasHash(P) | | | &#8212; &gt; nfo : permissions(P)</p>
 <dt><code>-s, &#8211;search</code>=&lt;<i>needle</i>&gt;</dt>
 <dd> Returns a list of classes and properties which partially match <i>needle</i> in the ontology. This is a case insensitive match, for example: </dd>
@@ -136,40 +136,40 @@ $ tracker sparql -q &quot;SELECT ?song WHERE { ?song a nmm:MusicPiece }&quot;
 </pre>
 </dd><dt>List all music albums, showing title, track count, and length in seconds.</dt>
 <dd>
-<p>$ tracker sparql -q &#8220;SELECT ?title COUNT(?song)<br />
-                     AS songs<br />
-                     SUM(?length) AS totallength<br />
-                     WHERE<br />
-{<br />
-    ? album a nmm : MusicAlbum;<br />
-nie:<br />
-    title ? title.<br />
-                ? song nmm<br />
-                : musicAlbum<br />
-                ? album;<br />
-nfo:<br />
-    duration ? length<br />
-}<br />
+<p>$ tracker sparql -q &#8220;SELECT ?title COUNT(?song)<br/>
+                     AS songs<br/>
+                     SUM(?length) AS totallength<br/>
+                     WHERE<br/>
+{<br/>
+    ? album a nmm : MusicAlbum;<br/>
+nie:<br/>
+    title ? title.<br/>
+                ? song nmm<br/>
+                : musicAlbum<br/>
+                ? album;<br/>
+nfo:<br/>
+    duration ? length<br/>
+}<br/>
 GROUP BY ? album &#8221;</p>
 </dd><dt>List all music from a particular artist</dt>
 <dd>
-<p>$ tracker sparql &#8211; q &#8220;SELECT ?song ?title WHERE {<br />
-    ? song nmm<br />
-    : performer [nmm:artistName &#8216;Artist Name&#8217;];<br />
-nie : title ? title<br />
-}<br />
+<p>$ tracker sparql &#8211; q &#8220;SELECT ?song ?title WHERE {<br/>
+    ? song nmm<br/>
+    : performer [nmm:artistName &#8216;Artist Name&#8217;];<br/>
+nie : title ? title<br/>
+}<br/>
 &#8221;</p>
 </dd><dt>Set the played count for a song</dt>
 <dd>
-<p>$ tracker sparql &#8211; u &#8211; q &#8220;DELETE {<br />
-    &lt; file: /// home/user/Music/song.mp3&gt; nie:usageCounter ?count<br />
-}<br />
-WHERE{<br />
-    &lt; file : /// home/user/Music/song.mp3&gt; nie:usageCounter ?count<br />
-} INSERT<br />
-{<br />
-    &lt; file: /// home/user/Music/song.mp3&gt; nie:usageCounter 42<br />
-}<br />
+<p>$ tracker sparql &#8211; u &#8211; q &#8220;DELETE {<br/>
+    &lt; file: /// home/user/Music/song.mp3&gt; nie:usageCounter ?count<br/>
+}<br/>
+WHERE{<br/>
+    &lt; file : /// home/user/Music/song.mp3&gt; nie:usageCounter ?count<br/>
+} INSERT<br/>
+{<br/>
+    &lt; file: /// home/user/Music/song.mp3&gt; nie:usageCounter 42<br/>
+}<br/>
 &#8221;</p>
 </dd><dt>List all image files</dt>
 <dd>
@@ -178,11 +178,11 @@ $ tracker sparql -q &quot;SELECT ?image WHERE { ?image a nfo:Image }&quot;
 </pre>
 </dd><dt>List all image files with a specific tag</dt>
 <dd>
-<p>$ tracker sparql &#8211; q &#8220;SELECT ?image WHERE {<br />
-    ? image a nfo<br />
-    : Image;<br />
-nao : hasTag [nao:prefLabel &#8216;tag&#8217;]<br />
-}<br />
+<p>$ tracker sparql &#8211; q &#8220;SELECT ?image WHERE {<br/>
+    ? image a nfo<br/>
+    : Image;<br/>
+nao : hasTag [nao:prefLabel &#8216;tag&#8217;]<br/>
+}<br/>
 &#8221;</p>
 </dd><dt>List all image files created on a specific month and order by date</dt>
 <dd>

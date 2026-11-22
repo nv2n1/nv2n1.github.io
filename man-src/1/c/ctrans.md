@@ -54,7 +54,7 @@ description: "ctrans – a Computer Graphics Metafile ( CGM ) translator"
 <dt><code>-quiet</code></dt>
 <dd> Suppress reporting of non-fatal (warning) error messages; only fatal error messages are reported.</dd>
 <dt><code>-record </code></dt>
-<dd> &lt; <i>record_number&#8230; </i> &gt;<br />
+<dd> &lt; <i>record_number&#8230; </i> &gt;<br/>
  If processing only single frames of the metafile is desired, this option specifies the <i>record number</i> containing the start of that frame. <code>ctrans</code> assumes the processing is to start at the first <code>BEGIN PICTURE</code> element in that record. The user must perform bookkeeping to determine the record that contains the desired frame. Normally, a metafile editor (e.g., <code>ictrans(1NCARG)</code>. may be used as the actual user interface to perform this bookkeeping. Without a specified <i>record number,</i> <code>ctrans</code> processes the entire metafile.</dd>
 <dt><code>-soft</code></dt>
 <dd> Unconditionally perform software filling of all filled polygons. This option may be useful for devices which do not support the filled polygon drawing primitive or have limits on the number of vertices describing a polygon. On some devices this number is known and software filling is performed, as appropriate, without user specification.</dd>
@@ -171,6 +171,6 @@ description: "ctrans – a Computer Graphics Metafile ( CGM ) translator"
 <p> Using the <code>-wid </code> option to have <code>ctrans </code> display its output in a window created by another X application may produce unexpected results, particularly with regard to color. </p>
 <p> At <code>ctrans&#8217;</code> current level of implementation, the subset of CGM elements supported is closely approximated by the list provided in <code>NCAR&#8217;s</code> <i>Graphics Installer&#8217;s Guide,</i> Version 2.00 (August 1987). However, the best way to determine whether a particular CGM element is supported by the translator is feed a metafile containing the element in question to <code>ctrans</code>. Consult the aforementioned publication for a discussion of Graphcaps and Fontcaps as well.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1987-2009<br />
+<p> Copyright (C) 1987-2009<br/>
  University Corporation for Atmospheric Research </p>
 <p> The use of this Software is governed by a License Agreement. </p>

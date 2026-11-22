@@ -71,7 +71,7 @@ description: "indexmaker – Creates index files for mrtg web sites (mrtg-2.17.4
 <dt><code>&#8211;title</code> <i>text</i></dt>
 <dd> Set title of generated index file (default: regexp)</dd>
 <dt><code>&#8211;bodyopt</code> <i>text</i></dt>
-<dd> The value of this argument gets appended to the &lt;<font SIZE="-1">BODY</font>&gt; tag. This allows you to set document colors. By default this option is set to </dd>
+<dd> The value of this argument gets appended to the &lt;BODY&gt; tag. This allows you to set document colors. By default this option is set to </dd>
 <pre>
  bgcolor=&quot;#ffffff&quot; text=&quot;#000000&quot; link=&quot;#000000&quot; vlink=&quot;#000000&quot; alink=&quot;#000000&quot;
 </pre>
@@ -104,6 +104,6 @@ description: "indexmaker – Creates index files for mrtg web sites (mrtg-2.17.4
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt;</p>
 <h2>LICENSE</h2>
-<p> <font SIZE="-1">GNU</font> General Public License</p>
+<p> GNU General Public License</p>
 <h2>COPYRIGHT</h2>
 <p> 2000-2001 Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>

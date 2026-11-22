@@ -10,7 +10,7 @@ description: "zlarscl2.f –"
 <p>zlarscl2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlarscl2</code> (M, N, D, X, LDX)<br />
+<p>subroutine <code>zlarscl2</code> (M, N, D, X, LDX)<br/>
  <i></i><code>ZLARSCL2</code> performs reciprocal diagonal scaling on a vector.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlarscl2 (integerM, integerN, double precision, dimension( * )D, complex*16, dimension( ldx, * )X, integerLDX)</h3>

@@ -19,10 +19,10 @@ void *realloc(void *ptr, size_t size);
 void *reallocarray(void *ptr, size_t nmemb, size_t size);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>reallocarray</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.29:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.28 and earlier:<br />
+<p> <code>reallocarray</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.29:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.28 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_GNU_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>malloc</code>() function allocates <i>size</i> bytes and returns a pointer to the allocated memory. <i>The memory is not initialized</i>. If <i>size</i> is 0, then <code>malloc</code>() returns either NULL, or a unique pointer value that can later be successfully passed to <code>free</code>(). </p>
@@ -55,7 +55,7 @@ void *reallocarray(void *ptr, size_t nmemb, size_t size);
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>malloc</code>(), <code>free</code>(),<br />
+<td> <code>malloc</code>(), <code>free</code>(),<br/>
  <code>calloc</code>(), <code>realloc</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

@@ -193,8 +193,8 @@ description: "scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf – input format c
 <h2>NOTES</h2>
 <h3>The 'a' assignment-allocation modifier</h3>
 <p> Originally, the GNU C library supported dynamic allocation for string inputs (as a nonstandard extension) via the <code>a</code> character. (This feature is present at least as far back as glibc 2.0.) Thus, one could write the following to have <code>scanf</code>() allocate a buffer for an input string, with a pointer to that buffer being returned in <i>*buf</i>: </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*buf; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*buf; <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;scanf(&quot;%as&quot;,&nbsp;&amp;buf); </p>
 <p> The use of the letter <code>a</code> for this purpose was problematic, since <code>a</code> is also specified by the ISO C standard as a synonym for <code>f</code> (floating-point input). POSIX.1-2008 instead specifies the <code>m</code> modifier for assignment allocation (as documented in DESCRIPTION, above). </p>
 <p> Note that the <code>a</code> modifier is not available if the program is compiled with <i>gcc -std=c99</i> or <i>gcc -D_ISOC99_SOURCE</i> (unless <code>_GNU_SOURCE</code> is also specified), in which case the <code>a</code> is interpreted as a specifier for floating-point numbers (see above). </p>
@@ -214,10 +214,10 @@ description: "scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf – input format c
 <h2>EXAMPLES</h2>
 <p> To use the dynamic allocation conversion specifier, specify <code>m</code> as a length modifier (thus <code>%ms</code> or <code>%m[</code><i>range</i><code>]</code>). The caller must <code><a href="/docs/linux/man/3-free/">free</a></code>(3) the returned string, as in the following example: </p>
 <p> char *p; int n; </p>
-<p> errno = 0; n = scanf(&quot;%m[a-z]&quot;, &amp;p); if (n == 1) { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;read:&nbsp;%s\n&quot;, p); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(p); } else if (errno != 0) { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;scanf&quot;); } else { <br />
+<p> errno = 0; n = scanf(&quot;%m[a-z]&quot;, &amp;p); if (n == 1) { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;read:&nbsp;%s\n&quot;, p); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(p); } else if (errno != 0) { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;scanf&quot;); } else { <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;No matching characters\n&quot;); } </p>
 <p> As shown in the above example, it is necessary to call <code><a href="/docs/linux/man/3-free/">free</a></code>(3) only if the <code>scanf</code>() call successfully read a string.  </p>
 <h2>SEE ALSO</h2>

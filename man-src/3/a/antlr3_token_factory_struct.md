@@ -12,21 +12,21 @@ description: "ANTLR3_TOKEN_FACTORY_struct –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3commontoken.h">antlr3commontoken.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p>void(* <code>close</code> )(struct <code>ANTLR3_TOKEN_FACTORY_struct</code> *factory)<br />
- <i>Pointer to a function the destroys the factory. </i><br />
- <code>pANTLR3_INPUT_STREAM</code> <code>input</code><br />
- <i>Pointer to an input stream that is using this token factory (may be NULL) which will be assigned to the tokens automatically. </i><br />
- <code>pANTLR3_COMMON_TOKEN</code>(* <code>newToken</code> )(struct <code>ANTLR3_TOKEN_FACTORY_struct</code> *factory)<br />
- <i>Pointer to a function that returns a new token. </i><br />
- <code>ANTLR3_UINT32</code> <code>nextToken</code><br />
- <i>The next token to throw out from the pool, will cause a new pool allocation if this exceeds the available tokenCount. </i><br />
- <code>pANTLR3_COMMON_TOKEN</code> * <code>pools</code><br />
- <i>Pointers to the array of tokens that this factory has produced so far. </i><br />
- void(* <code>setInputStream</code> )(struct <code>ANTLR3_TOKEN_FACTORY_struct</code> *factory, <code>pANTLR3_INPUT_STREAM</code> <code>input</code>)<br />
- <i>Pointer to a function that changes teh curent inptu stream so that new tokens are created with reference to their originating text. </i><br />
- <code>ANTLR3_INT32</code> <code>thisPool</code><br />
- <i>Current pool tokens we are allocating from. </i><br />
- <code>ANTLR3_COMMON_TOKEN</code> <code>unTruc</code><br />
+<p>void(* <code>close</code> )(struct <code>ANTLR3_TOKEN_FACTORY_struct</code> *factory)<br/>
+ <i>Pointer to a function the destroys the factory. </i><br/>
+ <code>pANTLR3_INPUT_STREAM</code> <code>input</code><br/>
+ <i>Pointer to an input stream that is using this token factory (may be NULL) which will be assigned to the tokens automatically. </i><br/>
+ <code>pANTLR3_COMMON_TOKEN</code>(* <code>newToken</code> )(struct <code>ANTLR3_TOKEN_FACTORY_struct</code> *factory)<br/>
+ <i>Pointer to a function that returns a new token. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>nextToken</code><br/>
+ <i>The next token to throw out from the pool, will cause a new pool allocation if this exceeds the available tokenCount. </i><br/>
+ <code>pANTLR3_COMMON_TOKEN</code> * <code>pools</code><br/>
+ <i>Pointers to the array of tokens that this factory has produced so far. </i><br/>
+ void(* <code>setInputStream</code> )(struct <code>ANTLR3_TOKEN_FACTORY_struct</code> *factory, <code>pANTLR3_INPUT_STREAM</code> <code>input</code>)<br/>
+ <i>Pointer to a function that changes teh curent inptu stream so that new tokens are created with reference to their originating text. </i><br/>
+ <code>ANTLR3_INT32</code> <code>thisPool</code><br/>
+ <i>Current pool tokens we are allocating from. </i><br/>
+ <code>ANTLR3_COMMON_TOKEN</code> <code>unTruc</code><br/>
  <i>Trick to initialize tokens and their API quickly, we set up this token when the factory is created, then just copy the memory it uses into the new token. </i></p>
 <h2>Detailed Description</h2>
 <p>ANTLR3 Token factory interface to create lots of tokens efficiently rather than creating and freeing lots of little bits of memory.</p>

@@ -10,7 +10,7 @@ description: "chbgst.f –"
 <p>chbgst.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>chbgst</code> (VECT, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, X, LDX, WORK, RWORK, INFO)<br />
+<p>subroutine <code>chbgst</code> (VECT, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, X, LDX, WORK, RWORK, INFO)<br/>
  <i></i><code>CHBGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chbgst (characterVECT, characterUPLO, integerN, integerKA, integerKB, complex, dimension( ldab, * )AB, integerLDAB, complex, dimension( ldbb, * )BB, integerLDBB, complex, dimension( ldx, * )X, integerLDX, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

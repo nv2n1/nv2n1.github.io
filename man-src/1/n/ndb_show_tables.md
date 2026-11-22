@@ -63,7 +63,7 @@ ndb_show_tables [-c <i>connect_string</i>]
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Only user-created Cluster tables may be accessed from MySQL; system tables such as SYSTAB_0 are not visible to <code>mysqld</code>. However, you can examine the contents of system tables using NDB API applications such as <code>ndb_select_all</code> (see <code><a href="/docs/linux/man/1-ndb_select_all/">ndb_select_all</a></code>(1)). </p>
 </dl>
 </dl>

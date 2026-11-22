@@ -14,9 +14,9 @@ description: "QuantLib::Event – Base class for event."
 <p> Inherited by <code>Callability</code>, <code>CashFlow</code>, and <code>DefaultEvent</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>Event interface</code> </p>
-<p> virtual <code>Date</code> <code>date</code> () const =0<br />
- <i>returns the date at which the event occurs </i><br />
- bool <code>hasOccurred</code> (const <code>Date</code> &amp;d, bool includeToday=false) const<br />
+<p> virtual <code>Date</code> <code>date</code> () const =0<br/>
+ <i>returns the date at which the event occurs </i><br/>
+ bool <code>hasOccurred</code> (const <code>Date</code> &amp;d, bool includeToday=false) const<br/>
  <i>returns true if an event has already occurred before a date </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>

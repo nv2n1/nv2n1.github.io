@@ -72,25 +72,25 @@ $ dbpmda
                                                                                                            &gt;
 </code></pre>
 <p> To examine the metric and instance descriptors, the <code>desc</code> and <code>instance</code> commands can be used. Metrics may be identified either by name, or using the &#8220;dotted&#8221; notation to specify the domain, cluster and item fields of a PMID. Instance domains must be identified using a &#8220;dotted&#8221; notation to specify the domain and serial fields. The syntax for most commands will be displayed if the command is given without any arguments: </p>
-<p>dbpmda &gt; desc 253.0.0 PMID : 253.0.0 Data Type : 32 &#8211; bit unsigned int InDom : PM_INDOM_NULL 0xffffffff Semantics : instant Units : none<br />
-                                                                                                                                        dbpmda &gt;<br />
-    instance<br />
-        instance indom #[number | name | &#8220;name&#8221;] dbpmda &gt; instance 253.0 pmInDom : 253.0<br />
-                                                              [0] inst : 0 name : &#8220;red&#8221;<br />
-                                                                                      [1] inst : 1 name : &#8220;green&#8221;<br />
+<p>dbpmda &gt; desc 253.0.0 PMID : 253.0.0 Data Type : 32 &#8211; bit unsigned int InDom : PM_INDOM_NULL 0xffffffff Semantics : instant Units : none<br/>
+                                                                                                                                        dbpmda &gt;<br/>
+    instance<br/>
+        instance indom #[number | name | &#8220;name&#8221;] dbpmda &gt; instance 253.0 pmInDom : 253.0<br/>
+                                                              [0] inst : 0 name : &#8220;red&#8221;<br/>
+                                                                                      [1] inst : 1 name : &#8220;green&#8221;<br/>
                                                                                                               [2] inst : 2 name : &#8220;blue&#8221;</p>
 <p> To test the most important component of a PMDA, the <code>fetch</code>, it is often useful to determine the time it takes the PMDA to respond. The <code>timer</code> may be turned on before giving a <code>fetch</code>: </p>
-<p>dbpmda&gt; timer on<br />
-dbpmda&gt; fetch simple.numfetch 253.0.1<br />
-PMID(s): 253.0.0 253.0.1<br />
-pmResult dump from 0x100078e0 timestamp: 0.000000 11:00:00.000 numpmid: 2<br />
-  253.0.0 (simple.numfetch): numval: 1 valfmt: 0 vlist[]:<br />
-   value 1 1.4012985e-45 0x1<br />
-  253.0.1 (simple.color): numval: 3 valfmt: 0 vlist[]:<br />
-    inst [0 or ???] value 1 1 1.4012985e-45 0x1<br />
-    inst [1 or ???] value 101 1.4153114e-43 0x65<br />
-    inst [2 or ???] value 201 2.8166099e-43 0xc9<br />
-Timer: 0.003921 seconds<br />
+<p>dbpmda&gt; timer on<br/>
+dbpmda&gt; fetch simple.numfetch 253.0.1<br/>
+PMID(s): 253.0.0 253.0.1<br/>
+pmResult dump from 0x100078e0 timestamp: 0.000000 11:00:00.000 numpmid: 2<br/>
+  253.0.0 (simple.numfetch): numval: 1 valfmt: 0 vlist[]:<br/>
+   value 1 1.4012985e-45 0x1<br/>
+  253.0.1 (simple.color): numval: 3 valfmt: 0 vlist[]:<br/>
+    inst [0 or ???] value 1 1 1.4012985e-45 0x1<br/>
+    inst [1 or ???] value 101 1.4153114e-43 0x65<br/>
+    inst [2 or ???] value 201 2.8166099e-43 0xc9<br/>
+Timer: 0.003921 seconds<br/>
 dbpmda&gt; timer off</p>
 <p> The integer, floating point and hex translations of the values in the <i>pmResult</i> structure are dumped if <code>getdesc</code> is set to <code>off</code> (the default). Setting <code>getdesc</code> to <code>on</code> would result in only integer values being dumped in the above fetch as the descriptor describes the metrics of 32-bit unsigned integers. </p>
 <p> The simple PMDA also supports the <code>store</code> operation which can be tested with subsequent <code>fetch</code> commands: </p>

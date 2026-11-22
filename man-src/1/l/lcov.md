@@ -14,57 +14,57 @@ description: "lcov – a graphical GCOV front-end"
 <dl>
 <dt>
 </dt><dd>
- [<code>-d</code>|<code>&#8211;directory</code> <i>directory</i>] [<code>-k</code>|<code>&#8211;kernel-directory</code> <i>directory</i>]<br />
- [<code>-o</code>|<code>&#8211;output-file</code> <i>tracefile</i>] [<code>-t</code>|<code>&#8211;test-name</code> <i>testname</i>]<br />
- [<code>-b</code>|<code>&#8211;base-directory</code> <i>directory</i>] [<code>-i</code>|<code>&#8211;initial</code>] [<code>&#8211;gcov-tool</code> <i>tool</i>]<br />
- [<code>&#8211;checksum</code>] [<code>&#8211;no-checksum</code>] [<code>&#8211;no-recursion</code>] [<code>-f</code>|<code>&#8211;follow</code>]<br />
- [<code>&#8211;compat-libtool</code>] [<code>&#8211;no-compat-libtool</code>] [<code>&#8211;ignore-errors</code> <i>errors</i>]<br />
- [<code>&#8211;to-package</code> <i>package</i>] [<code>&#8211;from-package</code> <i>package</i>] [<code>-q</code>|<code>&#8211;quiet</code>]<br />
- [<code>&#8211;no-markers</code>] [<code>&#8211;external</code>] [<code>&#8211;no-external</code>]<br />
- [<code>&#8211;config-file</code> <i>config-file</i>] [<code>&#8211;rc</code> <i>keyword</i>=<i>value</i>]<br />
+ [<code>-d</code>|<code>&#8211;directory</code> <i>directory</i>] [<code>-k</code>|<code>&#8211;kernel-directory</code> <i>directory</i>]<br/>
+ [<code>-o</code>|<code>&#8211;output-file</code> <i>tracefile</i>] [<code>-t</code>|<code>&#8211;test-name</code> <i>testname</i>]<br/>
+ [<code>-b</code>|<code>&#8211;base-directory</code> <i>directory</i>] [<code>-i</code>|<code>&#8211;initial</code>] [<code>&#8211;gcov-tool</code> <i>tool</i>]<br/>
+ [<code>&#8211;checksum</code>] [<code>&#8211;no-checksum</code>] [<code>&#8211;no-recursion</code>] [<code>-f</code>|<code>&#8211;follow</code>]<br/>
+ [<code>&#8211;compat-libtool</code>] [<code>&#8211;no-compat-libtool</code>] [<code>&#8211;ignore-errors</code> <i>errors</i>]<br/>
+ [<code>&#8211;to-package</code> <i>package</i>] [<code>&#8211;from-package</code> <i>package</i>] [<code>-q</code>|<code>&#8211;quiet</code>]<br/>
+ [<code>&#8211;no-markers</code>] [<code>&#8211;external</code>] [<code>&#8211;no-external</code>]<br/>
+ [<code>&#8211;config-file</code> <i>config-file</i>] [<code>&#8211;rc</code> <i>keyword</i>=<i>value</i>]<br/>
  [<code>&#8211;compat</code> <i>mode</i>=on|off|auto]
 </dd></dl>
 <p> <code>lcov</code> <code>-z</code>|<code>&#8211;zerocounters</code></p>
 <dl>
 <dt>
 </dt><dd>
- [<code>-d</code>|<code>&#8211;directory</code> <i>directory</i>] [<code>&#8211;no-recursion</code>] [<code>-f</code>|<code>&#8211;follow</code>]<br />
+ [<code>-d</code>|<code>&#8211;directory</code> <i>directory</i>] [<code>&#8211;no-recursion</code>] [<code>-f</code>|<code>&#8211;follow</code>]<br/>
  [<code>-q</code>|<code>&#8211;quiet</code>]
 </dd></dl>
 <p> <code>lcov</code> <code>-l</code>|<code>&#8211;list</code> <i>tracefile</i></p>
 <dl>
 <dt>
 </dt><dd>
- [<code>-q</code>|<code>&#8211;quiet</code>] [<code>&#8211;list-full-path</code>] [<code>&#8211;no-list-full-path</code>]<br />
+ [<code>-q</code>|<code>&#8211;quiet</code>] [<code>&#8211;list-full-path</code>] [<code>&#8211;no-list-full-path</code>]<br/>
  [<code>&#8211;config-file</code> <i>config-file</i>] [<code>&#8211;rc</code> <i>keyword</i>=<i>value</i>]
 </dd></dl>
 <p> <code>lcov</code> <code>-a</code>|<code>&#8211;add-tracefile</code> <i>tracefile</i></p>
 <dl>
 <dt>
 </dt><dd>
- [<code>-o</code>|<code>&#8211;output-file</code> <i>tracefile</i>] [<code>&#8211;checksum</code>] [<code>&#8211;no-checksum</code>]<br />
+ [<code>-o</code>|<code>&#8211;output-file</code> <i>tracefile</i>] [<code>&#8211;checksum</code>] [<code>&#8211;no-checksum</code>]<br/>
  [<code>-q</code>|<code>&#8211;quiet</code>] [<code>&#8211;config-file</code> <i>config-file</i>] [<code>&#8211;rc</code> <i>keyword</i>=<i>value</i>]
 </dd></dl>
 <p> <code>lcov</code> <code>-e</code>|<code>&#8211;extract</code> <i>tracefile pattern</i></p>
 <dl>
 <dt>
 </dt><dd>
- [<code>-o</code>|<code>&#8211;output-file</code> <i>tracefile</i>] [<code>&#8211;checksum</code>] [<code>&#8211;no-checksum</code>]<br />
+ [<code>-o</code>|<code>&#8211;output-file</code> <i>tracefile</i>] [<code>&#8211;checksum</code>] [<code>&#8211;no-checksum</code>]<br/>
  [<code>-q</code>|<code>&#8211;quiet</code>] [<code>&#8211;config-file</code> <i>config-file</i>] [<code>&#8211;rc</code> <i>keyword</i>=<i>value</i>]
 </dd></dl>
 <p> <code>lcov</code> <code>-r</code>|<code>&#8211;remove</code> <i>tracefile pattern</i></p>
 <dl>
 <dt>
 </dt><dd>
- [<code>-o</code>|<code>&#8211;output-file</code> <i>tracefile</i>] [<code>&#8211;checksum</code>] [<code>&#8211;no-checksum</code>]<br />
+ [<code>-o</code>|<code>&#8211;output-file</code> <i>tracefile</i>] [<code>&#8211;checksum</code>] [<code>&#8211;no-checksum</code>]<br/>
  [<code>-q</code>|<code>&#8211;quiet</code>] [<code>&#8211;config-file</code> <i>config-file</i>] [<code>&#8211;rc</code> <i>keyword</i>=<i>value</i>]
 </dd></dl>
 <p> <code>lcov</code> <code>&#8211;diff</code> <i>tracefile diff</i></p>
 <dl>
 <dt>
 </dt><dd>
- [<code>-o</code>|<code>&#8211;output-file</code> <i>tracefile</i>] [<code>&#8211;checksum</code>] [<code>&#8211;no-checksum</code>]<br />
- [<code>&#8211;convert-filenames</code>] [<code>&#8211;strip</code> <i>depth</i>] [<code>&#8211;path</code> <i>path</i>] [<code>-q</code>|<code>&#8211;quiet</code>]<br />
+ [<code>-o</code>|<code>&#8211;output-file</code> <i>tracefile</i>] [<code>&#8211;checksum</code>] [<code>&#8211;no-checksum</code>]<br/>
+ [<code>&#8211;convert-filenames</code>] [<code>&#8211;strip</code> <i>depth</i>] [<code>&#8211;path</code> <i>path</i>] [<code>-q</code>|<code>&#8211;quiet</code>]<br/>
  [<code>&#8211;config-file</code> <i>config-file</i>] [<code>&#8211;rc</code> <i>keyword</i>=<i>value</i>]
 </dd></dl>
 <p> <code>lcov</code> <code>&#8211;summary</code> <i>tracefile</i></p>
@@ -91,7 +91,7 @@ description: "lcov – a graphical GCOV front-end"
 <p> Please note that this man page refers to the output format of <code>lcov</code> as &quot;.info file&quot; or &quot;tracefile&quot; and that the output of GCOV is called &quot;.da file&quot;. </p>
 <p> Also note that when printing percentages, 0% and 100% are only printed when the values are exactly 0% and 100% respectively. Other values which would conventionally be rounded to 0% or 100% are instead printed as nearest non-boundary value. This behavior is in accordance with that of the <code><a href="/docs/linux/man/1-gcov/">gcov</a></code>(1) tool. </p>
 <h2>OPTIONS</h2>
-<p> <code>-a</code> <i>tracefile</i><br />
+<p> <code>-a</code> <i>tracefile</i><br/>
  <code>&#8211;add-tracefile</code> <i>tracefile</i> </p>
 <dl>
 <dt>
@@ -100,7 +100,7 @@ description: "lcov – a graphical GCOV front-end"
 <p> The result of the add operation will be written to stdout or the tracefile specified with -o. </p>
 <p> Only one of -z, -c, -a, -e, -r, -l, &#8211;diff or &#8211;summary may be specified at a time. </p>
 </dl>
-<p> <code>-b</code> <i>directory</i><br />
+<p> <code>-b</code> <i>directory</i><br/>
  <code>&#8211;base-directory</code> <i>directory</i> </p>
 <dl>
 <dt>
@@ -112,7 +112,7 @@ description: "lcov – a graphical GCOV front-end"
 <p> In this example, use /home/user/project as base directory. </p>
 <p> This option is required when using lcov on projects built with libtool or similar build environments that work with a base directory, i.e. environments, where the current working directory when invoking the compiler is not the same directory in which the source code file is located. </p>
 <p> Note that this option will not work in environments where multiple base directories are used. In that case use configuration file setting <code>geninfo_auto_base=1</code> (see <code><a href="/docs/linux/man/5-lcovrc/">lcovrc</a></code>(5)).</dl>
-<p> <code>-c</code><br />
+<p> <code>-c</code><br/>
  <code>&#8211;capture</code> </p>
 <dl>
 <dt>
@@ -120,7 +120,7 @@ description: "lcov – a graphical GCOV front-end"
 <p> By default captures the current kernel execution counts and writes the resulting coverage data to the standard output. Use the &#8211;directory option to capture counts for a user space program. </p>
 <p> The result of the capture operation will be written to stdout or the tracefile specified with -o. </p>
 <p> Only one of -z, -c, -a, -e, -r, -l, &#8211;diff or &#8211;summary may be specified at a time.</dl>
-<p> <code>&#8211;checksum</code><br />
+<p> <code>&#8211;checksum</code><br/>
  <code>&#8211;no-checksum</code> </p>
 <dl>
 <dt>
@@ -166,7 +166,7 @@ description: "lcov – a graphical GCOV front-end"
 </dt><dd> Enable this mode if you are capturing coverage data for a project that was built using a version of GCC 4.6 that contains a modification (split function checksums) of later GCC versions. Typical error messages when running lcov on coverage data produced by such GCC versions are &#8216;out of memory&#8217; and &#8216;reached unexpected end of file&#8217;. </dd>
 <p> The default value for this setting is &#8216;auto&#8217;</dl>
 </dl>
-<p> <code>&#8211;compat-libtool</code><br />
+<p> <code>&#8211;compat-libtool</code><br/>
  <code>&#8211;no-compat-libtool</code> </p>
 <dl>
 <dt>
@@ -193,21 +193,21 @@ description: "lcov – a graphical GCOV front-end"
 <p> Note that lines which are not present in the old version will not be counted as instrumented, therefore tracefiles resulting from this operation should not be interpreted individually but together with other tracefiles taken from the newer version. Also keep in mind that converted coverage data should only be used for overview purposes as the process itself introduces a loss of accuracy. </p>
 <p> The result of the diff operation will be written to stdout or the tracefile specified with -o. </p>
 <p> Only one of -z, -c, -a, -e, -r, -l, &#8211;diff or &#8211;summary may be specified at a time.</dl>
-<p> <code>-d</code> <i>directory</i><br />
+<p> <code>-d</code> <i>directory</i><br/>
  <code>&#8211;directory</code> <i>directory</i> </p>
 <dl>
 <dt>
 </dt><dd> Use .da files in <i>directory</i> instead of kernel. </dd>
 <p> If you want to work on coverage data for a user space program, use this option to specify the location where the program was compiled (that&#8217;s where the counter files ending with .da will be stored). </p>
 <p> Note that you may specify this option more than once.</dl>
-<p> <code>&#8211;external</code><br />
+<p> <code>&#8211;external</code><br/>
  <code>&#8211;no-external</code> </p>
 <dl>
 <dt>
 </dt><dd> Specify whether to capture coverage data for external source files. </dd>
 <p> External source files are files which are not located in one of the directories specified by &#8211;directory or &#8211;base-directory. Use &#8211;external to include external source files while capturing coverage data or &#8211;no-external to ignore this data. </p>
 <p> Data for external source files is <code>included</code> by default.</dl>
-<p> <code>-e</code> <i>tracefile</i> <i>pattern</i><br />
+<p> <code>-e</code> <i>tracefile</i> <i>pattern</i><br/>
  <code>&#8211;extract</code> <i>tracefile</i> <i>pattern</i> </p>
 <dl>
 <dt>
@@ -215,7 +215,7 @@ description: "lcov – a graphical GCOV front-end"
 <p> Use this switch if you want to extract coverage data for only a particular set of files from a tracefile. Additional command line parameters will be interpreted as shell wildcard patterns (note that they may need to be escaped accordingly to prevent the shell from expanding them first). Every file entry in <i>tracefile</i> which matches at least one of those patterns will be extracted. </p>
 <p> The result of the extract operation will be written to stdout or the tracefile specified with -o. </p>
 <p> Only one of -z, -c, -a, -e, -r, -l, &#8211;diff or &#8211;summary may be specified at a time.</dl>
-<p> <code>-f</code><br />
+<p> <code>-f</code><br/>
  <code>&#8211;follow</code> </p>
 <dl>
 <dt>
@@ -229,7 +229,7 @@ description: "lcov – a graphical GCOV front-end"
 <dl>
 <dt>
 </dt><dd> Specify the location of the gcov tool.</dd></dl>
-<p> <code>-h</code><br />
+<p> <code>-h</code><br/>
  <code>&#8211;help</code> </p>
 <dl>
 <dt>
@@ -242,7 +242,7 @@ description: "lcov – a graphical GCOV front-end"
 <p> <i>errors</i> can be a comma-separated list of the following keywords: </p>
 <p> <code>gcov:</code> the gcov tool returned with a non-zero return code. </p>
 <p> <code>source:</code> the source code file for a data set could not be found.</dl>
-<p> <code>-i</code><br />
+<p> <code>-i</code><br/>
  <code>&#8211;initial</code></p>
 <dl>
 <dt>
@@ -270,20 +270,20 @@ description: "lcov – a graphical GCOV front-end"
 </dt><dd> # lcov -a app_base.info -a app_test.info -o app_total.info </dd>
 </dl>
 </dl>
-<p> <code>-k</code> <i>subdirectory</i><br />
+<p> <code>-k</code> <i>subdirectory</i><br/>
  <code>&#8211;kernel-directory</code> <i>subdirectory</i> </p>
 <dl>
 <dt>
 </dt><dd> Capture kernel coverage data only from <i>subdirectory</i>. </dd>
 <p> Use this option if you don&#8217;t want to get coverage data for all of the kernel, but only for specific subdirectories. This option may be specified more than once. </p>
 <p> Note that you may need to specify the full path to the kernel subdirectory depending on the version of the kernel gcov support.</dl>
-<p> <code>-l</code> <i>tracefile</i><br />
+<p> <code>-l</code> <i>tracefile</i><br/>
  <code>&#8211;list</code> <i>tracefile</i> </p>
 <dl>
 <dt>
 </dt><dd> List the contents of the <i>tracefile</i>. </dd>
 <p> Only one of -z, -c, -a, -e, -r, -l, &#8211;diff or &#8211;summary may be specified at a time.</dl>
-<p> <code>&#8211;list-full-path</code><br />
+<p> <code>&#8211;list-full-path</code><br/>
  <code>&#8211;no-list-full-path</code> </p>
 <dl>
 <dt>
@@ -297,7 +297,7 @@ description: "lcov – a graphical GCOV front-end"
 <dl>
 <dt>
 </dt><dd> Use this option if you want to get coverage data for the specified directory only without processing subdirectories.</dd></dl>
-<p> <code>-o</code> <i>tracefile</i><br />
+<p> <code>-o</code> <i>tracefile</i><br/>
  <code>&#8211;output-file</code> <i>tracefile</i> </p>
 <dl>
 <dt>
@@ -309,7 +309,7 @@ description: "lcov – a graphical GCOV front-end"
 <dt>
 </dt><dd> Strip path from filenames when applying diff. </dd>
 <p> Use this option together with &#8211;diff to tell lcov to disregard the specified initial path component when matching between tracefile and diff filenames.</dl>
-<p> <code>-q</code><br />
+<p> <code>-q</code><br/>
  <code>&#8211;quiet</code> </p>
 <dl>
 <dt>
@@ -320,7 +320,7 @@ description: "lcov – a graphical GCOV front-end"
 <dt>
 </dt><dd> Override a configuration directive. </dd>
 <p> Use this option to specify a <i>keyword</i>=<i>value</i> statement which overrides the corresponding configuration statement in the lcovrc configuration file. You can specify this option more than once to override multiple configuration statements. See <code><a href="/docs/linux/man/5-lcovrc/">lcovrc</a></code>(5) for a list of available keywords and their meaning.</dl>
-<p> <code>-r</code> <i>tracefile</i> <i>pattern</i><br />
+<p> <code>-r</code> <i>tracefile</i> <i>pattern</i><br/>
  <code>&#8211;remove</code> <i>tracefile</i> <i>pattern</i> </p>
 <dl>
 <dt>
@@ -339,7 +339,7 @@ description: "lcov – a graphical GCOV front-end"
 </dt><dd> Show summary coverage information for the specified tracefile. </dd>
 <p> Note that you may specify this option more than once. </p>
 <p> Only one of -z, -c, -a, -e, -r, -l, &#8211;diff or &#8211;summary may be specified at a time.</dl>
-<p> <code>-t</code> <i>testname</i><br />
+<p> <code>-t</code> <i>testname</i><br/>
  <code>&#8211;test-name</code> <i>testname</i> </p>
 <dl>
 <dt>
@@ -355,8 +355,8 @@ description: "lcov – a graphical GCOV front-end"
 <dl>
 <dt>
 </dt><dd>
- &#8211; run the test<br />
- &#8211; run lcov -c [-d directory] &#8211;to-package <i>file</i><br />
+ &#8211; run the test<br/>
+ &#8211; run lcov -c [-d directory] &#8211;to-package <i>file</i><br/>
  &#8211; copy <i>file</i> to the build machine</dd></dl>
 <p> On the build machine:</p>
 <dl>
@@ -364,12 +364,12 @@ description: "lcov – a graphical GCOV front-end"
 </dt><dd>
  &#8211; run lcov -c &#8211;from-package <i>file</i> [-o and other options]</dd></dl>
 <p> This works for both kernel and user space coverage data. Note that you might have to specify the path to the build directory using -b with either &#8211;to-package or &#8211;from-package. Note also that the package data must be converted to a .info file before recompiling the program or it will become invalid.</dl>
-<p> <code>-v</code><br />
+<p> <code>-v</code><br/>
  <code>&#8211;version</code> </p>
 <dl>
 <dt>
 </dt><dd> Print version number, then exit.</dd></dl>
-<p> <code>-z</code><br />
+<p> <code>-z</code><br/>
  <code>&#8211;zerocounters</code> </p>
 <dl>
 <dt>

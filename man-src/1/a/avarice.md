@@ -22,81 +22,81 @@ description: "avarice – Provides an interface from avr-gdb to Atmel’s JTAGIC
 <p> <code>avarice</code> currently has support for the following devices:</p>
 <dl>
 <dt>
-</dt><dd> at90can128<br />
- at90can32 (<code>o</code>)<br />
- at90can64 (<code>o</code>)<br />
- at90pwm2 (<code>o</code>) (<code>+</code>)<br />
- at90pwm216 (<code>o</code>) (<code>+</code>)<br />
- at90pwm2b (<code>o</code>) (<code>+</code>)<br />
- at90pwm3 (<code>o</code>) (<code>+</code>)<br />
- at90pwm316 (<code>o</code>) (<code>+</code>)<br />
- at90pwm3b (<code>o</code>) (<code>+</code>)<br />
- at90usb1287 (<code>*</code>)<br />
- at90usb162 (<code>o</code>) (<code>+</code>)<br />
- at90usb646 (<code>*</code>)<br />
- at90usb647 (<code>*</code>)<br />
- atmega128<br />
- atmega1280 (<code>*</code>)<br />
- atmega1281 (<code>*</code>)<br />
- atmega1284p (<code>*</code>)<br />
- atmega16<br />
- atmega162<br />
- atmega164p (<code>o</code>)<br />
- atmega165 (<code>o</code>)<br />
- atmega165p (<code>o</code>)<br />
- atmega168 (<code>o</code>) (<code>+</code>)<br />
- atmega168p (<code>o</code>) (<code>+</code>)<br />
- atmega169<br />
- atmega16hva (<code>o</code>)<br />
- atmega2560 (<code>*</code>)<br />
- atmega2561 (<code>*</code>)<br />
- atmega32<br />
- atmega323<br />
- atmega324p (<code>o</code>)<br />
- atmega325 (<code>o</code>)<br />
- atmega3250 (<code>o</code>)<br />
- atmega3250p (<code>o</code>)<br />
- atmega325p (<code>o</code>)<br />
- atmega328p (<code>o</code>) (<code>+</code>)<br />
- atmega329 (<code>o</code>)<br />
- atmega3290 (<code>o</code>)<br />
- atmega3290p (<code>o</code>)<br />
- atmega329p (<code>o</code>)<br />
- atmega32c1 (<code>o</code>) (<code>+</code>)<br />
- atmega32hvb (<code>o</code>) (<code>+</code>)<br />
- atmega32m1 (<code>o</code>) (<code>+</code>)<br />
- atmega32u4 (<code>o</code>)<br />
- atmega406 (<code>*</code>)<br />
- atmega48 (<code>o</code>) (<code>+</code>)<br />
- atmega48p (<code>o</code>) (<code>+</code>)<br />
- atmega64<br />
- atmega640 (<code>*</code>)<br />
- atmega644 (<code>*</code>)<br />
- atmega644p (<code>*</code>)<br />
- atmega645 (<code>*</code>)<br />
- atmega6450 (<code>*</code>)<br />
- atmega649 (<code>*</code>)<br />
- atmega6490 (<code>*</code>)<br />
- atmega88 (<code>o</code>) (<code>+</code>)<br />
- atmega88p (<code>o</code>) (<code>+</code>)<br />
- attiny13 (<code>o</code>) (<code>+</code>)<br />
- attiny167 (<code>o</code>) (<code>+</code>)<br />
- attiny2313 (<code>o</code>) (<code>+</code>)<br />
- attiny24 (<code>o</code>) (<code>+</code>)<br />
- attiny25 (<code>o</code>) (<code>+</code>)<br />
- attiny261 (<code>o</code>) (<code>+</code>)<br />
- attiny43u (<code>o</code>) (<code>+</code>)<br />
- attiny44 (<code>o</code>) (<code>+</code>)<br />
- attiny45 (<code>o</code>) (<code>+</code>)<br />
- attiny461 (<code>o</code>) (<code>+</code>)<br />
- attiny48 (<code>o</code>) (<code>+</code>)<br />
- attiny84 (<code>o</code>) (<code>+</code>)<br />
- attiny85 (<code>o</code>) (<code>+</code>)<br />
- attiny861 (<code>o</code>) (<code>+</code>)<br />
- attiny88 (<code>o</code>) (<code>+</code>)<br />
+</dt><dd> at90can128<br/>
+ at90can32 (<code>o</code>)<br/>
+ at90can64 (<code>o</code>)<br/>
+ at90pwm2 (<code>o</code>) (<code>+</code>)<br/>
+ at90pwm216 (<code>o</code>) (<code>+</code>)<br/>
+ at90pwm2b (<code>o</code>) (<code>+</code>)<br/>
+ at90pwm3 (<code>o</code>) (<code>+</code>)<br/>
+ at90pwm316 (<code>o</code>) (<code>+</code>)<br/>
+ at90pwm3b (<code>o</code>) (<code>+</code>)<br/>
+ at90usb1287 (<code>*</code>)<br/>
+ at90usb162 (<code>o</code>) (<code>+</code>)<br/>
+ at90usb646 (<code>*</code>)<br/>
+ at90usb647 (<code>*</code>)<br/>
+ atmega128<br/>
+ atmega1280 (<code>*</code>)<br/>
+ atmega1281 (<code>*</code>)<br/>
+ atmega1284p (<code>*</code>)<br/>
+ atmega16<br/>
+ atmega162<br/>
+ atmega164p (<code>o</code>)<br/>
+ atmega165 (<code>o</code>)<br/>
+ atmega165p (<code>o</code>)<br/>
+ atmega168 (<code>o</code>) (<code>+</code>)<br/>
+ atmega168p (<code>o</code>) (<code>+</code>)<br/>
+ atmega169<br/>
+ atmega16hva (<code>o</code>)<br/>
+ atmega2560 (<code>*</code>)<br/>
+ atmega2561 (<code>*</code>)<br/>
+ atmega32<br/>
+ atmega323<br/>
+ atmega324p (<code>o</code>)<br/>
+ atmega325 (<code>o</code>)<br/>
+ atmega3250 (<code>o</code>)<br/>
+ atmega3250p (<code>o</code>)<br/>
+ atmega325p (<code>o</code>)<br/>
+ atmega328p (<code>o</code>) (<code>+</code>)<br/>
+ atmega329 (<code>o</code>)<br/>
+ atmega3290 (<code>o</code>)<br/>
+ atmega3290p (<code>o</code>)<br/>
+ atmega329p (<code>o</code>)<br/>
+ atmega32c1 (<code>o</code>) (<code>+</code>)<br/>
+ atmega32hvb (<code>o</code>) (<code>+</code>)<br/>
+ atmega32m1 (<code>o</code>) (<code>+</code>)<br/>
+ atmega32u4 (<code>o</code>)<br/>
+ atmega406 (<code>*</code>)<br/>
+ atmega48 (<code>o</code>) (<code>+</code>)<br/>
+ atmega48p (<code>o</code>) (<code>+</code>)<br/>
+ atmega64<br/>
+ atmega640 (<code>*</code>)<br/>
+ atmega644 (<code>*</code>)<br/>
+ atmega644p (<code>*</code>)<br/>
+ atmega645 (<code>*</code>)<br/>
+ atmega6450 (<code>*</code>)<br/>
+ atmega649 (<code>*</code>)<br/>
+ atmega6490 (<code>*</code>)<br/>
+ atmega88 (<code>o</code>) (<code>+</code>)<br/>
+ atmega88p (<code>o</code>) (<code>+</code>)<br/>
+ attiny13 (<code>o</code>) (<code>+</code>)<br/>
+ attiny167 (<code>o</code>) (<code>+</code>)<br/>
+ attiny2313 (<code>o</code>) (<code>+</code>)<br/>
+ attiny24 (<code>o</code>) (<code>+</code>)<br/>
+ attiny25 (<code>o</code>) (<code>+</code>)<br/>
+ attiny261 (<code>o</code>) (<code>+</code>)<br/>
+ attiny43u (<code>o</code>) (<code>+</code>)<br/>
+ attiny44 (<code>o</code>) (<code>+</code>)<br/>
+ attiny45 (<code>o</code>) (<code>+</code>)<br/>
+ attiny461 (<code>o</code>) (<code>+</code>)<br/>
+ attiny48 (<code>o</code>) (<code>+</code>)<br/>
+ attiny84 (<code>o</code>) (<code>+</code>)<br/>
+ attiny85 (<code>o</code>) (<code>+</code>)<br/>
+ attiny861 (<code>o</code>) (<code>+</code>)<br/>
+ attiny88 (<code>o</code>) (<code>+</code>)<br/>
  atxmega128a1 (<code>*</code>)</dd></dl>
-<p> <code>*</code> &#8211; Only supported by the JTAG ICE mkII device.<br />
- <code>o</code> &#8211; Only supported by the JTAG ICE mkII and AVR Dragon device.<br />
+<p> <code>*</code> &#8211; Only supported by the JTAG ICE mkII device.<br/>
+ <code>o</code> &#8211; Only supported by the JTAG ICE mkII and AVR Dragon device.<br/>
  <code>+</code> &#8211; debugWire, see below</p>
 <h3>Supported File Formats</h3>
 <p> <code>avarice</code> uses libbfd for reading input files. As such, it can handle any file format that libbfd knowns about. This includes the Intel Hex, Motorola SRecord and ELF formats, among others. If you tell <code>avarice</code> to read an ELF file, it will automatically handle programming all of the sections contained in the file (e.g. flash, eeprom, etc.).</p>
@@ -111,10 +111,10 @@ description: "avarice – Provides an interface from avr-gdb to Atmel’s JTAGIC
 <dt><code>-B</code>,&nbsp;<wbr><code>&#8211;jtag-bitrate</code>&nbsp;<wbr>&lt;rate&gt;</dt>
 <dd> Set the bitrate that the JTAG box communicates with the AVR target device. This must be less than 1/4 of the frequency of the target. Valid values are 1 MHz, 500 kHz, 250 kHz or 125 kHz for the JTAG ICE mkI, anything between 22 kHz through approximately 6400 kHz for the JTAG ICE mkII. (default: 250 kHz)</dd>
 <dt><code>-C</code>,&nbsp;<wbr><code>&#8211;capture</code></dt>
-<dd> Capture running program.<br />
+<dd> Capture running program.<br/>
  Note: debugging must have been enabled prior to starting the program. (e.g., by running avarice earlier)</dd>
 <dt><code>-c</code>,&nbsp;<wbr><code>&#8211;daisy-chain</code>&nbsp;<wbr>&lt;ub,ua,bb,ba&gt;</dt>
-<dd> Setup JTAG daisy-chain information.<br />
+<dd> Setup JTAG daisy-chain information.<br/>
  Four comma-separated parameters need to be provided, corresponding to <i>units before</i>, <i>units after</i>, <i>bits before</i>, and <i>bits after</i>.</dd>
 <dt><code>-D</code>,&nbsp;<wbr><code>&#8211;detach</code></dt>
 <dd> Detach once synced with JTAG ICE</dd>
@@ -129,11 +129,11 @@ description: "avarice – Provides an interface from avr-gdb to Atmel’s JTAGIC
 <dt><code>-g</code>,&nbsp;<wbr><code>&#8211;dragon</code></dt>
 <dd> Connect to an AVR Dragon. This option implies the <code>-2</code> option.</dd>
 <dt><code>-I</code>,&nbsp;<wbr><code>&#8211;ignore-intr</code></dt>
-<dd> Automatically step over interrupts.<br />
+<dd> Automatically step over interrupts.<br/>
  Note: EXPERIMENTAL. Can not currently handle devices fused for compatibility.</dd>
 <dt><code>-j</code>,&nbsp;<wbr><code>&#8211;jtag</code>&nbsp;<wbr>&lt;devname&gt;</dt>
-<dd> Port attached to JTAG box (default: /dev/avrjtag). If the JTAG_DEV environmental variable is set, avarice will use that as the default instead.<br />
- If <code>avarice</code> has been configured with libusb support, the JTAG ICE mkII can be connected through USB. In that case, the string <i>usb</i> is used as the name of the device. If there are multiple JTAG ICE mkII devices connected to the system through USB, this string may be followed by the (trailing part of the) ICE&#8217;s serial number, delimited from the <i>usb</i> by a colon.<br />
+<dd> Port attached to JTAG box (default: /dev/avrjtag). If the JTAG_DEV environmental variable is set, avarice will use that as the default instead.<br/>
+ If <code>avarice</code> has been configured with libusb support, the JTAG ICE mkII can be connected through USB. In that case, the string <i>usb</i> is used as the name of the device. If there are multiple JTAG ICE mkII devices connected to the system through USB, this string may be followed by the (trailing part of the) ICE&#8217;s serial number, delimited from the <i>usb</i> by a colon.<br/>
  The AVR Dragon can only be connected through USB, so this option defaults to &quot;usb&quot; in that case.</dd>
 <dt><code>-k</code>,&nbsp;<wbr><code>&#8211;known-devices</code></dt>
 <dd> Print a list of known devices.</dd>
@@ -144,7 +144,7 @@ description: "avarice – Provides an interface from avr-gdb to Atmel’s JTAGIC
 <dt><code>-P</code>,&nbsp;<wbr><code>&#8211;part</code>&nbsp;<wbr>&lt;name&gt;</dt>
 <dd> Target device name (e.g. atmega16)</dd>
 <dt><code>-p</code>,&nbsp;<wbr><code>&#8211;program</code></dt>
-<dd> Program the target. Binary filename must be specified with &#8211;file option.<br />
+<dd> Program the target. Binary filename must be specified with &#8211;file option.<br/>
  <code>NOTE:</code> The old behaviour of automatically erasing the target before programming is no longer done. You must explicitly give the &#8211;erase option for the target to be erased.</dd>
 <dt><code>-R</code>,&nbsp;<wbr><code>&#8211;reset-srst</code></dt>
 <dd> Apply nSRST signal (external reset) when connecting. This can override applications that set the JTD bit.</dd>
@@ -159,7 +159,7 @@ description: "avarice – Provides an interface from avr-gdb to Atmel’s JTAGIC
 <dt><code>-W</code>,&nbsp;<wbr><code>&#8211;write-fuses</code>&nbsp;<wbr>&lt;eehhll&gt;</dt>
 <dd> Write fuses bytes. <code>ee</code> is the extended fuse byte, <code>hh</code> is the high fuse byte and <code>ll</code> is the low fuse byte. The fuse byte data must be given in two digit hexidecimal format with zero padding if needed. All three bytes must currently be given.</dd>
 <dt><code>-x</code>,&nbsp;<wbr><code>&#8211;xmega</code></dt>
-<dd> The target device is an ATxmega part. Since the ATxmega uses a different JTAG communication than other AVRs, the normal device autodetection based on the JTAG ID does not work. If the device has been explicitly selected through the -P option, it is not necessary to also specify the -x option.<br />
+<dd> The target device is an ATxmega part. Since the ATxmega uses a different JTAG communication than other AVRs, the normal device autodetection based on the JTAG ID does not work. If the device has been explicitly selected through the -P option, it is not necessary to also specify the -x option.<br/>
  <code>NOTE:</code> Current, if the target device doesn&#8217;t have an extended fuse byte (e.g. the atmega16), the you should set ee==ll when writing the fuse bytes.</dd></dl>
 <p> <i>HOST_NAME</i> defaults to 0.0.0.0 (listen on any interface) if not given. </p>
 <p> :<i>PORT</i> is required to put avarice into gdb server mode.</p>
@@ -183,7 +183,7 @@ description: "avarice – Provides an interface from avr-gdb to Atmel’s JTAGIC
 <dt>*</dt>
 <dd> The Atmel AVR processors have a Harvard architecture (separate code and data buses). To distinguish data address 0 from code address 0, <code>avr-gdb</code> adds 0x800000 to all data addresses. Bear this in mind when examining printed pointers, or when passing absolute addresses to gdb commands.</dd></dl>
 <h2>DEBUGWIRE</h2>
-<p> The <i>debugWire</i> protocol is a proprietary protocol introduced by Atmel to allow debugging small AVR controllers that don&#8217;t offer enough pins (and enough chip resources) to implement full JTAG. The communication takes place over the <i>/RESET</i> pin which needs to be turned into a debugWire connection pin by programming the <i>DWEN</i> fuse (debugWire enable), using a normal programmer connection (in-system programming, high-voltage programming). Note that by enabling this fuse, the standard reset functionality of that pin will be lost, so any in-system programming will cease to work as it requires a functional <i>/RESET</i> pin. Thus it should be made <code>absolutely sure there is a way back</code>, like a device (as the STK500, for example) that can handle high-voltage programming of the AVR. Currently, <code>avarice</code> offers no option to turn off the DWEN fuse. However, <code>avrdude</code> offers the option to turn it off either through high-voltage programming, or by using the JTAG ICE mkII to first turn the target into an ISP-compatible mode, and then using normal ISP commands to change the fuse settings.<br />
+<p> The <i>debugWire</i> protocol is a proprietary protocol introduced by Atmel to allow debugging small AVR controllers that don&#8217;t offer enough pins (and enough chip resources) to implement full JTAG. The communication takes place over the <i>/RESET</i> pin which needs to be turned into a debugWire connection pin by programming the <i>DWEN</i> fuse (debugWire enable), using a normal programmer connection (in-system programming, high-voltage programming). Note that by enabling this fuse, the standard reset functionality of that pin will be lost, so any in-system programming will cease to work as it requires a functional <i>/RESET</i> pin. Thus it should be made <code>absolutely sure there is a way back</code>, like a device (as the STK500, for example) that can handle high-voltage programming of the AVR. Currently, <code>avarice</code> offers no option to turn off the DWEN fuse. However, <code>avrdude</code> offers the option to turn it off either through high-voltage programming, or by using the JTAG ICE mkII to first turn the target into an ISP-compatible mode, and then using normal ISP commands to change the fuse settings.<br/>
  Note that the debugWire environment is further limited, compared to JTAG. It does not offer hardware breakpoints, so all breakpoints have to be implemented as software breakpoints by rewriting flash pages using <i>BREAK</i> instructions. (Software breakpoints are currently not implemented by <code>avarice</code>.) Some memory spaces (fuse and lock bits) are not accessible through the debugWire protocol.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <code><a href="/docs/linux/man/1-avrdude/">avrdude</a></code>(1), <code><a href="/docs/linux/man/1-avr-gdb/">avr-gdb</a></code>(1), <code><a href="/docs/linux/man/1-insight/">insight</a></code>(1), <code>avr-insight</code>(1), <code><a href="/docs/linux/man/1-ice-gdb/">ice-gdb</a></code>(1), <code><a href="/docs/linux/man/1-ice-insight/">ice-insight</a></code>(1)</p>

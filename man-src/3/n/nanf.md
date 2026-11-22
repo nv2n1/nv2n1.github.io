@@ -10,8 +10,8 @@ description: "nan, nanf, nanl – return ‘Not a Number’"
 <p>nan, nanf, nanl &#8211; return &#8216;Not a Number&#8217; </p>
 <h2>Synopsis</h2>
 <p><code>#include &lt;math.h&gt;</code> </p>
-<p> <code>double nan(const char *</code><i>tagp</i><code>);</code><br />
- <code>float nanf(const char *</code><i>tagp</i><code>);</code><br />
+<p> <code>double nan(const char *</code><i>tagp</i><code>);</code><br/>
+ <code>float nanf(const char *</code><i>tagp</i><code>);</code><br/>
  <code>long double nanl(const char *</code><i>tagp</i><code>);</code> </p>
 <p> Link with <i>-lm</i>. </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>

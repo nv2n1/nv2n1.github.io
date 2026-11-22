@@ -79,8 +79,8 @@ description: "invoke-rc.d – executes System-V style init script actions"
 <h2>Bugs</h2>
 <p>Please report any bugs using the Debian bug tracking system, <a rel="nofollow" href="http://bugs.debian.org/,">http://bugs.debian.org/,</a> packages sysv-rc or file-rc (depending on which version of invoke-rc.d you are using).</p>
 <h2>See Also</h2>
-<p><i>Debian Policy manual</i>,<br />
- <code>/etc/init.d/skeleton</code>,<br />
- <code><a href="/docs/linux/man/8-update-rc-d/">update-rc.d</a></code>(8),<br />
- <code><a href="/docs/linux/man/8-init/">init</a></code>(8),<br />
+<p><i>Debian Policy manual</i>,<br/>
+ <code>/etc/init.d/skeleton</code>,<br/>
+ <code><a href="/docs/linux/man/8-update-rc-d/">update-rc.d</a></code>(8),<br/>
+ <code><a href="/docs/linux/man/8-init/">init</a></code>(8),<br/>
  <code>/usr/share/doc/sysv-rc/README.policy-rc.d</code> </p>

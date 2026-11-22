@@ -46,8 +46,8 @@ description: "fbpanel – a NETWM compliant lightweight GTK2-based panel for UNI
 </dl>
 <h2>CUSTOMIZATION</h2>
 <p> To change default settings, copy profile file to your home directory </p>
-<p>mkdir -p&nbsp;<wbr>~/.fbpanel<br />
-cp&nbsp;<wbr>/usr/share/fbpanel/default&nbsp;<wbr>~/.fbpanel<br />
+<p>mkdir -p&nbsp;<wbr>~/.fbpanel<br/>
+cp&nbsp;<wbr>/usr/share/fbpanel/default&nbsp;<wbr>~/.fbpanel<br/>
  and edit it. Default profile file contains comments and explanation inside, so it should be easy. For full list of options please visit fbpanel&#8217;s home page. </p>
 <h2>FILES</h2>
 <dl>

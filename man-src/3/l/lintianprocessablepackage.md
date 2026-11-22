@@ -20,9 +20,9 @@ Lintian::Processable::Package -- An object that Lintian can process
  Instances of this perl class are objects that Lintian can process (e.g. deb files). Multiple objects can then be combined into groups, which Lintian will process together.
 <h2>Class Methods</h2>
 <dl COMPACT>
-<dt>new (FILE[, <font SIZE="-1">TYPE</font>])
-</dt><dd> Creates a processable from <font SIZE="-1">FILE.</font> If <font SIZE="-1">TYPE</font> is given, the <font SIZE="-1">FILE</font> is assumed to be that <font SIZE="-1">TYPE</font> otherwise the type is determined by the file extension. 
- <font SIZE="-1">TYPE</font> is one of ``binary'' (.deb), ``udeb'' (.udeb), ``source'' (.dsc) or ``changes'' (.changes).</dd></dl>
+<dt>new (FILE[, TYPE])
+</dt><dd> Creates a processable from FILE. If TYPE is given, the FILE is assumed to be that TYPE otherwise the type is determined by the file extension. 
+ TYPE is one of ``binary'' (.deb), ``udeb'' (.udeb), ``source'' (.dsc) or ``changes'' (.changes).</dd></dl>
 
 <h2>Author</h2>
  Originally written by Niels Thykier &lt;niels [at] thykier.net&gt; for Lintian.

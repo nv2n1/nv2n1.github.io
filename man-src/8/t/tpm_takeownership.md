@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_takeownership/"
 description: "tpm_takeownership – setup an owner on the TPM"
 ---
 
-<p>TPM Management &#8211; tpm_takeownership<br />
+<p>TPM Management &#8211; tpm_takeownership<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_takeownership &#8211; setup an owner on the TPM</p>

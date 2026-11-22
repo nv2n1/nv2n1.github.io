@@ -10,7 +10,7 @@ description: "pngquant – PNG converter and lossy image compressor"
 
 <p> <code>pngquant</code> &#8211; PNG converter and lossy image compressor </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pngquant</code> Aq options [ncolors] file [<i>file &#8230;</i> ]<br />
+<p> <code>pngquant</code> Aq options [ncolors] file [<i>file &#8230;</i> ]<br/>
 <code>pngquant</code> Aq options [ncolors] &#8211; <code>&lt; file </code> <code>&gt; file </code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>pngquant</code> converts 32-bit RGBA PNGs to 8-bit (or smaller) RGBA-palette PNGs, optionally using Floyd-Steinberg dithering. The output filename is the same as the input name except that it ends in `-fs8.png&#8217; or `-or8.png&#8217; (unless the input is stdin, in which case the quantized image will go to stdout). The default behavior if the output file exists is to skip the conversion; use &#8211;<code>-force</code> to overwrite.</p>

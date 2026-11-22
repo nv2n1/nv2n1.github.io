@@ -13,10 +13,10 @@ description: "QwtCompassMagnetNeedle –"
 <p>#include &lt;qwt_dial_needle.h&gt; </p>
 <p> Inherits <code>QwtDialNeedle</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>Style</code> { <code>TriangleStyle</code>, <code>ThinStyle</code> }<br />
+<p>enum <code>Style</code> { <code>TriangleStyle</code>, <code>ThinStyle</code> }<br/>
  <i>Style of the needle. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtCompassMagnetNeedle</code> (<code>Style</code>=<code>TriangleStyle</code>, const QColor &amp;light=Qt::white, const QColor &amp;dark=Qt::red)<br />
+<p><code>QwtCompassMagnetNeedle</code> (<code>Style</code>=<code>TriangleStyle</code>, const QColor &amp;light=Qt::white, const QColor &amp;dark=Qt::red)<br/>
  <i>Constructor. </i></p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>drawNeedle</code> (QPainter *, double length, QPalette::ColorGroup) const </p>
@@ -51,8 +51,8 @@ description: "QwtCompassMagnetNeedle –"
 <p>Draw the needle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>length</i> Length of the needle<br />
+<dd><i>painter</i> Painter<br/>
+ <i>length</i> Length of the needle<br/>
  <i>colorGroup</i> Color group, used for painting</dd></dl>
 <p> Implements <code>QwtDialNeedle</code>. </p>
 <h2>Author</h2>

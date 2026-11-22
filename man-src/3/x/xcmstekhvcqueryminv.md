@@ -38,5 +38,5 @@ description: "XcmsTekHVCQueryMaxC, XcmsTekHVCQueryMaxV, XcmsTekHVCQueryMaxVC, Xc
 <p> The <code>XcmsTekHVCQueryMaxVSamples</code> returns nsamples of maximum Value, the Chroma at which that maximum Value is reached, and the actual Hue for which the maximum Chroma was found. These sample points may then be used to plot the maximum Value/Chroma boundary of the screen&#8217;s color gamut for the specified Hue in TekHVC color space. </p>
 <p> The <code>XcmsTekHVCQueryMinV</code> function, given a Hue and Chroma, determines the minimum Value in TekHVC color space displayable by the screen. It returns the minimum Value and the actual Hue and Chroma at which the minimum Value was found.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcmscielabquerymaxc/">XcmsCIELabQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmscieluvquerymaxc/">XcmsCIELuvQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmsqueryblack/">XcmsQueryBlack</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcmscielabquerymaxc/">XcmsCIELabQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmscieluvquerymaxc/">XcmsCIELuvQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmsqueryblack/">XcmsQueryBlack</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

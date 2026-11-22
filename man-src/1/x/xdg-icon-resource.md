@@ -104,7 +104,7 @@ description: "xdg-icon-resource – command line tool for (un)installing icon re
 <dt>
 </dt><dd> No permission to read one of the files passed on the command line.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xdg-desktop-icon/">xdg-desktop-icon</a></code>(1), <code><a href="/docs/linux/man/1-xdg-desktop-menu/">xdg-desktop-menu</a></code>(1), <code><a href="/docs/linux/man/1-xdg-mime/">xdg-mime</a></code>(1), m[blue]<code>Icon theme specification</code>m[]<font SIZE="-2">[1]</font></p>
+<p> <code><a href="/docs/linux/man/1-xdg-desktop-icon/">xdg-desktop-icon</a></code>(1), <code><a href="/docs/linux/man/1-xdg-desktop-menu/">xdg-desktop-menu</a></code>(1), <code><a href="/docs/linux/man/1-xdg-mime/">xdg-mime</a></code>(1), m[blue]<code>Icon theme specification</code>m[][1]</p>
 <h2>EXAMPLES</h2>
 <p> To install an icon resource to depict a launcher for the application myfoobar, the company ShinyThings Inc. can use: </p>
 <dl>

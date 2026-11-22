@@ -23,7 +23,7 @@ description: "XvSetPortAttribute – sets an attribute of a video port"
 <dt><i>value</i></dt>
 <dd>Identifies the value to which <i>attribute</i> is to be set. Can be one of the table entries under the column &quot;Type,&quot; below.</dd></dl>
 <h2>Description</h2>
-<p><code><a href="/docs/linux/man/3-xvsetportattribute/">XvSetPortAttribute</a></code>(3)<br />
+<p><code><a href="/docs/linux/man/3-xvsetportattribute/">XvSetPortAttribute</a></code>(3)<br/>
 &nbsp;<wbr>permits a client to set the port attribute to specified values. This request supports the following values: </p>
 <table>
 <tr VALIGN=top>

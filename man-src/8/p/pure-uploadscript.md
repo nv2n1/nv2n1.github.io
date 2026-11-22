@@ -11,8 +11,8 @@ description: "pure-uploadscript – Automatically run an external program after 
 <h2>Syntax</h2>
 <p>pure-uploadscript [<i>-p</i> &lt;<i>/path/to/pidfile</i>&gt;] [<i>-B</i>] [<i>-g</i> &lt;<i>gid</i>&gt;] [<i>-h</i>] <i>-r</i> &lt;<i>program to run</i>&gt; [<i>-u</i> &lt;<i>uid</i>&gt;]</p>
 <h2>Description</h2>
-<p>If Pure-FTPd is compiled with <code>&#8211;with-uploadscript</code> (default in binary distributions), and if the <code>-o</code> (or <code>&#8211;uploadscript</code>) is passed to the server, a named pipe called <code>/var/run/pure-ftpd.upload.pipe</code> is created. You will also notice an important file called <code>/var/run/pure-ftpd.upload.lock</code>, used for locking.<br />
- After a successful upload, the file name is written to the pipe.<br />
+<p>If Pure-FTPd is compiled with <code>&#8211;with-uploadscript</code> (default in binary distributions), and if the <code>-o</code> (or <code>&#8211;uploadscript</code>) is passed to the server, a named pipe called <code>/var/run/pure-ftpd.upload.pipe</code> is created. You will also notice an important file called <code>/var/run/pure-ftpd.upload.lock</code>, used for locking.<br/>
+ After a successful upload, the file name is written to the pipe.<br/>
  <code>pure-uploadscript</code> reads this pipe to automatically run any program or script to process the newly uploaded file.</p>
 <h2>Options</h2>
 <dl>
@@ -46,7 +46,7 @@ description: "pure-uploadscript – Automatically run an external program after 
 </dd><dt>&#8211; Two external programs/scripts can&#8217;t run at the same time. Uploads are always processed sequentially, in chronological order. This is to avoid denial-of-services by issuing a lot of simultaneous STOR commands in order to launch a fork bomb on the server. For this reason, your programs shouldn&#8217;t take a long time to complete (but they can run themselves in background) .</dt>
 <dd></dd></dl>
 <h2>Examples</h2>
-<p>A sample script could be : #! /bin/sh<br />
+<p>A sample script could be : #! /bin/sh<br/>
  echo &quot;$1 uploaded&quot; | /usr/bin/mutt -s &quot;New upload : $1&quot; \ ftpadmin [at] dom.ai.n Never forget to quote (<code>&quot;variable&quot;</code>) all variables in all your shell scripts to avoid security flaws. </p>
 <h2>Authors</h2>
 <p>Frank DENIS &lt;j at pureftpd dot org&gt;</p>

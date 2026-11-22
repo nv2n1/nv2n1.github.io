@@ -10,12 +10,12 @@ description: "ql/experimental/commodities/commodity.hpp – Commodity base class
 
 <p> ql/experimental/commodities/commodity.hpp &#8211; Commodity base class. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instrument.hpp&gt;<br />
- #include &lt;ql/money.hpp&gt;<br />
- #include &lt;vector&gt;<br />
+<p> #include &lt;ql/instrument.hpp&gt;<br/>
+ #include &lt;ql/money.hpp&gt;<br/>
+ #include &lt;vector&gt;<br/>
  #include &lt;ostream&gt; </p>
 <h3>Classes</h3>
-<p> class <code>Commodity</code><br />
+<p> class <code>Commodity</code><br/>
  <i></i><code>Commodity</code> base class.</p>
 <h3>Typedefs</h3>
 <p> typedef std::map&lt; std::string, boost::any &gt; <code>SecondaryCosts</code> </p>

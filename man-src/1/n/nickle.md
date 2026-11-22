@@ -114,7 +114,7 @@ int[ *, *] name = &#123;&#123;0, 1}, {2, 3}} int[2, 2] name = &#123;&#123;0...}.
 <dd>
 </dd><dt>* / // %</dt>
 <dd> Times, divide, integer divide, and remainder. The right operand of the last three operators must be nonzero. The result type of the division operator will always be at least rational: the result type of the integer division operator will always be int. This is a notable departure from C, where integer division is implied by integer operands. Integer division is defined by </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>x&nbsp;<wbr>//&nbsp;<wbr>y&nbsp;<wbr>==&nbsp;<wbr>y&nbsp;<wbr>&gt;&nbsp;<wbr>0&nbsp;<wbr>?&nbsp;<wbr>floor&nbsp;<wbr>(x&nbsp;<wbr>/&nbsp;<wbr>y)&nbsp;<wbr>: ceil(x&nbsp;<wbr>/&nbsp;<wbr>y)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>x&nbsp;<wbr>//&nbsp;<wbr>y&nbsp;<wbr>==&nbsp;<wbr>y&nbsp;<wbr>&gt;&nbsp;<wbr>0&nbsp;<wbr>?&nbsp;<wbr>floor&nbsp;<wbr>(x&nbsp;<wbr>/&nbsp;<wbr>y)&nbsp;<wbr>: ceil(x&nbsp;<wbr>/&nbsp;<wbr>y)<br/>
  The remainder is always non-negative and is defined by: by </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>x&nbsp;<wbr>%&nbsp;<wbr>y&nbsp;<wbr>=&nbsp;<wbr>x &#8211;&nbsp;<wbr>(x&nbsp;<wbr>//&nbsp;<wbr>y)&nbsp;<wbr>*&nbsp;<wbr>y </p>
 <dt>=============</dt>
@@ -126,7 +126,7 @@ int[ *, *] name = &#123;&#123;0, 1}, {2, 3}} int[2, 2] name = &#123;&#123;0...}.
 </dd><dt>&lt;&lt; &gt;&gt;</dt>
 <dd> Bitwise left and right shift with integer operands. Negative right operands work as expected. These operators are defined by </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>x&nbsp;<wbr>&lt;&lt;&nbsp;<wbr>y&nbsp;<wbr>=&nbsp;<wbr>x&nbsp;<wbr>*&nbsp;<wbr>2&nbsp;<wbr>**&nbsp;<wbr>y </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>x&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>y&nbsp;<wbr>=&nbsp;<wbr>x&nbsp;<wbr>//&nbsp;<wbr>2&nbsp;<wbr>**&nbsp;<wbr>y<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>x&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>y&nbsp;<wbr>=&nbsp;<wbr>x&nbsp;<wbr>//&nbsp;<wbr>2&nbsp;<wbr>**&nbsp;<wbr>y<br/>
  Another way to look at this is that negative left operands are considered to be in an infinite twos-complement representation (i.e., sign-extended to infinity), with right shift sign-extending its left operand.</p>
 <dt>=============</dt>
 <dd>
@@ -196,7 +196,7 @@ int[ *, *] name = &#123;&#123;0, 1}, {2, 3}} int[2, 2] name = &#123;&#123;0...}.
 <dd> Parentheses for grouping.</dd></dl>
 <p> <code>Typedef:</code> </p>
 <p> As in C, new type names may be created with the typedef statement. The syntax is </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>typedef T typename;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>typedef T typename;<br/>
  where T is a Nickle type. The resulting typename may be used anywhere a type is expected.</p>
 <h2>VALUES</h2>
 <p> Values of the base types of Nickle are as expected. See the syntax for constants above. Values of type file, semaphore, and continuation may currently be created only by calls to builtin functions: no Nickle constants of these types exist. </p>
@@ -296,9 +296,9 @@ int[ *, *] name = &#123;&#123;0, 1}, {2, 3}} int[2, 2] name = &#123;&#123;0...}.
 <dd> Reopen the given namespace N, and extend it with the names defined as public in the given statements S.</dd>
 <dt>
 </dt><dd> Names defined inside the namespace are invisible outside the namespace unless they are qualified with the keyword public. Public names may be referred to using a path notation: </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>namespace::namespace::&#8230;::namespace::name<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>namespace::namespace::&#8230;::namespace::name<br/>
  refers to the given name as defined inside the given set of namespaces. The double-colon syntax is unfortunate, as it is slightly different in meaning than in C++, but all the good symbols were taken, and it is believed to be a feature that the namespace separator is syntactically different than the structure operator. In Java, for example, the phrase </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>name.name.name<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>name.name.name<br/>
  is syntactically ambiguous: the middle name may be either a structure or a namespace.</p>
 <dt>import N;</dt>
 <dd> The name N must refer to a namespace: all public names in this namespace are brought into the current scope (scoping out conflicting names).</dd></dl>
@@ -719,39 +719,39 @@ int[ *, *] name = &#123;&#123;0, 1}, {2, 3}} int[2, 2] name = &#123;&#123;0...}.
 <dt>NICKLESTART</dt>
 <dd> The filename of the file that should be loaded as a bootstrap on Nickle startup. The default in the absence of this variable is to load /usr/share/nickle/builtin.5c.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> An example (taken from the <i>bc</i> manual:<br />
-real function exponent(real x)<br />
-{<br />
-    real a = 1;<br />
-    int b = 1;<br />
-    real s = 1;<br />
-    int i = 1;<br />
-    while (1) {<br />
-        a = a * x;<br />
-        b = b * i;<br />
-        real c = a / b;<br />
-        if (abs(c) &lt; 1e-6)<br />
-            return s;<br />
-        s = s + c;<br />
-        i++;<br />
-    }<br />
-}<br />
- defines a function to compute an approximate value of the exponential function e ** x and<br />
-for (i = 1; i &lt; 10; i++)<br />
+<p> An example (taken from the <i>bc</i> manual:<br/>
+real function exponent(real x)<br/>
+{<br/>
+    real a = 1;<br/>
+    int b = 1;<br/>
+    real s = 1;<br/>
+    int i = 1;<br/>
+    while (1) {<br/>
+        a = a * x;<br/>
+        b = b * i;<br/>
+        real c = a / b;<br/>
+        if (abs(c) &lt; 1e-6)<br/>
+            return s;<br/>
+        s = s + c;<br/>
+        i++;<br/>
+    }<br/>
+}<br/>
+ defines a function to compute an approximate value of the exponential function e ** x and<br/>
+for (i = 1; i &lt; 10; i++)<br/>
     printf(&#8220;%g
-&#8221;, exponent(i));<br />
+&#8221;, exponent(i));<br/>
  prints approximate values of the exponential function of the first ten integers.</p>
 <h2>VERSION</h2>
 <p> This document describes version 1.99.2 of nickle, as well as some newer features. It was distributed with version 2.69 of nickle.</p>
 <h2>BUGS</h2>
 <p> See the discussion of the type of the exponentiation operator ** above. </p>
-<p> Due to a difficult-to-remove grammar ambiguity, it is not possible to use a bare assignment expression in an array initializer: it is confused with a structure initializer. For example:<br />
-&gt; int x = 0;<br />
-&gt; (int[*])<br />
-{<br />
-    x = 1<br />
-}<br />
--&gt; (int[*]){x = 1} Non array initializer<br />
+<p> Due to a difficult-to-remove grammar ambiguity, it is not possible to use a bare assignment expression in an array initializer: it is confused with a structure initializer. For example:<br/>
+&gt; int x = 0;<br/>
+&gt; (int[*])<br/>
+{<br/>
+    x = 1<br/>
+}<br/>
+-&gt; (int[*]){x = 1} Non array initializer<br/>
  The workaround is to parenthesize the assignment expression: </p>
 <pre><code>
 &gt; (int[*]){(x = 1)}
@@ -766,7 +766,7 @@ for (i = 1; i &lt; 10; i++)<br />
 <p> The implementation has not been thoroughly tested.</p>
 <h2>AUTHOR</h2>
 <p> <i>Nickle</i> is the work of Keith Packard &lt;keithp [at] keithp.com&gt; and Bart Massey &lt;bart_massey [at] iname.com&gt;. </p>
-<p> Nickle is<br />
+<p> Nickle is<br/>
  Copyright 1988-2006 Keith Packard and Bart Massey. All Rights Reserved. </p>
 <p> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: </p>
 <p> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. </p>

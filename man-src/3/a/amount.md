@@ -17,7 +17,7 @@ description: "QuantLib::CashFlow – Base class for cash flows."
 <p> <code>Event interface</code> </p>
 <p> virtual <code>Date</code> <code>date</code> () const =0 </p>
 <p> <code>CashFlow interface</code> </p>
-<p> virtual <code>Real</code> <code>amount</code> () const =0<br />
+<p> virtual <code>Real</code> <code>amount</code> () const =0<br/>
  <i>returns the amount of the cash flow </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>

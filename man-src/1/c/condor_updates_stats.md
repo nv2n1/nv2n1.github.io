@@ -10,10 +10,10 @@ description: "condor_updates_stats Display output from condor_status"
 
 <p> <i>condor_updates_stats</i> Display output from <i>condor_status</i> </p>
 <h2>Synopsis</h2>
-<p> <i>condor_updates_stats</i> [ &#8212; <code>help</code><br />
+<p> <i>condor_updates_stats</i> [ &#8212; <code>help</code><br/>
 &nbsp;<wbr>&#8211;&nbsp;<wbr> <code>h</code> ] [ &#8212; <code>version</code> ] </p>
-<p> <i>condor_updates_stats</i> [ &#8212; <code>long</code><br />
-&nbsp;<wbr>&#8211;&nbsp;<wbr> <code>l</code> ] [ &#8212; <code>history=&lt;min&gt;-&lt;max&gt;</code> ] [ &#8212; <code>interval=&lt;seconds&gt;</code> ] [ &#8212; <code>notime</code> ] [ &#8212; <code>time</code> ] [ &#8212; <code>summary</code><br />
+<p> <i>condor_updates_stats</i> [ &#8212; <code>long</code><br/>
+&nbsp;<wbr>&#8211;&nbsp;<wbr> <code>l</code> ] [ &#8212; <code>history=&lt;min&gt;-&lt;max&gt;</code> ] [ &#8212; <code>interval=&lt;seconds&gt;</code> ] [ &#8212; <code>notime</code> ] [ &#8212; <code>time</code> ] [ &#8212; <code>summary</code><br/>
 &nbsp;<wbr>&#8211;&nbsp;<wbr> <code>s</code> ] </p>
 <h2>Description</h2>
 <p> <i>condor_updates_stats</i> parses the output from <i>condor_status</i> , and it displays the information relating to update statistics in a useful format. The statistics are displayed with the most recent update first; the most recent update is numbered with the smallest value. </p>
@@ -78,8 +78,8 @@ description: "condor_updates_stats Display output from condor_status"
 <p> <i>condor_updates_stats</i> will exit with a status value of 0 (zero) upon success, and it will exit with a nonzero value upon failure. </p>
 <h2>Examples</h2>
 <p> Assuming the default of 128 updates kept, and assuming that the update interval is 5 minutes, <i>condor_updates_stats</i> displays: </p>
-<p> $ condor_status -l host1 | condor_updates_stats &#8211;interval=300<br />
- (Reading from stdin)<br />
+<p> $ condor_status -l host1 | condor_updates_stats &#8211;interval=300<br/>
+ (Reading from stdin)<br/>
  *** Name/Machine = &#8216;HOST1.cs.wisc.edu&#8217; MyType = &#8216;Machine&#8217; *** </p>
 <p>&nbsp;<wbr>Type: Main </p>
 <p>Stats: Total=2277, Seq=2276, Lost=3&nbsp;<wbr>(0.13%) </p>

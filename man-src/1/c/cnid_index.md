@@ -19,7 +19,7 @@ description: "cnid_index – check and repair Netatalk CNID database indexes"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font> </dd>
+  <code>Warning</code>  </dd>
 <p> When using <code>cnid_index</code> on cdb handled databases, <code>cnid_index</code> cannot check if another process (afpd) accesses the CNID databases. In this case, you have to manually ensure no other process accesses the database when running <code>cnid_index</code>. </p>
 </dl>
 <h2>SEE ALSO</h2>

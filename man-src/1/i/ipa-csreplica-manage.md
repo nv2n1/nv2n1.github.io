@@ -51,8 +51,8 @@ description: "ipa-csreplica-manage – Manage an IPA CS replica"
 <dl>
 <dt>List a server&#8217;s replication agreements.</dt>
 <dd>
-&nbsp;<wbr>#&nbsp;<wbr>ipa-csreplica-manage list srv1.example.com<br />
-&nbsp;<wbr>srv2.example.com<br />
+&nbsp;<wbr>#&nbsp;<wbr>ipa-csreplica-manage list srv1.example.com<br/>
+&nbsp;<wbr>srv2.example.com<br/>
 &nbsp;<wbr>srv3.example.com</dd>
 <dt>Re-initialize a replica:</dt>
 <dd>

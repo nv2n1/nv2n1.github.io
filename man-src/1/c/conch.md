@@ -24,7 +24,7 @@ description: "conch – Conch SSH client"
 <p> The &#8211;<code>K</code> option determines how the client connects to the remote host. It is a comma-separated list of the methods to use, in order of preference. The two connection methods are `unix&#8217; (for connecting over a multiplexed connection) and `direct&#8217; </p>
 <p> (to connect directly). To disable connecting over a multiplexed connection, do not include `unix&#8217; in the preference list. </p>
 <p> As an example of how connection sharing works, to speed up CVS over SSH: </p>
-<p> <code>conch</code> &#8211;noshell &#8211;fork -l cvs_user cvs_host<br />
+<p> <code>conch</code> &#8211;noshell &#8211;fork -l cvs_user cvs_host<br/>
  set CVS_RSH=<code>conch</code> </p>
 <p> Now, when CVS connects to cvs_host as cvs_user, instead of making a new connection to the server, <code>conch</code> will add a new channel to the existing connection. This saves the cost of repeatedly negotiating the cryptography and authentication. </p>
 <p> The options are as follows:</p>
@@ -84,7 +84,7 @@ description: "conch – Conch SSH client"
 <h2>REPORTING BUGS</h2>
 <p> To report a bug, visit <i><a rel="nofollow" href="http://twistedmatrix.com/bugs/">http://twistedmatrix.com/bugs/</a></i></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2002-2008 Twisted Matrix Laboratories.<br />
+<p> Copyright &#169; 2002-2008 Twisted Matrix Laboratories.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ssh/">ssh</a>(1) </p>

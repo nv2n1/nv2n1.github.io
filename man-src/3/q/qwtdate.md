@@ -22,8 +22,8 @@ description: "QwtDate –"
 <p> static double <code>toDouble</code> (const QDateTime &amp;) </p>
 <p> static QDateTime <code>ceil</code> (const QDateTime &amp;, <code>IntervalType</code>) </p>
 <p> static QDateTime <code>floor</code> (const QDateTime &amp;, <code>IntervalType</code>) </p>
-<p> static QDate <code>dateOfWeek0</code> (int year, <code>Week0Type</code>)<br />
- <i>Date of the first day of the first week for a year. </i><br />
+<p> static QDate <code>dateOfWeek0</code> (int year, <code>Week0Type</code>)<br/>
+ <i>Date of the first day of the first week for a year. </i><br/>
  static int <code>weekNumber</code> (const QDate &amp;, <code>Week0Type</code>) </p>
 <p> static int <code>utcOffset</code> (const QDateTime &amp;) </p>
 <p> static QString <code>toString</code> (const QDateTime &amp;, const QString &amp;format, <code>Week0Type</code>) </p>
@@ -79,7 +79,7 @@ description: "QwtDate –"
 <p>Ceil a datetime according the interval type </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dateTime</i> Datetime value<br />
+<dd><i>dateTime</i> Datetime value<br/>
  <i>intervalType</i> Interval type, how to ceil. F.e. when intervalType = QwtDate::Months, the result will be ceiled to the next beginning of a month</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -91,7 +91,7 @@ description: "QwtDate –"
 <p>Date of the first day of the first week for a year. The first day of a week depends on the current locale ( QLocale::firstDayOfWeek() ). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>year</i> Year<br />
+<dd><i>year</i> Year<br/>
  <i>type</i> Option how to identify the first week</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -103,7 +103,7 @@ description: "QwtDate –"
 <p>Floor a datetime according the interval type </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dateTime</i> Datetime value<br />
+<dd><i>dateTime</i> Datetime value<br/>
  <i>intervalType</i> Interval type, how to ceil. F.e. when intervalType = QwtDate::Months, the result will be ceiled to the next beginning of a month</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -146,7 +146,7 @@ description: "QwtDate –"
 <p>Translate from double to QDateTime </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Number of milliseconds since the epoch, 1970-01-01T00:00:00 UTC<br />
+<dd><i>value</i> Number of milliseconds since the epoch, 1970-01-01T00:00:00 UTC<br/>
  <i>timeSpec</i> Time specification</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -183,8 +183,8 @@ description: "QwtDate –"
 <p>&nbsp;<wbr>week number with a leading zero&nbsp;<wbr>(&nbsp;<wbr>01 &#8211; 53&nbsp;<wbr>)</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dateTime</i> Datetime value<br />
- <i>format</i> Format string<br />
+<dd><i>dateTime</i> Datetime value<br/>
+ <i>format</i> Format string<br/>
  <i>week0Type</i> Specification of week 0</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -220,7 +220,7 @@ description: "QwtDate –"
 <p>&nbsp;<wbr>Number of weeks that have begun since&nbsp;<wbr><code>dateOfWeek0()</code>.</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>date</i> Date<br />
+<dd><i>date</i> Date<br/>
  <i>type</i> Option how to identify the first week</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

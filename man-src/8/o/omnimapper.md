@@ -28,7 +28,7 @@ description: "omniMapper – Simple proxy for CORBA naming service from omniORB"
 <p>&nbsp;<wbr>NameService&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>IOR:000f&#8230; </p>
 <p>&nbsp;<wbr>InterfaceRepository IOR:0100&#8230;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-omninames/">omniNames</a></code>(8).<br />
+<p><code><a href="/docs/linux/man/8-omninames/">omniNames</a></code>(8).<br/>
  The programs are documented fully by the HTML documentation in the omniorb4-doc package.</p>
 <h2>Author</h2>
 <p>omniMapper was written by Duncan Grisby &lt;duncan [at] grisby.org&gt; </p>

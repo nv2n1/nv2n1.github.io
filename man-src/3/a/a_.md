@@ -14,12 +14,12 @@ description: "QuantLib::Vasicek – Vasicek model class"
 <p> Inherits <code>QuantLib::OneFactorAffineModel</code>. </p>
 <p> Inherited by <code>HullWhite</code>. </p>
 <h3>Classes</h3>
-<p> class <code>Dynamics</code><br />
+<p> class <code>Dynamics</code><br/>
  <i>Short-rate dynamics in the Vasicek model. </i></p>
 <h3>Public Member Functions</h3>
 <p> <code>Vasicek</code> (<code>Rate</code> r0=0.05, Real a=0.1, Real b=0.05, Real sigma=0.01, Real lambda=0.0) </p>
 <p> virtual Real <code>discountBondOption</code> (Option::Type type, Real strike, Time maturity, Time bondMaturity) const </p>
-<p> virtual boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; <code>dynamics</code> () const<br />
+<p> virtual boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; <code>dynamics</code> () const<br/>
  <i>returns the short-rate dynamics </i></p>
 <h3>Protected Member Functions</h3>
 <p> virtual Real <code>A</code> (Time t, Time T) const </p>

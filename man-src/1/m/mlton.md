@@ -43,8 +43,8 @@ description: "mlton – whole-program compiler for the Standard ML (SML) program
 <dt><code>-inline </code><i>n</i></dt>
 <dd> Set the inlining threshold used in the optimizer. The threshold is an approximate measure of code size of a procedure. The default is 320. </dd>
 <dt><code>-keep </code><i>{</i><code>g</code>|<code>o</code>|<code>sml</code>}</dt>
-<dd> Save intermediate files. If no <code>-keep</code> argument is given, then only the output file is saved. <code>g</code> generated <code>.S</code> and <code>.c</code> files passed to gcc and the assembler<br />
- <code>o</code> object (<code>.o</code>) files<br />
+<dd> Save intermediate files. If no <code>-keep</code> argument is given, then only the output file is saved. <code>g</code> generated <code>.S</code> and <code>.c</code> files passed to gcc and the assembler<br/>
+ <code>o</code> object (<code>.o</code>) files<br/>
  <code>sml</code> SML file </dd>
 <dt><code>-link-opt </code><i>option</i></dt>
 <dd> Pass <i>option</i> to <code>gcc</code> when linking. You can use this to specify library search paths, e.g. <code>-link-opt -Lpath</code>, and libraries to link with, e.g. <code>-link-opt -lfoo</code>, or even both at the same time, e.g. <code>-link-opt &#8216;-Lpath -lfoo&#8217;</code>. If you wish to pass an option to the linker, you must use <code>gcc</code>&#8216;s <code>-Wl,</code> syntax, e.g., <code>-link-opt &#8216;-Wl,&#8211;export-dynamic&#8217;</code>. </dd>
@@ -69,10 +69,10 @@ description: "mlton – whole-program compiler for the Standard ML (SML) program
 <dt><code>-show-def-use </code><i>file</i></dt>
 <dd> Output def-use information to <i>file</i>. Each identifier that is defined appears on a line, follwed on subequent lines by the position of each use. </dd>
 <dt><code>-stop </code><i>{</i><code>f</code>|<code>g</code>|<code>o</code>|<code>sml</code>|<code>tc</code>}</dt>
-<dd> Specify when to stop. <code>f</code> list of files on stdout (only makes sense when input is <code>foo.cm</code> or <code>foo.mlb</code>)<br />
- <code>g</code> generated <code>.S</code> and <code>.c</code> files<br />
- <code>o</code> object (<code>.o</code>) files<br />
- <code>sml</code> SML file (only makes sense when input is <code>foo.cm</code> or <code>foo.mlb</code>)<br />
+<dd> Specify when to stop. <code>f</code> list of files on stdout (only makes sense when input is <code>foo.cm</code> or <code>foo.mlb</code>)<br/>
+ <code>g</code> generated <code>.S</code> and <code>.c</code> files<br/>
+ <code>o</code> object (<code>.o</code>) files<br/>
+ <code>sml</code> SML file (only makes sense when input is <code>foo.cm</code> or <code>foo.mlb</code>)<br/>
  <code>tc</code> after type checking If you compile <code>-stop g</code> or <code>-stop o</code>, you can resume compilation by running <code>MLton</code> on the generated <code>.c</code> and <code>.S</code> or <code>.o</code> files. </dd>
 <dt><code>-target </code><i>{</i><code>self</code>|&#8230;}</dt>
 <dd> Generate an executable that runs on the specified platform. The default is <code>self</code>, which means to compile for the machine that <code>MLton</code> is running on. To use any other target, you must first install a cross compiler. See the <code>MLton Guide</code> for details. </dd>
@@ -83,9 +83,9 @@ description: "mlton – whole-program compiler for the Standard ML (SML) program
 <dt><code>-target-link-opt </code><i>target</i> <i>option</i></dt>
 <dd> Like <code>-link-opt</code>, this passes <i>option</i> to <code>gcc</code> when linking, except it only passes <i>option</i> when the target architecture or operating system is <i>target</i>. Valid values for <i>target</i> are as for <code>-target-as-opt</code>. </dd>
 <dt><code>-verbose </code><i>{</i><code>0</code>|<code>1</code>|<code>2</code>|<code>3</code>}</dt>
-<dd> How verbose to be about what passes are running. The default is 0. <code>0</code> silent<br />
- <code>1</code> calls to compiler, assembler, and linker<br />
- <code>2</code> 1, plus intermediate compiler passes<br />
+<dd> How verbose to be about what passes are running. The default is 0. <code>0</code> silent<br/>
+ <code>1</code> calls to compiler, assembler, and linker<br/>
+ <code>2</code> 1, plus intermediate compiler passes<br/>
  <code>3</code> 2, plus some data structure sizes </dd>
 </dl>
 <h2>Runtime system options</h2>
@@ -94,8 +94,8 @@ description: "mlton – whole-program compiler for the Standard ML (SML) program
 <p> Run-time options can also control <code>MLton</code>, as in <code>mlton @MLton fixed-heap 0.5g &#8212; foo.sml</code> </p>
 <dl>
 <dt><code>fixed-heap </code><i>x{</i><code>k</code>|<code>K</code>|<code>m</code>|<code>M</code>|<code>g</code>|<code>G</code>}</dt>
-<dd> Use a fixed size heap of size <i>x</i>, where <i>x</i> is a real number and the trailing letter indicates its units. <code>k</code> or <code>K</code> 1024<br />
- m or <code>M</code> 1,048,576<br />
+<dd> Use a fixed size heap of size <i>x</i>, where <i>x</i> is a real number and the trailing letter indicates its units. <code>k</code> or <code>K</code> 1024<br/>
+ m or <code>M</code> 1,048,576<br/>
  <code>g</code> or <code>G</code> 1,073,741,824 A value of <code>0</code> means to use almost all the RAM present on the machine. </dd>
 <p> The heap size used by <code>fixed-heap</code> includes all memory allocated by SML code, including memory for the stack (or stacks, if there are multiple threads). It does not, however, include any memory used for code itself or memory used by C globals, the C stack, or malloc. </p>
 <dt><code>gc-messages</code></dt>

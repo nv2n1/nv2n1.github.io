@@ -71,24 +71,24 @@ description: "ustr_const – ustr string library constants"
 <p> &nbsp;<wbr>&nbsp;<wbr> <code>USTR_POOL_LL_CNTL_SET_FREE_CMP</code> </p>
 <p> &nbsp;<wbr>&nbsp;<wbr> <code>USTR_POOL_LL_CNTL_GET_REALLOC</code> </p>
 <p> &nbsp;<wbr>&nbsp;<wbr> <code>USTR_POOL_LL_CNTL_SET_REALLOC</code> </p>
-<p> <code>Constant: </code> USTR_CONF_INCLUDE_CODEONLY_HEADERS<br />
+<p> <code>Constant: </code> USTR_CONF_INCLUDE_CODEONLY_HEADERS<br/>
  <code>Explanation:</code> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>This switch controls whether all the code will be included as inline functions. Having this be non-zero means that you don&#8217;t have to link against the library.<br />
- <code>Constant: </code> USTR_CONF_USE_EOS_MARK<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>This switch controls whether all the code will be included as inline functions. Having this be non-zero means that you don&#8217;t have to link against the library.<br/>
+ <code>Constant: </code> USTR_CONF_USE_EOS_MARK<br/>
  <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This switch turns on End of String markers, so any bounds overflow will be noticed by ustr_assert_valid(). <code>Note:</code> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Changing this will not do anything useful unless USTR_CONF_INCLUDE_CODEONLY_HEADERS is non-zero.<br />
- <code>Constant: </code> USTR_CONF_USE_ASSERT<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Changing this will not do anything useful unless USTR_CONF_INCLUDE_CODEONLY_HEADERS is non-zero.<br/>
+ <code>Constant: </code> USTR_CONF_USE_ASSERT<br/>
  <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This switch turns USTR_ASSERT()&nbsp;<wbr>calls on, so the code within them will be evaluated. Note that there are many calls to ustr_assert_valid()&nbsp;<wbr>within USTR_ASSERT()&nbsp;<wbr>macros and that call is relatively expensive. <code>Note:</code> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Changing this will not do anything useful unless USTR_CONF_INCLUDE_CODEONLY_HEADERS is non-zero.<br />
- <code>Constant: </code> USTR_CONF_COMPILE_USE_ATTRIBUTES<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Changing this will not do anything useful unless USTR_CONF_INCLUDE_CODEONLY_HEADERS is non-zero.<br/>
+ <code>Constant: </code> USTR_CONF_COMPILE_USE_ATTRIBUTES<br/>
  <code>Explanation:</code> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>This switch controls whether gcc type&nbsp;<wbr>__attribute__()&nbsp;<wbr>statements are used in the public headers headers for the library. If the value is 1 then if they are supported by the compiler that built the library they will be used, if the value is 0 they won&#8217;t be used at all.<br />
- <code>Constant: </code> USTR_CONF_COMPILE_TYPEDEF<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>This switch controls whether gcc type&nbsp;<wbr>__attribute__()&nbsp;<wbr>statements are used in the public headers headers for the library. If the value is 1 then if they are supported by the compiler that built the library they will be used, if the value is 0 they won&#8217;t be used at all.<br/>
+ <code>Constant: </code> USTR_CONF_COMPILE_TYPEDEF<br/>
  <code>Explanation:</code> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>This switch controls whether typedef will be used for the structs in the public headers for the library. If the value is 1 then they will be used, if the value is 0 they won&#8217;t be used at all&nbsp;<wbr>(and your code will have to use struct tags instead &#8212; note all libraries using ustr should compile without this option set).<br />
- <code>Constant: </code> USTR_CONF_COMPILE_USE_INLINE<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>This switch controls whether typedef will be used for the structs in the public headers for the library. If the value is 1 then they will be used, if the value is 0 they won&#8217;t be used at all&nbsp;<wbr>(and your code will have to use struct tags instead &#8212; note all libraries using ustr should compile without this option set).<br/>
+ <code>Constant: </code> USTR_CONF_COMPILE_USE_INLINE<br/>
  <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This switch controls whether inline functions will be used in a few cases where the function bodies are very small. <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>In some cases this is used so that GCC can eliminate calls to strlen(), for the&nbsp;<wbr>*_cstr()&nbsp;<wbr>functions. </p>
@@ -169,7 +169,7 @@ description: "ustr_const – ustr string library constants"
 <p>&nbsp;<wbr>&nbsp;<wbr>This error code means that the Ustr string consisted only spaces, and a plus or minus sign. </p>
 <p> <code>Constant: </code> USTR_TYPE_PARSE_NUM_ERR_ONLY_SPMX </p>
 <p> <code>Explanation:</code> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>This error code means that the Ustr string consisted of only spaces, a plus or minus sign and a&nbsp;<wbr>&quot;0x&quot;&nbsp;<wbr>base 16 prefix.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>This error code means that the Ustr string consisted of only spaces, a plus or minus sign and a&nbsp;<wbr>&quot;0x&quot;&nbsp;<wbr>base 16 prefix.<br/>
  <code>Constant: </code> USTR_TYPE_PARSE_NUM_ERR_OOB </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This error code means that the Ustr string had characters in it that where out of bounds from the working base. </p>
@@ -194,7 +194,7 @@ description: "ustr_const – ustr string library constants"
 <p>&nbsp;<wbr>&nbsp;<wbr>Return the separator along with the tokens. For example splitting&nbsp;<wbr>&quot;a,b,&quot;&nbsp;<wbr>using separator&nbsp;<wbr>&quot;,&quot;&nbsp;<wbr>will return the tokens&nbsp;<wbr>&quot;a,&quot;&nbsp;<wbr>and&nbsp;<wbr>&quot;b,&quot;&nbsp;<wbr>whereas without this flag only&nbsp;<wbr>&quot;a&quot;&nbsp;<wbr>and&nbsp;<wbr>&quot;b&quot;&nbsp;<wbr>would be returned. </p>
 <p>&nbsp;<wbr>.br <code>Constant: </code> USTR_FLAG_SPLIT_RET_NON </p>
 <p> <code>Explanation:</code> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Return empty tokens. For example: splitting&nbsp;<wbr>&quot;a,,b&quot;&nbsp;<wbr>with separator&nbsp;<wbr>&quot;,&quot;&nbsp;<wbr>will return the tokens&nbsp;<wbr>{&quot;a&quot;&nbsp;<wbr>&quot;&quot;&nbsp;<wbr>&quot;b&quot;}.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Return empty tokens. For example: splitting&nbsp;<wbr>&quot;a,,b&quot;&nbsp;<wbr>with separator&nbsp;<wbr>&quot;,&quot;&nbsp;<wbr>will return the tokens&nbsp;<wbr>{&quot;a&quot;&nbsp;<wbr>&quot;&quot;&nbsp;<wbr>&quot;b&quot;}.<br/>
  <code>Constant: </code> USTR_FLAG_SPLIT_KEEP_CONFIG </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Force the returned Ustr&#8217;s to have same configuration parameters as the Ustr string that is being split.</p>
@@ -213,130 +213,130 @@ description: "ustr_const – ustr string library constants"
 <p>&nbsp;<wbr>&nbsp;<wbr>This macro is 0, but shows the intent that a boolean value is expected and not a number.</p>
 <h2>Constants passed to ustr_cntl_opt()</h2>
 <p><code>Constant: </code> USTR_CNTL_OPT_GET_REF_BYTES </p>
-<p> Parameter<code>[1]</code>: Number of bytes for default reference count in Ustr<br />
+<p> Parameter<code>[1]</code>: Number of bytes for default reference count in Ustr<br/>
  Type<code>[1]</code>: size_t * </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will get the default number of bytes used for a reference count when creating Ustr&#8217;s. </p>
 <p> <code>Constant: </code> USTR_CNTL_OPT_SET_REF_BYTES </p>
-<p> Parameter<code>[1]</code>: Number of bytes for default reference count in Ustr<br />
+<p> Parameter<code>[1]</code>: Number of bytes for default reference count in Ustr<br/>
  Type<code>[1]</code>: size_t </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will set the default number of bytes used for a reference count when creating Ustr&#8217;s. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>For a single instance, the ustr_dupx_*()&nbsp;<wbr>functions can be used. </p>
 <p> <code>Constant: </code> USTR_CNTL_OPT_GET_HAS_SIZE </p>
-<p> Parameter<code>[1]</code>: Default flag for whether to include an explicit size in a Ustr<br />
+<p> Parameter<code>[1]</code>: Default flag for whether to include an explicit size in a Ustr<br/>
  Type<code>[1]</code>: int * </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will get the default flag for whether to store an explicit size in created Ustr&#8217;s. </p>
 <p> <code>Constant: </code> USTR_CNTL_OPT_SET_HAS_SIZE </p>
-<p> Parameter<code>[1]</code>: Default flag for whether to include an explicit size in a Ustr<br />
+<p> Parameter<code>[1]</code>: Default flag for whether to include an explicit size in a Ustr<br/>
  Type<code>[1]</code>: int </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will set the default flag for whether to store an explicit size in created Ustr&#8217;s. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>For a single instance, the ustr_dupx_*()&nbsp;<wbr>functions can be used. </p>
 <p> <code>Constant: </code> USTR_CNTL_OPT_GET_EXACT_BYTES </p>
-<p> Parameter<code>[1]</code>: Default flag for whether to exactly allocate memory<br />
+<p> Parameter<code>[1]</code>: Default flag for whether to exactly allocate memory<br/>
  Type<code>[1]</code>: int * </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will get the default flag for whether to exactly allocate memory when a Ustr needs to be resized. </p>
 <p> <code>Constant: </code> USTR_CNTL_OPT_SET_EXACT_BYTES </p>
-<p> Parameter<code>[1]</code>: Default flag for whether to exactly allocate memory<br />
+<p> Parameter<code>[1]</code>: Default flag for whether to exactly allocate memory<br/>
  Type<code>[1]</code>: int </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will set the default flag for whether to exactly allocate memory when a Ustr needs to be resized. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>For a single instance, the ustr_dupx_*()&nbsp;<wbr>functions can be used. </p>
-<p> <code>Constant: </code> USTR_CNTL_OPT_GET_MEM<br />
- Parameter<code>[1]</code>: Pointer to colleciton of function pointers for system allocation<br />
+<p> <code>Constant: </code> USTR_CNTL_OPT_GET_MEM<br/>
+ Parameter<code>[1]</code>: Pointer to colleciton of function pointers for system allocation<br/>
  Type<code>[1]</code>: struct Ustr_cntl_mem * </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will get the&nbsp;<wbr>&quot;system&quot;&nbsp;<wbr>allocation functions&nbsp;<wbr>(malloc, realloc, free)&nbsp;<wbr>for allocated Ustr&#8217;s. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>As you would expect the default values are: malloc, realloc, free. </p>
-<p> <code>Constant: </code> USTR_CNTL_OPT_SET_MEM<br />
- Parameter<code>[1]</code>: Pointer to colleciton of function pointers for system allocation<br />
+<p> <code>Constant: </code> USTR_CNTL_OPT_SET_MEM<br/>
+ Parameter<code>[1]</code>: Pointer to colleciton of function pointers for system allocation<br/>
  Type<code>[1]</code>: const struct Ustr_cntl_mem * </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will set the&nbsp;<wbr>&quot;system&quot;&nbsp;<wbr>allocation functions&nbsp;<wbr>(malloc, realloc, free)&nbsp;<wbr>for allocated Ustr&#8217;s. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>If this option is set after a Ustr has been created, then when freeing or reallocating the existing Ustr the given functions will be used. So they must either be compatible with the default or you must ensure that nothing is allocated before they are set. </p>
 <p> <code>Constant: </code> USTR_CNTL_OPT_GET_MC_M_SCRUB </p>
-<p> Parameter<code>[1]</code>: Flag for whether to include an explicit size in a Ustr<br />
+<p> Parameter<code>[1]</code>: Flag for whether to include an explicit size in a Ustr<br/>
  Type<code>[1]</code>: int * </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will get the flag for whether to&nbsp;<wbr>&quot;scrub&quot;&nbsp;<wbr>data allocated via. malloc check. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Malloc check has to be enabled for this to mean anything, Ie. USTR_CNTL_MALLOC_LVL()&nbsp;<wbr>must be positive. </p>
 <p> <code>Constant: </code> USTR_CNTL_OPT_SET_MC_M_SCRUB </p>
-<p> Parameter<code>[1]</code>: Flag for whether to include an explicit size in a Ustr<br />
+<p> Parameter<code>[1]</code>: Flag for whether to include an explicit size in a Ustr<br/>
  Type<code>[1]</code>: int </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will set the flag for whether to&nbsp;<wbr>&quot;scrub&quot;&nbsp;<wbr>data allocated via. malloc check. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Malloc check has to be enabled for this to mean anything, Ie. USTR_CNTL_MALLOC_LVL()&nbsp;<wbr>must be positive. </p>
 <p> <code>Constant: </code> USTR_CNTL_OPT_GET_MC_F_SCRUB </p>
-<p> Parameter<code>[1]</code>: Flag for whether to include an explicit size in a Ustr<br />
+<p> Parameter<code>[1]</code>: Flag for whether to include an explicit size in a Ustr<br/>
  Type<code>[1]</code>: int * </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will get the flag for whether to&nbsp;<wbr>&quot;scrub&quot;&nbsp;<wbr>data freed via. malloc check. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Malloc check has to be enabled for this to mean anything, Ie. USTR_CNTL_MALLOC_LVL()&nbsp;<wbr>must be positive. </p>
 <p> <code>Constant: </code> USTR_CNTL_OPT_SET_MC_F_SCRUB </p>
-<p> Parameter<code>[1]</code>: Flag for whether to include an explicit size in a Ustr<br />
+<p> Parameter<code>[1]</code>: Flag for whether to include an explicit size in a Ustr<br/>
  Type<code>[1]</code>: int </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will set the flag for whether to&nbsp;<wbr>&quot;scrub&quot;&nbsp;<wbr>data freed via. malloc check. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Malloc check has to be enabled for this to mean anything, Ie. USTR_CNTL_MALLOC_LVL()&nbsp;<wbr>must be positive. </p>
 <p> <code>Constant: </code> USTR_CNTL_OPT_GET_MC_R_SCRUB </p>
-<p> Parameter<code>[1]</code>: Flag for whether to include an explicit size in a Ustr<br />
+<p> Parameter<code>[1]</code>: Flag for whether to include an explicit size in a Ustr<br/>
  Type<code>[1]</code>: int * </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will get the flag for whether to&nbsp;<wbr>&quot;scrub&quot;&nbsp;<wbr>data reallocated via. malloc check. This is done by turning all reallocations into a malloc()&nbsp;<wbr>and free(), and so is even more costly than normal scrubbing. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Malloc check has to be enabled for this to mean anything, Ie. USTR_CNTL_MALLOC_LVL()&nbsp;<wbr>must be positive. </p>
 <p> <code>Constant: </code> USTR_CNTL_OPT_SET_MC_R_SCRUB </p>
-<p> Parameter<code>[1]</code>: Flag for whether to include an explicit size in a Ustr<br />
+<p> Parameter<code>[1]</code>: Flag for whether to include an explicit size in a Ustr<br/>
  Type<code>[1]</code>: int </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will set the flag for whether to&nbsp;<wbr>&quot;scrub&quot;&nbsp;<wbr>data reallocated via. malloc check. This is done by turning all reallocations into a malloc()&nbsp;<wbr>and free(), and so is even more costly than normal scrubbing. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Malloc check has to be enabled for this to mean anything, Ie. USTR_CNTL_MALLOC_LVL()&nbsp;<wbr>must be positive. </p>
-<p> <code>Constant: </code> USTR_CNTL_OPT_GET_FMT<br />
- Parameter<code>[1]</code>: Pointer to colleciton of function pointers for system formating<br />
+<p> <code>Constant: </code> USTR_CNTL_OPT_GET_FMT<br/>
+ Parameter<code>[1]</code>: Pointer to colleciton of function pointers for system formating<br/>
  Type<code>[1]</code>: struct Ustr_cntl_fmt * </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will get the system formatting functions&nbsp;<wbr>(vsnprintf)&nbsp;<wbr>for Ustr&#8217;s. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>There are two functions, the first is always called and the second is likely called&nbsp;<wbr>(always with the exact same arguments)&nbsp;<wbr>if the length passed to the first call was not big enough. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>As you would expect the default values are: vsnprintf and vsnprintf </p>
-<p> <code>Constant: </code> USTR_CNTL_OPT_SET_FMT<br />
- Parameter<code>[1]</code>: Pointer to colleciton of function pointers for system formatting<br />
+<p> <code>Constant: </code> USTR_CNTL_OPT_SET_FMT<br/>
+ Parameter<code>[1]</code>: Pointer to colleciton of function pointers for system formatting<br/>
  Type<code>[1]</code>: const struct Ustr_cntl_fmt * </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will set the system formatting functions&nbsp;<wbr>(vsnprintf)&nbsp;<wbr>for Ustr&#8217;s.</p>
 <h2>Constants passed to ustr_pool_ll_cntl()</h2>
 <p><code>Constant: </code> USTR_POOL_LL_CNTL_GET_FREE_CMP </p>
-<p> Parameter<code>[1]</code>: Number of pointers to compare to in the pool<br />
+<p> Parameter<code>[1]</code>: Number of pointers to compare to in the pool<br/>
  Type<code>[1]</code>: unsigned int * </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will get the number of comparisons done on a pool free operation. </p>
 <p> <code>Constant: </code> USTR_POOL_LL_CNTL_SET_FREE_CMP </p>
-<p> Parameter<code>[1]</code>: Number of pointers to compare to in the pool<br />
+<p> Parameter<code>[1]</code>: Number of pointers to compare to in the pool<br/>
  Type<code>[1]</code>: unsigned int </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will set the number of comparisons done on a pool free operation. </p>
 <p> <code>Note:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>The default is a small non-zero value, as it&#8217;s significantly common to have very short lived ustr&#8217;s &#8230; however this doesn&#8217;t mean that you can&#8217;t forget to take references even with pool allocated ustrs. </p>
 <p> <code>Constant: </code> USTR_POOL_LL_CNTL_GET_REALLOC </p>
-<p> Parameter<code>[1]</code>: Flag for if we should call realloc()<br />
+<p> Parameter<code>[1]</code>: Flag for if we should call realloc()<br/>
  Type<code>[1]</code>: int * </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will get the flag for if we call realloc()&nbsp;<wbr>to make data bigger, or revert to just allocating anew each time. </p>
 <p> <code>Constant: </code> USTR_POOL_LL_CNTL_SET_REALLOC </p>
-<p> Parameter<code>[1]</code>: Flag for if we should call realloc()<br />
+<p> Parameter<code>[1]</code>: Flag for if we should call realloc()<br/>
  Type<code>[1]</code>: int </p>
 <p> <code>Explanation:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>This option will set the flag for if we call realloc()&nbsp;<wbr>to make data bigger, or revert to just allocating anew each time. </p>

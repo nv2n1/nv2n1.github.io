@@ -34,12 +34,12 @@ Dpkg::Version - handling and comparing dpkg-style version numbers
  If <tt>$a</tt> or <tt>$b</tt> are not valid version numbers, it dies with an error.
 </dd><dt>version_compare_relation($a, $rel, $b)
 </dt><dd>Returns the result (0 or 1) of the given comparison operation. This function is implemented on top of <i>version_compare()</i>. 
- Allowed values for <tt>$rel</tt> are the exported constants <font SIZE="-1">REL_GT, REL_GE, REL_EQ, REL_LE, REL_LT.</font> Use <i>version_normalize_relation()</i> if you have an input string containing the operator.
+ Allowed values for <tt>$rel</tt> are the exported constants REL_GT, REL_GE, REL_EQ, REL_LE, REL_LT. Use <i>version_normalize_relation()</i> if you have an input string containing the operator.
 </dd><dt>my $rel = version_normalize_relation($rel_string)
-</dt><dd>Returns the normalized constant of the relation <tt>$rel</tt> (a value among <font SIZE="-1">REL_GT, REL_GE, REL_EQ, REL_LE</font> and <font SIZE="-1">REL_LT</font>). Supported relations names in input are: ``gt'', ``ge'', ``eq'', ``le'', ``lt'', ``&gt;&gt;'', ``&gt;='', ``='', ``&lt;='', ``&lt;&lt;''. ``&gt;'' and ``&lt;'' are also supported but should not be used as they are obsolete aliases of ``&gt;='' and ``&lt;=''.
+</dt><dd>Returns the normalized constant of the relation <tt>$rel</tt> (a value among REL_GT, REL_GE, REL_EQ, REL_LE and REL_LT). Supported relations names in input are: ``gt'', ``ge'', ``eq'', ``le'', ``lt'', ``&gt;&gt;'', ``&gt;='', ``='', ``&lt;='', ``&lt;&lt;''. ``&gt;'' and ``&lt;'' are also supported but should not be used as they are obsolete aliases of ``&gt;='' and ``&lt;=''.
 </dd><dt>version_compare_string($a, $b)
 </dt><dd>String comparison function used for comparing non-numerical parts of version numbers. Returns -1 if <tt>$a</tt> is earlier than <tt>$b</tt>, 0 if they are equal and 1 if <tt>$a</tt> is later than <tt>$b</tt>. 
- The ``~'' character always sort lower than anything else. Digits sort lower than non-digits. Among remaining characters alphabetic characters (A-Za-z) sort lower than the other ones. Within each range, the <font SIZE="-1">ASCII</font> decimal value of the character is used to sort between characters.
+ The ``~'' character always sort lower than anything else. Digits sort lower than non-digits. Among remaining characters alphabetic characters (A-Za-z) sort lower than the other ones. Within each range, the ASCII decimal value of the character is used to sort between characters.
 </dd><dt>version_compare_part($a, $b)
 </dt><dd>Compare two corresponding sub-parts of a version number (either upstream version or debian revision). 
  Each parameter is split by <i>version_split_digits()</i> and resulting items are compared together. As soon as a difference happens, it returns -1 if <tt>$a</tt> is earlier than <tt>$b</tt>, 0 if they are equal and 1 if <tt>$a</tt> is later than <tt>$b</tt>.

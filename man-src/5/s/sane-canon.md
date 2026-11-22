@@ -11,11 +11,11 @@ description: "sane-canon – SANE backend for Canon SCSI scanners"
 <h2>Description</h2>
 <p>The <code>sane-canon</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to the following Canon flatbed and film scanners:</p>
 <dl>
-<dd>CanoScan 300<br />
- CanoScan 600<br />
- CanoScan FB620S<br />
- CanoScan FB1200S<br />
- CanoScan FS2700F<br />
+<dd>CanoScan 300<br/>
+ CanoScan 600<br/>
+ CanoScan FB620S<br/>
+ CanoScan FB1200S<br/>
+ CanoScan FS2700F<br/>
  CanoScan FS2710S
 </dd></dl>
 <p> Parallel port and USB scanners are not supported by this backend; see the manual pages for <code><a href="/docs/linux/man/5-sane-canon_pp/">sane-canon_pp</a></code>(5) and <code><a href="/docs/linux/man/5-sane-canon630u/">sane-canon630u</a></code>(5) for further information. IMPORTANT: This is beta code. We tested the code on the scanners listed above, using the computers and operating systems available to us, but we cannot guarantee that the backend will work smoothly with future operating systems, SCSI adapters, SANE frontend programs, or Canon scanners not contained in the list above. In some cases your computer might even hang. It cannot be excluded (although we consider it extremely unlikely) that your scanner will be damaged. That said, TESTERS ARE WELCOME. Send your bug reports and comments to Manuel Panea <i>&lt;mpd [at] rzg.mpg.de&gt;</i>; for questions concerning the FB620 and FB1200S contact Mitsuru Okaniwa <i>&lt;m-okaniwa [at] bea.hi-ho.ne.jp&gt;</i>, for the FS2710S Ulrich Deiters <i>&lt;ukd [at] xenon.pc.uni-koeln.de&gt;</i>. </p>
@@ -39,10 +39,10 @@ description: "sane-canon – SANE backend for Canon SCSI scanners"
 <p> Example: export SANE_DEBUG_CANON=4 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5)<br />
+<p><code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5)<br/>
  <i><a rel="nofollow" href="http://www.rzg.mpg.de/~mpd/sane/doc/canon.install2700F.txt">http://www.rzg.mpg.de/~mpd/sane/doc/canon.install2700F.txt</a></i> (installation of a CanoScan 2700F)</p>
 <h2>Author</h2>
-<p>Helmut Koeberle, Manuel Panea, and Markus Mertinat;<br />
- FB620S and FB1200S support by Mitsuru Okaniwa;<br />
- FS2710S support by Ulrich Deiters<br />
+<p>Helmut Koeberle, Manuel Panea, and Markus Mertinat;<br/>
+ FB620S and FB1200S support by Mitsuru Okaniwa;<br/>
+ FS2710S support by Ulrich Deiters<br/>
  Man page by Henning Meier-Geinitz (mostly based on canon.README)</p>

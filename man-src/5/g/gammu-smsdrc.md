@@ -15,9 +15,9 @@ description: "gammu-smsdrc – gammu-smsd(1) configuration file"
 <h3>General parameters of SMS daemon</h3>
 <dl>
 <dt><code>Service</code></dt>
-<dd>SMSD service to use, one of FILES, MYSQL, PGSQL, DBI (depends on compiled in support for backends). <code>FILES</code> &#8211; stores messages in files, see <a href="/docs/linux/man/7-gammu-smsd-files/">gammu-smsd-files</a>(7) for details<br />
- <code>MYSQL</code> &#8211; stores messages in MySQL database, see <a href="/docs/linux/man/7-gammu-smsd-mysql/">gammu-smsd-mysql</a>(7) for details<br />
- <code>PGSQL</code> &#8211; stores messages in PostgreSQL database, see <a href="/docs/linux/man/7-gammu-smsd-pgsql/">gammu-smsd-pgsql</a>(7) for details<br />
+<dd>SMSD service to use, one of FILES, MYSQL, PGSQL, DBI (depends on compiled in support for backends). <code>FILES</code> &#8211; stores messages in files, see <a href="/docs/linux/man/7-gammu-smsd-files/">gammu-smsd-files</a>(7) for details<br/>
+ <code>MYSQL</code> &#8211; stores messages in MySQL database, see <a href="/docs/linux/man/7-gammu-smsd-mysql/">gammu-smsd-mysql</a>(7) for details<br/>
+ <code>PGSQL</code> &#8211; stores messages in PostgreSQL database, see <a href="/docs/linux/man/7-gammu-smsd-pgsql/">gammu-smsd-pgsql</a>(7) for details<br/>
  <code>DBI</code> &#8211; stores messages in any database supported by libdbi, this includes MSSQL, MySQL, PostgreSQL or SQLite databases, see <a href="/docs/linux/man/7-gammu-smsd-dbi/">gammu-smsd-dbi</a>(7) for details</dd>
 <dt><code>PIN</code></dt>
 <dd>PIN for SIM card. This is optional, but you should set it if your phone after power on requires PIN.</dd>
@@ -28,8 +28,8 @@ description: "gammu-smsdrc – gammu-smsd(1) configuration file"
 <dt><code>LogFile</code></dt>
 <dd>File where SMSD actions are being logged. You can also use special value &quot;syslog&quot; which will send all messages to syslog daemon. On Windows another special value &quot;eventlog&quot; exists, which will send logs to Windows Event Log. Default is to provide no logging.</dd>
 <dt><code>DebugLevel</code></dt>
-<dd>Debug level for SMSD. The integer value should be sum of all flags you want to enable. <code>1</code> &#8211; enables basic debugging information<br />
- <code>2</code> &#8211; enables logging of SQL queries of service backends<br />
+<dd>Debug level for SMSD. The integer value should be sum of all flags you want to enable. <code>1</code> &#8211; enables basic debugging information<br/>
+ <code>2</code> &#8211; enables logging of SQL queries of service backends<br/>
  <code>4</code> &#8211; enables logging of gammu debug information (has to be enabled also in gammu section) Generally to get as much debug information as possible, use 255. Default is 0, what should mean no extra information.</dd>
 <dt><code>CommTimeout</code></dt>
 <dd>How many seconds should SMSD wait after each read/write loop. Default is 30.</dd>
@@ -44,11 +44,11 @@ description: "gammu-smsdrc – gammu-smsd(1) configuration file"
 <dt><code>ResetFrequency</code></dt>
 <dd>The number of seconds between performing a preventive soft reset in order to minimize the cases of hanging phones e.g. Nokia 5110 will sometimes freeze to a state when only after unmounting the battery the phone will be functional again. Default is 0 (not used).</dd>
 <dt><code>DeliveryReport</code></dt>
-<dd>Whether delivery reports should be used, one of &#8216;no&#8217;, &#8216;log&#8217;, &#8216;sms&#8217;. <code>log</code> &#8211; one line log entry,<br />
- <code>sms</code> &#8211; store in inbox as a received SMS<br />
+<dd>Whether delivery reports should be used, one of &#8216;no&#8217;, &#8216;log&#8217;, &#8216;sms&#8217;. <code>log</code> &#8211; one line log entry,<br/>
+ <code>sms</code> &#8211; store in inbox as a received SMS<br/>
  <code>no</code> &#8211; no delivery reports Default is &#8216;no&#8217;.</dd>
 <dt><code>DeliveryReportDelay</code></dt>
-<dd>Delay in seconds how long is still delivery report considered valid. This depends on brokeness of your network (delivery report should have same timestamp as sent message). Increase this if delivery reports are not paired with sent messages.<br />
+<dd>Delay in seconds how long is still delivery report considered valid. This depends on brokeness of your network (delivery report should have same timestamp as sent message). Increase this if delivery reports are not paired with sent messages.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> Default is 600 (10 minutes).</dd>
 <dt><code>PhoneID</code></dt>
 <dd>String with info about phone used for sending/receiving. This can be useful if you want to run several SMS daemons. When you set PhoneID, all messages (including injected ones) will be marked by this string and it allow more SMS daemons to share single database. This option has actually no effect of FILES backend service.</dd>
@@ -85,8 +85,8 @@ description: "gammu-smsdrc – gammu-smsd(1) configuration file"
 <dt><code>ErrorSMSPath</code></dt>
 <dd>Where SMSes with error in transmission is placed. Default is same as SentSMSPath.</dd>
 <dt><code>InboxFormat</code></dt>
-<dd>The format in which the SMS will be stored: &#8216;detail&#8217;, &#8216;unicode&#8217;, &#8216;standard&#8217;. <code>detail</code> &#8211; format used for message backup by <a href="/docs/linux/man/1-gammu/">gammu</a>(1)<br />
- <code>unicode</code> &#8211; message text stored in unicode (UTF-16)<br />
+<dd>The format in which the SMS will be stored: &#8216;detail&#8217;, &#8216;unicode&#8217;, &#8216;standard&#8217;. <code>detail</code> &#8211; format used for message backup by <a href="/docs/linux/man/1-gammu/">gammu</a>(1)<br/>
+ <code>unicode</code> &#8211; message text stored in unicode (UTF-16)<br/>
  <code>standard</code> &#8211; message text stored in system charset Default is &#8216;unicode&#8217;.</dd>
 <dt><code>TransmitFormat</code></dt>
 <dd>The format for transmitting the SMS: &#8216;auto&#8217;, &#8216;unicode&#8217;, &#8216;7bit&#8217;. Default is &#8216;auto&#8217;.</dd></dl>
@@ -123,14 +123,14 @@ number1 = 666</pre>
 <h2>Author</h2>
 <p>gammu-smsd and this manual page were written by Michal Cihar &lt;michal [at] cihar.com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2009 Michal Cihar and other authors. License GPLv2: GNU GPL version 2 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>&gt;<br />
+<p>Copyright &#169; 2009 Michal Cihar and other authors. License GPLv2: GNU GPL version 2 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>Reporting Bugs</h2>
 <p>Please report bugs to &lt;<a rel="nofollow" href="http://bugs.cihar.com">http://bugs.cihar.com</a>&gt;. </p>
 <p> Before reporting a bug, please enable verbose logging in SMSD configuration: </p>
-<p>&nbsp;<wbr>[gammu]<br />
+<p>&nbsp;<wbr>[gammu]<br/>
 &nbsp;<wbr>logformat&nbsp;<wbr>=&nbsp;<wbr>textall </p>
-<p>&nbsp;<wbr>[smsd]<br />
-&nbsp;<wbr>debuglevel&nbsp;<wbr>=&nbsp;<wbr>255<br />
+<p>&nbsp;<wbr>[smsd]<br/>
+&nbsp;<wbr>debuglevel&nbsp;<wbr>=&nbsp;<wbr>255<br/>
 &nbsp;<wbr>logfile&nbsp;<wbr>=&nbsp;<wbr>smsd.log </p>
 <p> and include this verbose log within bug report.</p>

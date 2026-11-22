@@ -40,10 +40,10 @@ description: "sha512hmac – compute and check HMAC values"
 <dd>Attempt to pass all input files through <i>prelink -y</i> before processing their contents. The tool always attempts to do so when computing or performing a self-check. </dd>
 </dl>
 <h2>Examples</h2>
-<p>Example output from <i>sha1hmac</i>, for files on the developer&#8217;s system:<br />
-&nbsp;<wbr>&nbsp;<wbr>e64db5e8a9b8a40091e5302fa4de0bfc6c5d19d0&nbsp;<wbr>&nbsp;<wbr>/etc/passwd<br />
-&nbsp;<wbr>&nbsp;<wbr>e7d93a2c70ec4d7720c6f2b033c1e5ea19f2d677&nbsp;<wbr>&nbsp;<wbr>/etc/group<br />
-&nbsp;<wbr>&nbsp;<wbr>d732d6df77114ea6b81a43d64655f86b1e5ee925&nbsp;<wbr>&nbsp;<wbr>/etc/services<br />
+<p>Example output from <i>sha1hmac</i>, for files on the developer&#8217;s system:<br/>
+&nbsp;<wbr>&nbsp;<wbr>e64db5e8a9b8a40091e5302fa4de0bfc6c5d19d0&nbsp;<wbr>&nbsp;<wbr>/etc/passwd<br/>
+&nbsp;<wbr>&nbsp;<wbr>e7d93a2c70ec4d7720c6f2b033c1e5ea19f2d677&nbsp;<wbr>&nbsp;<wbr>/etc/group<br/>
+&nbsp;<wbr>&nbsp;<wbr>d732d6df77114ea6b81a43d64655f86b1e5ee925&nbsp;<wbr>&nbsp;<wbr>/etc/services<br/>
 &nbsp;<wbr>&nbsp;<wbr>ad92162bef979054a75d1f3510e6b05902bec641&nbsp;<wbr>&nbsp;<wbr>/etc/hosts </p>
 <h2>See Also</h2>
 <p><code>fipshmac</code>(1), <code>fipscheck</code>(1), <code><a href="/docs/linux/man/8-prelink/">prelink</a></code>(8) </p>

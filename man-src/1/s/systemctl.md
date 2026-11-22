@@ -952,7 +952,7 @@ systemctl mount-image --mkdir bar.service /tmp/img.raw /var/lib/baz/img
 </dt><dd> Print a short version string and exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> On success, 0 is returned, a non-zero failure code otherwise. </p>
-<p> <code>systemctl</code> uses the return codes defined by LSB, as defined in m[blue]<code>LSB 3.0.0</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> <code>systemctl</code> uses the return codes defined by LSB, as defined in m[blue]<code>LSB 3.0.0</code>m[][1]. </p>
 <p> <code>Table 3. LSB return codes</code> </p>
 <table BORDER>
 <tr VALIGN=top>

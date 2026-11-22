@@ -16,7 +16,7 @@ hpidomain[-D id][-N host[:port]][-C&lt;cfgfile&gt;][-t tttt][-V - X - h] hpidoma
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> hpidomain displays the domain info for the specified domain. If no domain or host is selected, ohparam uses the default domain as specified in the openhpiclient.conf file. </p>
-<p> In verbose mode, it walks the <font SIZE="-1">DRT</font> and displays domaininfo for all directly related domains. Option -t allows to change the domain tag. </p>
+<p> In verbose mode, it walks the DRT and displays domaininfo for all directly related domains. Option -t allows to change the domain tag. </p>
 <p> (No Option) Display domain info</p>
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>
@@ -32,7 +32,7 @@ hpidomain[-D id][-N host[:port]][-C&lt;cfgfile&gt;][-t tttt][-V - X - h] hpidoma
 <dt><code>-X</code>, <code>&#8211;debug</code></dt>
 <dd> Display debug messages</dd>
 <dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dd> Open session to the domain served by the daemon at the specified URL (host:port). This option overrides the OPENHPI_DAEMON_HOST and OPENHPI_DAEMON_PORT environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
 <dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
 <dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SEE ALSO</h2>

@@ -18,7 +18,7 @@ description: "runscript – script interpreter for minicom"
 <h2>KEYWORDS</h2>
 <dl>
 <dt>Runscript recognizes the following commands:</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
 <dl>
@@ -31,23 +31,23 @@ timeout verbose sleep break call log
 <h2>OVERVIEW OF KEYWORDS</h2>
 <dl>
 <dt><code>send &lt;string&gt;</code></dt>
-<dd> <p> &lt;string&gt; is sent to the modem. It is followed by a &#8216;\r&#8217;. &lt;string&gt; can be: <br />
-&nbsp;<wbr>&nbsp;<wbr>- regular text, e.g.&nbsp;<wbr>&#8216;send hello&#8217; <br />
+<dd> <p> &lt;string&gt; is sent to the modem. It is followed by a &#8216;\r&#8217;. &lt;string&gt; can be: <br/>
+&nbsp;<wbr>&nbsp;<wbr>- regular text, e.g.&nbsp;<wbr>&#8216;send hello&#8217; <br/>
 &nbsp;<wbr>&nbsp;<wbr>- text enclosed in quotes, e.g.&nbsp;<wbr>&#8216;send&nbsp;<wbr>&quot;hello world&quot;&#8216; </p>
  </dd>
-<dt><br />
+<dt><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Within&nbsp;<wbr>&lt;string&gt;&nbsp;<wbr>the following sequences are recognized:</dt>
-<dd> <p> <br />
-&nbsp;<wbr>\n - newline <br />
-&nbsp;<wbr>\r - carriage return <br />
-&nbsp;<wbr>\a - bell <br />
-&nbsp;<wbr>\b - backspace <br />
-&nbsp;<wbr>\c - don&#8217;t send the default&nbsp;<wbr>&#8216;\r&#8217;. <br />
-&nbsp;<wbr>\f - formfeed <br />
-&nbsp;<wbr>\^&nbsp;<wbr>- the&nbsp;<wbr>^&nbsp;<wbr>character <br />
+<dd> <p> <br/>
+&nbsp;<wbr>\n - newline <br/>
+&nbsp;<wbr>\r - carriage return <br/>
+&nbsp;<wbr>\a - bell <br/>
+&nbsp;<wbr>\b - backspace <br/>
+&nbsp;<wbr>\c - don&#8217;t send the default&nbsp;<wbr>&#8216;\r&#8217;. <br/>
+&nbsp;<wbr>\f - formfeed <br/>
+&nbsp;<wbr>\^&nbsp;<wbr>- the&nbsp;<wbr>^&nbsp;<wbr>character <br/>
 &nbsp;<wbr>\o - send character&nbsp;<wbr><code>o</code>&nbsp;<wbr>(<code>o</code>&nbsp;<wbr>is an octal number) </p>
-<p> <br />
- Control characters can be used in the string with the ^ prefix (^A to ^Z, ^[, ^, ^], ^^ and ^_). If you need to send the ^ character, you must prefix it with the \ escape character. <br />
+<p> <br/>
+ Control characters can be used in the string with the ^ prefix (^A to ^Z, ^[, ^, ^], ^^ and ^_). If you need to send the ^ character, you must prefix it with the \ escape character. <br/>
  Also $(environment_variable) can be used, for example $(TERM). Minicom passes three special environment variables: $(LOGIN), which is the username, $(PASS), which is the password, as defined in the proper entry of the dialing directory, and $(TERMLIN) which is the number of actual terminal lines on your screen (that is, the statusline excluded). </p>
  </dd>
 <dt><code>print &lt;string&gt;</code></dt>
@@ -112,8 +112,8 @@ timeout verbose sleep break call log
 <dd> <p> Write text to the logfile. </p>
  </dd></dl>
 <h2>NOTES</h2>
-<p> If you want to make your script to exit minicom (for example when you use minicom to dial up your ISP, and then start a PPP or SLIP session from a script), try the command &quot;! killall -9 minicom&quot; as the last script command. The -9 option should prevent minicom from hanging up the line and resetting the modem before exiting. <br />
- <br />
+<p> If you want to make your script to exit minicom (for example when you use minicom to dial up your ISP, and then start a PPP or SLIP session from a script), try the command &quot;! killall -9 minicom&quot; as the last script command. The -9 option should prevent minicom from hanging up the line and resetting the modem before exiting. <br/>
+ <br/>
  Well, I don&#8217;t think this is enough information to make you an experienced &#8216;programmer&#8217; in &#8216;runscript&#8217;, but together with the examples it shouldn&#8217;t be too hard to write some useful script files. Things will be easier if you have experience with BASIC. The <code>minicom</code> source code comes together with two example scripts, <code>scriptdemo</code> and <code>unixlogin</code>. Especially the last one is a good base to build on for your own scripts.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-minicom/">minicom</a></code>(1)  </p>

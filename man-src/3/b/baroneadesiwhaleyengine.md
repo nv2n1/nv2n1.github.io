@@ -10,10 +10,10 @@ description: "ql/pricingengines/vanilla/baroneadesiwhaleyengine.hpp – Barone-A
 
 <p> ql/pricingengines/vanilla/baroneadesiwhaleyengine.hpp &#8211; Barone-Adesi and Whaley approximation engine. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instruments/vanillaoption.hpp&gt;<br />
+<p> #include &lt;ql/instruments/vanillaoption.hpp&gt;<br/>
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>BaroneAdesiWhaleyApproximationEngine</code><br />
+<p> class <code>BaroneAdesiWhaleyApproximationEngine</code><br/>
  <i>Barone-Adesi and Whaley pricing engine for American options (1987). </i></p>
 <h2>Detailed Description</h2>
 <p> Barone-Adesi and Whaley approximation engine. </p>

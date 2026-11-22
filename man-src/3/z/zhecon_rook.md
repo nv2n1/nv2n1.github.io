@@ -10,7 +10,7 @@ description: "zhecon_rook.f –"
 <p>zhecon_rook.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhecon_rook</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, INFO)<br />
+<p>subroutine <code>zhecon_rook</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, INFO)<br/>
  <i></i><code>ZHECON_ROOK</code> estimates the reciprocal of the condition number fort HE matrices using factorization obtained with one of the bounded diagonal pivoting methods (max 2 interchanges)</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhecon_rook (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, double precisionANORM, double precisionRCOND, complex*16, dimension( * )WORK, integerINFO)</h3>

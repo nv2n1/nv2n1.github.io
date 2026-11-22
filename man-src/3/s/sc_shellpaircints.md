@@ -16,8 +16,8 @@ description: "sc::ShellPairCints –"
 <h3>Public Member Functions</h3>
 <p><code>ShellPairCints</code> (<code>Ref</code>&lt; <code>PrimPairsCints</code> &gt; &amp;) </p>
 <p> <code>ShellPairCints</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>init</code> (const int, const int) </p>
 <p> <code>prim_pair_t</code> * <code>prim_pair</code> (int p1, int p2) const </p>
 <p> double <code>prim_pair_P</code> (int p1, int p2, int xyz) const </p>

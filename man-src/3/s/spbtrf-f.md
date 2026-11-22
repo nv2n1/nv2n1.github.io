@@ -10,7 +10,7 @@ description: "spbtrf.f –"
 <p>spbtrf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>spbtrf</code> (UPLO, N, KD, AB, LDAB, INFO)<br />
+<p> subroutine <code>spbtrf</code> (UPLO, N, KD, AB, LDAB, INFO)<br/>
  <i></i><code>SPBTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spbtrf (characterUPLO, integerN, integerKD, real, dimension( ldab, * )AB, integerLDAB, integerINFO)</h3>

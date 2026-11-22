@@ -85,7 +85,7 @@ description: "pki –issue – Issue a certificate using a CA certificate and ke
 <dd>User notice for certificatePolicy.</dd></dl>
 <h2>Examples</h2>
 <p>To save repetitive typing, command line options can be stored in files. Lets assume <i>pki.opt</i> contains the following contents: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&#8211;cacert ca_cert.der &#8211;cakey ca_key.der &#8211;digest sha256<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&#8211;cacert ca_cert.der &#8211;cakey ca_key.der &#8211;digest sha256<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;flag serverAuth &#8211;lifetime 1460 &#8211;type pkcs10 </p>
 <p> Then the following command can be used to issue a certificate based on a given PKCS#10 certificate request and the options above: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;issue &#8211;options pki.opt &#8211;in req.der&nbsp;<wbr>&gt;&nbsp;<wbr>cert.der </p>

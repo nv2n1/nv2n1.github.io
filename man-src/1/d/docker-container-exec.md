@@ -20,7 +20,7 @@ description: "docker-container-exec – Run a command in a running container"
 <p> Without this flag, the process run by docker exec in a running container has the same capabilities as the container, which may be limited. Set &#8211;privileged to give all capabilities to the process. </p>
 <h2>USER</h2>
 <p> user sets the username or UID used and optionally the groupname or GID for the specified command. </p>
-<p> The followings examples are all valid:<br />
+<p> The followings examples are all valid:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;user&nbsp;[user | user:group | uid | uid:gid | user:gid | uid:group&nbsp;] </p>
 <p> Without this argument the command will be run as root in the container. </p>
 <h2>Exit Status</h2>

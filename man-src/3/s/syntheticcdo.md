@@ -19,7 +19,7 @@ description: "ql/experimental/credit/syntheticcdo.hpp – Synthetic Collateraliz
 #include &lt;ql/experimental/credit/lossdistribution.hpp&gt;
 #include &lt;ql/experimental/credit/onefactorcopula.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>SyntheticCDO</code><br />
+<p>class <code>SyntheticCDO</code><br/>
  <i>Synthetic Collateralized Debt Obligation. </i></p>
 <h2>Detailed Description</h2>
 <p>Synthetic Collateralized Debt Obligation and pricing engines.</p>

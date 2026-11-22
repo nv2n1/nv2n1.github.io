@@ -31,7 +31,7 @@ git revert[--[no - ] edit][-n][-m parent - number][-s][-S[&lt;keyid&gt;]]&lt;com
 <dt>
 </dt><dd> Usually you cannot revert a merge because you do not know which side of the merge should be considered the mainline. This option specifies the parent number (starting from 1) of the mainline and allows revert to reverse the change relative to the specified parent. </dd>
 <p> Reverting a merge commit declares that you will never want the tree changes brought in by the merge. As a result, later merges will only bring in tree changes introduced by commits that are not ancestors of the previously reverted merge. This may or may not be what you want. </p>
-<p> See the m[blue]<code>revert-a-faulty-merge How-To</code>m[]<font SIZE="-2">[1]</font> for more details.</dl>
+<p> See the m[blue]<code>revert-a-faulty-merge How-To</code>m[][1] for more details.</dl>
 <p> &#8211;no-edit</p>
 <dl>
 <dt>

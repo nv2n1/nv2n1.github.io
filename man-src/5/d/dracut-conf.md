@@ -13,7 +13,7 @@ description: "dracut.conf – configuration file(s) for dracut"
 <h2>Description</h2>
 <p><i>dracut.conf</i> is loaded during the initialisation phase of dracut. Command line parameter will overwrite any values set here. <i>*.conf</i> files are read from /usr/lib/dracut/dracut.conf.d and /etc/dracut.conf.d. Files with the same name in /etc/dracut.conf.d will replace files in /usr/lib/dracut/dracut.conf.d. The files are then read in alphanumerical order and will overwrite parameters set in <i>/etc/dracut.conf</i>. Each line specifies an attribute and a value. A <i>#</i> indicates the beginning of a comment; following characters, up to the end of the line are not interpreted. dracut command line options will overwrite any values set here. Configuration files must have the extension .conf; other extensions are ignored.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Space-separated lists have to have a leading and trailing space!  <code>dracutmodules+=</code>&quot;&nbsp;<wbr><i>&lt;dracut modules&gt;</i>&nbsp;<wbr>&quot;</dd>
 <dl>
 <dd>Specify a space-separated list of dracut modules to call when building the initramfs. Modules are located in <i>/usr/lib/dracut/modules.d</i>.</dd></dl>
@@ -72,7 +72,7 @@ can be any directory name found in /dev/disk. E.g. &quot;by-uuid&quot;, &quot;by
 <dl>
 <dd>Specify temporary directory to use.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  If chrooted to another root other than the real root device, use &#8211;fstab and provide a valid <i>/etc/fstab</i>.  <code>use_fstab=</code>&quot;<i>{yes|no}</i>&quot;</dd>
 <dl>
 <dd>Use <i>/etc/fstab</i> instead of <i>/proc/self/mountinfo</i>.</dd></dl>

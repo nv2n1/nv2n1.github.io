@@ -11,7 +11,7 @@ description: "dlapll.f –"
 <p> dlapll.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlapll</code> (N, X, INCX, Y, INCY, SSMIN)<br />
+<p> subroutine <code>dlapll</code> (N, X, INCX, Y, INCY, SSMIN)<br/>
  <i></i><code>DLAPLL</code> measures the linear dependence of two vectors.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlapll (integerN, double precision, dimension( * )X, integerINCX, double precision, dimension( * )Y, integerINCY, double precisionSSMIN)</h3>

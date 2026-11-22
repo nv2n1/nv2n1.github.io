@@ -10,7 +10,7 @@ description: "zsyrk.f –"
 <p>zsyrk.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zsyrk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br />
+<p>subroutine <code>zsyrk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br/>
  <i></i><code>ZSYRK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zsyrk (characterUPLO, characterTRANS, integerN, integerK, complex*16ALPHA, complex*16, dimension(lda,*)A, integerLDA, complex*16BETA, complex*16, dimension(ldc,*)C, integerLDC)</h3>

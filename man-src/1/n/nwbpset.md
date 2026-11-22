@@ -14,13 +14,13 @@ description: "nwbpset – Create a bindery property or set its value"
 <h2>DESCRIPTION</h2>
 <p> <code>nwbpset</code> Reads a property specification from the standard input and creates and sets the corresponding property. The format is determined by the output of &#8216;nwbpvalues -c&#8217;. nwbpset will hopefully become an important part of the bindery management suite of ncpfs, together with </p>
 <p> As another example, look at the following command line: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>nwbpvalues -t 1 -o supervisor -p user_defaults -c |\&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>sed&nbsp;<wbr>&#8216;2s/.*/ME/&#8217;|\<br />
-&nbsp;<wbr>&nbsp;<wbr>sed&nbsp;<wbr>&#8216;3s/.*/LOGIN_CONTROL/&#8217;|\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>nwbpvalues -t 1 -o supervisor -p user_defaults -c |\&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>sed&nbsp;<wbr>&#8216;2s/.*/ME/&#8217;|\<br/>
+&nbsp;<wbr>&nbsp;<wbr>sed&nbsp;<wbr>&#8216;3s/.*/LOGIN_CONTROL/&#8217;|\<br/>
 &nbsp;<wbr>&nbsp;<wbr>nwbpset </p>
 <p> With this command, the property user_defaults of the user object &#8216;supervisor&#8217; is copied into the property login_control of the user object &#8216;me&#8217;. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>nwbpvalues -t 1 -o me -p login_control -c |\<br />
-&nbsp;<wbr>&nbsp;<wbr>sed&nbsp;<wbr>&#8216;9s/.*/ff/&#8217;|\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>nwbpvalues -t 1 -o me -p login_control -c |\<br/>
+&nbsp;<wbr>&nbsp;<wbr>sed&nbsp;<wbr>&#8216;9s/.*/ff/&#8217;|\<br/>
 &nbsp;<wbr>&nbsp;<wbr>nwbpset </p>
 <p> This command disables the user object me. </p>
 <p> Feel free to contribute other examples! </p>

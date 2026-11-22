@@ -129,8 +129,8 @@ description: "viewfax – display fax files in an X11 window"
 <p> CCITT (now ITU) Recommendation T.4, <i>Standardization of Group 3 Facsimile Apparatus for Document</i> <i>Transmission. </i> </p>
 <p> CCITT (now ITU) Recommendation T.6, <i>Facsimile Coding Schemes and Coding Control Functions for Group 4</i> <i>Facsimile Apparatus.</i></p>
 <h2>BUGS</h2>
-<p> The user interface does not comply with any known style guide.<br />
- The help text looks moth-eaten because it is encoded as a fax. This avoids dealing with X11 fonts.<br />
+<p> The user interface does not comply with any known style guide.<br/>
+ The help text looks moth-eaten because it is encoded as a fax. This avoids dealing with X11 fonts.<br/>
  The program does not refer to the X resources database.</p>
 <h2>AUTHOR</h2>
 <p> Frank D. Cringle (fdc [at] cliwe.ping.de). </p>

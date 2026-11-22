@@ -50,7 +50,7 @@ description: "darkstat – network statistics gatherer"
 <dd>Specify the path of the base URL. This can be useful if <i>darkstat</i> is accessed via a reverse proxy. </dd>
 <p> For example, if you use Apache&#8217;s <i>mod_proxy</i> and want to avoid a complicated setup with <i>mod_proxy_html</i> (and <i>mod_header</i> to unset the <i>Accept-Encoding</i> header), just set the base path to something like <i>stats</i> and use a config similar to the following snippet: </p>
 <dl>
-<dd>&nbsp;<wbr>ProxyPass&nbsp;<wbr>/stats/&nbsp;<wbr><a rel="nofollow" href="http://localhost:667/stats/">http://localhost:667/stats/</a><br />
+<dd>&nbsp;<wbr>ProxyPass&nbsp;<wbr>/stats/&nbsp;<wbr><a rel="nofollow" href="http://localhost:667/stats/">http://localhost:667/stats/</a><br/>
 &nbsp;<wbr>ProxyPassReverse&nbsp;<wbr>/stats/&nbsp;<wbr><a rel="nofollow" href="http://localhost:667/stats/">http://localhost:667/stats/</a></dd></dl>
 <p> The default is <i>/</i> (i.e. the root).</dl>
 <dt><code>-f</code><i> filter</i></dt>

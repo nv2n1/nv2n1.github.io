@@ -16,8 +16,8 @@ description: "dictCleanup – cleanup dictionary"
 void dictCleanup(dictCtx dict, dictCleanupFunc cleanup, void *rock);
 </pre>
 <h2>Arguments</h2>
-<p> dict &#8211; dictionary to cleanup<br />
- cleanup &#8211; cleanup callback<br />
+<p> dict &#8211; dictionary to cleanup<br/>
+ cleanup &#8211; cleanup callback<br/>
  rock &#8211; to pass to &lt;cleanup&gt; </p>
 <h2>Description</h2>
 <p> Calls &lt;cleanup&gt; for every item in &lt;dict&gt;. If &lt;cleanup&gt; returns true, then item is removed from &lt;dict&gt;. </p>

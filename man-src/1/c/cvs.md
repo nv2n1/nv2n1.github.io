@@ -991,45 +991,45 @@ description: "cvs – Concurrent Versions System"
 <dl>
 <dd> <p> cvs diff \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --old-group-format=&#8216;\begin{em} </p>
  </dd>
 <dd> <p> %&lt;\end{em} </p>
  </dd>
 <dd> <p> &#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --new-group-format=&#8216;\begin{bf} </p>
  </dd>
 <dd> <p> %&gt;\end{bf} </p>
  </dd>
 <dd> <p> &#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 myfile </p>
  </dd>
 <dd> <p> The following command is equivalent to the above example, but it is a little more verbose, because it spells out the default line group formats. </p>
  </dd>
 <dd> <p> cvs diff \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --old-group-format=&#8216;\begin{em} </p>
  </dd>
 <dd> <p> %&lt;\end{em} </p>
  </dd>
 <dd> <p> &#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --new-group-format=&#8216;\begin{bf} </p>
  </dd>
 <dd> <p> %&gt;\end{bf} </p>
  </dd>
 <dd> <p> &#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --unchanged-group-format=&#8216;%=&#8216;&nbsp;<wbr>\ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --changed-group-format=&#8216;\begin{em} </p>
  </dd>
 <dd> <p> %&lt;\end{em} </p>
@@ -1040,34 +1040,34 @@ myfile </p>
  </dd>
 <dd> <p> &#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 myfile </p>
  </dd>
 <dd> <p> Here is a more advanced example, which outputs a diff listing with headers containing line numbers in a ``plain English&#8217;&#8216; style. </p>
  </dd>
 <dd> <p> cvs diff \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --unchanged-group-format=&#8216;&#8216;&nbsp;<wbr>\ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --old-group-format=&#8216;--------&nbsp;<wbr>%dn line%(n=1?:s)&nbsp;<wbr>deleted at&nbsp;<wbr>%df: </p>
  </dd>
 <dd> <p> %&lt;&#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --new-group-format=&#8216;--------&nbsp;<wbr>%dN line%(N=1?:s)&nbsp;<wbr>added after&nbsp;<wbr>%de: </p>
  </dd>
 <dd> <p> %&gt;&#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --changed-group-format=&#8216;--------&nbsp;<wbr>%dn line%(n=1?:s)&nbsp;<wbr>changed at&nbsp;<wbr>%df: </p>
  </dd>
 <dd> <p> %&lt;-------- to: </p>
  </dd>
 <dd> <p> %&gt;&#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 myfile </p>
  </dd>
 <dd> <p> To specify a line group format, use one of the options listed below. You can specify up to four line group formats, one for each kind of line group. You should quote <i>format</i>, because it typically contains shell metacharacters. </p>
@@ -1153,22 +1153,22 @@ myfile </p>
 <dl>
 <dd> <p> cvs diff \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --old-line-format=&#8216;-%l </p>
  </dd>
 <dd> <p> &#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --new-line-format=&#8216;|%l </p>
  </dd>
 <dd> <p> &#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --unchanged-line-format=&#8216;&nbsp;<wbr>%l </p>
  </dd>
 <dd> <p> &#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 myfile </p>
  </dd>
 <dd> <p> To specify a line format, use one of the following options. You should quote <i>format</i>, since it often contains shell metacharacters. </p>
@@ -1219,37 +1219,37 @@ myfile </p>
  </dd>
 <dd> <p> cvs diff \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --old-line-format=&#8216;&lt;&nbsp;<wbr>%l </p>
  </dd>
 <dd> <p> &#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --new-line-format=&#8216;&gt;&nbsp;<wbr>%l </p>
  </dd>
 <dd> <p> &#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --old-group-format=&#8216;%df%(f=l?:,%dl)d%dE </p>
  </dd>
 <dd> <p> %&lt;&#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --new-group-format=&#8216;%dea%dF%(F=L?:,%dL) </p>
  </dd>
 <dd> <p> %&gt;&#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --changed-group-format=&#8216;%df%(f=l?:,%dl)c%dF%(F=L?:,%dL) </p>
  </dd>
 <dd> <p> %&lt;--- </p>
  </dd>
 <dd> <p> %&gt;&#8216; \ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 --unchanged-group-format=&#8216;&#8216;&nbsp;<wbr>\ </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 myfile </p>
  </dd>
 <dd>  </dd></dl>
@@ -1818,7 +1818,7 @@ myfile </p>
 <dl>
 <dd> <p> $ cd .. # You must stand immediately above the </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sources when you issue&nbsp;<wbr><code>cvs release</code>. </p>
  </dd>
 <dd> <p> $ cvs release -d tc </p>
@@ -1901,7 +1901,7 @@ myfile </p>
  </dd>
 <dd> <p> `-- b </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>`-- CVS </p>
  </dd>
 <dd> <p> 3 directories </p>

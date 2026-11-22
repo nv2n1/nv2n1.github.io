@@ -24,22 +24,22 @@ description: "PAPI_overflow –"
 <dd>Not implemented</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>EventSet</i> &#8212; an integer handle to a PAPI event set as created by <code>PAPI_create_eventset</code><br />
- <i>EventCode</i> &#8212; the preset or native event code to be set for overflow detection. This event must have already been added to the EventSet.<br />
- <i>threshold</i> &#8212; the overflow threshold value for this EventCode.<br />
- <i>flags</i> &#8212; bitmap that controls the overflow mode of operation. Set to PAPI_OVERFLOW_FORCE_SW to force software overflowing, even if hardware overflow support is available. If hardware overflow support is available on a given system, it will be the default mode of operation. There are situations where it is advantageous to use software overflow instead. Although software overflow is inherently less accurate, with more latency and processing overhead, it does allow for overflowing on derived events, and for the accurate recording of overflowing event counts. These two features are typically not available with hardware overflow. Only one type of overflow is allowed per event set, so setting one event to hardware overflow and another to forced software overflow will result in an error being returned.<br />
- <i>handler</i> &#8212; pointer to the user supplied handler function to call upon overflow<br />
- <i>address</i> &#8212; the Program Counter address at the time of the overflow<br />
- <i>overflow_vector</i> &#8212; a long long word containing flag bits to indicate which hardware counter(s) caused the overflow<br />
+<dd><i>EventSet</i> &#8212; an integer handle to a PAPI event set as created by <code>PAPI_create_eventset</code><br/>
+ <i>EventCode</i> &#8212; the preset or native event code to be set for overflow detection. This event must have already been added to the EventSet.<br/>
+ <i>threshold</i> &#8212; the overflow threshold value for this EventCode.<br/>
+ <i>flags</i> &#8212; bitmap that controls the overflow mode of operation. Set to PAPI_OVERFLOW_FORCE_SW to force software overflowing, even if hardware overflow support is available. If hardware overflow support is available on a given system, it will be the default mode of operation. There are situations where it is advantageous to use software overflow instead. Although software overflow is inherently less accurate, with more latency and processing overhead, it does allow for overflowing on derived events, and for the accurate recording of overflowing event counts. These two features are typically not available with hardware overflow. Only one type of overflow is allowed per event set, so setting one event to hardware overflow and another to forced software overflow will result in an error being returned.<br/>
+ <i>handler</i> &#8212; pointer to the user supplied handler function to call upon overflow<br/>
+ <i>address</i> &#8212; the Program Counter address at the time of the overflow<br/>
+ <i>overflow_vector</i> &#8212; a long long word containing flag bits to indicate which hardware counter(s) caused the overflow<br/>
  <i>*context</i> &#8212; pointer to a machine specific structure that defines the register context at the time of overflow. This parameter is often unused and can be ignored in the user function.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i> On success, <code>PAPI_overflow</code> returns PAPI_OK.<br />
- <i>PAPI_EINVAL</i> One or more of the arguments is invalid. Most likely a bad threshold value.<br />
- <i>PAPI_ENOMEM</i> Insufficient memory to complete the operation.<br />
- <i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br />
- <i>PAPI_EISRUN</i> The EventSet is currently counting events.<br />
- <i>PAPI_ECNFLCT</i> The underlying counter hardware cannot count this event and other events in the EventSet simultaneously. Also can happen if you are trying to overflow both by hardware and by forced software at the same time.<br />
+<dd><i>PAPI_OK</i> On success, <code>PAPI_overflow</code> returns PAPI_OK.<br/>
+ <i>PAPI_EINVAL</i> One or more of the arguments is invalid. Most likely a bad threshold value.<br/>
+ <i>PAPI_ENOMEM</i> Insufficient memory to complete the operation.<br/>
+ <i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br/>
+ <i>PAPI_EISRUN</i> The EventSet is currently counting events.<br/>
+ <i>PAPI_ECNFLCT</i> The underlying counter hardware cannot count this event and other events in the EventSet simultaneously. Also can happen if you are trying to overflow both by hardware and by forced software at the same time.<br/>
  <i>PAPI_ENOEVNT</i> The PAPI event is not available on the underlying hardware.</dd></dl>
 <p> <code>Example</code></p>
 <dl COMPACT>

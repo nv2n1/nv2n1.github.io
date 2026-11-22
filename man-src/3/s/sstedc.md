@@ -11,7 +11,7 @@ description: "sstedc.f –"
 <p> sstedc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sstedc</code> (COMPZ, N, D, E, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p> subroutine <code>sstedc</code> (COMPZ, N, D, E, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>SSTEBZ</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sstedc (characterCOMPZ, integerN, real, dimension( * )D, real, dimension( * )E, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>
@@ -81,21 +81,21 @@ Z is REAL array, dimension(LDZ, N) On entry, if COMPZ = 'V', then Z contains the
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>          LWORK is INTEGER<br />
-          The dimension of the array WORK.<br />
-          If COMPZ = &#8216;N&#8217; or N &lt;= 1 then LWORK must be at least 1.<br />
-          If COMPZ = &#8216;V&#8217; and N &gt; 1 then LWORK must be at least<br />
-                         ( 1 + 3*N + 2*N*lg N + 4*N**2 ),<br />
-                         where lg( N ) = smallest integer k such<br />
-                         that 2**k &gt;= N.<br />
-          If COMPZ = &#8216;I&#8217; and N &gt; 1 then LWORK must be at least<br />
-                         ( 1 + 4*N + N**2 ).<br />
-          Note that for COMPZ = &#8216;I&#8217; or &#8216;V&#8217;, then if N is less than or<br />
-          equal to the minimum divide size, usually 25, then LWORK need<br />
-          only be max(1,2*(N-1)).<br />
-          If LWORK = -1, then a workspace query is assumed;<br />
-          the routine<br />
-              only calculates the optimal size of the WORK array,<br />
+<p>          LWORK is INTEGER<br/>
+          The dimension of the array WORK.<br/>
+          If COMPZ = &#8216;N&#8217; or N &lt;= 1 then LWORK must be at least 1.<br/>
+          If COMPZ = &#8216;V&#8217; and N &gt; 1 then LWORK must be at least<br/>
+                         ( 1 + 3*N + 2*N*lg N + 4*N**2 ),<br/>
+                         where lg( N ) = smallest integer k such<br/>
+                         that 2**k &gt;= N.<br/>
+          If COMPZ = &#8216;I&#8217; and N &gt; 1 then LWORK must be at least<br/>
+                         ( 1 + 4*N + N**2 ).<br/>
+          Note that for COMPZ = &#8216;I&#8217; or &#8216;V&#8217;, then if N is less than or<br/>
+          equal to the minimum divide size, usually 25, then LWORK need<br/>
+          only be max(1,2*(N-1)).<br/>
+          If LWORK = -1, then a workspace query is assumed;<br/>
+          the routine<br/>
+              only calculates the optimal size of the WORK array,<br/>
               returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>IWORK</i> </p>
 <pre>

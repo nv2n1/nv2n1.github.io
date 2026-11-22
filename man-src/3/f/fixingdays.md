@@ -17,41 +17,41 @@ description: "QuantLib::FloatingRateCoupon – base floating-rate coupon class"
 <p> void <code>setPricer</code> (const boost::shared_ptr&lt; <code>FloatingRateCouponPricer</code> &gt; &amp;) </p>
 <p> boost::shared_ptr&lt; <code>FloatingRateCouponPricer</code> &gt; <code>pricer</code> () const </p>
 <p> <code>CashFlow interface</code> </p>
-<p> <code>Real</code> <code>amount</code> () const<br />
+<p> <code>Real</code> <code>amount</code> () const<br/>
  <i>returns the amount of the cash flow </i> </p>
 <p> <code>Coupon interface</code> </p>
-<p> <code>Rate</code> <code>rate</code> () const<br />
- <i>accrued rate </i><br />
+<p> <code>Rate</code> <code>rate</code> () const<br/>
+ <i>accrued rate </i><br/>
  <code>Real</code> <code>price</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountingCurve) const </p>
-<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>day counter for accrual calculation </i><br />
- <code>Real</code> <code>accruedAmount</code> (const <code>Date</code> &amp;) const<br />
+<p> <code>DayCounter</code> <code>dayCounter</code> () const<br/>
+ <i>day counter for accrual calculation </i><br/>
+ <code>Real</code> <code>accruedAmount</code> (const <code>Date</code> &amp;) const<br/>
  <i>accrued amount at the given date </i> </p>
 <p> <code>Inspectors</code> </p>
-<p> const boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; &amp; <code>index</code> () const<br />
- <i>floating index </i><br />
- <code>Natural</code> <code>fixingDays</code> () const<br />
- <i>fixing days </i><br />
- virtual <code>Date</code> <code>fixingDate</code> () const<br />
- <i>fixing date </i><br />
- <code>Real</code> <code>gearing</code> () const<br />
- <i>index gearing, i.e. multiplicative coefficient for the index </i><br />
- <code>Spread</code> <code>spread</code> () const<br />
- <i>spread paid over the fixing of the underlying index </i><br />
- virtual <code>Rate</code> <code>indexFixing</code> () const<br />
- <i>fixing of the underlying index </i><br />
- virtual <code>Rate</code> <code>convexityAdjustment</code> () const<br />
- <i>convexity adjustment </i><br />
- virtual <code>Rate</code> <code>adjustedFixing</code> () const<br />
- <i>convexity-adjusted fixing </i><br />
- bool <code>isInArrears</code> () const<br />
+<p> const boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; &amp; <code>index</code> () const<br/>
+ <i>floating index </i><br/>
+ <code>Natural</code> <code>fixingDays</code> () const<br/>
+ <i>fixing days </i><br/>
+ virtual <code>Date</code> <code>fixingDate</code> () const<br/>
+ <i>fixing date </i><br/>
+ <code>Real</code> <code>gearing</code> () const<br/>
+ <i>index gearing, i.e. multiplicative coefficient for the index </i><br/>
+ <code>Spread</code> <code>spread</code> () const<br/>
+ <i>spread paid over the fixing of the underlying index </i><br/>
+ virtual <code>Rate</code> <code>indexFixing</code> () const<br/>
+ <i>fixing of the underlying index </i><br/>
+ virtual <code>Rate</code> <code>convexityAdjustment</code> () const<br/>
+ <i>convexity adjustment </i><br/>
+ virtual <code>Rate</code> <code>adjustedFixing</code> () const<br/>
+ <i>convexity-adjusted fixing </i><br/>
+ bool <code>isInArrears</code> () const<br/>
  <i>whether or not the coupon fixes in arrears </i> </p>
 <p> <code>Observer interface</code> </p>
 <p> void <code>update</code> () </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>
 <h3>Protected Member Functions</h3>
-<p><code>Rate</code> <code>convexityAdjustmentImpl</code> (<code>Rate</code> fixing) const<br />
+<p><code>Rate</code> <code>convexityAdjustmentImpl</code> (<code>Rate</code> fixing) const<br/>
  <i>convexity adjustment for the given index fixing </i></p>
 <h3>Protected Attributes</h3>
 <p>boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; <code>index_</code> </p>

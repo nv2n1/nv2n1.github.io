@@ -12,16 +12,16 @@ description: "QuantLib::PathMultiAssetOption – Base class for path-dependent o
 <p>#include &lt;ql/experimental/mcbasket/pathmultiassetoption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for multi-asset option calculation </i><br />
- class <code>results</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for multi-asset option calculation </i><br/>
+ class <code>results</code><br/>
  <i>Results from multi-asset option calculation </i></p>
 <h3>Public Member Functions</h3>
 <p><code>PathMultiAssetOption</code> (const boost::shared_ptr&lt; <code>StochasticProcess</code> &gt; &amp;, const boost::shared_ptr&lt; <code>PricingEngine</code> &gt; &amp;engine=boost::shared_ptr&lt; <code>PricingEngine</code> &gt;()) </p>
 <h3>Instrument interface</h3>
 <p>boost::shared_ptr&lt; <code>StochasticProcess</code> &gt; <code>stochasticProcess_</code> </p>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  void <code>setupArguments</code> (PricingEngine::arguments *) const </p>
 <p> virtual boost::shared_ptr&lt; <code>PathPayoff</code> &gt; <code>pathPayoff</code> () const =0 </p>
 <p> virtual std::vector&lt; <code>Date</code> &gt; <code>fixingDates</code> () const =0 </p>

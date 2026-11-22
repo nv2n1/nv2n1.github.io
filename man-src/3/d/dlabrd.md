@@ -11,7 +11,7 @@ description: "dlabrd.f –"
 <p> dlabrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlabrd</code> (M, N, NB, A, LDA, D, E, TAUQ, TAUP, X, LDX, Y, LDY)<br />
+<p> subroutine <code>dlabrd</code> (M, N, NB, A, LDA, D, E, TAUQ, TAUP, X, LDX, Y, LDY)<br/>
  <i></i><code>DLABRD</code> reduces the first nb rows and columns of a general matrix to a bidiagonal form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlabrd (integerM, integerN, integerNB, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( * )TAUQ, double precision, dimension( * )TAUP, double precision, dimension( ldx, * )X, integerLDX, double precision, dimension( ldy, * )Y, integerLDY)</h3>

@@ -15,7 +15,7 @@ description: "tcpdump_to_db – convert tcpdump textual output to fsdb"
 </pre>
 <h2>DESCRIPTION</h2>
 <p> Converts a tcpdump data stream to Fsdb format. </p>
-<p> <code>Currently it handles only </code><font SIZE="-1"><code>TCP</code></font><code> and silently fails on other traffic!</code> Awaiting enhancement&#8230; you&#8217;re welcome to help.</p>
+<p> <code>Currently it handles only </code><code>TCP</code><code> and silently fails on other traffic!</code> Awaiting enhancement&#8230; you&#8217;re welcome to help.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-t</code> or <code>&#8211;daytime</code></dt>
@@ -60,4 +60,4 @@ description: "tcpdump_to_db – convert tcpdump textual output to fsdb"
 <p> Fsdb.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2008 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

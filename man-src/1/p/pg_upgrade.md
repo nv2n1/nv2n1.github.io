@@ -190,7 +190,7 @@ psql --username postgres --file script.sql postgres
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Caution</code> </font><br />
+  <code>Caution</code> <br/>
  In general it is unsafe to access tables referenced in rebuild scripts until the rebuild scripts have run to completion; doing so could yield incorrect results or poor performance. Tables not referenced in rebuild scripts can be accessed immediately. </dd>
 </dl>
 </dl>

@@ -16,18 +16,18 @@ description: "QuantLib::Instrument – Abstract instrument class."
 <p>virtual void <code>setupArguments</code> (PricingEngine::arguments *) const </p>
 <p> virtual void <code>fetchResults</code> (const PricingEngine::results *) const </p>
 <p> <code>Inspectors</code> </p>
-<p> <code>Real</code> <code>NPV</code> () const<br />
- <i>returns the net present value of the instrument. </i><br />
- <code>Real</code> <code>errorEstimate</code> () const<br />
- <i>returns the error estimate on the NPV when available. </i><br />
- template&lt;typename T &gt; T <code>result</code> (const std::string &amp;tag) const<br />
- <i>returns any additional result returned by the pricing engine. </i><br />
- const std::map&lt; std::string, boost::any &gt; &amp; <code>additionalResults</code> () const<br />
- <i>returns all additional result returned by the pricing engine. </i><br />
- virtual bool <code>isExpired</code> () const =0<br />
+<p> <code>Real</code> <code>NPV</code> () const<br/>
+ <i>returns the net present value of the instrument. </i><br/>
+ <code>Real</code> <code>errorEstimate</code> () const<br/>
+ <i>returns the error estimate on the NPV when available. </i><br/>
+ template&lt;typename T &gt; T <code>result</code> (const std::string &amp;tag) const<br/>
+ <i>returns any additional result returned by the pricing engine. </i><br/>
+ const std::map&lt; std::string, boost::any &gt; &amp; <code>additionalResults</code> () const<br/>
+ <i>returns all additional result returned by the pricing engine. </i><br/>
+ virtual bool <code>isExpired</code> () const =0<br/>
  <i>returns whether the instrument is still tradable. </i> </p>
 <p> <code>Modifiers</code> </p>
-<p> void <code>setPricingEngine</code> (const boost::shared_ptr&lt; <code>PricingEngine</code> &gt; &amp;)<br />
+<p> void <code>setPricingEngine</code> (const boost::shared_ptr&lt; <code>PricingEngine</code> &gt; &amp;)<br/>
  <i>set the pricing engine to be used. </i></p>
 <h3>Protected Member Functions</h3>
 <p><code>Calculations</code> </p>
@@ -36,7 +36,7 @@ description: "QuantLib::Instrument – Abstract instrument class."
 <p> virtual void <code>performCalculations</code> () const </p>
 <h3>Protected Attributes</h3>
 <p>boost::shared_ptr&lt; <code>PricingEngine</code> &gt; <code>engine_</code> </p>
-<p> <code>Results</code><br />
+<p> <code>Results</code><br/>
  The value of this attribute and any other that derived classes might declare must be set during calculation. </p>
 <p> <code>Real</code> <code>NPV_</code> </p>
 <p> <code>Real</code> <code>errorEstimate_</code> </p>

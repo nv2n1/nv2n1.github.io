@@ -10,7 +10,7 @@ description: "chemv.f –"
 <p>chemv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>chemv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>chemv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>CHEMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chemv (characterUPLO, integerN, complexALPHA, complex, dimension(lda,*)A, integerLDA, complex, dimension(*)X, integerINCX, complexBETA, complex, dimension(*)Y, integerINCY)</h3>

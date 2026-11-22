@@ -10,7 +10,7 @@ description: "dtgexc.f –"
 <p>dtgexc.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, WORK, LWORK, INFO)<br />
+<p>subroutine <code>dtgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, WORK, LWORK, INFO)<br/>
  <i></i><code>DTGEXC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtgexc (logicalWANTQ, logicalWANTZ, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldq, * )Q, integerLDQ, double precision, dimension( ldz, * )Z, integerLDZ, integerIFST, integerILST, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

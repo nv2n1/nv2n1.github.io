@@ -9,11 +9,11 @@ description: "List Creation/Destruction Functions – Functions that create, ini
 
 <p>List Creation/Destruction Functions &#8211; Functions that create, initialize and destroy Ecore_Lists. </p>
 <h3>Functions</h3>
-<p>EAPI Ecore_List * <code>ecore_list_new</code> (void)<br />
- <i>Create and initialize a new list. </i><br />
- EAPI int <code>ecore_list_init</code> (Ecore_List *list)<br />
- <i>Initialize a list to some sane starting values. </i><br />
- EAPI void <code>ecore_list_destroy</code> (Ecore_List *list)<br />
+<p>EAPI Ecore_List * <code>ecore_list_new</code> (void)<br/>
+ <i>Create and initialize a new list. </i><br/>
+ EAPI int <code>ecore_list_init</code> (Ecore_List *list)<br/>
+ <i>Initialize a list to some sane starting values. </i><br/>
+ EAPI void <code>ecore_list_destroy</code> (Ecore_List *list)<br/>
  <i>Free a list and all of it&#8217;s nodes. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that create, initialize and destroy Ecore_Lists.</p>

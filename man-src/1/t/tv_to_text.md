@@ -10,11 +10,11 @@ description: "tv_to_text – Convert XMLTV listings to text."
 
 <p> tv_to_text &#8211; Convert XMLTV listings to text. </p>
 <h2>SYNOPSIS</h2>
-<p> tv_to_text [&#8211;help] [&#8211;with-desc] [&#8211;output <font SIZE="-1">FILE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>
+<p> tv_to_text [&#8211;help] [&#8211;with-desc] [&#8211;output FILE] [FILE&#8230;]</p>
 <h2>DESCRIPTION</h2>
-<p> Read <font SIZE="-1">XMLTV</font> data and output a summary of listings. The programme titles, subtitles, times and channels are shown. </p>
+<p> Read XMLTV data and output a summary of listings. The programme titles, subtitles, times and channels are shown. </p>
 <p> <code>&#8211;with-desc</code> include programme description in output </p>
-<p> <code>&#8211;output </code><font SIZE="-1"><code>FILE</code></font> write to <font SIZE="-1">FILE</font> rather than standard output</p>
+<p> <code>&#8211;output </code><code>FILE</code> write to FILE rather than standard output</p>
 <h2>SEE ALSO</h2>
 <p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>

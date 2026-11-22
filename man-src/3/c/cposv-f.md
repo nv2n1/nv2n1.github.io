@@ -10,7 +10,7 @@ description: "cposv.f –"
 <p>cposv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cposv</code> (UPLO, N, NRHS, A, LDA, B, LDB, INFO)<br />
+<p>subroutine <code>cposv</code> (UPLO, N, NRHS, A, LDA, B, LDB, INFO)<br/>
  <i></i><code> CPOSV computes the solution to system of linear equations A * X = B for PO matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cposv (characterUPLO, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

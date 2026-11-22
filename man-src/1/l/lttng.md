@@ -284,7 +284,7 @@ $ lttng enable-channel -k -C 4096
 <dd> Set a filter on a newly enabled event. Filter expression on event fields and context. The event will be recorded if the filter&#8217;s expression evaluates to TRUE. Only specify on first activation of a given event within a session. Specifying a filter is only allowed when enabling events within a session before tracing is started. If the filter fails to link with the event within the traced domain, the event will be discarded. Filtering is currently only implemented for the user-space tracer. </dd>
 <p> Expression examples: </p>
 <p>&#8216;intfield &gt; 500 &amp;&amp; intfield &lt; 503&#8217; &#8216;(strfield == &#8220;test&#8221; || intfield != 10) &amp;&amp; intfield &gt; 33&#8217; &#8216;doublefield &gt; 1.1 &amp;&amp; intfield &lt; 5.3&#8217;</p>
-<p> Wildcards are allowed at the end of strings:<br />
+<p> Wildcards are allowed at the end of strings:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8216;seqfield1&nbsp;<wbr>==&nbsp;<wbr>&quot;te*&quot;&#8217; In string literals, the escape character is a &#8216;\&#8217;. Use &#8216;\*&#8217; for the &#8216;*&#8217; character, and &#8216;\&#8217; for the &#8216;\&#8217; character sequence. Wildcard matches any sequence of characters, including an empty sub-string (matches 0 or more characters). </p>
 <p> Context information can be used for filtering. The examples below shows usage of context filtering on the process name (using a wildcard), process ID range, and unique thread ID. The process and thread IDs of running applications can be found under columns &quot;PID&quot; and &quot;LWP&quot; of the &quot;ps -eLf&quot; command. </p>
 <pre><code>

@@ -34,15 +34,15 @@ description: "kccachetest – command line interface to test the cache hash data
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br />
- <code>-rnd</code> : performs random test.<br />
- <code>-etc</code> : performs miscellaneous operations.<br />
- <code>-tran</code> : performs transaction.<br />
- <code>-tc</code> : tunes the database with the compression option.<br />
- <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.<br />
- <code>-capcnt </code><i>num</i> : specifies the maximum number of records.<br />
- <code>-capsiz </code><i>num</i> : specifies the maximum size of memory usage.<br />
- <code>-lv</code> : reports all errors.<br />
+</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br/>
+ <code>-rnd</code> : performs random test.<br/>
+ <code>-etc</code> : performs miscellaneous operations.<br/>
+ <code>-tran</code> : performs transaction.<br/>
+ <code>-tc</code> : tunes the database with the compression option.<br/>
+ <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.<br/>
+ <code>-capcnt </code><i>num</i> : specifies the maximum number of records.<br/>
+ <code>-capsiz </code><i>num</i> : specifies the maximum size of memory usage.<br/>
+ <code>-lv</code> : reports all errors.<br/>
  <code>-it </code><i>num</i> : specifies the number of repetition.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

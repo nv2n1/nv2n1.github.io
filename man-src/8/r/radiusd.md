@@ -60,11 +60,11 @@ description: "radiusd – Authentication, Authorization and Accounting server"
 <p> 3) When you make a small change, testing it before changing anything else. If the change works, save a copy of the configuration, and make another change. If the change doesn&#8217;t work, debug it, and try to understand why it doesn&#8217;t work. </p>
 <p> If you begin by making large changes to the server configuration, it will never work, and you will never be able to debug the problem. </p>
 <p> 4) If you need to add a connection to a database FOO (e.g. LDAP or SQL), then: </p>
-<p> a) Edit raddb/modules/foo<br />
+<p> a) Edit raddb/modules/foo<br/>
  This file contains the default configuration for the module. It contains comments describing what can be configured, and what those configuration entries mean. </p>
-<p> b) Edit raddb/sites-available/default<br />
+<p> b) Edit raddb/sites-available/default<br/>
  This file contains the default policy for the server. e.g. &quot;enable CHAP, MS-CHAP, and EAP authentication&quot;. Look in this file for all references to your module &quot;foo&quot;. Read the comments, and remove the leading hash &#8216;#&#8217; from the lines referencing the module. This enables the module. </p>
-<p> c) Edit raddb/sites-available/inner-tunnel<br />
+<p> c) Edit raddb/sites-available/inner-tunnel<br/>
  This file contains the default policy for the &quot;tunneled&quot; portion of certain EAP methods. Perform the same kind of edits as above, for the &quot;default&quot; file.. If you are not using EAP (802.1X), then this step can be skipped. </p>
 <p> d) Start the server in debugging mode ( <code>radiusd -X</code> ), and start testing. </p>
 <p> 5) Ask questions on the mailing list (freeradius-users [at] lists.freeradius.org). When asking questions, include the output from debugging mode ( <code>radiusd -X</code> ). This information will allow people to help you. If you do not include it, the first response to your message will be &quot;post the output of debug mode&quot;. </p>

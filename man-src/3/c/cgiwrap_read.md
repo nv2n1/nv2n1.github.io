@@ -17,7 +17,7 @@ description: "cgiwrap_read – cgiwrap input function"
 void cgiwrap_read(char *buf, int buf_len, int *read_len);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> buf &#8211; a pre-allocated buffer to read the data into<br />
+<p> buf &#8211; a pre-allocated buffer to read the data into<br/>
  buf_len &#8211; the size of the pre-allocated buffer </p>
 <h2>DESCRIPTION</h2>
 <p> cgiwrap_read is used to read incoming data from the client, usually from a POST or PUT HTTP request. It wraps the part of fread(stdin). </p>

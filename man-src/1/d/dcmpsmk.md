@@ -40,56 +40,56 @@ dcmfile-out  DICOM presentation state file to be created
          use config file f for the logger
 </code></pre>
 <h3>input options</h3>
-<p>input file format : +f&#8211; read &#8211; file<br />
-                                    read file format or<br />
-    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br />
-        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br />
-                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br />
-                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br />
+<p>input file format : +f&#8211; read &#8211; file<br/>
+                                    read file format or<br/>
+    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br/>
+        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br/>
+                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br/>
+                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br/>
                                                                                                       &#8211; ti&#8211; read &#8211; xfer &#8211; implicit read with implicit VR little endian TS</p>
 <h3>processing options</h3>
-<p>VOI transform handling:<br />
-  +Vl  &#8211;voi-lut<br />
-         use first VOI LUT if present (default)<br />
-  +Vw  &#8211;voi-window<br />
-         use first window center/width if present<br />
-  -V   &#8211;voi-ignore<br />
-         ignore VOI LUT and window center/width<br />
-curve handling:<br />
-  +c   &#8211;curve-activate<br />
-         activate curve data if present (default)<br />
-  -c   &#8211;curve-ignore<br />
-         ignore curve data<br />
-overlay handling:<br />
-  +oc  &#8211;overlay-copy<br />
-         copy overlays if not embedded, activate otherwise (default)<br />
-  +oa  &#8211;overlay-activate<br />
-         activate overlays<br />
-  -o   &#8211;overlay-ignore<br />
-         ignore overlays<br />
-shutter handling:<br />
-  +s   &#8211;shutter-activate<br />
-         use shutter if present in image (default)<br />
-  -s   &#8211;shutter-ignore<br />
-         ignore shutter<br />
-presentation LUT shape handling:<br />
-  +p   &#8211;plut-activate<br />
-         use presentation LUT shape if present (default)<br />
-  -p   &#8211;plut-ignore<br />
-         ignore presentation LUT shape<br />
-layering:<br />
-  +l1  &#8211;layer-single<br />
-         all curves and overlays are in one layer<br />
-  +l2  &#8211;layer-double<br />
-         one layer for curves, one for overlays (default)<br />
-  +ls  &#8211;layer-separate<br />
-         separate layers for each curve and overlay<br />
-location of referenced image:<br />
-  -lx  &#8211;location-none<br />
-         image reference without location (default)<br />
-  -ln  &#8211;location-network  [a]etitle: string<br />
-         image located at application entity a<br />
-  -lm  &#8211;location-media  [f]ilesetID, fileset[UID]: string<br />
+<p>VOI transform handling:<br/>
+  +Vl  &#8211;voi-lut<br/>
+         use first VOI LUT if present (default)<br/>
+  +Vw  &#8211;voi-window<br/>
+         use first window center/width if present<br/>
+  -V   &#8211;voi-ignore<br/>
+         ignore VOI LUT and window center/width<br/>
+curve handling:<br/>
+  +c   &#8211;curve-activate<br/>
+         activate curve data if present (default)<br/>
+  -c   &#8211;curve-ignore<br/>
+         ignore curve data<br/>
+overlay handling:<br/>
+  +oc  &#8211;overlay-copy<br/>
+         copy overlays if not embedded, activate otherwise (default)<br/>
+  +oa  &#8211;overlay-activate<br/>
+         activate overlays<br/>
+  -o   &#8211;overlay-ignore<br/>
+         ignore overlays<br/>
+shutter handling:<br/>
+  +s   &#8211;shutter-activate<br/>
+         use shutter if present in image (default)<br/>
+  -s   &#8211;shutter-ignore<br/>
+         ignore shutter<br/>
+presentation LUT shape handling:<br/>
+  +p   &#8211;plut-activate<br/>
+         use presentation LUT shape if present (default)<br/>
+  -p   &#8211;plut-ignore<br/>
+         ignore presentation LUT shape<br/>
+layering:<br/>
+  +l1  &#8211;layer-single<br/>
+         all curves and overlays are in one layer<br/>
+  +l2  &#8211;layer-double<br/>
+         one layer for curves, one for overlays (default)<br/>
+  +ls  &#8211;layer-separate<br/>
+         separate layers for each curve and overlay<br/>
+location of referenced image:<br/>
+  -lx  &#8211;location-none<br/>
+         image reference without location (default)<br/>
+  -ln  &#8211;location-network  [a]etitle: string<br/>
+         image located at application entity a<br/>
+  -lm  &#8211;location-media  [f]ilesetID, fileset[UID]: string<br/>
          image located on storage medium</p>
 <h3>output options</h3>
 <pre><code>

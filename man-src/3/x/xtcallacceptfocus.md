@@ -21,6 +21,6 @@ description: "XtCallAcceptFocus – calla widget’s accept_focus procedure"
 <h2>Description</h2>
 <p>The <code>XtCallAcceptFocus</code> function calls the specified widget&#8217;s accept_focus procedure, passing it the specified widget and time, and returns what the accept_focus procedure returns. If accept_focus is NULL, <code>XtCallAcceptFocus</code> returns <code>False</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtsetkeyboardfocus/">XtSetKeyboardFocus</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtsetkeyboardfocus/">XtSetKeyboardFocus</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

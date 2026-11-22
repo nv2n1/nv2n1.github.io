@@ -15,7 +15,7 @@ perlfaq1 - General Questions About Perl
 
 <h2>DESCRIPTION</h2>
 
- This section of the <font SIZE="-1">FAQ</font> answers very general, high-level questions about Perl.
+ This section of the FAQ answers very general, high-level questions about Perl.
 
 <h3>What is Perl?</h3>
 
@@ -33,7 +33,7 @@ perlfaq1 - General Questions About Perl
 
  The core development team (known as the Perl Porters) are a group of highly altruistic individuals committed to producing better software for free than you could hope to purchase for money. You may snoop on pending developments via the archives &lt;<a rel="nofollow" HREF="http://www.nntp.perl.org/group/perl.perl5.porters/">http://www.nntp.perl.org/group/perl.perl5.porters/</a>&gt; or you can subscribe to the mailing list by sending perl5-porters-subscribe [at] perl.org a subscription request (an empty message with no subject is fine). 
 
- While the <font SIZE="-1">GNU</font> project includes Perl in its distributions, there's no such thing as ``<font SIZE="-1">GNU</font> Perl''. Perl is not produced nor maintained by the Free Software Foundation. Perl's licensing terms are also more open than <font SIZE="-1">GNU</font> software's tend to be. 
+ While the GNU project includes Perl in its distributions, there's no such thing as ``GNU Perl''. Perl is not produced nor maintained by the Free Software Foundation. Perl's licensing terms are also more open than GNU software's tend to be. 
 
  You can get commercial support of Perl if you wish, although for most users the informal support will more than suffice. See the answer to ``Where can I buy a commercial version of Perl?'' for more information.
 
@@ -58,7 +58,7 @@ perlfaq1 - General Questions About Perl
 </dd><dt>&bull;
 </dt><dd> The latest versions are probably the least deployed and widely tested, so you may want to wait a few months after their release and see what problems others have if you are risk averse.
 </dd><dt>&bull;
-</dt><dd> The immediate, in addition to the current stable release, the previous stable release is maintained. See ``<font SIZE="-1">MAINTENANCE AND SUPPORT''</font> in perlpolicy for more information.
+</dt><dd> The immediate, in addition to the current stable release, the previous stable release is maintained. See ``MAINTENANCE AND SUPPORT'' in perlpolicy for more information.
 </dd><dt>&bull;
 </dt><dd> There are really two tracks of perl development: a maintenance version and an experimental version. The maintenance versions are stable, and have an even number as the minor release (i.e. perl5.24.x, where 24 is the minor release). The experimental versions may include features that don't make it into the stable versions, and have an odd number as the minor release (i.e. perl5.25.x, where 25 is the minor release).
 </dd><dt>&bull;
@@ -104,15 +104,15 @@ perlfaq1 - General Questions About Perl
 
 <h3>Is Perl difficult to learn?</h3>
 
- No, Perl is easy to start learning &lt;<a rel="nofollow" HREF="http://learn.perl.org/">http://learn.perl.org/</a>&gt; --and easy to keep learning. It looks like most programming languages you're likely to have experience with, so if you've ever written a C program, an awk script, a shell script, or even a <font SIZE="-1">BASIC</font> program, you're already partway there. 
+ No, Perl is easy to start learning &lt;<a rel="nofollow" HREF="http://learn.perl.org/">http://learn.perl.org/</a>&gt; --and easy to keep learning. It looks like most programming languages you're likely to have experience with, so if you've ever written a C program, an awk script, a shell script, or even a BASIC program, you're already partway there. 
 
- Most tasks only require a small subset of the Perl language. One of the guiding mottos for Perl development is ``there's more than one way to do it'' (<font SIZE="-1">TMTOWTDI,</font> sometimes pronounced ``tim toady''). Perl's learning curve is therefore shallow (easy to learn) and long (there's a whole lot you can do if you really want). 
+ Most tasks only require a small subset of the Perl language. One of the guiding mottos for Perl development is ``there's more than one way to do it'' (TMTOWTDI, sometimes pronounced ``tim toady''). Perl's learning curve is therefore shallow (easy to learn) and long (there's a whole lot you can do if you really want). 
 
  Finally, because Perl is frequently (but not always, and certainly not by definition) an interpreted language, you can write your programs and test them without an intermediate compilation step, allowing you to experiment and test/debug quickly and easily. This ease of experimentation flattens the learning curve even more. 
 
- Things that make Perl easier to learn: Unix experience, almost any kind of programming experience, an understanding of regular expressions, and the ability to understand other people's code. If there's something you need to do, then it's probably already been done, and a working example is usually available for free. Don't forget Perl modules, either. They're discussed in Part 3 of this <font SIZE="-1">FAQ,</font> along with <font SIZE="-1">CPAN</font> &lt;<a rel="nofollow" HREF="http://www.cpan.org/">http://www.cpan.org/</a>&gt;, which is discussed in Part 2.
+ Things that make Perl easier to learn: Unix experience, almost any kind of programming experience, an understanding of regular expressions, and the ability to understand other people's code. If there's something you need to do, then it's probably already been done, and a working example is usually available for free. Don't forget Perl modules, either. They're discussed in Part 3 of this FAQ, along with CPAN &lt;<a rel="nofollow" HREF="http://www.cpan.org/">http://www.cpan.org/</a>&gt;, which is discussed in Part 2.
 
-<h3>How does Perl compare with other languages like Java, Python, <font SIZE="-1">REXX,</font> Scheme, or Tcl?</h3>
+<h3>How does Perl compare with other languages like Java, Python, REXX, Scheme, or Tcl?</h3>
 
  Perl can be used for almost any coding problem, even ones which require integrating specialist C code for extra speed. As with any tool it can be used well or badly. Perl has many strengths, and a few weaknesses, precisely which areas are good and bad is often a personal choice. 
 
@@ -124,9 +124,9 @@ perlfaq1 - General Questions About Perl
 
  Perl is flexible and extensible enough for you to use on virtually any task, from one-line file-processing tasks to large, elaborate systems. 
 
- For many people, Perl serves as a great replacement for shell scripting. For others, it serves as a convenient, high-level replacement for most of what they'd program in low-level languages like C or C<font SIZE="-2">++</font>. It's ultimately up to you (and possibly your management) which tasks you'll use Perl for and which you won't. 
+ For many people, Perl serves as a great replacement for shell scripting. For others, it serves as a convenient, high-level replacement for most of what they'd program in low-level languages like C or C++. It's ultimately up to you (and possibly your management) which tasks you'll use Perl for and which you won't. 
 
- If you have a library that provides an <font SIZE="-1">API,</font> you can make any component of it available as just another Perl function or variable using a Perl extension written in C or C<font SIZE="-2">++</font> and dynamically linked into your main perl interpreter. You can also go the other direction, and write your main program in C or C<font SIZE="-2">++</font>, and then link in some Perl code on the fly, to create a powerful application. See perlembed. 
+ If you have a library that provides an API, you can make any component of it available as just another Perl function or variable using a Perl extension written in C or C++ and dynamically linked into your main perl interpreter. You can also go the other direction, and write your main program in C or C++, and then link in some Perl code on the fly, to create a powerful application. See perlembed. 
 
  That said, there will always be small, focused, special-purpose languages dedicated to a specific problem domain that are simply more convenient for certain kinds of problems. Perl tries to be all things to all people, but nothing special to anyone. Examples of specialized languages that come to mind include prolog and matlab.
 
@@ -140,13 +140,13 @@ perlfaq1 - General Questions About Perl
 
  ``Perl'' is the name of the language. Only the ``P'' is capitalized. The name of the interpreter (the program which runs the Perl script) is ``perl'' with a lowercase ``p''. 
 
- You may or may not choose to follow this usage. But never write ``<font SIZE="-1">PERL'',</font> because perl is not an acronym.
+ You may or may not choose to follow this usage. But never write ``PERL'', because perl is not an acronym.
 
-<h3>What is a <font SIZE="-1">JAPH</font>?</h3>
+<h3>What is a JAPH?</h3>
 
  (contributed by brian d foy) 
 
- <font SIZE="-1">JAPH</font> stands for ``Just another Perl hacker,'', which Randal Schwartz used to sign email and usenet messages starting in the late 1980s. He previously used the phrase with many subjects (``Just another x hacker,''), so to distinguish his <font SIZE="-1">JAPH,</font> he started to write them as Perl programs: 
+ JAPH stands for ``Just another Perl hacker,'', which Randal Schwartz used to sign email and usenet messages starting in the late 1980s. He previously used the phrase with many subjects (``Just another x hacker,''), so to distinguish his JAPH, he started to write them as Perl programs: 
 
  <pre>
     print &quot;Just another Perl hacker,&quot;;
@@ -154,7 +154,7 @@ perlfaq1 - General Questions About Perl
 
  Other people picked up on this and started to write clever or obfuscated programs to produce the same output, spinning things quickly out of control while still providing hours of amusement for their creators and readers. 
 
- <font SIZE="-1">CPAN</font> has several <font SIZE="-1">JAPH</font> programs at &lt;<a rel="nofollow" HREF="http://www.cpan.org/misc/japh">http://www.cpan.org/misc/japh</a>&gt;.
+ CPAN has several JAPH programs at &lt;<a rel="nofollow" HREF="http://www.cpan.org/misc/japh">http://www.cpan.org/misc/japh</a>&gt;.
 
 <h3>How can I convince others to use Perl?</h3>
 
@@ -181,7 +181,7 @@ perlfaq1 - General Questions About Perl
 
  This documentation is free; you can redistribute it and/or modify it under the same terms as Perl itself. 
 
- Irrespective of its distribution, all code examples here are in the public domain. You are permitted and encouraged to use this code and any derivatives thereof in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit to the <font SIZE="-1">FAQ</font> would be courteous but is not required. 
+ Irrespective of its distribution, all code examples here are in the public domain. You are permitted and encouraged to use this code and any derivatives thereof in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit to the FAQ would be courteous but is not required. 
 
 
 

@@ -11,7 +11,7 @@ description: "dlamrg.f –"
 <p> dlamrg.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlamrg</code> (N1, N2, A, DTRD1, DTRD2, INDEX)<br />
+<p> subroutine <code>dlamrg</code> (N1, N2, A, DTRD1, DTRD2, INDEX)<br/>
  <i></i><code>DLAMRG</code> creates a permutation list to merge the entries of two independently sorted sets into a single set sorted in ascending order.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlamrg (integerN1, integerN2, double precision, dimension( * )A, integerDTRD1, integerDTRD2, integer, dimension( * )INDEX)</h3>

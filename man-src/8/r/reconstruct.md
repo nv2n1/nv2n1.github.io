@@ -47,7 +47,7 @@ description: "reconstruct – reconstruct mailboxes"
 <dt><code>-O</code></dt>
 <dd>Delete odd files. This is the opposite of &#8216;-o&#8217;.</dd>
 <dt><code>-m</code></dt>
-<dd><code>NOTE: CURRENTLY UNAVAILABLE</code><br />
+<dd><code>NOTE: CURRENTLY UNAVAILABLE</code><br/>
  Rebuild the <i>mailboxes</i> file. Use whatever data in the existing <i>mailboxes</i> file it can scavenge, then scans all partitions listed in the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file for additional mailboxes.</dd></dl>
 <h2>Examples</h2>
 <p>You want to reconstruct the index files for a user, you have recovered a deleted mail file from backup and given it a suitable name (eg user/ben-lacy/33.), but it is not visible since it is not indexed: </p>

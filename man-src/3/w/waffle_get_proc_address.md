@@ -23,7 +23,7 @@ void *waffle_get_proc_address(const char *name);</code></pre>
 <dd>&bull; If the queried function is statically exposed by the OpenGL library of a given API, then <code>waffle_get_proc_address()</code> may return a <code>NULL</code>.</dd></dl>
 <dl>
 <dd>&bull; Under Windows (WGL) a current context must be available before executing the function. Otherwise <code>waffle_get_proc_address()</code> may return a <code>NULL</code>.</dd></dl>
-<p> For details on this function&#8217;s behavior, see the specification for the relevant platform: the m[blue]<code>GLX 1.4 Specification</code>m[]<font SIZE="-2">[1]</font> the m[blue]<code>EGL 1.4 Specification</code>m[]<font SIZE="-2">[2]</font> or the m[blue]<code>MSDN article</code>m[]<font SIZE="-2">[3]</font>.</dl>
+<p> For details on this function&#8217;s behavior, see the specification for the relevant platform: the m[blue]<code>GLX 1.4 Specification</code>m[][1] the m[blue]<code>EGL 1.4 Specification</code>m[][2] or the m[blue]<code>MSDN article</code>m[][3].</dl>
 <h2>Errors</h2>
 <p>See <code><a href="/docs/linux/man/3-waffle_error/">waffle_error</a></code>(3) for the complete list of waffle&#8217;s error codes. </p>
 <p> No errors are specific to any functions listed in this manual page.</p>

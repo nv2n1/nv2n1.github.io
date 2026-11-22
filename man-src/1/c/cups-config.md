@@ -10,15 +10,15 @@ description: "cups-config – get cups api, compiler, directory, and link inform
 
 <p> cups-config &#8211; get cups api, compiler, directory, and link information.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>cups-config</code> &#8211;api-version<br />
- <code>cups-config</code> &#8211;build<br />
- <code>cups-config</code> &#8211;cflags<br />
- <code>cups-config</code> &#8211;datadir<br />
- <code>cups-config</code> &#8211;help<br />
- <code>cups-config</code> &#8211;ldflags<br />
- <code>cups-config</code> [ <i>&#8211;image</i> ] [ <i>&#8211;static</i> ] &#8211;libs<br />
- <code>cups-config</code> &#8211;serverbin<br />
- <code>cups-config</code> &#8211;serverroot<br />
+<p> <code>cups-config</code> &#8211;api-version<br/>
+ <code>cups-config</code> &#8211;build<br/>
+ <code>cups-config</code> &#8211;cflags<br/>
+ <code>cups-config</code> &#8211;datadir<br/>
+ <code>cups-config</code> &#8211;help<br/>
+ <code>cups-config</code> &#8211;ldflags<br/>
+ <code>cups-config</code> [ <i>&#8211;image</i> ] [ <i>&#8211;static</i> ] &#8211;libs<br/>
+ <code>cups-config</code> &#8211;serverbin<br/>
+ <code>cups-config</code> &#8211;serverroot<br/>
  <code>cups-config</code> &#8211;version </p>
 <h2>DESCRIPTION</h2>
 <p> <code>cups-config</code> is the CUPS program configuration utility. It should be used by application developers to determine the necessary command-line options for the compiler and linker, as well as determining installation directories for filters, configuration files, and drivers.</p>

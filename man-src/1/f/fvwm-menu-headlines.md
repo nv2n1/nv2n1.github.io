@@ -12,7 +12,7 @@ description: "fvwm-menu-headlines – builds headlines menu definition for fvwm"
 <h2>SYNOPSIS</h2>
 <p> <code>fvwm-menu-headlines</code> [ <code>&#8211;help</code>|<code>-h</code>|<code>-?</code> ] [ <code>&#8211;version</code>|<code>-V</code> ] [ <code>&#8211;info</code> [site] ] [ <code>&#8211;site</code>|<code>-s</code> site ] [ <code>&#8211;name</code>|<code>-n</code> name ] [ <code>&#8211;title</code>|<code>-t</code> title ] [ <code>&#8211;item</code> item ] [ <code>&#8211;exec</code>|<code>-e</code> exec-command ] [ <code>&#8211;command</code>|<code>-e</code> fvwm-command ] [ <code>&#8211;icon-title</code> icon ] [ <code>&#8211;icon-item</code> icon ] [ <code>&#8211;icon-home</code> icon ] [ <code>&#8211;icon-error</code> icon ] [ <code>&#8211;wm-icons</code> ] [ <code>&#8211;frontpage</code> [where] ] [ <code>&#8211;proxy</code>|<code>-p</code> host:port ] [ <code>&#8211;file</code> [file] ] [ <code>&#8211;fake</code> [file] ] [ <code>&#8211;timeout</code> seconds ]</p>
 <h2>DESCRIPTION</h2>
-<p> This configurable perl script builds an fvwm menu definition for headlines of popular news web sites: FreshMeat, Slashdot, LinuxToday, DaemonNews, GNOME-News, KDE-News, RootPrompt, LinuxFr, ThinkGeek, <font SIZE="-1">CNN</font>, <font SIZE="-1">BBC</font> and more. </p>
+<p> This configurable perl script builds an fvwm menu definition for headlines of popular news web sites: FreshMeat, Slashdot, LinuxToday, DaemonNews, GNOME-News, KDE-News, RootPrompt, LinuxFr, ThinkGeek, CNN, BBC and more. </p>
 <p> It is possible to specify a customized menu item format, change a command (usually launching a browser) and add menu icons (there is a support for the wm-icons package).</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -31,7 +31,7 @@ description: "fvwm-menu-headlines – builds headlines menu definition for fvwm"
 <dt><code>&#8211;item</code> label-format</dt>
 <dd>
 </dd><dt><code>&#8211;exec</code> command-format</dt>
-<dd> define format for menu item or command (what is shown and what is executed when the item is chosen). Default label is &#8216;%h	%[(%Y-%m-%d <tt>%H:</tt>%M)]&#8217;. <font SIZE="-1">TAB</font> can be specified as &#8216;	&#8217;, but in .fvwm2rc you should specify a double backslash or a real <font SIZE="-1">TAB</font>. </dd>
+<dd> define format for menu item or command (what is shown and what is executed when the item is chosen). Default label is &#8216;%h	%[(%Y-%m-%d <tt>%H:</tt>%M)]&#8217;. TAB can be specified as &#8216;	&#8217;, but in .fvwm2rc you should specify a double backslash or a real TAB. </dd>
 <p> Format specifiers for a headline format: </p>
 <pre><code>
 % h - headline % u - url % d - date in the native format(that site backend supplied) % [strftime - argument - string] - date / time, see strftime(3)
@@ -67,12 +67,12 @@ description: "fvwm-menu-headlines – builds headlines menu definition for fvwm"
 <dt><code>&#8211;proxy</code> host[:port]</dt>
 <dd> define a proxy to use. Example: &#8211;proxy proxy.inter.net:3128</dd>
 <dt><code>&#8211;file</code> [file]</dt>
-<dd> write the menu output to specified file. If no filename is given with this option (or empty filename), the default filename <font SIZE="-1">WORK_HOME/SITE</font>.menu is used. Without this option or with &#8216;-&#8216; filename, the menu output is written to standard output.</dd>
+<dd> write the menu output to specified file. If no filename is given with this option (or empty filename), the default filename WORK_HOME/SITE.menu is used. Without this option or with &#8216;-&#8216; filename, the menu output is written to standard output.</dd>
 <dt><code>&#8211;fake</code> [file]</dt>
-<dd> don&#8217;t connect to the host using <font SIZE="-1">HTTP</font> protocol, instead, read from <font SIZE="-1">WORK_HOME/SITE</font>.in file. The following reads input from freshmeat.in (downloaded <a rel="nofollow" href="http://freshmeat.net/backend/recentnews.txt)">http://freshmeat.net/backend/recentnews.txt)</a> and saves output to segfault.menu (both files are in <font SIZE="-1">WORK_HOME</font>): fvwm-menu-headlines &#8211;site freshmeat &#8211;fake &#8211;file</dd>
+<dd> don&#8217;t connect to the host using HTTP protocol, instead, read from WORK_HOME/SITE.in file. The following reads input from freshmeat.in (downloaded <a rel="nofollow" href="http://freshmeat.net/backend/recentnews.txt)">http://freshmeat.net/backend/recentnews.txt)</a> and saves output to segfault.menu (both files are in WORK_HOME): fvwm-menu-headlines &#8211;site freshmeat &#8211;fake &#8211;file</dd>
 <dt><code>&#8211;timeout</code> seconds</dt>
 <dd> limit a line reading from a socket to this timeout, the default timeout is 20 seconds.</dd></dl>
-<p> <font SIZE="-1">WORK_HOME</font> of this script is ~/.fvwm/.fvwm-menu-headlines. It is created if needed. </p>
+<p> WORK_HOME of this script is ~/.fvwm/.fvwm-menu-headlines. It is created if needed. </p>
 <p> Option parameters can be specified either using &#8216;=&#8217; or in the next argument. Short options are ok if not ambiguous: <tt>&quot;-h&quot;</tt>, <tt>&quot;-t&quot;</tt>; but be careful with short options, what is now unambiguous, can become ambiguous in the next versions.</p>
 <h2>USAGE</h2>
 <p> 1. One of the ways to use this script is to define a crontab entry to run the script every hour or so for every monitored site: </p>
@@ -160,7 +160,7 @@ sub process_my_slashdot()
   Mikhael Goikhman &lt;migo [at] homemail.com&gt;, 16 Dec 1999.
 </pre>
 <h2>COPYING</h2>
-<p> The script is distributed by the same terms as fvwm itself. See <font SIZE="-1">GNU</font> General Public License for details.</p>
+<p> The script is distributed by the same terms as fvwm itself. See GNU General Public License for details.</p>
 <h2>BUGS</h2>
 <p> I try to keep all supported site info up to date, but sites often go down, change their backend formats, change their httpd responses, just stop to post news and so on; the script in the latest cvs may be more up to date. </p>
 <p> The headline times may be off by one hour or more, since the time is displayed for your local time zone, and the time zone of the original time in the site backend output is often guessed (sometimes incorrectly); similarly it is guessed whether to apply the daylight saving correction. </p>

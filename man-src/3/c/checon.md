@@ -11,7 +11,7 @@ description: "checon.f –"
 <p> checon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>checon</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, INFO)<br />
+<p> subroutine <code>checon</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, INFO)<br/>
  <i></i><code>CHECON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine checon (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, realANORM, realRCOND, complex, dimension( * )WORK, integerINFO)</h3>

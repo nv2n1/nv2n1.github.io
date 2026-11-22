@@ -17,5 +17,5 @@ description: "XtProcessLock, XtProcessUnlock – lock and unlock process"
 <p><code>XtProcessLock</code> is used to lock all process global data. </p>
 <p> <code>XtProcessUnlock</code> unlocks the process.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -10,7 +10,7 @@ description: "sspgv.f –"
 <p>sspgv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sspgv</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, INFO)<br />
+<p>subroutine <code>sspgv</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, INFO)<br/>
  <i></i><code>SSPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sspgv (integerITYPE, characterJOBZ, characterUPLO, integerN, real, dimension( * )AP, real, dimension( * )BP, real, dimension( * )W, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerINFO)</h3>

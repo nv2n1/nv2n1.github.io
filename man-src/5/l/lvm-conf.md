@@ -29,43 +29,43 @@ description: "lvm.conf — Configuration file for LVM2"
 <dt><code>value</code> = <code>section</code> | <code>assignment</code></dt>
 <dd>A value can either be a new section, or an assignment.</dd>
 <dt><code>section</code> = <code>identifier</code> &#8216;<code>{</code>&#8216; <code>value</code>* &#8216;<code>}</code>&#8216;</dt>
-<dd>A section groups associated values together. If the same section is encountered multiple times, the contents of all instances are concatenated together in the order of appearance.<br />
- It is denoted by a name and delimited by curly brackets.<br />
+<dd>A section groups associated values together. If the same section is encountered multiple times, the contents of all instances are concatenated together in the order of appearance.<br/>
+ It is denoted by a name and delimited by curly brackets.<br/>
  e.g.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>backup {</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8230;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>}</p>
 <dt><code>assignment</code> = <code>identifier</code> &#8216;<code>=</code>&#8216; ( <code>array</code> | <code>type</code> )</dt>
-<dd>An assignment associates a type with an identifier. If the identifier contains forward slashes, those are interpreted as path delimiters. The statement <code>section/key = value</code> is equivalent to <code>section { key = value }</code>. If multiple instances of the same key are encountered, only the last value is used (and a warning is issued).<br />
+<dd>An assignment associates a type with an identifier. If the identifier contains forward slashes, those are interpreted as path delimiters. The statement <code>section/key = value</code> is equivalent to <code>section { key = value }</code>. If multiple instances of the same key are encountered, only the last value is used (and a warning is issued).<br/>
  e.g.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><code>level = 7</code></dd>
 <dt><code>array</code> = &#8216;<code>[</code>&#8216; ( <code>type</code> &#8216;<code>,</code>&#8216;)* <code>type</code> &#8216;<code>]</code>&#8216; | &#8216;<code>[</code>&#8216; &#8216;<code>]</code>&#8216;</dt>
-<dd>Inhomogeneous arrays are supported.<br />
- Elements must be separated by commas.<br />
+<dd>Inhomogeneous arrays are supported.<br/>
+ Elements must be separated by commas.<br/>
  An empty array is acceptable.</dd>
 <dt><code>type</code> = <code>integer</code> | <code>float</code> | <code>string</code></dt>
-<dd><code>integer</code> = [0-9]*<br />
- <code>float</code> = [0-9]*&#8217;<code>.</code>&#8216;[0-9]*<br />
+<dd><code>integer</code> = [0-9]*<br/>
+ <code>float</code> = [0-9]*&#8217;<code>.</code>&#8216;[0-9]*<br/>
  <code>string </code>= &#8221;.*&#8221;</dd>
 <dd>Strings with spaces must be enclosed in double quotes, single words that start with a letter can be left unquoted. </dd>
 </dl>
 <h2>Settings</h2>
 <p>The <code>lvmconfig</code> command prints the LVM configuration settings in various ways. See the man page <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8). </p>
-<p> Command to print a list of all possible config settings, with their default values:<br />
+<p> Command to print a list of all possible config settings, with their default values:<br/>
  <code>lvmconfig &#8211;type default</code> </p>
-<p> Command to print a list of all possible config settings, with their default values, and a full description of each as a comment:<br />
+<p> Command to print a list of all possible config settings, with their default values, and a full description of each as a comment:<br/>
  <code>lvmconfig &#8211;type default &#8211;withcomments</code> </p>
-<p> Command to print a list of all possible config settings, with their current values (configured, non-default values are shown):<br />
+<p> Command to print a list of all possible config settings, with their current values (configured, non-default values are shown):<br/>
  <code>lvmconfig &#8211;type current</code> </p>
-<p> Command to print all config settings that have been configured with a different value than the default (configured, non-default values are shown):<br />
+<p> Command to print all config settings that have been configured with a different value than the default (configured, non-default values are shown):<br/>
  <code>lvmconfig &#8211;type diff</code> </p>
-<p> Command to print a single config setting, with its default value, and a full description, where &quot;Section&quot; refers to the config section, e.g. global, and &quot;Setting&quot; refers to the name of the specific setting, e.g. umask:<br />
+<p> Command to print a single config setting, with its default value, and a full description, where &quot;Section&quot; refers to the config section, e.g. global, and &quot;Setting&quot; refers to the name of the specific setting, e.g. umask:<br/>
  <code>lvmconfig &#8211;type default &#8211;withcomments Section/Setting</code></p>
 <h2>Files</h2>
-<p><i>/etc/lvm/lvm.conf</i><br />
- <i>/etc/lvm/lvmlocal.conf</i><br />
- <i>/etc/lvm/archive</i><br />
- <i>/etc/lvm/backup</i><br />
- <i>/etc/lvm/cache/.cache</i><br />
- <i>/run/lock/lvm</i><br />
+<p><i>/etc/lvm/lvm.conf</i><br/>
+ <i>/etc/lvm/lvmlocal.conf</i><br/>
+ <i>/etc/lvm/archive</i><br/>
+ <i>/etc/lvm/backup</i><br/>
+ <i>/etc/lvm/cache/.cache</i><br/>
+ <i>/run/lock/lvm</i><br/>
  <i>/etc/lvm/profile</i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8) </p>

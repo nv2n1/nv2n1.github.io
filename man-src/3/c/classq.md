@@ -11,7 +11,7 @@ description: "classq.f –"
 <p> classq.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>classq</code> (N, X, INCX, SCALE, SUMSQ)<br />
+<p> subroutine <code>classq</code> (N, X, INCX, SCALE, SUMSQ)<br/>
  <i></i><code>CLASSQ</code> updates a sum of squares represented in scaled form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine classq (integerN, complex, dimension( * )X, integerINCX, realSCALE, realSUMSQ)</h3>

@@ -94,66 +94,66 @@ description: "getdate, getdate_r – convert a date-plus-time string to broken-d
 <p> The POSIX.1 specification for <code><a href="/docs/linux/man/3-strptime/">strptime</a></code>(3) contains conversion specifications using the <code>%E</code> or <code>%O</code> modifier, while such specifications are not given for <code>getdate</code>(). In glibc, <code>getdate</code>() is implemented using <code><a href="/docs/linux/man/3-strptime/">strptime</a></code>(3), so that precisely the same conversions are supported by both.</p>
 <h2>EXAMPLES</h2>
 <p> The program below calls <code>getdate</code>() for each of its command-line arguments, and for each call displays the values in the fields of the returned <i>tm</i> structure. The following shell session demonstrates the operation of the program: </p>
-<p> $<code> TFILE=$PWD/tfile</code> $<code> echo &#8216;%A&#8217; &gt; $TFILE </code> # Full name of the day of the week $<code> echo &#8216;%T&#8217; &gt;&gt; $TFILE</code> # ISO date (YYYY-MM-DD) $<code> echo &#8216;%F&#8217; &gt;&gt; $TFILE</code> # Time (HH:MM:SS) $<code> date</code> $<code> export DATEMSK=$TFILE</code> $<code> ./a.out Tuesday &#8216;2009-12-28&#8242; &#8217;12:22:33&#8217;</code> Sun Sep 7 06:03:36 CEST 2008 Call 1 (&quot;Tuesday&quot;) succeeded:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_sec&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;36<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_min&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;3<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_hour&nbsp;<wbr>&nbsp;=&nbsp;6<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mday&nbsp;<wbr>&nbsp;=&nbsp;9<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mon&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;8<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_year&nbsp;<wbr>&nbsp;=&nbsp;108<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_wday&nbsp;<wbr>&nbsp;=&nbsp;2<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_yday&nbsp;<wbr>&nbsp;=&nbsp;252<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_isdst&nbsp;=&nbsp;1 Call 2 (&quot;2009-12-28&quot;) succeeded:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_sec&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;36<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_min&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;3<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_hour&nbsp;<wbr>&nbsp;=&nbsp;6<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mday&nbsp;<wbr>&nbsp;=&nbsp;28<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mon&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;11<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_year&nbsp;<wbr>&nbsp;=&nbsp;109<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_wday&nbsp;<wbr>&nbsp;=&nbsp;1<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_yday&nbsp;<wbr>&nbsp;=&nbsp;361<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_isdst&nbsp;=&nbsp;0 Call 3 (&quot;12:22:33&quot;) succeeded:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_sec&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;33<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_min&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;22<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_hour&nbsp;<wbr>&nbsp;=&nbsp;12<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mday&nbsp;<wbr>&nbsp;=&nbsp;7<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mon&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;8<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_year&nbsp;<wbr>&nbsp;=&nbsp;108<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_wday&nbsp;<wbr>&nbsp;=&nbsp;0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_yday&nbsp;<wbr>&nbsp;=&nbsp;250<br />
+<p> $<code> TFILE=$PWD/tfile</code> $<code> echo &#8216;%A&#8217; &gt; $TFILE </code> # Full name of the day of the week $<code> echo &#8216;%T&#8217; &gt;&gt; $TFILE</code> # ISO date (YYYY-MM-DD) $<code> echo &#8216;%F&#8217; &gt;&gt; $TFILE</code> # Time (HH:MM:SS) $<code> date</code> $<code> export DATEMSK=$TFILE</code> $<code> ./a.out Tuesday &#8216;2009-12-28&#8242; &#8217;12:22:33&#8217;</code> Sun Sep 7 06:03:36 CEST 2008 Call 1 (&quot;Tuesday&quot;) succeeded:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_sec&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;36<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_min&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;3<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_hour&nbsp;<wbr>&nbsp;=&nbsp;6<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mday&nbsp;<wbr>&nbsp;=&nbsp;9<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mon&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;8<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_year&nbsp;<wbr>&nbsp;=&nbsp;108<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_wday&nbsp;<wbr>&nbsp;=&nbsp;2<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_yday&nbsp;<wbr>&nbsp;=&nbsp;252<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_isdst&nbsp;=&nbsp;1 Call 2 (&quot;2009-12-28&quot;) succeeded:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_sec&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;36<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_min&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;3<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_hour&nbsp;<wbr>&nbsp;=&nbsp;6<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mday&nbsp;<wbr>&nbsp;=&nbsp;28<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mon&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;11<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_year&nbsp;<wbr>&nbsp;=&nbsp;109<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_wday&nbsp;<wbr>&nbsp;=&nbsp;1<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_yday&nbsp;<wbr>&nbsp;=&nbsp;361<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_isdst&nbsp;=&nbsp;0 Call 3 (&quot;12:22:33&quot;) succeeded:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_sec&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;33<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_min&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;22<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_hour&nbsp;<wbr>&nbsp;=&nbsp;12<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mday&nbsp;<wbr>&nbsp;=&nbsp;7<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mon&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;8<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_year&nbsp;<wbr>&nbsp;=&nbsp;108<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_wday&nbsp;<wbr>&nbsp;=&nbsp;0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_yday&nbsp;<wbr>&nbsp;=&nbsp;250<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_isdst&nbsp;=&nbsp;1</p>
 <h3>Program source</h3>
 <p> #define _GNU_SOURCE #include &lt;time.h&gt; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
+<p> int main(int argc, char *argv[]) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct tm&nbsp;*tmp; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int j&nbsp;=&nbsp;1;&nbsp;j&nbsp;&lt;&nbsp;argc;&nbsp;j++)&nbsp;{<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int j&nbsp;=&nbsp;1;&nbsp;j&nbsp;&lt;&nbsp;argc;&nbsp;j++)&nbsp;{<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tmp&nbsp;=&nbsp;getdate(argv[j]); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(tmp&nbsp;==&nbsp;NULL)&nbsp;{<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(tmp&nbsp;==&nbsp;NULL)&nbsp;{<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;Call&nbsp;%d failed;&nbsp;getdate_err&nbsp;=&nbsp;%d
-&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;j, getdate_err);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;continue;<br />
+&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;j, getdate_err);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;continue;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;Call&nbsp;%d&nbsp;(\&quot;%s\&quot;)&nbsp;succeeded:
-&quot;, j, argv[j]);<br />
+&quot;, j, argv[j]);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_sec&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;%d
-&quot;, tmp-&gt;tm_sec);<br />
+&quot;, tmp-&gt;tm_sec);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_min&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;%d
-&quot;, tmp-&gt;tm_min);<br />
+&quot;, tmp-&gt;tm_min);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_hour&nbsp;<wbr>&nbsp;=&nbsp;%d
-&quot;, tmp-&gt;tm_hour);<br />
+&quot;, tmp-&gt;tm_hour);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mday&nbsp;<wbr>&nbsp;=&nbsp;%d
-&quot;, tmp-&gt;tm_mday);<br />
+&quot;, tmp-&gt;tm_mday);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_mon&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;%d
-&quot;, tmp-&gt;tm_mon);<br />
+&quot;, tmp-&gt;tm_mon);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_year&nbsp;<wbr>&nbsp;=&nbsp;%d
-&quot;, tmp-&gt;tm_year);<br />
+&quot;, tmp-&gt;tm_year);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_wday&nbsp;<wbr>&nbsp;=&nbsp;%d
-&quot;, tmp-&gt;tm_wday);<br />
+&quot;, tmp-&gt;tm_wday);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_yday&nbsp;<wbr>&nbsp;=&nbsp;%d
-&quot;, tmp-&gt;tm_yday);<br />
+&quot;, tmp-&gt;tm_yday);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tm_isdst&nbsp;=&nbsp;%d
-&quot;, tmp-&gt;tm_isdst);<br />
+&quot;, tmp-&gt;tm_isdst);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>

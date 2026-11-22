@@ -67,13 +67,13 @@ description: "systemd-journal-gatewayd.service, systemd-journal-gatewayd.socket,
 <dd>The default. Plaintext syslog-like output, one line per journal entry (like <code>journalctl &#8211;output short</code>).</dd></dl>
 <p> <code>application/json</code></p>
 <dl>
-<dd>Entries are formatted as JSON data structures, one per line (like <code>journalctl &#8211;output json</code>). See m[blue]<code>Journal JSON Format</code>m[]<font SIZE="-2">[1]</font> for more information.</dd></dl>
+<dd>Entries are formatted as JSON data structures, one per line (like <code>journalctl &#8211;output json</code>). See m[blue]<code>Journal JSON Format</code>m[][1] for more information.</dd></dl>
 <p> <code>application/event-stream</code></p>
 <dl>
-<dd>Entries are formatted as JSON data structures, wrapped in a format suitable for m[blue]<code>Server-Sent Events</code>m[]<font SIZE="-2">[2]</font> (like <code>journalctl &#8211;output json-sse</code>).</dd></dl>
+<dd>Entries are formatted as JSON data structures, wrapped in a format suitable for m[blue]<code>Server-Sent Events</code>m[][2] (like <code>journalctl &#8211;output json-sse</code>).</dd></dl>
 <p> <code>application/vnd.fdo.journal</code></p>
 <dl>
-<dd>Entries are serialized into a binary (but mostly text-based) stream suitable for backups and network transfer (like <code>journalctl &#8211;output export</code>). See m[blue]<code>Journal Export Format</code>m[]<font SIZE="-2">[3]</font> for more information.</dd></dl>
+<dd>Entries are serialized into a binary (but mostly text-based) stream suitable for backups and network transfer (like <code>journalctl &#8211;output export</code>). See m[blue]<code>Journal Export Format</code>m[][3] for more information.</dd></dl>
 <h2>Range Header</h2>
 <p><code>Range: entries=</code><i>cursor</i><code>[[:</code><i>num_skip</i><code>]:</code><i>num_entries</i><code>]</code> </p>
 <p> where <code>cursor</code> is a cursor string, <code>num_skip</code> is an integer, <code>num_entries</code> is an unsigned integer. </p>
@@ -93,7 +93,7 @@ description: "systemd-journal-gatewayd.service, systemd-journal-gatewayd.socket,
 <dl>
 <dd>Match journal fields. See <code><a href="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a></code>(7).</dd></dl>
 <h2>Examples</h2>
-<p>Retrieve events from this boot from local journal in m[blue]<code>Journal Export Format</code>m[]<font SIZE="-2">[3]</font>: </p>
+<p>Retrieve events from this boot from local journal in m[blue]<code>Journal Export Format</code>m[][3]: </p>
 <dl>
 <dd>
 <pre>curl --silent -H'Accept: application/vnd.fdo.journal' \

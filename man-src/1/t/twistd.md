@@ -76,5 +76,5 @@ description: "twistd – run Twisted applications (TACs, TAPs)"
 <h2>REPORTING BUGS</h2>
 <p> To report a bug, visit <i><a rel="nofollow" href="http://twistedmatrix.com/trac/wiki/TwistedDevelopment#DevelopmentProcess">http://twistedmatrix.com/trac/wiki/TwistedDevelopment#DevelopmentProcess</a></i></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2011 Twisted Matrix Laboratories.<br />
+<p> Copyright &#169; 2001-2011 Twisted Matrix Laboratories.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

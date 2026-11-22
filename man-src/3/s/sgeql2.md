@@ -11,7 +11,7 @@ description: "sgeql2.f –"
 <p> sgeql2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgeql2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
+<p> subroutine <code>sgeql2</code> (M, N, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>SGEQL2</code> computes the QL factorization of a general rectangular matrix using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgeql2 (integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK, integerINFO)</h3>

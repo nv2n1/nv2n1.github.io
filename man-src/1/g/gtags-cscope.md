@@ -51,7 +51,7 @@ $ gtags - cscope &gt;&gt; help 0 &lt; arg &gt; : Find this C symbol 1 &lt; arg &
 <p> <code>Gtags-cscope</code> exits with a non 0 value if an error occurred, 0 otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cscope/">cscope</a></code>(1), <code><a href="/docs/linux/man/1-gtags-parser/">gtags-parser</a></code>(1), <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1), <code><a href="/docs/linux/man/1-global/">global</a></code>(1), <code><a href="/docs/linux/man/1-htags/">htags</a></code>(1). </p>
-<p> GNU GLOBAL source code tag system<br />
+<p> GNU GLOBAL source code tag system<br/>
  (<a rel="nofollow" href="http://www.gnu.org/software/global/">http://www.gnu.org/software/global/</a>).</p>
 <h2>BUG</h2>
 <p> The second field of the output is almost &lt;unknown&gt; since GLOBAL doesn&#8217;t recognize it. Command 2 (Find functions called by this function) is not implemented.</p>

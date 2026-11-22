@@ -379,7 +379,7 @@ $ sudo -g operator /bin/ls
 </code></pre>
 <p>match /usr/bin/who but not /usr/bin/X11/xterm </p>
 <p>When matching the command line arguments, however, a slash <i>does</i> get matched by wildcards since command line arguments may contain arbitrary strings and not just path names. </p>
-<p>Bf -symbolic Wildcards in command line arguments should be used with care. Ef <br />
+<p>Bf -symbolic Wildcards in command line arguments should be used with care. Ef <br/>
  Command line arguments are matched as a single, concatenated string. This mean a wildcard character such as `?&#8216; or `*&#8216; will match across word boundaries, which may be unexpected. For example, while a sudoers entry like: </p>
 <pre><code>%operator ALL = /bin/cat /var/log/messages*
 </code></pre>

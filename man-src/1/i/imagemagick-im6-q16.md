@@ -19,8 +19,8 @@ description: "ImageMagick – is a free software suite for the creation, modific
 <p> The current release is ImageMagick 6.9.10-11. It runs on Linux, Windows, Mac Os X, iOS, Android OS, and others. </p>
 <p> The authoritative ImageMagick version 6 web site is <a rel="nofollow" href="https://legacy.imagemagick.org.">https://legacy.imagemagick.org.</a> The authoritative source code repository is <a rel="nofollow" href="https://github.com/ImageMagick/ImageMagick6.">https://github.com/ImageMagick/ImageMagick6.</a> We maintain a source code mirror at <a rel="nofollow" href="https://gitlab.com/ImageMagick/ImageMagick6.">https://gitlab.com/ImageMagick/ImageMagick6.</a> </p>
 <p> The design of ImageMagick is an evolutionary process, with the design and implementation efforts serving to influence and guide further progress in the other. With ImageMagick version 7 we aim to improve the design based on lessons learned from the version 6 implementation. </p>
-<p> In the paragraphs below, find a short description for each command-line tool.Cl ick on the program name to get details on the program usage and a list of comman d-line options that alters how the program performs. If you are just getting acq uainted with ImageMagick, start at the top of the list, the convert program, and<br />
-&nbsp;work your way down. Also be sure to peruse Anthony Thyssen&#8217;s tutorial on how to<br />
+<p> In the paragraphs below, find a short description for each command-line tool.Cl ick on the program name to get details on the program usage and a list of comman d-line options that alters how the program performs. If you are just getting acq uainted with ImageMagick, start at the top of the list, the convert program, and<br/>
+&nbsp;work your way down. Also be sure to peruse Anthony Thyssen&#8217;s tutorial on how to<br/>
 &nbsp;use ImageMagick utilities to convert, compose, or edit images from the command- line.</p>
 <dl>
 <dt><code>convert</code></dt>

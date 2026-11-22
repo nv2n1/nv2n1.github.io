@@ -11,7 +11,7 @@ helpztags - generate the help tags file for directory
 
 <h2>SYNOPSIS</h2>
 
- helpztags <i></i><font SIZE="-1"><i>DIRS</i></font><i></i>...
+ helpztags <i></i><i>DIRS</i><i></i>...
 
 <h2>DESCRIPTION</h2>
 

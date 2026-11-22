@@ -17,7 +17,7 @@ description: "xml_grep – grep XML files looking for specific elements"
 <pre>
   xml_grep &lt;xpath expression&gt; &lt;file list&gt;
 </pre>
-<p> By default you can just give <tt>&quot;xml_grep&quot;</tt> an XPath expression and a list of files, and get an <font SIZE="-1">XML</font> file with the result. </p>
+<p> By default you can just give <tt>&quot;xml_grep&quot;</tt> an XPath expression and a list of files, and get an XML file with the result. </p>
 <p> This is equivalent to writing </p>
 <pre>
   xml_grep --group_by_file file --pretty_print indented --cond &lt;file list&gt;
@@ -36,15 +36,15 @@ description: "xml_grep – grep XML files looking for specific elements"
 <p> several <tt>&quot;--root&quot;</tt> can be provided</p>
 <dt><code>&#8211;cond</code> &lt;cond&gt;</dt>
 <dd> return the chunks (or file names) only if they contain elements matching &lt;cond&gt; </dd>
-<p> several <tt>&quot;--cond&quot;</tt> can be provided (in which case they are <font SIZE="-1">OR</font>&#8216;ed)</p>
+<p> several <tt>&quot;--cond&quot;</tt> can be provided (in which case they are OR&#8216;ed)</p>
 <dt><code>&#8211;files</code></dt>
-<dd> return only file names (do not generate an <font SIZE="-1">XML</font> output) </dd>
-<p> usage of this option precludes using any of the options that define the <font SIZE="-1">XML</font> output: <tt>&quot;--roots&quot;</tt>, <tt>&quot;--encoding&quot;</tt>, <tt>&quot;--wrap&quot;</tt>, <tt>&quot;--group_by_file&quot;</tt> or <tt>&quot;--pretty_print&quot;</tt></p>
+<dd> return only file names (do not generate an XML output) </dd>
+<p> usage of this option precludes using any of the options that define the XML output: <tt>&quot;--roots&quot;</tt>, <tt>&quot;--encoding&quot;</tt>, <tt>&quot;--wrap&quot;</tt>, <tt>&quot;--group_by_file&quot;</tt> or <tt>&quot;--pretty_print&quot;</tt></p>
 <dt><code>&#8211;count</code></dt>
 <dd> return only the number of matches in each file </dd>
-<p> usage of this option precludes using any of the options that define the <font SIZE="-1">XML</font> output: <tt>&quot;--roots&quot;</tt>, <tt>&quot;--encoding&quot;</tt>, <tt>&quot;--wrap&quot;</tt>, <tt>&quot;--group_by_file&quot;</tt> or <tt>&quot;--pretty_print&quot;</tt></p>
+<p> usage of this option precludes using any of the options that define the XML output: <tt>&quot;--roots&quot;</tt>, <tt>&quot;--encoding&quot;</tt>, <tt>&quot;--wrap&quot;</tt>, <tt>&quot;--group_by_file&quot;</tt> or <tt>&quot;--pretty_print&quot;</tt></p>
 <dt><code>&#8211;strict</code></dt>
-<dd> without this option parsing errors are reported to <font SIZE="-1">STDOUT</font> and the file skipped</dd>
+<dd> without this option parsing errors are reported to STDOUT and the file skipped</dd>
 <dt><code>&#8211;date</code></dt>
 <dd> when on (by default) the wrapping element get a <tt>&quot;date&quot;</tt> attribute that gives the date the tool was run. </dd>
 <p> with <tt>&quot;--nodate&quot;</tt> this attribute is not added, which can be useful if you need to compare 2 runs.</p>
@@ -74,22 +74,22 @@ description: "xml_grep – grep XML files looking for specific elements"
 <dt><code>&#8211;text_only</code></dt>
 <dd> Displays the text of the results, one by line.</dd>
 <dt><code>&#8211;html</code></dt>
-<dd> Allow <font SIZE="-1">HTML</font> input, files are converted using HTML::TreeBuilder</dd>
+<dd> Allow HTML input, files are converted using HTML::TreeBuilder</dd>
 <dt><code>&#8211;Tidy</code></dt>
-<dd> Allow <font SIZE="-1">HTML</font> input, files are converted using HTML::Tidy</dd></dl>
+<dd> Allow HTML input, files are converted using HTML::Tidy</dd></dl>
 <h3>Condition Syntax</h3>
 <p> &lt;cond&gt; is an XPath-like expression as allowed by XML::Twig to trigger handlers. </p>
-<p> exemples:<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8216;para&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8216;para[@compact=&#8220;compact&#8221;]&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8216;*[@urgent]&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8216;*[@urgent=&#8220;1&#8221;]&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8216;para[<i>string()</i>=&#8220;<font SIZE="-1">WARNING&#8221;</font>]&#8217; </p>
+<p> exemples:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8216;para&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8216;para[@compact=&#8220;compact&#8221;]&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8216;*[@urgent]&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8216;*[@urgent=&#8220;1&#8221;]&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8216;para[<i>string()</i>=&#8220;WARNING&#8221;]&#8217; </p>
 <p> see XML::Twig for a more complete description of the &lt;cond&gt; syntax </p>
 <p> options are processedby Getopt::Long so they can start with &#8216;-&#8216; or &#8216;&#8211;&#8216; and can be abbreviated (<tt>&quot;-r&quot;</tt> instead of <tt>&quot;--root&quot;</tt> for example)</p>
 <h2>DESCRIPTION</h2>
-<p> <code>xml_grep</code> does a grep on <font SIZE="-1">XML</font> files. Instead of using regular expressions it uses XPath expressions (in fact the subset of XPath supported by XML::Twig) </p>
-<p> the results can be the names of the files or <font SIZE="-1">XML</font> elements containing matching elements.</p>
+<p> <code>xml_grep</code> does a grep on XML files. Instead of using regular expressions it uses XPath expressions (in fact the subset of XPath supported by XML::Twig) </p>
+<p> the results can be the names of the files or XML elements containing matching elements.</p>
 <h2>SEE ALSO</h2>
 <p> XML::Twig Getopt::Long</p>
 <h2>LICENSE</h2>

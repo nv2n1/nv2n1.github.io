@@ -13,7 +13,7 @@ description: "shtool install – GNU shtool"
 <h2>SYNOPSIS</h2>
 <p> <code>shtool install</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-t</code>|<code>&#8211;trace</code>] [<code>-d</code>|<code>&#8211;mkdir</code>] [<code>-c</code>|<code>&#8211;copy</code>] [<code>-C</code>|<code>&#8211;compare-copy</code>] [<code>-s</code>|<code>&#8211;strip</code>] [<code>-m</code>|<code>&#8211;mode</code> <i>mode</i>] [<code>-o</code>|<code>&#8211;owner</code> <i>owner</i>] [<code>-g</code>|<code>&#8211;group</code> <i>group</i>] [<code>-e</code>|<code>&#8211;exec</code> <i>sed-cmd</i>] <i>file</i> [<i>file</i> &#8230;] <i>path</i></p>
 <h2>DESCRIPTION</h2>
-<p> This command installs a one or more <i>file</i>s to a given target <i>path</i> providing all important options of the <font SIZE="-1">BSD</font> <i><a href="/docs/linux/man/1-install/">install</a></i>(1) command. The trick is that the functionality is provided in a portable way.</p>
+<p> This command installs a one or more <i>file</i>s to a given target <i>path</i> providing all important options of the BSD <i><a href="/docs/linux/man/1-install/">install</a></i>(1) command. The trick is that the functionality is provided in a portable way.</p>
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
@@ -22,7 +22,7 @@ description: "shtool install – GNU shtool"
 <dt><code>-t</code>, <code>&#8211;trace</code></dt>
 <dd> Enable the output of the essential shell commands which are executed.</dd>
 <dt><code>-d</code>, <code>&#8211;mkdir</code></dt>
-<dd> To maximize <font SIZE="-1">BSD</font> compatiblity, the <font SIZE="-1">BSD &quot;</font><code>shtool</code> <tt>&quot;install -d&quot;</tt>&#8220; usage is internally mapped to the &#8221;<code>shtool</code> <tt>&quot;mkdir -f -p -m 755&quot;</tt>&quot; command.</dd>
+<dd> To maximize BSD compatiblity, the BSD &quot;<code>shtool</code> <tt>&quot;install -d&quot;</tt>&#8220; usage is internally mapped to the &#8221;<code>shtool</code> <tt>&quot;mkdir -f -p -m 755&quot;</tt>&quot; command.</dd>
 <dt><code>-c</code>, <code>&#8211;copy</code></dt>
 <dd> Copy the <i>file</i> to the target <i>path</i>. Default is to move.</dd>
 <dt><code>-C</code>, <code>&#8211;compare-copy</code></dt>
@@ -47,6 +47,6 @@ description: "shtool install – GNU shtool"
      shtool install -c -m 644 -e &quot;s/@p@/$prefix/g&quot; foo.conf $(etcdir)/
 </pre>
 <h2>HISTORY</h2>
-<p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>install</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1997 for <font SIZE="-1"><code>GNU</code></font><code> shtool</code>. It was prompted by portability issues in the installation procedures of <font SIZE="-1"><code>OSSP</code></font> libraries.</p>
+<p> The <code>GNU</code><code> shtool</code> <code>install</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1997 for <code>GNU</code><code> shtool</code>. It was prompted by portability issues in the installation procedures of <code>OSSP</code> libraries.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-umask/">umask</a></i>(1), <i><a href="/docs/linux/man/1-chmod/">chmod</a></i>(1), <i><a href="/docs/linux/man/1-chown/">chown</a></i>(1), <i><a href="/docs/linux/man/1-chgrp/">chgrp</a></i>(1), <i><a href="/docs/linux/man/1-strip/">strip</a></i>(1), <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1). </p>

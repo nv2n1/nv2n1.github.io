@@ -11,7 +11,7 @@ description: "claic1.f –"
 <p> claic1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>claic1</code> (JOB, J, X, SEST, W, GAMMA, SESTPR, S, C)<br />
+<p> subroutine <code>claic1</code> (JOB, J, X, SEST, W, GAMMA, SESTPR, S, C)<br/>
  <i></i><code>CLAIC1</code> applies one step of incremental condition estimation.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claic1 (integerJOB, integerJ, complex, dimension( j )X, realSEST, complex, dimension( j )W, complexGAMMA, realSESTPR, complexS, complexC)</h3>

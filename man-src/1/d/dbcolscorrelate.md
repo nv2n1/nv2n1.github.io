@@ -26,10 +26,10 @@ description: "dbcolscorrelate – find the coefficient of correlation over colum
 <dd> Select a the Pearson product-moment correlation coefficient (the &#8220;sample correlation coefficient&#8221;, usually designated <i>r</i>).</dd>
 <dt><code>&#8211;nosample</code></dt>
 <dd> Select a the Pearson product-moment correlation coefficient (the &#8220;sample correlation coefficient&#8221;, usually designated <i>r</i>).</dd>
-<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></dt>
+<dt><code>-f </code><code>FORMAT</code> or <code>&#8211;format </code><code>FORMAT</code></dt>
 <dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output statistics. Defaults to <tt>&quot;%.5g&quot;</tt>.</dd>
 <dt><code>-T TmpDir</code></dt>
-<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd></dl>
+<dd> where to put tmp files. Also uses environment variable TMPDIR, if -T is not specified. Default is /tmp.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
 <dt><code>-d</code></dt>
@@ -69,4 +69,4 @@ description: "dbcolscorrelate – find the coefficient of correlation over colum
 <p> Fsdb, dbcolstatscores, dbcolsregression.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

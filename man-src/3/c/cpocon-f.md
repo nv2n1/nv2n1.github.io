@@ -10,7 +10,7 @@ description: "cpocon.f –"
 <p>cpocon.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cpocon</code> (UPLO, N, A, LDA, ANORM, RCOND, WORK, RWORK, INFO)<br />
+<p>subroutine <code>cpocon</code> (UPLO, N, A, LDA, ANORM, RCOND, WORK, RWORK, INFO)<br/>
  <i></i><code>CPOCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpocon (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, realANORM, realRCOND, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

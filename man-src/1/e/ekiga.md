@@ -43,7 +43,7 @@ description: "Ekiga – SIP and H.323 Voice over IP and Videoconferencing for UN
 <h2>OTHER INFO</h2>
 <p> The webpage for Ekiga is at <a rel="nofollow" href="http://www.ekiga.org.">http://www.ekiga.org.</a> You can find info about Ekiga there and download the latest version. Either as packages for all major distributions or as sourcecode. Patched version of the libs are available, if necessary.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2000-2008 Damien Sandras<br />
+<p> Copyright &#169; 2000-2008 Damien Sandras<br/>
  This is free software licensed under the GPLv2; see the LICENSE file in the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code>gconf-config</code>(1), <code>gconfd-1</code>(1), <code>gconfd-2</code>(1), <code>gconftool-1</code>(1), <code><a href="/docs/linux/man/1-gconftool-2/">gconftool-2</a></code>(1), <code>gconfigger</code>(1) </p>

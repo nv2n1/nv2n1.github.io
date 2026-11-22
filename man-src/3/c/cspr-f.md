@@ -10,7 +10,7 @@ description: "cspr.f –"
 <p>cspr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cspr</code> (UPLO, N, ALPHA, X, INCX, AP)<br />
+<p>subroutine <code>cspr</code> (UPLO, N, ALPHA, X, INCX, AP)<br/>
  <i></i><code>CSPR</code> performs the symmetrical rank-1 update of a complex symmetric packed matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cspr (characterUPLO, integerN, complexALPHA, complex, dimension( * )X, integerINCX, complex, dimension( * )AP)</h3>

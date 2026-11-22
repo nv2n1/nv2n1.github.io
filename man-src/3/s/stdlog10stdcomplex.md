@@ -12,7 +12,7 @@ description: "std::log10(std::complex) – std::log10(std::complex)"
 <pre><code>Defined in header&lt;complex&gt;
     template &lt;class T&gt;
     complex&lt;T&gt; log10(const complex&lt;T&gt; &amp;z);</code></pre>
-<p>Computes complex common (base 10) logarithm of a complex value z with a branch cut along the negative real axis.<br />
+<p>Computes complex common (base 10) logarithm of a complex value z with a branch cut along the negative real axis.<br/>
 The behavior of this function is equivalent to std::log(z)/std::log(T<code>(10)</code>). </p>
 <h2>Parameters</h2>
 <p>z &#8211; complex value</p>
@@ -43,19 +43,19 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;2*log10(0,1) = (0,1.36438)<br />
-&nbsp;<wbr>&nbsp;4*log10(0.707107,0.707107) = (0,1.36438)<br />
-&nbsp;<wbr>&nbsp;log10(-100,0) = (2,1.36438)<br />
-&nbsp;<wbr>&nbsp;log10(-100,-0) (the other side of the cut) = (2,-1.36438)<br />
+<p>&nbsp;<wbr>&nbsp;2*log10(0,1) = (0,1.36438)<br/>
+&nbsp;<wbr>&nbsp;4*log10(0.707107,0.707107) = (0,1.36438)<br/>
+&nbsp;<wbr>&nbsp;log10(-100,0) = (2,1.36438)<br/>
+&nbsp;<wbr>&nbsp;log10(-100,-0) (the other side of the cut) = (2,-1.36438)<br/>
 &nbsp;<wbr>&nbsp;(note: pi/log<code>(10)</code> = 1.36438)</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;complex natural logarithm with the branch cuts along the negative real axis<br />
-log(std::complex) <i>(function template)</i><br />
-log10<br />
-log10f<br />
-log10l computes common (base 10) logarithm (log10(x))<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br />
-<i>(C++11)</i><br />
-<i>(C++11)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;applies the function std::log10 to each element of valarray<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;complex natural logarithm with the branch cuts along the negative real axis<br/>
+log(std::complex) <i>(function template)</i><br/>
+log10<br/>
+log10f<br/>
+log10l computes common (base 10) logarithm (log10(x))<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br/>
+<i>(C++11)</i><br/>
+<i>(C++11)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;applies the function std::log10 to each element of valarray<br/>
 log10(std::valarray) <i>(function template)</i> </p>

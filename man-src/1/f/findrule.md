@@ -17,7 +17,7 @@ findrule[path...][expression]
 
 <h2>DESCRIPTION</h2>
 
- <tt>&quot;findrule&quot;</tt> mostly borrows the interface from <font SIZE="-1">GNU</font> <i><a HREF="/docs/linux/man/1-find/">find</a></i>(1) to provide a command-line interface onto the File::Find::Rule heirarchy of modules. 
+ <tt>&quot;findrule&quot;</tt> mostly borrows the interface from GNU <i><a HREF="/docs/linux/man/1-find/">find</a></i>(1) to provide a command-line interface onto the File::Find::Rule heirarchy of modules. 
 
  The syntax for expressions is the rule name, preceded by a dash, followed by an optional argument. If the argument is an opening parenthesis it is taken as a list of arguments, terminated by a closing parenthesis. 
 

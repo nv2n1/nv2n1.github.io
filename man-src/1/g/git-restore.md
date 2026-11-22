@@ -101,7 +101,7 @@ $ rm -f hello.c
 $ git restore hello.c                     <code>(2)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>take a file out of another commit<br />
+<p> <code>1. </code>take a file out of another commit<br/>
  <code>2. </code>restore hello.c from the index </p>
 <p> If you want to restore <i>all</i> C source files to match the version in the index, you can say </p>
 <dl>

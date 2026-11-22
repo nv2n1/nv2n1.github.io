@@ -10,7 +10,7 @@ description: "zsptrf.f –"
 <p>zsptrf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zsptrf</code> (UPLO, N, AP, IPIV, INFO)<br />
+<p>subroutine <code>zsptrf</code> (UPLO, N, AP, IPIV, INFO)<br/>
  <i></i><code>ZSPTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zsptrf (characterUPLO, integerN, complex*16, dimension( * )AP, integer, dimension( * )IPIV, integerINFO)</h3>

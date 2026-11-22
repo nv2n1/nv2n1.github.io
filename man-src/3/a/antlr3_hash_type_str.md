@@ -9,68 +9,68 @@ description: "include/antlr3collections.h –"
 
 <p>include/antlr3collections.h &#8211; </p>
 <h2>Synopsis</h2>
-<p>#include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
+<p>#include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br/>
  #include &lt;<a href="file:/usr/include/antlr3bitset.h">antlr3bitset.h</a>&gt; </p>
 <h3>Data Structures</h3>
-<p>struct <code>ANTLR3_HASH_BUCKET_struct</code><br />
- <i>Internal structure of a hash table bucket, which tracks all keys that hash to the same bucket. </i><br />
- struct <code>ANTLR3_HASH_ENTRY_struct</code><br />
- <i>Internal structure representing an element in a hash bucket. </i><br />
- struct <code>ANTLR3_HASH_ENUM_struct</code><br />
- <i>Internal structure representing an enumeration of a table. </i><br />
+<p>struct <code>ANTLR3_HASH_BUCKET_struct</code><br/>
+ <i>Internal structure of a hash table bucket, which tracks all keys that hash to the same bucket. </i><br/>
+ struct <code>ANTLR3_HASH_ENTRY_struct</code><br/>
+ <i>Internal structure representing an element in a hash bucket. </i><br/>
+ struct <code>ANTLR3_HASH_ENUM_struct</code><br/>
+ <i>Internal structure representing an enumeration of a table. </i><br/>
  struct <code>ANTLR3_HASH_KEY_struct</code> </p>
-<p> struct <code>ANTLR3_HASH_TABLE_struct</code><br />
- <i>Structure that tracks a hash table. </i><br />
- struct <code>ANTLR3_INT_TRIE_NODE_struct</code><br />
- <i>Structure that defines an element/node in an ANTLR3_INT_TRIE. </i><br />
- struct <code>ANTLR3_INT_TRIE_struct</code><br />
- <i>Structure that defines an ANTLR3_INT_TRIE. </i><br />
- struct <code>ANTLR3_LIST_struct</code><br />
- <i>Structure that represents a LIST collection. </i><br />
- struct <code>ANTLR3_STACK_struct</code><br />
- <i>Structure that represents a Stack collection. </i><br />
- struct <code>ANTLR3_TOPO_struct</code><br />
- <i>A topological sort system that given a set of dependencies of a node m on node n, can sort them in dependency order. </i><br />
- struct <code>ANTLR3_TRIE_ENTRY_struct</code><br />
- <i>Structure that holds the payload entry in an ANTLR3_INT_TRIE or ANTLR3_STRING_TRIE. </i><br />
+<p> struct <code>ANTLR3_HASH_TABLE_struct</code><br/>
+ <i>Structure that tracks a hash table. </i><br/>
+ struct <code>ANTLR3_INT_TRIE_NODE_struct</code><br/>
+ <i>Structure that defines an element/node in an ANTLR3_INT_TRIE. </i><br/>
+ struct <code>ANTLR3_INT_TRIE_struct</code><br/>
+ <i>Structure that defines an ANTLR3_INT_TRIE. </i><br/>
+ struct <code>ANTLR3_LIST_struct</code><br/>
+ <i>Structure that represents a LIST collection. </i><br/>
+ struct <code>ANTLR3_STACK_struct</code><br/>
+ <i>Structure that represents a Stack collection. </i><br/>
+ struct <code>ANTLR3_TOPO_struct</code><br/>
+ <i>A topological sort system that given a set of dependencies of a node m on node n, can sort them in dependency order. </i><br/>
+ struct <code>ANTLR3_TRIE_ENTRY_struct</code><br/>
+ <i>Structure that holds the payload entry in an ANTLR3_INT_TRIE or ANTLR3_STRING_TRIE. </i><br/>
  struct <code>ANTLR3_VECTOR_ELEMENT_struct</code> </p>
-<p> struct <code>ANTLR3_VECTOR_FACTORY_struct</code><br />
- <i>Structure that tracks vectors in a vector and auto deletes the vectors in the vector factory when closed. </i><br />
+<p> struct <code>ANTLR3_VECTOR_FACTORY_struct</code><br/>
+ <i>Structure that tracks vectors in a vector and auto deletes the vectors in the vector factory when closed. </i><br/>
  struct <code>ANTLR3_VECTOR_struct</code> </p>
 <h3>Defines</h3>
-<p>#define <code>ANTLR3_FACTORY_VPOOL_SIZE</code> 256<br />
- <i>Default vector pool size if otherwise unspecified. </i><br />
- #define <code>ANTLR3_HASH_TYPE_INT</code> 0<br />
- <i>Indicates the hashed file has integer keys. </i><br />
- #define <code>ANTLR3_HASH_TYPE_STR</code> 1<br />
- <i>Indicates the hashed file has numeric keys. </i><br />
+<p>#define <code>ANTLR3_FACTORY_VPOOL_SIZE</code> 256<br/>
+ <i>Default vector pool size if otherwise unspecified. </i><br/>
+ #define <code>ANTLR3_HASH_TYPE_INT</code> 0<br/>
+ <i>Indicates the hashed file has integer keys. </i><br/>
+ #define <code>ANTLR3_HASH_TYPE_STR</code> 1<br/>
+ <i>Indicates the hashed file has numeric keys. </i><br/>
  #define <code>ANTLR3_VECTOR_INTERNAL_SIZE</code> 16 </p>
 <h3>Typedefs</h3>
-<p>typedef struct <code>ANTLR3_HASH_BUCKET_struct</code> <code>ANTLR3_HASH_BUCKET</code><br />
- <i>Internal structure of a hash table bucket, which tracks all keys that hash to the same bucket. </i><br />
- typedef struct <code>ANTLR3_HASH_ENTRY_struct</code> <code>ANTLR3_HASH_ENTRY</code><br />
- <i>Internal structure representing an element in a hash bucket. </i><br />
- typedef struct <code>ANTLR3_HASH_ENUM_struct</code> <code>ANTLR3_HASH_ENUM</code><br />
- <i>Internal structure representing an enumeration of a table. </i><br />
+<p>typedef struct <code>ANTLR3_HASH_BUCKET_struct</code> <code>ANTLR3_HASH_BUCKET</code><br/>
+ <i>Internal structure of a hash table bucket, which tracks all keys that hash to the same bucket. </i><br/>
+ typedef struct <code>ANTLR3_HASH_ENTRY_struct</code> <code>ANTLR3_HASH_ENTRY</code><br/>
+ <i>Internal structure representing an element in a hash bucket. </i><br/>
+ typedef struct <code>ANTLR3_HASH_ENUM_struct</code> <code>ANTLR3_HASH_ENUM</code><br/>
+ <i>Internal structure representing an enumeration of a table. </i><br/>
  typedef struct <code>ANTLR3_HASH_KEY_struct</code> <code>ANTLR3_HASH_KEY</code> </p>
-<p> typedef struct <code>ANTLR3_HASH_TABLE_struct</code> <code>ANTLR3_HASH_TABLE</code><br />
- <i>Structure that tracks a hash table. </i><br />
- typedef struct <code>ANTLR3_INT_TRIE_struct</code> <code>ANTLR3_INT_TRIE</code><br />
- <i>Structure that defines an ANTLR3_INT_TRIE. </i><br />
- typedef struct <code>ANTLR3_INT_TRIE_NODE_struct</code> <code>ANTLR3_INT_TRIE_NODE</code><br />
- <i>Structure that defines an element/node in an ANTLR3_INT_TRIE. </i><br />
- typedef struct <code>ANTLR3_LIST_struct</code> <code>ANTLR3_LIST</code><br />
- <i>Structure that represents a LIST collection. </i><br />
- typedef struct <code>ANTLR3_STACK_struct</code> <code>ANTLR3_STACK</code><br />
- <i>Structure that represents a Stack collection. </i><br />
- typedef struct <code>ANTLR3_TOPO_struct</code> <code>ANTLR3_TOPO</code><br />
- <i>A topological sort system that given a set of dependencies of a node m on node n, can sort them in dependency order. </i><br />
- typedef struct <code>ANTLR3_TRIE_ENTRY_struct</code> <code>ANTLR3_TRIE_ENTRY</code><br />
- <i>Structure that holds the payload entry in an ANTLR3_INT_TRIE or ANTLR3_STRING_TRIE. </i><br />
+<p> typedef struct <code>ANTLR3_HASH_TABLE_struct</code> <code>ANTLR3_HASH_TABLE</code><br/>
+ <i>Structure that tracks a hash table. </i><br/>
+ typedef struct <code>ANTLR3_INT_TRIE_struct</code> <code>ANTLR3_INT_TRIE</code><br/>
+ <i>Structure that defines an ANTLR3_INT_TRIE. </i><br/>
+ typedef struct <code>ANTLR3_INT_TRIE_NODE_struct</code> <code>ANTLR3_INT_TRIE_NODE</code><br/>
+ <i>Structure that defines an element/node in an ANTLR3_INT_TRIE. </i><br/>
+ typedef struct <code>ANTLR3_LIST_struct</code> <code>ANTLR3_LIST</code><br/>
+ <i>Structure that represents a LIST collection. </i><br/>
+ typedef struct <code>ANTLR3_STACK_struct</code> <code>ANTLR3_STACK</code><br/>
+ <i>Structure that represents a Stack collection. </i><br/>
+ typedef struct <code>ANTLR3_TOPO_struct</code> <code>ANTLR3_TOPO</code><br/>
+ <i>A topological sort system that given a set of dependencies of a node m on node n, can sort them in dependency order. </i><br/>
+ typedef struct <code>ANTLR3_TRIE_ENTRY_struct</code> <code>ANTLR3_TRIE_ENTRY</code><br/>
+ <i>Structure that holds the payload entry in an ANTLR3_INT_TRIE or ANTLR3_STRING_TRIE. </i><br/>
  typedef struct <code>ANTLR3_VECTOR_struct</code> <code>ANTLR3_VECTOR</code> </p>
 <p> typedef struct <code>ANTLR3_VECTOR_ELEMENT_struct</code> <code>ANTLR3_VECTOR_ELEMENT</code> </p>
-<p> typedef struct <code>ANTLR3_VECTOR_FACTORY_struct</code> <code>ANTLR3_VECTOR_FACTORY</code><br />
- <i>Structure that tracks vectors in a vector and auto deletes the vectors in the vector factory when closed. </i><br />
+<p> typedef struct <code>ANTLR3_VECTOR_FACTORY_struct</code> <code>ANTLR3_VECTOR_FACTORY</code><br/>
+ <i>Structure that tracks vectors in a vector and auto deletes the vectors in the vector factory when closed. </i><br/>
  typedef struct <code>ANTLR3_HASH_KEY_struct</code> * <code>pANTLR3_HASH_KEY</code> </p>
 <p> typedef struct <code>ANTLR3_INT_TRIE_NODE_struct</code> * <code>pANTLR3_INT_TRIE_NODE</code> </p>
 <p> typedef struct <code>ANTLR3_TRIE_ENTRY_struct</code> * <code>pANTLR3_TRIE_ENTRY</code> </p>

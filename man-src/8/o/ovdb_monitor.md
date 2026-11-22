@@ -14,9 +14,9 @@ Use <tt>&quot;ovdb_init&quot;</tt> to start ovdb_monitor
 
 <h2>Description</h2>
 
-When started (by <tt>&quot;ovdb_init&quot;</tt>), <tt>&quot;ovdb_monitor&quot;</tt> forks three processes that perform routine database maintenance tasks. These are: transaction checkpointing, deadlock detection, and transaction log removal. The process <font SIZE="-1">ID</font> of the parent is written to <i>pathrun/ovdb_monitor.pid</i>. This <font SIZE="-1">PID</font> is used by other <font SIZE="-1">INN</font> commands to verify that ovdb_monitor is running. 
+When started (by <tt>&quot;ovdb_init&quot;</tt>), <tt>&quot;ovdb_monitor&quot;</tt> forks three processes that perform routine database maintenance tasks. These are: transaction checkpointing, deadlock detection, and transaction log removal. The process ID of the parent is written to <i>pathrun/ovdb_monitor.pid</i>. This PID is used by other INN commands to verify that ovdb_monitor is running. 
 
- To shut down ovdb_monitor, send a <font SIZE="-1">TERM</font> signal to the process <font SIZE="-1">ID</font> in <i>pathrun/ovdb_monitor.pid</i> . The parent process will shut down the three children and wait for their exit before exiting itself.
+ To shut down ovdb_monitor, send a TERM signal to the process ID in <i>pathrun/ovdb_monitor.pid</i> . The parent process will shut down the three children and wait for their exit before exiting itself.
 
 <h2>History</h2>
 

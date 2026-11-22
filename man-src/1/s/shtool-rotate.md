@@ -23,7 +23,7 @@ description: "shtool rotate – GNU shtool log file rotation"
 <dt><code>-t</code>, <code>&#8211;trace</code></dt>
 <dd> Enable the output of the essential shell commands which are executed.</dd>
 <dt><code>-f</code>, <code>&#8211;force</code></dt>
-<dd> Force silent creation of archive directory if it does not exists. Also skip missing intermediate logfiles in the rotation step. Default is to exit with error in both cases. <font SIZE="-1">FIXME</font></dd>
+<dd> Force silent creation of archive directory if it does not exists. Also skip missing intermediate logfiles in the rotation step. Default is to exit with error in both cases. FIXME</dd>
 <dt><code>-n</code>, <code>&#8211;num-files</code> <i>count</i></dt>
 <dd> Create <i>count</i> archive files. Default is 10.</dd>
 <dt><code>-s</code>, <code>&#8211;size</code> <i>size</i></dt>
@@ -63,6 +63,6 @@ description: "shtool rotate – GNU shtool log file rotation"
  apachectl graceful
 </pre>
 <h2>HISTORY</h2>
-<p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>rotate</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 2001 for <font SIZE="-1"><code>GNU</code></font><code> shtool</code>. Its development was prompted by the need to have a flexible logfile rotation facility in the <code>OpenPKG</code> project.</p>
+<p> The <code>GNU</code><code> shtool</code> <code>rotate</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 2001 for <code>GNU</code><code> shtool</code>. Its development was prompted by the need to have a flexible logfile rotation facility in the <code>OpenPKG</code> project.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <font SIZE="-1">BSD</font> <i>newsyslog</i>(8). </p>
+<p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), BSD <i>newsyslog</i>(8). </p>

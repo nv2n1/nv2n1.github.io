@@ -13,26 +13,26 @@ description: "ANTLR3_STRING_FACTORY_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3string.h">antlr3string.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> void(* <code>close</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory)<br />
- <i>Pointer to function that closes the factory. </i><br />
- void(* <code>destroy</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>pANTLR3_STRING</code> string)<br />
- <i>Pointer to function that deletes the string altogether. </i><br />
+<p> void(* <code>close</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory)<br/>
+ <i>Pointer to function that closes the factory. </i><br/>
+ void(* <code>destroy</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>pANTLR3_STRING</code> string)<br/>
+ <i>Pointer to function that deletes the string altogether. </i><br/>
  <code>ANTLR3_UINT32</code> <code>index</code> </p>
-<p> <code>pANTLR3_STRING</code>(* <code>newPtr</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>pANTLR3_UINT8</code> string, <code>ANTLR3_UINT32</code> size)<br />
- <i>Pointer to function that manufactures a string from a given pointer and length. </i><br />
- <code>pANTLR3_STRING</code>(* <code>newPtr8</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>pANTLR3_UINT8</code> string, <code>ANTLR3_UINT32</code> size)<br />
- <i>Pointer to function that manufactures a string from a given pointer and length. </i><br />
- <code>pANTLR3_STRING</code>(* <code>newRaw</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory)<br />
- <i>Pointer to function that manufactures an empty string. </i><br />
- <code>pANTLR3_STRING</code>(* <code>newSize</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>ANTLR3_UINT32</code> size)<br />
- <i>Pointer to function that manufactures a raw string with no text in it but space for size characters. </i><br />
- <code>pANTLR3_STRING</code>(* <code>newStr</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>pANTLR3_UINT8</code> string)<br />
- <i>Pointer to function that manufactures a string from a given pointer and works out the length. </i><br />
- <code>pANTLR3_STRING</code>(* <code>newStr8</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>pANTLR3_UINT8</code> string)<br />
- <i>Pointer to function that manufactures a string from a given pointer and length. </i><br />
- <code>pANTLR3_STRING</code>(* <code>printable</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>pANTLR3_STRING</code> string)<br />
- <i>Pointer to function that returns a copy of the string in printable form without any control characters in it. </i><br />
- <code>pANTLR3_VECTOR</code> <code>strings</code><br />
+<p> <code>pANTLR3_STRING</code>(* <code>newPtr</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>pANTLR3_UINT8</code> string, <code>ANTLR3_UINT32</code> size)<br/>
+ <i>Pointer to function that manufactures a string from a given pointer and length. </i><br/>
+ <code>pANTLR3_STRING</code>(* <code>newPtr8</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>pANTLR3_UINT8</code> string, <code>ANTLR3_UINT32</code> size)<br/>
+ <i>Pointer to function that manufactures a string from a given pointer and length. </i><br/>
+ <code>pANTLR3_STRING</code>(* <code>newRaw</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory)<br/>
+ <i>Pointer to function that manufactures an empty string. </i><br/>
+ <code>pANTLR3_STRING</code>(* <code>newSize</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>ANTLR3_UINT32</code> size)<br/>
+ <i>Pointer to function that manufactures a raw string with no text in it but space for size characters. </i><br/>
+ <code>pANTLR3_STRING</code>(* <code>newStr</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>pANTLR3_UINT8</code> string)<br/>
+ <i>Pointer to function that manufactures a string from a given pointer and works out the length. </i><br/>
+ <code>pANTLR3_STRING</code>(* <code>newStr8</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>pANTLR3_UINT8</code> string)<br/>
+ <i>Pointer to function that manufactures a string from a given pointer and length. </i><br/>
+ <code>pANTLR3_STRING</code>(* <code>printable</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory, <code>pANTLR3_STRING</code> string)<br/>
+ <i>Pointer to function that returns a copy of the string in printable form without any control characters in it. </i><br/>
+ <code>pANTLR3_VECTOR</code> <code>strings</code><br/>
  <i>List of all the strings that have been allocated by the factory. </i></p>
 <h2>Detailed Description</h2>
 <p> Definition of the string factory interface, which creates and tracks strings for you of various shapes and sizes.</p>

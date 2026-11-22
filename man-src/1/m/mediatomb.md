@@ -84,7 +84,7 @@ description: "mediatomb – UPnP MediaServer"
 <p> <code>Sergey Bostandzhyan</code> </p>
 <p> <code>Leonhard Wimmer</code></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2005 Gena Batsyan, Sergey Bostandzhyan<br />
+<p> Copyright &#169; 2005 Gena Batsyan, Sergey Bostandzhyan<br/>
  Copyright &#169; 2006-2008 Gena Batsyan, Sergey Bostandzhyan, Leonhard Wimmer </p>
 <p> This manual page is part of MediaTomb. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License version 2 as published by the Free Software Foundation. </p>

@@ -10,17 +10,17 @@ description: "pnmhisteq – histogram equalise a portable anymap"
 
 <p> pnmhisteq &#8211; histogram equalise a portable anymap </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pnmhisteq</code><br />
+<p> <code>pnmhisteq</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-gray</code>] [<code>-rmap</code> <i>pgmfile</i>] [<code>-wmap</code> <i>pgmfile</i>] [<code>-verbose</code>] [<i>pnmfile</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pnmhisteq</code> increases the contrast of a portable graymap or pixmap through the technique of <i>histogram equalisation</i>[1]. A histogram of the luminance of pixels in the map is computed, from which a transfer function is calculated which spreads out intensity levels around histogram peaks and compresses them at troughs. This has the effect of using the available levels of intensity more efficiently and thereby increases the detail visible in the image. </p>
 <p> Mathematically, if <i>N[i]</i> is the number of pixels of luminosity <i>i</i> in the image and <i>T</i> is the total number of pixels, luminosity <i>j</i> is replaced by: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;j<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8212;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;N[i]&nbsp;/&nbsp;T<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8212;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;j<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8212;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;N[i]&nbsp;/&nbsp;T<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8212;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;i=0 </p>
 <p> If you&#8217;re processing a related set of images, for example frames of an animation, it&#8217;s generally best to apply the same intensity map to every frame, since otherwise you&#8217;ll get distracting frame-to-frame changes in the brightness of objects. <code>pnmhisteq</code>&#8216;s <code>-wmap</code> option allows you to save, as a portable graymap, the luminosity map computed from an image (usually a composite of the images you intend to process created with <code>pnmcat</code>). Then, you can subsequently process each of the individual images using the luminosity map saved in the file, supplied with the <code>-rmap</code> option.</p>
 <h2>OPTIONS</h2>
@@ -44,7 +44,7 @@ description: "pnmhisteq – histogram equalise a portable anymap"
 <dt>[1]</dt>
 <dd> Russ, John C. The Image Processing Handbook. Boca Raton: CRC Press, 1992. Pages 105-110.</dd></dl>
 <h2>AUTHOR</h2>
-<p> <center> Copyright (C) 1995 by John Walker (kelvin [at] fourmilab.ch).<br />
- WWW home page: <a rel="nofollow" href="http://www.fourmilab.ch/">http://www.fourmilab.ch/</a><br />
+<p> <center> Copyright (C) 1995 by John Walker (kelvin [at] fourmilab.ch).<br/>
+ WWW home page: <a rel="nofollow" href="http://www.fourmilab.ch/">http://www.fourmilab.ch/</a><br/>
  </center> </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, without any conditions or restrictions. This software is provided &#8220;as is&#8221; without express or implied warranty. </p>

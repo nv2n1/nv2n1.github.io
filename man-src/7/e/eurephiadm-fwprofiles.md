@@ -9,8 +9,8 @@ description: "eurephiadm fwprofiles – Configuring eurephia firewall profiles"
 
 <p>eurephiadm fwprofiles &#8211; Configuring eurephia firewall profiles</p>
 <h2>Synopsis</h2>
-<p><code>eurephiadm fwprofiles</code> \-\-list|\-l [\-v|\-\-verbose] [\-a|\-\-accessprofile &lt;acc. ID&gt;] [\-f|\-\-fw-destination &lt;name&gt;] [\-i|\-\-uid &lt;user ID&gt;] [\-n|\-\-username &lt;username&gt;] [\-c|\-\-certid &lt;cert ID&gt;] [\-e|\-\-email &lt;e-mail address&gt;] [\-d|\-\-digest &lt;certificate SHA1 digest&gt;]<br />
- <code>eurephiadm fwprofiles</code> \-\-add|\-A [\-d|\-\-description &lt;Description&gt;] [\-f|\-\-fw-destination &lt;name&gt;]<br />
+<p><code>eurephiadm fwprofiles</code> \-\-list|\-l [\-v|\-\-verbose] [\-a|\-\-accessprofile &lt;acc. ID&gt;] [\-f|\-\-fw-destination &lt;name&gt;] [\-i|\-\-uid &lt;user ID&gt;] [\-n|\-\-username &lt;username&gt;] [\-c|\-\-certid &lt;cert ID&gt;] [\-e|\-\-email &lt;e-mail address&gt;] [\-d|\-\-digest &lt;certificate SHA1 digest&gt;]<br/>
+ <code>eurephiadm fwprofiles</code> \-\-add|\-A [\-d|\-\-description &lt;Description&gt;] [\-f|\-\-fw-destination &lt;name&gt;]<br/>
  <code>eurephiadm fwprofiles</code> \-\-delete|\-D [\-a|\-\-accessprofile &lt;acc. ID&gt;] [\-f|\-\-fw-destination &lt;name&gt;]</p>
 <h2>Description</h2>
 <p>The eurephia plug-in can take advantage of the OS firewall to give a fine grained access control of each OpenVPN client. The preconfigured firewall chains available to eurephia needs to be defined using this eurephiadm command. When the firewall profiles are defined here, they can be assigned to the different user accesses you have enabled.</p>
@@ -18,13 +18,13 @@ description: "eurephiadm fwprofiles – Configuring eurephia firewall profiles"
 <p>Available modes for the fwprofiles command are:</p>
 <dl>
 <dt><code>-A | &#8211;add</code></dt>
-<dd>[-d|&#8211;description &lt;Description&gt;] [-f|&#8211;fw-destination &lt;name&gt;]<br />
+<dd>[-d|&#8211;description &lt;Description&gt;] [-f|&#8211;fw-destination &lt;name&gt;]<br/>
  Add a new firewall profile. Both <code>&#8211;description</code> and <code>&#8211;fw-destination</code> are required. The <code>&#8211;description</code> is just to give a human readable description of the firewall profile name and is only used in the different reports available in <code>eurephiadm</code>.</dd>
 <dt><code>-D | &#8211;delete</code></dt>
-<dd>[-a|&#8211;accessprofile &lt;acc. ID&gt;] [-f|&#8211;fw-destination &lt;name&gt;]<br />
+<dd>[-a|&#8211;accessprofile &lt;acc. ID&gt;] [-f|&#8211;fw-destination &lt;name&gt;]<br/>
  Delete a firewall profile. Either <code>&#8211;accessprofile</code> or <code>&#8211;fw-destination</code> must be provided.</dd>
 <dt><code>-l | &#8211;list</code></dt>
-<dd>[-v|&#8211;verbose] [-a|&#8211;accessprofile &lt;acc. ID&gt;] [-f|&#8211;fw-destination &lt;name&gt;] [-i|&#8211;uid &lt;user ID&gt;] [-n|&#8211;username &lt;username&gt;] [-c|&#8211;certid &lt;cert ID&gt;] [-e|&#8211;email &lt;e-mail address&gt;] [-d|&#8211;digest &lt;certificate SHA1 digest&gt;]<br />
+<dd>[-v|&#8211;verbose] [-a|&#8211;accessprofile &lt;acc. ID&gt;] [-f|&#8211;fw-destination &lt;name&gt;] [-i|&#8211;uid &lt;user ID&gt;] [-n|&#8211;username &lt;username&gt;] [-c|&#8211;certid &lt;cert ID&gt;] [-e|&#8211;email &lt;e-mail address&gt;] [-d|&#8211;digest &lt;certificate SHA1 digest&gt;]<br/>
  List available firewall profiles. Without any arguments, a simple overview over all registered firewall profiles. If the <code>&#8211;verbose</code> argument is given, the list will be more comprehensive.</dd>
 <dd>The rest of the arguments are filters which is used to reduce the length of the list. Multiple filters may be added, but they will only work as additional &quot;AND&quot; argument in the query.</dd>
 <dt><code>-h | &#8211;help</code></dt>

@@ -9,8 +9,8 @@ description: "rpc.statd – NSM service daemon"
 
 <p>rpc.statd &#8211; NSM service daemon</p>
 <h2>Synopsis</h2>
-<p><code>rpc.statd [-dh?FLNvV] [-H </code><i>prog</i><code>] [-n </code><i>my-name</i><code>] [-o </code><i>outgoing-port</i><code>]</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[-p </code><i>listener-port</i><code>] [-P </code><i>path</i><code>]</code><br />
+<p><code>rpc.statd [-dh?FLNvV] [-H </code><i>prog</i><code>] [-n </code><i>my-name</i><code>] [-o </code><i>outgoing-port</i><code>]</code><br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[-p </code><i>listener-port</i><code>] [-P </code><i>path</i><code>]</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[&#8211;nlm-port </code><i>port</i><code>] [&#8211;nlm-udp-port </code><i>port</i><code>]</code></p>
 <h2>Description</h2>
 <p>File locks are not part of persistent file system state. Lock state is thus lost when a host reboots. </p>
@@ -104,13 +104,13 @@ description: "rpc.statd – NSM service daemon"
 <dd>network transport capability database</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sm-notify/">sm-notify</a></code>(8), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code>rpc.nfsd</code>(8), <code><a href="/docs/linux/man/8-rpcbind/">rpcbind</a></code>(8), <code><a href="/docs/linux/man/8-tcpd/">tcpd</a></code>(8), <code><a href="/docs/linux/man/5-hosts_access/">hosts_access</a></code>(5), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/5-netconfig/">netconfig</a></code>(5) </p>
-<p> RFC 1094 &#8211; &quot;NFS: Network File System Protocol Specification&quot;<br />
- RFC 1813 &#8211; &quot;NFS Version 3 Protocol Specification&quot;<br />
+<p> RFC 1094 &#8211; &quot;NFS: Network File System Protocol Specification&quot;<br/>
+ RFC 1813 &#8211; &quot;NFS Version 3 Protocol Specification&quot;<br/>
  OpenGroup Protocols for Interworking: XNFS, Version 3W &#8211; Chapter 11</p>
 <h2>Authors</h2>
-<p>Jeff Uphoff &lt;juphoff [at] users.sourceforge.net&gt;<br />
- Olaf Kirch &lt;okir [at] monad.swb.de&gt;<br />
- H.J. Lu &lt;hjl [at] gnu.org&gt;<br />
- Lon Hohberger &lt;hohberger [at] missioncriticallinux.com&gt;<br />
- Paul Clements &lt;paul.clements [at] steeleye.com&gt;<br />
+<p>Jeff Uphoff &lt;juphoff [at] users.sourceforge.net&gt;<br/>
+ Olaf Kirch &lt;okir [at] monad.swb.de&gt;<br/>
+ H.J. Lu &lt;hjl [at] gnu.org&gt;<br/>
+ Lon Hohberger &lt;hohberger [at] missioncriticallinux.com&gt;<br/>
+ Paul Clements &lt;paul.clements [at] steeleye.com&gt;<br/>
  Chuck Lever &lt;chuck.lever [at] oracle.com&gt;</p>

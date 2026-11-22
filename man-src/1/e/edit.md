@@ -16,9 +16,9 @@ description: "run-mailcap, view, see, edit, compose, print – execute programs 
 <p> <code>run-mailcap</code> (or any of its aliases) will use the given action to process each mime-type/file in turn. Each file is specified as its mime-type, its encoding (e.g. compression), and filename together, separated by colons. If the mime-type is omitted, an attempt to determine the type is made by trying to match the file&#8217;s extension with those in the <i>mime.types</i> files. If no mime-type is found, a last attempt will be done by running the <code>file</code> command, if available. If the encoding is omitted, it will also be determined from the file&#8217;s extensions. Currently supported encodings are <code>gzip</code> (.gz), <code>bzip2</code> (.bz2), <code>xz</code> (.xz), and <code>compress</code> (.Z). A filename of &quot;-&quot; can be used to mean &quot;standard input&quot;, but then a mime-type <code>must</code> be specified. </p>
 <p> Both the user&#8217;s files (~/.mailcap; ~/.mime.types) and the system files (/etc/mailcap; /etc/mime.types) are searched in turn for information.</p>
 <h3>EXAMPLES</h3>
-<p>&nbsp;<wbr>&nbsp;see picture.jpg<br />
-&nbsp;<wbr>&nbsp;print output.ps.gz<br />
-&nbsp;<wbr>&nbsp;compose text/html:index.htm<br />
+<p>&nbsp;<wbr>&nbsp;see picture.jpg<br/>
+&nbsp;<wbr>&nbsp;print output.ps.gz<br/>
+&nbsp;<wbr>&nbsp;compose text/html:index.htm<br/>
 &nbsp;<wbr>&nbsp;extract-mail-attachment msg.txt | see image/tiff:gzip:-</p>
 <h3>OPTIONS</h3>
 <p> All options are in the form &#8211;&lt;opt&gt;=&lt;value&gt;.</p>

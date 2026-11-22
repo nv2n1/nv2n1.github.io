@@ -12,9 +12,9 @@ description: "uncrustify – C, C++, C#, D, Java and Pawn source code beautifier
 <h2>SYNOPSIS</h2>
 <p> <code>uncrustify </code>[<i>OPTIONS</i>] [<i>FILES</i>] </p>
 <h2>DESCRIPTION</h2>
-<p> If no input files are specified, the input is read from stdin.<br />
+<p> If no input files are specified, the input is read from stdin.<br/>
  If reading from stdin, you should specify the language using -l. </p>
-<p> If -F is used or files are specified on the command line, the output filename is <i>PFX</i> + &quot;/&quot; + filename + <i>SFX</i>.<br />
+<p> If -F is used or files are specified on the command line, the output filename is <i>PFX</i> + &quot;/&quot; + filename + <i>SFX</i>.<br/>
  Unless, of course, the options <code>&#8211;replace</code> or <code>&#8211;no-backup</code> are used. </p>
 <p> When reading from stdin or doing a single file via the &#8216;-f&#8217; option, the output is dumped to stdout, unless redirected with -o FILE. </p>
 <p> Errors are always dumped to stderr </p>
@@ -22,33 +22,33 @@ description: "uncrustify – C, C++, C#, D, Java and Pawn source code beautifier
 <h3>Basic Options:</h3>
 <dl>
 <dt><code>-c</code><i> CFG</dt>
-<dd> Use the config file CFG</i>.<br />
+<dd> Use the config file CFG</i>.<br/>
  If not specified, uncrustify will use <code>$UNCRUSTIFY_CONFIG</code> or <code>$HOME/.uncrustify.cfg</code>.</dd>
 <dt><code>-f</code><i> FILE</dt>
 <dd> Process the single file FILE</i>, sending output to stdout or the file specified with <code>-o</code>.</dd>
 <dt><code>-o</code><i> FILE</dt>
-<dd> Redirect output to FILE</i>.<br />
+<dd> Redirect output to FILE</i>.<br/>
  Use with <code>-f</code>, <code>&#8211;update-config</code>, <code>&#8211;update-config-with-doc</code>, <code>&#8211;universalindent</code>.</dd>
 <dt><code>&#8211;check</code></dt>
 <dd> Do not output the new text, instead verify that nothing changes when the file(s) are processed. The status of every file is printed to stderr. The exit code is EXIT_SUCCESS if there were no changes, EXIT_FAILURE otherwise.</dd>
 <dt><code>-F</code><i> FILE</dt>
-<dd> Read files to process from FILE</i>, one filename per line. If <i>FILE</i> is &#8216;-&#8216; then read filenames from standard input instead of a file.<br />
- You can create this file using something like &#8216;<code>find . -name &quot;*.c&quot; &gt; list.txt</code>&#8216;.<br />
+<dd> Read files to process from FILE</i>, one filename per line. If <i>FILE</i> is &#8216;-&#8216; then read filenames from standard input instead of a file.<br/>
+ You can create this file using something like &#8216;<code>find . -name &quot;*.c&quot; &gt; list.txt</code>&#8216;.<br/>
  This cannot be combined with <code>-f</code>.</dd>
 <dt><code>&#8211;prefix</code><i> PFX</dt>
-<dd> Prepend PFX</i> to the output filename path.<br />
+<dd> Prepend PFX</i> to the output filename path.<br/>
  This cannot be combined with <code>-f</code>, <code>&#8211;replace</code>, or <code>&#8211;no-backup</code>.</dd>
 <dt><code>&#8211;suffix</code><i> SFX</dt>
-<dd> Append SFX</i> to the output filename.<br />
- The default is &#8216;.uncrustify&#8217; if neither <i>SFX</i> or <i>PFX</i> are specified.<br />
+<dd> Append SFX</i> to the output filename.<br/>
+ The default is &#8216;.uncrustify&#8217; if neither <i>SFX</i> or <i>PFX</i> are specified.<br/>
  This cannot be combined with <code>-f</code>, <code>&#8211;replace</code>, or <code>&#8211;no-backup</code>.</dd>
 <dt><code>&#8211;frag</code><i></dt>
 <dd> Assume the input is a code fragment and the first line is properly indented.</dd>
 <dt></i><code>&#8211;replace</code></dt>
-<dd> Replace source files (creates a backup).<br />
+<dd> Replace source files (creates a backup).<br/>
  This cannot be combined with <code>-f</code>, <code>&#8211;prefix</code>, or <code>&#8211;suffix</code>.</dd>
 <dt><code>&#8211;no-backup</code></dt>
-<dd> Replace files, no backup. Useful if files are under source control<br />
+<dd> Replace files, no backup. Useful if files are under source control<br/>
  This cannot be combined with <code>-f</code>, <code>&#8211;prefix</code>, or <code>&#8211;suffix</code>.</dd>
 <dt><code>&#8211;mtime</code></dt>
 <dd> Preserve mtime on replaced files.</dd>
@@ -93,7 +93,7 @@ description: "uncrustify – C, C++, C#, D, Java and Pawn source code beautifier
 <dt>Process a file, output to stdout.</dt>
 <dd> uncrustify -c my.cfg -d foo.d</dd>
 <dt>Process a source tree, output to a different tree.</dt>
-<dd> find src -name &quot;*.[ch]&quot; &gt; files.txt<br />
+<dd> find src -name &quot;*.[ch]&quot; &gt; files.txt<br/>
  uncrustify -c my.cfg -F files.txt &#8211;prefix out</dd>
 <dt>Process a source tree in-place.</dt>
 <dd> uncrustify -c my.cfg &#8211;no-backup $(find src -name &quot;*.[ch]&quot;) </dd>
@@ -105,7 +105,7 @@ description: "uncrustify – C, C++, C#, D, Java and Pawn source code beautifier
 <h2>REPORTING BUGS</h2>
 <p> Use the issue tracker at &lt;<a rel="nofollow" href="http://sourceforge.net/projects/uncrustify">http://sourceforge.net/projects/uncrustify</a>&gt; </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2006-2014 Ben Gardner<br />
+<p> Copyright (C) 2006-2014 Ben Gardner<br/>
  Copyright (C) 2015, 2016 Guy Maurel </p>
 <h2>LICENSE</h2>
 <p> GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt; </p>

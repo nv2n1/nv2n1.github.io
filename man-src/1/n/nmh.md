@@ -120,7 +120,7 @@ description: "nmh – new MH message system"
 ^Path:~^To determine the user's nmh directory
 </pre>
 <h2>BUGS</h2>
-<p> If problems are encountered with an <code>nmh</code> program, the problems should be reported to the local maintainers of <code>nmh</code>. When doing this, the name of the program should be reported, along with the version information for the program.<br />
+<p> If problems are encountered with an <code>nmh</code> program, the problems should be reported to the local maintainers of <code>nmh</code>. When doing this, the name of the program should be reported, along with the version information for the program.<br/>
  To find out what version of an <code>nmh</code> program is being run, invoke the program with the <code>-version</code> switch. This information includes the version of <code>nmh</code>, the host it was generated on, and the date the program was loaded. </p>
 <p> Send bug reports and suggestions to <i>nmh-workers [at] nongnu.org</i>.</p>
 <h2>SEE ALSO</h2>

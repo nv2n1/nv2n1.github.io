@@ -34,7 +34,7 @@ description: "genericups – Driver for contact-closure UPS equipment"
 <dd>Optional. The driver will sleep for this many seconds after setting the shutdown signal. This is necessary for some hardware which requires a sustained level to activate the shutdown sequence. </dd>
 <p> The default behavior of the driver is to exit immediately. If this doesn&#8217;t reliably trigger a shutdown in your UPS hardware, use this setting to give it more time to react.</dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> very large values for sdtime may create warnings from upsdrvctl if it gets tired of waiting for the driver to return. </p>
 </dl>
 <h2>Custom Configurations</h2>

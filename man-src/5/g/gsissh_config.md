@@ -9,7 +9,7 @@ description: "ssh_config – OpenSSH SSH client configuration files"
 
 <p><code>ssh_config</code> &#8211; OpenSSH SSH client configuration files</p>
 <h2>Synopsis</h2>
-<p><code>~/.ssh/config</code><br />
+<p><code>~/.ssh/config</code><br/>
 <code>/etc/gsissh/ssh_config</code></p>
 <h2>Description</h2>
 <p><a href="/docs/linux/man/1-ssh/">ssh</a>(1) obtains configuration data from the following sources in the following order:  </p>

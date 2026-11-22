@@ -16,32 +16,32 @@ int tux(unsigned int action, user_req_t *req);
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> The <code>tux()</code> system call calls the kernel to perform an <i>action</i> on behalf of the currently executing user-space TUX module. </p>
-<p> <i>action</i> can be one of:<br />
-enum tux_actions {<br />
-    TUX_ACTION_STARTUP = 1,<br />
-    TUX_ACTION_SHUTDOWN = 2,<br />
-    TUX_ACTION_STARTTHREAD = 3,<br />
-    TUX_ACTION_STOPTHREAD = 4,<br />
-    TUX_ACTION_EVENTLOOP = 5,<br />
-    TUX_ACTION_GET_OBJECT = 6,<br />
-    TUX_ACTION_SEND_OBJECT = 7,<br />
-    TUX_ACTION_READ_OBJECT = 8,<br />
-    TUX_ACTION_FINISH_REQ = 9,<br />
-    TUX_ACTION_FINISH_CLOSE_REQ = 10,<br />
-    TUX_ACTION_REGISTER_MODULE = 11,<br />
-    TUX_ACTION_UNREGISTER_MODULE = 12,<br />
-    TUX_ACTION_CURRENT_DATE = 13,<br />
-    TUX_ACTION_REGISTER_MIMETYPE = 14,<br />
-    TUX_ACTION_READ_HEADERS = 15,<br />
-    TUX_ACTION_POSTPONE_REQ = 16,<br />
-    TUX_ACTION_CONTINUE_REQ = 17,<br />
-    TUX_ACTION_REDIRECT_REQ = 18,<br />
-    TUX_ACTION_READ_POST_DATA = 19,<br />
-    TUX_ACTION_SEND_BUFFER = 20,<br />
-    TUX_ACTION_WATCH_PROXY_SOCKET = 21,<br />
-    TUX_ACTION_WAIT_PROXY_SOCKET = 22,<br />
-    TUX_ACTION_QUERY_VERSION = 23,<br />
-    MAX_TUX_ACTION<br />
+<p> <i>action</i> can be one of:<br/>
+enum tux_actions {<br/>
+    TUX_ACTION_STARTUP = 1,<br/>
+    TUX_ACTION_SHUTDOWN = 2,<br/>
+    TUX_ACTION_STARTTHREAD = 3,<br/>
+    TUX_ACTION_STOPTHREAD = 4,<br/>
+    TUX_ACTION_EVENTLOOP = 5,<br/>
+    TUX_ACTION_GET_OBJECT = 6,<br/>
+    TUX_ACTION_SEND_OBJECT = 7,<br/>
+    TUX_ACTION_READ_OBJECT = 8,<br/>
+    TUX_ACTION_FINISH_REQ = 9,<br/>
+    TUX_ACTION_FINISH_CLOSE_REQ = 10,<br/>
+    TUX_ACTION_REGISTER_MODULE = 11,<br/>
+    TUX_ACTION_UNREGISTER_MODULE = 12,<br/>
+    TUX_ACTION_CURRENT_DATE = 13,<br/>
+    TUX_ACTION_REGISTER_MIMETYPE = 14,<br/>
+    TUX_ACTION_READ_HEADERS = 15,<br/>
+    TUX_ACTION_POSTPONE_REQ = 16,<br/>
+    TUX_ACTION_CONTINUE_REQ = 17,<br/>
+    TUX_ACTION_REDIRECT_REQ = 18,<br/>
+    TUX_ACTION_READ_POST_DATA = 19,<br/>
+    TUX_ACTION_SEND_BUFFER = 20,<br/>
+    TUX_ACTION_WATCH_PROXY_SOCKET = 21,<br/>
+    TUX_ACTION_WAIT_PROXY_SOCKET = 22,<br/>
+    TUX_ACTION_QUERY_VERSION = 23,<br/>
+    MAX_TUX_ACTION<br/>
 };</p>
 <p> The first <i>action</i> values listed below are administrative and are normally used only in the tux program. </p>
 <p> TUX_ACTION_STARTUP starts the tux subsystem, and takes a NULL <i>req</i>. TODO: Only root can use TUX_ACTION_STARTUP. </p>
@@ -53,9 +53,9 @@ enum tux_actions {<br />
 <p> TUX_ACTION_UNREGISTER_MODULE Unregister a user-space module identified by the req-&gt;modulename string. Only registered modules can be unregistered. </p>
 <p> TUX_ACTION_CURRENT_DATE Set the current date string to req-&gt;new_date. The date string must be RFC 1123-compliant and increase monotonically. The tux daemon normally calls this once per second. </p>
 <p> TUX_ACTION_REGISTER_MIMETYPE Sets the extension req-&gt;objectname to map to mimetype req-&gt;object_addr. The tux daemon normally registers the mime types in /etc/tux.mime.types, but modules could conceivably create their own mimetype mappings. </p>
-<p> TUX_ACTION_QUERY_VERSION Return the major version, minor version, and patchlevel of the kernel TUX subsystem, encoded in the return value as<br />
- (TUX_MAJOR_VERSION &lt;&lt; 24) | (TUX_MINOR_VERSION &lt;&lt; 16) |<br />
-&nbsp;<wbr>TUX_PATCHLEVEL_VERSION<br />
+<p> TUX_ACTION_QUERY_VERSION Return the major version, minor version, and patchlevel of the kernel TUX subsystem, encoded in the return value as<br/>
+ (TUX_MAJOR_VERSION &lt;&lt; 24) | (TUX_MINOR_VERSION &lt;&lt; 16) |<br/>
+&nbsp;<wbr>TUX_PATCHLEVEL_VERSION<br/>
  If the system call sets errno to EINVAL, assume major version 2, minor version 1. </p>
 <p> The rest of the <i>action</i> values are used to respond to TUX events. The general architecture is that TUX&#8217;s event loop is invoked to catch HTTP events, and then responses are generated in response to those events. </p>
 <p> TUX_ACTION_EVENTLOOP invokes the TUX event loop&#8212;the TUX subsystem will either immediately return with a new request <i>req</i>, or will wait for new requests to arrive. </p>
@@ -76,80 +76,80 @@ enum tux_actions {<br />
 <p> TUX_ACTION_SEND_BUFFER is like TUX_ACTION_SEND_OBJECT except that it sends whatever is in the req-&gt;object_addr buffer. This can be used as a generic output buffer. </p>
 <p> TUX_ACTION_WATCH_PROXY_SOCKET sets up a non-TUX socket to be used with TUX_ACTION_WAIT_PROXY_SOCKET. The socket must be a network socket. The function is atomic. Repeated calls to this action will replace the previous proxy socket, so there is no need to deinitialize it. The socket file descriptor must be put into req-&gt;object_addr. </p>
 <p> TUX_ACTION_WAIT_PROXY_SOCKET postpones the current request until there are input packets on the socket that was set up via TUX_ACTION_WATCH_PROXY_SOCKET. The proxy socket has a keepalive timer running. The request will be resumed once there is input activity on the socket &#8211; the module can use nonblocking recv() on the socket to process input packets. </p>
-<p> user_req_t <i>req</i> is the request returned by the TUX subsystem. Defined fields depend on the version. For major version 2, they are:<br />
-typedef struct user_req_s {<br />
-    int version_major;<br />
-    int version_minor;<br />
-    int version_patch;<br />
-    int http_version;<br />
-    int http_method;<br />
-    int sock;<br />
-    int event;<br />
-    int thread_nr;<br />
-    void *id;<br />
-    void *priv;<br />
-    int http_status;<br />
-    int bytes_sent;<br />
-    char *object_addr;<br />
-    int module_index;<br />
-    char modulename[MAX_MODULENAME_LEN];<br />
-    unsigned int client_host;<br />
-    unsigned int objectlen;<br />
-    char query[MAX_URI_LEN];<br />
-    char objectname[MAX_URI_LEN];<br />
-    unsigned int cookies_len;<br />
-    char cookies[MAX_COOKIE_LEN];<br />
-    char content_type[MAX_FIELD_LEN];<br />
-    char user_agent[MAX_FIELD_LEN];<br />
-    char accept[MAX_FIELD_LEN];<br />
-    char accept_charset[MAX_FIELD_LEN];<br />
-    char accept_encoding[MAX_FIELD_LEN];<br />
-    char accept_language[MAX_FIELD_LEN];<br />
-    char cache_control[MAX_FIELD_LEN];<br />
-    char if_modified_since[MAX_FIELD_LEN];<br />
-    char negotiate[MAX_FIELD_LEN];<br />
-    char pragma[MAX_FIELD_LEN];<br />
-    char referer[MAX_FIELD_LEN];<br />
-    char *post_data;<br />
-    char new_date[DATE_LEN];<br />
-    int keep_alive;<br />
-} user_req_t;<br />
- For major version 3, they are:<br />
-typedef struct user_req_s {<br />
-    uint32_t version_major;<br />
-    uint32_t version_minor;<br />
-    uint32_t version_patch;<br />
-    uint32_t http_version;<br />
-    uint32_t http_method;<br />
-    uint32_t http_status;<br />
-    uint32_t sock;<br />
-    uint32_t event;<br />
-    uint32_t error;<br />
-    uint32_t thread_nr;<br />
-    uint32_t bytes_sent;<br />
-    uint32_t client_host;<br />
-    uint32_t objectlen;<br />
-    uint32_t module_index;<br />
-    uint32_t keep_alive;<br />
-    uint32_t cookies_len;<br />
-    uint64_t id;<br />
-    uint64_t priv;<br />
-    uint64_t object_addr;<br />
-    uint8_t query[MAX_URI_LEN];<br />
-    uint8_t objectname[MAX_URI_LEN];<br />
-    uint8_t cookies[MAX_COOKIE_LEN];<br />
-    uint8_t content_type[MAX_FIELD_LEN];<br />
-    uint8_t user_agent[MAX_FIELD_LEN];<br />
-    uint8_t accept[MAX_FIELD_LEN];<br />
-    uint8_t accept_charset[MAX_FIELD_LEN];<br />
-    uint8_t accept_encoding[MAX_FIELD_LEN];<br />
-    uint8_t accept_language[MAX_FIELD_LEN];<br />
-    uint8_t cache_control[MAX_FIELD_LEN];<br />
-    uint8_t if_modified_since[MAX_FIELD_LEN];<br />
-    uint8_t negotiate[MAX_FIELD_LEN];<br />
-    uint8_t pragma[MAX_FIELD_LEN];<br />
-    uint8_t referer[MAX_FIELD_LEN];<br />
-    uint8_t new_date[DATE_LEN];<br />
+<p> user_req_t <i>req</i> is the request returned by the TUX subsystem. Defined fields depend on the version. For major version 2, they are:<br/>
+typedef struct user_req_s {<br/>
+    int version_major;<br/>
+    int version_minor;<br/>
+    int version_patch;<br/>
+    int http_version;<br/>
+    int http_method;<br/>
+    int sock;<br/>
+    int event;<br/>
+    int thread_nr;<br/>
+    void *id;<br/>
+    void *priv;<br/>
+    int http_status;<br/>
+    int bytes_sent;<br/>
+    char *object_addr;<br/>
+    int module_index;<br/>
+    char modulename[MAX_MODULENAME_LEN];<br/>
+    unsigned int client_host;<br/>
+    unsigned int objectlen;<br/>
+    char query[MAX_URI_LEN];<br/>
+    char objectname[MAX_URI_LEN];<br/>
+    unsigned int cookies_len;<br/>
+    char cookies[MAX_COOKIE_LEN];<br/>
+    char content_type[MAX_FIELD_LEN];<br/>
+    char user_agent[MAX_FIELD_LEN];<br/>
+    char accept[MAX_FIELD_LEN];<br/>
+    char accept_charset[MAX_FIELD_LEN];<br/>
+    char accept_encoding[MAX_FIELD_LEN];<br/>
+    char accept_language[MAX_FIELD_LEN];<br/>
+    char cache_control[MAX_FIELD_LEN];<br/>
+    char if_modified_since[MAX_FIELD_LEN];<br/>
+    char negotiate[MAX_FIELD_LEN];<br/>
+    char pragma[MAX_FIELD_LEN];<br/>
+    char referer[MAX_FIELD_LEN];<br/>
+    char *post_data;<br/>
+    char new_date[DATE_LEN];<br/>
+    int keep_alive;<br/>
+} user_req_t;<br/>
+ For major version 3, they are:<br/>
+typedef struct user_req_s {<br/>
+    uint32_t version_major;<br/>
+    uint32_t version_minor;<br/>
+    uint32_t version_patch;<br/>
+    uint32_t http_version;<br/>
+    uint32_t http_method;<br/>
+    uint32_t http_status;<br/>
+    uint32_t sock;<br/>
+    uint32_t event;<br/>
+    uint32_t error;<br/>
+    uint32_t thread_nr;<br/>
+    uint32_t bytes_sent;<br/>
+    uint32_t client_host;<br/>
+    uint32_t objectlen;<br/>
+    uint32_t module_index;<br/>
+    uint32_t keep_alive;<br/>
+    uint32_t cookies_len;<br/>
+    uint64_t id;<br/>
+    uint64_t priv;<br/>
+    uint64_t object_addr;<br/>
+    uint8_t query[MAX_URI_LEN];<br/>
+    uint8_t objectname[MAX_URI_LEN];<br/>
+    uint8_t cookies[MAX_COOKIE_LEN];<br/>
+    uint8_t content_type[MAX_FIELD_LEN];<br/>
+    uint8_t user_agent[MAX_FIELD_LEN];<br/>
+    uint8_t accept[MAX_FIELD_LEN];<br/>
+    uint8_t accept_charset[MAX_FIELD_LEN];<br/>
+    uint8_t accept_encoding[MAX_FIELD_LEN];<br/>
+    uint8_t accept_language[MAX_FIELD_LEN];<br/>
+    uint8_t cache_control[MAX_FIELD_LEN];<br/>
+    uint8_t if_modified_since[MAX_FIELD_LEN];<br/>
+    uint8_t negotiate[MAX_FIELD_LEN];<br/>
+    uint8_t pragma[MAX_FIELD_LEN];<br/>
+    uint8_t referer[MAX_FIELD_LEN];<br/>
+    uint8_t new_date[DATE_LEN];<br/>
 } user_req_t;</p>
 <dl>
 <dt>version_major</dt>

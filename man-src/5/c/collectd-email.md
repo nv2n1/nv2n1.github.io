@@ -34,7 +34,7 @@ This plugin collects data indirectly by providing a UNIX-socket that external pr
 </dd><dt>&bull;
 </dt><dd>Spam score: 
  <pre> s:&lt;value&gt;</pre></dd><dt>&bull;
-</dt><dd>Successful spam checks (e.g. ``<font SIZE="-1">BAYES_99'', ``SUBJECT_DRUG_GAP_C'', ...</font>): 
+</dt><dd>Successful spam checks (e.g. ``BAYES_99'', ``SUBJECT_DRUG_GAP_C'', ...): 
  <pre> c:&lt;type1&gt;[,&lt;type2&gt;,...]</pre>Each line is limited to 256 characters (including the newline character). Longer lines will be ignored.</dd></dl>
 
 <h2>See Also</h2>

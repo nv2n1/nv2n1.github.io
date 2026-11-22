@@ -59,8 +59,8 @@ description: "sane-canon_dr – SANE backend for Canon DR-series scanners"
 <dl>
 <dd>Set the number of bytes in the data buffer to something other than the compiled-in default of 4MB. Large values may cause timeouts or hangs, small values may cause slow scans. </dd>
 <p> Note: The backend does not place an upper bound on this value, as some users required it to be quite large. Values above the default are not recommended, and may crash your OS or lockup your scsi card driver. You have been warned.</dl>
-<p> &quot;option vendor-name [string of text]&quot;<br />
- &quot;option model-name [string of text]&quot;<br />
+<p> &quot;option vendor-name [string of text]&quot;<br/>
+ &quot;option model-name [string of text]&quot;<br/>
  &quot;option version-name [string of text]&quot;</p>
 <dl>
 <dd>These options can be used collectively to override the values provided by the scanner, or to provide the values when the scanner cannot.</dd></dl>
@@ -74,23 +74,23 @@ description: "sane-canon_dr – SANE backend for Canon DR-series scanners"
 <h2>Environment</h2>
 <p>The backend uses a single environment variable, <code>SANE_DEBUG_CANON_DR</code>, which enables debugging output to stderr. Valid values are: </p>
 <dl>
-<dd>5 Errors<br />
- 10 Function trace<br />
- 15 Function detail<br />
- 20 Option commands<br />
- 25 SCSI/USB trace<br />
- 30 SCSI/USB detail<br />
+<dd>5 Errors<br/>
+ 10 Function trace<br/>
+ 15 Function detail<br/>
+ 20 Option commands<br/>
+ 25 SCSI/USB trace<br/>
+ 30 SCSI/USB detail<br/>
  35 Useless noise</dd></dl>
 <h2>Known Issues</h2>
 <p>This backend was entirely reverse engineered from usb traces of the proprietary driver. Various advanced features of the machines may not be enabled. Many machines have not been tested. Their protocol is unknown.</p>
 <h2>Credits</h2>
-<p>The various authors of the <code><a href="/docs/linux/man/5-sane-fujitsu/">sane-fujitsu</a></code>(5) backend provided useful code.<br />
- Yabarana Corp. <i><a rel="nofollow" href="http://www.yabarana.com">www.yabarana.com</a></i> provided significant funding.<br />
- EvriChart, Inc. <i><a rel="nofollow" href="http://www.evrichart.com">www.evrichart.com</a></i> provided funding and loaned equipment.<br />
- Canon, USA. <i><a rel="nofollow" href="http://www.usa.canon.com">www.usa.canon.com</a></i> loaned equipment.<br />
- HPrint <i>hprint.com.br</i> provided funding and testing for DR-2510 support.<br />
- Stone-IT <i><a rel="nofollow" href="http://www.stone-it.com">www.stone-it.com</a></i> provided funding for DR-2010 and DR-2050 support.<br />
- Gerhard Pfeffer provided access and testing for P-208 and P-215.<br />
+<p>The various authors of the <code><a href="/docs/linux/man/5-sane-fujitsu/">sane-fujitsu</a></code>(5) backend provided useful code.<br/>
+ Yabarana Corp. <i><a rel="nofollow" href="http://www.yabarana.com">www.yabarana.com</a></i> provided significant funding.<br/>
+ EvriChart, Inc. <i><a rel="nofollow" href="http://www.evrichart.com">www.evrichart.com</a></i> provided funding and loaned equipment.<br/>
+ Canon, USA. <i><a rel="nofollow" href="http://www.usa.canon.com">www.usa.canon.com</a></i> loaned equipment.<br/>
+ HPrint <i>hprint.com.br</i> provided funding and testing for DR-2510 support.<br/>
+ Stone-IT <i><a rel="nofollow" href="http://www.stone-it.com">www.stone-it.com</a></i> provided funding for DR-2010 and DR-2050 support.<br/>
+ Gerhard Pfeffer provided access and testing for P-208 and P-215.<br/>
  Special thanks to: Alejandro Imass, Andre Shimakawa, Martijn van Brummelen, Thanos Diacakis and Junren Shi for testing and feedback.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a>(5)</code> </p>

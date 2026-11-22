@@ -11,7 +11,7 @@ description: "upssched – Timer helper for scheduling events from upsmon"
 <h2>Synopsis</h2>
 <p><code>upssched</code></p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  <code>upssched</code> should be run from <code><a href="/docs/linux/man/8-upsmon/">upsmon</a></code>(8) via the NOTIFYCMD. You should never run it directly during normal operations. </dd>
 <h2>Description</h2>
 <p><code>upssched</code> was created to allow users to execute programs at times relative to events being monitored by <code><a href="/docs/linux/man/8-upsmon/">upsmon</a></code>(8). The original purpose was to allow for a shutdown to occur after some fixed period on battery, but there are other uses that are possible.</p>

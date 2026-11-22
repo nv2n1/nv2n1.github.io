@@ -10,7 +10,7 @@ description: "XkbGetControlsChanges – Updates a local copy of a keyboard descr
 <p>XkbGetControlsChanges &#8211; Updates a local copy of a keyboard description with the changes previously noted by one or more calls to XkbNoteControlsChanges </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dd>XkbGetControlsChanges <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbNameChangesPtr </code><i>changes</i><code>);</code><br />
+<dd>XkbGetControlsChanges <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbNameChangesPtr </code><i>changes</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -9,33 +9,33 @@ description: "Ecore URL Connection Functions – Utility functions that set up, 
 
 <p>Ecore URL Connection Functions &#8211; Utility functions that set up, use and shut down the Ecore URL Connection library. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_con_url_init</code> (void)<br />
- <i>Initialises the Ecore_Con_Url library. </i><br />
- EAPI int <code>ecore_con_url_shutdown</code> (void)<br />
- <i>Shuts down the Ecore_Con_Url library. </i><br />
- EAPI Ecore_Con_Url * <code>ecore_con_url_new</code> (const char *url)<br />
- <i>Creates and initializes a new Ecore_Con_Url. </i><br />
- EAPI void <code>ecore_con_url_destroy</code> (Ecore_Con_Url *url_con)<br />
- <i>Frees the Ecore_Con_Url. </i><br />
- EAPI int <code>ecore_con_url_url_set</code> (Ecore_Con_Url *url_con, const char *url)<br />
- <i>FIXME: To be documented. </i><br />
- EAPI void <code>ecore_con_url_data_set</code> (Ecore_Con_Url *url_con, void *data)<br />
- <i>FIXME: To be documented. </i><br />
- EAPI void * <code>ecore_con_url_data_get</code> (Ecore_Con_Url *url_con)<br />
- <i>FIXME: To be documented. </i><br />
- EAPI void <code>ecore_con_url_time</code> (Ecore_Con_Url *url_con, Ecore_Con_Url_Time condition, time_t tm)<br />
- <i>FIXME: To be documented. </i><br />
- EAPI void <code>ecore_con_url_fd_set</code> (Ecore_Con_Url *url_con, int fd)<br />
- <i>FIXME: To be documented. </i><br />
- EAPI int <code>ecore_con_url_received_bytes_get</code> (Ecore_Con_Url *url_con)<br />
- <i>FIXME: To be documented. </i><br />
- EAPI int <code>ecore_con_url_send</code> (Ecore_Con_Url *url_con, void *data, size_t length, char *content_type)<br />
- <i>FIXME: To be documented. </i><br />
- EAPI int <code>ecore_con_url_ftp_upload</code> (Ecore_Con_Url *url_con, char *filename, char *user, char *pass, char *upload_dir)<br />
- <i>Makes a FTP upload. </i><br />
- EAPI void <code>ecore_con_url_verbose_set</code> (Ecore_Con_Url *url_con, int verbose)<br />
- <i>Enable or disable libcurl verbose output, useful for debug. </i><br />
- EAPI void <code>ecore_con_url_ftp_use_epsv_set</code> (Ecore_Con_Url *url_con, int use_epsv)<br />
+<p>EAPI int <code>ecore_con_url_init</code> (void)<br/>
+ <i>Initialises the Ecore_Con_Url library. </i><br/>
+ EAPI int <code>ecore_con_url_shutdown</code> (void)<br/>
+ <i>Shuts down the Ecore_Con_Url library. </i><br/>
+ EAPI Ecore_Con_Url * <code>ecore_con_url_new</code> (const char *url)<br/>
+ <i>Creates and initializes a new Ecore_Con_Url. </i><br/>
+ EAPI void <code>ecore_con_url_destroy</code> (Ecore_Con_Url *url_con)<br/>
+ <i>Frees the Ecore_Con_Url. </i><br/>
+ EAPI int <code>ecore_con_url_url_set</code> (Ecore_Con_Url *url_con, const char *url)<br/>
+ <i>FIXME: To be documented. </i><br/>
+ EAPI void <code>ecore_con_url_data_set</code> (Ecore_Con_Url *url_con, void *data)<br/>
+ <i>FIXME: To be documented. </i><br/>
+ EAPI void * <code>ecore_con_url_data_get</code> (Ecore_Con_Url *url_con)<br/>
+ <i>FIXME: To be documented. </i><br/>
+ EAPI void <code>ecore_con_url_time</code> (Ecore_Con_Url *url_con, Ecore_Con_Url_Time condition, time_t tm)<br/>
+ <i>FIXME: To be documented. </i><br/>
+ EAPI void <code>ecore_con_url_fd_set</code> (Ecore_Con_Url *url_con, int fd)<br/>
+ <i>FIXME: To be documented. </i><br/>
+ EAPI int <code>ecore_con_url_received_bytes_get</code> (Ecore_Con_Url *url_con)<br/>
+ <i>FIXME: To be documented. </i><br/>
+ EAPI int <code>ecore_con_url_send</code> (Ecore_Con_Url *url_con, void *data, size_t length, char *content_type)<br/>
+ <i>FIXME: To be documented. </i><br/>
+ EAPI int <code>ecore_con_url_ftp_upload</code> (Ecore_Con_Url *url_con, char *filename, char *user, char *pass, char *upload_dir)<br/>
+ <i>Makes a FTP upload. </i><br/>
+ EAPI void <code>ecore_con_url_verbose_set</code> (Ecore_Con_Url *url_con, int verbose)<br/>
+ <i>Enable or disable libcurl verbose output, useful for debug. </i><br/>
+ EAPI void <code>ecore_con_url_ftp_use_epsv_set</code> (Ecore_Con_Url *url_con, int use_epsv)<br/>
  <i>Enable or disable EPSV extension. </i></p>
 <h2>Detailed Description</h2>
 <p>Utility functions that set up, use and shut down the Ecore URL Connection library. </p>

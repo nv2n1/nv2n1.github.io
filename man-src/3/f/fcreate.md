@@ -12,7 +12,7 @@ description: "fCreate – create a file lock."
 <pre>#include &lt;util/ulocks.h&gt;</pre>
 <pre>NEOERR *fCreate(int *plock, const char *file);</pre>
 <h2>Arguments</h2>
-<p>plock &#8211; place for lock.<br />
+<p>plock &#8211; place for lock.<br/>
  file &#8211; path of file to use as lock. </p>
 <h2>Description</h2>
 <p>Creates a file lock on named file &lt;file&gt;. The lock is returned in &lt;plock&gt;. </p>

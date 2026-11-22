@@ -11,14 +11,14 @@ description: "amq – automounter query tool"
 <h2>Synopsis</h2>
 <p><code>amq</code> [ <code>-fimpqsvwHTU</code> ] [ <code>-h</code><i> hostname</i> ] [ <code>-l</code><i> log_file</i> ] [ <code>-x</code><i> log_options</i> ] [ <code>-D</code><i> debug_options</i> ] [ <code>-P</code><i> program_number</i> ] [[ <code>-u</code> ] <i>directory &#8230;</i> ]</p>
 <h2>Description</h2>
-<p><code>Amq</code> provides a simple way of determining the current state of <code>amd</code> program. Communication is by <font SIZE="-1">RPC.</font> Three modes of operation are supported by the current protocol. By default a list of mount points and auto-mounted filesystems is output. An alternative host can be specified using the <i>-h</i> option. </p>
+<p><code>Amq</code> provides a simple way of determining the current state of <code>amd</code> program. Communication is by RPC. Three modes of operation are supported by the current protocol. By default a list of mount points and auto-mounted filesystems is output. An alternative host can be specified using the <i>-h</i> option. </p>
 <p> If <i>directory</i> names are given, as output by default, then per-filesystem information is displayed.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-f</code></dt>
 <dd>Ask the automounter to flush the internal caches and reload all the maps. </dd>
 <dt><code>-h</code><i> hostname</i></dt>
-<dd>Specify an alternate host to query. By default the local host is used. In an <font SIZE="-1">HP-UX</font> cluster, the root server is queried by default, since that is the system on which the automounter is normally run. </dd>
+<dd>Specify an alternate host to query. By default the local host is used. In an HP-UX cluster, the root server is queried by default, since that is the system on which the automounter is normally run. </dd>
 <dt><code>-i</code></dt>
 <dd>Print information about the mount maps. </dd>
 <dt><code>-l</code><i> log_file</i></dt>
@@ -53,10 +53,10 @@ description: "amq – automounter query tool"
 <h2>Files</h2>
 <dl>
 <dt><code>amq.x</code></dt>
-<dd><font SIZE="-1">RPC</font> protocol description. </dd>
+<dd>RPC protocol description. </dd>
 </dl>
 <h2>Caveats</h2>
-<p><code>Amq</code> uses a Sun registered <font SIZE="-1">RPC</font> program number (300019 decimal) which may not be in the /etc/rpc database. </p>
+<p><code>Amq</code> uses a Sun registered RPC program number (300019 decimal) which may not be in the /etc/rpc database. </p>
 <p> If the TCP wrappers library is available, and the <code>use_tcpwrappers</code> global <code>amd.conf</code> option is set to &#8220;yes&#8221;, then <code>amd</code> will verify that the host running <code>amq</code> is authorized to connect. The <i>amd</i> service name must used in the <code>/etc/hosts.allow</code> and <code>/etc/hosts.deny</code> files. For example, to allow only localhost to connect to <code>amd,</code> add this line to <code>/etc/hosts.allow:</code> </p>
 <dl>
 <dd>amd: localhost</dd></dl>

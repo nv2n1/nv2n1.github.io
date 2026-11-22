@@ -51,7 +51,7 @@ description: "shorewall.conf – Shorewall global configuration file"
 <p> DROP_DEFAULT describes the rules to be applied before a connection request is dropped by a DROP policy; REJECT_DEFAULT describes the rules to be applied if a connection request is rejected by a REJECT policy. The other three are similar for ACCEPT, QUEUE and NFQUEUE policies. </p>
 <p> The value applied to these may be:</p>
 <dl>
-<dd>a) The name of an<br />
+<dd>a) The name of an<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><i>action</i>.</dd>
 <dd>b) <code>None</code> or <code>none</code> The default values are:</dd>
 <dd>DROP_DEFAULT=&quot;Drop&quot;</dd>
@@ -369,19 +369,19 @@ net all DROP info</pre>
 <dd>Eariler generations of Shorewall Lite required that remote root login via ssh be enabled in order to use the <code>load</code> and <code>reload</code> commands. Beginning with release 3.9.5, you may define an alternative means for accessing the remote firewall system. In that release, two new options were added to shorewall.conf:.IP &quot;&quot; 4 RSH_COMMAND</dd>
 <dl>
 <dd>RCP_COMMAND The default values for these are as follows:.IP &quot;&quot; 4 RSH_COMMAND: ssh ${root}@${system} ${command}</dd>
-<dd>RCP_COMMAND: scp ${files}<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>${root}@${system}:${destination} Shell variables that will be set when the commands are envoked are as follows:.IP &quot;&quot; 4 <i>root</i> &#8211; root user. Normally<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>root</code>&nbsp;<wbr>but may be overridden using the&nbsp;<wbr>&#8216;-r&#8217;<br />
+<dd>RCP_COMMAND: scp ${files}<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>${root}@${system}:${destination} Shell variables that will be set when the commands are envoked are as follows:.IP &quot;&quot; 4 <i>root</i> &#8211; root user. Normally<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>root</code>&nbsp;<wbr>but may be overridden using the&nbsp;<wbr>&#8216;-r&#8217;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>option.</dd>
-<dd><i>system</i> &#8211; The name/IP address<br />
+<dd><i>system</i> &#8211; The name/IP address<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>of the remote firewall system.</dd>
-<dd><i>command</i> &#8211; For RSH_COMMAND,<br />
+<dd><i>command</i> &#8211; For RSH_COMMAND,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the command to be executed on the firewall system.</dd>
-<dd><i>files</i> &#8211; For RCP_COMMAND, a<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>space-separated list of files to be copied to the remote<br />
+<dd><i>files</i> &#8211; For RCP_COMMAND, a<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>space-separated list of files to be copied to the remote<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>firewall system.</dd>
-<dd><i>destination</i> &#8211; The directory<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>on the remote system that the files are to be copied<br />
+<dd><i>destination</i> &#8211; The directory<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>on the remote system that the files are to be copied<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>into.</dd></dl>
 </dl>
 <p> <code>REQUIRE_INTERFACE=</code>[<code>Yes</code>|<code>No</code>]</p>
@@ -460,7 +460,7 @@ net all DROP info</pre>
 <dl>
 <dd>4.Packets are sent through the main routing table by a rule with priority 999. In <i>routing_rules</i>[18](5), the range 1-998 may be used for inserting rules that bypass the main table.</dd></dl>
 <dl>
-<dd>5.All provider gateways must be specified explicitly in the GATEWAY column. <code>detect</code> may not be specified..sp<br />
+<dd>5.All provider gateways must be specified explicitly in the GATEWAY column. <code>detect</code> may not be specified..sp<br/>
  Note <code>detect</code> may be specified for interfaces whose configuration is managed by dhcpcd. Shorewall will use dhcpcd&#8217;s database to find the interfaces&#8217;s gateway. </dd>
 </dl>
 <dl>
@@ -473,10 +473,10 @@ net all DROP info</pre>
 <dd>Shorewall has traditionally been very noisy (produced lots of output). You may set the default level of verbosity using the VERBOSITY OPTION. </dd>
 <p> Values are:</p>
 <dl>
-<dd>0 &#8211; Silent. You may make it more verbose using the -v<br />
+<dd>0 &#8211; Silent. You may make it more verbose using the -v<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>option</dd>
 <dd>1 &#8211; Major progress messages displayed</dd>
-<dd>2 &#8211; All progress messages displayed (pre Shorewall-3.2.0<br />
+<dd>2 &#8211; All progress messages displayed (pre Shorewall-3.2.0<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>behavior) If not specified, then 2 is assumed.</dd></dl>
 </dl>
 <p> <code>WIDE_TC_MARKS=</code>{<code>Yes</code>|<code>No</code>}</p>

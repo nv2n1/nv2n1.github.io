@@ -10,7 +10,7 @@ description: "ztgsna.f –"
 <p>ztgsna.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztgsna</code> (JOB, HOWMNY, SELECT, N, A, LDA, B, LDB, VL, LDVL, VR, LDVR, S, DIF, MM, M, WORK, LWORK, IWORK, INFO)<br />
+<p>subroutine <code>ztgsna</code> (JOB, HOWMNY, SELECT, N, A, LDA, B, LDB, VL, LDVL, VR, LDVR, S, DIF, MM, M, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>ZTGSNA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztgsna (characterJOB, characterHOWMNY, logical, dimension( * )SELECT, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldvl, * )VL, integerLDVL, complex*16, dimension( ldvr, * )VR, integerLDVR, double precision, dimension( * )S, double precision, dimension( * )DIF, integerMM, integerM, complex*16, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>

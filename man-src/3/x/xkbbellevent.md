@@ -10,7 +10,7 @@ description: "XkbBellEvent – Provides a function that initiates a bell event f
 <p>XkbBellEvent &#8211; Provides a function that initiates a bell event for the keyboard without ringing the bell </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbBellEvent</code> <code>(Display *</code><i>display</i><code>,</code> <code>Window </code><i>window</i><code>,</code> <code>int </code><i>percent</i><code>,</code> <code>Atom </code><i>name</i><code>);</code><br />
+<dt> <code>Bool XkbBellEvent</code> <code>(Display *</code><i>display</i><code>,</code> <code>Window </code><i>window</i><code>,</code> <code>int </code><i>percent</i><code>,</code> <code>Atom </code><i>name</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

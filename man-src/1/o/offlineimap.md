@@ -109,7 +109,7 @@ description: "offlineimap – Synchronize mailboxes and Maildirs both ways or on
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Caution</code> </font> </dd>
+  <code>Caution</code>  </dd>
 <p> Since the FMD5 part of the filename changes, this may lead to UID conflicts. Ensure to dispose a proper backup of both the cache and the Maildir before running this fix as well as verify the results using the &#8216;&#8211;dry-run&#8217; flag first. </p>
 </dl>
 <p> &#8211;mbnames-prune</p>
@@ -130,7 +130,7 @@ description: "offlineimap – Synchronize mailboxes and Maildirs both ways or on
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font><br />
+  <code>Warning</code> <br/>
  enabling the <i>maxsyncaccounts</i> and <i>maxconnections</i> options is deprecated since it&#8217;s known to have race conditions. </dd>
 </dl>
 </dl>

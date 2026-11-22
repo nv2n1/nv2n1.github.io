@@ -82,7 +82,7 @@ description: "nessus – The client part of the Nessus Security Scanner"
 <p> The nessus client interface is divided in several panels:</p>
 <dl>
 <dt>* The &#8220;Nessusd host&#8221; section:</dt>
-<dd> In this section, you must enter the <code>nessusd </code> host to whom you will connect, as well as the port. You must also enter your <code>nessusd </code> user name and your password (not the one of the system). Once you are done, you must click on the &#8220;Log in&#8221; button, which will establish the connection to the <code>nessusd </code> host.<br />
+<dd> In this section, you must enter the <code>nessusd </code> host to whom you will connect, as well as the port. You must also enter your <code>nessusd </code> user name and your password (not the one of the system). Once you are done, you must click on the &#8220;Log in&#8221; button, which will establish the connection to the <code>nessusd </code> host.<br/>
  Once the connection is established, <code>nessusd</code> sends to the client the list of attacks it will perform, as well as the default preferences to use. </dd>
 <dt>* The &#8220;Target Selection&#8221; section:</dt>
 <dd> * In this section, you are required to enter the primary target. A primary target may be a single host (e.g. prof.fr.nessus.org), an IP (e.g. 192.168.1.1), a subnet (e.g. 192.168.1.1/24 or prof.fr.nessus.org), or a list of hosts, separated by commas (e.g. 192.168.1.1, 192.168.2.1/24, prof.fr.nessus.org, joyeux.fr.nessus.org). </dd>
@@ -114,7 +114,7 @@ description: "nessus – The client part of the Nessus Security Scanner"
 <p> The canonical places where you will find more information about the Nessus project are: </p>
 <dl>
 <dt>
-</dt><dd> <a rel="nofollow" href="http://www.nessus.org/">http://www.nessus.org/</a> (Official site)<br />
+</dt><dd> <a rel="nofollow" href="http://www.nessus.org/">http://www.nessus.org/</a> (Official site)<br/>
  <a rel="nofollow" href="http://cvs.nessus.org/">http://cvs.nessus.org/</a> (Developers site)</dd></dl>
 <h2>AUTHORS</h2>
 <p> The Nessus Project was started and is being maintained by Renaud Deraison &lt;deraison [at] cvs.nessus.org&gt;. The <code>nessusd</code> server is mainly Copyright (C) 1998-2001 Renaud Deraison, as well as the attack modules. </p>

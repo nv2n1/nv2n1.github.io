@@ -45,5 +45,5 @@ description: "XtSetKeyTranslator, XtTranslateKeycode, XtRegisterCaseConverter, X
 <p> The <code>XtRegisterCaseConverter</code> registers the specified case converter. The start and stop arguments provide the inclusive range of KeySyms for which this converter is to be called. The new converter overrides any previous converters for KeySyms in that range. No interface exists to remove converters; you need to register an identity converter. When a new converter is registered, the Intrinsics refreshes the keyboard state if necessary. The default converter understands case conversion for all KeySyms defined in the core protocol. </p>
 <p> The <code>XtConvertCase</code> function calls the appropriate converter and returns the results. A user-supplied <code>XtKeyProc</code> may need to use this function.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

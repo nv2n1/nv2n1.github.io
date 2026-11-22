@@ -61,6 +61,6 @@ description: "gescape (Escape) – provides a standard way of implementing nonst
 <p>Online: <code>setusv(3NCARG),</code> <code>frame(3NCARG),</code> <code>ngpict(3NCARG),</code> <code>gks(3NCARG),</code> <code>ncarg_gks_cbind(3NCARG)</code> </p>
 <p> Hardcopy: User&#8217;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 1987-2009<br />
- University Corporation for Atmospheric Research<br />
+<p>Copyright (C) 1987-2009<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement.</p>

@@ -16,7 +16,7 @@ description: "zmq_recvmsg – receive a message part from a socket"
 <dl>
 <dd>Specifies that the operation should be performed in non-blocking mode. If there are no messages available on the specified <i>socket</i>, the <i>zmq_recvmsg()</i> function shall fail with <i>errno</i> set to EAGAIN.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> this API method is deprecated in favor of <a href="/docs/linux/man/3-zmq_msg_recv/">zmq_msg_recv</a>(3). </p>
 </dl>
 <h3>Multi-part messages</h3>
@@ -47,21 +47,21 @@ description: "zmq_recvmsg – receive a message part from a socket"
 <dl>
 <dd>The message passed to the function was invalid.</dd></dl>
 <h2>Example</h2>
-<p><code>Receiving a message from a socket</code>. int more;<br />
-size_t more_size = sizeof(more);<br />
-do {<br />
-    /* Create an empty 0MQ message to hold the message part */<br />
-    zmq_msg_t part;<br />
-    int rc = zmq_msg_init(&amp;part);<br />
-    assert(rc == 0);<br />
-    /* Block until a message is available to be received from socket */<br />
-    rc = zmq_recvmsg(socket, &amp;part, 0);<br />
-    assert(rc != -1);<br />
-    /* Determine if more message parts are to follow */<br />
-    rc = zmq_getsockopt(socket, ZMQ_RCVMORE, &amp;more, &amp;more_size);<br />
-    assert(rc == 0);<br />
-    zmq_msg_close(&amp;part);<br />
-} while (more);<br />
+<p><code>Receiving a message from a socket</code>. int more;<br/>
+size_t more_size = sizeof(more);<br/>
+do {<br/>
+    /* Create an empty 0MQ message to hold the message part */<br/>
+    zmq_msg_t part;<br/>
+    int rc = zmq_msg_init(&amp;part);<br/>
+    assert(rc == 0);<br/>
+    /* Block until a message is available to be received from socket */<br/>
+    rc = zmq_recvmsg(socket, &amp;part, 0);<br/>
+    assert(rc != -1);<br/>
+    /* Determine if more message parts are to follow */<br/>
+    rc = zmq_getsockopt(socket, ZMQ_RCVMORE, &amp;more, &amp;more_size);<br/>
+    assert(rc == 0);<br/>
+    zmq_msg_close(&amp;part);<br/>
+} while (more);<br/>
  <code>Receiving a multi-part message</code>. </p>
 <pre><code>int more;
 size_t more_size = sizeof(more);

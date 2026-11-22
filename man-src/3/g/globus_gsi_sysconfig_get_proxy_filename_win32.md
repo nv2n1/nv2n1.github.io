@@ -10,44 +10,44 @@ description: "Functions for Win32 platforms –"
 
 <p> Functions for Win32 platforms - </p>
 <h3>Functions</h3>
-<p> <br />
- globus_result_t <code>globus_gsi_sysconfig_set_key_permissions_win32</code> (char *filename) <br />
- <i>Win32 - Set Key Permissions. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_file_exists_win32</code> (const char *filename) <br />
- <i>Win32 - File Exists. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_dir_exists_win32</code> (const char *filename) <br />
- <i>Win32 - Directory Exists. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_get_current_working_dir_win32</code> (char **working_dir) <br />
- <i>Win32 - Get Current Working Directory. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_make_absolute_path_for_filename_win32</code> (char *filename, char **absolute_path) <br />
- <i>Win32 - Make Absolute Path. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_split_dir_and_filename_win32</code> (char *full_filename, char **dir_string, char **filename_string) <br />
- <i>Win32 - Split Directory and Filename. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_get_cert_dir_win32</code> (char **cert_dir) <br />
- <i>Win32 - Get Trusted CA Cert Dir. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_get_user_cert_filename_win32</code> (char **user_cert, char **user_key) <br />
- <i>Win32 - Get User Certificate Filename. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_get_host_cert_filename_win32</code> (char **host_cert, char **host_key) <br />
- <i>Win32 - Get Host Certificate and Key Filenames. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_get_service_cert_filename_win32</code> (char *service_name, char **service_cert, char **service_key) <br />
- <i>Win32 - Get Service Certificate and Key Filenames. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_get_proxy_filename_win32</code> (char **user_proxy, <code>globus_gsi_proxy_file_type_t</code> proxy_file_type) <br />
- <i>Win32 - Get Proxy Filename. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_get_ca_cert_files_win32</code> (char *ca_cert_dir, globus_fifo_t *ca_cert_list) <br />
- <i>Win32 - Get CA Cert Filenames. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_remove_all_owned_files_win32</code> (char *default_filename) <br />
- <i>Win32 - Remove all proxies owned by current uid. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_get_gridmap_filename_win32</code> (char **filename) <br />
- <i>Win32 - Get the path and file name of the grid map file. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_get_authz_conf_filename_win32</code> (char **filename) <br />
- <i>Win32 - Get the path and file name of the grid map file. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_get_authz_lib_conf_filename_win32</code> (char **filename) <br />
- <i>Win32 - Get authorization configuration filename. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_get_gaa_conf_filename_win32</code> (char **filename) <br />
- <i>Win32 - Get the path and file name of the gaa config file. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_is_superuser_win32</code> (int *is_superuser) <br />
- <i>Win32 - Check if the current user is root. </i> <br />
- globus_result_t <code>globus_gsi_sysconfig_get_signing_policy_filename_win32</code> (X509_NAME *ca_name, char *cert_dir, char **signing_policy_filename) <br />
+<p> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_set_key_permissions_win32</code> (char *filename) <br/>
+ <i>Win32 - Set Key Permissions. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_file_exists_win32</code> (const char *filename) <br/>
+ <i>Win32 - File Exists. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_dir_exists_win32</code> (const char *filename) <br/>
+ <i>Win32 - Directory Exists. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_get_current_working_dir_win32</code> (char **working_dir) <br/>
+ <i>Win32 - Get Current Working Directory. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_make_absolute_path_for_filename_win32</code> (char *filename, char **absolute_path) <br/>
+ <i>Win32 - Make Absolute Path. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_split_dir_and_filename_win32</code> (char *full_filename, char **dir_string, char **filename_string) <br/>
+ <i>Win32 - Split Directory and Filename. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_get_cert_dir_win32</code> (char **cert_dir) <br/>
+ <i>Win32 - Get Trusted CA Cert Dir. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_get_user_cert_filename_win32</code> (char **user_cert, char **user_key) <br/>
+ <i>Win32 - Get User Certificate Filename. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_get_host_cert_filename_win32</code> (char **host_cert, char **host_key) <br/>
+ <i>Win32 - Get Host Certificate and Key Filenames. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_get_service_cert_filename_win32</code> (char *service_name, char **service_cert, char **service_key) <br/>
+ <i>Win32 - Get Service Certificate and Key Filenames. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_get_proxy_filename_win32</code> (char **user_proxy, <code>globus_gsi_proxy_file_type_t</code> proxy_file_type) <br/>
+ <i>Win32 - Get Proxy Filename. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_get_ca_cert_files_win32</code> (char *ca_cert_dir, globus_fifo_t *ca_cert_list) <br/>
+ <i>Win32 - Get CA Cert Filenames. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_remove_all_owned_files_win32</code> (char *default_filename) <br/>
+ <i>Win32 - Remove all proxies owned by current uid. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_get_gridmap_filename_win32</code> (char **filename) <br/>
+ <i>Win32 - Get the path and file name of the grid map file. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_get_authz_conf_filename_win32</code> (char **filename) <br/>
+ <i>Win32 - Get the path and file name of the grid map file. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_get_authz_lib_conf_filename_win32</code> (char **filename) <br/>
+ <i>Win32 - Get authorization configuration filename. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_get_gaa_conf_filename_win32</code> (char **filename) <br/>
+ <i>Win32 - Get the path and file name of the gaa config file. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_is_superuser_win32</code> (int *is_superuser) <br/>
+ <i>Win32 - Check if the current user is root. </i> <br/>
+ globus_result_t <code>globus_gsi_sysconfig_get_signing_policy_filename_win32</code> (X509_NAME *ca_name, char *cert_dir, char **signing_policy_filename) <br/>
  <i>Win32 - Get Signing Policy Filename. </i>  </p>
 <h2>Detailed Description</h2>
 <p> These functions implement the Win32 version of the Globus GSI System Configuration API. <code>They should never be called directly, please use the provided platform independent defines.</code>  </p>
@@ -96,7 +96,7 @@ description: "Functions for Win32 platforms –"
 <p> Win32 - Get CA Cert Filenames. Gets a list of trusted CA certificate filenames in a trusted CA certificate directory. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>ca_cert_dir</i> The trusted CA certificate directory to get the filenames from <br />
+<dd> <p> <i>ca_cert_dir</i> The trusted CA certificate directory to get the filenames from <br/>
  <i>ca_cert_list</i> The resulting list of CA certificate filenames. This is a globus list structure. </p>
  </dd></dl>
 <p> <code>See Also:</code> </p>
@@ -180,7 +180,7 @@ description: "Functions for Win32 platforms –"
  </dd></dl>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>host_cert</i> pointer to the host certificate filename <br />
+<dd> <p> <i>host_cert</i> pointer to the host certificate filename <br/>
  <i>host_key</i> pointer to the host key filename </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -203,7 +203,7 @@ description: "Functions for Win32 platforms –"
  </dd></dl>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>user_proxy</i> the proxy filename of the user <br />
+<dd> <p> <i>user_proxy</i> the proxy filename of the user <br/>
  <i>proxy_file_type</i> Switch for determining whether to return a existing proxy filename or if a filename suitable for creating a proxy should be returned </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -227,8 +227,8 @@ description: "Functions for Win32 platforms –"
  </dd></dl>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>service_name</i> The name of the service which allows us to determine the locations of cert and key files to look for <br />
- <i>service_cert</i> pointer to the host certificate filename <br />
+<dd> <p> <i>service_name</i> The name of the service which allows us to determine the locations of cert and key files to look for <br/>
+ <i>service_cert</i> pointer to the host certificate filename <br/>
  <i>service_key</i> pointer to the host key filename </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -239,8 +239,8 @@ description: "Functions for Win32 platforms –"
 <p> Win32 - Get Signing Policy Filename. Get the Signing Policy Filename on the current system, based on the CA&#8217;s subject name, and the trusted certificates directory </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>ca_name</i> The X.509 subject name of the CA to get the signing policy of. The hash of the CA is generated from this <br />
- <i>cert_dir</i> The trusted CA certificates directory, containing the singing_policy files of the trusted CAs. <br />
+<dd> <p> <i>ca_name</i> The X.509 subject name of the CA to get the signing policy of. The hash of the CA is generated from this <br/>
+ <i>cert_dir</i> The trusted CA certificates directory, containing the singing_policy files of the trusted CAs. <br/>
  <i>signing_policy_filename</i> The resulting singing_policy filename </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -264,7 +264,7 @@ description: "Functions for Win32 platforms –"
  </dd></dl>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>user_cert</i> pointer the filename of the user certificate <br />
+<dd> <p> <i>user_cert</i> pointer the filename of the user certificate <br/>
  <i>user_key</i> pointer to the filename of the user key </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -285,7 +285,7 @@ description: "Functions for Win32 platforms –"
 <p> Win32 - Make Absolute Path. Make the filename into an absolute path string based on the current working directory. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>filename</i> the filename to get the absolute path of. <br />
+<dd> <p> <i>filename</i> the filename to get the absolute path of. <br/>
  <i>absolute_path</i> The resulting absolute path </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -316,8 +316,8 @@ description: "Functions for Win32 platforms –"
 <p> Win32 - Split Directory and Filename. Split the directory and filename portions of a filename string into two separate strings </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>full_filename</i> <br />
- <i>dir_string</i> <br />
+<dd> <p> <i>full_filename</i> <br/>
+ <i>dir_string</i> <br/>
  <i>filename_string</i> </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>

@@ -17,14 +17,14 @@ description: "ovsdb-server – Open vSwitch database server"
 <dt>Service options:</dt>
 <dd> [<code>&#8211;service</code>] [<code>&#8211;service-monitor</code>]</dd>
 <dt>Logging options:</dt>
-<dd> [<code>-v</code>[<i>module</i>[<code>:</code><i>destination</i>[<code>:</code><i>level</i>]]]]&#8230;<br />
- [<code>&#8211;verbose[=</code><i>module</i>[<code>:</code><i>destination</i>[<code>:</code><i>level</i>]]]]&#8230;<br />
+<dd> [<code>-v</code>[<i>module</i>[<code>:</code><i>destination</i>[<code>:</code><i>level</i>]]]]&#8230;<br/>
+ [<code>&#8211;verbose[=</code><i>module</i>[<code>:</code><i>destination</i>[<code>:</code><i>level</i>]]]]&#8230;<br/>
  [<code>&#8211;log-file</code>[<code>=</code><i>file</i>]]</dd>
 <dt>Public key infrastructure options:</dt>
-<dd> [<code>&#8211;private-key=</code><i>privkey.pem</i>]<br />
- [<code>&#8211;certificate=</code><i>cert.pem</i>]<br />
- [<code>&#8211;ca-cert=</code><i>cacert.pem</i>]<br />
- [<code>&#8211;bootstrap-ca-cert=</code><i>cacert.pem</i>]<br />
+<dd> [<code>&#8211;private-key=</code><i>privkey.pem</i>]<br/>
+ [<code>&#8211;certificate=</code><i>cert.pem</i>]<br/>
+ [<code>&#8211;ca-cert=</code><i>cacert.pem</i>]<br/>
+ [<code>&#8211;bootstrap-ca-cert=</code><i>cacert.pem</i>]<br/>
  [<code>&#8211;peer-ca-cert=</code><i>peer-cacert.pem</i>]</dd>
 <dt>Runtime management options:</dt>
 <dd> <code>&#8211;unixctl=</code><i>socket</i></dd>

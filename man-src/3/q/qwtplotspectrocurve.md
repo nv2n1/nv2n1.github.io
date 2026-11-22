@@ -13,15 +13,15 @@ description: "QwtPlotSpectroCurve –"
 <p>#include &lt;qwt_plot_spectrocurve.h&gt; </p>
 <p> Inherits <code>QwtPlotSeriesItem</code>, and <code>QwtSeriesStore&lt; QwtPoint3D &gt;</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>PaintAttribute</code> { <code>ClipPoints</code> = 1 }<br />
- <i>Paint attributes. </i><br />
- typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br />
+<p>enum <code>PaintAttribute</code> { <code>ClipPoints</code> = 1 }<br/>
+ <i>Paint attributes. </i><br/>
+ typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br/>
  <i>Paint attributes. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPlotSpectroCurve</code> (const QString &amp;<code>title</code>=QString::null) </p>
 <p> <code>QwtPlotSpectroCurve</code> (const <code>QwtText</code> &amp;<code>title</code>) </p>
-<p> virtual <code>~QwtPlotSpectroCurve</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtPlotSpectroCurve</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
 <p> void <code>setPaintAttribute</code> (<code>PaintAttribute</code>, bool on=true) </p>
 <p> bool <code>testPaintAttribute</code> (<code>PaintAttribute</code>) const </p>
@@ -75,11 +75,11 @@ description: "QwtPlotSpectroCurve –"
 <p>Draw a subset of the points </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> Index of the first sample to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> Index of the first sample to be painted<br/>
  <i>to</i> Index of the last sample to be painted. If to &lt; 0 the series will be painted to its last sample.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -88,11 +88,11 @@ description: "QwtPlotSpectroCurve –"
 <p>Draw a subset of the points </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> Index of the first sample to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> Index of the first sample to be painted<br/>
  <i>to</i> Index of the last sample to be painted. If to &lt; 0 the series will be painted to its last sample.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -131,7 +131,7 @@ description: "QwtPlotSpectroCurve –"
 <p>Specify an attribute how to draw the curve </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Paint attribute<br />
+<dd><i>attribute</i> Paint attribute<br/>
  <i>on</i> On/Off /sa PaintAttribute, <code>testPaintAttribute()</code></dd></dl>
 <h3>void QwtPlotSpectroCurve::setPenWidth (doublepenWidth)</h3>
 <p>Assign a pen width </p>

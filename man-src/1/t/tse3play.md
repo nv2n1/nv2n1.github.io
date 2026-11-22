@@ -8,15 +8,15 @@ url: "/docs/linux/man/1-tse3play/"
 description: "tse3play – play/convert music files (MIDI or TSE3MDL) using the TSE3 sequencer engine library"
 ---
 
-<p> tse3play &#8211; play/convert music files (MIDI or TSE3MDL) using the <font SIZE="-1">TSE3</font> sequencer engine library</p>
+<p> tse3play &#8211; play/convert music files (MIDI or TSE3MDL) using the TSE3 sequencer engine library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tse3play [-h] [-ver] [-v] [-list] [-nv] [-np] [-l] [-omidi</code> <i>output-midi-file</i> <code>] [-omidi0] [-omidicomp] [-otse3mdl</code> <i>output-tse3mdl-file</i> <code>] [-map</code> <i>from-midi-channel to-midi-channel</i> <code>] [-m] [-r] [-gmr] [-gsr] [-xgr] [-unix] [-oss] [-alsa] [-arts] [-stream] [-s</code> <i>start-time</i> <code>] [-solo</code> <i>track</i> <code>] [-sl</code> <i>usecs</i> <code>] [ -stop ] [ -e ] [ -mute</code> <i>channel</i> <code>] [ -pd</code> <i>dir</i> <code>]</code> <i>file</i> <code>] [ -port</code> <i>port</i> <code>] [ -fast ]</code></p>
 <h2>DESCRIPTION</h2>
-<p> <code>tse3play</code> plays TSE3MDL files and MIDI files using the <font SIZE="-1">TSE3</font> sequencer engine. It was originally developed as a test application for the <font SIZE="-1">TSE3</font> engine, but is now a fully featured playback application. </p>
+<p> <code>tse3play</code> plays TSE3MDL files and MIDI files using the TSE3 sequencer engine. It was originally developed as a test application for the TSE3 engine, but is now a fully featured playback application. </p>
 <p> <code>tse3play</code> can also convert files between the two supported formats. Whilst playing it provides text based visual feedback, or can stream an English representation of the contents of the file to standard output. </p>
 <p> <i>MIDI files</i> are a standard file format for the storage of musical (song) data that can be found in abundance on the internet. They don&#8217;t contain the actual sounds played, but instructions on how to recreate the song (i.e. start note/stop note commands). MIDI files are most often created by a <i>sequencer</i> application (akin to a word processor for music). MIDI files often have the extension .mid or .midi </p>
-<p> <i>TSE3MDL</i> ( <i>TSE3 Music Description Langauge</i> ) files are a similar form of music file. They are created by sequencer applications based on the <font SIZE="-1">TSE3</font> sequencer engine library. The file format contains a great deal more information and harnesses the full power of the <font SIZE="-1">TSE3</font> library. TSE3MDL files often have the extension .tse3 </p>
-<p> The type of the input file is automatically detected by <code>tse3play</code> . <code>tse3play</code> can also load legacy <i>TSE2MDL</i> files from sequencers based on the older <font SIZE="-1">TSE2</font> sequencer library.</p>
+<p> <i>TSE3MDL</i> ( <i>TSE3 Music Description Langauge</i> ) files are a similar form of music file. They are created by sequencer applications based on the TSE3 sequencer engine library. The file format contains a great deal more information and harnesses the full power of the TSE3 library. TSE3MDL files often have the extension .tse3 </p>
+<p> The type of the input file is automatically detected by <code>tse3play</code> . <code>tse3play</code> can also load legacy <i>TSE2MDL</i> files from sequencers based on the older TSE2 sequencer library.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt>-h, &#8211;help</dt>
@@ -83,7 +83,7 @@ description: "tse3play – play/convert music files (MIDI or TSE3MDL) using the 
 <dd> Tells <code>tse3play</code> to use a faster MIDI file import routine. This will make the MIDI file playback start almost instantaneously (especially noticeable for very large MIDI files). You can only use this if you are not converting a file. </dd>
 <p> It has a number of possible side effects; (i) The MIDI file&#8217;s last time stamp is trusted to be correct (it might not be) (ii) Stopping playback half way through <i>may</i> produce &#8216;hanging notes&#8217;</dl>
 <h2>BUGS</h2>
-<p> Naturally, <code>tse3play</code> is completely bug free. The <font SIZE="-1">TSE3</font> library upon which it is based is also completely bug free. However, if you do find something goes wrong then contact the author. The program can only be improved with your feedback.</p>
+<p> Naturally, <code>tse3play</code> is completely bug free. The TSE3 library upon which it is based is also completely bug free. However, if you do find something goes wrong then contact the author. The program can only be improved with your feedback.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000,2001 Pete Goodliffe. See the license file in the TSE3 doc diirectory for a complete license statement.</p>
 <h2>AUTHOR</h2>

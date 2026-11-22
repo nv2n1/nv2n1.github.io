@@ -13,12 +13,12 @@ description: "dbjoin – join two tables on common columns"
 <pre><code>
 dbjoin[-Sid]-- input table1.fsdb-- input table2.fsdb[-nNrR] column[column...]
 </code></pre>
-<p> <font SIZE="-1">OR</font> </p>
+<p> OR </p>
 <pre><code>
 cat table1.fsdb | dbjoin[-Sid]-- input table2.fsdb[-nNrR] column[column...]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> Does a natural, inner join on <font SIZE="-1">TABLE1</font> and <font SIZE="-1">TABLE2 </font> the specified columns. With the <tt>&quot;-a&quot;</tt> option, or with <tt>&quot;-t outer&quot;</tt> it will do a natural, full outer join. </p>
+<p> Does a natural, inner join on TABLE1 and TABLE2  the specified columns. With the <tt>&quot;-a&quot;</tt> option, or with <tt>&quot;-t outer&quot;</tt> it will do a natural, full outer join. </p>
 <p> (Database review: inner joints output records only when there are matches in both tables and will omit records that do not match. Outer joins output all records from both tables, filling with the empty value as needed. Right (left) outer joins keep all elements of the right (left) table, even those that don&#8217;t match in the other table.) </p>
 <p> By default for non-hash joins, data will be sorted lexically, but the usual sorting options can be mixed with the column specification. </p>
 <p> Because two tables are required, input is typically in files. Standard input is accessible by the file &#8220;-&#8221;.</p>
@@ -40,16 +40,16 @@ cat table1.fsdb | dbjoin[-Sid]-- input table2.fsdb[-nNrR] column[column...]
 <dl>
 <dt><code>-a</code> or <code>&#8211;all</code></dt>
 <dd> Perform a <i>full outer join</i>, include non-matches (each record which doesn&#8217;t match at all will appear once). Default is an <i>inner join</i>.</dd>
-<dt><code>-t </code><font SIZE="-1"><code>TYPE</code></font> or <code>&#8211;type </code><font SIZE="-1"><code>TYPE</code></font></dt>
-<dd> Explicitly specify the join type. <font SIZE="-1">TYPE</font> must be inner, outer, left (outer), right (outer). Default: inner.</dd>
-<dt><code>-m </code><font SIZE="-1"><code>METHOD</code></font> or <code>&#8211;method </code><font SIZE="-1"><code>METHOD</code></font></dt>
+<dt><code>-t </code><code>TYPE</code> or <code>&#8211;type </code><code>TYPE</code></dt>
+<dd> Explicitly specify the join type. TYPE must be inner, outer, left (outer), right (outer). Default: inner.</dd>
+<dt><code>-m </code><code>METHOD</code> or <code>&#8211;method </code><code>METHOD</code></dt>
 <dd> Select join method (algorithm). Choices are merge, righthash, and lefthash. Default: merge.</dd>
 <dt><code>-S</code> or <code>&#8211;pre-sorted</code></dt>
 <dd> assume (and verify) data is already sorted</dd>
 <dt><code>-e E</code> or <code>&#8211;empty E</code></dt>
 <dd> give value E as the value for empty (null) records</dd>
 <dt><code>-T TmpDir</code></dt>
-<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd></dl>
+<dd> where to put tmp files. Also uses environment variable TMPDIR, if -T is not specified. Default is /tmp.</dd></dl>
 <p> Sort specification options (can be interspersed with column names):</p>
 <dl>
 <dt><code>-r</code> or <code>&#8211;descending</code></dt>
@@ -111,4 +111,4 @@ cat table1.fsdb | dbjoin[-Sid]-- input table2.fsdb[-nNrR] column[column...]
 <p> Fsdb.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2016 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

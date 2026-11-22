@@ -19,11 +19,11 @@ description: "update-smart-drivedb – update smartmontools drive database"
 <dt><code>-t TOOL</code></dt>
 <dd>Use TOOL for download. TOOL is one of: <i>curl wget lynx</i> <i>svn</i>. The default is the first one found in PATH.</dd>
 <dt><code>-u LOCATION</code></dt>
-<dd>Use URL of LOCATION for download. LOCATION is one of:<br />
- <i>sf</i> (Sourceforge code browser via HTTPS),<br />
- <i>svn</i> (SVN repository via HTTPS),<br />
- <i>svni</i> (SVN repository via HTTP),<br />
- <i>trac</i> (Trac code browser via HTTPS).<br />
+<dd>Use URL of LOCATION for download. LOCATION is one of:<br/>
+ <i>sf</i> (Sourceforge code browser via HTTPS),<br/>
+ <i>svn</i> (SVN repository via HTTPS),<br/>
+ <i>svni</i> (SVN repository via HTTP),<br/>
+ <i>trac</i> (Trac code browser via HTTPS).<br/>
  The default is <i>svn</i>.</dd>
 <dt><code>&#8211;cacert FILE</code></dt>
 <dd>Use CA certificates from FILE to verify the peer.</dd>
@@ -57,16 +57,16 @@ description: "update-smart-drivedb – update smartmontools drive database"
 <dd>empty file created if downloaded file was identical. </dd>
 </dl>
 <h2>Authors</h2>
-<p><code>Christian Franke</code>.<br />
+<p><code>Christian Franke</code>.<br/>
  This manual page was originally written by <code>Hannes von Haugwitz &lt;hannes [at] vonhaugwitz.com&gt;</code>.</p>
 <h2>Reporting Bugs</h2>
-<p>To submit a bug report, create a ticket in smartmontools wiki:<br />
- &lt;<code><a rel="nofollow" href="http://www.smartmontools.org/">http://www.smartmontools.org/</a></code>&gt;.<br />
- Alternatively send the info to the smartmontools support mailing list:<br />
+<p>To submit a bug report, create a ticket in smartmontools wiki:<br/>
+ &lt;<code><a rel="nofollow" href="http://www.smartmontools.org/">http://www.smartmontools.org/</a></code>&gt;.<br/>
+ Alternatively send the info to the smartmontools support mailing list:<br/>
  &lt;<code><a rel="nofollow" href="https://lists.sourceforge.net/lists/listinfo/smartmontools-support">https://lists.sourceforge.net/lists/listinfo/smartmontools-support</a>&gt;. </p>
 <p> </code></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-smartctl/">smartctl</a></code>(8), <code><a href="/docs/linux/man/8-smartd/">smartd</a></code>(8). </p>
 <h2>Package Version</h2>
-<p>smartmontools-6.6 2016-05-31 r4324<br />
+<p>smartmontools-6.6 2016-05-31 r4324<br/>
  $Id: update-smart-drivedb.8.in 4223 2016-02-26 20:18:40Z chrfranke $</p>

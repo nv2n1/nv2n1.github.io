@@ -36,7 +36,7 @@ mirmon[-v][-q][-t timeout][-c conf][-get all | update | url url]
 </pre>
 <p> It quietly probes a subset of the sites in a given list, writes the results in the &#8216;state&#8217; file and generates a web page with the results. The subset contains the sites that are new, bad and/or not probed for a specified time. </p>
 <p> When no &#8216;get&#8217; option is specified, the program just generates a new web page from the last known state. </p>
-<p> The program checks the mirrors by running a (user specified) program on a pipe. A (user specified) number of probes is run in parallel using nonblocking <font SIZE="-1">IO</font>. When something can be read from the pipe, it switches the pipe to blocking <font SIZE="-1">IO</font> and reads one line from the pipe. Then it flushes and closes the pipe. No attempt is made to kill the probe. </p>
+<p> The program checks the mirrors by running a (user specified) program on a pipe. A (user specified) number of probes is run in parallel using nonblocking IO. When something can be read from the pipe, it switches the pipe to blocking IO and reads one line from the pipe. Then it flushes and closes the pipe. No attempt is made to kill the probe. </p>
 <p> The probe should return something that looks like </p>
 <pre>
   1043625600 ...
@@ -55,11 +55,11 @@ mirmon[-v][-q][-t timeout][-c conf][-get all | update | url url]
 </dd></dl>
 <p> <code>syntax</code> </p>
 <p> A config file looks like this : </p>
-<p>+ &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; | #lines that start with &#8216;#&#8217; are comment | #blank lines are ignored too | #tabs are replaced by a space |<br />
-        | #the config entries are &#8216;key&#8217; and<br />
-    &#8216;value&#8217; pairs | #a &#8216;key&#8217; begins in column 1 | #the &#8216;value&#8217; is the rest of the line | somekey A_val B_val&#8230; | otherkey X_val Y_val&#8230; |<br />
-        | #indented lines are glued | #the next three lines mean &#8216;somekey part1 part2 part3&#8217; | somekey part1 | part2 | part3 |<br />
-        | #lines starting with a &#8216;+&#8217; are concatenated | #the next three lines mean &#8216;somekey part1part2part3&#8217; | somekey part1 | +part2 | +part3 |<br />
+<p>+ &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; | #lines that start with &#8216;#&#8217; are comment | #blank lines are ignored too | #tabs are replaced by a space |<br/>
+        | #the config entries are &#8216;key&#8217; and<br/>
+    &#8216;value&#8217; pairs | #a &#8216;key&#8217; begins in column 1 | #the &#8216;value&#8217; is the rest of the line | somekey A_val B_val&#8230; | otherkey X_val Y_val&#8230; |<br/>
+        | #indented lines are glued | #the next three lines mean &#8216;somekey part1 part2 part3&#8217; | somekey part1 | part2 | part3 |<br/>
+        | #lines starting with a &#8216;+&#8217; are concatenated | #the next three lines mean &#8216;somekey part1part2part3&#8217; | somekey part1 | +part2 | +part3 |<br/>
         | #lines starting with a &#8216;.&#8217; are glued too | #don &#8216;t use a &#8216;.&#8217; on a line by itself | #&#8217;somekey&#8217; gets the value &#8220;part1
  part2
  part3&#8221; | somekey part1 |.part2 |.part3 + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;</p>
@@ -90,12 +90,12 @@ mirmon[-v][-q][-t timeout][-c conf][-get all | update | url url]
 <dl>
 <dt>* plain : lines like</dt>
 <dd>
-us http :                     // www.tux.org/ [email] &#8230;<br />
-          nl http :           // apache.cs.uu.nl/dist/ [email] &#8230;<br />
+us http :                     // www.tux.org/ [email] &#8230;<br/>
+          nl http :           // apache.cs.uu.nl/dist/ [email] &#8230;<br/>
                     nl rsync: // archive.cs.uu.nl/apache-dist/ [email] &#8230;</dd>
 <dt>* apache : lines like those in the apache mirrors.list</dt>
 <dd>
-ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org &#8230;<br />
+ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org &#8230;<br/>
              http nl http: // apache.cs.uu.nl/dist/ user [at] cs.uu.nl &#8230;
 </dd></dl>
 </dl>
@@ -107,7 +107,7 @@ ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org
 <dt>web_page <i>file-name</i></dt>
 <dd> Specify where the html report page is written.</dd>
 <dt>icons <i>directory-name</i></dt>
-<dd> Specify the directory where the icons can be found, relative to the <i>web_page</i>, or relative to the <font SIZE="-1">DOCUMENTROOT</font> of the web server. </dd>
+<dd> Specify the directory where the icons can be found, relative to the <i>web_page</i>, or relative to the DOCUMENTROOT of the web server. </dd>
 <p> If/when the <i>web_page</i> lives in directory <tt>&quot;.../mirmon/&quot;</tt> and the icons live in directory <tt>&quot;.../mirmon/icons/&quot;</tt>, specify </p>
 <pre>
   icons icons
@@ -143,7 +143,7 @@ ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org
   us - United States
   nl - Netherlands
 </pre>
-<p> The mirmon package contains a recent <font SIZE="-1">ISO</font> list. </p>
+<p> The mirmon package contains a recent ISO list. </p>
 <p> <i>Fake</i> domains like <i>Backup</i>, <i>Master</i> are allowed, and are listed first in the report ; lowercase-first fake domains (like <i>backup</i>) are listed last.
 </dl>
 <p> <code>optional entries</code> </p>
@@ -154,24 +154,24 @@ ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org
 <dd> Optionally specify the timeout for the probes (default 300). </dd>
 <p> After the last probe is started, the program waits for &lt;timeout&gt; + 10 seconds, cleans up and exits.</p>
 <dt>project_logo <i>logo</i></dt>
-<dd> Optionally specify (the <font SIZE="-1">SRC</font> of the <font SIZE="-1">IMG</font> of) a logo to be placed top right on the page. </dd>
+<dd> Optionally specify (the SRC of the IMG of) a logo to be placed top right on the page. </dd>
 <pre>
   project_logo /icons/apache.gif
   project_logo <a rel="nofollow" href="http://www.apache.org/icons/...">http://www.apache.org/icons/...</a>
 </pre>
 <dt>htm_head <i>html</i></dt>
-<dd> Optionally specify some <font SIZE="-1">HTML</font> to be placed before &lt;/HEAD&gt;. </dd>
+<dd> Optionally specify some HTML to be placed before &lt;/HEAD&gt;. </dd>
 <pre>
   htm_head
     &lt;link REL=StyleSheet href=&quot;/style.css&quot; TYPE=&quot;text/css&quot;&gt;
 </pre>
 <dt>htm_top <i>html</i></dt>
-<dd> Optionally specify some <font SIZE="-1">HTML</font> to be placed near the top of the page. </dd>
+<dd> Optionally specify some HTML to be placed near the top of the page. </dd>
 <pre>
   htm_top testing 1, 2, 3
 </pre>
 <dt>htm_foot <i>html</i></dt>
-<dd> Optionally specify <font SIZE="-1">HTML</font> to be placed near the bottom of the page. </dd>
+<dd> Optionally specify HTML to be placed near the bottom of the page. </dd>
 <pre>
   htm_foot
     &lt;HR&gt;
@@ -278,7 +278,7 @@ ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org
   cd DOCUMENTROOT
   mkdir mirmon
 </pre>
-<p> For <i></i><font SIZE="-1"><i>DOCUMENTROOT</i></font><i></i>, substitute the full pathname of the document root of your webserver.</p>
+<p> For <i></i><i>DOCUMENTROOT</i><i></i>, substitute the full pathname of the document root of your webserver.</p>
 </dd><dt>* Check out the mirmon repository :</dt>
 <dd>
 <pre>
@@ -308,8 +308,8 @@ ftp us ftp :               // ftp.tux.org/pub/net/apache/dist/ user [at] tux.org
 </pre>
 </dd><dt>* Create a mirror list &quot;mirror_list&quot; ;</dt>
 <dd> Use your favorite editor, or genererate the list from an existing database. </dd>
-<p>nl http :                    // archive.cs.uu.nl/your-project/ contact [at] cs.uu.nl<br />
-          uk http :          // mirrors.this.org/your-project/ mirrors [at] this.org<br />
+<p>nl http :                    // archive.cs.uu.nl/your-project/ contact [at] cs.uu.nl<br/>
+          uk http :          // mirrors.this.org/your-project/ mirrors [at] this.org<br/>
                     us http: // mirrors.that.org/your-project/ mirrors [at] that.org</p>
 <p> The email addresses are optional.</p>
 <dt>* Create a mirmon config file &quot;mirmon.conf&quot; with your favorite editor.</dt>

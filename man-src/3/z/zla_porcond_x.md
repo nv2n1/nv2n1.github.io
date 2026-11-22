@@ -10,7 +10,7 @@ description: "zla_porcond_x.f –"
 <p>zla_porcond_x.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>zla_porcond_x</code> (UPLO, N, A, LDA, AF, LDAF, X, INFO, WORK, RWORK)<br />
+<p>DOUBLE PRECISION function <code>zla_porcond_x</code> (UPLO, N, A, LDA, AF, LDAF, X, INFO, WORK, RWORK)<br/>
  <i></i><code>ZLA_PORCOND_X</code> computes the infinity norm condition number of op(A)*diag(x) for Hermitian positive-definite matrices.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function zla_porcond_x (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldaf, * )AF, integerLDAF, complex*16, dimension( * )X, integerINFO, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK)</h3>

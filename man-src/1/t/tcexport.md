@@ -14,8 +14,8 @@ description: "tcexport – Simple frontend to transcode’s encoding subsystem"
 <h2>COPYRIGHT</h2>
 <p> <code>tcexport</code> is Copyright (C) by Francesco Romani </p>
 <h2>DESCRIPTION</h2>
-<p> <code>tcexport</code> was designed as a debug tool for transcode&#8217;s encoding code: it fits in a very limited range of usage cases; however, it can also be used independently if you like.<br />
- tcexport encodes and multiplexes a raw YUV4MPEG2/WAV V/A stream using given parameters and transcode encoder components. tecexport provides direct and complete access to transcode&#8217;s encoding features and modules, but hasn&#8217;t any of transcode import/extracting/decoding/filtering capabilities. Use some other tc* tool if you need those facilities.<br />
+<p> <code>tcexport</code> was designed as a debug tool for transcode&#8217;s encoding code: it fits in a very limited range of usage cases; however, it can also be used independently if you like.<br/>
+ tcexport encodes and multiplexes a raw YUV4MPEG2/WAV V/A stream using given parameters and transcode encoder components. tecexport provides direct and complete access to transcode&#8217;s encoding features and modules, but hasn&#8217;t any of transcode import/extracting/decoding/filtering capabilities. Use some other tc* tool if you need those facilities.<br/>
  tcexport&#8217;s options are intentionally made similar, or identical if feasible, to corresponding transcode&#8217;s encoding options. </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -80,10 +80,10 @@ description: "tcexport – Simple frontend to transcode’s encoding subsystem"
 <p>&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>error while reading/writing from/to a file </p>
 <p>&nbsp;<wbr>3&nbsp;<wbr>&nbsp;<wbr>requested an inexistent&nbsp;<wbr>(or unreadable)&nbsp;<wbr>module </p>
 <p>&nbsp;<wbr>4&nbsp;<wbr>&nbsp;<wbr>a module raised an internal error </p>
-<p>&nbsp;<wbr>5&nbsp;<wbr>&nbsp;<wbr>error while probing input file(s). Make sure they are of right format.<br />
+<p>&nbsp;<wbr>5&nbsp;<wbr>&nbsp;<wbr>error while probing input file(s). Make sure they are of right format.<br/>
  64 internal error. Please provide a report of what&#8217;s happened on transcode-devel mailing list </p>
 <h2>AUTHORS</h2>
-<p> <code>tcexport</code> was written by Francesco Romani<br />
+<p> <code>tcexport</code> was written by Francesco Romani<br/>
  &lt;fromani [at] gmail.com&gt; with contributions from the Transcode Team and many others. See AUTHORS for details. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tccat/">tccat</a></code>(1), <code><a href="/docs/linux/man/1-tcdecode/">tcdecode</a></code>(1), <code><a href="/docs/linux/man/1-tcdemux/">tcdemux</a></code>(1), <code><a href="/docs/linux/man/1-tcextract/">tcextract</a></code>(1), <code><a href="/docs/linux/man/1-tcprobe/">tcprobe</a></code>(1), <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) <code><a href="/docs/linux/man/1-tcmodinfo/">tcmodinfo</a></code>(1) </p>

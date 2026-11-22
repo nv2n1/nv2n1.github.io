@@ -10,9 +10,9 @@ description: "qodem – Qodem Terminal Emulator"
 
 <p> qodem &#8211; Qodem Terminal Emulator</p>
 <h2>SYNOPSIS</h2>
-<p> <code>qodem</code> [ &#8211;enable-capture FILENAME ]<br />
- [ [ &#8211;connect HOST [ &#8211;connect-method method ]<br />
- [ &#8211;username name ] ] |<br />
+<p> <code>qodem</code> [ &#8211;enable-capture FILENAME ]<br/>
+ [ [ &#8211;connect HOST [ &#8211;connect-method method ]<br/>
+ [ &#8211;username name ] ] |<br/>
  args&#8230; ] </p>
 <dl>
 <dt><code>qodem</code> [ &#8211;help | -h | -? ]</dt>
@@ -21,26 +21,26 @@ description: "qodem – Qodem Terminal Emulator"
 <h2>DESCRIPTION</h2>
 <p> <i>Qodem</i> is an open-source clone implementation of the popular DOS-based Qmodem serial communications program. Qodem incorporates many features that are useful on all kinds of text-based consoles such as scrollback buffer, session capture, screen dump, dialing directory, and also includes serial port handling and modem dialing. </p>
 <p> The major features of Qodem are: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Unicode display: translation of CP437&nbsp;<wbr>(PC VGA), VT100 DEC Special<br />
-&nbsp;<wbr>Graphics characters, VT220 National Replacement Character sets,<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Unicode display: translation of CP437&nbsp;<wbr>(PC VGA), VT100 DEC Special<br/>
+&nbsp;<wbr>Graphics characters, VT220 National Replacement Character sets,<br/>
 &nbsp;<wbr>etc., to Unicode </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Terminal interface conveniences: scrollback buffer, capture file,<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Terminal interface conveniences: scrollback buffer, capture file,<br/>
 &nbsp;<wbr>screen dump, dialing directory, keyboard macros, script support </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Connection methods: serial, local shell, command line, telnet,<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Connection methods: serial, local shell, command line, telnet,<br/>
 &nbsp;<wbr>ssh, rlogin, rsh </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Emulations: ANSI, Avatar, VT52, VT100/102, VT220, Linux, and XTerm </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Transfer protocols: Xmodem, Ymodem, Zmodem, and Kermit </p>
 <h2>TERMINAL REQUIREMENTS</h2>
 <p> Qodem requires the following characteristics of its shell/terminal: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Unicode capability.&nbsp;<wbr>&nbsp;<wbr>The raw Linux console, UXTerm, URxvt,<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Unicode capability.&nbsp;<wbr>&nbsp;<wbr>The raw Linux console, UXTerm, URxvt,<br/>
 &nbsp;<wbr>Konsole, and gnome-terminal all work well. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>A Unicode font that includes the CP437&nbsp;<wbr>(PC VGA)&nbsp;<wbr>glyphs. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>The meta key must use escape prefixing rather than setting the 8th<br />
-&nbsp;<wbr>bit on the character.&nbsp;<wbr>&nbsp;<wbr>Many terminal emulators do this by<br />
-&nbsp;<wbr>default.&nbsp;<wbr>&nbsp;<wbr>Qodem sends an xterm escape sequence to enable this<br />
-&nbsp;<wbr>behavior.&nbsp;<wbr>&nbsp;<wbr>For XTerm, this can be enabled by clicking<br />
-&nbsp;<wbr>CTRL-Mouse1&nbsp;<wbr>(left button)&nbsp;<wbr>and checking&nbsp;<wbr>&quot;Meta Sends Escape&quot;, or by<br />
-&nbsp;<wbr>adding the following lines to&nbsp;<wbr>~/.Xresources:<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>The meta key must use escape prefixing rather than setting the 8th<br/>
+&nbsp;<wbr>bit on the character.&nbsp;<wbr>&nbsp;<wbr>Many terminal emulators do this by<br/>
+&nbsp;<wbr>default.&nbsp;<wbr>&nbsp;<wbr>Qodem sends an xterm escape sequence to enable this<br/>
+&nbsp;<wbr>behavior.&nbsp;<wbr>&nbsp;<wbr>For XTerm, this can be enabled by clicking<br/>
+&nbsp;<wbr>CTRL-Mouse1&nbsp;<wbr>(left button)&nbsp;<wbr>and checking&nbsp;<wbr>&quot;Meta Sends Escape&quot;, or by<br/>
+&nbsp;<wbr>adding the following lines to&nbsp;<wbr>~/.Xresources:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>XTerm*metaSendsEscape: true</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>UXTerm*metaSendsEscape: true</p>
 <h2>EMULATIONS</h2>
@@ -80,9 +80,9 @@ description: "qodem – Qodem Terminal Emulator"
 <dd> Supports the original robust (slow) Kermit plus streaming and autostart. On reliable connections with streaming it should perform reasonably well. Does not yet support long or extra-long packets, RESEND/REGET, server mode, or sliding windows. </dd>
 </dl>
 <h2>INTERFACE</h2>
-<p> <code>Phonebook</code><br />
+<p> <code>Phonebook</code><br/>
  When qodem first starts up, by default it will start in the phonebook. The menu on the bottom half of the screen lists the various actions available. When editing a phonebook entry, the status line will change to show options for each field. Connecting to a system or leaving the phonebook puts qodem in Terminal Mode. </p>
-<p> <code>Terminal Mode</code><br />
+<p> <code>Terminal Mode</code><br/>
  Terminal Mode is the main qodem terminal emulator interface. <code>Alt-Z</code> will bring up a help menu. While in Terminal Mode the following actions are supported:</p>
 <dl>
 <dt><code>Alt-D Phonebook</code></dt>
@@ -162,14 +162,14 @@ description: "qodem – Qodem Terminal Emulator"
 <dt><code>Alt-U Scrollback Record</code></dt>
 <dd> This selects whether or not lines that scroll off the top of the screen will be saved to the scrollback buffer.</dd>
 <dt><code>Alt-= Doorway Mode</code></dt>
-<dd> This selects between three doorway modes: &quot;Doorway OFF&quot;, &quot;Doorway MIXED&quot; and &quot;Doorway FULL&quot;. When doorway mode is &quot;Doorway OFF&quot;, terminal mode responds to all of its command keys as described in this section. When doorway mode is &quot;Doorway FULL&quot;, all Alt- command keystrokes except <code>Alt-=</code> are passed to the remote side. When doorway mode is &quot;Doorway MIXED&quot;, terminal mode supports a few commands but passes the majority of Alt- command keystrokes to the remote side. The default commands supported in &quot;Doorway MIXED&quot; mode are:<br />
-&nbsp;<wbr>&nbsp;<wbr>Alt-D Phonebook<br />
-&nbsp;<wbr>&nbsp;<wbr>Alt-P Capture<br />
-&nbsp;<wbr>&nbsp;<wbr>Alt-T Screen Dump<br />
-&nbsp;<wbr>&nbsp;<wbr>Alt-Y COM Parameters<br />
-&nbsp;<wbr>&nbsp;<wbr>Alt-Z Menu<br />
-&nbsp;<wbr>&nbsp;<wbr>Alt-/&nbsp;<wbr>Scrollback<br />
-&nbsp;<wbr>&nbsp;<wbr>Alt-PgUp or Ctrl-PgUp Upload Files<br />
+<dd> This selects between three doorway modes: &quot;Doorway OFF&quot;, &quot;Doorway MIXED&quot; and &quot;Doorway FULL&quot;. When doorway mode is &quot;Doorway OFF&quot;, terminal mode responds to all of its command keys as described in this section. When doorway mode is &quot;Doorway FULL&quot;, all Alt- command keystrokes except <code>Alt-=</code> are passed to the remote side. When doorway mode is &quot;Doorway MIXED&quot;, terminal mode supports a few commands but passes the majority of Alt- command keystrokes to the remote side. The default commands supported in &quot;Doorway MIXED&quot; mode are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>Alt-D Phonebook<br/>
+&nbsp;<wbr>&nbsp;<wbr>Alt-P Capture<br/>
+&nbsp;<wbr>&nbsp;<wbr>Alt-T Screen Dump<br/>
+&nbsp;<wbr>&nbsp;<wbr>Alt-Y COM Parameters<br/>
+&nbsp;<wbr>&nbsp;<wbr>Alt-Z Menu<br/>
+&nbsp;<wbr>&nbsp;<wbr>Alt-/&nbsp;<wbr>Scrollback<br/>
+&nbsp;<wbr>&nbsp;<wbr>Alt-PgUp or Ctrl-PgUp Upload Files<br/>
 &nbsp;<wbr>&nbsp;<wbr>Alt-PgDn or Ctrl-PgDn Download Files</dd>
 <dt><code>Alt&#8211; Status Lines</code></dt>
 <dd> This toggles the status line on or off.</dd>
@@ -183,45 +183,45 @@ description: "qodem – Qodem Terminal Emulator"
 <p> UTF-8 is NOT supported in filenames, modem strings, and remote addresses. </p>
 <h2>SCRIPT SUPPORT</h2>
 <p> Qodem does not have its own scripting language. Instead, any program that reads and writes to the standard input and output can be run as a Qodem script: </p>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Characters sent from the remote connection are visible to the<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Characters sent from the remote connection are visible to the<br/>
 script in its standard input. </p>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Characters the script emits to its standard output are passed on<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Characters the script emits to its standard output are passed on<br/>
 the remote connection. </p>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Messages to the standard error are reported to the user and also<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Messages to the standard error are reported to the user and also<br/>
 recorded in the session log. </p>
 <p> Since scripts are communicating with the remote system and not Qodem itself, they are unable to script Qodem&#8217;s behavior, e.g. change the terminal emulation, hangup and dial another phonebook entry, download a file, etc. However, they can be written in any language, and they can be tested outside Qodem. </p>
 <p> Scripts replace the user, and as such have similar constraints: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Script standard input, output, and error must all be in UTF-8 encoding. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Scripts should send carriage return&nbsp;<wbr>(0x0D, or&nbsp;<wbr>
-)&nbsp;<wbr>instead of new<br />
+)&nbsp;<wbr>instead of new<br/>
 &nbsp;<wbr>line&nbsp;<wbr>(0x0A, or&nbsp;<wbr>
-)&nbsp;<wbr>to the remote side &#8211; the same as if a user<br />
-&nbsp;<wbr>pressed the Enter key.&nbsp;<wbr>&nbsp;<wbr>They should expect to see either bare<br />
+)&nbsp;<wbr>to the remote side &#8211; the same as if a user<br/>
+&nbsp;<wbr>pressed the Enter key.&nbsp;<wbr>&nbsp;<wbr>They should expect to see either bare<br/>
 &nbsp;<wbr>carriage return&nbsp;<wbr>(0x0D, or&nbsp;<wbr>
-)&nbsp;<wbr>or carriage return followed by<br />
+)&nbsp;<wbr>or carriage return followed by<br/>
 &nbsp;<wbr>newline&nbsp;<wbr>(0x0D 0x0A, or&nbsp;<wbr>
 )&nbsp;<wbr>from the remote side. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Input and output translate byte translation&nbsp;<wbr>(the Alt-A Translate Tables)&nbsp;<wbr>are honored for scripts. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>While a script is running:<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Zmodem and Kermit autostart are disabled.<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Keyboard function key macros are disabled.<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Qodem functions accessed through the Alt-character<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>combinations and PgUp/PgDn are unavailable.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>While a script is running:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Zmodem and Kermit autostart are disabled.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Keyboard function key macros are disabled.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Qodem functions accessed through the Alt-character<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>combinations and PgUp/PgDn are unavailable.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211; Pressing Alt-P will pause the script. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>While a script is paused:<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; The script will receive nothing on its standard input.<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Anything in the script&#8217;s standard output will be held until<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the script is resumed.<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; The script process will not be signaled;&nbsp;<wbr>it may continue<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>running in its own process.<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; The only Alt-character function recognized is AltP to<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>resume the script.&nbsp;<wbr>&nbsp;<wbr>All other Alt- keys will be ignored.<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Keys pressed will be sent directly to the remote system.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>While a script is paused:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; The script will receive nothing on its standard input.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Anything in the script&#8217;s standard output will be held until<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the script is resumed.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; The script process will not be signaled;&nbsp;<wbr>it may continue<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>running in its own process.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; The only Alt-character function recognized is AltP to<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>resume the script.&nbsp;<wbr>&nbsp;<wbr>All other Alt- keys will be ignored.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Keys pressed will be sent directly to the remote system.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211; Keyboard function key macros will work. </p>
 <p> Scripts are launched in two ways: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>In TERMINAL mode, press Alt-F and enter the script filename.&nbsp;<wbr>&nbsp;<wbr>The<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>In TERMINAL mode, press Alt-F and enter the script filename.&nbsp;<wbr>&nbsp;<wbr>The<br/>
 &nbsp;<wbr>script will start immediately. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>In the phonebook, add a script filename to a phonebook entry.&nbsp;<wbr>&nbsp;<wbr>The<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>In the phonebook, add a script filename to a phonebook entry.&nbsp;<wbr>&nbsp;<wbr>The<br/>
 &nbsp;<wbr>script will start once that entry is connected. </p>
 <p> Script command-line arguments can be passed directly in both the Alt-F script dialog and the phonebook linked script field. For example, pressing Alt-F and entering &quot;my_script.pl arg1&quot; will launch my_script.pl and with its first command-line argument ($ARGV[0] in Perl) set to &quot;arg1&quot;. </p>
 <h2>OPTIONS</h2>

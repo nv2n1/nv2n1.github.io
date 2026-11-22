@@ -16,7 +16,7 @@ use namespace::clean;
 <p>A class for collecting Lintian tags as they are found</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>tag (<font SIZE="-1">ARGS</font>)</dt>
+<dt>tag (ARGS)</dt>
 <dd>Store found tags for later processing.</dd>
 <dt>tags</dt>
 <dd></dd></dl>

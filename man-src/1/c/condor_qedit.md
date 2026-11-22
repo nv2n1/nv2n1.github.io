@@ -47,13 +47,13 @@ description: "condor_qedit modify job attributes"
 </dt><dd> Modify job attributes in the queue of the schedd specified in the specified pool</dd>
 </dl>
 <h2>Examples</h2>
-<p> % condor_qedit -name north.cs.wisc.edu -pool condor.cs.wisc.edu 249.0 answer 42<br />
- Set attribute &quot;answer&quot;.<br />
- % condor_qedit -name perdita 1849.0 In &#8216;&quot;myinput&quot;&#8217;<br />
- Set attribute &quot;In&quot;.<br />
- % condor_qedit jbasney NiceUser TRUE<br />
- Set attribute &quot;NiceUser&quot;.<br />
- % condor_qedit -constraint &#8216;JobUniverse == 1&#8217; Requirements &#8216;(Arch == &quot;INTEL&quot;) &amp;&amp; (OpSys == &quot;SOLARIS26&quot;) &amp;&amp; (Disk &gt;= ExecutableSize) &amp;&amp; (VirtualMemory &gt;= ImageSize)&#8217;<br />
+<p> % condor_qedit -name north.cs.wisc.edu -pool condor.cs.wisc.edu 249.0 answer 42<br/>
+ Set attribute &quot;answer&quot;.<br/>
+ % condor_qedit -name perdita 1849.0 In &#8216;&quot;myinput&quot;&#8217;<br/>
+ Set attribute &quot;In&quot;.<br/>
+ % condor_qedit jbasney NiceUser TRUE<br/>
+ Set attribute &quot;NiceUser&quot;.<br/>
+ % condor_qedit -constraint &#8216;JobUniverse == 1&#8217; Requirements &#8216;(Arch == &quot;INTEL&quot;) &amp;&amp; (OpSys == &quot;SOLARIS26&quot;) &amp;&amp; (Disk &gt;= ExecutableSize) &amp;&amp; (VirtualMemory &gt;= ImageSize)&#8217;<br/>
  Set attribute &quot;Requirements&quot;. </p>
 <h2>General Remarks</h2>
 <p> A job&#8217;s ClassAd attributes may be viewed with </p>

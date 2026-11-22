@@ -14,7 +14,7 @@ description: "pfunc – grep for perl functions"
     pfunc subroutine FILES...
 </pre>
 <h2>DESCRIPTION</h2>
-<p> <code>pfunc</code> searches the named <font SIZE="-1">FILES</font> for all calls to the given subroutine. It will report back the file and line number each call is found on along with what sort of call it is </p>
+<p> <code>pfunc</code> searches the named FILES for all calls to the given subroutine. It will report back the file and line number each call is found on along with what sort of call it is </p>
 <pre>
     function            foo()
     class method        Class-&gt;foo()

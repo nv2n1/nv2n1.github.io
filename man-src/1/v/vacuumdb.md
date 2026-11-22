@@ -49,7 +49,7 @@ description: "vacuumdb – garbage-collect and analyze a PostgreSQL database"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Tip</code> </font><br />
+  <code>Tip</code> <br/>
  If you specify columns, you probably have to escape the parentheses from the shell. (See examples below.) </dd>
 </dl>
 </dl>

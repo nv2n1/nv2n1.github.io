@@ -14,9 +14,9 @@ char *nl_langinfo(nl_item item);
 char *nl_langinfo_l(nl_item item, locale_t locale);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>nl_langinfo_l</code>():</p>
 <dl>
-<dd>Since glibc 2.24:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
- Glibc 2.23 and earlier:<br />
+<dd>Since glibc 2.24:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br/>
+ Glibc 2.23 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>Description</h2>
 <p>The <code>nl_langinfo</code>() and <code>nl_langinfo_l</code>() functions provide access to locale information in a more flexible way than <code><a href="/docs/linux/man/3-localeconv/">localeconv</a></code>(3). <code>nl_langinfo</code>() returns a string which is the value corresponding to <i>item</i> in the program&#8217;s current global locale. <code>nl_langinfo_l</code>() returns a string which is the value corresponding to <i>item</i> for the locale identified by the locale object <i>locale</i>, which was previously created by <code>newlocale</code>(1). Individual and additional elements of the locale categories can be queried. <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3) needs to be executed with proper arguments before. </p>

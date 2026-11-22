@@ -10,19 +10,19 @@ description: "vacall – C functions called with variable arguments"
 <p>vacall &#8211; C functions called with variable arguments</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;vacall.h&gt;</code></pre>
-<p> <code>extern void* vacall_function;</code> void function(alist)<br />
-    va_alist alist;<br />
-{<br />
-    va_start_type(alist[, return_type]);<br />
-    arg = va_arg_type(alist[, arg_type]);<br />
-    va_return_type(alist[[, return_type ], return_value]);<br />
-}<br />
-vacall_function = &amp;function;<br />
+<p> <code>extern void* vacall_function;</code> void function(alist)<br/>
+    va_alist alist;<br/>
+{<br/>
+    va_start_type(alist[, return_type]);<br/>
+    arg = va_arg_type(alist[, arg_type]);<br/>
+    va_return_type(alist[[, return_type ], return_value]);<br/>
+}<br/>
+vacall_function = &amp;function;<br/>
 val = ((return_type(*)())vacall)(arg1, arg2, &#8230;);</p>
 <h2>Description</h2>
-<p>This set of macros permit a C function <i>function</i> to be called with variable arguments and to return variable return values. This is much like the <code>varargs</code>(3) facility, but also allows the return value to be specified at run time. Function calling conventions differ considerably on different machines, and <i>vacall</i> attempts to provide some degree of isolation from such architecture dependencies. The function that can be called with any number and type of arguments and which will return any type of return value is <code>vacall</code>. It will do some magic and call the function stored in the variable <code>vacall_function</code>. If you want to make more than one use of <i>vacall</i>, use the <i><a href="/docs/linux/man/3-trampoline/">trampoline</a></i>(3) facility to store <i>&amp;function</i> into <code>vacall_function</code> just before calling <code>vacall</code>. Within<br />
+<p>This set of macros permit a C function <i>function</i> to be called with variable arguments and to return variable return values. This is much like the <code>varargs</code>(3) facility, but also allows the return value to be specified at run time. Function calling conventions differ considerably on different machines, and <i>vacall</i> attempts to provide some degree of isolation from such architecture dependencies. The function that can be called with any number and type of arguments and which will return any type of return value is <code>vacall</code>. It will do some magic and call the function stored in the variable <code>vacall_function</code>. If you want to make more than one use of <i>vacall</i>, use the <i><a href="/docs/linux/man/3-trampoline/">trampoline</a></i>(3) facility to store <i>&amp;function</i> into <code>vacall_function</code> just before calling <code>vacall</code>. Within<br/>
     function,</p>
-<p>    the following macros can be used to walk through the argument list and<br />
+<p>    the following macros can be used to walk through the argument list and<br/>
         specify a return value :</p>
 <p>    va_start_type(alist[, return_type]);</p>
 <p>starts the walk through the argument list and specifies the return type.arg = va_arg_type(alist[, arg_type]);</p>
@@ -38,22 +38,22 @@ val = ((return_type(*)())vacall)(arg1, arg2, &#8230;);</p>
 <h2>Notes</h2>
 <p>Functions which want to emulate Kernighan &amp; Ritchie style functions (i.e., in ANSI C, functions without a typed argument list) cannot use the <i>type</i> values <code>char</code>, <code>schar</code>, <code>uchar</code>, <code>short</code>, <code>ushort</code>, <code>float</code>. As prescribed by the default K&amp;R C expression promotions, they have to use <code>int</code> instead of <code>char</code>, <code>schar</code>, <code>uchar</code>, <code>short</code>, <code>ushort</code> and <code>double</code> instead of <code>float</code>. The macros <code>va_start_longlong()</code>, <code>va_start_ulonglong()</code>, <code>va_return_longlong()</code>, <code>va_return_ulonglong()</code>, <code>va_arg_longlong()</code> and <code>va_arg_ulonglong()</code> work only if the C compiler has a working <code>long long</code> 64-bit integer type. The struct types used in <code>va_start_struct()</code> and <code>va_struct()</code> must only contain (signed or unsigned) int, long, long long or pointer fields. Struct types containing (signed or unsigned) char, short, float, double or other structs are not supported. </p>
 <h2>Example</h2>
-<p>This example, a possible implementation of <code><a href="/docs/linux/man/3-execl/">execl</a></code>(3) on top of <code>execv</code>(2) using <code>varargs</code>(3), #include &lt;varargs.h&gt;<br />
-#define MAXARGS 100<br />
-/* execl is called by execl(file, arg1, arg2, &#8230;, (char *)0); */<br />
-int execl(va_alist)<br />
-    va_dcl<br />
-{<br />
-    va_list ap;<br />
-    char *file;<br />
-    char *args[MAXARGS];<br />
-    int argno = 0;<br />
-    va_start(ap);<br />
-    file = va_arg(ap, char *);<br />
-    while ((args[argno] = va_arg(ap, char *)) != (char *)0)<br />
-        argno++;<br />
-    va_end(ap);<br />
-    return execv(file, args);<br />
+<p>This example, a possible implementation of <code><a href="/docs/linux/man/3-execl/">execl</a></code>(3) on top of <code>execv</code>(2) using <code>varargs</code>(3), #include &lt;varargs.h&gt;<br/>
+#define MAXARGS 100<br/>
+/* execl is called by execl(file, arg1, arg2, &#8230;, (char *)0); */<br/>
+int execl(va_alist)<br/>
+    va_dcl<br/>
+{<br/>
+    va_list ap;<br/>
+    char *file;<br/>
+    char *args[MAXARGS];<br/>
+    int argno = 0;<br/>
+    va_start(ap);<br/>
+    file = va_arg(ap, char *);<br/>
+    while ((args[argno] = va_arg(ap, char *)) != (char *)0)<br/>
+        argno++;<br/>
+    va_end(ap);<br/>
+    return execv(file, args);<br/>
 } looks like this using <code><a href="/docs/linux/man/3-vacall/">vacall</a></code>(3): </p>
 <pre><code>#include &lt;vacall.h&gt;
 #define MAXARGS 100

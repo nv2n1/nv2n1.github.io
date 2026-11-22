@@ -166,7 +166,7 @@ description: "java – the Java application launcher"
 <p> Always use a local file system for storage of this file to avoid stalling the JVM due to network latency. The file may be truncated in the case of a full file system and logging will continue on the truncated file. This option overrides <i>-verbose:gc</i> if both are given on the command line. </p>
 <dl>
 <dt>-Xmsn</dt>
-<dd>Specify the initial size, in bytes, of the memory allocation pool. This value must be a multiple of 1024 greater than 1MB. Append the letter <i>k</i> or <i>K</i> to indicate kilobytes, or <i>m</i> or <i>M</i> to indicate megabytes. The default value is chosen at runtime based on system configuration. For more information, see HotSpot Ergonomics<br />
+<dd>Specify the initial size, in bytes, of the memory allocation pool. This value must be a multiple of 1024 greater than 1MB. Append the letter <i>k</i> or <i>K</i> to indicate kilobytes, or <i>m</i> or <i>M</i> to indicate megabytes. The default value is chosen at runtime based on system configuration. For more information, see HotSpot Ergonomics<br/>
  Examples:</dd>
 <dl>
 <dd>
@@ -176,7 +176,7 @@ description: "java – the Java application launcher"
  </code></pre>
 </dd></dl>
 <dt>-Xmxn</dt>
-<dd>Specify the maximum size, in bytes, of the memory allocation pool. This value must a multiple of 1024 greater than 2MB. Append the letter <i>k</i> or <i>K</i> to indicate kilobytes, or <i>m</i> or <i>M</i> to indicate megabytes. The default value is chosen at runtime based on system configuration. For more information, see HotSpot Ergonomics<br />
+<dd>Specify the maximum size, in bytes, of the memory allocation pool. This value must a multiple of 1024 greater than 2MB. Append the letter <i>k</i> or <i>K</i> to indicate kilobytes, or <i>m</i> or <i>M</i> to indicate megabytes. The default value is chosen at runtime based on system configuration. For more information, see HotSpot Ergonomics<br/>
  Examples:</dd>
 <dl>
 <dd>

@@ -173,7 +173,7 @@ description: "rpmorphan – find orphaned packages"
 <p> rpmorphan uses standard perl module in console mode. </p>
 <p> If you want to use the Tk graphical interface, you should install the Tk module (perl-Tk rpm package). </p>
 <p> If you want to use the curses interface, you should install the Curses::UI perl module ( perl-Curses-UI rpm package). </p>
-<p> If you want to speed up rpmorphan, you should install the <font SIZE="-1">RPM2</font> perl module ( perl-RPM2 rpm package). On mandriva, the <font SIZE="-1">URPM</font> perl module (dependency from urpmi) will be used instead.</p>
+<p> If you want to speed up rpmorphan, you should install the RPM2 perl module ( perl-RPM2 rpm package). On mandriva, the URPM perl module (dependency from urpmi) will be used instead.</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>display orphaned libraries</dt>
@@ -200,8 +200,8 @@ description: "rpmorphan – find orphaned packages"
 <p> For Mandriva users : the &#8216;urpme &#8211;auto-orphans&#8217; command show quickly a a list of unused library packages.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1">RPMORPHAN_METHOD</font></dt>
-<dd> for experts only : allow to force the method used to get rpm data. It can be set to <font SIZE="-1">URPM, RPM2</font> or &#8216;basic&#8217; (for external rpm query)</dd></dl>
+<dt>RPMORPHAN_METHOD</dt>
+<dd> for experts only : allow to force the method used to get rpm data. It can be set to URPM, RPM2 or &#8216;basic&#8217; (for external rpm query)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>rpm</i>(1) for rpm call </p>
 <p> <i><a href="/docs/linux/man/1-rpmusage/">rpmusage</a></i>(1) </p>
@@ -211,7 +211,7 @@ description: "rpmorphan – find orphaned packages"
 <h2>EXIT STATUS</h2>
 <p> should be allways 0</p>
 <h2>LICENSE AND COPYRIGHT</h2>
-<p> Copyright (C) 2006 by Eric Gerbier This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p> Copyright (C) 2006 by Eric Gerbier This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
 <h2>AUTHOR</h2>
 <p> Eric Gerbier </p>
 <p> you can report any bug or suggest to gerbier [at] users.sourceforge.net </p>

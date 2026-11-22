@@ -10,52 +10,52 @@ description: "uuid – Universally Unique Identifier Command-Line Tool"
 
 <p> uuid &#8211; Universally Unique Identifier Command-Line Tool </p>
 <h2>VERSION</h2>
-<p> <font SIZE="-1">OSSP</font> uuid <font SIZE="-1">1.6.2 (04-Jul-2008)</font></p>
+<p> OSSP uuid 1.6.2 (04-Jul-2008)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>uuid</code> [<code>-v</code> <i>version</i>] [<code>-m</code>] [<code>-n</code> <i>count</i>] [<code>-1</code>] [<code>-F</code> <i>format</i>] [<code>-o</code> <i>filename</i>] [<i>namespace</i> <i>name</i>] </p>
 <p> <code>uuid</code> <code>-d</code> [<code>-r</code>] [<code>-o</code> <i>filename</i>] <i>uuid</i></p>
 <h2>DESCRIPTION</h2>
-<p> <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> is a <font SIZE="-1">ISO-C:1999</font> application programming interface (<font SIZE="-1">API</font>) and corresponding command line interface (<font SIZE="-1">CLI</font>) for the generation of <font SIZE="-1">DCE 1.1, ISO/IEC 11578:1996</font> and <font SIZE="-1">IETF RFC-4122</font> compliant <i>Universally Unique Identifier</i> (<font SIZE="-1">UUID</font>). It supports <font SIZE="-1">DCE 1.1</font> variant UUIDs of version 1 (time and node based), version 3 (name based, <font SIZE="-1">MD5</font>), version 4 (random number based) and version 5 (name based, <font SIZE="-1">SHA-1</font>). Additional <font SIZE="-1">API</font> bindings are provided for the languages <font SIZE="-1">ISO-C<font SIZE="-2">++</font>:1998,</font> Perl:5 and <font SIZE="-1">PHP:4/5.</font> Optional backward compatibility exists for the ISO-C <font SIZE="-1">DCE-1.1</font> and Perl Data::UUID APIs. </p>
+<p> <code>OSSP</code><code> uuid</code> is a ISO-C:1999 application programming interface (API) and corresponding command line interface (CLI) for the generation of DCE 1.1, ISO/IEC 11578:1996 and IETF RFC-4122 compliant <i>Universally Unique Identifier</i> (UUID). It supports DCE 1.1 variant UUIDs of version 1 (time and node based), version 3 (name based, MD5), version 4 (random number based) and version 5 (name based, SHA-1). Additional API bindings are provided for the languages ISO-C++:1998, Perl:5 and PHP:4/5. Optional backward compatibility exists for the ISO-C DCE-1.1 and Perl Data::UUID APIs. </p>
 <p> UUIDs are 128 bit numbers which are intended to have a high likelihood of uniqueness over space and time and are computationally difficult to guess. They are globally unique identifiers which can be locally generated without contacting a global registration authority. UUIDs are intended as unique identifiers for both mass tagging objects with an extremely short lifetime and to reliably identifying very persistent objects across a network. </p>
-<p> This is the command line interface (<font SIZE="-1">CLI</font>) of <font SIZE="-1"><code>OSSP</code></font><code> uuid</code>. For a detailed description of UUIDs see the documentation of the application programming interface (<font SIZE="-1">API</font>) in <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3).</p>
+<p> This is the command line interface (CLI) of <code>OSSP</code><code> uuid</code>. For a detailed description of UUIDs see the documentation of the application programming interface (API) in <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3).</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-v</code> <i>version</i></dt>
-<dd> Sets the version of the generated <font SIZE="-1">DCE 1.1</font> variant <font SIZE="-1">UUID.</font> Supported are <i>version</i> &quot;<tt>1</tt>&#8220;, &#8221;<tt>3</tt>&#8220;, &#8221;<tt>4</tt>&#8220; and &#8221;<tt>5</tt>&#8220;. The default is &#8221;<tt>1</tt>&quot;. </dd>
-<p> For version 3 and version 5 UUIDs the additional command line arguments <i>namespace</i> and <i>name</i> have to be given. The <i>namespace</i> is either a <font SIZE="-1">UUID</font> in string representation or an identifier for internally pre-defined namespace UUIDs (currently known are &quot;<tt> ns:DNS<br />
- </tt>&#8220;, &#8221;<tt> ns:URL<br />
- </tt>&#8220;, &#8221;<tt> ns:OID<br />
- </tt>&#8220;, and &#8221;<tt> ns:X500<br />
+<dd> Sets the version of the generated DCE 1.1 variant UUID. Supported are <i>version</i> &quot;<tt>1</tt>&#8220;, &#8221;<tt>3</tt>&#8220;, &#8221;<tt>4</tt>&#8220; and &#8221;<tt>5</tt>&#8220;. The default is &#8221;<tt>1</tt>&quot;. </dd>
+<p> For version 3 and version 5 UUIDs the additional command line arguments <i>namespace</i> and <i>name</i> have to be given. The <i>namespace</i> is either a UUID in string representation or an identifier for internally pre-defined namespace UUIDs (currently known are &quot;<tt> ns:DNS<br/>
+ </tt>&#8220;, &#8221;<tt> ns:URL<br/>
+ </tt>&#8220;, &#8221;<tt> ns:OID<br/>
+ </tt>&#8220;, and &#8221;<tt> ns:X500<br/>
  </tt>&quot;). The <i>name</i> is a string of arbitrary length.</p>
 <dt><code>-m</code></dt>
-<dd> Forces the use of a random multi-cast <font SIZE="-1">MAC</font> address when generating version 1 UUIDs. By default the real physical <font SIZE="-1">MAC</font> address of the system is used.</dd>
+<dd> Forces the use of a random multi-cast MAC address when generating version 1 UUIDs. By default the real physical MAC address of the system is used.</dd>
 <dt><code>-n</code> <i>count</i></dt>
 <dd> Generate <i>count</i> UUIDs instead of just a single one (the default).</dd>
 <dt><code>-1</code></dt>
-<dd> If option <code>-n</code> is used with a <i>count</i> greater than <tt>1</tt>, then this option can enforce the reset the <font SIZE="-1">UUID</font> context for each generated <font SIZE="-1">UUID.</font> This makes no difference for <i>version</i> <tt>3</tt>, <tt>4</tt> and <tt>5</tt> UUIDs. But version <tt>1</tt> UUIDs are based on the previously generated <font SIZE="-1">UUID</font> which is remembered in the <font SIZE="-1">UUID</font> context of the <font SIZE="-1">API.</font> Option <code>-1</code> deletes the remembered <font SIZE="-1">UUID</font> on each iteration.</dd>
+<dd> If option <code>-n</code> is used with a <i>count</i> greater than <tt>1</tt>, then this option can enforce the reset the UUID context for each generated UUID. This makes no difference for <i>version</i> <tt>3</tt>, <tt>4</tt> and <tt>5</tt> UUIDs. But version <tt>1</tt> UUIDs are based on the previously generated UUID which is remembered in the UUID context of the API. Option <code>-1</code> deletes the remembered UUID on each iteration.</dd>
 <dt><code>-F</code> <i>format</i></dt>
-<dd> Representation format for importing or exporting an <font SIZE="-1">UUID.</font> The following (case insensitive) format identifiers are currently recognized:</dd>
+<dd> Representation format for importing or exporting an UUID. The following (case insensitive) format identifiers are currently recognized:</dd>
 <dl>
 <dl>
-<dt> BIN<br />
+<dt> BIN<br/>
  (binary representation)</dt>
-<dd> This is the raw 128 bit network byte order binary representation of a <font SIZE="-1">UUID.</font> Example is the octet stream <tt> 0xF8 0x1D 0x4F 0xAE 0x7D 0xEC 0x11 0xD0 0xA7 0x65 0x00 0xA0 0xC9 0x1E 0x6B 0xF6<br />
+<dd> This is the raw 128 bit network byte order binary representation of a UUID. Example is the octet stream <tt> 0xF8 0x1D 0x4F 0xAE 0x7D 0xEC 0x11 0xD0 0xA7 0x65 0x00 0xA0 0xC9 0x1E 0x6B 0xF6<br/>
  </tt>.</dd>
-<dt> STR<br />
+<dt> STR<br/>
  (string representation)</dt>
-<dd> This is the 36 character hexadecimal <font SIZE="-1">ASCII</font> string representation of a <font SIZE="-1">UUID.</font> Example is the string &quot;<tt> f81d4fae-7dec-11d0-a765-00a0c91e6bf6<br />
+<dd> This is the 36 character hexadecimal ASCII string representation of a UUID. Example is the string &quot;<tt> f81d4fae-7dec-11d0-a765-00a0c91e6bf6<br/>
  </tt>&quot;.</dd>
-<dt> SIV<br />
+<dt> SIV<br/>
  (single integer value representation)</dt>
-<dd> This is the maximum 39 character long single integer value representation of a <font SIZE="-1">UUID.</font> Example is the string &quot;<tt>329800735698586629295641978511506172918</tt>&quot;.</dd></dl>
+<dd> This is the maximum 39 character long single integer value representation of a UUID. Example is the string &quot;<tt>329800735698586629295641978511506172918</tt>&quot;.</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt><code>-o</code> <i>filename</i></dt>
 <dd> Write output to <i>filename</i> instead of to <i>stdout</i>.</dd>
 <dt><code>-d</code></dt>
-<dd> Decode a given <font SIZE="-1">UUID</font> (given as a command line argument or if the command line argument is &quot;<tt> -<br />
- </tt>&quot; the <font SIZE="-1">UUID</font> is read from <i>stdin</i>) and dump textual information about the <font SIZE="-1">UUID.</font></dd></dl>
+<dd> Decode a given UUID (given as a command line argument or if the command line argument is &quot;<tt> -<br/>
+ </tt>&quot; the UUID is read from <i>stdin</i>) and dump textual information about the UUID.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
  # generate DCE 1.1 v1 UUID (time and node based)

@@ -13,14 +13,14 @@ description: "ANTLR3_HASH_ENTRY_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Public Member Functions</h3>
-<p> <code>void</code> (ANTLR3_CDECL *free)(void *<code>data</code>)<br />
+<p> <code>void</code> (ANTLR3_CDECL *free)(void *<code>data</code>)<br/>
  <i>Pointer to routine that knows how to release the memory structure pointed at by data. </i></p>
 <h3>Data Fields</h3>
-<p> void * <code>data</code><br />
- <i>Pointer to the data for this particular entry. </i><br />
- <code>ANTLR3_HASH_KEY</code> <code>keybase</code><br />
- <i>Key that created this particular entry. </i><br />
- struct <code>ANTLR3_HASH_ENTRY_struct</code> * <code>nextEntry</code><br />
+<p> void * <code>data</code><br/>
+ <i>Pointer to the data for this particular entry. </i><br/>
+ <code>ANTLR3_HASH_KEY</code> <code>keybase</code><br/>
+ <i>Key that created this particular entry. </i><br/>
+ struct <code>ANTLR3_HASH_ENTRY_struct</code> * <code>nextEntry</code><br/>
  <i>Pointer to the next entry in this bucket if there is one. </i></p>
 <h2>Detailed Description</h2>
 <p> Internal structure representing an element in a hash bucket. </p>

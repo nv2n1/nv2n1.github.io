@@ -11,7 +11,7 @@ description: "clarz.f –"
 <p> clarz.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clarz</code> (SIDE, M, N, L, V, INCV, TAU, C, LDC, WORK)<br />
+<p> subroutine <code>clarz</code> (SIDE, M, N, L, V, INCV, TAU, C, LDC, WORK)<br/>
  <i></i><code>CLARZ</code> applies an elementary reflector (as returned by stzrzf) to a general matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clarz (characterSIDE, integerM, integerN, integerL, complex, dimension( * )V, integerINCV, complexTAU, complex, dimension( ldc, * )C, integerLDC, complex, dimension( * )WORK)</h3>

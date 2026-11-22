@@ -7,10 +7,10 @@ url: "/docs/linux/man/1-firstaidkit/"
 ---
 
 <h2>NAME FirstAidKit</h2>
-<p> <code>.SH</code>SYNOPSIS firstaidkit [options] [-a | &#8211;auto] [fix | FLOW ]<br />
- firstaidkit [options] [-f | &#8211;flow ] PLUGIN FLOW<br />
- firstaidkit [options] &#8211;print-config<br />
- firstaidkit [options] &#8211;list<br />
+<p> <code>.SH</code>SYNOPSIS firstaidkit [options] [-a | &#8211;auto] [fix | FLOW ]<br/>
+ firstaidkit [options] [-f | &#8211;flow ] PLUGIN FLOW<br/>
+ firstaidkit [options] &#8211;print-config<br/>
+ firstaidkit [options] &#8211;list<br/>
  firstaidkit [options] &#8211;info &lt;plugin&gt; </p>
 <p> <code>.SH</code>DESCRIPTION Firstaidkit executes simple and common recovery tasks in an automated way. The basic elements in the system are: backend plugin system, the plugins and the plugin flows. The plugins can be thought of as individual recovery units. Each unit having the possibility of holding varioius types of processes, but still focused on one specific subsystem. There can be a plugin for password recovery for example. This plugin would take care of all the possible processes related to password recovery. In the password recovery plugin there would only be one process: to recover the password. But other plugins might need to executing more than one process. Like if you would like to diagnose before actually fixing something. </p>
 <p> Plugin flows are structures that represent the different processes. You will usually find two default flows in a plugin (with known exceptions): The diagnose flow and the fix flow. When in diagnose no changes to the system should be done. Only information should be taken from the system and output through the firstaidkit reporting system (this basically means a log file or stdout. It all depends on the configuration parameters when executing firstaidkit). When in fix mode an attempt will be made to modify the system to fix whatever was found to be missconfigured. </p>

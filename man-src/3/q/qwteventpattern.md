@@ -13,39 +13,39 @@ description: "QwtEventPattern –"
 <p>#include &lt;qwt_event_pattern.h&gt; </p>
 <p> Inherited by <code>QwtPicker</code>.</p>
 <h3>Classes</h3>
-<p>class <code>KeyPattern</code><br />
- <i>A pattern for key events. </i><br />
- class <code>MousePattern</code><br />
+<p>class <code>KeyPattern</code><br/>
+ <i>A pattern for key events. </i><br/>
+ class <code>MousePattern</code><br/>
  <i>A pattern for mouse events. </i></p>
 <h3>Public Types</h3>
-<p>enum <code>MousePatternCode</code> { <code>MouseSelect1</code>, <code>MouseSelect2</code>, <code>MouseSelect3</code>, <code>MouseSelect4</code>, <code>MouseSelect5</code>, <code>MouseSelect6</code>, <code>MousePatternCount</code> }<br />
- <i>Symbolic mouse input codes. </i><br />
- enum <code>KeyPatternCode</code> { <code>KeySelect1</code>, <code>KeySelect2</code>, <code>KeyAbort</code>, <code>KeyLeft</code>, <code>KeyRight</code>, <code>KeyUp</code>, <code>KeyDown</code>, <code>KeyRedo</code>, <code>KeyUndo</code>, <code>KeyHome</code>, <code>KeyPatternCount</code> }<br />
+<p>enum <code>MousePatternCode</code> { <code>MouseSelect1</code>, <code>MouseSelect2</code>, <code>MouseSelect3</code>, <code>MouseSelect4</code>, <code>MouseSelect5</code>, <code>MouseSelect6</code>, <code>MousePatternCount</code> }<br/>
+ <i>Symbolic mouse input codes. </i><br/>
+ enum <code>KeyPatternCode</code> { <code>KeySelect1</code>, <code>KeySelect2</code>, <code>KeyAbort</code>, <code>KeyLeft</code>, <code>KeyRight</code>, <code>KeyUp</code>, <code>KeyDown</code>, <code>KeyRedo</code>, <code>KeyUndo</code>, <code>KeyHome</code>, <code>KeyPatternCount</code> }<br/>
  <i>Symbolic keyboard input codes. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtEventPattern</code> () </p>
-<p> virtual <code>~QwtEventPattern</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtEventPattern</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>initMousePattern</code> (int numButtons) </p>
 <p> void <code>initKeyPattern</code> () </p>
 <p> void <code>setMousePattern</code> (<code>MousePatternCode</code>, Qt::MouseButton button, Qt::KeyboardModifiers=Qt::NoModifier) </p>
 <p> void <code>setKeyPattern</code> (<code>KeyPatternCode</code>, int keyCode, Qt::KeyboardModifiers modifierCodes=Qt::NoModifier) </p>
-<p> void <code>setMousePattern</code> (const QVector&lt; <code>MousePattern</code> &gt; &amp;)<br />
- <i>Change the mouse event patterns. </i><br />
- void <code>setKeyPattern</code> (const QVector&lt; <code>KeyPattern</code> &gt; &amp;)<br />
- <i>Change the key event patterns. </i><br />
+<p> void <code>setMousePattern</code> (const QVector&lt; <code>MousePattern</code> &gt; &amp;)<br/>
+ <i>Change the mouse event patterns. </i><br/>
+ void <code>setKeyPattern</code> (const QVector&lt; <code>KeyPattern</code> &gt; &amp;)<br/>
+ <i>Change the key event patterns. </i><br/>
  const QVector&lt; <code>MousePattern</code> &gt; &amp; <code>mousePattern</code> () const </p>
 <p> const QVector&lt; <code>KeyPattern</code> &gt; &amp; <code>keyPattern</code> () const </p>
 <p> QVector&lt; <code>MousePattern</code> &gt; &amp; <code>mousePattern</code> () </p>
 <p> QVector&lt; <code>KeyPattern</code> &gt; &amp; <code>keyPattern</code> () </p>
-<p> bool <code>mouseMatch</code> (<code>MousePatternCode</code>, const QMouseEvent *) const<br />
- <i>Compare a mouse event with an event pattern. </i><br />
- bool <code>keyMatch</code> (<code>KeyPatternCode</code>, const QKeyEvent *) const<br />
+<p> bool <code>mouseMatch</code> (<code>MousePatternCode</code>, const QMouseEvent *) const<br/>
+ <i>Compare a mouse event with an event pattern. </i><br/>
+ bool <code>keyMatch</code> (<code>KeyPatternCode</code>, const QKeyEvent *) const<br/>
  <i>Compare a key event with an event pattern. </i></p>
 <h3>Protected Member Functions</h3>
-<p>virtual bool <code>mouseMatch</code> (const <code>MousePattern</code> &amp;, const QMouseEvent *) const<br />
- <i>Compare a mouse event with an event pattern. </i><br />
- virtual bool <code>keyMatch</code> (const <code>KeyPattern</code> &amp;, const QKeyEvent *) const<br />
+<p>virtual bool <code>mouseMatch</code> (const <code>MousePattern</code> &amp;, const QMouseEvent *) const<br/>
+ <i>Compare a mouse event with an event pattern. </i><br/>
+ virtual bool <code>keyMatch</code> (const <code>KeyPattern</code> &amp;, const QKeyEvent *) const<br/>
  <i>Compare a key event with an event pattern. </i></p>
 <h2>Detailed Description</h2>
 <p>A collection of event patterns. </p>
@@ -177,7 +177,7 @@ description: "QwtEventPattern –"
 <p>Compare a key event with an event pattern. A key event matches the pattern when both have the same key value and in the state value the same key flags (Qt::KeyButtonMask) are set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>code</i> Index of the event pattern<br />
+<dd><i>code</i> Index of the event pattern<br/>
  <i>event</i> Key event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -189,7 +189,7 @@ description: "QwtEventPattern –"
 <p>Compare a key event with an event pattern. A key event matches the pattern when both have the same key value and in the state value the same key flags (Qt::KeyButtonMask) are set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pattern</i> Key event pattern<br />
+<dd><i>pattern</i> Key event pattern<br/>
  <i>event</i> Key event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -209,7 +209,7 @@ description: "QwtEventPattern –"
 <p>Compare a mouse event with an event pattern. A mouse event matches the pattern when both have the same button value and in the state value the same key flags(Qt::KeyButtonMask) are set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>code</i> Index of the event pattern<br />
+<dd><i>code</i> Index of the event pattern<br/>
  <i>event</i> Mouse event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -221,7 +221,7 @@ description: "QwtEventPattern –"
 <p>Compare a mouse event with an event pattern. A mouse event matches the pattern when both have the same button value and in the state value the same key flags(Qt::KeyButtonMask) are set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pattern</i> Mouse event pattern<br />
+<dd><i>pattern</i> Mouse event pattern<br/>
  <i>event</i> Mouse event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -241,8 +241,8 @@ description: "QwtEventPattern –"
 <p>Change one key pattern </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pattern</i> Index of the pattern<br />
- <i>key</i> Key<br />
+<dd><i>pattern</i> Index of the pattern<br/>
+ <i>key</i> Key<br/>
  <i>modifiers</i> Keyboard modifiers</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -251,8 +251,8 @@ description: "QwtEventPattern –"
 <p>Change one mouse pattern </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pattern</i> Index of the pattern<br />
- <i>button</i> Button<br />
+<dd><i>pattern</i> Index of the pattern<br/>
+ <i>button</i> Button<br/>
  <i>modifiers</i> Keyboard modifiers</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

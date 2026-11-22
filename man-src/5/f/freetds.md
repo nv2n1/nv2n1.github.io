@@ -147,7 +147,7 @@ description: "freetds.conf – configuration file for FreeTDS"
 </dd><dt><code>0x8000thread id (not implemented).</code></dt>
 <dd></dd></dl>
 <h2>Names And Locations</h2>
-<p>The file is normally named<br />
+<p>The file is normally named<br/>
  /etc/freetds.conf or ${HOME}/.freetds.conf That name can be overridden with the FREETDSCONF environment variable. </p>
 <p> FreeTDS will search conf files for a servername in the following order: </p>
 <ol>

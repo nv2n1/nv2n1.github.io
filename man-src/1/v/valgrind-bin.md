@@ -461,39 +461,39 @@ PROGRESS: U 130s, W 134s, 97.0% CPU, EvC 574.90M, TIn 657.5k, TOut 3.0k, #thr 63
 <dl COMPACT>
 <dd>&bull; <i>CPU</i>: overall average cpu use.RE </dd>
 <dl COMPACT>
-<dd>&bull; <i>EvC</i>: number of event checks. An event<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;check is a backwards branch in the simulated program, so this is a<br />
+<dd>&bull; <i>EvC</i>: number of event checks. An event<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;check is a backwards branch in the simulated program, so this is a<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;measure of forward progress of the program.RE </dd>
 <dl COMPACT>
-<dd>&bull; <i>TIn</i>: number of code blocks instrumented<br />
+<dd>&bull; <i>TIn</i>: number of code blocks instrumented<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;by the JIT.RE </dd>
 <dl COMPACT>
-<dd>&bull; <i>TOut</i>: number of instrumented code<br />
+<dd>&bull; <i>TOut</i>: number of instrumented code<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;blocks that have been thrown away.RE </dd>
 <dl COMPACT>
-<dd>&bull; <i>#thr</i>: number of threads in the<br />
+<dd>&bull; <i>#thr</i>: number of threads in the<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;program.RE </dd>
 <p> From the progress of these, it is possible to observe: </p>
 <dl COMPACT>
-<dd>&bull; when the program is compute bound (<i>TIn</i><br />
+<dd>&bull; when the program is compute bound (<i>TIn</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rises slowly,&nbsp;<i>EvC</i>&nbsp;rises rapidly).RE </dd>
 <dl COMPACT>
-<dd>&bull; when the program is in a spinloop<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(<i>TIn</i>/<i>TOut</i><br />
+<dd>&bull; when the program is in a spinloop<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(<i>TIn</i>/<i>TOut</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fixed,&nbsp;<i>EvC</i>&nbsp;rises rapidly).RE </dd>
 <dl COMPACT>
-<dd>&bull; when the program is JIT-bound (<i>TIn</i><br />
+<dd>&bull; when the program is JIT-bound (<i>TIn</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rises rapidly).RE </dd>
 <dl COMPACT>
-<dd>&bull; when the program is rapidly discarding code<br />
+<dd>&bull; when the program is rapidly discarding code<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(<i>TOut</i>&nbsp;rises rapidly).RE </dd>
 <dl COMPACT>
-<dd>&bull; when the program is about to achieve some expected state<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(<i>EvC</i>&nbsp;arrives at some value you<br />
+<dd>&bull; when the program is about to achieve some expected state<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(<i>EvC</i>&nbsp;arrives at some value you<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;expect).RE </dd>
 <dl COMPACT>
-<dd>&bull;<br />
-&nbsp;when the program is idling&nbsp;(<i>U</i>&nbsp;rises<br />
+<dd>&bull;<br/>
+&nbsp;when the program is idling&nbsp;(<i>U</i>&nbsp;rises<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;more slowly than&nbsp;<i>W</i>).RE </dd>
 </dl>
 </dl>
@@ -747,26 +747,26 @@ PROGRESS: U 130s, W 134s, 97.0% CPU, EvC 574.90M, TIn 657.5k, TOut 3.0k, #thr 63
 <p> <code>&#8211;delta-stacktrace=yes</code> indicates to Helgrind to derive a new stacktrace from the previous stacktrace, as long as there was no call instruction, no return instruction, or any other instruction changing the call stack since the previous stacktrace was captured. If no such instruction was executed, the new stacktrace can be derived from the previous stacktrace by just changing the top frame to the current program counter. This option can speed up Helgrind by 25% when using <code>&#8211;history-level=full</code>. </p>
 <p> The following aspects have to be considered when using <code>&#8211;delta-stacktrace=yes</code> : </p>
 <dl COMPACT>
-<dd>&bull; In some cases (for example in a function prologue), the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;valgrind unwinder might not properly unwind the stack, due to some<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;limitations and/or due to wrong unwind info. When using<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;delta-stacktrace=yes, the wrong stack trace captured in the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;function prologue will be kept till the next call or return.<br />
+<dd>&bull; In some cases (for example in a function prologue), the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;valgrind unwinder might not properly unwind the stack, due to some<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;limitations and/or due to wrong unwind info. When using<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;delta-stacktrace=yes, the wrong stack trace captured in the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;function prologue will be kept till the next call or return.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.RE </dd>
 <dl COMPACT>
-<dd>&bull; On the other hand, &#8211;delta-stacktrace=yes sometimes helps to<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;obtain a correct stacktrace, for example when the unwind info allows<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a correct stacktrace to be done in the beginning of the sequence,<br />
+<dd>&bull; On the other hand, &#8211;delta-stacktrace=yes sometimes helps to<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;obtain a correct stacktrace, for example when the unwind info allows<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a correct stacktrace to be done in the beginning of the sequence,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;but not later on in the instruction sequence..RE </dd>
 <dl COMPACT>
-<dd>&bull; Determining which instructions are changing the callstack is<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;partially based on platform dependent heuristics, which have to be<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tuned/validated specifically for the platform. Also, unwinding in a<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;function prologue must be good enough to allow using<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;delta-stacktrace=yes. Currently, the option &#8211;delta-stacktrace=yes<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;has been reasonably validated only on linux x86 32 bits and linux<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;amd64 64 bits. For more details about how to validate<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;delta-stacktrace=yes, see debug option &#8211;hg-sanity-flags and the<br />
+<dd>&bull; Determining which instructions are changing the callstack is<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;partially based on platform dependent heuristics, which have to be<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tuned/validated specifically for the platform. Also, unwinding in a<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;function prologue must be good enough to allow using<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;delta-stacktrace=yes. Currently, the option &#8211;delta-stacktrace=yes<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;has been reasonably validated only on linux x86 32 bits and linux<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;amd64 64 bits. For more details about how to validate<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;delta-stacktrace=yes, see debug option &#8211;hg-sanity-flags and the<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;function check_cached_rcec_ok in libhb_core.c..RE </dd>
 </dl>
 <p> <code>&#8211;conflict-cache-size=N [default: 1000000] </code></p>
@@ -960,7 +960,7 @@ PROGRESS: U 130s, W 134s, 97.0% CPU, EvC 574.90M, TIn 657.5k, TOut 3.0k, #thr 63
 <dl COMPACT>
 <dd>Changes the function for which calls are counted when <code>&#8211;basic-counts=yes</code> is specified.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-cg_annotate/">cg_annotate</a>(1), <a href="/docs/linux/man/1-callgrind_annotate/">callgrind_annotate</a>(1), <a href="/docs/linux/man/1-callgrind_control/">callgrind_control</a>(1), <a href="/docs/linux/man/1-ms_print/">ms_print</a>(1), $INSTALL/share/doc/valgrind/html/index.html or <a rel="nofollow" href="http://www.valgrind.org/docs/manual/index.html,">http://www.valgrind.org/docs/manual/index.html,</a> m[blue]<code>Debugging your program using Valgrind&#8217;s gdbserver and GDB</code>m[]<font SIZE="-2">[1]</font> m[blue]<code>vgdb</code>m[]<font SIZE="-2">[2]</font>, m[blue]<code>Valgrind monitor commands</code>m[]<font SIZE="-2">[3]</font>, m[blue]<code>The Commentary</code>m[]<font SIZE="-2">[4]</font>, m[blue]<code>Scheduling and Multi-Thread Performance</code>m[]<font SIZE="-2">[5]</font>, m[blue]<code>Cachegrind: a cache and branch-prediction profiler</code>m[]<font SIZE="-2">[6]</font>.</p>
+<p><a href="/docs/linux/man/1-cg_annotate/">cg_annotate</a>(1), <a href="/docs/linux/man/1-callgrind_annotate/">callgrind_annotate</a>(1), <a href="/docs/linux/man/1-callgrind_control/">callgrind_control</a>(1), <a href="/docs/linux/man/1-ms_print/">ms_print</a>(1), $INSTALL/share/doc/valgrind/html/index.html or <a rel="nofollow" href="http://www.valgrind.org/docs/manual/index.html,">http://www.valgrind.org/docs/manual/index.html,</a> m[blue]<code>Debugging your program using Valgrind&#8217;s gdbserver and GDB</code>m[][1] m[blue]<code>vgdb</code>m[][2], m[blue]<code>Valgrind monitor commands</code>m[][3], m[blue]<code>The Commentary</code>m[][4], m[blue]<code>Scheduling and Multi-Thread Performance</code>m[][5], m[blue]<code>Cachegrind: a cache and branch-prediction profiler</code>m[][6].</p>
 <h2>Author</h2>
 <p>See the AUTHORS file in the valgrind distribution for a comprehensive list of authors. </p>
 <p> This manpage was written by Andres Roldan &lt;aroldan [at] debian.org&gt; and the Valgrind developers.</p>

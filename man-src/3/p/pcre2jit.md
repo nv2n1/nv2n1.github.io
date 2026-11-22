@@ -13,11 +13,11 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <p> JIT support applies only to the traditional Perl-compatible matching function. It does not apply when the DFA matching function is being used. The code for this support was written by Zoltan Herczeg.</p>
 <h2>Availability Of Jit Support</h2>
 <p>JIT support is an optional feature of PCRE2. The &quot;configure&quot; option &#8211;enable-jit (or equivalent CMake option) must be set when PCRE2 is built if you want to use JIT. The support is limited to the following hardware platforms: </p>
-<p>&nbsp;<wbr>&nbsp;ARM 32-bit&nbsp;(v5, v7, and Thumb2)<br />
-&nbsp;<wbr>&nbsp;ARM 64-bit<br />
-&nbsp;<wbr>&nbsp;Intel x86 32-bit and 64-bit<br />
-&nbsp;<wbr>&nbsp;MIPS 32-bit and 64-bit<br />
-&nbsp;<wbr>&nbsp;Power PC 32-bit and 64-bit<br />
+<p>&nbsp;<wbr>&nbsp;ARM 32-bit&nbsp;(v5, v7, and Thumb2)<br/>
+&nbsp;<wbr>&nbsp;ARM 64-bit<br/>
+&nbsp;<wbr>&nbsp;Intel x86 32-bit and 64-bit<br/>
+&nbsp;<wbr>&nbsp;MIPS 32-bit and 64-bit<br/>
+&nbsp;<wbr>&nbsp;Power PC 32-bit and 64-bit<br/>
 &nbsp;<wbr>&nbsp;SPARC 32-bit </p>
 <p> If &#8211;enable-jit is set on an unsupported platform, compilation fails. </p>
 <p> A program can tell if JIT support is available by calling <code>pcre2_config()</code> with the PCRE2_CONFIG_JIT option. The result is 1 when JIT is available, and 0 otherwise. However, a simple program does not need to check this in order to use JIT. The API is implemented in a way that falls back to the interpretive code if JIT is not available. For programs that need the best possible performance, there is also a &quot;fast path&quot; API that is JIT-specific.</p>
@@ -46,32 +46,32 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <p>When the compiled JIT code runs, it needs a block of memory to use as a stack. By default, it uses 32KiB on the machine stack. However, some large or complicated patterns need more than this. The error PCRE2_ERROR_JIT_STACKLIMIT is given when there is not enough stack. Three functions are provided for managing blocks of memory for use as JIT stacks. There is further discussion about the use of JIT stacks in the section entitled &quot;JIT stack FAQ&quot; below. </p>
 <p> The <code>pcre2_jit_stack_create()</code> function creates a JIT stack. Its arguments are a starting size, a maximum size, and a general context (for memory allocation functions, or NULL for standard memory allocation). It returns a pointer to an opaque structure of type <code>pcre2_jit_stack</code>, or NULL if there is an error. The <code>pcre2_jit_stack_free()</code> function is used to free a stack that is no longer needed. If its argument is NULL, this function returns immediately, without doing anything. (For the technically minded: the address space is allocated by mmap or VirtualAlloc.) A maximum stack size of 512KiB to 1MiB should be more than enough for any pattern. </p>
 <p> The <code>pcre2_jit_stack_assign()</code> function specifies which stack JIT code should use. Its arguments are as follows: </p>
-<p>&nbsp;<wbr>&nbsp;pcre2_match_context&nbsp;<wbr>&nbsp;*mcontext<br />
-&nbsp;<wbr>&nbsp;pcre2_jit_callback&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;callback<br />
+<p>&nbsp;<wbr>&nbsp;pcre2_match_context&nbsp;<wbr>&nbsp;*mcontext<br/>
+&nbsp;<wbr>&nbsp;pcre2_jit_callback&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;callback<br/>
 &nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*data </p>
 <p> The first argument is a pointer to a match context. When this is subsequently passed to a matching function, its information determines which JIT stack is used. If this argument is NULL, the function returns immediately, without doing anything. There are three cases for the values of the other two options: </p>
-<p>&nbsp;<wbr>&nbsp;(1)&nbsp;If&nbsp;<i>callback</i>&nbsp;is NULL and&nbsp;<i>data</i>&nbsp;is NULL, an internal 32KiB block<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;on the machine stack is used. This is the default when a match<br />
+<p>&nbsp;<wbr>&nbsp;(1)&nbsp;If&nbsp;<i>callback</i>&nbsp;is NULL and&nbsp;<i>data</i>&nbsp;is NULL, an internal 32KiB block<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;on the machine stack is used. This is the default when a match<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;context is created. </p>
-<p>&nbsp;<wbr>&nbsp;(2)&nbsp;If&nbsp;<i>callback</i>&nbsp;is NULL and&nbsp;<i>data</i>&nbsp;is not NULL,&nbsp;<i>data</i>&nbsp;must be<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a pointer to a valid JIT stack, the result of calling<br />
+<p>&nbsp;<wbr>&nbsp;(2)&nbsp;If&nbsp;<i>callback</i>&nbsp;is NULL and&nbsp;<i>data</i>&nbsp;is not NULL,&nbsp;<i>data</i>&nbsp;must be<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a pointer to a valid JIT stack, the result of calling<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>pcre2_jit_stack_create()</code>. </p>
-<p>&nbsp;<wbr>&nbsp;(3)&nbsp;If&nbsp;<i>callback</i>&nbsp;is not NULL, it must point to a function that is<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;called with&nbsp;<i>data</i>&nbsp;as an argument at the start of matching, in<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;order to set up a JIT stack. If the return from the callback<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;function is NULL, the internal 32KiB stack is used;&nbsp;otherwise the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return value must be a valid JIT stack, the result of calling<br />
+<p>&nbsp;<wbr>&nbsp;(3)&nbsp;If&nbsp;<i>callback</i>&nbsp;is not NULL, it must point to a function that is<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;called with&nbsp;<i>data</i>&nbsp;as an argument at the start of matching, in<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;order to set up a JIT stack. If the return from the callback<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;function is NULL, the internal 32KiB stack is used;&nbsp;otherwise the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return value must be a valid JIT stack, the result of calling<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>pcre2_jit_stack_create()</code>. </p>
 <p> A callback function is obeyed whenever JIT code is about to be run; it is not obeyed when <code>pcre2_match()</code> is called with options that are incompatible for JIT matching. A callback function can therefore be used to determine whether a match operation was executed by JIT or by the interpreter. </p>
 <p> You may safely use the same JIT stack for more than one pattern (either by assigning directly or by callback), as long as the patterns are matched sequentially in the same thread. Currently, the only way to set up non-sequential matches in one thread is to use callouts: if a callout function starts another match, that match must use a different JIT stack to the one used for currently suspended match(es). </p>
 <p> In a multithread application, if you do not specify a JIT stack, or if you assign or pass back NULL from a callback, that is thread-safe, because each thread has its own machine stack. However, if you assign or pass back a non-NULL JIT stack, this must be a different stack for each thread so that the application is thread-safe. </p>
 <p> Strictly speaking, even more is allowed. You can assign the same non-NULL stack to a match context that is used by any number of patterns, as long as they are not used for matching by multiple threads at the same time. For example, you could use the same stack in all compiled patterns, with a global mutex in the callback to wait until the stack is available for use. However, this is an inefficient solution, and not recommended. </p>
 <p> This is a suggestion for how a multithreaded program that needs to set up non-default JIT stacks might operate: </p>
-<p>&nbsp;<wbr>&nbsp;During thread initalization<br />
+<p>&nbsp;<wbr>&nbsp;During thread initalization<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;thread_local_var&nbsp;=&nbsp;pcre2_jit_stack_create(&#8230;) </p>
-<p>&nbsp;<wbr>&nbsp;During thread exit<br />
+<p>&nbsp;<wbr>&nbsp;During thread exit<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pcre2_jit_stack_free(thread_local_var) </p>
-<p>&nbsp;<wbr>&nbsp;Use a one-line callback function<br />
+<p>&nbsp;<wbr>&nbsp;Use a one-line callback function<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return thread_local_var </p>
 <p> All the functions described in this section do nothing if JIT is not available.</p>
 <h2>Jit Stack Faq</h2>
@@ -94,23 +94,23 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <p>The JIT executable allocator does not free all memory when it is possible. It expects new allocations, and keeps some free memory around to improve allocation speed. However, in low memory conditions, it might be better to free all possible memory. You can cause this to happen by calling pcre2_jit_free_unused_memory(). Its argument is a general context, for custom memory management, or NULL for standard memory management.</p>
 <h2>Example Code</h2>
 <p>This is a single-threaded example that specifies a JIT stack without using a callback. A real program should include error checking after all the function calls. </p>
-<p>&nbsp;<wbr>&nbsp;int rc;<br />
-&nbsp;<wbr>&nbsp;pcre2_code&nbsp;*re;<br />
-&nbsp;<wbr>&nbsp;pcre2_match_data&nbsp;*match_data;<br />
-&nbsp;<wbr>&nbsp;pcre2_match_context&nbsp;*mcontext;<br />
+<p>&nbsp;<wbr>&nbsp;int rc;<br/>
+&nbsp;<wbr>&nbsp;pcre2_code&nbsp;*re;<br/>
+&nbsp;<wbr>&nbsp;pcre2_match_data&nbsp;*match_data;<br/>
+&nbsp;<wbr>&nbsp;pcre2_match_context&nbsp;*mcontext;<br/>
 &nbsp;<wbr>&nbsp;pcre2_jit_stack&nbsp;*jit_stack; </p>
-<p>&nbsp;<wbr>&nbsp;re&nbsp;=&nbsp;pcre2_compile(pattern, PCRE2_ZERO_TERMINATED, 0,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&amp;errornumber,&nbsp;&amp;erroffset, NULL);<br />
-&nbsp;<wbr>&nbsp;rc&nbsp;=&nbsp;pcre2_jit_compile(re, PCRE2_JIT_COMPLETE);<br />
-&nbsp;<wbr>&nbsp;mcontext&nbsp;=&nbsp;pcre2_match_context_create(NULL);<br />
-&nbsp;<wbr>&nbsp;jit_stack&nbsp;=&nbsp;pcre2_jit_stack_create(32*1024, 512*1024, NULL);<br />
-&nbsp;<wbr>&nbsp;pcre2_jit_stack_assign(mcontext, NULL, jit_stack);<br />
-&nbsp;<wbr>&nbsp;match_data&nbsp;=&nbsp;pcre2_match_data_create(re, 10);<br />
-&nbsp;<wbr>&nbsp;rc&nbsp;=&nbsp;pcre2_match(re, subject, length, 0, 0, match_data, mcontext);<br />
+<p>&nbsp;<wbr>&nbsp;re&nbsp;=&nbsp;pcre2_compile(pattern, PCRE2_ZERO_TERMINATED, 0,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&amp;errornumber,&nbsp;&amp;erroffset, NULL);<br/>
+&nbsp;<wbr>&nbsp;rc&nbsp;=&nbsp;pcre2_jit_compile(re, PCRE2_JIT_COMPLETE);<br/>
+&nbsp;<wbr>&nbsp;mcontext&nbsp;=&nbsp;pcre2_match_context_create(NULL);<br/>
+&nbsp;<wbr>&nbsp;jit_stack&nbsp;=&nbsp;pcre2_jit_stack_create(32*1024, 512*1024, NULL);<br/>
+&nbsp;<wbr>&nbsp;pcre2_jit_stack_assign(mcontext, NULL, jit_stack);<br/>
+&nbsp;<wbr>&nbsp;match_data&nbsp;=&nbsp;pcre2_match_data_create(re, 10);<br/>
+&nbsp;<wbr>&nbsp;rc&nbsp;=&nbsp;pcre2_match(re, subject, length, 0, 0, match_data, mcontext);<br/>
 &nbsp;<wbr>&nbsp;/*&nbsp;Process result&nbsp;*/ </p>
-<p>&nbsp;<wbr>&nbsp;pcre2_code_free(re);<br />
-&nbsp;<wbr>&nbsp;pcre2_match_data_free(match_data);<br />
-&nbsp;<wbr>&nbsp;pcre2_match_context_free(mcontext);<br />
+<p>&nbsp;<wbr>&nbsp;pcre2_code_free(re);<br/>
+&nbsp;<wbr>&nbsp;pcre2_match_data_free(match_data);<br/>
+&nbsp;<wbr>&nbsp;pcre2_match_context_free(mcontext);<br/>
 &nbsp;<wbr>&nbsp;pcre2_jit_stack_free(jit_stack);</p>
 <h2>Jit Fast Path Api</h2>
 <p>Because the API described above falls back to interpreted matching when JIT is not available, it is convenient for programs that are written for general use in many environments. However, calling JIT via <code>pcre2_match()</code> does have a performance impact. Programs that are written for use where JIT is known to be available, and which need the best possible performance, can instead use a &quot;fast path&quot; API to call JIT matching directly instead of calling <code>pcre2_match()</code> (obviously only for patterns that have been successfully processed by <code>pcre2_jit_compile()</code>). </p>

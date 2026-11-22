@@ -20,50 +20,50 @@ description: "atomic-trust – Manage system container trust policy"
 <p> The default trust policy is managed by the default command. Options are <code>accept</code> or <code>reject</code>. </p>
 <p> The default <code>/etc/containers/policy.json</code> file may be overriden using environment variable <code>TRUST_POLICY</code>. This is typically only useful for testing. </p>
 <h2>OPTIONS</h2>
-<p> <code>-h</code> <code>&#8211;help</code><br />
+<p> <code>-h</code> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement. </p>
-<p> <code>-k</code> <code>&#8211;pubkeys</code><br />
-&nbsp;<wbr>&nbsp;<wbr>A reference to a local file, download URL to an exported public key or a<br />
-&nbsp;<wbr>&nbsp;<wbr>local user GPG keyring ID&nbsp;<wbr>(see output of&nbsp;<wbr>&#8216;gpg2 &#8211;list-keys&#8217;). Keys are<br />
-&nbsp;<wbr>&nbsp;<wbr>parsed and encoded inline with policy.json. Option may be used multiple<br />
-&nbsp;<wbr>&nbsp;<wbr>times to require an image be sigend by multiple keys. One of<br />
-&nbsp;<wbr>&nbsp;<wbr><code>&#8211;pubkeys</code>&nbsp;<wbr>or&nbsp;<wbr><code>&#8211;pubkeysfile</code>&nbsp;<wbr>is required for&nbsp;<wbr><code>signedBy</code>&nbsp;<wbr>type. This<br />
+<p> <code>-k</code> <code>&#8211;pubkeys</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>A reference to a local file, download URL to an exported public key or a<br/>
+&nbsp;<wbr>&nbsp;<wbr>local user GPG keyring ID&nbsp;<wbr>(see output of&nbsp;<wbr>&#8216;gpg2 &#8211;list-keys&#8217;). Keys are<br/>
+&nbsp;<wbr>&nbsp;<wbr>parsed and encoded inline with policy.json. Option may be used multiple<br/>
+&nbsp;<wbr>&nbsp;<wbr>times to require an image be sigend by multiple keys. One of<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>&#8211;pubkeys</code>&nbsp;<wbr>or&nbsp;<wbr><code>&#8211;pubkeysfile</code>&nbsp;<wbr>is required for&nbsp;<wbr><code>signedBy</code>&nbsp;<wbr>type. This<br/>
 &nbsp;<wbr>&nbsp;<wbr>option is recommended over&nbsp;<wbr><code>&#8211;pubkeysfile</code>. </p>
-<p> <code>-f</code> <code>&#8211;pubkeysfile</code><br />
-&nbsp;<wbr>&nbsp;<wbr>A path to an exported public key on the local system. Key paths<br />
-&nbsp;<wbr>&nbsp;<wbr>will be referenced in policy.json. Any path may be used but path<br />
-&nbsp;<wbr>&nbsp;<wbr><code>/etc/pki/containers</code>&nbsp;<wbr>is recommended. Option may be used multiple times to<br />
-&nbsp;<wbr>&nbsp;<wbr>require an image be sigend by multiple keys. One of&nbsp;<wbr><code>&#8211;pubkeys</code>&nbsp;<wbr>or<br />
+<p> <code>-f</code> <code>&#8211;pubkeysfile</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>A path to an exported public key on the local system. Key paths<br/>
+&nbsp;<wbr>&nbsp;<wbr>will be referenced in policy.json. Any path may be used but path<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>/etc/pki/containers</code>&nbsp;<wbr>is recommended. Option may be used multiple times to<br/>
+&nbsp;<wbr>&nbsp;<wbr>require an image be sigend by multiple keys. One of&nbsp;<wbr><code>&#8211;pubkeys</code>&nbsp;<wbr>or<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>&#8211;pubkeysfile</code>&nbsp;<wbr>is required for&nbsp;<wbr><code>signedBy</code>&nbsp;<wbr>type. </p>
-<p> <code>&#8211;keytype</code><br />
+<p> <code>&#8211;keytype</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>The public key type. Default: GPGKeys&nbsp;<wbr>(only supported value) </p>
-<p> <code>-t</code> <code>&#8211;type</code><br />
-&nbsp;<wbr>&nbsp;<wbr>The trust type for this policy entry. Accepted values:<br />
-&nbsp;<wbr><code>signedBy</code>&nbsp;<wbr>(default): Require signatures with corresponding list of<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>public keys<br />
-&nbsp;<wbr><code>insecureAcceptAnything</code>: do not require any signatures for this<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>registry scope<br />
+<p> <code>-t</code> <code>&#8211;type</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>The trust type for this policy entry. Accepted values:<br/>
+&nbsp;<wbr><code>signedBy</code>&nbsp;<wbr>(default): Require signatures with corresponding list of<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>public keys<br/>
+&nbsp;<wbr><code>insecureAcceptAnything</code>: do not require any signatures for this<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>registry scope<br/>
 &nbsp;<wbr><code>reject</code>: do not accept images for this registry scope </p>
-<p> <code>-u</code> <code>&#8211;sigstore</code><br />
-&nbsp;<wbr>&nbsp;<wbr>A path or remote URL where signatures are found. Prefix filesystem path with<br />
+<p> <code>-u</code> <code>&#8211;sigstore</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>A path or remote URL where signatures are found. Prefix filesystem path with<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>file:///PATH</code>&nbsp;<wbr>and remote web server with&nbsp;<wbr><code> &lt;<a rel="nofollow" href="https://URL[:PORT][/PATH/TO/SIGNATURES">https://URL[:PORT][/PATH/TO/SIGNATURES</a>&gt;]</code>. </p>
-<p> <code>-s</code> <code>&#8211;sigstoretype</code><br />
-&nbsp;<wbr>&nbsp;<wbr>Type of signature transport. Accepted values:<br />
-&nbsp;<wbr><code>web</code>&nbsp;<wbr>(default): remote web server<br />
-&nbsp;<wbr><code>atomic</code>: OpenShift-based Atomic Registry API<br />
+<p> <code>-s</code> <code>&#8211;sigstoretype</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>Type of signature transport. Accepted values:<br/>
+&nbsp;<wbr><code>web</code>&nbsp;<wbr>(default): remote web server<br/>
+&nbsp;<wbr><code>atomic</code>: OpenShift-based Atomic Registry API<br/>
 &nbsp;<wbr><code>local</code>: Local filesystem path </p>
 <h2>delete OPTIONS</h2>
-<p> <code>&#8211;save-sigstore</code><br />
+<p> <code>&#8211;save-sigstore</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Do not remove local sigstore configuration. </p>
 <h2>default OPTIONS</h2>
 <p> The default trust policy is managed by the default command. Options are <code>accept</code> or <code>reject</code>. </p>
 <h2>show OPTIONS</h2>
-<p> <code>&#8211;raw</code><br />
+<p> <code>&#8211;raw</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Output trust policy file as raw JSON </p>
-<p> <code>-j</code> <code>&#8211;json</code><br />
+<p> <code>-j</code> <code>&#8211;json</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Output trust as JSON for machine parsing </p>
 <h2>reset</h2>
-<p> Resets <code>policy.json</code> to the default. Removes all YAML files in<br />
+<p> Resets <code>policy.json</code> to the default. Removes all YAML files in<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>/etc/containers/registries.d/</code>&nbsp;<wbr>except&nbsp;<wbr><code>default.yaml</code>. </p>
 <h2>EXAMPLES</h2>
 <p> Add public key trust to specific registry repository </p>

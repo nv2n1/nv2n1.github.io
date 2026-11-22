@@ -44,7 +44,7 @@ description: "memcached-tool – stats and management tool for memcached"
 <dd> Make a partial dump of the cache written in the add statements of the memcached protocol. </dd>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-memcached/">memcached</a></code>(1),<br />
+<p> <code><a href="/docs/linux/man/1-memcached/">memcached</a></code>(1),<br/>
  <code><a rel="nofollow" href="http://www.memcached.org">http://www.memcached.org</a></code> </p>
 <h2>AUTHOR</h2>
 <p> The memcached-tool script was written by Brad Fitzpatrick <code>&lt;brad [at] danga.com&gt;</code> </p>

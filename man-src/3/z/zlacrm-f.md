@@ -10,7 +10,7 @@ description: "zlacrm.f –"
 <p>zlacrm.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlacrm</code> (M, N, A, LDA, B, LDB, C, LDC, RWORK)<br />
+<p>subroutine <code>zlacrm</code> (M, N, A, LDA, B, LDB, C, LDC, RWORK)<br/>
  <i></i><code>ZLACRM</code> multiplies a complex matrix by a square real matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlacrm (integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldc, * )C, integerLDC, double precision, dimension( * )RWORK)</h3>

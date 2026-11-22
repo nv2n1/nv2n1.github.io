@@ -42,8 +42,8 @@ description: "docker-lvm-plugin – Docker Volume Driver for lvm volumes"
 </dd></dl>
 <p> This will create a thinpool named mythinpool of size 10G under volume group vg1. NOTE: thinpools are special kind of logical volumes carved out of the volume group. Hence in the above example, to create the thinpool mythinpool you must have atleast 10G of freespace in volume group vg1.</p>
 <h2>Options</h2>
-<p><code>-debug</code>=<i>true</i>|<i>false</i><br />
-&nbsp;<wbr>&nbsp;<wbr>Enable debug logging. Default is false. <code>-version</code>=<i>true</i>|<i>false</i><br />
+<p><code>-debug</code>=<i>true</i>|<i>false</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>Enable debug logging. Default is false. <code>-version</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print version information and quit. Default is false.</p>
 <h2>Examples</h2>
 <p><code>Volume Creation</code>  </p>
@@ -64,16 +64,16 @@ description: "docker-lvm-plugin – Docker Volume Driver for lvm volumes"
 <p> This will list volumes created by all docker drivers including the default driver (local). <code>Volume Inspect</code>  </p>
 <pre>docker volume inspect foobar</pre>
 </dl>
-<p> This will inspect foobar and return a JSON. [<br />
-&nbsp;<wbr>{<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;Driver&quot;:&nbsp;<wbr>&quot;lvm&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;Labels&quot;:&nbsp;<wbr>{},<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;Mountpoint&quot;:&nbsp;<wbr>&quot;/var/lib/docker-lvm-plugin/foobar&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;Name&quot;:&nbsp;<wbr>&quot;foobar&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;Options&quot;:&nbsp;<wbr>{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;size&quot;:&nbsp;<wbr>&quot;0.2G&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>},<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;Scope&quot;:&nbsp;<wbr>&quot;local&quot;<br />
+<p> This will inspect foobar and return a JSON. [<br/>
+&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;Driver&quot;:&nbsp;<wbr>&quot;lvm&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;Labels&quot;:&nbsp;<wbr>{},<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;Mountpoint&quot;:&nbsp;<wbr>&quot;/var/lib/docker-lvm-plugin/foobar&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;Name&quot;:&nbsp;<wbr>&quot;foobar&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;Options&quot;:&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;size&quot;:&nbsp;<wbr>&quot;0.2G&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>},<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;Scope&quot;:&nbsp;<wbr>&quot;local&quot;<br/>
 &nbsp;<wbr>} ] <code>Volume Removal</code>  </p>
 <pre>docker volume rm foobar</pre>
 </dl>

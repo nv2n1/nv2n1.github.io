@@ -95,7 +95,7 @@ foo.git Joe + R + Hacker + &lt;joe[at] example.com&gt; foo / bar.git O + W + Ner
 <dl>
 <dt>
 </dt><dd>
-read_config_file(&#8220;gitweb_config.perl&#8221;);<br />
+read_config_file(&#8220;gitweb_config.perl&#8221;);<br/>
 $projects_list = $projectroot;
 </dd></dl>
 <p> Then create the following script to get list of project in the format suitable for GITWEB_LIST build configuration variable (or <code>$projects_list</code> variable in gitweb config): </p>
@@ -137,14 +137,14 @@ our $export_ok = &quot;git-daemon-export-ok&quot;;
 <dl>
 <dt>
 </dt><dd>
-$export_auth_hook = sub<br />
-{<br />
-    use Apache2::SubRequest();<br />
-    use Apache2::Const &#8211; compile = &gt; qw(HTTP_OK);<br />
-    my $path = &#8220;$_[0]/HEAD&#8221;;<br />
-    my $r = Apache2::RequestUtil-&gt;request;<br />
-    my $sub = $r-&gt;lookup_file($path);<br />
-    return $sub-&gt;filename eq $path &amp;&amp; $sub-&gt;status == Apache2::Const::HTTP_OK;<br />
+$export_auth_hook = sub<br/>
+{<br/>
+    use Apache2::SubRequest();<br/>
+    use Apache2::Const &#8211; compile = &gt; qw(HTTP_OK);<br/>
+    my $path = &#8220;$_[0]/HEAD&#8221;;<br/>
+    my $r = Apache2::RequestUtil-&gt;request;<br/>
+    my $sub = $r-&gt;lookup_file($path);<br/>
+    return $sub-&gt;filename eq $path &amp;&amp; $sub-&gt;status == Apache2::Const::HTTP_OK;<br/>
 };
 </dd></dl>
 </dl>
@@ -374,17 +374,17 @@ Alias /gitweb/static /usr/share/gitweb/static
 <dl>
 <dt>
 </dt><dd>
-&lt;VirtualHost *:80&gt;<br />
-    ServerName    git.example.org<br />
-    DocumentRoot  /pub/git<br />
-    SetEnv        GITWEB_CONFIG   /etc/gitweb.conf<br />
-    # turning on mod rewrite<br />
-    RewriteEngine on<br />
-    # make the front page an internal rewrite to the gitweb script<br />
-    RewriteRule ^/$  /cgi-bin/gitweb.cgi<br />
-    # make access for &#8220;dumb clients&#8221; work<br />
-    RewriteRule ^/(.*\.git/(?!/?(HEAD|info|objects|refs)).*)?$ \<br />
-                /cgi-bin/gitweb.cgi%{REQUEST_URI}  [L,PT]<br />
+&lt;VirtualHost *:80&gt;<br/>
+    ServerName    git.example.org<br/>
+    DocumentRoot  /pub/git<br/>
+    SetEnv        GITWEB_CONFIG   /etc/gitweb.conf<br/>
+    # turning on mod rewrite<br/>
+    RewriteEngine on<br/>
+    # make the front page an internal rewrite to the gitweb script<br/>
+    RewriteRule ^/$  /cgi-bin/gitweb.cgi<br/>
+    # make access for &#8220;dumb clients&#8221; work<br/>
+    RewriteRule ^/(.*\.git/(?!/?(HEAD|info|objects|refs)).*)?$ \<br/>
+                /cgi-bin/gitweb.cgi%{REQUEST_URI}  [L,PT]<br/>
 &lt;/VirtualHost&gt;
 </dd></dl>
 <p> The above configuration expects your public repositories to live under <code>/pub/git</code> and will serve them as <code><a rel="nofollow" href="http://git.domain.org/dir-under-pub-git">http://git.domain.org/dir-under-pub-git</a></code>, both as clonable Git URL and as browseable gitweb interface. If you then start your <code><a href="/docs/linux/man/1-git-daemon/">git-daemon</a></code>(1) with <code>&#8211;base-path=/pub/git &#8211;export-all</code> then you can even use the <code>git://</code> URL with exactly the same path. </p>
@@ -393,9 +393,9 @@ Alias /gitweb/static /usr/share/gitweb/static
 <dl>
 <dt>
 </dt><dd>
-@stylesheets = (&#8220;/some/absolute/path/gitweb.css&#8221;);<br />
-$my_uri = &#8220;/&#8221;;<br />
-$home_link = &#8220;/&#8221;;<br />
+@stylesheets = (&#8220;/some/absolute/path/gitweb.css&#8221;);<br/>
+$my_uri = &#8220;/&#8221;;<br/>
+$home_link = &#8220;/&#8221;;<br/>
 $per_request_config = 1;
 </dd></dl>
 <p> Nowadays though gitweb should create HTML base tag when needed (to set base URI for relative links), so it should work automatically.</p>
@@ -405,32 +405,32 @@ $per_request_config = 1;
 <dl>
 <dt>
 </dt><dd>
-&lt;VirtualHost *:80&gt;<br />
-    ServerName    git.example.org<br />
-    DocumentRoot  /pub/git<br />
-    SetEnv        GITWEB_CONFIG  /etc/gitweb.conf<br />
-    # turning on mod rewrite<br />
-    RewriteEngine on<br />
-    # make the front page an internal rewrite to the gitweb script<br />
-    RewriteRule ^/$  /cgi-bin/gitweb.cgi  [QSA,L,PT]<br />
-    # look for a public_git directory in unix users&#8217; home<br />
-    # http://git.example.org/~&lt;user&gt;/<br />
-    RewriteRule ^/\~([^\/]+)(/|/gitweb.cgi)?$   /cgi-bin/gitweb.cgi \<br />
-                [QSA,E=GITWEB_PROJECTROOT:/home/$1/public_git/,L,PT]<br />
-    # http://git.example.org/+&lt;user&gt;/<br />
-    #RewriteRule ^/\+([^\/]+)(/|/gitweb.cgi)?$  /cgi-bin/gitweb.cgi \<br />
-                 [QSA,E=GITWEB_PROJECTROOT:/home/$1/public_git/,L,PT]<br />
-    # http://git.example.org/user/&lt;user&gt;/<br />
-    #RewriteRule ^/user/([^\/]+)/(gitweb.cgi)?$ /cgi-bin/gitweb.cgi \<br />
-                 [QSA,E=GITWEB_PROJECTROOT:/home/$1/public_git/,L,PT]<br />
-    # defined list of project roots<br />
-    RewriteRule ^/scm(/|/gitweb.cgi)?$ /cgi-bin/gitweb.cgi \<br />
-                [QSA,E=GITWEB_PROJECTROOT:/pub/scm/,L,PT]<br />
-    RewriteRule ^/var(/|/gitweb.cgi)?$ /cgi-bin/gitweb.cgi \<br />
-                [QSA,E=GITWEB_PROJECTROOT:/var/git/,L,PT]<br />
-    # make access for &#8220;dumb clients&#8221; work<br />
-    RewriteRule ^/(.*\.git/(?!/?(HEAD|info|objects|refs)).*)?$ \<br />
-                /cgi-bin/gitweb.cgi%{REQUEST_URI}  [L,PT]<br />
+&lt;VirtualHost *:80&gt;<br/>
+    ServerName    git.example.org<br/>
+    DocumentRoot  /pub/git<br/>
+    SetEnv        GITWEB_CONFIG  /etc/gitweb.conf<br/>
+    # turning on mod rewrite<br/>
+    RewriteEngine on<br/>
+    # make the front page an internal rewrite to the gitweb script<br/>
+    RewriteRule ^/$  /cgi-bin/gitweb.cgi  [QSA,L,PT]<br/>
+    # look for a public_git directory in unix users&#8217; home<br/>
+    # http://git.example.org/~&lt;user&gt;/<br/>
+    RewriteRule ^/\~([^\/]+)(/|/gitweb.cgi)?$   /cgi-bin/gitweb.cgi \<br/>
+                [QSA,E=GITWEB_PROJECTROOT:/home/$1/public_git/,L,PT]<br/>
+    # http://git.example.org/+&lt;user&gt;/<br/>
+    #RewriteRule ^/\+([^\/]+)(/|/gitweb.cgi)?$  /cgi-bin/gitweb.cgi \<br/>
+                 [QSA,E=GITWEB_PROJECTROOT:/home/$1/public_git/,L,PT]<br/>
+    # http://git.example.org/user/&lt;user&gt;/<br/>
+    #RewriteRule ^/user/([^\/]+)/(gitweb.cgi)?$ /cgi-bin/gitweb.cgi \<br/>
+                 [QSA,E=GITWEB_PROJECTROOT:/home/$1/public_git/,L,PT]<br/>
+    # defined list of project roots<br/>
+    RewriteRule ^/scm(/|/gitweb.cgi)?$ /cgi-bin/gitweb.cgi \<br/>
+                [QSA,E=GITWEB_PROJECTROOT:/pub/scm/,L,PT]<br/>
+    RewriteRule ^/var(/|/gitweb.cgi)?$ /cgi-bin/gitweb.cgi \<br/>
+                [QSA,E=GITWEB_PROJECTROOT:/var/git/,L,PT]<br/>
+    # make access for &#8220;dumb clients&#8221; work<br/>
+    RewriteRule ^/(.*\.git/(?!/?(HEAD|info|objects|refs)).*)?$ \<br/>
+                /cgi-bin/gitweb.cgi%{REQUEST_URI}  [L,PT]<br/>
 &lt;/VirtualHost&gt;
 </dd></dl>
 <p> Here actual project root is passed to gitweb via <code>GITWEB_PROJECT_ROOT</code> environment variable from a web server, so you need to put the following line in gitweb configuration file (<code>/etc/gitweb.conf</code> in above example): </p>
@@ -470,18 +470,18 @@ $feature{&#8216;pathinfo&#8217;} {&#8216;default&#8217;} = [1];
 <dl>
 <dt>
 </dt><dd>
-&lt;VirtualHost *:80&gt;<br />
-        ServerAlias git.example.com<br />
-        DocumentRoot /var/www/gitweb<br />
-        &lt;Directory /var/www/gitweb&gt;<br />
-                Options ExecCGI<br />
-                AddHandler cgi-script cgi<br />
-                DirectoryIndex gitweb.cgi<br />
-                RewriteEngine On<br />
-                RewriteCond %{REQUEST_FILENAME} !-f<br />
-                RewriteCond %{REQUEST_FILENAME} !-d<br />
-                RewriteRule ^.* /gitweb.cgi/$0 [L,PT]<br />
-        &lt;/Directory&gt;<br />
+&lt;VirtualHost *:80&gt;<br/>
+        ServerAlias git.example.com<br/>
+        DocumentRoot /var/www/gitweb<br/>
+        &lt;Directory /var/www/gitweb&gt;<br/>
+                Options ExecCGI<br/>
+                AddHandler cgi-script cgi<br/>
+                DirectoryIndex gitweb.cgi<br/>
+                RewriteEngine On<br/>
+                RewriteCond %{REQUEST_FILENAME} !-f<br/>
+                RewriteCond %{REQUEST_FILENAME} !-d<br/>
+                RewriteRule ^.* /gitweb.cgi/$0 [L,PT]<br/>
+        &lt;/Directory&gt;<br/>
 &lt;/VirtualHost&gt;
 </dd></dl>
 <p> The rewrite rule guarantees that existing static files will be properly served, whereas any other URL will be passed to gitweb as PATH_INFO parameter. </p>
@@ -533,7 +533,7 @@ $feature{&#8216;pathinfo&#8217;} {&#8216;default&#8217;} = [1];
 </dd></dl>
 <p> will fail with a 404 error.</p>
 <h2>BUGS</h2>
-<p> Please report any bugs or feature requests to m[blue]<code>git [at] vger.kernel.org</code>m[]<font SIZE="-2">[1]</font>, putting &quot;gitweb&quot; in the subject of email.</p>
+<p> Please report any bugs or feature requests to m[blue]<code>git [at] vger.kernel.org</code>m[][1], putting &quot;gitweb&quot; in the subject of email.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-gitweb-conf/">gitweb.conf</a></code>(5), <code><a href="/docs/linux/man/1-git-instaweb/">git-instaweb</a></code>(1) </p>
 <p> <code>gitweb/README</code>, <code>gitweb/INSTALL</code></p>

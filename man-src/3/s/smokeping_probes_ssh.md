@@ -33,7 +33,7 @@ description: "Smokeping::probes::SSH – Secure Shell Probe for SmokePing"
 <h2>Description</h2>
 <p>Integrates ssh-keyscan as a probe into smokeping. The variable <code>binary</code> must point to your copy of the ssh-keyscan program. If it is not installed on your system yet, you should install openssh &gt;= 3.8p1 </p>
 <p> The Probe asks the given host n-times for it&#8217;s public key, where n is the amount specified in the config File. </p>
-<p> As part of the initialization, the probe asks 127.0.0.1 for it&#8217;s public key and tries to parse the output. Make sure you have <font SIZE="-1">SSH</font> running on the localhost as well.</p>
+<p> As part of the initialization, the probe asks 127.0.0.1 for it&#8217;s public key and tries to parse the output. Make sure you have SSH running on the localhost as well.</p>
 <h2>Variables</h2>
 <p>Supported probe-specific variables:</p>
 <dl COMPACT>
@@ -46,10 +46,10 @@ description: "Smokeping::probes::SSH – Secure Shell Probe for SmokePing"
 <p> Example value: 5 </p>
 <p> Default value: 5</p>
 <dt>offset</dt>
-<dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as &#8216;random&#8217;, and the offset from the &#8216;General&#8217; section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
+<dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as &#8216;random&#8217;, and the offset from the &#8216;General&#8217; section is used if nothing is specified here. Note that this does NOT influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
 <p> Example value: 50%</p>
 <dt>step</dt>
-<dd>Duration of the base interval that this probe should use, if different from the one specified in the &#8216;Database&#8217; section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
+<dd>Duration of the base interval that this probe should use, if different from the one specified in the &#8216;Database&#8217; section. Note that the step in the RRD files is fixed when they are originally generated, and if you change the step parameter afterwards, you&#8217;ll have to delete the old RRD files or somehow convert them. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
 <p> Example value: 300</p>
 <dt>timeout</dt>
 <dd>How long a single &#8216;ping&#8217; takes at maximum </dd>
@@ -62,7 +62,7 @@ description: "Smokeping::probes::SSH – Secure Shell Probe for SmokePing"
 <p> Example value: dsa </p>
 <p> Default value: rsa</p>
 <dt>pings</dt>
-<dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. </dd>
+<dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the RRD files is fixed when they are originally generated, and if you change this parameter afterwards, you&#8217;ll have to delete the old RRD files or somehow convert them. </dd>
 <p> Example value: 5</p>
 <dt>port</dt>
 <dd>Port to use when testing the ssh connection -p <i>port</i> </dd>

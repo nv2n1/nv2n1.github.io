@@ -10,11 +10,11 @@ description: "od_accounting –"
 <p>od_accounting &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Data Fields</h3>
-<p> <code>od_acct_symbol</code> * <code>syms</code><br />
- <i>All recorded symbols decoded. </i><br />
- int <code>nb_syms</code><br />
- <i>Number of symbols actually recorded. </i><br />
- <code>od_accounting_dict</code> <code>dict</code><br />
+<p> <code>od_acct_symbol</code> * <code>syms</code><br/>
+ <i>All recorded symbols decoded. </i><br/>
+ int <code>nb_syms</code><br/>
+ <i>Number of symbols actually recorded. </i><br/>
+ <code>od_accounting_dict</code> <code>dict</code><br/>
  <i>Dictionary for translating strings into id. </i></p>
 <h2>Field Documentation</h2>
 <h3><code>od_acct_symbol</code>* od_accounting::syms</h3>

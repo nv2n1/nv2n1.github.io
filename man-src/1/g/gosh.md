@@ -40,10 +40,10 @@ description: "gosh – a Scheme script interpreter"
 <dt><code>-E</code><i>expr</i></dt>
 <dd> Same as -e, except that the <i>expr</i> is read as if it is surrounded by parenthesis.</dd>
 <dt><code>-f</code><i>flag</i></dt>
-<dd> Sets various flags.<br />
-&nbsp;<wbr>&nbsp;<wbr>no-inline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>don&#8217;t inline primitive procedures<br />
-&nbsp;<wbr>&nbsp;<wbr>no-source-info&nbsp;<wbr>&nbsp;<wbr>don&#8217;t preserve source information for debug<br />
-&nbsp;<wbr>&nbsp;<wbr>load-verbose&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>report while loading files<br />
+<dd> Sets various flags.<br/>
+&nbsp;<wbr>&nbsp;<wbr>no-inline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>don&#8217;t inline primitive procedures<br/>
+&nbsp;<wbr>&nbsp;<wbr>no-source-info&nbsp;<wbr>&nbsp;<wbr>don&#8217;t preserve source information for debug<br/>
+&nbsp;<wbr>&nbsp;<wbr>load-verbose&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>report while loading files<br/>
 &nbsp;<wbr>&nbsp;<wbr>case-fold&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>uses case-insensitive reader&nbsp;<wbr>(as in R5RS)</dd>
 <dt><code>&#8212;</code></dt>
 <dd> Specifies that there are no more options. If there are more arguments after this, they are taken as script file name and its arguments. </dd>
@@ -59,7 +59,7 @@ description: "gosh – a Scheme script interpreter"
 <p> Shiro Kawai (shiro @ acm . org) </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gauche-config/">gauche-config</a>(1) </p>
-<p> Gauche Scheme interpreter:<br />
+<p> Gauche Scheme interpreter:<br/>
  <a rel="nofollow" href="http://practical-scheme.net/gauche/">http://practical-scheme.net/gauche/</a> </p>
-<p> For the information about Scheme language, see<br />
+<p> For the information about Scheme language, see<br/>
  <a rel="nofollow" href="http://www.schemers.org/">http://www.schemers.org/</a> </p>

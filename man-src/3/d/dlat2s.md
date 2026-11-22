@@ -11,7 +11,7 @@ description: "dlat2s.f –"
 <p> dlat2s.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlat2s</code> (UPLO, N, A, LDA, SA, LDSA, INFO)<br />
+<p> subroutine <code>dlat2s</code> (UPLO, N, A, LDA, SA, LDSA, INFO)<br/>
  <i></i><code>DLAT2S</code> converts a double-precision triangular matrix to a single-precision triangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlat2s (characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, real, dimension( ldsa, * )SA, integerLDSA, integerINFO)</h3>

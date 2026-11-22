@@ -10,33 +10,33 @@ description: "Priority Queue –"
 
 <p> Priority Queue &#8211; </p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_priority_q_s</code><br />
+<p> struct <code>globus_priority_q_s</code><br/>
  <i>Priority Queue Structure. </i></p>
 <h3>Typedefs</h3>
-<p> typedef int(* <code>globus_priority_q_cmp_func_t</code> )(void *priority_1, void *priority_2)<br />
- <i>Priority Comparison Predicate. </i><br />
- typedef struct <code>globus_priority_q_s</code> <code>globus_priority_q_t</code><br />
+<p> typedef int(* <code>globus_priority_q_cmp_func_t</code> )(void *priority_1, void *priority_2)<br/>
+ <i>Priority Comparison Predicate. </i><br/>
+ typedef struct <code>globus_priority_q_s</code> <code>globus_priority_q_t</code><br/>
  <i>Priority Queue Structure. </i></p>
 <h3>Functions</h3>
-<p> int <code>globus_priority_q_init</code> (<code>globus_priority_q_t</code> *priority_q, <code>globus_priority_q_cmp_func_t</code> cmp_func)<br />
- <i>Initialize a priority queue. </i><br />
- int <code>globus_priority_q_destroy</code> (<code>globus_priority_q_t</code> *priority_q)<br />
- <i>Destroy a Priority Queue. </i><br />
- <code>globus_bool_t</code> <code>globus_priority_q_empty</code> (<code>globus_priority_q_t</code> *priority_q)<br />
- <i>Priority Queue Empty Predicate. </i><br />
- int <code>globus_priority_q_size</code> (<code>globus_priority_q_t</code> *priority_q)<br />
- <i>Priority Queue Size. </i><br />
- int <code>globus_priority_q_enqueue</code> (<code>globus_priority_q_t</code> *priority_q, void *datum, void *priority)<br />
- <i>Add a Datum to a Priority Queue. </i><br />
- void * <code>globus_priority_q_dequeue</code> (<code>globus_priority_q_t</code> *priority_q)<br />
- <i>Remove a Datum From A Priority Queue. </i><br />
- void * <code>globus_priority_q_first</code> (<code>globus_priority_q_t</code> *priority_q)<br />
- <i>Get the Highest-Priority Datum From a Priority Queue. </i><br />
- void * <code>globus_priority_q_first_priority</code> (<code>globus_priority_q_t</code> *priority_q)<br />
- <i>Get the Highest Priority in Priority Queue. </i><br />
- void * <code>globus_priority_q_remove</code> (<code>globus_priority_q_t</code> *priority_q, void *datum)<br />
- <i>Remove an Arbitrary Datum from a Priority Queue. </i><br />
- void * <code>globus_priority_q_modify</code> (<code>globus_priority_q_t</code> *priority_q, void *datum, void *new_priority)<br />
+<p> int <code>globus_priority_q_init</code> (<code>globus_priority_q_t</code> *priority_q, <code>globus_priority_q_cmp_func_t</code> cmp_func)<br/>
+ <i>Initialize a priority queue. </i><br/>
+ int <code>globus_priority_q_destroy</code> (<code>globus_priority_q_t</code> *priority_q)<br/>
+ <i>Destroy a Priority Queue. </i><br/>
+ <code>globus_bool_t</code> <code>globus_priority_q_empty</code> (<code>globus_priority_q_t</code> *priority_q)<br/>
+ <i>Priority Queue Empty Predicate. </i><br/>
+ int <code>globus_priority_q_size</code> (<code>globus_priority_q_t</code> *priority_q)<br/>
+ <i>Priority Queue Size. </i><br/>
+ int <code>globus_priority_q_enqueue</code> (<code>globus_priority_q_t</code> *priority_q, void *datum, void *priority)<br/>
+ <i>Add a Datum to a Priority Queue. </i><br/>
+ void * <code>globus_priority_q_dequeue</code> (<code>globus_priority_q_t</code> *priority_q)<br/>
+ <i>Remove a Datum From A Priority Queue. </i><br/>
+ void * <code>globus_priority_q_first</code> (<code>globus_priority_q_t</code> *priority_q)<br/>
+ <i>Get the Highest-Priority Datum From a Priority Queue. </i><br/>
+ void * <code>globus_priority_q_first_priority</code> (<code>globus_priority_q_t</code> *priority_q)<br/>
+ <i>Get the Highest Priority in Priority Queue. </i><br/>
+ void * <code>globus_priority_q_remove</code> (<code>globus_priority_q_t</code> *priority_q, void *datum)<br/>
+ <i>Remove an Arbitrary Datum from a Priority Queue. </i><br/>
+ void * <code>globus_priority_q_modify</code> (<code>globus_priority_q_t</code> *priority_q, void *datum, void *new_priority)<br/>
  <i>Modify the Priority of Datum. </i></p>
 <h2>Detailed Description</h2>
 <p> This module defines a priority queue for globus. It is implemented using a binary heap (minheap) and does NOT have a fifo fallback for like priorities. If you need fifo fallback, you should use a compound priority with the primary priority being the &#8216;real&#8217; priority and the secondary being a serial number. </p>
@@ -53,13 +53,13 @@ description: "Priority Queue –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>priority_1</i> First priority to compare<br />
+</dt><dd> <i>priority_1</i> First priority to compare<br/>
  <i>priority_2</i> Second priority to compare</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>&gt;</i> 0 The priority of priority_1 is less than that of priority_2.<br />
- <i>&lt;</i> 0 The priority of priority_1 is greater than that of priority_2.<br />
+</dt><dd> <i>&gt;</i> 0 The priority of priority_1 is less than that of priority_2.<br/>
+ <i>&lt;</i> 0 The priority of priority_1 is greater than that of priority_2.<br/>
  <i>=</i> 0 The priorities of priority_1 and priority_2 are the same.</dd></dl>
 <h3>typedef struct <code>globus_priority_q_s</code> <code>globus_priority_q_t</code></h3>
 <p> Priority Queue Structure. A pointer to a structure of this type is passed to all functions in the <code>Priority Queue </code> module. It is not intended to be inspected or modified outside of this API.</p>
@@ -84,7 +84,7 @@ description: "Priority Queue –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>GLOBUS_FAILURE</i> Failure</dd></dl>
 <h3><code>globus_bool_t</code> globus_priority_q_empty (<code>globus_priority_q_t</code> *priority_q)</h3>
 <p> Priority Queue Empty Predicate. The <code>globus_priority_q_empty()</code> function checks the given priority queue to determine if it is empty. It is considered empty if it has been initialized via <code>globus_priority_q_init()</code> and there are no items which have been inserted via <code>globus_priority_q_enqueue()</code> which have not been removed by calling <code>globus_priority_q_remove()</code> or <code>globus_priority_q_dequeue()</code>. If it is empty, this function returns GLOBUS_TRUE; otherwise it returns GLOBUS_FALSE. </p>
@@ -95,7 +95,7 @@ description: "Priority Queue –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_TRUE</i> The priority queue is empty<br />
+</dt><dd> <i>GLOBUS_TRUE</i> The priority queue is empty<br/>
  <i>GLOBUS_FALSE</i> The priority queue is not empty, or the priority queue is invalid</dd></dl>
 <h3>int globus_priority_q_enqueue (<code>globus_priority_q_t</code> *priority_q, void *datum, void *priority)</h3>
 <p> Add a Datum to a Priority Queue. The <code>globus_priority_q_enqueue()</code> function inserts a datum into the priority queue based on its priority. When an item is inserted, the pointers to both the datum and the priority are copied into the priority_q data structure, so neither may be freed until the datum is removed from the priority queue, or undefined behavior may occur. </p>
@@ -103,13 +103,13 @@ description: "Priority Queue –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>priority_q</i> Pointer to the priority queue to insert datum into<br />
- <i>datum</i> The datum to insert into the queue<br />
+</dt><dd> <i>priority_q</i> Pointer to the priority queue to insert datum into<br/>
+ <i>datum</i> The datum to insert into the queue<br/>
  <i>priority</i> The priority of the datum</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>GLOBUS_FAILURE</i> Failure</dd></dl>
 <h3>void* globus_priority_q_first (<code>globus_priority_q_t</code> *priority_q)</h3>
 <p> Get the Highest-Priority Datum From a Priority Queue. The <code>globus_priority_q_first()</code> function returns the highest-priority datum from the priority queue pointed to by priority_q. The datum is not removed from the queue; to do that, use <code>globus_priority_q_dequeue()</code> instead. If the priority_q pointer is NULL or the queue is empty, this function returns NULL. The priority queue retains a reference to the returned datum, so the pointer value returned must not freed until the datum is removed from the queue. </p>
@@ -136,20 +136,20 @@ description: "Priority Queue –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>priority_q</i> Pointer to the priority queue structure to initialize.<br />
+</dt><dd> <i>priority_q</i> Pointer to the priority queue structure to initialize.<br/>
  <i>cmp_func</i> Pointer to a function which computes the relative relationship between two priorities. See the documentation of <code>globus_priority_q_cmp_func_t</code> for details on how to implement that function.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>GLOBUS_FAILURE</i> Failure</dd></dl>
 <h3>void* globus_priority_q_modify (<code>globus_priority_q_t</code> *priority_q, void *datum, void *new_priority)</h3>
 <p> Modify the Priority of Datum. The <code>globus_priority_q_modify()</code> function modifies the priority of the highest-priority instance of datum in the priority queue so that it new_priority. The old priority of the datum is returned. If the priority_q is NULL or the datum is not present, this function returns NULL. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>priority_q</i> Pointer to the priority queue to modify<br />
- <i>datum</i> Pointer to the datum whose priority is being modified<br />
+</dt><dd> <i>priority_q</i> Pointer to the priority queue to modify<br/>
+ <i>datum</i> Pointer to the datum whose priority is being modified<br/>
  <i>new_priority</i> Pointer to the new priority</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -160,7 +160,7 @@ description: "Priority Queue –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>priority_q</i> Pointer to the priority queue to modify<br />
+</dt><dd> <i>priority_q</i> Pointer to the priority queue to modify<br/>
  <i>datum</i> Pointer to the datum to search for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

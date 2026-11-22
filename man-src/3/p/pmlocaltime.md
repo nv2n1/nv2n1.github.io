@@ -9,7 +9,7 @@ description: "pmLocaltime – convert the date and time for a reporting timezone
 
 <p><code>pmLocaltime</code> &#8211; convert the date and time for a reporting timezone</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;time.h&gt;<br />
+<p><code> #include &lt;time.h&gt;<br/>
  #include &lt;pcp/pmapi.h&gt; </p>
 <p> struct tm *pmLocaltime(const time_t *</code><i>clock</i>, struct tm *<i>result</i>); </p>
 <p> cc &#8230; -lpcp</p>

@@ -10,12 +10,12 @@ description: "ql/indexes/swap/jpyliborswap.hpp – JPY Libor Swap indexes"
 
 <p> ql/indexes/swap/jpyliborswap.hpp &#8211; JPY Libor Swap indexes </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/indexes/swapindex.hpp&gt;<br />
+<p> #include &lt;ql/indexes/swapindex.hpp&gt;<br/>
  #include &lt;ql/termstructures/yieldtermstructure.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>JpyLiborSwapIsdaFixAm</code><br />
- <i>JpyLiborSwapIsdaFixAm index base class </i><br />
- class <code>JpyLiborSwapIsdaFixPm</code><br />
+<p> class <code>JpyLiborSwapIsdaFixAm</code><br/>
+ <i>JpyLiborSwapIsdaFixAm index base class </i><br/>
+ class <code>JpyLiborSwapIsdaFixPm</code><br/>
  <i>JpyLiborSwapIsdaFixPm index base class </i></p>
 <h2>Detailed Description</h2>
 <p> JPY Libor Swap indexes </p>

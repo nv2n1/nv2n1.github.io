@@ -10,38 +10,38 @@ description: "Mutual Exclusion –"
 
 <p> Mutual Exclusion &#8211; </p>
 <h3>Data Structures</h3>
-<p> union <code>globus_mutex_t</code><br />
- <i>Mutex. </i><br />
- union <code>globus_mutexattr_t</code><br />
- <i>Mutex attribute. </i><br />
- struct <code>globus_rmutex_t</code><br />
+<p> union <code>globus_mutex_t</code><br/>
+ <i>Mutex. </i><br/>
+ union <code>globus_mutexattr_t</code><br/>
+ <i>Mutex attribute. </i><br/>
+ struct <code>globus_rmutex_t</code><br/>
  <i>Recursive Mutex. </i></p>
 <h3>Typedefs</h3>
-<p> typedef int <code>globus_rmutexattr_t</code><br />
+<p> typedef int <code>globus_rmutexattr_t</code><br/>
  <i>Recursive mutex attribute. </i></p>
 <h3>Functions</h3>
-<p> int <code>globus_mutex_init</code> (<code>globus_mutex_t</code> *mutex, <code>globus_mutexattr_t</code> *attr)<br />
- <i>Initialize a mutex. </i><br />
- int <code>globus_mutex_destroy</code> (<code>globus_mutex_t</code> *mutex)<br />
- <i>Destroy a mutex. </i><br />
- int <code>globus_mutex_lock</code> (<code>globus_mutex_t</code> *mutex)<br />
- <i>Lock a mutex. </i><br />
- int <code>globus_mutex_unlock</code> (<code>globus_mutex_t</code> *mutex)<br />
- <i>Unlock a mutex. </i><br />
- int <code>globus_mutex_trylock</code> (<code>globus_mutex_t</code> *mutex)<br />
- <i>Lock a mutex if it is not locked. </i><br />
- int <code>globus_mutexattr_init</code> (<code>globus_mutexattr_t</code> *attr)<br />
- <i>Initialize a mutex attribute. </i><br />
- int <code>globus_mutexattr_destroy</code> (<code>globus_mutexattr_t</code> *attr)<br />
+<p> int <code>globus_mutex_init</code> (<code>globus_mutex_t</code> *mutex, <code>globus_mutexattr_t</code> *attr)<br/>
+ <i>Initialize a mutex. </i><br/>
+ int <code>globus_mutex_destroy</code> (<code>globus_mutex_t</code> *mutex)<br/>
+ <i>Destroy a mutex. </i><br/>
+ int <code>globus_mutex_lock</code> (<code>globus_mutex_t</code> *mutex)<br/>
+ <i>Lock a mutex. </i><br/>
+ int <code>globus_mutex_unlock</code> (<code>globus_mutex_t</code> *mutex)<br/>
+ <i>Unlock a mutex. </i><br/>
+ int <code>globus_mutex_trylock</code> (<code>globus_mutex_t</code> *mutex)<br/>
+ <i>Lock a mutex if it is not locked. </i><br/>
+ int <code>globus_mutexattr_init</code> (<code>globus_mutexattr_t</code> *attr)<br/>
+ <i>Initialize a mutex attribute. </i><br/>
+ int <code>globus_mutexattr_destroy</code> (<code>globus_mutexattr_t</code> *attr)<br/>
  <i>Destroy a mutex attribute. </i></p>
 <h3>Recursive Mutex</h3>
-<p> int <code>globus_rmutex_init</code> (<code>globus_rmutex_t</code> *rmutex, <code>globus_rmutexattr_t</code> *rattr)<br />
- <i>Initialize a recursive mutex. </i><br />
- int <code>globus_rmutex_lock</code> (<code>globus_rmutex_t</code> *rmutex)<br />
- <i>Lock a recursive mutex. </i><br />
- int <code>globus_rmutex_unlock</code> (<code>globus_rmutex_t</code> *rmutex)<br />
- <i>Unlock a recursive mutex. </i><br />
- int <code>globus_rmutex_destroy</code> (<code>globus_rmutex_t</code> *rmutex)<br />
+<p> int <code>globus_rmutex_init</code> (<code>globus_rmutex_t</code> *rmutex, <code>globus_rmutexattr_t</code> *rattr)<br/>
+ <i>Initialize a recursive mutex. </i><br/>
+ int <code>globus_rmutex_lock</code> (<code>globus_rmutex_t</code> *rmutex)<br/>
+ <i>Lock a recursive mutex. </i><br/>
+ int <code>globus_rmutex_unlock</code> (<code>globus_rmutex_t</code> *rmutex)<br/>
+ <i>Unlock a recursive mutex. </i><br/>
+ int <code>globus_rmutex_destroy</code> (<code>globus_rmutex_t</code> *rmutex)<br/>
  <i>Destroy a recursive mutex. </i></p>
 <h2>Detailed Description</h2>
 <p> The Globus runtime includes three portable, related mutual exclusion primitives that can be used in applications and libraries. These are</p>
@@ -68,7 +68,7 @@ description: "Mutual Exclusion –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>mutex</i> Pointer to the mutex to initialize.<br />
+</dt><dd> <i>mutex</i> Pointer to the mutex to initialize.<br/>
  <i>attr</i> Ignored.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -150,7 +150,7 @@ without causing deadlock.
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>rmutex</i> A pointer to the mutex to initialize<br />
+</dt><dd> <i>rmutex</i> A pointer to the mutex to initialize<br/>
  <i>rattr</i> IGNORED</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

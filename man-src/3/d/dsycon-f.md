@@ -10,7 +10,7 @@ description: "dsycon.f –"
 <p>dsycon.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dsycon</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dsycon</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>DSYCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsycon (characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, double precisionANORM, double precisionRCOND, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

@@ -10,13 +10,13 @@ description: "One-time execution –"
 
 <p> One-time execution &#8211; </p>
 <h3>Data Structures</h3>
-<p> union <code>globus_thread_once_t</code><br />
+<p> union <code>globus_thread_once_t</code><br/>
  <i>Thread once structure. </i></p>
 <h3>Macros</h3>
-<p> #define <code>GLOBUS_THREAD_ONCE_INIT</code> { .none = 0 }<br />
+<p> #define <code>GLOBUS_THREAD_ONCE_INIT</code> { .none = 0 }<br/>
  <i>Thread once initializer value. </i></p>
 <h3>Functions</h3>
-<p> int <code>globus_thread_once</code> (<code>globus_thread_once_t</code> *once, void(*init_routine)(void))<br />
+<p> int <code>globus_thread_once</code> (<code>globus_thread_once_t</code> *once, void(*init_routine)(void))<br/>
  <i>Execute a function one time. </i></p>
 <h2>Detailed Description</h2>
 <p> The <code>globus_thread_once_t</code> provides a way for applications and libraries to execute some code exactly one time, independent of the number of threads which attempt to execute it. To use this, statically initialize a <code>globus_thread_once_t</code> control with the value GLOBUS_THREAD_ONCE_INIT, and pass a pointer to a function to execute once, along with the control, to <code>globus_thread_once()</code>.</p>
@@ -26,7 +26,7 @@ description: "One-time execution –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>once</i> A pointer to the value used to govern whether the function passed via the <i>init_routine</i> parameter has executed.<br />
+</dt><dd> <i>once</i> A pointer to the value used to govern whether the function passed via the <i>init_routine</i> parameter has executed.<br/>
  <i>init_routine</i> Function to execute one time. It is called with no parameters.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

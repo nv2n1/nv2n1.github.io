@@ -13,19 +13,19 @@ description: "wvdial.conf – wvdial configuration file"
 <p> The configuration file <i>/etc/wvdial.conf</i> is in Windows &quot;ini&quot; file format, with <code>sections</code> named in square brackets and a number of <code>variable = value</code> pairs within each section. </p>
 <p> Here is a sample configuration file: </p>
 <dl>
-<dd>[Dialer Defaults]<br />
- Modem = /dev/ttyS2<br />
- Baud = 57600<br />
- Init = ATZ<br />
- Init2 = AT S11=50<br />
- Phone = 555-4242<br />
- Username = apenwarr<br />
+<dd>[Dialer Defaults]<br/>
+ Modem = /dev/ttyS2<br/>
+ Baud = 57600<br/>
+ Init = ATZ<br/>
+ Init2 = AT S11=50<br/>
+ Phone = 555-4242<br/>
+ Username = apenwarr<br/>
  Password = my-password </dd>
-<p> [Dialer phone2]<br />
+<p> [Dialer phone2]<br/>
  Phone = 555-4243 </p>
-<p> [Dialer shh]<br />
+<p> [Dialer shh]<br/>
  Init3 = ATM0 </p>
-<p> [Dialer pulse]<br />
+<p> [Dialer pulse]<br/>
  Dial Command = ATDP</dl>
 <p> The sample configuration file above contains all of the options necessary to run the two sample command lines given above. Here is a complete list of settings that <code>wvdial</code> understands:</p>
 <dl>

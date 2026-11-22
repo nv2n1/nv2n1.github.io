@@ -21,10 +21,10 @@ description: "pamtouil – convert a PNM or PNM/alpha image into a Motif UIL ico
 <dl>
 <dt><code>-name</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>Allows you to specify the prefix string which is printed in the<br />
-&nbsp;<wbr>&nbsp;<wbr>resulting UIL output.&nbsp;<wbr>&nbsp;<wbr>If not specified, will default to the filename<br />
-&nbsp;<wbr>&nbsp;<wbr>(without extension)&nbsp;<wbr>of the ppmfile argument.&nbsp;<wbr>&nbsp;<wbr>If&nbsp;<wbr><code>-name</code>&nbsp;<wbr>is not<br />
-&nbsp;<wbr>&nbsp;<wbr>specified and no ppmfile is specified&nbsp;<wbr>(i.e. piped input), the<br />
+&nbsp;<wbr>&nbsp;<wbr>Allows you to specify the prefix string which is printed in the<br/>
+&nbsp;<wbr>&nbsp;<wbr>resulting UIL output.&nbsp;<wbr>&nbsp;<wbr>If not specified, will default to the filename<br/>
+&nbsp;<wbr>&nbsp;<wbr>(without extension)&nbsp;<wbr>of the ppmfile argument.&nbsp;<wbr>&nbsp;<wbr>If&nbsp;<wbr><code>-name</code>&nbsp;<wbr>is not<br/>
+&nbsp;<wbr>&nbsp;<wbr>specified and no ppmfile is specified&nbsp;<wbr>(i.e. piped input), the<br/>
 &nbsp;<wbr>&nbsp;<wbr>prefix string will default to the string&nbsp;<wbr>&#8216;noname&#8217;. </dd>
 </dl>
 <h2>SEE ALSO</h2>

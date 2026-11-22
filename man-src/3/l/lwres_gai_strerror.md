@@ -67,5 +67,5 @@ description: "lwres_gai_strerror – print suitable error string"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-strerror/">strerror</a></code>(3), <code><a href="/docs/linux/man/3-lwres_getaddrinfo/">lwres_getaddrinfo</a></code>(3), <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), <code>RFC2133</code>().</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001 Internet Software Consortium. </p>

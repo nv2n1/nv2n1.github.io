@@ -10,41 +10,41 @@ description: "nm – list symbols from object files"
 
 <p> nm - list symbols from object files </p>
 <h2>SYNOPSIS</h2>
-<p> nm [<code>-A</code>|<code>-o</code>|<code>--print-file-name</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-a</code>|<code>--debug-syms</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-B</code>|<code>--format=bsd</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-C</code>|<code>--demangle</code>[=<i>style</i>]] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-D</code>|<code>--dynamic</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-f</code><i>format</i>|<code>--format=</code><i>format</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-g</code>|<code>--extern-only</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-h</code>|<code>--help</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--ifunc-chars=</code><i></i><font SIZE="-1"><i>CHARS</i></font><i></i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-j</code>|<code>--format=just-symbols</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-l</code>|<code>--line-numbers</code>]&nbsp;[<code>--inlines</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-n</code>|<code>-v</code>|<code>--numeric-sort</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-P</code>|<code>--portability</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-p</code>|<code>--no-sort</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-r</code>|<code>--reverse-sort</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-S</code>|<code>--print-size</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-s</code>|<code>--print-armap</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>&nbsp;<i>radix</i>|<code>--radix=</code><i>radix</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-u</code>|<code>--undefined-only</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-U</code>&nbsp;<i>method</i>]&nbsp;[<code>--unicode=</code><i>method</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-V</code>|<code>--version</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-X 32_64</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--defined-only</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--no-demangle</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--no-recurse-limit</code>|<code>--recurse-limit</code>]] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--plugin</code>&nbsp;<i>name</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--size-sort</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--special-syms</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--synthetic</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--target=</code><i>bfdname</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--with-symbol-versions</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--without-symbol-versions</code>] <br />
+<p> nm [<code>-A</code>|<code>-o</code>|<code>--print-file-name</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-a</code>|<code>--debug-syms</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-B</code>|<code>--format=bsd</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-C</code>|<code>--demangle</code>[=<i>style</i>]] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-D</code>|<code>--dynamic</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-f</code><i>format</i>|<code>--format=</code><i>format</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-g</code>|<code>--extern-only</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-h</code>|<code>--help</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--ifunc-chars=</code><i></i><i>CHARS</i><i></i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-j</code>|<code>--format=just-symbols</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-l</code>|<code>--line-numbers</code>]&nbsp;[<code>--inlines</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-n</code>|<code>-v</code>|<code>--numeric-sort</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-P</code>|<code>--portability</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-p</code>|<code>--no-sort</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-r</code>|<code>--reverse-sort</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-S</code>|<code>--print-size</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-s</code>|<code>--print-armap</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>&nbsp;<i>radix</i>|<code>--radix=</code><i>radix</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-u</code>|<code>--undefined-only</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-U</code>&nbsp;<i>method</i>]&nbsp;[<code>--unicode=</code><i>method</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-V</code>|<code>--version</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-X 32_64</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--defined-only</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--no-demangle</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--no-recurse-limit</code>|<code>--recurse-limit</code>]] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--plugin</code>&nbsp;<i>name</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--size-sort</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--special-syms</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--synthetic</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--target=</code><i>bfdname</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--with-symbol-versions</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--without-symbol-versions</code>] <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;[<i>objfile</i>...]  </p>
 <h2>DESCRIPTION</h2>
-<p> <font SIZE="-1">GNU</font> <code>nm</code> lists the symbols from object files <i>objfile</i>.... If no object files are listed as arguments, <code>nm</code> assumes the file <i>a.out</i>. </p>
+<p> GNU <code>nm</code> lists the symbols from object files <i>objfile</i>.... If no object files are listed as arguments, <code>nm</code> assumes the file <i>a.out</i>. </p>
 <p> For each symbol, <code>nm</code> shows: </p>
 <dl>
 <dt>&bull;</dt>
@@ -62,7 +62,7 @@ description: "nm – list symbols from object files"
 <dt>&quot;B&quot;</dt>
 <dd>  </dd>
 <dt>&quot;b&quot;</dt>
-<dd> <p> The symbol is in the <font SIZE="-1">BSS</font> data section. This section typically contains zero-initialized or uninitialized data, although the exact behavior is system dependent. </p>
+<dd> <p> The symbol is in the BSS data section. This section typically contains zero-initialized or uninitialized data, although the exact behavior is system dependent. </p>
  </dd>
 <dt>&quot;C&quot;</dt>
 <dd>  </dd>
@@ -80,9 +80,9 @@ description: "nm – list symbols from object files"
 <dd> <p> The symbol is in an initialized data section for small objects. Some object file formats permit more efficient access to small data objects, such as a global int variable as opposed to a large global array. </p>
  </dd>
 <dt>&quot;i&quot;</dt>
-<dd> <p> For <font SIZE="-1">PE</font> format files this indicates that the symbol is in a section specific to the implementation of DLLs. </p>
-<p> For <font SIZE="-1">ELF</font> format files this indicates that the symbol is an indirect function. This is a <font SIZE="-1">GNU</font> extension to the standard set of <font SIZE="-1">ELF</font> symbol types. It indicates a symbol which if referenced by a relocation does not evaluate to its address, but instead must be invoked at runtime. The runtime execution will then return the value to be used in the relocation. </p>
-<p> Note - the actual symbols display for <font SIZE="-1">GNU</font> indirect symbols is controlled by the <code>--ifunc-chars</code> command line option. If this option has been provided then the first character in the string will be used for global indirect function symbols. If the string contains a second character then that will be used for local indirect function symbols. </p>
+<dd> <p> For PE format files this indicates that the symbol is in a section specific to the implementation of DLLs. </p>
+<p> For ELF format files this indicates that the symbol is an indirect function. This is a GNU extension to the standard set of ELF symbol types. It indicates a symbol which if referenced by a relocation does not evaluate to its address, but instead must be invoked at runtime. The runtime execution will then return the value to be used in the relocation. </p>
+<p> Note - the actual symbols display for GNU indirect symbols is controlled by the <code>--ifunc-chars</code> command line option. If this option has been provided then the first character in the string will be used for global indirect function symbols. If the string contains a second character then that will be used for local indirect function symbols. </p>
  </dd>
 <dt>&quot;I&quot;</dt>
 <dd> <p> The symbol is an indirect reference to another symbol. </p>
@@ -115,7 +115,7 @@ description: "nm – list symbols from object files"
 <dd> <p> The symbol is undefined. </p>
  </dd>
 <dt>&quot;u&quot;</dt>
-<dd> <p> The symbol is a unique global symbol. This is a <font SIZE="-1">GNU</font> extension to the standard set of <font SIZE="-1">ELF</font> symbol bindings. For such a symbol the dynamic linker will make sure that in the entire process there is just one symbol with this name and type in use. </p>
+<dd> <p> The symbol is a unique global symbol. This is a GNU extension to the standard set of ELF symbol bindings. For such a symbol the dynamic linker will make sure that in the entire process there is just one symbol with this name and type in use. </p>
  </dd>
 <dt>&quot;V&quot;</dt>
 <dd>  </dd>
@@ -155,12 +155,12 @@ description: "nm – list symbols from object files"
 <dd> <p> Display all symbols, even debugger-only symbols; normally these are not listed. </p>
  </dd>
 <dt><code>-B</code></dt>
-<dd> <p> The same as <code>--format=bsd</code> (for compatibility with the <font SIZE="-1">MIPS</font> <code>nm</code>). </p>
+<dd> <p> The same as <code>--format=bsd</code> (for compatibility with the MIPS <code>nm</code>). </p>
  </dd>
 <dt><code>-C</code></dt>
 <dd>  </dd>
 <dt><code>--demangle[=</code><i>style</i><code>]</code></dt>
-<dd> <p> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C<font SIZE="-2">++</font> function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler. </p>
+<dd> <p> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C++ function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler. </p>
  </dd>
 <dt><code>--no-demangle</code></dt>
 <dd> <p> Do not demangle low-level symbol names. This is the default. </p>
@@ -195,8 +195,8 @@ description: "nm – list symbols from object files"
 <dt><code>--help</code></dt>
 <dd> <p> Show a summary of the options to <code>nm</code> and exit. </p>
  </dd>
-<dt><code>--ifunc-chars=</code><i></i><font SIZE="-1"><i>CHARS</i></font><i></i></dt>
-<dd> <p> When display <font SIZE="-1">GNU</font> indirect function symbols <code>nm</code> will default to using the <code>&quot;i&quot;</code> character for both local indirect functions and global indirect functions. The <code>--ifunc-chars</code> option allows the user to specify a string containing one or two characters. The first character will be used for global indirect function symbols and the second character, if present, will be used for local indirect function symbols. </p>
+<dt><code>--ifunc-chars=</code><i></i><i>CHARS</i><i></i></dt>
+<dd> <p> When display GNU indirect function symbols <code>nm</code> will default to using the <code>&quot;i&quot;</code> character for both local indirect functions and global indirect functions. The <code>--ifunc-chars</code> option allows the user to specify a string containing one or two characters. The first character will be used for global indirect function symbols and the second character, if present, will be used for local indirect function symbols. </p>
  </dd>
 <dt><code>j</code></dt>
 <dd> <p> The same as <code>--format=just-symbols</code>. </p>
@@ -224,7 +224,7 @@ description: "nm – list symbols from object files"
 <dt><code>-P</code></dt>
 <dd>  </dd>
 <dt><code>--portability</code></dt>
-<dd> <p> Use the <font SIZE="-1">POSIX.2</font> standard output format instead of the default format. Equivalent to <code>-f posix</code>. </p>
+<dd> <p> Use the POSIX.2 standard output format instead of the default format. Equivalent to <code>-f posix</code>. </p>
  </dd>
 <dt><code>-r</code></dt>
 <dd>  </dd>
@@ -254,7 +254,7 @@ description: "nm – list symbols from object files"
 <dt><code>-U</code><i>[d|i|l|e|x|h]</i></dt>
 <dd>  </dd>
 <dt><code>--unicode=</code><i>[default|invalid|locale|escape|hex|highlight]</i></dt>
-<dd> <p> Controls the display of <font SIZE="-1">UTF-8</font> encoded multibyte characters in strings. The default (<code>--unicode=default</code>) is to give them no special treatment. The <code>--unicode=locale</code> option displays the sequence in the current locale, which may or may not support them. The options <code>--unicode=hex</code> and <code>--unicode=invalid</code> display them as hex byte sequences enclosed by either angle brackets or curly braces. </p>
+<dd> <p> Controls the display of UTF-8 encoded multibyte characters in strings. The default (<code>--unicode=default</code>) is to give them no special treatment. The <code>--unicode=locale</code> option displays the sequence in the current locale, which may or may not support them. The options <code>--unicode=hex</code> and <code>--unicode=invalid</code> display them as hex byte sequences enclosed by either angle brackets or curly braces. </p>
 <p> The <code>--unicode=escape</code> option displays them as escape sequences (<i>\uxxxx</i>) and the <code>--unicode=highlight</code> option displays them as escape sequences highlighted in red (if supported by the output device). The colouring is intended to draw attention to the presence of unicode sequences where they might not be expected. </p>
  </dd>
 <dt><code>-V</code></dt>
@@ -263,7 +263,7 @@ description: "nm – list symbols from object files"
 <dd> <p> Show the version number of <code>nm</code> and exit. </p>
  </dd>
 <dt><code>-X</code></dt>
-<dd> <p> This option is ignored for compatibility with the <font SIZE="-1">AIX</font> version of <code>nm</code>. It takes one parameter which must be the string <code>32_64</code>. The default mode of <font SIZE="-1">AIX</font> <code>nm</code> corresponds to <code>-X 32</code>, which is not supported by <font SIZE="-1">GNU</font> <code>nm</code>. </p>
+<dd> <p> This option is ignored for compatibility with the AIX version of <code>nm</code>. It takes one parameter which must be the string <code>32_64</code>. The default mode of AIX <code>nm</code> corresponds to <code>-X 32</code>, which is not supported by GNU <code>nm</code>. </p>
  </dd>
 <dt><code>--defined-only</code></dt>
 <dd> <p> Display only defined symbols for each object file. </p>
@@ -271,13 +271,13 @@ description: "nm – list symbols from object files"
 <dt><code>--plugin</code><i>name</i></dt>
 <dd> <p> Load the plugin called <i>name</i> to add support for extra target types. This option is only available if the toolchain has been built with plugin support enabled. </p>
 <p> If <code>--plugin</code> is not provided, but plugin support has been enabled then <code>nm</code> iterates over the files in <i>${libdir}/bfd-plugins</i> in alphabetic order and the first plugin that claims the object in question is used. </p>
-<p> Please note that this plugin search directory is <i>not</i> the one used by <code>ld</code>&#8216;s <code>-plugin</code> option. In order to make <code>nm</code> use the linker plugin it must be copied into the <i>${libdir}/bfd-plugins</i> directory. For <font SIZE="-1">GCC</font> based compilations the linker plugin is called <i>liblto_plugin.so.0.0.0</i>. For Clang based compilations it is called <i>LLVMgold.so</i>. The <font SIZE="-1">GCC</font> plugin is always backwards compatible with earlier versions, so it is sufficient to just copy the newest one. </p>
+<p> Please note that this plugin search directory is <i>not</i> the one used by <code>ld</code>&#8216;s <code>-plugin</code> option. In order to make <code>nm</code> use the linker plugin it must be copied into the <i>${libdir}/bfd-plugins</i> directory. For GCC based compilations the linker plugin is called <i>liblto_plugin.so.0.0.0</i>. For Clang based compilations it is called <i>LLVMgold.so</i>. The GCC plugin is always backwards compatible with earlier versions, so it is sufficient to just copy the newest one. </p>
  </dd>
 <dt><code>--size-sort</code></dt>
-<dd> <p> Sort symbols by size. For <font SIZE="-1">ELF</font> objects symbol sizes are read from the <font SIZE="-1">ELF,</font> for other object types the symbol sizes are computed as the difference between the value of the symbol and the value of the symbol with the next higher value. If the <code>&quot;bsd&quot;</code> output format is used the size of the symbol is printed, rather than the value, and <code>-S</code> must be used in order both size and value to be printed. </p>
+<dd> <p> Sort symbols by size. For ELF objects symbol sizes are read from the ELF, for other object types the symbol sizes are computed as the difference between the value of the symbol and the value of the symbol with the next higher value. If the <code>&quot;bsd&quot;</code> output format is used the size of the symbol is printed, rather than the value, and <code>-S</code> must be used in order both size and value to be printed. </p>
  </dd>
 <dt><code>--special-syms</code></dt>
-<dd> <p> Display symbols which have a target-specific special meaning. These symbols are usually used by the target for some special processing and are not normally helpful when included in the normal symbol lists. For example for <font SIZE="-1">ARM</font> targets this option would skip the mapping symbols used to mark transitions between <font SIZE="-1">ARM</font> code, <font SIZE="-1">THUMB</font> code and data. </p>
+<dd> <p> Display symbols which have a target-specific special meaning. These symbols are usually used by the target for some special processing and are not normally helpful when included in the normal symbol lists. For example for ARM targets this option would skip the mapping symbols used to mark transitions between ARM code, THUMB code and data. </p>
  </dd>
 <dt><code>--synthetic</code></dt>
 <dd> <p> Include synthetic symbols in the output. These are special symbols created by the linker for various purposes. They are not shown by default since they are not part of the binary&#8217;s original source code. </p>
@@ -298,4 +298,4 @@ description: "nm – list symbols from object files"
 <p> <code><a href="/docs/linux/man/1-ar/">ar</a></code>(1), <code><a href="/docs/linux/man/1-objdump/">objdump</a></code>(1), <code><a href="/docs/linux/man/1-ranlib/">ranlib</a></code>(1), and the Info entries for <i>binutils</i>.  </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991-2022 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled ``<font SIZE="-1">GNU</font> Free Documentation License&#8217;&#8216;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled ``GNU Free Documentation License&#8217;&#8216;. </p>

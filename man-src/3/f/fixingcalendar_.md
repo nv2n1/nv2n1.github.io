@@ -15,13 +15,13 @@ description: "QuantLib::InterestRateIndex – base class for interest rate index
 <h3>Public Member Functions</h3>
 <p><code>InterestRateIndex</code> (const std::string &amp;familyName, const <code>Period</code> &amp;tenor, <code>Natural</code> settlementDays, const <code>Currency</code> &amp;currency, const <code>Calendar</code> &amp;fixingCalendar, const <code>DayCounter</code> &amp;dayCounter) </p>
 <p> <code>Index interface</code> </p>
-<p> std::string <code>name</code> () const<br />
- <i>Returns the name of the index. </i><br />
- <code>Calendar</code> <code>fixingCalendar</code> () const<br />
- <i>returns the calendar defining valid fixing dates </i><br />
- bool <code>isValidFixingDate</code> (const <code>Date</code> &amp;fixingDate) const<br />
- <i>returns TRUE if the fixing date is a valid one </i><br />
- <code>Rate</code> <code>fixing</code> (const <code>Date</code> &amp;fixingDate, bool forecastTodaysFixing=false) const<br />
+<p> std::string <code>name</code> () const<br/>
+ <i>Returns the name of the index. </i><br/>
+ <code>Calendar</code> <code>fixingCalendar</code> () const<br/>
+ <i>returns the calendar defining valid fixing dates </i><br/>
+ bool <code>isValidFixingDate</code> (const <code>Date</code> &amp;fixingDate) const<br/>
+ <i>returns TRUE if the fixing date is a valid one </i><br/>
+ <code>Rate</code> <code>fixing</code> (const <code>Date</code> &amp;fixingDate, bool forecastTodaysFixing=false) const<br/>
  <i>returns the fixing at the given date </i> </p>
 <p> <code>Observer interface</code> </p>
 <p> void <code>update</code> () </p>
@@ -33,7 +33,7 @@ description: "QuantLib::InterestRateIndex – base class for interest rate index
 <p> const <code>Currency</code> &amp; <code>currency</code> () const </p>
 <p> const <code>DayCounter</code> &amp; <code>dayCounter</code> () const </p>
 <p> virtual <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>termStructure</code> () const =0 </p>
-<p> <code>Date calculations</code><br />
+<p> <code>Date calculations</code><br/>
  These method can be overridden to implement particular conventions (e.g. EurLibor) </p>
 <p> virtual <code>Date</code> <code>valueDate</code> (const <code>Date</code> &amp;fixingDate) const </p>
 <p> virtual <code>Date</code> <code>maturityDate</code> (const <code>Date</code> &amp;valueDate) const =0 </p>

@@ -1431,12 +1431,12 @@ description: "groff – a short reference for the GNU roff language"
 <p>For example the underlining of a character say <code>t</code> looks like <code>\z\[ul]t</code> or <code>\z\(ult</code> </p>
 <p>Longer words look then a bit strange, but a useful mode is to write each character into a whole own line. To underlines the 3 character part &quot;tar&quot; of the word &quot;start&quot;: </p>
 <dl>
-<dd> <p> <br />
+<dd> <p> <br/>
  before s\ \z\[ul]t\ \z\[ul]a\ \z\[ul]r\ t after </p>
  </dd></dl>
 <p> or </p>
 <dl>
-<dd> <p> <br />
+<dd> <p> <br/>
  before s\ \z\(ult\ \z\(ula\ \z\(ulr\ t after </p>
  </dd></dl>
 <p>The result looks like </p>

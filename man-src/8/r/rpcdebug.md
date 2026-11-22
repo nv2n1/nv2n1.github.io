@@ -9,9 +9,9 @@ description: "rpcdebug – set and clear NFS and RPC kernel debug flags"
 
 <p>rpcdebug &#8211; set and clear NFS and RPC kernel debug flags</p>
 <h2>Synopsis</h2>
-<p><code>rpcdebug</code> <code>-vh</code><br />
- <code>rpcdebug</code> <code>-m</code> <i>module</i><br />
- <code>rpcdebug</code> <code>-m</code> <i>module</i> <code>-s</code> <i>flags</i>&#8230;<br />
+<p><code>rpcdebug</code> <code>-vh</code><br/>
+ <code>rpcdebug</code> <code>-m</code> <i>module</i><br/>
+ <code>rpcdebug</code> <code>-m</code> <i>module</i> <code>-s</code> <i>flags</i>&#8230;<br/>
  <code>rpcdebug</code> <code>-m</code> <i>module</i> <code>-c</code> <i>flags</i>&#8230;</p>
 <h2>Description</h2>
 <p>The <code>rpcdebug</code> command allows an administrator to set and clear the Linux kernel&#8217;s NFS client and server debug flags. Setting these flags causes the kernel to emit messages to the system log in response to NFS activity; this is typically useful when debugging NFS problems. </p>

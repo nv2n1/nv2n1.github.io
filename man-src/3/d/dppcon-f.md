@@ -10,7 +10,7 @@ description: "dppcon.f –"
 <p>dppcon.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dppcon</code> (UPLO, N, AP, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dppcon</code> (UPLO, N, AP, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>DPPCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dppcon (characterUPLO, integerN, double precision, dimension( * )AP, double precisionANORM, double precisionRCOND, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

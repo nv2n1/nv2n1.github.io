@@ -19,15 +19,15 @@ NEOERR *cgi_cookie_set(CGI *cgi, const char *name, const char *value,
                        const char *time_str, int persistent, int secure);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> cgi &#8211; a CGI struct<br />
- name &#8211; the name of the cookie<br />
- value &#8211; the value to set the cookie to.<br />
- path &#8211; optional path for which the cookie is valid. Default<br />
- is /<br />
- domain &#8211; optional domain for which the cookie is valid. You<br />
- can use cgi_cookie_authority to determine this<br />
- domain. Default is none, which is interpreted by<br />
- the browser as the sending domain only.<br />
+<p> cgi &#8211; a CGI struct<br/>
+ name &#8211; the name of the cookie<br/>
+ value &#8211; the value to set the cookie to.<br/>
+ path &#8211; optional path for which the cookie is valid. Default<br/>
+ is /<br/>
+ domain &#8211; optional domain for which the cookie is valid. You<br/>
+ can use cgi_cookie_authority to determine this<br/>
+ domain. Default is none, which is interpreted by<br/>
+ the browser as the sending domain only.<br/>
  time_str &#8211; expiration time string in the following format </p>
 <h2>DESCRIPTION</h2>
 <p> cgi_cookie_set will issue a Set-Cookie header that should cause a browser to return a cookie when required. Note this function does no escaping of anything, you have to take care of that first. </p>

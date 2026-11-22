@@ -1691,13 +1691,13 @@ description: "XmTabStack – The TabStack widget class"
 <p></center></p>
 <h3>Calback Information</h3>
 <p>A pointer to the following structure is passed to each callback: </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre>typedef struct _XmTabStackCallbackStruct {
  int<i>reason</i><code>;
  XEvent</code><i>*event</i><code>;
  Widget</code><i>selected_child</i><code>;
 } XmTabStackCallbackStruct;
-</code><font SIZE="+1"></font></pre>
+</code></pre>
 <dl COMPACT>
 <dt><i>reason</i></dt>
 <dd>Indicates why the callback was invoked. Valid callbacks reasons include:</dd>

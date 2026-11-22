@@ -11,7 +11,7 @@ description: "dgemv.f –"
 <p> dgemv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgemv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p> subroutine <code>dgemv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>DGEMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgemv (characterTRANS, integerM, integerN, double precisionALPHA, double precision, dimension(lda,*)A, integerLDA, double precision, dimension(*)X, integerINCX, double precisionBETA, double precision, dimension(*)Y, integerINCY)</h3>

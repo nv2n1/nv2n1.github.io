@@ -26,8 +26,8 @@ description: "targetctl – Save and restore configuration of kernel target"
 <p><code>/etc/target/saveconfig.json</code> </p>
 <p> <code>/sys/kernel/config/target</code></p>
 <h2>Author</h2>
-<p>Written by Andy Grover &lt;agrover [at] redhat.com&gt;.<br />
+<p>Written by Andy Grover &lt;agrover [at] redhat.com&gt;.<br/>
  Man page written by Andy Grover &lt;agrover [at] redhat.com&gt;.</p>
 <h2>Reporting Bugs</h2>
-<p>Report bugs via &lt;targetcli-fb-devel [at] lists.fedorahosted.org&gt;<br />
+<p>Report bugs via &lt;targetcli-fb-devel [at] lists.fedorahosted.org&gt;<br/>
  or &lt;<a rel="nofollow" href="https://github.com/open-iscsi/rtslib-fb/issues">https://github.com/open-iscsi/rtslib-fb/issues</a>&gt;</p>

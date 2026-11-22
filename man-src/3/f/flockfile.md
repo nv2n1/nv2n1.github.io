@@ -20,8 +20,8 @@ void funlockfile(FILE *filehandle);
 <p> All functions shown above:</p>
 <dl>
 <dt>
-</dt><dd> /* Since glibc 2.24: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.23:&nbsp;*/&nbsp;_POSIX_C_SOURCE<br />
+</dt><dd> /* Since glibc 2.24: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.23:&nbsp;*/&nbsp;_POSIX_C_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The stdio functions are thread-safe. This is achieved by assigning to each <i>FILE</i> object a lockcount and (if the lockcount is nonzero) an owning thread. For each library call, these functions wait until the <i>FILE</i> object is no longer locked by a different thread, then lock it, do the requested I/O, and unlock the object again. </p>

@@ -13,8 +13,8 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 <h2>Description</h2>
 <p><code>XbaeCaption</code> is a simple manager used to associate a label with its single child. The label may be either an <code>XmString</code> or a Pixmap and can be displayed in any one of twelve positions around the edge of the child. <code>XbaeCaption</code> performs geometry management so that its size always matches its child&#8217;s size plus the size of the label and label offset. By using <code>XbaeCaption</code> with an <code>XmFrame</code> child, groups of related widgets can be labeled in a visually appealing manner. <code>XbaeCaption</code> is also useful for associating labels with individual <code>XmTextFields</code>.</p>
 <h3>Classes</h3>
-<p><code>XbaeCaption</code> inherits behavior and resources from the <code>Core</code>, <code>Composite</code>, <code>Constraint</code> and <code>XmManager</code> widget classes.<br />
- The class pointer is <code>xbaeCaptionWidgetClass</code>.<br />
+<p><code>XbaeCaption</code> inherits behavior and resources from the <code>Core</code>, <code>Composite</code>, <code>Constraint</code> and <code>XmManager</code> widget classes.<br/>
+ The class pointer is <code>xbaeCaptionWidgetClass</code>.<br/>
  The class name is <code>XbaeCaption</code>.</p>
 <h3>New Resources</h3>
 <p>The following table lists the new resources defined by <code>XbaeCaption</code>. The codes in the Access column indicate whether the given resource can be set at creation time (C), or set by using XtSetValues (S), or retrieved by using XtGetValues (G). </p>
@@ -46,11 +46,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNfontList</font></td>
-<td><font SIZE="-9">XmCFontList</font></td>
-<td><font SIZE="-9">FontList</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNfontList</td>
+<td>XmCFontList</td>
+<td>FontList</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -59,11 +59,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNlabelAlignment</font></td>
-<td><font SIZE="-9">XmCLabelAlignment</font></td>
-<td><font SIZE="-9">XbaeLabelAlignment</font></td>
-<td><font SIZE="-9">XbaeAlignmentCenter</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNlabelAlignment</td>
+<td>XmCLabelAlignment</td>
+<td>XbaeLabelAlignment</td>
+<td>XbaeAlignmentCenter</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -72,11 +72,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNlabelOffset</font></td>
-<td><font SIZE="-9">XmCLabelOffset</font></td>
-<td><font SIZE="-9">Int</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNlabelOffset</td>
+<td>XmCLabelOffset</td>
+<td>Int</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -85,11 +85,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNlabelPixmap</font></td>
-<td><font SIZE="-9">XmCLabelPixmap</font></td>
-<td><font SIZE="-9">PrimForegroundPixmap</font></td>
-<td><font SIZE="-9">XmUNSPECIFIED_PIXMAP</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNlabelPixmap</td>
+<td>XmCLabelPixmap</td>
+<td>PrimForegroundPixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -98,11 +98,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNlabelPosition</font></td>
-<td><font SIZE="-9">XmCLabelPosition</font></td>
-<td><font SIZE="-9">XbaeLabelPosition</font></td>
-<td><font SIZE="-9">XbaePositionLeft</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNlabelPosition</td>
+<td>XmCLabelPosition</td>
+<td>XbaeLabelPosition</td>
+<td>XbaePositionLeft</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -111,11 +111,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNlabelString</font></td>
-<td><font SIZE="-9">XmCXmString</font></td>
-<td><font SIZE="-9">XmString</font></td>
-<td><font SIZE="-9">widget name</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNlabelString</td>
+<td>XmCXmString</td>
+<td>XmString</td>
+<td>widget name</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -124,11 +124,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNlabelTextAlignment</font></td>
-<td><font SIZE="-9">XmCAlignment</font></td>
-<td><font SIZE="-9">Alignment</font></td>
-<td><font SIZE="-9">XmALIGNMENT_CENTER</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNlabelTextAlignment</td>
+<td>XmCAlignment</td>
+<td>Alignment</td>
+<td>XmALIGNMENT_CENTER</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -137,18 +137,18 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNlabelType</font></td>
-<td><font SIZE="-9">XmCLabelType</font></td>
-<td><font SIZE="-9">LabelType</font></td>
-<td><font SIZE="-9">XmString</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNlabelType</td>
+<td>XmCLabelType</td>
+<td>LabelType</td>
+<td>XmString</td>
+<td>CSG
 </td>
 </tr>
 </table>
 </table>
 <dl COMPACT>
 <dt><code>XmNfontList</code></dt>
-<dd>Specifies the font of the text used in the caption label. If this value is <font SIZE="-1">NULL</font> at initialization, it is initialized by looking up the parent hierarchy of the widget for an ancestor that is a subclass of the <code>XmBulletinBoard</code>, <code>VendorShell</code> or <code>XmMenuShell</code> widget class. If such an ancestor is found, the font list is initialized to the appropriate default font list of the ancestor widget <code>XmNdefaultFontList for</code> <code>VendorShell</code> and <code>XmMenuShell</code>, <code>XmNlabelFontList</code> or <code>XmNbuttonFontList</code> for <code>XmBulletinBoard.</code> Refer to <code>XmFontList(3X)</code> for more information on the creation and structure of a font list. This resource is copied.</dd>
+<dd>Specifies the font of the text used in the caption label. If this value is NULL at initialization, it is initialized by looking up the parent hierarchy of the widget for an ancestor that is a subclass of the <code>XmBulletinBoard</code>, <code>VendorShell</code> or <code>XmMenuShell</code> widget class. If such an ancestor is found, the font list is initialized to the appropriate default font list of the ancestor widget <code>XmNdefaultFontList for</code> <code>VendorShell</code> and <code>XmMenuShell</code>, <code>XmNlabelFontList</code> or <code>XmNbuttonFontList</code> for <code>XmBulletinBoard.</code> Refer to <code>XmFontList(3X)</code> for more information on the creation and structure of a font list. This resource is copied.</dd>
 <dt><code>XmNlabelAlignment</code></dt>
 <dd>Specifies the alignment of the caption label along the side of the caption child. Must be one of the enumerated <code>XbaeLabelAlignment</code> types: <code>XbaeAlignmentTopOrLeft</code>, <code>XbaeAlignmentCenter</code>, <code>XbaeAlignmentBottomOrRight</code>.</dd>
 <dt><code>XmNlabelOffset</code></dt>
@@ -158,7 +158,7 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 <dt><code>XmNlabelPosition</code></dt>
 <dd>Specifies on which side of the caption child the caption label should be placed. Must be one of the enumerated <code>XbaeLabelPosition</code> types: <code>XbaePositionLeft</code>, <code>XbaePositionRight</code>, <code>XbaePositionTop</code>, <code>XbaePositionBottom</code>.</dd>
 <dt><code>XmNlabelString</code></dt>
-<dd>Specifies the compound string when the <code>XmNlabelType is</code> <code>XmSTRING</code>. If this value is <font SIZE="-1">NULL,</font> it is initialized by converting the name of the widget to a compound string. Refer to <code>XmString(3X)</code> for more information on the creation and structure of compound strings.</dd>
+<dd>Specifies the compound string when the <code>XmNlabelType is</code> <code>XmSTRING</code>. If this value is NULL, it is initialized by converting the name of the widget to a compound string. Refer to <code>XmString(3X)</code> for more information on the creation and structure of compound strings.</dd>
 <dt><code>XmNlabelTextAlignment</code></dt>
 <dd>Specifies the text alignment for the caption label. This resource is only useful for multi line caption labels. Valid values are: <code>XmALIGNMENT_BEGINNING</code> left alignment causes the left sides of the lines of text to be vertically aligned. <code>XmALIGNMENT_CENTER</code> center alignment causes the centers of the lines of text to be vertically aligned. <code>XmALIGNMENT_END</code> right alignment causes the right sides of the lines of text to be vertically aligned.</dd>
 <dt><code>XmNlabelType</code></dt>
@@ -193,11 +193,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbottomShadowColor</font></td>
-<td><font SIZE="-9">XmCBottomShadowColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbottomShadowColor</td>
+<td>XmCBottomShadowColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -206,11 +206,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbottomShadowPixmap</font></td>
-<td><font SIZE="-9">XmCBottomShadowPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">XmUNSPECIFIED_PIXMAP</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbottomShadowPixmap</td>
+<td>XmCBottomShadowPixmap</td>
+<td>Pixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -219,11 +219,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNforeground</font></td>
-<td><font SIZE="-9">XmCForeground</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNforeground</td>
+<td>XmCForeground</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -232,11 +232,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhelpCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNhelpCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -245,11 +245,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhighlightColor</font></td>
-<td><font SIZE="-9">XmCHighlightColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNhighlightColor</td>
+<td>XmCHighlightColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -258,11 +258,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhighlightPixmap</font></td>
-<td><font SIZE="-9">XmCHighlightPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNhighlightPixmap</td>
+<td>XmCHighlightPixmap</td>
+<td>Pixmap</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -271,11 +271,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNnavigationType</font></td>
-<td><font SIZE="-9">XmCNavigationType</font></td>
-<td><font SIZE="-9">XmNavigationType</font></td>
-<td><font SIZE="-9">XmTAB_GROUP</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNnavigationType</td>
+<td>XmCNavigationType</td>
+<td>XmNavigationType</td>
+<td>XmTAB_GROUP</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -284,11 +284,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNshadowThickness</font></td>
-<td><font SIZE="-9">XmCShadowThickness</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">2</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNshadowThickness</td>
+<td>XmCShadowThickness</td>
+<td>Dimension</td>
+<td>2</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -297,11 +297,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNstringDirection</font></td>
-<td><font SIZE="-9">XmCStringDirection</font></td>
-<td><font SIZE="-9">XmStringDirection</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNstringDirection</td>
+<td>XmCStringDirection</td>
+<td>XmStringDirection</td>
+<td>dynamic</td>
+<td>CG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -310,11 +310,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtopShadowColor</font></td>
-<td><font SIZE="-9">XmCTopShadowColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtopShadowColor</td>
+<td>XmCTopShadowColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -323,11 +323,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtopShadowPixmap</font></td>
-<td><font SIZE="-9">XmCTopShadowPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtopShadowPixmap</td>
+<td>XmCTopShadowPixmap</td>
+<td>Pixmap</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -336,11 +336,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtraversalOn</font></td>
-<td><font SIZE="-9">XmCTraversalOn</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtraversalOn</td>
+<td>XmCTraversalOn</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -349,11 +349,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNunitType</font></td>
-<td><font SIZE="-9">XmCUnitType</font></td>
-<td><font SIZE="-9">UnsignedChar</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNunitType</td>
+<td>XmCUnitType</td>
+<td>UnsignedChar</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -362,11 +362,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNuserData</font></td>
-<td><font SIZE="-9">XmCUserData</font></td>
-<td><font SIZE="-9">Pointer</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNuserData</td>
+<td>XmCUserData</td>
+<td>Pointer</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 </table>
@@ -399,11 +399,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNchildren</font></td>
-<td><font SIZE="-9">XmCReadOnly</font></td>
-<td><font SIZE="-9">WidgetList</font></td>
-<td><font SIZE="-9">private</font></td>
-<td><font SIZE="-9">G</font>
+<td>XmNchildren</td>
+<td>XmCReadOnly</td>
+<td>WidgetList</td>
+<td>private</td>
+<td>G
 </td>
 </tr>
 <tr VALIGN=top>
@@ -412,11 +412,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNinsertPosition</font></td>
-<td><font SIZE="-9">XmCInsertPosition</font></td>
-<td><font SIZE="-9">Function</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNinsertPosition</td>
+<td>XmCInsertPosition</td>
+<td>Function</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -425,11 +425,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNnumChildren</font></td>
-<td><font SIZE="-9">XmCReadOnly</font></td>
-<td><font SIZE="-9">Cardinal</font></td>
-<td><font SIZE="-9">4</font></td>
-<td><font SIZE="-9">G</font>
+<td>XmNnumChildren</td>
+<td>XmCReadOnly</td>
+<td>Cardinal</td>
+<td>4</td>
+<td>G
 </td>
 </tr>
 </table>
@@ -462,11 +462,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNaccelerators</font></td>
-<td><font SIZE="-9">XmCAccelerators</font></td>
-<td><font SIZE="-9">AcceleratorTable</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNaccelerators</td>
+<td>XmCAccelerators</td>
+<td>AcceleratorTable</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -475,11 +475,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNancestorSensitive</font></td>
-<td><font SIZE="-9">XmCSensitive</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNancestorSensitive</td>
+<td>XmCSensitive</td>
+<td>Boolean</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -488,11 +488,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbackground</font></td>
-<td><font SIZE="-9">XmCBackground</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">G</font>
+<td>XmNbackground</td>
+<td>XmCBackground</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>G
 </td>
 </tr>
 <tr VALIGN=top>
@@ -501,11 +501,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbackgroundPixmap</font></td>
-<td><font SIZE="-9">XmCPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">XmUNSPECIFIED_PIXMAP</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbackgroundPixmap</td>
+<td>XmCPixmap</td>
+<td>Pixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -514,11 +514,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNborderColor</font></td>
-<td><font SIZE="-9">XmCBorderColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">XtDefaultForeground</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNborderColor</td>
+<td>XmCBorderColor</td>
+<td>Pixel</td>
+<td>XtDefaultForeground</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -527,11 +527,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNborderPixmap</font></td>
-<td><font SIZE="-9">XmCPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">XmUNSPECIFIED_PIXMAP</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNborderPixmap</td>
+<td>XmCPixmap</td>
+<td>Pixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -540,11 +540,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNborderWidth</font></td>
-<td><font SIZE="-9">XmCBorderWidth</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNborderWidth</td>
+<td>XmCBorderWidth</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -553,11 +553,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolormap</font></td>
-<td><font SIZE="-9">XmCColormap</font></td>
-<td><font SIZE="-9">Colormap</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNcolormap</td>
+<td>XmCColormap</td>
+<td>Colormap</td>
+<td>dynamic</td>
+<td>CG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -566,11 +566,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNdepth</font></td>
-<td><font SIZE="-9">XmCDepth</font></td>
-<td><font SIZE="-9">Int</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNdepth</td>
+<td>XmCDepth</td>
+<td>Int</td>
+<td>dynamic</td>
+<td>CG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -579,11 +579,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNdestroyCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNdestroyCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -592,11 +592,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNheight</font></td>
-<td><font SIZE="-9">XmCHeight</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNheight</td>
+<td>XmCHeight</td>
+<td>Dimension</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -605,11 +605,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNinitialResourcesPersistent</font></td>
-<td><font SIZE="-9">XmCInitialResourcesPersistent</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNinitialResourcesPersistent</td>
+<td>XmCInitialResourcesPersistent</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -618,11 +618,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNmappedWhenManaged</font></td>
-<td><font SIZE="-9">XmCMappedWhenManaged</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNmappedWhenManaged</td>
+<td>XmCMappedWhenManaged</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -631,11 +631,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNscreen</font></td>
-<td><font SIZE="-9">XmCScreen</font></td>
-<td><font SIZE="-9">Screen</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNscreen</td>
+<td>XmCScreen</td>
+<td>Screen</td>
+<td>dynamic</td>
+<td>CG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -644,11 +644,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNsensitive</font></td>
-<td><font SIZE="-9">XmCSensitive</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNsensitive</td>
+<td>XmCSensitive</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -657,11 +657,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtranslations</font></td>
-<td><font SIZE="-9">XmCTranslations</font></td>
-<td><font SIZE="-9">TranslationTable</font></td>
-<td><font SIZE="-9">internal</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtranslations</td>
+<td>XmCTranslations</td>
+<td>TranslationTable</td>
+<td>internal</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -670,11 +670,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNwidth</font></td>
-<td><font SIZE="-9">XmCWidth</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNwidth</td>
+<td>XmCWidth</td>
+<td>Dimension</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -683,11 +683,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNx</font></td>
-<td><font SIZE="-9">XmCPosition</font></td>
-<td><font SIZE="-9">Position</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNx</td>
+<td>XmCPosition</td>
+<td>Position</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -696,11 +696,11 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNy</font></td>
-<td><font SIZE="-9">XmCPosition</font></td>
-<td><font SIZE="-9">Position</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNy</td>
+<td>XmCPosition</td>
+<td>Position</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 </table>
@@ -764,9 +764,9 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code>VirtualBindings(3X)</code>.</p>
 <h2>Author</h2>
-<p><code>Andrew Wason,</code> Bellcore, Piscataway NJ; author<br />
+<p><code>Andrew Wason,</code> Bellcore, Piscataway NJ; author<br/>
  (aw [at] bae.bellcore.com) </p>
-<p> <code>Andrew Lister</code><br />
+<p> <code>Andrew Lister</code><br/>
  (lister [at] db.com) </p>
 <h2>Release</h2>
 <p>This document describes XbaeCaption from Xbae Version 4.9.</p>
@@ -776,6 +776,6 @@ description: "XbaeCaption – The Bellcore Application Environment (BAE) XbaeCap
 <p>Bellcore, previous and current maintainers of the Xbae widgets (collectively &#8216;authors&#8217;) provide this information solely to professionals who have the appropriate degree of experience to understand and interpret its contents in accordance with generally accepted engineering or other professional standards and applicable regulations. No recommendations as to products or vendors is made or should be implied. </p>
 <p> While the information contained herein has been prepared from sources deemed to be reliable, the authors reserve the right to revise the information without notice, but have no obligation to do so. Unless the recipient has been expressly granted a license by Bellcore under separate applicable written agreement with Bellcore, no license, expressed or implied, is granted under any patents, copyrights or other intellectual property rights. Use of the information is at your discretion and shall not be deemed an inducement by Bellcore to infringe any existing or later-issued patent, copyrights or other intellectual property right. </p>
 <p> THE AUTHORS MAKE NO REPRESENTATIONS AND EXTENDS NO WARRANTIES, EXPRESS OR IMPLIED, WITH RESPECT TO THE INFORMATION, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR ANY PARTICULAR PURPOSE, AND THE WARRANTY AGAINST INFRINGEMENT OF PATENTS OR OTHER INTELLECTUAL PROPERTY RIGHTS. THE INFORMATION IS PROVIDED &#8220;AS IS&#8221;, AND IN NO EVENT SHALL THE AUTHORS OR ANY OF ITS AFFILIATES BE LIABLE FOR ANY DAMAGES, INCLUDING ANY LOST PROFITS OR OTHER INCIDENTAL OR CONSEQUENTIAL DAMAGES RELATING TO THE INFORMATION. </p>
-<p> Copyright 1991 Bellcore. All Rights Reserved. Copyright 1995-99 Andrew Lister All Rights Reserved.<br />
+<p> Copyright 1991 Bellcore. All Rights Reserved. Copyright 1995-99 Andrew Lister All Rights Reserved.<br/>
  Copyright 1999-2002 LessTif Developers </p>
 <p> The above no warranty extends to all additions and contributions. No contributor shall be held liable; this work is provided &#8220;as is&#8221;. If this is a problem for you, then don&#8217;t use this software.</p>

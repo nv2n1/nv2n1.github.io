@@ -14,17 +14,17 @@ description: "sc::SpatialMOPairIter –"
 #include &lt;pairiter.h&gt;</code></pre>
 <p> Inherits <code>sc::MOPairIter</code>. Inherited by <code>sc::SpatialMOPairIter_eq</code>, and <code>sc::SpatialMOPairIter_neq</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>SpatialMOPairIter</code> (const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space_i, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space_j)<br />
- <i>Initialize a spatial pair iterator for the given MO spaces. </i><br />
- virtual int <code>nij_aa</code> () const =0<br />
- <i>Returns the number of functions in alpha-alpha space. </i><br />
- virtual int <code>nij_ab</code> () const =0<br />
- <i>Returns the number of functions in alpha-beta space. </i><br />
- virtual int <code>ij_aa</code> () const =0<br />
- <i>Returns compound index ij for alpha-alpha case. </i><br />
- virtual int <code>ij_ab</code> () const =0<br />
- <i>Returns compound index ij for alpha-beta case. </i><br />
- virtual int <code>ij_ba</code> () const =0<br />
+<p><code>SpatialMOPairIter</code> (const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space_i, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space_j)<br/>
+ <i>Initialize a spatial pair iterator for the given MO spaces. </i><br/>
+ virtual int <code>nij_aa</code> () const =0<br/>
+ <i>Returns the number of functions in alpha-alpha space. </i><br/>
+ virtual int <code>nij_ab</code> () const =0<br/>
+ <i>Returns the number of functions in alpha-beta space. </i><br/>
+ virtual int <code>ij_aa</code> () const =0<br/>
+ <i>Returns compound index ij for alpha-alpha case. </i><br/>
+ virtual int <code>ij_ab</code> () const =0<br/>
+ <i>Returns compound index ij for alpha-beta case. </i><br/>
+ virtual int <code>ij_ba</code> () const =0<br/>
  <i>Returns compound index ij for beta-alpha case. </i></p>
 <h2>Detailed Description</h2>
 <p><code>SpatialMOPairIter</code> gives the ordering of pairs of spatial orbitals. </p>

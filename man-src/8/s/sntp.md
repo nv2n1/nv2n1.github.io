@@ -9,7 +9,7 @@ description: "sntp – standard Simple Network Time Protocol program"
 
 <p>sntp &#8211; standard Simple Network Time Protocol program</p>
 <h2>Synopsis</h2>
-<p><code>sntp</code> [<code>&#8211;</code><i>flag</i> [<i>value</i>]]&#8230; [<code>&#8212;</code><i>opt-name</i> [[=| ]<i>value</i>]]&#8230;<br />
+<p><code>sntp</code> [<code>&#8211;</code><i>flag</i> [<i>value</i>]]&#8230; [<code>&#8212;</code><i>opt-name</i> [[=| ]<i>value</i>]]&#8230;<br/>
  [ hostname-or-IP &#8230;] </p>
 <h2>Description</h2>
 <p>This manual page briefly documents the <code>sntp</code> command. <i>sntp</i> can be used as a SNTP client to query a NTP or SNTP server and either display the time or set the local system&#8217;s time (given suitable privilege). It can be run as an interactive command or in a <i>cron</i> job. </p>
@@ -43,8 +43,8 @@ description: "sntp – standard Simple Network Time Protocol program"
 <dd>Use broadcasts to the address specified for synchronisation. </dd>
 <p> If specified SNTP will listen to the specified broadcast address for NTP broadcasts. The default maximum wait time, 68 seconds, can be modified with -t.</p>
 <dt><code>-t</code> <i>seconds</i>, <code>&#8211;timeout</code>=<i>seconds</i></dt>
-<dd>Specify the number of seconds to wait for broadcasts. This option takes an integer number as its argument. The default <i>seconds</i> for this option is:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<dd>Specify the number of seconds to wait for broadcasts. This option takes an integer number as its argument. The default <i>seconds</i> for this option is:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>68 </dd>
 <p> When waiting for a broadcast packet SNTP will wait the number of seconds specified before giving up. Default 68 seconds.</p>
 <dt><code>-a</code> <i>auth-keynumber</i>, <code>&#8211;authentication</code>=<i>auth-keynumber</i></dt>
@@ -54,7 +54,7 @@ description: "sntp – standard Simple Network Time Protocol program"
 <dd>Specify a keyfile. SNTP will look in this file for the key specified with -a. </dd>
 <p> This option specifies the keyfile. SNTP will search for the key specified with -a keyno in this file. Key files follow the following format: </p>
 <p> keyid keytype key </p>
-<p> Where<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>keyid is a number identifying this key<br />
+<p> Where<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>keyid is a number identifying this key<br/>
  keytype is one of the follow: S Key in 64 Bit hexadecimal number as specified in in the DES specification. N Key in 64 Bit hexadecimal number as specified in the NTP standard. A Key in a 1-to-8 character ASCII string. M Key in a 1-to-8 character ASCII string using the MD5 authentication scheme. </p>
 <p> For more information see ntp.keys(5).</p>
 <dt><code>-?</code>,<code> &#8211;help</code></dt>
@@ -83,7 +83,7 @@ description: "sntp – standard Simple Network Time Protocol program"
 <h2>Bugs</h2>
 <p>Please report bugs to <a rel="nofollow" href="http://bugs.ntp.org">http://bugs.ntp.org</a> .</p>
 <h2>Author</h2>
-<p>David L. Mills and/or others<br />
+<p>David L. Mills and/or others<br/>
  Please send bug reports to: <a rel="nofollow" href="http://bugs.ntp.org,">http://bugs.ntp.org,</a> bugs [at] ntp.org </p>
 <pre>see html/copyright.html</pre>
 <p>This manual page was <i>AutoGen</i>-erated from the <code>sntp</code> option definitions.</p>

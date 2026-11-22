@@ -10,9 +10,9 @@ description: "CMPIArgs – CMPIArgs class implementation"
 <p>CMPIArgs &#8211; CMPIArgs class implementation</p>
 <h2>Synopsis</h2>
 <h3>Public Attributes</h3>
-<p>int <code>void * hdl</code><br />
- Opaque pointer to class instance data.<br />
- <code>CMPIArgsFT</code> * <code>ft</code><br />
+<p>int <code>void * hdl</code><br/>
+ Opaque pointer to class instance data.<br/>
+ <code>CMPIArgsFT</code> * <code>ft</code><br/>
  <i>Pointer to the Args Function Table. </i></p>
 <h2>Methods</h2>
 <p><code>CMPIStatus</code> <code>release</code> (<code>CMPIArgs</code> *args) </p>

@@ -16,7 +16,7 @@ description: "sldtoppm – convert an AutoCAD slide file into a portable pixmap"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-adjust</code></dt>
-<dd> If the display on which the slide file was created had non-square pixels, when the slide is processed with <code>sldtoppm</code> and the <code>-adjust</code> option is not present, the following warning will appear: Warning &#8211; pixels on source screen were non-square.<br />
+<dd> If the display on which the slide file was created had non-square pixels, when the slide is processed with <code>sldtoppm</code> and the <code>-adjust</code> option is not present, the following warning will appear: Warning &#8211; pixels on source screen were non-square.<br/>
  Specifying <code>-adjust</code> will correct image width to compensate. Specifying the <code>-adjust</code> option causes <code>sldtoppm</code> to scale the width of the image so that pixels in the resulting portable pixmap are square (and hence circles appear as true circles, not ellipses). The scaling is performed in the vector domain, before scan converting the objects. The results are, therefore, superior in appearance to what you&#8217;d obtain were you to perform the equivalent scaling with <code>pnmscale</code> after the bitmap had been created.</dd>
 <dt><code>-dir</code></dt>
 <dd> The input is assumed to be an AutoCAD slide library file. A directory listing each slide in the library is printed on standard error.</dd>

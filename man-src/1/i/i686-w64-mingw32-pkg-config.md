@@ -128,7 +128,7 @@ $ pkg - config-- print - errors-- define - variable = prefix = / foo-- variable 
 <dl>
 <dt><i>PKG_CHECK_MODULES(VARIABLE-PREFIX, MODULES [,ACTION-IF-FOUND [,ACTION-IF-NOT-FOUND]])</i></dt>
 <dd>
-<p> The macro PKG_CHECK_MODULES can be used in <i>configure.ac</i> to check whether modules exist. A typical usage would be:<br />
+<p> The macro PKG_CHECK_MODULES can be used in <i>configure.ac</i> to check whether modules exist. A typical usage would be:<br/>
 PKG_CHECK_MODULES([MYSTUFF], [gtk + -2.0 &gt;= 1.3.5 libxml = 1.8.4])</p>
 <p> This would result in MYSTUFF_LIBS and MYSTUFF_CFLAGS substitution variables, set to the libs and cflags for the given module list. If a module is missing or has the wrong version, by default configure will abort with a message. To replace the default action, specify an ACTION-IF-NOT-FOUND. PKG_CHECK_MODULES will not print any error messages if you specify your own ACTION-IF-NOT-FOUND. However, it will set the variable MYSTUFF_PKG_ERRORS, which you can use to display what went wrong. </p>
 <p> Note that if there is a possibility the first call to PKG_CHECK_MODULES might not happen, you should be sure to include an explicit call to PKG_PROG_PKG_CONFIG in your configure.ac. </p>

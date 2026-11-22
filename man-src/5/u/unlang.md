@@ -320,10 +320,10 @@ description: "unlang – FreeRADIUS Processing un-language"
 <dd>Conditional syntax similar to that used in Unix shells may also be used.</dd>
 <dl>
 <dt>%{%{Foo}:-bar}</dt>
-<dd>If %{Foo} has a value, returns that value.<br />
+<dd>If %{Foo} has a value, returns that value.<br/>
  Otherwise, returns literal string &quot;bar&quot;.</dd>
 <dt>%{%{Foo}:-%{Bar}}</dt>
-<dd>If %{Foo} has a value, returns that value.<br />
+<dd>If %{Foo} has a value, returns that value.<br/>
  Otherwise, returns the expansion of %{Bar}. </dd>
 <p> These conditional expansions can be nested to almost any depth, such as with %{%{One}:-%{%{Two}:-%{Three}}}</dl>
 </dl>

@@ -13,11 +13,11 @@ description: "glutInitWindowSize – Requests future windows to open at a given 
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutInitWindowSize int width int height</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>width Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>width Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Width of future windows. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>height Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>height Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Height of future windows.</p>
 <h2>Description</h2>
 <p>This function allows you to request initial dimensions for future windows. </p>

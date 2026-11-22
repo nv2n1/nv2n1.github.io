@@ -13,12 +13,12 @@ description: "crlhelper – Helper program used to store-and-forward CRLs"
 <h2>Description</h2>
 <p>A helper program used by the Apache <code>httpd</code> mod_revocator plug-in to store-and-forward CRLs from upstream to the various Apache processes in the preform MPM. This saves each process from having to fetch the CRL itself. This is not expected to be run by end-users. The mod_revocator plug-in requires the mod_nss plug-in to also be registered with this Apache <code>httpd</code> process. Whenever an Apache <code>httpd</code> process configured to use the mod_revocator plug-in is started, this program will be automatically invoked via reference to the mod_revocator configuration file stored under <code>/etc/httpd/conf.d/revocator.conf</code> which contains the following default entry:</p>
 <dl>
-<dd># CRL Helper:<br />
- # This helper program does the actual CRL retrieval<br />
- #<br />
- # NOTE: Located at &#8216;/usr/bin/crlhelper&#8217; prior<br />
- # to &#8216;mod_revocator-1.0.3-16&#8217;.<br />
- #<br />
+<dd># CRL Helper:<br/>
+ # This helper program does the actual CRL retrieval<br/>
+ #<br/>
+ # NOTE: Located at &#8216;/usr/bin/crlhelper&#8217; prior<br/>
+ # to &#8216;mod_revocator-1.0.3-16&#8217;.<br/>
+ #<br/>
  CRLHelper /usr/libexec/crlhelper </dd>
 <h2>Options</h2>
 <dl>

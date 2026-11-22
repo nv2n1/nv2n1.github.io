@@ -13,14 +13,14 @@ description: "ql/math/statistics/sequencestatistics.hpp – Statistics tools for
 #define DEFINE_SEQUENCE_STAT_CONST_METHOD_DOUBLE(METHOD)
 Typedefs</code></pre>
 <h3>Classes</h3>
-<p>class <code>GenericSequenceStatistics&lt; StatisticsType &gt;</code><br />
+<p>class <code>GenericSequenceStatistics&lt; StatisticsType &gt;</code><br/>
  <i>Statistics analysis of N-dimensional (sequence) data. </i></p>
 <h3>Defines</h3>
 <pre><code>#define DEFINE_SEQUENCE_STAT_CONST_METHOD_VOID(METHOD)
 #define DEFINE_SEQUENCE_STAT_CONST_METHOD_DOUBLE(METHOD)
 Typedefs</code></pre>
-<p> typedef GenericSequenceStatistics&lt; Statistics &gt; <code>SequenceStatistics</code><br />
- <i>default multi-dimensional statistics tool </i><br />
+<p> typedef GenericSequenceStatistics&lt; Statistics &gt; <code>SequenceStatistics</code><br/>
+ <i>default multi-dimensional statistics tool </i><br/>
  typedef GenericSequenceStatistics&lt; IncrementalStatistics &gt; <code>SequenceStatisticsInc</code></p>
 <h2>Detailed Description</h2>
 <p>Statistics tools for sequence (vector, list, array) samples.</p>

@@ -9,10 +9,10 @@ description: "globus_xio_gridftp_driver.h – XIO GRIDFTP Client Driver."
 
 <p>globus_xio_gridftp_driver.h &#8211; XIO GRIDFTP Client Driver.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;globus_xio_system.h&#8217;<br />
+<p>#include &#8216;globus_xio_system.h&#8217;<br/>
  #include &#8216;globus_common.h&#8217; </p>
 <h3>Typedefs</h3>
-<p>typedef enum<br />
+<p>typedef enum<br/>
  <code>globus_l_xio_gridftp_mode_e</code> <code>globus_l_xio_gridftp_mode_t</code>&quot; </p>
 <h3>Enumerations</h3>
 <p>enum <code>globus_xio_gridftp_error_type_t</code> { <code>GLOBUS_XIO_GRIDFTP_ERROR_ATTR</code>, <code>GLOBUS_XIO_GRIDFTP_ERROR_SEEK</code>, <code>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_READ</code>, <code>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_WRITE</code>, <code>GLOBUS_XIO_GRIDFTP_ERROR_PENDING_READ</code>, <code>GLOBUS_XIO_GRIDFTP_ERROR_PENDING_WRITE</code>, <code>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_PARTIAL_XFER</code> } </p>
@@ -138,19 +138,19 @@ description: "globus_xio_gridftp_driver.h – XIO GRIDFTP Client Driver."
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the authentication information used to authenticate with the GridFTP server </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>credential</i> The credential to use for authenticating with a GridFTP server. This may be GSS_C_NO_CREDENTIAL to use the default credential.<br />
- <i>user</i> The user name to send to the GridFTP server. When doing a GSI transfer, this may be set to NULL, and the default gridmap entry for the user&#8217;s GSI identity will be used<br />
- <i>password</i> The password to send to the GridFTP server. When doing a GSI transfer, this may be set to NULL.<br />
- <i>account</i> The account to use for the data transfer.<br />
+<dd><i>credential</i> The credential to use for authenticating with a GridFTP server. This may be GSS_C_NO_CREDENTIAL to use the default credential.<br/>
+ <i>user</i> The user name to send to the GridFTP server. When doing a GSI transfer, this may be set to NULL, and the default gridmap entry for the user&#8217;s GSI identity will be used<br/>
+ <i>password</i> The password to send to the GridFTP server. When doing a GSI transfer, this may be set to NULL.<br/>
+ <i>account</i> The account to use for the data transfer.<br/>
  <i>subject</i> The subject name of the GridFTP server. This is only used when doing a GSI transfer, and then only when the security subject name does not match the hostname of the server (ie, when the server is being run by a user).</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_GET_AUTH</code>, gss_cred_id_t *credential_out, const char **user_out, const char **password_out, const char **account_out, const char **subject_out)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the authentication information on the attr. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>credential_out</i> The credential will be stored here.<br />
- <i>user_out</i> The user name will be stored here.<br />
- <i>password_out</i> The password will be stored here.<br />
- <i>account_out</i> The account information will be stored here.<br />
+<dd><i>credential_out</i> The credential will be stored here.<br/>
+ <i>user_out</i> The user name will be stored here.<br/>
+ <i>password_out</i> The password will be stored here.<br/>
+ <i>account_out</i> The account information will be stored here.<br/>
  <i>subject_out</i> The subject name will be stored here.</dd></dl>
 <h3>globus_result_t globus_xio_gridftp_attr_cntl (attr, driver, <code>GLOBUS_XIO_GRIDFTP_SET_DCAU</code>, intdcau_mode)</h3>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the mode of authentication to be performed on GridFTP data channels. </p>

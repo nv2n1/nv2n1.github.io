@@ -42,7 +42,7 @@ description: "nut.conf – UPS definitions for Network UPS Tools"
 <dl>
 <dd>Optional. At the end of an emergency system halt, the upsmon master will signal the UPS to switch off. This may fail for a number of reasons. Most notably is the case that mains power returns during the shutdown process. See the section &quot;Power races&quot; in /usr/share/doc/nut/docs/shutdown.txt.gz. The system will wait this long for the UPS to cut power, and then reboot. It should be long enough to exhaust the batteries, in case line power continues to be unavailable. On the other hand, it should not be so long that the system remains offline for an unreasonable amount of time if line power has returned. See <a href="/docs/linux/man/1-sleep/">sleep</a>(1) for compatible time syntax. If you specify the time in seconds, use the &quot;s&quot; suffix.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font> </dd>
+<dd> <code>Warning</code>  </dd>
 <p> this workaround might be dangerous under some circumstances. Please read <a rel="nofollow" href="http://bugs.debian.org/358696">http://bugs.debian.org/358696</a> for more details. </p>
 </dl>
 <h2>Example</h2>

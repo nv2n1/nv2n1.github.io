@@ -19,7 +19,7 @@ description: "grubby – command line tool used to configure bootloader menu ent
 <p>The default bootloader target is primarily determined by the architecture for which grubby has been built. Each architecture has a preferred bootloader, and each bootloader has its own configuration file. If no bootloader is selected on the command line, grubby will use these default settings to search for an existing configuration. If no bootloader configuration file is found, grubby will use the default value for that architecture. These defaults are listed in the table below. </p>
 <table BORDER>
 <tr VALIGN=top>
-<td><code><br />
+<td><code><br/>
 &nbsp;<wbr>Arch</code></td>
 <td><code>Bootloader</code></td>
 <td><code>Configuration File</code>

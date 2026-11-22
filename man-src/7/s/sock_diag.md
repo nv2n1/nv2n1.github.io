@@ -17,17 +17,17 @@ diag_socket = socket(AF_NETLINK, socket_type, NETLINK_SOCK_DIAG);</code></pre>
 <h2>Description</h2>
 <p>The sock_diag netlink subsystem provides a mechanism for obtaining information about sockets of various address families from the kernel. This subsystem can be used to obtain information about individual sockets or request a list of sockets. In the request, the caller can specify additional information it would like to obtain about the socket, for example, memory information or information specific to the address family. When requesting a list of sockets, the caller can specify filters that would be applied by the kernel to select a subset of sockets to report. For now, there is only the ability to filter sockets by state (connected, listening, and so on.) Note that sock_diag reports only those sockets that have a name; that is, either sockets bound explicitly with <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) or sockets that were automatically bound to an address (e.g., by <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2)). This is the same set of sockets that is available via <i>/proc/net/unix</i>, <i>/proc/net/tcp</i>, <i>/proc/net/udp</i>, and so on.</p>
 <h3>Request</h3>
-<p>The request starts with a <i>struct nlmsghdr</i> header described in <code><a href="/docs/linux/man/7-netlink/">netlink</a></code>(7) with <i>nlmsg_type</i> field set to <code>SOCK_DIAG_BY_FAMILY</code>. It is followed by a header specific to the address family that starts with a common part shared by all address families: struct inet_diag_msg {<br />
-    __u8 idiag_family;<br />
-    __u8 idiag_state;<br />
-    __u8 idiag_timer;<br />
-    __u8 idiag_retrans;<br />
-    struct inet_diag_sockid id;<br />
-    __u32 idiag_expires;<br />
-    __u32 idiag_rqueue;<br />
-    __u32 idiag_wqueue;<br />
-    __u32 idiag_uid;<br />
-    __u32 idiag_inode;<br />
+<p>The request starts with a <i>struct nlmsghdr</i> header described in <code><a href="/docs/linux/man/7-netlink/">netlink</a></code>(7) with <i>nlmsg_type</i> field set to <code>SOCK_DIAG_BY_FAMILY</code>. It is followed by a header specific to the address family that starts with a common part shared by all address families: struct inet_diag_msg {<br/>
+    __u8 idiag_family;<br/>
+    __u8 idiag_state;<br/>
+    __u8 idiag_timer;<br/>
+    __u8 idiag_retrans;<br/>
+    struct inet_diag_sockid id;<br/>
+    __u32 idiag_expires;<br/>
+    __u32 idiag_rqueue;<br/>
+    __u32 idiag_wqueue;<br/>
+    __u32 idiag_uid;<br/>
+    __u32 idiag_inode;<br/>
 }; The fields of this structure are as follows:</p>
 <dl>
 <dt><i>sdiag_family</i></dt>
@@ -38,17 +38,17 @@ diag_socket = socket(AF_NETLINK, socket_type, NETLINK_SOCK_DIAG);</code></pre>
 <h3>Response</h3>
 <p>The response starts with a <i>struct nlmsghdr</i> header and is followed by an array of objects specific to the address family. The array is to be accessed with the standard <code>NLMSG_*</code> macros from the <code><a href="/docs/linux/man/3-netlink/">netlink</a></code>(3) API. Each object is the NLA (netlink attributes) list that is to be accessed with the <code>RTA_*</code> macros from <code><a href="/docs/linux/man/3-rtnetlink/">rtnetlink</a></code>(3) API.</p>
 <h3>UNIX domain sockets</h3>
-<p>For UNIX domain sockets the request is represented in the following structure: struct inet_diag_msg {<br />
-    __u8 idiag_family;<br />
-    __u8 idiag_state;<br />
-    __u8 idiag_timer;<br />
-    __u8 idiag_retrans;<br />
-    struct inet_diag_sockid id;<br />
-    __u32 idiag_expires;<br />
-    __u32 idiag_rqueue;<br />
-    __u32 idiag_wqueue;<br />
-    __u32 idiag_uid;<br />
-    __u32 idiag_inode;<br />
+<p>For UNIX domain sockets the request is represented in the following structure: struct inet_diag_msg {<br/>
+    __u8 idiag_family;<br/>
+    __u8 idiag_state;<br/>
+    __u8 idiag_timer;<br/>
+    __u8 idiag_retrans;<br/>
+    struct inet_diag_sockid id;<br/>
+    __u32 idiag_expires;<br/>
+    __u32 idiag_rqueue;<br/>
+    __u32 idiag_wqueue;<br/>
+    __u32 idiag_uid;<br/>
+    __u32 idiag_inode;<br/>
 }; The fields of this structure are as follows:</p>
 <dl>
 <dt><i>sdiag_family</i></dt>
@@ -72,8 +72,8 @@ diag_socket = socket(AF_NETLINK, socket_type, NETLINK_SOCK_DIAG);</code></pre>
 <dd>The attribute reported in answer to this request is <code>UNIX_DIAG_NAME</code>. The payload associated with this attribute is the pathname to which the socket was bound (a sequence of bytes up to <code>UNIX_PATH_MAX</code> length).</dd>
 <dt><code>UDIAG_SHOW_VFS</code></dt>
 <dd>The attribute reported in answer to this request is <code>UNIX_DIAG_VFS</code>. The payload associated with this attribute is represented in the following structure:</dd>
-<dd>struct unix_diag_vfs {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 udiag_vfs_dev;<br />
+<dd>struct unix_diag_vfs {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 udiag_vfs_dev;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 udiag_vfs_ino; };</dd>
 <dd>The fields of this structure are as follows:</dd>
 <dl>
@@ -90,8 +90,8 @@ diag_socket = socket(AF_NETLINK, socket_type, NETLINK_SOCK_DIAG);</code></pre>
 <dd>The attribute reported in answer to this request is <code>UNIX_DIAG_ICONS</code>. The payload associated with this attribute is an array of __u32 values which are inode numbers of sockets that has passed the <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) call, but hasn&#8217;t been processed with <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2) yet. This attribute is reported for listening sockets only.</dd>
 <dt><code>UDIAG_SHOW_RQLEN</code></dt>
 <dd>The attribute reported in answer to this request is <code>UNIX_DIAG_RQLEN</code>. The payload associated with this attribute is represented in the following structure:</dd>
-<dd>struct unix_diag_rqlen {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 udiag_rqueue;<br />
+<dd>struct unix_diag_rqlen {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 udiag_rqueue;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 udiag_wqueue; };</dd>
 <dd>The fields of this structure are as follows:</dd>
 <dl>
@@ -113,17 +113,17 @@ diag_socket = socket(AF_NETLINK, socket_type, NETLINK_SOCK_DIAG);</code></pre>
 </dl>
 <dt><i>udiag_cookie</i></dt>
 <dd>This is an array of opaque identifiers that could be used along with <i>udiag_ino</i> to specify an individual socket. It is ignored when querying for a list of sockets, as well as when all its elements are set to -1.</dd></dl>
-<p> The response to a query for UNIX domain sockets is represented as an array of struct inet_diag_msg {<br />
-    __u8 idiag_family;<br />
-    __u8 idiag_state;<br />
-    __u8 idiag_timer;<br />
-    __u8 idiag_retrans;<br />
-    struct inet_diag_sockid id;<br />
-    __u32 idiag_expires;<br />
-    __u32 idiag_rqueue;<br />
-    __u32 idiag_wqueue;<br />
-    __u32 idiag_uid;<br />
-    __u32 idiag_inode;<br />
+<p> The response to a query for UNIX domain sockets is represented as an array of struct inet_diag_msg {<br/>
+    __u8 idiag_family;<br/>
+    __u8 idiag_state;<br/>
+    __u8 idiag_timer;<br/>
+    __u8 idiag_retrans;<br/>
+    struct inet_diag_sockid id;<br/>
+    __u32 idiag_expires;<br/>
+    __u32 idiag_rqueue;<br/>
+    __u32 idiag_wqueue;<br/>
+    __u32 idiag_uid;<br/>
+    __u32 idiag_inode;<br/>
 }; followed by netlink attributes. The fields of this structure are as follows:</p>
 <dl>
 <dt><i>udiag_family</i></dt>
@@ -139,28 +139,28 @@ diag_socket = socket(AF_NETLINK, socket_type, NETLINK_SOCK_DIAG);</code></pre>
 <dt><i>udiag_cookie</i></dt>
 <dd>This is an array of opaque identifiers that could be used in subsequent queries.</dd></dl>
 <h3>IPv4 and IPv6 sockets</h3>
-<p>For IPv4 and IPv6 sockets, the request is represented in the following structure: struct inet_diag_msg {<br />
-    __u8 idiag_family;<br />
-    __u8 idiag_state;<br />
-    __u8 idiag_timer;<br />
-    __u8 idiag_retrans;<br />
-    struct inet_diag_sockid id;<br />
-    __u32 idiag_expires;<br />
-    __u32 idiag_rqueue;<br />
-    __u32 idiag_wqueue;<br />
-    __u32 idiag_uid;<br />
-    __u32 idiag_inode;<br />
-}; where <i>struct inet_diag_sockid</i> is defined as follows: struct inet_diag_msg {<br />
-    __u8 idiag_family;<br />
-    __u8 idiag_state;<br />
-    __u8 idiag_timer;<br />
-    __u8 idiag_retrans;<br />
-    struct inet_diag_sockid id;<br />
-    __u32 idiag_expires;<br />
-    __u32 idiag_rqueue;<br />
-    __u32 idiag_wqueue;<br />
-    __u32 idiag_uid;<br />
-    __u32 idiag_inode;<br />
+<p>For IPv4 and IPv6 sockets, the request is represented in the following structure: struct inet_diag_msg {<br/>
+    __u8 idiag_family;<br/>
+    __u8 idiag_state;<br/>
+    __u8 idiag_timer;<br/>
+    __u8 idiag_retrans;<br/>
+    struct inet_diag_sockid id;<br/>
+    __u32 idiag_expires;<br/>
+    __u32 idiag_rqueue;<br/>
+    __u32 idiag_wqueue;<br/>
+    __u32 idiag_uid;<br/>
+    __u32 idiag_inode;<br/>
+}; where <i>struct inet_diag_sockid</i> is defined as follows: struct inet_diag_msg {<br/>
+    __u8 idiag_family;<br/>
+    __u8 idiag_state;<br/>
+    __u8 idiag_timer;<br/>
+    __u8 idiag_retrans;<br/>
+    struct inet_diag_sockid id;<br/>
+    __u32 idiag_expires;<br/>
+    __u32 idiag_rqueue;<br/>
+    __u32 idiag_wqueue;<br/>
+    __u32 idiag_uid;<br/>
+    __u32 idiag_inode;<br/>
 }; The fields of <i>struct inet_diag_req_v2</i> are as follows:</p>
 <dl>
 <dt><i>sdiag_family</i></dt>
@@ -178,10 +178,10 @@ diag_socket = socket(AF_NETLINK, socket_type, NETLINK_SOCK_DIAG);</code></pre>
 <dd>The payload associated with this attribute is a __u8 value which is the TClass of the socket. IPv6 sockets only. For LISTEN and CLOSE sockets, this is followed by <code>INET_DIAG_SKV6ONLY</code> attribute with associated __u8 payload value meaning whether the socket is IPv6-only or not.</dd>
 <dt><code>INET_DIAG_MEMINFO</code></dt>
 <dd>The payload associated with this attribute is represented in the following structure:</dd>
-<dd>struct inet_diag_meminfo {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 idiag_rmem;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 idiag_wmem;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 idiag_fmem;<br />
+<dd>struct inet_diag_meminfo {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 idiag_rmem;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 idiag_wmem;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 idiag_fmem;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 idiag_tmem; };</dd>
 <dd>The fields of this structure are as follows:</dd>
 <dl>
@@ -223,17 +223,17 @@ diag_socket = socket(AF_NETLINK, socket_type, NETLINK_SOCK_DIAG);</code></pre>
 <dd>The interface number the socket is bound to.</dd>
 <dt><i>idiag_cookie</i></dt>
 <dd>This is an array of opaque identifiers that could be used along with other fields of this structure to specify an individual socket. It is ignored when querying for a list of sockets, as well as when all its elements are set to -1.</dd></dl>
-<p> The response to a query for IPv4 or IPv6 sockets is represented as an array of struct inet_diag_msg {<br />
-    __u8 idiag_family;<br />
-    __u8 idiag_state;<br />
-    __u8 idiag_timer;<br />
-    __u8 idiag_retrans;<br />
-    struct inet_diag_sockid id;<br />
-    __u32 idiag_expires;<br />
-    __u32 idiag_rqueue;<br />
-    __u32 idiag_wqueue;<br />
-    __u32 idiag_uid;<br />
-    __u32 idiag_inode;<br />
+<p> The response to a query for IPv4 or IPv6 sockets is represented as an array of struct inet_diag_msg {<br/>
+    __u8 idiag_family;<br/>
+    __u8 idiag_state;<br/>
+    __u8 idiag_timer;<br/>
+    __u8 idiag_retrans;<br/>
+    struct inet_diag_sockid id;<br/>
+    __u32 idiag_expires;<br/>
+    __u32 idiag_rqueue;<br/>
+    __u32 idiag_wqueue;<br/>
+    __u32 idiag_uid;<br/>
+    __u32 idiag_inode;<br/>
 }; followed by netlink attributes. The fields of this structure are as follows:</p>
 <dl>
 <dt><i>idiag_family</i></dt>

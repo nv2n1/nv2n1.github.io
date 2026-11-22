@@ -18,27 +18,27 @@ description: "sc::BatchElectronDensity –"
 <p>This gives the elements of gradient arrays.</p>
 <p>enum { XX = 0, YX = 1, YY = 2, ZX = 3, ZY = 4, ZZ = 5 }</p>
 <p>This gives the elements of hessian arrays.</p>
-<p>Public Member Functions<br />
+<p>Public Member Functions<br/>
  <code>BatchElectronDensity</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
 <p> <code>BatchElectronDensity</code> (const <code>Ref</code>&lt; <code>Wavefunction</code> &gt; &amp;, double accuracy=DBL_EPSILON) </p>
-<p> <code>BatchElectronDensity</code> (const <code>Ref</code>&lt; <code>BatchElectronDensity</code> &gt; &amp;d, bool reference_parent_data=false)<br />
- <i>This will construct copies of this. </i><br />
- virtual void <code>boundingbox</code> (double valuemin, double valuemax, <code>SCVector3</code> &amp;p1, <code>SCVector3</code> &amp;p2)<br />
- <i>Returns the bounding box. </i><br />
- void <code>clear</code> ()<br />
- <i>This will cause all stratch storage to be released. </i><br />
- void <code>compute_density</code> (const <code>SCVector3</code> &amp;r, double *alpha_density, double *alpha_density_grad, double *alpha_density_hessian, double *beta_density, double *beta_density_grad, double *beta_density_hessian)<br />
- <i>This is a alternate to the </i><code>Volume</code> interface that avoids some of the overhead of that interface.<br />
- virtual void <code>init</code> (bool initialize_density_matrices=true)<br />
- <i>This is called to finish initialization of the object. </i><br />
- virtual void <code>set_densities</code> (const <code>RefSymmSCMatrix</code> &amp;aden, const <code>RefSymmSCMatrix</code> &amp;bden)<br />
- <i>This will fill in the internel copies of the density matrices with new values. </i><br />
- void <code>set_linear_scaling</code> (bool b)<br />
- <i>Turn linear scaling algorithm on/off. </i><br />
- void <code>set_accuracy</code> (double a)<br />
- <i>Sets the accuracy. </i><br />
- void <code>set_use_dmat_bound</code> (bool b)<br />
- <i>Turn use of density matrix bounds on/off. </i> <code>DFT Support Members.</code><br />
+<p> <code>BatchElectronDensity</code> (const <code>Ref</code>&lt; <code>BatchElectronDensity</code> &gt; &amp;d, bool reference_parent_data=false)<br/>
+ <i>This will construct copies of this. </i><br/>
+ virtual void <code>boundingbox</code> (double valuemin, double valuemax, <code>SCVector3</code> &amp;p1, <code>SCVector3</code> &amp;p2)<br/>
+ <i>Returns the bounding box. </i><br/>
+ void <code>clear</code> ()<br/>
+ <i>This will cause all stratch storage to be released. </i><br/>
+ void <code>compute_density</code> (const <code>SCVector3</code> &amp;r, double *alpha_density, double *alpha_density_grad, double *alpha_density_hessian, double *beta_density, double *beta_density_grad, double *beta_density_hessian)<br/>
+ <i>This is a alternate to the </i><code>Volume</code> interface that avoids some of the overhead of that interface.<br/>
+ virtual void <code>init</code> (bool initialize_density_matrices=true)<br/>
+ <i>This is called to finish initialization of the object. </i><br/>
+ virtual void <code>set_densities</code> (const <code>RefSymmSCMatrix</code> &amp;aden, const <code>RefSymmSCMatrix</code> &amp;bden)<br/>
+ <i>This will fill in the internel copies of the density matrices with new values. </i><br/>
+ void <code>set_linear_scaling</code> (bool b)<br/>
+ <i>Turn linear scaling algorithm on/off. </i><br/>
+ void <code>set_accuracy</code> (double a)<br/>
+ <i>Sets the accuracy. </i><br/>
+ void <code>set_use_dmat_bound</code> (bool b)<br/>
+ <i>Turn use of density matrix bounds on/off. </i> <code>DFT Support Members.</code><br/>
  These return some of the internal data, some of which is only value after a density has been computed. This data is needed by the density functional theory code. </p>
 <pre><code>double * alpha_density_matrix ()
 Return the alpha density matrix.
@@ -59,7 +59,7 @@ Protected Member Functions</code></pre>
 <p> virtual void <code>init_scratch_data</code> () </p>
 <p> void <code>compute_basis_values</code> (const <code>SCVector3</code> &amp;r) </p>
 <p> void <code>compute_spin_density</code> (const double *dmat, double *rho, double *grad, double *hess) </p>
-<p> virtual void <code>compute</code> ()<br />
+<p> virtual void <code>compute</code> ()<br/>
  <i>Recompute at least the results that have compute true and are not already computed. </i></p>
 <h3>Protected Attributes</h3>
 <p><code>Ref</code>&lt; <code>Wavefunction</code> &gt; <code>wfn_</code> </p>

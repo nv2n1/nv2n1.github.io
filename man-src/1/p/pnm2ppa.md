@@ -90,5 +90,5 @@ description: "pnm2ppa – convert portable anymap (PNM) images to HP’s PPA pri
 <h2>HISTORY</h2>
 <p> This program was originally pbm2ppa, written by Tim Norman. It originally supported black and white output on the 820 series. Tim added nascent color support in early 1999. In May 1999, Giorgio Marzano started making real headway in getting color support working properly. Andrew van der Stock has maintained the code since September 1999, and made it available at <a rel="nofollow" href="http://sourceforge.net/projects/pnm2ppa.">http://sourceforge.net/projects/pnm2ppa.</a></p>
 <h2>BUGS</h2>
-<p> Faint horizontal lines marking boundaries between print sweeps may be visible. You may get better results when printing images, with the options:<br />
+<p> Faint horizontal lines marking boundaries between print sweeps may be visible. You may get better results when printing images, with the options:<br/>
 &nbsp;<code>&nbsp;-p &#8211;uni&nbsp;</code>&nbsp;(this may no longer apply since recent code improvements). </p>

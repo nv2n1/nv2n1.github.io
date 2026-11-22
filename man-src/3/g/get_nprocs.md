@@ -11,7 +11,7 @@ description: "get_nprocs, get_nprocs_conf – get number of processors"
 <p> get_nprocs, get_nprocs_conf &#8211; get number of processors </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/sysinfo.h&gt;</code> </p>
-<p> <code>int get_nprocs(void);</code><br />
+<p> <code>int get_nprocs(void);</code><br/>
  <code>int get_nprocs_conf(void);</code></p>
 <h2>DESCRIPTION</h2>
 <p> The function <code>get_nprocs_conf</code>() returns the number of processors configured by the operating system. </p>
@@ -28,7 +28,7 @@ description: "get_nprocs, get_nprocs_conf – get number of processors"
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>get_nprocs</code>(),<br />
+<td> <code>get_nprocs</code>(),<br/>
  <code>get_nprocs_conf</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe
@@ -44,11 +44,11 @@ description: "get_nprocs, get_nprocs_conf – get number of processors"
 <h2>EXAMPLES</h2>
 <p> The following example shows how <code>get_nprocs</code>() and <code>get_nprocs_conf</code>() can be used. </p>
 <p> #include &lt;stdlib.h&gt; #include &lt;stdio.h&gt; #include &lt;sys/sysinfo.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;This system has&nbsp;%d processors configured and&nbsp;&quot;<br />
+<p> int main(int argc, char *argv[]) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;This system has&nbsp;%d processors configured and&nbsp;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;%d processors available.
-&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;get_nprocs_conf(), get_nprocs());<br />
+&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;get_nprocs_conf(), get_nprocs());<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nproc/">nproc</a></code>(1)</p>

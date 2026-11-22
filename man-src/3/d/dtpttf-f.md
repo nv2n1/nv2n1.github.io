@@ -10,7 +10,7 @@ description: "dtpttf.f –"
 <p>dtpttf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtpttf</code> (TRANSR, UPLO, N, AP, ARF, INFO)<br />
+<p>subroutine <code>dtpttf</code> (TRANSR, UPLO, N, AP, ARF, INFO)<br/>
  <i></i><code>DTPTTF</code> copies a triangular matrix from the standard packed format (TP) to the rectangular full packed format (TF).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtpttf (characterTRANSR, characterUPLO, integerN, double precision, dimension( 0: * )AP, double precision, dimension( 0: * )ARF, integerINFO)</h3>

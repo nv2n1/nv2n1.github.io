@@ -40,7 +40,7 @@ description: "kcookiejar5 – Command line interface to the KDE HTTP cookie daem
 <h2>See Also</h2>
 <p><i>kf5options</i>(7), <i>qt5options</i>(7)</p>
 <h2>Bugs</h2>
-<p>Please use m[blue]<code>KDE&#8217;s bugtracker</code>m[]<font SIZE="-2">[1]</font> to report bugs.</p>
+<p>Please use m[blue]<code>KDE&#8217;s bugtracker</code>m[][1] to report bugs.</p>
 <h2>Authors</h2>
 <p><code>Waldo Bastian</code> &lt;bastian [at] kde.org&gt;</p>
 <dl>

@@ -10,7 +10,7 @@ description: "zhetf2.f –"
 <p>zhetf2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhetf2</code> (UPLO, N, A, LDA, IPIV, INFO)<br />
+<p>subroutine <code>zhetf2</code> (UPLO, N, A, LDA, IPIV, INFO)<br/>
  <i></i><code>ZHETF2</code> computes the factorization of a complex Hermitian matrix, using the diagonal pivoting method (unblocked algorithm, calling Level 2 BLAS).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhetf2 (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integerINFO)</h3>

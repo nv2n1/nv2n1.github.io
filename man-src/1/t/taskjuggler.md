@@ -11,8 +11,8 @@ description: "_______taskjuggler ____ – translates project descriptions into H
 <p> _______taskjuggler ____ &#8211; translates project descriptions into HTML or XML reports </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>taskjuggler<br />
+<dt> <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>taskjuggler<br/>
 </code>&nbsp;<wbr>[<code>&nbsp;<wbr></code><i>&nbsp;<wbr>options&nbsp;<wbr></i><code>&nbsp;<wbr></code>]&nbsp;<wbr>[<code>&nbsp;<wbr></code><i>&nbsp;<wbr></i><i>&nbsp;<wbr>&lt;filename1&gt;&nbsp;<wbr></i><i>&nbsp;<wbr></i><code>&nbsp;<wbr></code>]&nbsp;<wbr>[<code>&nbsp;<wbr></code><i>&nbsp;<wbr></i><i>&nbsp;<wbr>&lt;filename2&gt;&nbsp;<wbr>&#8230;&nbsp;<wbr></i><i>&nbsp;<wbr></i><code>&nbsp;<wbr></code>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code> taskjuggler </code></p>

@@ -12,11 +12,11 @@ description: "Globus Callback Signal Handling –"
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_SIGNAL_INTERRUPT</code> </p>
 <h3>Functions</h3>
-<p> <code>globus_result_t</code> <code>globus_callback_space_register_signal_handler</code> (int signum, <code>globus_bool_t</code> persist, <code>globus_callback_func_t</code> callback_func, void *callback_user_arg, <code>globus_callback_space_t</code> space)<br />
- <i>Fire a callback when the specified signal is received. </i><br />
- <code>globus_result_t</code> <code>globus_callback_unregister_signal_handler</code> (int signum, <code>globus_callback_func_t</code> unregister_callback, void *unreg_arg)<br />
- <i>Unregister a signal handling callback. </i><br />
- void <code>globus_callback_add_wakeup_handler</code> (void(*wakeup)(void *), void *user_arg)<br />
+<p> <code>globus_result_t</code> <code>globus_callback_space_register_signal_handler</code> (int signum, <code>globus_bool_t</code> persist, <code>globus_callback_func_t</code> callback_func, void *callback_user_arg, <code>globus_callback_space_t</code> space)<br/>
+ <i>Fire a callback when the specified signal is received. </i><br/>
+ <code>globus_result_t</code> <code>globus_callback_unregister_signal_handler</code> (int signum, <code>globus_callback_func_t</code> unregister_callback, void *unreg_arg)<br/>
+ <i>Unregister a signal handling callback. </i><br/>
+ void <code>globus_callback_add_wakeup_handler</code> (void(*wakeup)(void *), void *user_arg)<br/>
  <i>Register a wakeup handler with callback library. </i></p>
 <h2>Detailed Description</h2>
 <h2>Macro Definition Documentation</h2>
@@ -30,17 +30,17 @@ description: "Globus Callback Signal Handling –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>wakeup</i> function to call when callback library needs you to return asap from any blocked callbacks.<br />
+</dt><dd> <i>wakeup</i> function to call when callback library needs you to return asap from any blocked callbacks.<br/>
  <i>user_arg</i> user data that will be passed along in the wakeup handler</dd></dl>
 <h3><code>globus_result_t</code> globus_callback_space_register_signal_handler (intsignum, <code>globus_bool_t</code>persist, <code>globus_callback_func_t</code>callback_func, void *callback_user_arg, <code>globus_callback_space_t</code>space)</h3>
 <p> Fire a callback when the specified signal is received. Note that there is a tiny delay between the time this call returns and the signal is actually handled by this library. It is likely that, if the signal was received the instant the call returned, it will be lost (this is normally not an issue, since you would call this in your startup code anyway) </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>signum</i> The signal to receive. The following signals are not allowed: SIGKILL, SIGSEGV, SIGABRT, SIGBUS, SIGFPE, SIGILL, SIGIOT, SIGPIPE, SIGEMT, SIGSYS, SIGTRAP, SIGSTOP, SIGCONT, and SIGWAITING<br />
- <i>persist</i> If GLOBUS_TRUE, keep this callback registered for multiple signals. If GLOBUS_FALSE, the signal handler will automatically be unregistered once the signal has been received.<br />
- <i>callback_func</i> the user func to call when a signal is received<br />
- <i>callback_user_arg</i> user arg that will be passed to callback<br />
+</dt><dd> <i>signum</i> The signal to receive. The following signals are not allowed: SIGKILL, SIGSEGV, SIGABRT, SIGBUS, SIGFPE, SIGILL, SIGIOT, SIGPIPE, SIGEMT, SIGSYS, SIGTRAP, SIGSTOP, SIGCONT, and SIGWAITING<br/>
+ <i>persist</i> If GLOBUS_TRUE, keep this callback registered for multiple signals. If GLOBUS_FALSE, the signal handler will automatically be unregistered once the signal has been received.<br/>
+ <i>callback_func</i> the user func to call when a signal is received<br/>
+ <i>callback_user_arg</i> user arg that will be passed to callback<br/>
  <i>space</i> the space to deliver callbacks to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -57,8 +57,8 @@ description: "Globus Callback Signal Handling –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>signum</i> The signal to unregister.<br />
- <i>unregister_callback</i> the function to call when the callback has been canceled and there are no running instances of it (may be NULL). This will be delivered to the same space used in the register call.<br />
+</dt><dd> <i>signum</i> The signal to unregister.<br/>
+ <i>unregister_callback</i> the function to call when the callback has been canceled and there are no running instances of it (may be NULL). This will be delivered to the same space used in the register call.<br/>
  <i>unreg_arg</i> user arg that will be passed to callback</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

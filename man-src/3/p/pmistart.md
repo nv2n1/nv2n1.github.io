@@ -9,8 +9,8 @@ description: "pmiStart – establish a new LOGIMPORT context"
 
 <p><code>pmiStart</code> &#8211; establish a new LOGIMPORT context</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/import.h&gt; </p>
 <p> int pmiStart(const char *</code><i>archive</i>, int <i>inherit</i>); </p>
 <p> cc &#8230; -lpcp_import -lpcp</p>

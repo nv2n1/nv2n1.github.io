@@ -13,38 +13,38 @@ description: "getdns_dict_set, getdns_dict_set_bindata, getdns_dict_set_dict, ge
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_dict_set_bindata</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-</dt><dd> char *name,<br />
+</dt><dd> char *name,<br/>
  getdns_bindata *child_bindata)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_dict_set_dict</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-</dt><dd> char *name,<br />
+</dt><dd> char *name,<br/>
  getdns_dict *child_dict)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_dict_set_int</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-</dt><dd> char *name,<br />
+</dt><dd> char *name,<br/>
  uint32_t child_uint32_t)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_dict_set_list</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-</dt><dd> char *name,<br />
+</dt><dd> char *name,<br/>
  getdns_list *child_list)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The getdns_dict type is used to manage name/value pairs in which the names are strings and the data types of the values are heterogeneous and include</p>
 <dl>
 <dt>
 </dt><dd>
- getdns_bindata<br />
- getdns_dict<br />
- getdns_list<br />
+ getdns_bindata<br/>
+ getdns_dict<br/>
+ getdns_list<br/>
  uint32_t</dd></dl>
 <p> <i>this_dict</i> the dictionary in which to add/update the name/value pair </p>
 <p> <i>name</i> the name whose associated value is to be set. If the name exists in the dictionary the value associated with that name is replaced, if the name does not exist in the dictionary a new item is added to the dictionary. </p>

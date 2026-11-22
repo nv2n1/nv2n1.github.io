@@ -11,7 +11,7 @@ description: "stpqrt.f –"
 <p> stpqrt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>stpqrt</code> (M, N, L, NB, A, LDA, B, LDB, T, LDT, WORK, INFO)<br />
+<p> subroutine <code>stpqrt</code> (M, N, L, NB, A, LDA, B, LDB, T, LDT, WORK, INFO)<br/>
  <i></i><code>STPQRT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stpqrt (integerM, integerN, integerL, integerNB, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( ldt, * )T, integerLDT, real, dimension( * )WORK, integerINFO)</h3>

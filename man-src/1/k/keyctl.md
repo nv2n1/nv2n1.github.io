@@ -10,54 +10,54 @@ description: "keyctl – key management facility control"
 
 <p> keyctl &#8211; key management facility control </p>
 <h2>SYNOPSIS</h2>
-<p> <code>keyctl</code> &#8211;version<br />
- <code>keyctl</code> show [-x] [&lt;keyring&gt;]<br />
- <code>keyctl</code> add &lt;type&gt; &lt;desc&gt; &lt;data&gt; &lt;keyring&gt;<br />
- <code>keyctl</code> padd &lt;type&gt; &lt;desc&gt; &lt;keyring&gt;<br />
- <code>keyctl</code> request &lt;type&gt; &lt;desc&gt; [&lt;dest_keyring&gt;]<br />
- <code>keyctl</code> request2 &lt;type&gt; &lt;desc&gt; &lt;info&gt; [&lt;dest_keyring&gt;]<br />
- <code>keyctl</code> prequest2 &lt;type&gt; &lt;desc&gt; [&lt;dest_keyring&gt;]<br />
- <code>keyctl</code> update &lt;key&gt; &lt;data&gt;<br />
- <code>keyctl</code> pupdate &lt;key&gt;<br />
- <code>keyctl</code> newring &lt;name&gt; &lt;keyring&gt;<br />
- <code>keyctl</code> revoke &lt;key&gt;<br />
- <code>keyctl</code> clear &lt;keyring&gt;<br />
- <code>keyctl</code> link &lt;key&gt; &lt;keyring&gt;<br />
- <code>keyctl</code> unlink &lt;key&gt; [&lt;keyring&gt;]<br />
- <code>keyctl</code> search &lt;keyring&gt; &lt;type&gt; &lt;desc&gt; [&lt;dest_keyring&gt;]<br />
- <code>keyctl</code> restrict_keyring &lt;keyring&gt; [&lt;type&gt; [&lt;restriction&gt;]]<br />
- <code>keyctl</code> read &lt;key&gt;<br />
- <code>keyctl</code> pipe &lt;key&gt;<br />
- <code>keyctl</code> print &lt;key&gt;<br />
- <code>keyctl</code> list &lt;keyring&gt;<br />
- <code>keyctl</code> rlist &lt;keyring&gt;<br />
- <code>keyctl</code> describe &lt;keyring&gt;<br />
- <code>keyctl</code> rdescribe &lt;keyring&gt; [sep]<br />
- <code>keyctl</code> chown &lt;key&gt; &lt;uid&gt;<br />
- <code>keyctl</code> chgrp &lt;key&gt; &lt;gid&gt;<br />
- <code>keyctl</code> setperm &lt;key&gt; &lt;mask&gt;<br />
- <code>keyctl</code> new_session<br />
- <code>keyctl</code> session<br />
- <code>keyctl</code> session &#8211; [&lt;prog&gt; &lt;arg1&gt; &lt;arg2&gt; &#8230;]<br />
- <code>keyctl</code> session &lt;name&gt; [&lt;prog&gt; &lt;arg1&gt; &lt;arg2&gt; &#8230;]<br />
- <code>keyctl</code> instantiate &lt;key&gt; &lt;data&gt; &lt;keyring&gt;<br />
- <code>keyctl</code> pinstantiate &lt;key&gt; &lt;keyring&gt;<br />
- <code>keyctl</code> negate &lt;key&gt; &lt;timeout&gt; &lt;keyring&gt;<br />
- <code>keyctl</code> reject &lt;key&gt; &lt;timeout&gt; &lt;error&gt; &lt;keyring&gt;<br />
- <code>keyctl</code> timeout &lt;key&gt; &lt;timeout&gt;<br />
- <code>keyctl</code> security &lt;key&gt;<br />
- <code>keyctl</code> reap [-v]<br />
- <code>keyctl</code> purge &lt;type&gt;<br />
- <code>keyctl</code> purge [-i] [-p] &lt;type&gt; &lt;desc&gt;<br />
- <code>keyctl</code> purge -s &lt;type&gt; &lt;desc&gt;<br />
- <code>keyctl</code> get_persistent &lt;keyring&gt; [&lt;uid&gt;]<br />
- <code>keyctl</code> dh_compute &lt;private&gt; &lt;prime&gt; &lt;base&gt;<br />
- <code>keyctl</code> dh_compute_kdf &lt;private&gt; &lt;prime&gt; &lt;base&gt; &lt;output_length&gt; &lt;hash_type&gt;<br />
- <code>keyctl</code> dh_compute_kdf_oi &lt;private&gt; &lt;prime&gt; &lt;base&gt; &lt;output_length&gt; &lt;hash_type&gt;<br />
- <code>keyctl</code> pkey_query &lt;key&gt; &lt;pass&gt; [k=v]*<br />
- <code>keyctl</code> pkey_encrypt &lt;key&gt; &lt;pass&gt; &lt;datafile&gt; [k=v]* &gt;&lt;encfile&gt;<br />
- <code>keyctl</code> pkey_decrypt &lt;key&gt; &lt;pass&gt; &lt;encfile&gt; [k=v]* &gt;&lt;datafile&gt;<br />
- <code>keyctl</code> pkey_sign &lt;key&gt; &lt;pass&gt; &lt;datafile&gt; [k=v]* &gt;&lt;sigfile&gt;<br />
+<p> <code>keyctl</code> &#8211;version<br/>
+ <code>keyctl</code> show [-x] [&lt;keyring&gt;]<br/>
+ <code>keyctl</code> add &lt;type&gt; &lt;desc&gt; &lt;data&gt; &lt;keyring&gt;<br/>
+ <code>keyctl</code> padd &lt;type&gt; &lt;desc&gt; &lt;keyring&gt;<br/>
+ <code>keyctl</code> request &lt;type&gt; &lt;desc&gt; [&lt;dest_keyring&gt;]<br/>
+ <code>keyctl</code> request2 &lt;type&gt; &lt;desc&gt; &lt;info&gt; [&lt;dest_keyring&gt;]<br/>
+ <code>keyctl</code> prequest2 &lt;type&gt; &lt;desc&gt; [&lt;dest_keyring&gt;]<br/>
+ <code>keyctl</code> update &lt;key&gt; &lt;data&gt;<br/>
+ <code>keyctl</code> pupdate &lt;key&gt;<br/>
+ <code>keyctl</code> newring &lt;name&gt; &lt;keyring&gt;<br/>
+ <code>keyctl</code> revoke &lt;key&gt;<br/>
+ <code>keyctl</code> clear &lt;keyring&gt;<br/>
+ <code>keyctl</code> link &lt;key&gt; &lt;keyring&gt;<br/>
+ <code>keyctl</code> unlink &lt;key&gt; [&lt;keyring&gt;]<br/>
+ <code>keyctl</code> search &lt;keyring&gt; &lt;type&gt; &lt;desc&gt; [&lt;dest_keyring&gt;]<br/>
+ <code>keyctl</code> restrict_keyring &lt;keyring&gt; [&lt;type&gt; [&lt;restriction&gt;]]<br/>
+ <code>keyctl</code> read &lt;key&gt;<br/>
+ <code>keyctl</code> pipe &lt;key&gt;<br/>
+ <code>keyctl</code> print &lt;key&gt;<br/>
+ <code>keyctl</code> list &lt;keyring&gt;<br/>
+ <code>keyctl</code> rlist &lt;keyring&gt;<br/>
+ <code>keyctl</code> describe &lt;keyring&gt;<br/>
+ <code>keyctl</code> rdescribe &lt;keyring&gt; [sep]<br/>
+ <code>keyctl</code> chown &lt;key&gt; &lt;uid&gt;<br/>
+ <code>keyctl</code> chgrp &lt;key&gt; &lt;gid&gt;<br/>
+ <code>keyctl</code> setperm &lt;key&gt; &lt;mask&gt;<br/>
+ <code>keyctl</code> new_session<br/>
+ <code>keyctl</code> session<br/>
+ <code>keyctl</code> session &#8211; [&lt;prog&gt; &lt;arg1&gt; &lt;arg2&gt; &#8230;]<br/>
+ <code>keyctl</code> session &lt;name&gt; [&lt;prog&gt; &lt;arg1&gt; &lt;arg2&gt; &#8230;]<br/>
+ <code>keyctl</code> instantiate &lt;key&gt; &lt;data&gt; &lt;keyring&gt;<br/>
+ <code>keyctl</code> pinstantiate &lt;key&gt; &lt;keyring&gt;<br/>
+ <code>keyctl</code> negate &lt;key&gt; &lt;timeout&gt; &lt;keyring&gt;<br/>
+ <code>keyctl</code> reject &lt;key&gt; &lt;timeout&gt; &lt;error&gt; &lt;keyring&gt;<br/>
+ <code>keyctl</code> timeout &lt;key&gt; &lt;timeout&gt;<br/>
+ <code>keyctl</code> security &lt;key&gt;<br/>
+ <code>keyctl</code> reap [-v]<br/>
+ <code>keyctl</code> purge &lt;type&gt;<br/>
+ <code>keyctl</code> purge [-i] [-p] &lt;type&gt; &lt;desc&gt;<br/>
+ <code>keyctl</code> purge -s &lt;type&gt; &lt;desc&gt;<br/>
+ <code>keyctl</code> get_persistent &lt;keyring&gt; [&lt;uid&gt;]<br/>
+ <code>keyctl</code> dh_compute &lt;private&gt; &lt;prime&gt; &lt;base&gt;<br/>
+ <code>keyctl</code> dh_compute_kdf &lt;private&gt; &lt;prime&gt; &lt;base&gt; &lt;output_length&gt; &lt;hash_type&gt;<br/>
+ <code>keyctl</code> dh_compute_kdf_oi &lt;private&gt; &lt;prime&gt; &lt;base&gt; &lt;output_length&gt; &lt;hash_type&gt;<br/>
+ <code>keyctl</code> pkey_query &lt;key&gt; &lt;pass&gt; [k=v]*<br/>
+ <code>keyctl</code> pkey_encrypt &lt;key&gt; &lt;pass&gt; &lt;datafile&gt; [k=v]* &gt;&lt;encfile&gt;<br/>
+ <code>keyctl</code> pkey_decrypt &lt;key&gt; &lt;pass&gt; &lt;encfile&gt; [k=v]* &gt;&lt;datafile&gt;<br/>
+ <code>keyctl</code> pkey_sign &lt;key&gt; &lt;pass&gt; &lt;datafile&gt; [k=v]* &gt;&lt;sigfile&gt;<br/>
  <code>keyctl</code> pkey_decrypt &lt;key&gt; &lt;pass&gt; &lt;datafile&gt; &lt;sigfile&gt; [k=v]*</p>
 <h2>DESCRIPTION</h2>
 <p> This program is used to control the key management facility in various ways using a variety of subcommands.</p>
@@ -101,7 +101,7 @@ keyctl from keyutils-1.5.3 (Built 2011-08-24)
 <p> <code>keyctl show [-x] [&lt;keyring&gt;]</code> </p>
 <p> By default this command recursively shows what keyrings a process is subscribed to and what keys and keyrings they contain. If a keyring is specified then that keyring will be dumped instead. If <code>-x</code> is specified then the keyring IDs will be dumped in hex instead of decimal.</p>
 <h3>Add a key to a keyring</h3>
-<p> <code>keyctl add</code> &lt;type&gt; &lt;desc&gt; &lt;data&gt; &lt;keyring&gt;<br />
+<p> <code>keyctl add</code> &lt;type&gt; &lt;desc&gt; &lt;data&gt; &lt;keyring&gt;<br/>
  <code>keyctl padd</code> &lt;type&gt; &lt;desc&gt; &lt;keyring&gt; </p>
 <p> This command creates a key of the specified type and description; instantiates it with the given data and attaches it to the specified keyring. It then prints the new key&#8217;s ID on stdout: </p>
 <dl>
@@ -117,8 +117,8 @@ $ keyctl add user mykey stuff @u
 <dt>
 </dt><dd> $ echo -n stuff | keyctl padd user mykey @u 26</dd></dl>
 <h3>Request a key</h3>
-<p> <code>keyctl request</code> &lt;type&gt; &lt;desc&gt; [&lt;dest_keyring&gt;]<br />
- <code>keyctl request2</code> &lt;type&gt; &lt;desc&gt; &lt;info&gt; [&lt;dest_keyring&gt;]<br />
+<p> <code>keyctl request</code> &lt;type&gt; &lt;desc&gt; [&lt;dest_keyring&gt;]<br/>
+ <code>keyctl request2</code> &lt;type&gt; &lt;desc&gt; &lt;info&gt; [&lt;dest_keyring&gt;]<br/>
  <code>keyctl prequest2</code> &lt;type&gt; &lt;desc&gt; [&lt;dest_keyring&gt;] </p>
 <p> These three commands request the lookup of a key of the given type and description. The process&#8217;s keyrings will be searched, and if a match is found the matching key&#8217;s ID will be printed to stdout; and if a destination keyring is given, the key will be added to that keyring also. </p>
 <p> If there is no key, the first command will simply return the error ENOKEY and fail. The second and third commands will create a partial key with the type and description, and call out to <i>/sbin/request-key</i> with that key and the extra information supplied. This will then attempt to instantiate the key in some manner, such that a valid key is obtained. </p>
@@ -138,7 +138,7 @@ $ keyctl request user debug:hello
 </pre>
 </dd></dl>
 <h3>Update a key</h3>
-<p> <code>keyctl update</code> &lt;key&gt; &lt;data&gt;<br />
+<p> <code>keyctl update</code> &lt;key&gt; &lt;data&gt;<br/>
  <code>keyctl pupdate</code> &lt;key&gt; </p>
 <p> This command replaces the data attached to a key with a new set of data. If the type of the key doesn&#8217;t support update then error &quot;Operation not supported&quot; will be returned. </p>
 <dl>
@@ -236,8 +236,8 @@ $ keyctl restrict_keyring $1 asymmetric builtin_trusted
 </dd></dl>
 </pre>
 <h3>Read a key</h3>
-<p> <code>keyctl read</code> &lt;key&gt;<br />
- <code>keyctl pipe</code> &lt;key&gt;<br />
+<p> <code>keyctl read</code> &lt;key&gt;<br/>
+ <code>keyctl pipe</code> &lt;key&gt;<br/>
  <code>keyctl print</code> &lt;key&gt; </p>
 <p> These commands read the payload of a key. &quot;read&quot; prints it on stdout as a hex dump, &quot;pipe&quot; dumps the raw data to stdout and &quot;print&quot; dumps it to stdout directly if it&#8217;s entirely printable or as a hexdump preceded by &quot;:hex:&quot; if not. </p>
 <p> If the key type does not support reading of the payload, then error &quot;Operation not supported&quot; will be returned. </p>
@@ -255,7 +255,7 @@ $
 </pre>
 </dd></dl>
 <h3>List a keyring</h3>
-<p> <code>keyctl list</code> &lt;keyring&gt;<br />
+<p> <code>keyctl list</code> &lt;keyring&gt;<br/>
  <code>keyctl rlist</code> &lt;keyring&gt; </p>
 <p> These commands list the contents of a key as a keyring. &quot;list&quot; pretty prints the contents and &quot;rlist&quot; just produces a space-separated list of key IDs. </p>
 <p> No attempt is made to check that the specified keyring is a keyring. </p>
@@ -268,21 +268,21 @@ $ keyctl list @us 2 keys in keyring : 22 : vrwsl-- -- -- -- --4043 - 1 keyring :
 </code></pre>
 </dd></dl>
 <h3>Describe a key</h3>
-<p> <code>keyctl describe</code> &lt;keyring&gt;<br />
+<p> <code>keyctl describe</code> &lt;keyring&gt;<br/>
  <code>keyctl rdescribe</code> &lt;keyring&gt; [sep] </p>
 <p> These commands fetch a description of a keyring. &quot;describe&quot; pretty prints the description in the same fashion as the &quot;list&quot; command; &quot;rdescribe&quot; prints the raw data returned from the kernel. </p>
 <dl>
 <dt>
 </dt><dd>
-$ keyctl describe @us &#8211; 5 : vrwsl&#8211; &#8212; &#8212; &#8212; &#8211;4043 &#8211; 1 keyring : _uid_ses .4043 $ keyctl rdescribe @us keyring;<br />
-4043;<br />
-&#8211; 1;<br />
-3f1f0000;<br />
+$ keyctl describe @us &#8211; 5 : vrwsl&#8211; &#8212; &#8212; &#8212; &#8211;4043 &#8211; 1 keyring : _uid_ses .4043 $ keyctl rdescribe @us keyring;<br/>
+4043;<br/>
+&#8211; 1;<br/>
+3f1f0000;<br/>
 _uid_ses .4043
 </dd></dl>
 <p> The raw string is &quot;&lt;type&gt;;&lt;uid&gt;;&lt;gid&gt;;&lt;perms&gt;;&lt;description&gt;&quot;, where <i>uid</i> and <i>gid</i> are the decimal user and group IDs, <i>perms</i> is the permissions mask in hex, <i>type</i> and <i>description</i> are the type name and description strings (neither of which will contain semicolons).</p>
 <h3>Change the access controls on a key</h3>
-<p> <code>keyctl chown</code> &lt;key&gt; &lt;uid&gt;<br />
+<p> <code>keyctl chown</code> &lt;key&gt; &lt;uid&gt;<br/>
  <code>keyctl chgrp</code> &lt;key&gt; &lt;gid&gt; </p>
 <p> These two commands change the UID and GID associated with evaluating a key&#8217;s permissions mask. The UID also governs which quota a key is taken out of. </p>
 <p> The chown command is not currently supported; attempting it will earn the error &quot;Operation not supported&quot; at best. </p>
@@ -303,7 +303,7 @@ $ sudo keyctl chgrp 27 0
 <dl>
 <dt>
 </dt><dd>
-Possessor UID GID Other Permission Granted == == == == == == == == == == == == == == == == == == == == == == == == ==<br />
+Possessor UID GID Other Permission Granted == == == == == == == == == == == == == == == == == == == == == == == == ==<br/>
     01000000 00010000 00000100 00000001 View 02000000 00020000 00000200 00000002 Read 04000000 00040000 00000400 00000004 Write 08000000 00080000 00000800 00000008 Search 10000000 00100000 00001000 00000010 Link 20000000 00200000 00002000 00000020 Set Attribute 3f000000 003f0000 00003f00 0000003f All
 </dd></dl>
 <p> <i>View</i> permits the type, description and other parameters of a key to be viewed. </p>
@@ -320,8 +320,8 @@ $ keyctl setperm 27 0x1f1f1f00
 </pre>
 </dd></dl>
 <h3>Start a new session with fresh keyrings</h3>
-<p> <code>keyctl session</code><br />
- <code>keyctl session</code> &#8211; [&lt;prog&gt; &lt;arg1&gt; &lt;arg2&gt; &#8230;]<br />
+<p> <code>keyctl session</code><br/>
+ <code>keyctl session</code> &#8211; [&lt;prog&gt; &lt;arg1&gt; &lt;arg2&gt; &#8230;]<br/>
  <code>keyctl session</code> &lt;name&gt; [&lt;prog&gt; &lt;arg1&gt; &lt;arg2&gt; &#8230;] </p>
 <p> These commands join or create a new keyring and then run a shell or other program with that keyring as the session key. </p>
 <p> The variation with no arguments just creates an anonymous session keyring and attaches that as the session keyring; it then exec&#8217;s $SHELL. </p>
@@ -369,9 +369,9 @@ fish
 </code></pre>
 </dd></dl>
 <h3>Instantiate a key</h3>
-<p> <code>keyctl instantiate</code> &lt;key&gt; &lt;data&gt; &lt;keyring&gt;<br />
- <code>keyctl pinstantiate</code> &lt;key&gt; &lt;keyring&gt;<br />
- <code>keyctl negate</code> &lt;key&gt; &lt;timeout&gt; &lt;keyring&gt;<br />
+<p> <code>keyctl instantiate</code> &lt;key&gt; &lt;data&gt; &lt;keyring&gt;<br/>
+ <code>keyctl pinstantiate</code> &lt;key&gt; &lt;keyring&gt;<br/>
+ <code>keyctl negate</code> &lt;key&gt; &lt;timeout&gt; &lt;keyring&gt;<br/>
  <code>keyctl reject</code> &lt;key&gt; &lt;timeout&gt; &lt;error&gt; &lt;keyring&gt; </p>
 <p> These commands are used to attach data to a partially set up key (as created by the kernel and passed to <i>/sbin/request-key</i>). &quot;instantiate&quot; marks a key as being valid and attaches the data as the payload. &quot;negate&quot; and &quot;reject&quot; mark a key as invalid and sets a timeout on it so that it&#8217;ll go away after a while. This prevents a lot of quickly sequential requests from slowing the system down overmuch when they all fail, as all subsequent requests will then fail with error &quot;Requested key not found&quot; (if negated) or the specified error (if rejected) until the negative key has expired. </p>
 <p> Reject&#8217;s error argument can either be a UNIX error number or one of &#8216;<code>rejected</code>&#8216;, &#8216;<code>expired</code>&#8216; or &#8216;<code>revoked</code>&#8216;. </p>
@@ -441,8 +441,8 @@ Session Keyring
 <p> A key that is designated reapable will only be removed from a keyring if the caller has Write permission on that keyring, and only keyrings that grant Search permission to the caller will be searched. </p>
 <p> The command prints the number of keys reaped before it exits. If the <code>-v</code> flag is passed then the reaped keys are listed as they&#8217;re being reaped, together with the success or failure of the unlink.</p>
 <h3>Remove matching keys from the session keyring tree</h3>
-<p> <code>keyctl</code> purge &lt;type&gt;<br />
- <code>keyctl</code> purge [-i] [-p] &lt;type&gt; &lt;desc&gt;<br />
+<p> <code>keyctl</code> purge &lt;type&gt;<br/>
+ <code>keyctl</code> purge [-i] [-p] &lt;type&gt; &lt;desc&gt;<br/>
  <code>keyctl</code> purge -s &lt;type&gt; &lt;desc&gt; </p>
 <p> These commands perform a depth-first search to find matching keys in the caller&#8217;s session keyring tree and attempts to unlink them. The number of keys successfully unlinked is printed at the end. </p>
 <p> The keyrings must grant Read and View permission to the caller to be searched, and the keys to be removed must also grant View permission. Keys can only be removed from keyrings that grant Write permission. </p>
@@ -485,10 +485,10 @@ $ keyctl dh_compute $1 $2 $3
 <p> <code>keyctl</code> dh_compute_kdf_oi &lt;private&gt; &lt;prime&gt; &lt;base&gt; &lt;output_length&gt; &lt;hash_type&gt; </p>
 <p> This command is identical to the command <i>dh_compute_kdf</i> to generate a Diffie-Hellman shared secret followed by a key derivation operation. This command allows the caller to provide the other input data (OI data) compliant to SP800-56A via stdin.</p>
 <h3>Perform public-key operations with an asymmetric key</h3>
-<p> <code>keyctl</code> pkey_query &lt;key&gt; &lt;pass&gt; [k=v]*<br />
- <code>keyctl</code> pkey_encrypt &lt;key&gt; &lt;pass&gt; &lt;datafile&gt; [k=v]* &gt; &lt;encfile&gt;<br />
- <code>keyctl</code> pkey_decrypt &lt;key&gt; &lt;pass&gt; &lt;encfile&gt; [k=v]* &gt; &lt;datafile&gt;<br />
- <code>keyctl</code> pkey_sign &lt;key&gt; &lt;pass&gt; &lt;datafile&gt; [k=v]* &gt; &lt;sigfile&gt;<br />
+<p> <code>keyctl</code> pkey_query &lt;key&gt; &lt;pass&gt; [k=v]*<br/>
+ <code>keyctl</code> pkey_encrypt &lt;key&gt; &lt;pass&gt; &lt;datafile&gt; [k=v]* &gt; &lt;encfile&gt;<br/>
+ <code>keyctl</code> pkey_decrypt &lt;key&gt; &lt;pass&gt; &lt;encfile&gt; [k=v]* &gt; &lt;datafile&gt;<br/>
+ <code>keyctl</code> pkey_sign &lt;key&gt; &lt;pass&gt; &lt;datafile&gt; [k=v]* &gt; &lt;sigfile&gt;<br/>
  <code>keyctl</code> pkey_verify &lt;key&gt; &lt;pass&gt; &lt;datafile&gt; &lt;sigfile&gt; [k=v]* </p>
 <p> These commands query an asymmetric key, encrypt data with it, decrypt the encrypted data, generate a signature over some data and verify that signature. For encrypt, decrypt and sign, the resulting data is written to stdout; verify reads the data and the signature files and compares them. </p>
 <p> [<code>!</code>] NOTE that the data is of very limited capacity, with no more bits than the size of the key. For signatures, the caller is expected to digest the actual data and pass in the result of the digest as the datafile. The name of the digest should be specified on the end of the command line as &quot;hash=&lt;name&gt;&quot;. </p>

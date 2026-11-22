@@ -9,9 +9,9 @@ description: "Heap Functions – The heap is an area of memory that can be alloc
 
 <p>Heap Functions &#8211; The heap is an area of memory that can be allocated for program use at runtime. </p>
 <h3>Functions</h3>
-<p>EAPI Embryo_Cell <code>embryo_data_heap_push</code> (Embryo_Program *ep, int cells)<br />
- <i>Increases the size of the heap of the given virtual machine by the given number of Embryo_Cells. </i><br />
- EAPI void <code>embryo_data_heap_pop</code> (Embryo_Program *ep, Embryo_Cell down_to)<br />
+<p>EAPI Embryo_Cell <code>embryo_data_heap_push</code> (Embryo_Program *ep, int cells)<br/>
+ <i>Increases the size of the heap of the given virtual machine by the given number of Embryo_Cells. </i><br/>
+ EAPI void <code>embryo_data_heap_pop</code> (Embryo_Program *ep, Embryo_Cell down_to)<br/>
  <i>Decreases the size of the heap of the given virtual machine down to the given size. </i></p>
 <h2>Detailed Description</h2>
 <p>The heap is an area of memory that can be allocated for program use at runtime. </p>
@@ -21,13 +21,13 @@ description: "Heap Functions – The heap is an area of memory that can be alloc
 <p>Decreases the size of the heap of the given virtual machine down to the given size. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ep</i> The program with the given virtual machine.<br />
+<dd><i>ep</i> The program with the given virtual machine.<br/>
  <i>down_to</i> The given size.</dd></dl>
 <h3>EAPI Embryo_Cell embryo_data_heap_push (Embryo_Program * ep, int cells)</h3>
 <p>Increases the size of the heap of the given virtual machine by the given number of Embryo_Cells. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ep</i> The program with the given virtual machine.<br />
+<dd><i>ep</i> The program with the given virtual machine.<br/>
  <i>cells</i> The given number of Embryo_Cells.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

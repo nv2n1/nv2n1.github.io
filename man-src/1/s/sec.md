@@ -12,59 +12,59 @@ description: "sec – simple event correlator"
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>sec</code></dt>
-<dd> <p> [--conf=&lt;file pattern&gt; ...] <br />
- [--input=&lt;file pattern&gt;[=&lt;context&gt;] ...] <br />
- [--input-timeout=&lt;input timeout&gt;] <br />
- [--timeout-script=&lt;timeout script&gt;] <br />
- [--reopen-timeout=&lt;reopen timeout&gt;] <br />
- [--check-timeout=&lt;check timeout&gt;] <br />
- [--poll-timeout=&lt;poll timeout&gt;] <br />
- [--socket-timeout=&lt;socket timeout&gt;] <br />
- [--blocksize=&lt;io block size&gt;] <br />
- [--bufsize=&lt;input buffer size&gt;] <br />
- [--evstoresize=&lt;event store size&gt;] <br />
- [--cleantime=&lt;clean time&gt;] <br />
- [--log=&lt;logfile&gt;] <br />
- [--syslog=&lt;facility&gt;] <br />
- [--debug=&lt;debuglevel&gt;] <br />
- [--pid=&lt;pidfile&gt;] <br />
- [--dump=&lt;dumpfile&gt;] <br />
- [--user=&lt;username&gt;] <br />
- [--group=&lt;groupname&gt; ...] <br />
- [--umask=&lt;mode&gt;] <br />
- [--dumpfts | --nodumpfts] <br />
- [--quoting | --noquoting] <br />
- [--tail | --notail] <br />
- [--fromstart | --nofromstart] <br />
- [--detach | --nodetach] <br />
- [--jointbuf | --nojointbuf] <br />
- [--keepopen | --nokeepopen] <br />
- [--rwfifo | --norwfifo] <br />
- [--childterm | --nochildterm] <br />
- [--intevents | --nointevents] <br />
- [--intcontexts | --nointcontexts] <br />
- [--testonly | --notestonly] <br />
- [--help] [-?] <br />
+<dd> <p> [--conf=&lt;file pattern&gt; ...] <br/>
+ [--input=&lt;file pattern&gt;[=&lt;context&gt;] ...] <br/>
+ [--input-timeout=&lt;input timeout&gt;] <br/>
+ [--timeout-script=&lt;timeout script&gt;] <br/>
+ [--reopen-timeout=&lt;reopen timeout&gt;] <br/>
+ [--check-timeout=&lt;check timeout&gt;] <br/>
+ [--poll-timeout=&lt;poll timeout&gt;] <br/>
+ [--socket-timeout=&lt;socket timeout&gt;] <br/>
+ [--blocksize=&lt;io block size&gt;] <br/>
+ [--bufsize=&lt;input buffer size&gt;] <br/>
+ [--evstoresize=&lt;event store size&gt;] <br/>
+ [--cleantime=&lt;clean time&gt;] <br/>
+ [--log=&lt;logfile&gt;] <br/>
+ [--syslog=&lt;facility&gt;] <br/>
+ [--debug=&lt;debuglevel&gt;] <br/>
+ [--pid=&lt;pidfile&gt;] <br/>
+ [--dump=&lt;dumpfile&gt;] <br/>
+ [--user=&lt;username&gt;] <br/>
+ [--group=&lt;groupname&gt; ...] <br/>
+ [--umask=&lt;mode&gt;] <br/>
+ [--dumpfts | --nodumpfts] <br/>
+ [--quoting | --noquoting] <br/>
+ [--tail | --notail] <br/>
+ [--fromstart | --nofromstart] <br/>
+ [--detach | --nodetach] <br/>
+ [--jointbuf | --nojointbuf] <br/>
+ [--keepopen | --nokeepopen] <br/>
+ [--rwfifo | --norwfifo] <br/>
+ [--childterm | --nochildterm] <br/>
+ [--intevents | --nointevents] <br/>
+ [--intcontexts | --nointcontexts] <br/>
+ [--testonly | --notestonly] <br/>
+ [--help] [-?] <br/>
  [--version] </p>
  </dd></dl>
 <h2>DESCRIPTION</h2>
 <p> SEC is an event correlation tool for advanced event processing which can be harnessed for event log monitoring, for network and security management, for fraud detection, and for any other task which involves event correlation. Event correlation is a procedure where a stream of events is processed, in order to detect (and act on) certain event groups that occur within predefined time windows. Unlike many other event correlation products which are heavyweight solutions, SEC is a lightweight and platform-independent event correlator which runs as a single process. The user can start it as a daemon, employ it in shell pipelines, execute it interactively in a terminal, run many SEC processes simultaneously for different tasks, and use it in a wide variety of other ways. </p>
 <p> SEC reads lines from files, named pipes, or standard input, matches the lines with patterns (regular expressions, Perl subroutines, etc.) for recognizing input events, and correlates events according to the rules in its configuration file(s). Rules are matched against input in the order they are given in the configuration file. If there are two or more configuration files, rule sequence from every file is matched against input (unless explicitly specified otherwise). SEC can produce output by executing external programs (e.g., <code><a href="/docs/linux/man/1-snmptrap/">snmptrap</a></code>(1) or <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1)), by writing to files, by sending data to TCP and UDP based servers, by calling precompiled Perl subroutines, etc. </p>
 <p> SEC can be run in various ways. For example, the following command line starts it as a daemon, in order to monitor events appended to the /var/log/messages syslog file with rules from /etc/sec/syslog.rules: </p>
-<p> /usr/bin/sec --detach --conf=/etc/sec/syslog.rules \ <br />
+<p> /usr/bin/sec --detach --conf=/etc/sec/syslog.rules \ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>--input=/var/log/messages </p>
 <p> Each time /var/log/messages is rotated, a new instance of /var/log/messages is opened and processed from the beginning. The following command line runs SEC in a shell pipeline, configuring it to process lines from standard input, and to exit when the /usr/bin/nc tool closes its standard output and exits: </p>
-<p> /usr/bin/nc -l 8080 | /usr/bin/sec --notail --input=- \ <br />
+<p> /usr/bin/nc -l 8080 | /usr/bin/sec --notail --input=- \ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>--conf=/etc/sec/my.conf </p>
 <p> Some SEC rules start event correlation operations, while other rules react immediately to input events or system clock. For example, suppose that SEC has been started with the following command line </p>
 <p> /usr/bin/sec --conf=/etc/sec/sshd.rules --input=/var/log/secure </p>
 <p> in order to monitor the /var/log/secure syslog file for sshd events. Also, suppose that the /etc/sec/sshd.rules configuration file contains the following rule for correlating SSH failed login syslog events: </p>
-<p> type=SingleWithThreshold <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: Failed .+ for (\S+) from [\d.]+ port \d+ ssh2 <br />
- desc=Three SSH login failures within 1m for user $1 <br />
- action=pipe &#8216;%s&#8217; /bin/mail -s &#8216;SSH login alert&#8217; root [at] localhost <br />
- window=60 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: Failed .+ for (\S+) from [\d.]+ port \d+ ssh2 <br/>
+ desc=Three SSH login failures within 1m for user $1 <br/>
+ action=pipe &#8216;%s&#8217; /bin/mail -s &#8216;SSH login alert&#8217; root [at] localhost <br/>
+ window=60 <br/>
  thresh=3 </p>
 <p> The <i>pattern</i> field of the rule defines the pattern for recognizing input events, while the <i>ptype</i> field defines its type (regular expression). Suppose that user risto fails to log in over SSH and the following message is logged to /var/log/secure: </p>
 <p> Dec 16 16:24:59 myserver sshd[13685]: Failed password for risto from 10.12.2.5 port 41063 ssh2 </p>
@@ -72,12 +72,12 @@ description: "sec – simple event correlator"
 <p> /bin/mail -s &#8216;SSH login alert&#8217; root [at] localhost </p>
 <p> with a pipe connected to its standard input. Then, SEC writes the operation description string <i>Three SSH login failures within 1m for user risto</i> (held by the %s special variable) to the standard input of the command through the pipe. In other words, an e-mail warning is sent to the local root-user. Finally, since there are 5 seconds left until the end of the event correlation window, the operation will consume the following SSH login failure events for user risto without any further action, and finish after 5 seconds. </p>
 <p> The above example illustrates that the <i>desc</i> field of a rule defines the scope of event correlation and influences the number of operations created by the rule. For example, if we set the <i>desc </i> field to <i>Three SSH login failures within 1m</i>, the root-user would be also alerted on 3 SSH login failure events for *different* users within 1 minute. In order to avoid clashes between operations started by different rules, operation ID contains not only the value set by the <i>desc</i> field, but also the rule file name and the rule number inside the file. For example, if the rule file /etc/sec/sshd.rules contains one rule </p>
-<p> type=SingleWithThreshold <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: Failed .+ for (\S+) from [\d.]+ port \d+ ssh2 <br />
- desc=Three SSH login failures within 1m for user $1 <br />
- action=pipe &#8216;%s&#8217; /bin/mail -s &#8216;SSH login alert&#8217; root [at] localhost <br />
- window=60 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: Failed .+ for (\S+) from [\d.]+ port \d+ ssh2 <br/>
+ desc=Three SSH login failures within 1m for user $1 <br/>
+ action=pipe &#8216;%s&#8217; /bin/mail -s &#8216;SSH login alert&#8217; root [at] localhost <br/>
+ window=60 <br/>
  thresh=3 </p>
 <p> and the event </p>
 <p> Dec 16 16:24:59 myserver sshd[13685]: Failed password for risto from 10.12.2.5 port 41063 ssh2 </p>
@@ -85,22 +85,22 @@ description: "sec – simple event correlator"
 <p> /etc/sec/sshd.rules | 0 | Three SSH login failures within 1m for user risto </p>
 <p> (0 is the number assigned to the first rule in the file, see EVENT CORRELATION OPERATIONS section for more information). </p>
 <p> The following simple example demonstrates that event correlation schemes can be defined by combining several rules. In this example, two rules harness contexts and synthetic events for achieving their goal: </p>
-<p> type=SingleWithThreshold <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: Failed .+ for (\S+) from [\d.]+ port \d+ ssh2 <br />
- desc=Three SSH login failures within 1m for user $1 <br />
- action=event 3_SSH_LOGIN_FAILURES_FOR_$1 <br />
- window=60 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: Failed .+ for (\S+) from [\d.]+ port \d+ ssh2 <br/>
+ desc=Three SSH login failures within 1m for user $1 <br/>
+ action=event 3_SSH_LOGIN_FAILURES_FOR_$1 <br/>
+ window=60 <br/>
  thresh=3 </p>
-<p> type=EventGroup <br />
- ptype=RegExp <br />
- pattern=3_SSH_LOGIN_FAILURES_FOR_(\S+) <br />
- context=!USER_$1_COUNTED &amp;&amp; !COUNTING_OFF <br />
- count=create USER_$1_COUNTED 60 <br />
- desc=Repeated SSH login failures for 30 distinct users within 1m <br />
- action=pipe &#8216;%s&#8217; /bin/mail -s &#8216;SSH login alert&#8217; root [at] localhost; \ <br />
-&nbsp;<wbr>create COUNTING_OFF 3600 <br />
- window=60 <br />
+<p> type=EventGroup <br/>
+ ptype=RegExp <br/>
+ pattern=3_SSH_LOGIN_FAILURES_FOR_(\S+) <br/>
+ context=!USER_$1_COUNTED &amp;&amp; !COUNTING_OFF <br/>
+ count=create USER_$1_COUNTED 60 <br/>
+ desc=Repeated SSH login failures for 30 distinct users within 1m <br/>
+ action=pipe &#8216;%s&#8217; /bin/mail -s &#8216;SSH login alert&#8217; root [at] localhost; \ <br/>
+&nbsp;<wbr>create COUNTING_OFF 3600 <br/>
+ window=60 <br/>
  thresh=30 </p>
 <p> The first rule looks almost identical to the rule from the previous example, but its <i>action</i> field is different -- after three SSH login failures have been observed for the same user name within one minute by an event correlation operation, the operation will emit the synthetic event 3_SSH_LOGIN_FAILURES_FOR_&lt;username&gt;. Although synthetic events are created by SEC, they are treated like regular events received from input sources and are matched against rules. The regular expression pattern of the second rule will match the 3_SSH_LOGIN_FAILURES_FOR_&lt;username&gt; event and start a new event correlation operation if no such events have been previously seen. Also, each time a synthetic event for some user name has matched the rule, a context with the lifetime of 1 minute for that user name is created (see the <i>count</i> field). Note that this prevents further matches for the same user name, since a synthetic event for &lt;username&gt; can match the rule only if the context USER_&lt;username&gt;_COUNTED *does not* exist (as requested by the boolean expression in the <i>context</i> field; see CONTEXTS AND CONTEXT EXPRESSIONS section for more information). The operation started by the rule sends an e-mail warning to the local root-user if 30 synthetic events have been observed within 1 minute (see the <i>thresh</i> and <i>window</i> fields). Note that due to the use of the USER_&lt;username&gt;_COUNTED contexts, all synthetic events concern different user names. After sending an e-mail warning, the operation will also create the context COUNTING_OFF with the lifetime of 1 hour, and will continue to run until the 1 minute event correlation window expires. After the operation has finished, the presence of the COUNTING_OFF context will keep the second rule disabled (as requested by the boolean expression in the <i>context</i> field). Therefore, at most one e-mail warning per 1 hour is issued by above rules. </p>
 <p> The above examples have presented the event correlation capabilities of SEC in a very brief fashion. The following sections will provide an in-depth discussion of SEC features.  </p>
@@ -146,13 +146,13 @@ description: "sec – simple event correlator"
 <dd> <p> use syslog for logging SEC activities. All messages will be logged with the facility &lt;facility&gt;, e.g., <i>local0</i> (see <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) for possible facility values). Warning: be careful with using this option if SEC is employed for monitoring syslog log files, because message loops might occur. </p>
  </dd>
 <dt><code>--debug=&lt;debuglevel&gt;</code></dt>
-<dd> <p> set logging verbosity for SEC. Setting debuglevel to &lt;debuglevel&gt; means that all messages of level &lt;debuglevel&gt; and lower are logged (e.g., if &lt;debuglevel&gt; is 3, messages from levels 1-3 are logged). The following levels are recognized by SEC: <br />
- 1 - critical messages (severe faults that cause SEC to terminate, e.g., a failed system call) <br />
- 2 - error messages (faults that need attention, e.g., an incorrect rule definition in a configuration file) <br />
- 3 - warning messages (possible faults, e.g., a command forked from SEC terminated with a non-zero exit code) <br />
- 4 - notification messages (normal system level events and interrupts, e.g., the reception of a signal) <br />
- 5 - informative messages (information about external programs forked from SEC) <br />
- 6 - debug messages (detailed information about all SEC activities) <br />
+<dd> <p> set logging verbosity for SEC. Setting debuglevel to &lt;debuglevel&gt; means that all messages of level &lt;debuglevel&gt; and lower are logged (e.g., if &lt;debuglevel&gt; is 3, messages from levels 1-3 are logged). The following levels are recognized by SEC: <br/>
+ 1 - critical messages (severe faults that cause SEC to terminate, e.g., a failed system call) <br/>
+ 2 - error messages (faults that need attention, e.g., an incorrect rule definition in a configuration file) <br/>
+ 3 - warning messages (possible faults, e.g., a command forked from SEC terminated with a non-zero exit code) <br/>
+ 4 - notification messages (normal system level events and interrupts, e.g., the reception of a signal) <br/>
+ 5 - informative messages (information about external programs forked from SEC) <br/>
+ 6 - debug messages (detailed information about all SEC activities) <br/>
  Default &lt;debuglevel&gt; is 6 (i.e., log everything). See SIGNALS section for information on how to change &lt;debuglevel&gt; at runtime. </p>
  </dd>
 <dt><code>--pid=&lt;pidfile&gt;</code></dt>
@@ -212,23 +212,23 @@ description: "sec – simple event correlator"
 <p> Note that options can be introduced both with the single dash (-) and double dash (--), and both the equal sign (=) and whitespace can be used for separating the option name from the option value. For example, <code>-conf=&lt;file_pattern&gt;</code> and <code>--conf &lt;file_pattern&gt;</code> options are equivalent.  </p>
 <h2>CONFIGURATION FILES</h2>
 <p> Each SEC configuration file consists of rule definitions which are separated by empty lines, whitespace lines and/or comment lines. Each rule definition consists of keyword=value fields, one keyword and value per line. Values are case insensitive only where character case is not important (like the values specifying rule types, e.g., &#8216;Single&#8217; and &#8216;single&#8217; are treated identically). The backslash character (\) may be used at the end of a line to continue the current rule field in the next line. Lines which begin with the number sign (#) are treated as comments and ignored (whitespace characters may precede #). Any comment line, empty line, whitespace line, or end of file will terminate the preceding rule definition. For inserting comments into rule definitions, the <i>rem</i> keyword can be used. For example, the following lines define two rules: </p>
-<p> type=Single <br />
- rem=this rule matches any line which contains \ <br />
-&nbsp;<wbr>three consecutive A characters and writes the string&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&quot;three A characters were observed&quot;&nbsp;<wbr>to standard output <br />
- ptype=SubStr <br />
- pattern=AAA <br />
- desc=Three A characters <br />
- action=write - three A characters were observed <br />
- # This comment line ends preceding rule definition. <br />
- # The following rule works like the previous rule, <br />
- # but looks for three consecutive B characters and <br />
- # writes the string &quot;three B characters were observed&quot; <br />
- # to standard output <br />
- type=Single <br />
- ptype=SubStr <br />
- pattern=BBB <br />
- desc=Three B characters <br />
+<p> type=Single <br/>
+ rem=this rule matches any line which contains \ <br/>
+&nbsp;<wbr>three consecutive A characters and writes the string&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&quot;three A characters were observed&quot;&nbsp;<wbr>to standard output <br/>
+ ptype=SubStr <br/>
+ pattern=AAA <br/>
+ desc=Three A characters <br/>
+ action=write - three A characters were observed <br/>
+ # This comment line ends preceding rule definition. <br/>
+ # The following rule works like the previous rule, <br/>
+ # but looks for three consecutive B characters and <br/>
+ # writes the string &quot;three B characters were observed&quot; <br/>
+ # to standard output <br/>
+ type=Single <br/>
+ ptype=SubStr <br/>
+ pattern=BBB <br/>
+ desc=Three B characters <br/>
  action=write - three B characters were observed </p>
 <p> Apart from keywords that are part of rule definitions, <i>label</i> keywords may appear anywhere in the configuration file. The value of each <i>label</i> keyword will be treated as a label that can be referred to in rule definitions as a point-of-continue. This allows for continuing event processing at a rule that follows the label, after the current rule has matched and processed the event. </p>
 <p> The points-of-continue are defined with <i>continue*</i> fields. Accepted values for these fields are: </p>
@@ -246,54 +246,54 @@ description: "sec – simple event correlator"
 <dd> <p> after an event has matched the rule, search for matching rules ends for *all* configuration files. </p>
  </dd></dl>
 <p> SEC rules from the same configuration file are matched against input in the order they have been given in the file. For example, consider a configuration file which contains the following rule sequence: </p>
-<p> type=Single <br />
- ptype=SubStr <br />
- pattern=AAA <br />
- rem=after this rule has matched, continue from last rule <br />
- continue=GoTo lastRule <br />
- desc=Three A characters <br />
+<p> type=Single <br/>
+ ptype=SubStr <br/>
+ pattern=AAA <br/>
+ rem=after this rule has matched, continue from last rule <br/>
+ continue=GoTo lastRule <br/>
+ desc=Three A characters <br/>
  action=write - three A characters were observed </p>
-<p> type=Single <br />
- ptype=SubStr <br />
- pattern=BBB <br />
- rem=after this rule has matched, don&#8217;t consider following rules, \ <br />
-&nbsp;<wbr>since&nbsp;<wbr>&#8216;continue&#8217;&nbsp;<wbr>defaults to&nbsp;<wbr>&#8216;DontCont&#8217; <br />
- desc=Three B characters <br />
+<p> type=Single <br/>
+ ptype=SubStr <br/>
+ pattern=BBB <br/>
+ rem=after this rule has matched, don&#8217;t consider following rules, \ <br/>
+&nbsp;<wbr>since&nbsp;<wbr>&#8216;continue&#8217;&nbsp;<wbr>defaults to&nbsp;<wbr>&#8216;DontCont&#8217; <br/>
+ desc=Three B characters <br/>
  action=write - three B characters were observed </p>
-<p> type=Single <br />
- ptype=SubStr <br />
- pattern=CCC <br />
- rem=after this rule has matched, continue from next rule <br />
- continue=TakeNext <br />
- desc=Three C characters <br />
+<p> type=Single <br/>
+ ptype=SubStr <br/>
+ pattern=CCC <br/>
+ rem=after this rule has matched, continue from next rule <br/>
+ continue=TakeNext <br/>
+ desc=Three C characters <br/>
  action=write - three C characters were observed </p>
 <p> label=lastRule </p>
-<p> type=Single <br />
- ptype=SubStr <br />
- pattern=DDD <br />
- desc=Three D characters <br />
+<p> type=Single <br/>
+ ptype=SubStr <br/>
+ pattern=DDD <br/>
+ desc=Three D characters <br/>
  action=write - three D characters were observed </p>
 <p> For the input line &quot;AAABBBCCCDDD&quot;, this ruleset writes strings &quot;three A characters were observed&quot; and &quot;three D characters were observed&quot; to standard output. If the input line is &quot;BBBCCCDDD&quot;, the string &quot;three B characters were observed&quot; is written to standard output. For the input line &quot;CCCDDD&quot;, strings &quot;three C characters were observed&quot; and &quot;three D characters were observed&quot; are sent to standard output, while the input line &quot;DDD&quot; produces the output string &quot;three D characters were observed&quot;. </p>
 <p> If there are two or more configuration files, rule sequence from every file is matched against input (unless explicitly specified otherwise). For example, suppose SEC is started with the command line </p>
-<p> /usr/bin/sec --input=- \ <br />
+<p> /usr/bin/sec --input=- \ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>--conf=/etc/sec/sec1.rules --conf=/etc/sec/sec2.rules </p>
 <p> and the configuration file /etc/sec/sec1.rules has the following content: </p>
-<p> type=Single <br />
- ptype=SubStr <br />
- pattern=AAA <br />
- desc=Three A characters <br />
+<p> type=Single <br/>
+ ptype=SubStr <br/>
+ pattern=AAA <br/>
+ desc=Three A characters <br/>
  action=write - three A characters were observed </p>
-<p> type=Single <br />
- ptype=SubStr <br />
- pattern=BBB <br />
- continue=EndMatch <br />
- desc=Three B characters <br />
+<p> type=Single <br/>
+ ptype=SubStr <br/>
+ pattern=BBB <br/>
+ continue=EndMatch <br/>
+ desc=Three B characters <br/>
  action=write - three B characters were observed </p>
 <p> Also, suppose the configuration file /etc/sec/sec2.rules has the following content: </p>
-<p> type=Single <br />
- ptype=SubStr <br />
- pattern=CCC <br />
- desc=Three C characters <br />
+<p> type=Single <br/>
+ ptype=SubStr <br/>
+ pattern=CCC <br/>
+ desc=Three C characters <br/>
  action=write - three C characters were observed </p>
 <p> If SEC receives the line &quot;AAABBBCCC&quot; from standard input, rules from both configuration files are tried, and as a result, the strings &quot;three A characters were observed&quot; and &quot;three C characters were observed&quot; are written to standard output. Note that rules from /etc/sec/sec1.rules are tried first against the input line, since the option <code>--conf=/etc/sec/sec1.rules </code> is given before <code>--conf=/etc/sec/sec2.rules </code> in the SEC command line (see also INPUT PROCESSING AND TIMING section for a more detailed discussion). If SEC receives the line &quot;BBBCCC&quot; from standard input, the second rule from /etc/sec/sec1.rules produces a match, and the string &quot;three B characters were observed&quot; is written to standard output. Since the rule contains <i>continue=EndMatch</i> statement, the search for matching rules will end for all configuration files, and rules from /etc/sec/sec2.rules will not be not tried. Without this statement, the search for matching rules would continue in /etc/sec/sec2.rules, and the first rule would write the string &quot;three C characters were observed&quot; to standard output.  </p>
 <h2>PATTERNS, PATTERN TYPES AND MATCH VARIABLES</h2>
@@ -301,7 +301,7 @@ description: "sec – simple event correlator"
 <dl>
 <dt><i>SubStr[N]</i></dt>
 <dd> <p> pattern is a string that is searched in the last N input lines L1, L2, ..., LN. If N is greater than 1, the input lines are joined into a string &quot;L1&lt;NEWLINE&gt;L2&lt;NEWLINE&gt;...&lt;NEWLINE&gt;LN&quot;, and the pattern string will be searched from it. If the pattern string is found in input line(s), the pattern matches. Backslash sequences \t, \n, \r, \s, and \0 can be used in the pattern for denoting tabulation, newline, carriage return, space character, and empty string, respectively, while \\ denotes backslash itself. For example, consider the following pattern definition: </p>
-<p> ptype=substr <br />
+<p> ptype=substr <br/>
  pattern=Backup done:\tsuccess </p>
 <p> The pattern matches lines containing &quot;Backup done:&lt;TAB&gt;success&quot;. </p>
 <p> Note that since the <i>SubStr[N]</i> pattern type has been designed for fast matching, it does not support match variables. </p>
@@ -310,18 +310,18 @@ description: "sec – simple event correlator"
 <dd> <p> pattern is a Perl regular expression (see <code><a href="/docs/linux/man/1-perlre/">perlre</a></code>(1) for more information) for matching the last N input lines L1, L2, ..., LN. If N is greater than 1, the input lines are joined into a string &quot;L1&lt;NEWLINE&gt;L2&lt;NEWLINE&gt;...&lt;NEWLINE&gt;LN&quot;, and the regular expression is matched with this string. If the regular expression matches, match variables will be set, and these match variables can be used in other parts of the rule definition. </p>
 <p> In addition to numbered match variables ($1, $2, etc.), SEC supports named match variables $+{name} and the $0 variable. The $0 variable holds the entire string of last N input lines that the regular expression has matched. Named match variables can be created in newer versions of Perl regular expression language, e.g., (?&lt;myvar&gt;AB|CD) sets $+{myvar} to AB or CD. The special named match variable $+{_inputsrc} is created by SEC and holds input file name(s) where matching line(s) came from. </p>
 <p> For example, the following pattern matches the SSH &quot;Connection from&quot; event, and sets $0 to the entire event line, both $1 and $+{ip} to the IP address of the remote node, $2 to the port number at the remote node, and $+{_inputsrc} to the input file name: </p>
-<p> ptype=RegExp <br />
+<p> ptype=RegExp <br/>
  pattern=sshd\[\d+\]: Connection from (?&lt;ip&gt;[\d.]+) port (\d+) </p>
 <p> Also, SEC allows for match caching and for the creation of additional named match variables through variable maps which are defined with the <i>varmap*</i> fields. Variable map is a list of <i>name=number </i> mappings separated by semicolons, where <i>name</i> is the name for the named variable and <i>number </i> identifies a numbered match variable that is set by the regular expression. Each name must begin with a letter and consist of letters, digits and underscores. After the regular expression has matched, named variables specified by the map are created from corresponding numbered variables. If the same named variable is set up both from the regular expression and variable map, the map takes precedence. </p>
 <p> If <i>name</i> is not followed by the equal sign and number in the <i>varmap*</i> field, it is regarded as a common name for all match variables and their values from a successful match. This name is used for caching a successful match by the pattern -- match variables and their values are stored in the memory-based pattern match cache under <i>name</i>. Cached match results can be reused by <i>Cached</i> and <i>NCached</i> patterns. Note that before processing each new input line, previous content of the pattern match cache is cleared. Also note that a successful pattern match is cached even if the subsequent context expression evaluation yields FALSE (see INPUT PROCESSING AND TIMING section for more information). </p>
 <p> For example, consider the following pattern definition: </p>
-<p> ptype=regexp <br />
- pattern=(?i)(\S+\.mydomain).*printer: toner\/ink low <br />
+<p> ptype=regexp <br/>
+ pattern=(?i)(\S+\.mydomain).*printer: toner\/ink low <br/>
  varmap=printer_toner_or_ink_low; message=0; hostname=1 </p>
 <p> The pattern matches &quot;printer: toner/ink low&quot; messages in a case insensitive manner from printers belonging to .mydomain. Note that the printer hostname is assigned to $1 and $+{hostname}, while the whole message line is assigned to $0 and $+{message}. The name of the file where message line came from is assigned to $+{_inputsrc}. Also, these variables and their values are stored to the pattern match cache under the name &quot;printer_toner_or_ink_low&quot;. </p>
 <p> The following pattern definition produces a match if the last two input lines are AAA and BBB: </p>
-<p> ptype=regexp2 <br />
- pattern=^AAA\nBBB$ <br />
+<p> ptype=regexp2 <br/>
+ pattern=^AAA\nBBB$ <br/>
  varmap=aaa_bbb </p>
 <p> Note that with the <code>--nojointbuf</code> option the pattern only matches if the matching lines are coming from the *same* input file, while the <code>--jointbuf</code> option lifts that restriction. </p>
 <p> In the case of a match, $0 is set to &quot;AAA&lt;NEWLINE&gt;BBB&quot; and $+{_inputsrc} to file name(s) for matching lines. Also, these variable-value pairs are cached under the name &quot;aaa_bbb&quot;. </p>
@@ -333,31 +333,31 @@ description: "sec – simple event correlator"
 <p> function(L1, L2, ..., LN, F) </p>
 <p> Also note that if the input line is a synthetic event, the input file name is Perl undefined value. </p>
 <p> If the function returns several values or a single value that is true in Perl boolean context, the pattern matches. If the function returns no values or a single value that is false in Perl boolean context (0, empty string or undefined value), the pattern does not match. If the pattern matches, return values will be assigned to numbered match variables ($1, $2, etc.). Like with RegExp patterns, the $0 variable is set to matching input line(s), the $+{_inputsrc} variable is set to input file name(s), and named match variables can be created from variable maps. For example, consider the following pattern definition: </p>
-<p> ptype=perlfunc2 <br />
+<p> ptype=perlfunc2 <br/>
  pattern=sub { return ($_[0] cmp $_[1]); } </p>
 <p> The pattern compares last two input lines in a stringwise manner ($_[1] holds the last line and $_[0] the preceding one), and matches if the lines are different. Note that the result of the comparison is assigned to $1, while two matching lines are concatenated (with the newline character between them) and assigned to $0. The file name(s) for matching lines are assigned to $+{_inputsrc}. </p>
 <p> The following pattern produces a match for any line, and sets $1, $2 and $3 variables to strings &quot;abc&quot;, &quot;def&quot; and &quot;ghi&quot;, respectively (also, $0 is set to the whole input line and $+{_inputsrc} to the input file name): </p>
-<p> ptype=perlfunc <br />
+<p> ptype=perlfunc <br/>
  pattern=sub { return (&quot;abc&quot;, &quot;def&quot;, &quot;ghi&quot;); } </p>
 <p> The following pattern definition produces a match if the input line is not a synthetic event and contains either the string &quot;abc&quot; or &quot;def&quot;. The $0 variable is set to the matching line, while $1, $+{file} and $+{_inputsrc} are set to the name of the input file: </p>
-<p> ptype=perlfunc <br />
- pattern=sub { if (defined($_[1]) &amp;&amp; $_[0] =~ /abc|def/) \ <br />
- { return $_[1]; } return 0; } <br />
+<p> ptype=perlfunc <br/>
+ pattern=sub { if (defined($_[1]) &amp;&amp; $_[0] =~ /abc|def/) \ <br/>
+ { return $_[1]; } return 0; } <br/>
  varmap= file=1 </p>
 <p> Finally, if a function pattern returns a single value which is a reference to a Perl hash, named match variables are created from key-value pairs in the hash. For example, the following pattern matches a line if it contains either the string &quot;three&quot; or &quot;four&quot;. Apart from setting $0 and $+{_inputsrc}, the pattern also creates match variables $+{three} and $+{four}, and sets them to 3 and 4, respectively: </p>
-<p> ptype=perlfunc <br />
- pattern=sub { my(%hash); \ <br />
- if ($_[0] !~ /three|four/) { return 0; } \ <br />
+<p> ptype=perlfunc <br/>
+ pattern=sub { my(%hash); \ <br/>
+ if ($_[0] !~ /three|four/) { return 0; } \ <br/>
  $hash{&quot;three&quot;} = 3; $hash{&quot;four&quot;} = 4; return \%hash; } </p>
  </dd>
 <dt><i>Cached</i></dt>
 <dd> <p> pattern is a name that is searched in the pattern match cache (entries are stored into the cache with the <i>varmap*</i> fields). If an entry with the given name is found in the cache, the pattern matches, and match variables and values are retrieved from the cache. For example, if the input line matches the following pattern </p>
-<p> ptype=perlfunc <br />
- pattern=sub { if (defined($_[1]) &amp;&amp; $_[0] =~ /abc|def/) \ <br />
- { return $_[1]; } return 0; } <br />
+<p> ptype=perlfunc <br/>
+ pattern=sub { if (defined($_[1]) &amp;&amp; $_[0] =~ /abc|def/) \ <br/>
+ { return $_[1]; } return 0; } <br/>
  varmap=abc_or_def_found; file=1 </p>
 <p> then the entry &quot;abc_or_def_found&quot; is created in the pattern match cache. Therefore, the pattern </p>
-<p> ptype=cached <br />
+<p> ptype=cached <br/>
  pattern=abc_or_def_found </p>
 <p> will also produce a match for this input line, and set the $0, $1, $+{file}, and $+{_inputsrc} variables to values from the previous match. </p>
  </dd>
@@ -387,41 +387,41 @@ description: "sec – simple event correlator"
 <p> A SEC context is a memory based entity which has one or more names, a lifetime, and an event store. Also, an action list can be set up for a context which is executed immediately before the context expires. </p>
 <p> For example, the action <i>create MYCONTEXT 3600 (report MYCONTEXT /bin/mail root [at] localhost)</i> creates the context <code>MYCONTEXT </code> which has a lifetime of 3600 seconds and empty event store. Also, immediately before <code>MYCONTEXT </code> expires and is dropped from memory, the action <i>report MYCONTEXT /bin/mail root [at] localhost</i> is executed which mails the event store of <code>MYCONTEXT </code> to root [at] localhost. </p>
 <p> Contexts can be used for event aggregation and reporting. Suppose the following actions are executed in this order: </p>
-<p> create MYCONTEXT <br />
- add MYCONTEXT This is a test <br />
- alias MYCONTEXT MYALIAS <br />
- add MYALIAS This is another test <br />
- report MYCONTEXT /bin/mail root [at] localhost <br />
+<p> create MYCONTEXT <br/>
+ add MYCONTEXT This is a test <br/>
+ alias MYCONTEXT MYALIAS <br/>
+ add MYALIAS This is another test <br/>
+ report MYCONTEXT /bin/mail root [at] localhost <br/>
  delete MYALIAS </p>
 <p> The first action creates the context <code>MYCONTEXT </code> with infinite lifetime and empty event store. The second action appends the string &quot;This is a test&quot; to the event store of <code>MYCONTEXT</code>. The third action sets up an alias name <code>MYALIAS </code> for the context (names <code>MYCONTEXT </code> and <code>MYALIAS</code> refer to the same context data structure). The fourth action appends the string &quot;This is another test&quot; to the event store of the context. The fifth action writes the lines </p>
-<p> This is a test <br />
+<p> This is a test <br/>
  This is another test </p>
 <p> to the standard input of the <i>/bin/mail root [at] localhost </i> command. The sixth action deletes the context data structure from memory and drops its names <code>MYCONTEXT </code> and <code>MYALIAS</code>. </p>
 <p> Since contexts are accessible from all rules and event correlation operations, they can be used for data sharing and joining several rules into one event correlation scheme. In order to check for the presence of contexts from rules, context expressions can be employed. </p>
 <p> Context expressions are boolean expressions that are defined with the <i>context*</i> rule fields. Context expressions can be used for restricting the matches produced by patterns, since if the expression evaluates FALSE, the rule will not match an input event. </p>
-<p> The context expression accepts context names, Perl miniprograms, Perl functions, and pattern match cache lookups as operands. These operands can be combined with the following operators: <br />
- ! - logical NOT, <br />
- &amp;&amp; - short-circuit logical AND, <br />
- || - short-circuit logical OR. <br />
+<p> The context expression accepts context names, Perl miniprograms, Perl functions, and pattern match cache lookups as operands. These operands can be combined with the following operators: <br/>
+ ! - logical NOT, <br/>
+ &amp;&amp; - short-circuit logical AND, <br/>
+ || - short-circuit logical OR. <br/>
  In addition, parentheses can be used for grouping purposes. </p>
 <p> If the operand does not contain any special operators (such as -&gt; or :&gt;, see below), it is treated as a context name. Context name operands may contain match variables, but may not contain whitespace. If the context name refers to an existing context, the operand evaluates TRUE, otherwise it evaluates FALSE. </p>
 <p> For example, consider the following rule sequence: </p>
-<p> type=Single <br />
- ptype=RegExp <br />
- pattern=Test: (\d+) <br />
- desc=test <br />
+<p> type=Single <br/>
+ ptype=RegExp <br/>
+ pattern=Test: (\d+) <br/>
+ desc=test <br/>
  action=create CONT_$1 </p>
-<p> type=Single <br />
- ptype=RegExp <br />
- pattern=Test2: (\d+) (\d+) <br />
- context=CONT_$1 &amp;&amp; CONT_$2 <br />
- desc=test <br />
+<p> type=Single <br/>
+ ptype=RegExp <br/>
+ pattern=Test2: (\d+) (\d+) <br/>
+ context=CONT_$1 &amp;&amp; CONT_$2 <br/>
+ desc=test <br/>
  action=write - Both $1 and $2 have been seen in the past </p>
 <p> If the following input lines appear in this order </p>
-<p> Test: 19 <br />
- Test: 261 <br />
- Test2: 19 787 <br />
- Test: 787 <br />
+<p> Test: 19 <br/>
+ Test: 261 <br/>
+ Test2: 19 787 <br/>
+ Test: 787 <br/>
  Test2: 787 261 </p>
 <p> the first input line matches the first rule which creates the context <code>CONT_19</code>, and similarly, the second input line triggers the creation of the context <code>CONT_261</code>. The third input line &quot;Test2: 19 787&quot; matches the regular expression </p>
 <p> Test2: (\d+) (\d+) </p>
@@ -432,11 +432,11 @@ description: "sec – simple event correlator"
 <p> evaluates TRUE (both context <code>CONT_787</code> and context <code>CONT_261</code> exist), and therefore the string &quot;Both 787 and 261 have been seen in the past&quot; is written to standard output. </p>
 <p> If the context expression operand contains the arrow operator (-&gt;), the text following the arrow must be a valid Perl function definition that is compiled at SEC startup with the Perl <code>eval</code>() function. The <code>eval</code>() must return a code reference (see also PERL INTEGRATION section for more information). If any text precedes the arrow, it is treated as a list of parameters for the function. Parameters must be separated by whitespace and may contain match variables. In order to evaluate the context expression operand, the Perl function is called in the Perl scalar context. If the return value of the function is true in the Perl boolean context, the operand evaluates TRUE, otherwise it evaluates FALSE. </p>
 <p> For example, the following rule matches an SSH login failure event if the login attempt comes from a privileged port of the client host: </p>
-<p> type=Single <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: Failed .+ for (\S+) from [\d.]+ port (\d+) ssh2 <br />
- context=$2 -&gt; ( sub { $_[0] &lt; 1024 } ) <br />
- desc=SSH login failure for $1 priv port $2 <br />
+<p> type=Single <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: Failed .+ for (\S+) from [\d.]+ port (\d+) ssh2 <br/>
+ context=$2 -&gt; ( sub { $_[0] &lt; 1024 } ) <br/>
+ desc=SSH login failure for $1 priv port $2 <br/>
  action=write - SSH login failure for user $1 from a privileged port $2 </p>
 <p> When the following message from SSH daemon appears </p>
 <p> Dec 16 16:24:59 myserver sshd[13685]: Failed password for risto from 10.12.2.5 port 41063 ssh2 </p>
@@ -446,30 +446,30 @@ description: "sec – simple event correlator"
 <p> Dec 16 16:25:17 myserver sshd[13689]: Failed password for risto from 10.12.2.5 port 1023 ssh2 </p>
 <p> matches the rule, and the string &quot;SSH login failure for user risto from a privileged port 1023&quot; is written to standard output. </p>
 <p> As another example, the following context expression evaluates TRUE if the /var/log/messages file does not exist or was last modified more than 1 hour ago (note that the Perl function takes no parameters): </p>
-<p> context= -&gt; ( sub { my(@stat) = stat(&quot;/var/log/messages&quot;); \ <br />
+<p> context= -&gt; ( sub { my(@stat) = stat(&quot;/var/log/messages&quot;); \ <br/>
  return (!scalar(@stat) || time() - $stat[9] &gt; 3600); } ) </p>
 <p> If the context expression operand contains the :&gt; operator, the text that follows :&gt; must be a valid Perl function definition that is compiled at SEC startup with the Perl <code>eval</code>() function. The <code>eval</code>() must return a code reference (see also PERL INTEGRATION section for more information). If any text precedes the :&gt; operator, it is treated as a list of parameters for the function. Parameters must be separated by whitespace and may contain match variables. It is assumed that each parameter is a name of an entry in the pattern match cache. If an entry with the given name does not exist, Perl undefined value is passed to the function. If an entry with the given name exists, a reference to the entry is passed to the Perl function. Internally, each pattern match cache entry is implemented as a Perl hash which contains all match variables for the given entry. In the hash, each key-value pair represents some variable name and value, e.g., if cached match variable $+{ip} is holding 10.1.1.1, the hash contains the value <code>10.1.1.1</code> with the key <code>ip</code>. In order to evaluate the context expression operand, the Perl function is called in the Perl scalar context. If the return value of the function is true in the Perl boolean context, the operand evaluates TRUE, otherwise it evaluates FALSE. </p>
 <p> For example, consider the following rule sequence: </p>
-<p> type=Single <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: (?&lt;status&gt;Accepted|Failed) .+ \ <br />
- for (?&lt;invuser&gt;invalid user )?(?&lt;user&gt;\S+) from (?&lt;ip&gt;[\d.]+) \ <br />
- port (?&lt;port&gt;\d+) ssh2 <br />
- varmap=SSH <br />
- continue=TakeNext <br />
- desc=parse SSH login events and pass them to following rules <br />
+<p> type=Single <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: (?&lt;status&gt;Accepted|Failed) .+ \ <br/>
+ for (?&lt;invuser&gt;invalid user )?(?&lt;user&gt;\S+) from (?&lt;ip&gt;[\d.]+) \ <br/>
+ port (?&lt;port&gt;\d+) ssh2 <br/>
+ varmap=SSH <br/>
+ continue=TakeNext <br/>
+ desc=parse SSH login events and pass them to following rules <br/>
  action=none </p>
-<p> type=Single <br />
- ptype=Cached <br />
- pattern=SSH <br />
- context=SSH :&gt; ( sub { $_[0]-&gt;{&quot;status&quot;} eq &quot;Failed&quot; &amp;&amp; \ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$_[0]-&gt;{&quot;port&quot;}&nbsp;<wbr>&lt;&nbsp;<wbr>1024&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>}&nbsp;<wbr>) <br />
- desc=Probe of invalid user $+{user} from privileged port of $+{ip} <br />
+<p> type=Single <br/>
+ ptype=Cached <br/>
+ pattern=SSH <br/>
+ context=SSH :&gt; ( sub { $_[0]-&gt;{&quot;status&quot;} eq &quot;Failed&quot; &amp;&amp; \ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$_[0]-&gt;{&quot;port&quot;}&nbsp;<wbr>&lt;&nbsp;<wbr>1024&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>}&nbsp;<wbr>) <br/>
+ desc=Probe of invalid user $+{user} from privileged port of $+{ip} <br/>
  action=pipe &#8216;%t: %s&#8217; /bin/mail -s &#8216;SSH alert&#8217; root [at] localhost </p>
 <p> The first rule matches and parses SSH login messages, and stores parsing results to the pattern match cache under the name <code>SSH</code>. The pattern of the second rule (defined with <i>ptype=Cached</i> and <i>pattern=SSH</i>) matches any input event for which the entry <code>SSH</code> has been previously created in the pattern match cache (in other words, the event has been recognized and parsed as an SSH login message). For each matching event, the second rule passes the reference to the <code>SSH</code> cache entry to the Perl function </p>
-<p> sub { $_[0]-&gt;{&quot;status&quot;} eq &quot;Failed&quot; &amp;&amp; \ <br />
-$_[0]-&gt;{&quot;port&quot;}&nbsp;<wbr>&lt;&nbsp;<wbr>1024&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>\ <br />
+<p> sub { $_[0]-&gt;{&quot;status&quot;} eq &quot;Failed&quot; &amp;&amp; \ <br/>
+$_[0]-&gt;{&quot;port&quot;}&nbsp;<wbr>&lt;&nbsp;<wbr>1024&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>\ <br/>
 defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
 <p> The function checks the values of $+{status}, $+{port}, and $+{invuser} match variables under the <code>SSH</code> entry, and returns true if $+{status} equals to the string &quot;Failed&quot; (i.e., login attempt failed), the value of $+{port} is less than 1024, and $+{invuser} holds a defined value (i.e., user account does not exist). If the function (and thus context expression) evaluates TRUE, the rule sends a warning e-mail to root [at] localhost that a non-existing user account was probed from a privileged port of a client host. </p>
 <p> If the context expression operand begins with the <i>varset</i> keyword, the following string is treated as a name of an entry in the pattern match cache. The operand evaluates TRUE if the given entry exists, and FALSE otherwise. </p>
@@ -742,22 +742,22 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
 <p> Mail the timestamp and the value of the $0 variable to the local root: </p>
 <p> action=pipe &#8216;%t: $0&#8217; /bin/mail -s &quot;alert message&quot; root [at] localhost </p>
 <p> Add the value of the $0 variable to the event store of the context <code>ftp_&lt;the value of $1&gt;</code>, and set the context to expire after 30 minutes. When the context expires, its event store will be mailed to the local root: </p>
-<p> action=add ftp_$1 $0; \ <br />
+<p> action=add ftp_$1 $0; \ <br/>
 &nbsp;<wbr>set ftp_$1 1800&nbsp;<wbr>(report ftp_$1&nbsp;<wbr>/bin/mail root [at] localhost) </p>
 <p> Create a subroutine for weeding out comment lines from the input list, and use this subroutine for removing comment lines from the event store of the context <code>C1</code>: </p>
-<p> action=eval %funcptr ( sub { my(@buf) = split(/\n/, $_[0]); \ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>my(@ret)&nbsp;<wbr>=&nbsp;<wbr>grep(!/^#/,&nbsp;<wbr>@buf);&nbsp;<wbr>return&nbsp;<wbr>@ret;&nbsp;<wbr>}&nbsp;<wbr>);&nbsp;<wbr>\ <br />
+<p> action=eval %funcptr ( sub { my(@buf) = split(/\n/, $_[0]); \ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>my(@ret)&nbsp;<wbr>=&nbsp;<wbr>grep(!/^#/,&nbsp;<wbr>@buf);&nbsp;<wbr>return&nbsp;<wbr>@ret;&nbsp;<wbr>}&nbsp;<wbr>);&nbsp;<wbr>\ <br/>
 &nbsp;<wbr>copy C1&nbsp;<wbr>%in;&nbsp;<wbr>call&nbsp;<wbr>%out&nbsp;<wbr>%funcptr&nbsp;<wbr>%in;&nbsp;<wbr>fill C1&nbsp;<wbr>%out </p>
 <p> The following action list achieves the same goal as the previous action list with <i>while </i> and <i>if </i> actions: </p>
-<p> action=getsize %size C1; while %size ( shift C1 %event; \ <br />
-&nbsp;<wbr>lcall&nbsp;<wbr>%nocomment&nbsp;<wbr>%event -&gt;&nbsp;<wbr>(&nbsp;<wbr>sub&nbsp;<wbr>{&nbsp;<wbr>$_[0]&nbsp;<wbr>!~&nbsp;<wbr>/^#/&nbsp;<wbr>}&nbsp;<wbr>);&nbsp;<wbr>\ <br />
-&nbsp;<wbr>if&nbsp;<wbr>%nocomment&nbsp;<wbr>(&nbsp;<wbr>add C1&nbsp;<wbr>%event&nbsp;<wbr>);&nbsp;<wbr>\ <br />
+<p> action=getsize %size C1; while %size ( shift C1 %event; \ <br/>
+&nbsp;<wbr>lcall&nbsp;<wbr>%nocomment&nbsp;<wbr>%event -&gt;&nbsp;<wbr>(&nbsp;<wbr>sub&nbsp;<wbr>{&nbsp;<wbr>$_[0]&nbsp;<wbr>!~&nbsp;<wbr>/^#/&nbsp;<wbr>}&nbsp;<wbr>);&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>if&nbsp;<wbr>%nocomment&nbsp;<wbr>(&nbsp;<wbr>add C1&nbsp;<wbr>%event&nbsp;<wbr>);&nbsp;<wbr>\ <br/>
 &nbsp;<wbr>lcall&nbsp;<wbr>%size&nbsp;<wbr>%size -&gt;&nbsp;<wbr>(&nbsp;<wbr>sub&nbsp;<wbr>{&nbsp;<wbr>$_[0]-1;&nbsp;<wbr>}&nbsp;<wbr>)&nbsp;<wbr>)  </p>
 <h2>PARSING ISSUES</h2>
 <p> As already noted, SEC context expressions and action lists may contain parentheses which are used for grouping and masking purposes. When SEC parses its configuration, it checks whether parentheses in context expressions and action lists are balanced (i.e., whether each parenthesis has a counterpart), since unbalanced parentheses introduce ambiguity. This can cause SEC to reject some legitimate constructs, e.g., </p>
 <p> action=eval %o (print &quot;)&quot;;) </p>
-<p> is considered an invalid action list (however, note that <br />
- action=eval %o (print &quot;()&quot;;) <br />
+<p> is considered an invalid action list (however, note that <br/>
+ action=eval %o (print &quot;()&quot;;) <br/>
  would be passed by SEC, since now parentheses are balanced). In order to avoid such parsing errors, each parenthesis without a counterpart must be masked with a backslash (the backslash will be removed by SEC during configuration file parsing). For example, the above action could be written as </p>
 <p> action=eval %o (print &quot;\)&quot;;)  </p>
 <h2>RULE TYPES</h2>
@@ -795,25 +795,25 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
  </dd></dl>
 <p> Note that match variables may be used in <i>context</i>, <i>desc</i>, and <i>action</i> fields. Also note that this rule does not start an event correlation operation, and the <i>desc</i> field is merely used for setting the %s action list variable. </p>
 <p> <code>Examples:</code> </p>
-<p> type=single <br />
- continue=takenext <br />
- ptype=regexp <br />
- pattern=ftpd\[(\d+)\]: \S+ \(ristov2.*FTP session opened <br />
- desc=ftp session opened for ristov2 pid $1 <br />
+<p> type=single <br/>
+ continue=takenext <br/>
+ ptype=regexp <br/>
+ pattern=ftpd\[(\d+)\]: \S+ \(ristov2.*FTP session opened <br/>
+ desc=ftp session opened for ristov2 pid $1 <br/>
  action=create ftp_$1 </p>
-<p> type=single <br />
- continue=takenext <br />
- ptype=regexp <br />
- pattern=ftpd\[(\d+)\]: <br />
- context=ftp_$1 <br />
- desc=ftp session event for ristov2 pid $1 <br />
- action=add ftp_$1 $0; set ftp_$1 1800 \ <br />
+<p> type=single <br/>
+ continue=takenext <br/>
+ ptype=regexp <br/>
+ pattern=ftpd\[(\d+)\]: <br/>
+ context=ftp_$1 <br/>
+ desc=ftp session event for ristov2 pid $1 <br/>
+ action=add ftp_$1 $0; set ftp_$1 1800 \ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(report ftp_$1&nbsp;<wbr>/bin/mail root [at] localhost) </p>
-<p> type=single <br />
- ptype=regexp <br />
- pattern=ftpd\[(\d+)\]: \S+ \(ristov2.*FTP session closed <br />
- desc=ftp session closed for ristov2 pid $1 <br />
- action=report ftp_$1 /bin/mail root [at] localhost; \ <br />
+<p> type=single <br/>
+ ptype=regexp <br/>
+ pattern=ftpd\[(\d+)\]: \S+ \(ristov2.*FTP session closed <br/>
+ desc=ftp session closed for ristov2 pid $1 <br/>
+ action=report ftp_$1 /bin/mail root [at] localhost; \ <br/>
 &nbsp;<wbr>delete ftp_$1 </p>
 <p> This ruleset is created for monitoring the ftpd log file. The first rule creates the context <code>ftp_&lt;pid&gt;</code> when someone connects from host ristov2 over FTP and establishes a new ftp session (the session is identified by the PID of the process which has been created for handling this session). The second rule adds all further log file lines for the session &lt;pid&gt; to the event store of the context <code>ftp_&lt;pid&gt; </code> (before adding a line, the rule checks if the context exists). After adding a line, the rule extends context&#8217;s lifetime for 30 minutes and sets the action list that will be executed when the context expires. The third rule mails collected log file lines to root [at] localhost when the session &lt;pid&gt; is closed. Collected lines will also be mailed when the session &lt;pid&gt; has been inactive for 30 minutes (no log file lines observed for that session). </p>
 <p> Note that the log file line that has matched the first rule is also matched against the second rule (since the first rule has the <i>continue</i> field set to TakeNext). Since the second rule always matches this line, it will become the first line in the event store of <code>ftp_&lt;pid&gt;</code>. The second rule has also its <i>continue</i> field set to TakeNext, since otherwise no log file lines would reach the third rule.  </p>
@@ -856,12 +856,12 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
  </dd></dl>
 <p> Note that match variables may be used in <i>context</i>, <i>script</i>, <i>desc</i>, <i>action</i>, and <i>action2</i> fields. Also note that this rule does not start an event correlation operation, and the <i>desc</i> field is merely used for setting the %s action list variable. </p>
 <p> <code>Examples:</code> </p>
-<p> type=SingleWithScript <br />
- ptype=RegExp <br />
- pattern=interface ([\d.]+) down <br />
- script=/bin/ping -c 3 -q $1 <br />
- desc=Check if $1 responds to ping <br />
- action=logonly Interface $1 reported down, but is pingable <br />
+<p> type=SingleWithScript <br/>
+ ptype=RegExp <br/>
+ pattern=interface ([\d.]+) down <br/>
+ script=/bin/ping -c 3 -q $1 <br/>
+ desc=Check if $1 responds to ping <br/>
+ action=logonly Interface $1 reported down, but is pingable <br/>
  action2=pipe &#8216;%t: Interface $1 is down&#8217; /bin/mail root [at] localhost </p>
 <p> When &quot;interface &lt;ipaddress&gt; down&quot; line appears in input, the rule checks if &lt;ipaddress&gt; responds to ping. If &lt;ipaddress&gt; is pingable, the message &quot;Interface &lt;ipaddress&gt; reported down, but is pingable&quot; is logged; otherwise an e-mail warning containing a human-readable timestamp is sent to root [at] localhost.  </p>
 <h3>SINGLEWITHSUPPRESS RULE</h3>
@@ -901,11 +901,11 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
  </dd></dl>
 <p> Note that match variables may be used in <i>context</i>, <i>desc</i>, and <i>action</i> fields. </p>
 <p> <code>Examples:</code> </p>
-<p> type=SingleWithSuppress <br />
- ptype=RegExp <br />
- pattern=(\S+): [fF]ile system full <br />
- desc=File system $1 full <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
+<p> type=SingleWithSuppress <br/>
+ ptype=RegExp <br/>
+ pattern=(\S+): [fF]ile system full <br/>
+ desc=File system $1 full <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
  window=900 </p>
 <p> This rule runs event correlation operations for processing &quot;file system full&quot; syslog messages, e.g., </p>
 <p> Dec 16 14:26:09 test ufs: [ID 845546 kern.notice] NOTICE: alloc: /var: file system full </p>
@@ -970,39 +970,39 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
  </dd></dl>
 <p> Note that match variables may be used in <i>context</i>, <i>desc</i>, <i>action</i>, <i>pattern2</i>, <i>context2</i>, <i>desc2</i>, and <i>action2</i> fields. </p>
 <p> <code>Examples:</code> </p>
-<p> type=Pair <br />
- ptype=RegExp <br />
- pattern=kernel: nfs: server (\S+) not responding, still trying <br />
- desc=Server $1 is not responding <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- ptype2=SubStr <br />
- pattern2=kernel: nfs: server $1 OK <br />
- desc2=Server $1 is responding again <br />
- action2=logonly <br />
+<p> type=Pair <br/>
+ ptype=RegExp <br/>
+ pattern=kernel: nfs: server (\S+) not responding, still trying <br/>
+ desc=Server $1 is not responding <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ ptype2=SubStr <br/>
+ pattern2=kernel: nfs: server $1 OK <br/>
+ desc2=Server $1 is responding again <br/>
+ action2=logonly <br/>
  window=3600 </p>
 <p> This rule runs event correlation operations for processing NFS &quot;server not responding&quot; and &quot;server OK&quot; syslog messages, e.g., </p>
-<p> Dec 18 22:39:48 test kernel: nfs: server box1 not responding, still trying <br />
+<p> Dec 18 22:39:48 test kernel: nfs: server box1 not responding, still trying <br/>
  Dec 18 22:42:27 test kernel: nfs: server box1 OK </p>
 <p> When the &quot;server not responding&quot; message for an NFS server is observed, an operation is created for this server which sends an e-mail warning about the server to root [at] localhost. The operation will then run for 3600 seconds and silently consume further &quot;server not responding&quot; messages for the same server. If this operation observes &quot;server OK&quot; message for the *same* server, it will log the message &quot;Server &lt;servername&gt; is responding again&quot; and finish. </p>
 <p> For example, if SEC observes the following event at 22:39:48 </p>
 <p> Dec 18 22:39:48 test kernel: nfs: server box1 not responding, still trying </p>
 <p> an event correlation operation is created for server box1 which issues an e-mail warning about this server immediately. After that, the operation will run for 3600 seconds (until 23:39:48), waiting for an event which would contain the substring &quot;kernel: nfs: server box1 OK&quot; (because the <i>pattern2</i> field contains the $1 match variable which evaluates to the server name). </p>
 <p> If any further error messages appear for server box1 during the 3600 second lifetime of the operation, e.g., </p>
-<p> Dec 18 22:40:28 test kernel: nfs: server box1 not responding, still trying <br />
+<p> Dec 18 22:40:28 test kernel: nfs: server box1 not responding, still trying <br/>
  Dec 18 22:41:09 test kernel: nfs: server box1 not responding, still trying </p>
 <p> these messages will be silently consumed by the operation. If before its expiration the operation observes an event which contains the substring &quot;kernel: nfs: server box1 OK&quot;, e.g., </p>
 <p> Dec 18 22:42:27 test kernel: nfs: server box1 OK </p>
 <p> the operation will log the message &quot;Server box1 is responding again&quot; and terminate immediately. If no such message appears during the 3600 second lifetime of the operation, the operation will expire without taking any action. Please note that if the <i>window</i> field would be either removed from the rule definition or set to 0, the operation would never silently expire, but would terminate only after observing an event which contains the substring &quot;kernel: nfs: server box1 OK&quot;. </p>
 <p> If the above rule is modified in the following way </p>
-<p> type=Pair <br />
- ptype=RegExp <br />
- pattern=^([[:alnum:]: ]+) \S+ kernel: nfs: server (\S+) not responding, still trying <br />
- desc=Server $2 is not responding <br />
- action=logonly <br />
- ptype2=RegExp <br />
- pattern2=^([[:alnum:]: ]+) \S+ kernel: nfs: server $2 OK <br />
- desc2=Server %2 was not accessible from %1 to $1 <br />
- action2=pipe &#8216;%s&#8217; /bin/mail root [at] localhost <br />
+<p> type=Pair <br/>
+ ptype=RegExp <br/>
+ pattern=^([[:alnum:]: ]+) \S+ kernel: nfs: server (\S+) not responding, still trying <br/>
+ desc=Server $2 is not responding <br/>
+ action=logonly <br/>
+ ptype2=RegExp <br/>
+ pattern2=^([[:alnum:]: ]+) \S+ kernel: nfs: server $2 OK <br/>
+ desc2=Server %2 was not accessible from %1 to $1 <br/>
+ action2=pipe &#8216;%s&#8217; /bin/mail root [at] localhost <br/>
  window=86400 </p>
 <p> this rule will run event correlation operations which report NFS server downtime to root [at] localhost via e-mail, provided that downtime does not exceed 24 hours (86400 seconds). </p>
 <p> For example, if SEC observes the following event </p>
@@ -1073,25 +1073,25 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
  </dd></dl>
 <p> Note that match variables may be used in <i>context</i>, <i>desc</i>, <i>action</i>, <i>pattern2</i>, <i>context2</i>, <i>desc2</i>, and <i>action2</i> fields. </p>
 <p> <code>Examples:</code> </p>
-<p> type=PairWithWindow <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: Failed .+ for (\S+) from ([\d.]+) port \d+ ssh2 <br />
- desc=User $1 has been unable to log in from $2 over SSH during 1 minute <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- ptype2=RegExp <br />
- pattern2=sshd\[\d+\]: Accepted .+ for $1 from $2 port \d+ ssh2 <br />
- desc2=SSH login successful for %1 from %2 after initial failure <br />
- action2=logonly <br />
+<p> type=PairWithWindow <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: Failed .+ for (\S+) from ([\d.]+) port \d+ ssh2 <br/>
+ desc=User $1 has been unable to log in from $2 over SSH during 1 minute <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ ptype2=RegExp <br/>
+ pattern2=sshd\[\d+\]: Accepted .+ for $1 from $2 port \d+ ssh2 <br/>
+ desc2=SSH login successful for %1 from %2 after initial failure <br/>
+ action2=logonly <br/>
  window=60 </p>
 <p> This rule runs event correlation operations for processing SSH login events, e.g., </p>
-<p> Dec 27 19:00:24 test sshd[10526]: Failed password for risto from 10.1.2.7 port 52622 ssh2 <br />
+<p> Dec 27 19:00:24 test sshd[10526]: Failed password for risto from 10.1.2.7 port 52622 ssh2 <br/>
  Dec 27 19:00:27 test sshd[10526]: Accepted password for risto from 10.1.2.7 port 52622 ssh2 </p>
 <p> When an SSH login failure is observed for a user name and a source IP address, an operation is created for this user name and IP address combination which will expect a successful login for the *same* user name and *same* IP address during 60 seconds. If the user will not log in from the same IP address during 60 seconds, the operation will send an e-mail warning to root [at] localhost before finishing, otherwise it will log the message &quot;SSH login successful for &lt;username&gt; from &lt;ipaddress&gt; after initial failure&quot; and finish. </p>
 <p> Suppose the following events are generated by an SSH daemon, and each event timestamp reflects the time SEC observes the event: </p>
-<p> Dec 30 13:02:01 test sshd[30517]: Failed password for risto from 10.1.2.7 port 42172 ssh2 <br />
- Dec 30 13:02:30 test sshd[30810]: Failed password for root from 192.168.1.104 port 46125 ssh2 <br />
- Dec 30 13:02:37 test sshd[30517]: Failed password for risto from 10.1.2.7 port 42172 ssh2 <br />
- Dec 30 13:02:59 test sshd[30810]: Failed password for root from 192.168.1.104 port 46125 ssh2 <br />
+<p> Dec 30 13:02:01 test sshd[30517]: Failed password for risto from 10.1.2.7 port 42172 ssh2 <br/>
+ Dec 30 13:02:30 test sshd[30810]: Failed password for root from 192.168.1.104 port 46125 ssh2 <br/>
+ Dec 30 13:02:37 test sshd[30517]: Failed password for risto from 10.1.2.7 port 42172 ssh2 <br/>
+ Dec 30 13:02:59 test sshd[30810]: Failed password for root from 192.168.1.104 port 46125 ssh2 <br/>
  Dec 30 13:03:04 test sshd[30810]: Accepted password for root from 192.168.1.104 port 46125 ssh2 </p>
 <p> When the first event is observed at 13:02:01, an operation is started for user risto and IP address 10.1.2.7 which will expect a successful login for risto from 10.1.2.7. The operation will run for 60 seconds, waiting for an event which would match the regular expression </p>
 <p> sshd\[\d+\]: Accepted .+ for risto from 10\.1\.2\.7 port \d+ ssh2 </p>
@@ -1146,20 +1146,20 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
  </dd></dl>
 <p> Note that match variables may be used in <i>context</i>, <i>desc</i>, <i>action</i>, and <i>action2</i> fields. </p>
 <p> <code>Examples:</code> </p>
-<p> type=SingleWithThreshold <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: Failed .+ for (\S+) from [\d.]+ port \d+ ssh2 <br />
- desc=Three SSH login failures within 1m for user $1 <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- window=60 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: Failed .+ for (\S+) from [\d.]+ port \d+ ssh2 <br/>
+ desc=Three SSH login failures within 1m for user $1 <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ window=60 <br/>
  thresh=3 </p>
 <p> This rule runs event correlation operations for counting the number of SSH login failure events. Each operation counts events for one user name, and if the operation has observed three login failures within 60 seconds, it sends an e-mail warning to root [at] localhost. </p>
 <p> Suppose the following events are generated by an SSH daemon, and each event timestamp reflects the time SEC observes the event: </p>
-<p> Dec 28 01:42:21 test sshd[28132]: Failed password for risto from 10.1.2.7 port 42172 ssh2 <br />
- Dec 28 01:43:10 test sshd[28132]: Failed password for risto from 10.1.2.7 port 42172 ssh2 <br />
- Dec 28 01:43:29 test sshd[28132]: Failed password for risto from 10.1.2.7 port 42172 ssh2 <br />
- Dec 28 01:44:00 test sshd[28149]: Failed password for risto2 from 10.1.2.7 port 42176 ssh2 <br />
- Dec 28 01:44:03 test sshd[28211]: Failed password for risto from 10.1.2.7 port 42192 ssh2 <br />
+<p> Dec 28 01:42:21 test sshd[28132]: Failed password for risto from 10.1.2.7 port 42172 ssh2 <br/>
+ Dec 28 01:43:10 test sshd[28132]: Failed password for risto from 10.1.2.7 port 42172 ssh2 <br/>
+ Dec 28 01:43:29 test sshd[28132]: Failed password for risto from 10.1.2.7 port 42172 ssh2 <br/>
+ Dec 28 01:44:00 test sshd[28149]: Failed password for risto2 from 10.1.2.7 port 42176 ssh2 <br/>
+ Dec 28 01:44:03 test sshd[28211]: Failed password for risto from 10.1.2.7 port 42192 ssh2 <br/>
  Dec 28 01:44:07 test sshd[28211]: Failed password for risto from 10.1.2.7 port 42192 ssh2 </p>
 <p> When the first event is observed at 01:42:21, a counting operation is started for user risto, with its event correlation window ending at 01:43:21. Since by 01:43:21 two SSH login failures for user risto have occurred, the threshold condition remains unsatisfied for the operation. Therefore, the beginning of its event correlation window will be moved to 01:43:10 (the occurrence time of the second event), leaving the first event outside the window. At 01:44:00, another counting operation is started for user risto2. The threshold condition for the first operation will become satisfied at 01:44:03 (since the operation has seen three login failure events for user risto within 60 seconds), and thus an e-mail warning will be issued. Finally, the event occurring at 01:44:07 will be consumed silently by the first operation (the operation will run until 01:44:10). Since there will be no further login failure events for user risto2, the second operation will exist until 01:45:00 without taking any action.  </p>
 <h3>SINGLEWITH2THRESHOLDS RULE</h3>
@@ -1214,21 +1214,21 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
  </dd></dl>
 <p> Note that match variables may be used in <i>context</i>, <i>desc</i>, <i>action</i>, <i>desc2</i>, and <i>action2</i> fields. </p>
 <p> <code>Examples:</code> </p>
-<p> type=SingleWith2Thresholds <br />
- ptype=RegExp <br />
- pattern=(\S+): %SYS-3-CPUHOG <br />
- desc=Router $1 CPU overload <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- window=300 <br />
- thresh=2 <br />
- desc2=Router $1 CPU load has been normal for 1h <br />
- action2=logonly <br />
- window2=3600 <br />
+<p> type=SingleWith2Thresholds <br/>
+ ptype=RegExp <br/>
+ pattern=(\S+): %SYS-3-CPUHOG <br/>
+ desc=Router $1 CPU overload <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ window=300 <br/>
+ thresh=2 <br/>
+ desc2=Router $1 CPU load has been normal for 1h <br/>
+ action2=logonly <br/>
+ window2=3600 <br/>
  thresh2=0 </p>
 <p> When a SYS-3-CPUHOG syslog message is received from a router, the rule starts a counting operation for this router which sends an e-mail warning to root [at] localhost if another such message is received from the same router within 300 seconds. After sending the warning, the operation will continue to run until no SYS-3-CPUHOG syslog messages have been received from the router for 3600 seconds. When this condition becomes satisfied, the operation will log the message &quot;Router &lt;routername&gt; CPU load has been normal for 1h&quot; and finish. </p>
 <p> Suppose the following events are generated by a router, and each event timestamp reflects the time SEC observes the event: </p>
-<p> Dec 30 12:23:25 router1.mydomain Router1: %SYS-3-CPUHOG: cpu is hogged <br />
- Dec 30 12:25:38 router1.mydomain Router1: %SYS-3-CPUHOG: cpu is hogged <br />
+<p> Dec 30 12:23:25 router1.mydomain Router1: %SYS-3-CPUHOG: cpu is hogged <br/>
+ Dec 30 12:25:38 router1.mydomain Router1: %SYS-3-CPUHOG: cpu is hogged <br/>
  Dec 30 12:28:53 router1.mydomain Router1: %SYS-3-CPUHOG: cpu is hogged </p>
 <p> When the first event is observed at 12:23:25, a counting operation is started for router Router1. The appearance of the second event at 12:25:38 fulfills the threshold condition given with the <i>thresh</i> and <i>window</i> fields (two events have been observed within 300 seconds). Therefore, the operation will send an e-mail warning about the CPU overload of Router1 to root [at] localhost. </p>
 <p> After that, the operation will start another counting round, expecting to see no SYS-3-CPUHOG events (since <i>thresh2=0</i>) for Router1 during the following 3600 seconds (the beginning of the operation&#8217;s event correlation window will be moved to 12:25:38 for the second counting round). Since the appearance of the third event at 12:28:53 violates the threshold condition given with the <i>thresh2</i> and <i>window2</i> fields, the beginning of the event correlation window will be moved to 12:28:53. Since there will be no further SYS-3-CPUHOG messages for Router1, the operation will run until 13:28:53 and then expire, logging the message &quot;Router Router1 CPU load has been normal for 1h&quot; before finishing.  </p>
@@ -1317,66 +1317,66 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
 <p> Note that match variables may be used in <i>context*</i>, <i>count*</i>, <i>desc</i>, <i>action</i>, <i>init</i>, <i>end</i>, and <i>slide</i> fields. </p>
 <p> <code>Examples:</code> </p>
 <p> The following example rule cross-correlates iptables events, Apache web server access log messages with 4xx response codes, and SSH login failure events: </p>
-<p> type=EventGroup3 <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: Failed .+ for (?:invalid user )?\S+ from ([\d.]+) port \d+ ssh2 <br />
- thresh=2 <br />
- ptype2=RegExp <br />
- pattern2=^([\d.]+) \S+ \S+ \[.+?\] &quot;.+? HTTP\/[\d.]+&quot; 4\d+ <br />
- thresh2=3 <br />
- ptype3=RegExp <br />
- pattern3=kernel: iptables:.* SRC=([\d.]+) <br />
- thresh3=5 <br />
- desc=Repeated probing from host $1 <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
+<p> type=EventGroup3 <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: Failed .+ for (?:invalid user )?\S+ from ([\d.]+) port \d+ ssh2 <br/>
+ thresh=2 <br/>
+ ptype2=RegExp <br/>
+ pattern2=^([\d.]+) \S+ \S+ \[.+?\] &quot;.+? HTTP\/[\d.]+&quot; 4\d+ <br/>
+ thresh2=3 <br/>
+ ptype3=RegExp <br/>
+ pattern3=kernel: iptables:.* SRC=([\d.]+) <br/>
+ thresh3=5 <br/>
+ desc=Repeated probing from host $1 <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
  window=120 </p>
 <p> The rule starts an event correlation operation for an IP address if SSH login failure event, iptables event, or Apache 4xx event is observed for that IP address. The operation sends an e-mail warning to root [at] localhost if within 120 seconds three threshold conditions are satisfied for the IP address it tracks -- (1) at least two SSH login failure events have occurred for this client IP, (2) at least three Apache 4xx events have occured for this client IP, (3) at least five iptables events have been observed for this source IP. </p>
 <p> Suppose the following events occur, and each event timestamp reflects the time SEC observes the event: </p>
-<p> 192.168.1.104 - - [05/Jan/2014:01:11:22 +0200] &quot;GET /test.html HTTP/1.1&quot; 404 286 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; <br />
- Jan 5 01:12:52 localhost kernel: iptables: IN=eth0 OUT= MAC=08:00:27:8e:a1:3a:00:1d:e0:7e:89:b1:08:00 SRC=192.168.1.104 DST=192.168.1.107 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=48422 DF PROTO=TCP SPT=46351 DPT=21 WINDOW=29200 RES=0x00 SYN URGP=0 <br />
- Jan 5 01:12:53 localhost kernel: iptables: IN=eth0 OUT= MAC=08:00:27:8e:a1:3a:00:1d:e0:7e:89:b1:08:00 SRC=192.168.1.104 DST=192.168.1.107 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=48423 DF PROTO=TCP SPT=46351 DPT=21 WINDOW=29200 RES=0x00 SYN URGP=0 <br />
- Jan 5 01:13:01 localhost kernel: iptables: IN=eth0 OUT= MAC=08:00:27:8e:a1:3a:00:1d:e0:7e:89:b1:08:00 SRC=192.168.1.104 DST=192.168.1.107 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=20048 DF PROTO=TCP SPT=44963 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 <br />
- Jan 5 01:13:02 localhost kernel: iptables: IN=eth0 OUT= MAC=08:00:27:8e:a1:3a:00:1d:e0:7e:89:b1:08:00 SRC=192.168.1.104 DST=192.168.1.107 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=20049 DF PROTO=TCP SPT=44963 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 <br />
- Jan 5 01:13:08 localhost kernel: iptables: IN=eth0 OUT= MAC=08:00:27:8e:a1:3a:00:1d:e0:7e:89:b1:08:00 SRC=192.168.1.104 DST=192.168.1.107 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=36362 DF PROTO=TCP SPT=56918 DPT=25 WINDOW=29200 RES=0x00 SYN URGP=0 <br />
- Jan 5 01:13:09 localhost kernel: iptables: IN=eth0 OUT= MAC=08:00:27:8e:a1:3a:00:1d:e0:7e:89:b1:08:00 SRC=192.168.1.104 DST=192.168.1.107 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=36363 DF PROTO=TCP SPT=56918 DPT=25 WINDOW=29200 RES=0x00 SYN URGP=0 <br />
- 192.168.1.104 - - [05/Jan/2014:01:13:51 +0200] &quot;GET /test.html HTTP/1.1&quot; 404 286 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; <br />
- 192.168.1.104 - - [05/Jan/2014:01:13:54 +0200] &quot;GET /test.html HTTP/1.1&quot; 404 286 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; <br />
- 192.168.1.104 - - [05/Jan/2014:01:14:00 +0200] &quot;GET /login.html HTTP/1.1&quot; 404 287 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; <br />
- 192.168.1.104 - - [05/Jan/2014:01:14:03 +0200] &quot;GET /login.html HTTP/1.1&quot; 404 287 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; <br />
- 192.168.1.104 - - [05/Jan/2014:01:14:03 +0200] &quot;GET /login.html HTTP/1.1&quot; 404 287 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; <br />
- Jan 5 01:14:11 localhost sshd[1810]: Failed password for root from 192.168.1.104 port 46125 ssh2 <br />
- Jan 5 01:14:12 localhost sshd[1810]: Failed password for root from 192.168.1.104 port 46125 ssh2 <br />
- Jan 5 01:14:18 localhost sshd[1822]: Failed password for root from 192.168.1.104 port 46126 ssh2 <br />
- Jan 5 01:14:19 localhost sshd[1822]: Failed password for root from 192.168.1.104 port 46126 ssh2 <br />
+<p> 192.168.1.104 - - [05/Jan/2014:01:11:22 +0200] &quot;GET /test.html HTTP/1.1&quot; 404 286 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; <br/>
+ Jan 5 01:12:52 localhost kernel: iptables: IN=eth0 OUT= MAC=08:00:27:8e:a1:3a:00:1d:e0:7e:89:b1:08:00 SRC=192.168.1.104 DST=192.168.1.107 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=48422 DF PROTO=TCP SPT=46351 DPT=21 WINDOW=29200 RES=0x00 SYN URGP=0 <br/>
+ Jan 5 01:12:53 localhost kernel: iptables: IN=eth0 OUT= MAC=08:00:27:8e:a1:3a:00:1d:e0:7e:89:b1:08:00 SRC=192.168.1.104 DST=192.168.1.107 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=48423 DF PROTO=TCP SPT=46351 DPT=21 WINDOW=29200 RES=0x00 SYN URGP=0 <br/>
+ Jan 5 01:13:01 localhost kernel: iptables: IN=eth0 OUT= MAC=08:00:27:8e:a1:3a:00:1d:e0:7e:89:b1:08:00 SRC=192.168.1.104 DST=192.168.1.107 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=20048 DF PROTO=TCP SPT=44963 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 <br/>
+ Jan 5 01:13:02 localhost kernel: iptables: IN=eth0 OUT= MAC=08:00:27:8e:a1:3a:00:1d:e0:7e:89:b1:08:00 SRC=192.168.1.104 DST=192.168.1.107 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=20049 DF PROTO=TCP SPT=44963 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 <br/>
+ Jan 5 01:13:08 localhost kernel: iptables: IN=eth0 OUT= MAC=08:00:27:8e:a1:3a:00:1d:e0:7e:89:b1:08:00 SRC=192.168.1.104 DST=192.168.1.107 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=36362 DF PROTO=TCP SPT=56918 DPT=25 WINDOW=29200 RES=0x00 SYN URGP=0 <br/>
+ Jan 5 01:13:09 localhost kernel: iptables: IN=eth0 OUT= MAC=08:00:27:8e:a1:3a:00:1d:e0:7e:89:b1:08:00 SRC=192.168.1.104 DST=192.168.1.107 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=36363 DF PROTO=TCP SPT=56918 DPT=25 WINDOW=29200 RES=0x00 SYN URGP=0 <br/>
+ 192.168.1.104 - - [05/Jan/2014:01:13:51 +0200] &quot;GET /test.html HTTP/1.1&quot; 404 286 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; <br/>
+ 192.168.1.104 - - [05/Jan/2014:01:13:54 +0200] &quot;GET /test.html HTTP/1.1&quot; 404 286 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; <br/>
+ 192.168.1.104 - - [05/Jan/2014:01:14:00 +0200] &quot;GET /login.html HTTP/1.1&quot; 404 287 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; <br/>
+ 192.168.1.104 - - [05/Jan/2014:01:14:03 +0200] &quot;GET /login.html HTTP/1.1&quot; 404 287 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; <br/>
+ 192.168.1.104 - - [05/Jan/2014:01:14:03 +0200] &quot;GET /login.html HTTP/1.1&quot; 404 287 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; <br/>
+ Jan 5 01:14:11 localhost sshd[1810]: Failed password for root from 192.168.1.104 port 46125 ssh2 <br/>
+ Jan 5 01:14:12 localhost sshd[1810]: Failed password for root from 192.168.1.104 port 46125 ssh2 <br/>
+ Jan 5 01:14:18 localhost sshd[1822]: Failed password for root from 192.168.1.104 port 46126 ssh2 <br/>
+ Jan 5 01:14:19 localhost sshd[1822]: Failed password for root from 192.168.1.104 port 46126 ssh2 <br/>
  192.168.1.104 - - [05/Jan/2014:01:14:34 +0200] &quot;GET /test.html HTTP/1.1&quot; 404 286 &quot;-&quot; &quot;Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0&quot; </p>
 <p> The Apache 4xx event at 01:11:22 starts an event correlation operation for 192.168.1.104 which has the event correlation window of 120 seconds, thus ending at 01:13:22. Between 01:12:52 and 01:13:09, six iptables events appear for 192.168.1.104, and the appearance of the fifth event at 01:13:08 fulfills the third threshold condition (within 120 seconds, at least five iptables events have been observed). </p>
 <p> Since by 01:13:22 (the end of the event correlation window) no additional events have occurred, the first and second threshold condition remain unsatisfied. Therefore, the beginning of the event correlation window will be moved to 01:12:52 (the occurrence time of the earliest event which is at most 120 seconds old). As a result, the end of the window will move from 01:13:22 to 01:14:52. The only event which is left outside the window is the Apache 4xx event at 01:11:22, and thus the threshold condition for iptables events remains satisfied. </p>
 <p> Between 01:13:51 and 01:14:03, five Apache 4xx events occur, and the appearance of the third event at 01:14:00 fulfills the second threshold condition (within 120 seconds, at least three Apache 4xx events have been observed). These events are followed by four SSH login failure events which occur between 01:14:11 and 01:14:19. The appearance of the second event at 01:14:12 fulfills the first threshold condition (within 120 seconds, at least two SSH login failure events have been observed). Since at this particular moment (01:14:12) the other two conditions are also fulfilled, the operation sends an e-mail warning about 192.168.1.104 to root [at] localhost. After that, the operation silently consumes all further matching events for 192.168.1.104 until 01:14:52, and then terminates. </p>
 <p> Please note that if the above rule definition would contain <i>multact=yes</i> statement, the operation would continue sending e-mails at each matching event after 01:14:12, provided that all threshold conditions are satisfied. Therefore, the operation would send three additional e-mails at 01:14:18, 01:14:19, and 01:14:34. Also, the operation would not terminate after its window ends at 01:14:52, but would rather slide the window forward and expect new events. At the occurence of any iptables, SSH login failure or Apache 4xx event for 192.168.1.104, the operation would produce a warning e-mail if all threshold conditions are fulfilled. </p>
 <p> The following example rule cross-correlates iptables events and SSH login events: </p>
-<p> type=EventGroup3 <br />
- ptype=regexp <br />
- pattern=sshd\[\d+\]: Failed .+ for (\S+) from ([\d.]+) port \d+ ssh2 <br />
- varmap= user=1; ip=2 <br />
- count=alias OPER_$+{ip} LOGIN_FAILED_$+{user}_$+{ip} <br />
- ptype2=regexp <br />
- pattern2=sshd\[\d+\]: Accepted .+ for (\S+) from ([\d.]+) port \d+ ssh2 <br />
- varmap2= user=1; ip=2 <br />
- context2=LOGIN_FAILED_$+{user}_$+{ip} <br />
- ptype3=regexp <br />
- pattern3=kernel: iptables:.* SRC=([\d.]+) <br />
- varmap3= ip=1 <br />
- desc=Client $+{ip} accessed a firewalled port and had difficulties with logging in <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- init=create OPER_$+{ip} <br />
- slide=delete OPER_$+{ip}; reset 0 <br />
- end=delete OPER_$+{ip} <br />
+<p> type=EventGroup3 <br/>
+ ptype=regexp <br/>
+ pattern=sshd\[\d+\]: Failed .+ for (\S+) from ([\d.]+) port \d+ ssh2 <br/>
+ varmap= user=1; ip=2 <br/>
+ count=alias OPER_$+{ip} LOGIN_FAILED_$+{user}_$+{ip} <br/>
+ ptype2=regexp <br/>
+ pattern2=sshd\[\d+\]: Accepted .+ for (\S+) from ([\d.]+) port \d+ ssh2 <br/>
+ varmap2= user=1; ip=2 <br/>
+ context2=LOGIN_FAILED_$+{user}_$+{ip} <br/>
+ ptype3=regexp <br/>
+ pattern3=kernel: iptables:.* SRC=([\d.]+) <br/>
+ varmap3= ip=1 <br/>
+ desc=Client $+{ip} accessed a firewalled port and had difficulties with logging in <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ init=create OPER_$+{ip} <br/>
+ slide=delete OPER_$+{ip}; reset 0 <br/>
+ end=delete OPER_$+{ip} <br/>
  window=120 </p>
 <p> The rule starts an event correlation operation for an IP address if SSH login failure or iptables event was observed for that IP address. The operation exists for 120 seconds (since when the event correlation window slides forward, the operation terminates itself with the <i>reset </i> action as specified with the <i>slide</i> field). The operation sends an e-mail warning to root [at] localhost if within 120 seconds three threshold conditions are satisfied for the IP address it tracks -- (1) at least one iptables event has been observed for this source IP, (2) at least one SSH login failure has been observed for this client IP, (3) at least one successful SSH login has been observed for this client IP and for some user, provided that the operation has previously observed an SSH login failure for the same user and same client IP. </p>
 <p> Suppose the following events occur, and each event timestamp reflects the time SEC observes the event: </p>
-<p> Dec 27 19:00:06 test kernel: iptables: IN=eth0 OUT= MAC=00:13:72:8a:83:d2:00:1b:25:07:e2:1b:08:00 SRC=10.1.2.7 DST=10.2.5.5 LEN=60 TOS=0x00 PREC=0x00 TTL=62 ID=1881 DF PROTO=TCP SPT=34342 DPT=23 WINDOW=5840 RES=0x00 SYN URGP=0 <br />
- Dec 27 19:00:14 test sshd[10520]: Accepted password for root from 10.1.2.7 port 52609 ssh2 <br />
- Dec 27 19:00:24 test sshd[10526]: Failed password for risto from 10.1.2.7 port 52622 ssh2 <br />
+<p> Dec 27 19:00:06 test kernel: iptables: IN=eth0 OUT= MAC=00:13:72:8a:83:d2:00:1b:25:07:e2:1b:08:00 SRC=10.1.2.7 DST=10.2.5.5 LEN=60 TOS=0x00 PREC=0x00 TTL=62 ID=1881 DF PROTO=TCP SPT=34342 DPT=23 WINDOW=5840 RES=0x00 SYN URGP=0 <br/>
+ Dec 27 19:00:14 test sshd[10520]: Accepted password for root from 10.1.2.7 port 52609 ssh2 <br/>
+ Dec 27 19:00:24 test sshd[10526]: Failed password for risto from 10.1.2.7 port 52622 ssh2 <br/>
  Dec 27 19:00:27 test sshd[10526]: Accepted password for risto from 10.1.2.7 port 52622 ssh2 </p>
 <p> The iptables event at 19:00:06 starts an event correlation operation for 10.1.2.7 which has the event correlation window of 120 seconds. Immediately after the operation has been started, it creates the context OPER_10.1.2.7. The second event at 19:00:14 does not match the rule, since the context LOGIN_FAILED_root_10.1.2.7 does not exist. The third event at 19:00:24 matches the rule, and the operation which is running for 10.1.2.7 sets up the alias name LOGIN_FAILED_risto_10.1.2.7 for the context OPER_10.1.2.7. Finally, the fourth event at 19:00:27 matches the rule, since the context LOGIN_FAILED_risto_10.1.2.7 exists, and the event is therefore processed by the operation (the presence of the context indicates that the operation has previously observed a login failure for user risto from 10.1.2.7). At this particular moment (19:00:27), all three threshold conditions for the operation are fulfilled, and therefore it sends an e-mail warning about 10.1.2.7 to root [at] localhost. After that, the operation silently consumes all further matching events for 10.1.2.7 until 19:02:06, and then terminates. Immediately before termination, the operation deletes the context OPER_10.1.2.7 which also drops its alias name LOGIN_FAILED_risto_10.1.2.7. </p>
 <h3>SUPPRESS RULE</h3>
@@ -1406,17 +1406,17 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
  </dd></dl>
 <p> Note that match variables may be used in the <i>context</i> field. Also note that this rule does not start an event correlation operation, and the optional <i>desc</i> field is merely used for describing the rule. </p>
 <p> <code>Examples:</code> </p>
-<p> type=Suppress <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: Failed .+ for \S+ from ([\d.]+) port \d+ ssh2 <br />
+<p> type=Suppress <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: Failed .+ for \S+ from ([\d.]+) port \d+ ssh2 <br/>
  context=SUPPRESS_IP_$1 </p>
-<p> type=SingleWithThreshold <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: Failed .+ for (\S+) from ([\d.]+) port \d+ ssh2 <br />
- desc=Three SSH login failures within 1m for user $1 from $2 <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost; \ <br />
-&nbsp;<wbr>create SUPPRESS_IP_$2 3600 <br />
- window=60 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: Failed .+ for (\S+) from ([\d.]+) port \d+ ssh2 <br/>
+ desc=Three SSH login failures within 1m for user $1 from $2 <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost; \ <br/>
+&nbsp;<wbr>create SUPPRESS_IP_$2 3600 <br/>
+ window=60 <br/>
  thresh=3 </p>
 <p> The first rule filters out SSH login failure events for an already reported source IP address, so that they will not be matched against the second rule during 3600 seconds after sending an e-mail warning.  </p>
 <h3>CALENDAR RULE</h3>
@@ -1447,23 +1447,23 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
  </dd></dl>
 <p> Note that this rule does not start event correlation operation, and the <i>desc</i> field is merely used for setting the %s action list variable. </p>
 <p> <code>Examples:</code> </p>
-<p> type=Calendar <br />
- time=0 2 25-31 3,12 6 <br />
- desc=Check if backup is done on last Saturday of Q1 and Q4 <br />
+<p> type=Calendar <br/>
+ time=0 2 25-31 3,12 6 <br/>
+ desc=Check if backup is done on last Saturday of Q1 and Q4 <br/>
  action=event WAITING_FOR_BACKUP </p>
-<p> type=Calendar <br />
- time=0 2 24-30 6,9 6 <br />
- desc=Check if backup is done on last Saturday of Q2 and Q3 <br />
+<p> type=Calendar <br/>
+ time=0 2 24-30 6,9 6 <br/>
+ desc=Check if backup is done on last Saturday of Q2 and Q3 <br/>
  action=event WAITING_FOR_BACKUP </p>
-<p> type=PairWithWindow <br />
- ptype=SubStr <br />
- pattern=WAITING_FOR_BACKUP <br />
- desc=Quarterly backup not completed on time! <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- ptype2=SubStr <br />
- pattern2=BACKUP READY <br />
- desc2=Quarterly backup successfully completed <br />
- action2=none <br />
+<p> type=PairWithWindow <br/>
+ ptype=SubStr <br/>
+ pattern=WAITING_FOR_BACKUP <br/>
+ desc=Quarterly backup not completed on time! <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ ptype2=SubStr <br/>
+ pattern2=BACKUP READY <br/>
+ desc2=Quarterly backup successfully completed <br/>
+ action2=none <br/>
  window=1800 </p>
 <p> The first two rules create a synthetic event WAITING_FOR_BACKUP at 2AM on last Saturday of March, June, September and December. The third rule matches this event and starts an event correlation operation which waits for the BACKUP READY event for 1800 seconds. If this event has not arrived by 2:30AM, the operation sends an e-mail warning to root [at] localhost.  </p>
 <h3>JUMP RULE</h3>
@@ -1503,9 +1503,9 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
 <p> Note that match variables may be used in the <i>context</i> field. They may also be used in the <i>cfset</i> field, provided that the <i>constset </i> field is set to No. Also note that this rule does not start event correlation operations, and the optional <i>desc</i> field is merely used for describing the rule. </p>
 <p> Finally, if the <i>cfset</i> field is not present and the <i>continue</i> field is set to GoTo, the Jump rule can be used for skipping rules inside the current configuration file; if both <i>cfset</i> and <i>continue</i> are not present, Jump is identical to Suppress. </p>
 <p> <code>Examples:</code> </p>
-<p> type=Jump <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: <br />
+<p> type=Jump <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: <br/>
  cfset=sshd-rules auth-rules </p>
 <p> When an sshd syslog message appears in input, rules from configuration files of the set <code>sshd-rules</code> are first used for matching the message, and then rules from the configuration file set <code>auth-rules</code> are tried.  </p>
 <h3>OPTIONS RULE</h3>
@@ -1527,68 +1527,68 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
  </dd></dl>
 <p> <code>Examples:</code> </p>
 <p> The following rule adds the current configuration file to the set <code>sshd-rules</code> which is used for matching input from Jump rules only: </p>
-<p> type=Options <br />
- joincfset=sshd-rules <br />
+<p> type=Options <br/>
+ joincfset=sshd-rules <br/>
  procallin=no </p>
 <p> The following rule adds the current configuration file to sets <code>linux</code> and <code>solaris</code> which are used for matching all input: </p>
-<p> type=Options <br />
+<p> type=Options <br/>
  joincfset=linux solaris  </p>
 <h2>EVENT CORRELATION OPERATIONS</h2>
 <p> Event correlation operations are dynamic entities created by rules. After creating an operation, the rule also feeds the operation with events that need to be correlated. Since each rule can create and feed many operations which are running simultaneously, each operation needs a unique ID. </p>
 <p> In order to identify event correlation operations, SEC assigns an ID to every operation that is composed from the configuration file name, the rule number, and the operation description string (defined by the <i>desc</i> field of the rule). If there are N rules in the configuration file (excluding Options rules), the rule numbers belong to the range 0..N-1, and the number of the k-th rule is k-1. Since each Options rule is only processed when SEC reads in the configuration file and is not applied at runtime, the Options rules will not receive rule numbers. Note that since the configuration file name and rule number are part of the operation ID, different rules can have identical <i>desc</i> fields without a danger of a clash between operations. </p>
 <p> For example, if the configuration file /etc/sec/my.conf contains only one rule </p>
-<p> type=SingleWithThreshold <br />
- ptype=RegExp <br />
- pattern=user (\S+) login failure on (\S+) <br />
- desc=Repeated login failures for user $1 on $2 <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- window=60 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=RegExp <br/>
+ pattern=user (\S+) login failure on (\S+) <br/>
+ desc=Repeated login failures for user $1 on $2 <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ window=60 <br/>
  thresh=3 </p>
 <p> then the number of this rule is 0. When this rule matches an input event &quot;user admin login failure on tty1&quot;, the <i>desc</i> field yields an operation description string <i>Repeated login failures for user admin on tty1</i>, and the event will be directed for further processing to the operation with the following ID: </p>
 <p> /etc/sec/my.conf | 0 | Repeated login failures for user admin on tty1 </p>
 <p> If the operation for this ID does not exist, the rule will create it. The newly created operation has its event counter initialized to 1, and it expects to receive two additional &quot;user admin login failure on tty1&quot; events from the rule within the following 60 seconds. If the operation receives such an event, its event counter is incremented, and if the counter reaches the value of 3, a warning e-mail is sent to root [at] localhost. </p>
 <p> By tuning the <i>desc</i> field of the rule, the scope of individual event correlation operations can be changed. For instance, if the following events occur within 10 seconds </p>
-<p> user admin login failure on tty1 <br />
- user admin login failure on tty5 <br />
+<p> user admin login failure on tty1 <br/>
+ user admin login failure on tty5 <br/>
  user admin login failure on tty2 </p>
 <p> the above rule starts three event correlation operations. However, if the <i>desc</i> field of the rule is changed to <i>Repeated login failures for user $1</i>, these events are processed by the *same* event correlation operation (the operation sends a warning e-mail to root [at] localhost when it receives the third event). </p>
 <p> Since rules from the same configuration file are matched against input in the order they are given, the rule ordering influences the creation and feeding of event correlation operations. Suppose the configuration file /etc/sec/my.conf contains the following rules: </p>
-<p> type=Suppress <br />
- ptype=TValue <br />
- pattern=TRUE <br />
+<p> type=Suppress <br/>
+ ptype=TValue <br/>
+ pattern=TRUE <br/>
  context=MYCONTEXT </p>
-<p> type=SingleWithThreshold <br />
- ptype=RegExp <br />
- pattern=user (\S+) login failure on (\S+) <br />
- desc=Repeated login failures for user $1 on $2 <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- window=60 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=RegExp <br/>
+ pattern=user (\S+) login failure on (\S+) <br/>
+ desc=Repeated login failures for user $1 on $2 <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ window=60 <br/>
  thresh=3 </p>
 <p> The second rule is able to create and feed event correlation operations as long as the context MYCONTEXT does not exist. However, after MYCONTEXT has been created, no input event will reach the second rule, and the rule is thus unable to create new operations and feed existing ones with events. </p>
 <p> Note that Pair and PairWithWindow rules can feed the same event to several operations. Suppose the configuration file /etc/sec/my2.conf contains the following rules: </p>
-<p> type=Suppress <br />
- ptype=SubStr <br />
+<p> type=Suppress <br/>
+ ptype=SubStr <br/>
  pattern=test </p>
-<p> type=Pair <br />
- ptype=RegExp <br />
- pattern=database (\S+) down <br />
- desc=Database $1 is down <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- ptype2=RegExp <br />
- pattern2=database $1 up|all databases up <br />
- desc2=Database %1 is up <br />
- action2=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
+<p> type=Pair <br/>
+ ptype=RegExp <br/>
+ pattern=database (\S+) down <br/>
+ desc=Database $1 is down <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ ptype2=RegExp <br/>
+ pattern2=database $1 up|all databases up <br/>
+ desc2=Database %1 is up <br/>
+ action2=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
  window=86400 </p>
 <p> Since the following input events don&#8217;t contain the substring &quot;test&quot; </p>
-<p> database mydb1 down <br />
- database mydb2 down <br />
+<p> database mydb1 down <br/>
+ database mydb2 down <br/>
  database mydb3 down </p>
 <p> they are matched by the second rule of type Pair which creates three event correlation operations. Each operation is running for one particular database name, and the operations have the following IDs: </p>
-<p> /etc/sec/my2.conf | 1 | Database mydb1 is down <br />
- /etc/sec/my2.conf | 1 | Database mydb2 is down <br />
+<p> /etc/sec/my2.conf | 1 | Database mydb1 is down <br/>
+ /etc/sec/my2.conf | 1 | Database mydb2 is down <br/>
  /etc/sec/my2.conf | 1 | Database mydb3 is down </p>
-<p> Each newly created operation sends an e-mail notification to root [at] localhost about the &quot;database down&quot; condition, and will then wait for 86400 seconds (24 hours) for either of the following messages: <br />
- (a) &quot;database up&quot; message for the given database, <br />
+<p> Each newly created operation sends an e-mail notification to root [at] localhost about the &quot;database down&quot; condition, and will then wait for 86400 seconds (24 hours) for either of the following messages: <br/>
+ (a) &quot;database up&quot; message for the given database, <br/>
  (b) &quot;all databases up&quot; message. </p>
 <p> The operation with the ID </p>
 <p> /etc/sec/my2.conf | 1 | Database mydb1 is down </p>
@@ -1603,31 +1603,31 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
 <p> uses the following regular expression: </p>
 <p> database mydb3 up|all databases up </p>
 <p> If the following input events appear after 10 minutes </p>
-<p> database test up <br />
- admin logged in <br />
- database mydb3 up <br />
+<p> database test up <br/>
+ admin logged in <br/>
+ database mydb3 up <br/>
  all databases up </p>
 <p> the first event &quot;database test up&quot; matches the first rule (Suppress) which does not pass the event further to the second rule (Pair). However, all following events reach the Pair rule. Since the messages don&#8217;t match the <i>pattern</i> field of the rule, the rule feeds them to all currently existing operations it has created, so that the operations can match these events with their regular expressions. Because regular expressions of all three operations don&#8217;t match the event &quot;admin logged in&quot;, the operations will continue to run. In the case of the &quot;database mydb3 up&quot; event, the regular expression of the operation </p>
 <p> /etc/sec/my2.conf | 1 | Database mydb3 is down </p>
 <p> produces a match. Therefore, the operation will send the e-mail notification &quot;Database mydb3 is up&quot; to root [at] localhost and terminate. However, the following event &quot;all databases up&quot; matches the regular expressions of two remaining operations. As a result, the operations will send e-mail notifications &quot;Database mydb1 is up&quot; and &quot;Database mydb2 is up&quot; to root [at] localhost and terminate. </p>
 <p> Each operation has an event correlation window which defines its scope in time. The size of the window is defined by the <i>window*</i> field, and the beginning of the window can be obtained with the <i>getwpos</i> action. SingleWithThreshold, SingleWith2Thresholds and EventGroup operations can slide its window forward during event processing, while for all operations the window can also be moved explicitly with the <i>setwpos</i> action. Also, with the <i>reset</i> action event correlation operations can be terminated. Note that <i>getwpos</i>, <i>setwpos</i>, and <i>reset</i> actions only work for operations started by the rules from the same configuration file. </p>
 <p> For example, consider the configuration file /etc/sec/sshd.rules that contains the following rules: </p>
-<p> type=SingleWithThreshold <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: Failed .+ for (\S+) from [\d.]+ port \d+ ssh2 <br />
- desc=Three SSH login failures within 1m for user $1 <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- window=60 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: Failed .+ for (\S+) from [\d.]+ port \d+ ssh2 <br/>
+ desc=Three SSH login failures within 1m for user $1 <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ window=60 <br/>
  thresh=3 </p>
-<p> type=Single <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: Accepted .+ for (\S+) from [\d.]+ port \d+ ssh2 <br />
- desc=SSH login successful for user $1 <br />
+<p> type=Single <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: Accepted .+ for (\S+) from [\d.]+ port \d+ ssh2 <br/>
+ desc=SSH login successful for user $1 <br/>
  action=reset -1 Three SSH login failures within 1m for user $1 </p>
 <p> Suppose the following events are generated by an SSH daemon, and each event timestamp reflects the time SEC observes the event: </p>
-<p> Dec 29 15:00:03 test sshd[14129]: Failed password for risto from 10.1.2.7 port 31312 ssh2 <br />
- Dec 29 15:00:08 test sshd[14129]: Failed password for risto from 10.1.2.7 port 31312 ssh2 <br />
- Dec 29 15:00:17 test sshd[14129]: Accepted password for risto from 10.1.2.7 port 31312 ssh2 <br />
+<p> Dec 29 15:00:03 test sshd[14129]: Failed password for risto from 10.1.2.7 port 31312 ssh2 <br/>
+ Dec 29 15:00:08 test sshd[14129]: Failed password for risto from 10.1.2.7 port 31312 ssh2 <br/>
+ Dec 29 15:00:17 test sshd[14129]: Accepted password for risto from 10.1.2.7 port 31312 ssh2 <br/>
  Dec 29 15:00:52 test sshd[14142]: Failed password for risto from 10.1.1.2 port 17721 ssh2 </p>
 <p> The first event at 15:00:03 starts an event correlation operation with the ID </p>
 <p> /etc/sec/sshd.rules | 0 | Three SSH login failures within 1m for user risto </p>
@@ -1642,82 +1642,82 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
 <p> Note that when both synthetic events and regular input are available for processing, synthetic events are always consumed first. When all synthetic events have been consumed iteratively, SEC will start processing new data from input files. </p>
 <p> With the <code>--jointbuf</code> option, SEC employs a joint input buffer for all input sources which holds N last input lines (the value of N can be set with the <code>--bufsize</code> option). Updating the input buffer means that the new line becomes the first element of the buffer, while the last element (the oldest line) is removed from the end of the buffer. With the <code>--nojointbuf</code> option, SEC maintains a buffer of N lines for each input file, and if the input line comes from file F, the buffer of F is updated as described previously. There is also a separate buffer for synthetic and internal events. </p>
 <p> Suppose SEC is started with the following command line </p>
-<p> /usr/bin/sec --conf=/etc/sec/test-multiline.conf --jointbuf \ <br />
+<p> /usr/bin/sec --conf=/etc/sec/test-multiline.conf --jointbuf \ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>--input=/var/log/prog1.log --input=/var/log/prog2.log </p>
 <p> and the configuration file /etc/sec/test-multiline.conf has the following content: </p>
-<p> type=Single <br />
- rem=this rule matches two consecutive lines where the first \ <br />
-&nbsp;<wbr>line contains&nbsp;<wbr>&quot;test1&quot;&nbsp;<wbr>and the second line&nbsp;<wbr>&quot;test2&quot;, and&nbsp;<wbr>\ <br />
-&nbsp;<wbr>writes the matching lines to standard output <br />
- ptype=RegExp2 <br />
- pattern=test1.*\n.*test2 <br />
- desc=two consecutive test lines <br />
+<p> type=Single <br/>
+ rem=this rule matches two consecutive lines where the first \ <br/>
+&nbsp;<wbr>line contains&nbsp;<wbr>&quot;test1&quot;&nbsp;<wbr>and the second line&nbsp;<wbr>&quot;test2&quot;, and&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>writes the matching lines to standard output <br/>
+ ptype=RegExp2 <br/>
+ pattern=test1.*\n.*test2 <br/>
+ desc=two consecutive test lines <br/>
  action=write - $0 </p>
 <p> When the following lines appear in input files /var/log/prog1.log and /var/log/prog2.log </p>
-<p> Dec 31 12:33:12 test prog1: test1 (file /var/log/prog1.log) <br />
- Dec 31 12:34:09 test prog2: test1 (file /var/log/prog2.log) <br />
- Dec 31 12:39:35 test prog1: test2 (file /var/log/prog1.log) <br />
+<p> Dec 31 12:33:12 test prog1: test1 (file /var/log/prog1.log) <br/>
+ Dec 31 12:34:09 test prog2: test1 (file /var/log/prog2.log) <br/>
+ Dec 31 12:39:35 test prog1: test2 (file /var/log/prog1.log) <br/>
  Dec 31 12:41:53 test prog2: test2 (file /var/log/prog2.log) </p>
 <p> they are stored in a common input buffer. Therefore, rule fires after the third event has appeared, and writes the following lines to standard output: </p>
-<p> Dec 31 12:34:09 test prog2: test1 (file /var/log/prog2.log) <br />
+<p> Dec 31 12:34:09 test prog2: test1 (file /var/log/prog2.log) <br/>
  Dec 31 12:39:35 test prog1: test2 (file /var/log/prog1.log) </p>
 <p> However, if SEC is started with the <code>--nojointbuf </code> option, separate input buffers are set up for /var/log/prog1.log and /var/log/prog2.log. Therefore, the rule fires after the third event has occurred, and writes the following lines to standard output: </p>
-<p> Dec 31 12:33:12 test prog1: test1 (file /var/log/prog1.log) <br />
+<p> Dec 31 12:33:12 test prog1: test1 (file /var/log/prog1.log) <br/>
  Dec 31 12:39:35 test prog1: test2 (file /var/log/prog1.log) </p>
 <p> The rule also fires after the fourth event has occurred, producing the following output: </p>
-<p> Dec 31 12:34:09 test prog2: test1 (file /var/log/prog2.log) <br />
+<p> Dec 31 12:34:09 test prog2: test1 (file /var/log/prog2.log) <br/>
  Dec 31 12:41:53 test prog2: test2 (file /var/log/prog2.log) </p>
 <p> The content of input buffers can be modified with the <i>rewrite</i> action, and modifications become visible immediately during ongoing event processing iteration. Suppose SEC is started with the following command line </p>
-<p> /usr/bin/sec --conf=/etc/sec/test-rewrite.conf \ <br />
+<p> /usr/bin/sec --conf=/etc/sec/test-rewrite.conf \ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>--input=- --nojointbuf </p>
 <p> and the configuration file /etc/sec/test-rewrite.conf has the following content: </p>
-<p> type=Single <br />
- rem=this rule matches two consecutive lines where the first \ <br />
-&nbsp;<wbr>line contains&nbsp;<wbr>&quot;test1&quot;&nbsp;<wbr>and the second line&nbsp;<wbr>&quot;test2&quot;, and&nbsp;<wbr>\ <br />
-&nbsp;<wbr>joins these lines in the input buffer <br />
- ptype=RegExp2 <br />
- pattern=^(.*test1.*)\n(.*test2.*)$ <br />
- continue=TakeNext <br />
- desc=join two test lines <br />
+<p> type=Single <br/>
+ rem=this rule matches two consecutive lines where the first \ <br/>
+&nbsp;<wbr>line contains&nbsp;<wbr>&quot;test1&quot;&nbsp;<wbr>and the second line&nbsp;<wbr>&quot;test2&quot;, and&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>joins these lines in the input buffer <br/>
+ ptype=RegExp2 <br/>
+ pattern=^(.*test1.*)\n(.*test2.*)$ <br/>
+ continue=TakeNext <br/>
+ desc=join two test lines <br/>
  action=rewrite 2 Joined $1 and $2 </p>
-<p> type=Single <br />
- rem=this rule matches a line which begins with &quot;Joined&quot;, \ <br />
-&nbsp;<wbr>and writes this line to standard output <br />
- ptype=RegExp <br />
- pattern=^Joined <br />
- desc=output joined lines <br />
+<p> type=Single <br/>
+ rem=this rule matches a line which begins with &quot;Joined&quot;, \ <br/>
+&nbsp;<wbr>and writes this line to standard output <br/>
+ ptype=RegExp <br/>
+ pattern=^Joined <br/>
+ desc=output joined lines <br/>
  action=write - $0 </p>
 <p> When the following two lines appear in standard input </p>
-<p> This is a test1 <br />
+<p> This is a test1 <br/>
  This is a test2 </p>
 <p> they are matched by the first rule which uses the <i>rewrite </i> action for replacing those two lines in the input buffer with a new content. The last line in the input buffer (&quot;This is a test2&quot;) is replaced with &quot;Joined This is a test1 and This is a test2&quot;, while the previous line in the input buffer (&quot;This is a test1&quot;) is replaced with an empty string. Since the rule contains <i>continue=TakeNext</i> statement, the matching process will continue from the following rule. This rule matches the last line in the input buffer if it begins with &quot;Joined&quot;, and writes the line to standard output, producing </p>
 <p> Joined This is a test1 and This is a test2 </p>
 <p> After each event processing iteration, the pattern match cache is cleared. In other words, if a match is cached with the rule <i>varmap*</i> field, it is available during ongoing iteration only. Note that results from a successful pattern matching are also cached when the subsequent context expression evaluation yields FALSE. This allows for reusing results from partial rule matches. For example, the following rule creates the cache entry &quot;ssh_failed_login&quot; for any SSH failed login event, even if the context ALERTING_ON does not exist: </p>
-<p> type=Single <br />
- ptype=RegExp <br />
- pattern=sshd\[\d+\]: Failed .+ for (\S+) from ([\d.]+) port \d+ ssh2 <br />
- varmap=ssh_failed_login; user=1; ip=2 <br />
- context=ALERTING_ON <br />
- desc=SSH login failure for user $1 from $2 <br />
+<p> type=Single <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[\d+\]: Failed .+ for (\S+) from ([\d.]+) port \d+ ssh2 <br/>
+ varmap=ssh_failed_login; user=1; ip=2 <br/>
+ context=ALERTING_ON <br/>
+ desc=SSH login failure for user $1 from $2 <br/>
  action=pipe &#8216;%s&#8217; /bin/mail -s &#8216;SSH login alert&#8217; root [at] localhost </p>
 <p> However, provided the context expression does not contain match variables, enclosing the expression in square brackets (e.g., [ALERTING_ON]) forces its evaluation before the pattern matching, and will thus prevent the matching and the creation of the cache entry if the evaluation yields FALSE. </p>
 <p> Rules from the same configuration file are matched against the buffer content in the order they are given in that file. When multiple configuration files have been specified, rule sequences from all files are matched against the buffer content (unless specified otherwise with Options rules). The matching order is determined by the order of configuration files in SEC command line. For example, if the Perl <code>glob</code>() function returns filenames in ascending ASCII order, and configuration files /home/risto/A.conf, /home/risto/B.conf2, and /home/risto/C.conf are specified with <code>--conf=/home/risto/*.conf --conf=/home/risto/*.conf2</code> in SEC command line, then SEC first matches the input against the rule sequence from A.conf, then from C.conf, and finally from B.conf2. Also, note that even if A.conf contains a Suppress rule for a particular event, the event is still processed by rulesets in C.conf and B.conf2. However, note that <code>glob</code>() might return file names in different order if locale settings change. If you want to enforce a fixed order for configuration file application in a portable way, it is recommended to create a unique set for each file with the Options rule, and employ the Jump rule for defining the processing order for sets, e.g.: </p>
-<p> # This rule appears in A.conf <br />
- type=Options <br />
- joincfset=FileA <br />
+<p> # This rule appears in A.conf <br/>
+ type=Options <br/>
+ joincfset=FileA <br/>
  procallin=no </p>
-<p> # This rule appears in B.conf2 <br />
- type=Options <br />
- joincfset=FileB <br />
+<p> # This rule appears in B.conf2 <br/>
+ type=Options <br/>
+ joincfset=FileB <br/>
  procallin=no </p>
-<p> # This rule appears in C.conf <br />
- type=Options <br />
- joincfset=FileC <br />
+<p> # This rule appears in C.conf <br/>
+ type=Options <br/>
+ joincfset=FileC <br/>
  procallin=no </p>
-<p> # This rule appears in main.conf <br />
- type=Jump <br />
- ptype=TValue <br />
- pattern=TRUE <br />
+<p> # This rule appears in main.conf <br/>
+ type=Jump <br/>
+ ptype=TValue <br/>
+ pattern=TRUE <br/>
  cfset=FileA FileC FileB </p>
 <p> After the relevant input buffer has been updated and its content has been matched by the rules, SEC handles caught signals and checks the status of child processes. When the timeout specified with the <code>--cleantime</code> option has expired, SEC also checks the status of contexts and event correlation operations. Therefore, relatively small values should be specified with the <code>--cleantime</code> option, in order to retain the accuracy of the event correlation process. If the <code>--cleantime</code> option is set to 0, SEC checks event correlation operations and contexts after processing every input line, but this consumes more CPU time. If the <code>--poll-timeout</code> option value exceeds the value given with <code>--cleantime</code>, the <code>--poll-timeout</code> option value takes precedence (i.e., sleeps after unsuccessful polls will not be shortened). </p>
 <p> Finally, note that apart from the sleeps after unsuccessful polls, SEC measures all time intervals and occurrence times in seconds, and always uses the <code><a href="/docs/linux/man/2-time/">time</a></code>(2) system call for obtaining the current time. Also, for input event occurrence time SEC always uses the time it observed the event, *not* the timestamp extracted from the event.  </p>
@@ -1734,27 +1734,27 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
 <p> SEC_SHUTDOWN - generated when SEC receives the <code>SIGTERM</code> signal, or when SEC reaches all EOFs of input files after being started with the <code>--notail</code> option. With the <code>--childterm</code> option, SEC sleeps for 3 seconds after generating SEC_SHUTDOWN event, and then sends SIGTERM to its child processes (if a child process was triggered by SEC_SHUTDOWN, this delay leaves the process enough time for setting a signal handler for SIGTERM). </p>
 <p> Before generating an internal event, SEC sets up a context named SEC_INTERNAL_EVENT, in order to disambiguate internal events from regular input. The SEC_INTERNAL_EVENT context is deleted immediately after the internal event has been matched against all rules. </p>
 <p> If the <code>--intcontexts</code> command line option is given, or there is an <code>--input</code> option with a context specified, SEC creates an internal context each time it reads a line from an input file or a synthetic event. The internal context is deleted immediately after the line has been matched against all rules. For all input files that have the context name explicitly set with <code>--input=&lt;file_pattern&gt;=&lt;context&gt;</code>, the name of the internal context is &lt;context&gt;. If the line was read from the input file &lt;filename&gt; for which there is no context name set, the name of the internal context is _FILE_EVENT_&lt;filename&gt;. For synthetic events, the name of the internal context defaults to _INTERNAL_EVENT, but <i>cspawn</i> and <i>cevent</i> actions can be used for generating synthetic events with custom internal context names. This allows for writing rules that match data from one particular input source only. For example, the rule </p>
-<p> type=Suppress <br />
- ptype=TValue <br />
- pattern=TRUE <br />
+<p> type=Suppress <br/>
+ ptype=TValue <br/>
+ pattern=TRUE <br/>
  context=[!_FILE_EVENT_/dev/logpipe] </p>
 <p> passes only the lines that were read from /dev/logpipe, and also synthetic events that were generated with the _FILE_EVENT_/dev/logpipe internal context (e.g., with the action <i>cevent _FILE_EVENT_/dev/logpipe 0 This is a test event</i>). As another example, if SEC has been started with the command line </p>
-<p> /usr/bin/sec --intevents --intcontexts --conf=/etc/sec/my.conf \ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>--input=/var/log/messages=MESSAGES&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>--input=/var/log/secure=SECURE&nbsp;<wbr>\ <br />
+<p> /usr/bin/sec --intevents --intcontexts --conf=/etc/sec/my.conf \ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>--input=/var/log/messages=MESSAGES&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>--input=/var/log/secure=SECURE&nbsp;<wbr>\ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>--input=/var/log/cron=CRON&nbsp;<wbr> </p>
 <p> and the rule file /etc/sec/my.conf contains the following rules </p>
-<p> type=Single <br />
- ptype=RegExp <br />
- pattern=^(?:SEC_STARTUP|SEC_RESTART)$ <br />
- context=[SEC_INTERNAL_EVENT] <br />
- desc=listen on 10514/tcp for incoming events <br />
+<p> type=Single <br/>
+ ptype=RegExp <br/>
+ pattern=^(?:SEC_STARTUP|SEC_RESTART)$ <br/>
+ context=[SEC_INTERNAL_EVENT] <br/>
+ desc=listen on 10514/tcp for incoming events <br/>
  action=cspawn MESSAGES /usr/bin/nc -l -k 10514 </p>
-<p> type=Single <br />
- ptype=RegExp <br />
- pattern=. <br />
- context=[MESSAGES] <br />
- desc=echo everything from 10514/tcp and /var/log/messages <br />
+<p> type=Single <br/>
+ ptype=RegExp <br/>
+ pattern=. <br/>
+ context=[MESSAGES] <br/>
+ desc=echo everything from 10514/tcp and /var/log/messages <br/>
  action=write - $0 </p>
 <p> then SEC will receive input lines from the log files /var/log/messages, /var/log/secure, and /var/log/cron, and will also run /usr/bin/nc for receiving input lines from the port 10514/tcp. All input lines from /var/log/messages and 10514/tcp are matched by the second rule and written to standard output.  </p>
 <h2>INTERPROCESS COMMUNICATION</h2>
@@ -1765,49 +1765,49 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
 <p> Sometimes it is desireable to start an external program and provide it with data from several rules. In order to create such setup, named pipes can be harnessed. For example, if /var/log/pipe is a named pipe, then </p>
 <p> action=shellcmd /usr/bin/logger -f /var/log/pipe -p user.notice </p>
 <p> starts the /usr/bin/logger utility which sends all lines read from /var/log/pipe to the local syslog daemon with the &quot;user&quot; facility and &quot;notice&quot; level. In order to feed events to /usr/bin/logger, the <i>write</i> action can be used (e.g., <i>write /var/log/pipe This is my event</i>). Although SEC keeps the named pipe open across different <i>write</i> actions, the pipe will be closed on the reception of SIGHUP, SIGABRT and SIGUSR2 signals. Since many UNIX tools terminate on receiving EOF from standard input, they need restarting after such signals have arrived. For this purpose, the <code>--intevents</code> option and SEC internal events can be used. For example, the following rule starts the /usr/bin/logger utility at SEC startup, and also restarts it after the reception of relevant signals: </p>
-<p> type=Single <br />
- ptype=RegExp <br />
- pattern=^(?:SEC_STARTUP|SEC_RESTART|SEC_SOFTRESTART|SEC_LOGROTATE)$ <br />
- context=SEC_INTERNAL_EVENT <br />
- desc=start the logger tool <br />
- action=free %emptystring; owritecl /var/log/pipe %emptystring; \ <br />
+<p> type=Single <br/>
+ ptype=RegExp <br/>
+ pattern=^(?:SEC_STARTUP|SEC_RESTART|SEC_SOFTRESTART|SEC_LOGROTATE)$ <br/>
+ context=SEC_INTERNAL_EVENT <br/>
+ desc=start the logger tool <br/>
+ action=free %emptystring; owritecl /var/log/pipe %emptystring; \ <br/>
 &nbsp;<wbr>shellcmd&nbsp;<wbr>/usr/bin/logger -f&nbsp;<wbr>/var/log/pipe -p user.notice </p>
 <p> Note that if /var/log/pipe is never opened for writing by a <i>write</i> action, /usr/bin/logger will never see EOF and will thus not terminate. The <i>owritecl</i> action opens and closes /var/log/pipe without writing any bytes, in order to ensure the presence of EOF in such cases. This allows any previous /usr/bin/logger process to terminate before the new process is started.  </p>
 <h2>PERL INTEGRATION</h2>
 <p> SEC supports patterns, context expressions, and actions which involve calls to the Perl <code>eval</code>() function or the execution of precompiled Perl code. The use of Perl code in SEC patterns and context expressions allows for creating proper match conditions for scenarios which can&#8217;t be handled by a simple regular expression match. For example, consider the following iptables syslog events: </p>
-<p> May 27 10:00:15 box1 kernel: iptables: IN=eth0 OUT= MAC=08:00:27:be:9e:2f:00:10:db:ff:20:03:08:00 SRC=10.6.4.14 DST=10.1.8.2 LEN=84 TOS=0x00 PREC=0x00 TTL=251 ID=61426 PROTO=ICMP TYPE=8 CODE=0 ID=11670 SEQ=2 <br />
+<p> May 27 10:00:15 box1 kernel: iptables: IN=eth0 OUT= MAC=08:00:27:be:9e:2f:00:10:db:ff:20:03:08:00 SRC=10.6.4.14 DST=10.1.8.2 LEN=84 TOS=0x00 PREC=0x00 TTL=251 ID=61426 PROTO=ICMP TYPE=8 CODE=0 ID=11670 SEQ=2 <br/>
  May 27 10:02:22 box1 kernel: iptables: IN=eth0 OUT= MAC=08:00:27:be:9e:2f:00:10:db:ff:20:03:08:00 SRC=10.6.4.14 DST=10.1.8.2 LEN=52 TOS=0x00 PREC=0x00 TTL=60 ID=61441 DF PROTO=TCP SPT=53125 DPT=23 WINDOW=49640 RES=0x00 SYN URGP=0 </p>
 <p> Depending on the protocol and the nature of the traffic, events can have a wide variety of fields, and parsing out all event data with one regular expression is infeasible. For addressing this issue, a PerlFunc pattern can be used which creates match variables from all fields of the matching event, stores them in one Perl hash, and returns a reference to this hash. Outside the PerlFunc pattern, match variables are initialized from the key-value pairs in the returned hash. Suppose the following Jump rule with a PerlFunc pattern is defined in the main.rules rule file: </p>
-<p> type=Jump <br />
- ptype=PerlFunc <br />
- pattern=sub { my(%var); my($line) = $_[0]; \ <br />
-&nbsp;<wbr>&nbsp;<wbr>if&nbsp;<wbr>($line&nbsp;<wbr>!~&nbsp;<wbr>/kernel: iptables:/g)&nbsp;<wbr>{&nbsp;<wbr>return 0;&nbsp;<wbr>}&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>while&nbsp;<wbr>($line&nbsp;<wbr>=~&nbsp;<wbr>/\G\s*([A-Z]+)(?:=(\S*))?/g)&nbsp;<wbr>{&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$var{$1}&nbsp;<wbr>=&nbsp;<wbr>defined($2)?$2:1;&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>}&nbsp;<wbr>return&nbsp;<wbr>\%var;&nbsp;<wbr>} <br />
- varmap=IPTABLES <br />
- desc=parse iptables event <br />
+<p> type=Jump <br/>
+ ptype=PerlFunc <br/>
+ pattern=sub { my(%var); my($line) = $_[0]; \ <br/>
+&nbsp;<wbr>&nbsp;<wbr>if&nbsp;<wbr>($line&nbsp;<wbr>!~&nbsp;<wbr>/kernel: iptables:/g)&nbsp;<wbr>{&nbsp;<wbr>return 0;&nbsp;<wbr>}&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>while&nbsp;<wbr>($line&nbsp;<wbr>=~&nbsp;<wbr>/\G\s*([A-Z]+)(?:=(\S*))?/g)&nbsp;<wbr>{&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$var{$1}&nbsp;<wbr>=&nbsp;<wbr>defined($2)?$2:1;&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>}&nbsp;<wbr>return&nbsp;<wbr>\%var;&nbsp;<wbr>} <br/>
+ varmap=IPTABLES <br/>
+ desc=parse iptables event <br/>
  cfset=iptables </p>
 <p> For example, if the iptables event contains the fields SRC=10.6.4.14, DST=10.1.8.2 and SYN, the above PerlFunc pattern sets up match variable $+{SRC} which holds 10.6.4.14, match variable $+{DST} which holds 10.1.8.2, and match variable $+{SYN} which holds 1. The Jump rule caches all created match variables under the name IPTABLES, and submits the matching event to <code>iptables</code> ruleset for further processing. Suppose the <code>iptables</code> ruleset is defined in the iptables.rules rule file: </p>
-<p> type=Options <br />
- procallin=no <br />
+<p> type=Options <br/>
+ procallin=no <br/>
  joincfset=iptables </p>
-<p> type=SingleWithThreshold <br />
- ptype=Cached <br />
- pattern=IPTABLES <br />
- context=IPTABLES :&gt; ( sub { return $_[0]-&gt;{&quot;PROTO&quot;} eq &quot;ICMP&quot;; } ) <br />
- desc=ICMP flood type $+{TYPE} code $+{CODE} from host $+{SRC} <br />
- action=logonly <br />
- window=10 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=Cached <br/>
+ pattern=IPTABLES <br/>
+ context=IPTABLES :&gt; ( sub { return $_[0]-&gt;{&quot;PROTO&quot;} eq &quot;ICMP&quot;; } ) <br/>
+ desc=ICMP flood type $+{TYPE} code $+{CODE} from host $+{SRC} <br/>
+ action=logonly <br/>
+ window=10 <br/>
  thresh=100 </p>
-<p> type=SingleWithThreshold <br />
- ptype=Cached <br />
- pattern=IPTABLES <br />
- context=IPTABLES :&gt; ( sub { return exists($_[0]-&gt;{&quot;SYN&quot;}) &amp;&amp; \ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>exists($_[0]-&gt;{&quot;FIN&quot;})&nbsp;<wbr>;&nbsp;<wbr>}&nbsp;<wbr>) <br />
- desc=SYN+FIN flood from host $+{SRC} <br />
- action=logonly <br />
- window=10 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=Cached <br/>
+ pattern=IPTABLES <br/>
+ context=IPTABLES :&gt; ( sub { return exists($_[0]-&gt;{&quot;SYN&quot;}) &amp;&amp; \ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>exists($_[0]-&gt;{&quot;FIN&quot;})&nbsp;<wbr>;&nbsp;<wbr>}&nbsp;<wbr>) <br/>
+ desc=SYN+FIN flood from host $+{SRC} <br/>
+ action=logonly <br/>
+ window=10 <br/>
  thresh=100 </p>
 <p> The two SingleWithThreshold rules employ Cached patterns for matching iptables events by looking up the IPTABLES entry in the pattern match cache (created by the above Jump rule for each iptables event). In order to narrow down the match to specific iptables events, the rules employ precompiled Perl functions in context expressions. The :&gt; operator is used for speeding up the matching, providing the function with a single parameter which refers to the hash of variable name-value pairs for the IPTABLES cache entry. </p>
 <p> The first SingleWithThreshold rule logs a warning message if within 10 seconds 100 iptables events have been observed for ICMP packets with the same type, code, and source IP address. The second SingleWithThreshold rule logs a warning message if within 10 seconds 100 iptables events have been observed for TCP packets coming from the same host, and having both SYN and FIN flag set in each packet. </p>
@@ -1816,256 +1816,256 @@ defined($_[0]-&gt;{&quot;invuser&quot;})&nbsp;<wbr>} </p>
 <p> the variable $b and its value become visible in the following context expression </p>
 <p> context= =(++$b &gt; 10) </p>
 <p> (with that expression one can implement event counting implicitly). In order to avoid possible clashes with variables inside the SEC code itself, user-defined Perl code is executed in the main::SEC namespace (i.e., inside the special package main::SEC). By using the main:: prefix, SEC data structures can be accessed and modified. For example, the following rules restore and save contexts on SEC startup and shutdown (SEC keeps all contexts in %main::context_list hash): </p>
-<p> type=Single <br />
- ptype=SubStr <br />
- pattern=SEC_STARTUP <br />
- context=SEC_INTERNAL_EVENT <br />
- continue=TakeNext <br />
- desc=Load the Storable module and terminate if it is not found <br />
- action=eval %ret (require Storable); \ <br />
+<p> type=Single <br/>
+ ptype=SubStr <br/>
+ pattern=SEC_STARTUP <br/>
+ context=SEC_INTERNAL_EVENT <br/>
+ continue=TakeNext <br/>
+ desc=Load the Storable module and terminate if it is not found <br/>
+ action=eval %ret (require Storable); \ <br/>
 &nbsp;<wbr>if&nbsp;<wbr>%ret&nbsp;<wbr>(&nbsp;<wbr>logonly Storabe loaded&nbsp;<wbr>)&nbsp;<wbr>else&nbsp;<wbr>(&nbsp;<wbr>eval&nbsp;<wbr>%o&nbsp;<wbr><a href="/docs/linux/man/1-exit/">exit</a>(1)&nbsp;<wbr>)&nbsp;<wbr> </p>
-<p> type=Single <br />
- ptype=SubStr <br />
- pattern=SEC_STARTUP <br />
- context=SEC_INTERNAL_EVENT <br />
- desc=Restore all SEC contexts from /var/lib/sec/SEC_CONTEXTS on startup <br />
- action=lcall %ret -&gt; ( sub { \ <br />
-&nbsp;<wbr>my&nbsp;<wbr>$ptr&nbsp;<wbr>=&nbsp;<wbr>$main::context_list{&quot;SEC_INTERNAL_EVENT&quot;};&nbsp;<wbr>\ <br />
-&nbsp;<wbr>%main::context_list&nbsp;<wbr>=&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>%{Storable::retrieve(&quot;/var/lib/sec/SEC_CONTEXTS&quot;)};&nbsp;<wbr>\ <br />
+<p> type=Single <br/>
+ ptype=SubStr <br/>
+ pattern=SEC_STARTUP <br/>
+ context=SEC_INTERNAL_EVENT <br/>
+ desc=Restore all SEC contexts from /var/lib/sec/SEC_CONTEXTS on startup <br/>
+ action=lcall %ret -&gt; ( sub { \ <br/>
+&nbsp;<wbr>my&nbsp;<wbr>$ptr&nbsp;<wbr>=&nbsp;<wbr>$main::context_list{&quot;SEC_INTERNAL_EVENT&quot;};&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>%main::context_list&nbsp;<wbr>=&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>%{Storable::retrieve(&quot;/var/lib/sec/SEC_CONTEXTS&quot;)};&nbsp;<wbr>\ <br/>
 &nbsp;<wbr>$main::context_list{&quot;SEC_INTERNAL_EVENT&quot;}&nbsp;<wbr>=&nbsp;<wbr>$ptr;&nbsp;<wbr>}&nbsp;<wbr>) </p>
-<p> type=Single <br />
- ptype=SubStr <br />
- pattern=SEC_SHUTDOWN <br />
- context=SEC_INTERNAL_EVENT <br />
- desc=Save all SEC contexts into /var/lib/sec/SEC_CONTEXTS on shutdown <br />
- action=lcall %ret -&gt; ( sub { \ <br />
-&nbsp;<wbr>Storable::store(\%main::context_list,&nbsp;<wbr>\ <br />
+<p> type=Single <br/>
+ ptype=SubStr <br/>
+ pattern=SEC_SHUTDOWN <br/>
+ context=SEC_INTERNAL_EVENT <br/>
+ desc=Save all SEC contexts into /var/lib/sec/SEC_CONTEXTS on shutdown <br/>
+ action=lcall %ret -&gt; ( sub { \ <br/>
+&nbsp;<wbr>Storable::store(\%main::context_list,&nbsp;<wbr>\ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;/var/lib/sec/SEC_CONTEXTS&quot;);&nbsp;<wbr>}&nbsp;<wbr>) </p>
 <p> However, note that modifying data structures within SEC code is recommended only for advanced users who have carefully studied relevant parts of the code. </p>
 <p> Finally, sometimes larger chunks of Perl code have to be used for event processing and correlation. However, writing many lines of code directly into a rule is cumbersome and may decrease its readability. In such cases it is recommended to separate the code into a custom Perl module which is loaded at SEC startup, and use the code through the module interface (see <code><a href="/docs/linux/man/1-perlmod/">perlmod</a></code>(1) for further details): </p>
-<p> type=Single <br />
- ptype=SubStr <br />
- pattern=SEC_STARTUP <br />
- context=SEC_INTERNAL_EVENT <br />
- desc=Load the SecStuff module <br />
- action=eval %ret (require &#8216;/usr/local/sec/SecStuff.pm&#8217;); \ <br />
+<p> type=Single <br/>
+ ptype=SubStr <br/>
+ pattern=SEC_STARTUP <br/>
+ context=SEC_INTERNAL_EVENT <br/>
+ desc=Load the SecStuff module <br/>
+ action=eval %ret (require &#8216;/usr/local/sec/SecStuff.pm&#8217;); \ <br/>
 &nbsp;<wbr>if&nbsp;<wbr>%ret&nbsp;<wbr>(&nbsp;<wbr>none&nbsp;<wbr>)&nbsp;<wbr>else&nbsp;<wbr>(&nbsp;<wbr>eval&nbsp;<wbr>%o&nbsp;<wbr><a href="/docs/linux/man/1-exit/">exit</a>(1)&nbsp;<wbr>) </p>
-<p> type=Single <br />
- ptype=PerlFunc <br />
- pattern=sub { return SecStuff::my_match($_[0]); } <br />
- desc=event &#8216;$0&#8217; was matched by my_match() <br />
+<p> type=Single <br/>
+ ptype=PerlFunc <br/>
+ pattern=sub { return SecStuff::my_match($_[0]); } <br/>
+ desc=event &#8216;$0&#8217; was matched by my_match() <br/>
  action=write - %s  </p>
 <h2>EXAMPLES</h2>
 <h3>Example 1 - a ruleset for Cisco events</h3>
 <p> This section presents an example rulebase for managing Cisco devices. It is assumed that the managed devices have syslog logging enabled, and that all syslog messages are sent to a central host and written to log file(s) that are monitored by SEC. </p>
-<p> # Set up contexts NIGHT and WEEKEND for nights <br />
- # and weekends. The context NIGHT has a lifetime <br />
+<p> # Set up contexts NIGHT and WEEKEND for nights <br/>
+ # and weekends. The context NIGHT has a lifetime <br/>
  # of 8 hours and the context WEEKEND 2 days </p>
-<p> type=Calendar <br />
- time=0 23 * * * <br />
- desc=NIGHT <br />
+<p> type=Calendar <br/>
+ time=0 23 * * * <br/>
+ desc=NIGHT <br/>
  action=create %s 28800 </p>
-<p> type=Calendar <br />
- time=0 0 * * 6 <br />
- desc=WEEKEND <br />
+<p> type=Calendar <br/>
+ time=0 0 * * 6 <br/>
+ desc=WEEKEND <br/>
  action=create %s 172800 </p>
-<p> # If a router does not come up within 5 minutes <br />
- # after it was rebooted, generate event <br />
- # &quot;&lt;router&gt; REBOOT FAILURE&quot;. The next rule matches <br />
- # this event, checks the router with ping and sends <br />
+<p> # If a router does not come up within 5 minutes <br/>
+ # after it was rebooted, generate event <br/>
+ # &quot;&lt;router&gt; REBOOT FAILURE&quot;. The next rule matches <br/>
+ # this event, checks the router with ping and sends <br/>
  # a notification if there is no response. </p>
-<p> type=PairWithWindow <br />
- ptype=RegExp <br />
- pattern=\s([\w.-]+) \d+: %SYS-5-RELOAD <br />
- desc=$1 REBOOT FAILURE <br />
- action=event %s <br />
- ptype2=RegExp <br />
- pattern2=\s$1 \d+: %SYS-5-RESTART <br />
- desc2=%1 successful reboot <br />
- action2=logonly <br />
+<p> type=PairWithWindow <br/>
+ ptype=RegExp <br/>
+ pattern=\s([\w.-]+) \d+: %SYS-5-RELOAD <br/>
+ desc=$1 REBOOT FAILURE <br/>
+ action=event %s <br/>
+ ptype2=RegExp <br/>
+ pattern2=\s$1 \d+: %SYS-5-RESTART <br/>
+ desc2=%1 successful reboot <br/>
+ action2=logonly <br/>
  window=300 </p>
-<p> type=SingleWithScript <br />
- ptype=RegExp <br />
- pattern=^([\w.-]+) REBOOT FAILURE <br />
- script=/bin/ping -c 3 -q $1 <br />
- desc=$1 did not come up after reboot <br />
- action=logonly $1 is pingable after reboot <br />
+<p> type=SingleWithScript <br/>
+ ptype=RegExp <br/>
+ pattern=^([\w.-]+) REBOOT FAILURE <br/>
+ script=/bin/ping -c 3 -q $1 <br/>
+ desc=$1 did not come up after reboot <br/>
+ action=logonly $1 is pingable after reboot <br/>
  action2=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost </p>
-<p> # Send a notification if CPU load of a router is too <br />
- # high (two CPUHOG messages are received within 5 <br />
- # minutes); send another notification if the load is <br />
- # normal again (no CPUHOG messages within last 15 <br />
+<p> # Send a notification if CPU load of a router is too <br/>
+ # high (two CPUHOG messages are received within 5 <br/>
+ # minutes); send another notification if the load is <br/>
+ # normal again (no CPUHOG messages within last 15 <br/>
  # minutes). Rule is not active at night or weekend. </p>
-<p> type=SingleWith2Thresholds <br />
- ptype=RegExp <br />
- pattern=\s([\w.-]+) \d+: %SYS-3-CPUHOG <br />
- context=!(NIGHT || WEEKEND) <br />
- desc=$1 CPU overload <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- window=300 <br />
- thresh=2 <br />
- desc2=$1 CPU load normal <br />
- action2=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- window2=900 <br />
+<p> type=SingleWith2Thresholds <br/>
+ ptype=RegExp <br/>
+ pattern=\s([\w.-]+) \d+: %SYS-3-CPUHOG <br/>
+ context=!(NIGHT || WEEKEND) <br/>
+ desc=$1 CPU overload <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ window=300 <br/>
+ thresh=2 <br/>
+ desc2=$1 CPU load normal <br/>
+ action2=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ window2=900 <br/>
  thresh2=0 </p>
-<p> # If a router interface is in down state for less <br />
- # than 15 seconds, generate event <br />
- # &quot;&lt;router&gt; INTERFACE &lt;interface&gt; SHORT OUTAGE&quot;; <br />
- # otherwise generate event <br />
+<p> # If a router interface is in down state for less <br/>
+ # than 15 seconds, generate event <br/>
+ # &quot;&lt;router&gt; INTERFACE &lt;interface&gt; SHORT OUTAGE&quot;; <br/>
+ # otherwise generate event <br/>
  # &quot;&lt;router&gt; INTERFACE &lt;interface&gt; DOWN&quot;. </p>
-<p> type=PairWithWindow <br />
- ptype=RegExp <br />
- pattern=\s([\w.-]+) \d+: %LINK-3-UPDOWN: Interface ([\w.-]+), changed state to down <br />
- desc=$1 INTERFACE $2 DOWN <br />
- action=event %s <br />
- ptype2=RegExp <br />
- pattern2=\s$1 \d+: %LINK-3-UPDOWN: Interface $2, changed state to up <br />
- desc2=%1 INTERFACE %2 SHORT OUTAGE <br />
- action2=event %s <br />
+<p> type=PairWithWindow <br/>
+ ptype=RegExp <br/>
+ pattern=\s([\w.-]+) \d+: %LINK-3-UPDOWN: Interface ([\w.-]+), changed state to down <br/>
+ desc=$1 INTERFACE $2 DOWN <br/>
+ action=event %s <br/>
+ ptype2=RegExp <br/>
+ pattern2=\s$1 \d+: %LINK-3-UPDOWN: Interface $2, changed state to up <br/>
+ desc2=%1 INTERFACE %2 SHORT OUTAGE <br/>
+ action2=event %s <br/>
  window=15 </p>
-<p> # If &quot;&lt;router&gt; INTERFACE &lt;interface&gt; DOWN&quot; event is <br />
- # received, send a notification and wait for <br />
- # &quot;interface up&quot; event from the same router interface <br />
+<p> # If &quot;&lt;router&gt; INTERFACE &lt;interface&gt; DOWN&quot; event is <br/>
+ # received, send a notification and wait for <br/>
+ # &quot;interface up&quot; event from the same router interface <br/>
  # for the next 24 hours </p>
-<p> type=Pair <br />
- ptype=RegExp <br />
- pattern=^([\w.-]+) INTERFACE ([\w.-]+) DOWN <br />
- desc=$1 interface $2 is down <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- ptype2=RegExp <br />
- pattern2=\s$1 \d+: %LINK-3-UPDOWN: Interface $2, changed state to up <br />
- desc2=%1 interface %2 is up <br />
- action2=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
+<p> type=Pair <br/>
+ ptype=RegExp <br/>
+ pattern=^([\w.-]+) INTERFACE ([\w.-]+) DOWN <br/>
+ desc=$1 interface $2 is down <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ ptype2=RegExp <br/>
+ pattern2=\s$1 \d+: %LINK-3-UPDOWN: Interface $2, changed state to up <br/>
+ desc2=%1 interface %2 is up <br/>
+ action2=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
  window=86400 </p>
-<p> # If ten &quot;short outage&quot; events have been observed <br />
+<p> # If ten &quot;short outage&quot; events have been observed <br/>
  # in the window of 6 hours, send a notification </p>
-<p> type=SingleWithThreshold <br />
- ptype=RegExp <br />
- pattern=^([\w.-]+) INTERFACE ([\w.-]+) SHORT OUTAGE <br />
- desc=Interface $2 at node $1 is unstable <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br />
- window=21600 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=RegExp <br/>
+ pattern=^([\w.-]+) INTERFACE ([\w.-]+) SHORT OUTAGE <br/>
+ desc=Interface $2 at node $1 is unstable <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail root [at] localhost <br/>
+ window=21600 <br/>
  thresh=10  </p>
 <h3>Example 2 - hierarchically organized rulesets for iptables and sshd events</h3>
 <p> This section presents an example of hierarchically organized rules for processing Linux iptables events from /var/log/messages and SSH login events from /var/log/secure. It is assumed that all rule files reside in the /etc/sec directory and that the rule hierarchy has two levels. The file /etc/sec/main.rules contains first-level Jump rules for matching and parsing events from input files and submitting them to proper rulesets for further processing. All other rule files in the /etc/sec directory contain second-level rules which receive their input from first-level Jump rules. Also, the example assumes that SEC is started with the following command line: </p>
-<p> /usr/bin/sec --conf=/etc/sec/*.rules --intcontexts \ <br />
+<p> /usr/bin/sec --conf=/etc/sec/*.rules --intcontexts \ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>--input=/var/log/messages --input=/var/log/secure </p>
-<p> # <br />
- # the content of /etc/sec/main.rules <br />
+<p> # <br/>
+ # the content of /etc/sec/main.rules <br/>
  # </p>
-<p> type=Jump <br />
- context=[ _FILE_EVENT_/var/log/messages ] <br />
- ptype=PerlFunc <br />
- pattern=sub { my(%var); my($line) = $_[0]; \ <br />
-&nbsp;<wbr>&nbsp;<wbr>if&nbsp;<wbr>($line&nbsp;<wbr>!~&nbsp;<wbr>/kernel: iptables:/g)&nbsp;<wbr>{&nbsp;<wbr>return 0;&nbsp;<wbr>}&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>while&nbsp;<wbr>($line&nbsp;<wbr>=~&nbsp;<wbr>/\G\s*([A-Z]+)(?:=(\S*))?/g)&nbsp;<wbr>{&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$var{$1}&nbsp;<wbr>=&nbsp;<wbr>defined($2)?$2:1;&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>}&nbsp;<wbr>return&nbsp;<wbr>\%var;&nbsp;<wbr>} <br />
- varmap=IPTABLES <br />
- desc=parse iptables events and direct to relevant ruleset <br />
+<p> type=Jump <br/>
+ context=[ _FILE_EVENT_/var/log/messages ] <br/>
+ ptype=PerlFunc <br/>
+ pattern=sub { my(%var); my($line) = $_[0]; \ <br/>
+&nbsp;<wbr>&nbsp;<wbr>if&nbsp;<wbr>($line&nbsp;<wbr>!~&nbsp;<wbr>/kernel: iptables:/g)&nbsp;<wbr>{&nbsp;<wbr>return 0;&nbsp;<wbr>}&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>while&nbsp;<wbr>($line&nbsp;<wbr>=~&nbsp;<wbr>/\G\s*([A-Z]+)(?:=(\S*))?/g)&nbsp;<wbr>{&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$var{$1}&nbsp;<wbr>=&nbsp;<wbr>defined($2)?$2:1;&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>}&nbsp;<wbr>return&nbsp;<wbr>\%var;&nbsp;<wbr>} <br/>
+ varmap=IPTABLES <br/>
+ desc=parse iptables events and direct to relevant ruleset <br/>
  cfset=iptables </p>
-<p> type=Jump <br />
- context=[ _FILE_EVENT_/var/log/secure ] <br />
- ptype=RegExp <br />
- pattern=sshd\[(?&lt;pid&gt;\d+)\]: (?&lt;status&gt;Accepted|Failed) \ <br />
- (?&lt;authmethod&gt;[\w-]+) for (?&lt;invuser&gt;invalid user )?\ <br />
- (?&lt;user&gt;[\w-]+) from (?&lt;srcip&gt;[\d.]+) port (?&lt;srcport&gt;\d+) ssh2$ <br />
- varmap=SSH_LOGIN <br />
- desc=parse SSH login events and direct to relevant ruleset <br />
+<p> type=Jump <br/>
+ context=[ _FILE_EVENT_/var/log/secure ] <br/>
+ ptype=RegExp <br/>
+ pattern=sshd\[(?&lt;pid&gt;\d+)\]: (?&lt;status&gt;Accepted|Failed) \ <br/>
+ (?&lt;authmethod&gt;[\w-]+) for (?&lt;invuser&gt;invalid user )?\ <br/>
+ (?&lt;user&gt;[\w-]+) from (?&lt;srcip&gt;[\d.]+) port (?&lt;srcport&gt;\d+) ssh2$ <br/>
+ varmap=SSH_LOGIN <br/>
+ desc=parse SSH login events and direct to relevant ruleset <br/>
  cfset=ssh-login </p>
-<p> type=Jump <br />
- context=[ SSH_EVENT ] <br />
- ptype=TValue <br />
- pattern=True <br />
- desc=direct SSH synthetic events to relevant ruleset <br />
+<p> type=Jump <br/>
+ context=[ SSH_EVENT ] <br/>
+ ptype=TValue <br/>
+ pattern=True <br/>
+ desc=direct SSH synthetic events to relevant ruleset <br/>
  cfset=ssh-events </p>
-<p> # <br />
- # the content of /etc/sec/iptables.rules <br />
+<p> # <br/>
+ # the content of /etc/sec/iptables.rules <br/>
  # </p>
-<p> type=Options <br />
- procallin=no <br />
+<p> type=Options <br/>
+ procallin=no <br/>
  joincfset=iptables </p>
-<p> type=SingleWithThreshold <br />
- ptype=Cached <br />
- pattern=IPTABLES <br />
- context=IPTABLES :&gt; ( sub { return exists($_[0]-&gt;{&quot;SYN&quot;}) &amp;&amp; \ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>exists($_[0]-&gt;{&quot;FIN&quot;})&nbsp;<wbr>;&nbsp;<wbr>}&nbsp;<wbr>)&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>!SUPPRESS_IP_$+{SRC} <br />
- desc=SYN+FIN flood from host $+{SRC} <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail -s &#8216;iptables alert&#8217; root [at] localhost; \ <br />
-&nbsp;<wbr>create SUPPRESS_IP_$+{SRC}&nbsp;<wbr>3600 <br />
- window=10 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=Cached <br/>
+ pattern=IPTABLES <br/>
+ context=IPTABLES :&gt; ( sub { return exists($_[0]-&gt;{&quot;SYN&quot;}) &amp;&amp; \ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>exists($_[0]-&gt;{&quot;FIN&quot;})&nbsp;<wbr>;&nbsp;<wbr>}&nbsp;<wbr>)&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>!SUPPRESS_IP_$+{SRC} <br/>
+ desc=SYN+FIN flood from host $+{SRC} <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail -s &#8216;iptables alert&#8217; root [at] localhost; \ <br/>
+&nbsp;<wbr>create SUPPRESS_IP_$+{SRC}&nbsp;<wbr>3600 <br/>
+ window=10 <br/>
  thresh=100 </p>
-<p> type=SingleWithThreshold <br />
- ptype=Cached <br />
- pattern=IPTABLES <br />
- context=IPTABLES :&gt; ( sub { return exists($_[0]-&gt;{&quot;SYN&quot;}) &amp;&amp; \ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>!exists($_[0]-&gt;{&quot;ACK&quot;})&nbsp;<wbr>;&nbsp;<wbr>}&nbsp;<wbr>)&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>!SUPPRESS_IP_$+{SRC} <br />
- desc=SYN flood from host $+{SRC} <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail -s &#8216;iptables alert&#8217; root [at] localhost; \ <br />
-&nbsp;<wbr>create SUPPRESS_IP_$+{SRC}&nbsp;<wbr>3600 <br />
- window=10 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=Cached <br/>
+ pattern=IPTABLES <br/>
+ context=IPTABLES :&gt; ( sub { return exists($_[0]-&gt;{&quot;SYN&quot;}) &amp;&amp; \ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>!exists($_[0]-&gt;{&quot;ACK&quot;})&nbsp;<wbr>;&nbsp;<wbr>}&nbsp;<wbr>)&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>!SUPPRESS_IP_$+{SRC} <br/>
+ desc=SYN flood from host $+{SRC} <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail -s &#8216;iptables alert&#8217; root [at] localhost; \ <br/>
+&nbsp;<wbr>create SUPPRESS_IP_$+{SRC}&nbsp;<wbr>3600 <br/>
+ window=10 <br/>
  thresh=100 </p>
-<p> # <br />
- # the content of /etc/sec/ssh-login.rules <br />
+<p> # <br/>
+ # the content of /etc/sec/ssh-login.rules <br/>
  # </p>
-<p> type=Options <br />
- procallin=no <br />
+<p> type=Options <br/>
+ procallin=no <br/>
  joincfset=ssh-login </p>
-<p> type=Single <br />
- ptype=Cached <br />
- pattern=SSH_LOGIN <br />
- context=SSH_LOGIN :&gt; ( sub { return $_[0]-&gt;{&quot;status&quot;} eq &quot;Failed&quot; &amp;&amp; \ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$_[0]-&gt;{&quot;srcport&quot;}&nbsp;<wbr>&lt;&nbsp;<wbr>1024&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>defined($_[0]-&gt;{&quot;invuser&quot;});&nbsp;<wbr>}&nbsp;<wbr>) <br />
- continue=TakeNext <br />
- desc=Probe of invalid user $+{user} from privileged port of $+{srcip} <br />
+<p> type=Single <br/>
+ ptype=Cached <br/>
+ pattern=SSH_LOGIN <br/>
+ context=SSH_LOGIN :&gt; ( sub { return $_[0]-&gt;{&quot;status&quot;} eq &quot;Failed&quot; &amp;&amp; \ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$_[0]-&gt;{&quot;srcport&quot;}&nbsp;<wbr>&lt;&nbsp;<wbr>1024&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>defined($_[0]-&gt;{&quot;invuser&quot;});&nbsp;<wbr>}&nbsp;<wbr>) <br/>
+ continue=TakeNext <br/>
+ desc=Probe of invalid user $+{user} from privileged port of $+{srcip} <br/>
  action=pipe &#8216;%t: %s&#8217; /bin/mail -s &#8216;SSH alert&#8217; root [at] localhost </p>
-<p> type=SingleWithThreshold <br />
- ptype=Cached <br />
- pattern=SSH_LOGIN <br />
- context=SSH_LOGIN :&gt; ( sub { return $_[0]-&gt;{&quot;status&quot;} eq &quot;Failed&quot; &amp;&amp; \ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>defined($_[0]-&gt;{&quot;invuser&quot;});&nbsp;<wbr>}&nbsp;<wbr>) <br />
- desc=Ten login probes for invalid users from $+{srcip} within 60s <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail -s &#8216;SSH alert&#8217; root [at] localhost <br />
- thresh=10 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=Cached <br/>
+ pattern=SSH_LOGIN <br/>
+ context=SSH_LOGIN :&gt; ( sub { return $_[0]-&gt;{&quot;status&quot;} eq &quot;Failed&quot; &amp;&amp; \ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>defined($_[0]-&gt;{&quot;invuser&quot;});&nbsp;<wbr>}&nbsp;<wbr>) <br/>
+ desc=Ten login probes for invalid users from $+{srcip} within 60s <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail -s &#8216;SSH alert&#8217; root [at] localhost <br/>
+ thresh=10 <br/>
  window=60 </p>
-<p> type=PairWithWindow <br />
- ptype=Cached <br />
- pattern=SSH_LOGIN <br />
- context=SSH_LOGIN :&gt; ( sub { return $_[0]-&gt;{&quot;status&quot;} eq &quot;Failed&quot;; } ) <br />
- desc=User $+{user} failed to log in from $+{srcip} within 60s <br />
- action=cevent SSH_EVENT 0 %s <br />
- ptype2=Cached <br />
- pattern2=SSH_LOGIN <br />
- context2=SSH_LOGIN :&gt; \ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(&nbsp;<wbr>sub&nbsp;<wbr>{&nbsp;<wbr>return&nbsp;<wbr>$_[0]-&gt;{&quot;status&quot;}&nbsp;<wbr>eq&nbsp;<wbr>&quot;Accepted&quot;;&nbsp;<wbr>}&nbsp;<wbr>)&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$+{user}&nbsp;<wbr>%+{user}&nbsp;<wbr>$+{srcip}&nbsp;<wbr>%+{srcip}&nbsp;<wbr>-&gt;&nbsp;<wbr>\ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(&nbsp;<wbr>sub&nbsp;<wbr>{&nbsp;<wbr>return&nbsp;<wbr>$_[0]&nbsp;<wbr>eq&nbsp;<wbr>$_[1]&nbsp;<wbr>&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>&nbsp;<wbr>$_[2]&nbsp;<wbr>eq&nbsp;<wbr>$_[3];&nbsp;<wbr>}&nbsp;<wbr>&nbsp;<wbr>) <br />
- desc2=User $+{user} logged in successfully from $+{srcip} within 60s <br />
- action2=logonly <br />
+<p> type=PairWithWindow <br/>
+ ptype=Cached <br/>
+ pattern=SSH_LOGIN <br/>
+ context=SSH_LOGIN :&gt; ( sub { return $_[0]-&gt;{&quot;status&quot;} eq &quot;Failed&quot;; } ) <br/>
+ desc=User $+{user} failed to log in from $+{srcip} within 60s <br/>
+ action=cevent SSH_EVENT 0 %s <br/>
+ ptype2=Cached <br/>
+ pattern2=SSH_LOGIN <br/>
+ context2=SSH_LOGIN :&gt; \ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(&nbsp;<wbr>sub&nbsp;<wbr>{&nbsp;<wbr>return&nbsp;<wbr>$_[0]-&gt;{&quot;status&quot;}&nbsp;<wbr>eq&nbsp;<wbr>&quot;Accepted&quot;;&nbsp;<wbr>}&nbsp;<wbr>)&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$+{user}&nbsp;<wbr>%+{user}&nbsp;<wbr>$+{srcip}&nbsp;<wbr>%+{srcip}&nbsp;<wbr>-&gt;&nbsp;<wbr>\ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(&nbsp;<wbr>sub&nbsp;<wbr>{&nbsp;<wbr>return&nbsp;<wbr>$_[0]&nbsp;<wbr>eq&nbsp;<wbr>$_[1]&nbsp;<wbr>&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>&nbsp;<wbr>$_[2]&nbsp;<wbr>eq&nbsp;<wbr>$_[3];&nbsp;<wbr>}&nbsp;<wbr>&nbsp;<wbr>) <br/>
+ desc2=User $+{user} logged in successfully from $+{srcip} within 60s <br/>
+ action2=logonly <br/>
  window=60 </p>
-<p> # <br />
- # the content of /etc/sec/ssh-events.rules <br />
+<p> # <br/>
+ # the content of /etc/sec/ssh-events.rules <br/>
  # </p>
-<p> type=Options <br />
- procallin=no <br />
+<p> type=Options <br/>
+ procallin=no <br/>
  joincfset=ssh-events </p>
-<p> type=SingleWithThreshold <br />
- ptype=RegExp <br />
- pattern=User ([\w-]+) failed to log in from [\d.]+ within 60s <br />
- desc=Ten login failures for user $1 within 1h <br />
- action=pipe &#8216;%t: %s&#8217; /bin/mail -s &#8216;SSH alert&#8217; root [at] localhost <br />
- thresh=10 <br />
+<p> type=SingleWithThreshold <br/>
+ ptype=RegExp <br/>
+ pattern=User ([\w-]+) failed to log in from [\d.]+ within 60s <br/>
+ desc=Ten login failures for user $1 within 1h <br/>
+ action=pipe &#8216;%t: %s&#8217; /bin/mail -s &#8216;SSH alert&#8217; root [at] localhost <br/>
+ thresh=10 <br/>
  window=3600  </p>
 <h2>ENVIRONMENT</h2>
 <p> If the <code>SECRC </code> environment variable is set, SEC expects it to contain the name of its resource file. Resource file lines which are empty or which begin with the number sign (#) are ignored (whitespace may precede #). Each remaining line is appended to the <code>argv</code> array of SEC as a *single* element. Also, the lines are appended to <code>argv</code> in the order they appear in the resource file. Therefore, if the SEC command line option has a value, the option name and the value must either be separated by the equal sign (=) or a newline. Here is a simple resource file example: </p>
-<p> # read events from standard input <br />
+<p> # read events from standard input <br/>
  --input=- </p>
-<p> # rules are stored in /etc/sec/test.conf <br />
- --conf <br />
+<p> # rules are stored in /etc/sec/test.conf <br/>
+ --conf <br/>
  /etc/sec/test.conf </p>
 <p> Note that although SEC rereads its resource file at the reception of the <code>SIGHUP</code> or <code>SIGABRT</code> signal, adding an option that specifies a certain startup procedure (e.g., <code>--pid</code> or <code>--detach</code>) will not produce the desired effect at runtime. Also note that the resource file content is *not* parsed by shell, therefore shell metacharacters are passed to SEC as-is.  </p>
 <h2>SIGNALS</h2>

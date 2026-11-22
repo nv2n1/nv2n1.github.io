@@ -53,8 +53,8 @@ description: "pdftocairo – Portable Document Format (PDF) to PNG/JPEG/TIFF/PDF
 <dt><code>-svg</code></dt>
 <dd> Generate a SVG (Scalable Vector Graphics) file</dd>
 <dt><code>-print</code></dt>
-<dd> (Windows only) Prints to a system printer. See also -printer and -printeropt.<br />
-&nbsp;If an output file is not specified, the output will be sent to the printer.<br />
+<dd> (Windows only) Prints to a system printer. See also -printer and -printeropt.<br/>
+&nbsp;If an output file is not specified, the output will be sent to the printer.<br/>
 &nbsp;The output file&nbsp;&#8216;-&#8216;&nbsp;can not be used with this option.</dd>
 <dt><code>-printdlg</code></dt>
 <dd> (Windows only) Prints to a system printer. Displays the print dialog to allow the print options to be modified before printing.</dd>

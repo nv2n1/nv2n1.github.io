@@ -19,11 +19,11 @@ Protected Attributes</code></pre>
 <p><code>ForwardSwapQuote</code> (const boost::shared_ptr&lt; <code>SwapIndex</code> &gt; &amp;swapIndex, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;spread, const <code>Period</code> &amp;fwdStart) </p>
 <p> const <code>Date</code> &amp; <code>valueDate</code> () const </p>
 <p> const <code>Date</code> &amp; <code>startDate</code> () const </p>
-<p> const <code>Date</code> &amp; <code>fixingDate</code> () const<br />
+<p> const <code>Date</code> &amp; <code>fixingDate</code> () const<br/>
  <code>Quote interface</code> </p>
-<p> Real <code>value</code> () const<br />
- <i>returns the current value </i><br />
- bool <code>isValid</code> () const<br />
+<p> Real <code>value</code> () const<br/>
+ <i>returns the current value </i><br/>
+ bool <code>isValid</code> () const<br/>
  <i>returns true if the </i><code>Quote</code> holds a valid value <code>Observer interface</code> </p>
 <pre><code>void update ()
 Protected Member Functions

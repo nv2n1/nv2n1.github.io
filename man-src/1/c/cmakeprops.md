@@ -307,32 +307,32 @@ description: "cmakeprops – Reference of CMake properties."
 <p> The COMPILE_DEFINITIONS property may be set to a semicolon-separated list of preprocessor definitions using the syntax VAR or VAR=value. Function-style definitions are not supported. CMake will automatically escape the value correctly for the native build system (note that CMake language syntax may require escapes to specify some values). This property may be set on a per-configuration basis using the name COMPILE_DEFINITIONS_&lt;CONFIG&gt; where &lt;CONFIG&gt; is an upper-case name (ex. &quot;COMPILE_DEFINITIONS_DEBUG&quot;). </p>
 <p> CMake will automatically drop some definitions that are not supported by the native build tool. The VS6 IDE does not support definition values with spaces (but NMake does). </p>
 <p> Contents of COMPILE_DEFINITIONS may use &quot;generator expressions&quot; with the syntax &quot;$&lt;&#8230;&gt;&quot;. Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -376,32 +376,32 @@ description: "cmakeprops – Reference of CMake properties."
 <p> This property specifies the list of options specified so far for this property. This property exists on directories and targets. </p>
 <p> The target property values are used by the generators to set the options for the compiler. </p>
 <p> Contents of COMPILE_OPTIONS may use &quot;generator expressions&quot; with the syntax &quot;$&lt;&#8230;&gt;&quot;. Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -554,32 +554,32 @@ description: "cmakeprops – Reference of CMake properties."
 <p> This property specifies the list of directories given so far to the include_directories command. This property exists on directories and targets. In addition to accepting values from the include_directories command, values may be set directly on any directory or any target using the set_property command. A target gets its initial value for this property from the value of the directory property. A directory gets its initial value from its parent directory if it has one. Both directory and target property values are adjusted by calls to the include_directories command. </p>
 <p> The target property values are used by the generators to set the include paths for the compiler. See also the include_directories command. </p>
 <p> Contents of INCLUDE_DIRECTORIES may use &quot;generator expressions&quot; with the syntax &quot;$&lt;&#8230;&gt;&quot;. Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -615,32 +615,32 @@ description: "cmakeprops – Reference of CMake properties."
 <dd> List of public compile definitions for a library. </dd>
 <p> Targets may populate this property to publish the compile definitions required to compile against the headers for the target. Consuming targets can add entries to their own COMPILE_DEFINITIONS property such as $&lt;TARGET_PROPERTY:foo,INTERFACE_COMPILE_DEFINITIONS&gt; to use the compile definitions specified in the interface of &#8216;foo&#8217;. </p>
 <p> Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -667,32 +667,32 @@ description: "cmakeprops – Reference of CMake properties."
 <dd> List of interface options to pass to the compiler. </dd>
 <p> Targets may populate this property to publish the compile options required to compile against the headers for the target. Consuming targets can add entries to their own COMPILE_OPTIONS property such as $&lt;TARGET_PROPERTY:foo,INTERFACE_COMPILE_OPTIONS&gt; to use the compile options specified in the interface of &#8216;foo&#8217;. </p>
 <p> Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -719,32 +719,32 @@ description: "cmakeprops – Reference of CMake properties."
 <dd> List of public include directories for a library. </dd>
 <p> Targets may populate this property to publish the include directories required to compile against the headers for the target. Consuming targets can add entries to their own INCLUDE_DIRECTORIES property such as $&lt;TARGET_PROPERTY:foo,INTERFACE_INCLUDE_DIRECTORIES&gt; to use the include directories specified in the interface of &#8216;foo&#8217;. </p>
 <p> Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -771,32 +771,32 @@ description: "cmakeprops – Reference of CMake properties."
 <dd> List public interface libraries for a library. </dd>
 <p> This property contains the list of transitive link dependencies. When the target is linked into another target the libraries listed (and recursively their link interface libraries) will be provided to the other target also. This property is overridden by the LINK_INTERFACE_LIBRARIES or LINK_INTERFACE_LIBRARIES_&lt;CONFIG&gt; property if policy CMP0022 is OLD or unset. </p>
 <p> Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -826,32 +826,32 @@ description: "cmakeprops – Reference of CMake properties."
 <dd> List of public system include directories for a library. </dd>
 <p> Targets may populate this property to publish the include directories which contain system headers, and therefore should not result in compiler warnings. Consuming targets will then mark the same include directories as system headers. </p>
 <p> Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -934,32 +934,32 @@ description: "cmakeprops – Reference of CMake properties."
 <p> This property specifies the list of libraries or targets which will be used for linking. In addition to accepting values from the target_link_libraries command, values may be set directly on any target using the set_property command. </p>
 <p> The target property values are used by the generators to set the link libraries for the compiler. See also the target_link_libraries command. </p>
 <p> Contents of LINK_LIBRARIES may use &quot;generator expressions&quot; with the syntax &quot;$&lt;&#8230;&gt;&quot;. Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>

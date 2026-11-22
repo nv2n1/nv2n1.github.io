@@ -9,8 +9,8 @@ description: "isns_config – iSNS configuration file"
 
 <p>isns_config &#8211; iSNS configuration file</p>
 <h2>Synopsis</h2>
-<p><code>/etc/isns/isnsadm.conf</code><br />
- <code>/etc/isns/isnsd.conf</code><br />
+<p><code>/etc/isns/isnsadm.conf</code><br/>
+ <code>/etc/isns/isnsd.conf</code><br/>
  <code>/etc/isns/isnsdd.conf</code> </p>
 <h2>Description</h2>
 <p>All Open-iSNS utilities read their configuration from a file in <code>/etc/isns</code>. There is a separate configuration file for each application, <code>isnsd</code>, <code>isnsadm</code>, and <code>isnsdd</code>. The syntax and the set of supported options is identical, even though some options are specific to e.g. the server. Unless indicated, options are applicable to all utilities. </p>

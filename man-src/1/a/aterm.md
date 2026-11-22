@@ -52,20 +52,20 @@ description: "aterm (Afterstep XVT) – a VT102 emulator for the X window system
 <dd> <p> Turn on/off pseudo transparent scrollbar. Works the same as -tr; resource <code>transpscrollbar</code>. </p>
  </dd>
 <dt><code>-tint</code><i>color</i></dt>
-<dd> <p> Turn on pseudo transparency background tinting. Tinting can be done fast and slow way. In fast way it will be done by combining of background color with tinting color using logical function. This function defaults to AND, and it can be changed using <code>-tinttype</code> option - see below. In general solid colors like Blue, Red, Green, Cyan, Magenta, Yellow are good, but you should experiment with it for each background you have. True tinting is more memory and CPU hungry - tinted copy of background image will be created every time you move/resize window. It alows for more smooth tinting thou. You need to build it with <code>--enable-transparency=yes</code> or <code>--enable-background-imageyes</code> option, to be able to use this feature. resource <code>tinting</code>.<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br />
+<dd> <p> Turn on pseudo transparency background tinting. Tinting can be done fast and slow way. In fast way it will be done by combining of background color with tinting color using logical function. This function defaults to AND, and it can be changed using <code>-tinttype</code> option - see below. In general solid colors like Blue, Red, Green, Cyan, Magenta, Yellow are good, but you should experiment with it for each background you have. True tinting is more memory and CPU hungry - tinted copy of background image will be created every time you move/resize window. It alows for more smooth tinting thou. You need to build it with <code>--enable-transparency=yes</code> or <code>--enable-background-imageyes</code> option, to be able to use this feature. resource <code>tinting</code>.<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br/>
  </p>
  </dd>
 <dt><code>-sh</code><i>amount</i></dt>
-<dd> <p> This option allows for darkening/lightening of the background image <i>amount</i> is the %value of the desired brightness, where 100 is the original. if <i>amount</i> is less then 100 - image will be darkened. if <i>amount</i> is less then 0 or more then 100 - image will be lightened. Lightening can cause some strange looking effects if applied on bright image. This option causes aterm to create shaded/lightened copy of the background - it&#8217;s more memory cosuming as the result. It does not make much difference, though, if applied on non transparent background image. resource <code>shading</code>.<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br />
+<dd> <p> This option allows for darkening/lightening of the background image <i>amount</i> is the %value of the desired brightness, where 100 is the original. if <i>amount</i> is less then 100 - image will be darkened. if <i>amount</i> is less then 0 or more then 100 - image will be lightened. Lightening can cause some strange looking effects if applied on bright image. This option causes aterm to create shaded/lightened copy of the background - it&#8217;s more memory cosuming as the result. It does not make much difference, though, if applied on non transparent background image. resource <code>shading</code>.<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br/>
  </p>
  </dd>
 <dt><code>-fade</code><i>amount</i></dt>
-<dd> <p> This option allows for darkening/lightening of colors when aterm is loosing focus. <i>amount</i> is the %value of the desired brightness, where 100 is the original. if <i>amount</i> is less then 100 - colors will be darkened. if <i>amount</i> is less then 0 or more then 100 - colors will be lightened. Lightening can cause some strange looking effects if applied on bright colors. This option causes aterm to use more colors, as the result it is disabled by default. Use --enable-fading ./configure option to enable it. resource <code>fading</code>.<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br />
+<dd> <p> This option allows for darkening/lightening of colors when aterm is loosing focus. <i>amount</i> is the %value of the desired brightness, where 100 is the original. if <i>amount</i> is less then 100 - colors will be darkened. if <i>amount</i> is less then 0 or more then 100 - colors will be lightened. Lightening can cause some strange looking effects if applied on bright colors. This option causes aterm to use more colors, as the result it is disabled by default. Use --enable-fading ./configure option to enable it. resource <code>fading</code>.<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br/>
  </p>
  </dd>
 <dt><code>-bgtype</code><i>type</i></dt>
-<dd> <p> Specify type of the transformation to be performed on background image. Possible types are : <code>tile</code> - plain vanilla tiling of the image. <code>scale</code> - original image will be scaled to the aterm&#8217;s size, every time you resize window. <code>scalev</code> - original image will be scaled to the aterm&#8217;s height only, every time you resize window. <code>scaleh</code> - original image will be scaled to the aterm&#8217;s width only, every time you resize window. <code>center</code> - original image will be centered in aterm&#8217;s window. <code>notile</code> - background color will be padded to image&#8217;s right/bottom to make it the same size as window is. <code>notileh</code> - background color will be padded to image&#8217;s right to make it the same width as window is. <code>notilev</code> - background color will be padded to image&#8217;s bottom to make it the same height as window is. <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br />
- <code>cut</code> - aterm background will be cut out of the source image, as if this source image was tiled across the root window. The portion of the image that lies underneath of window will be used. <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br />
+<dd> <p> Specify type of the transformation to be performed on background image. Possible types are : <code>tile</code> - plain vanilla tiling of the image. <code>scale</code> - original image will be scaled to the aterm&#8217;s size, every time you resize window. <code>scalev</code> - original image will be scaled to the aterm&#8217;s height only, every time you resize window. <code>scaleh</code> - original image will be scaled to the aterm&#8217;s width only, every time you resize window. <code>center</code> - original image will be centered in aterm&#8217;s window. <code>notile</code> - background color will be padded to image&#8217;s right/bottom to make it the same size as window is. <code>notileh</code> - background color will be padded to image&#8217;s right to make it the same width as window is. <code>notilev</code> - background color will be padded to image&#8217;s bottom to make it the same height as window is. <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br/>
+ <code>cut</code> - aterm background will be cut out of the source image, as if this source image was tiled across the root window. The portion of the image that lies underneath of window will be used. <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br/>
  If AfterStep Pager, asetroot or Esetroot where used to set the root image, then this option can be used in conjunction with -tr option. In this case it will do mentioned transformations to the root pixmap. and use it as aterm&#8217;s background. resource <code>backgroundType</code>. </p>
  </dd>
 <dt><code>-txttype</code><i>type</i></dt>
@@ -213,8 +213,8 @@ description: "aterm (Afterstep XVT) – a VT102 emulator for the X window system
 <dd> <p> This option allows for darkening/lightening of the background image <i>amount</i> is the %value of the desired brightness, where 100 is the original. if <i>amount</i> is less then 100 - image will be darkened. if <i>amount</i> is less then 0 or more then 100 - image will be lightened. Lightening can cause some strange looking effects if applied on bright image. This option causes aterm to create shaded/lightened copy of the background - it&#8217;s more memory cosuming as the result. It does not make much difference, though, if applied on non transparent background image. </p>
  </dd>
 <dt><code>backgroundType:</code><i>type</i></dt>
-<dd> <p> Specify type of the transformation to be performed on background image. Possible types are : <code>tile</code> - plain vanilla tiling of the image. <code>scale</code> - original image will be scaled to the aterm&#8217;s size, every time you resize window. <code>scalev</code> - original image will be scaled to the aterm&#8217;s height only, every time you resize window. <code>scaleh</code> - original image will be scaled to the aterm&#8217;s width only, every time you resize window. <code>center</code> - original image will be centered in aterm&#8217;s window. <code>notile</code> - background color will be padded to image&#8217;s right/bottom to make it the same size as window is. <code>notileh</code> - background color will be padded to image&#8217;s right to make it the same width as window is. <code>notilev</code> - background color will be padded to image&#8217;s bottom to make it the same height as window is. <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br />
- <code>cut</code> - aterm background will be cut out of the source image, as if this source image was tiled across the root window. The portion of the image that lies underneath of window will be used. <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br />
+<dd> <p> Specify type of the transformation to be performed on background image. Possible types are : <code>tile</code> - plain vanilla tiling of the image. <code>scale</code> - original image will be scaled to the aterm&#8217;s size, every time you resize window. <code>scalev</code> - original image will be scaled to the aterm&#8217;s height only, every time you resize window. <code>scaleh</code> - original image will be scaled to the aterm&#8217;s width only, every time you resize window. <code>center</code> - original image will be centered in aterm&#8217;s window. <code>notile</code> - background color will be padded to image&#8217;s right/bottom to make it the same size as window is. <code>notileh</code> - background color will be padded to image&#8217;s right to make it the same width as window is. <code>notilev</code> - background color will be padded to image&#8217;s bottom to make it the same height as window is. <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br/>
+ <code>cut</code> - aterm background will be cut out of the source image, as if this source image was tiled across the root window. The portion of the image that lies underneath of window will be used. <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><br/>
  If AfterStep Pager, asetroot or Esetroot where used to set the root image, then this option can be used in conjunction with -tr option. In this case it will do mentioned transformations to the root pixmap. and use it as aterm&#8217;s background. </p>
  </dd>
 <dt><code>textType:</code><i>type</i></dt>
@@ -238,7 +238,7 @@ description: "aterm (Afterstep XVT) – a VT102 emulator for the X window system
 <dd> <p> Select the main text font used [default 7x14]; option <code>-fn</code>. </p>
  </dd>
 <dt><code>font</code><i>n</i><code>:</code><i>fontname</i></dt>
-<dd> <p> Specify the alternative font <i>n</i>. The default font values: <br />
+<dd> <p> Specify the alternative font <i>n</i>. The default font values: <br/>
  </p>
  </dd>
 <dl>
@@ -341,7 +341,7 @@ description: "aterm (Afterstep XVT) – a VT102 emulator for the X window system
 <dd> <p> The string to send when the delete key (not the keypad delete key) is pressed. If unset it will send the sequence traditionally associated with the <code>Execute</code> key. </p>
  </dd>
 <dt><code>cutchars:</code><i>string</i></dt>
-<dd> <p> The characters used as delimiters for double-click word selection. The built-in default: <br />
+<dd> <p> The characters used as delimiters for double-click word selection. The built-in default: <br/>
  <code>BACKSLASH `&quot;&#8216;&amp;()*,;&lt;=&gt;?@[]{|}</code> </p>
  </dd>
 <dt><code>keysym.</code><i>sym</i>: <i>string</i></dt>
@@ -538,12 +538,12 @@ description: "aterm (Afterstep XVT) – a VT102 emulator for the X window system
 <h2>CURRENT PROJECT COORDINATOR</h2>
 <dl>
 <dt>Project Coordinator</dt>
-<dd> <p> Sasha Vasko <i>&lt;sasha [at] aftercode.net&gt;</i> <br />
+<dd> <p> Sasha Vasko <i>&lt;sasha [at] aftercode.net&gt;</i> <br/>
  </p>
  </dd>
 <dt>Web page maintainter</dt>
-<dd> <p> Sasha Vasko <i>&lt;sasha [at] aftercode.net&gt;</i> <br />
- &lt;<a rel="nofollow" href="http://www.afterstep.org/aterm">http://www.afterstep.org/aterm</a>&gt; <br />
+<dd> <p> Sasha Vasko <i>&lt;sasha [at] aftercode.net&gt;</i> <br/>
+ &lt;<a rel="nofollow" href="http://www.afterstep.org/aterm">http://www.afterstep.org/aterm</a>&gt; <br/>
  </p>
  </dd>
 <dt>Online support</dt>
@@ -564,17 +564,17 @@ description: "aterm (Afterstep XVT) – a VT102 emulator for the X window system
 <dd> <p> wrote the Greek Keyboard Input </p>
  </dd>
 <dt>mj olesen <i>&lt;olesen [at] me.QueensU.CA&gt;</i></dt>
-<dd> <p> Wrote the menu system. <br />
+<dd> <p> Wrote the menu system. <br/>
  Project Coordinator (changes.txt 2.11 to 2.21) </p>
  </dd>
 <dt>Oezguer Kesim <i>&lt;kesim [at] math.fu-berlin.de&gt;</i></dt>
 <dd> <p> Project Coordinator (changes.txt 2.21a to 2.4.5) </p>
  </dd>
 <dt>Geoff Wing <i>&lt;gcw [at] pobox.com&gt;</i></dt>
-<dd> <p> Rewrote screen display and text selection routines. <br />
+<dd> <p> Rewrote screen display and text selection routines. <br/>
  Project Coordinator (changes.txt 2.4.6 - ) </p>
  </dd>
 <dt>Sasha Vasko <i>&lt;sasha [at] aftercode.net&gt;</i></dt>
-<dd> <p> branched rxvt with Alfredo Kojima additions to aterm. <br />
+<dd> <p> branched rxvt with Alfredo Kojima additions to aterm. <br/>
  </p>
  </dd></dl>

@@ -10,7 +10,7 @@ description: "pmdumplog – dump internal details of a performance metrics archi
 
 <p> <code>pmdumplog</code> &#8211; dump internal details of a performance metrics archive log</p>
 <h2>SYNOPSIS</h2>
-<p> <code>pmdumplog</code> [<code>-adilLmMrstxz</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-S</code> <i>starttime</i>] [<code>-T</code> <i>endtime</i>] [<code>-Z</code> <i>timezone</i>] <i>archive</i> [<i>metricname</i> &#8230;]<br />
+<p> <code>pmdumplog</code> [<code>-adilLmMrstxz</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-S</code> <i>starttime</i>] [<code>-T</code> <i>endtime</i>] [<code>-Z</code> <i>timezone</i>] <i>archive</i> [<i>metricname</i> &#8230;]<br/>
  <code>pmdumplog</code> [<code>-v</code> <i>file</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdumplog</code> dumps assorted control, metadata, index and state information from the files of a Performance Co-Pilot (PCP) archive log. The archive log has the base name <i>archive</i> and must have been previously created using <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). </p>

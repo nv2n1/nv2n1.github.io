@@ -19,23 +19,23 @@ description: "docker-engine-activate – Activate Enterprise Edition"
 <p> For non-interactive scriptable deployments, download your license from </p>
 <p> &lt;<a rel="nofollow" href="https://hub.docker.com/">https://hub.docker.com/</a>&gt; then specify the file with the &#8216;&#8211;license&#8217; flag. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;containerd</code>=&quot;&quot;<br />
+<p> <code>&#8211;containerd</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;override default location of containerd endpoint </p>
-<p> <code>&#8211;display-only</code>[=false]<br />
+<p> <code>&#8211;display-only</code>[=false]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;only display license information and exit </p>
-<p> <code>&#8211;engine-image</code>=&quot;&quot;<br />
+<p> <code>&#8211;engine-image</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Specify engine image </p>
-<p> <code>&#8211;format</code>=&quot;&quot;<br />
+<p> <code>&#8211;format</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Pretty-print licenses using a Go template </p>
-<p> <code>-h</code>, <code>&#8211;help</code>[=false]<br />
+<p> <code>-h</code>, <code>&#8211;help</code>[=false]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;help for activate </p>
-<p> <code>&#8211;license</code>=&quot;&quot;<br />
+<p> <code>&#8211;license</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;License File </p>
-<p> <code>&#8211;quiet</code>[=false]<br />
+<p> <code>&#8211;quiet</code>[=false]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Only display available licenses by ID </p>
-<p> <code>&#8211;registry-prefix</code>=&quot;docker.io/store/docker&quot;<br />
+<p> <code>&#8211;registry-prefix</code>=&quot;docker.io/store/docker&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Override the default location where engine images are pulled </p>
-<p> <code>&#8211;version</code>=&quot;&quot;<br />
+<p> <code>&#8211;version</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Specify engine version&nbsp;(default is to use currently running version) </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-engine/">docker-engine</a>(1)</code> </p>

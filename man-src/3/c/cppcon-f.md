@@ -10,7 +10,7 @@ description: "cppcon.f –"
 <p>cppcon.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cppcon</code> (UPLO, N, AP, ANORM, RCOND, WORK, RWORK, INFO)<br />
+<p>subroutine <code>cppcon</code> (UPLO, N, AP, ANORM, RCOND, WORK, RWORK, INFO)<br/>
  <i></i><code>CPPCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cppcon (characterUPLO, integerN, complex, dimension( * )AP, realANORM, realRCOND, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

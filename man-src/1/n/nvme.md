@@ -165,9 +165,9 @@ description: "nvme – the dumb pci-e storage utility"
 <dt>
 </dt><dd> Show NVMe Controller Registers</dd></dl>
 <h2>FURTHER DOCUMENTATION</h2>
-<p> See the freely available references on the m[blue]<code>Official NVM-Express Site</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> See the freely available references on the m[blue]<code>Official NVM-Express Site</code>m[][1].</p>
 <h2>AUTHORS</h2>
-<p> This is written and maintained by m[blue]<code>Keith Busch</code>m[]<font SIZE="-2">[2]</font>.</p>
+<p> This is written and maintained by m[blue]<code>Keith Busch</code>m[][2].</p>
 <h2>REPORTING BUGS</h2>
 <p> Patches and issues may be submitted to the official repository at m[blue]<code><a rel="nofollow" href="https://github.com/linux-nvme/nvme-cli">https://github.com/linux-nvme/nvme-cli</a></code>m[].</p>
 <h2>NVME</h2>

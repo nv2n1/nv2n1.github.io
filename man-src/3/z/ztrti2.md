@@ -10,7 +10,7 @@ description: "ztrti2.f –"
 <p>ztrti2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztrti2</code> (UPLO, DIAG, N, A, LDA, INFO)<br />
+<p>subroutine <code>ztrti2</code> (UPLO, DIAG, N, A, LDA, INFO)<br/>
  <i></i><code>ZTRTI2</code> computes the inverse of a triangular matrix (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztrti2 (characterUPLO, characterDIAG, integerN, complex*16, dimension( lda, * )A, integerLDA, integerINFO)</h3>

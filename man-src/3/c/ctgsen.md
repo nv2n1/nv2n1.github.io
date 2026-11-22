@@ -11,7 +11,7 @@ description: "ctgsen.f –"
 <p> ctgsen.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctgsen</code> (IJOB, WANTQ, WANTZ, SELECT, N, A, LDA, B, LDB, ALPHA, BETA, Q, LDQ, Z, LDZ, M, PL, PR, DIF, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p> subroutine <code>ctgsen</code> (IJOB, WANTQ, WANTZ, SELECT, N, A, LDA, B, LDB, ALPHA, BETA, Q, LDQ, Z, LDZ, M, PL, PR, DIF, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>CTGSEN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctgsen (integerIJOB, logicalWANTQ, logicalWANTZ, logical, dimension( * )SELECT, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( * )ALPHA, complex, dimension( * )BETA, complex, dimension( ldq, * )Q, integerLDQ, complex, dimension( ldz, * )Z, integerLDZ, integerM, realPL, realPR, real, dimension( * )DIF, complex, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>
@@ -123,9 +123,9 @@ description: "ctgsen.f –"
           eigenvalues.
 </pre>
 <p> <i>Q</i> </p>
-<p>Q is COMPLEX array, dimension(LDQ, N) On entry, if WANTQ =.TRUE., Q is an N &#8211; by &#8211; N matrix.On exit, Q has been postmultiplied by the left unitary transformation matrix which reorder(A, B); The leading M<br />
-          columns of Q form orthonormal bases for the specified pair of<br />
-          left eigenspaces (deflating subspaces).<br />
+<p>Q is COMPLEX array, dimension(LDQ, N) On entry, if WANTQ =.TRUE., Q is an N &#8211; by &#8211; N matrix.On exit, Q has been postmultiplied by the left unitary transformation matrix which reorder(A, B); The leading M<br/>
+          columns of Q form orthonormal bases for the specified pair of<br/>
+          left eigenspaces (deflating subspaces).<br/>
           If WANTQ = .FALSE., Q is not referenced.</p>
 <p> <i>LDQ</i> </p>
 <pre>
@@ -134,9 +134,9 @@ description: "ctgsen.f –"
           If WANTQ = .TRUE., LDQ &gt;= N.
 </pre>
 <p> <i>Z</i> </p>
-<p>Z is COMPLEX array, dimension(LDZ, N) On entry, if WANTZ =.TRUE., Z is an N &#8211; by &#8211; N matrix.On exit, Z has been postmultiplied by the left unitary transformation matrix which reorder(A, B); The leading M<br />
-          columns of Z form orthonormal bases for the specified pair of<br />
-          left eigenspaces (deflating subspaces).<br />
+<p>Z is COMPLEX array, dimension(LDZ, N) On entry, if WANTZ =.TRUE., Z is an N &#8211; by &#8211; N matrix.On exit, Z has been postmultiplied by the left unitary transformation matrix which reorder(A, B); The leading M<br/>
+          columns of Z form orthonormal bases for the specified pair of<br/>
+          left eigenspaces (deflating subspaces).<br/>
           If WANTZ = .FALSE., Z is not referenced.</p>
 <p> <i>LDZ</i> </p>
 <pre>
@@ -181,11 +181,11 @@ description: "ctgsen.f –"
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>LWORK is INTEGER<br />
-        The dimension of the array WORK.LWORK &gt;= 1 If IJOB = 1,<br />
-                                                      2 or 4, LWORK &gt;= 2 * M *(N &#8211; M) If IJOB = 3 or 5, LWORK &gt;= 4 * M *(N &#8211; M) If LWORK = -1, then a workspace query is assumed;<br />
-the routine<br />
-    only calculates the optimal size of the WORK array,<br />
+<p>LWORK is INTEGER<br/>
+        The dimension of the array WORK.LWORK &gt;= 1 If IJOB = 1,<br/>
+                                                      2 or 4, LWORK &gt;= 2 * M *(N &#8211; M) If IJOB = 3 or 5, LWORK &gt;= 4 * M *(N &#8211; M) If LWORK = -1, then a workspace query is assumed;<br/>
+the routine<br/>
+    only calculates the optimal size of the WORK array,<br/>
     returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>IWORK</i> </p>
 <pre>
@@ -193,13 +193,13 @@ the routine<br />
           On exit, if INFO = 0, IWORK(1) returns the optimal LIWORK.
 </pre>
 <p> <i>LIWORK</i> </p>
-<p>LIWORK is INTEGER<br />
-        The dimension of the array IWORK.LIWORK &gt;= 1. If IJOB = 1,<br />
-                                                         2 or 4, LIWORK &gt;= N + 2;<br />
-If IJOB = 3 or 5, LIWORK &gt;= MAX(N + 2, 2 * M * (N &#8211; M));<br />
-If LIWORK = -1, then a workspace query is assumed;<br />
-the<br />
-    routine only calculates the optimal size of the IWORK array,<br />
+<p>LIWORK is INTEGER<br/>
+        The dimension of the array IWORK.LIWORK &gt;= 1. If IJOB = 1,<br/>
+                                                         2 or 4, LIWORK &gt;= N + 2;<br/>
+If IJOB = 3 or 5, LIWORK &gt;= MAX(N + 2, 2 * M * (N &#8211; M));<br/>
+If LIWORK = -1, then a workspace query is assumed;<br/>
+the<br/>
+    routine only calculates the optimal size of the IWORK array,<br/>
     returns this value as the first entry of the IWORK array, and no error message related to LIWORK is issued by XERBLA.</p>
 <p> <i>INFO</i> </p>
 <pre>

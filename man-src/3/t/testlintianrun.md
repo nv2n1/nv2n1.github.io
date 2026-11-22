@@ -16,16 +16,16 @@ description: "Test::Lintian::Run — generic runner for all suites"
 <p>Generic test runner for all Lintian test suites</p>
 <h2>Functions</h2>
 <dl COMPACT>
-<dt>logged_runner(<font SIZE="-1">RUN_PATH</font>)</dt>
-<dd>Starts the generic test runner for the test located in <font SIZE="-1">RUN_PATH</font> and logs the output.</dd>
-<dt>runner(<font SIZE="-1">RUN_PATH</font>)</dt>
-<dd>This routine provides the basic structure for all runners and runs the test located in <font SIZE="-1">RUN_PATH.</font></dd>
+<dt>logged_runner(RUN_PATH)</dt>
+<dd>Starts the generic test runner for the test located in RUN_PATH and logs the output.</dd>
+<dt>runner(RUN_PATH)</dt>
+<dd>This routine provides the basic structure for all runners and runs the test located in RUN_PATH.</dd>
 <dt>check_literal</dt>
 <dd>
 </dd><dt>check_tags</dt>
 <dd>
-</dd><dt>check_result(<font SIZE="-1">DESC, EXPECTED, ACTUAL</font>)</dt>
-<dd>This routine checks if the <font SIZE="-1">EXPECTED</font> tags match the calibrated <font SIZE="-1">ACTUAL</font> for the test described by <font SIZE="-1">DESC.</font> For some additional checks, also need the <font SIZE="-1">ORIGINAL</font> tags before calibration. Returns a list of errors, if there are any.</dd></dl>
+</dd><dt>check_result(DESC, EXPECTED, ACTUAL)</dt>
+<dd>This routine checks if the EXPECTED tags match the calibrated ACTUAL for the test described by DESC. For some additional checks, also need the ORIGINAL tags before calibration. Returns a list of errors, if there are any.</dd></dl>
 <h2>Author</h2>
 <p>Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

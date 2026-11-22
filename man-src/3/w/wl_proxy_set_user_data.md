@@ -38,9 +38,9 @@ void wl_proxy_set_queue (struct wl_proxy *proxy, struct wl_event_queue *queue)</
 <p>Set a proxy&#8217;s listener (with dispatcher) </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>proxy</i> The proxy object<br />
- <i>dispatcher</i> The dispatcher to be used for this proxy<br />
- <i>implementation</i> The dispatcher-specific listener implementation<br />
+<dd><i>proxy</i> The proxy object<br/>
+ <i>dispatcher</i> The dispatcher to be used for this proxy<br/>
+ <i>implementation</i> The dispatcher-specific listener implementation<br/>
  <i>data</i> User data to be associated with the proxy</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -51,8 +51,8 @@ void wl_proxy_set_queue (struct wl_proxy *proxy, struct wl_event_queue *queue)</
 <p>Set a proxy&#8217;s listener </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>proxy</i> The proxy object<br />
- <i>implementation</i> The listener to be added to proxy<br />
+<dd><i>proxy</i> The proxy object<br/>
+ <i>implementation</i> The listener to be added to proxy<br/>
  <i>data</i> User data to be associated with the proxy</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -63,7 +63,7 @@ void wl_proxy_set_queue (struct wl_proxy *proxy, struct wl_event_queue *queue)</
 <p>Create a proxy object with a given interface </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>factory</i> Factory proxy object<br />
+<dd><i>factory</i> Factory proxy object<br/>
  <i>interface</i> Interface the proxy object should use</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -119,8 +119,8 @@ void wl_proxy_set_queue (struct wl_proxy *proxy, struct wl_event_queue *queue)</
 <p>Prepare a request to be sent to the compositor </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>proxy</i> The proxy object<br />
- <i>opcode</i> Opcode of the request to be sent<br />
+<dd><i>proxy</i> The proxy object<br/>
+ <i>opcode</i> Opcode of the request to be sent<br/>
  <i>&#8230;</i> Extra arguments for the given request</dd></dl>
 <p> This function is similar to <code>wl_proxy_marshal_constructor()</code>, except it doesn&#8217;t create proxies for new-id arguments. </p>
 <p> <code>Note:</code></p>
@@ -133,8 +133,8 @@ void wl_proxy_set_queue (struct wl_proxy *proxy, struct wl_event_queue *queue)</
 <p>Prepare a request to be sent to the compositor </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>proxy</i> The proxy object<br />
- <i>opcode</i> Opcode of the request to be sent<br />
+<dd><i>proxy</i> The proxy object<br/>
+ <i>opcode</i> Opcode of the request to be sent<br/>
  <i>args</i> Extra arguments for the given request</dd></dl>
 <p> This function is similar to <code>wl_proxy_marshal_array_constructor()</code>, except it doesn&#8217;t create proxies for new-id arguments. </p>
 <p> <code>Note:</code></p>
@@ -147,9 +147,9 @@ void wl_proxy_set_queue (struct wl_proxy *proxy, struct wl_event_queue *queue)</
 <p>Prepare a request to be sent to the compositor </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>proxy</i> The proxy object<br />
- <i>opcode</i> Opcode of the request to be sent<br />
- <i>args</i> Extra arguments for the given request<br />
+<dd><i>proxy</i> The proxy object<br/>
+ <i>opcode</i> Opcode of the request to be sent<br/>
+ <i>args</i> Extra arguments for the given request<br/>
  <i>interface</i> The interface to use for the new proxy</dd></dl>
 <p> Translates the request given by opcode and the extra arguments into the wire format and write it to the connection buffer. This version takes an array of the union type <code>wl_argument</code>. </p>
 <p> For new-id arguments, this function will allocate a new <code>wl_proxy</code> and send the ID to the server. The new <code>wl_proxy</code> will be returned on success or NULL on errror with errno set accordingly. </p>
@@ -163,9 +163,9 @@ void wl_proxy_set_queue (struct wl_proxy *proxy, struct wl_event_queue *queue)</
 <p>Prepare a request to be sent to the compositor </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>proxy</i> The proxy object<br />
- <i>opcode</i> Opcode of the request to be sent<br />
- <i>interface</i> The interface to use for the new proxy<br />
+<dd><i>proxy</i> The proxy object<br/>
+ <i>opcode</i> Opcode of the request to be sent<br/>
+ <i>interface</i> The interface to use for the new proxy<br/>
  <i>&#8230;</i> Extra arguments for the given request</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -179,7 +179,7 @@ void wl_proxy_set_queue (struct wl_proxy *proxy, struct wl_event_queue *queue)</
 <p>Assign a proxy to an event queue </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>proxy</i> The proxy object<br />
+<dd><i>proxy</i> The proxy object<br/>
  <i>queue</i> The event queue that will handle this proxy</dd></dl>
 <p> Assign proxy to event queue. Events coming from proxy will be queued in queue instead of the display&#8217;s main queue. </p>
 <p> <code>See Also:</code></p>
@@ -189,7 +189,7 @@ void wl_proxy_set_queue (struct wl_proxy *proxy, struct wl_event_queue *queue)</
 <p>Set the user data associated with a proxy </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>proxy</i> The proxy object<br />
+<dd><i>proxy</i> The proxy object<br/>
  <i>user_data</i> The data to be associated with proxy</dd></dl>
 <p> Set the user data associated with proxy. When events for this proxy are received, user_data will be supplied to its listener.</p>
 <h2>Author</h2>

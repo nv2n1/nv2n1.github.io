@@ -50,31 +50,31 @@ description: "hwloc-distrib – Build a number of cpu masks distributed on the s
 <h2>EXAMPLES</h2>
 <p> hwloc-distrib&#8217;s operation is best described through several examples. </p>
 <p> If 4 processes have to be distributed across a machine, their CPU masks may be obtained with: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-distrib 4<br />
-&nbsp;<wbr>0x0000000f<br />
-&nbsp;<wbr>0x00000f00<br />
-&nbsp;<wbr>0x000000f0<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-distrib 4<br/>
+&nbsp;<wbr>0x0000000f<br/>
+&nbsp;<wbr>0x00000f00<br/>
+&nbsp;<wbr>0x000000f0<br/>
 &nbsp;<wbr>0x0000f000 </p>
 <p> To distribute only among the second package, the topology should be restricted: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-distrib &#8211;restrict&nbsp;<wbr>$(hwloc-calc package:1)&nbsp;<wbr>4<br />
-&nbsp;<wbr>0x00000010<br />
-&nbsp;<wbr>0x00000020<br />
-&nbsp;<wbr>0x00000040<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-distrib &#8211;restrict&nbsp;<wbr>$(hwloc-calc package:1)&nbsp;<wbr>4<br/>
+&nbsp;<wbr>0x00000010<br/>
+&nbsp;<wbr>0x00000020<br/>
+&nbsp;<wbr>0x00000040<br/>
 &nbsp;<wbr>0x00000080 </p>
 <p> To get a single processor of each CPU masks (prevent migration in case of binding) </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-distrib 4 &#8211;single<br />
-&nbsp;<wbr>0x00000001<br />
-&nbsp;<wbr>0x00000100<br />
-&nbsp;<wbr>0x00000010<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-distrib 4 &#8211;single<br/>
+&nbsp;<wbr>0x00000001<br/>
+&nbsp;<wbr>0x00000100<br/>
+&nbsp;<wbr>0x00000010<br/>
 &nbsp;<wbr>0x00001000 </p>
 <p> Each output line may be converted independently with hwloc-calc: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-distrib 4 &#8211;single | hwloc-calc &#8211;taskset<br />
-&nbsp;<wbr>0x1<br />
-&nbsp;<wbr>0x100<br />
-&nbsp;<wbr>0x10<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-distrib 4 &#8211;single | hwloc-calc &#8211;taskset<br/>
+&nbsp;<wbr>0x1<br/>
+&nbsp;<wbr>0x100<br/>
+&nbsp;<wbr>0x10<br/>
 &nbsp;<wbr>0x1000 </p>
 <p> To convert the output into a list of processors that may be passed to dplace -c inside a mpirun command line: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-distrib 4 &#8211;single | xargs hwloc-calc &#8211;pulist<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-distrib 4 &#8211;single | xargs hwloc-calc &#8211;pulist<br/>
 &nbsp;<wbr>0,8,4,16</p>
 <h2>RETURN VALUE</h2>
 <p> Upon successful execution, hwloc-distrib displays one or more CPU mask strings. The return value is 0. </p>

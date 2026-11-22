@@ -11,7 +11,7 @@ description: "csymm.f –"
 <p> csymm.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>csymm</code> (SIDE, UPLO, M, N, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
+<p> subroutine <code>csymm</code> (SIDE, UPLO, M, N, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br/>
  <i></i><code>CSYMM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine csymm (characterSIDE, characterUPLO, integerM, integerN, complexALPHA, complex, dimension(lda,*)A, integerLDA, complex, dimension(ldb,*)B, integerLDB, complexBETA, complex, dimension(ldc,*)C, integerLDC)</h3>

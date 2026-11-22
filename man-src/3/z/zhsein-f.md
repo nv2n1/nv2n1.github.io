@@ -10,7 +10,7 @@ description: "zhsein.f –"
 <p>zhsein.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhsein</code> (SIDE, EIGSRC, INITV, SELECT, N, H, LDH, W, VL, LDVL, VR, LDVR, MM, M, WORK, RWORK, IFAILL, IFAILR, INFO)<br />
+<p>subroutine <code>zhsein</code> (SIDE, EIGSRC, INITV, SELECT, N, H, LDH, W, VL, LDVL, VR, LDVR, MM, M, WORK, RWORK, IFAILL, IFAILR, INFO)<br/>
  <i></i><code>ZHSEIN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhsein (characterSIDE, characterEIGSRC, characterINITV, logical, dimension( * )SELECT, integerN, complex*16, dimension( ldh, * )H, integerLDH, complex*16, dimension( * )W, complex*16, dimension( ldvl, * )VL, integerLDVL, complex*16, dimension( ldvr, * )VR, integerLDVR, integerMM, integerM, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integer, dimension( * )IFAILL, integer, dimension( * )IFAILR, integerINFO)</h3>

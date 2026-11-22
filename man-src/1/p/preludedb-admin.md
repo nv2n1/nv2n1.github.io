@@ -67,5 +67,5 @@ preludedb-admin delete alert --criteria &quot;alert.classification.text == 'UDP 
 <h2>AUTHOR</h2>
 <p> This manpage was Written by Pierre Chifflier.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2006-2016 CS-SI.<br />
+<p> Copyright &#169; 2006-2016 CS-SI.<br/>
  This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law. </p>

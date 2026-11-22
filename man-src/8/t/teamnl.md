@@ -9,7 +9,7 @@ description: "teamnl — team network device Netlink interface tool"
 
 <p>teamnl &#8212; team network device Netlink interface tool</p>
 <h2>Synopsis</h2>
-<p><code>teamnl</code> [<code>-p</code> <i>port_name</i>] [<code>-a</code> <i>array_index</i>] <i>team_device command </i>[<i>command_args</i>&#8230;]<br />
+<p><code>teamnl</code> [<code>-p</code> <i>port_name</i>] [<code>-a</code> <i>array_index</i>] <i>team_device command </i>[<i>command_args</i>&#8230;]<br/>
  <code>teamnl</code> <code>-h</code></p>
 <h2>Description</h2>
 <p>teamnl is a tool enabling interaction with a team device via the team driver Netlink interface. This tools serves mainly for debugging purposes. Note that it makes no sense to use this tool to change options on team device controlled by a teamd instance.</p>

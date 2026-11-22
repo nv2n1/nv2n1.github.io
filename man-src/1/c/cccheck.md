@@ -30,15 +30,15 @@ description: "cccheck – Perform static code contracts verification for CLR ass
 <dl>
 <dt>Suppose you have a method:</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>void Method()&nbsp;<wbr>{<br />
-&nbsp;<wbr>object x&nbsp;<wbr>=&nbsp;<wbr>null;<br />
-&nbsp;<wbr>int y&nbsp;<wbr>=&nbsp;<wbr>1;<br />
-&nbsp;<wbr>if&nbsp;<wbr>(y&nbsp;<wbr>%&nbsp;<wbr>2&nbsp;<wbr>==&nbsp;<wbr>1)<br />
-x&nbsp;<wbr>=&nbsp;<wbr>new object();<br />
-&nbsp;<wbr>else<br />
+&nbsp;<wbr>&nbsp;<wbr>void Method()&nbsp;<wbr>{<br/>
+&nbsp;<wbr>object x&nbsp;<wbr>=&nbsp;<wbr>null;<br/>
+&nbsp;<wbr>int y&nbsp;<wbr>=&nbsp;<wbr>1;<br/>
+&nbsp;<wbr>if&nbsp;<wbr>(y&nbsp;<wbr>%&nbsp;<wbr>2&nbsp;<wbr>==&nbsp;<wbr>1)<br/>
+x&nbsp;<wbr>=&nbsp;<wbr>new object();<br/>
+&nbsp;<wbr>else<br/>
 x&nbsp;<wbr>=&nbsp;<wbr>new string(); </dd>
 <p>Contract.Assert(x&nbsp;<wbr>!=&nbsp;<wbr>null); } </p>
-<p> After the verification the tool will have results in following format: &quot;Assertion at : [Subroutine: &lt;id&gt; Block &lt;blockId&gt; PC &lt;id&gt;] :<br />
+<p> After the verification the tool will have results in following format: &quot;Assertion at : [Subroutine: &lt;id&gt; Block &lt;blockId&gt; PC &lt;id&gt;] :<br/>
 &nbsp;<wbr>is&nbsp;<wbr>(true|false|unproven|unreachable)&quot;. (PC is a program counter) </p>
 </dl>
 <h2>AUTHOR</h2>

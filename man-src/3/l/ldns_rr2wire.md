@@ -10,7 +10,7 @@ description: "ldns_rr2wire, ldns_pkt2wire, ldns_rdf2wire"
 
 <p> ldns_rr2wire, ldns_pkt2wire, ldns_rdf2wire </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_rr2wire(uint8_t **dest, const ldns_rr *rr, int, size_t *size); </p>

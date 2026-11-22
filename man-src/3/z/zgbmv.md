@@ -10,7 +10,7 @@ description: "zgbmv.f –"
 <p>zgbmv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgbmv</code> (TRANS, M, N, KL, KU, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>zgbmv</code> (TRANS, M, N, KL, KU, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>ZGBMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgbmv (characterTRANS, integerM, integerN, integerKL, integerKU, complex*16ALPHA, complex*16, dimension(lda,*)A, integerLDA, complex*16, dimension(*)X, integerINCX, complex*16BETA, complex*16, dimension(*)Y, integerINCY)</h3>

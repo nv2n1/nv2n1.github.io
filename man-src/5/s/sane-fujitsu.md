@@ -78,13 +78,13 @@ SP-600C/620C fi-5015C
 <h2>Environment</h2>
 <p>The backend uses a single environment variable, <code>SANE_DEBUG_FUJITSU</code>, which enables debugging output to stderr. Valid values are: </p>
 <dl>
-<dd>5 Errors<br />
- 10 Function trace<br />
- 15 Function detail<br />
- 20 Option commands<br />
- 25 SCSI/USB trace<br />
- 30 SCSI/USB writes<br />
- 31 SCSI/USB reads<br />
+<dd>5 Errors<br/>
+ 10 Function trace<br/>
+ 15 Function detail<br/>
+ 20 Option commands<br/>
+ 25 SCSI/USB trace<br/>
+ 30 SCSI/USB writes<br/>
+ 31 SCSI/USB reads<br/>
  35 Useless noise</dd></dl>
 <h2>Known Issues</h2>
 <p>Flatbed units may fail to scan at maximum area, particularly at high resolution. </p>
@@ -92,28 +92,28 @@ SP-600C/620C fi-5015C
 <p> CCITT Fax compression used by older scanners is not supported. </p>
 <p> JPEG output is supported by the backend, but not by the SANE protocol, so is disabled in this release. It can be enabled if you rebuild from source.</p>
 <h2>Credits</h2>
-<p>m3091 backend: Frederik Ramm &lt;<i>frederik a t remote d o t org</i>&gt;<br />
+<p>m3091 backend: Frederik Ramm &lt;<i>frederik a t remote d o t org</i>&gt;<br/>
  m3096g backend: Randolph Bentson &lt;<i>bentson a t holmsjoen d o t com</i>&gt; </p>
-<p>&nbsp;<wbr>&nbsp;(with credit to the unnamed author of the coolscan driver)<br />
+<p>&nbsp;<wbr>&nbsp;(with credit to the unnamed author of the coolscan driver)<br/>
  fujitsu backend, m3093, fi-4340C, ipc, cmp, long-time maintainer: </p>
-<p>&nbsp;<wbr>&nbsp;Oliver Schirrmeister &lt;<i>oschirr a t abm d o t de</i>&gt;<br />
- m3092: Mario Goppold &lt;<i>mgoppold a t tbzpariv d o t tcc-chemnitz dot de</i>&gt;<br />
- fi-4220C and basic USB support: Ron Cemer &lt;<i>ron a t roncemer d o t com</i>&gt;<br />
- fi-4120, fi-series color, backend re-write, jpeg, current maintainer:<br />
+<p>&nbsp;<wbr>&nbsp;Oliver Schirrmeister &lt;<i>oschirr a t abm d o t de</i>&gt;<br/>
+ m3092: Mario Goppold &lt;<i>mgoppold a t tbzpariv d o t tcc-chemnitz dot de</i>&gt;<br/>
+ fi-4220C and basic USB support: Ron Cemer &lt;<i>ron a t roncemer d o t com</i>&gt;<br/>
+ fi-4120, fi-series color, backend re-write, jpeg, current maintainer:<br/>
 &nbsp;<wbr>&nbsp;m. allan noah: &lt;<i>kitno455 a t gmail d o t com</i>&gt; </p>
-<p> JPEG output and low memory usage support funded by:<br />
+<p> JPEG output and low memory usage support funded by:<br/>
 &nbsp;<wbr>&nbsp;Archivista GmbH <i><a rel="nofollow" href="http://www.archivista.ch">www.archivista.ch</a></i> </p>
-<p> Endorser support funded by:<br />
-&nbsp;<wbr>&nbsp;O A S Oilfield Accounting Service Ltd<br />
-&nbsp;<wbr>&nbsp;1500, 840 &#8211; 7th Avenue S.W.<br />
-&nbsp;<wbr>&nbsp;Calgary, Alberta<br />
-&nbsp;<wbr>&nbsp;T2P 3G2 Canada<br />
+<p> Endorser support funded by:<br/>
+&nbsp;<wbr>&nbsp;O A S Oilfield Accounting Service Ltd<br/>
+&nbsp;<wbr>&nbsp;1500, 840 &#8211; 7th Avenue S.W.<br/>
+&nbsp;<wbr>&nbsp;Calgary, Alberta<br/>
+&nbsp;<wbr>&nbsp;T2P 3G2 Canada<br/>
 &nbsp;<wbr>&nbsp;1-403-263-2600 <i><a rel="nofollow" href="http://www.oas.ca">www.oas.ca</a></i> </p>
-<p> Automatic length detection support funded by:<br />
+<p> Automatic length detection support funded by:<br/>
 &nbsp;<wbr>&nbsp;Martin G. Miller <i>mgmiller at optonline.net</i> </p>
-<p> Hardware donated, software image enhancement and fi-6/7xxx support funded by:<br />
+<p> Hardware donated, software image enhancement and fi-6/7xxx support funded by:<br/>
 &nbsp;<wbr>&nbsp;Fujitsu Computer Products of America, Inc. <i><a rel="nofollow" href="http://www.fcpa.com">www.fcpa.com</a></i> </p>
-<p> iX500 support funded by:<br />
+<p> iX500 support funded by:<br/>
 &nbsp;<wbr>&nbsp;Prefix Computer Services <i><a rel="nofollow" href="http://www.prefixservice.com">www.prefixservice.com</a></i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-sp15c/">sane-sp15c</a></code>(5), <code><a href="/docs/linux/man/5-sane-avision/">sane-avision</a></code>(5), <code><a href="/docs/linux/man/5-sane-epjitsu/">sane-epjitsu</a></code>(5) </p>

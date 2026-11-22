@@ -28,10 +28,10 @@ description: "termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcfl
  int cfsetspeed(struct termios *  termios_p  , speed_t  speed  ); 
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>cfsetspeed</code>(), <code>cfmakeraw</code>(): <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19: <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier: <br />
+<p> <code>cfsetspeed</code>(), <code>cfmakeraw</code>(): <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19: <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier: <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE  </p>
 <h2>DESCRIPTION</h2>
 <p> The termios functions describe a general terminal interface that is provided to control asynchronous communications ports.  </p>
@@ -345,7 +345,7 @@ description: "termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcfl
 <p> POSIX does not specify whether the setting of the <code>O_NONBLOCK</code> file status flag takes precedence over the MIN and TIME settings. If <code>O_NONBLOCK</code> is set, a <code><a href="/docs/linux/man/2-read/">read</a></code>(2) in noncanonical mode may return immediately, regardless of the setting of MIN or TIME. Furthermore, if no data is available, POSIX permits a <code><a href="/docs/linux/man/2-read/">read</a></code>(2) in noncanonical mode to return either 0, or -1 with <i>errno</i> set to <code>EAGAIN</code>.  </p>
 <h3>Raw mode</h3>
 <p> <code>cfmakeraw</code>() sets the terminal to something like the &quot;raw&quot; mode of the old Version 7 terminal driver: input is available character by character, echoing is disabled, and all special processing of terminal input and output characters is disabled. The terminal attributes are set as follows: </p>
-<p> termios_p-&gt;c_iflag &amp;= ~(IGNBRK | BRKINT | PARMRK | ISTRIP <br />
+<p> termios_p-&gt;c_iflag &amp;= ~(IGNBRK | BRKINT | PARMRK | ISTRIP <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;| INLCR | IGNCR | ICRNL | IXON); termios_p-&gt;c_oflag &amp;= ~OPOST; termios_p-&gt;c_lflag &amp;= ~(ECHO | ECHONL | ICANON | ISIG | IEXTEN); termios_p-&gt;c_cflag &amp;= ~(CSIZE | PARENB); termios_p-&gt;c_cflag |= CS8;  </p>
 <h3>Line control</h3>
 <p> <code>tcsendbreak</code>() transmits a continuous stream of zero-valued bits for a specific duration, if the terminal is using asynchronous serial data transmission. If <i>duration</i> is zero, it transmits zero-valued bits for at least 0.25 seconds, and not more than 0.5 seconds. If <i>duration</i> is not zero, it sends zero-valued bits for some implementation-defined length of time. </p>

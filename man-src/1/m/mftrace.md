@@ -74,7 +74,7 @@ description: "mftrace – convert METAFONT format fonts into Type1 outline fonts
 <dt><code>-w, &#8211;warranty</code></dt>
 <dd> Show warranty and copyright.</dd></dl>
 <h2>COPYRIGHT</h2>
-<p> You may redistribute copies of mftrace under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.<br />
+<p> You may redistribute copies of mftrace under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.<br/>
  This manual page is copyright &#169; 2005,2006,2007 Julian Gilbey and is distributed under the GNU General Public License too.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), <code><a href="/docs/linux/man/1-autotrace/">autotrace</a></code>(1), <code><a href="/docs/linux/man/1-potrace/">potrace</a></code>(1), <code><a href="/docs/linux/man/1-fontforge/">fontforge</a></code>(1).</p>

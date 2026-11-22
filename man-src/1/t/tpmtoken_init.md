@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-tpmtoken_init/"
 description: "tpmtoken_init – initialize the user’s TPM PKCS#11 data store"
 ---
 
-<p>TPM Management &#8211; tpmtoken_init<br />
+<p>TPM Management &#8211; tpmtoken_init<br/>
  </center></p>
 
 <p> tpmtoken_init &#8211; initialize the user&#8217;s TPM PKCS#11 data store </p>

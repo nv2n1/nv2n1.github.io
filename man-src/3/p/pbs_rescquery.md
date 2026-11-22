@@ -21,9 +21,9 @@ int usepool(int connect, int update)</pre>
 <dt> <code>pbs_rescquery</code></dt>
 <dd>
 </dd><dd>Issue a request to the batch server to query the availability of resources. <i> is the connection returned by </i><code>pbs_connect</code>(). <i> is an array of one or more strings specifying the resources to be queried. is the is the number of strings in resourcelist. and are integer arrays of size arraysize. The amount of resource specified in the corresponding resourcelist string which is available, already allocated, reserved, and down/off-line is returned in the integer arrays.</dd>
-<dd>At the present time the only resources which may be specified is &quot;nodes&quot;. It may be specified as<br />
+<dd>At the present time the only resources which may be specified is &quot;nodes&quot;. It may be specified as<br/>
  </i><code> </dd>
-<p> <code><br />
+<p> <code><br/>
  where specification is what a user specifies in the -l option arguement list for nodes, see qsub(1B) and the various pbs_resource_* man pages.</p>
 <dd>Where the node resourcelist is a simple type, such as &quot;nodes&quot;, &quot;nodes=&quot;, or &quot;nodes=type</code>&quot;, the numbers returned reflect the actual number of nodes (of the specified type) which are <code>available</code>, <code>allocated</code>, <code>reserved</code>, or <code>down</code>.</dd>
 <dd>For a more complex node resourcelist, such as &quot;nodes=2&quot; or &quot;nodes=type1:type2&quot;, only the value returned in <i>available</i> has meaning. If the number in <i>available</i> is positive, it is the number of nodes requried to satisified the specification and that some set of nodes are available which will satisify it, see <i>avail ().</i> If the number in <i>available</i> is zero, some number of nodes requried to satisified the specification are currently unavailable, the request might be satisifed at a later time. If the number in <i>available</i> is negative, no combination of known nodes can satisified the specification.</dd>

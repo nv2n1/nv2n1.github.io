@@ -158,13 +158,13 @@ xrdcp - old[options] source destination
 <p> <i>source</i></p>
 <dl>
 <dt>
-</dt><dd> a local file, a local directory name suffixed by /, or an xrootd URL in the form of <center> <code><a href="xroot://[">xroot://[</a></code><i>user</i><code>@</code>]<i>host[</i><code>:</code><i>port</i>]<code>/</code><i>absolutepath</i><br />
+</dt><dd> a local file, a local directory name suffixed by /, or an xrootd URL in the form of <center> <code><a href="xroot://[">xroot://[</a></code><i>user</i><code>@</code>]<i>host[</i><code>:</code><i>port</i>]<code>/</code><i>absolutepath</i><br/>
  </center> The <i>absolutepath</i> can be a directory. </dd>
 </dl>
 <p> <i>destination</i></p>
 <dl>
 <dt>
-</dt><dd> a dash (i.e. <code>&#8211;</code>) indicating stanard out, a local file, a local directory name suffixed by /, or an xrootd URL in the form <center> <code><a href="xroot://[">xroot://[</a></code><i>user</i><code>@</code>]<i>host[</i><code>:</code><i>port</i>]<code>/</code><i>absolutepath</i><br />
+</dt><dd> a dash (i.e. <code>&#8211;</code>) indicating stanard out, a local file, a local directory name suffixed by /, or an xrootd URL in the form <center> <code><a href="xroot://[">xroot://[</a></code><i>user</i><code>@</code>]<i>host[</i><code>:</code><i>port</i>]<code>/</code><i>absolutepath</i><br/>
  </center> The <i>absolutepath</i> can be a directory. </dd>
 </dl>
 <h2>EXAMPLES (GENERIC)</h2>
@@ -183,15 +183,15 @@ xrdcp - old[options] source destination
 <dl>
 <dt>local file upload to a Castor instance using a specific service class and stager:</dt>
 <dd>
- <code>$ xrdcp-old /tmp/myfile root://&lt;stagerhost&gt;.cern.ch//castor/cern.ch/data/myfile -ODstagerHost=$STAGE_HOST&amp;svcClass=$STAGE_SVCCLASS</code><br />
+ <code>$ xrdcp-old /tmp/myfile root://&lt;stagerhost&gt;.cern.ch//castor/cern.ch/data/myfile -ODstagerHost=$STAGE_HOST&amp;svcClass=$STAGE_SVCCLASS</code><br/>
  [ you need to escape the &#8216;&amp;&#8217; in the shell ]</dd>
 <dt>remote file download from a Castor instance using a specific stager:</dt>
 <dd>
  <code>$ xrdcp-old /tmp/myfile root://&lt;stagerhost&gt;.cern.ch//castor/cern.ch/data/myfile -OSstagerHost=$STAGE_HOST</code></dd>
 <dt>client-proxy copy to-/from- a Castor instance:</dt>
 <dd>
- <code>$ xrdcp-old</code><br />
- <code>root://&lt;stagerA&gt;.cern.ch//castor/cern.ch/data/stagerA/myfile -OSstagerHost=&lt;stagerA&gt;</code><br />
+ <code>$ xrdcp-old</code><br/>
+ <code>root://&lt;stagerA&gt;.cern.ch//castor/cern.ch/data/stagerA/myfile -OSstagerHost=&lt;stagerA&gt;</code><br/>
  <code>root://&lt;stagerB&gt;.cern.ch//castor/cern.ch/data/stagerB/myfile -ODstagerHost=&lt;stagerA&gt;</code> </dd>
 <p> [ you cannot copy between stagers using the same logical filename in the castor namespace! ]</dl>
 <h2>NOTES</h2>
@@ -201,5 +201,5 @@ xrdcp - old[options] source destination
 <h2>LICENSE</h2>
 <p> License terms can be displayed by typing &quot;<code>xrootd -H</code>&quot;.</p>
 <h2>SUPPORT LEVEL</h2>
-<p> The <code>xrdcp</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
+<p> The <code>xrdcp</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br/>
  </center> </p>

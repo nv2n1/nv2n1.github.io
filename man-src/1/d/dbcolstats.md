@@ -12,18 +12,18 @@ description: "dbcolstats – compute statistics on a fsdb column"
 <h2>SYNOPSIS</h2>
 <p> dbcolstats [-amS] [-c ConfidenceFraction] [-q NumberOfQuantiles] column</p>
 <h2>DESCRIPTION</h2>
-<p> Compute statistics over a <font SIZE="-1">COLUMN</font> of data. Records containing non-numeric data are considered null do not contribute to the stats (with the <tt>&quot;-a&quot;</tt> option they are treated as zeros). </p>
+<p> Compute statistics over a COLUMN of data. Records containing non-numeric data are considered null do not contribute to the stats (with the <tt>&quot;-a&quot;</tt> option they are treated as zeros). </p>
 <p> Confidence intervals are a t-test (+/- (t_{a/2})*s/sqrt(n)) and assume the population takes a normal distribution with a small number of samples (&lt; 100). </p>
 <p> By default, all statistics are computed for as a population <i>sample</i> (with an &#8220;n-1&#8221; term), not as representing the whole population (using &#8220;n&#8221;). Select between them with <code>&#8211;sample</code> or <code>&#8211;nosample</code>. When you measure the entire population, use the latter option. </p>
 <p> The output of this program is probably best looked at after reformatting with dblistize. </p>
-<p> Dbcolstats runs in O(1) memory. Median or quantile requires sorting the data and invokes dbsort. Sorting will run in constant <font SIZE="-1">RAM</font> but O(number of records) disk space. If median or quantile is required and the data is already sorted, dbcolstats will run more efficiently with the -S option.</p>
+<p> Dbcolstats runs in O(1) memory. Median or quantile requires sorting the data and invokes dbsort. Sorting will run in constant RAM but O(number of records) disk space. If median or quantile is required and the data is already sorted, dbcolstats will run more efficiently with the -S option.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-a</code> or <code>&#8211;include-non-numeric</code></dt>
 <dd> Compute stats over all records (treat non-numeric records as zero rather than just ignoring them).</dd>
-<dt><code>-c </code><font SIZE="-1"><code>FRACTION</code></font> or <code>&#8211;confidence </code><font SIZE="-1"><code>FRACTION</code></font></dt>
-<dd> Specify <font SIZE="-1">FRACTION</font> for the confidence interval. Defaults to 0.95 for a 95% confidence factor.</dd>
-<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></dt>
+<dt><code>-c </code><code>FRACTION</code> or <code>&#8211;confidence </code><code>FRACTION</code></dt>
+<dd> Specify FRACTION for the confidence interval. Defaults to 0.95 for a 95% confidence factor.</dd>
+<dt><code>-f </code><code>FORMAT</code> or <code>&#8211;format </code><code>FORMAT</code></dt>
 <dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output statistics. Defaults to <tt>&quot;%.5g&quot;</tt>.</dd>
 <dt><code>-m</code> or <code>&#8211;median</code></dt>
 <dd> Compute median value. (Will sort data if necessary.) (Median is the quantitle for N=2.)</dd>
@@ -40,7 +40,7 @@ description: "dbcolstats – compute statistics on a fsdb column"
 <dt><code>-F</code> or <code>&#8211;fs</code> or <code>&#8211;fieldseparator</code> S</dt>
 <dd> Specify the field (column) separator as <tt>&quot;S&quot;</tt>. See dbfilealter for valid field separators.</dd>
 <dt><code>-T TmpDir</code></dt>
-<dd> where to put temporary data. Only used if median or quantiles are requested. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd>
+<dd> where to put temporary data. Only used if median or quantiles are requested. Also uses environment variable TMPDIR, if -T is not specified. Default is /tmp.</dd>
 <dt><code>-k KeyField</code></dt>
 <dd> Do multi-stats, grouped by each key. Assumes keys are sorted. (Use dbmultistats to guarantee sorting order.)</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
@@ -100,4 +100,4 @@ description: "dbcolstats – compute statistics on a fsdb column"
 <p> Because of limits of floating point, statistics on numbers of widely different scales may be incorrect. See the test cases <i>dbcolstats_extrema</i> for examples.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

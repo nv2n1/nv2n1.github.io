@@ -10,10 +10,10 @@ description: "ql/pricingengines/vanilla/bjerksundstenslandengine.hpp – Bjerksu
 
 <p> ql/pricingengines/vanilla/bjerksundstenslandengine.hpp &#8211; Bjerksund and Stensland approximation engine. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instruments/vanillaoption.hpp&gt;<br />
+<p> #include &lt;ql/instruments/vanillaoption.hpp&gt;<br/>
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>BjerksundStenslandApproximationEngine</code><br />
+<p> class <code>BjerksundStenslandApproximationEngine</code><br/>
  <i>Bjerksund and Stensland pricing engine for American options (1993). </i></p>
 <h2>Detailed Description</h2>
 <p> Bjerksund and Stensland approximation engine. </p>

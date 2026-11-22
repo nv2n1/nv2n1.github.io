@@ -23,6 +23,6 @@ description: "ntfs-config – Enable/disable write support for NTFS with a simpl
 <dt><code>-d</code>, <code>&#8211;debug</code></dt>
 <dd>Print debugging information.</dd></dl>
 <h2>See Also</h2>
-<p>You can get more support by visting ntfs-config homepage :<br />
- <code><a rel="nofollow" href="http://flomertens.free.fre/ntfs-config">http://flomertens.free.fre/ntfs-config</a></code> You can also get more information about ntfs-3g at :<br />
+<p>You can get more support by visting ntfs-config homepage :<br/>
+ <code><a rel="nofollow" href="http://flomertens.free.fre/ntfs-config">http://flomertens.free.fre/ntfs-config</a></code> You can also get more information about ntfs-3g at :<br/>
  <code><a rel="nofollow" href="http://www.ntfs-3g.org">http://www.ntfs-3g.org</a></code> </p>

@@ -12,7 +12,7 @@ description: "llvm-dis – LLVM disassembler"
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-dis</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> The <code>llvm-dis</code> command is the <font SIZE="-1">LLVM</font> disassembler. It takes an <font SIZE="-1">LLVM</font> bitcode file and converts it into human-readable <font SIZE="-1">LLVM</font> assembly language. </p>
+<p> The <code>llvm-dis</code> command is the LLVM disassembler. It takes an LLVM bitcode file and converts it into human-readable LLVM assembly language. </p>
 <p> If filename is omitted or specified as <tt>&quot;-&quot;</tt>, <code>llvm-dis</code> reads its input from standard input. </p>
 <p> If the input is being read from standard input, then <code>llvm-dis</code> will send its output to standard output by default. Otherwise, the output will be written to a file named after the input file, with a <tt>&quot;.ll&quot;</tt> suffix added (any existing <tt>&quot;.bc&quot;</tt> suffix will first be removed). You can override the choice of output file using the <code>-o</code> option.</p>
 <h2>OPTIONS</h2>
@@ -28,4 +28,4 @@ description: "llvm-dis – LLVM disassembler"
 <h2>SEE ALSO</h2>
 <p> llvm-as</p>
 <h2>AUTHORS</h2>
-<p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
+<p> Maintained by the LLVM Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>

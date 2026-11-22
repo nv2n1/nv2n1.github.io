@@ -73,6 +73,6 @@ description: "ncargpath – Return the full pathname to a given NCAR Graphics di
 <h2>SEE ALSO</h2>
 <p> Online: <code>ncarg_env(5NCARG),</code>ncarg_gks(3NCARG),<code>ncargintro(5NCARG)</code> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1987-2009<br />
- University Corporation for Atmospheric Research<br />
+<p> Copyright (C) 1987-2009<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement. </p>

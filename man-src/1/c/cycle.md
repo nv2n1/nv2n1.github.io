@@ -15,21 +15,21 @@ description: "cycle – a calendar for women"
 <p> Cycle is a calendar program for women. Given a cycle length or statistics for several periods, it can calculate the days until menstruation, the days of &quot;safe&quot; sex, the fertile period, and the days to ovulations, and define the d.o.b. (date of birth) of a child. It allows the user to write notes and helps to supervise the reception of hormonal contraceptive tablets.</p>
 <h2>FEATURES</h2>
 <p> The program is capable of: </p>
-<p>&nbsp;<wbr>&#8211; Calculate of the days of menstruation, based on length of the cycle or on statistics of a period.<br />
-&nbsp;<wbr>&#8211; Calculate the&nbsp;<wbr>&quot;safe&quot;&nbsp;<wbr>sex days, fertile period and day to ovulations<br />
-&nbsp;<wbr>&#8211; Definition of D.O.B .&nbsp;<wbr>(Date Of Birth)&nbsp;<wbr>of a child<br />
-&nbsp;<wbr>&#8211; Allows to write notes<br />
+<p>&nbsp;<wbr>&#8211; Calculate of the days of menstruation, based on length of the cycle or on statistics of a period.<br/>
+&nbsp;<wbr>&#8211; Calculate the&nbsp;<wbr>&quot;safe&quot;&nbsp;<wbr>sex days, fertile period and day to ovulations<br/>
+&nbsp;<wbr>&#8211; Definition of D.O.B .&nbsp;<wbr>(Date Of Birth)&nbsp;<wbr>of a child<br/>
+&nbsp;<wbr>&#8211; Allows to write notes<br/>
 &nbsp;<wbr>&#8211; Helps to supervise reception of hormonal contraceptive tablets </p>
 <h2>HOW DOES IT WORK</h2>
 <p> It uses the calendar method for the definition of fertile days. For this is necessary to determine duration, at least, of last six cycles. For determine the fertile days it uses this algoritm: </p>
-<p>&nbsp;<wbr>&#8211; First day: duration of shortest cycle minus 18<br />
-&nbsp;<wbr>&#8211; Last day: duration of longest cycle minus 11<br />
+<p>&nbsp;<wbr>&#8211; First day: duration of shortest cycle minus 18<br/>
+&nbsp;<wbr>&#8211; Last day: duration of longest cycle minus 11<br/>
 &nbsp;<wbr>&#8211; Ovulation: is considered in the middle of fertile period&nbsp;<wbr>(Determine the exact day isn&#8217;t possible with the calendar method)&nbsp;<wbr> </p>
 <p> Date of a birth of the child is counted from the beginning of last menstruation (in obstetrics are accepted 40 weeks). This date is corrected with the duration of a cycle (are subtracted or added same number of days that a cycle differs from 28 days). Is possible check the results at: <a rel="nofollow" href="http://cir.msk.ru/sroki.shtml">http://cir.msk.ru/sroki.shtml</a> (in Russian)</p>
 <h2>USAGE</h2>
 <p> It is necessary to mark the beginning of menstruation. This is possible clicking with the right button on the date and chosing &quot;The beginning of a cycle&quot;. Similarly the mark can be removed. Using duration of last six cycles, the program will calculate </p>
-<p>&nbsp;<wbr>&#8211; Fertile period &#8211; green cells<br />
-&nbsp;<wbr>&#8211; Ovulation day&nbsp;<wbr>(the middle fertile period)&nbsp;<wbr>&#8211; brightly green cell<br />
+<p>&nbsp;<wbr>&#8211; Fertile period &#8211; green cells<br/>
+&nbsp;<wbr>&#8211; Ovulation day&nbsp;<wbr>(the middle fertile period)&nbsp;<wbr>&#8211; brightly green cell<br/>
 &nbsp;<wbr>&#8211; Beginning of following menstruation &#8211; pink cells&nbsp;<wbr> </p>
 <p> Cycle duration is set in options or is calculated an average of last six periods. </p>
 <p> To determine prospective date of a birth of the child, it is necessary first day of last cycle to mark in addition as &quot;Pregnancy&quot;. </p>

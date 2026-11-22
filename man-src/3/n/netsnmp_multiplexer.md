@@ -9,9 +9,9 @@ description: "multiplexer – Splits mode requests into calls to different handl
 
 <p>multiplexer &#8211; Splits mode requests into calls to different handlers.</p>
 <h3>Functions</h3>
-<p><code>netsnmp_mib_handler</code> * <code>netsnmp_get_multiplexer_handler</code> (<code>netsnmp_mib_handler_methods</code> *req)<br />
- <i>returns a multiplixer handler given a </i><code>netsnmp_mib_handler_methods</code> structure of subhandlers.<br />
- int <code>netsnmp_multiplexer_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)<br />
+<p><code>netsnmp_mib_handler</code> * <code>netsnmp_get_multiplexer_handler</code> (<code>netsnmp_mib_handler_methods</code> *req)<br/>
+ <i>returns a multiplixer handler given a </i><code>netsnmp_mib_handler_methods</code> structure of subhandlers.<br/>
+ int <code>netsnmp_multiplexer_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)<br/>
  <i>implements the multiplexer helper </i></p>
 <h2>Detailed Description</h2>
 <p>Splits mode requests into calls to different handlers. </p>

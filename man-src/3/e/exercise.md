@@ -10,18 +10,18 @@ description: "ql/exercise.hpp – Option exercise classes and payoff function."
 
 <p> ql/exercise.hpp &#8211; Option exercise classes and payoff function. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/time/date.hpp&gt;<br />
+<p> #include &lt;ql/time/date.hpp&gt;<br/>
  #include &lt;vector&gt; </p>
 <h3>Classes</h3>
-<p> class <code>Exercise</code><br />
- <i>Base exercise class. </i><br />
- class <code>EarlyExercise</code><br />
- <i>Early-exercise base class. </i><br />
- class <code>AmericanExercise</code><br />
- <i>American exercise. </i><br />
- class <code>BermudanExercise</code><br />
- <i>Bermudan exercise. </i><br />
- class <code>EuropeanExercise</code><br />
+<p> class <code>Exercise</code><br/>
+ <i>Base exercise class. </i><br/>
+ class <code>EarlyExercise</code><br/>
+ <i>Early-exercise base class. </i><br/>
+ class <code>AmericanExercise</code><br/>
+ <i>American exercise. </i><br/>
+ class <code>BermudanExercise</code><br/>
+ <i>Bermudan exercise. </i><br/>
+ class <code>EuropeanExercise</code><br/>
  <i>European exercise. </i></p>
 <h2>Detailed Description</h2>
 <p> Option exercise classes and payoff function. </p>

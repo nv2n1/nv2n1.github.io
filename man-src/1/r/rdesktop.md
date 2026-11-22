@@ -178,6 +178,6 @@ description: "rdesktop – Remote Desktop Protocol client"
 <dd> Protocol error or unable to connect to remote host. </dd>
 </dl>
 <h2>LINKS</h2>
-<p> Main website of rdesktop<br />
+<p> Main website of rdesktop<br/>
  <i><a rel="nofollow" href="http://www.rdesktop.org/">http://www.rdesktop.org/</a> </p>
 <p> </i></p>

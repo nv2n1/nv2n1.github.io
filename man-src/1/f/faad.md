@@ -22,16 +22,16 @@ description: "faad — Process an Advanced Audio Codec stream"
 <dl>
 <dl>
 <dt>
-</dt><dd> 1: 16-bit PCM data (default).<br />
- 2: 24-bit PCM data.<br />
- 3: 32-bit PCM data.<br />
+</dt><dd> 1: 16-bit PCM data (default).<br/>
+ 2: 24-bit PCM data.<br/>
+ 3: 32-bit PCM data.<br/>
  4: 32-bit floatingpe&quot; &quot; &lt;number&gt;&quot; Sets the MPEGpe for the processing to use. The number takes one of the following values:</dd>
 <dl>
 <dl>
 <dt>
-</dt><dd> 1: Main object type.<br />
- 2: Low Complexity (LC) object type (default).<br />
- 4: Long Term Prediction (LTP) object type.<br />
+</dt><dd> 1: Main object type.<br/>
+ 2: Low Complexity (LC) object type (default).<br/>
+ 4: Long Term Prediction (LTP) object type.<br/>
  23: Low Delay (LD) object type.</dd></dl>
 </dl>
 <dl>

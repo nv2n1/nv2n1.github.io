@@ -21,6 +21,6 @@ Allocates storage with a size of at least bytes bytes.The returned storage is al
 <h2>Exceptions</h2>
 <p>Throws an exception if storage of the requested size and alignment cannot be obtained.</p>
 <h2>See also</h2>
-<p>do_allocate allocates memory<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(virtual private member function)<br />
+<p>do_allocate allocates memory<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(virtual private member function)<br/>
 <code>[virtual]</code> </p>

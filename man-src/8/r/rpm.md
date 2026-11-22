@@ -12,27 +12,27 @@ description: "rpm – RPM Package Manager"
 <h3>Querying And Verifying Packages:</h3>
 <p><code>rpm</code> {<code>-q|&#8211;query</code>} [<code>select-options</code>] [<code>query-options</code>] <code>rpm</code> {<code>-V|&#8211;verify</code>} [<code>select-options</code>] [<code>verify-options</code>]</p>
 <h3>Installing, Upgrading, And Removing Packages:</h3>
-<p><code>rpm</code> {<code>-i|&#8211;install</code>} [<code>install-options</code>] <i>PACKAGE_FILE</i><i> &#8230;</i> <code>rpm</code> {<code>-U|&#8211;upgrade</code>} [<code>install-options</code>] <i>PACKAGE_FILE</i><i> &#8230;</i> <code>rpm</code> {<code>-F|&#8211;freshen</code>} [<code>install-options</code>] <i>PACKAGE_FILE</i><i> &#8230;</i> <code>rpm</code> {<code>-e|&#8211;erase</code>} [<code>&#8211;allmatches</code>] [<code>&#8211;justdb] [&#8211;nodeps</code>] [<code>&#8211;noscripts</code>]<br />
+<p><code>rpm</code> {<code>-i|&#8211;install</code>} [<code>install-options</code>] <i>PACKAGE_FILE</i><i> &#8230;</i> <code>rpm</code> {<code>-U|&#8211;upgrade</code>} [<code>install-options</code>] <i>PACKAGE_FILE</i><i> &#8230;</i> <code>rpm</code> {<code>-F|&#8211;freshen</code>} [<code>install-options</code>] <i>PACKAGE_FILE</i><i> &#8230;</i> <code>rpm</code> {<code>-e|&#8211;erase</code>} [<code>&#8211;allmatches</code>] [<code>&#8211;justdb] [&#8211;nodeps</code>] [<code>&#8211;noscripts</code>]<br/>
 &nbsp;<wbr>[<code>&#8211;notriggers</code>]&nbsp;<wbr>[<code>&#8211;test</code>]&nbsp;<wbr><i>PACKAGE_NAME</i><i>&nbsp;<wbr>&#8230;</i></p>
 <h3>Miscellaneous:</h3>
 <p><code>rpm</code> {<code>&#8211;querytags|&#8211;showrc</code>} <code>rpm</code> {<code>&#8211;setperms|&#8211;setugids</code>} <i>PACKAGE_NAME</i><i> &#8230;</i></p>
 <h3>select-options</h3>
-<p>&nbsp;<wbr>[<i>PACKAGE_NAME</i>]&nbsp;<wbr>[<code>-a,&#8211;all</code>]&nbsp;<wbr>[<code>-f,&#8211;file&nbsp;<wbr></code><i>FILE</i>]<br />
-&nbsp;<wbr>[<code>-g,&#8211;group&nbsp;<wbr></code><i>GROUP</i>]&nbsp;<wbr>{<code>-p,&#8211;package&nbsp;<wbr></code><i>PACKAGE_FILE</i>]<br />
-&nbsp;<wbr>[<code>&#8211;hdrid&nbsp;<wbr></code><i>SHA1</i>]&nbsp;<wbr>[<code>&#8211;pkgid&nbsp;<wbr></code><i>MD5</i>]&nbsp;<wbr>[<code>&#8211;tid&nbsp;<wbr></code><i>TID</i>]<br />
-&nbsp;<wbr>[<code>&#8211;querybynumber&nbsp;<wbr></code><i>HDRNUM</i>]&nbsp;<wbr>[<code>&#8211;triggeredby&nbsp;<wbr></code><i>PACKAGE_NAME</i>]<br />
+<p>&nbsp;<wbr>[<i>PACKAGE_NAME</i>]&nbsp;<wbr>[<code>-a,&#8211;all</code>]&nbsp;<wbr>[<code>-f,&#8211;file&nbsp;<wbr></code><i>FILE</i>]<br/>
+&nbsp;<wbr>[<code>-g,&#8211;group&nbsp;<wbr></code><i>GROUP</i>]&nbsp;<wbr>{<code>-p,&#8211;package&nbsp;<wbr></code><i>PACKAGE_FILE</i>]<br/>
+&nbsp;<wbr>[<code>&#8211;hdrid&nbsp;<wbr></code><i>SHA1</i>]&nbsp;<wbr>[<code>&#8211;pkgid&nbsp;<wbr></code><i>MD5</i>]&nbsp;<wbr>[<code>&#8211;tid&nbsp;<wbr></code><i>TID</i>]<br/>
+&nbsp;<wbr>[<code>&#8211;querybynumber&nbsp;<wbr></code><i>HDRNUM</i>]&nbsp;<wbr>[<code>&#8211;triggeredby&nbsp;<wbr></code><i>PACKAGE_NAME</i>]<br/>
 &nbsp;<wbr>[<code>&#8211;whatprovides&nbsp;<wbr></code><i>CAPABILITY</i>]&nbsp;<wbr>[<code>&#8211;whatrequires&nbsp;<wbr></code><i>CAPABILITY</i>]</p>
 <h3>query-options</h3>
-<p>&nbsp;<wbr>[<code>&#8211;changelog</code>]&nbsp;<wbr>[<code>-c,&#8211;configfiles</code>]&nbsp;<wbr>[<code>&#8211;conflicts</code>]<br />
-&nbsp;<wbr>[<code>-d,&#8211;docfiles</code>]&nbsp;<wbr>[<code>&#8211;dump</code>]&nbsp;<wbr>[<code>&#8211;filesbypkg</code>]&nbsp;<wbr>[<code>-i,&#8211;info</code>]<br />
-&nbsp;<wbr>[<code>&#8211;last</code>]&nbsp;<wbr>[<code>-l,&#8211;list</code>]&nbsp;<wbr>[<code>&#8211;obsoletes</code>]&nbsp;<wbr>[<code>&#8211;provides</code>]<br />
-&nbsp;<wbr>[<code>&#8211;qf,&#8211;queryformat&nbsp;<wbr></code><i>QUERYFMT</i>]&nbsp;<wbr>[<code>-R,&#8211;requires</code>]<br />
+<p>&nbsp;<wbr>[<code>&#8211;changelog</code>]&nbsp;<wbr>[<code>-c,&#8211;configfiles</code>]&nbsp;<wbr>[<code>&#8211;conflicts</code>]<br/>
+&nbsp;<wbr>[<code>-d,&#8211;docfiles</code>]&nbsp;<wbr>[<code>&#8211;dump</code>]&nbsp;<wbr>[<code>&#8211;filesbypkg</code>]&nbsp;<wbr>[<code>-i,&#8211;info</code>]<br/>
+&nbsp;<wbr>[<code>&#8211;last</code>]&nbsp;<wbr>[<code>-l,&#8211;list</code>]&nbsp;<wbr>[<code>&#8211;obsoletes</code>]&nbsp;<wbr>[<code>&#8211;provides</code>]<br/>
+&nbsp;<wbr>[<code>&#8211;qf,&#8211;queryformat&nbsp;<wbr></code><i>QUERYFMT</i>]&nbsp;<wbr>[<code>-R,&#8211;requires</code>]<br/>
 &nbsp;<wbr>[<code>&#8211;scripts</code>]&nbsp;<wbr>[<code>-s,&#8211;state</code>]&nbsp;<wbr>[<code>&#8211;triggers,&#8211;triggerscripts</code>]</p>
 <h3>verify-options</h3>
-<p>&nbsp;<wbr>[<code>&#8211;nodeps</code>]&nbsp;<wbr>[<code>&#8211;nofiles</code>]&nbsp;<wbr>[<code>&#8211;noscripts</code>]<br />
-&nbsp;<wbr>[<code>&#8211;nodigest</code>]&nbsp;<wbr>[<code>&#8211;nosignature</code>]<br />
-&nbsp;<wbr>[<code>&#8211;nolinkto</code>]&nbsp;<wbr>[<code>&#8211;nofiledigest</code>]&nbsp;<wbr>[<code>&#8211;nosize</code>]&nbsp;<wbr>[<code>&#8211;nouser</code>]<br />
-&nbsp;<wbr>[<code>&#8211;nogroup</code>]&nbsp;<wbr>[<code>&#8211;nomtime</code>]&nbsp;<wbr>[<code>&#8211;nomode</code>]&nbsp;<wbr>[<code>&#8211;nordev</code>]<br />
+<p>&nbsp;<wbr>[<code>&#8211;nodeps</code>]&nbsp;<wbr>[<code>&#8211;nofiles</code>]&nbsp;<wbr>[<code>&#8211;noscripts</code>]<br/>
+&nbsp;<wbr>[<code>&#8211;nodigest</code>]&nbsp;<wbr>[<code>&#8211;nosignature</code>]<br/>
+&nbsp;<wbr>[<code>&#8211;nolinkto</code>]&nbsp;<wbr>[<code>&#8211;nofiledigest</code>]&nbsp;<wbr>[<code>&#8211;nosize</code>]&nbsp;<wbr>[<code>&#8211;nouser</code>]<br/>
+&nbsp;<wbr>[<code>&#8211;nogroup</code>]&nbsp;<wbr>[<code>&#8211;nomtime</code>]&nbsp;<wbr>[<code>&#8211;nomode</code>]&nbsp;<wbr>[<code>&#8211;nordev</code>]<br/>
 &nbsp;<wbr>[<code>&#8211;nocaps</code>]</p>
 <h3>install-options</h3>
 <pre><code>[--allfiles] [--badreloc] [--excludepath OLDPATH]
@@ -170,7 +170,7 @@ description: "rpm – RPM Package Manager"
 <dt><code>&#8211;test</code></dt>
 <dd>Don&#8217;t really uninstall anything, just go through the motions. Useful in conjunction with the <code>-vv</code> option for debugging.</dd></dl>
 <h3>Query Options</h3>
-<p>The general form of an rpm query command is <code>rpm</code> {<code>-q|&#8211;query</code>} [<code>select-options</code>] [<code>query-options</code>] You may specify the format that package information should be printed in. To do this, you use the<br />
+<p>The general form of an rpm query command is <code>rpm</code> {<code>-q|&#8211;query</code>} [<code>select-options</code>] [<code>query-options</code>] You may specify the format that package information should be printed in. To do this, you use the<br/>
 &nbsp;<wbr><code>&#8211;qf|&#8211;queryformat</code>&nbsp;<wbr><i>QUERYFMT</i> option, followed by the <i>QUERYFMT</i> format string. Query formats are modified versions of the standard <code><a href="/docs/linux/man/3-printf/">printf</a>(3)</code> formatting. The format is made up of static strings (which may include standard C character escapes for newlines, tabs, and other special characters) and <code><a href="/docs/linux/man/3-printf/">printf</a>(3)</code> type formatters. As <code>rpm</code> already knows the type to print, the type specifier must be omitted however, and replaced by the name of the header tag to be printed, enclosed by <code>{}</code> characters. Tag names are case insensitive, and the leading <code>RPMTAG_</code> portion of the tag name may be omitted as well. Alternate output formats may be requested by following the tag with <code>:</code><i>typetag</i>. Currently, the following types are supported:</p>
 <dl>
 <dt><code>:armor</code></dt>

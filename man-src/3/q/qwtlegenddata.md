@@ -12,15 +12,15 @@ description: "QwtLegendData –"
 <h2>Synopsis</h2>
 <p>#include &lt;qwt_legend_data.h&gt;</p>
 <h3>Public Types</h3>
-<p>enum <code>Mode</code> { <code>ReadOnly</code>, <code>Clickable</code>, <code>Checkable</code> }<br />
- <i>Mode defining how a legend entry interacts. </i><br />
- enum <code>Role</code> { <code>ModeRole</code>, <code>TitleRole</code>, <code>IconRole</code>, <code>UserRole</code> = 32 }<br />
+<p>enum <code>Mode</code> { <code>ReadOnly</code>, <code>Clickable</code>, <code>Checkable</code> }<br/>
+ <i>Mode defining how a legend entry interacts. </i><br/>
+ enum <code>Role</code> { <code>ModeRole</code>, <code>TitleRole</code>, <code>IconRole</code>, <code>UserRole</code> = 32 }<br/>
  <i>Identifier how to interprete a QVariant. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtLegendData</code> ()<br />
- <i>Constructor. </i><br />
- <code>~QwtLegendData</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtLegendData</code> ()<br/>
+ <i>Constructor. </i><br/>
+ <code>~QwtLegendData</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setValues</code> (const QMap&lt; int, QVariant &gt; &amp;) </p>
 <p> const QMap&lt; int, QVariant &gt; &amp; <code>values</code> () const </p>
 <p> void <code>setValue</code> (int role, const QVariant &amp;) </p>
@@ -75,7 +75,7 @@ description: "QwtLegendData –"
 <p>Set an attribute value </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>role</i> Attribute role<br />
+<dd><i>role</i> Attribute role<br/>
  <i>data</i> Attribute value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

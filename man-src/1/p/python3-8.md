@@ -63,34 +63,34 @@ description: "python – an interpreted, interactive, object-oriented programmin
 <dt><code>-X </code><i>option</i></dt>
 <dd>Set implementation specific option. The following options are available: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X faulthandler: enable faulthandler </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X showrefcount: output the total reference count and number of used<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memory blocks when the program finishes or after each statement in the<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X showrefcount: output the total reference count and number of used<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memory blocks when the program finishes or after each statement in the<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;interactive interpreter. This only works on debug builds </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X tracemalloc: start tracing Python memory allocations using the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tracemalloc module. By default, only the most recent frame is stored in a<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;traceback of a trace. Use -X tracemalloc=NFRAME to start tracing with a<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X tracemalloc: start tracing Python memory allocations using the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tracemalloc module. By default, only the most recent frame is stored in a<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;traceback of a trace. Use -X tracemalloc=NFRAME to start tracing with a<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;traceback limit of NFRAME frames </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X showalloccount: output the total count of allocated objects for each<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;type when the program finishes. This only works when Python was built with<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X showalloccount: output the total count of allocated objects for each<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;type when the program finishes. This only works when Python was built with<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;COUNT_ALLOCS defined </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X importtime: show how long each import takes. It shows module name,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cumulative time&nbsp;(including nested imports)&nbsp;and self time&nbsp;(excluding<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nested imports). Note that its output may be broken in multi-threaded<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X importtime: show how long each import takes. It shows module name,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cumulative time&nbsp;(including nested imports)&nbsp;and self time&nbsp;(excluding<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nested imports). Note that its output may be broken in multi-threaded<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;application. Typical usage is python3 -X importtime -c&nbsp;&#8216;import asyncio&#8217; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X dev: enable CPython&#8217;s&nbsp;&quot;development mode&quot;, introducing additional runtime<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;checks which are too expensive to be enabled by default. It will not be<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;more verbose than the default if the code is correct: new warnings are<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;only emitted when an issue is detected. Effect of the developer mode:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;Add default warning filter, as -W default<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;Install debug hooks on memory allocators: see the PyMem_SetupDebugHooks()&nbsp;C function<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;Enable the faulthandler module to dump the Python traceback on a crash<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;Enable asyncio debug mode<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;Set the dev_mode attribute of sys.flags to True<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X dev: enable CPython&#8217;s&nbsp;&quot;development mode&quot;, introducing additional runtime<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;checks which are too expensive to be enabled by default. It will not be<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;more verbose than the default if the code is correct: new warnings are<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;only emitted when an issue is detected. Effect of the developer mode:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;Add default warning filter, as -W default<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;Install debug hooks on memory allocators: see the PyMem_SetupDebugHooks()&nbsp;C function<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;Enable the faulthandler module to dump the Python traceback on a crash<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;Enable asyncio debug mode<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;Set the dev_mode attribute of sys.flags to True<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;io.IOBase destructor logs close()&nbsp;exceptions </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X utf8: enable UTF-8 mode for operating system interfaces, overriding the default<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;locale-aware mode. -X utf8=0 explicitly disables UTF-8 mode&nbsp;(even when it would<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X utf8: enable UTF-8 mode for operating system interfaces, overriding the default<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;locale-aware mode. -X utf8=0 explicitly disables UTF-8 mode&nbsp;(even when it would<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;otherwise activate automatically). See PYTHONUTF8 for more details </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X pycache_prefix=PATH: enable writing .pyc files to a parallel tree rooted at the<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-X pycache_prefix=PATH: enable writing .pyc files to a parallel tree rooted at the<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;given directory instead of to the code tree.</p>
 <dt><code>-x</code></dt>
 <dd>Skip the first line of the source. This is intended for a DOS specific hack only. Warning: the line numbers in error messages will be off by one!</dd></dl>
@@ -103,11 +103,11 @@ description: "python – an interpreted, interactive, object-oriented programmin
 <dl COMPACT>
 <dt><i>${exec_prefix}/bin/python</i></dt>
 <dd>Recommended location of the interpreter.</dd></dl>
-<p> <i>${prefix}/lib/python&lt;version&gt;</i><br />
+<p> <i>${prefix}/lib/python&lt;version&gt;</i><br/>
  <i>${exec_prefix}/lib/python&lt;version&gt;</i></p>
 <dl COMPACT>
 <dd>Recommended locations of the directories containing the standard modules.</dd></dl>
-<p> <i>${prefix}/include/python&lt;version&gt;</i><br />
+<p> <i>${prefix}/include/python&lt;version&gt;</i><br/>
  <i>${exec_prefix}/include/python&lt;version&gt;</i></p>
 <dl COMPACT>
 <dd>Recommended locations of the directories containing the include files needed for developing Python extensions and embedding the interpreter.</dd></dl>
@@ -128,7 +128,7 @@ description: "python – an interpreted, interactive, object-oriented programmin
 <dt>PYTHONINSPECT</dt>
 <dd>If this is set to a non-empty string it is equivalent to specifying the <code>-i</code> option.</dd>
 <dt>PYTHONIOENCODING</dt>
-<dd>If this is set before running the interpreter, it overrides the encoding used for stdin/stdout/stderr, in the syntax <i>encodingname</i><code>:</code><i>errorhandler</i> The <i>errorhandler</i> part is optional and has the same meaning as in str.encode. For stderr, the <i>errorhandler</i><br />
+<dd>If this is set before running the interpreter, it overrides the encoding used for stdin/stdout/stderr, in the syntax <i>encodingname</i><code>:</code><i>errorhandler</i> The <i>errorhandler</i> part is optional and has the same meaning as in str.encode. For stderr, the <i>errorhandler</i><br/>
 &nbsp;part is ignored;&nbsp;the handler will always be&nbsp;&#8216;backslashreplace&#8217;.</dd>
 <dt>PYTHONNOUSERSITE</dt>
 <dd>If this is set to a non-empty string it is equivalent to specifying the <code>-s</code> option (Don&#8217;t add the user site directory to sys.path).</dd>
@@ -174,11 +174,11 @@ description: "python – an interpreted, interactive, object-oriented programmin
 <h2>Author</h2>
 <p>The Python Software Foundation: <a rel="nofollow" href="https://www.python.org/psf/">https://www.python.org/psf/</a></p>
 <h2>Internet Resources</h2>
-<p>Main website: <a rel="nofollow" href="https://www.python.org/">https://www.python.org/</a><br />
- Documentation: <a rel="nofollow" href="https://docs.python.org/">https://docs.python.org/</a><br />
- Developer resources: <a rel="nofollow" href="https://devguide.python.org/">https://devguide.python.org/</a><br />
- Downloads: <a rel="nofollow" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br />
- Module repository: <a rel="nofollow" href="https://pypi.org/">https://pypi.org/</a><br />
+<p>Main website: <a rel="nofollow" href="https://www.python.org/">https://www.python.org/</a><br/>
+ Documentation: <a rel="nofollow" href="https://docs.python.org/">https://docs.python.org/</a><br/>
+ Developer resources: <a rel="nofollow" href="https://devguide.python.org/">https://devguide.python.org/</a><br/>
+ Downloads: <a rel="nofollow" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br/>
+ Module repository: <a rel="nofollow" href="https://pypi.org/">https://pypi.org/</a><br/>
  Newsgroups: comp.lang.python, comp.lang.python.announce</p>
 <h2>Licensing</h2>
 <p>Python is distributed under an Open Source license. See the file &quot;LICENSE&quot; in the Python source distribution for information on terms &amp; conditions for accessing and otherwise using Python and for a DISCLAIMER OF ALL WARRANTIES.</p>

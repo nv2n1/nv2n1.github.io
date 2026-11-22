@@ -22,8 +22,8 @@ description: "Credential Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> pointer for return code<br />
- <i>cred_usage</i> GSS_C_INITIATE, GSS_C_ACCEPT, or GSS_C_BOTH<br />
+</dt><dd> <i>minor_status</i> pointer for return code<br/>
+ <i>cred_usage</i> GSS_C_INITIATE, GSS_C_ACCEPT, or GSS_C_BOTH<br/>
  <i>output_cred_handle</i> Pointer to the returned handle. This needs to be passed to many gss routines.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

@@ -16,18 +16,18 @@ description: "QwtPlotSeriesItem –"
 <h3>Public Member Functions</h3>
 <p><code>QwtPlotSeriesItem</code> (const QString &amp;<code>title</code>=QString::null) </p>
 <p> <code>QwtPlotSeriesItem</code> (const <code>QwtText</code> &amp;<code>title</code>) </p>
-<p> virtual <code>~QwtPlotSeriesItem</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtPlotSeriesItem</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setOrientation</code> (Qt::Orientation) </p>
 <p> Qt::Orientation <code>orientation</code> () const </p>
-<p> virtual void <code>draw</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;) const<br />
- <i>Draw the complete series. </i><br />
+<p> virtual void <code>draw</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;) const<br/>
+ <i>Draw the complete series. </i><br/>
  virtual void <code>drawSeries</code> (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const =0 </p>
 <p> virtual QRectF <code>boundingRect</code> () const </p>
-<p> virtual void <code>updateScaleDiv</code> (const <code>QwtScaleDiv</code> &amp;, const <code>QwtScaleDiv</code> &amp;)<br />
+<p> virtual void <code>updateScaleDiv</code> (const <code>QwtScaleDiv</code> &amp;, const <code>QwtScaleDiv</code> &amp;)<br/>
  <i>Update the item to changes of the axes scale division. </i></p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>dataChanged</code> ()<br />
+<p>virtual void <code>dataChanged</code> ()<br/>
  <i></i><code>dataChanged()</code> indicates, that the series has been changed.</p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>
@@ -57,20 +57,20 @@ description: "QwtPlotSeriesItem –"
 <p>Draw the complete series. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
  <i>canvasRect</i> Contents rectangle of the canvas</dd></dl>
 <p> Implements <code>QwtPlotItem</code>.</p>
 <h3>virtual void QwtPlotSeriesItem::drawSeries (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, intfrom, intto) const [pure virtual]</h3>
 <p>Draw a subset of the samples </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> Index of the first point to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> Index of the first point to be painted<br/>
  <i>to</i> Index of the last point to be painted. If to &lt; 0 the curve will be painted to its last point.</dd></dl>
 <p> Implemented in <code>QwtPlotCurve</code>, <code>QwtPlotTradingCurve</code>, <code>QwtPlotIntervalCurve</code>, <code>QwtPlotHistogram</code>, <code>QwtPlotBarChart</code>, <code>QwtPlotMultiBarChart</code>, and <code>QwtPlotSpectroCurve</code>.</p>
 <h3>Qt::Orientation QwtPlotSeriesItem::orientation () const</h3>
@@ -91,7 +91,7 @@ description: "QwtPlotSeriesItem –"
 <p> <code>updateScaleDiv()</code> is only called when the ScaleInterest interest is enabled. The default implementation does nothing. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xScaleDiv</i> Scale division of the x-axis<br />
+<dd><i>xScaleDiv</i> Scale division of the x-axis<br/>
  <i>yScaleDiv</i> Scale division of the y-axis</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

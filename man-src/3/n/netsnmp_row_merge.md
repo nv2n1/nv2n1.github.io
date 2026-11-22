@@ -14,19 +14,19 @@ description: "row_merge – Calls sub handlers with request for one row at a tim
 #define ROW_MERGE_DONE   2
 #define ROW_MERGE_HEAD   3
 Functions</code></pre>
-<p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_row_merge_handler</code> (int prefix_len)<br />
- <i>returns a row_merge handler that can be injected into a given handler chain. </i><br />
- int <code>netsnmp_register_row_merge</code> (<code>netsnmp_handler_registration</code> *reginfo)<br />
- <i>functionally the same as calling </i><code>netsnmp_register_handler()</code> but also injects a row_merge handler at the same time for you.<br />
- <code>netsnmp_row_merge_status</code> * <code>netsnmp_row_merge_status_get</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, int create_missing)<br />
- <i>retrieve row_merge_status </i><br />
- int <code>netsnmp_row_merge_status_first</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo)<br />
- <i>Determine if this is the first row. </i><br />
- int <code>netsnmp_row_merge_status_last</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo)<br />
- <i>Determine if this is the last row. </i><br />
- int <code>netsnmp_row_merge_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)<br />
- <i>Implements the row_merge handler. </i><br />
- void <code>netsnmp_init_row_merge</code> (void)<br />
+<p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_row_merge_handler</code> (int prefix_len)<br/>
+ <i>returns a row_merge handler that can be injected into a given handler chain. </i><br/>
+ int <code>netsnmp_register_row_merge</code> (<code>netsnmp_handler_registration</code> *reginfo)<br/>
+ <i>functionally the same as calling </i><code>netsnmp_register_handler()</code> but also injects a row_merge handler at the same time for you.<br/>
+ <code>netsnmp_row_merge_status</code> * <code>netsnmp_row_merge_status_get</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, int create_missing)<br/>
+ <i>retrieve row_merge_status </i><br/>
+ int <code>netsnmp_row_merge_status_first</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo)<br/>
+ <i>Determine if this is the first row. </i><br/>
+ int <code>netsnmp_row_merge_status_last</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo)<br/>
+ <i>Determine if this is the last row. </i><br/>
+ int <code>netsnmp_row_merge_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)<br/>
+ <i>Implements the row_merge handler. </i><br/>
+ void <code>netsnmp_init_row_merge</code> (void)<br/>
  <i>initializes the row_merge helper which then registers a row_merge handler as a run-time injectable handler for configuration file use. </i></p>
 <h2>Detailed Description</h2>
 <p>Calls sub handlers with request for one row at a time. </p>

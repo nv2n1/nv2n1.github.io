@@ -9,7 +9,7 @@ description: "X Composite Extension Functions – Functions related to the X Com
 
 <p>X Composite Extension Functions &#8211; Functions related to the X Composite extension. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_x_composite_query</code> (void)<br />
+<p>EAPI int <code>ecore_x_composite_query</code> (void)<br/>
  <i>Return whether the Composite Extension is available. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions related to the X Composite extension.</p>

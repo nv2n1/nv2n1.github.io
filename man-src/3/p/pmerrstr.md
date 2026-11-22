@@ -10,7 +10,7 @@ description: "pmErrStr, pmErrStr_r – convert a PMAPI error code into a string"
 <p><code>pmErrStr</code>, <code>pmErrStr_r</code> &#8211; convert a PMAPI error code into a string</p>
 <h2>C Synopsis</h2>
 <p><code> #include &lt;pcp/pmapi.h&gt; </p>
-<p> const char *pmErrStr(int </code><i>code</i>);<br />
+<p> const char *pmErrStr(int </code><i>code</i>);<br/>
  char *pmErrStr_r(int <i>code</i>, char *<i>buf</i>, int <i>buflen</i>); </p>
 <p> cc &#8230; -lpcp</p>
 <h2>Description</h2>

@@ -13,17 +13,17 @@ description: "Globus GSI Certificate Handling Utilities –"
 <p> <code>Activation</code> </p>
 <p> <code>Cert Utils Constants</code> </p>
 <h3>Functions</h3>
-<p> globus_result_t <code>globus_gsi_cert_utils_make_time</code> (const ASN1_UTCTIME *ctm, time_t *newtime)<br />
- <i>Convert ASN1_UTCTIME to time_t. </i><br />
- globus_result_t <code>globus_gsi_cert_utils_get_cert_type</code> (X509 *cert, <code>globus_gsi_cert_utils_cert_type_t</code> *type)<br />
- <i>Get the X509 certificate type. </i><br />
- globus_result_t <code>globus_gsi_cert_utils_get_x509_name</code> (const char *subject_string, int length, X509_NAME *x509_name)<br />
- <i>Get the certificate name. </i><br />
- globus_result_t <code>globus_gsi_cert_utils_get_base_name</code> (X509_NAME *subject, STACK_OF(X509)*cert_chain)<br />
- <i>Get the base certificate name from a certificate chain. </i><br />
- globus_result_t <code>globus_gsi_cert_utils_get_eec</code> (STACK_OF(X509)*cert_chain, X509 **eec)<br />
- <i>Get the end-entity certificate from a certificate chain. </i><br />
- globus_result_t <code>globus_gsi_cert_utils_get_identity_cert</code> (STACK_OF(X509)*cert_chain, X509 **identity_cert)<br />
+<p> globus_result_t <code>globus_gsi_cert_utils_make_time</code> (const ASN1_UTCTIME *ctm, time_t *newtime)<br/>
+ <i>Convert ASN1_UTCTIME to time_t. </i><br/>
+ globus_result_t <code>globus_gsi_cert_utils_get_cert_type</code> (X509 *cert, <code>globus_gsi_cert_utils_cert_type_t</code> *type)<br/>
+ <i>Get the X509 certificate type. </i><br/>
+ globus_result_t <code>globus_gsi_cert_utils_get_x509_name</code> (const char *subject_string, int length, X509_NAME *x509_name)<br/>
+ <i>Get the certificate name. </i><br/>
+ globus_result_t <code>globus_gsi_cert_utils_get_base_name</code> (X509_NAME *subject, STACK_OF(X509)*cert_chain)<br/>
+ <i>Get the base certificate name from a certificate chain. </i><br/>
+ globus_result_t <code>globus_gsi_cert_utils_get_eec</code> (STACK_OF(X509)*cert_chain, X509 **eec)<br/>
+ <i>Get the end-entity certificate from a certificate chain. </i><br/>
+ globus_result_t <code>globus_gsi_cert_utils_get_identity_cert</code> (STACK_OF(X509)*cert_chain, X509 **identity_cert)<br/>
  <i>Get the identity certificate from a certificate chain. </i></p>
 <h2>Detailed Description</h2>
 <p> The Globus GSI Certificate Handling Utilities library. This library contains helper functions for dealing with certificates. </p>
@@ -40,7 +40,7 @@ description: "Globus GSI Certificate Handling Utilities –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>subject</i> Pointer to an X509_NAME object which gets stripped<br />
+</dt><dd> <i>subject</i> Pointer to an X509_NAME object which gets stripped<br/>
  <i>cert_chain</i> The certificate chain used to detect the number of CNs to strip. This is done by figuring out the number of proxies in the chain.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -51,7 +51,7 @@ description: "Globus GSI Certificate Handling Utilities –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cert</i> The X509 certificate<br />
+</dt><dd> <i>cert</i> The X509 certificate<br/>
  <i>type</i> The returned X509 certificate type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -62,22 +62,22 @@ description: "Globus GSI Certificate Handling Utilities –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cert_chain</i> Certificate chain to inspect.<br />
+</dt><dd> <i>cert_chain</i> Certificate chain to inspect.<br/>
  <i>eec</i> Pointer to be set to the EEC value from within the cert chain. Must freed by the caller.</dd></dl>
 <h3>globus_result_t globus_gsi_cert_utils_get_identity_cert (STACK_OF(X509)*cert_chain, X509 **identity_cert)</h3>
 <p> Get the identity certificate from a certificate chain. Get the identity-providing certificate associated with a certificate chain. This may be an independent proxy or a end-entity certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cert_chain</i> Certificate chain to inspect.<br />
+</dt><dd> <i>cert_chain</i> Certificate chain to inspect.<br/>
  <i>identity_cert</i> Pointer to be set to the certificate value from within the cert chain. Must freed by the caller.</dd></dl>
 <h3>globus_result_t globus_gsi_cert_utils_get_x509_name (const char *subject_string, intlength, X509_NAME *x509_name)</h3>
 <p> Get the certificate name. Get the X509_NAME from a subject string. OpenSSL doesn&#8217;t provide this function, probably because it shouldn&#8217;t be used. If you are getting an X509_NAME from just a string, its impossible to verify its integrity. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>subject_string</i> The subject in the format: &#8216;/O=Grid/OU=&#8230;&#8217;<br />
- <i>length</i> The length of the subject string<br />
+</dt><dd> <i>subject_string</i> The subject in the format: &#8216;/O=Grid/OU=&#8230;&#8217;<br/>
+ <i>length</i> The length of the subject string<br/>
  <i>x509_name</i> The resulting X509_NAME object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -88,7 +88,7 @@ description: "Globus GSI Certificate Handling Utilities –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ctm</i> The ASN1_UTCTIME to convert<br />
+</dt><dd> <i>ctm</i> The ASN1_UTCTIME to convert<br/>
  <i>newtime</i> The converted time</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

@@ -15,17 +15,17 @@ description: "sc::TorsSimpleCo –"
 <p> Inherits <code>sc::SimpleCo</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>TorsSimpleCo</code> (const <code>TorsSimpleCo</code> &amp;) </p>
-<p> <code>TorsSimpleCo</code> (const char *refr, int, int, int, int)<br />
- <i>This constructor takes a string containing a label, and four integers a, b, c, and d which give the indices of the atoms involved in the torsion angle abcd. </i><br />
- <code>TorsSimpleCo</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor.<br />
- const char * <code>ctype</code> () const<br />
- <i>Always returns the string &#8216;TORS&#8217;. </i><br />
- double <code>radians</code> () const<br />
- <i>Returns the value of the angle abc in radians. </i><br />
- double <code>degrees</code> () const<br />
- <i>Returns the value of the angle abc in degrees. </i><br />
- double <code>preferred_value</code> () const<br />
+<p> <code>TorsSimpleCo</code> (const char *refr, int, int, int, int)<br/>
+ <i>This constructor takes a string containing a label, and four integers a, b, c, and d which give the indices of the atoms involved in the torsion angle abcd. </i><br/>
+ <code>TorsSimpleCo</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor.<br/>
+ const char * <code>ctype</code> () const<br/>
+ <i>Always returns the string &#8216;TORS&#8217;. </i><br/>
+ double <code>radians</code> () const<br/>
+ <i>Returns the value of the angle abc in radians. </i><br/>
+ double <code>degrees</code> () const<br/>
+ <i>Returns the value of the angle abc in degrees. </i><br/>
+ double <code>preferred_value</code> () const<br/>
  <i>Returns the value of the angle abc in degrees. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>TorsSimpleCo</code> class describes an torsion internal coordinate of a molecule. </p>

@@ -9,11 +9,11 @@ description: "sendmail – an electronic mail transport agent"
 
 <p>sendmail &#8211; an electronic mail transport agent</p>
 <h2>Synopsis</h2>
-<p><code>sendmail</code> [<i>flags</i>] [<i>address &#8230;</i>]<br />
- <code>newaliases</code><br />
- <code>mailq</code> [<code>-v</code>]<br />
- <code>hoststat</code><br />
- <code>purgestat</code><br />
+<p><code>sendmail</code> [<i>flags</i>] [<i>address &#8230;</i>]<br/>
+ <code>newaliases</code><br/>
+ <code>mailq</code> [<code>-v</code>]<br/>
+ <code>hoststat</code><br/>
+ <code>purgestat</code><br/>
  <code>smtpd</code></p>
 <h2>Description</h2>
 <p><code>Sendmail</code> sends a message to one or more <i>recipients,</i> routing the message over whatever networks are necessary. <code>Sendmail</code> does internetwork forwarding as necessary to deliver the message to the correct place. <code>Sendmail</code> is not intended as a user interface routine; other programs provide user-friendly front ends; <code>sendmail</code> is used only to deliver pre-formatted messages. With no flags, <code>sendmail</code> reads its standard input up to an end-of-file or a line consisting only of a single dot and sends a copy of the message found there to all of the addresses listed. It determines the network(s) to use based on the syntax and contents of the addresses. </p>

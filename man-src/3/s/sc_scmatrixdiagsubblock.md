@@ -17,8 +17,8 @@ description: "sc::SCMatrixDiagSubBlock –"
 <p><code>SCMatrixDiagSubBlock</code> (int istart, int iend, int jstart, int offset, double *data) </p>
 <p> <code>SCMatrixDiagSubBlock</code> (int istart, int iend, int offset, double *data) </p>
 <p> <code>SCMatrixDiagSubBlock</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>process</code> (<code>SCElementOp</code> *) </p>
 <p> void <code>process</code> (<code>SCElementOp2</code> *, <code>SCMatrixBlock</code> *) </p>
 <p> void <code>process</code> (<code>SCElementOp3</code> *, <code>SCMatrixBlock</code> *, <code>SCMatrixBlock</code> *)</p>

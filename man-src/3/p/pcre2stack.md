@@ -32,9 +32,9 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <p>In Unix-like environments, there is not often a problem with the stack unless very long strings are involved, though the default limit on stack size varies from system to system. Values from 8Mb to 64Mb are common. You can find your default limit by running the command: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>ulimit -s </p>
 <p> Unfortunately, the effect of running out of stack is often SIGSEGV, though sometimes a more explicit error message is given. You can normally increase the limit on stack size by code such as this: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>struct rlimit rlim;<br />
-&nbsp;<wbr>&nbsp;<wbr>getrlimit(RLIMIT_STACK,&nbsp;<wbr>&amp;rlim);<br />
-&nbsp;<wbr>&nbsp;<wbr>rlim.rlim_cur&nbsp;<wbr>=&nbsp;<wbr>100*1024*1024;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>struct rlimit rlim;<br/>
+&nbsp;<wbr>&nbsp;<wbr>getrlimit(RLIMIT_STACK,&nbsp;<wbr>&amp;rlim);<br/>
+&nbsp;<wbr>&nbsp;<wbr>rlim.rlim_cur&nbsp;<wbr>=&nbsp;<wbr>100*1024*1024;<br/>
 &nbsp;<wbr>&nbsp;<wbr>setrlimit(RLIMIT_STACK,&nbsp;<wbr>&amp;rlim); </p>
 <p> This reads the current limits (soft and hard) using <code>getrlimit()</code>, then attempts to increase the soft limit to 100Mb using <code>setrlimit()</code>. You must do this before calling <code>pcre2_match()</code>.</p>
 <h3>Changing stack size in Mac OS X</h3>

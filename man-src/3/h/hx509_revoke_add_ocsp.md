@@ -25,12 +25,12 @@ description: "hx509 revokation checking functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context<br />
- <i>reqcerts</i> list of certificates to request ocsp data for<br />
- <i>pool</i> certificate pool to use when signing<br />
- <i>signer</i> certificate to use to sign the request<br />
- <i>digest</i> the signing algorithm in the request, if NULL use the default signature algorithm,<br />
- <i>request</i> the encoded request, free with free_heim_octet_string().<br />
+</dt><dd> <i>context</i> a hx509 context<br/>
+ <i>reqcerts</i> list of certificates to request ocsp data for<br/>
+ <i>pool</i> certificate pool to use when signing<br/>
+ <i>signer</i> certificate to use to sign the request<br/>
+ <i>digest</i> the signing algorithm in the request, if NULL use the default signature algorithm,<br/>
+ <i>request</i> the encoded request, free with free_heim_octet_string().<br/>
  <i>nonce</i> nonce in the request, free with free_heim_octet_string().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -41,8 +41,8 @@ description: "hx509 revokation checking functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> hx509 context<br />
- <i>ctx</i> hx509 revokation context<br />
+</dt><dd> <i>context</i> hx509 context<br/>
+ <i>ctx</i> hx509 revokation context<br/>
  <i>path</i> path to file that is going to be added to the context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -53,8 +53,8 @@ description: "hx509 revokation checking functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> hx509 context<br />
- <i>ctx</i> hx509 revokation context<br />
+</dt><dd> <i>context</i> hx509 context<br/>
+ <i>ctx</i> hx509 revokation context<br/>
  <i>path</i> path to file that is going to be added to the context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -71,7 +71,7 @@ description: "hx509 revokation checking functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
  <i>ctx</i> returns a newly allocated revokation context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -82,8 +82,8 @@ description: "hx509 revokation checking functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context<br />
- <i>path</i> path to a file with a OCSP reply<br />
+</dt><dd> <i>context</i> a hx509 context<br/>
+ <i>path</i> path to a file with a OCSP reply<br/>
  <i>out</i> the out FILE descriptor to print the reply on</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -94,11 +94,11 @@ description: "hx509 revokation checking functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> hx509 context<br />
- <i>ctx</i> hx509 revokation context<br />
- <i>certs</i><br />
- <i>now</i><br />
- <i>cert</i><br />
+</dt><dd> <i>context</i> hx509 context<br/>
+ <i>ctx</i> hx509 revokation context<br/>
+ <i>certs</i><br/>
+ <i>now</i><br/>
+ <i>cert</i><br/>
  <i>parent_cert</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

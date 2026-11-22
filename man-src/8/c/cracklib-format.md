@@ -27,8 +27,8 @@ description: "cracklib-format, cracklib-packer, cracklib-unpacker – cracklib d
 <dt><i>/usr/sbin/cracklib-format</i></dt>
 <dd>cracklib shell script to create initial list of words for dictionary database.</dd></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-fascistcheck/">FascistCheck</a></code>(3), <code><a href="/docs/linux/man/8-cracklib-check/">cracklib-check</a></code>(8), <code><a href="/docs/linux/man/8-update-cracklib/">update-cracklib</a></code>(8), <code><a href="/docs/linux/man/8-create-cracklib-dict/">create-cracklib-dict</a></code>(8)<br />
- /usr/share/doc/libcrack2/libcrack2.html<br />
+<p><code><a href="/docs/linux/man/3-fascistcheck/">FascistCheck</a></code>(3), <code><a href="/docs/linux/man/8-cracklib-check/">cracklib-check</a></code>(8), <code><a href="/docs/linux/man/8-update-cracklib/">update-cracklib</a></code>(8), <code><a href="/docs/linux/man/8-create-cracklib-dict/">create-cracklib-dict</a></code>(8)<br/>
+ /usr/share/doc/libcrack2/libcrack2.html<br/>
  /usr/share/doc/cracklib-runtime/cracklib-runtime.html</p>
 <h2>Author</h2>
 <p><code>cracklib2</code> is written by Alec Muffett &lt;alecm [at] crypto.dircon.co.uk&gt;. Manual added by Jean Pierre LeJacq &lt;jplejacq [at] quoininc.com&gt;.</p>

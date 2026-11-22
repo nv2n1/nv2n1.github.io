@@ -15,12 +15,12 @@ description: "enc2xs — Perl Encode Module Generator"
   enc2xs -C
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <i>enc2xs</i> builds a Perl extension for use by Encode from either Unicode Character Mapping files (.ucm) or Tcl Encoding Files (.enc). Besides being used internally during the build process of the Encode module, you can use <i>enc2xs</i> to add your own encoding to perl. No knowledge of <font SIZE="-1">XS</font> is necessary.  </p>
+<p> <i>enc2xs</i> builds a Perl extension for use by Encode from either Unicode Character Mapping files (.ucm) or Tcl Encoding Files (.enc). Besides being used internally during the build process of the Encode module, you can use <i>enc2xs</i> to add your own encoding to perl. No knowledge of XS is necessary.  </p>
 <h2>Quick Guide</h2>
 <p> If you want to know as little about Perl as possible but need to add a new encoding, just read this chapter and forget the rest. </p>
 <dl>
 <dt>0.</dt>
-<dd> <p> Have a .ucm file ready. You can get it from somewhere or you can write your own from scratch or you can grab one from the Encode distribution and customize it. For the <font SIZE="-1">UCM</font> format, see the next Chapter. In the example below, I&#8217;ll call my theoretical encoding myascii, defined in <i>my.ucm</i>. <code>&quot;$&quot;</code> is a shell prompt. </p>
+<dd> <p> Have a .ucm file ready. You can get it from somewhere or you can write your own from scratch or you can grab one from the Encode distribution and customize it. For the UCM format, see the next Chapter. In the example below, I&#8217;ll call my theoretical encoding myascii, defined in <i>my.ucm</i>. <code>&quot;$&quot;</code> is a shell prompt. </p>
 <pre><code>  $ ls -F
   my.ucm
 </code></pre>
@@ -57,7 +57,7 @@ description: "enc2xs — Perl Encode Module Generator"
 <dl>
 <dd>  </dd></dl>
 <dt>2.</dt>
-<dd> <p> Edit the files generated. You don&#8217;t have to if you have no time <font SIZE="-1">AND</font> no intention to give it to someone else. But it is a good idea to edit the pod and to add more tests. </p>
+<dd> <p> Edit the files generated. You don&#8217;t have to if you have no time AND no intention to give it to someone else. But it is a good idea to edit the pod and to add more tests. </p>
  </dd>
 <dt>3.</dt>
 <dd> <p> Now issue a command all Perl Mongers love: </p>
@@ -104,8 +104,8 @@ description: "enc2xs — Perl Encode Module Generator"
 <p> to update Encode::ConfigLocal, a module that controls local settings. After that, ``use Encode;&#8216;&#8216; is enough to load your encodings on demand. </p>
  </dd></dl>
 <h2>The Unicode Character Map</h2>
-<p> Encode uses the Unicode Character Map (<font SIZE="-1">UCM</font>) format for source character mappings. This format is used by <font SIZE="-1">IBM</font>&#8216;s <font SIZE="-1">ICU</font> package and was adopted by Nick Ing-Simmons for use with the Encode module. Since <font SIZE="-1">UCM</font> is more flexible than Tcl&#8217;s Encoding Map and far more user-friendly, this is the recommended format for Encode now. </p>
-<p> A <font SIZE="-1">UCM</font> file looks like this. </p>
+<p> Encode uses the Unicode Character Map (UCM) format for source character mappings. This format is used by IBM&#8216;s ICU package and was adopted by Nick Ing-Simmons for use with the Encode module. Since UCM is more flexible than Tcl&#8217;s Encoding Map and far more user-friendly, this is the recommended format for Encode now. </p>
+<p> A UCM file looks like this. </p>
 <pre><code>  #
   # Comments
   #
@@ -131,11 +131,11 @@ description: "enc2xs — Perl Encode Module Generator"
 <dd> <p> Anything that follows <code>&quot;#&quot;</code> is treated as a comment. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The header section continues until a line containing the word <font SIZE="-1">CHARMAP.</font> This section has a form of <i>&lt;keyword&gt; value</i>, one pair per line. Strings used as values must be quoted. Barewords are treated as numbers. <i>\xXX</i> represents a byte. </p>
-<p> Most of the keywords are self-explanatory. <i>subchar</i> means substitution character, not subcharacter. When you decode a Unicode sequence to this encoding but no matching character is found, the byte sequence defined here will be used. For most cases, the value here is \x3F; in <font SIZE="-1">ASCII,</font> this is a question mark. </p>
+<dd> <p> The header section continues until a line containing the word CHARMAP. This section has a form of <i>&lt;keyword&gt; value</i>, one pair per line. Strings used as values must be quoted. Barewords are treated as numbers. <i>\xXX</i> represents a byte. </p>
+<p> Most of the keywords are self-explanatory. <i>subchar</i> means substitution character, not subcharacter. When you decode a Unicode sequence to this encoding but no matching character is found, the byte sequence defined here will be used. For most cases, the value here is \x3F; in ASCII, this is a question mark. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">CHARMAP</font> starts the character map section. Each line has a form as follows: </p>
+<dd> <p> CHARMAP starts the character map section. Each line has a form as follows: </p>
 <pre><code>  &lt;UXXXX&gt; \xXX.. |0 # comment
     ^ ^ ^
     | | +- Fallback flag
@@ -163,13 +163,13 @@ description: "enc2xs — Perl Encode Module Generator"
 <dl>
 <dd>  </dd></dl>
 <dt>&bull;</dt>
-<dd> <p> And finally, <font SIZE="-1">END OF CHARMAP</font> ends the section. </p>
+<dd> <p> And finally, END OF CHARMAP ends the section. </p>
  </dd></dl>
-<p> When you are manually creating a <font SIZE="-1">UCM</font> file, you should copy ascii.ucm or an existing encoding which is close to yours, rather than write your own from scratch. </p>
-<p> When you do so, make sure you leave at least <code>U0000</code> to <code>U0020</code> as is, unless your environment is <font SIZE="-1">EBCDIC.</font> </p>
-<p> <font SIZE="-1"><code>CAVEAT</code></font>: not all features in <font SIZE="-1">UCM</font> are implemented. For example, icu:state is not used. Because of that, you need to write a perl module if you want to support algorithmical encodings, notably the <font SIZE="-1">ISO-2022</font> series. Such modules include Encode::JP::2022_JP, Encode::KR::2022_KR, and Encode::TW::HZ.  </p>
+<p> When you are manually creating a UCM file, you should copy ascii.ucm or an existing encoding which is close to yours, rather than write your own from scratch. </p>
+<p> When you do so, make sure you leave at least <code>U0000</code> to <code>U0020</code> as is, unless your environment is EBCDIC. </p>
+<p> <code>CAVEAT</code>: not all features in UCM are implemented. For example, icu:state is not used. Because of that, you need to write a perl module if you want to support algorithmical encodings, notably the ISO-2022 series. Such modules include Encode::JP::2022_JP, Encode::KR::2022_KR, and Encode::TW::HZ.  </p>
 <h3>Coping with duplicate mappings</h3>
-<p> When you create a map, you <font SIZE="-1">SHOULD</font> make your mappings round-trip safe. That is, <code>&quot;encode(&#8216;your-encoding&#8217;, decode(&#8216;your-encoding&#8217;, $data)) eq $data&quot;</code> stands for all characters that are marked as <code>&quot;|0&quot;</code>. Here is how to make sure: </p>
+<p> When you create a map, you SHOULD make your mappings round-trip safe. That is, <code>&quot;encode(&#8216;your-encoding&#8217;, decode(&#8216;your-encoding&#8217;, $data)) eq $data&quot;</code> stands for all characters that are marked as <code>&quot;|0&quot;</code>. Here is how to make sure: </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> Sort your map in Unicode order. </p>
@@ -178,7 +178,7 @@ description: "enc2xs — Perl Encode Module Generator"
 <dd> <p> When you have a duplicate entry, mark either one with &#8216;|1&#8217; or &#8216;|3&#8217;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> And make sure the &#8216;|1&#8217; or &#8216;|3&#8217; entry <font SIZE="-1">FOLLOWS</font> the &#8216;|0&#8217; entry. </p>
+<dd> <p> And make sure the &#8216;|1&#8217; or &#8216;|3&#8217; entry FOLLOWS the &#8216;|0&#8217; entry. </p>
  </dd></dl>
 <p> Here is an example from big5-eten. </p>
 <pre><code>  &lt;U2550&gt; \xF9\xF9 |0
@@ -196,15 +196,15 @@ description: "enc2xs — Perl Encode Module Generator"
   \xA2\xA4 =&gt; U2550 U2550 =&gt; \xF9\xF9
   (\xF9\xF9 =&gt; U2550 is now overwritten!)
 </code></pre>
-<p> The Encode package comes with <i>ucmlint</i>, a crude but sufficient utility to check the integrity of a <font SIZE="-1">UCM</font> file. Check under the Encode/bin directory for this. </p>
+<p> The Encode package comes with <i>ucmlint</i>, a crude but sufficient utility to check the integrity of a UCM file. Check under the Encode/bin directory for this. </p>
 <p> When in doubt, you can use <i>ucmsort</i>, yet another utility under Encode/bin directory.  </p>
 <h2>Bookmarks</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">ICU</font> Home Page &lt;<a rel="nofollow" href="http://www.icu-project.org/">http://www.icu-project.org/</a>&gt; </p>
+<dd> <p> ICU Home Page &lt;<a rel="nofollow" href="http://www.icu-project.org/">http://www.icu-project.org/</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">ICU</font> Character Mapping Tables &lt;<a rel="nofollow" href="http://site.icu-project.org/charts/charset">http://site.icu-project.org/charts/charset</a>&gt; </p>
+<dd> <p> ICU Character Mapping Tables &lt;<a rel="nofollow" href="http://site.icu-project.org/charts/charset">http://site.icu-project.org/charts/charset</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> ICU:Conversion Data &lt;<a rel="nofollow" href="http://www.icu-project.org/userguide/conversion-data.html">http://www.icu-project.org/userguide/conversion-data.html</a>&gt; </p>

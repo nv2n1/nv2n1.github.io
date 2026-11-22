@@ -497,7 +497,7 @@ int main(void)
     exit(0);
 }
 </code></pre>
-<p> <center> <i>________________________________________</i><br />
+<p> <center> <i>________________________________________</i><br/>
  </center> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-cdk/">cdk</a></code>(3), <code><a href="/docs/linux/man/3-cdk_display/">cdk_display</a></code>(3), <code><a href="/docs/linux/man/3-cdk_screen/">cdk_screen</a></code>(3) </p>

@@ -10,7 +10,7 @@ description: "dlaed7.f –"
 <p>dlaed7.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlaed7</code> (ICOMPQ, N, QSIZ, TLVLS, CURLVL, CURPBM, D, Q, LDQ, INDXQ, RHO, CUTPNT, QSTORE, QPTR, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dlaed7</code> (ICOMPQ, N, QSIZ, TLVLS, CURLVL, CURPBM, D, Q, LDQ, INDXQ, RHO, CUTPNT, QSTORE, QPTR, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, WORK, IWORK, INFO)<br/>
  <i></i><code>DLAED7</code> used by sstedc. Computes the updated eigensystem of a diagonal matrix after modification by a rank-one symmetric matrix. Used when the original matrix is dense.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaed7 (integerICOMPQ, integerN, integerQSIZ, integerTLVLS, integerCURLVL, integerCURPBM, double precision, dimension( * )D, double precision, dimension( ldq, * )Q, integerLDQ, integer, dimension( * )INDXQ, double precisionRHO, integerCUTPNT, double precision, dimension( * )QSTORE, integer, dimension( * )QPTR, integer, dimension( * )PRMPTR, integer, dimension( * )PERM, integer, dimension( * )GIVPTR, integer, dimension( 2, * )GIVCOL, double precision, dimension( 2, * )GIVNUM, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

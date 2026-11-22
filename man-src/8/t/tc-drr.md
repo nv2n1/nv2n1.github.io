@@ -24,16 +24,16 @@ description: "drr – deficit round robin scheduler"
 <p>To attach to device eth0, using the interface MTU as its quantum: </p>
 <p> # tc qdisc add dev eth0 handle 1 root drr </p>
 <p> Adding two classes: </p>
-<p> # tc class add dev eth0 parent 1: classid 1:1 drr<br />
+<p> # tc class add dev eth0 parent 1: classid 1:1 drr<br/>
  # tc class add dev eth0 parent 1: classid 1:2 drr </p>
 <p> You also need to add at least one filter to classify packets. </p>
 <p> # tc filter add dev eth0 protocol .. classid 1:1 </p>
 <p> Like SFQ, DRR is only useful when it owns the queue &#8212; it is a pure scheduler and does not delay packets. Attaching non-work-conserving qdiscs like tbf to it does not make sense &#8212; other qdiscs in the active list will also become inactive until the dequeue operation succeeds. Embed DRR within another qdisc like HTB or HFSC to ensure it owns the queue. </p>
 <p> You can mimic SFQ behavior by assigning packets to the attached classes using the flow filter: </p>
 <p> <code>tc qdisc add dev .. drr</code> </p>
-<p> <code>for i in .. 1024;do</code><br />
- <code> tc class add dev .. classid $handle:$(print %x $i)</code><br />
- <code> tc qdisc add dev .. fifo limit 16</code><br />
+<p> <code>for i in .. 1024;do</code><br/>
+ <code> tc class add dev .. classid $handle:$(print %x $i)</code><br/>
+ <code> tc qdisc add dev .. fifo limit 16</code><br/>
  <code>done</code> </p>
 <p> <code>tc filter add .. protocol ip .. $handle flow hash keys src,dst,proto,proto-src,proto-dst divisor 1024 perturb 10</code></p>
 <h2>Source</h2>

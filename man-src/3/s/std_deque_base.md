@@ -12,9 +12,9 @@ description: "std::_Deque_base< _Tp, _Alloc > –"
 <p> Inherited by <code>std::deque&lt; _Tp, _Alloc &gt;</code> [protected].</p>
 <h3>Public Types</h3>
 <p>typedef _Alloc <code>allocator_type</code> </p>
-<p> typedef <code>_Deque_iterator</code>&lt; _Tp,<br />
+<p> typedef <code>_Deque_iterator</code>&lt; _Tp,<br/>
  const _Tp &amp;, const _Tp * &gt; <code>const_iterator</code>&quot; </p>
-<p> typedef <code>_Deque_iterator</code>&lt; _Tp,<br />
+<p> typedef <code>_Deque_iterator</code>&lt; _Tp,<br/>
  _Tp &amp;, _Tp * &gt; <code>iterator</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <p><code>_Deque_base</code> (size_t __num_elements) </p>
@@ -24,9 +24,9 @@ description: "std::_Deque_base< _Tp, _Alloc > –"
 <p> allocator_type <code>get_allocator</code> () const noexcept</p>
 <h3>Protected Types</h3>
 <p>enum { <code>_S_initial_map_size</code> } </p>
-<p> typedef _Alloc::template<br />
+<p> typedef _Alloc::template<br/>
  rebind&lt; _Tp * &gt;::other <code>_Map_alloc_type</code>&quot; </p>
-<p> typedef _Alloc::template<br />
+<p> typedef _Alloc::template<br/>
  rebind&lt; _Tp &gt;::other <code>_Tp_alloc_type</code>&quot;</p>
 <h3>Protected Member Functions</h3>
 <p>_Tp ** <code>_M_allocate_map</code> (size_t __n) </p>

@@ -11,7 +11,7 @@ description: "cla_gercond_x.f –"
 <p> cla_gercond_x.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>cla_gercond_x</code> (TRANS, N, A, LDA, AF, LDAF, IPIV, X, INFO, WORK, RWORK)<br />
+<p> REAL function <code>cla_gercond_x</code> (TRANS, N, A, LDA, AF, LDAF, IPIV, X, INFO, WORK, RWORK)<br/>
  <i></i><code>CLA_GERCOND_X</code> computes the infinity norm condition number of op(A)*diag(x) for general matrices.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function cla_gercond_x (characterTRANS, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, complex, dimension( * )X, integerINFO, complex, dimension( * )WORK, real, dimension( * )RWORK)</h3>

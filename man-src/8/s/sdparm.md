@@ -154,22 +154,22 @@ description: "sdparm – access SCSI modes pages; read VPD pages; send simple SC
 <dd>tells a device to allow medium removal. It uses the SCSI &quot;prevent allow medium removal&quot; command. This is desperation stuff, possibly overriding a prevention applied by the OS on a mounted file system. The &quot;eject&quot; utility (from the &quot;eject&quot; package) is more graceful and should be tried first. This command is only appropriate for devices with removable media.</dd></dl>
 <p> For loading and ejecting tapes the mt utility should be used (i.e. not these commands). The &#8216;ready&#8217; command is valid for tape devices.</p>
 <h2>Examples</h2>
-<p>To list the common (generic) mode parameters of a disk:<br />
-sdparm&nbsp;<wbr>/dev/sda To list the designators within the device identification VPD page of a disk:<br />
+<p>To list the common (generic) mode parameters of a disk:<br/>
+sdparm&nbsp;<wbr>/dev/sda To list the designators within the device identification VPD page of a disk:<br/>
 sdparm &#8211;inquiry&nbsp;<wbr>/dev/sda To see all parameters for the caching mode page: </p>
 <pre><code>sdparm --page=ca /dev/sda</code></pre>
-<p> To see all parameters for the caching mode page with parameter descriptions to the right: sdparm &#8211;page=ca &#8211;long /dev/sda To get the WCE values (current changeable default and saved) in hex:<br />
-sdparm -g WCE -H&nbsp;<wbr>/dev/sda<br />
+<p> To see all parameters for the caching mode page with parameter descriptions to the right: sdparm &#8211;page=ca &#8211;long /dev/sda To get the WCE values (current changeable default and saved) in hex:<br/>
+sdparm -g WCE -H&nbsp;<wbr>/dev/sda<br/>
  0x01 0x00 0x01 0x01 To get the WCE current value in hex: sdparm -g WCE=1 -H /dev/sda</p>
-<p>0x01 To set the &quot;Writeback Cache Enable&quot; bit in the current values page: sdparm &#8211;set=WCE /dev/sda To set the &quot;Writeback Cache Enable&quot; bit in the current and saved values page: sdparm &#8211;set=WCE &#8211;save /dev/sda To set the &quot;Writeback Cache Enable&quot; and clear &quot;Read Cache Disable&quot;: sdparm &#8211;set=WCE &#8211;clear=RCD &#8211;save /dev/sda The previous example can also by written as: sdparm -s WCE=1,RCD=0 -S /dev/sda To re-establish the manufacturer&#8217;s defaults in the current and saved values of the caching mode page: sdparm &#8211;page=ca &#8211;defaults &#8211;save /dev/sda If an ATAPI cd/dvd drive is at /dev/hdc then its common (mode) parameters could be listed in the lk 2.6 series with:<br />
-sdparm&nbsp;<wbr>/dev/hdc If there is a DVD in the drive at /dev/hdc then it could be ejected in the lk 2.6 series with: sdparm &#8211;command=eject /dev/hdc If the ejection is being prevented by software then that can be overridden with: sdparm &#8211;command=unlock /dev/hdc One disk vendor has a &quot;Performance Mode&quot; bit (PM) in the vendor specific unit attention mode page [0x0,0x0]. PM=0 is server mode (the default) while PM=1 is desktop mode. Desktop mode can be set (both current and saved values) with: sdparm &#8211;page=0 &#8211;set=2:7:1=1 &#8211;save /dev/sda The resultant change can be viewed in hex with the <i>&#8211;hex</i> option as there are no acronyms for vendor extensions yet. The PM bit is now covered by vendor specific mode pages and the above can also be accomplished with: sdparm &#8211;vendor=sea &#8211;set=PM &#8211;save /dev/sda What follows are some examples from Windows using the &#8216;&#8211;wscan&#8217; option. The idea is to list the storage device names on the system that might be invoked by other uses of sdparm.<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sdparm &#8211;wscan<br />
- PD0 [C] FUJITSU MHY2160BH 0000<br />
- PD1 [DF] WD 2500BEV External 1.05 WD-WXE90<br />
- CDROM0 [E] MATSHITA DVD/CDRW UJDA775 CB03 So &#8216;sdparm -a CDROM0&#8217; and &#8216;sdparm -a E&#8217; will show all the (known) mode page fields for the Matshita DVD/CD drive. By using the &#8216;&#8211;wsacan&#8217; option twice, the bus type (as seen by the OS) is added to the output:<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sdparm -ww<br />
- PD0 [C] &lt;Ata &gt; FUJITSU MHY2160BH 0000<br />
- PD1 [DF] &lt;Usb &gt; WD 2500BEV External 1.05 WD-WXE90<br />
+<p>0x01 To set the &quot;Writeback Cache Enable&quot; bit in the current values page: sdparm &#8211;set=WCE /dev/sda To set the &quot;Writeback Cache Enable&quot; bit in the current and saved values page: sdparm &#8211;set=WCE &#8211;save /dev/sda To set the &quot;Writeback Cache Enable&quot; and clear &quot;Read Cache Disable&quot;: sdparm &#8211;set=WCE &#8211;clear=RCD &#8211;save /dev/sda The previous example can also by written as: sdparm -s WCE=1,RCD=0 -S /dev/sda To re-establish the manufacturer&#8217;s defaults in the current and saved values of the caching mode page: sdparm &#8211;page=ca &#8211;defaults &#8211;save /dev/sda If an ATAPI cd/dvd drive is at /dev/hdc then its common (mode) parameters could be listed in the lk 2.6 series with:<br/>
+sdparm&nbsp;<wbr>/dev/hdc If there is a DVD in the drive at /dev/hdc then it could be ejected in the lk 2.6 series with: sdparm &#8211;command=eject /dev/hdc If the ejection is being prevented by software then that can be overridden with: sdparm &#8211;command=unlock /dev/hdc One disk vendor has a &quot;Performance Mode&quot; bit (PM) in the vendor specific unit attention mode page [0x0,0x0]. PM=0 is server mode (the default) while PM=1 is desktop mode. Desktop mode can be set (both current and saved values) with: sdparm &#8211;page=0 &#8211;set=2:7:1=1 &#8211;save /dev/sda The resultant change can be viewed in hex with the <i>&#8211;hex</i> option as there are no acronyms for vendor extensions yet. The PM bit is now covered by vendor specific mode pages and the above can also be accomplished with: sdparm &#8211;vendor=sea &#8211;set=PM &#8211;save /dev/sda What follows are some examples from Windows using the &#8216;&#8211;wscan&#8217; option. The idea is to list the storage device names on the system that might be invoked by other uses of sdparm.<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sdparm &#8211;wscan<br/>
+ PD0 [C] FUJITSU MHY2160BH 0000<br/>
+ PD1 [DF] WD 2500BEV External 1.05 WD-WXE90<br/>
+ CDROM0 [E] MATSHITA DVD/CDRW UJDA775 CB03 So &#8216;sdparm -a CDROM0&#8217; and &#8216;sdparm -a E&#8217; will show all the (known) mode page fields for the Matshita DVD/CD drive. By using the &#8216;&#8211;wsacan&#8217; option twice, the bus type (as seen by the OS) is added to the output:<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sdparm -ww<br/>
+ PD0 [C] &lt;Ata &gt; FUJITSU MHY2160BH 0000<br/>
+ PD1 [DF] &lt;Usb &gt; WD 2500BEV External 1.05 WD-WXE90<br/>
  CDROM0 [E] &lt;Atapi&gt; MATSHITA DVD/CDRW UJDA775 CB03 And the pattern continues to add a SCSI adapter scan. This may be useful if there are specialized storage related devices (e.g. a SES device in an enclosure) but does add much extra information in this case. </p>
 <pre><code># sdparm -www
 PD0     [C]     &lt;Ata  &gt;  FUJITSU   MHY2160BH         0000
@@ -217,7 +217,7 @@ SCSI1:0,0,0   claimed=1 pdt=5h  MATSHITA  DVD/CDRW UJDA775  CB03
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2005-2013 Douglas Gilbert<br />
+<p>Copyright &#169; 2005-2013 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>Web Site</h2>
 <p>There is a web page discussing this package at <a rel="nofollow" href="http://sg.danny.cz/sg/sdparm.html">http://sg.danny.cz/sg/sdparm.html</a> .</p>

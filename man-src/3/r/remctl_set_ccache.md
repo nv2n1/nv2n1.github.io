@@ -15,19 +15,19 @@ int remctl_set_ccache(struct remctl *r, const char *ccache);</code></pre>
 
 <h2>Description</h2>
 
-<i>remctl_set_ccache()</i> tells the the remctl client library to use <i>ccache</i> as the credential cache for authentication to a remctl server. It will affect any subsequent <i>remctl_open()</i> calls on the same struct remctl object (and may have broader effects; see <font SIZE="-1">WARNINGS</font> below). <i>ccache</i> is normally a path to a file in the file system that holds Kerberos credentials, but may take other values depending on the underlying Kerberos implementation used by GSS-API. 
+<i>remctl_set_ccache()</i> tells the the remctl client library to use <i>ccache</i> as the credential cache for authentication to a remctl server. It will affect any subsequent <i>remctl_open()</i> calls on the same struct remctl object (and may have broader effects; see WARNINGS below). <i>ccache</i> is normally a path to a file in the file system that holds Kerberos credentials, but may take other values depending on the underlying Kerberos implementation used by GSS-API. 
 
- Calling this function will normally override any <font SIZE="-1">KRB5CCNAME</font> environment setting. If the caller wishes to honor that setting, it should either not call this function or check whether that environment variable is set first.
+ Calling this function will normally override any KRB5CCNAME environment setting. If the caller wishes to honor that setting, it should either not call this function or check whether that environment variable is set first.
 
 <h2>Return Value</h2>
 
 <i>remctl_set_ccache()</i> returns true on success and false on failure. On failure, the caller should call <i>remctl_error()</i> to retrieve the error message. 
 
- This function will always return failure if the underlying GSS-API implementation against which the remctl client library was compiled does not support setting the Kerberos credential cache. The caller should be prepared for that. Falling back on setting the <font SIZE="-1">KRB5CCNAME</font> environment variable is often a reasonable choice.
+ This function will always return failure if the underlying GSS-API implementation against which the remctl client library was compiled does not support setting the Kerberos credential cache. The caller should be prepared for that. Falling back on setting the KRB5CCNAME environment variable is often a reasonable choice.
 
 <h2>Examples</h2>
 
-Here's an example of attempting to use this function to set a ticket cache location and falling back on setting <font SIZE="-1">KRB5CCNAME</font> in the environment if this function is not supported. <pre><code>struct remctl r;
+Here's an example of attempting to use this function to set a ticket cache location and falling back on setting KRB5CCNAME in the environment if this function is not supported. <pre><code>struct remctl r;
 r = remctl_new();
 if (r != NULL)
     if (!remctl_set_ccache(r, &quot;/tmp/krb5cc_example&quot;))

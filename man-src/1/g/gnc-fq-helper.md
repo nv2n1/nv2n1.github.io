@@ -27,11 +27,11 @@ gnc-fq-helper - allows gnucash to communicate with Finance::Quote
 
  For example: 
 
- (yahoo ``<font SIZE="-1">IBM</font>'' ``<font SIZE="-1">LNUX</font>'') (fidelity_direct ``<font SIZE="-1">FBIOX</font>'' ``<font SIZE="-1">FSELX</font>'') (currency ``<font SIZE="-1">USD</font>'' ``<font SIZE="-1">AUD</font>'') 
+ (yahoo ``IBM'' ``LNUX'') (fidelity_direct ``FBIOX'' ``FSELX'') (currency ``USD'' ``AUD'') 
 
  Output (on standard output, one output form per input line): 
 
- Schemified version of gnc-fq's output, basically an alist of alists, as in the example below. Right now, only the fields that this script knows about (and knows how to convert to scheme) are returned, so the conversion function will have to be updated whenever Finance::Quote changes. Currently you'll get symbol, gnc:time-no-zone, and currency, and either last, nav, or price. Fields with gnc: prefixes are non-Finance::Quote fields. gnc:time-no-zone is returned as a string of the form ``YYYY-MM-DD <font SIZE="-1">HH:MM:SS</font>'', basically the unmolested (and underspecified) output of the quote source. It's up to you to know what it's proper timezone really is. i.e. if you know the time was in America/Chicago, you'll need to convert it to that. 
+ Schemified version of gnc-fq's output, basically an alist of alists, as in the example below. Right now, only the fields that this script knows about (and knows how to convert to scheme) are returned, so the conversion function will have to be updated whenever Finance::Quote changes. Currently you'll get symbol, gnc:time-no-zone, and currency, and either last, nav, or price. Fields with gnc: prefixes are non-Finance::Quote fields. gnc:time-no-zone is returned as a string of the form ``YYYY-MM-DD HH:MM:SS'', basically the unmolested (and underspecified) output of the quote source. It's up to you to know what it's proper timezone really is. i.e. if you know the time was in America/Chicago, you'll need to convert it to that. 
 
  For example: 
 

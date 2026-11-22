@@ -10,10 +10,10 @@ description: "pmtime, pmTimeConnect, pmTimeDisconnect, pmTimeRecv, pmTimeSendAck
 <p><code>pmtime</code>, <code>pmTimeConnect</code>, <code>pmTimeDisconnect</code>, <code>pmTimeRecv</code>, <code>pmTimeSendAck</code>, <code>pmTimeShowDialog</code> &#8211; time control functions for synchronizing the archive position and update interval between one or more applications</p>
 <h2>C Synopsis</h2>
 <p><code> #include &lt;pcp/pmtime.h&gt; </p>
-<p> int pmTimeConnect(int </code><i>port</i>, pmTime *<i>state</i>);<br />
- int pmTimeDisconnect(int <i>fd</i>);<br />
- int pmTimeSendAck(int <i>fd</i>, struct timeval *<i>fetchTime</i>);<br />
- int pmTimeShowDialog(int <i>fd</i>, int <i>show</i>);<br />
+<p> int pmTimeConnect(int </code><i>port</i>, pmTime *<i>state</i>);<br/>
+ int pmTimeDisconnect(int <i>fd</i>);<br/>
+ int pmTimeSendAck(int <i>fd</i>, struct timeval *<i>fetchTime</i>);<br/>
+ int pmTimeShowDialog(int <i>fd</i>, int <i>show</i>);<br/>
  int pmTimeRecv(int <i>fd</i>, pmTime *<i>state</i>); </p>
 <p> cc &#8230; -lpcp_gui</p>
 <h2>Description</h2>

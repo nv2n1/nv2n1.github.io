@@ -19,64 +19,64 @@ cc files... - lexpect5 .20 - ltcl7 .5 - lm
 </code></pre>
 <p> Note: library versions may differ in the actual release. </p>
 <p> The Expect_Init function adds expect commands to the named interpreter. It avoids overwriting commands that already exist, however aliases beginning with &quot;exp_&quot; are always created for expect commands. So for example, &quot;send&quot; can be used as &quot;exp_send&quot;. </p>
-<p> Generally, you should only call Expect commands via Tcl_Eval. Certain auxiliary functions may be called directly. They are summarized below. They may be useful in constructing your own main. Look at the file exp_main_exp.c in the Expect distribution as a prototype main. Another prototype is tclAppInit.c in the Tcl source distribution. A prototype for working with Tk is in exp_main_tk.c in the Expect distribution.<br />
-int exp_cmdlinecmds;<br />
-int exp_interactive;<br />
-FILE *exp_cmdfile;<br />
-char *exp_cmdfilename;<br />
-int exp_tcl_debugger_available;<br />
-void exp_parse_argv(Tcl_Interp *, int argc, char **argv);<br />
-int exp_interpreter(Tcl_Interp *);<br />
-void exp_interpret_cmdfile(Tcl_Interp *, FILE *);<br />
-void exp_interpret_cmdfilename(Tcl_Interp *, char *);<br />
-void exp_interpret_rcfiles(Tcl_Interp *, int my_rc, int sys_rc);<br />
-char *exp_cook(char *s, int *len);<br />
-void    (*exp_app_exit)EXP_PROTO((Tcl_Interp *);<br />
-void    exp_exit(Tcl_Interp *,int status);<br />
-void    exp_exit_handlers(Tcl_Interp *);<br />
-void    exp_error(Tcl_Interp,char *,&#8230;);<br />
+<p> Generally, you should only call Expect commands via Tcl_Eval. Certain auxiliary functions may be called directly. They are summarized below. They may be useful in constructing your own main. Look at the file exp_main_exp.c in the Expect distribution as a prototype main. Another prototype is tclAppInit.c in the Tcl source distribution. A prototype for working with Tk is in exp_main_tk.c in the Expect distribution.<br/>
+int exp_cmdlinecmds;<br/>
+int exp_interactive;<br/>
+FILE *exp_cmdfile;<br/>
+char *exp_cmdfilename;<br/>
+int exp_tcl_debugger_available;<br/>
+void exp_parse_argv(Tcl_Interp *, int argc, char **argv);<br/>
+int exp_interpreter(Tcl_Interp *);<br/>
+void exp_interpret_cmdfile(Tcl_Interp *, FILE *);<br/>
+void exp_interpret_cmdfilename(Tcl_Interp *, char *);<br/>
+void exp_interpret_rcfiles(Tcl_Interp *, int my_rc, int sys_rc);<br/>
+char *exp_cook(char *s, int *len);<br/>
+void    (*exp_app_exit)EXP_PROTO((Tcl_Interp *);<br/>
+void    exp_exit(Tcl_Interp *,int status);<br/>
+void    exp_exit_handlers(Tcl_Interp *);<br/>
+void    exp_error(Tcl_Interp,char *,&#8230;);<br/>
  <code>exp_cmdlinecmds</code> is 1 if Expect has been invoked with commands on the program command-line (using &quot;-c&quot; for example). <code>exp_interactive</code> is 1 if Expect has been invoked with the -i flag or if no commands or script is being invoked. <code>exp_cmdfile</code> is a stream from which Expect will read commands. <code>exp_cmdfilename</code> is the name of a file which Expect will open and read commands from. <code>exp_tcl_debugger_available</code> is 1 if the debugger has been armed. </p>
 <p> <code>exp_parse_argv</code> reads the representation of the command line. Based on what is found, any of the other variables listed here are initialized appropriately. <code>exp_interpreter</code> interactively prompts the user for commands and evaluates them. <code>exp_interpret_cmdfile</code> reads the given stream and evaluates any commands found. <code>exp_interpret_cmdfilename</code> opens the named file and evaluates any commands found. <code>exp_interpret_rcfiles</code> reads and evalutes the .rc files. If my_rc is zero, then ~/.expectrc is skipped. If sys_rc is zero, then the system-wide expectrc file is skipped. <code>exp_cook</code> returns a static buffer containing the argument reproduced with newlines replaced by carriage-return linefeed sequences. The primary purpose of this is to allow messages to be produced without worrying about whether the terminal is in raw mode or cooked mode. If length is zero, it is computed via strlen. <code>exp_error is a printf-like function that writes the result</code> to interp-&gt;result.</p>
 <h2>SYNOPSIS</h2>
-<p>#include &lt;expect.h&gt;<br />
-int exp_spawnl(file, arg0[, arg1, &#8230;, argn](char *) 0);<br />
-char *file;<br />
-char *arg0, *arg1, &#8230; *argn;<br />
-int<br />
-    exp_spawnv(file, argv);<br />
-char *file, *argv[];<br />
-int<br />
-    exp_spawnfd(fd);<br />
-int fd;<br />
-FILE *<br />
-    exp_popen(command);<br />
-char *command;<br />
-extern int exp_pid;<br />
-extern int exp_ttyinit;<br />
-extern int exp_ttycopy;<br />
-extern int exp_console;<br />
-extern char *exp_stty_init;<br />
-extern void (*exp_close_in_child)();<br />
-extern void (*exp_child_exec_prelude)();<br />
-extern void exp_close_tcl_files();<br />
+<p>#include &lt;expect.h&gt;<br/>
+int exp_spawnl(file, arg0[, arg1, &#8230;, argn](char *) 0);<br/>
+char *file;<br/>
+char *arg0, *arg1, &#8230; *argn;<br/>
+int<br/>
+    exp_spawnv(file, argv);<br/>
+char *file, *argv[];<br/>
+int<br/>
+    exp_spawnfd(fd);<br/>
+int fd;<br/>
+FILE *<br/>
+    exp_popen(command);<br/>
+char *command;<br/>
+extern int exp_pid;<br/>
+extern int exp_ttyinit;<br/>
+extern int exp_ttycopy;<br/>
+extern int exp_console;<br/>
+extern char *exp_stty_init;<br/>
+extern void (*exp_close_in_child)();<br/>
+extern void (*exp_child_exec_prelude)();<br/>
+extern void exp_close_tcl_files();<br/>
 cc files&#8230; &#8211; lexpect &#8211; ltcl &#8211; lm</p>
 <h2>DESCRIPTION</h2>
 <p> <code>exp_spawnl</code> and <code>exp_spawnv</code> fork a new process so that its stdin, stdout, and stderr can be written and read by the current process. <i>file</i> is the name of a file to be executed. The <i>arg</i> pointers are null-terminated strings. Following the style of execve(), <i>arg0</i> (or <i>argv[0]</i>) is customarily a duplicate of the name of the file. </p>
 <p> Four interfaces are available, <code>exp_spawnl</code> is useful when the number of arguments is known at compile time. <code>exp_spawnv</code> is useful when the number of arguments is not known at compile time. <code>exp_spawnfd</code> is useful when an open file descriptor is already available as a source. <code>exp_popen</code> is explained later on. </p>
 <p> If the process is successfully created, a file descriptor is returned which corresponds to the process&#8217;s stdin, stdout and stderr. A stream may be associated with the file descriptor by using fdopen(). (This should almost certainly be followed by setbuf() to unbuffer the I/O.) </p>
 <p> Closing the file descriptor will typically be detected by the process as an EOF. Once such a process exits, it should be waited upon (via wait) in order to free up the kernel process slot. (Some systems allow you to avoid this if you ignore the SIGCHLD signal). </p>
-<p> <code>exp_popen</code> is yet another interface, styled after popen(). It takes a Bourne shell command line, and returns a stream that corresponds to the process&#8217;s stdin, stdout and stderr. The actual implementation of <code>exp_popen</code> below demonstrates <code>exp_spawnl</code>.<br />
-FILE *<br />
-exp_popen(program)<br />
-char *program;<br />
-{<br />
-    FILE *fp;<br />
-    int ec;<br />
-    if (0 &gt; (ec = exp_spawnl(&#8220;sh&#8221;, &#8220;sh&#8221;, &#8220;-c&#8221;, program, (char *)0)))<br />
-        return (0);<br />
-        if (NULL == (fp = fdopen(ec,&#8221;r+&#8221;)) return(0);<br />
-        setbuf(fp,(char *)0);<br />
-        return(fp);<br />
+<p> <code>exp_popen</code> is yet another interface, styled after popen(). It takes a Bourne shell command line, and returns a stream that corresponds to the process&#8217;s stdin, stdout and stderr. The actual implementation of <code>exp_popen</code> below demonstrates <code>exp_spawnl</code>.<br/>
+FILE *<br/>
+exp_popen(program)<br/>
+char *program;<br/>
+{<br/>
+    FILE *fp;<br/>
+    int ec;<br/>
+    if (0 &gt; (ec = exp_spawnl(&#8220;sh&#8221;, &#8220;sh&#8221;, &#8220;-c&#8221;, program, (char *)0)))<br/>
+        return (0);<br/>
+        if (NULL == (fp = fdopen(ec,&#8221;r+&#8221;)) return(0);<br/>
+        setbuf(fp,(char *)0);<br/>
+        return(fp);<br/>
 }</p>
 <p> After a process is started, the variable <code>exp_pid</code> is set to the process-id of the new process. The variable <code>exp_pty_slave_name</code> is set to the name of the slave side of the pty. </p>
 <p> The spawn functions uses a pty to communicate with the process. By default, the pty is initialized the same way as the user&#8217;s tty (if possible, i.e., if the environment has a controlling terminal.) This initialization can be skipped by setting exp_ttycopy to 0. </p>
@@ -88,51 +88,51 @@ char *program;<br />
 <p> If you are also using Tcl, it may be convenient to use the function exp_close_tcl_files which closes all files between the default standard file descriptors and the highest descriptor known to Tcl. (Expect does this.) </p>
 <p> The function exp_child_exec_prelude is the last function called prior to the actual exec in the child. You can redefine this for effects such as manipulating the uid or the signals. </p>
 <h2>IF YOU WANT TO ALLOCATE YOUR OWN PTY</h2>
-<p>extern int exp_autoallocpty;<br />
+<p>extern int exp_autoallocpty;<br/>
 extern int exp_pty[2];</p>
 <p> The spawn functions use a pty to communicate with the process. By default, a pty is automatically allocated each time a process is spawned. If you want to allocate ptys yourself, before calling one of the spawn functions, set <code>exp_autoallocpty</code> to 0, <code>exp_pty[0]</code> to the master pty file descriptor and <code>exp_pty[1]</code> to the slave pty file descriptor. The expect library will not do any pty initializations (e.g., exp_stty_init will not be used). The slave pty file descriptor will be automatically closed when the process is spawned. After the process is started, all further communication takes place with the master pty file descriptor. </p>
 <p> <code>exp_spawnl</code> and <code>exp_spawnv</code> duplicate the shell&#8217;s actions in searching for an executable file in a list of directories. The directory list is obtained from the environment.</p>
 <h2>EXPECT PROCESSING</h2>
-<p> While it is possible to use read() to read information from a process spawned by <code>exp_spawnl</code> or <code>exp_spawnv</code>, more convenient functions are provided. They are as follows:<br />
-int<br />
-    exp_expectl(fd, type1, pattern1, [<br />
-        re1,<br />
-    ],<br />
-                value1, type2, &#8230;, exp_end);<br />
-int fd;<br />
-enum exp_type type;<br />
-char *pattern1, *pattern2, &#8230;;<br />
-regexp *re1, *re2, &#8230;;<br />
-int value1, value2, &#8230;;<br />
-int<br />
-    exp_fexpectl(fp, type1, pattern1, [<br />
-        re1,<br />
-    ] value1,<br />
-                 type2, &#8230;, exp_end);<br />
-FILE *fp;<br />
-enum exp_type type;<br />
-char *pattern1, *pattern2, &#8230;;<br />
-regexp *re1, *re2, &#8230;;<br />
-int value1, value2, &#8230;;<br />
-enum exp_type {<br />
-};<br />
-struct exp_case {<br />
-};<br />
-int<br />
-    exp_expectv(fd, cases);<br />
-int fd;<br />
-struct exp_case *cases;<br />
-int<br />
-    exp_fexpectv(fp, cases);<br />
-FILE *fp;<br />
-struct exp_case *cases;<br />
-extern int exp_timeout;<br />
-extern char *exp_match;<br />
-extern char *exp_match_end;<br />
-extern char *exp_buffer;<br />
-extern char *exp_buffer_end;<br />
-extern int exp_match_max;<br />
-extern int exp_full_buffer;<br />
+<p> While it is possible to use read() to read information from a process spawned by <code>exp_spawnl</code> or <code>exp_spawnv</code>, more convenient functions are provided. They are as follows:<br/>
+int<br/>
+    exp_expectl(fd, type1, pattern1, [<br/>
+        re1,<br/>
+    ],<br/>
+                value1, type2, &#8230;, exp_end);<br/>
+int fd;<br/>
+enum exp_type type;<br/>
+char *pattern1, *pattern2, &#8230;;<br/>
+regexp *re1, *re2, &#8230;;<br/>
+int value1, value2, &#8230;;<br/>
+int<br/>
+    exp_fexpectl(fp, type1, pattern1, [<br/>
+        re1,<br/>
+    ] value1,<br/>
+                 type2, &#8230;, exp_end);<br/>
+FILE *fp;<br/>
+enum exp_type type;<br/>
+char *pattern1, *pattern2, &#8230;;<br/>
+regexp *re1, *re2, &#8230;;<br/>
+int value1, value2, &#8230;;<br/>
+enum exp_type {<br/>
+};<br/>
+struct exp_case {<br/>
+};<br/>
+int<br/>
+    exp_expectv(fd, cases);<br/>
+int fd;<br/>
+struct exp_case *cases;<br/>
+int<br/>
+    exp_fexpectv(fp, cases);<br/>
+FILE *fp;<br/>
+struct exp_case *cases;<br/>
+extern int exp_timeout;<br/>
+extern char *exp_match;<br/>
+extern char *exp_match_end;<br/>
+extern char *exp_buffer;<br/>
+extern char *exp_buffer_end;<br/>
+extern int exp_match_max;<br/>
+extern int exp_full_buffer;<br/>
 extern int exp_remove_nulls;</p>
 <p> The functions wait until the output from a process matches one of the patterns, a specified time period has passed, or an EOF is seen. </p>
 <p> The first argument to each function is either a file descriptor or a stream. Successive sets of arguments describe patterns and associated integer values to return when the pattern matches. </p>
@@ -145,34 +145,34 @@ extern int exp_remove_nulls;</p>
 <p> If the variable exp_full_buffer is 1, then EXP_FULLBUFFER is returned if exp_buffer fills with no pattern having matched. </p>
 <p> When the expect function returns, <code>exp_buffer</code> points to the buffer of characters that was being considered for matching. <code>exp_buffer_end</code> points to one past the last character in exp_buffer. If a match occurred, <code>exp_match</code> points into <code>exp_buffer</code> where the match began. <code>exp_match_end</code> points to one character past where the match ended. </p>
 <p> Each time new input arrives, it is compared to each pattern in the order they are listed. Thus, you may test for absence of a match by making the last pattern something guaranteed to appear, such as a prompt. In situations where there is no prompt, you must check for <code>EXP_TIMEOUT</code> (just like you would if you were interacting manually). More philosophy and strategies on specifying <code>expect</code> patterns can be found in the documentation on the <code>expect</code> program itself. See SEE ALSO below. </p>
-<p> Patterns are the usual C-shell-style regular expressions. For example, the following fragment looks for a successful login, such as from a telnet dialogue.<br />
-switch (exp_expectl(<br />
-    exp_glob, &#8220;connected&#8221;, CONN,<br />
-    exp_glob, &#8220;busy&#8221;, BUSY,<br />
-    exp_glob, &#8220;failed&#8221;, ABORT,<br />
-    exp_glob, &#8220;invalid password&#8221;, ABORT,<br />
-    exp_end)) {<br />
-case CONN: /* logged in successfully */<br />
-    break;<br />
-case BUSY: /* couldn&#8217;t log in at the moment */<br />
-    break;<br />
-case EXP_TIMEOUT:<br />
-case ABORT: /* can&#8217;t log in at any moment! */<br />
-    break;<br />
-default: /* problem with expect */<br />
+<p> Patterns are the usual C-shell-style regular expressions. For example, the following fragment looks for a successful login, such as from a telnet dialogue.<br/>
+switch (exp_expectl(<br/>
+    exp_glob, &#8220;connected&#8221;, CONN,<br/>
+    exp_glob, &#8220;busy&#8221;, BUSY,<br/>
+    exp_glob, &#8220;failed&#8221;, ABORT,<br/>
+    exp_glob, &#8220;invalid password&#8221;, ABORT,<br/>
+    exp_end)) {<br/>
+case CONN: /* logged in successfully */<br/>
+    break;<br/>
+case BUSY: /* couldn&#8217;t log in at the moment */<br/>
+    break;<br/>
+case EXP_TIMEOUT:<br/>
+case ABORT: /* can&#8217;t log in at any moment! */<br/>
+    break;<br/>
+default: /* problem with expect */<br/>
 }</p>
 <p> Asterisks (as in the example above) are a useful shorthand for omitting line-termination characters and other detail. Patterns must match the entire output of the current process (since the previous read on the descriptor or stream). More than 2000 bytes of output can force earlier bytes to be &quot;forgotten&quot;. This may be changed by setting the variable <code>exp_match_max</code>. Note that excessively large values can slow down the pattern matcher.</p>
 <h2>RUNNING IN THE BACKGROUND</h2>
-<p>extern int exp_disconnected;<br />
-int exp_disconnect();<br />
+<p>extern int exp_disconnected;<br/>
+int exp_disconnect();<br/>
  It is possible to move a process into the background after it has begun running. A typical use for this is to read passwords and then go into the background to sleep before using the passwords to do real work. </p>
 <p> To move a process into the background, fork, call exp_disconnect() in the child process and exit() in the parent process. This disassociates your process from the controlling terminal. If you wish to move a process into the background in a different way, you must set the variable exp_disconnected to 1. This allows processes spawned after this point to be started correctly.</p>
 <h2>MULTIPLEXING</h2>
 <p> By default, the expect functions block inside of a read on a single file descriptor. If you want to wait on patterns from multiple file descriptors, use select, poll, or an event manager. They will tell you what file descriptor is ready to read. </p>
 <p> When a file descriptor is ready to read, you can use the expect functions to do one and only read by setting timeout to 0.</p>
 <h2>SLAVE CONTROL</h2>
-<p>void<br />
-    exp_slave_control(fd, enable) int fd;<br />
+<p>void<br/>
+    exp_slave_control(fd, enable) int fd;<br/>
 int enable;</p>
 <p> Pty trapping is normally done automatically by the expect functions. However, if you want to issue an ioctl, for example, directly on the slave device, you should temporary disable trapping. </p>
 <p> Pty trapping can be controlled with exp_slave_control. The first argument is the file descriptor corresponding to the spawned process. The second argument is a 0 if trapping is to be disabled and 1 if it is to be enabled. </p>

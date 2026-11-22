@@ -92,7 +92,7 @@ description: "enblend – manual page for enblend 4.1.1"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs at &lt;<a rel="nofollow" href="https://bugs.launchpad.net/enblend">https://bugs.launchpad.net/enblend</a>&gt;. + cleanup_output</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004-2012 Andrew Mihal. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 2004-2012 Andrew Mihal. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>enblend</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>enblend</code> programs are properly installed at your site, the command</p>

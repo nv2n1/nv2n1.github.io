@@ -9,7 +9,7 @@ description: "ksplice-undo – Undo a Ksplice update that has been applied to th
 
 <p>ksplice-undo &#8211; Undo a Ksplice update that has been applied to the running kernel</p>
 <h2>Synopsis</h2>
-<p><code>ksplice-undo</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] <i></i><font SIZE="-1"><i>KSPLICE_ID</i></font><i></i></p>
+<p><code>ksplice-undo</code> [<i></i><i>OPTIONS</i><i></i>] <i></i><i>KSPLICE_ID</i><i></i></p>
 <h2>Description</h2>
 <p><code>ksplice-undo</code> takes as input a Ksplice identification tag, as reported by <i><a href="/docs/linux/man/8-ksplice-view/">ksplice-view</a></i>(8), and it reverses that update within the running binary kernel.</p>
 <h2>Options</h2>
@@ -29,4 +29,4 @@ description: "ksplice-undo – Undo a Ksplice update that has been applied to th
 <p>Jeff Arnold, Anders Kaseorg, and Tim Abbott</p>
 <h2>Copyright</h2>
 <p>Copyright (C) 2007-2009 Ksplice, Inc. </p>
-<p> This is free software and documentation. You can redistribute and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License, version 2.</p>
+<p> This is free software and documentation. You can redistribute and/or modify it under the terms of the GNU General Public License, version 2.</p>

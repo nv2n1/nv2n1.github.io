@@ -10,7 +10,7 @@ description: "cgetc2.f –"
 <p>cgetc2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgetc2</code> (N, A, LDA, IPIV, JPIV, INFO)<br />
+<p>subroutine <code>cgetc2</code> (N, A, LDA, IPIV, JPIV, INFO)<br/>
  <i></i><code>CGETC2</code> computes the LU factorization with complete pivoting of the general n-by-n matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgetc2 (integerN, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integer, dimension( * )JPIV, integerINFO)</h3>

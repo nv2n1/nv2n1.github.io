@@ -10,21 +10,21 @@ dahdi_genconf - Generate configuration for dahdi channels.
 
 <h2>Synopsis</h2>
 
-dahdi_genconf [<font SIZE="-1">FILES</font>...]
+dahdi_genconf [FILES...]
 
 <h2>Description</h2>
 
-This script generate configuration files for <font SIZE="-1">DAHDI</font> hardware. The parameters are types of files to generate. By default it will generate the types 'dahdi' and 'chan_dahdi'. See below a complete list.
+This script generate configuration files for DAHDI hardware. The parameters are types of files to generate. By default it will generate the types 'dahdi' and 'chan_dahdi'. See below a complete list.
 <dl><dt>dahdi - /etc/dahdi/system.conf
-</dt><dd>Configuration for <i>dahdi_cfg</i>(1). Its location may be overriden by the environment variable <font SIZE="-1">DAHDI_CONF_FILE</font>.
+</dt><dd>Configuration for <i>dahdi_cfg</i>(1). Its location may be overriden by the environment variable DAHDI_CONF_FILE.
 </dd><dt>modules /etc/dahdi/modules
-</dt><dd>List of <font SIZE="-1">DAHDI</font> kernel modules to be loaded by the init.d script. One module per line. Its location may be overriden with the variable <font SIZE="-1">DAHDI_MODS_FILE</font>.
+</dt><dd>List of DAHDI kernel modules to be loaded by the init.d script. One module per line. Its location may be overriden with the variable DAHDI_MODS_FILE.
 </dd><dt>chan_dahdi - /etc/asterisk/dahdi-channels.conf
-</dt><dd>Configuration for <i>asterisk</i>(1). It should be included in the main /etc/asterisk/chan_dahdi.conf. Its location may be overriden by the environment variable <font SIZE="-1">CHAN_DAHDI_CHANNELS_FILE</font>.
+</dt><dd>Configuration for <i>asterisk</i>(1). It should be included in the main /etc/asterisk/chan_dahdi.conf. Its location may be overriden by the environment variable CHAN_DAHDI_CHANNELS_FILE.
 </dd><dt>users - /etc/asterisk/users.conf
-</dt><dd>Configuration for <i>asterisk</i>(1) and AsteriskGUI. Its location may be overriden by the environment variable <font SIZE="-1">USERS_FILE</font>.
+</dt><dd>Configuration for <i>asterisk</i>(1) and AsteriskGUI. Its location may be overriden by the environment variable USERS_FILE.
 </dd><dt>chan_dahdi_full - /etc/asterisk/chan_dahdi.conf
-</dt><dd>Configuration for <i>asterisk</i>(1) and AsteriskGUI. Its location may be overriden by the environment variable <font SIZE="-1">CHAN_DAHDI_CONF_FILE</font>.</dd></dl>
+</dt><dd>Configuration for <i>asterisk</i>(1) and AsteriskGUI. Its location may be overriden by the environment variable CHAN_DAHDI_CONF_FILE.</dd></dl>
 
 <h2>Examples</h2>
 

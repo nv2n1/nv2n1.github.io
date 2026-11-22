@@ -57,7 +57,7 @@ description: "aa, autoarchive – simple backup utility"
 <p> Robert Cernansky &lt;openhs [at] users.sourceforge.net&gt; </p>
 <p> Homepage: <a rel="nofollow" href="http://autoarchive.sourceforge.net/">http://autoarchive.sourceforge.net/</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2003 &#8211; 2010 Robert Cernansky<br />
+<p> Copyright &#169; 2003 &#8211; 2010 Robert Cernansky<br/>
  Copyright &#169; 2003 &#8211; 2010 HOME software </p>
 <p> This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation. </p>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>

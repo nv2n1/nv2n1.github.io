@@ -11,10 +11,10 @@ description: "rquota – implement quotas on remote machines"
 <h2>Protocol</h2>
 <p><code>/usr/include/rpcsvc/rquota.x</code></p>
 <h2>Description</h2>
-<p> The <code>rquota()</code> protocol inquires about quotas on remote machines. It is used in conjunction with <font SIZE="-1">NFS</font>, since <font SIZE="-1">NFS</font> itself does not implement quotas.</p>
+<p> The <code>rquota()</code> protocol inquires about quotas on remote machines. It is used in conjunction with NFS, since NFS itself does not implement quotas.</p>
 <h2>Programming</h2>
 <p><code>#include &lt;rpcsvc/rquota.h&gt;</code> </p>
-<p> The following <font SIZE="-1">XDR</font> routines are available in <code>librpcsvc</code>: </p>
+<p> The following XDR routines are available in <code>librpcsvc</code>: </p>
 <pre><code>xdr_getquota_arg</code>
 <code>xdr_getquota_rslt</code>
 <code>xdr_rquota</code></pre>

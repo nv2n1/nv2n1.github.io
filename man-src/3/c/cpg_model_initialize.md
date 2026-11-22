@@ -51,12 +51,12 @@ typedef void (*cpg_totem_confchg_fn_t)(
 <dl>
 <dt>
 </dt><dd>
-typedef struct {<br />
-    cpg_model_t model;<br />
-    cpg_deliver_fn_t cpg_deliver_fn;<br />
-    cpg_confchg_fn_t cpg_confchg_fn;<br />
-    cpg_totem_confchg_fn_t cpg_totem_confchg_fn;<br />
-    unsigned int flags;<br />
+typedef struct {<br/>
+    cpg_model_t model;<br/>
+    cpg_deliver_fn_t cpg_deliver_fn;<br/>
+    cpg_confchg_fn_t cpg_confchg_fn;<br/>
+    cpg_totem_confchg_fn_t cpg_totem_confchg_fn;<br/>
+    unsigned int flags;<br/>
 } cpg_model_v1_data_t;
 </dd></dl>
 </dl>
@@ -66,10 +66,10 @@ typedef struct {<br />
 <dl>
 <dt>
 </dt><dd>
-struct cpg_address {<br />
-    unsigned int nodeid;<br />
-    unsigned int pid;<br />
-    unsigned int reason;<br />
+struct cpg_address {<br/>
+    unsigned int nodeid;<br/>
+    unsigned int pid;<br/>
+    unsigned int reason;<br/>
 };
 </dd></dl>
 </dl>

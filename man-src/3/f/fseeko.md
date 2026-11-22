@@ -19,7 +19,7 @@ off_t ftello(FILE *stream);
 <p> <code>fseeko</code>(), <code>ftello</code>(): </p>
 <dl>
 <dt>
-</dt><dd> _FILE_OFFSET_BITS&nbsp;==&nbsp;64 || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+</dt><dd> _FILE_OFFSET_BITS&nbsp;==&nbsp;64 || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
  (defining the obsolete _LARGEFILE_SOURCE macro also works)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>fseeko</code>() and <code>ftello</code>() functions are identical to <code><a href="/docs/linux/man/3-fseek/">fseek</a></code>(3) and <code><a href="/docs/linux/man/3-ftell/">ftell</a></code>(3) (see <code><a href="/docs/linux/man/3-fseek/">fseek</a></code>(3)), respectively, except that the <i>offset</i> argument of <code>fseeko</code>() and the return value of <code>ftello</code>() is of type <i>off_t</i> instead of <i>long</i>. </p>

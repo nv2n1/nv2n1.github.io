@@ -41,20 +41,20 @@ description: "sane-epjitsu – SANE backend for Epson-based Fujitsu USB scanners
 <h2>Environment</h2>
 <p>The backend uses a single environment variable, <code>SANE_DEBUG_EPJITSU,</code> which enables debugging output to stderr. Valid values are: </p>
 <dl>
-<dd>5 Errors<br />
- 10 Function trace<br />
- 15 Function detail<br />
- 20 Option commands<br />
- 25 USB trace<br />
- 30 USB detail<br />
+<dd>5 Errors<br/>
+ 10 Function trace<br/>
+ 15 Function detail<br/>
+ 20 Option commands<br/>
+ 25 USB trace<br/>
+ 30 USB detail<br/>
  35 Useless noise</dd></dl>
 <h2>Known Issues</h2>
 <dl>
 <dd>Only limited scan area options are exposed. </dd>
 <p> fi-60F and fi-65F hardware grayscale mode is not used, because the calibration code is not finished.</dl>
 <h2>Credits</h2>
-<p>S300 support funded by Microdea, Inc. and Archivista, GmbH.<br />
- fi-60F support funded by TrueCheck, Inc.<br />
+<p>S300 support funded by Microdea, Inc. and Archivista, GmbH.<br/>
+ fi-60F support funded by TrueCheck, Inc.<br/>
  Improved calibration code provided by Richard Goedeken.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) </p>

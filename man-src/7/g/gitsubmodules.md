@@ -144,7 +144,7 @@ git grep foo
 git ls-files --recurse-submodules</pre>
 </dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> <code>git ls-files</code> also requires its own <code>&#8211;recurse-submodules</code> flag. </p>
 </dl>
 <dl>

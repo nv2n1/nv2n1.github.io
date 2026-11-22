@@ -8,17 +8,17 @@ url: "/docs/linux/man/1-globus-spec-creator/"
 description: "globus-spec-creator – Generate an RPM spec file from a GPT source package description"
 ---
 
-<p> <code>globus-spec-creator</code> &#8211; Generate an <font SIZE="-1">RPM</font> spec file from a <font SIZE="-1">GPT</font> source package description </p>
+<p> <code>globus-spec-creator</code> &#8211; Generate an RPM spec file from a GPT source package description </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globus-spec-creator</code> [options] [patches &#8230;] </p>
 <p> Options:</p>
 <dl>
 <dt><code>-gptfile</code> filename</dt>
-<dd> The package&#8217;s <font SIZE="-1">GPT</font> source package description file (mandatory)</dd>
+<dd> The package&#8217;s GPT source package description file (mandatory)</dd>
 <dt><code>-setupfile</code> filename</dt>
-<dd> The corresponding setup package&#8217;s <font SIZE="-1">GPT</font> source package description file (default: none)</dd>
+<dd> The corresponding setup package&#8217;s GPT source package description file (default: none)</dd>
 <dt><code>-release</code> releasenumber</dt>
-<dd> The <font SIZE="-1">RPM</font> release number (default: 1)</dd>
+<dd> The RPM release number (default: 1)</dd>
 <dt><code>-directory</code> directory</dt>
 <dd> The package&#8217;s source directory in the toolkit installer</dd>
 <dt><code>-toolkitversion</code> versionnumber</dt>
@@ -26,7 +26,7 @@ description: "globus-spec-creator – Generate an RPM spec file from a GPT sourc
 <dt><code>-email</code> emailaddress</dt>
 <dd> The packagers e-mail address (default: username [at] hostname)</dd>
 <dt><code>-nodoc</code></dt>
-<dd> Disable the generation of the doc <font SIZE="-1">RPM</font></dd>
+<dd> Disable the generation of the doc RPM</dd>
 <dt><code>-help</code></dt>
 <dd> Show help</dd></dl>
 <p> Arguments: </p>

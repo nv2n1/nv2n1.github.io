@@ -32,9 +32,9 @@ description: "Tspi_ChangeAuthAsym – change the authorization data of an entity
 <h2>Return Codes</h2>
 <p><code>Tspi_ChangeAuthAsym</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; Either <i>hObjectToChange</i>, <i>hParentObject</i>, or <i>hIdentKey</i> is an invalid handle.</font></dt>
+<dt>TSS_E_INVALID_HANDLE &#8211; Either <i>hObjectToChange</i>, <i>hParentObject</i>, or <i>hIdentKey</i> is an invalid handle.</dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></dt>
+</dd><dt>TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</dt>
 <dd></dd></dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_ChangeAuthAsym</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>

@@ -37,9 +37,9 @@ description: "bro-cut – parse Bro logs"
 <dd>
 </dd><dd>For time conversion option <code>-d</code> or <code>-u</code>, the format string can be specified by setting this environment variable.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> Output three columns and convert time values:<br />
+<p> Output three columns and convert time values:<br/>
  cat conn.log | bro-cut -d ts id.orig_h id.orig_p </p>
-<p> Output all columns and convert time values with a custom format string:<br />
+<p> Output all columns and convert time values with a custom format string:<br/>
  cat conn.log | bro-cut -D &quot;%Y-%m-%d %H:%M:%S&quot;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-strftime/">strftime</a>(3)</p>

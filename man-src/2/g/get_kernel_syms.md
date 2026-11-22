@@ -18,8 +18,8 @@ int get_kernel_syms(struct kernel_sym *table);
 <h2>DESCRIPTION</h2>
 <p> <code>Note</code>: This system call is present only in kernels before Linux 2.6. </p>
 <p> If <i>table</i> is NULL, <code>get_kernel_syms</code>() returns the number of symbols available for query. Otherwise, it fills in a table of structures: </p>
-<p> struct kernel_sym {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long value;<br />
+<p> struct kernel_sym {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long value;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;name[60]; }; </p>
 <p> The symbols are interspersed with magic symbols of the form <code>#</code><i>module-name</i> with the kernel having an empty name. The value associated with a symbol of this form is the address at which the module is loaded. </p>
 <p> The symbols exported from each module follow their magic module tag and the modules are returned in the reverse of the order in which they were loaded.</p>

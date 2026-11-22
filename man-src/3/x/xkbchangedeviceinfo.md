@@ -10,7 +10,7 @@ description: "XkbChangeDeviceInfo – Update the server’s description of a dev
 <p>XkbChangeDeviceInfo &#8211; Update the server&#8217;s description of a device with the changes noted in an XkbDeviceChangesRec </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbChangeDeviceInfo</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>XkbDeviceChangesPtr </code><i>changes</i><code>);</code><br />
+<dt> <code>Bool XkbChangeDeviceInfo</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>XkbDeviceChangesPtr </code><i>changes</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

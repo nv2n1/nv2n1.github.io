@@ -11,7 +11,7 @@ description: "wd_keepalive – a simplified software watchdog daemon"
 <h2>Synopsis</h2>
 <p><code>wd_keepalive</code> [<code>-c</code> <i>filename</i>|<code>&#8211;config-file</code> <i>filename</i>]</p>
 <h2>Description</h2>
-<p>This is a simplified version of the watchdog daemon. If configured so it only opens<br />
+<p>This is a simplified version of the watchdog daemon. If configured so it only opens<br/>
 &nbsp;<wbr>.IR&nbsp;<wbr>/dev/watchdog ,&nbsp;<wbr> and keeps writing to it often enough to keep the kernel from resetting, at least once per minute. Each write delays the reboot time another minute. After a minute of inactivity the watchdog hardware will cause a reset. In the case of the software watchdog the ability to reboot will depend on the state of the machines and interrupts. </p>
 <p> The wd_keepalive daemon can be stopped without causing a reboot if the device <i>/dev/watchdog</i> is closed correctly, unless your kernel is compiled with the <i>CONFIG_WATCHDOG_NOWAYOUT</i> option enabled. </p>
 <p> Under high system load <code>wd_keepalive</code> might be swapped out of memory and may fail to make it back in in time. Under these circumstances the Linux kernel will reset the machine. To make sure you won&#8217;t get unnecessary reboots make sure you have the variable <i>realtime</i> set to <i>yes</i> in the configuration file <i>watchdog.conf</i>. This adds real time support to <code>wd_keepalive</code>: it will lock itself into memory and there should be no problem even under the highest of loads. </p>

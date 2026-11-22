@@ -23,31 +23,31 @@ mount {
 <dd>The directory path where the group hierarchy associated to a given controller shall be mounted. The directory is created automatically on cgconfig service startup if it does not exist and is deleted on service shutdown.</dd></dl>
 <p> If no <i>mount</i> section is specified, no controllers are mounted. group</p>
 <p>section has this form:</p>
-<p>group &lt;name&gt; {<br />
-    [permissions]<br />
-    &lt;controller&gt; {<br />
-        &lt;param name&gt; = &lt;param value&gt;;<br />
+<p>group &lt;name&gt; {<br/>
+    [permissions]<br/>
+    &lt;controller&gt; {<br/>
+        &lt;param name&gt; = &lt;param value&gt;;<br/>
         &#8230;</p>
-<p>    }<br />
+<p>    }<br/>
     &#8230;</p>
 <p>}</p>
 <dl>
 <dt><code>name</code></dt>
 <dd>Name of the control group. It can contain only characters, which are allowed for directory names. The groups form a tree, i.e. a control group can contain zero or more subgroups. Subgroups can be specified using &#8216;/&#8217; delimiter. The root control group is always created automatically in all hierarchies and it is the base of the group hierarchy. It can be explicitly specified in <code>cgconfig.conf</code> by using &#8216;.&#8217; as group name. This can be used e.g. to set its permissions, as shown in Example 6. When the parent control group of a subgroup is not specified it is created automatically. permissions</dd>
-<p>Permissions of the given control group on mounted filesystem.<br />
+<p>Permissions of the given control group on mounted filesystem.<br/>
 root</p>
-<p>has always permission to do anything with the control group.<br />
+<p>has always permission to do anything with the control group.<br/>
 Permissions have the following syntax:</p>
-<p>perm {<br />
-    task {<br />
-        uid = &lt;task user&gt;;<br />
-        gid = &lt;task group&gt;;<br />
+<p>perm {<br/>
+    task {<br/>
+        uid = &lt;task user&gt;;<br/>
+        gid = &lt;task group&gt;;<br/>
         fperm = &lt;file permissions&gt;</p>
-<p>    }<br />
-    admin {<br />
-        uid = &lt;admin name&gt;;<br />
-        gid = &lt;admin group&gt;;<br />
-        dperm = &lt;directory permissions&gt;<br />
+<p>    }<br/>
+    admin {<br/>
+        uid = &lt;admin name&gt;;<br/>
+        gid = &lt;admin group&gt;;<br/>
+        dperm = &lt;directory permissions&gt;<br/>
         fperm = &lt;file permissions&gt;</p>
 <p>    }</p>
 <p>}</p>
@@ -71,17 +71,17 @@ Permissions have the following syntax:</p>
 </dl>
 <p> If no <i>group</i> section is specified, no groups are created. default</p>
 <p>section has this form:</p>
-<p>default {<br />
-    perm {<br />
-        task {<br />
-            uid = &lt;task user&gt;;<br />
-            gid = &lt;task group&gt;;<br />
+<p>default {<br/>
+    perm {<br/>
+        task {<br/>
+            uid = &lt;task user&gt;;<br/>
+            gid = &lt;task group&gt;;<br/>
             fperm = &lt;file permissions&gt;</p>
-<p>        }<br />
-        admin {<br />
-            uid = &lt;admin name&gt;;<br />
-            gid = &lt;admin group&gt;;<br />
-            dperm = &lt;directory permissions&gt;<br />
+<p>        }<br/>
+        admin {<br/>
+            uid = &lt;admin name&gt;;<br/>
+            gid = &lt;admin group&gt;;<br/>
+            dperm = &lt;directory permissions&gt;<br/>
             fperm = &lt;file permissions&gt;</p>
 <p>        }</p>
 <p>    }</p>

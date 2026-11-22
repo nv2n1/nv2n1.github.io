@@ -13,18 +13,18 @@ description: "sc::OneBodyIntOp –"
 <h3>Public Member Functions</h3>
 <p><code>OneBodyIntOp</code> (const <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; &amp;) </p>
 <p> <code>OneBodyIntOp</code> (const <code>Ref</code>&lt; <code>OneBodyIntIter</code> &gt; &amp;) </p>
-<p> void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;)<br />
- <i>This is the fallback routine to process blocks and is called by process_spec members that are not overridden. </i><br />
- void <code>process_spec_rect</code> (<code>SCMatrixRectBlock</code> *)<br />
- <i>Matrices should call these members when the type of block is known. </i><br />
+<p> void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;)<br/>
+ <i>This is the fallback routine to process blocks and is called by process_spec members that are not overridden. </i><br/>
+ void <code>process_spec_rect</code> (<code>SCMatrixRectBlock</code> *)<br/>
+ <i>Matrices should call these members when the type of block is known. </i><br/>
  void <code>process_spec_ltri</code> (<code>SCMatrixLTriBlock</code> *) </p>
 <p> void <code>process_spec_rectsub</code> (<code>SCMatrixRectSubBlock</code> *) </p>
 <p> void <code>process_spec_ltrisub</code> (<code>SCMatrixLTriSubBlock</code> *) </p>
-<p> bool <code>cloneable</code> ()<br />
- <i>Returns true if this </i><code>SCElementOp</code> supports the cloneable member.<br />
- <code>Ref</code>&lt; <code>SCElementOp</code> &gt; <code>clone</code> ()<br />
- <i>Returns a clone of this object. </i><br />
- int <code>has_side_effects</code> ()<br />
+<p> bool <code>cloneable</code> ()<br/>
+ <i>Returns true if this </i><code>SCElementOp</code> supports the cloneable member.<br/>
+ <code>Ref</code>&lt; <code>SCElementOp</code> &gt; <code>clone</code> ()<br/>
+ <i>Returns a clone of this object. </i><br/>
+ int <code>has_side_effects</code> ()<br/>
  <i>By default this returns nonzero. </i></p>
 <h3>Protected Attributes</h3>
 <p><code>Ref</code>&lt; <code>OneBodyIntIter</code> &gt; <code>iter</code></p>

@@ -11,7 +11,7 @@ description: "cla_heamv.f –"
 <p> cla_heamv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cla_heamv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p> subroutine <code>cla_heamv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>CLA_HEAMV</code> computes a matrix-vector product using a Hermitian indefinite matrix to calculate error bounds.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cla_heamv (integerUPLO, integerN, realALPHA, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )X, integerINCX, realBETA, real, dimension( * )Y, integerINCY)</h3>

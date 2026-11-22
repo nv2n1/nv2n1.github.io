@@ -11,11 +11,11 @@ description: "cerf, cerff, cerfl, cerfc, cerfcf, cerfcl – complex error functi
 <p> cerf, cerff, cerfl, cerfc, cerfcf, cerfcl &#8211; complex error function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex cerf(double complex </code><i>z</i><code>);</code><br />
- <code>float complex cerff(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex cerf(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex cerff(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex cerfl(long double complex </code><i>z</i><code>);</code> </p>
-<p> <code>double complex cerfc(double complex </code><i>z</i><code>);</code><br />
- <code>float complex cerfcf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex cerfc(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex cerfcf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex cerfcl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

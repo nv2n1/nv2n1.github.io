@@ -141,7 +141,7 @@ void traverseCDKOnce(
 <h2>BUGS</h2>
 <p> Not all widgets have had the extra methods added so that they work with the screen traversal engine.</p>
 <h2>AUTHOR</h2>
-<p> Grant Edwards, Aspen Research Corporation<br />
+<p> Grant Edwards, Aspen Research Corporation<br/>
  Thomas Dickey and contributors.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-cdk/">cdk</a></code>(3), <code><a href="/docs/linux/man/3-cdk_binding/">cdk_binding</a></code>(3), <code><a href="/docs/linux/man/3-cdk_display/">cdk_display</a></code>(3), <code><a href="/docs/linux/man/3-cdk_screen/">cdk_screen</a></code>(3) </p>

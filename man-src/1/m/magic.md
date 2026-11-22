@@ -572,8 +572,8 @@ description: "magic – VLSI layout editor"
 <dl>
 <dl>
 <dt><code>layout</code></dt>
-<dd> This type of window is used to edit a VLSI cell. The command takes a single argument which is used as the name of a cell to be loaded. The command <center> <code>open </code><i>filename</i><br />
- </center> is a shorthand for the command <center> <code>specialopen layout </code><i>filename</i>.<br />
+<dd> This type of window is used to edit a VLSI cell. The command takes a single argument which is used as the name of a cell to be loaded. The command <center> <code>open </code><i>filename</i><br/>
+ </center> is a shorthand for the command <center> <code>specialopen layout </code><i>filename</i>.<br/>
  </center></dd>
 <dt><code>color</code></dt>
 <dd> This type of window allows the color map to be edited. See the section COMMANDS FOR COLORMAP EDITING below.</dd>
@@ -669,9 +669,9 @@ description: "magic – VLSI layout editor"
 <p> Layer masks may be formed by constructing comma-separated lists of individual layer names. The individual layer names may be abbreviated, as long as the abbreviations are unique. For example, to indicate polysilicon and n-diffusion, use <code>poly,ndiff</code> or <code>ndiff,poly</code>. The special character <code>&#8211;</code> causes all subsequent layers to be subtracted from the layer mask. For example, <code>*-p</code> means &#8220;all layers but polysilicon&#8221;. The special character <code>+</code> reverses the effect of a previous <code>&#8211;</code>; all subsequent layers are once again added to the layer mask. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ext2sim/">ext2sim</a>(1), <a href="/docs/linux/man/1-ext2spice/">ext2spice</a>(1), <a href="/docs/linux/man/5-cmap/">cmap</a>(5), <a href="/docs/linux/man/5-dstyle/">dstyle</a>(5), <a href="/docs/linux/man/5-ext/">ext</a>(5), <a href="/docs/linux/man/5-sim/">sim</a>(5), <a href="/docs/linux/man/5-glyphs/">glyphs</a>(5), <a href="/docs/linux/man/5-magic/">magic</a>(5), <a href="/docs/linux/man/5-displays/">displays</a>(5), <a href="/docs/linux/man/5-net/">net</a>(5) </p>
-<p> Online documentation can be found at the following URLs:<br />
- <a rel="nofollow" href="http://opencircuitdesign.com/magic/">http://opencircuitdesign.com/magic/</a><br />
- <a rel="nofollow" href="http://vlsi.cornell.edu/magic/">http://vlsi.cornell.edu/magic/</a><br />
+<p> Online documentation can be found at the following URLs:<br/>
+ <a rel="nofollow" href="http://opencircuitdesign.com/magic/">http://opencircuitdesign.com/magic/</a><br/>
+ <a rel="nofollow" href="http://vlsi.cornell.edu/magic/">http://vlsi.cornell.edu/magic/</a><br/>
  The OpenCircuitDesign website contains HTML versions of all the documentation found in the Magic &quot;doc&quot; subdirectory, including tutorials, technology file manual; download, compile and install instructions, and command reference. </p>
 <h2>FILES</h2>
 <pre><code>

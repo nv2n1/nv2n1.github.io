@@ -17,15 +17,15 @@ description: "sc::StateInBin –"
 <p><code>StateInBin</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
 <p> <code>StateInBin</code> (std::istream &amp;) </p>
 <p> <code>StateInBin</code> (const char *) </p>
-<p> int <code>open</code> (const char *name)<br />
- <i>State information will be obtained from name. </i><br />
- int <code>use_directory</code> ()<br />
- <i>Returns true of this object uses a directory. </i><br />
- int <code>tell</code> ()<br />
- <i>Return the current position in the file. </i><br />
- void <code>seek</code> (int loc)<br />
- <i>Set the current position in the file. </i><br />
- int <code>seekable</code> ()<br />
+<p> int <code>open</code> (const char *name)<br/>
+ <i>State information will be obtained from name. </i><br/>
+ int <code>use_directory</code> ()<br/>
+ <i>Returns true of this object uses a directory. </i><br/>
+ int <code>tell</code> ()<br/>
+ <i>Return the current position in the file. </i><br/>
+ void <code>seek</code> (int loc)<br/>
+ <i>Set the current position in the file. </i><br/>
+ int <code>seekable</code> ()<br/>
  <i>Return non-zero if seek does anything sensible. </i></p>
 <h2>Detailed Description</h2>
 <p>Read objects written with <code>StateOutBin</code>.</p>

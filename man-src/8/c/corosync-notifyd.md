@@ -29,13 +29,13 @@ description: "corosync-notifyd – Listen for important corosync events and send
 <dt><code>-h</code></dt>
 <dd>Print this help</dd></dl>
 <h2>Examples</h2>
-<p>$ corosync-notifyd -o<br />
- corosync-notifyd[18505]: troll[23374016] corosync-notify:18505:12 is now connected to corosync<br />
- corosync-notifyd[18505]: troll[23374016] corosync-notify:18505:13 is now disconnected from corosync<br />
- corosync-notifyd[18505]: troll[23374016] is now quorate<br />
- corosync-notifyd[18505]: r2[1550100672] ip:192.168.100.92 joined<br />
+<p>$ corosync-notifyd -o<br/>
+ corosync-notifyd[18505]: troll[23374016] corosync-notify:18505:12 is now connected to corosync<br/>
+ corosync-notifyd[18505]: troll[23374016] corosync-notify:18505:13 is now disconnected from corosync<br/>
+ corosync-notifyd[18505]: troll[23374016] is now quorate<br/>
+ corosync-notifyd[18505]: r2[1550100672] ip:192.168.100.92 joined<br/>
  corosync-notifyd[18505]: r2[1550100672] ip:192.168.100.92 left </p>
-<p> $ corosync-notifyd -d<br />
+<p> $ corosync-notifyd -d<br/>
  Note this output below is from &quot;dbus-monitor &#8211;system&quot; </p>
 <pre><code>signal sender=:1.216 -&gt; dest=(null destination) serial=2 path=/com/redhat/cluster/corosync;
 interface=com.redhat.cluster.corosync; member=ConnectionStateChange

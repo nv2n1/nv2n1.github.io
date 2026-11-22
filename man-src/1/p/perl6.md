@@ -17,7 +17,7 @@ perl6[switches][--][programfile][arguments]
 
 <h2>DESCRIPTION</h2>
 
- With no arguments, enters a <font SIZE="-1">REPL.</font> With a <tt>&quot;[programfile]&quot;</tt> or the <tt>&quot;-e&quot;</tt> option, compiles the given program and by default also executes the compiled code. 
+ With no arguments, enters a REPL. With a <tt>&quot;[programfile]&quot;</tt> or the <tt>&quot;-e&quot;</tt> option, compiles the given program and by default also executes the compiled code. 
 
  
   -c                   check syntax only (runs BEGIN and CHECK blocks)
@@ -55,7 +55,7 @@ Target Backend Description == == == == == == = == == == == == =
                                                                                   jar JVM JVM archive
 </code></pre> 
 
- For <tt>&quot;--profile-filename&quot;</tt>, specifying a name ending in <tt>&quot;.json&quot;</tt> will write a raw <font SIZE="-1">JSON</font> profile dump. The default if this is omitted is <tt>&quot;profile-</tt>[timestamp]<tt>.html&quot;</tt>.
+ For <tt>&quot;--profile-filename&quot;</tt>, specifying a name ending in <tt>&quot;.json&quot;</tt> will write a raw JSON profile dump. The default if this is omitted is <tt>&quot;profile-</tt>[timestamp]<tt>.html&quot;</tt>.
 
 <h2>ENVIRONMENT VARIABLES</h2>
 
@@ -85,7 +85,7 @@ Target Backend Description == == == == == == = == == == == == =
 
 <dl>
 <dt>&quot;RAKUDO_PREFIX&quot; (<i>Str</i>; <i>src/core/CompUnit/RepositoryRegistry.pm</i>)
-</dt><dd> When this is set, Rakudo will look for the standard repositories (perl, vendor, site) in the specified directory. This is intended as an escape hatch for build-time bootstrapping issues, where Rakudo may be built as an unprivileged user without write access to the runtime paths in <font SIZE="-1">NQP</font>'s config.
+</dt><dd> When this is set, Rakudo will look for the standard repositories (perl, vendor, site) in the specified directory. This is intended as an escape hatch for build-time bootstrapping issues, where Rakudo may be built as an unprivileged user without write access to the runtime paths in NQP's config.
 </dd><dt>&quot;RAKUDO_PRECOMP_DIST&quot; (<i>src/core/CompUnit/PrecompilationRepository.pm</i>)
 </dt><dd>
 </dd><dt>&quot;RAKUDO_PRECOMP_LOADING&quot; (<i>src/core/CompUnit/PrecompilationRepository.pm</i>)
@@ -97,7 +97,7 @@ Target Backend Description == == == == == == = == == == == == =
 
 <dl>
 <dt>&quot;RAKUDO_ERROR_COLOR&quot; (<i>Bool</i>; <i>src/core/Exception.pm</i>)
-</dt><dd> Controls whether to emit <font SIZE="-1">ANSI</font> codes for error highlighting. Defaults to true if unset, except on Win32.
+</dt><dd> Controls whether to emit ANSI codes for error highlighting. Defaults to true if unset, except on Win32.
 </dd><dt>&quot;RAKUDO_MAX_THREADS&quot; (<i>UInt</i>; <i>src/core/ThreadPoolScheduler.pm</i>)
 </dt><dd> Override the default maximum number of threads used by a thread pool.
 </dd><dt>&quot;TMPDIR&quot;, &quot;TEMP&quot;, &quot;TMP&quot; (<i>Str</i>; <i>src/core/IO/Spec/</i>)
@@ -109,6 +109,6 @@ Target Backend Description == == == == == == = == == == == == =
 
 <h2>AUTHORS</h2>
 
- Written by the Rakudo contributors, see the <font SIZE="-1">CREDITS</font> file. 
+ Written by the Rakudo contributors, see the CREDITS file. 
 
  This manual page was written by Reini Urban, Moritz Lenz and the Rakudo contributors.

@@ -68,11 +68,11 @@ BrightScan OpticPro OpticPro P12</pre>
 <p>This section describes the backend&#8217;s configuration file entries. The file is located at: <i>/etc/sane.d/plustek_pp.conf</i> </p>
 <p> For a proper setup, you will need at least two entries:</p>
 <dl>
-<dd><i>[direct]</i><br />
+<dd><i>[direct]</i><br/>
  <i>device 0x378</i></dd></dl>
 <p> or</p>
 <dl>
-<dd><i>[kernel]</i><br />
+<dd><i>[kernel]</i><br/>
  <i>device /dev/pt_drv</i></dd></dl>
 <p> <i>direct</i> tells the backend, that the following devicename (here <i>0x378</i>) has to be interpreted as parallel port scanner device. In fact it is the address to use, alternatively you can use <i>/dev/parport0</i> if the backend has been compiled with libieee1284 support. <i>kernel</i> should only be used, when a kernel-module has been built out of the backend sources. See below for more instructions about this. </p>
 <p> Further options: </p>
@@ -110,14 +110,14 @@ BrightScan OpticPro OpticPro P12</pre>
 <h2>Building The Kernel Module</h2>
 <p>As mentioned before, the <code>sane-plustek_pp</code> backend code can also be compiled and installed as linux kernel module. To do so, you will need the source-files of this sane-backend installation. Unpack this tar-ball and go to the directory: <i>sane-backends/doc/plustek</i>. Within this directory, you should find a script called: <i>MakeModule.sh</i>. Now if your Linux kernelsources are installed correctly, it should be possible to build, install and load the module <code>pt_drv</code>. <code>Please note,</code> that the kernelsources need to be configured correctly. Refer to your distributions manual on how this is done. As root user, try </p>
 <p> <i>./MakeModule.sh</i> </p>
-<p> the script will try and get all necessary information about your running kernel and will lead you through the whole installation process.<br />
+<p> the script will try and get all necessary information about your running kernel and will lead you through the whole installation process.<br/>
  <code>Note: Installing and loading the can only be done as</code> superuser.</p>
 <h2>Kernel Module Setup</h2>
 <p>The configuration of the kernel module is done by providing some or more options found below to the kernel module at load time. This can be done by invoking <code><a href="/docs/linux/man/8-insmod/">insmod</a></code>(8) with the appropriate parameters or appending the options to the file <i>/etc/modules.conf (kernel &lt; 2.6.x)</i> or <i>/etc/modprobe.conf (kernel &gt;= 2.6.x)</i> </p>
-<p> <code>The Options:</code><br />
+<p> <code>The Options:</code><br/>
  lampoff=lll</p>
 <dl>
-<dd>The value <i>lll</i> tells the driver, after how many seconds to switch-off the lamp(s). The default value is 180. 0 will disable this feature.<br />
+<dd>The value <i>lll</i> tells the driver, after how many seconds to switch-off the lamp(s). The default value is 180. 0 will disable this feature.<br/>
  <code>HINT:</code> Do not use a value that is too small, because often switching on/off the lamps will reduce their lifetime.</dd></dl>
 <p> port=ppp</p>
 <dl>
@@ -157,8 +157,8 @@ BrightScan OpticPro OpticPro P12</pre>
 </dl>
 <p> Sample entry for file <i>/etc/modules.conf</i>: </p>
 <dl>
-<dd>alias char-major-40 pt_drv<br />
- pre-install pt_drv modprobe -k parport<br />
+<dd>alias char-major-40 pt_drv<br/>
+ pre-install pt_drv modprobe -k parport<br/>
  options pt_drv lampoff=180 warmup=15 port=0x378 lOffonEnd=0 mov=0 slowIO=0 forceMode=0</dd></dl>
 <p> For multidevice support, simply add values separated by commas to the different options </p>
 <dl>
@@ -190,15 +190,15 @@ BrightScan OpticPro OpticPro P12</pre>
 <p> Example: export SANE_DEBUG_PLUSTEK_PP=10 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code>xscanimage</code>(1),<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code>xscanimage</code>(1),<br/>
  <i>/usr/share/doc/libsane/plustek/Plustek-PARPORT.changes</i> </p>
 <h2>Contact And Bug-Reports</h2>
-<p>Please send any information and bug-reports to:<br />
+<p>Please send any information and bug-reports to:<br/>
  <code>SANE Mailing List</code> </p>
-<p> Additional info and hints can be obtained from our<br />
- Mailing-List archive at:<br />
+<p> Additional info and hints can be obtained from our<br/>
+ Mailing-List archive at:<br/>
  <i><a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a></i> </p>
-<p> To obtain debug messages from the backend, please set the environment-variable <code>SANE_DEBUG_PLUSTEK_PP</code> before calling your favorite scan-frontend (i.e. <code>xscanimage</code>(1)),<code>i.e.:</code><br />
+<p> To obtain debug messages from the backend, please set the environment-variable <code>SANE_DEBUG_PLUSTEK_PP</code> before calling your favorite scan-frontend (i.e. <code>xscanimage</code>(1)),<code>i.e.:</code><br/>
  <i>export SANE_DEBUG_PLUSTEK_PP=20 ; xscanimage</i> </p>
 <p> The value controls the verbosity of the backend.</p>
 <h2>KNOWN BUGS &amp; RESTRICTIONS</h2>

@@ -46,34 +46,34 @@ description: "acroread – Adobe PDF Viewer for viewing PDF files on X Window Sy
 <dt><code>-installCertificate [-PEM|-DER] &lt;PathName&gt;</code></dt>
 <dd> Installs the certificate in the specified format from the given path to the Adobe Reader Certificate repository. </dd>
 <dt><code>/a</code></dt>
-<dd> Switch used to pass the file open parameters. To use more than one file open parameter, use &amp; as the separator and the options should be within quotes. See the example below:<br />
+<dd> Switch used to pass the file open parameters. To use more than one file open parameter, use &amp; as the separator and the options should be within quotes. See the example below:<br/>
  acroread /a &quot;page=NUM &amp; zoom=NUM&quot; PDF_FILE.pdf</dd>
 <dl>
 <dt>
-</dt><dd> <code>nameddest=name</code> &#8211; Specifies a named destination in the PDF.<br />
- <code>page=pagenum</code> &#8211; Specifies a numbered page in the document, using an integer value.<br />
- <code>zoom=scale</code> &#8211; Sets the zoom and scroll factors, using float or integer values.<br />
- <code>zoom=scale,left,top</code> &#8211; Scroll values left and top are in a coordinate system where 0,0 is the top left of the visible page, regardless of document rotation.<br />
- <code>view=&lt;option&gt;</code> &#8211; Set the view of the displayed page, using keyword values defined in the PDF Language Specification. Scroll values left and top are floats or integers in a coordinate system where 0,0 is the top left of the visible page, regardless of document rotation. Use the page command before this command.<br />
- <code>view=Fit</code><br />
- <code>view=FitH</code><br />
- <code>view=FitH,top</code><br />
- <code>view=FitV</code><br />
- <code>view=FitV,left</code><br />
- <code>view=FitB</code><br />
- <code>view=FitBH</code><br />
- <code>view=FitBH,top</code><br />
- <code>view=FitBV</code><br />
- <code>view=FitBV,left</code><br />
- <code>viewrect=left,top,wd,ht</code> &#8211; Sets the view rectangle using float or integer values in a coordinate system where 0,0 is the top left of the visible page, regardless of document rotation. Use the page command before this command.<br />
- <code>pagemode=&lt;option&gt;</code> &#8211; Displays bookmarks or thumbnails.<br />
- <code>pagemode=bookmarks</code><br />
- <code>pagemode=thumbs</code><br />
- <code>pagemode=none (default)</code><br />
- <code>scrollbar=1|0</code> &#8211; Turns scrollbars on or off.<br />
- <code>search=wordList</code> &#8211; Opens the Search UI and performs a search for the specified word list in the document. Found words are highlighted in the document. The words must be enclosed in quotes and separated by spaces; for example: #search=”word1 word2”<br />
- <code>toolbar=1|0</code> &#8211; Turns the toolbar on or off.<br />
- <code>highlight=lt,rt,top,btm</code> &#8211; Highlights a specified rectangle on the displayed page. (Use the page command before this command.) The rectangle values are integers in a coordinate system where 0,0 is the top left of the visible page, regardless of document rotation.<br />
+</dt><dd> <code>nameddest=name</code> &#8211; Specifies a named destination in the PDF.<br/>
+ <code>page=pagenum</code> &#8211; Specifies a numbered page in the document, using an integer value.<br/>
+ <code>zoom=scale</code> &#8211; Sets the zoom and scroll factors, using float or integer values.<br/>
+ <code>zoom=scale,left,top</code> &#8211; Scroll values left and top are in a coordinate system where 0,0 is the top left of the visible page, regardless of document rotation.<br/>
+ <code>view=&lt;option&gt;</code> &#8211; Set the view of the displayed page, using keyword values defined in the PDF Language Specification. Scroll values left and top are floats or integers in a coordinate system where 0,0 is the top left of the visible page, regardless of document rotation. Use the page command before this command.<br/>
+ <code>view=Fit</code><br/>
+ <code>view=FitH</code><br/>
+ <code>view=FitH,top</code><br/>
+ <code>view=FitV</code><br/>
+ <code>view=FitV,left</code><br/>
+ <code>view=FitB</code><br/>
+ <code>view=FitBH</code><br/>
+ <code>view=FitBH,top</code><br/>
+ <code>view=FitBV</code><br/>
+ <code>view=FitBV,left</code><br/>
+ <code>viewrect=left,top,wd,ht</code> &#8211; Sets the view rectangle using float or integer values in a coordinate system where 0,0 is the top left of the visible page, regardless of document rotation. Use the page command before this command.<br/>
+ <code>pagemode=&lt;option&gt;</code> &#8211; Displays bookmarks or thumbnails.<br/>
+ <code>pagemode=bookmarks</code><br/>
+ <code>pagemode=thumbs</code><br/>
+ <code>pagemode=none (default)</code><br/>
+ <code>scrollbar=1|0</code> &#8211; Turns scrollbars on or off.<br/>
+ <code>search=wordList</code> &#8211; Opens the Search UI and performs a search for the specified word list in the document. Found words are highlighted in the document. The words must be enclosed in quotes and separated by spaces; for example: #search=”word1 word2”<br/>
+ <code>toolbar=1|0</code> &#8211; Turns the toolbar on or off.<br/>
+ <code>highlight=lt,rt,top,btm</code> &#8211; Highlights a specified rectangle on the displayed page. (Use the page command before this command.) The rectangle values are integers in a coordinate system where 0,0 is the top left of the visible page, regardless of document rotation.<br/>
  <code>help=indexcontentssearch</code> &#8211; Used only when opening a file from the command line or an Apple Event. Opens the document in the Help window, with the specified navigation panel selected.</dd></dl>
 <dt><code>-toPostScript</code> <i>options</i> <i>pdf-file</i> &#8230; <i>ps-dir</i></dt>
 <dd>
@@ -88,10 +88,10 @@ description: "acroread – Adobe PDF Viewer for viewing PDF files on X Window Sy
 <p> The following are valid options for the conversion of PDF to PostScript:</p>
 <dl>
 <dt>
-</dt><dd> <code>-printerName</code> &lt;name&gt; &#8211; this is to print device-dependent PS.<br />
- <code>-rotateAndCenter</code>&#8211; auto-rotate and center the pages.<br />
- <code>-choosePaperByPDFPageSize</code>&#8211; use the pdf page size to determine the output tray.<br />
- <code>-nUp</code>&#8211; &lt;hpage&gt; &lt;vpage&gt; &lt;pageorder&gt; border rotate &#8211; print multiple pages on the same sheet of paper.<br />
+</dt><dd> <code>-printerName</code> &lt;name&gt; &#8211; this is to print device-dependent PS.<br/>
+ <code>-rotateAndCenter</code>&#8211; auto-rotate and center the pages.<br/>
+ <code>-choosePaperByPDFPageSize</code>&#8211; use the pdf page size to determine the output tray.<br/>
+ <code>-nUp</code>&#8211; &lt;hpage&gt; &lt;vpage&gt; &lt;pageorder&gt; border rotate &#8211; print multiple pages on the same sheet of paper.<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>hpage,vpage: can take numbers upto 99.</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pageorder: how the pages are ordered on paper. Possible page orders are:</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 (Horizontal)</p>
@@ -100,7 +100,7 @@ description: "acroread – Adobe PDF Viewer for viewing PDF files on X Window Sy
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>3 (VerticalReversed)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>border: draws the crop-box of PDF pages</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>rotate: automatically rotates each page</p>
-<p> <code>-booklet</code> &lt;subset&gt; &lt;binding&gt; rotate &lt;from&gt; &lt;to&gt; &#8211; prints multiple pages on the same sheet of paper in the order required to read correctly when folded.<br />
+<p> <code>-booklet</code> &lt;subset&gt; &lt;binding&gt; rotate &lt;from&gt; &lt;to&gt; &#8211; prints multiple pages on the same sheet of paper in the order required to read correctly when folded.<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> subset: determines which side of the paper print. Possible options are :</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 (PrintBothSides)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 (PrintFrontSideOnly)</p>
@@ -112,26 +112,26 @@ description: "acroread – Adobe PDF Viewer for viewing PDF files on X Window Sy
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 (BookletBinding_Right)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>2 (BookletBinding_LeftTall)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>3 (BookletBinding_RightTall)</p>
-<p> <code>-binary</code> &#8211; emit binary PostScript where possible<br />
- <code>-start</code> <i>int</i> &#8211; identify the first page in the document to be converted (default is the first page of the document)<br />
- <code>-end</code> <i>int</i> &#8211; identify the last page in the document to be converted (default is the last page of the document)<br />
- <code>-optimizeForSpeed</code> &#8211; emit PostScript such that all fonts are emitted once at the beginning of the document. This results in faster transmission times and smaller PostScript documents but requires more PostScript printer virtual memory.<br />
- <code>-landscape</code> &#8211; rotate the pages to print landscape<br />
- <code>-reverse</code> &#8211; reverse the page order of the output<br />
- <code>-odd</code> &#8211; emit only odd-numbered pages<br />
- <code>-even</code> &#8211; emit only even-numbered pages<br />
- <code>-commentsOff</code> &#8211; don&#8217;t print comments<br />
- <code>-annotsOff</code> &#8211; don&#8217;t print annots<br />
- <code>-stampsOff</code> &#8211; don&#8217;t print stamps<br />
- <code>-markupsOn</code> &#8211; print document and markups<br />
- <code>-level2</code> &#8211; emit Level 2 PostScript (level1 is not supported)<br />
- <code>-level3</code> &#8211; emit Level 3 PostScript<br />
- <code>-printerhalftones</code> &#8211; use the printer default halftones.<br />
- <code>-saveVM</code> &#8211; download fonts as needed to preserve printer memory<br />
- <code>-scale</code> &lt;int&gt; &#8211; scale the pages according to the scale factor (default is 100 percent)<br />
- <code>-shrink</code> &#8211; shrink the pages to fit the page size<br />
- <code>-expand</code> &#8211; expand the pages to fit the page size<br />
- <code>-size</code> &lt;pagesize&gt; &#8211; set the page size. The following page sizes are recognized:<br />
+<p> <code>-binary</code> &#8211; emit binary PostScript where possible<br/>
+ <code>-start</code> <i>int</i> &#8211; identify the first page in the document to be converted (default is the first page of the document)<br/>
+ <code>-end</code> <i>int</i> &#8211; identify the last page in the document to be converted (default is the last page of the document)<br/>
+ <code>-optimizeForSpeed</code> &#8211; emit PostScript such that all fonts are emitted once at the beginning of the document. This results in faster transmission times and smaller PostScript documents but requires more PostScript printer virtual memory.<br/>
+ <code>-landscape</code> &#8211; rotate the pages to print landscape<br/>
+ <code>-reverse</code> &#8211; reverse the page order of the output<br/>
+ <code>-odd</code> &#8211; emit only odd-numbered pages<br/>
+ <code>-even</code> &#8211; emit only even-numbered pages<br/>
+ <code>-commentsOff</code> &#8211; don&#8217;t print comments<br/>
+ <code>-annotsOff</code> &#8211; don&#8217;t print annots<br/>
+ <code>-stampsOff</code> &#8211; don&#8217;t print stamps<br/>
+ <code>-markupsOn</code> &#8211; print document and markups<br/>
+ <code>-level2</code> &#8211; emit Level 2 PostScript (level1 is not supported)<br/>
+ <code>-level3</code> &#8211; emit Level 3 PostScript<br/>
+ <code>-printerhalftones</code> &#8211; use the printer default halftones.<br/>
+ <code>-saveVM</code> &#8211; download fonts as needed to preserve printer memory<br/>
+ <code>-scale</code> &lt;int&gt; &#8211; scale the pages according to the scale factor (default is 100 percent)<br/>
+ <code>-shrink</code> &#8211; shrink the pages to fit the page size<br/>
+ <code>-expand</code> &#8211; expand the pages to fit the page size<br/>
+ <code>-size</code> &lt;pagesize&gt; &#8211; set the page size. The following page sizes are recognized:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>letter &#8211; letter size paper</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>tabloid &#8211; tabloid size paper</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ledger &#8211; ledger size paper</p>
@@ -147,7 +147,7 @@ description: "acroread – Adobe PDF Viewer for viewing PDF files on X Window Sy
 <dl>
 <dl>
 <dt><code>Mutually exclusive options</code></dt>
-<dd> The following are the mutually exclusive print options, their usage together can lead to undesired results:<br />
+<dd> The following are the mutually exclusive print options, their usage together can lead to undesired results:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1. expand, shrink, nUp and booklet</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>2. annotsOff, commentsOff, markupsOn and stampsOff</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>3. landscape and choosePaperByPDFPageSize</p>

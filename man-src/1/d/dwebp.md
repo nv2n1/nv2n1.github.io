@@ -47,20 +47,20 @@ description: "dwebp – decompress a WebP file to an image file"
 <dd> Disable all assembly optimizations. </dd>
 </dl>
 <h2>BUGS</h2>
-<p> Please report all bugs to our issue tracker: <a rel="nofollow" href="http://code.google.com/p/webp/issues">http://code.google.com/p/webp/issues</a><br />
+<p> Please report all bugs to our issue tracker: <a rel="nofollow" href="http://code.google.com/p/webp/issues">http://code.google.com/p/webp/issues</a><br/>
  Patches welcome! See this page to get started: <a rel="nofollow" href="http://www.webmproject.org/code/contribute/submitting-patches/">http://www.webmproject.org/code/contribute/submitting-patches/</a> </p>
 <h2>EXAMPLES</h2>
-<p> dwebp picture.webp -o output.png<br />
+<p> dwebp picture.webp -o output.png<br/>
  dwebp picture.webp -ppm -o output.ppm </p>
 <h2>AUTHORS</h2>
-<p> <code>dwebp</code> was written by the WebP team.<br />
+<p> <code>dwebp</code> was written by the WebP team.<br/>
  The latest source tree is available at <a rel="nofollow" href="http://www.webmproject.org/code">http://www.webmproject.org/code</a> </p>
 <p> This manual page was written by Pascal Massimino &lt;pascal.massimino [at] gmail.com&gt;, for the Debian project (and may be used by others). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-cwebp/">cwebp</a></code>(1), <code><a href="/docs/linux/man/1-webpmux/">webpmux</a></code>(1), <code><a href="/docs/linux/man/1-gif2webp/">gif2webp</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-cwebp/">cwebp</a></code>(1), <code><a href="/docs/linux/man/1-webpmux/">webpmux</a></code>(1), <code><a href="/docs/linux/man/1-gif2webp/">gif2webp</a></code>(1).<br/>
  Please refer to <a rel="nofollow" href="http://developers.google.com/speed/webp/">http://developers.google.com/speed/webp/</a> for additional information.</p>
 <h3>Output file format details</h3>
-<p> PAM: <a rel="nofollow" href="http://netpbm.sourceforge.net/doc/pam.html">http://netpbm.sourceforge.net/doc/pam.html</a><br />
- PGM: <a rel="nofollow" href="http://netpbm.sourceforge.net/doc/pgm.html">http://netpbm.sourceforge.net/doc/pgm.html</a><br />
- PPM: <a rel="nofollow" href="http://netpbm.sourceforge.net/doc/ppm.html">http://netpbm.sourceforge.net/doc/ppm.html</a><br />
+<p> PAM: <a rel="nofollow" href="http://netpbm.sourceforge.net/doc/pam.html">http://netpbm.sourceforge.net/doc/pam.html</a><br/>
+ PGM: <a rel="nofollow" href="http://netpbm.sourceforge.net/doc/pgm.html">http://netpbm.sourceforge.net/doc/pgm.html</a><br/>
+ PPM: <a rel="nofollow" href="http://netpbm.sourceforge.net/doc/ppm.html">http://netpbm.sourceforge.net/doc/ppm.html</a><br/>
  PNG: <a rel="nofollow" href="http://www.libpng.org/pub/png/png-sitemap.html#info">http://www.libpng.org/pub/png/png-sitemap.html#info</a> </p>

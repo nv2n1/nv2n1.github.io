@@ -63,15 +63,15 @@ description: "reiserfsck – The checking tool for the ReiserFS filesystem."
 <p> 5. Before running <code>reiserfsck &#8211;rebuild-tree</code>, please make a backup of the whole partition before proceeding. Then run <code>reiserfsck &#8211;rebuild-tree &#8211;logfile rebuild.log /dev/hda1</code>. </p>
 <p> 6. If the <code>reiserfsck &#8211;rebuild-tree</code> step fails or does not recover what you expected, please submit this as a bug report. Try to provide as much information as possible including your platform and Linux kernel version. We will try to help solve the problem.</p>
 <h2>Exit Codes</h2>
-<p><code>reiserfsck</code> uses the following exit codes:<br />
- &nbsp; <i>0</i> &#8211; No errors.<br />
- &nbsp; <i>1</i> &#8211; File system errors corrected.<br />
- &nbsp; <i>2</i> &#8211; Reboot is needed.<br />
- &nbsp; <i>4</i> &#8211; File system fatal errors left uncorrected,<br />
- <code>reiserfsck &#8211;rebuild-tree</code> needs to be launched.<br />
- &nbsp; <i>6</i> &#8211; File system fixable errors left uncorrected,<br />
- <code>reiserfsck &#8211;fix-fixable</code> needs to be launched.<br />
- &nbsp; <i>8</i> &#8211; Operational error.<br />
+<p><code>reiserfsck</code> uses the following exit codes:<br/>
+ &nbsp; <i>0</i> &#8211; No errors.<br/>
+ &nbsp; <i>1</i> &#8211; File system errors corrected.<br/>
+ &nbsp; <i>2</i> &#8211; Reboot is needed.<br/>
+ &nbsp; <i>4</i> &#8211; File system fatal errors left uncorrected,<br/>
+ <code>reiserfsck &#8211;rebuild-tree</code> needs to be launched.<br/>
+ &nbsp; <i>6</i> &#8211; File system fixable errors left uncorrected,<br/>
+ <code>reiserfsck &#8211;fix-fixable</code> needs to be launched.<br/>
+ &nbsp; <i>8</i> &#8211; Operational error.<br/>
  &nbsp; <i>16</i> &#8211; Usage or syntax error.</p>
 <h2>Author</h2>
 <p>This version of <code>reiserfsck</code> has been written by Vitaly Fertman &lt;vitaly [at] namesys.com&gt;.</p>

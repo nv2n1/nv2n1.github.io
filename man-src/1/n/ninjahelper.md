@@ -19,9 +19,9 @@ description: "NINJAHELPER – A menu driven curses-based interface to walk you t
 <dt>(1)</dt>
 <dd> create a file in the handlers directory (eg. /usr/share/backupninja) using the .helper extension. For example, if you wish to create a helper for the handler &quot;blue&quot;, create the file /usr/share/backupninja/blue.helper.</dd>
 <dt>(2)</dt>
-<dd> next, add your helper to the global HELPERS variable and define the main function for your helper (the function name is always &lt;helper&gt;_wizard). To use the blue.helper as an example: HELPERS=&quot;$HELPERS blue:description_of_this_helper&quot;<br />
-&nbsp;<wbr>blue_wizard()&nbsp;<wbr>{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8230; do work here &#8230;<br />
+<dd> next, add your helper to the global HELPERS variable and define the main function for your helper (the function name is always &lt;helper&gt;_wizard). To use the blue.helper as an example: HELPERS=&quot;$HELPERS blue:description_of_this_helper&quot;<br/>
+&nbsp;<wbr>blue_wizard()&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8230; do work here &#8230;<br/>
 &nbsp;<wbr>}</dd>
 <dt>(3)</dt>
 <dd> look at the existing helpers to see how they are written. Try to re-use functions, such as the dialog functions that are defined in easydialog.sh, or the vserver functions defined in lib/vserver.</dd>

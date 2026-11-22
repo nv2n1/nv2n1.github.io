@@ -65,13 +65,13 @@ $ sphinx-quickstart
    ...
 </pre>
 <p> This is exactly how the toctree for this documentation looks. The documents to include are given as <i>document name</i>s, which in short means that you leave off the file name extension and use slashes as directory separators. </p>
-<p> [image: more info] [image]<br />
+<p> [image: more info] [image]<br/>
 &nbsp;<wbr>Read more about&nbsp;<wbr><i>the toctree directive</i>. </p>
 <p> You can now create the files you listed in the toctree and add content, and their section titles will be inserted (up to the &quot;maxdepth&quot; level) at the place where the toctree directive is placed. Also, Sphinx now knows about the order and hierarchy of your documents. (They may contain <code>toctree</code> directives themselves, which means you can create deeply nested hierarchies if necessary.)</p>
 <h3>Adding content</h3>
 <p> In Sphinx source files, you can use most features of standard reStructuredText. There are also several features added by Sphinx. For example, you can add cross-file references in a portable way (which works for all output types) using the <code>ref</code> role. </p>
 <p> For an example, if you are viewing the HTML version you can look at the source for this document &#8212; use the &quot;Show Source&quot; link in the sidebar. </p>
-<p> [image: more info] [image]<br />
+<p> [image: more info] [image]<br/>
 &nbsp;<wbr>See&nbsp;<wbr><i>rst-primer</i>&nbsp;<wbr>for a more in-depth introduction to reStructuredText and <i>sphinxmarkup</i> for a full list of markup added by Sphinx.</p>
 <h3>Running the build</h3>
 <p> Now that you have added some files and content, let&#8217;s make a first build of the docs. A build is started with the <code>sphinx-build</code> program, called like this: </p>
@@ -79,7 +79,7 @@ $ sphinx-quickstart
 $ sphinx-build -b html sourcedir builddir
 </pre>
 <p> where <i>sourcedir</i> is the <i>source directory</i>, and <i>builddir</i> is the directory in which you want to place the built documentation. The <i>-b</i> option selects a builder; in this example Sphinx will build HTML files. </p>
-<p> [image: more info] [image]<br />
+<p> [image: more info] [image]<br/>
 &nbsp;<wbr>See&nbsp;<wbr><i>invocation</i>&nbsp;<wbr>for all options that&nbsp;<wbr><code>sphinx-build</code> supports. </p>
 <p> However, <code>sphinx-quickstart</code> script creates a <code>Makefile</code> and a <code>make.bat</code> which make life even easier for you: with them you only need to run </p>
 <pre>
@@ -116,13 +116,13 @@ The :py:func:`enumerate` function can be used for ...
 <p> And here is the proof: A link to <code>enumerate()</code>. </p>
 <p> Again, the <code>py:</code> can be left out if the Python domain is the default one. It doesn&#8217;t matter which file contains the actual documentation for <code>enumerate()</code>; Sphinx will find it and create a link to it. </p>
 <p> Each domain will have special rules for how the signatures can look like, and make the formatted output look pretty, or add specific features like links to parameter types, e.g. in the C/C++ domains. </p>
-<p> [image: more info] [image]<br />
+<p> [image: more info] [image]<br/>
 &nbsp;<wbr>See&nbsp;<wbr><i>domains</i>&nbsp;<wbr>for all the available domains and their directives/roles.</dl>
 <h3>Basic configuration</h3>
 <p> Earlier we mentioned that the <code>conf.py</code> file controls how Sphinx processes your documents. In that file, which is executed as a Python source file, you assign configuration values. For advanced users: since it is executed by Sphinx, you can do non-trivial tasks in it, like extending <code>sys.path</code> or importing a module to find out the version your are documenting. </p>
 <p> The config values that you probably want to change are already put into the <code>conf.py</code> by <code>sphinx-quickstart</code> and initially commented out (with standard Python syntax: a <code>#</code> comments the rest of the line). To change the default value, remove the hash sign and modify the value. To customize a config value that is not automatically added by <code>sphinx-quickstart</code>, just add an additional assignment. </p>
 <p> Keep in mind that the file uses Python syntax for strings, numbers, lists and so on. The file is saved in UTF-8 by default, as indicated by the encoding declaration in the first line. If you use non-ASCII characters in any string value, you need to use Python Unicode strings (like <code>project = u&#8217;ExposÃ©&#8217;</code>). </p>
-<p> [image: more info] [image]<br />
+<p> [image: more info] [image]<br/>
 &nbsp;<wbr>See&nbsp;<wbr><i>build-config</i>&nbsp;<wbr>for documentation of all available config values.</p>
 <h3>Autodoc</h3>
 <p> When documenting Python code, it is common to put a lot of documentation in the source files, in documentation strings. Sphinx supports the inclusion of docstrings from your modules with an <i>extension</i> (an extension is a Python module that provides additional features for Sphinx projects) called &quot;autodoc&quot;. </p>
@@ -139,7 +139,7 @@ The :py:func:`enumerate` function can be used for ...
 <p> autodoc needs to import your modules in order to extract the docstrings. Therefore, you must add the appropriate path to <code>sys.path</code> in your <code>conf.py</code>. </p>
 <p> <code>WARNING:</code> <code>autodoc</code> <code>imports</code> the modules to be documented. If any modules have side effects on import, these will be executed by <code>autodoc</code> when <code>sphinx-build</code> is run. </p>
 <p> If you document scripts (as opposed to library modules), make sure their main routine is protected by a <code>if __name__ == &#8216;__main__&#8217;</code> condition. </p>
-<p> [image: more info] [image]<br />
+<p> [image: more info] [image]<br/>
 &nbsp;<wbr>See&nbsp;<wbr><code>sphinx.ext.autodoc</code>&nbsp;<wbr>for the complete description of the features of autodoc.</p>
 <h3>Intersphinx</h3>
 <p> Many Sphinx documents including the <i>Python documentation</i> are published on the internet. When you want to make links to such documents from your documentation, you can do it with <code>sphinx.ext.intersphinx</code>. </p>
@@ -149,7 +149,7 @@ The :py:func:`enumerate` function can be used for ...
 intersphinx_mapping = {'python': ('<a rel="nofollow" href="http://docs.python.org/3',">http://docs.python.org/3',</a> None)}
 </pre>
 <p> And now, you can write a cross-reference like <code>:py:func:`io.open`</code>. Any cross-reference that has no matching target in the current documentation set, will be looked up in the documentation sets configured in <code>intersphinx_mapping</code> (this needs access to the URL in order to download the list of valid targets). Intersphinx also works for some other <i>domains&#8217;</i> roles including <code>:ref:</code>, however it doesn&#8217;t work for <code>:doc:</code> as that is non-domain role. </p>
-<p> [image: more info] [image]<br />
+<p> [image: more info] [image]<br/>
 &nbsp;<wbr>See&nbsp;<wbr><code>sphinx.ext.intersphinx</code>&nbsp;<wbr>for the complete description of the features of intersphinx.</p>
 <h3>More topics to be covered</h3>
 <dl>
@@ -739,7 +739,7 @@ Lorem ipsum [Ref]_ dolor sit amet.
 .. deprecated:: 3.1
    Use :func:`spam` instead.
 </pre>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <dt><code>.. seealso::</code></dt>
 <dd> Many sections include a list of references to module documentation or external documents. These lists are created using the <code>seealso</code> directive. </dd>

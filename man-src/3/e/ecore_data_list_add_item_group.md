@@ -9,15 +9,15 @@ description: "List Item Adding Functions – Functions that are used to add node
 
 <p>List Item Adding Functions &#8211; Functions that are used to add nodes to an Ecore_List. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_list_append</code> (Ecore_List *list, void *data)<br />
- <i>Append data to the list. </i><br />
- EAPI int <code>ecore_list_prepend</code> (Ecore_List *list, void *data)<br />
- <i>Prepend data to the beginning of the list. </i><br />
- EAPI int <code>ecore_list_insert</code> (Ecore_List *list, void *data)<br />
- <i>Insert data in front of the current point in the list. </i><br />
- EAPI int <code>ecore_list_append_list</code> (Ecore_List *list, Ecore_List *append)<br />
- <i>Append a list to the list. </i><br />
- EAPI int <code>ecore_list_prepend_list</code> (Ecore_List *list, Ecore_List *prepend)<br />
+<p>EAPI int <code>ecore_list_append</code> (Ecore_List *list, void *data)<br/>
+ <i>Append data to the list. </i><br/>
+ EAPI int <code>ecore_list_prepend</code> (Ecore_List *list, void *data)<br/>
+ <i>Prepend data to the beginning of the list. </i><br/>
+ EAPI int <code>ecore_list_insert</code> (Ecore_List *list, void *data)<br/>
+ <i>Insert data in front of the current point in the list. </i><br/>
+ EAPI int <code>ecore_list_append_list</code> (Ecore_List *list, Ecore_List *append)<br/>
+ <i>Append a list to the list. </i><br/>
+ EAPI int <code>ecore_list_prepend_list</code> (Ecore_List *list, Ecore_List *prepend)<br/>
  <i>Prepend a list to the beginning of the list. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that are used to add nodes to an Ecore_List.</p>
@@ -26,7 +26,7 @@ description: "List Item Adding Functions – Functions that are used to add node
 <p>Append data to the list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list.<br />
+<dd><i>list</i> The list.<br/>
  <i>data</i> The data to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -37,7 +37,7 @@ description: "List Item Adding Functions – Functions that are used to add node
 <p>Append a list to the list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list.<br />
+<dd><i>list</i> The list.<br/>
  <i>append</i> The list to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -48,7 +48,7 @@ description: "List Item Adding Functions – Functions that are used to add node
 <p>Insert data in front of the current point in the list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list to hold the inserted data.<br />
+<dd><i>list</i> The list to hold the inserted data.<br/>
  <i>data</i> The data to insert into list.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -58,7 +58,7 @@ description: "List Item Adding Functions – Functions that are used to add node
 <p>Prepend data to the beginning of the list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list.<br />
+<dd><i>list</i> The list.<br/>
  <i>data</i> The data to prepend.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -68,7 +68,7 @@ description: "List Item Adding Functions – Functions that are used to add node
 <p>Prepend a list to the beginning of the list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list.<br />
+<dd><i>list</i> The list.<br/>
  <i>prepend</i> The list to prepend.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

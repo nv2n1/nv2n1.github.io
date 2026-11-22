@@ -10,7 +10,7 @@ description: "slatrz.f –"
 <p>slatrz.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slatrz</code> (M, N, L, A, LDA, TAU, WORK)<br />
+<p>subroutine <code>slatrz</code> (M, N, L, A, LDA, TAU, WORK)<br/>
  <i></i><code>SLATRZ</code> factors an upper trapezoidal matrix by means of orthogonal transformations.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slatrz (integerM, integerN, integerL, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK)</h3>

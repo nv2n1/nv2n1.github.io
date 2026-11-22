@@ -10,7 +10,7 @@ description: "checkbashisms – check for bashisms in /bin/sh scripts"
 
 <p> checkbashisms &#8211; check for bashisms in /bin/sh scripts</p>
 <h2>SYNOPSIS</h2>
-<p> <code>checkbashisms</code> <i>script</i> &#8230;<br />
+<p> <code>checkbashisms</code> <i>script</i> &#8230;<br/>
  <code>checkbashisms &#8211;help</code>|<code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>checkbashisms</code>, based on one of the checks from the <code>lintian</code> system, performs basic checks on <i>/bin/sh</i> shell scripts for the possible presence of bashisms. It takes the names of the shell scripts on the command line, and outputs warnings if possible bashisms are detected. </p>

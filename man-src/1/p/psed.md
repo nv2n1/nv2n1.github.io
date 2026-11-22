@@ -16,7 +16,7 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 <h2>DESCRIPTION</h2>
 <p> A stream editor reads the input stream consisting of the specified files (or standard input, if none are given), processes is line by line by applying a script consisting of edit commands, and writes resulting lines to standard output. The filename &#8216;<tt>&quot;-&quot;</tt>&#8216; may be used to read standard input. </p>
 <p> The edit script is composed from arguments of <code>-e</code> options and script-files, in the given order. A single script argument may be specified as the first parameter. </p>
-<p> If this program is invoked with the name <i>s2p</i>, it will act as a sed-to-Perl translator. See &#8220;<font SIZE="-1">SED</font> <font SIZE="-1">SCRIPT</font> <font SIZE="-1">TRANSLATION</font>&#8221;. </p>
+<p> If this program is invoked with the name <i>s2p</i>, it will act as a sed-to-Perl translator. See &#8220;SED SCRIPT TRANSLATION&#8221;. </p>
 <p> <code>sed</code> returns an exit code of 0 on success or &gt;0 if an error occurred.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -43,7 +43,7 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 <dt><code>$</code></dt>
 <dd> A dollar sign (<tt>&quot;$&quot;</tt>) is the line number of the last line of the input stream.</dd>
 <dt><code>/</code><i>regular expression</i><code>/</code></dt>
-<dd> A pattern address is a basic regular expression (see &#8220;<font SIZE="-1">BASIC</font> <font SIZE="-1">REGULAR</font> <font SIZE="-1">EXPRESSIONS</font>&#8221;), between the delimiting character <tt>&quot;/&quot;</tt>. Any other character except <tt>&quot;\&quot;</tt> or newline may be used to delimit a pattern address when the initial delimiter is prefixed with a backslash (&#8216;<tt>&quot;\&quot;</tt>&#8216;).</dd></dl>
+<dd> A pattern address is a basic regular expression (see &#8220;BASIC REGULAR EXPRESSIONS&#8221;), between the delimiting character <tt>&quot;/&quot;</tt>. Any other character except <tt>&quot;\&quot;</tt> or newline may be used to delimit a pattern address when the initial delimiter is prefixed with a backslash (&#8216;<tt>&quot;\&quot;</tt>&#8216;).</dd></dl>
 <p> If no address is given, the command selects every line. </p>
 <p> If one address is given, it selects the line (or lines) matching the address. </p>
 <p> Two addresses select a range that begins whenever the first address matches, and ends (including that line) when the second address matches. If the first (second) address is a matching pattern, the second address is not applied to the very same line to determine the end of the range. Likewise, if the second address is a matching pattern, the first address is not applied to the very same line to determine the begin of another range. If both addresses are line numbers, and the second line number is less than the first line number, then only the first line is selected.</p>
@@ -74,7 +74,7 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 <dt>[2addr]<code>l</code></dt>
 <dd> Print the contents of the pattern space: non-printable characters are shown in C-style escaped form; long lines are split and have a trailing ^&#8217;<tt>&quot;\&quot;</tt>&#8216; at the point of the split; the true end of a line is marked with a &#8216;<tt>&quot;$&quot;</tt>&#8216;. Escapes are: &#8216;&#8217;, &#8216;	&#8217;, &#8216;
 &#8217;, &#8216;&#8217;, &#8216;
-&#8217;, &#8216;&#8217; for <font SIZE="-1">BEL</font>, <font SIZE="-1">HT</font>, <font SIZE="-1">LF</font>, <font SIZE="-1">FF</font>, <font SIZE="-1">CR</font>, <font SIZE="-1">ESC</font>, respectively, and &#8216;\&#8217; followed by a three-digit octal number for all other non-printable characters.</dd>
+&#8217;, &#8216;&#8217; for BEL, HT, LF, FF, CR, ESC, respectively, and &#8216;\&#8217; followed by a three-digit octal number for all other non-printable characters.</dd>
 <dt>[2addr]<code>n</code></dt>
 <dd> If automatic printing is enabled, write the pattern space to the standard output. Replace the pattern space with the next line of input. If there is no more input, processing is terminated.</dd>
 <dt>[2addr]<code>N</code></dt>
@@ -90,7 +90,7 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 <dt>[2addr]<code>s/</code><i>regular expression</i><code>/</code><i>replacement</i><code>/</code><i>flags</i></dt>
 <dd> Substitute the <i>replacement</i> string for the first substring in the pattern space that matches the <i>regular expression</i>. Any character other than backslash or newline can be used instead of a slash to delimit the regular expression and the replacement. To use the delimiter as a literal character within the regular expression and the replacement, precede the character by a backslash (&#8216;<tt>&quot;\&quot;</tt>&#8216;). </dd>
 <p> Literal newlines may be embedded in the replacement string by preceding a newline with a backslash. </p>
-<p> Within the replacement, an ampersand (&#8216;<tt>&quot;&amp;&quot;</tt>&#8216;) is replaced by the string matching the regular expression. The strings &#8216;<tt>&quot;\1&quot;</tt>&#8216; through &#8216;<tt>&quot;\9&quot;</tt>&#8216; are replaced by the corresponding subpattern (see &#8220;<font SIZE="-1">BASIC</font> <font SIZE="-1">REGULAR</font> <font SIZE="-1">EXPRESSIONS</font>&#8221;). To get a literal &#8216;<tt>&quot;&amp;&quot;</tt>&#8216; or &#8216;<tt>&quot;\&quot;</tt>&#8216; in the replacement text, precede it by a backslash. </p>
+<p> Within the replacement, an ampersand (&#8216;<tt>&quot;&amp;&quot;</tt>&#8216;) is replaced by the string matching the regular expression. The strings &#8216;<tt>&quot;\1&quot;</tt>&#8216; through &#8216;<tt>&quot;\9&quot;</tt>&#8216; are replaced by the corresponding subpattern (see &#8220;BASIC REGULAR EXPRESSIONS&#8221;). To get a literal &#8216;<tt>&quot;&amp;&quot;</tt>&#8216; or &#8216;<tt>&quot;\&quot;</tt>&#8216; in the replacement text, precede it by a backslash. </p>
 <p> The following <i>flags</i> modify the behaviour of the <code>s</code> command:</p>
 <dl>
 <dl>
@@ -124,14 +124,14 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 <dt>[0addr]<code>#</code> [<i>comment</i>]</dt>
 <dd> The entire line is ignored (treated as a comment). If, however, the first two characters in the script are &#8216;<tt>&quot;#n&quot;</tt>&#8216;, automatic printing of output is suppressed, as if the <code>-n</code> option were given on the command line.</dd></dl>
 <h2>BASIC REGULAR EXPRESSIONS</h2>
-<p> A <i>Basic Regular Expression</i> (<font SIZE="-1">BRE</font>), as defined in <font SIZE="-1">POSIX</font> 1003.2, consists of <i>atoms</i>, for matching parts of a string, and <i>bounds</i>, specifying repetitions of a preceding atom.</p>
+<p> A <i>Basic Regular Expression</i> (BRE), as defined in POSIX 1003.2, consists of <i>atoms</i>, for matching parts of a string, and <i>bounds</i>, specifying repetitions of a preceding atom.</p>
 <h3>Atoms</h3>
-<p> The possible atoms of a <font SIZE="-1">BRE</font> are: <code>.</code>, matching any single character; <code>^</code> and <code>$</code>, matching the null string at the beginning or end of a string, respectively; a <i>bracket expressions</i>, enclosed in <code>[</code> and <code>]</code> (see below); and any single character with no other significance (matching that character). A <code>\</code> before one of: <code>.</code>, <code>^</code>, <code>$</code>, <code>[</code>, <code>*</code>, <code>\</code>, matching the character after the backslash. A sequence of atoms enclosed in <code>\(</code> and <code>\)</code> becomes an atom and establishes the target for a <i>backreference</i>, consisting of the substring that actually matches the enclosed atoms. Finally, <code>\</code> followed by one of the digits <code>0</code> through <code>9</code> is a backreference. </p>
+<p> The possible atoms of a BRE are: <code>.</code>, matching any single character; <code>^</code> and <code>$</code>, matching the null string at the beginning or end of a string, respectively; a <i>bracket expressions</i>, enclosed in <code>[</code> and <code>]</code> (see below); and any single character with no other significance (matching that character). A <code>\</code> before one of: <code>.</code>, <code>^</code>, <code>$</code>, <code>[</code>, <code>*</code>, <code>\</code>, matching the character after the backslash. A sequence of atoms enclosed in <code>\(</code> and <code>\)</code> becomes an atom and establishes the target for a <i>backreference</i>, consisting of the substring that actually matches the enclosed atoms. Finally, <code>\</code> followed by one of the digits <code>0</code> through <code>9</code> is a backreference. </p>
 <p> A <code>^</code> that is not first, or a <code>$</code> that is not last does not have a special significance and need not be preceded by a backslash to become literal. The same is true for a <code>]</code>, that does not terminate a bracket expression. </p>
-<p> An unescaped backslash cannot be last in a <font SIZE="-1">BRE</font>.</p>
+<p> An unescaped backslash cannot be last in a BRE.</p>
 <h3>Bounds</h3>
-<p> The <font SIZE="-1">BRE</font> bounds are: <code>*</code>, specifying 0 or more matches of the preceding atom; <code>\{</code><i>count</i><code>\}</code>, specifying that many repetitions; <code>\{</code><i>minimum</i><code>,\}</code>, giving a lower limit; and <code>\{</code><i>minimum</i><code>,</code><i>maximum</i><code>\}</code> finally defines a lower and upper bound. </p>
-<p> A bound appearing as the first item in a <font SIZE="-1">BRE</font> is taken literally.</p>
+<p> The BRE bounds are: <code>*</code>, specifying 0 or more matches of the preceding atom; <code>\{</code><i>count</i><code>\}</code>, specifying that many repetitions; <code>\{</code><i>minimum</i><code>,\}</code>, giving a lower limit; and <code>\{</code><i>minimum</i><code>,</code><i>maximum</i><code>\}</code> finally defines a lower and upper bound. </p>
+<p> A bound appearing as the first item in a BRE is taken literally.</p>
 <h3>Bracket Expressions</h3>
 <p> A <i>bracket expression</i> is a list of characters, character ranges and character classes enclosed in <code>[</code> and <code>]</code> and matches any single character from the represented set of characters. </p>
 <p> A character range is written as two characters separated by <code>&#8211;</code> and represents all characters (according to the character collating sequence) that are not less than the first and not greater than the second. (Ranges are very collating-sequence-dependent, and portable programs should avoid relying on them.) </p>
@@ -147,7 +147,7 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 <p> To include a literal &#8216;<tt>&quot;^&quot;</tt>&#8216;, place it anywhere else but first. To include a literal &#8216;<tt>&quot;]&quot;</tt>&#8216; place it first or immediately after an initial <code>^</code>. To include a literal &#8216;<tt>&quot;-&quot;</tt>&#8216; make it the first (or second after <code>^</code>) or last character, or the second endpoint of a range. </p>
 <p> The special bracket expression constructs <tt>&quot;[[:&lt;:]]&quot;</tt> and <tt>&quot;[[:&gt;:]]&quot;</tt> match the null string at the beginning and end of a word respectively. (Note that neither is identical to Perl&#8217;s &#8216;&#8217; atom.)</p>
 <h3>Additional Atoms</h3>
-<p> Since some sed implementations provide additional regular expression atoms (not defined in <font SIZE="-1">POSIX</font> 1003.2), <code>psed</code> is capable of translating the following backslash escapes:</p>
+<p> Since some sed implementations provide additional regular expression atoms (not defined in POSIX 1003.2), <code>psed</code> is capable of translating the following backslash escapes:</p>
 <dl>
 <dt><code>\&lt;</code> This is the same as &quot;[[:&gt;:]]&quot;.</dt>
 <dd>
@@ -161,7 +161,7 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 <dd>
 </dd><dt><code>\B</code> Match the empty string between any two either word or non-word characters.</dt>
 <dd></dd></dl>
-<p> To enable this feature, the environment variable <font SIZE="-1">PSEDEXTBRE</font> must be set to a string containing the requested characters, e.g.: <tt>&quot;PSEDEXTBRE='&lt;&gt;wW'&quot;</tt>.</p>
+<p> To enable this feature, the environment variable PSEDEXTBRE must be set to a string containing the requested characters, e.g.: <tt>&quot;PSEDEXTBRE='&lt;&gt;wW'&quot;</tt>.</p>
 <h2>ENVIRONMENT</h2>
 <p> The environment variable <tt>&quot;PSEDEXTBRE&quot;</tt> may be set to extend BREs. See &#8220;Additional Atoms&#8221;.</p>
 <h2>DIAGNOSTICS</h2>
@@ -169,9 +169,9 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 <dt>ambiguous translation for character &#8216;%s&#8217; in &#8216;y&#8217; command</dt>
 <dd> The indicated character appears twice, with different translations.</dd>
 <dt>&#8216;[&#8216; cannot be last in pattern</dt>
-<dd> A &#8216;[&#8216; in a <font SIZE="-1">BRE</font> indicates the beginning of a <i>bracket expression</i>.</dd>
+<dd> A &#8216;[&#8216; in a BRE indicates the beginning of a <i>bracket expression</i>.</dd>
 <dt>&#8216;\&#8217; cannot be last in pattern</dt>
-<dd> A &#8216;\&#8217; in a <font SIZE="-1">BRE</font> is used to make the subsequent character literal.</dd>
+<dd> A &#8216;\&#8217; in a BRE is used to make the subsequent character literal.</dd>
 <dt>&#8216;\&#8217; cannot be last in substitution</dt>
 <dd> A &#8216;\&#8217; in a substitution string is used to make the subsequent character literal.</dd>
 <dt>conflicting flags &#8216;%s&#8217;</dt>
@@ -185,11 +185,11 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 </dd><dt>illegal option &#8216;%s&#8217;</dt>
 <dd>
 </dd><dt>improper delimiter in s command</dt>
-<dd> The <font SIZE="-1">BRE</font> and substitution may not be delimited with &#8216;\&#8217; or newline.</dd>
+<dd> The BRE and substitution may not be delimited with &#8216;\&#8217; or newline.</dd>
 <dt>invalid address after &#8216;,&#8217;</dt>
 <dd>
 </dd><dt>invalid backreference (%s)</dt>
-<dd> The specified backreference number exceeds the number of backreferences in the <font SIZE="-1">BRE</font>.</dd>
+<dd> The specified backreference number exceeds the number of backreferences in the BRE.</dd>
 <dt>invalid repeat clause &#8216;\{%s\}&#8217;</dt>
 <dd> The repeat clause does not contain a valid integer value, or pair of values.</dd>
 <dt>malformed regex, 1st address</dt>
@@ -227,11 +227,11 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 <dt>unknown command &#8216;%s&#8217;</dt>
 <dd>
 </dd><dt>unterminated &#8216;[&#8216;</dt>
-<dd> A <font SIZE="-1">BRE</font> contains an unterminated bracket expression.</dd>
+<dd> A BRE contains an unterminated bracket expression.</dd>
 <dt>unterminated &#8216;\(&#8216;</dt>
-<dd> A <font SIZE="-1">BRE</font> contains an unterminated backreference.</dd>
+<dd> A BRE contains an unterminated backreference.</dd>
 <dt>&#8216;\{&#8216; without closing &#8216;\}&#8217;</dt>
-<dd> A <font SIZE="-1">BRE</font> contains an unterminated bounds specification.</dd>
+<dd> A BRE contains an unterminated bounds specification.</dd>
 <dt>&#8216;\)&#8217; without preceding &#8216;\(&#8216;</dt>
 <dd>
 </dd><dt>&#8216;y&#8217; command requires argument</dt>
@@ -256,12 +256,12 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i><a href="/docs/linux/man/7-re_format/">re_format</a></i>(7)</p>
 <h2>BUGS</h2>
-<p> The <code>l</code> command will show escape characters (<font SIZE="-1">ESC</font>) as &#8216;<tt>&quot;&quot;</tt>&#8216;, but a vertical tab (<font SIZE="-1">VT</font>) in octal. </p>
+<p> The <code>l</code> command will show escape characters (ESC) as &#8216;<tt>&quot;&quot;</tt>&#8216;, but a vertical tab (VT) in octal. </p>
 <p> Trailing spaces are truncated from labels in <code>:</code>, <code>t</code> and <code>b</code> commands. </p>
 <p> The meaning of an empty regular expression (&#8216;<tt>&quot;//&quot;</tt>&#8216;), as defined by <code>sed</code>, is &#8220;the last pattern used, at run time&#8221;. This deviates from the Perl interpretation, which will re-use the &#8220;last last successfully executed regular expression&#8221;. Since keeping track of pattern usage would create terribly cluttered code, and differences would only appear in obscure context (where other <code>sed</code> implementations appear to deviate, too), the Perl semantics was adopted. Note that common usage of this feature, such as in <tt>&quot;/abc/s//xyz/&quot;</tt>, will work as expected. </p>
 <p> Collating elements (of bracket expressions in BREs) are not implemented.</p>
 <h2>STANDARDS</h2>
-<p> This <code>sed</code> implementation conforms to the <font SIZE="-1">IEEE</font> Std1003.2-1992 (&#8220;<font SIZE="-1">POSIX</font>.2&#8221;) definition of <code>sed</code>, and is compatible with the <i>OpenBSD</i> implementation, except where otherwise noted (see &#8220;<font SIZE="-1">BUGS</font>&#8221;).</p>
+<p> This <code>sed</code> implementation conforms to the IEEE Std1003.2-1992 (&#8220;POSIX.2&#8221;) definition of <code>sed</code>, and is compatible with the <i>OpenBSD</i> implementation, except where otherwise noted (see &#8220;BUGS&#8221;).</p>
 <h2>AUTHOR</h2>
 <p> This Perl implementation of <i>sed</i> was written by Wolfgang Laun, <i>Wolfgang.Laun [at] alcatel.at</i>.</p>
 <h2>COPYRIGHT and LICENSE</h2>

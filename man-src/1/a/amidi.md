@@ -61,11 +61,11 @@ description: "amidi – read from and write to ALSA RawMIDI ports"
 <dd> creates a virtual RawMIDI port and prints all data sent to this port. </dd>
 </dl>
 <h2>FILES</h2>
-<p> <i>/usr/share/alsa/alsa.conf</i> default rawmidi definitions<br />
- <i>/etc/asound.conf</i> system-wide rawmidi definitions<br />
+<p> <i>/usr/share/alsa/alsa.conf</i> default rawmidi definitions<br/>
+ <i>/etc/asound.conf</i> system-wide rawmidi definitions<br/>
  <i>~/.asoundrc</i> user specific rawmidi definitions </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-aplaymidi/">aplaymidi</a>(1)<br />
+<p> <a href="/docs/linux/man/1-aplaymidi/">aplaymidi</a>(1)<br/>
  <a href="/docs/linux/man/1-arecordmidi/">arecordmidi</a>(1) </p>
 <h2>AUTHOR</h2>
 <p> Clemens Ladisch &lt;clemens [at] ladisch.de&gt; </p>

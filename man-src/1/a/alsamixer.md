@@ -41,7 +41,7 @@ description: "alsamixer – soundcard mixer for ALSA soundcard driver, with ncur
 <p> <code>alsamixer</code> recognizes the following keyboard commands to control the soundcard. Commands shown here in upper case can also be given in lower case. To be reminded of these keystrokes, hit the <i>h</i> key. </p>
 <h3>General Controls</h3>
 <p> The <i>Left</i> and <i>right arrow</i> keys are used to select the channel (or device, depending on your preferred terminology). You can also use <i>n</i> (&quot;next&quot;) and <i>p</i> (&quot;previous&quot;). </p>
-<p> The <i>Up</i> and <i>Down Arrows</i> control the volume for the currently selected device. You can also use <i>+</i> or <i>&#8211;</i> for the same purpose. Both the left and right signals are affected. For independent left and right control, see below.<br />
+<p> The <i>Up</i> and <i>Down Arrows</i> control the volume for the currently selected device. You can also use <i>+</i> or <i>&#8211;</i> for the same purpose. Both the left and right signals are affected. For independent left and right control, see below.<br/>
 &nbsp; The <i>B</i> or <i>=</i> key adjusts the balance of volumes on left and right channels. </p>
 <p> <i>M</i> toggles muting for the current channel (both left and right). If the hardware supports it, you can mute left and right independently by using <i>,</i> (or <i>&lt;</i>) and <i>.</i> (or <i>&gt;</i>) respectively. </p>
 <p> <i>SPACE</i> enables recording for the current channel. If any other channels have recording enabled, they will have their recording function disabled first. This only works for valid input channels, of course. </p>
@@ -87,10 +87,10 @@ description: "alsamixer – soundcard mixer for ALSA soundcard driver, with ncur
 <p> Set the default background color </p>
 </dd><dt><code>bind</code> <i>key_definition</i> <i>command</i></dt>
 <dd>
-<p> A <i>key_definition</i> may be:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; a single character<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; a combination with control: C-a<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; a combination with alt: M-a<br />
+<p> A <i>key_definition</i> may be:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; a single character<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; a combination with control: C-a<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; a combination with alt: M-a<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; a special keyname: Enter, Escape, PageUp, PageDown, Left, Down, Right, Up, Home, End, Backspace, F1 .. F12 </p>
 <p> See section <code>COMMANDS</code> for a list of <i>commands</i>. </p>
 </dd></dl>

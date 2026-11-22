@@ -33,7 +33,7 @@ my $repo = $pool-&gt;add_repo("my_first_repo");
 <dl>
 <dt>
 </dt><dd>
-$pool-&gt;{appdata} = 42;<br />
+$pool-&gt;{appdata} = 42;<br/>
 printf &#8220;appdata is %d
 &#8221;, $pool-&gt;{appdata};
 </dd></dl>
@@ -41,8 +41,8 @@ printf &#8220;appdata is %d
 <dl>
 <dt>
 </dt><dd>
-my $iter = $pool-&gt;solvables_iter();<br />
-for<br />
+my $iter = $pool-&gt;solvables_iter();<br/>
+for<br/>
     my $solvable(@$iter){&#8230;};
 </dd></dl>
 <p> As a downside of this approach, iterator objects cannot have attributes. </p>
@@ -224,9 +224,9 @@ set pool[solv::new_Pool] set repo[$pool add_repo &#8220;my_first_repo&#8221;]
 <dl>
 <dt>
 </dt><dd>
-set iter[$pool solvables_iter] solv::iter s $iter<br />
-{<br />
-    &#8230;<br />
+set iter[$pool solvables_iter] solv::iter s $iter<br/>
+{<br/>
+    &#8230;<br/>
 }
 </dd></dl>
 <p> libsolv&#8217;s arrays are mapped to tcl&#8217;s lists: </p>
@@ -305,9 +305,9 @@ set jobs[list $job1 $job2] set problems[$solver solve $jobs] puts &#8220;We have
 <dl>
 <dt>
 </dt><dd>
-Pool *Pool()<br />
-    my $pool = solv::Pool-&gt;new ();<br />
-pool = solv.Pool()<br />
+Pool *Pool()<br/>
+    my $pool = solv::Pool-&gt;new ();<br/>
+pool = solv.Pool()<br/>
            pool = Solv::Pool.new()
 </dd></dl>
 <p> Create a new pool instance. In most cases you just need one pool. Note that the returned object &quot;owns&quot; the pool, i.e. if the object is freed, the pool is also freed. You can use the disown method to break this ownership relation.</p>
@@ -315,48 +315,48 @@ pool = solv.Pool()<br />
 <dl>
 <dt>
 </dt><dd>
-void *appdata; /* read/write */<br />
-$pool-&gt;{appdata} pool.appdata<br />
+void *appdata; /* read/write */<br/>
+$pool-&gt;{appdata} pool.appdata<br/>
     pool.appdata
 </dd></dl>
 <p> Application specific data that may be used in any way by the code using the pool. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable solvables[]; /* read only */<br />
-my $solvable = $pool-&gt;<br />
-{<br />
-    solvables<br />
-    } -&gt; [$solvid];<br />
+Solvable solvables[]; /* read only */<br/>
+my $solvable = $pool-&gt;<br/>
+{<br/>
+    solvables<br/>
+    } -&gt; [$solvid];<br/>
 solvable = pool.solvables[solvid] solvable = pool.solvables[solvid]
 </dd></dl>
 <p> Look up a Solvable by its id. </p>
 <dl>
 <dt>
 </dt><dd>
-Repo repos[]; /* read only */<br />
-my $repo = $pool-&gt;<br />
-{<br />
-    repos<br />
-    } -&gt; [$repoid];<br />
+Repo repos[]; /* read only */<br/>
+my $repo = $pool-&gt;<br/>
+{<br/>
+    repos<br/>
+    } -&gt; [$repoid];<br/>
 repo = pool.repos[repoid] repo = pool.repos[repoid]
 </dd></dl>
 <p> Look up a Repository by its id. </p>
 <dl>
 <dt>
 </dt><dd>
-Repo *installed; /* read/write */<br />
-$pool-&gt;{installed} = $repo;<br />
-pool.installed = repo<br />
+Repo *installed; /* read/write */<br/>
+$pool-&gt;{installed} = $repo;<br/>
+pool.installed = repo<br/>
                      pool.installed = repo
 </dd></dl>
 <p> Define which repository contains all the installed packages. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *errstr; /* read only */<br />
-my $err = $pool-&gt;{errstr};<br />
-err = pool.errstr<br />
+const char *errstr; /* read only */<br/>
+my $err = $pool-&gt;{errstr};<br/>
+err = pool.errstr<br/>
           err = pool.errstr
 </dd></dl>
 <p> Return the last error string that was stored in the pool.</p>
@@ -405,241 +405,241 @@ err = pool.errstr<br />
 <dl>
 <dt>
 </dt><dd>
-void free()<br />
-    $pool-&gt;free();<br />
-pool.free()<br />
+void free()<br/>
+    $pool-&gt;free();<br/>
+pool.free()<br/>
     pool.free()
 </dd></dl>
 <p> Force a free of the pool. After this call, you must not access any object that still references the pool. </p>
 <dl>
 <dt>
 </dt><dd>
-void disown()<br />
-    $pool-&gt;disown();<br />
-pool.disown()<br />
+void disown()<br/>
+    $pool-&gt;disown();<br/>
+pool.disown()<br/>
     pool.disown()
 </dd></dl>
 <p> Break the ownership relation between the binding object and the pool. After this call, the pool will not get freed even if the object goes out of scope. This also means that you must manually call the free method to free the pool data. </p>
 <dl>
 <dt>
 </dt><dd>
-void setdebuglevel(int level)<br />
-    $pool-&gt;setdebuglevel($level);<br />
-pool.setdebuglevel(level)<br />
+void setdebuglevel(int level)<br/>
+    $pool-&gt;setdebuglevel($level);<br/>
+pool.setdebuglevel(level)<br/>
     pool.setdebuglevel(level)
 </dd></dl>
 <p> Set the debug level. A value of zero means no debug output, the higher the value, the more output is generated. </p>
 <dl>
 <dt>
 </dt><dd>
-int set_flag(int flag, int value)<br />
-    my $oldvalue = $pool-&gt;set_flag($flag, $value);<br />
-oldvalue = pool.set_flag(flag, value)<br />
+int set_flag(int flag, int value)<br/>
+    my $oldvalue = $pool-&gt;set_flag($flag, $value);<br/>
+oldvalue = pool.set_flag(flag, value)<br/>
                oldvalue = pool.set_flag(flag, value)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-int get_flag(int flag)<br />
-    my $value = $pool-&gt;get_flag($flag);<br />
-value = pool.get_flag(flag)<br />
+int get_flag(int flag)<br/>
+    my $value = $pool-&gt;get_flag($flag);<br/>
+value = pool.get_flag(flag)<br/>
             value = pool.get_flag(flag)
 </dd></dl>
 <p> Set/get a pool specific flag. The flags define how the system works, e.g. how the package manager treats obsoletes. The default flags should be sane for most applications, but in some cases you may want to tweak a flag, for example if you want to solv package dependencies for some other system than yours. </p>
 <dl>
 <dt>
 </dt><dd>
-void set_rootdir(const char *rootdir)<br />
-    $pool-&gt;set_rootdir(rootdir);<br />
-pool.set_rootdir(rootdir)<br />
+void set_rootdir(const char *rootdir)<br/>
+    $pool-&gt;set_rootdir(rootdir);<br/>
+pool.set_rootdir(rootdir)<br/>
     pool.set_rootdir(rootdir)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-const char *get_rootdir()<br />
-    my $rootdir = $pool-&gt;get_rootdir();<br />
-rootdir = pool.get_rootdir()<br />
+const char *get_rootdir()<br/>
+    my $rootdir = $pool-&gt;get_rootdir();<br/>
+rootdir = pool.get_rootdir()<br/>
               rootdir = pool.get_rootdir()
 </dd></dl>
 <p> Set/get the rootdir to use. This is useful if you want package management to work only in some directory, for example if you want to setup a chroot jail. Note that the rootdir will only be prepended to file paths if the <code>REPO_USE_ROOTDIR</code> flag is used. </p>
 <dl>
 <dt>
 </dt><dd>
-void setarch(const char *arch = 0)<br />
-    $pool-&gt;setarch();<br />
-pool.setarch()<br />
+void setarch(const char *arch = 0)<br/>
+    $pool-&gt;setarch();<br/>
+pool.setarch()<br/>
     pool.setarch()
 </dd></dl>
 <p> Set the architecture for your system. The architecture is used to determine which packages are installable. It defaults to the result of &#8220;uname -m&#8221;. </p>
 <dl>
 <dt>
 </dt><dd>
-Repo add_repo(const char *name)<br />
-    $repo = $pool-&gt;add_repo($name);<br />
-repo = pool.add_repo(name)<br />
+Repo add_repo(const char *name)<br/>
+    $repo = $pool-&gt;add_repo($name);<br/>
+repo = pool.add_repo(name)<br/>
            repo = pool.add_repo(name)
 </dd></dl>
 <p> Add a Repository with the specified name to the pool. The repository is empty on creation, use the repository methods to populate it with packages. </p>
 <dl>
 <dt>
 </dt><dd>
-Repoiterator repos_iter()<br />
-for my $repo (@{$pool-&gt;repos_iter()})<br />
-for repo in pool.repos_iter():<br />
+Repoiterator repos_iter()<br/>
+for my $repo (@{$pool-&gt;repos_iter()})<br/>
+for repo in pool.repos_iter():<br/>
 for repo in pool.repos_iter()
 </dd></dl>
 <p> Iterate over the existing repositories. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvableiterator solvables_iter()<br />
-for my $solvable (@{$pool-&gt;solvables_iter()})<br />
-for solvable in pool.solvables_iter():<br />
+Solvableiterator solvables_iter()<br/>
+for my $solvable (@{$pool-&gt;solvables_iter()})<br/>
+for solvable in pool.solvables_iter():<br/>
 for solvable in pool.solvables_iter()
 </dd></dl>
 <p> Iterate over the existing solvables. </p>
 <dl>
 <dt>
 </dt><dd>
-Dep Dep(const char *str, bool create = 1)<br />
-    my $dep = $pool-&gt;Dep($string);<br />
-dep = pool.Dep(string)<br />
+Dep Dep(const char *str, bool create = 1)<br/>
+    my $dep = $pool-&gt;Dep($string);<br/>
+dep = pool.Dep(string)<br/>
           dep = pool.Dep(string)
 </dd></dl>
 <p> Create an object describing a string or dependency. If the string is currently not in the pool and <i>create</i> is false, <code>undef</code>/<code>None</code>/<code>nil</code> is returned. </p>
 <dl>
 <dt>
 </dt><dd>
-void addfileprovides()<br />
-    $pool-&gt;addfileprovides();<br />
-pool.addfileprovides()<br />
+void addfileprovides()<br/>
+    $pool-&gt;addfileprovides();<br/>
+pool.addfileprovides()<br/>
     pool.addfileprovides()
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id *addfileprovides_queue()<br />
-    my @ids = $pool-&gt;addfileprovides_queue();<br />
-ids = pool.addfileprovides_queue()<br />
+Id *addfileprovides_queue()<br/>
+    my @ids = $pool-&gt;addfileprovides_queue();<br/>
+ids = pool.addfileprovides_queue()<br/>
           ids = pool.addfileprovides_queue()
 </dd></dl>
 <p> Some package managers like rpm allow dependencies on files contained in other packages. To allow libsolv to deal with those dependencies in an efficient way, you need to call the addfileprovides method after creating and reading all repositories. This method will scan all dependency for file names and then scan all packages for matching files. If a filename has been matched, it will be added to the provides list of the corresponding package. The addfileprovides_queue variant works the same way but returns an array containing all file dependencies. This information can be stored in the meta section of the repositories to speed up the next time the repository is loaded and addfileprovides is called. </p>
 <dl>
 <dt>
 </dt><dd>
-void createwhatprovides()<br />
-    $pool-&gt;createwhatprovides();<br />
-pool.createwhatprovides()<br />
+void createwhatprovides()<br/>
+    $pool-&gt;createwhatprovides();<br/>
+pool.createwhatprovides()<br/>
     pool.createwhatprovides()
 </dd></dl>
 <p> Create the internal &#8220;whatprovides&#8221; hash over all of the provides of all packages. This method must be called before doing any lookups on provides. It&#8217;s encouraged to do it right after all repos are set up, usually right after the call to addfileprovides(). </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable *whatprovides(DepId dep)<br />
-    my @solvables = $pool-&gt;whatprovides($dep);<br />
-solvables = pool.whatprovides(dep)<br />
+Solvable *whatprovides(DepId dep)<br/>
+    my @solvables = $pool-&gt;whatprovides($dep);<br/>
+solvables = pool.whatprovides(dep)<br/>
                 solvables = pool.whatprovides(dep)
 </dd></dl>
 <p> Return all solvables that provide the specified dependency. You can use either a Dep object or a simple Id as argument. </p>
 <dl>
 <dt>
 </dt><dd>
-Id *matchprovidingids(const char *match, int flags)<br />
-    my @ids = $pool-&gt;matchprovidingids($match, $flags);<br />
-ids = pool.matchprovidingids(match, flags)<br />
+Id *matchprovidingids(const char *match, int flags)<br/>
+    my @ids = $pool-&gt;matchprovidingids($match, $flags);<br/>
+ids = pool.matchprovidingids(match, flags)<br/>
           ids = pool.matchprovidingids(match, flags)
 </dd></dl>
 <p> Search the names of all provides and return the ones matching the specified string. See the Dataiterator class for the allowed flags. </p>
 <dl>
 <dt>
 </dt><dd>
-Id towhatprovides(Id *ids)<br />
-    my $offset = $pool-&gt;towhatprovides(\@ids);<br />
-offset = pool.towhatprovides(ids)<br />
+Id towhatprovides(Id *ids)<br/>
+    my $offset = $pool-&gt;towhatprovides(\@ids);<br/>
+offset = pool.towhatprovides(ids)<br/>
              offset = pool.towhatprovides(ids)
 </dd></dl>
 <p> &#8220;Internalize&#8221; an array containing Ids. The returned value can be used to create solver jobs working on a specific set of packages. See the Solver class for more information. </p>
 <dl>
 <dt>
 </dt><dd>
-bool isknownarch(DepId id)<br />
-    my $bool = $pool-&gt;isknownarch($id);<br />
+bool isknownarch(DepId id)<br/>
+    my $bool = $pool-&gt;isknownarch($id);<br/>
 bool = pool.isknownarch(id) bool = pool.isknownarch ? (id)
 </dd></dl>
 <p> Return true if the specified Id describes a known architecture. </p>
 <dl>
 <dt>
 </dt><dd>
-Solver Solver()<br />
-    my $solver = $pool-&gt;Solver();<br />
-solver = pool.Solver()<br />
+Solver Solver()<br/>
+    my $solver = $pool-&gt;Solver();<br/>
+solver = pool.Solver()<br/>
              solver = pool.Solver()
 </dd></dl>
 <p> Create a new solver object. </p>
 <dl>
 <dt>
 </dt><dd>
-Job Job(int how, Id what)<br />
-    my $job = $pool-&gt;Job($how, $what);<br />
-job = pool.Job(how, what)<br />
+Job Job(int how, Id what)<br/>
+    my $job = $pool-&gt;Job($how, $what);<br/>
+job = pool.Job(how, what)<br/>
           job = pool.Job(how, what)
 </dd></dl>
 <p> Create a new Job object. Kind of low level, in most cases you would use a Selection or Dep job constructor instead. </p>
 <dl>
 <dt>
 </dt><dd>
-Selection Selection()<br />
-    my $sel = $pool-&gt;Selection();<br />
-sel = pool.Selection()<br />
+Selection Selection()<br/>
+    my $sel = $pool-&gt;Selection();<br/>
+sel = pool.Selection()<br/>
           sel = pool.Selection()
 </dd></dl>
 <p> Create an empty selection. Useful as a starting point for merging other selections. </p>
 <dl>
 <dt>
 </dt><dd>
-Selection Selection_all()<br />
-    my $sel = $pool-&gt;Selection_all();<br />
-sel = pool.Selection_all()<br />
+Selection Selection_all()<br/>
+    my $sel = $pool-&gt;Selection_all();<br/>
+sel = pool.Selection_all()<br/>
           sel = pool.Selection_all()
 </dd></dl>
 <p> Create a selection containing all packages. Useful as starting point for intersecting other selections or for update/distupgrade jobs. </p>
 <dl>
 <dt>
 </dt><dd>
-Selection select(const char *name, int flags)<br />
-    my $sel = $pool-&gt;select($name, $flags);<br />
-sel = pool.select(name, flags)<br />
+Selection select(const char *name, int flags)<br/>
+    my $sel = $pool-&gt;select($name, $flags);<br/>
+sel = pool.select(name, flags)<br/>
           sel = pool.select(name, flags)
 </dd></dl>
 <p> Create a selection by matching packages against the specified string. See the Selection class for a list of flags and how to create solver jobs from a selection. </p>
 <dl>
 <dt>
 </dt><dd>
-void setpooljobs(Jobs *jobs)<br />
-    $pool-&gt;setpooljobs(\@jobs);<br />
-pool.setpooljobs(jobs)<br />
+void setpooljobs(Jobs *jobs)<br/>
+    $pool-&gt;setpooljobs(\@jobs);<br/>
+pool.setpooljobs(jobs)<br/>
     pool.setpooljobs(jobs)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Job *getpooljobs()<br />
-    @jobs = $pool-&gt;getpooljobs();<br />
-jobs = pool.getpooljobs()<br />
+Job *getpooljobs()<br/>
+    @jobs = $pool-&gt;getpooljobs();<br/>
+jobs = pool.getpooljobs()<br/>
            jobs = pool.getpooljobs()
 </dd></dl>
 <p> Get/Set fixed jobs stored in the pool. Those jobs are automatically appended to all solver jobs, they are meant for fixed configurations like which packages can be multiversion installed, which packages were userinstalled or must not be erased. </p>
 <dl>
 <dt>
 </dt><dd>
-void set_loadcallback(Callable *callback)<br />
-    $pool-&gt;setloadcallback(\&amp;callbackfunction);<br />
-pool.setloadcallback(callbackfunction)<br />
-    pool.setloadcallback<br />
-{<br />
-    | repodata | &#8230;<br />
+void set_loadcallback(Callable *callback)<br/>
+    $pool-&gt;setloadcallback(\&amp;callbackfunction);<br/>
+pool.setloadcallback(callbackfunction)<br/>
+    pool.setloadcallback<br/>
+{<br/>
+    | repodata | &#8230;<br/>
 }
 </dd></dl>
 <p> Set the callback function called when repository metadata needs to be loaded on demand. To make use of this feature, you need to create repodata stubs that tell the library which data is available but not loaded. If later on the data needs to be accessed, the callback function is called with a repodata argument. You can then load the data (maybe fetching it first from a remote server). The callback should return true if the data has been made available. </p>
@@ -669,65 +669,65 @@ pool.setloadcallback(callbackfunction)<br />
 <dl>
 <dt>
 </dt><dd>
-const char *lookup_str(Id solvid, Id keyname)<br />
-    my $string = $pool-&gt;lookup_str($solvid, $keyname);<br />
-string = pool.lookup_str(solvid, keyname)<br />
+const char *lookup_str(Id solvid, Id keyname)<br/>
+    my $string = $pool-&gt;lookup_str($solvid, $keyname);<br/>
+string = pool.lookup_str(solvid, keyname)<br/>
              string = pool.lookup_str(solvid, keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id lookup_id(Id solvid, Id keyname)<br />
-    my $id = $pool-&gt;lookup_id($solvid, $keyname);<br />
-id = pool.lookup_id(solvid, keyname)<br />
+Id lookup_id(Id solvid, Id keyname)<br/>
+    my $id = $pool-&gt;lookup_id($solvid, $keyname);<br/>
+id = pool.lookup_id(solvid, keyname)<br/>
          id = pool.lookup_id(solvid, keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-unsigned long long lookup_num(Id solvid, Id keyname, unsigned long long notfound = 0)<br />
-    my $num = $pool-&gt;lookup_num($solvid, $keyname);<br />
-num = pool.lookup_num(solvid, keyname)<br />
+unsigned long long lookup_num(Id solvid, Id keyname, unsigned long long notfound = 0)<br/>
+    my $num = $pool-&gt;lookup_num($solvid, $keyname);<br/>
+num = pool.lookup_num(solvid, keyname)<br/>
           num = pool.lookup_num(solvid, keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-bool lookup_void(Id solvid, Id keyname)<br />
-    my $bool = $pool-&gt;lookup_void($solvid, $keyname);<br />
+bool lookup_void(Id solvid, Id keyname)<br/>
+    my $bool = $pool-&gt;lookup_void($solvid, $keyname);<br/>
 bool = pool.lookup_void(solvid, keyname) bool = pool.lookup_void(solvid, keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id *lookup_idarray(Id solvid, Id keyname)<br />
-    my @ids = $pool-&gt;lookup_idarray($solvid, $keyname);<br />
-ids = pool.lookup_idarray(solvid, keyname)<br />
+Id *lookup_idarray(Id solvid, Id keyname)<br/>
+    my @ids = $pool-&gt;lookup_idarray($solvid, $keyname);<br/>
+ids = pool.lookup_idarray(solvid, keyname)<br/>
           ids = pool.lookup_idarray(solvid, keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Chksum lookup_checksum(Id solvid, Id keyname)<br />
-    my $chksum = $pool-&gt;lookup_checksum($solvid, $keyname);<br />
-chksum = pool.lookup_checksum(solvid, keyname)<br />
+Chksum lookup_checksum(Id solvid, Id keyname)<br/>
+    my $chksum = $pool-&gt;lookup_checksum($solvid, $keyname);<br/>
+chksum = pool.lookup_checksum(solvid, keyname)<br/>
              chksum = pool.lookup_checksum(solvid, keyname)
 </dd></dl>
 <p> Lookup functions. Return the data element stored in the specified solvable. You should probably use the methods of the Solvable class instead. </p>
 <dl>
 <dt>
 </dt><dd>
-Dataiterator Dataiterator(Id keyname, const char *match = 0, int flags = 0)<br />
-    my $di = $pool-&gt;Dataiterator($keyname, $match, $flags);<br />
-di = pool.Dataiterator(keyname, match, flags)<br />
+Dataiterator Dataiterator(Id keyname, const char *match = 0, int flags = 0)<br/>
+    my $di = $pool-&gt;Dataiterator($keyname, $match, $flags);<br/>
+di = pool.Dataiterator(keyname, match, flags)<br/>
          di = pool.Dataiterator(keyname, match, flags)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Dataiterator Dataiterator_solvid(Id solvid, Id keyname, const char *match = 0, int flags = 0)<br />
-    my $di = $pool-&gt;Dataiterator($solvid, $keyname, $match, $flags);<br />
-di = pool.Dataiterator(solvid, keyname, match, flags)<br />
+Dataiterator Dataiterator_solvid(Id solvid, Id keyname, const char *match = 0, int flags = 0)<br/>
+    my $di = $pool-&gt;Dataiterator($solvid, $keyname, $match, $flags);<br/>
+di = pool.Dataiterator(solvid, keyname, match, flags)<br/>
          di = pool.Dataiterator(solvid, keyname, match, flags)
 </dd></dl>
 <dl>
@@ -745,53 +745,53 @@ di = pool.Dataiterator(solvid, keyname, match, flags)<br />
 <dl>
 <dt>
 </dt><dd>
-Repo id2repo(Id id)<br />
-    $repo = $pool-&gt;id2repo($id);<br />
-repo = pool.id2repo(id)<br />
+Repo id2repo(Id id)<br/>
+    $repo = $pool-&gt;id2repo($id);<br/>
+repo = pool.id2repo(id)<br/>
            repo = pool.id2repo(id)
 </dd></dl>
 <p> Lookup an existing Repository by id. You can also do this by using the <code>repos</code> attribute. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable id2solvable(Id id)<br />
-    $solvable = $pool-&gt;id2solvable($id);<br />
-solvable = pool.id2solvable(id)<br />
+Solvable id2solvable(Id id)<br/>
+    $solvable = $pool-&gt;id2solvable($id);<br/>
+solvable = pool.id2solvable(id)<br/>
                solvable = pool.id2solvable(id)
 </dd></dl>
 <p> Lookup an existing Repository by id. You can also do this by using the <code>solvables</code> attribute. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *solvid2str(Id id)<br />
-    my $str = $pool-&gt;solvid2str($id);<br />
-str = pool.solvid2str(id)<br />
+const char *solvid2str(Id id)<br/>
+    my $str = $pool-&gt;solvid2str($id);<br/>
+str = pool.solvid2str(id)<br/>
           str = pool.solvid2str(id)
 </dd></dl>
 <p> Return a string describing the Solvable with the specified id. The string consists of the name, version, and architecture of the Solvable. </p>
 <dl>
 <dt>
 </dt><dd>
-Id str2id(const char *str, bool create = 1)<br />
-    my $id = pool-&gt;str2id($string);<br />
-id = pool.str2id(string)<br />
+Id str2id(const char *str, bool create = 1)<br/>
+    my $id = pool-&gt;str2id($string);<br/>
+id = pool.str2id(string)<br/>
          id = pool.str2id(string)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-const char *id2str(Id id)<br />
-    $string = pool-&gt;id2str($id);<br />
-string = pool.id2str(id)<br />
+const char *id2str(Id id)<br/>
+    $string = pool-&gt;id2str($id);<br/>
+string = pool.id2str(id)<br/>
              string = pool.id2str(id)
 </dd></dl>
 <p> Convert a string into an Id and back. If the string is currently not in the pool and <i>create</i> is false, zero is returned. </p>
 <dl>
 <dt>
 </dt><dd>
-Id rel2id(Id name, Id evr, int flags, bool create = 1)<br />
-    my $id = pool-&gt;rel2id($nameid, $evrid, $flags);<br />
-id = pool.rel2id(nameid, evrid, flags)<br />
+Id rel2id(Id name, Id evr, int flags, bool create = 1)<br/>
+    my $id = pool-&gt;rel2id($nameid, $evrid, $flags);<br/>
+id = pool.rel2id(nameid, evrid, flags)<br/>
          id = pool.rel2id(nameid, evrid, flags)
 </dd></dl>
 <p> Create a &#8220;relational&#8221; dependency. Such dependencies consist of a name part, the <i>flags</i> describing the relation, and a version part. The flags are: </p>
@@ -808,18 +808,18 @@ id = pool.rel2id(nameid, evrid, flags)<br />
 <dl>
 <dt>
 </dt><dd>
-Id id2langid(Id id, const char *lang, bool create = 1)<br />
-    my $id = $pool-&gt;id2langid($id, $language);<br />
-id = pool.id2langid(id, language)<br />
+Id id2langid(Id id, const char *lang, bool create = 1)<br/>
+    my $id = $pool-&gt;id2langid($id, $language);<br/>
+id = pool.id2langid(id, language)<br/>
          id = pool.id2langid(id, language)
 </dd></dl>
 <p> Create a language specific Id from some other id. This function simply converts the id into a string, appends a dot and the specified language to the string and converts the result back into an Id. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *dep2str(Id id)<br />
-    $string = pool-&gt;dep2str($id);<br />
-string = pool.dep2str(id)<br />
+const char *dep2str(Id id)<br/>
+    $string = pool-&gt;dep2str($id);<br/>
+string = pool.dep2str(id)<br/>
              string = pool.dep2str(id)
 </dd></dl>
 <p> Convert a dependency id into a string. If the id is just a string, this function has the same effect as id2str(). For relational dependencies, the result is the correct &#8220;name relation evr&#8221; string.</p>
@@ -829,16 +829,16 @@ string = pool.dep2str(id)<br />
 <dl>
 <dt>
 </dt><dd>
-Pool *pool; /* read only */<br />
-$dep-&gt;{pool} dep.pool<br />
+Pool *pool; /* read only */<br/>
+$dep-&gt;{pool} dep.pool<br/>
     dep.pool
 </dd></dl>
 <p> Back reference to the pool this dependency belongs to. </p>
 <dl>
 <dt>
 </dt><dd>
-Id id; /* read only */<br />
-$dep-&gt;{id} dep.id<br />
+Id id; /* read only */<br/>
+$dep-&gt;{id} dep.id<br/>
     dep.id
 </dd></dl>
 <p> The id of this dependency.</p>
@@ -846,36 +846,36 @@ $dep-&gt;{id} dep.id<br />
 <dl>
 <dt>
 </dt><dd>
-Dep Rel(int flags, DepId evrid, bool create = 1)<br />
-    my $reldep = $dep-&gt;Rel($flags, $evrdep);<br />
-reldep = dep.Rel(flags, evrdep)<br />
+Dep Rel(int flags, DepId evrid, bool create = 1)<br/>
+    my $reldep = $dep-&gt;Rel($flags, $evrdep);<br/>
+reldep = dep.Rel(flags, evrdep)<br/>
              reldep = dep.Rel(flags, evrdep)
 </dd></dl>
 <p> Create a relational dependency from to string dependencies and a flags argument. See the pool&#8217;s rel2id method for a description of the flags. </p>
 <dl>
 <dt>
 </dt><dd>
-Selection Selection_name(int setflags = 0)<br />
-    my $sel = $dep-&gt;Selection_name();<br />
-sel = dep.Selection_name()<br />
+Selection Selection_name(int setflags = 0)<br/>
+    my $sel = $dep-&gt;Selection_name();<br/>
+sel = dep.Selection_name()<br/>
           sel = dep.Selection_name()
 </dd></dl>
 <p> Create a Selection from a dependency. The selection consists of all packages that have a name equal to the dependency. If the dependency is of a relational type, the packages version must also fulfill the dependency. </p>
 <dl>
 <dt>
 </dt><dd>
-Selection Selection_provides(int setflags = 0)<br />
-    my $sel = $dep-&gt;Selection_provides();<br />
-sel = dep.Selection_provides()<br />
+Selection Selection_provides(int setflags = 0)<br/>
+    my $sel = $dep-&gt;Selection_provides();<br/>
+sel = dep.Selection_provides()<br/>
           sel = dep.Selection_provides()
 </dd></dl>
 <p> Create a Selection from a dependency. The selection consists of all packages that have at least one provides matching the dependency. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *str()<br />
-    my $str = $dep-&gt;str();<br />
-str = $dep.str()<br />
+const char *str()<br/>
+    my $str = $dep-&gt;str();<br/>
+str = $dep.str()<br/>
           str = $dep.str()
 </dd></dl>
 <p> Return a string describing the dependency. </p>
@@ -893,9 +893,9 @@ my <i>$str</i> <code>=</code> <i>$dep</i><code>-&gt;str</code>;
 <dl>
 <dt>
 </dt><dd>
-&lt;equality&gt;<br />
-if ($dep1 == $dep2)<br />
-if dep1 == dep2:<br />
+&lt;equality&gt;<br/>
+if ($dep1 == $dep2)<br/>
+if dep1 == dep2:<br/>
 if dep1 == dep2
 </dd></dl>
 <p> The dependencies are equal if they are part of the same pool and have the same ids.</p>
@@ -905,64 +905,64 @@ if dep1 == dep2
 <dl>
 <dt>
 </dt><dd>
-Pool *pool; /* read only */<br />
-$repo-&gt;{pool} repo.pool<br />
+Pool *pool; /* read only */<br/>
+$repo-&gt;{pool} repo.pool<br/>
     repo.pool
 </dd></dl>
 <p> Back reference to the pool this dependency belongs to. </p>
 <dl>
 <dt>
 </dt><dd>
-Id id; /* read only */<br />
-$repo-&gt;{id} repo.id<br />
+Id id; /* read only */<br/>
+$repo-&gt;{id} repo.id<br/>
     repo.id
 </dd></dl>
 <p> The id of the repository. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *name; /* read/write */<br />
-$repo-&gt;{name} repo.name<br />
+const char *name; /* read/write */<br/>
+$repo-&gt;{name} repo.name<br/>
     repo.name
 </dd></dl>
 <p> The repositories name. To libsolv, the name is just a string with no specific meaning. </p>
 <dl>
 <dt>
 </dt><dd>
-int priority; /* read/write */<br />
-$repo-&gt;{priority} repo.priority<br />
+int priority; /* read/write */<br/>
+$repo-&gt;{priority} repo.priority<br/>
     repo.priority
 </dd></dl>
 <p> The priority of the repository. A higher number means that packages of this repository will be chosen over other repositories, even if they have a greater package version. </p>
 <dl>
 <dt>
 </dt><dd>
-int subpriority; /* read/write */<br />
-$repo-&gt;{subpriority} repo.subpriority<br />
+int subpriority; /* read/write */<br/>
+$repo-&gt;{subpriority} repo.subpriority<br/>
     repo.subpriority
 </dd></dl>
 <p> The sub-priority of the repository. This value is compared when the priorities of two repositories are the same. It is useful to make the library prefer on-disk repositories to remote ones. </p>
 <dl>
 <dt>
 </dt><dd>
-int nsolvables; /* read only */<br />
-$repo-&gt;{nsolvables} repo.nsolvables<br />
+int nsolvables; /* read only */<br/>
+$repo-&gt;{nsolvables} repo.nsolvables<br/>
     repo.nsolvables
 </dd></dl>
 <p> The number of solvables in this repository. </p>
 <dl>
 <dt>
 </dt><dd>
-void *appdata; /* read/write */<br />
-$repo-&gt;{appdata} repo.appdata<br />
+void *appdata; /* read/write */<br/>
+$repo-&gt;{appdata} repo.appdata<br/>
     repo.appdata
 </dd></dl>
 <p> Application specific data that may be used in any way by the code using the repository. </p>
 <dl>
 <dt>
 </dt><dd>
-Datapos *meta; /* read only */<br />
-$repo-&gt;{meta} repo.meta<br />
+Datapos *meta; /* read only */<br/>
+$repo-&gt;{meta} repo.meta<br/>
     repo.meta
 </dd></dl>
 <p> Return a Datapos object of the repodata&#8217;s metadata. You can use the lookup methods of the Datapos class to lookup metadata attributes, like the repository timestamp.</p>
@@ -1007,18 +1007,18 @@ $repo-&gt;{meta} repo.meta<br />
 <dl>
 <dt>
 </dt><dd>
-void free(bool reuseids = 0)<br />
-    $repo-&gt;free();<br />
-repo.free()<br />
+void free(bool reuseids = 0)<br/>
+    $repo-&gt;free();<br/>
+repo.free()<br/>
     repo.free()
 </dd></dl>
 <p> Free the repository and all solvables it contains. If <i>reuseids</i> is set to true, the solvable ids and the repository id may be reused by the library when added new solvables. Thus you should leave it false if you are not sure that somebody holds a reference. </p>
 <dl>
 <dt>
 </dt><dd>
-void empty(bool reuseids = 0)<br />
-    $repo-&gt;empty();<br />
-repo.empty()<br />
+void empty(bool reuseids = 0)<br/>
+    $repo-&gt;empty();<br/>
+repo.empty()<br/>
     repo.empty()
 </dd></dl>
 <p> Free all the solvables in a repository. The repository will be empty after this call. See the free() method for the meaning of <i>reuseids</i>. </p>
@@ -1036,9 +1036,9 @@ repo.empty()<br />
 <dl>
 <dt>
 </dt><dd>
-void internalize()<br />
-    $repo-&gt;internalize();<br />
-repo.internalize()<br />
+void internalize()<br/>
+    $repo-&gt;internalize();<br/>
+repo.internalize()<br/>
     repo.internalize()
 </dd></dl>
 <p> Internalize added data. Data must be internalized before it is available to the lookup and data iterator functions. </p>
@@ -1056,27 +1056,27 @@ repo.internalize()<br />
 <dl>
 <dt>
 </dt><dd>
-Solvableiterator solvables_iter()<br />
-for my $solvable (@{$repo-&gt;solvables_iter()})<br />
-for solvable in repo.solvables_iter():<br />
+Solvableiterator solvables_iter()<br/>
+for my $solvable (@{$repo-&gt;solvables_iter()})<br/>
+for solvable in repo.solvables_iter():<br/>
 for solvable in repo.solvables_iter()
 </dd></dl>
 <p> Iterate over all solvables in a repository. </p>
 <dl>
 <dt>
 </dt><dd>
-Repodata add_repodata(int flags = 0)<br />
-    my $repodata = $repo-&gt;add_repodata();<br />
-repodata = repo.add_repodata()<br />
+Repodata add_repodata(int flags = 0)<br/>
+    my $repodata = $repo-&gt;add_repodata();<br/>
+repodata = repo.add_repodata()<br/>
                repodata = repo.add_repodata()
 </dd></dl>
 <p> Add a new repodata area to the repository. This is normally automatically done by the repo_add methods, so you need this method only in very rare circumstances. </p>
 <dl>
 <dt>
 </dt><dd>
-void create_stubs()<br />
-    $repo-&gt;create_stubs();<br />
-repo.create_stubs()<br />
+void create_stubs()<br/>
+    $repo-&gt;create_stubs();<br/>
+repo.create_stubs()<br/>
     repo.create_stubs()
 </dd></dl>
 <p> Calls the create_stubs() repodata method for the last repodata of the repository. </p>
@@ -1094,35 +1094,35 @@ repo.create_stubs()<br />
 <dl>
 <dt>
 </dt><dd>
-Repodata first_repodata()<br />
-    my $repodata = $repo-&gt;first_repodata();<br />
-repodata = repo.first_repodata()<br />
+Repodata first_repodata()<br/>
+    my $repodata = $repo-&gt;first_repodata();<br/>
+repodata = repo.first_repodata()<br/>
                repodata = repo.first_repodata()
 </dd></dl>
 <p> Checks if all repodatas but the first repodata are extensions, and return the first repodata if this is the case. Useful if you want to do a store/retrieve sequence on the repository to reduce the memory using and enable paging, as this does not work if the repository contains multiple non-extension repodata areas. </p>
 <dl>
 <dt>
 </dt><dd>
-Selection Selection(int setflags = 0)<br />
-    my $sel = $repo-&gt;Selection();<br />
-sel = repo.Selection()<br />
+Selection Selection(int setflags = 0)<br/>
+    my $sel = $repo-&gt;Selection();<br/>
+sel = repo.Selection()<br/>
           sel = repo.Selection()
 </dd></dl>
 <p> Create a Selection consisting of all packages in the repository. </p>
 <dl>
 <dt>
 </dt><dd>
-Dataiterator Dataiterator(Id key, const char *match = 0, int flags = 0)<br />
-    my $di = $repo-&gt;Dataiterator($keyname, $match, $flags);<br />
-di = repo.Dataiterator(keyname, match, flags)<br />
+Dataiterator Dataiterator(Id key, const char *match = 0, int flags = 0)<br/>
+    my $di = $repo-&gt;Dataiterator($keyname, $match, $flags);<br/>
+di = repo.Dataiterator(keyname, match, flags)<br/>
          di = repo.Dataiterator(keyname, match, flags)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Dataiterator Dataiterator_meta(Id key, const char *match = 0, int flags = 0)<br />
-    my $di = $repo-&gt;Dataiterator_meta($keyname, $match, $flags);<br />
-di = repo.Dataiterator_meta(keyname, match, flags)<br />
+Dataiterator Dataiterator_meta(Id key, const char *match = 0, int flags = 0)<br/>
+    my $di = $repo-&gt;Dataiterator_meta($keyname, $match, $flags);<br/>
+di = repo.Dataiterator_meta(keyname, match, flags)<br/>
          di = repo.Dataiterator_meta(keyname, match, flags)
 </dd></dl>
 <dl>
@@ -1149,9 +1149,9 @@ my <i>$str</i> <code>=</code> <i>$repo</i><code>-&gt;str</code>;
 <dl>
 <dt>
 </dt><dd>
-&lt;equality&gt;<br />
-if ($repo1 == $repo2)<br />
-if repo1 == repo2:<br />
+&lt;equality&gt;<br/>
+if ($repo1 == $repo2)<br/>
+if repo1 == repo2:<br/>
 if repo1 == repo2
 </dd></dl>
 <p> Two repositories are equal if they belong to the same pool and have the same id.</p>
@@ -1159,196 +1159,196 @@ if repo1 == repo2
 <dl>
 <dt>
 </dt><dd>
-Solvable add_solvable()<br />
-    $repo-&gt;add_solvable();<br />
-repo.add_solvable()<br />
+Solvable add_solvable()<br/>
+    $repo-&gt;add_solvable();<br/>
+repo.add_solvable()<br/>
     repo.add_solvable()
 </dd></dl>
 <p> Add a single empty solvable to the repository. Returns a Solvable object, see the Solvable class for more information. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_solv(const char *name, int flags = 0)<br />
-    $repo-&gt;add_solv($name);<br />
-repo.add_solv(name)<br />
+bool add_solv(const char *name, int flags = 0)<br/>
+    $repo-&gt;add_solv($name);<br/>
+repo.add_solv(name)<br/>
     repo.add_solv(name)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-bool add_solv(FILE *fp, int flags = 0)<br />
-    $repo-&gt;add_solv($fp);<br />
-repo.add_solv(fp)<br />
+bool add_solv(FILE *fp, int flags = 0)<br/>
+    $repo-&gt;add_solv($fp);<br/>
+repo.add_solv(fp)<br/>
     repo.add_solv(fp)
 </dd></dl>
 <p> Read a &#8220;solv&#8221; file and add its contents to the repository. These files can be written with the write() method and are normally used as fast cache for repository metadata. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_rpmdb(int flags = 0)<br />
-    $repo-&gt;add_rpmdb();<br />
-repo.add_rpmdb()<br />
+bool add_rpmdb(int flags = 0)<br/>
+    $repo-&gt;add_rpmdb();<br/>
+repo.add_rpmdb()<br/>
     repo.add_rpmdb()
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-bool add_rpmdb_reffp(FILE *reffp, int flags = 0)<br />
-    $repo-&gt;add_rpmdb_reffp($reffp);<br />
-repo.add_rpmdb_reffp(reffp)<br />
+bool add_rpmdb_reffp(FILE *reffp, int flags = 0)<br/>
+    $repo-&gt;add_rpmdb_reffp($reffp);<br/>
+repo.add_rpmdb_reffp(reffp)<br/>
     repo.add_rpmdb_reffp(reffp)
 </dd></dl>
 <p> Add the contents of the rpm database to the repository. If a solv file containing an old version of the database is available, it can be passed as reffp to speed up reading. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable add_rpm(const char *filename, int flags = 0)<br />
-    my $solvable = $repo-&gt;add_rpm($filename);<br />
-solvable = repo.add_rpm(filename)<br />
+Solvable add_rpm(const char *filename, int flags = 0)<br/>
+    my $solvable = $repo-&gt;add_rpm($filename);<br/>
+solvable = repo.add_rpm(filename)<br/>
                solvable = repo.add_rpm(filename)
 </dd></dl>
 <p> Add the metadata of a single rpm package to the repository. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_rpmdb_pubkeys(int flags = 0)<br />
-    $repo-&gt;add_rpmdb_pubkeys();<br />
-repo.add_rpmdb_pubkeys()<br />
+bool add_rpmdb_pubkeys(int flags = 0)<br/>
+    $repo-&gt;add_rpmdb_pubkeys();<br/>
+repo.add_rpmdb_pubkeys()<br/>
     repo.add_rpmdb_pubkeys()
 </dd></dl>
 <p> Add all pubkeys contained in the rpm database to the repository. Note that newer rpm versions also allow to store the pubkeys in some directory instead of the rpm database. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable add_pubkey(const char *keyfile, int flags = 0)<br />
-    my $solvable = $repo-&gt;add_pubkey($keyfile);<br />
-solvable = repo.add_pubkey(keyfile)<br />
+Solvable add_pubkey(const char *keyfile, int flags = 0)<br/>
+    my $solvable = $repo-&gt;add_pubkey($keyfile);<br/>
+solvable = repo.add_pubkey(keyfile)<br/>
                solvable = repo.add_pubkey(keyfile)
 </dd></dl>
 <p> Add a pubkey from a file to the repository. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_rpmmd(FILE *fp, const char *language, int flags = 0)<br />
-    $repo-&gt;add_rpmmd($fp, undef);<br />
-repo.add_rpmmd(fp, None)<br />
+bool add_rpmmd(FILE *fp, const char *language, int flags = 0)<br/>
+    $repo-&gt;add_rpmmd($fp, undef);<br/>
+repo.add_rpmmd(fp, None)<br/>
     repo.add_rpmmd(fp, nil)
 </dd></dl>
 <p> Add metadata stored in the &quot;rpm-md&quot; format (i.e. from files in the &#8220;repodata&#8221; directory) to a repository. Supported files are &quot;primary&quot;, &quot;filelists&quot;, &quot;other&quot;, &quot;suseinfo&quot;. Do not forget to specify the <code>REPO_EXTEND_SOLVABLES</code> for extension files like &quot;filelists&quot; and &quot;other&quot;. Use the <i>language</i> parameter if you have language extension files, otherwise simply use a <code>undef</code>/<code>None</code>/<code>nil</code> parameter. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_repomdxml(FILE *fp, int flags = 0)<br />
-    $repo-&gt;add_repomdxml($fp);<br />
-repo.add_repomdxml(fp)<br />
+bool add_repomdxml(FILE *fp, int flags = 0)<br/>
+    $repo-&gt;add_repomdxml($fp);<br/>
+repo.add_repomdxml(fp)<br/>
     repo.add_repomdxml(fp)
 </dd></dl>
 <p> Add the repomd.xml meta description from the &quot;rpm-md&quot; format to the repository. This file contains information about the repository like keywords, and also a list of all database files with checksums. The data is added to the &quot;meta&quot; section of the repository, i.e. no package gets created. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_updateinfoxml(FILE *fp, int flags = 0)<br />
-    $repo-&gt;add_updateinfoxml($fp);<br />
-repo.add_updateinfoxml(fp)<br />
+bool add_updateinfoxml(FILE *fp, int flags = 0)<br/>
+    $repo-&gt;add_updateinfoxml($fp);<br/>
+repo.add_updateinfoxml(fp)<br/>
     repo.add_updateinfoxml(fp)
 </dd></dl>
 <p> Add the updateinfo.xml file containing available maintenance updates to the repository. All updates are created as special packages that have a &quot;patch:&quot; prefix in their name. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_deltainfoxml(FILE *fp, int flags = 0)<br />
-    $repo-&gt;add_deltainfoxml($fp);<br />
-repo.add_deltainfoxml(fp)<br />
+bool add_deltainfoxml(FILE *fp, int flags = 0)<br/>
+    $repo-&gt;add_deltainfoxml($fp);<br/>
+repo.add_deltainfoxml(fp)<br/>
     repo.add_deltainfoxml(fp)
 </dd></dl>
 <p> Add the deltainfo.xml file (also called prestodelta.xml) containing available delta-rpms to the repository. The data is added to the &quot;meta&quot; section, i.e. no package gets created. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_debdb(int flags = 0)<br />
-    $repo-&gt;add_debdb();<br />
-repo.add_debdb()<br />
+bool add_debdb(int flags = 0)<br/>
+    $repo-&gt;add_debdb();<br/>
+repo.add_debdb()<br/>
     repo.add_debdb()
 </dd></dl>
 <p> Add the contents of the debian installed package database to the repository. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_debpackages(FILE *fp, int flags = 0)<br />
-    $repo-&gt;add_debpackages($fp);<br />
-repo.add_debpackages($fp)<br />
+bool add_debpackages(FILE *fp, int flags = 0)<br/>
+    $repo-&gt;add_debpackages($fp);<br/>
+repo.add_debpackages($fp)<br/>
     repo.add_debpackages($fp)
 </dd></dl>
 <p> Add the contents of the debian repository metadata (the &quot;packages&quot; file) to the repository. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable add_deb(const char *filename, int flags = 0)<br />
-    my $solvable = $repo-&gt;add_deb($filename);<br />
-solvable = repo.add_deb(filename)<br />
+Solvable add_deb(const char *filename, int flags = 0)<br/>
+    my $solvable = $repo-&gt;add_deb($filename);<br/>
+solvable = repo.add_deb(filename)<br/>
                solvable = repo.add_deb(filename)
 </dd></dl>
 <p> Add the metadata of a single deb package to the repository. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_mdk(FILE *fp, int flags = 0)<br />
-    $repo-&gt;add_mdk($fp);<br />
-repo.add_mdk(fp)<br />
+bool add_mdk(FILE *fp, int flags = 0)<br/>
+    $repo-&gt;add_mdk($fp);<br/>
+repo.add_mdk(fp)<br/>
     repo.add_mdk(fp)
 </dd></dl>
 <p> Add the contents of the mageia/mandriva repository metadata (the &quot;synthesis.hdlist&quot; file) to the repository. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_mdk_info(FILE *fp, int flags = 0)<br />
-    $repo-&gt;add_mdk($fp);<br />
-repo.add_mdk(fp)<br />
+bool add_mdk_info(FILE *fp, int flags = 0)<br/>
+    $repo-&gt;add_mdk($fp);<br/>
+repo.add_mdk(fp)<br/>
     repo.add_mdk(fp)
 </dd></dl>
 <p> Extend the packages from the synthesis file with the info.xml and files.xml data. Do not forget to specify <code>REPO_EXTEND_SOLVABLES</code>. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_arch_repo(FILE *fp, int flags = 0)<br />
-    $repo-&gt;add_arch_repo($fp);<br />
-repo.add_arch_repo(fp)<br />
+bool add_arch_repo(FILE *fp, int flags = 0)<br/>
+    $repo-&gt;add_arch_repo($fp);<br/>
+repo.add_arch_repo(fp)<br/>
     repo.add_arch_repo(fp)
 </dd></dl>
 <p> Add the contents of the archlinux repository metadata (the &quot;.db.tar&quot; file) to the repository. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_arch_local(const char *dir, int flags = 0)<br />
-    $repo-&gt;add_arch_local($dir);<br />
-repo.add_arch_local(dir)<br />
+bool add_arch_local(const char *dir, int flags = 0)<br/>
+    $repo-&gt;add_arch_local($dir);<br/>
+repo.add_arch_local(dir)<br/>
     repo.add_arch_local(dir)
 </dd></dl>
 <p> Add the contents of the archlinux installed package database to the repository. The <i>dir</i> parameter is usually set to &quot;/var/lib/pacman/local&quot;. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_content(FILE *fp, int flags = 0)<br />
-    $repo-&gt;add_content($fp);<br />
-repo.add_content(fp)<br />
+bool add_content(FILE *fp, int flags = 0)<br/>
+    $repo-&gt;add_content($fp);<br/>
+repo.add_content(fp)<br/>
     repo.add_content(fp)
 </dd></dl>
 <p> Add the &#8220;content&#8221; meta description from the susetags format to the repository. This file contains information about the repository like keywords, and also a list of all database files with checksums. The data is added to the &quot;meta&quot; section of the repository, i.e. no package gets created. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_susetags(FILE *fp, Id defvendor, const char *language, int flags = 0)<br />
-    $repo-&gt;add_susetags($fp, $defvendor, $language);<br />
-repo.add_susetags(fp, defvendor, language)<br />
+bool add_susetags(FILE *fp, Id defvendor, const char *language, int flags = 0)<br/>
+    $repo-&gt;add_susetags($fp, $defvendor, $language);<br/>
+repo.add_susetags(fp, defvendor, language)<br/>
     repo.add_susetags(fp, defvendor, language)
 </dd></dl>
 <p> Add repository metadata in the susetags format to the repository. Like with add_rpmmd, you can specify a language if you have language extension files. The <i>defvendor</i> parameter provides a default vendor for packages with missing vendors, it is usually provided in the content file. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_products(const char *dir, int flags = 0)<br />
-    $repo-&gt;add_products($dir);<br />
-repo.add_products(dir)<br />
+bool add_products(const char *dir, int flags = 0)<br/>
+    $repo-&gt;add_products($dir);<br/>
+repo.add_products(dir)<br/>
     repo.add_products(dir)
 </dd></dl>
 <p> Add the installed SUSE products database to the repository. The <i>dir</i> parameter is usually &quot;/etc/products.d&quot;.</p>
@@ -1358,82 +1358,82 @@ repo.add_products(dir)<br />
 <dl>
 <dt>
 </dt><dd>
-Repo *repo; /* read only */<br />
-$solvable-&gt;{repo} solvable.repo<br />
+Repo *repo; /* read only */<br/>
+$solvable-&gt;{repo} solvable.repo<br/>
     solvable.repo
 </dd></dl>
 <p> The repository this solvable belongs to. </p>
 <dl>
 <dt>
 </dt><dd>
-Pool *pool; /* read only */<br />
-$solvable-&gt;{pool} solvable.pool<br />
+Pool *pool; /* read only */<br/>
+$solvable-&gt;{pool} solvable.pool<br/>
     solvable.pool
 </dd></dl>
 <p> The pool this solvable belongs to, same as the pool of the repo. </p>
 <dl>
 <dt>
 </dt><dd>
-Id id; /* read only */<br />
-$solvable-&gt;{id} solvable.id<br />
+Id id; /* read only */<br/>
+$solvable-&gt;{id} solvable.id<br/>
     solvable.id
 </dd></dl>
 <p> The specific id of the solvable. </p>
 <dl>
 <dt>
 </dt><dd>
-char *name; /* read/write */<br />
-$solvable-&gt;{name} solvable.name<br />
+char *name; /* read/write */<br/>
+$solvable-&gt;{name} solvable.name<br/>
     solvable.name
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-char *evr; /* read/write */<br />
-$solvable-&gt;{evr} solvable.evr<br />
+char *evr; /* read/write */<br/>
+$solvable-&gt;{evr} solvable.evr<br/>
     solvable.evr
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-char *arch; /* read/write */<br />
-$solvable-&gt;{arch} solvable.arch<br />
+char *arch; /* read/write */<br/>
+$solvable-&gt;{arch} solvable.arch<br/>
     solvable.arch
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-char *vendor; /* read/write */<br />
-$solvable-&gt;{vendor} solvable.vendor<br />
+char *vendor; /* read/write */<br/>
+$solvable-&gt;{vendor} solvable.vendor<br/>
     solvable.vendor
 </dd></dl>
 <p> Easy access to often used attributes of solvables. They are internally stored as Ids. </p>
 <dl>
 <dt>
 </dt><dd>
-Id nameid; /* read/write */<br />
-$solvable-&gt;{nameid} solvable.nameid<br />
+Id nameid; /* read/write */<br/>
+$solvable-&gt;{nameid} solvable.nameid<br/>
     solvable.nameid
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id evrid; /* read/write */<br />
-$solvable-&gt;{evrid} solvable.evrid<br />
+Id evrid; /* read/write */<br/>
+$solvable-&gt;{evrid} solvable.evrid<br/>
     solvable.evrid
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id archid; /* read/write */<br />
-$solvable-&gt;{archid} solvable.archid<br />
+Id archid; /* read/write */<br/>
+$solvable-&gt;{archid} solvable.archid<br/>
     solvable.archid
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id vendorid; /* read/write */<br />
-$solvable-&gt;{vendorid} solvable.vendorid<br />
+Id vendorid; /* read/write */<br/>
+$solvable-&gt;{vendorid} solvable.vendorid<br/>
     solvable.vendorid
 </dd></dl>
 <p> Raw interface to the ids. Useful if you want to search for a specific id and want to avoid the string compare overhead.</p>
@@ -1441,73 +1441,73 @@ $solvable-&gt;{vendorid} solvable.vendorid<br />
 <dl>
 <dt>
 </dt><dd>
-const char *lookup_str(Id keyname)<br />
-    my $string = $solvable-&gt;lookup_str($keyname);<br />
-string = solvable.lookup_str(keyname)<br />
+const char *lookup_str(Id keyname)<br/>
+    my $string = $solvable-&gt;lookup_str($keyname);<br/>
+string = solvable.lookup_str(keyname)<br/>
              string = solvable.lookup_str(keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id lookup_id(Id keyname)<br />
-    my $id = $solvable-&gt;lookup_id($keyname);<br />
-id = solvable.lookup_id(solvid)<br />
+Id lookup_id(Id keyname)<br/>
+    my $id = $solvable-&gt;lookup_id($keyname);<br/>
+id = solvable.lookup_id(solvid)<br/>
          id = solvable.lookup_id(solvid)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-unsigned long long lookup_num(Id solvid, Id keyname, unsigned long long notfound = 0)<br />
-    my $num = $solvable-&gt;lookup_num($keyname);<br />
-num = solvable.lookup_num(keyname)<br />
+unsigned long long lookup_num(Id solvid, Id keyname, unsigned long long notfound = 0)<br/>
+    my $num = $solvable-&gt;lookup_num($keyname);<br/>
+num = solvable.lookup_num(keyname)<br/>
           num = solvable.lookup_num(keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-bool lookup_void(Id keyname)<br />
-    my $bool = $solvable-&gt;lookup_void($keyname);<br />
+bool lookup_void(Id keyname)<br/>
+    my $bool = $solvable-&gt;lookup_void($keyname);<br/>
 bool = solvable.lookup_void(keyname) bool = solvable.lookup_void(keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Chksum lookup_checksum(Id keyname)<br />
-    my $chksum = $solvable-&gt;lookup_checksum($keyname);<br />
-chksum = solvable.lookup_checksum(keyname)<br />
+Chksum lookup_checksum(Id keyname)<br/>
+    my $chksum = $solvable-&gt;lookup_checksum($keyname);<br/>
+chksum = solvable.lookup_checksum(keyname)<br/>
              chksum = solvable.lookup_checksum(keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id *lookup_idarray(Id keyname, Id marker = -1)<br />
-    my @ids = $solvable-&gt;lookup_idarray($keyname);<br />
-ids = solvable.lookup_idarray(keyname)<br />
+Id *lookup_idarray(Id keyname, Id marker = -1)<br/>
+    my @ids = $solvable-&gt;lookup_idarray($keyname);<br/>
+ids = solvable.lookup_idarray(keyname)<br/>
           ids = solvable.lookup_idarray(keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Dep *lookup_deparray(Id keyname, Id marker = -1)<br />
-    my @deps = $solvable-&gt;lookup_deparray($keyname);<br />
-deps = solvable.lookup_deparray(keyname)<br />
+Dep *lookup_deparray(Id keyname, Id marker = -1)<br/>
+    my @deps = $solvable-&gt;lookup_deparray($keyname);<br/>
+deps = solvable.lookup_deparray(keyname)<br/>
            deps = solvable.lookup_deparray(keyname)
 </dd></dl>
 <p> Generic lookup methods. Retrieve data stored for the specific keyname. The lookup_idarray() method will return an array of Ids, use lookup_deparray if you want an array of Dependency objects instead. Some Id arrays contain two parts of data divided by a specific marker, for example the provides array uses the SOLVABLE_FILEMARKER id to store both the ids provided by the package and the ids added by the addfileprovides method. The default, -1, translates to the correct marker for the keyname and returns the first part of the array, use 1 to select the second part or 0 to retrieve all ids including the marker. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *lookup_location(unsigned int *OUTPUT);<br />
-my($location, $medianr) = $solvable-&gt;lookup_location();<br />
+const char *lookup_location(unsigned int *OUTPUT);<br/>
+my($location, $medianr) = $solvable-&gt;lookup_location();<br/>
 location, medianr = solvable.lookup_location() location, medianr = solvable.lookup_location()
 </dd></dl>
 <p> Return a tuple containing the on-media location and an optional media number for multi-part repositories (e.g. repositories spawning multiple DVDs). </p>
 <dl>
 <dt>
 </dt><dd>
-Dataiterator Dataiterator(Id keyname, const char *match = 0, int flags = 0)<br />
-    my $di = $solvable-&gt;Dataiterator($keyname, $match, $flags);<br />
-di = solvable.Dataiterator(keyname, match, flags)<br />
+Dataiterator Dataiterator(Id keyname, const char *match = 0, int flags = 0)<br/>
+    my $di = $solvable-&gt;Dataiterator($keyname, $match, $flags);<br/>
+di = solvable.Dataiterator(keyname, match, flags)<br/>
          di = solvable.Dataiterator(keyname, match, flags)
 </dd></dl>
 <dl>
@@ -1523,38 +1523,38 @@ di = solvable.Dataiterator(keyname, match, flags)<br />
 <dl>
 <dt>
 </dt><dd>
-void add_deparray(Id keyname, DepId dep, Id marker = -1);<br />
-$solvable-&gt;add_deparray($keyname, $dep);<br />
-solvable.add_deparray(keyname, dep)<br />
+void add_deparray(Id keyname, DepId dep, Id marker = -1);<br/>
+$solvable-&gt;add_deparray($keyname, $dep);<br/>
+solvable.add_deparray(keyname, dep)<br/>
     solvable.add_deparray(keyname, dep)
 </dd></dl>
 <p> Add a new dependency to the attributes stored in keyname. </p>
 <dl>
 <dt>
 </dt><dd>
-void unset(Id keyname);<br />
-$solvable-&gt;unset($keyname);<br />
-solvable.unset(keyname)<br />
+void unset(Id keyname);<br/>
+$solvable-&gt;unset($keyname);<br/>
+solvable.unset(keyname)<br/>
     solvable.unset(keyname)
 </dd></dl>
 <p> Delete data stored for the specific keyname. </p>
 <dl>
 <dt>
 </dt><dd>
-bool installable();<br />
-$solvable-&gt;installable()<br />
-    solvable.installable()<br />
-        solvable.installable<br />
+bool installable();<br/>
+$solvable-&gt;installable()<br/>
+    solvable.installable()<br/>
+        solvable.installable<br/>
     ?
 </dd></dl>
 <p> Return true if the solvable is installable on the system. Solvables are not installable if the system does not support their architecture. </p>
 <dl>
 <dt>
 </dt><dd>
-bool isinstalled();<br />
-$solvable-&gt;isinstalled()<br />
-    solvable.isinstalled()<br />
-        solvable.isinstalled<br />
+bool isinstalled();<br/>
+$solvable-&gt;isinstalled()<br/>
+    solvable.isinstalled()<br/>
+        solvable.isinstalled<br/>
     ?
 </dd></dl>
 <p> Return true if the solvable is installed on the system. </p>
@@ -1583,18 +1583,18 @@ $solvable-&gt;isinstalled()<br />
 <dl>
 <dt>
 </dt><dd>
-Selection Selection(int setflags = 0)<br />
-    my $sel = $solvable-&gt;Selection();<br />
-sel = solvable.Selection()<br />
+Selection Selection(int setflags = 0)<br/>
+    my $sel = $solvable-&gt;Selection();<br/>
+sel = solvable.Selection()<br/>
           sel = solvable.Selection()
 </dd></dl>
 <p> Create a Selection containing just the single solvable. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *str()<br />
-    my $str = $solvable-&gt;str();<br />
-str = $solvable.str()<br />
+const char *str()<br/>
+    my $str = $solvable-&gt;str();<br/>
+str = $solvable.str()<br/>
           str = $solvable.str()
 </dd></dl>
 <p> Return a string describing the solvable. The string consists of the name, version, and architecture of the Solvable. </p>
@@ -1612,9 +1612,9 @@ my <i>$str</i> <code>=</code> <i>$solvable</i><code>-&gt;str</code>;
 <dl>
 <dt>
 </dt><dd>
-&lt;equality&gt;<br />
-if ($solvable1 == $solvable2)<br />
-if solvable1 == solvable2:<br />
+&lt;equality&gt;<br/>
+if ($solvable1 == $solvable2)<br/>
+if solvable1 == solvable2:<br/>
 if solvable1 == solvable2
 </dd></dl>
 <p> Two solvables are equal if they are part of the same pool and have the same ids.</p>
@@ -1665,18 +1665,18 @@ if solvable1 == solvable2
 <dl>
 <dt>
 </dt><dd>
-void prepend_keyname(Id keyname);<br />
-$di-&gt;prepend_keyname($keyname);<br />
-di.prepend_keyname(keyname)<br />
+void prepend_keyname(Id keyname);<br/>
+$di-&gt;prepend_keyname($keyname);<br/>
+di.prepend_keyname(keyname)<br/>
     di.prepend_keyname(keyname)
 </dd></dl>
 <p> Do a sub-search in the array stored in keyname. </p>
 <dl>
 <dt>
 </dt><dd>
-void skip_solvable();<br />
-$di-&gt;kip_solvable();<br />
-di.skip_solvable()<br />
+void skip_solvable();<br/>
+$di-&gt;kip_solvable();<br/>
+di.skip_solvable()<br/>
     di.skip_solvable()
 </dd></dl>
 <p> Stop matching the current solvable and advance to the next one. </p>
@@ -1697,110 +1697,110 @@ di.skip_solvable()<br />
 <dl>
 <dt>
 </dt><dd>
-Pool *pool; /* read only */<br />
-$d-&gt;{pool} d.pool<br />
+Pool *pool; /* read only */<br/>
+$d-&gt;{pool} d.pool<br/>
     d.pool
 </dd></dl>
 <p> Back pointer to pool. </p>
 <dl>
 <dt>
 </dt><dd>
-Repo *repo; /* read only */<br />
-$d-&gt;{repo} d.repo<br />
+Repo *repo; /* read only */<br/>
+$d-&gt;{repo} d.repo<br/>
     d.repo
 </dd></dl>
 <p> The repository containing the matched object. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable *solvable; /* read only */<br />
-$d-&gt;{solvable} d.solvable<br />
+Solvable *solvable; /* read only */<br/>
+$d-&gt;{solvable} d.solvable<br/>
     d.solvable
 </dd></dl>
 <p> The solvable containing the value that was matched. </p>
 <dl>
 <dt>
 </dt><dd>
-Id solvid; /* read only */<br />
-$d-&gt;{solvid} d.solvid<br />
+Id solvid; /* read only */<br/>
+$d-&gt;{solvid} d.solvid<br/>
     d.solvid
 </dd></dl>
 <p> The id of the solvable that matched. </p>
 <dl>
 <dt>
 </dt><dd>
-Id key_id;<br />
-$d-&gt;{key_id} d.key_id<br />
+Id key_id;<br/>
+$d-&gt;{key_id} d.key_id<br/>
     d.key_id
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-const char *key_idstr;<br />
-$d-&gt;{key_idstr} d.key_idstr<br />
+const char *key_idstr;<br/>
+$d-&gt;{key_idstr} d.key_idstr<br/>
     d.key_idstr
 </dd></dl>
 <p> The keyname that matched, either as id or string. </p>
 <dl>
 <dt>
 </dt><dd>
-Id type_id;<br />
-$d-&gt;{type_id} d.type_id<br />
+Id type_id;<br/>
+$d-&gt;{type_id} d.type_id<br/>
     d.type_id
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-const char *type_idstr;<br />
-$d-&gt;{type_idstr};<br />
-d.type_idstr<br />
+const char *type_idstr;<br/>
+$d-&gt;{type_idstr};<br/>
+d.type_idstr<br/>
     d.type_idstr
 </dd></dl>
 <p> The key type of the value that was matched, either as id or string. </p>
 <dl>
 <dt>
 </dt><dd>
-Id id;<br />
-$d-&gt;{id} d.id<br />
+Id id;<br/>
+$d-&gt;{id} d.id<br/>
     d.id
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id idstr;<br />
-$d-&gt;{idstr} d.idstr<br />
+Id idstr;<br/>
+$d-&gt;{idstr} d.idstr<br/>
     d.idstr
 </dd></dl>
 <p> The Id of the value that was matched (only valid for id types), either as id or string. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *str;<br />
-$d-&gt;{str} d.str<br />
+const char *str;<br/>
+$d-&gt;{str} d.str<br/>
     d.str
 </dd></dl>
 <p> The string value that was matched (only valid for string types). </p>
 <dl>
 <dt>
 </dt><dd>
-unsigned long long num;<br />
-$d-&gt;{num} d.num<br />
+unsigned long long num;<br/>
+$d-&gt;{num} d.num<br/>
     d.num
 </dd></dl>
 <p> The numeric value that was matched (only valid for numeric types). </p>
 <dl>
 <dt>
 </dt><dd>
-unsigned int num2;<br />
-$d-&gt;{num2} d.num2<br />
+unsigned int num2;<br/>
+$d-&gt;{num2} d.num2<br/>
     d.num2
 </dd></dl>
 <p> The secondary numeric value that was matched (only valid for types containing two values). </p>
 <dl>
 <dt>
 </dt><dd>
-unsigned int binary;<br />
-$d-&gt;{binary} d.binary<br />
+unsigned int binary;<br/>
+$d-&gt;{binary} d.binary<br/>
     d.binary
 </dd></dl>
 <p> The value in binary form, useful for checksums and other data that cannot be represented as a string.</p>
@@ -1808,18 +1808,18 @@ $d-&gt;{binary} d.binary<br />
 <dl>
 <dt>
 </dt><dd>
-Datapos pos();<br />
-my $pos = $d-&gt;pos();<br />
-pos = d.pos()<br />
+Datapos pos();<br/>
+my $pos = $d-&gt;pos();<br/>
+pos = d.pos()<br/>
           pos = d.pos()
 </dd></dl>
 <p> The position object of the current match. It can be used to do sub-searches starting at the match (if it is of an array type). See the Datapos class for more information. </p>
 <dl>
 <dt>
 </dt><dd>
-Datapos parentpos();<br />
-my $pos = $d-&gt;parentpos();<br />
-pos = d.parentpos()<br />
+Datapos parentpos();<br/>
+my $pos = $d-&gt;parentpos();<br/>
+pos = d.parentpos()<br/>
           pos = d.parentpos()
 </dd></dl>
 <p> The position object of the array containing the current match. It can be used to do sub-searches, see the Datapos class for more information. </p>
@@ -1889,8 +1889,8 @@ my <i>$str</i> <code>=</code> <i>$d</i><code>-&gt;str</code>;
 <dl>
 <dt>
 </dt><dd>
-Pool *pool; /* read only */<br />
-$d-&gt;{pool} d.pool<br />
+Pool *pool; /* read only */<br/>
+$d-&gt;{pool} d.pool<br/>
     d.pool
 </dd></dl>
 <p> Back pointer to pool.</p>
@@ -1898,64 +1898,64 @@ $d-&gt;{pool} d.pool<br />
 <dl>
 <dt>
 </dt><dd>
-int flags();<br />
-my $flags = $sel-&gt;flags();<br />
-flags = sel.flags()<br />
+int flags();<br/>
+my $flags = $sel-&gt;flags();<br/>
+flags = sel.flags()<br/>
             flags = sel.flags()
 </dd></dl>
 <p> Return the result flags of the selection. The flags are a subset of the ones used when creating the selection, they describe which method was used to get the result. For example, if you create the selection with &#8220;SELECTION_NAME | SELECTION_PROVIDES&#8221;, the resulting flags will either be SELECTION_NAME or SELECTION_PROVIDES depending if there was a package that matched the name or not. If there was no match at all, the flags will be zero. </p>
 <dl>
 <dt>
 </dt><dd>
-bool isempty();<br />
-$sel-&gt;isempty()<br />
-    sel.isempty()<br />
-        sel.isempty<br />
+bool isempty();<br/>
+$sel-&gt;isempty()<br/>
+    sel.isempty()<br/>
+        sel.isempty<br/>
     ?
 </dd></dl>
 <p> Return true if the selection is empty, i.e. no package could be matched. </p>
 <dl>
 <dt>
 </dt><dd>
-void filter(Selection *other)<br />
-    $sel-&gt;filter($other);<br />
-sel.filter(other)<br />
+void filter(Selection *other)<br/>
+    $sel-&gt;filter($other);<br/>
+sel.filter(other)<br/>
     sel.filter(other)
 </dd></dl>
 <p> Intersect two selections. Packages will only stay in the selection if there are also included in the other selecting. Does an in-place modification. </p>
 <dl>
 <dt>
 </dt><dd>
-void add(Selection *other)<br />
-    $sel-&gt;add($other);<br />
-sel.add(other)<br />
+void add(Selection *other)<br/>
+    $sel-&gt;add($other);<br/>
+sel.add(other)<br/>
     sel.add(other)
 </dd></dl>
 <p> Build the union of two selections. All packages of the other selection will be added to the set of packages of the selection object. Does an in-place modification. Note that the selection flags are no longer meaningful after the add operation. </p>
 <dl>
 <dt>
 </dt><dd>
-void add_raw(Id how, Id what)<br />
-    $sel-&gt;add_raw($how, $what);<br />
-sel.add_raw(how, what)<br />
+void add_raw(Id how, Id what)<br/>
+    $sel-&gt;add_raw($how, $what);<br/>
+sel.add_raw(how, what)<br/>
     sel.add_raw(how, what)
 </dd></dl>
 <p> Add a raw element to the selection. Check the Job class for information about the how and what parameters. </p>
 <dl>
 <dt>
 </dt><dd>
-Job *jobs(int action)<br />
-    my @jobs = $sel-&gt;jobs($action);<br />
-jobs = sel.jobs(action)<br />
+Job *jobs(int action)<br/>
+    my @jobs = $sel-&gt;jobs($action);<br/>
+jobs = sel.jobs(action)<br/>
            jobs = sel.jobs(action)
 </dd></dl>
 <p> Convert a selection into an array of Job objects. The action parameter is or-ed to the &#8220;how&#8221; part of the job, it describes the type of job (e.g. install, erase). See the Job class for the action and action modifier constants. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable *solvables()<br />
-    my @solvables = $sel-&gt;solvables();<br />
-solvables = sel.solvables()<br />
+Solvable *solvables()<br/>
+    my @solvables = $sel-&gt;solvables();<br/>
+solvables = sel.solvables()<br/>
                 solvables = sel.solvables()
 </dd></dl>
 <p> Convert a selection into an array of Solvable objects. </p>
@@ -2114,24 +2114,24 @@ my <i>$str</i> <code>=</code> <i>$sel</i><code>-&gt;str</code>;
 <dl>
 <dt>
 </dt><dd>
-Pool *pool; /* read only */<br />
-$job-&gt;{pool} d.pool<br />
+Pool *pool; /* read only */<br/>
+$job-&gt;{pool} d.pool<br/>
     d.pool
 </dd></dl>
 <p> Back pointer to pool. </p>
 <dl>
 <dt>
 </dt><dd>
-Id how; /* read/write */<br />
-$job-&gt;{how} d.how<br />
+Id how; /* read/write */<br/>
+$job-&gt;{how} d.how<br/>
     d.how
 </dd></dl>
 <p> Union of the selection, action, action modifier, and set flags. The selection part describes the semantics of the &#8220;what&#8221; Id. </p>
 <dl>
 <dt>
 </dt><dd>
-Id what; /* read/write */<br />
-$job-&gt;{what} d.what<br />
+Id what; /* read/write */<br/>
+$job-&gt;{what} d.what<br/>
     d.what
 </dd></dl>
 <p> Id describing the set of packages, the meaning depends on the selection part of the &#8220;how&#8221; attribute.</p>
@@ -2139,19 +2139,19 @@ $job-&gt;{what} d.what<br />
 <dl>
 <dt>
 </dt><dd>
-Solvable *solvables()<br />
-    my @solvables = $job-&gt;solvables();<br />
-solvables = job.solvables()<br />
+Solvable *solvables()<br/>
+    my @solvables = $job-&gt;solvables();<br/>
+solvables = job.solvables()<br/>
                 solvables = job.solvables()
 </dd></dl>
 <p> Return the set of solvables of the job as an array of Solvable objects. </p>
 <dl>
 <dt>
 </dt><dd>
-bool isemptyupdate();<br />
-$job-&gt;isemptyupdate()<br />
-    job.isemptyupdate()<br />
-        job.isemptyupdate<br />
+bool isemptyupdate();<br/>
+$job-&gt;isemptyupdate()<br/>
+    job.isemptyupdate()<br/>
+        job.isemptyupdate<br/>
     ?
 </dd></dl>
 <p> Convenience function to find out if the job describes an update job with no matching packages, i.e. a job that does nothing. Some package managers like &#8220;zypper&#8221; like to turn those jobs into install jobs, i.e. an update of a not-installed package will result into the installation of the package. </p>
@@ -2169,9 +2169,9 @@ my <i>$str</i> <code>=</code> <i>$job</i><code>-&gt;str</code>;
 <dl>
 <dt>
 </dt><dd>
-&lt;equality&gt;<br />
-if ($job1 == $job2)<br />
-if job1 == job2:<br />
+&lt;equality&gt;<br/>
+if ($job1 == $job2)<br/>
+if job1 == job2:<br/>
 if job1 == job2
 </dd></dl>
 <p> Two jobs are equal if they belong to the same pool and both the &#8220;how&#8221; and the &#8220;what&#8221; attributes are the same.</p>
@@ -2469,8 +2469,8 @@ if job1 == job2
 <dl>
 <dt>
 </dt><dd>
-Pool *pool; /* read only */<br />
-$job-&gt;{pool} d.pool<br />
+Pool *pool; /* read only */<br/>
+$job-&gt;{pool} d.pool<br/>
     d.pool
 </dd></dl>
 <p> Back pointer to pool.</p>
@@ -2478,43 +2478,43 @@ $job-&gt;{pool} d.pool<br />
 <dl>
 <dt>
 </dt><dd>
-int set_flag(int flag, int value)<br />
-    my $oldvalue = $solver-&gt;set_flag($flag, $value);<br />
-oldvalue = solver.set_flag(flag, value)<br />
+int set_flag(int flag, int value)<br/>
+    my $oldvalue = $solver-&gt;set_flag($flag, $value);<br/>
+oldvalue = solver.set_flag(flag, value)<br/>
                oldvalue = solver.set_flag(flag, value)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-int get_flag(int flag)<br />
-    my $value = $solver-&gt;get_flag($flag);<br />
-value = solver.get_flag(flag)<br />
+int get_flag(int flag)<br/>
+    my $value = $solver-&gt;get_flag($flag);<br/>
+value = solver.get_flag(flag)<br/>
             value = solver.get_flag(flag)
 </dd></dl>
 <p> Set/get a solver specific flag. The flags define the policies the solver has to obey. The flags are explained in the CONSTANTS section of this class. </p>
 <dl>
 <dt>
 </dt><dd>
-Problem *solve(Job *jobs)<br />
-    my @problems = $solver-&gt;solve(\@jobs);<br />
-problems = solver.solve(jobs)<br />
+Problem *solve(Job *jobs)<br/>
+    my @problems = $solver-&gt;solve(\@jobs);<br/>
+problems = solver.solve(jobs)<br/>
                problems = solver.solve(jobs)
 </dd></dl>
 <p> Solve a problem specified in the job list (plus the jobs defined in the pool). Returns an array of problems that need user interaction, or an empty array if no problems were encountered. See the Problem class on how to deal with problems. </p>
 <dl>
 <dt>
 </dt><dd>
-Transaction transaction()<br />
-    my $trans = $solver-&gt;transaction();<br />
-trans = solver.transaction()<br />
+Transaction transaction()<br/>
+    my $trans = $solver-&gt;transaction();<br/>
+trans = solver.transaction()<br/>
             trans = solver.transaction()
 </dd></dl>
 <p> Return the transaction to implement the calculated package changes. A transaction is available even if problems were found, this is useful for interactive user interfaces that show both the job result and the problems. </p>
 <dl>
 <dt>
 </dt><dd>
-int reason = describe_decision(Solvable * s, Rule *OUTPUT)<br />
-    my($reason, $rule) = $solver-&gt;describe_decision($solvable);<br />
+int reason = describe_decision(Solvable * s, Rule *OUTPUT)<br/>
+    my($reason, $rule) = $solver-&gt;describe_decision($solvable);<br/>
 (reason, rule) = solver.describe_decision(solvable)(reason, rule) = solver.describe_decision(solvable)
 </dd></dl>
 <p> Return the reason why a specific solvable was installed or erased. For most of the reasons the rule that triggered the decision is also returned.</p>
@@ -2524,16 +2524,16 @@ int reason = describe_decision(Solvable * s, Rule *OUTPUT)<br />
 <dl>
 <dt>
 </dt><dd>
-Solver *solv; /* read only */<br />
-$problem-&gt;{solv} problem.solv<br />
+Solver *solv; /* read only */<br/>
+$problem-&gt;{solv} problem.solv<br/>
     problem.solv
 </dd></dl>
 <p> Back pointer to solver object. </p>
 <dl>
 <dt>
 </dt><dd>
-Id id; /* read only */<br />
-$problem-&gt;{id} problem.id<br />
+Id id; /* read only */<br/>
+$problem-&gt;{id} problem.id<br/>
     problem.id
 </dd></dl>
 <p> Id of the problem. The first problem has Id 1, they are numbered consecutively.</p>
@@ -2541,36 +2541,36 @@ $problem-&gt;{id} problem.id<br />
 <dl>
 <dt>
 </dt><dd>
-Rule findproblemrule()<br />
-    my $probrule = $problem-&gt;findproblemrule();<br />
-probrule = problem.findproblemrule()<br />
+Rule findproblemrule()<br/>
+    my $probrule = $problem-&gt;findproblemrule();<br/>
+probrule = problem.findproblemrule()<br/>
                probrule = problem.findproblemrule()
 </dd></dl>
 <p> Return the rule that caused the problem. Of course in most situations there is no single responsible rule, but many rules that interconnect with each created the problem. Nevertheless, the solver uses some heuristic approach to find a rule that somewhat describes the problem best to the user. </p>
 <dl>
 <dt>
 </dt><dd>
-Rule *findallproblemrules(bool unfiltered = 0)<br />
-    my @probrules = $problem-&gt;findallproblemrules();<br />
-probrules = problem.findallproblemrule()<br />
+Rule *findallproblemrules(bool unfiltered = 0)<br/>
+    my @probrules = $problem-&gt;findallproblemrules();<br/>
+probrules = problem.findallproblemrule()<br/>
                 probrules = problem.findallproblemrule()
 </dd></dl>
 <p> Return all rules responsible for the problem. The returned set of rules contains all the needed information why there was a problem, but it&#8217;s hard to present them to the user in a sensible way. The default is to filter out all update and job rules (unless the returned rules only consist of those types). </p>
 <dl>
 <dt>
 </dt><dd>
-Solution *solutions()<br />
-    my @solutions = $problem-&gt;solutions();<br />
-solutions = problem.solutions()<br />
+Solution *solutions()<br/>
+    my @solutions = $problem-&gt;solutions();<br/>
+solutions = problem.solutions()<br/>
                 solutions = problem.solutions()
 </dd></dl>
 <p> Return an array containing multiple possible solutions to fix the problem. See the solution class for more information. </p>
 <dl>
 <dt>
 </dt><dd>
-int solution_count()<br />
-    my $cnt = $problem-&gt;solution_count();<br />
-cnt = problem.solution_count()<br />
+int solution_count()<br/>
+    my $cnt = $problem-&gt;solution_count();<br/>
+cnt = problem.solution_count()<br/>
           cnt = problem.solution_count()
 </dd></dl>
 <p> Return the number of solutions without creating solution objects. </p>
@@ -2591,24 +2591,24 @@ my <i>$str</i> <code>=</code> <i>$problem</i><code>-&gt;str</code>;
 <dl>
 <dt>
 </dt><dd>
-Solver *solv; /* read only */<br />
-$rule-&gt;{solv} rule.solv<br />
+Solver *solv; /* read only */<br/>
+$rule-&gt;{solv} rule.solv<br/>
     rule.solv
 </dd></dl>
 <p> Back pointer to solver object. </p>
 <dl>
 <dt>
 </dt><dd>
-Id id; /* read only */<br />
-$rule-&gt;{id} rule.id<br />
+Id id; /* read only */<br/>
+$rule-&gt;{id} rule.id<br/>
     rule.id
 </dd></dl>
 <p> The id of the rule. </p>
 <dl>
 <dt>
 </dt><dd>
-int type; /* read only */<br />
-$rule-&gt;{type} rule.type<br />
+int type; /* read only */<br/>
+$rule-&gt;{type} rule.type<br/>
     rule.type
 </dd></dl>
 <p> The basic type of the rule. See the constant section of the solver class for the type list.</p>
@@ -2616,27 +2616,27 @@ $rule-&gt;{type} rule.type<br />
 <dl>
 <dt>
 </dt><dd>
-Ruleinfo info()<br />
-    my $ruleinfo = $rule-&gt;info();<br />
-ruleinfo = rule.info()<br />
+Ruleinfo info()<br/>
+    my $ruleinfo = $rule-&gt;info();<br/>
+ruleinfo = rule.info()<br/>
                ruleinfo = rule.info()
 </dd></dl>
 <p> Return a Ruleinfo object that contains information about why the rule was created. But see the allinfos() method below. </p>
 <dl>
 <dt>
 </dt><dd>
-Ruleinfo *allinfos()<br />
-    my @ruleinfos = $rule-&gt;allinfos();<br />
-ruleinfos = rule.allinfos()<br />
+Ruleinfo *allinfos()<br/>
+    my @ruleinfos = $rule-&gt;allinfos();<br/>
+ruleinfos = rule.allinfos()<br/>
                 ruleinfos = rule.allinfos()
 </dd></dl>
 <p> As the same dependency rule can get created because of multiple dependencies, one Ruleinfo is not enough to describe the reason. Thus the allinfos() method returns an array of all infos about a rule. </p>
 <dl>
 <dt>
 </dt><dd>
-&lt;equality&gt;<br />
-if ($rule1 == $rule2)<br />
-if rule1 == rule2:<br />
+&lt;equality&gt;<br/>
+if ($rule1 == $rule2)<br/>
+if rule1 == rule2:<br/>
 if rule1 == rule2
 </dd></dl>
 <p> Two rules are equal if they belong to the same solver and have the same id.</p>
@@ -2646,57 +2646,57 @@ if rule1 == rule2
 <dl>
 <dt>
 </dt><dd>
-Solver *solv; /* read only */<br />
-$ruleinfo-&gt;{solv} ruleinfo.solv<br />
+Solver *solv; /* read only */<br/>
+$ruleinfo-&gt;{solv} ruleinfo.solv<br/>
     ruleinfo.solv
 </dd></dl>
 <p> Back pointer to solver object. </p>
 <dl>
 <dt>
 </dt><dd>
-int type; /* read only */<br />
-$ruleinfo-&gt;{type} ruleinfo.type<br />
+int type; /* read only */<br/>
+$ruleinfo-&gt;{type} ruleinfo.type<br/>
     ruleinfo.type
 </dd></dl>
 <p> The type of the ruleinfo. See the constant section of the solver class for the rule type list and the special type list. </p>
 <dl>
 <dt>
 </dt><dd>
-Dep *dep; /* read only */<br />
-$ruleinfo-&gt;{dep} ruleinfo.dep<br />
+Dep *dep; /* read only */<br/>
+$ruleinfo-&gt;{dep} ruleinfo.dep<br/>
     ruleinfo.dep
 </dd></dl>
 <p> The dependency leading to the creation of the rule. </p>
 <dl>
 <dt>
 </dt><dd>
-Dep *dep_id; /* read only */<br />
-$ruleinfo-&gt;{&#8216;dep_id&#8217;} ruleinfo.dep_id<br />
+Dep *dep_id; /* read only */<br/>
+$ruleinfo-&gt;{&#8216;dep_id&#8217;} ruleinfo.dep_id<br/>
     ruleinfo.dep_id
 </dd></dl>
 <p> The Id of the dependency leading to the creation of the rule, or zero. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable *solvable; /* read only */<br />
-$ruleinfo-&gt;{solvable} ruleinfo.solvable<br />
+Solvable *solvable; /* read only */<br/>
+$ruleinfo-&gt;{solvable} ruleinfo.solvable<br/>
     ruleinfo.solvable
 </dd></dl>
 <p> The involved Solvable, e.g. the one containing the dependency. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable *othersolvable; /* read only */<br />
-$ruleinfo-&gt;{othersolvable} ruleinfo.othersolvable<br />
+Solvable *othersolvable; /* read only */<br/>
+$ruleinfo-&gt;{othersolvable} ruleinfo.othersolvable<br/>
     ruleinfo.othersolvable
 </dd></dl>
 <p> The other involved Solvable (if any), e.g. the one containing providing the dependency for conflicts. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *problemstr();<br />
-my $str = $ruleinfo-&gt;problemstr();<br />
-str = ruleinfo.problemstr()<br />
+const char *problemstr();<br/>
+my $str = $ruleinfo-&gt;problemstr();<br/>
+str = ruleinfo.problemstr()<br/>
           str = ruleinfo.problemstr()
 </dd></dl>
 <p> A string describing the ruleinfo from a problem perspective. This probably only makes sense if the rule is part of a problem.</p>
@@ -2706,24 +2706,24 @@ str = ruleinfo.problemstr()<br />
 <dl>
 <dt>
 </dt><dd>
-Solver *solv; /* read only */<br />
-$solution-&gt;{solv} solution.solv<br />
+Solver *solv; /* read only */<br/>
+$solution-&gt;{solv} solution.solv<br/>
     solution.solv
 </dd></dl>
 <p> Back pointer to solver object. </p>
 <dl>
 <dt>
 </dt><dd>
-Id problemid; /* read only */<br />
-$solution-&gt;{problemid} solution.problemid<br />
+Id problemid; /* read only */<br/>
+$solution-&gt;{problemid} solution.problemid<br/>
     solution.problemid
 </dd></dl>
 <p> Id of the problem the solution solves. </p>
 <dl>
 <dt>
 </dt><dd>
-Id id; /* read only */<br />
-$solution-&gt;{id} solution.id<br />
+Id id; /* read only */<br/>
+$solution-&gt;{id} solution.id<br/>
     solution.id
 </dd></dl>
 <p> Id of the solution. The first solution has Id 1, they are numbered consecutively.</p>
@@ -2731,18 +2731,18 @@ $solution-&gt;{id} solution.id<br />
 <dl>
 <dt>
 </dt><dd>
-Solutionelement *elements(bool expandreplaces = 0)<br />
-    my @solutionelements = $solution-&gt;elements();<br />
-solutionelements = solution.elements()<br />
+Solutionelement *elements(bool expandreplaces = 0)<br/>
+    my @solutionelements = $solution-&gt;elements();<br/>
+solutionelements = solution.elements()<br/>
                        solutionelements = solution.elements()
 </dd></dl>
 <p> Return an array containing the elements describing what needs to be done to implement the specific solution. If expandreplaces is true, elements of type SOLVER_SOLUTION_REPLACE will be replaced by one or more elements replace elements describing the policy mismatches. </p>
 <dl>
 <dt>
 </dt><dd>
-int element_count()<br />
-    my $cnt = $solution-&gt;solution_count();<br />
-cnt = solution.element_count()<br />
+int element_count()<br/>
+    my $cnt = $solution-&gt;solution_count();<br/>
+cnt = solution.element_count()<br/>
           cnt = solution.element_count()
 </dd></dl>
 <p> Return the number of solution elements without creating objects. Note that the count does not match the number of objects returned by the elements() method of expandreplaces is set to true.</p>
@@ -2752,64 +2752,64 @@ cnt = solution.element_count()<br />
 <dl>
 <dt>
 </dt><dd>
-Solver *solv; /* read only */<br />
-$solutionelement-&gt;{solv} solutionelement.solv<br />
+Solver *solv; /* read only */<br/>
+$solutionelement-&gt;{solv} solutionelement.solv<br/>
     solutionelement.solv
 </dd></dl>
 <p> Back pointer to solver object. </p>
 <dl>
 <dt>
 </dt><dd>
-Id problemid; /* read only */<br />
-$solutionelement-&gt;{problemid} solutionelement.problemid<br />
+Id problemid; /* read only */<br/>
+$solutionelement-&gt;{problemid} solutionelement.problemid<br/>
     solutionelement.problemid
 </dd></dl>
 <p> Id of the problem the element (partly) solves. </p>
 <dl>
 <dt>
 </dt><dd>
-Id solutionid; /* read only */<br />
-$solutionelement-&gt;{solutionid} solutionelement.solutionid<br />
+Id solutionid; /* read only */<br/>
+$solutionelement-&gt;{solutionid} solutionelement.solutionid<br/>
     solutionelement.solutionid
 </dd></dl>
 <p> Id of the solution the element is a part of. </p>
 <dl>
 <dt>
 </dt><dd>
-Id id; /* read only */<br />
-$solutionelement-&gt;{id} solutionelement.id<br />
+Id id; /* read only */<br/>
+$solutionelement-&gt;{id} solutionelement.id<br/>
     solutionelement.id
 </dd></dl>
 <p> Id of the solution element. The first element has Id 1, they are numbered consecutively. </p>
 <dl>
 <dt>
 </dt><dd>
-Id type; /* read only */<br />
-$solutionelement-&gt;{type} solutionelement.type<br />
+Id type; /* read only */<br/>
+$solutionelement-&gt;{type} solutionelement.type<br/>
     solutionelement.type
 </dd></dl>
 <p> Type of the solution element. See the constant section of the solver class for the existing types. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable *solvable; /* read only */<br />
-$solutionelement-&gt;{solvable} solutionelement.solvable<br />
+Solvable *solvable; /* read only */<br/>
+$solutionelement-&gt;{solvable} solutionelement.solvable<br/>
     solutionelement.solvable
 </dd></dl>
 <p> The installed solvable that needs to be replaced for replacement elements. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable *replacement; /* read only */<br />
-$solutionelement-&gt;{replacement} solutionelement.replacement<br />
+Solvable *replacement; /* read only */<br/>
+$solutionelement-&gt;{replacement} solutionelement.replacement<br/>
     solutionelement.replacement
 </dd></dl>
 <p> The solvable that needs to be installed to fix the problem. </p>
 <dl>
 <dt>
 </dt><dd>
-int jobidx; /* read only */<br />
-$solutionelement-&gt;{jobidx} solutionelement.jobidx<br />
+int jobidx; /* read only */<br/>
+$solutionelement-&gt;{jobidx} solutionelement.jobidx<br/>
     solutionelement.jobidx
 </dd></dl>
 <p> The index of the job that needs to be removed to fix the problem, or -1 if the element is of another type. Note that it&#8217;s better to change the job to SOLVER_NOOP type so that the numbering of other elements does not get disturbed. This method works both for types SOLVER_SOLUTION_JOB and SOLVER_SOLUTION_POOLJOB.</p>
@@ -2817,36 +2817,36 @@ $solutionelement-&gt;{jobidx} solutionelement.jobidx<br />
 <dl>
 <dt>
 </dt><dd>
-Solutionelement *replaceelements()<br />
-    my @solutionelements = $solutionelement-&gt;replaceelements();<br />
-solutionelements = solutionelement.replaceelements()<br />
+Solutionelement *replaceelements()<br/>
+    my @solutionelements = $solutionelement-&gt;replaceelements();<br/>
+solutionelements = solutionelement.replaceelements()<br/>
                        solutionelements = solutionelement.replaceelements()
 </dd></dl>
 <p> If the solution element is of type SOLVER_SOLUTION_REPLACE, return an array of elements describing the policy mismatches, otherwise return a copy of the element. See also the &#8220;expandreplaces&#8221; option in the solution&#8217;s elements() method. </p>
 <dl>
 <dt>
 </dt><dd>
-int illegalreplace()<br />
-    my $illegal = $solutionelement-&gt;illegalreplace();<br />
-illegal = solutionelement.illegalreplace()<br />
+int illegalreplace()<br/>
+    my $illegal = $solutionelement-&gt;illegalreplace();<br/>
+illegal = solutionelement.illegalreplace()<br/>
               illegal = solutionelement.illegalreplace()
 </dd></dl>
 <p> Return an integer that contains the policy mismatch bits or-ed together, or zero if there was no policy mismatch. See the policy error constants in the solver class. </p>
 <dl>
 <dt>
 </dt><dd>
-Job Job()<br />
-    my $job = $solutionelement-&gt;Job();<br />
-illegal = solutionelement.Job()<br />
+Job Job()<br/>
+    my $job = $solutionelement-&gt;Job();<br/>
+illegal = solutionelement.Job()<br/>
               illegal = solutionelement.Job()
 </dd></dl>
 <p> Create a job that implements the solution element. Add this job to the array of jobs for all elements of type different to SOLVER_SOLUTION_JOB and SOLVER_SOLUTION_POOLJOB. For the later two, a SOLVER_NOOB Job is created, you should replace the old job with the new one. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *str()<br />
-    my $str = $solutionelement-&gt;str();<br />
-str = solutionelement.str()<br />
+const char *str()<br/>
+    my $str = $solutionelement-&gt;str();<br/>
+str = solutionelement.str()<br/>
           str = solutionelement.str()
 </dd></dl>
 <p> A string describing the change the solution element consists of.</p>
@@ -2971,8 +2971,8 @@ str = solutionelement.str()<br />
 <dl>
 <dt>
 </dt><dd>
-Pool *pool; /* read only */<br />
-$trans-&gt;{pool} trans.pool<br />
+Pool *pool; /* read only */<br/>
+$trans-&gt;{pool} trans.pool<br/>
     trans.pool
 </dd></dl>
 <p> Back pointer to pool.</p>
@@ -2980,64 +2980,64 @@ $trans-&gt;{pool} trans.pool<br />
 <dl>
 <dt>
 </dt><dd>
-bool isempty();<br />
-$trans-&gt;isempty()<br />
-    trans.isempty()<br />
-        trans.isempty<br />
+bool isempty();<br/>
+$trans-&gt;isempty()<br/>
+    trans.isempty()<br/>
+        trans.isempty<br/>
     ?
 </dd></dl>
 <p> Returns true if the transaction does not do anything, i.e. has no elements. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable *newsolvables();<br />
-my @newsolvables = $trans-&gt;newsolvables();<br />
-newsolvables = trans.newsolvables()<br />
+Solvable *newsolvables();<br/>
+my @newsolvables = $trans-&gt;newsolvables();<br/>
+newsolvables = trans.newsolvables()<br/>
                    newsolvables = trans.newsolvables()
 </dd></dl>
 <p> Return all packages that are to be installed by the transaction. These are the packages that need to be downloaded from the repositories. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable *keptsolvables();<br />
-my @keptsolvables = $trans-&gt;keptsolvables();<br />
-keptsolvables = trans.keptsolvables()<br />
+Solvable *keptsolvables();<br/>
+my @keptsolvables = $trans-&gt;keptsolvables();<br/>
+keptsolvables = trans.keptsolvables()<br/>
                     keptsolvables = trans.keptsolvables()
 </dd></dl>
 <p> Return all installed packages that the transaction will keep installed. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable *steps();<br />
-my @steps = $trans-&gt;steps();<br />
-steps = trans.steps()<br />
+Solvable *steps();<br/>
+my @steps = $trans-&gt;steps();<br/>
+steps = trans.steps()<br/>
             steps = trans.steps()
 </dd></dl>
 <p> Return all solvables that need to be installed (if the returned solvable is not already installed) or erased (if the returned solvable is installed). A step is also called a transaction element. </p>
 <dl>
 <dt>
 </dt><dd>
-int steptype(Solvable *solvable, int mode)<br />
-    my $type = $trans-&gt;steptype($solvable, $mode);<br />
-type = trans.steptype(solvable, mode)<br />
+int steptype(Solvable *solvable, int mode)<br/>
+    my $type = $trans-&gt;steptype($solvable, $mode);<br/>
+type = trans.steptype(solvable, mode)<br/>
            type = trans.steptype(solvable, mode)
 </dd></dl>
 <p> Return the transaction type of the specified solvable. See the CONSTANTS sections for the mode argument flags and the list of returned types. </p>
 <dl>
 <dt>
 </dt><dd>
-TransactionClass *classify(int mode = 0)<br />
-    my @classes = $trans-&gt;classify();<br />
-classes = trans.classify()<br />
+TransactionClass *classify(int mode = 0)<br/>
+    my @classes = $trans-&gt;classify();<br/>
+classes = trans.classify()<br/>
               classes = trans.classify()
 </dd></dl>
 <p> Group the transaction elements into classes so that they can be displayed in a structured way. You can use various mapping mode flags to tweak the result to match your preferences, see the mode argument flag in the CONSTANTS section. See the TransactionClass class for how to deal with the returned objects. </p>
 <dl>
 <dt>
 </dt><dd>
-Solvable othersolvable(Solvable *solvable);<br />
-my $other = $trans-&gt;othersolvable($solvable);<br />
-other = trans.othersolvable(solvable)<br />
+Solvable othersolvable(Solvable *solvable);<br/>
+my $other = $trans-&gt;othersolvable($solvable);<br/>
+other = trans.othersolvable(solvable)<br/>
             other = trans.othersolvable(solvable)
 </dd></dl>
 <p> Return the &#8220;other&#8221; solvable for a given solvable. For installed packages the other solvable is the best package with the same name that replaces the installed package, or the best package of the obsoleting packages if the package does not get replaced by one with the same name. </p>
@@ -3046,27 +3046,27 @@ other = trans.othersolvable(solvable)<br />
 <dl>
 <dt>
 </dt><dd>
-Solvable *allothersolvables(Solvable *solvable);<br />
-my @others = $trans-&gt;allothersolvables($solvable);<br />
-others = trans.allothersolvables(solvable)<br />
+Solvable *allothersolvables(Solvable *solvable);<br/>
+my @others = $trans-&gt;allothersolvables($solvable);<br/>
+others = trans.allothersolvables(solvable)<br/>
              others = trans.allothersolvables(solvable)
 </dd></dl>
 <p> For installed packages, returns all of the packages that replace us. For to be installed packages, returns all of the packages that the new package replaces. The special &#8220;other&#8221; solvable is always the first entry of the returned array. </p>
 <dl>
 <dt>
 </dt><dd>
-int calc_installsizechange();<br />
-my $change = $trans-&gt;calc_installsizechange();<br />
-change = trans.calc_installsizechange()<br />
+int calc_installsizechange();<br/>
+my $change = $trans-&gt;calc_installsizechange();<br/>
+change = trans.calc_installsizechange()<br/>
              change = trans.calc_installsizechange()
 </dd></dl>
 <p> Return the size change of the installed system in kilobytes (kibibytes). </p>
 <dl>
 <dt>
 </dt><dd>
-void order(int flags = 0);<br />
-$trans-&gt;order();<br />
-trans.order()<br />
+void order(int flags = 0);<br/>
+$trans-&gt;order();<br/>
+trans.order()<br/>
     trans.order()
 </dd></dl>
 <p> Order the steps in the transactions so that dependent packages are updated before packages that depend on them. For rpm, you can also use rpmlib&#8217;s ordering functionality, debian&#8217;s dpkg does not provide a way to order a transaction.</p>
@@ -3096,77 +3096,77 @@ erase  B
 <dl>
 <dt>
 </dt><dd>
-Transaction *transaction; /* read only */<br />
-$class-&gt;<br />
-{<br />
-    transaction<br />
-}<br />
+Transaction *transaction; /* read only */<br/>
+$class-&gt;<br/>
+{<br/>
+    transaction<br/>
+}<br/>
 class.transaction class.transaction
 </dd></dl>
 <p> Back pointer to transaction object. </p>
 <dl>
 <dt>
 </dt><dd>
-int type; /* read only */<br />
-$class-&gt;<br />
-{<br />
-    type<br />
-}<br />
+int type; /* read only */<br/>
+$class-&gt;<br/>
+{<br/>
+    type<br/>
+}<br/>
 class.type class.type
 </dd></dl>
 <p> The type of the transaction elements in the class. </p>
 <dl>
 <dt>
 </dt><dd>
-int count; /* read only */<br />
-$class-&gt;<br />
-{<br />
-    count<br />
-}<br />
+int count; /* read only */<br/>
+$class-&gt;<br/>
+{<br/>
+    count<br/>
+}<br/>
 class.count class.count
 </dd></dl>
 <p> The number of elements in the class. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *fromstr;<br />
-$class-&gt;<br />
-{<br />
-    fromstr<br />
-}<br />
+const char *fromstr;<br/>
+$class-&gt;<br/>
+{<br/>
+    fromstr<br/>
+}<br/>
 class.fromstr class.fromstr
 </dd></dl>
 <p> The old vendor or architecture. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *tostr;<br />
-$class-&gt;<br />
-{<br />
-    tostr<br />
-}<br />
+const char *tostr;<br/>
+$class-&gt;<br/>
+{<br/>
+    tostr<br/>
+}<br/>
 class.tostr class.tostr
 </dd></dl>
 <p> The new vendor or architecture. </p>
 <dl>
 <dt>
 </dt><dd>
-Id fromid;<br />
-$class-&gt;<br />
-{<br />
-    fromid<br />
-}<br />
+Id fromid;<br/>
+$class-&gt;<br/>
+{<br/>
+    fromid<br/>
+}<br/>
 class.fromid class.fromid
 </dd></dl>
 <p> The id of the old vendor or architecture. </p>
 <dl>
 <dt>
 </dt><dd>
-Id toid;<br />
-$class-&gt;<br />
-{<br />
-    toid<br />
-}<br />
+Id toid;<br/>
+$class-&gt;<br/>
+{<br/>
+    toid<br/>
+}<br/>
 class.toid class.toid
 </dd></dl>
 <p> The id of the new vendor or architecture.</p>
@@ -3174,9 +3174,9 @@ class.toid class.toid
 <dl>
 <dt>
 </dt><dd>
-void solvables();<br />
-my @solvables = $class-&gt;solvables();<br />
-solvables = class.solvables()<br />
+void solvables();<br/>
+my @solvables = $class-&gt;solvables();<br/>
+solvables = class.solvables()<br/>
                 solvables = class.solvables()
 </dd></dl>
 <p> Return the solvables for all transaction elements in the class.</p>
@@ -3186,9 +3186,9 @@ solvables = class.solvables()<br />
 <dl>
 <dt>
 </dt><dd>
-Chksum Chksum(Id type)<br />
-    my $chksum = solv::Chksum-&gt;new ($type);<br />
-chksum = solv.Chksum(type)<br />
+Chksum Chksum(Id type)<br/>
+    my $chksum = solv::Chksum-&gt;new ($type);<br/>
+chksum = solv.Chksum(type)<br/>
              chksum = Solv::Chksum.new(type)
 </dd></dl>
 <p> Create a checksum object. Currently the following types are supported: </p>
@@ -3205,18 +3205,18 @@ chksum = solv.Chksum(type)<br />
 <dl>
 <dt>
 </dt><dd>
-Chksum Chksum(Id type, const char *hex)<br />
-    my $chksum = solv::Chksum-&gt;new ($type, $hex);<br />
-chksum = solv.Chksum(type, hex)<br />
+Chksum Chksum(Id type, const char *hex)<br/>
+    my $chksum = solv::Chksum-&gt;new ($type, $hex);<br/>
+chksum = solv.Chksum(type, hex)<br/>
              chksum = Solv::Chksum.new(type, hex)
 </dd></dl>
 <p> Create an already finalized checksum object from a hex string. </p>
 <dl>
 <dt>
 </dt><dd>
-Chksum Chksum_from_bin(Id type, char *bin)<br />
-    my $chksum = solv::Chksum-&gt;from_bin($type, $bin);<br />
-chksum = solv.Chksum.from_bin(type, bin)<br />
+Chksum Chksum_from_bin(Id type, char *bin)<br/>
+    my $chksum = solv::Chksum-&gt;from_bin($type, $bin);<br/>
+chksum = solv.Chksum.from_bin(type, bin)<br/>
              chksum = Solv::Chksum.from_bin(type, bin)
 </dd></dl>
 <p> Create an already finalized checksum object from a binary checksum.</p>
@@ -3224,8 +3224,8 @@ chksum = solv.Chksum.from_bin(type, bin)<br />
 <dl>
 <dt>
 </dt><dd>
-Id type; /* read only */<br />
-$chksum-&gt;{type} chksum.type<br />
+Id type; /* read only */<br/>
+$chksum-&gt;{type} chksum.type<br/>
     chksum.type
 </dd></dl>
 <p> Return the type of the checksum object.</p>
@@ -3233,72 +3233,72 @@ $chksum-&gt;{type} chksum.type<br />
 <dl>
 <dt>
 </dt><dd>
-void add(const char *str)<br />
-    $chksum-&gt;add($str);<br />
-chksum.add(str)<br />
+void add(const char *str)<br/>
+    $chksum-&gt;add($str);<br/>
+chksum.add(str)<br/>
     chksum.add(str)
 </dd></dl>
 <p> Add a (binary) string to the checksum. </p>
 <dl>
 <dt>
 </dt><dd>
-void add_fp(FILE *fp)<br />
-    $chksum-&gt;add_fp($file);<br />
-chksum.add_fp(file)<br />
+void add_fp(FILE *fp)<br/>
+    $chksum-&gt;add_fp($file);<br/>
+chksum.add_fp(file)<br/>
     chksum.add_fp(file)
 </dd></dl>
 <p> Add the contents of a file to the checksum. </p>
 <dl>
 <dt>
 </dt><dd>
-void add_stat(const char *filename)<br />
-    $chksum-&gt;add_stat($filename);<br />
-chksum.add_stat(filename)<br />
+void add_stat(const char *filename)<br/>
+    $chksum-&gt;add_stat($filename);<br/>
+chksum.add_stat(filename)<br/>
     chksum.add_stat(filename)
 </dd></dl>
 <p> Stat the file and add the dev/ino/size/mtime member to the checksum. If the stat fails, the members are zeroed. </p>
 <dl>
 <dt>
 </dt><dd>
-void add_fstat(int fd)<br />
-    $chksum-&gt;add_fstat($fd);<br />
-chksum.add_fstat(fd)<br />
+void add_fstat(int fd)<br/>
+    $chksum-&gt;add_fstat($fd);<br/>
+chksum.add_fstat(fd)<br/>
     chksum.add_fstat(fd)
 </dd></dl>
 <p> Same as add_stat, but instead of the filename a file descriptor is used. </p>
 <dl>
 <dt>
 </dt><dd>
-unsigned char *raw()<br />
-    my $raw = $chksum-&gt;raw();<br />
-raw = chksum.raw()<br />
+unsigned char *raw()<br/>
+    my $raw = $chksum-&gt;raw();<br/>
+raw = chksum.raw()<br/>
           raw = chksum.raw()
 </dd></dl>
 <p> Finalize the checksum and return the result as raw bytes. This means that the result can contain NUL bytes or unprintable characters. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *hex()<br />
-    my $raw = $chksum-&gt;hex();<br />
-raw = chksum.hex()<br />
+const char *hex()<br/>
+    my $raw = $chksum-&gt;hex();<br/>
+raw = chksum.hex()<br/>
           raw = chksum.hex()
 </dd></dl>
 <p> Finalize the checksum and return the result as hex string. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *typestr()<br />
-    my $typestr = $chksum-&gt;typestr();<br />
-typestr = chksum.typestr<br />
+const char *typestr()<br/>
+    my $typestr = $chksum-&gt;typestr();<br/>
+typestr = chksum.typestr<br/>
               typestr = chksum.typestr
 </dd></dl>
 <p> Return the type of the checksum as a string, e.g. &quot;sha256&quot;. </p>
 <dl>
 <dt>
 </dt><dd>
-&lt;equality&gt;<br />
-if ($chksum1 == $chksum2)<br />
-if chksum1 == chksum2:<br />
+&lt;equality&gt;<br/>
+if ($chksum1 == $chksum2)<br/>
+if chksum1 == chksum2:<br/>
 if chksum1 == chksum2
 </dd></dl>
 <p> Checksums are equal if they are of the same type and the finalized results are the same. </p>
@@ -3318,18 +3318,18 @@ my <i>$str</i> <code>=</code> <i>$chksum</i><code>-&gt;str</code>;
 <dl>
 <dt>
 </dt><dd>
-FILE *xfopen(char *fn, char *mode = &#8220;r&#8221;)<br />
-    my $file = solv::xfopen($path);<br />
-file = solv.xfopen(path)<br />
+FILE *xfopen(char *fn, char *mode = &#8220;r&#8221;)<br/>
+    my $file = solv::xfopen($path);<br/>
+file = solv.xfopen(path)<br/>
            file = Solv::xfopen(path)
 </dd></dl>
 <p> Open a file at the specified path. The mode argument is passed on to the stdio library. </p>
 <dl>
 <dt>
 </dt><dd>
-FILE *xfopen_fd(char *fn, int fileno)<br />
-    my $file = solv::xfopen_fd($path, $fileno);<br />
-file = solv.xfopen_fd(path, fileno)<br />
+FILE *xfopen_fd(char *fn, int fileno)<br/>
+    my $file = solv::xfopen_fd($path, $fileno);<br/>
+file = solv.xfopen_fd(path, fileno)<br/>
            file = Solv::xfopen_fd(path, fileno)
 </dd></dl>
 <p> Create a file handle from the specified file descriptor. The path argument is only used to select the correct (de-)compression algorithm, use an empty path if you want to make sure to read/write raw data. The file descriptor is dup()ed before the file handle is created.</p>
@@ -3337,9 +3337,9 @@ file = solv.xfopen_fd(path, fileno)<br />
 <dl>
 <dt>
 </dt><dd>
-int fileno()<br />
-    my $fileno = $file-&gt;fileno();<br />
-fileno = file.fileno()<br />
+int fileno()<br/>
+    my $fileno = $file-&gt;fileno();<br/>
+fileno = file.fileno()<br/>
              fileno = file.fileno()
 </dd></dl>
 <p> Return file file descriptor of the file. If the file is not open, -1 is returned. </p>
@@ -3357,27 +3357,27 @@ fileno = file.fileno()<br />
 <dl>
 <dt>
 </dt><dd>
-int dup()<br />
-    my $fileno = $file-&gt;dup();<br />
-fileno = file.dup()<br />
+int dup()<br/>
+    my $fileno = $file-&gt;dup();<br/>
+fileno = file.dup()<br/>
              fileno = file.dup()
 </dd></dl>
 <p> Return a copy of the descriptor of the file. If the file is not open, -1 is returned. </p>
 <dl>
 <dt>
 </dt><dd>
-bool flush()<br />
-    $file-&gt;flush();<br />
-file.flush()<br />
+bool flush()<br/>
+    $file-&gt;flush();<br/>
+file.flush()<br/>
     file.flush()
 </dd></dl>
 <p> Flush the file. Returns false if there was an error. Flushing a closed file always returns true. </p>
 <dl>
 <dt>
 </dt><dd>
-bool close()<br />
-    $file-&gt;close();<br />
-file.close()<br />
+bool close()<br/>
+    $file-&gt;close();<br/>
+file.close()<br/>
     file.close()
 </dd></dl>
 <p> Close the file. This is needed for languages like Ruby that do not destruct objects right after they are no longer referenced. In that case, it is good style to close open files so that the file descriptors are freed right away. Returns false if there was an error.</p>
@@ -3387,16 +3387,16 @@ file.close()<br />
 <dl>
 <dt>
 </dt><dd>
-Repo *repo; /* read only */<br />
-$data-&gt;{repo} data.repo<br />
+Repo *repo; /* read only */<br/>
+$data-&gt;{repo} data.repo<br/>
     data.repo
 </dd></dl>
 <p> Back pointer to repository object. </p>
 <dl>
 <dt>
 </dt><dd>
-Id id; /* read only */<br />
-$data-&gt;{id} data.id<br />
+Id id; /* read only */<br/>
+$data-&gt;{id} data.id<br/>
     data.id
 </dd></dl>
 <p> The id of the repodata area. Repodata ids of different repositories overlap.</p>
@@ -3404,54 +3404,54 @@ $data-&gt;{id} data.id<br />
 <dl>
 <dt>
 </dt><dd>
-internalize();<br />
-$data-&gt;internalize();<br />
-data.internalize()<br />
+internalize();<br/>
+$data-&gt;internalize();<br/>
+data.internalize()<br/>
     data.internalize()
 </dd></dl>
 <p> Internalize newly added data. The lookup functions will only see the new data after it has been internalized. </p>
 <dl>
 <dt>
 </dt><dd>
-bool write(FILE *fp);<br />
-$data-&gt;write($fp);<br />
-data.write(fp)<br />
+bool write(FILE *fp);<br/>
+$data-&gt;write($fp);<br/>
+data.write(fp)<br/>
     data.write(fp)
 </dd></dl>
 <p> Write the contents of the repodata area as solv file. </p>
 <dl>
 <dt>
 </dt><dd>
-bool add_solv(FILE *fp, int flags = 0);<br />
-$data-&gt;add_solv($fp);<br />
-data.add_solv(fp)<br />
+bool add_solv(FILE *fp, int flags = 0);<br/>
+$data-&gt;add_solv($fp);<br/>
+data.add_solv(fp)<br/>
     data.add_solv(fp)
 </dd></dl>
 <p> Replace a stub repodata object with the data from a solv file. This method automatically adds the REPO_USE_LOADING flag. It should only be used from a load callback. </p>
 <dl>
 <dt>
 </dt><dd>
-void create_stubs();<br />
-$data-&gt;create_stubs()<br />
-    data.create_stubs()<br />
+void create_stubs();<br/>
+$data-&gt;create_stubs()<br/>
+    data.create_stubs()<br/>
         data.create_stubs()
 </dd></dl>
 <p> Create stub repodatas from the information stored in the repodata meta area. </p>
 <dl>
 <dt>
 </dt><dd>
-void extend_to_repo();<br />
-$data-&gt;extend_to_repo();<br />
-data.extend_to_repo()<br />
+void extend_to_repo();<br/>
+$data-&gt;extend_to_repo();<br/>
+data.extend_to_repo()<br/>
     data.extend_to_repo()
 </dd></dl>
 <p> Extend the repodata so that it has the same size as the repo it belongs to. This method is only needed when switching to a just written repodata extension to make the repodata match the written extension (which is always of the size of the repo). </p>
 <dl>
 <dt>
 </dt><dd>
-&lt;equality&gt;<br />
-if ($data1 == $data2)<br />
-if data1 == data2:<br />
+&lt;equality&gt;<br/>
+if ($data1 == $data2)<br/>
+if data1 == data2:<br/>
 if data1 == data2
 </dd></dl>
 <p> Two repodata objects are equal if they belong to the same repository and have the same id.</p>
@@ -3459,25 +3459,25 @@ if data1 == data2
 <dl>
 <dt>
 </dt><dd>
-const char *lookup_str(Id solvid, Id keyname)<br />
-    my $string = $data-&gt;lookup_str($solvid, $keyname);<br />
-string = data.lookup_str(solvid, keyname)<br />
+const char *lookup_str(Id solvid, Id keyname)<br/>
+    my $string = $data-&gt;lookup_str($solvid, $keyname);<br/>
+string = data.lookup_str(solvid, keyname)<br/>
              string = data.lookup_str(solvid, keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id *lookup_idarray(Id solvid, Id keyname)<br />
-    my @ids = $data-&gt;lookup_idarray($solvid, $keyname);<br />
-ids = data.lookup_idarray(solvid, keyname)<br />
+Id *lookup_idarray(Id solvid, Id keyname)<br/>
+    my @ids = $data-&gt;lookup_idarray($solvid, $keyname);<br/>
+ids = data.lookup_idarray(solvid, keyname)<br/>
           ids = data.lookup_idarray(solvid, keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Chksum lookup_checksum(Id solvid, Id keyname)<br />
-    my $chksum = $data-&gt;lookup_checksum($solvid, $keyname);<br />
-chksum = data.lookup_checksum(solvid, keyname)<br />
+Chksum lookup_checksum(Id solvid, Id keyname)<br/>
+    my $chksum = $data-&gt;lookup_checksum($solvid, $keyname);<br/>
+chksum = data.lookup_checksum(solvid, keyname)<br/>
              chksum = data.lookup_checksum(solvid, keyname)
 </dd></dl>
 <p> Lookup functions. Return the data element stored in the specified solvable. The methods probably only make sense to retrieve data from the special SOLVID_META solvid that stores repodata meta information.</p>
@@ -3485,57 +3485,57 @@ chksum = data.lookup_checksum(solvid, keyname)<br />
 <dl>
 <dt>
 </dt><dd>
-void set_id(Id solvid, Id keyname, DepId id);<br />
-$data-&gt;set_id($solvid, $keyname, $id);<br />
-data.set_id(solvid, keyname, id)<br />
+void set_id(Id solvid, Id keyname, DepId id);<br/>
+$data-&gt;set_id($solvid, $keyname, $id);<br/>
+data.set_id(solvid, keyname, id)<br/>
     data.set_id(solvid, keyname, id)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-void set_str(Id solvid, Id keyname, const char *str);<br />
-$data-&gt;set_str($solvid, $keyname, $str);<br />
-data.set_str(solvid, keyname, str)<br />
+void set_str(Id solvid, Id keyname, const char *str);<br/>
+$data-&gt;set_str($solvid, $keyname, $str);<br/>
+data.set_str(solvid, keyname, str)<br/>
     data.set_str(solvid, keyname, str)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-void set_poolstr(Id solvid, Id keyname, const char *str);<br />
-$data-&gt;set_poolstr($solvid, $keyname, $str);<br />
-data.set_poolstr(solvid, keyname, str)<br />
+void set_poolstr(Id solvid, Id keyname, const char *str);<br/>
+$data-&gt;set_poolstr($solvid, $keyname, $str);<br/>
+data.set_poolstr(solvid, keyname, str)<br/>
     data.set_poolstr(solvid, keyname, str)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-void set_checksum(Id solvid, Id keyname, Chksum *chksum);<br />
-$data-&gt;set_checksum($solvid, $keyname, $chksum);<br />
-data.set_checksum(solvid, keyname, chksum)<br />
+void set_checksum(Id solvid, Id keyname, Chksum *chksum);<br/>
+$data-&gt;set_checksum($solvid, $keyname, $chksum);<br/>
+data.set_checksum(solvid, keyname, chksum)<br/>
     data.set_checksum(solvid, keyname, chksum)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-void add_idarray(Id solvid, Id keyname, DepId id);<br />
-$data-&gt;add_idarray($solvid, $keyname, $id);<br />
-data.add_idarray(solvid, keyname, id)<br />
+void add_idarray(Id solvid, Id keyname, DepId id);<br/>
+$data-&gt;add_idarray($solvid, $keyname, $id);<br/>
+data.add_idarray(solvid, keyname, id)<br/>
     data.add_idarray(solvid, keyname, id)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id new_handle();<br />
-my $handle = $data-&gt;new_handle();<br />
-handle = data.new_handle()<br />
+Id new_handle();<br/>
+my $handle = $data-&gt;new_handle();<br/>
+handle = data.new_handle()<br/>
              handle = data.new_handle()
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-void add_flexarray(Id solvid, Id keyname, Id handle);<br />
-$data-&gt;add_flexarray($solvid, $keyname, $handle);<br />
-data.add_flexarray(solvid, keyname, handle)<br />
+void add_flexarray(Id solvid, Id keyname, Id handle);<br/>
+$data-&gt;add_flexarray($solvid, $keyname, $handle);<br/>
+data.add_flexarray(solvid, keyname, handle)<br/>
     data.add_flexarray(solvid, keyname, handle)
 </dd></dl>
 <p> Data storage methods. Probably only useful to store data in the special SOLVID_META solvid that stores repodata meta information. Note that repodata areas can have their own Id pool (see the REPO_LOCALPOOL flag), so be careful if you need to store ids. Arrays are created by calling the add function for every element. A flexarray is an array of sub-structures, call new_handle to create a new structure, use the handle as solvid to fill the structure with data and call add_flexarray to put the structure in an array.</p>
@@ -3545,8 +3545,8 @@ data.add_flexarray(solvid, keyname, handle)<br />
 <dl>
 <dt>
 </dt><dd>
-Repo *repo; /* read only */<br />
-$data-&gt;{repo} data.repo<br />
+Repo *repo; /* read only */<br/>
+$data-&gt;{repo} data.repo<br/>
     data.repo
 </dd></dl>
 <p> Back pointer to repository object.</p>
@@ -3554,26 +3554,26 @@ $data-&gt;{repo} data.repo<br />
 <dl>
 <dt>
 </dt><dd>
-Dataiterator(Id keyname, const char *match, int flags)<br />
-    my $di = $datapos-&gt;Dataiterator($keyname, $match, $flags);<br />
-di = datapos.Dataiterator(keyname, match, flags)<br />
+Dataiterator(Id keyname, const char *match, int flags)<br/>
+    my $di = $datapos-&gt;Dataiterator($keyname, $match, $flags);<br/>
+di = datapos.Dataiterator(keyname, match, flags)<br/>
          di = datapos.Dataiterator(keyname, match, flags)
 </dd></dl>
 <p> Create a Dataiterator at the position of the datapos object. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *lookup_deltalocation(unsigned int *OUTPUT);<br />
-my($location, $medianr) = $datapos-&gt;lookup_deltalocation();<br />
+const char *lookup_deltalocation(unsigned int *OUTPUT);<br/>
+my($location, $medianr) = $datapos-&gt;lookup_deltalocation();<br/>
 location, medianr = datapos.lookup_deltalocation() location, medianr = datapos.lookup_deltalocation()
 </dd></dl>
 <p> Return a tuple containing the on-media location and an optional media number for a delta rpm. This obviously only works if the data position points to structure describing a delta rpm. </p>
 <dl>
 <dt>
 </dt><dd>
-const char *lookup_deltaseq();<br />
-my $seq = $datapos-&gt;lookup_deltaseq();<br />
-seq = datapos.lookup_deltaseq();<br />
+const char *lookup_deltaseq();<br/>
+my $seq = $datapos-&gt;lookup_deltaseq();<br/>
+seq = datapos.lookup_deltaseq();<br/>
 seq = datapos.lookup_deltaseq();
 </dd></dl>
 <p> Return the delta rpm sequence from the structure describing a delta rpm.</p>
@@ -3581,48 +3581,48 @@ seq = datapos.lookup_deltaseq();
 <dl>
 <dt>
 </dt><dd>
-const char *lookup_str(Id keyname)<br />
-    my $string = $datapos-&gt;lookup_str($keyname);<br />
-string = datapos.lookup_str(keyname)<br />
+const char *lookup_str(Id keyname)<br/>
+    my $string = $datapos-&gt;lookup_str($keyname);<br/>
+string = datapos.lookup_str(keyname)<br/>
              string = datapos.lookup_str(keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id lookup_id(Id solvid, Id keyname)<br />
-    my $id = $datapos-&gt;lookup_id($keyname);<br />
-id = datapos.lookup_id(keyname)<br />
+Id lookup_id(Id solvid, Id keyname)<br/>
+    my $id = $datapos-&gt;lookup_id($keyname);<br/>
+id = datapos.lookup_id(keyname)<br/>
          id = datapos.lookup_id(keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-unsigned long long lookup_num(Id keyname, unsigned long long notfound = 0)<br />
-    my $num = $datapos-&gt;lookup_num($keyname);<br />
-num = datapos.lookup_num(keyname)<br />
+unsigned long long lookup_num(Id keyname, unsigned long long notfound = 0)<br/>
+    my $num = $datapos-&gt;lookup_num($keyname);<br/>
+num = datapos.lookup_num(keyname)<br/>
           num = datapos.lookup_num(keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-bool lookup_void(Id keyname)<br />
-    my $bool = $datapos-&gt;lookup_void($keyname);<br />
+bool lookup_void(Id keyname)<br/>
+    my $bool = $datapos-&gt;lookup_void($keyname);<br/>
 bool = datapos.lookup_void(keyname) bool = datapos.lookup_void(keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Id *lookup_idarray(Id keyname)<br />
-    my @ids = $datapos-&gt;lookup_idarray($keyname);<br />
-ids = datapos.lookup_idarray(keyname)<br />
+Id *lookup_idarray(Id keyname)<br/>
+    my @ids = $datapos-&gt;lookup_idarray($keyname);<br/>
+ids = datapos.lookup_idarray(keyname)<br/>
           ids = datapos.lookup_idarray(keyname)
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Chksum lookup_checksum(Id keyname)<br />
-    my $chksum = $datapos-&gt;lookup_checksum($keyname);<br />
-chksum = datapos.lookup_checksum(keyname)<br />
+Chksum lookup_checksum(Id keyname)<br/>
+    my $chksum = $datapos-&gt;lookup_checksum($keyname);<br/>
+chksum = datapos.lookup_checksum(keyname)<br/>
              chksum = datapos.lookup_checksum(keyname)
 </dd></dl>
 <p> Lookup functions. Note that the returned Ids are always translated into the Ids of the global pool even if the repodata area contains its own pool. </p>

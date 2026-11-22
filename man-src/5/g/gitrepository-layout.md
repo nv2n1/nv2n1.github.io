@@ -162,22 +162,22 @@ description: "gitrepository-layout – Git Repository Layout"
 <p> Note that if no extensions are specified in the config file, then <code>core.repositoryformatversion</code> SHOULD be set to <code>0</code> (setting it to <code>1</code> provides no benefit, and makes the repository incompatible with older implementations of git). </p>
 <p> This document will serve as the master list for extensions. Any implementation wishing to define a new extension should make a note of it here, in order to claim the name. </p>
 <p> The defined extensions are: </p>
-<p> <font SIZE="+1"> <code>noop</code></p>
+<p>  <code>noop</code></p>
 <dl>
 <dd>This extension does not change git&#8217;s behavior at all. It is useful only for testing format-1 compatibility.</dd></dl>
-<p> </font><font SIZE="+2"> <code>preciousObjects</code></p>
+<p>  <code>preciousObjects</code></p>
 <dl>
 <dd>When the config key <code>extensions.preciousObjects</code> is set to <code>true</code>, objects in the repository MUST NOT be deleted (e.g., by <code>git-prune</code> or <code>git repack -d</code>).</dd></dl>
-<p> </font><font SIZE="+3"> <code>partialclone</code></p>
+<p>  <code>partialclone</code></p>
 <dl>
 <dd>When the config key <code>extensions.partialclone</code> is set, it indicates that the repo was created with a partial clone (or later performed a partial fetch) and that the remote may have omitted sending certain unwanted objects. Such a remote is called a &quot;promisor remote&quot; and it promises that all such omitted objects can be fetched from it in the future. </dd>
 <p> The value of this key is the name of the promisor remote.</dl>
-<p> </font><font SIZE="+4"> <code>worktreeConfig</code></p>
+<p>  <code>worktreeConfig</code></p>
 <dl>
 <dd>If set, by default &quot;git config&quot; reads from both &quot;config&quot; and &quot;config.worktree&quot; file from GIT_DIR in that order. In multiple working directory mode, &quot;config&quot; file is shared while &quot;config.worktree&quot; is per-working directory (i.e., it&#8217;s in GIT_COMMON_DIR/worktrees/&lt;id&gt;/config.worktree)</dd></dl>
-<p> </font></p>
+<p> </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-git-init/">git-init</a></code>(1), <code><a href="/docs/linux/man/1-git-clone/">git-clone</a></code>(1), <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1), <code><a href="/docs/linux/man/1-git-pack-refs/">git-pack-refs</a></code>(1), <code><a href="/docs/linux/man/1-git-gc/">git-gc</a></code>(1), <code><a href="/docs/linux/man/1-git-checkout/">git-checkout</a></code>(1), <code><a href="/docs/linux/man/7-gitglossary/">gitglossary</a></code>(7), m[blue]<code>The Git User&#8217;s Manual</code>m[]<font SIZE="-2">[1]</font></p>
+<p><code><a href="/docs/linux/man/1-git-init/">git-init</a></code>(1), <code><a href="/docs/linux/man/1-git-clone/">git-clone</a></code>(1), <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1), <code><a href="/docs/linux/man/1-git-pack-refs/">git-pack-refs</a></code>(1), <code><a href="/docs/linux/man/1-git-gc/">git-gc</a></code>(1), <code><a href="/docs/linux/man/1-git-checkout/">git-checkout</a></code>(1), <code><a href="/docs/linux/man/7-gitglossary/">gitglossary</a></code>(7), m[blue]<code>The Git User&#8217;s Manual</code>m[][1]</p>
 <h2>Git</h2>
 <p>Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>Notes</h2>

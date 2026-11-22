@@ -11,7 +11,7 @@ description: "std::binder2nd< _Operation > –"
 <h2>Synopsis</h2>
 <p> Inherits <code>std::unary_function&lt; _Operation::first_argument_type, _Operation::result_type &gt;</code>.</p>
 <h3>Public Types</h3>
-<p>typedef<br />
+<p>typedef<br/>
  _Operation::first_argument_type <code>argument_type</code>&quot; </p>
 <p> typedef _Operation::result_type <code>result_type</code></p>
 <h3>Public Member Functions</h3>

@@ -13,18 +13,18 @@ description: "QwtPlotGLCanvas –"
 <p>#include &lt;qwt_plot_glcanvas.h&gt; </p>
 <p> Inherits QGLWidget.</p>
 <h3>Public Types</h3>
-<p>enum <code>Shadow</code> { <code>Plain</code> = QFrame::Plain, <code>Raised</code> = QFrame::Raised, <code>Sunken</code> = QFrame::Sunken }<br />
- <i>Frame shadow. </i><br />
- enum <code>Shape</code> { <code>NoFrame</code> = QFrame::NoFrame, <code>Box</code> = QFrame::Box, <code>Panel</code> = QFrame::Panel }<br />
+<p>enum <code>Shadow</code> { <code>Plain</code> = QFrame::Plain, <code>Raised</code> = QFrame::Raised, <code>Sunken</code> = QFrame::Sunken }<br/>
+ <i>Frame shadow. </i><br/>
+ enum <code>Shape</code> { <code>NoFrame</code> = QFrame::NoFrame, <code>Box</code> = QFrame::Box, <code>Panel</code> = QFrame::Panel }<br/>
  <i>Frame shape. </i></p>
 <h3>Public Slots</h3>
-<p>void <code>replot</code> ()<br />
+<p>void <code>replot</code> ()<br/>
  <i>Calls repaint() </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotGLCanvas</code> (<code>QwtPlot</code> *=NULL)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPlotGLCanvas</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotGLCanvas</code> (<code>QwtPlot</code> *=NULL)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPlotGLCanvas</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setFrameStyle</code> (int style) </p>
 <p> int <code>frameStyle</code> () const </p>
 <p> void <code>setFrameShadow</code> (<code>Shadow</code>) </p>

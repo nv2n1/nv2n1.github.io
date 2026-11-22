@@ -10,7 +10,7 @@ description: "claed7.f –"
 <p>claed7.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>claed7</code> (N, CUTPNT, QSIZ, TLVLS, CURLVL, CURPBM, D, Q, LDQ, RHO, INDXQ, QSTORE, QPTR, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, WORK, RWORK, IWORK, INFO)<br />
+<p>subroutine <code>claed7</code> (N, CUTPNT, QSIZ, TLVLS, CURLVL, CURPBM, D, Q, LDQ, RHO, INDXQ, QSTORE, QPTR, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, WORK, RWORK, IWORK, INFO)<br/>
  <i></i><code>CLAED7</code> used by sstedc. Computes the updated eigensystem of a diagonal matrix after modification by a rank-one symmetric matrix. Used when the original matrix is dense.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claed7 (integerN, integerCUTPNT, integerQSIZ, integerTLVLS, integerCURLVL, integerCURPBM, real, dimension( * )D, complex, dimension( ldq, * )Q, integerLDQ, realRHO, integer, dimension( * )INDXQ, real, dimension( * )QSTORE, integer, dimension( * )QPTR, integer, dimension( * )PRMPTR, integer, dimension( * )PERM, integer, dimension( * )GIVPTR, integer, dimension( 2, * )GIVCOL, real, dimension( 2, * )GIVNUM, complex, dimension( * )WORK, real, dimension( * )RWORK, integer, dimension( * )IWORK, integerINFO)</h3>

@@ -9,23 +9,23 @@ description: "wicd-wired-settings.conf – controls Wicd’s wired network setti
 
 <p>wicd-wired-settings.conf &#8211; controls Wicd&#8217;s wired network settings</p>
 <h2>Description</h2>
-<p>This file contains configuration information for wired interfaces in Wicd.<br />
+<p>This file contains configuration information for wired interfaces in Wicd.<br/>
  This file is located at /etc/wicd/wired-settings.conf </p>
 <h2>Settings</h2>
 <dl>
 <dt><code>default = </code><i>&lt;0|1&gt;</i></dt>
-<dd>This option decides whether to use this profile as the default. 0 = do not use this profile as default.<br />
+<dd>This option decides whether to use this profile as the default. 0 = do not use this profile as default.<br/>
  1 = use this profile as default.</dd>
 <dt><code>beforescript = </code><i>&lt;None|arbitrary_script&gt;</i></dt>
-<dd>This defines a script to run before Wicd brings up the connection. The script should be a Bourne-compatible script and should be executable.<br />
+<dd>This defines a script to run before Wicd brings up the connection. The script should be a Bourne-compatible script and should be executable.<br/>
  IMPORTANT &#8211; scripts should ONLY be writable by root and located in a directory that is only writable by root.</dd>
 <dt><code>afterscript = </code><i>&lt;None|arbitrary_script&gt;</i></dt>
-<dd>This defines a script to run after Wicd brings up the connection. The script should be a Bourne-compatible script and should be executable.<br />
+<dd>This defines a script to run after Wicd brings up the connection. The script should be a Bourne-compatible script and should be executable.<br/>
  IMPORTANT &#8211; scripts should ONLY be writable by root and located in a directory that is only writable by root.</dd>
 <dt><code>predisconnectscript = </code><i>&lt;None|arbitrary_script&gt;</i></dt>
 <dd>This defines a script to run before Wicd disconnects the interface. The script should be a Bourne-compatible script and should be executable.</dd>
 <dt><code>postdisconnectscript = </code><i>&lt;None|arbitrary_script&gt;</i></dt>
-<dd>This defines a script to run after Wicd disconnects the interface. The script should be a Bourne-compatible script and should be executable.<br />
+<dd>This defines a script to run after Wicd disconnects the interface. The script should be a Bourne-compatible script and should be executable.<br/>
  IMPORTANT &#8211; scripts should ONLY be writable by root and located in a directory that is only writable by root.</dd>
 <dt><code>ip = </code><i>&lt;None|ip_address&gt;</i></dt>
 <dd>Use this option if you have a static ip address for your system.</dd>

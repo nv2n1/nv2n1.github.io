@@ -10,7 +10,7 @@ description: "pmdabonding – Linux bonded interface performance metrics domain 
 
 <p> <code>pmdabonding</code> &#8211; Linux bonded interface performance metrics domain agent (PMDA)</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdabonding</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from bonded network interfaces in the Linux kernel.</p>
+<p> <code>pmdabonding</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values from bonded network interfaces in the Linux kernel.</p>
 <h2>INSTALLATION</h2>
 <p> Install the bonding PMDA by using the Install script as root: </p>
 <p>#&nbsp;<wbr>cd&nbsp;<wbr>$PCP_PMDAS_DIR/bonding </p>

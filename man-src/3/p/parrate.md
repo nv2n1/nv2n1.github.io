@@ -10,62 +10,62 @@ description: "QuantLib::YieldTermStructure – Interest-rate term structure."
 
 <p>QuantLib::YieldTermStructure &#8211; Interest-rate term structure. </p>
 
-<p> <br />
+<p> <br/>
  </p>
 <p>#include &lt;ql/termstructures/yieldtermstructure.hpp&gt; </p>
 <p>Inherits <code>QuantLib::TermStructure</code>. </p>
 <p>Inherited by <code>InterpolatedDiscountCurve&lt; LogLinear &gt;</code>, <code>FittedBondDiscountCurve</code>, <code>FlatForward</code>, <code>ForwardRateStructure</code>, <code>ImpliedTermStructure</code>, <code>InterpolatedDiscountCurve&lt; Interpolator &gt;</code>, and <code>ZeroYieldStructure</code>. </p>
 <h3>Public Member Functions</h3>
-<p> <code>Constructors</code> <br />
+<p> <code>Constructors</code> <br/>
  See the <code>TermStructure</code> documentation for issues regarding constructors. </p>
-<p> <br />
- <code>YieldTermStructure</code> (const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>()) <br />
- <i>default constructor </i> <br />
- <code>YieldTermStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>()) <br />
- <i>initialize with a fixed reference date </i> <br />
- <code>YieldTermStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;cal, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>()) <br />
+<p> <br/>
+ <code>YieldTermStructure</code> (const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>()) <br/>
+ <i>default constructor </i> <br/>
+ <code>YieldTermStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>()) <br/>
+ <i>initialize with a fixed reference date </i> <br/>
+ <code>YieldTermStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;cal, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>()) <br/>
  <i>calculate the reference date based on the global evaluation date </i> </p>
-<p> <code>zero-yield rates</code> <br />
+<p> <code>zero-yield rates</code> <br/>
  These methods return the implied zero-yield rate for a given date or time. In the former case, the time is calculated as a fraction of year from the reference date. </p>
-<p> <br />
- <code>InterestRate</code> <code>zeroRate</code> (const <code>Date</code> &amp;d, const <code>DayCounter</code> &amp;resultDayCounter, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br />
- <br />
- <code>InterestRate</code> <code>zeroRate</code> (Time t, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br />
+<p> <br/>
+ <code>InterestRate</code> <code>zeroRate</code> (const <code>Date</code> &amp;d, const <code>DayCounter</code> &amp;resultDayCounter, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br/>
+ <br/>
+ <code>InterestRate</code> <code>zeroRate</code> (Time t, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br/>
  </p>
-<p> <code>discount factors</code> <br />
+<p> <code>discount factors</code> <br/>
  These methods return the discount factor for a given date or time. In the former case, the time is calculated as a fraction of year from the reference date. </p>
-<p> <br />
- <code>DiscountFactor</code> <code>discount</code> (const <code>Date</code> &amp;, bool extrapolate=false) const <br />
- <br />
- <code>DiscountFactor</code> <code>discount</code> (Time, bool extrapolate=false) const <br />
+<p> <br/>
+ <code>DiscountFactor</code> <code>discount</code> (const <code>Date</code> &amp;, bool extrapolate=false) const <br/>
+ <br/>
+ <code>DiscountFactor</code> <code>discount</code> (Time, bool extrapolate=false) const <br/>
  </p>
-<p> <code>forward rates</code> <br />
+<p> <code>forward rates</code> <br/>
  These methods returns the implied forward interest rate between two dates or times. In the former case, times are calculated as fractions of year from the reference date. </p>
-<p> <br />
- <code>InterestRate</code> <code>forwardRate</code> (const <code>Date</code> &amp;d1, const <code>Date</code> &amp;d2, const <code>DayCounter</code> &amp;resultDayCounter, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br />
- <br />
- <code>InterestRate</code> <code>forwardRate</code> (const <code>Date</code> &amp;d, const <code>Period</code> &amp;p, const <code>DayCounter</code> &amp;resultDayCounter, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br />
- <br />
- <code>InterestRate</code> <code>forwardRate</code> (Time t1, Time t2, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br />
+<p> <br/>
+ <code>InterestRate</code> <code>forwardRate</code> (const <code>Date</code> &amp;d1, const <code>Date</code> &amp;d2, const <code>DayCounter</code> &amp;resultDayCounter, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br/>
+ <br/>
+ <code>InterestRate</code> <code>forwardRate</code> (const <code>Date</code> &amp;d, const <code>Period</code> &amp;p, const <code>DayCounter</code> &amp;resultDayCounter, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br/>
+ <br/>
+ <code>InterestRate</code> <code>forwardRate</code> (Time t1, Time t2, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br/>
  </p>
-<p> <code>par rates</code> <br />
+<p> <code>par rates</code> <br/>
  These methods returns the implied par rate for a given sequence of payments at the given dates or times. In the former case, times are calculated as fractions of year from the reference date. </p>
 <p> <code>Warning</code> </p>
 <dl>
 <dd> <p> though somewhat related to a swap rate, this method is not to be used for the fair rate of a real swap, since it does not take into account all the market conventions&#8217; details. The correct way to evaluate such rate is to instantiate a SimpleSwap with the correct conventions, pass it the term structure and call the swap&#8217;s fairRate() method. </p>
  </dd></dl>
-<p> <br />
- <code>Rate</code> <code>parRate</code> (<code>Integer</code> tenor, const <code>Date</code> &amp;startDate, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br />
- <br />
- <code>Rate</code> <code>parRate</code> (const std::vector&lt; <code>Date</code> &gt; &amp;dates, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br />
- <br />
- <code>Rate</code> <code>parRate</code> (const std::vector&lt; Time &gt; &amp;times, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br />
+<p> <br/>
+ <code>Rate</code> <code>parRate</code> (<code>Integer</code> tenor, const <code>Date</code> &amp;startDate, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br/>
+ <br/>
+ <code>Rate</code> <code>parRate</code> (const std::vector&lt; <code>Date</code> &gt; &amp;dates, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br/>
+ <br/>
+ <code>Rate</code> <code>parRate</code> (const std::vector&lt; Time &gt; &amp;times, <code>Frequency</code> freq=Annual, bool extrapolate=false) const <br/>
   </p>
 <h3>Protected Member Functions</h3>
-<p> <code>Calculations</code> <br />
+<p> <code>Calculations</code> <br/>
  These methods must be implemented in derived classes to perform the actual discount and rate calculations. When they are called, range check has already been performed; therefore, they must assume that extrapolation is required. </p>
-<p> <br />
- virtual <code>DiscountFactor</code> <code>discountImpl</code> (Time) const =0 <br />
+<p> <br/>
+ virtual <code>DiscountFactor</code> <code>discountImpl</code> (Time) const =0 <br/>
  <i>discount calculation </i>  </p>
 <h2>Detailed Description</h2>
 <p>Interest-rate term structure. </p>

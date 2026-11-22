@@ -11,7 +11,7 @@ description: "chegvd.f –"
 <p> chegvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chegvd</code> (ITYPE, JOBZ, UPLO, N, A, LDA, B, LDB, W, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />
+<p> subroutine <code>chegvd</code> (ITYPE, JOBZ, UPLO, N, A, LDA, B, LDB, W, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>CHEGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chegvd (integerITYPE, characterJOBZ, characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, real, dimension( * )W, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerLRWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>
@@ -102,15 +102,15 @@ if ITYPE
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>LWORK is INTEGER<br />
-        The length of the array WORK.If N &lt;= 1,<br />
-    LWORK &gt;= 1. If JOBZ = &#8216;N&#8217; and N &gt; 1, LWORK &gt;= N + 1. If JOBZ = &#8216;V&#8217; and N &gt; 1, LWORK &gt;= 2 *N + N ** 2. If LWORK = -1, then a workspace query is assumed;<br />
-the routine<br />
-    only calculates the optimal sizes of the WORK,<br />
-    RWORK and<br />
-        IWORK arrays,<br />
-    returns these values as the first entries of<br />
-        the WORK,<br />
+<p>LWORK is INTEGER<br/>
+        The length of the array WORK.If N &lt;= 1,<br/>
+    LWORK &gt;= 1. If JOBZ = &#8216;N&#8217; and N &gt; 1, LWORK &gt;= N + 1. If JOBZ = &#8216;V&#8217; and N &gt; 1, LWORK &gt;= 2 *N + N ** 2. If LWORK = -1, then a workspace query is assumed;<br/>
+the routine<br/>
+    only calculates the optimal sizes of the WORK,<br/>
+    RWORK and<br/>
+        IWORK arrays,<br/>
+    returns these values as the first entries of<br/>
+        the WORK,<br/>
     RWORK and IWORK arrays, and no error message related to LWORK or LRWORK or LIWORK is issued by XERBLA.</p>
 <p> <i>RWORK</i> </p>
 <pre>
@@ -118,15 +118,15 @@ the routine<br />
           On exit, if INFO = 0, RWORK(1) returns the optimal LRWORK.
 </pre>
 <p> <i>LRWORK</i> </p>
-<p>LRWORK is INTEGER<br />
-        The dimension of the array RWORK.If N &lt;= 1,<br />
-    LRWORK &gt;= 1. If JOBZ = &#8216;N&#8217; and N &gt; 1, LRWORK &gt;= N.If JOBZ = &#8216;V&#8217; and N &gt; 1, LRWORK &gt;= 1 + 5 *N + 2 *N ** 2. If LRWORK = -1, then a workspace query is assumed;<br />
-the<br />
-    routine only calculates the optimal sizes of the WORK,<br />
-    RWORK<br />
-        and IWORK arrays,<br />
-    returns these values as the first entries<br />
-        of the WORK,<br />
+<p>LRWORK is INTEGER<br/>
+        The dimension of the array RWORK.If N &lt;= 1,<br/>
+    LRWORK &gt;= 1. If JOBZ = &#8216;N&#8217; and N &gt; 1, LRWORK &gt;= N.If JOBZ = &#8216;V&#8217; and N &gt; 1, LRWORK &gt;= 1 + 5 *N + 2 *N ** 2. If LRWORK = -1, then a workspace query is assumed;<br/>
+the<br/>
+    routine only calculates the optimal sizes of the WORK,<br/>
+    RWORK<br/>
+        and IWORK arrays,<br/>
+    returns these values as the first entries<br/>
+        of the WORK,<br/>
     RWORK and IWORK arrays, and no error message related to LWORK or LRWORK or LIWORK is issued by XERBLA.</p>
 <p> <i>IWORK</i> </p>
 <pre>
@@ -134,15 +134,15 @@ the<br />
           On exit, if INFO = 0, IWORK(1) returns the optimal LIWORK.
 </pre>
 <p> <i>LIWORK</i> </p>
-<p>LIWORK is INTEGER<br />
-        The dimension of the array IWORK.If N &lt;= 1,<br />
-    LIWORK &gt;= 1. If JOBZ = &#8216;N&#8217; and N &gt; 1, LIWORK &gt;= 1. If JOBZ = &#8216;V&#8217; and N &gt; 1, LIWORK &gt;= 3 + 5 *N.If LIWORK = -1, then a workspace query is assumed;<br />
-the<br />
-    routine only calculates the optimal sizes of the WORK,<br />
-    RWORK<br />
-        and IWORK arrays,<br />
-    returns these values as the first entries<br />
-        of the WORK,<br />
+<p>LIWORK is INTEGER<br/>
+        The dimension of the array IWORK.If N &lt;= 1,<br/>
+    LIWORK &gt;= 1. If JOBZ = &#8216;N&#8217; and N &gt; 1, LIWORK &gt;= 1. If JOBZ = &#8216;V&#8217; and N &gt; 1, LIWORK &gt;= 3 + 5 *N.If LIWORK = -1, then a workspace query is assumed;<br/>
+the<br/>
+    routine only calculates the optimal sizes of the WORK,<br/>
+    RWORK<br/>
+        and IWORK arrays,<br/>
+    returns these values as the first entries<br/>
+        of the WORK,<br/>
     RWORK and IWORK arrays, and no error message related to LWORK or LRWORK or LIWORK is issued by XERBLA.</p>
 <p> <i>INFO</i> </p>
 <pre><code>

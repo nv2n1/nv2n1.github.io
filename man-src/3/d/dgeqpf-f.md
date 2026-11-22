@@ -10,7 +10,7 @@ description: "dgeqpf.f –"
 <p>dgeqpf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgeqpf</code> (M, N, A, LDA, JPVT, TAU, WORK, INFO)<br />
+<p>subroutine <code>dgeqpf</code> (M, N, A, LDA, JPVT, TAU, WORK, INFO)<br/>
  <i></i><code>DGEQPF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgeqpf (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )JPVT, double precision, dimension( * )TAU, double precision, dimension( * )WORK, integerINFO)</h3>

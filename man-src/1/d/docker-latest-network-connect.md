@@ -48,11 +48,11 @@ $ docker network connect --ip 172.20.128.2 multi-host-network container2
 <p> Once connected in network, containers can communicate using only another container&#8217;s IP address or name. For overlay networks or custom plugins that support multi-host connectivity, containers connected to the same multi-host network but launched from different Engines can also communicate in this way. </p>
 <p> You can connect a container to one or more networks. The networks need not be the same type. For example, you can connect a single container bridge and overlay networks. </p>
 <h2>OPTIONS</h2>
-<p> <code>NETWORK</code><br />
+<p> <code>NETWORK</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Specify network name </p>
-<p> <code>CONTAINER</code><br />
+<p> <code>CONTAINER</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Specify container name </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>HISTORY</h2>
 <p> OCT 2015, created by Mary Anthony &lt;mary [at] docker.com&gt; </p>

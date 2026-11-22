@@ -19,64 +19,64 @@ description: "QwtThermo –"
 <p>virtual void <code>setValue</code> (double val) </p>
 <h3>Public Member Functions</h3>
 <p><code>QwtThermo</code> (QWidget *parent=NULL) </p>
-<p> virtual <code>~QwtThermo</code> ()<br />
- <i>Destructor. </i><br />
- void <code>setOrientation</code> (Qt::Orientation)<br />
- <i>Set the orientation. </i><br />
+<p> virtual <code>~QwtThermo</code> ()<br/>
+ <i>Destructor. </i><br/>
+ void <code>setOrientation</code> (Qt::Orientation)<br/>
+ <i>Set the orientation. </i><br/>
  Qt::Orientation <code>orientation</code> () const </p>
-<p> void <code>setScalePosition</code> (<code>ScalePosition</code>)<br />
- <i>Change the position of the scale. </i><br />
+<p> void <code>setScalePosition</code> (<code>ScalePosition</code>)<br/>
+ <i>Change the position of the scale. </i><br/>
  <code>ScalePosition</code> <code>scalePosition</code> () const </p>
-<p> void <code>setSpacing</code> (int)<br />
- <i>Change the spacing between pipe and scale. </i><br />
+<p> void <code>setSpacing</code> (int)<br/>
+ <i>Change the spacing between pipe and scale. </i><br/>
  int <code>spacing</code> () const </p>
 <p> void <code>setBorderWidth</code> (int w) </p>
 <p> int <code>borderWidth</code> () const </p>
-<p> void <code>setOriginMode</code> (<code>OriginMode</code>)<br />
- <i>Change how the origin is determined. </i><br />
+<p> void <code>setOriginMode</code> (<code>OriginMode</code>)<br/>
+ <i>Change how the origin is determined. </i><br/>
  <code>OriginMode</code> <code>originMode</code> () const </p>
-<p> void <code>setOrigin</code> (double)<br />
- <i>Specifies the custom origin. </i><br />
+<p> void <code>setOrigin</code> (double)<br/>
+ <i>Specifies the custom origin. </i><br/>
  double <code>origin</code> () const </p>
-<p> void <code>setFillBrush</code> (const QBrush &amp;b)<br />
- <i>Change the brush of the liquid. </i><br />
+<p> void <code>setFillBrush</code> (const QBrush &amp;b)<br/>
+ <i>Change the brush of the liquid. </i><br/>
  QBrush <code>fillBrush</code> () const </p>
-<p> void <code>setAlarmBrush</code> (const QBrush &amp;b)<br />
- <i>Specify the liquid brush above the alarm threshold. </i><br />
+<p> void <code>setAlarmBrush</code> (const QBrush &amp;b)<br/>
+ <i>Specify the liquid brush above the alarm threshold. </i><br/>
  QBrush <code>alarmBrush</code> () const </p>
 <p> void <code>setAlarmLevel</code> (double v) </p>
 <p> double <code>alarmLevel</code> () const </p>
-<p> void <code>setAlarmEnabled</code> (bool tf)<br />
- <i>Enable or disable the alarm threshold. </i><br />
+<p> void <code>setAlarmEnabled</code> (bool tf)<br/>
+ <i>Enable or disable the alarm threshold. </i><br/>
  bool <code>alarmEnabled</code> () const </p>
-<p> void <code>setColorMap</code> (<code>QwtColorMap</code> *)<br />
- <i>Assign a color map for the fill color. </i><br />
+<p> void <code>setColorMap</code> (<code>QwtColorMap</code> *)<br/>
+ <i>Assign a color map for the fill color. </i><br/>
  <code>QwtColorMap</code> * <code>colorMap</code> () </p>
 <p> const <code>QwtColorMap</code> * <code>colorMap</code> () const </p>
 <p> void <code>setPipeWidth</code> (int w) </p>
 <p> int <code>pipeWidth</code> () const </p>
-<p> void <code>setRangeFlags</code> (<code>QwtInterval::BorderFlags</code>)<br />
- <i>Exclude/Include min/max values. </i><br />
+<p> void <code>setRangeFlags</code> (<code>QwtInterval::BorderFlags</code>)<br/>
+ <i>Exclude/Include min/max values. </i><br/>
  <code>QwtInterval::BorderFlags</code> <code>rangeFlags</code> () const </p>
-<p> double <code>value</code> () const<br />
- <i>Return the value. </i><br />
+<p> double <code>value</code> () const<br/>
+ <i>Return the value. </i><br/>
  virtual QSize <code>sizeHint</code> () const </p>
 <p> virtual QSize <code>minimumSizeHint</code> () const </p>
-<p> void <code>setScaleDraw</code> (<code>QwtScaleDraw</code> *)<br />
- <i>Set a scale draw. </i><br />
+<p> void <code>setScaleDraw</code> (<code>QwtScaleDraw</code> *)<br/>
+ <i>Set a scale draw. </i><br/>
  const <code>QwtScaleDraw</code> * <code>scaleDraw</code> () const </p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>drawLiquid</code> (QPainter *, const QRect &amp;) const </p>
-<p> virtual void <code>scaleChange</code> ()<br />
- <i>Notify a scale change. </i><br />
+<p> virtual void <code>scaleChange</code> ()<br/>
+ <i>Notify a scale change. </i><br/>
  virtual void <code>paintEvent</code> (QPaintEvent *) </p>
 <p> virtual void <code>resizeEvent</code> (QResizeEvent *) </p>
 <p> virtual void <code>changeEvent</code> (QEvent *) </p>
 <p> <code>QwtScaleDraw</code> * <code>scaleDraw</code> () </p>
 <p> QRect <code>pipeRect</code> () const </p>
-<p> QRect <code>fillRect</code> (const QRect &amp;) const<br />
- <i>Calculate the filled rectangle of the pipe. </i><br />
- QRect <code>alarmRect</code> (const QRect &amp;) const<br />
+<p> QRect <code>fillRect</code> (const QRect &amp;) const<br/>
+ <i>Calculate the filled rectangle of the pipe. </i><br/>
+ QRect <code>alarmRect</code> (const QRect &amp;) const<br/>
  <i>Calculate the alarm rectangle of the pipe. </i></p>
 <h2>Detailed Description</h2>
 <p>The Thermometer Widget. </p>
@@ -204,7 +204,7 @@ description: "QwtThermo –"
 <p>Redraw the liquid in thermometer pipe. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>pipeRect</i> Bounding rectangle of the pipe without borders</dd></dl>
 <h3>QBrush QwtThermo::fillBrush () const</h3>
 <p><code>Returns:</code></p>

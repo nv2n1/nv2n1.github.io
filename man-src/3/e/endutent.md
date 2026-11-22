@@ -11,11 +11,11 @@ description: "getutent, getutid, getutline, pututline, setutent, endutent, utmpn
 <p> getutent, getutid, getutline, pututline, setutent, endutent, utmpname &#8211; access utmp file entries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;utmp.h&gt;</code> </p>
-<p> <code>struct utmp *getutent(void);</code><br />
- <code>struct utmp *getutid(const struct utmp *</code><i>ut</i><code>);</code><br />
+<p> <code>struct utmp *getutent(void);</code><br/>
+ <code>struct utmp *getutid(const struct utmp *</code><i>ut</i><code>);</code><br/>
  <code>struct utmp *getutline(const struct utmp *</code><i>ut</i><code>);</code> </p>
 <p> <code>struct utmp *pututline(const struct utmp *</code><i>ut</i><code>);</code> </p>
-<p> <code>void setutent(void);</code><br />
+<p> <code>void setutent(void);</code><br/>
  <code>void endutent(void);</code> </p>
 <p> <code>int utmpname(const char *</code><i>file</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
@@ -57,28 +57,28 @@ description: "getutent, getutid, getutline, pututline, setutent, endutent, utmpn
 <tr VALIGN=top>
 <td> <code>getutent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe init race:utent<br />
+<td> MT-Unsafe init race:utent<br/>
  race:utentbuf sig:ALRM timer
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>getutid</code>(),<br />
+<td> <code>getutid</code>(),<br/>
  <code>getutline</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe init race:utent<br />
+<td> MT-Unsafe init race:utent<br/>
  sig:ALRM timer
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>pututline</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:utent<br />
+<td> MT-Unsafe race:utent<br/>
  sig:ALRM timer
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>setutent</code>(),<br />
- <code>endutent</code>(),<br />
+<td> <code>setutent</code>(),<br/>
+ <code>endutent</code>(),<br/>
  <code>utmpname</code>() </td>
 <td>Thread safety</td>
 <td>MT-Unsafe race:utent
@@ -118,29 +118,29 @@ _GNU_SOURCE
 <h2>EXAMPLES</h2>
 <p> The following example adds and removes a utmp record, assuming it is run from within a pseudo terminal. For usage in a real application, you should check the return values of <code><a href="/docs/linux/man/3-getpwuid/">getpwuid</a></code>(3) and <code><a href="/docs/linux/man/3-ttyname/">ttyname</a></code>(3). </p>
 <p> #include &lt;string.h&gt; #include &lt;stdlib.h&gt; #include &lt;pwd.h&gt; #include &lt;unistd.h&gt; #include &lt;utmp.h&gt; #include &lt;time.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
+<p> int main(int argc, char *argv[]) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct utmp entry; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;system(&quot;echo before adding entry:;who&quot;); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entry.ut_type&nbsp;=&nbsp;USER_PROCESS;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entry.ut_pid&nbsp;=&nbsp;getpid();<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;strcpy(entry.ut_line, ttyname(STDIN_FILENO)&nbsp;+&nbsp;strlen(&quot;/dev/&quot;));<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;only correct for ptys named&nbsp;/dev/tty[pqr][0-9a-z]&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;strcpy(entry.ut_id, ttyname(STDIN_FILENO)&nbsp;+&nbsp;strlen(&quot;/dev/tty&quot;));<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time(&amp;entry.ut_time);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;strcpy(entry.ut_user, getpwuid(getuid())-&gt;pw_name);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(entry.ut_host, 0, UT_HOSTSIZE);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entry.ut_addr&nbsp;=&nbsp;0;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;setutent();<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entry.ut_type&nbsp;=&nbsp;USER_PROCESS;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entry.ut_pid&nbsp;=&nbsp;getpid();<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;strcpy(entry.ut_line, ttyname(STDIN_FILENO)&nbsp;+&nbsp;strlen(&quot;/dev/&quot;));<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;only correct for ptys named&nbsp;/dev/tty[pqr][0-9a-z]&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;strcpy(entry.ut_id, ttyname(STDIN_FILENO)&nbsp;+&nbsp;strlen(&quot;/dev/tty&quot;));<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time(&amp;entry.ut_time);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;strcpy(entry.ut_user, getpwuid(getuid())-&gt;pw_name);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(entry.ut_host, 0, UT_HOSTSIZE);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entry.ut_addr&nbsp;=&nbsp;0;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;setutent();<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pututline(&amp;entry); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;system(&quot;echo after adding entry:;who&quot;); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entry.ut_type&nbsp;=&nbsp;DEAD_PROCESS;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(entry.ut_line, 0, UT_LINESIZE);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entry.ut_time&nbsp;=&nbsp;0;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(entry.ut_user, 0, UT_NAMESIZE);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;setutent();<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entry.ut_type&nbsp;=&nbsp;DEAD_PROCESS;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(entry.ut_line, 0, UT_LINESIZE);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entry.ut_time&nbsp;=&nbsp;0;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(entry.ut_user, 0, UT_NAMESIZE);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;setutent();<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pututline(&amp;entry); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;system(&quot;echo after removing entry:;who&quot;); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;endutent();<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;endutent();<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-getutmp/">getutmp</a></code>(3), <code><a href="/docs/linux/man/5-utmp/">utmp</a></code>(5)</p>

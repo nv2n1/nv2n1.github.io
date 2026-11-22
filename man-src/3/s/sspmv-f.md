@@ -10,7 +10,7 @@ description: "sspmv.f –"
 <p>sspmv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sspmv</code> (UPLO, N, ALPHA, AP, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>sspmv</code> (UPLO, N, ALPHA, AP, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>SSPMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sspmv (characterUPLO, integerN, realALPHA, real, dimension(*)AP, real, dimension(*)X, integerINCX, realBETA, real, dimension(*)Y, integerINCY)</h3>

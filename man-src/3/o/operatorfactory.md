@@ -16,7 +16,7 @@ description: "ql/methods/finitedifferences/operatorfactory.hpp – Factory for f
 #include &lt;ql/methods/finitedifferences/bsmtermoperator.hpp&gt;
 #include &lt;ql/methods/finitedifferences/onefactoroperator.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>OperatorFactory</code><br />
+<p>class <code>OperatorFactory</code><br/>
  <i>Black-Scholes-Merton differential operator. </i></p>
 <h2>Detailed Description</h2>
 <p>Factory for finite difference operators.</p>

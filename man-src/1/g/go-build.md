@@ -18,7 +18,7 @@ description: "go-build – compile the packages named by the import paths"
 <p> When compiling a single main package, build writes the resulting executable to an output file named after the first source file (&#8216;go build ed.go rx.go&#8217; writes &#8216;ed&#8217; or &#8216;ed.exe&#8217;) or the source code directory (&#8216;go build unix/sam&#8217; writes &#8216;sam&#8217; or &#8216;sam.exe&#8217;). The &#8216;.exe&#8217; suffix is added when writing a Windows executable. </p>
 <p> When compiling multiple packages or a single non-main package, build compiles the packages but discards the resulting object, serving only as a check that the packages can be built. </p>
 <p> The -o flag forces build to write the resulting executable or object to the named output file or directory, instead of the default behavior described in the last two paragraphs. If the named output is an existing directory or ends with a slash or backslash, then any resulting executables will be written to that directory. </p>
-<p> The -i flag installs the packages that are dependencies of the target.<br />
+<p> The -i flag installs the packages that are dependencies of the target.<br/>
  The -i flag is deprecated. Compiled packages are cached automatically.</p>
 <h2>OPTIONS</h2>
 <p> The build flags are shared by the build, clean, get, install, list, run, and test commands:</p>
@@ -28,10 +28,10 @@ description: "go-build – compile the packages named by the import paths"
 <dt><code>-n</code></dt>
 <dd> print the commands but do not run them.</dd>
 <dt><code>-p </code><i>n</i></dt>
-<dd> the number of programs, such as build commands or test binaries, that can be run in parallel.<br />
+<dd> the number of programs, such as build commands or test binaries, that can be run in parallel.<br/>
  The default is GOMAXPROCS, normally the number of CPUs available.</dd>
 <dt><code>-race</code></dt>
-<dd> enable data race detection.<br />
+<dd> enable data race detection.<br/>
  Supported only on linux/amd64, freebsd/amd64, darwin/amd64, windows/amd64, linux/ppc64le and linux/arm64 (only for 48-bit VMA).</dd>
 <dt><code>-msan</code></dt>
 <dd> enable interoperation with memory sanitizer. Supported only on linux/amd64, linux/arm64 and only with Clang/LLVM as the host C compiler. On linux/arm64, pie build mode will be used.</dd>
@@ -72,12 +72,12 @@ description: "go-build – compile the packages named by the import paths"
 <dt><code>-trimpath</code></dt>
 <dd> remove all file system paths from the resulting executable. Instead of absolute file system paths, the recorded file names will begin with either &quot;go&quot; (for the standard library), or a module path [at] version (when using modules), or a plain import path (when using GOPATH).</dd>
 <dt><code>-toolexec &#8216;</code><i>cmd args</i><code>&#8216;</code></dt>
-<dd> a program to use to invoke toolchain programs like vet and asm. For example, instead of running asm, the go command will run &#8216;cmd args /path/to/asm &lt;arguments for asm&gt;&#8217;.<br />
+<dd> a program to use to invoke toolchain programs like vet and asm. For example, instead of running asm, the go command will run &#8216;cmd args /path/to/asm &lt;arguments for asm&gt;&#8217;.<br/>
  The TOOLEXEC_IMPORTPATH environment variable will be set, matching &#8216;go list -f &#123;&#123;.ImportPath}}&#8217; for the package being built. </dd>
 </dl>
 <p> The -asmflags, -gccgoflags, -gcflags, and -ldflags flags accept a space-separated list of arguments to pass to an underlying tool during the build. To embed spaces in an element in the list, surround it with either single or double quotes. The argument list may be preceded by a package pattern and an equal sign, which restricts the use of that argument list to the building of packages matching that pattern (see &#8216;go help packages&#8217; for a description of package patterns). Without a pattern, the argument list applies only to the packages named on the command line. The flags may be repeated with different patterns in order to specify different arguments for different sets of packages. If a package matches patterns given in multiple flags, the latest match on the command line wins. For example, &#8216;go build -gcflags=-S fmt&#8217; prints the disassembly only for package fmt, while &#8216;go build -gcflags=all=-S fmt&#8217; prints the disassembly for fmt and all its dependencies. </p>
-<p> For more about specifying packages, see <code><a href="/docs/linux/man/7-go-packages/">go-packages</a></code>(7).<br />
- For more about where packages and binaries are installed, see <code>go-gopath</code>(1).<br />
+<p> For more about specifying packages, see <code><a href="/docs/linux/man/7-go-packages/">go-packages</a></code>(7).<br/>
+ For more about where packages and binaries are installed, see <code>go-gopath</code>(1).<br/>
  For more about calling between Go and C/C++, run &#8216;go help c&#8217;. </p>
 <p> Note: Build adheres to certain conventions such as those described by &#8216;go help gopath&#8217;. Not all projects can follow these conventions, however. Installations that have their own conventions or that use a separate software build system may choose to use lower-level invocations such as &#8216;go tool compile&#8217; and &#8216;go tool link&#8217; to avoid some of the overheads and design decisions of the build tool.</p>
 <h2>SEE ALSO</h2>

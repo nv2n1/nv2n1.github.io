@@ -36,34 +36,34 @@ description: "tp-magic-config — Helps creating ‘Magic’ tool plugins for Tu
 <dd> Outputs the user directory where the installed copy of <i>Tux Paint</i> expects plugins to install their local data files. (e.g., &quot;/home/username/.tuxpaint/plugins/data&quot;). This is the same value that plugins installed locally will receive in the &quot;data_directory&quot; string within the &quot;magic_api&quot; structure sent to the plugins&#8217; functions. </dd>
 </dl>
 <h2>SYSTEM-WIDE SHELL EXAMPLES</h2>
-<p> $ gcc -shared `tp-magic-config &#8211;cflags` my_plugin.c -o my_plugin.so<br />
- # cp my_plugin.so `tp-magic-config &#8211;pluginprefix`<br />
- # cp my_plugin_icon.png `tp-magic-config &#8211;dataprefix`/images/magic<br />
- # cp my_plugin.html `tp-magic-config &#8211;plugindocrefix`/html<br />
+<p> $ gcc -shared `tp-magic-config &#8211;cflags` my_plugin.c -o my_plugin.so<br/>
+ # cp my_plugin.so `tp-magic-config &#8211;pluginprefix`<br/>
+ # cp my_plugin_icon.png `tp-magic-config &#8211;dataprefix`/images/magic<br/>
+ # cp my_plugin.html `tp-magic-config &#8211;plugindocrefix`/html<br/>
  # cp my_plugin.txt `tp-magic-config &#8211;plugindocrefix` </p>
 <h2>LOCAL SHELL EXAMPLES</h2>
-<p> $ gcc -shared `tp-magic-config &#8211;cflags` my_plugin.c -o my_plugin.so<br />
- $ mkdir -p `tp-magic-config &#8211;localpluginprefix`<br />
- $ cp my_plugin.so `tp-magic-config &#8211;localpluginprefix`<br />
- $ mkdir -p `tp-magic-config &#8211;localdataprefix`/images/magic<br />
+<p> $ gcc -shared `tp-magic-config &#8211;cflags` my_plugin.c -o my_plugin.so<br/>
+ $ mkdir -p `tp-magic-config &#8211;localpluginprefix`<br/>
+ $ cp my_plugin.so `tp-magic-config &#8211;localpluginprefix`<br/>
+ $ mkdir -p `tp-magic-config &#8211;localdataprefix`/images/magic<br/>
  $ cp my_plugin_icon.png `tp-magic-config &#8211;localdataprefix`/images/magic </p>
 <h2>SYSTEM-WIDE MAKEFILE EXAMPLE</h2>
-<p> MAGIC_CFLAGS=$(shell tp-magic-config &#8211;cflags)<br />
- MAGIC_PREFIX=$(shell tp-magic-config &#8211;pluginprefix)<br />
- MAGIC_DOC_PREFIX=$(shell tp-magic-config &#8211;plugindocprefix)<br />
+<p> MAGIC_CFLAGS=$(shell tp-magic-config &#8211;cflags)<br/>
+ MAGIC_PREFIX=$(shell tp-magic-config &#8211;pluginprefix)<br/>
+ MAGIC_DOC_PREFIX=$(shell tp-magic-config &#8211;plugindocprefix)<br/>
  DATA_PREFIX=$(shell tp-magic-config &#8211;dataprefix) </p>
 <p> all: my_plugin.so </p>
 <p> my_plugin.so: my_plugin.c </p>
 <p> install: install-so install-data install-docs </p>
-<p> install-so:<br />
+<p> install-so:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>mkdir -p $(MAGIC_PREFIX)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cp my_plugin.so $(MAGIC_PREFIX)/</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>chmod 644 $(MAGIC_PREFIX)/my_plugin.so</p>
-<p> install-data:<br />
+<p> install-data:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>mkdir -p $(DATA_PREFIX)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cp icons/my_plugin_icon.png $(DATA_PREFIX)/images/magic/</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>chmod 644 $(DATA_PREFIX)/images/magic/my_plugin_icon.png</p>
-<p> install-docs:<br />
+<p> install-docs:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>mkdir -p $(MAGIC_DOC_PREFIX)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cp docs/my_plugin.html $(MAGIC_DOC_PREFIX)/html/</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>chmod 644 $(MAGIC_DOC_PREFIX)/html/my_plugin.html</p>

@@ -11,8 +11,8 @@ description: "aa_autoinitmouse – easy to use AA-lib mouse initialization funct
 <p> aa_autoinitmouse &#8211; easy to use AA-lib mouse initialization function.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
-<p> int aa_autoinitmouse<br />
- (<br />
+<p> int aa_autoinitmouse<br/>
+ (<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>struct aa_context *c,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int mode</p>
 <p> ); </code></p>

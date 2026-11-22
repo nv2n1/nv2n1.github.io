@@ -39,8 +39,8 @@ description: "sane-dmc – SANE backend for the Polaroid Digital Microscope Came
 <h2>Configuration</h2>
 <p>The contents of the <i>dmc.conf</i> file is a list of device names that correspond to DMC scanners. Empty lines and lines starting with a hash mark (#) are ignored. A sample configuration file is shown below: </p>
 <dl>
-<dd>/dev/scanner<br />
- # this is a comment<br />
+<dd>/dev/scanner<br/>
+ # this is a comment<br/>
  /dev/sge</dd></dl>
 <h2>Files</h2>
 <dl>

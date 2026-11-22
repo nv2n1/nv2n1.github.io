@@ -13,7 +13,7 @@ description: "QwtDialSimpleNeedle –"
 <p>#include &lt;qwt_dial_needle.h&gt; </p>
 <p> Inherits <code>QwtDialNeedle</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>Style</code> { <code>Arrow</code>, <code>Ray</code> }<br />
+<p>enum <code>Style</code> { <code>Arrow</code>, <code>Ray</code> }<br/>
  <i>Style of the needle. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtDialSimpleNeedle</code> (<code>Style</code>, bool hasKnob=true, const QColor &amp;mid=Qt::gray, const QColor &amp;base=Qt::darkGray) </p>
@@ -48,17 +48,17 @@ description: "QwtDialSimpleNeedle –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>style</i> Style<br />
- <i>hasKnob</i> With/Without knob<br />
- <i>mid</i> Middle color<br />
+<dd><i>style</i> Style<br/>
+ <i>hasKnob</i> With/Without knob<br/>
+ <i>mid</i> Middle color<br/>
  <i>base</i> Base color</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtDialSimpleNeedle::drawNeedle (QPainter *painter, doublelength, QPalette::ColorGroupcolorGroup) const [protected], [virtual]</h3>
 <p>Draw the needle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>length</i> Length of the needle<br />
+<dd><i>painter</i> Painter<br/>
+ <i>length</i> Length of the needle<br/>
  <i>colorGroup</i> Color group, used for painting</dd></dl>
 <p> Implements <code>QwtDialNeedle</code>.</p>
 <h3>void QwtDialSimpleNeedle::setWidth (doublewidth)</h3>

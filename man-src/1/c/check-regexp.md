@@ -13,9 +13,9 @@ description: "check-regexp – test regular expressions from the command line"
 <p> <code>check-regexp</code> <i>&#8216;regular expression&#8217; &#8216;string1&#8217; &#8216;string2&#8217; </i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> check-regexp (GNU Source-highlight) </p>
-<p> You simply pass as the first command line argument the regular expression and then the strings you want to try to match.<br />
+<p> You simply pass as the first command line argument the regular expression and then the strings you want to try to match.<br/>
  It is crucial, in order to avoid shell substitutions, to enclose both the expression and the strings in single quotes. </p>
-<p> The program then prints some information about the possibly successful matching.<br />
+<p> The program then prints some information about the possibly successful matching.<br/>
  In the output the what[0] part represents the whole match, and the what[i] part represents the i-th marked subexpression that matched. </p>
 <p> The program also prints possible prefix and suffix.</p>
 <h2>OPTIONS</h2>

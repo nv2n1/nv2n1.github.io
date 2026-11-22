@@ -18,13 +18,13 @@ description: "xine-config – script to get information about the installed vers
 <p> <i>xine-config</i> accepts the following options, passing them on (possibly modified) to <i>pkg-config libxine</i>:</p>
 <dl>
 <dt><code>&#8211;version</code></dt>
-<dd> &#8211;modversion<br />
+<dd> &#8211;modversion<br/>
  Print the currently installed version of <i>libxine</i> on the standard output.</dd>
 <dt><code>&#8211;libs</code></dt>
 <dd>
 </dd><dt> <code>&#8211;cflags</code> </dt>
 <dt> <code>&#8211;objcflags</code></dt>
-<dd>Passed on unmodified.<br />
+<dd>Passed on unmodified.<br/>
  Print the compiler flags (for C and Objective C, respectively) that are necessary to compile a program that uses <i>libxine</i>.</dd>
 <dt><code>&#8211;bindir</code></dt>
 <dd>
@@ -35,10 +35,10 @@ description: "xine-config – script to get information about the installed vers
 <dd>
 </dd><dd>Print the directory where, respectively, <i>libxine</i> binaries, plugins, data files, scripts and locale data are stored/expected.</dd>
 <dt><code>&#8211;prefix=PREFIX</code></dt>
-<dd> &#8211;define-variable=prefix=PREFIX<br />
+<dd> &#8211;define-variable=prefix=PREFIX<br/>
  If specified, use PREFIX instead of the installation prefix that <i>xine-lib</i> was built with. This option is also used for the exec prefix if &#8211;exec-prefix was not specified. </dd>
 <dt><code>&#8211;exec-prefix=PREFIX</code></dt>
-<dd> &#8211;define-variable=exec_prefix=PREFIX<br />
+<dd> &#8211;define-variable=exec_prefix=PREFIX<br/>
  If specified, use PREFIX instead of the installation exec prefix that <i>xine-lib</i> was built with.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>xine-lib</code>(3), <code><a href="/docs/linux/man/1-xine/">xine</a></code>(1)</p>

@@ -13,7 +13,7 @@ description: "dh_md5sums – generate DEBIAN/md5sums file"
 <p> <code>dh_md5sums</code> [<i>debhelper options</i>] [<code>-x</code>] [<code>-X</code><i>item</i>] [<code>&#8211;include-conffiles</code>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>dh_md5sums</code> is a debhelper program that is responsible for generating a <i>DEBIAN/md5sums</i> file, which lists the md5sums of each file in the package. These files are used by <code>dpkg &#8211;verify</code> or the <i>debsums</i>(1) program. </p>
-<p> All files in <i></i><font SIZE="-1"><i>DEBIAN/</i></font><i></i> are omitted from the <i>md5sums</i> file, as are all conffiles (unless you use the <code>&#8211;include-conffiles</code> switch). </p>
+<p> All files in <i></i><i>DEBIAN/</i><i></i> are omitted from the <i>md5sums</i> file, as are all conffiles (unless you use the <code>&#8211;include-conffiles</code> switch). </p>
 <p> The md5sums file is installed with proper permissions and ownerships.</p>
 <h2>OPTIONS</h2>
 <dl>

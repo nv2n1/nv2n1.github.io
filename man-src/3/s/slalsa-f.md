@@ -10,7 +10,7 @@ description: "slalsa.f –"
 <p>slalsa.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slalsa</code> (ICOMPQ, SMLSIZ, N, NRHS, B, LDB, BX, LDBX, U, LDU, VT, K, DIFL, DIFR, Z, POLES, GIVPTR, GIVCOL, LDGCOL, PERM, GIVNUM, C, S, WORK, IWORK, INFO)<br />
+<p>subroutine <code>slalsa</code> (ICOMPQ, SMLSIZ, N, NRHS, B, LDB, BX, LDBX, U, LDU, VT, K, DIFL, DIFR, Z, POLES, GIVPTR, GIVCOL, LDGCOL, PERM, GIVNUM, C, S, WORK, IWORK, INFO)<br/>
  <i></i><code>SLALSA</code> computes the SVD of the coefficient matrix in compact form. Used by sgelsd.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slalsa (integerICOMPQ, integerSMLSIZ, integerN, integerNRHS, real, dimension( ldb, * )B, integerLDB, real, dimension( ldbx, * )BX, integerLDBX, real, dimension( ldu, * )U, integerLDU, real, dimension( ldu, * )VT, integer, dimension( * )K, real, dimension( ldu, * )DIFL, real, dimension( ldu, * )DIFR, real, dimension( ldu, * )Z, real, dimension( ldu, * )POLES, integer, dimension( * )GIVPTR, integer, dimension( ldgcol, * )GIVCOL, integerLDGCOL, integer, dimension( ldgcol, * )PERM, real, dimension( ldu, * )GIVNUM, real, dimension( * )C, real, dimension( * )S, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

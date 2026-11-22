@@ -76,27 +76,27 @@ CONTROL := {
 <h2>Examples</h2>
 <p>The following example encapsulates incoming IP packets on eth0 into MPLS with a label 123 and sends them out eth1:</p>
 <dl>
-<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev eth0 protocol ip parent ffff: flower \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mpls push protocol mpls_uc label 123 \<br />
+<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev eth0 protocol ip parent ffff: flower \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mpls push protocol mpls_uc label 123 \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mirred egress redirect dev eth1
 </dd></dl>
 <p> In this example, incoming MPLS unicast packets on eth0 are decapsulated and redirected to eth1:</p>
 <dl>
-<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev eth0 protocol mpls_uc parent ffff: flower \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mpls pop protocol ipv4 \<br />
+<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev eth0 protocol mpls_uc parent ffff: flower \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mpls pop protocol ipv4 \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mirred egress redirect dev eth1
 </dd></dl>
 <p> Here is another example, where incoming Ethernet frames are encapsulated into MPLS with label 123 and TTL 64. Then, an outer Ethernet header is added and the resulting frame is finally sent on eth1:</p>
 <dl>
-<dd>#tc qdisc add dev eth0 ingress #tc filter add dev eth0 ingress matchall \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mpls mac_push label 123 ttl 64 \<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action vlan push_eth \<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>dst_mac 02:00:00:00:00:02 \<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>src_mac 02:00:00:00:00:01 \<br />
+<dd>#tc qdisc add dev eth0 ingress #tc filter add dev eth0 ingress matchall \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mpls mac_push label 123 ttl 64 \<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action vlan push_eth \<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>dst_mac 02:00:00:00:00:02 \<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>src_mac 02:00:00:00:00:01 \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mirred egress redirect dev eth1
 </dd></dl>
 <p> The following example assumes that incoming MPLS packets with label 123 transport Ethernet frames. The outer Ethernet and the MPLS headers are stripped, then the inner Ethernet frame is sent on eth1:</p>
 <dl>
-<dd>#tc qdisc add dev eth0 ingress #tc filter add dev eth0 ingress protocol mpls_uc \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>flower mpls_label 123 mpls_bos 1 \<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action vlan pop_eth \<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mpls pop protocol teb \<br />
+<dd>#tc qdisc add dev eth0 ingress #tc filter add dev eth0 ingress protocol mpls_uc \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>flower mpls_label 123 mpls_bos 1 \<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action vlan pop_eth \<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mpls pop protocol teb \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mirred egress redirect dev eth1
 </dd></dl>
 <h2>See Also</h2>

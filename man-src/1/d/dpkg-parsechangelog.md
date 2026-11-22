@@ -18,9 +18,9 @@ description: "dpkg-parsechangelog – parse Debian changelog files"
 <dt><code>-l</code>, <code>&#8211;file</code> <i>changelog-file</i></dt>
 <dd> Specifies the changelog file to read information from. A &#8216;-&#8216; can be used to specify reading from standard input. The default is <code>debian/changelog</code>.</dd>
 <dt><code>-F</code> <i>changelog-format</i></dt>
-<dd> Specifies the format of the changelog. By default the format is read from a special line near the bottom of the changelog or failing that defaults to the <code>debian</code> standard format. See also <font SIZE="-1"><code>CHANGELOG FORMATS</code></font>.</dd>
+<dd> Specifies the format of the changelog. By default the format is read from a special line near the bottom of the changelog or failing that defaults to the <code>debian</code> standard format. See also <code>CHANGELOG FORMATS</code>.</dd>
 <dt><code>-L</code> <i>libdir</i></dt>
-<dd> Obsolete option without effect (since dpkg 1.18.8). Setting the perl environment variables <font SIZE="-1"><code>PERL5LIB</code></font> or <font SIZE="-1"><code>PERLLIB</code></font> has a similar effect when looking for the parser perl modules.</dd>
+<dd> Obsolete option without effect (since dpkg 1.18.8). Setting the perl environment variables <code>PERL5LIB</code> or <code>PERLLIB</code> has a similar effect when looking for the parser perl modules.</dd>
 <dt><code>-S</code>, <code>&#8211;show-field</code> <i>field</i></dt>
 <dd> Specifies the name of the field to show (since dpkg 1.17.0). The field name is not printed, only its value.</dd>
 <dt><code>-?</code>, <code>&#8211;help</code></dt>
@@ -98,9 +98,9 @@ description: "dpkg-parsechangelog – parse Debian changelog files"
 <p> Short option parsing with non-bundled values available only since dpkg 1.18.0.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
-<dt><font SIZE="-1"><code>DPKG_NLS</code></font></dt>
+<dt><code>DPKG_NLS</code></dt>
 <dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dd></dl>
 <h2>FILES</h2>
 <dl>

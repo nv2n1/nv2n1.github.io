@@ -10,21 +10,21 @@ description: "frepple – open source production planning and scheduling"
 
 <p> frepple &#8211; open source production planning and scheduling </p>
 <h2>SYNOPSIS</h2>
-<p> <code>frepple [options]</code> <i>&lt;files&gt;</i><br />
- <code>frepple [options]</code> <i>&lt;directories&gt;</i><br />
+<p> <code>frepple [options]</code> <i>&lt;files&gt;</i><br/>
+ <code>frepple [options]</code> <i>&lt;directories&gt;</i><br/>
  <code>frepple [options]</code> </p>
 <h2>DESCRIPTION</h2>
 <p> FrePPLe is an open source production planning and scheduling application. </p>
 <p> This program reads XML input data, and also embeds a Python interpeter to execute instructions in the Python language. </p>
-<p> The input data can be provided in the following ways:<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Passing one or more XML files.<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Passing one or more directories as arguments.<br />
-&nbsp;<wbr>The program will process all files with the extension&nbsp;<wbr>&#8216;.xml&#8217;&nbsp;<wbr>found<br />
-&nbsp;<wbr>in the directories in alphabetical order.<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Passing one or more Python files with the extension&nbsp;<wbr>&#8216;.py&#8217;.<br />
-&nbsp;<wbr>The Python commands are executed in the embedded interpreter.<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; When passing no file or directory arguments, input will be read<br />
-&nbsp;<wbr>from the standard input. XML data can be redirected or piped to the<br />
+<p> The input data can be provided in the following ways:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Passing one or more XML files.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Passing one or more directories as arguments.<br/>
+&nbsp;<wbr>The program will process all files with the extension&nbsp;<wbr>&#8216;.xml&#8217;&nbsp;<wbr>found<br/>
+&nbsp;<wbr>in the directories in alphabetical order.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Passing one or more Python files with the extension&nbsp;<wbr>&#8216;.py&#8217;.<br/>
+&nbsp;<wbr>The Python commands are executed in the embedded interpreter.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; When passing no file or directory arguments, input will be read<br/>
+&nbsp;<wbr>from the standard input. XML data can be redirected or piped to the<br/>
 &nbsp;<wbr>application. </p>
 <h2>OPTIONS</h2>
 <dl>

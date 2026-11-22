@@ -14,7 +14,7 @@ description: "qsub – submit pbs job"
 <h2>DESCRIPTION</h2>
 <p> To create a job is to submit an executable script to a batch server. The batch server will be the default server unless the <i> option is specified. See discussion of PBS_DEFAULT under Environment Variables below. Typically, the script is a shell script which will be executed by a command shell such as sh or csh. </p>
 <p> Options on the </i><code>qsub</code> command allow the specification of attributes which affect the behavior of the job. </p>
-<p> The qsub command will pass certain environment variables in the <i> </i><font SIZE="-1"><i> attribute of the job. These variables will be available to the job. The value for the following variables will be taken from the environment of the qsub command: </i><code>HOME</code>, <code>LANG</code>, <code>LOGNAME</code>, <code>PATH</code>, <code>MAIL</code>, <code>SHELL</code>, and <code>TZ</code>. These values will be assigned to a new name which is the current name prefixed with the string &quot;PBS_O_&quot;. For example, the job will have access to an environment variable named <code>PBS_O_HOME</code> which have the value of the variable <code>HOME</code> in the qsub command environment. </p>
+<p> The qsub command will pass certain environment variables in the <i> </i><i> attribute of the job. These variables will be available to the job. The value for the following variables will be taken from the environment of the qsub command: </i><code>HOME</code>, <code>LANG</code>, <code>LOGNAME</code>, <code>PATH</code>, <code>MAIL</code>, <code>SHELL</code>, and <code>TZ</code>. These values will be assigned to a new name which is the current name prefixed with the string &quot;PBS_O_&quot;. For example, the job will have access to an environment variable named <code>PBS_O_HOME</code> which have the value of the variable <code>HOME</code> in the qsub command environment. </p>
 <p> In addition to the above, the following environment variables will be available to the batch job.</p>
 <dl>
 <dt><code>PBS_O_HOST</code></dt>
@@ -37,7 +37,7 @@ description: "qsub – submit pbs job"
 <dd> the name of the file contain the list of nodes assigned to the job (for parallel and cluster systems).</dd>
 <dt><code>PBS_QUEUE</code></dt>
 <dd> the name of the queue from which the job is executed.</dd></dl>
-<p> </font></p>
+<p> </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt>-a date_time</dt>
@@ -82,8 +82,8 @@ description: "qsub – submit pbs job"
 <dt>-D path</dt>
 <dd> Defines the root directory to be used for the job. This option sets the environment variable PBS_O_ROOTDIR.</dd>
 <dt>-e path</dt>
-<dd> Defines the path to be used for the standard error stream of the batch job. The argument is of the form:<br />
- </i><code><br />
+<dd> Defines the path to be used for the standard error stream of the batch job. The argument is of the form:<br/>
+ </i><code><br/>
  where is the name of a host to which the file will be returned and is the path name on that host in the syntax recognized by POSIX. The argument will be interpreted as follows:</dd>
 <dl>
 <dl>
@@ -99,11 +99,11 @@ description: "qsub – submit pbs job"
 <dd> Where hostname specifies the name of the host that the file should be returned to. The path will be the default file name.</dd></dl>
 </dl>
 <dt>
-</dt><dd> If the <i> option is not specified or the </i><code>path_name</code> is not specified or is specified and is a directory, the default file name for the standard error stream will be used. The default name has the following form:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>job_name.esequence_number</code><br />
+</dt><dd> If the <i> option is not specified or the </i><code>path_name</code> is not specified or is specified and is a directory, the default file name for the standard error stream will be used. The default name has the following form:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>job_name.esequence_number</code><br/>
  where <code>job_name</code> is the name of the job, see <i> option, and </i><code>sequence_number</code> is the job number assigned when the job is submitted.</dd>
 <dt>-f</dt>
-<dd> Specifies that the job is fault tolerant. The <i> </i><font SIZE="-1"><i> attribute will be set to true, which indicates that the job can survive the loss of a mom other than the &quot;mother superior&quot; mom (the first node in the exec hosts )</dd>
+<dd> Specifies that the job is fault tolerant. The <i> </i><i> attribute will be set to true, which indicates that the job can survive the loss of a mom other than the &quot;mother superior&quot; mom (the first node in the exec hosts )</dd>
 <dt>-h</dt>
 <dd> Specifies that a user hold be applied to the job at submission time.</dd>
 <dt>-I</dt>
@@ -132,7 +132,7 @@ description: "qsub – submit pbs job"
 <dd> Neither stream is retained.</dd></dl>
 </dl>
 <dt>-l resource_list</dt>
-<dd> Defines the resources that are required by the job and establishes a limit to the amount of resource that can be consumed. If not set for a generally available resource, such as CPU time, the limit is infinite. The <i> argument is of the form:<br />
+<dd> Defines the resources that are required by the job and establishes a limit to the amount of resource that can be consumed. If not set for a generally available resource, such as CPU time, the limit is infinite. The <i> argument is of the form:<br/>
  </i><code></dd>
 <dt>-m mail_options</dt>
 <dd> Defines the set of conditions under which the execution server will send a mail message about the job. The </code><i> argument is a string which consists of either the single character &quot;</i><code>n</code>&quot;, or one or more of the characters &quot;<code>a</code>&quot;, &quot;<code>b</code>&quot;, and &quot;<code>e</code>&quot;.</dd>
@@ -154,8 +154,8 @@ description: "qsub – submit pbs job"
 <dt>-M user_list</dt>
 <dd> Declares the list of users to whom mail is sent by the execution server when it sends mail about the job.</dd>
 <dt>
-</dt><dd> The argument is of the form:<br />
- </i><code><br />
+</dt><dd> The argument is of the form:<br/>
+ </i><code><br/>
  If unset, the list defaults to the submitting user at the qsub host, i.e. the job owner.</dd>
 <dt>-n</dt>
 <dd> Specifies that the job has exclusive access to the nodes it is executing on. This is intended to be used in conjunction with a scheduler that enforces exclusive access, and it tells the cpuset to give the job access to all of that node&#8217;s resources.</dd>
@@ -164,8 +164,8 @@ description: "qsub – submit pbs job"
 <dt>
 </dt><dd> If the </code><i> option is not specified, the job name will be the base name of the job script file specified on the command line. If no script file name was specified and the script was read from the standard input, then the job name will be set to </i><code></dd>
 <dt>-o path</dt>
-<dd> Defines the path to be used for the standard output stream of the batch job. The </code><i> argument is of the form:<br />
- </i><code><br />
+<dd> Defines the path to be used for the standard output stream of the batch job. The </code><i> argument is of the form:<br/>
+ </i><code><br/>
  where is the name of a host to which the file will be returned and is the path name on that host in the syntax recognized by POSIX. The argument will be interpreted as follows:</dd>
 <dl>
 <dl>
@@ -181,8 +181,8 @@ description: "qsub – submit pbs job"
 <dd> Where hostname specifies the name of the host that the file should be returned to. The path will be the default file name.</dd></dl>
 </dl>
 <dt>
-</dt><dd> If the <i> option is not specified or the </i><code>path_name</code> is not specified or is specified and is a directory, the default file name for the standard output stream will be used. The default name has the following form:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>job_name.osequence_number</code><br />
+</dt><dd> If the <i> option is not specified or the </i><code>path_name</code> is not specified or is specified and is a directory, the default file name for the standard output stream will be used. The default name has the following form:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>job_name.osequence_number</code><br/>
  where <code>job_name</code> is the name of the job, see <i> option, and </i><code>sequence_number</code> is the job number assigned when the job is submitted.</dd>
 <dt>-p priority</dt>
 <dd> Defines the priority of the job. The <i> argument must be a integer between -1024 and +1023 inclusive. The default is no priority which is equivalent to a priority of zero.</dd>
@@ -195,7 +195,7 @@ description: "qsub – submit pbs job"
 <dt>
 </dt><dd> If the <i> option is not specified, the qsub command will submit the script to the default server. See PBS_DEFAULT under the Environment Variables section on this man page and the PBS ERS section 2.7.4, &quot;Default Server&quot;.</dd>
 <dt>
-</dt><dd> If the option is specified, it is in one of the following three forms:<br />
+</dt><dd> If the option is specified, it is in one of the following three forms:<br/>
  </i><code> </dd>
 <dt>
 </dt><dd> If the </code><i> argument names a queue and does not name a server, the job will be submitted to the named queue at the default server.</dd>
@@ -210,8 +210,8 @@ description: "qsub – submit pbs job"
 <dt>-S path_list</dt>
 <dd> Declares the shell that interprets the job script.</dd>
 <dt>
-</dt><dd> The option argument <i> is in the form:<br />
- </i><code><br />
+</dt><dd> The option argument <i> is in the form:<br/>
+ </i><code><br/>
  Only one path may be specified for any host named. Only one path may be specified without the corresponding host name. The path selected will be the one with the host name that matched the name of the execution host. If no matching host is found, then the path specified without a host will be selected, if present.</dd>
 <dt>
 </dt><dd> If the </code><i> option is not specified, the option argument is the null string, or no entry from the is selected, the execution will use the user&#8217;s login shell on the execution host.</dd>
@@ -230,13 +230,13 @@ description: "qsub – submit pbs job"
 <dt>-T script_name</dt>
 <dd> Allows for per job prologue and epilogue scripts. The full script name will be prologue.[name] or epilogue.[name]. For the job submission, only request the name of the prologue or epilogue script.</dd>
 <dt>
-</dt><dd> Example: </i><code><br />
+</dt><dd> Example: </i><code><br/>
  Specifies to use the script prologue.prescript</dd>
 <dt>-u user_list</dt>
 <dd> Defines the user name under which the job is to run on the execution system.</dd>
 <dt>
-</dt><dd> The </code><i> argument is of the form:<br />
- </i><code><br />
+</dt><dd> The </code><i> argument is of the form:<br/>
+ </i><code><br/>
  Only one user name may be given per specified host. Only one of the specifications may be supplied without the corresponding specification. That user name will used for execution on any host not named in the argument list. If unset, the user list defaults to the user who is running qsub.</dd>
 <dt>-v variable_list</dt>
 <dd> Expands the list of environment variables that are exported to the job.</dd>
@@ -247,15 +247,15 @@ description: "qsub – submit pbs job"
 <dt>-w path</dt>
 <dd> Defines the working directory path to be used for the job. If the </code><i> option is not specified, the default working directory is the current directory. This option sets the environment variable PBS_O_WORKDIR.</dd>
 <dt>-W additional_attributes</dt>
-<dd> The -W option allows for the specification of additional job attributes. The general syntax of the -W is in the form:<br />
- </i><code><br />
+<dd> The -W option allows for the specification of additional job attributes. The general syntax of the -W is in the form:<br/>
+ </i><code><br/>
  Note if white space occurs anywhere within the option argument string or the equal sign, &quot;=&quot;, occurs within an </code><i> string, then the string must be enclosed with either single or double quote marks.</dd>
 <dt>
 </dt><dd> PBS currently supports the following attributes within the -W option.</dd>
 <dt>
-</dt><dd> </i><code><br />
- Defines the dependency between this and other jobs. The </code><i> is in the form:<br />
- </i><code><br />
+</dt><dd> </i><code><br/>
+ Defines the dependency between this and other jobs. The </code><i> is in the form:<br/>
+ </i><code><br/>
  The </code><i>argument</i> is either a numeric count or a PBS job id according to <i>type .</i> If argument is a count, it must be greater than 0. If it is a job id and not fully specified in the form <code> it will be expanded according to the default server rules which apply to job IDs on most commands. If </code><i>argument</i> is null (the preceding colon need not be specified), the dependency of the corresponding type is cleared (unset).</dd>
 <dl>
 <dl>
@@ -304,24 +304,24 @@ description: "qsub – submit pbs job"
 <dt>
 </dt><dd> If any of the <code>before</code> forms are used, the jobs referenced by <code>jobid</code> must have the same owner as the job being submitted. Otherwise, the dependency is ignored.</dd></dl>
 <p> Error processing of the existence, state, or condition of the job on which the newly submitted job is a deferred service, i.e. the check is performed after the job is queued. If an error is detected, the new job will be deleted by the server. Mail will be sent to the job submitter stating the error. </p>
-<p> Dependency examples:<br />
+<p> Dependency examples:<br/>
  <code> </p>
 </dl>
 <dt>
 </dt><dd>
- Defines the group name under which the job is to run on the execution system. The </code><i> argument is of the form:<br />
- </i><code><br />
- Only one group name may be given per specified host. Only one of the specifications may be supplied without the corresponding specification. That group name will used for execution on any host not named in the argument list. If not set, the </code><i> </i></font><font SIZE="-2"><i> defaults to the primary group of the user under which the job will be run.</dd>
+ Defines the group name under which the job is to run on the execution system. The </code><i> argument is of the form:<br/>
+ </i><code><br/>
+ Only one group name may be given per specified host. Only one of the specifications may be supplied without the corresponding specification. That group name will used for execution on any host not named in the argument list. If not set, the </code><i> </i><i> defaults to the primary group of the user under which the job will be run.</dd>
 <dt>
-</dt><dd> </i><code><br />
+</dt><dd> </i><code><br/>
  If the interactive attribute is specified, the job is an interactive job. The -I option is a alternative method of specifying this attribute.</dd>
 <dt>
 </dt><dd>
-<p> Specifies which files are staged (copied) in before job start or staged out after the job completes execution. On completion of the job, all staged-in and staged-out files are removed from the execution system. The </code><i> is in the form<br />
- </i><code><br />
- regardless of the direction of the copy. The name is the name of the file on the system where the job executed. It may be an absolute path or relative to the home directory of the user. The name is the destination name on the host specified by The name may be absolute or relative to the user&#8217;s home directory on the destination host. The use of wildcards in the file name is not recommended. The file names map to a remote copy program (rcp) call on the execution system in the follow manner:<br />
- For stagein: rcp hostname:remote_file local_file<br />
- For stageout: rcp local_file hostname:remote_file<br />
+<p> Specifies which files are staged (copied) in before job start or staged out after the job completes execution. On completion of the job, all staged-in and staged-out files are removed from the execution system. The </code><i> is in the form<br/>
+ </i><code><br/>
+ regardless of the direction of the copy. The name is the name of the file on the system where the job executed. It may be an absolute path or relative to the home directory of the user. The name is the destination name on the host specified by The name may be absolute or relative to the user&#8217;s home directory on the destination host. The use of wildcards in the file name is not recommended. The file names map to a remote copy program (rcp) call on the execution system in the follow manner:<br/>
+ For stagein: rcp hostname:remote_file local_file<br/>
+ For stageout: rcp local_file hostname:remote_file<br/>
  Data staging examples: </p>
 <p> If TORQUE has been compiled with wordexp support, then variables can be used in the specified paths. Currently only $PBS_JOBID, $HOME, and $TMPDIR are supported for stagein.</p>
 </dd><dt>
@@ -333,7 +333,7 @@ description: "qsub – submit pbs job"
 <dd> Enables X11 forwarding. The DISPLAY environment variable must be set.</dd>
 <dt>-z</dt>
 <dd> Directs that the qsub command is not to write the job identifier assigned to the job to the command&#8217;s standard output.</dd></dl>
-<p> </code></font></p>
+<p> </code></p>
 <h2>OPERANDS</h2>
 <p> The qsub command accepts a <i> operand that is the path to the script of the job. If the path is relative, it will be expanded relative to the working directory of the qsub command. </p>
 <p> If the operand is not provided or the operand is the single character &quot;-&quot;, the qsub command reads the script from standard input. When the script is being read from Standard Input, qsub will copy the file to a temporary file. This temporary file is passed to the library interface routine pbs_submit. The temporary file is removed by qsub after pbs_submit returns or upon the receipt of a signal which would cause qsub to terminate. </i></p>
@@ -397,8 +397,8 @@ description: "qsub – submit pbs job"
 <dd> The execution user has an .rhosts file naming the submitting user on the submitting host.</dd></dl>
 </dl>
 <p> C-Shell .logout File: </p>
-<p> The following warning applies for users of the c-shell, csh. If the job is executed under the csh and a .logout</i> file exists in the home directory in which the job executes, the exit status of the job is that of the .logout script, not the job script. This may impact any inter-job dependencies. To preserve the job exit status, either remove the .logout file or place the following line as the first line in the .logout file<br />
- <code><br />
+<p> The following warning applies for users of the c-shell, csh. If the job is executed under the csh and a .logout</i> file exists in the home directory in which the job executes, the exit status of the job is that of the .logout script, not the job script. This may impact any inter-job dependencies. To preserve the job exit status, either remove the .logout file or place the following line as the first line in the .logout file<br/>
+ <code><br/>
  and the following line as the last executable line in .logout </p>
 <p> Interactive Jobs: </p>
 <p> If the </code><i> option is specified on the command line or in a script directive, or if the &quot;interactive&quot; job attribute declared true via the -W option, </i><code> either on the command line or in a script directive, the job is an interactive job. The script will be processed for directives, but will not be included with the job. When the job begins execution, all input to the job is from the terminal session in which qsub is running. </p>

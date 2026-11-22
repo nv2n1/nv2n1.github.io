@@ -12,7 +12,7 @@ description: "git-credential-cache–daemon – Temporarily store user credentia
 <pre>git credential-cache---daemon [--debug] &lt;socket&gt;</pre>
 <h2>Description</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> You probably don&#8217;t want to invoke this command yourself; it is started automatically when you use <code><a href="/docs/linux/man/1-git-credential-cache/">git-credential-cache</a></code>(1). </p>
 </dl>
 <p> This command listens on the Unix domain socket specified by <code>&lt;socket&gt;</code> for <code>git-credential-cache</code> clients. Clients may store and retrieve credentials. Each credential is held for a timeout specified by the client; once no credentials are held, the daemon exits. </p>

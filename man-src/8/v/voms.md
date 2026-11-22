@@ -137,19 +137,19 @@ description: "voms – VOMS server"
 <p> <code>-nologfile</code> </p>
 <p> This option disables logging on the voms specific logfile. Please note that specifying this option without at the same time specifying <code>-syslog</code> implies that no logging will take place.</p>
 <h2>Bugs</h2>
-<p>m[blue]<code>EGEE Bug Tracking Tool</code>m[]<font SIZE="-2">[1]</font></p>
+<p>m[blue]<code>EGEE Bug Tracking Tool</code>m[][1]</p>
 <h2>See Also</h2>
 <p>voms-proxy-init(1), voms-proxy-info(1), voms-proxy-destroy(1) </p>
-<p> m[blue]<code>EDT Auth Home page</code>m[]<font SIZE="-2">[2]</font> </p>
-<p> m[blue]<code>CVSweb</code>m[]<font SIZE="-2">[3]</font> </p>
-<p> m[blue]<code>RPM repository</code>m[]<font SIZE="-2">[4]</font></p>
+<p> m[blue]<code>EDT Auth Home page</code>m[][2] </p>
+<p> m[blue]<code>CVSweb</code>m[][3] </p>
+<p> m[blue]<code>RPM repository</code>m[][4]</p>
 <h2>Authors</h2>
 <p>Vincenzo Ciaschini Vincenzo.Ciaschini [at] cnaf.infn.it. </p>
 <p> Valerio Venturi Valerio.Venturi [at] cnaf.infn.it.</p>
 <h2>Copyright</h2>
 <p>Copyright (c) Members of the EGEE Collaboration. 2004. See the beneficiaries list for details on the copyright holders. </p>
 <p> Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at </p>
-<p> m[blue]<code><a rel="nofollow" href="http://www.apache.org">www.apache.org</a>/licenses/LICENSE-2.0</code>m[]<font SIZE="-2">[5]</font> </p>
+<p> m[blue]<code><a rel="nofollow" href="http://www.apache.org">www.apache.org</a>/licenses/LICENSE-2.0</code>m[][5] </p>
 <p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
 <h2>Notes</h2>
 <dl>

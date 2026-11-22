@@ -22,8 +22,8 @@ description: "hx509 certificate selecting functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>peer</i> the peer to set the new algorithms for<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>peer</i> the peer to set the new algorithms for<br/>
  <i>val</i> an AlgorithmsIdentier to add</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -34,7 +34,7 @@ description: "hx509 certificate selecting functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
  <i>peer</i> return an allocated peer, free with <code>hx509_peer_info_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -51,7 +51,7 @@ description: "hx509 certificate selecting functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>peer</i> peer info to update<br />
+</dt><dd> <i>peer</i> peer info to update<br/>
  <i>cert</i> cerificate of the remote peer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -62,9 +62,9 @@ description: "hx509 certificate selecting functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>peer</i> the peer to set the new algorithms for<br />
- <i>val</i> array of supported AlgorithmsIdentiers<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>peer</i> the peer to set the new algorithms for<br/>
+ <i>val</i> array of supported AlgorithmsIdentiers<br/>
  <i>len</i> length of array val.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

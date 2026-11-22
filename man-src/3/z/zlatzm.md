@@ -10,7 +10,7 @@ description: "zlatzm.f –"
 <p>zlatzm.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlatzm</code> (SIDE, M, N, V, INCV, TAU, C1, C2, LDC, WORK)<br />
+<p>subroutine <code>zlatzm</code> (SIDE, M, N, V, INCV, TAU, C1, C2, LDC, WORK)<br/>
  <i></i><code>ZLATZM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlatzm (characterSIDE, integerM, integerN, complex*16, dimension( * )V, integerINCV, complex*16TAU, complex*16, dimension( ldc, * )C1, complex*16, dimension( ldc, * )C2, integerLDC, complex*16, dimension( * )WORK)</h3>

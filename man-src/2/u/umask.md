@@ -10,7 +10,7 @@ description: "umask – set file mode creation mask"
 
 <p> umask &#8211; set file mode creation mask </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;sys/stat.h&gt;</code> </p>
 <p> <code>mode_t umask(mode_t </code><i>mask</i><code>);</code></p>
 <h2>DESCRIPTION</h2>

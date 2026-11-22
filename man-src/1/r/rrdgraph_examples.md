@@ -10,7 +10,7 @@ description: "rrdgraph_examples – Examples for rrdtool graph"
 
 <p> rrdgraph_examples &#8211; Examples for rrdtool graph </p>
 <h2>SYNOPSIS</h2>
-<p> <code>rrdtool graph /home/httpd/html/test.png &#8211;img-format </code><font SIZE="-1"><code>PNG</code></font> </p>
+<p> <code>rrdtool graph /home/httpd/html/test.png &#8211;img-format </code><code>PNG</code> </p>
 <p> followed by any of the examples below</p>
 <h2>DESCRIPTION</h2>
 <p> For your convenience some of the commands are explained here by using detailed examples. They are not always cut-and-paste ready because comments are intermixed with the examples.</p>
@@ -92,13 +92,13 @@ description: "rrdgraph_examples – Examples for rrdtool graph"
 </pre>
 </dl>
 <h3>Drawing dashed lines</h3>
-<p> Also works for <font SIZE="-1">HRULE</font> and <font SIZE="-1">VRULE</font></p>
+<p> Also works for HRULE and VRULE</p>
 <dl>
 <dt>&bull;</dt>
-<dd> default style: &#8211; &#8211; &#8211; &#8211; &#8211;<br />
+<dd> default style: &#8211; &#8211; &#8211; &#8211; &#8211;<br/>
 &nbsp;<wbr>LINE1:data#FF0000:&#8220;dashed line&#8221;:dashes</dd>
 <dt>&bull;</dt>
-<dd> more fancy style with offset: &#8211; &#8211; &#8212; &#8211; &#8212; &#8211;<br />
+<dd> more fancy style with offset: &#8211; &#8211; &#8212; &#8211; &#8212; &#8211;<br/>
 &nbsp;<wbr>LINE1:data#FF0000:&#8220;another dashed line&#8221;:dashes=15,5,5,10:dash-offset=10</dd></dl>
 <h3>Time ranges</h3>
 <pre><code>
@@ -135,14 +135,14 @@ Last four weeks : --start end - 4w --end 00 : 00 January 2001 : --start 20010101
           LINE1:scaledupper#ff0000:&quot;Upper Confidence Bound: Average bits out&quot; \
           LINE1:scaledlower#ff0000:&quot;Lower Confidence Bound: Average bits out&quot;
 </pre>
-<p> This example generates a graph of the data series in blue (<font SIZE="-1">LINE2</font> with the scaledobs virtual data source), confidence bounds in red (scaledupper and scaledlower virtual data sources), and potential failures (i.e. potential aberrant aberrant behavior) marked by vertical yellow lines (the fail data source). </p>
-<p> The raw data comes from an <font SIZE="-1">AVERAGE</font> <font SIZE="-1"><code>RRA</code></font>, the finest resolution of the observed time series (one consolidated data point per primary data point). The predicted (or smoothed) values are stored in the <font SIZE="-1">HWPREDICT</font> <font SIZE="-1"><code>RRA</code></font>. The predicted deviations (think standard deviation) values are stored in the <font SIZE="-1">DEVPREDICT</font> <font SIZE="-1"><code>RRA</code></font>. Finally, the <font SIZE="-1">FAILURES</font> <font SIZE="-1"><code>RRA</code></font> contains indicators, with 1 denoting a potential failure. </p>
-<p> All of the data is rescaled to bits (instead of Octets) by multiplying by 8. The confidence bounds are computed by an offset of 2 deviations both above and below the predicted values (the CDEFs upper and lower). Vertical lines indicated potential failures are graphed via the <font SIZE="-1">TICK</font> graph element, which converts non-zero values in an <font SIZE="-1"><code>RRA</code></font> into tick marks. Here an axis-fraction argument of 1.0 means the tick marks span the entire y-axis, and hence become vertical lines on the graph. </p>
-<p> The choice of 2 deviations (a scaling factor) matches the default used internally by the <font SIZE="-1">FAILURES</font> <font SIZE="-1"><code>RRA</code></font>. If the internal value is changed (see rrdtune), this graphing command should be changed to be consistent. </p>
+<p> This example generates a graph of the data series in blue (LINE2 with the scaledobs virtual data source), confidence bounds in red (scaledupper and scaledlower virtual data sources), and potential failures (i.e. potential aberrant aberrant behavior) marked by vertical yellow lines (the fail data source). </p>
+<p> The raw data comes from an AVERAGE <code>RRA</code>, the finest resolution of the observed time series (one consolidated data point per primary data point). The predicted (or smoothed) values are stored in the HWPREDICT <code>RRA</code>. The predicted deviations (think standard deviation) values are stored in the DEVPREDICT <code>RRA</code>. Finally, the FAILURES <code>RRA</code> contains indicators, with 1 denoting a potential failure. </p>
+<p> All of the data is rescaled to bits (instead of Octets) by multiplying by 8. The confidence bounds are computed by an offset of 2 deviations both above and below the predicted values (the CDEFs upper and lower). Vertical lines indicated potential failures are graphed via the TICK graph element, which converts non-zero values in an <code>RRA</code> into tick marks. Here an axis-fraction argument of 1.0 means the tick marks span the entire y-axis, and hence become vertical lines on the graph. </p>
+<p> The choice of 2 deviations (a scaling factor) matches the default used internally by the FAILURES <code>RRA</code>. If the internal value is changed (see rrdtune), this graphing command should be changed to be consistent. </p>
 <p> <i>A note on data reduction:</i> </p>
-<p> The <code>rrdtool</code> <i>graph</i> command is designed to plot data at a specified temporal resolution, regardless of the actually resolution of the data in the <font SIZE="-1">RRD</font> file. This can present a problem for the specialized consolidation functions which maintain a one-to-one mapping between primary data points and consolidated data points. If a graph insists on viewing the contents of these <code>RRAs</code> on a coarser temporal scale, the <i>graph</i> command tries to do something intelligent, but the confidence bands and failures no longer have the same meaning and may be misleading.</p>
+<p> The <code>rrdtool</code> <i>graph</i> command is designed to plot data at a specified temporal resolution, regardless of the actually resolution of the data in the RRD file. This can present a problem for the specialized consolidation functions which maintain a one-to-one mapping between primary data points and consolidated data points. If a graph insists on viewing the contents of these <code>RRAs</code> on a coarser temporal scale, the <i>graph</i> command tries to do something intelligent, but the confidence bands and failures no longer have the same meaning and may be misleading.</p>
 <h2>SEE ALSO</h2>
-<p> rrdgraph gives an overview of how <code>rrdtool graph</code> works. rrdgraph_data describes <font SIZE="-1"><code>DEF</code></font>,<font SIZE="-1"><code>CDEF</code></font> and <font SIZE="-1"><code>VDEF</code></font> in detail. rrdgraph_rpn describes the <font SIZE="-1"><code>RPN</code></font> language used in the <code>xDEF</code> statements. rrdgraph_graph page describes all the graph and print functions.</p>
+<p> rrdgraph gives an overview of how <code>rrdtool graph</code> works. rrdgraph_data describes <code>DEF</code>,<code>CDEF</code> and <code>VDEF</code> in detail. rrdgraph_rpn describes the <code>RPN</code> language used in the <code>xDEF</code> statements. rrdgraph_graph page describes all the graph and print functions.</p>
 <h2>AUTHOR</h2>
 <p> Program by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <p> This manual page by Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; with corrections and/or additions by several people </p>

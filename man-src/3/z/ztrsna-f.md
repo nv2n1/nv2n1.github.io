@@ -10,7 +10,7 @@ description: "ztrsna.f –"
 <p>ztrsna.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztrsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, RWORK, INFO)<br />
+<p>subroutine <code>ztrsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, RWORK, INFO)<br/>
  <i></i><code>ZTRSNA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztrsna (characterJOB, characterHOWMNY, logical, dimension( * )SELECT, integerN, complex*16, dimension( ldt, * )T, integerLDT, complex*16, dimension( ldvl, * )VL, integerLDVL, complex*16, dimension( ldvr, * )VR, integerLDVR, double precision, dimension( * )S, double precision, dimension( * )SEP, integerMM, integerM, complex*16, dimension( ldwork, * )WORK, integerLDWORK, double precision, dimension( * )RWORK, integerINFO)</h3>

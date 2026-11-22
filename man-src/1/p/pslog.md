@@ -10,7 +10,7 @@ description: "pslog – report current logs path of a process"
 
 <p> pslog &#8211; report current logs path of a process </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pslog</code> <i>pid</i> &#8230;<br />
+<p> <code>pslog</code> <i>pid</i> &#8230;<br/>
  <code>pslog -V</code></p>
 <h2>DESCRIPTION</h2>
 <p> The <code>pslog</code> command reports the current working logs of a process.</p>

@@ -18,11 +18,11 @@ description: "tokyocabinet – a modern implementation of DBM"
 <h2>The Dinosaur Wing Of The Dbm Forks</h2>
 <p>Tokyo Cabinet is developed as the successor of GDBM and QDBM on the following purposes. They are achieved and Tokyo Cabinet replaces conventional DBM products. </p>
 <dl>
-<dd>improves space efficiency : smaller size of database file.<br />
- improves time efficiency : faster processing speed.<br />
- improves parallelism : higher performance in multi-thread environment.<br />
- improves usability : simplified API.<br />
- improves robustness : database file is not corrupted even under catastrophic situation.<br />
+<dd>improves space efficiency : smaller size of database file.<br/>
+ improves time efficiency : faster processing speed.<br/>
+ improves parallelism : higher performance in multi-thread environment.<br/>
+ improves usability : simplified API.<br/>
+ improves robustness : database file is not corrupted even under catastrophic situation.<br/>
  supports 64-bit architecture : enormous memory space and database file are available.
 </dd></dl>
 <p> As with QDBM, the following three restrictions of traditional DBM: a process can handle only one database, the size of a key and a value is bounded, a database file is sparse, are cleared. Moreover, the following three restrictions of QDBM: the size of a database file is limited to 2GB, environments with different byte orders can not share a database file, only one thread can search a database at the same time, are cleared. </p>

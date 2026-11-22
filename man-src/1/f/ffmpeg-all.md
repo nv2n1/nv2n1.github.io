@@ -25,7 +25,7 @@ ffmpeg - ffmpeg video converter
 
  As a general rule, options are applied to the next specified file. Therefore, order is important, and you can have the same option on the command line multiple times. Each occurrence is then applied to the next input or output file. Exceptions from this rule are the global options (e.g. verbosity level), which should be specified first. 
 
- Do not mix input and output files --- first specify all input files, then all output files. Also do not mix options which belong to different files. All options apply <font SIZE="-1">ONLY</font> to the next input or output file and are reset between files.
+ Do not mix input and output files --- first specify all input files, then all output files. Also do not mix options which belong to different files. All options apply ONLY to the next input or output file and are reset between files.
 <dl>
 <dt>&bull;
 </dt><dd> To set the video bitrate of the output file to 64 kbit/s: 
@@ -239,7 +239,7 @@ _______ ______________ ________ | | | | | |
         ffmpeg -i A.avi -i C.mkv -i B.mp4 -filter_complex &quot;overlay&quot; out1.mp4 out2.srt
 </pre> 
 
- A filtergraph is setup here using the <tt>&quot;-filter_complex&quot;</tt> option and consists of a single video filter. The <tt>&quot;overlay&quot;</tt> filter requires exactly two video inputs, but none are specified, so the first two available video streams are used, those of <i>A.avi</i> and <i>C.mkv</i>. The output pad of the filter has no label and so is sent to the first output file <i>out1.mp4</i>. Due to this, automatic selection of the video stream is skipped, which would have selected the stream in <i>B.mp4</i>. The audio stream with most channels viz. <tt>&quot;stream 3&quot;</tt> in <i>B.mp4</i>, is chosen automatically. No subtitle stream is chosen however, since the <font SIZE="-1">MP4</font> format has no default subtitle encoder registered, and the user hasn't specified a subtitle encoder. 
+ A filtergraph is setup here using the <tt>&quot;-filter_complex&quot;</tt> option and consists of a single video filter. The <tt>&quot;overlay&quot;</tt> filter requires exactly two video inputs, but none are specified, so the first two available video streams are used, those of <i>A.avi</i> and <i>C.mkv</i>. The output pad of the filter has no label and so is sent to the first output file <i>out1.mp4</i>. Due to this, automatic selection of the video stream is skipped, which would have selected the stream in <i>B.mp4</i>. The audio stream with most channels viz. <tt>&quot;stream 3&quot;</tt> in <i>B.mp4</i>, is chosen automatically. No subtitle stream is chosen however, since the MP4 format has no default subtitle encoder registered, and the user hasn't specified a subtitle encoder. 
 
  The 2nd output file, <i>out2.srt</i>, only accepts text-based subtitle streams. So, even though the first subtitle stream available belongs to <i>C.mkv</i>, it is image-based and hence skipped. The selected stream, <tt>&quot;stream 2&quot;</tt> in <i>B.mp4</i>, is the first text-based subtitle stream. 
 
@@ -275,9 +275,9 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 
 <h2>OPTIONS</h2>
 
- All the numerical options, if not specified otherwise, accept a string representing a number as input, which may be followed by one of the <font SIZE="-1">SI</font> unit prefixes, for example: 'K', 'M', or 'G'. 
+ All the numerical options, if not specified otherwise, accept a string representing a number as input, which may be followed by one of the SI unit prefixes, for example: 'K', 'M', or 'G'. 
 
- If 'i' is appended to the <font SIZE="-1">SI</font> unit prefix, the complete prefix will be interpreted as a unit prefix for binary multiples, which are based on powers of 1024 instead of powers of 1000. Appending 'B' to the <font SIZE="-1">SI</font> unit prefix multiplies the value by 8. This allows using, for example: '<font SIZE="-1">KB</font>', 'MiB', 'G' and 'B' as number suffixes. 
+ If 'i' is appended to the SI unit prefix, the complete prefix will be interpreted as a unit prefix for binary multiples, which are based on powers of 1024 instead of powers of 1000. Appending 'B' to the SI unit prefix multiplies the value by 8. This allows using, for example: 'KB', 'MiB', 'G' and 'B' as number suffixes. 
 
  Options which do not take arguments are boolean options, and set the corresponding value to true. They can be set to false by prefixing the option name with ``no''. For example using ``-nofoo'' will set the boolean option with name ``foo'' to false.
 
@@ -294,13 +294,13 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
  Possible forms of stream specifiers are:
 <dl>
 <dt><i>stream_index</i>
-</dt><dd> Matches the stream with this index. E.g. <tt>&quot;-threads:1 4&quot;</tt> would set the thread count for the second stream to 4. If <i>stream_index</i> is used as an additional stream specifier (see below), then it selects stream number <i>stream_index</i> from the matching streams. Stream numbering is based on the order of the streams as detected by libavformat except when a program <font SIZE="-1">ID</font> is also specified. In this case it is based on the ordering of the streams in the program.
+</dt><dd> Matches the stream with this index. E.g. <tt>&quot;-threads:1 4&quot;</tt> would set the thread count for the second stream to 4. If <i>stream_index</i> is used as an additional stream specifier (see below), then it selects stream number <i>stream_index</i> from the matching streams. Stream numbering is based on the order of the streams as detected by libavformat except when a program ID is also specified. In this case it is based on the ordering of the streams in the program.
 </dd><dt><i>stream_type</i><b>[:</b><i>additional_stream_specifier</i><b>]</b>
 </dt><dd> <i>stream_type</i> is one of following: 'v' or 'V' for video, 'a' for audio, 's' for subtitle, 'd' for data, and 't' for attachments. 'v' matches all video streams, 'V' only matches video streams which are not attached pictures, video thumbnails or cover arts. If <i>additional_stream_specifier</i> is used, then it matches streams which both have this type and match the <i>additional_stream_specifier</i>. Otherwise, it matches all streams of the specified type.
 </dd><dt><b>p:</b><i>program_id</i><b>[:</b><i>additional_stream_specifier</i><b>]</b>
 </dt><dd> Matches streams which are in the program with the id <i>program_id</i>. If <i>additional_stream_specifier</i> is used, then it matches streams which both are part of the program and match the <i>additional_stream_specifier</i>.
 </dd><dt><b>#</b><i>stream_id</i> <b>or i:</b><i>stream_id</i>
-</dt><dd> Match the stream by stream id (e.g. <font SIZE="-1">PID</font> in MPEG-TS container).
+</dt><dd> Match the stream by stream id (e.g. PID in MPEG-TS container).
 </dd><dt><b>m:</b><i>key</i><b>[:</b><i>value</i><b>]</b>
 </dt><dd> Matches streams with the metadata tag <i>key</i> having the specified value. If <i>value</i> is not given, matches streams that contain the given tag with any value.
 </dd><dt><b>u</b>
@@ -436,12 +436,12 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
  <pre>
         ffmpeg [...] -loglevel +repeat
 </pre> 
- By default the program logs to stderr. If coloring is supported by the terminal, colors are used to mark errors and warnings. Log coloring can be disabled setting the environment variable <font SIZE="-1"><b>AV_LOG_FORCE_NOCOLOR</b></font>, or can be forced setting the environment variable <font SIZE="-1"><b>AV_LOG_FORCE_COLOR</b></font>.</dd></dl>
+ By default the program logs to stderr. If coloring is supported by the terminal, colors are used to mark errors and warnings. Log coloring can be disabled setting the environment variable <b>AV_LOG_FORCE_NOCOLOR</b>, or can be forced setting the environment variable <b>AV_LOG_FORCE_COLOR</b>.</dd></dl>
 
 <dt><b>-report</b>
 </dt><dd> Dump full command line and log output to a file named <tt>&quot;</tt>program<tt>-</tt>YYYYMMDD<tt>-</tt>HHMMSS<tt>.log&quot;</tt> in the current directory. This file can be useful for bug reports. It also implies <tt>&quot;-loglevel debug&quot;</tt>. 
 
- Setting the environment variable <font SIZE="-1"><b>FFREPORT</b></font> to any value has the same effect. If the value is a ':'-separated key=value sequence, these options will affect the report; option values must be escaped if they contain special characters or the options delimiter ':' (see the ``Quoting and escaping'' section in the ffmpeg-utils manual). 
+ Setting the environment variable <b>FFREPORT</b> to any value has the same effect. If the value is a ':'-separated key=value sequence, these options will affect the report; option values must be escaped if they contain special characters or the options delimiter ':' (see the ``Quoting and escaping'' section in the ffmpeg-utils manual). 
 
  The following options are recognized:
 </dd><dl>
@@ -528,7 +528,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 <dl>
 </dl>
 
-<dt><font SIZE="-1"><b>ARM</b></font>
+<dt><b>ARM</b>
 </dt><dd>
 </dd><dl>
 <dl>
@@ -608,7 +608,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 </dl>
 
 <dt><b>-max_alloc</b> <i>bytes</i>
-</dt><dd> Set the maximum size limit for allocating a block on the heap by ffmpeg's family of malloc functions. Exercise <b>extreme caution</b> when using this option. Don't use if you do not understand the full consequence of doing so. Default is <font SIZE="-1">INT_MAX.</font></dd></dl>
+</dt><dd> Set the maximum size limit for allocating a block on the heap by ffmpeg's family of malloc functions. Exercise <b>extreme caution</b> when using this option. Don't use if you do not understand the full consequence of doing so. Default is INT_MAX.</dd></dl>
 
 <h3>AVOptions</h3>
 
@@ -620,7 +620,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 </dt><dd> These options are specific to the given container, device or codec. Private options are listed under their corresponding containers/devices/codecs.</dd></dl>
  
 
- For example to write an ID3v2.3 header instead of a default ID3v2.4 to an <font SIZE="-1">MP3</font> file, use the <b>id3v2_version</b> private option of the <font SIZE="-1">MP3</font> muxer: 
+ For example to write an ID3v2.3 header instead of a default ID3v2.4 to an MP3 file, use the <b>id3v2_version</b> private option of the MP3 muxer: 
 
  <pre>
         ffmpeg -i input.flac -id3v2_version 3 out.mp3
@@ -680,7 +680,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
  When used as an output option (before an output url), decodes but discards input until the timestamps reach <i>position</i>. 
  <i>position</i> must be a time duration specification, see <b>the Time duration section in the <a HREF="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a>(1) manual</b>.
 </dd><dt><b>-sseof</b> <i>position</i> <b>(</b><i>input</i><b>)</b>
-</dt><dd> Like the <tt>&quot;-ss&quot;</tt> option but relative to the ``end of file''. That is negative values are earlier in the file, 0 is at <font SIZE="-1">EOF.</font>
+</dt><dd> Like the <tt>&quot;-ss&quot;</tt> option but relative to the ``end of file''. That is negative values are earlier in the file, 0 is at EOF.
 </dd><dt><b>-itsoffset</b> <i>offset</i> <b>(</b><i>input</i><b>)</b>
 </dt><dd> Set the input time offset. 
  <i>offset</i> must be a time duration specification, see <b>the Time duration section in the <a HREF="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a>(1) manual</b>. 
@@ -755,7 +755,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
  <pre>
         ffmpeg -i in.mp4 -i IMAGE -map 0 -map 1 -c copy -c:v:1 png -disposition:v:1 attached_pic out.mp4
 </pre> 
- Not all muxers support embedded thumbnails, and those who do, only support a few formats, like <font SIZE="-1">JPEG</font> or <font SIZE="-1">PNG.</font></dd></dl>
+ Not all muxers support embedded thumbnails, and those who do, only support a few formats, like JPEG or PNG.</dd></dl>
 
 <dt><b>-program [title=</b><i>title</i><b>:][program_num=</b><i>program_num</i><b>:]st=</b><i>stream</i><b>[:st=</b><i>stream</i><b>...] (</b><i>output</i><b>)</b>
 </dt><dd> Creates a program with the specified <i>title</i>, <i>program_num</i> and adds the specified <i>stream</i>(s) to it.
@@ -774,7 +774,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 
  The parameters set for each target are as follows. 
 
- <font SIZE="-1"><b>VCD</b></font> 
+ <b>VCD</b> 
 
  <pre>
         &lt;pal&gt;:
@@ -797,7 +797,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
         -codec:a mp2 -b:a 224k
 </pre> 
 
- <font SIZE="-1"><b>SVCD</b></font> 
+ <b>SVCD</b> 
 
  <pre>
         &lt;pal&gt;:
@@ -820,7 +820,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
         -codec:a mp2 -b:a 224k
 </pre> 
 
- <font SIZE="-1"><b>DVD</b></font> 
+ <b>DVD</b> 
 
  <pre>
         &lt;pal&gt;:
@@ -843,7 +843,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
         -codec:a ac3 -b:a 448k
 </pre> 
 
- <font SIZE="-1"><b>DV</b></font> 
+ <b>DV</b> 
 
  <pre>
         &lt;pal&gt;:
@@ -874,7 +874,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 </dd><dt><b>-q[:</b><i>stream_specifier</i><b>]</b> <i>q</i> <b>(</b><i>output,per-stream</i><b>)</b>
 </dt><dd>
 </dd><dt><b>-qscale[:</b><i>stream_specifier</i><b>]</b> <i>q</i> <b>(</b><i>output,per-stream</i><b>)</b>
-</dt><dd> Use fixed quality scale (<font SIZE="-1">VBR</font>). The meaning of <i>q</i>/<i>qscale</i> is codec-dependent. If <i>qscale</i> is used without a <i>stream_specifier</i> then it applies only to the video stream, this is to maintain compatibility with previous behavior and as specifying the same codec specific value to 2 different codecs that is audio and video generally is not what is intended when no stream_specifier is used.
+</dt><dd> Use fixed quality scale (VBR). The meaning of <i>q</i>/<i>qscale</i> is codec-dependent. If <i>qscale</i> is used without a <i>stream_specifier</i> then it applies only to the video stream, this is to maintain compatibility with previous behavior and as specifying the same codec specific value to 2 different codecs that is audio and video generally is not what is intended when no stream_specifier is used.
 </dd><dt><b>-filter[:</b><i>stream_specifier</i><b>]</b> <i>filtergraph</i> <b>(</b><i>output,per-stream</i><b>)</b>
 </dt><dd> Create the filtergraph specified by <i>filtergraph</i> and use it to filter the stream. 
 
@@ -965,7 +965,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
         ffmpeg -i foo.mov -c:v libxvid -pass 1 -an -f rawvideo -y /dev/null
 </pre>
 </dd><dt><b>-passlogfile[:</b><i>stream_specifier</i><b>]</b> <i>prefix</i> <b>(</b><i>output,per-stream</i><b>)</b>
-</dt><dd> Set two-pass log file name prefix to <i>prefix</i>, the default file name prefix is ``ffmpeg2pass''. The complete file name will be <i></i><font SIZE="-1"><i>PREFIX-N</i></font><i>.log</i>, where N is a number specific to the output stream
+</dt><dd> Set two-pass log file name prefix to <i>prefix</i>, the default file name prefix is ``ffmpeg2pass''. The complete file name will be <i></i><i>PREFIX-N</i><i>.log</i>, where N is a number specific to the output stream
 </dd><dt><b>-vf</b> <i>filtergraph</i> <b>(</b><i>output</i><b>)</b>
 </dt><dd> Create the filtergraph specified by <i>filtergraph</i> and use it to filter the stream. 
  This is an alias for <tt>&quot;-filter:v&quot;</tt>, see the <b>-filter option</b>.
@@ -984,9 +984,9 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 </dd><dt><b>-rc_override[:</b><i>stream_specifier</i><b>]</b> <i>override</i> <b>(</b><i>output,per-stream</i><b>)</b>
 </dt><dd> Rate control override for specific intervals, formatted as ``int,int,int'' list separated with slashes. Two first values are the beginning and end frame numbers, last one is quantizer to use if positive, or quality factor if negative.
 </dd><dt><b>-ilme</b>
-</dt><dd> Force interlacing support in encoder (<font SIZE="-1">MPEG-2</font> and <font SIZE="-1">MPEG-4</font> only). Use this option if your input file is interlaced and you want to keep the interlaced format for minimum losses. The alternative is to deinterlace the input stream by use of a filter such as <tt>&quot;yadif&quot;</tt> or <tt>&quot;bwdif&quot;</tt>, but deinterlacing introduces losses.
+</dt><dd> Force interlacing support in encoder (MPEG-2 and MPEG-4 only). Use this option if your input file is interlaced and you want to keep the interlaced format for minimum losses. The alternative is to deinterlace the input stream by use of a filter such as <tt>&quot;yadif&quot;</tt> or <tt>&quot;bwdif&quot;</tt>, but deinterlacing introduces losses.
 </dd><dt><b>-psnr</b>
-</dt><dd> Calculate <font SIZE="-1">PSNR</font> of compressed frames.
+</dt><dd> Calculate PSNR of compressed frames.
 </dd><dt><b>-vstats</b>
 </dt><dd> Dump video coding statistics to <i>vstats_HHMMSS.log</i>.
 </dd><dt><b>-vstats_file</b> <i>file</i>
@@ -1004,7 +1004,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 </dd><dt><b>-vtag</b> <i>fourcc/tag</i> <b>(</b><i>output</i><b>)</b>
 </dt><dd> Force video tag/fourcc. This is an alias for <tt>&quot;-tag:v&quot;</tt>.
 </dd><dt><b>-qphist (</b><i>global</i><b>)</b>
-</dt><dd> Show <font SIZE="-1">QP</font> histogram
+</dt><dd> Show QP histogram
 </dd><dt><b>-vbsf</b> <i>bitstream_filter</i>
 </dt><dd> Deprecated see -bsf
 </dd><dt><b>-force_key_frames[:</b><i>stream_specifier</i><b>]</b> <i>time</i><b>[,</b><i>time</i><b>...] (</b><i>output,per-stream</i><b>)</b>
@@ -1069,11 +1069,11 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 </dd><dl>
 <dl>
 <dt><b>cuda</b>
-</dt><dd> <i>device</i> is the number of the <font SIZE="-1">CUDA</font> device.
+</dt><dd> <i>device</i> is the number of the CUDA device.
 </dd><dt><b>dxva2</b>
 </dt><dd> <i>device</i> is the number of the Direct3D 9 display adapter.
 </dd><dt><b>vaapi</b>
-</dt><dd> <i>device</i> is either an X11 display name or a <font SIZE="-1">DRM</font> render node. If not specified, it will attempt to open the default X11 display (<i></i>$DISPLAY<i></i>) and then the first <font SIZE="-1">DRM</font> render node (<i>/dev/dri/renderD128</i>).
+</dt><dd> <i>device</i> is either an X11 display name or a DRM render node. If not specified, it will attempt to open the default X11 display (<i></i>$DISPLAY<i></i>) and then the first DRM render node (<i>/dev/dri/renderD128</i>).
 </dd><dt><b>vdpau</b>
 </dt><dd> <i>device</i> is an X11 display name. If not specified, it will attempt to open the default X11 display (<i></i>$DISPLAY<i></i>).
 </dd><dt><b>qsv</b>
@@ -1101,7 +1101,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 <dl>
 <dt>
 </dt><dd> 
- If not specified, <b>auto_any</b> is used. (Note that it may be easier to achieve the desired result for <font SIZE="-1">QSV</font> by creating the platform-appropriate subdevice (<b>dxva2</b> or <b>vaapi</b>) and then deriving a <font SIZE="-1">QSV</font> device from that.)</dd></dl>
+ If not specified, <b>auto_any</b> is used. (Note that it may be easier to achieve the desired result for QSV by creating the platform-appropriate subdevice (<b>dxva2</b> or <b>vaapi</b>) and then deriving a QSV device from that.)</dd></dl>
 
 <dt><b>opencl</b>
 </dt><dd> <i>device</i> selects the platform and device as <i>platform_index.device_index</i>. 
@@ -1148,7 +1148,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 </dd><dt><i>-init_hw_device opencl:,device_name=Foo9000</i>
 </dt><dd> Choose the device with a name containing the string <i>Foo9000</i>.
 </dd><dt><i>-init_hw_device opencl:1,device_type=gpu,device_extensions=cl_khr_fp16</i>
-</dt><dd> Choose the <font SIZE="-1">GPU</font> device on the second platform supporting the <i>cl_khr_fp16</i> extension.</dd></dl>
+</dt><dd> Choose the GPU device on the second platform supporting the <i>cl_khr_fp16</i> extension.</dd></dl>
 </dl>
 
 <dl>
@@ -1178,9 +1178,9 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 <dt><i>-init_hw_device vulkan:1</i>
 </dt><dd> Choose the second device on the system.
 </dd><dt><i>-init_hw_device vulkan:RADV</i>
-</dt><dd> Choose the first device with a name containing the string <i></i><font SIZE="-1"><i>RADV</i></font><i></i>.
+</dt><dd> Choose the first device with a name containing the string <i></i><i>RADV</i><i></i>.
 </dd><dt><i>-init_hw_device vulkan:0,instance_extensions=VK_KHR_wayland_surface+VK_KHR_xcb_surface</i>
-</dt><dd> Choose the first device and enable the Wayland and <font SIZE="-1">XCB</font> instance extensions.</dd></dl>
+</dt><dd> Choose the first device and enable the Wayland and XCB instance extensions.</dd></dl>
 </dl>
 
 <dl>
@@ -1208,22 +1208,22 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 </dd><dt><b>auto</b>
 </dt><dd> Automatically select the hardware acceleration method.
 </dd><dt><b>vdpau</b>
-</dt><dd> Use <font SIZE="-1">VDPAU</font> (Video Decode and Presentation <font SIZE="-1">API</font> for Unix) hardware acceleration.
+</dt><dd> Use VDPAU (Video Decode and Presentation API for Unix) hardware acceleration.
 </dd><dt><b>dxva2</b>
-</dt><dd> Use <font SIZE="-1">DXVA2</font> (DirectX Video Acceleration) hardware acceleration.
+</dt><dd> Use DXVA2 (DirectX Video Acceleration) hardware acceleration.
 </dd><dt><b>vaapi</b>
-</dt><dd> Use <font SIZE="-1">VAAPI</font> (Video Acceleration <font SIZE="-1">API</font>) hardware acceleration.
+</dt><dd> Use VAAPI (Video Acceleration API) hardware acceleration.
 </dd><dt><b>qsv</b>
 </dt><dd> Use the Intel QuickSync Video acceleration for video transcoding. 
  Unlike most other values, this option does not enable accelerated decoding (that is used automatically whenever a qsv decoder is selected), but accelerated transcoding, without copying the frames into the system memory. 
- For it to work, both the decoder and the encoder must support <font SIZE="-1">QSV</font> acceleration and no filters must be used.</dd></dl>
+ For it to work, both the decoder and the encoder must support QSV acceleration and no filters must be used.</dd></dl>
 </dl>
 
 <dl>
 <dt>
 </dt><dd> 
  This option has no effect if the selected hwaccel is not available or not supported by the chosen decoder. 
- Note that most acceleration methods are intended for playback and will not be faster than software decoding on modern CPUs. Additionally, <b>ffmpeg</b> will usually need to copy the decoded frames from the <font SIZE="-1">GPU</font> memory into the system memory, resulting in further performance loss. This option is thus mainly useful for testing.</dd></dl>
+ Note that most acceleration methods are intended for playback and will not be faster than software decoding on modern CPUs. Additionally, <b>ffmpeg</b> will usually need to copy the decoded frames from the GPU memory into the system memory, resulting in further performance loss. This option is thus mainly useful for testing.</dd></dl>
 
 <dt><b>-hwaccel_device[:</b><i>stream_specifier</i><b>]</b> <i>hwaccel_device</i> <b>(</b><i>input,per-stream</i><b>)</b>
 </dt><dd> Select a device to use for hardware acceleration. 
@@ -1240,7 +1240,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 </dd><dt><b>-ar[:</b><i>stream_specifier</i><b>]</b> <i>freq</i> <b>(</b><i>input/output,per-stream</i><b>)</b>
 </dt><dd> Set the audio sampling frequency. For output streams it is set by default to the frequency of the corresponding input stream. For input streams this option only makes sense for audio grabbing devices and raw demuxers and is mapped to the corresponding demuxer options.
 </dd><dt><b>-aq</b> <i>q</i> <b>(</b><i>output</i><b>)</b>
-</dt><dd> Set the audio quality (codec-specific, <font SIZE="-1">VBR</font>). This is an alias for -q:a.
+</dt><dd> Set the audio quality (codec-specific, VBR). This is an alias for -q:a.
 </dd><dt><b>-ac[:</b><i>stream_specifier</i><b>]</b> <i>channels</i> <b>(</b><i>input/output,per-stream</i><b>)</b>
 </dt><dd> Set the number of audio channels. For output streams it is set by default to the number of input audio channels. For input streams this option only makes sense for audio grabbing devices and raw demuxers and is mapped to the corresponding demuxer options.
 </dd><dt><b>-an (</b><i>input/output</i><b>)</b>
@@ -1279,7 +1279,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 
 <dl>
 <dt><b>-fix_sub_duration</b>
-</dt><dd> Fix subtitles durations. For each subtitle, wait for the next packet in the same stream and adjust the duration of the first to avoid overlap. This is necessary with some subtitles codecs, especially <font SIZE="-1">DVB</font> subtitles, because the duration in the original packet is only a rough estimate and the end is actually marked by an empty subtitle frame. Failing to use this option when necessary can result in exaggerated durations or muxing failures due to non-monotonic timestamps. 
+</dt><dd> Fix subtitles durations. For each subtitle, wait for the next packet in the same stream and adjust the duration of the first to avoid overlap. This is necessary with some subtitles codecs, especially DVB subtitles, because the duration in the original packet is only a rough estimate and the end is actually marked by an empty subtitle frame. Failing to use this option when necessary can result in exaggerated durations or muxing failures due to non-monotonic timestamps. 
  Note that this option will delay the output of all data until the next subtitle packet is decoded: it may increase memory consumption and latency a lot.
 </dd><dt><b>-canvas_size</b> <i>size</i>
 </dt><dd> Set the size of the canvas used to render subtitles.</dd></dl>
@@ -1293,7 +1293,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
  A <tt>&quot;-&quot;</tt> character before the stream identifier creates a ``negative'' mapping. It disables matching streams from already created mappings. 
  A trailing <tt>&quot;?&quot;</tt> after the stream index will allow the map to be optional: if the map matches no streams the map will be ignored instead of failing. Note the map will still fail if an invalid input file index is used; such as if the map refers to a non-existent input. 
  An alternative <i>[linklabel]</i> form will map outputs from complex filter graphs (see the <b>-filter_complex</b> option) to the output file. <i>linklabel</i> must correspond to a defined output link label in the graph. 
- For example, to map <font SIZE="-1">ALL</font> streams from the first input file to output 
+ For example, to map ALL streams from the first input file to output 
  <pre>
         ffmpeg -i INPUT -map 0 output
 </pre> 
@@ -1301,7 +1301,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
  <pre>
         ffmpeg -i INPUT -map 0:1 out.wav
 </pre> 
- will map the input stream in <i></i><font SIZE="-1"><i>INPUT</i></font><i></i> identified by ``0:1'' to the (single) output stream in <i>out.wav</i>. 
+ will map the input stream in <i></i><i>INPUT</i><i></i> identified by ``0:1'' to the (single) output stream in <i>out.wav</i>. 
  For example, to select the stream with index 2 from input file <i>a.mov</i> (specified by the identifier ``0:2''), and stream with index 6 from input <i>b.mov</i> (specified by the identifier ``1:6''), and copy them to the output file <i>out.mov</i>: 
  <pre>
         ffmpeg -i a.mov -i b.mov -c copy -map 0:2 -map 1:6 out.mov
@@ -1331,7 +1331,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
 </dt><dd> Map an audio channel from a given input to an output. If <i>output_file_id</i>.<i>stream_specifier</i> is not set, the audio channel will be mapped on all the audio streams. 
  Using ``-1'' instead of <i>input_file_id</i>.<i>stream_specifier</i>.<i>channel_id</i> will map a muted channel. 
  A trailing <tt>&quot;?&quot;</tt> will allow the map_channel to be optional: if the map_channel matches no channel the map_channel will be ignored instead of failing. 
- For example, assuming <i></i><font SIZE="-1"><i>INPUT</i></font><i></i> is a stereo audio file, you can switch the two audio channels with the following command: 
+ For example, assuming <i></i><i>INPUT</i><i></i> is a stereo audio file, you can switch the two audio channels with the following command: 
  <pre>
         ffmpeg -i INPUT -map_channel 0.0.1 -map_channel 0.0.0 OUTPUT
 </pre> 
@@ -1340,7 +1340,7 @@ ffmpeg - i A.avi - i B.mp4 - i C.mkv - filter_complex "[1:v]hue=s=0,split=2[outv
         ffmpeg -i INPUT -map_channel -1 -map_channel 0.0.1 OUTPUT
 </pre> 
  The order of the ``-map_channel'' option specifies the order of the channels in the output stream. The output channel layout is guessed from the number of channels mapped (mono if one ``-map_channel'', stereo if two, etc.). Using ``-ac'' in combination of ``-map_channel'' makes the channel gain levels to be updated if input and output channel layouts don't match (for instance two ``-map_channel'' options and ``-ac 6''). 
- You can also extract each channel of an input to specific outputs; the following command extracts two channels of the <i></i><font SIZE="-1"><i>INPUT</i></font><i></i> audio stream (file 0, stream 0) to the respective <i></i><font SIZE="-1"><i>OUTPUT_CH0</i></font><i></i> and <i></i><font SIZE="-1"><i>OUTPUT_CH1</i></font><i></i> outputs: 
+ You can also extract each channel of an input to specific outputs; the following command extracts two channels of the <i></i><i>INPUT</i><i></i> audio stream (file 0, stream 0) to the respective <i></i><i>OUTPUT_CH0</i><i></i> and <i></i><i>OUTPUT_CH1</i><i></i> outputs: 
  <pre>
         ffmpeg -i INPUT -map_channel 0.0.0 OUTPUT_CH0 -map_channel 0.0.1 OUTPUT_CH1
 </pre> 
@@ -1391,7 +1391,7 @@ ffmpeg - i input.mkv - filter_complex "[0:1] [0:2] amerge" - c : a pcm_s16le - c
 </dd><dt><b>-benchmark_all (</b><i>global</i><b>)</b>
 </dt><dd> Show benchmarking information during the encode. Shows real, system and user time used in various steps (audio/video encode/decode).
 </dd><dt><b>-timelimit</b> <i>duration</i> <b>(</b><i>global</i><b>)</b>
-</dt><dd> Exit after ffmpeg has been running for <i>duration</i> seconds in <font SIZE="-1">CPU</font> user time.
+</dt><dd> Exit after ffmpeg has been running for <i>duration</i> seconds in CPU user time.
 </dd><dt><b>-dump (</b><i>global</i><b>)</b>
 </dt><dd> Dump each input packet to stderr.
 </dd><dt><b>-hex (</b><i>global</i><b>)</b>
@@ -1494,7 +1494,7 @@ ffmpeg - i input.mkv - filter_complex "[0:1] [0:2] amerge" - c : a pcm_s16le - c
 </dd><dt><b>-streamid</b> <i>output-stream-index</i><b>:</b><i>new-value</i> <b>(</b><i>output</i><b>)</b>
 </dt><dd> Assign a new stream-id value to an output stream. This option should be specified prior to the output filename to which it applies. For the situation where multiple output files exist, a streamid may be reassigned to a different value. 
 
- For example, to set the stream 0 <font SIZE="-1">PID</font> to 33 and the stream 1 <font SIZE="-1">PID</font> to 36 for an output mpegts file: 
+ For example, to set the stream 0 PID to 33 and the stream 1 PID to 36 for an output mpegts file: 
 
  <pre>
         ffmpeg -i inurl -streamid 0:33 -streamid 1:36 out.ts
@@ -1508,8 +1508,8 @@ ffmpeg - i input.mkv - filter_complex "[0:1] [0:2] amerge" - c : a pcm_s16le - c
 </pre>
 </dd><dt><b>-tag[:</b><i>stream_specifier</i><b>]</b> <i>codec_tag</i> <b>(</b><i>input/output,per-stream</i><b>)</b>
 </dt><dd> Force a tag/fourcc for matching streams.
-</dd><dt><b>-timecode</b> <i>hh</i><b>:</b><i>mm</i><b>:</b><i>ss</i><font SIZE="-1"><b>SEP</b></font><i>ff</i>
-</dt><dd> Specify Timecode for writing. <i></i><font SIZE="-1"><i>SEP</i></font><i></i> is ':' for non drop timecode and ';' (or '.') for drop. 
+</dd><dt><b>-timecode</b> <i>hh</i><b>:</b><i>mm</i><b>:</b><i>ss</i><b>SEP</b><i>ff</i>
+</dt><dd> Specify Timecode for writing. <i></i><i>SEP</i><i></i> is ':' for non drop timecode and ';' (or '.') for drop. 
 
  <pre>
         ffmpeg -i input.mpg -timecode 01:02:03.04 -r 30000/1001 -s ntsc output.mpg
@@ -1655,13 +1655,13 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
         ffmpeg -f oss -i /dev/dsp -f video4linux2 -i /dev/video0 /tmp/out.mpg
 </pre> 
 
- Or with an <font SIZE="-1">ALSA</font> audio source (mono input, card id 1) instead of <font SIZE="-1">OSS:</font> 
+ Or with an ALSA audio source (mono input, card id 1) instead of OSS: 
 
  <pre>
         ffmpeg -f alsa -ac 1 -i hw:1 -f video4linux2 -i /dev/video0 /tmp/out.mpg
 </pre> 
 
- Note that you must activate the right video source and channel before launching ffmpeg with any <font SIZE="-1">TV</font> viewer such as &lt;<b><a rel="nofollow" HREF="http://linux.bytesex.org/xawtv/">http://linux.bytesex.org/xawtv/</a></b>&gt; by Gerd Knorr. You also have to set the audio recording levels correctly with a standard mixer.
+ Note that you must activate the right video source and channel before launching ffmpeg with any TV viewer such as &lt;<b><a rel="nofollow" HREF="http://linux.bytesex.org/xawtv/">http://linux.bytesex.org/xawtv/</a></b>&gt; by Gerd Knorr. You also have to set the audio recording levels correctly with a standard mixer.
 
 <h3>X11 grabbing</h3>
 
@@ -1671,13 +1671,13 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
         ffmpeg -f x11grab -video_size cif -framerate 25 -i :0.0 /tmp/out.mpg
 </pre> 
 
- 0.0 is display.screen number of your X11 server, same as the <font SIZE="-1">DISPLAY</font> environment variable. 
+ 0.0 is display.screen number of your X11 server, same as the DISPLAY environment variable. 
 
  <pre>
         ffmpeg -f x11grab -video_size cif -framerate 25 -i :0.0+10,20 /tmp/out.mpg
 </pre> 
 
- 0.0 is display.screen number of your X11 server, same as the <font SIZE="-1">DISPLAY</font> environment variable. 10 is the x-offset and 20 the y-offset for the grabbing.
+ 0.0 is display.screen number of your X11 server, same as the DISPLAY environment variable. 10 is the x-offset and 20 the y-offset for the grabbing.
 
 <h3>Video and Audio file format conversion</h3>
 
@@ -1686,7 +1686,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  Examples:
 <dl>
 <dt>&bull;
-</dt><dd> You can use <font SIZE="-1">YUV</font> files as input: 
+</dt><dd> You can use YUV files as input: 
  <pre>
         ffmpeg -i /tmp/test%d.Y /tmp/out.mpg
 </pre> 
@@ -1697,13 +1697,13 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </pre> 
  The Y files use twice the resolution of the U and V files. They are raw files, without header. They can be generated by all decent video decoders. You must specify the size of the image with the <b>-s</b> option if ffmpeg cannot guess it.
 </dd><dt>&bull;
-</dt><dd> You can input from a raw <font SIZE="-1">YUV420P</font> file: 
+</dt><dd> You can input from a raw YUV420P file: 
  <pre>
         ffmpeg -i /tmp/test.yuv /tmp/out.avi
 </pre> 
- test.yuv is a file containing raw <font SIZE="-1">YUV</font> planar data. Each frame is composed of the Y plane followed by the U and V planes at half vertical and horizontal resolution.
+ test.yuv is a file containing raw YUV planar data. Each frame is composed of the Y plane followed by the U and V planes at half vertical and horizontal resolution.
 </dd><dt>&bull;
-</dt><dd> You can output to a raw <font SIZE="-1">YUV420P</font> file: 
+</dt><dd> You can output to a raw YUV420P file: 
  <pre>
         ffmpeg -i mydivx.avi hugefile.yuv
 </pre>
@@ -1712,13 +1712,13 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  <pre>
         ffmpeg -i /tmp/a.wav -s 640x480 -i /tmp/a.yuv /tmp/a.mpg
 </pre> 
- Converts the audio file a.wav and the raw <font SIZE="-1">YUV</font> video file a.yuv to <font SIZE="-1">MPEG</font> file a.mpg.
+ Converts the audio file a.wav and the raw YUV video file a.yuv to MPEG file a.mpg.
 </dd><dt>&bull;
 </dt><dd> You can also do audio and video conversions at the same time: 
  <pre>
         ffmpeg -i /tmp/a.wav -ar 22050 /tmp/a.mp2
 </pre> 
- Converts a.wav to <font SIZE="-1">MPEG</font> audio at 22050 Hz sample rate.
+ Converts a.wav to MPEG audio at 22050 Hz sample rate.
 </dd><dt>&bull;
 </dt><dd> You can encode to several formats at the same time and define a mapping from input stream to output streams: 
  <pre>
@@ -1730,8 +1730,8 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  <pre>
         ffmpeg -i snatch_1.vob -f avi -c:v mpeg4 -b:v 800k -g 300 -bf 2 -c:a libmp3lame -b:a 128k snatch.avi
 </pre> 
- This is a typical <font SIZE="-1">DVD</font> ripping example; the input is a <font SIZE="-1">VOB</font> file, the output an <font SIZE="-1">AVI</font> file with <font SIZE="-1">MPEG-4</font> video and <font SIZE="-1">MP3</font> audio. Note that in this command we use B-frames so the <font SIZE="-1">MPEG-4</font> stream is DivX5 compatible, and <font SIZE="-1">GOP</font> size is 300 which means one intra frame every 10 seconds for 29.97fps input video. Furthermore, the audio stream is MP3-encoded so you need to enable <font SIZE="-1">LAME</font> support by passing <tt>&quot;--enable-libmp3lame&quot;</tt> to configure. The mapping is particularly useful for <font SIZE="-1">DVD</font> transcoding to get the desired audio language. 
- <font SIZE="-1">NOTE:</font> To see the supported input formats, use <tt>&quot;ffmpeg -demuxers&quot;</tt>.
+ This is a typical DVD ripping example; the input is a VOB file, the output an AVI file with MPEG-4 video and MP3 audio. Note that in this command we use B-frames so the MPEG-4 stream is DivX5 compatible, and GOP size is 300 which means one intra frame every 10 seconds for 29.97fps input video. Furthermore, the audio stream is MP3-encoded so you need to enable LAME support by passing <tt>&quot;--enable-libmp3lame&quot;</tt> to configure. The mapping is particularly useful for DVD transcoding to get the desired audio language. 
+ NOTE: To see the supported input formats, use <tt>&quot;ffmpeg -demuxers&quot;</tt>.
 </dd><dt>&bull;
 </dt><dd> You can extract images from a video, or create a video from many images: 
  For extracting images from a video: 
@@ -1757,12 +1757,12 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </pre> 
  The resulting output file <i>test12.nut</i> will contain the first four streams from the input files in reverse order.
 </dd><dt>&bull;
-</dt><dd> To force <font SIZE="-1">CBR</font> video output: 
+</dt><dd> To force CBR video output: 
  <pre>
         ffmpeg -i myfile.avi -b 4000k -minrate 4000k -maxrate 4000k -bufsize 1835k out.m2v
 </pre>
 </dd><dt>&bull;
-</dt><dd> The four options lmin, lmax, mblmin and mblmax use 'lambda' units, but you may use the <font SIZE="-1">QP2LAMBDA</font> constant to easily convert from 'q' units: 
+</dt><dd> The four options lmin, lmax, mblmin and mblmax use 'lambda' units, but you may use the QP2LAMBDA constant to easily convert from 'q' units: 
  <pre>
         ffmpeg -i src.ext -lmax 21*QP2LAMBDA dst.ext
 </pre></dd></dl>
@@ -1830,7 +1830,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
  If the value is ``now'' it takes the current time. 
 
- Time is local time unless Z is appended, in which case it is interpreted as <font SIZE="-1">UTC.</font> If the year-month-day part is not specified it takes the current year-month-day.
+ Time is local time unless Z is appended, in which case it is interpreted as UTC. If the year-month-day part is not specified it takes the current year-month-day.
 
 <h3>Time duration</h3>
 
@@ -1840,7 +1840,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 [-] [&lt;HH&gt;:]&lt;MM&gt; : &lt;SS&gt;[.&lt;m&gt;...]
  
 
- <i></i><font SIZE="-1"><i>HH</i></font><i></i> expresses the number of hours, <i></i><font SIZE="-1"><i>MM</i></font><i></i> the number of minutes for a maximum of 2 digits, and <i></i><font SIZE="-1"><i>SS</i></font><i></i> the number of seconds for a maximum of 2 digits. The <i>m</i> at the end expresses decimal value for <i></i><font SIZE="-1"><i>SS</i></font><i></i>. 
+ <i></i><i>HH</i><i></i> expresses the number of hours, <i></i><i>MM</i><i></i> the number of minutes for a maximum of 2 digits, and <i></i><i>SS</i><i></i> the number of seconds for a maximum of 2 digits. The <i>m</i> at the end expresses decimal value for <i></i><i>SS</i><i></i>. 
 
  <i>or</i> 
 
@@ -2310,116 +2310,116 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
  Individual channels are identified by an id, as given by the table below:
 <dl>
-<dt><font SIZE="-1"><b>FL</b></font>
+<dt><b>FL</b>
 </dt><dd> front left
-</dd><dt><font SIZE="-1"><b>FR</b></font>
+</dd><dt><b>FR</b>
 </dt><dd> front right
-</dd><dt><font SIZE="-1"><b>FC</b></font>
+</dd><dt><b>FC</b>
 </dt><dd> front center
-</dd><dt><font SIZE="-1"><b>LFE</b></font>
+</dd><dt><b>LFE</b>
 </dt><dd> low frequency
-</dd><dt><font SIZE="-1"><b>BL</b></font>
+</dd><dt><b>BL</b>
 </dt><dd> back left
-</dd><dt><font SIZE="-1"><b>BR</b></font>
+</dd><dt><b>BR</b>
 </dt><dd> back right
-</dd><dt><font SIZE="-1"><b>FLC</b></font>
+</dd><dt><b>FLC</b>
 </dt><dd> front left-of-center
-</dd><dt><font SIZE="-1"><b>FRC</b></font>
+</dd><dt><b>FRC</b>
 </dt><dd> front right-of-center
-</dd><dt><font SIZE="-1"><b>BC</b></font>
+</dd><dt><b>BC</b>
 </dt><dd> back center
-</dd><dt><font SIZE="-1"><b>SL</b></font>
+</dd><dt><b>SL</b>
 </dt><dd> side left
-</dd><dt><font SIZE="-1"><b>SR</b></font>
+</dd><dt><b>SR</b>
 </dt><dd> side right
-</dd><dt><font SIZE="-1"><b>TC</b></font>
+</dd><dt><b>TC</b>
 </dt><dd> top center
-</dd><dt><font SIZE="-1"><b>TFL</b></font>
+</dd><dt><b>TFL</b>
 </dt><dd> top front left
-</dd><dt><font SIZE="-1"><b>TFC</b></font>
+</dd><dt><b>TFC</b>
 </dt><dd> top front center
-</dd><dt><font SIZE="-1"><b>TFR</b></font>
+</dd><dt><b>TFR</b>
 </dt><dd> top front right
-</dd><dt><font SIZE="-1"><b>TBL</b></font>
+</dd><dt><b>TBL</b>
 </dt><dd> top back left
-</dd><dt><font SIZE="-1"><b>TBC</b></font>
+</dd><dt><b>TBC</b>
 </dt><dd> top back center
-</dd><dt><font SIZE="-1"><b>TBR</b></font>
+</dd><dt><b>TBR</b>
 </dt><dd> top back right
-</dd><dt><font SIZE="-1"><b>DL</b></font>
+</dd><dt><b>DL</b>
 </dt><dd> downmix left
-</dd><dt><font SIZE="-1"><b>DR</b></font>
+</dd><dt><b>DR</b>
 </dt><dd> downmix right
-</dd><dt><font SIZE="-1"><b>WL</b></font>
+</dd><dt><b>WL</b>
 </dt><dd> wide left
-</dd><dt><font SIZE="-1"><b>WR</b></font>
+</dd><dt><b>WR</b>
 </dt><dd> wide right
-</dd><dt><font SIZE="-1"><b>SDL</b></font>
+</dd><dt><b>SDL</b>
 </dt><dd> surround direct left
-</dd><dt><font SIZE="-1"><b>SDR</b></font>
+</dd><dt><b>SDR</b>
 </dt><dd> surround direct right
-</dd><dt><font SIZE="-1"><b>LFE2</b></font>
+</dd><dt><b>LFE2</b>
 </dt><dd> low frequency 2</dd></dl>
  
 
  Standard channel layout compositions can be specified by using the following identifiers:
 <dl>
 <dt><b>mono</b>
-</dt><dd> <font SIZE="-1">FC</font>
+</dt><dd> FC
 </dd><dt><b>stereo</b>
-</dt><dd> <font SIZE="-1">FL+FR</font>
+</dt><dd> FL+FR
 </dd><dt><b>2.1</b>
-</dt><dd> <font SIZE="-1">FL+FR+LFE</font>
+</dt><dd> FL+FR+LFE
 </dd><dt><b>3.0</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC</font>
+</dt><dd> FL+FR+FC
 </dd><dt><b>3.0(back)</b>
-</dt><dd> <font SIZE="-1">FL+FR+BC</font>
+</dt><dd> FL+FR+BC
 </dd><dt><b>4.0</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+BC</font>
+</dt><dd> FL+FR+FC+BC
 </dd><dt><b>quad</b>
-</dt><dd> <font SIZE="-1">FL+FR+BL+BR</font>
+</dt><dd> FL+FR+BL+BR
 </dd><dt><b>quad(side)</b>
-</dt><dd> <font SIZE="-1">FL+FR+SL+SR</font>
+</dt><dd> FL+FR+SL+SR
 </dd><dt><b>3.1</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+LFE</font>
+</dt><dd> FL+FR+FC+LFE
 </dd><dt><b>5.0</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+BL+BR</font>
+</dt><dd> FL+FR+FC+BL+BR
 </dd><dt><b>5.0(side)</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+SL+SR</font>
+</dt><dd> FL+FR+FC+SL+SR
 </dd><dt><b>4.1</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+LFE+BC</font>
+</dt><dd> FL+FR+FC+LFE+BC
 </dd><dt><b>5.1</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+LFE+BL+BR</font>
+</dt><dd> FL+FR+FC+LFE+BL+BR
 </dd><dt><b>5.1(side)</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+LFE+SL+SR</font>
+</dt><dd> FL+FR+FC+LFE+SL+SR
 </dd><dt><b>6.0</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+BC+SL+SR</font>
+</dt><dd> FL+FR+FC+BC+SL+SR
 </dd><dt><b>6.0(front)</b>
-</dt><dd> <font SIZE="-1">FL+FR+FLC+FRC+SL+SR</font>
+</dt><dd> FL+FR+FLC+FRC+SL+SR
 </dd><dt><b>hexagonal</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+BL+BR+BC</font>
+</dt><dd> FL+FR+FC+BL+BR+BC
 </dd><dt><b>6.1</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+LFE+BC+SL+SR</font>
+</dt><dd> FL+FR+FC+LFE+BC+SL+SR
 </dd><dt><b>6.1</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+LFE+BL+BR+BC</font>
+</dt><dd> FL+FR+FC+LFE+BL+BR+BC
 </dd><dt><b>6.1(front)</b>
-</dt><dd> <font SIZE="-1">FL+FR+LFE+FLC+FRC+SL+SR</font>
+</dt><dd> FL+FR+LFE+FLC+FRC+SL+SR
 </dd><dt><b>7.0</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+BL+BR+SL+SR</font>
+</dt><dd> FL+FR+FC+BL+BR+SL+SR
 </dd><dt><b>7.0(front)</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+FLC+FRC+SL+SR</font>
+</dt><dd> FL+FR+FC+FLC+FRC+SL+SR
 </dd><dt><b>7.1</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+LFE+BL+BR+SL+SR</font>
+</dt><dd> FL+FR+FC+LFE+BL+BR+SL+SR
 </dd><dt><b>7.1(wide)</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+LFE+BL+BR+FLC+FRC</font>
+</dt><dd> FL+FR+FC+LFE+BL+BR+FLC+FRC
 </dd><dt><b>7.1(wide-side)</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+LFE+FLC+FRC+SL+SR</font>
+</dt><dd> FL+FR+FC+LFE+FLC+FRC+SL+SR
 </dd><dt><b>octagonal</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+BL+BR+BC+SL+SR</font>
+</dt><dd> FL+FR+FC+BL+BR+BC+SL+SR
 </dd><dt><b>hexadecagonal</b>
-</dt><dd> <font SIZE="-1">FL+FR+FC+BL+BR+BC+SL+SR+WL+WR+TBL+TBR+TBC+TFC+TFL+TFR</font>
+</dt><dd> FL+FR+FC+BL+BR+BC+SL+SR+WL+WR+TBL+TBR+TBC+TFC+TFL+TFR
 </dd><dt><b>downmix</b>
-</dt><dd> <font SIZE="-1">DL+DR</font></dd></dl>
+</dt><dd> DL+DR</dd></dl>
  
 
  A custom channel layout can be specified as a sequence of terms, separated by '+' or '|'. Each term can be:
@@ -2427,7 +2427,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt>&bull;
 </dt><dd> the name of a standard channel layout (e.g. <b>mono</b>, <b>stereo</b>, <b>4.0</b>, <b>quad</b>, <b>5.0</b>, etc.)
 </dd><dt>&bull;
-</dt><dd> the name of a single channel (e.g. <font SIZE="-1"><b>FL</b></font>, <font SIZE="-1"><b>FR</b></font>, <font SIZE="-1"><b>FC</b></font>, <font SIZE="-1"><b>LFE</b></font>, etc.)
+</dt><dd> the name of a single channel (e.g. <b>FL</b>, <b>FR</b>, <b>FC</b>, <b>LFE</b>, etc.)
 </dd><dt>&bull;
 </dt><dd> a number of channels, in decimal, followed by 'c', yielding the default channel layout for that number of channels (see the function <tt>&quot;av_get_default_channel_layout&quot;</tt>). Note that not all channel counts have a default layout.
 </dd><dt>&bull;
@@ -2507,7 +2507,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>isinf(x)</b>
 </dt><dd> Return 1.0 if <i>x</i> is +/-INFINITY, 0.0 otherwise.
 </dd><dt><b>isnan(x)</b>
-</dt><dd> Return 1.0 if <i>x</i> is <font SIZE="-1">NAN, 0.0</font> otherwise.
+</dt><dd> Return 1.0 if <i>x</i> is NAN, 0.0 otherwise.
 </dd><dt><b>ld(var)</b>
 </dt><dd> Load the value of the internal variable with number <i>var</i>, which was previously stored with st(<i>var</i>, <i>expr</i>). The function returns the loaded value.
 </dd><dt><b>lerp(x, y, z)</b>
@@ -2569,24 +2569,24 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>trunc(expr)</b>
 </dt><dd> Round the value of expression <i>expr</i> towards zero to the nearest integer. For example, ``trunc(-1.5)'' is ``-1.0''.
 </dd><dt><b>while(cond, expr)</b>
-</dt><dd> Evaluate expression <i>expr</i> while the expression <i>cond</i> is non-zero, and returns the value of the last <i>expr</i> evaluation, or <font SIZE="-1">NAN</font> if <i>cond</i> was always false.</dd></dl>
+</dt><dd> Evaluate expression <i>expr</i> while the expression <i>cond</i> is non-zero, and returns the value of the last <i>expr</i> evaluation, or NAN if <i>cond</i> was always false.</dd></dl>
  
 
  The following constants are available:
 <dl>
-<dt><font SIZE="-1"><b>PI</b></font>
+<dt><b>PI</b>
 </dt><dd> area of the unit disc, approximately 3.14
 </dd><dt><b>E</b>
 </dt><dd> <b>exp</b>(1) (Euler's number), approximately 2.718
-</dd><dt><font SIZE="-1"><b>PHI</b></font>
+</dd><dt><b>PHI</b>
 </dt><dd> golden ratio (1+<b>sqrt</b>(5))/2, approximately 1.618</dd></dl>
  
 
  Assuming that an expression is considered ``true'' if it has a non-zero value, note that: 
 
- <tt>&quot;*&quot;</tt> works like <font SIZE="-1">AND</font> 
+ <tt>&quot;*&quot;</tt> works like AND 
 
- <tt>&quot;+&quot;</tt> works like <font SIZE="-1">OR</font> 
+ <tt>&quot;+&quot;</tt> works like OR 
 
  For example the construct: 
 
@@ -2602,7 +2602,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
  In your C code, you can extend the list of unary and binary functions, and define recognized constants, so that they are available for your expressions. 
 
- The evaluator also recognizes the International System unit prefixes. If 'i' is appended after the prefix, binary prefixes are used, which are based on powers of 1024 instead of powers of 1000. The 'B' postfix multiplies the value by 8, and can be appended after a unit prefix or used alone. This allows using for example '<font SIZE="-1">KB</font>', 'MiB', 'G' and 'B' as number postfix. 
+ The evaluator also recognizes the International System unit prefixes. If 'i' is appended after the prefix, binary prefixes are used, which are based on powers of 1024 instead of powers of 1000. The 'B' postfix multiplies the value by 8, and can be appended after a unit prefix or used alone. This allows using for example 'KB', 'MiB', 'G' and 'B' as number postfix. 
 
  The list of available International System prefixes follows, with indication of the corresponding powers of 10 and of 2.
 <dl>
@@ -2653,7 +2653,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
  Sometimes, a global option may only affect a specific kind of codec, and may be nonsensical or ignored by another, so you need to be aware of the meaning of the specified options. Also some options are meant only for decoding or encoding. 
 
- Options may be set by specifying -<i>option</i> <i>value</i> in the FFmpeg tools, or by setting the value explicitly in the <tt>&quot;AVCodecContext&quot;</tt> options or using the <i>libavutil/opt.h</i> <font SIZE="-1">API</font> for programmatic use. 
+ Options may be set by specifying -<i>option</i> <i>value</i> in the FFmpeg tools, or by setting the value explicitly in the <tt>&quot;AVCodecContext&quot;</tt> options or using the <i>libavutil/opt.h</i> API for programmatic use. 
 
  The list of supported options follow:
 <dl>
@@ -2687,9 +2687,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>truncated</b>
 </dt><dd> Input bitstream might be randomly truncated.
 </dd><dt><b>drop_changed</b>
-</dt><dd> Don't output frames whose parameters differ from first decoded frame in stream. Error <font SIZE="-1">AVERROR_INPUT_CHANGED</font> is returned when a frame is dropped.
+</dt><dd> Don't output frames whose parameters differ from first decoded frame in stream. Error AVERROR_INPUT_CHANGED is returned when a frame is dropped.
 </dd><dt><b>ildct</b>
-</dt><dd> Use interlaced <font SIZE="-1">DCT.</font>
+</dt><dd> Use interlaced DCT.
 </dd><dt><b>low_delay</b>
 </dt><dd> Force low delay.
 </dd><dt><b>global_header</b>
@@ -2714,7 +2714,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
  It is the fundamental unit of time (in seconds) in terms of which frame timestamps are represented. For fixed-fps content, timebase should be <tt>&quot;1 / frame_rate&quot;</tt> and timestamp increments should be identically 1.
 </dd><dt><b>g</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set the group of picture (<font SIZE="-1">GOP</font>) size. Default value is 12.
+</dt><dd> Set the group of picture (GOP) size. Default value is 12.
 </dd><dt><b>ar</b> <i>integer</i> <b>(</b><i>decoding/encoding,audio</i><b>)</b>
 </dt><dd> Set audio sampling rate (in Hz).
 </dd><dt><b>ac</b> <i>integer</i> <b>(</b><i>decoding/encoding,audio</i><b>)</b>
@@ -2724,21 +2724,21 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>frame_size</b> <i>integer</i> <b>(</b><i>encoding,audio</i><b>)</b>
 </dt><dd> Set audio frame size. 
 
- Each submitted frame except the last must contain exactly frame_size samples per channel. May be 0 when the codec has <font SIZE="-1">CODEC_CAP_VARIABLE_FRAME_SIZE</font> set, in that case the frame size is not restricted. It is set by some decoders to indicate constant frame size.
+ Each submitted frame except the last must contain exactly frame_size samples per channel. May be 0 when the codec has CODEC_CAP_VARIABLE_FRAME_SIZE set, in that case the frame size is not restricted. It is set by some decoders to indicate constant frame size.
 </dd><dt><b>frame_number</b> <i>integer</i>
 </dt><dd> Set the frame number.
 </dd><dt><b>delay</b> <i>integer</i>
 </dt><dd>
 </dd><dt><b>qcomp</b> <i>float</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set video quantizer scale compression (<font SIZE="-1">VBR</font>). It is used as a constant in the ratecontrol equation. Recommended range for default rc_eq: 0.0-1.0.
+</dt><dd> Set video quantizer scale compression (VBR). It is used as a constant in the ratecontrol equation. Recommended range for default rc_eq: 0.0-1.0.
 </dd><dt><b>qblur</b> <i>float</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set video quantizer scale blur (<font SIZE="-1">VBR</font>).
+</dt><dd> Set video quantizer scale blur (VBR).
 </dd><dt><b>qmin</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set min video quantizer scale (<font SIZE="-1">VBR</font>). Must be included between -1 and 69, default value is 2.
+</dt><dd> Set min video quantizer scale (VBR). Must be included between -1 and 69, default value is 2.
 </dd><dt><b>qmax</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set max video quantizer scale (<font SIZE="-1">VBR</font>). Must be included between -1 and 1024, default value is 31.
+</dt><dd> Set max video quantizer scale (VBR). Must be included between -1 and 1024, default value is 31.
 </dd><dt><b>qdiff</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set max difference between the quantizer scale (<font SIZE="-1">VBR</font>).
+</dt><dd> Set max difference between the quantizer scale (VBR).
 </dd><dt><b>bf</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
 </dt><dd> Set max number of B frames between non-B-frames. 
 
@@ -2750,7 +2750,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>b_strategy</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
 </dt><dd> Set strategy to choose between I/P/B-frames.
 </dd><dt><b>ps</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">RTP</font> payload size in bytes.
+</dt><dd> Set RTP payload size in bytes.
 </dd><dt><b>mv_bits</b> <i>integer</i>
 </dt><dd>
 </dd><dt><b>header_bits</b> <i>integer</i>
@@ -2832,7 +2832,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
 
 <dt><b>b_qoffset</b> <i>float</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">QP</font> offset between P and B frames.
+</dt><dd> Set QP offset between P and B frames.
 </dd><dt><b>err_detect</b> <i>flags</i> <b>(</b><i>decoding,audio,video</i><b>)</b>
 </dt><dd> Set error detection flags. 
 
@@ -2865,21 +2865,21 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>block_align</b> <i>integer</i>
 </dt><dd>
 </dd><dt><b>mpeg_quant</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Use <font SIZE="-1">MPEG</font> quantizers instead of H.263.
+</dt><dd> Use MPEG quantizers instead of H.263.
 </dd><dt><b>rc_override_count</b> <i>integer</i>
 </dt><dd>
 </dd><dt><b>maxrate</b> <i>integer</i> <b>(</b><i>encoding,audio,video</i><b>)</b>
 </dt><dd> Set max bitrate tolerance (in bits/s). Requires bufsize to be set.
 </dd><dt><b>minrate</b> <i>integer</i> <b>(</b><i>encoding,audio,video</i><b>)</b>
-</dt><dd> Set min bitrate tolerance (in bits/s). Most useful in setting up a <font SIZE="-1">CBR</font> encode. It is of little use elsewise.
+</dt><dd> Set min bitrate tolerance (in bits/s). Most useful in setting up a CBR encode. It is of little use elsewise.
 </dd><dt><b>bufsize</b> <i>integer</i> <b>(</b><i>encoding,audio,video</i><b>)</b>
 </dt><dd> Set ratecontrol buffer size (in bits).
 </dd><dt><b>i_qfactor</b> <i>float</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">QP</font> factor between P and I frames.
+</dt><dd> Set QP factor between P and I frames.
 </dd><dt><b>i_qoffset</b> <i>float</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">QP</font> offset between P and I frames.
+</dt><dd> Set QP offset between P and I frames.
 </dd><dt><b>dct</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">DCT</font> algorithm. 
+</dt><dd> Set DCT algorithm. 
 
  Possible values:
 </dd><dl>
@@ -2895,7 +2895,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>altivec</b>
 </dt><dd>
 </dd><dt><b>faan</b>
-</dt><dd> floating point <font SIZE="-1">AAN DCT</font></dd></dl>
+</dt><dd> floating point AAN DCT</dd></dl>
 </dl>
 
 <dl>
@@ -2912,7 +2912,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>dark_mask</b> <i>float</i> <b>(</b><i>encoding,video</i><b>)</b>
 </dt><dd> Compress dark areas stronger than medium ones.
 </dd><dt><b>idct</b> <i>integer</i> <b>(</b><i>decoding/encoding,video</i><b>)</b>
-</dt><dd> Select <font SIZE="-1">IDCT</font> implementation. 
+</dt><dd> Select IDCT implementation. 
 
  Possible values:
 </dd><dl>
@@ -2926,7 +2926,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>simplemmx</b>
 </dt><dd>
 </dd><dt><b>simpleauto</b>
-</dt><dd> Automatically pick a <font SIZE="-1">IDCT</font> compatible with the simple one
+</dt><dd> Automatically pick a IDCT compatible with the simple one
 </dd><dt><b>arm</b>
 </dt><dd>
 </dd><dt><b>altivec</b>
@@ -2944,7 +2944,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>xvid</b>
 </dt><dd>
 </dd><dt><b>faani</b>
-</dt><dd> floating point <font SIZE="-1">AAN IDCT</font></dd></dl>
+</dt><dd> floating point AAN IDCT</dd></dl>
 </dl>
 
 <dl>
@@ -2959,7 +2959,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dl>
 <dl>
 <dt><b>guess_mvs</b>
-</dt><dd> iterative motion vector (<font SIZE="-1">MV</font>) search (slow)
+</dt><dd> iterative motion vector (MV) search (slow)
 </dd><dt><b>deblock</b>
 </dt><dd> use strong deblock filter for damaged MBs
 </dd><dt><b>favor_inter</b>
@@ -3005,9 +3005,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>bitstream</b>
 </dt><dd>
 </dd><dt><b>mb_type</b>
-</dt><dd> macroblock (<font SIZE="-1">MB</font>) type
+</dt><dd> macroblock (MB) type
 </dd><dt><b>qp</b>
-</dt><dd> per-block quantization parameter (<font SIZE="-1">QP</font>)
+</dt><dd> per-block quantization parameter (QP)
 </dd><dt><b>dct_coeff</b>
 </dt><dd>
 </dd><dt><b>green_metadata</b>
@@ -3046,7 +3046,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>satd</b>
 </dt><dd> sum of absolute Hadamard transformed differences
 </dd><dt><b>dct</b>
-</dt><dd> sum of absolute <font SIZE="-1">DCT</font> transformed differences
+</dt><dd> sum of absolute DCT transformed differences
 </dd><dt><b>psnr</b>
 </dt><dd> sum of squared quantization errors (avoid, low quality)
 </dd><dt><b>bit</b>
@@ -3087,7 +3087,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>satd</b>
 </dt><dd> sum of absolute Hadamard transformed differences
 </dd><dt><b>dct</b>
-</dt><dd> sum of absolute <font SIZE="-1">DCT</font> transformed differences
+</dt><dd> sum of absolute DCT transformed differences
 </dd><dt><b>psnr</b>
 </dt><dd> sum of squared quantization errors (avoid, low quality)
 </dd><dt><b>bit</b>
@@ -3128,7 +3128,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>satd</b>
 </dt><dd> sum of absolute Hadamard transformed differences
 </dd><dt><b>dct</b>
-</dt><dd> sum of absolute <font SIZE="-1">DCT</font> transformed differences
+</dt><dd> sum of absolute DCT transformed differences
 </dd><dt><b>psnr</b>
 </dt><dd> sum of squared quantization errors (avoid, low quality)
 </dd><dt><b>bit</b>
@@ -3169,7 +3169,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>satd</b>
 </dt><dd> sum of absolute Hadamard transformed differences
 </dd><dt><b>dct</b>
-</dt><dd> sum of absolute <font SIZE="-1">DCT</font> transformed differences
+</dt><dd> sum of absolute DCT transformed differences
 </dd><dt><b>psnr</b>
 </dt><dd> sum of squared quantization errors (avoid, low quality)
 </dd><dt><b>bit</b>
@@ -3201,7 +3201,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dt><dd> Set diamond type &amp; size for motion estimation.
 </dd><dl>
 <dl>
-<dt><b>(1024, </b><font SIZE="-1"><b>INT_MAX</b></font><b>)</b>
+<dt><b>(1024, </b><b>INT_MAX</b><b>)</b>
 </dt><dd> full motion estimation(slowest)
 </dd><dt><b>(768, 1024]</b>
 </dt><dd> umh motion estimation
@@ -3215,7 +3215,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dt><dd> small diamond motion estimation
 </dd><dt><b>-1</b>
 </dt><dd> funny diamond motion estimation
-</dd><dt><b>(</b><font SIZE="-1"><b>INT_MIN,</b></font><b> -1)</b>
+</dd><dt><b>(</b><b>INT_MIN,</b><b> -1)</b>
 </dt><dd> sab diamond motion estimation</dd></dl>
 </dl>
 
@@ -3239,7 +3239,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>satd</b>
 </dt><dd> sum of absolute Hadamard transformed differences
 </dd><dt><b>dct</b>
-</dt><dd> sum of absolute <font SIZE="-1">DCT</font> transformed differences
+</dt><dd> sum of absolute DCT transformed differences
 </dd><dt><b>psnr</b>
 </dt><dd> sum of squared quantization errors (avoid, low quality)
 </dd><dt><b>bit</b>
@@ -3340,7 +3340,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>skip_manual</b>
 </dt><dd> Do not skip samples and export skip information as frame side data.
 </dd><dt><b>ass_ro_flush_noop</b>
-</dt><dd> Do not reset <font SIZE="-1">ASS</font> ReadOrder field on flush.</dd></dl>
+</dt><dd> Do not reset ASS ReadOrder field on flush.</dd></dl>
 </dl>
 
 <dl>
@@ -3355,9 +3355,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>prft</b>
 </dt><dd> Export encoder Producer Reference Time into packet side-data (see <tt>&quot;AV_PKT_DATA_PRFT&quot;</tt>) for codecs that support it.
 </dd><dt><b>venc_params</b>
-</dt><dd> Export video encoding parameters through frame side data (see <tt>&quot;AV_FRAME_DATA_VIDEO_ENC_PARAMS&quot;</tt>) for codecs that support it. At present, those are H.264 and <font SIZE="-1">VP9.</font>
+</dt><dd> Export video encoding parameters through frame side data (see <tt>&quot;AV_FRAME_DATA_VIDEO_ENC_PARAMS&quot;</tt>) for codecs that support it. At present, those are H.264 and VP9.
 </dd><dt><b>film_grain</b>
-</dt><dd> Export film grain parameters through frame side data (see <tt>&quot;AV_FRAME_DATA_FILM_GRAIN_PARAMS&quot;</tt>). Supported at present by <font SIZE="-1">AV1</font> decoders.</dd></dl>
+</dt><dd> Export film grain parameters through frame side data (see <tt>&quot;AV_FRAME_DATA_FILM_GRAIN_PARAMS&quot;</tt>). Supported at present by AV1 decoders.</dd></dl>
 </dl>
 
 <dl>
@@ -3420,7 +3420,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>satd</b>
 </dt><dd> sum of absolute Hadamard transformed differences
 </dd><dt><b>dct</b>
-</dt><dd> sum of absolute <font SIZE="-1">DCT</font> transformed differences
+</dt><dd> sum of absolute DCT transformed differences
 </dd><dt><b>psnr</b>
 </dt><dd> sum of squared quantization errors (avoid, low quality)
 </dd><dt><b>bit</b>
@@ -3449,9 +3449,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
 
 <dt><b>mblmin</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set min macroblock lagrange factor (<font SIZE="-1">VBR</font>).
+</dt><dd> Set min macroblock lagrange factor (VBR).
 </dd><dt><b>mblmax</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set max macroblock lagrange factor (<font SIZE="-1">VBR</font>).
+</dt><dd> Set max macroblock lagrange factor (VBR).
 </dd><dt><b>mepc</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
 </dt><dd> Set motion estimation bitrate penalty compensation (1.0 = 256).
 </dd><dt><b>skip_loop_filter</b> <i>integer</i> <b>(</b><i>decoding,video</i><b>)</b>
@@ -3510,7 +3510,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>max_prediction_order</b> <i>integer</i> <b>(</b><i>encoding,audio</i><b>)</b>
 </dt><dd>
 </dd><dt><b>timecode_frame_start</b> <i>integer</i> <b>(</b><i>encoding,video</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">GOP</font> timecode frame start number, in non drop frame format.
+</dt><dd> Set GOP timecode frame start number, in non drop frame format.
 </dd><dt><b>bits_per_raw_sample</b> <i>integer</i>
 </dt><dd>
 </dd><dt><b>channel_layout</b> <i>integer</i> <b>(</b><i>decoding/encoding,audio</i><b>)</b>
@@ -3528,29 +3528,29 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dl>
 <dl>
 <dt><b>bt709</b>
-</dt><dd> <font SIZE="-1">BT.709</font>
+</dt><dd> BT.709
 </dd><dt><b>bt470m</b>
-</dt><dd> <font SIZE="-1">BT.470 M</font>
+</dt><dd> BT.470 M
 </dd><dt><b>bt470bg</b>
-</dt><dd> <font SIZE="-1">BT.470 BG</font>
+</dt><dd> BT.470 BG
 </dd><dt><b>smpte170m</b>
-</dt><dd> <font SIZE="-1">SMPTE 170 M</font>
+</dt><dd> SMPTE 170 M
 </dd><dt><b>smpte240m</b>
-</dt><dd> <font SIZE="-1">SMPTE 240 M</font>
+</dt><dd> SMPTE 240 M
 </dd><dt><b>film</b>
 </dt><dd> Film
 </dd><dt><b>bt2020</b>
-</dt><dd> <font SIZE="-1">BT.2020</font>
+</dt><dd> BT.2020
 </dd><dt><b>smpte428</b>
 </dt><dd>
 </dd><dt><b>smpte428_1</b>
-</dt><dd> <font SIZE="-1">SMPTE ST 428-1</font>
+</dt><dd> SMPTE ST 428-1
 </dd><dt><b>smpte431</b>
-</dt><dd> <font SIZE="-1">SMPTE 431-2</font>
+</dt><dd> SMPTE 431-2
 </dd><dt><b>smpte432</b>
-</dt><dd> <font SIZE="-1">SMPTE 432-1</font>
+</dt><dd> SMPTE 432-1
 </dd><dt><b>jedec-p22</b>
-</dt><dd> <font SIZE="-1">JEDEC P22</font></dd></dl>
+</dt><dd> JEDEC P22</dd></dl>
 </dl>
 
 <dl>
@@ -3561,15 +3561,15 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dl>
 <dl>
 <dt><b>bt709</b>
-</dt><dd> <font SIZE="-1">BT.709</font>
+</dt><dd> BT.709
 </dd><dt><b>gamma22</b>
-</dt><dd> <font SIZE="-1">BT.470 M</font>
+</dt><dd> BT.470 M
 </dd><dt><b>gamma28</b>
-</dt><dd> <font SIZE="-1">BT.470 BG</font>
+</dt><dd> BT.470 BG
 </dd><dt><b>smpte170m</b>
-</dt><dd> <font SIZE="-1">SMPTE 170 M</font>
+</dt><dd> SMPTE 170 M
 </dd><dt><b>smpte240m</b>
-</dt><dd> <font SIZE="-1">SMPTE 240 M</font>
+</dt><dd> SMPTE 240 M
 </dd><dt><b>linear</b>
 </dt><dd> Linear
 </dd><dt><b>log</b>
@@ -3583,31 +3583,31 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>iec61966_2_4</b>
 </dt><dd>
 </dd><dt><b>iec61966-2-4</b>
-</dt><dd> <font SIZE="-1">IEC 61966-2-4</font>
+</dt><dd> IEC 61966-2-4
 </dd><dt><b>bt1361</b>
 </dt><dd>
 </dd><dt><b>bt1361e</b>
-</dt><dd> <font SIZE="-1">BT.1361</font>
+</dt><dd> BT.1361
 </dd><dt><b>iec61966_2_1</b>
 </dt><dd>
 </dd><dt><b>iec61966-2-1</b>
-</dt><dd> <font SIZE="-1">IEC 61966-2-1</font>
+</dt><dd> IEC 61966-2-1
 </dd><dt><b>bt2020_10</b>
 </dt><dd>
 </dd><dt><b>bt2020_10bit</b>
-</dt><dd> <font SIZE="-1">BT.2020</font> - 10 bit
+</dt><dd> BT.2020 - 10 bit
 </dd><dt><b>bt2020_12</b>
 </dt><dd>
 </dd><dt><b>bt2020_12bit</b>
-</dt><dd> <font SIZE="-1">BT.2020</font> - 12 bit
+</dt><dd> BT.2020 - 12 bit
 </dd><dt><b>smpte2084</b>
-</dt><dd> <font SIZE="-1">SMPTE ST 2084</font>
+</dt><dd> SMPTE ST 2084
 </dd><dt><b>smpte428</b>
 </dt><dd>
 </dd><dt><b>smpte428_1</b>
-</dt><dd> <font SIZE="-1">SMPTE ST 428-1</font>
+</dt><dd> SMPTE ST 428-1
 </dd><dt><b>arib-std-b67</b>
-</dt><dd> <font SIZE="-1">ARIB STD-B67</font></dd></dl>
+</dt><dd> ARIB STD-B67</dd></dl>
 </dl>
 
 <dl>
@@ -3618,33 +3618,33 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dl>
 <dl>
 <dt><b>rgb</b>
-</dt><dd> <font SIZE="-1">RGB</font>
+</dt><dd> RGB
 </dd><dt><b>bt709</b>
-</dt><dd> <font SIZE="-1">BT.709</font>
+</dt><dd> BT.709
 </dd><dt><b>fcc</b>
-</dt><dd> <font SIZE="-1">FCC</font>
+</dt><dd> FCC
 </dd><dt><b>bt470bg</b>
-</dt><dd> <font SIZE="-1">BT.470 BG</font>
+</dt><dd> BT.470 BG
 </dd><dt><b>smpte170m</b>
-</dt><dd> <font SIZE="-1">SMPTE 170 M</font>
+</dt><dd> SMPTE 170 M
 </dd><dt><b>smpte240m</b>
-</dt><dd> <font SIZE="-1">SMPTE 240 M</font>
+</dt><dd> SMPTE 240 M
 </dd><dt><b>ycocg</b>
-</dt><dd> <font SIZE="-1">YCOCG</font>
+</dt><dd> YCOCG
 </dd><dt><b>bt2020nc</b>
 </dt><dd>
 </dd><dt><b>bt2020_ncl</b>
-</dt><dd> <font SIZE="-1">BT.2020 NCL</font>
+</dt><dd> BT.2020 NCL
 </dd><dt><b>bt2020c</b>
 </dt><dd>
 </dd><dt><b>bt2020_cl</b>
-</dt><dd> <font SIZE="-1">BT.2020 CL</font>
+</dt><dd> BT.2020 CL
 </dd><dt><b>smpte2085</b>
-</dt><dd> <font SIZE="-1">SMPTE 2085</font>
+</dt><dd> SMPTE 2085
 </dd><dt><b>chroma-derived-nc</b>
-</dt><dd> Chroma-derived <font SIZE="-1">NCL</font>
+</dt><dd> Chroma-derived NCL
 </dd><dt><b>chroma-derived-c</b>
-</dt><dd> Chroma-derived <font SIZE="-1">CL</font>
+</dt><dd> Chroma-derived CL
 </dd><dt><b>ictcp</b>
 </dt><dd> ICtCp</dd></dl>
 </dl>
@@ -3659,11 +3659,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>tv</b>
 </dt><dd>
 </dd><dt><b>mpeg</b>
-</dt><dd> <font SIZE="-1">MPEG</font> (219*2^(n-8))
+</dt><dd> MPEG (219*2^(n-8))
 </dd><dt><b>pc</b>
 </dt><dd>
 </dd><dt><b>jpeg</b>
-</dt><dd> <font SIZE="-1">JPEG</font> (2^n-1)</dd></dl>
+</dt><dd> JPEG (2^n-1)</dd></dl>
 </dl>
 
 <dl>
@@ -3782,7 +3782,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>max_pixels</b> <i>integer</i> <b>(</b><i>decoding/encoding,video</i><b>)</b>
 </dt><dd> Maximum number of pixels per image. This value can be used to avoid out of memory failures due to large images.
 </dd><dt><b>apply_cropping</b> <i>bool</i> <b>(</b><i>decoding,video</i><b>)</b>
-</dt><dd> Enable cropping if cropping parameters are multiples of the required alignment for the left and top parameters. If the alignment is not met the cropping will be partially applied to maintain alignment. Default is 1 (enabled). Note: The required alignment depends on if <tt>&quot;AV_CODEC_FLAG_UNALIGNED&quot;</tt> is set and the <font SIZE="-1">CPU.</font> <tt>&quot;AV_CODEC_FLAG_UNALIGNED&quot;</tt> cannot be changed from the command line. Also hardware decoders will not apply left/top Cropping.</dd></dl>
+</dt><dd> Enable cropping if cropping parameters are multiples of the required alignment for the left and top parameters. If the alignment is not met the cropping will be partially applied to maintain alignment. Default is 1 (enabled). Note: The required alignment depends on if <tt>&quot;AV_CODEC_FLAG_UNALIGNED&quot;</tt> is set and the CPU. <tt>&quot;AV_CODEC_FLAG_UNALIGNED&quot;</tt> cannot be changed from the command line. Also hardware decoders will not apply left/top Cropping.</dd></dl>
 
 <h2>DECODERS</h2>
 
@@ -3800,12 +3800,12 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>av1</h3>
 
- AOMedia Video 1 (<font SIZE="-1">AV1</font>) decoder. 
+ AOMedia Video 1 (AV1) decoder. 
 
  <i>Options</i>
 <dl>
 <dt><b>operating_point</b>
-</dt><dd> Select an operating point of a scalable <font SIZE="-1">AV1</font> bitstream (0 - 31). Default is 0.</dd></dl>
+</dt><dd> Select an operating point of a scalable AV1 bitstream (0 - 31). Default is 0.</dd></dl>
 
 <h3>rawvideo</h3>
 
@@ -3833,9 +3833,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>libdav1d</h3>
 
- dav1d <font SIZE="-1">AV1</font> decoder. 
+ dav1d AV1 decoder. 
 
- libdav1d allows libavcodec to decode the AOMedia Video 1 (<font SIZE="-1">AV1</font>) codec. Requires the presence of the libdav1d headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libdav1d&quot;</tt>. 
+ libdav1d allows libavcodec to decode the AOMedia Video 1 (AV1) codec. Requires the presence of the libdav1d headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libdav1d&quot;</tt>. 
 
  <i>Options</i> 
 
@@ -3848,21 +3848,21 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>filmgrain</b>
 </dt><dd> Apply film grain to the decoded video if present in the bitstream. Defaults to the internal default of the library.
 </dd><dt><b>oppoint</b>
-</dt><dd> Select an operating point of a scalable <font SIZE="-1">AV1</font> bitstream (0 - 31). Defaults to the internal default of the library.
+</dt><dd> Select an operating point of a scalable AV1 bitstream (0 - 31). Defaults to the internal default of the library.
 </dd><dt><b>alllayers</b>
-</dt><dd> Output all spatial layers of a scalable <font SIZE="-1">AV1</font> bitstream. The default value is false.</dd></dl>
+</dt><dd> Output all spatial layers of a scalable AV1 bitstream. The default value is false.</dd></dl>
 
 <h3>libdavs2</h3>
 
- <font SIZE="-1">AVS2-P2/IEEE1857.4</font> video decoder wrapper. 
+ AVS2-P2/IEEE1857.4 video decoder wrapper. 
 
- This decoder allows libavcodec to decode <font SIZE="-1">AVS2</font> streams with davs2 library.
+ This decoder allows libavcodec to decode AVS2 streams with davs2 library.
 
 <h3>libuavs3d</h3>
 
- <font SIZE="-1">AVS3-P2/IEEE1857.10</font> video decoder. 
+ AVS3-P2/IEEE1857.10 video decoder. 
 
- libuavs3d allows libavcodec to decode <font SIZE="-1">AVS3</font> streams. Requires the presence of the libuavs3d headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libuavs3d&quot;</tt>. 
+ libuavs3d allows libavcodec to decode AVS3 streams. Requires the presence of the libuavs3d headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libuavs3d&quot;</tt>. 
 
  <i>Options</i> 
 
@@ -3877,22 +3877,22 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>ac3</h3>
 
- <font SIZE="-1">AC-3</font> audio decoder. 
+ AC-3 audio decoder. 
 
- This decoder implements part of <font SIZE="-1">ATSC A/52:2010</font> and <font SIZE="-1">ETSI TS 102 366,</font> as well as the undocumented RealAudio 3 (a.k.a. dnet). 
+ This decoder implements part of ATSC A/52:2010 and ETSI TS 102 366, as well as the undocumented RealAudio 3 (a.k.a. dnet). 
 
- <i></i><font SIZE="-1"><i>AC-3</i></font><i> Decoder Options</i>
+ <i></i><i>AC-3</i><i> Decoder Options</i>
 <dl>
 <dt><b>-drc_scale</b> <i>value</i>
-</dt><dd> Dynamic Range Scale Factor. The factor to apply to dynamic range values from the <font SIZE="-1">AC-3</font> stream. This factor is applied exponentially. The default value is 1. There are 3 notable scale factor ranges:
+</dt><dd> Dynamic Range Scale Factor. The factor to apply to dynamic range values from the AC-3 stream. This factor is applied exponentially. The default value is 1. There are 3 notable scale factor ranges:
 </dd><dl>
 <dl>
 <dt><b>drc_scale == 0</b>
-</dt><dd> <font SIZE="-1">DRC</font> disabled. Produces full range audio.
+</dt><dd> DRC disabled. Produces full range audio.
 </dd><dt><b>0 &lt; drc_scale &lt;= 1</b>
-</dt><dd> <font SIZE="-1">DRC</font> enabled. Applies a fraction of the stream <font SIZE="-1">DRC</font> value. Audio reproduction is between full range and full compression.
+</dt><dd> DRC enabled. Applies a fraction of the stream DRC value. Audio reproduction is between full range and full compression.
 </dd><dt><b>drc_scale &gt; 1</b>
-</dt><dd> <font SIZE="-1">DRC</font> enabled. Applies drc_scale asymmetrically. Loud sounds are fully compressed. Soft sounds are enhanced.</dd></dl>
+</dt><dd> DRC enabled. Applies drc_scale asymmetrically. Loud sounds are fully compressed. Soft sounds are enhanced.</dd></dl>
 </dl>
 
 <dl>
@@ -3901,14 +3901,14 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>flac</h3>
 
- <font SIZE="-1">FLAC</font> audio decoder. 
+ FLAC audio decoder. 
 
- This decoder aims to implement the complete <font SIZE="-1">FLAC</font> specification from Xiph. 
+ This decoder aims to implement the complete FLAC specification from Xiph. 
 
- <i></i><font SIZE="-1"><i>FLAC</i></font><i> Decoder options</i>
+ <i></i><i>FLAC</i><i> Decoder options</i>
 <dl>
 <dt><b>-use_buggy_lpc</b>
-</dt><dd> The lavc <font SIZE="-1">FLAC</font> encoder used to produce buggy streams with high lpc values (like the default value). This option makes it possible to decode such streams correctly by using lavc's old buggy lpc logic for decoding.</dd></dl>
+</dt><dd> The lavc FLAC encoder used to produce buggy streams with high lpc values (like the default value). This option makes it possible to decode such streams correctly by using lavc's old buggy lpc logic for decoding.</dd></dl>
 
 <h3>ffwavesynth</h3>
 
@@ -3920,15 +3920,15 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
  libcelt decoder wrapper. 
 
- libcelt allows libavcodec to decode the Xiph <font SIZE="-1">CELT</font> ultra-low delay audio codec. Requires the presence of the libcelt headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libcelt&quot;</tt>.
+ libcelt allows libavcodec to decode the Xiph CELT ultra-low delay audio codec. Requires the presence of the libcelt headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libcelt&quot;</tt>.
 
 <h3>libgsm</h3>
 
  libgsm decoder wrapper. 
 
- libgsm allows libavcodec to decode the <font SIZE="-1">GSM</font> full rate audio codec. Requires the presence of the libgsm headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libgsm&quot;</tt>. 
+ libgsm allows libavcodec to decode the GSM full rate audio codec. Requires the presence of the libgsm headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libgsm&quot;</tt>. 
 
- This decoder supports both the ordinary <font SIZE="-1">GSM</font> and the Microsoft variant.
+ This decoder supports both the ordinary GSM and the Microsoft variant.
 
 <h3>libilbc</h3>
 
@@ -3971,9 +3971,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>libaribb24</h3>
 
- <font SIZE="-1">ARIB STD-B24</font> caption decoder. 
+ ARIB STD-B24 caption decoder. 
 
- Implements profiles A and C of the <font SIZE="-1">ARIB STD-B24</font> standard. 
+ Implements profiles A and C of the ARIB STD-B24 standard. 
 
  <i>libaribb24 Decoder Options</i>
 <dl>
@@ -3993,11 +3993,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dl>
 <dl>
 <dt><b>-1</b>
-</dt><dd> Compute clut if no matching <font SIZE="-1">CLUT</font> is in the stream.
+</dt><dd> Compute clut if no matching CLUT is in the stream.
 </dd><dt><b>0</b>
-</dt><dd> Never compute <font SIZE="-1">CLUT</font>
+</dt><dd> Never compute CLUT
 </dd><dt><b>1</b>
-</dt><dd> Always compute <font SIZE="-1">CLUT</font> and override the one provided in the stream.</dd></dl>
+</dt><dd> Always compute CLUT and override the one provided in the stream.</dd></dl>
 </dl>
 
 <dl>
@@ -4013,23 +4013,23 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  <i>Options</i>
 <dl>
 <dt><b>palette</b>
-</dt><dd> Specify the global palette used by the bitmaps. When stored in VobSub, the palette is normally specified in the index file; in Matroska, the palette is stored in the codec extra-data in the same format as in VobSub. In DVDs, the palette is stored in the <font SIZE="-1">IFO</font> file, and therefore not available when reading from dumped <font SIZE="-1">VOB</font> files. 
+</dt><dd> Specify the global palette used by the bitmaps. When stored in VobSub, the palette is normally specified in the index file; in Matroska, the palette is stored in the codec extra-data in the same format as in VobSub. In DVDs, the palette is stored in the IFO file, and therefore not available when reading from dumped VOB files. 
  The format for this option is a string containing 16 24-bits hexadecimal numbers (without 0x prefix) separated by commas, for example <tt>&quot;0d00ee, ee450d, 101010, eaeaea, 0ce60b, ec14ed, ebff0b, 0d617a, 7b7b7b, d1d1d1, 7b2a0e, 0d950c, 0f007b, cf0dec, cfa80c, 7c127b&quot;</tt>.
 </dd><dt><b>ifo_palette</b>
-</dt><dd> Specify the <font SIZE="-1">IFO</font> file from which the global palette is obtained. (experimental)
+</dt><dd> Specify the IFO file from which the global palette is obtained. (experimental)
 </dd><dt><b>forced_subs_only</b>
 </dt><dd> Only decode subtitle entries marked as forced. Some titles have forced and non-forced subtitles in the same track. Setting this flag to <tt>1</tt> will only keep the forced subtitles. Default value is <tt>0</tt>.</dd></dl>
 
 <h3>libzvbi-teletext</h3>
 
- Libzvbi allows libavcodec to decode <font SIZE="-1">DVB</font> teletext pages and <font SIZE="-1">DVB</font> teletext subtitles. Requires the presence of the libzvbi headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libzvbi&quot;</tt>. 
+ Libzvbi allows libavcodec to decode DVB teletext pages and DVB teletext subtitles. Requires the presence of the libzvbi headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libzvbi&quot;</tt>. 
 
  <i>Options</i>
 <dl>
 <dt><b>txt_page</b>
 </dt><dd> List of teletext page numbers to decode. Pages that do not match the specified list are dropped. You may use the special <tt>&quot;*&quot;</tt> string to match all pages, or <tt>&quot;subtitle&quot;</tt> to match all subtitle pages. Default value is *.
 </dd><dt><b>txt_default_region</b>
-</dt><dd> Set default character set used for decoding, a value between 0 and 87 (see <font SIZE="-1">ETS 300 706,</font> Section 15, Table 32). Default value is -1, which does not override the libzvbi default. This option is needed for some legacy level 1.0 transmissions which cannot signal the proper charset.
+</dt><dd> Set default character set used for decoding, a value between 0 and 87 (see ETS 300 706, Section 15, Table 32). Default value is -1, which does not override the libzvbi default. This option is needed for some legacy level 1.0 transmissions which cannot signal the proper charset.
 </dd><dt><b>txt_chop_top</b>
 </dt><dd> Discards the top teletext line. Default value is 1.
 </dd><dt><b>txt_format</b>
@@ -4037,11 +4037,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dl>
 <dl>
 <dt><b>bitmap</b>
-</dt><dd> The default format, you should use this for teletext pages, because certain graphics and colors cannot be expressed in simple text or even <font SIZE="-1">ASS.</font>
+</dt><dd> The default format, you should use this for teletext pages, because certain graphics and colors cannot be expressed in simple text or even ASS.
 </dd><dt><b>text</b>
 </dt><dd> Simple text based output without formatting.
 </dd><dt><b>ass</b>
-</dt><dd> Formatted <font SIZE="-1">ASS</font> output, subtitle pages and teletext pages are returned in different styles, subtitle pages are stripped down to text, but an effort is made to keep the text alignment and the formatting.</dd></dl>
+</dt><dd> Formatted ASS output, subtitle pages and teletext pages are returned in different styles, subtitle pages are stripped down to text, but an effort is made to keep the text alignment and the formatting.</dd></dl>
 </dl>
 
 <dl>
@@ -4076,27 +4076,27 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>aac</h3>
 
- Advanced Audio Coding (<font SIZE="-1">AAC</font>) encoder. 
+ Advanced Audio Coding (AAC) encoder. 
 
- This encoder is the default <font SIZE="-1">AAC</font> encoder, natively implemented into FFmpeg. 
+ This encoder is the default AAC encoder, natively implemented into FFmpeg. 
 
  <i>Options</i>
 <dl>
 <dt><b>b</b>
-</dt><dd> Set bit rate in bits/s. Setting this automatically activates constant bit rate (<font SIZE="-1">CBR</font>) mode. If this option is unspecified it is set to 128kbps.
+</dt><dd> Set bit rate in bits/s. Setting this automatically activates constant bit rate (CBR) mode. If this option is unspecified it is set to 128kbps.
 </dd><dt><b>q</b>
-</dt><dd> Set quality for variable bit rate (<font SIZE="-1">VBR</font>) mode. This option is valid only using the <b>ffmpeg</b> command-line tool. For library interface users, use <b>global_quality</b>.
+</dt><dd> Set quality for variable bit rate (VBR) mode. This option is valid only using the <b>ffmpeg</b> command-line tool. For library interface users, use <b>global_quality</b>.
 </dd><dt><b>cutoff</b>
 </dt><dd> Set cutoff frequency. If unspecified will allow the encoder to dynamically adjust the cutoff to improve clarity on low bitrates.
 </dd><dt><b>aac_coder</b>
-</dt><dd> Set <font SIZE="-1">AAC</font> encoder coding method. Possible values:
+</dt><dd> Set AAC encoder coding method. Possible values:
 </dd><dl>
 <dl>
 <dt><b>twoloop</b>
-</dt><dd> Two loop searching (<font SIZE="-1">TLS</font>) method. 
+</dt><dd> Two loop searching (TLS) method. 
  This method first sets quantizers depending on band thresholds and then tries to find an optimal combination by adding or subtracting a specific value from all quantizers and adjusting some individual quantizer a little. Will tune itself based on whether <b>aac_is</b>, <b>aac_ms</b> and <b>aac_pns</b> are enabled.
 </dd><dt><b>anmr</b>
-</dt><dd> Average noise to mask ratio (<font SIZE="-1">ANMR</font>) trellis-based solution. 
+</dt><dd> Average noise to mask ratio (ANMR) trellis-based solution. 
  This is an experimental coder which currently produces a lower quality, is more unstable and is slower than the default twoloop coder but has potential. Currently has no support for the <b>aac_is</b> or <b>aac_pns</b> options. Not currently recommended.
 </dd><dt><b>fast</b>
 </dt><dd> Constant quantizer method. 
@@ -4109,11 +4109,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>aac_ms</b>
 </dt><dd> Sets mid/side coding mode. The default value of ``auto'' will automatically use M/S with bands which will benefit from such coding. Can be forced for all bands using the value ``enable'', which is mainly useful for debugging or disabled using ``disable''.
 </dd><dt><b>aac_is</b>
-</dt><dd> Sets intensity stereo coding tool usage. By default, it's enabled and will automatically toggle <font SIZE="-1">IS</font> for similar pairs of stereo bands if it's beneficial. Can be disabled for debugging by setting the value to ``disable''.
+</dt><dd> Sets intensity stereo coding tool usage. By default, it's enabled and will automatically toggle IS for similar pairs of stereo bands if it's beneficial. Can be disabled for debugging by setting the value to ``disable''.
 </dd><dt><b>aac_pns</b>
 </dt><dd> Uses perceptual noise substitution to replace low entropy high frequency bands with imperceptible white noise during the decoding process. By default, it's enabled, but can be disabled for debugging purposes by using ``disable''.
 </dd><dt><b>aac_tns</b>
-</dt><dd> Enables the use of a multitap <font SIZE="-1">FIR</font> filter which spans through the high frequency bands to hide quantization noise during the encoding process and is reverted by the decoder. As well as decreasing unpleasant artifacts in the high range this also reduces the entropy in the high bands and allows for more bits to be used by the mid-low bands. By default it's enabled but can be disabled for debugging by setting the option to ``disable''.
+</dt><dd> Enables the use of a multitap FIR filter which spans through the high frequency bands to hide quantization noise during the encoding process and is reverted by the decoder. As well as decreasing unpleasant artifacts in the high range this also reduces the entropy in the high bands and allows for more bits to be used by the mid-low bands. By default it's enabled but can be disabled for debugging by setting the option to ``disable''.
 </dd><dt><b>aac_ltp</b>
 </dt><dd> Enables the use of the long term prediction extension which increases coding efficiency in very low bandwidth situations such as encoding of voice or solo piano music by extending constant harmonic peaks in bands throughout frames. This option is implied by profile:a aac_low and is incompatible with aac_pred. Use in conjunction with <b>-ar</b> to decrease the samplerate.
 </dd><dt><b>aac_pred</b>
@@ -4123,13 +4123,13 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dl>
 <dl>
 <dt><b>aac_low</b>
-</dt><dd> The default, <font SIZE="-1">AAC</font> ``Low-complexity'' profile. Is the most compatible and produces decent quality.
+</dt><dd> The default, AAC ``Low-complexity'' profile. Is the most compatible and produces decent quality.
 </dd><dt><b>mpeg2_aac_low</b>
-</dt><dd> Equivalent to <tt>&quot;-profile:a aac_low -aac_pns 0&quot;</tt>. <font SIZE="-1">PNS</font> was introduced with the <font SIZE="-1">MPEG4</font> specifications.
+</dt><dd> Equivalent to <tt>&quot;-profile:a aac_low -aac_pns 0&quot;</tt>. PNS was introduced with the MPEG4 specifications.
 </dd><dt><b>aac_ltp</b>
-</dt><dd> Long term prediction profile, is enabled by and will enable the <b>aac_ltp</b> option. Introduced in <font SIZE="-1">MPEG4.</font>
+</dt><dd> Long term prediction profile, is enabled by and will enable the <b>aac_ltp</b> option. Introduced in MPEG4.
 </dd><dt><b>aac_main</b>
-</dt><dd> Main-type prediction profile, is enabled by and will enable the <b>aac_pred</b> option. Introduced in <font SIZE="-1">MPEG2.</font></dd></dl>
+</dt><dd> Main-type prediction profile, is enabled by and will enable the <b>aac_pred</b> option. Introduced in MPEG2.</dd></dl>
 </dl>
 
 <dl>
@@ -4140,15 +4140,15 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>ac3 and ac3_fixed</h3>
 
- <font SIZE="-1">AC-3</font> audio encoders. 
+ AC-3 audio encoders. 
 
- These encoders implement part of <font SIZE="-1">ATSC A/52:2010</font> and <font SIZE="-1">ETSI TS 102 366,</font> as well as the undocumented RealAudio 3 (a.k.a. dnet). 
+ These encoders implement part of ATSC A/52:2010 and ETSI TS 102 366, as well as the undocumented RealAudio 3 (a.k.a. dnet). 
 
  The <i>ac3</i> encoder uses floating-point math, while the <i>ac3_fixed</i> encoder only uses fixed-point integer math. This does not mean that one is always faster, just that one or the other may be better suited to a particular system. The <i>ac3_fixed</i> encoder is not the default codec for any of the output formats, so it must be specified explicitly using the option <tt>&quot;-acodec ac3_fixed&quot;</tt> in order to use it. 
 
- <i></i><font SIZE="-1"><i>AC-3</i></font><i> Metadata</i> 
+ <i></i><i>AC-3</i><i> Metadata</i> 
 
- The <font SIZE="-1">AC-3</font> metadata options are used to set parameters that describe the audio, but in most cases do not affect the audio encoding itself. Some of the options do directly affect or influence the decoding and playback of the resulting bitstream, while others are just for informational purposes. A few of the options will add bits to the output stream that could otherwise be used for audio data, and will thus affect the quality of the output. Those will be indicated accordingly with a note in the option list below. 
+ The AC-3 metadata options are used to set parameters that describe the audio, but in most cases do not affect the audio encoding itself. Some of the options do directly affect or influence the decoding and playback of the resulting bitstream, while others are just for informational purposes. A few of the options will add bits to the output stream that could otherwise be used for audio data, and will thus affect the quality of the output. Those will be indicated accordingly with a note in the option list below. 
 
  These parameters are described in detail in several publicly-available documents.
 <dl>
@@ -4218,7 +4218,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  Audio Production Information is optional information describing the mixing environment. Either none or both of the fields are written to the bitstream.
 <dl>
 <dt><b>-mixing_level</b> <i>number</i>
-</dt><dd> Mixing Level. Specifies peak sound pressure level (<font SIZE="-1">SPL</font>) in the production environment when the mix was mastered. Valid values are 80 to 111, or -1 for unknown or not indicated. The default value is -1, but that value cannot be used if the Audio Production Information is written to the bitstream. Therefore, if the <tt>&quot;room_type&quot;</tt> option is not the default value, the <tt>&quot;mixing_level&quot;</tt> option must not be -1.
+</dt><dd> Mixing Level. Specifies peak sound pressure level (SPL) in the production environment when the mix was mastered. Valid values are 80 to 111, or -1 for unknown or not indicated. The default value is -1, but that value cannot be used if the Audio Production Information is written to the bitstream. Therefore, if the <tt>&quot;room_type&quot;</tt> option is not the default value, the <tt>&quot;mixing_level&quot;</tt> option must not be -1.
 </dd><dt><b>-room_type</b> <i>type</i>
 </dt><dd> Room Type. Describes the equalization used during the final mixing session at the studio or on the dubbing stage. A large room is a dubbing stage with the industry standard X-curve equalization; a small room has flat equalization. This field will not be written to the bitstream if both the <tt>&quot;mixing_level&quot;</tt> option and the <tt>&quot;room_type&quot;</tt> option have the default values.
 </dd><dl>
@@ -4264,7 +4264,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>-dialnorm</b> <i>value</i>
 </dt><dd> Dialogue Normalization. Indicates how far the average dialogue level of the program is below digital 100% full scale (0 dBFS). This parameter determines a level shift during audio reproduction that sets the average volume of the dialogue to a preset level. The goal is to match volume level between program sources. A value of -31dB will result in no volume level change, relative to the source volume, during audio reproduction. Valid values are whole numbers in the range -31 to -1, with -31 being the default.
 </dd><dt><b>-dsur_mode</b> <i>mode</i>
-</dt><dd> Dolby Surround Mode. Specifies whether the stereo signal uses Dolby Surround (Pro Logic). This field will only be written to the bitstream if the audio stream is stereo. Using this option does <font SIZE="-1"><b>NOT</b></font> mean the encoder will actually apply Dolby Surround processing.
+</dt><dd> Dolby Surround Mode. Specifies whether the stereo signal uses Dolby Surround (Pro Logic). This field will only be written to the bitstream if the audio stream is stereo. Using this option does <b>NOT</b> mean the encoder will actually apply Dolby Surround processing.
 </dd><dl>
 <dl>
 <dt><b>0</b>
@@ -4423,7 +4423,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  Extended Bitstream Information - Part 2
 <dl>
 <dt><b>-dsurex_mode</b> <i>mode</i>
-</dt><dd> Dolby Surround <font SIZE="-1">EX</font> Mode. Indicates whether the stream uses Dolby Surround <font SIZE="-1">EX</font> (7.1 matrixed to 5.1). Using this option does <font SIZE="-1"><b>NOT</b></font> mean the encoder will actually apply Dolby Surround <font SIZE="-1">EX</font> processing.
+</dt><dd> Dolby Surround EX Mode. Indicates whether the stream uses Dolby Surround EX (7.1 matrixed to 5.1). Using this option does <b>NOT</b> mean the encoder will actually apply Dolby Surround EX processing.
 </dd><dl>
 <dl>
 <dt><b>0</b>
@@ -4433,18 +4433,18 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>1</b>
 </dt><dd>
 </dd><dt><b>on</b>
-</dt><dd> Dolby Surround <font SIZE="-1">EX</font> Off
+</dt><dd> Dolby Surround EX Off
 </dd><dt><b>2</b>
 </dt><dd>
 </dd><dt><b>off</b>
-</dt><dd> Dolby Surround <font SIZE="-1">EX</font> On</dd></dl>
+</dt><dd> Dolby Surround EX On</dd></dl>
 </dl>
 
 <dl>
 </dl>
 
 <dt><b>-dheadphone_mode</b> <i>mode</i>
-</dt><dd> Dolby Headphone Mode. Indicates whether the stream uses Dolby Headphone encoding (multi-channel matrixed to 2.0 for use with headphones). Using this option does <font SIZE="-1"><b>NOT</b></font> mean the encoder will actually apply Dolby Headphone processing.
+</dt><dd> Dolby Headphone Mode. Indicates whether the stream uses Dolby Headphone encoding (multi-channel matrixed to 2.0 for use with headphones). Using this option does <b>NOT</b> mean the encoder will actually apply Dolby Headphone processing.
 </dd><dl>
 <dl>
 <dt><b>0</b>
@@ -4465,7 +4465,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
 
 <dt><b>-ad_conv_type</b> <i>type</i>
-</dt><dd> A/D Converter Type. Indicates whether the audio has passed through <font SIZE="-1">HDCD A/D</font> conversion.
+</dt><dd> A/D Converter Type. Indicates whether the audio has passed through HDCD A/D conversion.
 </dd><dl>
 <dl>
 <dt><b>0</b>
@@ -4475,7 +4475,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>1</b>
 </dt><dd>
 </dd><dt><b>hdcd</b>
-</dt><dd> <font SIZE="-1">HDCD A/D</font> Converter</dd></dl>
+</dt><dd> HDCD A/D Converter</dd></dl>
 </dl>
 
 <dl>
@@ -4483,20 +4483,20 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
  
 
- <i>Other </i><font SIZE="-1"><i>AC-3</i></font><i> Encoding Options</i>
+ <i>Other </i><i>AC-3</i><i> Encoding Options</i>
 <dl>
 <dt><b>-stereo_rematrixing</b> <i>boolean</i>
-</dt><dd> Stereo Rematrixing. Enables/Disables use of rematrixing for stereo input. This is an optional <font SIZE="-1">AC-3</font> feature that increases quality by selectively encoding the left/right channels as mid/side. This option is enabled by default, and it is highly recommended that it be left as enabled except for testing purposes.
+</dt><dd> Stereo Rematrixing. Enables/Disables use of rematrixing for stereo input. This is an optional AC-3 feature that increases quality by selectively encoding the left/right channels as mid/side. This option is enabled by default, and it is highly recommended that it be left as enabled except for testing purposes.
 </dd><dt><b>cutoff</b> <i>frequency</i>
 </dt><dd> Set lowpass cutoff frequency. If unspecified, the encoder selects a default determined by various other encoding parameters.</dd></dl>
  
 
- <i>Floating-Point-Only </i><font SIZE="-1"><i>AC-3</i></font><i> Encoding Options</i> 
+ <i>Floating-Point-Only </i><i>AC-3</i><i> Encoding Options</i> 
 
  These options are only valid for the floating-point encoder and do not exist for the fixed-point encoder due to the corresponding features not being implemented in fixed-point.
 <dl>
 <dt><b>-channel_coupling</b> <i>boolean</i>
-</dt><dd> Enables/Disables use of channel coupling, which is an optional <font SIZE="-1">AC-3</font> feature that increases quality by combining high frequency information from multiple channels into a single channel. The per-channel high frequency information is sent with less accuracy in both the frequency and time domains. This allows more bits to be used for lower frequencies while preserving enough information to reconstruct the high frequencies. This option is enabled by default for the floating-point encoder and should generally be left as enabled except for testing purposes or to increase encoding speed.
+</dt><dd> Enables/Disables use of channel coupling, which is an optional AC-3 feature that increases quality by combining high frequency information from multiple channels into a single channel. The per-channel high frequency information is sent with less accuracy in both the frequency and time domains. This allows more bits to be used for lower frequencies while preserving enough information to reconstruct the high frequencies. This option is enabled by default for the floating-point encoder and should generally be left as enabled except for testing purposes or to increase encoding speed.
 </dd><dl>
 <dl>
 <dt><b>-1</b>
@@ -4532,7 +4532,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>flac</h3>
 
- <font SIZE="-1">FLAC</font> (Free Lossless Audio Codec) Encoder 
+ FLAC (Free Lossless Audio Codec) Encoder 
 
  <i>Options</i> 
 
@@ -4543,15 +4543,15 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>frame_size</b>
 </dt><dd> Sets the size of the frames in samples per channel.
 </dd><dt><b>lpc_coeff_precision</b>
-</dt><dd> Sets the <font SIZE="-1">LPC</font> coefficient precision, valid values are from 1 to 15, 15 is the default.
+</dt><dd> Sets the LPC coefficient precision, valid values are from 1 to 15, 15 is the default.
 </dd><dt><b>lpc_type</b>
-</dt><dd> Sets the first stage <font SIZE="-1">LPC</font> algorithm
+</dt><dd> Sets the first stage LPC algorithm
 </dd><dl>
 <dl>
 <dt><b>none</b>
-</dt><dd> <font SIZE="-1">LPC</font> is not used
+</dt><dd> LPC is not used
 </dd><dt><b>fixed</b>
-</dt><dd> fixed <font SIZE="-1">LPC</font> coefficients
+</dt><dd> fixed LPC coefficients
 </dd><dt><b>levinson</b>
 </dt><dd>
 </dd><dt><b>cholesky</b>
@@ -4562,7 +4562,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
 
 <dt><b>lpc_passes</b>
-</dt><dd> Number of passes to use for Cholesky factorization during <font SIZE="-1">LPC</font> analysis
+</dt><dd> Number of passes to use for Cholesky factorization during LPC analysis
 </dd><dt><b>min_partition_order</b>
 </dt><dd> The minimum partition order
 </dd><dt><b>max_partition_order</b>
@@ -4610,13 +4610,13 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>exact_rice_parameters</b>
 </dt><dd> Chooses if rice parameters are calculated exactly or approximately. if set to 1 then they are chosen exactly, which slows the code down slightly and improves compression slightly.
 </dd><dt><b>multi_dim_quant</b>
-</dt><dd> Multi Dimensional Quantization. If set to 1 then a 2nd stage <font SIZE="-1">LPC</font> algorithm is applied after the first stage to finetune the coefficients. This is quite slow and slightly improves compression.</dd></dl>
+</dt><dd> Multi Dimensional Quantization. If set to 1 then a 2nd stage LPC algorithm is applied after the first stage to finetune the coefficients. This is quite slow and slightly improves compression.</dd></dl>
 
 <h3>opus</h3>
 
  Opus encoder. 
 
- This is a native FFmpeg encoder for the Opus format. Currently its in development and only implements the <font SIZE="-1">CELT</font> part of the codec. Its quality is usually worse and at best is equal to the libopus encoder. 
+ This is a native FFmpeg encoder for the Opus format. Currently its in development and only implements the CELT part of the codec. Its quality is usually worse and at best is equal to the libopus encoder. 
 
  <i>Options</i>
 <dl>
@@ -4627,15 +4627,15 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>libfdk_aac</h3>
 
- libfdk-aac <font SIZE="-1">AAC</font> (Advanced Audio Coding) encoder wrapper. 
+ libfdk-aac AAC (Advanced Audio Coding) encoder wrapper. 
 
- The libfdk-aac library is based on the Fraunhofer <font SIZE="-1">FDK AAC</font> code from the Android project. 
+ The libfdk-aac library is based on the Fraunhofer FDK AAC code from the Android project. 
 
- Requires the presence of the libfdk-aac headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libfdk-aac&quot;</tt>. The library is also incompatible with <font SIZE="-1">GPL,</font> so if you allow the use of <font SIZE="-1">GPL,</font> you should configure with <tt>&quot;--enable-gpl --enable-nonfree --enable-libfdk-aac&quot;</tt>. 
+ Requires the presence of the libfdk-aac headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libfdk-aac&quot;</tt>. The library is also incompatible with GPL, so if you allow the use of GPL, you should configure with <tt>&quot;--enable-gpl --enable-nonfree --enable-libfdk-aac&quot;</tt>. 
 
  This encoder has support for the AAC-HE profiles. 
 
- <font SIZE="-1">VBR</font> encoding, enabled through the <b>vbr</b> or <b>flags +qscale</b> options, is experimental and only works with some combinations of parameters. 
+ VBR encoding, enabled through the <b>vbr</b> or <b>flags +qscale</b> options, is experimental and only works with some combinations of parameters. 
 
  Support for encoding 7.1 audio is only available with libfdk-aac 0.1.3 or higher. 
 
@@ -4647,13 +4647,13 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dl>
 <dt><b>b</b>
 </dt><dd> Set bit rate in bits/s. If the bitrate is not explicitly specified, it is automatically set to a suitable value depending on the selected profile. 
- In case <font SIZE="-1">VBR</font> mode is enabled the option is ignored.
+ In case VBR mode is enabled the option is ignored.
 </dd><dt><b>ar</b>
 </dt><dd> Set audio sampling rate (in Hz).
 </dd><dt><b>channels</b>
 </dt><dd> Set the number of audio channels.
 </dd><dt><b>flags +qscale</b>
-</dt><dd> Enable fixed quality, <font SIZE="-1">VBR</font> (Variable Bit Rate) mode. Note that <font SIZE="-1">VBR</font> is implicitly enabled when the <b>vbr</b> value is positive.
+</dt><dd> Enable fixed quality, VBR (Variable Bit Rate) mode. Note that VBR is implicitly enabled when the <b>vbr</b> value is positive.
 </dd><dt><b>cutoff</b>
 </dt><dd> Set cutoff frequency. If not specified (or explicitly set to 0) it will use a value automatically computed by the library. Default value is 0.
 </dd><dt><b>profile</b>
@@ -4662,15 +4662,15 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dl>
 <dl>
 <dt><b>aac_low</b>
-</dt><dd> Low Complexity <font SIZE="-1">AAC</font> (<font SIZE="-1">LC</font>)
+</dt><dd> Low Complexity AAC (LC)
 </dd><dt><b>aac_he</b>
-</dt><dd> High Efficiency <font SIZE="-1">AAC</font> (HE-AAC)
+</dt><dd> High Efficiency AAC (HE-AAC)
 </dd><dt><b>aac_he_v2</b>
-</dt><dd> High Efficiency <font SIZE="-1">AAC</font> version 2 (HE-AACv2)
+</dt><dd> High Efficiency AAC version 2 (HE-AACv2)
 </dd><dt><b>aac_ld</b>
-</dt><dd> Low Delay <font SIZE="-1">AAC</font> (<font SIZE="-1">LD</font>)
+</dt><dd> Low Delay AAC (LD)
 </dd><dt><b>aac_eld</b>
-</dt><dd> Enhanced Low Delay <font SIZE="-1">AAC</font> (<font SIZE="-1">ELD</font>)</dd></dl>
+</dt><dd> Enhanced Low Delay AAC (ELD)</dd></dl>
 </dl>
 
 <dl>
@@ -4686,14 +4686,14 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dt><dd> Enable afterburner feature if set to 1, disabled if set to 0. This improves the quality but also the required processing power. 
  Default value is 1.
 </dd><dt><b>eld_sbr</b>
-</dt><dd> Enable <font SIZE="-1">SBR</font> (Spectral Band Replication) for <font SIZE="-1">ELD</font> if set to 1, disabled if set to 0. 
+</dt><dd> Enable SBR (Spectral Band Replication) for ELD if set to 1, disabled if set to 0. 
  Default value is 0.
 </dd><dt><b>eld_v2</b>
-</dt><dd> Enable ELDv2 (LD-MPS extension for <font SIZE="-1">ELD</font> stereo signals) for ELDv2 if set to 1, disabled if set to 0. 
- Note that option is available when fdk-aac version (<font SIZE="-1">AACENCODER_LIB_VL0.AACENCODER_LIB_VL1.AACENCODER_LIB_VL2</font>) &gt; (4.0.0). 
+</dt><dd> Enable ELDv2 (LD-MPS extension for ELD stereo signals) for ELDv2 if set to 1, disabled if set to 0. 
+ Note that option is available when fdk-aac version (AACENCODER_LIB_VL0.AACENCODER_LIB_VL1.AACENCODER_LIB_VL2) &gt; (4.0.0). 
  Default value is 0.
 </dd><dt><b>signaling</b>
-</dt><dd> Set <font SIZE="-1">SBR/PS</font> signaling style. 
+</dt><dd> Set SBR/PS signaling style. 
  It can assume one of the following values:
 </dd><dl>
 <dl>
@@ -4702,7 +4702,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>implicit</b>
 </dt><dd> implicit backwards compatible signaling
 </dd><dt><b>explicit_sbr</b>
-</dt><dd> explicit <font SIZE="-1">SBR,</font> implicit <font SIZE="-1">PS</font> signaling
+</dt><dd> explicit SBR, implicit PS signaling
 </dd><dt><b>explicit_hierarchical</b>
 </dt><dd> explicit hierarchical signaling</dd></dl>
 </dl>
@@ -4713,21 +4713,21 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  Default value is <b>default</b>.</dd></dl>
 
 <dt><b>latm</b>
-</dt><dd> Output <font SIZE="-1">LATM/LOAS</font> encapsulated data if set to 1, disabled if set to 0. 
+</dt><dd> Output LATM/LOAS encapsulated data if set to 1, disabled if set to 0. 
 
  Default value is 0.
 </dd><dt><b>header_period</b>
-</dt><dd> Set StreamMuxConfig and <font SIZE="-1">PCE</font> repetition period (in frames) for sending in-band configuration buffers within <font SIZE="-1">LATM/LOAS</font> transport layer. 
+</dt><dd> Set StreamMuxConfig and PCE repetition period (in frames) for sending in-band configuration buffers within LATM/LOAS transport layer. 
 
  Must be a 16-bits non-negative integer. 
 
  Default value is 0.
 </dd><dt><b>vbr</b>
-</dt><dd> Set <font SIZE="-1">VBR</font> mode, from 1 to 5. 1 is lowest quality (though still pretty good) and 5 is highest quality. A value of 0 will disable <font SIZE="-1">VBR,</font> and <font SIZE="-1">CBR</font> (Constant Bit Rate) is enabled. 
+</dt><dd> Set VBR mode, from 1 to 5. 1 is lowest quality (though still pretty good) and 5 is highest quality. A value of 0 will disable VBR, and CBR (Constant Bit Rate) is enabled. 
 
- Currently only the <b>aac_low</b> profile supports <font SIZE="-1">VBR</font> encoding. 
+ Currently only the <b>aac_low</b> profile supports VBR encoding. 
 
- <font SIZE="-1">VBR</font> modes 1-5 correspond to roughly the following average bit rates:
+ VBR modes 1-5 correspond to roughly the following average bit rates:
 </dd><dl>
 <dl>
 <dt><b>1</b>
@@ -4752,42 +4752,42 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Use <b>ffmpeg</b> to convert an audio file to <font SIZE="-1">VBR AAC</font> in an M4A (<font SIZE="-1">MP4</font>) container: 
+</dt><dd> Use <b>ffmpeg</b> to convert an audio file to VBR AAC in an M4A (MP4) container: 
  <pre>
         ffmpeg -i input.wav -codec:a libfdk_aac -vbr 3 output.m4a
 </pre>
 </dd><dt>&bull;
-</dt><dd> Use <b>ffmpeg</b> to convert an audio file to <font SIZE="-1">CBR</font> 64k kbps <font SIZE="-1">AAC,</font> using the High-Efficiency <font SIZE="-1">AAC</font> profile: 
+</dt><dd> Use <b>ffmpeg</b> to convert an audio file to CBR 64k kbps AAC, using the High-Efficiency AAC profile: 
  <pre>
         ffmpeg -i input.wav -c:a libfdk_aac -profile:a aac_he -b:a 64k output.m4a
 </pre></dd></dl>
 
 <h3>libmp3lame</h3>
 
- <font SIZE="-1">LAME</font> (Lame Ain't an <font SIZE="-1">MP3</font> Encoder) <font SIZE="-1">MP3</font> encoder wrapper. 
+ LAME (Lame Ain't an MP3 Encoder) MP3 encoder wrapper. 
 
  Requires the presence of the libmp3lame headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libmp3lame&quot;</tt>. 
 
- See <b>libshine</b> for a fixed-point <font SIZE="-1">MP3</font> encoder, although with a lower quality. 
+ See <b>libshine</b> for a fixed-point MP3 encoder, although with a lower quality. 
 
  <i>Options</i> 
 
  The following options are supported by the libmp3lame wrapper. The <b>lame</b>-equivalent of the options are listed in parentheses.
 <dl>
 <dt><b>b (</b><i>-b</i><b>)</b>
-</dt><dd> Set bitrate expressed in bits/s for <font SIZE="-1">CBR</font> or <font SIZE="-1">ABR. LAME</font> <tt>&quot;bitrate&quot;</tt> is expressed in kilobits/s.
+</dt><dd> Set bitrate expressed in bits/s for CBR or ABR. LAME <tt>&quot;bitrate&quot;</tt> is expressed in kilobits/s.
 </dd><dt><b>q (</b><i>-V</i><b>)</b>
-</dt><dd> Set constant quality setting for <font SIZE="-1">VBR.</font> This option is valid only using the <b>ffmpeg</b> command-line tool. For library interface users, use <b>global_quality</b>.
+</dt><dd> Set constant quality setting for VBR. This option is valid only using the <b>ffmpeg</b> command-line tool. For library interface users, use <b>global_quality</b>.
 </dd><dt><b>compression_level (</b><i>-q</i><b>)</b>
 </dt><dd> Set algorithm quality. Valid arguments are integers in the 0-9 range, with 0 meaning highest quality but slowest, and 9 meaning fastest while producing the worst quality.
 </dd><dt><b>cutoff (</b><i>--lowpass</i><b>)</b>
 </dt><dd> Set lowpass cutoff frequency. If unspecified, the encoder dynamically adjusts the cutoff.
 </dd><dt><b>reservoir</b>
-</dt><dd> Enable use of bit reservoir when set to 1. Default value is 1. <font SIZE="-1">LAME</font> has this enabled by default, but can be overridden by use <b>--nores</b> option.
+</dt><dd> Enable use of bit reservoir when set to 1. Default value is 1. LAME has this enabled by default, but can be overridden by use <b>--nores</b> option.
 </dd><dt><b>joint_stereo (</b><i>-m j</i><b>)</b>
 </dt><dd> Enable the encoder to use (on a frame by frame basis) either L/R stereo or mid/side stereo. Default value is 1.
 </dd><dt><b>abr (</b><i>--abr</i><b>)</b>
-</dt><dd> Enable the encoder to use <font SIZE="-1">ABR</font> when set to 1. The <b>lame</b> <b>--abr</b> sets the target bitrate, while this options only tells FFmpeg to use <font SIZE="-1">ABR</font> still relies on <b>b</b> to set bitrate.</dd></dl>
+</dt><dd> Enable the encoder to use ABR when set to 1. The <b>lame</b> <b>--abr</b> sets the target bitrate, while this options only tells FFmpeg to use ABR still relies on <b>b</b> to set bitrate.</dd></dl>
 
 <h3>libopencore-amrnb</h3>
 
@@ -4840,7 +4840,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>b (</b><i>bitrate</i><b>)</b>
 </dt><dd> Set the bit rate in bits/s. FFmpeg's <b>b</b> option is expressed in bits/s, while <b>opusenc</b>'s <b>bitrate</b> in kilobits/s.
 </dd><dt><b>vbr (</b><i>vbr</i><b>,</b> <i>hard-cbr</i><b>, and</b> <i>cvbr</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">VBR</font> mode. The FFmpeg <b>vbr</b> option has the following valid arguments, with the <b>opusenc</b> equivalent options in parentheses:
+</dt><dd> Set VBR mode. The FFmpeg <b>vbr</b> option has the following valid arguments, with the <b>opusenc</b> equivalent options in parentheses:
 </dd><dl>
 <dl>
 <dt><b>off (</b><i>hard-cbr</i><b>)</b>
@@ -4861,7 +4861,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>packet_loss (</b><i>expect-loss</i><b>)</b>
 </dt><dd> Set expected packet loss percentage. The default is 0.
 </dd><dt><b>fec (</b><i>n/a</i><b>)</b>
-</dt><dd> Enable inband forward error correction. <b>packet_loss</b> must be non-zero to take advantage - frequency of <font SIZE="-1">FEC</font> 'side-data' is proportional to expected packet loss. Default is disabled.
+</dt><dd> Enable inband forward error correction. <b>packet_loss</b> must be non-zero to take advantage - frequency of FEC 'side-data' is proportional to expected packet loss. Default is disabled.
 </dd><dt><b>application (N.A.)</b>
 </dt><dd> Set intended application type. Valid options are listed below:
 </dd><dl>
@@ -4880,17 +4880,17 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>cutoff (N.A.)</b>
 </dt><dd> Set cutoff bandwidth in Hz. The argument must be exactly one of the following: 4000, 6000, 8000, 12000, or 20000, corresponding to narrowband, mediumband, wideband, super wideband, and fullband respectively. The default is 0 (cutoff disabled).
 </dd><dt><b>mapping_family (</b><i>mapping_family</i><b>)</b>
-</dt><dd> Set channel mapping family to be used by the encoder. The default value of -1 uses mapping family 0 for mono and stereo inputs, and mapping family 1 otherwise. The default also disables the surround masking and <font SIZE="-1">LFE</font> bandwidth optimzations in libopus, and requires that the input contains 8 channels or fewer. 
+</dt><dd> Set channel mapping family to be used by the encoder. The default value of -1 uses mapping family 0 for mono and stereo inputs, and mapping family 1 otherwise. The default also disables the surround masking and LFE bandwidth optimzations in libopus, and requires that the input contains 8 channels or fewer. 
 
- Other values include 0 for mono and stereo, 1 for surround sound with masking and <font SIZE="-1">LFE</font> bandwidth optimizations, and 255 for independent streams with an unspecified channel layout.
+ Other values include 0 for mono and stereo, 1 for surround sound with masking and LFE bandwidth optimizations, and 255 for independent streams with an unspecified channel layout.
 </dd><dt><b>apply_phase_inv (N.A.) (requires libopus &gt;= 1.2)</b>
 </dt><dd> If set to 0, disables the use of phase inversion for intensity stereo, improving the quality of mono downmixes, but slightly reducing normal stereo quality. The default is 1 (phase inversion enabled).</dd></dl>
 
 <h3>libshine</h3>
 
- Shine Fixed-Point <font SIZE="-1">MP3</font> encoder wrapper. 
+ Shine Fixed-Point MP3 encoder wrapper. 
 
- Shine is a fixed-point <font SIZE="-1">MP3</font> encoder. It has a far better performance on platforms without an <font SIZE="-1">FPU,</font> e.g. armel CPUs, and some phones and tablets. However, as it is more targeted on performance than quality, it is not on par with <font SIZE="-1">LAME</font> and other production-grade encoders quality-wise. Also, according to the project's homepage, this encoder may not be free of bugs as the code was written a long time ago and the project was dead for at least 5 years. 
+ Shine is a fixed-point MP3 encoder. It has a far better performance on platforms without an FPU, e.g. armel CPUs, and some phones and tablets. However, as it is more targeted on performance than quality, it is not on par with LAME and other production-grade encoders quality-wise. Also, according to the project's homepage, this encoder may not be free of bugs as the code was written a long time ago and the project was dead for at least 5 years. 
 
  This encoder only supports stereo and mono input. This is also CBR-only. 
 
@@ -4905,11 +4905,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  The following options are supported by the libshine wrapper. The <b>shineenc</b>-equivalent of the options are listed in parentheses.
 <dl>
 <dt><b>b (</b><i>-b</i><b>)</b>
-</dt><dd> Set bitrate expressed in bits/s for <font SIZE="-1">CBR.</font> <b>shineenc</b> <b>-b</b> option is expressed in kilobits/s.</dd></dl>
+</dt><dd> Set bitrate expressed in bits/s for CBR. <b>shineenc</b> <b>-b</b> option is expressed in kilobits/s.</dd></dl>
 
 <h3>libtwolame</h3>
 
- TwoLAME <font SIZE="-1">MP2</font> encoder wrapper. 
+ TwoLAME MP2 encoder wrapper. 
 
  Requires the presence of the libtwolame headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libtwolame&quot;</tt>. 
 
@@ -4918,9 +4918,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  The following options are supported by the libtwolame wrapper. The <b>twolame</b>-equivalent options follow the FFmpeg ones and are in parentheses.
 <dl>
 <dt><b>b (</b><i>-b</i><b>)</b>
-</dt><dd> Set bitrate expressed in bits/s for <font SIZE="-1">CBR.</font> <b>twolame</b> <b>b</b> option is expressed in kilobits/s. Default value is 128k.
+</dt><dd> Set bitrate expressed in bits/s for CBR. <b>twolame</b> <b>b</b> option is expressed in kilobits/s. Default value is 128k.
 </dd><dt><b>q (</b><i>-V</i><b>)</b>
-</dt><dd> Set quality for experimental <font SIZE="-1">VBR</font> support. Maximum value range is from -50 to 50, useful range is from -10 to 10. The higher the value, the better the quality. This option is valid only using the <b>ffmpeg</b> command-line tool. For library interface users, use <b>global_quality</b>.
+</dt><dd> Set quality for experimental VBR support. Maximum value range is from -50 to 50, useful range is from -10 to 10. The higher the value, the better the quality. This option is valid only using the <b>ffmpeg</b> command-line tool. For library interface users, use <b>global_quality</b>.
 </dd><dt><b>mode (</b><i>--mode</i><b>)</b>
 </dt><dd> Set the mode of the resulting audio. Possible values:
 </dd><dl>
@@ -4945,11 +4945,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>energy_levels (</b><i>--energy</i><b>)</b>
 </dt><dd> Enable energy levels extensions when set to 1. The default value is 0 (disabled).
 </dd><dt><b>error_protection (</b><i>--protect</i><b>)</b>
-</dt><dd> Enable <font SIZE="-1">CRC</font> error protection when set to 1. The default value is 0 (disabled).
+</dt><dd> Enable CRC error protection when set to 1. The default value is 0 (disabled).
 </dd><dt><b>copyright (</b><i>--copyright</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">MPEG</font> audio copyright flag when set to 1. The default value is 0 (disabled).
+</dt><dd> Set MPEG audio copyright flag when set to 1. The default value is 0 (disabled).
 </dd><dt><b>original (</b><i>--original</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">MPEG</font> audio original flag when set to 1. The default value is 0 (disabled).</dd></dl>
+</dt><dd> Set MPEG audio original flag when set to 1. The default value is 0 (disabled).</dd></dl>
 
 <h3>libvo-amrwbenc</h3>
 
@@ -5004,22 +5004,22 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  To get a more accurate and extensive documentation of the libvorbis options, consult the libvorbisenc's and <b>oggenc</b>'s documentations. See &lt;<b><a rel="nofollow" HREF="http://xiph.org/vorbis/">http://xiph.org/vorbis/</a></b>&gt;, &lt;<b><a rel="nofollow" HREF="http://wiki.xiph.org/Vorbis-tools">http://wiki.xiph.org/Vorbis-tools</a></b>&gt;, and <b><a HREF="/docs/linux/man/1-oggenc/">oggenc</a></b>(1).
 <dl>
 <dt><b>b (</b><i>-b</i><b>)</b>
-</dt><dd> Set bitrate expressed in bits/s for <font SIZE="-1">ABR.</font> <b>oggenc</b> <b>-b</b> is expressed in kilobits/s.
+</dt><dd> Set bitrate expressed in bits/s for ABR. <b>oggenc</b> <b>-b</b> is expressed in kilobits/s.
 </dd><dt><b>q (</b><i>-q</i><b>)</b>
-</dt><dd> Set constant quality setting for <font SIZE="-1">VBR.</font> The value should be a float number in the range of -1.0 to 10.0. The higher the value, the better the quality. The default value is <b>3.0</b>. 
+</dt><dd> Set constant quality setting for VBR. The value should be a float number in the range of -1.0 to 10.0. The higher the value, the better the quality. The default value is <b>3.0</b>. 
  This option is valid only using the <b>ffmpeg</b> command-line tool. For library interface users, use <b>global_quality</b>.
 </dd><dt><b>cutoff (</b><i>--advanced-encode-option lowpass_frequency=N</i><b>)</b>
 </dt><dd> Set cutoff bandwidth in Hz, a value of 0 disables cutoff. <b>oggenc</b>'s related option is expressed in kHz. The default value is <b>0</b> (cutoff disabled).
 </dd><dt><b>minrate (</b><i>-m</i><b>)</b>
 </dt><dd> Set minimum bitrate expressed in bits/s. <b>oggenc</b> <b>-m</b> is expressed in kilobits/s.
 </dd><dt><b>maxrate (</b><i>-M</i><b>)</b>
-</dt><dd> Set maximum bitrate expressed in bits/s. <b>oggenc</b> <b>-M</b> is expressed in kilobits/s. This only has effect on <font SIZE="-1">ABR</font> mode.
+</dt><dd> Set maximum bitrate expressed in bits/s. <b>oggenc</b> <b>-M</b> is expressed in kilobits/s. This only has effect on ABR mode.
 </dd><dt><b>iblock (</b><i>--advanced-encode-option impulse_noisetune=N</i><b>)</b>
 </dt><dd> Set noise floor bias for impulse blocks. The value is a float number from -15.0 to 0.0. A negative bias instructs the encoder to pay special attention to the crispness of transients in the encoded audio. The tradeoff for better transient response is a higher bitrate.</dd></dl>
 
 <h3>mjpeg</h3>
 
- Motion <font SIZE="-1">JPEG</font> encoder. 
+ Motion JPEG encoder. 
 
  <i>Options</i>
 <dl>
@@ -5091,14 +5091,14 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
  A description of some of the currently available video encoders follows.
 
-<h3><font SIZE="-1">GIF</font></h3>
+<h3>GIF</h3>
 
- <font SIZE="-1">GIF</font> image/animation encoder. 
+ GIF image/animation encoder. 
 
  <i>Options</i>
 <dl>
 <dt><b>gifflags</b> <i>integer</i>
-</dt><dd> Sets the flags used for <font SIZE="-1">GIF</font> encoding.
+</dt><dd> Sets the flags used for GIF encoding.
 </dd><dl>
 <dl>
 <dt><b>offsetting</b>
@@ -5113,11 +5113,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
 
 <dt><b>gifimage</b> <i>integer</i>
-</dt><dd> Enables encoding one full <font SIZE="-1">GIF</font> image per frame, rather than an animated <font SIZE="-1">GIF.</font> 
+</dt><dd> Enables encoding one full GIF image per frame, rather than an animated GIF. 
 
  Default value is <b>0</b>.
 </dd><dt><b>global_palette</b> <i>integer</i>
-</dt><dd> Writes a palette to the global <font SIZE="-1">GIF</font> header where feasible. 
+</dt><dd> Writes a palette to the global GIF header where feasible. 
 
  If disabled, every frame will always have a palette written, even if there is a global palette supplied. 
 
@@ -5179,7 +5179,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>tile_height</b> <i>integer</i>
 </dt><dd> Sets tile height. Range is 1 to 1073741824. Default is 256.
 </dd><dt><b>pred</b> <i>integer</i>
-</dt><dd> Allows setting the discrete wavelet transform (<font SIZE="-1">DWT</font>) type
+</dt><dd> Allows setting the discrete wavelet transform (DWT) type
 </dd><dl>
 <dl>
 <dt><b>dwt97int (Lossy)</b>
@@ -5194,9 +5194,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  Default is <tt>&quot;dwt97int&quot;</tt></dd></dl>
 
 <dt><b>sop</b> <i>boolean</i>
-</dt><dd> Enable this to add <font SIZE="-1">SOP</font> marker at the start of each packet. Disabled by default.
+</dt><dd> Enable this to add SOP marker at the start of each packet. Disabled by default.
 </dd><dt><b>eph</b> <i>boolean</i>
-</dt><dd> Enable this to add <font SIZE="-1">EPH</font> marker at the end of each packet header. Disabled by default.
+</dt><dd> Enable this to add EPH marker at the end of each packet header. Disabled by default.
 </dd><dt><b>prog</b> <i>integer</i>
 </dt><dd> Sets the progression order to be used by the encoder. Possible values are:
 </dd><dl>
@@ -5231,7 +5231,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>librav1e</h3>
 
- rav1e <font SIZE="-1">AV1</font> encoder wrapper. 
+ rav1e AV1 encoder wrapper. 
 
  Requires the presence of the rav1e headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-librav1e&quot;</tt>. 
 
@@ -5260,7 +5260,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>libaom-av1</h3>
 
- libaom <font SIZE="-1">AV1</font> encoder wrapper. 
+ libaom AV1 encoder wrapper. 
 
  Requires the presence of the libaom headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libaom&quot;</tt>. 
 
@@ -5271,9 +5271,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>b</b>
 </dt><dd> Set bitrate target in bits/second. By default this will use variable-bitrate mode. If <b>maxrate</b> and <b>minrate</b> are also set to the same value then it will use constant-bitrate mode, otherwise if <b>crf</b> is set as well then it will use constrained-quality mode.
 </dd><dt><b>g keyint_min</b>
-</dt><dd> Set key frame placement. The <font SIZE="-1">GOP</font> size sets the maximum distance between key frames; if zero the output stream will be intra-only. The minimum distance is ignored unless it is the same as the <font SIZE="-1">GOP</font> size, in which case key frames will always appear at a fixed interval. Not set by default, so without this option the library has completely free choice about where to place key frames.
+</dt><dd> Set key frame placement. The GOP size sets the maximum distance between key frames; if zero the output stream will be intra-only. The minimum distance is ignored unless it is the same as the GOP size, in which case key frames will always appear at a fixed interval. Not set by default, so without this option the library has completely free choice about where to place key frames.
 </dd><dt><b>qmin qmax</b>
-</dt><dd> Set minimum/maximum quantisation values. Valid range is from 0 to 63 (warning: this does not match the quantiser values actually used by <font SIZE="-1">AV1</font> - divide by four to map real quantiser values to this range). Defaults to min/max (no constraint).
+</dt><dd> Set minimum/maximum quantisation values. Valid range is from 0 to 63 (warning: this does not match the quantiser values actually used by AV1 - divide by four to map real quantiser values to this range). Defaults to min/max (no constraint).
 </dd><dt><b>minrate maxrate bufsize rc_init_occupancy</b>
 </dt><dd> Set rate control buffering parameters. Not used if not set - defaults to unconstrained variable bitrate.
 </dd><dt><b>threads</b>
@@ -5346,15 +5346,15 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>denoise-noise-level (</b><i>level</i><b>)</b>
 </dt><dd> Amount of noise to be removed for grain synthesis. Grain synthesis is disabled if this option is not set or set to 0.
 </dd><dt><b>denoise-block-size (</b><i>pixels</i><b>)</b>
-</dt><dd> Block size used for denoising for grain synthesis. If not set, <font SIZE="-1">AV1</font> codec uses the default value of 32.
+</dt><dd> Block size used for denoising for grain synthesis. If not set, AV1 codec uses the default value of 32.
 </dd><dt><b>undershoot-pct (</b><i>pct</i><b>)</b>
 </dt><dd> Set datarate undershoot (min) percentage of the target bitrate. Range is -1 to 100. Default is -1.
 </dd><dt><b>overshoot-pct (</b><i>pct</i><b>)</b>
 </dt><dd> Set datarate overshoot (max) percentage of the target bitrate. Range is -1 to 1000. Default is -1.
 </dd><dt><b>minsection-pct (</b><i>pct</i><b>)</b>
-</dt><dd> Minimum percentage variation of the <font SIZE="-1">GOP</font> bitrate from the target bitrate. If minsection-pct is not set, the libaomenc wrapper computes it as follows: <tt>&quot;(minrate * 100 / bitrate)&quot;</tt>. Range is -1 to 100. Default is -1 (unset).
+</dt><dd> Minimum percentage variation of the GOP bitrate from the target bitrate. If minsection-pct is not set, the libaomenc wrapper computes it as follows: <tt>&quot;(minrate * 100 / bitrate)&quot;</tt>. Range is -1 to 100. Default is -1 (unset).
 </dd><dt><b>maxsection-pct (</b><i>pct</i><b>)</b>
-</dt><dd> Maximum percentage variation of the <font SIZE="-1">GOP</font> bitrate from the target bitrate. If maxsection-pct is not set, the libaomenc wrapper computes it as follows: <tt>&quot;(maxrate * 100 / bitrate)&quot;</tt>. Range is -1 to 5000. Default is -1 (unset).
+</dt><dd> Maximum percentage variation of the GOP bitrate from the target bitrate. If maxsection-pct is not set, the libaomenc wrapper computes it as follows: <tt>&quot;(maxrate * 100 / bitrate)&quot;</tt>. Range is -1 to 5000. Default is -1 (unset).
 </dd><dt><b>frame-parallel (</b><i>boolean</i><b>)</b>
 </dt><dd> Enable frame parallel decodability features. Default is true.
 </dd><dt><b>tiles</b>
@@ -5364,7 +5364,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>row-mt (Requires libaom &gt;= 1.0.0-759-g90a15f4f2)</b>
 </dt><dd> Enable row based multi-threading. Disabled by default.
 </dd><dt><b>enable-cdef (</b><i>boolean</i><b>)</b>
-</dt><dd> Enable Constrained Directional Enhancement Filter. The libaom-av1 encoder enables <font SIZE="-1">CDEF</font> by default.
+</dt><dd> Enable Constrained Directional Enhancement Filter. The libaom-av1 encoder enables CDEF by default.
 </dd><dt><b>enable-restoration (</b><i>boolean</i><b>)</b>
 </dt><dd> Enable Loop Restoration Filter. Default is true for libaom-av1.
 </dd><dt><b>enable-global-motion (</b><i>boolean</i><b>)</b>
@@ -5376,7 +5376,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>enable-1to4-partitions (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
 </dt><dd> Enable 1:4/4:1 partitions. Default is true.
 </dd><dt><b>enable-ab-partitions (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
-</dt><dd> Enable <font SIZE="-1">AB</font> shape partitions. Default is true.
+</dt><dd> Enable AB shape partitions. Default is true.
 </dd><dt><b>enable-angle-delta (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
 </dt><dd> Enable angle delta intra prediction. Default is true.
 </dd><dt><b>enable-cfl-intra (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
@@ -5392,17 +5392,17 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>enable-palette (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
 </dt><dd> Enable palette prediction mode. Default is true.
 </dd><dt><b>enable-flip-idtx (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
-</dt><dd> Enable extended transform type, including <font SIZE="-1">FLIPADST_DCT, DCT_FLIPADST, FLIPADST_FLIPADST, ADST_FLIPADST, FLIPADST_ADST, IDTX, V_DCT, H_DCT, V_ADST, H_ADST, V_FLIPADST, H_FLIPADST.</font> Default is true.
+</dt><dd> Enable extended transform type, including FLIPADST_DCT, DCT_FLIPADST, FLIPADST_FLIPADST, ADST_FLIPADST, FLIPADST_ADST, IDTX, V_DCT, H_DCT, V_ADST, H_ADST, V_FLIPADST, H_FLIPADST. Default is true.
 </dd><dt><b>enable-tx64 (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
 </dt><dd> Enable 64-pt transform. Default is true.
 </dd><dt><b>reduced-tx-type-set (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
 </dt><dd> Use reduced set of transform types. Default is false.
 </dd><dt><b>use-intra-dct-only (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
-</dt><dd> Use <font SIZE="-1">DCT</font> only for <font SIZE="-1">INTRA</font> modes. Default is false.
+</dt><dd> Use DCT only for INTRA modes. Default is false.
 </dd><dt><b>use-inter-dct-only (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
-</dt><dd> Use <font SIZE="-1">DCT</font> only for <font SIZE="-1">INTER</font> modes. Default is false.
+</dt><dd> Use DCT only for INTER modes. Default is false.
 </dd><dt><b>use-intra-default-tx-only (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
-</dt><dd> Use Default-transform only for <font SIZE="-1">INTRA</font> modes. Default is false.
+</dt><dd> Use Default-transform only for INTRA modes. Default is false.
 </dd><dt><b>enable-ref-frame-mvs (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
 </dt><dd> Enable temporal mv prediction. Default is true.
 </dd><dt><b>enable-reduced-reference-set (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
@@ -5428,7 +5428,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>enable-smooth-interintra (</b><i>boolean</i><b>) (Requires libaom &gt;= v2.0.0)</b>
 </dt><dd> Enable smooth interintra mode. Default is true.
 </dd><dt><b>aom-params</b>
-</dt><dd> Set libaom options using a list of <i>key</i>=<i>value</i> pairs separated by ``:''. For a list of supported options, see <b>aomenc --help</b> under the section ``<font SIZE="-1">AV1</font> Specific Options''. 
+</dt><dd> Set libaom options using a list of <i>key</i>=<i>value</i> pairs separated by ``:''. For a list of supported options, see <b>aomenc --help</b> under the section ``AV1 Specific Options''. 
 
  For example to specify libaom encoding options with <b>-aom-params</b>: 
 
@@ -5438,9 +5438,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>libsvtav1</h3>
 
- <font SIZE="-1">SVT-AV1</font> encoder wrapper. 
+ SVT-AV1 encoder wrapper. 
 
- Requires the presence of the <font SIZE="-1">SVT-AV1</font> headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libsvtav1&quot;</tt>. 
+ Requires the presence of the SVT-AV1 headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libsvtav1&quot;</tt>. 
 
  <i>Options</i>
 <dl>
@@ -5460,7 +5460,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>vbr</b>
 </dt><dd> Variable bitrate: use a target bitrate for the whole stream.
 </dd><dt><b>cvbr</b>
-</dt><dd> Constrained variable bitrate: use a target bitrate for each <font SIZE="-1">GOP.</font></dd></dl>
+</dt><dd> Constrained variable bitrate: use a target bitrate for each GOP.</dd></dl>
 </dl>
 
 <dl>
@@ -5498,7 +5498,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>libopenh264</h3>
 
- Cisco libopenh264 H.264/MPEG-4 <font SIZE="-1">AVC</font> encoder wrapper. 
+ Cisco libopenh264 H.264/MPEG-4 AVC encoder wrapper. 
 
  This encoder requires the presence of the libopenh264 headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libopenh264&quot;</tt>. The library is detected using <b>pkg-config</b>. 
 
@@ -5511,7 +5511,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>b</b>
 </dt><dd> Set the bitrate (as a number of bits per second).
 </dd><dt><b>g</b>
-</dt><dd> Set the <font SIZE="-1">GOP</font> size.
+</dt><dd> Set the GOP size.
 </dd><dt><b>maxrate</b>
 </dt><dd> Set the max bitrate (as a number of bits per second).
 </dd><dt><b>flags +global_header</b>
@@ -5540,9 +5540,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>loopfilter</b>
 </dt><dd> Enable loop filter, if set to 1 (automatically enabled). To disable set a value of 0.
 </dd><dt><b>profile</b>
-</dt><dd> Set profile restrictions. If set to the value of <b>main</b> enable <font SIZE="-1">CABAC</font> (set the <tt>&quot;SEncParamExt.iEntropyCodingModeFlag&quot;</tt> flag to 1).
+</dt><dd> Set profile restrictions. If set to the value of <b>main</b> enable CABAC (set the <tt>&quot;SEncParamExt.iEntropyCodingModeFlag&quot;</tt> flag to 1).
 </dd><dt><b>max_nal_size</b>
-</dt><dd> Set maximum <font SIZE="-1">NAL</font> size in bytes.
+</dt><dd> Set maximum NAL size in bytes.
 </dd><dt><b>allow_skip_frames</b>
 </dt><dd> Allow skipping frames to hit the target bitrate if set to 1.</dd></dl>
 
@@ -5559,16 +5559,16 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  The following global options are mapped to internal libtheora options which affect the quality and the bitrate of the encoded stream.
 <dl>
 <dt><b>b</b>
-</dt><dd> Set the video bitrate in bit/s for <font SIZE="-1">CBR</font> (Constant Bit Rate) mode. In case <font SIZE="-1">VBR</font> (Variable Bit Rate) mode is enabled this option is ignored.
+</dt><dd> Set the video bitrate in bit/s for CBR (Constant Bit Rate) mode. In case VBR (Variable Bit Rate) mode is enabled this option is ignored.
 </dd><dt><b>flags</b>
-</dt><dd> Used to enable constant quality mode (<font SIZE="-1">VBR</font>) encoding through the <b>qscale</b> flag, and to enable the <tt>&quot;pass1&quot;</tt> and <tt>&quot;pass2&quot;</tt> modes.
+</dt><dd> Used to enable constant quality mode (VBR) encoding through the <b>qscale</b> flag, and to enable the <tt>&quot;pass1&quot;</tt> and <tt>&quot;pass2&quot;</tt> modes.
 </dd><dt><b>g</b>
-</dt><dd> Set the <font SIZE="-1">GOP</font> size.
+</dt><dd> Set the GOP size.
 </dd><dt><b>global_quality</b>
 </dt><dd> Set the global quality as an integer in lambda units. 
- Only relevant when <font SIZE="-1">VBR</font> mode is enabled with <tt>&quot;flags +qscale&quot;</tt>. The value is converted to <font SIZE="-1">QP</font> units by dividing it by <tt>&quot;FF_QP2LAMBDA&quot;</tt>, clipped in the [0 - 10] range, and then multiplied by 6.3 to get a value in the native libtheora range [0-63]. A higher value corresponds to a higher quality.
+ Only relevant when VBR mode is enabled with <tt>&quot;flags +qscale&quot;</tt>. The value is converted to QP units by dividing it by <tt>&quot;FF_QP2LAMBDA&quot;</tt>, clipped in the [0 - 10] range, and then multiplied by 6.3 to get a value in the native libtheora range [0-63]. A higher value corresponds to a higher quality.
 </dd><dt><b>q</b>
-</dt><dd> Enable <font SIZE="-1">VBR</font> mode when set to a non-negative value, and set constant quality value as a double floating point value in <font SIZE="-1">QP</font> units. 
+</dt><dd> Enable VBR mode when set to a non-negative value, and set constant quality value as a double floating point value in QP units. 
  The value is clipped in the [0-10] range, and then multiplied by 6.3 to get a value in the native libtheora range [0-63]. 
  This option is valid only using the <b>ffmpeg</b> command-line tool. For library interface users, use <b>global_quality</b>.</dd></dl>
  
@@ -5576,19 +5576,19 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Set maximum constant quality (<font SIZE="-1">VBR</font>) encoding with <b>ffmpeg</b>: 
+</dt><dd> Set maximum constant quality (VBR) encoding with <b>ffmpeg</b>: 
  <pre>
         ffmpeg -i INPUT -codec:v libtheora -q:v 10 OUTPUT.ogg
 </pre>
 </dd><dt>&bull;
-</dt><dd> Use <b>ffmpeg</b> to convert a <font SIZE="-1">CBR 1000</font> kbps Theora video stream: 
+</dt><dd> Use <b>ffmpeg</b> to convert a CBR 1000 kbps Theora video stream: 
  <pre>
         ffmpeg -i INPUT -codec:v libtheora -b:v 1000k OUTPUT.ogg
 </pre></dd></dl>
 
 <h3>libvpx</h3>
 
- <font SIZE="-1">VP8/VP9</font> format supported through libvpx. 
+ VP8/VP9 format supported through libvpx. 
 
  Requires the presence of the libvpx headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libvpx&quot;</tt>. 
 
@@ -5598,7 +5598,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
  To reduce the duplication of documentation, only the private options and some others requiring special attention are documented here. For the documentation of the undocumented generic options, see <b>the Codec Options chapter</b>. 
 
- To get more documentation of the libvpx options, invoke the command <b>ffmpeg -h encoder=libvpx</b>, <b>ffmpeg -h encoder=libvpx-vp9</b> or <b>vpxenc --help</b>. Further information is available in the libvpx <font SIZE="-1">API</font> documentation.
+ To get more documentation of the libvpx options, invoke the command <b>ffmpeg -h encoder=libvpx</b>, <b>ffmpeg -h encoder=libvpx-vp9</b> or <b>vpxenc --help</b>. Further information is available in the libvpx API documentation.
 <dl>
 <dt><b>b (</b><i>target-bitrate</i><b>)</b>
 </dt><dd> Set bitrate in bits/s. Note that FFmpeg's <b>b</b> option is expressed in bits/s, while <b>vpxenc</b>'s <b>target-bitrate</b> is in kilobits/s.
@@ -5623,9 +5623,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>qcomp (</b><i>bias-pct</i><b>)</b>
 </dt><dd>
 </dd><dt><b>maxrate (</b><i>maxsection-pct</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">GOP</font> max bitrate in bits/s. Note <b>vpxenc</b>'s option is specified as a percentage of the target bitrate, the libvpx wrapper converts this value as follows: <tt>&quot;(maxrate * 100 / bitrate)&quot;</tt>.
+</dt><dd> Set GOP max bitrate in bits/s. Note <b>vpxenc</b>'s option is specified as a percentage of the target bitrate, the libvpx wrapper converts this value as follows: <tt>&quot;(maxrate * 100 / bitrate)&quot;</tt>.
 </dd><dt><b>minrate (</b><i>minsection-pct</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">GOP</font> min bitrate in bits/s. Note <b>vpxenc</b>'s option is specified as a percentage of the target bitrate, the libvpx wrapper converts this value as follows: <tt>&quot;(minrate * 100 / bitrate)&quot;</tt>.
+</dt><dd> Set GOP min bitrate in bits/s. Note <b>vpxenc</b>'s option is specified as a percentage of the target bitrate, the libvpx wrapper converts this value as follows: <tt>&quot;(minrate * 100 / bitrate)&quot;</tt>.
 </dd><dt><b>minrate, maxrate, b</b> <i>end-usage=cbr</i>
 </dt><dd> <tt>&quot;(minrate == maxrate == bitrate)&quot;</tt>.
 </dd><dt><b>crf (</b><i>end-usage=cq</i><b>,</b> <i>cq-level</i><b>)</b>
@@ -5675,7 +5675,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dl>
 <dl>
 <dt><b>auto-alt-ref</b>
-</dt><dd> Enable use of alternate reference frames (2-pass only). Values greater than 1 enable multi-layer alternate reference frames (<font SIZE="-1">VP9</font> only).
+</dt><dd> Enable use of alternate reference frames (2-pass only). Values greater than 1 enable multi-layer alternate reference frames (VP9 only).
 </dd><dt><b>arnr-maxframes</b>
 </dt><dd> Set altref noise reduction max frame count.
 </dd><dt><b>arnr-type</b>
@@ -5692,7 +5692,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>error-resilient</b>
 </dt><dd> Enable error resiliency features.
 </dd><dt><b>sharpness</b> <i>integer</i>
-</dt><dd> Increase sharpness at the expense of lower <font SIZE="-1">PSNR.</font> The valid range is [0, 7].
+</dt><dd> Increase sharpness at the expense of lower PSNR. The valid range is [0, 7].
 </dd><dt><b>ts-parameters</b>
 </dt><dd> Sets the temporal scalability configuration using a :-separated list of key=value pairs. For example, to specify temporal scalability parameters with <tt>&quot;ffmpeg&quot;</tt>: 
 
@@ -5763,7 +5763,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>aq-mode</b>
 </dt><dd> Set adaptive quantization mode (0: off (default), 1: variance 2: complexity, 3: cyclic refresh, 4: equator360).
 </dd><dt><b>colorspace</b> <i>color-space</i>
-</dt><dd> Set input color space. The <font SIZE="-1">VP9</font> bitstream supports signaling the following colorspaces:
+</dt><dd> Set input color space. The VP9 bitstream supports signaling the following colorspaces:
 </dd><dl>
 <dl>
 <dt><b>rgb </b>sRGB
@@ -5790,9 +5790,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>tune-content</b>
 </dt><dd> Set content type: default (0), screen (1), film (2).
 </dd><dt><b>corpus-complexity</b>
-</dt><dd> Corpus <font SIZE="-1">VBR</font> mode is a variant of standard <font SIZE="-1">VBR</font> where the complexity distribution midpoint is passed in rather than calculated for a specific clip or chunk. 
+</dt><dd> Corpus VBR mode is a variant of standard VBR where the complexity distribution midpoint is passed in rather than calculated for a specific clip or chunk. 
 
- The valid range is [0, 10000]. 0 (default) uses standard <font SIZE="-1">VBR.</font>
+ The valid range is [0, 10000]. 0 (default) uses standard VBR.
 </dd><dt><b>enable-tpl</b> <i>boolean</i>
 </dt><dd> Enable temporal dependency model.
 </dd><dt><b>ref-frame-config</b>
@@ -5807,23 +5807,23 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>rfc_update_buffer_slot</b>
 </dt><dd> Indicates the buffer slot number to update
 </dd><dt><b>rfc_update_last</b>
-</dt><dd> Indicates whether to update the <font SIZE="-1">LAST</font> frame
+</dt><dd> Indicates whether to update the LAST frame
 </dd><dt><b>rfc_update_golden</b>
-</dt><dd> Indicates whether to update <font SIZE="-1">GOLDEN</font> frame
+</dt><dd> Indicates whether to update GOLDEN frame
 </dd><dt><b>rfc_update_alt_ref</b>
-</dt><dd> Indicates whether to update <font SIZE="-1">ALT_REF</font> frame
+</dt><dd> Indicates whether to update ALT_REF frame
 </dd><dt><b>rfc_lst_fb_idx</b>
-</dt><dd> <font SIZE="-1">LAST</font> frame buffer index
+</dt><dd> LAST frame buffer index
 </dd><dt><b>rfc_gld_fb_idx</b>
-</dt><dd> <font SIZE="-1">GOLDEN</font> frame buffer index
+</dt><dd> GOLDEN frame buffer index
 </dd><dt><b>rfc_alt_fb_idx</b>
-</dt><dd> <font SIZE="-1">ALT_REF</font> frame buffer index
+</dt><dd> ALT_REF frame buffer index
 </dd><dt><b>rfc_reference_last</b>
-</dt><dd> Indicates whether to reference <font SIZE="-1">LAST</font> frame
+</dt><dd> Indicates whether to reference LAST frame
 </dd><dt><b>rfc_reference_golden</b>
-</dt><dd> Indicates whether to reference <font SIZE="-1">GOLDEN</font> frame
+</dt><dd> Indicates whether to reference GOLDEN frame
 </dd><dt><b>rfc_reference_alt_ref</b>
-</dt><dd> Indicates whether to reference <font SIZE="-1">ALT_REF</font> frame
+</dt><dd> Indicates whether to reference ALT_REF frame
 </dd><dt><b>rfc_reference_duration</b>
 </dt><dd> Indicates frame duration</dd></dl>
 </dl>
@@ -5844,11 +5844,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
  libwebp WebP Image encoder wrapper 
 
- libwebp is Google's official encoder for WebP images. It can encode in either lossy or lossless mode. Lossy images are essentially a wrapper around a <font SIZE="-1">VP8</font> frame. Lossless images are a separate codec developed by Google. 
+ libwebp is Google's official encoder for WebP images. It can encode in either lossy or lossless mode. Lossy images are essentially a wrapper around a VP8 frame. Lossless images are a separate codec developed by Google. 
 
  <i>Pixel Format</i> 
 
- Currently, libwebp only supports <font SIZE="-1">YUV420</font> for lossy and <font SIZE="-1">RGB</font> for lossless due to limitations of the format and libwebp. Alpha is supported for either mode. Because of <font SIZE="-1">API</font> limitations, if <font SIZE="-1">RGB</font> is passed in when encoding lossy or <font SIZE="-1">YUV</font> is passed in for encoding lossless, the pixel format will automatically be converted using functions from libwebp. This is not ideal and is done only for convenience. 
+ Currently, libwebp only supports YUV420 for lossy and RGB for lossless due to limitations of the format and libwebp. Alpha is supported for either mode. Because of API limitations, if RGB is passed in when encoding lossy or YUV is passed in for encoding lossless, the pixel format will automatically be converted using functions from libwebp. This is not ideal and is done only for convenience. 
 
  <i>Options</i>
 <dl>
@@ -5857,7 +5857,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>-compression_level</b> <i>integer</i>
 </dt><dd> For lossy, this is a quality/speed tradeoff. Higher values give better quality for a given size at the cost of increased encoding time. For lossless, this is a size/speed tradeoff. Higher values give smaller size at the cost of increased encoding time. More specifically, it controls the number of extra algorithms and compression tools used, and varies the combination of these tools. This maps to the <i>method</i> option in libwebp. The valid range is 0 to 6. Default is 4.
 </dd><dt><b>-qscale</b> <i>float</i>
-</dt><dd> For lossy encoding, this controls image quality, 0 to 100. For lossless encoding, this controls the effort and time spent at compressing more. The default value is 75. Note that for usage via libavcodec, this option is called <i>global_quality</i> and must be multiplied by <i></i><font SIZE="-1"><i>FF_QP2LAMBDA</i></font><i></i>.
+</dt><dd> For lossy encoding, this controls image quality, 0 to 100. For lossless encoding, this controls the effort and time spent at compressing more. The default value is 75. Note that for usage via libavcodec, this option is called <i>global_quality</i> and must be multiplied by <i></i><i>FF_QP2LAMBDA</i><i></i>.
 </dd><dt><b>-preset</b> <i>type</i>
 </dt><dd> Configuration preset. This does some automatic settings based on the general type of the image.
 </dd><dl>
@@ -5884,17 +5884,17 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>libx264, libx264rgb</h3>
 
- x264 H.264/MPEG-4 <font SIZE="-1">AVC</font> encoder wrapper. 
+ x264 H.264/MPEG-4 AVC encoder wrapper. 
 
  This encoder requires the presence of the libx264 headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libx264&quot;</tt>. 
 
- libx264 supports an impressive number of features, including 8x8 and 4x4 adaptive spatial transform, adaptive B-frame placement, <font SIZE="-1">CAVLC/CABAC</font> entropy coding, interlacing (<font SIZE="-1">MBAFF</font>), lossless mode, psy optimizations for detail retention (adaptive quantization, psy-RD, psy-trellis). 
+ libx264 supports an impressive number of features, including 8x8 and 4x4 adaptive spatial transform, adaptive B-frame placement, CAVLC/CABAC entropy coding, interlacing (MBAFF), lossless mode, psy optimizations for detail retention (adaptive quantization, psy-RD, psy-trellis). 
 
  Many libx264 encoder options are mapped to FFmpeg global codec options, while unique encoder options are provided through private options. Additionally the <b>x264opts</b> and <b>x264-params</b> private options allows one to pass a list of key=value tuples as accepted by the libx264 <tt>&quot;x264_param_parse&quot;</tt> function. 
 
  The x264 project website is at &lt;<b><a rel="nofollow" HREF="http://www.videolan.org/developers/x264.html">http://www.videolan.org/developers/x264.html</a></b>&gt;. 
 
- The libx264rgb encoder is the same as libx264, except it accepts packed <font SIZE="-1">RGB</font> pixel formats as input instead of <font SIZE="-1">YUV.</font> 
+ The libx264rgb encoder is the same as libx264, except it accepts packed RGB pixel formats as input instead of YUV. 
 
  <i>Supported Pixel Formats</i> 
 
@@ -5962,15 +5962,15 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>b_strategy (</b><i>b-adapt</i><b>)</b>
 </dt><dd> Adaptive B-frame placement decision algorithm. Use only on first-pass.
 </dd><dt><b>keyint_min (</b><i>min-keyint</i><b>)</b>
-</dt><dd> Minimum <font SIZE="-1">GOP</font> size.
+</dt><dd> Minimum GOP size.
 </dd><dt><b>coder</b>
 </dt><dd> Set entropy encoder. Possible values:
 </dd><dl>
 <dl>
 <dt><b>ac</b>
-</dt><dd> Enable <font SIZE="-1">CABAC.</font>
+</dt><dd> Enable CABAC.
 </dd><dt><b>vlc</b>
-</dt><dd> Enable <font SIZE="-1">CAVLC</font> and disable <font SIZE="-1">CABAC.</font> It generates the same effect as <b>x264</b>'s <b>--no-cabac</b> option.</dd></dl>
+</dt><dd> Enable CAVLC and disable CABAC. It generates the same effect as <b>x264</b>'s <b>--no-cabac</b> option.</dd></dl>
 </dl>
 
 <dl>
@@ -6005,7 +6005,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
 
 <dt><b>flags</b>
-</dt><dd> Set encoding flags. It can be used to disable closed <font SIZE="-1">GOP</font> and enable open <font SIZE="-1">GOP</font> by setting it to <tt>&quot;-cgop&quot;</tt>. The result is similar to the behavior of <b>x264</b>'s <b>--open-gop</b> option.
+</dt><dd> Set encoding flags. It can be used to disable closed GOP and enable open GOP by setting it to <tt>&quot;-cgop&quot;</tt>. The result is similar to the behavior of <b>x264</b>'s <b>--open-gop</b> option.
 </dd><dt><b>rc_init_occupancy (</b><i>vbv-init</i><b>)</b>
 </dt><dd>
 </dd><dt><b>preset (</b><i>preset</i><b>)</b>
@@ -6019,26 +6019,26 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>crf (</b><i>crf</i><b>)</b>
 </dt><dd> Set the quality for constant quality mode.
 </dd><dt><b>crf_max (</b><i>crf-max</i><b>)</b>
-</dt><dd> In <font SIZE="-1">CRF</font> mode, prevents <font SIZE="-1">VBV</font> from lowering quality beyond this point.
+</dt><dd> In CRF mode, prevents VBV from lowering quality beyond this point.
 </dd><dt><b>qp (</b><i>qp</i><b>)</b>
 </dt><dd> Set constant quantization rate control method parameter.
 </dd><dt><b>aq-mode (</b><i>aq-mode</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">AQ</font> method. Possible values:
+</dt><dd> Set AQ method. Possible values:
 </dd><dl>
 <dl>
 <dt><b>none (</b><i>0</i><b>)</b>
 </dt><dd> Disabled.
 </dd><dt><b>variance (</b><i>1</i><b>)</b>
-</dt><dd> Variance <font SIZE="-1">AQ</font> (complexity mask).
+</dt><dd> Variance AQ (complexity mask).
 </dd><dt><b>autovariance (</b><i>2</i><b>)</b>
-</dt><dd> Auto-variance <font SIZE="-1">AQ</font> (experimental).</dd></dl>
+</dt><dd> Auto-variance AQ (experimental).</dd></dl>
 </dl>
 
 <dl>
 </dl>
 
 <dt><b>aq-strength (</b><i>aq-strength</i><b>)</b>
-</dt><dd> Set <font SIZE="-1">AQ</font> strength, reduce blocking and blurring in flat and textured areas.
+</dt><dd> Set AQ strength, reduce blocking and blurring in flat and textured areas.
 </dd><dt><b>psy</b>
 </dt><dd> Use psychovisual optimizations when set to 1. When set to 0, it has the same effect as <b>x264</b>'s <b>--no-psy</b> option.
 </dd><dt><b>psy-rd (</b><i>psy-rd</i><b>)</b>
@@ -6063,9 +6063,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
 
 <dt><b>ssim (</b><i>ssim</i><b>)</b>
-</dt><dd> Enable calculation and printing <font SIZE="-1">SSIM</font> stats after the encoding.
+</dt><dd> Enable calculation and printing SSIM stats after the encoding.
 </dd><dt><b>intra-refresh (</b><i>intra-refresh</i><b>)</b>
-</dt><dd> Enable the use of Periodic Intra Refresh instead of <font SIZE="-1">IDR</font> frames when set to 1.
+</dt><dd> Enable the use of Periodic Intra Refresh instead of IDR frames when set to 1.
 </dd><dt><b>avcintra-class (</b><i>class</i><b>)</b>
 </dt><dd> Configure the encoder to generate AVC-Intra. Valid values are 50,100 and 200
 </dd><dt><b>bluray-compat (</b><i>bluray-compat</i><b>)</b>
@@ -6092,7 +6092,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>8x8dct</b>
 </dt><dd> Enable adaptive spatial transform (high profile 8x8 transform) when set to 1. When set to 0, it has the same effect as <b>x264</b>'s <b>--no-8x8dct</b> option.
 </dd><dt><b>fast-pskip</b>
-</dt><dd> Enable early <font SIZE="-1">SKIP</font> detection on P-frames when set to 1. When set to 0, it has the same effect as <b>x264</b>'s <b>--no-fast-pskip</b> option.
+</dt><dd> Enable early SKIP detection on P-frames when set to 1. When set to 0, it has the same effect as <b>x264</b>'s <b>--no-fast-pskip</b> option.
 </dd><dt><b>aud (</b><i>aud</i><b>)</b>
 </dt><dd> Enable use of access unit delimiters when set to 1.
 </dd><dt><b>mbtree</b>
@@ -6100,7 +6100,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>deblock (</b><i>deblock</i><b>)</b>
 </dt><dd> Set loop filter parameters, in <i>alpha</i>:<i>beta</i> form.
 </dd><dt><b>cplxblur (</b><i>cplxblur</i><b>)</b>
-</dt><dd> Set fluctuations reduction in <font SIZE="-1">QP</font> (before curve compression).
+</dt><dd> Set fluctuations reduction in QP (before curve compression).
 </dd><dt><b>partitions (</b><i>partitions</i><b>)</b>
 </dt><dd> Set partitions to consider as a comma-separated list of. Possible values in the list:
 </dd><dl>
@@ -6125,11 +6125,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
 
 <dt><b>direct-pred (</b><i>direct</i><b>)</b>
-</dt><dd> Set direct <font SIZE="-1">MV</font> prediction mode. Possible values:
+</dt><dd> Set direct MV prediction mode. Possible values:
 </dd><dl>
 <dl>
 <dt><b>none (</b><i>none</i><b>)</b>
-</dt><dd> Disable <font SIZE="-1">MV</font> prediction.
+</dt><dd> Disable MV prediction.
 </dd><dt><b>spatial (</b><i>spatial</i><b>)</b>
 </dt><dd> Enable spatial predicting.
 </dd><dt><b>temporal (</b><i>temporal</i><b>)</b>
@@ -6142,19 +6142,19 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
 
 <dt><b>slice-max-size (</b><i>slice-max-size</i><b>)</b>
-</dt><dd> Set the limit of the size of each slice in bytes. If not specified but <font SIZE="-1">RTP</font> payload size (<b>ps</b>) is specified, that is used.
+</dt><dd> Set the limit of the size of each slice in bytes. If not specified but RTP payload size (<b>ps</b>) is specified, that is used.
 </dd><dt><b>stats (</b><i>stats</i><b>)</b>
 </dt><dd> Set the file name for multi-pass stats.
 </dd><dt><b>nal-hrd (</b><i>nal-hrd</i><b>)</b>
-</dt><dd> Set signal <font SIZE="-1">HRD</font> information (requires <b>vbv-bufsize</b> to be set). Possible values:
+</dt><dd> Set signal HRD information (requires <b>vbv-bufsize</b> to be set). Possible values:
 </dd><dl>
 <dl>
 <dt><b>none (</b><i>none</i><b>)</b>
-</dt><dd> Disable <font SIZE="-1">HRD</font> information signaling.
+</dt><dd> Disable HRD information signaling.
 </dd><dt><b>vbr (</b><i>vbr</i><b>)</b>
 </dt><dd> Variable bit rate.
 </dd><dt><b>cbr (</b><i>cbr</i><b>)</b>
-</dt><dd> Constant bit rate (not allowed in <font SIZE="-1">MP4</font> container).</dd></dl>
+</dt><dd> Constant bit rate (not allowed in MP4 container).</dd></dl>
 </dl>
 
 <dl>
@@ -6171,7 +6171,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
         ffmpeg -i foo.mpg -c:v libx264 -x264opts keyint=123:min-keyint=20 -an out.mkv
 </pre>
 </dd><dt><b>a53cc</b> <i>boolean</i>
-</dt><dd> Import closed captions (which must be <font SIZE="-1">ATSC</font> compatible format) into output. Only the mpeg2 and h264 decoders provide these. Default is 1 (on).
+</dt><dd> Import closed captions (which must be ATSC compatible format) into output. Only the mpeg2 and h264 decoders provide these. Default is 1 (on).
 </dd><dt><b>x264-params (N.A.)</b>
 </dt><dd> Override the x264 configuration using a :-separated list of key=value parameters. 
 
@@ -6201,9 +6201,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>bf</b>
 </dt><dd>
 </dd><dt><b>g</b>
-</dt><dd> Set the <font SIZE="-1">GOP</font> size.
+</dt><dd> Set the GOP size.
 </dd><dt><b>keyint_min</b>
-</dt><dd> Minimum <font SIZE="-1">GOP</font> size.
+</dt><dd> Minimum GOP size.
 </dd><dt><b>refs</b>
 </dt><dd> Number of reference frames each P-frame can use. The range is from <i>1-16</i>.
 </dd><dt><b>preset</b>
@@ -6241,7 +6241,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>libxavs2</h3>
 
- xavs2 <font SIZE="-1">AVS2-P2/IEEE1857.4</font> encoder wrapper. 
+ xavs2 AVS2-P2/IEEE1857.4 encoder wrapper. 
 
  This encoder requires the presence of the libxavs2 headers and library during configuration. You need to explicitly configure the build with <b>--enable-libxavs2</b>. 
 
@@ -6282,11 +6282,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>libxvid</h3>
 
- Xvid <font SIZE="-1">MPEG-4</font> Part 2 encoder wrapper. 
+ Xvid MPEG-4 Part 2 encoder wrapper. 
 
  This encoder requires the presence of the libxvidcore headers and library during configuration. You need to explicitly configure the build with <tt>&quot;--enable-libxvid --enable-gpl&quot;</tt>. 
 
- The native <tt>&quot;mpeg4&quot;</tt> encoder supports the <font SIZE="-1">MPEG-4</font> Part 2 format, so users can encode to this format without this library. 
+ The native <tt>&quot;mpeg4&quot;</tt> encoder supports the MPEG-4 Part 2 format, so users can encode to this format without this library. 
 
  <i>Options</i> 
 
@@ -6317,15 +6317,15 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>mv4</b>
 </dt><dd> Use four motion vector by macroblock.
 </dd><dt><b>aic</b>
-</dt><dd> Enable high quality <font SIZE="-1">AC</font> prediction.
+</dt><dd> Enable high quality AC prediction.
 </dd><dt><b>gray</b>
 </dt><dd> Only encode grayscale.
 </dd><dt><b>gmc</b>
-</dt><dd> Enable the use of global motion compensation (<font SIZE="-1">GMC</font>).
+</dt><dd> Enable the use of global motion compensation (GMC).
 </dd><dt><b>qpel</b>
 </dt><dd> Enable quarter-pixel motion compensation.
 </dd><dt><b>cgop</b>
-</dt><dd> Enable closed <font SIZE="-1">GOP.</font>
+</dt><dd> Enable closed GOP.
 </dd><dt><b>global_header</b>
 </dt><dd> Place global headers in extradata instead of every keyframe.</dd></dl>
 </dl>
@@ -6378,19 +6378,19 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
  When combined with <b>lumi_aq</b>, the resulting quality will not be better than any of the two specified individually. In other words, the resulting quality will be the worse one of the two effects.
 </dd><dt><b>ssim</b>
-</dt><dd> Set structural similarity (<font SIZE="-1">SSIM</font>) displaying method. Possible values:
+</dt><dd> Set structural similarity (SSIM) displaying method. Possible values:
 </dd><dl>
 <dl>
 <dt><b>off</b>
-</dt><dd> Disable displaying of <font SIZE="-1">SSIM</font> information.
+</dt><dd> Disable displaying of SSIM information.
 </dd><dt><b>avg</b>
-</dt><dd> Output average <font SIZE="-1">SSIM</font> at the end of encoding to stdout. The format of showing the average <font SIZE="-1">SSIM</font> is: 
+</dt><dd> Output average SSIM at the end of encoding to stdout. The format of showing the average SSIM is: 
  <pre>
         Average SSIM: %f
 </pre> 
  For users who are not familiar with C, <tt>%f</tt> means a float number, or a decimal (e.g. 0.939232).
 </dd><dt><b>frame</b>
-</dt><dd> Output both per-frame <font SIZE="-1">SSIM</font> data during encoding and average <font SIZE="-1">SSIM</font> at the end of encoding to stdout. The format of per-frame information is: 
+</dt><dd> Output both per-frame SSIM data during encoding and average SSIM at the end of encoding to stdout. The format of per-frame information is: 
  <pre>
                SSIM: avg: %1.3f min: %1.3f max: %1.3f
 </pre> 
@@ -6401,15 +6401,15 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
 
 <dt><b>ssim_acc</b>
-</dt><dd> Set <font SIZE="-1">SSIM</font> accuracy. Valid options are integers within the range of 0-4, while 0 gives the most accurate result and 4 computes the fastest.</dd></dl>
+</dt><dd> Set SSIM accuracy. Valid options are integers within the range of 0-4, while 0 gives the most accurate result and 4 computes the fastest.</dd></dl>
 
 <h3>MediaFoundation</h3>
 
- This provides wrappers to encoders (both audio and video) in the MediaFoundation framework. It can access both <font SIZE="-1">SW</font> and <font SIZE="-1">HW</font> encoders. Video encoders can take input in either of nv12 or yuv420p form (some encoders support both, some support only either - in practice, nv12 is the safer choice, especially among <font SIZE="-1">HW</font> encoders).
+ This provides wrappers to encoders (both audio and video) in the MediaFoundation framework. It can access both SW and HW encoders. Video encoders can take input in either of nv12 or yuv420p form (some encoders support both, some support only either - in practice, nv12 is the safer choice, especially among HW encoders).
 
 <h3>mpeg2</h3>
 
- <font SIZE="-1">MPEG-2</font> video encoder. 
+ MPEG-2 video encoder. 
 
  <i>Options</i>
 <dl>
@@ -6424,7 +6424,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>ss</b>
 </dt><dd> Spatially Scalable
 </dd><dt><b>snr</b>
-</dt><dd> <font SIZE="-1">SNR</font> Scalable
+</dt><dd> SNR Scalable
 </dd><dt><b>main</b>
 </dt><dd>
 </dd><dt><b>simple</b>
@@ -6475,11 +6475,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>video_format</b> <i>integer</i>
 </dt><dd> Specifies the video_format written into the sequence display extension indicating the source of the video pictures. The default is <b>unspecified</b>, can be <b>component</b>, <b>pal</b>, <b>ntsc</b>, <b>secam</b> or <b>mac</b>. For maximum compatibility, use <b>component</b>.
 </dd><dt><b>a53cc</b> <i>boolean</i>
-</dt><dd> Import closed captions (which must be <font SIZE="-1">ATSC</font> compatible format) into output. Default is 1 (on).</dd></dl>
+</dt><dd> Import closed captions (which must be ATSC compatible format) into output. Default is 1 (on).</dd></dl>
 
 <h3>png</h3>
 
- <font SIZE="-1">PNG</font> image encoder. 
+ PNG image encoder. 
 
  <i>Private options</i>
 <dl>
@@ -6545,7 +6545,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>mbs_per_slice</b> <i>integer</i>
 </dt><dd> Number of macroblocks in each slice (1-8); the default value (8) should be good in almost all situations.
 </dd><dt><b>vendor</b> <i>string</i>
-</dt><dd> Override the 4-byte vendor <font SIZE="-1">ID. A</font> custom vendor <font SIZE="-1">ID</font> like <i>apl0</i> would claim the stream was produced by the Apple encoder.
+</dt><dd> Override the 4-byte vendor ID. A custom vendor ID like <i>apl0</i> would claim the stream was produced by the Apple encoder.
 </dd><dt><b>alpha_bits</b> <i>integer</i>
 </dt><dd> Specify number of bits for alpha component. Possible values are <i>0</i>, <i>8</i> and <i>16</i>. Use <i>0</i> to disable alpha plane coding.</dd></dl>
  
@@ -6558,9 +6558,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
  For the fastest encoding speed set the <b>qscale</b> parameter (4 is the recommended value) and do not set a size constraint.
 
-<h3><font SIZE="-1">QSV</font> encoders</h3>
+<h3>QSV encoders</h3>
 
- The family of Intel QuickSync Video encoders (<font SIZE="-1">MPEG-2, H.264, HEVC, JPEG/MJPEG</font> and <font SIZE="-1">VP9</font>) 
+ The family of Intel QuickSync Video encoders (MPEG-2, H.264, HEVC, JPEG/MJPEG and VP9) 
 
  The ratecontrol method is selected as follows:
 <dl>
@@ -6569,11 +6569,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dl>
 <dl>
 <dt>-
-</dt><dd> <i></i><font SIZE="-1"><i>CQP</i></font><i></i> - constant quantizer scale, when the <b>qscale</b> codec flag is also set (the <b>-qscale</b> ffmpeg option).
+</dt><dd> <i></i><i>CQP</i><i></i> - constant quantizer scale, when the <b>qscale</b> codec flag is also set (the <b>-qscale</b> ffmpeg option).
 </dd><dt>-
-</dt><dd> <i></i><font SIZE="-1"><i>LA_ICQ</i></font><i></i> - intelligent constant quality with lookahead, when the <b>look_ahead</b> option is also set.
+</dt><dd> <i></i><i>LA_ICQ</i><i></i> - intelligent constant quality with lookahead, when the <b>look_ahead</b> option is also set.
 </dd><dt>-
-</dt><dd> <i></i><font SIZE="-1"><i>ICQ</i></font><i></i> --- intelligent constant quality otherwise.</dd></dl>
+</dt><dd> <i></i><i>ICQ</i><i></i> --- intelligent constant quality otherwise.</dd></dl>
 </dl>
 
 <dl>
@@ -6584,15 +6584,15 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dl>
 <dl>
 <dt>-
-</dt><dd> <i></i><font SIZE="-1"><i>LA</i></font><i></i> - <font SIZE="-1">VBR</font> with lookahead, when the <b>look_ahead</b> option is specified.
+</dt><dd> <i></i><i>LA</i><i></i> - VBR with lookahead, when the <b>look_ahead</b> option is specified.
 </dd><dt>-
-</dt><dd> <i></i><font SIZE="-1"><i>VCM</i></font><i></i> - video conferencing mode, when the <b>vcm</b> option is set.
+</dt><dd> <i></i><i>VCM</i><i></i> - video conferencing mode, when the <b>vcm</b> option is set.
 </dd><dt>-
-</dt><dd> <i></i><font SIZE="-1"><i>CBR</i></font><i></i> - constant bitrate, when <b>maxrate</b> is specified and equal to the average bitrate.
+</dt><dd> <i></i><i>CBR</i><i></i> - constant bitrate, when <b>maxrate</b> is specified and equal to the average bitrate.
 </dd><dt>-
-</dt><dd> <i></i><font SIZE="-1"><i>VBR</i></font><i></i> - variable bitrate, when <b>maxrate</b> is specified, but is higher than the average bitrate.
+</dt><dd> <i></i><i>VBR</i><i></i> - variable bitrate, when <b>maxrate</b> is specified, but is higher than the average bitrate.
 </dd><dt>-
-</dt><dd> <i></i><font SIZE="-1"><i>AVBR</i></font><i></i> - average <font SIZE="-1">VBR</font> mode, when <b>maxrate</b> is not specified. This mode is further configured by the <b>avbr_accuracy</b> and <b>avbr_convergence</b> options.</dd></dl>
+</dt><dd> <i></i><i>AVBR</i><i></i> - average VBR mode, when <b>maxrate</b> is not specified. This mode is further configured by the <b>avbr_accuracy</b> and <b>avbr_convergence</b> options.</dd></dl>
 </dl>
 
 <dl>
@@ -6600,9 +6600,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
  
 
- Note that depending on your system, a different mode than the one you specified may be selected by the encoder. Set the verbosity level to <i>verbose</i> or higher to see the actual settings used by the <font SIZE="-1">QSV</font> runtime. 
+ Note that depending on your system, a different mode than the one you specified may be selected by the encoder. Set the verbosity level to <i>verbose</i> or higher to see the actual settings used by the QSV runtime. 
 
- Additional libavcodec global options are mapped to <font SIZE="-1">MSDK</font> options as follows:
+ Additional libavcodec global options are mapped to MSDK options as follows:
 <dl>
 <dt>&bull;
 </dt><dd> <b>g/gop_size</b> -&gt; <b>GopPicSize</b>
@@ -6619,9 +6619,9 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt>&bull;
 </dt><dd> <b>cgop/CLOSED_GOP</b> codec flag -&gt; <b>GopOptFlag</b>
 </dd><dt>&bull;
-</dt><dd> For the <i></i><font SIZE="-1"><i>CQP</i></font><i></i> mode, the <b>i_qfactor/i_qoffset</b> and <b>b_qfactor/b_qoffset</b> set the difference between <i></i><font SIZE="-1"><i>QPP</i></font><i></i> and <i></i><font SIZE="-1"><i>QPI</i></font><i></i>, and <i></i><font SIZE="-1"><i>QPP</i></font><i></i> and <i></i><font SIZE="-1"><i>QPB</i></font><i></i> respectively.
+</dt><dd> For the <i></i><i>CQP</i><i></i> mode, the <b>i_qfactor/i_qoffset</b> and <b>b_qfactor/b_qoffset</b> set the difference between <i></i><i>QPP</i><i></i> and <i></i><i>QPI</i><i></i>, and <i></i><i>QPP</i><i></i> and <i></i><i>QPB</i><i></i> respectively.
 </dd><dt>&bull;
-</dt><dd> Setting the <b>coder</b> option to the value <i>vlc</i> will make the H.264 encoder use <font SIZE="-1">CAVLC</font> instead of <font SIZE="-1">CABAC.</font></dd></dl>
+</dt><dd> Setting the <b>coder</b> option to the value <i>vlc</i> will make the H.264 encoder use CAVLC instead of CABAC.</dd></dl>
 
 <h3>snow</h3>
 
@@ -6630,11 +6630,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>iterative_dia_size</b>
 </dt><dd> dia size for the iterative motion estimation</dd></dl>
 
-<h3><font SIZE="-1">VAAPI</font> encoders</h3>
+<h3>VAAPI encoders</h3>
 
- Wrappers for hardware encoders accessible via <font SIZE="-1">VAAPI.</font> 
+ Wrappers for hardware encoders accessible via VAAPI. 
 
- These encoders only accept input in <font SIZE="-1">VAAPI</font> hardware surfaces. If you have input in software frames, use the <b>hwupload</b> filter to upload them to the <font SIZE="-1">GPU.</font> 
+ These encoders only accept input in VAAPI hardware surfaces. If you have input in software frames, use the <b>hwupload</b> filter to upload them to the GPU. 
 
  The following standard libavcodec options are used:
 <dl>
@@ -6682,7 +6682,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>low_power</b>
 </dt><dd> Some drivers/platforms offer a second encoder for some codecs intended to use less power than the default encoder; setting this option will attempt to use that encoder. Note that it may support a reduced feature set, so some other options may not be available in this mode.
 </dd><dt><b>idr_interval</b>
-</dt><dd> Set the number of normal intra frames between full-refresh (<font SIZE="-1">IDR</font>) frames in open-GOP mode. The intra frames are still IRAPs, but will not include global headers and may have non-decodable leading pictures.
+</dt><dd> Set the number of normal intra frames between full-refresh (IDR) frames in open-GOP mode. The intra frames are still IRAPs, but will not include global headers and may have non-decodable leading pictures.
 </dd><dt><b>b_depth</b>
 </dt><dd> Set the B-frame reference depth. When set to one (the default), all B-frames will refer only to P- or I-frames. When set to greater values multiple layers of B-frames will be present, frames in each layer only referring to frames in higher layers.
 </dd><dt><b>rc_mode</b>
@@ -6692,17 +6692,17 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dl>
 <dt><b>auto</b>
 </dt><dd> Choose the mode automatically based on driver support and the other options. This is the default.
-</dd><dt><font SIZE="-1"><b>CQP</b></font>
+</dd><dt><b>CQP</b>
 </dt><dd> Constant-quality.
-</dd><dt><font SIZE="-1"><b>CBR</b></font>
+</dd><dt><b>CBR</b>
 </dt><dd> Constant-bitrate.
-</dd><dt><font SIZE="-1"><b>VBR</b></font>
+</dd><dt><b>VBR</b>
 </dt><dd> Variable-bitrate.
-</dd><dt><font SIZE="-1"><b>ICQ</b></font>
+</dd><dt><b>ICQ</b>
 </dt><dd> Intelligent constant-quality.
-</dd><dt><font SIZE="-1"><b>QVBR</b></font>
+</dd><dt><b>QVBR</b>
 </dt><dd> Quality-defined variable-bitrate.
-</dd><dt><font SIZE="-1"><b>AVBR</b></font>
+</dd><dt><b>AVBR</b>
 </dt><dd> Average variable bitrate.</dd></dl>
 </dl>
 
@@ -6724,11 +6724,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>ac</b>
 </dt><dd>
 </dd><dt><b>cabac</b>
-</dt><dd> Use <font SIZE="-1">CABAC.</font>
+</dt><dd> Use CABAC.
 </dd><dt><b>vlc</b>
 </dt><dd>
 </dd><dt><b>cavlc</b>
-</dt><dd> Use <font SIZE="-1">CAVLC.</font></dd></dl>
+</dt><dd> Use CAVLC.</dd></dl>
 </dl>
 
 <dl>
@@ -6737,7 +6737,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt><b>aud</b>
 </dt><dd> Include access unit delimiters in the stream (not included by default).
 </dd><dt><b>sei</b>
-</dt><dd> Set <font SIZE="-1">SEI</font> message types to include. Some combination of the following values:
+</dt><dd> Set SEI message types to include. Some combination of the following values:
 </dd><dl>
 <dl>
 <dt><b>identifier</b>
@@ -6765,11 +6765,11 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dd><dt><b>tier</b>
 </dt><dd> Set <i>general_tier_flag</i>. This may affect the level chosen for the stream if it is not explicitly specified.
 </dd><dt><b>sei</b>
-</dt><dd> Set <font SIZE="-1">SEI</font> message types to include. Some combination of the following values:
+</dt><dd> Set SEI message types to include. Some combination of the following values:
 </dd><dl>
 <dl>
 <dt><b>hdr</b>
-</dt><dd> Include <font SIZE="-1">HDR</font> metadata if the input frames have it (<i>mastering_display_colour_volume</i> and <i>content_light_level</i> messages).</dd></dl>
+</dt><dd> Include HDR metadata if the input frames have it (<i>mastering_display_colour_volume</i> and <i>content_light_level</i> messages).</dd></dl>
 </dl>
 
 <dl>
@@ -6783,15 +6783,15 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 </dl>
 
 <dt><b>mjpeg_vaapi</b>
-</dt><dd> Only baseline <font SIZE="-1">DCT</font> encoding is supported. The encoder always uses the standard quantisation and huffman tables - <b>global_quality</b> scales the standard quantisation table (range 1-100). 
+</dt><dd> Only baseline DCT encoding is supported. The encoder always uses the standard quantisation and huffman tables - <b>global_quality</b> scales the standard quantisation table (range 1-100). 
 
- For <font SIZE="-1">YUV, 4:2:0, 4:2:2</font> and 4:4:4 subsampling modes are supported. <font SIZE="-1">RGB</font> is also supported, and will create an <font SIZE="-1">RGB JPEG.</font>
+ For YUV, 4:2:0, 4:2:2 and 4:4:4 subsampling modes are supported. RGB is also supported, and will create an RGB JPEG.
 </dd><dl>
 <dl>
 <dt><b>jfif</b>
-</dt><dd> Include <font SIZE="-1">JFIF</font> header in each frame (not included by default).
+</dt><dd> Include JFIF header in each frame (not included by default).
 </dd><dt><b>huffman</b>
-</dt><dd> Include standard huffman tables (on by default). Turning this off will save a few hundred bytes in each output frame, but may lose compatibility with some <font SIZE="-1">JPEG</font> decoders which don't fully handle <font SIZE="-1">MJPEG.</font></dd></dl>
+</dt><dd> Include standard huffman tables (on by default). Turning this off will save a few hundred bytes in each output frame, but may lose compatibility with some JPEG decoders which don't fully handle MJPEG.</dd></dl>
 </dl>
 
 <dl>
@@ -6833,7 +6833,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>vc2</h3>
 
- <font SIZE="-1">SMPTE VC-2</font> (previously <font SIZE="-1">BBC</font> Dirac Pro). This codec was primarily aimed at professional broadcasting but since it supports yuv420, yuv422 and yuv444 at 8 (limited range or full range), 10 or 12 bits, this makes it suitable for other tasks which require low overhead and low compression (like screen recording). 
+ SMPTE VC-2 (previously BBC Dirac Pro). This codec was primarily aimed at professional broadcasting but since it supports yuv420, yuv422 and yuv444 at 8 (limited range or full range), 10 or 12 bits, this makes it suitable for other tasks which require low overhead and low compression (like screen recording). 
 
  <i>Options</i>
 <dl>
@@ -6858,7 +6858,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 <dt>-
 </dt><dd> <i>default</i> Uses the default quantization matrix from the specifications, extended with values for the fifth level. This provides a good balance between keeping detail and omitting artifacts.
 </dd><dt>-
-</dt><dd> <i>flat</i> Use a completely zeroed out quantization matrix. This increases <font SIZE="-1">PSNR</font> but might reduce perception. Use in bogus benchmarks.
+</dt><dd> <i>flat</i> Use a completely zeroed out quantization matrix. This increases PSNR but might reduce perception. Use in bogus benchmarks.
 </dd><dt>-
 </dt><dd> <i>color</i> Reduces detail but attempts to preserve color at extremely low bitrates.</dd></dl>
 </dl>
@@ -6871,7 +6871,7 @@ ffmpeg - i input.ts - filter_complex '[#0x2ef] setpts=PTS+1/TB [sub] ; [#0x2d0] 
 
 <h3>dvdsub</h3>
 
- This codec encodes the bitmap subtitle format that is used in DVDs. Typically they are stored in <font SIZE="-1">VOBSUB</font> file pairs (*.idx + *.sub), and they can also be used in Matroska files. 
+ This codec encodes the bitmap subtitle format that is used in DVDs. Typically they are stored in VOBSUB file pairs (*.idx + *.sub), and they can also be used in Matroska files. 
 
  <i>Options</i>
 <dl>
@@ -6900,24 +6900,24 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>aac_adtstoasc</h3>
 
- Convert <font SIZE="-1">MPEG-2/4 AAC ADTS</font> to an <font SIZE="-1">MPEG-4</font> Audio Specific Configuration bitstream. 
+ Convert MPEG-2/4 AAC ADTS to an MPEG-4 Audio Specific Configuration bitstream. 
 
- This filter creates an <font SIZE="-1">MPEG-4</font> AudioSpecificConfig from an <font SIZE="-1">MPEG-2/4 ADTS</font> header and removes the <font SIZE="-1">ADTS</font> header. 
+ This filter creates an MPEG-4 AudioSpecificConfig from an MPEG-2/4 ADTS header and removes the ADTS header. 
 
- This filter is required for example when copying an <font SIZE="-1">AAC</font> stream from a raw <font SIZE="-1">ADTS AAC</font> or an MPEG-TS container to <font SIZE="-1">MP4A-LATM,</font> to an <font SIZE="-1">FLV</font> file, or to <font SIZE="-1">MOV/MP4</font> files and related formats such as 3GP or M4A. Please note that it is auto-inserted for <font SIZE="-1">MP4A-LATM</font> and <font SIZE="-1">MOV/MP4</font> and related formats.
+ This filter is required for example when copying an AAC stream from a raw ADTS AAC or an MPEG-TS container to MP4A-LATM, to an FLV file, or to MOV/MP4 files and related formats such as 3GP or M4A. Please note that it is auto-inserted for MP4A-LATM and MOV/MP4 and related formats.
 
 <h3>av1_metadata</h3>
 
- Modify metadata embedded in an <font SIZE="-1">AV1</font> stream.
+ Modify metadata embedded in an AV1 stream.
 <dl>
 <dt><b>td</b>
 </dt><dd> Insert or remove temporal delimiter OBUs in all temporal units of the stream.
 </dd><dl>
 <dl>
 <dt><b>insert</b>
-</dt><dd> Insert a <font SIZE="-1">TD</font> at the beginning of every <font SIZE="-1">TU</font> which does not already have one.
+</dt><dd> Insert a TD at the beginning of every TU which does not already have one.
 </dd><dt><b>remove</b>
-</dt><dd> Remove the <font SIZE="-1">TD</font> from the beginning of every <font SIZE="-1">TU</font> which has one.</dd></dl>
+</dt><dd> Remove the TD from the beginning of every TU which has one.</dd></dl>
 </dl>
 
 <dl>
@@ -6928,9 +6928,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>transfer_characteristics</b>
 </dt><dd>
 </dd><dt><b>matrix_coefficients</b>
-</dt><dd> Set the color description fields in the stream (see <font SIZE="-1">AV1</font> section 6.4.2).
+</dt><dd> Set the color description fields in the stream (see AV1 section 6.4.2).
 </dd><dt><b>color_range</b>
-</dt><dd> Set the color range in the stream (see <font SIZE="-1">AV1</font> section 6.4.2; note that this cannot be set for streams using <font SIZE="-1">BT.709</font> primaries, sRGB transfer characteristic and identity (<font SIZE="-1">RGB</font>) matrix coefficients).
+</dt><dd> Set the color range in the stream (see AV1 section 6.4.2; note that this cannot be set for streams using BT.709 primaries, sRGB transfer characteristic and identity (RGB) matrix coefficients).
 </dd><dl>
 <dl>
 <dt><b>tv</b>
@@ -6943,11 +6943,11 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dl>
 
 <dt><b>chroma_sample_position</b>
-</dt><dd> Set the chroma sample location in the stream (see <font SIZE="-1">AV1</font> section 6.4.2). This can only be set for 4:2:0 streams.
+</dt><dd> Set the chroma sample location in the stream (see AV1 section 6.4.2). This can only be set for 4:2:0 streams.
 </dd><dl>
 <dl>
 <dt><b>vertical</b>
-</dt><dd> Left position (matching the default in <font SIZE="-1">MPEG-2</font> and H.264).
+</dt><dd> Left position (matching the default in MPEG-2 and H.264).
 </dd><dt><b>colocated</b>
 </dt><dd> Top-left position.</dd></dl>
 </dl>
@@ -6968,7 +6968,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>dca_core</h3>
 
- Extract the core from a <font SIZE="-1">DCA/DTS</font> stream, dropping extensions such as DTS-HD.
+ Extract the core from a DCA/DTS stream, dropping extensions such as DTS-HD.
 
 <h3>dump_extra</h3>
 
@@ -7009,7 +7009,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  Extract the in-band extradata. 
 
- Certain codecs allow the long-term headers (e.g. <font SIZE="-1">MPEG-2</font> sequence headers, or H.264/HEVC (<font SIZE="-1">VPS/</font>)SPS/PPS) to be transmitted either ``in-band'' (i.e. as a part of the bitstream containing the coded frames) or ``out of band'' (e.g. on the container level). This latter form is called ``extradata'' in FFmpeg terminology. 
+ Certain codecs allow the long-term headers (e.g. MPEG-2 sequence headers, or H.264/HEVC (VPS/)SPS/PPS) to be transmitted either ``in-band'' (i.e. as a part of the bitstream containing the coded frames) or ``out of band'' (e.g. on the container level). This latter form is called ``extradata'' in FFmpeg terminology. 
 
  This bitstream filter detects the in-band headers and makes them available as extradata.
 <dl>
@@ -7028,13 +7028,13 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  Extradata is unchanged by this transformation, but note that if the stream contains inline parameter sets then the output may be unusable if they are removed. 
 
- For example, to remove all non-VCL <font SIZE="-1">NAL</font> units from an H.264 stream: 
+ For example, to remove all non-VCL NAL units from an H.264 stream: 
 
  <pre>
         ffmpeg -i INPUT -c:v copy -bsf:v 'filter_units=pass_types=1-5' OUTPUT
 </pre> 
 
- To remove all AUDs, <font SIZE="-1">SEI</font> and filler from an H.265 stream: 
+ To remove all AUDs, SEI and filler from an H.265 stream: 
 
  <pre>
         ffmpeg -i INPUT -c:v copy -bsf:v 'filter_units=remove_types=35|38-40' OUTPUT
@@ -7042,7 +7042,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>hapqa_extract</h3>
 
- Extract Rgb or Alpha part of an <font SIZE="-1">HAPQA</font> file, without recompression, in order to create an <font SIZE="-1">HAPQ</font> or an HAPAlphaOnly file.
+ Extract Rgb or Alpha part of an HAPQA file, without recompression, in order to create an HAPQ or an HAPAlphaOnly file.
 <dl>
 <dt><b>texture</b>
 </dt><dd> Specifies the texture to keep.
@@ -7059,13 +7059,13 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dl>
  
 
- Convert <font SIZE="-1">HAPQA</font> to <font SIZE="-1">HAPQ</font> 
+ Convert HAPQA to HAPQ 
 
  <pre>
         ffmpeg -i hapqa_inputfile.mov -c copy -bsf:v hapqa_extract=texture=color -tag:v HapY -metadata:s:v:0 encoder=&quot;HAPQ&quot; hapq_file.mov
 </pre> 
 
- Convert <font SIZE="-1">HAPQA</font> to HAPAlphaOnly 
+ Convert HAPQA to HAPAlphaOnly 
 
  <pre>
         ffmpeg -i hapqa_inputfile.mov -c copy -bsf:v hapqa_extract=texture=alpha -tag:v HapA -metadata:s:v:0 encoder=&quot;HAPAlpha Only&quot; hapalphaonly_file.mov
@@ -7076,7 +7076,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
  Modify metadata embedded in an H.264 stream.
 <dl>
 <dt><b>aud</b>
-</dt><dd> Insert or remove <font SIZE="-1">AUD NAL</font> units in all access units of the stream.
+</dt><dd> Insert or remove AUD NAL units in all access units of the stream.
 </dd><dl>
 <dl>
 <dt><b>insert</b>
@@ -7089,7 +7089,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dl>
 
 <dt><b>sample_aspect_ratio</b>
-</dt><dd> Set the sample aspect ratio of the stream in the <font SIZE="-1">VUI</font> parameters.
+</dt><dd> Set the sample aspect ratio of the stream in the VUI parameters.
 </dd><dt><b>overscan_appropriate_flag</b>
 </dt><dd> Set whether the stream is suitable for display using overscan or not (see H.264 section E.2.1).
 </dd><dt><b>video_format</b>
@@ -7105,7 +7105,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>chroma_sample_loc_type</b>
 </dt><dd> Set the chroma sample location in the stream (see H.264 section E.2.1 and figure E-1).
 </dd><dt><b>tick_rate</b>
-</dt><dd> Set the tick rate (num_units_in_tick / time_scale) in the <font SIZE="-1">VUI</font> parameters. This is the smallest time unit representable in the stream, and in many cases represents the field rate of the stream (double the frame rate).
+</dt><dd> Set the tick rate (num_units_in_tick / time_scale) in the VUI parameters. This is the smallest time unit representable in the stream, and in many cases represents the field rate of the stream (double the frame rate).
 </dd><dt><b>fixed_frame_rate_flag</b>
 </dt><dd> Set whether the stream has fixed framerate - typically this indicates that the framerate is exactly half the tick rate, but the exact meaning is dependent on interlacing and the picture structure (see H.264 section E.2.1 and table E-6).
 </dd><dt><b>crop_left</b>
@@ -7115,17 +7115,17 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>crop_top</b>
 </dt><dd>
 </dd><dt><b>crop_bottom</b>
-</dt><dd> Set the frame cropping offsets in the <font SIZE="-1">SPS.</font> These values will replace the current ones if the stream is already cropped. 
+</dt><dd> Set the frame cropping offsets in the SPS. These values will replace the current ones if the stream is already cropped. 
 
  These fields are set in pixels. Note that some sizes may not be representable if the chroma is subsampled or the stream is interlaced (see H.264 section 7.4.2.1.1).
 </dd><dt><b>sei_user_data</b>
-</dt><dd> Insert a string as <font SIZE="-1">SEI</font> unregistered user data. The argument must be of the form <i>UUID+string</i>, where the <font SIZE="-1">UUID</font> is as hex digits possibly separated by hyphens, and the string can be anything. 
+</dt><dd> Insert a string as SEI unregistered user data. The argument must be of the form <i>UUID+string</i>, where the UUID is as hex digits possibly separated by hyphens, and the string can be anything. 
 
- For example, <b>086f3693-b7b3-4f2c-9653-21492feee5b8+hello</b> will insert the string ``hello'' associated with the given <font SIZE="-1">UUID.</font>
+ For example, <b>086f3693-b7b3-4f2c-9653-21492feee5b8+hello</b> will insert the string ``hello'' associated with the given UUID.
 </dd><dt><b>delete_filler</b>
-</dt><dd> Deletes both filler <font SIZE="-1">NAL</font> units and filler <font SIZE="-1">SEI</font> messages.
+</dt><dd> Deletes both filler NAL units and filler SEI messages.
 </dd><dt><b>level</b>
-</dt><dd> Set the level in the <font SIZE="-1">SPS.</font> Refer to H.264 section A.3 and tables A-1 to A-5. 
+</dt><dd> Set the level in the SPS. Refer to H.264 section A.3 and tables A-1 to A-5. 
 
  The argument must be the name of a level (for example, <b>4.2</b>), a level_idc value (for example, <b>42</b>), or the special name <b>auto</b> indicating that the filter should attempt to guess the level from the input stream properties.</dd></dl>
 
@@ -7133,9 +7133,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  Convert an H.264 bitstream from length prefixed mode to start code prefixed mode (as defined in the Annex B of the ITU-T H.264 specification). 
 
- This is required by some streaming formats, typically the <font SIZE="-1">MPEG-2</font> transport stream format (muxer <tt>&quot;mpegts&quot;</tt>). 
+ This is required by some streaming formats, typically the MPEG-2 transport stream format (muxer <tt>&quot;mpegts&quot;</tt>). 
 
- For example to remux an <font SIZE="-1">MP4</font> file containing an H.264 stream to mpegts format with <b>ffmpeg</b>, you can use the command: 
+ For example to remux an MP4 file containing an H.264 stream to mpegts format with <b>ffmpeg</b>, you can use the command: 
 
  <pre>
         ffmpeg -i INPUT.mp4 -codec copy -bsf:v h264_mp4toannexb OUTPUT.ts
@@ -7147,14 +7147,14 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  This applies a specific fixup to some Blu-ray streams which contain redundant PPSs modifying irrelevant parameters of the stream which confuse other transformations which require correct extradata. 
 
- A new single global <font SIZE="-1">PPS</font> is created, and all of the redundant PPSs within the stream are removed.
+ A new single global PPS is created, and all of the redundant PPSs within the stream are removed.
 
 <h3>hevc_metadata</h3>
 
- Modify metadata embedded in an <font SIZE="-1">HEVC</font> stream.
+ Modify metadata embedded in an HEVC stream.
 <dl>
 <dt><b>aud</b>
-</dt><dd> Insert or remove <font SIZE="-1">AUD NAL</font> units in all access units of the stream.
+</dt><dd> Insert or remove AUD NAL units in all access units of the stream.
 </dd><dl>
 <dl>
 <dt><b>insert</b>
@@ -7167,7 +7167,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dl>
 
 <dt><b>sample_aspect_ratio</b>
-</dt><dd> Set the sample aspect ratio in the stream in the <font SIZE="-1">VUI</font> parameters.
+</dt><dd> Set the sample aspect ratio in the stream in the VUI parameters.
 </dd><dt><b>video_format</b>
 </dt><dd>
 </dd><dt><b>video_full_range_flag</b>
@@ -7181,9 +7181,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>chroma_sample_loc_type</b>
 </dt><dd> Set the chroma sample location in the stream (see H.265 section E.3.1 and figure E.1).
 </dd><dt><b>tick_rate</b>
-</dt><dd> Set the tick rate in the <font SIZE="-1">VPS</font> and <font SIZE="-1">VUI</font> parameters (num_units_in_tick / time_scale). Combined with <b>num_ticks_poc_diff_one</b>, this can set a constant framerate in the stream. Note that it is likely to be overridden by container parameters when the stream is in a container.
+</dt><dd> Set the tick rate in the VPS and VUI parameters (num_units_in_tick / time_scale). Combined with <b>num_ticks_poc_diff_one</b>, this can set a constant framerate in the stream. Note that it is likely to be overridden by container parameters when the stream is in a container.
 </dd><dt><b>num_ticks_poc_diff_one</b>
-</dt><dd> Set poc_proportional_to_timing_flag in <font SIZE="-1">VPS</font> and <font SIZE="-1">VUI</font> and use this value to set num_ticks_poc_diff_one_minus1 (see H.265 sections 7.4.3.1 and E.3.1). Ignored if <b>tick_rate</b> is not also set.
+</dt><dd> Set poc_proportional_to_timing_flag in VPS and VUI and use this value to set num_ticks_poc_diff_one_minus1 (see H.265 sections 7.4.3.1 and E.3.1). Ignored if <b>tick_rate</b> is not also set.
 </dd><dt><b>crop_left</b>
 </dt><dd>
 </dd><dt><b>crop_right</b>
@@ -7191,33 +7191,33 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>crop_top</b>
 </dt><dd>
 </dd><dt><b>crop_bottom</b>
-</dt><dd> Set the conformance window cropping offsets in the <font SIZE="-1">SPS.</font> These values will replace the current ones if the stream is already cropped. 
+</dt><dd> Set the conformance window cropping offsets in the SPS. These values will replace the current ones if the stream is already cropped. 
 
  These fields are set in pixels. Note that some sizes may not be representable if the chroma is subsampled (H.265 section 7.4.3.2.1).
 </dd><dt><b>level</b>
-</dt><dd> Set the level in the <font SIZE="-1">VPS</font> and <font SIZE="-1">SPS.</font> See H.265 section A.4 and tables A.6 and A.7. 
+</dt><dd> Set the level in the VPS and SPS. See H.265 section A.4 and tables A.6 and A.7. 
 
  The argument must be the name of a level (for example, <b>5.1</b>), a <i>general_level_idc</i> value (for example, <b>153</b> for level 5.1), or the special name <b>auto</b> indicating that the filter should attempt to guess the level from the input stream properties.</dd></dl>
 
 <h3>hevc_mp4toannexb</h3>
 
- Convert an <font SIZE="-1">HEVC/H.265</font> bitstream from length prefixed mode to start code prefixed mode (as defined in the Annex B of the ITU-T H.265 specification). 
+ Convert an HEVC/H.265 bitstream from length prefixed mode to start code prefixed mode (as defined in the Annex B of the ITU-T H.265 specification). 
 
- This is required by some streaming formats, typically the <font SIZE="-1">MPEG-2</font> transport stream format (muxer <tt>&quot;mpegts&quot;</tt>). 
+ This is required by some streaming formats, typically the MPEG-2 transport stream format (muxer <tt>&quot;mpegts&quot;</tt>). 
 
- For example to remux an <font SIZE="-1">MP4</font> file containing an <font SIZE="-1">HEVC</font> stream to mpegts format with <b>ffmpeg</b>, you can use the command: 
+ For example to remux an MP4 file containing an HEVC stream to mpegts format with <b>ffmpeg</b>, you can use the command: 
 
  <pre>
         ffmpeg -i INPUT.mp4 -codec copy -bsf:v hevc_mp4toannexb OUTPUT.ts
 </pre> 
 
- Please note that this filter is auto-inserted for MPEG-TS (muxer <tt>&quot;mpegts&quot;</tt>) and raw <font SIZE="-1">HEVC/H.265</font> (muxer <tt>&quot;h265&quot;</tt> or <tt>&quot;hevc&quot;</tt>) output formats.
+ Please note that this filter is auto-inserted for MPEG-TS (muxer <tt>&quot;mpegts&quot;</tt>) and raw HEVC/H.265 (muxer <tt>&quot;h265&quot;</tt> or <tt>&quot;hevc&quot;</tt>) output formats.
 
 <h3>imxdump</h3>
 
- Modifies the bitstream to fit in <font SIZE="-1">MOV</font> and to be usable by the Final Cut Pro decoder. This filter only applies to the mpeg2video codec, and is likely not needed for Final Cut Pro 7 and newer with the appropriate <b>-tag:v</b>. 
+ Modifies the bitstream to fit in MOV and to be usable by the Final Cut Pro decoder. This filter only applies to the mpeg2video codec, and is likely not needed for Final Cut Pro 7 and newer with the appropriate <b>-tag:v</b>. 
 
- For example, to remux 30 MB/sec <font SIZE="-1">NTSC IMX</font> to <font SIZE="-1">MOV:</font> 
+ For example, to remux 30 MB/sec NTSC IMX to MOV: 
 
  <pre>
         ffmpeg -i input.mxf -c copy -bsf:v imxdump -tag:v mx3n output.mov
@@ -7225,19 +7225,19 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>mjpeg2jpeg</h3>
 
- Convert <font SIZE="-1">MJPEG/AVI1</font> packets to full <font SIZE="-1">JPEG/JFIF</font> packets. 
+ Convert MJPEG/AVI1 packets to full JPEG/JFIF packets. 
 
- <font SIZE="-1">MJPEG</font> is a video codec wherein each video frame is essentially a <font SIZE="-1">JPEG</font> image. The individual frames can be extracted without loss, e.g. by 
+ MJPEG is a video codec wherein each video frame is essentially a JPEG image. The individual frames can be extracted without loss, e.g. by 
 
  <pre>
         ffmpeg -i ../some_mjpeg.avi -c:v copy frames_%d.jpg
 </pre> 
 
- Unfortunately, these chunks are incomplete <font SIZE="-1">JPEG</font> images, because they lack the <font SIZE="-1">DHT</font> segment required for decoding. Quoting from &lt;<b><a rel="nofollow" HREF="http://www.digitalpreservation.gov/formats/fdd/fdd000063.shtml">http://www.digitalpreservation.gov/formats/fdd/fdd000063.shtml</a></b>&gt;: 
+ Unfortunately, these chunks are incomplete JPEG images, because they lack the DHT segment required for decoding. Quoting from &lt;<b><a rel="nofollow" HREF="http://www.digitalpreservation.gov/formats/fdd/fdd000063.shtml">http://www.digitalpreservation.gov/formats/fdd/fdd000063.shtml</a></b>&gt;: 
 
- Avery Lee, writing in the rec.video.desktop newsgroup in 2001, commented that ``<font SIZE="-1">MJPEG,</font> or at least the <font SIZE="-1">MJPEG</font> in AVIs having the <font SIZE="-1">MJPG</font> fourcc, is restricted <font SIZE="-1">JPEG</font> with a fixed --- and *omitted* --- Huffman table. The <font SIZE="-1">JPEG</font> must be YCbCr colorspace, it must be 4:2:2, and it must use basic Huffman encoding, not arithmetic or progressive. . . . You can indeed extract the <font SIZE="-1">MJPEG</font> frames and decode them with a regular <font SIZE="-1">JPEG</font> decoder, but you have to prepend the <font SIZE="-1">DHT</font> segment to them, or else the decoder won't have any idea how to decompress the data. The exact table necessary is given in the OpenDML spec.'' 
+ Avery Lee, writing in the rec.video.desktop newsgroup in 2001, commented that ``MJPEG, or at least the MJPEG in AVIs having the MJPG fourcc, is restricted JPEG with a fixed --- and *omitted* --- Huffman table. The JPEG must be YCbCr colorspace, it must be 4:2:2, and it must use basic Huffman encoding, not arithmetic or progressive. . . . You can indeed extract the MJPEG frames and decode them with a regular JPEG decoder, but you have to prepend the DHT segment to them, or else the decoder won't have any idea how to decompress the data. The exact table necessary is given in the OpenDML spec.'' 
 
- This bitstream filter patches the header of frames extracted from an <font SIZE="-1">MJPEG</font> stream (carrying the <font SIZE="-1">AVI1</font> header <font SIZE="-1">ID</font> and lacking a <font SIZE="-1">DHT</font> segment) to produce fully qualified <font SIZE="-1">JPEG</font> images. 
+ This bitstream filter patches the header of frames extracted from an MJPEG stream (carrying the AVI1 header ID and lacking a DHT segment) to produce fully qualified JPEG images. 
 
  <pre>
         ffmpeg -i mjpeg-movie.avi -c:v copy -bsf:v mjpeg2jpeg frame_%d.jpg
@@ -7247,21 +7247,21 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>mjpegadump</h3>
 
- Add an <font SIZE="-1">MJPEG A</font> header to the bitstream, to enable decoding by Quicktime.
+ Add an MJPEG A header to the bitstream, to enable decoding by Quicktime.
 
 <h3>mov2textsub</h3>
 
- Extract a representable text file from <font SIZE="-1">MOV</font> subtitles, stripping the metadata header from each subtitle packet. 
+ Extract a representable text file from MOV subtitles, stripping the metadata header from each subtitle packet. 
 
  See also the <b>text2movsub</b> filter.
 
 <h3>mp3decomp</h3>
 
- Decompress non-standard compressed <font SIZE="-1">MP3</font> audio headers.
+ Decompress non-standard compressed MP3 audio headers.
 
 <h3>mpeg2_metadata</h3>
 
- Modify metadata embedded in an <font SIZE="-1">MPEG-2</font> stream.
+ Modify metadata embedded in an MPEG-2 stream.
 <dl>
 <dt><b>display_aspect_ratio</b>
 </dt><dd> Set the display aspect ratio in the stream. 
@@ -7296,9 +7296,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  Unpack DivX-style packed B-frames. 
 
- DivX-style packed B-frames are not valid <font SIZE="-1">MPEG-4</font> and were only a workaround for the broken Video for Windows subsystem. They use more space, can cause minor <font SIZE="-1">AV</font> sync issues, require more <font SIZE="-1">CPU</font> power to decode (unless the player has some decoded picture queue to compensate the 2,0,2,0 frame per packet style) and cause trouble if copied into a standard container like mp4 or mpeg-ps/ts, because <font SIZE="-1">MPEG-4</font> decoders may not be able to decode them, since they are not valid <font SIZE="-1">MPEG-4.</font> 
+ DivX-style packed B-frames are not valid MPEG-4 and were only a workaround for the broken Video for Windows subsystem. They use more space, can cause minor AV sync issues, require more CPU power to decode (unless the player has some decoded picture queue to compensate the 2,0,2,0 frame per packet style) and cause trouble if copied into a standard container like mp4 or mpeg-ps/ts, because MPEG-4 decoders may not be able to decode them, since they are not valid MPEG-4. 
 
- For example to fix an <font SIZE="-1">AVI</font> file containing an <font SIZE="-1">MPEG-4</font> stream with DivX-style packed B-frames using <b>ffmpeg</b>, you can use the command: 
+ For example to fix an AVI file containing an MPEG-4 stream with DivX-style packed B-frames using <b>ffmpeg</b>, you can use the command: 
 
  <pre>
         ffmpeg -i INPUT.avi -codec copy -bsf:v mpeg4_unpack_bframes OUTPUT.avi
@@ -7328,7 +7328,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>pcm_rechunk</h3>
 
- Repacketize <font SIZE="-1">PCM</font> audio to a fixed number of samples per packet or a fixed packet rate per second. This is similar to the <b>asetnsamples audio filter</b> but works on audio packets instead of audio frames.
+ Repacketize PCM audio to a fixed number of samples per packet or a fixed packet rate per second. This is similar to the <b>asetnsamples audio filter</b> but works on audio packets instead of audio frames.
 <dl>
 <dt><b>nb_out_samples, n</b>
 </dt><dd> Set the number of samples per each output audio packet. The number is intended as the number of samples <i>per each channel</i>. Default value is 1024.
@@ -7338,7 +7338,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dt><dd> This option makes the filter output a fixed number of packets per second instead of a fixed number of samples per packet. If the audio sample rate is not divisible by the frame rate then the number of samples will not be constant but will vary slightly so that each packet will start as close to the frame boundary as possible. Using this option has precedence over <b>nb_out_samples</b>.</dd></dl>
  
 
- You can generate the well known 1602-1601-1602-1601-1602 pattern of 48kHz audio for <font SIZE="-1">NTSC</font> frame rate using the <b>frame_rate</b> option. 
+ You can generate the well known 1602-1601-1602-1601-1602 pattern of 48kHz audio for NTSC frame rate using the <b>frame_rate</b> option. 
 
  <pre>
         ffmpeg -f lavfi -i sine=r=48000:d=1 -c pcm_s16le -bsf pcm_rechunk=r=30000/1001 -f framecrc -
@@ -7359,13 +7359,13 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>bt709</b>
 </dt><dd>
 </dd><dt><b>bt470bg</b>
-</dt><dd> <font SIZE="-1">BT601 625</font>
+</dt><dd> BT601 625
 </dd><dt><b>smpte170m</b>
-</dt><dd> <font SIZE="-1">BT601 525</font>
+</dt><dd> BT601 525
 </dd><dt><b>bt2020</b>
 </dt><dd>
 </dd><dt><b>smpte431</b>
-</dt><dd> <font SIZE="-1">DCI P3</font>
+</dt><dd> DCI P3
 </dd><dt><b>smpte432</b>
 </dt><dd> P3 D65</dd></dl>
 </dl>
@@ -7382,11 +7382,11 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>unknown</b>
 </dt><dd>
 </dd><dt><b>bt709</b>
-</dt><dd> <font SIZE="-1">BT 601, BT 709, BT 2020</font>
+</dt><dd> BT 601, BT 709, BT 2020
 </dd><dt><b>smpte2084</b>
-</dt><dd> <font SIZE="-1">SMPTE ST 2084</font>
+</dt><dd> SMPTE ST 2084
 </dd><dt><b>arib-std-b67</b>
-</dt><dd> <font SIZE="-1">ARIB STD-B67</font></dd></dl>
+</dt><dd> ARIB STD-B67</dd></dl>
 </dl>
 
 <dl>
@@ -7403,7 +7403,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>bt709</b>
 </dt><dd>
 </dd><dt><b>smpte170m</b>
-</dt><dd> <font SIZE="-1">BT 601</font>
+</dt><dd> BT 601
 </dd><dt><b>bt2020nc</b>
 </dt><dd></dd></dl>
 </dl>
@@ -7449,7 +7449,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>setts</h3>
 
- Set <font SIZE="-1">PTS</font> and <font SIZE="-1">DTS</font> in packets. 
+ Set PTS and DTS in packets. 
 
  It accepts the following parameters:
 <dl>
@@ -7458,41 +7458,41 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>pts</b>
 </dt><dd>
 </dd><dt><b>dts</b>
-</dt><dd> Set expressions for <font SIZE="-1">PTS, DTS</font> or both.</dd></dl>
+</dt><dd> Set expressions for PTS, DTS or both.</dd></dl>
  
 
- The expressions are evaluated through the eval <font SIZE="-1">API</font> and can contain the following constants:
+ The expressions are evaluated through the eval API and can contain the following constants:
 <dl>
 <dt><b>N</b>
 </dt><dd> The count of the input packet. Starting from 0.
-</dd><dt><font SIZE="-1"><b>TS</b></font>
+</dd><dt><b>TS</b>
 </dt><dd> The demux timestamp in input in case of <tt>&quot;ts&quot;</tt> or <tt>&quot;dts&quot;</tt> option or presentation timestamp in case of <tt>&quot;pts&quot;</tt> option.
-</dd><dt><font SIZE="-1"><b>POS</b></font>
+</dd><dt><b>POS</b>
 </dt><dd> The original position in the file of the packet, or undefined if undefined for the current packet
-</dd><dt><font SIZE="-1"><b>DTS</b></font>
+</dd><dt><b>DTS</b>
 </dt><dd> The demux timestamp in input.
-</dd><dt><font SIZE="-1"><b>PTS</b></font>
+</dd><dt><b>PTS</b>
 </dt><dd> The presentation timestamp in input.
-</dd><dt><font SIZE="-1"><b>STARTDTS</b></font>
-</dt><dd> The <font SIZE="-1">DTS</font> of the first packet.
-</dd><dt><font SIZE="-1"><b>STARTPTS</b></font>
-</dt><dd> The <font SIZE="-1">PTS</font> of the first packet.
-</dd><dt><font SIZE="-1"><b>PREV_INDTS</b></font>
-</dt><dd> The previous input <font SIZE="-1">DTS.</font>
-</dd><dt><font SIZE="-1"><b>PREV_INPTS</b></font>
-</dt><dd> The previous input <font SIZE="-1">PTS.</font>
-</dd><dt><font SIZE="-1"><b>PREV_OUTDTS</b></font>
-</dt><dd> The previous output <font SIZE="-1">DTS.</font>
-</dd><dt><font SIZE="-1"><b>PREV_OUTPTS</b></font>
-</dt><dd> The previous output <font SIZE="-1">PTS.</font>
-</dd><dt><font SIZE="-1"><b>TB</b></font>
+</dd><dt><b>STARTDTS</b>
+</dt><dd> The DTS of the first packet.
+</dd><dt><b>STARTPTS</b>
+</dt><dd> The PTS of the first packet.
+</dd><dt><b>PREV_INDTS</b>
+</dt><dd> The previous input DTS.
+</dd><dt><b>PREV_INPTS</b>
+</dt><dd> The previous input PTS.
+</dd><dt><b>PREV_OUTDTS</b>
+</dt><dd> The previous output DTS.
+</dd><dt><b>PREV_OUTPTS</b>
+</dt><dd> The previous output PTS.
+</dd><dt><b>TB</b>
 </dt><dd> The timebase of stream packet belongs.
-</dd><dt><font SIZE="-1"><b>SR</b></font>
+</dd><dt><b>SR</b>
 </dt><dd> The sample rate of stream packet belongs.</dd></dl>
 
 <h3>text2movsub</h3>
 
- Convert text subtitles to <font SIZE="-1">MOV</font> subtitles (as used by the <tt>&quot;mov_text&quot;</tt> codec) with metadata headers. 
+ Convert text subtitles to MOV subtitles (as used by the <tt>&quot;mov_text&quot;</tt> codec) with metadata headers. 
 
  See also the <b>mov2textsub</b> filter.
 
@@ -7500,18 +7500,18 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  Log trace output containing all syntax elements in the coded stream headers (everything above the level of individual coded blocks). This can be useful for debugging low-level stream issues. 
 
- Supports <font SIZE="-1">AV1, H.264, H.265,</font> (M)JPEG, <font SIZE="-1">MPEG-2</font> and <font SIZE="-1">VP9,</font> but depending on the build only a subset of these may be available.
+ Supports AV1, H.264, H.265, (M)JPEG, MPEG-2 and VP9, but depending on the build only a subset of these may be available.
 
 <h3>truehd_core</h3>
 
- Extract the core from a TrueHD stream, dropping <font SIZE="-1">ATMOS</font> data.
+ Extract the core from a TrueHD stream, dropping ATMOS data.
 
 <h3>vp9_metadata</h3>
 
- Modify metadata embedded in a <font SIZE="-1">VP9</font> stream.
+ Modify metadata embedded in a VP9 stream.
 <dl>
 <dt><b>color_space</b>
-</dt><dd> Set the color space value in the frame header. Note that any frame set to <font SIZE="-1">RGB</font> will be implicitly set to <font SIZE="-1">PC</font> range and that <font SIZE="-1">RGB</font> is incompatible with profiles 0 and 2.
+</dt><dd> Set the color space value in the frame header. Note that any frame set to RGB will be implicitly set to PC range and that RGB is incompatible with profiles 0 and 2.
 </dd><dl>
 <dl>
 <dt><b>unknown</b>
@@ -7549,21 +7549,21 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>vp9_superframe</h3>
 
- Merge <font SIZE="-1">VP9</font> invisible (alt-ref) frames back into <font SIZE="-1">VP9</font> superframes. This fixes merging of split/segmented <font SIZE="-1">VP9</font> streams where the alt-ref frame was split from its visible counterpart.
+ Merge VP9 invisible (alt-ref) frames back into VP9 superframes. This fixes merging of split/segmented VP9 streams where the alt-ref frame was split from its visible counterpart.
 
 <h3>vp9_superframe_split</h3>
 
- Split <font SIZE="-1">VP9</font> superframes into single frames.
+ Split VP9 superframes into single frames.
 
 <h3>vp9_raw_reorder</h3>
 
- Given a <font SIZE="-1">VP9</font> stream with correct timestamps but possibly out of order, insert additional show-existing-frame packets to correct the ordering.
+ Given a VP9 stream with correct timestamps but possibly out of order, insert additional show-existing-frame packets to correct the ordering.
 
 <h2>FORMAT OPTIONS</h2>
 
  The libavformat library provides some generic global options, which can be set on all the muxers and demuxers. In addition each muxer or demuxer may support so-called private options, which are specific for that component. 
 
- Options may be set by specifying -<i>option</i> <i>value</i> in the FFmpeg tools, or by setting the value explicitly in the <tt>&quot;AVFormatContext&quot;</tt> options or using the <i>libavutil/opt.h</i> <font SIZE="-1">API</font> for programmatic use. 
+ Options may be set by specifying -<i>option</i> <i>value</i> in the FFmpeg tools, or by setting the value explicitly in the <tt>&quot;AVFormatContext&quot;</tt> options or using the <i>libavutil/opt.h</i> API for programmatic use. 
 
  The list of supported options follows:
 <dl>
@@ -7595,9 +7595,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>fastseek</b>
 </dt><dd> Enable fast, but inaccurate seeks for some formats.
 </dd><dt><b>genpts</b>
-</dt><dd> Generate missing <font SIZE="-1">PTS</font> if <font SIZE="-1">DTS</font> is present.
+</dt><dd> Generate missing PTS if DTS is present.
 </dd><dt><b>igndts</b>
-</dt><dd> Ignore <font SIZE="-1">DTS</font> if <font SIZE="-1">PTS</font> is set. Inert when nofillin is set.
+</dt><dd> Ignore DTS if PTS is set. Inert when nofillin is set.
 </dd><dt><b>ignidx</b>
 </dt><dd> Ignore index.
 </dd><dt><b>keepside (</b><i>deprecated</i><b>,</b><i>inert</i><b>)</b>
@@ -7609,7 +7609,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>noparse</b>
 </dt><dd> Disable AVParsers, this needs <tt>&quot;+nofillin&quot;</tt> too.
 </dd><dt><b>sortdts</b>
-</dt><dd> Try to interleave output packets by <font SIZE="-1">DTS.</font> At present, available only for AVIs with an index.</dd></dl>
+</dt><dd> Try to interleave output packets by DTS. At present, available only for AVIs with an index.</dd></dl>
 </dl>
 
 <dl>
@@ -7626,7 +7626,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>latm (</b><i>deprecated</i><b>,</b><i>inert</i><b>)</b>
 </dt><dd>
 </dd><dt><b>shortest</b>
-</dt><dd> Stop muxing at the end of the shortest stream. It may be needed to increase max_interleave_delta to avoid flushing the longer streams before <font SIZE="-1">EOF.</font></dd></dl>
+</dt><dd> Stop muxing at the end of the shortest stream. It may be needed to increase max_interleave_delta to avoid flushing the longer streams before EOF.</dd></dl>
 </dl>
 
 <dl>
@@ -7724,7 +7724,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>correct_ts_overflow</b> <i>integer</i> <b>(</b><i>input</i><b>)</b>
 </dt><dd> Correct single timestamp overflows if set to 1. Default is 1.
 </dd><dt><b>flush_packets</b> <i>integer</i> <b>(</b><i>output</i><b>)</b>
-</dt><dd> Flush the underlying I/O stream after each packet. Default is -1 (auto), which means that the underlying protocol will decide, 1 enables it, and has the effect of reducing the latency, 0 disables it and may increase <font SIZE="-1">IO</font> throughput in some cases.
+</dt><dd> Flush the underlying I/O stream after each packet. Default is -1 (auto), which means that the underlying protocol will decide, 1 enables it, and has the effect of reducing the latency, 0 disables it and may increase IO throughput in some cases.
 </dd><dt><b>output_ts_offset</b> <i>offset</i> <b>(</b><i>output</i><b>)</b>
 </dt><dd> Set the output time offset. 
 
@@ -7745,7 +7745,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>max_streams</b> <i>integer</i> <b>(</b><i>input</i><b>)</b>
 </dt><dd> Specifies the maximum number of streams. This can be used to reject files that would require too many resources due to a large number of streams.
 </dd><dt><b>skip_estimate_duration_from_pts</b> <i>bool</i> <b>(</b><i>input</i><b>)</b>
-</dt><dd> Skip estimation of input duration when calculated using <font SIZE="-1">PTS.</font> At present, applicable for MPEG-PS and MPEG-TS.
+</dt><dd> Skip estimation of input duration when calculated using PTS. At present, applicable for MPEG-PS and MPEG-TS.
 </dd><dt><b>strict, f_strict</b> <i>integer</i> <b>(</b><i>input/output</i><b>)</b>
 </dt><dd> Specify how strictly to follow the standards. <tt>&quot;f_strict&quot;</tt> is deprecated and should be used only via the <b>ffmpeg</b> tool. 
 
@@ -7796,7 +7796,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  Animated Portable Network Graphics demuxer. 
 
- This demuxer is used to demux <font SIZE="-1">APNG</font> files. All headers, but the <font SIZE="-1">PNG</font> signature, up to (but not including) the first fcTL chunk are transmitted as extradata. Frames are then split as being all the chunks between two fcTL ones, or between the last fcTL and <font SIZE="-1">IEND</font> chunks.
+ This demuxer is used to demux APNG files. All headers, but the PNG signature, up to (but not including) the first fcTL chunk are transmitted as extradata. Frames are then split as being all the chunks between two fcTL ones, or between the last fcTL and IEND chunks.
 <dl>
 <dt><b>-ignore_loop</b> <i>bool</i>
 </dt><dd> Ignore the loop variable in the file if set.
@@ -7809,7 +7809,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  Advanced Systems Format demuxer. 
 
- This demuxer is used to demux <font SIZE="-1">ASF</font> files and <font SIZE="-1">MMS</font> network streams.
+ This demuxer is used to demux ASF files and MMS network streams.
 <dl>
 <dt><b>-no_resync_search</b> <i>bool</i>
 </dt><dd> Do not try to resynchronize by looking for a certain optional start code.</dd></dl>
@@ -7854,7 +7854,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt>&quot;stream&quot;
 </dt><dd> Introduce a stream in the virtual file. All subsequent stream-related directives apply to the last introduced stream. Some streams properties must be set in order to allow identifying the matching streams in the subfiles. If no streams are defined in the script, the streams from the first file are copied.
 </dd><dt>&quot;exact_stream_id id&quot;
-</dt><dd> Set the id of the stream. If this directive is given, the string with the corresponding id in the subfiles will be used. This is especially useful for MPEG-PS (<font SIZE="-1">VOB</font>) files, where the order of the streams is not reliable.</dd></dl>
+</dt><dd> Set the id of the stream. If this directive is given, the string with the corresponding id in the subfiles will be used. This is especially useful for MPEG-PS (VOB) files, where the order of the streams is not reliable.</dd></dl>
  
 
  <i>Options</i> 
@@ -7868,7 +7868,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
  -1 is equivalent to 1 if the format was automatically probed and 0 otherwise.
 </dd><dt><b>auto_convert</b>
 </dt><dd> If set to 1, try to perform automatic conversions on packet data to make the streams concatenable. The default is 1. 
- Currently, the only conversion is adding the h264_mp4toannexb bitstream filter to H.264 streams in <font SIZE="-1">MP4</font> format. This is necessary in particular if there are resolution changes.
+ Currently, the only conversion is adding the h264_mp4toannexb bitstream filter to H.264 streams in MP4 format. This is necessary in particular if there are resolution changes.
 </dd><dt><b>segment_time_metadata</b>
 </dt><dd> If set to 1, every packet will contain the <i>lavf.concat.start_time</i> and the <i>lavf.concat.duration</i> packet metadata values which are the start_time and the duration of the respective file segments in the concatenated output expressed in microseconds. The duration metadata is only set if it is known based on the concat file. The default is 0.</dd></dl>
  
@@ -7896,7 +7896,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>dash</h3>
 
- Dynamic Adaptive Streaming over <font SIZE="-1">HTTP</font> demuxer. 
+ Dynamic Adaptive Streaming over HTTP demuxer. 
 
  This demuxer presents all AVStreams found in the manifest. By setting the discard flags on AVStreams the caller can decide which streams to actually receive. Each stream mirrors the <tt>&quot;id&quot;</tt> and <tt>&quot;bandwidth&quot;</tt> properties from the <tt>&quot;&lt;Representation&gt;&quot;</tt> as metadata keys named ``id'' and ``variant_bitrate'' respectively.
 
@@ -7904,7 +7904,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  Adobe Flash Video Format demuxer. 
 
- This demuxer is used to demux <font SIZE="-1">FLV</font> files and <font SIZE="-1">RTMP</font> network streams. In case of live network streams, if you force format, you may use live_flv option instead of flv to survive timestamp discontinuities. 
+ This demuxer is used to demux FLV files and RTMP network streams. In case of live network streams, if you force format, you may use live_flv option instead of flv to survive timestamp discontinuities. 
 
  <pre>
         ffmpeg -f flv -i myfile.flv ...
@@ -7920,7 +7920,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>gif</h3>
 
- Animated <font SIZE="-1">GIF</font> demuxer. 
+ Animated GIF demuxer. 
 
  It accepts the following options:
 <dl>
@@ -7931,22 +7931,22 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>default_delay</b>
 </dt><dd> Set the default delay between frames in hundredths of seconds. Range is 0 to 6000. Default value is 10.
 </dd><dt><b>ignore_loop</b>
-</dt><dd> <font SIZE="-1">GIF</font> files can contain information to loop a certain number of times (or infinitely). If <b>ignore_loop</b> is set to 1, then the loop setting from the input will be ignored and looping will not occur. If set to 0, then looping will occur and will cycle the number of times according to the <font SIZE="-1">GIF.</font> Default value is 1.</dd></dl>
+</dt><dd> GIF files can contain information to loop a certain number of times (or infinitely). If <b>ignore_loop</b> is set to 1, then the loop setting from the input will be ignored and looping will not occur. If set to 0, then looping will occur and will cycle the number of times according to the GIF. Default value is 1.</dd></dl>
  
 
- For example, with the overlay filter, place an infinitely looping <font SIZE="-1">GIF</font> over another video: 
+ For example, with the overlay filter, place an infinitely looping GIF over another video: 
 
  <pre>
         ffmpeg -i input.mp4 -ignore_loop 0 -i input.gif -filter_complex overlay=shortest=1 out.mkv
 </pre> 
 
- Note that in the above example the shortest option for overlay filter is used to end the output video at the length of the shortest input file, which in this case is <i>input.mp4</i> as the <font SIZE="-1">GIF</font> in this example loops infinitely.
+ Note that in the above example the shortest option for overlay filter is used to end the output video at the length of the shortest input file, which in this case is <i>input.mp4</i> as the GIF in this example loops infinitely.
 
 <h3>hls</h3>
 
- <font SIZE="-1">HLS</font> demuxer 
+ HLS demuxer 
 
- Apple <font SIZE="-1">HTTP</font> Live Streaming demuxer. 
+ Apple HTTP Live Streaming demuxer. 
 
  This demuxer presents all AVStreams from all variant streams. The id field is set to the bitrate variant index number. By setting the discard flags on AVStreams (by pressing 'a' or 'v' in ffplay), the caller can decide which variant streams to actually receive. The total bitrate of the variant that the stream belongs to is available in a metadata key named ``variant_bitrate''. 
 
@@ -7961,11 +7961,11 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>m3u8_hold_counters</b>
 </dt><dd> The maximum number of times to load m3u8 when it refreshes without new segments. Default value is 1000.
 </dd><dt><b>http_persistent</b>
-</dt><dd> Use persistent <font SIZE="-1">HTTP</font> connections. Applicable only for <font SIZE="-1">HTTP</font> streams. Enabled by default.
+</dt><dd> Use persistent HTTP connections. Applicable only for HTTP streams. Enabled by default.
 </dd><dt><b>http_multiple</b>
-</dt><dd> Use multiple <font SIZE="-1">HTTP</font> connections for downloading <font SIZE="-1">HTTP</font> segments. Enabled by default for <font SIZE="-1">HTTP/1.1</font> servers.
+</dt><dd> Use multiple HTTP connections for downloading HTTP segments. Enabled by default for HTTP/1.1 servers.
 </dd><dt><b>http_seekable</b>
-</dt><dd> Use <font SIZE="-1">HTTP</font> partial requests for downloading <font SIZE="-1">HTTP</font> segments. 0 = disable, 1 = enable, -1 = auto, Default is auto.</dd></dl>
+</dt><dd> Use HTTP partial requests for downloading HTTP segments. 0 = disable, 1 = enable, -1 = auto, Default is auto.</dd></dl>
 
 <h3>image2</h3>
 
@@ -8100,7 +8100,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>max_size</b>
 </dt><dd> The demuxer buffers the entire file into memory. Adjust this value to set the maximum buffer size, which in turn, acts as a ceiling for the size of files that can be read. Range is 0 to 100 MiB. 0 removes buffer size limit (not recommended). Default is 5 MiB.
 </dd><dt><b>video_stream_expr</b>
-</dt><dd> String which is evaluated using the eval <font SIZE="-1">API</font> to assign colors to the generated video stream. Variables which can be used are <tt>&quot;x&quot;</tt>, <tt>&quot;y&quot;</tt>, <tt>&quot;w&quot;</tt>, <tt>&quot;h&quot;</tt>, <tt>&quot;t&quot;</tt>, <tt>&quot;speed&quot;</tt>, <tt>&quot;tempo&quot;</tt>, <tt>&quot;order&quot;</tt>, <tt>&quot;pattern&quot;</tt> and <tt>&quot;row&quot;</tt>.
+</dt><dd> String which is evaluated using the eval API to assign colors to the generated video stream. Variables which can be used are <tt>&quot;x&quot;</tt>, <tt>&quot;y&quot;</tt>, <tt>&quot;w&quot;</tt>, <tt>&quot;h&quot;</tt>, <tt>&quot;t&quot;</tt>, <tt>&quot;speed&quot;</tt>, <tt>&quot;tempo&quot;</tt>, <tt>&quot;order&quot;</tt>, <tt>&quot;pattern&quot;</tt> and <tt>&quot;row&quot;</tt>.
 </dd><dt><b>video_stream</b>
 </dt><dd> Generate video stream. Can be 1 (on) or 0 (off). Default is 0.
 </dd><dt><b>video_stream_w</b>
@@ -8124,13 +8124,13 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dt><dd> Set the subsong index. This can be either 'all', 'auto', or the index of the subsong. Subsong indexes start at 0. The default is 'auto'. 
  The default value is to let libopenmpt choose.
 </dd><dt><b>layout</b>
-</dt><dd> Set the channel layout. Valid values are 1, 2, and 4 channel layouts. The default value is <font SIZE="-1">STEREO.</font>
+</dt><dd> Set the channel layout. Valid values are 1, 2, and 4 channel layouts. The default value is STEREO.
 </dd><dt><b>sample_rate</b>
-</dt><dd> Set the sample rate for libopenmpt to output. Range is from 1000 to <font SIZE="-1">INT_MAX.</font> The value default is 48000.</dd></dl>
+</dt><dd> Set the sample rate for libopenmpt to output. Range is from 1000 to INT_MAX. The value default is 48000.</dd></dl>
 
 <h3>mov/mp4/3gp</h3>
 
- Demuxer for Quicktime File Format &amp; <font SIZE="-1">ISO/IEC</font> Base Media File Format (<font SIZE="-1">ISO/IEC 14496-12</font> or <font SIZE="-1">MPEG-4</font> Part 12, <font SIZE="-1">ISO/IEC 15444-12</font> or <font SIZE="-1">JPEG 2000</font> Part 12). 
+ Demuxer for Quicktime File Format &amp; ISO/IEC Base Media File Format (ISO/IEC 14496-12 or MPEG-4 Part 12, ISO/IEC 15444-12 or JPEG 2000 Part 12). 
 
  Registered extensions: mov, mp4, m4a, 3gp, 3g2, mj2, psp, m4b, ism, ismv, isma, f4v 
 
@@ -8156,11 +8156,11 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dl>
 <dl>
 <dt><b>auto</b>
-</dt><dd> Auto-detect whether to set mfra timestamps as <font SIZE="-1">PTS</font> or <font SIZE="-1">DTS</font> <i>(default)</i>
+</dt><dd> Auto-detect whether to set mfra timestamps as PTS or DTS <i>(default)</i>
 </dd><dt><b>dts</b>
-</dt><dd> Set mfra timestamps as <font SIZE="-1">DTS</font>
+</dt><dd> Set mfra timestamps as DTS
 </dd><dt><b>pts</b>
-</dt><dd> Set mfra timestamps as <font SIZE="-1">PTS</font>
+</dt><dd> Set mfra timestamps as PTS
 </dd><dt><b>0</b>
 </dt><dd> Don't use mfra box to set timestamps</dd></dl>
 </dl>
@@ -8171,18 +8171,18 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dt><b>export_all</b>
 </dt><dd> Export unrecognized boxes within the <i>udta</i> box as metadata entries. The first four characters of the box type are set as the key. Default is false.
 </dd><dt><b>export_xmp</b>
-</dt><dd> Export entire contents of <i></i><font SIZE="-1"><i>XMP_</i></font><i></i> box and <i>uuid</i> box as a string with key <tt>&quot;xmp&quot;</tt>. Note that if <tt>&quot;export_all&quot;</tt> is set and this option isn't, the contents of <i></i><font SIZE="-1"><i>XMP_</i></font><i></i> box are still exported but with key <tt>&quot;XMP_&quot;</tt>. Default is false.
+</dt><dd> Export entire contents of <i></i><i>XMP_</i><i></i> box and <i>uuid</i> box as a string with key <tt>&quot;xmp&quot;</tt>. Note that if <tt>&quot;export_all&quot;</tt> is set and this option isn't, the contents of <i></i><i>XMP_</i><i></i> box are still exported but with key <tt>&quot;XMP_&quot;</tt>. Default is false.
 </dd><dt><b>activation_bytes</b>
-</dt><dd> 4-byte key required to decrypt Audible <font SIZE="-1">AAX</font> and <font SIZE="-1">AAX+</font> files. See Audible <font SIZE="-1">AAX</font> subsection below.
+</dt><dd> 4-byte key required to decrypt Audible AAX and AAX+ files. See Audible AAX subsection below.
 </dd><dt><b>audible_fixed_key</b>
-</dt><dd> Fixed key used for handling Audible <font SIZE="-1">AAX/AAX+</font> files. It has been pre-set so should not be necessary to specify.
+</dt><dd> Fixed key used for handling Audible AAX/AAX+ files. It has been pre-set so should not be necessary to specify.
 </dd><dt><b>decryption_key</b>
-</dt><dd> 16-byte key, in hex, to decrypt files encrypted using <font SIZE="-1">ISO</font> Common Encryption (<font SIZE="-1">CENC/AES-128 CTR</font>; <font SIZE="-1">ISO/IEC 23001-7</font>).</dd></dl>
+</dt><dd> 16-byte key, in hex, to decrypt files encrypted using ISO Common Encryption (CENC/AES-128 CTR; ISO/IEC 23001-7).</dd></dl>
  
 
- <i>Audible </i><font SIZE="-1"><i>AAX</i></font><i></i> 
+ <i>Audible </i><i>AAX</i><i></i> 
 
- Audible <font SIZE="-1">AAX</font> files are encrypted M4B files, and they can be decrypted by specifying a 4 byte activation secret. 
+ Audible AAX files are encrypted M4B files, and they can be decrypted by specifying a 4 byte activation secret. 
 
  <pre>
         ffmpeg -activation_bytes 1CEB00DA -i test.aax -vn -c:a copy output.mp4
@@ -8190,31 +8190,31 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>mpegts</h3>
 
- <font SIZE="-1">MPEG-2</font> transport stream demuxer. 
+ MPEG-2 transport stream demuxer. 
 
  This demuxer accepts the following options:
 <dl>
 <dt><b>resync_size</b>
 </dt><dd> Set size limit for looking up a new synchronization. Default value is 65536.
 </dd><dt><b>skip_unknown_pmt</b>
-</dt><dd> Skip PMTs for programs not defined in the <font SIZE="-1">PAT.</font> Default value is 0.
+</dt><dd> Skip PMTs for programs not defined in the PAT. Default value is 0.
 </dd><dt><b>fix_teletext_pts</b>
-</dt><dd> Override teletext packet <font SIZE="-1">PTS</font> and <font SIZE="-1">DTS</font> values with the timestamps calculated from the <font SIZE="-1">PCR</font> of the first program which the teletext stream is part of and is not discarded. Default value is 1, set this option to 0 if you want your teletext packet <font SIZE="-1">PTS</font> and <font SIZE="-1">DTS</font> values untouched.
+</dt><dd> Override teletext packet PTS and DTS values with the timestamps calculated from the PCR of the first program which the teletext stream is part of and is not discarded. Default value is 1, set this option to 0 if you want your teletext packet PTS and DTS values untouched.
 </dd><dt><b>ts_packetsize</b>
 </dt><dd> Output option carrying the raw packet size in bytes. Show the detected raw packet size, cannot be set by the user.
 </dd><dt><b>scan_all_pmts</b>
 </dt><dd> Scan and combine all PMTs. The value is an integer with value from -1 to 1 (-1 means automatic setting, 1 means enabled, 0 means disabled). Default value is -1.
 </dd><dt><b>merge_pmt_versions</b>
-</dt><dd> Re-use existing streams when a <font SIZE="-1">PMT</font>'s version is updated and elementary streams move to different PIDs. Default value is 0.</dd></dl>
+</dt><dd> Re-use existing streams when a PMT's version is updated and elementary streams move to different PIDs. Default value is 0.</dd></dl>
 
 <h3>mpjpeg</h3>
 
- <font SIZE="-1">MJPEG</font> encapsulated in multi-part <font SIZE="-1">MIME</font> demuxer. 
+ MJPEG encapsulated in multi-part MIME demuxer. 
 
- This demuxer allows reading of <font SIZE="-1">MJPEG,</font> where each frame is represented as a part of multipart/x-mixed-replace stream.
+ This demuxer allows reading of MJPEG, where each frame is represented as a part of multipart/x-mixed-replace stream.
 <dl>
 <dt><b>strict_mime_boundary</b>
-</dt><dd> Default implementation applies a relaxed standard to multi-part <font SIZE="-1">MIME</font> boundary detection, to prevent regression with numerous existing endpoints not generating a proper <font SIZE="-1">MIME MJPEG</font> stream. Turning this option on by setting it to 1 will result in a stricter check of the boundary value.</dd></dl>
+</dt><dd> Default implementation applies a relaxed standard to multi-part MIME boundary detection, to prevent regression with numerous existing endpoints not generating a proper MIME MJPEG stream. Turning this option on by setting it to 1 will result in a stricter check of the boundary value.</dd></dl>
 
 <h3>rawvideo</h3>
 
@@ -8242,7 +8242,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  SBaGen script demuxer. 
 
- This demuxer reads the script language used by SBaGen &lt;<b><a rel="nofollow" HREF="http://uazu.net/sbagen/">http://uazu.net/sbagen/</a></b>&gt; to generate binaural beats sessions. A <font SIZE="-1">SBG</font> script looks like that: 
+ This demuxer reads the script language used by SBaGen &lt;<b><a rel="nofollow" HREF="http://uazu.net/sbagen/">http://uazu.net/sbagen/</a></b>&gt; to generate binaural beats sessions. A SBG script looks like that: 
 
  
 - SE
@@ -8259,18 +8259,18 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
        :00 off
  
 
- A <font SIZE="-1">SBG</font> script can mix absolute and relative timestamps. If the script uses either only absolute timestamps (including the script start time) or only relative ones, then its layout is fixed, and the conversion is straightforward. On the other hand, if the script mixes both kind of timestamps, then the <i></i><font SIZE="-1"><i>NOW</i></font><i></i> reference for relative timestamps will be taken from the current time of day at the time the script is read, and the script layout will be frozen according to that reference. That means that if the script is directly played, the actual times will match the absolute timestamps up to the sound controller's clock accuracy, but if the user somehow pauses the playback or seeks, all times will be shifted accordingly.
+ A SBG script can mix absolute and relative timestamps. If the script uses either only absolute timestamps (including the script start time) or only relative ones, then its layout is fixed, and the conversion is straightforward. On the other hand, if the script mixes both kind of timestamps, then the <i></i><i>NOW</i><i></i> reference for relative timestamps will be taken from the current time of day at the time the script is read, and the script layout will be frozen according to that reference. That means that if the script is directly played, the actual times will match the absolute timestamps up to the sound controller's clock accuracy, but if the user somehow pauses the playback or seeks, all times will be shifted accordingly.
 
 <h3>tedcaptions</h3>
 
- <font SIZE="-1">JSON</font> captions used for &lt;<b><a rel="nofollow" HREF="http://www.ted.com/">http://www.ted.com/</a></b>&gt;. 
+ JSON captions used for &lt;<b><a rel="nofollow" HREF="http://www.ted.com/">http://www.ted.com/</a></b>&gt;. 
 
- <font SIZE="-1">TED</font> does not provide links to the captions, but they can be guessed from the page. The file <i>tools/bookmarklets.html</i> from the FFmpeg source tree contains a bookmarklet to expose them. 
+ TED does not provide links to the captions, but they can be guessed from the page. The file <i>tools/bookmarklets.html</i> from the FFmpeg source tree contains a bookmarklet to expose them. 
 
  This demuxer accepts the following option:
 <dl>
 <dt><b>start_time</b>
-</dt><dd> Set the start time of the <font SIZE="-1">TED</font> talk, in milliseconds. The default is 15000 (15s). It is used to sync the captions with the downloadable videos, because they include a 15s intro.</dd></dl>
+</dt><dd> Set the start time of the TED talk, in milliseconds. The default is 15000 (15s). It is used to sync the captions with the downloadable videos, because they include a 15s intro.</dd></dl>
  
 
  Example: convert the captions to a format most players understand: 
@@ -8283,7 +8283,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  Vapoursynth wrapper. 
 
- Due to security concerns, Vapoursynth scripts will not be autodetected so the input format has to be forced. For ff* <font SIZE="-1">CLI</font> tools, add <tt>&quot;-f vapoursynth&quot;</tt> before the input <tt>&quot;-i yourscript.vpy&quot;</tt>. 
+ Due to security concerns, Vapoursynth scripts will not be autodetected so the input format has to be forced. For ff* CLI tools, add <tt>&quot;-f vapoursynth&quot;</tt> before the input <tt>&quot;-i yourscript.vpy&quot;</tt>. 
 
  This demuxer accepts the following option:
 <dl>
@@ -8341,9 +8341,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
  The required index space depends on the output file size and should be about 16 bytes per gigabyte. When this option is omitted or set to zero the necessary index space is guessed.
 </dd><dt><b>write_channel_mask</b>
 </dt><dd> Write the channel layout mask into the audio stream header. 
- This option is enabled by default. Disabling the channel mask can be useful in specific scenarios, e.g. when merging multiple audio streams into one for compatibility with software that only supports a single audio stream in <font SIZE="-1">AVI</font> (see <b>the ``amerge'' section in the ffmpeg-filters manual</b>).
+ This option is enabled by default. Disabling the channel mask can be useful in specific scenarios, e.g. when merging multiple audio streams into one for compatibility with software that only supports a single audio stream in AVI (see <b>the ``amerge'' section in the ffmpeg-filters manual</b>).
 </dd><dt><b>flipped_raw_rgb</b>
-</dt><dd> If set to true, store positive height for raw <font SIZE="-1">RGB</font> bitmaps, which indicates bitmap is stored bottom-up. Note that this option does not flip the bitmap which has to be done manually beforehand, e.g. by using the vflip filter. Default is <i>false</i> and indicates bitmap is stored top down.</dd></dl>
+</dt><dd> If set to true, store positive height for raw RGB bitmaps, which indicates bitmap is stored bottom-up. Note that this option does not flip the bitmap which has to be done manually beforehand, e.g. by using the vflip filter. Default is <i>false</i> and indicates bitmap is stored top down.</dd></dl>
 
 <h3>chromaprint</h3>
 
@@ -8377,29 +8377,29 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>crc</h3>
 
- <font SIZE="-1">CRC</font> (Cyclic Redundancy Check) testing format. 
+ CRC (Cyclic Redundancy Check) testing format. 
 
- This muxer computes and prints the Adler-32 <font SIZE="-1">CRC</font> of all the input audio and video frames. By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the <font SIZE="-1">CRC.</font> 
+ This muxer computes and prints the Adler-32 CRC of all the input audio and video frames. By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the CRC. 
 
- The output of the muxer consists of a single line of the form: CRC=0x<i></i><font SIZE="-1"><i>CRC</i></font><i></i>, where <i></i><font SIZE="-1"><i>CRC</i></font><i></i> is a hexadecimal number 0-padded to 8 digits containing the <font SIZE="-1">CRC</font> for all the decoded input frames. 
+ The output of the muxer consists of a single line of the form: CRC=0x<i></i><i>CRC</i><i></i>, where <i></i><i>CRC</i><i></i> is a hexadecimal number 0-padded to 8 digits containing the CRC for all the decoded input frames. 
 
  See also the <b>framecrc</b> muxer. 
 
  <i>Examples</i> 
 
- For example to compute the <font SIZE="-1">CRC</font> of the input, and store it in the file <i>out.crc</i>: 
+ For example to compute the CRC of the input, and store it in the file <i>out.crc</i>: 
 
  <pre>
         ffmpeg -i INPUT -f crc out.crc
 </pre> 
 
- You can print the <font SIZE="-1">CRC</font> to stdout with the command: 
+ You can print the CRC to stdout with the command: 
 
  <pre>
         ffmpeg -i INPUT -f crc -
 </pre> 
 
- You can select the output format of each frame with <b>ffmpeg</b> by specifying the audio and video codec and format. For example to compute the <font SIZE="-1">CRC</font> of the input audio converted to <font SIZE="-1">PCM</font> unsigned 8-bit and the input video converted to <font SIZE="-1">MPEG-2</font> video, use the command: 
+ You can select the output format of each frame with <b>ffmpeg</b> by specifying the audio and video codec and format. For example to compute the CRC of the input audio converted to PCM unsigned 8-bit and the input video converted to MPEG-2 video, use the command: 
 
  <pre>
         ffmpeg -i INPUT -c:a pcm_u8 -c:v mpeg2video -f crc -
@@ -8416,7 +8416,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dl>
 <dl>
 <dt><b>aac_seq_header_detect</b>
-</dt><dd> Place <font SIZE="-1">AAC</font> sequence header based on audio stream data.
+</dt><dd> Place AAC sequence header based on audio stream data.
 </dd><dt><b>no_sequence_end</b>
 </dt><dd> Disable sequence end tag.
 </dd><dt><b>no_metadata</b>
@@ -8424,7 +8424,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>no_duration_filesize</b>
 </dt><dd> Disable duration and filesize in metadata when they are equal to zero at the end of stream. (Be used to non-seekable living stream).
 </dd><dt><b>add_keyframe_index</b>
-</dt><dd> Used to facilitate seeking; particularly for <font SIZE="-1">HTTP</font> pseudo streaming.</dd></dl>
+</dt><dd> Used to facilitate seeking; particularly for HTTP pseudo streaming.</dd></dl>
 </dl>
 
 <dl>
@@ -8433,17 +8433,17 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>dash</h3>
 
- Dynamic Adaptive Streaming over <font SIZE="-1">HTTP</font> (<font SIZE="-1">DASH</font>) muxer that creates segments and manifest files according to the MPEG-DASH standard <font SIZE="-1">ISO/IEC 23009-1:2014.</font> 
+ Dynamic Adaptive Streaming over HTTP (DASH) muxer that creates segments and manifest files according to the MPEG-DASH standard ISO/IEC 23009-1:2014. 
 
  For more information see:
 <dl>
 <dt>&bull;
-</dt><dd> <font SIZE="-1">ISO DASH</font> Specification: &lt;<b><a rel="nofollow" HREF="http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip">http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip</a></b>&gt;
+</dt><dd> ISO DASH Specification: &lt;<b><a rel="nofollow" HREF="http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip">http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip</a></b>&gt;
 </dd><dt>&bull;
-</dt><dd> WebM <font SIZE="-1">DASH</font> Specification: &lt;<b><a rel="nofollow" HREF="https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification">https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification</a></b>&gt;</dd></dl>
+</dt><dd> WebM DASH Specification: &lt;<b><a rel="nofollow" HREF="https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification">https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification</a></b>&gt;</dd></dl>
  
 
- It creates a <font SIZE="-1">MPD</font> manifest file and segment files for each stream. 
+ It creates a MPD manifest file and segment files for each stream. 
 
  The segment filename might contain pre-defined identifiers used with SegmentTemplate as defined in section 5.3.9.4.4 of the standard. Available identifiers are ``$RepresentationID$'', ``$Number$'', ``$Bandwidth$'' and ``$Time$''. In addition to the standard identifiers, an ffmpeg-specific ``$ext$'' identifier is also supported. When specified ffmpeg will replace <tt>$ext</tt>$ in the file name with muxing format's extensions such as mp4, webm etc., 
 
@@ -8483,26 +8483,26 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>media_seg_name</b> <i>segment_name</i>
 </dt><dd> DASH-templated name to used for the media segments. Default is ``chunk-stream$RepresentationID$-$Number%05d$.$ext$''. ``$ext$'' is replaced with the file name extension specific for the segment format.
 </dd><dt><b>utc_timing_url</b> <i>utc_url</i>
-</dt><dd> <font SIZE="-1">URL</font> of the page that will return the <font SIZE="-1">UTC</font> timestamp in <font SIZE="-1">ISO</font> format. Example: ``<a rel="nofollow" HREF="https://time.akamai.com/?iso''">https://time.akamai.com/?iso''</a>
+</dt><dd> URL of the page that will return the UTC timestamp in ISO format. Example: ``<a rel="nofollow" HREF="https://time.akamai.com/?iso''">https://time.akamai.com/?iso''</a>
 </dd><dt><b>method</b> <i>method</i>
-</dt><dd> Use the given <font SIZE="-1">HTTP</font> method to create output files. Generally set to <font SIZE="-1">PUT</font> or <font SIZE="-1">POST.</font>
+</dt><dd> Use the given HTTP method to create output files. Generally set to PUT or POST.
 </dd><dt><b>http_user_agent</b> <i>user_agent</i>
-</dt><dd> Override User-Agent field in <font SIZE="-1">HTTP</font> header. Applicable only for <font SIZE="-1">HTTP</font> output.
+</dt><dd> Override User-Agent field in HTTP header. Applicable only for HTTP output.
 </dd><dt><b>http_persistent</b> <i>http_persistent</i>
-</dt><dd> Use persistent <font SIZE="-1">HTTP</font> connections. Applicable only for <font SIZE="-1">HTTP</font> output.
+</dt><dd> Use persistent HTTP connections. Applicable only for HTTP output.
 </dd><dt><b>hls_playlist</b> <i>hls_playlist</i>
-</dt><dd> Generate <font SIZE="-1">HLS</font> playlist files as well. The master playlist is generated with the filename <i>hls_master_name</i>. One media playlist file is generated for each stream with filenames media_0.m3u8, media_1.m3u8, etc.
+</dt><dd> Generate HLS playlist files as well. The master playlist is generated with the filename <i>hls_master_name</i>. One media playlist file is generated for each stream with filenames media_0.m3u8, media_1.m3u8, etc.
 </dd><dt><b>hls_master_name</b> <i>file_name</i>
-</dt><dd> <font SIZE="-1">HLS</font> master playlist name. Default is ``master.m3u8''.
+</dt><dd> HLS master playlist name. Default is ``master.m3u8''.
 </dd><dt><b>streaming</b> <i>streaming</i>
 </dt><dd> Enable (1) or disable (0) chunk streaming mode of output. In chunk streaming mode, each frame will be a moof fragment which forms a chunk.
 </dd><dt><b>adaptation_sets</b> <i>adaptation_sets</i>
 </dt><dd> Assign streams to AdaptationSets. Syntax is ``id=x,streams=a,b,c id=y,streams=d,e'' with x and y being the IDs of the adaptation sets and a,b,c,d and e are the indices of the mapped streams. 
  To map all video (or audio) streams to an AdaptationSet, ``v'' (or ``a'') can be used as stream identifier instead of IDs. 
  When no assignment is defined, this defaults to an AdaptationSet for each stream. 
- Optional syntax is ``id=x,seg_duration=x,frag_duration=x,frag_type=type,descriptor=descriptor_string,streams=a,b,c id=y,seg_duration=y,frag_type=type,streams=d,e'' and so on, descriptor is useful to the scheme defined by <font SIZE="-1">ISO/IEC</font> 23009-1:2014/Amd.2:2015. For example, -adaptation_sets ``id=0,descriptor=&lt;SupplementalProperty schemeIdUri=\''urn:mpeg:dash:srd:2014\`` value=\''0,0,0,1,1,2,2\``/&gt;,streams=v''. Please note that descriptor string should be a self-closing xml tag. seg_duration, frag_duration and frag_type override the global option values for each adaptation set. For example, -adaptation_sets ``id=0,seg_duration=2,frag_duration=1,frag_type=duration,streams=v id=1,seg_duration=2,frag_type=none,streams=a'' type_id marks an adaptation set as containing streams meant to be used for Trick Mode for the referenced adaptation set. For example, -adaptation_sets ``id=0,seg_duration=2,frag_type=none,streams=0 id=1,seg_duration=10,frag_type=none,trick_id=0,streams=1''
+ Optional syntax is ``id=x,seg_duration=x,frag_duration=x,frag_type=type,descriptor=descriptor_string,streams=a,b,c id=y,seg_duration=y,frag_type=type,streams=d,e'' and so on, descriptor is useful to the scheme defined by ISO/IEC 23009-1:2014/Amd.2:2015. For example, -adaptation_sets ``id=0,descriptor=&lt;SupplementalProperty schemeIdUri=\''urn:mpeg:dash:srd:2014\`` value=\''0,0,0,1,1,2,2\``/&gt;,streams=v''. Please note that descriptor string should be a self-closing xml tag. seg_duration, frag_duration and frag_type override the global option values for each adaptation set. For example, -adaptation_sets ``id=0,seg_duration=2,frag_duration=1,frag_type=duration,streams=v id=1,seg_duration=2,frag_type=none,streams=a'' type_id marks an adaptation set as containing streams meant to be used for Trick Mode for the referenced adaptation set. For example, -adaptation_sets ``id=0,seg_duration=2,frag_type=none,streams=0 id=1,seg_duration=10,frag_type=none,trick_id=0,streams=1''
 </dd><dt><b>timeout</b> <i>timeout</i>
-</dt><dd> Set timeout for socket I/O operations. Applicable only for <font SIZE="-1">HTTP</font> output.
+</dt><dd> Set timeout for socket I/O operations. Applicable only for HTTP output.
 </dd><dt><b>index_correction</b> <i>index_correction</i>
 </dt><dd> Enable (1) or Disable (0) segment index correction logic. Applicable only when <i>use_template</i> is enabled and <i>use_timeline</i> is disabled. 
  When enabled, the logic monitors the flow of segment indexes. If a streams's segment index value is not at the expected real time position, then the logic corrects that index value. 
@@ -8510,7 +8510,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>format_options</b> <i>options_list</i>
 </dt><dd> Set container format (mp4/webm) options using a <tt>&quot;:&quot;</tt> separated list of key=value parameters. Values containing <tt>&quot;:&quot;</tt> special characters must be escaped.
 </dd><dt><b>global_sidx</b> <i>global_sidx</i>
-</dt><dd> Write global <font SIZE="-1">SIDX</font> atom. Applicable only for single file, mp4 output, non-streaming mode.
+</dt><dd> Write global SIDX atom. Applicable only for single file, mp4 output, non-streaming mode.
 </dd><dt><b>dash_segment_type</b> <i>dash_segment_type</i>
 </dt><dd> Possible values:
 </dd><dl>
@@ -8518,7 +8518,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dt><b>auto</b>
 </dt><dd> If this flag is set, the dash segment files format will be selected based on the stream codec. This is the default mode.
 </dd><dt><b>mp4</b>
-</dt><dd> If this flag is set, the dash segment files will be in in <font SIZE="-1">ISOBMFF</font> format.
+</dt><dd> If this flag is set, the dash segment files will be in in ISOBMFF format.
 </dd><dt><b>webm</b>
 </dt><dd> If this flag is set, the dash segment files will be in in WebM format.</dd></dl>
 </dl>
@@ -8527,9 +8527,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dl>
 
 <dt><b>ignore_io_errors</b> <i>ignore_io_errors</i>
-</dt><dd> Ignore <font SIZE="-1">IO</font> errors during open and write. Useful for long-duration runs with network output.
+</dt><dd> Ignore IO errors during open and write. Useful for long-duration runs with network output.
 </dd><dt><b>lhls</b> <i>lhls</i>
-</dt><dd> Enable Low-latency <font SIZE="-1">HLS</font>(<font SIZE="-1">LHLS</font>). Adds #EXT-X-PREFETCH tag with current segment's <font SIZE="-1">URI.</font> Apple doesn't have an official spec for <font SIZE="-1">LHLS.</font> Meanwhile hls.js player folks are trying to standardize a open <font SIZE="-1">LHLS</font> spec. The draft spec is available in <a rel="nofollow" HREF="https://github.com/video-dev/hlsjs-rfcs/blob/lhls-spec/proposals/0001-lhls.md">https://github.com/video-dev/hlsjs-rfcs/blob/lhls-spec/proposals/0001-lhls.md</a> This option will also try to comply with the above open spec, till Apple's spec officially supports it. Applicable only when <i>streaming</i> and <i>hls_playlist</i> options are enabled. This is an experimental feature.
+</dt><dd> Enable Low-latency HLS(LHLS). Adds #EXT-X-PREFETCH tag with current segment's URI. Apple doesn't have an official spec for LHLS. Meanwhile hls.js player folks are trying to standardize a open LHLS spec. The draft spec is available in <a rel="nofollow" HREF="https://github.com/video-dev/hlsjs-rfcs/blob/lhls-spec/proposals/0001-lhls.md">https://github.com/video-dev/hlsjs-rfcs/blob/lhls-spec/proposals/0001-lhls.md</a> This option will also try to comply with the above open spec, till Apple's spec officially supports it. Applicable only when <i>streaming</i> and <i>hls_playlist</i> options are enabled. This is an experimental feature.
 </dd><dt><b>ldash</b> <i>ldash</i>
 </dt><dd> Enable Low-latency Dash by constraining the presence and values of some elements.
 </dd><dt><b>master_m3u8_publish_rate</b> <i>master_m3u8_publish_rate</i>
@@ -8539,7 +8539,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>mpd_profile</b> <i>mpd_profile</i>
 </dt><dd> Set one or more manifest profiles.
 </dd><dt><b>http_opts</b> <i>http_opts</i>
-</dt><dd> A :-separated list of key=value options to pass to the underlying <font SIZE="-1">HTTP</font> protocol. Applicable only for <font SIZE="-1">HTTP</font> output.
+</dt><dd> A :-separated list of key=value options to pass to the underlying HTTP protocol. Applicable only for HTTP output.
 </dd><dt><b>target_latency</b> <i>target_latency</i>
 </dt><dd> Set an intended target latency in seconds (fractional value can be set) for serving. Applicable only when <i>streaming</i> and <i>write_prft</i> options are enabled. This is an informative fields clients can use to measure the latency of the service.
 </dd><dt><b>min_playback_rate</b> <i>min_playback_rate</i>
@@ -8554,9 +8554,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>framecrc</h3>
 
- Per-packet <font SIZE="-1">CRC</font> (Cyclic Redundancy Check) testing format. 
+ Per-packet CRC (Cyclic Redundancy Check) testing format. 
 
- This muxer computes and prints the Adler-32 <font SIZE="-1">CRC</font> for each audio and video packet. By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the <font SIZE="-1">CRC.</font> 
+ This muxer computes and prints the Adler-32 CRC for each audio and video packet. By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the CRC. 
 
  The output of the muxer consists of a line for each audio and video packet of the form: 
 
@@ -8564,11 +8564,11 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
         &lt;stream_index&gt;, &lt;packet_dts&gt;, &lt;packet_pts&gt;, &lt;packet_duration&gt;, &lt;packet_size&gt;, 0x&lt;CRC&gt;
 </pre> 
 
- <i></i><font SIZE="-1"><i>CRC</i></font><i></i> is a hexadecimal number 0-padded to 8 digits containing the <font SIZE="-1">CRC</font> of the packet. 
+ <i></i><i>CRC</i><i></i> is a hexadecimal number 0-padded to 8 digits containing the CRC of the packet. 
 
  <i>Examples</i> 
 
- For example to compute the <font SIZE="-1">CRC</font> of the audio and video frames in <i></i><font SIZE="-1"><i>INPUT</i></font><i></i>, converted to raw audio and video packets, and store it in the file <i>out.crc</i>: 
+ For example to compute the CRC of the audio and video frames in <i></i><i>INPUT</i><i></i>, converted to raw audio and video packets, and store it in the file <i>out.crc</i>: 
 
  <pre>
         ffmpeg -i INPUT -f framecrc out.crc
@@ -8580,7 +8580,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
         ffmpeg -i INPUT -f framecrc -
 </pre> 
 
- With <b>ffmpeg</b>, you can select the output format to which the audio and video frames are encoded before computing the <font SIZE="-1">CRC</font> for each packet by specifying the audio and video codec. For example, to compute the <font SIZE="-1">CRC</font> of each decoded input audio frame converted to <font SIZE="-1">PCM</font> unsigned 8-bit and of each decoded input video frame converted to <font SIZE="-1">MPEG-2</font> video, use the command: 
+ With <b>ffmpeg</b>, you can select the output format to which the audio and video frames are encoded before computing the CRC for each packet by specifying the audio and video codec. For example, to compute the CRC of each decoded input audio frame converted to PCM unsigned 8-bit and of each decoded input video frame converted to MPEG-2 video, use the command: 
 
  <pre>
         ffmpeg -i INPUT -c:a pcm_u8 -c:v mpeg2video -f framecrc -
@@ -8594,7 +8594,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  This muxer computes and prints a cryptographic hash for each audio and video packet. This can be used for packet-by-packet equality checks without having to individually do a binary comparison on each. 
 
- By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the hash, but the output of explicit conversions to other codecs can also be used. It uses the <font SIZE="-1">SHA-256</font> cryptographic hash function by default, but supports several other algorithms. 
+ By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the hash, but the output of explicit conversions to other codecs can also be used. It uses the SHA-256 cryptographic hash function by default, but supports several other algorithms. 
 
  The output of the muxer consists of a line for each audio and video packet of the form: 
 
@@ -8610,13 +8610,13 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  <i>Examples</i> 
 
- To compute the <font SIZE="-1">SHA-256</font> hash of the audio and video frames in <i></i><font SIZE="-1"><i>INPUT</i></font><i></i>, converted to raw audio and video packets, and store it in the file <i>out.sha256</i>: 
+ To compute the SHA-256 hash of the audio and video frames in <i></i><i>INPUT</i><i></i>, converted to raw audio and video packets, and store it in the file <i>out.sha256</i>: 
 
  <pre>
         ffmpeg -i INPUT -f framehash out.sha256
 </pre> 
 
- To print the information to stdout, using the <font SIZE="-1">MD5</font> hash function, use the command: 
+ To print the information to stdout, using the MD5 hash function, use the command: 
 
  <pre>
         ffmpeg -i INPUT -f framehash -hash md5 -
@@ -8626,13 +8626,13 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>framemd5</h3>
 
- Per-packet <font SIZE="-1">MD5</font> testing format. 
+ Per-packet MD5 testing format. 
 
- This is a variant of the <b>framehash</b> muxer. Unlike that muxer, it defaults to using the <font SIZE="-1">MD5</font> hash function. 
+ This is a variant of the <b>framehash</b> muxer. Unlike that muxer, it defaults to using the MD5 hash function. 
 
  <i>Examples</i> 
 
- To compute the <font SIZE="-1">MD5</font> hash of the audio and video frames in <i></i><font SIZE="-1"><i>INPUT</i></font><i></i>, converted to raw audio and video packets, and store it in the file <i>out.md5</i>: 
+ To compute the MD5 hash of the audio and video frames in <i></i><i>INPUT</i><i></i>, converted to raw audio and video packets, and store it in the file <i>out.md5</i>: 
 
  <pre>
         ffmpeg -i INPUT -f framemd5 out.md5
@@ -8648,7 +8648,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>gif</h3>
 
- Animated <font SIZE="-1">GIF</font> muxer. 
+ Animated GIF muxer. 
 
  It accepts the following options:
 <dl>
@@ -8664,13 +8664,13 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
         ffmpeg -i INPUT -loop 10 -final_delay 500 out.gif
 </pre> 
 
- Note 1: if you wish to extract the frames into separate <font SIZE="-1">GIF</font> files, you need to force the <b>image2</b> muxer: 
+ Note 1: if you wish to extract the frames into separate GIF files, you need to force the <b>image2</b> muxer: 
 
  <pre>
         ffmpeg -i INPUT -c:v gif -f image2 &quot;out%d.gif&quot;
 </pre> 
 
- Note 2: the <font SIZE="-1">GIF</font> format has a very large time base: the delay between two frames can therefore not be smaller than one centi second.
+ Note 2: the GIF format has a very large time base: the delay between two frames can therefore not be smaller than one centi second.
 
 <h3>hash</h3>
 
@@ -8678,7 +8678,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  This muxer computes and prints a cryptographic hash of all the input audio and video frames. This can be used for equality checks without having to do a complete binary comparison. 
 
- By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the hash, but the output of explicit conversions to other codecs can also be used. Timestamps are ignored. It uses the <font SIZE="-1">SHA-256</font> cryptographic hash function by default, but supports several other algorithms. 
+ By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the hash, but the output of explicit conversions to other codecs can also be used. Timestamps are ignored. It uses the SHA-256 cryptographic hash function by default, but supports several other algorithms. 
 
  The output of the muxer consists of a single line of the form: <i>algo</i>=<i>hash</i>, where <i>algo</i> is a short string representing the hash function used, and <i>hash</i> is a hexadecimal number representing the computed hash.
 <dl>
@@ -8688,13 +8688,13 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  <i>Examples</i> 
 
- To compute the <font SIZE="-1">SHA-256</font> hash of the input converted to raw audio and video, and store it in the file <i>out.sha256</i>: 
+ To compute the SHA-256 hash of the input converted to raw audio and video, and store it in the file <i>out.sha256</i>: 
 
  <pre>
         ffmpeg -i INPUT -f hash out.sha256
 </pre> 
 
- To print an <font SIZE="-1">MD5</font> hash to stdout use the command: 
+ To print an MD5 hash to stdout use the command: 
 
  <pre>
         ffmpeg -i INPUT -f hash -hash md5 -
@@ -8704,13 +8704,13 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>hls</h3>
 
- Apple <font SIZE="-1">HTTP</font> Live Streaming muxer that segments MPEG-TS according to the <font SIZE="-1">HTTP</font> Live Streaming (<font SIZE="-1">HLS</font>) specification. 
+ Apple HTTP Live Streaming muxer that segments MPEG-TS according to the HTTP Live Streaming (HLS) specification. 
 
  It creates a playlist file, and one or more segment files. The output filename specifies the playlist filename. 
 
  By default, the muxer creates a file for each segment produced. These files have the same name as the playlist, followed by a sequential number and a .ts extension. 
 
- Make sure to require a closed <font SIZE="-1">GOP</font> when encoding and to set the <font SIZE="-1">GOP</font> size to fit your segment time constraint. 
+ Make sure to require a closed GOP when encoding and to set the GOP size to fit your segment time constraint. 
 
  For example, to convert an input file with <b>ffmpeg</b>: 
 
@@ -8720,7 +8720,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  This example will produce the playlist, <i>out.m3u8</i>, and segment files: <i>out0.ts</i>, <i>out1.ts</i>, <i>out2.ts</i>, etc. 
 
- See also the <b>segment</b> muxer, which provides a more generic and flexible implementation of a segmenter, and can be used to perform <font SIZE="-1">HLS</font> segmentation. 
+ See also the <b>segment</b> muxer, which provides a more generic and flexible implementation of a segmenter, and can be used to perform HLS segmentation. 
 
  <i>Options</i> 
 
@@ -8763,7 +8763,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dt><b>start_number</b> <i>number</i>
 </dt><dd> Start the playlist sequence number (<tt>&quot;#EXT-X-MEDIA-SEQUENCE&quot;</tt>) from the specified <i>number</i> when <i>hls_start_number_source</i> value is <i>generic</i>. (This is the default case.) Unless <tt>&quot;hls_flags single_file&quot;</tt> is set, it also specifies starting sequence numbers of segment and subtitle filenames. Default value is 0.
 </dd><dt><b>hls_allow_cache</b> <i>allowcache</i>
-</dt><dd> Explicitly set whether the client <font SIZE="-1">MAY</font> (1) or <font SIZE="-1">MUST NOT</font> (0) cache media segments.
+</dt><dd> Explicitly set whether the client MAY (1) or MUST NOT (0) cache media segments.
 </dd><dt><b>hls_base_url</b> <i>baseurl</i>
 </dt><dd> Append <i>baseurl</i> to every entry in the playlist. Useful to generate playlists with absolute paths. 
 
@@ -8832,7 +8832,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  This example will create a directory hierarchy 2016/02/15 (if any of them do not exist), and then produce the playlist, <i>out.m3u8</i>, and segment files: <i>2016/02/15/file-20160215-1455569023.ts</i>, <i>2016/02/15/file-20160215-1455569024.ts</i>, etc.
 </dd><dt><b>hls_key_info_file</b> <i>key_info_file</i>
-</dt><dd> Use the information in <i>key_info_file</i> for segment encryption. The first line of <i>key_info_file</i> specifies the key <font SIZE="-1">URI</font> written to the playlist. The key <font SIZE="-1">URL</font> is used to access the encryption key during playback. The second line specifies the path to the key file used to obtain the key during the encryption process. The key file is read as a single packed array of 16 octets in binary format. The optional third line specifies the initialization vector (<font SIZE="-1">IV</font>) as a hexadecimal string to be used instead of the segment sequence number (default) for encryption. Changes to <i>key_info_file</i> will result in segment encryption with the new key/IV and an entry in the playlist for the new key <font SIZE="-1">URI/IV</font> if <tt>&quot;hls_flags periodic_rekey&quot;</tt> is enabled. 
+</dt><dd> Use the information in <i>key_info_file</i> for segment encryption. The first line of <i>key_info_file</i> specifies the key URI written to the playlist. The key URL is used to access the encryption key during playback. The second line specifies the path to the key file used to obtain the key during the encryption process. The key file is read as a single packed array of 16 octets in binary format. The optional third line specifies the initialization vector (IV) as a hexadecimal string to be used instead of the segment sequence number (default) for encryption. Changes to <i>key_info_file</i> will result in segment encryption with the new key/IV and an entry in the playlist for the new key URI/IV if <tt>&quot;hls_flags periodic_rekey&quot;</tt> is enabled. 
 
  Key info file format: 
 
@@ -8857,7 +8857,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
         /path/to/file.key
 </pre> 
 
- Example <font SIZE="-1">IV:</font> 
+ Example IV: 
 
  <pre>
         0123456789ABCDEF0123456789ABCDEF
@@ -8884,7 +8884,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
           -hls_key_info_file file.keyinfo out.m3u8
 </pre>
 </dd><dt><b>-hls_enc</b> <i>enc</i>
-</dt><dd> Enable (1) or disable (0) the <font SIZE="-1">AES128</font> encryption. When enabled every segment generated is encrypted and the encryption key is saved as <i>playlist name</i>.key.
+</dt><dd> Enable (1) or disable (0) the AES128 encryption. When enabled every segment generated is encrypted and the encryption key is saved as <i>playlist name</i>.key.
 </dd><dt><b>-hls_enc_key</b> <i>key</i>
 </dt><dd> 16-octet key to encrypt the segments, by default it is randomly generated.
 </dd><dt><b>-hls_enc_key_url</b> <i>keyurl</i>
@@ -8896,9 +8896,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dl>
 <dl>
 <dt><b>mpegts</b>
-</dt><dd> Output segment files in <font SIZE="-1">MPEG-2</font> Transport Stream format. This is compatible with all <font SIZE="-1">HLS</font> versions.
+</dt><dd> Output segment files in MPEG-2 Transport Stream format. This is compatible with all HLS versions.
 </dd><dt><b>fmp4</b>
-</dt><dd> Output segment files in fragmented <font SIZE="-1">MP4</font> format, similar to MPEG-DASH. fmp4 files may be used in <font SIZE="-1">HLS</font> version 7 and above.</dd></dl>
+</dt><dd> Output segment files in fragmented MP4 format, similar to MPEG-DASH. fmp4 files may be used in HLS version 7 and above.</dd></dl>
 </dl>
 
 <dl>
@@ -8923,7 +8923,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dl>
 <dl>
 <dt><b>single_file</b>
-</dt><dd> If this flag is set, the muxer will store all segments in a single MPEG-TS file, and will use byte ranges in the playlist. <font SIZE="-1">HLS</font> playlists generated with this way will have the version number 4. For example: 
+</dt><dd> If this flag is set, the muxer will store all segments in a single MPEG-TS file, and will use byte ranges in the playlist. HLS playlists generated with this way will have the version number 4. For example: 
  <pre>
         ffmpeg -i in.nut -hls_flags single_file out.m3u8
 </pre> 
@@ -8939,7 +8939,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>omit_endlist</b>
 </dt><dd> Do not append the <tt>&quot;EXT-X-ENDLIST&quot;</tt> tag at the end of the playlist.
 </dd><dt><b>periodic_rekey</b>
-</dt><dd> The file specified by <tt>&quot;hls_key_info_file&quot;</tt> will be checked periodically and detect updates to the encryption info. Be sure to replace this file atomically, including the file containing the <font SIZE="-1">AES</font> encryption key.
+</dt><dd> The file specified by <tt>&quot;hls_key_info_file&quot;</tt> will be checked periodically and detect updates to the encryption info. Be sure to replace this file atomically, including the file containing the AES encryption key.
 </dd><dt><b>independent_segments</b>
 </dt><dd> Add the <tt>&quot;#EXT-X-INDEPENDENT-SEGMENTS&quot;</tt> to playlists that has video segments and when all the segments of that playlist are guaranteed to start with a Key frame.
 </dd><dt><b>iframes_only</b>
@@ -8973,15 +8973,15 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>hls_playlist_type vod</b>
 </dt><dd> Emit <tt>&quot;#EXT-X-PLAYLIST-TYPE:VOD&quot;</tt> in the m3u8 header. Forces <b>hls_list_size</b> to 0; the playlist must not change.
 </dd><dt><b>method</b>
-</dt><dd> Use the given <font SIZE="-1">HTTP</font> method to create the hls files. 
+</dt><dd> Use the given HTTP method to create the hls files. 
 
  <pre>
         ffmpeg -re -i in.ts -f hls -method PUT <a rel="nofollow" HREF="http://example.com/live/out.m3u8">http://example.com/live/out.m3u8</a>
 </pre> 
 
- This example will upload all the mpegts segment files to the <font SIZE="-1">HTTP</font> server using the <font SIZE="-1">HTTP PUT</font> method, and update the m3u8 files every <tt>&quot;refresh&quot;</tt> times using the same method. Note that the <font SIZE="-1">HTTP</font> server must support the given method for uploading files.
+ This example will upload all the mpegts segment files to the HTTP server using the HTTP PUT method, and update the m3u8 files every <tt>&quot;refresh&quot;</tt> times using the same method. Note that the HTTP server must support the given method for uploading files.
 </dd><dt><b>http_user_agent</b>
-</dt><dd> Override User-Agent field in <font SIZE="-1">HTTP</font> header. Applicable only for <font SIZE="-1">HTTP</font> output.
+</dt><dd> Override User-Agent field in HTTP header. Applicable only for HTTP output.
 </dd><dt><b>var_stream_map</b>
 </dt><dd> Map string which specifies how to group the audio, video and subtitle streams into different variant streams. The variant stream groups are separated by space. Expected string format is like this ``a:0,v:0 a:1,v:1 ....''. Here a:, v:, s: are the keys to specify audio, video and subtitle streams respectively. Allowed values are 0 to 9 (limited just based on practical usage). 
 
@@ -9039,7 +9039,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
           <a rel="nofollow" HREF="http://example.com/live/out_%v.m3u8">http://example.com/live/out_%v.m3u8</a>
 </pre> 
 
- This example creates two audio only and one video only variant streams. In addition to the #EXT-X-STREAM-INF tag for each variant stream in the master playlist, #EXT-X-MEDIA tag is also added for the two audio only variant streams and they are mapped to the one video only variant streams with audio group name 'aud_low', and the audio group have default stat is <font SIZE="-1">NO</font> or <font SIZE="-1">YES.</font> 
+ This example creates two audio only and one video only variant streams. In addition to the #EXT-X-STREAM-INF tag for each variant stream in the master playlist, #EXT-X-MEDIA tag is also added for the two audio only variant streams and they are mapped to the one video only variant streams with audio group name 'aud_low', and the audio group have default stat is NO or YES. 
 
  By default, a single hls variant containing all the encoded streams is created. 
 
@@ -9051,7 +9051,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
           <a rel="nofollow" HREF="http://example.com/live/out_%v.m3u8">http://example.com/live/out_%v.m3u8</a>
 </pre> 
 
- This example creates two audio only and one video only variant streams. In addition to the #EXT-X-STREAM-INF tag for each variant stream in the master playlist, #EXT-X-MEDIA tag is also added for the two audio only variant streams and they are mapped to the one video only variant streams with audio group name 'aud_low', and the audio group have default stat is <font SIZE="-1">NO</font> or <font SIZE="-1">YES,</font> and one audio have and language is named <font SIZE="-1">ENG,</font> the other audio language is named <font SIZE="-1">CHN.</font> 
+ This example creates two audio only and one video only variant streams. In addition to the #EXT-X-STREAM-INF tag for each variant stream in the master playlist, #EXT-X-MEDIA tag is also added for the two audio only variant streams and they are mapped to the one video only variant streams with audio group name 'aud_low', and the audio group have default stat is NO or YES, and one audio have and language is named ENG, the other audio language is named CHN. 
 
  By default, a single hls variant containing all the encoded streams is created. 
 
@@ -9068,7 +9068,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  This example adds <tt>&quot;#EXT-X-MEDIA&quot;</tt> tag with <tt>&quot;TYPE=SUBTITLES&quot;</tt> in the master playlist with webvtt subtitle group name 'subtitle'. Please make sure the input file has one text subtitle stream at least.
 </dd><dt><b>cc_stream_map</b>
-</dt><dd> Map string which specifies different closed captions groups and their attributes. The closed captions stream groups are separated by space. Expected string format is like this ``ccgroup:&lt;group name&gt;,instreamid:&lt;<font SIZE="-1">INSTREAM-ID</font>&gt;,language:&lt;language code&gt; ....''. 'ccgroup' and 'instreamid' are mandatory attributes. 'language' is an optional attribute. The closed captions groups configured using this option are mapped to different variant streams by providing the same 'ccgroup' name in the <tt>&quot;var_stream_map&quot;</tt> string. If <tt>&quot;var_stream_map&quot;</tt> is not set, then the first available ccgroup in <tt>&quot;cc_stream_map&quot;</tt> is mapped to the output variant stream. The examples for these two use cases are given below. 
+</dt><dd> Map string which specifies different closed captions groups and their attributes. The closed captions stream groups are separated by space. Expected string format is like this ``ccgroup:&lt;group name&gt;,instreamid:&lt;INSTREAM-ID&gt;,language:&lt;language code&gt; ....''. 'ccgroup' and 'instreamid' are mandatory attributes. 'language' is an optional attribute. The closed captions groups configured using this option are mapped to different variant streams by providing the same 'ccgroup' name in the <tt>&quot;var_stream_map&quot;</tt> string. If <tt>&quot;var_stream_map&quot;</tt> is not set, then the first available ccgroup in <tt>&quot;cc_stream_map&quot;</tt> is mapped to the output variant stream. The examples for these two use cases are given below. 
 
  <pre>
         ffmpeg -re -i in.ts -b:v 1000k -b:a 64k -a53cc 1 -f hls \
@@ -9077,7 +9077,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
           <a rel="nofollow" HREF="http://example.com/live/out.m3u8">http://example.com/live/out.m3u8</a>
 </pre> 
 
- This example adds <tt>&quot;#EXT-X-MEDIA&quot;</tt> tag with <tt>&quot;TYPE=CLOSED-CAPTIONS&quot;</tt> in the master playlist with group name 'cc', language 'en' (english) and INSTREAM-ID '<font SIZE="-1">CC1</font>'. Also, it adds <tt>&quot;CLOSED-CAPTIONS&quot;</tt> attribute with group name 'cc' for the output variant stream. 
+ This example adds <tt>&quot;#EXT-X-MEDIA&quot;</tt> tag with <tt>&quot;TYPE=CLOSED-CAPTIONS&quot;</tt> in the master playlist with group name 'cc', language 'en' (english) and INSTREAM-ID 'CC1'. Also, it adds <tt>&quot;CLOSED-CAPTIONS&quot;</tt> attribute with group name 'cc' for the output variant stream. 
 
  <pre>
         ffmpeg -re -i in.ts -b:v:0 1000k -b:v:1 256k -b:a:0 64k -b:a:1 32k \
@@ -9089,15 +9089,15 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
           <a rel="nofollow" HREF="http://example.com/live/out_%v.m3u8">http://example.com/live/out_%v.m3u8</a>
 </pre> 
 
- This example adds two <tt>&quot;#EXT-X-MEDIA&quot;</tt> tags with <tt>&quot;TYPE=CLOSED-CAPTIONS&quot;</tt> in the master playlist for the INSTREAM-IDs '<font SIZE="-1">CC1</font>' and '<font SIZE="-1">CC2</font>'. Also, it adds <tt>&quot;CLOSED-CAPTIONS&quot;</tt> attribute with group name 'cc' for the two output variant streams.
+ This example adds two <tt>&quot;#EXT-X-MEDIA&quot;</tt> tags with <tt>&quot;TYPE=CLOSED-CAPTIONS&quot;</tt> in the master playlist for the INSTREAM-IDs 'CC1' and 'CC2'. Also, it adds <tt>&quot;CLOSED-CAPTIONS&quot;</tt> attribute with group name 'cc' for the two output variant streams.
 </dd><dt><b>master_pl_name</b>
-</dt><dd> Create <font SIZE="-1">HLS</font> master playlist with the given name. 
+</dt><dd> Create HLS master playlist with the given name. 
 
  <pre>
         ffmpeg -re -i in.ts -f hls -master_pl_name master.m3u8 <a rel="nofollow" HREF="http://example.com/live/out.m3u8">http://example.com/live/out.m3u8</a>
 </pre> 
 
- This example creates <font SIZE="-1">HLS</font> master playlist with name master.m3u8 and it is published at <a rel="nofollow" HREF="http://example.com/live/">http://example.com/live/</a>
+ This example creates HLS master playlist with name master.m3u8 and it is published at <a rel="nofollow" HREF="http://example.com/live/">http://example.com/live/</a>
 </dd><dt><b>master_pl_publish_rate</b>
 </dt><dd> Publish master play list repeatedly every after specified number of segment intervals. 
 
@@ -9106,28 +9106,28 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
         -hls_time 2 -master_pl_publish_rate 30 <a rel="nofollow" HREF="http://example.com/live/out.m3u8">http://example.com/live/out.m3u8</a>
 </pre> 
 
- This example creates <font SIZE="-1">HLS</font> master playlist with name master.m3u8 and keep publishing it repeatedly every after 30 segments i.e. every after 60s.
+ This example creates HLS master playlist with name master.m3u8 and keep publishing it repeatedly every after 30 segments i.e. every after 60s.
 </dd><dt><b>http_persistent</b>
-</dt><dd> Use persistent <font SIZE="-1">HTTP</font> connections. Applicable only for <font SIZE="-1">HTTP</font> output.
+</dt><dd> Use persistent HTTP connections. Applicable only for HTTP output.
 </dd><dt><b>timeout</b>
-</dt><dd> Set timeout for socket I/O operations. Applicable only for <font SIZE="-1">HTTP</font> output.
+</dt><dd> Set timeout for socket I/O operations. Applicable only for HTTP output.
 </dd><dt><b>-ignore_io_errors</b>
-</dt><dd> Ignore <font SIZE="-1">IO</font> errors during open, write and delete. Useful for long-duration runs with network output.
+</dt><dd> Ignore IO errors during open, write and delete. Useful for long-duration runs with network output.
 </dd><dt><b>headers</b>
-</dt><dd> Set custom <font SIZE="-1">HTTP</font> headers, can override built in default headers. Applicable only for <font SIZE="-1">HTTP</font> output.</dd></dl>
+</dt><dd> Set custom HTTP headers, can override built in default headers. Applicable only for HTTP output.</dd></dl>
 
 <h3>ico</h3>
 
- <font SIZE="-1">ICO</font> file muxer. 
+ ICO file muxer. 
 
- Microsoft's icon file format (<font SIZE="-1">ICO</font>) has some strict limitations that should be noted:
+ Microsoft's icon file format (ICO) has some strict limitations that should be noted:
 <dl>
 <dt>&bull;
 </dt><dd> Size cannot exceed 256 pixels in any dimension
 </dd><dt>&bull;
-</dt><dd> Only <font SIZE="-1">BMP</font> and <font SIZE="-1">PNG</font> images can be stored
+</dt><dd> Only BMP and PNG images can be stored
 </dd><dt>&bull;
-</dt><dd> If a <font SIZE="-1">BMP</font> image is used, it must be one of the following pixel formats: 
+</dt><dd> If a BMP image is used, it must be one of the following pixel formats: 
  <pre>
         BMP Bit Depth      FFmpeg Pixel Format
         1bit               pal8
@@ -9138,9 +9138,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
         32bit              bgra
 </pre>
 </dd><dt>&bull;
-</dt><dd> If a <font SIZE="-1">BMP</font> image is used, it must use the <font SIZE="-1">BITMAPINFOHEADER DIB</font> header
+</dt><dd> If a BMP image is used, it must use the BITMAPINFOHEADER DIB header
 </dd><dt>&bull;
-</dt><dd> If a <font SIZE="-1">PNG</font> image is used, it must use the rgba pixel format</dd></dl>
+</dt><dd> If a PNG image is used, it must use the rgba pixel format</dd></dl>
 
 <h3>image2</h3>
 
@@ -9156,7 +9156,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  For example the pattern ``img-%03d.bmp'' will specify a sequence of filenames of the form <i>img-001.bmp</i>, <i>img-002.bmp</i>, ..., <i>img-010.bmp</i>, etc. The pattern ``img%%-%d.jpg'' will specify a sequence of filenames of the form <i>img%-1.jpg</i>, <i>img%-2.jpg</i>, ..., <i>img%-10.jpg</i>, etc. 
 
- The image muxer supports the .Y.U.V image file format. This format is special in that that each image frame consists of three files, for each of the <font SIZE="-1">YUV420P</font> components. To read or write this image file format, specify the name of the '.Y' file. The muxer will automatically open the '.U' and '.V' files as required. 
+ The image muxer supports the .Y.U.V image file format. This format is special in that that each image frame consists of three files, for each of the YUV420P components. To read or write this image file format, specify the name of the '.Y' file. The muxer will automatically open the '.U' and '.V' files as required. 
 
  <i>Options</i>
 <dl>
@@ -9200,7 +9200,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
         ffmpeg -f v4l2 -r 1 -i /dev/video0 -f image2 -strftime 1 &quot;%Y-%m-%d_%H-%M-%S.jpg&quot;
 </pre> 
 
- You can set the file name with current frame's <font SIZE="-1">PTS:</font> 
+ You can set the file name with current frame's PTS: 
 
  <pre>
         ffmpeg -f v4l2 -r 1 -i /dev/video0 -copyts -f image2 -frame_pts true %d.jpg&quot;
@@ -9226,7 +9226,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dt><dd> Set title name provided to a single track. This gets mapped to the FileDescription element for a stream written as attachment.
 </dd><dt><b>language</b>
 </dt><dd> Specify the language of the track in the Matroska languages form. 
- The language can be either the 3 letters bibliographic <font SIZE="-1">ISO-639-2</font> (<font SIZE="-1">ISO 639-2/B</font>) form (like ``fre'' for French), or a language code mixed with a country code for specialities in languages (like ``fre-ca'' for Canadian French).
+ The language can be either the 3 letters bibliographic ISO-639-2 (ISO 639-2/B) form (like ``fre'' for French), or a language code mixed with a country code for specialities in languages (like ``fre-ca'' for Canadian French).
 </dd><dt><b>stereo_mode</b>
 </dt><dd> Set stereo 3D video layout of two views in a single video track. 
  The following values are recognized:
@@ -9292,30 +9292,30 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>infer_no_subs</b>
 </dt><dd> This mode is the same as infer except that if no subtitle track with disposition default exists, no subtitle track will be marked as default.
 </dd><dt><b>passthrough</b>
-</dt><dd> In this mode the FlagDefault is set if and only if the <font SIZE="-1">AV_DISPOSITION_DEFAULT</font> flag is set in the disposition of the corresponding stream.</dd></dl>
+</dt><dd> In this mode the FlagDefault is set if and only if the AV_DISPOSITION_DEFAULT flag is set in the disposition of the corresponding stream.</dd></dl>
 </dl>
 
 <dl>
 </dl>
 
 <dt><b>flipped_raw_rgb</b>
-</dt><dd> If set to true, store positive height for raw <font SIZE="-1">RGB</font> bitmaps, which indicates bitmap is stored bottom-up. Note that this option does not flip the bitmap which has to be done manually beforehand, e.g. by using the vflip filter. Default is <i>false</i> and indicates bitmap is stored top down.</dd></dl>
+</dt><dd> If set to true, store positive height for raw RGB bitmaps, which indicates bitmap is stored bottom-up. Note that this option does not flip the bitmap which has to be done manually beforehand, e.g. by using the vflip filter. Default is <i>false</i> and indicates bitmap is stored top down.</dd></dl>
 
 <h3>md5</h3>
 
- <font SIZE="-1">MD5</font> testing format. 
+ MD5 testing format. 
 
- This is a variant of the <b>hash</b> muxer. Unlike that muxer, it defaults to using the <font SIZE="-1">MD5</font> hash function. 
+ This is a variant of the <b>hash</b> muxer. Unlike that muxer, it defaults to using the MD5 hash function. 
 
  <i>Examples</i> 
 
- To compute the <font SIZE="-1">MD5</font> hash of the input converted to raw audio and video, and store it in the file <i>out.md5</i>: 
+ To compute the MD5 hash of the input converted to raw audio and video, and store it in the file <i>out.md5</i>: 
 
  <pre>
         ffmpeg -i INPUT -f md5 out.md5
 </pre> 
 
- You can print the <font SIZE="-1">MD5</font> to stdout with the command: 
+ You can print the MD5 to stdout with the command: 
 
  <pre>
         ffmpeg -i INPUT -f md5 -
@@ -9325,9 +9325,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>mov, mp4, ismv</h3>
 
- <font SIZE="-1">MOV/MP4/ISMV</font> (Smooth Streaming) muxer. 
+ MOV/MP4/ISMV (Smooth Streaming) muxer. 
 
- The mov/mp4/ismv muxer supports fragmentation. Normally, a <font SIZE="-1">MOV/MP4</font> file has all the metadata about all packets stored in one location (written at the end of the file, it can be moved to the start for better playback by adding <i>faststart</i> to the <i>movflags</i>, or using the <b>qt-faststart</b> tool). A fragmented file consists of a number of fragments, where packets and metadata about these packets are stored together. Writing a fragmented file has the advantage that the file is decodable even if the writing is interrupted (while a normal <font SIZE="-1">MOV/MP4</font> is undecodable if it is not properly finished), and it requires less memory when writing very long files (since writing normal <font SIZE="-1">MOV/MP4</font> files stores info about every single packet in memory until the file is closed). The downside is that it is less compatible with other applications. 
+ The mov/mp4/ismv muxer supports fragmentation. Normally, a MOV/MP4 file has all the metadata about all packets stored in one location (written at the end of the file, it can be moved to the start for better playback by adding <i>faststart</i> to the <i>movflags</i>, or using the <b>qt-faststart</b> tool). A fragmented file consists of a number of fragments, where packets and metadata about these packets are stored together. Writing a fragmented file has the advantage that the file is decodable even if the writing is interrupted (while a normal MOV/MP4 is undecodable if it is not properly finished), and it requires less memory when writing very long files (since writing normal MOV/MP4 files stores info about every single packet in memory until the file is closed). The downside is that it is less compatible with other applications. 
 
  <i>Options</i> 
 
@@ -9352,7 +9352,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
  Additionally, the way the output file is written can be adjusted through a few other options:
 <dl>
 <dt><b>-movflags empty_moov</b>
-</dt><dd> Write an initial moov atom directly at the start of the file, without describing any samples in it. Generally, an mdat/moov pair is written at the start of the file, as a normal <font SIZE="-1">MOV/MP4</font> file, containing only a short portion of the file. With this option set, there is no initial mdat atom, and the moov atom only describes the tracks but has a zero duration. 
+</dt><dd> Write an initial moov atom directly at the start of the file, without describing any samples in it. Generally, an mdat/moov pair is written at the start of the file, as a normal MOV/MP4 file, containing only a short portion of the file. With this option set, there is no initial mdat atom, and the moov atom only describes the tracks but has a zero duration. 
  This option is implicitly set when writing ismv (Smooth Streaming) files.
 </dd><dt><b>-movflags separate_moof</b>
 </dt><dd> Write a separate moof (movie fragment) atom for each track. Normally, packets for all tracks are written in a moof atom (which is slightly more efficient), but with this option set, the muxer writes one moof/mdat pair for each track, making it easier to separate tracks. 
@@ -9362,7 +9362,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>-movflags faststart</b>
 </dt><dd> Run a second pass moving the index (moov atom) to the beginning of the file. This operation can take a while, and will not work in various situations such as fragmented output, thus it is not enabled by default.
 </dd><dt><b>-movflags rtphint</b>
-</dt><dd> Add <font SIZE="-1">RTP</font> hinting tracks to the output file.
+</dt><dd> Add RTP hinting tracks to the output file.
 </dd><dt><b>-movflags disable_chpl</b>
 </dt><dd> Disable Nero chapter markers (chpl atom). Normally, both Nero chapters and a QuickTime chapter track are written to the file. With this option set, only the QuickTime chapter track will be written. Nero chapters can cause failures when the file is reprocessed with certain tagging programs, like mp3Tag 2.61a and iTunes 11.3, most likely other versions are affected as well.
 </dd><dt><b>-movflags omit_tfhd_offset</b>
@@ -9372,16 +9372,16 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>-write_tmcd</b>
 </dt><dd> Specify <tt>&quot;on&quot;</tt> to force writing a timecode track, <tt>&quot;off&quot;</tt> to disable it and <tt>&quot;auto&quot;</tt> to write a timecode track only for mov and mp4 output (default).
 </dd><dt><b>-movflags negative_cts_offsets</b>
-</dt><dd> Enables utilization of version 1 of the <font SIZE="-1">CTTS</font> box, in which the <font SIZE="-1">CTS</font> offsets can be negative. This enables the initial sample to have <font SIZE="-1">DTS/CTS</font> of zero, and reduces the need for edit lists for some cases such as video tracks with B-frames. Additionally, eases conformance with the DASH-IF interoperability guidelines. 
+</dt><dd> Enables utilization of version 1 of the CTTS box, in which the CTS offsets can be negative. This enables the initial sample to have DTS/CTS of zero, and reduces the need for edit lists for some cases such as video tracks with B-frames. Additionally, eases conformance with the DASH-IF interoperability guidelines. 
  This option is implicitly set when writing ismv (Smooth Streaming) files.
 </dd><dt><b>-write_prft</b>
-</dt><dd> Write producer time reference box (<font SIZE="-1">PRFT</font>) with a specified time source for the <font SIZE="-1">NTP</font> field in the <font SIZE="-1">PRFT</font> box. Set value as <b>wallclock</b> to specify timesource as wallclock time and <b>pts</b> to specify timesource as input packets' <font SIZE="-1">PTS</font> values. 
- Setting value to <b>pts</b> is applicable only for a live encoding use case, where <font SIZE="-1">PTS</font> values are set as as wallclock time at the source. For example, an encoding use case with decklink capture source where <b>video_pts</b> and <b>audio_pts</b> are set to <b>abs_wallclock</b>.</dd></dl>
+</dt><dd> Write producer time reference box (PRFT) with a specified time source for the NTP field in the PRFT box. Set value as <b>wallclock</b> to specify timesource as wallclock time and <b>pts</b> to specify timesource as input packets' PTS values. 
+ Setting value to <b>pts</b> is applicable only for a live encoding use case, where PTS values are set as as wallclock time at the source. For example, an encoding use case with decklink capture source where <b>video_pts</b> and <b>audio_pts</b> are set to <b>abs_wallclock</b>.</dd></dl>
  
 
  <i>Example</i> 
 
- Smooth Streaming content can be pushed in real time to a publishing point on <font SIZE="-1">IIS</font> with this muxer. Example: 
+ Smooth Streaming content can be pushed in real time to a publishing point on IIS with this muxer. Example: 
 
  <pre>
         ffmpeg -re &lt;&lt;normal input/transcoding options&gt;&gt; -movflags isml+frag_keyframe -f ismv <a rel="nofollow" HREF="http://server/publishingpoint.isml/Streams(Encoder1)">http://server/publishingpoint.isml/Streams(Encoder1)</a>
@@ -9389,12 +9389,12 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>mp3</h3>
 
- The <font SIZE="-1">MP3</font> muxer writes a raw <font SIZE="-1">MP3</font> stream with the following optional features:
+ The MP3 muxer writes a raw MP3 stream with the following optional features:
 <dl>
 <dt>&bull;
 </dt><dd> An ID3v2 metadata header at the beginning (enabled by default). Versions 2.3 and 2.4 are supported, the <tt>&quot;id3v2_version&quot;</tt> private option controls which one is used (3 or 4). Setting <tt>&quot;id3v2_version&quot;</tt> to 0 disables the ID3v2 header completely. 
- The muxer supports writing attached pictures (<font SIZE="-1">APIC</font> frames) to the ID3v2 header. The pictures are supplied to the muxer in form of a video stream with a single packet. There can be any number of those streams, each will correspond to a single <font SIZE="-1">APIC</font> frame. The stream metadata tags <i>title</i> and <i>comment</i> map to <font SIZE="-1">APIC</font> <i>description</i> and <i>picture type</i> respectively. See &lt;<b><a rel="nofollow" HREF="http://id3.org/id3v2.4.0-frames">http://id3.org/id3v2.4.0-frames</a></b>&gt; for allowed picture types. 
- Note that the <font SIZE="-1">APIC</font> frames must be written at the beginning, so the muxer will buffer the audio frames until it gets all the pictures. It is therefore advised to provide the pictures as soon as possible to avoid excessive buffering.
+ The muxer supports writing attached pictures (APIC frames) to the ID3v2 header. The pictures are supplied to the muxer in form of a video stream with a single packet. There can be any number of those streams, each will correspond to a single APIC frame. The stream metadata tags <i>title</i> and <i>comment</i> map to APIC <i>description</i> and <i>picture type</i> respectively. See &lt;<b><a rel="nofollow" HREF="http://id3.org/id3v2.4.0-frames">http://id3.org/id3v2.4.0-frames</a></b>&gt; for allowed picture types. 
+ Note that the APIC frames must be written at the beginning, so the muxer will buffer the audio frames until it gets all the pictures. It is therefore advised to provide the pictures as soon as possible to avoid excessive buffering.
 </dd><dt>&bull;
 </dt><dd> A Xing/LAME frame right after the ID3v2 header (if present). It is enabled by default, but will be written only if the output is seekable. The <tt>&quot;write_xing&quot;</tt> private option can be used to disable it. The frame contains various information that may be useful to the decoder, like the audio duration or encoder delay.
 </dd><dt>&bull;
@@ -9416,7 +9416,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
         -metadata:s:v title=&quot;Album cover&quot; -metadata:s:v comment=&quot;Cover (Front)&quot; out.mp3
 </pre> 
 
- Write a ``clean'' <font SIZE="-1">MP3</font> without any extra features: 
+ Write a ``clean'' MP3 without any extra features: 
 
  <pre>
         ffmpeg -i input.wav -write_xing 0 -id3v2_version 0 out.mp3
@@ -9424,9 +9424,9 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>mpegts</h3>
 
- <font SIZE="-1">MPEG</font> transport stream muxer. 
+ MPEG transport stream muxer. 
 
- This muxer implements <font SIZE="-1">ISO 13818-1</font> and part of <font SIZE="-1">ETSI EN 300 468.</font> 
+ This muxer implements ISO 13818-1 and part of ETSI EN 300 468. 
 
  The recognized metadata settings in mpegts muxer are <tt>&quot;service_provider&quot;</tt> and <tt>&quot;service_name&quot;</tt>. If they are not set the default for <tt>&quot;service_provider&quot;</tt> is <b>FFmpeg</b> and the default for <tt>&quot;service_name&quot;</tt> is <b>Service01</b>. 
 
@@ -9435,19 +9435,19 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
  The muxer options are:
 <dl>
 <dt><b>mpegts_transport_stream_id</b> <i>integer</i>
-</dt><dd> Set the <b>transport_stream_id</b>. This identifies a transponder in <font SIZE="-1">DVB.</font> Default is <tt>0x0001</tt>.
+</dt><dd> Set the <b>transport_stream_id</b>. This identifies a transponder in DVB. Default is <tt>0x0001</tt>.
 </dd><dt><b>mpegts_original_network_id</b> <i>integer</i>
-</dt><dd> Set the <b>original_network_id</b>. This is unique identifier of a network in <font SIZE="-1">DVB.</font> Its main use is in the unique identification of a service through the path <b>Original_Network_ID, Transport_Stream_ID</b>. Default is <tt>0x0001</tt>.
+</dt><dd> Set the <b>original_network_id</b>. This is unique identifier of a network in DVB. Its main use is in the unique identification of a service through the path <b>Original_Network_ID, Transport_Stream_ID</b>. Default is <tt>0x0001</tt>.
 </dd><dt><b>mpegts_service_id</b> <i>integer</i>
-</dt><dd> Set the <b>service_id</b>, also known as program in <font SIZE="-1">DVB.</font> Default is <tt>0x0001</tt>.
+</dt><dd> Set the <b>service_id</b>, also known as program in DVB. Default is <tt>0x0001</tt>.
 </dd><dt><b>mpegts_service_type</b> <i>integer</i>
 </dt><dd> Set the program <b>service_type</b>. Default is <tt>&quot;digital_tv&quot;</tt>. Accepts the following options:
 </dd><dl>
 <dl>
 <dt><b>hex_value</b>
-</dt><dd> Any hexadecimal value between <tt>0x01</tt> and <tt>0xff</tt> as defined in <font SIZE="-1">ETSI 300 468.</font>
+</dt><dd> Any hexadecimal value between <tt>0x01</tt> and <tt>0xff</tt> as defined in ETSI 300 468.
 </dd><dt><b>digital_tv</b>
-</dt><dd> Digital <font SIZE="-1">TV</font> service.
+</dt><dd> Digital TV service.
 </dd><dt><b>digital_radio</b>
 </dt><dd> Digital Radio service.
 </dd><dt><b>teletext</b>
@@ -9455,38 +9455,38 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>advanced_codec_digital_radio</b>
 </dt><dd> Advanced Codec Digital Radio service.
 </dd><dt><b>mpeg2_digital_hdtv</b>
-</dt><dd> <font SIZE="-1">MPEG2</font> Digital <font SIZE="-1">HDTV</font> service.
+</dt><dd> MPEG2 Digital HDTV service.
 </dd><dt><b>advanced_codec_digital_sdtv</b>
-</dt><dd> Advanced Codec Digital <font SIZE="-1">SDTV</font> service.
+</dt><dd> Advanced Codec Digital SDTV service.
 </dd><dt><b>advanced_codec_digital_hdtv</b>
-</dt><dd> Advanced Codec Digital <font SIZE="-1">HDTV</font> service.</dd></dl>
+</dt><dd> Advanced Codec Digital HDTV service.</dd></dl>
 </dl>
 
 <dl>
 </dl>
 
 <dt><b>mpegts_pmt_start_pid</b> <i>integer</i>
-</dt><dd> Set the first <font SIZE="-1">PID</font> for PMTs. Default is <tt>0x1000</tt>, minimum is <tt>0x0020</tt>, maximum is <tt>0x1ffa</tt>. This option has no effect in m2ts mode where the <font SIZE="-1">PMT PID</font> is fixed <tt>0x0100</tt>.
+</dt><dd> Set the first PID for PMTs. Default is <tt>0x1000</tt>, minimum is <tt>0x0020</tt>, maximum is <tt>0x1ffa</tt>. This option has no effect in m2ts mode where the PMT PID is fixed <tt>0x0100</tt>.
 </dd><dt><b>mpegts_start_pid</b> <i>integer</i>
-</dt><dd> Set the first <font SIZE="-1">PID</font> for elementary streams. Default is <tt>0x0100</tt>, minimum is <tt>0x0020</tt>, maximum is <tt>0x1ffa</tt>. This option has no effect in m2ts mode where the elementary stream PIDs are fixed.
+</dt><dd> Set the first PID for elementary streams. Default is <tt>0x0100</tt>, minimum is <tt>0x0020</tt>, maximum is <tt>0x1ffa</tt>. This option has no effect in m2ts mode where the elementary stream PIDs are fixed.
 </dd><dt><b>mpegts_m2ts_mode</b> <i>boolean</i>
 </dt><dd> Enable m2ts mode if set to <tt>1</tt>. Default value is <tt>&quot;-1&quot;</tt> which disables m2ts mode.
 </dd><dt><b>muxrate</b> <i>integer</i>
-</dt><dd> Set a constant muxrate. Default is <font SIZE="-1">VBR.</font>
+</dt><dd> Set a constant muxrate. Default is VBR.
 </dd><dt><b>pes_payload_size</b> <i>integer</i>
-</dt><dd> Set minimum <font SIZE="-1">PES</font> packet payload in bytes. Default is <tt>2930</tt>.
+</dt><dd> Set minimum PES packet payload in bytes. Default is <tt>2930</tt>.
 </dd><dt><b>mpegts_flags</b> <i>flags</i>
 </dt><dd> Set mpegts flags. Accepts the following options:
 </dd><dl>
 <dl>
 <dt><b>resend_headers</b>
-</dt><dd> Reemit <font SIZE="-1">PAT/PMT</font> before writing the next packet.
+</dt><dd> Reemit PAT/PMT before writing the next packet.
 </dd><dt><b>latm</b>
-</dt><dd> Use <font SIZE="-1">LATM</font> packetization for <font SIZE="-1">AAC.</font>
+</dt><dd> Use LATM packetization for AAC.
 </dd><dt><b>pat_pmt_at_frames</b>
-</dt><dd> Reemit <font SIZE="-1">PAT</font> and <font SIZE="-1">PMT</font> at each video frame.
+</dt><dd> Reemit PAT and PMT at each video frame.
 </dd><dt><b>system_b</b>
-</dt><dd> Conform to System B (<font SIZE="-1">DVB</font>) instead of System A (<font SIZE="-1">ATSC</font>).
+</dt><dd> Conform to System B (DVB) instead of System A (ATSC).
 </dd><dt><b>initial_discontinuity</b>
 </dt><dd> Mark the initial packet of each stream as discontinuity.</dd></dl>
 </dl>
@@ -9497,15 +9497,15 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 <dt><b>mpegts_copyts</b> <i>boolean</i>
 </dt><dd> Preserve original timestamps, if value is set to <tt>1</tt>. Default value is <tt>&quot;-1&quot;</tt>, which results in shifting timestamps so that they start from 0.
 </dd><dt><b>omit_video_pes_length</b> <i>boolean</i>
-</dt><dd> Omit the <font SIZE="-1">PES</font> packet length for video packets. Default is <tt>1</tt> (true).
+</dt><dd> Omit the PES packet length for video packets. Default is <tt>1</tt> (true).
 </dd><dt><b>pcr_period</b> <i>integer</i>
-</dt><dd> Override the default <font SIZE="-1">PCR</font> retransmission time in milliseconds. Default is <tt>&quot;-1&quot;</tt> which means that the <font SIZE="-1">PCR</font> interval will be determined automatically: 20 ms is used for <font SIZE="-1">CBR</font> streams, the highest multiple of the frame duration which is less than 100 ms is used for <font SIZE="-1">VBR</font> streams.
+</dt><dd> Override the default PCR retransmission time in milliseconds. Default is <tt>&quot;-1&quot;</tt> which means that the PCR interval will be determined automatically: 20 ms is used for CBR streams, the highest multiple of the frame duration which is less than 100 ms is used for VBR streams.
 </dd><dt><b>pat_period</b> <i>duration</i>
-</dt><dd> Maximum time in seconds between <font SIZE="-1">PAT/PMT</font> tables. Default is <tt>0.1</tt>.
+</dt><dd> Maximum time in seconds between PAT/PMT tables. Default is <tt>0.1</tt>.
 </dd><dt><b>sdt_period</b> <i>duration</i>
-</dt><dd> Maximum time in seconds between <font SIZE="-1">SDT</font> tables. Default is <tt>0.5</tt>.
+</dt><dd> Maximum time in seconds between SDT tables. Default is <tt>0.5</tt>.
 </dd><dt><b>tables_version</b> <i>integer</i>
-</dt><dd> Set <font SIZE="-1">PAT, PMT</font> and <font SIZE="-1">SDT</font> version (default <tt>0</tt>, valid values are from 0 to 31, inclusively). This option allows updating stream structure so that standard consumer may detect the change. To do so, reopen output <tt>&quot;AVFormatContext&quot;</tt> (in case of <font SIZE="-1">API</font> usage) or restart <b>ffmpeg</b> instance, cyclically changing <b>tables_version</b> value: 
+</dt><dd> Set PAT, PMT and SDT version (default <tt>0</tt>, valid values are from 0 to 31, inclusively). This option allows updating stream structure so that standard consumer may detect the change. To do so, reopen output <tt>&quot;AVFormatContext&quot;</tt> (in case of API usage) or restart <b>ffmpeg</b> instance, cyclically changing <b>tables_version</b> value: 
 
  <pre>
         ffmpeg -i source1.ts -codec copy -f mpegts -tables_version 0 <a HREF="udp://1.1.1.1:1111">udp://1.1.1.1:1111</a>
@@ -9534,14 +9534,14 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
 <h3>mxf, mxf_d10, mxf_opatom</h3>
 
- <font SIZE="-1">MXF</font> muxer. 
+ MXF muxer. 
 
  <i>Options</i> 
 
  The muxer options are:
 <dl>
 <dt><b>store_user_comments</b> <i>bool</i>
-</dt><dd> Set if user comments should be stored if available or never. <font SIZE="-1">IRT D-10</font> does not allow user comments. The default is thus to write them for mxf and mxf_opatom but not for mxf_d10</dd></dl>
+</dt><dd> Set if user comments should be stored if available or never. IRT D-10 does not allow user comments. The default is thus to write them for mxf and mxf_opatom but not for mxf_d10</dd></dl>
 
 <h3>null</h3>
 
@@ -9612,7 +9612,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  This muxer outputs streams to a number of separate files of nearly fixed duration. Output filename pattern can be set in a fashion similar to <b>image2</b>, or by using a <tt>&quot;strftime&quot;</tt> template if the <b>strftime</b> option is enabled. 
 
- <tt>&quot;stream_segment&quot;</tt> is a variant of the muxer used to write to streaming output formats, i.e. which do not require global headers, and is recommended for outputting e.g. to <font SIZE="-1">MPEG</font> transport stream segments. <tt>&quot;ssegment&quot;</tt> is a shorter alias for <tt>&quot;stream_segment&quot;</tt>. 
+ <tt>&quot;stream_segment&quot;</tt> is a variant of the muxer used to write to streaming output formats, i.e. which do not require global headers, and is recommended for outputting e.g. to MPEG transport stream segments. <tt>&quot;ssegment&quot;</tt> is a shorter alias for <tt>&quot;stream_segment&quot;</tt>. 
 
  Every segment starts with a keyframe of the selected reference stream, which is set through the <b>reference_stream</b> option. 
 
@@ -9622,7 +9622,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  Optionally it can generate a list of the created segments, by setting the option <i>segment_list</i>. The list type is specified by the <i>segment_list_type</i> option. The entry filenames in the segment list are set by default to the basename of the corresponding segment files. 
 
- See also the <b>hls</b> muxer, which provides a more specific implementation for <font SIZE="-1">HLS</font> segmentation. 
+ See also the <b>hls</b> muxer, which provides a more specific implementation for HLS segmentation. 
 
  <i>Options</i> 
 
@@ -9669,7 +9669,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
  <pre>
         &lt;segment_filename&gt;,&lt;segment_start_time&gt;,&lt;segment_end_time&gt;
 </pre> 
- <i>segment_filename</i> is the name of the output file generated by the muxer according to the provided pattern. <font SIZE="-1">CSV</font> escaping (according to <font SIZE="-1">RFC4180</font>) is applied if required. 
+ <i>segment_filename</i> is the name of the output file generated by the muxer according to the provided pattern. CSV escaping (according to RFC4180) is applied if required. 
  <i>segment_start_time</i> and <i>segment_end_time</i> specify the segment start and end time expressed in seconds. 
  A list file with the suffix <tt>&quot;.csv&quot;</tt> or <tt>&quot;.ext&quot;</tt> will auto-select this format. 
  <b>ext</b> is deprecated in favor or <b>csv</b>.
@@ -9709,13 +9709,13 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dd><dt><b>segment_time_delta</b> <i>delta</i>
 </dt><dd> Specify the accuracy time when selecting the start time for a segment, expressed as a duration specification. Default value is ``0''. 
 
- When delta is specified a key-frame will start a new segment if its <font SIZE="-1">PTS</font> satisfies the relation: 
+ When delta is specified a key-frame will start a new segment if its PTS satisfies the relation: 
 
  <pre>
         PTS &gt;= start_time - time_delta
 </pre> 
 
- This option is useful when splitting video content, which is always split at <font SIZE="-1">GOP</font> boundaries, in case a key frame is found just before the specified split time. 
+ This option is useful when splitting video content, which is always split at GOP boundaries, in case a key frame is found just before the specified split time. 
 
  In particular may be used in combination with the <i>ffmpeg</i> option <i>force_key_frames</i>. The key frame times specified by <i>force_key_frames</i> may not be set accurately because of rounding issues, with the consequence that a key frame time may result set just before the specified time. For constant frame rate videos a value of 1/(2*<i>frame_rate</i>) should address the worst case mismatch between the specified time and the time set by <i>force_key_frames</i>.
 </dd><dt><b>segment_times</b> <i>times</i>
@@ -9740,7 +9740,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 </dt><dd> If enabled, write an empty segment if there are no packets during the period a segment would usually span. Otherwise, the segment will be filled with the next packet written. Defaults to <tt>0</tt>.</dd></dl>
  
 
- Make sure to require a closed <font SIZE="-1">GOP</font> when encoding and to set the <font SIZE="-1">GOP</font> size to fit your segment time constraint. 
+ Make sure to require a closed GOP when encoding and to set the GOP size to fit your segment time constraint. 
 
  <i>Examples</i>
 <dl>
@@ -9772,12 +9772,12 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
         ffmpeg -i in.mkv -codec copy -map 0 -f segment -segment_list out.csv -segment_frames 100,200,300,500,800 out%03d.nut
 </pre>
 </dd><dt>&bull;
-</dt><dd> Convert the <i>in.mkv</i> to <font SIZE="-1">TS</font> segments using the <tt>&quot;libx264&quot;</tt> and <tt>&quot;aac&quot;</tt> encoders: 
+</dt><dd> Convert the <i>in.mkv</i> to TS segments using the <tt>&quot;libx264&quot;</tt> and <tt>&quot;aac&quot;</tt> encoders: 
  <pre>
         ffmpeg -i in.mkv -map 0 -codec:v libx264 -codec:a aac -f ssegment -segment_list out.list out%03d.ts
 </pre>
 </dd><dt>&bull;
-</dt><dd> Segment the input file, and create an M3U8 live playlist (can be used as live <font SIZE="-1">HLS</font> source): 
+</dt><dd> Segment the input file, and create an M3U8 live playlist (can be used as live HLS source): 
  <pre>
         ffmpeg -re -i in.mkv -codec copy -map 0 -f segment -segment_list playlist.m3u8 \
         -segment_list_flags +live -segment_time 10 out%03d.mkv
@@ -9804,7 +9804,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  This muxer computes and prints a cryptographic hash of all the input frames, on a per-stream basis. This can be used for equality checks without having to do a complete binary comparison. 
 
- By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the hash, but the output of explicit conversions to other codecs can also be used. Timestamps are ignored. It uses the <font SIZE="-1">SHA-256</font> cryptographic hash function by default, but supports several other algorithms. 
+ By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the hash, but the output of explicit conversions to other codecs can also be used. Timestamps are ignored. It uses the SHA-256 cryptographic hash function by default, but supports several other algorithms. 
 
  The output of the muxer consists of one line per stream of the form: <i>streamindex</i>,<i>streamtype</i>,<i>algo</i>=<i>hash</i>, where <i>streamindex</i> is the index of the mapped stream, <i>streamtype</i> is a single character indicating the type of stream, <i>algo</i> is a short string representing the hash function used, and <i>hash</i> is a hexadecimal number representing the computed hash.
 <dl>
@@ -9814,13 +9814,13 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  <i>Examples</i> 
 
- To compute the <font SIZE="-1">SHA-256</font> hash of the input converted to raw audio and video, and store it in the file <i>out.sha256</i>: 
+ To compute the SHA-256 hash of the input converted to raw audio and video, and store it in the file <i>out.sha256</i>: 
 
  <pre>
         ffmpeg -i INPUT -f streamhash out.sha256
 </pre> 
 
- To print an <font SIZE="-1">MD5</font> hash to stdout use the command: 
+ To print an MD5 hash to stdout use the command: 
 
  <pre>
         ffmpeg -i INPUT -f streamhash -hash md5 -
@@ -9832,7 +9832,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  The fifo pseudo-muxer allows the separation of encoding and muxing by using first-in-first-out queue and running the actual muxer in a separate thread. This is especially useful in combination with the <b>tee</b> muxer and can be used to send data to several destinations with different reliability/writing speed/latency. 
 
- <font SIZE="-1">API</font> users should be aware that callback functions (interrupt_callback, io_open and io_close) used within its AVFormatContext must be thread-safe. 
+ API users should be aware that callback functions (interrupt_callback, io_open and io_close) used within its AVFormatContext must be thread-safe. 
 
  The behavior of the fifo muxer if the queue fills up or if the output fails is selectable,
 <dl>
@@ -9877,7 +9877,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
 
  The tee muxer can be used to write the same data to several outputs, such as files or streams. It can be used, for example, to stream a video over a network and save it to disk at the same time. 
 
- It is different from specifying several outputs to the <b>ffmpeg</b> command-line tool. With the tee muxer, the audio and video data will be encoded only once. With conventional multiple outputs, multiple encoding operations in parallel are initiated, which can be a very expensive process. The tee muxer is not useful when using the libavformat <font SIZE="-1">API</font> directly because it is then possible to feed the same packets to several muxers directly. 
+ It is different from specifying several outputs to the <b>ffmpeg</b> command-line tool. With the tee muxer, the audio and video data will be encoded only once. With conventional multiple outputs, multiple encoding operations in parallel are initiated, which can be a very expensive process. The tee muxer is not useful when using the libavformat API directly because it is then possible to feed the same packets to several muxers directly. 
 
  Since the tee muxer does not represent any particular output format, ffmpeg cannot auto-select output streams. So all streams intended for output must be specified using <tt>&quot;-map&quot;</tt>. See the examples below. 
 
@@ -9898,7 +9898,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
  The following special options are also recognized:
 <dl>
 <dt><b>f</b>
-</dt><dd> Specify the format name. Required if it cannot be guessed from the output <font SIZE="-1">URL.</font>
+</dt><dd> Specify the format name. Required if it cannot be guessed from the output URL.
 </dd><dt><b>bsfs[/</b><i>spec</i><b>]</b>
 </dt><dd> Specify a list of bitstream filters to apply to the specified output. 
  It is possible to specify to which streams a given bitstream filter applies, by appending a stream specifier to the option separated by <tt>&quot;/&quot;</tt>. <i>spec</i> must be a stream specifier (see <b>Format stream specifiers</b>). 
@@ -9919,7 +9919,7 @@ ffmpeg - i INPUT - c : v copy - bsf : v filter1 [= opt1 = str1:opt2 = str2][, fi
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Encode something and both archive it in a WebM file and stream it as MPEG-TS over <font SIZE="-1">UDP:</font> 
+</dt><dd> Encode something and both archive it in a WebM file and stream it as MPEG-TS over UDP: 
  <pre>
         ffmpeg -i ... -c:v libx264 -c:a mp2 -f tee -map 0:v -map 0:a
           &quot;archive-20121107.mkv|[f=mpegts]<a HREF="udp://10.0.1.255:1234/">udp://10.0.1.255:1234/</a>&quot;
@@ -9937,16 +9937,16 @@ ffmpeg - i... - map 0 - flags + global_header - c : v libx264 - c : a aac - f te
 
 <h3>webm_dash_manifest</h3>
 
- WebM <font SIZE="-1">DASH</font> Manifest muxer. 
+ WebM DASH Manifest muxer. 
 
- This muxer implements the WebM <font SIZE="-1">DASH</font> Manifest specification to generate the <font SIZE="-1">DASH</font> manifest <font SIZE="-1">XML.</font> It also supports manifest generation for <font SIZE="-1">DASH</font> live streams. 
+ This muxer implements the WebM DASH Manifest specification to generate the DASH manifest XML. It also supports manifest generation for DASH live streams. 
 
  For more information see:
 <dl>
 <dt>&bull;
-</dt><dd> WebM <font SIZE="-1">DASH</font> Specification: &lt;<b><a rel="nofollow" HREF="https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification">https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification</a></b>&gt;
+</dt><dd> WebM DASH Specification: &lt;<b><a rel="nofollow" HREF="https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification">https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification</a></b>&gt;
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">ISO DASH</font> Specification: &lt;<b><a rel="nofollow" HREF="http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip">http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip</a></b>&gt;</dd></dl>
+</dt><dd> ISO DASH Specification: &lt;<b><a rel="nofollow" HREF="http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip">http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip</a></b>&gt;</dd></dl>
  
 
  <i>Options</i> 
@@ -9956,17 +9956,17 @@ ffmpeg - i... - map 0 - flags + global_header - c : v libx264 - c : a aac - f te
 <dt><b>adaptation_sets</b>
 </dt><dd> This option has the following syntax: ``id=x,streams=a,b,c id=y,streams=d,e'' where x and y are the unique identifiers of the adaptation sets and a,b,c,d and e are the indices of the corresponding audio and video streams. Any number of adaptation sets can be added using this option.
 </dd><dt><b>live</b>
-</dt><dd> Set this to 1 to create a live stream <font SIZE="-1">DASH</font> Manifest. Default: 0.
+</dt><dd> Set this to 1 to create a live stream DASH Manifest. Default: 0.
 </dd><dt><b>chunk_start_index</b>
 </dt><dd> Start index of the first chunk. This will go in the <b>startNumber</b> attribute of the <b>SegmentTemplate</b> element in the manifest. Default: 0.
 </dd><dt><b>chunk_duration_ms</b>
 </dt><dd> Duration of each chunk in milliseconds. This will go in the <b>duration</b> attribute of the <b>SegmentTemplate</b> element in the manifest. Default: 1000.
 </dd><dt><b>utc_timing_url</b>
-</dt><dd> <font SIZE="-1">URL</font> of the page that will return the <font SIZE="-1">UTC</font> timestamp in <font SIZE="-1">ISO</font> format. This will go in the <b>value</b> attribute of the <b>UTCTiming</b> element in the manifest. Default: None.
+</dt><dd> URL of the page that will return the UTC timestamp in ISO format. This will go in the <b>value</b> attribute of the <b>UTCTiming</b> element in the manifest. Default: None.
 </dd><dt><b>time_shift_buffer_depth</b>
-</dt><dd> Smallest time (in seconds) shifting buffer for which any Representation is guaranteed to be available. This will go in the <b>timeShiftBufferDepth</b> attribute of the <font SIZE="-1"><b>MPD</b></font> element. Default: 60.
+</dt><dd> Smallest time (in seconds) shifting buffer for which any Representation is guaranteed to be available. This will go in the <b>timeShiftBufferDepth</b> attribute of the <b>MPD</b> element. Default: 60.
 </dd><dt><b>minimum_update_period</b>
-</dt><dd> Minimum update period (in seconds) of the manifest. This will go in the <b>minimumUpdatePeriod</b> attribute of the <font SIZE="-1"><b>MPD</b></font> element. Default: 0.</dd></dl>
+</dt><dd> Minimum update period (in seconds) of the manifest. This will go in the <b>minimumUpdatePeriod</b> attribute of the <b>MPD</b> element. Default: 0.</dd></dl>
  
 
  <i>Example</i> 
@@ -9987,7 +9987,7 @@ ffmpeg - i... - map 0 - flags + global_header - c : v libx264 - c : a aac - f te
 
  WebM Live Chunk Muxer. 
 
- This muxer writes out WebM headers and chunks as separate files which can be consumed by clients that support WebM Live streams via <font SIZE="-1">DASH.</font> 
+ This muxer writes out WebM headers and chunks as separate files which can be consumed by clients that support WebM Live streams via DASH. 
 
  <i>Options</i> 
 
@@ -10040,7 +10040,7 @@ ffmpeg - i... - map 0 - flags + global_header - c : v libx264 - c : a aac - f te
 </dd><dt>5.
 </dt><dd> After global metadata there may be sections with per-stream/per-chapter metadata.
 </dd><dt>6.
-</dt><dd> A section starts with the section name in uppercase (i.e. <font SIZE="-1">STREAM</font> or <font SIZE="-1">CHAPTER</font>) in brackets (<b>[</b>, <b>]</b>) and ends with next section or end of file.
+</dt><dd> A section starts with the section name in uppercase (i.e. STREAM or CHAPTER) in brackets (<b>[</b>, <b>]</b>) and ends with next section or end of file.
 </dd><dt>7.
 </dt><dd> At the beginning of a chapter section there may be an optional timebase to be used for start/end values. It must be in form <b>TIMEBASE=</b><i>num</i><b>/</b><i>den</i>, where <i>num</i> and <i>den</i> are integers. If the timebase is missing then start/end times are assumed to be in nanoseconds. 
  Next a chapter section must contain chapter start and end times in form <b>START=</b><i>num</i>, <b>END=</b><i>num</i>, where <i>num</i> is a positive integer.
@@ -10077,7 +10077,7 @@ this is a comment
         ffmpeg -i INPUT -f ffmetadata FFMETADATAFILE
 </pre> 
 
- Reinserting edited metadata information from the <font SIZE="-1">FFMETADATAFILE</font> file can be done as: 
+ Reinserting edited metadata information from the FFMETADATAFILE file can be done as: 
 
  <pre>
         ffmpeg -i INPUT -i FFMETADATAFILE -map_metadata 1 -codec copy OUTPUT
@@ -10087,12 +10087,12 @@ this is a comment
 
  The libavformat library provides some generic global options, which can be set on all the protocols. In addition each protocol may support so-called private options, which are specific for that component. 
 
- Options may be set by specifying -<i>option</i> <i>value</i> in the FFmpeg tools, or by setting the value explicitly in the <tt>&quot;AVFormatContext&quot;</tt> options or using the <i>libavutil/opt.h</i> <font SIZE="-1">API</font> for programmatic use. 
+ Options may be set by specifying -<i>option</i> <i>value</i> in the FFmpeg tools, or by setting the value explicitly in the <tt>&quot;AVFormatContext&quot;</tt> options or using the <i>libavutil/opt.h</i> API for programmatic use. 
 
  The list of supported options follows:
 <dl>
 <dt><b>protocol_whitelist</b> <i>list</i> <b>(</b><i>input</i><b>)</b>
-</dt><dd> Set a ``,''-separated list of allowed protocols. ``<font SIZE="-1">ALL''</font> matches all protocols. Protocols prefixed by ``-'' are disabled. All protocols are allowed by default but protocols used by an another protocol (nested protocols) are restricted to a per protocol subset.</dd></dl>
+</dt><dd> Set a ``,''-separated list of allowed protocols. ``ALL'' matches all protocols. Protocols prefixed by ``-'' are disabled. All protocols are allowed by default but protocols used by an another protocol (nested protocols) are restricted to a per protocol subset.</dd></dl>
 
 <h2>PROTOCOLS</h2>
 
@@ -10100,7 +10100,7 @@ this is a comment
 
  When you configure your FFmpeg build, all the supported protocols are enabled by default. You can list all available ones using the configure option ``--list-protocols''. 
 
- You can disable all the protocols using the configure option ``--disable-protocols'', and selectively enable a protocol using the option &quot;--enable-protocol=<i></i><font SIZE="-1"><i>PROTOCOL</i></font><i></i>``, or you can disable a particular protocol using the option ''--disable-protocol=<i></i><font SIZE="-1"><i>PROTOCOL</i></font><i></i>&quot;. 
+ You can disable all the protocols using the configure option ``--disable-protocols'', and selectively enable a protocol using the option &quot;--enable-protocol=<i></i><i>PROTOCOL</i><i></i>``, or you can disable a particular protocol using the option ''--disable-protocol=<i></i><i>PROTOCOL</i><i></i>&quot;. 
 
  The option ``-protocols'' of the ff* tools will display the list of supported protocols. 
 
@@ -10114,9 +10114,9 @@ this is a comment
 
 <h3>amqp</h3>
 
- Advanced Message Queueing Protocol (<font SIZE="-1">AMQP</font>) version 0-9-1 is a broker based publish-subscribe communication protocol. 
+ Advanced Message Queueing Protocol (AMQP) version 0-9-1 is a broker based publish-subscribe communication protocol. 
 
- FFmpeg must be compiled with --enable-librabbitmq to support <font SIZE="-1">AMQP. A</font> separate <font SIZE="-1">AMQP</font> broker must also be run. An example open-source <font SIZE="-1">AMQP</font> broker is RabbitMQ. 
+ FFmpeg must be compiled with --enable-librabbitmq to support AMQP. A separate AMQP broker must also be run. An example open-source AMQP broker is RabbitMQ. 
 
  After starting the broker, an FFmpeg client may stream data to the broker using the command: 
 
@@ -10181,7 +10181,7 @@ ffplay amqp: //[[user]:[password]@]hostname[:port][/vhost]
 </dd><dt><b>chapter</b>
 </dt><dd> Start chapter (1...N)
 </dd><dt><b>playlist</b>
-</dt><dd> Playlist to read (<font SIZE="-1">BDMV/PLAYLIST/</font>?????.mpls)</dd></dl>
+</dt><dd> Playlist to read (BDMV/PLAYLIST/?????.mpls)</dd></dl>
  
 
  Examples: 
@@ -10207,10 +10207,10 @@ ffplay amqp: //[[user]:[password]@]hostname[:port][/vhost]
  The accepted options are:
 <dl>
 <dt><b>read_ahead_limit</b>
-</dt><dd> Amount in bytes that may be read ahead when seeking isn't supported. Range is -1 to <font SIZE="-1">INT_MAX.</font> -1 for unlimited. Default is 65536.</dd></dl>
+</dt><dd> Amount in bytes that may be read ahead when seeking isn't supported. Range is -1 to INT_MAX. -1 for unlimited. Default is 65536.</dd></dl>
  
 
- <font SIZE="-1">URL</font> Syntax is 
+ URL Syntax is 
 
  <pre>
         cache:&lt;URL&gt;
@@ -10222,13 +10222,13 @@ ffplay amqp: //[[user]:[password]@]hostname[:port][/vhost]
 
  Read and seek from many resources in sequence as if they were a unique resource. 
 
- A <font SIZE="-1">URL</font> accepted by this protocol has the syntax: 
+ A URL accepted by this protocol has the syntax: 
 
  <pre>
         concat:&lt;URL1&gt;|&lt;URL2&gt;|...|&lt;URLN&gt;
 </pre> 
 
- where <i></i><font SIZE="-1"><i>URL1</i></font><i></i>, <i></i><font SIZE="-1"><i>URL2</i></font><i></i>, ..., <i></i><font SIZE="-1"><i>URLN</i></font><i></i> are the urls of the resource to be concatenated, each one possibly specifying a distinct protocol. 
+ where <i></i><i>URL1</i><i></i>, <i></i><i>URL2</i><i></i>, ..., <i></i><i>URLN</i><i></i> are the urls of the resource to be concatenated, each one possibly specifying a distinct protocol. 
 
  For example to read a sequence of files <i>split1.mpeg</i>, <i>split2.mpeg</i>, <i>split3.mpeg</i> with <b>ffplay</b> use the command: 
 
@@ -10245,12 +10245,12 @@ ffplay amqp: //[[user]:[password]@]hostname[:port][/vhost]
  The accepted options are:
 <dl>
 <dt><b>key</b>
-</dt><dd> Set the <font SIZE="-1">AES</font> decryption key binary block from given hexadecimal representation.
+</dt><dd> Set the AES decryption key binary block from given hexadecimal representation.
 </dd><dt><b>iv</b>
-</dt><dd> Set the <font SIZE="-1">AES</font> decryption initialization vector binary block from given hexadecimal representation.</dd></dl>
+</dt><dd> Set the AES decryption initialization vector binary block from given hexadecimal representation.</dd></dl>
  
 
- Accepted <font SIZE="-1">URL</font> formats: 
+ Accepted URL formats: 
 
  <pre>
         crypto:&lt;URL&gt;
@@ -10259,9 +10259,9 @@ ffplay amqp: //[[user]:[password]@]hostname[:port][/vhost]
 
 <h3>data</h3>
 
- Data in-line in the <font SIZE="-1">URI.</font> See &lt;<b><a rel="nofollow" HREF="http://en.wikipedia.org/wiki/Data_URI_scheme">http://en.wikipedia.org/wiki/Data_URI_scheme</a></b>&gt;. 
+ Data in-line in the URI. See &lt;<b><a rel="nofollow" HREF="http://en.wikipedia.org/wiki/Data_URI_scheme">http://en.wikipedia.org/wiki/Data_URI_scheme</a></b>&gt;. 
 
- For example, to convert a <font SIZE="-1">GIF</font> file given inline with <b>ffmpeg</b>: 
+ For example, to convert a GIF file given inline with <b>ffmpeg</b>: 
 
  <pre>
         ffmpeg -i &quot;data:image/gif;base64,R0lGODdhCAAIAMIEAAAAAAAA//8AAP//AP///////////////ywAAAAACAAIAAADF0gEDLojDgdGiJdJqUX02iB4E8Q9jUMkADs=&quot; smiley.png
@@ -10273,7 +10273,7 @@ ffplay amqp: //[[user]:[password]@]hostname[:port][/vhost]
 
  Read from or write to a file. 
 
- A file <font SIZE="-1">URL</font> can have the form: 
+ A file URL can have the form: 
 
  <pre>
         file:&lt;filename&gt;
@@ -10281,7 +10281,7 @@ ffplay amqp: //[[user]:[password]@]hostname[:port][/vhost]
 
  where <i>filename</i> is the path of the file to read. 
 
- An <font SIZE="-1">URL</font> that does not have a protocol prefix will be assumed to be a file <font SIZE="-1">URL.</font> Depending on the build, an <font SIZE="-1">URL</font> that looks like a Windows path with the drive letter at the beginning will also be assumed to be a file <font SIZE="-1">URL</font> (usually not the case in builds for unix-like systems). 
+ An URL that does not have a protocol prefix will be assumed to be a file URL. Depending on the build, an URL that looks like a Windows path with the drive letter at the beginning will also be assumed to be a file URL (usually not the case in builds for unix-like systems). 
 
  For example to read from a file <i>input.mpeg</i> with <b>ffmpeg</b> use the command: 
 
@@ -10296,16 +10296,16 @@ ffplay amqp: //[[user]:[password]@]hostname[:port][/vhost]
 </dd><dt><b>blocksize</b>
 </dt><dd> Set I/O operation maximum block size, in bytes. Default value is <tt>&quot;INT_MAX&quot;</tt>, which results in not limiting the requested block size. Setting this value reasonably low improves user termination request reaction time, which is valuable for files on slow medium.
 </dd><dt><b>follow</b>
-</dt><dd> If set to 1, the protocol will retry reading at the end of the file, allowing reading files that still are being written. In order for this to terminate, you either need to use the rw_timeout option, or use the interrupt callback (for <font SIZE="-1">API</font> users).
+</dt><dd> If set to 1, the protocol will retry reading at the end of the file, allowing reading files that still are being written. In order for this to terminate, you either need to use the rw_timeout option, or use the interrupt callback (for API users).
 </dd><dt><b>seekable</b>
 </dt><dd> Controls if seekability is advertised on the file. 0 means non-seekable, -1 means auto (seekable for normal files, non-seekable for named pipes). 
  Many demuxers handle seekable and non-seekable resources differently, overriding this might speed up opening certain files at the cost of losing some features (e.g. accurate seeking).</dd></dl>
 
 <h3>ftp</h3>
 
- <font SIZE="-1">FTP</font> (File Transfer Protocol). 
+ FTP (File Transfer Protocol). 
 
- Read from or write to remote resources using <font SIZE="-1">FTP</font> protocol. 
+ Read from or write to remote resources using FTP protocol. 
 
  Following syntax is required. 
 
@@ -10318,16 +10318,16 @@ ftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 <dt><b>timeout</b>
 </dt><dd> Set timeout in microseconds of socket I/O operations used by the underlying low level operation. By default it is set to -1, which means that the timeout is not specified.
 </dd><dt><b>ftp-user</b>
-</dt><dd> Set a user to be used for authenticating to the <font SIZE="-1">FTP</font> server. This is overridden by the user in the <font SIZE="-1">FTP URL.</font>
+</dt><dd> Set a user to be used for authenticating to the FTP server. This is overridden by the user in the FTP URL.
 </dd><dt><b>ftp-password</b>
-</dt><dd> Set a password to be used for authenticating to the <font SIZE="-1">FTP</font> server. This is overridden by the password in the <font SIZE="-1">FTP URL,</font> or by <b>ftp-anonymous-password</b> if no user is set.
+</dt><dd> Set a password to be used for authenticating to the FTP server. This is overridden by the password in the FTP URL, or by <b>ftp-anonymous-password</b> if no user is set.
 </dd><dt><b>ftp-anonymous-password</b>
 </dt><dd> Password used when login as anonymous user. Typically an e-mail address should be used.
 </dd><dt><b>ftp-write-seekable</b>
 </dt><dd> Control seekability of connection during encoding. If set to 1 the resource is supposed to be seekable, if set to 0 it is assumed not to be seekable. Default value is 0.</dd></dl>
  
 
- <font SIZE="-1">NOTE:</font> Protocol can be used as output, but it is recommended to not do it, unless special care is taken (tests, customized server configuration etc.). Different <font SIZE="-1">FTP</font> servers behave in different way during seek operation. ff* tools may produce incomplete content due to server limitations.
+ NOTE: Protocol can be used as output, but it is recommended to not do it, unless special care is taken (tests, customized server configuration etc.). Different FTP servers behave in different way during seek operation. ff* tools may produce incomplete content due to server limitations.
 
 <h3>gopher</h3>
 
@@ -10337,11 +10337,11 @@ ftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 
  Gophers protocol. 
 
- The Gopher protocol with <font SIZE="-1">TLS</font> encapsulation.
+ The Gopher protocol with TLS encapsulation.
 
 <h3>hls</h3>
 
- Read Apple <font SIZE="-1">HTTP</font> Live Streaming compliant segmented stream as a uniform one. The M3U8 playlists describing the segments can be remote <font SIZE="-1">HTTP</font> resources or local files, accessed using the standard file protocol. The nested protocol is declared by specifying &quot;+<i>proto</i>&quot; after the hls <font SIZE="-1">URI</font> scheme name, where <i>proto</i> is either ``file'' or ``http''. 
+ Read Apple HTTP Live Streaming compliant segmented stream as a uniform one. The M3U8 playlists describing the segments can be remote HTTP resources or local files, accessed using the standard file protocol. The nested protocol is declared by specifying &quot;+<i>proto</i>&quot; after the hls URI scheme name, where <i>proto</i> is either ``file'' or ``http''. 
 
  <pre>
         hls+<a rel="nofollow" HREF="http://host/path/to/remote/resource.m3u8">http://host/path/to/remote/resource.m3u8</a>
@@ -10352,7 +10352,7 @@ ftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 
 <h3>http</h3>
 
- <font SIZE="-1">HTTP</font> (Hyper Text Transfer Protocol). 
+ HTTP (Hyper Text Transfer Protocol). 
 
  This protocol accepts the following options:
 <dl>
@@ -10361,17 +10361,17 @@ ftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 </dd><dt><b>chunked_post</b>
 </dt><dd> If set to 1 use chunked Transfer-Encoding for posts, default is 1.
 </dd><dt><b>content_type</b>
-</dt><dd> Set a specific content type for the <font SIZE="-1">POST</font> messages or for listen mode.
+</dt><dd> Set a specific content type for the POST messages or for listen mode.
 </dd><dt><b>http_proxy</b>
-</dt><dd> set <font SIZE="-1">HTTP</font> proxy to tunnel through e.g. <a rel="nofollow" HREF="http://example.com:1234">http://example.com:1234</a>
+</dt><dd> set HTTP proxy to tunnel through e.g. <a rel="nofollow" HREF="http://example.com:1234">http://example.com:1234</a>
 </dd><dt><b>headers</b>
-</dt><dd> Set custom <font SIZE="-1">HTTP</font> headers, can override built in default headers. The value must be a string encoding the headers.
+</dt><dd> Set custom HTTP headers, can override built in default headers. The value must be a string encoding the headers.
 </dd><dt><b>multiple_requests</b>
 </dt><dd> Use persistent connections if set to 1, default is 0.
 </dd><dt><b>post_data</b>
-</dt><dd> Set custom <font SIZE="-1">HTTP</font> post data.
+</dt><dd> Set custom HTTP post data.
 </dd><dt><b>referer</b>
-</dt><dd> Set the Referer header. Include 'Referer: <font SIZE="-1">URL</font>' header in <font SIZE="-1">HTTP</font> request.
+</dt><dd> Set the Referer header. Include 'Referer: URL' header in HTTP request.
 </dd><dt><b>user_agent</b>
 </dt><dd> Override the User-Agent header. If not specified the protocol will use a string describing the libavformat build. (``Lavf/&lt;version&gt;'')
 </dd><dt><b>user-agent</b>
@@ -10381,32 +10381,32 @@ ftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 </dd><dt><b>reconnect_streamed</b>
 </dt><dd> If set then even streamed/non seekable streams will be reconnected on errors.
 </dd><dt><b>reconnect_on_network_error</b>
-</dt><dd> Reconnect automatically in case of <font SIZE="-1">TCP/TLS</font> errors during connect.
+</dt><dd> Reconnect automatically in case of TCP/TLS errors during connect.
 </dd><dt><b>reconnect_on_http_error</b>
-</dt><dd> A comma separated list of <font SIZE="-1">HTTP</font> status codes to reconnect on. The list can include specific status codes (e.g. '503') or the strings '4xx' / '5xx'.
+</dt><dd> A comma separated list of HTTP status codes to reconnect on. The list can include specific status codes (e.g. '503') or the strings '4xx' / '5xx'.
 </dd><dt><b>reconnect_delay_max</b>
 </dt><dd> Sets the maximum delay in seconds after which to give up reconnecting
 </dd><dt><b>mime_type</b>
-</dt><dd> Export the <font SIZE="-1">MIME</font> type.
+</dt><dd> Export the MIME type.
 </dd><dt><b>http_version</b>
-</dt><dd> Exports the <font SIZE="-1">HTTP</font> response version number. Usually ``1.0'' or ``1.1''.
+</dt><dd> Exports the HTTP response version number. Usually ``1.0'' or ``1.1''.
 </dd><dt><b>icy</b>
-</dt><dd> If set to 1 request <font SIZE="-1">ICY</font> (SHOUTcast) metadata from the server. If the server supports this, the metadata has to be retrieved by the application by reading the <b>icy_metadata_headers</b> and <b>icy_metadata_packet</b> options. The default is 1.
+</dt><dd> If set to 1 request ICY (SHOUTcast) metadata from the server. If the server supports this, the metadata has to be retrieved by the application by reading the <b>icy_metadata_headers</b> and <b>icy_metadata_packet</b> options. The default is 1.
 </dd><dt><b>icy_metadata_headers</b>
-</dt><dd> If the server supports <font SIZE="-1">ICY</font> metadata, this contains the ICY-specific <font SIZE="-1">HTTP</font> reply headers, separated by newline characters.
+</dt><dd> If the server supports ICY metadata, this contains the ICY-specific HTTP reply headers, separated by newline characters.
 </dd><dt><b>icy_metadata_packet</b>
-</dt><dd> If the server supports <font SIZE="-1">ICY</font> metadata, and <b>icy</b> was set to 1, this contains the last non-empty metadata packet sent by the server. It should be polled in regular intervals by applications interested in mid-stream metadata updates.
+</dt><dd> If the server supports ICY metadata, and <b>icy</b> was set to 1, this contains the last non-empty metadata packet sent by the server. It should be polled in regular intervals by applications interested in mid-stream metadata updates.
 </dd><dt><b>cookies</b>
-</dt><dd> Set the cookies to be sent in future requests. The format of each cookie is the same as the value of a Set-Cookie <font SIZE="-1">HTTP</font> response field. Multiple cookies can be delimited by a newline character.
+</dt><dd> Set the cookies to be sent in future requests. The format of each cookie is the same as the value of a Set-Cookie HTTP response field. Multiple cookies can be delimited by a newline character.
 </dd><dt><b>offset</b>
 </dt><dd> Set initial byte offset.
 </dd><dt><b>end_offset</b>
 </dt><dd> Try to limit the request to bytes preceding this offset.
 </dd><dt><b>method</b>
-</dt><dd> When used as a client option it sets the <font SIZE="-1">HTTP</font> method for the request. 
- When used as a server option it sets the <font SIZE="-1">HTTP</font> method that is going to be expected from the client(s). If the expected and the received <font SIZE="-1">HTTP</font> method do not match the client will be given a Bad Request response. When unset the <font SIZE="-1">HTTP</font> method is not checked for now. This will be replaced by autodetection in the future.
+</dt><dd> When used as a client option it sets the HTTP method for the request. 
+ When used as a server option it sets the HTTP method that is going to be expected from the client(s). If the expected and the received HTTP method do not match the client will be given a Bad Request response. When unset the HTTP method is not checked for now. This will be replaced by autodetection in the future.
 </dd><dt><b>listen</b>
-</dt><dd> If set to 1 enables experimental <font SIZE="-1">HTTP</font> server. This can be used to send data when used as an output option, or read data from a client with <font SIZE="-1">HTTP POST</font> when used as an input option. If set to 2 enables experimental multi-client <font SIZE="-1">HTTP</font> server. This is not yet implemented in ffmpeg.c and thus must not be used as a command line option. 
+</dt><dd> If set to 1 enables experimental HTTP server. This can be used to send data when used as an output option, or read data from a client with HTTP POST when used as an input option. If set to 2 enables experimental multi-client HTTP server. This is not yet implemented in ffmpeg.c and thus must not be used as a command line option. 
  <pre>
         # Server side (sending):
         ffmpeg -i somefile.ogg -c copy -listen 1 -f ogg http://&lt;server&gt;:&lt;port&gt;
@@ -10422,16 +10422,16 @@ ftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
         wget --post-file=somefile.ogg http://&lt;server&gt;:&lt;port&gt;
 </pre>
 </dd><dt><b>send_expect_100</b>
-</dt><dd> Send an Expect: 100-continue header for <font SIZE="-1">POST.</font> If set to 1 it will send, if set to 0 it won't, if set to -1 it will try to send if it is applicable. Default value is -1.
+</dt><dd> Send an Expect: 100-continue header for POST. If set to 1 it will send, if set to 0 it won't, if set to -1 it will try to send if it is applicable. Default value is -1.
 </dd><dt><b>auth_type</b>
-</dt><dd> Set <font SIZE="-1">HTTP</font> authentication type. No option for Digest, since this method requires getting nonce parameters from the server first and can't be used straight away like Basic.
+</dt><dd> Set HTTP authentication type. No option for Digest, since this method requires getting nonce parameters from the server first and can't be used straight away like Basic.
 </dd><dl>
 <dl>
 <dt><b>none</b>
-</dt><dd> Choose the <font SIZE="-1">HTTP</font> authentication type automatically. This is the default.
+</dt><dd> Choose the HTTP authentication type automatically. This is the default.
 </dd><dt><b>basic</b>
-</dt><dd> Choose the <font SIZE="-1">HTTP</font> basic authentication. 
- Basic authentication sends a Base64-encoded string that contains a user name and password for the client. Base64 is not a form of encryption and should be considered the same as sending the user name and password in clear text (Base64 is a reversible encoding). If a resource needs to be protected, strongly consider using an authentication scheme other than basic authentication. <font SIZE="-1">HTTPS/TLS</font> should be used with basic authentication. Without these additional security enhancements, basic authentication should not be used to protect sensitive or valuable information.</dd></dl>
+</dt><dd> Choose the HTTP basic authentication. 
+ Basic authentication sends a Base64-encoded string that contains a user name and password for the client. Base64 is not a form of encryption and should be considered the same as sending the user name and password in clear text (Base64 is a reversible encoding). If a resource needs to be protected, strongly consider using an authentication scheme other than basic authentication. HTTPS/TLS should be used with basic authentication. Without these additional security enhancements, basic authentication should not be used to protect sensitive or valuable information.</dd></dl>
 </dl>
 
 <dl>
@@ -10439,9 +10439,9 @@ ftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 </dl>
  
 
- <i></i><font SIZE="-1"><i>HTTP</i></font><i> Cookies</i> 
+ <i></i><i>HTTP</i><i> Cookies</i> 
 
- Some <font SIZE="-1">HTTP</font> requests will be denied unless cookie values are passed in with the request. The <b>cookies</b> option allows these cookies to be specified. At the very least, each cookie must specify a value along with a path and domain. <font SIZE="-1">HTTP</font> requests that match both the domain and path will automatically include the cookie value in the <font SIZE="-1">HTTP</font> Cookie header field. Multiple cookies can be delimited by a newline. 
+ Some HTTP requests will be denied unless cookie values are passed in with the request. The <b>cookies</b> option allows these cookies to be specified. At the very least, each cookie must specify a value along with a path and domain. HTTP requests that match both the domain and path will automatically include the cookie value in the HTTP Cookie header field. Multiple cookies can be delimited by a newline. 
 
  The required syntax to play a stream specifying a cookie is: 
 
@@ -10462,7 +10462,7 @@ ftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 </dd><dt><b>ice_description</b>
 </dt><dd> Set the stream description.
 </dd><dt><b>ice_url</b>
-</dt><dd> Set the stream website <font SIZE="-1">URL.</font>
+</dt><dd> Set the stream website URL.
 </dd><dt><b>ice_public</b>
 </dt><dd> Set if the stream should be public. The default is 0 (not public).
 </dd><dt><b>user_agent</b>
@@ -10472,9 +10472,9 @@ ftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 </dd><dt><b>content_type</b>
 </dt><dd> Set the stream content type. This must be set if it is different from audio/mpeg.
 </dd><dt><b>legacy_icecast</b>
-</dt><dd> This enables support for Icecast versions &lt; 2.4.0, that do not support the <font SIZE="-1">HTTP PUT</font> method but the <font SIZE="-1">SOURCE</font> method.
+</dt><dd> This enables support for Icecast versions &lt; 2.4.0, that do not support the HTTP PUT method but the SOURCE method.
 </dd><dt><b>tls</b>
-</dt><dd> Establish a <font SIZE="-1">TLS</font> (<font SIZE="-1">HTTPS</font>) connection to Icecast.</dd></dl>
+</dt><dd> Establish a TLS (HTTPS) connection to Icecast.</dd></dl>
  
 
  
@@ -10483,11 +10483,11 @@ icecast: //[&lt;username&gt;[:&lt;password&gt;]@]&lt;server&gt;:&lt;port&gt;/&lt
 
 <h3>mmst</h3>
 
- <font SIZE="-1">MMS</font> (Microsoft Media Server) protocol over <font SIZE="-1">TCP.</font>
+ MMS (Microsoft Media Server) protocol over TCP.
 
 <h3>mmsh</h3>
 
- <font SIZE="-1">MMS</font> (Microsoft Media Server) protocol over <font SIZE="-1">HTTP.</font> 
+ MMS (Microsoft Media Server) protocol over HTTP. 
 
  The required syntax is: 
 
@@ -10497,9 +10497,9 @@ mmsh: //&lt;server&gt;[:&lt;port&gt;][/&lt;app&gt;][/&lt;playpath&gt;]
 
 <h3>md5</h3>
 
- <font SIZE="-1">MD5</font> output protocol. 
+ MD5 output protocol. 
 
- Computes the <font SIZE="-1">MD5</font> hash of the data to be written, and on close writes this to the designated output or stdout if none is specified. It can be used to test muxers without writing an actual file. 
+ Computes the MD5 hash of the data to be written, and on close writes this to the designated output or stdout if none is specified. It can be used to test muxers without writing an actual file. 
 
  Some examples follow. 
 
@@ -10510,13 +10510,13 @@ mmsh: //&lt;server&gt;[:&lt;port&gt;][/&lt;app&gt;][/&lt;playpath&gt;]
         ffmpeg -i input.flv -f avi -y md5:
 </pre> 
 
- Note that some formats (typically <font SIZE="-1">MOV</font>) require the output protocol to be seekable, so they will fail with the <font SIZE="-1">MD5</font> output protocol.
+ Note that some formats (typically MOV) require the output protocol to be seekable, so they will fail with the MD5 output protocol.
 
 <h3>pipe</h3>
 
- <font SIZE="-1">UNIX</font> pipe access protocol. 
+ UNIX pipe access protocol. 
 
- Read and write from <font SIZE="-1">UNIX</font> pipes. 
+ Read and write from UNIX pipes. 
 
  The accepted syntax is: 
 
@@ -10548,13 +10548,13 @@ mmsh: //&lt;server&gt;[:&lt;port&gt;][/&lt;app&gt;][/&lt;playpath&gt;]
 </dt><dd> Set I/O operation maximum block size, in bytes. Default value is <tt>&quot;INT_MAX&quot;</tt>, which results in not limiting the requested block size. Setting this value reasonably low improves user termination request reaction time, which is valuable if data transmission is slow.</dd></dl>
  
 
- Note that some formats (typically <font SIZE="-1">MOV</font>), require the output protocol to be seekable, so they will fail with the pipe output protocol.
+ Note that some formats (typically MOV), require the output protocol to be seekable, so they will fail with the pipe output protocol.
 
 <h3>prompeg</h3>
 
- Pro-MPEG Code of Practice #3 Release 2 <font SIZE="-1">FEC</font> protocol. 
+ Pro-MPEG Code of Practice #3 Release 2 FEC protocol. 
 
- The Pro-MPEG CoP#3 <font SIZE="-1">FEC</font> is a 2D parity-check forward error correction mechanism for <font SIZE="-1">MPEG-2</font> Transport Streams sent over <font SIZE="-1">RTP.</font> 
+ The Pro-MPEG CoP#3 FEC is a 2D parity-check forward error correction mechanism for MPEG-2 Transport Streams sent over RTP. 
 
  This protocol must be used in conjunction with the <tt>&quot;rtp_mpegts&quot;</tt> muxer and the <tt>&quot;rtp&quot;</tt> protocol. 
 
@@ -10564,7 +10564,7 @@ mmsh: //&lt;server&gt;[:&lt;port&gt;][/&lt;app&gt;][/&lt;playpath&gt;]
         -f rtp_mpegts -fec prompeg=&lt;option&gt;=&lt;val&gt;... rtp://&lt;hostname&gt;:&lt;port&gt;
 </pre> 
 
- The destination <font SIZE="-1">UDP</font> ports are <tt>&quot;port + 2&quot;</tt> for the column <font SIZE="-1">FEC</font> stream and <tt>&quot;port + 4&quot;</tt> for the row <font SIZE="-1">FEC</font> stream. 
+ The destination UDP ports are <tt>&quot;port + 2&quot;</tt> for the column FEC stream and <tt>&quot;port + 4&quot;</tt> for the row FEC stream. 
 
  This protocol accepts the following options:
 <dl>
@@ -10602,11 +10602,11 @@ mmsh: //&lt;server&gt;[:&lt;port&gt;][/&lt;app&gt;][/&lt;playpath&gt;]
 </dl>
 
 <dt><b>buffer_size</b>
-</dt><dd> Set internal <font SIZE="-1">RIST</font> buffer size in milliseconds for retransmission of data. Default value is 0 which means the librist default (1 sec). Maximum value is 30 seconds.
+</dt><dd> Set internal RIST buffer size in milliseconds for retransmission of data. Default value is 0 which means the librist default (1 sec). Maximum value is 30 seconds.
 </dd><dt><b>pkt_size</b>
 </dt><dd> Set maximum packet size for sending data. 1316 by default.
 </dd><dt><b>log_level</b>
-</dt><dd> Set loglevel for <font SIZE="-1">RIST</font> logging messages. You only need to set this if you explicitly want to enable debug level messages or packet loss simulation, otherwise the regular loglevel is respected.
+</dt><dd> Set loglevel for RIST logging messages. You only need to set this if you explicitly want to enable debug level messages or packet loss simulation, otherwise the regular loglevel is respected.
 </dd><dt><b>secret</b>
 </dt><dd> Set override of encryption secret, by default is unset.
 </dd><dt><b>encryption</b>
@@ -10616,7 +10616,7 @@ mmsh: //&lt;server&gt;[:&lt;port&gt;][/&lt;app&gt;][/&lt;playpath&gt;]
 
  Real-Time Messaging Protocol. 
 
- The Real-Time Messaging Protocol (<font SIZE="-1">RTMP</font>) is used for streaming multimedia content across a <font SIZE="-1">TCP/IP</font> network. 
+ The Real-Time Messaging Protocol (RTMP) is used for streaming multimedia content across a TCP/IP network. 
 
  The required syntax is: 
 
@@ -10631,13 +10631,13 @@ rtmp: //[&lt;username&gt;:&lt;password&gt;@]&lt;server&gt;[:&lt;port&gt;][/&lt;a
 </dd><dt><b>password</b>
 </dt><dd> An optional password (mostly for publishing).
 </dd><dt><b>server</b>
-</dt><dd> The address of the <font SIZE="-1">RTMP</font> server.
+</dt><dd> The address of the RTMP server.
 </dd><dt><b>port</b>
-</dt><dd> The number of the <font SIZE="-1">TCP</font> port to use (by default is 1935).
+</dt><dd> The number of the TCP port to use (by default is 1935).
 </dd><dt><b>app</b>
-</dt><dd> It is the name of the application to access. It usually corresponds to the path where the application is installed on the <font SIZE="-1">RTMP</font> server (e.g. <i>/ondemand/</i>, <i>/flash/live/</i>, etc.). You can override the value parsed from the <font SIZE="-1">URI</font> through the <tt>&quot;rtmp_app&quot;</tt> option, too.
+</dt><dd> It is the name of the application to access. It usually corresponds to the path where the application is installed on the RTMP server (e.g. <i>/ondemand/</i>, <i>/flash/live/</i>, etc.). You can override the value parsed from the URI through the <tt>&quot;rtmp_app&quot;</tt> option, too.
 </dd><dt><b>playpath</b>
-</dt><dd> It is the path or name of the resource to play with reference to the application specified in <i>app</i>, may be prefixed by ``mp4:''. You can override the value parsed from the <font SIZE="-1">URI</font> through the <tt>&quot;rtmp_playpath&quot;</tt> option, too.
+</dt><dd> It is the path or name of the resource to play with reference to the application specified in <i>app</i>, may be prefixed by ``mp4:''. You can override the value parsed from the URI through the <tt>&quot;rtmp_playpath&quot;</tt> option, too.
 </dd><dt><b>listen</b>
 </dt><dd> Act as a server, listening for an incoming connection.
 </dd><dt><b>timeout</b>
@@ -10647,36 +10647,36 @@ rtmp: //[&lt;username&gt;:&lt;password&gt;@]&lt;server&gt;[:&lt;port&gt;][/&lt;a
  Additionally, the following parameters can be set via command line options (or in code via <tt>&quot;AVOption&quot;</tt>s):
 <dl>
 <dt><b>rtmp_app</b>
-</dt><dd> Name of application to connect on the <font SIZE="-1">RTMP</font> server. This option overrides the parameter specified in the <font SIZE="-1">URI.</font>
+</dt><dd> Name of application to connect on the RTMP server. This option overrides the parameter specified in the URI.
 </dd><dt><b>rtmp_buffer</b>
 </dt><dd> Set the client buffer time in milliseconds. The default is 3000.
 </dd><dt><b>rtmp_conn</b>
-</dt><dd> Extra arbitrary <font SIZE="-1">AMF</font> connection parameters, parsed from a string, e.g. like <tt>&quot;B:1 S:authMe O:1 NN:code:1.23 NS:flag:ok O:0&quot;</tt>. Each value is prefixed by a single character denoting the type, B for Boolean, N for number, S for string, O for object, or Z for null, followed by a colon. For Booleans the data must be either 0 or 1 for <font SIZE="-1">FALSE</font> or <font SIZE="-1">TRUE,</font> respectively. Likewise for Objects the data must be 0 or 1 to end or begin an object, respectively. Data items in subobjects may be named, by prefixing the type with 'N' and specifying the name before the value (i.e. <tt>&quot;NB:myFlag:1&quot;</tt>). This option may be used multiple times to construct arbitrary <font SIZE="-1">AMF</font> sequences.
+</dt><dd> Extra arbitrary AMF connection parameters, parsed from a string, e.g. like <tt>&quot;B:1 S:authMe O:1 NN:code:1.23 NS:flag:ok O:0&quot;</tt>. Each value is prefixed by a single character denoting the type, B for Boolean, N for number, S for string, O for object, or Z for null, followed by a colon. For Booleans the data must be either 0 or 1 for FALSE or TRUE, respectively. Likewise for Objects the data must be 0 or 1 to end or begin an object, respectively. Data items in subobjects may be named, by prefixing the type with 'N' and specifying the name before the value (i.e. <tt>&quot;NB:myFlag:1&quot;</tt>). This option may be used multiple times to construct arbitrary AMF sequences.
 </dd><dt><b>rtmp_flashver</b>
-</dt><dd> Version of the Flash plugin used to run the <font SIZE="-1">SWF</font> player. The default is <font SIZE="-1">LNX 9,0,124,2.</font> (When publishing, the default is <font SIZE="-1">FMLE/3.0</font> (compatible; &lt;libavformat version&gt;).)
+</dt><dd> Version of the Flash plugin used to run the SWF player. The default is LNX 9,0,124,2. (When publishing, the default is FMLE/3.0 (compatible; &lt;libavformat version&gt;).)
 </dd><dt><b>rtmp_flush_interval</b>
-</dt><dd> Number of packets flushed in the same request (<font SIZE="-1">RTMPT</font> only). The default is 10.
+</dt><dd> Number of packets flushed in the same request (RTMPT only). The default is 10.
 </dd><dt><b>rtmp_live</b>
 </dt><dd> Specify that the media is a live stream. No resuming or seeking in live streams is possible. The default value is <tt>&quot;any&quot;</tt>, which means the subscriber first tries to play the live stream specified in the playpath. If a live stream of that name is not found, it plays the recorded stream. The other possible values are <tt>&quot;live&quot;</tt> and <tt>&quot;recorded&quot;</tt>.
 </dd><dt><b>rtmp_pageurl</b>
-</dt><dd> <font SIZE="-1">URL</font> of the web page in which the media was embedded. By default no value will be sent.
+</dt><dd> URL of the web page in which the media was embedded. By default no value will be sent.
 </dd><dt><b>rtmp_playpath</b>
-</dt><dd> Stream identifier to play or to publish. This option overrides the parameter specified in the <font SIZE="-1">URI.</font>
+</dt><dd> Stream identifier to play or to publish. This option overrides the parameter specified in the URI.
 </dd><dt><b>rtmp_subscribe</b>
 </dt><dd> Name of live stream to subscribe to. By default no value will be sent. It is only sent if the option is specified or if rtmp_live is set to live.
 </dd><dt><b>rtmp_swfhash</b>
-</dt><dd> <font SIZE="-1">SHA256</font> hash of the decompressed <font SIZE="-1">SWF</font> file (32 bytes).
+</dt><dd> SHA256 hash of the decompressed SWF file (32 bytes).
 </dd><dt><b>rtmp_swfsize</b>
-</dt><dd> Size of the decompressed <font SIZE="-1">SWF</font> file, required for SWFVerification.
+</dt><dd> Size of the decompressed SWF file, required for SWFVerification.
 </dd><dt><b>rtmp_swfurl</b>
-</dt><dd> <font SIZE="-1">URL</font> of the <font SIZE="-1">SWF</font> player for the media. By default no value will be sent.
+</dt><dd> URL of the SWF player for the media. By default no value will be sent.
 </dd><dt><b>rtmp_swfverify</b>
-</dt><dd> <font SIZE="-1">URL</font> to player swf file, compute hash/size automatically.
+</dt><dd> URL to player swf file, compute hash/size automatically.
 </dd><dt><b>rtmp_tcurl</b>
-</dt><dd> <font SIZE="-1">URL</font> of the target stream. Defaults to <a HREF="proto://host[:port]/app.">proto://host[:port]/app.</a></dd></dl>
+</dt><dd> URL of the target stream. Defaults to <a HREF="proto://host[:port]/app.">proto://host[:port]/app.</a></dd></dl>
  
 
- For example to read with <b>ffplay</b> a multimedia resource named ``sample'' from the application ``vod'' from an <font SIZE="-1">RTMP</font> server ``myserver'': 
+ For example to read with <b>ffplay</b> a multimedia resource named ``sample'' from the application ``vod'' from an RTMP server ``myserver'': 
 
  <pre>
         ffplay <a HREF="rtmp://myserver/vod/sample">rtmp://myserver/vod/sample</a>
@@ -10692,35 +10692,35 @@ rtmp: //[&lt;username&gt;:&lt;password&gt;@]&lt;server&gt;[:&lt;port&gt;][/&lt;a
 
  Encrypted Real-Time Messaging Protocol. 
 
- The Encrypted Real-Time Messaging Protocol (<font SIZE="-1">RTMPE</font>) is used for streaming multimedia content within standard cryptographic primitives, consisting of Diffie-Hellman key exchange and <font SIZE="-1">HMACSHA256,</font> generating a pair of <font SIZE="-1">RC4</font> keys.
+ The Encrypted Real-Time Messaging Protocol (RTMPE) is used for streaming multimedia content within standard cryptographic primitives, consisting of Diffie-Hellman key exchange and HMACSHA256, generating a pair of RC4 keys.
 
 <h3>rtmps</h3>
 
- Real-Time Messaging Protocol over a secure <font SIZE="-1">SSL</font> connection. 
+ Real-Time Messaging Protocol over a secure SSL connection. 
 
- The Real-Time Messaging Protocol (<font SIZE="-1">RTMPS</font>) is used for streaming multimedia content across an encrypted connection.
+ The Real-Time Messaging Protocol (RTMPS) is used for streaming multimedia content across an encrypted connection.
 
 <h3>rtmpt</h3>
 
- Real-Time Messaging Protocol tunneled through <font SIZE="-1">HTTP.</font> 
+ Real-Time Messaging Protocol tunneled through HTTP. 
 
- The Real-Time Messaging Protocol tunneled through <font SIZE="-1">HTTP</font> (<font SIZE="-1">RTMPT</font>) is used for streaming multimedia content within <font SIZE="-1">HTTP</font> requests to traverse firewalls.
+ The Real-Time Messaging Protocol tunneled through HTTP (RTMPT) is used for streaming multimedia content within HTTP requests to traverse firewalls.
 
 <h3>rtmpte</h3>
 
- Encrypted Real-Time Messaging Protocol tunneled through <font SIZE="-1">HTTP.</font> 
+ Encrypted Real-Time Messaging Protocol tunneled through HTTP. 
 
- The Encrypted Real-Time Messaging Protocol tunneled through <font SIZE="-1">HTTP</font> (<font SIZE="-1">RTMPTE</font>) is used for streaming multimedia content within <font SIZE="-1">HTTP</font> requests to traverse firewalls.
+ The Encrypted Real-Time Messaging Protocol tunneled through HTTP (RTMPTE) is used for streaming multimedia content within HTTP requests to traverse firewalls.
 
 <h3>rtmpts</h3>
 
- Real-Time Messaging Protocol tunneled through <font SIZE="-1">HTTPS.</font> 
+ Real-Time Messaging Protocol tunneled through HTTPS. 
 
- The Real-Time Messaging Protocol tunneled through <font SIZE="-1">HTTPS</font> (<font SIZE="-1">RTMPTS</font>) is used for streaming multimedia content within <font SIZE="-1">HTTPS</font> requests to traverse firewalls.
+ The Real-Time Messaging Protocol tunneled through HTTPS (RTMPTS) is used for streaming multimedia content within HTTPS requests to traverse firewalls.
 
 <h3>libsmbclient</h3>
 
- libsmbclient permits one to manipulate <font SIZE="-1">CIFS/SMB</font> network resources. 
+ libsmbclient permits one to manipulate CIFS/SMB network resources. 
 
  Following syntax is required. 
 
@@ -10744,7 +10744,7 @@ smb: //[[domain:]user[:password@]]server[/share[/path[/file]]]
 
  Secure File Transfer Protocol via libssh 
 
- Read from or write to remote resources using <font SIZE="-1">SFTP</font> protocol. 
+ Read from or write to remote resources using SFTP protocol. 
 
  Following syntax is required. 
 
@@ -10772,9 +10772,9 @@ sftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 
  Real-Time Messaging Protocol and its variants supported through librtmp. 
 
- Requires the presence of the librtmp headers and library during configuration. You need to explicitly configure the build with ``--enable-librtmp''. If enabled this will replace the native <font SIZE="-1">RTMP</font> protocol. 
+ Requires the presence of the librtmp headers and library during configuration. You need to explicitly configure the build with ``--enable-librtmp''. If enabled this will replace the native RTMP protocol. 
 
- This protocol provides most client functions and a few server functions needed to support <font SIZE="-1">RTMP, RTMP</font> tunneled in <font SIZE="-1">HTTP</font> (<font SIZE="-1">RTMPT</font>), encrypted <font SIZE="-1">RTMP</font> (<font SIZE="-1">RTMPE</font>), <font SIZE="-1">RTMP</font> over <font SIZE="-1">SSL/TLS</font> (<font SIZE="-1">RTMPS</font>) and tunneled variants of these encrypted types (<font SIZE="-1">RTMPTE, RTMPTS</font>). 
+ This protocol provides most client functions and a few server functions needed to support RTMP, RTMP tunneled in HTTP (RTMPT), encrypted RTMP (RTMPE), RTMP over SSL/TLS (RTMPS) and tunneled variants of these encrypted types (RTMPTE, RTMPTS). 
 
  The required syntax is: 
 
@@ -10782,11 +10782,11 @@ sftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
         &lt;rtmp_proto&gt;://&lt;server&gt;[:&lt;port&gt;][/&lt;app&gt;][/&lt;playpath&gt;] &lt;options&gt;
  
 
- where <i>rtmp_proto</i> is one of the strings ``rtmp'', ``rtmpt'', ``rtmpe'', ``rtmps'', ``rtmpte'', ``rtmpts'' corresponding to each <font SIZE="-1">RTMP</font> variant, and <i>server</i>, <i>port</i>, <i>app</i> and <i>playpath</i> have the same meaning as specified for the <font SIZE="-1">RTMP</font> native protocol. <i>options</i> contains a list of space-separated options of the form <i>key</i>=<i>val</i>. 
+ where <i>rtmp_proto</i> is one of the strings ``rtmp'', ``rtmpt'', ``rtmpe'', ``rtmps'', ``rtmpte'', ``rtmpts'' corresponding to each RTMP variant, and <i>server</i>, <i>port</i>, <i>app</i> and <i>playpath</i> have the same meaning as specified for the RTMP native protocol. <i>options</i> contains a list of space-separated options of the form <i>key</i>=<i>val</i>. 
 
  See the librtmp manual page (man 3 librtmp) for more information. 
 
- For example, to stream a file in real-time to an <font SIZE="-1">RTMP</font> server using <b>ffmpeg</b>: 
+ For example, to stream a file in real-time to an RTMP server using <b>ffmpeg</b>: 
 
  <pre>
         ffmpeg -re -i myfile -f flv <a HREF="rtmp://myserver/live/mystream">rtmp://myserver/live/mystream</a>
@@ -10802,34 +10802,34 @@ sftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 
  Real-time Transport Protocol. 
 
- The required syntax for an <font SIZE="-1">RTP URL</font> is: rtp://<i>hostname</i>[:<i>port</i>][?<i>option</i>=<i>val</i>...] 
+ The required syntax for an RTP URL is: rtp://<i>hostname</i>[:<i>port</i>][?<i>option</i>=<i>val</i>...] 
 
- <i>port</i> specifies the <font SIZE="-1">RTP</font> port to use. 
+ <i>port</i> specifies the RTP port to use. 
 
- The following <font SIZE="-1">URL</font> options are supported:
+ The following URL options are supported:
 <dl>
 <dt><b>ttl=</b><i>n</i>
-</dt><dd> Set the <font SIZE="-1">TTL</font> (Time-To-Live) value (for multicast only).
+</dt><dd> Set the TTL (Time-To-Live) value (for multicast only).
 </dd><dt><b>rtcpport=</b><i>n</i>
-</dt><dd> Set the remote <font SIZE="-1">RTCP</font> port to <i>n</i>.
+</dt><dd> Set the remote RTCP port to <i>n</i>.
 </dd><dt><b>localrtpport=</b><i>n</i>
-</dt><dd> Set the local <font SIZE="-1">RTP</font> port to <i>n</i>.
+</dt><dd> Set the local RTP port to <i>n</i>.
 </dd><dt><b>localrtcpport=</b><i>n</i><b>'</b>
-</dt><dd> Set the local <font SIZE="-1">RTCP</font> port to <i>n</i>.
+</dt><dd> Set the local RTCP port to <i>n</i>.
 </dd><dt><b>pkt_size=</b><i>n</i>
 </dt><dd> Set max packet size (in bytes) to <i>n</i>.
 </dd><dt><b>buffer_size=</b><i>size</i>
-</dt><dd> Set the maximum <font SIZE="-1">UDP</font> socket buffer size in bytes.
+</dt><dd> Set the maximum UDP socket buffer size in bytes.
 </dd><dt><b>connect=0|1</b>
-</dt><dd> Do a <tt>&quot;connect()&quot;</tt> on the <font SIZE="-1">UDP</font> socket (if set to 1) or not (if set to 0).
+</dt><dd> Do a <tt>&quot;connect()&quot;</tt> on the UDP socket (if set to 1) or not (if set to 0).
 </dd><dt><b>sources=</b><i>ip</i><b>[,</b><i>ip</i><b>]</b>
-</dt><dd> List allowed source <font SIZE="-1">IP</font> addresses.
+</dt><dd> List allowed source IP addresses.
 </dd><dt><b>block=</b><i>ip</i><b>[,</b><i>ip</i><b>]</b>
-</dt><dd> List disallowed (blocked) source <font SIZE="-1">IP</font> addresses.
+</dt><dd> List disallowed (blocked) source IP addresses.
 </dd><dt><b>write_to_source=0|1</b>
 </dt><dd> Send packets to the source address of the latest received packet (if set to 1) or to a default remote address (if set to 0).
 </dd><dt><b>localport=</b><i>n</i>
-</dt><dd> Set the local <font SIZE="-1">RTP</font> port to <i>n</i>.
+</dt><dd> Set the local RTP port to <i>n</i>.
 </dd><dt><b>timeout=</b><i>n</i>
 </dt><dd> Set timeout (in microseconds) of socket I/O operations to <i>n</i>. 
  This is a deprecated option. Instead, <b>localrtpport</b> should be used.</dd></dl>
@@ -10838,21 +10838,21 @@ sftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
  Important notes:
 <dl>
 <dt>1.
-</dt><dd> If <b>rtcpport</b> is not set the <font SIZE="-1">RTCP</font> port will be set to the <font SIZE="-1">RTP</font> port value plus 1.
+</dt><dd> If <b>rtcpport</b> is not set the RTCP port will be set to the RTP port value plus 1.
 </dd><dt>2.
-</dt><dd> If <b>localrtpport</b> (the local <font SIZE="-1">RTP</font> port) is not set any available port will be used for the local <font SIZE="-1">RTP</font> and <font SIZE="-1">RTCP</font> ports.
+</dt><dd> If <b>localrtpport</b> (the local RTP port) is not set any available port will be used for the local RTP and RTCP ports.
 </dd><dt>3.
-</dt><dd> If <b>localrtcpport</b> (the local <font SIZE="-1">RTCP</font> port) is not set it will be set to the local <font SIZE="-1">RTP</font> port value plus 1.</dd></dl>
+</dt><dd> If <b>localrtcpport</b> (the local RTCP port) is not set it will be set to the local RTP port value plus 1.</dd></dl>
 
 <h3>rtsp</h3>
 
  Real-Time Streaming Protocol. 
 
- <font SIZE="-1">RTSP</font> is not technically a protocol handler in libavformat, it is a demuxer and muxer. The demuxer supports both normal <font SIZE="-1">RTSP</font> (with data transferred over <font SIZE="-1">RTP</font>; this is used by e.g. Apple and Microsoft) and Real-RTSP (with data transferred over <font SIZE="-1">RDT</font>). 
+ RTSP is not technically a protocol handler in libavformat, it is a demuxer and muxer. The demuxer supports both normal RTSP (with data transferred over RTP; this is used by e.g. Apple and Microsoft) and Real-RTSP (with data transferred over RDT). 
 
- The muxer can be used to send a stream using <font SIZE="-1">RTSP ANNOUNCE</font> to a server supporting it (currently Darwin Streaming Server and Mischa Spiegelmock's &lt;<b><a rel="nofollow" HREF="https://github.com/revmischa/rtsp-server">https://github.com/revmischa/rtsp-server</a></b>&gt;). 
+ The muxer can be used to send a stream using RTSP ANNOUNCE to a server supporting it (currently Darwin Streaming Server and Mischa Spiegelmock's &lt;<b><a rel="nofollow" HREF="https://github.com/revmischa/rtsp-server">https://github.com/revmischa/rtsp-server</a></b>&gt;). 
 
- The required syntax for a <font SIZE="-1">RTSP</font> url is: 
+ The required syntax for a RTSP url is: 
 
  <pre>
         rtsp://&lt;hostname&gt;[:&lt;port&gt;]/&lt;path&gt;
@@ -10865,18 +10865,18 @@ sftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 <dt><b>initial_pause</b>
 </dt><dd> Do not start playing the stream immediately if set to 1. Default value is 0.
 </dd><dt><b>rtsp_transport</b>
-</dt><dd> Set <font SIZE="-1">RTSP</font> transport protocols. 
+</dt><dd> Set RTSP transport protocols. 
  It accepts the following values:
 </dd><dl>
 <dl>
 <dt><b>udp</b>
-</dt><dd> Use <font SIZE="-1">UDP</font> as lower transport protocol.
+</dt><dd> Use UDP as lower transport protocol.
 </dd><dt><b>tcp</b>
-</dt><dd> Use <font SIZE="-1">TCP</font> (interleaving within the <font SIZE="-1">RTSP</font> control channel) as lower transport protocol.
+</dt><dd> Use TCP (interleaving within the RTSP control channel) as lower transport protocol.
 </dd><dt><b>udp_multicast</b>
-</dt><dd> Use <font SIZE="-1">UDP</font> multicast as lower transport protocol.
+</dt><dd> Use UDP multicast as lower transport protocol.
 </dd><dt><b>http</b>
-</dt><dd> Use <font SIZE="-1">HTTP</font> tunneling as lower transport protocol, which is useful for passing proxies.</dd></dl>
+</dt><dd> Use HTTP tunneling as lower transport protocol, which is useful for passing proxies.</dd></dl>
 </dl>
 
 <dl>
@@ -10885,7 +10885,7 @@ sftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
  Multiple lower transport protocols may be specified, in that case they are tried one at a time (if the setup of one fails, the next one is tried). For the muxer, only the <b>tcp</b> and <b>udp</b> options are supported.</dd></dl>
 
 <dt><b>rtsp_flags</b>
-</dt><dd> Set <font SIZE="-1">RTSP</font> flags. 
+</dt><dd> Set RTSP flags. 
 
  The following values are accepted:
 </dd><dl>
@@ -10895,7 +10895,7 @@ sftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 </dd><dt><b>listen</b>
 </dt><dd> Act as a server, listening for an incoming connection.
 </dd><dt><b>prefer_tcp</b>
-</dt><dd> Try <font SIZE="-1">TCP</font> for <font SIZE="-1">RTP</font> transport first, if <font SIZE="-1">TCP</font> is available as <font SIZE="-1">RTSP RTP</font> transport.</dd></dl>
+</dt><dd> Try TCP for RTP transport first, if TCP is available as RTSP RTP transport.</dd></dl>
 </dl>
 
 <dl>
@@ -10923,9 +10923,9 @@ sftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
  By default it accepts all media types.</dd></dl>
 
 <dt><b>min_port</b>
-</dt><dd> Set minimum local <font SIZE="-1">UDP</font> port. Default value is 5000.
+</dt><dd> Set minimum local UDP port. Default value is 5000.
 </dd><dt><b>max_port</b>
-</dt><dd> Set maximum local <font SIZE="-1">UDP</font> port. Default value is 65000.
+</dt><dd> Set maximum local UDP port. Default value is 65000.
 </dd><dt><b>timeout</b>
 </dt><dd> Set maximum timeout (in seconds) to wait for incoming connections. 
 
@@ -10933,12 +10933,12 @@ sftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 </dd><dt><b>reorder_queue_size</b>
 </dt><dd> Set number of packets to buffer for handling of reordered packets.
 </dd><dt><b>stimeout</b>
-</dt><dd> Set socket <font SIZE="-1">TCP I/O</font> timeout in microseconds.
+</dt><dd> Set socket TCP I/O timeout in microseconds.
 </dd><dt><b>user-agent</b>
 </dt><dd> Override User-Agent header. If not specified, it defaults to the libavformat identifier string.</dd></dl>
  
 
- When receiving data over <font SIZE="-1">UDP,</font> the demuxer tries to reorder received packets (since they may arrive out of order, or packets may get lost totally). This can be disabled by setting the maximum demuxing delay to zero (via the <tt>&quot;max_delay&quot;</tt> field of AVFormatContext). 
+ When receiving data over UDP, the demuxer tries to reorder received packets (since they may arrive out of order, or packets may get lost totally). This can be disabled by setting the maximum demuxing delay to zero (via the <tt>&quot;max_delay&quot;</tt> field of AVFormatContext). 
 
  When watching multi-bitrate Real-RTSP streams with <b>ffplay</b>, the streams to display can be chosen with <tt>&quot;-vst&quot;</tt> <i>n</i> and <tt>&quot;-ast&quot;</tt> <i>n</i> for video and audio respectively, and can be switched on the fly by pressing <tt>&quot;v&quot;</tt> and <tt>&quot;a&quot;</tt>. 
 
@@ -10947,17 +10947,17 @@ sftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
  The following examples all make use of the <b>ffplay</b> and <b>ffmpeg</b> tools.
 <dl>
 <dt>&bull;
-</dt><dd> Watch a stream over <font SIZE="-1">UDP,</font> with a max reordering delay of 0.5 seconds: 
+</dt><dd> Watch a stream over UDP, with a max reordering delay of 0.5 seconds: 
  <pre>
         ffplay -max_delay 500000 -rtsp_transport udp <a HREF="rtsp://server/video.mp4">rtsp://server/video.mp4</a>
 </pre>
 </dd><dt>&bull;
-</dt><dd> Watch a stream tunneled over <font SIZE="-1">HTTP:</font> 
+</dt><dd> Watch a stream tunneled over HTTP: 
  <pre>
         ffplay -rtsp_transport http <a HREF="rtsp://server/video.mp4">rtsp://server/video.mp4</a>
 </pre>
 </dd><dt>&bull;
-</dt><dd> Send a stream in realtime to a <font SIZE="-1">RTSP</font> server, for others to watch: 
+</dt><dd> Send a stream in realtime to a RTSP server, for others to watch: 
  <pre>
         ffmpeg -re -i &lt;input&gt; -f rtsp -muxdelay 0.1 <a HREF="rtsp://server/live.sdp">rtsp://server/live.sdp</a>
 </pre>
@@ -10969,31 +10969,31 @@ sftp: //[user[:password]@]server[:port]/path/to/remote/resource.mpeg
 
 <h3>sap</h3>
 
- Session Announcement Protocol (<font SIZE="-1">RFC 2974</font>). This is not technically a protocol handler in libavformat, it is a muxer and demuxer. It is used for signalling of <font SIZE="-1">RTP</font> streams, by announcing the <font SIZE="-1">SDP</font> for the streams regularly on a separate port. 
+ Session Announcement Protocol (RFC 2974). This is not technically a protocol handler in libavformat, it is a muxer and demuxer. It is used for signalling of RTP streams, by announcing the SDP for the streams regularly on a separate port. 
 
  <i>Muxer</i> 
 
- The syntax for a <font SIZE="-1">SAP</font> url given to the muxer is: 
+ The syntax for a SAP url given to the muxer is: 
 
  
 sap: //&lt;destination&gt;[:&lt;port&gt;][?&lt;options&gt;]
  
 
- The <font SIZE="-1">RTP</font> packets are sent to <i>destination</i> on port <i>port</i>, or to port 5004 if no port is specified. <i>options</i> is a <tt>&quot;&amp;&quot;</tt>-separated list. The following options are supported:
+ The RTP packets are sent to <i>destination</i> on port <i>port</i>, or to port 5004 if no port is specified. <i>options</i> is a <tt>&quot;&amp;&quot;</tt>-separated list. The following options are supported:
 <dl>
 <dt><b>announce_addr=</b><i>address</i>
-</dt><dd> Specify the destination <font SIZE="-1">IP</font> address for sending the announcements to. If omitted, the announcements are sent to the commonly used <font SIZE="-1">SAP</font> announcement multicast address 224.2.127.254 (sap.mcast.net), or ff0e::2:7ffe if <i>destination</i> is an IPv6 address.
+</dt><dd> Specify the destination IP address for sending the announcements to. If omitted, the announcements are sent to the commonly used SAP announcement multicast address 224.2.127.254 (sap.mcast.net), or ff0e::2:7ffe if <i>destination</i> is an IPv6 address.
 </dd><dt><b>announce_port=</b><i>port</i>
 </dt><dd> Specify the port to send the announcements on, defaults to 9875 if not specified.
 </dd><dt><b>ttl=</b><i>ttl</i>
-</dt><dd> Specify the time to live value for the announcements and <font SIZE="-1">RTP</font> packets, defaults to 255.
+</dt><dd> Specify the time to live value for the announcements and RTP packets, defaults to 255.
 </dd><dt><b>same_port=</b><i>0|1</i>
-</dt><dd> If set to 1, send all <font SIZE="-1">RTP</font> streams on the same port pair. If zero (the default), all streams are sent on unique ports, with each stream on a port 2 numbers higher than the previous. VLC/Live555 requires this to be set to 1, to be able to receive the stream. The <font SIZE="-1">RTP</font> stack in libavformat for receiving requires all streams to be sent on unique ports.</dd></dl>
+</dt><dd> If set to 1, send all RTP streams on the same port pair. If zero (the default), all streams are sent on unique ports, with each stream on a port 2 numbers higher than the previous. VLC/Live555 requires this to be set to 1, to be able to receive the stream. The RTP stack in libavformat for receiving requires all streams to be sent on unique ports.</dd></dl>
  
 
  Example command lines follow. 
 
- To broadcast a stream on the local subnet, for watching in <font SIZE="-1">VLC:</font> 
+ To broadcast a stream on the local subnet, for watching in VLC: 
 
  <pre>
         ffmpeg -re -i &lt;input&gt; -f sap <a HREF="sap://224.0.0.255?same_port=1">sap://224.0.0.255?same_port=1</a>
@@ -11013,7 +11013,7 @@ sap: //&lt;destination&gt;[:&lt;port&gt;][?&lt;options&gt;]
 
  <i>Demuxer</i> 
 
- The syntax for a <font SIZE="-1">SAP</font> url given to the demuxer is: 
+ The syntax for a SAP url given to the demuxer is: 
 
  
 sap: //[&lt;address&gt;][:&lt;port&gt;]
@@ -11025,13 +11025,13 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 
  Example command lines follow. 
 
- To play back the first stream announced on the normal <font SIZE="-1">SAP</font> multicast address: 
+ To play back the first stream announced on the normal SAP multicast address: 
 
  <pre>
         ffplay sap://
 </pre> 
 
- To play back the first stream announced on one the default IPv6 <font SIZE="-1">SAP</font> multicast address: 
+ To play back the first stream announced on one the default IPv6 SAP multicast address: 
 
  <pre>
         ffplay <a HREF="sap://[ff0e::2:7ffe]">sap://[ff0e::2:7ffe]</a>
@@ -11041,7 +11041,7 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 
  Stream Control Transmission Protocol. 
 
- The accepted <font SIZE="-1">URL</font> syntax is: 
+ The accepted URL syntax is: 
 
  <pre>
         sctp://&lt;host&gt;:&lt;port&gt;[?&lt;options&gt;]
@@ -11058,7 +11058,7 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 
  Haivision Secure Reliable Transport Protocol via libsrt. 
 
- The supported syntax for a <font SIZE="-1">SRT URL</font> is: 
+ The supported syntax for a SRT URL is: 
 
  <pre>
         srt://&lt;hostname&gt;:&lt;port&gt;[?&lt;options&gt;]
@@ -11077,31 +11077,31 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
  This protocol accepts the following options.
 <dl>
 <dt><b>connect_timeout=</b><i>milliseconds</i>
-</dt><dd> Connection timeout; <font SIZE="-1">SRT</font> cannot connect for <font SIZE="-1">RTT</font> &gt; 1500 msec (2 handshake exchanges) with the default connect timeout of 3 seconds. This option applies to the caller and rendezvous connection modes. The connect timeout is 10 times the value set for the rendezvous mode (which can be used as a workaround for this connection problem with earlier versions).
+</dt><dd> Connection timeout; SRT cannot connect for RTT &gt; 1500 msec (2 handshake exchanges) with the default connect timeout of 3 seconds. This option applies to the caller and rendezvous connection modes. The connect timeout is 10 times the value set for the rendezvous mode (which can be used as a workaround for this connection problem with earlier versions).
 </dd><dt><b>ffs=</b><i>bytes</i>
-</dt><dd> Flight Flag Size (Window Size), in bytes. <font SIZE="-1">FFS</font> is actually an internal parameter and you should set it to not less than <b>recv_buffer_size</b> and <b>mss</b>. The default value is relatively large, therefore unless you set a very large receiver buffer, you do not need to change this option. Default value is 25600.
+</dt><dd> Flight Flag Size (Window Size), in bytes. FFS is actually an internal parameter and you should set it to not less than <b>recv_buffer_size</b> and <b>mss</b>. The default value is relatively large, therefore unless you set a very large receiver buffer, you do not need to change this option. Default value is 25600.
 </dd><dt><b>inputbw=</b><i>bytes/seconds</i>
 </dt><dd> Sender nominal input rate, in bytes per seconds. Used along with <b>oheadbw</b>, when <b>maxbw</b> is set to relative (0), to calculate maximum sending rate when recovery packets are sent along with the main media stream: <b>inputbw</b> * (100 + <b>oheadbw</b>) / 100 if <b>inputbw</b> is not set while <b>maxbw</b> is set to relative (0), the actual input rate is evaluated inside the library. Default value is 0.
 </dd><dt><b>iptos=</b><i>tos</i>
-</dt><dd> <font SIZE="-1">IP</font> Type of Service. Applies to sender only. Default value is 0xB8.
+</dt><dd> IP Type of Service. Applies to sender only. Default value is 0xB8.
 </dd><dt><b>ipttl=</b><i>ttl</i>
-</dt><dd> <font SIZE="-1">IP</font> Time To Live. Applies to sender only. Default value is 64.
+</dt><dd> IP Time To Live. Applies to sender only. Default value is 64.
 </dd><dt><b>latency=</b><i>microseconds</i>
 </dt><dd> Timestamp-based Packet Delivery Delay. Used to absorb bursts of missed packet retransmissions. This flag sets both <b>rcvlatency</b> and <b>peerlatency</b> to the same value. Note that prior to version 1.3.0 this is the only flag to set the latency, however this is effectively equivalent to setting <b>peerlatency</b>, when side is sender and <b>rcvlatency</b> when side is receiver, and the bidirectional stream sending is not supported.
 </dd><dt><b>listen_timeout=</b><i>microseconds</i>
 </dt><dd> Set socket listen timeout.
 </dd><dt><b>maxbw=</b><i>bytes/seconds</i>
-</dt><dd> Maximum sending bandwidth, in bytes per seconds. -1 infinite (<font SIZE="-1">CSRTCC</font> limit is 30mbps) 0 relative to input rate (see <b>inputbw</b>) &gt;0 absolute limit value Default value is 0 (relative)
+</dt><dd> Maximum sending bandwidth, in bytes per seconds. -1 infinite (CSRTCC limit is 30mbps) 0 relative to input rate (see <b>inputbw</b>) &gt;0 absolute limit value Default value is 0 (relative)
 </dd><dt><b>mode=</b><i>caller|listener|rendezvous</i>
 </dt><dd> Connection mode. <b>caller</b> opens client connection. <b>listener</b> starts server to listen for incoming connections. <b>rendezvous</b> use Rendez-Vous connection mode. Default value is caller.
 </dd><dt><b>mss=</b><i>bytes</i>
-</dt><dd> Maximum Segment Size, in bytes. Used for buffer allocation and rate calculation using a packet counter assuming fully filled packets. The smallest <font SIZE="-1">MSS</font> between the peers is used. This is 1500 by default in the overall internet. This is the maximum size of the <font SIZE="-1">UDP</font> packet and can be only decreased, unless you have some unusual dedicated network settings. Default value is 1500.
+</dt><dd> Maximum Segment Size, in bytes. Used for buffer allocation and rate calculation using a packet counter assuming fully filled packets. The smallest MSS between the peers is used. This is 1500 by default in the overall internet. This is the maximum size of the UDP packet and can be only decreased, unless you have some unusual dedicated network settings. Default value is 1500.
 </dd><dt><b>nakreport=</b><i>1|0</i>
 </dt><dd> If set to 1, Receiver will send `UMSG_LOSSREPORT` messages periodically until a lost packet is retransmitted or intentionally dropped. Default value is 1.
 </dd><dt><b>oheadbw=</b><i>percents</i>
 </dt><dd> Recovery bandwidth overhead above input rate, in percents. See <b>inputbw</b>. Default value is 25%.
 </dd><dt><b>passphrase=</b><i>string</i>
-</dt><dd> HaiCrypt Encryption/Decryption Passphrase string, length from 10 to 79 characters. The passphrase is the shared secret between the sender and the receiver. It is used to generate the Key Encrypting Key using <font SIZE="-1">PBKDF2</font> (Password-Based Key Derivation Function). It is used only if <b>pbkeylen</b> is non-zero. It is used on the receiver only if the received data is encrypted. The configured passphrase cannot be recovered (write-only).
+</dt><dd> HaiCrypt Encryption/Decryption Passphrase string, length from 10 to 79 characters. The passphrase is the shared secret between the sender and the receiver. It is used to generate the Key Encrypting Key using PBKDF2 (Password-Based Key Derivation Function). It is used only if <b>pbkeylen</b> is non-zero. It is used on the receiver only if the received data is encrypted. The configured passphrase cannot be recovered (write-only).
 </dd><dt><b>enforced_encryption=</b><i>1|0</i>
 </dt><dd> If true, both connection parties must have the same password set (including empty, that is, with no encryption). If the password doesn't match or only one side is unencrypted, the connection is rejected. Default is true.
 </dd><dt><b>kmrefreshrate=</b><i>packets</i>
@@ -11109,7 +11109,7 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 </dd><dt><b>kmpreannounce=</b><i>packets</i>
 </dt><dd> The interval between when a new encryption key is sent and when switchover occurs. This value also applies to the subsequent interval between when switchover occurs and when the old encryption key is decommissioned. Default is -1. -1 means auto (0x1000 in srt library). The range for this option is integers in the 0 - <tt>&quot;INT_MAX&quot;</tt>.
 </dd><dt><b>payload_size=</b><i>bytes</i>
-</dt><dd> Sets the maximum declared size of a packet transferred during the single call to the sending function in Live mode. Use 0 if this value isn't used (which is default in file mode). Default is -1 (automatic), which typically means MPEG-TS; if you are going to use <font SIZE="-1">SRT</font> to send any different kind of payload, such as, for example, wrapping a live stream in very small frames, then you can use a bigger maximum frame size, though not greater than 1456 bytes.
+</dt><dd> Sets the maximum declared size of a packet transferred during the single call to the sending function in Live mode. Use 0 if this value isn't used (which is default in file mode). Default is -1 (automatic), which typically means MPEG-TS; if you are going to use SRT to send any different kind of payload, such as, for example, wrapping a live stream in very small frames, then you can use a bigger maximum frame size, though not greater than 1456 bytes.
 </dd><dt><b>pkt_size=</b><i>bytes</i>
 </dt><dd> Alias for <b>payload_size</b>.
 </dd><dt><b>peerlatency=</b><i>microseconds</i>
@@ -11117,36 +11117,36 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 </dd><dt><b>pbkeylen=</b><i>bytes</i>
 </dt><dd> Sender encryption key length, in bytes. Only can be set to 0, 16, 24 and 32. Enable sender encryption if not 0. Not required on receiver (set to 0), key size obtained from sender in HaiCrypt handshake. Default value is 0.
 </dd><dt><b>rcvlatency=</b><i>microseconds</i>
-</dt><dd> The time that should elapse since the moment when the packet was sent and the moment when it's delivered to the receiver application in the receiving function. This time should be a buffer time large enough to cover the time spent for sending, unexpectedly extended <font SIZE="-1">RTT</font> time, and the time needed to retransmit the lost <font SIZE="-1">UDP</font> packet. The effective latency value will be the maximum of this options' value and the value of <b>peerlatency</b> set by the peer side. Before version 1.3.0 this option is only available as <b>latency</b>.
+</dt><dd> The time that should elapse since the moment when the packet was sent and the moment when it's delivered to the receiver application in the receiving function. This time should be a buffer time large enough to cover the time spent for sending, unexpectedly extended RTT time, and the time needed to retransmit the lost UDP packet. The effective latency value will be the maximum of this options' value and the value of <b>peerlatency</b> set by the peer side. Before version 1.3.0 this option is only available as <b>latency</b>.
 </dd><dt><b>recv_buffer_size=</b><i>bytes</i>
-</dt><dd> Set <font SIZE="-1">UDP</font> receive buffer size, expressed in bytes.
+</dt><dd> Set UDP receive buffer size, expressed in bytes.
 </dd><dt><b>send_buffer_size=</b><i>bytes</i>
-</dt><dd> Set <font SIZE="-1">UDP</font> send buffer size, expressed in bytes.
+</dt><dd> Set UDP send buffer size, expressed in bytes.
 </dd><dt><b>timeout=</b><i>microseconds</i>
-</dt><dd> Set raise error timeouts for read, write and connect operations. Note that the <font SIZE="-1">SRT</font> library has internal timeouts which can be controlled separately, the value set here is only a cap on those.
+</dt><dd> Set raise error timeouts for read, write and connect operations. Note that the SRT library has internal timeouts which can be controlled separately, the value set here is only a cap on those.
 </dd><dt><b>tlpktdrop=</b><i>1|0</i>
-</dt><dd> Too-late Packet Drop. When enabled on receiver, it skips missing packets that have not been delivered in time and delivers the following packets to the application when their time-to-play has come. It also sends a fake <font SIZE="-1">ACK</font> to the sender. When enabled on sender and enabled on the receiving peer, the sender drops the older packets that have no chance of being delivered in time. It was automatically enabled in the sender if the receiver supports it.
+</dt><dd> Too-late Packet Drop. When enabled on receiver, it skips missing packets that have not been delivered in time and delivers the following packets to the application when their time-to-play has come. It also sends a fake ACK to the sender. When enabled on sender and enabled on the receiving peer, the sender drops the older packets that have no chance of being delivered in time. It was automatically enabled in the sender if the receiver supports it.
 </dd><dt><b>sndbuf=</b><i>bytes</i>
 </dt><dd> Set send buffer size, expressed in bytes.
 </dd><dt><b>rcvbuf=</b><i>bytes</i>
 </dt><dd> Set receive buffer size, expressed in bytes. 
  Receive buffer must not be greater than <b>ffs</b>.
 </dd><dt><b>lossmaxttl=</b><i>packets</i>
-</dt><dd> The value up to which the Reorder Tolerance may grow. When Reorder Tolerance is &gt; 0, then packet loss report is delayed until that number of packets come in. Reorder Tolerance increases every time a ``belated'' packet has come, but it wasn't due to retransmission (that is, when <font SIZE="-1">UDP</font> packets tend to come out of order), with the difference between the latest sequence and this packet's sequence, and not more than the value of this option. By default it's 0, which means that this mechanism is turned off, and the loss report is always sent immediately upon experiencing a ``gap'' in sequences.
+</dt><dd> The value up to which the Reorder Tolerance may grow. When Reorder Tolerance is &gt; 0, then packet loss report is delayed until that number of packets come in. Reorder Tolerance increases every time a ``belated'' packet has come, but it wasn't due to retransmission (that is, when UDP packets tend to come out of order), with the difference between the latest sequence and this packet's sequence, and not more than the value of this option. By default it's 0, which means that this mechanism is turned off, and the loss report is always sent immediately upon experiencing a ``gap'' in sequences.
 </dd><dt><b>minversion</b>
-</dt><dd> The minimum <font SIZE="-1">SRT</font> version that is required from the peer. A connection to a peer that does not satisfy the minimum version requirement will be rejected. 
+</dt><dd> The minimum SRT version that is required from the peer. A connection to a peer that does not satisfy the minimum version requirement will be rejected. 
  The version format in hex is 0xXXYYZZ for x.y.z in human readable form.
 </dd><dt><b>streamid=</b><i>string</i>
-</dt><dd> A string limited to 512 characters that can be set on the socket prior to connecting. This stream <font SIZE="-1">ID</font> will be able to be retrieved by the listener side from the socket that is returned from srt_accept and was connected by a socket with that set stream <font SIZE="-1">ID. SRT</font> does not enforce any special interpretation of the contents of this string. This option doesnXt make sense in Rendezvous connection; the result might be that simply one side will override the value from the other side and itXs the matter of luck which one would win
+</dt><dd> A string limited to 512 characters that can be set on the socket prior to connecting. This stream ID will be able to be retrieved by the listener side from the socket that is returned from srt_accept and was connected by a socket with that set stream ID. SRT does not enforce any special interpretation of the contents of this string. This option doesnXt make sense in Rendezvous connection; the result might be that simply one side will override the value from the other side and itXs the matter of luck which one would win
 </dd><dt><b>smoother=</b><i>live|file</i>
 </dt><dd> The type of Smoother used for the transmission for that socket, which is responsible for the transmission and congestion control. The Smoother type must be exactly the same on both connecting parties, otherwise the connection is rejected.
 </dd><dt><b>messageapi=</b><i>1|0</i>
-</dt><dd> When set, this socket uses the Message <font SIZE="-1">API,</font> otherwise it uses Buffer <font SIZE="-1">API.</font> Note that in live mode (see <b>transtype</b>) thereXs only message <font SIZE="-1">API</font> available. In File mode you can chose to use one of two modes: 
- Stream <font SIZE="-1">API</font> (default, when this option is false). In this mode you may send as many data as you wish with one sending instruction, or even use dedicated functions that read directly from a file. The internal facility will take care of any speed and congestion control. When receiving, you can also receive as many data as desired, the data not extracted will be waiting for the next call. There is no boundary between data portions in the Stream mode. 
- Message <font SIZE="-1">API.</font> In this mode your single sending instruction passes exactly one piece of data that has boundaries (a message). Contrary to Live mode, this message may span across multiple <font SIZE="-1">UDP</font> packets and the only size limitation is that it shall fit as a whole in the sending buffer. The receiver shall use as large buffer as necessary to receive the message, otherwise the message will not be given up. When the message is not complete (not all packets received or there was a packet loss) it will not be given up.
+</dt><dd> When set, this socket uses the Message API, otherwise it uses Buffer API. Note that in live mode (see <b>transtype</b>) thereXs only message API available. In File mode you can chose to use one of two modes: 
+ Stream API (default, when this option is false). In this mode you may send as many data as you wish with one sending instruction, or even use dedicated functions that read directly from a file. The internal facility will take care of any speed and congestion control. When receiving, you can also receive as many data as desired, the data not extracted will be waiting for the next call. There is no boundary between data portions in the Stream mode. 
+ Message API. In this mode your single sending instruction passes exactly one piece of data that has boundaries (a message). Contrary to Live mode, this message may span across multiple UDP packets and the only size limitation is that it shall fit as a whole in the sending buffer. The receiver shall use as large buffer as necessary to receive the message, otherwise the message will not be given up. When the message is not complete (not all packets received or there was a packet loss) it will not be given up.
 </dd><dt><b>transtype=</b><i>live|file</i>
 </dt><dd> Sets the transmission type for the socket, in particular, setting this option sets multiple other parameters to their default values as required for a particular transmission type. 
- live: Set options as for live transmission. In this mode, you should send by one sending instruction only so many data that fit in one <font SIZE="-1">UDP</font> packet, and limited to the value defined first in <b>payload_size</b> (1316 is default in this mode). There is no speed control in this mode, only the bandwidth control, if configured, in order to not exceed the bandwidth with the overhead transmission (retransmitted and control packets). 
+ live: Set options as for live transmission. In this mode, you should send by one sending instruction only so many data that fit in one UDP packet, and limited to the value defined first in <b>payload_size</b> (1316 is default in this mode). There is no speed control in this mode, only the bandwidth control, if configured, in order to not exceed the bandwidth with the overhead transmission (retransmitted and control packets). 
  file: Set options as for non-live transmission. See <b>messageapi</b> for further explanations
 </dd><dt><b>linger=</b><i>seconds</i>
 </dt><dd> The number of seconds that the socket waits for unsent data when closing. Default is -1. -1 means auto (off with 0 seconds in live mode, on with 180 seconds in file mode). The range for this option is integers in the 0 - <tt>&quot;INT_MAX&quot;</tt>.</dd></dl>
@@ -11167,13 +11167,13 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
  Supported values:
 </dd><dl>
 <dl>
-<dt><font SIZE="-1"><b>AES_CM_128_HMAC_SHA1_80</b></font>
+<dt><b>AES_CM_128_HMAC_SHA1_80</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SRTP_AES128_CM_HMAC_SHA1_80</b></font>
+</dd><dt><b>SRTP_AES128_CM_HMAC_SHA1_80</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>AES_CM_128_HMAC_SHA1_32</b></font>
+</dd><dt><b>AES_CM_128_HMAC_SHA1_32</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SRTP_AES128_CM_HMAC_SHA1_32</b></font>
+</dd><dt><b>SRTP_AES128_CM_HMAC_SHA1_32</b>
 </dt><dd></dd></dl>
 </dl>
 
@@ -11199,13 +11199,13 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 
  Examples: 
 
- Extract a chapter from a <font SIZE="-1">DVD VOB</font> file (start and end sectors obtained externally and multiplied by 2048): 
+ Extract a chapter from a DVD VOB file (start and end sectors obtained externally and multiplied by 2048): 
 
  <pre>
         subfile,,start,153391104,end,268142592,,:/media/dvd/VIDEO_TS/VTS_08_1.VOB
 </pre> 
 
- Play an <font SIZE="-1">AVI</font> file directly from a <font SIZE="-1">TAR</font> archive: 
+ Play an AVI file directly from a TAR archive: 
 
  <pre>
         subfile,,start,183241728,end,366490624,,:archive.tar
@@ -11229,7 +11229,7 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 
  Transmission Control Protocol. 
 
- The required syntax for a <font SIZE="-1">TCP</font> url is: 
+ The required syntax for a TCP url is: 
 
  <pre>
         tcp://&lt;hostname&gt;:&lt;port&gt;[?&lt;options&gt;]
@@ -11251,12 +11251,12 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 </dd><dt><b>send_buffer_size=</b><i>bytes</i>
 </dt><dd> Set send buffer size, expressed bytes.
 </dd><dt><b>tcp_nodelay=</b><i>1|0</i>
-</dt><dd> Set <font SIZE="-1">TCP_NODELAY</font> to disable Nagle's algorithm. Default value is 0.
+</dt><dd> Set TCP_NODELAY to disable Nagle's algorithm. Default value is 0.
 </dd><dt><b>tcp_mss=</b><i>bytes</i>
-</dt><dd> Set maximum segment size for outgoing <font SIZE="-1">TCP</font> packets, expressed in bytes.</dd></dl>
+</dt><dd> Set maximum segment size for outgoing TCP packets, expressed in bytes.</dd></dl>
  
 
- The following example shows how to setup a listening <font SIZE="-1">TCP</font> connection with <b>ffmpeg</b>, which is then accessed with <b>ffplay</b>: 
+ The following example shows how to setup a listening TCP connection with <b>ffmpeg</b>, which is then accessed with <b>ffplay</b>: 
 
  <pre>
         ffmpeg -i &lt;input&gt; -f &lt;format&gt; tcp://&lt;hostname&gt;:&lt;port&gt;?listen
@@ -11265,9 +11265,9 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 
 <h3>tls</h3>
 
- Transport Layer Security (<font SIZE="-1">TLS</font>) / Secure Sockets Layer (<font SIZE="-1">SSL</font>) 
+ Transport Layer Security (TLS) / Secure Sockets Layer (SSL) 
 
- The required syntax for a <font SIZE="-1">TLS/SSL</font> url is: 
+ The required syntax for a TLS/SSL url is: 
 
  <pre>
         tls://&lt;hostname&gt;:&lt;port&gt;[?&lt;options&gt;]
@@ -11276,10 +11276,10 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
  The following parameters can be set via command line options (or in code via <tt>&quot;AVOption&quot;</tt>s):
 <dl>
 <dt><b>ca_file, cafile=</b><i>filename</i>
-</dt><dd> A file containing certificate authority (<font SIZE="-1">CA</font>) root certificates to treat as trusted. If the linked <font SIZE="-1">TLS</font> library contains a default this might not need to be specified for verification to work, but not all libraries and setups have defaults built in. The file must be in OpenSSL <font SIZE="-1">PEM</font> format.
+</dt><dd> A file containing certificate authority (CA) root certificates to treat as trusted. If the linked TLS library contains a default this might not need to be specified for verification to work, but not all libraries and setups have defaults built in. The file must be in OpenSSL PEM format.
 </dd><dt><b>tls_verify=</b><i>1|0</i>
-</dt><dd> If enabled, try to verify the peer that we are communicating with. Note, if using OpenSSL, this currently only makes sure that the peer certificate is signed by one of the root certificates in the <font SIZE="-1">CA</font> database, but it does not validate that the certificate actually matches the host name we are trying to connect to. (With other backends, the host name is validated as well.) 
- This is disabled by default since it requires a <font SIZE="-1">CA</font> database to be provided by the caller in many cases.
+</dt><dd> If enabled, try to verify the peer that we are communicating with. Note, if using OpenSSL, this currently only makes sure that the peer certificate is signed by one of the root certificates in the CA database, but it does not validate that the certificate actually matches the host name we are trying to connect to. (With other backends, the host name is validated as well.) 
+ This is disabled by default since it requires a CA database to be provided by the caller in many cases.
 </dd><dt><b>cert_file, cert=</b><i>filename</i>
 </dt><dd> A file containing a certificate to use in the handshake with the peer. (When operating as server, in listen mode, this is more often required by the peer, while client certificates only are mandated in certain setups.)
 </dd><dt><b>key_file, key=</b><i>filename</i>
@@ -11287,18 +11287,18 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 </dd><dt><b>listen=</b><i>1|0</i>
 </dt><dd> If enabled, listen for connections on the provided port, and assume the server role in the handshake instead of the client role.
 </dd><dt><b>http_proxy</b>
-</dt><dd> The <font SIZE="-1">HTTP</font> proxy to tunnel through, e.g. <tt>&quot;<a rel="nofollow" HREF="http://example.com:1234">http://example.com:1234</a>&quot;</tt>. The proxy must support the <font SIZE="-1">CONNECT</font> method.</dd></dl>
+</dt><dd> The HTTP proxy to tunnel through, e.g. <tt>&quot;<a rel="nofollow" HREF="http://example.com:1234">http://example.com:1234</a>&quot;</tt>. The proxy must support the CONNECT method.</dd></dl>
  
 
  Example command lines: 
 
- To create a <font SIZE="-1">TLS/SSL</font> server that serves an input stream. 
+ To create a TLS/SSL server that serves an input stream. 
 
  <pre>
         ffmpeg -i &lt;input&gt; -f &lt;format&gt; tls://&lt;hostname&gt;:&lt;port&gt;?listen&amp;cert=&lt;server.crt&gt;&amp;key=&lt;server.key&gt;
 </pre> 
 
- To play back a stream from the <font SIZE="-1">TLS/SSL</font> server using <b>ffplay</b>: 
+ To play back a stream from the TLS/SSL server using <b>ffplay</b>: 
 
  <pre>
         ffplay tls://&lt;hostname&gt;:&lt;port&gt;
@@ -11308,7 +11308,7 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 
  User Datagram Protocol. 
 
- The required syntax for an <font SIZE="-1">UDP URL</font> is: 
+ The required syntax for an UDP URL is: 
 
  <pre>
         udp://&lt;hostname&gt;:&lt;port&gt;[?&lt;options&gt;]
@@ -11316,58 +11316,58 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 
  <i>options</i> contains a list of &amp;-separated options of the form <i>key</i>=<i>val</i>. 
 
- In case threading is enabled on the system, a circular buffer is used to store the incoming data, which allows one to reduce loss of data due to <font SIZE="-1">UDP</font> socket buffer overruns. The <i>fifo_size</i> and <i>overrun_nonfatal</i> options are related to this buffer. 
+ In case threading is enabled on the system, a circular buffer is used to store the incoming data, which allows one to reduce loss of data due to UDP socket buffer overruns. The <i>fifo_size</i> and <i>overrun_nonfatal</i> options are related to this buffer. 
 
  The list of supported options follows.
 <dl>
 <dt><b>buffer_size=</b><i>size</i>
-</dt><dd> Set the <font SIZE="-1">UDP</font> maximum socket buffer size in bytes. This is used to set either the receive or send buffer size, depending on what the socket is used for. Default is 32 <font SIZE="-1">KB</font> for output, 384 <font SIZE="-1">KB</font> for input. See also <i>fifo_size</i>.
+</dt><dd> Set the UDP maximum socket buffer size in bytes. This is used to set either the receive or send buffer size, depending on what the socket is used for. Default is 32 KB for output, 384 KB for input. See also <i>fifo_size</i>.
 </dd><dt><b>bitrate=</b><i>bitrate</i>
 </dt><dd> If set to nonzero, the output will have the specified constant bitrate if the input has enough packets to sustain it.
 </dd><dt><b>burst_bits=</b><i>bits</i>
 </dt><dd> When using <i>bitrate</i> this specifies the maximum number of bits in packet bursts.
 </dd><dt><b>localport=</b><i>port</i>
-</dt><dd> Override the local <font SIZE="-1">UDP</font> port to bind with.
+</dt><dd> Override the local UDP port to bind with.
 </dd><dt><b>localaddr=</b><i>addr</i>
-</dt><dd> Local <font SIZE="-1">IP</font> address of a network interface used for sending packets or joining multicast groups.
+</dt><dd> Local IP address of a network interface used for sending packets or joining multicast groups.
 </dd><dt><b>pkt_size=</b><i>size</i>
-</dt><dd> Set the size in bytes of <font SIZE="-1">UDP</font> packets.
+</dt><dd> Set the size in bytes of UDP packets.
 </dd><dt><b>reuse=</b><i>1|0</i>
-</dt><dd> Explicitly allow or disallow reusing <font SIZE="-1">UDP</font> sockets.
+</dt><dd> Explicitly allow or disallow reusing UDP sockets.
 </dd><dt><b>ttl=</b><i>ttl</i>
 </dt><dd> Set the time to live value (for multicast only).
 </dd><dt><b>connect=</b><i>1|0</i>
-</dt><dd> Initialize the <font SIZE="-1">UDP</font> socket with <tt>&quot;connect()&quot;</tt>. In this case, the destination address can't be changed with ff_udp_set_remote_url later. If the destination address isn't known at the start, this option can be specified in ff_udp_set_remote_url, too. This allows finding out the source address for the packets with getsockname, and makes writes return with <font SIZE="-1">AVERROR</font>(<font SIZE="-1">ECONNREFUSED</font>) if ``destination unreachable'' is received. For receiving, this gives the benefit of only receiving packets from the specified peer address/port.
+</dt><dd> Initialize the UDP socket with <tt>&quot;connect()&quot;</tt>. In this case, the destination address can't be changed with ff_udp_set_remote_url later. If the destination address isn't known at the start, this option can be specified in ff_udp_set_remote_url, too. This allows finding out the source address for the packets with getsockname, and makes writes return with AVERROR(ECONNREFUSED) if ``destination unreachable'' is received. For receiving, this gives the benefit of only receiving packets from the specified peer address/port.
 </dd><dt><b>sources=</b><i>address</i><b>[,</b><i>address</i><b>]</b>
 </dt><dd> Only receive packets sent from the specified addresses. In case of multicast, also subscribe to multicast traffic coming from these addresses only.
 </dd><dt><b>block=</b><i>address</i><b>[,</b><i>address</i><b>]</b>
 </dt><dd> Ignore packets sent from the specified addresses. In case of multicast, also exclude the source addresses in the multicast subscription.
 </dd><dt><b>fifo_size=</b><i>units</i>
-</dt><dd> Set the <font SIZE="-1">UDP</font> receiving circular buffer size, expressed as a number of packets with size of 188 bytes. If not specified defaults to 7*4096.
+</dt><dd> Set the UDP receiving circular buffer size, expressed as a number of packets with size of 188 bytes. If not specified defaults to 7*4096.
 </dd><dt><b>overrun_nonfatal=</b><i>1|0</i>
-</dt><dd> Survive in case of <font SIZE="-1">UDP</font> receiving circular buffer overrun. Default value is 0.
+</dt><dd> Survive in case of UDP receiving circular buffer overrun. Default value is 0.
 </dd><dt><b>timeout=</b><i>microseconds</i>
 </dt><dd> Set raise error timeout, expressed in microseconds. 
  This option is only relevant in read mode: if no data arrived in more than this time interval, raise error.
 </dd><dt><b>broadcast=</b><i>1|0</i>
-</dt><dd> Explicitly allow or disallow <font SIZE="-1">UDP</font> broadcasting. 
+</dt><dd> Explicitly allow or disallow UDP broadcasting. 
  Note that broadcasting may not work properly on networks having a broadcast storm protection.</dd></dl>
  
 
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Use <b>ffmpeg</b> to stream over <font SIZE="-1">UDP</font> to a remote endpoint: 
+</dt><dd> Use <b>ffmpeg</b> to stream over UDP to a remote endpoint: 
  <pre>
         ffmpeg -i &lt;input&gt; -f &lt;format&gt; udp://&lt;hostname&gt;:&lt;port&gt;
 </pre>
 </dd><dt>&bull;
-</dt><dd> Use <b>ffmpeg</b> to stream in mpegts format over <font SIZE="-1">UDP</font> using 188 sized <font SIZE="-1">UDP</font> packets, using a large input buffer: 
+</dt><dd> Use <b>ffmpeg</b> to stream in mpegts format over UDP using 188 sized UDP packets, using a large input buffer: 
  <pre>
         ffmpeg -i &lt;input&gt; -f mpegts udp://&lt;hostname&gt;:&lt;port&gt;?pkt_size=188&amp;buffer_size=65535
 </pre>
 </dd><dt>&bull;
-</dt><dd> Use <b>ffmpeg</b> to receive over <font SIZE="-1">UDP</font> from a remote endpoint: 
+</dt><dd> Use <b>ffmpeg</b> to receive over UDP from a remote endpoint: 
  <pre>
         ffmpeg -i <a HREF="udp://[">udp://[</a>&lt;multicast-address&gt;]:&lt;port&gt; ...
 </pre></dd></dl>
@@ -11376,7 +11376,7 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 
  Unix local socket 
 
- The required syntax for a Unix socket <font SIZE="-1">URL</font> is: 
+ The required syntax for a Unix socket URL is: 
 
  <pre>
         unix://&lt;filepath&gt;
@@ -11413,7 +11413,7 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
         ffplay zmq:<a HREF="tcp://127.0.0.1:5555">tcp://127.0.0.1:5555</a>
 </pre> 
 
- Streaming to multiple clients is implemented using a ZeroMQ Pub-Sub pattern. The server side binds to a port and publishes data. Clients connect to the server (via <font SIZE="-1">IP</font> address/port) and subscribe to the stream. The order in which the server and client start generally does not matter. 
+ Streaming to multiple clients is implemented using a ZeroMQ Pub-Sub pattern. The server side binds to a port and publishes data. Clients connect to the server (via IP address/port) and subscribe to the stream. The order in which the server and client start generally does not matter. 
 
  ffmpeg must be compiled with the --enable-libzmq option to support this protocol. 
 
@@ -11428,7 +11428,7 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 
  In addition each input or output device may support so-called private options, which are specific for that component. 
 
- Options may be set by specifying -<i>option</i> <i>value</i> in the FFmpeg tools, or by setting the value explicitly in the device <tt>&quot;AVFormatContext&quot;</tt> options or using the <i>libavutil/opt.h</i> <font SIZE="-1">API</font> for programmatic use.
+ Options may be set by specifying -<i>option</i> <i>value</i> in the FFmpeg tools, or by setting the value explicitly in the device <tt>&quot;AVFormatContext&quot;</tt> options or using the <i>libavutil/opt.h</i> API for programmatic use.
 
 <h2>INPUT DEVICES</h2>
 
@@ -11436,7 +11436,7 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 
  When you configure your FFmpeg build, all the supported input devices are enabled by default. You can list all available ones using the configure option ``--list-indevs''. 
 
- You can disable all the input devices using the configure option ``--disable-indevs'', and selectively enable an input device using the option &quot;--enable-indev=<i></i><font SIZE="-1"><i>INDEV</i></font><i></i>``, or you can disable a particular input device using the option ''--disable-indev=<i></i><font SIZE="-1"><i>INDEV</i></font><i></i>&quot;. 
+ You can disable all the input devices using the configure option ``--disable-indevs'', and selectively enable an input device using the option &quot;--enable-indev=<i></i><i>INDEV</i><i></i>``, or you can disable a particular input device using the option ''--disable-indev=<i></i><i>INDEV</i><i></i>&quot;. 
 
  The option ``-devices'' of the ff* tools will display the list of supported input devices. 
 
@@ -11444,25 +11444,25 @@ sap: //[&lt;address&gt;][:&lt;port&gt;]
 
 <h3>alsa</h3>
 
- <font SIZE="-1">ALSA</font> (Advanced Linux Sound Architecture) input device. 
+ ALSA (Advanced Linux Sound Architecture) input device. 
 
  To enable this input device during configuration you need libasound installed on your system. 
 
- This device allows capturing from an <font SIZE="-1">ALSA</font> device. The name of the device to capture has to be an <font SIZE="-1">ALSA</font> card identifier. 
+ This device allows capturing from an ALSA device. The name of the device to capture has to be an ALSA card identifier. 
 
- An <font SIZE="-1">ALSA</font> identifier has the syntax: 
+ An ALSA identifier has the syntax: 
 
  
 hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
  
 
- where the <i></i><font SIZE="-1"><i>DEV</i></font><i></i> and <i></i><font SIZE="-1"><i>SUBDEV</i></font><i></i> components are optional. 
+ where the <i></i><i>DEV</i><i></i> and <i></i><i>SUBDEV</i><i></i> components are optional. 
 
- The three arguments (in order: <i></i><font SIZE="-1"><i>CARD</i></font><i></i>,<i></i><font SIZE="-1"><i>DEV</i></font><i></i>,<i></i><font SIZE="-1"><i>SUBDEV</i></font><i></i>) specify card number or identifier, device number and subdevice number (-1 means any). 
+ The three arguments (in order: <i></i><i>CARD</i><i></i>,<i></i><i>DEV</i><i></i>,<i></i><i>SUBDEV</i><i></i>) specify card number or identifier, device number and subdevice number (-1 means any). 
 
  To see the list of cards currently recognized by your system check the files <i>/proc/asound/cards</i> and <i>/proc/asound/devices</i>. 
 
- For example to capture with <b>ffmpeg</b> from an <font SIZE="-1">ALSA</font> device with card id 0, you may run the command: 
+ For example to capture with <b>ffmpeg</b> from an ALSA device with card id 0, you may run the command: 
 
  <pre>
         ffmpeg -f alsa -i hw:0 alsaout.wav
@@ -11481,9 +11481,9 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 
  Android camera input device. 
 
- This input devices uses the Android Camera2 <font SIZE="-1">NDK API</font> which is available on devices with <font SIZE="-1">API</font> level 24+. The availability of android_camera is autodetected during configuration. 
+ This input devices uses the Android Camera2 NDK API which is available on devices with API level 24+. The availability of android_camera is autodetected during configuration. 
 
- This device allows capturing from all cameras on an Android device, which are integrated into the Camera2 <font SIZE="-1">NDK API.</font> 
+ This device allows capturing from all cameras on an Android device, which are integrated into the Camera2 NDK API. 
 
  The available cameras are enumerated internally and can be selected with the <i>camera_index</i> parameter. The input file string is discarded. 
 
@@ -11504,7 +11504,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 
  AVFoundation input device. 
 
- AVFoundation is the currently recommended framework by Apple for streamgrabbing on <font SIZE="-1">OSX</font> &gt;= 10.7 as well as on iOS. 
+ AVFoundation is the currently recommended framework by Apple for streamgrabbing on OSX &gt;= 10.7 as well as on iOS. 
 
  The input filename has to be given in the following syntax: 
 
@@ -11542,11 +11542,11 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dl>
 <dt><b>-list_devices &lt;TRUE|FALSE&gt;</b>
 </dt><dd> If set to true, a list of all available input devices is given showing all device names and indices.
-</dd><dt><b>-video_device_index &lt;</b><font SIZE="-1"><b>INDEX</b></font><b>&gt;</b>
+</dd><dt><b>-video_device_index &lt;</b><b>INDEX</b><b>&gt;</b>
 </dt><dd> Specify the video device by its index. Overrides anything given in the input filename.
-</dd><dt><b>-audio_device_index &lt;</b><font SIZE="-1"><b>INDEX</b></font><b>&gt;</b>
+</dd><dt><b>-audio_device_index &lt;</b><b>INDEX</b><b>&gt;</b>
 </dt><dd> Specify the audio device by its index. Overrides anything given in the input filename.
-</dd><dt><b>-pixel_format &lt;</b><font SIZE="-1"><b>FORMAT</b></font><b>&gt;</b>
+</dd><dt><b>-pixel_format &lt;</b><b>FORMAT</b><b>&gt;</b>
 </dt><dd> Request the video device to use a specific pixel format. If the specified format is not supported, a list of available formats is given and the first one in this list is used instead. Available pixel formats are: <tt>&quot;monob, rgb555be, rgb555le, rgb565be, rgb565le, rgb24, bgr24, 0rgb, bgr0, 0bgr, rgb0, 
 &nbsp;bgr48be, uyvy422, yuva444p, yuva444p16le, yuv444p, yuv422p16, yuv422p10, yuv444p10, 
 &nbsp;yuv420p, nv12, yuyv422, gray&quot;</tt>
@@ -11559,7 +11559,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 </dd><dt><b>-capture_mouse_clicks</b>
 </dt><dd> Capture the screen mouse clicks. Default is 0.
 </dd><dt><b>-capture_raw_data</b>
-</dt><dd> Capture the raw device data. Default is 0. Using this option may result in receiving the underlying data delivered to the AVFoundation framework. E.g. for muxed devices that sends raw <font SIZE="-1">DV</font> data to the framework (like tape-based camcorders), setting this option to false results in extracted video frames captured in the designated pixel format only. Setting this option to true results in receiving the raw <font SIZE="-1">DV</font> stream untouched.</dd></dl>
+</dt><dd> Capture the raw device data. Default is 0. Using this option may result in receiving the underlying data delivered to the AVFoundation framework. E.g. for muxed devices that sends raw DV data to the framework (like tape-based camcorders), setting this option to false results in extracted video frames captured in the designated pixel format only. Setting this option to true results in receiving the raw DV stream untouched.</dd></dl>
  
 
  <i>Examples</i>
@@ -11585,14 +11585,14 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
         $ ffmpeg -f avfoundation -pixel_format bgr0 -i &quot;default:none&quot; out.avi
 </pre>
 </dd><dt>&bull;
-</dt><dd> Record raw <font SIZE="-1">DV</font> data from a suitable input device and write the output into out.dv: 
+</dt><dd> Record raw DV data from a suitable input device and write the output into out.dv: 
  <pre>
         $ ffmpeg -f avfoundation -capture_raw_data true -i &quot;zr100:none&quot; out.dv
 </pre></dd></dl>
 
 <h3>bktr</h3>
 
- <font SIZE="-1">BSD</font> video input device. 
+ BSD video input device. 
 
  <i>Options</i>
 <dl>
@@ -11626,7 +11626,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 
  The decklink input device provides capture capabilities for Blackmagic DeckLink devices. 
 
- To enable this input device, you need the Blackmagic DeckLink <font SIZE="-1">SDK</font> and you need to configure with the appropriate <tt>&quot;--extra-cflags&quot;</tt> and <tt>&quot;--extra-ldflags&quot;</tt>. On Windows, you need to run the <font SIZE="-1">IDL</font> files through <b>widl</b>. 
+ To enable this input device, you need the Blackmagic DeckLink SDK and you need to configure with the appropriate <tt>&quot;--extra-cflags&quot;</tt> and <tt>&quot;--extra-ldflags&quot;</tt>. On Windows, you need to run the IDL files through <b>widl</b>. 
 
  DeckLink is very picky about the formats it supports. Pixel format of the input can be set with <b>raw_format</b>. Framerate and video size must be determined for your device with <b>-list_formats 1</b>. Audio sample rate is always 48 kHz and the number of channels can be 2, 8 or 16. Note that all audio channels are bundled in one single audio track. 
 
@@ -11643,28 +11643,28 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 </dd><dl>
 <dl>
 <dt><b>auto</b>
-</dt><dd> This is the default which means 8-bit <font SIZE="-1">YUV 422</font> or 8-bit <font SIZE="-1">ARGB</font> if format autodetection is used, 8-bit <font SIZE="-1">YUV 422</font> otherwise.
+</dt><dd> This is the default which means 8-bit YUV 422 or 8-bit ARGB if format autodetection is used, 8-bit YUV 422 otherwise.
 </dd><dt><b>uyvy422</b>
-</dt><dd> 8-bit <font SIZE="-1">YUV 422.</font>
+</dt><dd> 8-bit YUV 422.
 </dd><dt><b>yuv422p10</b>
-</dt><dd> 10-bit <font SIZE="-1">YUV 422.</font>
+</dt><dd> 10-bit YUV 422.
 </dd><dt><b>argb</b>
-</dt><dd> 8-bit <font SIZE="-1">RGB.</font>
+</dt><dd> 8-bit RGB.
 </dd><dt><b>bgra</b>
-</dt><dd> 8-bit <font SIZE="-1">RGB.</font>
+</dt><dd> 8-bit RGB.
 </dd><dt><b>rgb10</b>
-</dt><dd> 10-bit <font SIZE="-1">RGB.</font></dd></dl>
+</dt><dd> 10-bit RGB.</dd></dl>
 </dl>
 
 <dl>
 </dl>
 
 <dt><b>teletext_lines</b>
-</dt><dd> If set to nonzero, an additional teletext stream will be captured from the vertical ancillary data. Both <font SIZE="-1">SD PAL</font> (576i) and <font SIZE="-1">HD</font> (1080i or 1080p) sources are supported. In case of <font SIZE="-1">HD</font> sources, <font SIZE="-1">OP47</font> packets are decoded. 
+</dt><dd> If set to nonzero, an additional teletext stream will be captured from the vertical ancillary data. Both SD PAL (576i) and HD (1080i or 1080p) sources are supported. In case of HD sources, OP47 packets are decoded. 
 
- This option is a bitmask of the <font SIZE="-1">SD PAL VBI</font> lines captured, specifically lines 6 to 22, and lines 318 to 335. Line 6 is the <font SIZE="-1">LSB</font> in the mask. Selected lines which do not contain teletext information will be ignored. You can use the special <b>all</b> constant to select all possible lines, or <b>standard</b> to skip lines 6, 318 and 319, which are not compatible with all receivers. 
+ This option is a bitmask of the SD PAL VBI lines captured, specifically lines 6 to 22, and lines 318 to 335. Line 6 is the LSB in the mask. Selected lines which do not contain teletext information will be ignored. You can use the special <b>all</b> constant to select all possible lines, or <b>standard</b> to skip lines 6, 318 and 319, which are not compatible with all receivers. 
 
- For <font SIZE="-1">SD</font> sources, ffmpeg needs to be compiled with <tt>&quot;--enable-libzvbi&quot;</tt>. For <font SIZE="-1">HD</font> sources, on older (pre-4K) DeckLink card models you have to capture in 10 bit mode.
+ For SD sources, ffmpeg needs to be compiled with <tt>&quot;--enable-libzvbi&quot;</tt>. For HD sources, on older (pre-4K) DeckLink card models you have to capture in 10 bit mode.
 </dd><dt><b>channels</b>
 </dt><dd> Defines number of audio channels to capture. Must be <b>2</b>, <b>8</b> or <b>16</b>. Defaults to <b>2</b>.
 </dd><dt><b>duplex_mode</b>
@@ -11672,7 +11672,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 </dd><dt><b>timecode_format</b>
 </dt><dd> Timecode type to include in the frame and video stream metadata. Must be <b>none</b>, <b>rp188vitc</b>, <b>rp188vitc2</b>, <b>rp188ltc</b>, <b>rp188hfr</b>, <b>rp188any</b>, <b>vitc</b>, <b>vitc2</b>, or <b>serial</b>. Defaults to <b>none</b> (not included). 
 
- In order to properly support 50/60 fps timecodes, the ordering of the queried timecode types for <b>rp188any</b> is <font SIZE="-1">HFR, VITC1, VITC2</font> and <font SIZE="-1">LTC</font> for &gt;30 fps content. Note that this is slightly different to the ordering used by the DeckLink <font SIZE="-1">API,</font> which is <font SIZE="-1">HFR, VITC1, LTC, VITC2.</font>
+ In order to properly support 50/60 fps timecodes, the ordering of the queried timecode types for <b>rp188any</b> is HFR, VITC1, VITC2 and LTC for &gt;30 fps content. Note that this is slightly different to the ordering used by the DeckLink API, which is HFR, VITC1, LTC, VITC2.
 </dd><dt><b>video_input</b>
 </dt><dd> Sets the video input source. Must be <b>unset</b>, <b>sdi</b>, <b>hdmi</b>, <b>optical_sdi</b>, <b>component</b>, <b>composite</b> or <b>s_video</b>. Defaults to <b>unset</b>.
 </dd><dt><b>audio_input</b>
@@ -11690,11 +11690,11 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 </dd><dt><b>decklink_copyts</b>
 </dt><dd> If set to <b>true</b>, timestamps are forwarded as they are without removing the initial offset. Defaults to <b>false</b>.
 </dd><dt><b>timestamp_align</b>
-</dt><dd> Capture start time alignment in seconds. If set to nonzero, input frames are dropped till the system timestamp aligns with configured value. Alignment difference of up to one frame duration is tolerated. This is useful for maintaining input synchronization across N different hardware devices deployed for 'N-way' redundancy. The system time of different hardware devices should be synchronized with protocols such as <font SIZE="-1">NTP</font> or <font SIZE="-1">PTP,</font> before using this option. Note that this method is not foolproof. In some border cases input synchronization may not happen due to thread scheduling jitters in the <font SIZE="-1">OS.</font> Either sync could go wrong by 1 frame or in a rarer case <b>timestamp_align</b> seconds. Defaults to <b>0</b>.
+</dt><dd> Capture start time alignment in seconds. If set to nonzero, input frames are dropped till the system timestamp aligns with configured value. Alignment difference of up to one frame duration is tolerated. This is useful for maintaining input synchronization across N different hardware devices deployed for 'N-way' redundancy. The system time of different hardware devices should be synchronized with protocols such as NTP or PTP, before using this option. Note that this method is not foolproof. In some border cases input synchronization may not happen due to thread scheduling jitters in the OS. Either sync could go wrong by 1 frame or in a rarer case <b>timestamp_align</b> seconds. Defaults to <b>0</b>.
 </dd><dt><b>wait_for_tc (</b><i>bool</i><b>)</b>
 </dt><dd> Drop frames till a frame with timecode is received. Sometimes serial timecode isn't received with the first input frame. If that happens, the stored stream timecode will be inaccurate. If this option is set to <b>true</b>, input frames are dropped till a frame with timecode is received. Option <i>timecode_format</i> must be specified. Defaults to <b>false</b>.
 </dd><dt><b>enable_klv(</b><i>bool</i><b>)</b>
-</dt><dd> If set to <b>true</b>, extracts <font SIZE="-1">KLV</font> data from <font SIZE="-1">VANC</font> and outputs <font SIZE="-1">KLV</font> packets. <font SIZE="-1">KLV VANC</font> packets are joined based on <font SIZE="-1">MID</font> and <font SIZE="-1">PSC</font> fields and aggregated into one <font SIZE="-1">KLV</font> packet. Defaults to <b>false</b>.</dd></dl>
+</dt><dd> If set to <b>true</b>, extracts KLV data from VANC and outputs KLV packets. KLV VANC packets are joined based on MID and PSC fields and aggregated into one KLV packet. Defaults to <b>false</b>.</dd></dl>
  
 
  <i>Examples</i>
@@ -11739,7 +11739,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
         &lt;TYPE&gt;=&lt;NAME&gt;[:&lt;TYPE&gt;=&lt;NAME&gt;]
  
 
- where <i></i><font SIZE="-1"><i>TYPE</i></font><i></i> can be either <i>audio</i> or <i>video</i>, and <i></i><font SIZE="-1"><i>NAME</i></font><i></i> is the device's name or alternative name.. 
+ where <i></i><i>TYPE</i><i></i> can be either <i>audio</i> or <i>video</i>, and <i></i><i>NAME</i><i></i> is the device's name or alternative name.. 
 
  <i>Options</i> 
 
@@ -11776,7 +11776,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 </dd><dt><b>crossbar_audio_input_pin_number</b>
 </dt><dd> Select audio input pin number for crossbar device. This will be routed to the crossbar device's Audio Decoder output pin. Note that changing this value can affect future invocations (sets a new default) until system reboot occurs.
 </dd><dt><b>show_video_device_dialog</b>
-</dt><dd> If set to <b>true</b>, before capture starts, popup a display dialog to the end user, allowing them to change video filter properties and configurations manually. Note that for crossbar devices, adjusting values in this dialog may be needed at times to toggle between <font SIZE="-1">PAL</font> (25 fps) and <font SIZE="-1">NTSC</font> (29.97) input frame rates, sizes, interlacing, etc. Changing these values can enable different scan rates/frame rates and avoiding green bars at the bottom, flickering scan lines, etc. Note that with some devices, changing these properties can also affect future invocations (sets new defaults) until system reboot occurs.
+</dt><dd> If set to <b>true</b>, before capture starts, popup a display dialog to the end user, allowing them to change video filter properties and configurations manually. Note that for crossbar devices, adjusting values in this dialog may be needed at times to toggle between PAL (25 fps) and NTSC (29.97) input frame rates, sizes, interlacing, etc. Changing these values can enable different scan rates/frame rates and avoiding green bars at the bottom, flickering scan lines, etc. Note that with some devices, changing these properties can also affect future invocations (sets new defaults) until system reboot occurs.
 </dd><dt><b>show_audio_device_dialog</b>
 </dt><dd> If set to <b>true</b>, before capture starts, popup a display dialog to the end user, allowing them to change audio filter properties and configurations manually.
 </dd><dt><b>show_video_crossbar_connection_dialog</b>
@@ -11784,9 +11784,9 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 </dd><dt><b>show_audio_crossbar_connection_dialog</b>
 </dt><dd> If set to <b>true</b>, before capture starts, popup a display dialog to the end user, allowing them to manually modify crossbar pin routings, when it opens an audio device.
 </dd><dt><b>show_analog_tv_tuner_dialog</b>
-</dt><dd> If set to <b>true</b>, before capture starts, popup a display dialog to the end user, allowing them to manually modify <font SIZE="-1">TV</font> channels and frequencies.
+</dt><dd> If set to <b>true</b>, before capture starts, popup a display dialog to the end user, allowing them to manually modify TV channels and frequencies.
 </dd><dt><b>show_analog_tv_tuner_audio_dialog</b>
-</dt><dd> If set to <b>true</b>, before capture starts, popup a display dialog to the end user, allowing them to manually modify <font SIZE="-1">TV</font> audio (like mono vs. stereo, Language A,B or C).
+</dt><dd> If set to <b>true</b>, before capture starts, popup a display dialog to the end user, allowing them to manually modify TV audio (like mono vs. stereo, Language A,B or C).
 </dd><dt><b>audio_device_load</b>
 </dt><dd> Load an audio capture filter device from file instead of searching it by name. It may load additional parameters too, if the filter supports the serialization of its properties to. To use this an audio capture source has to be specified, but it can be anything even fake one.
 </dd><dt><b>audio_device_save</b>
@@ -11924,52 +11924,52 @@ $ ffmpeg - f dshow - audio_pin_name "Audio Out" - video_pin_name 2 - i video = v
 
 <h3>iec61883</h3>
 
- FireWire <font SIZE="-1">DV/HDV</font> input device using libiec61883. 
+ FireWire DV/HDV input device using libiec61883. 
 
  To enable this input device, you need libiec61883, libraw1394 and libavc1394 installed on your system. Use the configure option <tt>&quot;--enable-libiec61883&quot;</tt> to compile with the device enabled. 
 
- The iec61883 capture device supports capturing from a video device connected via <font SIZE="-1">IEEE1394</font> (FireWire), using libiec61883 and the new Linux FireWire stack (juju). This is the default <font SIZE="-1">DV/HDV</font> input method in Linux Kernel 2.6.37 and later, since the old FireWire stack was removed. 
+ The iec61883 capture device supports capturing from a video device connected via IEEE1394 (FireWire), using libiec61883 and the new Linux FireWire stack (juju). This is the default DV/HDV input method in Linux Kernel 2.6.37 and later, since the old FireWire stack was removed. 
 
  Specify the FireWire port to be used as input file, or ``auto'' to choose the first port connected. 
 
  <i>Options</i>
 <dl>
 <dt><b>dvtype</b>
-</dt><dd> Override autodetection of <font SIZE="-1">DV/HDV.</font> This should only be used if auto detection does not work, or if usage of a different device type should be prohibited. Treating a <font SIZE="-1">DV</font> device as <font SIZE="-1">HDV</font> (or vice versa) will not work and result in undefined behavior. The values <b>auto</b>, <b>dv</b> and <b>hdv</b> are supported.
+</dt><dd> Override autodetection of DV/HDV. This should only be used if auto detection does not work, or if usage of a different device type should be prohibited. Treating a DV device as HDV (or vice versa) will not work and result in undefined behavior. The values <b>auto</b>, <b>dv</b> and <b>hdv</b> are supported.
 </dd><dt><b>dvbuffer</b>
-</dt><dd> Set maximum size of buffer for incoming data, in frames. For <font SIZE="-1">DV,</font> this is an exact value. For <font SIZE="-1">HDV,</font> it is not frame exact, since <font SIZE="-1">HDV</font> does not have a fixed frame size.
+</dt><dd> Set maximum size of buffer for incoming data, in frames. For DV, this is an exact value. For HDV, it is not frame exact, since HDV does not have a fixed frame size.
 </dd><dt><b>dvguid</b>
-</dt><dd> Select the capture device by specifying its <font SIZE="-1">GUID.</font> Capturing will only be performed from the specified device and fails if no device with the given <font SIZE="-1">GUID</font> is found. This is useful to select the input if multiple devices are connected at the same time. Look at /sys/bus/firewire/devices to find out the GUIDs.</dd></dl>
+</dt><dd> Select the capture device by specifying its GUID. Capturing will only be performed from the specified device and fails if no device with the given GUID is found. This is useful to select the input if multiple devices are connected at the same time. Look at /sys/bus/firewire/devices to find out the GUIDs.</dd></dl>
  
 
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Grab and show the input of a FireWire <font SIZE="-1">DV/HDV</font> device. 
+</dt><dd> Grab and show the input of a FireWire DV/HDV device. 
  <pre>
         ffplay -f iec61883 -i auto
 </pre>
 </dd><dt>&bull;
-</dt><dd> Grab and record the input of a FireWire <font SIZE="-1">DV/HDV</font> device, using a packet buffer of 100000 packets if the source is <font SIZE="-1">HDV.</font> 
+</dt><dd> Grab and record the input of a FireWire DV/HDV device, using a packet buffer of 100000 packets if the source is HDV. 
  <pre>
         ffmpeg -f iec61883 -i auto -dvbuffer 100000 out.mpg
 </pre></dd></dl>
 
 <h3>jack</h3>
 
- <font SIZE="-1">JACK</font> input device. 
+ JACK input device. 
 
  To enable this input device during configuration you need libjack installed on your system. 
 
- A <font SIZE="-1">JACK</font> input device creates one or more <font SIZE="-1">JACK</font> writable clients, one for each audio channel, with name <i>client_name</i>:input_<i>N</i>, where <i>client_name</i> is the name provided by the application, and <i>N</i> is a number which identifies the channel. Each writable client will send the acquired data to the FFmpeg input device. 
+ A JACK input device creates one or more JACK writable clients, one for each audio channel, with name <i>client_name</i>:input_<i>N</i>, where <i>client_name</i> is the name provided by the application, and <i>N</i> is a number which identifies the channel. Each writable client will send the acquired data to the FFmpeg input device. 
 
- Once you have created one or more <font SIZE="-1">JACK</font> readable clients, you need to connect them to one or more <font SIZE="-1">JACK</font> writable clients. 
+ Once you have created one or more JACK readable clients, you need to connect them to one or more JACK writable clients. 
 
- To connect or disconnect <font SIZE="-1">JACK</font> clients you can use the <b>jack_connect</b> and <b>jack_disconnect</b> programs, or do it through a graphical interface, for example with <b>qjackctl</b>. 
+ To connect or disconnect JACK clients you can use the <b>jack_connect</b> and <b>jack_disconnect</b> programs, or do it through a graphical interface, for example with <b>qjackctl</b>. 
 
- To list the <font SIZE="-1">JACK</font> clients and their properties you can invoke the command <b>jack_lsp</b>. 
+ To list the JACK clients and their properties you can invoke the command <b>jack_lsp</b>. 
 
- Follows an example which shows how to capture a <font SIZE="-1">JACK</font> readable client with <b>ffmpeg</b>. 
+ Follows an example which shows how to capture a JACK readable client with <b>ffmpeg</b>. 
 
  <pre>
         # Create a JACK writable client with name &quot;ffmpeg&quot;.
@@ -11997,26 +11997,26 @@ $ ffmpeg - f dshow - audio_pin_name "Audio Out" - video_pin_name 2 - i video = v
 
 <h3>kmsgrab</h3>
 
- <font SIZE="-1">KMS</font> video input device. 
+ KMS video input device. 
 
- Captures the <font SIZE="-1">KMS</font> scanout framebuffer associated with a specified <font SIZE="-1">CRTC</font> or plane as a <font SIZE="-1">DRM</font> object that can be passed to other hardware functions. 
+ Captures the KMS scanout framebuffer associated with a specified CRTC or plane as a DRM object that can be passed to other hardware functions. 
 
- Requires either <font SIZE="-1">DRM</font> master or <font SIZE="-1">CAP_SYS_ADMIN</font> to run. 
+ Requires either DRM master or CAP_SYS_ADMIN to run. 
 
  If you don't understand what all of that means, you probably don't want this. Look at <b>x11grab</b> instead. 
 
  <i>Options</i>
 <dl>
 <dt><b>device</b>
-</dt><dd> <font SIZE="-1">DRM</font> device to capture on. Defaults to <b>/dev/dri/card0</b>.
+</dt><dd> DRM device to capture on. Defaults to <b>/dev/dri/card0</b>.
 </dd><dt><b>format</b>
 </dt><dd> Pixel format of the framebuffer. This can be autodetected if you are running Linux 5.7 or later, but needs to be provided for earlier versions. Defaults to <b>bgr0</b>, which is the most common format used by the Linux console and Xorg X server.
 </dd><dt><b>format_modifier</b>
 </dt><dd> Format modifier to signal on output frames. This is necessary to import correctly into some APIs. It can be autodetected if you are running Linux 5.7 or later, but will need to be provided explicitly when needed in earlier versions. See the libdrm documentation for possible values.
 </dd><dt><b>crtc_id</b>
-</dt><dd> <font SIZE="-1">KMS CRTC ID</font> to define the capture source. The first active plane on the given <font SIZE="-1">CRTC</font> will be used.
+</dt><dd> KMS CRTC ID to define the capture source. The first active plane on the given CRTC will be used.
 </dd><dt><b>plane_id</b>
-</dt><dd> <font SIZE="-1">KMS</font> plane <font SIZE="-1">ID</font> to define the capture source. Defaults to the first active plane found if neither <b>crtc_id</b> nor <b>plane_id</b> are specified.
+</dt><dd> KMS plane ID to define the capture source. Defaults to the first active plane found if neither <b>crtc_id</b> nor <b>plane_id</b> are specified.
 </dd><dt><b>framerate</b>
 </dt><dd> Framerate to capture at. This is not synchronised to any page flipping or framebuffer changes - it just defines the interval at which the framebuffer is sampled. Sampling faster than the framebuffer update rate will generate independent frames with the same content. Defaults to <tt>30</tt>.</dd></dl>
  
@@ -12029,7 +12029,7 @@ $ ffmpeg - f dshow - audio_pin_name "Audio Out" - video_pin_name 2 - i video = v
         ffmpeg -f kmsgrab -i - -vf 'hwdownload,format=bgr0' output.mp4
 </pre>
 </dd><dt>&bull;
-</dt><dd> Capture from <font SIZE="-1">CRTC ID 42</font> at 60fps, map the result to <font SIZE="-1">VAAPI,</font> convert to <font SIZE="-1">NV12</font> and encode as H.264. 
+</dt><dd> Capture from CRTC ID 42 at 60fps, map the result to VAAPI, convert to NV12 and encode as H.264. 
  <pre>
         ffmpeg -crtc_id 42 -framerate 60 -f kmsgrab -i - -vf 'hwmap=derive_device=vaapi,scale_vaapi=w=1920:h=1080:format=nv12' -c:v h264_vaapi output.mp4
 </pre>
@@ -12051,7 +12051,7 @@ $ ffmpeg - f dshow - audio_pin_name "Audio Out" - video_pin_name 2 - i video = v
 <dl>
 <dt><b>graph</b>
 </dt><dd> Specify the filtergraph to use as input. Each video open output must be labelled by a unique string of the form &quot;out<i>N</i>&quot;, where <i>N</i> is a number starting from 0 corresponding to the mapped input stream generated by the device. The first unlabelled output is automatically assigned to the ``out0'' label, but all the others need to be specified explicitly. 
- The suffix ``+subcc'' can be appended to the output label to create an extra stream with the closed captions packets attached to that output (experimental; only for <font SIZE="-1">EIA-608 / CEA-708</font> for now). The subcc streams are created after all the normal streams, in the order of the corresponding stream. For example, if there is ``out19+subcc'', ``out7+subcc'' and up to ``out42'', the stream #43 is subcc for stream #7 and stream #44 is subcc for stream #19. 
+ The suffix ``+subcc'' can be appended to the output label to create an extra stream with the closed captions packets attached to that output (experimental; only for EIA-608 / CEA-708 for now). The subcc streams are created after all the normal streams, in the order of the corresponding stream. For example, if there is ``out19+subcc'', ``out7+subcc'' and up to ``out42'', the stream #43 is subcc for stream #7 and stream #44 is subcc for stream #19. 
  If not specified defaults to the filename specified for the input device.
 </dd><dt><b>graph_file</b>
 </dt><dd> Set the filename of the filtergraph to be read and sent to the other filters. Syntax of the filtergraph is the same as the one specified by the option <i>graph</i>.
@@ -12132,7 +12132,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
 <h3>libdc1394</h3>
 
- <font SIZE="-1">IIDC1394</font> input device, based on libdc1394 and libraw1394. 
+ IIDC1394 input device, based on libdc1394 and libraw1394. 
 
  Requires the configure option <tt>&quot;--enable-libdc1394&quot;</tt>. 
 
@@ -12151,16 +12151,16 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
  To enable this input device during configuration, you need OpenAL headers and libraries installed on your system, and need to configure FFmpeg with <tt>&quot;--enable-openal&quot;</tt>. 
 
- OpenAL headers and libraries should be provided as part of your OpenAL implementation, or as an additional download (an <font SIZE="-1">SDK</font>). Depending on your installation you may need to specify additional flags via the <tt>&quot;--extra-cflags&quot;</tt> and <tt>&quot;--extra-ldflags&quot;</tt> for allowing the build system to locate the OpenAL headers and libraries. 
+ OpenAL headers and libraries should be provided as part of your OpenAL implementation, or as an additional download (an SDK). Depending on your installation you may need to specify additional flags via the <tt>&quot;--extra-cflags&quot;</tt> and <tt>&quot;--extra-ldflags&quot;</tt> for allowing the build system to locate the OpenAL headers and libraries. 
 
  An incomplete list of OpenAL implementations follows:
 <dl>
 <dt><b>Creative</b>
 </dt><dd> The official Windows implementation, providing hardware acceleration with supported devices and software fallback. See &lt;<b><a rel="nofollow" HREF="http://openal.org/">http://openal.org/</a></b>&gt;.
 </dd><dt><b>OpenAL Soft</b>
-</dt><dd> Portable, open source (<font SIZE="-1">LGPL</font>) software implementation. Includes backends for the most common sound APIs on the Windows, Linux, Solaris, and <font SIZE="-1">BSD</font> operating systems. See &lt;<b><a rel="nofollow" HREF="http://kcat.strangesoft.net/openal.html">http://kcat.strangesoft.net/openal.html</a></b>&gt;.
+</dt><dd> Portable, open source (LGPL) software implementation. Includes backends for the most common sound APIs on the Windows, Linux, Solaris, and BSD operating systems. See &lt;<b><a rel="nofollow" HREF="http://kcat.strangesoft.net/openal.html">http://kcat.strangesoft.net/openal.html</a></b>&gt;.
 </dd><dt><b>Apple</b>
-</dt><dd> OpenAL is part of Core Audio, the official Mac <font SIZE="-1">OS X</font> Audio interface. See &lt;<b><a rel="nofollow" HREF="http://developer.apple.com/technologies/mac/audio-and-video.html">http://developer.apple.com/technologies/mac/audio-and-video.html</a></b>&gt;</dd></dl>
+</dt><dd> OpenAL is part of Core Audio, the official Mac OS X Audio interface. See &lt;<b><a rel="nofollow" HREF="http://developer.apple.com/technologies/mac/audio-and-video.html">http://developer.apple.com/technologies/mac/audio-and-video.html</a></b>&gt;</dd></dl>
  
 
  This device allows one to capture from an audio input device handled through OpenAL. 
@@ -12187,7 +12187,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
         $ ffmpeg -list_devices true -f openal -i dummy out.ogg
 </pre> 
 
- Capture from the OpenAL device <i></i><font SIZE="-1"><i>DR-BT101</i></font><i> via PulseAudio</i>: 
+ Capture from the OpenAL device <i></i><i>DR-BT101</i><i> via PulseAudio</i>: 
 
  <pre>
         $ ffmpeg -f openal -i 'DR-BT101 via PulseAudio' out.ogg
@@ -12211,7 +12211,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
  Open Sound System input device. 
 
- The filename to provide to the input device is the device node representing the <font SIZE="-1">OSS</font> input device, and is usually set to <i>/dev/dsp</i>. 
+ The filename to provide to the input device is the device node representing the OSS input device, and is usually set to <i>/dev/dsp</i>. 
 
  For example to grab from <i>/dev/dsp</i> using <b>ffmpeg</b> use the command: 
 
@@ -12219,7 +12219,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
         ffmpeg -f oss -i /dev/dsp /tmp/oss.wav
 </pre> 
 
- For more information about <font SIZE="-1">OSS</font> see: &lt;<b><a rel="nofollow" HREF="http://manuals.opensound.com/usersguide/dsp.html">http://manuals.opensound.com/usersguide/dsp.html</a></b>&gt; 
+ For more information about OSS see: &lt;<b><a rel="nofollow" HREF="http://manuals.opensound.com/usersguide/dsp.html">http://manuals.opensound.com/usersguide/dsp.html</a></b>&gt; 
 
  <i>Options</i>
 <dl>
@@ -12243,7 +12243,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
  <i>Options</i>
 <dl>
 <dt><b>server</b>
-</dt><dd> Connect to a specific PulseAudio server, specified by an <font SIZE="-1">IP</font> address. Default server is used when not provided.
+</dt><dd> Connect to a specific PulseAudio server, specified by an IP address. Default server is used when not provided.
 </dd><dt><b>name</b>
 </dt><dd> Specify the application name PulseAudio will use when showing active clients, by default it is the <tt>&quot;LIBAVFORMAT_IDENT&quot;</tt> string.
 </dd><dt><b>stream_name</b>
@@ -12257,7 +12257,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 </dd><dt><b>fragment_size</b>
 </dt><dd> Specify the minimal buffering fragment in PulseAudio, it will affect the audio latency. By default it is unset.
 </dd><dt><b>wallclock</b>
-</dt><dd> Set the initial <font SIZE="-1">PTS</font> using the current time. Default is 1.</dd></dl>
+</dt><dd> Set the initial PTS using the current time. Default is 1.</dd></dl>
  
 
  <i>Examples</i> 
@@ -12297,11 +12297,11 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
  If FFmpeg is built with v4l-utils support (by using the <tt>&quot;--enable-libv4l2&quot;</tt> configure option), it is possible to use it with the <tt>&quot;-use_libv4l2&quot;</tt> input device option. 
 
- The name of the device to grab is a file device node, usually Linux systems tend to automatically create such nodes when the device (e.g. an <font SIZE="-1">USB</font> webcam) is plugged into the system, and has a name of the kind <i>/dev/videoN</i>, where <i>N</i> is a number associated to the device. 
+ The name of the device to grab is a file device node, usually Linux systems tend to automatically create such nodes when the device (e.g. an USB webcam) is plugged into the system, and has a name of the kind <i>/dev/videoN</i>, where <i>N</i> is a number associated to the device. 
 
- Video4Linux2 devices usually support a limited set of <i>width</i>x<i>height</i> sizes and frame rates. You can check which are supported using <b>-list_formats all</b> for Video4Linux2 devices. Some devices, like <font SIZE="-1">TV</font> cards, support one or more standards. It is possible to list all the supported standards using <b>-list_standards all</b>. 
+ Video4Linux2 devices usually support a limited set of <i>width</i>x<i>height</i> sizes and frame rates. You can check which are supported using <b>-list_formats all</b> for Video4Linux2 devices. Some devices, like TV cards, support one or more standards. It is possible to list all the supported standards using <b>-list_standards all</b>. 
 
- The time base for the timestamps is 1 microsecond. Depending on the kernel version and configuration, the timestamps may be derived from the real time clock (origin at the Unix Epoch) or the monotonic clock (origin usually at boot time, unaffected by <font SIZE="-1">NTP</font> or manual changes to the clock). The <b>-timestamps abs</b> or <b>-ts abs</b> option can be used to force conversion into the real time clock. 
+ The time base for the timestamps is 1 microsecond. Depending on the kernel version and configuration, the timestamps may be derived from the real time clock (origin at the Unix Epoch) or the monotonic clock (origin usually at boot time, unaffected by NTP or manual changes to the clock). The <b>-timestamps abs</b> or <b>-ts abs</b> option can be used to force conversion into the real time clock. 
 
  Some usage examples of the video4linux2 device with <b>ffmpeg</b> and <b>ffplay</b>:
 <dl>
@@ -12331,7 +12331,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 </dd><dt><b>channel</b>
 </dt><dd> Set the input channel number. Default to -1, which means using the previously selected channel.
 </dd><dt><b>video_size</b>
-</dt><dd> Set the video frame size. The argument must be a string in the form <i></i><font SIZE="-1"><i>WIDTH</i></font><i></i>x<i></i><font SIZE="-1"><i>HEIGHT</i></font><i></i> or a valid size abbreviation.
+</dt><dd> Set the video frame size. The argument must be a string in the form <i></i><i>WIDTH</i><i></i>x<i></i><i>HEIGHT</i><i></i> or a valid size abbreviation.
 </dd><dt><b>pixel_format</b>
 </dt><dd> Select the pixel format (only valid for raw video input).
 </dd><dt><b>input_format</b>
@@ -12416,7 +12416,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 [&lt;hostname&gt;] : &lt;display_number&gt;.&lt;screen_number&gt;[+&lt;x_offset&gt;, &lt;y_offset&gt;]
  
 
- <i>hostname</i>:<i>display_number</i>.<i>screen_number</i> specifies the X11 display name of the screen to grab from. <i>hostname</i> can be omitted, and defaults to ``localhost''. The environment variable <font SIZE="-1"><b>DISPLAY</b></font> contains the default display name. 
+ <i>hostname</i>:<i>display_number</i>.<i>screen_number</i> specifies the X11 display name of the screen to grab from. <i>hostname</i> can be omitted, and defaults to ``localhost''. The environment variable <b>DISPLAY</b> contains the default display name. 
 
  <i>x_offset</i> and <i>y_offset</i> specify the offsets of the grabbed area with respect to the top-left border of the X11 screen. They default to 0. 
 
@@ -12443,8 +12443,8 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 </dd><dt><b>draw_mouse</b>
 </dt><dd> Specify whether to draw the mouse pointer. A value of <tt>0</tt> specifies not to draw the pointer. Default value is <tt>1</tt>.
 </dd><dt><b>follow_mouse</b>
-</dt><dd> Make the grabbed area follow the mouse. The argument can be <tt>&quot;centered&quot;</tt> or a number of pixels <i></i><font SIZE="-1"><i>PIXELS</i></font><i></i>. 
- When it is specified with ``centered'', the grabbing region follows the mouse pointer and keeps the pointer at the center of region; otherwise, the region follows only when the mouse pointer reaches within <i></i><font SIZE="-1"><i>PIXELS</i></font><i></i> (greater than zero) to the edge of region. 
+</dt><dd> Make the grabbed area follow the mouse. The argument can be <tt>&quot;centered&quot;</tt> or a number of pixels <i></i><i>PIXELS</i><i></i>. 
+ When it is specified with ``centered'', the grabbing region follows the mouse pointer and keeps the pointer at the center of region; otherwise, the region follows only when the mouse pointer reaches within <i></i><i>PIXELS</i><i></i> (greater than zero) to the edge of region. 
  For example: 
  <pre>
         ffmpeg -f x11grab -follow_mouse centered -framerate 25 -video_size cif -i :0.0 out.mpg
@@ -12486,7 +12486,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
  When you configure your FFmpeg build, all the supported output devices are enabled by default. You can list all available ones using the configure option ``--list-outdevs''. 
 
- You can disable all the output devices using the configure option ``--disable-outdevs'', and selectively enable an output device using the option &quot;--enable-outdev=<i></i><font SIZE="-1"><i>OUTDEV</i></font><i></i>``, or you can disable a particular input device using the option ''--disable-outdev=<i></i><font SIZE="-1"><i>OUTDEV</i></font><i></i>&quot;. 
+ You can disable all the output devices using the configure option ``--disable-outdevs'', and selectively enable an output device using the option &quot;--enable-outdev=<i></i><i>OUTDEV</i><i></i>``, or you can disable a particular input device using the option ''--disable-outdev=<i></i><i>OUTDEV</i><i></i>&quot;. 
 
  The option ``-devices'' of the ff* tools will display the list of enabled output devices. 
 
@@ -12494,12 +12494,12 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
 <h3>alsa</h3>
 
- <font SIZE="-1">ALSA</font> (Advanced Linux Sound Architecture) output device. 
+ ALSA (Advanced Linux Sound Architecture) output device. 
 
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Play a file on default <font SIZE="-1">ALSA</font> device: 
+</dt><dd> Play a file on default ALSA device: 
  <pre>
         ffmpeg -i INPUT -f alsa default
 </pre>
@@ -12513,7 +12513,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
  AudioToolbox output device. 
 
- Allows native output to CoreAudio devices on <font SIZE="-1">OSX.</font> 
+ Allows native output to CoreAudio devices on OSX. 
 
  The output filename can be empty (or <tt>&quot;-&quot;</tt>) to refer to the default system output device or a number that refers to the device index as shown using: <tt>&quot;-list_devices true&quot;</tt>. 
 
@@ -12531,7 +12531,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
  AudioToolbox supports the following options:
 <dl>
-<dt><b>-audio_device_index &lt;</b><font SIZE="-1"><b>INDEX</b></font><b>&gt;</b>
+<dt><b>-audio_device_index &lt;</b><b>INDEX</b><b>&gt;</b>
 </dt><dd> Specify the audio device by its index. Overrides anything given in the output filename.</dd></dl>
  
 
@@ -12550,9 +12550,9 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
 <h3>caca</h3>
 
- <font SIZE="-1">CACA</font> output device. 
+ CACA output device. 
 
- This output device allows one to show a video stream in <font SIZE="-1">CACA</font> window. Only one <font SIZE="-1">CACA</font> window is allowed per application, so you can have only one instance of this output device in an application. 
+ This output device allows one to show a video stream in CACA window. Only one CACA window is allowed per application, so you can have only one instance of this output device in an application. 
 
  To enable this output device you need to configure FFmpeg with <tt>&quot;--enable-libcaca&quot;</tt>. libcaca is a graphics library that outputs text instead of pixels. 
 
@@ -12561,9 +12561,9 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
  <i>Options</i>
 <dl>
 <dt><b>window_title</b>
-</dt><dd> Set the <font SIZE="-1">CACA</font> window title, if not specified default to the filename specified for the output device.
+</dt><dd> Set the CACA window title, if not specified default to the filename specified for the output device.
 </dd><dt><b>window_size</b>
-</dt><dd> Set the <font SIZE="-1">CACA</font> window size, can be a string of the form <i>width</i>x<i>height</i> or a video size abbreviation. If not specified it defaults to the size of the input video.
+</dt><dd> Set the CACA window size, can be a string of the form <i>width</i>x<i>height</i> or a video size abbreviation. If not specified it defaults to the size of the input video.
 </dd><dt><b>driver</b>
 </dt><dd> Set display driver.
 </dd><dt><b>algorithm</b>
@@ -12583,7 +12583,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> The following command shows the <b>ffmpeg</b> output is an <font SIZE="-1">CACA</font> window, forcing its size to 80x25: 
+</dt><dd> The following command shows the <b>ffmpeg</b> output is an CACA window, forcing its size to 80x25: 
  <pre>
         ffmpeg -i INPUT -c:v rawvideo -pix_fmt rgb24 -window_size 80x25 -f caca -
 </pre>
@@ -12602,7 +12602,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
  The decklink output device provides playback capabilities for Blackmagic DeckLink devices. 
 
- To enable this output device, you need the Blackmagic DeckLink <font SIZE="-1">SDK</font> and you need to configure with the appropriate <tt>&quot;--extra-cflags&quot;</tt> and <tt>&quot;--extra-ldflags&quot;</tt>. On Windows, you need to run the <font SIZE="-1">IDL</font> files through <b>widl</b>. 
+ To enable this output device, you need the Blackmagic DeckLink SDK and you need to configure with the appropriate <tt>&quot;--extra-cflags&quot;</tt> and <tt>&quot;--extra-ldflags&quot;</tt>. On Windows, you need to run the IDL files through <b>widl</b>. 
 
  DeckLink is very picky about the formats it supports. Pixel format is always uyvy422, framerate, field order and video size must be determined for your device with <b>-list_formats 1</b>. Audio sample rate is always 48 kHz. 
 
@@ -12675,7 +12675,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
  To enable this output device you need to configure FFmpeg with <tt>&quot;--enable-opengl&quot;</tt>. 
 
- This output device allows one to render to OpenGL context. Context may be provided by application or default <font SIZE="-1">SDL</font> window is created. 
+ This output device allows one to render to OpenGL context. Context may be provided by application or default SDL window is created. 
 
  When device renders to external context, application must implement handlers for following messages: <tt>&quot;AV_DEV_TO_APP_CREATE_WINDOW_BUFFER&quot;</tt> - create OpenGL context on current thread. <tt>&quot;AV_DEV_TO_APP_PREPARE_WINDOW_BUFFER&quot;</tt> - make OpenGL context current. <tt>&quot;AV_DEV_TO_APP_DISPLAY_WINDOW_BUFFER&quot;</tt> - swap buffers. <tt>&quot;AV_DEV_TO_APP_DESTROY_WINDOW_BUFFER&quot;</tt> - destroy OpenGL context. Application is also required to inform a device about current resolution by sending <tt>&quot;AV_APP_TO_DEV_WINDOW_SIZE&quot;</tt> message. 
 
@@ -12684,16 +12684,16 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 <dt><b>background</b>
 </dt><dd> Set background color. Black is a default.
 </dd><dt><b>no_window</b>
-</dt><dd> Disables default <font SIZE="-1">SDL</font> window when set to non-zero value. Application must provide OpenGL context and both <tt>&quot;window_size_cb&quot;</tt> and <tt>&quot;window_swap_buffers_cb&quot;</tt> callbacks when set.
+</dt><dd> Disables default SDL window when set to non-zero value. Application must provide OpenGL context and both <tt>&quot;window_size_cb&quot;</tt> and <tt>&quot;window_swap_buffers_cb&quot;</tt> callbacks when set.
 </dd><dt><b>window_title</b>
-</dt><dd> Set the <font SIZE="-1">SDL</font> window title, if not specified default to the filename specified for the output device. Ignored when <b>no_window</b> is set.
+</dt><dd> Set the SDL window title, if not specified default to the filename specified for the output device. Ignored when <b>no_window</b> is set.
 </dd><dt><b>window_size</b>
 </dt><dd> Set preferred window size, can be a string of the form widthxheight or a video size abbreviation. If not specified it defaults to the size of the input video, downscaled according to the aspect ratio. Mostly usable when <b>no_window</b> is not set.</dd></dl>
  
 
  <i>Examples</i> 
 
- Play a file on <font SIZE="-1">SDL</font> window using OpenGL rendering: 
+ Play a file on SDL window using OpenGL rendering: 
 
  <pre>
         ffmpeg  -i INPUT -f opengl &quot;window title&quot;
@@ -12701,7 +12701,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
 <h3>oss</h3>
 
- <font SIZE="-1">OSS</font> (Open Sound System) output device.
+ OSS (Open Sound System) output device.
 
 <h3>pulse</h3>
 
@@ -12714,7 +12714,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
  <i>Options</i>
 <dl>
 <dt><b>server</b>
-</dt><dd> Connect to a specific PulseAudio server, specified by an <font SIZE="-1">IP</font> address. Default server is used when not provided.
+</dt><dd> Connect to a specific PulseAudio server, specified by an IP address. Default server is used when not provided.
 </dd><dt><b>name</b>
 </dt><dd> Specify the application name PulseAudio will use when showing active clients, by default it is the <tt>&quot;LIBAVFORMAT_IDENT&quot;</tt> string.
 </dd><dt><b>stream_name</b>
@@ -12743,24 +12743,24 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
 <h3>sdl</h3>
 
- <font SIZE="-1">SDL</font> (Simple DirectMedia Layer) output device. 
+ SDL (Simple DirectMedia Layer) output device. 
 
  ``sdl2'' can be used as alias for ``sdl''. 
 
- This output device allows one to show a video stream in an <font SIZE="-1">SDL</font> window. Only one <font SIZE="-1">SDL</font> window is allowed per application, so you can have only one instance of this output device in an application. 
+ This output device allows one to show a video stream in an SDL window. Only one SDL window is allowed per application, so you can have only one instance of this output device in an application. 
 
  To enable this output device you need libsdl installed on your system when configuring your build. 
 
- For more information about <font SIZE="-1">SDL,</font> check: &lt;<b><a rel="nofollow" HREF="http://www.libsdl.org/">http://www.libsdl.org/</a></b>&gt; 
+ For more information about SDL, check: &lt;<b><a rel="nofollow" HREF="http://www.libsdl.org/">http://www.libsdl.org/</a></b>&gt; 
 
  <i>Options</i>
 <dl>
 <dt><b>window_title</b>
-</dt><dd> Set the <font SIZE="-1">SDL</font> window title, if not specified default to the filename specified for the output device.
+</dt><dd> Set the SDL window title, if not specified default to the filename specified for the output device.
 </dd><dt><b>icon_title</b>
-</dt><dd> Set the name of the iconified <font SIZE="-1">SDL</font> window, if not specified it is set to the same value of <i>window_title</i>.
+</dt><dd> Set the name of the iconified SDL window, if not specified it is set to the same value of <i>window_title</i>.
 </dd><dt><b>window_size</b>
-</dt><dd> Set the <font SIZE="-1">SDL</font> window size, can be a string of the form <i>width</i>x<i>height</i> or a video size abbreviation. If not specified it defaults to the size of the input video, downscaled according to the aspect ratio.
+</dt><dd> Set the SDL window size, can be a string of the form <i>width</i>x<i>height</i> or a video size abbreviation. If not specified it defaults to the size of the input video, downscaled according to the aspect ratio.
 </dd><dt><b>window_x</b>
 </dt><dd>
 </dd><dt><b>window_y</b>
@@ -12775,13 +12775,13 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
  The window created by the device can be controlled through the following interactive commands.
 <dl>
-<dt><b>q, </b><font SIZE="-1"><b>ESC</b></font>
+<dt><b>q, </b><b>ESC</b>
 </dt><dd> Quit the device immediately.</dd></dl>
  
 
  <i>Examples</i> 
 
- The following command shows the <b>ffmpeg</b> output is an <font SIZE="-1">SDL</font> window, forcing its size to the qcif format: 
+ The following command shows the <b>ffmpeg</b> output is an SDL window, forcing its size to the qcif format: 
 
  <pre>
         ffmpeg -i INPUT -c:v rawvideo -pix_fmt yuv420p -window_size qcif -f sdl &quot;SDL output&quot;
@@ -12797,7 +12797,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
 <h3>xv</h3>
 
- <font SIZE="-1">XV</font> (XVideo) output device. 
+ XV (XVideo) output device. 
 
  This output device allows one to show a video stream in a X Window System window. 
 
@@ -12805,9 +12805,9 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 <dl>
 <dt><b>display_name</b>
 </dt><dd> Specify the hardware display name, which determines the display and communications domain to be used. 
- The display name or <font SIZE="-1">DISPLAY</font> environment variable can be a string in the format <i>hostname</i>[:<i>number</i>[.<i>screen_number</i>]]. 
+ The display name or DISPLAY environment variable can be a string in the format <i>hostname</i>[:<i>number</i>[.<i>screen_number</i>]]. 
  <i>hostname</i> specifies the name of the host machine on which the display is physically attached. <i>number</i> specifies the number of the display server on that host machine. <i>screen_number</i> specifies the screen to be used on that server. 
- If unspecified, it defaults to the value of the <font SIZE="-1">DISPLAY</font> environment variable. 
+ If unspecified, it defaults to the value of the DISPLAY environment variable. 
  For example, <tt>&quot;dual-headed:0.1&quot;</tt> would specify screen 1 of display 0 on the machine named ``dual-headed''. 
  Check the X11 specification for more detailed information about the display name format.
 </dd><dt><b>window_id</b>
@@ -12841,7 +12841,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
  The audio resampler supports the following named options. 
 
- Options may be set by specifying -<i>option</i> <i>value</i> in the FFmpeg tools, <i>option</i>=<i>value</i> for the aresample filter, by setting the value explicitly in the <tt>&quot;SwrContext&quot;</tt> options or using the <i>libavutil/opt.h</i> <font SIZE="-1">API</font> for programmatic use.
+ Options may be set by specifying -<i>option</i> <i>value</i> in the FFmpeg tools, <i>option</i>=<i>value</i> for the aresample filter, by setting the value explicitly in the <tt>&quot;SwrContext&quot;</tt> options or using the <i>libavutil/opt.h</i> API for programmatic use.
 <dl>
 <dt><b>ich, in_channel_count</b>
 </dt><dd> Set the number of input channels. Default value is 0. Setting this value is not mandatory if the corresponding channel layout <b>in_channel_layout</b> is set.
@@ -12869,7 +12869,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 </dd><dt><b>slev, surround_mix_level</b>
 </dt><dd> Set the surround mix level. It is a value expressed in deciBel, and must be in the interval [-32,32].
 </dd><dt><b>lfe_mix_level</b>
-</dt><dd> Set <font SIZE="-1">LFE</font> mix into non <font SIZE="-1">LFE</font> level. It is used when there is a <font SIZE="-1">LFE</font> input but no <font SIZE="-1">LFE</font> output. It is a value expressed in deciBel, and must be in the interval [-32,32].
+</dt><dd> Set LFE mix into non LFE level. It is used when there is a LFE input but no LFE output. It is a value expressed in deciBel, and must be in the interval [-32,32].
 </dd><dt><b>rmvol, rematrix_volume</b>
 </dt><dd> Set rematrix volume. Default value is 1.0.
 </dd><dt><b>rematrix_maxval</b>
@@ -12926,7 +12926,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 </dd><dl>
 <dl>
 <dt><b>swr</b>
-</dt><dd> select the native <font SIZE="-1">SW</font> Resampler; filter options precision and cheby are not applicable in this case.
+</dt><dd> select the native SW Resampler; filter options precision and cheby are not applicable in this case.
 </dd><dt><b>soxr</b>
 </dt><dd> select the SoX Resampler (where available); compensation, and filter options filter_size, phase_shift, exact_rational, filter_type &amp; kaiser_beta, are not applicable in this case.</dd></dl>
 </dl>
@@ -12971,7 +12971,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 </dd><dt><b>dolby</b>
 </dt><dd> select Dolby
 </dd><dt><b>dplii</b>
-</dt><dd> select Dolby Pro Logic <font SIZE="-1">II</font></dd></dl>
+</dt><dd> select Dolby Pro Logic II</dd></dl>
 </dl>
 
 <dl>
@@ -13005,7 +13005,7 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 
  The video scaler supports the following named options. 
 
- Options may be set by specifying -<i>option</i> <i>value</i> in the FFmpeg tools, with a few API-only exceptions noted below. For programmatic use, they can be set explicitly in the <tt>&quot;SwsContext&quot;</tt> options or through the <i>libavutil/opt.h</i> <font SIZE="-1">API.</font>
+ Options may be set by specifying -<i>option</i> <i>value</i> in the FFmpeg tools, with a few API-only exceptions noted below. For programmatic use, they can be set explicitly in the <tt>&quot;SwsContext&quot;</tt> options or through the <i>libavutil/opt.h</i> API.
 <dl>
 <dt><b>sws_flags</b>
 </dt><dd> Set the scaler flags. This is also used to set the scaling algorithm. Only a single algorithm should be selected. Default value is <b>bicubic</b>. 
@@ -13049,17 +13049,17 @@ ffplay - f lavfi "movie=test.avi[out0];amovie=test.wav[out1]"
 <dl>
 </dl>
 
-<dt><b>srcw</b> <i>(</i><font SIZE="-1"><i>API</i></font><i> only)</i>
+<dt><b>srcw</b> <i>(</i><i>API</i><i> only)</i>
 </dt><dd> Set source width.
-</dd><dt><b>srch</b> <i>(</i><font SIZE="-1"><i>API</i></font><i> only)</i>
+</dd><dt><b>srch</b> <i>(</i><i>API</i><i> only)</i>
 </dt><dd> Set source height.
-</dd><dt><b>dstw</b> <i>(</i><font SIZE="-1"><i>API</i></font><i> only)</i>
+</dd><dt><b>dstw</b> <i>(</i><i>API</i><i> only)</i>
 </dt><dd> Set destination width.
-</dd><dt><b>dsth</b> <i>(</i><font SIZE="-1"><i>API</i></font><i> only)</i>
+</dd><dt><b>dsth</b> <i>(</i><i>API</i><i> only)</i>
 </dt><dd> Set destination height.
-</dd><dt><b>src_format</b> <i>(</i><font SIZE="-1"><i>API</i></font><i> only)</i>
+</dd><dt><b>src_format</b> <i>(</i><i>API</i><i> only)</i>
 </dt><dd> Set source pixel format (must be expressed as an integer).
-</dd><dt><b>dst_format</b> <i>(</i><font SIZE="-1"><i>API</i></font><i> only)</i>
+</dd><dt><b>dst_format</b> <i>(</i><i>API</i><i> only)</i>
 </dt><dd> Set destination pixel format (must be expressed as an integer).
 </dd><dt><b>src_range</b> <i>(boolean)</i>
 </dt><dd> If value is set to <tt>1</tt>, indicates source is full range. Default value is <tt>0</tt>, which indicates source is limited range.
@@ -13154,13 +13154,13 @@ ffmpeg - i INPUT - vf "split [main][tmp]; [tmp] crop=iw:ih/2:0:0, vflip [flip]; 
         display graph.png
 </pre> 
 
- can be used to create and display an image representing the graph described by the <i></i><font SIZE="-1"><i>GRAPH_DESCRIPTION</i></font><i></i> string. Note that this string must be a complete self-contained graph, with its inputs and outputs explicitly defined. For example if your command line is of the form: 
+ can be used to create and display an image representing the graph described by the <i></i><i>GRAPH_DESCRIPTION</i><i></i> string. Note that this string must be a complete self-contained graph, with its inputs and outputs explicitly defined. For example if your command line is of the form: 
 
  <pre>
         ffmpeg -i infile -vf scale=640:360 outfile
 </pre> 
 
- your <i></i><font SIZE="-1"><i>GRAPH_DESCRIPTION</i></font><i></i> string will need to be of the form: 
+ your <i></i><i>GRAPH_DESCRIPTION</i><i></i> string will need to be of the form: 
 
  <pre>
         nullsrc,scale=640:360,nullsink
@@ -13220,7 +13220,7 @@ nullsrc, split[L1], [L2] overlay, nullsink
 
  Libavfilter will automatically insert <b>scale</b> filters where format conversion is required. It is possible to specify swscale flags for those automatically inserted scalers by prepending <tt>&quot;sws_flags=</tt>flags<tt>;&quot;</tt> to the filtergraph description. 
 
- Here is a <font SIZE="-1">BNF</font> description of the filtergraph syntax: 
+ Here is a BNF description of the filtergraph syntax: 
 
  
         &lt;NAME&gt;             ::= sequence of alphanumeric characters and '_'
@@ -13276,11 +13276,11 @@ nullsrc, split[L1], [L2] overlay, nullsink
  The expression accepts the following values:
 <dl>
 <dt><b>t</b>
-</dt><dd> timestamp expressed in seconds, <font SIZE="-1">NAN</font> if the input timestamp is unknown
+</dt><dd> timestamp expressed in seconds, NAN if the input timestamp is unknown
 </dd><dt><b>n</b>
 </dt><dd> sequential number of the input frame, starting from 0
 </dd><dt><b>pos</b>
-</dt><dd> the position in the file of the input frame, <font SIZE="-1">NAN</font> if unknown
+</dt><dd> the position in the file of the input frame, NAN if unknown
 </dd><dt><b>w</b>
 </dt><dd>
 </dd><dt><b>h</b>
@@ -13309,7 +13309,7 @@ nullsrc, split[L1], [L2] overlay, nullsink
  Some filters with several inputs support a common set of options. These options can only be set by name, not with the short notation.
 <dl>
 <dt><b>eof_action</b>
-</dt><dd> The action to take when <font SIZE="-1">EOF</font> is encountered on the secondary input; it accepts one of the following values:
+</dt><dd> The action to take when EOF is encountered on the secondary input; it accepts one of the following values:
 </dd><dl>
 <dl>
 <dt><b>repeat</b>
@@ -13361,7 +13361,7 @@ nullsrc, split[L1], [L2] overlay, nullsink
 </dd><dt><b>link</b>
 </dt><dd> Choose if the <tt>&quot;average&quot;</tt> level between all channels of input stream or the louder(<tt>&quot;maximum&quot;</tt>) channel of input stream affects the reduction. Default is <tt>&quot;average&quot;</tt>.
 </dd><dt><b>detection</b>
-</dt><dd> Should the exact signal be taken in case of <tt>&quot;peak&quot;</tt> or an <font SIZE="-1">RMS</font> one in case of <tt>&quot;rms&quot;</tt>. Default is <tt>&quot;rms&quot;</tt> which is mostly smoother.
+</dt><dd> Should the exact signal be taken in case of <tt>&quot;peak&quot;</tt> or an RMS one in case of <tt>&quot;rms&quot;</tt>. Default is <tt>&quot;rms&quot;</tt> which is mostly smoother.
 </dd><dt><b>mix</b>
 </dt><dd> How much to use compressed signal in output. Default is 1. Range is between 0 and 1.</dd></dl>
  
@@ -13496,17 +13496,17 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 </dd><dt><b>mode</b>
 </dt><dd> Can be linear: <tt>&quot;lin&quot;</tt> or logarithmic: <tt>&quot;log&quot;</tt>.
 </dd><dt><b>dc</b>
-</dt><dd> Set <font SIZE="-1">DC.</font>
+</dt><dd> Set DC.
 </dd><dt><b>aa</b>
 </dt><dd> Set anti-aliasing.
 </dd><dt><b>samples</b>
 </dt><dd> Set sample reduction.
 </dd><dt><b>lfo</b>
-</dt><dd> Enable <font SIZE="-1">LFO.</font> By default disabled.
+</dt><dd> Enable LFO. By default disabled.
 </dd><dt><b>lforange</b>
-</dt><dd> Set <font SIZE="-1">LFO</font> range.
+</dt><dd> Set LFO range.
 </dd><dt><b>lforate</b>
-</dt><dd> Set <font SIZE="-1">LFO</font> rate.</dd></dl>
+</dt><dd> Set LFO rate.</dd></dl>
  
 
  <i>Commands</i> 
@@ -13630,9 +13630,9 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 </dd><dl>
 <dl>
 <dt><b>dc</b>
-</dt><dd> Add <font SIZE="-1">DC</font> signal.
+</dt><dd> Add DC signal.
 </dd><dt><b>ac</b>
-</dt><dd> Add <font SIZE="-1">AC</font> signal.
+</dt><dd> Add AC signal.
 </dd><dt><b>square</b>
 </dt><dd> Add square signal.
 </dd><dt><b>pulse</b>
@@ -13716,17 +13716,17 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 <dt><b>col</b>
 </dt><dd> select Columbia.
 </dd><dt><b>emi</b>
-</dt><dd> select <font SIZE="-1">EMI.</font>
+</dt><dd> select EMI.
 </dd><dt><b>bsi</b>
-</dt><dd> select <font SIZE="-1">BSI</font> (78RPM).
+</dt><dd> select BSI (78RPM).
 </dd><dt><b>riaa</b>
-</dt><dd> select <font SIZE="-1">RIAA.</font>
+</dt><dd> select RIAA.
 </dd><dt><b>cd</b>
-</dt><dd> select Compact Disc (<font SIZE="-1">CD</font>).
+</dt><dd> select Compact Disc (CD).
 </dd><dt><b>50fm</b>
-</dt><dd> select 50Xs (<font SIZE="-1">FM</font>).
+</dt><dd> select 50Xs (FM).
 </dd><dt><b>75fm</b>
-</dt><dd> select 75Xs (<font SIZE="-1">FM</font>).
+</dt><dd> select 75Xs (FM).
 </dd><dt><b>50kf</b>
 </dt><dd> select 50Xs (FM-KF).
 </dd><dt><b>75kf</b>
@@ -13770,8 +13770,8 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 </dt><dd>
 </dd><dt><b>nb_out_channels</b>
 </dt><dd> input and output number of channels
-</dd><dt><b>val(</b><font SIZE="-1"><b>CH</b></font><b>)</b>
-</dt><dd> the value of input channel with number <i></i><font SIZE="-1"><i>CH</i></font><i></i></dd></dl>
+</dd><dt><b>val(</b><b>CH</b><b>)</b>
+</dt><dd> the value of input channel with number <i></i><i>CH</i><i></i></dd></dl>
  
 
  Note: this filter is slow. For faster processing you should use a dedicated filter. 
@@ -13904,7 +13904,7 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 
 <h3>afftdn</h3>
 
- Denoise audio samples with <font SIZE="-1">FFT.</font> 
+ Denoise audio samples with FFT. 
 
  A description of the accepted parameters follows.
 <dl>
@@ -14038,11 +14038,11 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 
  Apply an arbitrary Finite Impulse Response filter. 
 
- This filter is designed for applying long <font SIZE="-1">FIR</font> filters, up to 60 seconds long. 
+ This filter is designed for applying long FIR filters, up to 60 seconds long. 
 
  It can be used as component for digital crossover filters, room equalization, cross talk cancellation, wavefield synthesis, auralization, ambiophonics, ambisonics and spatialization. 
 
- This filter uses the streams higher than first one as <font SIZE="-1">FIR</font> coefficients. If the non-first stream holds a single channel, it will be used for all input channels in the first stream, otherwise the number of channels in the non-first stream must be same as the number of channels in the first stream. 
+ This filter uses the streams higher than first one as FIR coefficients. If the non-first stream holds a single channel, it will be used for all input channels in the first stream, otherwise the number of channels in the non-first stream must be same as the number of channels in the first stream. 
 
  It accepts the following parameters:
 <dl>
@@ -14051,9 +14051,9 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 </dd><dt><b>wet</b>
 </dt><dd> Set wet gain. This sets final output gain.
 </dd><dt><b>length</b>
-</dt><dd> Set Impulse Response filter length. Default is 1, which means whole <font SIZE="-1">IR</font> is processed.
+</dt><dd> Set Impulse Response filter length. Default is 1, which means whole IR is processed.
 </dd><dt><b>gtype</b>
-</dt><dd> Enable applying gain measured from power of <font SIZE="-1">IR.</font> 
+</dt><dd> Enable applying gain measured from power of IR. 
  Set which approach to use for auto gain measurement.
 </dd><dl>
 <dl>
@@ -14062,7 +14062,7 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 </dd><dt><b>peak</b>
 </dt><dd> select peak gain, very conservative approach. This is default value.
 </dd><dt><b>dc</b>
-</dt><dd> select <font SIZE="-1">DC</font> gain, limited application.
+</dt><dd> select DC gain, limited application.
 </dd><dt><b>gn</b>
 </dt><dd> select gain to noise approach, this is most popular one.</dd></dl>
 </dl>
@@ -14071,33 +14071,33 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 </dl>
 
 <dt><b>irgain</b>
-</dt><dd> Set gain to be applied to <font SIZE="-1">IR</font> coefficients before filtering. Allowed range is 0 to 1. This gain is applied after any gain applied with <i>gtype</i> option.
+</dt><dd> Set gain to be applied to IR coefficients before filtering. Allowed range is 0 to 1. This gain is applied after any gain applied with <i>gtype</i> option.
 </dd><dt><b>irfmt</b>
-</dt><dd> Set format of <font SIZE="-1">IR</font> stream. Can be <tt>&quot;mono&quot;</tt> or <tt>&quot;input&quot;</tt>. Default is <tt>&quot;input&quot;</tt>.
+</dt><dd> Set format of IR stream. Can be <tt>&quot;mono&quot;</tt> or <tt>&quot;input&quot;</tt>. Default is <tt>&quot;input&quot;</tt>.
 </dd><dt><b>maxir</b>
 </dt><dd> Set max allowed Impulse Response filter duration in seconds. Default is 30 seconds. Allowed range is 0.1 to 60 seconds.
 </dd><dt><b>response</b>
-</dt><dd> Show <font SIZE="-1">IR</font> frequency response, magnitude(magenta), phase(green) and group delay(yellow) in additional video stream. By default it is disabled.
+</dt><dd> Show IR frequency response, magnitude(magenta), phase(green) and group delay(yellow) in additional video stream. By default it is disabled.
 </dd><dt><b>channel</b>
-</dt><dd> Set for which <font SIZE="-1">IR</font> channel to display frequency response. By default is first channel displayed. This option is used only when <i>response</i> is enabled.
+</dt><dd> Set for which IR channel to display frequency response. By default is first channel displayed. This option is used only when <i>response</i> is enabled.
 </dd><dt><b>size</b>
 </dt><dd> Set video stream size. This option is used only when <i>response</i> is enabled.
 </dd><dt><b>rate</b>
 </dt><dd> Set video stream frame rate. This option is used only when <i>response</i> is enabled.
 </dd><dt><b>minp</b>
-</dt><dd> Set minimal partition size used for convolution. Default is <i>8192</i>. Allowed range is from <i>1</i> to <i>32768</i>. Lower values decreases latency at cost of higher <font SIZE="-1">CPU</font> usage.
+</dt><dd> Set minimal partition size used for convolution. Default is <i>8192</i>. Allowed range is from <i>1</i> to <i>32768</i>. Lower values decreases latency at cost of higher CPU usage.
 </dd><dt><b>maxp</b>
-</dt><dd> Set maximal partition size used for convolution. Default is <i>8192</i>. Allowed range is from <i>8</i> to <i>32768</i>. Lower values may increase <font SIZE="-1">CPU</font> usage.
+</dt><dd> Set maximal partition size used for convolution. Default is <i>8192</i>. Allowed range is from <i>8</i> to <i>32768</i>. Lower values may increase CPU usage.
 </dd><dt><b>nbirs</b>
 </dt><dd> Set number of input impulse responses streams which will be switchable at runtime. Allowed range is from <i>1</i> to <i>32</i>. Default is <i>1</i>.
 </dd><dt><b>ir</b>
-</dt><dd> Set <font SIZE="-1">IR</font> stream which will be used for convolution, starting from <i>0</i>, should always be lower than supplied value by <tt>&quot;nbirs&quot;</tt> option. Default is <i>0</i>. This option can be changed at runtime via <b>commands</b>.</dd></dl>
+</dt><dd> Set IR stream which will be used for convolution, starting from <i>0</i>, should always be lower than supplied value by <tt>&quot;nbirs&quot;</tt> option. Default is <i>0</i>. This option can be changed at runtime via <b>commands</b>.</dd></dl>
  
 
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Apply reverb to stream using mono <font SIZE="-1">IR</font> file as second input, complete command using ffmpeg: 
+</dt><dd> Apply reverb to stream using mono IR file as second input, complete command using ffmpeg: 
  <pre>
         ffmpeg -i input.wav -i middle_tunnel_1way_mono.wav -lavfi afir output.wav
 </pre></dd></dl>
@@ -14132,7 +14132,7 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
  The filter accepts the following options:
 <dl>
 <dt><b>shift</b>
-</dt><dd> Specify frequency shift. Allowed range is -INT_MAX to <font SIZE="-1">INT_MAX.</font> Default value is 0.0.
+</dt><dd> Specify frequency shift. Allowed range is -INT_MAX to INT_MAX. Default value is 0.0.
 </dd><dt><b>level</b>
 </dt><dd> Set output gain applied to final output. Allowed range is from 0.0 to 1.0. Default value is 1.0.</dd></dl>
  
@@ -14168,7 +14168,7 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 </dd><dt><b>knee</b>
 </dt><dd> Curve the sharp knee around the threshold to enter gain reduction more softly. Default is 2.828427125. Allowed range is from 1 to 8.
 </dd><dt><b>detection</b>
-</dt><dd> Choose if exact signal should be taken for detection or an <font SIZE="-1">RMS</font> like one. Default is <tt>&quot;rms&quot;</tt>. Can be <tt>&quot;peak&quot;</tt> or <tt>&quot;rms&quot;</tt>.
+</dt><dd> Choose if exact signal should be taken for detection or an RMS like one. Default is <tt>&quot;rms&quot;</tt>. Can be <tt>&quot;peak&quot;</tt> or <tt>&quot;rms&quot;</tt>.
 </dd><dt><b>link</b>
 </dt><dd> Choose if the average level between all channels or the louder channel affects the reduction. Default is <tt>&quot;average&quot;</tt>. Can be <tt>&quot;average&quot;</tt> or <tt>&quot;maximum&quot;</tt>.</dd></dl>
  
@@ -14249,13 +14249,13 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 </dl>
 
 <dt><b>normalize, n</b>
-</dt><dd> Normalize filter coefficients, by default is enabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.
+</dt><dd> Normalize filter coefficients, by default is enabled. Enabling it will normalize magnitude response at DC to 0dB.
 </dd><dt><b>mix</b>
 </dt><dd> How much to use filtered signal in output. Default is 1. Range is between 0 and 1.
 </dd><dt><b>response</b>
-</dt><dd> Show <font SIZE="-1">IR</font> frequency response, magnitude(magenta), phase(green) and group delay(yellow) in additional video stream. By default it is disabled.
+</dt><dd> Show IR frequency response, magnitude(magenta), phase(green) and group delay(yellow) in additional video stream. By default it is disabled.
 </dd><dt><b>channel</b>
-</dt><dd> Set for which <font SIZE="-1">IR</font> channel to display frequency response. By default is first channel displayed. This option is used only when <i>response</i> is enabled.
+</dt><dd> Set for which IR channel to display frequency response. By default is first channel displayed. This option is used only when <i>response</i> is enabled.
 </dd><dt><b>size</b>
 </dt><dd> Set video stream size. This option is used only when <i>response</i> is enabled.</dd></dl>
  
@@ -14301,9 +14301,9 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 </dd><dt><b>release</b>
 </dt><dd> Come back from limiting to attenuation 1.0 in this amount of milliseconds. Default is 50 milliseconds.
 </dd><dt><b>asc</b>
-</dt><dd> When gain reduction is always needed <font SIZE="-1">ASC</font> takes care of releasing to an average reduction level rather than reaching a reduction of 0 in the release time.
+</dt><dd> When gain reduction is always needed ASC takes care of releasing to an average reduction level rather than reaching a reduction of 0 in the release time.
 </dd><dt><b>asc_level</b>
-</dt><dd> Select how much the release time is affected by <font SIZE="-1">ASC, 0</font> means nearly no changes in release time while 1 produces higher release times.
+</dt><dd> Select how much the release time is affected by ASC, 0 means nearly no changes in release time while 1 produces higher release times.
 </dd><dt><b>level</b>
 </dt><dd> Auto level output signal. Default is enabled. This normalizes audio back to 0dB if enabled.</dd></dl>
  
@@ -14344,11 +14344,11 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 </dd><dt><b>channels, c</b>
 </dt><dd> Specify which channels to filter, by default all available are filtered.
 </dd><dt><b>normalize, n</b>
-</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.
+</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.
 </dd><dt><b>order, o</b>
 </dt><dd> Set the filter order, can be 1 or 2. Default is 2.
 </dd><dt><b>transform, a</b>
-</dt><dd> Set transform type of <font SIZE="-1">IIR</font> filter.
+</dt><dd> Set transform type of IIR filter.
 </dd><dl>
 <dl>
 <dt><b>di</b>
@@ -14423,7 +14423,7 @@ ffmpeg - i in.flac - filter_complex 'acrossover=split=1500 8000:order=8th[LOW][M
 
  If the channel layouts of the inputs are disjoint, and therefore compatible, the channel layout of the output will be set accordingly and the channels will be reordered as necessary. If the channel layouts of the inputs are not disjoint, the output will have all the channels of the first input then all the channels of the second input, in that order, and the channel layout of the output will be the default value corresponding to the total number of channels. 
 
- For example, if the first input is in 2.1 (<font SIZE="-1">FL+FR+LF</font>) and the second input is <font SIZE="-1">FC+BL+BR,</font> then the output will be in 5.1, with the channels in the following order: a1, a2, b1, a3, b2, b3 (a1 is the first channel of the first input, b1 is the first channel of the second input). 
+ For example, if the first input is in 2.1 (FL+FR+LF) and the second input is FC+BL+BR, then the output will be in 5.1, with the channels in the following order: a1, a2, b1, a3, b2, b3 (a1 is the first channel of the first input, b1 is the first channel of the second input). 
 
  On the other hand, if both input are in stereo, the output channels will be in the default order: a1, a2, b1, b2, and the channel layout will be arbitrarily set to 4.0, which may or may not be the expected value. 
 
@@ -14749,7 +14749,7 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
 
 <h3>apulsator</h3>
 
- Audio pulsator is something between an autopanner and a tremolo. But it can produce funny stereo effects as well. Pulsator changes the volume of the left and right channel based on a <font SIZE="-1">LFO</font> (low frequency oscillator) with different waveforms and shifted phases. This filter have the ability to define an offset between left and right channel. An offset of 0 means that both <font SIZE="-1">LFO</font> shapes match each other. The left and right channel are altered equally - a conventional tremolo. An offset of 50% means that the shape of the right channel is exactly shifted in phase (or moved backwards about half of the frequency) - pulsator acts as an autopanner. At 1 both curves match again. Every setting in between moves the phase shift gapless between all stages and produces some ``bypassing'' sounds with sine and triangle waveforms. The more you set the offset near 1 (starting from the 0.5) the faster the signal passes from the left to the right speaker. 
+ Audio pulsator is something between an autopanner and a tremolo. But it can produce funny stereo effects as well. Pulsator changes the volume of the left and right channel based on a LFO (low frequency oscillator) with different waveforms and shifted phases. This filter have the ability to define an offset between left and right channel. An offset of 0 means that both LFO shapes match each other. The left and right channel are altered equally - a conventional tremolo. An offset of 50% means that the shape of the right channel is exactly shifted in phase (or moved backwards about half of the frequency) - pulsator acts as an autopanner. At 1 both curves match again. Every setting in between moves the phase shift gapless between all stages and produces some ``bypassing'' sounds with sine and triangle waveforms. The more you set the offset near 1 (starting from the 0.5) the faster the signal passes from the left to the right speaker. 
 
  The filter accepts the following options:
 <dl>
@@ -14758,9 +14758,9 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
 </dd><dt><b>level_out</b>
 </dt><dd> Set output gain. By default it is 1. Range is [0.015625 - 64].
 </dd><dt><b>mode</b>
-</dt><dd> Set waveform shape the <font SIZE="-1">LFO</font> will use. Can be one of: sine, triangle, square, sawup or sawdown. Default is sine.
+</dt><dd> Set waveform shape the LFO will use. Can be one of: sine, triangle, square, sawup or sawdown. Default is sine.
 </dd><dt><b>amount</b>
-</dt><dd> Set modulation. Define how much of original signal is affected by the <font SIZE="-1">LFO.</font>
+</dt><dd> Set modulation. Define how much of original signal is affected by the LFO.
 </dd><dt><b>offset_l</b>
 </dt><dd> Set left channel offset. Default is 0. Allowed range is [0 - 1].
 </dd><dt><b>offset_r</b>
@@ -14849,7 +14849,7 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
 
 <h3>asetrate</h3>
 
- Set the sample rate without altering the <font SIZE="-1">PCM</font> data. This will result in a change of speed and pitch. 
+ Set the sample rate without altering the PCM data. This will result in a change of speed and pitch. 
 
  The filter accepts the following options:
 <dl>
@@ -14968,7 +14968,7 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
  It accepts the following option:
 <dl>
 <dt><b>length</b>
-</dt><dd> Short window length in seconds, used for peak and trough <font SIZE="-1">RMS</font> measurement. Default is <tt>0.05</tt> (50 milliseconds). Allowed range is <tt>&quot;[0.01 - 10]&quot;</tt>.
+</dt><dd> Short window length in seconds, used for peak and trough RMS measurement. Default is <tt>0.05</tt> (50 milliseconds). Allowed range is <tt>&quot;[0.01 - 10]&quot;</tt>.
 </dd><dt><b>metadata</b>
 </dt><dd> Set metadata injection. All the metadata keys are prefixed with <tt>&quot;lavfi.astats.X&quot;</tt>, where <tt>&quot;X&quot;</tt> is channel number starting from 1 or string <tt>&quot;Overall&quot;</tt>. Default is disabled. 
  Available keys for each channel are: DC_offset Min_level Max_level Min_difference Max_difference Mean_difference RMS_difference Peak_level RMS_peak RMS_trough Crest_factor Flat_factor Peak_count Noise_floor Noise_floor_count Bit_depth Dynamic_range Zero_crossings Zero_crossings_rate Number_of_NaNs Number_of_Infs Number_of_denormals 
@@ -14985,7 +14985,7 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
 
  A description of each shown parameter follows:
 <dl>
-<dt><font SIZE="-1"><b>DC</b></font><b> offset</b>
+<dt><b>DC</b><b> offset</b>
 </dt><dd> Mean amplitude displacement from zero.
 </dd><dt><b>Min level</b>
 </dt><dd> Minimal sample level.
@@ -14997,18 +14997,18 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
 </dt><dd> Maximal difference between two consecutive samples.
 </dd><dt><b>Mean difference</b>
 </dt><dd> Mean difference between two consecutive samples. The average of each difference between two consecutive samples.
-</dd><dt><font SIZE="-1"><b>RMS</b></font><b> difference</b>
+</dd><dt><b>RMS</b><b> difference</b>
 </dt><dd> Root Mean Square difference between two consecutive samples.
 </dd><dt><b>Peak level dB</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RMS</b></font><b> level dB</b>
-</dt><dd> Standard peak and <font SIZE="-1">RMS</font> level measured in dBFS.
-</dd><dt><font SIZE="-1"><b>RMS</b></font><b> peak dB</b>
+</dd><dt><b>RMS</b><b> level dB</b>
+</dt><dd> Standard peak and RMS level measured in dBFS.
+</dd><dt><b>RMS</b><b> peak dB</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RMS</b></font><b> trough dB</b>
-</dt><dd> Peak and trough values for <font SIZE="-1">RMS</font> level measured over a short window.
+</dd><dt><b>RMS</b><b> trough dB</b>
+</dt><dd> Peak and trough values for RMS level measured over a short window.
 </dd><dt><b>Crest factor</b>
-</dt><dd> Standard ratio of peak to <font SIZE="-1">RMS</font> level (note: not in dB).
+</dt><dd> Standard ratio of peak to RMS level (note: not in dB).
 </dd><dt><b>Flat factor</b>
 </dt><dd> Flatness (i.e. consecutive samples with the same value) of the signal at its peak levels (i.e. either <i>Min level</i> or <i>Max level</i>).
 </dd><dt><b>Peak count</b>
@@ -15265,9 +15265,9 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
 </dd><dt><b>channels, c</b>
 </dt><dd> Specify which channels to filter, by default all available are filtered.
 </dd><dt><b>normalize, n</b>
-</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.
+</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.
 </dd><dt><b>transform, a</b>
-</dt><dd> Set transform type of <font SIZE="-1">IIR</font> filter.
+</dt><dd> Set transform type of IIR filter.
 </dd><dl>
 <dl>
 <dt><b>di</b>
@@ -15351,9 +15351,9 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
 </dd><dt><b>channels, c</b>
 </dt><dd> Specify which channels to filter, by default all available are filtered.
 </dd><dt><b>normalize, n</b>
-</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.
+</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.
 </dd><dt><b>transform, a</b>
-</dt><dd> Set transform type of <font SIZE="-1">IIR</font> filter.
+</dt><dd> Set transform type of IIR filter.
 </dd><dl>
 <dl>
 <dt><b>di</b>
@@ -15405,7 +15405,7 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
 
 <h3>bass, lowshelf</h3>
 
- Boost or cut the bass (lower) frequencies of the audio using a two-pole shelving filter with a response similar to that of a standard hi-fi's tone-controls. This is also known as shelving equalisation (<font SIZE="-1">EQ</font>). 
+ Boost or cut the bass (lower) frequencies of the audio using a two-pole shelving filter with a response similar to that of a standard hi-fi's tone-controls. This is also known as shelving equalisation (EQ). 
 
  The filter accepts the following options:
 <dl>
@@ -15441,9 +15441,9 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
 </dd><dt><b>channels, c</b>
 </dt><dd> Specify which channels to filter, by default all available are filtered.
 </dd><dt><b>normalize, n</b>
-</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.
+</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.
 </dd><dt><b>transform, a</b>
-</dt><dd> Set transform type of <font SIZE="-1">IIR</font> filter.
+</dt><dd> Set transform type of IIR filter.
 </dd><dl>
 <dl>
 <dt><b>di</b>
@@ -15497,7 +15497,7 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
 
 <h3>biquad</h3>
 
- Apply a biquad <font SIZE="-1">IIR</font> filter with the given coefficients. Where <i>b0</i>, <i>b1</i>, <i>b2</i> and <i>a0</i>, <i>a1</i>, <i>a2</i> are the numerator and denominator coefficients respectively. and <i>channels</i>, <i>c</i> specify which channels to filter, by default all available are filtered. 
+ Apply a biquad IIR filter with the given coefficients. Where <i>b0</i>, <i>b1</i>, <i>b2</i> and <i>a0</i>, <i>a1</i>, <i>a2</i> are the numerator and denominator coefficients respectively. and <i>channels</i>, <i>c</i> specify which channels to filter, by default all available are filtered. 
 
  <i>Commands</i> 
 
@@ -15520,9 +15520,9 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
 </dd><dt><b>channels, c</b>
 </dt><dd> Specify which channels to filter, by default all available are filtered.
 </dd><dt><b>normalize, n</b>
-</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.
+</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.
 </dd><dt><b>transform, a</b>
-</dt><dd> Set transform type of <font SIZE="-1">IIR</font> filter.
+</dt><dd> Set transform type of IIR filter.
 </dd><dl>
 <dl>
 <dt><b>di</b>
@@ -15593,7 +15593,7 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
  It accepts the following parameters:
 <dl>
 <dt><b>map</b>
-</dt><dd> Map channels from input to output. The argument is a '|'-separated list of mappings, each in the <tt>&quot;</tt>in_channel<tt>-</tt>out_channel<tt>&quot;</tt> or <i>in_channel</i> form. <i>in_channel</i> can be either the name of the input channel (e.g. <font SIZE="-1">FL</font> for front left) or its index in the input channel layout. <i>out_channel</i> is the name of the output channel or its index in the output channel layout. If <i>out_channel</i> is not given then it is implicitly an index, starting with zero and increasing by one for each mapping.
+</dt><dd> Map channels from input to output. The argument is a '|'-separated list of mappings, each in the <tt>&quot;</tt>in_channel<tt>-</tt>out_channel<tt>&quot;</tt> or <i>in_channel</i> form. <i>in_channel</i> can be either the name of the input channel (e.g. FL for front left) or its index in the input channel layout. <i>out_channel</i> is the name of the output channel or its index in the output channel layout. If <i>out_channel</i> is not given then it is implicitly an index, starting with zero and increasing by one for each mapping.
 </dd><dt><b>channel_layout</b>
 </dt><dd> The channel layout of the output stream.</dd></dl>
  
@@ -15603,13 +15603,13 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> For example, assuming a 5.1+downmix input <font SIZE="-1">MOV</font> file, 
+</dt><dd> For example, assuming a 5.1+downmix input MOV file, 
  <pre>
         ffmpeg -i in.mov -filter 'channelmap=map=DL-FL|DR-FR' out.wav
 </pre> 
- will create an output <font SIZE="-1">WAV</font> file tagged as stereo from the downmix channels of the input.
+ will create an output WAV file tagged as stereo from the downmix channels of the input.
 </dd><dt>&bull;
-</dt><dd> To fix a 5.1 <font SIZE="-1">WAV</font> improperly encoded in <font SIZE="-1">AAC</font>'s native channel order 
+</dt><dd> To fix a 5.1 WAV improperly encoded in AAC's native channel order 
  <pre>
         ffmpeg -i in.wav -filter 'channelmap=1|2|0|5|3|4:5.1' out.wav
 </pre></dd></dl>
@@ -15630,16 +15630,16 @@ asplit[a][b], [a] adelay = 32S | 32S [a], [b][a] anlms = order = 128 : leakage =
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> For example, assuming a stereo input <font SIZE="-1">MP3</font> file, 
+</dt><dd> For example, assuming a stereo input MP3 file, 
  <pre>
         ffmpeg -i in.mp3 -filter_complex channelsplit out.mkv
 </pre> 
  will create an output Matroska file with two audio streams, one containing only the left channel and the other the right channel.
 </dd><dt>&bull;
-</dt><dd> Split a 5.1 <font SIZE="-1">WAV</font> file into per-channel files: 
+</dt><dd> Split a 5.1 WAV file into per-channel files: 
 ffmpeg - i in.wav - filter_complex 'channelsplit=channel_layout=5.1[FL][FR][FC][LFE][SL][SR]' - map '[FL]' front_left.wav - map '[FR]' front_right.wav - map '[FC]' front_center.wav - map '[LFE]' lfe.wav - map '[SL]' side_left.wav - map '[SR]' side_right.wav
 </dd><dt>&bull;
-</dt><dd> Extract only <font SIZE="-1">LFE</font> from a 5.1 <font SIZE="-1">WAV</font> file: 
+</dt><dd> Extract only LFE from a 5.1 WAV file: 
 ffmpeg - i in.wav - filter_complex 'channelsplit=channel_layout=5.1:channels=LFE[LFE]' - map '[LFE]' lfe.wav
 </dd></dl>
 
@@ -15854,12 +15854,12 @@ ffmpeg - i in.wav - filter_complex 'channelsplit=channel_layout=5.1:channels=LFE
 
 <h3>dcshift</h3>
 
- Apply a <font SIZE="-1">DC</font> shift to the audio. 
+ Apply a DC shift to the audio. 
 
- This can be useful to remove a <font SIZE="-1">DC</font> offset (caused perhaps by a hardware problem in the recording chain) from the audio. The effect of a <font SIZE="-1">DC</font> offset is reduced headroom and hence volume. The <b>astats</b> filter can be used to determine if a signal has a <font SIZE="-1">DC</font> offset.
+ This can be useful to remove a DC offset (caused perhaps by a hardware problem in the recording chain) from the audio. The effect of a DC offset is reduced headroom and hence volume. The <b>astats</b> filter can be used to determine if a signal has a DC offset.
 <dl>
 <dt><b>shift</b>
-</dt><dd> Set the <font SIZE="-1">DC</font> shift, allowed range is [-1, 1]. It indicates the amount to shift the audio.
+</dt><dd> Set the DC shift, allowed range is [-1, 1]. It indicates the amount to shift the audio.
 </dd><dt><b>limitergain</b>
 </dt><dd> Optional. It should have a value much less than 1 (e.g. 0.05 or 0.02) and is used to prevent clipping.</dd></dl>
 
@@ -15895,7 +15895,7 @@ ffmpeg - i in.wav - filter_complex 'channelsplit=channel_layout=5.1:channels=LFE
 
  Measure audio dynamic range. 
 
- <font SIZE="-1">DR</font> values of 14 and higher is found in very dynamic material. <font SIZE="-1">DR</font> of 8 to 13 is found in transition material. And anything less that 8 have very poor dynamics and is very compressed. 
+ DR values of 14 and higher is found in very dynamic material. DR of 8 to 13 is found in transition material. And anything less that 8 have very poor dynamics and is very compressed. 
 
  The filter accepts the following options:
 <dl>
@@ -15917,11 +15917,11 @@ ffmpeg - i in.wav - filter_complex 'channelsplit=channel_layout=5.1:channels=LFE
 </dd><dt><b>maxgain, m</b>
 </dt><dd> Set the maximum gain factor. In range from 1.0 to 100.0. Default is 10.0. The Dynamic Audio Normalizer determines the maximum possible (local) gain factor for each input frame, i.e. the maximum gain factor that does not result in clipping or distortion. The maximum gain factor is determined by the frame's highest magnitude sample. However, the Dynamic Audio Normalizer additionally bounds the frame's maximum gain factor by a predetermined (global) maximum gain factor. This is done in order to avoid excessive gain factors in ``silent'' or almost silent frames. By default, the maximum gain factor is 10.0, For most inputs the default value should be sufficient and it usually is not recommended to increase this value. Though, for input with an extremely low overall volume level, it may be necessary to allow even higher gain factors. Note, however, that the Dynamic Audio Normalizer does not simply apply a ``hard'' threshold (i.e. cut off values above the threshold). Instead, a ``sigmoid'' threshold function will be applied. This way, the gain factors will smoothly approach the threshold value, but never exceed that value.
 </dd><dt><b>targetrms, r</b>
-</dt><dd> Set the target <font SIZE="-1">RMS.</font> In range from 0.0 to 1.0. Default is 0.0 - disabled. By default, the Dynamic Audio Normalizer performs ``peak'' normalization. This means that the maximum local gain factor for each frame is defined (only) by the frame's highest magnitude sample. This way, the samples can be amplified as much as possible without exceeding the maximum signal level, i.e. without clipping. Optionally, however, the Dynamic Audio Normalizer can also take into account the frame's root mean square, abbreviated <font SIZE="-1">RMS.</font> In electrical engineering, the <font SIZE="-1">RMS</font> is commonly used to determine the power of a time-varying signal. It is therefore considered that the <font SIZE="-1">RMS</font> is a better approximation of the ``perceived loudness'' than just looking at the signal's peak magnitude. Consequently, by adjusting all frames to a constant <font SIZE="-1">RMS</font> value, a uniform ``perceived loudness'' can be established. If a target <font SIZE="-1">RMS</font> value has been specified, a frame's local gain factor is defined as the factor that would result in exactly that <font SIZE="-1">RMS</font> value. Note, however, that the maximum local gain factor is still restricted by the frame's highest magnitude sample, in order to prevent clipping.
+</dt><dd> Set the target RMS. In range from 0.0 to 1.0. Default is 0.0 - disabled. By default, the Dynamic Audio Normalizer performs ``peak'' normalization. This means that the maximum local gain factor for each frame is defined (only) by the frame's highest magnitude sample. This way, the samples can be amplified as much as possible without exceeding the maximum signal level, i.e. without clipping. Optionally, however, the Dynamic Audio Normalizer can also take into account the frame's root mean square, abbreviated RMS. In electrical engineering, the RMS is commonly used to determine the power of a time-varying signal. It is therefore considered that the RMS is a better approximation of the ``perceived loudness'' than just looking at the signal's peak magnitude. Consequently, by adjusting all frames to a constant RMS value, a uniform ``perceived loudness'' can be established. If a target RMS value has been specified, a frame's local gain factor is defined as the factor that would result in exactly that RMS value. Note, however, that the maximum local gain factor is still restricted by the frame's highest magnitude sample, in order to prevent clipping.
 </dd><dt><b>coupling, n</b>
 </dt><dd> Enable channels coupling. By default is enabled. By default, the Dynamic Audio Normalizer will amplify all channels by the same amount. This means the same gain factor will be applied to all channels, i.e. the maximum possible gain factor is determined by the ``loudest'' channel. However, in some recordings, it may happen that the volume of the different channels is uneven, e.g. one channel may be ``quieter'' than the other one(s). In this case, this option can be used to disable the channel coupling. This way, the gain factor will be determined independently for each channel, depending only on the individual channel's highest magnitude sample. This allows for harmonizing the volume of the different channels.
 </dd><dt><b>correctdc, c</b>
-</dt><dd> Enable <font SIZE="-1">DC</font> bias correction. By default is disabled. An audio signal (in the time domain) is a sequence of sample values. In the Dynamic Audio Normalizer these sample values are represented in the -1.0 to 1.0 range, regardless of the original input format. Normally, the audio signal, or ``waveform'', should be centered around the zero point. That means if we calculate the mean value of all samples in a file, or in a single frame, then the result should be 0.0 or at least very close to that value. If, however, there is a significant deviation of the mean value from 0.0, in either positive or negative direction, this is referred to as a <font SIZE="-1">DC</font> bias or <font SIZE="-1">DC</font> offset. Since a <font SIZE="-1">DC</font> bias is clearly undesirable, the Dynamic Audio Normalizer provides optional <font SIZE="-1">DC</font> bias correction. With <font SIZE="-1">DC</font> bias correction enabled, the Dynamic Audio Normalizer will determine the mean value, or ``<font SIZE="-1">DC</font> correction'' offset, of each input frame and subtract that value from all of the frame's sample values which ensures those samples are centered around 0.0 again. Also, in order to avoid ``gaps'' at the frame boundaries, the <font SIZE="-1">DC</font> correction offset values will be interpolated smoothly between neighbouring frames.
+</dt><dd> Enable DC bias correction. By default is disabled. An audio signal (in the time domain) is a sequence of sample values. In the Dynamic Audio Normalizer these sample values are represented in the -1.0 to 1.0 range, regardless of the original input format. Normally, the audio signal, or ``waveform'', should be centered around the zero point. That means if we calculate the mean value of all samples in a file, or in a single frame, then the result should be 0.0 or at least very close to that value. If, however, there is a significant deviation of the mean value from 0.0, in either positive or negative direction, this is referred to as a DC bias or DC offset. Since a DC bias is clearly undesirable, the Dynamic Audio Normalizer provides optional DC bias correction. With DC bias correction enabled, the Dynamic Audio Normalizer will determine the mean value, or ``DC correction'' offset, of each input frame and subtract that value from all of the frame's sample values which ensures those samples are centered around 0.0 again. Also, in order to avoid ``gaps'' at the frame boundaries, the DC correction offset values will be interpolated smoothly between neighbouring frames.
 </dd><dt><b>altboundary, b</b>
 </dt><dd> Enable alternative boundary mode. By default is disabled. The Dynamic Audio Normalizer takes into account a certain neighbourhood around each frame. This includes the preceding frames as well as the subsequent frames. However, for the ``boundary'' frames, located at the very beginning and at the very end of the audio file, not all neighbouring frames are available. In particular, for the first few frames in the audio file, the preceding frames are not known. And, similarly, for the last few frames in the audio file, the subsequent frames are not known. Thus, the question arises which gain factors should be assumed for the missing frames in the ``boundary'' region. The Dynamic Audio Normalizer implements two modes to deal with this situation. The default boundary mode assumes a gain factor of exactly 1.0 for the missing frames, resulting in a smooth ``fade in'' and ``fade out'' at the beginning and at the end of the input, respectively.
 </dd><dt><b>compress, s</b>
@@ -15938,13 +15938,13 @@ ffmpeg - i in.wav - filter_complex 'channelsplit=channel_layout=5.1:channels=LFE
 
  Make audio easier to listen to on headphones. 
 
- This filter adds `cues' to 44.1kHz stereo (i.e. audio <font SIZE="-1">CD</font> format) audio so that when listened to on headphones the stereo image is moved from inside your head (standard for headphones) to outside and in front of the listener (standard for speakers). 
+ This filter adds `cues' to 44.1kHz stereo (i.e. audio CD format) audio so that when listened to on headphones the stereo image is moved from inside your head (standard for headphones) to outside and in front of the listener (standard for speakers). 
 
  Ported from SoX.
 
 <h3>equalizer</h3>
 
- Apply a two-pole peaking equalisation (<font SIZE="-1">EQ</font>) filter. With this filter, the signal-level at and around a selected frequency can be increased or decreased, whilst (unlike bandpass and bandreject filters) that at all other frequencies is unchanged. 
+ Apply a two-pole peaking equalisation (EQ) filter. With this filter, the signal-level at and around a selected frequency can be increased or decreased, whilst (unlike bandpass and bandreject filters) that at all other frequencies is unchanged. 
 
  In order to produce complex equalisation curves, this filter can be given several times, each with a different central frequency. 
 
@@ -15980,9 +15980,9 @@ ffmpeg - i in.wav - filter_complex 'channelsplit=channel_layout=5.1:channels=LFE
 </dd><dt><b>channels, c</b>
 </dt><dd> Specify which channels to filter, by default all available are filtered.
 </dd><dt><b>normalize, n</b>
-</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.
+</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.
 </dd><dt><b>transform, a</b>
-</dt><dd> Set transform type of <font SIZE="-1">IIR</font> filter.
+</dt><dd> Set transform type of IIR filter.
 </dd><dl>
 <dl>
 <dt><b>di</b>
@@ -16066,7 +16066,7 @@ ffmpeg - i in.wav - filter_complex 'channelsplit=channel_layout=5.1:channels=LFE
 
 <h3>firequalizer</h3>
 
- Apply <font SIZE="-1">FIR</font> Equalization using arbitrary frequency response. 
+ Apply FIR Equalization using arbitrary frequency response. 
 
  The filter accepts the following option:
 <dl>
@@ -16178,7 +16178,7 @@ ffmpeg - i in.wav - filter_complex 'channelsplit=channel_layout=5.1:channels=LFE
 </dd><dt><b>dumpscale</b>
 </dt><dd> Set scale for dumpfile. Acceptable values are same with scale option. Default is linlog.
 </dd><dt><b>fft2</b>
-</dt><dd> Enable 2-channel convolution using complex <font SIZE="-1">FFT.</font> This improves speed significantly. Default is disabled.
+</dt><dd> Enable 2-channel convolution using complex FFT. This improves speed significantly. Default is disabled.
 </dd><dt><b>min_phase</b>
 </dt><dd> Enable minimum phase impulse response. Default is disabled.</dd></dl>
  
@@ -16284,15 +16284,15 @@ firequalizer = gain = 'if(eq(chid,1), gain_interpolate(f), if(eq(chid,2), gain_i
 
 <h3>hdcd</h3>
 
- Decodes High Definition Compatible Digital (<font SIZE="-1">HDCD</font>) data. A 16-bit <font SIZE="-1">PCM</font> stream with embedded <font SIZE="-1">HDCD</font> codes is expanded into a 20-bit <font SIZE="-1">PCM</font> stream. 
+ Decodes High Definition Compatible Digital (HDCD) data. A 16-bit PCM stream with embedded HDCD codes is expanded into a 20-bit PCM stream. 
 
- The filter supports the Peak Extend and Low-level Gain Adjustment features of <font SIZE="-1">HDCD,</font> and detects the Transient Filter flag. 
+ The filter supports the Peak Extend and Low-level Gain Adjustment features of HDCD, and detects the Transient Filter flag. 
 
  <pre>
         ffmpeg -i HDCD16.flac -af hdcd OUT24.flac
 </pre> 
 
- When using the filter with wav, note the default encoding for wav is 16-bit, so the resulting 20-bit stream will be truncated back to 16-bit. Use something like <b>-acodec pcm_s24le</b> after the filter to get 24-bit <font SIZE="-1">PCM</font> output. 
+ When using the filter with wav, note the default encoding for wav is 16-bit, so the resulting 20-bit stream will be truncated back to 16-bit. Use something like <b>-acodec pcm_s24le</b> after the filter to get 24-bit PCM output. 
 
  <pre>
         ffmpeg -i HDCD16.wav -af hdcd OUT16.wav
@@ -16308,10 +16308,10 @@ firequalizer = gain = 'if(eq(chid,1), gain_interpolate(f), if(eq(chid,2), gain_i
 </dd><dt><b>cdt_ms</b>
 </dt><dd> Set the code detect timer period in ms.
 </dd><dt><b>force_pe</b>
-</dt><dd> Always extend peaks above -3dBFS even if <font SIZE="-1">PE</font> isn't signaled.
+</dt><dd> Always extend peaks above -3dBFS even if PE isn't signaled.
 </dd><dt><b>analyze_mode</b>
 </dt><dd> Replace audio with a solid tone and adjust the amplitude to signal some specific aspect of the decoding process. The output file can be loaded in an audio editor alongside the original to aid analysis. 
- <tt>&quot;analyze_mode=pe:force_pe=true&quot;</tt> can be used to see all samples above the <font SIZE="-1">PE</font> level. 
+ <tt>&quot;analyze_mode=pe:force_pe=true&quot;</tt> can be used to see all samples above the PE level. 
  Modes are:
 </dd><dl>
 <dl>
@@ -16344,7 +16344,7 @@ firequalizer = gain = 'if(eq(chid,1), gain_interpolate(f), if(eq(chid,2), gain_i
 </dd><dt><b>type</b>
 </dt><dd> Set processing type. Can be <i>time</i> or <i>freq</i>. <i>time</i> is processing audio in time domain which is slow. <i>freq</i> is processing audio in frequency domain which is fast. Default is <i>freq</i>.
 </dd><dt><b>lfe</b>
-</dt><dd> Set custom gain for <font SIZE="-1">LFE</font> channels. Value is in dB. Default is 0.
+</dt><dd> Set custom gain for LFE channels. Value is in dB. Default is 0.
 </dd><dt><b>size</b>
 </dt><dd> Set size of frame in number of samples which will be processed at once. Default value is <i>1024</i>. Allowed range is from 1024 to 96000.
 </dd><dt><b>hrir</b>
@@ -16354,7 +16354,7 @@ firequalizer = gain = 'if(eq(chid,1), gain_interpolate(f), if(eq(chid,2), gain_i
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Full example using wav files as coefficients with amovie filters for 7.1 downmix, each amovie filter use stereo file with <font SIZE="-1">IR</font> coefficients as input. The files give coefficients for each position of virtual loudspeaker: 
+</dt><dd> Full example using wav files as coefficients with amovie filters for 7.1 downmix, each amovie filter use stereo file with IR coefficients as input. The files give coefficients for each position of virtual loudspeaker: 
 ffmpeg - i input.wav - filter_complex "amovie=azi_270_ele_0_DFC.wav[sr];amovie=azi_90_ele_0_DFC.wav[sl];amovie=azi_225_ele_0_DFC.wav[br];amovie=azi_135_ele_0_DFC.wav[bl];amovie=azi_0_ele_0_DFC.wav,asplit[fc][lfe];amovie=azi_35_ele_0_DFC.wav[fl];amovie=azi_325_ele_0_DFC.wav[fr];[0:a][fl][fr][fc][lfe][bl][br][sl][sr]headphone=FL|FR|FC|LFE|BL|BR|SL|SR" output.wav
 </dd><dt>&bull;
 </dt><dd> Full example using wav files as coefficients with amovie filters for 7.1 downmix, but now in <i>multich</i> <i>hrir</i> format. 
@@ -16397,9 +16397,9 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
 </dd><dt><b>channels, c</b>
 </dt><dd> Specify which channels to filter, by default all available are filtered.
 </dd><dt><b>normalize, n</b>
-</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.
+</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.
 </dd><dt><b>transform, a</b>
-</dt><dd> Set transform type of <font SIZE="-1">IIR</font> filter.
+</dt><dd> Set transform type of IIR filter.
 </dd><dl>
 <dl>
 <dt><b>di</b>
@@ -16460,7 +16460,7 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
 </dd><dt><b>channel_layout</b>
 </dt><dd> The desired output channel layout. It defaults to stereo.
 </dd><dt><b>map</b>
-</dt><dd> Map channels from inputs to output. The argument is a '|'-separated list of mappings, each in the <tt>&quot;</tt>input_idx<tt>.</tt>in_channel<tt>-</tt>out_channel<tt>&quot;</tt> form. <i>input_idx</i> is the 0-based index of the input stream. <i>in_channel</i> can be either the name of the input channel (e.g. <font SIZE="-1">FL</font> for front left) or its index in the specified input stream. <i>out_channel</i> is the name of the output channel.</dd></dl>
+</dt><dd> Map channels from inputs to output. The argument is a '|'-separated list of mappings, each in the <tt>&quot;</tt>input_idx<tt>.</tt>in_channel<tt>-</tt>out_channel<tt>&quot;</tt> form. <i>input_idx</i> is the 0-based index of the input stream. <i>in_channel</i> can be either the name of the input channel (e.g. FL for front left) or its index in the specified input stream. <i>out_channel</i> is the name of the output channel.</dd></dl>
  
 
  The filter will attempt to guess the mappings when they are not specified explicitly. It does so by first trying to find an unused matching input channel and if that fails it picks the first unused input channel. 
@@ -16481,12 +16481,12 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
 
 <h3>ladspa</h3>
 
- Load a <font SIZE="-1">LADSPA</font> (Linux Audio Developer's Simple Plugin <font SIZE="-1">API</font>) plugin. 
+ Load a LADSPA (Linux Audio Developer's Simple Plugin API) plugin. 
 
  To enable compilation of this filter you need to configure FFmpeg with <tt>&quot;--enable-ladspa&quot;</tt>.
 <dl>
 <dt><b>file, f</b>
-</dt><dd> Specifies the name of <font SIZE="-1">LADSPA</font> plugin library to load. If the environment variable <font SIZE="-1"><b>LADSPA_PATH</b></font> is defined, the <font SIZE="-1">LADSPA</font> plugin is searched in each one of the directories specified by the colon separated list in <font SIZE="-1"><b>LADSPA_PATH</b></font>, otherwise in the standard <font SIZE="-1">LADSPA</font> paths, which are in this order: <i></i><font SIZE="-1"><i>HOME/</i></font><i>.ladspa/lib/</i>, <i>/usr/local/lib/ladspa/</i>, <i>/usr/lib/ladspa/</i>.
+</dt><dd> Specifies the name of LADSPA plugin library to load. If the environment variable <b>LADSPA_PATH</b> is defined, the LADSPA plugin is searched in each one of the directories specified by the colon separated list in <b>LADSPA_PATH</b>, otherwise in the standard LADSPA paths, which are in this order: <i></i><i>HOME/</i><i>.ladspa/lib/</i>, <i>/usr/local/lib/ladspa/</i>, <i>/usr/lib/ladspa/</i>.
 </dd><dt><b>plugin, p</b>
 </dt><dd> Specifies the plugin within the library. Some libraries contain only one plugin, but others contain many of them. If this is not set filter will list all available plugins within the specified library.
 </dd><dt><b>controls, c</b>
@@ -16504,7 +16504,7 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> List all available plugins within amp (<font SIZE="-1">LADSPA</font> example plugin) library: 
+</dt><dd> List all available plugins within amp (LADSPA example plugin) library: 
  <pre>
         ladspa=file=amp
 </pre>
@@ -16514,7 +16514,7 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
         ladspa=f=vcf:p=vcf_notch:c=help
 </pre>
 </dd><dt>&bull;
-</dt><dd> Simulate low quality audio equipment using <tt>&quot;Computer Music Toolkit&quot;</tt> (<font SIZE="-1">CMT</font>) plugin library: 
+</dt><dd> Simulate low quality audio equipment using <tt>&quot;Computer Music Toolkit&quot;</tt> (CMT) plugin library: 
  <pre>
         ladspa=file=cmt:plugin=lofi:controls=c0=22|c1=12|c2=12
 </pre>
@@ -16529,7 +16529,7 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
         ladspa=file=cmt:noise_source_white:c=c0=.2
 </pre>
 </dd><dt>&bull;
-</dt><dd> Generate 20 bpm clicks using plugin <tt>&quot;C* Click - Metronome&quot;</tt> from the <tt>&quot;C* Audio Plugin Suite&quot;</tt> (<font SIZE="-1">CAPS</font>) library: 
+</dt><dd> Generate 20 bpm clicks using plugin <tt>&quot;C* Click - Metronome&quot;</tt> from the <tt>&quot;C* Audio Plugin Suite&quot;</tt> (CAPS) library: 
  <pre>
         ladspa=file=caps:Click:c=c1=20'
 </pre>
@@ -16544,22 +16544,22 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
         ladspa=fast_lookahead_limiter_1913:fastLookaheadLimiter:20|0|2
 </pre>
 </dd><dt>&bull;
-</dt><dd> Attenuate low frequencies using Multiband <font SIZE="-1">EQ</font> from Steve Harris <tt>&quot;SWH Plugins&quot;</tt> collection: 
+</dt><dd> Attenuate low frequencies using Multiband EQ from Steve Harris <tt>&quot;SWH Plugins&quot;</tt> collection: 
  <pre>
         ladspa=mbeq_1197:mbeq:-24|-24|-24|0|0|0|0|0|0|0|0|0|0|0|0
 </pre>
 </dd><dt>&bull;
-</dt><dd> Reduce stereo image using <tt>&quot;Narrower&quot;</tt> from the <tt>&quot;C* Audio Plugin Suite&quot;</tt> (<font SIZE="-1">CAPS</font>) library: 
+</dt><dd> Reduce stereo image using <tt>&quot;Narrower&quot;</tt> from the <tt>&quot;C* Audio Plugin Suite&quot;</tt> (CAPS) library: 
  <pre>
         ladspa=caps:Narrower
 </pre>
 </dd><dt>&bull;
-</dt><dd> Another white noise, now using <tt>&quot;C* Audio Plugin Suite&quot;</tt> (<font SIZE="-1">CAPS</font>) library: 
+</dt><dd> Another white noise, now using <tt>&quot;C* Audio Plugin Suite&quot;</tt> (CAPS) library: 
  <pre>
         ladspa=caps:White:.2
 </pre>
 </dd><dt>&bull;
-</dt><dd> Some fractal noise, using <tt>&quot;C* Audio Plugin Suite&quot;</tt> (<font SIZE="-1">CAPS</font>) library: 
+</dt><dd> Some fractal noise, using <tt>&quot;C* Audio Plugin Suite&quot;</tt> (CAPS) library: 
  <pre>
         ladspa=caps:Fractal:c=c1=1
 </pre>
@@ -16580,20 +16580,20 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
 
 <h3>loudnorm</h3>
 
- <font SIZE="-1">EBU R128</font> loudness normalization. Includes both dynamic and linear normalization modes. Support for both single pass (livestreams, files) and double pass (files) modes. This algorithm can target <font SIZE="-1">IL, LRA,</font> and maximum true peak. In dynamic mode, to accurately detect true peaks, the audio stream will be upsampled to 192 kHz. Use the <tt>&quot;-ar&quot;</tt> option or <tt>&quot;aresample&quot;</tt> filter to explicitly set an output sample rate. 
+ EBU R128 loudness normalization. Includes both dynamic and linear normalization modes. Support for both single pass (livestreams, files) and double pass (files) modes. This algorithm can target IL, LRA, and maximum true peak. In dynamic mode, to accurately detect true peaks, the audio stream will be upsampled to 192 kHz. Use the <tt>&quot;-ar&quot;</tt> option or <tt>&quot;aresample&quot;</tt> filter to explicitly set an output sample rate. 
 
  The filter accepts the following options:
 <dl>
 <dt><b>I, i</b>
 </dt><dd> Set integrated loudness target. Range is -70.0 - -5.0. Default value is -24.0.
-</dd><dt><font SIZE="-1"><b>LRA,</b></font><b> lra</b>
+</dd><dt><b>LRA,</b><b> lra</b>
 </dt><dd> Set loudness range target. Range is 1.0 - 20.0. Default value is 7.0.
-</dd><dt><font SIZE="-1"><b>TP,</b></font><b> tp</b>
+</dd><dt><b>TP,</b><b> tp</b>
 </dt><dd> Set maximum true peak. Range is -9.0 - +0.0. Default value is -2.0.
 </dd><dt><b>measured_I, measured_i</b>
-</dt><dd> Measured <font SIZE="-1">IL</font> of input file. Range is -99.0 - +0.0.
+</dt><dd> Measured IL of input file. Range is -99.0 - +0.0.
 </dd><dt><b>measured_LRA, measured_lra</b>
-</dt><dd> Measured <font SIZE="-1">LRA</font> of input file. Range is 0.0 - 99.0.
+</dt><dd> Measured LRA of input file. Range is 0.0 - 99.0.
 </dd><dt><b>measured_TP, measured_tp</b>
 </dt><dd> Measured true peak of input file. Range is -99.0 - +99.0.
 </dd><dt><b>measured_thresh</b>
@@ -16601,9 +16601,9 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
 </dd><dt><b>offset</b>
 </dt><dd> Set offset gain. Gain is applied before the true-peak limiter. Range is -99.0 - +99.0. Default is +0.0.
 </dd><dt><b>linear</b>
-</dt><dd> Normalize by linearly scaling the source audio. <tt>&quot;measured_I&quot;</tt>, <tt>&quot;measured_LRA&quot;</tt>, <tt>&quot;measured_TP&quot;</tt>, and <tt>&quot;measured_thresh&quot;</tt> must all be specified. Target <font SIZE="-1">LRA</font> shouldn't be lower than source <font SIZE="-1">LRA</font> and the change in integrated loudness shouldn't result in a true peak which exceeds the target <font SIZE="-1">TP.</font> If any of these conditions aren't met, normalization mode will revert to <i>dynamic</i>. Options are <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt>. Default is <tt>&quot;true&quot;</tt>.
+</dt><dd> Normalize by linearly scaling the source audio. <tt>&quot;measured_I&quot;</tt>, <tt>&quot;measured_LRA&quot;</tt>, <tt>&quot;measured_TP&quot;</tt>, and <tt>&quot;measured_thresh&quot;</tt> must all be specified. Target LRA shouldn't be lower than source LRA and the change in integrated loudness shouldn't result in a true peak which exceeds the target TP. If any of these conditions aren't met, normalization mode will revert to <i>dynamic</i>. Options are <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt>. Default is <tt>&quot;true&quot;</tt>.
 </dd><dt><b>dual_mono</b>
-</dt><dd> Treat mono input files as ``dual-mono''. If a mono file is intended for playback on a stereo system, its <font SIZE="-1">EBU R128</font> measurement will be perceptually incorrect. If set to <tt>&quot;true&quot;</tt>, this option will compensate for this effect. Multi-channel input files are not affected by this option. Options are true or false. Default is false.
+</dt><dd> Treat mono input files as ``dual-mono''. If a mono file is intended for playback on a stereo system, its EBU R128 measurement will be perceptually incorrect. If set to <tt>&quot;true&quot;</tt>, this option will compensate for this effect. Multi-channel input files are not affected by this option. Options are true or false. Default is false.
 </dd><dt><b>print_format</b>
 </dt><dd> Set print format for stats. Options are summary, json, or none. Default value is none.</dd></dl>
 
@@ -16643,9 +16643,9 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
 </dd><dt><b>channels, c</b>
 </dt><dd> Specify which channels to filter, by default all available are filtered.
 </dd><dt><b>normalize, n</b>
-</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.
+</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.
 </dd><dt><b>transform, a</b>
-</dt><dd> Set transform type of <font SIZE="-1">IIR</font> filter.
+</dt><dd> Set transform type of IIR filter.
 </dd><dl>
 <dl>
 <dt><b>di</b>
@@ -16685,7 +16685,7 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Lowpass only <font SIZE="-1">LFE</font> channel, it <font SIZE="-1">LFE</font> is not present it does nothing: 
+</dt><dd> Lowpass only LFE channel, it LFE is not present it does nothing: 
  <pre>
         lowpass=c=LFE
 </pre></dd></dl>
@@ -16706,12 +16706,12 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
 
 <h3>lv2</h3>
 
- Load a <font SIZE="-1">LV2</font> (<font SIZE="-1">LADSPA</font> Version 2) plugin. 
+ Load a LV2 (LADSPA Version 2) plugin. 
 
  To enable compilation of this filter you need to configure FFmpeg with <tt>&quot;--enable-lv2&quot;</tt>.
 <dl>
 <dt><b>plugin, p</b>
-</dt><dd> Specifies the plugin <font SIZE="-1">URI.</font> You may need to escape ':'.
+</dt><dd> Specifies the plugin URI. You may need to escape ':'.
 </dd><dt><b>controls, c</b>
 </dt><dd> Set the '|' separated list of controls which are zero or more floating point values that determine the behavior of the loaded plugin (for example delay, threshold or gain). If <b>controls</b> is set to <tt>&quot;help&quot;</tt>, all available controls and their valid ranges are printed.
 </dd><dt><b>sample_rate, s</b>
@@ -16764,7 +16764,7 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
 </dd><dt><b>outdef</b>
 </dt><dd> output channel specification, of the form: &quot;<i>out_name</i>=[<i>gain</i>*]<i>in_name</i>[(+-)[<i>gain</i>*]<i>in_name</i>...]&quot;
 </dd><dt><b>out_name</b>
-</dt><dd> output channel to define, either a channel name (<font SIZE="-1">FL, FR,</font> etc.) or a channel number (c0, c1, etc.)
+</dt><dd> output channel to define, either a channel name (FL, FR, etc.) or a channel number (c0, c1, etc.)
 </dd><dt><b>gain</b>
 </dt><dd> multiplicative coefficient for the channel, 1 leaving the volume unchanged
 </dd><dt><b>in_name</b>
@@ -16993,7 +16993,7 @@ ffmpeg - i input.wav - filter_complex "amovie=minp.wav[hrirs];[0:a][hrirs]headph
 </dd><dt><b>link</b>
 </dt><dd> Choose if the <tt>&quot;average&quot;</tt> level between all channels of side-chain stream or the louder(<tt>&quot;maximum&quot;</tt>) channel of side-chain stream affects the reduction. Default is <tt>&quot;average&quot;</tt>.
 </dd><dt><b>detection</b>
-</dt><dd> Should the exact signal be taken in case of <tt>&quot;peak&quot;</tt> or an <font SIZE="-1">RMS</font> one in case of <tt>&quot;rms&quot;</tt>. Default is <tt>&quot;rms&quot;</tt> which is mainly smoother.
+</dt><dd> Should the exact signal be taken in case of <tt>&quot;peak&quot;</tt> or an RMS one in case of <tt>&quot;rms&quot;</tt>. Default is <tt>&quot;rms&quot;</tt> which is mainly smoother.
 </dd><dt><b>level_sc</b>
 </dt><dd> Set sidechain gain. Default is 1. Range is between 0.015625 and 64.
 </dd><dt><b>mix</b>
@@ -17036,7 +17036,7 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 </dd><dt><b>knee</b>
 </dt><dd> Curve the sharp knee around the threshold to enter gain reduction more softly. Default is 2.828427125. Allowed range is from 1 to 8.
 </dd><dt><b>detection</b>
-</dt><dd> Choose if exact signal should be taken for detection or an <font SIZE="-1">RMS</font> like one. Default is rms. Can be peak or rms.
+</dt><dd> Choose if exact signal should be taken for detection or an RMS like one. Default is rms. Can be peak or rms.
 </dd><dt><b>link</b>
 </dt><dd> Choose if the average level between all channels or the louder channel affects the reduction. Default is average. Can be average or maximum.
 </dd><dt><b>level_sc</b>
@@ -17132,14 +17132,14 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 
 <h3>sofalizer</h3>
 
- SOFAlizer uses head-related transfer functions (HRTFs) to create virtual loudspeakers around the user for binaural listening via headphones (audio formats up to 9 channels supported). The HRTFs are stored in <font SIZE="-1">SOFA</font> files (see &lt;<b><a rel="nofollow" HREF="http://www.sofacoustics.org/">http://www.sofacoustics.org/</a></b>&gt; for a database). SOFAlizer is developed at the Acoustics Research Institute (<font SIZE="-1">ARI</font>) of the Austrian Academy of Sciences. 
+ SOFAlizer uses head-related transfer functions (HRTFs) to create virtual loudspeakers around the user for binaural listening via headphones (audio formats up to 9 channels supported). The HRTFs are stored in SOFA files (see &lt;<b><a rel="nofollow" HREF="http://www.sofacoustics.org/">http://www.sofacoustics.org/</a></b>&gt; for a database). SOFAlizer is developed at the Acoustics Research Institute (ARI) of the Austrian Academy of Sciences. 
 
  To enable compilation of this filter you need to configure FFmpeg with <tt>&quot;--enable-libmysofa&quot;</tt>. 
 
  The filter accepts the following options:
 <dl>
 <dt><b>sofa</b>
-</dt><dd> Set the <font SIZE="-1">SOFA</font> file used for rendering.
+</dt><dd> Set the SOFA file used for rendering.
 </dd><dt><b>gain</b>
 </dt><dd> Set gain applied to audio. Value is in dB. Default is 0.
 </dd><dt><b>rotation</b>
@@ -17151,17 +17151,17 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 </dd><dt><b>type</b>
 </dt><dd> Set processing type. Can be <i>time</i> or <i>freq</i>. <i>time</i> is processing audio in time domain which is slow. <i>freq</i> is processing audio in frequency domain which is fast. Default is <i>freq</i>.
 </dd><dt><b>speakers</b>
-</dt><dd> Set custom positions of virtual loudspeakers. Syntax for this option is: &lt;<font SIZE="-1">CH</font>&gt; &lt;<font SIZE="-1">AZIM</font>&gt; &lt;<font SIZE="-1">ELEV</font>&gt;[|&lt;<font SIZE="-1">CH</font>&gt; &lt;<font SIZE="-1">AZIM</font>&gt; &lt;<font SIZE="-1">ELEV</font>&gt;|...]. Each virtual loudspeaker is described with short channel name following with azimuth and elevation in degrees. Each virtual loudspeaker description is separated by '|'. For example to override front left and front right channel positions use: 'speakers=FL 45 15|FR 345 15'. Descriptions with unrecognised channel names are ignored.
+</dt><dd> Set custom positions of virtual loudspeakers. Syntax for this option is: &lt;CH&gt; &lt;AZIM&gt; &lt;ELEV&gt;[|&lt;CH&gt; &lt;AZIM&gt; &lt;ELEV&gt;|...]. Each virtual loudspeaker is described with short channel name following with azimuth and elevation in degrees. Each virtual loudspeaker description is separated by '|'. For example to override front left and front right channel positions use: 'speakers=FL 45 15|FR 345 15'. Descriptions with unrecognised channel names are ignored.
 </dd><dt><b>lfegain</b>
-</dt><dd> Set custom gain for <font SIZE="-1">LFE</font> channels. Value is in dB. Default is 0.
+</dt><dd> Set custom gain for LFE channels. Value is in dB. Default is 0.
 </dd><dt><b>framesize</b>
 </dt><dd> Set custom frame size in number of samples. Default is 1024. Allowed range is from 1024 to 96000. Only used if option <b>type</b> is set to <i>freq</i>.
 </dd><dt><b>normalize</b>
-</dt><dd> Should all IRs be normalized upon importing <font SIZE="-1">SOFA</font> file. By default is enabled.
+</dt><dd> Should all IRs be normalized upon importing SOFA file. By default is enabled.
 </dd><dt><b>interpolate</b>
 </dt><dd> Should nearest IRs be interpolated with neighbor IRs if exact position does not match. By default is disabled.
 </dd><dt><b>minphase</b>
-</dt><dd> Minphase all IRs upon loading of <font SIZE="-1">SOFA</font> file. By default is disabled.
+</dt><dd> Minphase all IRs upon loading of SOFA file. By default is disabled.
 </dd><dt><b>anglestep</b>
 </dt><dd> Set neighbor search angle step. Only used if option <i>interpolate</i> is enabled.
 </dd><dt><b>radstep</b>
@@ -17407,13 +17407,13 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 </dd><dt><b>level_out</b>
 </dt><dd> Set output volume level. By default, this is <i>1</i>.
 </dd><dt><b>lfe</b>
-</dt><dd> Enable <font SIZE="-1">LFE</font> channel output if output channel layout has it. By default, this is enabled.
+</dt><dd> Enable LFE channel output if output channel layout has it. By default, this is enabled.
 </dd><dt><b>lfe_low</b>
-</dt><dd> Set <font SIZE="-1">LFE</font> low cut off frequency. By default, this is <i>128</i> Hz.
+</dt><dd> Set LFE low cut off frequency. By default, this is <i>128</i> Hz.
 </dd><dt><b>lfe_high</b>
-</dt><dd> Set <font SIZE="-1">LFE</font> high cut off frequency. By default, this is <i>256</i> Hz.
+</dt><dd> Set LFE high cut off frequency. By default, this is <i>256</i> Hz.
 </dd><dt><b>lfe_mode</b>
-</dt><dd> Set <font SIZE="-1">LFE</font> mode, can be <i>add</i> or <i>sub</i>. Default is <i>add</i>. In <i>add</i> mode, <font SIZE="-1">LFE</font> channel is created from input audio and added to output. In <i>sub</i> mode, <font SIZE="-1">LFE</font> channel is created from input audio and added to output but also all non-LFE output channels are subtracted with output <font SIZE="-1">LFE</font> channel.
+</dt><dd> Set LFE mode, can be <i>add</i> or <i>sub</i>. Default is <i>add</i>. In <i>add</i> mode, LFE channel is created from input audio and added to output. In <i>sub</i> mode, LFE channel is created from input audio and added to output but also all non-LFE output channels are subtracted with output LFE channel.
 </dd><dt><b>angle</b>
 </dt><dd> Set angle of stereo surround transform, Allowed range is from <i>0</i> to <i>360</i>. Default is <i>90</i>.
 </dd><dt><b>fc_in</b>
@@ -17449,9 +17449,9 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 </dd><dt><b>bc_out</b>
 </dt><dd> Set back center output volume. By default, this is <i>1</i>.
 </dd><dt><b>lfe_in</b>
-</dt><dd> Set <font SIZE="-1">LFE</font> input volume. By default, this is <i>1</i>.
+</dt><dd> Set LFE input volume. By default, this is <i>1</i>.
 </dd><dt><b>lfe_out</b>
-</dt><dd> Set <font SIZE="-1">LFE</font> output volume. By default, this is <i>1</i>.
+</dt><dd> Set LFE output volume. By default, this is <i>1</i>.
 </dd><dt><b>allx</b>
 </dt><dd> Set spread usage of stereo image across X axis for all channels.
 </dd><dt><b>ally</b>
@@ -17519,7 +17519,7 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 
 <h3>treble, highshelf</h3>
 
- Boost or cut treble (upper) frequencies of the audio using a two-pole shelving filter with a response similar to that of a standard hi-fi's tone-controls. This is also known as shelving equalisation (<font SIZE="-1">EQ</font>). 
+ Boost or cut treble (upper) frequencies of the audio using a two-pole shelving filter with a response similar to that of a standard hi-fi's tone-controls. This is also known as shelving equalisation (EQ). 
 
  The filter accepts the following options:
 <dl>
@@ -17555,9 +17555,9 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 </dd><dt><b>channels, c</b>
 </dt><dd> Specify which channels to filter, by default all available are filtered.
 </dd><dt><b>normalize, n</b>
-</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.
+</dt><dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.
 </dd><dt><b>transform, a</b>
-</dt><dd> Set transform type of <font SIZE="-1">IIR</font> filter.
+</dt><dd> Set transform type of IIR filter.
 </dd><dl>
 <dl>
 <dt><b>di</b>
@@ -17653,9 +17653,9 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 <dt><b>fixed</b>
 </dt><dd> 8-bit fixed-point; this limits input sample format to U8, S16, and S32.
 </dd><dt><b>float</b>
-</dt><dd> 32-bit floating-point; this limits input sample format to <font SIZE="-1">FLT.</font> (default)
+</dt><dd> 32-bit floating-point; this limits input sample format to FLT. (default)
 </dd><dt><b>double</b>
-</dt><dd> 64-bit floating-point; this limits input sample format to <font SIZE="-1">DBL.</font></dd></dl>
+</dt><dd> 64-bit floating-point; this limits input sample format to DBL.</dd></dl>
 </dl>
 
 <dl>
@@ -17718,11 +17718,11 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 </dd><dt><b>pos</b>
 </dt><dd> original frame position in the file
 </dd><dt><b>pts</b>
-</dt><dd> frame <font SIZE="-1">PTS</font>
+</dt><dd> frame PTS
 </dd><dt><b>sample_rate</b>
 </dt><dd> sample rate
 </dd><dt><b>startpts</b>
-</dt><dd> <font SIZE="-1">PTS</font> at start of stream
+</dt><dd> PTS at start of stream
 </dd><dt><b>startt</b>
 </dt><dd> time at start of stream
 </dd><dt><b>t</b>
@@ -17733,7 +17733,7 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 </dt><dd> last set volume value</dd></dl>
  
 
- Note that when <b>eval</b> is set to <b>once</b> only the <i>sample_rate</i> and <i>tb</i> variables are available, all other variables will evaluate to <font SIZE="-1">NAN.</font> 
+ Note that when <b>eval</b> is set to <b>once</b> only the <i>sample_rate</i> and <i>tb</i> variables are available, all other variables will evaluate to NAN. 
 
  <i>Commands</i> 
 
@@ -17776,7 +17776,7 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 
  In particular it will show the mean volume (root mean square), maximum volume (on a per-sample basis), and the beginning of a histogram of the registered volume values (from the maximum value to a cumulated 1/1000 of the samples). 
 
- All volumes are in decibels relative to the maximum <font SIZE="-1">PCM</font> value. 
+ All volumes are in decibels relative to the maximum PCM value. 
 
  <i>Examples</i> 
 
@@ -17908,7 +17908,7 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 
 <h3>afirsrc</h3>
 
- Generate a <font SIZE="-1">FIR</font> coefficients using frequency sampling method. 
+ Generate a FIR coefficients using frequency sampling method. 
 
  The resulting stream can be used with <b>afir</b> filter for filtering the audio signal. 
 
@@ -17950,7 +17950,7 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Set the sample rate to 48000 Hz and the channel layout to <font SIZE="-1">AV_CH_LAYOUT_MONO.</font> 
+</dt><dd> Set the sample rate to 48000 Hz and the channel layout to AV_CH_LAYOUT_MONO. 
  <pre>
         anullsrc=r=48000:cl=4
 </pre>
@@ -18026,7 +18026,7 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 </dd><dt><b>color, colour, c</b>
 </dt><dd> Specify the color of noise. Available noise colors are white, pink, brown, blue, violet and velvet. Default color is white.
 </dd><dt><b>seed, s</b>
-</dt><dd> Specify a value used to seed the <font SIZE="-1">PRNG.</font>
+</dt><dd> Specify a value used to seed the PRNG.
 </dd><dt><b>nb_samples, n</b>
 </dt><dd> Set the number of samples per each output frame, default is 1024.</dd></dl>
  
@@ -18041,7 +18041,7 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 
 <h3>hilbert</h3>
 
- Generate odd-tap Hilbert transform <font SIZE="-1">FIR</font> coefficients. 
+ Generate odd-tap Hilbert transform FIR coefficients. 
 
  The resulting stream can be used with <b>afir</b> filter for phase-shifting the signal by 90 degrees. 
 
@@ -18052,15 +18052,15 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 <dt><b>sample_rate, s</b>
 </dt><dd> Set sample rate, default is 44100.
 </dd><dt><b>taps, t</b>
-</dt><dd> Set length of <font SIZE="-1">FIR</font> filter, default is 22051.
+</dt><dd> Set length of FIR filter, default is 22051.
 </dd><dt><b>nb_samples, n</b>
 </dt><dd> Set number of samples per each frame.
 </dd><dt><b>win_func, w</b>
-</dt><dd> Set window function to be used when generating <font SIZE="-1">FIR</font> coefficients.</dd></dl>
+</dt><dd> Set window function to be used when generating FIR coefficients.</dd></dl>
 
 <h3>sinc</h3>
 
- Generate a sinc kaiser-windowed low-pass, high-pass, band-pass, or band-reject <font SIZE="-1">FIR</font> coefficients. 
+ Generate a sinc kaiser-windowed low-pass, high-pass, band-pass, or band-reject FIR coefficients. 
 
  The resulting stream can be used with <b>afir</b> filter for filtering the audio signal. 
 
@@ -18111,10 +18111,10 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 <dt><b>n</b>
 </dt><dd> The (sequential) number of the output audio frame, starting from 0.
 </dd><dt><b>pts</b>
-</dt><dd> The <font SIZE="-1">PTS</font> (Presentation TimeStamp) of the output audio frame, expressed in <i></i><font SIZE="-1"><i>TB</i></font><i></i> units.
+</dt><dd> The PTS (Presentation TimeStamp) of the output audio frame, expressed in <i></i><i>TB</i><i></i> units.
 </dd><dt><b>t</b>
-</dt><dd> The <font SIZE="-1">PTS</font> of the output audio frame, expressed in seconds.
-</dd><dt><font SIZE="-1"><b>TB</b></font>
+</dt><dd> The PTS of the output audio frame, expressed in seconds.
+</dd><dt><b>TB</b>
 </dt><dd> The timebase of the output audio frames.</dd></dl>
 </dl>
 
@@ -18140,7 +18140,7 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
         sine=frequency=220:beep_factor=4:duration=5
 </pre>
 </dd><dt>&bull;
-</dt><dd> Generate a 1 kHz sine wave following <tt>&quot;1602,1601,1602,1601,1602&quot;</tt> <font SIZE="-1">NTSC</font> pattern: 
+</dt><dd> Generate a 1 kHz sine wave following <tt>&quot;1602,1601,1602,1601,1602&quot;</tt> NTSC pattern: 
  <pre>
         sine=1000:samples_per_frame='st(0,mod(n,5)); 1602-not(not(eq(ld(0),1)+eq(ld(0),3)))'
 </pre></dd></dl>
@@ -18200,7 +18200,7 @@ ffmpeg - i main.flac - i sidechain.flac - filter_complex "[1:a]asplit=2[sc][mix]
 
  The range is calibrated so that the extreme values indicate the largest possible offset - if the rest of the frame is encoded with the worst possible quality, an offset of -1 indicates that this region should be encoded with the best possible quality anyway. Intermediate values are then interpolated in some codec-dependent way. 
 
- For example, in 10-bit H.264 the quantisation parameter varies between -12 and 51. A typical qoffset value of -1/10 therefore indicates that this region should be encoded with a <font SIZE="-1">QP</font> around one-tenth of the full range better than the rest of the frame. So, if most of the frame were to be encoded with a <font SIZE="-1">QP</font> of around 30, this region would get a <font SIZE="-1">QP</font> of around 24 (an offset of approximately -1/10 * (51 - -12) = -6.3). An extreme value of -1 would indicate that this region should be encoded with the best possible quality regardless of the treatment of the rest of the frame - that is, should be encoded at a <font SIZE="-1">QP</font> of -12.
+ For example, in 10-bit H.264 the quantisation parameter varies between -12 and 51. A typical qoffset value of -1/10 therefore indicates that this region should be encoded with a QP around one-tenth of the full range better than the rest of the frame. So, if most of the frame were to be encoded with a QP of around 30, this region would get a QP of around 24 (an offset of approximately -1/10 * (51 - -12) = -6.3). An extreme value of -1 would indicate that this region should be encoded with the best possible quality regardless of the treatment of the rest of the frame - that is, should be encoded at a QP of -12.
 </dd><dt><b>clear</b>
 </dt><dd> If set to true, remove any existing regions of interest marked on the frame before adding the new one.</dd></dl>
  
@@ -18274,7 +18274,7 @@ movie = in_alpha.mkv[alpha];
 
 <h3>ass</h3>
 
- Same as the <b>subtitles</b> filter, except that it doesn't require libavcodec and libavformat to work. On the other hand, it is limited to <font SIZE="-1">ASS</font> (Advanced Substation Alpha) subtitles files. 
+ Same as the <b>subtitles</b> filter, except that it doesn't require libavcodec and libavformat to work. On the other hand, it is limited to ASS (Advanced Substation Alpha) subtitles files. 
 
  This filter accepts the following option in addition to the common options from the <b>subtitles</b> filter:
 <dl>
@@ -18425,7 +18425,7 @@ movie = in_alpha.mkv[alpha];
  <pre>
         &lt;absolute_threshold&gt; = &lt;luminance_minimum_value&gt; + &lt;pixel_black_th&gt; * &lt;luminance_range_size&gt;
 </pre> 
- <i>luminance_range_size</i> and <i>luminance_minimum_value</i> depend on the input video format, the range is [0-255] for <font SIZE="-1">YUV</font> full-range formats and [16-235] for <font SIZE="-1">YUV</font> non full-range formats. 
+ <i>luminance_range_size</i> and <i>luminance_minimum_value</i> depend on the input video format, the range is [0-255] for YUV full-range formats and [16-235] for YUV non full-range formats. 
  Default value is 0.10.</dd></dl>
  
 
@@ -18439,7 +18439,7 @@ movie = in_alpha.mkv[alpha];
 
  Detect frames that are (almost) completely black. Can be useful to detect chapter transitions or commercials. Output lines consist of the frame number of the detected frame, the percentage of blackness, the position in the file if known or -1 and the timestamp in seconds. 
 
- In order to display the output lines, you need to set the loglevel at least to the <font SIZE="-1">AV_LOG_INFO</font> value. 
+ In order to display the output lines, you need to set the loglevel at least to the AV_LOG_INFO value. 
 
  This filter exports frame metadata <tt>&quot;lavfi.blackframe.pblack&quot;</tt>. The value represents the percentage of pixels in the picture that are below the threshold value. 
 
@@ -18578,15 +18578,15 @@ movie = in_alpha.mkv[alpha];
 </dt><dd>
 </dd><dt><b>H</b>
 </dt><dd> the width and height of currently filtered plane
-</dd><dt><font SIZE="-1"><b>SW</b></font>
+</dd><dt><b>SW</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SH</b></font>
+</dd><dt><b>SH</b>
 </dt><dd> Width and height scale for the plane being filtered. It is the ratio between the dimensions of the current plane to the luma plane, e.g. for a <tt>&quot;yuv420p&quot;</tt> frame, the values are <tt>&quot;1,1&quot;</tt> for the luma plane and <tt>&quot;0.5,0.5&quot;</tt> for the chroma planes.
 </dd><dt><b>T</b>
 </dt><dd> Time of the current frame, expressed in seconds.
-</dd><dt><font SIZE="-1"><b>TOP, A</b></font>
+</dd><dt><b>TOP, A</b>
 </dt><dd> Value of pixel component at current location for first video frame (top layer).
-</dd><dt><font SIZE="-1"><b>BOTTOM, B</b></font>
+</dd><dt><b>BOTTOM, B</b>
 </dt><dd> Value of pixel component at current location for second video frame (bottom layer).</dd></dl>
 </dl>
 
@@ -18660,11 +18660,11 @@ movie = in_alpha.mkv[alpha];
 </dd><dt><b>group</b>
 </dt><dd> Set maximal number of similar blocks for 3rd dimension. Default value is 1. When set to 1, no block matching is done. Larger values allows more blocks in single group. Allowed range is from 1 to 256.
 </dd><dt><b>range</b>
-</dt><dd> Set radius for search block matching. Default is 9. Allowed range is from 1 to <font SIZE="-1">INT32_MAX.</font>
+</dt><dd> Set radius for search block matching. Default is 9. Allowed range is from 1 to INT32_MAX.
 </dd><dt><b>mstep</b>
 </dt><dd> Set step between two search locations for block matching. Default is 1. Allowed range is from 1 to 64. Smaller is slower.
 </dd><dt><b>thmse</b>
-</dt><dd> Set threshold of mean square error for block matching. Valid range is 0 to <font SIZE="-1">INT32_MAX.</font>
+</dt><dd> Set threshold of mean square error for block matching. Valid range is 0 to INT32_MAX.
 </dd><dt><b>hdthr</b>
 </dt><dd> Set thresholding parameter for hard thresholding in 3D transformed domain. Larger values results in stronger hard-thresholding filtering in frequency domain.
 </dd><dt><b>estim</b>
@@ -18859,8 +18859,8 @@ split[a][b], [a] nlmeans = s = 3 : r = 7 : p = 3 [a], [b][a] bm3d = sigma = 3 : 
 </dd><dt><b>blend</b>
 </dt><dd> Blend percentage. 0.0 makes pixels either fully gray, or not gray at all. Higher values result in more preserved color.
 </dd><dt><b>yuv</b>
-</dt><dd> Signals that the color passed is already in <font SIZE="-1">YUV</font> instead of <font SIZE="-1">RGB.</font> 
- Literal colors like ``green'' or ``red'' don't make sense with this enabled anymore. This can be used to pass exact <font SIZE="-1">YUV</font> values as hexadecimal numbers.</dd></dl>
+</dt><dd> Signals that the color passed is already in YUV instead of RGB. 
+ Literal colors like ``green'' or ``red'' don't make sense with this enabled anymore. This can be used to pass exact YUV values as hexadecimal numbers.</dd></dl>
  
 
  <i>Commands</i> 
@@ -18871,7 +18871,7 @@ split[a][b], [a] nlmeans = s = 3 : r = 7 : p = 3 [a], [b][a] bm3d = sigma = 3 : 
 
 <h3>chromakey</h3>
 
- <font SIZE="-1">YUV</font> colorspace color/chroma keying. 
+ YUV colorspace color/chroma keying. 
 
  The filter accepts the following options:
 <dl>
@@ -18885,8 +18885,8 @@ split[a][b], [a] nlmeans = s = 3 : r = 7 : p = 3 [a], [b][a] bm3d = sigma = 3 : 
  0.0 makes pixels either fully transparent, or not transparent at all. 
  Higher values result in semi-transparent pixels, with a higher transparency the more similar the pixels color is to the key color.
 </dd><dt><b>yuv</b>
-</dt><dd> Signals that the color passed is already in <font SIZE="-1">YUV</font> instead of <font SIZE="-1">RGB.</font> 
- Literal colors like ``green'' or ``red'' don't make sense with this enabled anymore. This can be used to pass exact <font SIZE="-1">YUV</font> values as hexadecimal numbers.</dd></dl>
+</dt><dd> Signals that the color passed is already in YUV instead of RGB. 
+ Literal colors like ``green'' or ``red'' don't make sense with this enabled anymore. This can be used to pass exact YUV values as hexadecimal numbers.</dd></dl>
  
 
  <i>Commands</i> 
@@ -18959,7 +18959,7 @@ ffmpeg - f lavfi - i color = c = black : s = 1280x720 - i video.mp4 - shortest -
 
 <h3>ciescope</h3>
 
- Display <font SIZE="-1">CIE</font> color diagram with pixels overlaid onto it. 
+ Display CIE color diagram with pixels overlaid onto it. 
 
  The filter accepts the following options:
 <dl>
@@ -18993,7 +18993,7 @@ ffmpeg - f lavfi - i color = c = black : s = 1280x720 - i video.mp4 - shortest -
 </dl>
 
 <dt><b>cie</b>
-</dt><dd> Set <font SIZE="-1">CIE</font> system.
+</dt><dd> Set CIE system.
 </dd><dl>
 <dl>
 <dt><b>xyy</b>
@@ -19014,21 +19014,21 @@ ffmpeg - f lavfi - i color = c = black : s = 1280x720 - i video.mp4 - shortest -
 </dd><dt><b>size, s</b>
 </dt><dd> Set ciescope size, by default set to 512.
 </dd><dt><b>intensity, i</b>
-</dt><dd> Set intensity used to map input pixel values to <font SIZE="-1">CIE</font> diagram.
+</dt><dd> Set intensity used to map input pixel values to CIE diagram.
 </dd><dt><b>contrast</b>
 </dt><dd> Set contrast used to draw tongue colors that are out of active color system gamut.
 </dd><dt><b>corrgamma</b>
 </dt><dd> Correct gamma displayed on scope, by default enabled.
 </dd><dt><b>showwhite</b>
-</dt><dd> Show white point on <font SIZE="-1">CIE</font> diagram, by default disabled.
+</dt><dd> Show white point on CIE diagram, by default disabled.
 </dd><dt><b>gamma</b>
-</dt><dd> Set input gamma. Used only with <font SIZE="-1">XYZ</font> input color space.</dd></dl>
+</dt><dd> Set input gamma. Used only with XYZ input color space.</dd></dl>
 
 <h3>codecview</h3>
 
  Visualize information exported by some codecs. 
 
- Some codecs can export information through frames using side-data or other means. For example, some <font SIZE="-1">MPEG</font> based codecs export motion vectors through the <i>export_mvs</i> flag in the codec <b>flags2</b> option. 
+ Some codecs can export information through frames using side-data or other means. For example, some MPEG based codecs export motion vectors through the <i>export_mvs</i> flag in the codec <b>flags2</b> option. 
 
  The filter accepts the following option:
 <dl>
@@ -19145,7 +19145,7 @@ ffmpeg - f lavfi - i color = c = black : s = 1280x720 - i video.mp4 - shortest -
 
 <h3>colorcontrast</h3>
 
- Adjust color contrast between <font SIZE="-1">RGB</font> components. 
+ Adjust color contrast between RGB components. 
 
  The filter accepts the following options:
 <dl>
@@ -19171,7 +19171,7 @@ ffmpeg - f lavfi - i color = c = black : s = 1280x720 - i video.mp4 - shortest -
 
 <h3>colorcorrect</h3>
 
- Adjust color white balance selectively for blacks and whites. This filter operates in <font SIZE="-1">YUV</font> colorspace. 
+ Adjust color white balance selectively for blacks and whites. This filter operates in YUV colorspace. 
 
  The filter accepts the following options:
 <dl>
@@ -19280,7 +19280,7 @@ ffmpeg - f lavfi - i color = c = black : s = 1280x720 - i video.mp4 - shortest -
 
 <h3>colorkey</h3>
 
- <font SIZE="-1">RGB</font> colorspace color keying. 
+ RGB colorspace color keying. 
 
  The filter accepts the following options:
 <dl>
@@ -19316,7 +19316,7 @@ ffmpeg - i background.png - i video.mp4 - filter_complex "[1:v]colorkey=0x3BBD1E
 
 <h3>colorhold</h3>
 
- Remove all color information for all <font SIZE="-1">RGB</font> colors except for certain one. 
+ Remove all color information for all RGB colors except for certain one. 
 
  The filter accepts the following options:
 <dl>
@@ -19418,21 +19418,21 @@ ffmpeg - i background.png - i video.mp4 - filter_complex "[1:v]colorkey=0x3BBD1E
 </dd><dl>
 <dl>
 <dt><b>bt709</b>
-</dt><dd> <font SIZE="-1">BT.709</font>
+</dt><dd> BT.709
 </dd><dt><b>fcc</b>
-</dt><dd> <font SIZE="-1">FCC</font>
+</dt><dd> FCC
 </dd><dt><b>bt601</b>
-</dt><dd> <font SIZE="-1">BT.601</font>
+</dt><dd> BT.601
 </dd><dt><b>bt470</b>
-</dt><dd> <font SIZE="-1">BT.470</font>
+</dt><dd> BT.470
 </dd><dt><b>bt470bg</b>
-</dt><dd> <font SIZE="-1">BT.470BG</font>
+</dt><dd> BT.470BG
 </dd><dt><b>smpte170m</b>
-</dt><dd> <font SIZE="-1">SMPTE-170M</font>
+</dt><dd> SMPTE-170M
 </dd><dt><b>smpte240m</b>
-</dt><dd> <font SIZE="-1">SMPTE-240M</font>
+</dt><dd> SMPTE-240M
 </dd><dt><b>bt2020</b>
-</dt><dd> <font SIZE="-1">BT.2020</font></dd></dl>
+</dt><dd> BT.2020</dd></dl>
 </dl>
 
 <dl>
@@ -19440,7 +19440,7 @@ ffmpeg - i background.png - i video.mp4 - filter_complex "[1:v]colorkey=0x3BBD1E
 </dl>
  
 
- For example to convert from <font SIZE="-1">BT.601</font> to <font SIZE="-1">SMPTE-240M,</font> use the command: 
+ For example to convert from BT.601 to SMPTE-240M, use the command: 
 
  <pre>
         colormatrix=bt601:smpte240m
@@ -19458,21 +19458,21 @@ ffmpeg - i background.png - i video.mp4 - filter_complex "[1:v]colorkey=0x3BBD1E
 </dd><dl>
 <dl>
 <dt><b>bt470m</b>
-</dt><dd> <font SIZE="-1">BT.470M</font>
+</dt><dd> BT.470M
 </dd><dt><b>bt470bg</b>
-</dt><dd> <font SIZE="-1">BT.470BG</font>
+</dt><dd> BT.470BG
 </dd><dt><b>bt601-6-525</b>
-</dt><dd> <font SIZE="-1">BT.601-6 525</font>
+</dt><dd> BT.601-6 525
 </dd><dt><b>bt601-6-625</b>
-</dt><dd> <font SIZE="-1">BT.601-6 625</font>
+</dt><dd> BT.601-6 625
 </dd><dt><b>bt709</b>
-</dt><dd> <font SIZE="-1">BT.709</font>
+</dt><dd> BT.709
 </dd><dt><b>smpte170m</b>
-</dt><dd> <font SIZE="-1">SMPTE-170M</font>
+</dt><dd> SMPTE-170M
 </dd><dt><b>smpte240m</b>
-</dt><dd> <font SIZE="-1">SMPTE-240M</font>
+</dt><dd> SMPTE-240M
 </dd><dt><b>bt2020</b>
-</dt><dd> <font SIZE="-1">BT.2020</font></dd></dl>
+</dt><dd> BT.2020</dd></dl>
 </dl>
 
 <dl>
@@ -19485,19 +19485,19 @@ ffmpeg - i background.png - i video.mp4 - filter_complex "[1:v]colorkey=0x3BBD1E
 </dd><dl>
 <dl>
 <dt><b>bt709</b>
-</dt><dd> <font SIZE="-1">BT.709</font>
+</dt><dd> BT.709
 </dd><dt><b>fcc</b>
-</dt><dd> <font SIZE="-1">FCC</font>
+</dt><dd> FCC
 </dd><dt><b>bt470bg</b>
-</dt><dd> <font SIZE="-1">BT.470BG</font> or <font SIZE="-1">BT.601-6 625</font>
+</dt><dd> BT.470BG or BT.601-6 625
 </dd><dt><b>smpte170m</b>
-</dt><dd> <font SIZE="-1">SMPTE-170M</font> or <font SIZE="-1">BT.601-6 525</font>
+</dt><dd> SMPTE-170M or BT.601-6 525
 </dd><dt><b>smpte240m</b>
-</dt><dd> <font SIZE="-1">SMPTE-240M</font>
+</dt><dd> SMPTE-240M
 </dd><dt><b>ycgco</b>
 </dt><dd> YCgCo
 </dd><dt><b>bt2020ncl</b>
-</dt><dd> <font SIZE="-1">BT.2020</font> with non-constant luminance</dd></dl>
+</dt><dd> BT.2020 with non-constant luminance</dd></dl>
 </dl>
 
 <dl>
@@ -19510,21 +19510,21 @@ ffmpeg - i background.png - i video.mp4 - filter_complex "[1:v]colorkey=0x3BBD1E
 </dd><dl>
 <dl>
 <dt><b>bt709</b>
-</dt><dd> <font SIZE="-1">BT.709</font>
+</dt><dd> BT.709
 </dd><dt><b>bt470m</b>
-</dt><dd> <font SIZE="-1">BT.470M</font>
+</dt><dd> BT.470M
 </dd><dt><b>bt470bg</b>
-</dt><dd> <font SIZE="-1">BT.470BG</font>
+</dt><dd> BT.470BG
 </dd><dt><b>gamma22</b>
 </dt><dd> Constant gamma of 2.2
 </dd><dt><b>gamma28</b>
 </dt><dd> Constant gamma of 2.8
 </dd><dt><b>smpte170m</b>
-</dt><dd> <font SIZE="-1">SMPTE-170M, BT.601-6 625</font> or <font SIZE="-1">BT.601-6 525</font>
+</dt><dd> SMPTE-170M, BT.601-6 625 or BT.601-6 525
 </dd><dt><b>smpte240m</b>
-</dt><dd> <font SIZE="-1">SMPTE-240M</font>
+</dt><dd> SMPTE-240M
 </dd><dt><b>srgb</b>
-</dt><dd> <font SIZE="-1">SRGB</font>
+</dt><dd> SRGB
 </dd><dt><b>iec61966-2-1</b>
 </dt><dd> iec61966-2-1
 </dd><dt><b>iec61966-2-4</b>
@@ -19532,9 +19532,9 @@ ffmpeg - i background.png - i video.mp4 - filter_complex "[1:v]colorkey=0x3BBD1E
 </dd><dt><b>xvycc</b>
 </dt><dd> xvycc
 </dd><dt><b>bt2020-10</b>
-</dt><dd> <font SIZE="-1">BT.2020</font> for 10-bits content
+</dt><dd> BT.2020 for 10-bits content
 </dd><dt><b>bt2020-12</b>
-</dt><dd> <font SIZE="-1">BT.2020</font> for 12-bits content</dd></dl>
+</dt><dd> BT.2020 for 12-bits content</dd></dl>
 </dl>
 
 <dl>
@@ -19547,25 +19547,25 @@ ffmpeg - i background.png - i video.mp4 - filter_complex "[1:v]colorkey=0x3BBD1E
 </dd><dl>
 <dl>
 <dt><b>bt709</b>
-</dt><dd> <font SIZE="-1">BT.709</font>
+</dt><dd> BT.709
 </dd><dt><b>bt470m</b>
-</dt><dd> <font SIZE="-1">BT.470M</font>
+</dt><dd> BT.470M
 </dd><dt><b>bt470bg</b>
-</dt><dd> <font SIZE="-1">BT.470BG</font> or <font SIZE="-1">BT.601-6 625</font>
+</dt><dd> BT.470BG or BT.601-6 625
 </dd><dt><b>smpte170m</b>
-</dt><dd> <font SIZE="-1">SMPTE-170M</font> or <font SIZE="-1">BT.601-6 525</font>
+</dt><dd> SMPTE-170M or BT.601-6 525
 </dd><dt><b>smpte240m</b>
-</dt><dd> <font SIZE="-1">SMPTE-240M</font>
+</dt><dd> SMPTE-240M
 </dd><dt><b>film</b>
 </dt><dd> film
 </dd><dt><b>smpte431</b>
-</dt><dd> <font SIZE="-1">SMPTE-431</font>
+</dt><dd> SMPTE-431
 </dd><dt><b>smpte432</b>
-</dt><dd> <font SIZE="-1">SMPTE-432</font>
+</dt><dd> SMPTE-432
 </dd><dt><b>bt2020</b>
-</dt><dd> <font SIZE="-1">BT.2020</font>
+</dt><dd> BT.2020
 </dd><dt><b>jedec-p22</b>
-</dt><dd> <font SIZE="-1">JEDEC P22</font> phosphors</dd></dl>
+</dt><dd> JEDEC P22 phosphors</dd></dl>
 </dl>
 
 <dl>
@@ -19578,13 +19578,13 @@ ffmpeg - i background.png - i video.mp4 - filter_complex "[1:v]colorkey=0x3BBD1E
 </dd><dl>
 <dl>
 <dt><b>tv</b>
-</dt><dd> <font SIZE="-1">TV</font> (restricted) range
+</dt><dd> TV (restricted) range
 </dd><dt><b>mpeg</b>
-</dt><dd> <font SIZE="-1">MPEG</font> (restricted) range
+</dt><dd> MPEG (restricted) range
 </dd><dt><b>pc</b>
-</dt><dd> <font SIZE="-1">PC</font> (full) range
+</dt><dd> PC (full) range
 </dd><dt><b>jpeg</b>
-</dt><dd> <font SIZE="-1">JPEG</font> (full) range</dd></dl>
+</dt><dd> JPEG (full) range</dd></dl>
 </dl>
 
 <dl>
@@ -19597,30 +19597,30 @@ ffmpeg - i background.png - i video.mp4 - filter_complex "[1:v]colorkey=0x3BBD1E
 </dd><dl>
 <dl>
 <dt><b>yuv420p</b>
-</dt><dd> <font SIZE="-1">YUV 4:2:0</font> planar 8-bits
+</dt><dd> YUV 4:2:0 planar 8-bits
 </dd><dt><b>yuv420p10</b>
-</dt><dd> <font SIZE="-1">YUV 4:2:0</font> planar 10-bits
+</dt><dd> YUV 4:2:0 planar 10-bits
 </dd><dt><b>yuv420p12</b>
-</dt><dd> <font SIZE="-1">YUV 4:2:0</font> planar 12-bits
+</dt><dd> YUV 4:2:0 planar 12-bits
 </dd><dt><b>yuv422p</b>
-</dt><dd> <font SIZE="-1">YUV 4:2:2</font> planar 8-bits
+</dt><dd> YUV 4:2:2 planar 8-bits
 </dd><dt><b>yuv422p10</b>
-</dt><dd> <font SIZE="-1">YUV 4:2:2</font> planar 10-bits
+</dt><dd> YUV 4:2:2 planar 10-bits
 </dd><dt><b>yuv422p12</b>
-</dt><dd> <font SIZE="-1">YUV 4:2:2</font> planar 12-bits
+</dt><dd> YUV 4:2:2 planar 12-bits
 </dd><dt><b>yuv444p</b>
-</dt><dd> <font SIZE="-1">YUV 4:4:4</font> planar 8-bits
+</dt><dd> YUV 4:4:4 planar 8-bits
 </dd><dt><b>yuv444p10</b>
-</dt><dd> <font SIZE="-1">YUV 4:4:4</font> planar 10-bits
+</dt><dd> YUV 4:4:4 planar 10-bits
 </dd><dt><b>yuv444p12</b>
-</dt><dd> <font SIZE="-1">YUV 4:4:4</font> planar 12-bits</dd></dl>
+</dt><dd> YUV 4:4:4 planar 12-bits</dd></dl>
 </dl>
 
 <dl>
 </dl>
 
 <dt><b>fast</b>
-</dt><dd> Do a fast conversion, which skips gamma/primary correction. This will take significantly less <font SIZE="-1">CPU,</font> but will be mathematically incorrect. To get output compatible with that produced by the colormatrix filter, use fast=1.
+</dt><dd> Do a fast conversion, which skips gamma/primary correction. This will take significantly less CPU, but will be mathematically incorrect. To get output compatible with that produced by the colormatrix filter, use fast=1.
 </dd><dt><b>dither</b>
 </dt><dd> Specify dithering mode. 
 
@@ -19667,7 +19667,7 @@ ffmpeg - i background.png - i video.mp4 - filter_complex "[1:v]colorkey=0x3BBD1E
 
  The filter converts the transfer characteristics, color space and color primaries to the specified user values. The output value, if not specified, is set to a default value based on the ``all'' property. If that property is also not specified, the filter will log an error. The output color range and format default to the same value as the input color range and format. The input transfer characteristics, color space, color primaries and color range should be set on the input data. If any of these are missing, the filter will log an error and no conversion will take place. 
 
- For example to convert the input to <font SIZE="-1">SMPTE-240M,</font> use the command: 
+ For example to convert the input to SMPTE-240M, use the command: 
 
  <pre>
         colorspace=smpte240m
@@ -19788,9 +19788,9 @@ ffmpeg - i background.png - i video.mp4 - filter_complex "[1:v]colorkey=0x3BBD1E
 
 <h3>coreimage</h3>
 
- Video filtering on <font SIZE="-1">GPU</font> using Apple's CoreImage <font SIZE="-1">API</font> on <font SIZE="-1">OSX.</font> 
+ Video filtering on GPU using Apple's CoreImage API on OSX. 
 
- Hardware acceleration is based on an OpenGL context. Usually, this means it is processed by video hardware. However, software-based OpenGL implementations exist which means there is no guarantee for hardware processing. It depends on the respective <font SIZE="-1">OSX.</font> 
+ Hardware acceleration is based on an OpenGL context. Usually, this means it is processed by video hardware. However, software-based OpenGL implementations exist which means there is no guarantee for hardware processing. It depends on the respective OSX. 
 
  There are many filters and image generators provided by Apple that come with a large variety of options. The filter has to be referenced by its name along with its options. 
 
@@ -19840,7 +19840,7 @@ filter = &lt;NAME&gt; @ &lt; OPTION &gt;= &lt;VALUE&gt;[@ &lt; OPTION &gt;= &lt;
 </dt><dd> Use a filter chain with CISepiaTone at default values and CIVignetteEffect with its center at 100x100 and a radius of 50 pixels: 
 coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 100\ 100 [at] inputRadius = 50
 </dd><dt>&bull;
-</dt><dd> Use nullsrc and CIQRCodeGenerator to create a <font SIZE="-1">QR</font> code for the FFmpeg homepage, given as complete and escaped command-line for Apple's standard bash shell: 
+</dt><dd> Use nullsrc and CIQRCodeGenerator to create a QR code for the FFmpeg homepage, given as complete and escaped command-line for Apple's standard bash shell: 
  <pre>
         ffmpeg -f lavfi -i nullsrc=s=100x100,coreimage=filter=CIQRCodeGenerator [at] inputMessage=https\\\\\://FFmpeg.org/@inputCorrectionLevel=H -frames:v 1 QRCode.png
 </pre></dd></dl>
@@ -19934,9 +19934,9 @@ coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 1
 </dd><dt><b>n</b>
 </dt><dd> The number of the input frame, starting from 0.
 </dd><dt><b>pos</b>
-</dt><dd> the position in the file of the input frame, <font SIZE="-1">NAN</font> if unknown
+</dt><dd> the position in the file of the input frame, NAN if unknown
 </dd><dt><b>t</b>
-</dt><dd> The timestamp expressed in seconds. It's <font SIZE="-1">NAN</font> if the input timestamp is unknown.</dd></dl>
+</dt><dd> The timestamp expressed in seconds. It's NAN if the input timestamp is unknown.</dd></dl>
  
 
  The expression for <i>out_w</i> may depend on the value of <i>out_h</i>, and the expression for <i>out_h</i> may depend on <i>out_w</i>, but they cannot depend on <i>x</i> and <i>y</i>, as <i>x</i> and <i>y</i> are evaluated after <i>out_w</i> and <i>out_h</i>. 
@@ -20036,7 +20036,7 @@ coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 1
 </dd><dt><b>round</b>
 </dt><dd> The value which the width/height should be divisible by. It defaults to 16. The offset is automatically adjusted to center the video. Use 2 to get only even dimensions (needed for 4:2:2 video). 16 is best when encoding to most video codecs.
 </dd><dt><b>skip</b>
-</dt><dd> Set the number of initial frames for which evaluation is skipped. Default is 2. Range is 0 to <font SIZE="-1">INT_MAX.</font>
+</dt><dd> Set the number of initial frames for which evaluation is skipped. Default is 2. Range is 0 to INT_MAX.
 </dd><dt><b>reset_count, reset</b>
 </dt><dd> Set the counter that determines after how many frames cropdetect will reset the previously detected largest video area and start over to detect the current optimal crop area. Default value is 0. 
  This can be useful when channel logos distort the video area. 0 indicates 'never reset', and returns the largest area encountered during playback.</dd></dl>
@@ -20050,7 +20050,7 @@ coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 1
  Perfect frame accuracy cannot be guaranteed, but the result is good enough for some use cases.
 <dl>
 <dt><b>cue</b>
-</dt><dd> The cue timestamp expressed in a <font SIZE="-1">UNIX</font> timestamp in microseconds. Default is 0.
+</dt><dd> The cue timestamp expressed in a UNIX timestamp in microseconds. Default is 0.
 </dd><dt><b>preroll</b>
 </dt><dd> The duration of content to pass on as preroll expressed in seconds. Default is 0.
 </dd><dt><b>buffer</b>
@@ -20060,7 +20060,7 @@ coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 1
 
  Apply color adjustments using curves. 
 
- This filter is similar to the Adobe Photoshop and <font SIZE="-1">GIMP</font> curves tools. Each component (red, green and blue) has its values defined by <i>N</i> key points tied from each other using a smooth curve. The x-axis represents the pixel values from the input frame, and the y-axis the new pixel values to be set for the output frame. 
+ This filter is similar to the Adobe Photoshop and GIMP curves tools. Each component (red, green and blue) has its values defined by <i>N</i> key points tied from each other using a smooth curve. The x-axis represents the pixel values from the input frame, and the y-axis the new pixel values to be set for the output frame. 
 
  By default, a component curve is defined by the two points <i>(0;0)</i> and <i>(1;1)</i>. This creates a straight line where each original pixel value is ``adjusted'' to its own value, which means no change to the image. 
 
@@ -20102,7 +20102,7 @@ coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 1
  Default is <tt>&quot;none&quot;</tt>.</dd></dl>
 
 <dt><b>master, m</b>
-</dt><dd> Set the master key points. These points will define a second pass mapping. It is sometimes called a ``luminance'' or ``value'' mapping. It can be used with <b>r</b>, <b>g</b>, <b>b</b> or <b>all</b> since it acts like a post-processing <font SIZE="-1">LUT.</font>
+</dt><dd> Set the master key points. These points will define a second pass mapping. It is sometimes called a ``luminance'' or ``value'' mapping. It can be used with <b>r</b>, <b>g</b>, <b>b</b> or <b>all</b> since it acts like a post-processing LUT.
 </dd><dt><b>red, r</b>
 </dt><dd> Set the key points for the red component.
 </dd><dt><b>green, g</b>
@@ -20240,7 +20240,7 @@ coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 1
 
 <h3>dctdnoiz</h3>
 
- Denoise frames using 2D <font SIZE="-1">DCT</font> (frequency domain filtering). 
+ Denoise frames using 2D DCT (frequency domain filtering). 
 
  This filter is not designed for real time. 
 
@@ -20248,7 +20248,7 @@ coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 1
 <dl>
 <dt><b>sigma, s</b>
 </dt><dd> Set the noise sigma constant. 
- This <i>sigma</i> defines a hard threshold of <tt>&quot;3 * sigma&quot;</tt>; every <font SIZE="-1">DCT</font> coefficient (absolute value) below this threshold with be dropped. 
+ This <i>sigma</i> defines a hard threshold of <tt>&quot;3 * sigma&quot;</tt>; every DCT coefficient (absolute value) below this threshold with be dropped. 
  If you need a more advanced filtering, see <b>expr</b>. 
  Default is <tt>0</tt>.
 </dd><dt><b>overlap</b>
@@ -20257,7 +20257,7 @@ coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 1
  Default value is <i>blocksize</i>-1, which is the best possible setting.
 </dd><dt><b>expr, e</b>
 </dt><dd> Set the coefficient factor expression. 
- For each coefficient of a <font SIZE="-1">DCT</font> block, this expression will be evaluated as a multiplier value for the coefficient. 
+ For each coefficient of a DCT block, this expression will be evaluated as a multiplier value for the coefficient. 
  If this is option is set, the <b>sigma</b> option will be ignored. 
  The absolute value of the coefficient can be accessed through the <i>c</i> variable.
 </dd><dt><b>n</b>
@@ -20488,9 +20488,9 @@ coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 1
 </dd><dl>
 <dl>
 <dt><b>4</b>
-</dt><dd> If the original was telecined from 24 to 30 fps (Film to <font SIZE="-1">NTSC</font>).
+</dt><dd> If the original was telecined from 24 to 30 fps (Film to NTSC).
 </dd><dt><b>5</b>
-</dt><dd> If the original was telecined from 25 to 30 fps (<font SIZE="-1">PAL</font> to <font SIZE="-1">NTSC</font>).
+</dt><dd> If the original was telecined from 25 to 30 fps (PAL to NTSC).
 </dd><dt><b>20</b>
 </dt><dd> If a mixture of the two.</dd></dl>
 </dl>
@@ -20503,7 +20503,7 @@ coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 1
 
 <h3>delogo</h3>
 
- Suppress a <font SIZE="-1">TV</font> station logo by a simple interpolation of the surrounding pixels. Just set a rectangle covering the logo and watch it disappear (and sometimes something even uglier appear - your mileage may vary). 
+ Suppress a TV station logo by a simple interpolation of the surrounding pixels. Just set a rectangle covering the logo and watch it disappear (and sometimes something even uglier appear - your mileage may vary). 
 
  It accepts the following parameters:
 <dl>
@@ -20533,7 +20533,7 @@ coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 1
  Remove the rain in the input image/video by applying the derain methods based on convolutional neural networks. Supported models:
 <dl>
 <dt>&bull;
-</dt><dd> Recurrent Squeeze-and-Excitation Context Aggregation Net (<font SIZE="-1">RESCAN</font>). See &lt;<b><a rel="nofollow" HREF="http://openaccess.thecvf.com/content_ECCV_2018/papers/Xia_Li_Recurrent_Squeeze-and-Excitation_Context_ECCV_2018_paper.pdf">http://openaccess.thecvf.com/content_ECCV_2018/papers/Xia_Li_Recurrent_Squeeze-and-Excitation_Context_ECCV_2018_paper.pdf</a></b>&gt;.</dd></dl>
+</dt><dd> Recurrent Squeeze-and-Excitation Context Aggregation Net (RESCAN). See &lt;<b><a rel="nofollow" HREF="http://openaccess.thecvf.com/content_ECCV_2018/papers/Xia_Li_Recurrent_Squeeze-and-Excitation_Context_ECCV_2018_paper.pdf">http://openaccess.thecvf.com/content_ECCV_2018/papers/Xia_Li_Recurrent_Squeeze-and-Excitation_Context_ECCV_2018_paper.pdf</a></b>&gt;.</dd></dl>
  
 
  Training as well as model generation scripts are provided in the repository at &lt;<b><a rel="nofollow" HREF="https://github.com/XueweiMeng/derain_filter.git">https://github.com/XueweiMeng/derain_filter.git</a></b>&gt;. 
@@ -20558,11 +20558,11 @@ coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 1
  Default value is <b>derain</b>.</dd></dl>
 
 <dt><b>dnn_backend</b>
-</dt><dd> Specify which <font SIZE="-1">DNN</font> backend to use for model loading and execution. This option accepts the following values:
+</dt><dd> Specify which DNN backend to use for model loading and execution. This option accepts the following values:
 </dd><dl>
 <dl>
 <dt><b>native</b>
-</dt><dd> Native implementation of <font SIZE="-1">DNN</font> loading and execution.
+</dt><dd> Native implementation of DNN loading and execution.
 </dd><dt><b>tensorflow</b>
 </dt><dd> TensorFlow backend. To enable this backend you need to install the TensorFlow for C library (see &lt;<b><a rel="nofollow" HREF="https://www.tensorflow.org/install/install_c">https://www.tensorflow.org/install/install_c</a></b>&gt;) and configure FFmpeg with <tt>&quot;--enable-libtensorflow&quot;</tt></dd></dl>
 </dl>
@@ -20773,11 +20773,11 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
  The filter accepts the following options:
 <dl>
 <dt><b>dnn_backend</b>
-</dt><dd> Specify which <font SIZE="-1">DNN</font> backend to use for model loading and execution. This option accepts the following values:
+</dt><dd> Specify which DNN backend to use for model loading and execution. This option accepts the following values:
 </dd><dl>
 <dl>
 <dt><b>native</b>
-</dt><dd> Native implementation of <font SIZE="-1">DNN</font> loading and execution.
+</dt><dd> Native implementation of DNN loading and execution.
 </dd><dt><b>tensorflow</b>
 </dt><dd> TensorFlow backend. To enable this backend you need to install the TensorFlow for C library (see &lt;<b><a rel="nofollow" HREF="https://www.tensorflow.org/install/install_c">https://www.tensorflow.org/install/install_c</a></b>&gt;) and configure FFmpeg with <tt>&quot;--enable-libtensorflow&quot;</tt>
 </dd><dt><b>openvino</b>
@@ -20798,7 +20798,7 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
 </dd><dt><b>output</b>
 </dt><dd> Set the output name of the dnn network.
 </dd><dt><b>async</b>
-</dt><dd> use <font SIZE="-1">DNN</font> async execution if set (default: set), roll back to sync execution if the backend does not support async.</dd></dl>
+</dt><dd> use DNN async execution if set (default: set), roll back to sync execution if the backend does not support async.</dd></dl>
  
 
  <i>Examples</i>
@@ -20814,12 +20814,12 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
         ffmpeg -i input.jpg -vf format=grayf32,dnn_processing=model=halve_gray_float.model:input=dnn_in:output=dnn_out:dnn_backend=native -y out.native.png
 </pre>
 </dd><dt>&bull;
-</dt><dd> Handle the Y channel with srcnn.pb (see <b>sr</b> filter) for frame with yuv420p (planar <font SIZE="-1">YUV</font> formats supported): 
+</dt><dd> Handle the Y channel with srcnn.pb (see <b>sr</b> filter) for frame with yuv420p (planar YUV formats supported): 
  <pre>
         ./ffmpeg -i 480p.jpg -vf format=yuv420p,scale=w=iw*2:h=ih*2,dnn_processing=dnn_backend=tensorflow:model=srcnn.pb:input=x:output=y -y srcnn.jpg
 </pre>
 </dd><dt>&bull;
-</dt><dd> Handle the Y channel with espcn.pb (see <b>sr</b> filter), which changes frame size, for format yuv420p (planar <font SIZE="-1">YUV</font> formats supported): 
+</dt><dd> Handle the Y channel with espcn.pb (see <b>sr</b> filter), which changes frame size, for format yuv420p (planar YUV formats supported): 
  <pre>
         ./ffmpeg -i 480p.jpg -vf format=yuv420p,dnn_processing=dnn_backend=tensorflow:model=espcn.pb:input=x:output=y -y tmp.espcn.jpg
 </pre></dd></dl>
@@ -20985,11 +20985,11 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
  The foreground color expressions can use the following variables:
 </dd><dl>
 <dl>
-<dt><font SIZE="-1"><b>MIN</b></font>
+<dt><b>MIN</b>
 </dt><dd> Minimal value of metadata value.
-</dd><dt><font SIZE="-1"><b>MAX</b></font>
+</dd><dt><b>MAX</b>
 </dt><dd> Maximal value of metadata value.
-</dd><dt><font SIZE="-1"><b>VAL</b></font>
+</dd><dt><b>VAL</b>
 </dt><dd> Current metadata key value.</dd></dl>
 </dl>
 
@@ -21189,9 +21189,9 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
 </dd><dt><b>tc24hmax</b>
 </dt><dd> If set to 1, the output of the timecode option will wrap around at 24 hours. Default is 0 (disabled).
 </dd><dt><b>text</b>
-</dt><dd> The text string to be drawn. The text must be a sequence of <font SIZE="-1">UTF-8</font> encoded characters. This parameter is mandatory if no file is specified with the parameter <i>textfile</i>.
+</dt><dd> The text string to be drawn. The text must be a sequence of UTF-8 encoded characters. This parameter is mandatory if no file is specified with the parameter <i>textfile</i>.
 </dd><dt><b>textfile</b>
-</dt><dd> A text file containing text to be drawn. The text must be a sequence of <font SIZE="-1">UTF-8</font> encoded characters. 
+</dt><dd> A text file containing text to be drawn. The text must be a sequence of UTF-8 encoded characters. 
 
  This parameter is mandatory if no text string is specified with the parameter <i>text</i>. 
 
@@ -21237,7 +21237,7 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
 </dd><dt><b>sar</b>
 </dt><dd> The input sample aspect ratio.
 </dd><dt><b>t</b>
-</dt><dd> timestamp expressed in seconds, <font SIZE="-1">NAN</font> if the input timestamp is unknown
+</dt><dd> timestamp expressed in seconds, NAN if the input timestamp is unknown
 </dd><dt><b>text_h, th</b>
 </dt><dd> the height of the rendered text
 </dd><dt><b>text_w, tw</b>
@@ -21280,14 +21280,14 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
 </dt><dd> Evaluate the expression's value and output as formatted integer. 
  The first argument is the expression to be evaluated, just as for the <i>expr</i> function. The second argument specifies the output format. Allowed values are <b>x</b>, <b>X</b>, <b>d</b> and <b>u</b>. They are treated exactly as in the <tt>&quot;printf&quot;</tt> function. The third parameter is optional and sets the number of positions taken by the output. It can be used to add padding with zeros from the left.
 </dd><dt><b>gmtime</b>
-</dt><dd> The time at which the filter is running, expressed in <font SIZE="-1">UTC.</font> It can accept an argument: a <b>strftime()</b> format string.
+</dt><dd> The time at which the filter is running, expressed in UTC. It can accept an argument: a <b>strftime()</b> format string.
 </dd><dt><b>localtime</b>
 </dt><dd> The time at which the filter is running, expressed in the local time zone. It can accept an argument: a <b>strftime()</b> format string.
 </dd><dt><b>metadata</b>
 </dt><dd> Frame metadata. Takes one or two arguments. 
  The first argument is mandatory and specifies the metadata key. 
  The second argument is optional and specifies a default value, used when the metadata key is not found or empty. 
- Available metadata can be identified by inspecting entries starting with <font SIZE="-1">TAG</font> included within each frame section printed by running <tt>&quot;ffprobe -show_frames&quot;</tt>. 
+ Available metadata can be identified by inspecting entries starting with TAG included within each frame section printed by running <tt>&quot;ffprobe -show_frames&quot;</tt>. 
  String metadata generated in filters leading to the drawtext filter are also available.
 </dd><dt><b>n, frame_num</b>
 </dt><dd> The frame number, starting from 0.
@@ -21295,10 +21295,10 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
 </dt><dd> A one character description of the current picture type.
 </dd><dt><b>pts</b>
 </dt><dd> The timestamp of the current frame. It can take up to three arguments. 
- The first argument is the format of the timestamp; it defaults to <tt>&quot;flt&quot;</tt> for seconds as a decimal number with microsecond accuracy; <tt>&quot;hms&quot;</tt> stands for a formatted <i>[-]HH:MM:SS.mmm</i> timestamp with millisecond accuracy. <tt>&quot;gmtime&quot;</tt> stands for the timestamp of the frame formatted as <font SIZE="-1">UTC</font> time; <tt>&quot;localtime&quot;</tt> stands for the timestamp of the frame formatted as local time zone time. 
+ The first argument is the format of the timestamp; it defaults to <tt>&quot;flt&quot;</tt> for seconds as a decimal number with microsecond accuracy; <tt>&quot;hms&quot;</tt> stands for a formatted <i>[-]HH:MM:SS.mmm</i> timestamp with millisecond accuracy. <tt>&quot;gmtime&quot;</tt> stands for the timestamp of the frame formatted as UTC time; <tt>&quot;localtime&quot;</tt> stands for the timestamp of the frame formatted as local time zone time. 
  The second argument is an offset added to the timestamp. 
  If the format is set to <tt>&quot;hms&quot;</tt>, a third argument <tt>&quot;24HH&quot;</tt> may be supplied to present the hour part of the formatted timestamp in 24h format (00-23). 
- If the format is set to <tt>&quot;localtime&quot;</tt> or <tt>&quot;gmtime&quot;</tt>, a third argument may be supplied: a <b>strftime()</b> format string. By default, <i>YYYY-MM-DD </i><font SIZE="-1"><i>HH:MM:SS</i></font><i></i> format will be used.</dd></dl>
+ If the format is set to <tt>&quot;localtime&quot;</tt> or <tt>&quot;gmtime&quot;</tt>, a third argument may be supplied: a <b>strftime()</b> format string. By default, <i>YYYY-MM-DD </i><i>HH:MM:SS</i><i></i> format will be used.</dd></dl>
  
 
  <i>Commands</i> 
@@ -21344,12 +21344,12 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
         drawtext=&quot;fontsize=30:fontfile=FreeSerif.ttf:text='hello world':x=if(eq(mod(t\,30)\,0)\,rand(0\,(w-text_w))\,x):y=if(eq(mod(t\,30)\,0)\,rand(0\,(h-text_h))\,y)&quot;
 </pre>
 </dd><dt>&bull;
-</dt><dd> Show a text line sliding from right to left in the last row of the video frame. The file <i></i><font SIZE="-1"><i>LONG_LINE</i></font><i></i> is assumed to contain a single line with no newlines. 
+</dt><dd> Show a text line sliding from right to left in the last row of the video frame. The file <i></i><i>LONG_LINE</i><i></i> is assumed to contain a single line with no newlines. 
  <pre>
         drawtext=&quot;fontsize=15:fontfile=FreeSerif.ttf:text=LONG_LINE:y=h-line_h:x=-50*t&quot;
 </pre>
 </dd><dt>&bull;
-</dt><dd> Show the content of file <i></i><font SIZE="-1"><i>CREDITS</i></font><i></i> off the bottom of the frame and scroll up. 
+</dt><dd> Show the content of file <i></i><i>CREDITS</i><i></i> off the bottom of the frame and scroll up. 
  <pre>
         drawtext=&quot;fontsize=20:fontfile=FreeSerif.ttf:textfile=CREDITS:y=h-20*t&quot;
 </pre>
@@ -21395,7 +21395,7 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
         drawtext=fontfile=FreeSans.ttf:text=cow:fontsize=24:x=80:y=20+24-max_glyph_a
 </pre>
 </dd><dt>&bull;
-</dt><dd> Plot special <i>lavf.image2dec.source_basename</i> metadata onto each frame if such metadata exists. Otherwise, plot the string ``<font SIZE="-1">NA''.</font> Note that image2 demuxer must have option <b>-export_path_metadata 1</b> for the special metadata fields to be available for filters. 
+</dt><dd> Plot special <i>lavf.image2dec.source_basename</i> metadata onto each frame if such metadata exists. Otherwise, plot the string ``NA''. Note that image2 demuxer must have option <b>-export_path_metadata 1</b> for the special metadata fields to be available for filters. 
  <pre>
         drawtext=&quot;fontsize=20:fontcolor=white:fontfile=FreeSans.ttf:text='%{metadata\:lavf.image2dec.source_basename\:NA}':x=10:y=10&quot;
 </pre></dd></dl>
@@ -21456,7 +21456,7 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
 
 <h3>elbg</h3>
 
- Apply a posterize effect using the <font SIZE="-1">ELBG</font> (Enhanced <font SIZE="-1">LBG</font>) algorithm. 
+ Apply a posterize effect using the ELBG (Enhanced LBG) algorithm. 
 
  For each input image, the filter will compute the optimal mapping from the input to the output given the codebook length, that is the number of distinct output colors. 
 
@@ -21467,7 +21467,7 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
 </dd><dt><b>nb_steps, n</b>
 </dt><dd> Set the maximum number of iterations to apply for computing the optimal mapping. The higher the value the better the result and the higher the computation time. Default value is 1.
 </dd><dt><b>seed, s</b>
-</dt><dd> Set a random seed, must be an integer included between 0 and <font SIZE="-1">UINT32_MAX.</font> If not specified, or if explicitly set to -1, the filter will try to use a good random seed on a best effort basis.
+</dt><dd> Set a random seed, must be an integer included between 0 and UINT32_MAX. If not specified, or if explicitly set to -1, the filter will try to use a good random seed on a best effort basis.
 </dd><dt><b>pal8</b>
 </dt><dd> Set pal8 output pixel format. This option does not work with codebook length greater than 256.</dd></dl>
 
@@ -21483,7 +21483,7 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
 
 <h3>epx</h3>
 
- Apply the <font SIZE="-1">EPX</font> magnification filter which is designed for pixel art. 
+ Apply the EPX magnification filter which is designed for pixel art. 
 
  It accepts the following option:
 <dl>
@@ -21535,11 +21535,11 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
 <dt><b>n</b>
 </dt><dd> frame count of the input frame starting from 0
 </dd><dt><b>pos</b>
-</dt><dd> byte position of the corresponding packet in the input file, <font SIZE="-1">NAN</font> if unspecified
+</dt><dd> byte position of the corresponding packet in the input file, NAN if unspecified
 </dd><dt><b>r</b>
-</dt><dd> frame rate of the input video, <font SIZE="-1">NAN</font> if the input frame rate is unknown
+</dt><dd> frame rate of the input video, NAN if the input frame rate is unknown
 </dd><dt><b>t</b>
-</dt><dd> timestamp expressed in seconds, <font SIZE="-1">NAN</font> if the input timestamp is unknown</dd></dl>
+</dt><dd> timestamp expressed in seconds, NAN if the input timestamp is unknown</dd></dl>
  
 
  <i>Commands</i> 
@@ -21680,7 +21680,7 @@ ffmpeg - i INPUT - f lavfi - i nullsrc = hd720, geq = 'r=128+80*(sin(sqrt((X-W/2
  The filter accepts the following options:
 <dl>
 <dt><b>exposure</b>
-</dt><dd> Set the exposure correction in <font SIZE="-1">EV.</font> Allowed range is from -3.0 to 3.0 <font SIZE="-1">EV</font> Default value is 0 <font SIZE="-1">EV.</font>
+</dt><dd> Set the exposure correction in EV. Allowed range is from -3.0 to 3.0 EV Default value is 0 EV.
 </dd><dt><b>black</b>
 </dt><dd> Set the black level correction. Allowed range is from -1.0 to 1.0. Default value is 0.</dd></dl>
  
@@ -21792,7 +21792,7 @@ ffmpeg - i video.avi - filter_complex 'extractplanes=y+u+v[y][u][v]' - map '[y]'
 
 <h3>fftdnoiz</h3>
 
- Denoise frames using 3D <font SIZE="-1">FFT</font> (frequency domain filtering). 
+ Denoise frames using 3D FFT (frequency domain filtering). 
 
  The filter accepts the following options:
 <dl>
@@ -21881,7 +21881,7 @@ ffmpeg - i video.avi - filter_complex 'extractplanes=y+u+v[y][u][v]' - map '[y]'
 
 <h3>field</h3>
 
- Extract a single field from an interlaced image using stride arithmetic to avoid wasting <font SIZE="-1">CPU</font> time. The output frames are marked as non-interlaced. 
+ Extract a single field from an interlaced image using stride arithmetic to avoid wasting CPU time. The output frames are marked as non-interlaced. 
 
  The filter accepts the following options:
 <dl>
@@ -21928,7 +21928,7 @@ ffmpeg - i video.avi - filter_complex 'extractplanes=y+u+v[y][u][v]' - map '[y]'
 
  In addition to the various configuration options, <tt>&quot;fieldmatch&quot;</tt> can take an optional second stream, activated through the <b>ppsrc</b> option. If enabled, the frames reconstruction will be based on the fields and frames from this second stream. This allows the first input to be pre-processed in order to help the various algorithms of the filter, while keeping the output lossless (assuming the fields are matched properly). Typically, a field-aware denoiser, or brightness/contrast adjustments can help. 
 
- Note that this filter uses the same algorithms as <font SIZE="-1">TIVTC/TFM</font> (AviSynth project) and <font SIZE="-1">VIVTC/VFM</font> (VapourSynth project). The later is a light clone of <font SIZE="-1">TFM</font> from which <tt>&quot;fieldmatch&quot;</tt> is based on. While the semantic and usage are very close, some behaviour and options names can differ. 
+ Note that this filter uses the same algorithms as TIVTC/TFM (AviSynth project) and VIVTC/VFM (VapourSynth project). The later is a light clone of TFM from which <tt>&quot;fieldmatch&quot;</tt> is based on. While the semantic and usage are very close, some behaviour and options names can differ. 
 
  The <b>decimate</b> filter currently only works for constant frame rate input. If your input has mixed telecined (30fps) and progressive content with a lower framerate like 24fps use the following filterchain to produce the necessary cfr stream: <tt>&quot;dejudder,fps=30000/1001,fieldmatch,decimate&quot;</tt>. 
 
@@ -21982,7 +21982,7 @@ ffmpeg - i video.avi - filter_complex 'extractplanes=y+u+v[y][u][v]' - map '[y]'
  Default value is <i>pc_n</i>.</dd></dl>
 
 <dt><b>ppsrc</b>
-</dt><dd> Mark the main input stream as a pre-processed input, and enable the secondary input stream as the clean source to pick the fields from. See the filter introduction for more details. It is similar to the <b>clip2</b> feature from <font SIZE="-1">VFM/TFM.</font> 
+</dt><dd> Mark the main input stream as a pre-processed input, and enable the secondary input stream as the clean source to pick the fields from. See the filter introduction for more details. It is similar to the <b>clip2</b> feature from VFM/TFM. 
 
  Default value is <tt>0</tt> (disabled).
 </dd><dt><b>field</b>
@@ -22032,7 +22032,7 @@ ffmpeg - i video.avi - filter_complex 'extractplanes=y+u+v[y][u][v]' - map '[y]'
  Default is <i>sc</i>.</dd></dl>
 
 <dt><b>combdbg</b>
-</dt><dd> Force <tt>&quot;fieldmatch&quot;</tt> to calculate the combed metrics for certain matches and print them. This setting is known as <b>micout</b> in <font SIZE="-1">TFM/VFM</font> vocabulary. Available values are:
+</dt><dd> Force <tt>&quot;fieldmatch&quot;</tt> to calculate the combed metrics for certain matches and print them. This setting is known as <b>micout</b> in TFM/VFM vocabulary. Available values are:
 </dd><dl>
 <dl>
 <dt><b>none</b>
@@ -22063,7 +22063,7 @@ ffmpeg - i video.avi - filter_complex 'extractplanes=y+u+v[y][u][v]' - map '[y]'
 
  Default value is <tt>16</tt>.
 </dd><dt><b>combpel</b>
-</dt><dd> The number of combed pixels inside any of the <b>blocky</b> by <b>blockx</b> size blocks on the frame for the frame to be detected as combed. While <b>cthresh</b> controls how ``visible'' the combing must be, this setting controls ``how much'' combing there must be in any localized area (a window defined by the <b>blockx</b> and <b>blocky</b> settings) on the frame. Minimum value is <tt>0</tt> and maximum is <tt>&quot;blocky x blockx&quot;</tt> (at which point no frames will ever be detected as combed). This setting is known as <font SIZE="-1"><b>MI</b></font> in <font SIZE="-1">TFM/VFM</font> vocabulary. 
+</dt><dd> The number of combed pixels inside any of the <b>blocky</b> by <b>blockx</b> size blocks on the frame for the frame to be detected as combed. While <b>cthresh</b> controls how ``visible'' the combing must be, this setting controls ``how much'' combing there must be in any localized area (a window defined by the <b>blockx</b> and <b>blocky</b> settings) on the frame. Minimum value is <tt>0</tt> and maximum is <tt>&quot;blocky x blockx&quot;</tt> (at which point no frames will ever be detected as combed). This setting is known as <b>MI</b> in TFM/VFM vocabulary. 
 
  Default value is <tt>80</tt>.</dd></dl>
  
@@ -22149,13 +22149,13 @@ ffmpeg - i video.avi - filter_complex 'extractplanes=y+u+v[y][u][v]' - map '[y]'
 
  <i>Examples</i> 
 
- Simple <font SIZE="-1">IVTC</font> of a top field first telecined stream: 
+ Simple IVTC of a top field first telecined stream: 
 
  <pre>
         fieldmatch=order=tff:combmatch=none, decimate
 </pre> 
 
- Advanced <font SIZE="-1">IVTC,</font> with fallback on <b>yadif</b> for still combed frames: 
+ Advanced IVTC, with fallback on <b>yadif</b> for still combed frames: 
 
  <pre>
         fieldmatch=order=tff:combmatch=full, yadif=deint=interlaced, decimate
@@ -22177,7 +22177,7 @@ ffmpeg - i video.avi - filter_complex 'extractplanes=y+u+v[y][u][v]' - map '[y]'
 
  If the input video is not flagged as being interlaced, or it is already flagged as being of the required output field order, then this filter does not alter the incoming video. 
 
- It is very useful when converting to or from <font SIZE="-1">PAL DV</font> material, which is bottom field first. 
+ It is very useful when converting to or from PAL DV material, which is bottom field first. 
 
  For example: 
 
@@ -22323,9 +22323,9 @@ ffmpeg - i video.avi - filter_complex 'extractplanes=y+u+v[y][u][v]' - map '[y]'
 <dt><b>fps</b>
 </dt><dd> The desired output frame rate. The default is <tt>25</tt>.
 </dd><dt><b>start_time</b>
-</dt><dd> Assume the first <font SIZE="-1">PTS</font> should be the given value, in seconds. This allows for padding/trimming at the start of stream. By default, no assumption is made about the first frame's expected <font SIZE="-1">PTS,</font> so no padding or trimming is done. For example, this could be set to 0 to pad the beginning with duplicates of the first frame if a video stream starts after the audio stream or to trim any frames with a negative <font SIZE="-1">PTS.</font>
+</dt><dd> Assume the first PTS should be the given value, in seconds. This allows for padding/trimming at the start of stream. By default, no assumption is made about the first frame's expected PTS, so no padding or trimming is done. For example, this could be set to 0 to pad the beginning with duplicates of the first frame if a video stream starts after the audio stream or to trim any frames with a negative PTS.
 </dd><dt><b>round</b>
-</dt><dd> Timestamp (<font SIZE="-1">PTS</font>) rounding method. 
+</dt><dd> Timestamp (PTS) rounding method. 
  Possible values are:
 </dd><dl>
 <dl>
@@ -22498,7 +22498,7 @@ ffmpeg - i LEFT - i RIGHT - filter_complex framepack = frameseq OUTPUT
  It accepts the following parameters:
 <dl>
 <dt><b>filter_name</b>
-</dt><dd> The name of the frei0r effect to load. If the environment variable <font SIZE="-1"><b>FREI0R_PATH</b></font> is defined, the frei0r effect is searched for in each of the directories specified by the colon-separated list in <font SIZE="-1"><b>FREI0R_PATH</b></font>. Otherwise, the standard frei0r paths are searched, in this order: <i></i><font SIZE="-1"><i>HOME/</i></font><i>.frei0r-1/lib/</i>, <i>/usr/local/lib/frei0r-1/</i>, <i>/usr/lib/frei0r-1/</i>.
+</dt><dd> The name of the frei0r effect to load. If the environment variable <b>FREI0R_PATH</b> is defined, the frei0r effect is searched for in each of the directories specified by the colon-separated list in <b>FREI0R_PATH</b>. Otherwise, the standard frei0r paths are searched, in this order: <i></i><i>HOME/</i><i>.frei0r-1/lib/</i>, <i>/usr/local/lib/frei0r-1/</i>, <i>/usr/lib/frei0r-1/</i>.
 </dd><dt><b>filter_params</b>
 </dt><dd> A '|'-separated list of parameters to pass to the frei0r effect.</dd></dl>
  
@@ -22545,11 +22545,11 @@ ffmpeg - i LEFT - i RIGHT - filter_complex framepack = frameseq OUTPUT
 <dt><b>quality</b>
 </dt><dd> Set quality. This option defines the number of levels for averaging. It accepts an integer in the range 4-5. Default value is <tt>4</tt>.
 </dd><dt><b>qp</b>
-</dt><dd> Force a constant quantization parameter. It accepts an integer in range 0-63. If not set, the filter will use the <font SIZE="-1">QP</font> from the video stream (if available).
+</dt><dd> Force a constant quantization parameter. It accepts an integer in range 0-63. If not set, the filter will use the QP from the video stream (if available).
 </dd><dt><b>strength</b>
-</dt><dd> Set filter strength. It accepts an integer in range -15 to 32. Lower values mean more details but also more artifacts, while higher values make the image smoother but also blurrier. Default value is <tt>0</tt> X <font SIZE="-1">PSNR</font> optimal.
+</dt><dd> Set filter strength. It accepts an integer in range -15 to 32. Lower values mean more details but also more artifacts, while higher values make the image smoother but also blurrier. Default value is <tt>0</tt> X PSNR optimal.
 </dd><dt><b>use_bframe_qp</b>
-</dt><dd> Enable the use of the <font SIZE="-1">QP</font> from the B-Frames if set to <tt>1</tt>. Using this option may cause flicker since the B-Frames have often larger <font SIZE="-1">QP.</font> Default is <tt>0</tt> (not enabled).</dd></dl>
+</dt><dd> Enable the use of the QP from the B-Frames if set to <tt>1</tt>. Using this option may cause flicker since the B-Frames have often larger QP. Default is <tt>0</tt> (not enabled).</dd></dl>
 
 <h3>gblur</h3>
 
@@ -22595,7 +22595,7 @@ ffmpeg - i LEFT - i RIGHT - filter_complex framepack = frameseq OUTPUT
 </dt><dd> Set the blue expression.</dd></dl>
  
 
- The colorspace is selected according to the specified options. If one of the <b>lum_expr</b>, <b>cb_expr</b>, or <b>cr_expr</b> options is specified, the filter will automatically select a YCbCr colorspace. If one of the <b>red_expr</b>, <b>green_expr</b>, or <b>blue_expr</b> options is specified, it will select an <font SIZE="-1">RGB</font> colorspace. 
+ The colorspace is selected according to the specified options. If one of the <b>lum_expr</b>, <b>cb_expr</b>, or <b>cr_expr</b> options is specified, the filter will automatically select a YCbCr colorspace. If one of the <b>red_expr</b>, <b>green_expr</b>, or <b>blue_expr</b> options is specified, it will select an RGB colorspace. 
 
  If one of the chrominance expression is not defined, it falls back on the other one. If no alpha expression is specified it will evaluate to opaque value. If none of chrominance expressions are specified, they will evaluate to the luminance expression. 
 
@@ -22611,10 +22611,10 @@ ffmpeg - i LEFT - i RIGHT - filter_complex framepack = frameseq OUTPUT
 </dt><dd>
 </dd><dt><b>H</b>
 </dt><dd> The width and height of the image.
-</dd><dt><font SIZE="-1"><b>SW</b></font>
+</dd><dt><b>SW</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SH</b></font>
-</dt><dd> Width and height scale depending on the currently filtered plane. It is the ratio between the corresponding luma plane number of pixels and the current plane ones. E.g. for <font SIZE="-1">YUV4:2:0</font> the values are <tt>&quot;1,1&quot;</tt> for the luma plane, and <tt>&quot;0.5,0.5&quot;</tt> for chroma planes.
+</dd><dt><b>SH</b>
+</dt><dd> Width and height scale depending on the currently filtered plane. It is the ratio between the corresponding luma plane number of pixels and the current plane ones. E.g. for YUV4:2:0 the values are <tt>&quot;1,1&quot;</tt> for the luma plane, and <tt>&quot;0.5,0.5&quot;</tt> for chroma planes.
 </dd><dt><b>T</b>
 </dt><dd> Time of the current frame, expressed in seconds.
 </dd><dt><b>p(x, y)</b>
@@ -22679,7 +22679,7 @@ ffmpeg - i LEFT - i RIGHT - filter_complex framepack = frameseq OUTPUT
         format=gray,geq=lum_expr='(p(X,Y)+(256-p(X-4,Y-4)))/2'
 </pre>
 </dd><dt>&bull;
-</dt><dd> Modify <font SIZE="-1">RGB</font> components depending on pixel position: 
+</dt><dd> Modify RGB components depending on pixel position: 
  <pre>
         geq=r='X/W*r(X,Y)':g='(1-X/W)*g(X,Y)':b='(H-Y)/H*b(X,Y)'
 </pre>
@@ -22796,23 +22796,23 @@ ffmpeg - i LEFT - i RIGHT - filter_complex framepack = frameseq OUTPUT
 
 <h3>haldclut</h3>
 
- Apply a Hald <font SIZE="-1">CLUT</font> to a video stream. 
+ Apply a Hald CLUT to a video stream. 
 
- First input is the video stream to process, and second one is the Hald <font SIZE="-1">CLUT.</font> The Hald <font SIZE="-1">CLUT</font> input can be a simple picture or a complete video stream. 
+ First input is the video stream to process, and second one is the Hald CLUT. The Hald CLUT input can be a simple picture or a complete video stream. 
 
  The filter accepts the following options:
 <dl>
 <dt><b>shortest</b>
 </dt><dd> Force termination when the shortest input terminates. Default is <tt>0</tt>.
 </dd><dt><b>repeatlast</b>
-</dt><dd> Continue applying the last <font SIZE="-1">CLUT</font> after the end of the stream. A value of <tt>0</tt> disable the filter after the last frame of the <font SIZE="-1">CLUT</font> is reached. Default is <tt>1</tt>.</dd></dl>
+</dt><dd> Continue applying the last CLUT after the end of the stream. A value of <tt>0</tt> disable the filter after the last frame of the CLUT is reached. Default is <tt>1</tt>.</dd></dl>
  
 
  <tt>&quot;haldclut&quot;</tt> also has the same interpolation options as <b>lut3d</b> (both filters share the same internals). 
 
  This filter also supports the <b>framesync</b> options. 
 
- More information about the Hald <font SIZE="-1">CLUT</font> can be found on Eskil Steenberg's website (Hald <font SIZE="-1">CLUT</font> author) at &lt;<b><a rel="nofollow" HREF="http://www.quelsolaar.com/technology/clut.html">http://www.quelsolaar.com/technology/clut.html</a></b>&gt;. 
+ More information about the Hald CLUT can be found on Eskil Steenberg's website (Hald CLUT author) at &lt;<b><a rel="nofollow" HREF="http://www.quelsolaar.com/technology/clut.html">http://www.quelsolaar.com/technology/clut.html</a></b>&gt;. 
 
  <i>Commands</i> 
 
@@ -22820,9 +22820,9 @@ ffmpeg - i LEFT - i RIGHT - filter_complex framepack = frameseq OUTPUT
 
  <i>Workflow examples</i> 
 
- Hald <font SIZE="-1">CLUT</font> video stream 
+ Hald CLUT video stream 
 
- Generate an identity Hald <font SIZE="-1">CLUT</font> stream altered with various effects: 
+ Generate an identity Hald CLUT stream altered with various effects: 
 
  <pre>
         ffmpeg -f lavfi -i B&lt;haldclutsrc&gt;=8 -vf &quot;hue=H=2*PI*t:s=sin(2*PI*t)+1, curves=cross_process&quot; -t 10 -c:v ffv1 clut.nut
@@ -22836,13 +22836,13 @@ ffmpeg - i LEFT - i RIGHT - filter_complex framepack = frameseq OUTPUT
 ffmpeg - f lavfi - i mandelbrot - i clut.nut - filter_complex '[0][1] haldclut' - t 20 mandelclut.mkv
  
 
- The Hald <font SIZE="-1">CLUT</font> will be applied to the 10 first seconds (duration of <i>clut.nut</i>), then the latest picture of that <font SIZE="-1">CLUT</font> stream will be applied to the remaining frames of the <tt>&quot;mandelbrot&quot;</tt> stream. 
+ The Hald CLUT will be applied to the 10 first seconds (duration of <i>clut.nut</i>), then the latest picture of that CLUT stream will be applied to the remaining frames of the <tt>&quot;mandelbrot&quot;</tt> stream. 
 
- Hald <font SIZE="-1">CLUT</font> with preview 
+ Hald CLUT with preview 
 
- A Hald <font SIZE="-1">CLUT</font> is supposed to be a squared image of <tt>&quot;Level*Level*Level&quot;</tt> by <tt>&quot;Level*Level*Level&quot;</tt> pixels. For a given Hald <font SIZE="-1">CLUT,</font> FFmpeg will select the biggest possible square starting at the top left of the picture. The remaining padding pixels (bottom or right) will be ignored. This area can be used to add a preview of the Hald <font SIZE="-1">CLUT.</font> 
+ A Hald CLUT is supposed to be a squared image of <tt>&quot;Level*Level*Level&quot;</tt> by <tt>&quot;Level*Level*Level&quot;</tt> pixels. For a given Hald CLUT, FFmpeg will select the biggest possible square starting at the top left of the picture. The remaining padding pixels (bottom or right) will be ignored. This area can be used to add a preview of the Hald CLUT. 
 
- Typically, the following generated Hald <font SIZE="-1">CLUT</font> will be supported by the <tt>&quot;haldclut&quot;</tt> filter: 
+ Typically, the following generated Hald CLUT will be supported by the <tt>&quot;haldclut&quot;</tt> filter: 
 
  
 ffmpeg - f lavfi - i B &lt; haldclutsrc &gt;= 8 - vf "
@@ -22852,9 +22852,9 @@ smptebars = s = 320x256, split[a][b];
 [main][b] overlay = W - 320 " -frames:v 1 clut.png
  
 
- It contains the original and a preview of the effect of the <font SIZE="-1">CLUT: SMPTE</font> color bars are displayed on the right-top, and below the same color bars processed by the color changes. 
+ It contains the original and a preview of the effect of the CLUT: SMPTE color bars are displayed on the right-top, and below the same color bars processed by the color changes. 
 
- Then, the effect of this Hald <font SIZE="-1">CLUT</font> can be visualized with: 
+ Then, the effect of this Hald CLUT can be visualized with: 
 
  <pre>
         ffplay input.mkv -vf &quot;movie=clut.png, [in] haldclut&quot;
@@ -23025,12 +23025,12 @@ smptebars = s = 320x256, split[a][b];
 
 <h3>hwupload_cuda</h3>
 
- Upload system memory frames to a <font SIZE="-1">CUDA</font> device. 
+ Upload system memory frames to a CUDA device. 
 
  It accepts the following optional parameters:
 <dl>
 <dt><b>device</b>
-</dt><dd> The number of the <font SIZE="-1">CUDA</font> device to use</dd></dl>
+</dt><dd> The number of the CUDA device to use</dd></dl>
 
 <h3>hqx</h3>
 
@@ -23081,9 +23081,9 @@ smptebars = s = 320x256, split[a][b];
 </dd><dt><b>pts</b>
 </dt><dd> presentation timestamp of the input frame expressed in time base units
 </dd><dt><b>r</b>
-</dt><dd> frame rate of the input video, <font SIZE="-1">NAN</font> if the input frame rate is unknown
+</dt><dd> frame rate of the input video, NAN if the input frame rate is unknown
 </dd><dt><b>t</b>
-</dt><dd> timestamp expressed in seconds, <font SIZE="-1">NAN</font> if the input timestamp is unknown
+</dt><dd> timestamp expressed in seconds, NAN if the input timestamp is unknown
 </dd><dt><b>tb</b>
 </dt><dd> time base of the input video</dd></dl>
  
@@ -23396,7 +23396,7 @@ Original Original New Frame
 
  This filter can be used to correct for radial distortion as can result from the use of wide angle lenses, and thereby re-rectify the image. To find the right parameters one can use tools available for example as part of opencv or simply trial-and-error. To use opencv use the calibration sample (under samples/cpp) from the opencv sources and extract the k1 and k2 coefficients from the resulting matrix. 
 
- Note that effectively the same filter is available in the open-source tools Krita and Digikam from the <font SIZE="-1">KDE</font> project. 
+ Note that effectively the same filter is available in the open-source tools Krita and Digikam from the KDE project. 
 
  In contrast to the <b>vignette</b> filter, which can also be used to compensate lens errors, this filter corrects the distortion of the image, whereas <b>vignette</b> corrects the brightness distribution, so you may want to use both filters together in certain cases, though you will have to take care of ordering, i.e. whether vignetting should be applied before or after lens correction. 
 
@@ -23439,9 +23439,9 @@ Original Original New Frame
 <dt><b>make</b>
 </dt><dd> The make of the camera (for example, ``Canon''). This option is required.
 </dd><dt><b>model</b>
-</dt><dd> The model of the camera (for example, ``Canon <font SIZE="-1">EOS 100D''</font>). This option is required.
+</dt><dd> The model of the camera (for example, ``Canon EOS 100D''). This option is required.
 </dd><dt><b>lens_model</b>
-</dt><dd> The model of the lens (for example, ``Canon EF-S 18-55mm f/3.5-5.6 <font SIZE="-1">IS STM''</font>). This option is required.
+</dt><dd> The model of the lens (for example, ``Canon EF-S 18-55mm f/3.5-5.6 IS STM''). This option is required.
 </dd><dt><b>mode</b>
 </dt><dd> The type of correction to apply. The following values are valid options:
 </dd><dl>
@@ -23520,7 +23520,7 @@ Original Original New Frame
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Apply lens correction with make ``Canon'', camera model ``Canon <font SIZE="-1">EOS 100D'',</font> and lens model ``Canon EF-S 18-55mm f/3.5-5.6 <font SIZE="-1">IS STM''</font> with focal length of ``18'' and aperture of ``8.0''. 
+</dt><dd> Apply lens correction with make ``Canon'', camera model ``Canon EOS 100D'', and lens model ``Canon EF-S 18-55mm f/3.5-5.6 IS STM'' with focal length of ``18'' and aperture of ``8.0''. 
  <pre>
         ffmpeg -i input.mov -vf lensfun=make=Canon:model=&quot;Canon EOS 100D&quot;:lens_model=&quot;Canon EF-S 18-55mm f/3.5-5.6 IS STM&quot;:focal_length=18:aperture=8 -c:v h264 -b:v 8000k output.mov
 </pre>
@@ -23532,24 +23532,24 @@ Original Original New Frame
 
 <h3>libvmaf</h3>
 
- Obtain the <font SIZE="-1">VMAF</font> (Video Multi-Method Assessment Fusion) score between two input videos. 
+ Obtain the VMAF (Video Multi-Method Assessment Fusion) score between two input videos. 
 
- The obtained <font SIZE="-1">VMAF</font> score is printed through the logging system. 
+ The obtained VMAF score is printed through the logging system. 
 
  It requires Netflix's vmaf library (libvmaf) as a pre-requisite. After installing the library it can be enabled using: <tt>&quot;./configure --enable-libvmaf&quot;</tt>. If no model path is specified it uses the default model: <tt>&quot;vmaf_v0.6.1.pkl&quot;</tt>. 
 
  The filter has following options:
 <dl>
 <dt><b>model_path</b>
-</dt><dd> Set the model path which is to be used for <font SIZE="-1">SVM.</font> Default value: <tt>&quot;/usr/local/share/model/vmaf_v0.6.1.pkl&quot;</tt>
+</dt><dd> Set the model path which is to be used for SVM. Default value: <tt>&quot;/usr/local/share/model/vmaf_v0.6.1.pkl&quot;</tt>
 </dd><dt><b>log_path</b>
 </dt><dd> Set the file path to be used to store logs.
 </dd><dt><b>log_fmt</b>
 </dt><dd> Set the format of the log file (csv, json or xml).
 </dd><dt><b>enable_transform</b>
-</dt><dd> This option can enable/disable the <tt>&quot;score_transform&quot;</tt> applied to the final predicted <font SIZE="-1">VMAF</font> score, if you have specified score_transform option in the input parameter file passed to <tt>&quot;run_vmaf_training.py&quot;</tt> Default value: <tt>&quot;false&quot;</tt>
+</dt><dd> This option can enable/disable the <tt>&quot;score_transform&quot;</tt> applied to the final predicted VMAF score, if you have specified score_transform option in the input parameter file passed to <tt>&quot;run_vmaf_training.py&quot;</tt> Default value: <tt>&quot;false&quot;</tt>
 </dd><dt><b>phone_model</b>
-</dt><dd> Invokes the phone model which will generate <font SIZE="-1">VMAF</font> scores higher than in the regular model, which is more suitable for laptop, <font SIZE="-1">TV,</font> etc. viewing conditions. Default value: <tt>&quot;false&quot;</tt>
+</dt><dd> Invokes the phone model which will generate VMAF scores higher than in the regular model, which is more suitable for laptop, TV, etc. viewing conditions. Default value: <tt>&quot;false&quot;</tt>
 </dd><dt><b>psnr</b>
 </dt><dd> Enables computing psnr along with vmaf. Default value: <tt>&quot;false&quot;</tt>
 </dd><dt><b>ssim</b>
@@ -23637,12 +23637,12 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
 <h3>lut1d</h3>
 
- Apply a 1D <font SIZE="-1">LUT</font> to an input video. 
+ Apply a 1D LUT to an input video. 
 
  The filter accepts the following options:
 <dl>
 <dt><b>file</b>
-</dt><dd> Set the 1D <font SIZE="-1">LUT</font> file name. 
+</dt><dd> Set the 1D LUT file name. 
  Currently supported formats:
 </dd><dl>
 <dl>
@@ -23684,12 +23684,12 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
 <h3>lut3d</h3>
 
- Apply a 3D <font SIZE="-1">LUT</font> to an input video. 
+ Apply a 3D LUT to an input video. 
 
  The filter accepts the following options:
 <dl>
 <dt><b>file</b>
-</dt><dd> Set the 3D <font SIZE="-1">LUT</font> file name. 
+</dt><dd> Set the 3D LUT file name. 
  Currently supported formats:
 </dd><dl>
 <dl>
@@ -23759,7 +23759,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
  Compute a look-up table for binding each pixel component input value to an output value, and apply it to the input video. 
 
- <i>lutyuv</i> applies a lookup table to a <font SIZE="-1">YUV</font> input video, <i>lutrgb</i> to an <font SIZE="-1">RGB</font> input video. 
+ <i>lutyuv</i> applies a lookup table to a YUV input video, <i>lutrgb</i> to an RGB input video. 
 
  These filters accept the following parameters:
 <dl>
@@ -23791,7 +23791,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
  The exact component associated to each of the <i>c*</i> options depends on the format in input. 
 
- The <i>lut</i> filter requires either <font SIZE="-1">YUV</font> or <font SIZE="-1">RGB</font> pixel formats in input, <i>lutrgb</i> requires <font SIZE="-1">RGB</font> pixel formats in input, and <i>lutyuv</i> requires <font SIZE="-1">YUV.</font> 
+ The <i>lut</i> filter requires either YUV or RGB pixel formats in input, <i>lutrgb</i> requires RGB pixel formats in input, and <i>lutyuv</i> requires YUV. 
 
  The expressions can contain the following constants and functions:
 <dl>
@@ -23926,12 +23926,12 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Highlight differences between two <font SIZE="-1">RGB</font> video streams: 
+</dt><dd> Highlight differences between two RGB video streams: 
  <pre>
         lut2='ifnot(x-y,0,pow(2,bdx)-1):ifnot(x-y,0,pow(2,bdx)-1):ifnot(x-y,0,pow(2,bdx)-1)'
 </pre>
 </dd><dt>&bull;
-</dt><dd> Highlight differences between two <font SIZE="-1">YUV</font> video streams: 
+</dt><dd> Highlight differences between two YUV video streams: 
  <pre>
         lut2='ifnot(x-y,0,pow(2,bdx)-1):ifnot(x-y,pow(2,bdx-1),pow(2,bdx)-1):ifnot(x-y,pow(2,bdx-1),pow(2,bdx)-1)'
 </pre>
@@ -24090,7 +24090,7 @@ lut2 = 'if(lt(x,y),0,if(gt(x,y),pow(2,bdx)-1,pow(2,bdx-1))):if(lt(x,y),0,if(gt(x
  Default value is <b>bff</b>.</dd></dl>
 
 <dt><b>qp</b>
-</dt><dd> Set per-block quantization parameter (<font SIZE="-1">QP</font>) used by the internal encoder. 
+</dt><dd> Set per-block quantization parameter (QP) used by the internal encoder. 
 
  Higher values should result in a smoother motion vector field but less optimal individual vectors. Default value is 1.</dd></dl>
 
@@ -24402,15 +24402,15 @@ lut2 = 'if(lt(x,y),0,if(gt(x,y),pow(2,bdx)-1,pow(2,bdx-1))):if(lt(x,y),0,if(gt(x
 
 <h3>msad</h3>
 
- Obtain the <font SIZE="-1">MSAD</font> (Mean Sum of Absolute Differences) between two input videos. 
+ Obtain the MSAD (Mean Sum of Absolute Differences) between two input videos. 
 
  This filter takes two input videos. 
 
  Both input videos must have the same resolution and pixel format for this filter to work correctly. Also it assumes that both inputs have the same number of frames, which are compared one by one. 
 
- The obtained per component, average, min and max <font SIZE="-1">MSAD</font> is printed through the logging system. 
+ The obtained per component, average, min and max MSAD is printed through the logging system. 
 
- The filter stores the calculated <font SIZE="-1">MSAD</font> of each frame in frame metadata. 
+ The filter stores the calculated MSAD of each frame in frame metadata. 
 
  In the below example the input file <i>main.mpg</i> being processed is compared with the reference file <i>ref.mpg</i>. 
 
@@ -24663,7 +24663,7 @@ lut2 = 'if(lt(x,y),0,if(gt(x,y),pow(2,bdx)-1,pow(2,bdx-1))):if(lt(x,y),0,if(gt(x
 
 <h3>normalize</h3>
 
- Normalize <font SIZE="-1">RGB</font> video (aka histogram stretching, contrast stretching). See: <a rel="nofollow" HREF="https://en.wikipedia.org/wiki/Normalization_(image_processing)">https://en.wikipedia.org/wiki/Normalization_(image_processing)</a> 
+ Normalize RGB video (aka histogram stretching, contrast stretching). See: <a rel="nofollow" HREF="https://en.wikipedia.org/wiki/Normalization_(image_processing)">https://en.wikipedia.org/wiki/Normalization_(image_processing)</a> 
 
  For each channel of each frame, the filter computes the input range and maps it linearly to the user-specified output range. The output range defaults to the full dynamic range from pure black to pure white. 
 
@@ -24926,19 +24926,19 @@ lut2 = 'if(lt(x,y),0,if(gt(x,y),pow(2,bdx)-1,pow(2,bdx-1))):if(lt(x,y),0,if(gt(x
 </dd><dl>
 <dl>
 <dt><b>yuv420</b>
-</dt><dd> force <font SIZE="-1">YUV420</font> output
+</dt><dd> force YUV420 output
 </dd><dt><b>yuv420p10</b>
 </dt><dd> force YUV420p10 output
 </dd><dt><b>yuv422</b>
-</dt><dd> force <font SIZE="-1">YUV422</font> output
+</dt><dd> force YUV422 output
 </dd><dt><b>yuv422p10</b>
 </dt><dd> force YUV422p10 output
 </dd><dt><b>yuv444</b>
-</dt><dd> force <font SIZE="-1">YUV444</font> output
+</dt><dd> force YUV444 output
 </dd><dt><b>rgb</b>
-</dt><dd> force packed <font SIZE="-1">RGB</font> output
+</dt><dd> force packed RGB output
 </dd><dt><b>gbrp</b>
-</dt><dd> force planar <font SIZE="-1">RGB</font> output
+</dt><dd> force planar RGB output
 </dd><dt><b>auto</b>
 </dt><dd> automatically pick format</dd></dl>
 </dl>
@@ -24975,14 +24975,14 @@ lut2 = 'if(lt(x,y),0,if(gt(x,y),pow(2,bdx)-1,pow(2,bdx-1))):if(lt(x,y),0,if(gt(x
 </dd><dt><b>n</b>
 </dt><dd> the number of input frame, starting from 0
 </dd><dt><b>pos</b>
-</dt><dd> the position in the file of the input frame, <font SIZE="-1">NAN</font> if unknown
+</dt><dd> the position in the file of the input frame, NAN if unknown
 </dd><dt><b>t</b>
-</dt><dd> The timestamp, expressed in seconds. It's <font SIZE="-1">NAN</font> if the input timestamp is unknown.</dd></dl>
+</dt><dd> The timestamp, expressed in seconds. It's NAN if the input timestamp is unknown.</dd></dl>
  
 
  This filter also supports the <b>framesync</b> options. 
 
- Note that the <i>n</i>, <i>pos</i>, <i>t</i> variables are available only when evaluation is done <i>per frame</i>, and will evaluate to <font SIZE="-1">NAN</font> when <b>eval</b> is set to <b>init</b>. 
+ Note that the <i>n</i>, <i>pos</i>, <i>t</i> variables are available only when evaluation is done <i>per frame</i>, and will evaluate to NAN when <b>eval</b> is set to <b>init</b>. 
 
  Be aware that frames are taken from each input video in timestamp order, hence, if their initial timestamps differ, it is a good idea to pass the two inputs through a <i>setpts=PTS-STARTPTS</i> filter to have them begin in the same zero timestamp, as the example for the <i>movie</i> filter does. 
 
@@ -25011,12 +25011,12 @@ lut2 = 'if(lt(x,y),0,if(gt(x,y),pow(2,bdx)-1,pow(2,bdx-1))):if(lt(x,y),0,if(gt(x
         overlay=x=main_w-overlay_w-10:y=main_h-overlay_h-10
 </pre>
 </dd><dt>&bull;
-</dt><dd> Insert a transparent <font SIZE="-1">PNG</font> logo in the bottom left corner of the input, using the <b>ffmpeg</b> tool with the <tt>&quot;-filter_complex&quot;</tt> option: 
+</dt><dd> Insert a transparent PNG logo in the bottom left corner of the input, using the <b>ffmpeg</b> tool with the <tt>&quot;-filter_complex&quot;</tt> option: 
  <pre>
         ffmpeg -i input -i logo -filter_complex 'overlay=10:main_h-overlay_h-10' output
 </pre>
 </dd><dt>&bull;
-</dt><dd> Insert 2 different transparent <font SIZE="-1">PNG</font> logos (second logo on bottom right corner) using the <b>ffmpeg</b> tool: 
+</dt><dd> Insert 2 different transparent PNG logos (second logo on bottom right corner) using the <b>ffmpeg</b> tool: 
  <pre>
         ffmpeg -i input -i logo1 -i logo2 -filter_complex 'overlay=x=10:y=H-h-10,overlay=x=W-w-10:y=H-h-10' output
 </pre>
@@ -25059,7 +25059,7 @@ testsrc = s = 100x100, split = 4 [in0][in1][in2][in3];
 
  Overlay one video on top of another. 
 
- This is the <font SIZE="-1">CUDA</font> variant of the <b>overlay</b> filter. It only accepts <font SIZE="-1">CUDA</font> frames. The underlying input pixel formats have to match. 
+ This is the CUDA variant of the <b>overlay</b> filter. It only accepts CUDA frames. The underlying input pixel formats have to match. 
 
  It takes two inputs and has one output. The first input is the ``main'' video on which the second input is overlaid. 
 
@@ -25159,7 +25159,7 @@ testsrc = s = 100x100, split = 4 [in0][in1][in2][in3];
 </dd><dt><b>x</b>
 </dt><dd>
 </dd><dt><b>y</b>
-</dt><dd> The x and y offsets as specified by the <i>x</i> and <i>y</i> expressions, or <font SIZE="-1">NAN</font> if not yet specified.
+</dt><dd> The x and y offsets as specified by the <i>x</i> and <i>y</i> expressions, or NAN if not yet specified.
 </dd><dt><b>a</b>
 </dt><dd> same as <i>iw</i> / <i>ih</i>
 </dd><dt><b>sar</b>
@@ -25223,7 +25223,7 @@ testsrc = s = 100x100, split = 4 [in0][in1][in2][in3];
 <dt><b>max_colors</b>
 </dt><dd> Set the maximum number of colors to quantize in the palette. Note: the palette will still contain 256 colors; the unused palette entries will be black.
 </dd><dt><b>reserve_transparent</b>
-</dt><dd> Create a palette of 255 colors maximum and reserve the last one for transparency. Reserving the transparency color is useful for <font SIZE="-1">GIF</font> optimization. If not set, the maximum of colors in the palette will be 256. You probably want to disable this option for a standalone image. Set by default.
+</dt><dd> Create a palette of 255 colors maximum and reserve the last one for transparency. Reserving the transparency color is useful for GIF optimization. If not set, the maximum of colors in the palette will be 256. You probably want to disable this option for a standalone image. Set by default.
 </dd><dt><b>transparency_color</b>
 </dt><dd> Set the color that will be used as background for transparency.
 </dd><dt><b>stats_mode</b>
@@ -25294,7 +25294,7 @@ testsrc = s = 100x100, split = 4 [in0][in1][in2][in3];
 </dd><dl>
 <dl>
 <dt><b>rectangle</b>
-</dt><dd> Only the changing rectangle will be reprocessed. This is similar to <font SIZE="-1">GIF</font> cropping/offsetting compression mechanism. This option can be useful for speed if only a part of the image is changing, and has use cases such as limiting the scope of the error diffusal <b>dither</b> to the rectangle that bounds the moving scene (it leads to more deterministic output if the scene doesn't change much, and as a result less moving noise and better <font SIZE="-1">GIF</font> compression).</dd></dl>
+</dt><dd> Only the changing rectangle will be reprocessed. This is similar to GIF cropping/offsetting compression mechanism. This option can be useful for speed if only a part of the image is changing, and has use cases such as limiting the scope of the error diffusal <b>dither</b> to the rectangle that bounds the moving scene (it leads to more deterministic output if the scene doesn't change much, and as a result less moving noise and better GIF compression).</dd></dl>
 </dl>
 
 <dl>
@@ -25313,7 +25313,7 @@ testsrc = s = 100x100, split = 4 [in0][in1][in2][in3];
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Use a palette (generated for example with <b>palettegen</b>) to encode a <font SIZE="-1">GIF</font> using <b>ffmpeg</b>: 
+</dt><dd> Use a palette (generated for example with <b>palettegen</b>) to encode a GIF using <b>ffmpeg</b>: 
  <pre>
         ffmpeg -i input.mkv -i palette.png -lavfi paletteuse output.gif
 </pre></dd></dl>
@@ -25411,7 +25411,7 @@ testsrc = s = 100x100, split = 4 [in0][in1][in2][in3];
 
  Delay interlaced video by one field time so that the field order changes. 
 
- The intended use is to fix <font SIZE="-1">PAL</font> movies that have been captured with the opposite field order to the film-to-video transfer. 
+ The intended use is to fix PAL movies that have been captured with the opposite field order to the film-to-video transfer. 
 
  A description of the accepted parameters follows.
 <dl>
@@ -25504,7 +25504,7 @@ testsrc = s = 100x100, split = 4 [in0][in1][in2][in3];
 
 <h3>pp</h3>
 
- Enable the specified chain of postprocessing subfilters using libpostproc. This library should be automatically selected with a <font SIZE="-1">GPL</font> build (<tt>&quot;--enable-gpl&quot;</tt>). Subfilters must be separated by '/' and can be disabled by prepending a '-'. Each subfilter and some options have a short and a long name that can be used interchangeably, i.e. dr/dering are the same. 
+ Enable the specified chain of postprocessing subfilters using libpostproc. This library should be automatically selected with a GPL build (<tt>&quot;--enable-gpl&quot;</tt>). Subfilters must be separated by '/' and can be disabled by prepending a '-'. Each subfilter and some options have a short and a long name that can be used interchangeably, i.e. dr/dering are the same. 
 
  The filters accept the following options:
 <dl>
@@ -25627,7 +25627,7 @@ testsrc = s = 100x100, split = 4 [in0][in1][in2][in3];
 </dd><dt><b>fd/ffmpegdeint</b>
 </dt><dd> FFmpeg deinterlacing filter that deinterlaces the given block by filtering every second line with a <tt>&quot;(-1 4 2 4 -1)&quot;</tt> filter.
 </dd><dt><b>l5/lowpass5</b>
-</dt><dd> Vertically applied <font SIZE="-1">FIR</font> lowpass deinterlacing filter that deinterlaces the given block by filtering all lines with a <tt>&quot;(-1 2 6 2 -1)&quot;</tt> filter.
+</dt><dd> Vertically applied FIR lowpass deinterlacing filter that deinterlaces the given block by filtering all lines with a <tt>&quot;(-1 2 6 2 -1)&quot;</tt> filter.
 </dd><dt><b>fq/forceQuant[|quantizer]</b>
 </dt><dd> Overrides the quantizer table from the input with the constant quantizer you specify.
 </dd><dl>
@@ -25665,19 +25665,19 @@ testsrc = s = 100x100, split = 4 [in0][in1][in2][in3];
         pp=default/tmpnoise|1|2|3
 </pre>
 </dd><dt>&bull;
-</dt><dd> Apply deblocking on luminance only, and switch vertical deblocking on or off automatically depending on available <font SIZE="-1">CPU</font> time: 
+</dt><dd> Apply deblocking on luminance only, and switch vertical deblocking on or off automatically depending on available CPU time: 
  <pre>
         pp=hb|y/vb|a
 </pre></dd></dl>
 
 <h3>pp7</h3>
 
- Apply Postprocessing filter 7. It is variant of the <b>spp</b> filter, similar to spp = 6 with 7 point <font SIZE="-1">DCT,</font> where only the center sample is used after <font SIZE="-1">IDCT.</font> 
+ Apply Postprocessing filter 7. It is variant of the <b>spp</b> filter, similar to spp = 6 with 7 point DCT, where only the center sample is used after IDCT. 
 
  The filter accepts the following options:
 <dl>
 <dt><b>qp</b>
-</dt><dd> Force a constant quantization parameter. It accepts an integer in range 0 to 63. If not set, the filter will use the <font SIZE="-1">QP</font> from the video stream (if available).
+</dt><dd> Force a constant quantization parameter. It accepts an integer in range 0 to 63. If not set, the filter will use the QP from the video stream (if available).
 </dd><dt><b>mode</b>
 </dt><dd> Set thresholding mode. Available modes are:
 </dd><dl>
@@ -25807,26 +25807,26 @@ testsrc = s = 100x100, split = 4 [in0][in1][in2][in3];
 
 <h3>psnr</h3>
 
- Obtain the average, maximum and minimum <font SIZE="-1">PSNR</font> (Peak Signal to Noise Ratio) between two input videos. 
+ Obtain the average, maximum and minimum PSNR (Peak Signal to Noise Ratio) between two input videos. 
 
- This filter takes in input two input videos, the first input is considered the ``main'' source and is passed unchanged to the output. The second input is used as a ``reference'' video for computing the <font SIZE="-1">PSNR.</font> 
+ This filter takes in input two input videos, the first input is considered the ``main'' source and is passed unchanged to the output. The second input is used as a ``reference'' video for computing the PSNR. 
 
  Both video inputs must have the same resolution and pixel format for this filter to work correctly. Also it assumes that both inputs have the same number of frames, which are compared one by one. 
 
- The obtained average <font SIZE="-1">PSNR</font> is printed through the logging system. 
+ The obtained average PSNR is printed through the logging system. 
 
- The filter stores the accumulated <font SIZE="-1">MSE</font> (mean squared error) of each frame, and at the end of the processing it is averaged across all frames equally, and the following formula is applied to obtain the <font SIZE="-1">PSNR:</font> 
+ The filter stores the accumulated MSE (mean squared error) of each frame, and at the end of the processing it is averaged across all frames equally, and the following formula is applied to obtain the PSNR: 
 
  <pre>
         PSNR = 10*log10(MAX^2/MSE)
 </pre> 
 
- Where <font SIZE="-1">MAX</font> is the average of the maximum values of each component of the image. 
+ Where MAX is the average of the maximum values of each component of the image. 
 
  The description of the accepted parameters follows.
 <dl>
 <dt><b>stats_file, f</b>
-</dt><dd> If specified the filter will use the named file to save the <font SIZE="-1">PSNR</font> of each individual frame. When filename equals ``-'' the data is sent to standard output.
+</dt><dd> If specified the filter will use the named file to save the PSNR of each individual frame. When filename equals ``-'' the data is sent to standard output.
 </dd><dt><b>stats_version</b>
 </dt><dd> Specifies which version of the stats file format to use. Details of each format are written below. Default value is 1.
 </dd><dt><b>stats_add_max</b>
@@ -25865,7 +25865,7 @@ testsrc = s = 100x100, split = 4 [in0][in1][in2][in3];
 </dt><dd> For example: 
 movie = ref_movie.mpg, setpts = PTS - STARTPTS[main];
 [main][ref] psnr = "stats_file=stats.log"[out]
- On this example the input file being processed is compared with the reference file <i>ref_movie.mpg</i>. The <font SIZE="-1">PSNR</font> of each individual frame is stored in <i>stats.log</i>.
+ On this example the input file being processed is compared with the reference file <i>ref_movie.mpg</i>. The PSNR of each individual frame is stored in <i>stats.log</i>.
 </dd><dt>&bull;
 </dt><dd> Another example with different containers: 
 ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[main];[1:v]settb=AVTB,setpts=PTS-STARTPTS[ref];[main][ref]psnr" - f null -
@@ -25906,11 +25906,11 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 <dl>
 <dt>
 </dt><dd> 
- This option may be set to use chroma plane instead of the default luma plane for doing filter's computations. This may improve accuracy on very clean source material, but more likely will decrease accuracy, especially if there is chroma noise (rainbow effect) or any grayscale video. The main purpose of setting <b>mp</b> to a chroma plane is to reduce <font SIZE="-1">CPU</font> load and make pullup usable in realtime on slow machines.</dd></dl>
+ This option may be set to use chroma plane instead of the default luma plane for doing filter's computations. This may improve accuracy on very clean source material, but more likely will decrease accuracy, especially if there is chroma noise (rainbow effect) or any grayscale video. The main purpose of setting <b>mp</b> to a chroma plane is to reduce CPU load and make pullup usable in realtime on slow machines.</dd></dl>
 </dl>
  
 
- For best results (without duplicated frames in the output file) it is necessary to change the output frame rate. For example, to inverse telecine <font SIZE="-1">NTSC</font> input: 
+ For best results (without duplicated frames in the output file) it is necessary to change the output frame rate. For example, to inverse telecine NTSC input: 
 
  <pre>
         ffmpeg -i input -vf pullup -r 24000/1001 ...
@@ -25918,7 +25918,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
 <h3>qp</h3>
 
- Change video quantization parameters (<font SIZE="-1">QP</font>). 
+ Change video quantization parameters (QP). 
 
  The filter accepts the following option:
 <dl>
@@ -25926,7 +25926,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 </dt><dd> Set expression for quantization parameter.</dd></dl>
  
 
- The expression is evaluated through the eval <font SIZE="-1">API</font> and can contain, among others, the following constants:
+ The expression is evaluated through the eval API and can contain, among others, the following constants:
 <dl>
 <dt><i>known</i>
 </dt><dd> 1 if index is not 129, 0 otherwise.
@@ -25953,22 +25953,22 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
 <h3>readeia608</h3>
 
- Read closed captioning (<font SIZE="-1">EIA-608</font>) information from the top lines of a video frame. 
+ Read closed captioning (EIA-608) information from the top lines of a video frame. 
 
- This filter adds frame metadata for <tt>&quot;lavfi.readeia608.X.cc&quot;</tt> and <tt>&quot;lavfi.readeia608.X.line&quot;</tt>, where <tt>&quot;X&quot;</tt> is the number of the identified line with <font SIZE="-1">EIA-608</font> data (starting from 0). A description of each metadata value follows:
+ This filter adds frame metadata for <tt>&quot;lavfi.readeia608.X.cc&quot;</tt> and <tt>&quot;lavfi.readeia608.X.line&quot;</tt>, where <tt>&quot;X&quot;</tt> is the number of the identified line with EIA-608 data (starting from 0). A description of each metadata value follows:
 <dl>
 <dt><b>lavfi.readeia608.X.cc</b>
-</dt><dd> The two bytes stored as <font SIZE="-1">EIA-608</font> data (printed in hexadecimal).
+</dt><dd> The two bytes stored as EIA-608 data (printed in hexadecimal).
 </dd><dt><b>lavfi.readeia608.X.line</b>
-</dt><dd> The number of the line on which the <font SIZE="-1">EIA-608</font> data was identified and read.</dd></dl>
+</dt><dd> The number of the line on which the EIA-608 data was identified and read.</dd></dl>
  
 
  This filter accepts the following options:
 <dl>
 <dt><b>scan_min</b>
-</dt><dd> Set the line to start scanning for <font SIZE="-1">EIA-608</font> data. Default is <tt>0</tt>.
+</dt><dd> Set the line to start scanning for EIA-608 data. Default is <tt>0</tt>.
 </dd><dt><b>scan_max</b>
-</dt><dd> Set the line to end scanning for <font SIZE="-1">EIA-608</font> data. Default is <tt>29</tt>.
+</dt><dd> Set the line to end scanning for EIA-608 data. Default is <tt>29</tt>.
 </dd><dt><b>spw</b>
 </dt><dd> Set the ratio of width reserved for sync code detection. Default is <tt>0.27</tt>. Allowed range is <tt>&quot;[0.1 - 0.7]&quot;</tt>.
 </dd><dt><b>chp</b>
@@ -25984,21 +25984,21 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Output a csv with presentation time and the first two lines of identified <font SIZE="-1">EIA-608</font> captioning data. 
+</dt><dd> Output a csv with presentation time and the first two lines of identified EIA-608 captioning data. 
  <pre>
         ffprobe -f lavfi -i movie=captioned_video.mov,readeia608 -show_entries frame=pkt_pts_time:frame_tags=lavfi.readeia608.0.cc,lavfi.readeia608.1.cc -of csv
 </pre></dd></dl>
 
 <h3>readvitc</h3>
 
- Read vertical interval timecode (<font SIZE="-1">VITC</font>) information from the top lines of a video frame. 
+ Read vertical interval timecode (VITC) information from the top lines of a video frame. 
 
  The filter adds frame metadata key <tt>&quot;lavfi.readvitc.tc_str&quot;</tt> with the timecode value, if a valid timecode has been detected. Further metadata key <tt>&quot;lavfi.readvitc.found&quot;</tt> is set to 0/1 depending on whether timecode data has been found or not. 
 
  This filter accepts the following options:
 <dl>
 <dt><b>scan_max</b>
-</dt><dd> Set the maximum number of lines to scan for <font SIZE="-1">VITC</font> data. If the value is set to <tt>&quot;-1&quot;</tt> the full video frame is scanned. Default is <tt>45</tt>.
+</dt><dd> Set the maximum number of lines to scan for VITC data. If the value is set to <tt>&quot;-1&quot;</tt> the full video frame is scanned. Default is <tt>45</tt>.
 </dd><dt><b>thr_b</b>
 </dt><dd> Set the luma threshold for black. Accepts float numbers in the range [0.0,1.0], default value is <tt>0.2</tt>. The value must be equal or less than <tt>&quot;thr_w&quot;</tt>.
 </dd><dt><b>thr_w</b>
@@ -26008,7 +26008,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Detect and draw <font SIZE="-1">VITC</font> data onto the video frame; if no valid <font SIZE="-1">VITC</font> is detected, draw <tt>&quot;--:--:--:--&quot;</tt> as a placeholder: 
+</dt><dd> Detect and draw VITC data onto the video frame; if no valid VITC is detected, draw <tt>&quot;--:--:--:--&quot;</tt> as a placeholder: 
 ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=%{metadata\\:lavfi.readvitc.tc_str\\:--\\\\\\:--\\\\\\:--\\\\\\:--}:x=(w-tw)/2:y=400-ascent'
 </dd></dl>
 
@@ -26094,7 +26094,7 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
 
 <h3>removelogo</h3>
 
- Suppress a <font SIZE="-1">TV</font> station logo, using an image file to determine which pixels comprise the logo. It works by filling in the pixels that comprise the logo with neighboring pixels. 
+ Suppress a TV station logo, using an image file to determine which pixels comprise the logo. It works by filling in the pixels that comprise the logo with neighboring pixels. 
 
  The filter accepts the following options:
 <dl>
@@ -26108,7 +26108,7 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
 
 <h3>repeatfields</h3>
 
- This filter uses the repeat_field flag from the Video <font SIZE="-1">ES</font> headers and hard repeats fields based on its value.
+ This filter uses the repeat_field flag from the Video ES headers and hard repeats fields based on its value.
 
 <h3>reverse</h3>
 
@@ -26197,9 +26197,9 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
  The expressions for the angle and the output size can contain the following constants and functions:
 <dl>
 <dt><b>n</b>
-</dt><dd> sequential number of the input frame, starting from 0. It is always <font SIZE="-1">NAN</font> before the first frame is filtered.
+</dt><dd> sequential number of the input frame, starting from 0. It is always NAN before the first frame is filtered.
 </dd><dt><b>t</b>
-</dt><dd> time in seconds of the input frame, it is set to 0 when the filter is configured. It is always <font SIZE="-1">NAN</font> before the first frame is filtered.
+</dt><dd> time in seconds of the input frame, it is set to 0 when the filter is configured. It is always NAN before the first frame is filtered.
 </dd><dt><b>hsub</b>
 </dt><dd>
 </dd><dt><b>vsub</b>
@@ -26222,12 +26222,12 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Rotate the input by <font SIZE="-1">PI/6</font> radians clockwise: 
+</dt><dd> Rotate the input by PI/6 radians clockwise: 
  <pre>
         rotate=PI/6
 </pre>
 </dd><dt>&bull;
-</dt><dd> Rotate the input by <font SIZE="-1">PI/6</font> radians counter-clockwise: 
+</dt><dd> Rotate the input by PI/6 radians counter-clockwise: 
  <pre>
         rotate=-PI/6
 </pre>
@@ -26237,7 +26237,7 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
         rotate=45*PI/180
 </pre>
 </dd><dt>&bull;
-</dt><dd> Apply a constant rotation with period T, starting from an angle of <font SIZE="-1">PI/3:</font> 
+</dt><dd> Apply a constant rotation with period T, starting from an angle of PI/3: 
  <pre>
         rotate=PI/3+2*PI*t/T
 </pre>
@@ -26363,9 +26363,9 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
 <dt><b>auto</b>
 </dt><dd> Choose automatically.
 </dd><dt><b>bt709</b>
-</dt><dd> Format conforming to International Telecommunication Union (<font SIZE="-1">ITU</font>) Recommendation <font SIZE="-1">BT.709.</font>
+</dt><dd> Format conforming to International Telecommunication Union (ITU) Recommendation BT.709.
 </dd><dt><b>fcc</b>
-</dt><dd> Set color space conforming to the United States Federal Communications Commission (<font SIZE="-1">FCC</font>) Code of Federal Regulations (<font SIZE="-1">CFR</font>) Title 47 (2003) 73.682 (a).
+</dt><dd> Set color space conforming to the United States Federal Communications Commission (FCC) Code of Federal Regulations (CFR) Title 47 (2003) 73.682 (a).
 </dd><dt><b>bt601</b>
 </dt><dd>
 </dd><dt><b>bt470</b>
@@ -26375,20 +26375,20 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
 </dd><dl>
 <dl>
 <dt>&bull;
-</dt><dd> <font SIZE="-1">ITU</font> Radiocommunication Sector (ITU-R) Recommendation <font SIZE="-1">BT.601</font>
+</dt><dd> ITU Radiocommunication Sector (ITU-R) Recommendation BT.601
 </dd><dt>&bull;
-</dt><dd> ITU-R Rec. <font SIZE="-1">BT.470-6</font> (1998) Systems B, B1, and G
+</dt><dd> ITU-R Rec. BT.470-6 (1998) Systems B, B1, and G
 </dd><dt>&bull;
-</dt><dd> Society of Motion Picture and Television Engineers (<font SIZE="-1">SMPTE</font>) <font SIZE="-1">ST 170:2004</font></dd></dl>
+</dt><dd> Society of Motion Picture and Television Engineers (SMPTE) ST 170:2004</dd></dl>
 </dl>
 
 <dl>
 </dl>
 
 <dt><b>smpte240m</b>
-</dt><dd> Set color space conforming to <font SIZE="-1">SMPTE ST 240:1999.</font>
+</dt><dd> Set color space conforming to SMPTE ST 240:1999.
 </dd><dt><b>bt2020</b>
-</dt><dd> Set color space conforming to ITU-R <font SIZE="-1">BT.2020</font> non-constant luminance system.</dd></dl>
+</dt><dd> Set color space conforming to ITU-R BT.2020 non-constant luminance system.</dd></dl>
 </dl>
 
 <dl>
@@ -26407,7 +26407,7 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
 </dd><dt><b>jpeg/full/pc</b>
 </dt><dd> Set full range (0-255 in case of 8-bit luma).
 </dd><dt><b>mpeg/limited/tv</b>
-</dt><dd> Set ``<font SIZE="-1">MPEG''</font> range (16-235 in case of 8-bit luma).</dd></dl>
+</dt><dd> Set ``MPEG'' range (16-235 in case of 8-bit luma).</dd></dl>
 </dl>
 
 <dl>
@@ -26573,12 +26573,12 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
 
 <h3>scale_npp</h3>
 
- Use the <font SIZE="-1">NVIDIA</font> Performance Primitives (libnpp) to perform scaling and/or pixel format conversion on <font SIZE="-1">CUDA</font> video frames. Setting the output width and height works in the same way as for the <i>scale</i> filter. 
+ Use the NVIDIA Performance Primitives (libnpp) to perform scaling and/or pixel format conversion on CUDA video frames. Setting the output width and height works in the same way as for the <i>scale</i> filter. 
 
  The following additional options are accepted:
 <dl>
 <dt><b>format</b>
-</dt><dd> The pixel format of the output <font SIZE="-1">CUDA</font> frames. If set to the string ``same'' (the default), the input format will be kept. Note that automatic format negotiation and conversion is not yet supported for hardware frames
+</dt><dd> The pixel format of the output CUDA frames. If set to the string ``same'' (the default), the input format will be kept. Note that automatic format negotiation and conversion is not yet supported for hardware frames
 </dd><dt><b>interp_algo</b>
 </dt><dd> The interpolation algorithm used for resizing. One of the following:
 </dd><dl>
@@ -26727,7 +26727,7 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
 
 <h3>selectivecolor</h3>
 
- Adjust cyan, magenta, yellow and black (<font SIZE="-1">CMYK</font>) to certain ranges of colors (such as ``reds'', ``yellows'', ``greens'', ``cyans'', ...). The adjustment range is defined by the ``purity'' of the color (that is, how saturated it already is). 
+ Adjust cyan, magenta, yellow and black (CMYK) to certain ranges of colors (such as ``reds'', ``yellows'', ``greens'', ``cyans'', ...). The adjustment range is defined by the ``purity'' of the color (that is, how saturated it already is). 
 
  This filter is similar to the Adobe Photoshop Selective Color tool. 
 
@@ -26821,7 +26821,7 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
 
  The parameter <i>sar</i> is an expression containing the following constants:
 <dl>
-<dt><b>E, </b><font SIZE="-1"><b>PI, PHI</b></font>
+<dt><b>E, </b><b>PI, PHI</b>
 </dt><dd> These are approximated values for the mathematical constants e (Euler's number), pi (Greek pi), and phi (the golden ratio).
 </dd><dt><b>w, h</b>
 </dt><dd> The input width and height.
@@ -27187,61 +27187,61 @@ ffmpeg - i input.avi - filter : v 'readvitc,drawtext=fontfile=FreeMono.ttf:text=
 
  By default the filter will log these metadata values:
 <dl>
-<dt><font SIZE="-1"><b>YMIN</b></font>
+<dt><b>YMIN</b>
 </dt><dd> Display the minimal Y value contained within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>YLOW</b></font>
+</dd><dt><b>YLOW</b>
 </dt><dd> Display the Y value at the 10% percentile within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>YAVG</b></font>
+</dd><dt><b>YAVG</b>
 </dt><dd> Display the average Y value within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>YHIGH</b></font>
+</dd><dt><b>YHIGH</b>
 </dt><dd> Display the Y value at the 90% percentile within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>YMAX</b></font>
+</dd><dt><b>YMAX</b>
 </dt><dd> Display the maximum Y value contained within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>UMIN</b></font>
+</dd><dt><b>UMIN</b>
 </dt><dd> Display the minimal U value contained within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>ULOW</b></font>
+</dd><dt><b>ULOW</b>
 </dt><dd> Display the U value at the 10% percentile within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>UAVG</b></font>
+</dd><dt><b>UAVG</b>
 </dt><dd> Display the average U value within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>UHIGH</b></font>
+</dd><dt><b>UHIGH</b>
 </dt><dd> Display the U value at the 90% percentile within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>UMAX</b></font>
+</dd><dt><b>UMAX</b>
 </dt><dd> Display the maximum U value contained within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>VMIN</b></font>
+</dd><dt><b>VMIN</b>
 </dt><dd> Display the minimal V value contained within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>VLOW</b></font>
+</dd><dt><b>VLOW</b>
 </dt><dd> Display the V value at the 10% percentile within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>VAVG</b></font>
+</dd><dt><b>VAVG</b>
 </dt><dd> Display the average V value within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>VHIGH</b></font>
+</dd><dt><b>VHIGH</b>
 </dt><dd> Display the V value at the 90% percentile within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>VMAX</b></font>
+</dd><dt><b>VMAX</b>
 </dt><dd> Display the maximum V value contained within the input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>SATMIN</b></font>
+</dd><dt><b>SATMIN</b>
 </dt><dd> Display the minimal saturation value contained within the input frame. Expressed in range of [0-~181.02].
-</dd><dt><font SIZE="-1"><b>SATLOW</b></font>
+</dd><dt><b>SATLOW</b>
 </dt><dd> Display the saturation value at the 10% percentile within the input frame. Expressed in range of [0-~181.02].
-</dd><dt><font SIZE="-1"><b>SATAVG</b></font>
+</dd><dt><b>SATAVG</b>
 </dt><dd> Display the average saturation value within the input frame. Expressed in range of [0-~181.02].
-</dd><dt><font SIZE="-1"><b>SATHIGH</b></font>
+</dd><dt><b>SATHIGH</b>
 </dt><dd> Display the saturation value at the 90% percentile within the input frame. Expressed in range of [0-~181.02].
-</dd><dt><font SIZE="-1"><b>SATMAX</b></font>
+</dd><dt><b>SATMAX</b>
 </dt><dd> Display the maximum saturation value contained within the input frame. Expressed in range of [0-~181.02].
-</dd><dt><font SIZE="-1"><b>HUEMED</b></font>
+</dd><dt><b>HUEMED</b>
 </dt><dd> Display the median value for hue within the input frame. Expressed in range of [0-360].
-</dd><dt><font SIZE="-1"><b>HUEAVG</b></font>
+</dd><dt><b>HUEAVG</b>
 </dt><dd> Display the average value for hue within the input frame. Expressed in range of [0-360].
-</dd><dt><font SIZE="-1"><b>YDIF</b></font>
+</dd><dt><b>YDIF</b>
 </dt><dd> Display the average of sample value difference between all values of the Y plane in the current frame and corresponding values of the previous input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>UDIF</b></font>
+</dd><dt><b>UDIF</b>
 </dt><dd> Display the average of sample value difference between all values of the U plane in the current frame and corresponding values of the previous input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>VDIF</b></font>
+</dd><dt><b>VDIF</b>
 </dt><dd> Display the average of sample value difference between all values of the V plane in the current frame and corresponding values of the previous input frame. Expressed in range of [0-255].
-</dd><dt><font SIZE="-1"><b>YBITDEPTH</b></font>
+</dd><dt><b>YBITDEPTH</b>
 </dt><dd> Display bit depth of Y plane in current frame. Expressed in range of [0-16].
-</dd><dt><font SIZE="-1"><b>UBITDEPTH</b></font>
+</dd><dt><b>UBITDEPTH</b>
 </dt><dd> Display bit depth of U plane in current frame. Expressed in range of [0-16].
-</dd><dt><font SIZE="-1"><b>VBITDEPTH</b></font>
+</dd><dt><b>VBITDEPTH</b>
 </dt><dd> Display bit depth of V plane in current frame. Expressed in range of [0-16].</dd></dl>
  
 
@@ -27301,7 +27301,7 @@ metadata:
 
 <h3>signature</h3>
 
- Calculates the <font SIZE="-1">MPEG-7</font> Video Signature. The filter can handle more than one input. In this case the matching between the inputs can be calculated additionally. The filter always passes through the first input. The signature of each stream can be written into a file. 
+ Calculates the MPEG-7 Video Signature. The filter can handle more than one input. In this case the matching between the inputs can be calculated additionally. The filter always passes through the first input. The signature of each stream can be written into a file. 
 
  It accepts the following options:
 <dl>
@@ -27360,7 +27360,7 @@ metadata:
         ffmpeg -i input.mkv -vf signature=filename=signature.bin -map 0:v -f null -
 </pre>
 </dd><dt>&bull;
-</dt><dd> To detect whether two videos match and store the signatures in <font SIZE="-1">XML</font> format in signature0.xml and signature1.xml: 
+</dt><dd> To detect whether two videos match and store the signatures in XML format in signature0.xml and signature1.xml: 
 ffmpeg - i input1.mkv - i input2.mkv - filter_complex "[0:v][1:v] signature=nb_inputs=2:detectmode=full:format=xml:filename=signature%d.xml" - map : v - f null -
 </dd></dl>
 
@@ -27413,7 +27413,7 @@ ffmpeg - i input1.mkv - i input2.mkv - filter_complex "[0:v][1:v] signature=nb_i
 <dt><b>quality</b>
 </dt><dd> Set quality. This option defines the number of levels for averaging. It accepts an integer in the range 0-6. If set to <tt>0</tt>, the filter will have no effect. A value of <tt>6</tt> means the higher quality. For each increment of that value the speed drops by a factor of approximately 2. Default value is <tt>3</tt>.
 </dd><dt><b>qp</b>
-</dt><dd> Force a constant quantization parameter. If not set, the filter will use the <font SIZE="-1">QP</font> from the video stream (if available).
+</dt><dd> Force a constant quantization parameter. If not set, the filter will use the QP from the video stream (if available).
 </dd><dt><b>mode</b>
 </dt><dd> Set thresholding mode. Available modes are:
 </dd><dl>
@@ -27428,7 +27428,7 @@ ffmpeg - i input1.mkv - i input2.mkv - filter_complex "[0:v][1:v] signature=nb_i
 </dl>
 
 <dt><b>use_bframe_qp</b>
-</dt><dd> Enable the use of the <font SIZE="-1">QP</font> from the B-Frames if set to <tt>1</tt>. Using this option may cause flicker since the B-Frames have often larger <font SIZE="-1">QP.</font> Default is <tt>0</tt> (not enabled).</dd></dl>
+</dt><dd> Enable the use of the QP from the B-Frames if set to <tt>1</tt>. Using this option may cause flicker since the B-Frames have often larger QP. Default is <tt>0</tt> (not enabled).</dd></dl>
  
 
  <i>Commands</i> 
@@ -27443,9 +27443,9 @@ ffmpeg - i input1.mkv - i input2.mkv - filter_complex "[0:v][1:v] signature=nb_i
  Scale the input by applying one of the super-resolution methods based on convolutional neural networks. Supported models:
 <dl>
 <dt>&bull;
-</dt><dd> Super-Resolution Convolutional Neural Network model (<font SIZE="-1">SRCNN</font>). See &lt;<b><a rel="nofollow" HREF="https://arxiv.org/abs/1501.00092">https://arxiv.org/abs/1501.00092</a></b>&gt;.
+</dt><dd> Super-Resolution Convolutional Neural Network model (SRCNN). See &lt;<b><a rel="nofollow" HREF="https://arxiv.org/abs/1501.00092">https://arxiv.org/abs/1501.00092</a></b>&gt;.
 </dd><dt>&bull;
-</dt><dd> Efficient Sub-Pixel Convolutional Neural Network model (<font SIZE="-1">ESPCN</font>). See &lt;<b><a rel="nofollow" HREF="https://arxiv.org/abs/1609.05158">https://arxiv.org/abs/1609.05158</a></b>&gt;.</dd></dl>
+</dt><dd> Efficient Sub-Pixel Convolutional Neural Network model (ESPCN). See &lt;<b><a rel="nofollow" HREF="https://arxiv.org/abs/1609.05158">https://arxiv.org/abs/1609.05158</a></b>&gt;.</dd></dl>
  
 
  Training scripts as well as scripts for model file (.pb) saving can be found at &lt;<b><a rel="nofollow" HREF="https://github.com/XueweiMeng/sr/tree/sr_dnn_native">https://github.com/XueweiMeng/sr/tree/sr_dnn_native</a></b>&gt;. Original repository is at &lt;<b><a rel="nofollow" HREF="https://github.com/HighVoltageRocknRoll/sr.git">https://github.com/HighVoltageRocknRoll/sr.git</a></b>&gt;. 
@@ -27455,11 +27455,11 @@ ffmpeg - i input1.mkv - i input2.mkv - filter_complex "[0:v][1:v] signature=nb_i
  The filter accepts the following options:
 <dl>
 <dt><b>dnn_backend</b>
-</dt><dd> Specify which <font SIZE="-1">DNN</font> backend to use for model loading and execution. This option accepts the following values:
+</dt><dd> Specify which DNN backend to use for model loading and execution. This option accepts the following values:
 </dd><dl>
 <dl>
 <dt><b>native</b>
-</dt><dd> Native implementation of <font SIZE="-1">DNN</font> loading and execution.
+</dt><dd> Native implementation of DNN loading and execution.
 </dd><dt><b>tensorflow</b>
 </dt><dd> TensorFlow backend. To enable this backend you need to install the TensorFlow for C library (see &lt;<b><a rel="nofollow" HREF="https://www.tensorflow.org/install/install_c">https://www.tensorflow.org/install/install_c</a></b>&gt;) and configure FFmpeg with <tt>&quot;--enable-libtensorflow&quot;</tt></dd></dl>
 </dl>
@@ -27472,25 +27472,25 @@ ffmpeg - i input1.mkv - i input2.mkv - filter_complex "[0:v][1:v] signature=nb_i
 <dt><b>model</b>
 </dt><dd> Set path to model file specifying network architecture and its parameters. Note that different backends use different file formats. TensorFlow backend can load files for both formats, while native backend can load files for only its format.
 </dd><dt><b>scale_factor</b>
-</dt><dd> Set scale factor for <font SIZE="-1">SRCNN</font> model. Allowed values are <tt>2</tt>, <tt>3</tt> and <tt>4</tt>. Default value is <tt>2</tt>. Scale factor is necessary for <font SIZE="-1">SRCNN</font> model, because it accepts input upscaled using bicubic upscaling with proper scale factor.</dd></dl>
+</dt><dd> Set scale factor for SRCNN model. Allowed values are <tt>2</tt>, <tt>3</tt> and <tt>4</tt>. Default value is <tt>2</tt>. Scale factor is necessary for SRCNN model, because it accepts input upscaled using bicubic upscaling with proper scale factor.</dd></dl>
  
 
  This feature can also be finished with <b>dnn_processing</b> filter.
 
 <h3>ssim</h3>
 
- Obtain the <font SIZE="-1">SSIM</font> (Structural SImilarity Metric) between two input videos. 
+ Obtain the SSIM (Structural SImilarity Metric) between two input videos. 
 
- This filter takes in input two input videos, the first input is considered the ``main'' source and is passed unchanged to the output. The second input is used as a ``reference'' video for computing the <font SIZE="-1">SSIM.</font> 
+ This filter takes in input two input videos, the first input is considered the ``main'' source and is passed unchanged to the output. The second input is used as a ``reference'' video for computing the SSIM. 
 
  Both video inputs must have the same resolution and pixel format for this filter to work correctly. Also it assumes that both inputs have the same number of frames, which are compared one by one. 
 
- The filter stores the calculated <font SIZE="-1">SSIM</font> of each frame. 
+ The filter stores the calculated SSIM of each frame. 
 
  The description of the accepted parameters follows.
 <dl>
 <dt><b>stats_file, f</b>
-</dt><dd> If specified the filter will use the named file to save the <font SIZE="-1">SSIM</font> of each individual frame. When filename equals ``-'' the data is sent to standard output.</dd></dl>
+</dt><dd> If specified the filter will use the named file to save the SSIM of each individual frame. When filename equals ``-'' the data is sent to standard output.</dd></dl>
  
 
  The file printed if <i>stats_file</i> is selected, contains a sequence of key/value pairs of the form <i>key</i>:<i>value</i> for each compared couple of frames. 
@@ -27500,9 +27500,9 @@ ffmpeg - i input1.mkv - i input2.mkv - filter_complex "[0:v][1:v] signature=nb_i
 <dt><b>n</b>
 </dt><dd> sequential number of the input frame, starting from 1
 </dd><dt><b>Y, U, V, R, G, B</b>
-</dt><dd> <font SIZE="-1">SSIM</font> of the compared frames for the component specified by the suffix.
+</dt><dd> SSIM of the compared frames for the component specified by the suffix.
 </dd><dt><b>All</b>
-</dt><dd> <font SIZE="-1">SSIM</font> of the compared frames for the whole frame.
+</dt><dd> SSIM of the compared frames for the whole frame.
 </dd><dt><b>dB</b>
 </dt><dd> Same as above but in dB representation.</dd></dl>
  
@@ -27515,7 +27515,7 @@ ffmpeg - i input1.mkv - i input2.mkv - filter_complex "[0:v][1:v] signature=nb_i
 </dt><dd> For example: 
 movie = ref_movie.mpg, setpts = PTS - STARTPTS[main];
 [main][ref] ssim = "stats_file=stats.log"[out]
- On this example the input file being processed is compared with the reference file <i>ref_movie.mpg</i>. The <font SIZE="-1">SSIM</font> of each individual frame is stored in <i>stats.log</i>.
+ On this example the input file being processed is compared with the reference file <i>ref_movie.mpg</i>. The SSIM of each individual frame is stored in <i>stats.log</i>.
 </dd><dt>&bull;
 </dt><dd> Another example with both psnr and ssim at same time: 
 ffmpeg - i main.mpg - i ref.mpg - lavfi "ssim;[0:v][1:v]psnr" - f null -
@@ -27654,7 +27654,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 </dd><dt><b>icr</b>
 </dt><dd> interleaved columns, right eye first
 </dd><dt><b>hdmi</b>
-</dt><dd> <font SIZE="-1">HDMI</font> frame pack</dd></dl>
+</dt><dd> HDMI frame pack</dd></dl>
 </dl>
 
 <dl>
@@ -27714,24 +27714,24 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
  Draw subtitles on top of input video using the libass library. 
 
- To enable compilation of this filter you need to configure FFmpeg with <tt>&quot;--enable-libass&quot;</tt>. This filter also requires a build with libavcodec and libavformat to convert the passed subtitles file to <font SIZE="-1">ASS</font> (Advanced Substation Alpha) subtitles format. 
+ To enable compilation of this filter you need to configure FFmpeg with <tt>&quot;--enable-libass&quot;</tt>. This filter also requires a build with libavcodec and libavformat to convert the passed subtitles file to ASS (Advanced Substation Alpha) subtitles format. 
 
  The filter accepts the following options:
 <dl>
 <dt><b>filename, f</b>
 </dt><dd> Set the filename of the subtitle file to read. It must be specified.
 </dd><dt><b>original_size</b>
-</dt><dd> Specify the size of the original video, the video for which the <font SIZE="-1">ASS</font> file was composed. For the syntax of this option, check the <b>``Video size'' section in the ffmpeg-utils manual</b>. Due to a misdesign in <font SIZE="-1">ASS</font> aspect ratio arithmetic, this is necessary to correctly scale the fonts if the aspect ratio has been changed.
+</dt><dd> Specify the size of the original video, the video for which the ASS file was composed. For the syntax of this option, check the <b>``Video size'' section in the ffmpeg-utils manual</b>. Due to a misdesign in ASS aspect ratio arithmetic, this is necessary to correctly scale the fonts if the aspect ratio has been changed.
 </dd><dt><b>fontsdir</b>
 </dt><dd> Set a directory path containing fonts that can be used by the filter. These fonts will be used in addition to whatever the font provider uses.
 </dd><dt><b>alpha</b>
 </dt><dd> Process alpha channel, by default alpha channel is untouched.
 </dd><dt><b>charenc</b>
-</dt><dd> Set subtitles input character encoding. <tt>&quot;subtitles&quot;</tt> filter only. Only useful if not <font SIZE="-1">UTF-8.</font>
+</dt><dd> Set subtitles input character encoding. <tt>&quot;subtitles&quot;</tt> filter only. Only useful if not UTF-8.
 </dd><dt><b>stream_index, si</b>
 </dt><dd> Set subtitles stream index. <tt>&quot;subtitles&quot;</tt> filter only.
 </dd><dt><b>force_style</b>
-</dt><dd> Override default style or script info parameters of the subtitles. It accepts a string containing <font SIZE="-1">ASS</font> style format <tt>&quot;KEY=VALUE&quot;</tt> couples separated by ``,''.</dd></dl>
+</dt><dd> Override default style or script info parameters of the subtitles. It accepts a string containing ASS style format <tt>&quot;KEY=VALUE&quot;</tt> couples separated by ``,''.</dd></dl>
  
 
  If the first key is not specified, it is assumed that the first value specifies the <b>filename</b>. 
@@ -27808,9 +27808,9 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 </dd><dt><b>n</b>
 </dt><dd> The number of the input frame, starting from 0.
 </dd><dt><b>t</b>
-</dt><dd> The timestamp expressed in seconds. It's <font SIZE="-1">NAN</font> if the input timestamp is unknown.
+</dt><dd> The timestamp expressed in seconds. It's NAN if the input timestamp is unknown.
 </dd><dt><b>pos</b>
-</dt><dd> the position in the file of the input frame, <font SIZE="-1">NAN</font> if unknown</dd></dl>
+</dt><dd> the position in the file of the input frame, NAN if unknown</dd></dl>
  
 
  <i>Commands</i> 
@@ -28025,7 +28025,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Produce 8x8 <font SIZE="-1">PNG</font> tiles of all keyframes (<b>-skip_frame nokey</b>) in a movie: 
+</dt><dd> Produce 8x8 PNG tiles of all keyframes (<b>-skip_frame nokey</b>) in a movie: 
  <pre>
         ffmpeg -skip_frame nokey -i file.avi -vf 'scale=128:72,tile=8x8' -an -vsync 0 keyframes%03d.png
 </pre> 
@@ -28559,7 +28559,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 <dl>
 <dt><b>planes</b>
 </dt><dd> Set which planes will be processed, unprocessed planes will be copied. By default value 0xf, all planes will be processed. 
- If the format has 1 or 2 components, then luma is bit 0. If the format has 3 or 4 components: for <font SIZE="-1">RGB</font> formats bit 0 is green, bit 1 is blue and bit 2 is red; for <font SIZE="-1">YUV</font> formats bit 0 is luma, bit 1 is chroma-U and bit 2 is chroma-V. If present, the alpha channel is always the last bit.
+ If the format has 1 or 2 components, then luma is bit 0. If the format has 3 or 4 components: for RGB formats bit 0 is green, bit 1 is blue and bit 2 is red; for YUV formats bit 0 is luma, bit 1 is chroma-U and bit 2 is chroma-V. If present, the alpha channel is always the last bit.
 </dd><dt><b>inplace</b>
 </dt><dd> Do not require 2nd input for processing, instead use alpha plane from input stream.</dd></dl>
 
@@ -28628,14 +28628,14 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
  Apply ultra slow/simple postprocessing filter that compresses and decompresses the image at several (or - in the case of <b>quality</b> level <tt>8</tt> - all) shifts and average the results. 
 
- The way this differs from the behavior of spp is that uspp actually encodes &amp; decodes each case with libavcodec Snow, whereas spp uses a simplified intra only 8x8 <font SIZE="-1">DCT</font> similar to <font SIZE="-1">MJPEG.</font> 
+ The way this differs from the behavior of spp is that uspp actually encodes &amp; decodes each case with libavcodec Snow, whereas spp uses a simplified intra only 8x8 DCT similar to MJPEG. 
 
  The filter accepts the following options:
 <dl>
 <dt><b>quality</b>
 </dt><dd> Set quality. This option defines the number of levels for averaging. It accepts an integer in the range 0-8. If set to <tt>0</tt>, the filter will have no effect. A value of <tt>8</tt> means the higher quality. For each increment of that value the speed drops by a factor of approximately 2. Default value is <tt>3</tt>.
 </dd><dt><b>qp</b>
-</dt><dd> Force a constant quantization parameter. If not set, the filter will use the <font SIZE="-1">QP</font> from the video stream (if available).</dd></dl>
+</dt><dd> Force a constant quantization parameter. If not set, the filter will use the QP from the video stream (if available).</dd></dl>
 
 <h3>v360</h3>
 
@@ -29497,15 +29497,15 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
 <h3>vif</h3>
 
- Obtain the average <font SIZE="-1">VIF</font> (Visual Information Fidelity) between two input videos. 
+ Obtain the average VIF (Visual Information Fidelity) between two input videos. 
 
  This filter takes two input videos. 
 
  Both input videos must have the same resolution and pixel format for this filter to work correctly. Also it assumes that both inputs have the same number of frames, which are compared one by one. 
 
- The obtained average <font SIZE="-1">VIF</font> score is printed through the logging system. 
+ The obtained average VIF score is printed through the logging system. 
 
- The filter stores the calculated <font SIZE="-1">VIF</font> score of each frame. 
+ The filter stores the calculated VIF score of each frame. 
 
  In the below example the input file <i>main.mpg</i> being processed is compared with the reference file <i>ref.mpg</i>. 
 
@@ -29563,7 +29563,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 <dt><b>dither</b>
 </dt><dd> Set dithering to reduce the circular banding effects. Default is <tt>1</tt> (enabled).
 </dd><dt><b>aspect</b>
-</dt><dd> Set vignette aspect. This setting allows one to adjust the shape of the vignette. Setting this value to the <font SIZE="-1">SAR</font> of the input will make a rectangular vignetting following the dimensions of the video. 
+</dt><dd> Set vignette aspect. This setting allows one to adjust the shape of the vignette. Setting this value to the SAR of the input will make a rectangular vignetting following the dimensions of the video. 
 
  Default is <tt>&quot;1/1&quot;</tt>.</dd></dl>
  
@@ -29579,11 +29579,11 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 </dd><dt><b>n</b>
 </dt><dd> the number of input frame, starting from 0
 </dd><dt><b>pts</b>
-</dt><dd> the <font SIZE="-1">PTS</font> (Presentation TimeStamp) time of the filtered video frame, expressed in <i></i><font SIZE="-1"><i>TB</i></font><i></i> units, <font SIZE="-1">NAN</font> if undefined
+</dt><dd> the PTS (Presentation TimeStamp) time of the filtered video frame, expressed in <i></i><i>TB</i><i></i> units, NAN if undefined
 </dd><dt><b>r</b>
-</dt><dd> frame rate of the input video, <font SIZE="-1">NAN</font> if the input frame rate is unknown
+</dt><dd> frame rate of the input video, NAN if the input frame rate is unknown
 </dd><dt><b>t</b>
-</dt><dd> the <font SIZE="-1">PTS</font> (Presentation TimeStamp) of the filtered video frame, expressed in seconds, <font SIZE="-1">NAN</font> if undefined
+</dt><dd> the PTS (Presentation TimeStamp) of the filtered video frame, expressed in seconds, NAN if undefined
 </dd><dt><b>tb</b>
 </dt><dd> time base of the input video</dd></dl>
  
@@ -29603,7 +29603,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
 <h3>vmafmotion</h3>
 
- Obtain the average <font SIZE="-1">VMAF</font> motion score of a video. It is one of the component metrics of <font SIZE="-1">VMAF.</font> 
+ Obtain the average VMAF motion score of a video. It is one of the component metrics of VMAF. 
 
  The obtained average motion score is printed through the logging system. 
 
@@ -29638,7 +29638,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
  Deinterlace the input video (``w3fdif'' stands for ``Weston 3 Field Deinterlacing Filter''). 
 
- Based on the process described by Martin Weston for <font SIZE="-1">BBC R&amp;D,</font> and implemented based on the de-interlace algorithm written by Jim Easterbrook for <font SIZE="-1">BBC R&amp;D,</font> the Weston 3 field deinterlacing filter uses filter coefficients calculated by <font SIZE="-1">BBC R&amp;D.</font> 
+ Based on the process described by Martin Weston for BBC R&amp;D, and implemented based on the de-interlace algorithm written by Jim Easterbrook for BBC R&amp;D, the Weston 3 field deinterlacing filter uses filter coefficients calculated by BBC R&amp;D. 
 
  This filter uses field-dominance information in frame to decide which of each pair of fields to place first in the output. If it gets it wrong use <b>setfield</b> filter before <tt>&quot;w3fdif&quot;</tt> filter. 
 
@@ -29746,7 +29746,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
  Default is <tt>&quot;stack&quot;</tt>.</dd></dl>
 
 <dt><b>components, c</b>
-</dt><dd> Set which color components to display. Default is 1, which means only luminance or red color component if input is in <font SIZE="-1">RGB</font> colorspace. If is set for example to 7 it will display all 3 (if) available color components.
+</dt><dd> Set which color components to display. Default is 1, which means only luminance or red color component if input is in RGB colorspace. If is set for example to 7 it will display all 3 (if) available color components.
 </dd><dt><b>envelope, e</b>
 </dt><dd>
 </dd><dl>
@@ -29843,7 +29843,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 </dd><dt><b>tint0, t0</b>
 </dt><dd>
 </dd><dt><b>tint1, t1</b>
-</dt><dd> Set tint for output. Only used with lowpass filter and when display is not overlay and input pixel formats are not <font SIZE="-1">RGB.</font></dd></dl>
+</dt><dd> Set tint for output. Only used with lowpass filter and when display is not overlay and input pixel formats are not RGB.</dd></dl>
 
 <h3>weave, doubleweave</h3>
 
@@ -30010,7 +30010,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 </dt><dd> The width and height of the image.
 </dd><dt><b>P</b>
 </dt><dd> Progress of transition effect.
-</dd><dt><font SIZE="-1"><b>PLANE</b></font>
+</dd><dt><b>PLANE</b>
 </dt><dd> Currently processed plane.
 </dd><dt><b>A</b>
 </dt><dd> Return value of first input at current location and plane.
@@ -30190,7 +30190,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
 <h3>yadif_cuda</h3>
 
- Deinterlace the input video using the <b>yadif</b> algorithm, but implemented in <font SIZE="-1">CUDA</font> so that it can work as part of a <font SIZE="-1">GPU</font> accelerated pipeline with nvdec and/or nvenc. 
+ Deinterlace the input video using the <b>yadif</b> algorithm, but implemented in CUDA so that it can work as part of a GPU accelerated pipeline with nvdec and/or nvenc. 
 
  It accepts the following parameters:
 <dl>
@@ -30248,7 +30248,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
 <h3>yaepblur</h3>
 
- Apply blur filter while preserving edges (``yaepblur'' means ``yet another edge preserving blur filter''). The algorithm is described in ``J. S. Lee, Digital image enhancement and noise filtering by use of local statistics, <font SIZE="-1">IEEE</font> Trans. Pattern Anal. Mach. Intell. <font SIZE="-1">PAMI-2, 1980.''</font> 
+ Apply blur filter while preserving edges (``yaepblur'' means ``yet another edge preserving blur filter''). The algorithm is described in ``J. S. Lee, Digital image enhancement and noise filtering by use of local statistics, IEEE Trans. Pattern Anal. Mach. Intell. PAMI-2, 1980.'' 
 
  It accepts the following parameters:
 <dl>
@@ -30299,7 +30299,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 </dd><dt><b>on</b>
 </dt><dd> Output frame count.
 </dd><dt><b>in_time, it</b>
-</dt><dd> The input timestamp expressed in seconds. It's <font SIZE="-1">NAN</font> if the input timestamp is unknown.
+</dt><dd> The input timestamp expressed in seconds. It's NAN if the input timestamp is unknown.
 </dd><dt><b>out_time, time, ot</b>
 </dt><dd> The output timestamp expressed in seconds.
 </dd><dt><b>x</b>
@@ -30848,7 +30848,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
 <h3>colorkey_opencl</h3>
 
- <font SIZE="-1">RGB</font> colorspace color keying. 
+ RGB colorspace color keying. 
 
  The filter accepts the following options:
 <dl>
@@ -30981,7 +30981,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 </dd><dt><b>debug</b>
 </dt><dd> Whether or not additional debug info should be displayed, both in the processed output and in the console. 
  Note that in order to see console debug output you will also need to pass <tt>&quot;-v verbose&quot;</tt> to ffmpeg. 
- Viewing point matches in the output video is only supported for <font SIZE="-1">RGB</font> input. 
+ Viewing point matches in the output video is only supported for RGB input. 
  Defaults to <tt>0</tt>.
 </dd><dt><b>adaptive_crop</b>
 </dt><dd> Whether or not to do a tiny bit of cropping at the borders to cut down on the amount of mirrored pixels. 
@@ -31071,10 +31071,10 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Overlay an image <font SIZE="-1">LOGO</font> at the top-left corner of the <font SIZE="-1">INPUT</font> video. Both inputs are yuv420p format. 
+</dt><dd> Overlay an image LOGO at the top-left corner of the INPUT video. Both inputs are yuv420p format. 
 - i INPUT - i LOGO - filter_complex "[0:v]hwupload[a], [1:v]format=yuv420p, hwupload[b], [a][b]overlay_opencl, hwdownload" OUTPUT
 </dd><dt>&bull;
-</dt><dd> The inputs have same memory layout for color channels , the overlay has additional alpha plane, like <font SIZE="-1">INPUT</font> is yuv420p, and the <font SIZE="-1">LOGO</font> is yuva420p. 
+</dt><dd> The inputs have same memory layout for color channels , the overlay has additional alpha plane, like INPUT is yuv420p, and the LOGO is yuva420p. 
 - i INPUT - i LOGO - filter_complex "[0:v]hwupload[a], [1:v]format=yuva420p, hwupload[b], [a][b]overlay_opencl, hwdownload" OUTPUT
 </dd></dl>
 
@@ -31124,7 +31124,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 </dd><dt><b>x</b>
 </dt><dd>
 </dd><dt><b>y</b>
-</dt><dd> The x and y offsets as specified by the <i>x</i> and <i>y</i> expressions, or <font SIZE="-1">NAN</font> if not yet specified.
+</dt><dd> The x and y offsets as specified by the <i>x</i> and <i>y</i> expressions, or NAN if not yet specified.
 </dd><dt><b>a</b>
 </dt><dd> same as <i>iw</i> / <i>ih</i>
 </dd><dt><b>sar</b>
@@ -31170,7 +31170,7 @@ ffmpeg - i main.mpg - i ref.mkv - lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[mai
 
  The <tt>&quot;program_opencl&quot;</tt> filter also supports the <b>framesync</b> options. 
 
- The program source file must contain a kernel function with the given name, which will be run once for each plane of the output. Each run on a plane gets enqueued as a separate 2D global NDRange with one work-item for each pixel to be generated. The global <font SIZE="-1">ID</font> offset for each work-item is therefore the coordinates of a pixel in the destination image. 
+ The program source file must contain a kernel function with the given name, which will be run once for each plane of the output. Each run on a plane gets enqueued as a separate 2D global NDRange with one work-item for each pixel to be generated. The global ID offset for each work-item is therefore the coordinates of a pixel in the destination image. 
 
  The kernel function needs to take the following arguments:
 <dl>
@@ -31291,7 +31291,7 @@ __kernel void blend_images(__write_only image2d_t dst,
 
 <h3>tonemap_opencl</h3>
 
- Perform <font SIZE="-1">HDR</font>(<font SIZE="-1">PQ/HLG</font>) to <font SIZE="-1">SDR</font> conversion with tone-mapping. 
+ Perform HDR(PQ/HLG) to SDR conversion with tone-mapping. 
 
  It accepts the following parameters:
 <dl>
@@ -31391,7 +31391,7 @@ __kernel void blend_images(__write_only image2d_t dst,
  <i>Example</i>
 <dl>
 <dt>&bull;
-</dt><dd> Convert <font SIZE="-1">HDR</font>(<font SIZE="-1">PQ/HLG</font>) video to bt2020-transfer-characteristic p010 format using linear operator. 
+</dt><dd> Convert HDR(PQ/HLG) video to bt2020-transfer-characteristic p010 format using linear operator. 
  <pre>
         -i INPUT -vf &quot;format=p010,hwupload,tonemap_opencl=t=bt2020:tonemap=linear:format=p010,hwdownload,format=p010&quot; OUTPUT
 </pre></dd></dl>
@@ -31480,7 +31480,7 @@ __kernel void blend_images(__write_only image2d_t dst,
 </dt><dd> Set time of start of transition relative to first video.</dd></dl>
  
 
- The program source file must contain a kernel function with the given name, which will be run once for each plane of the output. Each run on a plane gets enqueued as a separate 2D global NDRange with one work-item for each pixel to be generated. The global <font SIZE="-1">ID</font> offset for each work-item is therefore the coordinates of a pixel in the destination image. 
+ The program source file must contain a kernel function with the given name, which will be run once for each plane of the output. Each run on a plane gets enqueued as a separate 2D global NDRange with one work-item for each pixel to be generated. The global ID offset for each work-item is therefore the coordinates of a pixel in the destination image. 
 
  The kernel function needs to take the following arguments:
 <dl>
@@ -31522,7 +31522,7 @@ __kernel void blend_images(__write_only image2d_t dst,
 
 <h2>VAAPI VIDEO FILTERS</h2>
 
- <font SIZE="-1">VAAPI</font> Video filters are usually used with <font SIZE="-1">VAAPI</font> decoder and <font SIZE="-1">VAAPI</font> encoder. Below is a description of <font SIZE="-1">VAAPI</font> video filters. 
+ VAAPI Video filters are usually used with VAAPI decoder and VAAPI encoder. Below is a description of VAAPI video filters. 
 
  To enable compilation of these filters you need to configure FFmpeg with <tt>&quot;--enable-vaapi&quot;</tt>. 
 
@@ -31530,7 +31530,7 @@ __kernel void blend_images(__write_only image2d_t dst,
 
 <h3>tonemap_vaapi</h3>
 
- Perform <font SIZE="-1">HDR</font>(High Dynamic Range) to <font SIZE="-1">SDR</font>(Standard Dynamic Range) conversion with tone-mapping. It maps the dynamic range of <font SIZE="-1">HDR10</font> content to the <font SIZE="-1">SDR</font> content. It currently only accepts <font SIZE="-1">HDR10</font> as input. 
+ Perform HDR(High Dynamic Range) to SDR(Standard Dynamic Range) conversion with tone-mapping. It maps the dynamic range of HDR10 content to the SDR content. It currently only accepts HDR10 as input. 
 
  It accepts the following parameters:
 <dl>
@@ -31567,7 +31567,7 @@ __kernel void blend_images(__write_only image2d_t dst,
  <i>Example</i>
 <dl>
 <dt>&bull;
-</dt><dd> Convert <font SIZE="-1">HDR</font>(<font SIZE="-1">HDR10</font>) video to bt2020-transfer-characteristic p010 format 
+</dt><dd> Convert HDR(HDR10) video to bt2020-transfer-characteristic p010 format 
  <pre>
         tonemap_vaapi=format=p010:t=bt2020-10
 </pre></dd></dl>
@@ -31642,12 +31642,12 @@ __kernel void blend_images(__write_only image2d_t dst,
 </dt><dd> Set the random fill ratio for the initial cellular automaton row. It is a floating point number value ranging from 0 to 1, defaults to 1/PHI. 
  This option is ignored when a file or a pattern is specified.
 </dd><dt><b>random_seed, seed</b>
-</dt><dd> Set the seed for filling randomly the initial row, must be an integer included between 0 and <font SIZE="-1">UINT32_MAX.</font> If not specified, or if explicitly set to -1, the filter will try to use a good random seed on a best effort basis.
+</dt><dd> Set the seed for filling randomly the initial row, must be an integer included between 0 and UINT32_MAX. If not specified, or if explicitly set to -1, the filter will try to use a good random seed on a best effort basis.
 </dd><dt><b>rule</b>
 </dt><dd> Set the cellular automaton rule, it is a number ranging from 0 to 255. Default value is 110.
 </dd><dt><b>size, s</b>
 </dt><dd> Set the size of the output video. For the syntax of this option, check the <b>``Video size'' section in the ffmpeg-utils manual</b>. 
- If <b>filename</b> or <b>pattern</b> is specified, the size is set by default to the width of the specified initial state row, and the height is set to <i>width</i> * <font SIZE="-1">PHI.</font> 
+ If <b>filename</b> or <b>pattern</b> is specified, the size is set by default to the width of the specified initial state row, and the height is set to <i>width</i> * PHI. 
  If <b>size</b> is set, it must contain the width of the specified pattern string, and the specified pattern will be centered in the larger row. 
  If a filename or a pattern string is not specified, the size value defaults to ``320x518'' (used for a randomly generated initial state).
 </dd><dt><b>scroll</b>
@@ -31684,7 +31684,7 @@ __kernel void blend_images(__write_only image2d_t dst,
 
 <h3>coreimagesrc</h3>
 
- Video source generated on <font SIZE="-1">GPU</font> using Apple's CoreImage <font SIZE="-1">API</font> on <font SIZE="-1">OSX.</font> 
+ Video source generated on GPU using Apple's CoreImage API on OSX. 
 
  This video source is a specialized version of the <b>coreimage</b> video filter. Use a core image generator at the beginning of the applied filterchain to generate the content. 
 
@@ -31711,7 +31711,7 @@ __kernel void blend_images(__write_only image2d_t dst,
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Use CIQRCodeGenerator to create a <font SIZE="-1">QR</font> code for the FFmpeg homepage, given as complete and escaped command-line for Apple's standard bash shell: 
+</dt><dd> Use CIQRCodeGenerator to create a QR code for the FFmpeg homepage, given as complete and escaped command-line for Apple's standard bash shell: 
  <pre>
         ffmpeg -f lavfi -i coreimagesrc=s=100x100:filter=CIQRCodeGenerator [at] inputMessage=https\\\\\://FFmpeg.org/@inputCorrectionLevel=H -frames:v 1 QRCode.png
 </pre> 
@@ -31905,10 +31905,10 @@ frei0r_src = size = 200x200 : framerate = 10 : filter_name = partik0l : filter_p
 </dd><dt><b>random_fill_ratio, ratio</b>
 </dt><dd> Set the random fill ratio for the initial random grid. It is a floating point number value ranging from 0 to 1, defaults to 1/PHI. It is ignored when a file is specified.
 </dd><dt><b>random_seed, seed</b>
-</dt><dd> Set the seed for filling the initial random grid, must be an integer included between 0 and <font SIZE="-1">UINT32_MAX.</font> If not specified, or if explicitly set to -1, the filter will try to use a good random seed on a best effort basis.
+</dt><dd> Set the seed for filling the initial random grid, must be an integer included between 0 and UINT32_MAX. If not specified, or if explicitly set to -1, the filter will try to use a good random seed on a best effort basis.
 </dd><dt><b>rule</b>
 </dt><dd> Set the life rule. 
- A rule can be specified with a code of the kind &quot;S<i></i><font SIZE="-1"><i>NS</i></font><i></i>/B<i></i><font SIZE="-1"><i>NB</i></font><i></i>&quot;, where <i></i><font SIZE="-1"><i>NS</i></font><i></i> and <i></i><font SIZE="-1"><i>NB</i></font><i></i> are sequences of numbers in the range 0-8, <i></i><font SIZE="-1"><i>NS</i></font><i></i> specifies the number of alive neighbor cells which make a live cell stay alive, and <i></i><font SIZE="-1"><i>NB</i></font><i></i> the number of alive neighbor cells which make a dead cell to become alive (i.e. to ``born''). ``s'' and ``b'' can be used in place of ``S'' and ``B'', respectively. 
+ A rule can be specified with a code of the kind &quot;S<i></i><i>NS</i><i></i>/B<i></i><i>NB</i><i></i>&quot;, where <i></i><i>NS</i><i></i> and <i></i><i>NB</i><i></i> are sequences of numbers in the range 0-8, <i></i><i>NS</i><i></i> specifies the number of alive neighbor cells which make a live cell stay alive, and <i></i><i>NB</i><i></i> the number of alive neighbor cells which make a dead cell to become alive (i.e. to ``born''). ``s'' and ``b'' can be used in place of ``S'' and ``B'', respectively. 
  Alternatively a rule can be specified by an 18-bits integer. The 9 high order bits are used to encode the next cell state if it is alive for each number of neighbor alive cells, the low order bits specify the rule for ``borning'' new cells. Higher order bits encode for an higher number of neighbor cells. For example the number 6153 = <tt>&quot;(12&lt;&lt;9)+9&quot;</tt> specifies a stay alive rule of 12 and a born rule of 9, which corresponds to ``S23/B03''. 
  Default value is ``S23/B3'', which is the original Conway's game of life rule, and will keep a cell alive if it has 2 or 3 neighbor alive cells, and will born a new cell if there are three alive cells around a dead cell.
 </dd><dt><b>size, s</b>
@@ -31960,30 +31960,30 @@ frei0r_src = size = 200x200 : framerate = 10 : filter_name = partik0l : filter_p
 
  The <tt>&quot;color&quot;</tt> source provides an uniformly colored input. 
 
- The <tt>&quot;haldclutsrc&quot;</tt> source provides an identity Hald <font SIZE="-1">CLUT.</font> See also <b>haldclut</b> filter. 
+ The <tt>&quot;haldclutsrc&quot;</tt> source provides an identity Hald CLUT. See also <b>haldclut</b> filter. 
 
  The <tt>&quot;nullsrc&quot;</tt> source returns unprocessed video frames. It is mainly useful to be employed in analysis / debugging tools, or as the source for filters which ignore the input data. 
 
- The <tt>&quot;pal75bars&quot;</tt> source generates a color bars pattern, based on <font SIZE="-1">EBU PAL</font> recommendations with 75% color levels. 
+ The <tt>&quot;pal75bars&quot;</tt> source generates a color bars pattern, based on EBU PAL recommendations with 75% color levels. 
 
- The <tt>&quot;pal100bars&quot;</tt> source generates a color bars pattern, based on <font SIZE="-1">EBU PAL</font> recommendations with 100% color levels. 
+ The <tt>&quot;pal100bars&quot;</tt> source generates a color bars pattern, based on EBU PAL recommendations with 100% color levels. 
 
- The <tt>&quot;rgbtestsrc&quot;</tt> source generates an <font SIZE="-1">RGB</font> test pattern useful for detecting <font SIZE="-1">RGB</font> vs <font SIZE="-1">BGR</font> issues. You should see a red, green and blue stripe from top to bottom. 
+ The <tt>&quot;rgbtestsrc&quot;</tt> source generates an RGB test pattern useful for detecting RGB vs BGR issues. You should see a red, green and blue stripe from top to bottom. 
 
- The <tt>&quot;smptebars&quot;</tt> source generates a color bars pattern, based on the <font SIZE="-1">SMPTE</font> Engineering Guideline <font SIZE="-1">EG 1-1990.</font> 
+ The <tt>&quot;smptebars&quot;</tt> source generates a color bars pattern, based on the SMPTE Engineering Guideline EG 1-1990. 
 
- The <tt>&quot;smptehdbars&quot;</tt> source generates a color bars pattern, based on the <font SIZE="-1">SMPTE RP 219-2002.</font> 
+ The <tt>&quot;smptehdbars&quot;</tt> source generates a color bars pattern, based on the SMPTE RP 219-2002. 
 
  The <tt>&quot;testsrc&quot;</tt> source generates a test video pattern, showing a color pattern, a scrolling gradient and a timestamp. This is mainly intended for testing purposes. 
 
  The <tt>&quot;testsrc2&quot;</tt> source is similar to testsrc, but supports more pixel formats instead of just <tt>&quot;rgb24&quot;</tt>. This allows using it as an input for other tests without requiring a format conversion. 
 
- The <tt>&quot;yuvtestsrc&quot;</tt> source generates an <font SIZE="-1">YUV</font> test pattern. You should see a y, cb and cr stripe from top to bottom. 
+ The <tt>&quot;yuvtestsrc&quot;</tt> source generates an YUV test pattern. You should see a y, cb and cr stripe from top to bottom. 
 
  The sources accept the following parameters:
 <dl>
 <dt><b>level</b>
-</dt><dd> Specify the level of the Hald <font SIZE="-1">CLUT,</font> only available in the <tt>&quot;haldclutsrc&quot;</tt> source. A level of <tt>&quot;N&quot;</tt> generates a picture of <tt>&quot;N*N*N&quot;</tt> by <tt>&quot;N*N*N&quot;</tt> pixels to be used as identity matrix for 3D lookup tables. Each component is coded on a <tt>&quot;1/(N*N)&quot;</tt> scale.
+</dt><dd> Specify the level of the Hald CLUT, only available in the <tt>&quot;haldclutsrc&quot;</tt> source. A level of <tt>&quot;N&quot;</tt> generates a picture of <tt>&quot;N*N*N&quot;</tt> by <tt>&quot;N*N*N&quot;</tt> pixels to be used as identity matrix for 3D lookup tables. Each component is coded on a <tt>&quot;1/(N*N)&quot;</tt> scale.
 </dd><dt><b>color, c</b>
 </dt><dd> Specify the color of the source, only available in the <tt>&quot;color&quot;</tt> source. For the syntax of this option, check the <b>``Color'' section in the ffmpeg-utils manual</b>.
 </dd><dt><b>size, s</b>
@@ -32486,7 +32486,7 @@ amovie = part2.mp4[a2];
 
 <h3>ebur128</h3>
 
- <font SIZE="-1">EBU R128</font> scanner filter. This filter takes an audio stream and analyzes its loudness level. By default, it logs a message at a frequency of 10Hz with the Momentary loudness (identified by <tt>&quot;M&quot;</tt>), Short-term loudness (<tt>&quot;S&quot;</tt>), Integrated loudness (<tt>&quot;I&quot;</tt>) and Loudness Range (<tt>&quot;LRA&quot;</tt>). 
+ EBU R128 scanner filter. This filter takes an audio stream and analyzes its loudness level. By default, it logs a message at a frequency of 10Hz with the Momentary loudness (identified by <tt>&quot;M&quot;</tt>), Short-term loudness (<tt>&quot;S&quot;</tt>), Integrated loudness (<tt>&quot;I&quot;</tt>) and Loudness Range (<tt>&quot;LRA&quot;</tt>). 
 
  The filter can only analyze streams which have a sampling rate of 48000 Hz and whose sample format is double-precision floating point. The input stream will be converted to this specification, if needed. Users may need to insert aformat and/or aresample filters after this filter to obtain the original parameters. 
 
@@ -32494,7 +32494,7 @@ amovie = part2.mp4[a2];
 
  The green area marks a +/- 1LU target range around the target loudness (-23LUFS by default, unless modified through <i>target</i>). 
 
- More information about the Loudness Recommendation <font SIZE="-1">EBU R128</font> on &lt;<b><a rel="nofollow" HREF="http://tech.ebu.ch/loudness">http://tech.ebu.ch/loudness</a></b>&gt;. 
+ More information about the Loudness Recommendation EBU R128 on &lt;<b><a rel="nofollow" HREF="http://tech.ebu.ch/loudness">http://tech.ebu.ch/loudness</a></b>&gt;. 
 
  The filter accepts the following options:
 <dl>
@@ -32503,7 +32503,7 @@ amovie = part2.mp4[a2];
 </dd><dt><b>size</b>
 </dt><dd> Set the video size. This option is for video only. For the syntax of this option, check the <b>``Video size'' section in the ffmpeg-utils manual</b>. Default and minimum resolution is <tt>&quot;640x480&quot;</tt>.
 </dd><dt><b>meter</b>
-</dt><dd> Set the <font SIZE="-1">EBU</font> scale meter. Default is <tt>9</tt>. Common values are <tt>9</tt> and <tt>18</tt>, respectively for <font SIZE="-1">EBU</font> scale meter +9 and <font SIZE="-1">EBU</font> scale meter +18. Any other integer value between this range is allowed.
+</dt><dd> Set the EBU scale meter. Default is <tt>9</tt>. Common values are <tt>9</tt> and <tt>18</tt>, respectively for EBU scale meter +9 and EBU scale meter +18. Any other integer value between this range is allowed.
 </dd><dt><b>metadata</b>
 </dt><dd> Set metadata injection. If set to <tt>1</tt>, the audio input will be segmented into 100ms output frames, each of them containing various loudness information in metadata. All the metadata keys are prefixed with <tt>&quot;lavfi.r128.&quot;</tt>. 
  Default is <tt>0</tt>.
@@ -32543,21 +32543,21 @@ amovie = part2.mp4[a2];
 </dl>
 
 <dt><b>dualmono</b>
-</dt><dd> Treat mono input files as ``dual mono''. If a mono file is intended for playback on a stereo system, its <font SIZE="-1">EBU R128</font> measurement will be perceptually incorrect. If set to <tt>&quot;true&quot;</tt>, this option will compensate for this effect. Multi-channel input files are not affected by this option.
+</dt><dd> Treat mono input files as ``dual mono''. If a mono file is intended for playback on a stereo system, its EBU R128 measurement will be perceptually incorrect. If set to <tt>&quot;true&quot;</tt>, this option will compensate for this effect. Multi-channel input files are not affected by this option.
 </dd><dt><b>panlaw</b>
 </dt><dd> Set a specific pan law to be used for the measurement of dual mono files. This parameter is optional, and has a default value of -3.01dB.
 </dd><dt><b>target</b>
-</dt><dd> Set a specific target level (in <font SIZE="-1">LUFS</font>) used as relative zero in the visualization. This parameter is optional and has a default value of -23LUFS as specified by <font SIZE="-1">EBU R128.</font> However, material published online may prefer a level of -16LUFS (e.g. for use with podcasts or video platforms).
+</dt><dd> Set a specific target level (in LUFS) used as relative zero in the visualization. This parameter is optional and has a default value of -23LUFS as specified by EBU R128. However, material published online may prefer a level of -16LUFS (e.g. for use with podcasts or video platforms).
 </dd><dt><b>gauge</b>
 </dt><dd> Set the value displayed by the gauge. Valid values are <tt>&quot;momentary&quot;</tt> and s <tt>&quot;shortterm&quot;</tt>. By default the momentary value will be used, but in certain scenarios it may be more useful to observe the short term value instead (e.g. live mixing).
 </dd><dt><b>scale</b>
-</dt><dd> Sets the display scale for the loudness. Valid parameters are <tt>&quot;absolute&quot;</tt> (in <font SIZE="-1">LUFS</font>) or <tt>&quot;relative&quot;</tt> (<font SIZE="-1">LU</font>) relative to the target. This only affects the video output, not the summary or continuous log output.</dd></dl>
+</dt><dd> Sets the display scale for the loudness. Valid parameters are <tt>&quot;absolute&quot;</tt> (in LUFS) or <tt>&quot;relative&quot;</tt> (LU) relative to the target. This only affects the video output, not the summary or continuous log output.</dd></dl>
  
 
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Real-time graph using <b>ffplay</b>, with a <font SIZE="-1">EBU</font> scale meter +18: 
+</dt><dd> Real-time graph using <b>ffplay</b>, with a EBU scale meter +18: 
 ffplay - f lavfi - i "amovie=input.mp3,ebur128=video=1:meter=18 [out0][out1]"
 </dd><dt>&bull;
 </dt><dd> Run an analysis with <b>ffmpeg</b>: 
@@ -32670,12 +32670,12 @@ select = 'if(gt(random(0), 0.2), 1, 2)' : n = 2 [tmp], boxblur = 2 : 2, [tmp] in
 </dl>
 
 <dt><b>expr</b>
-</dt><dd> Set expression which is used when <tt>&quot;function&quot;</tt> is set to <tt>&quot;expr&quot;</tt>. The expression is evaluated through the eval <font SIZE="-1">API</font> and can contain the following constants:
+</dt><dd> Set expression which is used when <tt>&quot;function&quot;</tt> is set to <tt>&quot;expr&quot;</tt>. The expression is evaluated through the eval API and can contain the following constants:
 </dd><dl>
 <dl>
-<dt><font SIZE="-1"><b>VALUE1</b></font>
+<dt><b>VALUE1</b>
 </dt><dd> Float representation of <tt>&quot;value&quot;</tt> from metadata key.
-</dd><dt><font SIZE="-1"><b>VALUE2</b></font>
+</dd><dt><b>VALUE2</b>
 </dt><dd> Float representation of <tt>&quot;value&quot;</tt> as supplied by user in <tt>&quot;value&quot;</tt> option.</dd></dl>
 </dl>
 
@@ -32683,9 +32683,9 @@ select = 'if(gt(random(0), 0.2), 1, 2)' : n = 2 [tmp], boxblur = 2 : 2, [tmp] in
 </dl>
 
 <dt><b>file</b>
-</dt><dd> If specified in <tt>&quot;print&quot;</tt> mode, output is written to the named file. Instead of plain filename any writable url can be specified. Filename ``-'' is a shorthand for standard output. If <tt>&quot;file&quot;</tt> option is not set, output is written to the log with <font SIZE="-1">AV_LOG_INFO</font> loglevel.
+</dt><dd> If specified in <tt>&quot;print&quot;</tt> mode, output is written to the named file. Instead of plain filename any writable url can be specified. Filename ``-'' is a shorthand for standard output. If <tt>&quot;file&quot;</tt> option is not set, output is written to the log with AV_LOG_INFO loglevel.
 </dd><dt><b>direct</b>
-</dt><dd> Reduces buffering in print mode when output is written to a <font SIZE="-1">URL</font> set using <i>file</i>.</dd></dl>
+</dt><dd> Reduces buffering in print mode when output is written to a URL set using <i>file</i>.</dd></dl>
  
 
  <i>Examples</i>
@@ -32778,23 +32778,23 @@ select = 'if(gt(random(0), 0.2), 1, 2)' : n = 2 [tmp], boxblur = 2 : 2, [tmp] in
 </dd><dt><b>selected_n</b>
 </dt><dd> The (sequential) number of the selected frame, starting from 0.
 </dd><dt><b>prev_selected_n</b>
-</dt><dd> The sequential number of the last selected frame. It's <font SIZE="-1">NAN</font> if undefined.
-</dd><dt><font SIZE="-1"><b>TB</b></font>
+</dt><dd> The sequential number of the last selected frame. It's NAN if undefined.
+</dd><dt><b>TB</b>
 </dt><dd> The timebase of the input timestamps.
 </dd><dt><b>pts</b>
-</dt><dd> The <font SIZE="-1">PTS</font> (Presentation TimeStamp) of the filtered video frame, expressed in <i></i><font SIZE="-1"><i>TB</i></font><i></i> units. It's <font SIZE="-1">NAN</font> if undefined.
+</dt><dd> The PTS (Presentation TimeStamp) of the filtered video frame, expressed in <i></i><i>TB</i><i></i> units. It's NAN if undefined.
 </dd><dt><b>t</b>
-</dt><dd> The <font SIZE="-1">PTS</font> of the filtered video frame, expressed in seconds. It's <font SIZE="-1">NAN</font> if undefined.
+</dt><dd> The PTS of the filtered video frame, expressed in seconds. It's NAN if undefined.
 </dd><dt><b>prev_pts</b>
-</dt><dd> The <font SIZE="-1">PTS</font> of the previously filtered video frame. It's <font SIZE="-1">NAN</font> if undefined.
+</dt><dd> The PTS of the previously filtered video frame. It's NAN if undefined.
 </dd><dt><b>prev_selected_pts</b>
-</dt><dd> The <font SIZE="-1">PTS</font> of the last previously filtered video frame. It's <font SIZE="-1">NAN</font> if undefined.
+</dt><dd> The PTS of the last previously filtered video frame. It's NAN if undefined.
 </dd><dt><b>prev_selected_t</b>
-</dt><dd> The <font SIZE="-1">PTS</font> of the last previously selected video frame, expressed in seconds. It's <font SIZE="-1">NAN</font> if undefined.
+</dt><dd> The PTS of the last previously selected video frame, expressed in seconds. It's NAN if undefined.
 </dd><dt><b>start_pts</b>
-</dt><dd> The <font SIZE="-1">PTS</font> of the first video frame in the video. It's <font SIZE="-1">NAN</font> if undefined.
+</dt><dd> The PTS of the first video frame in the video. It's NAN if undefined.
 </dd><dt><b>start_t</b>
-</dt><dd> The time of the first video frame in the video. It's <font SIZE="-1">NAN</font> if undefined.
+</dt><dd> The time of the first video frame in the video. It's NAN if undefined.
 </dd><dt><b>pict_type</b> <i>(video only)</i>
 </dt><dd> The type of the filtered frame. It can assume one of the following values:
 </dd><dl>
@@ -32807,11 +32807,11 @@ select = 'if(gt(random(0), 0.2), 1, 2)' : n = 2 [tmp], boxblur = 2 : 2, [tmp] in
 </dt><dd>
 </dd><dt><b>S</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SI</b></font>
+</dd><dt><b>SI</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SP</b></font>
+</dd><dt><b>SP</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>BI</b></font>
+</dd><dt><b>BI</b>
 </dt><dd></dd></dl>
 </dl>
 
@@ -32822,11 +32822,11 @@ select = 'if(gt(random(0), 0.2), 1, 2)' : n = 2 [tmp], boxblur = 2 : 2, [tmp] in
 </dt><dd> The frame interlace type. It can assume one of the following values:
 </dd><dl>
 <dl>
-<dt><font SIZE="-1"><b>PROGRESSIVE</b></font>
+<dt><b>PROGRESSIVE</b>
 </dt><dd> The frame is progressive (not interlaced).
-</dd><dt><font SIZE="-1"><b>TOPFIRST</b></font>
+</dd><dt><b>TOPFIRST</b>
 </dt><dd> The frame is top-field-first.
-</dd><dt><font SIZE="-1"><b>BOTTOMFIRST</b></font>
+</dd><dt><b>BOTTOMFIRST</b>
 </dt><dd> The frame is bottom-field-first.</dd></dl>
 </dl>
 
@@ -32949,17 +32949,17 @@ select = n = 2 : e = 'mod(n, 2)+1'[odd][even];
         &lt;START&gt;[-&lt;END&gt;] &lt;COMMANDS&gt;;
 </pre> 
 
- The time interval is specified by the <i></i><font SIZE="-1"><i>START</i></font><i></i> and <i></i><font SIZE="-1"><i>END</i></font><i></i> times. <i></i><font SIZE="-1"><i>END</i></font><i></i> is optional and defaults to the maximum time. 
+ The time interval is specified by the <i></i><i>START</i><i></i> and <i></i><i>END</i><i></i> times. <i></i><i>END</i><i></i> is optional and defaults to the maximum time. 
 
- The current frame time is considered within the specified interval if it is included in the interval [<i></i><font SIZE="-1"><i>START</i></font><i></i>, <i></i><font SIZE="-1"><i>END</i></font><i></i>), that is when the time is greater or equal to <i></i><font SIZE="-1"><i>START</i></font><i></i> and is lesser than <i></i><font SIZE="-1"><i>END</i></font><i></i>. 
+ The current frame time is considered within the specified interval if it is included in the interval [<i></i><i>START</i><i></i>, <i></i><i>END</i><i></i>), that is when the time is greater or equal to <i></i><i>START</i><i></i> and is lesser than <i></i><i>END</i><i></i>. 
 
- <i></i><font SIZE="-1"><i>COMMANDS</i></font><i></i> consists of a sequence of one or more command specifications, separated by ``,'', relating to that interval. The syntax of a command specification is given by: 
+ <i></i><i>COMMANDS</i><i></i> consists of a sequence of one or more command specifications, separated by ``,'', relating to that interval. The syntax of a command specification is given by: 
 
  <pre>
         [&lt;FLAGS&gt;] &lt;TARGET&gt; &lt;COMMAND&gt; &lt;ARG&gt;
 </pre> 
 
- <i></i><font SIZE="-1"><i>FLAGS</i></font><i></i> is optional and specifies the type of events relating to the time interval which enable sending the specified command, and must be a non-null sequence of identifier flags separated by ``+'' or ``|'' and enclosed between ``['' and ``]''. 
+ <i></i><i>FLAGS</i><i></i> is optional and specifies the type of events relating to the time interval which enable sending the specified command, and must be a non-null sequence of identifier flags separated by ``+'' or ``|'' and enclosed between ``['' and ``]''. 
 
  The following flags are recognized:
 <dl>
@@ -32968,24 +32968,24 @@ select = n = 2 : e = 'mod(n, 2)+1'[odd][even];
 </dd><dt><b>leave</b>
 </dt><dd> The command is sent when the current frame timestamp leaves the specified interval. In other words, the command is sent when the previous frame timestamp was in the given interval, and the current is not.
 </dd><dt><b>expr</b>
-</dt><dd> The command <i></i><font SIZE="-1"><i>ARG</i></font><i></i> is interpreted as expression and result of expression is passed as <i></i><font SIZE="-1"><i>ARG</i></font><i></i>. 
- The expression is evaluated through the eval <font SIZE="-1">API</font> and can contain the following constants:
+</dt><dd> The command <i></i><i>ARG</i><i></i> is interpreted as expression and result of expression is passed as <i></i><i>ARG</i><i></i>. 
+ The expression is evaluated through the eval API and can contain the following constants:
 </dd><dl>
 <dl>
-<dt><font SIZE="-1"><b>POS</b></font>
+<dt><b>POS</b>
 </dt><dd> Original position in the file of the frame, or undefined if undefined for the current frame.
-</dd><dt><font SIZE="-1"><b>PTS</b></font>
+</dd><dt><b>PTS</b>
 </dt><dd> The presentation timestamp in input.
 </dd><dt><b>N</b>
 </dt><dd> The count of the input frame for video or audio, starting from 0.
 </dd><dt><b>T</b>
 </dt><dd> The time in seconds of the current frame.
-</dd><dt><font SIZE="-1"><b>TS</b></font>
+</dd><dt><b>TS</b>
 </dt><dd> The start time in seconds of the current command interval.
-</dd><dt><font SIZE="-1"><b>TE</b></font>
+</dd><dt><b>TE</b>
 </dt><dd> The end time in seconds of the current command interval.
-</dd><dt><font SIZE="-1"><b>TI</b></font>
-</dt><dd> The interpolated time of the current command interval, <font SIZE="-1">TI</font> = (T - <font SIZE="-1">TS</font>) / (<font SIZE="-1">TE</font> - <font SIZE="-1">TS</font>).</dd></dl>
+</dd><dt><b>TI</b>
+</dt><dd> The interpolated time of the current command interval, TI = (T - TS) / (TE - TS).</dd></dl>
 </dl>
 
 <dl>
@@ -32993,17 +32993,17 @@ select = n = 2 : e = 'mod(n, 2)+1'[odd][even];
 </dl>
  
 
- If <i></i><font SIZE="-1"><i>FLAGS</i></font><i></i> is not specified, a default value of <tt>&quot;[enter]&quot;</tt> is assumed. 
+ If <i></i><i>FLAGS</i><i></i> is not specified, a default value of <tt>&quot;[enter]&quot;</tt> is assumed. 
 
- <i></i><font SIZE="-1"><i>TARGET</i></font><i></i> specifies the target of the command, usually the name of the filter class or a specific filter instance name. 
+ <i></i><i>TARGET</i><i></i> specifies the target of the command, usually the name of the filter class or a specific filter instance name. 
 
- <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i> specifies the name of the command for the target filter. 
+ <i></i><i>COMMAND</i><i></i> specifies the name of the command for the target filter. 
 
- <i></i><font SIZE="-1"><i>ARG</i></font><i></i> is optional and specifies the optional list of argument for the given <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i>. 
+ <i></i><i>ARG</i><i></i> is optional and specifies the optional list of argument for the given <i></i><i>COMMAND</i><i></i>. 
 
  Between one interval specification and another, whitespaces, or sequences of characters starting with <tt>&quot;#&quot;</tt> until the end of line, are ignored and can be used to annotate comments. 
 
- A simplified <font SIZE="-1">BNF</font> description of the commands specification syntax follows: 
+ A simplified BNF description of the commands specification syntax follows: 
 
  
         &lt;COMMAND_FLAG&gt;  ::= "enter" | "leave"
@@ -33046,7 +33046,7 @@ select = n = 2 : e = 'mod(n, 2)+1'[odd][even];
 
 <h3>setpts, asetpts</h3>
 
- Change the <font SIZE="-1">PTS</font> (presentation timestamp) of the input frames. 
+ Change the PTS (presentation timestamp) of the input frames. 
 
  <tt>&quot;setpts&quot;</tt> works on video frames, <tt>&quot;asetpts&quot;</tt> on audio frames. 
 
@@ -33056,50 +33056,50 @@ select = n = 2 : e = 'mod(n, 2)+1'[odd][even];
 </dt><dd> The expression which is evaluated for each frame to construct its timestamp.</dd></dl>
  
 
- The expression is evaluated through the eval <font SIZE="-1">API</font> and can contain the following constants:
+ The expression is evaluated through the eval API and can contain the following constants:
 <dl>
-<dt><font SIZE="-1"><b>FRAME_RATE, FR</b></font>
+<dt><b>FRAME_RATE, FR</b>
 </dt><dd> frame rate, only defined for constant frame-rate video
-</dd><dt><font SIZE="-1"><b>PTS</b></font>
+</dd><dt><b>PTS</b>
 </dt><dd> The presentation timestamp in input
 </dd><dt><b>N</b>
 </dt><dd> The count of the input frame for video or the number of consumed samples, not including the current frame for audio, starting from 0.
-</dd><dt><font SIZE="-1"><b>NB_CONSUMED_SAMPLES</b></font>
+</dd><dt><b>NB_CONSUMED_SAMPLES</b>
 </dt><dd> The number of consumed samples, not including the current frame (only audio)
-</dd><dt><font SIZE="-1"><b>NB_SAMPLES, S</b></font>
+</dd><dt><b>NB_SAMPLES, S</b>
 </dt><dd> The number of samples in the current frame (only audio)
-</dd><dt><font SIZE="-1"><b>SAMPLE_RATE, SR</b></font>
+</dd><dt><b>SAMPLE_RATE, SR</b>
 </dt><dd> The audio sample rate.
-</dd><dt><font SIZE="-1"><b>STARTPTS</b></font>
-</dt><dd> The <font SIZE="-1">PTS</font> of the first frame.
-</dd><dt><font SIZE="-1"><b>STARTT</b></font>
+</dd><dt><b>STARTPTS</b>
+</dt><dd> The PTS of the first frame.
+</dd><dt><b>STARTT</b>
 </dt><dd> the time in seconds of the first frame
-</dd><dt><font SIZE="-1"><b>INTERLACED</b></font>
+</dd><dt><b>INTERLACED</b>
 </dt><dd> State whether the current frame is interlaced.
 </dd><dt><b>T</b>
 </dt><dd> the time in seconds of the current frame
-</dd><dt><font SIZE="-1"><b>POS</b></font>
+</dd><dt><b>POS</b>
 </dt><dd> original position in the file of the frame, or undefined if undefined for the current frame
-</dd><dt><font SIZE="-1"><b>PREV_INPTS</b></font>
-</dt><dd> The previous input <font SIZE="-1">PTS.</font>
-</dd><dt><font SIZE="-1"><b>PREV_INT</b></font>
+</dd><dt><b>PREV_INPTS</b>
+</dt><dd> The previous input PTS.
+</dd><dt><b>PREV_INT</b>
 </dt><dd> previous input time in seconds
-</dd><dt><font SIZE="-1"><b>PREV_OUTPTS</b></font>
-</dt><dd> The previous output <font SIZE="-1">PTS.</font>
-</dd><dt><font SIZE="-1"><b>PREV_OUTT</b></font>
+</dd><dt><b>PREV_OUTPTS</b>
+</dt><dd> The previous output PTS.
+</dd><dt><b>PREV_OUTT</b>
 </dt><dd> previous output time in seconds
-</dd><dt><font SIZE="-1"><b>RTCTIME</b></font>
-</dt><dd> The wallclock (<font SIZE="-1">RTC</font>) time in microseconds. This is deprecated, use <b>time</b>(0) instead.
-</dd><dt><font SIZE="-1"><b>RTCSTART</b></font>
-</dt><dd> The wallclock (<font SIZE="-1">RTC</font>) time at the start of the movie in microseconds.
-</dd><dt><font SIZE="-1"><b>TB</b></font>
+</dd><dt><b>RTCTIME</b>
+</dt><dd> The wallclock (RTC) time in microseconds. This is deprecated, use <b>time</b>(0) instead.
+</dd><dt><b>RTCSTART</b>
+</dt><dd> The wallclock (RTC) time at the start of the movie in microseconds.
+</dd><dt><b>TB</b>
 </dt><dd> The timebase of the input timestamps.</dd></dl>
  
 
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Start counting <font SIZE="-1">PTS</font> from zero 
+</dt><dd> Start counting PTS from zero 
  <pre>
         setpts=PTS-STARTPTS
 </pre>
@@ -33124,7 +33124,7 @@ select = n = 2 : e = 'mod(n, 2)+1'[odd][even];
         setpts='1/(25*TB) * (N + 0.05 * sin(N*2*PI/25))'
 </pre>
 </dd><dt>&bull;
-</dt><dd> Apply an offset of 10 seconds to the input <font SIZE="-1">PTS:</font> 
+</dt><dd> Apply an offset of 10 seconds to the input PTS: 
  <pre>
         setpts=PTS+10/TB
 </pre>
@@ -33177,7 +33177,7 @@ select = n = 2 : e = 'mod(n, 2)+1'[odd][even];
 </dt><dd> The expression which is evaluated into the output timebase.</dd></dl>
  
 
- The value for <b>tb</b> is an arithmetic expression representing a rational. The expression can contain the constants ``<font SIZE="-1">AVTB''</font> (the default timebase), ``intb'' (the input timebase) and ``sr'' (the sample rate, audio only). Default value is ``intb''. 
+ The value for <b>tb</b> is an arithmetic expression representing a rational. The expression can contain the constants ``AVTB'' (the default timebase), ``intb'' (the input timebase) and ``sr'' (the sample rate, audio only). Default value is ``intb''. 
 
  <i>Examples</i>
 <dl>
@@ -33362,17 +33362,17 @@ select = n = 2 : e = 'mod(n, 2)+1'[odd][even];
 <dt><b>unspecified</b>
 </dt><dd> Unspecified (default)
 </dd><dt><b>bt709</b>
-</dt><dd> <font SIZE="-1">BT.709</font>
+</dt><dd> BT.709
 </dd><dt><b>fcc</b>
-</dt><dd> <font SIZE="-1">FCC</font>
+</dt><dd> FCC
 </dd><dt><b>bt470bg</b>
-</dt><dd> <font SIZE="-1">BT.470BG</font> or <font SIZE="-1">BT.601-6 625</font>
+</dt><dd> BT.470BG or BT.601-6 625
 </dd><dt><b>smpte170m</b>
-</dt><dd> <font SIZE="-1">SMPTE-170M</font> or <font SIZE="-1">BT.601-6 525</font>
+</dt><dd> SMPTE-170M or BT.601-6 525
 </dd><dt><b>smpte240m</b>
-</dt><dd> <font SIZE="-1">SMPTE-240M</font>
+</dt><dd> SMPTE-240M
 </dd><dt><b>bt2020ncl</b>
-</dt><dd> <font SIZE="-1">BT.2020</font> with non-constant luminance</dd></dl>
+</dt><dd> BT.2020 with non-constant luminance</dd></dl>
 </dl>
 
 <dl>
@@ -34108,11 +34108,11 @@ ffplay - f lavfi 'amovie=input.mp3, asplit [a][out1];
  The expression can use the following variables:
 </dd><dl>
 <dl>
-<dt><font SIZE="-1"><b>VOLUME</b></font>
+<dt><b>VOLUME</b>
 </dt><dd> Current max volume of channel in dB.
-</dd><dt><font SIZE="-1"><b>PEAK</b></font>
+</dd><dt><b>PEAK</b>
 </dt><dd> Current peak.
-</dd><dt><font SIZE="-1"><b>CHANNEL</b></font>
+</dd><dt><b>CHANNEL</b>
 </dt><dd> Current channel number, starting from 0.</dd></dl>
 </dl>
 
@@ -34410,11 +34410,11 @@ asplit[out0], showwaves = r = 30 [out1]
         &lt;TARGET&gt; &lt;COMMAND&gt; [&lt;ARG&gt;]
 </pre> 
 
- <i></i><font SIZE="-1"><i>TARGET</i></font><i></i> specifies the target of the command, usually the name of the filter class or a specific filter instance name. The default filter instance name uses the pattern <b>Parsed_&lt;filter_name&gt;_&lt;index&gt;</b>, but you can override this by using the <b>filter_name@id</b> syntax (see <b>Filtergraph syntax</b>). 
+ <i></i><i>TARGET</i><i></i> specifies the target of the command, usually the name of the filter class or a specific filter instance name. The default filter instance name uses the pattern <b>Parsed_&lt;filter_name&gt;_&lt;index&gt;</b>, but you can override this by using the <b>filter_name@id</b> syntax (see <b>Filtergraph syntax</b>). 
 
- <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i> specifies the name of the command for the target filter. 
+ <i></i><i>COMMAND</i><i></i> specifies the name of the command for the target filter. 
 
- <i></i><font SIZE="-1"><i>ARG</i></font><i></i> is optional and specifies the optional argument list for the given <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i>. 
+ <i></i><i>ARG</i><i></i> is optional and specifies the optional argument list for the given <i></i><i>COMMAND</i><i></i>. 
 
  Upon reception, the message is processed and the corresponding command is injected into the filtergraph. Depending on the result, the filter will send a reply to the client, adopting the format: 
 
@@ -34423,7 +34423,7 @@ asplit[out0], showwaves = r = 30 [out1]
         &lt;MESSAGE&gt;
 </pre> 
 
- <i></i><font SIZE="-1"><i>MESSAGE</i></font><i></i> is optional. 
+ <i></i><i>MESSAGE</i><i></i> is optional. 
 
  <i>Examples</i> 
 
@@ -34477,7 +34477,7 @@ nullsrc = s = 200x100, zmq[bg];
 </dd><dt><b>format_name, f</b>
 </dt><dd> Specifies the format assumed for the movie to read, and can be either the name of a container or an input device. If not specified, the format is guessed from <i>movie_name</i> or by probing.
 </dd><dt><b>seek_point, sp</b>
-</dt><dd> Specifies the seek point in seconds. The frames will be output starting from this seek point. The parameter is evaluated with <tt>&quot;av_strtod&quot;</tt>, so the numerical value may be suffixed by an <font SIZE="-1">IS</font> postfix. The default value is ``0''.
+</dt><dd> Specifies the seek point in seconds. The frames will be output starting from this seek point. The parameter is evaluated with <tt>&quot;av_strtod&quot;</tt>, so the numerical value may be suffixed by an IS postfix. The default value is ``0''.
 </dd><dt><b>streams, s</b>
 </dt><dd> Specifies the streams to read. Several streams can be specified, separated by ``+''. The source will then have as many outputs, in the same order. The syntax is explained in the <b>``Stream specifiers'' section in the ffmpeg manual</b>. Two special names, ``dv'' and ``da'' specify respectively the default (best suited) video and audio stream. Default is ``dv'', or ``da'' if the filter is called as ``amovie''.
 </dd><dt><b>stream_index, si</b>
@@ -34500,7 +34500,7 @@ input-- -- -- -- ---&gt;deltapts0-- &gt; overlay-- &gt; output ^
  <i>Examples</i>
 <dl>
 <dt>&bull;
-</dt><dd> Skip 3.2 seconds from the start of the <font SIZE="-1">AVI</font> file in.avi, and overlay it on top of the input labelled ``in'': 
+</dt><dd> Skip 3.2 seconds from the start of the AVI file in.avi, and overlay it on top of the input labelled ``in'': 
 movie = in.avi : seek_point = 3.2, scale = 180 : -1, setpts = PTS - STARTPTS[over];
 [in] setpts = PTS - STARTPTS[main];
 [main][over] overlay = 16 : 16 [out]
@@ -34525,9 +34525,9 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dd><dl>
 <dl>
 <dt>&bull;
-</dt><dd> <i>stream_index</i>: If stream_index is -1, a default stream is selected, and <i>timestamp</i> is automatically converted from <font SIZE="-1">AV_TIME_BASE</font> units to the stream specific time_base.
+</dt><dd> <i>stream_index</i>: If stream_index is -1, a default stream is selected, and <i>timestamp</i> is automatically converted from AV_TIME_BASE units to the stream specific time_base.
 </dd><dt>&bull;
-</dt><dd> <i>timestamp</i>: Timestamp in AVStream.time_base units or, if no stream is specified, in <font SIZE="-1">AV_TIME_BASE</font> units.
+</dt><dd> <i>timestamp</i>: Timestamp in AVStream.time_base units or, if no stream is specified, in AV_TIME_BASE units.
 </dd><dt>&bull;
 </dt><dd> <i>flags</i>: Flags which select direction and seeking mode.</dd></dl>
 </dl>
@@ -34536,30 +34536,30 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dl>
 
 <dt><b>get_duration</b>
-</dt><dd> Get movie duration in <font SIZE="-1">AV_TIME_BASE</font> units.</dd></dl>
+</dt><dd> Get movie duration in AV_TIME_BASE units.</dd></dl>
  <a NAME="lb]D">&nbsp;</a>
 
 <h2>EXTERNAL LIBRARIES</h2>
 
  FFmpeg can be hooked up with a number of external libraries to add support for more formats. None of them are used by default, their use has to be explicitly requested by passing the appropriate flags to <b>./configure</b>. <a NAME="lb]E">&nbsp;</a>
 
-<h3>Alliance for Open Media (<font SIZE="-1">AOM</font>)</h3>
+<h3>Alliance for Open Media (AOM)</h3>
 
- FFmpeg can make use of the <font SIZE="-1">AOM</font> library for <font SIZE="-1">AV1</font> decoding and encoding. 
+ FFmpeg can make use of the AOM library for AV1 decoding and encoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="http://aomedia.org/">http://aomedia.org/</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libaom&quot;</tt> to configure to enable it. <a NAME="lb]F">&nbsp;</a>
 
-<h3><font SIZE="-1">AMD AMF/VCE</font></h3>
+<h3>AMD AMF/VCE</h3>
 
- FFmpeg can use the <font SIZE="-1">AMD</font> Advanced Media Framework library for accelerated H.264 and <font SIZE="-1">HEVC</font>(only windows) encoding on hardware with Video Coding Engine (<font SIZE="-1">VCE</font>). 
+ FFmpeg can use the AMD Advanced Media Framework library for accelerated H.264 and HEVC(only windows) encoding on hardware with Video Coding Engine (VCE). 
 
- To enable support you must obtain the <font SIZE="-1">AMF</font> framework header files(version 1.4.9+) from &lt;<b><a rel="nofollow" HREF="https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git">https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git</a></b>&gt;. 
+ To enable support you must obtain the AMF framework header files(version 1.4.9+) from &lt;<b><a rel="nofollow" HREF="https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git">https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git</a></b>&gt;. 
 
  Create an <tt>&quot;AMF/&quot;</tt> directory in the system include path. Copy the contents of <tt>&quot;AMF/amf/public/include/&quot;</tt> into that directory. Then configure FFmpeg with <tt>&quot;--enable-amf&quot;</tt>. 
 
  Initialization of amf encoder occurs in this order: 1) trying to initialize through dx11(only windows) 2) trying to initialize through dx9(only windows) 3) trying to initialize through vulkan 
 
- To use h.264(<font SIZE="-1">AMD VCE</font>) encoder on linux amdgru-pro version 19.20+ and amf-amdgpu-pro package(amdgru-pro contains, but does not install automatically) are required. 
+ To use h.264(AMD VCE) encoder on linux amdgru-pro version 19.20+ and amf-amdgpu-pro package(amdgru-pro contains, but does not install automatically) are required. 
 
  This driver can be installed using amdgpu-pro-install script in official amd driver archive. <a NAME="lb]G">&nbsp;</a>
 
@@ -34569,13 +34569,13 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 
  For Windows, supported AviSynth variants are &lt;<b><a rel="nofollow" HREF="http://avisynth.nl">http://avisynth.nl</a></b>&gt; for 32-bit builds and &lt;<b><a rel="nofollow" HREF="http://avisynth.nl/index.php/AviSynth+">http://avisynth.nl/index.php/AviSynth+</a></b>&gt; for 32-bit and 64-bit builds. 
 
- For Linux, macOS, and <font SIZE="-1">BSD,</font> the only supported AviSynth variant is &lt;<b><a rel="nofollow" HREF="https://github.com/AviSynth/AviSynthPlus">https://github.com/AviSynth/AviSynthPlus</a></b>&gt;, starting with version 3.5. 
+ For Linux, macOS, and BSD, the only supported AviSynth variant is &lt;<b><a rel="nofollow" HREF="https://github.com/AviSynth/AviSynthPlus">https://github.com/AviSynth/AviSynthPlus</a></b>&gt;, starting with version 3.5. 
 
 <dl>
 <dt>
-</dt><dd> In 2016, AviSynth+ added support for building with <font SIZE="-1">GCC.</font> However, due to the eccentricities of Windows' calling conventions, 32-bit <font SIZE="-1">GCC</font> builds of AviSynth+ are not compatible with typical 32-bit builds of FFmpeg. 
- By default, FFmpeg assumes compatibility with 32-bit <font SIZE="-1">MSVC</font> builds of AviSynth+ since that is the most widely-used and entrenched build configuration. Users can override this and enable support for 32-bit <font SIZE="-1">GCC</font> builds of AviSynth+ by passing <tt>&quot;-DAVSC_WIN32_GCC32&quot;</tt> to <tt>&quot;--extra-cflags&quot;</tt> when configuring FFmpeg. 
- 64-bit builds of FFmpeg are not affected, and can use either <font SIZE="-1">MSVC</font> or <font SIZE="-1">GCC</font> builds of AviSynth+ without any special flags.</dd></dl>
+</dt><dd> In 2016, AviSynth+ added support for building with GCC. However, due to the eccentricities of Windows' calling conventions, 32-bit GCC builds of AviSynth+ are not compatible with typical 32-bit builds of FFmpeg. 
+ By default, FFmpeg assumes compatibility with 32-bit MSVC builds of AviSynth+ since that is the most widely-used and entrenched build configuration. Users can override this and enable support for 32-bit GCC builds of AviSynth+ by passing <tt>&quot;-DAVSC_WIN32_GCC32&quot;</tt> to <tt>&quot;--extra-cflags&quot;</tt> when configuring FFmpeg. 
+ 64-bit builds of FFmpeg are not affected, and can use either MSVC or GCC builds of AviSynth+ without any special flags.</dd></dl>
  
 
 <dl>
@@ -34597,24 +34597,24 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 
 <h3>dav1d</h3>
 
- FFmpeg can make use of the dav1d library for <font SIZE="-1">AV1</font> video decoding. 
+ FFmpeg can make use of the dav1d library for AV1 video decoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="https://code.videolan.org/videolan/dav1d">https://code.videolan.org/videolan/dav1d</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libdav1d&quot;</tt> to configure to enable it. <a NAME="lb]K">&nbsp;</a>
 
 <h3>davs2</h3>
 
- FFmpeg can make use of the davs2 library for <font SIZE="-1">AVS2-P2/IEEE1857.4</font> video decoding. 
+ FFmpeg can make use of the davs2 library for AVS2-P2/IEEE1857.4 video decoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="https://github.com/pkuvcl/davs2">https://github.com/pkuvcl/davs2</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libdavs2&quot;</tt> to configure to enable it. 
 
 <dl>
 <dt>
-</dt><dd> libdavs2 is under the <font SIZE="-1">GNU</font> Public License Version 2 or later (see &lt;<b><a rel="nofollow" HREF="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a></b>&gt; for details), you must upgrade FFmpeg's license to <font SIZE="-1">GPL</font> in order to use it.</dd></dl>
+</dt><dd> libdavs2 is under the GNU Public License Version 2 or later (see &lt;<b><a rel="nofollow" HREF="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a></b>&gt; for details), you must upgrade FFmpeg's license to GPL in order to use it.</dd></dl>
  <a NAME="lb]L">&nbsp;</a>
 
 <h3>uavs3d</h3>
 
- FFmpeg can make use of the uavs3d library for <font SIZE="-1">AVS3-P2/IEEE1857.10</font> video decoding. 
+ FFmpeg can make use of the uavs3d library for AVS3-P2/IEEE1857.10 video decoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="https://github.com/uavs3/uavs3d">https://github.com/uavs3/uavs3d</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libuavs3d&quot;</tt> to configure to enable it. <a NAME="lb]M">&nbsp;</a>
 
@@ -34624,19 +34624,19 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 
 <h3>Intel QuickSync Video</h3>
 
- FFmpeg can use Intel QuickSync Video (<font SIZE="-1">QSV</font>) for accelerated decoding and encoding of multiple codecs. To use <font SIZE="-1">QSV,</font> FFmpeg must be linked against the <tt>&quot;libmfx&quot;</tt> dispatcher, which loads the actual decoding libraries. 
+ FFmpeg can use Intel QuickSync Video (QSV) for accelerated decoding and encoding of multiple codecs. To use QSV, FFmpeg must be linked against the <tt>&quot;libmfx&quot;</tt> dispatcher, which loads the actual decoding libraries. 
 
  The dispatcher is open source and can be downloaded from &lt;<b><a rel="nofollow" HREF="https://github.com/lu-zero/mfx_dispatch.git">https://github.com/lu-zero/mfx_dispatch.git</a></b>&gt;. FFmpeg needs to be configured with the <tt>&quot;--enable-libmfx&quot;</tt> option and <tt>&quot;pkg-config&quot;</tt> needs to be able to locate the dispatcher's <tt>&quot;.pc&quot;</tt> files. <a NAME="lb]O">&nbsp;</a>
 
 <h3>Kvazaar</h3>
 
- FFmpeg can make use of the Kvazaar library for <font SIZE="-1">HEVC</font> encoding. 
+ FFmpeg can make use of the Kvazaar library for HEVC encoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="https://github.com/ultravideo/kvazaar">https://github.com/ultravideo/kvazaar</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libkvazaar&quot;</tt> to configure to enable it. <a NAME="lb]P">&nbsp;</a>
 
-<h3><font SIZE="-1">LAME</font></h3>
+<h3>LAME</h3>
 
- FFmpeg can make use of the <font SIZE="-1">LAME</font> library for <font SIZE="-1">MP3</font> encoding. 
+ FFmpeg can make use of the LAME library for MP3 encoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="http://lame.sourceforge.net/">http://lame.sourceforge.net/</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libmp3lame&quot;</tt> to configure to enable it. <a NAME="lb]Q">&nbsp;</a>
 
@@ -34648,7 +34648,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 
 <h3>libvpx</h3>
 
- FFmpeg can make use of the libvpx library for <font SIZE="-1">VP8/VP9</font> decoding and encoding. 
+ FFmpeg can make use of the libvpx library for VP8/VP9 decoding and encoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="http://www.webmproject.org/">http://www.webmproject.org/</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libvpx&quot;</tt> to configure to enable it. <a NAME="lb]S">&nbsp;</a>
 
@@ -34662,11 +34662,11 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 
 <dl>
 <dt>
-</dt><dd> OpenCORE and VisualOn libraries are under the Apache License 2.0 (see &lt;<b><a rel="nofollow" HREF="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></b>&gt; for details), which is incompatible to the <font SIZE="-1">LGPL</font> version 2.1 and <font SIZE="-1">GPL</font> version 2. You have to upgrade FFmpeg's license to <font SIZE="-1">LGPL</font> version 3 (or if you have enabled <font SIZE="-1">GPL</font> components, <font SIZE="-1">GPL</font> version 3) by passing <tt>&quot;--enable-version3&quot;</tt> to configure in order to use it. 
- The license of the Fraunhofer <font SIZE="-1">AAC</font> library is incompatible with the <font SIZE="-1">GPL.</font> Therefore, for <font SIZE="-1">GPL</font> builds, you have to pass <tt>&quot;--enable-nonfree&quot;</tt> to configure in order to use it. To the best of our knowledge, it is compatible with the <font SIZE="-1">LGPL.</font></dd></dl>
+</dt><dd> OpenCORE and VisualOn libraries are under the Apache License 2.0 (see &lt;<b><a rel="nofollow" HREF="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></b>&gt; for details), which is incompatible to the LGPL version 2.1 and GPL version 2. You have to upgrade FFmpeg's license to LGPL version 3 (or if you have enabled GPL components, GPL version 3) by passing <tt>&quot;--enable-version3&quot;</tt> to configure in order to use it. 
+ The license of the Fraunhofer AAC library is incompatible with the GPL. Therefore, for GPL builds, you have to pass <tt>&quot;--enable-nonfree&quot;</tt> to configure in order to use it. To the best of our knowledge, it is compatible with the LGPL.</dd></dl>
  
 
- <i>OpenCORE </i><font SIZE="-1"><i>AMR</i></font><i></i> 
+ <i>OpenCORE </i><i>AMR</i><i></i> 
 
  FFmpeg can make use of the OpenCORE libraries for AMR-NB decoding/encoding and AMR-WB decoding. 
 
@@ -34678,9 +34678,9 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 
  Go to &lt;<b><a rel="nofollow" HREF="http://sourceforge.net/projects/opencore-amr/">http://sourceforge.net/projects/opencore-amr/</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libvo-amrwbenc&quot;</tt> to configure to enable it. 
 
- <i>Fraunhofer </i><font SIZE="-1"><i>AAC</i></font><i> library</i> 
+ <i>Fraunhofer </i><i>AAC</i><i> library</i> 
 
- FFmpeg can make use of the Fraunhofer <font SIZE="-1">AAC</font> library for <font SIZE="-1">AAC</font> decoding &amp; encoding. 
+ FFmpeg can make use of the Fraunhofer AAC library for AAC decoding &amp; encoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="http://sourceforge.net/projects/opencore-amr/">http://sourceforge.net/projects/opencore-amr/</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libfdk-aac&quot;</tt> to configure to enable it. <a NAME="lb]U">&nbsp;</a>
 
@@ -34690,7 +34690,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 
  Go to &lt;<b><a rel="nofollow" HREF="http://www.openh264.org/">http://www.openh264.org/</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libopenh264&quot;</tt> to configure to enable it. 
 
- For decoding, this library is much more limited than the built-in decoder in libavcodec; currently, this library lacks support for decoding B-frames and some other main/high profile features. (It currently only supports constrained baseline profile and <font SIZE="-1">CABAC.</font>) Using it is mostly useful for testing and for taking advantage of Cisco's patent portfolio license (&lt;<b><a rel="nofollow" HREF="http://www.openh264.org/BINARY_LICENSE.txt">http://www.openh264.org/BINARY_LICENSE.txt</a></b>&gt;). <a NAME="lb]V">&nbsp;</a>
+ For decoding, this library is much more limited than the built-in decoder in libavcodec; currently, this library lacks support for decoding B-frames and some other main/high profile features. (It currently only supports constrained baseline profile and CABAC.) Using it is mostly useful for testing and for taking advantage of Cisco's patent portfolio license (&lt;<b><a rel="nofollow" HREF="http://www.openh264.org/BINARY_LICENSE.txt">http://www.openh264.org/BINARY_LICENSE.txt</a></b>&gt;). <a NAME="lb]V">&nbsp;</a>
 
 <h3>OpenJPEG</h3>
 
@@ -34698,17 +34698,17 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 
 <h3>rav1e</h3>
 
- FFmpeg can make use of rav1e (Rust <font SIZE="-1">AV1</font> Encoder) via its C bindings to encode videos. Go to &lt;<b><a rel="nofollow" HREF="https://github.com/xiph/rav1e/">https://github.com/xiph/rav1e/</a></b>&gt; and follow the instructions to build the C library. To enable using rav1e in FFmpeg, pass <tt>&quot;--enable-librav1e&quot;</tt> to <i>./configure</i>. <a NAME="lb]X">&nbsp;</a>
+ FFmpeg can make use of rav1e (Rust AV1 Encoder) via its C bindings to encode videos. Go to &lt;<b><a rel="nofollow" HREF="https://github.com/xiph/rav1e/">https://github.com/xiph/rav1e/</a></b>&gt; and follow the instructions to build the C library. To enable using rav1e in FFmpeg, pass <tt>&quot;--enable-librav1e&quot;</tt> to <i>./configure</i>. <a NAME="lb]X">&nbsp;</a>
 
-<h3><font SIZE="-1">SVT-AV1</font></h3>
+<h3>SVT-AV1</h3>
 
- FFmpeg can make use of the Scalable Video Technology for <font SIZE="-1">AV1</font> library for <font SIZE="-1">AV1</font> encoding. 
+ FFmpeg can make use of the Scalable Video Technology for AV1 library for AV1 encoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="https://github.com/OpenVisualCloud/SVT-AV1/">https://github.com/OpenVisualCloud/SVT-AV1/</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libsvtav1&quot;</tt> to configure to enable it. <a NAME="lb]Y">&nbsp;</a>
 
 <h3>TwoLAME</h3>
 
- FFmpeg can make use of the TwoLAME library for <font SIZE="-1">MP2</font> encoding. 
+ FFmpeg can make use of the TwoLAME library for MP2 encoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="http://www.twolame.org/">http://www.twolame.org/</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libtwolame&quot;</tt> to configure to enable it. <a NAME="lb]Z">&nbsp;</a>
 
@@ -34716,7 +34716,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 
  FFmpeg can read VapourSynth scripts as input. To enable support, pass <tt>&quot;--enable-vapoursynth&quot;</tt> to configure. Vapoursynth is detected via <tt>&quot;pkg-config&quot;</tt>. Versions 42 or greater supported. See &lt;<b><a rel="nofollow" HREF="http://www.vapoursynth.com/">http://www.vapoursynth.com/</a></b>&gt;. 
 
- Due to security concerns, Vapoursynth scripts will not be autodetected so the input format has to be forced. For ff* <font SIZE="-1">CLI</font> tools, add <tt>&quot;-f vapoursynth&quot;</tt> before the input <tt>&quot;-i yourscript.vpy&quot;</tt>. <a NAME="lb^A">&nbsp;</a>
+ Due to security concerns, Vapoursynth scripts will not be autodetected so the input format has to be forced. For ff* CLI tools, add <tt>&quot;-f vapoursynth&quot;</tt> before the input <tt>&quot;-i yourscript.vpy&quot;</tt>. <a NAME="lb^A">&nbsp;</a>
 
 <h3>x264</h3>
 
@@ -34726,40 +34726,40 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 
 <dl>
 <dt>
-</dt><dd> x264 is under the <font SIZE="-1">GNU</font> Public License Version 2 or later (see &lt;<b><a rel="nofollow" HREF="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a></b>&gt; for details), you must upgrade FFmpeg's license to <font SIZE="-1">GPL</font> in order to use it.</dd></dl>
+</dt><dd> x264 is under the GNU Public License Version 2 or later (see &lt;<b><a rel="nofollow" HREF="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a></b>&gt; for details), you must upgrade FFmpeg's license to GPL in order to use it.</dd></dl>
  <a NAME="lb^B">&nbsp;</a>
 
 <h3>x265</h3>
 
- FFmpeg can make use of the x265 library for <font SIZE="-1">HEVC</font> encoding. 
+ FFmpeg can make use of the x265 library for HEVC encoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="http://x265.org/developers.html">http://x265.org/developers.html</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libx265&quot;</tt> to configure to enable it. 
 
 <dl>
 <dt>
-</dt><dd> x265 is under the <font SIZE="-1">GNU</font> Public License Version 2 or later (see &lt;<b><a rel="nofollow" HREF="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a></b>&gt; for details), you must upgrade FFmpeg's license to <font SIZE="-1">GPL</font> in order to use it.</dd></dl>
+</dt><dd> x265 is under the GNU Public License Version 2 or later (see &lt;<b><a rel="nofollow" HREF="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a></b>&gt; for details), you must upgrade FFmpeg's license to GPL in order to use it.</dd></dl>
  <a NAME="lb^C">&nbsp;</a>
 
 <h3>xavs</h3>
 
- FFmpeg can make use of the xavs library for <font SIZE="-1">AVS</font> encoding. 
+ FFmpeg can make use of the xavs library for AVS encoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="http://xavs.sf.net/">http://xavs.sf.net/</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libxavs&quot;</tt> to configure to enable it. <a NAME="lb^D">&nbsp;</a>
 
 <h3>xavs2</h3>
 
- FFmpeg can make use of the xavs2 library for <font SIZE="-1">AVS2-P2/IEEE1857.4</font> video encoding. 
+ FFmpeg can make use of the xavs2 library for AVS2-P2/IEEE1857.4 video encoding. 
 
  Go to &lt;<b><a rel="nofollow" HREF="https://github.com/pkuvcl/xavs2">https://github.com/pkuvcl/xavs2</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libxavs2&quot;</tt> to configure to enable it. 
 
 <dl>
 <dt>
-</dt><dd> libxavs2 is under the <font SIZE="-1">GNU</font> Public License Version 2 or later (see &lt;<b><a rel="nofollow" HREF="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a></b>&gt; for details), you must upgrade FFmpeg's license to <font SIZE="-1">GPL</font> in order to use it.</dd></dl>
+</dt><dd> libxavs2 is under the GNU Public License Version 2 or later (see &lt;<b><a rel="nofollow" HREF="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a></b>&gt; for details), you must upgrade FFmpeg's license to GPL in order to use it.</dd></dl>
  <a NAME="lb^E">&nbsp;</a>
 
-<h3><font SIZE="-1">ZVBI</font></h3>
+<h3>ZVBI</h3>
 
- <font SIZE="-1">ZVBI</font> is a <font SIZE="-1">VBI</font> decoding library which can be used by FFmpeg to decode <font SIZE="-1">DVB</font> teletext pages and <font SIZE="-1">DVB</font> teletext subtitles. 
+ ZVBI is a VBI decoding library which can be used by FFmpeg to decode DVB teletext pages and DVB teletext subtitles. 
 
  Go to &lt;<b><a rel="nofollow" HREF="http://sourceforge.net/projects/zapping/">http://sourceforge.net/projects/zapping/</a></b>&gt; and follow the instructions for installing the library. Then pass <tt>&quot;--enable-libzvbi&quot;</tt> to configure to enable it. <a NAME="lb^F">&nbsp;</a>
 
@@ -34779,81 +34779,81 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab 4X Technologies format, used in some games.
 </pre>
-</dd><dt><b>8088flex </b><font SIZE="-1"><b>TMV</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>8088flex </b><b>TMV</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>AAX</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>AAX</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audible Enhanced Audio format, used in audiobooks.
 </pre>
-</dd><dt><font SIZE="-1"><b>AA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>AA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audible Format 2, 3, and 4, used in audiobooks.
 </pre>
-</dd><dt><font SIZE="-1"><b>ACT</b></font><b> Voice : </b>@tab<b> X</b>
+</dd><dt><b>ACT</b><b> Voice : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab contains G.729 audio
 </pre>
 </dd><dt><b>Adobe Filmstrip : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Audio </b><font SIZE="-1"><b>IFF</b></font><b> (</b><font SIZE="-1"><b>AIFF</b></font><b>) : X </b>@tab<b> X</b>
+</dd><dt><b>Audio </b><b>IFF</b><b> (</b><b>AIFF</b><b>) : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>American Laser Games </b><font SIZE="-1"><b>MM</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>American Laser Games </b><b>MM</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Multimedia format used in games like Mad Dog McCree.
 </pre>
-</dd><dt><b>3GPP </b><font SIZE="-1"><b>AMR</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>3GPP </b><b>AMR</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Amazing Studio Packed Animation File : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Multimedia format used in game Heart Of Darkness.
 </pre>
-</dd><dt><b>Apple </b><font SIZE="-1"><b>HTTP</b></font><b> Live Streaming : </b>@tab<b> X</b>
+</dd><dt><b>Apple </b><b>HTTP</b><b> Live Streaming : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Artworx Data Format : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Interplay </b><font SIZE="-1"><b>ACM</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Interplay </b><b>ACM</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio only format used in some Interplay games.
 </pre>
-</dd><dt><font SIZE="-1"><b>ADP</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADP</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used on the Nintendo Gamecube.
 </pre>
-</dd><dt><font SIZE="-1"><b>AFC</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>AFC</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used on the Nintendo Gamecube.
 </pre>
-</dd><dt><font SIZE="-1"><b>ADS/SS2</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADS/SS2</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used on the PS2.
 </pre>
-</dd><dt><font SIZE="-1"><b>APNG</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>APNG</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ASF</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ASF</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Advanced / Active Streaming Format.
 </pre>
-</dd><dt><font SIZE="-1"><b>AST</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>AST</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used on the Nintendo Wii.
 </pre>
-</dd><dt><font SIZE="-1"><b>AVI</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>AVI</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>AviSynth : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>AVR</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>AVR</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used on Mac.
 </pre>
-</dd><dt><font SIZE="-1"><b>AVS</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>AVS</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Multimedia format used by the Creature Shock game.
 </pre>
-</dd><dt><b>Beam Software </b><font SIZE="-1"><b>SIFF</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Beam Software </b><b>SIFF</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio and video format used in some games by Beam Software.
 </pre>
-</dd><dt><b>Bethesda Softworks </b><font SIZE="-1"><b>VID</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Bethesda Softworks </b><b>VID</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in some games from Bethesda Softworks.
 </pre>
@@ -34867,11 +34867,11 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Audio only multimedia format used by some games.
 </pre>
-</dd><dt><b>Bitmap Brothers </b><font SIZE="-1"><b>JV</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Bitmap Brothers </b><b>JV</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Z and Z95 games.
 </pre>
-</dd><dt><font SIZE="-1"><b>BRP</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>BRP</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Argonaut Games format.
 </pre>
@@ -34879,19 +34879,19 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Used in the game Flash Traffic: City of Angels.
 </pre>
-</dd><dt><font SIZE="-1"><b>BFSTM</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>BFSTM</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used on the Nintendo WiiU (based on BRSTM).
 </pre>
-</dd><dt><font SIZE="-1"><b>BRSTM</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>BRSTM</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used on the Nintendo Wii.
 </pre>
-</dd><dt><font SIZE="-1"><b>BW64</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>BW64</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Broadcast Wave 64bit.
 </pre>
-</dd><dt><font SIZE="-1"><b>BWF</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>BWF</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>codec2 (raw) : X </b>@tab<b> X</b>
 </dt><dd> <pre>
@@ -34901,35 +34901,35 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Contains header with version and mode info, simplifying playback.
 </pre>
-</dd><dt><font SIZE="-1"><b>CRI ADX</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>CRI ADX</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio-only format used in console video games.
 </pre>
-</dd><dt><font SIZE="-1"><b>CRI AIX</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>CRI AIX</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>CRI HCA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>CRI HCA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio-only format used in console video games.
 </pre>
-</dd><dt><b>Discworld </b><font SIZE="-1"><b>II BMV</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Discworld </b><b>II BMV</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Interplay C93 : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in the game Cyberia from Interplay.
 </pre>
-</dd><dt><b>Delphine Software International </b><font SIZE="-1"><b>CIN</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Delphine Software International </b><b>CIN</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Multimedia format used by Delphine Software games.
 </pre>
-</dd><dt><b>Digital Speech Standard (</b><font SIZE="-1"><b>DSS</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>Digital Speech Standard (</b><b>DSS</b><b>) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>CD+G</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>CD+G</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Video format used by CD+G karaoke disks
 </pre>
 </dd><dt><b>Phantom Cine : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Commodore </b><font SIZE="-1"><b>CDXL</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Commodore </b><b>CDXL</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Amiga CD video format
 </pre>
@@ -34937,13 +34937,13 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Apple Core Audio Format
 </pre>
-</dd><dt><font SIZE="-1"><b>CRC</b></font><b> testing format : X </b>@tab
+</dd><dt><b>CRC</b><b> testing format : X </b>@tab
 </dt><dd>
 </dd><dt><b>Creative Voice : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Created for the Sound Blaster Pro.
 </pre>
-</dd><dt><font SIZE="-1"><b>CRYO APC</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>CRYO APC</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used in some games by CRYO Interactive Entertainment.
 </pre>
@@ -34951,19 +34951,19 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>Deluxe Paint Animation : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DCSTR</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>DCSTR</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DFA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>DFA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab This format is used in Chronomaster game
 </pre>
 </dd><dt><b>DirectDraw Surface : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DSD</b></font><b> Stream File (</b><font SIZE="-1"><b>DSF</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>DSD</b><b> Stream File (</b><b>DSF</b><b>) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DV</b></font><b> video : X </b>@tab<b> X</b>
+</dd><dt><b>DV</b><b> video : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DXA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>DXA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab This format is used in the non-Windows version of the Feeble Files
          game and different game cutscenes repacked for use with ScummVM.
@@ -34976,25 +34976,25 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </pre>
 </dd><dt><b>Ensoniq Paris Audio File : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>FFM</b></font><b> (FFserver live feed) : X </b>@tab<b> X</b>
+</dd><dt><b>FFM</b><b> (FFserver live feed) : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Flash (</b><font SIZE="-1"><b>SWF</b></font><b>) : X </b>@tab<b> X</b>
+</dd><dt><b>Flash (</b><b>SWF</b><b>) : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Flash 9 (</b><font SIZE="-1"><b>AVM2</b></font><b>) : X </b>@tab<b> X</b>
+</dd><dt><b>Flash 9 (</b><b>AVM2</b><b>) : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Only embedded audio is decoded.
 </pre>
-</dd><dt><font SIZE="-1"><b>FLI/FLC/FLX</b></font><b> animation : </b>@tab<b> X</b>
+</dd><dt><b>FLI/FLC/FLX</b><b> animation : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab .fli/.flc files
 </pre>
-</dd><dt><b>Flash Video (</b><font SIZE="-1"><b>FLV</b></font><b>) : X </b>@tab<b> X</b>
+</dd><dt><b>Flash Video (</b><b>FLV</b><b>) : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Macromedia Flash video files
 </pre>
 </dd><dt><b>framecrc testing format : X </b>@tab
 </dt><dd>
-</dd><dt><b>FunCom </b><font SIZE="-1"><b>ISS</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>FunCom </b><b>ISS</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used in various games from FunCom like The Longest Journey.
 </pre>
@@ -35002,50 +35002,50 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>G.726 : </b>@tab<b> X </b>@tab<b> Both left- and right-justified.</b>
 </dt><dd>
-</dd><dt><b>G.729 </b><font SIZE="-1"><b>BIT</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>G.729 </b><b>BIT</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>G.729 raw : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>GENH</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>GENH</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format for various games.
 </pre>
-</dd><dt><font SIZE="-1"><b>GIF</b></font><b> Animation : X </b>@tab<b> X</b>
+</dd><dt><b>GIF</b><b> Animation : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>GXF</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>GXF</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab General eXchange Format SMPTE 360M, used by Thomson Grass Valley
          playout servers.
 </pre>
-</dd><dt><font SIZE="-1"><b>HNM</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>HNM</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Only version 4 supported, used in some games from Cryo Interactive
 </pre>
 </dd><dt><b>iCEDraw File : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ICO</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ICO</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Microsoft Windows ICO
 </pre>
-</dd><dt><b>id Quake </b><font SIZE="-1"><b>II CIN</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>id Quake </b><b>II CIN</b><b> video : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>id RoQ : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Quake III, Jedi Knight 2 and other computer games.
 </pre>
-</dd><dt><font SIZE="-1"><b>IEC61937</b></font><b> encapsulation : X </b>@tab<b> X</b>
+</dd><dt><b>IEC61937</b><b> encapsulation : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>IFF</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>IFF</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Interchange File Format
 </pre>
-</dd><dt><font SIZE="-1"><b>IFV</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>IFV</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab A format used by some old CCTV DVRs.
 </pre>
 </dd><dt><b>iLBC : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Interplay </b><font SIZE="-1"><b>MVE</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Interplay </b><b>MVE</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Format used in various Interplay computer games.
 </pre>
@@ -35053,37 +35053,37 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab I-frames only
 </pre>
-</dd><dt><font SIZE="-1"><b>IV8</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>IV8</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab A format generated by IndigoVision 8000 video server.
 </pre>
-</dd><dt><font SIZE="-1"><b>IVF</b></font><b> (On2) : X </b>@tab<b> X</b>
+</dd><dt><b>IVF</b><b> (On2) : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab A format used by libvpx
 </pre>
 </dd><dt><b>Internet Video Recording : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>IRCAM</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>IRCAM</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>LATM</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>LATM</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>LMLM4</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>LMLM4</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used by Linux Media Labs MPEG-4 PCI boards
 </pre>
-</dd><dt><font SIZE="-1"><b>LOAS</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>LOAS</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab contains LATM multiplexed AAC audio
 </pre>
-</dd><dt><font SIZE="-1"><b>LRC</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>LRC</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>LVF</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>LVF</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>LXF</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>LXF</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab VR native stream format, used by Leitch/Harris' video servers.
 </pre>
-</dd><dt><b>Magic Lantern Video (</b><font SIZE="-1"><b>MLV</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>Magic Lantern Video (</b><b>MLV</b><b>) : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Matroska : X </b>@tab<b> X</b>
 </dt><dd>
@@ -35093,15 +35093,15 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Metadata in text format.
 </pre>
-</dd><dt><font SIZE="-1"><b>MAXIS XA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>MAXIS XA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Sim City 3000; file extension .xa.
 </pre>
-</dd><dt><font SIZE="-1"><b>MCA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>MCA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in some games from Capcom; file extension .mca.
 </pre>
-</dd><dt><font SIZE="-1"><b>MD</b></font><b> Studio : </b>@tab<b> X</b>
+</dd><dt><b>MD</b><b> Studio : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Metal Gear Solid: The Twin Snakes : </b>@tab<b> X</b>
 </dt><dd>
@@ -35113,17 +35113,17 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>Monkey's Audio : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Motion Pixels </b><font SIZE="-1"><b>MVI</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Motion Pixels </b><b>MVI</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>MOV/QuickTime/MP4 : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab 3GP, 3GP2, PSP, iPod variants supported
 </pre>
-</dd><dt><font SIZE="-1"><b>MP2</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>MP2</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MP3</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>MP3</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MPEG-1</b></font><b> System : X </b>@tab<b> X</b>
+</dd><dt><b>MPEG-1</b><b> System : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab muxed audio and video, VCD format supported
 </pre>
@@ -35135,49 +35135,49 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab also known as DVB Transport Stream
 </pre>
-</dd><dt><font SIZE="-1"><b>MPEG-4</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>MPEG-4</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab MPEG-4 is a variant of QuickTime.
 </pre>
-</dd><dt><font SIZE="-1"><b>MSF</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>MSF</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used on the PS3.
 </pre>
-</dd><dt><b>Mirillis </b><font SIZE="-1"><b>FIC</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>Mirillis </b><b>FIC</b><b> video : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab No cursor rendering.
 </pre>
-</dd><dt><font SIZE="-1"><b>MIDI</b></font><b> Sample Dump Standard : </b>@tab<b> X</b>
+</dd><dt><b>MIDI</b><b> Sample Dump Standard : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MIME</b></font><b> multipart </b><font SIZE="-1"><b>JPEG</b></font><b> : X </b>@tab
+</dd><dt><b>MIME</b><b> multipart </b><b>JPEG</b><b> : X </b>@tab
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MSN TCP</b></font><b> webcam : </b>@tab<b> X</b>
+</dd><dt><b>MSN TCP</b><b> webcam : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used by MSN Messenger webcam streams.
 </pre>
-</dd><dt><font SIZE="-1"><b>MTV</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>MTV</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Musepack : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Musepack </b><font SIZE="-1"><b>SV8</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Musepack </b><b>SV8</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Material eXchange Format (</b><font SIZE="-1"><b>MXF</b></font><b>) : X </b>@tab<b> X</b>
+</dd><dt><b>Material eXchange Format (</b><b>MXF</b><b>) : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab SMPTE 377M, used by D-Cinema, broadcast industry.
 </pre>
-</dd><dt><b>Material eXchange Format (</b><font SIZE="-1"><b>MXF</b></font><b>), D-10 Mapping : X </b>@tab<b> X</b>
+</dd><dt><b>Material eXchange Format (</b><b>MXF</b><b>), D-10 Mapping : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab SMPTE 386M, D-10/IMX Mapping.
 </pre>
-</dd><dt><font SIZE="-1"><b>NC</b></font><b> camera feed : </b>@tab<b> X</b>
+</dd><dt><b>NC</b><b> camera feed : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab NC (AVIP NC4600) camera streams
 </pre>
-</dd><dt><font SIZE="-1"><b>NIST</b></font><b> SPeech HEader REsources : </b>@tab<b> X</b>
+</dd><dt><b>NIST</b><b> SPeech HEader REsources : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Computerized Speech Lab </b><font SIZE="-1"><b>NSP</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Computerized Speech Lab </b><b>NSP</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>NTT</b></font><b> TwinVQ (</b><font SIZE="-1"><b>VQF</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>NTT</b><b> TwinVQ (</b><b>VQF</b><b>) : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Nippon Telegraph and Telephone Corporation TwinVQ.
 </pre>
@@ -35185,25 +35185,25 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>NuppelVideo : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>NUT</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>NUT</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab NUT Open Container Format
 </pre>
 </dd><dt><b>Ogg : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Playstation Portable </b><font SIZE="-1"><b>PMP</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Playstation Portable </b><b>PMP</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Portable Voice Format : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>TechnoTrend </b><font SIZE="-1"><b>PVA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>TechnoTrend </b><b>PVA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used by TechnoTrend DVB PCI boards.
 </pre>
-</dd><dt><font SIZE="-1"><b>QCP</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>QCP</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>ADTS</b></font><b> (</b><font SIZE="-1"><b>AAC</b></font><b>) : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>ADTS</b><b> (</b><b>AAC</b><b>) : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>AC-3</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>AC-3</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>raw AMR-NB : </b>@tab<b> X</b>
 </dt><dd>
@@ -35211,23 +35211,23 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>raw aptX : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw aptX </b><font SIZE="-1"><b>HD</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>raw aptX </b><b>HD</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw Chinese </b><font SIZE="-1"><b>AVS</b></font><b> video : X </b>@tab<b> X</b>
+</dd><dt><b>raw Chinese </b><b>AVS</b><b> video : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>raw Dirac : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>raw DNxHD : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>DTS</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>DTS</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>raw DTS-HD : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>raw E-AC-3 : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>FLAC</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>FLAC</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>GSM</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>GSM</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>raw H.261 : X </b>@tab<b> X</b>
 </dt><dd>
@@ -35235,91 +35235,91 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>raw H.264 : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>HEVC</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>HEVC</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw Ingenient </b><font SIZE="-1"><b>MJPEG</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>raw Ingenient </b><b>MJPEG</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>MJPEG</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>MJPEG</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>MLP</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>MLP</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>MPEG</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>MPEG</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>MPEG-1</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>MPEG-1</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>MPEG-2</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>MPEG-2</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>MPEG-4</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>MPEG-4</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>NULL</b></font><b> : X </b>@tab
+</dd><dt><b>raw </b><b>NULL</b><b> : X </b>@tab
 </dt><dd>
 </dd><dt><b>raw video : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>raw id RoQ : X </b>@tab
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>SBC</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>SBC</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>raw Shorten : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>TAK</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>TAK</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>raw TrueHD : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>VC-1</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>VC-1</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> A-law : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> A-law : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> mu-law : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> mu-law : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> Archimedes </b><font SIZE="-1"><b>VIDC</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> Archimedes </b><b>VIDC</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> signed 8 bit : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> signed 8 bit : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> signed 16 bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> signed 16 bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> signed 16 bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> signed 16 bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> signed 24 bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> signed 24 bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> signed 24 bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> signed 24 bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> signed 32 bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> signed 32 bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> signed 32 bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> signed 32 bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> signed 64 bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> signed 64 bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> signed 64 bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> signed 64 bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> unsigned 8 bit : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> unsigned 8 bit : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> unsigned 16 bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> unsigned 16 bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> unsigned 16 bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> unsigned 16 bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> unsigned 24 bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> unsigned 24 bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> unsigned 24 bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> unsigned 24 bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> unsigned 32 bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> unsigned 32 bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> unsigned 32 bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> unsigned 32 bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM 16.8</b></font><b> floating point little-endian : </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM 16.8</b><b> floating point little-endian : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM 24.0</b></font><b> floating point little-endian : </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM 24.0</b><b> floating point little-endian : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> floating-point 32 bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> floating-point 32 bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> floating-point 32 bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> floating-point 32 bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> floating-point 64 bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> floating-point 64 bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>raw </b><font SIZE="-1"><b>PCM</b></font><b> floating-point 64 bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>raw </b><b>PCM</b><b> floating-point 64 bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RDT</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>RDT</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>REDCODE R3D</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>REDCODE R3D</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab File format used by RED Digital cameras, contains JPEG 2000 frames and PCM audio.
 </pre>
@@ -35331,49 +35331,49 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>Renderware TeXture Dictionary : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Resolume </b><font SIZE="-1"><b>DXV</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Resolume </b><b>DXV</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RF64</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>RF64</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RL2</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>RL2</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio and video format used in some games by Entertainment Software Partners.
 </pre>
 </dd><dt><b>RPL/ARMovie : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Lego Mindstorms </b><font SIZE="-1"><b>RSO</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>Lego Mindstorms </b><b>RSO</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RSD</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>RSD</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RTMP</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>RTMP</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Output is performed by publishing stream to RTMP server
 </pre>
-</dd><dt><font SIZE="-1"><b>RTP</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>RTP</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RTSP</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>RTSP</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Sample Dump eXchange : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SAP</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>SAP</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SBG</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>SBG</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SDP</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>SDP</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SER</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>SER</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Sega </b><font SIZE="-1"><b>FILM/CPK</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>Sega </b><b>FILM/CPK</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in many Sega Saturn console games.
 </pre>
 </dd><dt><b>Silicon Graphics Movie : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Sierra </b><font SIZE="-1"><b>SOL</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Sierra </b><b>SOL</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab .sol files used in Sierra Online games.
 </pre>
-</dd><dt><b>Sierra </b><font SIZE="-1"><b>VMD</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Sierra </b><b>VMD</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Sierra CD-ROM games.
 </pre>
@@ -35381,71 +35381,71 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Multimedia format used by many games.
 </pre>
-</dd><dt><font SIZE="-1"><b>SMJPEG</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>SMJPEG</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in certain Loki game ports.
 </pre>
-</dd><dt><font SIZE="-1"><b>SMPTE 337M</b></font><b> encapsulation : </b>@tab<b> X</b>
+</dd><dt><b>SMPTE 337M</b><b> encapsulation : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Smush : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Multimedia format used in some LucasArts games.
 </pre>
-</dd><dt><b>Sony OpenMG (</b><font SIZE="-1"><b>OMA</b></font><b>) : X </b>@tab<b> X</b>
+</dd><dt><b>Sony OpenMG (</b><b>OMA</b><b>) : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used in Sony Sonic Stage and Sony Vegas.
 </pre>
-</dd><dt><b>Sony PlayStation </b><font SIZE="-1"><b>STR</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Sony PlayStation </b><b>STR</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Sony Wave64 (W64) : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>SoX native format : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SUN AU</b></font><b> format : X </b>@tab<b> X</b>
+</dd><dt><b>SUN AU</b><b> format : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SUP</b></font><b> raw </b><font SIZE="-1"><b>PGS</b></font><b> subtitles : X </b>@tab<b> X</b>
+</dd><dt><b>SUP</b><b> raw </b><b>PGS</b><b> subtitles : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SVAG</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>SVAG</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used in Konami PS2 games.
 </pre>
-</dd><dt><font SIZE="-1"><b>TDSC</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>TDSC</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Text files : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>THP</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>THP</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used on the Nintendo GameCube.
 </pre>
-</dd><dt><b>Tiertex Limited </b><font SIZE="-1"><b>SEQ</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Tiertex Limited </b><b>SEQ</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Tiertex .seq files used in the DOS CD-ROM version of the game Flashback.
 </pre>
 </dd><dt><b>True Audio : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>VAG</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>VAG</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used in many Sony PS2 games.
 </pre>
-</dd><dt><font SIZE="-1"><b>VC-1</b></font><b> test bitstream : X </b>@tab<b> X</b>
+</dd><dt><b>VC-1</b><b> test bitstream : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Vidvox Hap : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Vivo : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>VPK</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>VPK</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used in Sony PS games.
 </pre>
-</dd><dt><font SIZE="-1"><b>WAV</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>WAV</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>WavPack : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>WebM : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Windows Televison (</b><font SIZE="-1"><b>WTV</b></font><b>) : X </b>@tab<b> X</b>
+</dd><dt><b>Windows Televison (</b><b>WTV</b><b>) : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Wing Commander </b><font SIZE="-1"><b>III</b></font><b> movie : </b>@tab<b> X</b>
+</dd><dt><b>Wing Commander </b><b>III</b><b> movie : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Multimedia format used in Origin's Wing Commander III computer game.
 </pre>
@@ -35453,19 +35453,19 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Multimedia format used in Westwood Studios games.
 </pre>
-</dd><dt><b>Westwood Studios </b><font SIZE="-1"><b>VQA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Westwood Studios </b><b>VQA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Multimedia format used in Westwood Studios games.
 </pre>
-</dd><dt><b>Wideband Single-bit Data (</b><font SIZE="-1"><b>WSD</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>Wideband Single-bit Data (</b><b>WSD</b><b>) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>WVE</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>WVE</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>XMV</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>XMV</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Microsoft video container used in Xbox games.
 </pre>
-</dd><dt><font SIZE="-1"><b>XVAG</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>XVAG</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Audio format used on the PS3.
 </pre>
@@ -35473,11 +35473,11 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Microsoft audio container used by XAudio 2.
 </pre>
-</dd><dt><b>eXtended BINary text (</b><font SIZE="-1"><b>XBIN</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>eXtended BINary text (</b><b>XBIN</b><b>) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>YUV4MPEG</b></font><b> pipe : X </b>@tab<b> X</b>
+</dd><dt><b>YUV4MPEG</b><b> pipe : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Psygnosis </b><font SIZE="-1"><b>YOP</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Psygnosis </b><b>YOP</b><b> : </b>@tab<b> X</b>
 </dt><dd></dd></dl>
  
 
@@ -35493,109 +35493,109 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab one raw file per component
 </pre>
-</dd><dt><b>Alias </b><font SIZE="-1"><b>PIX</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>Alias </b><b>PIX</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Alias/Wavefront PIX image format
 </pre>
-</dd><dt><b>animated </b><font SIZE="-1"><b>GIF</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>animated </b><b>GIF</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>APNG</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>APNG</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Animated Portable Network Graphics
 </pre>
-</dd><dt><font SIZE="-1"><b>BMP</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>BMP</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Microsoft BMP image
 </pre>
-</dd><dt><b>BRender </b><font SIZE="-1"><b>PIX</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>BRender </b><b>PIX</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Argonaut BRender 3D engine image format.
 </pre>
-</dd><dt><font SIZE="-1"><b>CRI</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>CRI</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Cintel RAW
 </pre>
-</dd><dt><font SIZE="-1"><b>DPX</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>DPX</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Digital Picture Exchange
 </pre>
-</dd><dt><font SIZE="-1"><b>EXR</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>EXR</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab OpenEXR
 </pre>
-</dd><dt><font SIZE="-1"><b>FITS</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>FITS</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Flexible Image Transport System
 </pre>
-</dd><dt><font SIZE="-1"><b>JPEG</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>JPEG</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Progressive JPEG is not supported.
 </pre>
-</dd><dt><font SIZE="-1"><b>JPEG 2000</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>JPEG 2000</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>JPEG-LS : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>LJPEG</b></font><b> : X </b>@tab
+</dd><dt><b>LJPEG</b><b> : X </b>@tab
 </dt><dd> <pre>
     @tab Lossless JPEG
 </pre>
-</dd><dt><font SIZE="-1"><b>MSP</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>MSP</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Microsoft Paint image
 </pre>
-</dd><dt><font SIZE="-1"><b>PAM</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>PAM</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab PAM is a PNM extension with alpha support.
 </pre>
-</dd><dt><font SIZE="-1"><b>PBM</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>PBM</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Portable BitMap image
 </pre>
-</dd><dt><font SIZE="-1"><b>PCD</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>PCD</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab PhotoCD
 </pre>
-</dd><dt><font SIZE="-1"><b>PCX</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>PCX</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab PC Paintbrush
 </pre>
-</dd><dt><font SIZE="-1"><b>PFM</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>PFM</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Portable FloatMap image
 </pre>
-</dd><dt><font SIZE="-1"><b>PGM</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>PGM</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Portable GrayMap image
 </pre>
-</dd><dt><font SIZE="-1"><b>PGMYUV</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>PGMYUV</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab PGM with U and V components in YUV 4:2:0
 </pre>
-</dd><dt><font SIZE="-1"><b>PGX</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>PGX</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab PGX file decoder
 </pre>
-</dd><dt><font SIZE="-1"><b>PIC</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>PIC</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Pictor/PC Paint
 </pre>
-</dd><dt><font SIZE="-1"><b>PNG</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>PNG</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Portable Network Graphics image
 </pre>
-</dd><dt><font SIZE="-1"><b>PPM</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>PPM</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Portable PixelMap image
 </pre>
-</dd><dt><font SIZE="-1"><b>PSD</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>PSD</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Photoshop
 </pre>
-</dd><dt><font SIZE="-1"><b>PTX</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>PTX</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab V.Flash PTX format
 </pre>
-</dd><dt><font SIZE="-1"><b>SGI</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>SGI</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab SGI RGB image format
 </pre>
@@ -35603,7 +35603,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Sun RAS image format
 </pre>
-</dd><dt><font SIZE="-1"><b>TIFF</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>TIFF</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab YUV, JPEG and some extension is not supported yet.
 </pre>
@@ -35615,7 +35615,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab WebP image format, encoding supported through external library libwebp
 </pre>
-</dd><dt><font SIZE="-1"><b>XBM</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>XBM</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab X BitMap image format
 </pre>
@@ -35623,11 +35623,11 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab X-Face image format
 </pre>
-</dd><dt><font SIZE="-1"><b>XPM</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>XPM</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab X PixMap image format
 </pre>
-</dd><dt><font SIZE="-1"><b>XWD</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>XWD</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab X Window Dump image format
 </pre></dd></dl>
@@ -35646,25 +35646,25 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Used in certain computer games.
 </pre>
-</dd><dt><b>8088flex </b><font SIZE="-1"><b>TMV</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>8088flex </b><b>TMV</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>A64 multicolor : X </b>@tab
 </dt><dd> <pre>
     @tab Creates video suitable to be played on a commodore 64 (multicolor mode).
 </pre>
-</dd><dt><b>Amazing Studio </b><font SIZE="-1"><b>PAF</b></font><b> Video : </b>@tab<b> X</b>
+</dd><dt><b>Amazing Studio </b><b>PAF</b><b> Video : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>American Laser Games </b><font SIZE="-1"><b>MM</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>American Laser Games </b><b>MM</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in games like Mad Dog McCree.
 </pre>
 </dd><dt><b>Amuse Graphics Movie : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>AMV</b></font><b> Video : X </b>@tab<b> X</b>
+</dd><dt><b>AMV</b><b> Video : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Chinese MP3 players.
 </pre>
-</dd><dt><font SIZE="-1"><b>ANSI/ASCII</b></font><b> art : </b>@tab<b> X</b>
+</dd><dt><b>ANSI/ASCII</b><b> art : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Apple Intermediate Codec : </b>@tab<b> X</b>
 </dt><dd>
@@ -35692,11 +35692,11 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab fourcc: ASV2
 </pre>
-</dd><dt><font SIZE="-1"><b>ATI VCR1</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ATI VCR1</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: VCR1
 </pre>
-</dd><dt><font SIZE="-1"><b>ATI VCR2</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ATI VCR2</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: VCR2
 </pre>
@@ -35706,37 +35706,37 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>Autodesk Animator Flic video : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Autodesk </b><font SIZE="-1"><b>RLE</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Autodesk </b><b>RLE</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: AASC
 </pre>
-</dd><dt><font SIZE="-1"><b>AV1</b></font><b> : E </b>@tab<b> E</b>
+</dd><dt><b>AV1</b><b> : E </b>@tab<b> E</b>
 </dt><dd> <pre>
     @tab Supported through external libraries libaom, libdav1d, librav1e and libsvtav1
 </pre>
-</dd><dt><b>Avid 1:1 10-bit </b><font SIZE="-1"><b>RGB</b></font><b> Packer : X </b>@tab<b> X</b>
+</dd><dt><b>Avid 1:1 10-bit </b><b>RGB</b><b> Packer : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: AVrp
 </pre>
-</dd><dt><font SIZE="-1"><b>AVS</b></font><b> (Audio Video Standard) video : </b>@tab<b> X</b>
+</dd><dt><b>AVS</b><b> (Audio Video Standard) video : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Video encoding used by the Creature Shock game.
 </pre>
-</dd><dt><font SIZE="-1"><b>AVS2-P2/IEEE1857.4</b></font><b> : E </b>@tab<b> E</b>
+</dd><dt><b>AVS2-P2/IEEE1857.4</b><b> : E </b>@tab<b> E</b>
 </dt><dd> <pre>
     @tab Supported through external libraries libxavs2 and libdavs2
 </pre>
-</dd><dt><font SIZE="-1"><b>AVS3-P2/IEEE1857.10</b></font><b> : </b>@tab<b> E</b>
+</dd><dt><b>AVS3-P2/IEEE1857.10</b><b> : </b>@tab<b> E</b>
 </dt><dd> <pre>
     @tab Supported through external library libuavs3d
 </pre>
-</dd><dt><font SIZE="-1"><b>AYUV</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>AYUV</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Microsoft uncompressed packed 4:4:4:4
 </pre>
-</dd><dt><b>Beam Software </b><font SIZE="-1"><b>VB</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Beam Software </b><b>VB</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Bethesda </b><font SIZE="-1"><b>VID</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>Bethesda </b><b>VID</b><b> video : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in some games from Bethesda Softworks.
 </pre>
@@ -35744,7 +35744,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>BitJazz SheerVideo : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Bitmap Brothers </b><font SIZE="-1"><b>JV</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>Bitmap Brothers </b><b>JV</b><b> video : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>y41p Brooktree uncompressed 4:1:1 12-bit : X </b>@tab<b> X</b>
 </dt><dd>
@@ -35764,31 +35764,31 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab fourcc: CSCD
 </pre>
-</dd><dt><font SIZE="-1"><b>CD+G</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>CD+G</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Video codec for CD+G karaoke disks
 </pre>
-</dd><dt><font SIZE="-1"><b>CDXL</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>CDXL</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Amiga CD video codec
 </pre>
-</dd><dt><b>Chinese </b><font SIZE="-1"><b>AVS</b></font><b> video : E </b>@tab<b> X</b>
+</dd><dt><b>Chinese </b><b>AVS</b><b> video : E </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab AVS1-P2, JiZhun profile, encoding through external library libxavs
 </pre>
-</dd><dt><b>Delphine Software International </b><font SIZE="-1"><b>CIN</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>Delphine Software International </b><b>CIN</b><b> video : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Codec used in Delphine Software International games.
 </pre>
-</dd><dt><b>Discworld </b><font SIZE="-1"><b>II BMV</b></font><b> Video : </b>@tab<b> X</b>
+</dd><dt><b>Discworld </b><b>II BMV</b><b> Video : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>CineForm </b><font SIZE="-1"><b>HD</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>CineForm </b><b>HD</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Canopus </b><font SIZE="-1"><b>HQ</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Canopus </b><b>HQ</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Canopus </b><font SIZE="-1"><b>HQA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Canopus </b><b>HQA</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Canopus </b><font SIZE="-1"><b>HQX</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Canopus </b><b>HQX</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Canopus Lossless Codec : </b>@tab<b> X</b>
 </dt><dd>
@@ -35804,9 +35804,9 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </pre>
 </dd><dt><b>CPiA Video Format : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Creative </b><font SIZE="-1"><b>YUV</b></font><b> (</b><font SIZE="-1"><b>CYUV</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>Creative </b><b>YUV</b><b> (</b><b>CYUV</b><b>) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DFA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>DFA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Codec used in Chronomaster game.
 </pre>
@@ -35828,29 +35828,29 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab fourcc: TM20
 </pre>
-</dd><dt><b>Duck TrueMotion 2.0 </b><font SIZE="-1"><b>RT</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Duck TrueMotion 2.0 </b><b>RT</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: TR20
 </pre>
-</dd><dt><font SIZE="-1"><b>DV</b></font><b> (Digital Video) : X </b>@tab<b> X</b>
+</dd><dt><b>DV</b><b> (Digital Video) : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Dxtory capture format : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Feeble Files/ScummVM </b><font SIZE="-1"><b>DXA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Feeble Files/ScummVM </b><b>DXA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Codec originally used in Feeble Files game.
 </pre>
-</dd><dt><b>Electronic Arts </b><font SIZE="-1"><b>CMV</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>Electronic Arts </b><b>CMV</b><b> video : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in NHL 95 game.
 </pre>
 </dd><dt><b>Electronic Arts Madcow video : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Electronic Arts </b><font SIZE="-1"><b>TGV</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>Electronic Arts </b><b>TGV</b><b> video : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Electronic Arts </b><font SIZE="-1"><b>TGQ</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>Electronic Arts </b><b>TGQ</b><b> video : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Electronic Arts </b><font SIZE="-1"><b>TQI</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>Electronic Arts </b><b>TQI</b><b> video : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Escape 124 : </b>@tab<b> X</b>
 </dt><dd>
@@ -35866,11 +35866,11 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </pre>
 </dd><dt><b>Flash Screen Video v2 : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Flash Video (</b><font SIZE="-1"><b>FLV</b></font><b>) : X </b>@tab<b> X</b>
+</dd><dt><b>Flash Video (</b><b>FLV</b><b>) : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Sorenson H.263 used in Flash
 </pre>
-</dd><dt><font SIZE="-1"><b>FM</b></font><b> Screen Capture Codec : </b>@tab<b> X</b>
+</dd><dt><b>FM</b><b> Screen Capture Codec : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Forward Uncompressed : </b>@tab<b> X</b>
 </dt><dd>
@@ -35892,21 +35892,21 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>H.263+ / H.263-1998 / H.263 version 2 : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>H.264 / </b><font SIZE="-1"><b>AVC / MPEG-4 AVC / MPEG-4</b></font><b> part 10 : E </b>@tab<b> X</b>
+</dd><dt><b>H.264 / </b><b>AVC / MPEG-4 AVC / MPEG-4</b><b> part 10 : E </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab encoding supported through external library libx264 and OpenH264
 </pre>
-</dd><dt><font SIZE="-1"><b>HEVC</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>HEVC</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab encoding supported through external library libx265 and libkvazaar
 </pre>
-</dd><dt><font SIZE="-1"><b>HNM</b></font><b> version 4 : </b>@tab<b> X</b>
+</dd><dt><b>HNM</b><b> version 4 : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>HuffYUV : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>HuffYUV FFmpeg variant : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>IBM</b></font><b> Ultimotion : </b>@tab<b> X</b>
+</dd><dt><b>IBM</b><b> Ultimotion : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: ULTI
 </pre>
@@ -35918,15 +35918,15 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Used in Quake III, Jedi Knight 2, other computer games.
 </pre>
-</dd><dt><font SIZE="-1"><b>IFF ILBM</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>IFF ILBM</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab IFF interleaved bitmap
 </pre>
-</dd><dt><font SIZE="-1"><b>IFF</b></font><b> ByteRun1 : </b>@tab<b> X</b>
+</dd><dt><b>IFF</b><b> ByteRun1 : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab IFF run length encoded bitmap
 </pre>
-</dd><dt><b>Infinity </b><font SIZE="-1"><b>IMM4</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Infinity </b><b>IMM4</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Intel H.263 : </b>@tab<b> X</b>
 </dt><dd>
@@ -35942,7 +35942,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Used in the game Cyberia from Interplay.
 </pre>
-</dd><dt><b>Interplay </b><font SIZE="-1"><b>MVE</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>Interplay </b><b>MVE</b><b> video : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Interplay .MVE files.
 </pre>
@@ -35952,29 +35952,29 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Codec used in Worms games.
 </pre>
-</dd><dt><b>Kega Game Video (</b><font SIZE="-1"><b>KGV1</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>Kega Game Video (</b><b>KGV1</b><b>) : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Kega emulator screen capture codec.
 </pre>
 </dd><dt><b>Lagarith : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>LCL</b></font><b> (LossLess Codec Library) </b><font SIZE="-1"><b>MSZH</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>LCL</b><b> (LossLess Codec Library) </b><b>MSZH</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>LCL</b></font><b> (LossLess Codec Library) </b><font SIZE="-1"><b>ZLIB</b></font><b> : E </b>@tab<b> E</b>
+</dd><dt><b>LCL</b><b> (LossLess Codec Library) </b><b>ZLIB</b><b> : E </b>@tab<b> E</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>LOCO</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>LOCO</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>LucasArts SANM/Smush : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in LucasArts games / SMUSH animations.
 </pre>
-</dd><dt><b>lossless </b><font SIZE="-1"><b>MJPEG</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>lossless </b><b>MJPEG</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>MagicYUV Video : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Mandsoft Screen Capture Codec : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Microsoft </b><font SIZE="-1"><b>ATC</b></font><b> Screen : </b>@tab<b> X</b>
+</dd><dt><b>Microsoft </b><b>ATC</b><b> Screen : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Also known as Microsoft Screen 3.
 </pre>
@@ -35982,7 +35982,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Also known as Microsoft Titanium Screen 2.
 </pre>
-</dd><dt><b>Microsoft </b><font SIZE="-1"><b>RLE</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Microsoft </b><b>RLE</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Microsoft Screen 1 : </b>@tab<b> X</b>
 </dt><dd> <pre>
@@ -36002,29 +36002,29 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab fourcc: VIXL
 </pre>
-</dd><dt><font SIZE="-1"><b>MJPEG</b></font><b> (Motion </b><font SIZE="-1"><b>JPEG</b></font><b>) : X </b>@tab<b> X</b>
+</dd><dt><b>MJPEG</b><b> (Motion </b><b>JPEG</b><b>) : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Mobotix MxPEG video : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Motion Pixels video : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MPEG-1</b></font><b> video : X </b>@tab<b> X</b>
+</dd><dt><b>MPEG-1</b><b> video : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MPEG-2</b></font><b> video : X </b>@tab<b> X</b>
+</dd><dt><b>MPEG-2</b><b> video : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MPEG-4</b></font><b> part 2 : X </b>@tab<b> X</b>
+</dd><dt><b>MPEG-4</b><b> part 2 : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab libxvidcore can be used alternatively for encoding.
 </pre>
-</dd><dt><font SIZE="-1"><b>MPEG-4</b></font><b> part 2 Microsoft variant version 1 : </b>@tab<b> X</b>
+</dd><dt><b>MPEG-4</b><b> part 2 Microsoft variant version 1 : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MPEG-4</b></font><b> part 2 Microsoft variant version 2 : X </b>@tab<b> X</b>
+</dd><dt><b>MPEG-4</b><b> part 2 Microsoft variant version 2 : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MPEG-4</b></font><b> part 2 Microsoft variant version 3 : X </b>@tab<b> X</b>
+</dd><dt><b>MPEG-4</b><b> part 2 Microsoft variant version 3 : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Newtek SpeedHQ : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Nintendo Gamecube </b><font SIZE="-1"><b>THP</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>Nintendo Gamecube </b><b>THP</b><b> video : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>NotchLC : </b>@tab<b> X</b>
 </dt><dd>
@@ -36032,59 +36032,59 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Video encoding used in NuppelVideo files.
 </pre>
-</dd><dt><b>On2 </b><font SIZE="-1"><b>VP3</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>On2 </b><b>VP3</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab still experimental
 </pre>
-</dd><dt><b>On2 </b><font SIZE="-1"><b>VP4</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>On2 </b><b>VP4</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: VP40
 </pre>
-</dd><dt><b>On2 </b><font SIZE="-1"><b>VP5</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>On2 </b><b>VP5</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: VP50
 </pre>
-</dd><dt><b>On2 </b><font SIZE="-1"><b>VP6</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>On2 </b><b>VP6</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: VP60,VP61,VP62
 </pre>
-</dd><dt><b>On2 </b><font SIZE="-1"><b>VP7</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>On2 </b><b>VP7</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: VP70,VP71
 </pre>
-</dd><dt><font SIZE="-1"><b>VP8</b></font><b> : E </b>@tab<b> X</b>
+</dd><dt><b>VP8</b><b> : E </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: VP80, encoding supported through external library libvpx
 </pre>
-</dd><dt><font SIZE="-1"><b>VP9</b></font><b> : E </b>@tab<b> X</b>
+</dd><dt><b>VP9</b><b> : E </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab encoding supported through external library libvpx
 </pre>
-</dd><dt><b>Pinnacle </b><font SIZE="-1"><b>TARGA</b></font><b> CineWave </b><font SIZE="-1"><b>YUV16</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Pinnacle </b><b>TARGA</b><b> CineWave </b><b>YUV16</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: Y216
 </pre>
-</dd><dt><b>Q-team </b><font SIZE="-1"><b>QPEG</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Q-team </b><b>QPEG</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourccs: QPEG, Q1.0, Q1.1
 </pre>
 </dd><dt><b>QuickTime 8BPS video : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>QuickTime Animation (</b><font SIZE="-1"><b>RLE</b></font><b>) video : X </b>@tab<b> X</b>
+</dd><dt><b>QuickTime Animation (</b><b>RLE</b><b>) video : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: 'rle '
 </pre>
-</dd><dt><b>QuickTime Graphics (</b><font SIZE="-1"><b>SMC</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>QuickTime Graphics (</b><b>SMC</b><b>) : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: 'smc '
 </pre>
-</dd><dt><b>QuickTime video (</b><font SIZE="-1"><b>RPZA</b></font><b>) : X </b>@tab<b> X</b>
+</dd><dt><b>QuickTime video (</b><b>RPZA</b><b>) : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: rpza
 </pre>
-</dd><dt><b>R10K </b><font SIZE="-1"><b>AJA</b></font><b> Kona 10-bit </b><font SIZE="-1"><b>RGB</b></font><b> Codec : X </b>@tab<b> X</b>
+</dd><dt><b>R10K </b><b>AJA</b><b> Kona 10-bit </b><b>RGB</b><b> Codec : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>R210 Quicktime Uncompressed </b><font SIZE="-1"><b>RGB</b></font><b> 10-bit : X </b>@tab<b> X</b>
+</dd><dt><b>R210 Quicktime Uncompressed </b><b>RGB</b><b> 10-bit : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Raw Video : X </b>@tab<b> X</b>
 </dt><dd>
@@ -36098,11 +36098,11 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </pre>
 </dd><dt><b>RealVideo 4.0 : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Renderware </b><font SIZE="-1"><b>TXD</b></font><b> (TeXture Dictionary) : </b>@tab<b> X</b>
+</dd><dt><b>Renderware </b><b>TXD</b><b> (TeXture Dictionary) : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Texture dictionaries used by the Renderware Engine.
 </pre>
-</dd><dt><font SIZE="-1"><b>RL2</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>RL2</b><b> video : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab used in some games by Entertainment Software Partners
 </pre>
@@ -36112,27 +36112,27 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>Screen Recorder Gold Codec : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Sierra </b><font SIZE="-1"><b>VMD</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>Sierra </b><b>VMD</b><b> video : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Sierra VMD files.
 </pre>
-</dd><dt><b>Silicon Graphics Motion Video Compressor 1 (</b><font SIZE="-1"><b>MVC1</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>Silicon Graphics Motion Video Compressor 1 (</b><b>MVC1</b><b>) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Silicon Graphics Motion Video Compressor 2 (</b><font SIZE="-1"><b>MVC2</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>Silicon Graphics Motion Video Compressor 2 (</b><b>MVC2</b><b>) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Silicon Graphics </b><font SIZE="-1"><b>RLE</b></font><b> 8-bit video : </b>@tab<b> X</b>
+</dd><dt><b>Silicon Graphics </b><b>RLE</b><b> 8-bit video : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Smacker video : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Video encoding used in Smacker.
 </pre>
-</dd><dt><font SIZE="-1"><b>SMPTE VC-1</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>SMPTE VC-1</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Snow : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab experimental wavelet codec (fourcc: SNOW)
 </pre>
-</dd><dt><b>Sony PlayStation </b><font SIZE="-1"><b>MDEC</b></font><b> (Motion DECoder) : </b>@tab<b> X</b>
+</dd><dt><b>Sony PlayStation </b><b>MDEC</b><b> (Motion DECoder) : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Sorenson Vector Quantizer 1 : X </b>@tab<b> X</b>
 </dt><dd> <pre>
@@ -36142,7 +36142,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab fourcc: SVQ3
 </pre>
-</dd><dt><b>Sunplus </b><font SIZE="-1"><b>JPEG</b></font><b> (</b><font SIZE="-1"><b>SP5X</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>Sunplus </b><b>JPEG</b><b> (</b><b>SP5X</b><b>) : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab fourcc: SP5X
 </pre>
@@ -36158,7 +36158,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab encoding supported through external library libtheora
 </pre>
-</dd><dt><b>Tiertex Limited </b><font SIZE="-1"><b>SEQ</b></font><b> video : </b>@tab<b> X</b>
+</dd><dt><b>Tiertex Limited </b><b>SEQ</b><b> video : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Codec used in DOS CD-ROM FlashBack game.
 </pre>
@@ -36172,13 +36172,13 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>v410 QuickTime uncompressed 4:4:4 10-bit : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>VBLE</b></font><b> Lossless Codec : </b>@tab<b> X</b>
+</dd><dt><b>VBLE</b><b> Lossless Codec : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>VMware Screen Codec / VMware Video : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Codec used in videos captured by VMware.
 </pre>
-</dd><dt><b>Westwood Studios </b><font SIZE="-1"><b>VQA</b></font><b> (Vector Quantized Animation) video : </b>@tab<b> X</b>
+</dd><dt><b>Westwood Studios </b><b>VQA</b><b> (Vector Quantized Animation) video : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Windows Media Image : </b>@tab<b> X</b>
 </dt><dd>
@@ -36190,21 +36190,21 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab not completely working
 </pre>
-</dd><dt><b>Wing Commander </b><font SIZE="-1"><b>III /</b></font><b> Xan : </b>@tab<b> X</b>
+</dd><dt><b>Wing Commander </b><b>III /</b><b> Xan : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Wing Commander III .MVE files.
 </pre>
-</dd><dt><b>Wing Commander </b><font SIZE="-1"><b>IV /</b></font><b> Xan : </b>@tab<b> X</b>
+</dd><dt><b>Wing Commander </b><b>IV /</b><b> Xan : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Wing Commander IV.
 </pre>
-</dd><dt><b>Winnov </b><font SIZE="-1"><b>WNV1</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Winnov </b><b>WNV1</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>WMV7</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>WMV7</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>YAMAHA SMAF</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>YAMAHA SMAF</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Psygnosis </b><font SIZE="-1"><b>YOP</b></font><b> Video : </b>@tab<b> X</b>
+</dd><dt><b>Psygnosis </b><b>YOP</b><b> Video : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>yuv4 : X </b>@tab<b> X</b>
 </dt><dd> <pre>
@@ -36212,7 +36212,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </pre>
 </dd><dt><b>ZeroCodec Lossless Video : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ZLIB</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ZLIB</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab part of LCL, encoder experimental
 </pre>
@@ -36235,131 +36235,131 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>8SVX fibonacci : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>AAC</b></font><b> : </b><font SIZE="-1"><b>EX</b></font>@tab<b> X</b>
+</dd><dt><b>AAC</b><b> : </b><b>EX</b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab encoding supported through internal encoder and external library libfdk-aac
 </pre>
-</dd><dt><font SIZE="-1"><b>AAC+</b></font><b> : E </b>@tab<font SIZE="-1"><b>IX</b></font>
+</dd><dt><b>AAC+</b><b> : E </b>@tab<b>IX</b>
 </dt><dd> <pre>
     @tab encoding supported through external library libfdk-aac
 </pre>
-</dd><dt><font SIZE="-1"><b>AC-3</b></font><b> : </b><font SIZE="-1"><b>IX</b></font>@tab<font SIZE="-1"><b>IX</b></font>
+</dd><dt><b>AC-3</b><b> : </b><b>IX</b>@tab<b>IX</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ACELP.KELVIN</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ACELP.KELVIN</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM 4X</b></font><b> Movie : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM 4X</b><b> Movie : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Yamaha </b><font SIZE="-1"><b>AICA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Yamaha </b><b>AICA</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> AmuseGraphics Movie : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> AmuseGraphics Movie : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Argonaut Games : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Argonaut Games : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM CDROM XA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM CDROM XA</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Creative Technology : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Creative Technology : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab 16 -E&lt;gt&gt; 4, 8 -E&lt;gt&gt; 4, 8 -E&lt;gt&gt; 3, 8 -E&lt;gt&gt; 2
 </pre>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Electronic Arts : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Electronic Arts : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in various EA titles.
 </pre>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Electronic Arts Maxis </b><font SIZE="-1"><b>CDROM XS</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Electronic Arts Maxis </b><b>CDROM XS</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Sim City 3000.
 </pre>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Electronic Arts R1 : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Electronic Arts R1 : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Electronic Arts R2 : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Electronic Arts R2 : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Electronic Arts R3 : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Electronic Arts R3 : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Electronic Arts </b><font SIZE="-1"><b>XAS</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Electronic Arts </b><b>XAS</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM G.722</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM G.722</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM G.726</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM G.726</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA AMV</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA AMV</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in AMV files
 </pre>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> Cunning Developments : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> Cunning Developments : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> Electronic Arts </b><font SIZE="-1"><b>EACS</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> Electronic Arts </b><b>EACS</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> Electronic Arts </b><font SIZE="-1"><b>SEAD</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> Electronic Arts </b><b>SEAD</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> Funcom : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> Funcom : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> High Voltage Software </b><font SIZE="-1"><b>ALP</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> High Voltage Software </b><b>ALP</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> QuickTime : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> QuickTime : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> Simon &amp; Schuster Interactive : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> Simon &amp; Schuster Interactive : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> Ubisoft </b><font SIZE="-1"><b>APM</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> Ubisoft </b><b>APM</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> Loki </b><font SIZE="-1"><b>SDL MJPEG</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> Loki </b><b>SDL MJPEG</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA WAV</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA WAV</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> Westwood : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> Westwood : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM ISS IMA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM ISS IMA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in FunCom games.
 </pre>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> Dialogic : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> Dialogic : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> Duck </b><font SIZE="-1"><b>DK3</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> Duck </b><b>DK3</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in some Sega Saturn console games.
 </pre>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> Duck </b><font SIZE="-1"><b>DK4</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> Duck </b><b>DK4</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in some Sega Saturn console games.
 </pre>
-</dd><dt><font SIZE="-1"><b>ADPCM IMA</b></font><b> Radical : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM IMA</b><b> Radical : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Microsoft : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Microsoft : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM MS IMA</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM MS IMA</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Nintendo Gamecube </b><font SIZE="-1"><b>AFC</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Nintendo Gamecube </b><b>AFC</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Nintendo Gamecube </b><font SIZE="-1"><b>DTK</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Nintendo Gamecube </b><b>DTK</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Nintendo </b><font SIZE="-1"><b>THP</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Nintendo </b><b>THP</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Playstation : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Playstation : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM QT IMA</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM QT IMA</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM SEGA CRI ADX</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM SEGA CRI ADX</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Sega Dreamcast games.
 </pre>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Shockwave Flash : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Shockwave Flash : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Sound Blaster Pro 2-bit : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Sound Blaster Pro 2-bit : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Sound Blaster Pro 2.6-bit : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Sound Blaster Pro 2.6-bit : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Sound Blaster Pro 4-bit : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Sound Blaster Pro 4-bit : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM VIMA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM VIMA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in LucasArts SMUSH animations.
 </pre>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Westwood Studios </b><font SIZE="-1"><b>IMA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Westwood Studios </b><b>IMA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Westwood Studios games like Command and Conquer.
 </pre>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Yamaha : X </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Yamaha : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ADPCM</b></font><b> Zork : </b>@tab<b> X</b>
+</dd><dt><b>ADPCM</b><b> Zork : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>AMR-NB : E </b>@tab<b> X</b>
 </dt><dd> <pre>
@@ -36369,7 +36369,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab encoding supported through external library libvo-amrwbenc
 </pre>
-</dd><dt><b>Amazing Studio </b><font SIZE="-1"><b>PAF</b></font><b> Audio : </b>@tab<b> X</b>
+</dd><dt><b>Amazing Studio </b><b>PAF</b><b> Audio : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Apple lossless audio : X </b>@tab<b> X</b>
 </dt><dd> <pre>
@@ -36379,23 +36379,23 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Used in Bluetooth A2DP
 </pre>
-</dd><dt><b>aptX </b><font SIZE="-1"><b>HD</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>aptX </b><b>HD</b><b> : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Bluetooth A2DP
 </pre>
-</dd><dt><font SIZE="-1"><b>ATRAC1</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ATRAC1</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ATRAC3</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ATRAC3</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ATRAC3+</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ATRAC3+</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ATRAC9</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>ATRAC9</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Bink Audio : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Bink and Smacker files in many games.
 </pre>
-</dd><dt><font SIZE="-1"><b>CELT</b></font><b> : </b>@tab<b> E</b>
+</dd><dt><b>CELT</b><b> : </b>@tab<b> E</b>
 </dt><dd> <pre>
     @tab decoding supported through external library libcelt
 </pre>
@@ -36403,185 +36403,185 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab en/decoding supported through external library libcodec2
 </pre>
-</dd><dt><font SIZE="-1"><b>CRI HCA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>CRI HCA</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Delphine Software International </b><font SIZE="-1"><b>CIN</b></font><b> audio : </b>@tab<b> X</b>
+</dd><dt><b>Delphine Software International </b><b>CIN</b><b> audio : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Codec used in Delphine Software International games.
 </pre>
-</dd><dt><b>Digital Speech Standard - Standard Play mode (</b><font SIZE="-1"><b>DSS SP</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>Digital Speech Standard - Standard Play mode (</b><b>DSS SP</b><b>) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Discworld </b><font SIZE="-1"><b>II BMV</b></font><b> Audio : </b>@tab<b> X</b>
+</dd><dt><b>Discworld </b><b>II BMV</b><b> Audio : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>COOK</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>COOK</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab All versions except 5.1 are supported.
 </pre>
-</dd><dt><font SIZE="-1"><b>DCA</b></font><b> (</b><font SIZE="-1"><b>DTS</b></font><b> Coherent Acoustics) : X </b>@tab<b> X</b>
+</dd><dt><b>DCA</b><b> (</b><b>DTS</b><b> Coherent Acoustics) : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab supported extensions: XCh, XXCH, X96, XBR, XLL, LBR (partially)
 </pre>
 </dd><dt><b>Dolby E : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DPCM</b></font><b> Gremlin : </b>@tab<b> X</b>
+</dd><dt><b>DPCM</b><b> Gremlin : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DPCM</b></font><b> id RoQ : X </b>@tab<b> X</b>
+</dd><dt><b>DPCM</b><b> id RoQ : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Quake III, Jedi Knight 2 and other computer games.
 </pre>
-</dd><dt><font SIZE="-1"><b>DPCM</b></font><b> Interplay : </b>@tab<b> X</b>
+</dd><dt><b>DPCM</b><b> Interplay : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in various Interplay computer games.
 </pre>
-</dd><dt><font SIZE="-1"><b>DPCM</b></font><b> Squareroot-Delta-Exact : </b>@tab<b> X</b>
+</dd><dt><b>DPCM</b><b> Squareroot-Delta-Exact : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in various games.
 </pre>
-</dd><dt><font SIZE="-1"><b>DPCM</b></font><b> Sierra Online : </b>@tab<b> X</b>
+</dd><dt><b>DPCM</b><b> Sierra Online : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Sierra Online game audio files.
 </pre>
-</dd><dt><font SIZE="-1"><b>DPCM</b></font><b> Sol : </b>@tab<b> X</b>
+</dd><dt><b>DPCM</b><b> Sol : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DPCM</b></font><b> Xan : </b>@tab<b> X</b>
+</dd><dt><b>DPCM</b><b> Xan : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Origin's Wing Commander IV AVI files.
 </pre>
-</dd><dt><font SIZE="-1"><b>DPCM</b></font><b> Xilam </b><font SIZE="-1"><b>DERF</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>DPCM</b><b> Xilam </b><b>DERF</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DSD</b></font><b> (Direct Stream Digital), least significant bit first : </b>@tab<b> X</b>
+</dd><dt><b>DSD</b><b> (Direct Stream Digital), least significant bit first : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DSD</b></font><b> (Direct Stream Digital), most significant bit first : </b>@tab<b> X</b>
+</dd><dt><b>DSD</b><b> (Direct Stream Digital), most significant bit first : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DSD</b></font><b> (Direct Stream Digital), least significant bit first, planar : </b>@tab<b> X</b>
+</dd><dt><b>DSD</b><b> (Direct Stream Digital), least significant bit first, planar : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DSD</b></font><b> (Direct Stream Digital), most significant bit first, planar : </b>@tab<b> X</b>
+</dd><dt><b>DSD</b><b> (Direct Stream Digital), most significant bit first, planar : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DSP</b></font><b> Group TrueSpeech : </b>@tab<b> X</b>
+</dd><dt><b>DSP</b><b> Group TrueSpeech : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DST</b></font><b> (Direct Stream Transfer) : </b>@tab<b> X</b>
+</dd><dt><b>DST</b><b> (Direct Stream Transfer) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DV</b></font><b> audio : </b>@tab<b> X</b>
+</dd><dt><b>DV</b><b> audio : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Enhanced </b><font SIZE="-1"><b>AC-3</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>Enhanced </b><b>AC-3</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>EVRC</b></font><b> (Enhanced Variable Rate Codec) : </b>@tab<b> X</b>
+</dd><dt><b>EVRC</b><b> (Enhanced Variable Rate Codec) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>FLAC</b></font><b> (Free Lossless Audio Codec) : X </b>@tab<font SIZE="-1"><b>IX</b></font>
+</dd><dt><b>FLAC</b><b> (Free Lossless Audio Codec) : X </b>@tab<b>IX</b>
 </dt><dd>
 </dd><dt><b>G.723.1 : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>G.729 : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>GSM</b></font><b> : E </b>@tab<b> X</b>
+</dd><dt><b>GSM</b><b> : E </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab encoding supported through external library libgsm
 </pre>
-</dd><dt><font SIZE="-1"><b>GSM</b></font><b> Microsoft variant : E </b>@tab<b> X</b>
+</dd><dt><b>GSM</b><b> Microsoft variant : E </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab encoding supported through external library libgsm
 </pre>
-</dd><dt><font SIZE="-1"><b>IAC</b></font><b> (Indeo Audio Coder) : </b>@tab<b> X</b>
+</dd><dt><b>IAC</b><b> (Indeo Audio Coder) : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>iLBC (Internet Low Bitrate Codec) : E </b>@tab<b> E</b>
 </dt><dd> <pre>
     @tab encoding and decoding supported through external library libilbc
 </pre>
-</dd><dt><font SIZE="-1"><b>IMC</b></font><b> (Intel Music Coder) : </b>@tab<b> X</b>
+</dd><dt><b>IMC</b><b> (Intel Music Coder) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Interplay </b><font SIZE="-1"><b>ACM</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Interplay </b><b>ACM</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MACE</b></font><b> (Macintosh Audio Compression/Expansion) 3:1 : </b>@tab<b> X</b>
+</dd><dt><b>MACE</b><b> (Macintosh Audio Compression/Expansion) 3:1 : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MACE</b></font><b> (Macintosh Audio Compression/Expansion) 6:1 : </b>@tab<b> X</b>
+</dd><dt><b>MACE</b><b> (Macintosh Audio Compression/Expansion) 6:1 : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MLP</b></font><b> (Meridian Lossless Packing) : X </b>@tab<b> X</b>
+</dd><dt><b>MLP</b><b> (Meridian Lossless Packing) : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in DVD-Audio discs.
 </pre>
 </dd><dt><b>Monkey's Audio : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MP1</b></font><b> (</b><font SIZE="-1"><b>MPEG</b></font><b> audio layer 1) : </b>@tab<font SIZE="-1"><b>IX</b></font>
+</dd><dt><b>MP1</b><b> (</b><b>MPEG</b><b> audio layer 1) : </b>@tab<b>IX</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MP2</b></font><b> (</b><font SIZE="-1"><b>MPEG</b></font><b> audio layer 2) : </b><font SIZE="-1"><b>IX</b></font>@tab<font SIZE="-1"><b>IX</b></font>
+</dd><dt><b>MP2</b><b> (</b><b>MPEG</b><b> audio layer 2) : </b><b>IX</b>@tab<b>IX</b>
 </dt><dd> <pre>
     @tab encoding supported also through external library TwoLAME
 </pre>
-</dd><dt><font SIZE="-1"><b>MP3</b></font><b> (</b><font SIZE="-1"><b>MPEG</b></font><b> audio layer 3) : E </b>@tab<font SIZE="-1"><b>IX</b></font>
+</dd><dt><b>MP3</b><b> (</b><b>MPEG</b><b> audio layer 3) : E </b>@tab<b>IX</b>
 </dt><dd> <pre>
     @tab encoding supported through external library LAME, ADU MP3 and MP3onMP4 also supported
 </pre>
-</dd><dt><font SIZE="-1"><b>MPEG-4</b></font><b> Audio Lossless Coding (</b><font SIZE="-1"><b>ALS</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>MPEG-4</b><b> Audio Lossless Coding (</b><b>ALS</b><b>) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Musepack </b><font SIZE="-1"><b>SV7</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Musepack </b><b>SV7</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Musepack </b><font SIZE="-1"><b>SV8</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>Musepack </b><b>SV8</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Nellymoser Asao : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>On2 </b><font SIZE="-1"><b>AVC</b></font><b> (Audio for Video Codec) : </b>@tab<b> X</b>
+</dd><dt><b>On2 </b><b>AVC</b><b> (Audio for Video Codec) : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Opus : E </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab encoding supported through external library libopus
 </pre>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> A-law : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> A-law : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> mu-law : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> mu-law : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> Archimedes </b><font SIZE="-1"><b>VIDC</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> Archimedes </b><b>VIDC</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 8-bit planar : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 8-bit planar : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 16-bit big-endian planar : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 16-bit big-endian planar : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 16-bit little-endian planar : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 16-bit little-endian planar : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 24-bit little-endian planar : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 24-bit little-endian planar : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 32-bit little-endian planar : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 32-bit little-endian planar : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> 32-bit floating point big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> 32-bit floating point big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> 32-bit floating point little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> 32-bit floating point little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> 64-bit floating point big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> 64-bit floating point big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> 64-bit floating point little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> 64-bit floating point little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> D-Cinema audio signed 24-bit : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> D-Cinema audio signed 24-bit : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 8-bit : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 8-bit : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 16-bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 16-bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 16-bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 16-bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 24-bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 24-bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 24-bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 24-bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 32-bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 32-bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 32-bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 32-bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> signed 16/20/24-bit big-endian in MPEG-TS : </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> signed 16/20/24-bit big-endian in MPEG-TS : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> unsigned 8-bit : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> unsigned 8-bit : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> unsigned 16-bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> unsigned 16-bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> unsigned 16-bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> unsigned 16-bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> unsigned 24-bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> unsigned 24-bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> unsigned 24-bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> unsigned 24-bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> unsigned 32-bit big-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> unsigned 32-bit big-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PCM</b></font><b> unsigned 32-bit little-endian : X </b>@tab<b> X</b>
+</dd><dt><b>PCM</b><b> unsigned 32-bit little-endian : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>QCELP /</b></font><b> PureVoice : </b>@tab<b> X</b>
+</dd><dt><b>QCELP /</b><b> PureVoice : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>QDesign Music Codec 1 : </b>@tab<b> X</b>
 </dt><dd>
@@ -36597,27 +36597,27 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab Real 28800 bit/s codec
 </pre>
-</dd><dt><b>RealAudio 3.0 (dnet) : </b><font SIZE="-1"><b>IX</b></font>@tab<b> X</b>
+</dd><dt><b>RealAudio 3.0 (dnet) : </b><b>IX</b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Real low bitrate AC-3 codec
 </pre>
 </dd><dt><b>RealAudio Lossless : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>RealAudio </b><font SIZE="-1"><b>SIPR / ACELP.NET</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>RealAudio </b><b>SIPR / ACELP.NET</b><b> : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SBC</b></font><b> (low-complexity subband codec) : X </b>@tab<b> X</b>
+</dd><dt><b>SBC</b><b> (low-complexity subband codec) : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Bluetooth A2DP
 </pre>
 </dd><dt><b>Shorten : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Sierra </b><font SIZE="-1"><b>VMD</b></font><b> audio : </b>@tab<b> X</b>
+</dd><dt><b>Sierra </b><b>VMD</b><b> audio : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in Sierra VMD files.
 </pre>
 </dd><dt><b>Smacker audio : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SMPTE 302M AES3</b></font><b> audio : X </b>@tab<b> X</b>
+</dd><dt><b>SMPTE 302M AES3</b><b> audio : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Sonic : X </b>@tab<b> X</b>
 </dt><dd> <pre>
@@ -36631,17 +36631,17 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd> <pre>
     @tab supported through external library libspeex
 </pre>
-</dd><dt><font SIZE="-1"><b>TAK</b></font><b> (Tom's lossless Audio Kompressor) : </b>@tab<b> X</b>
+</dd><dt><b>TAK</b><b> (Tom's lossless Audio Kompressor) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>True Audio (</b><font SIZE="-1"><b>TTA</b></font><b>) : X </b>@tab<b> X</b>
+</dd><dt><b>True Audio (</b><b>TTA</b><b>) : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>TrueHD : X </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in HD-DVD and Blu-Ray discs.
 </pre>
-</dd><dt><b>TwinVQ (</b><font SIZE="-1"><b>VQF</b></font><b> flavor) : </b>@tab<b> X</b>
+</dd><dt><b>TwinVQ (</b><b>VQF</b><b> flavor) : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>VIMA</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>VIMA</b><b> : </b>@tab<b> X</b>
 </dt><dd> <pre>
     @tab Used in LucasArts SMUSH animations.
 </pre>
@@ -36653,7 +36653,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>WavPack : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Westwood Audio (</b><font SIZE="-1"><b>SND1</b></font><b>) : </b>@tab<b> X</b>
+</dd><dt><b>Westwood Audio (</b><b>SND1</b><b>) : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Windows Media Audio 1 : X </b>@tab<b> X</b>
 </dt><dd>
@@ -36686,49 +36686,49 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 </dt><dd>
 </dd><dt><b>AQTitle : </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DVB</b></font><b> : X </b>@tab<b> X </b>@tab<b> X </b>@tab<b> X</b>
+</dd><dt><b>DVB</b><b> : X </b>@tab<b> X </b>@tab<b> X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DVB</b></font><b> teletext : </b>@tab<b> X </b>@tab@tab<b> E</b>
+</dd><dt><b>DVB</b><b> teletext : </b>@tab<b> X </b>@tab@tab<b> E</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DVD</b></font><b> : X </b>@tab<b> X </b>@tab<b> X </b>@tab<b> X</b>
+</dd><dt><b>DVD</b><b> : X </b>@tab<b> X </b>@tab<b> X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>JACOsub : X </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>MicroDVD : X </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MPL2</b></font><b> : </b>@tab<b> X </b>@tab@tab<b> X</b>
+</dd><dt><b>MPL2</b><b> : </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>MPsub (MPlayer) : </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PGS</b></font><b> : </b>@tab@tab@tab<b> X</b>
+</dd><dt><b>PGS</b><b> : </b>@tab@tab@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>PJS</b></font><b> (Phoenix) : </b>@tab<b> X </b>@tab@tab<b> X</b>
+</dd><dt><b>PJS</b><b> (Phoenix) : </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>RealText : </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SAMI</b></font><b> : </b>@tab<b> X </b>@tab@tab<b> X</b>
+</dd><dt><b>SAMI</b><b> : </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>Spruce format (</b><font SIZE="-1"><b>STL</b></font><b>) : </b>@tab<b> X </b>@tab@tab<b> X</b>
+</dd><dt><b>Spruce format (</b><b>STL</b><b>) : </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SSA/ASS</b></font><b> : X </b>@tab<b> X </b>@tab<b> X </b>@tab<b> X</b>
+</dd><dt><b>SSA/ASS</b><b> : X </b>@tab<b> X </b>@tab<b> X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><b>SubRip (</b><font SIZE="-1"><b>SRT</b></font><b>) : X </b>@tab<b> X </b>@tab<b> X </b>@tab<b> X</b>
+</dd><dt><b>SubRip (</b><b>SRT</b><b>) : X </b>@tab<b> X </b>@tab<b> X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>SubViewer v1 : </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>SubViewer : </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>TED</b></font><b> Talks captions : </b>@tab<b> X </b>@tab@tab<b> X</b>
+</dd><dt><b>TED</b><b> Talks captions : </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>TTML</b></font><b> : X </b>@tab@tab<b> X </b>@tab
+</dd><dt><b>TTML</b><b> : X </b>@tab@tab<b> X </b>@tab
 </dt><dd>
-</dd><dt><b>VobSub (</b><font SIZE="-1"><b>IDX+SUB</b></font><b>) : </b>@tab<b> X </b>@tab@tab<b> X</b>
+</dd><dt><b>VobSub (</b><b>IDX+SUB</b><b>) : </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>VPlayer : </b>@tab<b> X </b>@tab@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>WebVTT : X </b>@tab<b> X </b>@tab<b> X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>XSUB</b></font><b> : </b>@tab@tab<b> X </b>@tab<b> X</b>
+</dd><dt><b>XSUB</b><b> : </b>@tab@tab<b> X </b>@tab<b> X</b>
 </dt><dd></dd></dl>
  
 
@@ -36741,59 +36741,59 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 <dl>
 <dt><b>Name : Support</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>AMQP</b></font><b> : E</b>
+</dd><dt><b>AMQP</b><b> : E</b>
 </dt><dd>
 </dd><dt><b>file : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>FTP</b></font><b> : X</b>
+</dd><dt><b>FTP</b><b> : X</b>
 </dt><dd>
 </dd><dt><b>Gopher : X</b>
 </dt><dd>
 </dd><dt><b>Gophers : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>HLS</b></font><b> : X</b>
+</dd><dt><b>HLS</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>HTTP</b></font><b> : X</b>
+</dd><dt><b>HTTP</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>HTTPS</b></font><b> : X</b>
+</dd><dt><b>HTTPS</b><b> : X</b>
 </dt><dd>
 </dd><dt><b>Icecast : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MMSH</b></font><b> : X</b>
+</dd><dt><b>MMSH</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MMST</b></font><b> : X</b>
+</dd><dt><b>MMST</b><b> : X</b>
 </dt><dd>
 </dd><dt><b>pipe : X</b>
 </dt><dd>
-</dd><dt><b>Pro-MPEG </b><font SIZE="-1"><b>FEC</b></font><b> : X</b>
+</dd><dt><b>Pro-MPEG </b><b>FEC</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RTMP</b></font><b> : X</b>
+</dd><dt><b>RTMP</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RTMPE</b></font><b> : X</b>
+</dd><dt><b>RTMPE</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RTMPS</b></font><b> : X</b>
+</dd><dt><b>RTMPS</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RTMPT</b></font><b> : X</b>
+</dd><dt><b>RTMPT</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RTMPTE</b></font><b> : X</b>
+</dd><dt><b>RTMPTE</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RTMPTS</b></font><b> : X</b>
+</dd><dt><b>RTMPTS</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>RTP</b></font><b> : X</b>
+</dd><dt><b>RTP</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SAMBA</b></font><b> : E</b>
+</dd><dt><b>SAMBA</b><b> : E</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SCTP</b></font><b> : X</b>
+</dd><dt><b>SCTP</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SFTP</b></font><b> : E</b>
+</dd><dt><b>SFTP</b><b> : E</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>TCP</b></font><b> : X</b>
+</dd><dt><b>TCP</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>TLS</b></font><b> : X</b>
+</dd><dt><b>TLS</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>UDP</b></font><b> : X</b>
+</dd><dt><b>UDP</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ZMQ</b></font><b> : E</b>
+</dd><dt><b>ZMQ</b><b> : E</b>
 </dt><dd></dd></dl>
  
 
@@ -36806,33 +36806,33 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 <dl>
 <dt><b>Name : Input </b>@tab<b> Output</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>ALSA</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>ALSA</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>BKTR</b></font><b> : X </b>@tab
+</dd><dt><b>BKTR</b><b> : X </b>@tab
 </dt><dd>
 </dd><dt><b>caca : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DV1394</b></font><b> : X </b>@tab
+</dd><dt><b>DV1394</b><b> : X </b>@tab
 </dt><dd>
 </dd><dt><b>Lavfi virtual device : X </b>@tab
 </dt><dd>
 </dd><dt><b>Linux framebuffer : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>JACK</b></font><b> : X </b>@tab
+</dd><dt><b>JACK</b><b> : X </b>@tab
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>LIBCDIO</b></font><b> : X</b>
+</dd><dt><b>LIBCDIO</b><b> : X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>LIBDC1394</b></font><b> : X </b>@tab
+</dd><dt><b>LIBDC1394</b><b> : X </b>@tab
 </dt><dd>
 </dd><dt><b>OpenAL : X</b>
 </dt><dd>
 </dd><dt><b>OpenGL : </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>OSS</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>OSS</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>PulseAudio : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>SDL</b></font><b> : </b>@tab<b> X</b>
+</dd><dt><b>SDL</b><b> : </b>@tab<b> X</b>
 </dt><dd>
 </dd><dt><b>Video4Linux2 : X </b>@tab<b> X</b>
 </dt><dd>
@@ -36851,17 +36851,17 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 <dl>
 <dt><b>Codec/format : Read </b>@tab<b> Write</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>AVI</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>AVI</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>DV</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>DV</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>GXF</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>GXF</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MOV</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>MOV</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MPEG1/2</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>MPEG1/2</b><b> : X </b>@tab<b> X</b>
 </dt><dd>
-</dd><dt><font SIZE="-1"><b>MXF</b></font><b> : X </b>@tab<b> X</b>
+</dd><dt><b>MXF</b><b> : X </b>@tab<b> X</b>
 </dt><dd></dd></dl>
  <a NAME="lb^O">&nbsp;</a>
 
@@ -36875,7 +36875,7 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 
  For details about the authorship, see the Git history of the project (<a HREF="git://source.ffmpeg.org/ffmpeg">git://source.ffmpeg.org/ffmpeg</a>), e.g. by typing the command <b>git log</b> in the FFmpeg source directory, or browsing the online repository at &lt;<b><a rel="nofollow" HREF="http://source.ffmpeg.org">http://source.ffmpeg.org</a></b>&gt;. 
 
- Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. 
+ Maintainers for the specific components are listed in the file <i></i><i>MAINTAINERS</i><i></i> in the source code tree. 
 
 
 

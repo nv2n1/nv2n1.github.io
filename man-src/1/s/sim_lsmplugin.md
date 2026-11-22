@@ -43,5 +43,5 @@ description: "sim_lsmplugin — LibStorageMgmt simulator python plugin"
 <h2>BUGS</h2>
 <p> Please report bugs to <i>&lt;libstoragemgmt-devel [at] lists.sourceforge.net&gt;</i> </p>
 <h2>AUTHOR</h2>
-<p> Gris Ge <i>&lt;fge [at] redhat.com&gt;</i><br />
+<p> Gris Ge <i>&lt;fge [at] redhat.com&gt;</i><br/>
  Tony Asleson <i>&lt;tasleson [at] redhat.com&gt;</i> </p>

@@ -15,7 +15,7 @@ description: "gpt-undefines – Generate a list of preprocessor macros that are 
 <h2>Options</h2>
 <dl>
 <dt>-srcdir=PATH</dt>
-<dd>Use <font SIZE="-1">PATH</font> as the directory containing the source code. Source code in the entire directory tree will be scanned. Default <font SIZE="-1">PATH</font> is the directory <code>gpt-undefines</code> was invoked in.</dd>
+<dd>Use PATH as the directory containing the source code. Source code in the entire directory tree will be scanned. Default PATH is the directory <code>gpt-undefines</code> was invoked in.</dd>
 <dt>-config</dt>
 <dd>Prints the list out in a format that can be pasted into an installable header file.</dd>
 <dt>-disable-undefs</dt>

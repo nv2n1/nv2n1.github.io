@@ -12,7 +12,7 @@ description: "dh_scour – run scour optimizer on shipped SVG files"
 <h2>SYNOPSIS</h2>
 <p> <code>dh_scour</code> [<i>debhelper options</i>] [<code>&#8212;</code>&nbsp;<i>params</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> dh_scour is a debhelper program that will run the scour <font SIZE="-1">SVG</font> image scrubber on all shipped <font SIZE="-1">SVG</font> files.</p>
+<p> dh_scour is a debhelper program that will run the scour SVG image scrubber on all shipped SVG files.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8212;</code> <i>params</i></dt>

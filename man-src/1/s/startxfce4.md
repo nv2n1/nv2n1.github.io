@@ -23,5 +23,5 @@ description: "startxfce4 – initialize an Xfce session"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xfce4-session/">xfce4-session</a></code>(1), <code><a href="/docs/linux/man/1-xinit/">xinit</a></code>(1), <code><a href="/docs/linux/man/1-dbus-launch/">dbus-launch</a></code>(1), <code><a href="/docs/linux/man/1-ssh-agent/">ssh-agent</a></code>(1), <code>file:///usr/share/xfce4/doc/C/xfce4-use.html#xfce4-getting-started</code></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2005 Emanuele Rocca<br />
+<p> Copyright &#169; 2005 Emanuele Rocca<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

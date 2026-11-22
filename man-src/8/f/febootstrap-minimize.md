@@ -12,8 +12,8 @@ description: "febootstrap-minimize – Minimize an febootstrap image"
 <pre> febootstrap-minimize [--options] DIR</pre>
 <h2>Description</h2>
 <p><i>febootstrap-minimize</i> minimizes an <i><a href="/docs/linux/man/8-febootstrap/">febootstrap</a></i>(8)-created filesystem. This means that unneeded files and cruft are removed from the image. </p>
-<p> If no options are given, the default is to minimize the image as much as possible. This means, for example, that locales are removed so the image will only be usable in US-English, there will be no documentation or manual pages, and the image will only work in a <font SIZE="-1">UTC</font> timezone. </p>
-<p> Note that image minimization involves deleting files that have been installed by <font SIZE="-1">RPM</font>. Thus after minimization, it is no longer guaranteed that <font SIZE="-1">RPM</font> will function correctly on the image. You should only do this as a final step for &#8220;throwaway&#8221; appliances that do not need to be modified or upgraded in future.</p>
+<p> If no options are given, the default is to minimize the image as much as possible. This means, for example, that locales are removed so the image will only be usable in US-English, there will be no documentation or manual pages, and the image will only work in a UTC timezone. </p>
+<p> Note that image minimization involves deleting files that have been installed by RPM. Thus after minimization, it is no longer guaranteed that RPM will function correctly on the image. You should only do this as a final step for &#8220;throwaway&#8221; appliances that do not need to be modified or upgraded in future.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>&#8211;all</code></dt>
@@ -43,11 +43,11 @@ description: "febootstrap-minimize – Minimize an febootstrap image"
 <dt><code>&#8211;keep-zoneinfo</code></dt>
 <dd>
 </dd><dt><code>&#8211;drop-zoneinfo</code></dt>
-<dd>Keep or drop all timezones (except <font SIZE="-1">UTC</font> which is never deleted).</dd>
+<dd>Keep or drop all timezones (except UTC which is never deleted).</dd>
 <dt><code>&#8211;keep-rpmdb</code></dt>
 <dd>
 </dd><dt><code>&#8211;drop-rpmdb</code></dt>
-<dd>Keep or drop the <font SIZE="-1">RPM</font> and <font SIZE="-1">YUM</font> package databases. Obviously <font SIZE="-1">RPM</font> and <font SIZE="-1">YUM</font> will be completely non-functional if you drop these.</dd>
+<dd>Keep or drop the RPM and YUM package databases. Obviously RPM and YUM will be completely non-functional if you drop these.</dd>
 <dt><code>&#8211;keep-yum-cache</code></dt>
 <dd>
 </dd><dt><code>&#8211;drop-yum-cache</code></dt>
@@ -80,6 +80,6 @@ description: "febootstrap-minimize – Minimize an febootstrap image"
 <p>Richard W.M. Jones &lt;rjones @ redhat . com&gt;</p>
 <h2>Copyright</h2>
 <p>(C) Copyright 2009 Red Hat Inc., &lt;<a rel="nofollow" href="http://et.redhat.com/~rjones/febootstrap">http://et.redhat.com/~rjones/febootstrap</a>&gt;. </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA</font> 02139, <font SIZE="-1">USA</font>.</p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>

@@ -33,7 +33,7 @@ description: "Impressive – presentation tool with eye candy"
 <p> <code>-c </code><i>&lt;mode&gt;</i> or <code>&#8211;cache </code><i>&lt;mode&gt;</i></p>
 <dl>
 <dt>
-</dt><dd> Specifies the page cache mode to use. Valid options are:<br />
+</dt><dd> Specifies the page cache mode to use. Valid options are:<br/>
  <code>none</code></dd>
 <dl>
 <dt>
@@ -58,7 +58,7 @@ description: "Impressive – presentation tool with eye candy"
 <p> <code>-d </code><i>&lt;time&gt;</i> or <code>&#8211;duration </code><i>&lt;time&gt;</i></p>
 <dl>
 <dt>
-</dt><dd> Specifies the expected run time of the presentation. The <i>time</i> parameter can be either a number of seconds or a human-readable time like <code>1:23</code> (1 minute and 23 seconds), <code>4:56h</code> (4 hours and 56 minutes), <code>3m45s</code> (3 minutes and 45 seconds), <code>5m</code> (5 minutes) or <code>1:23:45</code> (1 hour, 23 minutes and 45 seconds).<br />
+</dt><dd> Specifies the expected run time of the presentation. The <i>time</i> parameter can be either a number of seconds or a human-readable time like <code>1:23</code> (1 minute and 23 seconds), <code>4:56h</code> (4 hours and 56 minutes), <code>3m45s</code> (3 minutes and 45 seconds), <code>5m</code> (5 minutes) or <code>1:23:45</code> (1 hour, 23 minutes and 45 seconds).<br/>
  If an expected duration is specified, Impressive will show a semi-transparent green progress bar at the lower edge of the screen, indicating how much time has already passed. If the time is up, the bar will occupy the whole edge and fade to yellow (at 125% of the expected time) to red (at 150% or more).</dd></dl>
 <p> <code>-D </code><i>&lt;ms&gt;</i> or <code>&#8211;mousedelay </code><i>&lt;ms&gt;</i></p>
 <dl>
@@ -116,8 +116,8 @@ description: "Impressive – presentation tool with eye candy"
 <p> <code>-O </code><i>&lt;mode&gt;</i> or <code>&#8211;autooverview </code><i>&lt;mode&gt;</i></p>
 <dl>
 <dt>
-</dt><dd> Enables or disables automatic derivation of whether a page shall or shall not be shown on the overview page. This feature is based on the fact that some LaTeX presentation packages tag all pages with a title (that can be read by Impressive with the help of <code>pdftk</code>), except those that contain multiple reveal steps.<br />
- The following modes are available:<br />
+</dt><dd> Enables or disables automatic derivation of whether a page shall or shall not be shown on the overview page. This feature is based on the fact that some LaTeX presentation packages tag all pages with a title (that can be read by Impressive with the help of <code>pdftk</code>), except those that contain multiple reveal steps.<br/>
+ The following modes are available:<br/>
  <code>off</code></dd>
 <dl>
 <dt>
@@ -170,7 +170,7 @@ description: "Impressive – presentation tool with eye candy"
 <p> <code>-u </code><i>&lt;seconds&gt;</i> or <code>&#8211;poll </code><i>&lt;seconds&gt;</i></p>
 <dl>
 <dt>
-</dt><dd> If this option is specified, the source file or directory will be checked for changed regularly. If a change in the input PDF file or any of the image files in the input image directory is detected, the page cache will be flushed and the current page as well as the info script will be reloaded. The current page&#8217;s transition will be shown between the old and the new version of the page.<br />
+</dt><dd> If this option is specified, the source file or directory will be checked for changed regularly. If a change in the input PDF file or any of the image files in the input image directory is detected, the page cache will be flushed and the current page as well as the info script will be reloaded. The current page&#8217;s transition will be shown between the old and the new version of the page.<br/>
  The new PDF file must have at least as much pages as the old one; also, it should have the same aspect ratio. If the input is a directory, image files must not have disappeared.</dd></dl>
 <p> <code>-w</code> or <code>&#8211;wrap</code></p>
 <dl>
@@ -215,7 +215,7 @@ description: "Impressive – presentation tool with eye candy"
 <dt>
 </dt><dd> The position of the status line.</dd></dl>
 <p> The position specifications are composed by one character that indicates whether the text shall be displayed at the top (<code>T</code>) or bottom (<code>B</code>) edge of the screen and one character that indicates whether it shall appear on the left (<code>L</code>), on the right (<code>R</code>) or centered (<code>C</code>). </p>
-<p> For example, the default OSD layout equals the following option string:<br />
+<p> For example, the default OSD layout equals the following option string:<br/>
  <code> -L margin=16,alpha=1,time=TR,title=BL,page=BR,status=TL</code> </p>
 <h2>USAGE</h2>
 <p> On startup, Impressive will display a black screen with the program logo at the center. If caching is enabled, but background rendering is disabled, all pages of the presentation will then be rendered once. A bar in the lower half of the screen displays the progress of this operation. Any key (except for Q and Esc) or mouse click skips this process, with the effect that Impressive will render the remaining pages on demand. Please note that the overview page will not be complete until every page has been rendered at least once. In other words, if the precaching process was skipped, placeholders will be displayed for all pages that have not been rendered yet. By default, Impressive will build up the cache in the background while the presentation runs. Thus, the progress bar will not appear and the preparation will only take the amount of time required to render the first two pages of the presentation. </p>
@@ -256,7 +256,7 @@ description: "Impressive – presentation tool with eye candy"
 <p> click&amp;drag with <code>LMB</code> (left mouse button)</p>
 <dl>
 <dt>
-</dt><dd> Create a new highlight box. While at least one highlight box is defined on the current page, the page itself will be shown in a darker and blurry rendition. Only the highlight boxes will be displayed in their original lightness and sharpness.<br />
+</dt><dd> Create a new highlight box. While at least one highlight box is defined on the current page, the page itself will be shown in a darker and blurry rendition. Only the highlight boxes will be displayed in their original lightness and sharpness.<br/>
  If a page with highlight boxes is left, the boxes will be saved and restored the next time this page is shown again.</dd></dl>
 <p> <code>RMB</code> (right mouse button) over a highlight box</p>
 <dl>
@@ -285,7 +285,7 @@ description: "Impressive – presentation tool with eye candy"
 <p> <code>Z</code> key</p>
 <dl>
 <dt>
-</dt><dd> Toggle zoom mode. When this key is first pressed, the current page will zoom in. The page will be displayed at double size, but in its original resolution (i.e. it will be blurry). Impressive will re-render the page at the new resolution if the graphics hardware supports it. During this time, Impressive will <code>not</code> accept any input, so don&#8217;t even think about clicking the mouse or pressing keys before the image gets crisp again.<br />
+</dt><dd> Toggle zoom mode. When this key is first pressed, the current page will zoom in. The page will be displayed at double size, but in its original resolution (i.e. it will be blurry). Impressive will re-render the page at the new resolution if the graphics hardware supports it. During this time, Impressive will <code>not</code> accept any input, so don&#8217;t even think about clicking the mouse or pressing keys before the image gets crisp again.<br/>
  In zoom mode, all other functions will work as normal. Any operations that leave the current page, such as flipping the page or entering the overview screen, will leave zoom mode, too.</dd></dl>
 <p> <code>[</code> /: <code>]</code> key</p>
 <dl>
@@ -325,7 +325,7 @@ description: "Impressive – presentation tool with eye candy"
 </dt><dd> Leaves fullscreen mode to facilitate task switching while running full-screen presentations.</dd></dl>
 <p> Any other alphanumeric (A-z, 0-9) or function key (F1-F12) can be used to assign shortcuts to pages that require quick access. If one of the keys is pressed together with <code>Shift</code>, the currently displayed page is associated with this key. To recall the page later, it is sufficient to press the shortcut key again. Shortcuts can be permanently stored with the <code>S</code> key. </p>
 <h2>INFO SCRIPTS</h2>
-<p> Impressive offers a powerful way to customize individual presentations using so-called info scripts. An info script is a text file having the same name and located in the same directory as the presentation file itself, except for the additional suffix <code>.info</code>. Thus, a presentation file called <code>BrandNewProduct.pdf</code> would have a info script with the name <code>BrandNewProduct.pdf.info</code>. If multiple arguments were specified on the command line, the info script will be called just <code>.info</code> (a dot file, so to speak). If a directory name was specified as the only argument, either a file called <i>DirectoryName</i>.info or a file called <code>.info</code> <i>inside</i> the directory will be used, depending on whether a path separator was specified at the end of the directory name or not &#8211; Impressive simply appends <code>.info</code> to whatever the input path name was.<br />
+<p> Impressive offers a powerful way to customize individual presentations using so-called info scripts. An info script is a text file having the same name and located in the same directory as the presentation file itself, except for the additional suffix <code>.info</code>. Thus, a presentation file called <code>BrandNewProduct.pdf</code> would have a info script with the name <code>BrandNewProduct.pdf.info</code>. If multiple arguments were specified on the command line, the info script will be called just <code>.info</code> (a dot file, so to speak). If a directory name was specified as the only argument, either a file called <i>DirectoryName</i>.info or a file called <code>.info</code> <i>inside</i> the directory will be used, depending on whether a path separator was specified at the end of the directory name or not &#8211; Impressive simply appends <code>.info</code> to whatever the input path name was.<br/>
  In any case, the default file name can be overridden by the <code>-I</code> command line option. </p>
 <p> Info scripts are actually Python scripts with full access to Impressive&#8217;s global data structures and functions. (It is possible to write real interactive applications using info scripts.) Thus, they can modify a broad range of settings concerning Impressive. This manual will only cover the most basic ones. </p>
 <h2> PAGE PROPERTIES</h2>
@@ -349,10 +349,10 @@ description: "Impressive – presentation tool with eye candy"
 <p> <code>skip</code></p>
 <dl>
 <dt>
-</dt><dd> This boolean property can be set to 1/:<code>True</code> if the page shall be skipped during the presentation.<br />
- Pages with <code>overview:True, skip:False</code> will be accessible both by cycling through the pages and using the overview page,<br />
- pages with <code>overview:True, skip:True</code> will be silently skipped in the normal page cycle, but remain accessible from the overview page,<br />
- pages with <code>overview:False, skip:False</code> will appear in the normal cycle, but not on the overview page<br />
+</dt><dd> This boolean property can be set to 1/:<code>True</code> if the page shall be skipped during the presentation.<br/>
+ Pages with <code>overview:True, skip:False</code> will be accessible both by cycling through the pages and using the overview page,<br/>
+ pages with <code>overview:True, skip:True</code> will be silently skipped in the normal page cycle, but remain accessible from the overview page,<br/>
+ pages with <code>overview:False, skip:False</code> will appear in the normal cycle, but not on the overview page<br/>
  and pages with <code>overview:False, skip:True</code> will not be accessible at all.</dd></dl>
 <p> <code>boxes</code></p>
 <dl>
@@ -389,7 +389,7 @@ description: "Impressive – presentation tool with eye candy"
 <p> <code>OnEnter</code>, <code>OnLeave</code>, <code>OnEnterOnce</code>, <code>OnLeaveOnce</code></p>
 <dl>
 <dt>
-</dt><dd> These properties can contain a Python callable (i.e. a function reference or lambda expression) that is executed when the page is entered or left. The <code>~Once</code> variants will only be executed when the page is entered or left for the first time. The callable must not take any arguments. This feature can be used to associate arbitrary Python code with specific pages, for example to execute external programs.<br />
+</dt><dd> These properties can contain a Python callable (i.e. a function reference or lambda expression) that is executed when the page is entered or left. The <code>~Once</code> variants will only be executed when the page is entered or left for the first time. The callable must not take any arguments. This feature can be used to associate arbitrary Python code with specific pages, for example to execute external programs.<br/>
  <code>Warning:</code> Lambda expressions cannot be properly processed by the Info Script save function (<code>S</code> key). If Impressive encounters lambda expressions when saving, it will remove them. In addition, it will not overwrite the original info script, but generate an extra file that needs to be merged withe the original script by hand.</dd></dl>
 <p> <code>keys</code></p>
 <dl>
@@ -411,16 +411,16 @@ PageProps = {
 </code></pre>
 <p> The PageProps definition (and <code>only</code> the PageProps definition) will be rewritten by Impressive if the <code>S</code> key is pressed. User-defined PageProps entries will also be left untouched, except for some pretty-printing. </p>
 <h2> GLOBAL PRESENTATION PROPERTIES</h2>
-<p> The name of the presentation is shown in the title bar of the Impressive window (if not in fullscreen mode). By default, the file name or (if available) PDF metadata title will be used for this purpose, but the presentation title can also be explicitly set by overwriting the <code>DocumentTitle</code> variable:<br />
+<p> The name of the presentation is shown in the title bar of the Impressive window (if not in fullscreen mode). By default, the file name or (if available) PDF metadata title will be used for this purpose, but the presentation title can also be explicitly set by overwriting the <code>DocumentTitle</code> variable:<br/>
  <code> DocumentTitle = &quot;My Presentation&quot;</code> </p>
-<p> Another useful variable, <code>AvailableTransitions</code>, contains a list of all transition classes that may be used for randomly assigning transitions to pages lacking the <code>transition</code> property. Thus, if you want to exclude a certain transition (either because you don&#8217;t like it or because you want to have it exclusively on pages where you manually assigned it using <code>PageProps</code>), you can write something like<br />
- <code> AvailableTransitions.remove(WipeBlobs)</code><br />
- On the other side, it&#8217;s possible to activate transitions that are not enabled by default:<br />
- <code> AvailableTransitions += [SlideUp, SlideDown]</code><br />
- Alternatively, you can completely overwrite <code>AvailableTransitions</code> to have the same transition (or set of transitions) assigned to all pages:<br />
+<p> Another useful variable, <code>AvailableTransitions</code>, contains a list of all transition classes that may be used for randomly assigning transitions to pages lacking the <code>transition</code> property. Thus, if you want to exclude a certain transition (either because you don&#8217;t like it or because you want to have it exclusively on pages where you manually assigned it using <code>PageProps</code>), you can write something like<br/>
+ <code> AvailableTransitions.remove(WipeBlobs)</code><br/>
+ On the other side, it&#8217;s possible to activate transitions that are not enabled by default:<br/>
+ <code> AvailableTransitions += [SlideUp, SlideDown]</code><br/>
+ Alternatively, you can completely overwrite <code>AvailableTransitions</code> to have the same transition (or set of transitions) assigned to all pages:<br/>
  <code> AvailableTransitions = [Crossfade]</code> </p>
 <h2> OPTION OVERRIDES</h2>
-<p> Another use of info scripts is overriding the default or command-line settings on a per-file basis. This can be done by simply overwriting one of the variables that are defined at the beginning of <code>impressive.py</code>. Each of these variables corresponds either to a command-line setting, or to some constant related to visual appearance or performance. So, for example, to force fullscreen mode for a presentation, write<br />
+<p> Another use of info scripts is overriding the default or command-line settings on a per-file basis. This can be done by simply overwriting one of the variables that are defined at the beginning of <code>impressive.py</code>. Each of these variables corresponds either to a command-line setting, or to some constant related to visual appearance or performance. So, for example, to force fullscreen mode for a presentation, write<br/>
  <code> Fullscreen = True</code> </p>
 <h2>AUTHOR</h2>
 <p> Impressive and its documentation has been written mainly by Martin J. Fiedler &lt;martin.fiedler [at] gmx.net&gt;, with small portions of the code written by external contributors. See the source code file for details.</p>

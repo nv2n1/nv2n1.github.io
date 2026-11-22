@@ -12,19 +12,19 @@ description: "ANTLR3_PARSER_struct –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3parser.h">antlr3parser.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p>void(* <code>free</code> )(struct <code>ANTLR3_PARSER_struct</code> *parser)<br />
- <i>Pointer to a function that knows how to free resources of an ANTLR3 parser. </i><br />
- <code>pANTLR3_TOKEN_STREAM</code>(* <code>getTokenStream</code> )(struct <code>ANTLR3_PARSER_struct</code> *parser)<br />
- <i>A pointer to a function that returns the token stream for this parser. </i><br />
- <code>pANTLR3_BASE_RECOGNIZER</code> <code>rec</code><br />
- <i>A pointer to the base recognizer, where most of the parser functions actually live because they are shared between parser and tree parser and this is the easier way than copying the interface all over the place. </i><br />
- void(* <code>setDebugListener</code> )(struct <code>ANTLR3_PARSER_struct</code> *parser, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> dbg)<br />
- <i>A pointer to a function that installs a debugger object (it also installs the debugging versions of the parser methods. </i><br />
- void(* <code>setTokenStream</code> )(struct <code>ANTLR3_PARSER_struct</code> *parser, <code>pANTLR3_TOKEN_STREAM</code>)<br />
- <i>A pointer to a function that installs a token stream for the parser. </i><br />
- void * <code>super</code><br />
- <i>All superstructure implementers of this interface require a pointer to their selves, which they can reference using the super pointer here. </i><br />
- <code>pANTLR3_TOKEN_STREAM</code> <code>tstream</code><br />
+<p>void(* <code>free</code> )(struct <code>ANTLR3_PARSER_struct</code> *parser)<br/>
+ <i>Pointer to a function that knows how to free resources of an ANTLR3 parser. </i><br/>
+ <code>pANTLR3_TOKEN_STREAM</code>(* <code>getTokenStream</code> )(struct <code>ANTLR3_PARSER_struct</code> *parser)<br/>
+ <i>A pointer to a function that returns the token stream for this parser. </i><br/>
+ <code>pANTLR3_BASE_RECOGNIZER</code> <code>rec</code><br/>
+ <i>A pointer to the base recognizer, where most of the parser functions actually live because they are shared between parser and tree parser and this is the easier way than copying the interface all over the place. </i><br/>
+ void(* <code>setDebugListener</code> )(struct <code>ANTLR3_PARSER_struct</code> *parser, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> dbg)<br/>
+ <i>A pointer to a function that installs a debugger object (it also installs the debugging versions of the parser methods. </i><br/>
+ void(* <code>setTokenStream</code> )(struct <code>ANTLR3_PARSER_struct</code> *parser, <code>pANTLR3_TOKEN_STREAM</code>)<br/>
+ <i>A pointer to a function that installs a token stream for the parser. </i><br/>
+ void * <code>super</code><br/>
+ <i>All superstructure implementers of this interface require a pointer to their selves, which they can reference using the super pointer here. </i><br/>
+ <code>pANTLR3_TOKEN_STREAM</code> <code>tstream</code><br/>
  <i>A provider of a tokenstream interface, for the parser to consume tokens from. </i></p>
 <h2>Detailed Description</h2>
 <p>This is the main interface for an ANTLR3 parser.</p>

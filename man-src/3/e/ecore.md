@@ -10,221 +10,221 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Ecore.h &#8211; The file that provides the program utility, main loop and timer functions. </p>
 <h2>Synopsis</h2>
 <h3>Data Structures</h3>
-<p>struct <code>_Ecore_Event_Signal_User</code><br />
- <i>User signal event. </i><br />
- struct <code>_Ecore_Event_Signal_Hup</code><br />
- <i>Hup signal event. </i><br />
- struct <code>_Ecore_Event_Signal_Exit</code><br />
- <i>Exit request event. </i><br />
- struct <code>_Ecore_Event_Signal_Power</code><br />
- <i>Power event. </i><br />
- struct <code>_Ecore_Event_Signal_Realtime</code><br />
- <i>Realtime event. </i><br />
- struct <code>_Ecore_Exe_Event_Add</code><br />
- <i>Process add event. </i><br />
- struct <code>_Ecore_Exe_Event_Del</code><br />
- <i>Process exit event. </i><br />
- struct <code>_Ecore_Exe_Event_Data_Line</code><br />
- <i>&lt; Lines from a child process </i><br />
- struct <code>_Ecore_Exe_Event_Data</code><br />
+<p>struct <code>_Ecore_Event_Signal_User</code><br/>
+ <i>User signal event. </i><br/>
+ struct <code>_Ecore_Event_Signal_Hup</code><br/>
+ <i>Hup signal event. </i><br/>
+ struct <code>_Ecore_Event_Signal_Exit</code><br/>
+ <i>Exit request event. </i><br/>
+ struct <code>_Ecore_Event_Signal_Power</code><br/>
+ <i>Power event. </i><br/>
+ struct <code>_Ecore_Event_Signal_Realtime</code><br/>
+ <i>Realtime event. </i><br/>
+ struct <code>_Ecore_Exe_Event_Add</code><br/>
+ <i>Process add event. </i><br/>
+ struct <code>_Ecore_Exe_Event_Del</code><br/>
+ <i>Process exit event. </i><br/>
+ struct <code>_Ecore_Exe_Event_Data_Line</code><br/>
+ <i>&lt; Lines from a child process </i><br/>
+ struct <code>_Ecore_Exe_Event_Data</code><br/>
  <i>Data from a child process event. </i></p>
 <h3>Defines</h3>
-<p>#define <code>ECORE_CALLBACK_CANCEL</code> 0<br />
- <i>Return value to remove a callback. </i><br />
- #define <code>ECORE_CALLBACK_RENEW</code> 1<br />
- <i>Return value to keep a callback. </i><br />
- #define <code>ECORE_EVENT_SIGNAL_USER</code> 1<br />
- <i>User signal event. </i><br />
- #define <code>ECORE_EVENT_SIGNAL_HUP</code> 2<br />
- <i>Hup signal event. </i><br />
- #define <code>ECORE_EVENT_SIGNAL_EXIT</code> 3<br />
- <i>Exit signal event. </i><br />
- #define <code>ECORE_EVENT_SIGNAL_POWER</code> 4<br />
- <i>Power signal event. </i><br />
- #define <code>ECORE_EVENT_SIGNAL_REALTIME</code> 5<br />
+<p>#define <code>ECORE_CALLBACK_CANCEL</code> 0<br/>
+ <i>Return value to remove a callback. </i><br/>
+ #define <code>ECORE_CALLBACK_RENEW</code> 1<br/>
+ <i>Return value to keep a callback. </i><br/>
+ #define <code>ECORE_EVENT_SIGNAL_USER</code> 1<br/>
+ <i>User signal event. </i><br/>
+ #define <code>ECORE_EVENT_SIGNAL_HUP</code> 2<br/>
+ <i>Hup signal event. </i><br/>
+ #define <code>ECORE_EVENT_SIGNAL_EXIT</code> 3<br/>
+ <i>Exit signal event. </i><br/>
+ #define <code>ECORE_EVENT_SIGNAL_POWER</code> 4<br/>
+ <i>Power signal event. </i><br/>
+ #define <code>ECORE_EVENT_SIGNAL_REALTIME</code> 5<br/>
  <i>Realtime signal event. </i></p>
 <h3>Typedefs</h3>
-<p>typedef void <code>Ecore_Exe</code><br />
- <i>A handle for spawned processes. </i><br />
- typedef void <code>Ecore_Timer</code><br />
- <i>A handle for timers. </i><br />
- typedef void <code>Ecore_Idler</code><br />
- <i>A handle for idlers. </i><br />
- typedef void <code>Ecore_Idle_Enterer</code><br />
- <i>A handle for idle enterers. </i><br />
- typedef void <code>Ecore_Idle_Exiter</code><br />
- <i>A handle for idle exiters. </i><br />
- typedef void <code>Ecore_Fd_Handler</code><br />
- <i>A handle for Fd hanlders. </i><br />
- typedef void <code>Ecore_Event_Handler</code><br />
- <i>A handle for an event handler. </i><br />
- typedef void <code>Ecore_Event_Filter</code><br />
- <i>A handle for an event filter. </i><br />
- typedef void <code>Ecore_Event</code><br />
- <i>A handle for an event. </i><br />
- typedef void <code>Ecore_Animator</code><br />
- <i>A handle for animators. </i><br />
- typedef void <code>Ecore_Poller</code><br />
- <i>A handle for pollers. </i><br />
- typedef struct <code>_Ecore_Event_Signal_User</code> <code>Ecore_Event_Signal_User</code><br />
- <i>User signal event. </i><br />
- typedef struct <code>_Ecore_Event_Signal_Hup</code> <code>Ecore_Event_Signal_Hup</code><br />
- <i>Hup signal event. </i><br />
- typedef struct <code>_Ecore_Event_Signal_Exit</code> <code>Ecore_Event_Signal_Exit</code><br />
- <i>Exit signal event. </i><br />
- typedef struct <code>_Ecore_Event_Signal_Power</code> <code>Ecore_Event_Signal_Power</code><br />
- <i>Power signal event. </i><br />
- typedef struct <code>_Ecore_Event_Signal_Realtime</code> <code>Ecore_Event_Signal_Realtime</code><br />
- <i>Realtime signal event. </i><br />
- typedef struct <code>_Ecore_Exe_Event_Add</code> <code>Ecore_Exe_Event_Add</code><br />
- <i>Spawned Exe add event. </i><br />
- typedef struct <code>_Ecore_Exe_Event_Del</code> <code>Ecore_Exe_Event_Del</code><br />
- <i>Spawned Exe exit event. </i><br />
- typedef struct <code>_Ecore_Exe_Event_Data_Line</code> <code>Ecore_Exe_Event_Data_Line</code><br />
- <i>Lines from a child process. </i><br />
- typedef struct <code>_Ecore_Exe_Event_Data</code> <code>Ecore_Exe_Event_Data</code><br />
+<p>typedef void <code>Ecore_Exe</code><br/>
+ <i>A handle for spawned processes. </i><br/>
+ typedef void <code>Ecore_Timer</code><br/>
+ <i>A handle for timers. </i><br/>
+ typedef void <code>Ecore_Idler</code><br/>
+ <i>A handle for idlers. </i><br/>
+ typedef void <code>Ecore_Idle_Enterer</code><br/>
+ <i>A handle for idle enterers. </i><br/>
+ typedef void <code>Ecore_Idle_Exiter</code><br/>
+ <i>A handle for idle exiters. </i><br/>
+ typedef void <code>Ecore_Fd_Handler</code><br/>
+ <i>A handle for Fd hanlders. </i><br/>
+ typedef void <code>Ecore_Event_Handler</code><br/>
+ <i>A handle for an event handler. </i><br/>
+ typedef void <code>Ecore_Event_Filter</code><br/>
+ <i>A handle for an event filter. </i><br/>
+ typedef void <code>Ecore_Event</code><br/>
+ <i>A handle for an event. </i><br/>
+ typedef void <code>Ecore_Animator</code><br/>
+ <i>A handle for animators. </i><br/>
+ typedef void <code>Ecore_Poller</code><br/>
+ <i>A handle for pollers. </i><br/>
+ typedef struct <code>_Ecore_Event_Signal_User</code> <code>Ecore_Event_Signal_User</code><br/>
+ <i>User signal event. </i><br/>
+ typedef struct <code>_Ecore_Event_Signal_Hup</code> <code>Ecore_Event_Signal_Hup</code><br/>
+ <i>Hup signal event. </i><br/>
+ typedef struct <code>_Ecore_Event_Signal_Exit</code> <code>Ecore_Event_Signal_Exit</code><br/>
+ <i>Exit signal event. </i><br/>
+ typedef struct <code>_Ecore_Event_Signal_Power</code> <code>Ecore_Event_Signal_Power</code><br/>
+ <i>Power signal event. </i><br/>
+ typedef struct <code>_Ecore_Event_Signal_Realtime</code> <code>Ecore_Event_Signal_Realtime</code><br/>
+ <i>Realtime signal event. </i><br/>
+ typedef struct <code>_Ecore_Exe_Event_Add</code> <code>Ecore_Exe_Event_Add</code><br/>
+ <i>Spawned Exe add event. </i><br/>
+ typedef struct <code>_Ecore_Exe_Event_Del</code> <code>Ecore_Exe_Event_Del</code><br/>
+ <i>Spawned Exe exit event. </i><br/>
+ typedef struct <code>_Ecore_Exe_Event_Data_Line</code> <code>Ecore_Exe_Event_Data_Line</code><br/>
+ <i>Lines from a child process. </i><br/>
+ typedef struct <code>_Ecore_Exe_Event_Data</code> <code>Ecore_Exe_Event_Data</code><br/>
  <i>Data from a child process. </i></p>
 <h3>Enumerations</h3>
 <p>enum <code>_Ecore_Fd_Handler_Flags</code> { <code>ECORE_FD_READ</code> = 1, <code>ECORE_FD_WRITE</code> = 2, <code>ECORE_FD_ERROR</code> = 4 } </p>
 <p> enum <code>_Ecore_Exe_Flags</code> { <code>ECORE_EXE_PIPE_READ</code> = 1, <code>ECORE_EXE_PIPE_WRITE</code> = 2, <code>ECORE_EXE_PIPE_ERROR</code> = 4, <code>ECORE_EXE_PIPE_READ_LINE_BUFFERED</code> = 8, <code>ECORE_EXE_PIPE_ERROR_LINE_BUFFERED</code> = 16, <code>ECORE_EXE_PIPE_AUTO</code> = 32, <code>ECORE_EXE_RESPAWN</code> = 64, <code>ECORE_EXE_USE_SH</code> = 128, <code>ECORE_EXE_NOT_LEADER</code> = 256 } </p>
 <p> enum <code>_Ecore_Poller_Type</code> { <code>ECORE_POLLER_CORE</code> = 0 } </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_init</code> (void)<br />
- <i>Set up connections, signal handlers, sockets etc. </i><br />
- EAPI int <code>ecore_shutdown</code> (void)<br />
- <i>Shut down connections, signal handlers sockets etc. </i><br />
- EAPI void <code>ecore_app_args_set</code> (int argc, const char **argv)<br />
- <i>Set up the programs command-line arguments. </i><br />
- EAPI void <code>ecore_app_args_get</code> (int *argc, char ***argv)<br />
- <i>Return the programs stored command-line arguments. </i><br />
- EAPI void <code>ecore_app_restart</code> (void)<br />
- <i>Restart the program executable with the command-line arguments stored. </i><br />
- EAPI <code>Ecore_Event_Handler</code> * <code>ecore_event_handler_add</code> (int type, int(*func)(void *data, int type, void *event), const void *data)<br />
- <i>Add an event handler. </i><br />
- EAPI void * <code>ecore_event_handler_del</code> (<code>Ecore_Event_Handler</code> *event_handler)<br />
- <i>Delete an event handler. </i><br />
- EAPI <code>Ecore_Event</code> * <code>ecore_event_add</code> (int type, void *ev, void(*func_free)(void *data, void *ev), void *data)<br />
- <i>Add an event to the event queue. </i><br />
- EAPI void * <code>ecore_event_del</code> (<code>Ecore_Event</code> *event)<br />
- <i>Delete an event from the queue. </i><br />
- EAPI int <code>ecore_event_type_new</code> (void)<br />
- <i>Allocate a new event type id sensibly and return the new id. </i><br />
- EAPI <code>Ecore_Event_Filter</code> * <code>ecore_event_filter_add</code> (void *(*func_start)(void *data), int(*func_filter)(void *data, void *loop_data, int type, void *event), void(*func_end)(void *data, void *loop_data), const void *data)<br />
- <i>Add a filter the current event queue. </i><br />
- EAPI void * <code>ecore_event_filter_del</code> (<code>Ecore_Event_Filter</code> *ef)<br />
- <i>Delete an event filter. </i><br />
- EAPI int <code>ecore_event_current_type_get</code> (void)<br />
- <i>Return the current event type being handled. </i><br />
- EAPI void * <code>ecore_event_current_event_get</code> (void)<br />
- <i>Return the current event type pointer handled. </i><br />
- EAPI <code>Ecore_Exe</code> * <code>ecore_exe_run</code> (const char *exe_cmd, const void *data)<br />
- <i>Spawns a child process. </i><br />
- EAPI <code>Ecore_Exe</code> * <code>ecore_exe_pipe_run</code> (const char *exe_cmd, Ecore_Exe_Flags flags, const void *data)<br />
- <i>Spawns a child process with its stdin/out available for communication. </i><br />
- EAPI int <code>ecore_exe_send</code> (<code>Ecore_Exe</code> *exe, void *data, int size)<br />
- <i>Sends data to the given child process which it recieves on stdin. </i><br />
- EAPI void <code>ecore_exe_close_stdin</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>The stdin of the given child process will close when the write buffer is empty. </i><br />
- EAPI void <code>ecore_exe_auto_limits_set</code> (<code>Ecore_Exe</code> *exe, int start_bytes, int end_bytes, int start_lines, int end_lines)<br />
- <i>Sets the auto pipe limits for the given process handle. </i><br />
- EAPI <code>Ecore_Exe_Event_Data</code> * <code>ecore_exe_event_data_get</code> (<code>Ecore_Exe</code> *exe, Ecore_Exe_Flags flags)<br />
- <i>Gets the auto pipe data for the given process handle. </i><br />
- EAPI void <code>ecore_exe_event_data_free</code> (<code>Ecore_Exe_Event_Data</code> *data)<br />
- <i>Frees the given event data. </i><br />
- EAPI void * <code>ecore_exe_free</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Frees the given process handle. </i><br />
- EAPI pid_t <code>ecore_exe_pid_get</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Retrieves the process ID of the given spawned process. </i><br />
- EAPI void <code>ecore_exe_tag_set</code> (<code>Ecore_Exe</code> *exe, const char *tag)<br />
- <i>Sets the string tag for the given process handle. </i><br />
- EAPI char * <code>ecore_exe_tag_get</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Retrieves the tag attached to the given process handle. </i><br />
- EAPI char * <code>ecore_exe_cmd_get</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Retrieves the command of the given spawned process. </i><br />
- EAPI void * <code>ecore_exe_data_get</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Retrieves the data attached to the given process handle. </i><br />
- EAPI void <code>ecore_exe_pause</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Pauses the given process by sending it a </i>SIGSTOP signal.<br />
- EAPI void <code>ecore_exe_continue</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Continues the given paused process by sending it a </i>SIGCONT signal.<br />
- EAPI void <code>ecore_exe_interrupt</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Sends the given spawned process a interrupt (</i>SIGINT) signal.<br />
- EAPI void <code>ecore_exe_quit</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Sends the given spawned process a quit (</i>SIGQUIT) signal.<br />
- EAPI void <code>ecore_exe_terminate</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Sends the given spawned process a terminate (</i>SIGTERM) signal.<br />
- EAPI void <code>ecore_exe_kill</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Kills the given spawned process by sending it a </i>SIGKILL signal.<br />
- EAPI void <code>ecore_exe_signal</code> (<code>Ecore_Exe</code> *exe, int num)<br />
- <i>Sends a </i>SIGUSR signal to the given spawned process.<br />
- EAPI void <code>ecore_exe_hup</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Sends a </i>SIGHUP signal to the given spawned process.<br />
- EAPI <code>Ecore_Idler</code> * <code>ecore_idler_add</code> (int(*func)(void *data), const void *data)<br />
- <i>Add an idler handler. </i><br />
- EAPI void * <code>ecore_idler_del</code> (<code>Ecore_Idler</code> *idler)<br />
- <i>Delete an idler callback from the list to be executed. </i><br />
- EAPI <code>Ecore_Idle_Enterer</code> * <code>ecore_idle_enterer_add</code> (int(*func)(void *data), const void *data)<br />
- <i>Add an idle enterer handler. </i><br />
- EAPI <code>Ecore_Idle_Enterer</code> * <code>ecore_idle_enterer_before_add</code> (int(*func)(void *data), const void *data)<br />
- <i>Add an idle enterer handler at the start of the list so it gets called earlier than others. </i><br />
- EAPI void * <code>ecore_idle_enterer_del</code> (<code>Ecore_Idle_Enterer</code> *idle_enterer)<br />
- <i>Delete an idle enterer callback. </i><br />
- EAPI <code>Ecore_Idle_Exiter</code> * <code>ecore_idle_exiter_add</code> (int(*func)(void *data), const void *data)<br />
- <i>Add an idle exiter handler. </i><br />
- EAPI void * <code>ecore_idle_exiter_del</code> (<code>Ecore_Idle_Exiter</code> *idle_exiter)<br />
- <i>Delete an idle exiter handler from the list to be run on exiting idle state. </i><br />
- EAPI void <code>ecore_main_loop_iterate</code> (void)<br />
- <i>Runs a single iteration of the main loop to process everything on the queue. </i><br />
- EAPI void <code>ecore_main_loop_begin</code> (void)<br />
- <i>Runs the application main loop. </i><br />
- EAPI void <code>ecore_main_loop_quit</code> (void)<br />
- <i>Quits the main loop once all the events currently on the queue have been processed. </i><br />
- EAPI <code>Ecore_Fd_Handler</code> * <code>ecore_main_fd_handler_add</code> (int fd, Ecore_Fd_Handler_Flags flags, int(*func)(void *data, <code>Ecore_Fd_Handler</code> *fd_handler), const void *data, int(*buf_func)(void *buf_data, <code>Ecore_Fd_Handler</code> *fd_handler), const void *buf_data)<br />
- <i>Adds a callback for activity on the given file descriptor. </i><br />
- EAPI void * <code>ecore_main_fd_handler_del</code> (<code>Ecore_Fd_Handler</code> *fd_handler)<br />
- <i>Deletes the given FD handler. </i><br />
- EAPI int <code>ecore_main_fd_handler_fd_get</code> (<code>Ecore_Fd_Handler</code> *fd_handler)<br />
- <i>Retrieves the file descriptor that the given handler is handling. </i><br />
- EAPI int <code>ecore_main_fd_handler_active_get</code> (<code>Ecore_Fd_Handler</code> *fd_handler, Ecore_Fd_Handler_Flags flags)<br />
- <i>Return if read, write or error, or a combination thereof, is active on the file descriptor of the given FD handler. </i><br />
- EAPI void <code>ecore_main_fd_handler_active_set</code> (<code>Ecore_Fd_Handler</code> *fd_handler, Ecore_Fd_Handler_Flags flags)<br />
- <i>Set what active streams the given FD handler should be monitoring. </i><br />
- EAPI double <code>ecore_time_get</code> (void)<br />
- <i>Retrieves the current system time as a floating point value in seconds. </i><br />
- EAPI <code>Ecore_Timer</code> * <code>ecore_timer_add</code> (double in, int(*func)(void *data), const void *data)<br />
- <i>Creates a timer to call the given function in the given period of time. </i><br />
- EAPI void * <code>ecore_timer_del</code> (<code>Ecore_Timer</code> *timer)<br />
- <i>Delete the specified timer from the timer list. </i><br />
- EAPI void <code>ecore_timer_interval_set</code> (<code>Ecore_Timer</code> *timer, double in)<br />
- <i>Change the interval the timer ticks of. </i><br />
- EAPI void <code>ecore_timer_delay</code> (<code>Ecore_Timer</code> *timer, double add)<br />
- <i>Add some delay for the next occurence of a timer. </i><br />
- EAPI double <code>ecore_timer_pending_get</code> (<code>Ecore_Timer</code> *timer)<br />
- <i>Get the pending time regarding a timer. </i><br />
- EAPI <code>Ecore_Animator</code> * <code>ecore_animator_add</code> (int(*func)(void *data), const void *data)<br />
- <i>Add a animator to tick off at every animaton tick during main loop execution. </i><br />
- EAPI void * <code>ecore_animator_del</code> (<code>Ecore_Animator</code> *animator)<br />
- <i>Delete the specified animator from the animator list. </i><br />
- EAPI void <code>ecore_animator_frametime_set</code> (double frametime)<br />
- <i>Set the animator call interval in seconds. </i><br />
- EAPI double <code>ecore_animator_frametime_get</code> (void)<br />
- <i>Get the animator call interval in seconds. </i><br />
- EAPI void <code>ecore_poller_poll_interval_set</code> (Ecore_Poller_Type type, double poll_time)<br />
- <i>Sets the time between ticks (in seconds) for the given ticker clock. </i><br />
- EAPI double <code>ecore_poller_poll_interval_get</code> (Ecore_Poller_Type type)<br />
- <i>Gets the time between ticks (in seconds) for the fiven ticker clock. </i><br />
- EAPI <code>Ecore_Poller</code> * <code>ecore_poller_add</code> (Ecore_Poller_Type type, int interval, int(*func)(void *data), const void *data)<br />
- <i>Creates a poller to call the given function at a particular tick interval. </i><br />
- EAPI void * <code>ecore_poller_del</code> (<code>Ecore_Poller</code> *poller)<br />
+<p>EAPI int <code>ecore_init</code> (void)<br/>
+ <i>Set up connections, signal handlers, sockets etc. </i><br/>
+ EAPI int <code>ecore_shutdown</code> (void)<br/>
+ <i>Shut down connections, signal handlers sockets etc. </i><br/>
+ EAPI void <code>ecore_app_args_set</code> (int argc, const char **argv)<br/>
+ <i>Set up the programs command-line arguments. </i><br/>
+ EAPI void <code>ecore_app_args_get</code> (int *argc, char ***argv)<br/>
+ <i>Return the programs stored command-line arguments. </i><br/>
+ EAPI void <code>ecore_app_restart</code> (void)<br/>
+ <i>Restart the program executable with the command-line arguments stored. </i><br/>
+ EAPI <code>Ecore_Event_Handler</code> * <code>ecore_event_handler_add</code> (int type, int(*func)(void *data, int type, void *event), const void *data)<br/>
+ <i>Add an event handler. </i><br/>
+ EAPI void * <code>ecore_event_handler_del</code> (<code>Ecore_Event_Handler</code> *event_handler)<br/>
+ <i>Delete an event handler. </i><br/>
+ EAPI <code>Ecore_Event</code> * <code>ecore_event_add</code> (int type, void *ev, void(*func_free)(void *data, void *ev), void *data)<br/>
+ <i>Add an event to the event queue. </i><br/>
+ EAPI void * <code>ecore_event_del</code> (<code>Ecore_Event</code> *event)<br/>
+ <i>Delete an event from the queue. </i><br/>
+ EAPI int <code>ecore_event_type_new</code> (void)<br/>
+ <i>Allocate a new event type id sensibly and return the new id. </i><br/>
+ EAPI <code>Ecore_Event_Filter</code> * <code>ecore_event_filter_add</code> (void *(*func_start)(void *data), int(*func_filter)(void *data, void *loop_data, int type, void *event), void(*func_end)(void *data, void *loop_data), const void *data)<br/>
+ <i>Add a filter the current event queue. </i><br/>
+ EAPI void * <code>ecore_event_filter_del</code> (<code>Ecore_Event_Filter</code> *ef)<br/>
+ <i>Delete an event filter. </i><br/>
+ EAPI int <code>ecore_event_current_type_get</code> (void)<br/>
+ <i>Return the current event type being handled. </i><br/>
+ EAPI void * <code>ecore_event_current_event_get</code> (void)<br/>
+ <i>Return the current event type pointer handled. </i><br/>
+ EAPI <code>Ecore_Exe</code> * <code>ecore_exe_run</code> (const char *exe_cmd, const void *data)<br/>
+ <i>Spawns a child process. </i><br/>
+ EAPI <code>Ecore_Exe</code> * <code>ecore_exe_pipe_run</code> (const char *exe_cmd, Ecore_Exe_Flags flags, const void *data)<br/>
+ <i>Spawns a child process with its stdin/out available for communication. </i><br/>
+ EAPI int <code>ecore_exe_send</code> (<code>Ecore_Exe</code> *exe, void *data, int size)<br/>
+ <i>Sends data to the given child process which it recieves on stdin. </i><br/>
+ EAPI void <code>ecore_exe_close_stdin</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>The stdin of the given child process will close when the write buffer is empty. </i><br/>
+ EAPI void <code>ecore_exe_auto_limits_set</code> (<code>Ecore_Exe</code> *exe, int start_bytes, int end_bytes, int start_lines, int end_lines)<br/>
+ <i>Sets the auto pipe limits for the given process handle. </i><br/>
+ EAPI <code>Ecore_Exe_Event_Data</code> * <code>ecore_exe_event_data_get</code> (<code>Ecore_Exe</code> *exe, Ecore_Exe_Flags flags)<br/>
+ <i>Gets the auto pipe data for the given process handle. </i><br/>
+ EAPI void <code>ecore_exe_event_data_free</code> (<code>Ecore_Exe_Event_Data</code> *data)<br/>
+ <i>Frees the given event data. </i><br/>
+ EAPI void * <code>ecore_exe_free</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Frees the given process handle. </i><br/>
+ EAPI pid_t <code>ecore_exe_pid_get</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Retrieves the process ID of the given spawned process. </i><br/>
+ EAPI void <code>ecore_exe_tag_set</code> (<code>Ecore_Exe</code> *exe, const char *tag)<br/>
+ <i>Sets the string tag for the given process handle. </i><br/>
+ EAPI char * <code>ecore_exe_tag_get</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Retrieves the tag attached to the given process handle. </i><br/>
+ EAPI char * <code>ecore_exe_cmd_get</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Retrieves the command of the given spawned process. </i><br/>
+ EAPI void * <code>ecore_exe_data_get</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Retrieves the data attached to the given process handle. </i><br/>
+ EAPI void <code>ecore_exe_pause</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Pauses the given process by sending it a </i>SIGSTOP signal.<br/>
+ EAPI void <code>ecore_exe_continue</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Continues the given paused process by sending it a </i>SIGCONT signal.<br/>
+ EAPI void <code>ecore_exe_interrupt</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Sends the given spawned process a interrupt (</i>SIGINT) signal.<br/>
+ EAPI void <code>ecore_exe_quit</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Sends the given spawned process a quit (</i>SIGQUIT) signal.<br/>
+ EAPI void <code>ecore_exe_terminate</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Sends the given spawned process a terminate (</i>SIGTERM) signal.<br/>
+ EAPI void <code>ecore_exe_kill</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Kills the given spawned process by sending it a </i>SIGKILL signal.<br/>
+ EAPI void <code>ecore_exe_signal</code> (<code>Ecore_Exe</code> *exe, int num)<br/>
+ <i>Sends a </i>SIGUSR signal to the given spawned process.<br/>
+ EAPI void <code>ecore_exe_hup</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Sends a </i>SIGHUP signal to the given spawned process.<br/>
+ EAPI <code>Ecore_Idler</code> * <code>ecore_idler_add</code> (int(*func)(void *data), const void *data)<br/>
+ <i>Add an idler handler. </i><br/>
+ EAPI void * <code>ecore_idler_del</code> (<code>Ecore_Idler</code> *idler)<br/>
+ <i>Delete an idler callback from the list to be executed. </i><br/>
+ EAPI <code>Ecore_Idle_Enterer</code> * <code>ecore_idle_enterer_add</code> (int(*func)(void *data), const void *data)<br/>
+ <i>Add an idle enterer handler. </i><br/>
+ EAPI <code>Ecore_Idle_Enterer</code> * <code>ecore_idle_enterer_before_add</code> (int(*func)(void *data), const void *data)<br/>
+ <i>Add an idle enterer handler at the start of the list so it gets called earlier than others. </i><br/>
+ EAPI void * <code>ecore_idle_enterer_del</code> (<code>Ecore_Idle_Enterer</code> *idle_enterer)<br/>
+ <i>Delete an idle enterer callback. </i><br/>
+ EAPI <code>Ecore_Idle_Exiter</code> * <code>ecore_idle_exiter_add</code> (int(*func)(void *data), const void *data)<br/>
+ <i>Add an idle exiter handler. </i><br/>
+ EAPI void * <code>ecore_idle_exiter_del</code> (<code>Ecore_Idle_Exiter</code> *idle_exiter)<br/>
+ <i>Delete an idle exiter handler from the list to be run on exiting idle state. </i><br/>
+ EAPI void <code>ecore_main_loop_iterate</code> (void)<br/>
+ <i>Runs a single iteration of the main loop to process everything on the queue. </i><br/>
+ EAPI void <code>ecore_main_loop_begin</code> (void)<br/>
+ <i>Runs the application main loop. </i><br/>
+ EAPI void <code>ecore_main_loop_quit</code> (void)<br/>
+ <i>Quits the main loop once all the events currently on the queue have been processed. </i><br/>
+ EAPI <code>Ecore_Fd_Handler</code> * <code>ecore_main_fd_handler_add</code> (int fd, Ecore_Fd_Handler_Flags flags, int(*func)(void *data, <code>Ecore_Fd_Handler</code> *fd_handler), const void *data, int(*buf_func)(void *buf_data, <code>Ecore_Fd_Handler</code> *fd_handler), const void *buf_data)<br/>
+ <i>Adds a callback for activity on the given file descriptor. </i><br/>
+ EAPI void * <code>ecore_main_fd_handler_del</code> (<code>Ecore_Fd_Handler</code> *fd_handler)<br/>
+ <i>Deletes the given FD handler. </i><br/>
+ EAPI int <code>ecore_main_fd_handler_fd_get</code> (<code>Ecore_Fd_Handler</code> *fd_handler)<br/>
+ <i>Retrieves the file descriptor that the given handler is handling. </i><br/>
+ EAPI int <code>ecore_main_fd_handler_active_get</code> (<code>Ecore_Fd_Handler</code> *fd_handler, Ecore_Fd_Handler_Flags flags)<br/>
+ <i>Return if read, write or error, or a combination thereof, is active on the file descriptor of the given FD handler. </i><br/>
+ EAPI void <code>ecore_main_fd_handler_active_set</code> (<code>Ecore_Fd_Handler</code> *fd_handler, Ecore_Fd_Handler_Flags flags)<br/>
+ <i>Set what active streams the given FD handler should be monitoring. </i><br/>
+ EAPI double <code>ecore_time_get</code> (void)<br/>
+ <i>Retrieves the current system time as a floating point value in seconds. </i><br/>
+ EAPI <code>Ecore_Timer</code> * <code>ecore_timer_add</code> (double in, int(*func)(void *data), const void *data)<br/>
+ <i>Creates a timer to call the given function in the given period of time. </i><br/>
+ EAPI void * <code>ecore_timer_del</code> (<code>Ecore_Timer</code> *timer)<br/>
+ <i>Delete the specified timer from the timer list. </i><br/>
+ EAPI void <code>ecore_timer_interval_set</code> (<code>Ecore_Timer</code> *timer, double in)<br/>
+ <i>Change the interval the timer ticks of. </i><br/>
+ EAPI void <code>ecore_timer_delay</code> (<code>Ecore_Timer</code> *timer, double add)<br/>
+ <i>Add some delay for the next occurence of a timer. </i><br/>
+ EAPI double <code>ecore_timer_pending_get</code> (<code>Ecore_Timer</code> *timer)<br/>
+ <i>Get the pending time regarding a timer. </i><br/>
+ EAPI <code>Ecore_Animator</code> * <code>ecore_animator_add</code> (int(*func)(void *data), const void *data)<br/>
+ <i>Add a animator to tick off at every animaton tick during main loop execution. </i><br/>
+ EAPI void * <code>ecore_animator_del</code> (<code>Ecore_Animator</code> *animator)<br/>
+ <i>Delete the specified animator from the animator list. </i><br/>
+ EAPI void <code>ecore_animator_frametime_set</code> (double frametime)<br/>
+ <i>Set the animator call interval in seconds. </i><br/>
+ EAPI double <code>ecore_animator_frametime_get</code> (void)<br/>
+ <i>Get the animator call interval in seconds. </i><br/>
+ EAPI void <code>ecore_poller_poll_interval_set</code> (Ecore_Poller_Type type, double poll_time)<br/>
+ <i>Sets the time between ticks (in seconds) for the given ticker clock. </i><br/>
+ EAPI double <code>ecore_poller_poll_interval_get</code> (Ecore_Poller_Type type)<br/>
+ <i>Gets the time between ticks (in seconds) for the fiven ticker clock. </i><br/>
+ EAPI <code>Ecore_Poller</code> * <code>ecore_poller_add</code> (Ecore_Poller_Type type, int interval, int(*func)(void *data), const void *data)<br/>
+ <i>Creates a poller to call the given function at a particular tick interval. </i><br/>
+ EAPI void * <code>ecore_poller_del</code> (<code>Ecore_Poller</code> *poller)<br/>
  <i>Delete the specified poller from the timer list. </i></p>
 <h3>Variables</h3>
-<p>EAPI int <code>ECORE_EXE_EVENT_ADD</code><br />
- <i>A child process has been added. </i><br />
- EAPI int <code>ECORE_EXE_EVENT_DEL</code><br />
- <i>A child process has been deleted (it exited, naming consistant with the rest of ecore). </i><br />
- EAPI int <code>ECORE_EXE_EVENT_DATA</code><br />
- <i>Data from a child process. </i><br />
- EAPI int <code>ECORE_EXE_EVENT_ERROR</code><br />
+<p>EAPI int <code>ECORE_EXE_EVENT_ADD</code><br/>
+ <i>A child process has been added. </i><br/>
+ EAPI int <code>ECORE_EXE_EVENT_DEL</code><br/>
+ <i>A child process has been deleted (it exited, naming consistant with the rest of ecore). </i><br/>
+ EAPI int <code>ECORE_EXE_EVENT_DATA</code><br/>
+ <i>Data from a child process. </i><br/>
+ EAPI int <code>ECORE_EXE_EVENT_ERROR</code><br/>
  <i>Errors from a child process. </i></p>
 <h2>Detailed Description</h2>
 <p>The file that provides the program utility, main loop and timer functions. </p>
@@ -275,7 +275,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Add a animator to tick off at every animaton tick during main loop execution. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>func</i> The function to call when it ticks off<br />
+<dd><i>func</i> The function to call when it ticks off<br/>
  <i>data</i> The data to pass to the function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -315,7 +315,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Return the programs stored command-line arguments. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>argc</i> A pointer to the return value to hold argc<br />
+<dd><i>argc</i> A pointer to the return value to hold argc<br/>
  <i>argv</i> A pointer to the return value to hold argv</dd></dl>
 <p> When called, this funciton returns the arguments for the program stored by <code>ecore_app_args_set()</code>. The integer pointed to by argc will be filled, if the pointer is not NULL, and the string array pointer argv will be filled also if the pointer is not NULL. The values they are filled with will be the same set by <code>ecore_app_args_set()</code>. </p>
 <p> References ecore_app_args_get(). </p>
@@ -324,7 +324,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Set up the programs command-line arguments. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>argc</i> The same as passed as argc to the programs main() function<br />
+<dd><i>argc</i> The same as passed as argc to the programs main() function<br/>
  <i>argv</i> The same as passed as argv to the programs main() function</dd></dl>
 <p> A call to this function will store the programs command-line arguments for later use by <code>ecore_app_restart()</code> or <code>ecore_app_args_get()</code>. </p>
 <p> References ecore_app_args_set(). </p>
@@ -338,9 +338,9 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Add an event to the event queue. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>type</i> The event type to add to the end of the event queue<br />
- <i>ev</i> The private data structure for this event type<br />
- <i>func_free</i> The function to be called to free this private structure<br />
+<dd><i>type</i> The event type to add to the end of the event queue<br/>
+ <i>ev</i> The private data structure for this event type<br/>
+ <i>func_free</i> The function to be called to free this private structure<br/>
  <i>data</i> The data pointer to be passed to the free function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -381,9 +381,9 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Add a filter the current event queue. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>func_start</i> Function to call just before filtering and return data<br />
- <i>func_filter</i> Function to call on each event<br />
- <i>func_end</i> Function to call after the queu has been filtered<br />
+<dd><i>func_start</i> Function to call just before filtering and return data<br/>
+ <i>func_filter</i> Function to call on each event<br/>
+ <i>func_end</i> Function to call after the queu has been filtered<br/>
  <i>data</i> Data to pass to the filter functions</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -406,8 +406,8 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Add an event handler. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>type</i> The type of the event this handler will get called for<br />
- <i>func</i> The function to call when the event is found in the queue<br />
+<dd><i>type</i> The type of the event this handler will get called for<br/>
+ <i>func</i> The function to call when the event is found in the queue<br/>
  <i>data</i> A data pointer to pass to the called function func</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -457,9 +457,9 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Creates a poller to call the given function at a particular tick interval. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>type</i> The ticker type to attach the poller to<br />
- <i>interval</i> The poll interval<br />
- <i>func</i> The given function. If func returns 1, the poller is rescheduled for the next tick interval.<br />
+<dd><i>type</i> The ticker type to attach the poller to<br/>
+ <i>interval</i> The poll interval<br/>
+ <i>func</i> The given function. If func returns 1, the poller is rescheduled for the next tick interval.<br/>
  <i>data</i> Data to pass to func when it is called.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -497,7 +497,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Sets the time between ticks (in seconds) for the given ticker clock. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>type</i> The ticker type to adjust<br />
+<dd><i>type</i> The ticker type to adjust<br/>
  <i>poll_time</i> The time (in seconds) between ticks of the clock</dd></dl>
 <p> This will adjust the time between ticks of the given ticker type defined by type to the time period defined by poll_time. </p>
 <p> References ecore_poller_poll_interval_set(). </p>

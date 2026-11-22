@@ -10,8 +10,8 @@ description: "file – determine file type"
 
 <p> <code>file</code> - determine file type </p>
 <h2>SYNOPSIS</h2>
-<p> <code>file</code> [-<code>bcdEhiklLNnprsSvzZ0</code> ] [-<code>-apple</code> ] [-<code>-exclude-quiet</code> ] [-<code>-extension</code> ] [-<code>-mime-encoding</code> ] [-<code>-mime-type</code> ] [-<code>e </code><i>testname</i> ] [-<code>F </code><i>separator</i> ] [-<code>f </code><i>namefile</i> ] [-<code>m </code><i>magicfiles</i> ] [-<code>P </code><i>name=value</i> ] <i>file ...</i> <br />
-<code>file</code> -<code>C</code> [-<code>m </code><i>magicfiles</i> ] <br />
+<p> <code>file</code> [-<code>bcdEhiklLNnprsSvzZ0</code> ] [-<code>-apple</code> ] [-<code>-exclude-quiet</code> ] [-<code>-extension</code> ] [-<code>-mime-encoding</code> ] [-<code>-mime-type</code> ] [-<code>e </code><i>testname</i> ] [-<code>F </code><i>separator</i> ] [-<code>f </code><i>namefile</i> ] [-<code>m </code><i>magicfiles</i> ] [-<code>P </code><i>name=value</i> ] <i>file ...</i> <br/>
+<code>file</code> -<code>C</code> [-<code>m </code><i>magicfiles</i> ] <br/>
 <code>file</code> [-<code>-help</code> ]  </p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents version 5.41 of the <code>file</code> command. </p>

@@ -204,7 +204,7 @@ description: "ptpd2 – Precision Time Protocol daemon (1588-2008)"
 <h2>Hardware Timestamping Support</h2>
 <p>As of 2.3.1, PTPd still does not support hardware timestamping. This functionality will appear in the upcoming version 2.4 &#8211; potentially an interim version of 2.3.x may be delivered that will support hardware clocks and timestamping on Linux. This is very much OS-specific and to a large extent, hardware-specific. Linux has a PTP kernel API but not all hardware supports it. Because PTPd supports multiple OS platforms, where hardware timestamping may use different mechanisms on every platform, it has to be re-written in a modular way to allow this without unnecessarily increasing code complexity, which already is a problem.</p>
 <h2>Bugs</h2>
-<p>As of ptpd 2.3.1, the (Open)Solaris (11) OS family is supported, but libpcap functionality is currently broken &#8211; IPv4/pcap and Ethernet transports cannot be used on those systems. PTPd will compile and run,<br />
+<p>As of ptpd 2.3.1, the (Open)Solaris (11) OS family is supported, but libpcap functionality is currently broken &#8211; IPv4/pcap and Ethernet transports cannot be used on those systems. PTPd will compile and run,<br/>
 &nbsp;<wbr>but will not receive any data. Please report any bugs using the bug tracker on the SourceForge page: <a rel="nofollow" href="http://sourceforge.net/projects/ptpd/">http://sourceforge.net/projects/ptpd/</a> </p>
 <h2>See Also</h2>
 <p>ptpd2.conf5 <a href="/docs/linux/man/5-ptpd2-conf/">ptpd2.conf</a>(5)</p>

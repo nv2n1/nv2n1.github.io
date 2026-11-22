@@ -268,7 +268,7 @@ waitsync 60 0.01
 <dl>
 <dt>
 </dt><dd>
-210 Number of sources = 1 Name / IP Address NP NR Span Frequency Freq Skew Offset Std Dev == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == =<br />
+210 Number of sources = 1 Name / IP Address NP NR Span Frequency Freq Skew Offset Std Dev == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == =<br/>
                                                                                                                                                                                                                    foo.example.net 11 5 46m &#8211; 0.001 0.045 1us 25us
 </dd></dl>
 <p> The columns are as follows: </p>
@@ -612,9 +612,9 @@ offline ::/0
 <dl>
 <dt>
 </dt><dd>
-210 n_samples = 1<br />
-#Date Time(UTC) Slewed Original Residual<br />
-                == == == == == == == == == == == == == == == == == == == == == == == == == ==<br />
+210 n_samples = 1<br/>
+#Date Time(UTC) Slewed Original Residual<br/>
+                == == == == == == == == == == == == == == == == == == == == == == == == == ==<br/>
                 0 27Jan99 22 : 09 : 20 0.00 0.97 0.00
 </dd></dl>
 <p> The columns are as as follows: </p>
@@ -683,7 +683,7 @@ accheck 2001:db8::1
 <dl>
 <dt>
 </dt><dd>
-Hostname NTP Drop Int IntL Last Cmd Drop Int Last == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == =<br />
+Hostname NTP Drop Int IntL Last Cmd Drop Int Last == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == =<br/>
                                                                                                                                                                            localhost 2 0 2 &#8211; 133 15 0 &#8211; 1 7 foo.example.net 12 0 6 &#8211; 23 0 0 &#8211; &#8211;
 </dd></dl>
 <p> Each row shows the data for a single host. Only hosts that have passed the host access checks (set with the <code>allow</code>, <code>deny</code>, <code>cmdallow</code> and <code>cmddeny</code> commands or configuration file directives) are logged. The intervals are displayed as a power of 2 in seconds. </p>

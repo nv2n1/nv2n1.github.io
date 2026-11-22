@@ -11,7 +11,7 @@ description: "dlarf.f –"
 <p> dlarf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlarf</code> (SIDE, M, N, V, INCV, TAU, C, LDC, WORK)<br />
+<p> subroutine <code>dlarf</code> (SIDE, M, N, V, INCV, TAU, C, LDC, WORK)<br/>
  <i></i><code>DLARF</code> applies an elementary reflector to a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarf (characterSIDE, integerM, integerN, double precision, dimension( * )V, integerINCV, double precisionTAU, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( * )WORK)</h3>

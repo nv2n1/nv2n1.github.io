@@ -155,8 +155,8 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 <dt>
 </dt><dd> Produces in Unix vanilla universe:</dd>
 </dl>
-<p> argument 1: one<br />
- argument 2: &quot;two&quot;<br />
+<p> argument 1: one<br/>
+ argument 2: &quot;two&quot;<br/>
  argument 3: &#8216;three&#8217;</p>
 <dl>
 <dt>
@@ -177,8 +177,8 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 <dl>
 <dt>
 </dt><dd> Produces:</dd></dl>
-<p> argument 1: 3<br />
- argument 2: simple<br />
+<p> argument 1: 3<br/>
+ argument 2: simple<br/>
  argument 3: arguments</p>
 <dl>
 <dt>
@@ -187,8 +187,8 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 <dl>
 <dt>
 </dt><dd> Produces:</dd></dl>
-<p> argument 1: one<br />
- argument 2: two with spaces<br />
+<p> argument 1: one<br/>
+ argument 2: two with spaces<br/>
  argument 3: 3</p>
 <dl>
 <dt>
@@ -197,8 +197,8 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 <dl>
 <dt>
 </dt><dd> Produces:</dd></dl>
-<p> argument 1: one<br />
- argument 2: &quot;two&quot;<br />
+<p> argument 1: one<br/>
+ argument 2: &quot;two&quot;<br/>
  argument 3: spacey &#8216;quoted&#8217; argument</p>
 <dl>
 <dt>
@@ -233,8 +233,8 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 <dt>
 </dt><dd> Produces the following environment entries:</dd>
 </dl>
-<p> one=1<br />
- two=&quot;2&quot;<br />
+<p> one=1<br/>
+ two=&quot;2&quot;<br/>
  three=spacey &#8216;quoted&#8217; value</p>
 <dl>
 <dt>
@@ -251,8 +251,8 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 <dt>
 </dt><dd> This produces the following:</dd>
 </dl>
-<p> one=1<br />
- two=2<br />
+<p> one=1<br/>
+ two=2<br/>
  three=&quot;quotes have no &#8216;special&#8217; meaning&quot;</p>
 <dl>
 <dt>
@@ -719,13 +719,13 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 <dt>
 </dt><dd> Alternatively, you may use these two options to set the default sizes for all files used by your job:</dd>
 </dl>
-<p> buffer_size = 1000000<br />
+<p> buffer_size = 1000000<br/>
  buffer_block_size = 256000</p>
 <dl>
 <dt>
 </dt><dd> If you do not set these, HTCondor will use the values given by these two configuration file macros:</dd>
 </dl>
-<p> DEFAULT_IO_BUFFER_SIZE = 1000000<br />
+<p> DEFAULT_IO_BUFFER_SIZE = 1000000<br/>
  DEFAULT_IO_BUFFER_BLOCK_SIZE = 256000</p>
 <dl>
 <dt>
@@ -1169,7 +1169,7 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 <dl>
 <dt>
 </dt><dd> For the scheduler universe only, <code>signal-number</code> is the signal delivered to the job when the job is removed with <i>condor_rm</i> . <code>signal-number</code> may be either the platform-specific name or value of the signal. This example shows it both ways for a Linux signal:</dd></dl>
-<p> remove_kill_sig = SIGUSR1<br />
+<p> remove_kill_sig = SIGUSR1<br/>
  remove_kill_sig = 10</p>
 <dl>
 <dt>
@@ -1432,7 +1432,7 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 <dl>
 <dt>
 </dt><dd> Defaults to the value zero (0). When <code>match_list_length</code> is defined with an integer value greater than zero (0), attributes are inserted into the job ClassAd. The maximum number of attributes defined is given by the integer value. The job ClassAds introduced are given as</dd></dl>
-<p> LastMatchName0 = &quot;most-recent-Name&quot;<br />
+<p> LastMatchName0 = &quot;most-recent-Name&quot;<br/>
  LastMatchName1 = &quot;next-most-recent-Name&quot;</p>
 <dl>
 <dt>
@@ -1547,9 +1547,9 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 </dl>
 <p> If any of the prescript or postscript values are not enclosed in double quotes, they are silently ignored. </p>
 <p> Below is an example of the use of starter pre and post scripts: </p>
-<p> +PreCmd = &quot;my_pre&quot;<br />
- +PreArgs = &quot;pre\&quot;arg1 prea&#8217;rg2&quot;<br />
- +PostCmd = &quot;my_post&quot;<br />
+<p> +PreCmd = &quot;my_pre&quot;<br/>
+ +PreArgs = &quot;pre\&quot;arg1 prea&#8217;rg2&quot;<br/>
+ +PostCmd = &quot;my_post&quot;<br/>
  +PostArguments = &quot;post\&quot;arg1 &#8216;post&#8221;ar g2&#8217;&quot; </p>
 <p> For this example PreArgs generates a first argument of pre&quot;a1&quot; and a second argument of pre&#8217;a2 . PostArguments generates a first argument of post&quot;a1 and a second argument of post&#8217;a 2 . </p>
 <p> <i>MACROS AND COMMENTS</i> </p>
@@ -1567,14 +1567,14 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 </dt><dd> The $(Node) macro is defined for parallel universe jobs, and is especially relevant for MPI applications. It is a unique value assigned for the duration of the job that essentially identifies the machine (slot) on which a program is executing. Values assigned start at 0 and increase monotonically. The values are assigned as the parallel job is about to start.</dd>
 <dt>
 </dt><dd> Recursive definition of macros is permitted. An example of a construction that works is the following:</dd></dl>
-<p> foo = bar<br />
+<p> foo = bar<br/>
  foo = snap $(foo)</p>
 <dl>
 <dt>
 </dt><dd> As a result, foo = snap bar .</dd>
 <dt>
 </dt><dd> Note that both left- and right- recursion works, so</dd></dl>
-<p> foo = bar<br />
+<p> foo = bar<br/>
  foo = $(foo) snap</p>
 <dl>
 <dt>
@@ -1585,8 +1585,8 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 <dl>
 <dt>
 </dt><dd> by itself will <i>not</i> work, as it does not have an initial base case. Mutually recursive constructions such as:</dd></dl>
-<p> B = bar<br />
- C = $(B)<br />
+<p> B = bar<br/>
+ C = $(B)<br/>
  B = $(C) boo</p>
 <dl>
 <dt>
@@ -1607,7 +1607,7 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 <dl>
 <dt>
 </dt><dd> In addition to the normal macro, there is also a special kind of macro called a <i>substitution macro</i> that allows the substitution of a machine ClassAd attribute value defined on the resource machine itself (gotten after a match to the machine has been made) into specific commands within the submit description file. The substitution macro is of the form:</dd></dl>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  $$(attribute)</p>
 <dl>
 <dt>
@@ -1620,24 +1620,24 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 </dt><dd> Values for the OpSys and Arch attributes are substituted at match time for any given resource. This example allows HTCondor to automatically choose the correct executable for the matched machine.</dd>
 <dt>
 </dt><dd> An extension to the syntax of the substitution macro provides an alternative string to use if the machine attribute within the substitution macro is undefined. The syntax appears as:</dd></dl>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  $$(attribute:string_if_attribute_undefined)</p>
 <dl>
 <dt>
 </dt><dd> An example using this extended syntax provides a path name to a required input file. Since the file can be placed in different locations on different machines, the file&#8217;s path name is given as an argument to the program.</dd></dl>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  arguments = $$(input_file_path:/usr/foo)</p>
 <dl>
 <dt>
 </dt><dd> On the machine, if the attribute input_file_path is not defined, then the path /usr/foo is used instead.</dd>
 <dt>
 </dt><dd> A further extension to the syntax of the substitution macro allows the evaluation of a ClassAd expression to define the value. In this form, the expression may refer to machine attributes by prefacing them with the TARGET. scope resolution prefix. To place a ClassAd expression into the substitution macro, square brackets are added to delimit the expression. The syntax appears as:</dd></dl>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  $$([ClassAd expression])</p>
 <dl>
 <dt>
 </dt><dd> An example of a job that uses this syntax may be one that wants to know how much memory it can use. The application cannot detect this itself, as it would potentially use all of the memory on a multi-slot machine. So the job determines the memory per slot, reducing it by 10% to account for miscellaneous overhead, and passes this as a command line argument to the application. In the submit description file will be</dd></dl>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  arguments = &#8211;memory $$([TARGET.Memory * 0.9])</p>
 <dl>
 <dt>
@@ -1646,12 +1646,12 @@ description: "condor_submit Queue jobs for execution under HTCondor"
 <dl>
 <dt>
 </dt><dd> The environment macro, $ENV, allows the evaluation of an environment variable to be used in setting a submit description file command. The syntax used is</dd></dl>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  $ENV(variable)</p>
 <dl>
 <dt>
 </dt><dd> An example submit description file command that uses this functionality evaluates the submitter&#8217;s home directory in order to set the path and file name of a log file:</dd></dl>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  log = $ENV(HOME)/jobs/logfile</p>
 <dl>
 <dt>

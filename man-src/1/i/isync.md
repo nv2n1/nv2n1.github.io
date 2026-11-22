@@ -12,8 +12,8 @@ description: "isync – synchronize IMAP4 and Maildir mailboxes"
 <h2>SYNOPSIS</h2>
 <p> <code>isync</code> [<i>options</i> &#8230;] {<i>mailbox</i> &#8230;|<i>-a</i>|<i>-l</i>}</p>
 <h2>DESCRIPTION</h2>
-<p> <code>isync</code> is a command line application which synchronizes local Maildir mailboxes with remote IMAP4 mailboxes, suitable for use in IMAP-disconnected mode. Multiple copies of the remote IMAP4 mailboxes can be maintained, and all flags are synchronized.<br />
- <code>isync</code> is only a wrapper binary around <code>mbsync</code> to simplify upgrades. It will automatically migrate the UID mapping from previous versions of <code>isync</code> (even before 0.8) to the new format, and transparently call <code>mbsync</code>. If you were using <code>isync</code> version 0.8 or 0.9.x you might want to use <code>mdconvert</code> to convert the mailboxes to the more efficient <code>native</code> UID storage scheme after migrating them.<br />
+<p> <code>isync</code> is a command line application which synchronizes local Maildir mailboxes with remote IMAP4 mailboxes, suitable for use in IMAP-disconnected mode. Multiple copies of the remote IMAP4 mailboxes can be maintained, and all flags are synchronized.<br/>
+ <code>isync</code> is only a wrapper binary around <code>mbsync</code> to simplify upgrades. It will automatically migrate the UID mapping from previous versions of <code>isync</code> (even before 0.8) to the new format, and transparently call <code>mbsync</code>. If you were using <code>isync</code> version 0.8 or 0.9.x you might want to use <code>mdconvert</code> to convert the mailboxes to the more efficient <code>native</code> UID storage scheme after migrating them.<br/>
  <code>isync</code> is deprecated. Please use the <code>-w</code> option to permanently migrate the configuration and start using <code>mbsync</code> directly.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -124,7 +124,7 @@ description: "isync – synchronize IMAP4 and Maildir mailboxes"
 <dt><code>~/.isyncrc</code></dt>
 <dd> Default configuration file</dd></dl>
 <h2>BUGS</h2>
-<p> The configuration file takes precedence over command line options.<br />
+<p> The configuration file takes precedence over command line options.<br/>
  Use -c /dev/null to work around. </p>
 <p> See the <code>INHERENT PROBLEMS</code> section in the <code>mbsync</code> man page, too.</p>
 <h2>SEE ALSO</h2>

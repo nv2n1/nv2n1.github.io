@@ -9,15 +9,15 @@ description: "perl – The Perl 5 language interpreter"
 
 <p>perl &#8211; The Perl 5 language interpreter </p>
 <h2>Synopsis</h2>
-<p><code>perl</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-sTtuUWX</code> ]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-hv</code> ] [ <code>-V</code>[:<i>configvar</i>] ]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-cw</code> ] [ <code>-d</code>[<code>t</code>][:<i>debugger</i>] ] [ <code>-D</code>[<i>number/list</i>] ]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-pna</code> ] [ <code>-F</code><i>pattern</i> ] [ <code>-l</code>[<i>octal</i>] ] [ <code>-0</code>[<i>octal/hexadecimal</i>] ]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-I</code><i>dir</i> ] [ <code>-m</code>[<code>&#8211;</code>]<i>module</i> ] [ <code>-M</code>[<code>&#8211;</code>]<i>&#8216;module&#8230;&#8217;</i> ] [ <code>-f</code> ]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-C [</code>number/list<code>] </code>]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-S</code> ]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-x</code>[<i>dir</i>] ]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-i</code>[<i>extension</i>] ]<br />
+<p><code>perl</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-sTtuUWX</code> ]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-hv</code> ] [ <code>-V</code>[:<i>configvar</i>] ]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-cw</code> ] [ <code>-d</code>[<code>t</code>][:<i>debugger</i>] ] [ <code>-D</code>[<i>number/list</i>] ]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-pna</code> ] [ <code>-F</code><i>pattern</i> ] [ <code>-l</code>[<i>octal</i>] ] [ <code>-0</code>[<i>octal/hexadecimal</i>] ]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-I</code><i>dir</i> ] [ <code>-m</code>[<code>&#8211;</code>]<i>module</i> ] [ <code>-M</code>[<code>&#8211;</code>]<i>&#8216;module&#8230;&#8217;</i> ] [ <code>-f</code> ]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-C [</code>number/list<code>] </code>]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-S</code> ]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-x</code>[<i>dir</i>] ]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-i</code>[<i>extension</i>] ]<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ [<code>-e</code>|<code>-E</code>] <i>&#8216;command&#8217;</i> ] [ <code>&#8212;</code> ] [ <i>programfile</i> ] [ <i>argument</i> ]&#8230;</p>
 <p> For more information on these options, you can run <tt>&quot;perldoc perlrun&quot;</tt>.</p>
 <h2>Getting Help</h2>
@@ -249,11 +249,11 @@ description: "perl – The Perl 5 language interpreter"
 <p>Perl officially stands for Practical Extraction and Report Language, except when it doesn&#8217;t. </p>
 <p> Perl was originally a language optimized for scanning arbitrary text files, extracting information from those text files, and printing reports based on that information. It quickly became a good language for many system management tasks. Over the years, Perl has grown into a general-purpose programming language. It&#8217;s widely used for everything from quick &#8220;one-liners&#8221; to full-scale application development. </p>
 <p> The language is intended to be practical (easy to use, efficient, complete) rather than beautiful (tiny, elegant, minimal). It combines (in the author&#8217;s opinion, anyway) some of the best features of <code>sed</code>, <code>awk</code>, and <code>sh</code>, making it familiar and easy to use for Unix users to whip up quick solutions to annoying problems. Its general-purpose programming facilities support procedural, functional, and object-oriented programming paradigms, making Perl a comfortable language for the long haul on major projects, whatever your bent. </p>
-<p> Perl&#8217;s roots in text processing haven&#8217;t been forgotten over the years. It still boasts some of the most powerful regular expressions to be found anywhere, and its support for Unicode text is world-class. It handles all kinds of structured text, too, through an extensive collection of extensions. Those libraries, collected in the <font SIZE="-1">CPAN,</font> provide ready-made solutions to an astounding array of problems. When they haven&#8217;t set the standard themselves, they steal from the best &#8212; just like Perl itself.</p>
+<p> Perl&#8217;s roots in text processing haven&#8217;t been forgotten over the years. It still boasts some of the most powerful regular expressions to be found anywhere, and its support for Unicode text is world-class. It handles all kinds of structured text, too, through an extensive collection of extensions. Those libraries, collected in the CPAN, provide ready-made solutions to an astounding array of problems. When they haven&#8217;t set the standard themselves, they steal from the best &#8212; just like Perl itself.</p>
 <h2>Availability</h2>
 <p>Perl is available for most operating systems, including virtually all Unix-like platforms. See &#8220;Supported Platforms&#8221; in perlport for a listing.</p>
 <h2>Environment</h2>
-<p>See &#8220;<font SIZE="-1">ENVIRONMENT&#8221;</font> in perlrun.</p>
+<p>See &#8220;ENVIRONMENT&#8221; in perlrun.</p>
 <h2>Author</h2>
 <p>Larry Wall &lt;larry [at] wall.org&gt;, with the help of oodles of other folks. </p>
 <p> If your Perl success stories and testimonials may be of help to others who wish to advocate the use of Perl in their applications, or if you wish to simply express your gratitude to Larry and the Perl developers, please write to perl-thanks [at] perl.org .</p>

@@ -10,7 +10,7 @@ description: "zupmtr.f –"
 <p>zupmtr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zupmtr</code> (SIDE, UPLO, TRANS, M, N, AP, TAU, C, LDC, WORK, INFO)<br />
+<p>subroutine <code>zupmtr</code> (SIDE, UPLO, TRANS, M, N, AP, TAU, C, LDC, WORK, INFO)<br/>
  <i></i><code>ZUPMTR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zupmtr (characterSIDE, characterUPLO, characterTRANS, integerM, integerN, complex*16, dimension( * )AP, complex*16, dimension( * )TAU, complex*16, dimension( ldc, * )C, integerLDC, complex*16, dimension( * )WORK, integerINFO)</h3>

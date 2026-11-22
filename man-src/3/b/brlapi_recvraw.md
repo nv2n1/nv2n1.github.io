@@ -51,7 +51,7 @@ description: "Driver-Specific modes –"
 <p>Get Raw data </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>buffer</i> points on a buffer where the function will store the received data;<br />
+<dd><i>buffer</i> points on a buffer where the function will store the received data;<br/>
  <i>size</i> holds the buffer size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -65,7 +65,7 @@ description: "Driver-Specific modes –"
 <p>Send Raw data </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>buffer</i> points on the data;<br />
+<dd><i>buffer</i> points on the data;<br/>
  <i>size</i> holds the packet size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

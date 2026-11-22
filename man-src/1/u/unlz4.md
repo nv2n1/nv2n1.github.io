@@ -98,7 +98,7 @@ lz4 file2 &gt;&gt; foo.lz4
 <dt><code>-r</code></dt>
 <dd> operate recursively on directories. This mode also sets <code>-m</code> (multiple input files).</dd>
 <dt><code>-B#</code></dt>
-<dd> Block size [4-7](default : 7)<br />
+<dd> Block size [4-7](default : 7)<br/>
  <code>-B4</code>= 64KB ; <code>-B5</code>= 256KB ; <code>-B6</code>= 1MB ; <code>-B7</code>= 4MB</dd>
 <dt><code>-BI</code></dt>
 <dd> Produce independent blocks (default)</dd>
@@ -107,12 +107,12 @@ lz4 file2 &gt;&gt; foo.lz4
 <dt><code>&#8211;[no-]frame-crc</code></dt>
 <dd> Select frame checksum (default:enabled)</dd>
 <dt><code>&#8211;[no-]content-size</code></dt>
-<dd> Header includes original size (default:not present)<br />
+<dd> Header includes original size (default:not present)<br/>
  Note : this option can only be activated when the original size can be determined, hence for a file. It won&#8217;t work with unknown source size, such as stdin or pipe.</dd>
 <dt><code>&#8211;[no-]sparse</code></dt>
 <dd> Sparse mode support (default:enabled on file, disabled on stdout)</dd>
 <dt><code>-l</code></dt>
-<dd> Use Legacy format (typically for Linux Kernel compression)<br />
+<dd> Use Legacy format (typically for Linux Kernel compression)<br/>
  Note : <code>-l</code> is not compatible with <code>-m</code> (<code>&#8211;multiple</code>) nor <code>-r</code></dd></dl>
 <h3>Other options</h3>
 <dl>

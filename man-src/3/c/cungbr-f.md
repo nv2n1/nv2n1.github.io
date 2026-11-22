@@ -10,7 +10,7 @@ description: "cungbr.f –"
 <p>cungbr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cungbr</code> (VECT, M, N, K, A, LDA, TAU, WORK, LWORK, INFO)<br />
+<p>subroutine <code>cungbr</code> (VECT, M, N, K, A, LDA, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>CUNGBR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cungbr (characterVECT, integerM, integerN, integerK, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

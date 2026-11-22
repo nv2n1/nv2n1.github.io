@@ -44,5 +44,5 @@ description: "XListFonts, XFreeFontNames, XListFontsWithInfo, XFreeFontInfo – 
 <p> The <code>XFreeFontInfo</code> function frees a font structure or an array of font structures and optionally an array of font names. If NULL is passed for names, no font names are freed. If a font structure for an open font (returned by <code>XLoadQueryFont</code>) is passed, the structure is freed, but the font is not closed; use <code>XUnloadFont</code> to close the font. </p>
 <p> Note that <code>XListFontsWithInfo</code> is not thread-safe. If other threads make X requests on the same <code>Display</code>, then this function&#8217;s behavior is undefined.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xloadfont/">XLoadFont</a>(3), <a href="/docs/linux/man/3-xsetfontpath/">XSetFontPath</a>(3)<br />
+<p><a href="/docs/linux/man/3-xloadfont/">XLoadFont</a>(3), <a href="/docs/linux/man/3-xsetfontpath/">XSetFontPath</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

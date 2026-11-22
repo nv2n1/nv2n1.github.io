@@ -14,8 +14,8 @@ description: "QwtSimpleCompassRose –"
 <p> Inherits <code>QwtCompassRose</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtSimpleCompassRose</code> (int <code>numThorns</code>=8, int <code>numThornLevels</code>=-1) </p>
-<p> virtual <code>~QwtSimpleCompassRose</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtSimpleCompassRose</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setWidth</code> (double w) </p>
 <p> double <code>width</code> () const </p>
 <p> void <code>setNumThorns</code> (int count) </p>
@@ -34,31 +34,31 @@ description: "QwtSimpleCompassRose –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>numThorns</i> Number of thorns<br />
+<dd><i>numThorns</i> Number of thorns<br/>
  <i>numThornLevels</i> Number of thorn levels</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtSimpleCompassRose::draw (QPainter *painter, const QPointF &amp;center, doubleradius, doublenorth, QPalette::ColorGroupcg = QPalette::Active) const [virtual]</h3>
 <p>Draw the rose </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>center</i> Center point<br />
- <i>radius</i> Radius of the rose<br />
- <i>north</i> Position<br />
+<dd><i>painter</i> Painter<br/>
+ <i>center</i> Center point<br/>
+ <i>radius</i> Radius of the rose<br/>
+ <i>north</i> Position<br/>
  <i>cg</i> Color group</dd></dl>
 <p> Implements <code>QwtCompassRose</code>.</p>
 <h3>void QwtSimpleCompassRose::drawRose (QPainter *painter, const QPalette &amp;palette, const QPointF &amp;center, doubleradius, doublenorth, doublewidth, intnumThorns, intnumThornLevels, doubleshrinkFactor) [static]</h3>
 <p>Draw the rose </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>palette</i> Palette<br />
- <i>center</i> Center of the rose<br />
- <i>radius</i> Radius of the rose<br />
- <i>north</i> Position pointing to north<br />
- <i>width</i> Width of the rose<br />
- <i>numThorns</i> Number of thorns<br />
- <i>numThornLevels</i> Number of thorn levels<br />
+<dd><i>painter</i> Painter<br/>
+ <i>palette</i> Palette<br/>
+ <i>center</i> Center of the rose<br/>
+ <i>radius</i> Radius of the rose<br/>
+ <i>north</i> Position pointing to north<br/>
+ <i>width</i> Width of the rose<br/>
+ <i>numThorns</i> Number of thorns<br/>
+ <i>numThornLevels</i> Number of thorn levels<br/>
  <i>shrinkFactor</i> Factor to shrink the thorns with each level</dd></dl>
 <h3>int QwtSimpleCompassRose::numThornLevels () const</h3>
 <p><code>Returns:</code></p>

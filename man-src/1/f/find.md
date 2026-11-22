@@ -287,7 +287,7 @@ description: "find – search for files in a directory hierarchy"
 <dd> <p> File name matches shell pattern <i>pattern</i>. The metacharacters do not treat `/&#8216; or `.&#8216; specially; so, for example, </p>
 <pre><code>find . -path &quot;./sr*sc&quot;
 </code></pre>
-<p> will print an entry for a directory called <i>./src/misc</i> (if one exists). To ignore a whole directory tree, use <code>-prune</code> rather than checking every file in the tree. Note that the pattern match test applies to the whole file name, starting from one of the start points named on the command line. It would only make sense to use an absolute path name here if the relevant start point is also an absolute path. This means that this command will never match anything: <br />
+<p> will print an entry for a directory called <i>./src/misc</i> (if one exists). To ignore a whole directory tree, use <code>-prune</code> rather than checking every file in the tree. Note that the pattern match test applies to the whole file name, starting from one of the start points named on the command line. It would only make sense to use an absolute path name here if the relevant start point is also an absolute path. This means that this command will never match anything: <br/>
  </p>
 <pre><code>find bar -path /foo/bar/myfile -print
 </code></pre>
@@ -691,7 +691,7 @@ description: "find – search for files in a directory hierarchy"
 </code></pre>
  </dd>
 <dt>-quit</dt>
-<dd> <p> Exit immediately (with return value zero if no errors have occurred). This is different to <code>-prune</code> because <code>-prune</code> only applies to the contents of pruned directories, while <code>-quit</code> simply makes <code>find</code> stop immediately. No child processes will be left running. Any command lines which have been built by <code>-exec ...&nbsp;+</code> or <code>-execdir ...&nbsp;+</code> are invoked before the program is exited. After <code>-quit</code> is executed, no more files specified on the command line will be processed. For example, `<code>find&nbsp;</code><i>/tmp/foo</i>&nbsp;<i>/tmp/bar</i>&nbsp;-print -quit` will print only `/tmp/foo`. <br />
+<dd> <p> Exit immediately (with return value zero if no errors have occurred). This is different to <code>-prune</code> because <code>-prune</code> only applies to the contents of pruned directories, while <code>-quit</code> simply makes <code>find</code> stop immediately. No child processes will be left running. Any command lines which have been built by <code>-exec ...&nbsp;+</code> or <code>-execdir ...&nbsp;+</code> are invoked before the program is exited. After <code>-quit</code> is executed, no more files specified on the command line will be processed. For example, `<code>find&nbsp;</code><i>/tmp/foo</i>&nbsp;<i>/tmp/bar</i>&nbsp;-print -quit` will print only `/tmp/foo`. <br/>
  One common use of <code>-quit</code> is to stop searching the file system once we have found what we want. For example, if we want to find just a single file we can do this: </p>
 <pre><code>find / -name needle -print -quit
 </code></pre>
@@ -1170,7 +1170,7 @@ find: possible unquoted pattern after predicate `-name'?
 <p> There are security problems inherent in the behaviour that the POSIX standard specifies for <code>find</code>, which therefore cannot be fixed. For example, the <code>-exec</code> action is inherently insecure, and <code>-execdir</code> should be used instead. </p>
 <p> The environment variable <code>LC_COLLATE</code> has no effect on the <code>-ok</code> action.  </p>
 <h2>REPORTING BUGS</h2>
-<p> GNU findutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/findutils/#get-help">https://www.gnu.org/software/findutils/#get-help</a>&gt; <br />
+<p> GNU findutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/findutils/#get-help">https://www.gnu.org/software/findutils/#get-help</a>&gt; <br/>
  Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt; </p>
 <p> Report any other issue via the form at the GNU Savannah bug tracker: </p>
 <dl>
@@ -1181,9 +1181,9 @@ find: possible unquoted pattern after predicate `-name'?
 <dd> <p> &lt;<a rel="nofollow" href="https://lists.gnu.org/mailman/listinfo/bug-findutils">https://lists.gnu.org/mailman/listinfo/bug-findutils</a>&gt; </p>
  </dd></dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1990-2021 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;. <br />
+<p> Copyright &#169; 1990-2021 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;. <br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1), <code><a href="/docs/linux/man/1-locate/">locate</a></code>(1), <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), <code>updatedb</code>(1), <code><a href="/docs/linux/man/1-xargs/">xargs</a></code>(1), <code><a href="/docs/linux/man/2-lstat/">lstat</a></code>(2), <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2), <code><a href="/docs/linux/man/3-ctime/">ctime</a></code>(3) <code><a href="/docs/linux/man/3-fnmatch/">fnmatch</a></code>(3), <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3), <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3), <code>locatedb</code>(5), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7) </p>
-<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/findutils/find">https://www.gnu.org/software/findutils/find</a>&gt; <br />
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/findutils/find">https://www.gnu.org/software/findutils/find</a>&gt; <br/>
  or available locally via: <code>info find</code> </p>

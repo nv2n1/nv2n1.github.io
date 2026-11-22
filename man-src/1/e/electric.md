@@ -85,11 +85,11 @@ Also a cast of thousands:
    David J. Yurach (Queen's University): QUISC 2.0 Silicon compiler
 </pre>
 <h2>SEE ALSO</h2>
-<p> Rubin, Steven M., &quot;A General-Purpose Framework for CAD Algorithms&quot;, <i>IEEE Communications</i>, Special Issue on Communications and VLSI, May 1991.<br />
- Rubin, Steven M., <i>Computer Aids for VLSI Design</i>, Addison-Wesley, Reading, Massachusetts, 1987.<br />
- Rubin, Steven M., &quot;An Integrated Aid for Top-Down Electrical Design&quot;, <i>Proceedings, VLSI &#8217;83</i> (Anceau and Aas, eds.), North Holland, Amsterdam, 1983.<br />
- Mead, C. and Conway, L., <i>Introduction to VLSI Systems</i>, Addison-Wesley, 1980.<br />
- Electrical User&#8217;s Guide.<br />
+<p> Rubin, Steven M., &quot;A General-Purpose Framework for CAD Algorithms&quot;, <i>IEEE Communications</i>, Special Issue on Communications and VLSI, May 1991.<br/>
+ Rubin, Steven M., <i>Computer Aids for VLSI Design</i>, Addison-Wesley, Reading, Massachusetts, 1987.<br/>
+ Rubin, Steven M., &quot;An Integrated Aid for Top-Down Electrical Design&quot;, <i>Proceedings, VLSI &#8217;83</i> (Anceau and Aas, eds.), North Holland, Amsterdam, 1983.<br/>
+ Mead, C. and Conway, L., <i>Introduction to VLSI Systems</i>, Addison-Wesley, 1980.<br/>
+ Electrical User&#8217;s Guide.<br/>
  Electric Internals manual. </p>
 <h2>FILES</h2>
 <table>

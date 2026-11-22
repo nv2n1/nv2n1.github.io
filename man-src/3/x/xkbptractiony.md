@@ -10,7 +10,7 @@ description: "XkbPtrActionY – Returns the high_YYY and low_YYY fields of act c
 <p>XkbPtrActionY &#8211; Returns the high_YYY and low_YYY fields of act converted to a signed int </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>int XkbPtrActionY</code> <code>(XkbPtrAction </code><i>act</i><code>);</code><br />
+<dt> <code>int XkbPtrActionY</code> <code>(XkbPtrAction </code><i>act</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

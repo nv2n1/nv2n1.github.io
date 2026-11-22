@@ -14,68 +14,68 @@ description: "Cdt – container data types"
 #include &lt;cdt.h&gt;
 </code></pre>
 <h3>DICTIONARY TYPES</h3>
-<p>Void_t *;<br />
-Dt_t;<br />
-Dtdisc_t;<br />
-Dtmethod_t;<br />
-Dtlink_t;<br />
+<p>Void_t *;<br/>
+Dt_t;<br/>
+Dtdisc_t;<br/>
+Dtmethod_t;<br/>
+Dtlink_t;<br/>
 Dtstat_t;</p>
 <h3>DICTIONARY CONTROL</h3>
-<p>Dt_t *dtopen(const Dtdisc_t *disc, const Dtmethod_t *meth);<br />
-int dtclose(Dt_t *dt);<br />
-void dtclear(dt);<br />
-Dtmethod_t *dtmethod(Dt_t *dt, const Dtmethod_t *meth);<br />
-Dtdisc_t *dtdisc(Dt_t *dt, const Dtdisc_t *disc, int type);<br />
-Dt_t *dtview(Dt_t *dt, Dt_t *view);<br />
+<p>Dt_t *dtopen(const Dtdisc_t *disc, const Dtmethod_t *meth);<br/>
+int dtclose(Dt_t *dt);<br/>
+void dtclear(dt);<br/>
+Dtmethod_t *dtmethod(Dt_t *dt, const Dtmethod_t *meth);<br/>
+Dtdisc_t *dtdisc(Dt_t *dt, const Dtdisc_t *disc, int type);<br/>
+Dt_t *dtview(Dt_t *dt, Dt_t *view);<br/>
 int dttreeset(Dt_t *dt, int minp, int balance);</p>
 <h3>STORAGE METHODS</h3>
-<p>Dtmethod_t *Dtset;<br />
-Dtmethod_t *Dtbag;<br />
-Dtmethod_t *Dtoset;<br />
-Dtmethod_t *Dtobag;<br />
-Dtmethod_t *Dtlist;<br />
-Dtmethod_t *Dtstack;<br />
-Dtmethod_t *Dtqueue;<br />
+<p>Dtmethod_t *Dtset;<br/>
+Dtmethod_t *Dtbag;<br/>
+Dtmethod_t *Dtoset;<br/>
+Dtmethod_t *Dtobag;<br/>
+Dtmethod_t *Dtlist;<br/>
+Dtmethod_t *Dtstack;<br/>
+Dtmethod_t *Dtqueue;<br/>
 Dtmethod_t *Dtdeque;</p>
 <h3>DISCIPLINE</h3>
-<p>#define DTOFFSET(struct_s, member)<br />
-#define DTDISC(disc, key, size, link, makef, freef, comparf, hashf, memoryf, eventf)<br />
-typedef Void_t *(*Dtmake_f)(Dt_t *, Void_t *, Dtdisc_t *);<br />
-typedef void (*Dtfree_f)(Dt_t *, Void_t *, Dtdisc_t *);<br />
-typedef int (*Dtcompar_f)(Dt_t *, Void_t *, Void_t *, Dtdisc_t *);<br />
-typedef unsigned int (*Dthash_f)(Dt_t *, Void_t *, Dtdisc_t *);<br />
-typedef Void_t *(*Dtmemory_f)(Dt_t *, Void_t *, size_t, Dtdisc_t *);<br />
+<p>#define DTOFFSET(struct_s, member)<br/>
+#define DTDISC(disc, key, size, link, makef, freef, comparf, hashf, memoryf, eventf)<br/>
+typedef Void_t *(*Dtmake_f)(Dt_t *, Void_t *, Dtdisc_t *);<br/>
+typedef void (*Dtfree_f)(Dt_t *, Void_t *, Dtdisc_t *);<br/>
+typedef int (*Dtcompar_f)(Dt_t *, Void_t *, Void_t *, Dtdisc_t *);<br/>
+typedef unsigned int (*Dthash_f)(Dt_t *, Void_t *, Dtdisc_t *);<br/>
+typedef Void_t *(*Dtmemory_f)(Dt_t *, Void_t *, size_t, Dtdisc_t *);<br/>
 typedef int (*Dtevent_f)(Dt_t *, int, Void_t *, Dtdisc_t *);</p>
 <h3>OBJECT OPERATIONS</h3>
-<p>Void_t *dtinsert(Dt_t *dt, Void_t *obj);<br />
-Void_t *dtappend(Dt_t *dt, Void_t *obj);<br />
-Void_t *dtdelete(Dt_t *dt, Void_t *obj);<br />
-Void_t *dtattach(Dt_t *dt, Void_t *obj);<br />
-Void_t *dtdetach(Dt_t *dt, Void_t *obj);<br />
-Void_t *dtsearch(Dt_t *dt, Void_t *obj);<br />
-Void_t *dtmatch(Dt_t *dt, Void_t *key);<br />
-Void_t *dtfirst(Dt_t *dt);<br />
-Void_t *dtnext(Dt_t *dt, Void_t *obj);<br />
-Void_t *dtlast(Dt_t *dt);<br />
-Void_t *dtprev(Dt_t *dt, Void_t *obj);<br />
-Void_t *dtfinger(Dt_t *dt);<br />
-Void_t *dtrenew(Dt_t *dt, Void_t *obj);<br />
-int dtwalk(Dt_t *dt, int (*userf)(Dt_t *, Void_t *, Void_t *), Void_t *);<br />
-Dtlink_t *dtflatten(Dt_t *dt);<br />
-Dtlink_t *dtlink(Dt_t *, Dtlink_t *link);<br />
-Void_t *dtobj(Dt_t *dt, Dtlink_t *link);<br />
-Dtlink_t *dtextract(Dt_t *dt);<br />
-int dtrestore(Dt_t *dt, Dtlink_t *link);<br />
-#define DTTREESEARCH(Dt_t *dt, Void_t *obj, action)<br />
+<p>Void_t *dtinsert(Dt_t *dt, Void_t *obj);<br/>
+Void_t *dtappend(Dt_t *dt, Void_t *obj);<br/>
+Void_t *dtdelete(Dt_t *dt, Void_t *obj);<br/>
+Void_t *dtattach(Dt_t *dt, Void_t *obj);<br/>
+Void_t *dtdetach(Dt_t *dt, Void_t *obj);<br/>
+Void_t *dtsearch(Dt_t *dt, Void_t *obj);<br/>
+Void_t *dtmatch(Dt_t *dt, Void_t *key);<br/>
+Void_t *dtfirst(Dt_t *dt);<br/>
+Void_t *dtnext(Dt_t *dt, Void_t *obj);<br/>
+Void_t *dtlast(Dt_t *dt);<br/>
+Void_t *dtprev(Dt_t *dt, Void_t *obj);<br/>
+Void_t *dtfinger(Dt_t *dt);<br/>
+Void_t *dtrenew(Dt_t *dt, Void_t *obj);<br/>
+int dtwalk(Dt_t *dt, int (*userf)(Dt_t *, Void_t *, Void_t *), Void_t *);<br/>
+Dtlink_t *dtflatten(Dt_t *dt);<br/>
+Dtlink_t *dtlink(Dt_t *, Dtlink_t *link);<br/>
+Void_t *dtobj(Dt_t *dt, Dtlink_t *link);<br/>
+Dtlink_t *dtextract(Dt_t *dt);<br/>
+int dtrestore(Dt_t *dt, Dtlink_t *link);<br/>
+#define DTTREESEARCH(Dt_t *dt, Void_t *obj, action)<br/>
 #define DTTREEMATCH(Dt_t *dt, Void_t *key, action)</p>
 <h3>DICTIONARY STATUS</h3>
-<p>Dt_t *dtvnext(Dt_t *dt);<br />
-int dtvcount(Dt_t *dt);<br />
-Dt_t *dtvhere(Dt_t *dt);<br />
-int dtsize(Dt_t *dt);<br />
+<p>Dt_t *dtvnext(Dt_t *dt);<br/>
+int dtvcount(Dt_t *dt);<br/>
+Dt_t *dtvhere(Dt_t *dt);<br/>
+int dtsize(Dt_t *dt);<br/>
 int dtstat(Dt_t *dt, Dtstat_t *, int all);</p>
 <h3>HASH FUNCTIONS</h3>
-<p>unsigned int dtstrhash(unsigned int h, char *str, int n);<br />
+<p>unsigned int dtstrhash(unsigned int h, char *str, int n);<br/>
 unsigned int dtcharhash(unsigned int h, unsigned char c);</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Cdt</i> manages run-time dictionaries using standard container data types: unordered set/multiset, ordered set/multiset, list, stack, and queue. </p>
@@ -130,17 +130,17 @@ unsigned int dtcharhash(unsigned int h, unsigned char c);</p>
 <h3> Dtqueue</h3>
 <p> Objects are kept in a queue, i.e., in order of insertion. Thus, the first object inserted is at queue head and will be the first to be deleted. </p>
 <h3>DISCIPLINE</h3>
-<p> Object format and associated management functions are defined in the type Dtdisc_t:<br />
-typedef struct<br />
-{<br />
-    int key, size;<br />
-    int link;<br />
-    Dtmake_f makef;<br />
-    Dtfree_f freef;<br />
-    Dtcompar_f comparf;<br />
-    Dthash_f hashf;<br />
-    Dtmemory_f memoryf;<br />
-    Dtevent_f eventf;<br />
+<p> Object format and associated management functions are defined in the type Dtdisc_t:<br/>
+typedef struct<br/>
+{<br/>
+    int key, size;<br/>
+    int link;<br/>
+    Dtmake_f makef;<br/>
+    Dtfree_f freef;<br/>
+    Dtcompar_f comparf;<br/>
+    Dthash_f hashf;<br/>
+    Dtmemory_f memoryf;<br/>
+    Dtevent_f eventf;<br/>
 } Dtdisc_t;</p>
 <h3> int key, size</h3>
 <p> Each object obj is identified by a key used for object comparison or hashing. key should be non-negative and defines an offset into obj. If size is negative, the key is a null-terminated string with starting address *(Void_t**)((char*)obj+key). If size is zero, the key is a null-terminated string with starting address (Void_t*)((char*)obj+key). Finally, if size is positive, the key is a byte array of length size starting at (Void_t*)((char*)obj+key). </p>
@@ -193,8 +193,8 @@ typedef struct<br />
 <p> These functions find an object matching obj or key either from dt or from some dictionary accessible from dt via a viewpath (see dtview().) dtsearch() and dtmatch() return the matching object or NULL on failure. </p>
 <h3> Void_t* dtfirst(Dt_t* dt)</h3>
 <h3> Void_t* dtnext(Dt_t* dt, Void_t* obj)</h3>
-<p> dtfirst() returns the first object in dt. dtnext() returns the object following obj. Objects are ordered based on the storage method in use. For Dtoset and Dtobag, objects are ordered by object comparisons. For Dtstack, objects are ordered in reverse order of insertion. For Dtqueue, objects are ordered in order of insertion. For Dtlist, objects are ordered by list position. For Dtset and Dtbag, objects are ordered by some internal order (more below). Thus, objects in a dictionary or a viewpath can be walked using a for(;;) loop as below.<br />
-for (obj = dtfirst(dt); obj; obj = dtnext(dt, obj))<br />
+<p> dtfirst() returns the first object in dt. dtnext() returns the object following obj. Objects are ordered based on the storage method in use. For Dtoset and Dtobag, objects are ordered by object comparisons. For Dtstack, objects are ordered in reverse order of insertion. For Dtqueue, objects are ordered in order of insertion. For Dtlist, objects are ordered by list position. For Dtset and Dtbag, objects are ordered by some internal order (more below). Thus, objects in a dictionary or a viewpath can be walked using a for(;;) loop as below.<br/>
+for (obj = dtfirst(dt); obj; obj = dtnext(dt, obj))<br/>
  When a dictionary uses Dtset or Dtbag, the object order is determined upon a call to dtfirst()/dtlast(). This order is frozen until a call dtnext()/dtprev() returns NULL or when these same functions are called with a NULL object argument. It is important that a dtfirst()/dtlast() call be balanced by a dtnext()/dtprev() call as described. Nested loops will require multiple balancing, once per loop. If loop balancing is not done carefully, either performance is degraded or unexpected behaviors may result.</p>
 <h3> Void_t* dtlast(Dt_t* dt)</h3>
 <h3> Void_t* dtprev(Dt_t* dt, Void_t* obj)</h3>

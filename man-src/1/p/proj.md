@@ -8,10 +8,10 @@ url: "/docs/linux/man/1-proj/"
 description: "proj – forward cartographic projection filter invproj – inverse cartographic projection filter"
 ---
 
-<p> proj &#8211; forward cartographic projection filter<br />
+<p> proj &#8211; forward cartographic projection filter<br/>
  invproj &#8211; inverse cartographic projection filter</p>
 <h2>SYNOPSIS</h2>
-<p> <code>proj</code> [ <code>-bceEfiIlmorsStTvVwW</code> [ <i>args</i> ] ] [ <code>+args</code> ] file[s]<br />
+<p> <code>proj</code> [ <code>-bceEfiIlmorsStTvVwW</code> [ <i>args</i> ] ] [ <code>+args</code> ] file[s]<br/>
  <code>invproj</code> [ <code>-bceEfiIlmorsStTwW</code> [ <i>args</i> ] ] [ <code>+args</code> ] file[s]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Proj</i> and <i>invproj</i> perform respective forward and inverse transformation of cartographic data to or from cartesian data with a wide range of selectable projection functions. </p>
@@ -60,7 +60,7 @@ description: "proj – forward cartographic projection filter invproj – invers
 <dl>
 <dt>
 </dt><dd>
-&nbsp;<wbr><tt>proj&nbsp;<wbr>+proj=utm&nbsp;<wbr>+lon_0=112w&nbsp;<wbr>+ellps=clrk66 -r&nbsp;<wbr>&lt;&lt;EOF<br />
+&nbsp;<wbr><tt>proj&nbsp;<wbr>+proj=utm&nbsp;<wbr>+lon_0=112w&nbsp;<wbr>+ellps=clrk66 -r&nbsp;<wbr>&lt;&lt;EOF<br/>
 &nbsp;<wbr>45d15'33.1&quot;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>111.5W</dd>
 <p>&nbsp;<wbr>45d15.551666667N<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-111d30</p>
 <p>&nbsp;<wbr>+45.25919444444<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>111d30'000w</p>
@@ -78,10 +78,10 @@ description: "proj – forward cartographic projection filter invproj – invers
 <p> The <i>nad2nad</i> program provides for translation between NAD27 and NAD83 (also available in cs2cs<i>) in a convenient manner. </p>
 <p> The geod</i> program provides the ability to compute geodesic (Great Circle) computations.</p>
 <h2>SEE ALSO</h2>
-<p> <code>cs2cs(1U), nad2nad(1U), geod(1U), pj_init(3U),</code><br />
- <i>Cartographic Projection Procedures for the UNIX Environment&#8212;A User&#8217;s Manual,</i> (Evenden, 1990, Open-file report 90-284).<br />
- <i>Map Projections Used by the U. S. Geological Survey</i> (Snyder, 1984, USGS Bulletin 1532).<br />
- <i>Map Projections&#8212;A Working Manual</i> (Snyder, 1988, USGS Prof. Paper 1395).<br />
+<p> <code>cs2cs(1U), nad2nad(1U), geod(1U), pj_init(3U),</code><br/>
+ <i>Cartographic Projection Procedures for the UNIX Environment&#8212;A User&#8217;s Manual,</i> (Evenden, 1990, Open-file report 90-284).<br/>
+ <i>Map Projections Used by the U. S. Geological Survey</i> (Snyder, 1984, USGS Bulletin 1532).<br/>
+ <i>Map Projections&#8212;A Working Manual</i> (Snyder, 1988, USGS Prof. Paper 1395).<br/>
  <i>An Album of Map Projections</i> (Snyder &amp; Voxland, 1989, USGS Prof. Paper 1453).</p>
 <h2>HOME PAGE</h2>
 <p> <a rel="nofollow" href="http://www.remotesensing.org/proj">http://www.remotesensing.org/proj</a> </p>

@@ -12,13 +12,13 @@ description: "perlbug – how to submit bug reports on Perl"
 <h2>SYNOPSIS</h2>
 <p> <code>perlbug</code> </p>
 <p> <code>perlbug</code> [ <code>-v</code> ] [ <code>-a</code> <i>address</i> ] [ <code>-s</code> <i>subject</i> ] [ <code>-b</code> <i>body</i> | <code>-f</code> <i>inputfile</i> ] [ <code>-F</code> <i>outputfile</i> ] [ <code>-r</code> <i>returnaddress</i> ] [ <code>-e</code> <i>editor</i> ] [ <code>-c</code> <i>adminaddress</i> | <code>-C</code> ] [ <code>-S</code> ] [ <code>-t</code> ] [ <code>-d</code> ] [ <code>-h</code> ] [ <code>-T</code> ] </p>
-<p> <code>perlbug</code> [ <code>-v</code> ] [ <code>-r</code> <i>returnaddress</i> ]<br />
+<p> <code>perlbug</code> [ <code>-v</code> ] [ <code>-r</code> <i>returnaddress</i> ]<br/>
 &nbsp;[ <code>-ok</code> | <code>-okay</code> | <code>-nok</code> | <code>-nokay</code> ] </p>
 <p> <code>perlthanks</code></p>
 <h2>DESCRIPTION</h2>
 <p> This program is designed to help you generate bug reports (and thank-you notes) about perl5 and the modules which ship with it. </p>
 <p> In most cases, you can just run it interactively from a command line without any special arguments and follow the prompts. </p>
-<p> If you have found a bug with a non-standard port (one that was not part of the <i>standard distribution</i>), a binary distribution, or a non-core module (such as Tk, <font SIZE="-1">DBI,</font> etc), then please see the documentation that came with that distribution to determine the correct place to report bugs. </p>
+<p> If you have found a bug with a non-standard port (one that was not part of the <i>standard distribution</i>), a binary distribution, or a non-core module (such as Tk, DBI, etc), then please see the documentation that came with that distribution to determine the correct place to report bugs. </p>
 <p> Bug reports should be submitted to the GitHub issue tracker at &lt;<a rel="nofollow" href="https://github.com/Perl/perl5/issues">https://github.com/Perl/perl5/issues</a>&gt;. The <code>perlbug [at] perl.org</code> address no longer automatically opens tickets. You can use this tool to compose your report and save it to a file which you can then submit to the issue tracker. </p>
 <p> In extreme cases, <code>perlbug</code> may not work well enough on your system to guide you through composing a bug report. In those cases, you may be able to use <code>perlbug -d</code> or <code>perl -V</code> to get system configuration information to include in your issue report. </p>
 <p> When reporting a bug, please run through this checklist:</p>
@@ -41,7 +41,7 @@ description: "perlbug – how to submit bug reports on Perl"
 <dt>Have you included all relevant information?</dt>
 <dd> Be sure to include the <code>exact</code> error messages, if any. &#8220;Perl gave an error&#8221; is not an exact error message. </dd>
 <p> If you get a core dump (or equivalent), you may use a debugger (<code>dbx</code>, <code>gdb</code>, etc) to produce a stack trace to include in the bug report. </p>
-<p> <font SIZE="-1">NOTE:</font> unless your Perl has been compiled with debug info (often <code>-g</code>), the stack trace is likely to be somewhat hard to use because it will most probably contain only the function names and not their arguments. If possible, recompile your Perl with debug info and reproduce the crash and the stack trace.</p>
+<p> NOTE: unless your Perl has been compiled with debug info (often <code>-g</code>), the stack trace is likely to be somewhat hard to use because it will most probably contain only the function names and not their arguments. If possible, recompile your Perl with debug info and reproduce the crash and the stack trace.</p>
 <dt>Can you describe the bug in plain English?</dt>
 <dd> The easier it is to understand a reproducible bug, the more likely it will be fixed. Any insight you can provide into the problem will help a great deal. In other words, try to analyze the problem (to the extent you can) and report your discoveries.</dd>
 <dt>Can you fix the bug yourself?</dt>
@@ -51,7 +51,7 @@ description: "perlbug – how to submit bug reports on Perl"
 <p> Make sure the patch is not reversed (the first argument to diff is typically the original file, the second argument your changed file). Make sure you test your patch by applying it with <tt>&quot;git am&quot;</tt> or the <tt>&quot;patch&quot;</tt> program before you send it on its way. Try to follow the same style as the code you are trying to patch. Make sure your patch really does work (<tt>&quot;make test&quot;</tt>, if the thing you&#8217;re patching is covered by Perl&#8217;s test suite).</p>
 <dt>Can you use &quot;perlbug&quot; to submit a thank-you note?</dt>
 <dd> Yes, you can do this by either using the <tt>&quot;-T&quot;</tt> option, or by invoking the program as <tt>&quot;perlthanks&quot;</tt>. Thank-you notes are good. It makes people smile.</dd></dl>
-<p> Please make your issue title informative. &#8220;a bug&#8221; is not informative. Neither is &#8220;perl crashes&#8221; nor is &#8220;<font SIZE="-1">HELP</font>!!!&#8221;. These don&#8217;t help. A compact description of what&#8217;s wrong is fine. </p>
+<p> Please make your issue title informative. &#8220;a bug&#8221; is not informative. Neither is &#8220;perl crashes&#8221; nor is &#8220;HELP!!!&#8221;. These don&#8217;t help. A compact description of what&#8217;s wrong is fine. </p>
 <p> Having done your bit, please be prepared to wait, to be told the bug is in your code, or possibly to get no reply at all. The volunteers who maintain Perl are busy folks, so if your problem is an obvious bug in your own code, is difficult to understand or is a duplicate of an existing report, you may not receive a personal reply. </p>
 <p> If it is important to you that your bug be fixed, do monitor the issue tracker (you will be subscribed to notifications for issues you submit or comment on) and the commit logs to development versions of Perl, and encourage the maintainers with kind words or offers of frosty beverages. (Please do be kind to the maintainers. Harassing or flaming them is likely to have the opposite effect of the one you want.) </p>
 <p> Feel free to update the ticket about your bug on &lt;<a rel="nofollow" href="https://github.com/Perl/perl5/issues">https://github.com/Perl/perl5/issues</a>&gt; if a new version of Perl is released and your bug is still present.</p>

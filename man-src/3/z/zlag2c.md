@@ -10,7 +10,7 @@ description: "zlag2c.f –"
 <p>zlag2c.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlag2c</code> (M, N, A, LDA, SA, LDSA, INFO)<br />
+<p>subroutine <code>zlag2c</code> (M, N, A, LDA, SA, LDSA, INFO)<br/>
  <i></i><code>ZLAG2C</code> converts a complex double precision matrix to a complex single precision matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlag2c (integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, complex, dimension( ldsa, * )SA, integerLDSA, integerINFO)</h3>

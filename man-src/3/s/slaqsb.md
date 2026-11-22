@@ -11,7 +11,7 @@ description: "slaqsb.f –"
 <p> slaqsb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slaqsb</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, EQUED)<br />
+<p> subroutine <code>slaqsb</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, EQUED)<br/>
  <i></i><code>SLAQSB</code> scales a symmetric/Hermitian band matrix, using scaling factors computed by spbequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaqsb (characterUPLO, integerN, integerKD, real, dimension( ldab, * )AB, integerLDAB, real, dimension( * )S, realSCOND, realAMAX, characterEQUED)</h3>

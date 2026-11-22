@@ -10,7 +10,7 @@ description: "dlarft.f –"
 <p>dlarft.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlarft</code> (DIRECT, STOREV, N, K, V, LDV, TAU, T, LDT)<br />
+<p>subroutine <code>dlarft</code> (DIRECT, STOREV, N, K, V, LDV, TAU, T, LDT)<br/>
  <i></i><code>DLARFT</code> forms the triangular factor T of a block reflector H = I &#8211; vtvH</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarft (characterDIRECT, characterSTOREV, integerN, integerK, double precision, dimension( ldv, * )V, integerLDV, double precision, dimension( * )TAU, double precision, dimension( ldt, * )T, integerLDT)</h3>

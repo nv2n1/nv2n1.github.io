@@ -9,64 +9,64 @@ description: "pure-ftpd – simple File Transfer Protocol server"
 
 <p>pure-ftpd &#8211; simple File Transfer Protocol server </p>
 <h2>Synopsis</h2>
-<p><code>pure-ftpd [-0] [-1] [-2] [-4] [-6] [-a gid] [-A] [-b] [-B] [-c clients] [-C cnx/ip] [-d [-d]] [-D] [-e] [-E] [-f facility] [-F fortunes file] [-g pidfile] [-G] [-H] [-i] [-I] [-j] [-J ciphers] [-k percentage] [-K] [-l authentication[:config file]] [-L max files:max depth] [-m maxload] [-M] [-n maxfiles:maxsize] [-N] [-o] [-O format:log file] [-p first:last] [-P ip address or host name] [-q upload:download ratio] [-Q upload:download ratio] [-r] [-R] [-s] [-S [address,][port]] [-t upload bandwidth:download bandwidth] [-T upload bandwidth:download bandwidth] [-u uid] [-U umask files:umask dirs] [-v bonjour name] [-V ip address] [-w] [-W] [-x] [-X] [-y max user sessions:max anon sessions] [-Y tls behavior] [-z] [-Z]</code><br />
- Alternative style :<br />
- -0 &#8211;notruncate<br />
- -1 &#8211;logpid<br />
- -2 &#8211;certfile<br />
- -4 &#8211;ipv4only<br />
- -6 &#8211;ipv6only<br />
- -a &#8211;trustedgid<br />
- -A &#8211;chrooteveryone<br />
- -b &#8211;brokenclientscompatibility<br />
- -B &#8211;daemonize<br />
- -c &#8211;maxclientsnumber<br />
- -C &#8211;maxclientsperip<br />
- -d &#8211;verboselog<br />
- -D &#8211;displaydotfiles<br />
- -e &#8211;anonymousonly<br />
- -E &#8211;noanonymous<br />
- -f &#8211;syslogfacility<br />
- -F &#8211;fortunesfile<br />
- -g &#8211;pidfile<br />
- -G &#8211;norename<br />
- -h &#8211;help<br />
- -H &#8211;dontresolve<br />
- -i &#8211;anonymouscantupload<br />
- -I &#8211;maxidletime<br />
- -j &#8211;createhomedir<br />
- -J &#8211;tlsciphersuite<br />
- -k &#8211;maxdiskusagepct<br />
- -K &#8211;keepallfiles<br />
- -l &#8211;login<br />
- -L &#8211;limitrecursion<br />
- -m &#8211;maxload<br />
- -M &#8211;anonymouscancreatedirs<br />
- -n &#8211;quota<br />
- -N &#8211;natmode<br />
- -o &#8211;uploadscript<br />
- -O &#8211;altlog<br />
- -p &#8211;passiveportrange<br />
- -P &#8211;forcepassiveip<br />
- -q &#8211;anonymousratio<br />
- -Q &#8211;userratio<br />
- -r &#8211;autorename<br />
- -R &#8211;nochmod<br />
- -s &#8211;antiwarez<br />
- -S &#8211;bind<br />
- -t &#8211;anonymousbandwidth<br />
- -T &#8211;userbandwidth<br />
- -u &#8211;minuid<br />
- -U &#8211;umask<br />
- -v &#8211;bonjour<br />
- -V &#8211;trustedip<br />
- -w &#8211;allowuserfxp<br />
- -W &#8211;allowanonymousfxp<br />
- -x &#8211;prohibitdotfileswrite<br />
- -X &#8211;prohibitdotfilesread<br />
- -y &#8211;peruserlimits<br />
- -Y &#8211;tls<br />
- -z &#8211;allowdotfiles<br />
+<p><code>pure-ftpd [-0] [-1] [-2] [-4] [-6] [-a gid] [-A] [-b] [-B] [-c clients] [-C cnx/ip] [-d [-d]] [-D] [-e] [-E] [-f facility] [-F fortunes file] [-g pidfile] [-G] [-H] [-i] [-I] [-j] [-J ciphers] [-k percentage] [-K] [-l authentication[:config file]] [-L max files:max depth] [-m maxload] [-M] [-n maxfiles:maxsize] [-N] [-o] [-O format:log file] [-p first:last] [-P ip address or host name] [-q upload:download ratio] [-Q upload:download ratio] [-r] [-R] [-s] [-S [address,][port]] [-t upload bandwidth:download bandwidth] [-T upload bandwidth:download bandwidth] [-u uid] [-U umask files:umask dirs] [-v bonjour name] [-V ip address] [-w] [-W] [-x] [-X] [-y max user sessions:max anon sessions] [-Y tls behavior] [-z] [-Z]</code><br/>
+ Alternative style :<br/>
+ -0 &#8211;notruncate<br/>
+ -1 &#8211;logpid<br/>
+ -2 &#8211;certfile<br/>
+ -4 &#8211;ipv4only<br/>
+ -6 &#8211;ipv6only<br/>
+ -a &#8211;trustedgid<br/>
+ -A &#8211;chrooteveryone<br/>
+ -b &#8211;brokenclientscompatibility<br/>
+ -B &#8211;daemonize<br/>
+ -c &#8211;maxclientsnumber<br/>
+ -C &#8211;maxclientsperip<br/>
+ -d &#8211;verboselog<br/>
+ -D &#8211;displaydotfiles<br/>
+ -e &#8211;anonymousonly<br/>
+ -E &#8211;noanonymous<br/>
+ -f &#8211;syslogfacility<br/>
+ -F &#8211;fortunesfile<br/>
+ -g &#8211;pidfile<br/>
+ -G &#8211;norename<br/>
+ -h &#8211;help<br/>
+ -H &#8211;dontresolve<br/>
+ -i &#8211;anonymouscantupload<br/>
+ -I &#8211;maxidletime<br/>
+ -j &#8211;createhomedir<br/>
+ -J &#8211;tlsciphersuite<br/>
+ -k &#8211;maxdiskusagepct<br/>
+ -K &#8211;keepallfiles<br/>
+ -l &#8211;login<br/>
+ -L &#8211;limitrecursion<br/>
+ -m &#8211;maxload<br/>
+ -M &#8211;anonymouscancreatedirs<br/>
+ -n &#8211;quota<br/>
+ -N &#8211;natmode<br/>
+ -o &#8211;uploadscript<br/>
+ -O &#8211;altlog<br/>
+ -p &#8211;passiveportrange<br/>
+ -P &#8211;forcepassiveip<br/>
+ -q &#8211;anonymousratio<br/>
+ -Q &#8211;userratio<br/>
+ -r &#8211;autorename<br/>
+ -R &#8211;nochmod<br/>
+ -s &#8211;antiwarez<br/>
+ -S &#8211;bind<br/>
+ -t &#8211;anonymousbandwidth<br/>
+ -T &#8211;userbandwidth<br/>
+ -u &#8211;minuid<br/>
+ -U &#8211;umask<br/>
+ -v &#8211;bonjour<br/>
+ -V &#8211;trustedip<br/>
+ -w &#8211;allowuserfxp<br/>
+ -W &#8211;allowanonymousfxp<br/>
+ -x &#8211;prohibitdotfileswrite<br/>
+ -X &#8211;prohibitdotfilesread<br/>
+ -y &#8211;peruserlimits<br/>
+ -Y &#8211;tls<br/>
+ -z &#8211;allowdotfiles<br/>
  -Z &#8211;customerproof </p>
 <h2>Description</h2>
 <p><code>Pure-FTPd</code> is a small, simple server for the old and hairy File Transfer Protocol, designed to use less resources than older servers, be smaller and very secure, and to never execute any external program. It support most-used features and commands of FTP (including many modern extensions), and leaves out everything which is deprecated, meaningless, insecure, or correlates with trouble. IPv6 is fully supported. </p>
@@ -123,8 +123,8 @@ description: "pure-ftpd – simple File Transfer Protocol server"
 <dt><code>-K</code></dt>
 <dd>Allow users to resume and upload files, but NOT to delete them. Directories can be removed, but only if they are empty.</dd>
 <dt><code>-l authentication:file</code></dt>
-<dd>Enable a new authentication method. It can be one of : <i>-l unix</i> For standard (/etc/passwd) authentication. <i>-l pam</i> For PAM authentication. <i>-l ldap:LDAP config file</i> For LDAP directories. <i>-l mysql:MySQL config file</i> For MySQL databases. <i>-l pgsql:Postgres config file</i> For Postgres databases. <i>-l puredb:PureDB database file</i> For PureDB databases. <i>-l extauth:path to pure-authd socket</i> For external authentication handlers.<br />
- Different authentication methods can be mixed together. For instance if you run the server with <i>-lpuredb:/etc/pure-ftpd/pwd.pdb -lmysql:/etc/pure-ftpd/my.cf -lunix</i> Accounts will first be authenticated from a PureDB database. If it fails, a MySQL server will be asked. If the account is still not found is the database, standard unix accounts will be scanned. Authentication methods are tried in the order you give the -l options, if you do not give -l, then the decision comes from configure, if PAM is built in, it is used, if not, then UNIX (/etc/passwd) is used by default.<br />
+<dd>Enable a new authentication method. It can be one of : <i>-l unix</i> For standard (/etc/passwd) authentication. <i>-l pam</i> For PAM authentication. <i>-l ldap:LDAP config file</i> For LDAP directories. <i>-l mysql:MySQL config file</i> For MySQL databases. <i>-l pgsql:Postgres config file</i> For Postgres databases. <i>-l puredb:PureDB database file</i> For PureDB databases. <i>-l extauth:path to pure-authd socket</i> For external authentication handlers.<br/>
+ Different authentication methods can be mixed together. For instance if you run the server with <i>-lpuredb:/etc/pure-ftpd/pwd.pdb -lmysql:/etc/pure-ftpd/my.cf -lunix</i> Accounts will first be authenticated from a PureDB database. If it fails, a MySQL server will be asked. If the account is still not found is the database, standard unix accounts will be scanned. Authentication methods are tried in the order you give the -l options, if you do not give -l, then the decision comes from configure, if PAM is built in, it is used, if not, then UNIX (/etc/passwd) is used by default.<br/>
  See the <i>README.LDAP</i> and <i>README.MySQL</i> files for info about the built-in LDAP and SQL directory support.</dd>
 <dt><code>-L max files:max depth</code></dt>
 <dd>Avoid denial-of-service attacks by limiting the number of displayed files in a &#8216;ls&#8217; and the maximum depth of a recursive &#8216;ls&#8217;. Defaults are 2000:5 (2000 files displayed for a single &#8216;ls&#8217; and walk through 5 subdirectories max).</dd>
@@ -135,22 +135,22 @@ description: "pure-ftpd – simple File Transfer Protocol server"
 <dt><code>-n maxfiles:maxsize</code></dt>
 <dd>Enable <code>virtual quotas</code> When virtual quotas are enabled, .ftpquota files are created, and the number of files for a user is restricted to &#8216;maxfiles&#8217;. The max total size of his directory is also restricted to &#8216;maxsize&#8217; Megabytes. Members of the trusted group aren&#8217;t subject to quotas.</dd>
 <dt><code>-N</code></dt>
-<dd>NAT mode. Force <code>active</code> mode. If your FTP server is behind a NAT box that doesn&#8217;t support applicative FTP proxying, or if you use port redirection without a transparent FTP proxy, use this. Well&#8230; the previous sentence isn&#8217;t very clear. Okay: if your network looks like this:<br />
- FTP&#8211;NAT.gateway/router&#8211;Internet<br />
+<dd>NAT mode. Force <code>active</code> mode. If your FTP server is behind a NAT box that doesn&#8217;t support applicative FTP proxying, or if you use port redirection without a transparent FTP proxy, use this. Well&#8230; the previous sentence isn&#8217;t very clear. Okay: if your network looks like this:<br/>
+ FTP&#8211;NAT.gateway/router&#8211;Internet<br/>
  and if you want people coming from the internet to have access to your FTP server, please try without this option first. If Netscape clients can connect without any problem, your NAT gateway rulez. If Netscape doesn&#8217;t display directory listings, your NAT gateway sucks. Use <code>-N</code> as a workaround.</dd>
 <dt><code>-o</code></dt>
 <dd>Enable <i>pure-uploadscript</i>.</dd>
 <dt><code>-O format:log file</code></dt>
-<dd>Record all file transfers into a specific log file, in an alternative format. Currently, three formats are supported : CLF, Stats, W3C and xferlog.<br />
- If you add<br />
- <code>-O clf:/var/log/pureftpd.log</code><br />
- to your starting options, Pure-FTPd will log transfers in <code>/var/log/pureftpd.log</code> in a format similar to the Apache web server in default configuration.<br />
- If you add<br />
- <code>-O stats:/var/log/pureftpd.log</code><br />
- to your starting options, Pure-FTPd will create accurate log files designed for traffic analys software like ftpStats.<br />
- If you add<br />
- <code>-O w3c:/var/log/pureftpd.log</code><br />
- to your starting options, Pure-FTPd will create W3C-conformant log files.<br />
+<dd>Record all file transfers into a specific log file, in an alternative format. Currently, three formats are supported : CLF, Stats, W3C and xferlog.<br/>
+ If you add<br/>
+ <code>-O clf:/var/log/pureftpd.log</code><br/>
+ to your starting options, Pure-FTPd will log transfers in <code>/var/log/pureftpd.log</code> in a format similar to the Apache web server in default configuration.<br/>
+ If you add<br/>
+ <code>-O stats:/var/log/pureftpd.log</code><br/>
+ to your starting options, Pure-FTPd will create accurate log files designed for traffic analys software like ftpStats.<br/>
+ If you add<br/>
+ <code>-O w3c:/var/log/pureftpd.log</code><br/>
+ to your starting options, Pure-FTPd will create W3C-conformant log files.<br/>
  For security purposes, the path must be absolute (eg. <code>/var/log/pureftpd.log</code>, not <code> ../log/pureftpd.log</code>).</dd>
 <dt><code>-p first:last</code></dt>
 <dd>Use only ports in the range <i>first</i> to <i>last</i> inclusive for passive-mode downloads. This means that clients will not try to open connections to TCP ports outside the range <i>first &#8211; last</i>, which makes pure-ftpd more compatible with packet filters. Note that the maximum number of clients (specified with <code>-c</code>) is forced down to <i>(last + 1 &#8211; first)/2</i> if it is greater, as the default is. (The syntax for the port range is, conveniently, the same as that of <code>iptables).</code></dd>
@@ -191,10 +191,10 @@ description: "pure-ftpd – simple File Transfer Protocol server"
 <dt><code>-y per user max sessions:max anonymous sessions</code></dt>
 <dd>This switch enables per-user concurrency limits. Two values are separated by a column. The first one is the max number of concurrent sessions for a single login. The second one is the maximum number of anonoymous sessions.</dd>
 <dt><code>-Y tls behavior</code></dt>
-<dd><code>-Y 0</code> (default) disables SSL/TLS security mechanisms.<br />
- <code>-Y 1</code> Accept both normal sessions and SSL/TLS ones.<br />
- <code>-Y 2</code> refuses connections that aren&#8217;t using SSL/TLS security mechanisms, including anonymous ones.<br />
- <code>-Y 3</code> refuses connections that aren&#8217;t using SSL/TLS security mechanisms, and refuse cleartext data channels as well.<br />
+<dd><code>-Y 0</code> (default) disables SSL/TLS security mechanisms.<br/>
+ <code>-Y 1</code> Accept both normal sessions and SSL/TLS ones.<br/>
+ <code>-Y 2</code> refuses connections that aren&#8217;t using SSL/TLS security mechanisms, including anonymous ones.<br/>
+ <code>-Y 3</code> refuses connections that aren&#8217;t using SSL/TLS security mechanisms, and refuse cleartext data channels as well.<br/>
  The server must have been compiled with SSL/TLS support and a valid certificate must be in place to accept encrypted sessions.</dd>
 <dt><code>-z</code></dt>
 <dd>Allow anonymous users to read files and directories starting with a dot (&#8216;.&#8217;).</dd>
@@ -279,7 +279,7 @@ description: "pure-ftpd – simple File Transfer Protocol server"
 <dd>Sorts by file modification time instead of by name. Undoes <code>-S</code>. </dd>
 </dl>
 <h2>Protocol</h2>
-<p>Here are the FTP commands supported by this server.<br />
+<p>Here are the FTP commands supported by this server.<br/>
  <code>ABOR</code> <code>ALLO</code> <code>APPE</code> <code>AUTH TLS</code> <code>CCC</code> <code>CDUP</code> <code>CWD</code> <code>DELE</code> <code>EPRT</code> <code>EPSV</code> <code>ESTA</code> <code>ESTP</code> <code>FEAT</code> <code>HELP</code> <code>LIST</code> <code>MDTM</code> <code>MFMT</code> <code>MKD</code> <code>MLSD</code> <code>MLST</code> <code>MODE</code> <code>NLST</code> <code>NOOP</code> <code>PASS</code> <code>PASV</code> <code>PBSZ</code> <code>PORT</code> <code>PROT</code> <code>PWD</code> <code>QUIT</code> <code>REST</code> <code>RETR</code> <code>RMD</code> <code>RNFR</code> <code>RNTO</code> <code>SIZE</code> <code>SPSV</code> <code>STAT</code> <code>STOR</code> <code>STOU</code> <code>STRU</code> <code>SYST</code> <code>TYPE</code> <code>USER</code> <code>XCUP</code> <code>XCWD</code> <code>XDBG</code> <code>XMKD</code> <code>XPWD</code> <code>XRMD</code> <code>OPTS MLST</code> <code>OPTS UTF8</code> <code>SITE CHMOD</code> <code>SITE HELP</code> <code>SITE IDLE</code> <code>SITE TIME</code> <code>SITE UTIME</code></p>
 <h2>Bugs</h2>
 <p>Please report bugs to the mailing-list (see below). Pure-FTPd looks very stable and is used on production servers. However it comes with no warranty and it can have nasty bugs or security flaws. </p>
@@ -292,84 +292,84 @@ description: "pure-ftpd – simple File Transfer Protocol server"
 <p> Pure-FTPd is (C)opyleft 2001-2015 by Frank DENIS &lt;j at pureftpd dot org&gt; and the Pure-FTPd team. </p>
 <p> This software is covered by the BSD license. </p>
 <p> Contributors: </p>
-<p>&nbsp;<wbr>Arnt Gulbrandsen,<br />
-&nbsp;<wbr>Troll Tech AS,<br />
-&nbsp;<wbr>Janos Farkas,<br />
-&nbsp;<wbr>August Fullford,<br />
-&nbsp;<wbr>Ximenes Zalteca,<br />
-&nbsp;<wbr>Patrick Michael Kane,<br />
-&nbsp;<wbr>Arkadiusz Miskiewicz,<br />
-&nbsp;<wbr>Michael K. Johnson,<br />
-&nbsp;<wbr>Kelley Lingerfelt,<br />
-&nbsp;<wbr>Sebastian Andersson,<br />
-&nbsp;<wbr>Andreas Westin,<br />
-&nbsp;<wbr>Jason Lunz,<br />
-&nbsp;<wbr>Mathias Gumz,<br />
-&nbsp;<wbr>Claudiu Costin,<br />
-&nbsp;<wbr>Ping,<br />
-&nbsp;<wbr>Paul Lasarev,<br />
-&nbsp;<wbr>Jean-Mathieux Schaffhauser,<br />
-&nbsp;<wbr>Emmanuel Hocdet,<br />
-&nbsp;<wbr>Sami Koskinen,<br />
-&nbsp;<wbr>Sami Farin,<br />
-&nbsp;<wbr>Luis Llorente Campo,<br />
-&nbsp;<wbr>Peter Pentchev,<br />
-&nbsp;<wbr>Darren Casey,<br />
-&nbsp;<wbr>The Regents of the University of California,<br />
-&nbsp;<wbr>Theo de Raadt&nbsp;<wbr>(OpenBSD),<br />
-&nbsp;<wbr>Matthias Andree,<br />
-&nbsp;<wbr>Isak Lyberth,<br />
-&nbsp;<wbr>Steve Reid,<br />
-&nbsp;<wbr>RSA Data Security Inc,<br />
-&nbsp;<wbr>Trilucid,<br />
-&nbsp;<wbr>Dmtry Lebkov,<br />
-&nbsp;<wbr>Johan Huisman,<br />
-&nbsp;<wbr>Thorsten Kukuk,<br />
-&nbsp;<wbr>Jan van Veen,<br />
-&nbsp;<wbr>Roger Constantin Demetrescu,<br />
-&nbsp;<wbr>Stefano F.,<br />
-&nbsp;<wbr>Robert Varga,<br />
-&nbsp;<wbr>Freeman,<br />
-&nbsp;<wbr>James Metcalf,<br />
-&nbsp;<wbr>Im Eunjea,<br />
-&nbsp;<wbr>Philip Gladstone,<br />
-&nbsp;<wbr>Kenneth Stailey,<br />
-&nbsp;<wbr>Brad Smith,<br />
-&nbsp;<wbr>Ulrik Sartipy,&nbsp;<wbr><br />
-&nbsp;<wbr>Cindy Marasco,<br />
-&nbsp;<wbr>Nicolas Doye,<br />
-&nbsp;<wbr>Thomas Briggs,<br />
-&nbsp;<wbr>Stanton Gallegos,<br />
-&nbsp;<wbr>Florin Andrei,<br />
-&nbsp;<wbr>Chan Wilson,<br />
-&nbsp;<wbr>Bjoern Metzdorf,<br />
-&nbsp;<wbr>Ben Gertzfield,<br />
-&nbsp;<wbr>Akhilesch Mritunjai,<br />
-&nbsp;<wbr>Dawid Szymanski,<br />
-&nbsp;<wbr>Kurt Inge Smadal,<br />
-&nbsp;<wbr>Alex Dupre,<br />
-&nbsp;<wbr>Gabriele Vinci,<br />
-&nbsp;<wbr>Andrey Ulanov,<br />
-&nbsp;<wbr>Fygul Hether,<br />
-&nbsp;<wbr>Jeffrey Lim,<br />
-&nbsp;<wbr>Ying-Chieh Liao,<br />
-&nbsp;<wbr>Johannes Erdfelt,<br />
-&nbsp;<wbr>Martin Sarfy,<br />
-&nbsp;<wbr>Clive Goodhead,<br />
-&nbsp;<wbr>Aristoteles Pagaltzis,<br />
-&nbsp;<wbr>Stefan Hornburg,<br />
-&nbsp;<wbr>Mehmet Cokcevik,<br />
-&nbsp;<wbr>Brynjar Eide,<br />
-&nbsp;<wbr>Torgnt Wernersson,<br />
-&nbsp;<wbr>Banhalmi Csaba,<br />
-&nbsp;<wbr>Volodin D,<br />
-&nbsp;<wbr>Oriol Magran�,<br />
-&nbsp;<wbr>Jui-Nan Lin,<br />
-&nbsp;<wbr>Patrick Gosling,<br />
-&nbsp;<wbr>Marc Balmer,<br />
-&nbsp;<wbr>Rajat Upadhyaya&nbsp;<wbr>/&nbsp;<wbr>Novell,<br />
-&nbsp;<wbr>Christian Cier-Zniewski,<br />
-&nbsp;<wbr>Wilco Baan Hofman,<br />
+<p>&nbsp;<wbr>Arnt Gulbrandsen,<br/>
+&nbsp;<wbr>Troll Tech AS,<br/>
+&nbsp;<wbr>Janos Farkas,<br/>
+&nbsp;<wbr>August Fullford,<br/>
+&nbsp;<wbr>Ximenes Zalteca,<br/>
+&nbsp;<wbr>Patrick Michael Kane,<br/>
+&nbsp;<wbr>Arkadiusz Miskiewicz,<br/>
+&nbsp;<wbr>Michael K. Johnson,<br/>
+&nbsp;<wbr>Kelley Lingerfelt,<br/>
+&nbsp;<wbr>Sebastian Andersson,<br/>
+&nbsp;<wbr>Andreas Westin,<br/>
+&nbsp;<wbr>Jason Lunz,<br/>
+&nbsp;<wbr>Mathias Gumz,<br/>
+&nbsp;<wbr>Claudiu Costin,<br/>
+&nbsp;<wbr>Ping,<br/>
+&nbsp;<wbr>Paul Lasarev,<br/>
+&nbsp;<wbr>Jean-Mathieux Schaffhauser,<br/>
+&nbsp;<wbr>Emmanuel Hocdet,<br/>
+&nbsp;<wbr>Sami Koskinen,<br/>
+&nbsp;<wbr>Sami Farin,<br/>
+&nbsp;<wbr>Luis Llorente Campo,<br/>
+&nbsp;<wbr>Peter Pentchev,<br/>
+&nbsp;<wbr>Darren Casey,<br/>
+&nbsp;<wbr>The Regents of the University of California,<br/>
+&nbsp;<wbr>Theo de Raadt&nbsp;<wbr>(OpenBSD),<br/>
+&nbsp;<wbr>Matthias Andree,<br/>
+&nbsp;<wbr>Isak Lyberth,<br/>
+&nbsp;<wbr>Steve Reid,<br/>
+&nbsp;<wbr>RSA Data Security Inc,<br/>
+&nbsp;<wbr>Trilucid,<br/>
+&nbsp;<wbr>Dmtry Lebkov,<br/>
+&nbsp;<wbr>Johan Huisman,<br/>
+&nbsp;<wbr>Thorsten Kukuk,<br/>
+&nbsp;<wbr>Jan van Veen,<br/>
+&nbsp;<wbr>Roger Constantin Demetrescu,<br/>
+&nbsp;<wbr>Stefano F.,<br/>
+&nbsp;<wbr>Robert Varga,<br/>
+&nbsp;<wbr>Freeman,<br/>
+&nbsp;<wbr>James Metcalf,<br/>
+&nbsp;<wbr>Im Eunjea,<br/>
+&nbsp;<wbr>Philip Gladstone,<br/>
+&nbsp;<wbr>Kenneth Stailey,<br/>
+&nbsp;<wbr>Brad Smith,<br/>
+&nbsp;<wbr>Ulrik Sartipy,&nbsp;<wbr><br/>
+&nbsp;<wbr>Cindy Marasco,<br/>
+&nbsp;<wbr>Nicolas Doye,<br/>
+&nbsp;<wbr>Thomas Briggs,<br/>
+&nbsp;<wbr>Stanton Gallegos,<br/>
+&nbsp;<wbr>Florin Andrei,<br/>
+&nbsp;<wbr>Chan Wilson,<br/>
+&nbsp;<wbr>Bjoern Metzdorf,<br/>
+&nbsp;<wbr>Ben Gertzfield,<br/>
+&nbsp;<wbr>Akhilesch Mritunjai,<br/>
+&nbsp;<wbr>Dawid Szymanski,<br/>
+&nbsp;<wbr>Kurt Inge Smadal,<br/>
+&nbsp;<wbr>Alex Dupre,<br/>
+&nbsp;<wbr>Gabriele Vinci,<br/>
+&nbsp;<wbr>Andrey Ulanov,<br/>
+&nbsp;<wbr>Fygul Hether,<br/>
+&nbsp;<wbr>Jeffrey Lim,<br/>
+&nbsp;<wbr>Ying-Chieh Liao,<br/>
+&nbsp;<wbr>Johannes Erdfelt,<br/>
+&nbsp;<wbr>Martin Sarfy,<br/>
+&nbsp;<wbr>Clive Goodhead,<br/>
+&nbsp;<wbr>Aristoteles Pagaltzis,<br/>
+&nbsp;<wbr>Stefan Hornburg,<br/>
+&nbsp;<wbr>Mehmet Cokcevik,<br/>
+&nbsp;<wbr>Brynjar Eide,<br/>
+&nbsp;<wbr>Torgnt Wernersson,<br/>
+&nbsp;<wbr>Banhalmi Csaba,<br/>
+&nbsp;<wbr>Volodin D,<br/>
+&nbsp;<wbr>Oriol Magran�,<br/>
+&nbsp;<wbr>Jui-Nan Lin,<br/>
+&nbsp;<wbr>Patrick Gosling,<br/>
+&nbsp;<wbr>Marc Balmer,<br/>
+&nbsp;<wbr>Rajat Upadhyaya&nbsp;<wbr>/&nbsp;<wbr>Novell,<br/>
+&nbsp;<wbr>Christian Cier-Zniewski,<br/>
+&nbsp;<wbr>Wilco Baan Hofman,<br/>
 &nbsp;<wbr>Clement Chauplannaz.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-ftp/">ftp</a>(1)</code>, <code><a href="/docs/linux/man/8-pure-ftpd/">pure-ftpd</a>(8)</code> <code><a href="/docs/linux/man/8-pure-ftpwho/">pure-ftpwho</a>(8)</code> <code><a href="/docs/linux/man/8-pure-mrtginfo/">pure-mrtginfo</a>(8)</code> <code><a href="/docs/linux/man/8-pure-uploadscript/">pure-uploadscript</a>(8)</code> <code><a href="/docs/linux/man/8-pure-statsdecode/">pure-statsdecode</a>(8)</code> <code><a href="/docs/linux/man/8-pure-pw/">pure-pw</a>(8)</code> <code><a href="/docs/linux/man/8-pure-quotacheck/">pure-quotacheck</a>(8)</code> <code><a href="/docs/linux/man/8-pure-authd/">pure-authd</a>(8)</code> <code>RFC 959</code>, <code>RFC 2228,</code> <code>RFC 2389,</code> <code>RFC 2428</code> and <code>RFC 4217</code>. </p>

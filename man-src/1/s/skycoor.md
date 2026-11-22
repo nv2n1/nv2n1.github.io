@@ -10,8 +10,8 @@ description: "skycoor – Convert coordinates"
 
 <p> skycoor &#8211; Convert coordinates</p>
 <h2>Synopsis</h2>
-<p> skycoor [-bdgjv] [-n ndec] ra1 dec1 sys1 &#8230; ran decn sysn<br />
- or<br />
+<p> skycoor [-bdgjv] [-n ndec] ra1 dec1 sys1 &#8230; ran decn sysn<br/>
+ or<br/>
  skycoor [-vbjg] [-n ndec] @listfile</p>
 <h2>Description</h2>
 <p> <i>skycoor</i> converts coordinates between the J2000, B1950, and galactic coordinate systems, rounding to a specified number of decimal places and printing in degrees or hh:mm:ss.sss dd:mm:ss.sss. Input coordinates may also be in either format, and the system (J2000, B1950, or galactic) may be in upper or lower case. No spaces are allowed within the individual coordinates</p>

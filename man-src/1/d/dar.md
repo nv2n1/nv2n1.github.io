@@ -724,21 +724,21 @@ description: "dar – creates, tests, lists, extracts, compares, merges, isolate
 <dl>
 <dt>
 </dt><dd>
-<p> create:<br />
+<p> create:<br/>
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>upon creation exclude the </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>following files from compression<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>following files from compression<br/>
  -Z &quot;*.mp3&quot; -Z &quot;*.mpg&quot; </p>
-<p> all:<br />
- -b<br />
+<p> all:<br/>
+ -b<br/>
  -p </p>
-<p> default:<br />
- # this will get read if not<br />
- # command has been set yet<br />
- -V<br />
+<p> default:<br/>
+ # this will get read if not<br/>
+ # command has been set yet<br/>
+ -V<br/>
  # thus by default dar shows its version </p>
-<p> all:<br />
- -v<br />
- # for any command we also ask to be verbose<br />
+<p> all:<br/>
+ -v<br/>
+ # for any command we also ask to be verbose<br/>
  # this is added to the previous all: condition</dd></dl>
 <p> Last point, you may have several time the same condition (several <code>all:</code> ) for example. They will be concatenated together. </p>
 <h2>USER TARGETS</h2>
@@ -748,18 +748,18 @@ description: "dar – creates, tests, lists, extracts, compares, merges, isolate
 <dl>
 <dt>
 </dt><dd> # normal set of files considered for backup </dd>
-<p> create:<br />
-&nbsp;<wbr>&nbsp;<wbr>-R&nbsp;<wbr>/<br />
-&nbsp;<wbr>&nbsp;<wbr>-P proc<br />
-&nbsp;<wbr>&nbsp;<wbr>-P sys<br />
-&nbsp;<wbr>&nbsp;<wbr>-P mnt<br />
+<p> create:<br/>
+&nbsp;<wbr>&nbsp;<wbr>-R&nbsp;<wbr>/<br/>
+&nbsp;<wbr>&nbsp;<wbr>-P proc<br/>
+&nbsp;<wbr>&nbsp;<wbr>-P sys<br/>
+&nbsp;<wbr>&nbsp;<wbr>-P mnt<br/>
 &nbsp;<wbr>&nbsp;<wbr>-D </p>
 <p> # if the &quot;home&quot; user target is applied on command line the following command get added </p>
-<p> home:<br />
+<p> home:<br/>
 -g home </p>
 <p> # if the &quot;verbose&quot; user target is used, we will have some more verbosity &#8230; </p>
-<p> verbose:<br />
-&nbsp;<wbr>&nbsp;<wbr>-v<br />
+<p> verbose:<br/>
+&nbsp;<wbr>&nbsp;<wbr>-v<br/>
 &nbsp;<wbr>&nbsp;<wbr>-vs</dl>
 <p> Then we could run dar in the following ways:</p>
 <dl>
@@ -774,20 +774,20 @@ description: "dar – creates, tests, lists, extracts, compares, merges, isolate
 <dl>
 <dt>
 </dt><dd>
-<p> # cat first.dcf<br />
-&nbsp;<wbr>&nbsp;<wbr>target3:<br />
+<p> # cat first.dcf<br/>
+&nbsp;<wbr>&nbsp;<wbr>target3:<br/>
 &nbsp;<wbr>-K toto </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>target1:<br />
-&nbsp;<wbr>target2<br />
-&nbsp;<wbr>-B second.dcf<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>target1:<br/>
+&nbsp;<wbr>target2<br/>
+&nbsp;<wbr>-B second.dcf<br/>
 &nbsp;<wbr>target3 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>target2:<br />
-&nbsp;<wbr>#never reached<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>target2:<br/>
+&nbsp;<wbr>#never reached<br/>
 &nbsp;<wbr>-s 10k </p>
-<p> # cat second.dcf<br />
-&nbsp;<wbr>&nbsp;<wbr>target2:<br />
-&nbsp;<wbr>-v<br />
-&nbsp;<wbr>&nbsp;<wbr>target3:<br />
+<p> # cat second.dcf<br/>
+&nbsp;<wbr>&nbsp;<wbr>target2:<br/>
+&nbsp;<wbr>-v<br/>
+&nbsp;<wbr>&nbsp;<wbr>target3:<br/>
 &nbsp;<wbr>-b </p>
 </dd></dl>
 <p> In that example, target1 activates both target2 and target3, but at the time of the parsing of first.dcf, neither target2 nor target3 were yet activated thus &#8216;-K toto&#8217; and &#8216;-s 10k&#8217; will never be given to dar (unless activated beside target1 before first.dcf get parsed), however when comes the time to parse second.dcf, target2 *and* target3 are activated, thus both &#8216;-v&#8217; and &#8216;-b&#8217; will be passed to dar, even if &#8216;target3&#8217; is located after &#8216;-B second.dcf&#8217; in the file first.dcf </p>

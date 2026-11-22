@@ -67,8 +67,8 @@ description: "DVIasm – a TeX utility program for editing DVI files directly"
 <dd>  This option would be useful for example when using CJK package.  </dd></dl>
  </dl>
   <h2>EXAMPLE</h2>
- Documentation of <code>DVIasm</code> by the original author Jin-Hwan Cho is published as: <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<a rel="nofollow" href="http://tug.org/TUGboat/Articles/tb28-2/tb89cho.pdf">http://tug.org/TUGboat/Articles/tb28-2/tb89cho.pdf</a>&nbsp;(TUGboat) <br />
+ Documentation of <code>DVIasm</code> by the original author Jin-Hwan Cho is published as: <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<a rel="nofollow" href="http://tug.org/TUGboat/Articles/tb28-2/tb89cho.pdf">http://tug.org/TUGboat/Articles/tb28-2/tb89cho.pdf</a>&nbsp;(TUGboat) <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<a rel="nofollow" href="http://ajt.ktug.kr/assets/2008/5/1/0201cho.pdf">http://ajt.ktug.kr/assets/2008/5/1/0201cho.pdf</a>&nbsp;(Asian Journal of TeX)  <h2>AUTHORS</h2>
  The first version was written in Python 2 by Jin-Hwan Cho in 2007. Khaled Hosny started to support dumping/compiling XeTeX XDV format in 2014. Arthur Reutenauer ported the script to Python 3 in 2019. Current maintainer of <code>DVIasm</code> is Hironobu Yamashita, since 2020.  <h2>BUG REPORT</h2>
  Please visit the GitHub repository &lt;<a rel="nofollow" href="https://github.com/aminophen/dviasm">https://github.com/aminophen/dviasm</a>&gt;.  <h2>SEE ALSO</h2>

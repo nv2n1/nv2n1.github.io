@@ -10,7 +10,7 @@ description: "dlaeda.f –"
 <p>dlaeda.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlaeda</code> (N, TLVLS, CURLVL, CURPBM, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, Q, QPTR, Z, ZTEMP, INFO)<br />
+<p>subroutine <code>dlaeda</code> (N, TLVLS, CURLVL, CURPBM, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, Q, QPTR, Z, ZTEMP, INFO)<br/>
  <i></i><code>DLAEDA</code> used by sstedc. Computes the Z vector determining the rank-one modification of the diagonal matrix. Used when the original matrix is dense.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaeda (integerN, integerTLVLS, integerCURLVL, integerCURPBM, integer, dimension( * )PRMPTR, integer, dimension( * )PERM, integer, dimension( * )GIVPTR, integer, dimension( 2, * )GIVCOL, double precision, dimension( 2, * )GIVNUM, double precision, dimension( * )Q, integer, dimension( * )QPTR, double precision, dimension( * )Z, double precision, dimension( * )ZTEMP, integerINFO)</h3>

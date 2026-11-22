@@ -44,19 +44,19 @@ description: "ngircd.conf – configuration file of ngIRCd"
 <dt><code>ServerUID</code></dt>
 <dd>User ID under which the server should run; you can use the name of the user or the numerical ID.</dd></dl>
 <dl>
-<dd><code>Attention:</code><br />
+<dd><code>Attention:</code><br/>
  For this to work the server must have been started with root privileges! In addition, the configuration and MOTD files must be readable by this user, otherwise RESTART and REHASH won&#8217;t work!</dd></dl>
 <dl>
 <dt><code>ServerGID</code></dt>
 <dd>Group ID under which the ngIRCd should run; you can use the name of the group or the numerical ID.</dd></dl>
 <dl>
-<dd><code>Attention:</code><br />
+<dd><code>Attention:</code><br/>
  For this to work the server must have been started with root privileges!</dd></dl>
 <dl>
 <dt><code>ChrootDir</code></dt>
 <dd>A directory to chroot in when everything is initialized. It doesn&#8217;t need to be populated if ngIRCd is compiled as a static binary. By default ngIRCd won&#8217;t use the chroot() feature.</dd></dl>
 <dl>
-<dd><code>Attention:</code><br />
+<dd><code>Attention:</code><br/>
  For this to work the server must have been started with root privileges!</dd></dl>
 <dl>
 <dt><code>PidFile</code></dt>
@@ -135,7 +135,7 @@ description: "ngircd.conf – configuration file of ngIRCd"
 <h2>Hints</h2>
 <p>It&#8217;s wise to use &quot;ngircd &#8211;configtest&quot; to validate the configuration file after changing it. See <code><a href="/docs/linux/man/8-ngircd/">ngircd</a></code>(8) for details.</p>
 <h2>Author</h2>
-<p>Alexander Barton, alex [at] barton.de<br />
+<p>Alexander Barton, alex [at] barton.de<br/>
  Homepage: <a rel="nofollow" href="http://ngircd.barton.de/">http://ngircd.barton.de/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ngircd/">ngircd</a></code>(8) </p>

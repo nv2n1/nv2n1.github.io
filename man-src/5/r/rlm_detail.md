@@ -16,8 +16,8 @@ description: "rlm_detail – FreeRADIUS Module"
 <dt>file</dt>
 <dd>The file name in which to store the radius packet records. NOTE: this variable is run through dynamic string expansion, and can include FreeRADIUS variables to create a dynamic filename.</dd></dl>
 <p>&nbsp;<wbr>&nbsp;<wbr>%{radacctdir}/%{Client-IP-Address}/detail-%Y%m </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>This will create one file per month, for each client.&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>This accomplishes&nbsp;<wbr>&#8216;file rotation&#8217;&nbsp;<wbr>automatically from&nbsp;<wbr><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>This will create one file per month, for each client.&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>This accomplishes&nbsp;<wbr>&#8216;file rotation&#8217;&nbsp;<wbr>automatically from&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>within the server. </p>
 <dl>
 <dt>perm</dt>

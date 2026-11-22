@@ -10,7 +10,7 @@ description: "pmdads389log – 389 Directory Server Log PMDA"
 
 <p> <code>pmdads389log</code> &#8211; 389 Directory Server Log PMDA</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdads389log</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which extracts statistics from 389 Directory Server access log using the <code><a href="/docs/linux/man/1-logconv-pl/">logconv.pl</a></code>(1) utility.</p>
+<p> <code>pmdads389log</code> is a Performance Metrics Domain Agent (PMDA) which extracts statistics from 389 Directory Server access log using the <code><a href="/docs/linux/man/1-logconv-pl/">logconv.pl</a></code>(1) utility.</p>
 <h2>INSTALLATION</h2>
 <p> <code>pmdads389log</code> uses a configuration file</p>
 <dl>
@@ -23,9 +23,9 @@ description: "pmdads389log – 389 Directory Server Log PMDA"
 <dt>&bull;</dt>
 <dd> minimal query interval</dd>
 <dt>&bull;</dt>
-<dd> 389 <font SIZE="-1">DS</font> access log to use</dd>
+<dd> 389 DS access log to use</dd>
 <dt>&bull;</dt>
-<dd> 389 <font SIZE="-1">DS</font> log directory to use (used if no file specified)</dd>
+<dd> 389 DS log directory to use (used if no file specified)</dd>
 <dt>&bull;</dt>
 <dd> non-root user having read access to the access log file</dd></dl>
 <p> Once this is setup, you can access the names and values for the 389 DS performance metrics by doing the following as root: </p>

@@ -130,7 +130,7 @@ description: "xrdp.ini – Configuration file for xrdp(8)"
 <dd>This option sets the logging level for syslog. It can have the same values of <code>LogLevel</code>. If <code>SyslogLevel</code> is greater than <code>LogLevel</code>, its value is lowered to that of <code>LogLevel</code>. </dd>
 </dl>
 <h2>Channels</h2>
-<p>The Remote Desktop Protocol supports several channels, which are used to transfer additional data like sound, clipboard data and others. Channel names not listed here will be blocked by <code>xrdp</code>. Not all channels are supported in all cases, so setting a value to <i>true</i> is a prerequisite, but does not force its use.<br />
+<p>The Remote Desktop Protocol supports several channels, which are used to transfer additional data like sound, clipboard data and others. Channel names not listed here will be blocked by <code>xrdp</code>. Not all channels are supported in all cases, so setting a value to <i>true</i> is a prerequisite, but does not force its use.<br/>
  Channels can also be enabled or disabled on a per connection basis by prefixing each setting with <code>channel.</code> in the channel section. </p>
 <dl>
 <dt><code>rdpdr</code>=<i>[true|false]</i></dt>

@@ -10,7 +10,7 @@ description: "XkbComputeShapeBounds – Updates the bounding box of a shape"
 <p>XkbComputeShapeBounds &#8211; Updates the bounding box of a shape </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbComputeShapeBounds</code> <code>(XkbShapePtr </code><i>shape</i><code>);</code><br />
+<dt> <code>Bool XkbComputeShapeBounds</code> <code>(XkbShapePtr </code><i>shape</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

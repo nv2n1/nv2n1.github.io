@@ -63,14 +63,14 @@ description: "ltrace.conf – Configuration file for"
 <p> If the underlying type is integral, then bits are shown in their natural big-endian order, with LSB being bit 0. E.g. <code>bitvec(ushort)</code> with value 0x0102 would be displayed as &lt;1,8&gt;, irrespective of underlying byte order. </p>
 <p> For other data types (notably structures and arrays), the underlying data is interpreted byte after byte. Bit 0 of first byte has number 0, bit 0 of second byte number 8, and so on. Thus <code>bitvec(struct(int))</code> is endian sensitive, and will show bytes comprising the integer in their memory order. Pointers are first dereferenced, thus <code>bitvec(array(char, </code>32<code>)*)</code> is actually a pointer to 256-bit bit vector. </p>
 </dl>
-<p> <code>string(</code><i>TYPE</i><code>)</code><br />
- <code>string[</code><i>EXPR</i><code>]</code><br />
+<p> <code>string(</code><i>TYPE</i><code>)</code><br/>
+ <code>string[</code><i>EXPR</i><code>]</code><br/>
  <code>string</code></p>
 <dl>
 <dd>The first form of the argument is canonical, the latter two are syntactic sugar. In the canonical form, the function argument is formatted as string. The <i>TYPE</i> shall be either a <code>char*</code>, or <code>array(char,</code><i>EXPR</i><code>)</code>, or <code>array(char,</code><i>EXPR</i><code>)*</code>. If an array is given, the length will typically be a <code>zero</code> expression (but doesn&#8217;t have to be). Using argument that is plain array (i.e. not a pointer to array) makes sense e.g. in C structs, in cases like <code>struct(string(array(char, </code>6<code>)))</code>, which describes the C type <code>struct {char </code>s<code>[</code>6<code>];}</code>. </dd>
 <p> Because simple C-like strings are pretty common, there are two shorthand forms. The first shorthand form (with brackets) means the same as <code>string(array(char, </code><i>EXPR</i><code>)*)</code>. Plain <code>string</code> without an argument is then taken to mean the same as <code>string[zero]</code>. </p>
 <p> Note that <code>char*</code> by itself describes a pointer to a char. Ltrace will dereference the pointer, and read and display the single character that it points to.</dl>
-<p> <code>enum(</code><i>NAME</i>[<code>=</code><i>VALUE</i>]{,<i>NAME</i>[<code>=</code><i>VALUE</i>]}<code>)</code><br />
+<p> <code>enum(</code><i>NAME</i>[<code>=</code><i>VALUE</i>]{,<i>NAME</i>[<code>=</code><i>VALUE</i>]}<code>)</code><br/>
  <code>enum[</code><i>TYPE</i><code>](</code><i>NAME</i>[<code>=</code><i>VALUE</i>]{,<i>NAME</i>[<code>=</code><i>VALUE</i>]}<code>)</code></p>
 <dl>
 <dd>This describes an enumeration lens. If an argument has any of the given values, it is instead shown as the corresponding <i>NAME</i>. If a <i>VALUE</i> is omitted, the next consecutive value following after the previous <i>VALUE</i> is taken instead. If the first <i>VALUE</i> is omitted, it&#8217;s <code>0</code> by default. </dd>
@@ -82,19 +82,19 @@ description: "ltrace.conf – Configuration file for"
 <h2>Recursive Structures</h2>
 <p>Ltrace allows you to express recursive structures. Such structures are expanded to the depth described by the parameter -A. To declare a recursive type, you first have to introduce the type to ltrace by using forward declaration. Then you can use the type in other type definitions in the usual way: </p>
 <dl>
-<dd><code>typedef </code><i>NAME</i><code> = struct;</code><br />
+<dd><code>typedef </code><i>NAME</i><code> = struct;</code><br/>
  <code>typedef </code><i>NAME</i><code> = struct(</code><i>NAME</i> can be used here<code>)</code></dd></dl>
 <p> For example, consider the following singy-linked structure and a function that takes such list as an argument: </p>
 <dl>
-<dd><code>typedef</code> int_list <code>= struct;</code><br />
- <code>typedef</code> int_list <code>= struct(int,</code> int_list<code>*);</code><br />
+<dd><code>typedef</code> int_list <code>= struct;</code><br/>
+ <code>typedef</code> int_list <code>= struct(int,</code> int_list<code>*);</code><br/>
  <code>void</code> ll<code>(</code>int_list<code>*);</code></dd></dl>
 <p> Such declarations might lead to an output like the following: </p>
 <dl>
 <dd>ll({ 9, { 8, { 7, { 6, &#8230; } } } }) = &lt;void&gt;</dd></dl>
 <p> Ltrace detects recursion and will not expand already-expanded structures. Thus a doubly-linked list would look like the following: </p>
 <dl>
-<dd><code>typedef</code> int_list <code>= struct;</code><br />
+<dd><code>typedef</code> int_list <code>= struct;</code><br/>
  <code>typedef</code> int_list <code>= struct(int,</code> int_list<code>*,</code> int_list<code>*);</code></dd></dl>
 <p> With output e.g. like: </p>
 <dl>
@@ -114,7 +114,7 @@ description: "ltrace.conf – Configuration file for"
 <dt><code>elt</code><i>NUM</i></dt>
 <dd>Value of <i>NUM</i>-th element of the surrounding structure type. E.g. <code>struct(ulong,array(int,elt1))</code> describes a structure whose first element is a length, and second element an array of ints of that length. </dd>
 </dl>
-<p> <code>zero</code><br />
+<p> <code>zero</code><br/>
  <code>zero(</code><i>EXPR</i><code>)</code></p>
 <dl>
 <dd>Describes array which extends until the first element, whose each byte is 0. If an expression is given, that is the maximum length of the array. If NUL terminator is not found earlier, that&#8217;s where the array ends.</dd></dl>
@@ -132,9 +132,9 @@ description: "ltrace.conf – Configuration file for"
 <dd><code>int</code> asprintf<code>(+string*, format);</code></dd></dl>
 <p> Here, the first argument to asprintf is denoted as return argument, which means that displaying the whole argument list is delayed until the function returns: </p>
 <dl>
-<dd>a.out-&gt;asprintf( &lt;unfinished &#8230;&gt;<br />
- libc.so.6-&gt;malloc(100) = 0x245b010<br />
- [&#8230; more calls here &#8230;]<br />
+<dd>a.out-&gt;asprintf( &lt;unfinished &#8230;&gt;<br/>
+ libc.so.6-&gt;malloc(100) = 0x245b010<br/>
+ [&#8230; more calls here &#8230;]<br/>
  &lt;&#8230; asprintf resumed&gt; &quot;X=1&quot;, &quot;X=%d&quot;, 1) = 5</dd></dl>
 <p> It is currently not possible to have an &quot;inout&quot; argument that passes information in both directions.</p>
 <h2>Examples</h2>

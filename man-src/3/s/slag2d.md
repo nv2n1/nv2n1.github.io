@@ -11,7 +11,7 @@ description: "slag2d.f –"
 <p> slag2d.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slag2d</code> (M, N, SA, LDSA, A, LDA, INFO)<br />
+<p> subroutine <code>slag2d</code> (M, N, SA, LDSA, A, LDA, INFO)<br/>
  <i></i><code>SLAG2D</code> converts a single precision matrix to a double precision matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slag2d (integerM, integerN, real, dimension( ldsa, * )SA, integerLDSA, double precision, dimension( lda, * )A, integerLDA, integerINFO)</h3>

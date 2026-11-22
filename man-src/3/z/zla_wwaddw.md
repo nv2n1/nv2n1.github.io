@@ -10,7 +10,7 @@ description: "zla_wwaddw.f –"
 <p>zla_wwaddw.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zla_wwaddw</code> (N, X, Y, W)<br />
+<p>subroutine <code>zla_wwaddw</code> (N, X, Y, W)<br/>
  <i></i><code>ZLA_WWADDW</code> adds a vector into a doubled-single vector.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zla_wwaddw (integerN, complex*16, dimension( * )X, complex*16, dimension( * )Y, complex*16, dimension( * )W)</h3>

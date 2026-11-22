@@ -13,7 +13,7 @@ description: "sc::DistShellPair –"
 <pre><code>
 #include &lt;distshpair.h&gt;
 Classes</code></pre>
-<p> class <code>SharedData</code><br />
+<p> class <code>SharedData</code><br/>
  <i>This is used to store data that must be shared between all cooperating shell pairs. </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>DistShellPair (const Ref&lt; MessageGrp &gt; &amp;, int nthread, int mythread, const Ref&lt; ThreadLock &gt; &amp;lock, const Ref&lt; GaussianBasisSet &gt; &amp;bs1, const Ref&lt; GaussianBasisSet &gt; &amp;bs2, bool dynamic, SharedData *shared=0)

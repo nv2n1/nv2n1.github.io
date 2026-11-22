@@ -12,7 +12,7 @@ description: "dpkg-gensymbols – generate symbols files (shared library depende
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-gensymbols</code> [<i>option</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>dpkg-gensymbols</code> scans a temporary build tree (debian/tmp by default) looking for libraries and generates a <i>symbols</i> file describing them. This file, if non-empty, is then installed in the <font SIZE="-1">DEBIAN</font> subdirectory of the build tree so that it ends up included in the control information of the package. </p>
+<p> <code>dpkg-gensymbols</code> scans a temporary build tree (debian/tmp by default) looking for libraries and generates a <i>symbols</i> file describing them. This file, if non-empty, is then installed in the DEBIAN subdirectory of the build tree so that it ends up included in the control information of the package. </p>
 <p> When generating those files, it uses as input some symbols files provided by the maintainer. It looks for the following files (and uses the first that is found):</p>
 <dl>
 <dt>&bull;</dt>
@@ -23,7 +23,7 @@ description: "dpkg-gensymbols – generate symbols files (shared library depende
 <dd> debian/<i>package</i>.symbols</dd>
 <dt>&bull;</dt>
 <dd> debian/symbols</dd></dl>
-<p> The main interest of those files is to provide the minimal version associated to each symbol provided by the libraries. Usually it corresponds to the first version of that package that provided the symbol, but it can be manually incremented by the maintainer if the <font SIZE="-1">ABI</font> of the symbol is extended without breaking backwards compatibility. It&#8217;s the responsibility of the maintainer to keep those files up-to-date and accurate, but <code>dpkg-gensymbols</code> helps with that. </p>
+<p> The main interest of those files is to provide the minimal version associated to each symbol provided by the libraries. Usually it corresponds to the first version of that package that provided the symbol, but it can be manually incremented by the maintainer if the ABI of the symbol is extended without breaking backwards compatibility. It&#8217;s the responsibility of the maintainer to keep those files up-to-date and accurate, but <code>dpkg-gensymbols</code> helps with that. </p>
 <p> When the generated symbols files differ from the maintainer supplied one, <code>dpkg-gensymbols</code> will print a diff between the two versions. Furthermore if the difference is too significant, it will even fail (you can customize how much difference you can tolerate, see the <code>-c</code> option).</p>
 <h2>MAINTAINING SYMBOLS FILES</h2>
 <p> The base interchange format of the symbols file is described in <code><a href="/docs/linux/man/5-deb-symbols/">deb-symbols</a></code>(5), which is used by the symbols files included in binary packages. These are generated from template symbols files with a format based on the former, described in <code><a href="/docs/linux/man/5-deb-src-symbols/">deb-src-symbols</a></code>(5) and included in source packages. </p>
@@ -37,12 +37,12 @@ description: "dpkg-gensymbols – generate symbols files (shared library depende
 <p> A well-maintained library has the following features:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> its <font SIZE="-1">API</font> is stable (public symbols are never dropped, only new public symbols are added) and changes in incompatible ways only when the <font SIZE="-1">SONAME</font> changes;</dd>
+<dd> its API is stable (public symbols are never dropped, only new public symbols are added) and changes in incompatible ways only when the SONAME changes;</dd>
 <dt>&bull;</dt>
-<dd> ideally, it uses symbol versioning to achieve <font SIZE="-1">ABI</font> stability despite internal changes and <font SIZE="-1">API</font> extension;</dd>
+<dd> ideally, it uses symbol versioning to achieve ABI stability despite internal changes and API extension;</dd>
 <dt>&bull;</dt>
 <dd> it doesn&#8217;t export private symbols (such symbols can be tagged optional as workaround).</dd></dl>
-<p> While maintaining the symbols file, it&#8217;s easy to notice appearance and disappearance of symbols. But it&#8217;s more difficult to catch incompatible <font SIZE="-1">API</font> and <font SIZE="-1">ABI</font> change. Thus the maintainer should read thoroughly the upstream changelog looking for cases where the rules of good library management have been broken. If potential problems are discovered, the upstream author should be notified as an upstream fix is always better than a Debian specific work-around.</p>
+<p> While maintaining the symbols file, it&#8217;s easy to notice appearance and disappearance of symbols. But it&#8217;s more difficult to catch incompatible API and ABI change. Thus the maintainer should read thoroughly the upstream changelog looking for cases where the rules of good library management have been broken. If potential problems are discovered, the upstream author should be notified as an upstream fix is always better than a Debian specific work-around.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-P</code><i>package-build-dir</i></dt>
@@ -55,7 +55,7 @@ description: "dpkg-gensymbols – generate symbols files (shared library depende
 <dd> Only analyze libraries explicitly listed instead of finding all public libraries. You can use shell patterns used for pathname expansions (see the <code>File::Glob</code>(3perl) manual page for details) in <i>library-file</i> to match multiple libraries with a single argument (otherwise you need multiple <code>-e</code>).</dd>
 <dt><code>-l</code><i>directory</i></dt>
 <dd> Prepend <i>directory</i> to the list of directories to search for private shared libraries (since dpkg 1.19.1). This option can be used multiple times. </dd>
-<p> <code>Note:</code> Use this option instead of setting <font SIZE="-1"><code>LD_LIBRARY_PATH</code></font>, as that environment variable is used to control the run-time linker and abusing it to set the shared library paths at build-time can be problematic when cross-compiling for example.</p>
+<p> <code>Note:</code> Use this option instead of setting <code>LD_LIBRARY_PATH</code>, as that environment variable is used to control the run-time linker and abusing it to set the shared library paths at build-time can be problematic when cross-compiling for example.</p>
 <dt><code>-I</code><i>filename</i></dt>
 <dd> Use <i>filename</i> as reference file to generate the symbols file that is integrated in the package itself.</dd>
 <dt><code>-O</code>[<i>filename</i>]</dt>
@@ -80,7 +80,7 @@ description: "dpkg-gensymbols – generate symbols files (shared library depende
 <dl>
 <dt>
 </dt><dd>
-<p> This value can be overridden by the environment variable <font SIZE="-1"><code>DPKG_GENSYMBOLS_CHECK_LEVEL</code></font>.</dd></dl>
+<p> This value can be overridden by the environment variable <code>DPKG_GENSYMBOLS_CHECK_LEVEL</code>.</dd></dl>
 <dt><code>-q</code></dt>
 <dd> Keep quiet and never generate a diff between generated symbols file and the template file used as starting point or show any warnings about new/lost libraries or new/lost symbols. This option only disables informational output but not the checks themselves (see <code>-c</code> option).</dd>
 <dt><code>-a</code><i>arch</i></dt>
@@ -95,11 +95,11 @@ description: "dpkg-gensymbols – generate symbols files (shared library depende
 <dd> Show the version and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_GENSYMBOLS_CHECK_LEVEL</code></font></dt>
+<dt><code>DPKG_GENSYMBOLS_CHECK_LEVEL</code></dt>
 <dd> Overrides the command check level, even if the <code>-c</code> command-line argument was given (note that this goes against the common convention of command-line arguments having precedence over environment variables).</dd>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
-<dt><font SIZE="-1"><code>DPKG_NLS</code></font></dt>
+<dt><code>DPKG_NLS</code></dt>
 <dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> &lt;<a rel="nofollow" href="https://people.redhat.com/drepper/symbol-versioning">https://people.redhat.com/drepper/symbol-versioning</a>&gt;, &lt;<a rel="nofollow" href="https://people.redhat.com/drepper/goodpractice.pdf">https://people.redhat.com/drepper/goodpractice.pdf</a>&gt;, &lt;<a rel="nofollow" href="https://people.redhat.com/drepper/dsohowto.pdf">https://people.redhat.com/drepper/dsohowto.pdf</a>&gt;, <code>deb-src-symbol</code>(5), <code><a href="/docs/linux/man/5-deb-symbols/">deb-symbols</a></code>(5), <code><a href="/docs/linux/man/1-dpkg-shlibdeps/">dpkg-shlibdeps</a></code>(1). </p>

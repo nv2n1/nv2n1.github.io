@@ -10,11 +10,11 @@ description: "pnmpad – add borders to portable anymap"
 
 <p> pnmpad &#8211; add borders to portable anymap </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pnmpad </code> [<code>-verbose</code>] [<code>-white</code>|<code>-black</code>]<br />
- [[[<code>-width=</code><i>width</i> [<code>-halign=</code><i>ratio</i>]] |<br />
- [<code>-left=</code><i>leftpad</i>] [<code>-right=</code><i>rightpad</i>]]]<br />
- [[[<code>-height=</code><i>height</i> [<code>-valign=</code><i>ratio</i>]] |<br />
- [<code>-top=</code><i>toppad</i>] [<code>-bottom=</code><i>botpad</i>]]]<br />
+<p> <code>pnmpad </code> [<code>-verbose</code>] [<code>-white</code>|<code>-black</code>]<br/>
+ [[[<code>-width=</code><i>width</i> [<code>-halign=</code><i>ratio</i>]] |<br/>
+ [<code>-left=</code><i>leftpad</i>] [<code>-right=</code><i>rightpad</i>]]]<br/>
+ [[[<code>-height=</code><i>height</i> [<code>-valign=</code><i>ratio</i>]] |<br/>
+ [<code>-top=</code><i>toppad</i>] [<code>-bottom=</code><i>botpad</i>]]]<br/>
  [<i>pnmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
 <h2>DESCRIPTION</h2>
@@ -25,14 +25,14 @@ description: "pnmpad – add borders to portable anymap"
 <dl>
 <dt>
 </dt><dd> Verbose output.</dd></dl>
-<p> <code>-white</code><br />
+<p> <code>-white</code><br/>
  <code>-black</code> (default)</p>
 <dl>
 <dt>
 </dt><dd> Set pad color.</dd></dl>
-<p> <code>-left </code><i>leftpad</i><br />
- <code>-right </code><i>rightpad</i><br />
- <code>-top </code><i>toppad</i><br />
+<p> <code>-left </code><i>leftpad</i><br/>
+ <code>-right </code><i>rightpad</i><br/>
+ <code>-top </code><i>toppad</i><br/>
  <code>-bottom </code><i>bottompad</i></p>
 <dl>
 <dt>
@@ -79,7 +79,7 @@ description: "pnmpad – add borders to portable anymap"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pbmmake/">pbmmake</a></code>(1), <code><a href="/docs/linux/man/1-pnmpaste/">pnmpaste</a></code>(1), <code><a href="/docs/linux/man/1-pnmcut/">pnmcut</a></code>(1), <code><a href="/docs/linux/man/1-pnmcrop/">pnmcrop</a></code>(1), <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5) </p>
 <h2>AUTHOR</h2>
-<p> Copyright (C) 2002 by Martin van Beilen<br />
- Copyright (C) 1990 by Angus Duggan<br />
+<p> Copyright (C) 2002 by Martin van Beilen<br/>
+ Copyright (C) 1990 by Angus Duggan<br/>
  Copyright (C) 1989 by Jef Poskanzer. </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. This software is provided &quot;as is&quot; without express or implied warranty. </p>

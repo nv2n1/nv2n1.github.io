@@ -18,7 +18,7 @@ darktable - cli IMG_1234.{RAW, ...}[&lt;xmp file&gt;]&lt;output file&gt;[options
 --width&lt;max width&gt; --height&lt;max height&gt; --bpp&lt;bpp&gt; --hq&lt;0 | 1 | true | false&gt; --upscale&lt;0 | 1 | true | false&gt; --verbose
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><font SIZE="-1"><code>OS X</code></font> and several other <code>Unices</code>. It&#8217;s described further in <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1). </p>
+<p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><code>OS X</code> and several other <code>Unices</code>. It&#8217;s described further in <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1). </p>
 <p> <code>darktable-cli</code> is a command line variant to be used to export images given the raw file and the accompanying xmp file.</p>
 <h2>OPTIONS</h2>
 <p> The user needs to supply an input filename and an output filename. All other parameters are optional.</p>
@@ -26,7 +26,7 @@ darktable - cli IMG_1234.{RAW, ...}[&lt;xmp file&gt;]&lt;output file&gt;[options
 <dt><code>&lt;input file&gt;</code></dt>
 <dd> The name of the input file to export.</dd>
 <dt><code>&lt;xmp file&gt;</code></dt>
-<dd> The optional name of an <font SIZE="-1">XMP</font> sidecar file containing the history stack data to be applied during export. If this option is not given darktable will search for an <font SIZE="-1">XMP</font> file that belongs to the given input file.</dd>
+<dd> The optional name of an XMP sidecar file containing the history stack data to be applied during export. If this option is not given darktable will search for an XMP file that belongs to the given input file.</dd>
 <dt><code>&lt;output file&gt;</code></dt>
 <dd> The name of the output file. darktable derives the export file format from the file extension. You can also use all the variables available in <code>darktable</code>&#8216;s export module in the output filename.</dd>
 <dt><code>&#8211;width &lt;max width&gt;</code></dt>
@@ -38,7 +38,7 @@ darktable - cli IMG_1234.{RAW, ...}[&lt;xmp file&gt;]&lt;output file&gt;[options
 <pre>
     --core --conf plugins/imageio/format/&lt;FORMAT&gt;/bpp=&lt;VALUE&gt;
 </pre>
-<p> where <font SIZE="-1"><code>FORMAT</code></font> is the name of the selected output format, for example <code>png</code>.</p>
+<p> where <code>FORMAT</code> is the name of the selected output format, for example <code>png</code>.</p>
 <dt><code>&#8211;hq &lt;0|1|true|false&gt;</code></dt>
 <dd> A flag that defines whether to use high quality resampling during export. Defaults to true.</dd>
 <dt><code>&#8211;upscale &lt;0|1|true|false&gt;</code></dt>
@@ -60,4 +60,4 @@ darktable - cli IMG_1234.{RAW, ...}[&lt;xmp file&gt;]&lt;output file&gt;[options
 <p> This man page was written by Richard Levitte &lt;richard [at] levittr.org&gt;. Additions were made by Tobias Ellinghaus &lt;me [at] houz.org&gt;.</p>
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> <code>Copyright (C)</code> 2009-2015 by Authors. </p>
-<p> <code>darktable</code> is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GPL</font> v3 or (at your option) any later version. </p>
+<p> <code>darktable</code> is free software; you can redistribute it and/or modify it under the terms of the GPL v3 or (at your option) any later version. </p>

@@ -10,42 +10,42 @@ description: "Functions for Encoding –"
 
 <p> Functions for Encoding &#8211; </p>
 <h3>Modules</h3>
-<p> <code>Configuration keys for the encoder ctl interface.</code><br />
+<p> <code>Configuration keys for the encoder ctl interface.</code><br/>
  <i>Encoder CTL settings. </i></p>
 <h3>Macros</h3>
-<p> #define <code>OD_SET_QUANT</code> 4000<br />
- <i>Set the quantizer scale. </i><br />
- #define <code>OD_SET_COMPLEXITY</code> 4002<br />
- <i>Configure the encoder&#8217;s computational complexity level. </i><br />
- #define <code>OD_GET_COMPLEXITY</code> 4004<br />
- <i>Get the encoder&#8217;s computational complexity level. </i><br />
- #define <code>OD_SET_ACTIVITY_MASKING</code> 4006<br />
- <i>Whether activity masking should be used or not. </i><br />
- #define <code>OD_SET_QM</code> 4008<br />
- <i>Which quantization matrix to use. </i><br />
- #define <code>OD_SET_DERING</code> 4010<br />
- <i>Whether the bilinear postprocessing filter should be used or not. </i><br />
- #define <code>OD_SET_MC_CHROMA</code> 4100<br />
- <i>Whether the motion compensation search should use the chroma planes in addition to the luma plane. </i><br />
- #define <code>OD_SET_MV_RES_MIN</code> 4102<br />
- <i>Minimum motion vectors resolution for the motion compensation search. </i><br />
- #define <code>OD_SET_MV_LEVEL_MIN</code> 4104<br />
- <i>Minimum motion vectors level for the motion compensation search. </i><br />
- #define <code>OD_SET_MV_LEVEL_MAX</code> 4106<br />
- <i>Maximum motion vectors level for the motion compensation search. </i><br />
- #define <code>OD_SET_MC_SATD</code> 4108<br />
- <i>Whether the SATD metric should be used in motion compensation or not. </i><br />
- #define <code>OD_SET_B_FRAMES</code> 4110<br />
- <i>Number of B frames used by encoder. </i><br />
- #define <code>OD_SET_BITRATE</code> 4112<br />
- <i>Sets the current encoding bitrate. </i><br />
- #define <code>OD_SET_RATE_FLAGS</code> 4114<br />
- <i>Modifies the default bitrate management behavior. </i><br />
- #define <code>OD_SET_RATE_BUFFER</code> 4116<br />
- <i>Sets the size of the bitrate management bit reservoir as a function of number of frames. </i><br />
- #define <code>OD_2PASS_OUT</code> 4118<br />
- <i>Enable pass 1 of two-pass encoding mode and retrieve the first pass metrics. </i><br />
- #define <code>OD_2PASS_IN</code> 4120<br />
+<p> #define <code>OD_SET_QUANT</code> 4000<br/>
+ <i>Set the quantizer scale. </i><br/>
+ #define <code>OD_SET_COMPLEXITY</code> 4002<br/>
+ <i>Configure the encoder&#8217;s computational complexity level. </i><br/>
+ #define <code>OD_GET_COMPLEXITY</code> 4004<br/>
+ <i>Get the encoder&#8217;s computational complexity level. </i><br/>
+ #define <code>OD_SET_ACTIVITY_MASKING</code> 4006<br/>
+ <i>Whether activity masking should be used or not. </i><br/>
+ #define <code>OD_SET_QM</code> 4008<br/>
+ <i>Which quantization matrix to use. </i><br/>
+ #define <code>OD_SET_DERING</code> 4010<br/>
+ <i>Whether the bilinear postprocessing filter should be used or not. </i><br/>
+ #define <code>OD_SET_MC_CHROMA</code> 4100<br/>
+ <i>Whether the motion compensation search should use the chroma planes in addition to the luma plane. </i><br/>
+ #define <code>OD_SET_MV_RES_MIN</code> 4102<br/>
+ <i>Minimum motion vectors resolution for the motion compensation search. </i><br/>
+ #define <code>OD_SET_MV_LEVEL_MIN</code> 4104<br/>
+ <i>Minimum motion vectors level for the motion compensation search. </i><br/>
+ #define <code>OD_SET_MV_LEVEL_MAX</code> 4106<br/>
+ <i>Maximum motion vectors level for the motion compensation search. </i><br/>
+ #define <code>OD_SET_MC_SATD</code> 4108<br/>
+ <i>Whether the SATD metric should be used in motion compensation or not. </i><br/>
+ #define <code>OD_SET_B_FRAMES</code> 4110<br/>
+ <i>Number of B frames used by encoder. </i><br/>
+ #define <code>OD_SET_BITRATE</code> 4112<br/>
+ <i>Sets the current encoding bitrate. </i><br/>
+ #define <code>OD_SET_RATE_FLAGS</code> 4114<br/>
+ <i>Modifies the default bitrate management behavior. </i><br/>
+ #define <code>OD_SET_RATE_BUFFER</code> 4116<br/>
+ <i>Sets the size of the bitrate management bit reservoir as a function of number of frames. </i><br/>
+ #define <code>OD_2PASS_OUT</code> 4118<br/>
+ <i>Enable pass 1 of two-pass encoding mode and retrieve the first pass metrics. </i><br/>
+ #define <code>OD_2PASS_IN</code> 4120<br/>
  <i>Submits two-pass encoding metric data collected the first encoding pass to the second pass. </i></p>
 <h3>Functions for encoding</h3>
 <p> You must link to libdaalabase and libdaalaenc if you use any of the functions in this section. </p>
@@ -70,17 +70,17 @@ description: "Functions for Encoding –"
 <dd> Call <code>daala_comment_clear()</code> to release all comments allocated.</dd>
 <dt>&bull;</dt>
 <dd> Call <code>daala_encode_free()</code> to release all encoder memory.</dd></dl>
-<p> <code>daala_enc_ctx</code> * <code>daala_encode_create</code> (const <code>daala_info</code> *info)<br />
- <i>Allocates and initializes an encoder instance. </i><br />
- int <code>daala_encode_ctl</code> (<code>daala_enc_ctx</code> *enc, int req, void *buf, size_t buf_sz)<br />
- <i>Encoder control function. </i><br />
- int <code>daala_encode_flush_header</code> (<code>daala_enc_ctx</code> *enc, <code>daala_comment</code> *comments, <code>daala_packet</code> *dp)<br />
- <i>Outputs the next header packet. </i><br />
- int <code>daala_encode_img_in</code> (<code>daala_enc_ctx</code> *enc, <code>daala_image</code> *img, int duration)<br />
- <i>Submits an uncompressed frame to the encoder. </i><br />
- int <code>daala_encode_packet_out</code> (<code>daala_enc_ctx</code> *enc, int last, <code>daala_packet</code> *dp)<br />
- <i>Retrieves encoded video data packets. </i><br />
- void <code>daala_encode_free</code> (<code>daala_enc_ctx</code> *enc)<br />
+<p> <code>daala_enc_ctx</code> * <code>daala_encode_create</code> (const <code>daala_info</code> *info)<br/>
+ <i>Allocates and initializes an encoder instance. </i><br/>
+ int <code>daala_encode_ctl</code> (<code>daala_enc_ctx</code> *enc, int req, void *buf, size_t buf_sz)<br/>
+ <i>Encoder control function. </i><br/>
+ int <code>daala_encode_flush_header</code> (<code>daala_enc_ctx</code> *enc, <code>daala_comment</code> *comments, <code>daala_packet</code> *dp)<br/>
+ <i>Outputs the next header packet. </i><br/>
+ int <code>daala_encode_img_in</code> (<code>daala_enc_ctx</code> *enc, <code>daala_image</code> *img, int duration)<br/>
+ <i>Submits an uncompressed frame to the encoder. </i><br/>
+ int <code>daala_encode_packet_out</code> (<code>daala_enc_ctx</code> *enc, int last, <code>daala_packet</code> *dp)<br/>
+ <i>Retrieves encoded video data packets. </i><br/>
+ void <code>daala_encode_free</code> (<code>daala_enc_ctx</code> *enc)<br/>
  <i>Frees an allocated encoder instance. </i></p>
 <h2>Detailed Description</h2>
 <h2>Macro Definition Documentation</h2>
@@ -169,9 +169,9 @@ description: "Functions for Encoding –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>OD_SUCCESS</i> Success.<br />
- <i>OD_EFAULT</i> <i>enc</i> or <i>buf</i> is NULL.<br />
- <i>OD_EINVAL</i> The target bitrate was not positive. A future version of this library may allow passing 0 to disabled rate-controlled mode and return to a quality-based mode, in which case this function will not return an error for that value.<br />
+</dt><dd> <i>OD_SUCCESS</i> Success.<br/>
+ <i>OD_EFAULT</i> <i>enc</i> or <i>buf</i> is NULL.<br/>
+ <i>OD_EINVAL</i> The target bitrate was not positive. A future version of this library may allow passing 0 to disabled rate-controlled mode and return to a quality-based mode, in which case this function will not return an error for that value.<br/>
  <i>OD_EIMPL</i> Not supported by this implementation.</dd></dl>
 <h3>#define OD_SET_RATE_FLAGS 4114</h3>
 <p> Modifies the default bitrate management behavior. Use to allow or disallow frame dropping, and to enable or disable capping bit reservoir overflows and underflows. See <code>the list of available flags</code>. The flags are set by default to <code>OD_RATECTL_DROP_FRAMES</code>|<code>OD_RATECTL_CAP_OVERFLOW</code>. </p>
@@ -190,22 +190,22 @@ description: "Functions for Encoding –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>OD_SUCCESS</i> Success.<br />
- <i>OD_EFAULT</i> <i>enc</i> or <i>buf</i> is NULL.<br />
- <i>OD_EINVAL</i> <i>buf_sz</i> is not sizeof(int) or rate control is not enabled.<br />
+</dt><dd> <i>OD_SUCCESS</i> Success.<br/>
+ <i>OD_EFAULT</i> <i>enc</i> or <i>buf</i> is NULL.<br/>
+ <i>OD_EINVAL</i> <i>buf_sz</i> is not sizeof(int) or rate control is not enabled.<br/>
  <i>OD_EIMPL</i> Not supported by this implementation in the current encoding mode.</dd></dl>
 <h3>#define OD_SET_RATE_BUFFER 4116</h3>
 <p> Sets the size of the bitrate management bit reservoir as a function of number of frames. The reservoir size affects how quickly bitrate management reacts to instantaneous changes in the video complexity. Larger reservoirs react more slowly, and provide better overall quality, but require more buffering by a client, adding more latency to live streams. By default, libdaala sets the reservoir to the maximum distance between keyframes, subject to a minimum and maximum limit. This call may be used to increase or decrease the reservoir, increasing or decreasing the allowed temporary variance in bitrate. An implementation may impose some limits on the size of a reservoir it can handle, in which case the actual reservoir size may not be exactly what was requested. The actual value set will be returned. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>buf</i> int: Requested size of the reservoir measured in frames.<br />
+</dt><dd> <i>buf</i> int: Requested size of the reservoir measured in frames.<br/>
  <i>buf</i> int: The actual size of the reservoir set.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>OD_EFAULT</i> <i>enc</i> or <i>buf</i> is NULL.<br />
- <i>OD_EINVAL</i> <i>buf_sz</i> is not sizeof(int), or rate control is not enabled. The buffer has an implementation defined minimum and maximum size and the value in buf will be adjusted to match the actual value set.<br />
+</dt><dd> <i>OD_EFAULT</i> <i>enc</i> or <i>buf</i> is NULL.<br/>
+ <i>OD_EINVAL</i> <i>buf_sz</i> is not sizeof(int), or rate control is not enabled. The buffer has an implementation defined minimum and maximum size and the value in buf will be adjusted to match the actual value set.<br/>
  <i>OD_EIMPL</i> Not supported by this implementation in the current encoding mode.</dd></dl>
 <h3>#define OD_2PASS_OUT 4118</h3>
 <p> Enable pass 1 of two-pass encoding mode and retrieve the first pass metrics. Pass 1 mode must be enabled before the first frame is encoded, and a target bitrate must have already been specified to the encoder. Although this does not have to be the exact rate that will be used in the second pass, closer values may produce better results. The first call returns the size of the two-pass header data, along with some placeholder content, and sets the encoder into pass 1 mode implicitly. This call sets the encoder to pass 1 mode implicitly. Then, a subsequent call must be made after each call to <code>daala_encode_img_in()</code> to retrieve the metrics for that frame. An additional, final call must be made to retrieve the summary data, containing such information as the total number of frames, etc. This must be stored in place of the placeholder data that was returned in the first call, before the frame metrics data. All of this data must be presented back to the encoder during pass 2 using <code>OD_2PASS_IN</code>. </p>
@@ -216,9 +216,9 @@ description: "Functions for Encoding –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>&gt;=0</i> The number of bytes of metric data available in the returned buffer.<br />
- <i>OD_EFAULT</i> <i>enc</i> or <i>buf</i> is NULL.<br />
- <i>OD_EINVAL</i> <i>buf_sz</i> is not sizeof(char *), no target bitrate has been set, or the first call was made after the first frame was submitted for encoding.<br />
+</dt><dd> <i>&gt;=0</i> The number of bytes of metric data available in the returned buffer.<br/>
+ <i>OD_EFAULT</i> <i>enc</i> or <i>buf</i> is NULL.<br/>
+ <i>OD_EINVAL</i> <i>buf_sz</i> is not sizeof(char *), no target bitrate has been set, or the first call was made after the first frame was submitted for encoding.<br/>
  <i>OD_EIMPL</i> Not supported by this implementation.</dd></dl>
 <h3>#define OD_2PASS_IN 4120</h3>
 <p> Submits two-pass encoding metric data collected the first encoding pass to the second pass. The first call must be made before the first frame is encoded, and a target bitrate must have already been specified to the encoder. It sets the encoder to pass 2 mode implicitly; this cannot be disabled. The encoder may require reading data from some or all of the frames in advance, depending on, e.g., the reservoir size used in the second pass. You must call this function repeatedly before each frame to provide data until either a) it fails to consume all of the data presented or b) all of the pass 1 data has been consumed. In the first case, you must save the remaining data to be presented after the next frame. You can call this function with a NULL argument to get an upper bound on the number of bytes that will be required before the next frame. </p>
@@ -230,12 +230,12 @@ description: "Functions for Encoding –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>&gt;0</i> The number of bytes of metric data required/consumed.<br />
- <i>0</i> No more data is required before the next frame.<br />
- <i>OD_EFAULT</i> <i>enc</i> is NULL.<br />
- <i>OD_EINVAL</i> No target bitrate has been set, or the first call was made after the first frame was submitted for encoding.<br />
- <i>OD_ENOTFORMAT</i> The data did not appear to be pass 1 from a compatible implementation of this library.<br />
- <i>OD_EBADHEADER</i> The data was invalid; this may be returned when attempting to read an aborted pass 1 file that still has the placeholder data in place of the summary data.<br />
+</dt><dd> <i>&gt;0</i> The number of bytes of metric data required/consumed.<br/>
+ <i>0</i> No more data is required before the next frame.<br/>
+ <i>OD_EFAULT</i> <i>enc</i> is NULL.<br/>
+ <i>OD_EINVAL</i> No target bitrate has been set, or the first call was made after the first frame was submitted for encoding.<br/>
+ <i>OD_ENOTFORMAT</i> The data did not appear to be pass 1 from a compatible implementation of this library.<br/>
+ <i>OD_EBADHEADER</i> The data was invalid; this may be returned when attempting to read an aborted pass 1 file that still has the placeholder data in place of the summary data.<br/>
  <i>OD_EIMPL</i> Not supported by this implementation.</dd></dl>
 <h2>Function Documentation</h2>
 <h3><code>daala_enc_ctx</code>* daala_encode_create (const <code>daala_info</code> *info)</h3>
@@ -257,17 +257,17 @@ description: "Functions for Encoding –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>enc</i> A <code>daala_enc_ctx</code> handle.<br />
- <i>req</i> The control code to process. See <code>the list of available control codes</code> for details.<br />
- <i>buf</i> The parameters for this control code.<br />
+</dt><dd> <i>enc</i> A <code>daala_enc_ctx</code> handle.<br/>
+ <i>req</i> The control code to process. See <code>the list of available control codes</code> for details.<br/>
+ <i>buf</i> The parameters for this control code.<br/>
  <i>buf_sz</i> The size of the parameter buffer.</dd></dl>
 <h3>int daala_encode_flush_header (<code>daala_enc_ctx</code> *enc, <code>daala_comment</code> *comments, <code>daala_packet</code> *dp)</h3>
 <p> Outputs the next header packet. This should be called repeatedly after encoder initialization until it return 0 to get all of the header packets, in order, before encoding actual video data. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>enc</i> A <code>daala_enc_ctx</code> handle.<br />
- <i>comments</i> The metadata to place in the comment header, when it is encoded. Users should free the returned data with <code>daala_comment_clear()</code>.<br />
+</dt><dd> <i>enc</i> A <code>daala_enc_ctx</code> handle.<br/>
+ <i>comments</i> The metadata to place in the comment header, when it is encoded. Users should free the returned data with <code>daala_comment_clear()</code>.<br/>
  <i>dp</i> A <code>daala_packet</code> structure to fill. All of the elements of this structure will be set, including a pointer to the header data. The memory for the header data is owned by libdaala.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -276,21 +276,21 @@ description: "Functions for Encoding –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>0</i> No packet was produced, and no more header packets remain.<br />
+</dt><dd> <i>0</i> No packet was produced, and no more header packets remain.<br/>
  <i>OD_EFAULT</i> <i>enc</i>, <i>comments</i> or <i>op</i> was NULL.</dd></dl>
 <h3>int daala_encode_img_in (<code>daala_enc_ctx</code> *enc, <code>daala_image</code> *img, intduration)</h3>
 <p> Submits an uncompressed frame to the encoder. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>enc</i> A <code>daala_enc_ctx</code> handle.<br />
- <i>img</i> A buffer of image data to encode.<br />
+</dt><dd> <i>enc</i> A <code>daala_enc_ctx</code> handle.<br/>
+ <i>img</i> A buffer of image data to encode.<br/>
  <i>duration</i> The duration to display the frame for, in timebase units. If a non-zero frame duration was specified in the header, then this parameter is ignored.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>0</i> Success.<br />
- <i>OD_EFAULT</i> <i>enc</i> or <i>img</i> was NULL.<br />
+</dt><dd> <i>0</i> Success.<br/>
+ <i>OD_EFAULT</i> <i>enc</i> or <i>img</i> was NULL.<br/>
  <i>OD_EINVAL</i> The image size does not match the frame size the encoder was initialized with, or encoding has already completed.</dd></dl>
 <h3>int daala_encode_packet_out (<code>daala_enc_ctx</code> *enc, intlast, <code>daala_packet</code> *dp)</h3>
 <p> Retrieves encoded video data packets. This should be called repeatedly after each frame is submitted to flush any encoded packets, until it returns 0. The encoder will not buffer these packets as subsequent frames are compressed, so a failure to do so will result in lost video data. </p>
@@ -301,7 +301,7 @@ description: "Functions for Encoding –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>enc</i> A <code>daala_enc_ctx</code> handle. This ensures that a proper EOS flag is set on the last packet.<br />
+</dt><dd> <i>enc</i> A <code>daala_enc_ctx</code> handle. This ensures that a proper EOS flag is set on the last packet.<br/>
  <i>dp</i> A <code>daala_packet</code> structure to fill. All of the elements of this structure will be set, including a pointer to the video data. The memory for the video data is owned by libdaala.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -310,7 +310,7 @@ description: "Functions for Encoding –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>0</i> No packet was produced, and no more encoded video data remains.<br />
+</dt><dd> <i>0</i> No packet was produced, and no more encoded video data remains.<br/>
  <i>OD_EFAULT</i> <i>enc</i> or <i>op</i> was NULL.</dd></dl>
 <h3>void daala_encode_free (<code>daala_enc_ctx</code> *enc)</h3>
 <p> Frees an allocated encoder instance. </p>

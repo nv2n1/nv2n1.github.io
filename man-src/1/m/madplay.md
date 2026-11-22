@@ -10,7 +10,7 @@ description: "madplay – decode and play MPEG audio stream(s)"
 
 <p> madplay &#8211; decode and play MPEG audio stream(s)</p>
 <h2>SYNOPSIS</h2>
-<p> <code>madplay</code> [<i>options</i>] <i>file</i> &#8230;<br />
+<p> <code>madplay</code> [<i>options</i>] <i>file</i> &#8230;<br/>
  <code>madplay</code> [<i>options</i>] <code>-o</code> [<i>type</i><code>:</code>]<i>path</i> <i>file</i> &#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>madplay</code> is a command-line MPEG audio decoder and player based on the MAD library (<i>libmad</i>). </p>

@@ -14,8 +14,8 @@ Protected Attributes</code></pre>
 <p> Inherits QuantLib::EnergySwap.</p>
 <h3>Public Member Functions</h3>
 <p><code>EnergyVanillaSwap</code> (bool payer, const <code>Calendar</code> &amp;calendar, const <code>Money</code> &amp;fixedPrice, const <code>UnitOfMeasure</code> &amp;fixedPriceUnitOfMeasure, const boost::shared_ptr&lt; <code>CommodityIndex</code> &gt; &amp;index, const <code>Currency</code> &amp;payCurrency, const <code>Currency</code> &amp;receiveCurrency, const PricingPeriods &amp;pricingPeriods, const <code>CommodityType</code> &amp;commodityType, const boost::shared_ptr&lt; SecondaryCosts &gt; &amp;secondaryCosts, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;payLegTermStructure, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;receiveLegTermStructure, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountTermStructure) </p>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  <code>Integer</code> <code>payReceive</code> () const </p>
 <p> const <code>Money</code> &amp; <code>fixedPrice</code> () const </p>
 <p> const <code>UnitOfMeasure</code> &amp; <code>fixedPriceUnitOfMeasure</code> () const </p>

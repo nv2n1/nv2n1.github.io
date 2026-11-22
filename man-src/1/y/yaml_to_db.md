@@ -14,8 +14,8 @@ description: "yaml_to_db – convert a subset of YAML into fsdb"
     yaml_to_db &lt;source.yaml
 </pre>
 <h2>DESCRIPTION</h2>
-<p> Converts a <i>very limited</i> subset of <font SIZE="-1">YAML</font> into Fsdb format. </p>
-<p> The input is YAML-format (<i>not</i> fsdb). The input is parsed as <font SIZE="-1">YAML, </font> assuming the file is an array of dictionary entries. We extract the dictionary names and output this as an fsdb table. </p>
+<p> Converts a <i>very limited</i> subset of YAML into Fsdb format. </p>
+<p> The input is YAML-format (<i>not</i> fsdb). The input is parsed as YAML,  assuming the file is an array of dictionary entries. We extract the dictionary names and output this as an fsdb table. </p>
 <p> The output is tab-separated fsdb. (Someday more general field separators should be supported.)</p>
 <h2>OPTIONS</h2>
 <p> This module also supports the standard fsdb options:</p>
@@ -70,4 +70,4 @@ description: "yaml_to_db – convert a subset of YAML into fsdb"
 <p> Fsdb.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 2011-2016 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

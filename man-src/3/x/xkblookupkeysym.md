@@ -10,7 +10,7 @@ description: "XkbLookupKeySym – Find the symbol associated with a key for a pa
 <p>XkbLookupKeySym &#8211; Find the symbol associated with a key for a particular state </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbLookupKeySym</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>KeyCode </code><i>key</i><code>,</code> <code>unsigned int </code><i>state</i><code>,</code> <code>unsigned int *</code><i>mods_rtrn</i><code>,</code> <code>KeySym *</code><i>sym_rtrn</i><code>);</code><br />
+<dt> <code>Bool XkbLookupKeySym</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>KeyCode </code><i>key</i><code>,</code> <code>unsigned int </code><i>state</i><code>,</code> <code>unsigned int *</code><i>mods_rtrn</i><code>,</code> <code>KeySym *</code><i>sym_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

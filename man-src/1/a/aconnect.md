@@ -10,8 +10,8 @@ description: "aconnect – ALSA sequencer connection manager"
 
 <p> aconnect &#8211; ALSA sequencer connection manager</p>
 <h2>SYNOPSIS</h2>
-<p> <code>aconnect</code> [-d] [-options] sender receiver<br />
- <code>aconnect</code> -i|-o [-options]<br />
+<p> <code>aconnect</code> [-d] [-options] sender receiver<br/>
+ <code>aconnect</code> -i|-o [-options]<br/>
  <code>aconnect</code> -x </p>
 <h2>DESCRIPTION</h2>
 <p> <code>aconnect</code> is a utility to connect and disconnect two existing ports on ALSA sequencer system. The ports with the arbitrary subscription permission, such as created by <code>aseqview(1),</code> can be connected to any (MIDI) device ports using <code>aconnect.</code> For example, to connect from port 64:0 to 65:0, run as follows:</p>

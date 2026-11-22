@@ -17,7 +17,7 @@ git prune[-n][-v][--progress][--expire&lt;time&gt;][--][&lt;head&gt;...]
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> In most cases, users should run <i>git gc</i>, which calls <i>git prune</i>. See the section &quot;NOTES&quot;, below. </p>
 </dl>
 <p> This runs <i>git fsck &#8211;unreachable</i> using all the refs available in <code>refs/</code>, optionally with additional set of objects specified on the command line, and prunes all unpacked objects unreachable from any of these head objects from the object database. In addition, it prunes the unpacked objects that are also found in packs by running <i>git prune-packed</i>. It also removes entries from .git/shallow that are not reachable by any ref. </p>

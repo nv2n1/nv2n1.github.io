@@ -20,11 +20,11 @@ description: "Test::Lintian::Helper — Helper functions for various testing par
 <dt><code>get_latest_policy()</code></dt>
 <dd>Returns a list with two elements. The first is the most recent version of the Debian policy. The second is its effective date.</dd>
 <dt><code>get_recommended_debhelper_version()</code></dt>
-<dd>Returns the version of debhelper recommended in &#8216;debhelper/compat-level&#8217; via Lintian::Data, relative to the established <font SIZE="-1">LINTIAN_ROOT.</font></dd>
+<dd>Returns the version of debhelper recommended in &#8216;debhelper/compat-level&#8217; via Lintian::Data, relative to the established LINTIAN_ROOT.</dd>
 <dt><code>get_required_debhelper_version()</code></dt>
-<dd>Returns the version of debhelper required in the file &#8216;debian/control&#8217; relative to the established <font SIZE="-1">LINTIAN_ROOT.</font> The return value is the exact string, which can include characters like a tilde.</dd>
-<dt>copy_dir_contents(<font SIZE="-1">SRC_DIR, TARGET_DIR</font>)</dt>
-<dd>Populates <font SIZE="-1">TARGET_DIR</font> with files/dirs from <font SIZE="-1">SRC_DIR,</font> preserving all attributes but dereferencing links. For an empty directory, no dummy file is required.</dd>
-<dt>rfc822date(<font SIZE="-1">EPOCH</font>)</dt>
-<dd>Returns a string with the date and time described by <font SIZE="-1">EPOCH,</font> formatted according to <font SIZE="-1">RFC822.</font> </dd>
+<dd>Returns the version of debhelper required in the file &#8216;debian/control&#8217; relative to the established LINTIAN_ROOT. The return value is the exact string, which can include characters like a tilde.</dd>
+<dt>copy_dir_contents(SRC_DIR, TARGET_DIR)</dt>
+<dd>Populates TARGET_DIR with files/dirs from SRC_DIR, preserving all attributes but dereferencing links. For an empty directory, no dummy file is required.</dd>
+<dt>rfc822date(EPOCH)</dt>
+<dd>Returns a string with the date and time described by EPOCH, formatted according to RFC822. </dd>
 </dl>

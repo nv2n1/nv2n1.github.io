@@ -27,5 +27,5 @@ description: "XtGetClassExtension – locate a class extension record"
 <h2>Description</h2>
 <p>The list of extension records at the specified offset in the specified <i>widget_class</i> will be searched for a match on the specified <i>type</i>, a version greater than or equal to the specified <i>version</i>, and a record size greater than or equal the specified <i>record_size</i> if it is nonzero. <code>XtGetClassExtension</code> returns a pointer to a matching extension record or NULL if no match is found. The returned extension record is owned by the widget class and must not be modified or freed by the caller, except possibly to be modified by the widget class owner.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

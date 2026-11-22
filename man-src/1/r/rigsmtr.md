@@ -12,9 +12,9 @@ description: "rigsmtr – measure S-Meter vs azimuth using Hamlib"
 <h2>SYNOPSIS</h2>
 <p> <code>rigsmtr</code> [<i>OPTION</i>]&#8230; [time_step]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>rigsmtr</code> uses Hamlib to control a rig to measure S-Meter vs azimuth:<br />
- It rotates the antenna from minimum azimuth to maximum azimuth. Every second or <i>time_step</i> if specified in seconds, it retrieves the signal strength.<br />
- Azimuth in degree and corresponding S-Meter level in dB relative to S9 are then printed on stdout.<br />
+<p> <code>rigsmtr</code> uses Hamlib to control a rig to measure S-Meter vs azimuth:<br/>
+ It rotates the antenna from minimum azimuth to maximum azimuth. Every second or <i>time_step</i> if specified in seconds, it retrieves the signal strength.<br/>
+ Azimuth in degree and corresponding S-Meter level in dB relative to S9 are then printed on stdout.<br/>
  To work correctly, rigsmtr needs a rig that could measure S-Meter and a Hamlib backend that is able to get it, mounted on a Hamlib supported rotator. </p>
 <p> Keep in mind that <code>Hamlib</code> is still BETA level software. A lof of stuff hasn&#8217;t been tested thoroughly, and the API may change without publicised notice. Please report bugs and feedback at the e-mail address given in the REPORTING BUGS section.</p>
 <h2>OPTIONS</h2>
@@ -49,7 +49,7 @@ description: "rigsmtr – measure S-Meter vs azimuth using Hamlib"
 <p> rigsmtr exits with: 0 if all operations went fine; 1 if there was an invalid command line option or arg; 2 if an error was returned by Hamlib; 3 if the rig doesn&#8217;t have the required capabilities. </p>
 <h2>EXAMPLE</h2>
 <p> rigsmtr -m 209 -r /dev/ttyS1 -M 202 &gt; csmtr </p>
-<p> Collect S-Meter readings on a TS850 while an EasycommII rotator makes a full 360&#176;, and record measurements in file csmtr.<br />
+<p> Collect S-Meter readings on a TS850 while an EasycommII rotator makes a full 360&#176;, and record measurements in file csmtr.<br/>
  After completion, csmtr file contains for example the following lines : </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>0 -47 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>30 -40&nbsp;<wbr> </p>
@@ -67,16 +67,16 @@ description: "rigsmtr – measure S-Meter vs azimuth using Hamlib"
 <dl>
 <dt>Result could then be ploted with gnuplot:</dt>
 <dd>
- gnuplot<br />
- set angles degrees<br />
- set polar<br />
- set grid polar 15.<br />
- unset border<br />
- unset param<br />
- set style data line<br />
- set rrange [-60:60]<br />
- set xrange [-60:60]<br />
- set yrange [-60:60]<br />
+ gnuplot<br/>
+ set angles degrees<br/>
+ set polar<br/>
+ set grid polar 15.<br/>
+ unset border<br/>
+ unset param<br/>
+ set style data line<br/>
+ set rrange [-60:60]<br/>
+ set xrange [-60:60]<br/>
+ set yrange [-60:60]<br/>
  plot &quot;csmtr&quot;</dd></dl>
 <h2>AUTHOR</h2>
 <p> Man page written by Stephane Fillod.</p>
@@ -85,7 +85,7 @@ description: "rigsmtr – measure S-Meter vs azimuth using Hamlib"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;hamlib-developer [at] users.sourceforge.net&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004-2009 Thierry Leconte &amp; Stephane Fillod<br />
+<p> Copyright &#169; 2004-2009 Thierry Leconte &amp; Stephane Fillod<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code>hamlib</code>(3),<code><a href="/docs/linux/man/1-rigctl/">rigctl</a></code>(1),<code><a href="/docs/linux/man/1-rotctl/">rotctl</a></code>(1) </p>

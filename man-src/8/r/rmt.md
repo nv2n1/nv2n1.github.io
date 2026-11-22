@@ -164,6 +164,6 @@ description: "rmt – remote magnetic tape server"
 <h2>History</h2>
 <p>The <code>rmt</code> command appeared in 4.2BSD. The GNU <code>rmt</code> is written from scratch, using the BSD specification.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2013, 2018 Free Software Foundation, Inc.<br />
- License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p>Copyright &#169; 2013, 2018 Free Software Foundation, Inc.<br/>
+ License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>

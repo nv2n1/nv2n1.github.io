@@ -89,7 +89,7 @@ description: "ipsec.conf – IPsec configuration and connections"
 <dd>whether to use IKE fragmentation (proprietary IKEv1 extension or IKEv2 fragmentation as per RFC 7383). Acceptable values are <code>yes</code> (the default), <code>accept</code>, <code>force</code> and <code>no</code>. If set to <code>yes</code>, and the peer supports it, oversized IKE messages will be sent in fragments. If set to <code>accept</code>, support for fragmentation is announced to the peer but the daemon does not send its own messages in fragments. If set to <code>force</code> (only supported for IKEv1) the initial IKE message will already be fragmented if required. Finally, setting the option to <code>no</code> will disable announcing support for this feature. </dd>
 <p> Note that fragmented IKE messages sent by a peer are always accepted irrespective of the value of this option (even when set to <code>no</code>).</p>
 <dt><code>ike</code> = &lt;cipher suites&gt;</dt>
-<dd>comma-separated list of IKE/ISAKMP SA encryption/authentication algorithms to be used, e.g. <code>aes128-sha256-modp3072</code>. The notation is <code>encryption-integrity[-prf]-dhgroup</code>. If no PRF is given, the algorithms defined for integrity are used for the PRF. The prf keywords are the same as the integrity algorithms, but have a <code>prf</code> prefix (such as <code>prfsha1</code>, <code>prfsha256</code> or <code>prfaesxcbc</code>).<br />
+<dd>comma-separated list of IKE/ISAKMP SA encryption/authentication algorithms to be used, e.g. <code>aes128-sha256-modp3072</code>. The notation is <code>encryption-integrity[-prf]-dhgroup</code>. If no PRF is given, the algorithms defined for integrity are used for the PRF. The prf keywords are the same as the integrity algorithms, but have a <code>prf</code> prefix (such as <code>prfsha1</code>, <code>prfsha256</code> or <code>prfaesxcbc</code>).<br/>
  In IKEv2, multiple algorithms and proposals may be included, such as <code>aes128-aes256-sha1-modp3072-modp2048,3des-sha1-md5-modp1024</code>. </dd>
 <p> Defaults to <code>aes128-sha256-modp3072</code>. The daemon adds its extensive default proposal to this default or the configured value. To restrict it to the configured proposal an exclamation mark (<code>!</code>) can be added at the end. </p>
 <p> <code>Note</code>: As a responder the daemon accepts the first supported proposal received from the peer. In order to restrict a responder to only accept specific cipher suites, the strict flag (<code>!</code>, exclamation mark) can be used, e.g: <code>aes256-sha512-modp4096!</code></p>
@@ -126,8 +126,8 @@ description: "ipsec.conf – IPsec configuration and connections"
 <dt><code>leftca2</code> = &lt;issuer dn&gt; | %same</dt>
 <dd>Same as <code>leftca</code>, but for the second authentication round (IKEv2 only).</dd>
 <dt><code>leftcert</code> = &lt;path&gt;</dt>
-<dd>the path to the left participant&#8217;s X.509 certificate. The file can be encoded either in PEM or DER format. OpenPGP certificates are supported as well. Both absolute paths or paths relative to <i>/etc/ipsec.d/certs</i> are accepted. By default <code>leftcert</code> sets <code>leftid</code> to the distinguished name of the certificate&#8217;s subject. The left participant&#8217;s ID can be overridden by specifying a <code>leftid</code> value which must be certified by the certificate, though.<br />
- A value in the form <code>%smartcard[&lt;slot nr&gt;[@&lt;module&gt;]]:&lt;keyid&gt;</code> defines a specific certificate to load from a PKCS#11 backend for this connection. See <a href="/docs/linux/man/5-ipsec-secrets/">ipsec.secrets</a>(5) for details about smartcard definitions. <code>leftcert</code> is required only if selecting the certificate with <code>leftid</code> is not sufficient, for example if multiple certificates use the same subject.<br />
+<dd>the path to the left participant&#8217;s X.509 certificate. The file can be encoded either in PEM or DER format. OpenPGP certificates are supported as well. Both absolute paths or paths relative to <i>/etc/ipsec.d/certs</i> are accepted. By default <code>leftcert</code> sets <code>leftid</code> to the distinguished name of the certificate&#8217;s subject. The left participant&#8217;s ID can be overridden by specifying a <code>leftid</code> value which must be certified by the certificate, though.<br/>
+ A value in the form <code>%smartcard[&lt;slot nr&gt;[@&lt;module&gt;]]:&lt;keyid&gt;</code> defines a specific certificate to load from a PKCS#11 backend for this connection. See <a href="/docs/linux/man/5-ipsec-secrets/">ipsec.secrets</a>(5) for details about smartcard definitions. <code>leftcert</code> is required only if selecting the certificate with <code>leftid</code> is not sufficient, for example if multiple certificates use the same subject.<br/>
  Multiple certificate paths or PKCS#11 backends can be specified in a comma separated list. The daemon chooses the certificate based on the received certificate requests if possible before enforcing the first.</dd>
 <dt><code>leftcert2</code> = &lt;path&gt;</dt>
 <dd>Same as <code>leftcert,</code> but for the second authentication round (IKEv2 only).</dd>
@@ -236,7 +236,7 @@ description: "ipsec.conf – IPsec configuration and connections"
 <dt><code>auto</code> = <code>ignore</code> | add</dt>
 <dd>currently can have either the value <code>ignore</code> (the default) or <code>add</code>.</dd>
 <dt><code>cacert</code> = &lt;path&gt;</dt>
-<dd>defines a path to the CA certificate either relative to <i>/etc/ipsec.d/cacerts</i> or as an absolute path.<br />
+<dd>defines a path to the CA certificate either relative to <i>/etc/ipsec.d/cacerts</i> or as an absolute path.<br/>
  A value in the form <code>%smartcard[&lt;slot nr&gt;[@&lt;module&gt;]]:&lt;keyid&gt;</code> defines a specific CA certificate to load from a PKCS#11 backend for this CA. See <a href="/docs/linux/man/5-ipsec-secrets/">ipsec.secrets</a>(5) for details about smartcard definitions.</dd>
 <dt><code>crluri</code> = &lt;uri&gt;</dt>
 <dd>defines a CRL distribution point (ldap, http, or file URI)</dd>
@@ -378,11 +378,11 @@ description: "ipsec.conf – IPsec configuration and connections"
 <p> It applies equally to IKE SAs and byte and packet limits for IPsec SAs.</p>
 <h3>Example</h3>
 <p>Let&#8217;s consider the default configuration: </p>
-<p> lifetime = 1h<br />
- <tt>&nbsp;<wbr></tt>margintime = 9m<br />
+<p> lifetime = 1h<br/>
+ <tt>&nbsp;<wbr></tt>margintime = 9m<br/>
  <tt>&nbsp;<wbr></tt>rekeyfuzz = 100%</p>
 <p> From the formula above follows that the rekey time lies between: </p>
-<p> rekeytime_min = 1h &#8211; (9m + 9m) = 42m<br />
+<p> rekeytime_min = 1h &#8211; (9m + 9m) = 42m<br/>
  <tt>&nbsp;<wbr></tt>rekeytime_max = 1h &#8211; (9m + 0m) = 51m</p>
 <p> Thus, the daemon will attempt to rekey the IPsec SA at a random time between 42 and 51 minutes after establishing the SA. Or, in other words, between 9 and 18 minutes before the SA expires.</p>
 <h3>Notes</h3>

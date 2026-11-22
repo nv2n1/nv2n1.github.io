@@ -10,7 +10,7 @@ description: "ldns_sign_public"
 
 <p> ldns_sign_public </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr_list* ldns_sign_public(ldns_rr_list *rrset, ldns_key_list *keys); </p>

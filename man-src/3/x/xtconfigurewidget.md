@@ -38,6 +38,6 @@ description: "XtConfigureWidget, XtMoveWidget, XtResizeWidget – move and resiz
 <p> The <code>XtResizeWindow</code> function calls the <code>XConfigureWindow</code> Xlib function to make the window of the specified widget match its width, height, and border width. This request is done unconditionally because there is no way to tell if these values match the current values. Note that the widget&#8217;s resize procedure is not called. </p>
 <p> There are very few times to use <code>XtResizeWindow</code>; instead, you should use <code>XtResizeWidget</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtmakegeometryrequest/">XtMakeGeometryRequest</a>(3), <a href="/docs/linux/man/3-xtquerygeometry/">XtQueryGeometry</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtmakegeometryrequest/">XtMakeGeometryRequest</a>(3), <a href="/docs/linux/man/3-xtquerygeometry/">XtQueryGeometry</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

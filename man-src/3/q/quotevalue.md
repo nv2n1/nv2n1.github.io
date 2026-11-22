@@ -22,7 +22,7 @@ latest relevant date</code></pre>
 <p> Inherits <code>QuantLib::Observer</code>, and <code>QuantLib::Observable</code>. Inherited by <code>RelativeDateRateHelper</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>BootstrapHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;quote) </p>
-<p> <code>BootstrapHelper</code> (Real quote)<br />
+<p> <code>BootstrapHelper</code> (Real quote)<br/>
  <code>BootstrapHelper interface</code> </p>
 <pre><code>Real quoteError () const
 Real quoteValue () const
@@ -35,7 +35,7 @@ earliest relevant date
 virtual Date latestDate () const
 latest relevant date</code></pre>
 <p> <code>Observer interface</code> </p>
-<p> virtual void <code>update</code> ()<br />
+<p> virtual void <code>update</code> ()<br/>
  <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;)</p>
 <h3>Protected Attributes</h3>

@@ -12,7 +12,7 @@ description: "tcinterfaces – Shorewall6 file"
 <dl>
 <dt> <code>/etc/shorewall6/tcinterfaces</code></dt></dl>
 <h2>Description</h2>
-<dd>This file lists the interfaces that are subject to simple traffic shaping. Simple traffic shaping is enabled by setting TC_ENABLED=Simple in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[1]</font>(5). </dd>
+<dd>This file lists the interfaces that are subject to simple traffic shaping. Simple traffic shaping is enabled by setting TC_ENABLED=Simple in m[blue]<code>shorewall6.conf</code>m[][1](5). </dd>
 <p> A note on the <i>bandwidth</i> definition used in this file: </p>
 <dl>
 <dd>&bull; don&#8217;t use a space between the integer value and the unit: 30kbit is valid while 30 kbit is not.</dd></dl>
@@ -54,7 +54,7 @@ description: "tcinterfaces – Shorewall6 file"
 <dd>The incoming <i>bandwidth</i> of that interface. Please note that you are not able to do traffic shaping on incoming traffic, as the traffic is already received before you could do so. But this allows you to define the maximum traffic allowed for this interface in total, if the rate is exceeded, the packets are dropped. You want this mainly if you have a DSL or Cable connection to avoid queuing at your providers side. </dd>
 <p> If you don&#8217;t want any traffic to be dropped, set this to a value to zero in which case Shorewall will not create an ingress qdisc. Must be set to zero if the REDIRECTED INTERFACES column is non-empty. </p>
 <p> The optional burst option was added in Shorewall 4.4.18. The default <i>burst</i> is 10kb. A larger <i>burst</i> can help make the <i>bandwidth</i> more accurate; often for fast lines, the enforced rate is well below the specified <i>bandwidth</i>. </p>
-<p> What is described above creates a rate/burst policing filter. Beginning with Shorewall 4.4.25, a rate-estimated policing filter may be configured instead. Rate-estimated filters should be used with Ethernet adapters that have Generic Receive Offload enabled by default. See m[blue]<code>Shorewall FAQ 97a</code>m[]<font SIZE="-2">[2]</font>. </p>
+<p> What is described above creates a rate/burst policing filter. Beginning with Shorewall 4.4.25, a rate-estimated policing filter may be configured instead. Rate-estimated filters should be used with Ethernet adapters that have Generic Receive Offload enabled by default. See m[blue]<code>Shorewall FAQ 97a</code>m[][2]. </p>
 <p> To create a rate-estimated filter, precede the bandwidth with a tilde (&quot;~&quot;). The optional interval and decay_interval determine how often the rate is estimated and how many samples are retained for estimating. Please see m[blue]<code><a rel="nofollow" href="http://ace-host.stuart.id.au/russell/files/tc/doc/estimators.txt">http://ace-host.stuart.id.au/russell/files/tc/doc/estimators.txt</a></code>m[] for details.</dl>
 <p> OUT-BANDWIDTH (out_bandwidth) &#8211; [<i>rate</i>[:[<i>burst</i>][:[<i>latency</i>][:[<i>peek</i>][:[<i>minburst</i>]]]]]]</p>
 <dl>

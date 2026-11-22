@@ -12,7 +12,7 @@ description: "dh_scrollkeeper – deprecated no-op"
 <h2>SYNOPSIS</h2>
 <p> <code>dh_scrollkeeper</code> [<i>debhelper options</i>] [<code>-n</code>] [<i>directory</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>dh_scrollkeeper</code> was a debhelper program that handled registering <font SIZE="-1">OMF</font> files for ScrollKeeper. However, it no longer does anything, and is now deprecated.</p>
+<p> <code>dh_scrollkeeper</code> was a debhelper program that handled registering OMF files for ScrollKeeper. However, it no longer does anything, and is now deprecated.</p>
 <h2>SEE ALSO</h2>
 <p> debhelper </p>
 <p> This program is a part of debhelper.</p>

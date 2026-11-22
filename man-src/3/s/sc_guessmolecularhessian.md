@@ -14,12 +14,12 @@ description: "sc::GuessMolecularHessian –"
 #include &lt;hess.h&gt;</code></pre>
 <p> Inherits <code>sc::MolecularHessian</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>GuessMolecularHessian</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>GuessMolecularHessian</code> <code>KeyVal</code> constructor is used to generate a <code>GuessMolecularHessian</code> object from the input.<br />
+<p><code>GuessMolecularHessian</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>GuessMolecularHessian</code> <code>KeyVal</code> constructor is used to generate a <code>GuessMolecularHessian</code> object from the input.<br/>
  <code>GuessMolecularHessian</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- <code>RefSymmSCMatrix</code> <code>cartesian_hessian</code> ()<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ <code>RefSymmSCMatrix</code> <code>cartesian_hessian</code> ()<br/>
  <i>Return the hessian in cartesian coordinates. </i></p>
 <h3>Protected Attributes</h3>
 <p><code>Ref</code>&lt; <code>MolecularCoor</code> &gt; <code>coor_</code></p>

@@ -10,7 +10,7 @@ description: "ldns_rdf_size, ldns_rdf_get_type, ldns_rdf_data, ldns_rdf_compare"
 
 <p> ldns_rdf_size, ldns_rdf_get_type, ldns_rdf_data, ldns_rdf_compare </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> size_t ldns_rdf_size(const ldns_rdf *rd); </p>

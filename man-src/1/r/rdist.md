@@ -188,53 +188,53 @@ install[dest];
 </pre>
 <p> This entry will set local message logging to have all but debug messages sent to standard output, change and notice messages will be sent to <i><a href="/docs/linux/man/3-syslog/">syslog</a>(3),</i> and all messages will be written to the file <code>/tmp/rdist.log.</code></p>
 <h2>DISTFILES</h2>
-<p> The <i>distfile</i> contains a sequence of entries that specify the files to be copied, the destination hosts, and what operations to perform to do the updating. Each entry has one of the following formats.<br />
-&lt;variable name&gt; `=&#8217; &lt;name list&gt;<br />
-[ label: ] &lt;source list&gt; `-&gt;&#8217; &lt;destination list&gt; &lt;command list&gt;<br />
+<p> The <i>distfile</i> contains a sequence of entries that specify the files to be copied, the destination hosts, and what operations to perform to do the updating. Each entry has one of the following formats.<br/>
+&lt;variable name&gt; `=&#8217; &lt;name list&gt;<br/>
+[ label: ] &lt;source list&gt; `-&gt;&#8217; &lt;destination list&gt; &lt;command list&gt;<br/>
 [ label: ] &lt;source list&gt; `::&#8217; &lt;time_stamp file&gt; &lt;command list&gt;</p>
 <p> The first format is used for defining variables. The second format is used for distributing files to other hosts. The third format is used for making lists of files that have been changed since some given date. The <i>source list</i> specifies a list of files and/or directories on the local host which are to be used as the master copy for distribution. The <i>destination list</i> is the list of hosts to which these files are to be copied. Each file in the source list is added to a list of changes if the file is out of date on the host which is being updated (second format) or the file is newer than the time stamp file (third format). </p>
 <p> Labels are optional. They are used to identify a command for partial updates. </p>
 <p> Newlines, tabs, and blanks are only used as separators and are otherwise ignored. Comments begin with `#&#8217; and end with a newline. </p>
 <p> Variables to be expanded begin with `$&#8217; followed by one character or a name enclosed in curly braces (see the examples at the end). </p>
 <p> The source and destination lists have the following format: </p>
-<p>&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
+<p>&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
 &lt;name&gt; or</p>
-<p>    &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;`(&#8216; &lt;zero or more names separated by white-space&gt; `)&#8217;<br />
+<p>    &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;`(&#8216; &lt;zero or more names separated by white-space&gt; `)&#8217;<br/>
  These simple lists can be modified by using one level of set addition, subtraction, or intersection like this: </p>
-<p>&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
+<p>&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
 list &#8216;-&#8216; list or</p>
-<p>    &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
+<p>    &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
 list &#8216;+&#8217; list or</p>
-<p>    &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-list &#8216;&amp;&#8217; list<br />
+<p>    &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+list &#8216;&amp;&#8217; list<br/>
  If additional modifications are needed (e.g., &#8220;all servers and client machines except for the OSF/1 machines&#8221;) then the list will have to be explicitly constructed in steps using &quot;temporary&quot; variables. </p>
 <p> The shell meta-characters `[&#8216;, `]&#8217;, `{&#8216;, `}&#8217;, `*&#8217;, and `?&#8217; are recognized and expanded (on the local host only) in the same way as <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1). They can be escaped with a backslash. The `~&#8217; character is also expanded in the same way as <i>csh</i> but is expanded separately on the local and destination hosts. When the <code>-o</code><i>whole</i> option is used with a file name that begins with `~&#8217;, everything except the home directory is appended to the destination name. File names which do not begin with `/&#8217; or `~&#8217; use the destination user&#8217;s home directory as the root directory for the rest of the file name. </p>
 <p> The command list consists of zero or more commands of the following format. </p>
-<p>`install &#8216;     &lt;options&gt;    opt_dest_name `;&#8217;<br />
-`notify &#8216;      &lt;name list&gt;  `;&#8217;<br />
-`except &#8216;      &lt;name list&gt;  `;&#8217;<br />
-`except_pat &#8216;  &lt;pattern list&gt;`;&#8217;<br />
-`special &#8216;     &lt;name list&gt;  string `;&#8217;<br />
+<p>`install &#8216;     &lt;options&gt;    opt_dest_name `;&#8217;<br/>
+`notify &#8216;      &lt;name list&gt;  `;&#8217;<br/>
+`except &#8216;      &lt;name list&gt;  `;&#8217;<br/>
+`except_pat &#8216;  &lt;pattern list&gt;`;&#8217;<br/>
+`special &#8216;     &lt;name list&gt;  string `;&#8217;<br/>
 `cmdspecial &#8216;  &lt;name list&gt;  string `;&#8217;</p>
 <p> The <i>install</i> command is used to copy out of date files and/or directories. Each source file is copied to each host in the destination list. Directories are recursively copied in the same way. <i>Opt_dest_name</i> is an optional parameter to rename files. If no <i>install</i> command appears in the command list or the destination name is not specified, the source file name is used. Directories in the path name will be created if they do not exist on the remote host. The <code>-o </code><i>distopts</i> option as specified above under <code>OPTIONS,</code> has the same semantics as on the command line except they only apply to the files in the source list. The login name used on the destination host is the same as the local host unless the destination name is of the format &#8220;login [at] host&quot;. </p>
 <p> The <i>notify</i> command is used to mail the list of files updated (and any errors that may have occurred) to the listed names. If no `@&#8217; appears in the name, the destination host is appended to the name (e.g., name1 [at] host, name2 [at] host, &#8230;). </p>

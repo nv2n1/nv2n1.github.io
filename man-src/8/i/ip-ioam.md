@@ -13,11 +13,11 @@ description: "ip-ioam – IPv6 In-situ OAM (IOAM)"
 { COMMAND |
     help }
 </code></pre>
-<p> <code>ip ioam namespace show</code><br />
- <code>ip ioam namespace add</code> <i>ID</i> <code> [ </code> <code>data</code> <i>DATA32</i> <code>]</code> <code> [ </code> <code>wide</code> <i>DATA64</i> <code>]</code><br />
- <code>ip ioam namespace del</code> <i>ID</i><br />
- <code>ip ioam schema show</code><br />
- <code>ip ioam schema add</code> <i>ID DATA</i><br />
+<p> <code>ip ioam namespace show</code><br/>
+ <code>ip ioam namespace add</code> <i>ID</i> <code> [ </code> <code>data</code> <i>DATA32</i> <code>]</code> <code> [ </code> <code>wide</code> <i>DATA64</i> <code>]</code><br/>
+ <code>ip ioam namespace del</code> <i>ID</i><br/>
+ <code>ip ioam schema show</code><br/>
+ <code>ip ioam schema add</code> <i>ID DATA</i><br/>
  <code>ip ioam schema del</code> <i>ID</i> </p>
 <pre><code>ip ioam namespace set
 ID

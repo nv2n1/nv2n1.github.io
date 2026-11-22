@@ -11,7 +11,7 @@ description: "sla_syrpvgrw.f –"
 <p> sla_syrpvgrw.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>sla_syrpvgrw</code> (UPLO, N, INFO, A, LDA, AF, LDAF, IPIV, WORK)<br />
+<p> REAL function <code>sla_syrpvgrw</code> (UPLO, N, INFO, A, LDA, AF, LDAF, IPIV, WORK)<br/>
  <i></i><code>SLA_SYRPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a symmetric indefinite matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function sla_syrpvgrw (character*1UPLO, integerN, integerINFO, real, dimension( lda, * )A, integerLDA, real, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, real, dimension( * )WORK)</h3>

@@ -9,7 +9,7 @@ description: "PFM – PFM graphic image file format"
 
 <p>PFM &#8211; PFM graphic image file format</p>
 <h2>Description</h2>
-<p>This document describes the PFM graphic image file format as understood by the Netpbm converters <code><a href="/docs/linux/man/1-pamtopfm/">pamtopfm</a></code>(1)<br />
+<p>This document describes the PFM graphic image file format as understood by the Netpbm converters <code><a href="/docs/linux/man/1-pamtopfm/">pamtopfm</a></code>(1)<br/>
 &nbsp;<wbr>and <code><a href="/docs/linux/man/1-pfmtopam/">pfmtopam</a></code>(1) There are multiple similar formats known as PFM in the world, none of them authoritatively documented. The format described here is one that Bryan Henderson deduced from a program he found somewhere that dealt with a &#8216;PFM&#8217; format. The PFM format is inspired by the Netpbm formats, and you will see lots of similarity. It is not, however, an official Netpbm format. Its goal is not consistent with those of Netpbm formats. </p>
 <h2>The format</h2>
 <p>A PFM image is a stream of bytes. The stream consists of a header followed immediately by a raster. These two components are described below. There are no delimeters before or after the sections as described.</p>

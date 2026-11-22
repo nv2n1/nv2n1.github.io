@@ -15,7 +15,7 @@ hpidomain[-h - V - X] hpidomain[--help][--verbose][--debug]
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> ohdomainlist displays the list of domains known to the openhpi base library. In verbose mode, it displays more information about those domains. Clients can only access domains known to the library. </p>
-<p> Please note that ohdomainlist can only display the domains defined in the openhpiclient.conf file as specified in the <font SIZE="-1">OPENHPICLIEN_CONF</font> environment variable. Dynamic changes of the domain list done using the oHpiDomainAdd and oHpiDomainAddById <font SIZE="-1">API</font> are valid only for the life-time of the client library. </p>
+<p> Please note that ohdomainlist can only display the domains defined in the openhpiclient.conf file as specified in the OPENHPICLIEN_CONF environment variable. Dynamic changes of the domain list done using the oHpiDomainAdd and oHpiDomainAddById API are valid only for the life-time of the client library. </p>
 <p> If no domain or host is selected, ohdomainlist lists the domains as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>
@@ -31,7 +31,7 @@ hpidomain[-h - V - X] hpidomain[--help][--verbose][--debug]
 <dt><code>-V</code>, <code>&#8211;verbose</code></dt>
 <dd> Verbose mode</dd>
 <dt><code>-N</code>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables.</dd>
+<dd> Open session to the domain served by the daemon at the specified URL (host:port). This option overrides the OPENHPI_DAEMON_HOST and OPENHPI_DAEMON_PORT environment variables.</dd>
 <dt><code>-C</code>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
 <dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SEE ALSO</h2>

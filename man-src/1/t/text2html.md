@@ -14,7 +14,7 @@ description: "text2html – convert plain text to HTML"
 <h2>SYNOPSIS</h2>
 <p> <code>text2html [options&#8230;]</code> [file &#8230;]</p>
 <h2>DESCRIPTION</h2>
-<p> The <tt>&quot;text2html&quot;</tt> utility converts text to <font SIZE="-1">HTML.</font> Text can come from standard input or files listed on the command line. </p>
+<p> The <tt>&quot;text2html&quot;</tt> utility converts text to HTML. Text can come from standard input or files listed on the command line. </p>
 <p> The available options are outlined in HTML::FromText. The option syntax is slightly different. Options are prefixed with two dashes (<tt>&quot;--&quot;</tt>) and may have an option value following an equals sign (<tt>&quot;=&quot;</tt>). The default value is on (&lt;1&gt;).</p>
 <h2>EXAMPLES</h2>
 <p> Convert the <tt>&quot;README&quot;</tt> file using <tt>&quot;paras&quot;</tt> and <tt>&quot;blockcode&quot;</tt>. </p>
@@ -40,7 +40,7 @@ text2html-- paras-- urls-- email-- bold-- underline
 <h2>AUTHORS</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> Ricardo <font SIZE="-1">SIGNES</font> &lt;rjbs [at] cpan.org&gt;</dd>
+<dd> Ricardo SIGNES &lt;rjbs [at] cpan.org&gt;</dd>
 <dt>&bull;</dt>
 <dd> Casey West &lt;casey [at] geeknest.com&gt;</dd>
 <dt>&bull;</dt>

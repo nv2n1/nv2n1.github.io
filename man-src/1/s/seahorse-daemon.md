@@ -32,7 +32,7 @@ description: "seahorse-daemon – seahorse pass phrase caching agent"
 <h2>VERSION</h2>
 <p> This man page describes <code>seahorse-daemon</code> version 0.9.x. </p>
 <h2>BUGS</h2>
-<p> If you find a bug, please report it at<br />
+<p> If you find a bug, please report it at<br/>
 &nbsp;<wbr><i><a rel="nofollow" href="http://bugzilla.gnome.org/enter_bug.cgi?product=seahorse">http://bugzilla.gnome.org/enter_bug.cgi?product=seahorse</a></i>. </p>
 <h2>AUTHORS</h2>
 <p> Jacob Perkins &lt;jap1 [at] users.sourceforge.net&gt; </p>
@@ -42,11 +42,11 @@ description: "seahorse-daemon – seahorse pass phrase caching agent"
 <p> Adam Schreiber &lt;sadam [at] clemson.edu&gt; </p>
 <p> This man page was originally written by Michael Mende &lt;debian [at] menole.net&gt; for the Debian system. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2001, 2002 Jose Carlos Garcia Sogo<br />
- Copyright (C) 2002, 2003 Jacob Perkins<br />
+<p> Copyright (C) 2001, 2002 Jose Carlos Garcia Sogo<br/>
+ Copyright (C) 2002, 2003 Jacob Perkins<br/>
  Copyright (C) 2004, 2006 Stef Walter, Adam Schreiber </p>
 <h2>LICENSE</h2>
-<p> You are free to distribute this software under the terms of the GNU General Public License.<br />
+<p> You are free to distribute this software under the terms of the GNU General Public License.<br/>
  Documentation and help files are covered by GFDL license. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-seahorse-tool/">seahorse-tool</a>(1)</code>, <code>seahorse-agent(1)</code>, </p>

@@ -22,7 +22,7 @@ description: "guestfs-building – How to build libguestfs from source"
 <dt>&bull;</dt>
 <dd> Run the tools from the source directory, or install.</dd></dl>
 <h2>REQUIREMENTS</h2>
-<h3>Short cut for Fedora or Red Hat Enterprise Linux (<font SIZE="-1">RHEL</font>) users</h3>
+<h3>Short cut for Fedora or Red Hat Enterprise Linux (RHEL) users</h3>
 <p> On Fedora, use <code><a href="/docs/linux/man/8-dnf/">dnf</a></code>(8) to install all the requirements: </p>
 <pre>
  dnf builddep libguestfs
@@ -34,7 +34,7 @@ description: "guestfs-building – How to build libguestfs from source"
  yum install autoconf automake libtool gettext-devel
 </pre>
 <h3>Short cut for Debian or Ubuntu users</h3>
-<p> Use <font SIZE="-1">APT</font> to install all the requirements: </p>
+<p> Use APT to install all the requirements: </p>
 <pre>
  apt-get build-dep libguestfs
  apt-get install autoconf automake libtool-bin gettext
@@ -55,14 +55,14 @@ description: "guestfs-building – How to build libguestfs from source"
 <dt>kernel ≥ 2.6.34</dt>
 <dd> <i>Required</i>. The following features must be enabled: <tt>&quot;virtio-pci&quot;</tt>, <tt>&quot;virtio-serial&quot;</tt>, <tt>&quot;virtio-block&quot;</tt>, <tt>&quot;virtio-net&quot;</tt>.</dd>
 <dt>supermin ≥ 5.1.0</dt>
-<dd> <i>Required</i>. For alternatives, see &#8220;<font SIZE="-1">USING A PREBUILT BINARY APPLIANCE&#8221;</font> below.</dd>
+<dd> <i>Required</i>. For alternatives, see &#8220;USING A PREBUILT BINARY APPLIANCE&#8221; below.</dd>
 <dt>glibc</dt>
-<dd> <i>Required</i>. We use the custom printf formatters extension of glibc (see &#8220;<font SIZE="-1">DAEMON CUSTOM PRINTF FORMATTERS&#8221;</font> in <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1)).</dd>
-<dt><font SIZE="-1">XDR</font> (tirpc, glibc or other)</dt>
-<dd> <i>Required</i>. We use the <font SIZE="-1">XDR</font> implementation from <tt>&quot;&lt;rpc/xdr.h&gt;&quot;</tt>, which may come from glibc, tirpc or another library. </dd>
+<dd> <i>Required</i>. We use the custom printf formatters extension of glibc (see &#8220;DAEMON CUSTOM PRINTF FORMATTERS&#8221; in <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1)).</dd>
+<dt>XDR (tirpc, glibc or other)</dt>
+<dd> <i>Required</i>. We use the XDR implementation from <tt>&quot;&lt;rpc/xdr.h&gt;&quot;</tt>, which may come from glibc, tirpc or another library. </dd>
 <p> The <tt>&quot;rpcgen&quot;</tt> tool is optional, except if you want to compile from git and/or patch libguestfs with new APIs.</p>
 <dt>Gcc or Clang</dt>
-<dd> <i>Required</i>. We use <tt>&quot;__attribute__((cleanup))&quot;</tt> which is a <font SIZE="-1">GCC</font> extension also supported by Clang.</dd>
+<dd> <i>Required</i>. We use <tt>&quot;__attribute__((cleanup))&quot;</tt> which is a GCC extension also supported by Clang.</dd>
 <dt>Perl</dt>
 <dd> <i>Required</i>. Various build steps and tests are written in Perl. Perl is not needed at runtime except if you need to run a small number of virt tools which are still written in Perl.</dd>
 <dt>Perl &quot;Pod::Man&quot;</dt>
@@ -87,7 +87,7 @@ description: "guestfs-building – How to build libguestfs from source"
 <dd>
 </dd><dt>bison</dt>
 <dd> <i>Required</i>.</dd>
-<dt>Perl-compatible Regular Expressions (<font SIZE="-1">PCRE</font>) library</dt>
+<dt>Perl-compatible Regular Expressions (PCRE) library</dt>
 <dd> <i>Required</i>.</dd>
 <dt>genisoimage</dt>
 <dd> <i>Required</i>.</dd>
@@ -117,14 +117,14 @@ description: "guestfs-building – How to build libguestfs from source"
 <dd> Optional. Used to parse libguestfs’s own config files, eg. <i>/etc/libguestfs-tools.conf</i>.</dd>
 <dt>libselinux</dt>
 <dd> Optional. Used by the libvirt backend to securely confine the appliance (sVirt).</dd>
-<dt>Berkeley <font SIZE="-1">DB</font> utils (db_dump, db_load, etc)</dt>
+<dt>Berkeley DB utils (db_dump, db_load, etc)</dt>
 <dd> Optional. Usually found in a package called <tt>&quot;db-utils&quot;</tt>, <tt>&quot;db4-utils&quot;</tt>, <tt>&quot;db4.X-utils&quot;</tt> etc.</dd>
 <dt>systemtap</dt>
 <dd> Optional. For userspace probes.</dd>
 <dt>readline</dt>
 <dd> Optional. For nicer command line editing in <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1).</dd>
 <dt>acl</dt>
-<dd> Optional. Library and programs for handling <font SIZE="-1">POSIX</font> ACLs.</dd>
+<dd> Optional. Library and programs for handling POSIX ACLs.</dd>
 <dt>libcap</dt>
 <dd> Optional. Library and programs for handling Linux capabilities.</dd>
 <dt>libldm</dt>
@@ -132,14 +132,14 @@ description: "guestfs-building – How to build libguestfs from source"
 <dt>sd-journal</dt>
 <dd> Optional. Library for accessing systemd journals.</dd>
 <dt>gdisk</dt>
-<dd> Optional. <font SIZE="-1">GPT</font> disk support.</dd>
+<dd> Optional. GPT disk support.</dd>
 <dt>netpbm</dt>
 <dd> Optional. Render icons from guests.</dd>
 <dt>icoutils</dt>
 <dd> Optional. Render icons from Windows guests.</dd>
 <dt>Perl &quot;Expect&quot;</dt>
 <dd> Optional. Perl module used to test <code><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></code>(1).</dd>
-<dt><font SIZE="-1">FUSE</font></dt>
+<dt>FUSE</dt>
 <dd> Optional. <code><a href="/docs/linux/man/1-fusermount/">fusermount</a></code>(1), libfuse and kernel module are all needed if you want <code><a href="/docs/linux/man/1-guestmount/">guestmount</a></code>(1) and/or mount-local support.</dd>
 <dt>static glibc</dt>
 <dd> Optional. Used only for testing.</dd>
@@ -147,12 +147,12 @@ description: "guestfs-building – How to build libguestfs from source"
 <dd>
 </dd><dt>nbdkit</dt>
 <dd> Optional. qemu-nbd is used for testing. </dd>
-<p> <code><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></code>(1) requires either qemu-nbd or nbdkit, but these only need to be present on the virt-p2v <font SIZE="-1">ISO,</font> they do not need to be installed at compile time.</p>
+<p> <code><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></code>(1) requires either qemu-nbd or nbdkit, but these only need to be present on the virt-p2v ISO, they do not need to be installed at compile time.</p>
 <dt>uml_mkcow</dt>
-<dd> Optional. For the <font SIZE="-1">UML</font> backend.</dd>
+<dd> Optional. For the UML backend.</dd>
 <dt>curl</dt>
 <dd> Optional. Used by virt-builder for downloads.</dd>
-<dt><font SIZE="-1">GNU</font> Privacy Guard (GnuPG, gpg) v1 or v2</dt>
+<dt>GNU Privacy Guard (GnuPG, gpg) v1 or v2</dt>
 <dd> Optional. Used by virt-builder for checking digital signatures.</dd>
 <dt>liblzma</dt>
 <dd> Optional. If available, virt-builder will use this library for fast, parallel uncompression of templates.</dd>
@@ -162,12 +162,12 @@ description: "guestfs-building – How to build libguestfs from source"
 <p> Either Gtk 2 or Gtk 3 can be used. If you want to select a specific version of Gtk, use <tt>&quot;./configure --with-gtk=2&quot;</tt> or <tt>&quot;./configure --with-gtk=3&quot;</tt>.</p>
 <dt>D-Bus</dt>
 <dd> Optional. </dd>
-<p> If the D-Bus low level C <font SIZE="-1">API</font> is available, virt-p2v can send a D-Bus message to logind to inhibit power saving (sleep, suspend, etc) during P2V conversions. </p>
-<p> If this <font SIZE="-1">API</font> is not available at build time, then very long conversions might be interrupted if the physical machine goes to sleep.</p>
+<p> If the D-Bus low level C API is available, virt-p2v can send a D-Bus message to logind to inhibit power saving (sleep, suspend, etc) during P2V conversions. </p>
+<p> If this API is not available at build time, then very long conversions might be interrupted if the physical machine goes to sleep.</p>
 <dt>zip</dt>
 <dd>
 </dd><dt>unzip</dt>
-<dd> Optional. Used by virt-v2v to handle <font SIZE="-1">OVA</font> files.</dd>
+<dd> Optional. Used by virt-v2v to handle OVA files.</dd>
 <dt>python-evtx</dt>
 <dd> Optional. Used by <code><a href="/docs/linux/man/1-virt-log/">virt-log</a></code>(1) to parse Windows Event Log files.</dd>
 <dt>OCaml gettext</dt>
@@ -181,7 +181,7 @@ description: "guestfs-building – How to build libguestfs from source"
 </dd><dt>Perl &quot;Test::More&quot;</dt>
 <dd> Optional. Used to build and test the Perl bindings.</dd>
 <dt>Python ≥ 2.2</dt>
-<dd> Optional. Used to build the Python bindings. For building Python 2 or Python 3 bindings, see &#8220;<font SIZE="-1">BUILDING PYTHON 2 AND PYTHON 3 BINDINGS&#8221;</font> below.</dd>
+<dd> Optional. Used to build the Python bindings. For building Python 2 or Python 3 bindings, see &#8220;BUILDING PYTHON 2 AND PYTHON 3 BINDINGS&#8221; below.</dd>
 <dt>Python &quot;unittest&quot;</dt>
 <dd> Optional. Used to run the Python testsuite.</dd>
 <dt>Ruby</dt>
@@ -193,21 +193,21 @@ description: "guestfs-building – How to build libguestfs from source"
 </dd><dt>rubygem-rdoc</dt>
 <dd> Optional. Used to build the Ruby bindings.</dd>
 <dt>Java ≥ 1.6</dt>
-<dd> Optional. Java, <font SIZE="-1">JNI</font> and jpackage-utils are needed for building Java bindings.</dd>
-<dt><font SIZE="-1">GHC</font></dt>
+<dd> Optional. Java, JNI and jpackage-utils are needed for building Java bindings.</dd>
+<dt>GHC</dt>
 <dd> Optional. Used to build the Haskell bindings.</dd>
-<dt><font SIZE="-1">PHP</font></dt>
+<dt>PHP</dt>
 <dd>
 </dd><dt>phpize</dt>
-<dd> Optional. Used to build the <font SIZE="-1">PHP</font> bindings.</dd>
+<dd> Optional. Used to build the PHP bindings.</dd>
 <dt>glib2</dt>
 <dd>
 </dd><dt>gobject-introspection</dt>
 <dd>
 </dd><dt>gjs</dt>
 <dd> Optional. Used to build and test the GObject bindings.</dd>
-<dt><font SIZE="-1">LUA</font></dt>
-<dd> Optional. Used to build the <font SIZE="-1">LUA</font> bindings.</dd>
+<dt>LUA</dt>
+<dd> Optional. Used to build the LUA bindings.</dd>
 <dt>Erlang</dt>
 <dd>
 </dd><dt>erl_interface</dt>
@@ -249,7 +249,7 @@ description: "guestfs-building – How to build libguestfs from source"
  make
 </pre>
 <h2>RUNNING THE TESTS</h2>
-<p> <font SIZE="-1"><code>DO NOT</code></font><code> run the tests as root!</code> Libguestfs can be built and tested as non-root. Running the tests as root could even be dangerous, don&#8217;t do it. </p>
+<p> <code>DO NOT</code><code> run the tests as root!</code> Libguestfs can be built and tested as non-root. Running the tests as root could even be dangerous, don&#8217;t do it. </p>
 <p> To sanity check that the build worked, do: </p>
 <pre>
  make quickcheck
@@ -260,7 +260,7 @@ description: "guestfs-building – How to build libguestfs from source"
 </pre>
 <p> There are many more tests you can run. See <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1) for details.</p>
 <h2>INSTALLING</h2>
-<p> <font SIZE="-1"><code>DO NOT</code></font><code> use </code>&quot;make install&quot;<code>!</code> You&#8217;ll end up with conflicting versions of libguestfs installed, and this causes constant headaches for users. See the next section for how to use the <i>./run</i> script instead. </p>
+<p> <code>DO NOT</code><code> use </code>&quot;make install&quot;<code>!</code> You&#8217;ll end up with conflicting versions of libguestfs installed, and this causes constant headaches for users. See the next section for how to use the <i>./run</i> script instead. </p>
 <p> Distro packagers can use: </p>
 <pre>
  make INSTALLDIRS=vendor DESTDIR=[temp-build-dir] install
@@ -326,7 +326,7 @@ description: "guestfs-building – How to build libguestfs from source"
 <p> to list them all. This section covers some of the more important ones.</p>
 <dl>
 <dt><code>&#8211;disable-appliance &#8211;disable-daemon</code></dt>
-<dd> See &#8220;<font SIZE="-1">USING A PREBUILT BINARY APPLIANCE&#8221;</font> below.</dd>
+<dd> See &#8220;USING A PREBUILT BINARY APPLIANCE&#8221; below.</dd>
 <dt><code>&#8211;disable-erlang</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-gobject</code></dt>
@@ -350,7 +350,7 @@ description: "guestfs-building – How to build libguestfs from source"
 <p> Note that disabling OCaml (bindings) or Perl will have the knock-on effect of disabling parts of the test suite and some tools. </p>
 <p> OCaml is required to build libguestfs and this requirement cannot be removed. Using <i>&#8211;disable-ocaml</i> only disables the bindings and OCaml tools.</p>
 <dt><code>&#8211;disable-fuse</code></dt>
-<dd> Disable <font SIZE="-1">FUSE</font> support in the <font SIZE="-1">API</font> and the <code><a href="/docs/linux/man/1-guestmount/">guestmount</a></code>(1) tool.</dd>
+<dd> Disable FUSE support in the API and the <code><a href="/docs/linux/man/1-guestmount/">guestmount</a></code>(1) tool.</dd>
 <dt><code>&#8211;disable-gnulib-tests</code></dt>
 <dd> On some platforms the GNUlib test suite can be flaky. This disables it, since errors in the GNUlib test suite are often not important.</dd>
 <dt><code>&#8211;disable-static</code></dt>
@@ -360,9 +360,9 @@ description: "guestfs-building – How to build libguestfs from source"
 <dt><code>&#8211;enable-werror</code></dt>
 <dd> This turns compiler warnings into errors (ie. <tt>&quot;-Werror&quot;</tt>). Use this for development, especially when submitting patches. It should generally <i>not</i> be used for production or distro builds.</dd>
 <dt><code>&#8211;with-default-backend=libvirt</code></dt>
-<dd> This controls the default method that libguestfs uses to run qemu (see &#8220;<font SIZE="-1">BACKEND&#8221;</font> in <code>guestfs</code>(3)). If not specified, the default backend is <tt>&quot;direct&quot;</tt>, which means libguestfs runs qemu directly. </dd>
-<p> Fedora and Red Hat Enterprise Linux (<font SIZE="-1">RHEL</font>) ≥ 7 use this flag to change the default backend to <tt>&quot;libvirt&quot;</tt>, because (especially in <font SIZE="-1">RHEL</font>) the policy is not to allow any program to run qemu except via libvirt. </p>
-<p> Note that despite this setting, all backends are built into libguestfs, and you can override the backend at runtime by setting the <tt>$LIBGUESTFS_BACKEND</tt> environment variable (or using <font SIZE="-1">API</font> methods).</p>
+<dd> This controls the default method that libguestfs uses to run qemu (see &#8220;BACKEND&#8221; in <code>guestfs</code>(3)). If not specified, the default backend is <tt>&quot;direct&quot;</tt>, which means libguestfs runs qemu directly. </dd>
+<p> Fedora and Red Hat Enterprise Linux (RHEL) ≥ 7 use this flag to change the default backend to <tt>&quot;libvirt&quot;</tt>, because (especially in RHEL) the policy is not to allow any program to run qemu except via libvirt. </p>
+<p> Note that despite this setting, all backends are built into libguestfs, and you can override the backend at runtime by setting the <tt>$LIBGUESTFS_BACKEND</tt> environment variable (or using API methods).</p>
 <dt><code>&#8211;with-distro=REDHAT|DEBIAN|&#8230;</code></dt>
 <dd> Libguestfs needs to know which Linux distro is in use so it can choose package names for the appliance correctly (see for example <i>appliance/packagelist.in</i>). It normally does this automatically. </dd>
 <p> However if you can building or packaging libguestfs on a new distro then you can use <i>&#8211;with-distro</i> to specify that the distro is similar to an existing one (eg. <i>&#8211;with-distro=REDHAT</i> if the distro is a new Red Hat or CentOS derivative). </p>
@@ -380,19 +380,19 @@ description: "guestfs-building – How to build libguestfs from source"
 <dd> Provide an alternate qemu binary (or list of binaries). This can be overridden at runtime by setting the <tt>&quot;LIBGUESTFS_HV&quot;</tt> environment variable.</dd>
 <dt><code>&#8211;with-supermin-packager-config=</code><i>yum.conf</i></dt>
 <dd> This passes the <i>&#8211;packager-config</i> option to <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1). </dd>
-<p> The most common use for this is to build the appliance using an alternate repository (instead of using the installed yum/dnf/apt/etc configuration to find and download packages). You might need to use this if you want to build libguestfs without having a network connection. Examples of using this can be found in the Fedora <tt>&quot;libguestfs.spec&quot;</tt> file (see &#8220;<font SIZE="-1">BUILDING A PACKAGE FOR FEDORA&#8221;</font> below for resources).</p>
+<p> The most common use for this is to build the appliance using an alternate repository (instead of using the installed yum/dnf/apt/etc configuration to find and download packages). You might need to use this if you want to build libguestfs without having a network connection. Examples of using this can be found in the Fedora <tt>&quot;libguestfs.spec&quot;</tt> file (see &#8220;BUILDING A PACKAGE FOR FEDORA&#8221; below for resources).</p>
 <dt><code>&#8211;with-supermin-extra-options=&quot;</code>&#8211;opt1 &#8211;opt2 &#8230;<code>&quot;</code></dt>
 <dd> Pass additional options to <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1). See <i>appliance/make.sh.in</i> to understand precisely what this does.</dd>
-<dt><font SIZE="-1"><code>PYTHON</code></font></dt>
-<dd> This environment variable may be set to point to a python binary (eg. <tt>&quot;python3&quot;</tt>). When <tt>&quot;./configure&quot;</tt> runs, it inspects this python binary to find the version of Python, the location of Python libraries and so on. See &#8220;<font SIZE="-1">BUILDING PYTHON 2 AND PYTHON 3 BINDINGS&#8221;</font> below.</dd>
-<dt><font SIZE="-1"><code>SUPERMIN</code></font></dt>
-<dd> This environment variable can be set to choose an alternative <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1) binary. This might be used, for example, if you want to use a newer upstream version of supermin than is packaged for your distro, or if supermin is not packaged at all. On <font SIZE="-1">RHEL 7,</font> you must set <tt>&quot;SUPERMIN=/usr/bin/supermin5&quot;</tt> when compiling libguestfs.</dd></dl>
+<dt><code>PYTHON</code></dt>
+<dd> This environment variable may be set to point to a python binary (eg. <tt>&quot;python3&quot;</tt>). When <tt>&quot;./configure&quot;</tt> runs, it inspects this python binary to find the version of Python, the location of Python libraries and so on. See &#8220;BUILDING PYTHON 2 AND PYTHON 3 BINDINGS&#8221; below.</dd>
+<dt><code>SUPERMIN</code></dt>
+<dd> This environment variable can be set to choose an alternative <code><a href="/docs/linux/man/1-supermin/">supermin</a></code>(1) binary. This might be used, for example, if you want to use a newer upstream version of supermin than is packaged for your distro, or if supermin is not packaged at all. On RHEL 7, you must set <tt>&quot;SUPERMIN=/usr/bin/supermin5&quot;</tt> when compiling libguestfs.</dd></dl>
 <h2>NOTES ABOUT QEMU AND KVM</h2>
 <p> A common problem is with broken or incompatible qemu releases. </p>
 <p> Different versions of qemu have problems booting the appliance for different reasons. This varies between versions of qemu, and Linux distributions which add their own patches. </p>
-<p> If you find a problem, you could try using your own qemu built from source (qemu is very easy to build from source), with a &#8220;qemu wrapper&#8221;. See &#8220;<font SIZE="-1">QEMU WRAPPERS&#8221;</font> in <code>guestfs</code>(3). </p>
-<p> By default the configure script will look for qemu-kvm (<font SIZE="-1">KVM</font> support). <font SIZE="-1">KVM</font> is much faster than using plain qemu. </p>
-<p> You may also need to enable <font SIZE="-1">KVM</font> support for non-root users, by following these instructions: <a rel="nofollow" href="http://www.linux-kvm.org/page/FAQ#How_can_I_use_kvm_with_a_non-privileged_user.3F">http://www.linux-kvm.org/page/FAQ#How_can_I_use_kvm_with_a_non-privileged_user.3F</a> </p>
+<p> If you find a problem, you could try using your own qemu built from source (qemu is very easy to build from source), with a &#8220;qemu wrapper&#8221;. See &#8220;QEMU WRAPPERS&#8221; in <code>guestfs</code>(3). </p>
+<p> By default the configure script will look for qemu-kvm (KVM support). KVM is much faster than using plain qemu. </p>
+<p> You may also need to enable KVM support for non-root users, by following these instructions: <a rel="nofollow" href="http://www.linux-kvm.org/page/FAQ#How_can_I_use_kvm_with_a_non-privileged_user.3F">http://www.linux-kvm.org/page/FAQ#How_can_I_use_kvm_with_a_non-privileged_user.3F</a> </p>
 <p> On some systems, this will work too: </p>
 <pre>
  chmod 0666 /dev/kvm
@@ -428,15 +428,15 @@ description: "guestfs-building – How to build libguestfs from source"
 <p> The Fedora spec file is stored under: <a rel="nofollow" href="http://pkgs.fedoraproject.org/cgit/rpms/libguestfs.git/">http://pkgs.fedoraproject.org/cgit/rpms/libguestfs.git/</a> </p>
 <p> Libguestfs is built in Fedora using the ordinary Fedora build system (Koji).</p>
 <h2>BUILDING A PACKAGE FOR RED HAT ENTERPRISE LINUX</h2>
-<p> Red Hat Enterprise Linux (<font SIZE="-1">RHEL</font>) builds of libguestfs are heavily patched. There are broadly two types of patches we apply:</p>
+<p> Red Hat Enterprise Linux (RHEL) builds of libguestfs are heavily patched. There are broadly two types of patches we apply:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> We disable many features that we do not wish to support for <font SIZE="-1">RHEL</font> customers. For example, the &#8220;libguestfs live&#8221; feature is disabled.</dd>
+<dd> We disable many features that we do not wish to support for RHEL customers. For example, the &#8220;libguestfs live&#8221; feature is disabled.</dd>
 <dt>&bull;</dt>
 <dd> We backport upstream features.</dd></dl>
-<p> The patches we apply to <font SIZE="-1">RHEL</font> releases are available publically in the upstream git repository, in a branch called <tt>&quot;rhel-x.y&quot;</tt> </p>
-<p> For example, the <font SIZE="-1">RHEL 7.3</font> patches are available here: <a rel="nofollow" href="https://github.com/libguestfs/libguestfs/commits/rhel-7.3">https://github.com/libguestfs/libguestfs/commits/rhel-7.3</a> </p>
-<p> The sources and spec files for <font SIZE="-1">RHEL</font> versions of libguestfs are available on <a rel="nofollow" href="https://git.centos.org/project/rpms,">https://git.centos.org/project/rpms,</a> and see also <a rel="nofollow" href="https://wiki.centos.org/Sources.">https://wiki.centos.org/Sources.</a></p>
+<p> The patches we apply to RHEL releases are available publically in the upstream git repository, in a branch called <tt>&quot;rhel-x.y&quot;</tt> </p>
+<p> For example, the RHEL 7.3 patches are available here: <a rel="nofollow" href="https://github.com/libguestfs/libguestfs/commits/rhel-7.3">https://github.com/libguestfs/libguestfs/commits/rhel-7.3</a> </p>
+<p> The sources and spec files for RHEL versions of libguestfs are available on <a rel="nofollow" href="https://git.centos.org/project/rpms,">https://git.centos.org/project/rpms,</a> and see also <a rel="nofollow" href="https://wiki.centos.org/Sources.">https://wiki.centos.org/Sources.</a></p>
 <h2>BUILDING i686 32 BIT VIRT-P2V</h2>
 <p> <i>(This section only applies on the x86-64 architecture.)</i> </p>
 <p> Building a 32 bit virt-p2v (i686) binary improves compatibility with older hardware. See <code><a href="/docs/linux/man/1-virt-p2v-make-disk/">virt-p2v-make-disk</a></code>(1) for details. Although virt-p2v is a simple Gtk application, it is not especially easy to build just virt-p2v as a 32 bit application on a 64 bit host. Usually the simplest way is to use a 32 bit chroot or even a 32 bit virtual machine to build libguestfs. </p>
@@ -453,9 +453,9 @@ description: "guestfs-building – How to build libguestfs from source"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009-2019 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This library is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> Lesser General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This library is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> See the <font SIZE="-1">GNU</font> Lesser General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA</font></p>
+<p> This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details. </p>
+<p> You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

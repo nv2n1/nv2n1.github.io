@@ -58,7 +58,7 @@ show variables          Display list of variables.
 $ mysqluc SERVER1=root [at] localhost
 </pre>
 </dd></dl>
-<p> The user can provide any number of user-defined variables but they must contain a value and no spaces around the &#8216;=&#8217; character. Once the console is launched, the user can see all variables using the &#8216;show variables&#8217; command.<br />
+<p> The user can provide any number of user-defined variables but they must contain a value and no spaces around the &#8216;=&#8217; character. Once the console is launched, the user can see all variables using the &#8216;show variables&#8217; command.<br/>
 OPTIONS </p>
 <dl>
 <dt>
@@ -89,7 +89,7 @@ OPTIONS </p>
 </dt><dd> &bull; &#8211;width &lt;number&gt; </dd>
 <p> Display width</dl>
 <p>NOTES </p>
-<p> Using the <code>&#8211;execute</code> option or piping commands to the console may require quotes or double quotes (for example, on Windows).<br />
+<p> Using the <code>&#8211;execute</code> option or piping commands to the console may require quotes or double quotes (for example, on Windows).<br/>
 EXAMPLES </p>
 <p> To launch the console, use this command: </p>
 <dl>
@@ -103,38 +103,38 @@ $ mysqluc
 <dl>
 <dt>
 </dt><dd>
-$ mysqluc -e &#8220;help utilities&#8221;<br />
-Utility           Description<br />
-&#8212;&#8212;&#8212;&#8212;&#8212;-  &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />
-mysqlindexcheck   check for duplicate or redundant indexes<br />
-mysqlrplcheck     check replication<br />
-mysqluserclone    clone a MySQL user account to one or more new users<br />
-mysqldbcompare    compare databases for consistency<br />
-mysqldiff         compare object definitions among objects where the<br />
-                  difference is how db1.obj1 differs from db2.obj2<br />
-mysqldbcopy       copy databases from one server to another<br />
-mysqlreplicate    establish replication with a master<br />
-mysqldbexport     export metadata and data from databases<br />
-mysqldbimport     import metadata and data from files<br />
-mysqlmetagrep     search metadata<br />
-mysqlprocgrep     search process information<br />
-mysqldiskusage    show disk usage for databases<br />
-mysqlserverinfo   show server information<br />
+$ mysqluc -e &#8220;help utilities&#8221;<br/>
+Utility           Description<br/>
+&#8212;&#8212;&#8212;&#8212;&#8212;-  &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br/>
+mysqlindexcheck   check for duplicate or redundant indexes<br/>
+mysqlrplcheck     check replication<br/>
+mysqluserclone    clone a MySQL user account to one or more new users<br/>
+mysqldbcompare    compare databases for consistency<br/>
+mysqldiff         compare object definitions among objects where the<br/>
+                  difference is how db1.obj1 differs from db2.obj2<br/>
+mysqldbcopy       copy databases from one server to another<br/>
+mysqlreplicate    establish replication with a master<br/>
+mysqldbexport     export metadata and data from databases<br/>
+mysqldbimport     import metadata and data from files<br/>
+mysqlmetagrep     search metadata<br/>
+mysqlprocgrep     search process information<br/>
+mysqldiskusage    show disk usage for databases<br/>
+mysqlserverinfo   show server information<br/>
 mysqlserverclone  start another instance of a running server
 </dd></dl>
 <p> The following demonstrates launching the console to run several commands using the &#8211;execute option to including setting a variable for a server connection and executing a utility using variable substitution. Note: it may be necessary to escape the &#8216;$&#8217; on some platforms (for example, Linux). Output below is an excerpt and is representational only.: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqluc &#8211; e &#8220;set SERVER=root [at] host123; mysqldiskusage &#8211;server=\$SERVER&#8221;<br />
-#Source on host123 : &#8230; connected.<br />
-            NOTICE : Your user account does not have read access to the datadir.Data sizes will be calculated and actual file sizes may be omitted.Some features may be unavailable.<br />
-#Database totals:<br />
-        + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ |<br />
-    db_name | total |<br />
-    +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8230; | world | 0 |<br />
-    &#8230; + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+Total database disk usage = 1,<br />
-                                                                                 072, 359, 052 bytes or 1022.00 MB<br />
+$ mysqluc &#8211; e &#8220;set SERVER=root [at] host123; mysqldiskusage &#8211;server=\$SERVER&#8221;<br/>
+#Source on host123 : &#8230; connected.<br/>
+            NOTICE : Your user account does not have read access to the datadir.Data sizes will be calculated and actual file sizes may be omitted.Some features may be unavailable.<br/>
+#Database totals:<br/>
+        + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ |<br/>
+    db_name | total |<br/>
+    +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8230; | world | 0 |<br/>
+    &#8230; + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+Total database disk usage = 1,<br/>
+                                                                                 072, 359, 052 bytes or 1022.00 MB<br/>
 #&#8230; done.
 </dd></dl>
 <p> The following demonstrates launching the console using the commands shown above but piped into the console on the command line. The results are the same as above.: </p>

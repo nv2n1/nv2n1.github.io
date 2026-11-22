@@ -38,10 +38,10 @@ description: "ImageByteOrder, BitmapBitOrder, BitmapPad, BitmapUnit, DisplayHeig
 <p> The <code>DisplayWidth</code> macro returns the width of the screen in pixels. </p>
 <p> The <code>DisplayWidthMM</code> macro returns the width of the specified screen in millimeters.</p>
 <h2>Structures</h2>
-<p>The <code>XPixmapFormatValues</code> structure provides an interface to the pixmap format information that is returned at the time of a connection setup. It contains: typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int depth;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int bits_per_pixel;<br />
+<p>The <code>XPixmapFormatValues</code> structure provides an interface to the pixmap format information that is returned at the time of a connection setup. It contains: typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int depth;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int bits_per_pixel;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int scanline_pad; } XPixmapFormatValues;</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), <a href="/docs/linux/man/3-blackpixelofscreen/">BlackPixelOfScreen</a>(3), IsCursorKey(3), <a href="/docs/linux/man/3-xfree/">XFree</a>(3)<br />
+<p><a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), <a href="/docs/linux/man/3-blackpixelofscreen/">BlackPixelOfScreen</a>(3), IsCursorKey(3), <a href="/docs/linux/man/3-xfree/">XFree</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -12,33 +12,33 @@ description: "ANTLR3_TOKEN_STREAM_struct –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3tokenstream.h">antlr3tokenstream.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p><code>pANTLR3_COMMON_TOKEN</code>(* <code>_LT</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_INT32</code> k)<br />
- <i>Get Token at current input pointer + i ahead where i=1 is next Token. </i><br />
- <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>debugger</code><br />
- <i>Debugger interface, is this is a debugging token stream. </i><br />
- void(* <code>free</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream)<br />
- <i>Function that knows how to free the memory for an ANTLR3_TOKEN_STREAM. </i><br />
- <code>pANTLR3_COMMON_TOKEN</code>(* <code>get</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> i)<br />
- <i>Get a token at an absolute index i; 0..n-1. </i><br />
- <code>pANTLR3_TOKEN_SOURCE</code>(* <code>getTokenSource</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream)<br />
- <i>Where is this stream pulling tokens from? This is not the name, but a pointer into an interface that contains a ANTLR3_TOKEN_SOURCE interface. </i><br />
- <code>ANTLR3_BOOLEAN</code> <code>initialStreamState</code><br />
- <i>Indicates the initial stream state for </i><code>dbgConsume()</code>.<br />
- <code>pANTLR3_INT_STREAM</code> <code>istream</code><br />
- <i>All input streams implement the ANTLR3_INT_STREAM interface. </i><br />
- void(* <code>setDebugListener</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>debugger</code>)<br />
- <i>Function that sets the token stream into debugging mode. </i><br />
- void(* <code>setTokenSource</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>pANTLR3_TOKEN_SOURCE</code> <code>tokenSource</code>)<br />
- <i>Function that installs a token source for teh stream. </i><br />
- void * <code>super</code><br />
- <i>Whatever is providing this interface needs a pointer to itself so that this can be passed back to it whenever the api functions are called. </i><br />
- <code>pANTLR3_TOKEN_SOURCE</code> <code>tokenSource</code><br />
- <i>Pointer to the token source for this stream. </i><br />
- <code>pANTLR3_STRING</code>(* <code>toString</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream)<br />
- <i>Return the text of all the tokens in the stream, as the old tramp in Leeds market used to say; &#8216;Get the lot!&#8217;. </i><br />
- <code>pANTLR3_STRING</code>(* <code>toStringSS</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop)<br />
- <i>Return the text of all tokens from start to stop, inclusive. </i><br />
- <code>pANTLR3_STRING</code>(* <code>toStringTT</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>pANTLR3_COMMON_TOKEN</code> start, <code>pANTLR3_COMMON_TOKEN</code> stop)<br />
+<p><code>pANTLR3_COMMON_TOKEN</code>(* <code>_LT</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_INT32</code> k)<br/>
+ <i>Get Token at current input pointer + i ahead where i=1 is next Token. </i><br/>
+ <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>debugger</code><br/>
+ <i>Debugger interface, is this is a debugging token stream. </i><br/>
+ void(* <code>free</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream)<br/>
+ <i>Function that knows how to free the memory for an ANTLR3_TOKEN_STREAM. </i><br/>
+ <code>pANTLR3_COMMON_TOKEN</code>(* <code>get</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> i)<br/>
+ <i>Get a token at an absolute index i; 0..n-1. </i><br/>
+ <code>pANTLR3_TOKEN_SOURCE</code>(* <code>getTokenSource</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream)<br/>
+ <i>Where is this stream pulling tokens from? This is not the name, but a pointer into an interface that contains a ANTLR3_TOKEN_SOURCE interface. </i><br/>
+ <code>ANTLR3_BOOLEAN</code> <code>initialStreamState</code><br/>
+ <i>Indicates the initial stream state for </i><code>dbgConsume()</code>.<br/>
+ <code>pANTLR3_INT_STREAM</code> <code>istream</code><br/>
+ <i>All input streams implement the ANTLR3_INT_STREAM interface. </i><br/>
+ void(* <code>setDebugListener</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>debugger</code>)<br/>
+ <i>Function that sets the token stream into debugging mode. </i><br/>
+ void(* <code>setTokenSource</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>pANTLR3_TOKEN_SOURCE</code> <code>tokenSource</code>)<br/>
+ <i>Function that installs a token source for teh stream. </i><br/>
+ void * <code>super</code><br/>
+ <i>Whatever is providing this interface needs a pointer to itself so that this can be passed back to it whenever the api functions are called. </i><br/>
+ <code>pANTLR3_TOKEN_SOURCE</code> <code>tokenSource</code><br/>
+ <i>Pointer to the token source for this stream. </i><br/>
+ <code>pANTLR3_STRING</code>(* <code>toString</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream)<br/>
+ <i>Return the text of all the tokens in the stream, as the old tramp in Leeds market used to say; &#8216;Get the lot!&#8217;. </i><br/>
+ <code>pANTLR3_STRING</code>(* <code>toStringSS</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop)<br/>
+ <i>Return the text of all tokens from start to stop, inclusive. </i><br/>
+ <code>pANTLR3_STRING</code>(* <code>toStringTT</code> )(struct <code>ANTLR3_TOKEN_STREAM_struct</code> *tokenStream, <code>pANTLR3_COMMON_TOKEN</code> start, <code>pANTLR3_COMMON_TOKEN</code> stop)<br/>
  <i>Because the user is not required to use a token with an index stored in it, we must provide a means for two token objects themselves to indicate the start/end location. </i></p>
 <h2>Detailed Description</h2>
 <p>Definition of the ANTLR3 common token stream interface. </p>

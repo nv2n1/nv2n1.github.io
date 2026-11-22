@@ -203,97 +203,97 @@ description: "teamd.conf — libteam daemon configuration file"
     &quot;runner&quot;: {&quot;name&quot;: &quot;roundrobin&quot;},
     &quot;ports&quot;: {&quot;eth1&quot;: {}, &quot;eth2&quot;: {}}
 }</code></pre>
-<p> Very basic configuration. {<br />
-    &quot;device&quot;: &quot;team0&quot;,<br />
-    &quot;runner&quot;: {&quot;name&quot;: &quot;activebackup&quot;},<br />
-    &quot;link_watch&quot;: {&quot;name&quot;: &quot;ethtool&quot;},<br />
-    &quot;ports&quot;: {<br />
-        &quot;eth1&quot;: {<br />
-            &quot;prio&quot;: -10,<br />
-            &quot;sticky&quot;: true<br />
-        },<br />
-        &quot;eth2&quot;: {<br />
-            &quot;prio&quot;: 100<br />
-        }<br />
-    }<br />
-} This configuration uses active-backup runner with ethtool link watcher. Port eth2 has higher priority, but the sticky flag ensures that if eth1 becomes active, it stays active while the link remains up. {<br />
-    &quot;device&quot;: &quot;team0&quot;,<br />
-    &quot;runner&quot;: {&quot;name&quot;: &quot;activebackup&quot;},<br />
-    &quot;link_watch&quot;: {<br />
-        &quot;name&quot;: &quot;ethtool&quot;,<br />
-        &quot;delay_up&quot;: 2500,<br />
-        &quot;delay_down&quot;: 1000<br />
-    },<br />
-    &quot;ports&quot;: {<br />
-        &quot;eth1&quot;: {<br />
-            &quot;prio&quot;: -10,<br />
-            &quot;sticky&quot;: true<br />
-        },<br />
-        &quot;eth2&quot;: {<br />
-            &quot;prio&quot;: 100<br />
-        }<br />
-    }<br />
-} Similar to the previous one. Only difference is that link changes are not propagated to the runner immediately, but delays are applied. {<br />
-    &quot;device&quot;: &quot;team0&quot;,<br />
-    &quot;runner&quot;: {&quot;name&quot;: &quot;activebackup&quot;},<br />
-    &quot;link_watch&quot;: {<br />
-        &quot;name&quot;: &quot;arp_ping&quot;,<br />
-        &quot;interval&quot;: 100,<br />
-        &quot;missed_max&quot;: 30,<br />
-        &quot;target_host&quot;: &quot;192.168.23.1&quot;<br />
-    },<br />
-    &quot;ports&quot;: {<br />
-        &quot;eth1&quot;: {<br />
-            &quot;prio&quot;: -10,<br />
-            &quot;sticky&quot;: true<br />
-        },<br />
-        &quot;eth2&quot;: {<br />
-            &quot;prio&quot;: 100<br />
-        }<br />
-    }<br />
-} This configuration uses ARP ping link watch. {<br />
-    &quot;device&quot;: &quot;team0&quot;,<br />
-    &quot;runner&quot;: {&quot;name&quot;: &quot;activebackup&quot;},<br />
-    &quot;link_watch&quot;: [<br />
-    {<br />
-        &quot;name&quot;: &quot;arp_ping&quot;,<br />
-        &quot;interval&quot;: 100,<br />
-        &quot;missed_max&quot;: 30,<br />
-        &quot;target_host&quot;: &quot;192.168.23.1&quot;<br />
-    },<br />
-    {<br />
-        &quot;name&quot;: &quot;arp_ping&quot;,<br />
-        &quot;interval&quot;: 50,<br />
-        &quot;missed_max&quot;: 20,<br />
-        &quot;target_host&quot;: &quot;192.168.24.1&quot;<br />
-    }<br />
-    ],<br />
-    &quot;ports&quot;: {<br />
-        &quot;eth1&quot;: {<br />
-            &quot;prio&quot;: -10,<br />
-            &quot;sticky&quot;: true<br />
-        },<br />
-        &quot;eth2&quot;: {<br />
-            &quot;prio&quot;: 100<br />
-        }<br />
-    }<br />
-} Similar to the previous one, only this time two link watchers are used at the same time. {<br />
-    &quot;device&quot;: &quot;team0&quot;,<br />
-    &quot;runner&quot;: {<br />
-        &quot;name&quot;: &quot;loadbalance&quot;,<br />
-        &quot;tx_hash&quot;: [&quot;eth&quot;, &quot;ipv4&quot;, &quot;ipv6&quot;]<br />
-    },<br />
-    &quot;ports&quot;: {&quot;eth1&quot;: {}, &quot;eth2&quot;: {}}<br />
-} Configuration for hash-based passive Tx load balancing. {<br />
-    &quot;device&quot;: &quot;team0&quot;,<br />
-    &quot;runner&quot;: {<br />
-        &quot;name&quot;: &quot;loadbalance&quot;,<br />
-        &quot;tx_hash&quot;: [&quot;eth&quot;, &quot;ipv4&quot;, &quot;ipv6&quot;],<br />
-        &quot;tx_balancer&quot;: {<br />
-            &quot;name&quot;: &quot;basic&quot;<br />
-        }<br />
-    },<br />
-    &quot;ports&quot;: {&quot;eth1&quot;: {}, &quot;eth2&quot;: {}}<br />
+<p> Very basic configuration. {<br/>
+    &quot;device&quot;: &quot;team0&quot;,<br/>
+    &quot;runner&quot;: {&quot;name&quot;: &quot;activebackup&quot;},<br/>
+    &quot;link_watch&quot;: {&quot;name&quot;: &quot;ethtool&quot;},<br/>
+    &quot;ports&quot;: {<br/>
+        &quot;eth1&quot;: {<br/>
+            &quot;prio&quot;: -10,<br/>
+            &quot;sticky&quot;: true<br/>
+        },<br/>
+        &quot;eth2&quot;: {<br/>
+            &quot;prio&quot;: 100<br/>
+        }<br/>
+    }<br/>
+} This configuration uses active-backup runner with ethtool link watcher. Port eth2 has higher priority, but the sticky flag ensures that if eth1 becomes active, it stays active while the link remains up. {<br/>
+    &quot;device&quot;: &quot;team0&quot;,<br/>
+    &quot;runner&quot;: {&quot;name&quot;: &quot;activebackup&quot;},<br/>
+    &quot;link_watch&quot;: {<br/>
+        &quot;name&quot;: &quot;ethtool&quot;,<br/>
+        &quot;delay_up&quot;: 2500,<br/>
+        &quot;delay_down&quot;: 1000<br/>
+    },<br/>
+    &quot;ports&quot;: {<br/>
+        &quot;eth1&quot;: {<br/>
+            &quot;prio&quot;: -10,<br/>
+            &quot;sticky&quot;: true<br/>
+        },<br/>
+        &quot;eth2&quot;: {<br/>
+            &quot;prio&quot;: 100<br/>
+        }<br/>
+    }<br/>
+} Similar to the previous one. Only difference is that link changes are not propagated to the runner immediately, but delays are applied. {<br/>
+    &quot;device&quot;: &quot;team0&quot;,<br/>
+    &quot;runner&quot;: {&quot;name&quot;: &quot;activebackup&quot;},<br/>
+    &quot;link_watch&quot;: {<br/>
+        &quot;name&quot;: &quot;arp_ping&quot;,<br/>
+        &quot;interval&quot;: 100,<br/>
+        &quot;missed_max&quot;: 30,<br/>
+        &quot;target_host&quot;: &quot;192.168.23.1&quot;<br/>
+    },<br/>
+    &quot;ports&quot;: {<br/>
+        &quot;eth1&quot;: {<br/>
+            &quot;prio&quot;: -10,<br/>
+            &quot;sticky&quot;: true<br/>
+        },<br/>
+        &quot;eth2&quot;: {<br/>
+            &quot;prio&quot;: 100<br/>
+        }<br/>
+    }<br/>
+} This configuration uses ARP ping link watch. {<br/>
+    &quot;device&quot;: &quot;team0&quot;,<br/>
+    &quot;runner&quot;: {&quot;name&quot;: &quot;activebackup&quot;},<br/>
+    &quot;link_watch&quot;: [<br/>
+    {<br/>
+        &quot;name&quot;: &quot;arp_ping&quot;,<br/>
+        &quot;interval&quot;: 100,<br/>
+        &quot;missed_max&quot;: 30,<br/>
+        &quot;target_host&quot;: &quot;192.168.23.1&quot;<br/>
+    },<br/>
+    {<br/>
+        &quot;name&quot;: &quot;arp_ping&quot;,<br/>
+        &quot;interval&quot;: 50,<br/>
+        &quot;missed_max&quot;: 20,<br/>
+        &quot;target_host&quot;: &quot;192.168.24.1&quot;<br/>
+    }<br/>
+    ],<br/>
+    &quot;ports&quot;: {<br/>
+        &quot;eth1&quot;: {<br/>
+            &quot;prio&quot;: -10,<br/>
+            &quot;sticky&quot;: true<br/>
+        },<br/>
+        &quot;eth2&quot;: {<br/>
+            &quot;prio&quot;: 100<br/>
+        }<br/>
+    }<br/>
+} Similar to the previous one, only this time two link watchers are used at the same time. {<br/>
+    &quot;device&quot;: &quot;team0&quot;,<br/>
+    &quot;runner&quot;: {<br/>
+        &quot;name&quot;: &quot;loadbalance&quot;,<br/>
+        &quot;tx_hash&quot;: [&quot;eth&quot;, &quot;ipv4&quot;, &quot;ipv6&quot;]<br/>
+    },<br/>
+    &quot;ports&quot;: {&quot;eth1&quot;: {}, &quot;eth2&quot;: {}}<br/>
+} Configuration for hash-based passive Tx load balancing. {<br/>
+    &quot;device&quot;: &quot;team0&quot;,<br/>
+    &quot;runner&quot;: {<br/>
+        &quot;name&quot;: &quot;loadbalance&quot;,<br/>
+        &quot;tx_hash&quot;: [&quot;eth&quot;, &quot;ipv4&quot;, &quot;ipv6&quot;],<br/>
+        &quot;tx_balancer&quot;: {<br/>
+            &quot;name&quot;: &quot;basic&quot;<br/>
+        }<br/>
+    },<br/>
+    &quot;ports&quot;: {&quot;eth1&quot;: {}, &quot;eth2&quot;: {}}<br/>
 } Configuration for active Tx load balancing using basic load balancer. </p>
 <pre><code>{
     &quot;device&quot;: &quot;team0&quot;,

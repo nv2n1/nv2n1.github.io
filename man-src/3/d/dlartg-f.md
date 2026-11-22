@@ -10,7 +10,7 @@ description: "dlartg.f –"
 <p>dlartg.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlartg</code> (F, G, CS, SN, R)<br />
+<p>subroutine <code>dlartg</code> (F, G, CS, SN, R)<br/>
  <i></i><code>DLARTG</code> generates a plane rotation with real cosine and real sine.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlartg (double precisionF, double precisionG, double precisionCS, double precisionSN, double precisionR)</h3>

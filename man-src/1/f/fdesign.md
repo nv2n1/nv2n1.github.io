@@ -91,9 +91,9 @@ description: "fdesign – Forms Library User Interface Designer"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-xforms/">xforms</a>(5), fd2ps(1L)</p>
 <h2>AUTHOR</h2>
-<p> Copyright (c) 1996-2002 T.C. Zhao &lt;tc_zhao [at] yahoo.com&gt; and Mark Overmars &lt;markov [at] cs.ruu.nl&gt;<br />
- Since 2002: GNU Lesser General Public License<br />
+<p> Copyright (c) 1996-2002 T.C. Zhao &lt;tc_zhao [at] yahoo.com&gt; and Mark Overmars &lt;markov [at] cs.ruu.nl&gt;<br/>
+ Since 2002: GNU Lesser General Public License<br/>
  Maintainers: Jean-Marc Lasgouttes, Angus Leeming and Jens Thoms Toerring &lt;jt [at] toerring.de&gt;</p>
 <h2>HOME PAGE</h2>
-<p> <a rel="nofollow" href="http://xforms-toolkit.org">http://xforms-toolkit.org</a><br />
+<p> <a rel="nofollow" href="http://xforms-toolkit.org">http://xforms-toolkit.org</a><br/>
  <a rel="nofollow" href="http://savannah.nongnu.org/projects/xforms/">http://savannah.nongnu.org/projects/xforms/</a> </p>

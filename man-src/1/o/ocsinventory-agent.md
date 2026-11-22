@@ -38,7 +38,7 @@ description: "ocsinventory-agent – Unified client for OCS-Inventory"
 #If NO PROLOG_FREQ has been preset, pick a time between execution and --delaytime for the agent to contact the server[default is 3600 seconds]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <i>ocsinventory-agent</i> creates inventory and send or write them. This agent is the successor of the former linux_agent which was released with <font SIZE="-1">OCS</font> 1.01 and prior. It also replaces the Solaris/AIX/BSD unofficial agents. The detailed list of supported Operating System is available in the Wiki.</p>
+<p> <i>ocsinventory-agent</i> creates inventory and send or write them. This agent is the successor of the former linux_agent which was released with OCS 1.01 and prior. It also replaces the Solaris/AIX/BSD unofficial agents. The detailed list of supported Operating System is available in the Wiki.</p>
 <dl>
 <dt><i>GNU/Linux</i></dt>
 <dd>
@@ -50,7 +50,7 @@ description: "ocsinventory-agent – Unified client for OCS-Inventory"
 <dd>
 </dd><dt><i>OpenBSD</i></dt>
 <dd>
-</dd><dt><i></i><font SIZE="-1"><i>AIX</i></font><i></i></dt>
+</dd><dt><i></i><i>AIX</i><i></i></dt>
 <dd>
 </dd><dt><i>MacOSX</i></dt>
 <dd>
@@ -64,8 +64,8 @@ description: "ocsinventory-agent – Unified client for OCS-Inventory"
 </pre>
 <dl>
 <dt><code>&#8211;backend-collect-timeout=SECONDS_BEFORE_KILL</code></dt>
-<dd> Time before <font SIZE="-1">OCS</font> kills modules processing which don&#8217;t end before the timeout.</dd>
-<dt><code>&#8211;basevardir</code>=<i></i><font SIZE="-1"><i>DIR</i></font><i></i></dt>
+<dd> Time before OCS kills modules processing which don&#8217;t end before the timeout.</dd>
+<dt><code>&#8211;basevardir</code>=<i></i><i>DIR</i><i></i></dt>
 <dd> Indicate the place where the agent should store its files.</dd>
 <dt><code>-d</code>, <code>&#8211;daemon</code></dt>
 <dd> Launch ocsinventory-agent in background. Proc::Daemon is needed.</dd>
@@ -74,25 +74,25 @@ description: "ocsinventory-agent – Unified client for OCS-Inventory"
 <dt><code>&#8211;devlib</code></dt>
 <dd> This option is designed for backend module developer. With it enabled, ocsinventry-agent won&#8217;t try to load the Backend module installed on the system. Instead it will scan the ./lib directory.</dd>
 <dt><code>&#8211;delaytime=SECONDS_TO_WAIT</code></dt>
-<dd> This option defaults to waiting a <i>random()</i> time between 0 and 3600 before initially contacting the server assuming <font SIZE="-1">NO</font> <font SIZE="-1">PROLOG_FREQ</font> has been set. Once <font SIZE="-1">PROLOG_FREQ</font> has been set, it uses that number at the top end of it&#8217;s random setting. Useful for pre-setting a deployed agent&#8217;s initial start time (so you don&#8217;t jam the server all at once, but don&#8217;t have to wait an hour to make sure the deployment worked).</dd>
+<dd> This option defaults to waiting a <i>random()</i> time between 0 and 3600 before initially contacting the server assuming NO PROLOG_FREQ has been set. Once PROLOG_FREQ has been set, it uses that number at the top end of it&#8217;s random setting. Useful for pre-setting a deployed agent&#8217;s initial start time (so you don&#8217;t jam the server all at once, but don&#8217;t have to wait an hour to make sure the deployment worked).</dd>
 <dt><code>-f</code>, <code>&#8211;force</code></dt>
-<dd> The agent will first contact the server during the <font SIZE="-1">PROLOG</font> period. If the server doesn&#8217;t know the machine or has outdated informations, it will ask for an inventory. With this option, the agent doesn&#8217;t run the <font SIZE="-1">PROLOG</font> with the server first but directly sends an inventory.</dd>
+<dd> The agent will first contact the server during the PROLOG period. If the server doesn&#8217;t know the machine or has outdated informations, it will ask for an inventory. With this option, the agent doesn&#8217;t run the PROLOG with the server first but directly sends an inventory.</dd>
 <dt><code>-i</code>, <code>&#8211;info</code></dt>
 <dd> Turn the verbose mode on. The flag is ignored if <code>&#8211;debug</code> is enable.</dd>
 <dt><code>&#8211;lazy</code></dt>
-<dd> Do not contact the server more than one time during the <font SIZE="-1">PROLOG_FREQ</font> and do an exit if there is nothing to do. Useful if you want to start the agent script regulary from the crontab but don&#8217;t want to overload the server.</dd>
-<dt><code>-l</code>, <code>&#8211;local</code>=<i></i><font SIZE="-1"><i>DIR</i></font><i></i></dt>
-<dd> Write an inventory in the <i></i><font SIZE="-1"><i>DIR</i></font><i></i> directory. A new file will be created if needed.</dd>
-<dt><code>&#8211;logfile</code>=<i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
-<dd> Log message in <i></i><font SIZE="-1"><i>FILE</i></font><i></i> and turn off <font SIZE="-1">STDERR</font></dd>
-<dt><code>-p</code>, <code>&#8211;password</code>=<i></i><font SIZE="-1"><i>PASSWORD</i></font><i></i></dt>
-<dd> Use <i></i><font SIZE="-1"><i>PASSWORD</i></font><i></i> for an <font SIZE="-1">HTTP</font> identification with the server.</dd>
-<dt><code>-P</code>, <code>&#8211;proxy</code>=<i></i><font SIZE="-1"><i>PROXY</i></font><i></i></dt>
-<dd> Use <i></i><font SIZE="-1"><i>PROXY</i></font><i></i> to specify a proxy <font SIZE="-1">HTTP</font> server. By default, the agent uses <font SIZE="-1">HTTP_PROXY</font> environment variable.</dd>
-<dt><code>-r</code>, <code>&#8211;realm</code>=<i></i><font SIZE="-1"><i>REALM</i></font><i></i></dt>
-<dd> Use <i></i><font SIZE="-1"><i>REALM</i></font><i></i> for an <font SIZE="-1">HTTP</font> identification with the server. For example, the value can be &#8216;Restricted Area&#8217;. You can find it in the login popup of your Internet browser.</dd>
-<dt><code>-s</code>, <code>&#8211;server</code>=<i></i><font SIZE="-1"><i>URI</i></font><i></i></dt>
-<dd> The uri of the server. If <i></i><font SIZE="-1"><i>URI</i></font><i></i> doesn&#8217;t start with http:// or <a rel="nofollow" href="https://,">https://,</a> the assume the parameter is a hostname and rewrite it like that: </dd>
+<dd> Do not contact the server more than one time during the PROLOG_FREQ and do an exit if there is nothing to do. Useful if you want to start the agent script regulary from the crontab but don&#8217;t want to overload the server.</dd>
+<dt><code>-l</code>, <code>&#8211;local</code>=<i></i><i>DIR</i><i></i></dt>
+<dd> Write an inventory in the <i></i><i>DIR</i><i></i> directory. A new file will be created if needed.</dd>
+<dt><code>&#8211;logfile</code>=<i></i><i>FILE</i><i></i></dt>
+<dd> Log message in <i></i><i>FILE</i><i></i> and turn off STDERR</dd>
+<dt><code>-p</code>, <code>&#8211;password</code>=<i></i><i>PASSWORD</i><i></i></dt>
+<dd> Use <i></i><i>PASSWORD</i><i></i> for an HTTP identification with the server.</dd>
+<dt><code>-P</code>, <code>&#8211;proxy</code>=<i></i><i>PROXY</i><i></i></dt>
+<dd> Use <i></i><i>PROXY</i><i></i> to specify a proxy HTTP server. By default, the agent uses HTTP_PROXY environment variable.</dd>
+<dt><code>-r</code>, <code>&#8211;realm</code>=<i></i><i>REALM</i><i></i></dt>
+<dd> Use <i></i><i>REALM</i><i></i> for an HTTP identification with the server. For example, the value can be &#8216;Restricted Area&#8217;. You can find it in the login popup of your Internet browser.</dd>
+<dt><code>-s</code>, <code>&#8211;server</code>=<i></i><i>URI</i><i></i></dt>
+<dd> The uri of the server. If <i></i><i>URI</i><i></i> doesn&#8217;t start with http:// or <a rel="nofollow" href="https://,">https://,</a> the assume the parameter is a hostname and rewrite it like that: </dd>
 <pre>
     % <a rel="nofollow" href="http://servername/ocsinventory">http://servername/ocsinventory</a>
 </pre>
@@ -106,15 +106,15 @@ description: "ocsinventory-agent – Unified client for OCS-Inventory"
     # A file will be created.
 </pre>
 <dt><code>&#8211;scan-homedirs</code></dt>
-<dd> Authorized <font SIZE="-1">OCS</font> to scan home directories to increase the Virtual Machine inventory.</dd>
-<dt><code>&#8211;tag</code>=<i></i><font SIZE="-1"><i>TAG</i></font><i></i></dt>
-<dd> Mark the machine with the <i></i><font SIZE="-1"><i>TAG</i></font><i></i> tag. Once the initial inventory is accepted by the server this value is ignored and you&#8217;ve to change the information directly on the server. The server do so in order to centralize the administration of the machine.</dd>
-<dt><code>-u</code> <i></i><font SIZE="-1"><i>USER</i></font><i></i>, <code>&#8211;user</code>=<i></i><font SIZE="-1"><i>USER</i></font><i></i></dt>
-<dd> Use <i></i><font SIZE="-1"><i>USER</i></font><i></i> for the server authentification.</dd>
-<dt><code>&#8211;version</code>=<i></i><font SIZE="-1"><i>USER</i></font><i></i></dt>
+<dd> Authorized OCS to scan home directories to increase the Virtual Machine inventory.</dd>
+<dt><code>&#8211;tag</code>=<i></i><i>TAG</i><i></i></dt>
+<dd> Mark the machine with the <i></i><i>TAG</i><i></i> tag. Once the initial inventory is accepted by the server this value is ignored and you&#8217;ve to change the information directly on the server. The server do so in order to centralize the administration of the machine.</dd>
+<dt><code>-u</code> <i></i><i>USER</i><i></i>, <code>&#8211;user</code>=<i></i><i>USER</i><i></i></dt>
+<dd> Use <i></i><i>USER</i><i></i> for the server authentification.</dd>
+<dt><code>&#8211;version</code>=<i></i><i>USER</i><i></i></dt>
 <dd> Print the version and exit.</dd>
-<dt><code>-w</code> <i></i><font SIZE="-1"><i>DURATION</i></font><i></i>, <code>&#8211;wait</code>=<i></i><font SIZE="-1"><i>DURATION</i></font><i></i></dt>
-<dd> Wait before initializing the connexion with the server. If <i></i><font SIZE="-1"><i>DURATION</i></font><i></i> equal <i>server</i> the agent will use the <font SIZE="-1">PROLOG_FREQ</font> of the server to determine the duration of this periode. Exactly like it would had done if it was in &#8211;daemon mode. Else if duration is a numerical value, it will be used directly. </dd>
+<dt><code>-w</code> <i></i><i>DURATION</i><i></i>, <code>&#8211;wait</code>=<i></i><i>DURATION</i><i></i></dt>
+<dd> Wait before initializing the connexion with the server. If <i></i><i>DURATION</i><i></i> equal <i>server</i> the agent will use the PROLOG_FREQ of the server to determine the duration of this periode. Exactly like it would had done if it was in &#8211;daemon mode. Else if duration is a numerical value, it will be used directly. </dd>
 <pre>
     % ocsinventory-agent --wait 5 --server localhost
 </pre>
@@ -131,8 +131,8 @@ description: "ocsinventory-agent – Unified client for OCS-Inventory"
 </dd><dt>/etc/ocsinventory-agent</dt>
 <dd></dd></dl>
 <h2>AUTHORS</h2>
-<p> The maintainer is Goneri <font SIZE="-1">LE</font> <font SIZE="-1">BOUDER</font> &lt;goneri [at] rulezlan.org&gt; </p>
-<p> Please read the <font SIZE="-1">AUTHORS</font>, Changes and <font SIZE="-1">THANKS</font> files to see who is behind <font SIZE="-1">OCS</font> Inventory Agent.</p>
+<p> The maintainer is Goneri LE BOUDER &lt;goneri [at] rulezlan.org&gt; </p>
+<p> Please read the AUTHORS, Changes and THANKS files to see who is behind OCS Inventory Agent.</p>
 <h2>SEE ALSO</h2>
 <dl>
 <dt>OCS-Inventory website,</dt>
@@ -159,7 +159,7 @@ description: "ocsinventory-agent – Unified client for OCS-Inventory"
 <h2>BUGS</h2>
 <p> Please, use the forum as much as possible. You can open your own bug tickets. Patches are welcome. You can also use LaunchPad bugtracker or push your Bazaar branch on LaunchPad and do a merge request.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2006-2009 <font SIZE="-1">OCS</font> Inventory contributors </p>
+<p> Copyright (C) 2006-2009 OCS Inventory contributors </p>
 <pre>
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

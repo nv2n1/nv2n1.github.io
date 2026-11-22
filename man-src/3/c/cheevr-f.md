@@ -10,7 +10,7 @@ description: "cheevr.f –"
 <p>cheevr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cheevr</code> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>cheevr</code> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code> CHEEVR computes the eigenvalues and, optionally, the left and/or right eigenvectors for HE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cheevr (characterJOBZ, characterRANGE, characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, realVL, realVU, integerIL, integerIU, realABSTOL, integerM, real, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, integer, dimension( * )ISUPPZ, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerLRWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

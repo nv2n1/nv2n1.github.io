@@ -146,7 +146,7 @@ description: "libcurl-tutorial – libcurl programming tutorial"
 <p> And when you send authentication to a proxy, you can also set authentication type the same way but instead with CURLOPT_PROXYAUTH: </p>
 <p>&nbsp;<wbr>curl_easy_setopt(easyhandle, CURLOPT_PROXYAUTH, CURLAUTH_NTLM); </p>
 <p> Both these options allow you to set multiple types (by ORing them together), to make libcurl pick the most secure one out of the types the server/proxy claims to support. This method does however add a round-trip since libcurl must first ask the server what it supports: </p>
-<p>&nbsp;<wbr>curl_easy_setopt(easyhandle, CURLOPT_HTTPAUTH,<br />
+<p>&nbsp;<wbr>curl_easy_setopt(easyhandle, CURLOPT_HTTPAUTH,<br/>
 &nbsp;<wbr>CURLAUTH_DIGEST|CURLAUTH_BASIC); </p>
 <p> For convenience, you can use the &#8216;CURLAUTH_ANY&#8217; define (instead of a list with specific types) which allows libcurl to use whatever method it wants. </p>
 <p> When asking for multiple types, libcurl will pick the available one it considers &quot;best&quot; in its own internal order of preference. </p>
@@ -161,44 +161,44 @@ curl_easy_perform(easyhandle); /* post away! */
 </code></pre>
 <p> Simple enough, huh? Since you set the POST options with the CURLOPT_POSTFIELDS, this automatically switches the handle to use POST in the upcoming request. </p>
 <p> Ok, so what if you want to post binary data that also requires you to set the Content-Type: header of the post? Well, binary posts prevent libcurl from being able to do strlen() on the data to figure out the size, so therefore we must tell libcurl the size of the post data. Setting headers in libcurl requests are done in a generic way, by building a list of our own headers and then passing that list to libcurl. </p>
-<p>struct curl_slist *headers = NULL;<br />
-headers = curl_slist_append(headers, &#8220;Content-Type: text/xml&#8221;);<br />
-/* post binary data */<br />
-curl_easy_setopt(easyhandle, CURLOPT_POSTFIELDS, binaryptr);<br />
-/* set the size of the postfields data */<br />
-curl_easy_setopt(easyhandle, CURLOPT_POSTFIELDSIZE, 23L);<br />
-/* pass our list of custom made headers */<br />
-curl_easy_setopt(easyhandle, CURLOPT_HTTPHEADER, headers);<br />
-curl_easy_perform(easyhandle); /* post away! */<br />
+<p>struct curl_slist *headers = NULL;<br/>
+headers = curl_slist_append(headers, &#8220;Content-Type: text/xml&#8221;);<br/>
+/* post binary data */<br/>
+curl_easy_setopt(easyhandle, CURLOPT_POSTFIELDS, binaryptr);<br/>
+/* set the size of the postfields data */<br/>
+curl_easy_setopt(easyhandle, CURLOPT_POSTFIELDSIZE, 23L);<br/>
+/* pass our list of custom made headers */<br/>
+curl_easy_setopt(easyhandle, CURLOPT_HTTPHEADER, headers);<br/>
+curl_easy_perform(easyhandle); /* post away! */<br/>
 curl_slist_free_all(headers);  /* free the header list */</p>
 <p> While the simple examples above cover the majority of all cases where HTTP POST operations are required, they don&#8217;t do multi-part formposts. Multi-part formposts were introduced as a better way to post (possibly large) binary data and were first documented in the RFC1867 (updated in RFC2388). They&#8217;re called multi-part because they&#8217;re built by a chain of parts, each part being a single unit of data. Each part has its own name and contents. You can in fact create and post a multi-part formpost with the regular libcurl POST support described above, but that would require that you build a formpost yourself and provide to libcurl. To make that easier, libcurl provides <i><a href="/docs/linux/man/3-curl_formadd/">curl_formadd</a>(3)</i>. Using this function, you add parts to the form. When you&#8217;re done adding parts, you post the whole form. </p>
 <p> The following example sets two simple text parts with plain textual contents, and then a file with binary contents and uploads the whole thing. </p>
-<p>struct curl_httppost *post = NULL;<br />
-struct curl_httppost *last = NULL;<br />
-curl_formadd(&amp;post, &amp;last,<br />
-             CURLFORM_COPYNAME, &#8220;name&#8221;,<br />
-             CURLFORM_COPYCONTENTS, &#8220;daniel&#8221;, CURLFORM_END);<br />
-curl_formadd(&amp;post, &amp;last,<br />
-             CURLFORM_COPYNAME, &#8220;project&#8221;,<br />
-             CURLFORM_COPYCONTENTS, &#8220;curl&#8221;, CURLFORM_END);<br />
-curl_formadd(&amp;post, &amp;last,<br />
-             CURLFORM_COPYNAME, &#8220;logotype-image&#8221;,<br />
-             CURLFORM_FILECONTENT, &#8220;curl.png&#8221;, CURLFORM_END);<br />
-/* Set the form info */<br />
-curl_easy_setopt(easyhandle, CURLOPT_HTTPPOST, post);<br />
-curl_easy_perform(easyhandle); /* post away! */<br />
-/* free the post data again */<br />
+<p>struct curl_httppost *post = NULL;<br/>
+struct curl_httppost *last = NULL;<br/>
+curl_formadd(&amp;post, &amp;last,<br/>
+             CURLFORM_COPYNAME, &#8220;name&#8221;,<br/>
+             CURLFORM_COPYCONTENTS, &#8220;daniel&#8221;, CURLFORM_END);<br/>
+curl_formadd(&amp;post, &amp;last,<br/>
+             CURLFORM_COPYNAME, &#8220;project&#8221;,<br/>
+             CURLFORM_COPYCONTENTS, &#8220;curl&#8221;, CURLFORM_END);<br/>
+curl_formadd(&amp;post, &amp;last,<br/>
+             CURLFORM_COPYNAME, &#8220;logotype-image&#8221;,<br/>
+             CURLFORM_FILECONTENT, &#8220;curl.png&#8221;, CURLFORM_END);<br/>
+/* Set the form info */<br/>
+curl_easy_setopt(easyhandle, CURLOPT_HTTPPOST, post);<br/>
+curl_easy_perform(easyhandle); /* post away! */<br/>
+/* free the post data again */<br/>
 curl_formfree(post);</p>
 <p> Multipart formposts are chains of parts using MIME-style separators and headers. It means that each one of these separate parts get a few headers set that describe the individual content-type, size etc. To enable your application to handicraft this formpost even more, libcurl allows you to supply your own set of custom headers to such an individual form part. You can of course supply headers to as many parts as you like, but this little example will show how you set headers to one specific part when you add that to the post handle: </p>
-<p>struct curl_slist *headers = NULL;<br />
-headers = curl_slist_append(headers, &#8220;Content-Type: text/xml&#8221;);<br />
-curl_formadd(&amp;post, &amp;last,<br />
-             CURLFORM_COPYNAME, &#8220;logotype-image&#8221;,<br />
-             CURLFORM_FILECONTENT, &#8220;curl.xml&#8221;,<br />
-             CURLFORM_CONTENTHEADER, headers,<br />
-             CURLFORM_END);<br />
-curl_easy_perform(easyhandle); /* post away! */<br />
-curl_formfree(post);           /* free post */<br />
+<p>struct curl_slist *headers = NULL;<br/>
+headers = curl_slist_append(headers, &#8220;Content-Type: text/xml&#8221;);<br/>
+curl_formadd(&amp;post, &amp;last,<br/>
+             CURLFORM_COPYNAME, &#8220;logotype-image&#8221;,<br/>
+             CURLFORM_FILECONTENT, &#8220;curl.xml&#8221;,<br/>
+             CURLFORM_CONTENTHEADER, headers,<br/>
+             CURLFORM_END);<br/>
+curl_easy_perform(easyhandle); /* post away! */<br/>
+curl_formfree(post);           /* free post */<br/>
 curl_slist_free_all(headers);  /* free custom header list */</p>
 <p> Since all options on an easyhandle are &quot;sticky&quot;, they remain the same until changed even if you do call <i><a href="/docs/linux/man/3-curl_easy_perform/">curl_easy_perform</a>(3)</i>, you may need to tell curl to go back to a plain GET request if you intend to do one as your next request. You force an easyhandle to go back to GET by using the CURLOPT_HTTPGET option: </p>
 <p>&nbsp;<wbr>curl_easy_setopt(easyhandle, CURLOPT_HTTPGET, 1L); </p>
@@ -208,23 +208,23 @@ curl_slist_free_all(headers);  /* free custom header list */</p>
 <p> Switch on the progress meter by, oddly enough, setting CURLOPT_NOPROGRESS to zero. This option is set to 1 by default. </p>
 <p> For most applications however, the built-in progress meter is useless and what instead is interesting is the ability to specify a progress callback. The function pointer you pass to libcurl will then be called on irregular intervals with information about the current transfer. </p>
 <p> Set the progress callback by using CURLOPT_PROGRESSFUNCTION. And pass a pointer to a function that matches this prototype: </p>
-<p>int progress_callback(void *clientp,<br />
-                      double dltotal,<br />
-                      double dlnow,<br />
-                      double ultotal,<br />
+<p>int progress_callback(void *clientp,<br/>
+                      double dltotal,<br/>
+                      double dlnow,<br/>
+                      double ultotal,<br/>
                       double ulnow);</p>
 <p> If any of the input arguments is unknown, a 0 will be passed. The first argument, the &#8216;clientp&#8217; is the pointer you pass to libcurl with CURLOPT_PROGRESSDATA. libcurl won&#8217;t touch it. </p>
 <h2>libcurl with C++</h2>
 <p> There&#8217;s basically only one thing to keep in mind when using C++ instead of C when interfacing libcurl: </p>
 <p> The callbacks CANNOT be non-static class member functions </p>
 <p> Example C++ code: </p>
-<p>class AClass<br />
-{<br />
-    static size_t write_data(void *ptr, size_t size, size_t nmemb,<br />
-                             void *ourpointer)<br />
-    {<br />
-        /* do what you want with the data */<br />
-    }<br />
+<p>class AClass<br/>
+{<br/>
+    static size_t write_data(void *ptr, size_t size, size_t nmemb,<br/>
+                             void *ourpointer)<br/>
+    {<br/>
+        /* do what you want with the data */<br/>
+    }<br/>
 }</p>
 <h2>Proxies</h2>
 <p> What &quot;proxy&quot; means according to Merriam-Webster: &quot;a person authorized to act for another&quot; but also &quot;the agency, function, or office of a deputy who acts as a substitute for another&quot;. </p>
@@ -300,15 +300,15 @@ curl_slist_free_all(headers);  /* free custom header list */</p>
 <p> When using the custom request, you change the request keyword of the actual request you are performing. Thus, by default you make a GET request but you can also make a POST operation (as described before) and then replace the POST keyword if you want to. You&#8217;re the boss. </p>
 <dt>Modify Headers</dt>
 <dd> HTTP-like protocols pass a series of headers to the server when doing the request, and you&#8217;re free to pass any amount of extra headers that you think fit. Adding headers is this easy: </dd>
-<p>struct curl_slist *headers = NULL; /* init to NULL is important */<br />
-headers = curl_slist_append(headers, &#8220;Hey-server-hey: how are you?&#8221;);<br />
-headers = curl_slist_append(headers, &#8220;X-silly-content: yes&#8221;);<br />
-/* pass our list of custom made headers */<br />
-curl_easy_setopt(easyhandle, CURLOPT_HTTPHEADER, headers);<br />
-curl_easy_perform(easyhandle); /* transfer http */<br />
+<p>struct curl_slist *headers = NULL; /* init to NULL is important */<br/>
+headers = curl_slist_append(headers, &#8220;Hey-server-hey: how are you?&#8221;);<br/>
+headers = curl_slist_append(headers, &#8220;X-silly-content: yes&#8221;);<br/>
+/* pass our list of custom made headers */<br/>
+curl_easy_setopt(easyhandle, CURLOPT_HTTPHEADER, headers);<br/>
+curl_easy_perform(easyhandle); /* transfer http */<br/>
 curl_slist_free_all(headers);  /* free the header list */</p>
 <p> &#8230; and if you think some of the internally generated headers, such as Accept: or Host: don&#8217;t contain the data you want them to contain, you can replace them by simply setting them too: </p>
-<p>headers = curl_slist_append(headers, &#8220;Accept: Agent-007&#8221;);<br />
+<p>headers = curl_slist_append(headers, &#8220;Accept: Agent-007&#8221;);<br/>
 headers = curl_slist_append(headers, &#8220;Host: munged.host.line&#8221;);</p>
 <dt>Delete Headers</dt>
 <dd> If you replace an existing header with one with no contents, you will prevent the header from being sent. For instance, if you want to completely prevent the &quot;Accept:&quot; header from being sent, you can disable it with code similar to this: </dd>

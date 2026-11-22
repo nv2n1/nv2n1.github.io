@@ -11,7 +11,7 @@ description: "ssbtrd.f –"
 <p> ssbtrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssbtrd</code> (VECT, UPLO, N, KD, AB, LDAB, D, E, Q, LDQ, WORK, INFO)<br />
+<p> subroutine <code>ssbtrd</code> (VECT, UPLO, N, KD, AB, LDAB, D, E, Q, LDQ, WORK, INFO)<br/>
  <i></i><code>SSBTRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssbtrd (characterVECT, characterUPLO, integerN, integerKD, real, dimension( ldab, * )AB, integerLDAB, real, dimension( * )D, real, dimension( * )E, real, dimension( ldq, * )Q, integerLDQ, real, dimension( * )WORK, integerINFO)</h3>
@@ -85,9 +85,9 @@ description: "ssbtrd.f –"
           The diagonal elements of the tridiagonal matrix T.
 </pre>
 <p> <i>E</i> </p>
-<p>E is REAL array, dimension(N &#8211; 1)<br />
-                         The off<br />
-                     &#8211; diagonal elements of the tridiagonal matrix T : E(i) = T(i, i + 1) if UPLO = &#8216;U&#8217;;<br />
+<p>E is REAL array, dimension(N &#8211; 1)<br/>
+                         The off<br/>
+                     &#8211; diagonal elements of the tridiagonal matrix T : E(i) = T(i, i + 1) if UPLO = &#8216;U&#8217;;<br/>
 E(i) = T(i + 1, i) if UPLO = &#8216;L&#8217;.</p>
 <p> <i>Q</i> </p>
 <pre><code>

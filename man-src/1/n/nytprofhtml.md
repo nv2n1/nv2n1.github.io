@@ -77,7 +77,7 @@ $ nytprofhtml[-h][-d][-m][-o&lt;output directory&gt;][-f&lt;input file&gt;][--op
 <p> Adam&#8217;s work is sponsored by The New York Times Co. &lt;<a rel="nofollow" href="http://open.nytimes.com">http://open.nytimes.com</a>&gt;. Tim&#8217;s work was partly sponsored by Shopzilla. &lt;<a rel="nofollow" href="http://www.shopzilla.com">http://www.shopzilla.com</a>&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> Mailing list and discussion at &lt;<a rel="nofollow" href="http://groups.google.com/group/develnytprof-dev">http://groups.google.com/group/develnytprof-dev</a>&gt; </p>
-<p> Public <font SIZE="-1">SVN</font> Repository and hacking instructions at &lt;<a rel="nofollow" href="http://code.google.com/p/perl-devel-nytprof/">http://code.google.com/p/perl-devel-nytprof/</a>&gt; </p>
+<p> Public SVN Repository and hacking instructions at &lt;<a rel="nofollow" href="http://code.google.com/p/perl-devel-nytprof/">http://code.google.com/p/perl-devel-nytprof/</a>&gt; </p>
 <p> Devel::NYTProf, Devel::NYTProf::Reader, nytprofcsv</p>
 <h2>AUTHOR</h2>
 <p> <code>Adam Kaplan</code>, <tt>&quot;&lt;akaplan at nytimes.com&gt;&quot;</tt>. <code>Tim Bunce</code>, &lt;<a rel="nofollow" href="http://www.tim.bunce.name">http://www.tim.bunce.name</a>&gt; and &lt;<a href="http://blog.timbunce.org">http://blog.timbunce.org</a>&gt;. <code>Steve Peters</code>, <tt>&quot;&lt;steve at fisharerojo.org&gt;&quot;</tt>.</p>

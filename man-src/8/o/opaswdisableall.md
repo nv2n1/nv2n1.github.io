@@ -50,7 +50,7 @@ description: "opaswdisableall"
 <dd>SM management key to access remote ports. </dd>
 </dl>
 <h2>Examples</h2>
-<p>opaswdisableall<br />
+<p>opaswdisableall<br/>
  opaswdisableall -p &#8216;1:1 1:2 2:1 2:2&#8217;</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

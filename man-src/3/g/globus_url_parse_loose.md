@@ -10,11 +10,11 @@ description: "URL String Parser –"
 
 <p> URL String Parser &#8211; </p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_url_t</code><br />
+<p> struct <code>globus_url_t</code><br/>
  <i>Parsed URLs.</i> </p>
 <p> This structure contains the fields which were parsed from an string representation of an URL. There are no methods to access fields of this structure. &quot;</p>
 <h3>Enumerations</h3>
-<p> enum <code>globus_url_scheme_t</code> { <code>GLOBUS_URL_SCHEME_FTP</code> =0, <code>GLOBUS_URL_SCHEME_GSIFTP</code>, <code>GLOBUS_URL_SCHEME_HTTP</code>, <code>GLOBUS_URL_SCHEME_HTTPS</code>, <code>GLOBUS_URL_SCHEME_LDAP</code>, <code>GLOBUS_URL_SCHEME_FILE</code>, <code>GLOBUS_URL_SCHEME_X_NEXUS</code>, <code>GLOBUS_URL_SCHEME_X_GASS_CACHE</code>, <code>GLOBUS_URL_SCHEME_UNKNOWN</code>, <code>GLOBUS_URL_NUM_SCHEMES</code> }<br />
+<p> enum <code>globus_url_scheme_t</code> { <code>GLOBUS_URL_SCHEME_FTP</code> =0, <code>GLOBUS_URL_SCHEME_GSIFTP</code>, <code>GLOBUS_URL_SCHEME_HTTP</code>, <code>GLOBUS_URL_SCHEME_HTTPS</code>, <code>GLOBUS_URL_SCHEME_LDAP</code>, <code>GLOBUS_URL_SCHEME_FILE</code>, <code>GLOBUS_URL_SCHEME_X_NEXUS</code>, <code>GLOBUS_URL_SCHEME_X_GASS_CACHE</code>, <code>GLOBUS_URL_SCHEME_UNKNOWN</code>, <code>GLOBUS_URL_NUM_SCHEMES</code> }<br/>
  <i>URL Schemes.</i> </p>
 <p> The Globus URL library supports a set of URL schemes (protocols). This enumeration can be used to quickly dispatch a parsed URL based on a constant value. &quot;</p>
 <h3>Functions</h3>
@@ -63,13 +63,13 @@ description: "URL String Parser –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>dst</i> The URL structure to be populated with a copy of the contents of src.<br />
+</dt><dd> <i>dst</i> The URL structure to be populated with a copy of the contents of src.<br/>
  <i>src</i> The original URL.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The URL was successfully copied.<br />
- <i>GLOBUS_URL_ERROR_NULL_URL</i> One of the URLs was GLOBUS_NULL.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The URL was successfully copied.<br/>
+ <i>GLOBUS_URL_ERROR_NULL_URL</i> One of the URLs was GLOBUS_NULL.<br/>
  <i>GLOBUS_URL_ERROR_OUT_OF_MEMORY;</i> The library was unable to allocate memory to create the the <code>globus_url_t</code> contents.</dd></dl>
 <h3>int globus_url_destroy (<code>globus_url_t</code> *url)</h3>
 <p> Destroy a <code>globus_url_t</code> structure. </p>
@@ -88,87 +88,87 @@ description: "URL String Parser –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>url_string</i> The string containing the URL.<br />
+</dt><dd> <i>url_string</i> The string containing the URL.<br/>
  <i>scheme_type</i> A pointer to a globus_url_scheme_t which will be set to the scheme.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The URL scheme was recogized, and scheme_type has been updated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The URL scheme was recogized, and scheme_type has been updated.<br/>
  <i>GLOBUS_URL_ERROR_BAD_SCHEME</i> The URL scheme was not recogized.</dd></dl>
 <h3>int globus_url_parse (const char *url_string, <code>globus_url_t</code> *url)</h3>
 <p> Parse a string containing a URL into a <code>globus_url_t</code> </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>url_string</i> String to parse<br />
+</dt><dd> <i>url_string</i> String to parse<br/>
  <i>url</i> Pointer to <code>globus_url_t</code> to be filled with the fields of the url</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The string was successfully parsed.<br />
- <i>GLOBUS_URL_ERROR_NULL_STRING</i> The url_string was GLOBUS_NULL.<br />
- <i>GLOBUS_URL_ERROR_NULL_URL</i> The URL pointer was GLOBUS_NULL.<br />
- <i>GLOBUS_URL_ERROR_BAD_SCHEME</i> The URL scheme (protocol) contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_USER</i> The user part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_PASSWORD</i> The password part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_HOST</i> The host part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_PORT</i> The port part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_PATH</i> The path part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_DN</i> -9 The DN part of an LDAP URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_ATTRIBUTES</i> -10 The attributes part of an LDAP URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_SCOPE</i> -11 The scope part of an LDAP URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_FILTER</i> -12 The filter part of an LDAP URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_OUT_OF_MEMORY</i> -13 The library was unable to allocate memory to create the the <code>globus_url_t</code> contents.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The string was successfully parsed.<br/>
+ <i>GLOBUS_URL_ERROR_NULL_STRING</i> The url_string was GLOBUS_NULL.<br/>
+ <i>GLOBUS_URL_ERROR_NULL_URL</i> The URL pointer was GLOBUS_NULL.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_SCHEME</i> The URL scheme (protocol) contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_USER</i> The user part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_PASSWORD</i> The password part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_HOST</i> The host part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_PORT</i> The port part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_PATH</i> The path part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_DN</i> -9 The DN part of an LDAP URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_ATTRIBUTES</i> -10 The attributes part of an LDAP URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_SCOPE</i> -11 The scope part of an LDAP URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_FILTER</i> -12 The filter part of an LDAP URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_OUT_OF_MEMORY</i> -13 The library was unable to allocate memory to create the the <code>globus_url_t</code> contents.<br/>
  <i>GLOBUS_URL_ERROR_INTERNAL_ERROR</i> -14 Some unexpected error occurred parsing the URL.</dd></dl>
 <h3>int globus_url_parse_loose (const char *url_string, <code>globus_url_t</code> *url)</h3>
 <p> Parse a string containing a URL into a <code>globus_url_t</code> Looser restrictions on characters allowed in the path part of the URL. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>url_string</i> String to parse<br />
+</dt><dd> <i>url_string</i> String to parse<br/>
  <i>url</i> Pointer to <code>globus_url_t</code> to be filled with the fields of the url</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The string was successfully parsed.<br />
- <i>GLOBUS_URL_ERROR_NULL_STRING</i> The url_string was GLOBUS_NULL.<br />
- <i>GLOBUS_URL_ERROR_NULL_URL</i> The URL pointer was GLOBUS_NULL.<br />
- <i>GLOBUS_URL_ERROR_BAD_SCHEME</i> The URL scheme (protocol) contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_USER</i> The user part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_PASSWORD</i> The password part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_HOST</i> The host part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_PORT</i> The port part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_PATH</i> The path part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_DN</i> -9 The DN part of an LDAP URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_ATTRIBUTES</i> -10 The attributes part of an LDAP URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_SCOPE</i> -11 The scope part of an LDAP URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_FILTER</i> -12 The filter part of an LDAP URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_OUT_OF_MEMORY</i> -13 The library was unable to allocate memory to create the the <code>globus_url_t</code> contents.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The string was successfully parsed.<br/>
+ <i>GLOBUS_URL_ERROR_NULL_STRING</i> The url_string was GLOBUS_NULL.<br/>
+ <i>GLOBUS_URL_ERROR_NULL_URL</i> The URL pointer was GLOBUS_NULL.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_SCHEME</i> The URL scheme (protocol) contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_USER</i> The user part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_PASSWORD</i> The password part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_HOST</i> The host part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_PORT</i> The port part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_PATH</i> The path part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_DN</i> -9 The DN part of an LDAP URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_ATTRIBUTES</i> -10 The attributes part of an LDAP URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_SCOPE</i> -11 The scope part of an LDAP URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_FILTER</i> -12 The filter part of an LDAP URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_OUT_OF_MEMORY</i> -13 The library was unable to allocate memory to create the the <code>globus_url_t</code> contents.<br/>
  <i>GLOBUS_URL_ERROR_INTERNAL_ERROR</i> -14 Some unexpected error occurred parsing the URL.</dd></dl>
 <h3>int globus_url_parse_rfc1738 (const char *url_string, <code>globus_url_t</code> *url)</h3>
 <p> Parse a string containing a URL into a <code>globus_url_t</code> </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>url_string</i> String to parse<br />
+</dt><dd> <i>url_string</i> String to parse<br/>
  <i>url</i> Pointer to <code>globus_url_t</code> to be filled with the fields of the url</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The string was successfully parsed.<br />
- <i>GLOBUS_URL_ERROR_NULL_STRING</i> The url_string was GLOBUS_NULL.<br />
- <i>GLOBUS_URL_ERROR_NULL_URL</i> The URL pointer was GLOBUS_NULL.<br />
- <i>GLOBUS_URL_ERROR_BAD_SCHEME</i> The URL scheme (protocol) contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_USER</i> The user part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_PASSWORD</i> The password part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_HOST</i> The host part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_PORT</i> The port part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_PATH</i> The path part of the URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_DN</i> -9 The DN part of an LDAP URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_ATTRIBUTES</i> -10 The attributes part of an LDAP URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_SCOPE</i> -11 The scope part of an LDAP URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_BAD_FILTER</i> -12 The filter part of an LDAP URL contained invalid characters.<br />
- <i>GLOBUS_URL_ERROR_OUT_OF_MEMORY</i> -13 The library was unable to allocate memory to create the the <code>globus_url_t</code> contents.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The string was successfully parsed.<br/>
+ <i>GLOBUS_URL_ERROR_NULL_STRING</i> The url_string was GLOBUS_NULL.<br/>
+ <i>GLOBUS_URL_ERROR_NULL_URL</i> The URL pointer was GLOBUS_NULL.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_SCHEME</i> The URL scheme (protocol) contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_USER</i> The user part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_PASSWORD</i> The password part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_HOST</i> The host part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_PORT</i> The port part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_PATH</i> The path part of the URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_DN</i> -9 The DN part of an LDAP URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_ATTRIBUTES</i> -10 The attributes part of an LDAP URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_SCOPE</i> -11 The scope part of an LDAP URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_BAD_FILTER</i> -12 The filter part of an LDAP URL contained invalid characters.<br/>
+ <i>GLOBUS_URL_ERROR_OUT_OF_MEMORY</i> -13 The library was unable to allocate memory to create the the <code>globus_url_t</code> contents.<br/>
  <i>GLOBUS_URL_ERROR_INTERNAL_ERROR</i> -14 Some unexpected error occurred parsing the URL.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>

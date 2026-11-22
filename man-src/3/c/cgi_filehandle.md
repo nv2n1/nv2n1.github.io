@@ -17,9 +17,9 @@ description: "cgi_filehandle – return a file pointer to an uploaded file"
 FILE *cgi_filehandle(CGI *cgi, const char *form_name);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> cgi &#8211; a pointer to a CGI struct allocated with cgi_init<br />
- form_name &#8211; the form name that the file was uploaded as<br />
- (not the filename) (if NULL, we&#8217;re asking for the<br />
+<p> cgi &#8211; a pointer to a CGI struct allocated with cgi_init<br/>
+ form_name &#8211; the form name that the file was uploaded as<br/>
+ (not the filename) (if NULL, we&#8217;re asking for the<br/>
  file handle for the PUT upload) </p>
 <h2>DESCRIPTION</h2>
 <p> cgi_filehandle will return the stdio FILE pointer associated with a file that was uploaded using multipart/form-data. The FILE pointer is positioned at the start of the file when first available. </p>

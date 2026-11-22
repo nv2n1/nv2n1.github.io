@@ -38,5 +38,5 @@ description: "XmbDrawImageString, XwcDrawImageString, Xutf8DrawImageString – d
 <p> When the <code>XFontSet</code> has missing charsets, each unavailable character is drawn with the default string returned by <code>XCreateFontSet</code>. The behavior for an invalid codepoint is undefined. </p>
 <p> The function <code>Xutf8TextExtents</code> is an extension introduced by The XFree86 Project, Inc., in their 4.0.2 release. Its presence is indicated by the macro <code>X_HAVE_UTF8_STRING</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xdrawimagestring/">XDrawImageString</a>(3), <a href="/docs/linux/man/3-xdrawstring/">XDrawString</a>(3), <a href="/docs/linux/man/3-xdrawtext/">XDrawText</a>(3), <a href="/docs/linux/man/3-xmbdrawstring/">XmbDrawString</a>(3), <a href="/docs/linux/man/3-xmbdrawtext/">XmbDrawText</a>(3)<br />
+<p><a href="/docs/linux/man/3-xdrawimagestring/">XDrawImageString</a>(3), <a href="/docs/linux/man/3-xdrawstring/">XDrawString</a>(3), <a href="/docs/linux/man/3-xdrawtext/">XDrawText</a>(3), <a href="/docs/linux/man/3-xmbdrawstring/">XmbDrawString</a>(3), <a href="/docs/linux/man/3-xmbdrawtext/">XmbDrawText</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

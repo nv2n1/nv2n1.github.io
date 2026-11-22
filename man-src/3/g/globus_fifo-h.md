@@ -14,8 +14,8 @@ description: "globus_fifo.h –"
 <h3>Typedefs</h3>
 <p>typedef struct globus_fifo_s * <code>globus_fifo_t</code> </p>
 <h3>Functions</h3>
-<p>int <code>globus_fifo_init</code> (<code>globus_fifo_t</code> *fifo)<br />
- <i>Initialize the fifo structure. </i><br />
+<p>int <code>globus_fifo_init</code> (<code>globus_fifo_t</code> *fifo)<br/>
+ <i>Initialize the fifo structure. </i><br/>
  void <code>globus_fifo_destroy</code> (<code>globus_fifo_t</code> *fifo) </p>
 <p> void <code>globus_fifo_destroy_all</code> (<code>globus_fifo_t</code> *fifo, void(*datum_free)(void *)) </p>
 <p> int <code>globus_fifo_empty</code> (const <code>globus_fifo_t</code> *fifo) </p>

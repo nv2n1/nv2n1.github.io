@@ -125,28 +125,28 @@ int gethostbyname2_r(const char *name, int af,
 <tr VALIGN=top>
 <td> <code>gethostbyname</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:hostbyname env<br />
+<td> MT-Unsafe race:hostbyname env<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>gethostbyaddr</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:hostbyaddr env<br />
+<td> MT-Unsafe race:hostbyaddr env<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>sethostent</code>(),<br />
- <code>endhostent</code>(),<br />
+<td> <code>sethostent</code>(),<br/>
+ <code>endhostent</code>(),<br/>
  <code>gethostent_r</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:hostent env<br />
+<td> MT-Unsafe race:hostent env<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>herror</code>(),<br />
+<td> <code>herror</code>(),<br/>
  <code>hstrerror</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe
@@ -155,14 +155,14 @@ int gethostbyname2_r(const char *name, int af,
 <tr VALIGN=top>
 <td> <code>gethostent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:hostent<br />
+<td> MT-Unsafe race:hostent<br/>
  race:hostentbuf env locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>gethostbyname2</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:hostbyname2<br />
+<td> MT-Unsafe race:hostbyname2<br/>
  env locale
 </td>
 </tr>

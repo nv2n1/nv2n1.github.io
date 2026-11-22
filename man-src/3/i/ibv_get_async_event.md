@@ -18,14 +18,14 @@ void ibv_ack_async_event(struct ibv_async_event *event);
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> <code>ibv_get_async_event()</code> waits for the next async event of the RDMA device context <i>context</i> and returns it through the pointer <i>event</i>, which is an ibv_async_event struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
-<p>struct ibv_async_event {<br />
-    union {<br />
-        struct ibv_cq *cq;   /* CQ that got the event */<br />
-        struct ibv_qp *qp;   /* QP that got the event */<br />
-        struct ibv_srq *srq; /* SRQ that got the event */<br />
-        int port_num;        /* port number that got the event */<br />
-    } element;<br />
-    enum ibv_event_type event_type; /* type of the event */<br />
+<p>struct ibv_async_event {<br/>
+    union {<br/>
+        struct ibv_cq *cq;   /* CQ that got the event */<br/>
+        struct ibv_qp *qp;   /* QP that got the event */<br/>
+        struct ibv_srq *srq; /* SRQ that got the event */<br/>
+        int port_num;        /* port number that got the event */<br/>
+    } element;<br/>
+    enum ibv_event_type event_type; /* type of the event */<br/>
 };</p>
 <p> One member of the element union will be valid, depending on the event_type member of the structure. event_type will be one of the following events: </p>
 <p> <i>QP events:</i></p>
@@ -85,8 +85,8 @@ void ibv_ack_async_event(struct ibv_async_event *event);
 <p> <code>ibv_get_async_event()</code> is a blocking function. If multiple threads call this function simultaneously, then when an async event occurs, only one thread will receive it, and it is not possible to predict which thread will receive it.</p>
 <h2>EXAMPLES</h2>
 <p> The following code example demonstrates one possible way to work with async events in non-blocking mode. It performs the following steps: </p>
-<p> 1. Set the async events queue work mode to be non-blocked<br />
- 2. Poll the queue until it has an async event<br />
+<p> 1. Set the async events queue work mode to be non-blocked<br/>
+ 2. Poll the queue until it has an async event<br/>
  3. Get the async event and ack it </p>
 <pre><code>
 /* change the blocking mode of the async event queue */

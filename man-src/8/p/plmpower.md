@@ -43,7 +43,7 @@ description: "plmpower – control Insteon/X10 devices via SmartLabs PLM 2412S"
 <dd>Time round trip request/response to device (Insteon only). </dd>
 </dl>
 <h2>Files</h2>
-<p>/usr/sbin/plmpower<br />
+<p>/usr/sbin/plmpower<br/>
  /etc/powerman/powerman.conf</p>
 <h2>Origin</h2>
 <p>PowerMan was originally developed by Andrew Uselton on LLNL&#8217;s Linux clusters. This software is open source and distributed under the terms of the GNU GPL.</p>

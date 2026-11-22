@@ -52,13 +52,13 @@ description: "setarch – change reported architecture in new program environmen
 <dt><code>-h</code>,<code> &#8211;help</code></dt>
 <dd> Display help text and exit.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> setarch &#8211;addr-no-randomize mytestprog<br />
- setarch ppc32 rpmbuild &#8211;target=ppc &#8211;rebuild foo.src.rpm<br />
- setarch ppc32 -v -vL3 rpmbuild &#8211;target=ppc &#8211;rebuild bar.src.rpm<br />
+<p> setarch &#8211;addr-no-randomize mytestprog<br/>
+ setarch ppc32 rpmbuild &#8211;target=ppc &#8211;rebuild foo.src.rpm<br/>
+ setarch ppc32 -v -vL3 rpmbuild &#8211;target=ppc &#8211;rebuild bar.src.rpm<br/>
  setarch ppc32 &#8211;32bit rpmbuild &#8211;target=ppc &#8211;rebuild foo.src.rpm</p>
 <h2>AUTHOR</h2>
-<p> Elliot Lee<br />
- Jindrich Novy<br />
+<p> Elliot Lee<br/>
+ Jindrich Novy<br/>
  Karel Zak</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-personality/">personality</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2)</p>

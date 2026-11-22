@@ -13,7 +13,7 @@ description: "log4cpp::ConfigureFailure –"
 <p>#include &lt;Configurator.hh&gt; </p>
 <p> Inherits runtime_error.</p>
 <h3>Public Member Functions</h3>
-<p><code>ConfigureFailure</code> (const std::string &amp;reason)<br />
+<p><code>ConfigureFailure</code> (const std::string &amp;reason)<br/>
  <i>Constructor. </i></p>
 <h2>Detailed Description</h2>
 <p>Exception class for configuration.</p>

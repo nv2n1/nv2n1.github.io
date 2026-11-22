@@ -10,8 +10,8 @@ description: "palmtopnm – convert a Palm pixmap into a portable anymap"
 
 <p> palmtopnm &#8211; convert a Palm pixmap into a portable anymap </p>
 <h2>SYNOPSIS</h2>
-<p> <code>palmtopnm</code> [<code>-verbose</code>] [<code>-rendition</code> <i>N</i>] [<code>-showhist</code>]<br />
- [<code>-forceplain</code>] [<i>pnmfile</i>]<br />
+<p> <code>palmtopnm</code> [<code>-verbose</code>] [<code>-rendition</code> <i>N</i>] [<code>-showhist</code>]<br/>
+ [<code>-forceplain</code>] [<i>pnmfile</i>]<br/>
  <code>palmtopnm</code> <code>-transparent </code> [<code>-verbose</code>] [<i>pnmfile</i>] </p>
 <h2>DESCRIPTION</h2>
 <p> Reads a Palm pixmap as input, from stdin or <i>pnmfile</i>. Produces either a portable pixmap as output, or writes the value of the transparent color in the Palm pixmap to stdout.</p>
@@ -35,5 +35,5 @@ description: "palmtopnm – convert a Palm pixmap into a portable anymap"
 <p> You currently cannot generate an alpha mask if the Palm pixmap has a transparent color. However, you can still do this with <code>ppmcolormask</code> with a Netpbm pipe similar to: </p>
 <p> <code>palmtopnm pixmap.palm | ppmcolormask `palmtopnm -transparent pixmap.palm`</code> </p>
 <h2>AUTHORS</h2>
-<p> This program was originally written as Tbmptopnm.c, by Ian Goldberg. It was heavily modified by Bill Janssen to add color, compression, and transparency function.<br />
+<p> This program was originally written as Tbmptopnm.c, by Ian Goldberg. It was heavily modified by Bill Janssen to add color, compression, and transparency function.<br/>
  Copyright 1995-2001 by Ian Goldberg and Bill Janssen. </p>

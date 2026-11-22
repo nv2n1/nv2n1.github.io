@@ -10,10 +10,10 @@ description: "rlmgr – administration utility for QDBM Relic"
 
 <p> rlmgr &#8211; administration utility for QDBM Relic </p>
 <h2>SYNOPSIS</h2>
-<p> <code>rlmgr create</code> <i>name</i><br />
- <code>rlmgr store</code> [-kx] [-vx|-vf] [-insert] <i>name</i> <i>key</i> <i>val</i><br />
- <code>rlmgr delete</code> [-kx] <i>name</i> <i>key</i><br />
- <code>rlmgr fetch</code> [-kx] [-ox] [-n] <i>name</i> <i>key</i><br />
+<p> <code>rlmgr create</code> <i>name</i><br/>
+ <code>rlmgr store</code> [-kx] [-vx|-vf] [-insert] <i>name</i> <i>key</i> <i>val</i><br/>
+ <code>rlmgr delete</code> [-kx] <i>name</i> <i>key</i><br/>
+ <code>rlmgr fetch</code> [-kx] [-ox] [-n] <i>name</i> <i>key</i><br/>
  <code>rlmgr list</code> [-ox] <i>name</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>rlmgr</code> commands. </p>

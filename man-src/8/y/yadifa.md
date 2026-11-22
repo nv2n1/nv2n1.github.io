@@ -45,7 +45,7 @@ description: "YADIFA is an utility for controlling YADIFAD"
 <dd>&nbsp;<wbr>reload the settings from the configuration file.&nbsp;<wbr></dd></dl>
 <dl>
 <dt>[<code>-t</code>] zonecfgreload</dt>
-<dd>[<code>-q </code><i>zone</i>]<br />
+<dd>[<code>-q </code><i>zone</i>]<br/>
 &nbsp;<wbr>reload the zone information in the configuration file and reload the zone file(s)&nbsp;<wbr>with increased serial number.&nbsp;<wbr> If a zone is specified only that zone section is reloaded.</dd>
 <dt>[<code>-t</code>] sync [<code>-q</code>] zone [<code>&#8211;clean</code>]</dt>
 <dd>&nbsp;<wbr>write the zone to disk and optionally removes the journal.&nbsp;<wbr> The extra [&#8211;clean] option will remove the journal.</dd>
@@ -84,11 +84,11 @@ description: "YADIFA is an utility for controlling YADIFAD"
 <p>There is a mailinglist for questions relating to any program in the yadifa package: </p>
 <dl>
 <dt><code>*</code></dt>
-<dd><code>yadifa-users [at] mailinglists.yadifa.eu</code><br />
+<dd><code>yadifa-users [at] mailinglists.yadifa.eu</code><br/>
  for submitting questions/answers.</dd></dl>
 <dl>
 <dt><code>*</code></dt>
-<dd><code><a rel="nofollow" href="http://www.yadifa.eu/mailing-list-users">http://www.yadifa.eu/mailing-list-users</a></code><br />
+<dd><code><a rel="nofollow" href="http://www.yadifa.eu/mailing-list-users">http://www.yadifa.eu/mailing-list-users</a></code><br/>
  for subscription requests.</dd></dl>
 <p> If you would like to stay informed about new versions and official patches send a subscription request to via:</p>
 <dl>
@@ -98,12 +98,12 @@ description: "YADIFA is an utility for controlling YADIFAD"
 <h2>License And Copyright</h2>
 <dl>
 <dt>Copyright</dt>
-<dd>(C)2011-2017, EURid<br />
- B-1831 Diegem, Belgium<br />
+<dd>(C)2011-2017, EURid<br/>
+ B-1831 Diegem, Belgium<br/>
  <code>info [at] yadifa.eu</code></dd></dl>
 <h2>Authors</h2>
-<p>Gery Van Emelen<br />
- Email: <code>Gery.VanEmelen [at] EURid.eu</code><br />
- Eric Diaz Fernandez<br />
+<p>Gery Van Emelen<br/>
+ Email: <code>Gery.VanEmelen [at] EURid.eu</code><br/>
+ Eric Diaz Fernandez<br/>
  Email: <code>Eric.DiazFernandez [at] EURid.eu</code> </p>
 <p> WWW: <code><a rel="nofollow" href="http://www.EURid.eu">http://www.EURid.eu</a></code></p>

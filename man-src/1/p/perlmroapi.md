@@ -34,17 +34,17 @@ struct mro_alg {
 <dt>resolve
 </dt><dd> Pointer to the linearisation function, described below.
 </dd><dt>name
-</dt><dd> Name of the <font SIZE="-1">MRO,</font> either in <font SIZE="-1">ISO-8859-1</font> or <font SIZE="-1">UTF-8.</font>
+</dt><dd> Name of the MRO, either in ISO-8859-1 or UTF-8.
 </dd><dt>length
 </dt><dd> Length of the name.
 </dd><dt>kflags
-</dt><dd> If the name is given in <font SIZE="-1">UTF-8,</font> set this to <tt>&quot;HVhek_UTF8&quot;</tt>. The value is passed direct as the parameter <i>kflags</i> to <tt>&quot;hv_common()&quot;</tt>.
+</dt><dd> If the name is given in UTF-8, set this to <tt>&quot;HVhek_UTF8&quot;</tt>. The value is passed direct as the parameter <i>kflags</i> to <tt>&quot;hv_common()&quot;</tt>.
 </dd><dt>hash
-</dt><dd> A precomputed hash value for the <font SIZE="-1">MRO</font>'s name, or 0.</dd></dl>
+</dt><dd> A precomputed hash value for the MRO's name, or 0.</dd></dl>
 
 <h2>Callbacks</h2>
 
- The <tt>&quot;resolve&quot;</tt> function is called to generate a linearised <font SIZE="-1">ISA</font> for the given stash, using this <font SIZE="-1">MRO.</font> It is called with a pointer to the stash, and a <i>level</i> of 0. The core always sets <i>level</i> to 0 when it calls your function - the parameter is provided to allow your implementation to track depth if it needs to recurse. 
+ The <tt>&quot;resolve&quot;</tt> function is called to generate a linearised ISA for the given stash, using this MRO. It is called with a pointer to the stash, and a <i>level</i> of 0. The core always sets <i>level</i> to 0 when it calls your function - the parameter is provided to allow your implementation to track depth if it needs to recurse. 
 
  The function should return a reference to an array containing the parent classes in order. The names of the classes should be the result of calling <tt>&quot;HvENAME()&quot;</tt> on the stash. In those cases where <tt>&quot;HvENAME()&quot;</tt> returns null, <tt>&quot;HvNAME()&quot;</tt> should be used instead. 
 
@@ -69,8 +69,8 @@ private_sv = MRO_GET_PRIVATE_DATA(meta, &amp;my_mro_alg);
 
 <h2>Examples</h2>
 
- For examples of <font SIZE="-1">MRO</font> implementations, see <tt>&quot;S_mro_get_linear_isa_c3()&quot;</tt> and the <tt>&quot;BOOT:&quot;</tt> section of <i>ext/mro/mro.xs</i>, and <tt>&quot;S_mro_get_linear_isa_dfs()&quot;</tt> in <i>mro_core.c</i>
+ For examples of MRO implementations, see <tt>&quot;S_mro_get_linear_isa_c3()&quot;</tt> and the <tt>&quot;BOOT:&quot;</tt> section of <i>ext/mro/mro.xs</i>, and <tt>&quot;S_mro_get_linear_isa_dfs()&quot;</tt> in <i>mro_core.c</i>
 
 <h2>AUTHORS</h2>
 
- The implementation of the C3 <font SIZE="-1">MRO</font> and switchable MROs within the perl core was written by Brandon L Black. Nicholas Clark created the pluggable interface, refactored Brandon's implementation to work with it, and wrote this document.
+ The implementation of the C3 MRO and switchable MROs within the perl core was written by Brandon L Black. Nicholas Clark created the pluggable interface, refactored Brandon's implementation to work with it, and wrote this document.

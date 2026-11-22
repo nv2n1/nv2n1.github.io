@@ -38,10 +38,10 @@ description: "dpkg-checkbuilddeps – check build dependencies and conflicts"
 <dd> Show the version and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DEB_BUILD_PROFILES</code></font></dt>
+<dt><code>DEB_BUILD_PROFILES</code></dt>
 <dd> If set, it will be used as the active build profile(s) for the package being built. It is a space separated list of profile names. Overridden by the <code>-P</code> option.</dd>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
-<dt><font SIZE="-1"><code>DPKG_NLS</code></font></dt>
+<dt><code>DPKG_NLS</code></dt>
 <dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default). </dd>
 </dl>

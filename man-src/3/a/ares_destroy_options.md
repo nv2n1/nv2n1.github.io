@@ -19,5 +19,5 @@ void ares_destroy_options(struct ares_options *options)
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_save_options/">ares_save_options</a></code>(3), <code><a href="/docs/linux/man/3-ares_init_options/">ares_init_options</a></code>(3)</p>
 <h2>AUTHOR</h2>
-<p> Brad House<br />
+<p> Brad House<br/>
  Copyright 1998 by the Massachusetts Institute of Technology. </p>

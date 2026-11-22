@@ -10,7 +10,7 @@ description: "slaed4.f –"
 <p>slaed4.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slaed4</code> (N, I, D, Z, DELTA, RHO, DLAM, INFO)<br />
+<p>subroutine <code>slaed4</code> (N, I, D, Z, DELTA, RHO, DLAM, INFO)<br/>
  <i></i><code>SLAED4</code> used by sstedc. Finds a single root of the secular equation.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaed4 (integerN, integerI, real, dimension( * )D, real, dimension( * )Z, real, dimension( * )DELTA, realRHO, realDLAM, integerINFO)</h3>

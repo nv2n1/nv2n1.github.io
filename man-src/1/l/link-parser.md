@@ -46,13 +46,13 @@ description: "link-parser – parses natural language sentences"
 <dt>
 </dt><dd> <code>linkparser&gt; Reading a man page is informative.</code> </dd>
 <p> ++++Time 0.00 seconds (0.01 total) </p>
-<p> Found 1 linkage (1 had no P.P. violations)<br />
+<p> Found 1 linkage (1 had no P.P. violations)<br/>
 &nbsp;<wbr>&nbsp;<wbr>Unique linkage, cost vector&nbsp;<wbr>=&nbsp;<wbr>(UNUSED=0 DIS=0 AND=0 LEN=12) </p>
-<p>&nbsp;<wbr>+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;Xp&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+<br />
-&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&#8212;&#8212;&#8212;Ss*g&#8212;&#8212;&#8212;+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|<br />
-&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&#8212;&#8212;-Os&#8212;&#8212;-+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|<br />
-&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&#8212;-Ds&#8212;-+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|<br />
-&nbsp;<wbr>+&#8212;-Wd&#8212;+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&#8211;AN&#8211;+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&#8212;Pa&#8212;+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|<br />
+<p>&nbsp;<wbr>+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;Xp&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+<br/>
+&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&#8212;&#8212;&#8212;Ss*g&#8212;&#8212;&#8212;+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|<br/>
+&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&#8212;&#8212;-Os&#8212;&#8212;-+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|<br/>
+&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&#8212;-Ds&#8212;-+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|<br/>
+&nbsp;<wbr>+&#8212;-Wd&#8212;+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&#8211;AN&#8211;+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&#8212;Pa&#8212;+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|<br/>
 &nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| </p>
 <p> LEFT-WALL reading.g a man.n page.n is.v informative.a .</dl>
 <p> A P.P. violation is a post-processing violation; it is a post-linkage step used to reject invalid parses. The link types shown are specific to English; other langauges will have different link types. </p>
@@ -61,7 +61,7 @@ description: "link-parser – parses natural language sentences"
 <dt>
 </dt><dd> <code>cat thesis.txt | link-parser /usr/share/link-grammar/en/4.0.dict -batch</code></dd></dl>
 <h2>SEE ALSO</h2>
-<p> Information on the shared-library API and the link types used in the parse is avavailable at the Abiword website at <code><a rel="nofollow" href="http://www.abisource.com/projects/link-grammar/dict/index.html">http://www.abisource.com/projects/link-grammar/dict/index.html</a></code><br />
+<p> Information on the shared-library API and the link types used in the parse is avavailable at the Abiword website at <code><a rel="nofollow" href="http://www.abisource.com/projects/link-grammar/dict/index.html">http://www.abisource.com/projects/link-grammar/dict/index.html</a></code><br/>
  Peer-reviewed papers explaining link-parser can be found at the original CMU site at <code><a rel="nofollow" href="http://www.link.cs.cmu.edu/link/papers/index.html.">http://www.link.cs.cmu.edu/link/papers/index.html.</a></code></p>
 <h2>AUTHOR</h2>
 <p> link-parser was written by Daniel Sleator &lt;sleator [at] cs.cmu.edu&gt;, Davy Temperley &lt;dtemp [at] theory.esm.rochester.edu&gt;, and John Lafferty &lt;lafferty [at] cs.cmu.edu&gt; </p>

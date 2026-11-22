@@ -10,7 +10,7 @@ description: "cheswapr.f –"
 <p>cheswapr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cheswapr</code> (UPLO, N, A, LDA, I1, I2)<br />
+<p>subroutine <code>cheswapr</code> (UPLO, N, A, LDA, I1, I2)<br/>
  <i></i><code>CHESWAPR</code> applies an elementary permutation on the rows and columns of a Hermitian matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cheswapr (characterUPLO, integerN, complex, dimension( lda, n )A, integerLDA, integerI1, integerI2)</h3>

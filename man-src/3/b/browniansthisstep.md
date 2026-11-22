@@ -13,7 +13,7 @@ description: "QuantLib::LogNormalFwdRateEuler – Euler."
 <p> Inherits <code>QuantLib::MarketModelEvolver</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>LogNormalFwdRateEuler</code> (const boost::shared_ptr&lt; <code>MarketModel</code> &gt; &amp;, const BrownianGeneratorFactory &amp;, const std::vector&lt; Size &gt; &amp;numeraires, Size initialStep=0) </p>
-<p> const std::vector&lt; <code>Real</code> &gt; &amp; <code>browniansThisStep</code> () const<br />
+<p> const std::vector&lt; <code>Real</code> &gt; &amp; <code>browniansThisStep</code> () const<br/>
  <i>accessor methods useful for doing pathwise vegas </i> </p>
 <p> <code>MarketModel interface</code> </p>
 <p> const std::vector&lt; Size &gt; &amp; <code>numeraires</code> () const </p>

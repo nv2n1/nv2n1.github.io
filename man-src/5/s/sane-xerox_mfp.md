@@ -38,8 +38,8 @@ description: "sane-xerox_mfp – SANE backend for Xerox Phaser 3200MFP device et
 <h2>Bugs And Support</h2>
 <p>If you have found a bug or need support please follow open-source way of acquiring support via mail-lists <i><a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a></i> or SANE bug tracker <i><a rel="nofollow" href="http://www.sane-project.org/bugs.html">http://www.sane-project.org/bugs.html</a></i>.</p>
 <h2>Authors</h2>
-<p>Alex Belkin &lt;<i>abc [at] telekom.ru</i>&gt;.<br />
- Samsung SCX-4500W scan over network support by Alexander Kuznetsov &lt;<i>acca(at)cpan.org</i>&gt;.<br />
+<p>Alex Belkin &lt;<i>abc [at] telekom.ru</i>&gt;.<br/>
+ Samsung SCX-4500W scan over network support by Alexander Kuznetsov &lt;<i>acca(at)cpan.org</i>&gt;.<br/>
  Color scanning on Samsung M2870 model and Xerox Cognac 3215 &amp; 3225 models by Laxmeesh Onkar Markod &lt;<i>m.laxmeesh [at] samsung.com</i>&gt;.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) </p>

@@ -9,7 +9,7 @@ description: "lpmove – move a job or all jobs to a new destination"
 
 <p>lpmove &#8211; move a job or all jobs to a new destination</p>
 <h2>Synopsis</h2>
-<p><code>lpmove</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-U</code> <i>username</i> ] <i>job</i> <i>destination</i><br />
+<p><code>lpmove</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-U</code> <i>username</i> ] <i>job</i> <i>destination</i><br/>
  <code>lpmove</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-U</code> <i>username</i> ] <i>source</i> <i>destination</i></p>
 <h2>Description</h2>
 <p><code>lpmove</code> moves the specified <i>job</i> or all jobs from <i>source</i> to <i>destination</i>. <i>job</i> can be the job ID number or the old destination and job ID.</p>
@@ -30,7 +30,7 @@ description: "lpmove – move a job or all jobs to a new destination"
 <p>Move all jobs from &quot;oldprinter&quot; to &quot;newprinter&quot;: </p>
 <pre> lpmove oldprinter newprinter</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-cancel/">cancel</a></code>(1), <code><a href="/docs/linux/man/1-lp/">lp</a></code>(1), <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1), <code><a href="/docs/linux/man/1-lprm/">lprm</a></code>(1),<br />
+<p><code><a href="/docs/linux/man/1-cancel/">cancel</a></code>(1), <code><a href="/docs/linux/man/1-lp/">lp</a></code>(1), <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1), <code><a href="/docs/linux/man/1-lprm/">lprm</a></code>(1),<br/>
  CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2021-2022 by OpenPrinting.</p>

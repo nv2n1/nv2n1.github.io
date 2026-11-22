@@ -23,30 +23,30 @@ description: "abook – text-based address book program"
 <dt><code>&#8211;datafile</code> <i>&lt;filename&gt;</i></dt>
 <dd> Use an alternative addressbook file (default is <i>$HOME/.abook/addressbook</i>).</dd>
 <dt><code>&#8211;mutt-query</code> <i>&lt;string&gt;</i></dt>
-<dd> Make a query for mutt (search the addressbook for <i>&lt;string&gt;</i>).<br />
+<dd> Make a query for mutt (search the addressbook for <i>&lt;string&gt;</i>).<br/>
  The <code>&#8211;datafile</code> option, as documented above, may be used <code>BEFORE</code> this option to search a different addressbook file.</dd>
 <dt><code>&#8211;convert</code> [ <code>&#8211;informat</code> <i>&lt;inputformat&gt;</i> ] [ <code>&#8211;infile</code> <i>&lt;inputfile&gt;</i> ] [ <code>&#8211;outformat</code> <i>&lt;outputformat&gt;</i> ] [ <code>&#8211;outfile</code> <i>&lt;outputfile&gt;</i> ]</dt>
 <dd> Converts <i>&lt;inputfile&gt;</i> in <i>&lt;inputformat&gt;</i> to <i>&lt;outputfile&gt;</i> in <i>&lt;outputformat&gt;</i> (defaults are <code>abook</code>, <code>stdin</code>, <code>text</code> and <code>stdout</code>). </dd>
-<p> The following <i>inputformats</i> are supported:<br />
- &#8211; <code>abook</code> abook native format<br />
- &#8211; <code>ldif</code> ldif / Netscape addressbook<br />
- &#8211; <code>mutt</code> mutt alias<br />
- &#8211; <code>pine</code> pine addressbook<br />
- &#8211; <code>csv</code> comma separated values<br />
+<p> The following <i>inputformats</i> are supported:<br/>
+ &#8211; <code>abook</code> abook native format<br/>
+ &#8211; <code>ldif</code> ldif / Netscape addressbook<br/>
+ &#8211; <code>mutt</code> mutt alias<br/>
+ &#8211; <code>pine</code> pine addressbook<br/>
+ &#8211; <code>csv</code> comma separated values<br/>
  &#8211; <code>palmcsv</code> Palm comma separated values </p>
-<p> The following <i>outputformats</i> are supported:<br />
- &#8211; <code>abook</code> abook native format<br />
- &#8211; <code>ldif</code> ldif / Netscape addressbook (.4ld)<br />
- &#8211; <code>mutt</code> mutt alias<br />
- &#8211; <code>html</code> html document<br />
- &#8211; <code>pine</code> pine addressbook<br />
- &#8211; <code>gcrd</code> GnomeCard (VCard) addressbook<br />
- &#8211; <code>csv</code> comma separated values<br />
- &#8211; <code>palmcsv</code> Palm comma separated values<br />
- &#8211; <code>elm</code> elm alias<br />
- &#8211; <code>text</code> plain text<br />
- &#8211; <code>spruce</code> Spruce address book<br />
- &#8211; <code>wl</code> Wanderlust address book<br />
+<p> The following <i>outputformats</i> are supported:<br/>
+ &#8211; <code>abook</code> abook native format<br/>
+ &#8211; <code>ldif</code> ldif / Netscape addressbook (.4ld)<br/>
+ &#8211; <code>mutt</code> mutt alias<br/>
+ &#8211; <code>html</code> html document<br/>
+ &#8211; <code>pine</code> pine addressbook<br/>
+ &#8211; <code>gcrd</code> GnomeCard (VCard) addressbook<br/>
+ &#8211; <code>csv</code> comma separated values<br/>
+ &#8211; <code>palmcsv</code> Palm comma separated values<br/>
+ &#8211; <code>elm</code> elm alias<br/>
+ &#8211; <code>text</code> plain text<br/>
+ &#8211; <code>spruce</code> Spruce address book<br/>
+ &#8211; <code>wl</code> Wanderlust address book<br/>
  &#8211; <code>bsdcal</code> BSD calendar</p>
 <dt><code>&#8211;add-email</code></dt>
 <dd> Read an e-mail message from stdin and add the sender to the addressbook.</dd>

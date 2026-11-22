@@ -11,7 +11,7 @@ description: "chpgv.f –"
 <p> chpgv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chpgv</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, RWORK, INFO)<br />
+<p> subroutine <code>chpgv</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, RWORK, INFO)<br/>
  <i></i><code>CHPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chpgv (integerITYPE, characterJOBZ, characterUPLO, integerN, complex, dimension( * )AP, complex, dimension( * )BP, real, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>
@@ -67,14 +67,14 @@ description: "chpgv.f –"
           On exit, the contents of AP are destroyed.
 </code></pre>
 <p> <i>BP</i> </p>
-<p>          BP is COMPLEX array, dimension (N*(N+1)/2)<br />
-          On entry, the upper or lower triangle of the Hermitian matrix<br />
-          B, packed columnwise in a linear array.  The j-th column of B<br />
-          is stored in the array BP as follows:<br />
-          if UPLO = &#8216;U&#8217;, BP(i + (j-1)*j/2) = B(i,j) for 1&lt;=i&lt;=j;<br />
-          if UPLO = &#8216;L&#8217;, BP(i + (j-1)*(2*n-j)/2) = B(i,j) for j&lt;=i&lt;=n.<br />
-          On exit, the triangular factor U or L from the Cholesky<br />
-          factorization B = U**H*U or B = L*L**H, in the same storage<br />
+<p>          BP is COMPLEX array, dimension (N*(N+1)/2)<br/>
+          On entry, the upper or lower triangle of the Hermitian matrix<br/>
+          B, packed columnwise in a linear array.  The j-th column of B<br/>
+          is stored in the array BP as follows:<br/>
+          if UPLO = &#8216;U&#8217;, BP(i + (j-1)*j/2) = B(i,j) for 1&lt;=i&lt;=j;<br/>
+          if UPLO = &#8216;L&#8217;, BP(i + (j-1)*(2*n-j)/2) = B(i,j) for j&lt;=i&lt;=n.<br/>
+          On exit, the triangular factor U or L from the Cholesky<br/>
+          factorization B = U**H*U or B = L*L**H, in the same storage<br/>
           format as B.</p>
 <p> <i>W</i> </p>
 <pre>
@@ -82,8 +82,8 @@ description: "chpgv.f –"
           If INFO = 0, the eigenvalues in ascending order.
 </pre>
 <p> <i>Z</i> </p>
-<p>Z is COMPLEX array, dimension(LDZ, N) If JOBZ = &#8216;V&#8217;, then if INFO = 0, Z contains the matrix Z of eigenvectors.The eigenvectors are normalized as follows : if ITYPE = 1 or 2, Z **H *B *Z = I;<br />
-if ITYPE<br />
+<p>Z is COMPLEX array, dimension(LDZ, N) If JOBZ = &#8216;V&#8217;, then if INFO = 0, Z contains the matrix Z of eigenvectors.The eigenvectors are normalized as follows : if ITYPE = 1 or 2, Z **H *B *Z = I;<br/>
+if ITYPE<br/>
 = 3, Z **H *inv(B) *Z = I.If JOBZ = &#8216;N&#8217;, then Z is not referenced.</p>
 <p> <i>LDZ</i> </p>
 <pre>

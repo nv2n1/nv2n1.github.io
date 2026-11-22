@@ -11,7 +11,7 @@ description: "cgebal.f –"
 <p> cgebal.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgebal</code> (JOB, N, A, LDA, ILO, IHI, SCALE, INFO)<br />
+<p> subroutine <code>cgebal</code> (JOB, N, A, LDA, ILO, IHI, SCALE, INFO)<br/>
  <i></i><code>CGEBAL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgebal (characterJOB, integerN, complex, dimension( lda, * )A, integerLDA, integerILO, integerIHI, real, dimension( * )SCALE, integerINFO)</h3>
@@ -66,7 +66,7 @@ description: "cgebal.f –"
 <pre>
           ILO is INTEGER
 </pre>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  <i>IHI</i> </p>
 <pre>
           IHI is INTEGER

@@ -46,7 +46,7 @@ description: "route – show / manipulate the IP routing table"
 <dt><code>netmask </code><i>NM</i></dt>
 <dd>when adding a network route, the netmask to be used.</dd>
 <dt><code>gw </code><i>GW</i></dt>
-<dd>route packets via a gateway.<br />
+<dd>route packets via a gateway.<br/>
  <code>NOTE:</code> The specified gateway must be reachable first. This usually means that you have to set up a static route to the gateway beforehand. If you specify the address of one of your local interfaces, it will be used to decide about the interface to which the packets should be routed to. This is a BSDism compatibility hack.</dd>
 <dt><code>metric </code><i>M</i></dt>
 <dd>set the metric field in the routing table (used by routing daemons) to <i>M</i>. If this option is not specified the metric for inet6 (IPv6) address family defaults to &#8216;1&#8217;, for inet (IPv4) it defaults to &#8216;0&#8217;. You should always specify an explicit metric value to not rely on those defaults &#8211; they also differ from iproute2.</dd>
@@ -96,15 +96,15 @@ description: "route – show / manipulate the IP routing table"
 <dt><code>Genmask </code></dt>
 <dd>The netmask for the destination net; &#8216;255.255.255.255&#8217; for a host destination and &#8216;0.0.0.0&#8217; for the <code>default</code> route.</dd>
 <dt><code>Flags </code></dt>
-<dd>Possible flags include<br />
- <code>U</code> (route is <code>up</code>)<br />
- <code>H</code> (target is a <code>host</code>)<br />
- <code>G</code> (use <code>gateway</code>)<br />
- <code>R</code> (<code>reinstate</code> route for dynamic routing)<br />
- <code>D</code> (<code>dynamically</code> installed by daemon or redirect)<br />
- <code>M</code> (<code>modified</code> from routing daemon or redirect)<br />
- <code>A</code> (installed by <code>addrconf</code>)<br />
- <code>C</code> (<code>cache</code> entry)<br />
+<dd>Possible flags include<br/>
+ <code>U</code> (route is <code>up</code>)<br/>
+ <code>H</code> (target is a <code>host</code>)<br/>
+ <code>G</code> (use <code>gateway</code>)<br/>
+ <code>R</code> (<code>reinstate</code> route for dynamic routing)<br/>
+ <code>D</code> (<code>dynamically</code> installed by daemon or redirect)<br/>
+ <code>M</code> (<code>modified</code> from routing daemon or redirect)<br/>
+ <code>A</code> (installed by <code>addrconf</code>)<br/>
+ <code>C</code> (<code>cache</code> entry)<br/>
  <code>!</code> (<code>reject</code> route)</dd>
 <dt><code>Metric </code></dt>
 <dd>The &#8216;distance&#8217; to the target (usually counted in hops).</dd>
@@ -125,8 +125,8 @@ description: "route – show / manipulate the IP routing table"
 <dt><code>Arp (cached only)</code></dt>
 <dd>Whether or not the hardware address for the cached route is up to date.</dd></dl>
 <h2>Files</h2>
-<p><i>/proc/net/ipv6_route</i><br />
- <i>/proc/net/route</i><br />
+<p><i>/proc/net/ipv6_route</i><br/>
+ <i>/proc/net/route</i><br/>
  <i>/proc/net/rt_cache</i></p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></i>(8), <i><a href="/docs/linux/man/8-netstat/">netstat</a></i>(8), <i><a href="/docs/linux/man/8-arp/">arp</a></i>(8), <i><a href="/docs/linux/man/8-rarp/">rarp</a></i>(8), <i><a href="/docs/linux/man/8-ip/">ip</a></i>(8) </p>

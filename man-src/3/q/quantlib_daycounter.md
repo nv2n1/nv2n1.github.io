@@ -12,25 +12,25 @@ description: "QuantLib::DayCounter – day counter class"
 <p>#include &lt;ql/time/daycounter.hpp&gt; </p>
 <p> Inherited by <code>Actual360</code>, <code>Actual365Fixed</code>, <code>ActualActual</code>, <code>Business252</code>, <code>OneDayCounter</code>, <code>SimpleDayCounter</code>, and <code>Thirty360</code>. </p>
 <h3>Classes</h3>
-<p>class <code>Impl</code><br />
+<p>class <code>Impl</code><br/>
  <i>abstract base class for day counter implementations </i></p>
 <h3>Public Member Functions</h3>
 <p><code>DayCounter</code> () </p>
 <p> <code>DayCounter interface</code> </p>
-<p> bool <code>empty</code> () const<br />
- <i>Returns whether or not the day counter is initialized. </i><br />
- std::string <code>name</code> () const<br />
- <i>Returns the name of the day counter. </i><br />
- <code>BigInteger</code> <code>dayCount</code> (const <code>Date</code> &amp;, const <code>Date</code> &amp;) const<br />
- <i>Returns the number of days between two dates. </i><br />
- <code>Time</code> <code>yearFraction</code> (const <code>Date</code> &amp;, const <code>Date</code> &amp;, const <code>Date</code> &amp;refPeriodStart=<code>Date</code>(), const <code>Date</code> &amp;refPeriodEnd=<code>Date</code>()) const<br />
+<p> bool <code>empty</code> () const<br/>
+ <i>Returns whether or not the day counter is initialized. </i><br/>
+ std::string <code>name</code> () const<br/>
+ <i>Returns the name of the day counter. </i><br/>
+ <code>BigInteger</code> <code>dayCount</code> (const <code>Date</code> &amp;, const <code>Date</code> &amp;) const<br/>
+ <i>Returns the number of days between two dates. </i><br/>
+ <code>Time</code> <code>yearFraction</code> (const <code>Date</code> &amp;, const <code>Date</code> &amp;, const <code>Date</code> &amp;refPeriodStart=<code>Date</code>(), const <code>Date</code> &amp;refPeriodEnd=<code>Date</code>()) const<br/>
  <i>Returns the period between two dates as a fraction of year. </i></p>
 <h3>Protected Member Functions</h3>
 <p><code>DayCounter</code> (const boost::shared_ptr&lt; <code>Impl</code> &gt; &amp;impl) </p>
 <h3>Protected Attributes</h3>
 <p>boost::shared_ptr&lt; <code>Impl</code> &gt; <code>impl_</code> </p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  bool <code>operator==</code> (const <code>DayCounter</code> &amp;, const <code>DayCounter</code> &amp;) </p>
 <p> bool <code>operator!=</code> (const <code>DayCounter</code> &amp;, const <code>DayCounter</code> &amp;) </p>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const <code>DayCounter</code> &amp;) </p>

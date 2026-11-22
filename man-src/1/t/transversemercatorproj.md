@@ -18,7 +18,7 @@ description: "TransverseMercatorProj — perform transverse Mercator projection"
 <dt><code>-s</code></dt>
 <dd>use the sixth-order Krueger series approximation to the transverse Mercator projection instead of the exact projection.</dd>
 <dt><code>-t</code></dt>
-<dd>use the exact algorithm with the &#8220;<font SIZE="-1">EXTENDED DOMAIN&#8221;</font>.</dd>
+<dd>use the exact algorithm with the &#8220;EXTENDED DOMAIN&#8221;.</dd>
 <dt><code>-l</code></dt>
 <dd>specify the longitude of origin <i>lon0</i> (degrees, default 0).</dd>
 <dt><code>-k</code></dt>
@@ -26,7 +26,7 @@ description: "TransverseMercatorProj — perform transverse Mercator projection"
 <dt><code>-r</code></dt>
 <dd>perform the reverse projection. <i>x</i> and <i>y</i> are given on standard input and each line of standard output gives <i>latitude</i>, <i>longitude</i>, <i>gamma</i>, and <i>k</i>.</dd>
 <dt><code>-e</code></dt>
-<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563. If the exact algorithm is used, <i>f</i> must be positive.</dd>
+<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the WGS84 ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563. If the exact algorithm is used, <i>f</i> must be positive.</dd>
 <dt><code>-p</code></dt>
 <dd>set the output precision to <i>prec</i> (default 6). <i>prec</i> is the number of digits after the decimal point for lengths (in meters). For latitudes and longitudes (in degrees), the number of digits after the decimal point is <i>prec</i> + 5. For the convergence (in degrees) and scale, the number of digits after the decimal point is <i>prec</i> + 6.</dd>
 <dt><code>&#8211;comment-delimiter</code></dt>
@@ -57,6 +57,6 @@ description: "TransverseMercatorProj — perform transverse Mercator projection"
 <h2>Author</h2>
 <p><code>TransverseMercatorProj</code> was written by Charles Karney.</p>
 <h2>See Also</h2>
-<p>The algorithms for the transverse Mercator projection are described in C. F. F. Karney, <i>Transverse Mercator with an accuracy of a few nanometers</i>, J. Geodesy <code>85</code>(8), 475-485 (Aug. 2011); <font SIZE="-1">DOI </font>&lt;<a rel="nofollow" href="https://dx.doi.org/10.1007/s00190-011-0445-3">https://dx.doi.org/10.1007/s00190-011-0445-3</a>&gt;; preprint &lt;<a rel="nofollow" href="http://arxiv.org/abs/1002.1417">http://arxiv.org/abs/1002.1417</a>&gt;. The explanation of the extended domain of the projection with the <code>-t</code> option is given in Section 5 of this paper.</p>
+<p>The algorithms for the transverse Mercator projection are described in C. F. F. Karney, <i>Transverse Mercator with an accuracy of a few nanometers</i>, J. Geodesy <code>85</code>(8), 475-485 (Aug. 2011); DOI &lt;<a rel="nofollow" href="https://dx.doi.org/10.1007/s00190-011-0445-3">https://dx.doi.org/10.1007/s00190-011-0445-3</a>&gt;; preprint &lt;<a rel="nofollow" href="http://arxiv.org/abs/1002.1417">http://arxiv.org/abs/1002.1417</a>&gt;. The explanation of the extended domain of the projection with the <code>-t</code> option is given in Section 5 of this paper.</p>
 <h2>History</h2>
 <p><code>TransverseMercatorProj</code> was added to GeographicLib, &lt;<a rel="nofollow" href="http://geographiclib.sf.net">http://geographiclib.sf.net</a>&gt;, in 2009-01. Prior to version 1.9 it was called TransverseMercatorTest (and its interface was slightly different).</p>

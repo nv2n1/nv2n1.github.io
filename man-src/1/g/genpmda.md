@@ -39,7 +39,7 @@ description: "genpmda – Performance Co-Pilot PMDA Generator"
 <dd> use <i>dir</i> for generated source code, default <code>./generated</code></dd>
 <dt><code>-v</code></dt>
 <dd> print verbose messages about what <code>genpmda</code> is doing.</dd></dl>
-<p> Example:<br />
+<p> Example:<br/>
 &nbsp;<wbr>Generate an&nbsp;<wbr>&quot;example&quot;&nbsp;<wbr>pmda using domain 99: </p>
 <p>&nbsp;<wbr><code>genpmda -D 99 -v -i EXAMPLE -c example.conf</code> </p>
 <p> Here is <i>example.conf</i> config file (for the required <code>-c</code> option): </p>

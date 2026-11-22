@@ -13,9 +13,9 @@ description: "QuantLib::ExtendedCoxIngersollRoss::Dynamics – Short-rate dynami
 <p> Inherits <code>QuantLib::CoxIngersollRoss::Dynamics</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>Dynamics</code> (const <code>Parameter</code> &amp;phi, Real theta, Real k, Real sigma, Real x0) </p>
-<p> virtual Real <code>variable</code> (Time t, Rate r) const<br />
- <i>Compute state variable from short rate. </i><br />
- virtual Real <code>shortRate</code> (Time t, Real y) const<br />
+<p> virtual Real <code>variable</code> (Time t, Rate r) const<br/>
+ <i>Compute state variable from short rate. </i><br/>
+ virtual Real <code>shortRate</code> (Time t, Real y) const<br/>
  <i>Compute short rate from state variable. </i></p>
 <h2>Detailed Description</h2>
 <p>Short-rate dynamics in the extended Cox-Ingersoll-Ross model. </p>

@@ -11,7 +11,7 @@ description: "dlahrd.f –"
 <p> dlahrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlahrd</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br />
+<p> subroutine <code>dlahrd</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br/>
  <i></i><code>DLAHRD</code> reduces the first nb columns of a general rectangular matrix A so that elements below the k-th subdiagonal are zero, and returns auxiliary matrices which are needed to apply the transformation to the unreduced part of A.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlahrd (integerN, integerK, integerNB, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( nb )TAU, double precision, dimension( ldt, nb )T, integerLDT, double precision, dimension( ldy, nb )Y, integerLDY)</h3>

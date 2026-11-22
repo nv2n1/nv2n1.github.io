@@ -10,7 +10,7 @@ description: "pcp-ipcs – provide information on IPC facilities"
 
 <p> pcp-ipcs &#8211; provide information on IPC facilities</p>
 <h2>SYNOPSIS</h2>
-<p> <code>pcp-ipcs</code> [<code>resource-option</code>] [<code>output-format</code>]<br />
+<p> <code>pcp-ipcs</code> [<code>resource-option</code>] [<code>output-format</code>]<br/>
  <code>pcp-ipcs</code> [<code>resource-option</code>] <code>-i</code><i> id</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>pcp-ipcs</code> provides information on the inter-process communication facilities for which the calling process has read access.</p>

@@ -37,7 +37,7 @@ description: "ocamldebug – the OCaml source-level replay debugger."
 <dt><code>-help</code>&nbsp;<wbr>or<code>&nbsp;<wbr>&#8211;help</code></dt>
 <dd> Display a short usage summary and exit.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1)<br/>
  <i>The OCaml user&#8217;s manual</i>, chapter &quot;The debugger&quot;.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Sven LUTHER &lt;luther [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>

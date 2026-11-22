@@ -13,16 +13,16 @@ description: "QwtSeriesData< T > –"
 <p>#include &lt;qwt_series_data.h&gt; </p>
 <p> Inherited by <code>QwtArraySeriesData&lt; T &gt;</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtSeriesData</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtSeriesData</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtSeriesData</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtSeriesData</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual size_t <code>size</code> () const =0 </p>
 <p> virtual T <code>sample</code> (size_t i) const =0 </p>
 <p> virtual QRectF <code>boundingRect</code> () const =0 </p>
 <p> virtual void <code>setRectOfInterest</code> (const QRectF &amp;rect) </p>
 <h3>Protected Attributes</h3>
-<p>QRectF <code>d_boundingRect</code><br />
+<p>QRectF <code>d_boundingRect</code><br/>
  <i>Can be used to cache a calculated bounding rectangle. </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;typename T&gt;class QwtSeriesData&lt; T &gt;</h3>

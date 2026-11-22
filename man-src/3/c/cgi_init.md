@@ -17,10 +17,10 @@ description: "cgi_init – Initialize ClearSilver CGI environment"
 NEOERR *cgi_init (CGI **cgi, HDF *hdf);
 </pre>
 <h2>ARGUMENTS</h2>
-<p> cgi &#8211; a pointer to a CGI pointer<br />
- hdf_file &#8211; the path to an HDF data set file that will also be<br />
- loaded into the dataset. This will likely have to<br />
- a be a full path, as the HDF search paths are not<br />
+<p> cgi &#8211; a pointer to a CGI pointer<br/>
+ hdf_file &#8211; the path to an HDF data set file that will also be<br/>
+ loaded into the dataset. This will likely have to<br/>
+ a be a full path, as the HDF search paths are not<br/>
  yet set up. Certain things, like </p>
 <h2>DESCRIPTION</h2>
 <p> cgi_init initializes the ClearSilver CGI environment, including creating the HDF data set. It will then import the standard CGI environment variables into that dataset, will parse the QUERY_STRING into the data set, and parse the HTTP_COOKIE into the data set. Note that if the var xdisplay is in the form data, cgi_init will attempt to validate the value and launch the configured debugger on the CGI program. These variables have to be specified in the hdf_file pointed to by hdf_file. The default settings do not allow debugger launching for security reasons. </p>

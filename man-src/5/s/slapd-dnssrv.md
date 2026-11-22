@@ -23,6 +23,6 @@ description: "slapd-dnssrv – DNS SRV referral backend to slapd"
 <dd>default slapd configuration file
 </dd></dl>
 <h2>See Also</h2>
-<p><code>&quot;OpenLDAP Root Service &#8211; An experimental LDAP referral service&quot;</code> [RFC 3088],<br />
- <code>&quot;OpenLDAP LDAP Root Service&quot;</code> &lt;<a rel="nofollow" href="http://www.openldap.org/faq/?file=393)">http://www.openldap.org/faq/?file=393)</a>&gt;,<br />
+<p><code>&quot;OpenLDAP Root Service &#8211; An experimental LDAP referral service&quot;</code> [RFC 3088],<br/>
+ <code>&quot;OpenLDAP LDAP Root Service&quot;</code> &lt;<a rel="nofollow" href="http://www.openldap.org/faq/?file=393)">http://www.openldap.org/faq/?file=393)</a>&gt;,<br/>
  <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) </p>

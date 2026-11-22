@@ -295,8 +295,8 @@ description: "minicom – friendly serial communication program"
 <dd>  </dd>
 <dl>
 <dt><code>A - Serial device</code></dt>
-<dd> <p> /dev/tty1 or /dev/ttyS1 for most people. /dev/cua&lt;n&gt; is still possible under GNU/Linux, but no longer recommended as these devices are obsolete and many systems with kernel 2.2.x or newer don&#8217;t have them. Use /dev/ttyS&lt;n&gt; instead. You may also have /dev/modem as a symlink to the real device. <br />
- If you have modems connected to two or more serial ports, you may specify all of them here in a list separated by space, comma or semicolon. When Minicom starts, it checks the list until it finds an available modem and uses that one. (However, you can&#8217;t specify different init strings to them... at least not yet.) <br />
+<dd> <p> /dev/tty1 or /dev/ttyS1 for most people. /dev/cua&lt;n&gt; is still possible under GNU/Linux, but no longer recommended as these devices are obsolete and many systems with kernel 2.2.x or newer don&#8217;t have them. Use /dev/ttyS&lt;n&gt; instead. You may also have /dev/modem as a symlink to the real device. <br/>
+ If you have modems connected to two or more serial ports, you may specify all of them here in a list separated by space, comma or semicolon. When Minicom starts, it checks the list until it finds an available modem and uses that one. (However, you can&#8217;t specify different init strings to them... at least not yet.) <br/>
  To use a UNIX socket for communication the device name must be prefixed with &quot;unix#&quot; following by the full path and the filename of the socket. Minicom will then try to connect to this socket as a client. As long as it cannot connect to the socket it stays &#8216;offline&#8217;. As soon as the connection establishes, minicom goes &#8216;online&#8217;. If the server closes the socket, minicom switches to &#8216;offline&#8217; again. </p>
  </dd>
 <dt><code>B - Lock file location</code></dt>
@@ -458,15 +458,15 @@ $HOME/minicom.log
 <h2>BUGS</h2>
 <p> Please report any bugs to <i>minicom-devel [at] lists.alioth.debian.org</i>. Thank you!  </p>
 <h2>AUTHORS</h2>
-<p> The original author of minicom is Miquel van Smoorenburg (miquels [at] cistron.nl). He wrote versions up to 1.75. <br />
- Jukka Lahtinen (walker [at] netsonic.fi, jukkal [at] despammed.com) has been responsible for new versions since 1.78, helped by some other people, including: <br />
- filipg [at] paranoia.com wrote the History buffer searching to 1.79. <br />
- Arnaldo Carvalho de Melo (acme [at] conectiva.com.br) did the internationalization and the Brazilian Portuguese translations. <br />
- Jim Seymour (jseymour [at] jimsun.LinxNet.com) wrote the multiple modem support and the filename selection window used since 1.80. <br />
- Tomohiro Kubota (kubota [at] debian.or.jp) wrote the Japanese translations and the citation facility, and did some fixes. <br />
- Gael Queri (gqueri [at] mail.dotcom.fr) wrote the French translations. <br />
- Arkadiusz Miskiewicz (misiek [at] pld.org.pl) wrote the Polish translations. <br />
- Kim Soyoung (nexti [at] chollian.net) wrote the Korean translations. <br />
+<p> The original author of minicom is Miquel van Smoorenburg (miquels [at] cistron.nl). He wrote versions up to 1.75. <br/>
+ Jukka Lahtinen (walker [at] netsonic.fi, jukkal [at] despammed.com) has been responsible for new versions since 1.78, helped by some other people, including: <br/>
+ filipg [at] paranoia.com wrote the History buffer searching to 1.79. <br/>
+ Arnaldo Carvalho de Melo (acme [at] conectiva.com.br) did the internationalization and the Brazilian Portuguese translations. <br/>
+ Jim Seymour (jseymour [at] jimsun.LinxNet.com) wrote the multiple modem support and the filename selection window used since 1.80. <br/>
+ Tomohiro Kubota (kubota [at] debian.or.jp) wrote the Japanese translations and the citation facility, and did some fixes. <br/>
+ Gael Queri (gqueri [at] mail.dotcom.fr) wrote the French translations. <br/>
+ Arkadiusz Miskiewicz (misiek [at] pld.org.pl) wrote the Polish translations. <br/>
+ Kim Soyoung (nexti [at] chollian.net) wrote the Korean translations. <br/>
  Jork Loeser (jork.loeser [at] inf.tu-dresden.de) provided the socket extension. </p>
 <p> Most of this man page is copied, with corrections, from the original minicom README, but some pieces and the corrections are by Michael K. Johnson. </p>
 <p> Jukka Lahtinen (walker [at] netsonic.fi) has added some information of the changes made after version 1.75. </p>

@@ -25,8 +25,8 @@ description: "adduser, addgroup – add a user or group to the system"
 <p> By default, each user in Debian GNU/Linux is given a corresponding group with the same name. Usergroups allow group writable directories to be easily maintained by placing the appropriate users in the new group, setting the set-group-ID bit in the directory, and ensuring that all users use a umask of 002. If this option is turned off by setting <code>USERGROUPS</code> to <i>no</i>, all users&#8217; GIDs are set to <code>USERS_GID</code>. Users&#8217; primary groups can also be overridden from the command line with the <code>&#8211;gid</code> or <code>&#8211;ingroup</code> options to set the group by id or name, respectively. Also, users can be added to one or more groups defined in adduser.conf either by setting ADD_EXTRA_GROUPS to 1 in adduser.conf, or by passing <code>&#8211;add_extra_groups </code> on the commandline. </p>
 <p> <code>adduser</code> will create a home directory subject to <code>DHOME</code>, <code>GROUPHOMES</code>, and <code>LETTERHOMES</code>. The home directory can be overridden from the command line with the <code>&#8211;home</code> option, and the shell with the <code>&#8211;shell</code> option. The home directory&#8217;s set-group-ID bit is set if <code>USERGROUPS</code> is <i>yes</i> so that any files created in the user&#8217;s home directory will have the correct group. </p>
 <p> <code>adduser</code> will copy files from <code>SKEL</code> into the home directory and prompt for finger (gecos) information and a password. The gecos may also be set with the <code>&#8211;gecos</code> option. With the <code>&#8211;disabled-login</code> option, the account will be created but will be disabled until a password is set. The <code>&#8211;disabled-password</code> option will not set a password, but login is still possible (for example with SSH RSA keys). To set up an encrypted home directory for the new user, add the <code>&#8211;encrypt-home</code> option. For more information, refer to the -b option of <code><a href="/docs/linux/man/1-ecryptfs-setup-private/">ecryptfs-setup-private</a>(1).</code> </p>
-<p> If the file <code>/usr/local/sbin/adduser.local</code> exists, it will be executed after the user account has been set up in order to do any local setup. The arguments passed to <code>adduser.local</code> are:<br />
- username uid gid home-directory<br />
+<p> If the file <code>/usr/local/sbin/adduser.local</code> exists, it will be executed after the user account has been set up in order to do any local setup. The arguments passed to <code>adduser.local</code> are:<br/>
+ username uid gid home-directory<br/>
  The environment variable VERBOSE is set according to the following rule:</p>
 <dl>
 <dt>0 if</dt>
@@ -100,7 +100,7 @@ description: "adduser, addgroup – add a user or group to the system"
 <dt><code>0 </code></dt>
 <dd>The user exists as specified. This can have 2 causes: The user was created by adduser or the user was already present on the system before adduser was invoked. If adduser was returning 0 , invoking adduser a second time with the same parameters as before also returns 0.</dd>
 <dt><code>1</code></dt>
-<dd>Creating the user or group failed because it was already present with other UID/GID than specified. The username or groupname was rejected because of a mismatch with the configured regular expressions, see <a href="/docs/linux/man/5-adduser-conf/">adduser.conf</a>(5). Adduser has been aborted by a signal.<br />
+<dd>Creating the user or group failed because it was already present with other UID/GID than specified. The username or groupname was rejected because of a mismatch with the configured regular expressions, see <a href="/docs/linux/man/5-adduser-conf/">adduser.conf</a>(5). Adduser has been aborted by a signal.<br/>
  Or for many other yet undocumented reasons which are printed to console then. You may then consider to remove <code>&#8211;quiet</code> to make adduser more verbose. </dd>
 </dl>
 <h2>Files</h2>
@@ -113,6 +113,6 @@ description: "adduser, addgroup – add a user or group to the system"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-adduser-conf/">adduser.conf</a></code>(5), <code><a href="/docs/linux/man/8-deluser/">deluser</a></code>(8), <code><a href="/docs/linux/man/8-groupadd/">groupadd</a></code>(8), <code><a href="/docs/linux/man/8-useradd/">useradd</a></code>(8), <code><a href="/docs/linux/man/8-usermod/">usermod</a></code>(8), Debian Policy 9.2.2. </p>
 <h2>Copyright</h2>
-<p>Copyright (C) 1997, 1998, 1999 Guy Maor. Modifications by Roland Bauerschmidt and Marc Haber. Additional patches by Joerg Hoh and Stephen Gran.<br />
- Copyright (C) 1995 Ted Hajek, with a great deal borrowed from the original Debian <code>adduser</code><br />
+<p>Copyright (C) 1997, 1998, 1999 Guy Maor. Modifications by Roland Bauerschmidt and Marc Haber. Additional patches by Joerg Hoh and Stephen Gran.<br/>
+ Copyright (C) 1995 Ted Hajek, with a great deal borrowed from the original Debian <code>adduser</code><br/>
  Copyright (C) 1994 Ian Murdock. <code>adduser</code> is free software; see the GNU General Public Licence version 2 or later for copying conditions. There is <i>no</i> warranty.</p>

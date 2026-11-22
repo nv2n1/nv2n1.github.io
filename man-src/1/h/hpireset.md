@@ -14,7 +14,7 @@ description: "hpireset – This sample openhpi application exercises HPI Reset M
 hpireset[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-r - w - h - X] hpireset[--domain nn][--host = host[:port]][--cfgfile = file][--hard-- warm-- help-- debug]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> hpireset searches the Resource Presence Table (<font SIZE="-1">RPT</font>) for resources with Reset Capability. It sends the requested reset action to all resources with <font SIZE="-1">SAHPI_CAPABILITY_RESET.</font> </p>
+<p> hpireset searches the Resource Presence Table (RPT) for resources with Reset Capability. It sends the requested reset action to all resources with SAHPI_CAPABILITY_RESET. </p>
 <p> If no domain is selected, hpireset uses a session with the default domain. The selected domain id must be configured via the openhpidclient.conf file specified in the environment.</p>
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>
@@ -32,7 +32,7 @@ hpireset[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-r - w - h - X] hpireset[--do
 <dt><code>-X</code>, <code>&#8211;debug</code></dt>
 <dd> Display debug messages</dd>
 <dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dd> Open session to the domain served by the daemon at the specified URL (host:port). This option overrides the OPENHPI_DAEMON_HOST and OPENHPI_DAEMON_PORT environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
 <dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
 <dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SEE ALSO</h2>

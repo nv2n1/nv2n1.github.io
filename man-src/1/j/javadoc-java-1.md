@@ -328,8 +328,8 @@ apidocs                             Top directory
 </code></pre>
 <h3>Generated API Declarations</h3>
 <p> The Javadoc tool generates a declaration at the start of each class, interface, field, constructor, and method description for that API item. For example, the declaration for the <i>Boolean</i> class is: </p>
-<p> <i>public final class Boolean</i><br />
- <i>extends Object</i><br />
+<p> <i>public final class Boolean</i><br/>
+ <i>extends Object</i><br/>
  <i>implements Serializable</i> </p>
 <p> and the declaration for the <i>Boolean.valueOf</i>method is: </p>
 <p> <i>public static Boolean valueOf(String s)</i> </p>
@@ -350,14 +350,14 @@ apidocs                             Top directory
 <code>/** This comment takes up only one line. */</code>
 </pre>
 <p> <code>Placement of comments</code> &#8211; Documentation comments are recognized only when placed immediately before class, interface, constructor, method, or field declarations &#8212; see the class example, method example, and field example. Documentation comments placed in the body of a method are ignored. Only one documentation comment per declaration statement is recognized by the Javadoc tool. </p>
-<p> A common mistake is to put an <i>import</i> statement between the class comment and the class declaration. Avoid this, as the Javadoc tool will ignore the class comment.<br />
-/**<br />
- * This is the class comment for the class Whatever.<br />
- */<br />
-import com.sun; // MISTAKE &#8211; Important not to put import statement here<br />
-public<br />
-class Whatever<br />
-{<br />
+<p> A common mistake is to put an <i>import</i> statement between the class comment and the class declaration. Avoid this, as the Javadoc tool will ignore the class comment.<br/>
+/**<br/>
+ * This is the class comment for the class Whatever.<br/>
+ */<br/>
+import com.sun; // MISTAKE &#8211; Important not to put import statement here<br/>
+public<br/>
+class Whatever<br/>
+{<br/>
 }</p>
 <p> <code>A doc comment is composed of a </code><tt>main description</tt><code> followed by a </code><tt>tag section</tt> &#8211; The <i>main description</i> begins after the starting delimiter <i>/**</i> and continues until the tag section. The <i>tag section</i> starts with the first block tag, which is defined by the first <i>@</i> character that begins a line (ignoring leading asterisks, white space, and leading separator <i>/**</i>). It is possible to have a comment with only a tag section and no main description. The main description cannot continue after the tag section begins. The argument to a tag can span multiple lines. There can be any number of tags &#8212; some types of tags can be repeated while others cannot. For example, this <i>@see</i> starts the tag section: </p>
 <pre>
@@ -366,9 +366,9 @@ class Whatever<br />
  * @see java.lang.Object
  */</code>
 </pre>
-<p> <code>Block tags and in-line tags</code> &#8211; A <i>tag</i> is a special keyword within a doc comment that the Javadoc tool can process. There are two kinds of tags: block tags, which appear as <i>@tag</i> (also known as &quot;standalone tags&quot;), and in-line tags, which appear within curly braces, as <i>{@tag}</i>. To be interpreted, a block tag must appear at the beginning of a line, ignoring leading asterisks, white space, and separator (<i>/**</i>). This means you can use the <i>@</i> character elsewhere in the text and it will not be interpreted as the start of a tag. If you want to start a line with the <i>@</i> character and not have it be interpreted, use the HTML entity <i>&amp;#064;</i>. Each block tag has associated text, which includes any text following the tag up to, but not including, either the next tag, or the end of the doc comment. This associated text can span multiple lines. An in-line tag is allowed and interpreted anywhere that text is allowed. The following example contains the block tag <i>@deprecated</i> and in-line tag <i>{@link}</i>.<br />
-/**<br />
- * @deprecated  As of JDK 1.1, replaced by {@link #setBounds(int,int,int,int)}<br />
+<p> <code>Block tags and in-line tags</code> &#8211; A <i>tag</i> is a special keyword within a doc comment that the Javadoc tool can process. There are two kinds of tags: block tags, which appear as <i>@tag</i> (also known as &quot;standalone tags&quot;), and in-line tags, which appear within curly braces, as <i>{@tag}</i>. To be interpreted, a block tag must appear at the beginning of a line, ignoring leading asterisks, white space, and separator (<i>/**</i>). This means you can use the <i>@</i> character elsewhere in the text and it will not be interpreted as the start of a tag. If you want to start a line with the <i>@</i> character and not have it be interpreted, use the HTML entity <i>&amp;#064;</i>. Each block tag has associated text, which includes any text following the tag up to, but not including, either the next tag, or the end of the doc comment. This associated text can span multiple lines. An in-line tag is allowed and interpreted anywhere that text is allowed. The following example contains the block tag <i>@deprecated</i> and in-line tag <i>{@link}</i>.<br/>
+/**<br/>
+ * @deprecated  As of JDK 1.1, replaced by {@link #setBounds(int,int,int,int)}<br/>
  */</p>
 <p> <code>Comments are written in HTML</code> &#8211; The text must be written in HTML, in that they should use HTML entities and can use HTML tags. You can use whichever version of HTML your browser supports; we have written the standard doclet to generate HTML 3.2-compliant code elsewhere (outside of the documentation comments) with the inclusion of cascading style sheets and frames. (We preface each generated file with &quot;HTML 4.0&quot; because of the frame sets.) </p>
 <p> For example, entities for the less-than (<i>&lt;</i>) and greater-than (<i>&gt;</i>) symbols should be written <i>&lt;</i> and <i>&gt;</i>. Likewise, the ampersand (<i>&amp;</i>) should be written <i>&amp;</i>. The bold HTML tag <i>&lt;b&gt;</i> is shown in the following example. </p>
@@ -457,52 +457,52 @@ public int x, y;      // Avoid this  </code>
 </dl>
 <p> For information about tags we might introduce in future releases, see <i>Proposed Tags</i> @ <a rel="nofollow" href="http://java.sun.com/j2se/javadoc/proposed-tags.html.">http://java.sun.com/j2se/javadoc/proposed-tags.html.</a> </p>
 <p> The current tags are: </p>
-<p>TagIntroduced in JDK / SDK<br />
-    @author1 .0<br />
-{<br />
-    @code<br />
-}<br />
-1.5<br />
-{<br />
-    @docRoot<br />
-}<br />
-1.3<br />
-    @deprecated1 .0<br />
-    @exception1 .0<br />
-{<br />
-    @inheritDoc<br />
-}<br />
-1.4<br />
-{<br />
-    @link<br />
-}<br />
-1.2<br />
-{<br />
-    @linkplain<br />
-}<br />
-1.4<br />
-{<br />
-    @literal<br />
-}<br />
-1.5<br />
-    @param1 .0<br />
-    @return1 .0<br />
-    @see1 .0<br />
-    @serial1 .2<br />
-    @serialData1 .2<br />
-    @serialField1 .2<br />
-    @since1 .1<br />
-    @throws1 .2<br />
-{<br />
-    @value<br />
-}<br />
-1.4<br />
-    @version1 .0 For custom tags,<br />
+<p>TagIntroduced in JDK / SDK<br/>
+    @author1 .0<br/>
+{<br/>
+    @code<br/>
+}<br/>
+1.5<br/>
+{<br/>
+    @docRoot<br/>
+}<br/>
+1.3<br/>
+    @deprecated1 .0<br/>
+    @exception1 .0<br/>
+{<br/>
+    @inheritDoc<br/>
+}<br/>
+1.4<br/>
+{<br/>
+    @link<br/>
+}<br/>
+1.2<br/>
+{<br/>
+    @linkplain<br/>
+}<br/>
+1.4<br/>
+{<br/>
+    @literal<br/>
+}<br/>
+1.5<br/>
+    @param1 .0<br/>
+    @return1 .0<br/>
+    @see1 .0<br/>
+    @serial1 .2<br/>
+    @serialData1 .2<br/>
+    @serialField1 .2<br/>
+    @since1 .1<br/>
+    @throws1 .2<br/>
+{<br/>
+    @value<br/>
+}<br/>
+1.4<br/>
+    @version1 .0 For custom tags,<br/>
     see the &#8211; tag option.</p>
-<p>              @author &amp;nbsp;<br />
+<p>              @author &amp;nbsp;<br/>
 name &#8211; text Adds an &#8220;Author&#8221; entry with the specified name &#8211; text to the generated docs when the &#8211; author option is used.A doc comment may contain multiple @author tags.You can specify one name per @author tag or multiple names per tag.In the former case, the Javadoc tool inserts a comma(, ) and space between names.In the latter case, the entire text is simply copied to the generated document without being parsed.Therefore, you can use multiple names per line if you want a localized name separator other than comma.</p>
-<p>                                                                                                                                                                                                                                                                                                                                                                                                                                            For more details,<br />
-    see Where Tags Can Be Used and writing @author tags @<br />
+<p>                                                                                                                                                                                                                                                                                                                                                                                                                                            For more details,<br/>
+    see Where Tags Can Be Used and writing @author tags @<br/>
  <a rel="nofollow" href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html#@author.">http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html#@author.</a> </p>
 <dl>
 <dl>
@@ -515,9 +515,9 @@ name &#8211; text Adds an &#8220;Author&#8221; entry with the specified name &#8
 <dl>
 <dl>
 <dt>o</dt>
-<dd> For Javadoc 1.2 and later, use a <i>{@link}</i> tag. This creates the link in-line, where you want it. For example:<br />
-/**<br />
- * @deprecated  As of JDK 1.1, replaced by {@link #setBounds(int,int,int,int)}<br />
+<dd> For Javadoc 1.2 and later, use a <i>{@link}</i> tag. This creates the link in-line, where you want it. For example:<br/>
+/**<br/>
+ * @deprecated  As of JDK 1.1, replaced by {@link #setBounds(int,int,int,int)}<br/>
  */</dd>
 <dt>o</dt>
 <dd> For Javadoc 1.1, the standard format is to create a <i>@see</i> tag (which cannot be in-line) for each <i>@deprecated</i> tag.</dd></dl>
@@ -597,11 +597,11 @@ name &#8211; text Adds an &#8220;Author&#8221; entry with the specified name &#8
 <dd> Inserts an in-line link with visible text <i>label</i> that points to the documentation for the specified package, class or member name of a referenced class. This tag is valid in all doc comments: overview, package, class, interface, constructor, method and field, including the text portion of any tag (such as @return, @param and @deprecated).</dd></dl>
 <p> This tag is very simliar to <i>@see</i> &#8212; both require the same references and accept exactly the same syntax for <i>package.class</i><i>#</i><i>member</i> and <i>label</i>. The main difference is that <i>{@link}</i> generates an in-line link rather than placing the link in the &quot;See Also&quot; section. Also, the <i>{@link}</i> tag begins and ends with curly braces to separate it from the rest of the in-line text. If you need to use &quot;}&quot; inside the label, use the HTML entity notation &amp;#125; </p>
 <p> There is no limit to the number of <i>{@link}</i> tags allowed in a sentence. You can use this tag in the main description part of any documentation comment or in the text portion of any tag (such as @deprecated, @return or @param). </p>
-<p> For example, here is a comment that refers to the <i>getComponentAt(int, int)</i> method:<br />
-Use the<br />
-{<br />
-    @link #getComponentAt(int, int) getComponentAt<br />
-}<br />
+<p> For example, here is a comment that refers to the <i>getComponentAt(int, int)</i> method:<br/>
+Use the<br/>
+{<br/>
+    @link #getComponentAt(int, int) getComponentAt<br/>
+}<br/>
 method.</p>
 <p> From this, the standard doclet would generate the following HTML (assuming it refers to another class in the same package): </p>
 <pre>
@@ -736,35 +736,35 @@ method.</p>
 <p> <code>Specifying a name</code> &#8211; This <i>package.class</i><i>#</i><i>member</i> name can be either fully-qualified, such as <i>java.lang.String#toUpperCase()</i> or not, such as <i>String#toUpperCase()</i> or <i>#toUpperCase()</i>. If less than fully-qualified, the Javadoc tool uses the normal Java compiler search order to find it, further described below in Search order for @see. The name can contain whitespace within parentheses, such as between method arguments. </p>
 <p> Of course the advantage of providing shorter, &quot;partially-qualified&quot; names is that they are shorter to type and there is less clutter in the source code. The following table shows the different forms of the name, where <i>Class</i> can be a class or interface, <i>Type</i> can be a class, interface, array, or primitive, and <i>method</i> can be a method or constructor. </p>
 <p>The following notes apply to the above table: </p>
-<p>oThe first set of forms (with no class or package) will cause the Javadoc tool to search only through the current class&#8217;s hierarchy. It will find a member of the current class or interface, one of its superclasses or superinterfaces, or one of its enclosing classes or interfaces (search steps 1-3). It will not search the rest of the current package or other packages (search steps 4-5).<br />
-oIf any method or constructor is entered as a name with no parentheses, such as getValue, and if there is no field with the same name, the Javadoc tool will correctly create a link to it, but will print a warning message reminding you to add the parentheses and arguments. If this method is overloaded, the Javadoc tool will link to the first method its search encounters, which is unspecified.<br />
-oNested classes must be specified as outer.inner, not simply inner, for all forms.<br />
+<p>oThe first set of forms (with no class or package) will cause the Javadoc tool to search only through the current class&#8217;s hierarchy. It will find a member of the current class or interface, one of its superclasses or superinterfaces, or one of its enclosing classes or interfaces (search steps 1-3). It will not search the rest of the current package or other packages (search steps 4-5).<br/>
+oIf any method or constructor is entered as a name with no parentheses, such as getValue, and if there is no field with the same name, the Javadoc tool will correctly create a link to it, but will print a warning message reminding you to add the parentheses and arguments. If this method is overloaded, the Javadoc tool will link to the first method its search encounters, which is unspecified.<br/>
+oNested classes must be specified as outer.inner, not simply inner, for all forms.<br/>
 oAs stated, the hash character (#), rather than a dot (.) separates a member from its class. This enables the Javadoc tool to resolve ambiguities, since the dot also separates classes, nested classes, packages, and subpackages. However, the Javadoc tool is generally lenient and will properly parse a dot if you know there is no ambiguity, though it will print a warning. </p>
-<p>Search order for @see &#8211; the Javadoc tool will process a @see tag that appears in a source file (.java), package file (package.html or package-info.java) or overview file (overview.html). In the latter two files, you must fully-qualify the name you supply with @see. In a source file, you can specify a name that is fully-qualified or partially-qualified.<br />
+<p>Search order for @see &#8211; the Javadoc tool will process a @see tag that appears in a source file (.java), package file (package.html or package-info.java) or overview file (overview.html). In the latter two files, you must fully-qualify the name you supply with @see. In a source file, you can specify a name that is fully-qualified or partially-qualified.<br/>
 When the Javadoc tool encounters a @see tag in a .java file that is not fully qualified, it searches for the specified name in the same order as the Java compiler would (except the Javadoc tool will not detect certain namespace ambiguities, since it assumes the source code is free of these errors). This search order is formally defined in the Java Language Specification. The Javadoc tool searches for that name through all related and imported classes and packages. In particular, it searches in this order: </p>
-<p>1.the current class or interface<br />
-2.any enclosing classes and interfaces, searching closest first<br />
-3.any superclasses and superinterfaces, searching closest first<br />
-4.the current package<br />
+<p>1.the current class or interface<br/>
+2.any enclosing classes and interfaces, searching closest first<br/>
+3.any superclasses and superinterfaces, searching closest first<br/>
+4.the current package<br/>
 5.any imported packages, classes and interfaces, searching in the order of the import statement </p>
-<p>The Javadoc tool continues to search recursively through steps 1-3 for each class it encounters until it finds a match. That is, after it searches through the current class and its enclosing class E, it will search through E&#8217;s superclasses before E&#8217;s enclosing classes.  In steps 4 and 5, the Javadoc tool does not search classes or interfaces within a package in any specified order (that order depends on the particular compiler). In step 5, the Javadoc tool looks in java.lang, since that is automatically imported by all programs.<br />
-The Javadoc tool does not necessarily look in subclasses, nor will it look in other packages even if their documentation is being generated in the same run. For example, if the @see tag is in the java.awt.event.KeyEvent class and refers to a name in the java.awt package, javadoc does not look in that package unless that class imports it.<br />
-How a name is displayed &#8211; If label is omitted, then package.class.member appears. In general, it is suitably shortened relative to the current class and package. By &#8220;shortened&#8221;, we mean the Javadoc tool displays only the minimum name necessary. For example, if the String.toUpperCase() method contains references to a member of the same class and to a member of a different class, the class name is displayed only in the latter case, as shown in the following table.<br />
+<p>The Javadoc tool continues to search recursively through steps 1-3 for each class it encounters until it finds a match. That is, after it searches through the current class and its enclosing class E, it will search through E&#8217;s superclasses before E&#8217;s enclosing classes.  In steps 4 and 5, the Javadoc tool does not search classes or interfaces within a package in any specified order (that order depends on the particular compiler). In step 5, the Javadoc tool looks in java.lang, since that is automatically imported by all programs.<br/>
+The Javadoc tool does not necessarily look in subclasses, nor will it look in other packages even if their documentation is being generated in the same run. For example, if the @see tag is in the java.awt.event.KeyEvent class and refers to a name in the java.awt package, javadoc does not look in that package unless that class imports it.<br/>
+How a name is displayed &#8211; If label is omitted, then package.class.member appears. In general, it is suitably shortened relative to the current class and package. By &#8220;shortened&#8221;, we mean the Javadoc tool displays only the minimum name necessary. For example, if the String.toUpperCase() method contains references to a member of the same class and to a member of a different class, the class name is displayed only in the latter case, as shown in the following table.<br/>
 Use -noqualifier to globally remove the package names.</p>
-<p>Type of ReferenceDisplays As<br />
-@see String#toLowerCase()<br />
+<p>Type of ReferenceDisplays As<br/>
+@see String#toLowerCase()<br/>
 Examples of @see</p>
 <p>The comment to the right shows how the name would be displayed if the @see tag is in a class in another package, such as java.applet.Applet. </p>
-<p>                                           See also:<br />
-@see java.lang.String                   //  String<br />
-@see java.lang.String The String class  //  The String class<br />
-@see String                             //  String<br />
-@see String#equals(Object)              //  String.equals(Object)<br />
-@see String#equals                      //  String.equals(java.lang.Object)<br />
-@see java.lang.Object#wait(long)        //  java.lang.Object.wait(long)<br />
-@see Character#MAX_RADIX                //  Character.MAX_RADIX<br />
-@see &lt;a href=&#8221;spec.html&#8221;&gt;Java Spec&lt;/a&gt;  //  Java Spec<br />
-@see &#8220;The Java Programming Language&#8221;    //  &#8220;The Java Programming Language&#8221;<br />
+<p>                                           See also:<br/>
+@see java.lang.String                   //  String<br/>
+@see java.lang.String The String class  //  The String class<br/>
+@see String                             //  String<br/>
+@see String#equals(Object)              //  String.equals(Object)<br/>
+@see String#equals                      //  String.equals(java.lang.Object)<br/>
+@see java.lang.Object#wait(long)        //  java.lang.Object.wait(long)<br/>
+@see Character#MAX_RADIX                //  Character.MAX_RADIX<br/>
+@see &lt;a href=&#8221;spec.html&#8221;&gt;Java Spec&lt;/a&gt;  //  Java Spec<br/>
+@see &#8220;The Java Programming Language&#8221;    //  &#8220;The Java Programming Language&#8221;<br/>
  You can extend <i>@see</i> to link to classes not being documented by using the <i>-link</i> option. </p>
 <p> For more details, see <i>writing @see tags</i> @ <a rel="nofollow" href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html#@see.">http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html#@see.</a></dl>
 </dl>
@@ -818,13 +818,13 @@ Examples of @see</p>
         </code>
 </pre>
 </dl>
-<p> When used with argument <i>package.class#field</i> in any doc comment, it displays the value of the specified constant:<br />
-/**<br />
- * Evaluates the script starting with {@value #SCRIPT_START}.<br />
- */<br />
-public<br />
-String evalScript(String script)<br />
-{<br />
+<p> When used with argument <i>package.class#field</i> in any doc comment, it displays the value of the specified constant:<br/>
+/**<br/>
+ * Evaluates the script starting with {@value #SCRIPT_START}.<br/>
+ */<br/>
+public<br/>
+String evalScript(String script)<br/>
+{<br/>
 }</p>
 <p> The argument <i>package.class#field</i> takes a form identical to that of the @see argument, except that the member must be a static field. </p>
 <p> These values of these constants are also displayed on the <i>Constant Field Values</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/api/constant-values.html">http://docs.oracle.com/javase/7/docs/api/constant-values.html</a> page. </p>
@@ -902,23 +902,23 @@ String evalScript(String script)<br />
 <dt>o</dt>
 <dd> <i>{@docRoot}</i></dd></dl>
 </dl>
-<p> <code>An example of a class comment:</code><br />
-/**<br />
- * A class representing a window on the screen.<br />
- * For example:<br />
- * &lt;pre&gt;<br />
- *    Window win = new Window(parent);<br />
- *    win.show();<br />
- * &lt;/pre&gt;<br />
- *<br />
- * @author  Sami Shaio<br />
- * @version 1.13, 06/08/06<br />
- * @see     java.awt.BaseWindow<br />
- * @see     java.awt.Button<br />
- */<br />
-class Window extends BaseWindow<br />
-{<br />
-    &#8230;<br />
+<p> <code>An example of a class comment:</code><br/>
+/**<br/>
+ * A class representing a window on the screen.<br/>
+ * For example:<br/>
+ * &lt;pre&gt;<br/>
+ *    Window win = new Window(parent);<br/>
+ *    win.show();<br/>
+ * &lt;/pre&gt;<br/>
+ *<br/>
+ * @author  Sami Shaio<br/>
+ * @version 1.13, 06/08/06<br/>
+ * @see     java.awt.BaseWindow<br/>
+ * @see     java.awt.Button<br/>
+ */<br/>
+class Window extends BaseWindow<br/>
+{<br/>
+    &#8230;<br/>
 }</p>
 <h3>Field Documentation Tags</h3>
 <p> The following are the tags that can appear in </p>
@@ -1249,12 +1249,12 @@ Options shown in <i>italic</i> are the Javadoc core options, which are provided 
 <dl>
 <dl>
 <dt>o</dt>
-<dd> In any kind of <i>import</i> statement: by wildcard import, import explicitly by name, or automatically import for <i>java.lang.*</i>. For example, this would suffice:<br />
- <i>import java.io.*;</i><br />
+<dd> In any kind of <i>import</i> statement: by wildcard import, import explicitly by name, or automatically import for <i>java.lang.*</i>. For example, this would suffice:<br/>
+ <i>import java.io.*;</i><br/>
  In 1.3.x and 1.2.x, only an explicit import by name works &#8212; a wildcard import statement does not work, nor does the automatic import <i>java.lang.*</i>.</dd>
 <dt>o</dt>
-<dd> In a declaration:<br />
- <i>void foo(File f) {}</i><br />
+<dd> In a declaration:<br/>
+ <i>void foo(File f) {}</i><br/>
  The reference and be in the return type or parameter type of a method, constructor, field, class or interface, or in an <i>implements</i>, <i>extends</i> or <i>throws</i> statement.</dd></dl>
 </dl>
 <p> An important corollary is that when you use the <i>-link</i> option, there may be many links that unintentionally do not appear due to this constraint. (The text would appear without a hypertext link.) You can detect these by the warnings they emit. The most innocuous way to properly reference a class and thereby add the link would be to import that class, as shown above. </p>
@@ -1298,8 +1298,8 @@ Options shown in <i>italic</i> are the Javadoc core options, which are provided 
 <p> <code>Example using relative links to the external docs</code> &#8211; It&#8217;s not very common to use <i>-linkoffline</i> with relative paths, for the simple reason that <i>-link</i> usually suffices. When using <i>-linkoffline</i>, the <i>package-list</i> file is generally local, and when using relative links, the file you are linking to is also generally local. So it is usually unnecessary to give a different path for the two arguments to <i>-linkoffline</i>. When the two arguments are identical, you can use <i>-link</i>. See the <i>-link</i> relative example. </p>
 <p> <code>Manually Creating a </code><tt>package-list</tt><code> File</code> &#8211; If a <i>package-list</i> file does not yet exist, but you know what package names your document will link to, you can create your own copy of this file by hand and specify its path with <i>packagelistLoc</i>. An example would be the previous case where the package list for <i>com.spipackage</i> did not exist when <i>com.apipackage</i> was first generated. This technique is useful when you need to generate documentation that links to new external documentation whose package names you know, but which is not yet published. This is also a way of creating <i>package-list</i> files for packages generated with Javadoc 1.0 or 1.1, where <i>package-list</i> files were not generated. Likewise, two companies can share their unpublished <i>package-list</i> files, enabling them to release their cross-linked documentation simultaneously. </p>
 <p> <code>Linking to Multiple Documents</code> &#8211; You can include <i>-linkoffline</i> once for each generated document you want to refer to (each option is shown on a separate line for clarity): </p>
-<p> <i>% </i><tt>javadoc -linkoffline</tt> <i>extdocURL1</i> <i>packagelistLoc1</i> <i>\</i><br />
- <i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></i><tt>-linkoffline</tt> <i>extdocURL2</i> <i>packagelistLoc2</i> <i>\</i><br />
+<p> <i>% </i><tt>javadoc -linkoffline</tt> <i>extdocURL1</i> <i>packagelistLoc1</i> <i>\</i><br/>
+ <i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></i><tt>-linkoffline</tt> <i>extdocURL2</i> <i>packagelistLoc2</i> <i>\</i><br/>
  <i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8230;</i> </p>
 <p> <code>Updating docs</code> &#8211; Another use for <i>-linkoffline</i> option is useful if your project has dozens or hundreds of packages, if you have already run javadoc on the entire tree, and now, in a separate run, you want to quickly make some small changes and re-run javadoc on just a small portion of the source tree. This is somewhat of a hack in that it works properly only if your changes are only to doc comments and not to declarations. If you were to add, remove or change any declarations from the source code, then broken links could show up in the index, package tree, inherited member lists, use page, and other places. </p>
 <p> First, you create a new destination directory (call it <i>update</i>) for this new small run. Let us say the original destination directory was named <i>html</i>. In the simplest example, cd to the parent of <i>html</i>. Set the first argument of <i>-linkoffline</i> to the current directory &quot;.&quot; and set the second argument to the relative path to <i>html</i>, where it can find <i>package-list</i>, and pass in only the package names of the packages you want to update: </p>
@@ -1404,13 +1404,13 @@ Options shown in <i>italic</i> are the Javadoc core options, which are provided 
 <p> The colon (<tt>:</tt>) is always the separator. To use a colon in <i>tagname</i>, see Use of Colon in Tag Name. </p>
 <p> The <i>-tag</i> option outputs the tag&#8217;s heading <i>taghead</i> in bold, followed on the next line by the text from its single argument, as shown in the example below. Like any block tag, this argument&#8217;s text can contain inline tags, which are also interpreted. The output is similar to standard one-argument tags, such as <i>@return</i> and <i>@author</i>. Omitting <i>taghead</i> causes <i>tagname</i> to appear as the heading. </p>
 <p> <code>Placement of tags</code> &#8211; The <tt>Xaoptcmf</tt> part of the argument determines where in the source code the tag is allowed to be placed, and whether the tag can be disabled (using <i>X</i>). You can supply either <tt>a</tt>, to allow the tag in all places, or any combination of the other letters: </p>
-<p> <tt>X</tt> (disable tag)<br />
- <tt>a</tt> (all)<br />
- <tt>o</tt> (overview)<br />
- <tt>p</tt> (packages)<br />
- <tt>t</tt> (types, that is classes and interfaces)<br />
- <tt>c</tt> (constructors)<br />
- <tt>m</tt> (methods)<br />
+<p> <tt>X</tt> (disable tag)<br/>
+ <tt>a</tt> (all)<br/>
+ <tt>o</tt> (overview)<br/>
+ <tt>p</tt> (packages)<br/>
+ <tt>t</tt> (types, that is classes and interfaces)<br/>
+ <tt>c</tt> (constructors)<br/>
+ <tt>m</tt> (methods)<br/>
  <tt>f</tt> (fields) </p>
 <p> <code>Examples of single tags</code> &#8211; An example of a tag option for a tag that can be used anywhere in the source code is: </p>
 <pre>

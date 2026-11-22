@@ -11,7 +11,7 @@ description: "clange.f –"
 <p> clange.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>clange</code> (NORM, M, N, A, LDA, WORK)<br />
+<p> REAL function <code>clange</code> (NORM, M, N, A, LDA, WORK)<br/>
  <i></i><code>CLANGE</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function clange (characterNORM, integerM, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )WORK)</h3>

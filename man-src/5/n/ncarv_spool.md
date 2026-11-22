@@ -9,7 +9,7 @@ description: "ncarv_spool – spooled device configuration table for interactive
 
 <p>ncarv_spool &#8211; spooled device configuration table for interactive metafile translator <code>ictrans</code></p>
 <h2>Synopsis</h2>
-<p><code>$NCARG_ROOT/lib/ncarg/ncarv_spool</code><br />
+<p><code>$NCARG_ROOT/lib/ncarg/ncarv_spool</code><br/>
  <code>~/.ncarv_spool</code></p>
 <h2>Description</h2>
 <p>The <code>ncarv_spool</code> file contains definitions for spooled devices to be used by <code>ictrans</code>. Each definition describes a rule used for sending a set of metafile frames to a spooled device. </p>
@@ -50,6 +50,6 @@ sunraster : -d xwd -geom 1152x900 : | x11tosun &gt; sunfile</pre>
 <p><code>ctrans(1NCARG)</code>, <code>ictrans(1NCARG)</code> </p>
 <p> Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 1987-2009<br />
+<p>Copyright (C) 1987-2009<br/>
  University Corporation for Atmospheric Research </p>
 <p> The use of this Software is governed by a License Agreement.</p>

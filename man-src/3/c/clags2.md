@@ -11,7 +11,7 @@ description: "clags2.f –"
 <p> clags2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clags2</code> (UPPER, A1, A2, A3, B1, B2, B3, CSU, SNU, CSV, SNV, CSQ, SNQ)<br />
+<p> subroutine <code>clags2</code> (UPPER, A1, A2, A3, B1, B2, B3, CSU, SNU, CSV, SNV, CSQ, SNQ)<br/>
  <i></i><code>CLAGS2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clags2 (logicalUPPER, realA1, complexA2, realA3, realB1, complexB2, realB3, realCSU, complexSNU, realCSV, complexSNV, realCSQ, complexSNQ)</h3>

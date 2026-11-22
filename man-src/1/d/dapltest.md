@@ -66,59 +66,59 @@ description: "dapltest – test for the Direct Access Programming Library (DAPL)
                         No default.
 </code></pre>
 <p> <code>Usage &#8211; Transaction test client</code> </p>
-<p>    dapltest [Common_Args] [ -s server_name ]<br />
-             [ -t threads ] [ -w endpoints ] [ -i iterations ] [ -Q ]<br />
-             [ -V ] [ -P ] OPclient OPserver [ op3,<br />
-    Transaction testing (-T T) transfers a variable amount of data between<br />
-    client and server.  The data transfer can be described as a sequence of<br />
-    individual operations; that entire sequence is transferred &#8216;iterations&#8217;<br />
-    times by each thread over all of its endpoint(s).<br />
-    The following parameters determine the behavior of the transaction test:<br />
-    -s server_name      Specifies the name or IP address of the server interface.<br />
-                        No default.<br />
-    [ -t threads ]      Specify the number of threads to be used.<br />
-                        Default: 1<br />
-    [ -w endpoints ]    Specify the number of connected endpoints per thread.<br />
-                        Default: 1<br />
-    [ -i iterations ]   Specify the number of times the entire sequence<br />
-                        of data transfers will be made over each endpoint.<br />
-                        Default: 1000<br />
-    [ -Q ]              Funnel completion events into a CNO.<br />
-                        Default: use EVDs<br />
-    [ -V ]              Validate the data being transferred.<br />
-                        Default: ignore the data<br />
-    [ -P ]              Turn on DTO completion polling<br />
-                        Default: off<br />
-    OP1 OP2 [ OP3, &#8230; ]<br />
-                        A single transaction (OPx) consists of:<br />
-                        server|client   Indicates who initiates the<br />
-                                        data transfer.<br />
-                        SR|RR|RW        Indicates the type of transfer:<br />
-                                        SR  send/recv<br />
-                                        RR  RDMA read<br />
-                                        RW  RDMA write<br />
-                        Defaults: none<br />
-                        [ seg_size [ num_segs ] ]<br />
-                                        Indicates the amount and format<br />
-                                        of the data to be transferred.<br />
-                                        Default:  4096  1<br />
-                                                  (i.e., 1 4KB buffer)<br />
-                        [ -f ]          For SR transfers only, indicates<br />
-                                        that a client&#8217;s send transfer<br />
-                                        completion should be reaped when<br />
-                                        the next recv completion is reaped.<br />
-                                        Sends and receives must be paired<br />
-                                        (one client, one server, and in that<br />
-                                        order) for this option to be used.<br />
-    Restrictions:<br />
-    Due to the flow control algorithm used by the transaction test, there<br />
-    must be at least one SR OP for both the client and the server.<br />
-    Requesting data validation (-V) causes the test to automatically append<br />
-    three OPs to those specified. These additional operations provide<br />
-    synchronization points during each iteration, at which all user-specified<br />
-    transaction buffers are checked. These three appended operations satisfy<br />
-    the &#8220;one SR in each direction&#8221; requirement.<br />
-    The transaction OP list is printed out if -d is supplied.<br />
+<p>    dapltest [Common_Args] [ -s server_name ]<br/>
+             [ -t threads ] [ -w endpoints ] [ -i iterations ] [ -Q ]<br/>
+             [ -V ] [ -P ] OPclient OPserver [ op3,<br/>
+    Transaction testing (-T T) transfers a variable amount of data between<br/>
+    client and server.  The data transfer can be described as a sequence of<br/>
+    individual operations; that entire sequence is transferred &#8216;iterations&#8217;<br/>
+    times by each thread over all of its endpoint(s).<br/>
+    The following parameters determine the behavior of the transaction test:<br/>
+    -s server_name      Specifies the name or IP address of the server interface.<br/>
+                        No default.<br/>
+    [ -t threads ]      Specify the number of threads to be used.<br/>
+                        Default: 1<br/>
+    [ -w endpoints ]    Specify the number of connected endpoints per thread.<br/>
+                        Default: 1<br/>
+    [ -i iterations ]   Specify the number of times the entire sequence<br/>
+                        of data transfers will be made over each endpoint.<br/>
+                        Default: 1000<br/>
+    [ -Q ]              Funnel completion events into a CNO.<br/>
+                        Default: use EVDs<br/>
+    [ -V ]              Validate the data being transferred.<br/>
+                        Default: ignore the data<br/>
+    [ -P ]              Turn on DTO completion polling<br/>
+                        Default: off<br/>
+    OP1 OP2 [ OP3, &#8230; ]<br/>
+                        A single transaction (OPx) consists of:<br/>
+                        server|client   Indicates who initiates the<br/>
+                                        data transfer.<br/>
+                        SR|RR|RW        Indicates the type of transfer:<br/>
+                                        SR  send/recv<br/>
+                                        RR  RDMA read<br/>
+                                        RW  RDMA write<br/>
+                        Defaults: none<br/>
+                        [ seg_size [ num_segs ] ]<br/>
+                                        Indicates the amount and format<br/>
+                                        of the data to be transferred.<br/>
+                                        Default:  4096  1<br/>
+                                                  (i.e., 1 4KB buffer)<br/>
+                        [ -f ]          For SR transfers only, indicates<br/>
+                                        that a client&#8217;s send transfer<br/>
+                                        completion should be reaped when<br/>
+                                        the next recv completion is reaped.<br/>
+                                        Sends and receives must be paired<br/>
+                                        (one client, one server, and in that<br/>
+                                        order) for this option to be used.<br/>
+    Restrictions:<br/>
+    Due to the flow control algorithm used by the transaction test, there<br/>
+    must be at least one SR OP for both the client and the server.<br/>
+    Requesting data validation (-V) causes the test to automatically append<br/>
+    three OPs to those specified. These additional operations provide<br/>
+    synchronization points during each iteration, at which all user-specified<br/>
+    transaction buffers are checked. These three appended operations satisfy<br/>
+    the &#8220;one SR in each direction&#8221; requirement.<br/>
+    The transaction OP list is printed out if -d is supplied.<br/>
  <code>Usage &#8211; Performance test client</code> </p>
 <pre><code>
     dapltest [Common_Args] -s server_name [ -m p|b ]

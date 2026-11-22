@@ -119,9 +119,9 @@ if the user tries to set a new value which is outside the range. If the range is
 <p>Specify range and step size. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>vmin</i> lower boundary of the interval<br />
- <i>vmax</i> higher boundary of the interval<br />
- <i>vstep</i> step width<br />
+<dd><i>vmin</i> lower boundary of the interval<br/>
+ <i>vmax</i> higher boundary of the interval<br/>
+ <i>vstep</i> step width<br/>
  <i>pageSize</i> page size in steps</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>

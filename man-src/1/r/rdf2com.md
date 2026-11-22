@@ -10,9 +10,9 @@ description: "rdf2bin, rdf2com – convert an RDOFF object file to flat binary"
 
 <p> rdf2bin, rdf2com &#8211; convert an RDOFF object file to flat binary</p>
 <h2>SYNOPSIS</h2>
-<p> <code>rdf2bin</code> [-o <i>relocation-origin</i>] [-p <i>segment-alignment</i>] [-f <i>format</i>] <i>input-file</i> <i>output-file</i><br />
- <code>rdf2com</code> [-p <i>segment-alignment</i>] <i>input-file</i> <i>output-file</i><br />
- <code>rdf2ith</code> [-o <i>relocation-origin</i>] [-p <i>segment-alignment</i>] <i>input-file</i> <i>output-file</i><br />
+<p> <code>rdf2bin</code> [-o <i>relocation-origin</i>] [-p <i>segment-alignment</i>] [-f <i>format</i>] <i>input-file</i> <i>output-file</i><br/>
+ <code>rdf2com</code> [-p <i>segment-alignment</i>] <i>input-file</i> <i>output-file</i><br/>
+ <code>rdf2ith</code> [-o <i>relocation-origin</i>] [-p <i>segment-alignment</i>] <i>input-file</i> <i>output-file</i><br/>
  <code>rdf2srec</code> [-o <i>relocation-origin</i>] [-p <i>segment-alignment</i>] <i>input-file</i> <i>output-file</i></p>
 <h2>OPTIONS</h2>
 <dl>

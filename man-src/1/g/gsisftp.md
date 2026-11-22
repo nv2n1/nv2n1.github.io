@@ -10,9 +10,9 @@ description: "sftp – secure file transfer program"
 
 <p> <code>sftp</code> &#8211; secure file transfer program</p>
 <h2>SYNOPSIS</h2>
-<p> <code>sftp</code> -words [-<code>1246aCfpqrv</code> ] [-<code>B </code><i>buffer_size</i> ] [-<code>b </code><i>batchfile</i> ] [-<code>c </code><i>cipher</i> ] [-<code>D </code><i>sftp_server_path</i> ] [-<code>F </code><i>ssh_config</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>l </code><i>limit</i> ] [-<code>o </code><i>ssh_option</i> ] [-<code>P </code><i>port</i> ] [-<code>R </code><i>num_requests</i> ] [-<code>S </code><i>program</i> ] [-<code>s </code><i>subsystem | sftp_server</i> ] <i>host</i><br />
-<code>sftp</code> [<i>user </i><code>@ </code><i>host </i>[: <i>file &#8230;</i> ] ]<br />
-<code>sftp</code> [<i>user </i><code>@ </code><i>host </i>[: <i>dir </i>[<i>file &#8230;</i> ] ] ]<br />
+<p> <code>sftp</code> -words [-<code>1246aCfpqrv</code> ] [-<code>B </code><i>buffer_size</i> ] [-<code>b </code><i>batchfile</i> ] [-<code>c </code><i>cipher</i> ] [-<code>D </code><i>sftp_server_path</i> ] [-<code>F </code><i>ssh_config</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>l </code><i>limit</i> ] [-<code>o </code><i>ssh_option</i> ] [-<code>P </code><i>port</i> ] [-<code>R </code><i>num_requests</i> ] [-<code>S </code><i>program</i> ] [-<code>s </code><i>subsystem | sftp_server</i> ] <i>host</i><br/>
+<code>sftp</code> [<i>user </i><code>@ </code><i>host </i>[: <i>file &#8230;</i> ] ]<br/>
+<code>sftp</code> [<i>user </i><code>@ </code><i>host </i>[: <i>dir </i>[<i>file &#8230;</i> ] ] ]<br/>
 <code>sftp</code> &#8211;<code>b </code><i>batchfile</i> [<i>user </i><code>@ </code><i>host</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>sftp</code> is an interactive file transfer program, similar to <a href="/docs/linux/man/1-ftp/">ftp</a>(1), which performs all operations over an encrypted <a href="/docs/linux/man/1-ssh/">ssh</a>(1) transport. It may also use many features of ssh, such as public key authentication and compression. <code>sftp</code> connects and logs into the specified <i>host</i> then enters an interactive command mode. </p>

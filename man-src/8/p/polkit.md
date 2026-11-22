@@ -14,7 +14,7 @@ description: "polkit – Authorization Framework"
 <h2>System Architecture</h2>
 <p>The system architecture of PolicyKit is comprised of the <i>Authority</i> (implemented as a service on the system message bus) and a <i>Authentication Agent</i> per user session (provided and started by the user session e.g. GNOME or KDE). Additionally, PolicyKit supports a number of extension points &#8211; specifically, vendors and/or sites can write extensions to completely control authorization policy. In a block diagram, the architecture looks like this: </p>
 <dl>
-<dd>[IMAGE]<font SIZE="-2">[1]</font> </dd>
+<dd>[IMAGE][1] </dd>
 <dl>
 <dd>
 <pre> +-------------------+
@@ -53,12 +53,12 @@ System Context | |
 </dl>
 <p> For convenience, the libpolkit-gobject-1 library wraps the PolicyKit D-Bus API using GObject. However, a mechanism can also use the D-Bus API or the <code><a href="/docs/linux/man/1-pkcheck/">pkcheck</a></code>(1) command to check authorizations. </p>
 <p> The libpolkit-agent-1 library provides an abstraction of the native authentication system, e.g. <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8) and also facilities registration and communication with the PolicyKit D-Bus service. </p>
-<p> See the m[blue]<code>developer documentation</code>m[]<font SIZE="-2">[2]</font> for more information about using and extending PolicyKit. </p>
+<p> See the m[blue]<code>developer documentation</code>m[][2] for more information about using and extending PolicyKit. </p>
 <p> See <code><a href="/docs/linux/man/8-pklocalauthority/">pklocalauthority</a></code>(8) for information about the Local Authority &#8211; the default authority implementation shipped with PolicyKit.</p>
 <h2>Authentication Agents</h2>
 <p>An authentication agent is used to make the user of a session prove that the user of the session really is the user (by authenticating as the user) or an administrative user (by authenticating as a administrator). In order to integrate well with the rest of the user session (e.g. match the look and feel), authentication agents are meant to be provided by the user session that the user uses. For example, an authentication agent may look like this: </p>
 <dl>
-<dd>[IMAGE]<font SIZE="-2">[3]</font> </dd>
+<dd>[IMAGE][3] </dd>
 <dl>
 <dd>
 <pre>+----------------------------------------------------------+
@@ -87,7 +87,7 @@ System Context | |
 </dl>
 <p> If the system is configured without a <i>root</i> account it may allow you to select the administrative user who is authenticating: </p>
 <dl>
-<dd>[IMAGE]<font SIZE="-2">[4]</font> </dd>
+<dd>[IMAGE][4] </dd>
 <dl>
 <dd>
 <pre>+----------------------------------------------------------+
@@ -137,7 +137,7 @@ System Context | |
 <dd>A URL to the project or vendor that is supplying the actions in the XML document. Optional.</dd></dl>
 <p> <i>icon_name</i></p>
 <dl>
-<dd>An icon representing the project or vendor that is supplying the actions in the XML document. The icon name must adhere to the m[blue]<code>Freedesktop.org Icon Naming Specification</code>m[]<font SIZE="-2">[5]</font>. Optional.</dd></dl>
+<dd>An icon representing the project or vendor that is supplying the actions in the XML document. The icon name must adhere to the m[blue]<code>Freedesktop.org Icon Naming Specification</code>m[][5]. Optional.</dd></dl>
 <p> <i>action</i></p>
 <dl>
 <dd>Declares an action. The action name is specified using the id attribute and can only contain the characters [a-z][0-9].- e.g. lower-case ASCII, digits, period and hyphen.</dd></dl>

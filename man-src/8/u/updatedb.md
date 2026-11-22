@@ -65,7 +65,7 @@ description: "updatedb – update a database for mlocate"
 <h2>Security</h2>
 <p>Databases built with <code>&#8211;require-visibility no</code> allow users to find names of files and directories of other users, which they would not otherwise be able to do.</p>
 <h2>Notes</h2>
-<p>The accompanying <code><a href="/docs/linux/man/1-locate/">locate</a></code>(1) utility was designed to be compatible to <code>slocate</code> and attempts to be compatible to <font SIZE="-1">GNU</font> <code>locate</code> where possible. This is not the case for <code>updatedb</code>. </p>
+<p>The accompanying <code><a href="/docs/linux/man/1-locate/">locate</a></code>(1) utility was designed to be compatible to <code>slocate</code> and attempts to be compatible to GNU <code>locate</code> where possible. This is not the case for <code>updatedb</code>. </p>
 <h2>Author</h2>
 <p>Miloslav Trmac &lt;mitr [at] redhat.com&gt;</p>
 <h2>See Also</h2>

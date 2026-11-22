@@ -10,7 +10,7 @@ description: "helcor – Heliocentric correction of CCD output data file(s)"
 
 <p> helcor &#8211; Heliocentric correction of CCD output data file(s)</p>
 <h2>SYNOPSIS</h2>
-<p> <code>helcor </code><i>[options] source_file &#8230;</i> &#8211; batch mode<br />
+<p> <code>helcor </code><i>[options] source_file &#8230;</i> &#8211; batch mode<br/>
  <code>helcor </code><i>[options]</i> &#8211; terminal mode </p>
 <h2>DESCRIPTION</h2>
 <p> The helcor program converts geocentric julian date (jdgeo) to heliocentric date (jdhel) or back. It works either in batch mode, where the table stored in file is converted and saved to another file, or in terminal mode, where the user enters simple commands and queries by keyboard. </p>

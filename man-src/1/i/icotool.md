@@ -24,7 +24,7 @@ description: "icotool – Convert and create Win32 icon and cursor files"
 <dd> This option tells icotool that images from all icon/cursor files given on the command line are to be extracted. Filter options (see below) can be used to control what images that will be extracted.</dd>
 <dt><code>-l, &#8211;list</code></dt>
 <dd> This options tells icotool that images in all given icon/cursor files are to be listed. The output will look something like this: </dd>
-<p>&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=1 &#8211;width=16 &#8211;height=16 &#8211;bit-depth=4 &#8211;palette-size=16<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=1 &#8211;width=16 &#8211;height=16 &#8211;bit-depth=4 &#8211;palette-size=16<br/>
 &nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=2 &#8211;width=32 &#8211;height=32 &#8211;bit-depth=8 &#8211;palette-size=256</p>
 <dt><code>-c, &#8211;create</code></dt>
 <dd> This options tells icotool to create an icon/cursor file using all the PNG files given on the command line, in the order they were specified. The number of bits per pixel used in the icon/cursor file will depend on the number of colors used in the PNG file. (If the PNG image has an indexed palette, it doesn&#8217;t necessarily mean that the same palette will be used in the created icon/cursor file.)</dd>
@@ -66,22 +66,22 @@ description: "icotool – Convert and create Win32 icon and cursor files"
 <dd> Output version information and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> List all images in the file `demo.ico&#8217;: </p>
-<p>&nbsp;<wbr>&nbsp;$&nbsp;<code>icotool -l demo.ico</code><br />
-&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=1 &#8211;width=16 &#8211;height=16 &#8211;bit-depth=4 &#8211;palette-size=16<br />
-&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=2 &#8211;width=32 &#8211;height=32 &#8211;bit-depth=4 &#8211;palette-size=16<br />
-&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=3 &#8211;width=48 &#8211;height=48 &#8211;bit-depth=4 &#8211;palette-size=16<br />
-&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=4 &#8211;width=16 &#8211;height=16 &#8211;bit-depth=8 &#8211;palette-size=256<br />
-&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=5 &#8211;width=32 &#8211;height=32 &#8211;bit-depth=8 &#8211;palette-size=256<br />
+<p>&nbsp;<wbr>&nbsp;$&nbsp;<code>icotool -l demo.ico</code><br/>
+&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=1 &#8211;width=16 &#8211;height=16 &#8211;bit-depth=4 &#8211;palette-size=16<br/>
+&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=2 &#8211;width=32 &#8211;height=32 &#8211;bit-depth=4 &#8211;palette-size=16<br/>
+&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=3 &#8211;width=48 &#8211;height=48 &#8211;bit-depth=4 &#8211;palette-size=16<br/>
+&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=4 &#8211;width=16 &#8211;height=16 &#8211;bit-depth=8 &#8211;palette-size=256<br/>
+&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=5 &#8211;width=32 &#8211;height=32 &#8211;bit-depth=8 &#8211;palette-size=256<br/>
 &nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=6 &#8211;width=48 &#8211;height=48 &#8211;bit-depth=8 &#8211;palette-size=256 </p>
 <p> List only 16-color images in `demo.ico&#8217;: </p>
-<p>&nbsp;<wbr>&nbsp;$&nbsp;<code>icotool -l &#8211;palette-size=16 demo.ico</code><br />
-&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=1 &#8211;width=16 &#8211;height=16 &#8211;bit-depth=4 &#8211;palette-size=16<br />
-&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=2 &#8211;width=32 &#8211;height=32 &#8211;bit-depth=4 &#8211;palette-size=16<br />
+<p>&nbsp;<wbr>&nbsp;$&nbsp;<code>icotool -l &#8211;palette-size=16 demo.ico</code><br/>
+&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=1 &#8211;width=16 &#8211;height=16 &#8211;bit-depth=4 &#8211;palette-size=16<br/>
+&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=2 &#8211;width=32 &#8211;height=32 &#8211;bit-depth=4 &#8211;palette-size=16<br/>
 &nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=3 &#8211;width=48 &#8211;height=48 &#8211;bit-depth=4 &#8211;palette-size=16 </p>
 <p> Extract all images to current directory, naming the destination files `demo.ico_I_WxHxD.xpm&#8217;: </p>
-<p>&nbsp;<wbr>&nbsp;$&nbsp;<code>icotool -x -o . demo.ico</code><br />
-&nbsp;<wbr>&nbsp;$&nbsp;<code>ls&nbsp;*.png</code><br />
-&nbsp;<wbr>&nbsp;demo_1_16x16x4.png&nbsp;<wbr>&nbsp;demo_3_48x48x4.png&nbsp;<wbr>&nbsp;demo_5_32x32x8.png<br />
+<p>&nbsp;<wbr>&nbsp;$&nbsp;<code>icotool -x -o . demo.ico</code><br/>
+&nbsp;<wbr>&nbsp;$&nbsp;<code>ls&nbsp;*.png</code><br/>
+&nbsp;<wbr>&nbsp;demo_1_16x16x4.png&nbsp;<wbr>&nbsp;demo_3_48x48x4.png&nbsp;<wbr>&nbsp;demo_5_32x32x8.png<br/>
 &nbsp;<wbr>&nbsp;demo_2_32x32x4.png&nbsp;<wbr>&nbsp;demo_4_16x16x8.png&nbsp;<wbr>&nbsp;demo_6_48x48x8.png </p>
 <p> Extract all 256-color icon images in all .ico files in the current directory, placing the extracted images in `img/&#8217; </p>
 <p>&nbsp;<wbr>&nbsp;$&nbsp;<code>icotool -x -o img/&nbsp;-p 256&nbsp;*.ico</code> </p>

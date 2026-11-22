@@ -30,17 +30,17 @@ description: "Client-Initiated Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br />
- <i>attr</i> Request attributes.<br />
- <i>url</i> URL to append to.<br />
+</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br/>
+ <i>attr</i> Request attributes.<br/>
+ <i>url</i> URL to append to.<br/>
  <i>length</i> The length of the data to append to the url, if known. If this parameter is set to <i>GLOBUS_GASS_LENGTH_UNKNOWN</i>, then the append may fail if the protocol does not support arbitrarily-length files.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The put was successfully initiated.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request, attr, or callback was GLOBUS_NULL. The put could not be processed.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the put.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a append on this URL type is implemented.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The put was successfully initiated.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request, attr, or callback was GLOBUS_NULL. The put could not be processed.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the put.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a append on this URL type is implemented.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -54,16 +54,16 @@ description: "Client-Initiated Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br />
- <i>attr</i> Request attributes.<br />
+</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br/>
+ <i>attr</i> Request attributes.<br/>
  <i>url</i> URL to get</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The get was successfully initiated.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request or attr was GLOBUS_NULL. The get could not be processed.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the get.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a get on this URL type is implemented.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The get was successfully initiated.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request or attr was GLOBUS_NULL. The get could not be processed.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the get.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a get on this URL type is implemented.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -77,17 +77,17 @@ description: "Client-Initiated Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br />
- <i>attr</i> Request attributes.<br />
- <i>url</i> URL to put.<br />
+</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br/>
+ <i>attr</i> Request attributes.<br/>
+ <i>url</i> URL to put.<br/>
  <i>length</i> The length of the data to put to the url, if known. If this parameter is set to <i>GLOBUS_GASS_LENGTH_UNKNOWN</i>, then the put may fail if the protocol does not support arbitrarily-length files.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The get was successfully initiated.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request or attr was GLOBUS_NULL. The get could not be processed.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the get.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a put on this URL type is implemented.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The get was successfully initiated.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request or attr was GLOBUS_NULL. The get could not be processed.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the get.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a put on this URL type is implemented.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -101,19 +101,19 @@ description: "Client-Initiated Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br />
- <i>attr</i> Request attributes.<br />
- <i>url</i> URL to append to.<br />
- <i>length</i> The length of the data to append to the url, if known. If this parameter is set to <i>GLOBUS_GASS_LENGTH_UNKNOWN</i>, then the append may fail if the protocol does not support arbitrarily-length files.<br />
- <i>callback</i> Function to call once the URL has been accepted, referred, or denied by the server.<br />
+</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br/>
+ <i>attr</i> Request attributes.<br/>
+ <i>url</i> URL to append to.<br/>
+ <i>length</i> The length of the data to append to the url, if known. If this parameter is set to <i>GLOBUS_GASS_LENGTH_UNKNOWN</i>, then the append may fail if the protocol does not support arbitrarily-length files.<br/>
+ <i>callback</i> Function to call once the URL has been accepted, referred, or denied by the server.<br/>
  <i>user_arg</i> User-supplied argument to the callback function.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The put was successfully initiated.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request, attr, or callback was GLOBUS_NULL. The put could not be processed.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the put.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a append on this URL type is implemented.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The put was successfully initiated.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request, attr, or callback was GLOBUS_NULL. The put could not be processed.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the put.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a append on this URL type is implemented.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -127,18 +127,18 @@ description: "Client-Initiated Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br />
- <i>attr</i> Request attributes.<br />
- <i>url</i> URL to get<br />
- <i>callback</i> Function to call once the URL has been accepted, referred, or denied by the server.<br />
+</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br/>
+ <i>attr</i> Request attributes.<br/>
+ <i>url</i> URL to get<br/>
+ <i>callback</i> Function to call once the URL has been accepted, referred, or denied by the server.<br/>
  <i>user_arg</i> User-supplied argument to the callback function.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The get was successfully initiated.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request, attr, or callback was GLOBUS_NULL. The get could not be processed.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the get.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a get on this URL type is implemented.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The get was successfully initiated.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request, attr, or callback was GLOBUS_NULL. The get could not be processed.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the get.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a get on this URL type is implemented.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -152,19 +152,19 @@ description: "Client-Initiated Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br />
- <i>attr</i> Request attributes.<br />
- <i>url</i> URL to put.<br />
- <i>length</i> The length of the data to put to the url, if known. If this parameter is set to <i>GLOBUS_GASS_LENGTH_UNKNOWN</i>, then the put may fail if the protocol does not support arbitrarily-length files.<br />
- <i>callback</i> Function to call once the URL has been accepted, referred, or denied by the server.<br />
+</dt><dd> <i>request</i> A pointer to an uninitialized request handle.<br/>
+ <i>attr</i> Request attributes.<br/>
+ <i>url</i> URL to put.<br/>
+ <i>length</i> The length of the data to put to the url, if known. If this parameter is set to <i>GLOBUS_GASS_LENGTH_UNKNOWN</i>, then the put may fail if the protocol does not support arbitrarily-length files.<br/>
+ <i>callback</i> Function to call once the URL has been accepted, referred, or denied by the server.<br/>
  <i>user_arg</i> User-supplied argument to the callback function.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The put was successfully initiated.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request, attr, or callback was GLOBUS_NULL. The put could not be processed.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the put.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a put on this URL type is implemented.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The put was successfully initiated.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> One of request, attr, or callback was GLOBUS_NULL. The put could not be processed.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_INTERNAL_ERROR</i> An internal resource was not available to process the put.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol handler for doing a put on this URL type is implemented.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_BAD_URL</i> The URL could not be parsed.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>

@@ -19,19 +19,19 @@ BeakerLib - analyze - Analyzing test results
 
  <i>rlDejaSum</i> 
 
- <font SIZE="-1">TODO</font> description 
+ TODO description 
 
  <pre>
     rlDejaSum par1 par2
 </pre>
 <dl>
 <dt>par1
-</dt><dd> <font SIZE="-1">TODO</font> description
+</dt><dd> TODO description
 </dd><dt>par2
-</dt><dd> <font SIZE="-1">TODO</font> description</dd></dl>
+</dt><dd> TODO description</dd></dl>
  
 
- Return 0 if... <font SIZE="-1">TODO</font>
+ Return 0 if... TODO
 
 <h2>AUTHORS</h2>
 

@@ -75,16 +75,16 @@ description: "emelFM2 – a GTK+2 file manager"
 <dt><i>G_BROKEN_FILENAMES, G_FILENAME_ENCODING, HOSTNAME, LC_ALL, LC_MESSAGES, LANGUAGE or LANG, PATH</i></dt>
 <dd></dd></dl>
 <h2>SUGGESTIONS AND BUG REPORTS</h2>
-<p> Please send bug reports, comments or feature requests to the mailing list &lt;emelfm2 [at] freelists.org&gt;. You do not need to be a subscriber.<br />
+<p> Please send bug reports, comments or feature requests to the mailing list &lt;emelfm2 [at] freelists.org&gt;. You do not need to be a subscriber.<br/>
  For known bugs refer to <a rel="nofollow" href="http://emelfm2.net/TODO.">http://emelfm2.net/TODO.</a> </p>
 <h2>CREDITS</h2>
 <p> The original emelFM was essentially a compilation of some of the features that Michael Clark found most useful in other file managers. The current maintainer of emelFM2 is tooar. For a complete list of contributors please refer to [PREFIX]/share/doc/emelfm2/CREDITS. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2003-2009, tooar &lt;tooar [at] emelfm2.net&gt;.<br />
+<p> Copyright (C) 2003-2009, tooar &lt;tooar [at] emelfm2.net&gt;.<br/>
  This program is licensed under the terms of the FSF General Public License and comes with ABSOLUTELY NO WARRANTY. </p>
 <h2>SEE ALSO</h2>
-<p> emelFM2 <a rel="nofollow" href="http://emelfm2.net">http://emelfm2.net</a><br />
- User Guide <a rel="nofollow" href="http://emelfm2.net/UserGuide">http://emelfm2.net/UserGuide</a><br />
- updated emelFM <a rel="nofollow" href="http://www.havens.de/elm/emelfm.html">http://www.havens.de/elm/emelfm.html</a><br />
+<p> emelFM2 <a rel="nofollow" href="http://emelfm2.net">http://emelfm2.net</a><br/>
+ User Guide <a rel="nofollow" href="http://emelfm2.net/UserGuide">http://emelfm2.net/UserGuide</a><br/>
+ updated emelFM <a rel="nofollow" href="http://www.havens.de/elm/emelfm.html">http://www.havens.de/elm/emelfm.html</a><br/>
  old emelFM <a rel="nofollow" href="http://www.pitt.edu/~macst92/emelFM/">http://www.pitt.edu/~macst92/emelFM/</a> or </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://emelFM.sourceforge.net/">http://emelFM.sourceforge.net/</a> </p>

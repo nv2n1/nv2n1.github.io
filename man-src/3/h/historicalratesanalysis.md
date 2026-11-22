@@ -10,10 +10,10 @@ description: "ql/models/marketmodels/historicalratesanalysis.hpp – Statistical
 
 <p> ql/models/marketmodels/historicalratesanalysis.hpp &#8211; Statistical analysis of historical rates. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/math/statistics/sequencestatistics.hpp&gt;<br />
+<p> #include &lt;ql/math/statistics/sequencestatistics.hpp&gt;<br/>
  #include &lt;ql/time/date.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>HistoricalRatesAnalysis</code><br />
+<p> class <code>HistoricalRatesAnalysis</code><br/>
  <i>Historical rate analysis class </i></p>
 <h3>Functions</h3>
 <p> void <code>historicalRatesAnalysis</code> (SequenceStatistics &amp;statistics, std::vector&lt; Date &gt; &amp;skippedDates, std::vector&lt; std::string &gt; &amp;skippedDatesErrorMessage, const Date &amp;startDate, const Date &amp;endDate, const Period &amp;step, const std::vector&lt; boost::shared_ptr&lt; InterestRateIndex &gt; &gt; &amp;indexes) </p>

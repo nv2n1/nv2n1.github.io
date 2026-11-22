@@ -12,7 +12,7 @@ description: "syslog-ng – syslog-ng system logger application"
 <dl>
 <dt> <code>syslog-ng</code> [options]</dt></dl>
 <h2>Description</h2>
-<dd>This manual page is only an abstract; for the complete documentation of syslog-ng, see m[blue]<code>The syslog-ng Open Source Edition Administrator Guide</code>m[]<font SIZE="-2">[1]</font> or m[blue]<code>the official syslog-ng website</code>m[]<font SIZE="-2">[2]</font>. </dd>
+<dd>This manual page is only an abstract; for the complete documentation of syslog-ng, see m[blue]<code>The syslog-ng Open Source Edition Administrator Guide</code>m[][1] or m[blue]<code>the official syslog-ng website</code>m[][2]. </dd>
 <p> The syslog-ng OSE application is a flexible and highly scalable system logging application. Typically, syslog-ng is used to manage log messages and implement centralized logging, where the aim is to collect the log messages of several devices on a single, central log server. The different devices &#8211; called syslog-ng clients &#8211; all run syslog-ng, and collect the log messages from the various applications, files, and other <i>sources</i>. The clients send all important log messages to the remote syslog-ng server, where the server sorts and stores them.</p>
 <h2>Options</h2>
 <p><code>&#8211;cfgfile &lt;file&gt;</code> or <code>-f &lt;file&gt;</code></p>
@@ -83,9 +83,9 @@ description: "syslog-ng – syslog-ng system logger application"
 <p> /home/algernon/install/syslog-ng/3.5/etc/syslog-ng.conf</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-syslog-ng-conf/">syslog-ng.conf</a></code>(5) </p>
-<p> m[blue]<code>The syslog-ng OSE 3.3 Administrator Guide</code>m[]<font SIZE="-2">[1]</font> </p>
-<p> If you experience any problems or need help with syslog-ng, visit m[blue]<code>visit the syslog-ng wiki</code>m[]<font SIZE="-2">[3]</font> or the m[blue]<code>syslog-ng mailing list</code>m[]<font SIZE="-2">[4]</font>. </p>
-<p> For news and notifications about of syslog-ng, visit the m[blue]<code>syslog-ng Insider Blog</code>m[]<font SIZE="-2">[5]</font>.</p>
+<p> m[blue]<code>The syslog-ng OSE 3.3 Administrator Guide</code>m[][1] </p>
+<p> If you experience any problems or need help with syslog-ng, visit m[blue]<code>visit the syslog-ng wiki</code>m[][3] or the m[blue]<code>syslog-ng mailing list</code>m[][4]. </p>
+<p> For news and notifications about of syslog-ng, visit the m[blue]<code>syslog-ng Insider Blog</code>m[][5].</p>
 <h2>Author</h2>
 <p>This manual page was written by the BalaBit Documentation Team &lt;documentation [at] balabit.com&gt;.</p>
 <h2>Copyright</h2>

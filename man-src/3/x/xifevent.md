@@ -39,5 +39,5 @@ description: "XIfEvent, XCheckIfEvent, XPeekIfEvent – check the event queue wi
 <dd>Specifies the argument passed in from the <code>XIfEvent</code>, <code>XCheckIfEvent</code>, or <code>XPeekIfEvent</code> function.</dd></dl>
 <p> The predicate procedure is called once for each event in the queue until it finds a match. After finding a match, the predicate procedure must return <code>True</code>. If it did not find a match, it must return <code>False</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xanyevent/">XAnyEvent</a>(3), <a href="/docs/linux/man/3-xnextevent/">XNextEvent</a>(3), <a href="/docs/linux/man/3-xputbackevent/">XPutBackEvent</a>(3) <a href="/docs/linux/man/3-xsendevent/">XSendEvent</a>(3)<br />
+<p><a href="/docs/linux/man/3-xanyevent/">XAnyEvent</a>(3), <a href="/docs/linux/man/3-xnextevent/">XNextEvent</a>(3), <a href="/docs/linux/man/3-xputbackevent/">XPutBackEvent</a>(3) <a href="/docs/linux/man/3-xsendevent/">XSendEvent</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

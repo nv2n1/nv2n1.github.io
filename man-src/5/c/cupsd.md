@@ -331,7 +331,7 @@ description: "cupsd.conf – server configuration file for cups"
 </dd><dt>WebInterface no</dt>
 <dd>Specifies whether the web interface is enabled.</dd></dl>
 <h2>See Also</h2>
-<p><i><a href="/docs/linux/man/5-classes-conf/">classes.conf</a>(5)</i>, <i><a href="/docs/linux/man/5-cups-files-conf/">cups-files.conf</a>(5)</i>, <i><a href="/docs/linux/man/8-cupsd/">cupsd</a>(8)</i>, <i><a href="/docs/linux/man/5-mime-convs/">mime.convs</a>(5)</i>, <i><a href="/docs/linux/man/5-mime-types/">mime.types</a>(5)</i>, <i><a href="/docs/linux/man/5-printers-conf/">printers.conf</a>(5)</i>, <i><a href="/docs/linux/man/5-subscriptions-conf/">subscriptions.conf</a>(5)</i>,<br />
+<p><i><a href="/docs/linux/man/5-classes-conf/">classes.conf</a>(5)</i>, <i><a href="/docs/linux/man/5-cups-files-conf/">cups-files.conf</a>(5)</i>, <i><a href="/docs/linux/man/8-cupsd/">cupsd</a>(8)</i>, <i><a href="/docs/linux/man/5-mime-convs/">mime.convs</a>(5)</i>, <i><a href="/docs/linux/man/5-mime-types/">mime.types</a>(5)</i>, <i><a href="/docs/linux/man/5-printers-conf/">printers.conf</a>(5)</i>, <i><a href="/docs/linux/man/5-subscriptions-conf/">subscriptions.conf</a>(5)</i>,<br/>
  <a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a></p>
 <h2>Copyright</h2>
 <p>Copyright 2007-2013 by Apple Inc.</p>

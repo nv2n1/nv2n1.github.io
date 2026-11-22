@@ -10,15 +10,15 @@ description: "ql/methods/montecarlo/longstaffschwartzpathpricer.hpp – Longstaf
 
 <p> ql/methods/montecarlo/longstaffschwartzpathpricer.hpp &#8211; Longstaff-Schwarz path pricer for early exercise options. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/yieldtermstructure.hpp&gt;<br />
- #include &lt;ql/math/functional.hpp&gt;<br />
- #include &lt;ql/math/linearleastsquaresregression.hpp&gt;<br />
- #include &lt;ql/methods/montecarlo/pathpricer.hpp&gt;<br />
- #include &lt;ql/methods/montecarlo/earlyexercisepathpricer.hpp&gt;<br />
- #include &lt;boost/bind.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/yieldtermstructure.hpp&gt;<br/>
+ #include &lt;ql/math/functional.hpp&gt;<br/>
+ #include &lt;ql/math/linearleastsquaresregression.hpp&gt;<br/>
+ #include &lt;ql/methods/montecarlo/pathpricer.hpp&gt;<br/>
+ #include &lt;ql/methods/montecarlo/earlyexercisepathpricer.hpp&gt;<br/>
+ #include &lt;boost/bind.hpp&gt;<br/>
  #include &lt;boost/function.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>LongstaffSchwartzPathPricer&lt; PathType &gt;</code><br />
+<p> class <code>LongstaffSchwartzPathPricer&lt; PathType &gt;</code><br/>
  <i>Longstaff-Schwarz path pricer for early exercise options. </i></p>
 <h2>Detailed Description</h2>
 <p> Longstaff-Schwarz path pricer for early exercise options. </p>

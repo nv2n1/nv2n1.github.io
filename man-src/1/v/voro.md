@@ -88,7 +88,7 @@ description: "voro++ – a 3D Voronoi cell library"
 <p> <code></p>
 <dl COMPACT>
 <dt>%i</dt>
-<dd></code> The particle ID number.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br />
+<dd></code> The particle ID number.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br/>
  <code></dd>
 <dt>%x</dt>
 <dd></code> The x coordinate of the particle. <code></dd>

@@ -10,7 +10,7 @@ description: "avc_cache_stats, avc_av_stats, avc_sid_stats – obtain userspace 
 
 <p> avc_cache_stats, avc_av_stats, avc_sid_stats &#8211; obtain userspace SELinux AVC statistics </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
+<p> <code>#include &lt;selinux/selinux.h&gt;</code><br/>
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>void avc_av_stats(void);</code> </p>
 <p> <code>void avc_sid_stats(void);</code> </p>

@@ -14,11 +14,11 @@ description: "docker-rmi – Remove one or more images"
 <h2>DESCRIPTION</h2>
 <p> Removes one or more images from the host node. This does not remove images from a registry. You cannot remove an image of a running container unless you use the <code>-f</code> option. To see all images on a host use the <code>docker images</code> command. </p>
 <h2>OPTIONS</h2>
-<p> <code>-f</code>, <code>&#8211;force</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-f</code>, <code>&#8211;force</code>=<i>true</i>|<i>false</i><br/>
 Force removal of the image. The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>&#8211;no-prune</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;no-prune</code>=<i>true</i>|<i>false</i><br/>
 Do not delete untagged parents. The default is&nbsp;<wbr><i>false</i>. </p>
 <h2>EXAMPLES</h2>
 <h2>Removing an image</h2>

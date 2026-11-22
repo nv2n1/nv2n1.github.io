@@ -14,11 +14,11 @@ description: "docker-load – Load an image from a tar archive or STDIN"
 <h2>DESCRIPTION</h2>
 <p> Loads a tarred repository from a file or the standard input stream. Restores both images and tags. Write image names or IDs imported it standard output stream. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-i</code>, <code>&#8211;input</code>=&quot;&quot;<br />
+<p> <code>-i</code>, <code>&#8211;input</code>=&quot;&quot;<br/>
 Read from a tar archive file, instead of STDIN. The tarball may be compressed with gzip, bzip, or xz. </p>
-<p> <code>-q</code>, <code>&#8211;quiet</code><br />
+<p> <code>-q</code>, <code>&#8211;quiet</code><br/>
 Suppress the load progress bar but still outputs the imported images. </p>
 <h2>EXAMPLES</h2>
 <dl>

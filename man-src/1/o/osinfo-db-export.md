@@ -10,7 +10,7 @@ description: "osinfo-db-export – Export to a osinfo database archive"
 
 <p> osinfo-db-export &#8211; Export to a osinfo database archive </p>
 <h2>SYNOPSIS</h2>
-<p> osinfo-db-export [<font SIZE="-1">OPTIONS&#8230;</font>] [<font SIZE="-1">ARCHIVE-FILE</font>]</p>
+<p> osinfo-db-export [OPTIONS&#8230;] [ARCHIVE-FILE]</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>osinfo-db-export</code> tool will create an osinfo database archive file containing the content from one of the standard local database locations:</p>
 <dl>
@@ -31,13 +31,13 @@ description: "osinfo-db-export – Export to a osinfo database archive"
 <dt><code>&#8211;system</code></dt>
 <dd> Override the default behaviour to force archiving files from the <code>system</code> database location.</dd>
 <dt><code>&#8211;dir=PATH</code></dt>
-<dd> Override the default behaviour to force archiving files from the custom directory <font SIZE="-1"><code>PATH</code></font>.</dd>
+<dd> Override the default behaviour to force archiving files from the custom directory <code>PATH</code>.</dd>
 <dt><code>&#8211;root=PATH</code></dt>
 <dd> Prefix the database location with the root directory given by <tt>&quot;PATH&quot;</tt>. This is useful when wishing to archive files that are in a chroot environment or equivalent.</dd>
 <dt><code>&#8211;version=VERSION</code></dt>
-<dd> Set the version string for the files in the archive to <font SIZE="-1"><code>VERSION</code></font>. If this argument is not given, the version will be set to the current date in the format <font SIZE="-1"><code>YYYYMMDD</code></font>.</dd>
+<dd> Set the version string for the files in the archive to <code>VERSION</code>. If this argument is not given, the version will be set to the current date in the format <code>YYYYMMDD</code>.</dd>
 <dt><code>&#8211;license=LICENSE-FILE</code></dt>
-<dd> Add <tt>&quot;LICENSE-FILE&quot;</tt> to the generated archive as an entry named &#8220;<font SIZE="-1">LICENSE&#8221;.</font></dd>
+<dd> Add <tt>&quot;LICENSE-FILE&quot;</tt> to the generated archive as an entry named &#8220;LICENSE&#8221;.</dd>
 <dt><code>-v</code>, <code>&#8211;verbose</code></dt>
 <dd> Display verbose progress information when archiving files</dd></dl>
 <h2>EXIT STATUS</h2>
@@ -49,4 +49,4 @@ description: "osinfo-db-export – Export to a osinfo database archive"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2016 Red Hat, Inc.</p>
 <h2>LICENSE</h2>
-<p> <tt>&quot;osinfo-db-export&quot;</tt> is distributed under the terms of the <font SIZE="-1">GNU LGPL</font> v2+ license. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font> </p>
+<p> <tt>&quot;osinfo-db-export&quot;</tt> is distributed under the terms of the GNU LGPL v2+ license. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE </p>

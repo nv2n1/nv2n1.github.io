@@ -27,7 +27,7 @@ description: "fig2ps2tex – generate a TeX file for including a PostScript file
 <h2>SEE ALSO</h2>
 <p> psfig(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), <a href="/docs/linux/man/1-fig2dev/">fig2dev</a>(1), <a href="/docs/linux/man/1-transfig/">transfig</a>(1). </p>
 <h2>AUTHOR</h2>
-<p> Micah Beck<br />
+<p> Micah Beck<br/>
  Cornell University </p>
 <p> Man page by George Ferguson, ferguson [at] cs.rochester.edu. </p>
 <h2>COPYRIGHT</h2>

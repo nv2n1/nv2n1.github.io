@@ -10,7 +10,7 @@ description: "zlatrs.f –"
 <p>zlatrs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlatrs</code> (UPLO, TRANS, DIAG, NORMIN, N, A, LDA, X, SCALE, CNORM, INFO)<br />
+<p>subroutine <code>zlatrs</code> (UPLO, TRANS, DIAG, NORMIN, N, A, LDA, X, SCALE, CNORM, INFO)<br/>
  <i></i><code>ZLATRS</code> solves a triangular system of equations with the scale factor set to prevent overflow.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlatrs (characterUPLO, characterTRANS, characterDIAG, characterNORMIN, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )X, double precisionSCALE, double precision, dimension( * )CNORM, integerINFO)</h3>

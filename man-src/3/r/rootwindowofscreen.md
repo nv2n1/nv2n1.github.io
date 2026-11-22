@@ -56,5 +56,5 @@ description: "BlackPixelOfScreen, WhitePixelOfScreen, CellsOfScreen, DefaultColo
 <p> The <code>WidthOfScreen</code> macro returns the width of the specified screen. </p>
 <p> The <code>WidthMMOfScreen</code> macro returns the width of the specified screen in millimeters.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), ImageByteOrder(3), IsCursorKey(3)<br />
+<p><a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), ImageByteOrder(3), IsCursorKey(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -13,24 +13,24 @@ description: "pbs_queue_attributes – pbs queue attributes"
 <dl>
 <dd><i></dd>
 <dl>
-<dt>acl_group_enable</i><font SIZE="+1"><i></i></dt>
+<dt>acl_group_enable</i><i></i></dt>
 <dd>Attribute which when true directs the server to use the queue group access control list <i>acl_groups .</i> Format: boolean, &quot;TRUE&quot;, &quot;True&quot;, &quot;true&quot;, &quot;Y&quot;, &quot;y&quot;, &quot;1&quot;, &quot;FALSE&quot;, &quot;False&quot;, &quot;false&quot;, &quot;N&quot;, &quot;n&quot;, &quot;0&quot;; default value: false = disabled. <i></dd>
-<dt>acl_group_sloppy</i></font><font SIZE="+2"><i></i></dt>
+<dt>acl_group_sloppy</i><i></i></dt>
 <dd>Search a job user&#8217;s secondary groups if the effective group doesn&#8217;t match the group acl. Warning, this can be very slow and expensive. Format: boolean, &quot;TRUE&quot;, &quot;True&quot;, &quot;true&quot;, &quot;Y&quot;, &quot;y&quot;, &quot;1&quot;, &quot;FALSE&quot;, &quot;False&quot;, &quot;false&quot;, &quot;N&quot;, &quot;n&quot;, &quot;0&quot;; default value: false = disabled. <i></dd>
-<dt>acl_groups</i></font><font SIZE="+3"><i></i></dt>
+<dt>acl_groups</i><i></i></dt>
 <dd>List which allows or denies enqueuing of jobs owned by members of the listed groups. The groups in the list are groups on the server host, not submitting hosts. If acl_group_enable is set to true, only groups listed in the acl_groups attribute will be allowed access to the queue. See section 10.1, Authorization, in the PBS External Reference Specification. Format: &quot;[+|-]group_name[,&#8230;]&quot;; default value: all groups allowed. <i></dd>
-<dt>acl_host_enable</i></font><font SIZE="+4"><i></i></dt>
+<dt>acl_host_enable</i><i></i></dt>
 <dd>Attribute which when true directs the server to use the <i>acl_hosts</i> access list. Format: boolean (see acl_group_enable); default value: disabled. <i></dd>
-<dt>acl_hosts</i></font><font SIZE="+5"><i></i></dt>
+<dt>acl_hosts</i><i></i></dt>
 <dd>List of hosts which may enqueue jobs in the queue. See section 10.1, Authorization, in the PBS External Reference Specification. Format: &quot;[+|-]hostname[&#8230;]&quot;; default value: all hosts allowed. <i></dd>
-<dt>acl_logic_or</i></font><font SIZE="+6"><i></i></dt>
+<dt>acl_logic_or</i><i></i></dt>
 <dd>Modifies the way acls are applied if both <i>acl_user_enable</i> and <i>acl_group_enable</i> are set to true. If <i>acl_logic_or</i> is true, then user and group acls are logically OR&#8217;ed together (a job can pass either the user or group acl lists to be allowed access to the queue). If I acl_logic_or is false, then user and group acls are logically AND&#8217;ed together (a job would have to pass both user and group acl lists). Format: boolean (see acl_group_enable and acl_user_enable); default value: disabled. <i></dd>
-<dt>acl_user_enable</i></font><font SIZE="+7"><i></i></dt>
+<dt>acl_user_enable</i><i></i></dt>
 <dd>Attribute which when true directs the server to use the the <i>acl_users</i> access list for this queue. Format: boolean (see acl_group_enable); default value: disabled. <i></dd>
-<dt>acl_users</i></font><font SIZE="+8"><i></i></dt>
+<dt>acl_users</i><i></i></dt>
 <dd>List of users allowed or denied the ability to enqueue jobs in this queue. See section 10.1, Authorization, in the PBS External Reference Specification. If acl_user_enable is set to true, only users listed in the acl_groups attribute will be allowed access to the queue. </dd>
 <p> Format: &quot;[+|-]user[@host][,&#8230;]&quot;; default value: all users allowed. <i></p>
-<dt>disallowed_types</i></font><font SIZE="+9"><i></i></dt>
+<dt>disallowed_types</i><i></i></dt>
 <dd>List of job &quot;types&quot; (interactive,batch,rerunable,nonrerunable,fault_tolerant,fault_intolerant) that are not allowed in this queue. </dd>
 <p> default value: all types allowed. <i></p>
 <dt>enabled</i></dt>
@@ -88,9 +88,9 @@ description: "pbs_queue_attributes – pbs queue attributes"
 <dt>route_held_jobs</i></dt>
 <dd>If true, jobs with a hold type set may be routed from this queue. If false, held jobs are not to be routed. Format: boolean (see acl_group_enable); default value: false. <i></dd>
 <dt>route_waiting_jobs</i></dt>
-<dd>If true, jobs with a future <i> </i></font><font SIZE="+8"><i> attribute may be routed from this queue. If false, they are not to be routed. Format: boolean (see acl_group_enable); default value: false.</dd>
-<dt>route_retry_time</i></font><font SIZE="+9"><i></i></dt>
-<dd>Time delay between route retries. Typically used when the network between servers is down. Format: integer seconds; default value: </font><font SIZE="+8"><code>{PBS_NET_RETRY_TIME}</code></font><font SIZE="+9"> (30 seconds). <i></dd>
+<dd>If true, jobs with a future <i> </i><i> attribute may be routed from this queue. If false, they are not to be routed. Format: boolean (see acl_group_enable); default value: false.</dd>
+<dt>route_retry_time</i><i></i></dt>
+<dd>Time delay between route retries. Typically used when the network between servers is down. Format: integer seconds; default value: <code>{PBS_NET_RETRY_TIME}</code> (30 seconds). <i></dd>
 <dt>route_lifetime</i></dt>
 <dd>The maximum time a job is allowed to exist in a routing queue. If the job cannot be routed in this amount of time, the job is aborted. If unset or set to a value of zero (0), the lifetime is infinite. Format: integer seconds; default infinite.</dd></dl>
 </dl>
@@ -111,6 +111,6 @@ description: "pbs_queue_attributes – pbs queue attributes"
 <dt>resources_assigned</i></dt>
 <dd>The total amount of certain types of resources allocated to jobs running from this queue.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h2>See Also</h2>
 <p>the PBS ERS, qmgr(1B), pbs_resources(7B) </p>

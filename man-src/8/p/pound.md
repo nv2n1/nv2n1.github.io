@@ -276,18 +276,18 @@ description: "pound – HTTP/HTTPS reverse-proxy and load-balancer"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Address 127.0.0.1 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>End </p>
-<p>&nbsp;<wbr>End<br />
+<p>&nbsp;<wbr>End<br/>
  End</dl>
 <p> To distribute the HTTP/HTTPS requests to three Web servers, where the third one is a newer and faster machine:</p>
 <dl>
 <dd>ListenHTTP </dd>
 <p>&nbsp;<wbr>Address 123.123.123.123 </p>
-<p>&nbsp;<wbr>Port&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80<br />
- End<br />
+<p>&nbsp;<wbr>Port&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80<br/>
+ End<br/>
  ListenHTTPS </p>
 <p>&nbsp;<wbr>Address 1.2.3.4 </p>
 <p>&nbsp;<wbr>Port&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>443 </p>
-<p>&nbsp;<wbr>Cert&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;/etc/pound/server.pem&quot;<br />
+<p>&nbsp;<wbr>Cert&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;/etc/pound/server.pem&quot;<br/>
  End </p>
 <p> Service </p>
 <p>&nbsp;<wbr>BackEnd </p>
@@ -302,28 +302,28 @@ description: "pound – HTTP/HTTPS reverse-proxy and load-balancer"
 <p>&nbsp;<wbr>&nbsp;<wbr>Address 192.168.0.12 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Port&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Priority 3 </p>
-<p>&nbsp;<wbr>End<br />
+<p>&nbsp;<wbr>End<br/>
  End</dl>
 <p> To separate between image requests and other Web content and send all requests for a specific URL to a secure server:</p>
 <dl>
 <dd>ListenHTTP </dd>
 <p>&nbsp;<wbr>Address 123.123.123.123 </p>
-<p>&nbsp;<wbr>Port&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80<br />
+<p>&nbsp;<wbr>Port&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80<br/>
  End </p>
-<p> # Images server(s)<br />
+<p> # Images server(s)<br/>
  Service </p>
 <p>&nbsp;<wbr>URL&nbsp;<wbr>&quot;.*.(jpg|gif)&quot; </p>
 <p>&nbsp;<wbr>BackEnd </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Address 192.168.0.12 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Port&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80 </p>
-<p>&nbsp;<wbr>End<br />
+<p>&nbsp;<wbr>End<br/>
  End </p>
-<p> # redirect all requests for /forbidden<br />
+<p> # redirect all requests for /forbidden<br/>
  Service </p>
 <p>&nbsp;<wbr>Url&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;/forbidden.*&quot; </p>
-<p>&nbsp;<wbr>Redirect&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;<a rel="nofollow" href="https://xyzzy.com">https://xyzzy.com</a>&quot;<br />
+<p>&nbsp;<wbr>Redirect&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;<a rel="nofollow" href="https://xyzzy.com">https://xyzzy.com</a>&quot;<br/>
  End </p>
-<p> # Catch-all server(s)<br />
+<p> # Catch-all server(s)<br/>
  Service </p>
 <p>&nbsp;<wbr>BackEnd </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Address 192.168.0.10 </p>
@@ -336,34 +336,34 @@ description: "pound – HTTP/HTTPS reverse-proxy and load-balancer"
 <p>&nbsp;<wbr>Session </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>BASIC </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>TTL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>300 </p>
-<p>&nbsp;<wbr>End<br />
+<p>&nbsp;<wbr>End<br/>
  End</dl>
 <p> Here is a more complex example: assume your static images (GIF/JPEG) are to be served from a single back-end 192.168.0.10. In addition, 192.168.0.11 is to do the hosting for <a rel="nofollow" href="http://www.myserver.com">www.myserver.com</a> with URL-based sessions, and 192.168.0.20 (a 1GHz PIII) and 192.168.0.21 (800Mhz Duron) are for all other requests (cookie-based sessions). The logging will be done by the back-end servers. The configuration file may look like this:</p>
 <dl>
-<dd>User &quot;nobody&quot;<br />
- Group &quot;nogroup&quot;<br />
- RootJail &quot;/var/pound/jail&quot;<br />
- Alive 60<br />
+<dd>User &quot;nobody&quot;<br/>
+ Group &quot;nogroup&quot;<br/>
+ RootJail &quot;/var/pound/jail&quot;<br/>
+ Alive 60<br/>
  LogLevel 0 </dd>
-<p> # Main listening ports<br />
+<p> # Main listening ports<br/>
  ListenHTTP </p>
 <p>&nbsp;<wbr>Address 1.2.3.4 </p>
 <p>&nbsp;<wbr>Port&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80 </p>
-<p>&nbsp;<wbr>Client&nbsp;<wbr>&nbsp;<wbr>10<br />
- End<br />
+<p>&nbsp;<wbr>Client&nbsp;<wbr>&nbsp;<wbr>10<br/>
+ End<br/>
  ListenHTTPS </p>
 <p>&nbsp;<wbr>Address 1.2.3.4 </p>
 <p>&nbsp;<wbr>Port&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>443 </p>
 <p>&nbsp;<wbr>Cert&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;/etc/pound/pound.pem&quot; </p>
-<p>&nbsp;<wbr>Client&nbsp;<wbr>&nbsp;<wbr>20<br />
+<p>&nbsp;<wbr>Client&nbsp;<wbr>&nbsp;<wbr>20<br/>
  End </p>
-<p> # Image server<br />
+<p> # Image server<br/>
  Service </p>
 <p>&nbsp;<wbr>URL&nbsp;<wbr>&quot;.*.(jpg|gif)&quot; </p>
 <p>&nbsp;<wbr>BackEnd </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Address 192.168.0.10 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Port&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80 </p>
-<p>&nbsp;<wbr>End<br />
+<p>&nbsp;<wbr>End<br/>
  End </p>
 <pre><code># Virtual host www.myserver.com
 Service
@@ -379,7 +379,7 @@ ID      &quot;sessid&quot;
 TTL     120
 End
 End</code></pre>
-<p> # Everybody else<br />
+<p> # Everybody else<br/>
  Service </p>
 <p>&nbsp;<wbr>BackEnd </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Address 192.168.0.20 </p>
@@ -395,7 +395,7 @@ End</code></pre>
 <p>&nbsp;<wbr>&nbsp;<wbr>Type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>COOKIE </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>ID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;userid&quot; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>TTL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>180 </p>
-<p>&nbsp;<wbr>End<br />
+<p>&nbsp;<wbr>End<br/>
  End
 </dl>
 <h2>Files</h2>
@@ -411,5 +411,5 @@ End</code></pre>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;roseg [at] apsis.ch&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2002-2010 Apsis GmbH.<br />
+<p>Copyright &#169; 2002-2010 Apsis GmbH.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>

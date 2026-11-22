@@ -24,7 +24,7 @@ description: "zvbi-chains – VBI proxy wrapper"
 <dd> Print a short description of all command line options. </dd>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-zvbid/">zvbid</a>(1), <a href="/docs/linux/man/8-v4l-conf/">v4l-conf</a>(8)<br />
+<p> <a href="/docs/linux/man/1-zvbid/">zvbid</a>(1), <a href="/docs/linux/man/8-v4l-conf/">v4l-conf</a>(8)<br/>
  <a rel="nofollow" href="http://zapping.sourceforge.net/">http://zapping.sourceforge.net/</a> (homepage)</p>
 <h2>AUTHOR</h2>
 <p> Tom Zoerner (tomzo AT users.sourceforge.net)</p>

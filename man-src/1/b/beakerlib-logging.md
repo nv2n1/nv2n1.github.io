@@ -19,7 +19,7 @@ description: "BeakerLib – logging – phase support, logging functions and met
 <p> <i>rlLogWarning</i> </p>
 <p> <i>rlLogError</i> </p>
 <p> <i>rlLogFatal</i> </p>
-<p> Create a time/priority-labelled message in the log. There is a bunch of aliases which can create messages formated as <font SIZE="-1">DEBUG/INFO/WARNING/ERROR</font> or <font SIZE="-1">FATAL </font>(but you would probably want to use rlDie instead of the last one). </p>
+<p> Create a time/priority-labelled message in the log. There is a bunch of aliases which can create messages formated as DEBUG/INFO/WARNING/ERROR or FATAL (but you would probably want to use rlDie instead of the last one). </p>
 <pre><code>
 rlLog message[logfile][priority][label]
 </code></pre>
@@ -27,7 +27,7 @@ rlLog message[logfile][priority][label]
 <dt>message</dt>
 <dd> Message you want to show (use quotes when invoking).</dd>
 <dt>logfile</dt>
-<dd> Log file. If not supplied, <font SIZE="-1">OUTPUTFILE</font> is assumed.</dd>
+<dd> Log file. If not supplied, OUTPUTFILE is assumed.</dd>
 <dt>priority</dt>
 <dd> Priority of the log.</dd>
 <dt>label</dt>
@@ -98,7 +98,7 @@ rlLog message[logfile][priority][label]
     rlGetDistroRelease
     rlGetDistroVariant
 </pre>
-<p> For example on the <font SIZE="-1">RHEL-4-AS</font> you will get release 4 and variant <font SIZE="-1">AS,</font> on the RHEL-5-Client you will get release 5 and variant Client. </p>
+<p> For example on the RHEL-4-AS you will get release 4 and variant AS, on the RHEL-5-Client you will get release 5 and variant Client. </p>
 <p> <i>rlShowRunningKernel</i> </p>
 <p> Log a message with version of the currently running kernel. </p>
 <pre>
@@ -115,16 +115,16 @@ rlLog message[logfile][priority][label]
 <dd> Type of the phase, one of the following:</dd>
 <dl>
 <dl>
-<dt><font SIZE="-1">FAIL</font></dt>
-<dd> When assert fails here, phase will report a <font SIZE="-1">FAIL.</font></dd>
-<dt><font SIZE="-1">WARN</font></dt>
-<dd> When assert fails here, phase will report a <font SIZE="-1">WARN.</font></dd></dl>
+<dt>FAIL</dt>
+<dd> When assert fails here, phase will report a FAIL.</dd>
+<dt>WARN</dt>
+<dd> When assert fails here, phase will report a WARN.</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt>name</dt>
 <dd> Optional name of the phase (if not provided, one will be generated).</dd></dl>
-<p> If all asserts included in the phase pass, phase reports <font SIZE="-1">PASS.</font> </p>
+<p> If all asserts included in the phase pass, phase reports PASS. </p>
 <p> <i>rlPhaseEnd</i> </p>
 <p> End current phase, summarize asserts included and report phase result. </p>
 <pre>
@@ -134,7 +134,7 @@ rlLog message[logfile][priority][label]
 <p> <i>rlPhaseStartSetup</i> </p>
 <p> <i>rlPhaseStartTest</i> </p>
 <p> <i>rlPhaseStartCleanup</i> </p>
-<p> Start a phase of the specified type: Setup -&gt; <font SIZE="-1">WARN,</font> Test -&gt; <font SIZE="-1">FAIL,</font> Cleanup -&gt; <font SIZE="-1">WARN.</font> </p>
+<p> Start a phase of the specified type: Setup -&gt; WARN, Test -&gt; FAIL, Cleanup -&gt; WARN. </p>
 <pre><code>
 rlPhaseStartSetup[name] rlPhaseStartTest[name] rlPhaseStartCleanup[name]
 </code></pre>
@@ -154,8 +154,8 @@ rlPhaseStartSetup[name] rlPhaseStartTest[name] rlPhaseStartCleanup[name]
 <dt>value</dt>
 <dd> Value of the metric.</dd>
 <dt>tolerance</dt>
-<dd> It is used when comparing via rcw. It means how larger can the second value be to not trigger a <font SIZE="-1">FAIL.</font> Default is 0.2</dd></dl>
-<p> When comparing <font SIZE="-1">FIRST, SECOND,</font> then: </p>
+<dd> It is used when comparing via rcw. It means how larger can the second value be to not trigger a FAIL. Default is 0.2</dd></dl>
+<p> When comparing FIRST, SECOND, then: </p>
 <pre>
     FIRST &gt;= SECOND means PASS
     FIRST+FIRST*tolerance &gt;= SECOND means WARN
@@ -180,8 +180,8 @@ rlPhaseStartSetup[name] rlPhaseStartTest[name] rlPhaseStartCleanup[name]
 <dt>value</dt>
 <dd> Value of the metric.</dd>
 <dt>tolerance</dt>
-<dd> It is used when comparing via rcw. It means how lower can the second value be to not trigger a <font SIZE="-1">FAIL.</font> Default is 0.2</dd></dl>
-<p> When comparing <font SIZE="-1">FIRST, SECOND,</font> then: </p>
+<dd> It is used when comparing via rcw. It means how lower can the second value be to not trigger a FAIL. Default is 0.2</dd></dl>
+<p> When comparing FIRST, SECOND, then: </p>
 <pre>
     FIRST &lt;= SECOND means PASS
     FIRST+FIRST*tolerance &lt;= SECOND means WARN

@@ -45,12 +45,12 @@ description: "locate – find files by name"
 <dt><code>-l</code>, <code>&#8211;limit</code>, <code>-n</code> <i>LIMIT</i></dt>
 <dd> Exit successfully after finding <i>LIMIT</i> entries. If the <code>&#8211;count</code> option is specified, the resulting count is also limited to <i>LIMIT</i>. </dd>
 <dt><code>-m</code>, <code>&#8211;mmap</code></dt>
-<dd> Ignored, for compatibility with <font SIZE="-1">BSD</font> and <font SIZE="-1">GNU</font> <code>locate</code>. </dd>
+<dd> Ignored, for compatibility with BSD and GNU <code>locate</code>. </dd>
 <dt><code>-P</code>, <code>&#8211;nofollow</code>, <code>-H</code></dt>
 <dd> When checking whether files exist (if the <code>&#8211;existing</code> option is specified), do not follow trailing symbolic links. This causes broken symbolic links to be reported like other files. </dd>
 <p> This is the opposite of <code>&#8211;follow</code>. </p>
 <dt><code>-0</code>, <code>&#8211;null</code></dt>
-<dd> Separate the entries on output using the <font SIZE="-1">ASCII NUL</font> character instead of writing each entry on a separate line. This option is designed for interoperability with the <code>&#8211;null</code> option of <font SIZE="-1">GNU</font> <code><a href="/docs/linux/man/1-xargs/">xargs</a></code>(1). </dd>
+<dd> Separate the entries on output using the ASCII NUL character instead of writing each entry on a separate line. This option is designed for interoperability with the <code>&#8211;null</code> option of GNU <code><a href="/docs/linux/man/1-xargs/">xargs</a></code>(1). </dd>
 <dt><code>-S</code>, <code>&#8211;statistics</code></dt>
 <dd> Write statistics about each read database to standard output instead of searching for files and exit successfully. </dd>
 <dt><code>-q</code>, <code>&#8211;quiet</code></dt>
@@ -60,7 +60,7 @@ description: "locate – find files by name"
 <dt><code>&#8211;regex</code></dt>
 <dd> Interpret all <i>PATTERN</i>s as extended regexps. </dd>
 <dt><code>-s</code>, <code>&#8211;stdio</code></dt>
-<dd> Ignored, for compatibility with <font SIZE="-1">BSD</font> and <font SIZE="-1">GNU</font> <code>locate</code>. </dd>
+<dd> Ignored, for compatibility with BSD and GNU <code>locate</code>. </dd>
 <dt><code>-V</code>, <code>&#8211;version</code></dt>
 <dd> Write information about the version and license of <code>locate</code> on standard output and exit successfully. </dd>
 <dt><code>-w</code>, <code>&#8211;wholename</code></dt>
@@ -85,9 +85,9 @@ description: "locate – find files by name"
 </dl>
 <h2>NOTES</h2>
 <p> The order in which the requested databases are processed is unspecified, which allows <code>locate</code> to reorder the database path for security reasons. </p>
-<p> <code>locate</code> attempts to be compatible to <code>slocate</code> (without the options used for creating databases) and <font SIZE="-1">GNU</font> <code>locate</code>, in that order. This is the reason for the impractical default <code>&#8211;follow</code> option and for the confusing set of <code>&#8211;regex</code> and <code>&#8211;regexp</code> options. </p>
-<p> The short spelling of the <code>-r</code> option is incompatible to <font SIZE="-1">GNU</font> <code>locate</code>, where it corresponds to the <code>&#8211;regex</code> option. Use the long option names to avoid confusion. </p>
-<p> The <code>LOCATE_PATH</code> environment variable replaces the default database in <font SIZE="-1">BSD</font> and <font SIZE="-1">GNU</font> <code>locate</code>, but it is added to other databases in this implementation and <code>slocate</code>. </p>
+<p> <code>locate</code> attempts to be compatible to <code>slocate</code> (without the options used for creating databases) and GNU <code>locate</code>, in that order. This is the reason for the impractical default <code>&#8211;follow</code> option and for the confusing set of <code>&#8211;regex</code> and <code>&#8211;regexp</code> options. </p>
+<p> The short spelling of the <code>-r</code> option is incompatible to GNU <code>locate</code>, where it corresponds to the <code>&#8211;regex</code> option. Use the long option names to avoid confusion. </p>
+<p> The <code>LOCATE_PATH</code> environment variable replaces the default database in BSD and GNU <code>locate</code>, but it is added to other databases in this implementation and <code>slocate</code>. </p>
 <h2>AUTHOR</h2>
 <p> Miloslav Trmac &lt;mitr [at] redhat.com&gt; </p>
 <h2>SEE ALSO</h2>

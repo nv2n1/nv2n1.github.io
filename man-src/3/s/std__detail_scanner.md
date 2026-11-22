@@ -11,10 +11,10 @@ description: "std::__detail::_Scanner< _InputIterator > –"
 <h2>Synopsis</h2>
 <p> Inherits <code>std::__detail::_Scanner_base</code>.</p>
 <h3>Public Types</h3>
-<p>typedef std::iterator_traits<br />
+<p>typedef std::iterator_traits<br/>
  &lt; _IteratorT &gt;::value_type <code>_CharT</code>&quot; </p>
 <p> typedef const <code>std::ctype</code>&lt; _CharT &gt; <code>_CtypeT</code> </p>
-<p> typedef<br />
+<p> typedef<br/>
  <code>regex_constants::syntax_option_type</code> <code>_FlagT</code>&quot; </p>
 <p> typedef _InputIterator <code>_IteratorT</code> </p>
 <p> typedef unsigned int <code>_StateT</code> </p>

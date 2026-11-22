@@ -10,8 +10,8 @@ description: "gzip, gunzip, zcat – compress or expand files"
 
 <p> gzip, gunzip, zcat &#8211; compress or expand files</p>
 <h2>SYNOPSIS</h2>
-<p> <code>gzip</code> [<code> -acdfhlLnNrtvV19 </code>] [<code>-S suffix</code>] [ <i>name &#8230;</i> ]<br />
- <code>gunzip</code> [<code> -acfhlLnNrtvV </code>] [<code>-S suffix</code>] [ <i>name &#8230;</i> ]<br />
+<p> <code>gzip</code> [<code> -acdfhlLnNrtvV19 </code>] [<code>-S suffix</code>] [ <i>name &#8230;</i> ]<br/>
+ <code>gunzip</code> [<code> -acfhlLnNrtvV </code>] [<code>-S suffix</code>] [ <i>name &#8230;</i> ]<br/>
  <code>zcat</code> [<code> -fhLV </code>] [ <i>name &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Gzip</i> reduces the size of the named files using Lempel-Ziv coding (LZ77). Whenever possible, each file is replaced by one with the extension <code>.gz,</code> while keeping the same ownership modes, access and modification times. (The default extension is <code>-gz</code> for VMS, <code>z</code> for MSDOS, OS/2 FAT, Windows NT FAT and Atari.) If no files are specified, or if a file name is &quot;-&quot;, the standard input is compressed to the standard output. <i>Gzip</i> will only attempt to compress regular files. In particular, it will ignore symbolic links. </p>
@@ -24,7 +24,7 @@ description: "gzip, gunzip, zcat – compress or expand files"
 <p> <i>zcat</i> is identical to <i>gunzip</i> <code>-c.</code> (On some systems, <i>zcat</i> may be installed as <i>gzcat</i> to preserve the original link to <i>compress.)</i> <i>zcat</i> uncompresses either a list of files on the command line or its standard input and writes the uncompressed data on standard output. <i>zcat</i> will uncompress files that have the correct magic number whether they have a <code>.gz</code> suffix or not. </p>
 <p> <i>Gzip</i> uses the Lempel-Ziv algorithm used in <i>zip</i> and PKZIP. The amount of compression obtained depends on the size of the input and the distribution of common substrings. Typically, text such as source code or English is reduced by 60-70%. Compression is generally much better than that achieved by LZW (as used in <i>compress</i>), Huffman coding (as used in <i>pack</i>), or adaptive Huffman coding (<i>compact</i>). </p>
 <p> Compression is always performed, even if the compressed file is slightly larger than the original. The worst case expansion is a few bytes for the gzip file header, plus 5 bytes every 32K block, or an expansion ratio of 0.015% for large files. Note that the actual number of used disk blocks almost never increases. <i>gzip</i> preserves the mode, ownership and timestamps of files when compressing or decompressing. </p>
-<p> The <i>gzip</i> file format is specified in P. Deutsch, <font SIZE="-1">GZIP</font> file format specification version 4.3, &lt;<a href="ftp://ftp.isi.edu/in-notes/rfc1952.txt">ftp://ftp.isi.edu/in-notes/rfc1952.txt</a>&gt;, Internet RFC 1952 (May 1996). The <i>zip</i> deflation format is specified in P. Deutsch, <font SIZE="-1">DEFLATE</font> Compressed Data Format Specification version 1.3, &lt;<a href="ftp://ftp.isi.edu/in-notes/rfc1951.txt">ftp://ftp.isi.edu/in-notes/rfc1951.txt</a>&gt;, Internet RFC 1951 (May 1996). </p>
+<p> The <i>gzip</i> file format is specified in P. Deutsch, GZIP file format specification version 4.3, &lt;<a href="ftp://ftp.isi.edu/in-notes/rfc1952.txt">ftp://ftp.isi.edu/in-notes/rfc1952.txt</a>&gt;, Internet RFC 1952 (May 1996). The <i>zip</i> deflation format is specified in P. Deutsch, DEFLATE Compressed Data Format Specification version 1.3, &lt;<a href="ftp://ftp.isi.edu/in-notes/rfc1951.txt">ftp://ftp.isi.edu/in-notes/rfc1951.txt</a>&gt;, Internet RFC 1951 (May 1996). </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-a &#8211;ascii</code></dt>
@@ -39,15 +39,15 @@ description: "gzip, gunzip, zcat – compress or expand files"
 <dd> Display a help screen and quit.</dd>
 <dt><code>-l &#8211;list</code></dt>
 <dd> For each compressed file, list the following fields: </dd>
-<p>&nbsp;<wbr>compressed size: size of the compressed file<br />
-&nbsp;<wbr>uncompressed size: size of the uncompressed file<br />
-&nbsp;<wbr>ratio: compression ratio&nbsp;<wbr>(0.0%&nbsp;<wbr>if unknown)<br />
+<p>&nbsp;<wbr>compressed size: size of the compressed file<br/>
+&nbsp;<wbr>uncompressed size: size of the uncompressed file<br/>
+&nbsp;<wbr>ratio: compression ratio&nbsp;<wbr>(0.0%&nbsp;<wbr>if unknown)<br/>
 &nbsp;<wbr>uncompressed_name: name of the uncompressed file </p>
 <p> The uncompressed size is given as -1 for files not in gzip format, such as compressed .Z files. To get the uncompressed size for such a file, you can use: </p>
 <p>&nbsp;<wbr>zcat file.Z | wc -c </p>
 <p> In combination with the &#8211;verbose option, the following fields are also displayed: </p>
-<p>&nbsp;<wbr>method: compression method<br />
-&nbsp;<wbr>crc: the 32-bit CRC of the uncompressed data<br />
+<p>&nbsp;<wbr>method: compression method<br/>
+&nbsp;<wbr>crc: the 32-bit CRC of the uncompressed data<br/>
 &nbsp;<wbr>date&nbsp;<wbr>&amp;&nbsp;<wbr>time: time stamp for the uncompressed file </p>
 <p> The compression methods currently supported are deflate, compress, lzh (SCO compress -H) and pack. The crc is given as ffffffff for a file not in gzip format. </p>
 <p> With &#8211;name, the uncompressed name, date and time are those stored within the compress file if present. </p>
@@ -76,7 +76,7 @@ description: "gzip, gunzip, zcat – compress or expand files"
 <dd> Regulate the speed of compression using the specified digit <i>#</i>, where <code>-1</code> or <code>&#8211;fast</code> indicates the fastest compression method (less compression) and <code>-9</code> or <code>&#8211;best</code> indicates the slowest compression method (best compression). The default compression level is <code>-6</code> (that is, biased towards high compression at expense of speed).</dd></dl>
 <h2>ADVANCED USAGE</h2>
 <p> Multiple compressed files can be concatenated. In this case, <i>gunzip</i> will extract all members at once. For example: </p>
-<p>gzip -c file1&nbsp;<wbr>&nbsp;<wbr>&gt;&nbsp;<wbr>foo.gz<br />
+<p>gzip -c file1&nbsp;<wbr>&nbsp;<wbr>&gt;&nbsp;<wbr>foo.gz<br/>
 gzip -c file2&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>foo.gz </p>
 <p> Then </p>
 <p>gunzip -c foo </p>
@@ -92,14 +92,14 @@ gzip -c file2&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>foo.gz </p>
 <p>gzip -cd file.gz | wc -c </p>
 <p> If you wish to create a single archive file with multiple members so that members can later be extracted independently, use an archiver such as tar or zip. GNU tar supports the -z option to invoke gzip transparently. gzip is designed as a complement to tar, not as a replacement.</p>
 <h2>ENVIRONMENT</h2>
-<p> The environment variable <code>GZIP</code> can hold a set of default options for <i>gzip.</i> These options are interpreted first and can be overwritten by explicit command line parameters. For example:<br />
-for sh:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>GZIP=&quot;-8v &#8211;name&quot;;&nbsp;<wbr>export GZIP<br />
-for csh:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>setenv GZIP&nbsp;<wbr>&quot;-8v &#8211;name&quot;<br />
+<p> The environment variable <code>GZIP</code> can hold a set of default options for <i>gzip.</i> These options are interpreted first and can be overwritten by explicit command line parameters. For example:<br/>
+for sh:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>GZIP=&quot;-8v &#8211;name&quot;;&nbsp;<wbr>export GZIP<br/>
+for csh:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>setenv GZIP&nbsp;<wbr>&quot;-8v &#8211;name&quot;<br/>
 for MSDOS: set GZIP=-8v &#8211;name </p>
 <p> On Vax/VMS, the name of the environment variable is GZIP_OPT, to avoid a conflict with the symbol set for invocation of the program.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-znew/">znew</a>(1), <a href="/docs/linux/man/1-zcmp/">zcmp</a>(1), <a href="/docs/linux/man/1-zmore/">zmore</a>(1), <a href="/docs/linux/man/1-zforce/">zforce</a>(1), <a href="/docs/linux/man/1-gzexe/">gzexe</a>(1), <a href="/docs/linux/man/1-zip/">zip</a>(1), <a href="/docs/linux/man/1-unzip/">unzip</a>(1), <a href="/docs/linux/man/1-compress/">compress</a>(1), pack(1), compact(1) </p>
-<p> The <i>gzip</i> file format is specified in P. Deutsch, <font SIZE="-1">GZIP</font> file format specification version 4.3, <code>&lt;<a href="ftp://ftp.isi.edu/in-notes/rfc1952.txt">ftp://ftp.isi.edu/in-notes/rfc1952.txt</a>&gt;</code>, Internet RFC 1952 (May 1996). The <i>zip</i> deflation format is specified in P. Deutsch, <font SIZE="-1">DEFLATE</font> Compressed Data Format Specification version 1.3, <code>&lt;<a href="ftp://ftp.isi.edu/in-notes/rfc1951.txt">ftp://ftp.isi.edu/in-notes/rfc1951.txt</a>&gt;</code>, Internet RFC 1951 (May 1996).</p>
+<p> The <i>gzip</i> file format is specified in P. Deutsch, GZIP file format specification version 4.3, <code>&lt;<a href="ftp://ftp.isi.edu/in-notes/rfc1952.txt">ftp://ftp.isi.edu/in-notes/rfc1952.txt</a>&gt;</code>, Internet RFC 1952 (May 1996). The <i>zip</i> deflation format is specified in P. Deutsch, DEFLATE Compressed Data Format Specification version 1.3, <code>&lt;<a href="ftp://ftp.isi.edu/in-notes/rfc1951.txt">ftp://ftp.isi.edu/in-notes/rfc1951.txt</a>&gt;</code>, Internet RFC 1951 (May 1996).</p>
 <h2>DIAGNOSTICS</h2>
 <p> Exit status is normally 0; if an error occurs, exit status is 1. If a warning occurs, exit status is 2.</p>
 <dl>
@@ -125,8 +125,8 @@ for MSDOS: set GZIP=-8v &#8211;name </p>
 <dt>&#8212; has <i>xx</i> other links: unchanged</dt>
 <dd> The input file has links; it is left unchanged. See <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1) for more information. Use the <code>-f</code> flag to force compression of multiply-linked files.</dd></dl>
 <h2>CAVEATS</h2>
-<p> When writing compressed data to a tape, it is generally necessary to pad the output with zeroes up to a block boundary. When the data is read and the whole block is passed to <i>gunzip</i> for decompression, <i>gunzip</i> detects that there is extra trailing garbage after the compressed data and emits a warning by default. You have to use the &#8211;quiet option to suppress the warning. This option can be set in the <code>GZIP</code> environment variable as in:<br />
-&nbsp;<wbr>&nbsp;<wbr>for sh:&nbsp;<wbr>&nbsp;<wbr>GZIP=&quot;-q&quot;&nbsp;<wbr>&nbsp;<wbr>tar -xfz &#8211;block-compress&nbsp;<wbr>/dev/rst0<br />
+<p> When writing compressed data to a tape, it is generally necessary to pad the output with zeroes up to a block boundary. When the data is read and the whole block is passed to <i>gunzip</i> for decompression, <i>gunzip</i> detects that there is extra trailing garbage after the compressed data and emits a warning by default. You have to use the &#8211;quiet option to suppress the warning. This option can be set in the <code>GZIP</code> environment variable as in:<br/>
+&nbsp;<wbr>&nbsp;<wbr>for sh:&nbsp;<wbr>&nbsp;<wbr>GZIP=&quot;-q&quot;&nbsp;<wbr>&nbsp;<wbr>tar -xfz &#8211;block-compress&nbsp;<wbr>/dev/rst0<br/>
 &nbsp;<wbr>&nbsp;<wbr>for csh:&nbsp;<wbr>(setenv GZIP -q;&nbsp;<wbr>tar -xfz &#8211;block-compr&nbsp;<wbr>/dev/rst0 </p>
 <p> In the above example, gzip is invoked implicitly by the -z option of GNU tar. Make sure that the same block size (-b option of tar) is used for reading and writing compressed data on tapes. (This example assumes you are using the GNU version of tar.)</p>
 <h2>BUGS</h2>
@@ -135,7 +135,7 @@ for MSDOS: set GZIP=-8v &#8211;name </p>
 <p> The &#8211;list option reports sizes as -1 and crc as ffffffff if the compressed file is on a non seekable media. </p>
 <p> In some rare cases, the &#8211;best option gives worse compression than the default compression level (-6). On some highly redundant files, <i>compress</i> compresses better than <i>gzip.</i></p>
 <h2>COPYRIGHT NOTICE</h2>
-<p> Copyright &#169; 1998, 1999, 2001, 2002 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 1998, 1999, 2001, 2002 Free Software Foundation, Inc.<br/>
  Copyright &#169; 1992, 1993 Jean-loup Gailly </p>
 <p> Permission is granted to make and distribute verbatim copies of this manual provided the copyright notice and this permission notice are preserved on all copies. </p>
 <p> Permission is granted to copy and distribute modified versions of this manual under the conditions for verbatim copying, provided that the entire resulting derived work is distributed under the terms of a permission notice identical to this one. </p>

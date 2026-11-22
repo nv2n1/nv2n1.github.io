@@ -10,7 +10,7 @@ description: "pth-config – Pth library build utility"
 
 <p> <code>pth-config</code> &#8211; Pth library build utility</p>
 <h2>VERSION</h2>
-<p> <font SIZE="-1">GNU</font> Pth <font SIZE="-1">2.0.7 (08-Jun-2006)</font></p>
+<p> GNU Pth 2.0.7 (08-Jun-2006)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pth-config</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<code>&#8211;all</code>] [<code>&#8211;prefix</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;bindir</code>] [<code>&#8211;libdir</code>] [<code>&#8211;includedir</code>] [<code>&#8211;mandir</code>] [<code>&#8211;datadir</code>] [<code>&#8211;acdir</code>] [<code>&#8211;cflags</code>] [<code>&#8211;ldflags</code>] [<code>&#8211;libs</code>]</p>
 <h2>DESCRIPTION</h2>

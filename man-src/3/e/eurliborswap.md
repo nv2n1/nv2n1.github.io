@@ -10,14 +10,14 @@ description: "ql/indexes/swap/eurliborswap.hpp – EUR Libor Swap indexes"
 
 <p> ql/indexes/swap/eurliborswap.hpp &#8211; EUR Libor Swap indexes </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/indexes/swapindex.hpp&gt;<br />
+<p> #include &lt;ql/indexes/swapindex.hpp&gt;<br/>
  #include &lt;ql/termstructures/yieldtermstructure.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>EurLiborSwapIsdaFixA</code><br />
- <i>EurLiborSwapIsdaFixA index base class </i><br />
- class <code>EurLiborSwapIsdaFixB</code><br />
- <i>EurLiborSwapIsdaFixB index base class </i><br />
- class <code>EurLiborSwapIfrFix</code><br />
+<p> class <code>EurLiborSwapIsdaFixA</code><br/>
+ <i>EurLiborSwapIsdaFixA index base class </i><br/>
+ class <code>EurLiborSwapIsdaFixB</code><br/>
+ <i>EurLiborSwapIsdaFixB index base class </i><br/>
+ class <code>EurLiborSwapIfrFix</code><br/>
  <i>EurLiborSwapIfrFix index base class </i></p>
 <h2>Detailed Description</h2>
 <p> EUR Libor Swap indexes </p>

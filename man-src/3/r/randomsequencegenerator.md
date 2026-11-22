@@ -14,7 +14,7 @@ description: "ql/math/randomnumbers/randomsequencegenerator.hpp – Random seque
 #include &lt;ql/errors.hpp&gt;
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>RandomSequenceGenerator&lt; RNG &gt;</code><br />
+<p>class <code>RandomSequenceGenerator&lt; RNG &gt;</code><br/>
  <i>Random sequence generator based on a pseudo-random number generator. </i></p>
 <h2>Detailed Description</h2>
 <p>Random sequence generator based on a pseudo-random number generator.</p>

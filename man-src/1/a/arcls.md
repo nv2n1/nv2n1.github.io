@@ -49,7 +49,7 @@ description: "arcls – list files or directories"
 <dt><code>url</code></dt>
 <dd> the location to list</dd></dl>
 <h2>EXTENDED DESCRIPTION</h2>
-<p> The <code>arcls</code> command lists files and directories on grid storage elements and in file index catalogues. Depending on the installed libraries (check with <code>-P</code> ), the following protocols may be used: file (file:// prefix may be omitted), http, https, httpg, ftp, gsiftp, srm, root.<br />
+<p> The <code>arcls</code> command lists files and directories on grid storage elements and in file index catalogues. Depending on the installed libraries (check with <code>-P</code> ), the following protocols may be used: file (file:// prefix may be omitted), http, https, httpg, ftp, gsiftp, srm, root.<br/>
 &nbsp;<wbr> In the case of a directory/fileset, attributes of objects belonging to it will be retrieved, unless <code>&#8211;nolist</code> is specified. </p>
 <p> If url starts from &#8216;@&#8217;, the remainder should be a path to a local file containing list of URLs, one per line. Then arcls acts as if it was called multiple times, once for each URL. For more information on ARC URL syntax please read &quot;Protocols, Uniform Resource Locators (URL) and Extensions Supported in ARC&quot; [NORDUGRID-TECH-7] </p>
 <h2>FILES</h2>

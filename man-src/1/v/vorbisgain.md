@@ -90,11 +90,11 @@ description: "vorbisgain – calculate the replay gain for Ogg Vorbis files"
 <dl>
 <dt>Program Code:</dt>
 <dd>
- Gian-Carlo Pascutto &lt;gcp [at] sjeng.org&gt;<br />
+ Gian-Carlo Pascutto &lt;gcp [at] sjeng.org&gt;<br/>
  Magnus Holmgren &lt;lear [at] algonet.se&gt; </dd>
 <dt>ReplayGain Analysis Code:</dt>
 <dd>
- Glen Sawyer &lt;glensawyer [at] hotmail.com&gt;<br />
+ Glen Sawyer &lt;glensawyer [at] hotmail.com&gt;<br/>
  Frank Klemm (<a rel="nofollow" href="http://www.uni-jena.de/~pfk/)">http://www.uni-jena.de/~pfk/)</a> </dd>
 <dt>Man Page:</dt>
 <dd>

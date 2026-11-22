@@ -40,12 +40,12 @@ dcmfile-out  DICOM output filename
          use config file f for the logger
 </code></pre>
 <h3>input options</h3>
-<p>input file format : +f&#8211; read &#8211; file<br />
-                                    read file format or<br />
-    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br />
-        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br />
-                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br />
-                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br />
+<p>input file format : +f&#8211; read &#8211; file<br/>
+                                    read file format or<br/>
+    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br/>
+        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br/>
+                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br/>
+                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br/>
                                                                                                       &#8211; ti&#8211; read &#8211; xfer &#8211; implicit read with implicit VR little endian TS</p>
 <h3>encapsulated pixel data encoding options</h3>
 <p>pixel data fragmentation : +ff&#8211; fragment &#8211; per &#8211; frame encode each frame as one fragment(default) + fs&#8211; fragment &#8211; size[s] ize : integer limit fragment size to s kbytes(non &#8211; standard) basic offset table encoding : +ot&#8211; offset &#8211; table &#8211; create create offset table(default) &#8211; ot&#8211; offset &#8211; table &#8211; empty leave offset table empty SOP Class UID : +cd&#8211; class &#8211; default keep SOP Class UID(default) + cs&#8211; class &#8211; sc convert to Secondary Capture Image(implies&#8211; uid &#8211; always) SOP Instance UID : +un&#8211; uid &#8211; never never assign new UID(default) + ua&#8211; uid &#8211; always always assign new UID</p>

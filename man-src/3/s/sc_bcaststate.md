@@ -13,19 +13,19 @@ description: "sc::BcastState –"
 <pre><code>
 #include &lt;mstate.h&gt;
 Public Member Functions</code></pre>
-<p> <code>BcastState</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;, int source=0)<br />
- <i>Create a </i><code>BcastState</code> object. The default source is node 0.<br />
- void <code>bcast</code> (int &amp;)<br />
- <i>Broadcast data to all nodes. </i><br />
+<p> <code>BcastState</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;, int source=0)<br/>
+ <i>Create a </i><code>BcastState</code> object. The default source is node 0.<br/>
+ void <code>bcast</code> (int &amp;)<br/>
+ <i>Broadcast data to all nodes. </i><br/>
  void <code>bcast</code> (double &amp;) </p>
 <p> void <code>bcast</code> (int *&amp;, int) </p>
 <p> void <code>bcast</code> (double *&amp;, int) </p>
 <p> template&lt;class T &gt; void <code>bcast</code> (<code>Ref</code>&lt; T &gt; &amp;a) </p>
-<p> void <code>flush</code> ()<br />
- <i>Force data to be written. </i><br />
- void <code>forget_references</code> ()<br />
- <i>Call the </i><code>StateOut</code> or <code>StateIn</code> forget_references member.<br />
- void <code>set_buffer_size</code> (int)<br />
+<p> void <code>flush</code> ()<br/>
+ <i>Force data to be written. </i><br/>
+ void <code>forget_references</code> ()<br/>
+ <i>Call the </i><code>StateOut</code> or <code>StateIn</code> forget_references member.<br/>
+ void <code>set_buffer_size</code> (int)<br/>
  <i>Controls the amount of data that is buffered before it is sent. </i></p>
 <h2>Detailed Description</h2>
 <p>This creates and forwards/retrieves data from either a <code>BcastStateRecv</code> or a <code>BcastStateSend</code> depending on the value of the argument to constructor.</p>

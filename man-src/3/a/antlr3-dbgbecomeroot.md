@@ -12,19 +12,19 @@ description: "src/antlr3basetreeadaptor.c –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3basetreeadaptor.h">antlr3basetreeadaptor.h</a>&gt; </p>
 <h3>Functions</h3>
-<p>static void <code>addChild</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>pANTLR3_BASE_TREE</code> child)<br />
- <i>Add a child to the tree t. </i><br />
- static void <code>addChildToken</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>pANTLR3_COMMON_TOKEN</code> child)<br />
- <i>Use the adaptor implementation to add a child node with the supplied token. </i><br />
- ANTLR3_API void <code>antlr3BaseTreeAdaptorInit</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)<br />
- <i>Given a pointer to a base tree adaptor structure (which is usually embedded in the super class the implements the tree adaptor used in the parse), initialize its function pointers and so on. </i><br />
- static <code>pANTLR3_BASE_TREE</code> <code>becomeRoot</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> newRootTree, <code>pANTLR3_BASE_TREE</code> oldRootTree)<br />
- <i>If oldRoot is a nil root, just copy or move the children to newRoot. </i><br />
- static <code>pANTLR3_BASE_TREE</code> <code>becomeRootToken</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, void *newRoot, <code>pANTLR3_BASE_TREE</code> oldRoot)<br />
- <i>Use the adaptor interface to set a new tree node with the supplied token to the root of the tree. </i><br />
+<p>static void <code>addChild</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>pANTLR3_BASE_TREE</code> child)<br/>
+ <i>Add a child to the tree t. </i><br/>
+ static void <code>addChildToken</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>pANTLR3_COMMON_TOKEN</code> child)<br/>
+ <i>Use the adaptor implementation to add a child node with the supplied token. </i><br/>
+ ANTLR3_API void <code>antlr3BaseTreeAdaptorInit</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)<br/>
+ <i>Given a pointer to a base tree adaptor structure (which is usually embedded in the super class the implements the tree adaptor used in the parse), initialize its function pointers and so on. </i><br/>
+ static <code>pANTLR3_BASE_TREE</code> <code>becomeRoot</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> newRootTree, <code>pANTLR3_BASE_TREE</code> oldRootTree)<br/>
+ <i>If oldRoot is a nil root, just copy or move the children to newRoot. </i><br/>
+ static <code>pANTLR3_BASE_TREE</code> <code>becomeRootToken</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, void *newRoot, <code>pANTLR3_BASE_TREE</code> oldRoot)<br/>
+ <i>Use the adaptor interface to set a new tree node with the supplied token to the root of the tree. </i><br/>
  static <code>pANTLR3_BASE_TREE</code> <code>createTypeText</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>ANTLR3_UINT32</code> tokenType, <code>pANTLR3_UINT8</code> text) </p>
-<p> static <code>pANTLR3_BASE_TREE</code> <code>createTypeToken</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>ANTLR3_UINT32</code> tokenType, <code>pANTLR3_COMMON_TOKEN</code> fromToken)<br />
- <i>Use the super class supplied </i><code>create()</code> method to create a new node from the supplied token.<br />
+<p> static <code>pANTLR3_BASE_TREE</code> <code>createTypeToken</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>ANTLR3_UINT32</code> tokenType, <code>pANTLR3_COMMON_TOKEN</code> fromToken)<br/>
+ <i>Use the super class supplied </i><code>create()</code> method to create a new node from the supplied token.<br/>
  static <code>pANTLR3_BASE_TREE</code> <code>createTypeTokenText</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>ANTLR3_UINT32</code> tokenType, <code>pANTLR3_COMMON_TOKEN</code> fromToken, <code>pANTLR3_UINT8</code> text) </p>
 <p> static void <code>dbgAddChild</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>pANTLR3_BASE_TREE</code> child) </p>
 <p> static void <code>dbgAddChildToken</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>pANTLR3_COMMON_TOKEN</code> child) </p>
@@ -37,31 +37,31 @@ description: "src/antlr3basetreeadaptor.c –"
 <p> static <code>pANTLR3_BASE_TREE</code> <code>dbgNil</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor) </p>
 <p> static void <code>defineDotEdges</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, void *t, <code>pANTLR3_STRING</code> dotSpec) </p>
 <p> static void <code>defineDotNodes</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, void *t, <code>pANTLR3_STRING</code> dotSpec) </p>
-<p> static <code>pANTLR3_BASE_TREE</code> <code>dupTree</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t)<br />
- <i>Return a duplicate of the entire tree (implementation provided by the BASE_TREE interface. </i><br />
+<p> static <code>pANTLR3_BASE_TREE</code> <code>dupTree</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t)<br/>
+ <i>Return a duplicate of the entire tree (implementation provided by the BASE_TREE interface. </i><br/>
  static <code>pANTLR3_BASE_TREE</code> <code>dupTreeTT</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>pANTLR3_BASE_TREE</code> parent) </p>
 <p> static <code>pANTLR3_BASE_TREE</code> <code>getChild</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>ANTLR3_UINT32</code> i) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>getChildCount</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t) </p>
-<p> static <code>pANTLR3_STRING</code> <code>getText</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t)<br />
- <i>Dummy implementation &#8211; will be supplied by super class. </i><br />
- static <code>ANTLR3_UINT32</code> <code>getType</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t)<br />
- <i>Dummy implementation &#8211; will be supplied by super class. </i><br />
- static <code>ANTLR3_UINT32</code> <code>getUniqueID</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> node)<br />
- <i>Returns a uniqueID for the node. </i><br />
+<p> static <code>pANTLR3_STRING</code> <code>getText</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t)<br/>
+ <i>Dummy implementation &#8211; will be supplied by super class. </i><br/>
+ static <code>ANTLR3_UINT32</code> <code>getType</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t)<br/>
+ <i>Dummy implementation &#8211; will be supplied by super class. </i><br/>
+ static <code>ANTLR3_UINT32</code> <code>getUniqueID</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> node)<br/>
+ <i>Returns a uniqueID for the node. </i><br/>
  static <code>ANTLR3_BOOLEAN</code> <code>isNilNode</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t) </p>
-<p> static <code>pANTLR3_STRING</code> <code>makeDot</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, void *theTree)<br />
- <i>Produce a DOT specification for graphviz. </i><br />
- static <code>pANTLR3_BASE_TREE</code> <code>nilNode</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor)<br />
- <i>Create and return a nil tree node (no token payload). </i><br />
- static <code>pANTLR3_BASE_TREE</code> <code>rulePostProcessing</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> root)<br />
- <i>Transform ^(nil x) to x. </i><br />
- static void <code>setText</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_STRING</code> t)<br />
- <i>Dummy implementation &#8211; will be supplied by super class. </i><br />
- static void <code>setText8</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_UINT8</code> t)<br />
- <i>Dummy implementation &#8211; will be supplied by super class. </i><br />
- static void <code>setType</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>ANTLR3_UINT32</code> type)<br />
- <i>Dummy implementation &#8211; will be supplied by super class. </i><br />
- static void <code>simulateTreeConstruction</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> tree)<br />
+<p> static <code>pANTLR3_STRING</code> <code>makeDot</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, void *theTree)<br/>
+ <i>Produce a DOT specification for graphviz. </i><br/>
+ static <code>pANTLR3_BASE_TREE</code> <code>nilNode</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor)<br/>
+ <i>Create and return a nil tree node (no token payload). </i><br/>
+ static <code>pANTLR3_BASE_TREE</code> <code>rulePostProcessing</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> root)<br/>
+ <i>Transform ^(nil x) to x. </i><br/>
+ static void <code>setText</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_STRING</code> t)<br/>
+ <i>Dummy implementation &#8211; will be supplied by super class. </i><br/>
+ static void <code>setText8</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_UINT8</code> t)<br/>
+ <i>Dummy implementation &#8211; will be supplied by super class. </i><br/>
+ static void <code>setType</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> t, <code>ANTLR3_UINT32</code> type)<br/>
+ <i>Dummy implementation &#8211; will be supplied by super class. </i><br/>
+ static void <code>simulateTreeConstruction</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_TREE</code> tree)<br/>
  <i>Sends the required debugging events for duplicating a tree to the debugger. </i></p>
 <h2>Detailed Description</h2>
 <p>Contains the base functions that all tree adaptors start with. </p>

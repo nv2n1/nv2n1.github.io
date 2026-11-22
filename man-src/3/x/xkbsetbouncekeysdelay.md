@@ -10,7 +10,7 @@ description: "XkbSetBounceKeysDelay – Sets the BounceKeys delay for a keyboard
 <p>XkbSetBounceKeysDelay &#8211; Sets the BounceKeys delay for a keyboard device </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbSetBounceKeysDelay</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int *</code><i>delay</i><code>);</code><br />
+<dt> <code>Bool XkbSetBounceKeysDelay</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int *</code><i>delay</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

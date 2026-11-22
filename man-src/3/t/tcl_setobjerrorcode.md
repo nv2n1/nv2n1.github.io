@@ -27,9 +27,9 @@ void
 <h2>Arguments</h2>
 <dl COMPACT>
 <dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to record information.</dd>
-<dd>int<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>code</i><br />
+<dd>int<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>code</i><br/>
  The code returned from script evaluation.</dd>
-<dd>Tcl_Obj<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>*options</i><br />
+<dd>Tcl_Obj<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>*options</i><br/>
  A dictionary of return options.</dd>
 <dd>char <i>*message</i> (in) For <code>Tcl_AddErrorInfo</code>, this is a conventional C string to append to the <code>-errorinfo</code> return option. For <code>Tcl_AddObjErrorInfo</code>, this points to the first byte of an array of <i>length</i> bytes containing a string to append to the <code>-errorinfo</code> return option. This byte array may contain embedded null bytes unless <i>length</i> is negative.</dd>
 <dd>Tcl_Obj <i>*objPtr</i> (in) A message to be appended to the <code>-errorinfo</code> return option in the form of a Tcl_Obj value.</dd>

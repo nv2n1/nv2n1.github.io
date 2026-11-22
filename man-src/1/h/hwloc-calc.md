@@ -66,63 +66,63 @@ description: "hwloc-calc – Operate on cpu mask strings and objects"
 <h2>EXAMPLES</h2>
 <p> hwloc-calc&#8217;s operation is best described through several examples. </p>
 <p> To display the (physical) CPU mask corresponding to the second package: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc package:1<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc package:1<br/>
 &nbsp;<wbr>0x000000f0 </p>
 <p> To display the (physical) CPU mask corresponding to the third pacakge, excluding its even numbered logical processors: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc package:2&nbsp;<wbr>~PU:even<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc package:2&nbsp;<wbr>~PU:even<br/>
 &nbsp;<wbr>0x00000c00 </p>
 <p> To combine two (physical) CPU masks: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc 0x0000ffff 0xff000000<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc 0x0000ffff 0xff000000<br/>
 &nbsp;<wbr>0xff00ffff </p>
 <p> To display the list of logical numbers of processors included in the second package: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc &#8211;intersect PU package:1<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc &#8211;intersect PU package:1<br/>
 &nbsp;<wbr>4,5,6,7 </p>
 <p> To bind GNU OpenMP threads logically over the whole machine, we need to use physical number output instead: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>export GOMP_CPU_AFFINITY=`hwloc-calc &#8211;physical-output &#8211;intersect PU machine:0`<br />
-&nbsp;<wbr>$&nbsp;<wbr>echo&nbsp;<wbr>$GOMP_CPU_AFFINITY<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>export GOMP_CPU_AFFINITY=`hwloc-calc &#8211;physical-output &#8211;intersect PU machine:0`<br/>
+&nbsp;<wbr>$&nbsp;<wbr>echo&nbsp;<wbr>$GOMP_CPU_AFFINITY<br/>
 &nbsp;<wbr>0,4,1,5,2,6,3,7 </p>
 <p> To display the list of NUMA nodes, by physical indexes, that intersect a given (physical) CPU mask: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc &#8211;physical &#8211;intersect NUMAnode 0xf0f0f0f0<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc &#8211;physical &#8211;intersect NUMAnode 0xf0f0f0f0<br/>
 &nbsp;<wbr>0,2 </p>
 <p> To display the physical index of a processor given by its logical index: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc PU:2 &#8211;physical-output &#8211;intersect PU<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc PU:2 &#8211;physical-output &#8211;intersect PU<br/>
 &nbsp;<wbr>3 </p>
 <p> To display the set of CPUs near network interface eth0: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc os=eth0<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc os=eth0<br/>
 &nbsp;<wbr>0x00005555 </p>
 <p> To display the indexes of packages near PCI device whose bus ID is 0000:01:02.0: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc pci=0000:01:02.0 &#8211;intersect Package<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc pci=0000:01:02.0 &#8211;intersect Package<br/>
 &nbsp;<wbr>1 </p>
 <p> To display the list of per-package cores that intersect the input: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc 0x00003c00 &#8211;hierarchical package.core<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc 0x00003c00 &#8211;hierarchical package.core<br/>
 &nbsp;<wbr>Package:2.Core:1 Package:3.Core:0 </p>
 <p> To display the (physical) CPU mask of the entire topology except the third package: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc all&nbsp;<wbr>~package:3<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc all&nbsp;<wbr>~package:3<br/>
 &nbsp;<wbr>0x0000f0ff </p>
 <p> To combine both physical and logical indexes as input: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc PU:2 &#8211;physical-input PU:3<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc PU:2 &#8211;physical-input PU:3<br/>
 &nbsp;<wbr>0x0000000c </p>
 <p> To synthetize a set of cores into largest objects on a 2-node 2-package 2-core machine: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc core:0 &#8211;largest<br />
-&nbsp;<wbr>Core:0<br />
-&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc core:0-1 &#8211;largest<br />
-&nbsp;<wbr>Package:0<br />
-&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc core:4-7 &#8211;largest<br />
-&nbsp;<wbr>NUMANode:1<br />
-&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc core:2-6 &#8211;largest<br />
-&nbsp;<wbr>Package:1 Package:2 Core:6<br />
-&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc pack:2 &#8211;largest<br />
-&nbsp;<wbr>Package:2<br />
-&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc package:2-3 &#8211;largest<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc core:0 &#8211;largest<br/>
+&nbsp;<wbr>Core:0<br/>
+&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc core:0-1 &#8211;largest<br/>
+&nbsp;<wbr>Package:0<br/>
+&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc core:4-7 &#8211;largest<br/>
+&nbsp;<wbr>NUMANode:1<br/>
+&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc core:2-6 &#8211;largest<br/>
+&nbsp;<wbr>Package:1 Package:2 Core:6<br/>
+&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc pack:2 &#8211;largest<br/>
+&nbsp;<wbr>Package:2<br/>
+&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc package:2-3 &#8211;largest<br/>
 &nbsp;<wbr>NUMANode:1 </p>
 <p> To get the set of first threads of all cores: </p>
 <p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-calc core:all.pu:0 </p>
 <p> This can also be very useful in order to make GNU OpenMP use exactly one thread per core, and in logical core order: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>export OMP_NUM_THREADS=`hwloc-calc &#8211;number-of core machine:0`<br />
-&nbsp;<wbr>$&nbsp;<wbr>echo&nbsp;<wbr>$OMP_NUM_THREADS<br />
-&nbsp;<wbr>4<br />
-&nbsp;<wbr>$&nbsp;<wbr>export GOMP_CPU_AFFINITY=`hwloc-calc &#8211;physical-output &#8211;intersect PU core:all.pu:0`<br />
-&nbsp;<wbr>$&nbsp;<wbr>echo&nbsp;<wbr>$GOMP_CPU_AFFINITY<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>export OMP_NUM_THREADS=`hwloc-calc &#8211;number-of core machine:0`<br/>
+&nbsp;<wbr>$&nbsp;<wbr>echo&nbsp;<wbr>$OMP_NUM_THREADS<br/>
+&nbsp;<wbr>4<br/>
+&nbsp;<wbr>$&nbsp;<wbr>export GOMP_CPU_AFFINITY=`hwloc-calc &#8211;physical-output &#8211;intersect PU core:all.pu:0`<br/>
+&nbsp;<wbr>$&nbsp;<wbr>echo&nbsp;<wbr>$GOMP_CPU_AFFINITY<br/>
 &nbsp;<wbr>0,2,1,3 </p>
 <h2>RETURN VALUE</h2>
 <p> Upon successful execution, hwloc-calc displays the (physical) CPU mask string, (physical or logical) object list, or (physical or logical) object number list. The return value is 0. </p>

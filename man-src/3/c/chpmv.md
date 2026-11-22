@@ -11,7 +11,7 @@ description: "chpmv.f –"
 <p> chpmv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chpmv</code> (UPLO, N, ALPHA, AP, X, INCX, BETA, Y, INCY)<br />
+<p> subroutine <code>chpmv</code> (UPLO, N, ALPHA, AP, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>CHPMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chpmv (characterUPLO, integerN, complexALPHA, complex, dimension(*)AP, complex, dimension(*)X, integerINCX, complexBETA, complex, dimension(*)Y, integerINCY)</h3>

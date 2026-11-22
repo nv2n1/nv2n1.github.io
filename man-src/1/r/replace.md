@@ -17,7 +17,7 @@ description: "replace – a string-replacement utility"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> The <code>replace</code> utility is deprecated as of MySQL 5.7.18 and is removed in MySQL 8.0. </p>
 </dl>
 <p> Invoke <code>replace</code> in one of the following ways: </p>

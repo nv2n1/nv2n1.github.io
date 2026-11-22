@@ -17,8 +17,8 @@ hivexregedit-- merge[--prefix prefix][--encoding enc] hivefile[regfile] hivexreg
 <p> Please note hivexregedit is a low-level tool for manipulating hive files directly. To merge or export registry changes to Windows virtual machines it&#8217;s better to use <i><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1). </p>
 <p> Given a local binary (&#8220;hive&#8221;) file, there are two modes. <tt>&quot;--merge&quot;</tt> imports (merges) changes from a regedit-format file into the hive. It is similar to using the <tt>&quot;/s&quot;</tt> switch in Windows regedit.exe. </p>
 <p> <tt>&quot;--export&quot;</tt> exports a Registry key (recursively) into the regedit format.</p>
-<h3><font SIZE="-1">ENCODING</font></h3>
-<p> <tt>&quot;hivexregedit&quot;</tt> expects that regedit files have already been re-encoded in the local encoding. Usually on Linux hosts, this means <font SIZE="-1">UTF-8</font> with Unix-style line endings. Since Windows regedit files are often in <font SIZE="-1">UTF-16LE</font> with Windows-style line endings, you may need to re-encode the whole file before or after processing. </p>
+<h3>ENCODING</h3>
+<p> <tt>&quot;hivexregedit&quot;</tt> expects that regedit files have already been re-encoded in the local encoding. Usually on Linux hosts, this means UTF-8 with Unix-style line endings. Since Windows regedit files are often in UTF-16LE with Windows-style line endings, you may need to re-encode the whole file before or after processing. </p>
 <p> To re-encode a file from Windows format to Linux (before processing it with the <tt>&quot;--merge&quot;</tt> option), you would do something like this: </p>
 <pre>
  iconv -f utf-16le -t utf-8 &lt; win.reg | dos2unix &gt; linux.reg
@@ -28,14 +28,14 @@ hivexregedit-- merge[--prefix prefix][--encoding enc] hivefile[regfile] hivexreg
  unix2dos &lt; linux.reg | iconv -f utf-8 -t utf-16le &gt; win.reg
 </pre>
 <p> For more information about encoding, see <i>Win::Hivex::Regedit</i>(3). </p>
-<p> If you are unsure about the current encoding, use the <i><a href="/docs/linux/man/1-file/">file</a></i>(1) command. Recent versions of Windows regedit.exe produce a <font SIZE="-1">UTF-16LE</font> file with Windows-style (<font SIZE="-1">CRLF</font>) line endings, like this: </p>
+<p> If you are unsure about the current encoding, use the <i><a href="/docs/linux/man/1-file/">file</a></i>(1) command. Recent versions of Windows regedit.exe produce a UTF-16LE file with Windows-style (CRLF) line endings, like this: </p>
 <pre>
  $ file software.reg
  software.reg: Little-endian UTF-16 Unicode text, with very long lines,
  with CRLF line terminators
 </pre>
 <p> This file would need conversion before you could <tt>&quot;--merge&quot;</tt> it.</p>
-<h3><font SIZE="-1">SHELL QUOTING</font></h3>
+<h3>SHELL QUOTING</h3>
 <p> Be careful when passing parameters containing <tt>&quot;\&quot;</tt> (backslash) in the shell. Usually you will have to use &#8216;single quotes&#8217; or double backslashes (but not both) to protect them from the shell.</p>
 <h3>CurrentControlSet etc.</h3>
 <p> Registry keys like <tt>&quot;CurrentControlSet&quot;</tt> don&#8217;t really exist in the Windows Registry at the level of the hive file, and therefore you cannot modify these. </p>
@@ -51,8 +51,8 @@ hivexregedit-- merge[--prefix prefix][--encoding enc] hivefile[regfile] hivexreg
 <p> &#8220;Current&#8221; is the one which Windows will choose when it boots. </p>
 <p> Similarly, other <tt>&quot;Current...&quot;</tt> keys in the path may need to be replaced.</p>
 <h2>EXAMPLE</h2>
-<p>$ virt &#8211; cat WindowsGuest / Windows / System32 / config / software &gt; software.hive<br />
-                                                                         $ hivexregedit&#8211; export &#8211;prefix &#8216;HKEY_LOCAL_MACHINE\SOFTWARE&#8217; software.hive &#8216;\Microsoft&#8217; &gt; ms &#8211; keys.reg<br />
+<p>$ virt &#8211; cat WindowsGuest / Windows / System32 / config / software &gt; software.hive<br/>
+                                                                         $ hivexregedit&#8211; export &#8211;prefix &#8216;HKEY_LOCAL_MACHINE\SOFTWARE&#8217; software.hive &#8216;\Microsoft&#8217; &gt; ms &#8211; keys.reg<br/>
                                                                                                                                                                               $ hivexregedit&#8211; merge system.hive&#8211; prefix &#8216;HKEY_LOCAL_MACHINE\SYSTEM&#8217; additions.reg</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -78,15 +78,15 @@ hivexregedit-- export[--prefix prefix] hivefile key &gt; regfile
 <p> The hive format itself does not store this prefix, so you have to supply it based on outside knowledge. (<i><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1), amongst other things, already knows about this). </p>
 <p> Usually it is sufficient to pass the parameter <tt>&quot;--prefix 'HKEY_LOCAL_MACHINE\SOFTWARE'&quot;</tt> or similar when doing merges and exports.</p>
 <dt><code>&#8211;encoding</code> UTF-16LE|ASCII</dt>
-<dd> When merging (only), you may need to specify the encoding for strings to be used in the hive file. This is explained in detail in &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i>Win::Hivex::Regedit</i>(3). </dd>
-<p> The default is to use <font SIZE="-1">UTF-16LE,</font> which should work with recent versions of Windows.</p>
+<dd> When merging (only), you may need to specify the encoding for strings to be used in the hive file. This is explained in detail in &#8220;ENCODING STRINGS&#8221; in <i>Win::Hivex::Regedit</i>(3). </dd>
+<p> The default is to use UTF-16LE, which should work with recent versions of Windows.</p>
 <dt><code>&#8211;unsafe-printable-strings</code></dt>
-<dd> When exporting (only), assume strings are <font SIZE="-1">UTF-16LE</font> and print them as strings instead of hex sequences. Remove the final zero codepoint from strings if present. </dd>
+<dd> When exporting (only), assume strings are UTF-16LE and print them as strings instead of hex sequences. Remove the final zero codepoint from strings if present. </dd>
 <p> This is unsafe and does not preserve the fidelity of strings in the original hive for various reasons:</p>
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> Assumes the original encoding is <font SIZE="-1">UTF-16LE. ASCII</font> strings and strings in other encodings will be corrupted by this transformation.</dd>
+<dd> Assumes the original encoding is UTF-16LE. ASCII strings and strings in other encodings will be corrupted by this transformation.</dd>
 <dt>&bull;</dt>
 <dd> Assumes that everything which has type 1 or 2 is really a string and that everything else is not a string, but the type field in real hives is not reliable.</dd>
 <dt>&bull;</dt>
@@ -95,7 +95,7 @@ hivexregedit-- export[--prefix prefix] hivefile key &gt; regfile
 <dl>
 <dt>
 </dt><dd>
-<p> This all happens because the hive itself contains no information about how strings are encoded (see &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i>Win::Hivex::Regedit</i>(3)). </p>
+<p> This all happens because the hive itself contains no information about how strings are encoded (see &#8220;ENCODING STRINGS&#8221; in <i>Win::Hivex::Regedit</i>(3)). </p>
 <p> You should only use this option for quick hacking and debugging of the hive contents, and <i>never</i> use it if the output is going to be passed into another program or stored in another hive.</dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
@@ -104,6 +104,6 @@ hivexregedit-- export[--prefix prefix] hivefile key &gt; regfile
 <p> Richard W.M. Jones &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2010 Red Hat Inc. </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font> </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA. </p>

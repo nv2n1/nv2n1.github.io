@@ -34,7 +34,7 @@ print "$hex\n";
    41204d414e204120504c414e20412043414e414c2050414e414d41
 </pre> 
 
- What was in this chunk of memory? Numbers, characters, or a mixture of both? Assuming that we're on a computer where <font SIZE="-1">ASCII</font> (or some similar) encoding is used: hexadecimal values in the range <tt>0x40</tt> - <tt>0x5A</tt> indicate an uppercase letter, and <tt>0x20</tt> encodes a space. So we might assume it is a piece of text, which some are able to read like a tabloid; but others will have to get hold of an <font SIZE="-1">ASCII</font> table and relive that firstgrader feeling. Not caring too much about which way to read this, we note that <tt>&quot;unpack&quot;</tt> with the template code <tt>&quot;H&quot;</tt> converts the contents of a sequence of bytes into the customary hexadecimal notation. Since ``a sequence of'' is a pretty vague indication of quantity, <tt>&quot;H&quot;</tt> has been defined to convert just a single hexadecimal digit unless it is followed by a repeat count. An asterisk for the repeat count means to use whatever remains. 
+ What was in this chunk of memory? Numbers, characters, or a mixture of both? Assuming that we're on a computer where ASCII (or some similar) encoding is used: hexadecimal values in the range <tt>0x40</tt> - <tt>0x5A</tt> indicate an uppercase letter, and <tt>0x20</tt> encodes a space. So we might assume it is a piece of text, which some are able to read like a tabloid; but others will have to get hold of an ASCII table and relive that firstgrader feeling. Not caring too much about which way to read this, we note that <tt>&quot;unpack&quot;</tt> with the template code <tt>&quot;H&quot;</tt> converts the contents of a sequence of bytes into the customary hexadecimal notation. Since ``a sequence of'' is a pretty vague indication of quantity, <tt>&quot;H&quot;</tt> has been defined to convert just a single hexadecimal digit unless it is followed by a repeat count. An asterisk for the repeat count means to use whatever remains. 
 
  The inverse operation - packing byte contents from a string of hexadecimal digits - is just as easily written. For instance: 
 
@@ -43,7 +43,7 @@ my $s = pack('H2' x 10, 30..39);
 print "$s\n";
  
 
- Since we feed a list of ten 2-digit hexadecimal strings to <tt>&quot;pack&quot;</tt>, the pack template should contain ten pack codes. If this is run on a computer with <font SIZE="-1">ASCII</font> character coding, it will print <tt>0123456789</tt>.
+ Since we feed a list of ten 2-digit hexadecimal strings to <tt>&quot;pack&quot;</tt>, the pack template should contain ten pack codes. If this is run on a computer with ASCII character coding, it will print <tt>0123456789</tt>.
 
 <h2>Packing Text</h2>
 
@@ -94,7 +94,7 @@ while (&lt;&gt;) {
 
  That looks a bit nicer; but we've got to take apart that weird template. Where did I pull that out of? 
 
- <font SIZE="-1">OK,</font> let's have a look at some of our data again; in fact, we'll include the headers, and a handy ruler so we can keep track of where we are. 
+ OK, let's have a look at some of our data again; in fact, we'll include the headers, and a handy ruler so we can keep track of where we are. 
 
  <pre>
              1         2         3         4         5        
@@ -110,7 +110,7 @@ while (&lt;&gt;) {
     my($date) = unpack(&quot;A10&quot;, $_);
 </pre> 
 
- <font SIZE="-1">OK,</font> what's next? Between the date and the description is a blank column; we want to skip over that. The <tt>&quot;x&quot;</tt> template means ``skip forward'', so we want one of those. Next, we have another batch of characters, from 12 to 38. That's 27 more characters, hence <tt>&quot;A27&quot;</tt>. (Don't make the fencepost error - there are 27 characters between 12 and 38, not 26. Count 'em!) 
+ OK, what's next? Between the date and the description is a blank column; we want to skip over that. The <tt>&quot;x&quot;</tt> template means ``skip forward'', so we want one of those. Next, we have another batch of characters, from 12 to 38. That's 27 more characters, hence <tt>&quot;A27&quot;</tt>. (Don't make the fencepost error - there are 27 characters between 12 and 38, not 26. Count 'em!) 
 
  Now we skip another character and pick up the next 7 characters: 
 
@@ -158,7 +158,7 @@ print pack("A10xA27xA7xA*", $date, "Totals",
     03/23/2001Totals                     1235.001172.98
 </pre> 
 
- <font SIZE="-1">OK,</font> it's a start, but what happened to the spaces? We put <tt>&quot;x&quot;</tt>, didn't we? Shouldn't it skip forward? Let's look at what ``pack'' in perlfunc says: 
+ OK, it's a start, but what happened to the spaces? We put <tt>&quot;x&quot;</tt>, didn't we? Shouldn't it skip forward? Let's look at what ``pack'' in perlfunc says: 
 
  <pre>
     x   A null byte.
@@ -240,7 +240,7 @@ print pack("A11 A28 A8 A*", $date, "Totals",
    my $ps = pack( 's', 20302 );
 </pre> 
 
- Again, the result is a string, now containing 2 bytes. If you print this string (which is, generally, not recommended) you might see <tt>&quot;ON&quot;</tt> or <tt>&quot;NO&quot;</tt> (depending on your system's byte ordering) - or something entirely different if your computer doesn't use <font SIZE="-1">ASCII</font> character encoding. Unpacking <tt>$ps</tt> with the same template returns the original integer value: 
+ Again, the result is a string, now containing 2 bytes. If you print this string (which is, generally, not recommended) you might see <tt>&quot;ON&quot;</tt> or <tt>&quot;NO&quot;</tt> (depending on your system's byte ordering) - or something entirely different if your computer doesn't use ASCII character encoding. Unpacking <tt>$ps</tt> with the same template returns the original integer value: 
 
  <pre>
    my( $s ) = unpack( 's', $ps );
@@ -250,7 +250,7 @@ print pack("A11 A28 A8 A*", $date, "Totals",
 
  16 bits won't get you too far with integers, but there is <tt>&quot;l&quot;</tt> and <tt>&quot;L&quot;</tt> for signed and unsigned 32-bit integers. And if this is not enough and your system supports 64 bit integers you can push the limits much closer to infinity with pack codes <tt>&quot;q&quot;</tt> and <tt>&quot;Q&quot;</tt>. A notable exception is provided by pack codes <tt>&quot;i&quot;</tt> and <tt>&quot;I&quot;</tt> for signed and unsigned integers of the ``local custom'' variety: Such an integer will take up as many bytes as a local C compiler returns for <tt>&quot;sizeof(int)&quot;</tt>, but it'll use <i>at least</i> 32 bits. 
 
- Each of the integer pack codes <tt>&quot;sSlLqQ&quot;</tt> results in a fixed number of bytes, no matter where you execute your program. This may be useful for some applications, but it does not provide for a portable way to pass data structures between Perl and C programs (bound to happen when you call <font SIZE="-1">XS</font> extensions or the Perl function <tt>&quot;syscall&quot;</tt>), or when you read or write binary files. What you'll need in this case are template codes that depend on what your local C compiler compiles when you code <tt>&quot;short&quot;</tt> or <tt>&quot;unsigned long&quot;</tt>, for instance. These codes and their corresponding byte lengths are shown in the table below. Since the C standard leaves much leeway with respect to the relative sizes of these data types, actual values may vary, and that's why the values are given as expressions in C and Perl. (If you'd like to use values from <tt>%Config</tt> in your program you have to import it with <tt>&quot;use Config&quot;</tt>.) 
+ Each of the integer pack codes <tt>&quot;sSlLqQ&quot;</tt> results in a fixed number of bytes, no matter where you execute your program. This may be useful for some applications, but it does not provide for a portable way to pass data structures between Perl and C programs (bound to happen when you call XS extensions or the Perl function <tt>&quot;syscall&quot;</tt>), or when you read or write binary files. What you'll need in this case are template codes that depend on what your local C compiler compiles when you code <tt>&quot;short&quot;</tt> or <tt>&quot;unsigned long&quot;</tt>, for instance. These codes and their corresponding byte lengths are shown in the table below. Since the C standard leaves much leeway with respect to the relative sizes of these data types, actual values may vary, and that's why the values are given as expressions in C and Perl. (If you'd like to use values from <tt>%Config</tt> in your program you have to import it with <tt>&quot;use Config&quot;</tt>.) 
 
  
 signed unsigned byte length in C byte length in Perl
@@ -277,14 +277,14 @@ signed unsigned byte length in C byte length in Perl
                                      +-- --+-- --+ +-- -- -- -- -+
  
 
- First, we note that this time-honored 16-bit <font SIZE="-1">CPU</font> uses little-endian order, and that's why the low order byte is stored at the lower address. To unpack such a (unsigned) short we'll have to use code <tt>&quot;v&quot;</tt>. A repeat count unpacks all 12 shorts: 
+ First, we note that this time-honored 16-bit CPU uses little-endian order, and that's why the low order byte is stored at the lower address. To unpack such a (unsigned) short we'll have to use code <tt>&quot;v&quot;</tt>. A repeat count unpacks all 12 shorts: 
 
  <pre>
    my( $ip, $cs, $flags, $ax, $bx, $cd, $dx, $si, $di, $bp, $ds, $es ) =
      unpack( 'v12', $frame );
 </pre> 
 
- Alternatively, we could have used <tt>&quot;C&quot;</tt> to unpack the individually accessible byte registers <font SIZE="-1">FL, FH, AL, AH,</font> etc.: 
+ Alternatively, we could have used <tt>&quot;C&quot;</tt> to unpack the individually accessible byte registers FL, FH, AL, AH, etc.: 
 
  <pre>
    my( $fl, $fh, $al, $ah, $bl, $bh, $cl, $ch, $dl, $dh ) =
@@ -388,7 +388,7 @@ $byte = pack('B8', '10001100');
 
 <h3>Uuencoding</h3>
 
- Another odd-man-out in the template alphabet is <tt>&quot;u&quot;</tt>, which packs a ``uuencoded string''. (``uu'' is short for Unix-to-Unix.) Chances are that you won't ever need this encoding technique which was invented to overcome the shortcomings of old-fashioned transmission mediums that do not support other than simple <font SIZE="-1">ASCII</font> data. The essential recipe is simple: Take three bytes, or 24 bits. Split them into 4 six-packs, adding a space (0x20) to each. Repeat until all of the data is blended. Fold groups of 4 bytes into lines no longer than 60 and garnish them in front with the original byte count (incremented by 0x20) and a <tt>&quot;\n&quot;</tt> at the end. - The <tt>&quot;pack&quot;</tt> chef will prepare this for you, a la minute, when you select pack code <tt>&quot;u&quot;</tt> on the menu: 
+ Another odd-man-out in the template alphabet is <tt>&quot;u&quot;</tt>, which packs a ``uuencoded string''. (``uu'' is short for Unix-to-Unix.) Chances are that you won't ever need this encoding technique which was invented to overcome the shortcomings of old-fashioned transmission mediums that do not support other than simple ASCII data. The essential recipe is simple: Take three bytes, or 24 bits. Split them into 4 six-packs, adding a space (0x20) to each. Repeat until all of the data is blended. Fold groups of 4 bytes into lines no longer than 60 and garnish them in front with the original byte count (incremented by 0x20) and a <tt>&quot;\n&quot;</tt> at the end. - The <tt>&quot;pack&quot;</tt> chef will prepare this for you, a la minute, when you select pack code <tt>&quot;u&quot;</tt> on the menu: 
 
  <pre>
    my $uubuf = pack( 'u', $bindat );
@@ -430,11 +430,11 @@ print unpack('%32i3', $buf), "\n";
 
  Unicode is a character set that can represent most characters in most of the world's languages, providing room for over one million different characters. Unicode 3.1 specifies 94,140 characters: The Basic Latin characters are assigned to the numbers 0 - 127. The Latin-1 Supplement with characters that are used in several European languages is in the next range, up to 255. After some more Latin extensions we find the character sets from languages using non-Roman alphabets, interspersed with a variety of symbol sets such as currency symbols, Zapf Dingbats or Braille. (You might want to visit &lt;<a rel="nofollow" HREF="http://www.unicode.org/">http://www.unicode.org/</a>&gt; for a look at some of them - my personal favourites are Telugu and Kannada.) 
 
- The Unicode character sets associates characters with integers. Encoding these numbers in an equal number of bytes would more than double the requirements for storing texts written in Latin alphabets. The <font SIZE="-1">UTF-8</font> encoding avoids this by storing the most common (from a western point of view) characters in a single byte while encoding the rarer ones in three or more bytes. 
+ The Unicode character sets associates characters with integers. Encoding these numbers in an equal number of bytes would more than double the requirements for storing texts written in Latin alphabets. The UTF-8 encoding avoids this by storing the most common (from a western point of view) characters in a single byte while encoding the rarer ones in three or more bytes. 
 
- Perl uses <font SIZE="-1">UTF-8,</font> internally, for most Unicode strings. 
+ Perl uses UTF-8, internally, for most Unicode strings. 
 
- So what has this got to do with <tt>&quot;pack&quot;</tt>? Well, if you want to compose a Unicode string (that is internally encoded as <font SIZE="-1">UTF-8</font>), you can do so by using template code <tt>&quot;U&quot;</tt>. As an example, let's produce the Euro currency symbol (code number 0x20AC): 
+ So what has this got to do with <tt>&quot;pack&quot;</tt>? Well, if you want to compose a Unicode string (that is internally encoded as UTF-8), you can do so by using template code <tt>&quot;U&quot;</tt>. As an example, let's produce the Euro currency symbol (code number 0x20AC): 
 
  
 $UTF8{Euro} = pack('U', 0x20AC);
@@ -447,9 +447,9 @@ $UTF8{Euro} = pack('U', 0x20AC);
 $Unicode{Euro} = unpack('U', $UTF8{Euro});
  
 
- Unpacking using the <tt>&quot;U&quot;</tt> template code also works on <font SIZE="-1">UTF-8</font> encoded byte strings. 
+ Unpacking using the <tt>&quot;U&quot;</tt> template code also works on UTF-8 encoded byte strings. 
 
- Usually you'll want to pack or unpack <font SIZE="-1">UTF-8</font> strings: 
+ Usually you'll want to pack or unpack UTF-8 strings: 
 
  
 #pack and unpack the Hebrew alphabet
@@ -457,11 +457,11 @@ my $alefbet = pack('U*', 0x05d0..0x05ea);
 my @hebrew = unpack('U*', $utf);
  
 
- Please note: in the general case, you're better off using <tt>&quot;Encode::decode('UTF-8', $utf)&quot;</tt> to decode a <font SIZE="-1">UTF-8</font> encoded byte string to a Perl Unicode string, and <tt>&quot;Encode::encode('UTF-8', $str)&quot;</tt> to encode a Perl Unicode string to <font SIZE="-1">UTF-8</font> bytes. These functions provide means of handling invalid byte sequences and generally have a friendlier interface.
+ Please note: in the general case, you're better off using <tt>&quot;Encode::decode('UTF-8', $utf)&quot;</tt> to decode a UTF-8 encoded byte string to a Perl Unicode string, and <tt>&quot;Encode::encode('UTF-8', $str)&quot;</tt> to encode a Perl Unicode string to UTF-8 bytes. These functions provide means of handling invalid byte sequences and generally have a friendlier interface.
 
 <h3>Another Portable Binary Encoding</h3>
 
- The pack code <tt>&quot;w&quot;</tt> has been added to support a portable binary data encoding scheme that goes way beyond simple integers. (Details can be found at &lt;<a rel="nofollow" HREF="http://Casbah.org/">http://Casbah.org/</a>&gt;, the Scarab project.) A <font SIZE="-1">BER</font> (Binary Encoded Representation) compressed unsigned integer stores base 128 digits, most significant digit first, with as few digits as possible. Bit eight (the high bit) is set on each byte except the last. There is no size limit to <font SIZE="-1">BER</font> encoding, but Perl won't go to extremes. 
+ The pack code <tt>&quot;w&quot;</tt> has been added to support a portable binary data encoding scheme that goes way beyond simple integers. (Details can be found at &lt;<a rel="nofollow" HREF="http://Casbah.org/">http://Casbah.org/</a>&gt;, the Scarab project.) A BER (Binary Encoded Representation) compressed unsigned integer stores base 128 digits, most significant digit first, with as few digits as possible. Bit eight (the high bit) is set on each byte except the last. There is no size limit to BER encoding, but Perl won't go to extremes. 
 
  <pre>
    my $berbuf = pack( 'w*', 1, 128, 128+1, 128*128+127 );
@@ -581,7 +581,7 @@ my $msg = pack('Z* Z* C A* C', $src, $dst, length $sm, $sm, $prio);
 
 <h3>Dynamic Templates</h3>
 
- So far, we've seen literals used as templates. If the list of pack items doesn't have fixed length, an expression constructing the template is required (whenever, for some reason, <tt>&quot;()*&quot;</tt> cannot be used). Here's an example: To store named string values in a way that can be conveniently parsed by a C program, we create a sequence of names and null terminated <font SIZE="-1">ASCII</font> strings, with <tt>&quot;=&quot;</tt> between the name and the value, followed by an additional delimiting null byte. Here's how: 
+ So far, we've seen literals used as templates. If the list of pack items doesn't have fixed length, an expression constructing the template is required (whenever, for some reason, <tt>&quot;()*&quot;</tt> cannot be used). Here's an example: To store named string values in a way that can be conveniently parsed by a C program, we create a sequence of names and null terminated ASCII strings, with <tt>&quot;=&quot;</tt> between the name and the value, followed by an additional delimiting null byte. Here's how: 
 
  <pre>
    my $env = pack( '(A*A*Z*)' . keys( %Env ) . 'C',
@@ -615,9 +615,9 @@ my $msg = pack('Z* Z* C A* C', $src, $dst, length $sm, $sm, $prio);
 
  Note that this is one of the rare cases where you cannot use the same template for <tt>&quot;pack&quot;</tt> and <tt>&quot;unpack&quot;</tt> because <tt>&quot;pack&quot;</tt> can't determine a repeat count for a <tt>&quot;()&quot;</tt>-group.
 
-<h3>Intel <font SIZE="-1">HEX</font></h3>
+<h3>Intel HEX</h3>
 
- Intel <font SIZE="-1">HEX</font> is a file format for representing binary data, mostly for programming various chips, as a text file. (See &lt;<a rel="nofollow" HREF="http://en.wikipedia.org/wiki/.hex">http://en.wikipedia.org/wiki/.hex</a>&gt; for a detailed description, and &lt;<a rel="nofollow" HREF="http://en.wikipedia.org/wiki/SREC_(file_format)">http://en.wikipedia.org/wiki/SREC_(file_format)</a>&gt; for the Motorola S-record format, which can be unravelled using the same technique.) Each line begins with a colon (':') and is followed by a sequence of hexadecimal characters, specifying a byte count <i>n</i> (8 bit), an address (16 bit, big endian), a record type (8 bit), <i>n</i> data bytes and a checksum (8 bit) computed as the least significant byte of the two's complement sum of the preceding bytes. Example: <tt>&quot;:0300300002337A1E&quot;</tt>. 
+ Intel HEX is a file format for representing binary data, mostly for programming various chips, as a text file. (See &lt;<a rel="nofollow" HREF="http://en.wikipedia.org/wiki/.hex">http://en.wikipedia.org/wiki/.hex</a>&gt; for a detailed description, and &lt;<a rel="nofollow" HREF="http://en.wikipedia.org/wiki/SREC_(file_format)">http://en.wikipedia.org/wiki/SREC_(file_format)</a>&gt; for the Motorola S-record format, which can be unravelled using the same technique.) Each line begins with a colon (':') and is followed by a sequence of hexadecimal characters, specifying a byte count <i>n</i> (8 bit), an address (16 bit, big endian), a record type (8 bit), <i>n</i> data bytes and a checksum (8 bit) computed as the least significant byte of the two's complement sum of the preceding bytes. Example: <tt>&quot;:0300300002337A1E&quot;</tt>. 
 
  The first step of processing such a line is the conversion, to binary, of the hexadecimal data, to obtain the four fields, while checking the checksum. No surprise here: we'll start with a simple <tt>&quot;pack&quot;</tt> call to convert everything to binary: 
 
@@ -643,11 +643,11 @@ my $msg = pack('Z* Z* C A* C', $src, $dst, length $sm, $sm, $prio);
 
  In previous sections we have seen how to pack numbers and character strings. If it were not for a couple of snags we could conclude this section right away with the terse remark that C structures don't contain anything else, and therefore you already know all there is to it. Sorry, no: read on, please. 
 
- If you have to deal with a lot of C structures, and don't want to hack all your template strings manually, you'll probably want to have a look at the <font SIZE="-1">CPAN</font> module <tt>&quot;Convert::Binary::C&quot;</tt>. Not only can it parse your C source directly, but it also has built-in support for all the odds and ends described further on in this section.
+ If you have to deal with a lot of C structures, and don't want to hack all your template strings manually, you'll probably want to have a look at the CPAN module <tt>&quot;Convert::Binary::C&quot;</tt>. Not only can it parse your C source directly, but it also has built-in support for all the odds and ends described further on in this section.
 
 <h3>The Alignment Pit</h3>
 
- In the consideration of speed against memory requirements the balance has been tilted in favor of faster execution. This has influenced the way C compilers allocate memory for structures: On architectures where a 16-bit or 32-bit operand can be moved faster between places in memory, or to or from a <font SIZE="-1">CPU</font> register, if it is aligned at an even or multiple-of-four or even at a multiple-of eight address, a C compiler will give you this speed benefit by stuffing extra bytes into structures. If you don't cross the C shoreline this is not likely to cause you any grief (although you should care when you design large data structures, or you want your code to be portable between architectures (you do want that, don't you?)). 
+ In the consideration of speed against memory requirements the balance has been tilted in favor of faster execution. This has influenced the way C compilers allocate memory for structures: On architectures where a 16-bit or 32-bit operand can be moved faster between places in memory, or to or from a CPU register, if it is aligned at an even or multiple-of-four or even at a multiple-of eight address, a C compiler will give you this speed benefit by stuffing extra bytes into structures. If you don't cross the C shoreline this is not likely to cause you any grief (although you should care when you design large data structures, or you want your code to be portable between architectures (you do want that, don't you?)). 
 
  To see how this affects <tt>&quot;pack&quot;</tt> and <tt>&quot;unpack&quot;</tt>, we'll compare these two C structures: 
 
@@ -677,7 +677,7 @@ typedef struct {
 
  The natural question: ``Why can't Perl compensate for the gaps?'' warrants an answer. One good reason is that C compilers might provide (non-ANSI) extensions permitting all sorts of fancy control over the way structures are aligned, even at the level of an individual structure field. And, if this were not enough, there is an insidious thing called <tt>&quot;union&quot;</tt> where the amount of fill bytes cannot be derived from the alignment of the next item alone. 
 
- <font SIZE="-1">OK,</font> so let's bite the bullet. Here's one way to get the alignment right by inserting template codes <tt>&quot;x&quot;</tt>, which don't take a corresponding item from the list: 
+ OK, so let's bite the bullet. Here's one way to get the alignment right by inserting template codes <tt>&quot;x&quot;</tt>, which don't take a corresponding item from the list: 
 
  <pre>
   my $gappy = pack( 'cxs cxxx l!', $c1, $s, $c2, $l );
@@ -779,7 +779,7 @@ typedef cell_t buffer_t[BUFLEN];
 
 <h3>Alignment, Take 3</h3>
 
- And even if you take all the above into account, <font SIZE="-1">ANSI</font> still lets this: 
+ And even if you take all the above into account, ANSI still lets this: 
 
  
 typedef struct {
@@ -787,7 +787,7 @@ typedef struct {
 } foo_t;
  
 
- vary in size. The alignment constraint of the structure can be greater than any of its elements. [And if you think that this doesn't affect anything common, dismember the next cellphone that you see. Many have <font SIZE="-1">ARM</font> cores, and the <font SIZE="-1">ARM</font> structure rules make <tt>&quot;sizeof (foo_t)&quot;</tt> == 4]
+ vary in size. The alignment constraint of the structure can be greater than any of its elements. [And if you think that this doesn't affect anything common, dismember the next cellphone that you see. Many have ARM cores, and the ARM structure rules make <tt>&quot;sizeof (foo_t)&quot;</tt> == 4]
 
 <h3>Pointers for How to Use Them</h3>
 

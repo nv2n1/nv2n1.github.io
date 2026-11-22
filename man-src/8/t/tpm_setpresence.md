@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_setpresence/"
 description: "tpm_setpresence- change TPM physical presence states or settings"
 ---
 
-<p>TPM Management &#8211; tpm_setpresence<br />
+<p>TPM Management &#8211; tpm_setpresence<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_setpresence- change TPM physical presence states or settings</p>

@@ -40,11 +40,11 @@ description: "ffmpeg-filters – FFmpeg filters"
         dot -Tpng graph.tmp -o graph.png &amp;&amp; \
         display graph.png
 </pre>
-<p> can be used to create and display an image representing the graph described by the <i></i><font SIZE="-1"><i>GRAPH_DESCRIPTION</i></font><i></i> string. Note that this string must be a complete self-contained graph, with its inputs and outputs explicitly defined. For example if your command line is of the form: </p>
+<p> can be used to create and display an image representing the graph described by the <i></i><i>GRAPH_DESCRIPTION</i><i></i> string. Note that this string must be a complete self-contained graph, with its inputs and outputs explicitly defined. For example if your command line is of the form: </p>
 <pre>
         ffmpeg -i infile -vf scale=640:360 outfile
 </pre>
-<p> your <i></i><font SIZE="-1"><i>GRAPH_DESCRIPTION</i></font><i></i> string will need to be of the form: </p>
+<p> your <i></i><i>GRAPH_DESCRIPTION</i><i></i> string will need to be of the form: </p>
 <pre>
         nullsrc,scale=640:360,nullsink
 </pre>
@@ -77,14 +77,14 @@ description: "ffmpeg-filters – FFmpeg filters"
 <p> In a filter description, if the input label of the first filter is not specified, &#8220;in&#8221; is assumed; if the output label of the last filter is not specified, &#8220;out&#8221; is assumed. </p>
 <p> In a complete filterchain all the unlabelled filter input and output pads must be connected. A filtergraph is considered valid if all the filter input and output pads of all the filterchains are connected. </p>
 <p> Libavfilter will automatically insert <code>scale</code> filters where format conversion is required. It is possible to specify swscale flags for those automatically inserted scalers by prepending <tt>&quot;sws_flags=</tt>flags<tt>;&quot;</tt> to the filtergraph description. </p>
-<p> Here is a <font SIZE="-1">BNF</font> description of the filtergraph syntax: </p>
-<p>        &lt;NAME&gt;             ::= sequence of alphanumeric characters and &#8216;_&#8217;<br />
-        &lt;FILTER_NAME&gt;      ::= &lt;NAME&gt;[&#8220;@&#8221;&lt;NAME&gt;]<br />
-        &lt;LINKLABEL&gt;        ::= &#8220;[&#8221; &lt;NAME&gt; &#8220;]&#8221;<br />
-        &lt;LINKLABELS&gt;       ::= &lt;LINKLABEL&gt; [&lt;LINKLABELS&gt;]<br />
-        &lt;FILTER_ARGUMENTS&gt; ::= sequence of chars (possibly quoted)<br />
-        &lt;FILTER&gt;           ::= [&lt;LINKLABELS&gt;] &lt;FILTER_NAME&gt; [&#8220;=&#8221; &lt;FILTER_ARGUMENTS&gt;] [&lt;LINKLABELS&gt;]<br />
-        &lt;FILTERCHAIN&gt;      ::= &lt;FILTER&gt; [,&lt;FILTERCHAIN&gt;]<br />
+<p> Here is a BNF description of the filtergraph syntax: </p>
+<p>        &lt;NAME&gt;             ::= sequence of alphanumeric characters and &#8216;_&#8217;<br/>
+        &lt;FILTER_NAME&gt;      ::= &lt;NAME&gt;[&#8220;@&#8221;&lt;NAME&gt;]<br/>
+        &lt;LINKLABEL&gt;        ::= &#8220;[&#8221; &lt;NAME&gt; &#8220;]&#8221;<br/>
+        &lt;LINKLABELS&gt;       ::= &lt;LINKLABEL&gt; [&lt;LINKLABELS&gt;]<br/>
+        &lt;FILTER_ARGUMENTS&gt; ::= sequence of chars (possibly quoted)<br/>
+        &lt;FILTER&gt;           ::= [&lt;LINKLABELS&gt;] &lt;FILTER_NAME&gt; [&#8220;=&#8221; &lt;FILTER_ARGUMENTS&gt;] [&lt;LINKLABELS&gt;]<br/>
+        &lt;FILTERCHAIN&gt;      ::= &lt;FILTER&gt; [,&lt;FILTERCHAIN&gt;]<br/>
         &lt;FILTERGRAPH&gt;      ::= [sws_flags=&lt;flags&gt;;] &lt;FILTERCHAIN&gt; [;&lt;FILTERGRAPH&gt;]</p>
 <h3>Notes on filtergraph escaping</h3>
 <p> Filtergraph description composition entails several levels of escaping. See <code>the &#8220;Quoting and escaping&#8221; section in the <a href="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a>(1) manual</code> for more information about the employed escaping procedure. </p>
@@ -113,11 +113,11 @@ description: "ffmpeg-filters – FFmpeg filters"
 <p> The expression accepts the following values:</p>
 <dl>
 <dt><code>t</code></dt>
-<dd> timestamp expressed in seconds, <font SIZE="-1">NAN</font> if the input timestamp is unknown</dd>
+<dd> timestamp expressed in seconds, NAN if the input timestamp is unknown</dd>
 <dt><code>n</code></dt>
 <dd> sequential number of the input frame, starting from 0</dd>
 <dt><code>pos</code></dt>
-<dd> the position in the file of the input frame, <font SIZE="-1">NAN</font> if unknown</dd>
+<dd> the position in the file of the input frame, NAN if unknown</dd>
 <dt><code>w</code></dt>
 <dd>
 </dd><dt><code>h</code></dt>
@@ -136,7 +136,7 @@ description: "ffmpeg-filters – FFmpeg filters"
 <p> Some filters with several inputs support a common set of options. These options can only be set by name, not with the short notation.</p>
 <dl>
 <dt><code>eof_action</code></dt>
-<dd> The action to take when <font SIZE="-1">EOF</font> is encountered on the secondary input; it accepts one of the following values:</dd>
+<dd> The action to take when EOF is encountered on the secondary input; it accepts one of the following values:</dd>
 <dl>
 <dl>
 <dt><code>repeat</code></dt>
@@ -179,7 +179,7 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dt><code>link</code></dt>
 <dd> Choose if the <tt>&quot;average&quot;</tt> level between all channels of input stream or the louder(<tt>&quot;maximum&quot;</tt>) channel of input stream affects the reduction. Default is <tt>&quot;average&quot;</tt>.</dd>
 <dt><code>detection</code></dt>
-<dd> Should the exact signal be taken in case of <tt>&quot;peak&quot;</tt> or an <font SIZE="-1">RMS</font> one in case of <tt>&quot;rms&quot;</tt>. Default is <tt>&quot;rms&quot;</tt> which is mostly smoother.</dd>
+<dd> Should the exact signal be taken in case of <tt>&quot;peak&quot;</tt> or an RMS one in case of <tt>&quot;rms&quot;</tt>. Default is <tt>&quot;rms&quot;</tt> which is mostly smoother.</dd>
 <dt><code>mix</code></dt>
 <dd> How much to use compressed signal in output. Default is 1. Range is between 0 and 1.</dd></dl>
 <p> <i>Commands</i> </p>
@@ -289,17 +289,17 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dt><code>mode</code></dt>
 <dd> Can be linear: <tt>&quot;lin&quot;</tt> or logarithmic: <tt>&quot;log&quot;</tt>.</dd>
 <dt><code>dc</code></dt>
-<dd> Set <font SIZE="-1">DC.</font></dd>
+<dd> Set DC.</dd>
 <dt><code>aa</code></dt>
 <dd> Set anti-aliasing.</dd>
 <dt><code>samples</code></dt>
 <dd> Set sample reduction.</dd>
 <dt><code>lfo</code></dt>
-<dd> Enable <font SIZE="-1">LFO.</font> By default disabled.</dd>
+<dd> Enable LFO. By default disabled.</dd>
 <dt><code>lforange</code></dt>
-<dd> Set <font SIZE="-1">LFO</font> range.</dd>
+<dd> Set LFO range.</dd>
 <dt><code>lforate</code></dt>
-<dd> Set <font SIZE="-1">LFO</font> rate.</dd></dl>
+<dd> Set LFO rate.</dd></dl>
 <p> <i>Commands</i> </p>
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>acue</h3>
@@ -401,9 +401,9 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dl>
 <dl>
 <dt><code>dc</code></dt>
-<dd> Add <font SIZE="-1">DC</font> signal.</dd>
+<dd> Add DC signal.</dd>
 <dt><code>ac</code></dt>
-<dd> Add <font SIZE="-1">AC</font> signal.</dd>
+<dd> Add AC signal.</dd>
 <dt><code>square</code></dt>
 <dd> Add square signal.</dd>
 <dt><code>pulse</code></dt>
@@ -472,17 +472,17 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dt><code>col</code></dt>
 <dd> select Columbia.</dd>
 <dt><code>emi</code></dt>
-<dd> select <font SIZE="-1">EMI.</font></dd>
+<dd> select EMI.</dd>
 <dt><code>bsi</code></dt>
-<dd> select <font SIZE="-1">BSI</font> (78RPM).</dd>
+<dd> select BSI (78RPM).</dd>
 <dt><code>riaa</code></dt>
-<dd> select <font SIZE="-1">RIAA.</font></dd>
+<dd> select RIAA.</dd>
 <dt><code>cd</code></dt>
-<dd> select Compact Disc (<font SIZE="-1">CD</font>).</dd>
+<dd> select Compact Disc (CD).</dd>
 <dt><code>50fm</code></dt>
-<dd> select 50Xs (<font SIZE="-1">FM</font>).</dd>
+<dd> select 50Xs (FM).</dd>
 <dt><code>75fm</code></dt>
-<dd> select 75Xs (<font SIZE="-1">FM</font>).</dd>
+<dd> select 75Xs (FM).</dd>
 <dt><code>50kf</code></dt>
 <dd> select 50Xs (FM-KF).</dd>
 <dt><code>75kf</code></dt>
@@ -516,8 +516,8 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dd>
 </dd><dt><code>nb_out_channels</code></dt>
 <dd> input and output number of channels</dd>
-<dt><code>val(</code><font SIZE="-1"><code>CH</code></font><code>)</code></dt>
-<dd> the value of input channel with number <i></i><font SIZE="-1"><i>CH</i></font><i></i></dd></dl>
+<dt><code>val(</code><code>CH</code><code>)</code></dt>
+<dd> the value of input channel with number <i></i><i>CH</i><i></i></dd></dl>
 <p> Note: this filter is slow. For faster processing you should use a dedicated filter. </p>
 <p> <i>Examples</i></p>
 <dl>
@@ -633,7 +633,7 @@ description: "ffmpeg-filters – FFmpeg filters"
 </pre>
 </dl>
 <h3>afftdn</h3>
-<p> Denoise audio samples with <font SIZE="-1">FFT.</font> </p>
+<p> Denoise audio samples with FFT. </p>
 <p> A description of the accepted parameters follows.</p>
 <dl>
 <dt><code>nr</code></dt>
@@ -751,9 +751,9 @@ description: "ffmpeg-filters – FFmpeg filters"
 </dl>
 <h3>afir</h3>
 <p> Apply an arbitrary Finite Impulse Response filter. </p>
-<p> This filter is designed for applying long <font SIZE="-1">FIR</font> filters, up to 60 seconds long. </p>
+<p> This filter is designed for applying long FIR filters, up to 60 seconds long. </p>
 <p> It can be used as component for digital crossover filters, room equalization, cross talk cancellation, wavefield synthesis, auralization, ambiophonics, ambisonics and spatialization. </p>
-<p> This filter uses the streams higher than first one as <font SIZE="-1">FIR</font> coefficients. If the non-first stream holds a single channel, it will be used for all input channels in the first stream, otherwise the number of channels in the non-first stream must be same as the number of channels in the first stream. </p>
+<p> This filter uses the streams higher than first one as FIR coefficients. If the non-first stream holds a single channel, it will be used for all input channels in the first stream, otherwise the number of channels in the non-first stream must be same as the number of channels in the first stream. </p>
 <p> It accepts the following parameters:</p>
 <dl>
 <dt><code>dry</code></dt>
@@ -761,9 +761,9 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dt><code>wet</code></dt>
 <dd> Set wet gain. This sets final output gain.</dd>
 <dt><code>length</code></dt>
-<dd> Set Impulse Response filter length. Default is 1, which means whole <font SIZE="-1">IR</font> is processed.</dd>
+<dd> Set Impulse Response filter length. Default is 1, which means whole IR is processed.</dd>
 <dt><code>gtype</code></dt>
-<dd> Enable applying gain measured from power of <font SIZE="-1">IR.</font> </dd>
+<dd> Enable applying gain measured from power of IR. </dd>
 <p> Set which approach to use for auto gain measurement.</p>
 <dl>
 <dl>
@@ -772,38 +772,38 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dt><code>peak</code></dt>
 <dd> select peak gain, very conservative approach. This is default value.</dd>
 <dt><code>dc</code></dt>
-<dd> select <font SIZE="-1">DC</font> gain, limited application.</dd>
+<dd> select DC gain, limited application.</dd>
 <dt><code>gn</code></dt>
 <dd> select gain to noise approach, this is most popular one.</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt><code>irgain</code></dt>
-<dd> Set gain to be applied to <font SIZE="-1">IR</font> coefficients before filtering. Allowed range is 0 to 1. This gain is applied after any gain applied with <i>gtype</i> option.</dd>
+<dd> Set gain to be applied to IR coefficients before filtering. Allowed range is 0 to 1. This gain is applied after any gain applied with <i>gtype</i> option.</dd>
 <dt><code>irfmt</code></dt>
-<dd> Set format of <font SIZE="-1">IR</font> stream. Can be <tt>&quot;mono&quot;</tt> or <tt>&quot;input&quot;</tt>. Default is <tt>&quot;input&quot;</tt>.</dd>
+<dd> Set format of IR stream. Can be <tt>&quot;mono&quot;</tt> or <tt>&quot;input&quot;</tt>. Default is <tt>&quot;input&quot;</tt>.</dd>
 <dt><code>maxir</code></dt>
 <dd> Set max allowed Impulse Response filter duration in seconds. Default is 30 seconds. Allowed range is 0.1 to 60 seconds.</dd>
 <dt><code>response</code></dt>
-<dd> Show <font SIZE="-1">IR</font> frequency response, magnitude(magenta), phase(green) and group delay(yellow) in additional video stream. By default it is disabled.</dd>
+<dd> Show IR frequency response, magnitude(magenta), phase(green) and group delay(yellow) in additional video stream. By default it is disabled.</dd>
 <dt><code>channel</code></dt>
-<dd> Set for which <font SIZE="-1">IR</font> channel to display frequency response. By default is first channel displayed. This option is used only when <i>response</i> is enabled.</dd>
+<dd> Set for which IR channel to display frequency response. By default is first channel displayed. This option is used only when <i>response</i> is enabled.</dd>
 <dt><code>size</code></dt>
 <dd> Set video stream size. This option is used only when <i>response</i> is enabled.</dd>
 <dt><code>rate</code></dt>
 <dd> Set video stream frame rate. This option is used only when <i>response</i> is enabled.</dd>
 <dt><code>minp</code></dt>
-<dd> Set minimal partition size used for convolution. Default is <i>8192</i>. Allowed range is from <i>1</i> to <i>32768</i>. Lower values decreases latency at cost of higher <font SIZE="-1">CPU</font> usage.</dd>
+<dd> Set minimal partition size used for convolution. Default is <i>8192</i>. Allowed range is from <i>1</i> to <i>32768</i>. Lower values decreases latency at cost of higher CPU usage.</dd>
 <dt><code>maxp</code></dt>
-<dd> Set maximal partition size used for convolution. Default is <i>8192</i>. Allowed range is from <i>8</i> to <i>32768</i>. Lower values may increase <font SIZE="-1">CPU</font> usage.</dd>
+<dd> Set maximal partition size used for convolution. Default is <i>8192</i>. Allowed range is from <i>8</i> to <i>32768</i>. Lower values may increase CPU usage.</dd>
 <dt><code>nbirs</code></dt>
 <dd> Set number of input impulse responses streams which will be switchable at runtime. Allowed range is from <i>1</i> to <i>32</i>. Default is <i>1</i>.</dd>
 <dt><code>ir</code></dt>
-<dd> Set <font SIZE="-1">IR</font> stream which will be used for convolution, starting from <i>0</i>, should always be lower than supplied value by <tt>&quot;nbirs&quot;</tt> option. Default is <i>0</i>. This option can be changed at runtime via <code>commands</code>.</dd></dl>
+<dd> Set IR stream which will be used for convolution, starting from <i>0</i>, should always be lower than supplied value by <tt>&quot;nbirs&quot;</tt> option. Default is <i>0</i>. This option can be changed at runtime via <code>commands</code>.</dd></dl>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Apply reverb to stream using mono <font SIZE="-1">IR</font> file as second input, complete command using ffmpeg: </dd>
+<dd> Apply reverb to stream using mono IR file as second input, complete command using ffmpeg: </dd>
 <pre>
         ffmpeg -i input.wav -i middle_tunnel_1way_mono.wav -lavfi afir output.wav
 </pre>
@@ -829,7 +829,7 @@ description: "ffmpeg-filters – FFmpeg filters"
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>shift</code></dt>
-<dd> Specify frequency shift. Allowed range is -INT_MAX to <font SIZE="-1">INT_MAX.</font> Default value is 0.0.</dd>
+<dd> Specify frequency shift. Allowed range is -INT_MAX to INT_MAX. Default value is 0.0.</dd>
 <dt><code>level</code></dt>
 <dd> Set output gain applied to final output. Allowed range is from 0.0 to 1.0. Default value is 1.0.</dd></dl>
 <p> <i>Commands</i> </p>
@@ -858,7 +858,7 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dt><code>knee</code></dt>
 <dd> Curve the sharp knee around the threshold to enter gain reduction more softly. Default is 2.828427125. Allowed range is from 1 to 8.</dd>
 <dt><code>detection</code></dt>
-<dd> Choose if exact signal should be taken for detection or an <font SIZE="-1">RMS</font> like one. Default is <tt>&quot;rms&quot;</tt>. Can be <tt>&quot;peak&quot;</tt> or <tt>&quot;rms&quot;</tt>.</dd>
+<dd> Choose if exact signal should be taken for detection or an RMS like one. Default is <tt>&quot;rms&quot;</tt>. Can be <tt>&quot;peak&quot;</tt> or <tt>&quot;rms&quot;</tt>.</dd>
 <dt><code>link</code></dt>
 <dd> Choose if the average level between all channels or the louder channel affects the reduction. Default is <tt>&quot;average&quot;</tt>. Can be <tt>&quot;average&quot;</tt> or <tt>&quot;maximum&quot;</tt>.</dd></dl>
 <p> <i>Commands</i> </p>
@@ -927,13 +927,13 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dl>
 </dl>
 <dt><code>normalize, n</code></dt>
-<dd> Normalize filter coefficients, by default is enabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.</dd>
+<dd> Normalize filter coefficients, by default is enabled. Enabling it will normalize magnitude response at DC to 0dB.</dd>
 <dt><code>mix</code></dt>
 <dd> How much to use filtered signal in output. Default is 1. Range is between 0 and 1.</dd>
 <dt><code>response</code></dt>
-<dd> Show <font SIZE="-1">IR</font> frequency response, magnitude(magenta), phase(green) and group delay(yellow) in additional video stream. By default it is disabled.</dd>
+<dd> Show IR frequency response, magnitude(magenta), phase(green) and group delay(yellow) in additional video stream. By default it is disabled.</dd>
 <dt><code>channel</code></dt>
-<dd> Set for which <font SIZE="-1">IR</font> channel to display frequency response. By default is first channel displayed. This option is used only when <i>response</i> is enabled.</dd>
+<dd> Set for which IR channel to display frequency response. By default is first channel displayed. This option is used only when <i>response</i> is enabled.</dd>
 <dt><code>size</code></dt>
 <dd> Set video stream size. This option is used only when <i>response</i> is enabled.</dd></dl>
 <p> Coefficients in <tt>&quot;tf&quot;</tt> and <tt>&quot;sf&quot;</tt> format are separated by spaces and are in ascending order. </p>
@@ -972,9 +972,9 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dt><code>release</code></dt>
 <dd> Come back from limiting to attenuation 1.0 in this amount of milliseconds. Default is 50 milliseconds.</dd>
 <dt><code>asc</code></dt>
-<dd> When gain reduction is always needed <font SIZE="-1">ASC</font> takes care of releasing to an average reduction level rather than reaching a reduction of 0 in the release time.</dd>
+<dd> When gain reduction is always needed ASC takes care of releasing to an average reduction level rather than reaching a reduction of 0 in the release time.</dd>
 <dt><code>asc_level</code></dt>
-<dd> Select how much the release time is affected by <font SIZE="-1">ASC, 0</font> means nearly no changes in release time while 1 produces higher release times.</dd>
+<dd> Select how much the release time is affected by ASC, 0 means nearly no changes in release time while 1 produces higher release times.</dd>
 <dt><code>level</code></dt>
 <dd> Auto level output signal. Default is enabled. This normalizes audio back to 0dB if enabled.</dd></dl>
 <p> Depending on picked setting it is recommended to upsample input 2x or 4x times with <code>aresample</code> before applying this filter.</p>
@@ -1008,11 +1008,11 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dt><code>channels, c</code></dt>
 <dd> Specify which channels to filter, by default all available are filtered.</dd>
 <dt><code>normalize, n</code></dt>
-<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.</dd>
+<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.</dd>
 <dt><code>order, o</code></dt>
 <dd> Set the filter order, can be 1 or 2. Default is 2.</dd>
 <dt><code>transform, a</code></dt>
-<dd> Set transform type of <font SIZE="-1">IIR</font> filter.</dd>
+<dd> Set transform type of IIR filter.</dd>
 <dl>
 <dl>
 <dt><code>di</code></dt>
@@ -1072,7 +1072,7 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dt><code>inputs</code></dt>
 <dd> Set the number of inputs. Default is 2.</dd></dl>
 <p> If the channel layouts of the inputs are disjoint, and therefore compatible, the channel layout of the output will be set accordingly and the channels will be reordered as necessary. If the channel layouts of the inputs are not disjoint, the output will have all the channels of the first input then all the channels of the second input, in that order, and the channel layout of the output will be the default value corresponding to the total number of channels. </p>
-<p> For example, if the first input is in 2.1 (<font SIZE="-1">FL+FR+LF</font>) and the second input is <font SIZE="-1">FC+BL+BR,</font> then the output will be in 5.1, with the channels in the following order: a1, a2, b1, a3, b2, b3 (a1 is the first channel of the first input, b1 is the first channel of the second input). </p>
+<p> For example, if the first input is in 2.1 (FL+FR+LF) and the second input is FC+BL+BR, then the output will be in 5.1, with the channels in the following order: a1, a2, b1, a3, b2, b3 (a1 is the first channel of the first input, b1 is the first channel of the second input). </p>
 <p> On the other hand, if both input are in stereo, the output channels will be in the default order: a1, a2, b1, b2, and the channel layout will be arbitrarily set to 4.0, which may or may not be the expected value. </p>
 <p> All inputs must have the same sample rate, and format. </p>
 <p> If inputs do not have the same duration, the output will stop with the shortest. </p>
@@ -1080,8 +1080,8 @@ description: "ffmpeg-filters – FFmpeg filters"
 <dl>
 <dt>&bull;</dt>
 <dd> Merge two mono files into a stereo stream: </dd>
-<p>amovie = left.wav[l];<br />
-amovie = right.mp3[r];<br />
+<p>amovie = left.wav[l];<br/>
+amovie = right.mp3[r];<br/>
 [l][r] amerge</p>
 <dt>&bull;</dt>
 <dd> Multiple merges assuming 1 video stream and 6 audio streams in <i>input.mkv</i>: </dd>
@@ -1329,7 +1329,7 @@ amovie = right.mp3[r];<br />
 <p> <i>Commands</i> </p>
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>apulsator</h3>
-<p> Audio pulsator is something between an autopanner and a tremolo. But it can produce funny stereo effects as well. Pulsator changes the volume of the left and right channel based on a <font SIZE="-1">LFO</font> (low frequency oscillator) with different waveforms and shifted phases. This filter have the ability to define an offset between left and right channel. An offset of 0 means that both <font SIZE="-1">LFO</font> shapes match each other. The left and right channel are altered equally &#8211; a conventional tremolo. An offset of 50% means that the shape of the right channel is exactly shifted in phase (or moved backwards about half of the frequency) &#8211; pulsator acts as an autopanner. At 1 both curves match again. Every setting in between moves the phase shift gapless between all stages and produces some &#8220;bypassing&#8221; sounds with sine and triangle waveforms. The more you set the offset near 1 (starting from the 0.5) the faster the signal passes from the left to the right speaker. </p>
+<p> Audio pulsator is something between an autopanner and a tremolo. But it can produce funny stereo effects as well. Pulsator changes the volume of the left and right channel based on a LFO (low frequency oscillator) with different waveforms and shifted phases. This filter have the ability to define an offset between left and right channel. An offset of 0 means that both LFO shapes match each other. The left and right channel are altered equally &#8211; a conventional tremolo. An offset of 50% means that the shape of the right channel is exactly shifted in phase (or moved backwards about half of the frequency) &#8211; pulsator acts as an autopanner. At 1 both curves match again. Every setting in between moves the phase shift gapless between all stages and produces some &#8220;bypassing&#8221; sounds with sine and triangle waveforms. The more you set the offset near 1 (starting from the 0.5) the faster the signal passes from the left to the right speaker. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>level_in</code></dt>
@@ -1337,9 +1337,9 @@ amovie = right.mp3[r];<br />
 <dt><code>level_out</code></dt>
 <dd> Set output gain. By default it is 1. Range is [0.015625 &#8211; 64].</dd>
 <dt><code>mode</code></dt>
-<dd> Set waveform shape the <font SIZE="-1">LFO</font> will use. Can be one of: sine, triangle, square, sawup or sawdown. Default is sine.</dd>
+<dd> Set waveform shape the LFO will use. Can be one of: sine, triangle, square, sawup or sawdown. Default is sine.</dd>
 <dt><code>amount</code></dt>
-<dd> Set modulation. Define how much of original signal is affected by the <font SIZE="-1">LFO.</font></dd>
+<dd> Set modulation. Define how much of original signal is affected by the LFO.</dd>
 <dt><code>offset_l</code></dt>
 <dd> Set left channel offset. Default is 0. Allowed range is [0 &#8211; 1].</dd>
 <dt><code>offset_r</code></dt>
@@ -1406,7 +1406,7 @@ amovie = right.mp3[r];<br />
         asetnsamples=n=1234:p=0
 </pre>
 <h3>asetrate</h3>
-<p> Set the sample rate without altering the <font SIZE="-1">PCM</font> data. This will result in a change of speed and pitch. </p>
+<p> Set the sample rate without altering the PCM data. This will result in a change of speed and pitch. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>sample_rate, r</code></dt>
@@ -1502,7 +1502,7 @@ amovie = right.mp3[r];<br />
 <p> It accepts the following option:</p>
 <dl>
 <dt><code>length</code></dt>
-<dd> Short window length in seconds, used for peak and trough <font SIZE="-1">RMS</font> measurement. Default is <tt>0.05</tt> (50 milliseconds). Allowed range is <tt>&quot;[0.01 - 10]&quot;</tt>.</dd>
+<dd> Short window length in seconds, used for peak and trough RMS measurement. Default is <tt>0.05</tt> (50 milliseconds). Allowed range is <tt>&quot;[0.01 - 10]&quot;</tt>.</dd>
 <dt><code>metadata</code></dt>
 <dd> Set metadata injection. All the metadata keys are prefixed with <tt>&quot;lavfi.astats.X&quot;</tt>, where <tt>&quot;X&quot;</tt> is channel number starting from 1 or string <tt>&quot;Overall&quot;</tt>. Default is disabled. </dd>
 <p> Available keys for each channel are: DC_offset Min_level Max_level Min_difference Max_difference Mean_difference RMS_difference Peak_level RMS_peak RMS_trough Crest_factor Flat_factor Peak_count Noise_floor Noise_floor_count Bit_depth Dynamic_range Zero_crossings Zero_crossings_rate Number_of_NaNs Number_of_Infs Number_of_denormals </p>
@@ -1517,7 +1517,7 @@ amovie = right.mp3[r];<br />
 <dd> Select the entries which need to be measured overall. The metadata keys can be used as flags, default is <code>all</code> which measures everything. <code>none</code> disables all overall measurement.</dd></dl>
 <p> A description of each shown parameter follows:</p>
 <dl>
-<dt><font SIZE="-1"><code>DC</code></font><code> offset</code></dt>
+<dt><code>DC</code><code> offset</code></dt>
 <dd> Mean amplitude displacement from zero.</dd>
 <dt><code>Min level</code></dt>
 <dd> Minimal sample level.</dd>
@@ -1529,18 +1529,18 @@ amovie = right.mp3[r];<br />
 <dd> Maximal difference between two consecutive samples.</dd>
 <dt><code>Mean difference</code></dt>
 <dd> Mean difference between two consecutive samples. The average of each difference between two consecutive samples.</dd>
-<dt><font SIZE="-1"><code>RMS</code></font><code> difference</code></dt>
+<dt><code>RMS</code><code> difference</code></dt>
 <dd> Root Mean Square difference between two consecutive samples.</dd>
 <dt><code>Peak level dB</code></dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>RMS</code></font><code> level dB</code></dt>
-<dd> Standard peak and <font SIZE="-1">RMS</font> level measured in dBFS.</dd>
-<dt><font SIZE="-1"><code>RMS</code></font><code> peak dB</code></dt>
+</dd><dt><code>RMS</code><code> level dB</code></dt>
+<dd> Standard peak and RMS level measured in dBFS.</dd>
+<dt><code>RMS</code><code> peak dB</code></dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>RMS</code></font><code> trough dB</code></dt>
-<dd> Peak and trough values for <font SIZE="-1">RMS</font> level measured over a short window.</dd>
+</dd><dt><code>RMS</code><code> trough dB</code></dt>
+<dd> Peak and trough values for RMS level measured over a short window.</dd>
 <dt><code>Crest factor</code></dt>
-<dd> Standard ratio of peak to <font SIZE="-1">RMS</font> level (note: not in dB).</dd>
+<dd> Standard ratio of peak to RMS level (note: not in dB).</dd>
 <dt><code>Flat factor</code></dt>
 <dd> Flatness (i.e. consecutive samples with the same value) of the signal at its peak levels (i.e. either <i>Min level</i> or <i>Max level</i>).</dd>
 <dt><code>Peak count</code></dt>
@@ -1741,9 +1741,9 @@ amovie = right.mp3[r];<br />
 <dt><code>channels, c</code></dt>
 <dd> Specify which channels to filter, by default all available are filtered.</dd>
 <dt><code>normalize, n</code></dt>
-<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.</dd>
+<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.</dd>
 <dt><code>transform, a</code></dt>
-<dd> Set transform type of <font SIZE="-1">IIR</font> filter.</dd>
+<dd> Set transform type of IIR filter.</dd>
 <dl>
 <dl>
 <dt><code>di</code></dt>
@@ -1816,9 +1816,9 @@ amovie = right.mp3[r];<br />
 <dt><code>channels, c</code></dt>
 <dd> Specify which channels to filter, by default all available are filtered.</dd>
 <dt><code>normalize, n</code></dt>
-<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.</dd>
+<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.</dd>
 <dt><code>transform, a</code></dt>
-<dd> Set transform type of <font SIZE="-1">IIR</font> filter.</dd>
+<dd> Set transform type of IIR filter.</dd>
 <dl>
 <dl>
 <dt><code>di</code></dt>
@@ -1862,7 +1862,7 @@ amovie = right.mp3[r];<br />
 <dt><code>mix, m</code></dt>
 <dd> Change bandreject mix. Syntax for the command is : &quot;<i>mix</i>&quot;</dd></dl>
 <h3>bass, lowshelf</h3>
-<p> Boost or cut the bass (lower) frequencies of the audio using a two-pole shelving filter with a response similar to that of a standard hi-fi&#8217;s tone-controls. This is also known as shelving equalisation (<font SIZE="-1">EQ</font>). </p>
+<p> Boost or cut the bass (lower) frequencies of the audio using a two-pole shelving filter with a response similar to that of a standard hi-fi&#8217;s tone-controls. This is also known as shelving equalisation (EQ). </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>gain, g</code></dt>
@@ -1895,9 +1895,9 @@ amovie = right.mp3[r];<br />
 <dt><code>channels, c</code></dt>
 <dd> Specify which channels to filter, by default all available are filtered.</dd>
 <dt><code>normalize, n</code></dt>
-<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.</dd>
+<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.</dd>
 <dt><code>transform, a</code></dt>
-<dd> Set transform type of <font SIZE="-1">IIR</font> filter.</dd>
+<dd> Set transform type of IIR filter.</dd>
 <dl>
 <dl>
 <dt><code>di</code></dt>
@@ -1943,7 +1943,7 @@ amovie = right.mp3[r];<br />
 <dt><code>mix, m</code></dt>
 <dd> Change bass mix. Syntax for the command is : &quot;<i>mix</i>&quot;</dd></dl>
 <h3>biquad</h3>
-<p> Apply a biquad <font SIZE="-1">IIR</font> filter with the given coefficients. Where <i>b0</i>, <i>b1</i>, <i>b2</i> and <i>a0</i>, <i>a1</i>, <i>a2</i> are the numerator and denominator coefficients respectively. and <i>channels</i>, <i>c</i> specify which channels to filter, by default all available are filtered. </p>
+<p> Apply a biquad IIR filter with the given coefficients. Where <i>b0</i>, <i>b1</i>, <i>b2</i> and <i>a0</i>, <i>a1</i>, <i>a2</i> are the numerator and denominator coefficients respectively. and <i>channels</i>, <i>c</i> specify which channels to filter, by default all available are filtered. </p>
 <p> <i>Commands</i> </p>
 <p> This filter supports the following commands:</p>
 <dl>
@@ -1964,9 +1964,9 @@ amovie = right.mp3[r];<br />
 <dt><code>channels, c</code></dt>
 <dd> Specify which channels to filter, by default all available are filtered.</dd>
 <dt><code>normalize, n</code></dt>
-<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.</dd>
+<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.</dd>
 <dt><code>transform, a</code></dt>
-<dd> Set transform type of <font SIZE="-1">IIR</font> filter.</dd>
+<dd> Set transform type of IIR filter.</dd>
 <dl>
 <dl>
 <dt><code>di</code></dt>
@@ -2025,20 +2025,20 @@ amovie = right.mp3[r];<br />
 <p> It accepts the following parameters:</p>
 <dl>
 <dt><code>map</code></dt>
-<dd> Map channels from input to output. The argument is a &#8216;|&#8217;-separated list of mappings, each in the <tt>&quot;</tt>in_channel<tt>-</tt>out_channel<tt>&quot;</tt> or <i>in_channel</i> form. <i>in_channel</i> can be either the name of the input channel (e.g. <font SIZE="-1">FL</font> for front left) or its index in the input channel layout. <i>out_channel</i> is the name of the output channel or its index in the output channel layout. If <i>out_channel</i> is not given then it is implicitly an index, starting with zero and increasing by one for each mapping.</dd>
+<dd> Map channels from input to output. The argument is a &#8216;|&#8217;-separated list of mappings, each in the <tt>&quot;</tt>in_channel<tt>-</tt>out_channel<tt>&quot;</tt> or <i>in_channel</i> form. <i>in_channel</i> can be either the name of the input channel (e.g. FL for front left) or its index in the input channel layout. <i>out_channel</i> is the name of the output channel or its index in the output channel layout. If <i>out_channel</i> is not given then it is implicitly an index, starting with zero and increasing by one for each mapping.</dd>
 <dt><code>channel_layout</code></dt>
 <dd> The channel layout of the output stream.</dd></dl>
 <p> If no mapping is present, the filter will implicitly map input channels to output channels, preserving indices. </p>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> For example, assuming a 5.1+downmix input <font SIZE="-1">MOV</font> file, </dd>
+<dd> For example, assuming a 5.1+downmix input MOV file, </dd>
 <pre>
         ffmpeg -i in.mov -filter 'channelmap=map=DL-FL|DR-FR' out.wav
 </pre>
-<p> will create an output <font SIZE="-1">WAV</font> file tagged as stereo from the downmix channels of the input.</p>
+<p> will create an output WAV file tagged as stereo from the downmix channels of the input.</p>
 <dt>&bull;</dt>
-<dd> To fix a 5.1 <font SIZE="-1">WAV</font> improperly encoded in <font SIZE="-1">AAC</font>&#8216;s native channel order </dd>
+<dd> To fix a 5.1 WAV improperly encoded in AAC&#8216;s native channel order </dd>
 <pre>
         ffmpeg -i in.wav -filter 'channelmap=1|2|0|5|3|4:5.1' out.wav
 </pre>
@@ -2055,16 +2055,16 @@ amovie = right.mp3[r];<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> For example, assuming a stereo input <font SIZE="-1">MP3</font> file, </dd>
+<dd> For example, assuming a stereo input MP3 file, </dd>
 <pre>
         ffmpeg -i in.mp3 -filter_complex channelsplit out.mkv
 </pre>
 <p> will create an output Matroska file with two audio streams, one containing only the left channel and the other the right channel.</p>
 <dt>&bull;</dt>
-<dd> Split a 5.1 <font SIZE="-1">WAV</font> file into per-channel files: </dd>
+<dd> Split a 5.1 WAV file into per-channel files: </dd>
 <p>ffmpeg &#8211; i in.wav &#8211; filter_complex &#8216;channelsplit=channel_layout=5.1[FL][FR][FC][LFE][SL][SR]&#8217; &#8211; map &#8216;[FL]&#8217; front_left.wav &#8211; map &#8216;[FR]&#8217; front_right.wav &#8211; map &#8216;[FC]&#8217; front_center.wav &#8211; map &#8216;[LFE]&#8217; lfe.wav &#8211; map &#8216;[SL]&#8217; side_left.wav &#8211; map &#8216;[SR]&#8217; side_right.wav</p>
 <dt>&bull;</dt>
-<dd> Extract only <font SIZE="-1">LFE</font> from a 5.1 <font SIZE="-1">WAV</font> file: </dd>
+<dd> Extract only LFE from a 5.1 WAV file: </dd>
 <p>ffmpeg &#8211; i in.wav &#8211; filter_complex &#8216;channelsplit=channel_layout=5.1:channels=LFE[LFE]&#8217; &#8211; map &#8216;[LFE]&#8217; lfe.wav
 </dl>
 <h3>chorus</h3>
@@ -2247,11 +2247,11 @@ amovie = right.mp3[r];<br />
 <p> <i>Commands</i> </p>
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>dcshift</h3>
-<p> Apply a <font SIZE="-1">DC</font> shift to the audio. </p>
-<p> This can be useful to remove a <font SIZE="-1">DC</font> offset (caused perhaps by a hardware problem in the recording chain) from the audio. The effect of a <font SIZE="-1">DC</font> offset is reduced headroom and hence volume. The <code>astats</code> filter can be used to determine if a signal has a <font SIZE="-1">DC</font> offset.</p>
+<p> Apply a DC shift to the audio. </p>
+<p> This can be useful to remove a DC offset (caused perhaps by a hardware problem in the recording chain) from the audio. The effect of a DC offset is reduced headroom and hence volume. The <code>astats</code> filter can be used to determine if a signal has a DC offset.</p>
 <dl>
 <dt><code>shift</code></dt>
-<dd> Set the <font SIZE="-1">DC</font> shift, allowed range is [-1, 1]. It indicates the amount to shift the audio.</dd>
+<dd> Set the DC shift, allowed range is [-1, 1]. It indicates the amount to shift the audio.</dd>
 <dt><code>limitergain</code></dt>
 <dd> Optional. It should have a value much less than 1 (e.g. 0.05 or 0.02) and is used to prevent clipping.</dd></dl>
 <h3>deesser</h3>
@@ -2281,7 +2281,7 @@ amovie = right.mp3[r];<br />
 </dl>
 <h3>drmeter</h3>
 <p> Measure audio dynamic range. </p>
-<p> <font SIZE="-1">DR</font> values of 14 and higher is found in very dynamic material. <font SIZE="-1">DR</font> of 8 to 13 is found in transition material. And anything less that 8 have very poor dynamics and is very compressed. </p>
+<p> DR values of 14 and higher is found in very dynamic material. DR of 8 to 13 is found in transition material. And anything less that 8 have very poor dynamics and is very compressed. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>length</code></dt>
@@ -2299,11 +2299,11 @@ amovie = right.mp3[r];<br />
 <dt><code>maxgain, m</code></dt>
 <dd> Set the maximum gain factor. In range from 1.0 to 100.0. Default is 10.0. The Dynamic Audio Normalizer determines the maximum possible (local) gain factor for each input frame, i.e. the maximum gain factor that does not result in clipping or distortion. The maximum gain factor is determined by the frame&#8217;s highest magnitude sample. However, the Dynamic Audio Normalizer additionally bounds the frame&#8217;s maximum gain factor by a predetermined (global) maximum gain factor. This is done in order to avoid excessive gain factors in &#8220;silent&#8221; or almost silent frames. By default, the maximum gain factor is 10.0, For most inputs the default value should be sufficient and it usually is not recommended to increase this value. Though, for input with an extremely low overall volume level, it may be necessary to allow even higher gain factors. Note, however, that the Dynamic Audio Normalizer does not simply apply a &#8220;hard&#8221; threshold (i.e. cut off values above the threshold). Instead, a &#8220;sigmoid&#8221; threshold function will be applied. This way, the gain factors will smoothly approach the threshold value, but never exceed that value.</dd>
 <dt><code>targetrms, r</code></dt>
-<dd> Set the target <font SIZE="-1">RMS.</font> In range from 0.0 to 1.0. Default is 0.0 &#8211; disabled. By default, the Dynamic Audio Normalizer performs &#8220;peak&#8221; normalization. This means that the maximum local gain factor for each frame is defined (only) by the frame&#8217;s highest magnitude sample. This way, the samples can be amplified as much as possible without exceeding the maximum signal level, i.e. without clipping. Optionally, however, the Dynamic Audio Normalizer can also take into account the frame&#8217;s root mean square, abbreviated <font SIZE="-1">RMS.</font> In electrical engineering, the <font SIZE="-1">RMS</font> is commonly used to determine the power of a time-varying signal. It is therefore considered that the <font SIZE="-1">RMS</font> is a better approximation of the &#8220;perceived loudness&#8221; than just looking at the signal&#8217;s peak magnitude. Consequently, by adjusting all frames to a constant <font SIZE="-1">RMS</font> value, a uniform &#8220;perceived loudness&#8221; can be established. If a target <font SIZE="-1">RMS</font> value has been specified, a frame&#8217;s local gain factor is defined as the factor that would result in exactly that <font SIZE="-1">RMS</font> value. Note, however, that the maximum local gain factor is still restricted by the frame&#8217;s highest magnitude sample, in order to prevent clipping.</dd>
+<dd> Set the target RMS. In range from 0.0 to 1.0. Default is 0.0 &#8211; disabled. By default, the Dynamic Audio Normalizer performs &#8220;peak&#8221; normalization. This means that the maximum local gain factor for each frame is defined (only) by the frame&#8217;s highest magnitude sample. This way, the samples can be amplified as much as possible without exceeding the maximum signal level, i.e. without clipping. Optionally, however, the Dynamic Audio Normalizer can also take into account the frame&#8217;s root mean square, abbreviated RMS. In electrical engineering, the RMS is commonly used to determine the power of a time-varying signal. It is therefore considered that the RMS is a better approximation of the &#8220;perceived loudness&#8221; than just looking at the signal&#8217;s peak magnitude. Consequently, by adjusting all frames to a constant RMS value, a uniform &#8220;perceived loudness&#8221; can be established. If a target RMS value has been specified, a frame&#8217;s local gain factor is defined as the factor that would result in exactly that RMS value. Note, however, that the maximum local gain factor is still restricted by the frame&#8217;s highest magnitude sample, in order to prevent clipping.</dd>
 <dt><code>coupling, n</code></dt>
 <dd> Enable channels coupling. By default is enabled. By default, the Dynamic Audio Normalizer will amplify all channels by the same amount. This means the same gain factor will be applied to all channels, i.e. the maximum possible gain factor is determined by the &#8220;loudest&#8221; channel. However, in some recordings, it may happen that the volume of the different channels is uneven, e.g. one channel may be &#8220;quieter&#8221; than the other one(s). In this case, this option can be used to disable the channel coupling. This way, the gain factor will be determined independently for each channel, depending only on the individual channel&#8217;s highest magnitude sample. This allows for harmonizing the volume of the different channels.</dd>
 <dt><code>correctdc, c</code></dt>
-<dd> Enable <font SIZE="-1">DC</font> bias correction. By default is disabled. An audio signal (in the time domain) is a sequence of sample values. In the Dynamic Audio Normalizer these sample values are represented in the -1.0 to 1.0 range, regardless of the original input format. Normally, the audio signal, or &#8220;waveform&#8221;, should be centered around the zero point. That means if we calculate the mean value of all samples in a file, or in a single frame, then the result should be 0.0 or at least very close to that value. If, however, there is a significant deviation of the mean value from 0.0, in either positive or negative direction, this is referred to as a <font SIZE="-1">DC</font> bias or <font SIZE="-1">DC</font> offset. Since a <font SIZE="-1">DC</font> bias is clearly undesirable, the Dynamic Audio Normalizer provides optional <font SIZE="-1">DC</font> bias correction. With <font SIZE="-1">DC</font> bias correction enabled, the Dynamic Audio Normalizer will determine the mean value, or &#8220;<font SIZE="-1">DC</font> correction&#8221; offset, of each input frame and subtract that value from all of the frame&#8217;s sample values which ensures those samples are centered around 0.0 again. Also, in order to avoid &#8220;gaps&#8221; at the frame boundaries, the <font SIZE="-1">DC</font> correction offset values will be interpolated smoothly between neighbouring frames.</dd>
+<dd> Enable DC bias correction. By default is disabled. An audio signal (in the time domain) is a sequence of sample values. In the Dynamic Audio Normalizer these sample values are represented in the -1.0 to 1.0 range, regardless of the original input format. Normally, the audio signal, or &#8220;waveform&#8221;, should be centered around the zero point. That means if we calculate the mean value of all samples in a file, or in a single frame, then the result should be 0.0 or at least very close to that value. If, however, there is a significant deviation of the mean value from 0.0, in either positive or negative direction, this is referred to as a DC bias or DC offset. Since a DC bias is clearly undesirable, the Dynamic Audio Normalizer provides optional DC bias correction. With DC bias correction enabled, the Dynamic Audio Normalizer will determine the mean value, or &#8220;DC correction&#8221; offset, of each input frame and subtract that value from all of the frame&#8217;s sample values which ensures those samples are centered around 0.0 again. Also, in order to avoid &#8220;gaps&#8221; at the frame boundaries, the DC correction offset values will be interpolated smoothly between neighbouring frames.</dd>
 <dt><code>altboundary, b</code></dt>
 <dd> Enable alternative boundary mode. By default is disabled. The Dynamic Audio Normalizer takes into account a certain neighbourhood around each frame. This includes the preceding frames as well as the subsequent frames. However, for the &#8220;boundary&#8221; frames, located at the very beginning and at the very end of the audio file, not all neighbouring frames are available. In particular, for the first few frames in the audio file, the preceding frames are not known. And, similarly, for the last few frames in the audio file, the subsequent frames are not known. Thus, the question arises which gain factors should be assumed for the missing frames in the &#8220;boundary&#8221; region. The Dynamic Audio Normalizer implements two modes to deal with this situation. The default boundary mode assumes a gain factor of exactly 1.0 for the missing frames, resulting in a smooth &#8220;fade in&#8221; and &#8220;fade out&#8221; at the beginning and at the end of the input, respectively.</dd>
 <dt><code>compress, s</code></dt>
@@ -2314,10 +2314,10 @@ amovie = right.mp3[r];<br />
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>earwax</h3>
 <p> Make audio easier to listen to on headphones. </p>
-<p> This filter adds `cues&#8217; to 44.1kHz stereo (i.e. audio <font SIZE="-1">CD</font> format) audio so that when listened to on headphones the stereo image is moved from inside your head (standard for headphones) to outside and in front of the listener (standard for speakers). </p>
+<p> This filter adds `cues&#8217; to 44.1kHz stereo (i.e. audio CD format) audio so that when listened to on headphones the stereo image is moved from inside your head (standard for headphones) to outside and in front of the listener (standard for speakers). </p>
 <p> Ported from SoX.</p>
 <h3>equalizer</h3>
-<p> Apply a two-pole peaking equalisation (<font SIZE="-1">EQ</font>) filter. With this filter, the signal-level at and around a selected frequency can be increased or decreased, whilst (unlike bandpass and bandreject filters) that at all other frequencies is unchanged. </p>
+<p> Apply a two-pole peaking equalisation (EQ) filter. With this filter, the signal-level at and around a selected frequency can be increased or decreased, whilst (unlike bandpass and bandreject filters) that at all other frequencies is unchanged. </p>
 <p> In order to produce complex equalisation curves, this filter can be given several times, each with a different central frequency. </p>
 <p> The filter accepts the following options:</p>
 <dl>
@@ -2349,9 +2349,9 @@ amovie = right.mp3[r];<br />
 <dt><code>channels, c</code></dt>
 <dd> Specify which channels to filter, by default all available are filtered.</dd>
 <dt><code>normalize, n</code></dt>
-<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.</dd>
+<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.</dd>
 <dt><code>transform, a</code></dt>
-<dd> Set transform type of <font SIZE="-1">IIR</font> filter.</dd>
+<dd> Set transform type of IIR filter.</dd>
 <dl>
 <dl>
 <dt><code>di</code></dt>
@@ -2420,7 +2420,7 @@ amovie = right.mp3[r];<br />
 <p> <i>Commands</i> </p>
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>firequalizer</h3>
-<p> Apply <font SIZE="-1">FIR</font> Equalization using arbitrary frequency response. </p>
+<p> Apply FIR Equalization using arbitrary frequency response. </p>
 <p> The filter accepts the following option:</p>
 <dl>
 <dt><code>gain</code></dt>
@@ -2522,7 +2522,7 @@ amovie = right.mp3[r];<br />
 <dt><code>dumpscale</code></dt>
 <dd> Set scale for dumpfile. Acceptable values are same with scale option. Default is linlog.</dd>
 <dt><code>fft2</code></dt>
-<dd> Enable 2-channel convolution using complex <font SIZE="-1">FFT.</font> This improves speed significantly. Default is disabled.</dd>
+<dd> Enable 2-channel convolution using complex FFT. This improves speed significantly. Default is disabled.</dd>
 <dt><code>min_phase</code></dt>
 <dd> Enable minimum phase impulse response. Default is disabled.</dd></dl>
 <p> <i>Examples</i></p>
@@ -2547,7 +2547,7 @@ amovie = right.mp3[r];<br />
 </pre>
 <dt>&bull;</dt>
 <dd> lowpass on left channel, highpass on right channel: </dd>
-<p>firequalizer = gain = &#8216;if(eq(chid,1), gain_interpolate(f), if(eq(chid,2), gain_interpolate(1e6+f), 0))&#8217;<br />
+<p>firequalizer = gain = &#8216;if(eq(chid,1), gain_interpolate(f), if(eq(chid,2), gain_interpolate(1e6+f), 0))&#8217;<br/>
     : gain_entry = &#8216;entry(1000, 0); entry(1001,-INF); entry(1e6+1000,0)&#8217; : multi = on
 </dl>
 <h3>flanger</h3>
@@ -2615,12 +2615,12 @@ amovie = right.mp3[r];<br />
 <dt><code>right_phase</code></dt>
 <dd> Change right phase. By default is enabled.</dd></dl>
 <h3>hdcd</h3>
-<p> Decodes High Definition Compatible Digital (<font SIZE="-1">HDCD</font>) data. A 16-bit <font SIZE="-1">PCM</font> stream with embedded <font SIZE="-1">HDCD</font> codes is expanded into a 20-bit <font SIZE="-1">PCM</font> stream. </p>
-<p> The filter supports the Peak Extend and Low-level Gain Adjustment features of <font SIZE="-1">HDCD,</font> and detects the Transient Filter flag. </p>
+<p> Decodes High Definition Compatible Digital (HDCD) data. A 16-bit PCM stream with embedded HDCD codes is expanded into a 20-bit PCM stream. </p>
+<p> The filter supports the Peak Extend and Low-level Gain Adjustment features of HDCD, and detects the Transient Filter flag. </p>
 <pre>
         ffmpeg -i HDCD16.flac -af hdcd OUT24.flac
 </pre>
-<p> When using the filter with wav, note the default encoding for wav is 16-bit, so the resulting 20-bit stream will be truncated back to 16-bit. Use something like <code>-acodec pcm_s24le</code> after the filter to get 24-bit <font SIZE="-1">PCM</font> output. </p>
+<p> When using the filter with wav, note the default encoding for wav is 16-bit, so the resulting 20-bit stream will be truncated back to 16-bit. Use something like <code>-acodec pcm_s24le</code> after the filter to get 24-bit PCM output. </p>
 <pre>
         ffmpeg -i HDCD16.wav -af hdcd OUT16.wav
         ffmpeg -i HDCD16.wav -af hdcd -c:a pcm_s24le OUT24.wav
@@ -2634,10 +2634,10 @@ amovie = right.mp3[r];<br />
 <dt><code>cdt_ms</code></dt>
 <dd> Set the code detect timer period in ms.</dd>
 <dt><code>force_pe</code></dt>
-<dd> Always extend peaks above -3dBFS even if <font SIZE="-1">PE</font> isn&#8217;t signaled.</dd>
+<dd> Always extend peaks above -3dBFS even if PE isn&#8217;t signaled.</dd>
 <dt><code>analyze_mode</code></dt>
 <dd> Replace audio with a solid tone and adjust the amplitude to signal some specific aspect of the decoding process. The output file can be loaded in an audio editor alongside the original to aid analysis. </dd>
-<p> <tt>&quot;analyze_mode=pe:force_pe=true&quot;</tt> can be used to see all samples above the <font SIZE="-1">PE</font> level. </p>
+<p> <tt>&quot;analyze_mode=pe:force_pe=true&quot;</tt> can be used to see all samples above the PE level. </p>
 <p> Modes are:</p>
 <dl>
 <dl>
@@ -2666,7 +2666,7 @@ amovie = right.mp3[r];<br />
 <dt><code>type</code></dt>
 <dd> Set processing type. Can be <i>time</i> or <i>freq</i>. <i>time</i> is processing audio in time domain which is slow. <i>freq</i> is processing audio in frequency domain which is fast. Default is <i>freq</i>.</dd>
 <dt><code>lfe</code></dt>
-<dd> Set custom gain for <font SIZE="-1">LFE</font> channels. Value is in dB. Default is 0.</dd>
+<dd> Set custom gain for LFE channels. Value is in dB. Default is 0.</dd>
 <dt><code>size</code></dt>
 <dd> Set size of frame in number of samples which will be processed at once. Default value is <i>1024</i>. Allowed range is from 1024 to 96000.</dd>
 <dt><code>hrir</code></dt>
@@ -2674,7 +2674,7 @@ amovie = right.mp3[r];<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Full example using wav files as coefficients with amovie filters for 7.1 downmix, each amovie filter use stereo file with <font SIZE="-1">IR</font> coefficients as input. The files give coefficients for each position of virtual loudspeaker: </dd>
+<dd> Full example using wav files as coefficients with amovie filters for 7.1 downmix, each amovie filter use stereo file with IR coefficients as input. The files give coefficients for each position of virtual loudspeaker: </dd>
 <p>ffmpeg &#8211; i input.wav &#8211; filter_complex &#8220;amovie=azi_270_ele_0_DFC.wav[sr];amovie=azi_90_ele_0_DFC.wav[sl];amovie=azi_225_ele_0_DFC.wav[br];amovie=azi_135_ele_0_DFC.wav[bl];amovie=azi_0_ele_0_DFC.wav,asplit[fc][lfe];amovie=azi_35_ele_0_DFC.wav[fl];amovie=azi_325_ele_0_DFC.wav[fr];[0:a][fl][fr][fc][lfe][bl][br][sl][sr]headphone=FL|FR|FC|LFE|BL|BR|SL|SR&#8221; output.wav</p>
 <dt>&bull;</dt>
 <dd> Full example using wav files as coefficients with amovie filters for 7.1 downmix, but now in <i>multich</i> <i>hrir</i> format. </dd>
@@ -2712,9 +2712,9 @@ amovie = right.mp3[r];<br />
 <dt><code>channels, c</code></dt>
 <dd> Specify which channels to filter, by default all available are filtered.</dd>
 <dt><code>normalize, n</code></dt>
-<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.</dd>
+<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.</dd>
 <dt><code>transform, a</code></dt>
-<dd> Set transform type of <font SIZE="-1">IIR</font> filter.</dd>
+<dd> Set transform type of IIR filter.</dd>
 <dl>
 <dl>
 <dt><code>di</code></dt>
@@ -2766,7 +2766,7 @@ amovie = right.mp3[r];<br />
 <dt><code>channel_layout</code></dt>
 <dd> The desired output channel layout. It defaults to stereo.</dd>
 <dt><code>map</code></dt>
-<dd> Map channels from inputs to output. The argument is a &#8216;|&#8217;-separated list of mappings, each in the <tt>&quot;</tt>input_idx<tt>.</tt>in_channel<tt>-</tt>out_channel<tt>&quot;</tt> form. <i>input_idx</i> is the 0-based index of the input stream. <i>in_channel</i> can be either the name of the input channel (e.g. <font SIZE="-1">FL</font> for front left) or its index in the specified input stream. <i>out_channel</i> is the name of the output channel.</dd></dl>
+<dd> Map channels from inputs to output. The argument is a &#8216;|&#8217;-separated list of mappings, each in the <tt>&quot;</tt>input_idx<tt>.</tt>in_channel<tt>-</tt>out_channel<tt>&quot;</tt> form. <i>input_idx</i> is the 0-based index of the input stream. <i>in_channel</i> can be either the name of the input channel (e.g. FL for front left) or its index in the specified input stream. <i>out_channel</i> is the name of the output channel.</dd></dl>
 <p> The filter will attempt to guess the mappings when they are not specified explicitly. It does so by first trying to find an unused matching input channel and if that fails it picks the first unused input channel. </p>
 <p> Join 3 inputs (with properly set channel layouts): </p>
 <pre>
@@ -2779,11 +2779,11 @@ amovie = right.mp3[r];<br />
         out
 </pre>
 <h3>ladspa</h3>
-<p> Load a <font SIZE="-1">LADSPA</font> (Linux Audio Developer&#8217;s Simple Plugin <font SIZE="-1">API</font>) plugin. </p>
+<p> Load a LADSPA (Linux Audio Developer&#8217;s Simple Plugin API) plugin. </p>
 <p> To enable compilation of this filter you need to configure FFmpeg with <tt>&quot;--enable-ladspa&quot;</tt>.</p>
 <dl>
 <dt><code>file, f</code></dt>
-<dd> Specifies the name of <font SIZE="-1">LADSPA</font> plugin library to load. If the environment variable <font SIZE="-1"><code>LADSPA_PATH</code></font> is defined, the <font SIZE="-1">LADSPA</font> plugin is searched in each one of the directories specified by the colon separated list in <font SIZE="-1"><code>LADSPA_PATH</code></font>, otherwise in the standard <font SIZE="-1">LADSPA</font> paths, which are in this order: <i></i><font SIZE="-1"><i>HOME/</i></font><i>.ladspa/lib/</i>, <i>/usr/local/lib/ladspa/</i>, <i>/usr/lib/ladspa/</i>.</dd>
+<dd> Specifies the name of LADSPA plugin library to load. If the environment variable <code>LADSPA_PATH</code> is defined, the LADSPA plugin is searched in each one of the directories specified by the colon separated list in <code>LADSPA_PATH</code>, otherwise in the standard LADSPA paths, which are in this order: <i></i><i>HOME/</i><i>.ladspa/lib/</i>, <i>/usr/local/lib/ladspa/</i>, <i>/usr/lib/ladspa/</i>.</dd>
 <dt><code>plugin, p</code></dt>
 <dd> Specifies the plugin within the library. Some libraries contain only one plugin, but others contain many of them. If this is not set filter will list all available plugins within the specified library.</dd>
 <dt><code>controls, c</code></dt>
@@ -2799,7 +2799,7 @@ amovie = right.mp3[r];<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> List all available plugins within amp (<font SIZE="-1">LADSPA</font> example plugin) library: </dd>
+<dd> List all available plugins within amp (LADSPA example plugin) library: </dd>
 <pre>
         ladspa=file=amp
 </pre>
@@ -2809,7 +2809,7 @@ amovie = right.mp3[r];<br />
         ladspa=f=vcf:p=vcf_notch:c=help
 </pre>
 <dt>&bull;</dt>
-<dd> Simulate low quality audio equipment using <tt>&quot;Computer Music Toolkit&quot;</tt> (<font SIZE="-1">CMT</font>) plugin library: </dd>
+<dd> Simulate low quality audio equipment using <tt>&quot;Computer Music Toolkit&quot;</tt> (CMT) plugin library: </dd>
 <pre>
         ladspa=file=cmt:plugin=lofi:controls=c0=22|c1=12|c2=12
 </pre>
@@ -2824,7 +2824,7 @@ amovie = right.mp3[r];<br />
         ladspa=file=cmt:noise_source_white:c=c0=.2
 </pre>
 <dt>&bull;</dt>
-<dd> Generate 20 bpm clicks using plugin <tt>&quot;C* Click - Metronome&quot;</tt> from the <tt>&quot;C* Audio Plugin Suite&quot;</tt> (<font SIZE="-1">CAPS</font>) library: </dd>
+<dd> Generate 20 bpm clicks using plugin <tt>&quot;C* Click - Metronome&quot;</tt> from the <tt>&quot;C* Audio Plugin Suite&quot;</tt> (CAPS) library: </dd>
 <pre>
         ladspa=file=caps:Click:c=c1=20'
 </pre>
@@ -2839,22 +2839,22 @@ amovie = right.mp3[r];<br />
         ladspa=fast_lookahead_limiter_1913:fastLookaheadLimiter:20|0|2
 </pre>
 <dt>&bull;</dt>
-<dd> Attenuate low frequencies using Multiband <font SIZE="-1">EQ</font> from Steve Harris <tt>&quot;SWH Plugins&quot;</tt> collection: </dd>
+<dd> Attenuate low frequencies using Multiband EQ from Steve Harris <tt>&quot;SWH Plugins&quot;</tt> collection: </dd>
 <pre>
         ladspa=mbeq_1197:mbeq:-24|-24|-24|0|0|0|0|0|0|0|0|0|0|0|0
 </pre>
 <dt>&bull;</dt>
-<dd> Reduce stereo image using <tt>&quot;Narrower&quot;</tt> from the <tt>&quot;C* Audio Plugin Suite&quot;</tt> (<font SIZE="-1">CAPS</font>) library: </dd>
+<dd> Reduce stereo image using <tt>&quot;Narrower&quot;</tt> from the <tt>&quot;C* Audio Plugin Suite&quot;</tt> (CAPS) library: </dd>
 <pre>
         ladspa=caps:Narrower
 </pre>
 <dt>&bull;</dt>
-<dd> Another white noise, now using <tt>&quot;C* Audio Plugin Suite&quot;</tt> (<font SIZE="-1">CAPS</font>) library: </dd>
+<dd> Another white noise, now using <tt>&quot;C* Audio Plugin Suite&quot;</tt> (CAPS) library: </dd>
 <pre>
         ladspa=caps:White:.2
 </pre>
 <dt>&bull;</dt>
-<dd> Some fractal noise, using <tt>&quot;C* Audio Plugin Suite&quot;</tt> (<font SIZE="-1">CAPS</font>) library: </dd>
+<dd> Some fractal noise, using <tt>&quot;C* Audio Plugin Suite&quot;</tt> (CAPS) library: </dd>
 <pre>
         ladspa=caps:Fractal:c=c1=1
 </pre>
@@ -2871,19 +2871,19 @@ amovie = right.mp3[r];<br />
 <dd> Modify the <i>N</i>-th control value. </dd>
 <p> If the specified value is not valid, it is ignored and prior one is kept.</dl>
 <h3>loudnorm</h3>
-<p> <font SIZE="-1">EBU R128</font> loudness normalization. Includes both dynamic and linear normalization modes. Support for both single pass (livestreams, files) and double pass (files) modes. This algorithm can target <font SIZE="-1">IL, LRA,</font> and maximum true peak. In dynamic mode, to accurately detect true peaks, the audio stream will be upsampled to 192 kHz. Use the <tt>&quot;-ar&quot;</tt> option or <tt>&quot;aresample&quot;</tt> filter to explicitly set an output sample rate. </p>
+<p> EBU R128 loudness normalization. Includes both dynamic and linear normalization modes. Support for both single pass (livestreams, files) and double pass (files) modes. This algorithm can target IL, LRA, and maximum true peak. In dynamic mode, to accurately detect true peaks, the audio stream will be upsampled to 192 kHz. Use the <tt>&quot;-ar&quot;</tt> option or <tt>&quot;aresample&quot;</tt> filter to explicitly set an output sample rate. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>I, i</code></dt>
 <dd> Set integrated loudness target. Range is -70.0 &#8211; -5.0. Default value is -24.0.</dd>
-<dt><font SIZE="-1"><code>LRA,</code></font><code> lra</code></dt>
+<dt><code>LRA,</code><code> lra</code></dt>
 <dd> Set loudness range target. Range is 1.0 &#8211; 20.0. Default value is 7.0.</dd>
-<dt><font SIZE="-1"><code>TP,</code></font><code> tp</code></dt>
+<dt><code>TP,</code><code> tp</code></dt>
 <dd> Set maximum true peak. Range is -9.0 &#8211; +0.0. Default value is -2.0.</dd>
 <dt><code>measured_I, measured_i</code></dt>
-<dd> Measured <font SIZE="-1">IL</font> of input file. Range is -99.0 &#8211; +0.0.</dd>
+<dd> Measured IL of input file. Range is -99.0 &#8211; +0.0.</dd>
 <dt><code>measured_LRA, measured_lra</code></dt>
-<dd> Measured <font SIZE="-1">LRA</font> of input file. Range is 0.0 &#8211; 99.0.</dd>
+<dd> Measured LRA of input file. Range is 0.0 &#8211; 99.0.</dd>
 <dt><code>measured_TP, measured_tp</code></dt>
 <dd> Measured true peak of input file. Range is -99.0 &#8211; +99.0.</dd>
 <dt><code>measured_thresh</code></dt>
@@ -2891,9 +2891,9 @@ amovie = right.mp3[r];<br />
 <dt><code>offset</code></dt>
 <dd> Set offset gain. Gain is applied before the true-peak limiter. Range is -99.0 &#8211; +99.0. Default is +0.0.</dd>
 <dt><code>linear</code></dt>
-<dd> Normalize by linearly scaling the source audio. <tt>&quot;measured_I&quot;</tt>, <tt>&quot;measured_LRA&quot;</tt>, <tt>&quot;measured_TP&quot;</tt>, and <tt>&quot;measured_thresh&quot;</tt> must all be specified. Target <font SIZE="-1">LRA</font> shouldn&#8217;t be lower than source <font SIZE="-1">LRA</font> and the change in integrated loudness shouldn&#8217;t result in a true peak which exceeds the target <font SIZE="-1">TP.</font> If any of these conditions aren&#8217;t met, normalization mode will revert to <i>dynamic</i>. Options are <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt>. Default is <tt>&quot;true&quot;</tt>.</dd>
+<dd> Normalize by linearly scaling the source audio. <tt>&quot;measured_I&quot;</tt>, <tt>&quot;measured_LRA&quot;</tt>, <tt>&quot;measured_TP&quot;</tt>, and <tt>&quot;measured_thresh&quot;</tt> must all be specified. Target LRA shouldn&#8217;t be lower than source LRA and the change in integrated loudness shouldn&#8217;t result in a true peak which exceeds the target TP. If any of these conditions aren&#8217;t met, normalization mode will revert to <i>dynamic</i>. Options are <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt>. Default is <tt>&quot;true&quot;</tt>.</dd>
 <dt><code>dual_mono</code></dt>
-<dd> Treat mono input files as &#8220;dual-mono&#8221;. If a mono file is intended for playback on a stereo system, its <font SIZE="-1">EBU R128</font> measurement will be perceptually incorrect. If set to <tt>&quot;true&quot;</tt>, this option will compensate for this effect. Multi-channel input files are not affected by this option. Options are true or false. Default is false.</dd>
+<dd> Treat mono input files as &#8220;dual-mono&#8221;. If a mono file is intended for playback on a stereo system, its EBU R128 measurement will be perceptually incorrect. If set to <tt>&quot;true&quot;</tt>, this option will compensate for this effect. Multi-channel input files are not affected by this option. Options are true or false. Default is false.</dd>
 <dt><code>print_format</code></dt>
 <dd> Set print format for stats. Options are summary, json, or none. Default value is none.</dd></dl>
 <h3>lowpass</h3>
@@ -2928,9 +2928,9 @@ amovie = right.mp3[r];<br />
 <dt><code>channels, c</code></dt>
 <dd> Specify which channels to filter, by default all available are filtered.</dd>
 <dt><code>normalize, n</code></dt>
-<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.</dd>
+<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.</dd>
 <dt><code>transform, a</code></dt>
-<dd> Set transform type of <font SIZE="-1">IIR</font> filter.</dd>
+<dd> Set transform type of IIR filter.</dd>
 <dl>
 <dl>
 <dt><code>di</code></dt>
@@ -2965,7 +2965,7 @@ amovie = right.mp3[r];<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Lowpass only <font SIZE="-1">LFE</font> channel, it <font SIZE="-1">LFE</font> is not present it does nothing: </dd>
+<dd> Lowpass only LFE channel, it LFE is not present it does nothing: </dd>
 <pre>
         lowpass=c=LFE
 </pre>
@@ -2982,11 +2982,11 @@ amovie = right.mp3[r];<br />
 <dt><code>mix, m</code></dt>
 <dd> Change lowpass mix. Syntax for the command is : &quot;<i>mix</i>&quot;</dd></dl>
 <h3>lv2</h3>
-<p> Load a <font SIZE="-1">LV2</font> (<font SIZE="-1">LADSPA</font> Version 2) plugin. </p>
+<p> Load a LV2 (LADSPA Version 2) plugin. </p>
 <p> To enable compilation of this filter you need to configure FFmpeg with <tt>&quot;--enable-lv2&quot;</tt>.</p>
 <dl>
 <dt><code>plugin, p</code></dt>
-<dd> Specifies the plugin <font SIZE="-1">URI.</font> You may need to escape &#8216;:&#8217;.</dd>
+<dd> Specifies the plugin URI. You may need to escape &#8216;:&#8217;.</dd>
 <dt><code>controls, c</code></dt>
 <dd> Set the &#8216;|&#8217; separated list of controls which are zero or more floating point values that determine the behavior of the loaded plugin (for example delay, threshold or gain). If <code>controls</code> is set to <tt>&quot;help&quot;</tt>, all available controls and their valid ranges are printed.</dd>
 <dt><code>sample_rate, s</code></dt>
@@ -3030,7 +3030,7 @@ amovie = right.mp3[r];<br />
 <dt><code>outdef</code></dt>
 <dd> output channel specification, of the form: &quot;<i>out_name</i>=[<i>gain</i>*]<i>in_name</i>[(+-)[<i>gain</i>*]<i>in_name</i>&#8230;]&quot;</dd>
 <dt><code>out_name</code></dt>
-<dd> output channel to define, either a channel name (<font SIZE="-1">FL, FR,</font> etc.) or a channel number (c0, c1, etc.)</dd>
+<dd> output channel to define, either a channel name (FL, FR, etc.) or a channel number (c0, c1, etc.)</dd>
 <dt><code>gain</code></dt>
 <dd> multiplicative coefficient for the channel, 1 leaving the volume unchanged</dd>
 <dt><code>in_name</code></dt>
@@ -3210,7 +3210,7 @@ amovie = right.mp3[r];<br />
 <dt><code>link</code></dt>
 <dd> Choose if the <tt>&quot;average&quot;</tt> level between all channels of side-chain stream or the louder(<tt>&quot;maximum&quot;</tt>) channel of side-chain stream affects the reduction. Default is <tt>&quot;average&quot;</tt>.</dd>
 <dt><code>detection</code></dt>
-<dd> Should the exact signal be taken in case of <tt>&quot;peak&quot;</tt> or an <font SIZE="-1">RMS</font> one in case of <tt>&quot;rms&quot;</tt>. Default is <tt>&quot;rms&quot;</tt> which is mainly smoother.</dd>
+<dd> Should the exact signal be taken in case of <tt>&quot;peak&quot;</tt> or an RMS one in case of <tt>&quot;rms&quot;</tt>. Default is <tt>&quot;rms&quot;</tt> which is mainly smoother.</dd>
 <dt><code>level_sc</code></dt>
 <dd> Set sidechain gain. Default is 1. Range is between 0.015625 and 64.</dd>
 <dt><code>mix</code></dt>
@@ -3246,7 +3246,7 @@ amovie = right.mp3[r];<br />
 <dt><code>knee</code></dt>
 <dd> Curve the sharp knee around the threshold to enter gain reduction more softly. Default is 2.828427125. Allowed range is from 1 to 8.</dd>
 <dt><code>detection</code></dt>
-<dd> Choose if exact signal should be taken for detection or an <font SIZE="-1">RMS</font> like one. Default is rms. Can be peak or rms.</dd>
+<dd> Choose if exact signal should be taken for detection or an RMS like one. Default is rms. Can be peak or rms.</dd>
 <dt><code>link</code></dt>
 <dd> Choose if the average level between all channels or the louder channel affects the reduction. Default is average. Can be average or maximum.</dd>
 <dt><code>level_sc</code></dt>
@@ -3326,12 +3326,12 @@ amovie = right.mp3[r];<br />
 </pre>
 </dl>
 <h3>sofalizer</h3>
-<p> SOFAlizer uses head-related transfer functions (HRTFs) to create virtual loudspeakers around the user for binaural listening via headphones (audio formats up to 9 channels supported). The HRTFs are stored in <font SIZE="-1">SOFA</font> files (see &lt;<code><a rel="nofollow" href="http://www.sofacoustics.org/">http://www.sofacoustics.org/</a></code>&gt; for a database). SOFAlizer is developed at the Acoustics Research Institute (<font SIZE="-1">ARI</font>) of the Austrian Academy of Sciences. </p>
+<p> SOFAlizer uses head-related transfer functions (HRTFs) to create virtual loudspeakers around the user for binaural listening via headphones (audio formats up to 9 channels supported). The HRTFs are stored in SOFA files (see &lt;<code><a rel="nofollow" href="http://www.sofacoustics.org/">http://www.sofacoustics.org/</a></code>&gt; for a database). SOFAlizer is developed at the Acoustics Research Institute (ARI) of the Austrian Academy of Sciences. </p>
 <p> To enable compilation of this filter you need to configure FFmpeg with <tt>&quot;--enable-libmysofa&quot;</tt>. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>sofa</code></dt>
-<dd> Set the <font SIZE="-1">SOFA</font> file used for rendering.</dd>
+<dd> Set the SOFA file used for rendering.</dd>
 <dt><code>gain</code></dt>
 <dd> Set gain applied to audio. Value is in dB. Default is 0.</dd>
 <dt><code>rotation</code></dt>
@@ -3343,17 +3343,17 @@ amovie = right.mp3[r];<br />
 <dt><code>type</code></dt>
 <dd> Set processing type. Can be <i>time</i> or <i>freq</i>. <i>time</i> is processing audio in time domain which is slow. <i>freq</i> is processing audio in frequency domain which is fast. Default is <i>freq</i>.</dd>
 <dt><code>speakers</code></dt>
-<dd> Set custom positions of virtual loudspeakers. Syntax for this option is: &lt;<font SIZE="-1">CH</font>&gt; &lt;<font SIZE="-1">AZIM</font>&gt; &lt;<font SIZE="-1">ELEV</font>&gt;[|&lt;<font SIZE="-1">CH</font>&gt; &lt;<font SIZE="-1">AZIM</font>&gt; &lt;<font SIZE="-1">ELEV</font>&gt;|&#8230;]. Each virtual loudspeaker is described with short channel name following with azimuth and elevation in degrees. Each virtual loudspeaker description is separated by &#8216;|&#8217;. For example to override front left and front right channel positions use: &#8216;speakers=FL 45 15|FR 345 15&#8217;. Descriptions with unrecognised channel names are ignored.</dd>
+<dd> Set custom positions of virtual loudspeakers. Syntax for this option is: &lt;CH&gt; &lt;AZIM&gt; &lt;ELEV&gt;[|&lt;CH&gt; &lt;AZIM&gt; &lt;ELEV&gt;|&#8230;]. Each virtual loudspeaker is described with short channel name following with azimuth and elevation in degrees. Each virtual loudspeaker description is separated by &#8216;|&#8217;. For example to override front left and front right channel positions use: &#8216;speakers=FL 45 15|FR 345 15&#8217;. Descriptions with unrecognised channel names are ignored.</dd>
 <dt><code>lfegain</code></dt>
-<dd> Set custom gain for <font SIZE="-1">LFE</font> channels. Value is in dB. Default is 0.</dd>
+<dd> Set custom gain for LFE channels. Value is in dB. Default is 0.</dd>
 <dt><code>framesize</code></dt>
 <dd> Set custom frame size in number of samples. Default is 1024. Allowed range is from 1024 to 96000. Only used if option <code>type</code> is set to <i>freq</i>.</dd>
 <dt><code>normalize</code></dt>
-<dd> Should all IRs be normalized upon importing <font SIZE="-1">SOFA</font> file. By default is enabled.</dd>
+<dd> Should all IRs be normalized upon importing SOFA file. By default is enabled.</dd>
 <dt><code>interpolate</code></dt>
 <dd> Should nearest IRs be interpolated with neighbor IRs if exact position does not match. By default is disabled.</dd>
 <dt><code>minphase</code></dt>
-<dd> Minphase all IRs upon loading of <font SIZE="-1">SOFA</font> file. By default is disabled.</dd>
+<dd> Minphase all IRs upon loading of SOFA file. By default is disabled.</dd>
 <dt><code>anglestep</code></dt>
 <dd> Set neighbor search angle step. Only used if option <i>interpolate</i> is enabled.</dd>
 <dt><code>radstep</code></dt>
@@ -3568,13 +3568,13 @@ amovie = right.mp3[r];<br />
 <dt><code>level_out</code></dt>
 <dd> Set output volume level. By default, this is <i>1</i>.</dd>
 <dt><code>lfe</code></dt>
-<dd> Enable <font SIZE="-1">LFE</font> channel output if output channel layout has it. By default, this is enabled.</dd>
+<dd> Enable LFE channel output if output channel layout has it. By default, this is enabled.</dd>
 <dt><code>lfe_low</code></dt>
-<dd> Set <font SIZE="-1">LFE</font> low cut off frequency. By default, this is <i>128</i> Hz.</dd>
+<dd> Set LFE low cut off frequency. By default, this is <i>128</i> Hz.</dd>
 <dt><code>lfe_high</code></dt>
-<dd> Set <font SIZE="-1">LFE</font> high cut off frequency. By default, this is <i>256</i> Hz.</dd>
+<dd> Set LFE high cut off frequency. By default, this is <i>256</i> Hz.</dd>
 <dt><code>lfe_mode</code></dt>
-<dd> Set <font SIZE="-1">LFE</font> mode, can be <i>add</i> or <i>sub</i>. Default is <i>add</i>. In <i>add</i> mode, <font SIZE="-1">LFE</font> channel is created from input audio and added to output. In <i>sub</i> mode, <font SIZE="-1">LFE</font> channel is created from input audio and added to output but also all non-LFE output channels are subtracted with output <font SIZE="-1">LFE</font> channel.</dd>
+<dd> Set LFE mode, can be <i>add</i> or <i>sub</i>. Default is <i>add</i>. In <i>add</i> mode, LFE channel is created from input audio and added to output. In <i>sub</i> mode, LFE channel is created from input audio and added to output but also all non-LFE output channels are subtracted with output LFE channel.</dd>
 <dt><code>angle</code></dt>
 <dd> Set angle of stereo surround transform, Allowed range is from <i>0</i> to <i>360</i>. Default is <i>90</i>.</dd>
 <dt><code>fc_in</code></dt>
@@ -3610,9 +3610,9 @@ amovie = right.mp3[r];<br />
 <dt><code>bc_out</code></dt>
 <dd> Set back center output volume. By default, this is <i>1</i>.</dd>
 <dt><code>lfe_in</code></dt>
-<dd> Set <font SIZE="-1">LFE</font> input volume. By default, this is <i>1</i>.</dd>
+<dd> Set LFE input volume. By default, this is <i>1</i>.</dd>
 <dt><code>lfe_out</code></dt>
-<dd> Set <font SIZE="-1">LFE</font> output volume. By default, this is <i>1</i>.</dd>
+<dd> Set LFE output volume. By default, this is <i>1</i>.</dd>
 <dt><code>allx</code></dt>
 <dd> Set spread usage of stereo image across X axis for all channels.</dd>
 <dt><code>ally</code></dt>
@@ -3676,7 +3676,7 @@ amovie = right.mp3[r];<br />
 <dt><code>overlap</code></dt>
 <dd> Set window overlap. If set to 1, the recommended overlap for selected window function will be picked. Default is <tt>0.5</tt>.</dd></dl>
 <h3>treble, highshelf</h3>
-<p> Boost or cut treble (upper) frequencies of the audio using a two-pole shelving filter with a response similar to that of a standard hi-fi&#8217;s tone-controls. This is also known as shelving equalisation (<font SIZE="-1">EQ</font>). </p>
+<p> Boost or cut treble (upper) frequencies of the audio using a two-pole shelving filter with a response similar to that of a standard hi-fi&#8217;s tone-controls. This is also known as shelving equalisation (EQ). </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>gain, g</code></dt>
@@ -3709,9 +3709,9 @@ amovie = right.mp3[r];<br />
 <dt><code>channels, c</code></dt>
 <dd> Specify which channels to filter, by default all available are filtered.</dd>
 <dt><code>normalize, n</code></dt>
-<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at <font SIZE="-1">DC</font> to 0dB.</dd>
+<dd> Normalize biquad coefficients, by default is disabled. Enabling it will normalize magnitude response at DC to 0dB.</dd>
 <dt><code>transform, a</code></dt>
-<dd> Set transform type of <font SIZE="-1">IIR</font> filter.</dd>
+<dd> Set transform type of IIR filter.</dd>
 <dl>
 <dl>
 <dt><code>di</code></dt>
@@ -3792,9 +3792,9 @@ amovie = right.mp3[r];<br />
 <dt><code>fixed</code></dt>
 <dd> 8-bit fixed-point; this limits input sample format to U8, S16, and S32.</dd>
 <dt><code>float</code></dt>
-<dd> 32-bit floating-point; this limits input sample format to <font SIZE="-1">FLT.</font> (default)</dd>
+<dd> 32-bit floating-point; this limits input sample format to FLT. (default)</dd>
 <dt><code>double</code></dt>
-<dd> 64-bit floating-point; this limits input sample format to <font SIZE="-1">DBL.</font></dd></dl>
+<dd> 64-bit floating-point; this limits input sample format to DBL.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -3847,11 +3847,11 @@ amovie = right.mp3[r];<br />
 <dt><code>pos</code></dt>
 <dd> original frame position in the file</dd>
 <dt><code>pts</code></dt>
-<dd> frame <font SIZE="-1">PTS</font></dd>
+<dd> frame PTS</dd>
 <dt><code>sample_rate</code></dt>
 <dd> sample rate</dd>
 <dt><code>startpts</code></dt>
-<dd> <font SIZE="-1">PTS</font> at start of stream</dd>
+<dd> PTS at start of stream</dd>
 <dt><code>startt</code></dt>
 <dd> time at start of stream</dd>
 <dt><code>t</code></dt>
@@ -3860,7 +3860,7 @@ amovie = right.mp3[r];<br />
 <dd> timestamp timebase</dd>
 <dt><code>volume</code></dt>
 <dd> last set volume value</dd></dl>
-<p> Note that when <code>eval</code> is set to <code>once</code> only the <i>sample_rate</i> and <i>tb</i> variables are available, all other variables will evaluate to <font SIZE="-1">NAN.</font> </p>
+<p> Note that when <code>eval</code> is set to <code>once</code> only the <i>sample_rate</i> and <i>tb</i> variables are available, all other variables will evaluate to NAN. </p>
 <p> <i>Commands</i> </p>
 <p> This filter supports the following commands:</p>
 <dl>
@@ -3895,17 +3895,17 @@ amovie = right.mp3[r];<br />
 <p> Detect the volume of the input video. </p>
 <p> The filter has no parameters. The input is not modified. Statistics about the volume will be printed in the log when the input stream end is reached. </p>
 <p> In particular it will show the mean volume (root mean square), maximum volume (on a per-sample basis), and the beginning of a histogram of the registered volume values (from the maximum value to a cumulated 1/1000 of the samples). </p>
-<p> All volumes are in decibels relative to the maximum <font SIZE="-1">PCM</font> value. </p>
+<p> All volumes are in decibels relative to the maximum PCM value. </p>
 <p> <i>Examples</i> </p>
 <p> Here is an excerpt of the output: </p>
-<p>[Parsed_volumedetect_0 0xa23120] mean_volume : -27 dB<br />
-                                                   [Parsed_volumedetect_0 0xa23120] max_volume : -4 dB<br />
-                                                                                                     [Parsed_volumedetect_0 0xa23120] histogram_4db : 6<br />
-                                                                                                         [Parsed_volumedetect_0 0xa23120] histogram_5db : 62<br />
-                                                                                                             [Parsed_volumedetect_0 0xa23120] histogram_6db : 286<br />
-                                                                                                                 [Parsed_volumedetect_0 0xa23120] histogram_7db : 1042<br />
-                                                                                                                     [Parsed_volumedetect_0 0xa23120] histogram_8db : 2551<br />
-                                                                                                                         [Parsed_volumedetect_0 0xa23120] histogram_9db : 4609<br />
+<p>[Parsed_volumedetect_0 0xa23120] mean_volume : -27 dB<br/>
+                                                   [Parsed_volumedetect_0 0xa23120] max_volume : -4 dB<br/>
+                                                                                                     [Parsed_volumedetect_0 0xa23120] histogram_4db : 6<br/>
+                                                                                                         [Parsed_volumedetect_0 0xa23120] histogram_5db : 62<br/>
+                                                                                                             [Parsed_volumedetect_0 0xa23120] histogram_6db : 286<br/>
+                                                                                                                 [Parsed_volumedetect_0 0xa23120] histogram_7db : 1042<br/>
+                                                                                                                     [Parsed_volumedetect_0 0xa23120] histogram_8db : 2551<br/>
+                                                                                                                         [Parsed_volumedetect_0 0xa23120] histogram_9db : 4609<br/>
                                                                                                                              [Parsed_volumedetect_0 0xa23120] histogram_10db : 8409</p>
 <p> It means that:</p>
 <dl>
@@ -3999,7 +3999,7 @@ amovie = right.mp3[r];<br />
 </pre>
 </dl>
 <h3>afirsrc</h3>
-<p> Generate a <font SIZE="-1">FIR</font> coefficients using frequency sampling method. </p>
+<p> Generate a FIR coefficients using frequency sampling method. </p>
 <p> The resulting stream can be used with <code>afir</code> filter for filtering the audio signal. </p>
 <p> The filter accepts the following options:</p>
 <dl>
@@ -4034,7 +4034,7 @@ amovie = right.mp3[r];<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Set the sample rate to 48000 Hz and the channel layout to <font SIZE="-1">AV_CH_LAYOUT_MONO.</font> </dd>
+<dd> Set the sample rate to 48000 Hz and the channel layout to AV_CH_LAYOUT_MONO. </dd>
 <pre>
         anullsrc=r=48000:cl=4
 </pre>
@@ -4098,7 +4098,7 @@ amovie = right.mp3[r];<br />
 <dt><code>color, colour, c</code></dt>
 <dd> Specify the color of noise. Available noise colors are white, pink, brown, blue, violet and velvet. Default color is white.</dd>
 <dt><code>seed, s</code></dt>
-<dd> Specify a value used to seed the <font SIZE="-1">PRNG.</font></dd>
+<dd> Specify a value used to seed the PRNG.</dd>
 <dt><code>nb_samples, n</code></dt>
 <dd> Set the number of samples per each output frame, default is 1024.</dd></dl>
 <p> <i>Examples</i></p>
@@ -4110,7 +4110,7 @@ amovie = right.mp3[r];<br />
 </pre>
 </dl>
 <h3>hilbert</h3>
-<p> Generate odd-tap Hilbert transform <font SIZE="-1">FIR</font> coefficients. </p>
+<p> Generate odd-tap Hilbert transform FIR coefficients. </p>
 <p> The resulting stream can be used with <code>afir</code> filter for phase-shifting the signal by 90 degrees. </p>
 <p> This is used in many matrix coding schemes and for analytic signal generation. The process is often written as a multiplication by i (or j), the imaginary unit. </p>
 <p> The filter accepts the following options:</p>
@@ -4118,13 +4118,13 @@ amovie = right.mp3[r];<br />
 <dt><code>sample_rate, s</code></dt>
 <dd> Set sample rate, default is 44100.</dd>
 <dt><code>taps, t</code></dt>
-<dd> Set length of <font SIZE="-1">FIR</font> filter, default is 22051.</dd>
+<dd> Set length of FIR filter, default is 22051.</dd>
 <dt><code>nb_samples, n</code></dt>
 <dd> Set number of samples per each frame.</dd>
 <dt><code>win_func, w</code></dt>
-<dd> Set window function to be used when generating <font SIZE="-1">FIR</font> coefficients.</dd></dl>
+<dd> Set window function to be used when generating FIR coefficients.</dd></dl>
 <h3>sinc</h3>
-<p> Generate a sinc kaiser-windowed low-pass, high-pass, band-pass, or band-reject <font SIZE="-1">FIR</font> coefficients. </p>
+<p> Generate a sinc kaiser-windowed low-pass, high-pass, band-pass, or band-reject FIR coefficients. </p>
 <p> The resulting stream can be used with <code>afir</code> filter for filtering the audio signal. </p>
 <p> The filter accepts the following options:</p>
 <dl>
@@ -4169,10 +4169,10 @@ amovie = right.mp3[r];<br />
 <dt><code>n</code></dt>
 <dd> The (sequential) number of the output audio frame, starting from 0.</dd>
 <dt><code>pts</code></dt>
-<dd> The <font SIZE="-1">PTS</font> (Presentation TimeStamp) of the output audio frame, expressed in <i></i><font SIZE="-1"><i>TB</i></font><i></i> units.</dd>
+<dd> The PTS (Presentation TimeStamp) of the output audio frame, expressed in <i></i><i>TB</i><i></i> units.</dd>
 <dt><code>t</code></dt>
-<dd> The <font SIZE="-1">PTS</font> of the output audio frame, expressed in seconds.</dd>
-<dt><font SIZE="-1"><code>TB</code></font></dt>
+<dd> The PTS of the output audio frame, expressed in seconds.</dd>
+<dt><code>TB</code></dt>
 <dd> The timebase of the output audio frames.</dd></dl>
 </dl>
 <dl>
@@ -4195,7 +4195,7 @@ amovie = right.mp3[r];<br />
         sine=frequency=220:beep_factor=4:duration=5
 </pre>
 <dt>&bull;</dt>
-<dd> Generate a 1 kHz sine wave following <tt>&quot;1602,1601,1602,1601,1602&quot;</tt> <font SIZE="-1">NTSC</font> pattern: </dd>
+<dd> Generate a 1 kHz sine wave following <tt>&quot;1602,1601,1602,1601,1602&quot;</tt> NTSC pattern: </dd>
 <pre>
         sine=1000:samples_per_frame='st(0,mod(n,5)); 1602-not(not(eq(ld(0),1)+eq(ld(0),3)))'
 </pre>
@@ -4237,7 +4237,7 @@ amovie = right.mp3[r];<br />
 <dd> Quantisation offset to apply within the region. </dd>
 <p> This must be a real value in the range -1 to +1. A value of zero indicates no quality change. A negative value asks for better quality (less quantisation), while a positive value asks for worse quality (greater quantisation). </p>
 <p> The range is calibrated so that the extreme values indicate the largest possible offset &#8211; if the rest of the frame is encoded with the worst possible quality, an offset of -1 indicates that this region should be encoded with the best possible quality anyway. Intermediate values are then interpolated in some codec-dependent way. </p>
-<p> For example, in 10-bit H.264 the quantisation parameter varies between -12 and 51. A typical qoffset value of -1/10 therefore indicates that this region should be encoded with a <font SIZE="-1">QP</font> around one-tenth of the full range better than the rest of the frame. So, if most of the frame were to be encoded with a <font SIZE="-1">QP</font> of around 30, this region would get a <font SIZE="-1">QP</font> of around 24 (an offset of approximately -1/10 * (51 &#8211; -12) = -6.3). An extreme value of -1 would indicate that this region should be encoded with the best possible quality regardless of the treatment of the rest of the frame &#8211; that is, should be encoded at a <font SIZE="-1">QP</font> of -12.</p>
+<p> For example, in 10-bit H.264 the quantisation parameter varies between -12 and 51. A typical qoffset value of -1/10 therefore indicates that this region should be encoded with a QP around one-tenth of the full range better than the rest of the frame. So, if most of the frame were to be encoded with a QP of around 30, this region would get a QP of around 24 (an offset of approximately -1/10 * (51 &#8211; -12) = -6.3). An extreme value of -1 would indicate that this region should be encoded with the best possible quality regardless of the treatment of the rest of the frame &#8211; that is, should be encoded at a QP of -12.</p>
 <dt><code>clear</code></dt>
 <dd> If set to true, remove any existing regions of interest marked on the frame before adding the new one.</dd></dl>
 <p> <i>Examples</i></p>
@@ -4258,7 +4258,7 @@ amovie = right.mp3[r];<br />
 <h3>alphamerge</h3>
 <p> Add or replace the alpha component of the primary input with the grayscale value of a second input. This is intended for use with <i>alphaextract</i> to allow the transmission or storage of frame sequences that have alpha in a format that doesn&#8217;t support an alpha channel. </p>
 <p> For example, to reconstruct full frames from a normal YUV-encoded video and a separate video created with <i>alphaextract</i>, you might use: </p>
-<p>movie = in_alpha.mkv[alpha];<br />
+<p>movie = in_alpha.mkv[alpha];<br/>
 [in][alpha] alphamerge[out]</p>
 <h3>amplify</h3>
 <p> Amplify differences between current pixel and pixels of adjacent frames in same pixel location. </p>
@@ -4294,7 +4294,7 @@ amovie = right.mp3[r];<br />
 </dd><dt><code>planes</code></dt>
 <dd></dd></dl>
 <h3>ass</h3>
-<p> Same as the <code>subtitles</code> filter, except that it doesn&#8217;t require libavcodec and libavformat to work. On the other hand, it is limited to <font SIZE="-1">ASS</font> (Advanced Substation Alpha) subtitles files. </p>
+<p> Same as the <code>subtitles</code> filter, except that it doesn&#8217;t require libavcodec and libavformat to work. On the other hand, it is limited to ASS (Advanced Substation Alpha) subtitles files. </p>
 <p> This filter accepts the following option in addition to the common options from the <code>subtitles</code> filter:</p>
 <dl>
 <dt><code>shaping</code></dt>
@@ -4409,7 +4409,7 @@ amovie = right.mp3[r];<br />
 <pre>
         &lt;absolute_threshold&gt; = &lt;luminance_minimum_value&gt; + &lt;pixel_black_th&gt; * &lt;luminance_range_size&gt;
 </pre>
-<p> <i>luminance_range_size</i> and <i>luminance_minimum_value</i> depend on the input video format, the range is [0-255] for <font SIZE="-1">YUV</font> full-range formats and [16-235] for <font SIZE="-1">YUV</font> non full-range formats. </p>
+<p> <i>luminance_range_size</i> and <i>luminance_minimum_value</i> depend on the input video format, the range is [0-255] for YUV full-range formats and [16-235] for YUV non full-range formats. </p>
 <p> Default value is 0.10.</dl>
 <p> The following example sets the maximum pixel threshold to the minimum value, and detects only black intervals of 2 or more seconds: </p>
 <pre>
@@ -4417,7 +4417,7 @@ amovie = right.mp3[r];<br />
 </pre>
 <h3>blackframe</h3>
 <p> Detect frames that are (almost) completely black. Can be useful to detect chapter transitions or commercials. Output lines consist of the frame number of the detected frame, the percentage of blackness, the position in the file if known or -1 and the timestamp in seconds. </p>
-<p> In order to display the output lines, you need to set the loglevel at least to the <font SIZE="-1">AV_LOG_INFO</font> value. </p>
+<p> In order to display the output lines, you need to set the loglevel at least to the AV_LOG_INFO value. </p>
 <p> This filter exports frame metadata <tt>&quot;lavfi.blackframe.pblack&quot;</tt>. The value represents the percentage of pixels in the picture that are below the threshold value. </p>
 <p> It accepts the following parameters:</p>
 <dl>
@@ -4546,15 +4546,15 @@ amovie = right.mp3[r];<br />
 <dd>
 </dd><dt><code>H</code></dt>
 <dd> the width and height of currently filtered plane</dd>
-<dt><font SIZE="-1"><code>SW</code></font></dt>
+<dt><code>SW</code></dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>SH</code></font></dt>
+</dd><dt><code>SH</code></dt>
 <dd> Width and height scale for the plane being filtered. It is the ratio between the dimensions of the current plane to the luma plane, e.g. for a <tt>&quot;yuv420p&quot;</tt> frame, the values are <tt>&quot;1,1&quot;</tt> for the luma plane and <tt>&quot;0.5,0.5&quot;</tt> for the chroma planes.</dd>
 <dt><code>T</code></dt>
 <dd> Time of the current frame, expressed in seconds.</dd>
-<dt><font SIZE="-1"><code>TOP, A</code></font></dt>
+<dt><code>TOP, A</code></dt>
 <dd> Value of pixel component at current location for first video frame (top layer).</dd>
-<dt><font SIZE="-1"><code>BOTTOM, B</code></font></dt>
+<dt><code>BOTTOM, B</code></dt>
 <dd> Value of pixel component at current location for second video frame (bottom layer).</dd></dl>
 </dl>
 <dl>
@@ -4619,11 +4619,11 @@ amovie = right.mp3[r];<br />
 <dt><code>group</code></dt>
 <dd> Set maximal number of similar blocks for 3rd dimension. Default value is 1. When set to 1, no block matching is done. Larger values allows more blocks in single group. Allowed range is from 1 to 256.</dd>
 <dt><code>range</code></dt>
-<dd> Set radius for search block matching. Default is 9. Allowed range is from 1 to <font SIZE="-1">INT32_MAX.</font></dd>
+<dd> Set radius for search block matching. Default is 9. Allowed range is from 1 to INT32_MAX.</dd>
 <dt><code>mstep</code></dt>
 <dd> Set step between two search locations for block matching. Default is 1. Allowed range is from 1 to 64. Smaller is slower.</dd>
 <dt><code>thmse</code></dt>
-<dd> Set threshold of mean square error for block matching. Valid range is 0 to <font SIZE="-1">INT32_MAX.</font></dd>
+<dd> Set threshold of mean square error for block matching. Valid range is 0 to INT32_MAX.</dd>
 <dt><code>hdthr</code></dt>
 <dd> Set thresholding parameter for hard thresholding in 3D transformed domain. Larger values results in stronger hard-thresholding filtering in frequency domain.</dd>
 <dt><code>estim</code></dt>
@@ -4789,13 +4789,13 @@ amovie = right.mp3[r];<br />
 <dt><code>blend</code></dt>
 <dd> Blend percentage. 0.0 makes pixels either fully gray, or not gray at all. Higher values result in more preserved color.</dd>
 <dt><code>yuv</code></dt>
-<dd> Signals that the color passed is already in <font SIZE="-1">YUV</font> instead of <font SIZE="-1">RGB.</font> </dd>
-<p> Literal colors like &#8220;green&#8221; or &#8220;red&#8221; don&#8217;t make sense with this enabled anymore. This can be used to pass exact <font SIZE="-1">YUV</font> values as hexadecimal numbers.</dl>
+<dd> Signals that the color passed is already in YUV instead of RGB. </dd>
+<p> Literal colors like &#8220;green&#8221; or &#8220;red&#8221; don&#8217;t make sense with this enabled anymore. This can be used to pass exact YUV values as hexadecimal numbers.</dl>
 <p> <i>Commands</i> </p>
 <p> This filter supports same <code>commands</code> as options. The command accepts the same syntax of the corresponding option. </p>
 <p> If the specified expression is not valid, it is kept at its current value.</p>
 <h3>chromakey</h3>
-<p> <font SIZE="-1">YUV</font> colorspace color/chroma keying. </p>
+<p> YUV colorspace color/chroma keying. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>color</code></dt>
@@ -4808,8 +4808,8 @@ amovie = right.mp3[r];<br />
 <p> 0.0 makes pixels either fully transparent, or not transparent at all. </p>
 <p> Higher values result in semi-transparent pixels, with a higher transparency the more similar the pixels color is to the key color.</p>
 <dt><code>yuv</code></dt>
-<dd> Signals that the color passed is already in <font SIZE="-1">YUV</font> instead of <font SIZE="-1">RGB.</font> </dd>
-<p> Literal colors like &#8220;green&#8221; or &#8220;red&#8221; don&#8217;t make sense with this enabled anymore. This can be used to pass exact <font SIZE="-1">YUV</font> values as hexadecimal numbers.</dl>
+<dd> Signals that the color passed is already in YUV instead of RGB. </dd>
+<p> Literal colors like &#8220;green&#8221; or &#8220;red&#8221; don&#8217;t make sense with this enabled anymore. This can be used to pass exact YUV values as hexadecimal numbers.</dl>
 <p> <i>Commands</i> </p>
 <p> This filter supports same <code>commands</code> as options. The command accepts the same syntax of the corresponding option. </p>
 <p> If the specified expression is not valid, it is kept at its current value. </p>
@@ -4863,7 +4863,7 @@ amovie = right.mp3[r];<br />
 <p> <i>Commands</i> </p>
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>ciescope</h3>
-<p> Display <font SIZE="-1">CIE</font> color diagram with pixels overlaid onto it. </p>
+<p> Display CIE color diagram with pixels overlaid onto it. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>system</code></dt>
@@ -4894,7 +4894,7 @@ amovie = right.mp3[r];<br />
 <dl>
 </dl>
 <dt><code>cie</code></dt>
-<dd> Set <font SIZE="-1">CIE</font> system.</dd>
+<dd> Set CIE system.</dd>
 <dl>
 <dl>
 <dt><code>xyy</code></dt>
@@ -4912,18 +4912,18 @@ amovie = right.mp3[r];<br />
 <dt><code>size, s</code></dt>
 <dd> Set ciescope size, by default set to 512.</dd>
 <dt><code>intensity, i</code></dt>
-<dd> Set intensity used to map input pixel values to <font SIZE="-1">CIE</font> diagram.</dd>
+<dd> Set intensity used to map input pixel values to CIE diagram.</dd>
 <dt><code>contrast</code></dt>
 <dd> Set contrast used to draw tongue colors that are out of active color system gamut.</dd>
 <dt><code>corrgamma</code></dt>
 <dd> Correct gamma displayed on scope, by default enabled.</dd>
 <dt><code>showwhite</code></dt>
-<dd> Show white point on <font SIZE="-1">CIE</font> diagram, by default disabled.</dd>
+<dd> Show white point on CIE diagram, by default disabled.</dd>
 <dt><code>gamma</code></dt>
-<dd> Set input gamma. Used only with <font SIZE="-1">XYZ</font> input color space.</dd></dl>
+<dd> Set input gamma. Used only with XYZ input color space.</dd></dl>
 <h3>codecview</h3>
 <p> Visualize information exported by some codecs. </p>
-<p> Some codecs can export information through frames using side-data or other means. For example, some <font SIZE="-1">MPEG</font> based codecs export motion vectors through the <i>export_mvs</i> flag in the codec <code>flags2</code> option. </p>
+<p> Some codecs can export information through frames using side-data or other means. For example, some MPEG based codecs export motion vectors through the <i>export_mvs</i> flag in the codec <code>flags2</code> option. </p>
 <p> The filter accepts the following option:</p>
 <dl>
 <dt><code>mv</code></dt>
@@ -5020,7 +5020,7 @@ amovie = right.mp3[r];<br />
 <p> <i>Commands</i> </p>
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>colorcontrast</h3>
-<p> Adjust color contrast between <font SIZE="-1">RGB</font> components. </p>
+<p> Adjust color contrast between RGB components. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>rc</code></dt>
@@ -5040,7 +5040,7 @@ amovie = right.mp3[r];<br />
 <p> <i>Commands</i> </p>
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>colorcorrect</h3>
-<p> Adjust color white balance selectively for blacks and whites. This filter operates in <font SIZE="-1">YUV</font> colorspace. </p>
+<p> Adjust color white balance selectively for blacks and whites. This filter operates in YUV colorspace. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>rl</code></dt>
@@ -5128,7 +5128,7 @@ amovie = right.mp3[r];<br />
 <p> <i>Commands</i> </p>
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>colorkey</h3>
-<p> <font SIZE="-1">RGB</font> colorspace color keying. </p>
+<p> RGB colorspace color keying. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>color</code></dt>
@@ -5155,7 +5155,7 @@ amovie = right.mp3[r];<br />
 <p> This filter supports same <code>commands</code> as options. The command accepts the same syntax of the corresponding option. </p>
 <p> If the specified expression is not valid, it is kept at its current value.</p>
 <h3>colorhold</h3>
-<p> Remove all color information for all <font SIZE="-1">RGB</font> colors except for certain one. </p>
+<p> Remove all color information for all RGB colors except for certain one. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>color</code></dt>
@@ -5242,26 +5242,26 @@ amovie = right.mp3[r];<br />
 <dl>
 <dl>
 <dt><code>bt709</code></dt>
-<dd> <font SIZE="-1">BT.709</font></dd>
+<dd> BT.709</dd>
 <dt><code>fcc</code></dt>
-<dd> <font SIZE="-1">FCC</font></dd>
+<dd> FCC</dd>
 <dt><code>bt601</code></dt>
-<dd> <font SIZE="-1">BT.601</font></dd>
+<dd> BT.601</dd>
 <dt><code>bt470</code></dt>
-<dd> <font SIZE="-1">BT.470</font></dd>
+<dd> BT.470</dd>
 <dt><code>bt470bg</code></dt>
-<dd> <font SIZE="-1">BT.470BG</font></dd>
+<dd> BT.470BG</dd>
 <dt><code>smpte170m</code></dt>
-<dd> <font SIZE="-1">SMPTE-170M</font></dd>
+<dd> SMPTE-170M</dd>
 <dt><code>smpte240m</code></dt>
-<dd> <font SIZE="-1">SMPTE-240M</font></dd>
+<dd> SMPTE-240M</dd>
 <dt><code>bt2020</code></dt>
-<dd> <font SIZE="-1">BT.2020</font></dd></dl>
+<dd> BT.2020</dd></dl>
 </dl>
 <dl>
 </dl>
 </dl>
-<p> For example to convert from <font SIZE="-1">BT.601</font> to <font SIZE="-1">SMPTE-240M,</font> use the command: </p>
+<p> For example to convert from BT.601 to SMPTE-240M, use the command: </p>
 <pre>
         colormatrix=bt601:smpte240m
 </pre>
@@ -5275,21 +5275,21 @@ amovie = right.mp3[r];<br />
 <dl>
 <dl>
 <dt><code>bt470m</code></dt>
-<dd> <font SIZE="-1">BT.470M</font></dd>
+<dd> BT.470M</dd>
 <dt><code>bt470bg</code></dt>
-<dd> <font SIZE="-1">BT.470BG</font></dd>
+<dd> BT.470BG</dd>
 <dt><code>bt601-6-525</code></dt>
-<dd> <font SIZE="-1">BT.601-6 525</font></dd>
+<dd> BT.601-6 525</dd>
 <dt><code>bt601-6-625</code></dt>
-<dd> <font SIZE="-1">BT.601-6 625</font></dd>
+<dd> BT.601-6 625</dd>
 <dt><code>bt709</code></dt>
-<dd> <font SIZE="-1">BT.709</font></dd>
+<dd> BT.709</dd>
 <dt><code>smpte170m</code></dt>
-<dd> <font SIZE="-1">SMPTE-170M</font></dd>
+<dd> SMPTE-170M</dd>
 <dt><code>smpte240m</code></dt>
-<dd> <font SIZE="-1">SMPTE-240M</font></dd>
+<dd> SMPTE-240M</dd>
 <dt><code>bt2020</code></dt>
-<dd> <font SIZE="-1">BT.2020</font></dd></dl>
+<dd> BT.2020</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -5299,19 +5299,19 @@ amovie = right.mp3[r];<br />
 <dl>
 <dl>
 <dt><code>bt709</code></dt>
-<dd> <font SIZE="-1">BT.709</font></dd>
+<dd> BT.709</dd>
 <dt><code>fcc</code></dt>
-<dd> <font SIZE="-1">FCC</font></dd>
+<dd> FCC</dd>
 <dt><code>bt470bg</code></dt>
-<dd> <font SIZE="-1">BT.470BG</font> or <font SIZE="-1">BT.601-6 625</font></dd>
+<dd> BT.470BG or BT.601-6 625</dd>
 <dt><code>smpte170m</code></dt>
-<dd> <font SIZE="-1">SMPTE-170M</font> or <font SIZE="-1">BT.601-6 525</font></dd>
+<dd> SMPTE-170M or BT.601-6 525</dd>
 <dt><code>smpte240m</code></dt>
-<dd> <font SIZE="-1">SMPTE-240M</font></dd>
+<dd> SMPTE-240M</dd>
 <dt><code>ycgco</code></dt>
 <dd> YCgCo</dd>
 <dt><code>bt2020ncl</code></dt>
-<dd> <font SIZE="-1">BT.2020</font> with non-constant luminance</dd></dl>
+<dd> BT.2020 with non-constant luminance</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -5321,21 +5321,21 @@ amovie = right.mp3[r];<br />
 <dl>
 <dl>
 <dt><code>bt709</code></dt>
-<dd> <font SIZE="-1">BT.709</font></dd>
+<dd> BT.709</dd>
 <dt><code>bt470m</code></dt>
-<dd> <font SIZE="-1">BT.470M</font></dd>
+<dd> BT.470M</dd>
 <dt><code>bt470bg</code></dt>
-<dd> <font SIZE="-1">BT.470BG</font></dd>
+<dd> BT.470BG</dd>
 <dt><code>gamma22</code></dt>
 <dd> Constant gamma of 2.2</dd>
 <dt><code>gamma28</code></dt>
 <dd> Constant gamma of 2.8</dd>
 <dt><code>smpte170m</code></dt>
-<dd> <font SIZE="-1">SMPTE-170M, BT.601-6 625</font> or <font SIZE="-1">BT.601-6 525</font></dd>
+<dd> SMPTE-170M, BT.601-6 625 or BT.601-6 525</dd>
 <dt><code>smpte240m</code></dt>
-<dd> <font SIZE="-1">SMPTE-240M</font></dd>
+<dd> SMPTE-240M</dd>
 <dt><code>srgb</code></dt>
-<dd> <font SIZE="-1">SRGB</font></dd>
+<dd> SRGB</dd>
 <dt><code>iec61966-2-1</code></dt>
 <dd> iec61966-2-1</dd>
 <dt><code>iec61966-2-4</code></dt>
@@ -5343,9 +5343,9 @@ amovie = right.mp3[r];<br />
 <dt><code>xvycc</code></dt>
 <dd> xvycc</dd>
 <dt><code>bt2020-10</code></dt>
-<dd> <font SIZE="-1">BT.2020</font> for 10-bits content</dd>
+<dd> BT.2020 for 10-bits content</dd>
 <dt><code>bt2020-12</code></dt>
-<dd> <font SIZE="-1">BT.2020</font> for 12-bits content</dd></dl>
+<dd> BT.2020 for 12-bits content</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -5355,25 +5355,25 @@ amovie = right.mp3[r];<br />
 <dl>
 <dl>
 <dt><code>bt709</code></dt>
-<dd> <font SIZE="-1">BT.709</font></dd>
+<dd> BT.709</dd>
 <dt><code>bt470m</code></dt>
-<dd> <font SIZE="-1">BT.470M</font></dd>
+<dd> BT.470M</dd>
 <dt><code>bt470bg</code></dt>
-<dd> <font SIZE="-1">BT.470BG</font> or <font SIZE="-1">BT.601-6 625</font></dd>
+<dd> BT.470BG or BT.601-6 625</dd>
 <dt><code>smpte170m</code></dt>
-<dd> <font SIZE="-1">SMPTE-170M</font> or <font SIZE="-1">BT.601-6 525</font></dd>
+<dd> SMPTE-170M or BT.601-6 525</dd>
 <dt><code>smpte240m</code></dt>
-<dd> <font SIZE="-1">SMPTE-240M</font></dd>
+<dd> SMPTE-240M</dd>
 <dt><code>film</code></dt>
 <dd> film</dd>
 <dt><code>smpte431</code></dt>
-<dd> <font SIZE="-1">SMPTE-431</font></dd>
+<dd> SMPTE-431</dd>
 <dt><code>smpte432</code></dt>
-<dd> <font SIZE="-1">SMPTE-432</font></dd>
+<dd> SMPTE-432</dd>
 <dt><code>bt2020</code></dt>
-<dd> <font SIZE="-1">BT.2020</font></dd>
+<dd> BT.2020</dd>
 <dt><code>jedec-p22</code></dt>
-<dd> <font SIZE="-1">JEDEC P22</font> phosphors</dd></dl>
+<dd> JEDEC P22 phosphors</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -5383,13 +5383,13 @@ amovie = right.mp3[r];<br />
 <dl>
 <dl>
 <dt><code>tv</code></dt>
-<dd> <font SIZE="-1">TV</font> (restricted) range</dd>
+<dd> TV (restricted) range</dd>
 <dt><code>mpeg</code></dt>
-<dd> <font SIZE="-1">MPEG</font> (restricted) range</dd>
+<dd> MPEG (restricted) range</dd>
 <dt><code>pc</code></dt>
-<dd> <font SIZE="-1">PC</font> (full) range</dd>
+<dd> PC (full) range</dd>
 <dt><code>jpeg</code></dt>
-<dd> <font SIZE="-1">JPEG</font> (full) range</dd></dl>
+<dd> JPEG (full) range</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -5399,28 +5399,28 @@ amovie = right.mp3[r];<br />
 <dl>
 <dl>
 <dt><code>yuv420p</code></dt>
-<dd> <font SIZE="-1">YUV 4:2:0</font> planar 8-bits</dd>
+<dd> YUV 4:2:0 planar 8-bits</dd>
 <dt><code>yuv420p10</code></dt>
-<dd> <font SIZE="-1">YUV 4:2:0</font> planar 10-bits</dd>
+<dd> YUV 4:2:0 planar 10-bits</dd>
 <dt><code>yuv420p12</code></dt>
-<dd> <font SIZE="-1">YUV 4:2:0</font> planar 12-bits</dd>
+<dd> YUV 4:2:0 planar 12-bits</dd>
 <dt><code>yuv422p</code></dt>
-<dd> <font SIZE="-1">YUV 4:2:2</font> planar 8-bits</dd>
+<dd> YUV 4:2:2 planar 8-bits</dd>
 <dt><code>yuv422p10</code></dt>
-<dd> <font SIZE="-1">YUV 4:2:2</font> planar 10-bits</dd>
+<dd> YUV 4:2:2 planar 10-bits</dd>
 <dt><code>yuv422p12</code></dt>
-<dd> <font SIZE="-1">YUV 4:2:2</font> planar 12-bits</dd>
+<dd> YUV 4:2:2 planar 12-bits</dd>
 <dt><code>yuv444p</code></dt>
-<dd> <font SIZE="-1">YUV 4:4:4</font> planar 8-bits</dd>
+<dd> YUV 4:4:4 planar 8-bits</dd>
 <dt><code>yuv444p10</code></dt>
-<dd> <font SIZE="-1">YUV 4:4:4</font> planar 10-bits</dd>
+<dd> YUV 4:4:4 planar 10-bits</dd>
 <dt><code>yuv444p12</code></dt>
-<dd> <font SIZE="-1">YUV 4:4:4</font> planar 12-bits</dd></dl>
+<dd> YUV 4:4:4 planar 12-bits</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt><code>fast</code></dt>
-<dd> Do a fast conversion, which skips gamma/primary correction. This will take significantly less <font SIZE="-1">CPU,</font> but will be mathematically incorrect. To get output compatible with that produced by the colormatrix filter, use fast=1.</dd>
+<dd> Do a fast conversion, which skips gamma/primary correction. This will take significantly less CPU, but will be mathematically incorrect. To get output compatible with that produced by the colormatrix filter, use fast=1.</dd>
 <dt><code>dither</code></dt>
 <dd> Specify dithering mode. </dd>
 <p> The accepted values are:</p>
@@ -5458,7 +5458,7 @@ amovie = right.mp3[r];<br />
 <dt><code>irange</code></dt>
 <dd> Override input color range. Same accepted values as <code>range</code>.</dd></dl>
 <p> The filter converts the transfer characteristics, color space and color primaries to the specified user values. The output value, if not specified, is set to a default value based on the &#8220;all&#8221; property. If that property is also not specified, the filter will log an error. The output color range and format default to the same value as the input color range and format. The input transfer characteristics, color space, color primaries and color range should be set on the input data. If any of these are missing, the filter will log an error and no conversion will take place. </p>
-<p> For example to convert the input to <font SIZE="-1">SMPTE-240M,</font> use the command: </p>
+<p> For example to convert the input to SMPTE-240M, use the command: </p>
 <pre>
         colorspace=smpte240m
 </pre>
@@ -5557,8 +5557,8 @@ amovie = right.mp3[r];<br />
 <h3>copy</h3>
 <p> Copy the input video source unchanged to the output. This is mainly useful for testing purposes.</p>
 <h3>coreimage</h3>
-<p> Video filtering on <font SIZE="-1">GPU</font> using Apple&#8217;s CoreImage <font SIZE="-1">API</font> on <font SIZE="-1">OSX.</font> </p>
-<p> Hardware acceleration is based on an OpenGL context. Usually, this means it is processed by video hardware. However, software-based OpenGL implementations exist which means there is no guarantee for hardware processing. It depends on the respective <font SIZE="-1">OSX.</font> </p>
+<p> Video filtering on GPU using Apple&#8217;s CoreImage API on OSX. </p>
+<p> Hardware acceleration is based on an OpenGL context. Usually, this means it is processed by video hardware. However, software-based OpenGL implementations exist which means there is no guarantee for hardware processing. It depends on the respective OSX. </p>
 <p> There are many filters and image generators provided by Apple that come with a large variety of options. The filter has to be referenced by its name along with its options. </p>
 <p> The coreimage filter accepts the following options:</p>
 <dl>
@@ -5601,7 +5601,7 @@ amovie = right.mp3[r];<br />
 <dd> Use a filter chain with CISepiaTone at default values and CIVignetteEffect with its center at 100&#215;100 and a radius of 50 pixels: </dd>
 <p>coreimage = filter = CIBoxBlur[at] default #CIVignetteEffect[at] inputCenter = 100\ 100 [at] inputRadius = 50</p>
 <dt>&bull;</dt>
-<dd> Use nullsrc and CIQRCodeGenerator to create a <font SIZE="-1">QR</font> code for the FFmpeg homepage, given as complete and escaped command-line for Apple&#8217;s standard bash shell: </dd>
+<dd> Use nullsrc and CIQRCodeGenerator to create a QR code for the FFmpeg homepage, given as complete and escaped command-line for Apple&#8217;s standard bash shell: </dd>
 <pre>
         ffmpeg -f lavfi -i nullsrc=s=100x100,coreimage=filter=CIQRCodeGenerator [at] inputMessage=https\\\://FFmpeg.org/@inputCorrectionLevel=H -frames:v 1 QRCode.png
 </pre>
@@ -5686,9 +5686,9 @@ amovie = right.mp3[r];<br />
 <dt><code>n</code></dt>
 <dd> The number of the input frame, starting from 0.</dd>
 <dt><code>pos</code></dt>
-<dd> the position in the file of the input frame, <font SIZE="-1">NAN</font> if unknown</dd>
+<dd> the position in the file of the input frame, NAN if unknown</dd>
 <dt><code>t</code></dt>
-<dd> The timestamp expressed in seconds. It&#8217;s <font SIZE="-1">NAN</font> if the input timestamp is unknown.</dd></dl>
+<dd> The timestamp expressed in seconds. It&#8217;s NAN if the input timestamp is unknown.</dd></dl>
 <p> The expression for <i>out_w</i> may depend on the value of <i>out_h</i>, and the expression for <i>out_h</i> may depend on <i>out_w</i>, but they cannot depend on <i>x</i> and <i>y</i>, as <i>x</i> and <i>y</i> are evaluated after <i>out_w</i> and <i>out_h</i>. </p>
 <p> The <i>x</i> and <i>y</i> parameters specify the expressions for the position of the top-left corner of the output (non-cropped) area. They are evaluated for each frame. If the evaluated value is not valid, it is approximated to the nearest valid value. </p>
 <p> The expression for <i>x</i> may depend on <i>y</i>, and the expression for <i>y</i> may depend on <i>x</i>. </p>
@@ -5777,7 +5777,7 @@ amovie = right.mp3[r];<br />
 <dt><code>round</code></dt>
 <dd> The value which the width/height should be divisible by. It defaults to 16. The offset is automatically adjusted to center the video. Use 2 to get only even dimensions (needed for 4:2:2 video). 16 is best when encoding to most video codecs.</dd>
 <dt><code>skip</code></dt>
-<dd> Set the number of initial frames for which evaluation is skipped. Default is 2. Range is 0 to <font SIZE="-1">INT_MAX.</font></dd>
+<dd> Set the number of initial frames for which evaluation is skipped. Default is 2. Range is 0 to INT_MAX.</dd>
 <dt><code>reset_count, reset</code></dt>
 <dd> Set the counter that determines after how many frames cropdetect will reset the previously detected largest video area and start over to detect the current optimal crop area. Default value is 0. </dd>
 <p> This can be useful when channel logos distort the video area. 0 indicates &#8216;never reset&#8217;, and returns the largest area encountered during playback.</dl>
@@ -5787,14 +5787,14 @@ amovie = right.mp3[r];<br />
 <p> Perfect frame accuracy cannot be guaranteed, but the result is good enough for some use cases.</p>
 <dl>
 <dt><code>cue</code></dt>
-<dd> The cue timestamp expressed in a <font SIZE="-1">UNIX</font> timestamp in microseconds. Default is 0.</dd>
+<dd> The cue timestamp expressed in a UNIX timestamp in microseconds. Default is 0.</dd>
 <dt><code>preroll</code></dt>
 <dd> The duration of content to pass on as preroll expressed in seconds. Default is 0.</dd>
 <dt><code>buffer</code></dt>
 <dd> The maximum duration of content to buffer before waiting for the cue expressed in seconds. Default is 0.</dd></dl>
 <h3>curves</h3>
 <p> Apply color adjustments using curves. </p>
-<p> This filter is similar to the Adobe Photoshop and <font SIZE="-1">GIMP</font> curves tools. Each component (red, green and blue) has its values defined by <i>N</i> key points tied from each other using a smooth curve. The x-axis represents the pixel values from the input frame, and the y-axis the new pixel values to be set for the output frame. </p>
+<p> This filter is similar to the Adobe Photoshop and GIMP curves tools. Each component (red, green and blue) has its values defined by <i>N</i> key points tied from each other using a smooth curve. The x-axis represents the pixel values from the input frame, and the y-axis the new pixel values to be set for the output frame. </p>
 <p> By default, a component curve is defined by the two points <i>(0;0)</i> and <i>(1;1)</i>. This creates a straight line where each original pixel value is &#8220;adjusted&#8221; to its own value, which means no change to the image. </p>
 <p> The filter allows you to redefine these two points and add some more. A new curve (using a natural cubic spline interpolation) will be define to pass smoothly through all these new coordinates. The new defined points needs to be strictly increasing over the x-axis, and their <i>x</i> and <i>y</i> values must be in the <i>[0;1]</i> interval. If the computed curves happened to go outside the vector spaces, the values will be clipped accordingly. </p>
 <p> The filter accepts the following options:</p>
@@ -5831,7 +5831,7 @@ amovie = right.mp3[r];<br />
 </dt><dd>
 <p> Default is <tt>&quot;none&quot;</tt>.</dd></dl>
 <dt><code>master, m</code></dt>
-<dd> Set the master key points. These points will define a second pass mapping. It is sometimes called a &#8220;luminance&#8221; or &#8220;value&#8221; mapping. It can be used with <code>r</code>, <code>g</code>, <code>b</code> or <code>all</code> since it acts like a post-processing <font SIZE="-1">LUT.</font></dd>
+<dd> Set the master key points. These points will define a second pass mapping. It is sometimes called a &#8220;luminance&#8221; or &#8220;value&#8221; mapping. It can be used with <code>r</code>, <code>g</code>, <code>b</code> or <code>all</code> since it acts like a post-processing LUT.</dd>
 <dt><code>red, r</code></dt>
 <dd> Set the key points for the red component.</dd>
 <dt><code>green, g</code></dt>
@@ -5941,13 +5941,13 @@ amovie = right.mp3[r];<br />
 <p> This filter supports same <code>commands</code> as options. The command accepts the same syntax of the corresponding option. </p>
 <p> If the specified expression is not valid, it is kept at its current value.</p>
 <h3>dctdnoiz</h3>
-<p> Denoise frames using 2D <font SIZE="-1">DCT</font> (frequency domain filtering). </p>
+<p> Denoise frames using 2D DCT (frequency domain filtering). </p>
 <p> This filter is not designed for real time. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>sigma, s</code></dt>
 <dd> Set the noise sigma constant. </dd>
-<p> This <i>sigma</i> defines a hard threshold of <tt>&quot;3 * sigma&quot;</tt>; every <font SIZE="-1">DCT</font> coefficient (absolute value) below this threshold with be dropped. </p>
+<p> This <i>sigma</i> defines a hard threshold of <tt>&quot;3 * sigma&quot;</tt>; every DCT coefficient (absolute value) below this threshold with be dropped. </p>
 <p> If you need a more advanced filtering, see <code>expr</code>. </p>
 <p> Default is <tt>0</tt>.</p>
 <dt><code>overlap</code></dt>
@@ -5956,7 +5956,7 @@ amovie = right.mp3[r];<br />
 <p> Default value is <i>blocksize</i>-1, which is the best possible setting.</p>
 <dt><code>expr, e</code></dt>
 <dd> Set the coefficient factor expression. </dd>
-<p> For each coefficient of a <font SIZE="-1">DCT</font> block, this expression will be evaluated as a multiplier value for the coefficient. </p>
+<p> For each coefficient of a DCT block, this expression will be evaluated as a multiplier value for the coefficient. </p>
 <p> If this is option is set, the <code>sigma</code> option will be ignored. </p>
 <p> The absolute value of the coefficient can be accessed through the <i>c</i> variable.</p>
 <dt><code>n</code></dt>
@@ -6139,9 +6139,9 @@ amovie = right.mp3[r];<br />
 <dl>
 <dl>
 <dt><code>4</code></dt>
-<dd> If the original was telecined from 24 to 30 fps (Film to <font SIZE="-1">NTSC</font>).</dd>
+<dd> If the original was telecined from 24 to 30 fps (Film to NTSC).</dd>
 <dt><code>5</code></dt>
-<dd> If the original was telecined from 25 to 30 fps (<font SIZE="-1">PAL</font> to <font SIZE="-1">NTSC</font>).</dd>
+<dd> If the original was telecined from 25 to 30 fps (PAL to NTSC).</dd>
 <dt><code>20</code></dt>
 <dd> If a mixture of the two.</dd></dl>
 </dl>
@@ -6151,7 +6151,7 @@ amovie = right.mp3[r];<br />
 <p> The default is <code>4</code>.</dd></dl>
 </dl>
 <h3>delogo</h3>
-<p> Suppress a <font SIZE="-1">TV</font> station logo by a simple interpolation of the surrounding pixels. Just set a rectangle covering the logo and watch it disappear (and sometimes something even uglier appear &#8211; your mileage may vary). </p>
+<p> Suppress a TV station logo by a simple interpolation of the surrounding pixels. Just set a rectangle covering the logo and watch it disappear (and sometimes something even uglier appear &#8211; your mileage may vary). </p>
 <p> It accepts the following parameters:</p>
 <dl>
 <dt><code>x</code></dt>
@@ -6177,7 +6177,7 @@ amovie = right.mp3[r];<br />
 <p> Remove the rain in the input image/video by applying the derain methods based on convolutional neural networks. Supported models:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> Recurrent Squeeze-and-Excitation Context Aggregation Net (<font SIZE="-1">RESCAN</font>). See &lt;<code><a rel="nofollow" href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Xia_Li_Recurrent_Squeeze-and-Excitation_Context_ECCV_2018_paper.pdf">http://openaccess.thecvf.com/content_ECCV_2018/papers/Xia_Li_Recurrent_Squeeze-and-Excitation_Context_ECCV_2018_paper.pdf</a></code>&gt;.</dd></dl>
+<dd> Recurrent Squeeze-and-Excitation Context Aggregation Net (RESCAN). See &lt;<code><a rel="nofollow" href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Xia_Li_Recurrent_Squeeze-and-Excitation_Context_ECCV_2018_paper.pdf">http://openaccess.thecvf.com/content_ECCV_2018/papers/Xia_Li_Recurrent_Squeeze-and-Excitation_Context_ECCV_2018_paper.pdf</a></code>&gt;.</dd></dl>
 <p> Training as well as model generation scripts are provided in the repository at &lt;<code><a rel="nofollow" href="https://github.com/XueweiMeng/derain_filter.git">https://github.com/XueweiMeng/derain_filter.git</a></code>&gt;. </p>
 <p> Native model files (.model) can be generated from TensorFlow model files (.pb) by using tools/python/convert.py </p>
 <p> The filter accepts the following options:</p>
@@ -6196,11 +6196,11 @@ amovie = right.mp3[r];<br />
 </dt><dd>
 <p> Default value is <code>derain</code>.</dd></dl>
 <dt><code>dnn_backend</code></dt>
-<dd> Specify which <font SIZE="-1">DNN</font> backend to use for model loading and execution. This option accepts the following values:</dd>
+<dd> Specify which DNN backend to use for model loading and execution. This option accepts the following values:</dd>
 <dl>
 <dl>
 <dt><code>native</code></dt>
-<dd> Native implementation of <font SIZE="-1">DNN</font> loading and execution.</dd>
+<dd> Native implementation of DNN loading and execution.</dd>
 <dt><code>tensorflow</code></dt>
 <dd> TensorFlow backend. To enable this backend you need to install the TensorFlow for C library (see &lt;<code><a rel="nofollow" href="https://www.tensorflow.org/install/install_c">https://www.tensorflow.org/install/install_c</a></code>&gt;) and configure FFmpeg with <tt>&quot;--enable-libtensorflow&quot;</tt></dd></dl>
 </dl>
@@ -6371,11 +6371,11 @@ amovie = right.mp3[r];<br />
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>dnn_backend</code></dt>
-<dd> Specify which <font SIZE="-1">DNN</font> backend to use for model loading and execution. This option accepts the following values:</dd>
+<dd> Specify which DNN backend to use for model loading and execution. This option accepts the following values:</dd>
 <dl>
 <dl>
 <dt><code>native</code></dt>
-<dd> Native implementation of <font SIZE="-1">DNN</font> loading and execution.</dd>
+<dd> Native implementation of DNN loading and execution.</dd>
 <dt><code>tensorflow</code></dt>
 <dd> TensorFlow backend. To enable this backend you need to install the TensorFlow for C library (see &lt;<code><a rel="nofollow" href="https://www.tensorflow.org/install/install_c">https://www.tensorflow.org/install/install_c</a></code>&gt;) and configure FFmpeg with <tt>&quot;--enable-libtensorflow&quot;</tt></dd>
 <dt><code>openvino</code></dt>
@@ -6393,7 +6393,7 @@ amovie = right.mp3[r];<br />
 <dt><code>output</code></dt>
 <dd> Set the output name of the dnn network.</dd>
 <dt><code>async</code></dt>
-<dd> use <font SIZE="-1">DNN</font> async execution if set (default: set), roll back to sync execution if the backend does not support async.</dd></dl>
+<dd> use DNN async execution if set (default: set), roll back to sync execution if the backend does not support async.</dd></dl>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
@@ -6407,12 +6407,12 @@ amovie = right.mp3[r];<br />
         ffmpeg -i input.jpg -vf format=grayf32,dnn_processing=model=halve_gray_float.model:input=dnn_in:output=dnn_out:dnn_backend=native -y out.native.png
 </pre>
 <dt>&bull;</dt>
-<dd> Handle the Y channel with srcnn.pb (see <code>sr</code> filter) for frame with yuv420p (planar <font SIZE="-1">YUV</font> formats supported): </dd>
+<dd> Handle the Y channel with srcnn.pb (see <code>sr</code> filter) for frame with yuv420p (planar YUV formats supported): </dd>
 <pre>
         ./ffmpeg -i 480p.jpg -vf format=yuv420p,scale=w=iw*2:h=ih*2,dnn_processing=dnn_backend=tensorflow:model=srcnn.pb:input=x:output=y -y srcnn.jpg
 </pre>
 <dt>&bull;</dt>
-<dd> Handle the Y channel with espcn.pb (see <code>sr</code> filter), which changes frame size, for format yuv420p (planar <font SIZE="-1">YUV</font> formats supported): </dd>
+<dd> Handle the Y channel with espcn.pb (see <code>sr</code> filter), which changes frame size, for format yuv420p (planar YUV formats supported): </dd>
 <pre>
         ./ffmpeg -i 480p.jpg -vf format=yuv420p,dnn_processing=dnn_backend=tensorflow:model=espcn.pb:input=x:output=y -y tmp.espcn.jpg
 </pre>
@@ -6560,11 +6560,11 @@ amovie = right.mp3[r];<br />
 <p> The foreground color expressions can use the following variables:</p>
 <dl>
 <dl>
-<dt><font SIZE="-1"><code>MIN</code></font></dt>
+<dt><code>MIN</code></dt>
 <dd> Minimal value of metadata value.</dd>
-<dt><font SIZE="-1"><code>MAX</code></font></dt>
+<dt><code>MAX</code></dt>
 <dd> Maximal value of metadata value.</dd>
-<dt><font SIZE="-1"><code>VAL</code></font></dt>
+<dt><code>VAL</code></dt>
 <dd> Current metadata key value.</dd></dl>
 </dl>
 <dl>
@@ -6740,9 +6740,9 @@ amovie = right.mp3[r];<br />
 <dt><code>tc24hmax</code></dt>
 <dd> If set to 1, the output of the timecode option will wrap around at 24 hours. Default is 0 (disabled).</dd>
 <dt><code>text</code></dt>
-<dd> The text string to be drawn. The text must be a sequence of <font SIZE="-1">UTF-8</font> encoded characters. This parameter is mandatory if no file is specified with the parameter <i>textfile</i>.</dd>
+<dd> The text string to be drawn. The text must be a sequence of UTF-8 encoded characters. This parameter is mandatory if no file is specified with the parameter <i>textfile</i>.</dd>
 <dt><code>textfile</code></dt>
-<dd> A text file containing text to be drawn. The text must be a sequence of <font SIZE="-1">UTF-8</font> encoded characters. </dd>
+<dd> A text file containing text to be drawn. The text must be a sequence of UTF-8 encoded characters. </dd>
 <p> This parameter is mandatory if no text string is specified with the parameter <i>text</i>. </p>
 <p> If both <i>text</i> and <i>textfile</i> are specified, an error is thrown.</p>
 <dt><code>reload</code></dt>
@@ -6782,7 +6782,7 @@ amovie = right.mp3[r];<br />
 <dt><code>sar</code></dt>
 <dd> The input sample aspect ratio.</dd>
 <dt><code>t</code></dt>
-<dd> timestamp expressed in seconds, <font SIZE="-1">NAN</font> if the input timestamp is unknown</dd>
+<dd> timestamp expressed in seconds, NAN if the input timestamp is unknown</dd>
 <dt><code>text_h, th</code></dt>
 <dd> the height of the rendered text</dd>
 <dt><code>text_w, tw</code></dt>
@@ -6816,14 +6816,14 @@ amovie = right.mp3[r];<br />
 <dd> Evaluate the expression&#8217;s value and output as formatted integer. </dd>
 <p> The first argument is the expression to be evaluated, just as for the <i>expr</i> function. The second argument specifies the output format. Allowed values are <code>x</code>, <code>X</code>, <code>d</code> and <code>u</code>. They are treated exactly as in the <tt>&quot;printf&quot;</tt> function. The third parameter is optional and sets the number of positions taken by the output. It can be used to add padding with zeros from the left.</p>
 <dt><code>gmtime</code></dt>
-<dd> The time at which the filter is running, expressed in <font SIZE="-1">UTC.</font> It can accept an argument: a <code>strftime()</code> format string.</dd>
+<dd> The time at which the filter is running, expressed in UTC. It can accept an argument: a <code>strftime()</code> format string.</dd>
 <dt><code>localtime</code></dt>
 <dd> The time at which the filter is running, expressed in the local time zone. It can accept an argument: a <code>strftime()</code> format string.</dd>
 <dt><code>metadata</code></dt>
 <dd> Frame metadata. Takes one or two arguments. </dd>
 <p> The first argument is mandatory and specifies the metadata key. </p>
 <p> The second argument is optional and specifies a default value, used when the metadata key is not found or empty. </p>
-<p> Available metadata can be identified by inspecting entries starting with <font SIZE="-1">TAG</font> included within each frame section printed by running <tt>&quot;ffprobe -show_frames&quot;</tt>. </p>
+<p> Available metadata can be identified by inspecting entries starting with TAG included within each frame section printed by running <tt>&quot;ffprobe -show_frames&quot;</tt>. </p>
 <p> String metadata generated in filters leading to the drawtext filter are also available.</p>
 <dt><code>n, frame_num</code></dt>
 <dd> The frame number, starting from 0.</dd>
@@ -6831,10 +6831,10 @@ amovie = right.mp3[r];<br />
 <dd> A one character description of the current picture type.</dd>
 <dt><code>pts</code></dt>
 <dd> The timestamp of the current frame. It can take up to three arguments. </dd>
-<p> The first argument is the format of the timestamp; it defaults to <tt>&quot;flt&quot;</tt> for seconds as a decimal number with microsecond accuracy; <tt>&quot;hms&quot;</tt> stands for a formatted <i>[-]HH:MM:SS.mmm</i> timestamp with millisecond accuracy. <tt>&quot;gmtime&quot;</tt> stands for the timestamp of the frame formatted as <font SIZE="-1">UTC</font> time; <tt>&quot;localtime&quot;</tt> stands for the timestamp of the frame formatted as local time zone time. </p>
+<p> The first argument is the format of the timestamp; it defaults to <tt>&quot;flt&quot;</tt> for seconds as a decimal number with microsecond accuracy; <tt>&quot;hms&quot;</tt> stands for a formatted <i>[-]HH:MM:SS.mmm</i> timestamp with millisecond accuracy. <tt>&quot;gmtime&quot;</tt> stands for the timestamp of the frame formatted as UTC time; <tt>&quot;localtime&quot;</tt> stands for the timestamp of the frame formatted as local time zone time. </p>
 <p> The second argument is an offset added to the timestamp. </p>
 <p> If the format is set to <tt>&quot;hms&quot;</tt>, a third argument <tt>&quot;24HH&quot;</tt> may be supplied to present the hour part of the formatted timestamp in 24h format (00-23). </p>
-<p> If the format is set to <tt>&quot;localtime&quot;</tt> or <tt>&quot;gmtime&quot;</tt>, a third argument may be supplied: a <code>strftime()</code> format string. By default, <i>YYYY-MM-DD </i><font SIZE="-1"><i>HH:MM:SS</i></font><i></i> format will be used.</dl>
+<p> If the format is set to <tt>&quot;localtime&quot;</tt> or <tt>&quot;gmtime&quot;</tt>, a third argument may be supplied: a <code>strftime()</code> format string. By default, <i>YYYY-MM-DD </i><i>HH:MM:SS</i><i></i> format will be used.</dl>
 <p> <i>Commands</i> </p>
 <p> This filter supports altering parameters via commands:</p>
 <dl>
@@ -6875,12 +6875,12 @@ amovie = right.mp3[r];<br />
         drawtext=&quot;fontsize=30:fontfile=FreeSerif.ttf:text='hello world':x=if(eq(mod(t\,30)\,0)\,rand(0\,(w-text_w))\,x):y=if(eq(mod(t\,30)\,0)\,rand(0\,(h-text_h))\,y)&quot;
 </pre>
 <dt>&bull;</dt>
-<dd> Show a text line sliding from right to left in the last row of the video frame. The file <i></i><font SIZE="-1"><i>LONG_LINE</i></font><i></i> is assumed to contain a single line with no newlines. </dd>
+<dd> Show a text line sliding from right to left in the last row of the video frame. The file <i></i><i>LONG_LINE</i><i></i> is assumed to contain a single line with no newlines. </dd>
 <pre>
         drawtext=&quot;fontsize=15:fontfile=FreeSerif.ttf:text=LONG_LINE:y=h-line_h:x=-50*t&quot;
 </pre>
 <dt>&bull;</dt>
-<dd> Show the content of file <i></i><font SIZE="-1"><i>CREDITS</i></font><i></i> off the bottom of the frame and scroll up. </dd>
+<dd> Show the content of file <i></i><i>CREDITS</i><i></i> off the bottom of the frame and scroll up. </dd>
 <pre>
         drawtext=&quot;fontsize=20:fontfile=FreeSerif.ttf:textfile=CREDITS:y=h-20*t&quot;
 </pre>
@@ -6926,7 +6926,7 @@ amovie = right.mp3[r];<br />
         drawtext=fontfile=FreeSans.ttf:text=cow:fontsize=24:x=80:y=20+24-max_glyph_a
 </pre>
 <dt>&bull;</dt>
-<dd> Plot special <i>lavf.image2dec.source_basename</i> metadata onto each frame if such metadata exists. Otherwise, plot the string &#8220;<font SIZE="-1">NA&#8221;.</font> Note that image2 demuxer must have option <code>-export_path_metadata 1</code> for the special metadata fields to be available for filters. </dd>
+<dd> Plot special <i>lavf.image2dec.source_basename</i> metadata onto each frame if such metadata exists. Otherwise, plot the string &#8220;NA&#8221;. Note that image2 demuxer must have option <code>-export_path_metadata 1</code> for the special metadata fields to be available for filters. </dd>
 <pre>
         drawtext=&quot;fontsize=20:fontcolor=white:fontfile=FreeSans.ttf:text='%{metadata\:lavf.image2dec.source_basename\:NA}':x=10:y=10&quot;
 </pre>
@@ -6976,7 +6976,7 @@ amovie = right.mp3[r];<br />
 </pre>
 </dl>
 <h3>elbg</h3>
-<p> Apply a posterize effect using the <font SIZE="-1">ELBG</font> (Enhanced <font SIZE="-1">LBG</font>) algorithm. </p>
+<p> Apply a posterize effect using the ELBG (Enhanced LBG) algorithm. </p>
 <p> For each input image, the filter will compute the optimal mapping from the input to the output given the codebook length, that is the number of distinct output colors. </p>
 <p> This filter accepts the following options.</p>
 <dl>
@@ -6985,7 +6985,7 @@ amovie = right.mp3[r];<br />
 <dt><code>nb_steps, n</code></dt>
 <dd> Set the maximum number of iterations to apply for computing the optimal mapping. The higher the value the better the result and the higher the computation time. Default value is 1.</dd>
 <dt><code>seed, s</code></dt>
-<dd> Set a random seed, must be an integer included between 0 and <font SIZE="-1">UINT32_MAX.</font> If not specified, or if explicitly set to -1, the filter will try to use a good random seed on a best effort basis.</dd>
+<dd> Set a random seed, must be an integer included between 0 and UINT32_MAX. If not specified, or if explicitly set to -1, the filter will try to use a good random seed on a best effort basis.</dd>
 <dt><code>pal8</code></dt>
 <dd> Set pal8 output pixel format. This option does not work with codebook length greater than 256.</dd></dl>
 <h3>entropy</h3>
@@ -6996,7 +6996,7 @@ amovie = right.mp3[r];<br />
 <dd> Can be either <i>normal</i> or <i>diff</i>. Default is <i>normal</i>. </dd>
 <p> <i>diff</i> mode measures entropy of histogram delta values, absolute differences between neighbour histogram values.</dl>
 <h3>epx</h3>
-<p> Apply the <font SIZE="-1">EPX</font> magnification filter which is designed for pixel art. </p>
+<p> Apply the EPX magnification filter which is designed for pixel art. </p>
 <p> It accepts the following option:</p>
 <dl>
 <dt><code>n</code></dt>
@@ -7041,11 +7041,11 @@ amovie = right.mp3[r];<br />
 <dt><code>n</code></dt>
 <dd> frame count of the input frame starting from 0</dd>
 <dt><code>pos</code></dt>
-<dd> byte position of the corresponding packet in the input file, <font SIZE="-1">NAN</font> if unspecified</dd>
+<dd> byte position of the corresponding packet in the input file, NAN if unspecified</dd>
 <dt><code>r</code></dt>
-<dd> frame rate of the input video, <font SIZE="-1">NAN</font> if the input frame rate is unknown</dd>
+<dd> frame rate of the input video, NAN if the input frame rate is unknown</dd>
 <dt><code>t</code></dt>
-<dd> timestamp expressed in seconds, <font SIZE="-1">NAN</font> if the input timestamp is unknown</dd></dl>
+<dd> timestamp expressed in seconds, NAN if the input timestamp is unknown</dd></dl>
 <p> <i>Commands</i> </p>
 <p> The filter supports the following commands:</p>
 <dl>
@@ -7161,7 +7161,7 @@ amovie = right.mp3[r];<br />
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>exposure</code></dt>
-<dd> Set the exposure correction in <font SIZE="-1">EV.</font> Allowed range is from -3.0 to 3.0 <font SIZE="-1">EV</font> Default value is 0 <font SIZE="-1">EV.</font></dd>
+<dd> Set the exposure correction in EV. Allowed range is from -3.0 to 3.0 EV Default value is 0 EV.</dd>
 <dt><code>black</code></dt>
 <dd> Set the black level correction. Allowed range is from -1.0 to 1.0. Default value is 0.</dd></dl>
 <p> <i>Commands</i> </p>
@@ -7258,7 +7258,7 @@ amovie = right.mp3[r];<br />
 </pre>
 </dl>
 <h3>fftdnoiz</h3>
-<p> Denoise frames using 3D <font SIZE="-1">FFT</font> (frequency domain filtering). </p>
+<p> Denoise frames using 3D FFT (frequency domain filtering). </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>sigma</code></dt>
@@ -7339,7 +7339,7 @@ amovie = right.mp3[r];<br />
 </pre>
 </dl>
 <h3>field</h3>
-<p> Extract a single field from an interlaced image using stride arithmetic to avoid wasting <font SIZE="-1">CPU</font> time. The output frames are marked as non-interlaced. </p>
+<p> Extract a single field from an interlaced image using stride arithmetic to avoid wasting CPU time. The output frames are marked as non-interlaced. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>type</code></dt>
@@ -7375,7 +7375,7 @@ amovie = right.mp3[r];<br />
 <p> Field matching filter for inverse telecine. It is meant to reconstruct the progressive frames from a telecined stream. The filter does not drop duplicated frames, so to achieve a complete inverse telecine <tt>&quot;fieldmatch&quot;</tt> needs to be followed by a decimation filter such as <code>decimate</code> in the filtergraph. </p>
 <p> The separation of the field matching and the decimation is notably motivated by the possibility of inserting a de-interlacing filter fallback between the two. If the source has mixed telecined and real interlaced content, <tt>&quot;fieldmatch&quot;</tt> will not be able to match fields for the interlaced parts. But these remaining combed frames will be marked as interlaced, and thus can be de-interlaced by a later filter such as <code>yadif</code> before decimation. </p>
 <p> In addition to the various configuration options, <tt>&quot;fieldmatch&quot;</tt> can take an optional second stream, activated through the <code>ppsrc</code> option. If enabled, the frames reconstruction will be based on the fields and frames from this second stream. This allows the first input to be pre-processed in order to help the various algorithms of the filter, while keeping the output lossless (assuming the fields are matched properly). Typically, a field-aware denoiser, or brightness/contrast adjustments can help. </p>
-<p> Note that this filter uses the same algorithms as <font SIZE="-1">TIVTC/TFM</font> (AviSynth project) and <font SIZE="-1">VIVTC/VFM</font> (VapourSynth project). The later is a light clone of <font SIZE="-1">TFM</font> from which <tt>&quot;fieldmatch&quot;</tt> is based on. While the semantic and usage are very close, some behaviour and options names can differ. </p>
+<p> Note that this filter uses the same algorithms as TIVTC/TFM (AviSynth project) and VIVTC/VFM (VapourSynth project). The later is a light clone of TFM from which <tt>&quot;fieldmatch&quot;</tt> is based on. While the semantic and usage are very close, some behaviour and options names can differ. </p>
 <p> The <code>decimate</code> filter currently only works for constant frame rate input. If your input has mixed telecined (30fps) and progressive content with a lower framerate like 24fps use the following filterchain to produce the necessary cfr stream: <tt>&quot;dejudder,fps=30000/1001,fieldmatch,decimate&quot;</tt>. </p>
 <p> The filter accepts the following options:</p>
 <dl>
@@ -7421,7 +7421,7 @@ amovie = right.mp3[r];<br />
 <p> In terms of speed <code>pc</code> mode is by far the fastest and <code>pcn_ub</code> is the slowest. </p>
 <p> Default value is <i>pc_n</i>.</dd></dl>
 <dt><code>ppsrc</code></dt>
-<dd> Mark the main input stream as a pre-processed input, and enable the secondary input stream as the clean source to pick the fields from. See the filter introduction for more details. It is similar to the <code>clip2</code> feature from <font SIZE="-1">VFM/TFM.</font> </dd>
+<dd> Mark the main input stream as a pre-processed input, and enable the secondary input stream as the clean source to pick the fields from. See the filter introduction for more details. It is similar to the <code>clip2</code> feature from VFM/TFM. </dd>
 <p> Default value is <tt>0</tt> (disabled).</p>
 <dt><code>field</code></dt>
 <dd> Set the field to match from. It is recommended to set this to the same value as <code>order</code> unless you experience matching failures with that setting. In certain circumstances changing the field that is used to match from can have a large impact on matching performance. Available values are:</dd>
@@ -7464,7 +7464,7 @@ amovie = right.mp3[r];<br />
 </dt><dd>
 <p> Default is <i>sc</i>.</dd></dl>
 <dt><code>combdbg</code></dt>
-<dd> Force <tt>&quot;fieldmatch&quot;</tt> to calculate the combed metrics for certain matches and print them. This setting is known as <code>micout</code> in <font SIZE="-1">TFM/VFM</font> vocabulary. Available values are:</dd>
+<dd> Force <tt>&quot;fieldmatch&quot;</tt> to calculate the combed metrics for certain matches and print them. This setting is known as <code>micout</code> in TFM/VFM vocabulary. Available values are:</dd>
 <dl>
 <dl>
 <dt><code>none</code></dt>
@@ -7490,7 +7490,7 @@ amovie = right.mp3[r];<br />
 <dd> Respectively set the x-axis and y-axis size of the window used during combed frame detection. This has to do with the size of the area in which <code>combpel</code> pixels are required to be detected as combed for a frame to be declared combed. See the <code>combpel</code> parameter description for more info. Possible values are any number that is a power of 2 starting at 4 and going up to 512. </dd>
 <p> Default value is <tt>16</tt>.</p>
 <dt><code>combpel</code></dt>
-<dd> The number of combed pixels inside any of the <code>blocky</code> by <code>blockx</code> size blocks on the frame for the frame to be detected as combed. While <code>cthresh</code> controls how &#8220;visible&#8221; the combing must be, this setting controls &#8220;how much&#8221; combing there must be in any localized area (a window defined by the <code>blockx</code> and <code>blocky</code> settings) on the frame. Minimum value is <tt>0</tt> and maximum is <tt>&quot;blocky x blockx&quot;</tt> (at which point no frames will ever be detected as combed). This setting is known as <font SIZE="-1"><code>MI</code></font> in <font SIZE="-1">TFM/VFM</font> vocabulary. </dd>
+<dd> The number of combed pixels inside any of the <code>blocky</code> by <code>blockx</code> size blocks on the frame for the frame to be detected as combed. While <code>cthresh</code> controls how &#8220;visible&#8221; the combing must be, this setting controls &#8220;how much&#8221; combing there must be in any localized area (a window defined by the <code>blockx</code> and <code>blocky</code> settings) on the frame. Minimum value is <tt>0</tt> and maximum is <tt>&quot;blocky x blockx&quot;</tt> (at which point no frames will ever be detected as combed). This setting is known as <code>MI</code> in TFM/VFM vocabulary. </dd>
 <p> Default value is <tt>80</tt>.</dl>
 <p> <i>p/c/n/u/b meaning</i> </p>
 <p> p/c/n </p>
@@ -7554,11 +7554,11 @@ amovie = right.mp3[r];<br />
                          2          1          3          2          2
 </pre>
 <p> <i>Examples</i> </p>
-<p> Simple <font SIZE="-1">IVTC</font> of a top field first telecined stream: </p>
+<p> Simple IVTC of a top field first telecined stream: </p>
 <pre>
         fieldmatch=order=tff:combmatch=none, decimate
 </pre>
-<p> Advanced <font SIZE="-1">IVTC,</font> with fallback on <code>yadif</code> for still combed frames: </p>
+<p> Advanced IVTC, with fallback on <code>yadif</code> for still combed frames: </p>
 <pre>
         fieldmatch=order=tff:combmatch=full, yadif=deint=interlaced, decimate
 </pre>
@@ -7571,7 +7571,7 @@ amovie = right.mp3[r];<br />
 <p> The default value is <code>tff</code>. </p>
 <p> The transformation is done by shifting the picture content up or down by one line, and filling the remaining line with appropriate picture content. This method is consistent with most broadcast field order converters. </p>
 <p> If the input video is not flagged as being interlaced, or it is already flagged as being of the required output field order, then this filter does not alter the incoming video. </p>
-<p> It is very useful when converting to or from <font SIZE="-1">PAL DV</font> material, which is bottom field first. </p>
+<p> It is very useful when converting to or from PAL DV material, which is bottom field first. </p>
 <p> For example: </p>
 <pre>
         ffmpeg -i in.vob -vf &quot;fieldorder=bff&quot; out.dv
@@ -7688,9 +7688,9 @@ amovie = right.mp3[r];<br />
 <dt><code>fps</code></dt>
 <dd> The desired output frame rate. The default is <tt>25</tt>.</dd>
 <dt><code>start_time</code></dt>
-<dd> Assume the first <font SIZE="-1">PTS</font> should be the given value, in seconds. This allows for padding/trimming at the start of stream. By default, no assumption is made about the first frame&#8217;s expected <font SIZE="-1">PTS,</font> so no padding or trimming is done. For example, this could be set to 0 to pad the beginning with duplicates of the first frame if a video stream starts after the audio stream or to trim any frames with a negative <font SIZE="-1">PTS.</font></dd>
+<dd> Assume the first PTS should be the given value, in seconds. This allows for padding/trimming at the start of stream. By default, no assumption is made about the first frame&#8217;s expected PTS, so no padding or trimming is done. For example, this could be set to 0 to pad the beginning with duplicates of the first frame if a video stream starts after the audio stream or to trim any frames with a negative PTS.</dd>
 <dt><code>round</code></dt>
-<dd> Timestamp (<font SIZE="-1">PTS</font>) rounding method. </dd>
+<dd> Timestamp (PTS) rounding method. </dd>
 <p> Possible values are:</p>
 <dl>
 <dl>
@@ -7762,11 +7762,11 @@ amovie = right.mp3[r];<br />
 </dl>
 </dl>
 <p> Some examples: </p>
-<p>#Convert left and right views into a frame &#8211; sequential video<br />
+<p>#Convert left and right views into a frame &#8211; sequential video<br/>
 ffmpeg &#8211; i LEFT &#8211; i RIGHT &#8211; filter_complex framepack = frameseq OUTPUT</p>
-<p>#Convert views into a side &#8211; by &#8211; side video with the same output resolution as the input<br />
-                                                           ffmpeg &#8211;<br />
-                                                       i LEFT &#8211; i RIGHT &#8211; filter_complex [0:v] scale = w = iw / 2 [left],<br />
+<p>#Convert views into a side &#8211; by &#8211; side video with the same output resolution as the input<br/>
+                                                           ffmpeg &#8211;<br/>
+                                                       i LEFT &#8211; i RIGHT &#8211; filter_complex [0:v] scale = w = iw / 2 [left],<br/>
                                            [1:v] scale = w = iw / 2 [right], [left][right] framepack = sbs OUTPUT</p>
 <h3>framerate</h3>
 <p> Change the frame rate by interpolating new video output frames from the source frames. </p>
@@ -7825,7 +7825,7 @@ ffmpeg &#8211; i LEFT &#8211; i RIGHT &#8211; filter_complex framepack = framese
 <p> It accepts the following parameters:</p>
 <dl>
 <dt><code>filter_name</code></dt>
-<dd> The name of the frei0r effect to load. If the environment variable <font SIZE="-1"><code>FREI0R_PATH</code></font> is defined, the frei0r effect is searched for in each of the directories specified by the colon-separated list in <font SIZE="-1"><code>FREI0R_PATH</code></font>. Otherwise, the standard frei0r paths are searched, in this order: <i></i><font SIZE="-1"><i>HOME/</i></font><i>.frei0r-1/lib/</i>, <i>/usr/local/lib/frei0r-1/</i>, <i>/usr/lib/frei0r-1/</i>.</dd>
+<dd> The name of the frei0r effect to load. If the environment variable <code>FREI0R_PATH</code> is defined, the frei0r effect is searched for in each of the directories specified by the colon-separated list in <code>FREI0R_PATH</code>. Otherwise, the standard frei0r paths are searched, in this order: <i></i><i>HOME/</i><i>.frei0r-1/lib/</i>, <i>/usr/local/lib/frei0r-1/</i>, <i>/usr/lib/frei0r-1/</i>.</dd>
 <dt><code>filter_params</code></dt>
 <dd> A &#8216;|&#8217;-separated list of parameters to pass to the frei0r effect.</dd></dl>
 <p> A frei0r effect parameter can be a boolean (its value is either &#8220;y&#8221; or &#8220;n&#8221;), a double, a color (specified as <i>R</i>/<i>G</i>/<i>B</i>, where <i>R</i>, <i>G</i>, and <i>B</i> are floating point numbers between 0.0 and 1.0, inclusive) or a color description as specified in the <code>&#8220;Color&#8221; section in the ffmpeg-utils manual</code>, a position (specified as <i>X</i>/<i>Y</i>, where <i>X</i> and <i>Y</i> are floating point numbers) and/or a string. </p>
@@ -7861,11 +7861,11 @@ ffmpeg &#8211; i LEFT &#8211; i RIGHT &#8211; filter_complex framepack = framese
 <dt><code>quality</code></dt>
 <dd> Set quality. This option defines the number of levels for averaging. It accepts an integer in the range 4-5. Default value is <tt>4</tt>.</dd>
 <dt><code>qp</code></dt>
-<dd> Force a constant quantization parameter. It accepts an integer in range 0-63. If not set, the filter will use the <font SIZE="-1">QP</font> from the video stream (if available).</dd>
+<dd> Force a constant quantization parameter. It accepts an integer in range 0-63. If not set, the filter will use the QP from the video stream (if available).</dd>
 <dt><code>strength</code></dt>
-<dd> Set filter strength. It accepts an integer in range -15 to 32. Lower values mean more details but also more artifacts, while higher values make the image smoother but also blurrier. Default value is <tt>0</tt> X <font SIZE="-1">PSNR</font> optimal.</dd>
+<dd> Set filter strength. It accepts an integer in range -15 to 32. Lower values mean more details but also more artifacts, while higher values make the image smoother but also blurrier. Default value is <tt>0</tt> X PSNR optimal.</dd>
 <dt><code>use_bframe_qp</code></dt>
-<dd> Enable the use of the <font SIZE="-1">QP</font> from the B-Frames if set to <tt>1</tt>. Using this option may cause flicker since the B-Frames have often larger <font SIZE="-1">QP.</font> Default is <tt>0</tt> (not enabled).</dd></dl>
+<dd> Enable the use of the QP from the B-Frames if set to <tt>1</tt>. Using this option may cause flicker since the B-Frames have often larger QP. Default is <tt>0</tt> (not enabled).</dd></dl>
 <h3>gblur</h3>
 <p> Apply Gaussian blur filter. </p>
 <p> The filter accepts the following options:</p>
@@ -7899,7 +7899,7 @@ ffmpeg &#8211; i LEFT &#8211; i RIGHT &#8211; filter_complex framepack = framese
 <dd> Set the green expression.</dd>
 <dt><code>blue_expr, b</code></dt>
 <dd> Set the blue expression.</dd></dl>
-<p> The colorspace is selected according to the specified options. If one of the <code>lum_expr</code>, <code>cb_expr</code>, or <code>cr_expr</code> options is specified, the filter will automatically select a YCbCr colorspace. If one of the <code>red_expr</code>, <code>green_expr</code>, or <code>blue_expr</code> options is specified, it will select an <font SIZE="-1">RGB</font> colorspace. </p>
+<p> The colorspace is selected according to the specified options. If one of the <code>lum_expr</code>, <code>cb_expr</code>, or <code>cr_expr</code> options is specified, the filter will automatically select a YCbCr colorspace. If one of the <code>red_expr</code>, <code>green_expr</code>, or <code>blue_expr</code> options is specified, it will select an RGB colorspace. </p>
 <p> If one of the chrominance expression is not defined, it falls back on the other one. If no alpha expression is specified it will evaluate to opaque value. If none of chrominance expressions are specified, they will evaluate to the luminance expression. </p>
 <p> The expressions can use the following variables and functions:</p>
 <dl>
@@ -7913,10 +7913,10 @@ ffmpeg &#8211; i LEFT &#8211; i RIGHT &#8211; filter_complex framepack = framese
 <dd>
 </dd><dt><code>H</code></dt>
 <dd> The width and height of the image.</dd>
-<dt><font SIZE="-1"><code>SW</code></font></dt>
+<dt><code>SW</code></dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>SH</code></font></dt>
-<dd> Width and height scale depending on the currently filtered plane. It is the ratio between the corresponding luma plane number of pixels and the current plane ones. E.g. for <font SIZE="-1">YUV4:2:0</font> the values are <tt>&quot;1,1&quot;</tt> for the luma plane, and <tt>&quot;0.5,0.5&quot;</tt> for chroma planes.</dd>
+</dd><dt><code>SH</code></dt>
+<dd> Width and height scale depending on the currently filtered plane. It is the ratio between the corresponding luma plane number of pixels and the current plane ones. E.g. for YUV4:2:0 the values are <tt>&quot;1,1&quot;</tt> for the luma plane, and <tt>&quot;0.5,0.5&quot;</tt> for chroma planes.</dd>
 <dt><code>T</code></dt>
 <dd> Time of the current frame, expressed in seconds.</dd>
 <dt><code>p(x, y)</code></dt>
@@ -7976,7 +7976,7 @@ ffmpeg &#8211; i LEFT &#8211; i RIGHT &#8211; filter_complex framepack = framese
         format=gray,geq=lum_expr='(p(X,Y)+(256-p(X-4,Y-4)))/2'
 </pre>
 <dt>&bull;</dt>
-<dd> Modify <font SIZE="-1">RGB</font> components depending on pixel position: </dd>
+<dd> Modify RGB components depending on pixel position: </dd>
 <pre>
         geq=r='X/W*r(X,Y)':g='(1-X/W)*g(X,Y)':b='(H-Y)/H*b(X,Y)'
 </pre>
@@ -8075,39 +8075,39 @@ ffmpeg &#8211; i LEFT &#8211; i RIGHT &#8211; filter_complex framepack = framese
 </pre>
 </dl>
 <h3>haldclut</h3>
-<p> Apply a Hald <font SIZE="-1">CLUT</font> to a video stream. </p>
-<p> First input is the video stream to process, and second one is the Hald <font SIZE="-1">CLUT.</font> The Hald <font SIZE="-1">CLUT</font> input can be a simple picture or a complete video stream. </p>
+<p> Apply a Hald CLUT to a video stream. </p>
+<p> First input is the video stream to process, and second one is the Hald CLUT. The Hald CLUT input can be a simple picture or a complete video stream. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>shortest</code></dt>
 <dd> Force termination when the shortest input terminates. Default is <tt>0</tt>.</dd>
 <dt><code>repeatlast</code></dt>
-<dd> Continue applying the last <font SIZE="-1">CLUT</font> after the end of the stream. A value of <tt>0</tt> disable the filter after the last frame of the <font SIZE="-1">CLUT</font> is reached. Default is <tt>1</tt>.</dd></dl>
+<dd> Continue applying the last CLUT after the end of the stream. A value of <tt>0</tt> disable the filter after the last frame of the CLUT is reached. Default is <tt>1</tt>.</dd></dl>
 <p> <tt>&quot;haldclut&quot;</tt> also has the same interpolation options as <code>lut3d</code> (both filters share the same internals). </p>
 <p> This filter also supports the <code>framesync</code> options. </p>
-<p> More information about the Hald <font SIZE="-1">CLUT</font> can be found on Eskil Steenberg&#8217;s website (Hald <font SIZE="-1">CLUT</font> author) at &lt;<code><a rel="nofollow" href="http://www.quelsolaar.com/technology/clut.html">http://www.quelsolaar.com/technology/clut.html</a></code>&gt;. </p>
+<p> More information about the Hald CLUT can be found on Eskil Steenberg&#8217;s website (Hald CLUT author) at &lt;<code><a rel="nofollow" href="http://www.quelsolaar.com/technology/clut.html">http://www.quelsolaar.com/technology/clut.html</a></code>&gt;. </p>
 <p> <i>Commands</i> </p>
 <p> This filter supports the <tt>&quot;interp&quot;</tt> option as <code>commands</code>. </p>
 <p> <i>Workflow examples</i> </p>
-<p> Hald <font SIZE="-1">CLUT</font> video stream </p>
-<p> Generate an identity Hald <font SIZE="-1">CLUT</font> stream altered with various effects: </p>
+<p> Hald CLUT video stream </p>
+<p> Generate an identity Hald CLUT stream altered with various effects: </p>
 <pre>
         ffmpeg -f lavfi -i B&lt;haldclutsrc&gt;=8 -vf &quot;hue=H=2*PI*t:s=sin(2*PI*t)+1, curves=cross_process&quot; -t 10 -c:v ffv1 clut.nut
 </pre>
 <p> Note: make sure you use a lossless codec. </p>
 <p> Then use it with <tt>&quot;haldclut&quot;</tt> to apply it on some random stream: </p>
 <p>ffmpeg &#8211; f lavfi &#8211; i mandelbrot &#8211; i clut.nut &#8211; filter_complex &#8216;[0][1] haldclut&#8217; &#8211; t 20 mandelclut.mkv</p>
-<p> The Hald <font SIZE="-1">CLUT</font> will be applied to the 10 first seconds (duration of <i>clut.nut</i>), then the latest picture of that <font SIZE="-1">CLUT</font> stream will be applied to the remaining frames of the <tt>&quot;mandelbrot&quot;</tt> stream. </p>
-<p> Hald <font SIZE="-1">CLUT</font> with preview </p>
-<p> A Hald <font SIZE="-1">CLUT</font> is supposed to be a squared image of <tt>&quot;Level*Level*Level&quot;</tt> by <tt>&quot;Level*Level*Level&quot;</tt> pixels. For a given Hald <font SIZE="-1">CLUT,</font> FFmpeg will select the biggest possible square starting at the top left of the picture. The remaining padding pixels (bottom or right) will be ignored. This area can be used to add a preview of the Hald <font SIZE="-1">CLUT.</font> </p>
-<p> Typically, the following generated Hald <font SIZE="-1">CLUT</font> will be supported by the <tt>&quot;haldclut&quot;</tt> filter: </p>
-<p>ffmpeg &#8211; f lavfi &#8211; i B &lt; haldclutsrc &gt;= 8 &#8211; vf &#8221;<br />
-                                            pad = iw + 320 [padded_clut];<br />
-smptebars = s = 320&#215;256, split[a][b];<br />
-[padded_clut][a] overlay = W &#8211; 320 : h, curves = color_negative[main];<br />
+<p> The Hald CLUT will be applied to the 10 first seconds (duration of <i>clut.nut</i>), then the latest picture of that CLUT stream will be applied to the remaining frames of the <tt>&quot;mandelbrot&quot;</tt> stream. </p>
+<p> Hald CLUT with preview </p>
+<p> A Hald CLUT is supposed to be a squared image of <tt>&quot;Level*Level*Level&quot;</tt> by <tt>&quot;Level*Level*Level&quot;</tt> pixels. For a given Hald CLUT, FFmpeg will select the biggest possible square starting at the top left of the picture. The remaining padding pixels (bottom or right) will be ignored. This area can be used to add a preview of the Hald CLUT. </p>
+<p> Typically, the following generated Hald CLUT will be supported by the <tt>&quot;haldclut&quot;</tt> filter: </p>
+<p>ffmpeg &#8211; f lavfi &#8211; i B &lt; haldclutsrc &gt;= 8 &#8211; vf &#8221;<br/>
+                                            pad = iw + 320 [padded_clut];<br/>
+smptebars = s = 320&#215;256, split[a][b];<br/>
+[padded_clut][a] overlay = W &#8211; 320 : h, curves = color_negative[main];<br/>
 [main][b] overlay = W &#8211; 320 &#8221; -frames:v 1 clut.png</p>
-<p> It contains the original and a preview of the effect of the <font SIZE="-1">CLUT: SMPTE</font> color bars are displayed on the right-top, and below the same color bars processed by the color changes. </p>
-<p> Then, the effect of this Hald <font SIZE="-1">CLUT</font> can be visualized with: </p>
+<p> It contains the original and a preview of the effect of the CLUT: SMPTE color bars are displayed on the right-top, and below the same color bars processed by the color changes. </p>
+<p> Then, the effect of this Hald CLUT can be visualized with: </p>
 <pre>
         ffplay input.mkv -vf &quot;movie=clut.png, [in] haldclut&quot;
 </pre>
@@ -8237,11 +8237,11 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <dt><code>derive_device</code> <i>type</i></dt>
 <dd> Rather than using the device supplied at initialisation, instead derive a new device of type <i>type</i> from the device the input frames exist on.</dd></dl>
 <h3>hwupload_cuda</h3>
-<p> Upload system memory frames to a <font SIZE="-1">CUDA</font> device. </p>
+<p> Upload system memory frames to a CUDA device. </p>
 <p> It accepts the following optional parameters:</p>
 <dl>
 <dt><code>device</code></dt>
-<dd> The number of the <font SIZE="-1">CUDA</font> device to use</dd></dl>
+<dd> The number of the CUDA device to use</dd></dl>
 <h3>hqx</h3>
 <p> Apply a high-quality magnification filter designed for pixel art. This filter was originally created by Maxim Stepin. </p>
 <p> It accepts the following option:</p>
@@ -8278,9 +8278,9 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <dt><code>pts</code></dt>
 <dd> presentation timestamp of the input frame expressed in time base units</dd>
 <dt><code>r</code></dt>
-<dd> frame rate of the input video, <font SIZE="-1">NAN</font> if the input frame rate is unknown</dd>
+<dd> frame rate of the input video, NAN if the input frame rate is unknown</dd>
 <dt><code>t</code></dt>
-<dd> timestamp expressed in seconds, <font SIZE="-1">NAN</font> if the input timestamp is unknown</dd>
+<dd> timestamp expressed in seconds, NAN if the input timestamp is unknown</dd>
 <dt><code>tb</code></dt>
 <dd> time base of the input video</dd></dl>
 <p> <i>Examples</i></p>
@@ -8445,11 +8445,11 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>interlace</h3>
 <p> Simple interlacing filter from progressive contents. This interleaves upper (or lower) lines from odd frames with lower (or upper) lines from even frames, halving the frame rate and preserving image height. </p>
-<p>Original Original New Frame<br />
-        Frame &#8216;j&#8217; Frame &#8216;j+1&#8242;(tff) == ==<br />
-    == == == == == == == ==<br />
-    = == == == == == == == == ==<br />
-          Line 0 &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &gt; Frame &#8216;j&#8217; Line 0 Line 1 Line 1 &#8212; &#8212; &gt; Frame &#8216;j+1&#8217; Line 1 Line 2 &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;&gt;Frame &#8216;j&#8217; Line 2 Line 3 Line 3 &#8212; &#8212; &gt; Frame &#8216;j+1&#8217; Line 3 &#8230;&#8230;&#8230; New Frame + 1 will be generated by Frame &#8216;j+2&#8217; and<br />
+<p>Original Original New Frame<br/>
+        Frame &#8216;j&#8217; Frame &#8216;j+1&#8242;(tff) == ==<br/>
+    == == == == == == == ==<br/>
+    = == == == == == == == == ==<br/>
+          Line 0 &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &gt; Frame &#8216;j&#8217; Line 0 Line 1 Line 1 &#8212; &#8212; &gt; Frame &#8216;j+1&#8217; Line 1 Line 2 &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;&gt;Frame &#8216;j&#8217; Line 2 Line 3 Line 3 &#8212; &#8212; &gt; Frame &#8216;j+1&#8217; Line 3 &#8230;&#8230;&#8230; New Frame + 1 will be generated by Frame &#8216;j+2&#8217; and<br/>
       Frame &#8216;j+3&#8217; and so on</p>
 <p> It accepts the following optional parameters:</p>
 <dl>
@@ -8526,7 +8526,7 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <h3>lenscorrection</h3>
 <p> Correct radial lens distortion </p>
 <p> This filter can be used to correct for radial distortion as can result from the use of wide angle lenses, and thereby re-rectify the image. To find the right parameters one can use tools available for example as part of opencv or simply trial-and-error. To use opencv use the calibration sample (under samples/cpp) from the opencv sources and extract the k1 and k2 coefficients from the resulting matrix. </p>
-<p> Note that effectively the same filter is available in the open-source tools Krita and Digikam from the <font SIZE="-1">KDE</font> project. </p>
+<p> Note that effectively the same filter is available in the open-source tools Krita and Digikam from the KDE project. </p>
 <p> In contrast to the <code>vignette</code> filter, which can also be used to compensate lens errors, this filter corrects the distortion of the image, whereas <code>vignette</code> corrects the brightness distribution, so you may want to use both filters together in certain cases, though you will have to take care of ordering, i.e. whether vignetting should be applied before or after lens correction. </p>
 <p> <i>Options</i> </p>
 <p> The filter accepts the following options:</p>
@@ -8556,9 +8556,9 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <dt><code>make</code></dt>
 <dd> The make of the camera (for example, &#8220;Canon&#8221;). This option is required.</dd>
 <dt><code>model</code></dt>
-<dd> The model of the camera (for example, &#8220;Canon <font SIZE="-1">EOS 100D&#8221;</font>). This option is required.</dd>
+<dd> The model of the camera (for example, &#8220;Canon EOS 100D&#8221;). This option is required.</dd>
 <dt><code>lens_model</code></dt>
-<dd> The model of the lens (for example, &#8220;Canon EF-S 18-55mm f/3.5-5.6 <font SIZE="-1">IS STM&#8221;</font>). This option is required.</dd>
+<dd> The model of the lens (for example, &#8220;Canon EF-S 18-55mm f/3.5-5.6 IS STM&#8221;). This option is required.</dd>
 <dt><code>mode</code></dt>
 <dd> The type of correction to apply. The following values are valid options:</dd>
 <dl>
@@ -8630,7 +8630,7 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Apply lens correction with make &#8220;Canon&#8221;, camera model &#8220;Canon <font SIZE="-1">EOS 100D&#8221;,</font> and lens model &#8220;Canon EF-S 18-55mm f/3.5-5.6 <font SIZE="-1">IS STM&#8221;</font> with focal length of &#8220;18&#8221; and aperture of &#8220;8.0&#8221;. </dd>
+<dd> Apply lens correction with make &#8220;Canon&#8221;, camera model &#8220;Canon EOS 100D&#8221;, and lens model &#8220;Canon EF-S 18-55mm f/3.5-5.6 IS STM&#8221; with focal length of &#8220;18&#8221; and aperture of &#8220;8.0&#8221;. </dd>
 <pre>
         ffmpeg -i input.mov -vf lensfun=make=Canon:model=&quot;Canon EOS 100D&quot;:lens_model=&quot;Canon EF-S 18-55mm f/3.5-5.6 IS STM&quot;:focal_length=18:aperture=8 -c:v h264 -b:v 8000k output.mov
 </pre>
@@ -8641,21 +8641,21 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 </pre>
 </dl>
 <h3>libvmaf</h3>
-<p> Obtain the <font SIZE="-1">VMAF</font> (Video Multi-Method Assessment Fusion) score between two input videos. </p>
-<p> The obtained <font SIZE="-1">VMAF</font> score is printed through the logging system. </p>
+<p> Obtain the VMAF (Video Multi-Method Assessment Fusion) score between two input videos. </p>
+<p> The obtained VMAF score is printed through the logging system. </p>
 <p> It requires Netflix&#8217;s vmaf library (libvmaf) as a pre-requisite. After installing the library it can be enabled using: <tt>&quot;./configure --enable-libvmaf&quot;</tt>. If no model path is specified it uses the default model: <tt>&quot;vmaf_v0.6.1.pkl&quot;</tt>. </p>
 <p> The filter has following options:</p>
 <dl>
 <dt><code>model_path</code></dt>
-<dd> Set the model path which is to be used for <font SIZE="-1">SVM.</font> Default value: <tt>&quot;/usr/local/share/model/vmaf_v0.6.1.pkl&quot;</tt></dd>
+<dd> Set the model path which is to be used for SVM. Default value: <tt>&quot;/usr/local/share/model/vmaf_v0.6.1.pkl&quot;</tt></dd>
 <dt><code>log_path</code></dt>
 <dd> Set the file path to be used to store logs.</dd>
 <dt><code>log_fmt</code></dt>
 <dd> Set the format of the log file (csv, json or xml).</dd>
 <dt><code>enable_transform</code></dt>
-<dd> This option can enable/disable the <tt>&quot;score_transform&quot;</tt> applied to the final predicted <font SIZE="-1">VMAF</font> score, if you have specified score_transform option in the input parameter file passed to <tt>&quot;run_vmaf_training.py&quot;</tt> Default value: <tt>&quot;false&quot;</tt></dd>
+<dd> This option can enable/disable the <tt>&quot;score_transform&quot;</tt> applied to the final predicted VMAF score, if you have specified score_transform option in the input parameter file passed to <tt>&quot;run_vmaf_training.py&quot;</tt> Default value: <tt>&quot;false&quot;</tt></dd>
 <dt><code>phone_model</code></dt>
-<dd> Invokes the phone model which will generate <font SIZE="-1">VMAF</font> scores higher than in the regular model, which is more suitable for laptop, <font SIZE="-1">TV,</font> etc. viewing conditions. Default value: <tt>&quot;false&quot;</tt></dd>
+<dd> Invokes the phone model which will generate VMAF scores higher than in the regular model, which is more suitable for laptop, TV, etc. viewing conditions. Default value: <tt>&quot;false&quot;</tt></dd>
 <dt><code>psnr</code></dt>
 <dd> Enables computing psnr along with vmaf. Default value: <tt>&quot;false&quot;</tt></dd>
 <dt><code>ssim</code></dt>
@@ -8728,11 +8728,11 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 </pre>
 </dl>
 <h3>lut1d</h3>
-<p> Apply a 1D <font SIZE="-1">LUT</font> to an input video. </p>
+<p> Apply a 1D LUT to an input video. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>file</code></dt>
-<dd> Set the 1D <font SIZE="-1">LUT</font> file name. </dd>
+<dd> Set the 1D LUT file name. </dd>
 <p> Currently supported formats:</p>
 <dl>
 <dl>
@@ -8765,11 +8765,11 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <p> <i>Commands</i> </p>
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>lut3d</h3>
-<p> Apply a 3D <font SIZE="-1">LUT</font> to an input video. </p>
+<p> Apply a 3D LUT to an input video. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>file</code></dt>
-<dd> Set the 3D <font SIZE="-1">LUT</font> file name. </dd>
+<dd> Set the 3D LUT file name. </dd>
 <p> Currently supported formats:</p>
 <dl>
 <dl>
@@ -8822,7 +8822,7 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <p> If the specified expression is not valid, it is kept at its current value.</p>
 <h3>lut, lutrgb, lutyuv</h3>
 <p> Compute a look-up table for binding each pixel component input value to an output value, and apply it to the input video. </p>
-<p> <i>lutyuv</i> applies a lookup table to a <font SIZE="-1">YUV</font> input video, <i>lutrgb</i> to an <font SIZE="-1">RGB</font> input video. </p>
+<p> <i>lutyuv</i> applies a lookup table to a YUV input video, <i>lutrgb</i> to an RGB input video. </p>
 <p> These filters accept the following parameters:</p>
 <dl>
 <dt><code>c0</code></dt>
@@ -8849,7 +8849,7 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <dd> set V/Cr component expression</dd></dl>
 <p> Each of them specifies the expression to use for computing the lookup table for the corresponding pixel component values. </p>
 <p> The exact component associated to each of the <i>c*</i> options depends on the format in input. </p>
-<p> The <i>lut</i> filter requires either <font SIZE="-1">YUV</font> or <font SIZE="-1">RGB</font> pixel formats in input, <i>lutrgb</i> requires <font SIZE="-1">RGB</font> pixel formats in input, and <i>lutyuv</i> requires <font SIZE="-1">YUV.</font> </p>
+<p> The <i>lut</i> filter requires either YUV or RGB pixel formats in input, <i>lutrgb</i> requires RGB pixel formats in input, and <i>lutyuv</i> requires YUV. </p>
 <p> The expressions can contain the following constants and functions:</p>
 <dl>
 <dt><code>w</code></dt>
@@ -8965,12 +8965,12 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Highlight differences between two <font SIZE="-1">RGB</font> video streams: </dd>
+<dd> Highlight differences between two RGB video streams: </dd>
 <pre>
         lut2='ifnot(x-y,0,pow(2,bdx)-1):ifnot(x-y,0,pow(2,bdx)-1):ifnot(x-y,0,pow(2,bdx)-1)'
 </pre>
 <dt>&bull;</dt>
-<dd> Highlight differences between two <font SIZE="-1">YUV</font> video streams: </dd>
+<dd> Highlight differences between two YUV video streams: </dd>
 <pre>
         lut2='ifnot(x-y,0,pow(2,bdx)-1):ifnot(x-y,pow(2,bdx-1),pow(2,bdx)-1):ifnot(x-y,pow(2,bdx-1),pow(2,bdx)-1)'
 </pre>
@@ -9081,7 +9081,7 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 </dt><dd>
 <p> Default value is <code>bff</code>.</dd></dl>
 <dt><code>qp</code></dt>
-<dd> Set per-block quantization parameter (<font SIZE="-1">QP</font>) used by the internal encoder. </dd>
+<dd> Set per-block quantization parameter (QP) used by the internal encoder. </dd>
 <p> Higher values should result in a smoother motion vector field but less optimal individual vectors. Default value is 1.</dl>
 <h3>median</h3>
 <p> Pick median pixel from certain rectangle defined by radius. </p>
@@ -9337,11 +9337,11 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <p> A frame is a candidate for dropping if no 8&#215;8 blocks differ by more than a threshold of <code>hi</code>, and if no more than <code>frac</code> blocks (1 meaning the whole image) differ by more than a threshold of <code>lo</code>. </p>
 <p> Default value for <code>hi</code> is 64*12, default value for <code>lo</code> is 64*5, and default value for <code>frac</code> is 0.33.</dl>
 <h3>msad</h3>
-<p> Obtain the <font SIZE="-1">MSAD</font> (Mean Sum of Absolute Differences) between two input videos. </p>
+<p> Obtain the MSAD (Mean Sum of Absolute Differences) between two input videos. </p>
 <p> This filter takes two input videos. </p>
 <p> Both input videos must have the same resolution and pixel format for this filter to work correctly. Also it assumes that both inputs have the same number of frames, which are compared one by one. </p>
-<p> The obtained per component, average, min and max <font SIZE="-1">MSAD</font> is printed through the logging system. </p>
-<p> The filter stores the calculated <font SIZE="-1">MSAD</font> of each frame in frame metadata. </p>
+<p> The obtained per component, average, min and max MSAD is printed through the logging system. </p>
+<p> The filter stores the calculated MSAD of each frame in frame metadata. </p>
 <p> In the below example the input file <i>main.mpg</i> being processed is compared with the reference file <i>ref.mpg</i>. </p>
 <pre>
         ffmpeg -i main.mpg -i ref.mpg -lavfi msad -f null -
@@ -9550,7 +9550,7 @@ smptebars = s = 320&#215;256, split[a][b];<br />
         noise=alls=20:allf=t+u
 </pre>
 <h3>normalize</h3>
-<p> Normalize <font SIZE="-1">RGB</font> video (aka histogram stretching, contrast stretching). See: <a rel="nofollow" href="https://en.wikipedia.org/wiki/Normalization_(image_processing)">https://en.wikipedia.org/wiki/Normalization_(image_processing)</a> </p>
+<p> Normalize RGB video (aka histogram stretching, contrast stretching). See: <a rel="nofollow" href="https://en.wikipedia.org/wiki/Normalization_(image_processing)">https://en.wikipedia.org/wiki/Normalization_(image_processing)</a> </p>
 <p> For each channel of each frame, the filter computes the input range and maps it linearly to the user-specified output range. The output range defaults to the full dynamic range from pure black to pure white. </p>
 <p> Temporal smoothing can be used on the input range to reduce flickering (rapid changes in brightness) caused when small dark or bright objects enter or leave the scene. This is similar to the auto-exposure (automatic gain control) on a video camera, and, like a video camera, it may cause a period of over- or under-exposure of the video. </p>
 <p> The R,G,B channels can be normalized independently, which may cause some color shifting, or linked together as a single channel, which prevents color shifting. Linked normalization preserves hue. Independent normalization does not, so it can be used to remove some color casts. Independent and linked normalization can be combined in any ratio. </p>
@@ -9743,19 +9743,19 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <dl>
 <dl>
 <dt><code>yuv420</code></dt>
-<dd> force <font SIZE="-1">YUV420</font> output</dd>
+<dd> force YUV420 output</dd>
 <dt><code>yuv420p10</code></dt>
 <dd> force YUV420p10 output</dd>
 <dt><code>yuv422</code></dt>
-<dd> force <font SIZE="-1">YUV422</font> output</dd>
+<dd> force YUV422 output</dd>
 <dt><code>yuv422p10</code></dt>
 <dd> force YUV422p10 output</dd>
 <dt><code>yuv444</code></dt>
-<dd> force <font SIZE="-1">YUV444</font> output</dd>
+<dd> force YUV444 output</dd>
 <dt><code>rgb</code></dt>
-<dd> force packed <font SIZE="-1">RGB</font> output</dd>
+<dd> force packed RGB output</dd>
 <dt><code>gbrp</code></dt>
-<dd> force planar <font SIZE="-1">RGB</font> output</dd>
+<dd> force planar RGB output</dd>
 <dt><code>auto</code></dt>
 <dd> automatically pick format</dd></dl>
 </dl>
@@ -9788,11 +9788,11 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 <dt><code>n</code></dt>
 <dd> the number of input frame, starting from 0</dd>
 <dt><code>pos</code></dt>
-<dd> the position in the file of the input frame, <font SIZE="-1">NAN</font> if unknown</dd>
+<dd> the position in the file of the input frame, NAN if unknown</dd>
 <dt><code>t</code></dt>
-<dd> The timestamp, expressed in seconds. It&#8217;s <font SIZE="-1">NAN</font> if the input timestamp is unknown.</dd></dl>
+<dd> The timestamp, expressed in seconds. It&#8217;s NAN if the input timestamp is unknown.</dd></dl>
 <p> This filter also supports the <code>framesync</code> options. </p>
-<p> Note that the <i>n</i>, <i>pos</i>, <i>t</i> variables are available only when evaluation is done <i>per frame</i>, and will evaluate to <font SIZE="-1">NAN</font> when <code>eval</code> is set to <code>init</code>. </p>
+<p> Note that the <i>n</i>, <i>pos</i>, <i>t</i> variables are available only when evaluation is done <i>per frame</i>, and will evaluate to NAN when <code>eval</code> is set to <code>init</code>. </p>
 <p> Be aware that frames are taken from each input video in timestamp order, hence, if their initial timestamps differ, it is a good idea to pass the two inputs through a <i>setpts=PTS-STARTPTS</i> filter to have them begin in the same zero timestamp, as the example for the <i>movie</i> filter does. </p>
 <p> You can chain together more overlays but you should test the efficiency of such approach. </p>
 <p> <i>Commands</i> </p>
@@ -9815,18 +9815,18 @@ smptebars = s = 320&#215;256, split[a][b];<br />
         overlay=x=main_w-overlay_w-10:y=main_h-overlay_h-10
 </pre>
 <dt>&bull;</dt>
-<dd> Insert a transparent <font SIZE="-1">PNG</font> logo in the bottom left corner of the input, using the <code>ffmpeg</code> tool with the <tt>&quot;-filter_complex&quot;</tt> option: </dd>
+<dd> Insert a transparent PNG logo in the bottom left corner of the input, using the <code>ffmpeg</code> tool with the <tt>&quot;-filter_complex&quot;</tt> option: </dd>
 <pre>
         ffmpeg -i input -i logo -filter_complex 'overlay=10:main_h-overlay_h-10' output
 </pre>
 <dt>&bull;</dt>
-<dd> Insert 2 different transparent <font SIZE="-1">PNG</font> logos (second logo on bottom right corner) using the <code>ffmpeg</code> tool: </dd>
+<dd> Insert 2 different transparent PNG logos (second logo on bottom right corner) using the <code>ffmpeg</code> tool: </dd>
 <pre>
         ffmpeg -i input -i logo1 -i logo2 -filter_complex 'overlay=x=10:y=H-h-10,overlay=x=W-w-10:y=H-h-10' output
 </pre>
 <dt>&bull;</dt>
 <dd> Add a transparent color layer on top of the main video; <tt>&quot;WxH&quot;</tt> must specify the size of the main input to the overlay filter: </dd>
-<p>color = color = red @.3 : size = WxH[over];<br />
+<p>color = color = red @.3 : size = WxH[over];<br/>
 [in][over] overlay[out]</p>
 <dt>&bull;</dt>
 <dd> Play an original video and a filtered version (here with the deshake filter) side by side using the <code>ffplay</code> tool: </dd>
@@ -9840,27 +9840,27 @@ smptebars = s = 320&#215;256, split[a][b];<br />
 </pre>
 <dt>&bull;</dt>
 <dd> Compose output by putting two input videos side to side: </dd>
-<p>ffmpeg &#8211; i left.avi &#8211; i right.avi &#8211; filter_complex &#8221;<br />
-    nullsrc = size = 200&#215;100 [background];<br />
-[0:v] setpts = PTS &#8211; STARTPTS, scale = 100&#215;100 [left];<br />
-[1:v] setpts = PTS &#8211; STARTPTS, scale = 100&#215;100 [right];<br />
-[background][left] overlay = shortest = 1 [background + left];<br />
+<p>ffmpeg &#8211; i left.avi &#8211; i right.avi &#8211; filter_complex &#8221;<br/>
+    nullsrc = size = 200&#215;100 [background];<br/>
+[0:v] setpts = PTS &#8211; STARTPTS, scale = 100&#215;100 [left];<br/>
+[1:v] setpts = PTS &#8211; STARTPTS, scale = 100&#215;100 [right];<br/>
+[background][left] overlay = shortest = 1 [background + left];<br/>
 [background + left][right] overlay = shortest = 1 : x = 100 [left + right] &#8221;</p>
 <dt>&bull;</dt>
 <dd> Mask 10-20 seconds of a video by applying the delogo filter to a section </dd>
 <p>ffmpeg &#8211; i test.avi &#8211; codec : v : 0 wmv2 &#8211; ar 11025 &#8211; b : v 9000k &#8211; vf &#8216;[in]split[split_main][split_delogo];[split_delogo]trim=start=360:end=371,delogo=0:0:640:480[delogoed];[split_main][delogoed]overlay=eof_action=pass[out]&#8217; masked.avi</p>
 <dt>&bull;</dt>
 <dd> Chain several overlays in cascade: </dd>
-<p>nullsrc = s = 200&#215;200 [bg];<br />
-testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
-[in0] lutrgb = r = 0, [bg] overlay = 0 : 0 [mid0];<br />
-[in1] lutrgb = g = 0, [mid0] overlay = 100 : 0 [mid1];<br />
-[in2] lutrgb = b = 0, [mid1] overlay = 0 : 100 [mid2];<br />
+<p>nullsrc = s = 200&#215;200 [bg];<br/>
+testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br/>
+[in0] lutrgb = r = 0, [bg] overlay = 0 : 0 [mid0];<br/>
+[in1] lutrgb = g = 0, [mid0] overlay = 100 : 0 [mid1];<br/>
+[in2] lutrgb = b = 0, [mid1] overlay = 0 : 100 [mid2];<br/>
 [in3] null, [mid2] overlay = 100 : 100 [out0]
 </dl>
 <h3>overlay_cuda</h3>
 <p> Overlay one video on top of another. </p>
-<p> This is the <font SIZE="-1">CUDA</font> variant of the <code>overlay</code> filter. It only accepts <font SIZE="-1">CUDA</font> frames. The underlying input pixel formats have to match. </p>
+<p> This is the CUDA variant of the <code>overlay</code> filter. It only accepts CUDA frames. The underlying input pixel formats have to match. </p>
 <p> It takes two inputs and has one output. The first input is the &#8220;main&#8221; video on which the second input is overlaid. </p>
 <p> It accepts the following parameters:</p>
 <dl>
@@ -9946,7 +9946,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dt><code>x</code></dt>
 <dd>
 </dd><dt><code>y</code></dt>
-<dd> The x and y offsets as specified by the <i>x</i> and <i>y</i> expressions, or <font SIZE="-1">NAN</font> if not yet specified.</dd>
+<dd> The x and y offsets as specified by the <i>x</i> and <i>y</i> expressions, or NAN if not yet specified.</dd>
 <dt><code>a</code></dt>
 <dd> same as <i>iw</i> / <i>ih</i></dd>
 <dt><code>sar</code></dt>
@@ -10006,7 +10006,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dt><code>max_colors</code></dt>
 <dd> Set the maximum number of colors to quantize in the palette. Note: the palette will still contain 256 colors; the unused palette entries will be black.</dd>
 <dt><code>reserve_transparent</code></dt>
-<dd> Create a palette of 255 colors maximum and reserve the last one for transparency. Reserving the transparency color is useful for <font SIZE="-1">GIF</font> optimization. If not set, the maximum of colors in the palette will be 256. You probably want to disable this option for a standalone image. Set by default.</dd>
+<dd> Create a palette of 255 colors maximum and reserve the last one for transparency. Reserving the transparency color is useful for GIF optimization. If not set, the maximum of colors in the palette will be 256. You probably want to disable this option for a standalone image. Set by default.</dd>
 <dt><code>transparency_color</code></dt>
 <dd> Set the color that will be used as background for transparency.</dd>
 <dt><code>stats_mode</code></dt>
@@ -10067,7 +10067,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dl>
 <dl>
 <dt><code>rectangle</code></dt>
-<dd> Only the changing rectangle will be reprocessed. This is similar to <font SIZE="-1">GIF</font> cropping/offsetting compression mechanism. This option can be useful for speed if only a part of the image is changing, and has use cases such as limiting the scope of the error diffusal <code>dither</code> to the rectangle that bounds the moving scene (it leads to more deterministic output if the scene doesn&#8217;t change much, and as a result less moving noise and better <font SIZE="-1">GIF</font> compression).</dd></dl>
+<dd> Only the changing rectangle will be reprocessed. This is similar to GIF cropping/offsetting compression mechanism. This option can be useful for speed if only a part of the image is changing, and has use cases such as limiting the scope of the error diffusal <code>dither</code> to the rectangle that bounds the moving scene (it leads to more deterministic output if the scene doesn&#8217;t change much, and as a result less moving noise and better GIF compression).</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -10081,7 +10081,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Use a palette (generated for example with <code>palettegen</code>) to encode a <font SIZE="-1">GIF</font> using <code>ffmpeg</code>: </dd>
+<dd> Use a palette (generated for example with <code>palettegen</code>) to encode a GIF using <code>ffmpeg</code>: </dd>
 <pre>
         ffmpeg -i input.mkv -i palette.png -lavfi paletteuse output.gif
 </pre>
@@ -10164,7 +10164,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 </dl>
 <h3>phase</h3>
 <p> Delay interlaced video by one field time so that the field order changes. </p>
-<p> The intended use is to fix <font SIZE="-1">PAL</font> movies that have been captured with the opposite field order to the film-to-video transfer. </p>
+<p> The intended use is to fix PAL movies that have been captured with the opposite field order to the film-to-video transfer. </p>
 <p> A description of the accepted parameters follows.</p>
 <dl>
 <dt><code>mode</code></dt>
@@ -10236,7 +10236,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <p> <i>Commands</i> </p>
 <p> This filter supports same <code>commands</code> as options.</p>
 <h3>pp</h3>
-<p> Enable the specified chain of postprocessing subfilters using libpostproc. This library should be automatically selected with a <font SIZE="-1">GPL</font> build (<tt>&quot;--enable-gpl&quot;</tt>). Subfilters must be separated by &#8216;/&#8217; and can be disabled by prepending a &#8216;-&#8216;. Each subfilter and some options have a short and a long name that can be used interchangeably, i.e. dr/dering are the same. </p>
+<p> Enable the specified chain of postprocessing subfilters using libpostproc. This library should be automatically selected with a GPL build (<tt>&quot;--enable-gpl&quot;</tt>). Subfilters must be separated by &#8216;/&#8217; and can be disabled by prepending a &#8216;-&#8216;. Each subfilter and some options have a short and a long name that can be used interchangeably, i.e. dr/dering are the same. </p>
 <p> The filters accept the following options:</p>
 <dl>
 <dt><code>subfilters</code></dt>
@@ -10340,7 +10340,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dt><code>fd/ffmpegdeint</code></dt>
 <dd> FFmpeg deinterlacing filter that deinterlaces the given block by filtering every second line with a <tt>&quot;(-1 4 2 4 -1)&quot;</tt> filter.</dd>
 <dt><code>l5/lowpass5</code></dt>
-<dd> Vertically applied <font SIZE="-1">FIR</font> lowpass deinterlacing filter that deinterlaces the given block by filtering all lines with a <tt>&quot;(-1 2 6 2 -1)&quot;</tt> filter.</dd>
+<dd> Vertically applied FIR lowpass deinterlacing filter that deinterlaces the given block by filtering all lines with a <tt>&quot;(-1 2 6 2 -1)&quot;</tt> filter.</dd>
 <dt><code>fq/forceQuant[|quantizer]</code></dt>
 <dd> Overrides the quantizer table from the input with the constant quantizer you specify.</dd>
 <dl>
@@ -10374,17 +10374,17 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
         pp=default/tmpnoise|1|2|3
 </pre>
 <dt>&bull;</dt>
-<dd> Apply deblocking on luminance only, and switch vertical deblocking on or off automatically depending on available <font SIZE="-1">CPU</font> time: </dd>
+<dd> Apply deblocking on luminance only, and switch vertical deblocking on or off automatically depending on available CPU time: </dd>
 <pre>
         pp=hb|y/vb|a
 </pre>
 </dl>
 <h3>pp7</h3>
-<p> Apply Postprocessing filter 7. It is variant of the <code>spp</code> filter, similar to spp = 6 with 7 point <font SIZE="-1">DCT,</font> where only the center sample is used after <font SIZE="-1">IDCT.</font> </p>
+<p> Apply Postprocessing filter 7. It is variant of the <code>spp</code> filter, similar to spp = 6 with 7 point DCT, where only the center sample is used after IDCT. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>qp</code></dt>
-<dd> Force a constant quantization parameter. It accepts an integer in range 0 to 63. If not set, the filter will use the <font SIZE="-1">QP</font> from the video stream (if available).</dd>
+<dd> Force a constant quantization parameter. It accepts an integer in range 0 to 63. If not set, the filter will use the QP from the video stream (if available).</dd>
 <dt><code>mode</code></dt>
 <dd> Set thresholding mode. Available modes are:</dd>
 <dl>
@@ -10489,19 +10489,19 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 </pre>
 </dl>
 <h3>psnr</h3>
-<p> Obtain the average, maximum and minimum <font SIZE="-1">PSNR</font> (Peak Signal to Noise Ratio) between two input videos. </p>
-<p> This filter takes in input two input videos, the first input is considered the &#8220;main&#8221; source and is passed unchanged to the output. The second input is used as a &#8220;reference&#8221; video for computing the <font SIZE="-1">PSNR.</font> </p>
+<p> Obtain the average, maximum and minimum PSNR (Peak Signal to Noise Ratio) between two input videos. </p>
+<p> This filter takes in input two input videos, the first input is considered the &#8220;main&#8221; source and is passed unchanged to the output. The second input is used as a &#8220;reference&#8221; video for computing the PSNR. </p>
 <p> Both video inputs must have the same resolution and pixel format for this filter to work correctly. Also it assumes that both inputs have the same number of frames, which are compared one by one. </p>
-<p> The obtained average <font SIZE="-1">PSNR</font> is printed through the logging system. </p>
-<p> The filter stores the accumulated <font SIZE="-1">MSE</font> (mean squared error) of each frame, and at the end of the processing it is averaged across all frames equally, and the following formula is applied to obtain the <font SIZE="-1">PSNR:</font> </p>
+<p> The obtained average PSNR is printed through the logging system. </p>
+<p> The filter stores the accumulated MSE (mean squared error) of each frame, and at the end of the processing it is averaged across all frames equally, and the following formula is applied to obtain the PSNR: </p>
 <pre>
         PSNR = 10*log10(MAX^2/MSE)
 </pre>
-<p> Where <font SIZE="-1">MAX</font> is the average of the maximum values of each component of the image. </p>
+<p> Where MAX is the average of the maximum values of each component of the image. </p>
 <p> The description of the accepted parameters follows.</p>
 <dl>
 <dt><code>stats_file, f</code></dt>
-<dd> If specified the filter will use the named file to save the <font SIZE="-1">PSNR</font> of each individual frame. When filename equals &#8220;-&#8221; the data is sent to standard output.</dd>
+<dd> If specified the filter will use the named file to save the PSNR of each individual frame. When filename equals &#8220;-&#8221; the data is sent to standard output.</dd>
 <dt><code>stats_version</code></dt>
 <dd> Specifies which version of the stats file format to use. Details of each format are written below. Default value is 1.</dd>
 <dt><code>stats_add_max</code></dt>
@@ -10530,9 +10530,9 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dl>
 <dt>&bull;</dt>
 <dd> For example: </dd>
-<p>movie = ref_movie.mpg, setpts = PTS &#8211; STARTPTS[main];<br />
+<p>movie = ref_movie.mpg, setpts = PTS &#8211; STARTPTS[main];<br/>
 [main][ref] psnr = &#8220;stats_file=stats.log&#8221;[out]</p>
-<p> On this example the input file being processed is compared with the reference file <i>ref_movie.mpg</i>. The <font SIZE="-1">PSNR</font> of each individual frame is stored in <i>stats.log</i>.</p>
+<p> On this example the input file being processed is compared with the reference file <i>ref_movie.mpg</i>. The PSNR of each individual frame is stored in <i>stats.log</i>.</p>
 <dt>&bull;</dt>
 <dd> Another example with different containers: </dd>
 <p>ffmpeg &#8211; i main.mpg &#8211; i ref.mkv &#8211; lavfi &#8220;[0:v]settb=AVTB,setpts=PTS-STARTPTS[main];[1:v]settb=AVTB,setpts=PTS-STARTPTS[ref];[main][ref]psnr&#8221; &#8211; f null &#8211;
@@ -10567,19 +10567,19 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dl>
 <dt>
 </dt><dd>
-<p> This option may be set to use chroma plane instead of the default luma plane for doing filter&#8217;s computations. This may improve accuracy on very clean source material, but more likely will decrease accuracy, especially if there is chroma noise (rainbow effect) or any grayscale video. The main purpose of setting <code>mp</code> to a chroma plane is to reduce <font SIZE="-1">CPU</font> load and make pullup usable in realtime on slow machines.</dd></dl>
+<p> This option may be set to use chroma plane instead of the default luma plane for doing filter&#8217;s computations. This may improve accuracy on very clean source material, but more likely will decrease accuracy, especially if there is chroma noise (rainbow effect) or any grayscale video. The main purpose of setting <code>mp</code> to a chroma plane is to reduce CPU load and make pullup usable in realtime on slow machines.</dd></dl>
 </dl>
-<p> For best results (without duplicated frames in the output file) it is necessary to change the output frame rate. For example, to inverse telecine <font SIZE="-1">NTSC</font> input: </p>
+<p> For best results (without duplicated frames in the output file) it is necessary to change the output frame rate. For example, to inverse telecine NTSC input: </p>
 <pre>
         ffmpeg -i input -vf pullup -r 24000/1001 ...
 </pre>
 <h3>qp</h3>
-<p> Change video quantization parameters (<font SIZE="-1">QP</font>). </p>
+<p> Change video quantization parameters (QP). </p>
 <p> The filter accepts the following option:</p>
 <dl>
 <dt><code>qp</code></dt>
 <dd> Set expression for quantization parameter.</dd></dl>
-<p> The expression is evaluated through the eval <font SIZE="-1">API</font> and can contain, among others, the following constants:</p>
+<p> The expression is evaluated through the eval API and can contain, among others, the following constants:</p>
 <dl>
 <dt><i>known</i></dt>
 <dd> 1 if index is not 129, 0 otherwise.</dd>
@@ -10601,19 +10601,19 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dt><code>seed</code></dt>
 <dd> Set seed for random number generator, must be an integer included between <tt>0</tt> and <tt>&quot;UINT32_MAX&quot;</tt>. If not specified, or if explicitly set to less than <tt>0</tt>, the filter will try to use a good random seed on a best effort basis.</dd></dl>
 <h3>readeia608</h3>
-<p> Read closed captioning (<font SIZE="-1">EIA-608</font>) information from the top lines of a video frame. </p>
-<p> This filter adds frame metadata for <tt>&quot;lavfi.readeia608.X.cc&quot;</tt> and <tt>&quot;lavfi.readeia608.X.line&quot;</tt>, where <tt>&quot;X&quot;</tt> is the number of the identified line with <font SIZE="-1">EIA-608</font> data (starting from 0). A description of each metadata value follows:</p>
+<p> Read closed captioning (EIA-608) information from the top lines of a video frame. </p>
+<p> This filter adds frame metadata for <tt>&quot;lavfi.readeia608.X.cc&quot;</tt> and <tt>&quot;lavfi.readeia608.X.line&quot;</tt>, where <tt>&quot;X&quot;</tt> is the number of the identified line with EIA-608 data (starting from 0). A description of each metadata value follows:</p>
 <dl>
 <dt><code>lavfi.readeia608.X.cc</code></dt>
-<dd> The two bytes stored as <font SIZE="-1">EIA-608</font> data (printed in hexadecimal).</dd>
+<dd> The two bytes stored as EIA-608 data (printed in hexadecimal).</dd>
 <dt><code>lavfi.readeia608.X.line</code></dt>
-<dd> The number of the line on which the <font SIZE="-1">EIA-608</font> data was identified and read.</dd></dl>
+<dd> The number of the line on which the EIA-608 data was identified and read.</dd></dl>
 <p> This filter accepts the following options:</p>
 <dl>
 <dt><code>scan_min</code></dt>
-<dd> Set the line to start scanning for <font SIZE="-1">EIA-608</font> data. Default is <tt>0</tt>.</dd>
+<dd> Set the line to start scanning for EIA-608 data. Default is <tt>0</tt>.</dd>
 <dt><code>scan_max</code></dt>
-<dd> Set the line to end scanning for <font SIZE="-1">EIA-608</font> data. Default is <tt>29</tt>.</dd>
+<dd> Set the line to end scanning for EIA-608 data. Default is <tt>29</tt>.</dd>
 <dt><code>spw</code></dt>
 <dd> Set the ratio of width reserved for sync code detection. Default is <tt>0.27</tt>. Allowed range is <tt>&quot;[0.1 - 0.7]&quot;</tt>.</dd>
 <dt><code>chp</code></dt>
@@ -10625,18 +10625,18 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Output a csv with presentation time and the first two lines of identified <font SIZE="-1">EIA-608</font> captioning data. </dd>
+<dd> Output a csv with presentation time and the first two lines of identified EIA-608 captioning data. </dd>
 <pre>
         ffprobe -f lavfi -i movie=captioned_video.mov,readeia608 -show_entries frame=pkt_pts_time:frame_tags=lavfi.readeia608.0.cc,lavfi.readeia608.1.cc -of csv
 </pre>
 </dl>
 <h3>readvitc</h3>
-<p> Read vertical interval timecode (<font SIZE="-1">VITC</font>) information from the top lines of a video frame. </p>
+<p> Read vertical interval timecode (VITC) information from the top lines of a video frame. </p>
 <p> The filter adds frame metadata key <tt>&quot;lavfi.readvitc.tc_str&quot;</tt> with the timecode value, if a valid timecode has been detected. Further metadata key <tt>&quot;lavfi.readvitc.found&quot;</tt> is set to 0/1 depending on whether timecode data has been found or not. </p>
 <p> This filter accepts the following options:</p>
 <dl>
 <dt><code>scan_max</code></dt>
-<dd> Set the maximum number of lines to scan for <font SIZE="-1">VITC</font> data. If the value is set to <tt>&quot;-1&quot;</tt> the full video frame is scanned. Default is <tt>45</tt>.</dd>
+<dd> Set the maximum number of lines to scan for VITC data. If the value is set to <tt>&quot;-1&quot;</tt> the full video frame is scanned. Default is <tt>45</tt>.</dd>
 <dt><code>thr_b</code></dt>
 <dd> Set the luma threshold for black. Accepts float numbers in the range [0.0,1.0], default value is <tt>0.2</tt>. The value must be equal or less than <tt>&quot;thr_w&quot;</tt>.</dd>
 <dt><code>thr_w</code></dt>
@@ -10644,7 +10644,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Detect and draw <font SIZE="-1">VITC</font> data onto the video frame; if no valid <font SIZE="-1">VITC</font> is detected, draw <tt>&quot;--:--:--:--&quot;</tt> as a placeholder: </dd>
+<dd> Detect and draw VITC data onto the video frame; if no valid VITC is detected, draw <tt>&quot;--:--:--:--&quot;</tt> as a placeholder: </dd>
 <p>ffmpeg &#8211; i input.avi &#8211; filter : v &#8216;readvitc,drawtext=fontfile=FreeMono.ttf:text=%{metadata\:lavfi.readvitc.tc_str\:&#8211;\\\:&#8211;\\\:&#8211;\\\:&#8211;}:x=(w-tw)/2:y=400-ascent&#8217;
 </dl>
 <h3>remap</h3>
@@ -10720,7 +10720,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dt><i>24</i></dt>
 <dd> Similar as 23.</dd></dl>
 <h3>removelogo</h3>
-<p> Suppress a <font SIZE="-1">TV</font> station logo, using an image file to determine which pixels comprise the logo. It works by filling in the pixels that comprise the logo with neighboring pixels. </p>
+<p> Suppress a TV station logo, using an image file to determine which pixels comprise the logo. It works by filling in the pixels that comprise the logo with neighboring pixels. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>filename, f</code></dt>
@@ -10728,7 +10728,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <p> Pixels in the provided bitmap image with a value of zero are not considered part of the logo, non-zero pixels are considered part of the logo. If you use white (255) for the logo and black (0) for the rest, you will be safe. For making the filter bitmap, it is recommended to take a screen capture of a black frame with the logo visible, and then using a threshold filter followed by the erode filter once or twice. </p>
 <p> If needed, little splotches can be fixed manually. Remember that if logo pixels are not covered, the filter quality will be much reduced. Marking too many pixels as part of the logo does not hurt as much, but it will increase the amount of blurring needed to cover over the image and will destroy more information than necessary, and extra pixels will slow things down on a large logo.</p>
 <h3>repeatfields</h3>
-<p> This filter uses the repeat_field flag from the Video <font SIZE="-1">ES</font> headers and hard repeats fields based on its value.</p>
+<p> This filter uses the repeat_field flag from the Video ES headers and hard repeats fields based on its value.</p>
 <h3>reverse</h3>
 <p> Reverse a video clip. </p>
 <p> Warning: This filter requires memory to buffer the entire clip, so trimming is suggested. </p>
@@ -10796,9 +10796,9 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <p> The expressions for the angle and the output size can contain the following constants and functions:</p>
 <dl>
 <dt><code>n</code></dt>
-<dd> sequential number of the input frame, starting from 0. It is always <font SIZE="-1">NAN</font> before the first frame is filtered.</dd>
+<dd> sequential number of the input frame, starting from 0. It is always NAN before the first frame is filtered.</dd>
 <dt><code>t</code></dt>
-<dd> time in seconds of the input frame, it is set to 0 when the filter is configured. It is always <font SIZE="-1">NAN</font> before the first frame is filtered.</dd>
+<dd> time in seconds of the input frame, it is set to 0 when the filter is configured. It is always NAN before the first frame is filtered.</dd>
 <dt><code>hsub</code></dt>
 <dd>
 </dd><dt><code>vsub</code></dt>
@@ -10819,12 +10819,12 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Rotate the input by <font SIZE="-1">PI/6</font> radians clockwise: </dd>
+<dd> Rotate the input by PI/6 radians clockwise: </dd>
 <pre>
         rotate=PI/6
 </pre>
 <dt>&bull;</dt>
-<dd> Rotate the input by <font SIZE="-1">PI/6</font> radians counter-clockwise: </dd>
+<dd> Rotate the input by PI/6 radians counter-clockwise: </dd>
 <pre>
         rotate=-PI/6
 </pre>
@@ -10834,7 +10834,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
         rotate=45*PI/180
 </pre>
 <dt>&bull;</dt>
-<dd> Apply a constant rotation with period T, starting from an angle of <font SIZE="-1">PI/3:</font> </dd>
+<dd> Apply a constant rotation with period T, starting from an angle of PI/3: </dd>
 <pre>
         rotate=PI/3+2*PI*t/T
 </pre>
@@ -10939,9 +10939,9 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dt><code>auto</code></dt>
 <dd> Choose automatically.</dd>
 <dt><code>bt709</code></dt>
-<dd> Format conforming to International Telecommunication Union (<font SIZE="-1">ITU</font>) Recommendation <font SIZE="-1">BT.709.</font></dd>
+<dd> Format conforming to International Telecommunication Union (ITU) Recommendation BT.709.</dd>
 <dt><code>fcc</code></dt>
-<dd> Set color space conforming to the United States Federal Communications Commission (<font SIZE="-1">FCC</font>) Code of Federal Regulations (<font SIZE="-1">CFR</font>) Title 47 (2003) 73.682 (a).</dd>
+<dd> Set color space conforming to the United States Federal Communications Commission (FCC) Code of Federal Regulations (CFR) Title 47 (2003) 73.682 (a).</dd>
 <dt><code>bt601</code></dt>
 <dd>
 </dd><dt><code>bt470</code></dt>
@@ -10951,18 +10951,18 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">ITU</font> Radiocommunication Sector (ITU-R) Recommendation <font SIZE="-1">BT.601</font></dd>
+<dd> ITU Radiocommunication Sector (ITU-R) Recommendation BT.601</dd>
 <dt>&bull;</dt>
-<dd> ITU-R Rec. <font SIZE="-1">BT.470-6</font> (1998) Systems B, B1, and G</dd>
+<dd> ITU-R Rec. BT.470-6 (1998) Systems B, B1, and G</dd>
 <dt>&bull;</dt>
-<dd> Society of Motion Picture and Television Engineers (<font SIZE="-1">SMPTE</font>) <font SIZE="-1">ST 170:2004</font></dd></dl>
+<dd> Society of Motion Picture and Television Engineers (SMPTE) ST 170:2004</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt><code>smpte240m</code></dt>
-<dd> Set color space conforming to <font SIZE="-1">SMPTE ST 240:1999.</font></dd>
+<dd> Set color space conforming to SMPTE ST 240:1999.</dd>
 <dt><code>bt2020</code></dt>
-<dd> Set color space conforming to ITU-R <font SIZE="-1">BT.2020</font> non-constant luminance system.</dd></dl>
+<dd> Set color space conforming to ITU-R BT.2020 non-constant luminance system.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -10978,7 +10978,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dt><code>jpeg/full/pc</code></dt>
 <dd> Set full range (0-255 in case of 8-bit luma).</dd>
 <dt><code>mpeg/limited/tv</code></dt>
-<dd> Set &#8220;<font SIZE="-1">MPEG&#8221;</font> range (16-235 in case of 8-bit luma).</dd></dl>
+<dd> Set &#8220;MPEG&#8221; range (16-235 in case of 8-bit luma).</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -11130,11 +11130,11 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dd> Set the output video dimension expression. The command accepts the same syntax of the corresponding option. </dd>
 <p> If the specified expression is not valid, it is kept at its current value.</dl>
 <h3>scale_npp</h3>
-<p> Use the <font SIZE="-1">NVIDIA</font> Performance Primitives (libnpp) to perform scaling and/or pixel format conversion on <font SIZE="-1">CUDA</font> video frames. Setting the output width and height works in the same way as for the <i>scale</i> filter. </p>
+<p> Use the NVIDIA Performance Primitives (libnpp) to perform scaling and/or pixel format conversion on CUDA video frames. Setting the output width and height works in the same way as for the <i>scale</i> filter. </p>
 <p> The following additional options are accepted:</p>
 <dl>
 <dt><code>format</code></dt>
-<dd> The pixel format of the output <font SIZE="-1">CUDA</font> frames. If set to the string &#8220;same&#8221; (the default), the input format will be kept. Note that automatic format negotiation and conversion is not yet supported for hardware frames</dd>
+<dd> The pixel format of the output CUDA frames. If set to the string &#8220;same&#8221; (the default), the input format will be kept. Note that automatic format negotiation and conversion is not yet supported for hardware frames</dd>
 <dt><code>interp_algo</code></dt>
 <dd> The interpolation algorithm used for resizing. One of the following:</dd>
 <dl>
@@ -11253,7 +11253,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dt><code>sc_pass, s</code></dt>
 <dd> Set the flag to pass scene change frames to the next filter. Default value is <tt>0</tt> You can enable it if you want to get snapshot of scene change frames only.</dd></dl>
 <h3>selectivecolor</h3>
-<p> Adjust cyan, magenta, yellow and black (<font SIZE="-1">CMYK</font>) to certain ranges of colors (such as &#8220;reds&#8221;, &#8220;yellows&#8221;, &#8220;greens&#8221;, &#8220;cyans&#8221;, &#8230;). The adjustment range is defined by the &#8220;purity&#8221; of the color (that is, how saturated it already is). </p>
+<p> Adjust cyan, magenta, yellow and black (CMYK) to certain ranges of colors (such as &#8220;reds&#8221;, &#8220;yellows&#8221;, &#8220;greens&#8221;, &#8220;cyans&#8221;, &#8230;). The adjustment range is defined by the &#8220;purity&#8221; of the color (that is, how saturated it already is). </p>
 <p> This filter is similar to the Adobe Photoshop Selective Color tool. </p>
 <p> The filter accepts the following options:</p>
 <dl>
@@ -11327,7 +11327,7 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <dd> Set the maximum integer value to use for expressing numerator and denominator when reducing the expressed aspect ratio to a rational. Default value is <tt>100</tt>.</dd></dl>
 <p> The parameter <i>sar</i> is an expression containing the following constants:</p>
 <dl>
-<dt><code>E, </code><font SIZE="-1"><code>PI, PHI</code></font></dt>
+<dt><code>E, </code><code>PI, PHI</code></dt>
 <dd> These are approximated values for the mathematical constants e (Euler&#8217;s number), pi (Greek pi), and phi (the golden ratio).</dd>
 <dt><code>w, h</code></dt>
 <dd> The input width and height.</dd>
@@ -11644,61 +11644,61 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
 <p> Evaluate various visual metrics that assist in determining issues associated with the digitization of analog video media. </p>
 <p> By default the filter will log these metadata values:</p>
 <dl>
-<dt><font SIZE="-1"><code>YMIN</code></font></dt>
+<dt><code>YMIN</code></dt>
 <dd> Display the minimal Y value contained within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>YLOW</code></font></dt>
+<dt><code>YLOW</code></dt>
 <dd> Display the Y value at the 10% percentile within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>YAVG</code></font></dt>
+<dt><code>YAVG</code></dt>
 <dd> Display the average Y value within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>YHIGH</code></font></dt>
+<dt><code>YHIGH</code></dt>
 <dd> Display the Y value at the 90% percentile within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>YMAX</code></font></dt>
+<dt><code>YMAX</code></dt>
 <dd> Display the maximum Y value contained within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>UMIN</code></font></dt>
+<dt><code>UMIN</code></dt>
 <dd> Display the minimal U value contained within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>ULOW</code></font></dt>
+<dt><code>ULOW</code></dt>
 <dd> Display the U value at the 10% percentile within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>UAVG</code></font></dt>
+<dt><code>UAVG</code></dt>
 <dd> Display the average U value within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>UHIGH</code></font></dt>
+<dt><code>UHIGH</code></dt>
 <dd> Display the U value at the 90% percentile within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>UMAX</code></font></dt>
+<dt><code>UMAX</code></dt>
 <dd> Display the maximum U value contained within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>VMIN</code></font></dt>
+<dt><code>VMIN</code></dt>
 <dd> Display the minimal V value contained within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>VLOW</code></font></dt>
+<dt><code>VLOW</code></dt>
 <dd> Display the V value at the 10% percentile within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>VAVG</code></font></dt>
+<dt><code>VAVG</code></dt>
 <dd> Display the average V value within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>VHIGH</code></font></dt>
+<dt><code>VHIGH</code></dt>
 <dd> Display the V value at the 90% percentile within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>VMAX</code></font></dt>
+<dt><code>VMAX</code></dt>
 <dd> Display the maximum V value contained within the input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>SATMIN</code></font></dt>
+<dt><code>SATMIN</code></dt>
 <dd> Display the minimal saturation value contained within the input frame. Expressed in range of [0-~181.02].</dd>
-<dt><font SIZE="-1"><code>SATLOW</code></font></dt>
+<dt><code>SATLOW</code></dt>
 <dd> Display the saturation value at the 10% percentile within the input frame. Expressed in range of [0-~181.02].</dd>
-<dt><font SIZE="-1"><code>SATAVG</code></font></dt>
+<dt><code>SATAVG</code></dt>
 <dd> Display the average saturation value within the input frame. Expressed in range of [0-~181.02].</dd>
-<dt><font SIZE="-1"><code>SATHIGH</code></font></dt>
+<dt><code>SATHIGH</code></dt>
 <dd> Display the saturation value at the 90% percentile within the input frame. Expressed in range of [0-~181.02].</dd>
-<dt><font SIZE="-1"><code>SATMAX</code></font></dt>
+<dt><code>SATMAX</code></dt>
 <dd> Display the maximum saturation value contained within the input frame. Expressed in range of [0-~181.02].</dd>
-<dt><font SIZE="-1"><code>HUEMED</code></font></dt>
+<dt><code>HUEMED</code></dt>
 <dd> Display the median value for hue within the input frame. Expressed in range of [0-360].</dd>
-<dt><font SIZE="-1"><code>HUEAVG</code></font></dt>
+<dt><code>HUEAVG</code></dt>
 <dd> Display the average value for hue within the input frame. Expressed in range of [0-360].</dd>
-<dt><font SIZE="-1"><code>YDIF</code></font></dt>
+<dt><code>YDIF</code></dt>
 <dd> Display the average of sample value difference between all values of the Y plane in the current frame and corresponding values of the previous input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>UDIF</code></font></dt>
+<dt><code>UDIF</code></dt>
 <dd> Display the average of sample value difference between all values of the U plane in the current frame and corresponding values of the previous input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>VDIF</code></font></dt>
+<dt><code>VDIF</code></dt>
 <dd> Display the average of sample value difference between all values of the V plane in the current frame and corresponding values of the previous input frame. Expressed in range of [0-255].</dd>
-<dt><font SIZE="-1"><code>YBITDEPTH</code></font></dt>
+<dt><code>YBITDEPTH</code></dt>
 <dd> Display bit depth of Y plane in current frame. Expressed in range of [0-16].</dd>
-<dt><font SIZE="-1"><code>UBITDEPTH</code></font></dt>
+<dt><code>UBITDEPTH</code></dt>
 <dd> Display bit depth of U plane in current frame. Expressed in range of [0-16].</dd>
-<dt><font SIZE="-1"><code>VBITDEPTH</code></font></dt>
+<dt><code>VBITDEPTH</code></dt>
 <dd> Display bit depth of V plane in current frame. Expressed in range of [0-16].</dd></dl>
 <p> The filter accepts the following options:</p>
 <dl>
@@ -11743,14 +11743,14 @@ testsrc = s = 100&#215;100, split = 4 [in0][in1][in2][in3];<br />
         ffplay example.mov -vf signalstats=stat=brng+vrep+tout,drawtext=fontfile=FreeSerif.ttf:textfile=signalstat_drawtext.txt
 </pre>
 <p> The contents of signalstat_drawtext.txt used in the command are: </p>
-<p>time % {pts : hms} Y(% {metadata : lavfi.signalstats.YMIN} &#8211; % {metadata : lavfi.signalstats.YMAX}) U(% {metadata : lavfi.signalstats.UMIN} &#8211; % {metadata : lavfi.signalstats.UMAX}) V(% {metadata : lavfi.signalstats.VMIN} &#8211; % {metadata : lavfi.signalstats.VMAX}) saturation maximum : %<br />
-{<br />
-metadata:<br />
-    lavfi.signalstats.SATMAX<br />
+<p>time % {pts : hms} Y(% {metadata : lavfi.signalstats.YMIN} &#8211; % {metadata : lavfi.signalstats.YMAX}) U(% {metadata : lavfi.signalstats.UMIN} &#8211; % {metadata : lavfi.signalstats.UMAX}) V(% {metadata : lavfi.signalstats.VMIN} &#8211; % {metadata : lavfi.signalstats.VMAX}) saturation maximum : %<br/>
+{<br/>
+metadata:<br/>
+    lavfi.signalstats.SATMAX<br/>
 }
 </dl>
 <h3>signature</h3>
-<p> Calculates the <font SIZE="-1">MPEG-7</font> Video Signature. The filter can handle more than one input. In this case the matching between the inputs can be calculated additionally. The filter always passes through the first input. The signature of each stream can be written into a file. </p>
+<p> Calculates the MPEG-7 Video Signature. The filter can handle more than one input. In this case the matching between the inputs can be calculated additionally. The filter always passes through the first input. The signature of each stream can be written into a file. </p>
 <p> It accepts the following options:</p>
 <dl>
 <dt><code>detectmode</code></dt>
@@ -11801,7 +11801,7 @@ metadata:<br />
         ffmpeg -i input.mkv -vf signature=filename=signature.bin -map 0:v -f null -
 </pre>
 <dt>&bull;</dt>
-<dd> To detect whether two videos match and store the signatures in <font SIZE="-1">XML</font> format in signature0.xml and signature1.xml: </dd>
+<dd> To detect whether two videos match and store the signatures in XML format in signature0.xml and signature1.xml: </dd>
 <p>ffmpeg &#8211; i input1.mkv &#8211; i input2.mkv &#8211; filter_complex &#8220;[0:v][1:v] signature=nb_inputs=2:detectmode=full:format=xml:filename=signature%d.xml&#8221; &#8211; map : v &#8211; f null &#8211;
 </dl>
 <h3>smartblur</h3>
@@ -11840,7 +11840,7 @@ metadata:<br />
 <dt><code>quality</code></dt>
 <dd> Set quality. This option defines the number of levels for averaging. It accepts an integer in the range 0-6. If set to <tt>0</tt>, the filter will have no effect. A value of <tt>6</tt> means the higher quality. For each increment of that value the speed drops by a factor of approximately 2. Default value is <tt>3</tt>.</dd>
 <dt><code>qp</code></dt>
-<dd> Force a constant quantization parameter. If not set, the filter will use the <font SIZE="-1">QP</font> from the video stream (if available).</dd>
+<dd> Force a constant quantization parameter. If not set, the filter will use the QP from the video stream (if available).</dd>
 <dt><code>mode</code></dt>
 <dd> Set thresholding mode. Available modes are:</dd>
 <dl>
@@ -11853,7 +11853,7 @@ metadata:<br />
 <dl>
 </dl>
 <dt><code>use_bframe_qp</code></dt>
-<dd> Enable the use of the <font SIZE="-1">QP</font> from the B-Frames if set to <tt>1</tt>. Using this option may cause flicker since the B-Frames have often larger <font SIZE="-1">QP.</font> Default is <tt>0</tt> (not enabled).</dd></dl>
+<dd> Enable the use of the QP from the B-Frames if set to <tt>1</tt>. Using this option may cause flicker since the B-Frames have often larger QP. Default is <tt>0</tt> (not enabled).</dd></dl>
 <p> <i>Commands</i> </p>
 <p> This filter supports the following commands:</p>
 <dl>
@@ -11863,19 +11863,19 @@ metadata:<br />
 <p> Scale the input by applying one of the super-resolution methods based on convolutional neural networks. Supported models:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> Super-Resolution Convolutional Neural Network model (<font SIZE="-1">SRCNN</font>). See &lt;<code><a rel="nofollow" href="https://arxiv.org/abs/1501.00092">https://arxiv.org/abs/1501.00092</a></code>&gt;.</dd>
+<dd> Super-Resolution Convolutional Neural Network model (SRCNN). See &lt;<code><a rel="nofollow" href="https://arxiv.org/abs/1501.00092">https://arxiv.org/abs/1501.00092</a></code>&gt;.</dd>
 <dt>&bull;</dt>
-<dd> Efficient Sub-Pixel Convolutional Neural Network model (<font SIZE="-1">ESPCN</font>). See &lt;<code><a rel="nofollow" href="https://arxiv.org/abs/1609.05158">https://arxiv.org/abs/1609.05158</a></code>&gt;.</dd></dl>
+<dd> Efficient Sub-Pixel Convolutional Neural Network model (ESPCN). See &lt;<code><a rel="nofollow" href="https://arxiv.org/abs/1609.05158">https://arxiv.org/abs/1609.05158</a></code>&gt;.</dd></dl>
 <p> Training scripts as well as scripts for model file (.pb) saving can be found at &lt;<code><a rel="nofollow" href="https://github.com/XueweiMeng/sr/tree/sr_dnn_native">https://github.com/XueweiMeng/sr/tree/sr_dnn_native</a></code>&gt;. Original repository is at &lt;<code><a rel="nofollow" href="https://github.com/HighVoltageRocknRoll/sr.git">https://github.com/HighVoltageRocknRoll/sr.git</a></code>&gt;. </p>
 <p> Native model files (.model) can be generated from TensorFlow model files (.pb) by using tools/python/convert.py </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>dnn_backend</code></dt>
-<dd> Specify which <font SIZE="-1">DNN</font> backend to use for model loading and execution. This option accepts the following values:</dd>
+<dd> Specify which DNN backend to use for model loading and execution. This option accepts the following values:</dd>
 <dl>
 <dl>
 <dt><code>native</code></dt>
-<dd> Native implementation of <font SIZE="-1">DNN</font> loading and execution.</dd>
+<dd> Native implementation of DNN loading and execution.</dd>
 <dt><code>tensorflow</code></dt>
 <dd> TensorFlow backend. To enable this backend you need to install the TensorFlow for C library (see &lt;<code><a rel="nofollow" href="https://www.tensorflow.org/install/install_c">https://www.tensorflow.org/install/install_c</a></code>&gt;) and configure FFmpeg with <tt>&quot;--enable-libtensorflow&quot;</tt></dd></dl>
 </dl>
@@ -11886,26 +11886,26 @@ metadata:<br />
 <dt><code>model</code></dt>
 <dd> Set path to model file specifying network architecture and its parameters. Note that different backends use different file formats. TensorFlow backend can load files for both formats, while native backend can load files for only its format.</dd>
 <dt><code>scale_factor</code></dt>
-<dd> Set scale factor for <font SIZE="-1">SRCNN</font> model. Allowed values are <tt>2</tt>, <tt>3</tt> and <tt>4</tt>. Default value is <tt>2</tt>. Scale factor is necessary for <font SIZE="-1">SRCNN</font> model, because it accepts input upscaled using bicubic upscaling with proper scale factor.</dd></dl>
+<dd> Set scale factor for SRCNN model. Allowed values are <tt>2</tt>, <tt>3</tt> and <tt>4</tt>. Default value is <tt>2</tt>. Scale factor is necessary for SRCNN model, because it accepts input upscaled using bicubic upscaling with proper scale factor.</dd></dl>
 <p> This feature can also be finished with <code>dnn_processing</code> filter.</p>
 <h3>ssim</h3>
-<p> Obtain the <font SIZE="-1">SSIM</font> (Structural SImilarity Metric) between two input videos. </p>
-<p> This filter takes in input two input videos, the first input is considered the &#8220;main&#8221; source and is passed unchanged to the output. The second input is used as a &#8220;reference&#8221; video for computing the <font SIZE="-1">SSIM.</font> </p>
+<p> Obtain the SSIM (Structural SImilarity Metric) between two input videos. </p>
+<p> This filter takes in input two input videos, the first input is considered the &#8220;main&#8221; source and is passed unchanged to the output. The second input is used as a &#8220;reference&#8221; video for computing the SSIM. </p>
 <p> Both video inputs must have the same resolution and pixel format for this filter to work correctly. Also it assumes that both inputs have the same number of frames, which are compared one by one. </p>
-<p> The filter stores the calculated <font SIZE="-1">SSIM</font> of each frame. </p>
+<p> The filter stores the calculated SSIM of each frame. </p>
 <p> The description of the accepted parameters follows.</p>
 <dl>
 <dt><code>stats_file, f</code></dt>
-<dd> If specified the filter will use the named file to save the <font SIZE="-1">SSIM</font> of each individual frame. When filename equals &#8220;-&#8221; the data is sent to standard output.</dd></dl>
+<dd> If specified the filter will use the named file to save the SSIM of each individual frame. When filename equals &#8220;-&#8221; the data is sent to standard output.</dd></dl>
 <p> The file printed if <i>stats_file</i> is selected, contains a sequence of key/value pairs of the form <i>key</i>:<i>value</i> for each compared couple of frames. </p>
 <p> A description of each shown parameter follows:</p>
 <dl>
 <dt><code>n</code></dt>
 <dd> sequential number of the input frame, starting from 1</dd>
 <dt><code>Y, U, V, R, G, B</code></dt>
-<dd> <font SIZE="-1">SSIM</font> of the compared frames for the component specified by the suffix.</dd>
+<dd> SSIM of the compared frames for the component specified by the suffix.</dd>
 <dt><code>All</code></dt>
-<dd> <font SIZE="-1">SSIM</font> of the compared frames for the whole frame.</dd>
+<dd> SSIM of the compared frames for the whole frame.</dd>
 <dt><code>dB</code></dt>
 <dd> Same as above but in dB representation.</dd></dl>
 <p> This filter also supports the <code>framesync</code> options. </p>
@@ -11913,9 +11913,9 @@ metadata:<br />
 <dl>
 <dt>&bull;</dt>
 <dd> For example: </dd>
-<p>movie = ref_movie.mpg, setpts = PTS &#8211; STARTPTS[main];<br />
+<p>movie = ref_movie.mpg, setpts = PTS &#8211; STARTPTS[main];<br/>
 [main][ref] ssim = &#8220;stats_file=stats.log&#8221;[out]</p>
-<p> On this example the input file being processed is compared with the reference file <i>ref_movie.mpg</i>. The <font SIZE="-1">SSIM</font> of each individual frame is stored in <i>stats.log</i>.</p>
+<p> On this example the input file being processed is compared with the reference file <i>ref_movie.mpg</i>. The SSIM of each individual frame is stored in <i>stats.log</i>.</p>
 <dt>&bull;</dt>
 <dd> Another example with both psnr and ssim at same time: </dd>
 <p>ffmpeg &#8211; i main.mpg &#8211; i ref.mpg &#8211; lavfi &#8220;ssim;[0:v][1:v]psnr&#8221; &#8211; f null &#8211;</p>
@@ -12049,7 +12049,7 @@ metadata:<br />
 <dt><code>icr</code></dt>
 <dd> interleaved columns, right eye first</dd>
 <dt><code>hdmi</code></dt>
-<dd> <font SIZE="-1">HDMI</font> frame pack</dd></dl>
+<dd> HDMI frame pack</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -12097,23 +12097,23 @@ metadata:<br />
 </dl>
 <h3>subtitles</h3>
 <p> Draw subtitles on top of input video using the libass library. </p>
-<p> To enable compilation of this filter you need to configure FFmpeg with <tt>&quot;--enable-libass&quot;</tt>. This filter also requires a build with libavcodec and libavformat to convert the passed subtitles file to <font SIZE="-1">ASS</font> (Advanced Substation Alpha) subtitles format. </p>
+<p> To enable compilation of this filter you need to configure FFmpeg with <tt>&quot;--enable-libass&quot;</tt>. This filter also requires a build with libavcodec and libavformat to convert the passed subtitles file to ASS (Advanced Substation Alpha) subtitles format. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>filename, f</code></dt>
 <dd> Set the filename of the subtitle file to read. It must be specified.</dd>
 <dt><code>original_size</code></dt>
-<dd> Specify the size of the original video, the video for which the <font SIZE="-1">ASS</font> file was composed. For the syntax of this option, check the <code>&#8220;Video size&#8221; section in the ffmpeg-utils manual</code>. Due to a misdesign in <font SIZE="-1">ASS</font> aspect ratio arithmetic, this is necessary to correctly scale the fonts if the aspect ratio has been changed.</dd>
+<dd> Specify the size of the original video, the video for which the ASS file was composed. For the syntax of this option, check the <code>&#8220;Video size&#8221; section in the ffmpeg-utils manual</code>. Due to a misdesign in ASS aspect ratio arithmetic, this is necessary to correctly scale the fonts if the aspect ratio has been changed.</dd>
 <dt><code>fontsdir</code></dt>
 <dd> Set a directory path containing fonts that can be used by the filter. These fonts will be used in addition to whatever the font provider uses.</dd>
 <dt><code>alpha</code></dt>
 <dd> Process alpha channel, by default alpha channel is untouched.</dd>
 <dt><code>charenc</code></dt>
-<dd> Set subtitles input character encoding. <tt>&quot;subtitles&quot;</tt> filter only. Only useful if not <font SIZE="-1">UTF-8.</font></dd>
+<dd> Set subtitles input character encoding. <tt>&quot;subtitles&quot;</tt> filter only. Only useful if not UTF-8.</dd>
 <dt><code>stream_index, si</code></dt>
 <dd> Set subtitles stream index. <tt>&quot;subtitles&quot;</tt> filter only.</dd>
 <dt><code>force_style</code></dt>
-<dd> Override default style or script info parameters of the subtitles. It accepts a string containing <font SIZE="-1">ASS</font> style format <tt>&quot;KEY=VALUE&quot;</tt> couples separated by &#8220;,&#8221;.</dd></dl>
+<dd> Override default style or script info parameters of the subtitles. It accepts a string containing ASS style format <tt>&quot;KEY=VALUE&quot;</tt> couples separated by &#8220;,&#8221;.</dd></dl>
 <p> If the first key is not specified, it is assumed that the first value specifies the <code>filename</code>. </p>
 <p> For example, to render the file <i>sub.srt</i> on top of the input video, use the command: </p>
 <pre>
@@ -12170,9 +12170,9 @@ metadata:<br />
 <dt><code>n</code></dt>
 <dd> The number of the input frame, starting from 0.</dd>
 <dt><code>t</code></dt>
-<dd> The timestamp expressed in seconds. It&#8217;s <font SIZE="-1">NAN</font> if the input timestamp is unknown.</dd>
+<dd> The timestamp expressed in seconds. It&#8217;s NAN if the input timestamp is unknown.</dd>
 <dt><code>pos</code></dt>
-<dd> the position in the file of the input frame, <font SIZE="-1">NAN</font> if unknown</dd></dl>
+<dd> the position in the file of the input frame, NAN if unknown</dd></dl>
 <p> <i>Commands</i> </p>
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>swapuv</h3>
@@ -12345,7 +12345,7 @@ metadata:<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Produce 8&#215;8 <font SIZE="-1">PNG</font> tiles of all keyframes (<code>-skip_frame nokey</code>) in a movie: </dd>
+<dd> Produce 8&#215;8 PNG tiles of all keyframes (<code>-skip_frame nokey</code>) in a movie: </dd>
 <pre>
         ffmpeg -skip_frame nokey -i file.avi -vf 'scale=128:72,tile=8x8' -an -vsync 0 keyframes%03d.png
 </pre>
@@ -12811,7 +12811,7 @@ metadata:<br />
 <dl>
 <dt><code>planes</code></dt>
 <dd> Set which planes will be processed, unprocessed planes will be copied. By default value 0xf, all planes will be processed. </dd>
-<p> If the format has 1 or 2 components, then luma is bit 0. If the format has 3 or 4 components: for <font SIZE="-1">RGB</font> formats bit 0 is green, bit 1 is blue and bit 2 is red; for <font SIZE="-1">YUV</font> formats bit 0 is luma, bit 1 is chroma-U and bit 2 is chroma-V. If present, the alpha channel is always the last bit.</p>
+<p> If the format has 1 or 2 components, then luma is bit 0. If the format has 3 or 4 components: for RGB formats bit 0 is green, bit 1 is blue and bit 2 is red; for YUV formats bit 0 is luma, bit 1 is chroma-U and bit 2 is chroma-V. If present, the alpha channel is always the last bit.</p>
 <dt><code>inplace</code></dt>
 <dd> Do not require 2nd input for processing, instead use alpha plane from input stream.</dd></dl>
 <h3>unsharp</h3>
@@ -12866,13 +12866,13 @@ metadata:<br />
 </dl>
 <h3>uspp</h3>
 <p> Apply ultra slow/simple postprocessing filter that compresses and decompresses the image at several (or &#8211; in the case of <code>quality</code> level <tt>8</tt> &#8211; all) shifts and average the results. </p>
-<p> The way this differs from the behavior of spp is that uspp actually encodes &amp; decodes each case with libavcodec Snow, whereas spp uses a simplified intra only 8&#215;8 <font SIZE="-1">DCT</font> similar to <font SIZE="-1">MJPEG.</font> </p>
+<p> The way this differs from the behavior of spp is that uspp actually encodes &amp; decodes each case with libavcodec Snow, whereas spp uses a simplified intra only 8&#215;8 DCT similar to MJPEG. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>quality</code></dt>
 <dd> Set quality. This option defines the number of levels for averaging. It accepts an integer in the range 0-8. If set to <tt>0</tt>, the filter will have no effect. A value of <tt>8</tt> means the higher quality. For each increment of that value the speed drops by a factor of approximately 2. Default value is <tt>3</tt>.</dd>
 <dt><code>qp</code></dt>
-<dd> Force a constant quantization parameter. If not set, the filter will use the <font SIZE="-1">QP</font> from the video stream (if available).</dd></dl>
+<dd> Force a constant quantization parameter. If not set, the filter will use the QP from the video stream (if available).</dd></dl>
 <h3>v360</h3>
 <p> Convert 360 videos between various formats. </p>
 <p> The filter accepts the following options:</p>
@@ -13619,11 +13619,11 @@ metadata:<br />
 <p> <i>Commands</i> </p>
 <p> This filter supports the all above options as <code>commands</code>.</p>
 <h3>vif</h3>
-<p> Obtain the average <font SIZE="-1">VIF</font> (Visual Information Fidelity) between two input videos. </p>
+<p> Obtain the average VIF (Visual Information Fidelity) between two input videos. </p>
 <p> This filter takes two input videos. </p>
 <p> Both input videos must have the same resolution and pixel format for this filter to work correctly. Also it assumes that both inputs have the same number of frames, which are compared one by one. </p>
-<p> The obtained average <font SIZE="-1">VIF</font> score is printed through the logging system. </p>
-<p> The filter stores the calculated <font SIZE="-1">VIF</font> score of each frame. </p>
+<p> The obtained average VIF score is printed through the logging system. </p>
+<p> The filter stores the calculated VIF score of each frame. </p>
 <p> In the below example the input file <i>main.mpg</i> being processed is compared with the reference file <i>ref.mpg</i>. </p>
 <pre>
         ffmpeg -i main.mpg -i ref.mpg -lavfi vif -f null -
@@ -13671,7 +13671,7 @@ metadata:<br />
 <dt><code>dither</code></dt>
 <dd> Set dithering to reduce the circular banding effects. Default is <tt>1</tt> (enabled).</dd>
 <dt><code>aspect</code></dt>
-<dd> Set vignette aspect. This setting allows one to adjust the shape of the vignette. Setting this value to the <font SIZE="-1">SAR</font> of the input will make a rectangular vignetting following the dimensions of the video. </dd>
+<dd> Set vignette aspect. This setting allows one to adjust the shape of the vignette. Setting this value to the SAR of the input will make a rectangular vignetting following the dimensions of the video. </dd>
 <p> Default is <tt>&quot;1/1&quot;</tt>.</dl>
 <p> <i>Expressions</i> </p>
 <p> The <code>alpha</code>, <code>x0</code> and <code>y0</code> expressions can contain the following parameters.</p>
@@ -13683,11 +13683,11 @@ metadata:<br />
 <dt><code>n</code></dt>
 <dd> the number of input frame, starting from 0</dd>
 <dt><code>pts</code></dt>
-<dd> the <font SIZE="-1">PTS</font> (Presentation TimeStamp) time of the filtered video frame, expressed in <i></i><font SIZE="-1"><i>TB</i></font><i></i> units, <font SIZE="-1">NAN</font> if undefined</dd>
+<dd> the PTS (Presentation TimeStamp) time of the filtered video frame, expressed in <i></i><i>TB</i><i></i> units, NAN if undefined</dd>
 <dt><code>r</code></dt>
-<dd> frame rate of the input video, <font SIZE="-1">NAN</font> if the input frame rate is unknown</dd>
+<dd> frame rate of the input video, NAN if the input frame rate is unknown</dd>
 <dt><code>t</code></dt>
-<dd> the <font SIZE="-1">PTS</font> (Presentation TimeStamp) of the filtered video frame, expressed in seconds, <font SIZE="-1">NAN</font> if undefined</dd>
+<dd> the PTS (Presentation TimeStamp) of the filtered video frame, expressed in seconds, NAN if undefined</dd>
 <dt><code>tb</code></dt>
 <dd> time base of the input video</dd></dl>
 <p> <i>Examples</i></p>
@@ -13704,7 +13704,7 @@ metadata:<br />
 </pre>
 </dl>
 <h3>vmafmotion</h3>
-<p> Obtain the average <font SIZE="-1">VMAF</font> motion score of a video. It is one of the component metrics of <font SIZE="-1">VMAF.</font> </p>
+<p> Obtain the average VMAF motion score of a video. It is one of the component metrics of VMAF. </p>
 <p> The obtained average motion score is printed through the logging system. </p>
 <p> The filter accepts the following options:</p>
 <dl>
@@ -13726,7 +13726,7 @@ metadata:<br />
 <dd> If set to 1, force the output to terminate when the shortest input terminates. Default value is 0.</dd></dl>
 <h3>w3fdif</h3>
 <p> Deinterlace the input video (&#8220;w3fdif&#8221; stands for &#8220;Weston 3 Field Deinterlacing Filter&#8221;). </p>
-<p> Based on the process described by Martin Weston for <font SIZE="-1">BBC R&amp;D,</font> and implemented based on the de-interlace algorithm written by Jim Easterbrook for <font SIZE="-1">BBC R&amp;D,</font> the Weston 3 field deinterlacing filter uses filter coefficients calculated by <font SIZE="-1">BBC R&amp;D.</font> </p>
+<p> Based on the process described by Martin Weston for BBC R&amp;D, and implemented based on the de-interlace algorithm written by Jim Easterbrook for BBC R&amp;D, the Weston 3 field deinterlacing filter uses filter coefficients calculated by BBC R&amp;D. </p>
 <p> This filter uses field-dominance information in frame to decide which of each pair of fields to place first in the output. If it gets it wrong use <code>setfield</code> filter before <tt>&quot;w3fdif&quot;</tt> filter. </p>
 <p> There are two sets of filter coefficients, so called &#8220;simple&#8221; and &#8220;complex&#8221;. Which set of filter coefficients is used can be set by passing an optional parameter:</p>
 <dl>
@@ -13816,7 +13816,7 @@ metadata:<br />
 </dt><dd>
 <p> Default is <tt>&quot;stack&quot;</tt>.</dd></dl>
 <dt><code>components, c</code></dt>
-<dd> Set which color components to display. Default is 1, which means only luminance or red color component if input is in <font SIZE="-1">RGB</font> colorspace. If is set for example to 7 it will display all 3 (if) available color components.</dd>
+<dd> Set which color components to display. Default is 1, which means only luminance or red color component if input is in RGB colorspace. If is set for example to 7 it will display all 3 (if) available color components.</dd>
 <dt><code>envelope, e</code></dt>
 <dd>
 </dd><dl>
@@ -13903,7 +13903,7 @@ metadata:<br />
 <dt><code>tint0, t0</code></dt>
 <dd>
 </dd><dt><code>tint1, t1</code></dt>
-<dd> Set tint for output. Only used with lowpass filter and when display is not overlay and input pixel formats are not <font SIZE="-1">RGB.</font></dd></dl>
+<dd> Set tint for output. Only used with lowpass filter and when display is not overlay and input pixel formats are not RGB.</dd></dl>
 <h3>weave, doubleweave</h3>
 <p> The <tt>&quot;weave&quot;</tt> takes a field-based video input and join each two sequential fields into single frame, producing a new double height clip with half the frame rate and half the frame count. </p>
 <p> The <tt>&quot;doubleweave&quot;</tt> works same as <tt>&quot;weave&quot;</tt> but without halving frame rate and frame count. </p>
@@ -14055,7 +14055,7 @@ metadata:<br />
 <dd> The width and height of the image.</dd>
 <dt><code>P</code></dt>
 <dd> Progress of transition effect.</dd>
-<dt><font SIZE="-1"><code>PLANE</code></font></dt>
+<dt><code>PLANE</code></dt>
 <dd> Currently processed plane.</dd>
 <dt><code>A</code></dt>
 <dd> Return value of first input at current location and plane.</dd>
@@ -14211,7 +14211,7 @@ metadata:<br />
 <p> The default value is <tt>&quot;all&quot;</tt>.</dd></dl>
 </dl>
 <h3>yadif_cuda</h3>
-<p> Deinterlace the input video using the <code>yadif</code> algorithm, but implemented in <font SIZE="-1">CUDA</font> so that it can work as part of a <font SIZE="-1">GPU</font> accelerated pipeline with nvdec and/or nvenc. </p>
+<p> Deinterlace the input video using the <code>yadif</code> algorithm, but implemented in CUDA so that it can work as part of a GPU accelerated pipeline with nvdec and/or nvenc. </p>
 <p> It accepts the following parameters:</p>
 <dl>
 <dt><code>mode</code></dt>
@@ -14261,7 +14261,7 @@ metadata:<br />
 <p> The default value is <tt>&quot;all&quot;</tt>.</dd></dl>
 </dl>
 <h3>yaepblur</h3>
-<p> Apply blur filter while preserving edges (&#8220;yaepblur&#8221; means &#8220;yet another edge preserving blur filter&#8221;). The algorithm is described in &#8220;J. S. Lee, Digital image enhancement and noise filtering by use of local statistics, <font SIZE="-1">IEEE</font> Trans. Pattern Anal. Mach. Intell. <font SIZE="-1">PAMI-2, 1980.&#8221;</font> </p>
+<p> Apply blur filter while preserving edges (&#8220;yaepblur&#8221; means &#8220;yet another edge preserving blur filter&#8221;). The algorithm is described in &#8220;J. S. Lee, Digital image enhancement and noise filtering by use of local statistics, IEEE Trans. Pattern Anal. Mach. Intell. PAMI-2, 1980.&#8221; </p>
 <p> It accepts the following parameters:</p>
 <dl>
 <dt><code>radius, r</code></dt>
@@ -14303,7 +14303,7 @@ metadata:<br />
 <dt><code>on</code></dt>
 <dd> Output frame count.</dd>
 <dt><code>in_time, it</code></dt>
-<dd> The input timestamp expressed in seconds. It&#8217;s <font SIZE="-1">NAN</font> if the input timestamp is unknown.</dd>
+<dd> The input timestamp expressed in seconds. It&#8217;s NAN if the input timestamp is unknown.</dd>
 <dt><code>out_time, time, ot</code></dt>
 <dd> The output timestamp expressed in seconds.</dd>
 <dt><code>x</code></dt>
@@ -14781,7 +14781,7 @@ metadata:<br />
 </pre>
 </dl>
 <h3>colorkey_opencl</h3>
-<p> <font SIZE="-1">RGB</font> colorspace color keying. </p>
+<p> RGB colorspace color keying. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>color</code></dt>
@@ -14901,7 +14901,7 @@ metadata:<br />
 <dt><code>debug</code></dt>
 <dd> Whether or not additional debug info should be displayed, both in the processed output and in the console. </dd>
 <p> Note that in order to see console debug output you will also need to pass <tt>&quot;-v verbose&quot;</tt> to ffmpeg. </p>
-<p> Viewing point matches in the output video is only supported for <font SIZE="-1">RGB</font> input. </p>
+<p> Viewing point matches in the output video is only supported for RGB input. </p>
 <p> Defaults to <tt>0</tt>.</p>
 <dt><code>adaptive_crop</code></dt>
 <dd> Whether or not to do a tiny bit of cropping at the borders to cut down on the amount of mirrored pixels. </dd>
@@ -14978,10 +14978,10 @@ metadata:<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Overlay an image <font SIZE="-1">LOGO</font> at the top-left corner of the <font SIZE="-1">INPUT</font> video. Both inputs are yuv420p format. </dd>
+<dd> Overlay an image LOGO at the top-left corner of the INPUT video. Both inputs are yuv420p format. </dd>
 <p>&#8211; i INPUT &#8211; i LOGO &#8211; filter_complex &#8220;[0:v]hwupload[a], [1:v]format=yuv420p, hwupload[b], [a][b]overlay_opencl, hwdownload&#8221; OUTPUT</p>
 <dt>&bull;</dt>
-<dd> The inputs have same memory layout for color channels , the overlay has additional alpha plane, like <font SIZE="-1">INPUT</font> is yuv420p, and the <font SIZE="-1">LOGO</font> is yuva420p. </dd>
+<dd> The inputs have same memory layout for color channels , the overlay has additional alpha plane, like INPUT is yuv420p, and the LOGO is yuva420p. </dd>
 <p>&#8211; i INPUT &#8211; i LOGO &#8211; filter_complex &#8220;[0:v]hwupload[a], [1:v]format=yuva420p, hwupload[b], [a][b]overlay_opencl, hwdownload&#8221; OUTPUT
 </dl>
 <h3>pad_opencl</h3>
@@ -15026,7 +15026,7 @@ metadata:<br />
 <dt><code>x</code></dt>
 <dd>
 </dd><dt><code>y</code></dt>
-<dd> The x and y offsets as specified by the <i>x</i> and <i>y</i> expressions, or <font SIZE="-1">NAN</font> if not yet specified.</dd>
+<dd> The x and y offsets as specified by the <i>x</i> and <i>y</i> expressions, or NAN if not yet specified.</dd>
 <dt><code>a</code></dt>
 <dd> same as <i>iw</i> / <i>ih</i></dd>
 <dt><code>sar</code></dt>
@@ -15063,7 +15063,7 @@ metadata:<br />
 <dt><code>size, s</code></dt>
 <dd> Size of output frames. Defaults to the same as the first input.</dd></dl>
 <p> The <tt>&quot;program_opencl&quot;</tt> filter also supports the <code>framesync</code> options. </p>
-<p> The program source file must contain a kernel function with the given name, which will be run once for each plane of the output. Each run on a plane gets enqueued as a separate 2D global NDRange with one work-item for each pixel to be generated. The global <font SIZE="-1">ID</font> offset for each work-item is therefore the coordinates of a pixel in the destination image. </p>
+<p> The program source file must contain a kernel function with the given name, which will be run once for each plane of the output. Each run on a plane gets enqueued as a separate 2D global NDRange with one work-item for each pixel to be generated. The global ID offset for each work-item is therefore the coordinates of a pixel in the destination image. </p>
 <p> The kernel function needs to take the following arguments:</p>
 <dl>
 <dt>&bull;</dt>
@@ -15079,57 +15079,57 @@ metadata:<br />
 <dl>
 <dt>&bull;</dt>
 <dd> Copy the input to the output (output must be the same size as the input). </dd>
-<p>__kernel void copy(__write_only image2d_t destination,<br />
-                   unsigned int index,<br />
-                   __read_only image2d_t source)<br />
-{<br />
+<p>__kernel void copy(__write_only image2d_t destination,<br/>
+                   unsigned int index,<br/>
+                   __read_only image2d_t source)<br/>
+{<br/>
     const sampler_t sampler = CLK_NORMALIZED_COORDS_FALSE;</p>
 <p>    int2 location = (int2)(get_global_id(0), get_global_id(1));</p>
 <p>    float4 value = read_imagef(source, sampler, location);</p>
-<p>    write_imagef(destination, location, value);<br />
+<p>    write_imagef(destination, location, value);<br/>
 }</p>
 <dt>&bull;</dt>
 <dd> Apply a simple transformation, rotating the input by an amount increasing with the index counter. Pixel values are linearly interpolated by the sampler, and the output need not have the same dimensions as the input. </dd>
-<p>__kernel void rotate_image(__write_only image2d_t dst,<br />
-                           unsigned int index,<br />
-                           __read_only image2d_t src)<br />
-{<br />
-    const sampler_t sampler = (CLK_NORMALIZED_COORDS_FALSE |<br />
+<p>__kernel void rotate_image(__write_only image2d_t dst,<br/>
+                           unsigned int index,<br/>
+                           __read_only image2d_t src)<br/>
+{<br/>
+    const sampler_t sampler = (CLK_NORMALIZED_COORDS_FALSE |<br/>
                                CLK_FILTER_LINEAR);</p>
 <p>    float angle = (float)index / 100.0f;</p>
-<p>    float2 dst_dim = convert_float2(get_image_dim(dst));<br />
+<p>    float2 dst_dim = convert_float2(get_image_dim(dst));<br/>
     float2 src_dim = convert_float2(get_image_dim(src));</p>
-<p>    float2 dst_cen = dst_dim / 2.0f;<br />
+<p>    float2 dst_cen = dst_dim / 2.0f;<br/>
     float2 src_cen = src_dim / 2.0f;</p>
 <p>    int2 dst_loc = (int2)(get_global_id(0), get_global_id(1));</p>
-<p>    float2 dst_pos = convert_float2(dst_loc) &#8211; dst_cen;<br />
-    float2 src_pos = {<br />
-        cos(angle) * dst_pos.x &#8211; sin(angle) * dst_pos.y,<br />
-        sin(angle) * dst_pos.x + cos(angle) * dst_pos.y};<br />
+<p>    float2 dst_pos = convert_float2(dst_loc) &#8211; dst_cen;<br/>
+    float2 src_pos = {<br/>
+        cos(angle) * dst_pos.x &#8211; sin(angle) * dst_pos.y,<br/>
+        sin(angle) * dst_pos.x + cos(angle) * dst_pos.y};<br/>
     src_pos = src_pos * src_dim / dst_dim;</p>
 <p>    float2 src_loc = src_pos + src_cen;</p>
-<p>    if (src_loc.x &lt; 0.0f || src_loc.y &lt; 0.0f ||<br />
-        src_loc.x &gt; src_dim.x || src_loc.y &gt; src_dim.y)<br />
-        write_imagef(dst, dst_loc, 0.5f);<br />
-    else<br />
-        write_imagef(dst, dst_loc, read_imagef(src, sampler, src_loc));<br />
+<p>    if (src_loc.x &lt; 0.0f || src_loc.y &lt; 0.0f ||<br/>
+        src_loc.x &gt; src_dim.x || src_loc.y &gt; src_dim.y)<br/>
+        write_imagef(dst, dst_loc, 0.5f);<br/>
+    else<br/>
+        write_imagef(dst, dst_loc, read_imagef(src, sampler, src_loc));<br/>
 }</p>
 <dt>&bull;</dt>
 <dd> Blend two inputs together, with the amount of each input used varying with the index counter. </dd>
-<p>__kernel void blend_images(__write_only image2d_t dst,<br />
-                           unsigned int index,<br />
-                           __read_only image2d_t src1,<br />
-                           __read_only image2d_t src2)<br />
-{<br />
-    const sampler_t sampler = (CLK_NORMALIZED_COORDS_FALSE |<br />
+<p>__kernel void blend_images(__write_only image2d_t dst,<br/>
+                           unsigned int index,<br/>
+                           __read_only image2d_t src1,<br/>
+                           __read_only image2d_t src2)<br/>
+{<br/>
+    const sampler_t sampler = (CLK_NORMALIZED_COORDS_FALSE |<br/>
                                CLK_FILTER_LINEAR);</p>
 <p>    float blend = (cos((float)index / 50.0f) + 1.0f) / 2.0f;</p>
-<p>    int2 dst_loc = (int2)(get_global_id(0), get_global_id(1));<br />
-    int2 src1_loc = dst_loc * get_image_dim(src1) / get_image_dim(dst);<br />
+<p>    int2 dst_loc = (int2)(get_global_id(0), get_global_id(1));<br/>
+    int2 src1_loc = dst_loc * get_image_dim(src1) / get_image_dim(dst);<br/>
     int2 src2_loc = dst_loc * get_image_dim(src2) / get_image_dim(dst);</p>
-<p>    float4 val1 = read_imagef(src1, sampler, src1_loc);<br />
+<p>    float4 val1 = read_imagef(src1, sampler, src1_loc);<br/>
     float4 val2 = read_imagef(src2, sampler, src2_loc);</p>
-<p>    write_imagef(dst, dst_loc, val1 * blend + val2 * (1.0f &#8211; blend));<br />
+<p>    write_imagef(dst, dst_loc, val1 * blend + val2 * (1.0f &#8211; blend));<br/>
 }
 </dl>
 <h3>roberts_opencl</h3>
@@ -15169,7 +15169,7 @@ metadata:<br />
 </pre>
 </dl>
 <h3>tonemap_opencl</h3>
-<p> Perform <font SIZE="-1">HDR</font>(<font SIZE="-1">PQ/HLG</font>) to <font SIZE="-1">SDR</font> conversion with tone-mapping. </p>
+<p> Perform HDR(PQ/HLG) to SDR conversion with tone-mapping. </p>
 <p> It accepts the following parameters:</p>
 <dl>
 <dt><code>tonemap</code></dt>
@@ -15253,7 +15253,7 @@ metadata:<br />
 <p> <i>Example</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Convert <font SIZE="-1">HDR</font>(<font SIZE="-1">PQ/HLG</font>) video to bt2020-transfer-characteristic p010 format using linear operator. </dd>
+<dd> Convert HDR(PQ/HLG) video to bt2020-transfer-characteristic p010 format using linear operator. </dd>
 <pre>
         -i INPUT -vf &quot;format=p010,hwupload,tonemap_opencl=t=bt2020:tonemap=linear:format=p010,hwdownload,format=p010&quot; OUTPUT
 </pre>
@@ -15329,7 +15329,7 @@ metadata:<br />
 <dd> Set duration of video transition.</dd>
 <dt><code>offset</code></dt>
 <dd> Set time of start of transition relative to first video.</dd></dl>
-<p> The program source file must contain a kernel function with the given name, which will be run once for each plane of the output. Each run on a plane gets enqueued as a separate 2D global NDRange with one work-item for each pixel to be generated. The global <font SIZE="-1">ID</font> offset for each work-item is therefore the coordinates of a pixel in the destination image. </p>
+<p> The program source file must contain a kernel function with the given name, which will be run once for each plane of the output. Each run on a plane gets enqueued as a separate 2D global NDRange with one work-item for each pixel to be generated. The global ID offset for each work-item is therefore the coordinates of a pixel in the destination image. </p>
 <p> The kernel function needs to take the following arguments:</p>
 <dl>
 <dt>&bull;</dt>
@@ -15344,32 +15344,32 @@ metadata:<br />
 <dl>
 <dt>&bull;</dt>
 <dd> Apply dots curtain transition effect: </dd>
-<p>__kernel void blend_images(__write_only image2d_t dst,<br />
-                           __read_only image2d_t src1,<br />
-                           __read_only image2d_t src2,<br />
-                           float progress)<br />
-{<br />
-    const sampler_t sampler = (CLK_NORMALIZED_COORDS_FALSE |<br />
-                               CLK_FILTER_LINEAR);<br />
-    int2 p = (int2)(get_global_id(0), get_global_id(1));<br />
-    float2 rp = (float2)(get_global_id(0), get_global_id(1));<br />
-    float2 dim = (float2)(get_image_dim(src1).x, get_image_dim(src1).y);<br />
+<p>__kernel void blend_images(__write_only image2d_t dst,<br/>
+                           __read_only image2d_t src1,<br/>
+                           __read_only image2d_t src2,<br/>
+                           float progress)<br/>
+{<br/>
+    const sampler_t sampler = (CLK_NORMALIZED_COORDS_FALSE |<br/>
+                               CLK_FILTER_LINEAR);<br/>
+    int2 p = (int2)(get_global_id(0), get_global_id(1));<br/>
+    float2 rp = (float2)(get_global_id(0), get_global_id(1));<br/>
+    float2 dim = (float2)(get_image_dim(src1).x, get_image_dim(src1).y);<br/>
     rp = rp / dim;</p>
-<p>    float2 dots = (float2)(20.0, 20.0);<br />
-    float2 center = (float2)(0, 0);<br />
+<p>    float2 dots = (float2)(20.0, 20.0);<br/>
+    float2 center = (float2)(0, 0);<br/>
     float2 unused;</p>
-<p>    float4 val1 = read_imagef(src1, sampler, p);<br />
-    float4 val2 = read_imagef(src2, sampler, p);<br />
+<p>    float4 val1 = read_imagef(src1, sampler, p);<br/>
+    float4 val2 = read_imagef(src2, sampler, p);<br/>
     bool next = distance(fract(rp * dots, &amp;unused), (float2)(0.5, 0.5)) &lt; (progress / distance(rp, center));</p>
-<p>    write_imagef(dst, p, next ? val1 : val2);<br />
+<p>    write_imagef(dst, p, next ? val1 : val2);<br/>
 }
 </dl>
 <h2>VAAPI VIDEO FILTERS</h2>
-<p> <font SIZE="-1">VAAPI</font> Video filters are usually used with <font SIZE="-1">VAAPI</font> decoder and <font SIZE="-1">VAAPI</font> encoder. Below is a description of <font SIZE="-1">VAAPI</font> video filters. </p>
+<p> VAAPI Video filters are usually used with VAAPI decoder and VAAPI encoder. Below is a description of VAAPI video filters. </p>
 <p> To enable compilation of these filters you need to configure FFmpeg with <tt>&quot;--enable-vaapi&quot;</tt>. </p>
 <p> To use vaapi filters, you need to setup the vaapi device correctly. For more information, please read &lt;<code><a rel="nofollow" href="https://trac.ffmpeg.org/wiki/Hardware/VAAPI">https://trac.ffmpeg.org/wiki/Hardware/VAAPI</a></code>&gt;</p>
 <h3>tonemap_vaapi</h3>
-<p> Perform <font SIZE="-1">HDR</font>(High Dynamic Range) to <font SIZE="-1">SDR</font>(Standard Dynamic Range) conversion with tone-mapping. It maps the dynamic range of <font SIZE="-1">HDR10</font> content to the <font SIZE="-1">SDR</font> content. It currently only accepts <font SIZE="-1">HDR10</font> as input. </p>
+<p> Perform HDR(High Dynamic Range) to SDR(Standard Dynamic Range) conversion with tone-mapping. It maps the dynamic range of HDR10 content to the SDR content. It currently only accepts HDR10 as input. </p>
 <p> It accepts the following parameters:</p>
 <dl>
 <dt><code>format</code></dt>
@@ -15398,7 +15398,7 @@ metadata:<br />
 <p> <i>Example</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Convert <font SIZE="-1">HDR</font>(<font SIZE="-1">HDR10</font>) video to bt2020-transfer-characteristic p010 format </dd>
+<dd> Convert HDR(HDR10) video to bt2020-transfer-characteristic p010 format </dd>
 <pre>
         tonemap_vaapi=format=p010:t=bt2020-10
 </pre>
@@ -15455,12 +15455,12 @@ metadata:<br />
 <dd> Set the random fill ratio for the initial cellular automaton row. It is a floating point number value ranging from 0 to 1, defaults to 1/PHI. </dd>
 <p> This option is ignored when a file or a pattern is specified.</p>
 <dt><code>random_seed, seed</code></dt>
-<dd> Set the seed for filling randomly the initial row, must be an integer included between 0 and <font SIZE="-1">UINT32_MAX.</font> If not specified, or if explicitly set to -1, the filter will try to use a good random seed on a best effort basis.</dd>
+<dd> Set the seed for filling randomly the initial row, must be an integer included between 0 and UINT32_MAX. If not specified, or if explicitly set to -1, the filter will try to use a good random seed on a best effort basis.</dd>
 <dt><code>rule</code></dt>
 <dd> Set the cellular automaton rule, it is a number ranging from 0 to 255. Default value is 110.</dd>
 <dt><code>size, s</code></dt>
 <dd> Set the size of the output video. For the syntax of this option, check the <code>&#8220;Video size&#8221; section in the ffmpeg-utils manual</code>. </dd>
-<p> If <code>filename</code> or <code>pattern</code> is specified, the size is set by default to the width of the specified initial state row, and the height is set to <i>width</i> * <font SIZE="-1">PHI.</font> </p>
+<p> If <code>filename</code> or <code>pattern</code> is specified, the size is set by default to the width of the specified initial state row, and the height is set to <i>width</i> * PHI. </p>
 <p> If <code>size</code> is set, it must contain the width of the specified pattern string, and the specified pattern will be centered in the larger row. </p>
 <p> If a filename or a pattern string is not specified, the size value defaults to &#8220;320&#215;518&#8221; (used for a randomly generated initial state).</p>
 <dt><code>scroll</code></dt>
@@ -15493,7 +15493,7 @@ metadata:<br />
 </pre>
 </dl>
 <h3>coreimagesrc</h3>
-<p> Video source generated on <font SIZE="-1">GPU</font> using Apple&#8217;s CoreImage <font SIZE="-1">API</font> on <font SIZE="-1">OSX.</font> </p>
+<p> Video source generated on GPU using Apple&#8217;s CoreImage API on OSX. </p>
 <p> This video source is a specialized version of the <code>coreimage</code> video filter. Use a core image generator at the beginning of the applied filterchain to generate the content. </p>
 <p> The coreimagesrc video source accepts the following options:</p>
 <dl>
@@ -15515,7 +15515,7 @@ metadata:<br />
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Use CIQRCodeGenerator to create a <font SIZE="-1">QR</font> code for the FFmpeg homepage, given as complete and escaped command-line for Apple&#8217;s standard bash shell: </dd>
+<dd> Use CIQRCodeGenerator to create a QR code for the FFmpeg homepage, given as complete and escaped command-line for Apple&#8217;s standard bash shell: </dd>
 <pre>
         ffmpeg -f lavfi -i coreimagesrc=s=100x100:filter=CIQRCodeGenerator [at] inputMessage=https\\\://FFmpeg.org/@inputCorrectionLevel=H -frames:v 1 QRCode.png
 </pre>
@@ -15656,7 +15656,7 @@ metadata:<br />
 <dt><code>filter_params</code></dt>
 <dd> A &#8216;|&#8217;-separated list of parameters to pass to the frei0r source.</dd></dl>
 <p> For example, to generate a frei0r partik0l source with size 200&#215;200 and frame rate 10 which is overlaid on the overlay filter main input: </p>
-<p>frei0r_src = size = 200&#215;200 : framerate = 10 : filter_name = partik0l : filter_params = 1234 [overlay];<br />
+<p>frei0r_src = size = 200&#215;200 : framerate = 10 : filter_name = partik0l : filter_params = 1234 [overlay];<br/>
 [in][overlay] overlay</p>
 <h3>life</h3>
 <p> Generate a life pattern. </p>
@@ -15673,10 +15673,10 @@ metadata:<br />
 <dt><code>random_fill_ratio, ratio</code></dt>
 <dd> Set the random fill ratio for the initial random grid. It is a floating point number value ranging from 0 to 1, defaults to 1/PHI. It is ignored when a file is specified.</dd>
 <dt><code>random_seed, seed</code></dt>
-<dd> Set the seed for filling the initial random grid, must be an integer included between 0 and <font SIZE="-1">UINT32_MAX.</font> If not specified, or if explicitly set to -1, the filter will try to use a good random seed on a best effort basis.</dd>
+<dd> Set the seed for filling the initial random grid, must be an integer included between 0 and UINT32_MAX. If not specified, or if explicitly set to -1, the filter will try to use a good random seed on a best effort basis.</dd>
 <dt><code>rule</code></dt>
 <dd> Set the life rule. </dd>
-<p> A rule can be specified with a code of the kind &quot;S<i></i><font SIZE="-1"><i>NS</i></font><i></i>/B<i></i><font SIZE="-1"><i>NB</i></font><i></i>&quot;, where <i></i><font SIZE="-1"><i>NS</i></font><i></i> and <i></i><font SIZE="-1"><i>NB</i></font><i></i> are sequences of numbers in the range 0-8, <i></i><font SIZE="-1"><i>NS</i></font><i></i> specifies the number of alive neighbor cells which make a live cell stay alive, and <i></i><font SIZE="-1"><i>NB</i></font><i></i> the number of alive neighbor cells which make a dead cell to become alive (i.e. to &#8220;born&#8221;). &#8220;s&#8221; and &#8220;b&#8221; can be used in place of &#8220;S&#8221; and &#8220;B&#8221;, respectively. </p>
+<p> A rule can be specified with a code of the kind &quot;S<i></i><i>NS</i><i></i>/B<i></i><i>NB</i><i></i>&quot;, where <i></i><i>NS</i><i></i> and <i></i><i>NB</i><i></i> are sequences of numbers in the range 0-8, <i></i><i>NS</i><i></i> specifies the number of alive neighbor cells which make a live cell stay alive, and <i></i><i>NB</i><i></i> the number of alive neighbor cells which make a dead cell to become alive (i.e. to &#8220;born&#8221;). &#8220;s&#8221; and &#8220;b&#8221; can be used in place of &#8220;S&#8221; and &#8220;B&#8221;, respectively. </p>
 <p> Alternatively a rule can be specified by an 18-bits integer. The 9 high order bits are used to encode the next cell state if it is alive for each number of neighbor alive cells, the low order bits specify the rule for &#8220;borning&#8221; new cells. Higher order bits encode for an higher number of neighbor cells. For example the number 6153 = <tt>&quot;(12&lt;&lt;9)+9&quot;</tt> specifies a stay alive rule of 12 and a born rule of 9, which corresponds to &#8220;S23/B03&#8221;. </p>
 <p> Default value is &#8220;S23/B3&#8221;, which is the original Conway&#8217;s game of life rule, and will keep a cell alive if it has 2 or 3 neighbor alive cells, and will born a new cell if there are three alive cells around a dead cell.</p>
 <dt><code>size, s</code></dt>
@@ -15721,20 +15721,20 @@ metadata:<br />
 <p> The <tt>&quot;allrgb&quot;</tt> source returns frames of size 4096&#215;4096 of all rgb colors. </p>
 <p> The <tt>&quot;allyuv&quot;</tt> source returns frames of size 4096&#215;4096 of all yuv colors. </p>
 <p> The <tt>&quot;color&quot;</tt> source provides an uniformly colored input. </p>
-<p> The <tt>&quot;haldclutsrc&quot;</tt> source provides an identity Hald <font SIZE="-1">CLUT.</font> See also <code>haldclut</code> filter. </p>
+<p> The <tt>&quot;haldclutsrc&quot;</tt> source provides an identity Hald CLUT. See also <code>haldclut</code> filter. </p>
 <p> The <tt>&quot;nullsrc&quot;</tt> source returns unprocessed video frames. It is mainly useful to be employed in analysis / debugging tools, or as the source for filters which ignore the input data. </p>
-<p> The <tt>&quot;pal75bars&quot;</tt> source generates a color bars pattern, based on <font SIZE="-1">EBU PAL</font> recommendations with 75% color levels. </p>
-<p> The <tt>&quot;pal100bars&quot;</tt> source generates a color bars pattern, based on <font SIZE="-1">EBU PAL</font> recommendations with 100% color levels. </p>
-<p> The <tt>&quot;rgbtestsrc&quot;</tt> source generates an <font SIZE="-1">RGB</font> test pattern useful for detecting <font SIZE="-1">RGB</font> vs <font SIZE="-1">BGR</font> issues. You should see a red, green and blue stripe from top to bottom. </p>
-<p> The <tt>&quot;smptebars&quot;</tt> source generates a color bars pattern, based on the <font SIZE="-1">SMPTE</font> Engineering Guideline <font SIZE="-1">EG 1-1990.</font> </p>
-<p> The <tt>&quot;smptehdbars&quot;</tt> source generates a color bars pattern, based on the <font SIZE="-1">SMPTE RP 219-2002.</font> </p>
+<p> The <tt>&quot;pal75bars&quot;</tt> source generates a color bars pattern, based on EBU PAL recommendations with 75% color levels. </p>
+<p> The <tt>&quot;pal100bars&quot;</tt> source generates a color bars pattern, based on EBU PAL recommendations with 100% color levels. </p>
+<p> The <tt>&quot;rgbtestsrc&quot;</tt> source generates an RGB test pattern useful for detecting RGB vs BGR issues. You should see a red, green and blue stripe from top to bottom. </p>
+<p> The <tt>&quot;smptebars&quot;</tt> source generates a color bars pattern, based on the SMPTE Engineering Guideline EG 1-1990. </p>
+<p> The <tt>&quot;smptehdbars&quot;</tt> source generates a color bars pattern, based on the SMPTE RP 219-2002. </p>
 <p> The <tt>&quot;testsrc&quot;</tt> source generates a test video pattern, showing a color pattern, a scrolling gradient and a timestamp. This is mainly intended for testing purposes. </p>
 <p> The <tt>&quot;testsrc2&quot;</tt> source is similar to testsrc, but supports more pixel formats instead of just <tt>&quot;rgb24&quot;</tt>. This allows using it as an input for other tests without requiring a format conversion. </p>
-<p> The <tt>&quot;yuvtestsrc&quot;</tt> source generates an <font SIZE="-1">YUV</font> test pattern. You should see a y, cb and cr stripe from top to bottom. </p>
+<p> The <tt>&quot;yuvtestsrc&quot;</tt> source generates an YUV test pattern. You should see a y, cb and cr stripe from top to bottom. </p>
 <p> The sources accept the following parameters:</p>
 <dl>
 <dt><code>level</code></dt>
-<dd> Specify the level of the Hald <font SIZE="-1">CLUT,</font> only available in the <tt>&quot;haldclutsrc&quot;</tt> source. A level of <tt>&quot;N&quot;</tt> generates a picture of <tt>&quot;N*N*N&quot;</tt> by <tt>&quot;N*N*N&quot;</tt> pixels to be used as identity matrix for 3D lookup tables. Each component is coded on a <tt>&quot;1/(N*N)&quot;</tt> scale.</dd>
+<dd> Specify the level of the Hald CLUT, only available in the <tt>&quot;haldclutsrc&quot;</tt> source. A level of <tt>&quot;N&quot;</tt> generates a picture of <tt>&quot;N*N*N&quot;</tt> by <tt>&quot;N*N*N&quot;</tt> pixels to be used as identity matrix for 3D lookup tables. Each component is coded on a <tt>&quot;1/(N*N)&quot;</tt> scale.</dd>
 <dt><code>color, c</code></dt>
 <dd> Specify the color of the source, only available in the <tt>&quot;color&quot;</tt> source. For the syntax of this option, check the <code>&#8220;Color&#8221; section in the ffmpeg-utils manual</code>.</dd>
 <dt><code>size, s</code></dt>
@@ -15794,32 +15794,32 @@ metadata:<br />
 <dl>
 <dt>&bull;</dt>
 <dd> Generate a colour ramp by setting pixel values from the position of the pixel in the output image. (Note that this will work with all pixel formats, but the generated output will not be the same.) </dd>
-<p>__kernel void ramp(__write_only image2d_t dst,<br />
-                   unsigned int index)<br />
-{<br />
+<p>__kernel void ramp(__write_only image2d_t dst,<br/>
+                   unsigned int index)<br/>
+{<br/>
     int2 loc = (int2)(get_global_id(0), get_global_id(1));</p>
-<p>    float4 val;<br />
+<p>    float4 val;<br/>
     val.xy = val.zw = convert_float2(loc) / convert_float2(get_image_dim(dst));</p>
-<p>    write_imagef(dst, loc, val);<br />
+<p>    write_imagef(dst, loc, val);<br/>
 }</p>
 <dt>&bull;</dt>
 <dd> Generate a Sierpinski carpet pattern, panning by a single pixel each frame. </dd>
-<p>__kernel void sierpinski_carpet(__write_only image2d_t dst,<br />
-                                unsigned int index)<br />
-{<br />
+<p>__kernel void sierpinski_carpet(__write_only image2d_t dst,<br/>
+                                unsigned int index)<br/>
+{<br/>
     int2 loc = (int2)(get_global_id(0), get_global_id(1));</p>
-<p>    float4 value = 0.0f;<br />
-    int x = loc.x + index;<br />
-    int y = loc.y + index;<br />
-    while (x &gt; 0 || y &gt; 0) {<br />
-        if (x % 3 == 1 &amp;&amp; y % 3 == 1) {<br />
-            value = 1.0f;<br />
-            break;<br />
-        }<br />
-        x /= 3;<br />
-        y /= 3;<br />
+<p>    float4 value = 0.0f;<br/>
+    int x = loc.x + index;<br/>
+    int y = loc.y + index;<br/>
+    while (x &gt; 0 || y &gt; 0) {<br/>
+        if (x % 3 == 1 &amp;&amp; y % 3 == 1) {<br/>
+            value = 1.0f;<br/>
+            break;<br/>
+        }<br/>
+        x /= 3;<br/>
+        y /= 3;<br/>
     }</p>
-<p>    write_imagef(dst, loc, value);<br />
+<p>    write_imagef(dst, loc, value);<br/>
 }
 </dl>
 <h3>sierpinski</h3>
@@ -16070,7 +16070,7 @@ metadata:<br />
 <dl>
 <dt>&bull;</dt>
 <dd> Complete example using <code>ffplay</code>: </dd>
-<p>ffplay &#8211; f lavfi &#8216;amovie=input.mp3, asplit [a][out1];<br />
+<p>ffplay &#8211; f lavfi &#8216;amovie=input.mp3, asplit [a][out1];<br/>
              [a] avectorscope = zoom = 1.3 : rc = 2 : gc = 200 : bc = 10 : rf = 1 : gf = 8 : bf = 7 [out0]&#8217;
 </dl>
 <h3>bench, abench</h3>
@@ -16121,16 +16121,16 @@ metadata:<br />
 <dl>
 <dt>&bull;</dt>
 <dd> Concatenate an opening, an episode and an ending, all in bilingual version (video in stream 0, audio in streams 1 and 2): </dd>
-<p>ffmpeg &#8211; i opening.mkv &#8211; i episode.mkv &#8211; i ending.mkv &#8211; filter_complex \<br />
-          &#8216;[0:0] [0:1] [0:2] [1:0] [1:1] [1:2] [2:0] [2:1] [2:2] concat = n = 3 : v = 1 : a = 2 [v][a1][a2] &#8216; \<br />
+<p>ffmpeg &#8211; i opening.mkv &#8211; i episode.mkv &#8211; i ending.mkv &#8211; filter_complex \<br/>
+          &#8216;[0:0] [0:1] [0:2] [1:0] [1:1] [1:2] [2:0] [2:1] [2:2] concat = n = 3 : v = 1 : a = 2 [v][a1][a2] &#8216; \<br/>
           -map &#8216;[v] &#8216; -map &#8216;[a1] &#8216; -map &#8216;[a2]&#8217; output.mkv</p>
 <dt>&bull;</dt>
 <dd> Concatenate two parts, handling audio and video separately, using the (a)movie sources, and adjusting the resolution: </dd>
-<p>movie = part1.mp4, scale = 512 : 288 [v1];<br />
-amovie = part1.mp4[a1];<br />
-movie = part2.mp4, scale = 512 : 288 [v2];<br />
-amovie = part2.mp4[a2];<br />
-[v1][v2] concat[outv];<br />
+<p>movie = part1.mp4, scale = 512 : 288 [v1];<br/>
+amovie = part1.mp4[a1];<br/>
+movie = part2.mp4, scale = 512 : 288 [v2];<br/>
+amovie = part2.mp4[a2];<br/>
+[v1][v2] concat[outv];<br/>
 [a1][a2] concat = v = 0 : a = 1 [outa]</p>
 <p> Note that a desync will happen at the stitch if the audio and video streams do not have exactly the same duration in the first file.</dl>
 <p> <i>Commands</i> </p>
@@ -16139,11 +16139,11 @@ amovie = part2.mp4[a2];<br />
 <dt><code>next</code></dt>
 <dd> Close the current segment and step to the next one</dd></dl>
 <h3>ebur128</h3>
-<p> <font SIZE="-1">EBU R128</font> scanner filter. This filter takes an audio stream and analyzes its loudness level. By default, it logs a message at a frequency of 10Hz with the Momentary loudness (identified by <tt>&quot;M&quot;</tt>), Short-term loudness (<tt>&quot;S&quot;</tt>), Integrated loudness (<tt>&quot;I&quot;</tt>) and Loudness Range (<tt>&quot;LRA&quot;</tt>). </p>
+<p> EBU R128 scanner filter. This filter takes an audio stream and analyzes its loudness level. By default, it logs a message at a frequency of 10Hz with the Momentary loudness (identified by <tt>&quot;M&quot;</tt>), Short-term loudness (<tt>&quot;S&quot;</tt>), Integrated loudness (<tt>&quot;I&quot;</tt>) and Loudness Range (<tt>&quot;LRA&quot;</tt>). </p>
 <p> The filter can only analyze streams which have a sampling rate of 48000 Hz and whose sample format is double-precision floating point. The input stream will be converted to this specification, if needed. Users may need to insert aformat and/or aresample filters after this filter to obtain the original parameters. </p>
 <p> The filter also has a video output (see the <i>video</i> option) with a real time graph to observe the loudness evolution. The graphic contains the logged message mentioned above, so it is not printed anymore when this option is set, unless the verbose logging is set. The main graphing area contains the short-term loudness (3 seconds of analysis), and the gauge on the right is for the momentary loudness (400 milliseconds), but can optionally be configured to instead display short-term loudness (see <i>gauge</i>). </p>
 <p> The green area marks a +/- 1LU target range around the target loudness (-23LUFS by default, unless modified through <i>target</i>). </p>
-<p> More information about the Loudness Recommendation <font SIZE="-1">EBU R128</font> on &lt;<code><a rel="nofollow" href="http://tech.ebu.ch/loudness">http://tech.ebu.ch/loudness</a></code>&gt;. </p>
+<p> More information about the Loudness Recommendation EBU R128 on &lt;<code><a rel="nofollow" href="http://tech.ebu.ch/loudness">http://tech.ebu.ch/loudness</a></code>&gt;. </p>
 <p> The filter accepts the following options:</p>
 <dl>
 <dt><code>video</code></dt>
@@ -16151,7 +16151,7 @@ amovie = part2.mp4[a2];<br />
 <dt><code>size</code></dt>
 <dd> Set the video size. This option is for video only. For the syntax of this option, check the <code>&#8220;Video size&#8221; section in the ffmpeg-utils manual</code>. Default and minimum resolution is <tt>&quot;640x480&quot;</tt>.</dd>
 <dt><code>meter</code></dt>
-<dd> Set the <font SIZE="-1">EBU</font> scale meter. Default is <tt>9</tt>. Common values are <tt>9</tt> and <tt>18</tt>, respectively for <font SIZE="-1">EBU</font> scale meter +9 and <font SIZE="-1">EBU</font> scale meter +18. Any other integer value between this range is allowed.</dd>
+<dd> Set the EBU scale meter. Default is <tt>9</tt>. Common values are <tt>9</tt> and <tt>18</tt>, respectively for EBU scale meter +9 and EBU scale meter +18. Any other integer value between this range is allowed.</dd>
 <dt><code>metadata</code></dt>
 <dd> Set metadata injection. If set to <tt>1</tt>, the audio input will be segmented into 100ms output frames, each of them containing various loudness information in metadata. All the metadata keys are prefixed with <tt>&quot;lavfi.r128.&quot;</tt>. </dd>
 <p> Default is <tt>0</tt>.</p>
@@ -16186,19 +16186,19 @@ amovie = part2.mp4[a2];<br />
 <dl>
 </dl>
 <dt><code>dualmono</code></dt>
-<dd> Treat mono input files as &#8220;dual mono&#8221;. If a mono file is intended for playback on a stereo system, its <font SIZE="-1">EBU R128</font> measurement will be perceptually incorrect. If set to <tt>&quot;true&quot;</tt>, this option will compensate for this effect. Multi-channel input files are not affected by this option.</dd>
+<dd> Treat mono input files as &#8220;dual mono&#8221;. If a mono file is intended for playback on a stereo system, its EBU R128 measurement will be perceptually incorrect. If set to <tt>&quot;true&quot;</tt>, this option will compensate for this effect. Multi-channel input files are not affected by this option.</dd>
 <dt><code>panlaw</code></dt>
 <dd> Set a specific pan law to be used for the measurement of dual mono files. This parameter is optional, and has a default value of -3.01dB.</dd>
 <dt><code>target</code></dt>
-<dd> Set a specific target level (in <font SIZE="-1">LUFS</font>) used as relative zero in the visualization. This parameter is optional and has a default value of -23LUFS as specified by <font SIZE="-1">EBU R128.</font> However, material published online may prefer a level of -16LUFS (e.g. for use with podcasts or video platforms).</dd>
+<dd> Set a specific target level (in LUFS) used as relative zero in the visualization. This parameter is optional and has a default value of -23LUFS as specified by EBU R128. However, material published online may prefer a level of -16LUFS (e.g. for use with podcasts or video platforms).</dd>
 <dt><code>gauge</code></dt>
 <dd> Set the value displayed by the gauge. Valid values are <tt>&quot;momentary&quot;</tt> and s <tt>&quot;shortterm&quot;</tt>. By default the momentary value will be used, but in certain scenarios it may be more useful to observe the short term value instead (e.g. live mixing).</dd>
 <dt><code>scale</code></dt>
-<dd> Sets the display scale for the loudness. Valid parameters are <tt>&quot;absolute&quot;</tt> (in <font SIZE="-1">LUFS</font>) or <tt>&quot;relative&quot;</tt> (<font SIZE="-1">LU</font>) relative to the target. This only affects the video output, not the summary or continuous log output.</dd></dl>
+<dd> Sets the display scale for the loudness. Valid parameters are <tt>&quot;absolute&quot;</tt> (in LUFS) or <tt>&quot;relative&quot;</tt> (LU) relative to the target. This only affects the video output, not the summary or continuous log output.</dd></dl>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Real-time graph using <code>ffplay</code>, with a <font SIZE="-1">EBU</font> scale meter +18: </dd>
+<dd> Real-time graph using <code>ffplay</code>, with a EBU scale meter +18: </dd>
 <p>ffplay &#8211; f lavfi &#8211; i &#8220;amovie=input.mp3,ebur128=video=1:meter=18 [out0][out1]&#8221;</p>
 <dt>&bull;</dt>
 <dd> Run an analysis with <code>ffmpeg</code>: </dd>
@@ -16290,20 +16290,20 @@ amovie = part2.mp4[a2];<br />
 <dl>
 </dl>
 <dt><code>expr</code></dt>
-<dd> Set expression which is used when <tt>&quot;function&quot;</tt> is set to <tt>&quot;expr&quot;</tt>. The expression is evaluated through the eval <font SIZE="-1">API</font> and can contain the following constants:</dd>
+<dd> Set expression which is used when <tt>&quot;function&quot;</tt> is set to <tt>&quot;expr&quot;</tt>. The expression is evaluated through the eval API and can contain the following constants:</dd>
 <dl>
 <dl>
-<dt><font SIZE="-1"><code>VALUE1</code></font></dt>
+<dt><code>VALUE1</code></dt>
 <dd> Float representation of <tt>&quot;value&quot;</tt> from metadata key.</dd>
-<dt><font SIZE="-1"><code>VALUE2</code></font></dt>
+<dt><code>VALUE2</code></dt>
 <dd> Float representation of <tt>&quot;value&quot;</tt> as supplied by user in <tt>&quot;value&quot;</tt> option.</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt><code>file</code></dt>
-<dd> If specified in <tt>&quot;print&quot;</tt> mode, output is written to the named file. Instead of plain filename any writable url can be specified. Filename &#8220;-&#8221; is a shorthand for standard output. If <tt>&quot;file&quot;</tt> option is not set, output is written to the log with <font SIZE="-1">AV_LOG_INFO</font> loglevel.</dd>
+<dd> If specified in <tt>&quot;print&quot;</tt> mode, output is written to the named file. Instead of plain filename any writable url can be specified. Filename &#8220;-&#8221; is a shorthand for standard output. If <tt>&quot;file&quot;</tt> option is not set, output is written to the log with AV_LOG_INFO loglevel.</dd>
 <dt><code>direct</code></dt>
-<dd> Reduces buffering in print mode when output is written to a <font SIZE="-1">URL</font> set using <i>file</i>.</dd></dl>
+<dd> Reduces buffering in print mode when output is written to a URL set using <i>file</i>.</dd></dl>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
@@ -16376,23 +16376,23 @@ amovie = part2.mp4[a2];<br />
 <dt><code>selected_n</code></dt>
 <dd> The (sequential) number of the selected frame, starting from 0.</dd>
 <dt><code>prev_selected_n</code></dt>
-<dd> The sequential number of the last selected frame. It&#8217;s <font SIZE="-1">NAN</font> if undefined.</dd>
-<dt><font SIZE="-1"><code>TB</code></font></dt>
+<dd> The sequential number of the last selected frame. It&#8217;s NAN if undefined.</dd>
+<dt><code>TB</code></dt>
 <dd> The timebase of the input timestamps.</dd>
 <dt><code>pts</code></dt>
-<dd> The <font SIZE="-1">PTS</font> (Presentation TimeStamp) of the filtered video frame, expressed in <i></i><font SIZE="-1"><i>TB</i></font><i></i> units. It&#8217;s <font SIZE="-1">NAN</font> if undefined.</dd>
+<dd> The PTS (Presentation TimeStamp) of the filtered video frame, expressed in <i></i><i>TB</i><i></i> units. It&#8217;s NAN if undefined.</dd>
 <dt><code>t</code></dt>
-<dd> The <font SIZE="-1">PTS</font> of the filtered video frame, expressed in seconds. It&#8217;s <font SIZE="-1">NAN</font> if undefined.</dd>
+<dd> The PTS of the filtered video frame, expressed in seconds. It&#8217;s NAN if undefined.</dd>
 <dt><code>prev_pts</code></dt>
-<dd> The <font SIZE="-1">PTS</font> of the previously filtered video frame. It&#8217;s <font SIZE="-1">NAN</font> if undefined.</dd>
+<dd> The PTS of the previously filtered video frame. It&#8217;s NAN if undefined.</dd>
 <dt><code>prev_selected_pts</code></dt>
-<dd> The <font SIZE="-1">PTS</font> of the last previously filtered video frame. It&#8217;s <font SIZE="-1">NAN</font> if undefined.</dd>
+<dd> The PTS of the last previously filtered video frame. It&#8217;s NAN if undefined.</dd>
 <dt><code>prev_selected_t</code></dt>
-<dd> The <font SIZE="-1">PTS</font> of the last previously selected video frame, expressed in seconds. It&#8217;s <font SIZE="-1">NAN</font> if undefined.</dd>
+<dd> The PTS of the last previously selected video frame, expressed in seconds. It&#8217;s NAN if undefined.</dd>
 <dt><code>start_pts</code></dt>
-<dd> The <font SIZE="-1">PTS</font> of the first video frame in the video. It&#8217;s <font SIZE="-1">NAN</font> if undefined.</dd>
+<dd> The PTS of the first video frame in the video. It&#8217;s NAN if undefined.</dd>
 <dt><code>start_t</code></dt>
-<dd> The time of the first video frame in the video. It&#8217;s <font SIZE="-1">NAN</font> if undefined.</dd>
+<dd> The time of the first video frame in the video. It&#8217;s NAN if undefined.</dd>
 <dt><code>pict_type</code> <i>(video only)</i></dt>
 <dd> The type of the filtered frame. It can assume one of the following values:</dd>
 <dl>
@@ -16405,11 +16405,11 @@ amovie = part2.mp4[a2];<br />
 <dd>
 </dd><dt><code>S</code></dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>SI</code></font></dt>
+</dd><dt><code>SI</code></dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>SP</code></font></dt>
+</dd><dt><code>SP</code></dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>BI</code></font></dt>
+</dd><dt><code>BI</code></dt>
 <dd></dd></dl>
 </dl>
 <dl>
@@ -16418,11 +16418,11 @@ amovie = part2.mp4[a2];<br />
 <dd> The frame interlace type. It can assume one of the following values:</dd>
 <dl>
 <dl>
-<dt><font SIZE="-1"><code>PROGRESSIVE</code></font></dt>
+<dt><code>PROGRESSIVE</code></dt>
 <dd> The frame is progressive (not interlaced).</dd>
-<dt><font SIZE="-1"><code>TOPFIRST</code></font></dt>
+<dt><code>TOPFIRST</code></dt>
 <dd> The frame is top-field-first.</dd>
-<dt><font SIZE="-1"><code>BOTTOMFIRST</code></font></dt>
+<dt><code>BOTTOMFIRST</code></dt>
 <dd> The frame is bottom-field-first.</dd></dl>
 </dl>
 <dl>
@@ -16499,8 +16499,8 @@ amovie = part2.mp4[a2];<br />
 <p> Comparing <i>scene</i> against a value between 0.3 and 0.5 is generally a sane choice.</p>
 <dt>&bull;</dt>
 <dd> Send even and odd frames to separate outputs, and compose them: </dd>
-<p>select = n = 2 : e = &#8216;mod(n, 2)+1&#8242;[odd][even];<br />
-[odd] pad = h = 2 * ih[tmp];<br />
+<p>select = n = 2 : e = &#8216;mod(n, 2)+1&#8242;[odd][even];<br/>
+[odd] pad = h = 2 * ih[tmp];<br/>
 [tmp][even] overlay = y = h</p>
 <dt>&bull;</dt>
 <dd> Select useful frames from an ffconcat file which is using inpoints and outpoints but where the source files are not intra frame only. </dd>
@@ -16525,13 +16525,13 @@ amovie = part2.mp4[a2];<br />
 <pre>
         &lt;START&gt;[-&lt;END&gt;] &lt;COMMANDS&gt;;
 </pre>
-<p> The time interval is specified by the <i></i><font SIZE="-1"><i>START</i></font><i></i> and <i></i><font SIZE="-1"><i>END</i></font><i></i> times. <i></i><font SIZE="-1"><i>END</i></font><i></i> is optional and defaults to the maximum time. </p>
-<p> The current frame time is considered within the specified interval if it is included in the interval [<i></i><font SIZE="-1"><i>START</i></font><i></i>, <i></i><font SIZE="-1"><i>END</i></font><i></i>), that is when the time is greater or equal to <i></i><font SIZE="-1"><i>START</i></font><i></i> and is lesser than <i></i><font SIZE="-1"><i>END</i></font><i></i>. </p>
-<p> <i></i><font SIZE="-1"><i>COMMANDS</i></font><i></i> consists of a sequence of one or more command specifications, separated by &#8220;,&#8221;, relating to that interval. The syntax of a command specification is given by: </p>
+<p> The time interval is specified by the <i></i><i>START</i><i></i> and <i></i><i>END</i><i></i> times. <i></i><i>END</i><i></i> is optional and defaults to the maximum time. </p>
+<p> The current frame time is considered within the specified interval if it is included in the interval [<i></i><i>START</i><i></i>, <i></i><i>END</i><i></i>), that is when the time is greater or equal to <i></i><i>START</i><i></i> and is lesser than <i></i><i>END</i><i></i>. </p>
+<p> <i></i><i>COMMANDS</i><i></i> consists of a sequence of one or more command specifications, separated by &#8220;,&#8221;, relating to that interval. The syntax of a command specification is given by: </p>
 <pre>
         [&lt;FLAGS&gt;] &lt;TARGET&gt; &lt;COMMAND&gt; &lt;ARG&gt;
 </pre>
-<p> <i></i><font SIZE="-1"><i>FLAGS</i></font><i></i> is optional and specifies the type of events relating to the time interval which enable sending the specified command, and must be a non-null sequence of identifier flags separated by &#8220;+&#8221; or &#8220;|&#8221; and enclosed between &#8220;[&#8221; and &#8220;]&#8221;. </p>
+<p> <i></i><i>FLAGS</i><i></i> is optional and specifies the type of events relating to the time interval which enable sending the specified command, and must be a non-null sequence of identifier flags separated by &#8220;+&#8221; or &#8220;|&#8221; and enclosed between &#8220;[&#8221; and &#8220;]&#8221;. </p>
 <p> The following flags are recognized:</p>
 <dl>
 <dt><code>enter</code></dt>
@@ -16539,39 +16539,39 @@ amovie = part2.mp4[a2];<br />
 <dt><code>leave</code></dt>
 <dd> The command is sent when the current frame timestamp leaves the specified interval. In other words, the command is sent when the previous frame timestamp was in the given interval, and the current is not.</dd>
 <dt><code>expr</code></dt>
-<dd> The command <i></i><font SIZE="-1"><i>ARG</i></font><i></i> is interpreted as expression and result of expression is passed as <i></i><font SIZE="-1"><i>ARG</i></font><i></i>. </dd>
-<p> The expression is evaluated through the eval <font SIZE="-1">API</font> and can contain the following constants:</p>
+<dd> The command <i></i><i>ARG</i><i></i> is interpreted as expression and result of expression is passed as <i></i><i>ARG</i><i></i>. </dd>
+<p> The expression is evaluated through the eval API and can contain the following constants:</p>
 <dl>
 <dl>
-<dt><font SIZE="-1"><code>POS</code></font></dt>
+<dt><code>POS</code></dt>
 <dd> Original position in the file of the frame, or undefined if undefined for the current frame.</dd>
-<dt><font SIZE="-1"><code>PTS</code></font></dt>
+<dt><code>PTS</code></dt>
 <dd> The presentation timestamp in input.</dd>
 <dt><code>N</code></dt>
 <dd> The count of the input frame for video or audio, starting from 0.</dd>
 <dt><code>T</code></dt>
 <dd> The time in seconds of the current frame.</dd>
-<dt><font SIZE="-1"><code>TS</code></font></dt>
+<dt><code>TS</code></dt>
 <dd> The start time in seconds of the current command interval.</dd>
-<dt><font SIZE="-1"><code>TE</code></font></dt>
+<dt><code>TE</code></dt>
 <dd> The end time in seconds of the current command interval.</dd>
-<dt><font SIZE="-1"><code>TI</code></font></dt>
-<dd> The interpolated time of the current command interval, <font SIZE="-1">TI</font> = (T &#8211; <font SIZE="-1">TS</font>) / (<font SIZE="-1">TE</font> &#8211; <font SIZE="-1">TS</font>).</dd></dl>
+<dt><code>TI</code></dt>
+<dd> The interpolated time of the current command interval, TI = (T &#8211; TS) / (TE &#8211; TS).</dd></dl>
 </dl>
 <dl>
 </dl>
 </dl>
-<p> If <i></i><font SIZE="-1"><i>FLAGS</i></font><i></i> is not specified, a default value of <tt>&quot;[enter]&quot;</tt> is assumed. </p>
-<p> <i></i><font SIZE="-1"><i>TARGET</i></font><i></i> specifies the target of the command, usually the name of the filter class or a specific filter instance name. </p>
-<p> <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i> specifies the name of the command for the target filter. </p>
-<p> <i></i><font SIZE="-1"><i>ARG</i></font><i></i> is optional and specifies the optional list of argument for the given <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i>. </p>
+<p> If <i></i><i>FLAGS</i><i></i> is not specified, a default value of <tt>&quot;[enter]&quot;</tt> is assumed. </p>
+<p> <i></i><i>TARGET</i><i></i> specifies the target of the command, usually the name of the filter class or a specific filter instance name. </p>
+<p> <i></i><i>COMMAND</i><i></i> specifies the name of the command for the target filter. </p>
+<p> <i></i><i>ARG</i><i></i> is optional and specifies the optional list of argument for the given <i></i><i>COMMAND</i><i></i>. </p>
 <p> Between one interval specification and another, whitespaces, or sequences of characters starting with <tt>&quot;#&quot;</tt> until the end of line, are ignored and can be used to annotate comments. </p>
-<p> A simplified <font SIZE="-1">BNF</font> description of the commands specification syntax follows: </p>
-<p>        &lt;COMMAND_FLAG&gt;  ::= &#8220;enter&#8221; | &#8220;leave&#8221;<br />
-        &lt;COMMAND_FLAGS&gt; ::= &lt;COMMAND_FLAG&gt; [(+|&#8221;|&#8221;)&lt;COMMAND_FLAG&gt;]<br />
-        &lt;COMMAND&gt;       ::= [&#8220;[&#8221; &lt;COMMAND_FLAGS&gt; &#8220;]&#8221;] &lt;TARGET&gt; &lt;COMMAND&gt; [&lt;ARG&gt;]<br />
-        &lt;COMMANDS&gt;      ::= &lt;COMMAND&gt; [,&lt;COMMANDS&gt;]<br />
-        &lt;INTERVAL&gt;      ::= &lt;START&gt;[-&lt;END&gt;] &lt;COMMANDS&gt;<br />
+<p> A simplified BNF description of the commands specification syntax follows: </p>
+<p>        &lt;COMMAND_FLAG&gt;  ::= &#8220;enter&#8221; | &#8220;leave&#8221;<br/>
+        &lt;COMMAND_FLAGS&gt; ::= &lt;COMMAND_FLAG&gt; [(+|&#8221;|&#8221;)&lt;COMMAND_FLAG&gt;]<br/>
+        &lt;COMMAND&gt;       ::= [&#8220;[&#8221; &lt;COMMAND_FLAGS&gt; &#8220;]&#8221;] &lt;TARGET&gt; &lt;COMMAND&gt; [&lt;ARG&gt;]<br/>
+        &lt;COMMANDS&gt;      ::= &lt;COMMAND&gt; [,&lt;COMMANDS&gt;]<br/>
+        &lt;INTERVAL&gt;      ::= &lt;START&gt;[-&lt;END&gt;] &lt;COMMANDS&gt;<br/>
         &lt;INTERVALS&gt;     ::= &lt;INTERVAL&gt;[;&lt;INTERVALS&gt;]</p>
 <p> <i>Examples</i></p>
 <dl>
@@ -16587,15 +16587,15 @@ amovie = part2.mp4[a2];<br />
 </pre>
 <dt>&bull;</dt>
 <dd> Specify a list of drawtext and hue commands in a file. </dd>
-<p>#show text in the interval 5 &#8211; 10<br />
-5.0 &#8211; 10.0 [enter] drawtext reinit &#8216;fontfile=FreeSerif.ttf:text=hello world&#8217;,<br />
+<p>#show text in the interval 5 &#8211; 10<br/>
+5.0 &#8211; 10.0 [enter] drawtext reinit &#8216;fontfile=FreeSerif.ttf:text=hello world&#8217;,<br/>
     [leave] drawtext reinit &#8216;fontfile=FreeSerif.ttf:text=&#8217;;</p>
-<p>#desaturate the image in the interval 15 &#8211; 20<br />
-15.0 &#8211; 20.0 [enter] hue s 0,<br />
-    [enter] drawtext reinit &#8216;fontfile=FreeSerif.ttf:text=nocolor&#8217;,<br />
-    [leave] hue s 1,<br />
+<p>#desaturate the image in the interval 15 &#8211; 20<br/>
+15.0 &#8211; 20.0 [enter] hue s 0,<br/>
+    [enter] drawtext reinit &#8216;fontfile=FreeSerif.ttf:text=nocolor&#8217;,<br/>
+    [leave] hue s 1,<br/>
     [leave] drawtext reinit &#8216;fontfile=FreeSerif.ttf:text=color&#8217;;</p>
-<p>#apply an exponential saturation fade &#8211; out effect, starting from time 25<br />
+<p>#apply an exponential saturation fade &#8211; out effect, starting from time 25<br/>
 25 [enter] hue s exp(25 &#8211; t)</p>
 <p> A filtergraph allowing to read and process the above command list stored in a file <i>test.cmd</i>, can be specified with: </p>
 <pre>
@@ -16603,54 +16603,54 @@ amovie = part2.mp4[a2];<br />
 </pre>
 </dl>
 <h3>setpts, asetpts</h3>
-<p> Change the <font SIZE="-1">PTS</font> (presentation timestamp) of the input frames. </p>
+<p> Change the PTS (presentation timestamp) of the input frames. </p>
 <p> <tt>&quot;setpts&quot;</tt> works on video frames, <tt>&quot;asetpts&quot;</tt> on audio frames. </p>
 <p> This filter accepts the following options:</p>
 <dl>
 <dt><code>expr</code></dt>
 <dd> The expression which is evaluated for each frame to construct its timestamp.</dd></dl>
-<p> The expression is evaluated through the eval <font SIZE="-1">API</font> and can contain the following constants:</p>
+<p> The expression is evaluated through the eval API and can contain the following constants:</p>
 <dl>
-<dt><font SIZE="-1"><code>FRAME_RATE, FR</code></font></dt>
+<dt><code>FRAME_RATE, FR</code></dt>
 <dd> frame rate, only defined for constant frame-rate video</dd>
-<dt><font SIZE="-1"><code>PTS</code></font></dt>
+<dt><code>PTS</code></dt>
 <dd> The presentation timestamp in input</dd>
 <dt><code>N</code></dt>
 <dd> The count of the input frame for video or the number of consumed samples, not including the current frame for audio, starting from 0.</dd>
-<dt><font SIZE="-1"><code>NB_CONSUMED_SAMPLES</code></font></dt>
+<dt><code>NB_CONSUMED_SAMPLES</code></dt>
 <dd> The number of consumed samples, not including the current frame (only audio)</dd>
-<dt><font SIZE="-1"><code>NB_SAMPLES, S</code></font></dt>
+<dt><code>NB_SAMPLES, S</code></dt>
 <dd> The number of samples in the current frame (only audio)</dd>
-<dt><font SIZE="-1"><code>SAMPLE_RATE, SR</code></font></dt>
+<dt><code>SAMPLE_RATE, SR</code></dt>
 <dd> The audio sample rate.</dd>
-<dt><font SIZE="-1"><code>STARTPTS</code></font></dt>
-<dd> The <font SIZE="-1">PTS</font> of the first frame.</dd>
-<dt><font SIZE="-1"><code>STARTT</code></font></dt>
+<dt><code>STARTPTS</code></dt>
+<dd> The PTS of the first frame.</dd>
+<dt><code>STARTT</code></dt>
 <dd> the time in seconds of the first frame</dd>
-<dt><font SIZE="-1"><code>INTERLACED</code></font></dt>
+<dt><code>INTERLACED</code></dt>
 <dd> State whether the current frame is interlaced.</dd>
 <dt><code>T</code></dt>
 <dd> the time in seconds of the current frame</dd>
-<dt><font SIZE="-1"><code>POS</code></font></dt>
+<dt><code>POS</code></dt>
 <dd> original position in the file of the frame, or undefined if undefined for the current frame</dd>
-<dt><font SIZE="-1"><code>PREV_INPTS</code></font></dt>
-<dd> The previous input <font SIZE="-1">PTS.</font></dd>
-<dt><font SIZE="-1"><code>PREV_INT</code></font></dt>
+<dt><code>PREV_INPTS</code></dt>
+<dd> The previous input PTS.</dd>
+<dt><code>PREV_INT</code></dt>
 <dd> previous input time in seconds</dd>
-<dt><font SIZE="-1"><code>PREV_OUTPTS</code></font></dt>
-<dd> The previous output <font SIZE="-1">PTS.</font></dd>
-<dt><font SIZE="-1"><code>PREV_OUTT</code></font></dt>
+<dt><code>PREV_OUTPTS</code></dt>
+<dd> The previous output PTS.</dd>
+<dt><code>PREV_OUTT</code></dt>
 <dd> previous output time in seconds</dd>
-<dt><font SIZE="-1"><code>RTCTIME</code></font></dt>
-<dd> The wallclock (<font SIZE="-1">RTC</font>) time in microseconds. This is deprecated, use <code>time</code>(0) instead.</dd>
-<dt><font SIZE="-1"><code>RTCSTART</code></font></dt>
-<dd> The wallclock (<font SIZE="-1">RTC</font>) time at the start of the movie in microseconds.</dd>
-<dt><font SIZE="-1"><code>TB</code></font></dt>
+<dt><code>RTCTIME</code></dt>
+<dd> The wallclock (RTC) time in microseconds. This is deprecated, use <code>time</code>(0) instead.</dd>
+<dt><code>RTCSTART</code></dt>
+<dd> The wallclock (RTC) time at the start of the movie in microseconds.</dd>
+<dt><code>TB</code></dt>
 <dd> The timebase of the input timestamps.</dd></dl>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Start counting <font SIZE="-1">PTS</font> from zero </dd>
+<dd> Start counting PTS from zero </dd>
 <pre>
         setpts=PTS-STARTPTS
 </pre>
@@ -16675,7 +16675,7 @@ amovie = part2.mp4[a2];<br />
         setpts='1/(25*TB) * (N + 0.05 * sin(N*2*PI/25))'
 </pre>
 <dt>&bull;</dt>
-<dd> Apply an offset of 10 seconds to the input <font SIZE="-1">PTS:</font> </dd>
+<dd> Apply an offset of 10 seconds to the input PTS: </dd>
 <pre>
         setpts=PTS+10/TB
 </pre>
@@ -16717,7 +16717,7 @@ amovie = part2.mp4[a2];<br />
 <dl>
 <dt><code>expr, tb</code></dt>
 <dd> The expression which is evaluated into the output timebase.</dd></dl>
-<p> The value for <code>tb</code> is an arithmetic expression representing a rational. The expression can contain the constants &#8220;<font SIZE="-1">AVTB&#8221;</font> (the default timebase), &#8220;intb&#8221; (the input timebase) and &#8220;sr&#8221; (the sample rate, audio only). Default value is &#8220;intb&#8221;. </p>
+<p> The value for <code>tb</code> is an arithmetic expression representing a rational. The expression can contain the constants &#8220;AVTB&#8221; (the default timebase), &#8220;intb&#8221; (the input timebase) and &#8220;sr&#8221; (the sample rate, audio only). Default value is &#8220;intb&#8221;. </p>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
@@ -16887,17 +16887,17 @@ amovie = part2.mp4[a2];<br />
 <dt><code>unspecified</code></dt>
 <dd> Unspecified (default)</dd>
 <dt><code>bt709</code></dt>
-<dd> <font SIZE="-1">BT.709</font></dd>
+<dd> BT.709</dd>
 <dt><code>fcc</code></dt>
-<dd> <font SIZE="-1">FCC</font></dd>
+<dd> FCC</dd>
 <dt><code>bt470bg</code></dt>
-<dd> <font SIZE="-1">BT.470BG</font> or <font SIZE="-1">BT.601-6 625</font></dd>
+<dd> BT.470BG or BT.601-6 625</dd>
 <dt><code>smpte170m</code></dt>
-<dd> <font SIZE="-1">SMPTE-170M</font> or <font SIZE="-1">BT.601-6 525</font></dd>
+<dd> SMPTE-170M or BT.601-6 525</dd>
 <dt><code>smpte240m</code></dt>
-<dd> <font SIZE="-1">SMPTE-240M</font></dd>
+<dd> SMPTE-240M</dd>
 <dt><code>bt2020ncl</code></dt>
-<dd> <font SIZE="-1">BT.2020</font> with non-constant luminance</dd></dl>
+<dd> BT.2020 with non-constant luminance</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -16921,11 +16921,11 @@ amovie = part2.mp4[a2];<br />
 </pre>
 <dt>&bull;</dt>
 <dd> A1 and its harmonics: A1, A2, (near)E3, A3: </dd>
-<p>ffplay &#8211; f lavfi &#8216;aevalsrc=0.1*sin(2*PI*55*t)+0.1*sin(4*PI*55*t)+0.1*sin(6*PI*55*t)+0.1*sin(8*PI*55*t), asplit[a][out1];<br />
+<p>ffplay &#8211; f lavfi &#8216;aevalsrc=0.1*sin(2*PI*55*t)+0.1*sin(4*PI*55*t)+0.1*sin(6*PI*55*t)+0.1*sin(8*PI*55*t), asplit[a][out1];<br/>
 [a] showcqt[out0]&#8217;</p>
 <dt>&bull;</dt>
 <dd> Same as above, but with more accuracy in frequency domain: </dd>
-<p>ffplay &#8211; f lavfi &#8216;aevalsrc=0.1*sin(2*PI*55*t)+0.1*sin(4*PI*55*t)+0.1*sin(6*PI*55*t)+0.1*sin(8*PI*55*t), asplit[a][out1];<br />
+<p>ffplay &#8211; f lavfi &#8216;aevalsrc=0.1*sin(2*PI*55*t)+0.1*sin(4*PI*55*t)+0.1*sin(6*PI*55*t)+0.1*sin(8*PI*55*t), asplit[a][out1];<br/>
 [a] showcqt = timeclamp = 0.5 [out0]&#8217;</p>
 <dt>&bull;</dt>
 <dd> Custom volume: </dd>
@@ -17364,7 +17364,7 @@ amovie = part2.mp4[a2];<br />
 </pre>
 <dt>&bull;</dt>
 <dd> Complete example for a colored and sliding spectrum per channel using <code>ffplay</code>: </dd>
-<p>ffplay &#8211; f lavfi &#8216;amovie=input.mp3, asplit [a][out1];<br />
+<p>ffplay &#8211; f lavfi &#8216;amovie=input.mp3, asplit [a][out1];<br/>
              [a] showspectrum = mode = separate : color = intensity : slide = 1 : scale = cbrt[out0]&#8217;
 </dl>
 <h3>showspectrumpic</h3>
@@ -17556,11 +17556,11 @@ amovie = part2.mp4[a2];<br />
 <p> The expression can use the following variables:</p>
 <dl>
 <dl>
-<dt><font SIZE="-1"><code>VOLUME</code></font></dt>
+<dt><code>VOLUME</code></dt>
 <dd> Current max volume of channel in dB.</dd>
-<dt><font SIZE="-1"><code>PEAK</code></font></dt>
+<dt><code>PEAK</code></dt>
 <dd> Current peak.</dd>
-<dt><font SIZE="-1"><code>CHANNEL</code></font></dt>
+<dt><code>CHANNEL</code></dt>
 <dd> Current channel number, starting from 0.</dd></dl>
 </dl>
 <dl>
@@ -17655,8 +17655,8 @@ amovie = part2.mp4[a2];<br />
 <p>amovie = a.mp3, asplit[out0], showwaves[out1]</p>
 <dt>&bull;</dt>
 <dd> Create a synthetic signal and show it with showwaves, forcing a frame rate of 30 frames per second: </dd>
-<p>aevalsrc = sin(1 * 2 * PI * t) * sin(880 * 2 * PI * t)<br />
-    : cos(2 * PI * 200 * t),<br />
+<p>aevalsrc = sin(1 * 2 * PI * t) * sin(880 * 2 * PI * t)<br/>
+    : cos(2 * PI * 200 * t),<br/>
 asplit[out0], showwaves = r = 30 [out1]
 </dl>
 <h3>showwavespic</h3>
@@ -17785,8 +17785,8 @@ asplit[out0], showwaves = r = 30 [out1]
 <p>[in] asplit = 3 [out0][out1][out2]</p>
 <dt>&bull;</dt>
 <dd> Create two separate outputs from the same input, one cropped and one padded: </dd>
-<p>[in] split[splitout1][splitout2];<br />
-[splitout1] crop = 100 : 100 : 0 : 0 [cropout];<br />
+<p>[in] split[splitout1][splitout2];<br/>
+[splitout1] crop = 100 : 100 : 0 : 0 [cropout];<br/>
 [splitout2] pad = 200 : 200 : 100 : 100 [padout];</p>
 <dt>&bull;</dt>
 <dd> Create 5 copies of the input audio with <code>ffmpeg</code>: </dd>
@@ -17804,23 +17804,23 @@ asplit[out0], showwaves = r = 30 [out1]
 <pre>
         &lt;TARGET&gt; &lt;COMMAND&gt; [&lt;ARG&gt;]
 </pre>
-<p> <i></i><font SIZE="-1"><i>TARGET</i></font><i></i> specifies the target of the command, usually the name of the filter class or a specific filter instance name. The default filter instance name uses the pattern <code>Parsed_&lt;filter_name&gt;_&lt;index&gt;</code>, but you can override this by using the <code>filter_name@id</code> syntax (see <code>Filtergraph syntax</code>). </p>
-<p> <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i> specifies the name of the command for the target filter. </p>
-<p> <i></i><font SIZE="-1"><i>ARG</i></font><i></i> is optional and specifies the optional argument list for the given <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i>. </p>
+<p> <i></i><i>TARGET</i><i></i> specifies the target of the command, usually the name of the filter class or a specific filter instance name. The default filter instance name uses the pattern <code>Parsed_&lt;filter_name&gt;_&lt;index&gt;</code>, but you can override this by using the <code>filter_name@id</code> syntax (see <code>Filtergraph syntax</code>). </p>
+<p> <i></i><i>COMMAND</i><i></i> specifies the name of the command for the target filter. </p>
+<p> <i></i><i>ARG</i><i></i> is optional and specifies the optional argument list for the given <i></i><i>COMMAND</i><i></i>. </p>
 <p> Upon reception, the message is processed and the corresponding command is injected into the filtergraph. Depending on the result, the filter will send a reply to the client, adopting the format: </p>
 <pre>
         &lt;ERROR_CODE&gt; &lt;ERROR_REASON&gt;
         &lt;MESSAGE&gt;
 </pre>
-<p> <i></i><font SIZE="-1"><i>MESSAGE</i></font><i></i> is optional. </p>
+<p> <i></i><i>MESSAGE</i><i></i> is optional. </p>
 <p> <i>Examples</i> </p>
 <p> Look at <i>tools/zmqsend</i> for an example of a zmq client which can be used to send commands processed by these filters. </p>
 <p> Consider the following filtergraph generated by <code>ffplay</code>. In this example the last overlay filter has an instance name. All other filters will have default instance names. </p>
-<p>ffplay &#8211; dumpgraph 1 &#8211; f lavfi &#8221;<br />
-    color = s = 100&#215;100 : c = red[l];<br />
-color = s = 100&#215;100 : c = blue[r];<br />
-nullsrc = s = 200&#215;100, zmq[bg];<br />
-[bg][l] overlay[bg + l];<br />
+<p>ffplay &#8211; dumpgraph 1 &#8211; f lavfi &#8221;<br/>
+    color = s = 100&#215;100 : c = red[l];<br/>
+color = s = 100&#215;100 : c = blue[r];<br/>
+nullsrc = s = 200&#215;100, zmq[bg];<br/>
+[bg][l] overlay[bg + l];<br/>
 [bg + l][r] overlay @my = x = 100 &#8221;</p>
 <p> To change the color of the left side of the video, the following command can be used: </p>
 <pre>
@@ -17847,7 +17847,7 @@ nullsrc = s = 200&#215;100, zmq[bg];<br />
 <dt><code>format_name, f</code></dt>
 <dd> Specifies the format assumed for the movie to read, and can be either the name of a container or an input device. If not specified, the format is guessed from <i>movie_name</i> or by probing.</dd>
 <dt><code>seek_point, sp</code></dt>
-<dd> Specifies the seek point in seconds. The frames will be output starting from this seek point. The parameter is evaluated with <tt>&quot;av_strtod&quot;</tt>, so the numerical value may be suffixed by an <font SIZE="-1">IS</font> postfix. The default value is &#8220;0&#8221;.</dd>
+<dd> Specifies the seek point in seconds. The frames will be output starting from this seek point. The parameter is evaluated with <tt>&quot;av_strtod&quot;</tt>, so the numerical value may be suffixed by an IS postfix. The default value is &#8220;0&#8221;.</dd>
 <dt><code>streams, s</code></dt>
 <dd> Specifies the streams to read. Several streams can be specified, separated by &#8220;+&#8221;. The source will then have as many outputs, in the same order. The syntax is explained in the <code>&#8220;Stream specifiers&#8221; section in the ffmpeg manual</code>. Two special names, &#8220;dv&#8221; and &#8220;da&#8221; specify respectively the default (best suited) video and audio stream. Default is &#8220;dv&#8221;, or &#8220;da&#8221; if the filter is called as &#8220;amovie&#8221;.</dd>
 <dt><code>stream_index, si</code></dt>
@@ -17858,20 +17858,20 @@ nullsrc = s = 200&#215;100, zmq[bg];<br />
 <dt><code>discontinuity</code></dt>
 <dd> Specifies the time difference between frames above which the point is considered a timestamp discontinuity which is removed by adjusting the later timestamps.</dd></dl>
 <p> It allows overlaying a second video on top of the main input of a filtergraph, as shown in this graph: </p>
-<p>input&#8211; &#8212; &#8212; &#8212; &#8212;&gt;deltapts0&#8211; &gt; overlay&#8211; &gt; output ^<br />
-    |<br />
+<p>input&#8211; &#8212; &#8212; &#8212; &#8212;&gt;deltapts0&#8211; &gt; overlay&#8211; &gt; output ^<br/>
+    |<br/>
     movie&#8211; &gt; scale&#8211; &gt; deltapts1&#8211; &#8212; &#8212; -+</p>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Skip 3.2 seconds from the start of the <font SIZE="-1">AVI</font> file in.avi, and overlay it on top of the input labelled &#8220;in&#8221;: </dd>
-<p>movie = in.avi : seek_point = 3.2, scale = 180 : -1, setpts = PTS &#8211; STARTPTS[over];<br />
-[in] setpts = PTS &#8211; STARTPTS[main];<br />
+<dd> Skip 3.2 seconds from the start of the AVI file in.avi, and overlay it on top of the input labelled &#8220;in&#8221;: </dd>
+<p>movie = in.avi : seek_point = 3.2, scale = 180 : -1, setpts = PTS &#8211; STARTPTS[over];<br/>
+[in] setpts = PTS &#8211; STARTPTS[main];<br/>
 [main][over] overlay = 16 : 16 [out]</p>
 <dt>&bull;</dt>
 <dd> Read from a video4linux2 device, and overlay it on top of the input labelled &#8220;in&#8221;: </dd>
-<p>movie = / dev / video0 : f = video4linux2, scale = 180 : -1, setpts = PTS &#8211; STARTPTS[over];<br />
-[in] setpts = PTS &#8211; STARTPTS[main];<br />
+<p>movie = / dev / video0 : f = video4linux2, scale = 180 : -1, setpts = PTS &#8211; STARTPTS[over];<br/>
+[in] setpts = PTS &#8211; STARTPTS[main];<br/>
 [main][over] overlay = 16 : 16 [out]</p>
 <dt>&bull;</dt>
 <dd> Read the first video stream and the audio stream with id 0x81 from dvd.vob; the video is connected to the pad named &#8220;video&#8221; and the audio is connected to the pad named &#8220;audio&#8221;: </dd>
@@ -17887,19 +17887,19 @@ movie = dvd.vob : s = v : 0 + #0x81
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> <i>stream_index</i>: If stream_index is -1, a default stream is selected, and <i>timestamp</i> is automatically converted from <font SIZE="-1">AV_TIME_BASE</font> units to the stream specific time_base.</dd>
+<dd> <i>stream_index</i>: If stream_index is -1, a default stream is selected, and <i>timestamp</i> is automatically converted from AV_TIME_BASE units to the stream specific time_base.</dd>
 <dt>&bull;</dt>
-<dd> <i>timestamp</i>: Timestamp in AVStream.time_base units or, if no stream is specified, in <font SIZE="-1">AV_TIME_BASE</font> units.</dd>
+<dd> <i>timestamp</i>: Timestamp in AVStream.time_base units or, if no stream is specified, in AV_TIME_BASE units.</dd>
 <dt>&bull;</dt>
 <dd> <i>flags</i>: Flags which select direction and seeking mode.</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt><code>get_duration</code></dt>
-<dd> Get movie duration in <font SIZE="-1">AV_TIME_BASE</font> units.</dd></dl>
+<dd> Get movie duration in AV_TIME_BASE units.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ffmpeg/">ffmpeg</a></code>(1), <code><a href="/docs/linux/man/1-ffplay/">ffplay</a></code>(1), <code><a href="/docs/linux/man/1-ffprobe/">ffprobe</a></code>(1), <code><a href="/docs/linux/man/3-libavfilter/">libavfilter</a></code>(3)</p>
 <h2>AUTHORS</h2>
 <p> The FFmpeg developers. </p>
 <p> For details about the authorship, see the Git history of the project (<a href="git://source.ffmpeg.org/ffmpeg">git://source.ffmpeg.org/ffmpeg</a>), e.g. by typing the command <code>git log</code> in the FFmpeg source directory, or browsing the online repository at &lt;<code><a rel="nofollow" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a></code>&gt;. </p>
-<p> Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. </p>
+<p> Maintainers for the specific components are listed in the file <i></i><i>MAINTAINERS</i><i></i> in the source code tree. </p>

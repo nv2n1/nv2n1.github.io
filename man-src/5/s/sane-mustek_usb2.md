@@ -25,12 +25,12 @@ description: "sane-mustek_usb2 – SANE backend for SQ113 based USB flatbed scan
 <p> Example: export SANE_DEBUG_MUSTEK_USB2=4 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-ma1509/">sane-ma1509</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_usb/">sane-mustek_usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek/">sane-mustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_pp/">sane-mustek_pp</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1)<br />
- <i>/usr/share/doc/libsane/mustek_usb2/mustek_usb2.CHANGES</i><br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-ma1509/">sane-ma1509</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_usb/">sane-mustek_usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek/">sane-mustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_pp/">sane-mustek_pp</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1)<br/>
+ <i>/usr/share/doc/libsane/mustek_usb2/mustek_usb2.CHANGES</i><br/>
  <i><a rel="nofollow" href="http://www.meier-geinitz.de/sane/mustek_usb2-backend/">http://www.meier-geinitz.de/sane/mustek_usb2-backend/</a></i> </p>
 <h2>Author</h2>
-<p>The driver has been written Roy Zhou, Jack Xu, and Vinci Cen from Mustek.<br />
+<p>The driver has been written Roy Zhou, Jack Xu, and Vinci Cen from Mustek.<br/>
  Adjustments to SANE by Henning Meier-Geinitz.</p>
 <h2>Bugs</h2>
-<p>Please contact me if you find a bug or missing feature: &lt;<i>henning [at] meier-geinitz.de</i>&gt;.<br />
+<p>Please contact me if you find a bug or missing feature: &lt;<i>henning [at] meier-geinitz.de</i>&gt;.<br/>
  Please send a debug log if your scanner isn&#8217;t detected correctly (see <code>SANE_DEBUG_MUSTEK_USB2</code> above). </p>

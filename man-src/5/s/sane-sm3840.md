@@ -49,7 +49,7 @@ Microtek ScanMaker 4800 All modes OK</pre>
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. To see error messages on stderr set <code>SANE_DEBUG_SM3840</code> to 1. </dd>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-microtek/">sane-microtek</a></code>(5), <code><a href="/docs/linux/man/5-sane-microtek2/">sane-microtek2</a></code>(5), <code><a href="/docs/linux/man/5-sane-sm3600/">sane-sm3600</a></code>(5)<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-microtek/">sane-microtek</a></code>(5), <code><a href="/docs/linux/man/5-sane-microtek2/">sane-microtek2</a></code>(5), <code><a href="/docs/linux/man/5-sane-sm3600/">sane-sm3600</a></code>(5)<br/>
  <i><a rel="nofollow" href="http://www.ziplabel.com/sm3840">http://www.ziplabel.com/sm3840</a></i> </p>
 <h2>Author</h2>
 <p>Earle F. Philhower III &lt;<i>earle [at] ziplabel.com</i>&gt;</p>

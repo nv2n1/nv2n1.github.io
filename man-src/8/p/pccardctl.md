@@ -7,10 +7,10 @@ url: "/docs/linux/man/8-pccardctl/"
 description: "pccardctl – PCMCIA card control utility lspcmcia – display extended PCMCIA debugging information"
 ---
 
-<p>pccardctl &#8211; PCMCIA card control utility<br />
+<p>pccardctl &#8211; PCMCIA card control utility<br/>
  lspcmcia &#8211; display extended PCMCIA debugging information</p>
 <h2>Synopsis</h2>
-<p><code>pccardctl</code> [<code>-V</code>] [<code>-v &#8230;</code>] <i>command</i> [<i>socket</i>]<br />
+<p><code>pccardctl</code> [<code>-V</code>] [<code>-v &#8230;</code>] <i>command</i> [<i>socket</i>]<br/>
  <code>lspcmcia</code> [<code>-V</code>] [<code>-v &#8230;</code>] [<i>socket</i>] </p>
 <h2>Description</h2>
 <p><code>pccardctl</code> is used to monitor and control the state of PCMCIA sockets. If a socket number is specified, the command will be applied to just one socket; otherwise, all sockets will be affected. If <code>pccardctl</code> is executed by root, all commands are available. If it is executed by an unpriviledged user, only the informational commands are accessible. <code>lspcmcia</code> is an alias for <code>pccardctl ls</code>, provided for convenience. </p>
@@ -45,6 +45,6 @@ description: "pccardctl – PCMCIA card control utility lspcmcia – display ext
 <dd>Increase the verbosity of the <code>ls</code> command. Giving this option twice increases verbosity further. </dd>
 </dl>
 <h2>Author</h2>
-<p>Daniel Ritz &#8211; daniel.ritz [at] gmx.ch<br />
- based upon the original cardctl man page by<br />
+<p>Daniel Ritz &#8211; daniel.ritz [at] gmx.ch<br/>
+ based upon the original cardctl man page by<br/>
  David Hinds &#8211; dahinds [at] users.sourceforge.net</p>

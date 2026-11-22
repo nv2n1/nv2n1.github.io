@@ -9,7 +9,7 @@ description: "xfs_ncheck – generate pathnames from i-numbers for XFS"
 
 <p>xfs_ncheck &#8211; generate pathnames from i-numbers for XFS</p>
 <h2>Synopsis</h2>
-<p><code>xfs_ncheck</code> [ <code>-i</code> <i>ino</i> ] &#8230; [ <code>-f</code> ] [ <code>-s</code> ] [ <code>-l</code> <i>logdev</i> ] <i>device</i><br />
+<p><code>xfs_ncheck</code> [ <code>-i</code> <i>ino</i> ] &#8230; [ <code>-f</code> ] [ <code>-s</code> ] [ <code>-l</code> <i>logdev</i> ] <i>device</i><br/>
  <code>xfs_ncheck -V</code></p>
 <h2>Description</h2>
 <p><code>xfs_ncheck</code> with no <code>-i</code> arguments generates an inode number and pathname list of all files on the given filesystem. Names of directory files are followed by <code>/.</code>. The output is not sorted in any particular order. The filesystem to be examined is specified by the <i>device</i> argument, which should be the disk or volume device for the filesystem. Filesystems stored in files can also be checked, using the <code>-f</code> flag.</p>

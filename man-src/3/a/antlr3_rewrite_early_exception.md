@@ -12,37 +12,37 @@ description: "include/antlr3exception.h –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt; </p>
 <h3>Data Structures</h3>
-<p>struct <code>ANTLR3_EXCEPTION_struct</code><br />
+<p>struct <code>ANTLR3_EXCEPTION_struct</code><br/>
  <i>Base structure for an ANTLR3 exception tracker. </i></p>
 <h3>Defines</h3>
 <p>#define <code>ANTLR3_EARLY_EXIT_EXCEPTION</code> 5 </p>
 <p> #define <code>ANTLR3_EARLY_EXIT_NAME</code> &#8216;Early exit&#8217; </p>
 <p> #define <code>ANTLR3_FAILED_PREDICATE_EXCEPTION</code> 6 </p>
 <p> #define <code>ANTLR3_FAILED_PREDICATE_NAME</code> &#8216;Predicate failed!&#8217; </p>
-<p> #define <code>ANTLR3_MISMATCHED_EX_NAME</code> &#8216;Mismatched Token Exception&#8217;<br />
- <i>Name of </i><code>ANTLR3_MISMATCHED_TOKEN_EXCEPTION</code>.<br />
+<p> #define <code>ANTLR3_MISMATCHED_EX_NAME</code> &#8216;Mismatched Token Exception&#8217;<br/>
+ <i>Name of </i><code>ANTLR3_MISMATCHED_TOKEN_EXCEPTION</code>.<br/>
  #define <code>ANTLR3_MISMATCHED_SET_EXCEPTION</code> 4 </p>
 <p> #define <code>ANTLR3_MISMATCHED_SET_NAME</code> &#8216;Mismatched set&#8217; </p>
-<p> #define <code>ANTLR3_MISMATCHED_TOKEN_EXCEPTION</code> 2<br />
- <i>Indicates that the recognizer was expecting one token and found a a different one. </i><br />
+<p> #define <code>ANTLR3_MISMATCHED_TOKEN_EXCEPTION</code> 2<br/>
+ <i>Indicates that the recognizer was expecting one token and found a a different one. </i><br/>
  #define <code>ANTLR3_MISMATCHED_TREE_NODE_EXCEPTION</code> 7 </p>
 <p> #define <code>ANTLR3_MISMATCHED_TREE_NODE_NAME</code> &#8216;Mismatched tree node!&#8217; </p>
 <p> #define <code>ANTLR3_MISSING_TOKEN_EXCEPTION</code> 10 </p>
 <p> #define <code>ANTLR3_MISSING_TOKEN_EXCEPTION_NAME</code> &#8216;Missing token&#8217; </p>
-<p> #define <code>ANTLR3_NO_VIABLE_ALT_EXCEPTION</code> 3<br />
- <i>Recognizer could not find a valid alternative from the input. </i><br />
- #define <code>ANTLR3_NO_VIABLE_ALT_NAME</code> &#8216;No Viable Alt&#8217;<br />
- <i>Name of </i><code>ANTLR3_NO_VIABLE_ALT_EXCEPTION</code>.<br />
- #define <code>ANTLR3_RECOGNITION_EX_NAME</code> &#8216;Recognition Exception&#8217;<br />
- <i>Name of exception </i><code>ANTLR3_RECOGNITION_EXCEPTION</code>.<br />
- #define <code>ANTLR3_RECOGNITION_EXCEPTION</code> 1<br />
- <i>Indicates that the recognizer received a token in the input that was not predicted. </i><br />
+<p> #define <code>ANTLR3_NO_VIABLE_ALT_EXCEPTION</code> 3<br/>
+ <i>Recognizer could not find a valid alternative from the input. </i><br/>
+ #define <code>ANTLR3_NO_VIABLE_ALT_NAME</code> &#8216;No Viable Alt&#8217;<br/>
+ <i>Name of </i><code>ANTLR3_NO_VIABLE_ALT_EXCEPTION</code>.<br/>
+ #define <code>ANTLR3_RECOGNITION_EX_NAME</code> &#8216;Recognition Exception&#8217;<br/>
+ <i>Name of exception </i><code>ANTLR3_RECOGNITION_EXCEPTION</code>.<br/>
+ #define <code>ANTLR3_RECOGNITION_EXCEPTION</code> 1<br/>
+ <i>Indicates that the recognizer received a token in the input that was not predicted. </i><br/>
  #define <code>ANTLR3_REWRITE_EARLY_EXCEPTION</code> 8 </p>
 <p> #define <code>ANTLR3_REWRITE_EARLY_EXCEPTION_NAME</code> &#8216;Mismatched tree node!&#8217; </p>
 <p> #define <code>ANTLR3_UNWANTED_TOKEN_EXCEPTION</code> 9 </p>
 <p> #define <code>ANTLR3_UNWANTED_TOKEN_EXCEPTION_NAME</code> &#8216;Extraneous token&#8217; </p>
 <h3>Typedefs</h3>
-<p>typedef struct <code>ANTLR3_EXCEPTION_struct</code> <code>ANTLR3_EXCEPTION</code><br />
+<p>typedef struct <code>ANTLR3_EXCEPTION_struct</code> <code>ANTLR3_EXCEPTION</code><br/>
  <i>Base structure for an ANTLR3 exception tracker. </i></p>
 <h2>Detailed Description</h2>
 <p>Contains the definition of a basic ANTLR3 exception structure created by a recognizer when errors are found/predicted. </p>

@@ -14,7 +14,7 @@ description: "log4cpp::NDC –"
 <h3>Classes</h3>
 <p>struct <code>DiagnosticContext</code> </p>
 <h3>Public Types</h3>
-<p>typedef std::vector<br />
+<p>typedef std::vector<br/>
  &lt; <code>DiagnosticContext</code> &gt; <code>ContextStack</code>&quot; </p>
 <h3>Public Member Functions</h3>
 <p><code>NDC</code> () </p>
@@ -28,22 +28,22 @@ description: "log4cpp::NDC –"
 <p> virtual void <code>_push</code> (const std::string &amp;message) </p>
 <p> virtual void <code>_setMaxDepth</code> (int maxDepth) </p>
 <h3>Static Public Member Functions</h3>
-<p>static void <code>clear</code> ()<br />
- <i>Clear any nested disgnostic information if any. </i><br />
- static <code>ContextStack</code> * <code>cloneStack</code> ()<br />
- <i>Clone the diagnostic context for the current thread. </i><br />
- static const std::string &amp; <code>get</code> ()<br />
- <i>Get the current diagnostic context string. </i><br />
- static size_t <code>getDepth</code> ()<br />
- <i>Get the current nesting depth of this diagnostic context. </i><br />
+<p>static void <code>clear</code> ()<br/>
+ <i>Clear any nested disgnostic information if any. </i><br/>
+ static <code>ContextStack</code> * <code>cloneStack</code> ()<br/>
+ <i>Clone the diagnostic context for the current thread. </i><br/>
+ static const std::string &amp; <code>get</code> ()<br/>
+ <i>Get the current diagnostic context string. </i><br/>
+ static size_t <code>getDepth</code> ()<br/>
+ <i>Get the current nesting depth of this diagnostic context. </i><br/>
  static void <code>inherit</code> (<code>ContextStack</code> *stack) </p>
-<p> static std::string <code>pop</code> ()<br />
- <i>Clients should call this method before leaving a diagnostic context. </i><br />
- static void <code>push</code> (const std::string &amp;message)<br />
- <i>Push new diagnostic context information for the current thread. </i><br />
- static void <code>setMaxDepth</code> (int maxDepth)<br />
- <i>Set the maximum nesting depth for the current </i><code>NDC</code>.<br />
- static <code>NDC</code> &amp; <code>getNDC</code> ()<br />
+<p> static std::string <code>pop</code> ()<br/>
+ <i>Clients should call this method before leaving a diagnostic context. </i><br/>
+ static void <code>push</code> (const std::string &amp;message)<br/>
+ <i>Push new diagnostic context information for the current thread. </i><br/>
+ static void <code>setMaxDepth</code> (int maxDepth)<br/>
+ <i>Set the maximum nesting depth for the current </i><code>NDC</code>.<br/>
+ static <code>NDC</code> &amp; <code>getNDC</code> ()<br/>
  <i>Return the </i><code>NDC</code> for the current thread.</p>
 <h3>Public Attributes</h3>
 <p><code>ContextStack</code> <code>_stack</code> </p>

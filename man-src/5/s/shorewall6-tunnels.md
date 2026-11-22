@@ -12,7 +12,7 @@ description: "tunnels – Shorewall6 VPN definition file"
 <dl>
 <dt> <code>/etc/shorewall6/tunnels</code></dt></dl>
 <h2>Description</h2>
-<dd>The tunnels file is used to define rules for encapsulated (usually encrypted) traffic to pass between the Shorewall6 system and a remote gateway. Traffic flowing through the tunnel is handled using the normal zone/policy/rule mechanism. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/VPNBasics.html">http://www.shorewall.net/VPNBasics.html</a></code>m[]<font SIZE="-2">[1]</font> for details. </dd>
+<dd>The tunnels file is used to define rules for encapsulated (usually encrypted) traffic to pass between the Shorewall6 system and a remote gateway. Traffic flowing through the tunnel is handled using the normal zone/policy/rule mechanism. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/VPNBasics.html">http://www.shorewall.net/VPNBasics.html</a></code>m[][1] for details. </dd>
 <p> The columns in the file are as follows (where the column name is followed by a different name in parentheses, the different name is used in the alternate specification syntax). </p>
 <p> <code>TYPE</code> &#8211; {<code>ipsec</code>[<code>:{noah</code>|ah}]|<code>ipsecnat</code>|<code>gre</code>|l2tp|<code>pptpclient</code>|<code>pptpserver</code>|?COMMENT|{<code>openvpn</code>|<code>openvpnclient</code>|<code>openvpnserver</code>}[:{<code>tcp</code>|<code>udp</code>}]<code>[</code>:<i>port</i>]|<code>generic</code><code>:</code><i>protocol</i>[<code>:</code><i>port</i>]}</p>
 <dl>
@@ -40,7 +40,7 @@ description: "tunnels – Shorewall6 VPN definition file"
 <p> <code>GATEWAY</code>(S) (gateway or gateways) &#8211; <i>address-or-range</i> <code>[ , &#8230; ]</code></p>
 <dl>
 <dd>The IP address of the remote tunnel gateway. If the remote gateway has no fixed address (Road Warrior) then specify the gateway as <code>::/0</code>. May be specified as a network address and if your kernel and ip6tables include iprange match support then IP address ranges are also allowed. </dd>
-<p> Beginning with Shorewall 4.5.3, a list of addresses or ranges may be given. Exclusion (m[blue]<code>shorewall6-exclusion</code>m[]<font SIZE="-2">[2]</font> (5) ) is not supported.</dl>
+<p> Beginning with Shorewall 4.5.3, a list of addresses or ranges may be given. Exclusion (m[blue]<code>shorewall6-exclusion</code>m[][2] (5) ) is not supported.</dl>
 <p> <code>GATEWAY ZONE(S)</code> (gateway_zone or gateway_zones) &#8211; [<i>zone</i>[<code>,</code><i>zone</i>]&#8230;]</p>
 <dl>
 <dd>Optional. If the gateway system specified in the third column is a standalone host then this column should contain a comma-separated list of the names of the zones that the host might be in. This column only applies to IPSEC tunnels where it enables ISAKMP traffic to flow through the tunnel to the remote gateway(s).</dd></dl>
@@ -103,7 +103,7 @@ description: "tunnels – Shorewall6 VPN definition file"
 <h2>Files</h2>
 <p>/etc/shorewall6/tunnels</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[3]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][3] </p>
 <p> <a href="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a href="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), <a href="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a href="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5), <a href="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5),<a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), <a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), shorewall6-routestopped(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a href="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall6-mangle/">shorewall6-mangle</a>(5), shorewall6-tos(5), <a href="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

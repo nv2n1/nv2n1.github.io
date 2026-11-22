@@ -15,10 +15,10 @@ description: "JSV – xxQS_NAMExx Job Submission Verifier"
 <h2>CONFIGURATION</h2>
 <p> JSVs can be configured in various locations. Either a <code>jsv_url</code> can be provided with the <code>-jsv</code> submit parameter during job submission, a corresponding switch can be added to one of the <code>sge_request</code> files, or a <code>jsv_url</code> can be configured in the global cluster configuration of the xxQS_NAMExx installation. </p>
 <p> All defined JSV instances will be executed in following order: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1)&nbsp;qsub -jsv &#8230;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;2)&nbsp;$cwd/.sge_request<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;3)&nbsp;$HOME/.sge_request<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;4)&nbsp;$SGE_ROOT/$SGE_CELL/common/sge_request<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1)&nbsp;qsub -jsv &#8230;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;2)&nbsp;$cwd/.sge_request<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;3)&nbsp;$HOME/.sge_request<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;4)&nbsp;$SGE_ROOT/$SGE_CELL/common/sge_request<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;5)&nbsp;Global configuration&nbsp; </p>
 <p> The Client JSVs (1-3) can be defined by xxQS_NAMExx end users, whereas the client JSV defined in the global sge_request file (4) and the server JSV (5) can only be defined by the xxQS_NAMExx administrators. </p>
 <p> Due to the fact that (4) and (5) are defined and configured by xxQS_NAMExx administrators and executed as the last JSV instances in the sequence of JSV scripts, an administrator has a way to enforce certain policies for a cluster. However, note that (4) may be over-ridden trivially with <code>qsub -clear</code>. </p>

@@ -19,7 +19,7 @@ description: "dmail – procmail Mail Delivery Module"
 <p> If the <i>+folder</i> extension is included in the user argument (or appears by itself if there is no user argument), <i>dmail</i> will attempt to deliver to the designated folder. If the folder does not exist or the extension is not included, the message is delivered to the user&#8217;s INBOX. If delivery is to INBOX and no INBOX currently exists, <i>dmail</i> will create a new INBOX. <i>dmail</i> recognizes the format of an existing INBOX or folder, and appends the new message in that format. </p>
 <p> The <code>-D</code> flag specifies debugging; this enables additional message telemetry. </p>
 <p> The <code>-f</code> or <code>-r</code> flag is used to specify a Return-Path. The header </p>
-<p>Return-Path:&nbsp;<wbr>&lt;<i>from_name</i>&gt;&nbsp;<wbr><br />
+<p>Return-Path:&nbsp;<wbr>&lt;<i>from_name</i>&gt;&nbsp;<wbr><br/>
  is prepended to the message before delivery. </p>
 <p> The <code>-s</code> flag specifies that the message will be flagged as being &quot;seen&quot;. </p>
 <p> The <code>-k</code> flag is used to specify delivery keywords, which are set on the message at delivery time if and <code>only</code> if the keywords are already defined in the mailbox. Multiple keywords can be specified by using a quoted string, e.g., </p>
@@ -32,5 +32,5 @@ description: "dmail – procmail Mail Delivery Module"
 <h2>AUTHOR</h2>
 <p> Mark Crispin, MRC [at] CAC.Washington.EDU</p>
 <h2>SEE ALSO</h2>
-<p> binmail(1)<br />
+<p> binmail(1)<br/>
  <a href="/docs/linux/man/1-procmail/">procmail</a>(1) </p>

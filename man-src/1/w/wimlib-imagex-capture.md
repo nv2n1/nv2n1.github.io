@@ -10,7 +10,7 @@ description: "wimlib-imagex-capture, wimlib-imagex-append – Create or append a
 
 <p> wimlib-imagex-capture, wimlib-imagex-append &#8211; Create or append a WIM image</p>
 <h2>SYNOPSIS</h2>
-<p> <code>wimlib-imagex capture</code> <i>SOURCE</i> <i>WIMFILE</i> [<i>IMAGE_NAME</i> [<i>IMAGE_DESCRIPTION</i>]] [<i>OPTION</i>&#8230;]<br />
+<p> <code>wimlib-imagex capture</code> <i>SOURCE</i> <i>WIMFILE</i> [<i>IMAGE_NAME</i> [<i>IMAGE_DESCRIPTION</i>]] [<i>OPTION</i>&#8230;]<br/>
  <code>wimlib-imagex append</code> <i>SOURCE</i> <i>WIMFILE</i> [<i>IMAGE_NAME</i> [<i>IMAGE_DESCRIPTION</i>]] [<i>OPTION</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>wimlib-imagex capture</code> and <code>wimlib-imagex append</code> commands create a Windows Imaging (WIM) image from a directory tree. The <code>wimlib-imagex capture</code> command creates a new WIM file containing the captured image, while the <code>wimlib-imagex append</code> command appends the captured image to an existing WIM file. These commands are also available as simply <code>wimcapture</code> and <code>wimappend</code> if the appropriate hard links or batch files are installed. </p>

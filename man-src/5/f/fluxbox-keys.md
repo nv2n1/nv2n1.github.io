@@ -68,7 +68,7 @@ description: "fluxbox-keys – keyboard shortcuts configuration for"
 <dl>
 <dd>Fires when the workspace changes. This can be used to change backgrounds or do anything else you like when you switch to a new workspace. See the <code>EXAMPLES</code> below for one idea.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font> </dd>
+<dd> <code>Warning</code>  </dd>
 <p> Use caution with this event! For example, do NOT bind this to any action that changes your current workspace. If you break your fluxbox with this feature, you get to keep the pieces. </p>
 </dl>
 <h2>Chaining</h2>

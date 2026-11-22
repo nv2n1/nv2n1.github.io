@@ -10,7 +10,7 @@ description: "dgeqr2p.f –"
 <p>dgeqr2p.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgeqr2p</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>dgeqr2p</code> (M, N, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>DGEQR2P</code> computes the QR factorization of a general rectangular matrix with non-negative diagonal elements using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgeqr2p (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAU, double precision, dimension( * )WORK, integerINFO)</h3>

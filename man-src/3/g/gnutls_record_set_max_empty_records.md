@@ -21,10 +21,10 @@ description: "gnutls_record_set_max_empty_records – API function"
 <h2>DESCRIPTION</h2>
 <p> Used to set the maximum number of empty fragments that can be accepted in a row. Accepting many empty fragments is useful for receiving length-hidden content, where empty fragments filled with pad are sent to hide the real length of a message. However, a malicious peer could send empty fragments to mount a DoS attack, so as a safety measure, a maximum number of empty fragments is accepted by default. If you know your application must accept a given number of empty fragments in a row, you can use this function to set the desired value.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br/>
  Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>

@@ -76,7 +76,7 @@ description: "sfq – Stochastic Fairness Queueing"
 <p> # tc filter add &#8230; flow hash keys src,dst perturb 30 divisor 1024 </p>
 <p> Note that the given divisor should match the one used by sfq. If you have changed the sfq default of 1024, use the same value for the flow hash filter, too. </p>
 <p> Example of sfq with optional RED mode : </p>
-<p> # tc qdisc add dev eth0 parent 1:1 handle 10: sfq limit 3000 flows 512 divisor 16384<br />
+<p> # tc qdisc add dev eth0 parent 1:1 handle 10: sfq limit 3000 flows 512 divisor 16384<br/>
 &nbsp;<wbr>&nbsp;redflowlimit 100000 min 8000 max 60000 probability 0.20 ecn headdrop</p>
 <h2>Source</h2>
 <dl>

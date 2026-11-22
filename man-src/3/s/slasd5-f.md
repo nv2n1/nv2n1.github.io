@@ -10,7 +10,7 @@ description: "slasd5.f –"
 <p>slasd5.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slasd5</code> (I, D, Z, DELTA, RHO, DSIGMA, WORK)<br />
+<p>subroutine <code>slasd5</code> (I, D, Z, DELTA, RHO, DSIGMA, WORK)<br/>
  <i></i><code>SLASD5</code> computes the square root of the i-th eigenvalue of a positive symmetric rank-one modification of a 2-by-2 diagonal matrix. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasd5 (integerI, real, dimension( 2 )D, real, dimension( 2 )Z, real, dimension( 2 )DELTA, realRHO, realDSIGMA, real, dimension( 2 )WORK)</h3>

@@ -33,7 +33,7 @@ union waffle_native_window *waffle_window_get_native(struct waffle_window *self)
 <dd>Show the window on the display. If the window is already shown, or if the native platform does not support showing windows (such as GBM), then do nothing and returns true.</dd></dl>
 <p> <code>waffle_window_swap_buffers()</code></p>
 <dl>
-<dd>If the window is double-buffered, then implicitly call <code>glFlush()</code> and post the contents of the back buffer to the front buffer. If the window is front-buffered, then do nothing. For platform-specific details of swap semantics, see the specification for the relevant native platform: the m[blue]<code>GLX 1.4 Specification</code>m[]<font SIZE="-2">[1]</font>, the m[blue]<code>EGL 1.4 Specification</code>m[]<font SIZE="-2">[2]</font>, or the m[blue]<code>CGL Reference</code>m[]<font SIZE="-2">[3]</font>.</dd></dl>
+<dd>If the window is double-buffered, then implicitly call <code>glFlush()</code> and post the contents of the back buffer to the front buffer. If the window is front-buffered, then do nothing. For platform-specific details of swap semantics, see the specification for the relevant native platform: the m[blue]<code>GLX 1.4 Specification</code>m[][1], the m[blue]<code>EGL 1.4 Specification</code>m[][2], or the m[blue]<code>CGL Reference</code>m[][3].</dd></dl>
 <p> <code>waffle_window_get_native()</code></p>
 <dl>
 <dd>Get the window&#8217;s underlying native objects. Use <code><a href="/docs/linux/man/3-free/">free</a></code>(3) to deallocate the returned pointer. See <code><a href="/docs/linux/man/3-waffle_native/">waffle_native</a></code>(3) for the definition of <code>union waffle_native_window</code>.</dd></dl>

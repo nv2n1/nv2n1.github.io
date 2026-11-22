@@ -9,7 +9,7 @@ description: "burp_ca – program for generating certificates for use with burp"
 
 <p>burp_ca &#8211; program for generating certificates for use with burp</p>
 <h2>Synopsis</h2>
-<p><code>burp_ca</code> [<i>options</i>]<br />
+<p><code>burp_ca</code> [<i>options</i>]<br/>
  A script for generating certificates for use with burp. This script comes with the burp backup and restore package, and was contributed by Patrick Koppen. </p>
 <h2>Options</h2>
 <dl>

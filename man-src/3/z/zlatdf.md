@@ -10,7 +10,7 @@ description: "zlatdf.f –"
 <p>zlatdf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlatdf</code> (IJOB, N, Z, LDZ, RHS, RDSUM, RDSCAL, IPIV, JPIV)<br />
+<p>subroutine <code>zlatdf</code> (IJOB, N, Z, LDZ, RHS, RDSUM, RDSCAL, IPIV, JPIV)<br/>
  <i></i><code>ZLATDF</code> uses the LU factorization of the n-by-n matrix computed by sgetc2 and computes a contribution to the reciprocal Dif-estimate.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlatdf (integerIJOB, integerN, complex*16, dimension( ldz, * )Z, integerLDZ, complex*16, dimension( * )RHS, double precisionRDSUM, double precisionRDSCAL, integer, dimension( * )IPIV, integer, dimension( * )JPIV)</h3>

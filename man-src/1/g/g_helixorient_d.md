@@ -19,44 +19,44 @@ description: "g_helixorient – calculates local pitch/bending/rotation/orientat
 <p> We need four Calpha coordinates to define the local direction of the helix axis. </p>
 <p> The tilt/rotation is calculated from Euler rotations, where we define the helix axis as the local X axis, the residues/CA-vector as Y, and the Z axis from their cross product. We use the Euler Y-Z-X rotation, meaning we first tilt the helix axis (1) around and (2) orthogonal to the residues vector, and finally apply the (3) rotation around it. For debugging or other purposes, we also write out the actual Euler rotation angles as theta1-3.xvg</p>
 <h2>FILES</h2>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br/>
 &nbsp;<wbr>Run input file: tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-oaxis</code><i> helixaxis.dat</i> <code>Output</code><br />
+<p> <code>-oaxis</code><i> helixaxis.dat</i> <code>Output</code><br/>
 &nbsp;<wbr>Generic data file&nbsp;<wbr> </p>
-<p> <code>-ocenter</code><i> center.dat</i> <code>Output</code><br />
+<p> <code>-ocenter</code><i> center.dat</i> <code>Output</code><br/>
 &nbsp;<wbr>Generic data file&nbsp;<wbr> </p>
-<p> <code>-orise</code><i> rise.xvg</i> <code>Output</code><br />
+<p> <code>-orise</code><i> rise.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-oradius</code><i> radius.xvg</i> <code>Output</code><br />
+<p> <code>-oradius</code><i> radius.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-otwist</code><i> twist.xvg</i> <code>Output</code><br />
+<p> <code>-otwist</code><i> twist.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-obending</code><i> bending.xvg</i> <code>Output</code><br />
+<p> <code>-obending</code><i> bending.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-otilt</code><i> tilt.xvg</i> <code>Output</code><br />
+<p> <code>-otilt</code><i> tilt.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-orot</code><i> rotation.xvg</i> <code>Output</code><br />
+<p> <code>-orot</code><i> rotation.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-[no]sidechain</code><i>no </i><br />
+<p> <code>-[no]sidechain</code><i>no </i><br/>
 &nbsp;<wbr>Calculate sidechain directions relative to helix axis too. </p>
-<p> <code>-[no]incremental</code><i>no </i><br />
+<p> <code>-[no]incremental</code><i>no </i><br/>
 &nbsp;<wbr>Calculate incremental rather than total rotation/tilt. </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

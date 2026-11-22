@@ -10,7 +10,7 @@ description: "cbdsqr.f –"
 <p>cbdsqr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cbdsqr</code> (UPLO, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, RWORK, INFO)<br />
+<p>subroutine <code>cbdsqr</code> (UPLO, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, RWORK, INFO)<br/>
  <i></i><code>CBDSQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cbdsqr (characterUPLO, integerN, integerNCVT, integerNRU, integerNCC, real, dimension( * )D, real, dimension( * )E, complex, dimension( ldvt, * )VT, integerLDVT, complex, dimension( ldu, * )U, integerLDU, complex, dimension( ldc, * )C, integerLDC, real, dimension( * )RWORK, integerINFO)</h3>

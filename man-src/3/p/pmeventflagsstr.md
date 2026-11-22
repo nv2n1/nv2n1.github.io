@@ -10,7 +10,7 @@ description: "pmEventFlagsStr, pmEventFlagsStr_r – convert an event record fla
 <p><code>pmEventFlagsStr</code>, <code>pmEventFlagsStr_r</code> &#8211; convert an event record flags value into a string</p>
 <h2>C Synopsis</h2>
 <p><code> #include &lt;pcp/pmapi.h&gt; </p>
-<p> const char *pmEventFlagsStr(int </code><i>flags</i>);<br />
+<p> const char *pmEventFlagsStr(int </code><i>flags</i>);<br/>
  char *pmEventFlagsStr_r(int <i>flags</i>, char *<i>buf</i>, int <i>buflen</i>); </p>
 <p> cc &#8230; -lpcp</p>
 <h2>Description</h2>

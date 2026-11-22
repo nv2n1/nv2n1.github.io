@@ -26,8 +26,8 @@ int attr_listf(int fd, char *buffer,
 <dl>
 <dt>
 </dt><dd>
-<p>__int32_t al_count;     /* number of entries in attrlist */<br />
-__int32_t al_more;      /* T/F: more attrs (do syscall again) */<br />
+<p>__int32_t al_count;     /* number of entries in attrlist */<br/>
+__int32_t al_more;      /* T/F: more attrs (do syscall again) */<br/>
 __int32_t al_offset[1]; /* byte offsets of attrs [var-sized] */
 </dd></dl>
 <p> The <i>al_count</i> field shows the number of attributes represented in this buffer, which is also the number of elements in the <i>al_offset</i> array. The <i>al_more</i> field will be non-zero if another <code>attr_list</code> call would result in more attributes. The <i>al_offset</i> array contains the byte offset within the <i>buffer</i> of the structure describing each of the attributes, an <tt>attrlist_ent_t</tt> structure. The <tt>ATTR_ENTRY(buffer, index)</tt> macro will help with decoding the list. It takes a pointer to the <i>buffer</i> and an <i>index</i> into the <i>al_offset</i> array and returns a pointer to the corresponding <tt>attrlist_ent_t</tt> structure. </p>
@@ -45,38 +45,38 @@ char a_name[];        /* attr name (NULL terminated) */
 <p> Note that the value of the attribute cannot be obtained through this interface, the <code>attr_get</code> call should be used to get the value. The <code>attr_list</code> interface tells the calling process how large of a buffer it must have in order to get the attribute&#8217;s value. </p>
 <p> The <i>flags</i> argument can contain the following symbols bitwise OR&#8217;ed together:</p>
 <dl>
-<dt><font SIZE="-1">ATTR_ROOT</font></dt>
+<dt>ATTR_ROOT</dt>
 <dd> List the attributes that are in the <code>root</code> address space, not in the <code>user</code> address space. (limited to use by super-user only)</dd>
-<dt><font SIZE="-1">ATTR_DONTFOLLOW</font></dt>
+<dt>ATTR_DONTFOLLOW</dt>
 <dd> Do not follow symbolic links when resolving a <i>path</i> on an <code>attr_list</code> function call. The default is to follow symbolic links.</dd></dl>
 <p> The <i>cursor</i> argument is a pointer to an opaque data structure that the kernel uses to track the calling process&#8217;s position in the attribute list. The only valid operations on a <i>cursor</i> are to pass it into an <code>attr_list</code> function call or to zero it out. It should be zero&#8217;ed out before the first <code>attr_list</code> call. Note that multi-threaded applications may keep more than one <i>cursor</i> in order to serve multiple contexts, ie: the <code>attr_list</code> call is &quot;thread-safe&quot;. </p>
 <p> <code>attr_list</code> will fail if one or more of the following are true:</p>
 <dl>
-<dt><font SIZE="-1">[ENOENT]</font></dt>
+<dt>[ENOENT]</dt>
 <dd> The named file does not exist.</dd>
-<dt><font SIZE="-1">[EPERM]</font></dt>
-<dd> The effective user <font SIZE="-1">ID</font> does not match the owner of the file and the effective user <font SIZE="-1">ID</font> is not super-user.</dd>
-<dt><font SIZE="-1">[ENOTDIR]</font></dt>
+<dt>[EPERM]</dt>
+<dd> The effective user ID does not match the owner of the file and the effective user ID is not super-user.</dd>
+<dt>[ENOTDIR]</dt>
 <dd> A component of the path prefix is not a directory.</dd>
-<dt><font SIZE="-1">[EACCES]</font></dt>
+<dt>[EACCES]</dt>
 <dd> Search permission is denied on a component of the path prefix.</dd>
-<dt><font SIZE="-1">[EINVAL]</font></dt>
+<dt>[EINVAL]</dt>
 <dd> A bit was set in the <i>flag</i> argument that is not defined for this system call, or the buffer was too small or too large.</dd>
-<dt><font SIZE="-1">[EFAULT]</font></dt>
+<dt>[EFAULT]</dt>
 <dd> Either <i>Path</i> or <i>buffer</i> points outside the allocated address space of the process, or <i>buffer</i> or <i>bufsize</i> are not 32bit aligned.</dd>
-<dt><font SIZE="-1">[ELOOP]</font></dt>
+<dt>[ELOOP]</dt>
 <dd> A path name lookup involved too many symbolic links.</dd>
-<dt><font SIZE="-1">[ENAMETOOLONG]</font></dt>
-<dd> The length of <i>path</i> exceeds <font SIZE="-1">{<i>MAXPATHLEN</i>}, </font> or a pathname component is longer than <font SIZE="-1">{<i>MAXNAMELEN</i>}. </font></dd>
-<dt><font SIZE="-1">[ENOATTR]</font></dt>
+<dt>[ENAMETOOLONG]</dt>
+<dd> The length of <i>path</i> exceeds {<i>MAXPATHLEN</i>},  or a pathname component is longer than {<i>MAXNAMELEN</i>}. </dd>
+<dt>[ENOATTR]</dt>
 <dd> <i>attribute</i> does not exist for this file.</dd></dl>
 <p> <code>attr_listf</code> will fail if:</p>
 <dl>
-<dt><font SIZE="-1">[EINVAL]</font></dt>
+<dt>[EINVAL]</dt>
 <dd> A bit was set in the <i>flag</i> argument that is not defined for this system call, or <i>fd</i> refers to a socket, not a file, or the buffer was too small or too large.</dd>
-<dt><font SIZE="-1">[EFAULT]</font></dt>
+<dt>[EFAULT]</dt>
 <dd> Either <i>Path</i> or <i>buffer</i> points outside the allocated address space of the process, or <i>buffer</i> or <i>bufsize</i> are not 32bit aligned.</dd>
-<dt><font SIZE="-1">[EBADF]</font></dt>
+<dt>[EBADF]</dt>
 <dd> <i>Fd</i> does not refer to a valid descriptor.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> Upon successful completion, a value of 0 is returned. Otherwise, a value of -1 is returned and <i>errno</i> is set to indicate the error.</p>

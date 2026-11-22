@@ -21,7 +21,7 @@ description: "sane-teco3 – SANE backend for TECO / RELISYS scanners"
  Trust Imagery 4800 SP+ VM3552 tested
  Trust Imagery 9600 SP VM3552 untested</pre>
 </dd></dl>
-<p> The TECO VM number can usually be found at the back of the scanner. It is also part of the FCC ID. The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1).<br />
+<p> The TECO VM number can usually be found at the back of the scanner. It is also part of the FCC ID. The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1).<br/>
  If you have any success with a scanner not listed here, or if you notice any strange behavior, please report to the backend maintainer or to the SANE mailing list. </p>
 <h2>Options</h2>
 <p>Valid command line options and their syntax can be listed by using: </p>

@@ -17,30 +17,30 @@ description: "std::sinh(std::complex) – std::sinh(std::complex)"
 <h2>Parameters</h2>
 <p>z &#8211; complex value</p>
 <h2>Return value</h2>
-<p>If no errors occur, complex hyperbolic sine of z is returned<br />
-Error handling and special values<br />
-Errors are reported consistent with math_errhandling<br />
-If the implementation supports IEEE floating-point arithmetic,<br />
-* std::sinh(std::conj(z)) == std::conj(std::sinh(z))<br />
-* std::sinh(z) == -std::sinh(-z)<br />
-* If z is (+0,+0), the result is (+0,+0)<br />
-* If z is (+0,+∞), the result is (±0,NaN) (the sign of the real part is unspecified) and FE_INVALID is raised<br />
-* If z is (+0,NaN), the result is (±0,NaN)<br />
-* If z is (x,+∞) (for any positive finite x), the result is (NaN,NaN) and FE_INVALID is raised<br />
-* If z is (x,NaN) (for any positive finite x), the result is (NaN,NaN) and FE_INVALID may be raised<br />
-* If z is (+∞,+0), the result is (+∞,+0)<br />
-* If z is (+∞,y) (for any positive finite y), the result is +∞cis(y)<br />
-* If z is (+∞,+∞), the result is (±∞,NaN) (the sign of the real part is unspecified) and FE_INVALID is raised<br />
-* If z is (+∞,NaN), the result is (±∞,NaN) (the sign of the real part is unspecified)<br />
-* If z is (NaN,+0), the result is (NaN,+0)<br />
-* If z is (NaN,y) (for any finite nonzero y), the result is (NaN,NaN) and FE_INVALID may be raised<br />
-* If z is (NaN,NaN), the result is (NaN,NaN)<br />
+<p>If no errors occur, complex hyperbolic sine of z is returned<br/>
+Error handling and special values<br/>
+Errors are reported consistent with math_errhandling<br/>
+If the implementation supports IEEE floating-point arithmetic,<br/>
+* std::sinh(std::conj(z)) == std::conj(std::sinh(z))<br/>
+* std::sinh(z) == -std::sinh(-z)<br/>
+* If z is (+0,+0), the result is (+0,+0)<br/>
+* If z is (+0,+∞), the result is (±0,NaN) (the sign of the real part is unspecified) and FE_INVALID is raised<br/>
+* If z is (+0,NaN), the result is (±0,NaN)<br/>
+* If z is (x,+∞) (for any positive finite x), the result is (NaN,NaN) and FE_INVALID is raised<br/>
+* If z is (x,NaN) (for any positive finite x), the result is (NaN,NaN) and FE_INVALID may be raised<br/>
+* If z is (+∞,+0), the result is (+∞,+0)<br/>
+* If z is (+∞,y) (for any positive finite y), the result is +∞cis(y)<br/>
+* If z is (+∞,+∞), the result is (±∞,NaN) (the sign of the real part is unspecified) and FE_INVALID is raised<br/>
+* If z is (+∞,NaN), the result is (±∞,NaN) (the sign of the real part is unspecified)<br/>
+* If z is (NaN,+0), the result is (NaN,+0)<br/>
+* If z is (NaN,y) (for any finite nonzero y), the result is (NaN,NaN) and FE_INVALID may be raised<br/>
+* If z is (NaN,NaN), the result is (NaN,NaN)<br/>
 where cis(y) is cos(y) + i sin(y) </p>
 <h2>Notes</h2>
-<p>Mathematical definition of hyperbolic sine is sinh z =<br />
-ez<br />
--e-z<br />
-2<br />
+<p>Mathematical definition of hyperbolic sine is sinh z =<br/>
+ez<br/>
+-e-z<br/>
+2<br/>
 Hyperbolic sine is an entire function in the complex plane and has no branch cuts. It is periodic with respect to the imaginary component, with period 2πi </p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -61,21 +61,21 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;sinh(1.000000,0.000000) = (1.175201,0.000000) (sinh<code>(1)</code> = 1.175201)<br />
+<p>&nbsp;<wbr>&nbsp;sinh(1.000000,0.000000) = (1.175201,0.000000) (sinh<code>(1)</code> = 1.175201)<br/>
 &nbsp;<wbr>&nbsp;sinh(0.000000,1.000000) = (0.000000,0.841471) ( sin<code>(1)</code> = 0.841471)</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;computes hyperbolic cosine of a complex number (ch(z))<br />
-cosh(std::complex) <i>(function template)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;computes hyperbolic tangent of a complex number<br />
-tanh(std::complex) <i>(function template)</i><br />
-asinh(std::complex) computes area hyperbolic sine of a complex number<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />
-<i>(C++11)</i><br />
-sinh<br />
-sinhf<br />
-sinhl computes hyperbolic sine (sh(x))<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br />
-<i>(C++11)</i><br />
-<i>(C++11)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;applies the function std::sinh to each element of valarray<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;computes hyperbolic cosine of a complex number (ch(z))<br/>
+cosh(std::complex) <i>(function template)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;computes hyperbolic tangent of a complex number<br/>
+tanh(std::complex) <i>(function template)</i><br/>
+asinh(std::complex) computes area hyperbolic sine of a complex number<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br/>
+<i>(C++11)</i><br/>
+sinh<br/>
+sinhf<br/>
+sinhl computes hyperbolic sine (sh(x))<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br/>
+<i>(C++11)</i><br/>
+<i>(C++11)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;applies the function std::sinh to each element of valarray<br/>
 sinh(std::valarray) <i>(function template)</i> </p>

@@ -10,7 +10,7 @@ description: "gcc-nm – a wrapper around nm adding the –plugin option"
 
 <p> gcc-nm &#8211; a wrapper around nm adding the &#8211;plugin option</p>
 <h2>SYNOPSIS</h2>
-<p> gcc-nm [<font SIZE="-1"><code>OPTION</code></font>] &#8230; [<i></i><font SIZE="-1"><i>ARGS</i></font><i></i>&#8230;] </p>
+<p> gcc-nm [<code>OPTION</code>] &#8230; [<i></i><i>ARGS</i><i></i>&#8230;] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gcc-nm</code> is a wrapper around <a href="/docs/linux/man/1-nm/">nm</a>(1) adding the appropriate <code>&#8211;plugin</code> option for the GCC 12 compiler. </p>
 <h2>OPTIONS</h2>

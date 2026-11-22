@@ -10,7 +10,7 @@ description: "iladlc.f –"
 <p>iladlc.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>INTEGER function <code>iladlc</code> (M, N, A, LDA)<br />
+<p>INTEGER function <code>iladlc</code> (M, N, A, LDA)<br/>
  <i></i><code>ILADLC</code> scans a matrix for its last non-zero column.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function iladlc (integerM, integerN, double precision, dimension( lda, * )A, integerLDA)</h3>

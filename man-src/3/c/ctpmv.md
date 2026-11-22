@@ -11,7 +11,7 @@ description: "ctpmv.f –"
 <p> ctpmv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctpmv</code> (UPLO, TRANS, DIAG, N, AP, X, INCX)<br />
+<p> subroutine <code>ctpmv</code> (UPLO, TRANS, DIAG, N, AP, X, INCX)<br/>
  <i></i><code>CTPMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctpmv (characterUPLO, characterTRANS, characterDIAG, integerN, complex, dimension(*)AP, complex, dimension(*)X, integerINCX)</h3>

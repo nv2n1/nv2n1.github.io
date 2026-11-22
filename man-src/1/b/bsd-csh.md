@@ -10,7 +10,7 @@ description: "csh – a shell (command interpreter) with C-like syntax"
 
 <p> <code>csh</code> &#8211; a shell (command interpreter) with C-like syntax </p>
 <h2>SYNOPSIS</h2>
-<p> <code>csh</code> [-<code>bcefimnstVvXx </code>[<i>argument &#8230;</i> ] ]<br />
+<p> <code>csh</code> [-<code>bcefimnstVvXx </code>[<i>argument &#8230;</i> ] ]<br/>
 <code>csh</code> [-<code>l</code> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>csh</code> is a command language interpreter incorporating a history mechanism (see Sx History substitutions ) , job control facilities (see Sx Jobs ) , interactive file name and user name completion (see Sx File name completion ) , and a C-like syntax. It is used both as an interactive login shell and a shell script command processor.</p>

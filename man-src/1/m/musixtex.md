@@ -85,14 +85,14 @@ description: "musixtex – processes MusiXTeX files, using pre-processors prepmx
 </dd><dt>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;etex&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;default</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latex&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-l<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pdfetex&nbsp;<wbr>&nbsp;<wbr>&nbsp;-p<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latex&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-l<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pdfetex&nbsp;<wbr>&nbsp;<wbr>&nbsp;-p<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pdflatex&nbsp;<wbr>&nbsp;-l -p</dd>
 <dt>If the -F option is used, options -l and -p need to be set if the engine name does not contain &quot;latex&quot; and &quot;pdf&quot; respectively. For example, the above four engines can be replaced by:</dt>
 <dd>
-&nbsp;<wbr>&nbsp;-F&nbsp;&quot;luatex &#8211;output-format=dvi&quot;&nbsp;<br />
-&nbsp;<wbr>&nbsp;-F&nbsp;&quot;lualatex &#8211;output-format=dvi&quot;<br />
-&nbsp;<wbr>&nbsp;-F&nbsp;&quot;luatex&quot;&nbsp;-p<br />
+&nbsp;<wbr>&nbsp;-F&nbsp;&quot;luatex &#8211;output-format=dvi&quot;&nbsp;<br/>
+&nbsp;<wbr>&nbsp;-F&nbsp;&quot;lualatex &#8211;output-format=dvi&quot;<br/>
+&nbsp;<wbr>&nbsp;-F&nbsp;&quot;luatex&quot;&nbsp;-p<br/>
 &nbsp;<wbr>&nbsp;-F&nbsp;&quot;lualatex&quot;&nbsp;-p </dd>
 </dl>
 <h2>SEE ALSO</h2>

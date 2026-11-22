@@ -10,7 +10,7 @@ description: "chown – change file owner and group"
 
 <p> chown &#8211; change file owner and group </p>
 <h2>SYNOPSIS</h2>
-<p> <code>chown</code> [<i>,OPTION/</i>]&#8230; [<i>,OWNER/</i>][<i>,:/</i>[<i>,GROUP/</i>]] <i>,FILE/</i>&#8230;<br />
+<p> <code>chown</code> [<i>,OPTION/</i>]&#8230; [<i>,OWNER/</i>][<i>,:/</i>[<i>,GROUP/</i>]] <i>,FILE/</i>&#8230;<br/>
  <code>chown</code> [<i>,OPTION/</i>]&#8230; <i>,&#8211;reference=RFILE FILE/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents the GNU version of <code>chown</code>. <code>chown</code> changes the user and/or group ownership of each given file. If only an owner (a user name or numeric user ID) is given, that user is made the owner of each given file, and the files&#8217; group is not changed. If the owner is followed by a colon and a group name (or numeric group ID), with no spaces between them, the group ownership of the files is changed as well. If a colon but no group name follows the user name, that user is made the owner of the files and the group of the files is changed to that user&#8217;s login group. If the colon and group are given, but the owner is omitted, only the group of the files is changed; in this case, <code>chown</code> performs the same function as <code>chgrp</code>. If only a colon is given, or if the entire operand is empty, neither the owner nor the group is changed.</p>
@@ -61,12 +61,12 @@ description: "chown – change file owner and group"
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie and Jim Meyering.</p>
 <h2>REPORTING BUGS</h2>
-<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br/>
  Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/2-chown/">chown</a>(2) </p>
-<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/chown">https://www.gnu.org/software/coreutils/chown</a>&gt;<br />
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/chown">https://www.gnu.org/software/coreutils/chown</a>&gt;<br/>
  or available locally via: info &#8216;(coreutils) chown invocation&#8217; </p>

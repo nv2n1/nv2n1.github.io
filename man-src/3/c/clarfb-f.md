@@ -10,7 +10,7 @@ description: "clarfb.f –"
 <p>clarfb.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>clarfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br />
+<p>subroutine <code>clarfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br/>
  <i></i><code>CLARFB</code> applies a block reflector or its conjugate-transpose to a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clarfb (characterSIDE, characterTRANS, characterDIRECT, characterSTOREV, integerM, integerN, integerK, complex, dimension( ldv, * )V, integerLDV, complex, dimension( ldt, * )T, integerLDT, complex, dimension( ldc, * )C, integerLDC, complex, dimension( ldwork, * )WORK, integerLDWORK)</h3>

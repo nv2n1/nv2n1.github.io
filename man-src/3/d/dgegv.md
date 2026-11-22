@@ -11,7 +11,7 @@ description: "dgegv.f –"
 <p> dgegv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgegv</code> (JOBVL, JOBVR, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, VL, LDVL, VR, LDVR, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dgegv</code> (JOBVL, JOBVR, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, VL, LDVL, VR, LDVR, WORK, LWORK, INFO)<br/>
  <i></i><code> DGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgegv (characterJOBVL, characterJOBVR, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )ALPHAR, double precision, dimension( * )ALPHAI, double precision, dimension( * )BETA, double precision, dimension( ldvl, * )VL, integerLDVL, double precision, dimension( ldvr, * )VR, integerLDVR, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -188,24 +188,24 @@ description: "dgegv.f –"
               returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.
 </code></pre>
 <p> <i>INFO</i> </p>
-<p>          INFO is INTEGER<br />
-          = 0:  successful exit<br />
-          &lt; 0:  if INFO = -i, the i-th argument had an illegal value.<br />
-          = 1,&#8230;,N:<br />
-                The QZ iteration failed.  No eigenvectors have been<br />
-                calculated, but ALPHAR(j), ALPHAI(j), and BETA(j)<br />
-                should be correct for j=INFO+1,&#8230;,N.<br />
-          &gt; N:  errors that usually indicate LAPACK problems:<br />
-                =N+1: error return from DGGBAL<br />
-                =N+2: error return from DGEQRF<br />
-                =N+3: error return from DORMQR<br />
-                =N+4: error return from DORGQR<br />
-                =N+5: error return from DGGHRD<br />
-                =N+6: error return from DHGEQZ (other than failed<br />
-                                                iteration)<br />
-                =N+7: error return from DTGEVC<br />
-                =N+8: error return from DGGBAK (computing VL)<br />
-                =N+9: error return from DGGBAK (computing VR)<br />
+<p>          INFO is INTEGER<br/>
+          = 0:  successful exit<br/>
+          &lt; 0:  if INFO = -i, the i-th argument had an illegal value.<br/>
+          = 1,&#8230;,N:<br/>
+                The QZ iteration failed.  No eigenvectors have been<br/>
+                calculated, but ALPHAR(j), ALPHAI(j), and BETA(j)<br/>
+                should be correct for j=INFO+1,&#8230;,N.<br/>
+          &gt; N:  errors that usually indicate LAPACK problems:<br/>
+                =N+1: error return from DGGBAL<br/>
+                =N+2: error return from DGEQRF<br/>
+                =N+3: error return from DORMQR<br/>
+                =N+4: error return from DORGQR<br/>
+                =N+5: error return from DGGHRD<br/>
+                =N+6: error return from DHGEQZ (other than failed<br/>
+                                                iteration)<br/>
+                =N+7: error return from DTGEVC<br/>
+                =N+8: error return from DGGBAK (computing VL)<br/>
+                =N+9: error return from DGGBAK (computing VR)<br/>
                 =N+10: error return from DLASCL (various calls)</p>
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>

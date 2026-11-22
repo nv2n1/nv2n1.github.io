@@ -10,7 +10,7 @@ description: "Ecore_Txt.h – Provides a text encoding conversion function."
 <p>Ecore_Txt.h &#8211; Provides a text encoding conversion function. </p>
 <h2>Synopsis</h2>
 <h3>Functions</h3>
-<p>EAPI char * <code>ecore_txt_convert</code> (const char *enc_from, const char *enc_to, const char *text)<br />
+<p>EAPI char * <code>ecore_txt_convert</code> (const char *enc_from, const char *enc_to, const char *text)<br/>
  <i>To be documented. </i></p>
 <h2>Detailed Description</h2>
 <p>Provides a text encoding conversion function. </p>

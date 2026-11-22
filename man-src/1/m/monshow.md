@@ -50,7 +50,7 @@ description: "monshow – show operational status of mon server."
 <p> Views are stored as files in a system-wide directory, typically <i>/etc/mon/monshow</i>, where each file specifies one view. If this path is not suitable for any reason, it can be changed by modifying the <code>$VIEWPATH</code> variable in the <code>monshow</code> script. </p>
 <p> When invoking <code>monshow</code> from the command line, the view to display is specified by the <code>&#8211;view=</code><i>name</i> argument. </p>
 <p> In the case of CGI invocation, views can be specified by appending either <i>?view=name</i> or <i>/name</i> to the URL. For example, the following are equivalent: </p>
-<p> <i><a rel="nofollow" href="http://monhost/monshow.cgi?view=test">http://monhost/monshow.cgi?view=test</a></i><br />
+<p> <i><a rel="nofollow" href="http://monhost/monshow.cgi?view=test">http://monhost/monshow.cgi?view=test</a></i><br/>
  <i><a rel="nofollow" href="http://monhost/monshow.cgi/test">http://monhost/monshow.cgi/test</a></i> </p>
 <p> If a view is not specified, then a default configuration will be loaded from <i>$HOME/.monshowrc</i> (command-line invocation) or <i>cgi-path/.monshowrc</i> (CGI invocation). </p>
 <h2>VIEW CONFIGURATION FILE</h2>

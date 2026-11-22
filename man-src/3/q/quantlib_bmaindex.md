@@ -15,7 +15,7 @@ description: "QuantLib::BMAIndex – Bond Market Association index."
 <p><code>BMAIndex</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;h=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;()) </p>
 <p> <code>Index interface</code> </p>
 <p> std::string <code>name</code> () const </p>
-<p> bool <code>isValidFixingDate</code> (const <code>Date</code> &amp;fixingDate) const<br />
+<p> bool <code>isValidFixingDate</code> (const <code>Date</code> &amp;fixingDate) const<br/>
  <i>returns TRUE if the fixing date is a valid one </i> </p>
 <p> <code>InterestRateIndex interface</code> </p>
 <p> <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>termStructure</code> () const </p>

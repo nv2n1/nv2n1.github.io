@@ -11,7 +11,7 @@ description: "sla_gbrpvgrw.f –"
 <p> sla_gbrpvgrw.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>sla_gbrpvgrw</code> (N, KL, KU, NCOLS, AB, LDAB, AFB, LDAFB)<br />
+<p> REAL function <code>sla_gbrpvgrw</code> (N, KL, KU, NCOLS, AB, LDAB, AFB, LDAFB)<br/>
  <i></i><code>SLA_GBRPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a general banded matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function sla_gbrpvgrw (integerN, integerKL, integerKU, integerNCOLS, real, dimension( ldab, * )AB, integerLDAB, real, dimension( ldafb, * )AFB, integerLDAFB)</h3>

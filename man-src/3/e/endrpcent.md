@@ -20,9 +20,9 @@ void endrpcent(void);
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> The <code>getrpcent</code>(), <code>getrpcbyname</code>(), and <code>getrpcbynumber</code>() functions each return a pointer to an object with the following structure containing the broken-out fields of an entry in the RPC program number data base. </p>
-<p> struct rpcent {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*r_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;name of server for this RPC program&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;**r_aliases;&nbsp;<wbr>&nbsp;/*&nbsp;alias list&nbsp;*/<br />
+<p> struct rpcent {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*r_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;name of server for this RPC program&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;**r_aliases;&nbsp;<wbr>&nbsp;/*&nbsp;alias list&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;r_number;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;RPC program number&nbsp;*/ }; </p>
 <p> The members of this structure are:</p>
 <dl>
@@ -52,7 +52,7 @@ void endrpcent(void);
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>getrpcent</code>(), <code>getrpcbyname</code>(),<br />
+<td> <code>getrpcent</code>(), <code>getrpcbyname</code>(),<br/>
  <code>getrpcbynumber</code>() </td>
 <td>Thread safety</td>
 <td>MT-Unsafe

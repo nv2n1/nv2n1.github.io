@@ -46,29 +46,29 @@ description: "tcbtest – test cases of the B+ tree database API"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-mt</code> : call the function `tchdbsetmutex&#8217;.<br />
- <code>-cd</code> : use the comparison function `tccmpdecimal&#8217;.<br />
- <code>-ci</code> : use the comparison function `tccmpint32&#8242;.<br />
- <code>-cj</code> : use the comparison function `tccmpint64&#8242;.<br />
- <code>-tl</code> : enable the option `BDBTLARGE&#8217;.<br />
- <code>-td</code> : enable the option `BDBTDEFLATE&#8217;.<br />
- <code>-tb</code> : enable the option `BDBTBZIP&#8217;.<br />
- <code>-tt</code> : enable the option `BDBTTCBS&#8217;.<br />
- <code>-tx</code> : enable the option `BDBTEXCODEC&#8217;.<br />
- <code>-lc </code><i>num</i> : specify the number of cached leaf pages.<br />
- <code>-nc </code><i>num</i> : specify the number of cached non-leaf pages.<br />
- <code>-xm </code><i>num</i> : specify the size of the extra mapped memory.<br />
- <code>-df </code><i>num</i> : specify the unit step number of auto defragmentation.<br />
- <code>-ls </code><i>num</i> : specify the maximum size of each leaf page.<br />
- <code>-ca </code><i>num</i> : specify the capacity number of records.<br />
- <code>-nl</code> : enable the option `BDBNOLCK&#8217;.<br />
- <code>-nb</code> : enable the option `BDBLCKNB&#8217;.<br />
- <code>-rnd</code> : select keys at random.<br />
- <code>-wb</code> : use the function `tcbdbget3&#8242; instead of `tcbdbget&#8217;.<br />
- <code>-pn </code><i>num</i> : specify the number of patterns.<br />
- <code>-dai</code> : use the function `tcbdbaddint&#8217; instead of `tcbdbputcat&#8217;.<br />
- <code>-dad</code> : use the function `tcbdbadddouble&#8217; instead of `tcbdbputcat&#8217;.<br />
- <code>-rl</code> : set the length of values at random.<br />
+</dt><dd> <code>-mt</code> : call the function `tchdbsetmutex&#8217;.<br/>
+ <code>-cd</code> : use the comparison function `tccmpdecimal&#8217;.<br/>
+ <code>-ci</code> : use the comparison function `tccmpint32&#8242;.<br/>
+ <code>-cj</code> : use the comparison function `tccmpint64&#8242;.<br/>
+ <code>-tl</code> : enable the option `BDBTLARGE&#8217;.<br/>
+ <code>-td</code> : enable the option `BDBTDEFLATE&#8217;.<br/>
+ <code>-tb</code> : enable the option `BDBTBZIP&#8217;.<br/>
+ <code>-tt</code> : enable the option `BDBTTCBS&#8217;.<br/>
+ <code>-tx</code> : enable the option `BDBTEXCODEC&#8217;.<br/>
+ <code>-lc </code><i>num</i> : specify the number of cached leaf pages.<br/>
+ <code>-nc </code><i>num</i> : specify the number of cached non-leaf pages.<br/>
+ <code>-xm </code><i>num</i> : specify the size of the extra mapped memory.<br/>
+ <code>-df </code><i>num</i> : specify the unit step number of auto defragmentation.<br/>
+ <code>-ls </code><i>num</i> : specify the maximum size of each leaf page.<br/>
+ <code>-ca </code><i>num</i> : specify the capacity number of records.<br/>
+ <code>-nl</code> : enable the option `BDBNOLCK&#8217;.<br/>
+ <code>-nb</code> : enable the option `BDBLCKNB&#8217;.<br/>
+ <code>-rnd</code> : select keys at random.<br/>
+ <code>-wb</code> : use the function `tcbdbget3&#8242; instead of `tcbdbget&#8217;.<br/>
+ <code>-pn </code><i>num</i> : specify the number of patterns.<br/>
+ <code>-dai</code> : use the function `tcbdbaddint&#8217; instead of `tcbdbputcat&#8217;.<br/>
+ <code>-dad</code> : use the function `tcbdbadddouble&#8217; instead of `tcbdbputcat&#8217;.<br/>
+ <code>-rl</code> : set the length of values at random.<br/>
  <code>-ru</code> : select update operations at random.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

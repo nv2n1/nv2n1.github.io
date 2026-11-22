@@ -26,7 +26,7 @@ description: "jjs – Invokes the Nashorn engine."
 <p>The <code>jjs</code> command-line tool is used to invoke the Nashorn engine. You can use it to interpret one or several script files, or to run an interactive shell.</p>
 <h2>Options</h2>
 <p>The options of the <code>jjs</code> command control the conditions under which scripts are interpreted by Nashorn. </p>
-<p> -cp <i>path</i><br />
+<p> -cp <i>path</i><br/>
  -classpath <i>path</i></p>
 <dl>
 <dd>Specifies the path to the supporting class files To set multiple paths, the option can be repeated, or you can separate each path with a colon (:).</dd></dl>
@@ -41,25 +41,25 @@ description: "jjs – Invokes the Nashorn engine."
 <code>jjs&gt;</code></pre>
 </dd></dl>
 <p> This option can be repeated to set multiple properties.</dl>
-<p> -doe<br />
+<p> -doe<br/>
  &#8211;dump-on-error</p>
 <dl>
 <dd>Provides a full stack trace when an error occurs. By default, only a brief error message is printed.</dd></dl>
-<p> -fv<br />
+<p> -fv<br/>
  &#8211;fullversion</p>
 <dl>
 <dd>Prints the full Nashorn version string.</dd></dl>
 <p> -fx</p>
 <dl>
 <dd>Launches the script as a JavaFX application.</dd></dl>
-<p> -h<br />
+<p> -h<br/>
  -help</p>
 <dl>
 <dd>Prints the list of options and their descriptions.</dd></dl>
 <p> &#8211;language=[es5]</p>
 <dl>
 <dd>Specifies the ECMAScript language version. The default version is ES5.</dd></dl>
-<p> -ot<br />
+<p> -ot<br/>
  &#8211;optimistic-types=[true|false]</p>
 <dl>
 <dd>Enables or disables optimistic type assumptions with deoptimizing recompilation. Running with optimistic types will yield higher final speed, but may increase warmup time.</dd></dl>
@@ -69,11 +69,11 @@ description: "jjs – Invokes the Nashorn engine."
 <p> -strict</p>
 <dl>
 <dd>Enables strict mode, which enforces stronger adherence to the standard (ECMAScript Edition 5.1), making it easier to detect common coding errors.</dd></dl>
-<p> -t=<i>zone</i><br />
+<p> -t=<i>zone</i><br/>
  -timezone=<i>zone</i></p>
 <dl>
 <dd>Sets the specified time zone for script execution. It overrides the time zone set in the OS and used by the <code>Date</code> object.</dd></dl>
-<p> -v<br />
+<p> -v<br/>
  -version</p>
 <dl>
 <dd>Prints the Nashorn version string.</dd></dl>

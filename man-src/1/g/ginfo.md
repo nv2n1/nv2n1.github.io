@@ -54,41 +54,41 @@ description: "ginfo – fetch service information"
 <dt><code>StorageShare:</code></dt>
 <dd> <i>ID, Path, AccessMode, AccessLatency, ServingState, RetentionPolicy,</i> <i>ExpirationMode, DefaultLifeTime, MaximumLifeTime, Tag.</i></dd></dl>
 <h2>OUTPUT FORMAT</h2>
-<p> Standard output for an Endpoint:<br />
-&nbsp;<wbr>HealthState: Value<br />
-&nbsp;<wbr>Implementor: Value<br />
-&nbsp;<wbr>InterfaceName: Value<br />
-&nbsp;<wbr>ServingState: Value<br />
-&nbsp;<wbr>URL: Value<br />
-&nbsp;<wbr>ImplementationVersion: Value<br />
-&nbsp;<wbr>Capability: Value<br />
-&nbsp;<wbr>ServiceForeignKey: Value<br />
-&nbsp;<wbr>QualityLevel: Value<br />
-&nbsp;<wbr>ID: Value<br />
+<p> Standard output for an Endpoint:<br/>
+&nbsp;<wbr>HealthState: Value<br/>
+&nbsp;<wbr>Implementor: Value<br/>
+&nbsp;<wbr>InterfaceName: Value<br/>
+&nbsp;<wbr>ServingState: Value<br/>
+&nbsp;<wbr>URL: Value<br/>
+&nbsp;<wbr>ImplementationVersion: Value<br/>
+&nbsp;<wbr>Capability: Value<br/>
+&nbsp;<wbr>ServiceForeignKey: Value<br/>
+&nbsp;<wbr>QualityLevel: Value<br/>
+&nbsp;<wbr>ID: Value<br/>
 &nbsp;<wbr>InterfaceVersion: Value </p>
-<p> JSON output for an Endpoint:<br />
-&nbsp;<wbr>[&#8230;&nbsp;<wbr>&quot;Value_of_the_ID&quot;:&nbsp;<wbr>{<br />
-&nbsp;<wbr>&quot;HealthState&quot;: Value,<br />
-&nbsp;<wbr>&quot;Implementor&quot;: Value,<br />
-&nbsp;<wbr>&quot;InterfaceName&quot;: Value,<br />
-&nbsp;<wbr>&quot;ServingState&quot;: Value,<br />
-&nbsp;<wbr>&quot;URL&quot;: Value,<br />
-&nbsp;<wbr>&quot;ImplementationVersion&quot;: Value,<br />
-&nbsp;<wbr>&quot;Capability&quot;: Value,<br />
-&nbsp;<wbr>&quot;ServiceForeignKey&quot;: Value,<br />
-&nbsp;<wbr>&quot;QualityLevel&quot;: Value,<br />
-&nbsp;<wbr>&quot;ID&quot;: Value,<br />
+<p> JSON output for an Endpoint:<br/>
+&nbsp;<wbr>[&#8230;&nbsp;<wbr>&quot;Value_of_the_ID&quot;:&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&quot;HealthState&quot;: Value,<br/>
+&nbsp;<wbr>&quot;Implementor&quot;: Value,<br/>
+&nbsp;<wbr>&quot;InterfaceName&quot;: Value,<br/>
+&nbsp;<wbr>&quot;ServingState&quot;: Value,<br/>
+&nbsp;<wbr>&quot;URL&quot;: Value,<br/>
+&nbsp;<wbr>&quot;ImplementationVersion&quot;: Value,<br/>
+&nbsp;<wbr>&quot;Capability&quot;: Value,<br/>
+&nbsp;<wbr>&quot;ServiceForeignKey&quot;: Value,<br/>
+&nbsp;<wbr>&quot;QualityLevel&quot;: Value,<br/>
+&nbsp;<wbr>&quot;ID&quot;: Value,<br/>
 &nbsp;<wbr>&quot;InterfaceVersion&quot;: Value}, &#8230;] </p>
-<p> CSV output for an Endpoint:<br />
-&nbsp;<wbr>HealthState,Implementor,InterfaceName,ServingState,URL,<br />
-&nbsp;<wbr>ImplementationVersion,Capability,ServiceForeignKey,QualityLevel,<br />
+<p> CSV output for an Endpoint:<br/>
+&nbsp;<wbr>HealthState,Implementor,InterfaceName,ServingState,URL,<br/>
+&nbsp;<wbr>ImplementationVersion,Capability,ServiceForeignKey,QualityLevel,<br/>
 &nbsp;<wbr>ID,InterfaceVersion </p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>1) List all information for all Endpoint attributes</dt>
 <dd> ginfo &#8211;host bdii.example.com Endpoint </dd>
 <dt>2) Use the host from the LCG_GFAL_INFOSYS environment variable and list all Location countries</dt>
-<dd> export LCG_GFAL_INFOSYS=bdii.example.com:2170<br />
+<dd> export LCG_GFAL_INFOSYS=bdii.example.com:2170<br/>
  ginfo Location country </dd>
 <dt>3) List all the Service types</dt>
 <dd> ginfo -l Type Service </dd>

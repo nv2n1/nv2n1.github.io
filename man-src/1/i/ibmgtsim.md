@@ -9,10 +9,10 @@ description: "IBMgtSim – Infiniband Management Simulator"
 
 <p><code>IBMgtSim</code> &#8211; Infiniband Management Simulator</p>
 <h2>Synopsys</h2>
-<p>IBMgtSim [-h] [-V mod-verb-pair-list] [-l log-file] [-p server-port]<br />
+<p>IBMgtSim [-h] [-V mod-verb-pair-list] [-l log-file] [-p server-port]<br/>
 &nbsp;<wbr>&nbsp;<wbr>[-w num-threads]&nbsp;<wbr>[-f flow-tcl-file]&nbsp;<wbr>[-s seed]&nbsp;<wbr>-t topology</p>
 <h2>Description</h2>
-<p>Simulates the Fabric as defined by the given topology file and start a server to handle <font SIZE="-1">MAD</font> requests from clients like OpenSM.</p>
+<p>Simulates the Fabric as defined by the given topology file and start a server to handle MAD requests from clients like OpenSM.</p>
 <h2>Arguments</h2>
 <dl>
 <dt>-t topology</dt>
@@ -57,4 +57,4 @@ description: "IBMgtSim – Infiniband Management Simulator"
 <dt>-h</dt>
 <dd>This help message</dd></dl>
 <h2>Author</h2>
-<p>Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il</p>
+<p>Eitan Zahavi, Mellanox Technologies LTD, eitan [at] mellanox.co.il</p>

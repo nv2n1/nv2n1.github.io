@@ -15,13 +15,13 @@ description: "std::uniform_int_distribution<IntType>::uniform_int_distribution â
                                                            IntType b = std::numeric_limits&lt;IntType&gt;::max());
 explicit uniform_int_distribution(const param_type &amp;params);
 (3)(since C++ 11)</code></pre>
-<p>Constructs new distribution object. <code>(2)</code> uses a and b as the distribution parameters, <code>(3)</code> uses params as the distribution parameters.<br />
+<p>Constructs new distribution object. <code>(2)</code> uses a and b as the distribution parameters, <code>(3)</code> uses params as the distribution parameters.<br/>
 The behavior is undefined if a&gt;b. </p>
 <h2>Parameters</h2>
-<p>a &#8211; the a distribution parameter (minimum value)<br />
-b &#8211; the b distribution parameter (maximum value)<br />
+<p>a &#8211; the a distribution parameter (minimum value)<br/>
+b &#8211; the b distribution parameter (maximum value)<br/>
 params &#8211; the distribution parameter set </p>
 <p>Defect reports </p>
 <p>The following behavior-changing defect reports were applied retroactively to previously published C++ standards. </p>
-<p>DR Applied to Behavior as published Correct behavior<br />
+<p>DR Applied to Behavior as published Correct behavior<br/>
 P0935R0 C++11 default constructor was explicit made implicit</p>

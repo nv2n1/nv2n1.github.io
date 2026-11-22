@@ -13,8 +13,8 @@ description: "glutExtensionSupported – Determine if an OpenGL extension is ava
 <h2>Synopsis</h2>
 <p>In openglut.h Ft int Fn glutExtensionSupported const char *extension</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>extension Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>extension Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>A string-name of an extension.</p>
 <h2>Description</h2>
 <p>Returns 0 if OpenGLUT cannot determine that the requested extension is definitely present. Only checks extensions from glGetString(). </p>

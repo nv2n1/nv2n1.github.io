@@ -15,7 +15,7 @@ description: "convert-ly – manual page for convert-ly 2.12.2"
 <p> Update LilyPond input to newer version. By default, update from the version taken from the ersion command, to the current LilyPond version.Examples:</p>
 <dl>
 <dt>
-</dt><dd> <tt>$ convert-ly -e old.ly</tt><br />
+</dt><dd> <tt>$ convert-ly -e old.ly</tt><br/>
  <tt>$ convert-ly --from=2.3.28 --to=2.5.21 foobar.ly &gt; foobar-new.ly</tt></dd></dl>
 <h2>OPTIONS</h2>
 <dl>

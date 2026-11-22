@@ -10,7 +10,7 @@ description: "zgemqrt.f –"
 <p>zgemqrt.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgemqrt</code> (SIDE, TRANS, M, N, K, NB, V, LDV, T, LDT, C, LDC, WORK, INFO)<br />
+<p>subroutine <code>zgemqrt</code> (SIDE, TRANS, M, N, K, NB, V, LDV, T, LDT, C, LDC, WORK, INFO)<br/>
  <i></i><code>ZGEMQRT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgemqrt (characterSIDE, characterTRANS, integerM, integerN, integerK, integerNB, complex*16, dimension( ldv, * )V, integerLDV, complex*16, dimension( ldt, * )T, integerLDT, complex*16, dimension( ldc, * )C, integerLDC, complex*16, dimension( * )WORK, integerINFO)</h3>

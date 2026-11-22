@@ -14,12 +14,12 @@ description: "pullnews – Pull news from multiple news servers and feed it to a
 <h2>REQUIREMENTS</h2>
 <p> The <tt>&quot;Net::NNTP&quot;</tt> module must be installed. This module is available as part of the libnet distribution and comes with recent versions of Perl. For older versions of Perl, you can download it from &lt;<a rel="nofollow" href="http://www.cpan.org/">http://www.cpan.org/</a>&gt;.</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pullnews</code> reads a config file in the running user&#8217;s home directory (normally called <i>~/.pullnews</i>) and connects to the upstream servers given there as a reader client. By default, it connects to all servers listed in the configuration file, but you can limit <code>pullnews</code> to specific servers by listing them on the command line: a whitespace-separated list of server names can be specified, like <i>from-server</i> for one of them. For each server it connects to, it pulls over articles and feeds them to the destination server via the <font SIZE="-1">IHAVE</font> or <font SIZE="-1">POST</font> commands. This means that the system <code>pullnews</code> is run on must have feeding access to the destination news server. </p>
+<p> <code>pullnews</code> reads a config file in the running user&#8217;s home directory (normally called <i>~/.pullnews</i>) and connects to the upstream servers given there as a reader client. By default, it connects to all servers listed in the configuration file, but you can limit <code>pullnews</code> to specific servers by listing them on the command line: a whitespace-separated list of server names can be specified, like <i>from-server</i> for one of them. For each server it connects to, it pulls over articles and feeds them to the destination server via the IHAVE or POST commands. This means that the system <code>pullnews</code> is run on must have feeding access to the destination news server. </p>
 <p> <code>pullnews</code> is designed for very small sites that do not want to bother setting up traditional peering and is not meant for handling large feeds.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-a</code> <i>hashfeed</i></dt>
-<dd> This option is a deterministic way to control the flow of articles and to split a feed. The <i>hashfeed</i> parameter must be in the form <tt>&quot;value/mod&quot;</tt> or <tt>&quot;start-end/mod&quot;</tt>. The Message-ID of each article is hashed using <font SIZE="-1">MD5</font>, which results in a 128-bit hash. The lowest 32 bits are then taken by default as the hashfeed value (which is an integer). If the hashfeed value modulus <tt>&quot;mod&quot;</tt> plus one equals <tt>&quot;value&quot;</tt> or is between <tt>&quot;start&quot;</tt> and <tt>&quot;end&quot;</tt>, <code>pullnews</code> will feed the article. All these numbers must be integers. </dd>
+<dd> This option is a deterministic way to control the flow of articles and to split a feed. The <i>hashfeed</i> parameter must be in the form <tt>&quot;value/mod&quot;</tt> or <tt>&quot;start-end/mod&quot;</tt>. The Message-ID of each article is hashed using MD5, which results in a 128-bit hash. The lowest 32 bits are then taken by default as the hashfeed value (which is an integer). If the hashfeed value modulus <tt>&quot;mod&quot;</tt> plus one equals <tt>&quot;value&quot;</tt> or is between <tt>&quot;start&quot;</tt> and <tt>&quot;end&quot;</tt>, <code>pullnews</code> will feed the article. All these numbers must be integers. </dd>
 <p> For instance: </p>
 <pre>
     pullnews -a 1/2      Feeds about 50% of all articles.
@@ -31,7 +31,7 @@ description: "pullnews – Pull news from multiple news servers and feed it to a
     pullnews -a 4-5/10   Feeds about 20% of all articles.
     pullnews -a 6-10/10  Feeds about 50% of all articles.
 </pre>
-<p> You can use an extended syntax of the form <tt>&quot;value/mod:offset&quot;</tt> or <tt>&quot;start-end/mod:offset&quot;</tt> (using an underscore <tt>&quot;_&quot;</tt> instead of a colon <tt>&quot;:&quot;</tt> is also recognized). As <font SIZE="-1">MD5</font> generates a 128-bit return value, it is possible to specify from which byte-offset the 32-bit integer used by hashfeed starts. The default value for <tt>&quot;offset&quot;</tt> is <tt>&quot;:0&quot;</tt> and thirteen overlapping values from <tt>&quot;:0&quot;</tt> to <tt>&quot;:12&quot;</tt> can be used. Only up to four totally independent values exist: <tt>&quot;:0&quot;</tt>, <tt>&quot;:4&quot;</tt>, <tt>&quot;:8&quot;</tt> and <tt>&quot;:12&quot;</tt>. </p>
+<p> You can use an extended syntax of the form <tt>&quot;value/mod:offset&quot;</tt> or <tt>&quot;start-end/mod:offset&quot;</tt> (using an underscore <tt>&quot;_&quot;</tt> instead of a colon <tt>&quot;:&quot;</tt> is also recognized). As MD5 generates a 128-bit return value, it is possible to specify from which byte-offset the 32-bit integer used by hashfeed starts. The default value for <tt>&quot;offset&quot;</tt> is <tt>&quot;:0&quot;</tt> and thirteen overlapping values from <tt>&quot;:0&quot;</tt> to <tt>&quot;:12&quot;</tt> can be used. Only up to four totally independent values exist: <tt>&quot;:0&quot;</tt>, <tt>&quot;:4&quot;</tt>, <tt>&quot;:8&quot;</tt> and <tt>&quot;:12&quot;</tt>. </p>
 <p> Therefore, it allows to a generate a second level of deterministic distribution. Indeed, if <code>pullnews</code> feeds <tt>&quot;1/2&quot;</tt>, it can go on splitting thanks to <tt>&quot;1-3/9:4&quot;</tt> for instance. Up to four levels of deterministic distribution can be used. </p>
 <p> The algorithm is compatible with the one used by Diablo 5.1 and up.</p>
 <dt><code>-b</code> <i>fraction</i></dt>
@@ -40,7 +40,7 @@ description: "pullnews – Pull news from multiple news servers and feed it to a
 <dd> Feed is header-only, that is to say <code>pullnews</code> only feeds the headers of the articles, plus one blank line. It adds the Bytes: header field if the article does not already have one, and keeps the body only if the article is a control article.</dd>
 <dt><code>-c</code> <i>config</i></dt>
 <dd> Normally, the config file is stored in <i>~/.pullnews</i> for the user running <code>pullnews</code>. If <code>-c</code> is given, <i>config</i> will be used as the config file instead. This is useful if you&#8217;re running <code>pullnews</code> as a system user on an automated basis out of cron rather than as an individual user. </dd>
-<p> See &#8220;<font SIZE="-1">CONFIG</font> <font SIZE="-1">FILE</font>&#8221; below for the format of this file.</p>
+<p> See &#8220;CONFIG FILE&#8221; below for the format of this file.</p>
 <dt><code>-C</code> <i>width</i></dt>
 <dd> Use <i>width</i> characters per line for the progress table. The default value is <tt>50</tt>.</dd>
 <dt><code>-d</code> <i>level</i></dt>
@@ -72,7 +72,7 @@ description: "pullnews – Pull news from multiple news servers and feed it to a
 <dt><code>-n</code></dt>
 <dd> Do nothing but read articles &#8212; does not feed articles downstream, writes no <code>rnews</code> file, does not update the config file.</dd>
 <dt><code>-N</code> <i>timeout</i></dt>
-<dd> Specify the timeout length, as <i>timeout</i> seconds, when establishing an <font SIZE="-1">NNTP</font> connection.</dd>
+<dd> Specify the timeout length, as <i>timeout</i> seconds, when establishing an NNTP connection.</dd>
 <dt><code>-O</code></dt>
 <dd> Use an optimized mode: <code>pullnews</code> checks whether the article already exists on the downstream server, before downloading it. It may help for huge articles or a slow link to upstream hosts.</dd>
 <dt><code>-p</code> <i>port</i></dt>
@@ -86,7 +86,7 @@ description: "pullnews – Pull news from multiple news servers and feed it to a
 <dt><code>-r</code> <i>file</i></dt>
 <dd> Rather than feeding the downloaded articles to a destination server, instead create a batch file that can later be fed to a server using <code>rnews</code>. See <i><a href="/docs/linux/man/1-rnews/">rnews</a></i>(1) for more information about the batch file format.</dd>
 <dt><code>-R</code></dt>
-<dd> Be a reader (use <font SIZE="-1">MODE</font> <font SIZE="-1">READER</font> and <font SIZE="-1">POST</font> commands) to the downstream server. The default is to use the <font SIZE="-1">IHAVE</font> command.</dd>
+<dd> Be a reader (use MODE READER and POST commands) to the downstream server. The default is to use the IHAVE command.</dd>
 <dt><code>-s</code> <i>to-server</i>[:<i>port</i>]</dt>
 <dd> Normally, <code>pullnews</code> will feed the articles it retrieves to the news server running on localhost. To connect to a different host, specify a server with the <code>-s</code> flag. You can also specify the port with this same flag or use <code>-p</code>.</dd>
 <dt><code>-S</code> <i>max-run</i></dt>
@@ -133,7 +133,7 @@ description: "pullnews – Pull news from multiple news servers and feed it to a
 <dt>~/.pullnews</dt>
 <dd> The default config file. It is in the running user&#8217;s home directory.</dd></dl>
 <h2>HISTORY</h2>
-<p> <code>pullnews</code> was written by James Brister for <font SIZE="-1">INN</font>. The documentation was rewritten in <font SIZE="-1">POD</font> by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
+<p> <code>pullnews</code> was written by James Brister for INN. The documentation was rewritten in POD by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
 <p> Geraint A. Edwards greatly improved <code>pullnews</code>, adding no more than 16 new recognized flags, fixing some bugs and integrating the <code>backupfeed</code> contrib script by Kai Henningsen, adding again 6 other flags. </p>
 <p> <tt>$Id:</tt> pullnews.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>SEE ALSO</h2>

@@ -10,7 +10,7 @@ description: "zungl2.f –"
 <p>zungl2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zungl2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>zungl2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>ZUNGL2</code> generates all or part of the unitary matrix Q from an LQ factorization determined by cgelqf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zungl2 (integerM, integerN, integerK, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )TAU, complex*16, dimension( * )WORK, integerINFO)</h3>

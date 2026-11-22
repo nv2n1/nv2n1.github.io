@@ -47,9 +47,9 @@ description: "Error handling –"
 <p> const char *<code>BRLAPI_STDCALL</code> <code>brlapi_getPacketTypeName</code> (<code>brlapi_packetType_t</code> type) </p>
 <p> int <code>BRLAPI_STDCALL</code> <code>brlapi_strexception</code> (char *buffer, size_t bufferSize, int error, <code>brlapi_packetType_t</code> type, const void *packet, size_t packetSize) </p>
 <p> int <code>BRLAPI_STDCALL</code> <code>brlapi__strexception</code> (<code>brlapi_handle_t</code> *handle, char *buffer, size_t bufferSize, int error, <code>brlapi_packetType_t</code> type, const void *packet, size_t packetSize) </p>
-<p> <code>brlapi_exceptionHandler_t</code><br />
+<p> <code>brlapi_exceptionHandler_t</code><br/>
  <code>BRLAPI_STDCALL</code> <code>brlapi_setExceptionHandler</code> (<code>brlapi_exceptionHandler_t</code> handler)&quot; </p>
-<p> <code>brlapi__exceptionHandler_t</code><br />
+<p> <code>brlapi__exceptionHandler_t</code><br/>
  <code>BRLAPI_STDCALL</code> <code>brlapi__setExceptionHandler</code> (<code>brlapi_handle_t</code> *handle, <code>brlapi__exceptionHandler_t</code> handler)&quot; </p>
 <p> void <code>BRLAPI_STDCALL</code> <code>brlapi_defaultExceptionHandler</code> (int error, <code>brlapi_packetType_t</code> type, const void *packet, size_t size) </p>
 <p> void <code>BRLAPI_STDCALL</code> <code>brlapi__defaultExceptionHandler</code> (<code>brlapi_handle_t</code> *handle, int error, <code>brlapi_packetType_t</code> type, const void *packet, size_t size) </p>
@@ -120,10 +120,10 @@ description: "Error handling –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> is the handle corresponding to the guilty connection;<br />
- <i>error</i> is a BRLAPI_ERROR_ error code;<br />
- <i>type</i> is the type of the guilty packet;<br />
- <i>packet</i> points to the content of the guilty packet (might be a little bit truncated);<br />
+</dt><dd> <i>handle</i> is the handle corresponding to the guilty connection;<br/>
+ <i>error</i> is a BRLAPI_ERROR_ error code;<br/>
+ <i>type</i> is the type of the guilty packet;<br/>
+ <i>packet</i> points to the content of the guilty packet (might be a little bit truncated);<br/>
  <i>size</i> gives the guilty packet&#8217;s size.</dd></dl>
 <h3>typedef uint32_t <code>brlapi_packetType_t</code></h3>
 <p> Type for packet type. Only unsigned can cross networks, 32bits</p>

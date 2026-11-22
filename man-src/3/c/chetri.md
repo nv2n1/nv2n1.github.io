@@ -11,7 +11,7 @@ description: "chetri.f –"
 <p> chetri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chetri</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br />
+<p> subroutine <code>chetri</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br/>
  <i></i><code>CHETRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chetri (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex, dimension( * )WORK, integerINFO)</h3>

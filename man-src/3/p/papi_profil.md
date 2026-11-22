@@ -20,22 +20,22 @@ description: "PAPI_profil –"
 <dd>The profiling routines have no Fortran interface.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>*buf</i> &#8212; pointer to a buffer of bufsiz bytes in which the histogram counts are stored in an array of unsigned short, unsigned int, or unsigned long long values, or &#8216;buckets&#8217;. The size of the buckets is determined by values in the flags argument.<br />
- <i>bufsiz</i> &#8212; the size of the histogram buffer in bytes. It is computed from the length of the code region to be profiled, the size of the buckets, and the scale factor as discussed above.<br />
- <i>offset</i> &#8212; the start address of the region to be profiled.<br />
- <i>scale</i> &#8212; broadly and historically speaking, a contraction factor that indicates how much smaller the histogram buffer is than the region to be profiled. More precisely, scale is interpreted as an unsigned 16-bit fixed-point fraction with the decimal point implied on the left. Its value is the reciprocal of the number of addresses in a subdivision, per counter of histogram buffer. Below is a table of representative values for scale.<br />
- <i>EventSet</i> &#8212; The PAPI EventSet to profile. This EventSet is marked as profiling-ready, but profiling doesn&#8217;t actually start until a <code>PAPI_start()</code> call is issued.<br />
- <i>EventCode</i> &#8212; Code of the Event in the EventSet to profile. This event must already be a member of the EventSet.<br />
- <i>threshold</i> &#8212; minimum number of events that must occur before the PC is sampled. If hardware overflow is supported for your component, this threshold will trigger an interrupt when reached. Otherwise, the counters will be sampled periodically and the PC will be recorded for the first sample that exceeds the threshold. If the value of threshold is 0, profiling will be disabled for this event.<br />
+<dd><i>*buf</i> &#8212; pointer to a buffer of bufsiz bytes in which the histogram counts are stored in an array of unsigned short, unsigned int, or unsigned long long values, or &#8216;buckets&#8217;. The size of the buckets is determined by values in the flags argument.<br/>
+ <i>bufsiz</i> &#8212; the size of the histogram buffer in bytes. It is computed from the length of the code region to be profiled, the size of the buckets, and the scale factor as discussed above.<br/>
+ <i>offset</i> &#8212; the start address of the region to be profiled.<br/>
+ <i>scale</i> &#8212; broadly and historically speaking, a contraction factor that indicates how much smaller the histogram buffer is than the region to be profiled. More precisely, scale is interpreted as an unsigned 16-bit fixed-point fraction with the decimal point implied on the left. Its value is the reciprocal of the number of addresses in a subdivision, per counter of histogram buffer. Below is a table of representative values for scale.<br/>
+ <i>EventSet</i> &#8212; The PAPI EventSet to profile. This EventSet is marked as profiling-ready, but profiling doesn&#8217;t actually start until a <code>PAPI_start()</code> call is issued.<br/>
+ <i>EventCode</i> &#8212; Code of the Event in the EventSet to profile. This event must already be a member of the EventSet.<br/>
+ <i>threshold</i> &#8212; minimum number of events that must occur before the PC is sampled. If hardware overflow is supported for your component, this threshold will trigger an interrupt when reached. Otherwise, the counters will be sampled periodically and the PC will be recorded for the first sample that exceeds the threshold. If the value of threshold is 0, profiling will be disabled for this event.<br/>
  <i>flags</i> &#8212; bit pattern to control profiling behavior. Defined values are shown in the table above.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i><br />
- <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
- <i>PAPI_ENOMEM</i> Insufficient memory to complete the operation.<br />
- <i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br />
- <i>PAPI_EISRUN</i> The EventSet is currently counting events.<br />
- <i>PAPI_ECNFLCT</i> The underlying counter hardware can not count this event and other events in the EventSet simultaneously.<br />
+<dd><i>PAPI_OK</i><br/>
+ <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br/>
+ <i>PAPI_ENOMEM</i> Insufficient memory to complete the operation.<br/>
+ <i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br/>
+ <i>PAPI_EISRUN</i> The EventSet is currently counting events.<br/>
+ <i>PAPI_ECNFLCT</i> The underlying counter hardware can not count this event and other events in the EventSet simultaneously.<br/>
  <i>PAPI_ENOEVNT</i> The PAPI preset is not available on the underlying hardware.</dd></dl>
 <p> <code>PAPI_profil()</code> provides hardware event statistics by profiling the occurence of specified hardware counter events. It is designed to mimic the UNIX SVR4 profil call. </p>
 <p> The statistics are generated by creating a histogram of hardware counter event overflows vs. program counter addresses for the current process. The histogram is defined for a specific region of program code to be profiled, and the identified region is logically broken up into a set of equal size subdivisions, each of which corresponds to a count in the histogram. </p>
@@ -44,15 +44,15 @@ description: "PAPI_profil –"
 <p> Events to be profiled are specified with the EventSet and EventCode parameters. More than one event can be simultaneously profiled by calling <code>PAPI_profil()</code> several times with different EventCode values. Profiling can be turned off for a given event by calling <code>PAPI_profil()</code> with a threshold value of 0. </p>
 <p> <code>Representative values for the scale variable</code></p>
 <dl COMPACT>
-<dd>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>HEX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>DECIMAL&nbsp;<wbr>&nbsp;<wbr>DEFININTION&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>0x20000&nbsp;<wbr>&nbsp;<wbr>131072&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Maps precisely one instruction address to a unique bucket in buf.&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>0x10000&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>65536&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Maps precisely two instruction addresses to a unique bucket in buf.&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>0x0FFFF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>65535&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Maps approximately two instruction addresses to a unique bucket in buf.&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>0x08000&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>32768&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Maps every four instruction addresses to a bucket in buf.&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>0x04000&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16384&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Maps every eight instruction addresses to a bucket in buf.&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>0x00002&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Maps all instruction addresses to the same bucket in buf.&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>0x00001&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Undefined.&nbsp;<wbr>&nbsp;<wbr><br />
+<dd>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>HEX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>DECIMAL&nbsp;<wbr>&nbsp;<wbr>DEFININTION&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>0x20000&nbsp;<wbr>&nbsp;<wbr>131072&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Maps precisely one instruction address to a unique bucket in buf.&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>0x10000&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>65536&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Maps precisely two instruction addresses to a unique bucket in buf.&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>0x0FFFF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>65535&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Maps approximately two instruction addresses to a unique bucket in buf.&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>0x08000&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>32768&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Maps every four instruction addresses to a bucket in buf.&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>0x04000&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16384&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Maps every eight instruction addresses to a bucket in buf.&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>0x00002&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Maps all instruction addresses to the same bucket in buf.&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>0x00001&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Undefined.&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>0x00000&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Undefined.&nbsp;<wbr>&nbsp;<wbr>
 </dd></dl>
 <p> Historically, the scale factor was introduced to allow the allocation of buffers smaller than the code size to be profiled. Data and instruction sizes were assumed to be multiples of 16-bits. These assumptions are no longer necessarily true. <code>PAPI_profil()</code> has preserved the traditional definition of scale where appropriate, but deprecated the definitions for 0 and 1 (disable scaling) and extended the range of scale to include 65536 and 131072 to allow for exactly two addresses and exactly one address per profiling bucket. </p>

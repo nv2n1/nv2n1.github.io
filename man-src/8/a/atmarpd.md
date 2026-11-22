@@ -9,7 +9,7 @@ description: "atmarpd – ATMARP demon"
 
 <p>atmarpd &#8211; ATMARP demon</p>
 <h2>Synopsis</h2>
-<p><code>atmarpd</code> [<code>-b</code>] [<code>-d</code>] [<code>-D&nbsp;<wbr></code><i>directory</i>] [<code>-l&nbsp;<wbr></code><i>logfile</i>] [<code>-m</code>] [<code>-n</code>]<br />
+<p><code>atmarpd</code> [<code>-b</code>] [<code>-d</code>] [<code>-D&nbsp;<wbr></code><i>directory</i>] [<code>-l&nbsp;<wbr></code><i>logfile</i>] [<code>-m</code>] [<code>-n</code>]<br/>
  <code>atmarpd</code> <code>-V</code></p>
 <h2>Description</h2>
 <p><code>atmarpd</code> implements the ATMARP protocol as specified in RFC1577 and RFC1755. Address resolution requests are sent from the kernel (using a comparably simple protocol) to the ATMARP demon, which then performs the dialog with the network. </p>

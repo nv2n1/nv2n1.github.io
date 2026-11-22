@@ -10,7 +10,7 @@ description: "transmission-gtk – a bittorrent client"
 
 <p> <code>transmission-gtk</code> &#8211; a bittorrent client </p>
 <h2>SYNOPSIS</h2>
-<p> <code>transmission-gtk</code> &#8211;<code>?</code><br />
+<p> <code>transmission-gtk</code> &#8211;<code>?</code><br/>
 <code>transmission-gtk</code> [-<code>pqm</code> ] [<i>torrent-file &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>transmission-gtk</code> is a fast and easy BitTorrent client. </p>

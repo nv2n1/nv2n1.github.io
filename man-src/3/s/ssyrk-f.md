@@ -10,7 +10,7 @@ description: "ssyrk.f –"
 <p>ssyrk.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssyrk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br />
+<p>subroutine <code>ssyrk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br/>
  <i></i><code>SSYRK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssyrk (characterUPLO, characterTRANS, integerN, integerK, realALPHA, real, dimension(lda,*)A, integerLDA, realBETA, real, dimension(ldc,*)C, integerLDC)</h3>

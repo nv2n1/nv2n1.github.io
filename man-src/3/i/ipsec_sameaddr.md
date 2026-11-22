@@ -11,14 +11,14 @@ description: "ipsec_sameaddr, ipsec_addrcmp, ipsec_samesubnet, ipsec_addrinsubne
 <p> ipsec_sameaddr, ipsec_addrcmp, ipsec_samesubnet, ipsec_addrinsubnet, ipsec_subnetinsubnet, ipsec_subnetishost, ipsec_samesaid, ipsec_sameaddrtype, ipsec_samesubnettype &#8211; do comparisons for addresses, subnets, SA IDs and address families</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
-<p> <code>int sameaddr(const ip_address *a, const ip_address *b);</code><br />
- <code>int addrcmp(const ip_address *a, const ip_address *b);</code><br />
- <code>int samesubnet(const ip_subnet *a, const ip_subnet *b);</code><br />
- <code>int addrinsubnet(const ip_address *a, const ip_subnet *s);</code><br />
- <code>int subnetinsubnet(const ip_subnet *a, const ip_subnet *b);</code><br />
- <code>int subnetishost(const ip_subnet *s);</code><br />
- <code>int samesaid(const ip_said *a, const ip_said *b);</code><br />
- <code>int sameaddrtype(const ip_address *a, const ip_address *b);</code><br />
+<p> <code>int sameaddr(const ip_address *a, const ip_address *b);</code><br/>
+ <code>int addrcmp(const ip_address *a, const ip_address *b);</code><br/>
+ <code>int samesubnet(const ip_subnet *a, const ip_subnet *b);</code><br/>
+ <code>int addrinsubnet(const ip_address *a, const ip_subnet *s);</code><br/>
+ <code>int subnetinsubnet(const ip_subnet *a, const ip_subnet *b);</code><br/>
+ <code>int subnetishost(const ip_subnet *s);</code><br/>
+ <code>int samesaid(const ip_said *a, const ip_said *b);</code><br/>
+ <code>int sameaddrtype(const ip_address *a, const ip_address *b);</code><br/>
  <code>int samesubnettype(const ip_subnet *a, const ip_subnet *b);</code></p>
 <h2>DESCRIPTION</h2>
 <p> These functions do various comparisons and tests on the <i>ip_address</i> type and <i>ip_subnet</i> types. </p>

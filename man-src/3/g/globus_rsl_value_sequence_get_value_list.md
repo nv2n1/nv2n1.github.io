@@ -10,37 +10,37 @@ description: "RSL Accessor Functions –"
 
 <p> RSL Accessor Functions &#8211; </p>
 <h3>Functions</h3>
-<p> int <code>globus_rsl_boolean_get_operator</code> (globus_rsl_t *ast_node)<br />
- <i>Get the RSL operator used in a boolean RSL composition. </i><br />
- globus_list_t * <code>globus_rsl_boolean_get_operand_list</code> (globus_rsl_t *ast_node)<br />
- <i>Get the RSL operand list from a boolean RSL composition. </i><br />
- globus_list_t ** <code>globus_rsl_boolean_get_operand_list_ref</code> (globus_rsl_t *boolean_node)<br />
- <i>Get a reference to the RSL operand list from a boolean RSL composition. </i><br />
- char * <code>globus_rsl_relation_get_attribute</code> (globus_rsl_t *ast_node)<br />
- <i>Get an RSL relation attribute name. </i><br />
- int <code>globus_rsl_relation_get_operator</code> (globus_rsl_t *ast_node)<br />
- <i>Get an RSL relation operator. </i><br />
- globus_rsl_value_t * <code>globus_rsl_relation_get_value_sequence</code> (globus_rsl_t *ast_node)<br />
- <i>Get the value of an RSL relation. </i><br />
- globus_rsl_value_t * <code>globus_rsl_relation_get_single_value</code> (globus_rsl_t *ast_node)<br />
- <i>Get the single value of an RSL relation. </i><br />
- char * <code>globus_rsl_value_literal_get_string</code> (globus_rsl_value_t *literal_node)<br />
- <i>Get the string value of an RSL literal. </i><br />
- globus_list_t * <code>globus_rsl_value_sequence_get_value_list</code> (globus_rsl_value_t *sequence_node)<br />
- <i>Get the value list from an RSL value sequence. </i><br />
- globus_rsl_value_t * <code>globus_rsl_value_variable_get_sequence</code> (globus_rsl_value_t *variable_node)<br />
- <i>Get the value sequence from an RSL variable reference. </i><br />
- char * <code>globus_rsl_value_variable_get_name</code> (globus_rsl_value_t *variable_node)<br />
- <i>Get the name of an RSL variable reference. </i><br />
- char * <code>globus_rsl_value_variable_get_default</code> (globus_rsl_value_t *variable_node)<br />
- <i>Get the default value of an RSL variable reference. </i><br />
- int <code>globus_rsl_value_variable_get_size</code> (globus_rsl_value_t *variable_node)<br />
- <i>Get the size of the value list within an RSL variable reference node. </i><br />
- globus_rsl_value_t * <code>globus_rsl_value_concatenation_get_left</code> (globus_rsl_value_t *concatenation_node)<br />
- <i>Get the left side of a concatenation value. </i><br />
- globus_rsl_value_t * <code>globus_rsl_value_concatenation_get_right</code> (globus_rsl_value_t *concatenation_node)<br />
- <i>Get the right side of a concatenation value. </i><br />
- globus_list_t ** <code>globus_rsl_value_sequence_get_list_ref</code> (globus_rsl_value_t *sequence_node)<br />
+<p> int <code>globus_rsl_boolean_get_operator</code> (globus_rsl_t *ast_node)<br/>
+ <i>Get the RSL operator used in a boolean RSL composition. </i><br/>
+ globus_list_t * <code>globus_rsl_boolean_get_operand_list</code> (globus_rsl_t *ast_node)<br/>
+ <i>Get the RSL operand list from a boolean RSL composition. </i><br/>
+ globus_list_t ** <code>globus_rsl_boolean_get_operand_list_ref</code> (globus_rsl_t *boolean_node)<br/>
+ <i>Get a reference to the RSL operand list from a boolean RSL composition. </i><br/>
+ char * <code>globus_rsl_relation_get_attribute</code> (globus_rsl_t *ast_node)<br/>
+ <i>Get an RSL relation attribute name. </i><br/>
+ int <code>globus_rsl_relation_get_operator</code> (globus_rsl_t *ast_node)<br/>
+ <i>Get an RSL relation operator. </i><br/>
+ globus_rsl_value_t * <code>globus_rsl_relation_get_value_sequence</code> (globus_rsl_t *ast_node)<br/>
+ <i>Get the value of an RSL relation. </i><br/>
+ globus_rsl_value_t * <code>globus_rsl_relation_get_single_value</code> (globus_rsl_t *ast_node)<br/>
+ <i>Get the single value of an RSL relation. </i><br/>
+ char * <code>globus_rsl_value_literal_get_string</code> (globus_rsl_value_t *literal_node)<br/>
+ <i>Get the string value of an RSL literal. </i><br/>
+ globus_list_t * <code>globus_rsl_value_sequence_get_value_list</code> (globus_rsl_value_t *sequence_node)<br/>
+ <i>Get the value list from an RSL value sequence. </i><br/>
+ globus_rsl_value_t * <code>globus_rsl_value_variable_get_sequence</code> (globus_rsl_value_t *variable_node)<br/>
+ <i>Get the value sequence from an RSL variable reference. </i><br/>
+ char * <code>globus_rsl_value_variable_get_name</code> (globus_rsl_value_t *variable_node)<br/>
+ <i>Get the name of an RSL variable reference. </i><br/>
+ char * <code>globus_rsl_value_variable_get_default</code> (globus_rsl_value_t *variable_node)<br/>
+ <i>Get the default value of an RSL variable reference. </i><br/>
+ int <code>globus_rsl_value_variable_get_size</code> (globus_rsl_value_t *variable_node)<br/>
+ <i>Get the size of the value list within an RSL variable reference node. </i><br/>
+ globus_rsl_value_t * <code>globus_rsl_value_concatenation_get_left</code> (globus_rsl_value_t *concatenation_node)<br/>
+ <i>Get the left side of a concatenation value. </i><br/>
+ globus_rsl_value_t * <code>globus_rsl_value_concatenation_get_right</code> (globus_rsl_value_t *concatenation_node)<br/>
+ <i>Get the right side of a concatenation value. </i><br/>
+ globus_list_t ** <code>globus_rsl_value_sequence_get_list_ref</code> (globus_rsl_value_t *sequence_node)<br/>
  <i>Get a reference to the list of values in a sequence. </i></p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>

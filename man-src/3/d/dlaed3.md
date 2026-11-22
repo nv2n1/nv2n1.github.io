@@ -11,7 +11,7 @@ description: "dlaed3.f –"
 <p> dlaed3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlaed3</code> (K, N, N1, D, Q, LDQ, RHO, DLAMDA, Q2, INDX, CTOT, W, S, INFO)<br />
+<p> subroutine <code>dlaed3</code> (K, N, N1, D, Q, LDQ, RHO, DLAMDA, Q2, INDX, CTOT, W, S, INFO)<br/>
  <i></i><code>DLAED3</code> used by sstedc. Finds the roots of the secular equation and updates the eigenvectors. Used when the original matrix is tridiagonal.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaed3 (integerK, integerN, integerN1, double precision, dimension( * )D, double precision, dimension( ldq, * )Q, integerLDQ, double precisionRHO, double precision, dimension( * )DLAMDA, double precision, dimension( * )Q2, integer, dimension( * )INDX, integer, dimension( * )CTOT, double precision, dimension( * )W, double precision, dimension( * )S, integerINFO)</h3>

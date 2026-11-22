@@ -34,7 +34,7 @@ description: "dumpcap – Dump network traffic"
 <p> Example: <code>-b filesize:1000 -b files:5</code> results in a ring buffer of five files of size one megabyte each.</p>
 <dt>-B &lt;capture buffer size&gt;</dt>
 <dd> Set capture buffer size (in MiB, default is 2 MiB). This is used by the capture driver to buffer packet data until that data can be written to disk. If you encounter packet drops while capturing, try to increase this size. Note that, while <code>Dumpcap</code> attempts to set the buffer size to 2 MiB by default, and can be told to set it to a larger value, the system or interface on which you&#8217;re capturing might silently limit the capture buffer size to a lower value or raise it to a higher value. </dd>
-<p> This is available on <font SIZE="-1">UNIX</font> systems with libpcap 1.0.0 or later and on Windows. It is not available on <font SIZE="-1">UNIX</font> systems with earlier versions of libpcap. </p>
+<p> This is available on UNIX systems with libpcap 1.0.0 or later and on Windows. It is not available on UNIX systems with earlier versions of libpcap. </p>
 <p> This option can occur multiple times. If used before the first occurrence of the <code>-i</code> option, it sets the default capture buffer size. If used after an <code>-i</code> option, it sets the capture buffer size for the interface specified by the last <code>-i</code> option occurring before this option. If the capture buffer size is not set specifically, the default capture buffer size is used instead.</p>
 <dt>-c &lt;capture packet count&gt;</dt>
 <dd> Set the maximum number of packets to read when capturing live data.</dd>
@@ -44,7 +44,7 @@ description: "dumpcap – Dump network traffic"
 <dd> Dump the code generated for the capture filter in a human-readable form, and exit.</dd>
 <dt>-D</dt>
 <dd> Print a list of the interfaces on which <code>Dumpcap</code> can capture, and exit. For each network interface, a number and an interface name, possibly followed by a text description of the interface, is printed. The interface name or the number can be supplied to the <code>-i</code> option to specify an interface on which to capture. </dd>
-<p> This can be useful on systems that don&#8217;t have a command to list them (e.g., Windows systems, or <font SIZE="-1">UNIX</font> systems lacking <code>ifconfig -a</code>); the number can be useful on Windows 2000 and later systems, where the interface name is a somewhat complex string. </p>
+<p> This can be useful on systems that don&#8217;t have a command to list them (e.g., Windows systems, or UNIX systems lacking <code>ifconfig -a</code>); the number can be useful on Windows 2000 and later systems, where the interface name is a somewhat complex string. </p>
 <p> Note that &#8220;can capture&#8221; means that <code>Dumpcap</code> was able to open that device to do a live capture. Depending on your system you may need to run dumpcap from an account with special privileges (for example, as root) to be able to capture network traffic. If &quot;<code>dumpcap -D</code>&quot; is not run from such an account, it will not list any interfaces.</p>
 <dt>-f &lt;capture filter&gt;</dt>
 <dd> Set the capture filter expression. </dd>
@@ -56,13 +56,13 @@ description: "dumpcap – Dump network traffic"
 <dd> Print the version and options and exits.</dd>
 <dt>-i &lt;capture interface&gt;|rpcap://&lt;host&gt;/&lt;capture interface&gt;|TCP@&lt;host&gt;:&lt;port&gt;|-</dt>
 <dd> Set the name of the network interface or pipe to use for live packet capture. </dd>
-<p> Network interface names should match one of the names listed in &quot;<code>dumpcap -D</code>&#8220; (described above); a number, as reported by &#8221;<code>dumpcap -D</code>&#8220;, can also be used. If you&#8217;re using <font SIZE="-1">UNIX, &#8221;</font><code>netstat -i</code>&#8220; or &#8221;<code>ifconfig -a</code>&quot; might also work to list interface names, although not all versions of <font SIZE="-1">UNIX</font> support the <code>-a</code> option to <code>ifconfig</code>. </p>
+<p> Network interface names should match one of the names listed in &quot;<code>dumpcap -D</code>&#8220; (described above); a number, as reported by &#8221;<code>dumpcap -D</code>&#8220;, can also be used. If you&#8217;re using UNIX, &#8221;<code>netstat -i</code>&#8220; or &#8221;<code>ifconfig -a</code>&quot; might also work to list interface names, although not all versions of UNIX support the <code>-a</code> option to <code>ifconfig</code>. </p>
 <p> If no interface is specified, <code>Dumpcap</code> searches the list of interfaces, choosing the first non-loopback interface if there are any non-loopback interfaces, and choosing the first loopback interface if there are no non-loopback interfaces. If there are no interfaces at all, <code>Dumpcap</code> reports an error and doesn&#8217;t start the capture. </p>
-<p> Pipe names should be either the name of a <font SIZE="-1">FIFO </font>(named pipe) or &#8220;-&#8221; to read data from the standard input. Data read from pipes must be in standard pcap format. </p>
+<p> Pipe names should be either the name of a FIFO (named pipe) or &#8220;-&#8221; to read data from the standard input. Data read from pipes must be in standard pcap format. </p>
 <p> This option can occur multiple times. When capturing from multiple interfaces, the capture file will be saved in pcap-ng format. </p>
 <p> Note: the Win32 version of <code>Dumpcap</code> doesn&#8217;t support capturing from pipes or stdin!</p>
 <dt>-I</dt>
-<dd> Put the interface in &#8220;monitor mode&#8221;; this is supported only on <font SIZE="-1">IEEE 802.11</font> Wi-Fi interfaces, and supported only on some operating systems. </dd>
+<dd> Put the interface in &#8220;monitor mode&#8221;; this is supported only on IEEE 802.11 Wi-Fi interfaces, and supported only on some operating systems. </dd>
 <p> Note that in monitor mode the adapter might disassociate from the network with which it&#8217;s associated, so that you will not be able to use any wireless networks with that adapter. This could prevent accessing files on a network server, or resolving host names or network addresses, if you are capturing in monitor mode and are not connected to another network with another adapter. </p>
 <p> This option can occur multiple times. If used before the first occurrence of the <code>-i</code> option, it enables the monitor mode for all interfaces. If used after an <code>-i</code> option, it enables the monitor mode for the interface specified by the last <code>-i</code> option occurring before this option.</p>
 <dt>-L</dt>
@@ -79,7 +79,7 @@ description: "dumpcap – Dump network traffic"
 <dt>-P</dt>
 <dd> Save files as pcap instead of the default pcap-ng. In situations that require pcap-ng, such as capturing from multiple interfaces, this option will be overridden.</dd>
 <dt>-q</dt>
-<dd> When capturing packets, don&#8217;t display the continuous count of packets captured that is normally shown when saving a capture to a file; instead, just display, at the end of the capture, a count of packets captured. On systems that support the <font SIZE="-1">SIGINFO</font> signal, such as various BSDs, you can cause the current count to be displayed by typing your &#8220;status&#8221; character (typically control-T, although it might be set to &#8220;disabled&#8221; by default on at least some BSDs, so you&#8217;d have to explicitly set it to use it).</dd>
+<dd> When capturing packets, don&#8217;t display the continuous count of packets captured that is normally shown when saving a capture to a file; instead, just display, at the end of the capture, a count of packets captured. On systems that support the SIGINFO signal, such as various BSDs, you can cause the current count to be displayed by typing your &#8220;status&#8221; character (typically control-T, although it might be set to &#8220;disabled&#8221; by default on at least some BSDs, so you&#8217;d have to explicitly set it to use it).</dd>
 <dt>-s &lt;capture snaplen&gt;</dt>
 <dd> Set the default snapshot length to use when capturing live data. No more than <i>snaplen</i> bytes of each network packet will be read into memory, or saved to disk. A value of 0 specifies a snapshot length of 65535, so that the full packet is captured; this is the default. </dd>
 <p> This option can occur multiple times. If used before the first occurrence of the <code>-i</code> option, it sets the default snapshot length. If used after an <code>-i</code> option, it sets the snapshot length for the interface specified by the last <code>-i</code> option occurring before this option. If the snapshot length is not set specifically, the default snapshot length is used if provided.</p>
@@ -91,7 +91,7 @@ description: "dumpcap – Dump network traffic"
 <dd> Print the version and exit.</dd>
 <dt>-w &lt;outfile&gt;</dt>
 <dd> Write raw packet data to <i>outfile</i>. </dd>
-<p> <font SIZE="-1">NOTE:</font> The usage of &#8220;-&#8221; for stdout is not allowed here!</p>
+<p> NOTE: The usage of &#8220;-&#8221; for stdout is not allowed here!</p>
 <dt>-y &lt;capture link type&gt;</dt>
 <dd> Set the data link type to use while capturing packets. The values reported by <code>-L</code> are the values that can be used. </dd>
 <p> This option can occur multiple times. If used before the first occurrence of the <code>-i</code> option, it sets the default capture link type. If used after an <code>-i</code> option, it sets the capture link type for the interface specified by the last <code>-i</code> option occurring before this option. If the capture link type is not set specifically, the default capture link type is used if provided.</dl>
@@ -101,6 +101,6 @@ description: "dumpcap – Dump network traffic"
 <p> <i><a href="/docs/linux/man/1-wireshark/">wireshark</a></i>(1), <i><a href="/docs/linux/man/1-tshark/">tshark</a></i>(1), <i><a href="/docs/linux/man/1-editcap/">editcap</a></i>(1), <i><a href="/docs/linux/man/1-mergecap/">mergecap</a></i>(1), <i><a href="/docs/linux/man/1-capinfos/">capinfos</a></i>(1), <i>pcap</i>(3), <i><a href="/docs/linux/man/7-pcap-filter/">pcap-filter</a></i>(7) or <i><a href="/docs/linux/man/8-tcpdump/">tcpdump</a></i>(8)</p>
 <h2>NOTES</h2>
 <p> <code>Dumpcap</code> is part of the <code>Wireshark</code> distribution. The latest version of <code>Wireshark</code> can be found at &lt;<a rel="nofollow" href="http://www.wireshark.org">http://www.wireshark.org</a>&gt;. </p>
-<p> <font SIZE="-1">HTML</font> versions of the Wireshark project man pages are available at: &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/man-pages">http://www.wireshark.org/docs/man-pages</a>&gt;.</p>
+<p> HTML versions of the Wireshark project man pages are available at: &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/man-pages">http://www.wireshark.org/docs/man-pages</a>&gt;.</p>
 <h2>AUTHORS</h2>
 <p> <code>Dumpcap</code> is derived from the <code>Wireshark</code> capturing engine code; see the list of authors in the <code>Wireshark</code> man page for a list of authors of that code. </p>

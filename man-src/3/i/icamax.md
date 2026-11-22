@@ -11,7 +11,7 @@ description: "icamax.f –"
 <p> icamax.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> INTEGER function <code>icamax</code> (N, CX, INCX)<br />
+<p> INTEGER function <code>icamax</code> (N, CX, INCX)<br/>
  <i></i><code>ICAMAX</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function icamax (integerN, complex, dimension(*)CX, integerINCX)</h3>

@@ -18,10 +18,10 @@ int ibv_bind_mw(struct ibv_qp *qp, struct ibv_mw *mw,
 <h2>DESCRIPTION</h2>
 <p> <code>ibv_bind_mw()</code> posts to the queue pair <i>qp</i> a request to bind the memory window <i>mw</i> according to the details in <i>mw_bind</i>. </p>
 <p> The argument <i>mw_bind</i> is an ibv_mw_bind struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
-<p>struct ibv_mw_bind {<br />
-    uint64_t wr_id;                    /* User defined WR ID */<br />
-    int send_flags;                    /* Use ibv_send_flags */<br />
-    struct ibv_mw_bind_info bind_info; /* MW bind information */<br />
+<p>struct ibv_mw_bind {<br/>
+    uint64_t wr_id;                    /* User defined WR ID */<br/>
+    int send_flags;                    /* Use ibv_send_flags */<br/>
+    struct ibv_mw_bind_info bind_info; /* MW bind information */<br/>
 }</p>
 <pre><code>
 struct ibv_mw_bind_info {
@@ -32,13 +32,13 @@ struct ibv_mw_bind_info {
 };
 </code></pre>
 <p> The QP Transport Service Type must be either UC, RC or XRC_SEND for bind operations. </p>
-<p> The attribute send_flags describes the properties of the <font SIZE="-1">WR</font>. It is either 0 or the bitwise <font SIZE="-1">OR</font> of one or more of the following flags: </p>
+<p> The attribute send_flags describes the properties of the WR. It is either 0 or the bitwise OR of one or more of the following flags: </p>
 <dl>
 <dt><code>IBV_SEND_FENCE </code> Set the fence indicator.</dt>
 <dd>
 </dd><dt><code>IBV_SEND_SIGNALED </code> Set the completion notification indicator. Relevant only if QP was created with sq_sig_all=0</dt>
 <dd></dd></dl>
-<p> The mw_access_flags define the allowed access to the MW after the bind completes successfully. It is either 0 or the bitwise <font SIZE="-1">OR</font> of one or more of the following flags:</p>
+<p> The mw_access_flags define the allowed access to the MW after the bind completes successfully. It is either 0 or the bitwise OR of one or more of the following flags:</p>
 <dl>
 <dt><code>IBV_ACCESS_REMOTE_WRITE </code> Enable Remote Write Access. Requires local write access to the MR.</dt>
 <dd>

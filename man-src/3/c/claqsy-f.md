@@ -10,7 +10,7 @@ description: "claqsy.f –"
 <p>claqsy.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>claqsy</code> (UPLO, N, A, LDA, S, SCOND, AMAX, EQUED)<br />
+<p>subroutine <code>claqsy</code> (UPLO, N, A, LDA, S, SCOND, AMAX, EQUED)<br/>
  <i></i><code>CLAQSY</code> scales a symmetric/Hermitian matrix, using scaling factors computed by spoequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claqsy (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )S, realSCOND, realAMAX, characterEQUED)</h3>

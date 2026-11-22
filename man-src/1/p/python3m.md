@@ -71,12 +71,12 @@ description: "python – an interpreted, interactive, object-oriented programmin
 <dl>
 <dt><i>${exec_prefix}/bin/python</i></dt>
 <dd> Recommended location of the interpreter.</dd></dl>
-<p> <i>${prefix}/lib/python&lt;version&gt;</i><br />
+<p> <i>${prefix}/lib/python&lt;version&gt;</i><br/>
  <i>${exec_prefix}/lib/python&lt;version&gt;</i></p>
 <dl>
 <dt>
 </dt><dd> Recommended locations of the directories containing the standard modules.</dd></dl>
-<p> <i>${prefix}/include/python&lt;version&gt;</i><br />
+<p> <i>${prefix}/include/python&lt;version&gt;</i><br/>
  <i>${exec_prefix}/include/python&lt;version&gt;</i></p>
 <dl>
 <dt>
@@ -98,7 +98,7 @@ description: "python – an interpreted, interactive, object-oriented programmin
 <dt>PYTHONINSPECT</dt>
 <dd> If this is set to a non-empty string it is equivalent to specifying the <code>-i</code> option.</dd>
 <dt>PYTHONIOENCODING</dt>
-<dd> If this is set before running the interpreter, it overrides the encoding used for stdin/stdout/stderr, in the syntax <i>encodingname</i><code>:</code><i>errorhandler</i> The <i>errorhandler</i> part is optional and has the same meaning as in str.encode. For stderr, the <i>errorhandler</i><br />
+<dd> If this is set before running the interpreter, it overrides the encoding used for stdin/stdout/stderr, in the syntax <i>encodingname</i><code>:</code><i>errorhandler</i> The <i>errorhandler</i> part is optional and has the same meaning as in str.encode. For stderr, the <i>errorhandler</i><br/>
 &nbsp;part is ignored;&nbsp;the handler will always be&nbsp;&#8216;backslashreplace&#8217;.</dd>
 <dt>PYTHONNOUSERSITE</dt>
 <dd> If this is set to a non-empty string it is equivalent to specifying the <code>-s</code> option (Don&#8217;t add the user site directory to sys.path).</dd>
@@ -115,11 +115,11 @@ description: "python – an interpreted, interactive, object-oriented programmin
 <h2>AUTHOR</h2>
 <p> The Python Software Foundation: <a rel="nofollow" href="https://www.python.org/psf/">https://www.python.org/psf/</a></p>
 <h2>INTERNET RESOURCES</h2>
-<p> Main website: <a rel="nofollow" href="https://www.python.org/">https://www.python.org/</a><br />
- Documentation: <a rel="nofollow" href="https://docs.python.org/">https://docs.python.org/</a><br />
- Developer resources: <a rel="nofollow" href="https://devguide.python.org/">https://devguide.python.org/</a><br />
- Downloads: <a rel="nofollow" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br />
- Module repository: <a rel="nofollow" href="https://pypi.org/">https://pypi.org/</a><br />
+<p> Main website: <a rel="nofollow" href="https://www.python.org/">https://www.python.org/</a><br/>
+ Documentation: <a rel="nofollow" href="https://docs.python.org/">https://docs.python.org/</a><br/>
+ Developer resources: <a rel="nofollow" href="https://devguide.python.org/">https://devguide.python.org/</a><br/>
+ Downloads: <a rel="nofollow" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br/>
+ Module repository: <a rel="nofollow" href="https://pypi.org/">https://pypi.org/</a><br/>
  Newsgroups: comp.lang.python, comp.lang.python.announce</p>
 <h2>LICENSING</h2>
 <p> Python is distributed under an Open Source license. See the file &quot;LICENSE&quot; in the Python source distribution for information on terms &amp; conditions for accessing and otherwise using Python and for a DISCLAIMER OF ALL WARRANTIES. </p>

@@ -16,9 +16,9 @@ description: "clvmd — cluster LVM daemon"
 <dl>
 <dt> <code>-C</code></dt>
 <dd>
-</dd><dd>Only valid if <code>-d</code> is also specified. Tells all clvmds in a cluster to enable/disable debug logging. Without this switch, only the local clvmd will change its debug level to that given with <code>-d</code>.<br />
- This does not work correctly if specified on the command-line that starts clvmd. If you want to start clvmd <code>and</code> enable cluster-wide logging then the command needs to be issued twice, eg:<br />
- <code>clvmd</code><br />
+</dd><dd>Only valid if <code>-d</code> is also specified. Tells all clvmds in a cluster to enable/disable debug logging. Without this switch, only the local clvmd will change its debug level to that given with <code>-d</code>.<br/>
+ This does not work correctly if specified on the command-line that starts clvmd. If you want to start clvmd <code>and</code> enable cluster-wide logging then the command needs to be issued twice, eg:<br/>
+ <code>clvmd</code><br/>
  <code>clvmd -d2</code></dd>
 <dt> <code>-d</code> [<i>value</i>]</dt>
 <dd>
@@ -63,7 +63,7 @@ description: "clvmd — cluster LVM daemon"
 <dt><code>LVM_BINARY</code></dt>
 <dd>The LVM2 binary to use. Defaults to <i>/usr/sbin/lvm</i>.</dd></dl>
 <h2>Files</h2>
-<p><i>/usr/sbin/clvmd</i><br />
+<p><i>/usr/sbin/clvmd</i><br/>
  <i>/usr/sbin/lvm</i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5), <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) </p>

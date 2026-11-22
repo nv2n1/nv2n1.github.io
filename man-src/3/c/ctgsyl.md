@@ -11,7 +11,7 @@ description: "ctgsyl.f –"
 <p> ctgsyl.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctgsyl</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, DIF, WORK, LWORK, IWORK, INFO)<br />
+<p> subroutine <code>ctgsyl</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, DIF, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>CTGSYL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctgsyl (characterTRANS, integerIJOB, integerM, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldc, * )C, integerLDC, complex, dimension( ldd, * )D, integerLDD, complex, dimension( lde, * )E, integerLDE, complex, dimension( ldf, * )F, integerLDF, realSCALE, realDIF, complex, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>

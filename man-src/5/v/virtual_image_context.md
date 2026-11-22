@@ -25,8 +25,8 @@ description: "virtual_image_context – The SELinux virtual machine image contex
 <dd>A user, role, type and optional range (for MCS/MLS) separated by colons (:) that can be used as a virtual image context.</dd></dl>
 </dl>
 <h2>Example</h2>
-<p># ./contexts/virtual_image_context<br />
- system_u:object_r:svirt_image_t:s0<br />
+<p># ./contexts/virtual_image_context<br/>
+ system_u:object_r:svirt_image_t:s0<br/>
  system_u:object_r:svirt_content_t:s0</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-libvirtd/">libvirtd</a></code>(8), <code>selinux_virtual_image_context_path</code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>

@@ -10,7 +10,7 @@ description: "zgerqf.f –"
 <p>zgerqf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgerqf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
+<p>subroutine <code>zgerqf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>ZGERQF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgerqf (integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )TAU, complex*16, dimension( * )WORK, integerLWORK, integerINFO)</h3>

@@ -11,36 +11,36 @@ description: "ANTLR3_INT_STREAM_struct –"
 <h2>Synopsis</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3intstream.h">antlr3intstream.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> <code>ANTLR3_UINT32</code>(* <code>_LA</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream, <code>ANTLR3_INT32</code> i)<br />
- <i>Get ANTLR3_UINT32 at current input pointer + i ahead where i=1 is next ANTLR3_UINT32. </i><br />
- <code>ANTLR3_UINT32</code> <code>cachedSize</code><br />
- <i>Because the indirect call, though small in individual cases can mount up if there are thousands of tokens (very large input streams), callers of size can optionally use this cached size field. </i><br />
- void(* <code>consume</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream)<br />
- <i>Consume the next &#8216;ANTR3_UINT32&#8217; in the stream. </i><br />
- void(* <code>free</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *stream)<br />
- <i>Frees any resources that were allocated for the implementation of this interface. </i><br />
+<p> <code>ANTLR3_UINT32</code>(* <code>_LA</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream, <code>ANTLR3_INT32</code> i)<br/>
+ <i>Get ANTLR3_UINT32 at current input pointer + i ahead where i=1 is next ANTLR3_UINT32. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>cachedSize</code><br/>
+ <i>Because the indirect call, though small in individual cases can mount up if there are thousands of tokens (very large input streams), callers of size can optionally use this cached size field. </i><br/>
+ void(* <code>consume</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream)<br/>
+ <i>Consume the next &#8216;ANTR3_UINT32&#8217; in the stream. </i><br/>
+ void(* <code>free</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *stream)<br/>
+ <i>Frees any resources that were allocated for the implementation of this interface. </i><br/>
  <code>pANTLR3_STRING</code>(* <code>getSourceName</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream) </p>
-<p> <code>ANTLR3_MARKER</code>(* <code>index</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream)<br />
- <i>Return the current input symbol index 0..n where n indicates the last symbol has been read. </i><br />
- <code>ANTLR3_MARKER</code> <code>lastMarker</code><br />
- <i>Last marker position allocated. </i><br />
- <code>ANTLR3_MARKER</code>(* <code>mark</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream)<br />
- <i>Tell the stream to start buffering if it hasn&#8217;t already. </i><br />
- void(* <code>release</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream, <code>ANTLR3_MARKER</code> <code>mark</code>)<br />
- <i>You may want to commit to a backtrack but don&#8217;t want to force the stream to keep bookkeeping objects around for a marker that is no longer necessary. </i><br />
- void(* <code>rewind</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream, <code>ANTLR3_MARKER</code> marker)<br />
- <i>Reset the stream so that next call to index would return marker. </i><br />
- void(* <code>rewindLast</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream)<br />
- <i>Reset the stream to the last marker position, witouh destryoing the last marker position. </i><br />
- void(* <code>seek</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream, <code>ANTLR3_MARKER</code> <code>index</code>)<br />
- <i>Set the input cursor to the position indicated by index. </i><br />
- <code>ANTLR3_UINT32</code>(* <code>size</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream)<br />
- <i>Only makes sense for streams that buffer everything up probably, but might be useful to display the entire stream or for testing. </i><br />
- <code>pANTLR3_STRING</code> <code>streamName</code><br />
- <i>Potentially useful in error reporting and so on, this string is an identification of the input source. </i><br />
- void * <code>super</code><br />
- <i>Pointer to the super structure that contains this interface. </i><br />
- <code>ANTLR3_UINT32</code> <code>type</code><br />
+<p> <code>ANTLR3_MARKER</code>(* <code>index</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream)<br/>
+ <i>Return the current input symbol index 0..n where n indicates the last symbol has been read. </i><br/>
+ <code>ANTLR3_MARKER</code> <code>lastMarker</code><br/>
+ <i>Last marker position allocated. </i><br/>
+ <code>ANTLR3_MARKER</code>(* <code>mark</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream)<br/>
+ <i>Tell the stream to start buffering if it hasn&#8217;t already. </i><br/>
+ void(* <code>release</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream, <code>ANTLR3_MARKER</code> <code>mark</code>)<br/>
+ <i>You may want to commit to a backtrack but don&#8217;t want to force the stream to keep bookkeeping objects around for a marker that is no longer necessary. </i><br/>
+ void(* <code>rewind</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream, <code>ANTLR3_MARKER</code> marker)<br/>
+ <i>Reset the stream so that next call to index would return marker. </i><br/>
+ void(* <code>rewindLast</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream)<br/>
+ <i>Reset the stream to the last marker position, witouh destryoing the last marker position. </i><br/>
+ void(* <code>seek</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream, <code>ANTLR3_MARKER</code> <code>index</code>)<br/>
+ <i>Set the input cursor to the position indicated by index. </i><br/>
+ <code>ANTLR3_UINT32</code>(* <code>size</code> )(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream)<br/>
+ <i>Only makes sense for streams that buffer everything up probably, but might be useful to display the entire stream or for testing. </i><br/>
+ <code>pANTLR3_STRING</code> <code>streamName</code><br/>
+ <i>Potentially useful in error reporting and so on, this string is an identification of the input source. </i><br/>
+ void * <code>super</code><br/>
+ <i>Pointer to the super structure that contains this interface. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>type</code><br/>
  <i>Input stream type indicator. </i></p>
 <h2>Field Documentation</h2>
 <h3><code>ANTLR3_UINT32</code>(* <code>ANTLR3_INT_STREAM_struct::_LA</code>)(struct <code>ANTLR3_INT_STREAM_struct</code> *intStream, <code>ANTLR3_INT32</code> i)</h3>

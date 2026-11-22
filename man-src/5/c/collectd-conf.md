@@ -89,14 +89,14 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>
 </dd><dl>
 <dt><code>Filter</code> <i>pattern</i></dt>
-<dd>If the <tt>&quot;fnmatch&quot;</tt> function is available on your system, a shell-like wildcard <i>pattern</i> may be specified to filter which files to include. This may be used in combination with recursively including a directory to easily be able to arbitrarily mix configuration files and other documents (e.g. <font SIZE="-1">README</font> files). The given example is similar to the first example above but includes all files matching <tt>&quot;*.conf&quot;</tt> in any subdirectory of <tt>&quot;/etc/collectd.d&quot;</tt>.</dd></dl>
+<dd>If the <tt>&quot;fnmatch&quot;</tt> function is available on your system, a shell-like wildcard <i>pattern</i> may be specified to filter which files to include. This may be used in combination with recursively including a directory to easily be able to arbitrarily mix configuration files and other documents (e.g. README files). The given example is similar to the first example above but includes all files matching <tt>&quot;*.conf&quot;</tt> in any subdirectory of <tt>&quot;/etc/collectd.d&quot;</tt>.</dd></dl>
 </dl>
 <dl>
 <dd>If more than one file is included by a single <code>Include</code> option, the files will be included in lexicographical order (as defined by the <tt>&quot;strcmp&quot;</tt> function). Thus, you can e. g. use numbered prefixes to specify the order in which the files are loaded. </dd>
 <p> To prevent loops and shooting yourself in the foot in interesting ways the nesting is limited to a depth of 8 levels, which should be sufficient for most uses. Since symlinks are followed it is still possible to crash the daemon by looping symlinks. In our opinion significant stupidity should result in an appropriate amount of pain. </p>
 <p> It is no problem to have a block like <tt>&quot;&lt;Plugin foo&gt;&quot;</tt> in more than one file, but you cannot include files from within blocks.</dl>
 <dt><code>PIDFile</code> <i>File</i></dt>
-<dd>Sets where to write the <font SIZE="-1">PID</font> file to. This file is overwritten when it exists and deleted when the program is stopped. Some init-scripts might override this setting using the <code>-P</code> command-line option.</dd>
+<dd>Sets where to write the PID file to. This file is overwritten when it exists and deleted when the program is stopped. Some init-scripts might override this setting using the <code>-P</code> command-line option.</dd>
 <dt><code>PluginDir</code> <i>Directory</i></dt>
 <dd>Path to the plugins (shared objects) of collectd.</dd>
 <dt><code>TypesDB</code> <i>File</i> [<i>File</i> &#8230;]</dt>
@@ -104,7 +104,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> If this option is not specified, a default file is read. If you need to define custom types in addition to the types defined in the default file, you need to explicitly load both. In other words, if the <code>TypesDB</code> option is encountered the default behavior is disabled and if you need the default types you have to also explicitly load them.</p>
 <dt><code>Interval</code> <i>Seconds</i></dt>
 <dd>Configures the interval in which to query the read plugins. Obviously smaller values lead to a higher system load produced by collectd, while higher values lead to more coarse statistics. </dd>
-<p> <code>Warning:</code> You should set this once and then never touch it again. If you do, <i>you will have to delete all your </i><font SIZE="-1"><i>RRD</i></font><i> files</i> or know some serious RRDtool magic! (Assuming you&#8217;re using the <i>RRDtool</i> or <i>RRDCacheD</i> plugin.)</p>
+<p> <code>Warning:</code> You should set this once and then never touch it again. If you do, <i>you will have to delete all your </i><i>RRD</i><i> files</i> or know some serious RRDtool magic! (Assuming you&#8217;re using the <i>RRDtool</i> or <i>RRDCacheD</i> plugin.)</p>
 <dt><code>MaxReadInterval</code> <i>Seconds</i></dt>
 <dd>A read plugin doubles the interval between queries after each failed attempt to get data. </dd>
 <p> This options limits the maximum value of the interval. The default value is <code>86400</code>.</p>
@@ -126,24 +126,24 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Hostname</code> <i>Name</i></dt>
 <dd>Sets the hostname that identifies a host. If you omit this setting, the hostname will be determined using the <i><a href="/docs/linux/man/2-gethostname/">gethostname</a></i>(2) system call.</dd>
 <dt><code>FQDNLookup</code> <code>true|false</code></dt>
-<dd>If <code>Hostname</code> is determined automatically this setting controls whether or not the daemon should try to figure out the &#8220;fully qualified domain name&#8221;, <font SIZE="-1">FQDN.</font> This is done using a lookup of the name returned by <tt>&quot;gethostname&quot;</tt>. This option is enabled by default.</dd>
+<dd>If <code>Hostname</code> is determined automatically this setting controls whether or not the daemon should try to figure out the &#8220;fully qualified domain name&#8221;, FQDN. This is done using a lookup of the name returned by <tt>&quot;gethostname&quot;</tt>. This option is enabled by default.</dd>
 <dt><code>PreCacheChain</code> <i>ChainName</i></dt>
 <dd>
 </dd><dt><code>PostCacheChain</code> <i>ChainName</i></dt>
-<dd>Configure the name of the &#8220;pre-cache chain&#8221; and the &#8220;post-cache chain&#8221;. Please see &#8220;<font SIZE="-1">FILTER CONFIGURATION&#8221;</font> below on information on chains and how these setting change the daemon&#8217;s behavior.</dd></dl>
+<dd>Configure the name of the &#8220;pre-cache chain&#8221; and the &#8220;post-cache chain&#8221;. Please see &#8220;FILTER CONFIGURATION&#8221; below on information on chains and how these setting change the daemon&#8217;s behavior.</dd></dl>
 <h2>Plugin Options</h2>
 <p>Some plugins may register own options. These options must be enclosed in a <tt>&quot;Plugin&quot;</tt>-Section. Which options exist depends on the plugin used. Some plugins require external configuration, too. The <tt>&quot;apache plugin&quot;</tt>, for example, required <tt>&quot;mod_status&quot;</tt> to be configured in the webserver you&#8217;re going to collect data from. These plugins are listed below as well, even if they don&#8217;t require any configuration within collectd&#8217;s configuration file. </p>
-<p> A list of all plugins and a short summary for each plugin can be found in the <i></i><font SIZE="-1"><i>README</i></font><i></i> file shipped with the sourcecode and hopefully binary packets as well.</p>
+<p> A list of all plugins and a short summary for each plugin can be found in the <i></i><i>README</i><i></i> file shipped with the sourcecode and hopefully binary packets as well.</p>
 <h3>Plugin aggregation</h3>
-<p>The <i>Aggregation plugin</i> makes it possible to aggregate several values into one using aggregation functions such as <i>sum</i>, <i>average</i>, <i>min</i> and <i>max</i>. This can be put to a wide variety of uses, e.g. average and total <font SIZE="-1">CPU</font> statistics for your entire fleet. </p>
-<p> The grouping is powerful but, as with many powerful tools, may be a bit difficult to wrap your head around. The grouping will therefore be demonstrated using an example: The average and sum of the <font SIZE="-1">CPU</font> usage across all CPUs of each host is to be calculated. </p>
-<p> To select all the affected values for our example, set <tt>&quot;Plugin cpu&quot;</tt> and <tt>&quot;Type cpu&quot;</tt>. The other values are left unspecified, meaning &#8220;all values&#8221;. The <i>Host</i>, <i>Plugin</i>, <i>PluginInstance</i>, <i>Type</i> and <i>TypeInstance</i> options work as if they were specified in the <tt>&quot;WHERE&quot;</tt> clause of an <tt>&quot;SELECT&quot;</tt> <font SIZE="-1">SQL</font> statement. </p>
+<p>The <i>Aggregation plugin</i> makes it possible to aggregate several values into one using aggregation functions such as <i>sum</i>, <i>average</i>, <i>min</i> and <i>max</i>. This can be put to a wide variety of uses, e.g. average and total CPU statistics for your entire fleet. </p>
+<p> The grouping is powerful but, as with many powerful tools, may be a bit difficult to wrap your head around. The grouping will therefore be demonstrated using an example: The average and sum of the CPU usage across all CPUs of each host is to be calculated. </p>
+<p> To select all the affected values for our example, set <tt>&quot;Plugin cpu&quot;</tt> and <tt>&quot;Type cpu&quot;</tt>. The other values are left unspecified, meaning &#8220;all values&#8221;. The <i>Host</i>, <i>Plugin</i>, <i>PluginInstance</i>, <i>Type</i> and <i>TypeInstance</i> options work as if they were specified in the <tt>&quot;WHERE&quot;</tt> clause of an <tt>&quot;SELECT&quot;</tt> SQL statement. </p>
 <pre> Plugin &quot;cpu&quot;
  Type &quot;cpu&quot;</pre>
-<p>Although the <i>Host</i>, <i>PluginInstance</i> (<font SIZE="-1">CPU</font> number, i.e. 0, 1, 2, &#8230;) and <i>TypeInstance</i> (idle, user, system, &#8230;) fields are left unspecified in the example, the intention is to have a new value for each host / type instance pair. This is achieved by &#8220;grouping&#8221; the values using the <tt>&quot;GroupBy&quot;</tt> option. It can be specified multiple times to group by more than one field. </p>
+<p>Although the <i>Host</i>, <i>PluginInstance</i> (CPU number, i.e. 0, 1, 2, &#8230;) and <i>TypeInstance</i> (idle, user, system, &#8230;) fields are left unspecified in the example, the intention is to have a new value for each host / type instance pair. This is achieved by &#8220;grouping&#8221; the values using the <tt>&quot;GroupBy&quot;</tt> option. It can be specified multiple times to group by more than one field. </p>
 <pre> GroupBy &quot;Host&quot;
  GroupBy &quot;TypeInstance&quot;</pre>
-<p>We do neither specify nor group by <i>plugin instance</i> (the <font SIZE="-1">CPU</font> number), so all metrics that differ in the <font SIZE="-1">CPU</font> number only will be aggregated. Each aggregation needs <i>at least one</i> such field, otherwise no aggregation would take place. </p>
+<p>We do neither specify nor group by <i>plugin instance</i> (the CPU number), so all metrics that differ in the CPU number only will be aggregated. Each aggregation needs <i>at least one</i> such field, otherwise no aggregation would take place. </p>
 <p> The full example configuration looks like this: </p>
 <pre> &lt;Plugin &quot;aggregation&quot;&gt;
  &lt;Aggregation&gt;
@@ -173,7 +173,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>
 </dd><dt><code>TypeInstance</code> <i>TypeInstance</i></dt>
 <dd>Selects the value lists to be added to this aggregation. <code>Type</code> must be a valid data set name, see <i><a href="/docs/linux/man/5-types-db/">types.db</a></i>(5) for details. </dd>
-<p> If the string starts with and ends with a slash (<tt>&quot;/&quot;</tt>), the string is interpreted as a <i>regular expression</i>. The regex flavor used are <font SIZE="-1">POSIX</font> extended regular expressions as described in <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7). Example usage: </p>
+<p> If the string starts with and ends with a slash (<tt>&quot;/&quot;</tt>), the string is interpreted as a <i>regular expression</i>. The regex flavor used are POSIX extended regular expressions as described in <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7). Example usage: </p>
 <pre> Host &quot;/^db[0-9]\.example\.com$/&quot;</pre>
 <dt><code>GroupBy</code> <code>Host</code>|<code>Plugin</code>|<code>PluginInstance</code>|<code>TypeInstance</code></dt>
 <dd>Group valued by the specified field. The <code>GroupBy</code> option may be repeated to group by multiple fields.</dd>
@@ -227,7 +227,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dd><dt><code>CalculateStddev</code> <code>true</code>|<code>false</code></dt>
 <dd>Boolean options for enabling calculation of the number of value lists, their sum, average, minimum, maximum and&nbsp;<wbr>/ or standard deviation. All options are disabled by default.</dd></dl>
 <h3>Plugin amqp</h3>
-<p>The <i></i><font SIZE="-1"><i>AMQP</i></font><i> plugin</i> can be used to communicate with other instances of <i>collectd</i> or third party applications using an <font SIZE="-1">AMQP</font> message broker. Values are sent to or received from the broker, which handles routing, queueing and possibly filtering out messages. </p>
+<p>The <i></i><i>AMQP</i><i> plugin</i> can be used to communicate with other instances of <i>collectd</i> or third party applications using an AMQP message broker. Values are sent to or received from the broker, which handles routing, queueing and possibly filtering out messages. </p>
 <p> <code>Synopsis:</code> </p>
 <pre> &lt;Plugin &quot;amqp&quot;&gt;
  # Send values to an AMQP broker
@@ -269,15 +269,15 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p>The plugin&#8217;s configuration consists of a number of <i>Publish</i> and <i>Subscribe</i> blocks, which configure sending and receiving of values respectively. The two blocks are very similar, so unless otherwise noted, an option can be used in either block. The name given in the blocks starting tag is only used for reporting messages, but may be used to support <i>flushing</i> of certain <i>Publish</i> blocks in the future.</p>
 <dl>
 <dt><code>Host</code> <i>Host</i></dt>
-<dd>Hostname or IP-address of the <font SIZE="-1">AMQP</font> broker. Defaults to the default behavior of the underlying communications library, <i>rabbitmq-c</i>, which is &#8220;localhost&#8221;.</dd>
+<dd>Hostname or IP-address of the AMQP broker. Defaults to the default behavior of the underlying communications library, <i>rabbitmq-c</i>, which is &#8220;localhost&#8221;.</dd>
 <dt><code>Port</code> <i>Port</i></dt>
-<dd>Service name or port number on which the <font SIZE="-1">AMQP</font> broker accepts connections. This argument must be a string, even if the numeric form is used. Defaults to &#8220;5672&#8221;.</dd>
+<dd>Service name or port number on which the AMQP broker accepts connections. This argument must be a string, even if the numeric form is used. Defaults to &#8220;5672&#8221;.</dd>
 <dt><code>VHost</code> <i>VHost</i></dt>
-<dd>Name of the <i>virtual host</i> on the <font SIZE="-1">AMQP</font> broker to use. Defaults to &#8220;/&#8221;.</dd>
+<dd>Name of the <i>virtual host</i> on the AMQP broker to use. Defaults to &#8220;/&#8221;.</dd>
 <dt><code>User</code> <i>User</i></dt>
 <dd>
 </dd><dt><code>Password</code> <i>Password</i></dt>
-<dd>Credentials used to authenticate to the <font SIZE="-1">AMQP</font> broker. By default &#8220;guest&#8221;/&#8220;guest&#8221; is used.</dd>
+<dd>Credentials used to authenticate to the AMQP broker. By default &#8220;guest&#8221;/&#8220;guest&#8221; is used.</dd>
 <dt><code>Exchange</code> <i>Exchange</i></dt>
 <dd>In <i>Publish</i> blocks, this option specifies the <i>exchange</i> to send values to. By default, &#8220;amq.fanout&#8221; will be used. </dd>
 <p> In <i>Subscribe</i> blocks this option is optional. If given, a <i>binding</i> between the given exchange and the <i>queue</i> is created, using the <i>routing key</i> if configured. See the <code>Queue</code> and <code>RoutingKey</code> options below.</p>
@@ -286,26 +286,26 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Queue</code> <i>Queue</i> (Subscribe only)</dt>
 <dd>Configures the <i>queue</i> name to subscribe to. If no queue name was configured explicitly, a unique queue name will be created by the broker.</dd>
 <dt><code>QueueDurable</code> <code>true</code>|<code>false</code> (Subscribe only)</dt>
-<dd>Defines if the <i>queue</i> subscribed to is durable (saved to persistent storage) or transient (will disappear if the <font SIZE="-1">AMQP</font> broker is restarted). Defaults to &#8220;false&#8221;. </dd>
+<dd>Defines if the <i>queue</i> subscribed to is durable (saved to persistent storage) or transient (will disappear if the AMQP broker is restarted). Defaults to &#8220;false&#8221;. </dd>
 <p> This option should be used in conjunction with the <i>Persistent</i> option on the publish side.</p>
 <dt><code>QueueAutoDelete</code> <code>true</code>|<code>false</code> (Subscribe only)</dt>
 <dd>Defines if the <i>queue</i> subscribed to will be deleted once the last consumer unsubscribes. Defaults to &#8220;true&#8221;.</dd>
 <dt><code>RoutingKey</code> <i>Key</i></dt>
 <dd>In <i>Publish</i> blocks, this configures the routing key to set on all outgoing messages. If not given, the routing key will be computed from the <i>identifier</i> of the value. The host, plugin, type and the two instances are concatenated together using dots as the separator and all containing dots replaced with slashes. For example &#8220;collectd.host/example/com.cpu.0.cpu.user&#8221;. This makes it possible to receive only specific values using a &#8220;topic&#8221; exchange. </dd>
-<p> In <i>Subscribe</i> blocks, configures the <i>routing key</i> used when creating a <i>binding</i> between an <i>exchange</i> and the <i>queue</i>. The usual wildcards can be used to filter messages when using a &#8220;topic&#8221; exchange. If you&#8217;re only interested in <font SIZE="-1">CPU</font> statistics, you could use the routing key &#8220;collectd.*.cpu.#&#8221; for example.</p>
+<p> In <i>Subscribe</i> blocks, configures the <i>routing key</i> used when creating a <i>binding</i> between an <i>exchange</i> and the <i>queue</i>. The usual wildcards can be used to filter messages when using a &#8220;topic&#8221; exchange. If you&#8217;re only interested in CPU statistics, you could use the routing key &#8220;collectd.*.cpu.#&#8221; for example.</p>
 <dt><code>Persistent</code> <code>true</code>|<code>false</code> (Publish only)</dt>
 <dd>Selects the <i>delivery method</i> to use. If set to <code>true</code>, the <i>persistent</i> mode will be used, i.e. delivery is guaranteed. If set to <code>false</code> (the default), the <i>transient</i> delivery mode will be used, i.e. messages may be lost due to high load, overflowing queues or similar issues.</dd>
 <dt><code>ConnectionRetryDelay</code> <i>Delay</i></dt>
-<dd>When the connection to the <font SIZE="-1">AMQP</font> broker is lost, defines the time in seconds to wait before attempting to reconnect. Defaults to 0, which implies collectd will attempt to reconnect at each read interval (in Subscribe mode) or each time values are ready for submission (in Publish mode).</dd>
-<dt><code>Format</code> <code>Command</code>|<font SIZE="-1"><code>JSON</code></font>|<code>Graphite</code> (Publish only)</dt>
+<dd>When the connection to the AMQP broker is lost, defines the time in seconds to wait before attempting to reconnect. Defaults to 0, which implies collectd will attempt to reconnect at each read interval (in Subscribe mode) or each time values are ready for submission (in Publish mode).</dd>
+<dt><code>Format</code> <code>Command</code>|<code>JSON</code>|<code>Graphite</code> (Publish only)</dt>
 <dd>Selects the format in which messages are sent to the broker. If set to <code>Command</code> (the default), values are sent as <tt>&quot;PUTVAL&quot;</tt> commands which are identical to the syntax used by the <i>Exec</i> and <i>UnixSock plugins</i>. In this case, the <tt>&quot;Content-Type&quot;</tt> header field will be set to <tt>&quot;text/collectd&quot;</tt>. </dd>
-<p> If set to <font SIZE="-1"><code>JSON</code></font>, the values are encoded in the <i>JavaScript Object Notation</i>, an easy and straight forward exchange format. The <tt>&quot;Content-Type&quot;</tt> header field will be set to <tt>&quot;application/json&quot;</tt>. </p>
+<p> If set to <code>JSON</code>, the values are encoded in the <i>JavaScript Object Notation</i>, an easy and straight forward exchange format. The <tt>&quot;Content-Type&quot;</tt> header field will be set to <tt>&quot;application/json&quot;</tt>. </p>
 <p> If set to <code>Graphite</code>, values are encoded in the <i>Graphite</i> format, which is &#8220;&lt;metric&gt; &lt;value&gt; &lt;timestamp&gt;
 &#8221;. The <tt>&quot;Content-Type&quot;</tt> header field will be set to <tt>&quot;text/graphite&quot;</tt>. </p>
-<p> A subscribing client <i>should</i> use the <tt>&quot;Content-Type&quot;</tt> header field to determine how to decode the values. Currently, the <i></i><font SIZE="-1"><i>AMQP</i></font><i> plugin</i> itself can only decode the <code>Command</code> format.</p>
+<p> A subscribing client <i>should</i> use the <tt>&quot;Content-Type&quot;</tt> header field to determine how to decode the values. Currently, the <i></i><i>AMQP</i><i> plugin</i> itself can only decode the <code>Command</code> format.</p>
 <dt><code>StoreRates</code> <code>true</code>|<code>false</code> (Publish only)</dt>
 <dd>Determines whether or not <tt>&quot;COUNTER&quot;</tt>, <tt>&quot;DERIVE&quot;</tt> and <tt>&quot;ABSOLUTE&quot;</tt> data sources are converted to a <i>rate</i> (i.e. a <tt>&quot;GAUGE&quot;</tt> value). If set to <code>false</code> (the default), no conversion is performed. Otherwise the conversion is performed using the internal value cache. </dd>
-<p> Please note that currently this option is only used if the <code>Format</code> option has been set to <font SIZE="-1"><code>JSON</code></font>.</p>
+<p> Please note that currently this option is only used if the <code>Format</code> option has been set to <code>JSON</code>.</p>
 <dt><code>GraphitePrefix</code> (Publish and <code>Format</code>=<i>Graphite</i> only)</dt>
 <dd>A prefix can be added in the metric name when outputting in the <i>Graphite</i> format. It&#8217;s added before the <i>Host</i> name. Metric name will be &#8220;&lt;prefix&gt;&lt;host&gt;&lt;postfix&gt;&lt;plugin&gt;&lt;type&gt;&lt;name&gt;&#8221;</dd>
 <dt><code>GraphitePostfix</code> (Publish and <code>Format</code>=<i>Graphite</i> only)</dt>
@@ -315,7 +315,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>GraphiteSeparateInstances</code> <code>true</code>|<code>false</code></dt>
 <dd>If set to <code>true</code>, the plugin instance and type instance will be in their own path component, for example <tt>&quot;host.cpu.0.cpu.idle&quot;</tt>. If set to <code>false</code> (the default), the plugin and plugin instance (and likewise the type and type instance) are put into one component, for example <tt>&quot;host.cpu-0.cpu-idle&quot;</tt>.</dd>
 <dt><code>GraphiteAlwaysAppendDS</code> <code>true</code>|<code>false</code></dt>
-<dd>If set to <code>true</code>, append the name of the <i>Data Source</i> (<font SIZE="-1">DS</font>) to the &#8220;metric&#8221; identifier. If set to <code>false</code> (the default), this is only done when there is more than one <font SIZE="-1">DS.</font></dd>
+<dd>If set to <code>true</code>, append the name of the <i>Data Source</i> (DS) to the &#8220;metric&#8221; identifier. If set to <code>false</code> (the default), this is only done when there is more than one DS.</dd>
 <dt><code>GraphitePreserveSeparator</code> <code>false</code>|<code>true</code></dt>
 <dd>If set to <code>false</code> (the default) the <tt>&quot;.&quot;</tt> (dot) character is replaced with <i>GraphiteEscapeChar</i>. Otherwise, if set to <code>true</code>, the <tt>&quot;.&quot;</tt> (dot) character is preserved, i.e. passed through.</dd></dl>
 <h3>Plugin apache</h3>
@@ -339,22 +339,22 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p>The instance name will be used as the <i>plugin instance</i>. To emulate the old (version 4) behavior, you can use an empty string (&quot;&quot;). In order for the plugin to work correctly, each instance name must be unique. This is not enforced by the plugin and it is your responsibility to ensure it. </p>
 <p> The following options are accepted within each <i>Instance</i> block:</p>
 <dl>
-<dt><font SIZE="-1"><code>URL</code></font> <i><a rel="nofollow" href="http://host/mod_status?auto">http://host/mod_status?auto</a></i></dt>
-<dd>Sets the <font SIZE="-1">URL</font> of the <tt>&quot;mod_status&quot;</tt> output. This needs to be the output generated by <tt>&quot;ExtendedStatus on&quot;</tt> and it needs to be the machine readable output generated by appending the <tt>&quot;?auto&quot;</tt> argument. This option is <i>mandatory</i>.</dd>
+<dt><code>URL</code> <i><a rel="nofollow" href="http://host/mod_status?auto">http://host/mod_status?auto</a></i></dt>
+<dd>Sets the URL of the <tt>&quot;mod_status&quot;</tt> output. This needs to be the output generated by <tt>&quot;ExtendedStatus on&quot;</tt> and it needs to be the machine readable output generated by appending the <tt>&quot;?auto&quot;</tt> argument. This option is <i>mandatory</i>.</dd>
 <dt><code>User</code> <i>Username</i></dt>
 <dd>Optional user name needed for authentication.</dd>
 <dt><code>Password</code> <i>Password</i></dt>
 <dd>Optional password needed for authentication.</dd>
 <dt><code>VerifyPeer</code> <code>true|false</code></dt>
-<dd>Enable or disable peer <font SIZE="-1">SSL</font> certificate verification. See &lt;<a rel="nofollow" href="http://curl.haxx.se/docs/sslcerts.html">http://curl.haxx.se/docs/sslcerts.html</a>&gt; for details. Enabled by default.</dd>
+<dd>Enable or disable peer SSL certificate verification. See &lt;<a rel="nofollow" href="http://curl.haxx.se/docs/sslcerts.html">http://curl.haxx.se/docs/sslcerts.html</a>&gt; for details. Enabled by default.</dd>
 <dt><code>VerifyHost</code> <code>true|false</code></dt>
-<dd>Enable or disable peer host name verification. If enabled, the plugin checks if the <tt>&quot;Common Name&quot;</tt> or a <tt>&quot;Subject Alternate Name&quot;</tt> field of the <font SIZE="-1">SSL</font> certificate matches the host name provided by the <font SIZE="-1"><code>URL</code></font> option. If this identity check fails, the connection is aborted. Obviously, only works when connecting to a <font SIZE="-1">SSL</font> enabled server. Enabled by default.</dd>
+<dd>Enable or disable peer host name verification. If enabled, the plugin checks if the <tt>&quot;Common Name&quot;</tt> or a <tt>&quot;Subject Alternate Name&quot;</tt> field of the SSL certificate matches the host name provided by the <code>URL</code> option. If this identity check fails, the connection is aborted. Obviously, only works when connecting to a SSL enabled server. Enabled by default.</dd>
 <dt><code>CACert</code> <i>File</i></dt>
-<dd>File that holds one or more <font SIZE="-1">SSL</font> certificates. If you want to use <font SIZE="-1">HTTPS</font> you will possibly need this option. What <font SIZE="-1">CA</font> certificates come bundled with <tt>&quot;libcurl&quot;</tt> and are checked by default depends on the distribution you use.</dd>
+<dd>File that holds one or more SSL certificates. If you want to use HTTPS you will possibly need this option. What CA certificates come bundled with <tt>&quot;libcurl&quot;</tt> and are checked by default depends on the distribution you use.</dd>
 <dt><code>SSLCiphers</code> <i>list of ciphers</i></dt>
 <dd>Specifies which ciphers to use in the connection. The list of ciphers must specify valid ciphers. See &lt;<a rel="nofollow" href="http://www.openssl.org/docs/apps/ciphers.html">http://www.openssl.org/docs/apps/ciphers.html</a>&gt; for details.</dd>
 <dt><code>Timeout</code> <i>Milliseconds</i></dt>
-<dd>The <code>Timeout</code> option sets the overall timeout for <font SIZE="-1">HTTP</font> requests to <font SIZE="-1"><code>URL</code></font>, in milliseconds. By default, the configured <code>Interval</code> is used to set the timeout.</dd></dl>
+<dd>The <code>Timeout</code> option sets the overall timeout for HTTP requests to <code>URL</code>, in milliseconds. By default, the configured <code>Interval</code> is used to set the timeout.</dd></dl>
 <h3>Plugin apcups</h3>
 <dl>
 <dt><code>Host</code> <i>Hostname</i></dt>
@@ -364,44 +364,44 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>ReportSeconds</code> <code>true</code>|<code>false</code></dt>
 <dd>If set to <code>true</code>, the time reported in the <tt>&quot;timeleft&quot;</tt> metric will be converted to seconds. This is the recommended setting. If set to <code>false</code>, the default for backwards compatibility, the time will be reported in minutes.</dd>
 <dt><code>PersistentConnection</code> <code>true</code>|<code>false</code></dt>
-<dd>The plugin is designed to keep the connection to <i>apcupsd</i> open between reads. If plugin poll interval is greater than 15 seconds (hardcoded socket close timeout in <i>apcupsd</i> <font SIZE="-1">NIS</font>), then this option is <code>false</code> by default. </dd>
+<dd>The plugin is designed to keep the connection to <i>apcupsd</i> open between reads. If plugin poll interval is greater than 15 seconds (hardcoded socket close timeout in <i>apcupsd</i> NIS), then this option is <code>false</code> by default. </dd>
 <p> You can instruct the plugin to close the connection after each read by setting this option to <code>false</code> or force keeping the connection by setting it to <code>true</code>. </p>
 <p> If <i>apcupsd</i> appears to close the connection due to inactivity quite quickly, the plugin will try to detect this problem and switch to an open-read-close mode.</dl>
 <h3>Plugin aquaero</h3>
-<p>This plugin collects the value of the available sensors in an <i>Aquaero 5</i> board. Aquaero 5 is a water-cooling controller board, manufactured by Aqua Computer GmbH &lt;<a rel="nofollow" href="http://www.aquacomputer.de/">http://www.aquacomputer.de/</a>&gt;, with a <font SIZE="-1">USB2</font> connection for monitoring and configuration. The board can handle multiple temperature sensors, fans, water pumps and water level sensors and adjust the output settings such as fan voltage or power used by the water pump based on the available inputs using a configurable controller included in the board. This plugin collects all the available inputs as well as some of the output values chosen by this controller. The plugin is based on the <i>libaquaero5</i> library provided by <i>aquatools-ng</i>.</p>
+<p>This plugin collects the value of the available sensors in an <i>Aquaero 5</i> board. Aquaero 5 is a water-cooling controller board, manufactured by Aqua Computer GmbH &lt;<a rel="nofollow" href="http://www.aquacomputer.de/">http://www.aquacomputer.de/</a>&gt;, with a USB2 connection for monitoring and configuration. The board can handle multiple temperature sensors, fans, water pumps and water level sensors and adjust the output settings such as fan voltage or power used by the water pump based on the available inputs using a configurable controller included in the board. This plugin collects all the available inputs as well as some of the output values chosen by this controller. The plugin is based on the <i>libaquaero5</i> library provided by <i>aquatools-ng</i>.</p>
 <dl>
 <dt><code>Device</code> <i>DevicePath</i></dt>
-<dd>Device path of the Aquaero 5&#8217;s <font SIZE="-1">USB HID </font>(human interface device), usually in the form <tt>&quot;/dev/usb/hiddevX&quot;</tt>. If this option is no set the plugin will try to auto-detect the Aquaero 5 <font SIZE="-1">USB</font> device based on vendor-ID and product-ID.</dd></dl>
+<dd>Device path of the Aquaero 5&#8217;s USB HID (human interface device), usually in the form <tt>&quot;/dev/usb/hiddevX&quot;</tt>. If this option is no set the plugin will try to auto-detect the Aquaero 5 USB device based on vendor-ID and product-ID.</dd></dl>
 <h3>Plugin ascent</h3>
-<p>This plugin collects information about an Ascent server, a free server for the &#8220;World of Warcraft&#8221; game. This plugin gathers the information by fetching the <font SIZE="-1">XML</font> status page using <tt>&quot;libcurl&quot;</tt> and parses it using <tt>&quot;libxml2&quot;</tt>. </p>
+<p>This plugin collects information about an Ascent server, a free server for the &#8220;World of Warcraft&#8221; game. This plugin gathers the information by fetching the XML status page using <tt>&quot;libcurl&quot;</tt> and parses it using <tt>&quot;libxml2&quot;</tt>. </p>
 <p> The configuration options are the same as for the <tt>&quot;apache&quot;</tt> plugin above:</p>
 <dl>
-<dt><font SIZE="-1"><code>URL</code></font> <i><a rel="nofollow" href="http://localhost/ascent/status/">http://localhost/ascent/status/</a></i></dt>
-<dd>Sets the <font SIZE="-1">URL</font> of the <font SIZE="-1">XML</font> status output.</dd>
+<dt><code>URL</code> <i><a rel="nofollow" href="http://localhost/ascent/status/">http://localhost/ascent/status/</a></i></dt>
+<dd>Sets the URL of the XML status output.</dd>
 <dt><code>User</code> <i>Username</i></dt>
 <dd>Optional user name needed for authentication.</dd>
 <dt><code>Password</code> <i>Password</i></dt>
 <dd>Optional password needed for authentication.</dd>
 <dt><code>VerifyPeer</code> <code>true|false</code></dt>
-<dd>Enable or disable peer <font SIZE="-1">SSL</font> certificate verification. See &lt;<a rel="nofollow" href="http://curl.haxx.se/docs/sslcerts.html">http://curl.haxx.se/docs/sslcerts.html</a>&gt; for details. Enabled by default.</dd>
+<dd>Enable or disable peer SSL certificate verification. See &lt;<a rel="nofollow" href="http://curl.haxx.se/docs/sslcerts.html">http://curl.haxx.se/docs/sslcerts.html</a>&gt; for details. Enabled by default.</dd>
 <dt><code>VerifyHost</code> <code>true|false</code></dt>
-<dd>Enable or disable peer host name verification. If enabled, the plugin checks if the <tt>&quot;Common Name&quot;</tt> or a <tt>&quot;Subject Alternate Name&quot;</tt> field of the <font SIZE="-1">SSL</font> certificate matches the host name provided by the <font SIZE="-1"><code>URL</code></font> option. If this identity check fails, the connection is aborted. Obviously, only works when connecting to a <font SIZE="-1">SSL</font> enabled server. Enabled by default.</dd>
+<dd>Enable or disable peer host name verification. If enabled, the plugin checks if the <tt>&quot;Common Name&quot;</tt> or a <tt>&quot;Subject Alternate Name&quot;</tt> field of the SSL certificate matches the host name provided by the <code>URL</code> option. If this identity check fails, the connection is aborted. Obviously, only works when connecting to a SSL enabled server. Enabled by default.</dd>
 <dt><code>CACert</code> <i>File</i></dt>
-<dd>File that holds one or more <font SIZE="-1">SSL</font> certificates. If you want to use <font SIZE="-1">HTTPS</font> you will possibly need this option. What <font SIZE="-1">CA</font> certificates come bundled with <tt>&quot;libcurl&quot;</tt> and are checked by default depends on the distribution you use.</dd>
+<dd>File that holds one or more SSL certificates. If you want to use HTTPS you will possibly need this option. What CA certificates come bundled with <tt>&quot;libcurl&quot;</tt> and are checked by default depends on the distribution you use.</dd>
 <dt><code>Timeout</code> <i>Milliseconds</i></dt>
-<dd>The <code>Timeout</code> option sets the overall timeout for <font SIZE="-1">HTTP</font> requests to <font SIZE="-1"><code>URL</code></font>, in milliseconds. By default, the configured <code>Interval</code> is used to set the timeout.</dd></dl>
+<dd>The <code>Timeout</code> option sets the overall timeout for HTTP requests to <code>URL</code>, in milliseconds. By default, the configured <code>Interval</code> is used to set the timeout.</dd></dl>
 <h3>Plugin barometer</h3>
 <p>This plugin reads absolute air pressure using digital barometer sensor on a I2C bus. Supported sensors are:</p>
 <dl>
-<dt><i></i><font SIZE="-1"><i>MPL115A2</i></font><i></i> from Freescale, see &lt;<a rel="nofollow" href="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MPL115A">http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MPL115A</a>&gt;.</dt>
+<dt><i></i><i>MPL115A2</i><i></i> from Freescale, see &lt;<a rel="nofollow" href="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MPL115A">http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MPL115A</a>&gt;.</dt>
 <dd>
-</dd><dt><i></i><font SIZE="-1"><i>MPL3115</i></font><i></i> from Freescale see &lt;<a rel="nofollow" href="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MPL3115A2">http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MPL3115A2</a>&gt;.</dt>
+</dd><dt><i></i><i>MPL3115</i><i></i> from Freescale see &lt;<a rel="nofollow" href="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MPL3115A2">http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MPL3115A2</a>&gt;.</dt>
 <dd>
-</dd><dt><i></i><font SIZE="-1"><i>BMP085</i></font><i></i> from Bosch Sensortec</dt>
+</dd><dt><i></i><i>BMP085</i><i></i> from Bosch Sensortec</dt>
 <dd></dd></dl>
-<p> The sensor type &#8211; one of the above &#8211; is detected automatically by the plugin and indicated in the plugin_instance (you will see subdirectory &#8220;barometer-mpl115&#8221; or &#8220;barometer-mpl3115&#8221;, or &#8220;barometer-bmp085&#8221;). The order of detection is <font SIZE="-1">BMP085 &#8211;</font>&gt; <font SIZE="-1">MPL3115 &#8211;</font>&gt; <font SIZE="-1">MPL115A2,</font> the first one found will be used (only one sensor can be used by the plugin). </p>
+<p> The sensor type &#8211; one of the above &#8211; is detected automatically by the plugin and indicated in the plugin_instance (you will see subdirectory &#8220;barometer-mpl115&#8221; or &#8220;barometer-mpl3115&#8221;, or &#8220;barometer-bmp085&#8221;). The order of detection is BMP085 &#8211;&gt; MPL3115 &#8211;&gt; MPL115A2, the first one found will be used (only one sensor can be used by the plugin). </p>
 <p> The plugin provides absolute barometric pressure, air pressure reduced to sea level (several possible approximations) and as an auxiliary value also internal sensor temperature. It uses (expects/provides) typical metric units &#8211; pressure in [hPa], temperature in [C], altitude in [m]. </p>
-<p> It was developed and tested under Linux only. The only platform dependency is the standard Linux i2c-dev interface (the particular bus driver has to support the <font SIZE="-1">SM</font> Bus command subset). </p>
+<p> It was developed and tested under Linux only. The only platform dependency is the standard Linux i2c-dev interface (the particular bus driver has to support the SM Bus command subset). </p>
 <p> The reduction or normalization to mean sea level pressure requires (depending on selected method/approximation) also altitude and reference to temperature sensor(s). When multiple temperature sensors are configured the minimum of their values is always used (expecting that the warmer ones are affected by e.g. direct sun light at that moment). </p>
 <p> Synopsis: </p>
 <pre> &lt;Plugin &quot;barometer&quot;&gt;
@@ -423,14 +423,14 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p>This way you should be able to verify that the pressure sensor (either type) is connected and detected on address 0x60.</p>
 <dt><code>Oversampling</code> <i>value</i></dt>
 <dd>Optional parameter controlling the oversampling/accuracy. Default value is 1 providing fastest and least accurate reading. </dd>
-<p> For <i></i><font SIZE="-1"><i>MPL115</i></font><i></i> this is the size of the averaging window. To filter out sensor noise a simple averaging using floating window of this configurable size is used. The plugin will use average of the last <tt>&quot;value&quot;</tt> measurements (value of 1 means no averaging). Minimal size is 1, maximal 1024. </p>
-<p> For <i></i><font SIZE="-1"><i>MPL3115</i></font><i></i> this is the oversampling value. The actual oversampling is performed by the sensor and the higher value the higher accuracy and longer conversion time (although nothing to worry about in the collectd context). Supported values are: 1, 2, 4, 8, 16, 32, 64 and 128. Any other value is adjusted by the plugin to the closest supported one. </p>
-<p> For <i></i><font SIZE="-1"><i>BMP085</i></font><i></i> this is the oversampling value. The actual oversampling is performed by the sensor and the higher value the higher accuracy and longer conversion time (although nothing to worry about in the collectd context). Supported values are: 1, 2, 4, 8. Any other value is adjusted by the plugin to the closest supported one.</p>
+<p> For <i></i><i>MPL115</i><i></i> this is the size of the averaging window. To filter out sensor noise a simple averaging using floating window of this configurable size is used. The plugin will use average of the last <tt>&quot;value&quot;</tt> measurements (value of 1 means no averaging). Minimal size is 1, maximal 1024. </p>
+<p> For <i></i><i>MPL3115</i><i></i> this is the oversampling value. The actual oversampling is performed by the sensor and the higher value the higher accuracy and longer conversion time (although nothing to worry about in the collectd context). Supported values are: 1, 2, 4, 8, 16, 32, 64 and 128. Any other value is adjusted by the plugin to the closest supported one. </p>
+<p> For <i></i><i>BMP085</i><i></i> this is the oversampling value. The actual oversampling is performed by the sensor and the higher value the higher accuracy and longer conversion time (although nothing to worry about in the collectd context). Supported values are: 1, 2, 4, 8. Any other value is adjusted by the plugin to the closest supported one.</p>
 <dt><code>PressureOffset</code> <i>offset</i></dt>
-<dd>Optional parameter for <font SIZE="-1">MPL3115</font> only. </dd>
+<dd>Optional parameter for MPL3115 only. </dd>
 <p> You can further calibrate the sensor by supplying pressure and/or temperature offsets. This is added to the measured/caclulated value (i.e. if the measured value is too high then use negative offset). In hPa, default is 0.0.</p>
 <dt><code>TemperatureOffset</code> <i>offset</i></dt>
-<dd>Optional parameter for <font SIZE="-1">MPL3115</font> only. </dd>
+<dd>Optional parameter for MPL3115 only. </dd>
 <p> You can further calibrate the sensor by supplying pressure and/or temperature offsets. This is added to the measured/caclulated value (i.e. if the measured value is too high then use negative offset). In C, default is 0.0.</p>
 <dt><code>Normalization</code> <i>method</i></dt>
 <dd>Optional parameter, default value is 0. </dd>
@@ -462,14 +462,14 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> When this option is set to <code>false</code>, the default, the <i>battery plugin</i> will only report the remaining capacity. If the <code>ValuesPercentage</code> option is enabled, the relative remaining capacity is calculated as the ratio of the &#8220;remaining capacity&#8221; and the &#8220;last full capacity&#8221;. This is what most tools, such as the status bar of desktop environments, also do. </p>
 <p> When set to <code>true</code>, the battery plugin will report three values: <code>charged</code> (remaining capacity), <code>discharged</code> (difference between &#8220;last full capacity&#8221; and &#8220;remaining capacity&#8221;) and <code>degraded</code> (difference between &#8220;design capacity&#8221; and &#8220;last full capacity&#8221;).</p>
 <dt><code>QueryStateFS</code> <code>false</code>|<code>true</code></dt>
-<dd>When set to <code>true</code>, the battery plugin will only read statistics related to battery performance as exposed by StateFS at /run/state. StateFS is used in Mer-based Sailfish <font SIZE="-1">OS,</font> for example.</dd></dl>
+<dd>When set to <code>true</code>, the battery plugin will only read statistics related to battery performance as exposed by StateFS at /run/state. StateFS is used in Mer-based Sailfish OS, for example.</dd></dl>
 <h3>Plugin bind</h3>
-<p>Starting with <font SIZE="-1">BIND 9.5.0,</font> the most widely used <font SIZE="-1">DNS</font> server software provides extensive statistics about queries, responses and lots of other information. The bind plugin retrieves this information that&#8217;s encoded in <font SIZE="-1">XML</font> and provided via <font SIZE="-1">HTTP</font> and submits the values to collectd. </p>
-<p> To use this plugin, you first need to tell <font SIZE="-1">BIND</font> to make this information available. This is done with the <tt>&quot;statistics-channels&quot;</tt> configuration option: </p>
+<p>Starting with BIND 9.5.0, the most widely used DNS server software provides extensive statistics about queries, responses and lots of other information. The bind plugin retrieves this information that&#8217;s encoded in XML and provided via HTTP and submits the values to collectd. </p>
+<p> To use this plugin, you first need to tell BIND to make this information available. This is done with the <tt>&quot;statistics-channels&quot;</tt> configuration option: </p>
 <pre> statistics-channels {
  inet localhost port 8053;
  };</pre>
-<p>The configuration follows the grouping that can be seen when looking at the data with an <font SIZE="-1">XSLT</font> compatible viewer, such as a modern web browser. It&#8217;s probably a good idea to make yourself familiar with the provided values, so you can understand what the collected statistics actually mean. </p>
+<p>The configuration follows the grouping that can be seen when looking at the data with an XSLT compatible viewer, such as a modern web browser. It&#8217;s probably a good idea to make yourself familiar with the provided values, so you can understand what the collected statistics actually mean. </p>
 <p> Synopsis: </p>
 <pre> &lt;Plugin &quot;bind&quot;&gt;
  URL &quot;<a rel="nofollow" href="http://localhost:8053/">http://localhost:8053/</a>&quot;
@@ -489,10 +489,10 @@ description: "collectd.conf – Configuration for the system statistics collecti
  &lt;/Plugin&gt;</pre>
 <p>The bind plugin accepts the following configuration options:</p>
 <dl>
-<dt><font SIZE="-1"><code>URL</code></font> <i></i><font SIZE="-1"><i>URL</i></font><i></i></dt>
-<dd><font SIZE="-1">URL</font> from which to retrieve the <font SIZE="-1">XML</font> data. If not specified, <tt>&quot;<a rel="nofollow" href="http://localhost:8053/">http://localhost:8053/</a>&quot;</tt> will be used.</dd>
+<dt><code>URL</code> <i></i><i>URL</i><i></i></dt>
+<dd>URL from which to retrieve the XML data. If not specified, <tt>&quot;<a rel="nofollow" href="http://localhost:8053/">http://localhost:8053/</a>&quot;</tt> will be used.</dd>
 <dt><code>ParseTime</code> <code>true</code>|<code>false</code></dt>
-<dd>When set to <code>true</code>, the time provided by <font SIZE="-1">BIND</font> will be parsed and used to dispatch the values. When set to <code>false</code>, the local time source is queried. </dd>
+<dd>When set to <code>true</code>, the time provided by BIND will be parsed and used to dispatch the values. When set to <code>false</code>, the local time source is queried. </dd>
 <p> This setting is set to <code>true</code> by default for backwards compatibility; setting this to <code>false</code> is <i>recommended</i> to avoid problems with timezones and localization.</p>
 <dt><code>OpCodes</code> <code>true</code>|<code>false</code></dt>
 <dd>When enabled, statistics about the <i>&#8220;OpCodes&#8221;</i>, for example the number of <tt>&quot;QUERY&quot;</tt> packets, are collected. </dd>
@@ -507,15 +507,15 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>Collect zone maintenance statistics, mostly information about notifications (zone updates) and zone transfers. </dd>
 <p> Default: Enabled.</p>
 <dt><code>ResolverStats</code> <code>true</code>|<code>false</code></dt>
-<dd>Collect resolver statistics, i. e. statistics about outgoing requests (e. g. queries over IPv4, lame servers). Since the global resolver counters apparently were removed in <font SIZE="-1">BIND 9.5.1</font> and 9.6.0, this is disabled by default. Use the <code>ResolverStats</code> option within a <code>View &#8220;_default&#8221;</code> block instead for the same functionality. </dd>
+<dd>Collect resolver statistics, i. e. statistics about outgoing requests (e. g. queries over IPv4, lame servers). Since the global resolver counters apparently were removed in BIND 9.5.1 and 9.6.0, this is disabled by default. Use the <code>ResolverStats</code> option within a <code>View &#8220;_default&#8221;</code> block instead for the same functionality. </dd>
 <p> Default: Disabled.</p>
 <dt><code>MemoryStats</code></dt>
 <dd>Collect global memory statistics. </dd>
 <p> Default: Enabled.</p>
 <dt><code>Timeout</code> <i>Milliseconds</i></dt>
-<dd>The <code>Timeout</code> option sets the overall timeout for <font SIZE="-1">HTTP</font> requests to <font SIZE="-1"><code>URL</code></font>, in milliseconds. By default, the configured <code>Interval</code> is used to set the timeout.</dd>
+<dd>The <code>Timeout</code> option sets the overall timeout for HTTP requests to <code>URL</code>, in milliseconds. By default, the configured <code>Interval</code> is used to set the timeout.</dd>
 <dt><code>View</code> <i>Name</i></dt>
-<dd>Collect statistics about a specific <i>&#8220;view&#8221;</i>. <font SIZE="-1">BIND</font> can behave different, mostly depending on the source IP-address of the request. These different configurations are called &#8220;views&#8221;. If you don&#8217;t use this feature, you most likely are only interested in the <tt>&quot;_default&quot;</tt> view. </dd>
+<dd>Collect statistics about a specific <i>&#8220;view&#8221;</i>. BIND can behave different, mostly depending on the source IP-address of the request. These different configurations are called &#8220;views&#8221;. If you don&#8217;t use this feature, you most likely are only interested in the <tt>&quot;_default&quot;</tt> view. </dd>
 <p> Within a &lt;<code>View</code>&nbsp;<wbr><i>name</i>&gt; block, you can specify which information you want to collect about a view. If no <code>View</code> block is configured, no detailed view statistics will be collected.</p>
 <dl>
 <dd>
@@ -527,7 +527,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>Collect resolver statistics, i. e. statistics about outgoing requests (e. g. queries over IPv4, lame servers). </dd>
 <p> Default: Enabled.</p>
 <dt><code>CacheRRSets</code> <code>true</code>|<code>false</code></dt>
-<dd>If enabled, the number of entries (<i>&#8220;</i><font SIZE="-1"><i>RR</i></font><i> sets&#8221;</i>) in the view&#8217;s cache by query type is collected. Negative entries (queries which resulted in an error, for example names that do not exist) are reported with a leading exclamation mark, e. g. &#8220;!A&#8221;. </dd>
+<dd>If enabled, the number of entries (<i>&#8220;</i><i>RR</i><i> sets&#8221;</i>) in the view&#8217;s cache by query type is collected. Negative entries (queries which resulted in an error, for example names that do not exist) are reported with a leading exclamation mark, e. g. &#8220;!A&#8221;. </dd>
 <p> Default: Enabled.</p>
 <dt><code>Zone</code> <i>Name</i></dt>
 <dd>When given, collect detailed information about the given zone in the view. The information collected if very similar to the global <code>ServerStats</code> information (see above). </dd>
@@ -538,8 +538,8 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd></dd></dl>
 </dl>
 <h3>Plugin ceph</h3>
-<p>The ceph plugin collects values from <font SIZE="-1">JSON</font> data to be parsed by <code>libyajl</code> (&lt;<a rel="nofollow" href="https://lloyd.github.io/yajl/">https://lloyd.github.io/yajl/</a>&gt;) retrieved from ceph daemon admin sockets. </p>
-<p> A separate <code>Daemon</code> block must be configured for each ceph daemon to be monitored. The following example will read daemon statistics from four separate ceph daemons running on the same device (two OSDs, one <font SIZE="-1">MON,</font> one <font SIZE="-1">MDS</font>) : </p>
+<p>The ceph plugin collects values from JSON data to be parsed by <code>libyajl</code> (&lt;<a rel="nofollow" href="https://lloyd.github.io/yajl/">https://lloyd.github.io/yajl/</a>&gt;) retrieved from ceph daemon admin sockets. </p>
+<p> A separate <code>Daemon</code> block must be configured for each ceph daemon to be monitored. The following example will read daemon statistics from four separate ceph daemons running on the same device (two OSDs, one MON, one MDS) : </p>
 <pre> &lt;Plugin ceph&gt;
  LongRunAvgLatency false
  ConvertSpecialMetricTypes true
@@ -562,16 +562,16 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>If enabled, latency values(sum,count pairs) are calculated as the long run average &#8211; average since the ceph daemon was started = (sum / count). When disabled, latency values are calculated as the average since the last collection = (sum_now &#8211; sum_last) / (count_now &#8211; count_last). </dd>
 <p> Default: Disabled</p>
 <dt><code>ConvertSpecialMetricTypes</code> <code>true</code>|<code>false</code></dt>
-<dd>If enabled, special metrics (metrics that differ in type from similar counters) are converted to the type of those similar counters. This currently only applies to filestore.journal_wr_bytes which is a counter for <font SIZE="-1">OSD</font> daemons. The ceph schema reports this metric type as a sum,count pair while similar counters are treated as derive types. When converted, the sum is used as the counter value and is treated as a derive type. When disabled, all metrics are treated as the types received from the ceph schema. </dd>
+<dd>If enabled, special metrics (metrics that differ in type from similar counters) are converted to the type of those similar counters. This currently only applies to filestore.journal_wr_bytes which is a counter for OSD daemons. The ceph schema reports this metric type as a sum,count pair while similar counters are treated as derive types. When converted, the sum is used as the counter value and is treated as a derive type. When disabled, all metrics are treated as the types received from the ceph schema. </dd>
 <p> Default: Enabled</dl>
 <p> Each <code>Daemon</code> block must have a string argument for the plugin instance name. A <code>SocketPath</code> is also required for each <code>Daemon</code> block:</p>
 <dl>
 <dt><code>Daemon</code> <i>DaemonName</i></dt>
 <dd>Name to be used as the instance name for this daemon.</dd>
 <dt><code>SocketPath</code> <i>SocketPath</i></dt>
-<dd>Specifies the path to the <font SIZE="-1">UNIX</font> admin socket of the ceph daemon.</dd></dl>
+<dd>Specifies the path to the UNIX admin socket of the ceph daemon.</dd></dl>
 <h3>Plugin cgroups</h3>
-<p>This plugin collects the <font SIZE="-1">CPU</font> user/system time for each <i>cgroup</i> by reading the <i>cpuacct.stat</i> files in the first cpuacct-mountpoint (typically <i>/sys/fs/cgroup/cpu.cpuacct</i> on machines using systemd).</p>
+<p>This plugin collects the CPU user/system time for each <i>cgroup</i> by reading the <i>cpuacct.stat</i> files in the first cpuacct-mountpoint (typically <i>/sys/fs/cgroup/cpu.cpuacct</i> on machines using systemd).</p>
 <dl>
 <dt><code>CGroup</code> <i>Directory</i></dt>
 <dd>Select <i>cgroup</i> based on the name. Whether only matching <i>cgroups</i> are collected or if they are ignored is controlled by the <code>IgnoreSelected</code> option; see below.</dd>
@@ -589,32 +589,32 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Timeout</code> <i>Timeout</i></dt>
 <dd>Connection timeout in seconds. Defaults to <code>2</code>.</dd></dl>
 <h3>Plugin conntrack</h3>
-<p>This plugin collects <font SIZE="-1">IP</font> conntrack statistics.</p>
+<p>This plugin collects IP conntrack statistics.</p>
 <dl>
 <dt><code>OldFiles</code></dt>
 <dd>Assume the <code>conntrack_count</code> and <code>conntrack_max</code> files to be found in <i>/proc/sys/net/ipv4/netfilter</i> instead of <i>/proc/sys/net/netfilter/</i>.</dd></dl>
 <h3>Plugin cpu</h3>
-<p>The <i></i><font SIZE="-1"><i>CPU</i></font><i> plugin</i> collects <font SIZE="-1">CPU</font> usage metrics. By default, <font SIZE="-1">CPU</font> usage is reported as Jiffies, using the <tt>&quot;cpu&quot;</tt> type. Two aggregations are available:</p>
+<p>The <i></i><i>CPU</i><i> plugin</i> collects CPU usage metrics. By default, CPU usage is reported as Jiffies, using the <tt>&quot;cpu&quot;</tt> type. Two aggregations are available:</p>
 <dl>
 <dt>&bull;</dt>
 <dd>Sum, per-state, over all CPUs installed in the system; and</dd>
 <dt>&bull;</dt>
-<dd>Sum, per-CPU, over all non-idle states of a <font SIZE="-1">CPU,</font> creating an &#8220;active&#8221; state.</dd></dl>
+<dd>Sum, per-CPU, over all non-idle states of a CPU, creating an &#8220;active&#8221; state.</dd></dl>
 <p> The two aggregations can be combined, leading to <i>collectd</i> only emitting a single &#8220;active&#8221; metric for the entire system. As soon as one of these aggregations (or both) is enabled, the <i>cpu plugin</i> will report a percentage, rather than Jiffies. In addition, you can request individual, per-state, per-CPU metrics to be reported as percentage. </p>
 <p> The following configuration options are available:</p>
 <dl>
 <dt><code>ReportByState</code> <code>true</code>|<code>false</code></dt>
 <dd>When set to <code>true</code>, the default, reports per-state metrics, e.g. &#8220;system&#8221;, &#8220;user&#8221; and &#8220;idle&#8221;. When set to <code>false</code>, aggregates (sums) all <i>non-idle</i> states into one &#8220;active&#8221; metric.</dd>
 <dt><code>ReportByCpu</code> <code>true</code>|<code>false</code></dt>
-<dd>When set to <code>true</code>, the default, reports per-CPU (per-core) metrics. When set to <code>false</code>, instead of reporting metrics for individual CPUs, only a global sum of <font SIZE="-1">CPU</font> states is emitted.</dd>
+<dd>When set to <code>true</code>, the default, reports per-CPU (per-core) metrics. When set to <code>false</code>, instead of reporting metrics for individual CPUs, only a global sum of CPU states is emitted.</dd>
 <dt><code>ValuesPercentage</code> <code>false</code>|<code>true</code></dt>
 <dd>This option is only considered when both, <code>ReportByCpu</code> and <code>ReportByState</code> are set to <code>true</code>. In this case, by default, metrics will be reported as Jiffies. By setting this option to <code>true</code>, you can request percentage values in the un-aggregated (per-CPU, per-state) mode as well.</dd>
 <dt><code>ReportNumCpu</code> <code>false</code>|<code>true</code></dt>
 <dd>When set to <code>true</code>, reports the number of available CPUs. Defaults to <code>false</code>.</dd></dl>
 <h3>Plugin cpufreq</h3>
-<p>This plugin doesn&#8217;t have any options. It reads <i>/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq</i> (for the first <font SIZE="-1">CPU</font> installed) to get the current <font SIZE="-1">CPU</font> frequency. If this file does not exist make sure <code>cpufreqd</code> (&lt;<a rel="nofollow" href="http://cpufreqd.sourceforge.net/">http://cpufreqd.sourceforge.net/</a>&gt;) or a similar tool is installed and an &#8220;cpu governor&#8221; (that&#8217;s a kernel module) is loaded.</p>
+<p>This plugin doesn&#8217;t have any options. It reads <i>/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq</i> (for the first CPU installed) to get the current CPU frequency. If this file does not exist make sure <code>cpufreqd</code> (&lt;<a rel="nofollow" href="http://cpufreqd.sourceforge.net/">http://cpufreqd.sourceforge.net/</a>&gt;) or a similar tool is installed and an &#8220;cpu governor&#8221; (that&#8217;s a kernel module) is loaded.</p>
 <h3>Plugin cpusleep</h3>
-<p>This plugin doesn&#8217;t have any options. It reads <font SIZE="-1">CLOCK_BOOTTIME</font> and <font SIZE="-1">CLOCK_MONOTONIC</font> and reports the difference between these clocks. Since <font SIZE="-1">BOOTTIME</font> clock increments while device is suspended and <font SIZE="-1">MONOTONIC</font> clock does not, the derivative of the difference between these clocks gives the relative amount of time the device has spent in suspend state. The recorded value is in milliseconds of sleep per seconds of wall clock.</p>
+<p>This plugin doesn&#8217;t have any options. It reads CLOCK_BOOTTIME and CLOCK_MONOTONIC and reports the difference between these clocks. Since BOOTTIME clock increments while device is suspended and MONOTONIC clock does not, the derivative of the difference between these clocks gives the relative amount of time the device has spent in suspend state. The recorded value is in milliseconds of sleep per seconds of wall clock.</p>
 <h3>Plugin csv</h3>
 <dl>
 <dt><code>DataDir</code> <i>Directory</i></dt>
@@ -622,17 +622,17 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>StoreRates</code> <code>true|false</code></dt>
 <dd>If set to <code>true</code>, convert counter values to rates. If set to <code>false</code> (the default) counter values are stored as is, i. e. as an increasing integer number.</dd></dl>
 <h3>cURL Statistics</h3>
-<p>All cURL-based plugins support collection of generic, request-based statistics. These are disabled by default and can be enabled selectively for each page or <font SIZE="-1">URL</font> queried from the curl, curl_json, or curl_xml plugins. See the documentation of those plugins for specific information. This section describes the available metrics that can be configured for each plugin. All options are disabled by default. </p>
+<p>All cURL-based plugins support collection of generic, request-based statistics. These are disabled by default and can be enabled selectively for each page or URL queried from the curl, curl_json, or curl_xml plugins. See the documentation of those plugins for specific information. This section describes the available metrics that can be configured for each plugin. All options are disabled by default. </p>
 <p> See &lt;<a rel="nofollow" href="http://curl.haxx.se/libcurl/c/curl_easy_getinfo.html">http://curl.haxx.se/libcurl/c/curl_easy_getinfo.html</a>&gt; for more details.</p>
 <dl>
 <dt><code>TotalTime</code> <code>true|false</code></dt>
-<dd>Total time of the transfer, including name resolving, <font SIZE="-1">TCP</font> connect, etc.</dd>
+<dd>Total time of the transfer, including name resolving, TCP connect, etc.</dd>
 <dt><code>NamelookupTime</code> <code>true|false</code></dt>
 <dd>Time it took from the start until name resolving was completed.</dd>
 <dt><code>ConnectTime</code> <code>true|false</code></dt>
 <dd>Time it took from the start until the connect to the remote host (or proxy) was completed.</dd>
 <dt><code>AppconnectTime</code> <code>true|false</code></dt>
-<dd>Time it took from the start until the <font SIZE="-1">SSL/SSH</font> connect/handshake to the remote host was completed.</dd>
+<dd>Time it took from the start until the SSL/SSH connect/handshake to the remote host was completed.</dd>
 <dt><code>PretransferTime</code> <code>true|false</code></dt>
 <dd>Time it took from the start until just before the transfer begins.</dd>
 <dt><code>StarttransferTime</code> <code>true|false</code></dt>
@@ -661,7 +661,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>The number of new connections that were created to achieve the transfer.</dd></dl>
 <h3>Plugin curl</h3>
 <p>The curl plugin uses the <code>libcurl</code> (&lt;<a rel="nofollow" href="http://curl.haxx.se/">http://curl.haxx.se/</a>&gt;) to read web pages and the match infrastructure (the same code used by the tail plugin) to use regular expressions with the received data. </p>
-<p> The following example will read the current value of <font SIZE="-1">AMD</font> stock from Google&#8217;s finance page and dispatch the value to collectd. </p>
+<p> The following example will read the current value of AMD stock from Google&#8217;s finance page and dispatch the value to collectd. </p>
 <pre> &lt;Plugin curl&gt;
  &lt;Page &quot;stock_quotes&quot;&gt;
  URL &quot;<a rel="nofollow" href="http://finance.google.com/finance?q=NYSE%3AAMD">http://finance.google.com/finance?q=NYSE%3AAMD</a>&quot;
@@ -687,24 +687,24 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p>In the <code>Plugin</code> block, there may be one or more <code>Page</code> blocks, each defining a web page and one or more &#8220;matches&#8221; to be performed on the returned data. The string argument to the <code>Page</code> block is used as plugin instance. </p>
 <p> The following options are valid within <code>Page</code> blocks:</p>
 <dl>
-<dt><font SIZE="-1"><code>URL</code></font> <i></i><font SIZE="-1"><i>URL</i></font><i></i></dt>
-<dd><font SIZE="-1">URL</font> of the web site to retrieve. Since a regular expression will be used to extract information from this data, non-binary data is a big plus here ;)</dd>
+<dt><code>URL</code> <i></i><i>URL</i><i></i></dt>
+<dd>URL of the web site to retrieve. Since a regular expression will be used to extract information from this data, non-binary data is a big plus here ;)</dd>
 <dt><code>User</code> <i>Name</i></dt>
 <dd>Username to use if authorization is required to read the page.</dd>
 <dt><code>Password</code> <i>Password</i></dt>
 <dd>Password to use if authorization is required to read the page.</dd>
 <dt><code>Digest</code> <code>true</code>|<code>false</code></dt>
-<dd>Enable <font SIZE="-1">HTTP</font> digest authentication.</dd>
+<dd>Enable HTTP digest authentication.</dd>
 <dt><code>VerifyPeer</code> <code>true</code>|<code>false</code></dt>
-<dd>Enable or disable peer <font SIZE="-1">SSL</font> certificate verification. See &lt;<a rel="nofollow" href="http://curl.haxx.se/docs/sslcerts.html">http://curl.haxx.se/docs/sslcerts.html</a>&gt; for details. Enabled by default.</dd>
+<dd>Enable or disable peer SSL certificate verification. See &lt;<a rel="nofollow" href="http://curl.haxx.se/docs/sslcerts.html">http://curl.haxx.se/docs/sslcerts.html</a>&gt; for details. Enabled by default.</dd>
 <dt><code>VerifyHost</code> <code>true</code>|<code>false</code></dt>
-<dd>Enable or disable peer host name verification. If enabled, the plugin checks if the <tt>&quot;Common Name&quot;</tt> or a <tt>&quot;Subject Alternate Name&quot;</tt> field of the <font SIZE="-1">SSL</font> certificate matches the host name provided by the <font SIZE="-1"><code>URL</code></font> option. If this identity check fails, the connection is aborted. Obviously, only works when connecting to a <font SIZE="-1">SSL</font> enabled server. Enabled by default.</dd>
+<dd>Enable or disable peer host name verification. If enabled, the plugin checks if the <tt>&quot;Common Name&quot;</tt> or a <tt>&quot;Subject Alternate Name&quot;</tt> field of the SSL certificate matches the host name provided by the <code>URL</code> option. If this identity check fails, the connection is aborted. Obviously, only works when connecting to a SSL enabled server. Enabled by default.</dd>
 <dt><code>CACert</code> <i>file</i></dt>
-<dd>File that holds one or more <font SIZE="-1">SSL</font> certificates. If you want to use <font SIZE="-1">HTTPS</font> you will possibly need this option. What <font SIZE="-1">CA</font> certificates come bundled with <tt>&quot;libcurl&quot;</tt> and are checked by default depends on the distribution you use.</dd>
+<dd>File that holds one or more SSL certificates. If you want to use HTTPS you will possibly need this option. What CA certificates come bundled with <tt>&quot;libcurl&quot;</tt> and are checked by default depends on the distribution you use.</dd>
 <dt><code>Header</code> <i>Header</i></dt>
-<dd>A <font SIZE="-1">HTTP</font> header to add to the request. Multiple headers are added if this option is specified more than once.</dd>
+<dd>A HTTP header to add to the request. Multiple headers are added if this option is specified more than once.</dd>
 <dt><code>Post</code> <i>Body</i></dt>
-<dd>Specifies that the <font SIZE="-1">HTTP</font> operation should be a <font SIZE="-1">POST</font> instead of a <font SIZE="-1">GET.</font> The complete data to be posted is given as the argument. This option will usually need to be accompanied by a <code>Header</code> option to set an appropriate <tt>&quot;Content-Type&quot;</tt> for the post body (e.g. to <tt>&quot;application/x-www-form-urlencoded&quot;</tt>).</dd>
+<dd>Specifies that the HTTP operation should be a POST instead of a GET. The complete data to be posted is given as the argument. This option will usually need to be accompanied by a <code>Header</code> option to set an appropriate <tt>&quot;Content-Type&quot;</tt> for the post body (e.g. to <tt>&quot;application/x-www-form-urlencoded&quot;</tt>).</dd>
 <dt><code>MeasureResponseTime</code> <code>true</code>|<code>false</code></dt>
 <dd>Measure response time for the request. If this setting is enabled, <code>Match</code> blocks (see below) are optional. Disabled by default. </dd>
 <p> Beware that requests will get aborted if they take too long to complete. Adjust <code>Timeout</code> accordingly if you expect <code>MeasureResponseTime</code> to report such slow requests. </p>
@@ -716,10 +716,10 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>&lt;Match&gt;</code></dt>
 <dd>One or more <code>Match</code> blocks that define how to match information in the data returned by <tt>&quot;libcurl&quot;</tt>. The <tt>&quot;curl&quot;</tt> plugin uses the same infrastructure that&#8217;s used by the <tt>&quot;tail&quot;</tt> plugin, so please see the documentation of the <tt>&quot;tail&quot;</tt> plugin below on how matches are defined. If the <code>MeasureResponseTime</code> or <code>MeasureResponseCode</code> options are set to <code>true</code>, <code>Match</code> blocks are optional.</dd>
 <dt><code>Timeout</code> <i>Milliseconds</i></dt>
-<dd>The <code>Timeout</code> option sets the overall timeout for <font SIZE="-1">HTTP</font> requests to <font SIZE="-1"><code>URL</code></font>, in milliseconds. By default, the configured <code>Interval</code> is used to set the timeout. Prior to version 5.5.0, there was no timeout and requests could hang indefinitely. This legacy behaviour can be achieved by setting the value of <code>Timeout</code> to 0. </dd>
+<dd>The <code>Timeout</code> option sets the overall timeout for HTTP requests to <code>URL</code>, in milliseconds. By default, the configured <code>Interval</code> is used to set the timeout. Prior to version 5.5.0, there was no timeout and requests could hang indefinitely. This legacy behaviour can be achieved by setting the value of <code>Timeout</code> to 0. </dd>
 <p> If <code>Timeout</code> is 0 or bigger than the <code>Interval</code>, keep in mind that each slow network connection will stall one read thread. Adjust the <code>ReadThreads</code> global setting accordingly to prevent this from blocking other plugins.</dl>
 <h3>Plugin curl_json</h3>
-<p>The <code>curl_json plugin</code> collects values from <font SIZE="-1">JSON</font> data to be parsed by <code>libyajl</code> (&lt;<a rel="nofollow" href="https://lloyd.github.io/yajl/">https://lloyd.github.io/yajl/</a>&gt;) retrieved via either <code>libcurl</code> (&lt;<a rel="nofollow" href="http://curl.haxx.se/">http://curl.haxx.se/</a>&gt;) or read directly from a unix socket. The former can be used, for example, to collect values from CouchDB documents (which are stored <font SIZE="-1">JSON</font> notation), and the latter to collect values from a uWSGI stats socket. </p>
+<p>The <code>curl_json plugin</code> collects values from JSON data to be parsed by <code>libyajl</code> (&lt;<a rel="nofollow" href="https://lloyd.github.io/yajl/">https://lloyd.github.io/yajl/</a>&gt;) retrieved via either <code>libcurl</code> (&lt;<a rel="nofollow" href="http://curl.haxx.se/">http://curl.haxx.se/</a>&gt;) or read directly from a unix socket. The former can be used, for example, to collect values from CouchDB documents (which are stored JSON notation), and the latter to collect values from a uWSGI stats socket. </p>
 <p> The following example will collect several values from the built-in <tt>&quot;_stats&quot;</tt> runtime statistics module of <i>CouchDB</i> (&lt;<a rel="nofollow" href="http://wiki.apache.org/couchdb/Runtime_Statistics">http://wiki.apache.org/couchdb/Runtime_Statistics</a>&gt;). </p>
 <pre> &lt;Plugin curl_json&gt;
  &lt;URL &quot;<a rel="nofollow" href="http://localhost:5984/_stats">http://localhost:5984/_stats</a>&quot;&gt;
@@ -747,16 +747,16 @@ description: "collectd.conf – Configuration for the system statistics collecti
  &lt;/Key&gt;
  &lt;/Sock&gt;
  &lt;/Plugin&gt;</pre>
-<p>In the <code>Plugin</code> block, there may be one or more <font SIZE="-1"><code>URL</code></font> blocks, each defining a <font SIZE="-1">URL</font> to be fetched via <font SIZE="-1">HTTP </font>(using libcurl) or <code>Sock</code> blocks defining a unix socket to read <font SIZE="-1">JSON</font> from directly. Each of these blocks may have one or more <code>Key</code> blocks. </p>
-<p> The <code>Key</code> string argument must be in a path format. Each component is used to match the key from a <font SIZE="-1">JSON</font> map or the index of an <font SIZE="-1">JSON</font> array. If a path component of a <code>Key</code> is a <i>*</i>&nbsp;<wbr>wildcard, the values for all map keys or array indices will be collectd. </p>
-<p> The following options are valid within <font SIZE="-1"><code>URL</code></font> blocks:</p>
+<p>In the <code>Plugin</code> block, there may be one or more <code>URL</code> blocks, each defining a URL to be fetched via HTTP (using libcurl) or <code>Sock</code> blocks defining a unix socket to read JSON from directly. Each of these blocks may have one or more <code>Key</code> blocks. </p>
+<p> The <code>Key</code> string argument must be in a path format. Each component is used to match the key from a JSON map or the index of an JSON array. If a path component of a <code>Key</code> is a <i>*</i>&nbsp;<wbr>wildcard, the values for all map keys or array indices will be collectd. </p>
+<p> The following options are valid within <code>URL</code> blocks:</p>
 <dl>
 <dt><code>Host</code> <i>Name</i></dt>
 <dd>Use <i>Name</i> as the host name when submitting values. Defaults to the global host name setting.</dd>
 <dt><code>Instance</code> <i>Instance</i></dt>
 <dd>Sets the plugin instance to <i>Instance</i>.</dd>
 <dt><code>Interval</code> <i>Interval</i></dt>
-<dd>Sets the interval (in seconds) in which the values will be collected from this <font SIZE="-1">URL.</font> By default the global <code>Interval</code> setting will be used.</dd>
+<dd>Sets the interval (in seconds) in which the values will be collected from this URL. By default the global <code>Interval</code> setting will be used.</dd>
 <dt><code>User</code> <i>Name</i></dt>
 <dd>
 </dd><dt><code>Password</code> <i>Password</i></dt>
@@ -776,7 +776,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dd><dt><code>Timeout</code> <i>Milliseconds</i></dt>
 <dd>These options behave exactly equivalent to the appropriate options of the <i>cURL</i> plugin. Please see there for a detailed description.</dd>
 <dt><code>&lt;Statistics&gt;</code></dt>
-<dd>One <code>Statistics</code> block can be used to specify cURL statistics to be collected for each request to the remote <font SIZE="-1">URL.</font> See the section &#8220;cURL Statistics&#8221; above for details.</dd></dl>
+<dd>One <code>Statistics</code> block can be used to specify cURL statistics to be collected for each request to the remote URL. See the section &#8220;cURL Statistics&#8221; above for details.</dd></dl>
 <p> The following options are valid within <code>Key</code> blocks:</p>
 <dl>
 <dt><code>Type</code> <i>Type</i></dt>
@@ -784,7 +784,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Instance</code> <i>Instance</i></dt>
 <dd>Type-instance to use. Defaults to the current map key or current string array element value.</dd></dl>
 <h3>Plugin curl_xml</h3>
-<p>The <code>curl_xml plugin</code> uses <code>libcurl</code> (&lt;<a rel="nofollow" href="http://curl.haxx.se/">http://curl.haxx.se/</a>&gt;) and <code>libxml2</code> (&lt;<a rel="nofollow" href="http://xmlsoft.org/">http://xmlsoft.org/</a>&gt;) to retrieve <font SIZE="-1">XML</font> data via cURL. </p>
+<p>The <code>curl_xml plugin</code> uses <code>libcurl</code> (&lt;<a rel="nofollow" href="http://curl.haxx.se/">http://curl.haxx.se/</a>&gt;) and <code>libxml2</code> (&lt;<a rel="nofollow" href="http://xmlsoft.org/">http://xmlsoft.org/</a>&gt;) to retrieve XML data via cURL. </p>
 <pre> &lt;Plugin &quot;curl_xml&quot;&gt;
  &lt;URL &quot;<a rel="nofollow" href="http://localhost/stats.xml">http://localhost/stats.xml</a>&quot;&gt;
  Host &quot;my_host&quot;
@@ -804,16 +804,16 @@ description: "collectd.conf – Configuration for the system statistics collecti
  &lt;/XPath&gt;
  &lt;/URL&gt;
  &lt;/Plugin&gt;</pre>
-<p>In the <code>Plugin</code> block, there may be one or more <font SIZE="-1"><code>URL</code></font> blocks, each defining a <font SIZE="-1">URL</font> to be fetched using libcurl. Within each <font SIZE="-1"><code>URL</code></font> block there are options which specify the connection parameters, for example authentication information, and one or more <code>XPath</code> blocks. </p>
+<p>In the <code>Plugin</code> block, there may be one or more <code>URL</code> blocks, each defining a URL to be fetched using libcurl. Within each <code>URL</code> block there are options which specify the connection parameters, for example authentication information, and one or more <code>XPath</code> blocks. </p>
 <p> Each <code>XPath</code> block specifies how to get one type of information. The string argument must be a valid XPath expression which returns a list of &#8220;base elements&#8221;. One value is dispatched for each &#8220;base element&#8221;. The <i>type instance</i> and values are looked up using further <i>XPath</i> expressions that should be relative to the base element. </p>
-<p> Within the <font SIZE="-1"><code>URL</code></font> block the following options are accepted:</p>
+<p> Within the <code>URL</code> block the following options are accepted:</p>
 <dl>
 <dt><code>Host</code> <i>Name</i></dt>
 <dd>Use <i>Name</i> as the host name when submitting values. Defaults to the global host name setting.</dd>
 <dt><code>Instance</code> <i>Instance</i></dt>
 <dd>Use <i>Instance</i> as the plugin instance when submitting values. Defaults to an empty string (no plugin instance).</dd>
-<dt><code>Namespace</code> <i>Prefix</i> <i></i><font SIZE="-1"><i>URL</i></font><i></i></dt>
-<dd>If an XPath expression references namespaces, they must be specified with this option. <i>Prefix</i> is the &#8220;namespace prefix&#8221; used in the <font SIZE="-1">XML</font> document. <i></i><font SIZE="-1"><i>URL</i></font><i></i> is the &#8220;namespace name&#8221;, an <font SIZE="-1">URI</font> reference uniquely identifying the namespace. The option can be repeated to register multiple namespaces. </dd>
+<dt><code>Namespace</code> <i>Prefix</i> <i></i><i>URL</i><i></i></dt>
+<dd>If an XPath expression references namespaces, they must be specified with this option. <i>Prefix</i> is the &#8220;namespace prefix&#8221; used in the XML document. <i></i><i>URL</i><i></i> is the &#8220;namespace name&#8221;, an URI reference uniquely identifying the namespace. The option can be repeated to register multiple namespaces. </dd>
 <p> Examples: </p>
 <pre> Namespace &quot;s&quot; &quot;<a rel="nofollow" href="http://schemas.xmlsoap.org/soap/envelope/">http://schemas.xmlsoap.org/soap/envelope/</a>&quot;
  Namespace &quot;m&quot; &quot;<a rel="nofollow" href="http://www.w3.org/1998/Math/MathML">http://www.w3.org/1998/Math/MathML</a>&quot;</pre>
@@ -827,7 +827,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>
 </dd><dt><code>VerifyHost</code> <code>true</code>|<code>false</code></dt>
 <dd>
-</dd><dt><code>CACert</code> <i></i><font SIZE="-1"><i>CA</i></font><i> Cert File</i></dt>
+</dd><dt><code>CACert</code> <i></i><i>CA</i><i> Cert File</i></dt>
 <dd>
 </dd><dt><code>Header</code> <i>Header</i></dt>
 <dd>
@@ -836,9 +836,9 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dd><dt><code>Timeout</code> <i>Milliseconds</i></dt>
 <dd>These options behave exactly equivalent to the appropriate options of the <i>cURL plugin</i>. Please see there for a detailed description.</dd>
 <dt><code>&lt;Statistics&gt;</code></dt>
-<dd>One <code>Statistics</code> block can be used to specify cURL statistics to be collected for each request to the remote <font SIZE="-1">URL.</font> See the section &#8220;cURL Statistics&#8221; above for details.</dd>
+<dd>One <code>Statistics</code> block can be used to specify cURL statistics to be collected for each request to the remote URL. See the section &#8220;cURL Statistics&#8221; above for details.</dd>
 <dt>&lt;<code>XPath</code> <i>XPath-expression</i>&gt;</dt>
-<dd>Within each <font SIZE="-1"><code>URL</code></font> block, there must be one or more <code>XPath</code> blocks. Each <code>XPath</code> block specifies how to get one type of information. The string argument must be a valid XPath expression which returns a list of &#8220;base elements&#8221;. One value is dispatched for each &#8220;base element&#8221;. </dd>
+<dd>Within each <code>URL</code> block, there must be one or more <code>XPath</code> blocks. Each <code>XPath</code> block specifies how to get one type of information. The string argument must be a valid XPath expression which returns a list of &#8220;base elements&#8221;. One value is dispatched for each &#8220;base element&#8221;. </dd>
 <p> Within the <code>XPath</code> block the following options are accepted:</p>
 <dl>
 <dd>
@@ -857,7 +857,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd></dd></dl>
 </dl>
 <h3>Plugin dbi</h3>
-<p>This plugin uses the <code>dbi</code> library (&lt;<a rel="nofollow" href="http://libdbi.sourceforge.net/">http://libdbi.sourceforge.net/</a>&gt;) to connect to various databases, execute <i></i><font SIZE="-1"><i>SQL</i></font><i></i> statements and read back the results. <i>dbi</i> is an acronym for &#8220;database interface&#8221; in case you were wondering about the name. You can configure how each column is to be interpreted and the plugin will generate one or more data sets from each row returned according to these rules. </p>
+<p>This plugin uses the <code>dbi</code> library (&lt;<a rel="nofollow" href="http://libdbi.sourceforge.net/">http://libdbi.sourceforge.net/</a>&gt;) to connect to various databases, execute <i></i><i>SQL</i><i></i> statements and read back the results. <i>dbi</i> is an acronym for &#8220;database interface&#8221; in case you were wondering about the name. You can configure how each column is to be interpreted and the plugin will generate one or more data sets from each row returned according to these rules. </p>
 <p> Because the plugin is very generic, the configuration is a little more complex than those of other plugins. It usually looks something like this: </p>
 <pre> &lt;Plugin dbi&gt;
  &lt;Query &quot;out_of_stock&quot;&gt;
@@ -885,7 +885,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p>The configuration above defines one query with one result and one database. The query is then linked to the database with the <code>Query</code> option <i>within</i> the <code>&lt;Database&gt;</code> block. You can have any number of queries and databases and you can also use the <code>Include</code> statement to split up the configuration file in multiple, smaller files. However, the <code>&lt;Query&gt;</code> block <i>must</i> precede the <code>&lt;Database&gt;</code> blocks, because the file is interpreted from top to bottom! </p>
 <p> The following is a complete list of options: </p>
 <p> <i></i>Query<i> blocks</i> </p>
-<p> Query blocks define <i></i><font SIZE="-1"><i>SQL</i></font><i></i> statements and how the returned data should be interpreted. They are identified by the name that is given in the opening line of the block. Thus the name needs to be unique. Other than that, the name is not used in collectd. </p>
+<p> Query blocks define <i></i><i>SQL</i><i></i> statements and how the returned data should be interpreted. They are identified by the name that is given in the opening line of the block. Thus the name needs to be unique. Other than that, the name is not used in collectd. </p>
 <p> In each <code>Query</code> block, there is one or more <code>Result</code> blocks. <code>Result</code> blocks define which column holds which value or instance information. You can use multiple <code>Result</code> blocks to create multiple values from one returned row. This is especially useful, when queries take a long time and sending almost the same query again and again is not desirable. </p>
 <p> Example: </p>
 <pre> &lt;Query &quot;environment&quot;&gt;
@@ -904,11 +904,11 @@ description: "collectd.conf – Configuration for the system statistics collecti
  &lt;/Query&gt;</pre>
 <p>The following options are accepted:</p>
 <dl>
-<dt><code>Statement</code> <i></i><font SIZE="-1"><i>SQL</i></font><i></i></dt>
-<dd>Sets the statement that should be executed on the server. This is <code>not</code> interpreted by collectd, but simply passed to the database server. Therefore, the <font SIZE="-1">SQL</font> dialect that&#8217;s used depends on the server collectd is connected to. </dd>
+<dt><code>Statement</code> <i></i><i>SQL</i><i></i></dt>
+<dd>Sets the statement that should be executed on the server. This is <code>not</code> interpreted by collectd, but simply passed to the database server. Therefore, the SQL dialect that&#8217;s used depends on the server collectd is connected to. </dd>
 <p> The query has to return at least two columns, one for the instance and one value. You cannot omit the instance, even if the statement is guaranteed to always return exactly one line. In that case, you can usually specify something like this: </p>
 <pre> Statement &quot;SELECT \&quot;instance\&quot;, COUNT(*) AS value FROM table&quot;</pre>
-<p>(That works with MySQL but may not be valid <font SIZE="-1">SQL</font> according to the spec. If you use a more strict database server, you may have to select from a dummy table or something.) </p>
+<p>(That works with MySQL but may not be valid SQL according to the spec. If you use a more strict database server, you may have to select from a dummy table or something.) </p>
 <p> Please note that some databases, for example <code>Oracle</code>, will fail if you include a semicolon at the end of the statement.</p>
 <dt><code>MinVersion</code> <i>Version</i></dt>
 <dd>
@@ -949,14 +949,14 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Interval</code> <i>Interval</i></dt>
 <dd>Sets the interval (in seconds) in which the values will be collected from this database. By default the global <code>Interval</code> setting will be used.</dd>
 <dt><code>Driver</code> <i>Driver</i></dt>
-<dd>Specifies the driver to use to connect to the database. In many cases those drivers are named after the database they can connect to, but this is not a technical necessity. These drivers are sometimes referred to as &#8220;<font SIZE="-1">DBD&#8221;, </font><code>D</code>ata<code>B</code>ase <code>D</code>river, and some distributions ship them in separate packages. Drivers for the &#8220;dbi&#8221; library are developed by the <code>libdbi-drivers</code> project at &lt;<a rel="nofollow" href="http://libdbi-drivers.sourceforge.net/">http://libdbi-drivers.sourceforge.net/</a>&gt;. </dd>
+<dd>Specifies the driver to use to connect to the database. In many cases those drivers are named after the database they can connect to, but this is not a technical necessity. These drivers are sometimes referred to as &#8220;DBD&#8221;, <code>D</code>ata<code>B</code>ase <code>D</code>river, and some distributions ship them in separate packages. Drivers for the &#8220;dbi&#8221; library are developed by the <code>libdbi-drivers</code> project at &lt;<a rel="nofollow" href="http://libdbi-drivers.sourceforge.net/">http://libdbi-drivers.sourceforge.net/</a>&gt;. </dd>
 <p> You need to give the driver name as expected by the &#8220;dbi&#8221; library here. You should be able to find that in the documentation for each driver. If you mistype the driver name, the plugin will dump a list of all known driver names to the log.</p>
 <dt><code>DriverOption</code> <i>Key</i> <i>Value</i></dt>
 <dd>Sets driver-specific options. What option a driver supports can be found in the documentation for each driver, somewhere at &lt;<a rel="nofollow" href="http://libdbi-drivers.sourceforge.net/">http://libdbi-drivers.sourceforge.net/</a>&gt;. However, the options &#8220;host&#8221;, &#8220;username&#8221;, &#8220;password&#8221;, and &#8220;dbname&#8221; seem to be de facto standards. </dd>
 <p> DBDs can register two types of options: String options and numeric options. The plugin will use the <tt>&quot;dbi_conn_set_option&quot;</tt> function when the configuration provides a string and the <tt>&quot;dbi_conn_require_option_numeric&quot;</tt> function when the configuration provides a number. So these two lines will actually result in different calls being used: </p>
 <pre> DriverOption &quot;Port&quot; 1234 # numeric
  DriverOption &quot;Port&quot; &quot;1234&quot; # string</pre>
-<p>Unfortunately, drivers are not too keen to report errors when an unknown option is passed to them, so invalid settings here may go unnoticed. This is not the plugin&#8217;s fault, it will report errors if it gets them from the library&nbsp;<wbr>/ the driver. If a driver complains about an option, the plugin will dump a complete list of all options understood by that driver to the log. There is no way to programmatically find out if an option expects a string or a numeric argument, so you will have to refer to the appropriate <font SIZE="-1">DBD</font>&#8216;s documentation to find this out. Sorry.</p>
+<p>Unfortunately, drivers are not too keen to report errors when an unknown option is passed to them, so invalid settings here may go unnoticed. This is not the plugin&#8217;s fault, it will report errors if it gets them from the library&nbsp;<wbr>/ the driver. If a driver complains about an option, the plugin will dump a complete list of all options understood by that driver to the log. There is no way to programmatically find out if an option expects a string or a numeric argument, so you will have to refer to the appropriate DBD&#8216;s documentation to find this out. Sorry.</p>
 <dt><code>SelectDB</code> <i>Database</i></dt>
 <dd>In some cases, the database name you connect with is not the database name you want to use for querying data. If this option is set, the plugin will &#8220;select&#8221; (switch to) that database after the connection is established.</dd>
 <dt><code>Query</code> <i>QueryName</i></dt>
@@ -994,7 +994,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>IgnoreSelected</code> <code>true</code>|<code>false</code></dt>
 <dd>Sets whether selected disks, i. e. the ones matches by any of the <code>Disk</code> statements, are ignored or if all other disks are ignored. The behavior (hopefully) is intuitive: If no <code>Disk</code> option is configured, all disks are collected. If at least one <code>Disk</code> option is given and no <code>IgnoreSelected</code> or set to <code>false</code>, <code>only</code> matching disks will be collected. If <code>IgnoreSelected</code> is set to <code>true</code>, all disks are collected <code>except</code> the ones matched.</dd>
 <dt><code>UseBSDName</code> <code>true</code>|<code>false</code></dt>
-<dd>Whether to use the device&#8217;s &#8220;<font SIZE="-1">BSD</font> Name&#8221;, on Mac&nbsp;<wbr><font SIZE="-1">OS</font>&nbsp;<wbr>X, instead of the default major/minor numbers. Requires collectd to be built with Apple&#8217;s IOKitLib support.</dd>
+<dd>Whether to use the device&#8217;s &#8220;BSD Name&#8221;, on Mac&nbsp;<wbr>OS&nbsp;<wbr>X, instead of the default major/minor numbers. Requires collectd to be built with Apple&#8217;s IOKitLib support.</dd>
 <dt><code>UdevNameAttr</code> <i>Attribute</i></dt>
 <dd>Attempt to override disk instance name with the value of a specified udev attribute when built with <code>libudev</code>. If the attribute is not defined for the given device, the default name is used. Example: </dd>
 <pre> UdevNameAttr &quot;DM_NAME&quot;</pre>
@@ -1002,13 +1002,13 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <h3>Plugin dns</h3>
 <dl>
 <dt><code>Interface</code> <i>Interface</i></dt>
-<dd>The dns plugin uses <code>libpcap</code> to capture dns traffic and analyzes it. This option sets the interface that should be used. If this option is not set, or set to &#8220;any&#8221;, the plugin will try to get packets from <code>all</code> interfaces. This may not work on certain platforms, such as Mac&nbsp;<wbr><font SIZE="-1">OS</font>&nbsp;<wbr>X.</dd>
+<dd>The dns plugin uses <code>libpcap</code> to capture dns traffic and analyzes it. This option sets the interface that should be used. If this option is not set, or set to &#8220;any&#8221;, the plugin will try to get packets from <code>all</code> interfaces. This may not work on certain platforms, such as Mac&nbsp;<wbr>OS&nbsp;<wbr>X.</dd>
 <dt><code>IgnoreSource</code> <i>IP-address</i></dt>
 <dd>Ignore packets that originate from this address.</dd>
 <dt><code>SelectNumericQueryTypes</code> <code>true</code>|<code>false</code></dt>
 <dd>Enabled by default, collects unknown (and thus presented as numeric only) query types.</dd></dl>
 <h3>Plugin dpdkstat</h3>
-<p>The <i>dpdkstat plugin</i> collects information about <font SIZE="-1">DPDK</font> interfaces using the extended <font SIZE="-1">NIC</font> stats <font SIZE="-1">API</font> in <font SIZE="-1">DPDK.</font> </p>
+<p>The <i>dpdkstat plugin</i> collects information about DPDK interfaces using the extended NIC stats API in DPDK. </p>
 <p> <code>Synopsis:</code> </p>
 <pre> &lt;Plugin &quot;dpdkstat&quot;&gt;
  Coremask &quot;0x4&quot;
@@ -1026,15 +1026,15 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Memorychannels</code> <i>Channels</i></dt>
 <dd>A string containing a number of memory channels per processor socket.</dd>
 <dt><code>ProcessType</code> <i>type</i></dt>
-<dd>A string containing the type of <font SIZE="-1">DPDK</font> process instance.</dd>
+<dd>A string containing the type of DPDK process instance.</dd>
 <dt><code>FilePrefix</code> <i>File</i></dt>
 <dd>The prefix text used for hugepage filenames. The filename will be set to /var/run/.&lt;prefix&gt;_config where prefix is what is passed in by the user.</dd>
-<dt><code>SocketMemory</code> <i></i><font SIZE="-1"><i>MB</i></font><i></i></dt>
-<dd>A string containing amount of Memory to allocate from hugepages on specific sockets in <font SIZE="-1">MB</font></dd>
+<dt><code>SocketMemory</code> <i></i><i>MB</i><i></i></dt>
+<dd>A string containing amount of Memory to allocate from hugepages on specific sockets in MB</dd>
 <dt><code>EnabledPortMask</code> <i>Mask</i></dt>
-<dd>A hexidecimal bit mask of the <font SIZE="-1">DPDK</font> ports which should be enabled. A mask of 0x0 means that all ports will be disabled. A bitmask of all Fs means that all ports will be enabled. This is an optional argument &#8211; default is all ports enabled.</dd>
+<dd>A hexidecimal bit mask of the DPDK ports which should be enabled. A mask of 0x0 means that all ports will be disabled. A bitmask of all Fs means that all ports will be enabled. This is an optional argument &#8211; default is all ports enabled.</dd>
 <dt><code>PortName</code> <i>Name</i></dt>
-<dd>A string containing an optional name for the enabled <font SIZE="-1">DPDK</font> ports. Each PortName option should contain only one port name; specify as many PortName options as desired. Default naming convention will be used if PortName is blank. If there are less PortName options than there are enabled ports, the default naming convention will be used for the additional ports.</dd></dl>
+<dd>A string containing an optional name for the enabled DPDK ports. Each PortName option should contain only one port name; specify as many PortName options as desired. Default naming convention will be used if PortName is blank. If there are less PortName options than there are enabled ports, the default naming convention will be used for the additional ports.</dd></dl>
 <h3>Plugin email</h3>
 <dl>
 <dt><code>SocketFile</code> <i>Path</i></dt>
@@ -1067,7 +1067,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Exec</code> <i>User</i>[:[<i>Group</i>]] <i>Executable</i> [<i>&lt;arg&gt;</i> [<i>&lt;arg&gt;</i> &#8230;]]</dt>
 <dd>
 </dd><dt><code>NotificationExec</code> <i>User</i>[:[<i>Group</i>]] <i>Executable</i> [<i>&lt;arg&gt;</i> [<i>&lt;arg&gt;</i> &#8230;]]</dt>
-<dd>Execute the executable <i>Executable</i> as user <i>User</i>. If the user name is followed by a colon and a group name, the effective group is set to that group. The real group and saved-set group will be set to the default group of that user. If no group is given the effective group <font SIZE="-1">ID</font> will be the same as the real group <font SIZE="-1">ID.</font> </dd>
+<dd>Execute the executable <i>Executable</i> as user <i>User</i>. If the user name is followed by a colon and a group name, the effective group is set to that group. The real group and saved-set group will be set to the default group of that user. If no group is given the effective group ID will be the same as the real group ID. </dd>
 <p> Please note that in order to change the user and/or group the daemon needs superuser privileges. If the daemon is run as an unprivileged user you must specify the same user/group here. If the daemon is run with superuser privileges, you must supply a non-root user here. </p>
 <p> The executable may be followed by optional arguments that are passed to the program. Please note that due to the configuration parsing numbers and boolean values may be changed. If you want to be absolutely sure that something is passed as-is please enclose it in quotes. </p>
 <p> The <code>Exec</code> and <code>NotificationExec</code> statements change the semantics of the programs executed, i. e. the data passed to them and the response expected from them. This is documented in great detail in <i><a href="/docs/linux/man/5-collectd-exec/">collectd-exec</a></i>(5).</dl>
@@ -1093,7 +1093,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
  Name &quot;sess_*&quot;
  &lt;/Directory&gt;
  &lt;/Plugin&gt;</pre>
-<p>The example above counts the number of files in QMail&#8217;s queue directories and the number of <font SIZE="-1">PHP5</font> sessions. Jfiy: The &#8220;todo&#8221; queue holds the messages that QMail has not yet looked at, the &#8220;message&#8221; queue holds the messages that were classified into &#8220;local&#8221; and &#8220;remote&#8221;. </p>
+<p>The example above counts the number of files in QMail&#8217;s queue directories and the number of PHP5 sessions. Jfiy: The &#8220;todo&#8221; queue holds the messages that QMail has not yet looked at, the &#8220;message&#8221; queue holds the messages that were classified into &#8220;local&#8221; and &#8220;remote&#8221;. </p>
 <p> As you can see, the configuration consists of one or more <tt>&quot;Directory&quot;</tt> blocks, each of which specifies a directory in which to count the files. Within those blocks, the following options are recognized:</p>
 <dl>
 <dt><code>Instance</code> <i>Instance</i></dt>
@@ -1143,7 +1143,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> Available configuration options:</p>
 <dl>
 <dt><code>MCReceiveFrom</code> <i>MCGroup</i> [<i>Port</i>]</dt>
-<dd>Sets sets the multicast group and <font SIZE="-1">UDP</font> port to which to subscribe. </dd>
+<dd>Sets sets the multicast group and UDP port to which to subscribe. </dd>
 <p> Default: <code>239.2.11.71</code>&nbsp;<wbr>/&nbsp;<wbr><code>8649</code></p>
 <dt>&lt;<code>Metric</code> <i>Name</i>&gt;</dt>
 <dd>These blocks add a new metric conversion to the internal table. <i>Name</i>, the string argument to the <code>Metric</code> block, is the metric name as used by Ganglia.</dd>
@@ -1162,14 +1162,14 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dl>
 <h3>Plugin gps</h3>
 <p>The <tt>&quot;gps plugin&quot;</tt> connects to gpsd on the host machine. The host, port, timeout and pause are configurable. </p>
-<p> This is useful if you run an <font SIZE="-1">NTP</font> server using a <font SIZE="-1">GPS</font> for source and you want to monitor it. </p>
-<p> Mind your <font SIZE="-1">GPS</font> must send $&#8211;GSA for having the data reported! </p>
+<p> This is useful if you run an NTP server using a GPS for source and you want to monitor it. </p>
+<p> Mind your GPS must send $&#8211;GSA for having the data reported! </p>
 <p> The following elements are collected:</p>
 <dl>
 <dt><code>satellites</code></dt>
-<dd>Number of satellites used for fix (type instance &#8220;used&#8221;) and in view (type instance &#8220;visible&#8221;). 0 means no <font SIZE="-1">GPS</font> satellites are visible.</dd>
+<dd>Number of satellites used for fix (type instance &#8220;used&#8221;) and in view (type instance &#8220;visible&#8221;). 0 means no GPS satellites are visible.</dd>
 <dt><code>dilution_of_precision</code></dt>
-<dd>Vertical and horizontal dilution (type instance &#8220;horizontal&#8221; or &#8220;vertical&#8221;). It should be between 0 and 3. Look at the documentation of your <font SIZE="-1">GPS</font> to know more.</dd></dl>
+<dd>Vertical and horizontal dilution (type instance &#8220;horizontal&#8221; or &#8220;vertical&#8221;). It should be between 0 and 3. Look at the documentation of your GPS to know more.</dd></dl>
 <p> Synopsis: </p>
 <pre> LoadPlugin gps
  &lt;Plugin &quot;gps&quot;&gt;
@@ -1189,12 +1189,12 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>Port to connect to gpsd on the host machine. Defaults to <code>2947</code>.</dd>
 <dt><code>Timeout</code> <i>Seconds</i></dt>
 <dd>Timeout in seconds (default 0.015 sec). </dd>
-<p> The <font SIZE="-1">GPS</font> data stream is fetch by the plugin form the daemon. It waits for data to be available, if none arrives it times out and loop for another reading. Mind to put a low value gpsd expects value in the micro-seconds area (recommended is 500 us) since the waiting function is blocking. Value must be between 500 us and 5 sec., if outside that range the default value is applied. </p>
+<p> The GPS data stream is fetch by the plugin form the daemon. It waits for data to be available, if none arrives it times out and loop for another reading. Mind to put a low value gpsd expects value in the micro-seconds area (recommended is 500 us) since the waiting function is blocking. Value must be between 500 us and 5 sec., if outside that range the default value is applied. </p>
 <p> This only applies from gpsd release-2.95.</p>
 <dt><code>PauseConnect</code> <i>Seconds</i></dt>
 <dd>Pause to apply between attempts of connection to gpsd in seconds (default 5 sec).</dd></dl>
 <h3>Plugin grpc</h3>
-<p>The <i>grpc</i> plugin provides an <font SIZE="-1">RPC</font> interface to submit values to or query values from collectd based on the open source gRPC framework. It exposes an end-point for dispatching values to the daemon. </p>
+<p>The <i>grpc</i> plugin provides an RPC interface to submit values to or query values from collectd based on the open source gRPC framework. It exposes an end-point for dispatching values to the daemon. </p>
 <p> The <code>gRPC</code> homepage can be found at &lt;<a rel="nofollow" href="https://grpc.io/">https://grpc.io/</a>&gt;.</p>
 <dl>
 <dt><code>Server</code> <i>Host</i> <i>Port</i></dt>
@@ -1205,13 +1205,13 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>
 </dd><dl>
 <dt><code>EnableSSL</code> <code>false</code>|<code>true</code></dt>
-<dd>Whether to require <font SIZE="-1">SSL</font> for outgoing connections. Default: false.</dd>
+<dd>Whether to require SSL for outgoing connections. Default: false.</dd>
 <dt><code>SSLCACertificateFile</code> <i>Filename</i></dt>
 <dd>
 </dd><dt><code>SSLCertificateFile</code> <i>Filename</i></dt>
 <dd>
 </dd><dt><code>SSLCertificateKeyFile</code> <i>Filename</i></dt>
-<dd>Filenames specifying <font SIZE="-1">SSL</font> certificate and key material to be used with <font SIZE="-1">SSL</font> connections.</dd></dl>
+<dd>Filenames specifying SSL certificate and key material to be used with SSL connections.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
@@ -1223,13 +1223,13 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>
 </dd><dl>
 <dt><code>EnableSSL</code> <i>true</i>|<i>false</i></dt>
-<dd>Whether to enable <font SIZE="-1">SSL</font> for incoming connections. Default: false.</dd>
+<dd>Whether to enable SSL for incoming connections. Default: false.</dd>
 <dt><code>SSLCACertificateFile</code> <i>Filename</i></dt>
 <dd>
 </dd><dt><code>SSLCertificateFile</code> <i>Filename</i></dt>
 <dd>
 </dd><dt><code>SSLCertificateKeyFile</code> <i>Filename</i></dt>
-<dd>Filenames specifying <font SIZE="-1">SSL</font> certificate and key material to be used with <font SIZE="-1">SSL</font> connections.</dd></dl>
+<dd>Filenames specifying SSL certificate and key material to be used with SSL connections.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
@@ -1246,9 +1246,9 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p>To collect <code>hugepages</code> information, collectd reads directories &#8220;/sys/devices/system/node/*/hugepages&#8221; and &#8220;/sys/kernel/mm/hugepages&#8221;. Reading of these directories can be disabled by the following options (default is enabled).</p>
 <dl>
 <dt><code>ReportPerNodeHP</code> <code>true</code>|<code>false</code></dt>
-<dd>If enabled, information will be collected from the hugepage counters in &#8220;/sys/devices/system/node/*/hugepages&#8221;. This is used to check the per-node hugepage statistics on a <font SIZE="-1">NUMA</font> system.</dd>
+<dd>If enabled, information will be collected from the hugepage counters in &#8220;/sys/devices/system/node/*/hugepages&#8221;. This is used to check the per-node hugepage statistics on a NUMA system.</dd>
 <dt><code>ReportRootHP</code> <code>true</code>|<code>false</code></dt>
-<dd>If enabled, information will be collected from the hugepage counters in &#8220;/sys/kernel/mm/hugepages&#8221;. This can be used on both <font SIZE="-1">NUMA</font> and non-NUMA systems to check the overall hugepage statistics.</dd>
+<dd>If enabled, information will be collected from the hugepage counters in &#8220;/sys/kernel/mm/hugepages&#8221;. This can be used on both NUMA and non-NUMA systems to check the overall hugepage statistics.</dd>
 <dt><code>ValuesPages</code> <code>true</code>|<code>false</code></dt>
 <dd>Whether to report hugepages metrics in number of pages. Defaults to <code>true</code>.</dd>
 <dt><code>ValuesBytes</code> <code>false</code>|<code>true</code></dt>
@@ -1256,7 +1256,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>ValuesPercentage</code> <code>false</code>|<code>true</code></dt>
 <dd>Whether to report hugepages metrics as percentage. Defaults to <code>false</code>.</dd></dl>
 <h3>Plugin intel_rdt</h3>
-<p>The <i>intel_rdt</i> plugin collects information provided by monitoring features of Intel Resource Director Technology (Intel(R) <font SIZE="-1">RDT</font>) like Cache Monitoring Technology (<font SIZE="-1">CMT</font>), Memory Bandwidth Monitoring (<font SIZE="-1">MBM</font>). These features provide information about utilization of shared resources. <font SIZE="-1">CMT</font> monitors last level cache occupancy (<font SIZE="-1">LLC</font>). <font SIZE="-1">MBM</font> supports two types of events reporting local and remote memory bandwidth. Local memory bandwidth (<font SIZE="-1">MBL</font>) reports the bandwidth of accessing memory associated with the local socket. Remote memory bandwidth (<font SIZE="-1">MBR</font>) reports the bandwidth of accessing the remote socket. Also this technology allows to monitor instructions per clock (<font SIZE="-1">IPC</font>). Monitor events are hardware dependant. Monitoring capabilities are detected on plugin initialization and only supported events are monitored. </p>
+<p>The <i>intel_rdt</i> plugin collects information provided by monitoring features of Intel Resource Director Technology (Intel(R) RDT) like Cache Monitoring Technology (CMT), Memory Bandwidth Monitoring (MBM). These features provide information about utilization of shared resources. CMT monitors last level cache occupancy (LLC). MBM supports two types of events reporting local and remote memory bandwidth. Local memory bandwidth (MBL) reports the bandwidth of accessing memory associated with the local socket. Remote memory bandwidth (MBR) reports the bandwidth of accessing the remote socket. Also this technology allows to monitor instructions per clock (IPC). Monitor events are hardware dependant. Monitoring capabilities are detected on plugin initialization and only supported events are monitored. </p>
 <p> <code>Synopsis:</code> </p>
 <pre> &lt;Plugin &quot;intel_rdt&quot;&gt;
  Cores &quot;0-2&quot; &quot;3,4,6&quot; &quot;8-10,15&quot;
@@ -1266,9 +1266,9 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Interval</code> <i>seconds</i></dt>
 <dd>The interval within which to retrieve statistics on monitored events in seconds. For milliseconds divide the time by 1000 for example if the desired interval is 50ms, set interval to 0.05. Due to limited capacity of counters it is not recommended to set interval higher than 1 sec.</dd>
 <dt><code>Cores</code> <i>cores groups</i></dt>
-<dd>All events are reported on a per core basis. Monitoring of the events can be configured for group of cores (aggregated statistics). This field defines groups of cores on which to monitor supported events. The field is represented as list of strings with core group values. Each string represents a list of cores in a group. Allowed formats are:<br />
-&nbsp;<wbr>0,1,2,3<br />
-&nbsp;<wbr>0-10,20-18<br />
+<dd>All events are reported on a per core basis. Monitoring of the events can be configured for group of cores (aggregated statistics). This field defines groups of cores on which to monitor supported events. The field is represented as list of strings with core group values. Each string represents a list of cores in a group. Allowed formats are:<br/>
+&nbsp;<wbr>0,1,2,3<br/>
+&nbsp;<wbr>0-10,20-18<br/>
 &nbsp;<wbr>1,3,5-8,10,0&#215;10-12 </dd>
 <p> If an empty string is provided as value for this field default cores configuration is applied &#8211; a separate group is created for each core.</dl>
 <p> <code>Note:</code> By default global interval is used to retrieve statistics on monitored events. To configure a plugin specific interval use <code>Interval</code> option of the intel_rdt &lt;LoadPlugin&gt; block. For milliseconds divide the time by 1000 for example if the desired interval is 50ms, set interval to 0.05. Due to limited capacity of counters it is not recommended to set interval higher than 1 sec.</p>
@@ -1288,8 +1288,8 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>When set to <i>false</i>, only interfaces with non-zero traffic will be reported. Note that the check is done by looking into whether a package was sent at any time from boot and the corresponding counter is non-zero. So, if the interface has been sending data in the past since boot, but not during the reported time-interval, it will still be reported. </dd>
 <p> The default value is <i>true</i> and results in collection of the data from all interfaces that are selected by <code>Interface</code> and <code>IgnoreSelected</code> options.</p>
 <dt><code>UniqueName</code> <i>true</i>|<i>false</i></dt>
-<dd>Interface name is not unique on Solaris (<font SIZE="-1">KSTAT</font>), interface name is unique only within a module/instance. Following tuple is considered unique:<br />
-(ks_module, ks_instance, ks_name) If this option is set to true, interface name contains above three fields separated by an underscore. For more info on <font SIZE="-1">KSTAT,</font> visit &lt;<a rel="nofollow" href="http://docs.oracle.com/cd/E23824_01/html/821-1468/kstat-3kstat.html#REFMAN3Ekstat-3kstat">http://docs.oracle.com/cd/E23824_01/html/821-1468/kstat-3kstat.html#REFMAN3Ekstat-3kstat</a>&gt; </dd>
+<dd>Interface name is not unique on Solaris (KSTAT), interface name is unique only within a module/instance. Following tuple is considered unique:<br/>
+(ks_module, ks_instance, ks_name) If this option is set to true, interface name contains above three fields separated by an underscore. For more info on KSTAT, visit &lt;<a rel="nofollow" href="http://docs.oracle.com/cd/E23824_01/html/821-1468/kstat-3kstat.html#REFMAN3Ekstat-3kstat">http://docs.oracle.com/cd/E23824_01/html/821-1468/kstat-3kstat.html#REFMAN3Ekstat-3kstat</a>&gt; </dd>
 <p> This option is only available on Solaris.</dl>
 <h3>Plugin ipmi</h3>
 <dl>
@@ -1332,12 +1332,12 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p>Available configuration options:</p>
 <dl>
 <dt><code>JVMArg</code> <i>Argument</i></dt>
-<dd>Argument that is to be passed to the <i>Java Virtual Machine</i> (<font SIZE="-1">JVM</font>). This works exactly the way the arguments to the <i>java</i> binary on the command line work. Execute <tt>&quot;java --help&quot;</tt> for details. </dd>
-<p> Please note that <code>all</code> these options must appear <code>before</code> (i. e. above) any other options! When another option is found, the <font SIZE="-1">JVM</font> will be started and later options will have to be ignored!</p>
+<dd>Argument that is to be passed to the <i>Java Virtual Machine</i> (JVM). This works exactly the way the arguments to the <i>java</i> binary on the command line work. Execute <tt>&quot;java --help&quot;</tt> for details. </dd>
+<p> Please note that <code>all</code> these options must appear <code>before</code> (i. e. above) any other options! When another option is found, the JVM will be started and later options will have to be ignored!</p>
 <dt><code>LoadPlugin</code> <i>JavaClass</i></dt>
 <dd>Instantiates a new <i>JavaClass</i> object. The constructor of this object very likely then registers one or more callback methods with the server. </dd>
 <p> See <i><a href="/docs/linux/man/5-collectd-java/">collectd-java</a></i>(5) for details. </p>
-<p> When the first such option is found, the virtual machine (<font SIZE="-1">JVM</font>) is created. This means that all <code>JVMArg</code> options must appear before (i. e. above) all <code>LoadPlugin</code> options!</p>
+<p> When the first such option is found, the virtual machine (JVM) is created. This means that all <code>JVMArg</code> options must appear before (i. e. above) all <code>LoadPlugin</code> options!</p>
 <dt><code>Plugin</code> <i>Name</i></dt>
 <dd>The entire block is passed to the Java plugin as an <i>org.collectd.api.OConfigItem</i> object. </dd>
 <p> For this to work, the plugin has to register a configuration callback first, see &#8220;config callback&#8221; in <i><a href="/docs/linux/man/5-collectd-java/">collectd-java</a></i>(5). This means, that the <code>Plugin</code> block must appear after the appropriate <code>LoadPlugin</code> block. Also note, that <i>Name</i> depends on the (Java) plugin registering the callback and is completely independent from the <i>JavaClass</i> argument passed to <code>LoadPlugin</code>.</dl>
@@ -1346,7 +1346,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> The following configuration options are available:</p>
 <dl>
 <dt><code>ReportRelative</code> <code>false</code>|<code>true</code></dt>
-<dd>When enabled, system load divided by number of available <font SIZE="-1">CPU</font> cores is reported for intervals 1 min, 5 min and 15 min. Defaults to false.</dd></dl>
+<dd>When enabled, system load divided by number of available CPU cores is reported for intervals 1 min, 5 min and 15 min. Defaults to false.</dd></dl>
 <h3>Plugin logfile</h3>
 <dl>
 <dt><code>LogLevel</code> <code>debug|info|notice|warning|err</code></dt>
@@ -1360,7 +1360,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>When enabled, all lines are prefixed by the severity of the log message, for example &#8220;warning&#8221;. Defaults to <code>false</code>.</dd></dl>
 <p> <code>Note</code>: There is no need to notify the daemon after moving or removing the log file (e. g. when rotating the logs). The plugin reopens the file for each line it writes.</p>
 <h3>Plugin log_logstash</h3>
-<p>The <i>log logstash plugin</i> behaves like the logfile plugin but formats messages as <font SIZE="-1">JSON</font> events for logstash to parse and input.</p>
+<p>The <i>log logstash plugin</i> behaves like the logfile plugin but formats messages as JSON events for logstash to parse and input.</p>
 <dl>
 <dt><code>LogLevel</code> <code>debug|info|notice|warning|err</code></dt>
 <dd>Sets the log-level. If, for example, set to <code>notice</code>, then all events with severity <code>notice</code>, <code>warning</code>, or <code>err</code> will be written to the logfile. </dd>
@@ -1369,7 +1369,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>Sets the file to write log messages to. The special strings <code>stdout</code> and <code>stderr</code> can be used to write to the standard output and standard error channels, respectively. This, of course, only makes much sense when <i>collectd</i> is running in foreground- or non-daemon-mode.</dd></dl>
 <p> <code>Note</code>: There is no need to notify the daemon after moving or removing the log file (e. g. when rotating the logs). The plugin reopens the file for each line it writes.</p>
 <h3>Plugin lpar</h3>
-<p>The <i></i><font SIZE="-1"><i>LPAR</i></font><i> plugin</i> reads <font SIZE="-1">CPU</font> statistics of <i>Logical Partitions</i>, a virtualization technique for <font SIZE="-1">IBM POWER</font> processors. It takes into account <font SIZE="-1">CPU</font> time stolen from or donated to a partition, in addition to the usual user, system, I/O statistics. </p>
+<p>The <i></i><i>LPAR</i><i> plugin</i> reads CPU statistics of <i>Logical Partitions</i>, a virtualization technique for IBM POWER processors. It takes into account CPU time stolen from or donated to a partition, in addition to the usual user, system, I/O statistics. </p>
 <p> The following configuration options are available:</p>
 <dl>
 <dt><code>CpuPoolStats</code> <code>false</code>|<code>true</code></dt>
@@ -1381,7 +1381,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <h3>Plugin mbmon</h3>
 <p>The <tt>&quot;mbmon plugin&quot;</tt> uses mbmon to retrieve temperature, voltage, etc. </p>
 <p> Be default collectd connects to <code>localhost</code> (127.0.0.1), port <code>411/tcp</code>. The <code>Host</code> and <code>Port</code> options can be used to change these values, see below. <tt>&quot;mbmon&quot;</tt> has to be running to work correctly. If <tt>&quot;mbmon&quot;</tt> is not running timeouts may appear which may interfere with other statistics.. </p>
-<p> <tt>&quot;mbmon&quot;</tt> must be run with the -r option (&#8220;print <font SIZE="-1">TAG</font> and Value format&#8221;); Debian&#8217;s <i>/etc/init.d/mbmon</i> script already does this, other people will need to ensure that this is the case.</p>
+<p> <tt>&quot;mbmon&quot;</tt> must be run with the -r option (&#8220;print TAG and Value format&#8221;); Debian&#8217;s <i>/etc/init.d/mbmon</i> script already does this, other people will need to ensure that this is the case.</p>
 <dl>
 <dt><code>Host</code> <i>Hostname</i></dt>
 <dd>Hostname to connect to. Defaults to <code>127.0.0.1</code>.</dd>
@@ -1435,13 +1435,13 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Host</code> <i>Hostname</i></dt>
 <dd>Sets the <code>host</code> field of dispatched values. Defaults to the global hostname setting. For backwards compatibility, values are also dispatched with the global hostname when <code>Host</code> is set to <code>127.0.0.1</code> or <code>localhost</code> and <code>Address</code> is not set.</dd>
 <dt><code>Address</code> <i>Address</i></dt>
-<dd>Hostname or <font SIZE="-1">IP</font> to connect to. For backwards compatibility, defaults to the value of <code>Host</code> or <code>127.0.0.1</code> if <code>Host</code> is unset.</dd>
+<dd>Hostname or IP to connect to. For backwards compatibility, defaults to the value of <code>Host</code> or <code>127.0.0.1</code> if <code>Host</code> is unset.</dd>
 <dt><code>Port</code> <i>Port</i></dt>
-<dd><font SIZE="-1">TCP</font> port to connect to. Defaults to <code>11211</code>.</dd>
+<dd>TCP port to connect to. Defaults to <code>11211</code>.</dd>
 <dt><code>Socket</code> <i>Path</i></dt>
-<dd>Connect to <i>memcached</i> using the <font SIZE="-1">UNIX</font> domain socket at <i>Path</i>. If this setting is given, the <code>Address</code> and <code>Port</code> settings are ignored.</dd></dl>
+<dd>Connect to <i>memcached</i> using the UNIX domain socket at <i>Path</i>. If this setting is given, the <code>Address</code> and <code>Port</code> settings are ignored.</dd></dl>
 <h3>Plugin mic</h3>
-<p>The <code>mic plugin</code> gathers <font SIZE="-1">CPU</font> statistics, memory usage and temperatures from Intel&#8217;s Many Integrated Core (<font SIZE="-1">MIC</font>) systems. </p>
+<p>The <code>mic plugin</code> gathers CPU statistics, memory usage and temperatures from Intel&#8217;s Many Integrated Core (MIC) systems. </p>
 <p> <code>Synopsis:</code> </p>
 <pre> &lt;Plugin mic&gt;
  ShowCPU true
@@ -1459,13 +1459,13 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p>The following options are valid inside the <code>Plugin mic</code> block:</p>
 <dl>
 <dt><code>ShowCPU</code> <code>true</code>|<code>false</code></dt>
-<dd>If enabled (the default) a sum of the <font SIZE="-1">CPU</font> usage across all cores is reported.</dd>
+<dd>If enabled (the default) a sum of the CPU usage across all cores is reported.</dd>
 <dt><code>ShowCPUCores</code> <code>true</code>|<code>false</code></dt>
-<dd>If enabled (the default) per-core <font SIZE="-1">CPU</font> usage is reported.</dd>
+<dd>If enabled (the default) per-core CPU usage is reported.</dd>
 <dt><code>ShowMemory</code> <code>true</code>|<code>false</code></dt>
-<dd>If enabled (the default) the physical memory usage of the <font SIZE="-1">MIC</font> system is reported.</dd>
+<dd>If enabled (the default) the physical memory usage of the MIC system is reported.</dd>
 <dt><code>ShowTemperatures</code> <code>true</code>|<code>false</code></dt>
-<dd>If enabled (the default) various temperatures of the <font SIZE="-1">MIC</font> system are reported.</dd>
+<dd>If enabled (the default) various temperatures of the MIC system are reported.</dd>
 <dt><code>Temperature</code> <i>Name</i></dt>
 <dd>This option controls which temperatures are being reported. Whether matching temperatures are being ignored or <i>only</i> matching temperatures are reported depends on the <code>IgnoreSelectedTemperature</code> setting below. By default <i>all</i> temperatures are reported.</dd>
 <dt><code>IgnoreSelectedTemperature</code> <code>false</code>|<code>true</code></dt>
@@ -1475,7 +1475,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>
 </dd><dl>
 <dt>die</dt>
-<dd>Die of the <font SIZE="-1">CPU</font></dd>
+<dd>Die of the CPU</dd>
 <dt>devmem</dt>
 <dd>Device Memory</dd>
 <dt>fin</dt>
@@ -1492,7 +1492,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dl>
 <dd></dd></dl>
 <dt><code>ShowPower</code> <code>true</code>|<code>false</code></dt>
-<dd>If enabled (the default) various temperatures of the <font SIZE="-1">MIC</font> system are reported.</dd>
+<dd>If enabled (the default) various temperatures of the MIC system are reported.</dd>
 <dt><code>Power</code> <i>Name</i></dt>
 <dd>This option controls which power readings are being reported. Whether matching power readings are being ignored or <i>only</i> matching power readings are reported depends on the <code>IgnoreSelectedPower</code> setting below. By default <i>all</i> power readings are reported.</dd>
 <dt><code>IgnoreSelectedPower</code> <code>false</code>|<code>true</code></dt>
@@ -1534,7 +1534,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>Enables or disables reporting of physical memory usage in percentages, e.g. percent of physical memory used. Defaults to <code>false</code>. </dd>
 <p> This is useful for deploying <i>collectd</i> in a heterogeneous environment in which the sizes of physical memory vary.</dl>
 <h3>Plugin modbus</h3>
-<p>The <code>modbus plugin</code> connects to a Modbus &#8220;slave&#8221; via Modbus/TCP or Modbus/RTU and reads register values. It supports reading single registers (unsigned 16 bit values), large integer values (unsigned 32 bit values) and floating point values (two registers interpreted as <font SIZE="-1">IEEE</font> floats in big endian notation). </p>
+<p>The <code>modbus plugin</code> connects to a Modbus &#8220;slave&#8221; via Modbus/TCP or Modbus/RTU and reads register values. It supports reading single registers (unsigned 16 bit values), large integer values (unsigned 32 bit values) and floating point values (two registers interpreted as IEEE floats in big endian notation). </p>
 <p> <code>Synopsis:</code> </p>
 <pre> &lt;Data &quot;voltage-input-1&quot;&gt;
  RegisterBase 0
@@ -1603,7 +1603,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>
 </dd><dl>
 <dt><code>Address</code> <i>Hostname</i></dt>
-<dd>For Modbus/TCP, specifies the node name (the actual network address) used to connect to the host. This may be an <font SIZE="-1">IP</font> address or a hostname. Please note that the used <i>libmodbus</i> library only supports IPv4 at the moment.</dd>
+<dd>For Modbus/TCP, specifies the node name (the actual network address) used to connect to the host. This may be an IP address or a hostname. Please note that the used <i>libmodbus</i> library only supports IPv4 at the moment.</dd>
 <dt><code>Port</code> <i>Service</i></dt>
 <dd>for Modbus/TCP, specifies the port used to connect to the host. The port can either be given as a number or as a service name. Please note that the <i>Service</i> argument must be a string, even if ports are given in their numerical form. Defaults to &#8220;502&#8221;.</dd>
 <dt><code>Device</code> <i>Devicenode</i></dt>
@@ -1612,14 +1612,14 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>For Modbus/RTU, specifies the baud rate of the serial device. Note, connections currently support only 8/N/1.</dd>
 <dt><code>Interval</code> <i>Interval</i></dt>
 <dd>Sets the interval (in seconds) in which the values will be collected from this host. By default the global <code>Interval</code> setting will be used.</dd>
-<dt>&lt;<code>Slave</code> <i></i><font SIZE="-1"><i>ID</i></font><i></i>&gt;</dt>
-<dd>Over each connection, multiple Modbus devices may be reached. The slave <font SIZE="-1">ID</font> is used to specify which device should be addressed. For each device you want to query, one <code>Slave</code> block must be given. </dd>
+<dt>&lt;<code>Slave</code> <i></i><i>ID</i><i></i>&gt;</dt>
+<dd>Over each connection, multiple Modbus devices may be reached. The slave ID is used to specify which device should be addressed. For each device you want to query, one <code>Slave</code> block must be given. </dd>
 <p> Within &lt;Slave&nbsp;<wbr>/&gt; blocks, the following options are allowed:</p>
 <dl>
 <dd>
 </dd><dl>
 <dt><code>Instance</code> <i>Instance</i></dt>
-<dd>Specify the plugin instance to use when dispatching the values to <i>collectd</i>. By default &quot;slave_<i></i><font SIZE="-1"><i>ID</i></font><i></i>&quot; is used.</dd>
+<dd>Specify the plugin instance to use when dispatching the values to <i>collectd</i>. By default &quot;slave_<i></i><i>ID</i><i></i>&quot; is used.</dd>
 <dt><code>Collect</code> <i>DataName</i></dt>
 <dd>Specifies which data to retrieve from the device. <i>DataName</i> must be the same string as the <i>Name</i> argument passed to a <code>Data</code> block. You can specify this option multiple times to collect more than one value from a slave. At least one <code>Collect</code> option is mandatory.</dd></dl>
 </dl>
@@ -1631,7 +1631,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd></dd></dl>
 </dl>
 <h3>Plugin mqtt</h3>
-<p>The <i></i><font SIZE="-1"><i>MQTT</i></font><i> plugin</i> can send metrics to <font SIZE="-1">MQTT </font>(<code>Publish</code> blocks) and receive values from <font SIZE="-1">MQTT </font>(<code>Subscribe</code> blocks). </p>
+<p>The <i></i><i>MQTT</i><i> plugin</i> can send metrics to MQTT (<code>Publish</code> blocks) and receive values from MQTT (<code>Subscribe</code> blocks). </p>
 <p> <code>Synopsis:</code> </p>
 <pre> &lt;Plugin mqtt&gt;
  &lt;Publish &quot;name&quot;&gt;
@@ -1647,15 +1647,15 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> <code>Options:</code></p>
 <dl>
 <dt><code>Host</code> <i>Hostname</i></dt>
-<dd>Hostname of the <font SIZE="-1">MQTT</font> broker to connect to.</dd>
+<dd>Hostname of the MQTT broker to connect to.</dd>
 <dt><code>Port</code> <i>Service</i></dt>
-<dd>Port number or service name of the <font SIZE="-1">MQTT</font> broker to connect to.</dd>
+<dd>Port number or service name of the MQTT broker to connect to.</dd>
 <dt><code>User</code> <i>UserName</i></dt>
-<dd>Username used when authenticating to the <font SIZE="-1">MQTT</font> broker.</dd>
+<dd>Username used when authenticating to the MQTT broker.</dd>
 <dt><code>Password</code> <i>Password</i></dt>
-<dd>Password used when authenticating to the <font SIZE="-1">MQTT</font> broker.</dd>
+<dd>Password used when authenticating to the MQTT broker.</dd>
 <dt><code>ClientId</code> <i>ClientId</i></dt>
-<dd><font SIZE="-1">MQTT</font> client <font SIZE="-1">ID</font> to use. Defaults to the hostname used by <i>collectd</i>.</dd>
+<dd>MQTT client ID to use. Defaults to the hostname used by <i>collectd</i>.</dd>
 <dt><code>QoS</code> [<code>0</code>&#8211;<code>2</code>]</dt>
 <dd>Sets the <i>Quality of Service</i>, with the values <tt>0</tt>, <tt>1</tt> and <tt>2</tt> meaning:</dd>
 <dl>
@@ -1675,27 +1675,27 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> An example topic name would be: </p>
 <pre> collectd/cpu-0/cpu-user</pre>
 <dt><code>Retain</code> <code>false</code>|<code>true</code> (Publish only)</dt>
-<dd>Controls whether the <font SIZE="-1">MQTT</font> broker will retain (keep a copy of) the last message sent to each topic and deliver it to new subscribers. Defaults to <code>false</code>.</dd>
+<dd>Controls whether the MQTT broker will retain (keep a copy of) the last message sent to each topic and deliver it to new subscribers. Defaults to <code>false</code>.</dd>
 <dt><code>StoreRates</code> <code>true</code>|<code>false</code> (Publish only)</dt>
 <dd>Controls whether <tt>&quot;DERIVE&quot;</tt> and <tt>&quot;COUNTER&quot;</tt> metrics are converted to a <i>rate</i> before sending. Defaults to <code>true</code>.</dd>
 <dt><code>CleanSession</code> <code>true</code>|<code>false</code> (Subscribe only)</dt>
-<dd>Controls whether the <font SIZE="-1">MQTT </font>&#8220;cleans&#8221; the session up after the subscriber disconnects or if it maintains the subscriber&#8217;s subscriptions and all messages that arrive while the subscriber is disconnected. Defaults to <code>true</code>.</dd>
+<dd>Controls whether the MQTT &#8220;cleans&#8221; the session up after the subscriber disconnects or if it maintains the subscriber&#8217;s subscriptions and all messages that arrive while the subscriber is disconnected. Defaults to <code>true</code>.</dd>
 <dt><code>Topic</code> <i>TopicName</i> (Subscribe only)</dt>
 <dd>Configures the topic(s) to subscribe to. You can use the single level <tt>&quot;+&quot;</tt> and multi level <tt>&quot;#&quot;</tt> wildcards. Defaults to <code>collectd/#</code>, i.e. all topics beneath the <code>collectd</code> branch.</dd>
 <dt><code>CACert</code> <i>file</i></dt>
-<dd>Path to the PEM-encoded <font SIZE="-1">CA</font> certificate file. Setting this option enables <font SIZE="-1">TLS</font> communication with the <font SIZE="-1">MQTT</font> broker, and as such, <code>Port</code> should be the TLS-enabled port of the <font SIZE="-1">MQTT</font> broker. A valid <font SIZE="-1">TLS</font> configuration requires <code>CACert</code>, <code>CertificateFile</code> and <code>CertificateKeyFile</code>.</dd>
+<dd>Path to the PEM-encoded CA certificate file. Setting this option enables TLS communication with the MQTT broker, and as such, <code>Port</code> should be the TLS-enabled port of the MQTT broker. A valid TLS configuration requires <code>CACert</code>, <code>CertificateFile</code> and <code>CertificateKeyFile</code>.</dd>
 <dt><code>CertificateFile</code> <i>file</i></dt>
-<dd>Path to the PEM-encoded certificate file to use as client certificate when connecting to the <font SIZE="-1">MQTT</font> broker. A valid <font SIZE="-1">TLS</font> configuration requires <code>CACert</code>, <code>CertificateFile</code> and <code>CertificateKeyFile</code>.</dd>
+<dd>Path to the PEM-encoded certificate file to use as client certificate when connecting to the MQTT broker. A valid TLS configuration requires <code>CACert</code>, <code>CertificateFile</code> and <code>CertificateKeyFile</code>.</dd>
 <dt><code>CertificateKeyFile</code> <i>file</i></dt>
-<dd>Path to the unencrypted PEM-encoded key file corresponding to <code>CertificateFile</code>. A valid <font SIZE="-1">TLS</font> configuration requires <code>CACert</code>, <code>CertificateFile</code> and <code>CertificateKeyFile</code>.</dd>
+<dd>Path to the unencrypted PEM-encoded key file corresponding to <code>CertificateFile</code>. A valid TLS configuration requires <code>CACert</code>, <code>CertificateFile</code> and <code>CertificateKeyFile</code>.</dd>
 <dt><code>TLSProtocol</code> <i>protocol</i></dt>
-<dd>If configured, this specifies the string protocol version (e.g. <tt>&quot;tlsv1&quot;</tt>, <tt>&quot;tlsv1.2&quot;</tt>) to use for the <font SIZE="-1">TLS</font> connection to the broker. If not set a default version is used which depends on the version of OpenSSL the Mosquitto library was linked against.</dd>
+<dd>If configured, this specifies the string protocol version (e.g. <tt>&quot;tlsv1&quot;</tt>, <tt>&quot;tlsv1.2&quot;</tt>) to use for the TLS connection to the broker. If not set a default version is used which depends on the version of OpenSSL the Mosquitto library was linked against.</dd>
 <dt><code>CipherSuite</code> <i>ciphersuite</i></dt>
 <dd>A string describing the ciphers available for use. See <i>ciphers</i>(1) and the <tt>&quot;openssl ciphers&quot;</tt> utility for more information. If unset, the default ciphers will be used.</dd></dl>
 <h3>Plugin mysql</h3>
 <p>The <tt>&quot;mysql plugin&quot;</tt> requires <code>mysqlclient</code> to be installed. It connects to one or more databases when started and keeps the connection up as long as possible. When the connection is interrupted for whatever reason it will try to re-connect. The plugin will complain loudly in case anything goes wrong. </p>
 <p> This plugin issues the MySQL <tt>&quot;SHOW STATUS&quot;</tt> / <tt>&quot;SHOW GLOBAL STATUS&quot;</tt> command and collects information about MySQL network traffic, executed statements, requests, the query cache and threads by evaluating the <tt>&quot;Bytes_{received,sent}&quot;</tt>, <tt>&quot;Com_*&quot;</tt>, <tt>&quot;Handler_*&quot;</tt>, <tt>&quot;Qcache_*&quot;</tt> and <tt>&quot;Threads_*&quot;</tt> return values. Please refer to the <code>MySQL reference manual</code>, <i>5.1.6. Server Status Variables</i> for an explanation of these values. </p>
-<p> Optionally, master and slave statistics may be collected in a MySQL replication setup. In that case, information about the synchronization state of the nodes are collected by evaluating the <tt>&quot;Position&quot;</tt> return value of the <tt>&quot;SHOW MASTER STATUS&quot;</tt> command and the <tt>&quot;Seconds_Behind_Master&quot;</tt>, <tt>&quot;Read_Master_Log_Pos&quot;</tt> and <tt>&quot;Exec_Master_Log_Pos&quot;</tt> return values of the <tt>&quot;SHOW SLAVE STATUS&quot;</tt> command. See the <code>MySQL reference manual</code>, <i>12.5.5.21 </i><font SIZE="-1"><i>SHOW MASTER STATUS</i></font><i> Syntax</i> and <i>12.5.5.31 </i><font SIZE="-1"><i>SHOW SLAVE STATUS</i></font><i> Syntax</i> for details. </p>
+<p> Optionally, master and slave statistics may be collected in a MySQL replication setup. In that case, information about the synchronization state of the nodes are collected by evaluating the <tt>&quot;Position&quot;</tt> return value of the <tt>&quot;SHOW MASTER STATUS&quot;</tt> command and the <tt>&quot;Seconds_Behind_Master&quot;</tt>, <tt>&quot;Read_Master_Log_Pos&quot;</tt> and <tt>&quot;Exec_Master_Log_Pos&quot;</tt> return values of the <tt>&quot;SHOW SLAVE STATUS&quot;</tt> command. See the <code>MySQL reference manual</code>, <i>12.5.5.21 </i><i>SHOW MASTER STATUS</i><i> Syntax</i> and <i>12.5.5.31 </i><i>SHOW SLAVE STATUS</i><i> Syntax</i> for details. </p>
 <p> Synopsis: </p>
 <pre> &lt;Plugin mysql&gt;
  &lt;Database foo&gt;
@@ -1742,7 +1742,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <pre> Port &quot;3306&quot;</pre>
 <p>If <code>Host</code> is set to <code>localhost</code> (the default), this setting has no effect. See the documentation for the <tt>&quot;mysql_real_connect&quot;</tt> function for details.</p>
 <dt><code>Socket</code> <i>Socket</i></dt>
-<dd>Specifies the path to the <font SIZE="-1">UNIX</font> domain socket of the MySQL server. This option only has any effect, if <code>Host</code> is set to <code>localhost</code> (the default). Otherwise, use the <code>Port</code> option above. See the documentation for the <tt>&quot;mysql_real_connect&quot;</tt> function for details.</dd>
+<dd>Specifies the path to the UNIX domain socket of the MySQL server. This option only has any effect, if <code>Host</code> is set to <code>localhost</code> (the default). Otherwise, use the <code>Port</code> option above. See the documentation for the <tt>&quot;mysql_real_connect&quot;</tt> function for details.</dd>
 <dt><code>InnodbStats</code> <i>true|false</i></dt>
 <dd>If enabled, metrics about the InnoDB storage engine are collected. Disabled by default.</dd>
 <dt><code>MasterStats</code> <i>true|false</i></dt>
@@ -1750,7 +1750,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dd><dt><code>SlaveStats</code> <i>true|false</i></dt>
 <dd>Enable the collection of master / slave statistics in a replication setup. In order to be able to get access to these statistics, the user needs special privileges. See the <code>User</code> documentation above. Defaults to <code>false</code>.</dd>
 <dt><code>SlaveNotifications</code> <i>true|false</i></dt>
-<dd>If enabled, the plugin sends a notification if the replication slave I/O and / or <font SIZE="-1">SQL</font> threads are not running. Defaults to <code>false</code>.</dd>
+<dd>If enabled, the plugin sends a notification if the replication slave I/O and / or SQL threads are not running. Defaults to <code>false</code>.</dd>
 <dt><code>WsrepStats</code> <i>true|false</i></dt>
 <dd>
 <pre> Enable the collection of wsrep plugin statistics, used in Master-Master
@@ -1759,19 +1759,19 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dd><dt><code>ConnectTimeout</code> <i>Seconds</i></dt>
 <dd>Sets the connect timeout for the MySQL client.</dd>
 <dt><code>SSLKey</code> <i>Path</i></dt>
-<dd>If provided, the X509 key in <font SIZE="-1">PEM</font> format.</dd>
+<dd>If provided, the X509 key in PEM format.</dd>
 <dt><code>SSLCert</code> <i>Path</i></dt>
-<dd>If provided, the X509 cert in <font SIZE="-1">PEM</font> format.</dd>
-<dt><font SIZE="-1"><code>SSLCA</code></font> <i>Path</i></dt>
-<dd>If provided, the <font SIZE="-1">CA</font> file in <font SIZE="-1">PEM</font> format (check OpenSSL docs).</dd>
+<dd>If provided, the X509 cert in PEM format.</dd>
+<dt><code>SSLCA</code> <i>Path</i></dt>
+<dd>If provided, the CA file in PEM format (check OpenSSL docs).</dd>
 <dt><code>SSLCAPath</code> <i>Path</i></dt>
-<dd>If provided, the <font SIZE="-1">CA</font> directory (check OpenSSL docs).</dd>
+<dd>If provided, the CA directory (check OpenSSL docs).</dd>
 <dt><code>SSLCipher</code> <i>String</i></dt>
-<dd>If provided, the <font SIZE="-1">SSL</font> cipher to use.</dd></dl>
+<dd>If provided, the SSL cipher to use.</dd></dl>
 <h3>Plugin netapp</h3>
-<p>The netapp plugin can collect various performance and capacity information from a NetApp filer using the NetApp <font SIZE="-1">API.</font> </p>
-<p> Please note that NetApp has a wide line of products and a lot of different software versions for each of these products. This plugin was developed for a NetApp <font SIZE="-1">FAS3040</font> running OnTap 7.2.3P8 and tested on <font SIZE="-1">FAS2050 7.3.1.1L1, FAS3140 7.2.5.1</font> and <font SIZE="-1">FAS3020 7.2.4P9.</font> It <i>should</i> work for most combinations of model and software version but it is very hard to test this. If you have used this plugin with other models and/or software version, feel free to send us a mail to tell us about the results, even if it&#8217;s just a short &#8220;It works&#8221;. </p>
-<p> To collect these data collectd will log in to the NetApp via <font SIZE="-1">HTTP</font>(S) and <font SIZE="-1">HTTP</font> basic authentication. </p>
+<p>The netapp plugin can collect various performance and capacity information from a NetApp filer using the NetApp API. </p>
+<p> Please note that NetApp has a wide line of products and a lot of different software versions for each of these products. This plugin was developed for a NetApp FAS3040 running OnTap 7.2.3P8 and tested on FAS2050 7.3.1.1L1, FAS3140 7.2.5.1 and FAS3020 7.2.4P9. It <i>should</i> work for most combinations of model and software version but it is very hard to test this. If you have used this plugin with other models and/or software version, feel free to send us a mail to tell us about the results, even if it&#8217;s just a short &#8220;It works&#8221;. </p>
+<p> To collect these data collectd will log in to the NetApp via HTTP(S) and HTTP basic authentication. </p>
 <p> <code>Do not use a regular user for this!</code> Create a special collectd user with just the minimum of capabilities needed. The user only needs the &#8220;login-http-admin&#8221; capability as well as a few more depending on which data will be collected. Required capabilities are documented below. </p>
 <p> <i>Synopsis</i> </p>
 <pre> &lt;Plugin &quot;netapp&quot;&gt;
@@ -1836,7 +1836,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Host</code> <i>Name</i></dt>
 <dd>A host block defines one NetApp filer. It will appear in collectd with the name you specify here which does not have to be its real name nor its hostname (see the <code>Address</code> option below).</dd>
 <dt><code>VFiler</code> <i>Name</i></dt>
-<dd>A <code>VFiler</code> block may only be used inside a host block. It accepts all the same options as the <code>Host</code> block (except for cascaded <code>VFiler</code> blocks) and will execute all NetApp <font SIZE="-1">API</font> commands in the context of the specified VFiler(R). It will appear in collectd with the name you specify here which does not have to be its real name. The VFiler name may be specified using the <code>VFilerName</code> option. If this is not specified, it will default to the name you specify here. </dd>
+<dd>A <code>VFiler</code> block may only be used inside a host block. It accepts all the same options as the <code>Host</code> block (except for cascaded <code>VFiler</code> blocks) and will execute all NetApp API commands in the context of the specified VFiler(R). It will appear in collectd with the name you specify here which does not have to be its real name. The VFiler name may be specified using the <code>VFilerName</code> option. If this is not specified, it will default to the name you specify here. </dd>
 <p> The VFiler block inherits all connection related settings from the surrounding <code>Host</code> block (which appear before the <code>VFiler</code> block) but they may be overwritten inside the <code>VFiler</code> block. </p>
 <p> This feature is useful, for example, when using a VFiler as SnapVault target (supported since OnTap 8.1). In that case, the SnapVault statistics are not available in the host filer (vfiler0) but only in the respective VFiler context.</p>
 <dt><code>Protocol</code> <code>httpd</code>|<code>http</code></dt>
@@ -1846,12 +1846,12 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> Default: https </p>
 <p> Valid options: http, https</p>
 <dt><code>Address</code> <i>Address</i></dt>
-<dd>The hostname or <font SIZE="-1">IP</font> address of the host. </dd>
+<dd>The hostname or IP address of the host. </dd>
 <p> Optional </p>
 <p> Type: string </p>
 <p> Default: The &#8220;host&#8221; block&#8217;s name.</p>
 <dt><code>Port</code> <i>Port</i></dt>
-<dd>The <font SIZE="-1">TCP</font> port to connect to on the host. </dd>
+<dd>The TCP port to connect to on the host. </dd>
 <p> Optional </p>
 <p> Type: integer </p>
 <p> Default: 80 for protocol &#8220;http&#8221;, 443 for protocol &#8220;https&#8221;</p>
@@ -1862,13 +1862,13 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> Mandatory </p>
 <p> Type: string</p>
 <dt><code>VFilerName</code> <i>Name</i></dt>
-<dd>The name of the VFiler in which context to execute <font SIZE="-1">API</font> commands. If not specified, the name provided to the <code>VFiler</code> block will be used instead. </dd>
+<dd>The name of the VFiler in which context to execute API commands. If not specified, the name provided to the <code>VFiler</code> block will be used instead. </dd>
 <p> Optional </p>
 <p> Type: string </p>
 <p> Default: name of the <code>VFiler</code> block </p>
 <p> <code>Note:</code> This option may only be used inside <code>VFiler</code> blocks.</p>
 <dt><code>Interval</code> <i>Interval</i></dt>
-<dd><font SIZE="-1"><code>TODO</code></font></dd></dl>
+<dd><code>TODO</code></dd></dl>
 <p> The following options decide what kind of data will be collected. You can either use them as a block and fine tune various parameters inside this block, use them as a single statement to just accept all default values, or omit it to not collect any data. </p>
 <p> The following options are valid inside all blocks:</p>
 <dl>
@@ -1881,36 +1881,36 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Interval</code> <i>Seconds</i></dt>
 <dd>Collect disk statistics every <i>Seconds</i> seconds.</dd>
 <dt><code>GetCPULoad</code> <code>true</code>|<code>false</code></dt>
-<dd>If you set this option to true the current <font SIZE="-1">CPU</font> usage will be read. This will be the average usage between all CPUs in your NetApp without any information about individual CPUs. </dd>
-<p> <code>Note:</code> These are the same values that the NetApp <font SIZE="-1">CLI</font> command &#8220;sysstat&#8221; returns in the &#8220;<font SIZE="-1">CPU&#8221;</font> field. </p>
+<dd>If you set this option to true the current CPU usage will be read. This will be the average usage between all CPUs in your NetApp without any information about individual CPUs. </dd>
+<p> <code>Note:</code> These are the same values that the NetApp CLI command &#8220;sysstat&#8221; returns in the &#8220;CPU&#8221; field. </p>
 <p> Optional </p>
 <p> Type: boolean </p>
 <p> Default: true </p>
 <p> Result: Two value lists of type &#8220;cpu&#8221;, and type instances &#8220;idle&#8221; and &#8220;system&#8221;.</p>
 <dt><code>GetInterfaces</code> <code>true</code>|<code>false</code></dt>
 <dd>If you set this option to true the current traffic of the network interfaces will be read. This will be the total traffic over all interfaces of your NetApp without any information about individual interfaces. </dd>
-<p> <code>Note:</code> This is the same values that the NetApp <font SIZE="-1">CLI</font> command &#8220;sysstat&#8221; returns in the &#8220;Net kB/s&#8221; field. </p>
+<p> <code>Note:</code> This is the same values that the NetApp CLI command &#8220;sysstat&#8221; returns in the &#8220;Net kB/s&#8221; field. </p>
 <p> <code>Or is it?</code> </p>
 <p> Optional </p>
 <p> Type: boolean </p>
 <p> Default: true </p>
 <p> Result: One value list of type &#8220;if_octects&#8221;.</p>
 <dt><code>GetDiskIO</code> <code>true</code>|<code>false</code></dt>
-<dd>If you set this option to true the current <font SIZE="-1">IO</font> throughput will be read. This will be the total <font SIZE="-1">IO</font> of your NetApp without any information about individual disks, volumes or aggregates. </dd>
-<p> <code>Note:</code> This is the same values that the NetApp <font SIZE="-1">CLI</font> command &#8220;sysstat&#8221; returns in the &#8220;Disk kB/s&#8221; field. </p>
+<dd>If you set this option to true the current IO throughput will be read. This will be the total IO of your NetApp without any information about individual disks, volumes or aggregates. </dd>
+<p> <code>Note:</code> This is the same values that the NetApp CLI command &#8220;sysstat&#8221; returns in the &#8220;Disk kB/s&#8221; field. </p>
 <p> Optional </p>
 <p> Type: boolean </p>
 <p> Default: true </p>
 <p> Result: One value list of type &#8220;disk_octets&#8221;.</p>
 <dt><code>GetDiskOps</code> <code>true</code>|<code>false</code></dt>
-<dd>If you set this option to true the current number of <font SIZE="-1">HTTP, NFS, CIFS, FCP,</font> iSCSI, etc. operations will be read. This will be the total number of operations on your NetApp without any information about individual volumes or aggregates. </dd>
-<p> <code>Note:</code> These are the same values that the NetApp <font SIZE="-1">CLI</font> command &#8220;sysstat&#8221; returns in the &#8220;<font SIZE="-1">NFS&#8221;, &#8220;CIFS&#8221;, &#8220;HTTP&#8221;, &#8220;FCP&#8221;</font> and &#8220;iSCSI&#8221; fields. </p>
+<dd>If you set this option to true the current number of HTTP, NFS, CIFS, FCP, iSCSI, etc. operations will be read. This will be the total number of operations on your NetApp without any information about individual volumes or aggregates. </dd>
+<p> <code>Note:</code> These are the same values that the NetApp CLI command &#8220;sysstat&#8221; returns in the &#8220;NFS&#8221;, &#8220;CIFS&#8221;, &#8220;HTTP&#8221;, &#8220;FCP&#8221; and &#8220;iSCSI&#8221; fields. </p>
 <p> Optional </p>
 <p> Type: boolean </p>
 <p> Default: true </p>
 <p> Result: A variable number of value lists of type &#8220;disk_ops_complex&#8221;. Each type of operation will result in one value list with the name of the operation as type instance.</dl>
-<p> <i>The </i><font SIZE="-1"><i>WAFL</i></font><i> block</i> </p>
-<p> This will collect various performance data about the <font SIZE="-1">WAFL</font> file system. At the moment this just means cache performance. </p>
+<p> <i>The </i><i>WAFL</i><i> block</i> </p>
+<p> This will collect various performance data about the WAFL file system. At the moment this just means cache performance. </p>
 <p> <code>Note:</code> To get this data the collectd user needs the &#8220;api-perf-object-get-instances&#8221; capability. </p>
 <p> <code>Note:</code> The interface to get these values is classified as &#8220;Diagnostics&#8221; by NetApp. This means that it is not guaranteed to be stable even between minor releases.</p>
 <dl>
@@ -1932,7 +1932,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> Default: true </p>
 <p> Result: One value list of type &#8220;cache_ratio&#8221; and type instance &#8220;inode_cache_hit&#8221;.</p>
 <dt><code>GetBufferCache</code> <code>true</code>|<code>false</code></dt>
-<dd><code>Note:</code> This is the same value that the NetApp <font SIZE="-1">CLI</font> command &#8220;sysstat&#8221; returns in the &#8220;Cache hit&#8221; field. </dd>
+<dd><code>Note:</code> This is the same value that the NetApp CLI command &#8220;sysstat&#8221; returns in the &#8220;Cache hit&#8221; field. </dd>
 <p> Optional </p>
 <p> Type: boolean </p>
 <p> Default: true </p>
@@ -1945,7 +1945,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>Collect disk statistics every <i>Seconds</i> seconds.</dd>
 <dt><code>GetBusy</code> <code>true</code>|<code>false</code></dt>
 <dd>If you set this option to true the busy time of all disks will be calculated and the value of the busiest disk in the system will be written. </dd>
-<p> <code>Note:</code> This is the same values that the NetApp <font SIZE="-1">CLI</font> command &#8220;sysstat&#8221; returns in the &#8220;Disk util&#8221; field. Probably. </p>
+<p> <code>Note:</code> This is the same values that the NetApp CLI command &#8220;sysstat&#8221; returns in the &#8220;Disk util&#8221; field. Probably. </p>
 <p> Optional </p>
 <p> Type: boolean </p>
 <p> Default: true </p>
@@ -1962,7 +1962,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dd><dt><code>GetOps</code> <i>Volume</i></dt>
 <dd>
 </dd><dt><code>GetLatency</code> <i>Volume</i></dt>
-<dd>Select the given volume for <font SIZE="-1">IO,</font> operations or latency statistics collection. The argument is the name of the volume without the <tt>&quot;/vol/&quot;</tt> prefix. </dd>
+<dd>Select the given volume for IO, operations or latency statistics collection. The argument is the name of the volume without the <tt>&quot;/vol/&quot;</tt> prefix. </dd>
 <p> Since the standard ignorelist functionality is used here, you can use a string starting and ending with a slash to specify regular expression matching: To match the volumes &#8220;vol0&#8221;, &#8220;vol2&#8221; and &#8220;vol7&#8221;, you can use this regular expression: </p>
 <pre> GetIO &quot;/^vol[027]$/&quot;</pre>
 <p>If no regular expression is specified, an exact match is required. Both, regular and exact matching are case sensitive. </p>
@@ -1972,7 +1972,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dd><dt><code>IgnoreSelectedOps</code> <code>true</code>|<code>false</code></dt>
 <dd>
 </dd><dt><code>IgnoreSelectedLatency</code> <code>true</code>|<code>false</code></dt>
-<dd>When set to <code>true</code>, the volumes selected for <font SIZE="-1">IO,</font> operations or latency statistics collection will be ignored and the data will be collected for all other volumes. </dd>
+<dd>When set to <code>true</code>, the volumes selected for IO, operations or latency statistics collection will be ignored and the data will be collected for all other volumes. </dd>
 <p> When set to <code>false</code>, data will only be collected for the specified volumes and all other volumes will be ignored. </p>
 <p> If no volumes have been specified with the above <code>Get*</code> options, all volumes will be collected regardless of the <code>IgnoreSelected*</code> option. </p>
 <p> Defaults to <code>false</code></dl>
@@ -1984,8 +1984,8 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>Collect volume usage statistics every <i>Seconds</i> seconds.</dd>
 <dt><code>GetCapacity</code> <i>VolumeName</i></dt>
 <dd>The current capacity of the volume will be collected. This will result in two to four value lists, depending on the configuration of the volume. All data sources are of type &#8220;df_complex&#8221; with the name of the volume as plugin_instance. </dd>
-<p> There will be type_instances &#8220;used&#8221; and &#8220;free&#8221; for the number of used and available bytes on the volume. If the volume has some space reserved for snapshots, a type_instance &#8220;snap_reserved&#8221; will be available. If the volume has <font SIZE="-1">SIS</font> enabled, a type_instance &#8220;sis_saved&#8221; will be available. This is the number of bytes saved by the <font SIZE="-1">SIS</font> feature. </p>
-<p> <code>Note:</code> The current NetApp <font SIZE="-1">API</font> has a bug that results in this value being reported as a 32 bit number. This plugin tries to guess the correct number which works most of the time. If you see strange values here, bug NetApp support to fix this. </p>
+<p> There will be type_instances &#8220;used&#8221; and &#8220;free&#8221; for the number of used and available bytes on the volume. If the volume has some space reserved for snapshots, a type_instance &#8220;snap_reserved&#8221; will be available. If the volume has SIS enabled, a type_instance &#8220;sis_saved&#8221; will be available. This is the number of bytes saved by the SIS feature. </p>
+<p> <code>Note:</code> The current NetApp API has a bug that results in this value being reported as a 32 bit number. This plugin tries to guess the correct number which works most of the time. If you see strange values here, bug NetApp support to fix this. </p>
 <p> Repeat this option to specify multiple volumes.</p>
 <dt><code>IgnoreSelectedCapacity</code> <code>true</code>|<code>false</code></dt>
 <dd>Specify whether to collect only the volumes selected by the <code>GetCapacity</code> option or to ignore those volumes. <code>IgnoreSelectedCapacity</code> defaults to <code>false</code>. However, if no <code>GetCapacity</code> option is specified at all, all capacities will be selected anyway.</dd>
@@ -2016,7 +2016,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dd><dt><code>VerboseInterface</code> <i>Interface</i></dt>
 <dd>Instruct the plugin to collect interface statistics. This is basically the same as the statistics provided by the <tt>&quot;interface&quot;</tt> plugin (see above) but potentially much more detailed. </dd>
 <p> When configuring with <code>Interface</code> only the basic statistics will be collected, namely octets, packets, and errors. These statistics are collected by the <tt>&quot;interface&quot;</tt> plugin, too, so using both at the same time is no benefit. </p>
-<p> When configured with <code>VerboseInterface</code> all counters <code>except</code> the basic ones, so that no data needs to be collected twice if you use the <tt>&quot;interface&quot;</tt> plugin. This includes dropped packets, received multicast packets, collisions and a whole zoo of differentiated <font SIZE="-1">RX</font> and <font SIZE="-1">TX</font> errors. You can try the following command to get an idea of what awaits you: </p>
+<p> When configured with <code>VerboseInterface</code> all counters <code>except</code> the basic ones, so that no data needs to be collected twice if you use the <tt>&quot;interface&quot;</tt> plugin. This includes dropped packets, received multicast packets, collisions and a whole zoo of differentiated RX and TX errors. You can try the following command to get an idea of what awaits you: </p>
 <pre> ip -s -s link list</pre>
 <p>If <i>Interface</i> is <code>All</code>, all interfaces will be selected.</p>
 <dt><code>QDisc</code> <i>Interface</i> [<i>QDisc</i>]</dt>
@@ -2041,7 +2041,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>The behavior is the same as with all other similar plugins: If nothing is selected at all, everything is collected. If some things are selected using the options described above, only these statistics are collected. If you set <code>IgnoreSelected</code> to <code>true</code>, this behavior is inverted, i. e. the specified statistics will not be collected.</dd></dl>
 <h3>Plugin network</h3>
 <p>The Network plugin sends data to a remote instance of collectd, receives data from a remote instance, or both at the same time. Data which has been received from the network is usually not transmitted again, but this can be activated, see the <code>Forward</code> option below. </p>
-<p> The default IPv6 multicast group is <tt>&quot;ff18::efc0:4a42&quot;</tt>. The default IPv4 multicast group is <tt>239.192.74.66</tt>. The default <i></i><font SIZE="-1"><i>UDP</i></font><i></i> port is <code>25826</code>. </p>
+<p> The default IPv6 multicast group is <tt>&quot;ff18::efc0:4a42&quot;</tt>. The default IPv4 multicast group is <tt>239.192.74.66</tt>. The default <i></i><i>UDP</i><i></i> port is <code>25826</code>. </p>
 <p> Both, <code>Server</code> and <code>Listen</code> can be used as single option or as block. When used as block, given options are valid for this socket only. The following example will export the metrics twice: Once to an &#8220;internal&#8221; server (without encryption and signing) and one to an external server (with cryptographic signature): </p>
 <pre> &lt;Plugin &quot;network&quot;&gt;
  # Export to an internal server
@@ -2064,7 +2064,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>
 </dd><dl>
 <dt><code>SecurityLevel</code> <code>Encrypt</code>|<code>Sign</code>|<code>None</code></dt>
-<dd>Set the security you require for network communication. When the security level has been set to <code>Encrypt</code>, data sent over the network will be encrypted using <i></i><font SIZE="-1"><i>AES-256</i></font><i></i>. The integrity of encrypted packets is ensured using <i></i><font SIZE="-1"><i>SHA-1</i></font><i></i>. When set to <code>Sign</code>, transmitted data is signed using the <i></i><font SIZE="-1"><i>HMAC-SHA-256</i></font><i></i> message authentication code. When set to <code>None</code>, data is sent without any security. </dd>
+<dd>Set the security you require for network communication. When the security level has been set to <code>Encrypt</code>, data sent over the network will be encrypted using <i></i><i>AES-256</i><i></i>. The integrity of encrypted packets is ensured using <i></i><i>SHA-1</i><i></i>. When set to <code>Sign</code>, transmitted data is signed using the <i></i><i>HMAC-SHA-256</i><i></i> message authentication code. When set to <code>None</code>, data is sent without any security. </dd>
 <p> This feature is only available if the <i>network</i> plugin was linked with <i>libgcrypt</i>.</p>
 <dt><code>Username</code> <i>Username</i></dt>
 <dd>Sets the username to transmit. This is used by the server to lookup the password. See <code>AuthFile</code> below. All security levels except <code>None</code> require this setting. </dd>
@@ -2073,9 +2073,9 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>Sets a password (shared secret) for this socket. All security levels except <code>None</code> require this setting. </dd>
 <p> This feature is only available if the <i>network</i> plugin was linked with <i>libgcrypt</i>.</p>
 <dt><code>Interface</code> <i>Interface name</i></dt>
-<dd>Set the outgoing interface for <font SIZE="-1">IP</font> packets. This applies at least to IPv6 packets and if possible to IPv4. If this option is not applicable, undefined or a non-existent interface name is specified, the default behavior is to let the kernel choose the appropriate interface. Be warned that the manual selection of an interface for unicast traffic is only necessary in rare cases.</dd>
+<dd>Set the outgoing interface for IP packets. This applies at least to IPv6 packets and if possible to IPv4. If this option is not applicable, undefined or a non-existent interface name is specified, the default behavior is to let the kernel choose the appropriate interface. Be warned that the manual selection of an interface for unicast traffic is only necessary in rare cases.</dd>
 <dt><code>ResolveInterval</code> <i>Seconds</i></dt>
-<dd>Sets the interval at which to re-resolve the <font SIZE="-1">DNS</font> for the <i>Host</i>. This is useful to force a regular <font SIZE="-1">DNS</font> lookup to support a high availability setup. If not specified, re-resolves are never attempted.</dd></dl>
+<dd>Sets the interval at which to re-resolve the DNS for the <i>Host</i>. This is useful to force a regular DNS lookup to support a high availability setup. If not specified, re-resolves are never attempted.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
@@ -2087,7 +2087,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>
 </dd><dl>
 <dt><code>SecurityLevel</code> <code>Encrypt</code>|<code>Sign</code>|<code>None</code></dt>
-<dd>Set the security you require for network communication. When the security level has been set to <code>Encrypt</code>, only encrypted data will be accepted. The integrity of encrypted packets is ensured using <i></i><font SIZE="-1"><i>SHA-1</i></font><i></i>. When set to <code>Sign</code>, only signed and encrypted data is accepted. When set to <code>None</code>, all data will be accepted. If an <code>AuthFile</code> option was given (see below), encrypted data is decrypted if possible. </dd>
+<dd>Set the security you require for network communication. When the security level has been set to <code>Encrypt</code>, only encrypted data will be accepted. The integrity of encrypted packets is ensured using <i></i><i>SHA-1</i><i></i>. When set to <code>Sign</code>, only signed and encrypted data is accepted. When set to <code>None</code>, all data will be accepted. If an <code>AuthFile</code> option was given (see below), encrypted data is decrypted if possible. </dd>
 <p> This feature is only available if the <i>network</i> plugin was linked with <i>libgcrypt</i>.</p>
 <dt><code>AuthFile</code> <i>Filename</i></dt>
 <dd>Sets a file in which usernames are mapped to passwords. These passwords are used to verify signatures and to decrypt encrypted network packets. If <code>SecurityLevel</code> is set to <code>None</code>, this is optional. If given, signed data is verified and encrypted packets are decrypted. Otherwise, signed data is accepted without checking the signature and encrypted data cannot be decrypted. For the other security levels this option is mandatory. </dd>
@@ -2096,14 +2096,14 @@ description: "collectd.conf – Configuration for the system statistics collecti
  user1: bar</pre>
 <p>Each time a packet is received, the modification time of the file is checked using <i><a href="/docs/linux/man/2-stat/">stat</a></i>(2). If the file has been changed, the contents is re-read. While the file is being read, it is locked using <i><a href="/docs/linux/man/2-fcntl/">fcntl</a></i>(2).</p>
 <dt><code>Interface</code> <i>Interface name</i></dt>
-<dd>Set the incoming interface for <font SIZE="-1">IP</font> packets explicitly. This applies at least to IPv6 packets and if possible to IPv4. If this option is not applicable, undefined or a non-existent interface name is specified, the default behavior is, to let the kernel choose the appropriate interface. Thus incoming traffic gets only accepted, if it arrives on the given interface.</dd></dl>
+<dd>Set the incoming interface for IP packets explicitly. This applies at least to IPv6 packets and if possible to IPv4. If this option is not applicable, undefined or a non-existent interface name is specified, the default behavior is, to let the kernel choose the appropriate interface. Thus incoming traffic gets only accepted, if it arrives on the given interface.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
 <dt><code>TimeToLive</code> <i>1-255</i></dt>
-<dd>Set the time-to-live of sent packets. This applies to all, unicast and multicast, and IPv4 and IPv6 packets. The default is to not change this value. That means that multicast packets will be sent with a <font SIZE="-1">TTL</font> of <tt>1</tt> (one) on most operating systems.</dd>
+<dd>Set the time-to-live of sent packets. This applies to all, unicast and multicast, and IPv4 and IPv6 packets. The default is to not change this value. That means that multicast packets will be sent with a TTL of <tt>1</tt> (one) on most operating systems.</dd>
 <dt><code>MaxPacketSize</code> <i>1024-65535</i></dt>
-<dd>Set the maximum size for datagrams received over the network. Packets larger than this will be truncated. Defaults to 1452 bytes, which is the maximum payload size that can be transmitted in one Ethernet frame using IPv6&nbsp;<wbr>/ <font SIZE="-1">UDP.</font> </dd>
+<dd>Set the maximum size for datagrams received over the network. Packets larger than this will be truncated. Defaults to 1452 bytes, which is the maximum payload size that can be transmitted in one Ethernet frame using IPv6&nbsp;<wbr>/ UDP. </dd>
 <p> On the server side, this limit should be set to the largest value used on <i>any</i> client. Likewise, the value on the client must not be larger than the value on the server, or data will be lost. </p>
 <p> <code>Compatibility:</code> Versions prior to <i>version 4.8</i> used a fixed sized buffer of 1024 bytes. Versions <i>4.8</i>, <i>4.9</i> and <i>4.10</i> used a default value of 1024 bytes to avoid problems when sending data to an older server.</p>
 <dt><code>Forward</code> <i>true|false</i></dt>
@@ -2111,23 +2111,23 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>ReportStats</code> <code>true</code>|<code>false</code></dt>
 <dd>The network plugin cannot only receive and send statistics, it can also create statistics about itself. Collectd data included the number of received and sent octets and packets, the length of the receive queue and the number of values handled. When set to <code>true</code>, the <i>Network plugin</i> will make these statistics available. Defaults to <code>false</code>.</dd></dl>
 <h3>Plugin nginx</h3>
-<p>This plugin collects the number of connections and requests handled by the <tt>&quot;nginx daemon&quot;</tt> (speak: engine X), a <font SIZE="-1">HTTP</font> and mail server/proxy. It queries the page provided by the <tt>&quot;ngx_http_stub_status_module&quot;</tt> module, which isn&#8217;t compiled by default. Please refer to &lt;<a rel="nofollow" href="http://wiki.codemongers.com/NginxStubStatusModule">http://wiki.codemongers.com/NginxStubStatusModule</a>&gt; for more information on how to compile and configure nginx and this module. </p>
+<p>This plugin collects the number of connections and requests handled by the <tt>&quot;nginx daemon&quot;</tt> (speak: engine X), a HTTP and mail server/proxy. It queries the page provided by the <tt>&quot;ngx_http_stub_status_module&quot;</tt> module, which isn&#8217;t compiled by default. Please refer to &lt;<a rel="nofollow" href="http://wiki.codemongers.com/NginxStubStatusModule">http://wiki.codemongers.com/NginxStubStatusModule</a>&gt; for more information on how to compile and configure nginx and this module. </p>
 <p> The following options are accepted by the <tt>&quot;nginx plugin&quot;</tt>:</p>
 <dl>
-<dt><font SIZE="-1"><code>URL</code></font> <i><a rel="nofollow" href="http://host/nginx_status">http://host/nginx_status</a></i></dt>
-<dd>Sets the <font SIZE="-1">URL</font> of the <tt>&quot;ngx_http_stub_status_module&quot;</tt> output.</dd>
+<dt><code>URL</code> <i><a rel="nofollow" href="http://host/nginx_status">http://host/nginx_status</a></i></dt>
+<dd>Sets the URL of the <tt>&quot;ngx_http_stub_status_module&quot;</tt> output.</dd>
 <dt><code>User</code> <i>Username</i></dt>
 <dd>Optional user name needed for authentication.</dd>
 <dt><code>Password</code> <i>Password</i></dt>
 <dd>Optional password needed for authentication.</dd>
 <dt><code>VerifyPeer</code> <code>true|false</code></dt>
-<dd>Enable or disable peer <font SIZE="-1">SSL</font> certificate verification. See &lt;<a rel="nofollow" href="http://curl.haxx.se/docs/sslcerts.html">http://curl.haxx.se/docs/sslcerts.html</a>&gt; for details. Enabled by default.</dd>
+<dd>Enable or disable peer SSL certificate verification. See &lt;<a rel="nofollow" href="http://curl.haxx.se/docs/sslcerts.html">http://curl.haxx.se/docs/sslcerts.html</a>&gt; for details. Enabled by default.</dd>
 <dt><code>VerifyHost</code> <code>true|false</code></dt>
-<dd>Enable or disable peer host name verification. If enabled, the plugin checks if the <tt>&quot;Common Name&quot;</tt> or a <tt>&quot;Subject Alternate Name&quot;</tt> field of the <font SIZE="-1">SSL</font> certificate matches the host name provided by the <font SIZE="-1"><code>URL</code></font> option. If this identity check fails, the connection is aborted. Obviously, only works when connecting to a <font SIZE="-1">SSL</font> enabled server. Enabled by default.</dd>
+<dd>Enable or disable peer host name verification. If enabled, the plugin checks if the <tt>&quot;Common Name&quot;</tt> or a <tt>&quot;Subject Alternate Name&quot;</tt> field of the SSL certificate matches the host name provided by the <code>URL</code> option. If this identity check fails, the connection is aborted. Obviously, only works when connecting to a SSL enabled server. Enabled by default.</dd>
 <dt><code>CACert</code> <i>File</i></dt>
-<dd>File that holds one or more <font SIZE="-1">SSL</font> certificates. If you want to use <font SIZE="-1">HTTPS</font> you will possibly need this option. What <font SIZE="-1">CA</font> certificates come bundled with <tt>&quot;libcurl&quot;</tt> and are checked by default depends on the distribution you use.</dd>
+<dd>File that holds one or more SSL certificates. If you want to use HTTPS you will possibly need this option. What CA certificates come bundled with <tt>&quot;libcurl&quot;</tt> and are checked by default depends on the distribution you use.</dd>
 <dt><code>Timeout</code> <i>Milliseconds</i></dt>
-<dd>The <code>Timeout</code> option sets the overall timeout for <font SIZE="-1">HTTP</font> requests to <font SIZE="-1"><code>URL</code></font>, in milliseconds. By default, the configured <code>Interval</code> is used to set the timeout.</dd></dl>
+<dd>The <code>Timeout</code> option sets the overall timeout for HTTP requests to <code>URL</code>, in milliseconds. By default, the configured <code>Interval</code> is used to set the timeout.</dd></dl>
 <h3>Plugin notify_desktop</h3>
 <p>This plugin sends a desktop notification to a notification daemon, as defined in the Desktop Notification Specification. To actually display the notifications, <code>notification-daemon</code> is required and <code>collectd</code> has to be able to access the X server (i. e., the <tt>&quot;DISPLAY&quot;</tt> and <tt>&quot;XAUTHORITY&quot;</tt> environment variables have to be set correctly) and the D-Bus message bus. </p>
 <p> The Desktop Notification Specification can be found at &lt;<a rel="nofollow" href="http://www.galago-project.org/specs/notification/">http://www.galago-project.org/specs/notification/</a>&gt;.</p>
@@ -2139,7 +2139,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dd><dt><code>FailureTimeout</code> <i>timeout</i></dt>
 <dd>Set the <i>timeout</i>, in milliseconds, after which to expire the notification for <tt>&quot;OKAY&quot;</tt>, <tt>&quot;WARNING&quot;</tt> and <tt>&quot;FAILURE&quot;</tt> severities respectively. If zero has been specified, the displayed notification will not be closed at all &#8211; the user has to do so herself. These options default to 5000. If a negative number has been specified, the default is used as well.</dd></dl>
 <h3>Plugin notify_email</h3>
-<p>The <i>notify_email</i> plugin uses the <i></i><font SIZE="-1"><i>ESMTP</i></font><i></i> library to send notifications to a configured email address. </p>
+<p>The <i>notify_email</i> plugin uses the <i></i><i>ESMTP</i><i></i> library to send notifications to a configured email address. </p>
 <p> <i>libESMTP</i> is available from &lt;<a rel="nofollow" href="http://www.stafford.uklinux.net/libesmtp/">http://www.stafford.uklinux.net/libesmtp/</a>&gt;. </p>
 <p> Available configuration options:</p>
 <dl>
@@ -2150,15 +2150,15 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>Configures the email address(es) to which the notifications should be mailed. May be repeated to send notifications to multiple addresses. </dd>
 <p> At least one <code>Recipient</code> must be present for the plugin to work correctly.</p>
 <dt><code>SMTPServer</code> <i>Hostname</i></dt>
-<dd>Hostname of the <font SIZE="-1">SMTP</font> server to connect to. </dd>
+<dd>Hostname of the SMTP server to connect to. </dd>
 <p> Default: <tt>&quot;localhost&quot;</tt></p>
 <dt><code>SMTPPort</code> <i>Port</i></dt>
-<dd><font SIZE="-1">TCP</font> port to connect to. </dd>
+<dd>TCP port to connect to. </dd>
 <p> Default: <tt>25</tt></p>
 <dt><code>SMTPUser</code> <i>Username</i></dt>
-<dd>Username for <font SIZE="-1">ASMTP</font> authentication. Optional.</dd>
+<dd>Username for ASMTP authentication. Optional.</dd>
 <dt><code>SMTPPassword</code> <i>Password</i></dt>
-<dd>Password for <font SIZE="-1">ASMTP</font> authentication. Optional.</dd>
+<dd>Password for ASMTP authentication. Optional.</dd>
 <dt><code>Subject</code> <i>Subject</i></dt>
 <dd>Subject-template to use when sending emails. There must be exactly two string-placeholders in the subject, given in the standard <i><a href="/docs/linux/man/3-printf/">printf</a>(3)</i> syntax, i. e. <tt>%s</tt>. The first will be replaced with the severity, the second with the hostname. </dd>
 <p> Default: <tt>&quot;Collectd notify: %s@%s&quot;</tt></dl>
@@ -2180,14 +2180,14 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>ReverseLookups</code> <code>true</code>|<code>false</code></dt>
 <dd>Sets whether or not to perform reverse lookups on peers. Since the name or IP-address may be used in a filename it is recommended to disable reverse lookups. The default is to do reverse lookups to preserve backwards compatibility, though.</dd>
 <dt><code>IncludeUnitID</code> <code>true</code>|<code>false</code></dt>
-<dd>When a peer is a refclock, include the unit <font SIZE="-1">ID</font> in the <i>type instance</i>. Defaults to <code>false</code> for backward compatibility. </dd>
+<dd>When a peer is a refclock, include the unit ID in the <i>type instance</i>. Defaults to <code>false</code> for backward compatibility. </dd>
 <p> If two refclock peers use the same driver and this is <code>false</code>, the plugin will try to write simultaneous measurements from both to the same type instance. This will result in error messages in the log and only one set of measurements making it through.</dl>
 <h3>Plugin nut</h3>
 <dl>
-<dt><font SIZE="-1"><code>UPS</code></font> <i>upsname</i><code>@</code><i>hostname</i>[<code>:</code><i>port</i>]</dt>
-<dd>Add a <font SIZE="-1">UPS</font> to collect data from. The format is identical to the one accepted by <i><a href="/docs/linux/man/8-upsc/">upsc</a></i>(8).</dd></dl>
+<dt><code>UPS</code> <i>upsname</i><code>@</code><i>hostname</i>[<code>:</code><i>port</i>]</dt>
+<dd>Add a UPS to collect data from. The format is identical to the one accepted by <i><a href="/docs/linux/man/8-upsc/">upsc</a></i>(8).</dd></dl>
 <h3>Plugin olsrd</h3>
-<p>The <i>olsrd</i> plugin connects to the <font SIZE="-1">TCP</font> port opened by the <i>txtinfo</i> plugin of the Optimized Link State Routing daemon and reads information about the current state of the meshed network. </p>
+<p>The <i>olsrd</i> plugin connects to the TCP port opened by the <i>txtinfo</i> plugin of the Optimized Link State Routing daemon and reads information about the current state of the meshed network. </p>
 <p> The following configuration options are understood:</p>
 <dl>
 <dt><code>Host</code> <i>Host</i></dt>
@@ -2195,25 +2195,25 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Port</code> <i>Port</i></dt>
 <dd>Specifies the port to connect to. This must be a string, even if you give the port as a number rather than a service name. Defaults to <code>&#8220;2006&#8221;</code>.</dd>
 <dt><code>CollectLinks</code> <code>No</code>|<code>Summary</code>|<code>Detail</code></dt>
-<dd>Specifies what information to collect about links, i. e. direct connections of the daemon queried. If set to <code>No</code>, no information is collected. If set to <code>Summary</code>, the number of links and the average of all <i>link quality</i> (<font SIZE="-1">LQ</font>) and <i>neighbor link quality</i> (<font SIZE="-1">NLQ</font>) values is calculated. If set to <code>Detail</code> <font SIZE="-1">LQ</font> and <font SIZE="-1">NLQ</font> are collected per link. </dd>
+<dd>Specifies what information to collect about links, i. e. direct connections of the daemon queried. If set to <code>No</code>, no information is collected. If set to <code>Summary</code>, the number of links and the average of all <i>link quality</i> (LQ) and <i>neighbor link quality</i> (NLQ) values is calculated. If set to <code>Detail</code> LQ and NLQ are collected per link. </dd>
 <p> Defaults to <code>Detail</code>.</p>
 <dt><code>CollectRoutes</code> <code>No</code>|<code>Summary</code>|<code>Detail</code></dt>
-<dd>Specifies what information to collect about routes of the daemon queried. If set to <code>No</code>, no information is collected. If set to <code>Summary</code>, the number of routes and the average <i>metric</i> and <i></i><font SIZE="-1"><i>ETX</i></font><i></i> is calculated. If set to <code>Detail</code> metric and <font SIZE="-1">ETX</font> are collected per route. </dd>
+<dd>Specifies what information to collect about routes of the daemon queried. If set to <code>No</code>, no information is collected. If set to <code>Summary</code>, the number of routes and the average <i>metric</i> and <i></i><i>ETX</i><i></i> is calculated. If set to <code>Detail</code> metric and ETX are collected per route. </dd>
 <p> Defaults to <code>Summary</code>.</p>
 <dt><code>CollectTopology</code> <code>No</code>|<code>Summary</code>|<code>Detail</code></dt>
-<dd>Specifies what information to collect about the global topology. If set to <code>No</code>, no information is collected. If set to <code>Summary</code>, the number of links in the entire topology and the average <i>link quality</i> (<font SIZE="-1">LQ</font>) is calculated. If set to <code>Detail</code> <font SIZE="-1">LQ</font> and <font SIZE="-1">NLQ</font> are collected for each link in the entire topology. </dd>
+<dd>Specifies what information to collect about the global topology. If set to <code>No</code>, no information is collected. If set to <code>Summary</code>, the number of links in the entire topology and the average <i>link quality</i> (LQ) is calculated. If set to <code>Detail</code> LQ and NLQ are collected for each link in the entire topology. </dd>
 <p> Defaults to <code>Summary</code>.</dl>
 <h3>Plugin onewire</h3>
-<p><font SIZE="-1"><code>EXPERIMENTAL</code></font><code>!</code> See notes below. </p>
+<p><code>EXPERIMENTAL</code><code>!</code> See notes below. </p>
 <p> The <tt>&quot;onewire&quot;</tt> plugin uses the <code>owcapi</code> library from the <code>owfs</code> project &lt;<a rel="nofollow" href="http://owfs.org/">http://owfs.org/</a>&gt; to read sensors connected via the onewire bus. </p>
 <p> It can be used in two possible modes &#8211; standard or advanced. </p>
-<p> In the standard mode only temperature sensors (sensors with the family code <tt>10</tt>, <tt>22</tt> and <tt>28</tt> &#8211; e.g. <font SIZE="-1">DS1820, DS18S20, DS1920</font>) can be read. If you have other sensors you would like to have included, please send a sort request to the mailing list. You can select sensors to be read or to be ignored depending on the option <code>IgnoreSelected</code>). When no list is provided the whole bus is walked and all sensors are read. </p>
-<p> Hubs (the <font SIZE="-1">DS2409</font> chips) are working, but read the note, why this plugin is experimental, below. </p>
-<p> In the advanced mode you can configure any sensor to be read (only numerical value) using full <font SIZE="-1">OWFS</font> path (e.g. &#8220;/uncached/10.F10FCA000800/temperature&#8221;). In this mode you have to list all the sensors. Neither default bus walk nor <code>IgnoreSelected</code> are used here. Address and type (file) is extracted from the path automatically and should produce compatible structure with the &#8220;standard&#8221; mode (basically the path is expected as for example &#8220;/uncached/10.F10FCA000800/temperature&#8221; where it would extract address part &#8220;F10FCA000800&#8221; and the rest after the slash is considered the type &#8211; here &#8220;temperature&#8221;). There are two advantages to this mode &#8211; you can access virtually any sensor (not just temperature), select whether to use cached or directly read values and it is slighlty faster. The downside is more complex configuration. </p>
+<p> In the standard mode only temperature sensors (sensors with the family code <tt>10</tt>, <tt>22</tt> and <tt>28</tt> &#8211; e.g. DS1820, DS18S20, DS1920) can be read. If you have other sensors you would like to have included, please send a sort request to the mailing list. You can select sensors to be read or to be ignored depending on the option <code>IgnoreSelected</code>). When no list is provided the whole bus is walked and all sensors are read. </p>
+<p> Hubs (the DS2409 chips) are working, but read the note, why this plugin is experimental, below. </p>
+<p> In the advanced mode you can configure any sensor to be read (only numerical value) using full OWFS path (e.g. &#8220;/uncached/10.F10FCA000800/temperature&#8221;). In this mode you have to list all the sensors. Neither default bus walk nor <code>IgnoreSelected</code> are used here. Address and type (file) is extracted from the path automatically and should produce compatible structure with the &#8220;standard&#8221; mode (basically the path is expected as for example &#8220;/uncached/10.F10FCA000800/temperature&#8221; where it would extract address part &#8220;F10FCA000800&#8221; and the rest after the slash is considered the type &#8211; here &#8220;temperature&#8221;). There are two advantages to this mode &#8211; you can access virtually any sensor (not just temperature), select whether to use cached or directly read values and it is slighlty faster. The downside is more complex configuration. </p>
 <p> The two modes are distinguished automatically by the format of the address. It is not possible to mix the two modes. Once a full path is detected in any <code>Sensor</code> then the whole addressing (all sensors) is considered to be this way (and as standard addresses will fail parsing they will be ignored).</p>
 <dl>
 <dt><code>Device</code> <i>Device</i></dt>
-<dd>Sets the device to read the values from. This can either be a &#8220;real&#8221; hardware device, such as a serial port or an <font SIZE="-1">USB</font> port, or the address of the <i>owserver</i>(1) socket, usually <code>localhost:4304</code>. </dd>
+<dd>Sets the device to read the values from. This can either be a &#8220;real&#8221; hardware device, such as a serial port or an USB port, or the address of the <i>owserver</i>(1) socket, usually <code>localhost:4304</code>. </dd>
 <p> Though the documentation claims to automatically recognize the given address format, with version 2.7p4 we had to specify the type explicitly. So with that version, the following configuration worked for us: </p>
 <pre> &lt;Plugin onewire&gt;
  Device &quot;-s localhost:4304&quot;
@@ -2221,14 +2221,14 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p>This directive is <code>required</code> and does not have a default value.</p>
 <dt><code>Sensor</code> <i>Sensor</i></dt>
 <dd>In the standard mode selects sensors to collect or to ignore (depending on <code>IgnoreSelected</code>, see below). Sensors are specified without the family byte at the beginning, so you have to use for example <tt>&quot;F10FCA000800&quot;</tt>, and <code>not</code> include the leading <tt>10.</tt> family byte and point. When no <code>Sensor</code> is configured the whole Onewire bus is walked and all supported sensors (see above) are read. </dd>
-<p> In the advanced mode the <code>Sensor</code> specifies full <font SIZE="-1">OWFS</font> path &#8211; e.g. <tt>&quot;/uncached/10.F10FCA000800/temperature&quot;</tt> (or when cached values are <font SIZE="-1">OK </font><tt>&quot;/10.F10FCA000800/temperature&quot;</tt>). <code>IgnoreSelected</code> is not used. </p>
+<p> In the advanced mode the <code>Sensor</code> specifies full OWFS path &#8211; e.g. <tt>&quot;/uncached/10.F10FCA000800/temperature&quot;</tt> (or when cached values are OK <tt>&quot;/10.F10FCA000800/temperature&quot;</tt>). <code>IgnoreSelected</code> is not used. </p>
 <p> As there can be multiple devices on the bus you can list multiple sensor (use multiple <code>Sensor</code> elements).</p>
 <dt><code>IgnoreSelected</code> <i>true</i>|<i>false</i></dt>
 <dd>If no configuration is given, the <code>onewire</code> plugin will collect data from all sensors found. This may not be practical, especially if sensors are added and removed regularly. Sometimes, however, it&#8217;s easier/preferred to collect only specific sensors or all sensors <i>except</i> a few specified ones. This option enables you to do that: By setting <code>IgnoreSelected</code> to <i>true</i> the effect of <code>Sensor</code> is inverted: All selected interfaces are ignored and all other interfaces are collected. </dd>
 <p> Used only in the standard mode &#8211; see above.</p>
 <dt><code>Interval</code> <i>Seconds</i></dt>
 <dd>Sets the interval in which all sensors should be read. If not specified, the global <code>Interval</code> setting is used.</dd></dl>
-<p> <font SIZE="-1"><code>EXPERIMENTAL</code></font><code>!</code> The <tt>&quot;onewire&quot;</tt> plugin is experimental, because it doesn&#8217;t yet work with big setups. It works with one sensor being attached to one controller, but as soon as you throw in a couple more senors and maybe a hub or two, reading all values will take more than ten seconds (the default interval). We will probably add some separate thread for reading the sensors and some cache or something like that, but it&#8217;s not done yet. We will try to maintain backwards compatibility in the future, but we can&#8217;t promise. So in short: If it works for you: Great! But keep in mind that the config <i>might</i> change, though this is unlikely. Oh, and if you want to help improving this plugin, just send a short notice to the mailing list. Thanks :)</p>
+<p> <code>EXPERIMENTAL</code><code>!</code> The <tt>&quot;onewire&quot;</tt> plugin is experimental, because it doesn&#8217;t yet work with big setups. It works with one sensor being attached to one controller, but as soon as you throw in a couple more senors and maybe a hub or two, reading all values will take more than ten seconds (the default interval). We will probably add some separate thread for reading the sensors and some cache or something like that, but it&#8217;s not done yet. We will try to maintain backwards compatibility in the future, but we can&#8217;t promise. So in short: If it works for you: Great! But keep in mind that the config <i>might</i> change, though this is unlikely. Oh, and if you want to help improving this plugin, just send a short notice to the mailing list. Thanks :)</p>
 <h3>Plugin openldap</h3>
 <p>To use the <tt>&quot;openldap&quot;</tt> plugin you first need to configure the <i>OpenLDAP</i> server correctly. The backend database <tt>&quot;monitor&quot;</tt> needs to be loaded and working. See <i><a href="/docs/linux/man/5-slapd-monitor/">slapd-monitor</a></i>(5) for the details. </p>
 <p> The configuration of the <tt>&quot;openldap&quot;</tt> plugin consists of one or more <code>Instance</code> blocks. Each block requires one string argument as the instance name. For example: </p>
@@ -2243,22 +2243,22 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p>The instance name will be used as the <i>plugin instance</i>. To emulate the old (version 4) behavior, you can use an empty string (&quot;&quot;). In order for the plugin to work correctly, each instance name must be unique. This is not enforced by the plugin and it is your responsibility to ensure it is. </p>
 <p> The following options are accepted within each <code>Instance</code> block:</p>
 <dl>
-<dt><font SIZE="-1"><code>URL</code></font> <i><a href="ldap://host/binddn">ldap://host/binddn</a></i></dt>
-<dd>Sets the <font SIZE="-1">URL</font> to use to connect to the <i>OpenLDAP</i> server. This option is <i>mandatory</i>.</dd>
+<dt><code>URL</code> <i><a href="ldap://host/binddn">ldap://host/binddn</a></i></dt>
+<dd>Sets the URL to use to connect to the <i>OpenLDAP</i> server. This option is <i>mandatory</i>.</dd>
 <dt><code>BindDN</code> <i>BindDN</i></dt>
-<dd>Name in the form of an <font SIZE="-1">LDAP</font> distinguished name intended to be used for authentication. Defaults to empty string to establish an anonymous authorization.</dd>
+<dd>Name in the form of an LDAP distinguished name intended to be used for authentication. Defaults to empty string to establish an anonymous authorization.</dd>
 <dt><code>Password</code> <i>Password</i></dt>
 <dd>Password for simple bind authentication. If this option is not set, unauthenticated bind operation is used.</dd>
 <dt><code>StartTLS</code> <code>true|false</code></dt>
-<dd>Defines whether <font SIZE="-1">TLS</font> must be used when connecting to the <i>OpenLDAP</i> server. Disabled by default.</dd>
+<dd>Defines whether TLS must be used when connecting to the <i>OpenLDAP</i> server. Disabled by default.</dd>
 <dt><code>VerifyHost</code> <code>true|false</code></dt>
-<dd>Enables or disables peer host name verification. If enabled, the plugin checks if the <tt>&quot;Common Name&quot;</tt> or a <tt>&quot;Subject Alternate Name&quot;</tt> field of the <font SIZE="-1">SSL</font> certificate matches the host name provided by the <font SIZE="-1"><code>URL</code></font> option. If this identity check fails, the connection is aborted. Enabled by default.</dd>
+<dd>Enables or disables peer host name verification. If enabled, the plugin checks if the <tt>&quot;Common Name&quot;</tt> or a <tt>&quot;Subject Alternate Name&quot;</tt> field of the SSL certificate matches the host name provided by the <code>URL</code> option. If this identity check fails, the connection is aborted. Enabled by default.</dd>
 <dt><code>CACert</code> <i>File</i></dt>
-<dd>File that holds one or more <font SIZE="-1">SSL</font> certificates. If you want to use <font SIZE="-1">TLS/SSL</font> you may possibly need this option. What <font SIZE="-1">CA</font> certificates are checked by default depends on the distribution you use and can be changed with the usual ldap client configuration mechanisms. See <i><a href="/docs/linux/man/5-ldap-conf/">ldap.conf</a></i>(5) for the details.</dd>
+<dd>File that holds one or more SSL certificates. If you want to use TLS/SSL you may possibly need this option. What CA certificates are checked by default depends on the distribution you use and can be changed with the usual ldap client configuration mechanisms. See <i><a href="/docs/linux/man/5-ldap-conf/">ldap.conf</a></i>(5) for the details.</dd>
 <dt><code>Timeout</code> <i>Seconds</i></dt>
 <dd>Sets the timeout value for ldap operations, in seconds. By default, the configured <code>Interval</code> is used to set the timeout. Use <code>-1</code> to disable (infinite timeout).</dd>
 <dt><code>Version</code> <i>Version</i></dt>
-<dd>An integer which sets the <font SIZE="-1">LDAP</font> protocol version number to use when connecting to the <i>OpenLDAP</i> server. Defaults to <code>3</code> for using <i>LDAPv3</i>.</dd></dl>
+<dd>An integer which sets the LDAP protocol version number to use when connecting to the <i>OpenLDAP</i> server. Defaults to <code>3</code> for using <i>LDAPv3</i>.</dd></dl>
 <h3>Plugin openvpn</h3>
 <p>The OpenVPN plugin reads a status file maintained by OpenVPN and gathers traffic statistics about connected clients. </p>
 <p> To set up OpenVPN to write to the status file periodically, use the <code>&#8211;status</code> option of OpenVPN. Since OpenVPN can write two different formats, you need to set the required format, too. This is done by setting <code>&#8211;status-version</code> to <code>2</code>. </p>
@@ -2279,7 +2279,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>CollectUserCount</code> <code>true</code>|<code>false</code></dt>
 <dd>When enabled, the number of currently connected clients or users is collected. This is especially interesting when <code>CollectIndividualUsers</code> is disabled, but can be configured independently from that option. Defaults to <code>false</code>.</dd></dl>
 <h3>Plugin oracle</h3>
-<p>The &#8220;oracle&#8221; plugin uses the OracleX Call Interface <i>(</i><font SIZE="-1"><i>OCI</i></font><i>)</i> to connect to an OracleX Database and lets you execute <font SIZE="-1">SQL</font> statements there. It is very similar to the &#8220;dbi&#8221; plugin, because it was written around the same time. See the &#8220;dbi&#8221; plugin&#8217;s documentation above for details. </p>
+<p>The &#8220;oracle&#8221; plugin uses the OracleX Call Interface <i>(</i><i>OCI</i><i>)</i> to connect to an OracleX Database and lets you execute SQL statements there. It is very similar to the &#8220;dbi&#8221; plugin, because it was written around the same time. See the &#8220;dbi&#8221; plugin&#8217;s documentation above for details. </p>
 <pre> &lt;Plugin oracle&gt;
  &lt;Query &quot;out_of_stock&quot;&gt;
  Statement &quot;SELECT category, COUNT(*) AS value FROM products WHERE in_stock = 0 GROUP BY category&quot;
@@ -2302,7 +2302,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> <i></i>Database<i> blocks</i> </p>
 <p> Database blocks define a connection to a database and which queries should be sent to that database. Each database needs a &#8220;name&#8221; as string argument in the starting tag of the block. This name will be used as &#8220;PluginInstance&#8221; in the values submitted to the daemon. Other than that, that name is not used.</p>
 <dl>
-<dt><code>ConnectID</code> <i></i><font SIZE="-1"><i>ID</i></font><i></i></dt>
+<dt><code>ConnectID</code> <i></i><i>ID</i><i></i></dt>
 <dd>Defines the &#8220;database alias&#8221; or &#8220;service name&#8221; to connect to. Usually, these names are defined in the file named <tt>&quot;$ORACLE_HOME/network/admin/tnsnames.ora&quot;</tt>.</dd>
 <dt><code>Host</code> <i>Host</i></dt>
 <dd>Hostname to use when dispatching values for this database. Defaults to using the global hostname of the <i>collectd</i> instance.</dd>
@@ -2315,7 +2315,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <h3>Plugin perl</h3>
 <p>This plugin embeds a Perl-interpreter into collectd and provides an interface to collectd&#8217;s plugin system. See <i><a href="/docs/linux/man/5-collectd-perl/">collectd-perl</a></i>(5) for its documentation.</p>
 <h3>Plugin pinba</h3>
-<p>The <i>Pinba plugin</i> receives profiling information from <i>Pinba</i>, an extension for the <i></i><font SIZE="-1"><i>PHP</i></font><i></i> interpreter. At the end of executing a script, i.e. after a PHP-based webpage has been delivered, the extension will send a <font SIZE="-1">UDP</font> packet containing timing information, peak memory usage and so on. The plugin will wait for such packets, parse them and account the provided information, which is then dispatched to the daemon once per interval. </p>
+<p>The <i>Pinba plugin</i> receives profiling information from <i>Pinba</i>, an extension for the <i></i><i>PHP</i><i></i> interpreter. At the end of executing a script, i.e. after a PHP-based webpage has been delivered, the extension will send a UDP packet containing timing information, peak memory usage and so on. The plugin will wait for such packets, parse them and account the provided information, which is then dispatched to the daemon once per interval. </p>
 <p> Synopsis: </p>
 <pre> &lt;Plugin pinba&gt;
  Address &quot;::0&quot;
@@ -2349,40 +2349,40 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Host</code> <i>Host</i></dt>
 <dd>Matches the hostname of the system the webserver / script is running on. This will contain the result of the <i><a href="/docs/linux/man/2-gethostname/">gethostname</a></i>(2) system call. If not configured, all hostnames will be accepted.</dd>
 <dt><code>Server</code> <i>Server</i></dt>
-<dd>Matches the name of the <i>virtual host</i>, i.e. the contents of the <tt>$_SERVER[&quot;SERVER_NAME&quot;]</tt> variable when within <font SIZE="-1">PHP.</font> If not configured, all server names will be accepted.</dd>
+<dd>Matches the name of the <i>virtual host</i>, i.e. the contents of the <tt>$_SERVER[&quot;SERVER_NAME&quot;]</tt> variable when within PHP. If not configured, all server names will be accepted.</dd>
 <dt><code>Script</code> <i>Script</i></dt>
-<dd>Matches the name of the <i>script name</i>, i.e. the contents of the <tt>$_SERVER[&quot;SCRIPT_NAME&quot;]</tt> variable when within <font SIZE="-1">PHP.</font> If not configured, all script names will be accepted.</dd></dl>
+<dd>Matches the name of the <i>script name</i>, i.e. the contents of the <tt>$_SERVER[&quot;SCRIPT_NAME&quot;]</tt> variable when within PHP. If not configured, all script names will be accepted.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
 </dl>
 <h3>Plugin ping</h3>
-<p>The <i>Ping</i> plugin starts a new thread which sends <font SIZE="-1">ICMP </font>&#8220;ping&#8221; packets to the configured hosts periodically and measures the network latency. Whenever the <tt>&quot;read&quot;</tt> function of the plugin is called, it submits the average latency, the standard deviation and the drop rate for each host. </p>
+<p>The <i>Ping</i> plugin starts a new thread which sends ICMP &#8220;ping&#8221; packets to the configured hosts periodically and measures the network latency. Whenever the <tt>&quot;read&quot;</tt> function of the plugin is called, it submits the average latency, the standard deviation and the drop rate for each host. </p>
 <p> Available configuration options:</p>
 <dl>
 <dt><code>Host</code> <i>IP-address</i></dt>
 <dd>Host to ping periodically. This option may be repeated several times to ping multiple hosts.</dd>
 <dt><code>Interval</code> <i>Seconds</i></dt>
-<dd>Sets the interval in which to send <font SIZE="-1">ICMP</font> echo packets to the configured hosts. This is <code>not</code> the interval in which statistics are queries from the plugin but the interval in which the hosts are &#8220;pinged&#8221;. Therefore, the setting here should be smaller than or equal to the global <code>Interval</code> setting. Fractional times, such as &#8220;1.24&#8221; are allowed. </dd>
+<dd>Sets the interval in which to send ICMP echo packets to the configured hosts. This is <code>not</code> the interval in which statistics are queries from the plugin but the interval in which the hosts are &#8220;pinged&#8221;. Therefore, the setting here should be smaller than or equal to the global <code>Interval</code> setting. Fractional times, such as &#8220;1.24&#8221; are allowed. </dd>
 <p> Default: <code>1.0</code></p>
 <dt><code>Timeout</code> <i>Seconds</i></dt>
-<dd>Time to wait for a response from the host to which an <font SIZE="-1">ICMP</font> packet had been sent. If a reply was not received after <i>Seconds</i> seconds, the host is assumed to be down or the packet to be dropped. This setting must be smaller than the <code>Interval</code> setting above for the plugin to work correctly. Fractional arguments are accepted. </dd>
+<dd>Time to wait for a response from the host to which an ICMP packet had been sent. If a reply was not received after <i>Seconds</i> seconds, the host is assumed to be down or the packet to be dropped. This setting must be smaller than the <code>Interval</code> setting above for the plugin to work correctly. Fractional arguments are accepted. </dd>
 <p> Default: <code>0.9</code></p>
-<dt><font SIZE="-1"><code>TTL</code></font> <i>0-255</i></dt>
-<dd>Sets the Time-To-Live of generated <font SIZE="-1">ICMP</font> packets.</dd>
+<dt><code>TTL</code> <i>0-255</i></dt>
+<dd>Sets the Time-To-Live of generated ICMP packets.</dd>
 <dt><code>Size</code> <i>size</i></dt>
-<dd>Sets the size of the data payload in <font SIZE="-1">ICMP</font> packet to specified <i>size</i> (it will be filled with regular <font SIZE="-1">ASCII</font> pattern). If not set, default 56 byte long string is used so that the packet size of an ICMPv4 packet is exactly 64 bytes, similar to the behaviour of normal <i>ping</i>(1) command.</dd>
+<dd>Sets the size of the data payload in ICMP packet to specified <i>size</i> (it will be filled with regular ASCII pattern). If not set, default 56 byte long string is used so that the packet size of an ICMPv4 packet is exactly 64 bytes, similar to the behaviour of normal <i>ping</i>(1) command.</dd>
 <dt><code>SourceAddress</code> <i>host</i></dt>
 <dd>Sets the source address to use. <i>host</i> may either be a numerical network address or a network hostname.</dd>
 <dt><code>Device</code> <i>name</i></dt>
 <dd>Sets the outgoing network device to be used. <i>name</i> has to specify an interface name (e. g. <tt>&quot;eth0&quot;</tt>). This might not be supported by all operating systems.</dd>
 <dt><code>MaxMissed</code> <i>Packets</i></dt>
-<dd>Trigger a <font SIZE="-1">DNS</font> resolve after the host has not replied to <i>Packets</i> packets. This enables the use of dynamic <font SIZE="-1">DNS</font> services (like dyndns.org) with the ping plugin. </dd>
+<dd>Trigger a DNS resolve after the host has not replied to <i>Packets</i> packets. This enables the use of dynamic DNS services (like dyndns.org) with the ping plugin. </dd>
 <p> Default: <code>-1</code> (disabled)</dl>
 <h3>Plugin postgresql</h3>
 <p>The <tt>&quot;postgresql&quot;</tt> plugin queries statistics from PostgreSQL databases. It keeps a persistent connection to all configured databases and tries to reconnect if the connection has been interrupted. A database is configured by specifying a <code>Database</code> block as described below. The default statistics are collected from PostgreSQL&#8217;s <code>statistics collector</code> which thus has to be enabled for this plugin to work correctly. This should usually be the case by default. See the section &#8220;The Statistics Collector&#8221; of the <code>PostgreSQL Documentation</code> for details. </p>
 <p> By specifying custom database queries using a <code>Query</code> block as described below, you may collect any data that is available from some PostgreSQL database. This way, you are able to access statistics of external daemons which are available in a PostgreSQL database or use future or special statistics provided by PostgreSQL without the need to upgrade your collectd installation. </p>
-<p> Starting with version 5.2, the <tt>&quot;postgresql&quot;</tt> plugin supports writing data to PostgreSQL databases as well. This has been implemented in a generic way. You need to specify an <font SIZE="-1">SQL</font> statement which will then be executed by collectd in order to write the data (see below for details). The benefit of that approach is that there is no fixed database layout. Rather, the layout may be optimized for the current setup. </p>
+<p> Starting with version 5.2, the <tt>&quot;postgresql&quot;</tt> plugin supports writing data to PostgreSQL databases as well. This has been implemented in a generic way. You need to specify an SQL statement which will then be executed by collectd in order to write the data (see below for details). The benefit of that approach is that there is no fixed database layout. Rather, the layout may be optimized for the current setup. </p>
 <p> The <code>PostgreSQL Documentation</code> manual can be found at &lt;<a rel="nofollow" href="http://www.postgresql.org/docs/manuals/">http://www.postgresql.org/docs/manuals/</a>&gt;. </p>
 <pre> &lt;Plugin postgresql&gt;
  &lt;Query magic&gt;
@@ -2439,15 +2439,15 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dl>
 <dt><code>Statement</code> <i>sql query statement</i></dt>
 <dd>Specify the <i>sql query statement</i> which the plugin should execute. The string may contain the tokens $1, $2, etc. which are used to reference the first, second, etc. parameter. The value of the parameters is specified by the <code>Param</code> configuration option &#8211; see below for details. To include a literal <code>$</code> character followed by a number, surround it with single quotes (<code>&#8216;</code>). </dd>
-<p> Any <font SIZE="-1">SQL</font> command which may return data (such as <tt>&quot;SELECT&quot;</tt> or <tt>&quot;SHOW&quot;</tt>) is allowed. Note, however, that only a single command may be used. Semicolons are allowed as long as a single non-empty command has been specified only. </p>
+<p> Any SQL command which may return data (such as <tt>&quot;SELECT&quot;</tt> or <tt>&quot;SHOW&quot;</tt>) is allowed. Note, however, that only a single command may be used. Semicolons are allowed as long as a single non-empty command has been specified only. </p>
 <p> The returned lines will be handled separately one after another.</p>
 <dt><code>Param</code> <i>hostname</i>|<i>database</i>|<i>instance</i>|<i>username</i>|<i>interval</i></dt>
-<dd>Specify the parameters which should be passed to the <font SIZE="-1">SQL</font> query. The parameters are referred to in the <font SIZE="-1">SQL</font> query as $1, $2, etc. in the same order as they appear in the configuration file. The value of the parameter is determined depending on the value of the <code>Param</code> option as follows:</dd>
+<dd>Specify the parameters which should be passed to the SQL query. The parameters are referred to in the SQL query as $1, $2, etc. in the same order as they appear in the configuration file. The value of the parameter is determined depending on the value of the <code>Param</code> option as follows:</dd>
 <dl>
 <dd>
 </dd><dl>
 <dt><i>hostname</i></dt>
-<dd>The configured hostname of the database connection. If a <font SIZE="-1">UNIX</font> domain socket is used, the parameter expands to &#8220;localhost&#8221;.</dd>
+<dd>The configured hostname of the database connection. If a UNIX domain socket is used, the parameter expands to &#8220;localhost&#8221;.</dd>
 <dt><i>database</i></dt>
 <dd>The name of the database of the current connection.</dd>
 <dt><i>instance</i></dt>
@@ -2510,23 +2510,23 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> The <code>Writer</code> block defines a PostgreSQL writer backend. It accepts a single mandatory argument specifying the name of the writer. This will then be used in the <code>Database</code> specification in order to activate the writer instance. The names of all writers have to be unique. The following options may be specified:</p>
 <dl>
 <dt><code>Statement</code> <i>sql statement</i></dt>
-<dd>This mandatory option specifies the <font SIZE="-1">SQL</font> statement that will be executed for each submitted value. A single <font SIZE="-1">SQL</font> statement is allowed only. Anything after the first semicolon will be ignored. </dd>
+<dd>This mandatory option specifies the SQL statement that will be executed for each submitted value. A single SQL statement is allowed only. Anything after the first semicolon will be ignored. </dd>
 <p> Nine parameters will be passed to the statement and should be specified as tokens $1, $2, through $9 in the statement string. The following values are made available through those parameters:</p>
 <dl>
 <dd>
 </dd><dl>
 <dt><code>$1</code></dt>
-<dd>The timestamp of the queried value as an <font SIZE="-1">RFC</font> 3339-formatted local time.</dd>
+<dd>The timestamp of the queried value as an RFC 3339-formatted local time.</dd>
 <dt><code>$2</code></dt>
 <dd>The hostname of the queried value.</dd>
 <dt><code>$3</code></dt>
 <dd>The plugin name of the queried value.</dd>
 <dt><code>$4</code></dt>
-<dd>The plugin instance of the queried value. This value may be <font SIZE="-1"><code>NULL</code></font> if there is no plugin instance.</dd>
+<dd>The plugin instance of the queried value. This value may be <code>NULL</code> if there is no plugin instance.</dd>
 <dt><code>$5</code></dt>
 <dd>The type of the queried value (cf. <i><a href="/docs/linux/man/5-types-db/">types.db</a></i>(5)).</dd>
 <dt><code>$6</code></dt>
-<dd>The type instance of the queried value. This value may be <font SIZE="-1"><code>NULL</code></font> if there is no type instance.</dd>
+<dd>The type instance of the queried value. This value may be <code>NULL</code> if there is no type instance.</dd>
 <dt><code>$7</code></dt>
 <dd>An array of names for the submitted values (i. e., the name of the data sources of the submitted value-list).</dd>
 <dt><code>$8</code></dt>
@@ -2538,7 +2538,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>In general, it is advisable to create and call a custom function in the PostgreSQL database for this purpose. Any procedural language supported by PostgreSQL will do (see chapter &#8220;Server Programming&#8221; in the PostgreSQL manual for details).</dd></dl>
 <dt><code>StoreRates</code> <code>false</code>|<code>true</code></dt>
 <dd>If set to <code>true</code> (the default), convert counter values to rates. If set to <code>false</code> counter values are stored as is, i. e. as an increasing integer number.</dd></dl>
-<p> The <code>Database</code> block defines one PostgreSQL database for which to collect statistics. It accepts a single mandatory argument which specifies the database name. None of the other options are required. PostgreSQL will use default values as documented in the section &#8220;<font SIZE="-1">CONNECTING TO A DATABASE&#8221;</font> in the <i><a href="/docs/linux/man/1-psql/">psql</a></i>(1) manpage. However, be aware that those defaults may be influenced by the user collectd is run as and special environment variables. See the manpage for details.</p>
+<p> The <code>Database</code> block defines one PostgreSQL database for which to collect statistics. It accepts a single mandatory argument which specifies the database name. None of the other options are required. PostgreSQL will use default values as documented in the section &#8220;CONNECTING TO A DATABASE&#8221; in the <i><a href="/docs/linux/man/1-psql/">psql</a></i>(1) manpage. However, be aware that those defaults may be influenced by the user collectd is run as and special environment variables. See the manpage for details.</p>
 <dl>
 <dt><code>Interval</code> <i>seconds</i></dt>
 <dd>Specify the interval with which the database should be queried. The default is to use the global <code>Interval</code> setting.</dd>
@@ -2547,10 +2547,10 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Instance</code> <i>name</i></dt>
 <dd>Specify the plugin instance name that should be used instead of the database name (which is the default, if this option has not been specified). This allows one to query multiple databases of the same name on the same host (e.g. when running multiple database server versions in parallel). The plugin instance name can also be set from the query result using the <code>PluginInstanceFrom</code> option in <code>Query</code> block.</dd>
 <dt><code>Host</code> <i>hostname</i></dt>
-<dd>Specify the hostname or <font SIZE="-1">IP</font> of the PostgreSQL server to connect to. If the value begins with a slash, it is interpreted as the directory name in which to look for the <font SIZE="-1">UNIX</font> domain socket. </dd>
+<dd>Specify the hostname or IP of the PostgreSQL server to connect to. If the value begins with a slash, it is interpreted as the directory name in which to look for the UNIX domain socket. </dd>
 <p> This option is also used to determine the hostname that is associated with a collected data set. If it has been omitted or either begins with with a slash or equals <code>localhost</code> it will be replaced with the global hostname definition of collectd. Any other value will be passed literally to collectd when dispatching values. Also see the global <code>Hostname</code> and <code>FQDNLookup</code> options.</p>
 <dt><code>Port</code> <i>port</i></dt>
-<dd>Specify the <font SIZE="-1">TCP</font> port or the local <font SIZE="-1">UNIX</font> domain socket file extension of the server.</dd>
+<dd>Specify the TCP port or the local UNIX domain socket file extension of the server.</dd>
 <dt><code>User</code> <i>username</i></dt>
 <dd>Specify the username to be used when connecting to the server.</dd>
 <dt><code>Password</code> <i>password</i></dt>
@@ -2558,32 +2558,32 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>ExpireDelay</code> <i>delay</i></dt>
 <dd>Skip expired values in query output.</dd>
 <dt><code>SSLMode</code> <i>disable</i>|<i>allow</i>|<i>prefer</i>|<i>require</i></dt>
-<dd>Specify whether to use an <font SIZE="-1">SSL</font> connection when contacting the server. The following modes are supported:</dd>
+<dd>Specify whether to use an SSL connection when contacting the server. The following modes are supported:</dd>
 <dl>
 <dd>
 </dd><dl>
 <dt><i>disable</i></dt>
-<dd>Do not use <font SIZE="-1">SSL</font> at all.</dd>
+<dd>Do not use SSL at all.</dd>
 <dt><i>allow</i></dt>
-<dd>First, try to connect without using <font SIZE="-1">SSL.</font> If that fails, try using <font SIZE="-1">SSL.</font></dd>
+<dd>First, try to connect without using SSL. If that fails, try using SSL.</dd>
 <dt><i>prefer</i> (default)</dt>
-<dd>First, try to connect using <font SIZE="-1">SSL.</font> If that fails, try without using <font SIZE="-1">SSL.</font></dd>
+<dd>First, try to connect using SSL. If that fails, try without using SSL.</dd>
 <dt><i>require</i></dt>
-<dd>Use <font SIZE="-1">SSL</font> only.</dd></dl>
+<dd>Use SSL only.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
 <dt><code>Instance</code> <i>name</i></dt>
 <dd>Specify the plugin instance name that should be used instead of the database name (which is the default, if this option has not been specified). This allows one to query multiple databases of the same name on the same host (e.g. when running multiple database server versions in parallel).</dd>
 <dt><code>KRBSrvName</code> <i>kerberos_service_name</i></dt>
-<dd>Specify the Kerberos service name to use when authenticating with Kerberos 5 or <font SIZE="-1">GSSAPI.</font> See the sections &#8220;Kerberos authentication&#8221; and &#8220;<font SIZE="-1">GSSAPI&#8221;</font> of the <code>PostgreSQL Documentation</code> for details.</dd>
+<dd>Specify the Kerberos service name to use when authenticating with Kerberos 5 or GSSAPI. See the sections &#8220;Kerberos authentication&#8221; and &#8220;GSSAPI&#8221; of the <code>PostgreSQL Documentation</code> for details.</dd>
 <dt><code>Service</code> <i>service_name</i></dt>
 <dd>Specify the PostgreSQL service name to use for additional parameters. That service has to be defined in <i>pg_service.conf</i> and holds additional connection parameters. See the section &#8220;The Connection Service File&#8221; in the <code>PostgreSQL Documentation</code> for details.</dd>
 <dt><code>Query</code> <i>query</i></dt>
 <dd>Specifies a <i>query</i> which should be executed in the context of the database connection. This may be any of the predefined or user-defined queries. If no such option is given, it defaults to &#8220;backends&#8221;, &#8220;transactions&#8221;, &#8220;queries&#8221;, &#8220;query_plans&#8221;, &#8220;table_states&#8221;, &#8220;disk_io&#8221; and &#8220;disk_usage&#8221; (unless a <code>Writer</code> has been specified). Else, the specified queries are used only.</dd>
 <dt><code>Writer</code> <i>writer</i></dt>
-<dd>Assigns the specified <i>writer</i> backend to the database connection. This causes all collected data to be send to the database using the settings defined in the writer configuration (see the section &#8220;<font SIZE="-1">FILTER CONFIGURATION&#8221;</font> below for details on how to selectively send data to certain plugins). </dd>
-<p> Each writer will register a flush callback which may be used when having long transactions enabled (see the <code>CommitInterval</code> option above). When issuing the <font SIZE="-1"><code>FLUSH</code></font> command (see <i><a href="/docs/linux/man/5-collectd-unixsock/">collectd-unixsock</a></i>(5) for details) the current transaction will be committed right away. Two different kinds of flush callbacks are available with the <tt>&quot;postgresql&quot;</tt> plugin:</p>
+<dd>Assigns the specified <i>writer</i> backend to the database connection. This causes all collected data to be send to the database using the settings defined in the writer configuration (see the section &#8220;FILTER CONFIGURATION&#8221; below for details on how to selectively send data to certain plugins). </dd>
+<p> Each writer will register a flush callback which may be used when having long transactions enabled (see the <code>CommitInterval</code> option above). When issuing the <code>FLUSH</code> command (see <i><a href="/docs/linux/man/5-collectd-unixsock/">collectd-unixsock</a></i>(5) for details) the current transaction will be committed right away. Two different kinds of flush callbacks are available with the <tt>&quot;postgresql&quot;</tt> plugin:</p>
 <dl>
 <dd>
 </dd><dl>
@@ -2677,28 +2677,28 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <pre> powerdns plugin: submit: Not found in lookup table: foobar = 42</pre>
 <p>In this case please file a bug report with the collectd team.</dl>
 <dt><code>Socket</code> <i>Path</i></dt>
-<dd>Configures the path to the <font SIZE="-1">UNIX</font> domain socket to be used when connecting to the daemon. By default <tt>&quot;${localstatedir}/run/pdns.controlsocket&quot;</tt> will be used for an authoritative server and <tt>&quot;${localstatedir}/run/pdns_recursor.controlsocket&quot;</tt> will be used for the recursor.</dd></dl>
+<dd>Configures the path to the UNIX domain socket to be used when connecting to the daemon. By default <tt>&quot;${localstatedir}/run/pdns.controlsocket&quot;</tt> will be used for an authoritative server and <tt>&quot;${localstatedir}/run/pdns_recursor.controlsocket&quot;</tt> will be used for the recursor.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
 <dt><code>LocalSocket</code> <i>Path</i></dt>
-<dd>Querying the recursor is done using <font SIZE="-1">UDP.</font> When using <font SIZE="-1">UDP</font> over <font SIZE="-1">UNIX</font> domain sockets, the client socket needs a name in the file system, too. You can set this local name to <i>Path</i> using the <code>LocalSocket</code> option. The default is <tt>&quot;</tt>prefix<tt>/var/run/collectd-powerdns&quot;</tt>.</dd></dl>
+<dd>Querying the recursor is done using UDP. When using UDP over UNIX domain sockets, the client socket needs a name in the file system, too. You can set this local name to <i>Path</i> using the <code>LocalSocket</code> option. The default is <tt>&quot;</tt>prefix<tt>/var/run/collectd-powerdns&quot;</tt>.</dd></dl>
 <h3>Plugin processes</h3>
 <dl>
 <dt><code>Process</code> <i>Name</i></dt>
-<dd>Select more detailed statistics of processes matching this name. The statistics collected for these selected processes are size of the resident segment size (<font SIZE="-1">RSS</font>), user- and system-time used, number of processes and number of threads, io data (where available) and minor and major pagefaults. </dd>
+<dd>Select more detailed statistics of processes matching this name. The statistics collected for these selected processes are size of the resident segment size (RSS), user- and system-time used, number of processes and number of threads, io data (where available) and minor and major pagefaults. </dd>
 <p> Some platforms have a limit on the length of process names. <i>Name</i> must stay below this limit.</p>
 <dt><code>ProcessMatch</code> <i>name</i> <i>regex</i></dt>
 <dd>Similar to the <code>Process</code> option this allows one to select more detailed statistics of processes matching the specified <i>regex</i> (see <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7) for details). The statistics of all matching processes are summed up and dispatched to the daemon using the specified <i>name</i> as an identifier. This allows one to &#8220;group&#8221; several processes together. <i>name</i> must not contain slashes.</dd>
 <dt><code>CollectContextSwitch</code> <i>Boolean</i></dt>
 <dd>Collect context switch of the process.</dd></dl>
 <h3>Plugin protocols</h3>
-<p>Collects a lot of information about various network protocols, such as <i></i><font SIZE="-1"><i>IP</i></font><i></i>, <i></i><font SIZE="-1"><i>TCP</i></font><i></i>, <i></i><font SIZE="-1"><i>UDP</i></font><i></i>, etc. </p>
+<p>Collects a lot of information about various network protocols, such as <i></i><i>IP</i><i></i>, <i></i><i>TCP</i><i></i>, <i></i><i>UDP</i><i></i>, etc. </p>
 <p> Available configuration options:</p>
 <dl>
 <dt><code>Value</code> <i>Selector</i></dt>
 <dd>Selects whether or not to select a specific value. The string being matched is of the form &quot;<i>Protocol</i>:<i>ValueName</i>&quot;, where <i>Protocol</i> will be used as the plugin instance and <i>ValueName</i> will be used as type instance. An example of the string being used would be <tt>&quot;Tcp:RetransSegs&quot;</tt>. </dd>
-<p> You can use regular expressions to match a large number of values with just one configuration option. To select all &#8220;extended&#8221; <i></i><font SIZE="-1"><i>TCP</i></font><i></i> values, you could use the following statement: </p>
+<p> You can use regular expressions to match a large number of values with just one configuration option. To select all &#8220;extended&#8221; <i></i><i>TCP</i><i></i> values, you could use the following statement: </p>
 <pre> Value &quot;/^TcpExt:/&quot;</pre>
 <p>Whether only matched values are selected or all matched values are ignored depends on the <code>IgnoreSelected</code>. By default, only matched values are selected. If no value is configured at all, all values will be selected.</p>
 <dt><code>IgnoreSelected</code> <code>true</code>|<code>false</code></dt>
@@ -2739,9 +2739,9 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>CollectInterface</code> <code>true</code>|<code>false</code></dt>
 <dd>When set to <code>true</code>, interface statistics will be collected for all interfaces present on the device. Defaults to <code>false</code>.</dd>
 <dt><code>CollectRegistrationTable</code> <code>true</code>|<code>false</code></dt>
-<dd>When set to <code>true</code>, information about wireless <font SIZE="-1">LAN</font> connections will be collected. Defaults to <code>false</code>.</dd>
+<dd>When set to <code>true</code>, information about wireless LAN connections will be collected. Defaults to <code>false</code>.</dd>
 <dt><code>CollectCPULoad</code> <code>true</code>|<code>false</code></dt>
-<dd>When set to <code>true</code>, information about the <font SIZE="-1">CPU</font> usage will be collected. The number is a dimensionless value where zero indicates no <font SIZE="-1">CPU</font> usage at all. Defaults to <code>false</code>.</dd>
+<dd>When set to <code>true</code>, information about the CPU usage will be collected. The number is a dimensionless value where zero indicates no CPU usage at all. Defaults to <code>false</code>.</dd>
 <dt><code>CollectMemory</code> <code>true</code>|<code>false</code></dt>
 <dd>When enabled, the amount of used and free memory will be collected. How used memory is calculated is unknown, for example whether or not caches are counted as used space. Defaults to <code>false</code>.</dd>
 <dt><code>CollectDF</code> <code>true</code>|<code>false</code></dt>
@@ -2768,7 +2768,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Host</code> <i>Hostname</i></dt>
 <dd>The <code>Host</code> option is the hostname or IP-address where the Redis instance is running on.</dd>
 <dt><code>Port</code> <i>Port</i></dt>
-<dd>The <code>Port</code> option is the <font SIZE="-1">TCP</font> port on which the Redis instance accepts connections. Either a service name of a port number may be given. Please note that numerical port numbers must be given as a string, too.</dd>
+<dd>The <code>Port</code> option is the TCP port on which the Redis instance accepts connections. Either a service name of a port number may be given. Please note that numerical port numbers must be given as a string, too.</dd>
 <dt><code>Password</code> <i>Password</i></dt>
 <dd>Use <i>Password</i> to authenticate when connecting to <i>Redis</i>.</dd>
 <dt><code>Timeout</code> <i>Milliseconds</i></dt>
@@ -2780,67 +2780,67 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Instance</code> <i>Type instance</i></dt>
 <dd>Within a query definition, an optional type instance to use when submitting the result of the query. When not supplied will default to the escaped command, up to 64 chars.</dd></dl>
 <h3>Plugin rrdcached</h3>
-<p>The <tt>&quot;rrdcached&quot;</tt> plugin uses the RRDtool accelerator daemon, <i><a href="/docs/linux/man/1-rrdcached/">rrdcached</a></i>(1), to store values to <font SIZE="-1">RRD</font> files in an efficient manner. The combination of the <tt>&quot;rrdcached&quot;</tt> <code>plugin</code> and the <tt>&quot;rrdcached&quot;</tt> <code>daemon</code> is very similar to the way the <tt>&quot;rrdtool&quot;</tt> plugin works (see below). The added abstraction layer provides a number of benefits, though: Because the cache is not within <tt>&quot;collectd&quot;</tt> anymore, it does not need to be flushed when <tt>&quot;collectd&quot;</tt> is to be restarted. This results in much shorter (if any) gaps in graphs, especially under heavy load. Also, the <tt>&quot;rrdtool&quot;</tt> command line utility is aware of the daemon so that it can flush values to disk automatically when needed. This allows one to integrate automated flushing of values into graphing solutions much more easily. </p>
-<p> There are disadvantages, though: The daemon may reside on a different host, so it may not be possible for <tt>&quot;collectd&quot;</tt> to create the appropriate <font SIZE="-1">RRD</font> files anymore. And even if <tt>&quot;rrdcached&quot;</tt> runs on the same host, it may run in a different base directory, so relative paths may do weird stuff if you&#8217;re not careful. </p>
-<p> So the <code>recommended configuration</code> is to let <tt>&quot;collectd&quot;</tt> and <tt>&quot;rrdcached&quot;</tt> run on the same host, communicating via a <font SIZE="-1">UNIX</font> domain socket. The <code>DataDir</code> setting should be set to an absolute path, so that a changed base directory does not result in <font SIZE="-1">RRD</font> files being created&nbsp;<wbr>/ expected in the wrong place.</p>
+<p>The <tt>&quot;rrdcached&quot;</tt> plugin uses the RRDtool accelerator daemon, <i><a href="/docs/linux/man/1-rrdcached/">rrdcached</a></i>(1), to store values to RRD files in an efficient manner. The combination of the <tt>&quot;rrdcached&quot;</tt> <code>plugin</code> and the <tt>&quot;rrdcached&quot;</tt> <code>daemon</code> is very similar to the way the <tt>&quot;rrdtool&quot;</tt> plugin works (see below). The added abstraction layer provides a number of benefits, though: Because the cache is not within <tt>&quot;collectd&quot;</tt> anymore, it does not need to be flushed when <tt>&quot;collectd&quot;</tt> is to be restarted. This results in much shorter (if any) gaps in graphs, especially under heavy load. Also, the <tt>&quot;rrdtool&quot;</tt> command line utility is aware of the daemon so that it can flush values to disk automatically when needed. This allows one to integrate automated flushing of values into graphing solutions much more easily. </p>
+<p> There are disadvantages, though: The daemon may reside on a different host, so it may not be possible for <tt>&quot;collectd&quot;</tt> to create the appropriate RRD files anymore. And even if <tt>&quot;rrdcached&quot;</tt> runs on the same host, it may run in a different base directory, so relative paths may do weird stuff if you&#8217;re not careful. </p>
+<p> So the <code>recommended configuration</code> is to let <tt>&quot;collectd&quot;</tt> and <tt>&quot;rrdcached&quot;</tt> run on the same host, communicating via a UNIX domain socket. The <code>DataDir</code> setting should be set to an absolute path, so that a changed base directory does not result in RRD files being created&nbsp;<wbr>/ expected in the wrong place.</p>
 <dl>
 <dt><code>DaemonAddress</code> <i>Address</i></dt>
-<dd>Address of the daemon as understood by the <tt>&quot;rrdc_connect&quot;</tt> function of the <font SIZE="-1">RRD</font> library. See <i><a href="/docs/linux/man/1-rrdcached/">rrdcached</a></i>(1) for details. Example: </dd>
+<dd>Address of the daemon as understood by the <tt>&quot;rrdc_connect&quot;</tt> function of the RRD library. See <i><a href="/docs/linux/man/1-rrdcached/">rrdcached</a></i>(1) for details. Example: </dd>
 <pre> &lt;Plugin &quot;rrdcached&quot;&gt;
  DaemonAddress &quot;unix:/var/run/rrdcached.sock&quot;
  &lt;/Plugin&gt;</pre>
 <dt><code>DataDir</code> <i>Directory</i></dt>
-<dd>Set the base directory in which the <font SIZE="-1">RRD</font> files reside. If this is a relative path, it is relative to the working base directory of the <tt>&quot;rrdcached&quot;</tt> daemon! Use of an absolute path is recommended.</dd>
+<dd>Set the base directory in which the RRD files reside. If this is a relative path, it is relative to the working base directory of the <tt>&quot;rrdcached&quot;</tt> daemon! Use of an absolute path is recommended.</dd>
 <dt><code>CreateFiles</code> <code>true</code>|<code>false</code></dt>
-<dd>Enables or disables the creation of <font SIZE="-1">RRD</font> files. If the daemon is not running locally, or <code>DataDir</code> is set to a relative path, this will not work as expected. Default is <code>true</code>.</dd>
+<dd>Enables or disables the creation of RRD files. If the daemon is not running locally, or <code>DataDir</code> is set to a relative path, this will not work as expected. Default is <code>true</code>.</dd>
 <dt><code>CreateFilesAsync</code> <code>false</code>|<code>true</code></dt>
-<dd>When enabled, new <font SIZE="-1">RRD</font> files are enabled asynchronously, using a separate thread that runs in the background. This prevents writes to block, which is a problem especially when many hundreds of files need to be created at once. However, since the purpose of creating the files asynchronously is <i>not</i> to block until the file is available, values before the file is available will be discarded. When disabled (the default) files are created synchronously, blocking for a short while, while the file is being written.</dd>
+<dd>When enabled, new RRD files are enabled asynchronously, using a separate thread that runs in the background. This prevents writes to block, which is a problem especially when many hundreds of files need to be created at once. However, since the purpose of creating the files asynchronously is <i>not</i> to block until the file is available, values before the file is available will be discarded. When disabled (the default) files are created synchronously, blocking for a short while, while the file is being written.</dd>
 <dt><code>StepSize</code> <i>Seconds</i></dt>
 <dd><code>Force</code> the stepsize of newly created RRD-files. Ideally (and per default) this setting is unset and the stepsize is set to the interval in which the data is collected. Do not use this option unless you absolutely have to for some reason. Setting this option may cause problems with the <tt>&quot;snmp plugin&quot;</tt>, the <tt>&quot;exec plugin&quot;</tt> or when the daemon is set up to receive data from other hosts.</dd>
 <dt><code>HeartBeat</code> <i>Seconds</i></dt>
 <dd><code>Force</code> the heartbeat of newly created RRD-files. This setting should be unset in which case the heartbeat is set to twice the <code>StepSize</code> which should equal the interval in which data is collected. Do not set this option unless you have a very good reason to do so.</dd>
 <dt><code>RRARows</code> <i>NumRows</i></dt>
-<dd>The <tt>&quot;rrdtool plugin&quot;</tt> calculates the number of PDPs per <font SIZE="-1">CDP</font> based on the <code>StepSize</code>, this setting and a timespan. This plugin creates RRD-files with three times five RRAs, i. e. five RRAs with the CFs <font SIZE="-1"><code>MIN</code></font>, <font SIZE="-1"><code>AVERAGE</code></font>, and <font SIZE="-1"><code>MAX</code></font>. The five RRAs are optimized for graphs covering one hour, one day, one week, one month, and one year. </dd>
-<p> So for each timespan, it calculates how many PDPs need to be consolidated into one <font SIZE="-1">CDP</font> by calculating:<br />
+<dd>The <tt>&quot;rrdtool plugin&quot;</tt> calculates the number of PDPs per CDP based on the <code>StepSize</code>, this setting and a timespan. This plugin creates RRD-files with three times five RRAs, i. e. five RRAs with the CFs <code>MIN</code>, <code>AVERAGE</code>, and <code>MAX</code>. The five RRAs are optimized for graphs covering one hour, one day, one week, one month, and one year. </dd>
+<p> So for each timespan, it calculates how many PDPs need to be consolidated into one CDP by calculating:<br/>
 &nbsp;<wbr>&nbsp;<wbr>number of PDPs&nbsp;<wbr>=&nbsp;<wbr>timespan&nbsp;<wbr>/&nbsp;<wbr>(stepsize&nbsp;<wbr>*&nbsp;<wbr>rrarows) </p>
 <p> Bottom line is, set this no smaller than the width of you graphs in pixels. The default is 1200.</p>
 <dt><code>RRATimespan</code> <i>Seconds</i></dt>
-<dd>Adds an RRA-timespan, given in seconds. Use this option multiple times to have more then one <font SIZE="-1">RRA.</font> If this option is never used, the built-in default of (3600, 86400, 604800, 2678400, 31622400) is used. </dd>
+<dd>Adds an RRA-timespan, given in seconds. Use this option multiple times to have more then one RRA. If this option is never used, the built-in default of (3600, 86400, 604800, 2678400, 31622400) is used. </dd>
 <p> For more information on how RRA-sizes are calculated see <code>RRARows</code> above.</p>
-<dt><font SIZE="-1"><code>XFF</code></font> <i>Factor</i></dt>
+<dt><code>XFF</code> <i>Factor</i></dt>
 <dd>Set the &#8220;XFiles Factor&#8221;. The default is 0.1. If unsure, don&#8217;t set this option. <i>Factor</i> must be in the range <tt>&quot;[0.0-1.0)&quot;</tt>, i.e. between zero (inclusive) and one (exclusive).</dd>
 <dt><code>CollectStatistics</code> <code>false</code>|<code>true</code></dt>
 <dd>When set to <code>true</code>, various statistics about the <i>rrdcached</i> daemon will be collected, with &#8220;rrdcached&#8221; as the <i>plugin name</i>. Defaults to <code>false</code>. </dd>
-<p> Statistics are read via <i>rrdcached</i>s socket using the <font SIZE="-1">STATS</font> command. See <i><a href="/docs/linux/man/1-rrdcached/">rrdcached</a></i>(1) for details.</dl>
+<p> Statistics are read via <i>rrdcached</i>s socket using the STATS command. See <i><a href="/docs/linux/man/1-rrdcached/">rrdcached</a></i>(1) for details.</dl>
 <h3>Plugin rrdtool</h3>
-<p>You can use the settings <code>StepSize</code>, <code>HeartBeat</code>, <code>RRARows</code>, and <font SIZE="-1"><code>XFF</code></font> to fine-tune your RRD-files. Please read <i><a href="/docs/linux/man/1-rrdcreate/">rrdcreate</a></i>(1) if you encounter problems using these settings. If you don&#8217;t want to dive into the depths of RRDtool, you can safely ignore these settings.</p>
+<p>You can use the settings <code>StepSize</code>, <code>HeartBeat</code>, <code>RRARows</code>, and <code>XFF</code> to fine-tune your RRD-files. Please read <i><a href="/docs/linux/man/1-rrdcreate/">rrdcreate</a></i>(1) if you encounter problems using these settings. If you don&#8217;t want to dive into the depths of RRDtool, you can safely ignore these settings.</p>
 <dl>
 <dt><code>DataDir</code> <i>Directory</i></dt>
-<dd>Set the directory to store <font SIZE="-1">RRD</font> files under. By default <font SIZE="-1">RRD</font> files are generated beneath the daemon&#8217;s working directory, i.e. the <code>BaseDir</code>.</dd>
+<dd>Set the directory to store RRD files under. By default RRD files are generated beneath the daemon&#8217;s working directory, i.e. the <code>BaseDir</code>.</dd>
 <dt><code>CreateFilesAsync</code> <code>false</code>|<code>true</code></dt>
-<dd>When enabled, new <font SIZE="-1">RRD</font> files are enabled asynchronously, using a separate thread that runs in the background. This prevents writes to block, which is a problem especially when many hundreds of files need to be created at once. However, since the purpose of creating the files asynchronously is <i>not</i> to block until the file is available, values before the file is available will be discarded. When disabled (the default) files are created synchronously, blocking for a short while, while the file is being written.</dd>
+<dd>When enabled, new RRD files are enabled asynchronously, using a separate thread that runs in the background. This prevents writes to block, which is a problem especially when many hundreds of files need to be created at once. However, since the purpose of creating the files asynchronously is <i>not</i> to block until the file is available, values before the file is available will be discarded. When disabled (the default) files are created synchronously, blocking for a short while, while the file is being written.</dd>
 <dt><code>StepSize</code> <i>Seconds</i></dt>
 <dd><code>Force</code> the stepsize of newly created RRD-files. Ideally (and per default) this setting is unset and the stepsize is set to the interval in which the data is collected. Do not use this option unless you absolutely have to for some reason. Setting this option may cause problems with the <tt>&quot;snmp plugin&quot;</tt>, the <tt>&quot;exec plugin&quot;</tt> or when the daemon is set up to receive data from other hosts.</dd>
 <dt><code>HeartBeat</code> <i>Seconds</i></dt>
 <dd><code>Force</code> the heartbeat of newly created RRD-files. This setting should be unset in which case the heartbeat is set to twice the <code>StepSize</code> which should equal the interval in which data is collected. Do not set this option unless you have a very good reason to do so.</dd>
 <dt><code>RRARows</code> <i>NumRows</i></dt>
-<dd>The <tt>&quot;rrdtool plugin&quot;</tt> calculates the number of PDPs per <font SIZE="-1">CDP</font> based on the <code>StepSize</code>, this setting and a timespan. This plugin creates RRD-files with three times five RRAs, i.e. five RRAs with the CFs <font SIZE="-1"><code>MIN</code></font>, <font SIZE="-1"><code>AVERAGE</code></font>, and <font SIZE="-1"><code>MAX</code></font>. The five RRAs are optimized for graphs covering one hour, one day, one week, one month, and one year. </dd>
-<p> So for each timespan, it calculates how many PDPs need to be consolidated into one <font SIZE="-1">CDP</font> by calculating:<br />
+<dd>The <tt>&quot;rrdtool plugin&quot;</tt> calculates the number of PDPs per CDP based on the <code>StepSize</code>, this setting and a timespan. This plugin creates RRD-files with three times five RRAs, i.e. five RRAs with the CFs <code>MIN</code>, <code>AVERAGE</code>, and <code>MAX</code>. The five RRAs are optimized for graphs covering one hour, one day, one week, one month, and one year. </dd>
+<p> So for each timespan, it calculates how many PDPs need to be consolidated into one CDP by calculating:<br/>
 &nbsp;<wbr>&nbsp;<wbr>number of PDPs&nbsp;<wbr>=&nbsp;<wbr>timespan&nbsp;<wbr>/&nbsp;<wbr>(stepsize&nbsp;<wbr>*&nbsp;<wbr>rrarows) </p>
 <p> Bottom line is, set this no smaller than the width of you graphs in pixels. The default is 1200.</p>
 <dt><code>RRATimespan</code> <i>Seconds</i></dt>
-<dd>Adds an RRA-timespan, given in seconds. Use this option multiple times to have more then one <font SIZE="-1">RRA.</font> If this option is never used, the built-in default of (3600, 86400, 604800, 2678400, 31622400) is used. </dd>
+<dd>Adds an RRA-timespan, given in seconds. Use this option multiple times to have more then one RRA. If this option is never used, the built-in default of (3600, 86400, 604800, 2678400, 31622400) is used. </dd>
 <p> For more information on how RRA-sizes are calculated see <code>RRARows</code> above.</p>
-<dt><font SIZE="-1"><code>XFF</code></font> <i>Factor</i></dt>
+<dt><code>XFF</code> <i>Factor</i></dt>
 <dd>Set the &#8220;XFiles Factor&#8221;. The default is 0.1. If unsure, don&#8217;t set this option. <i>Factor</i> must be in the range <tt>&quot;[0.0-1.0)&quot;</tt>, i.e. between zero (inclusive) and one (exclusive).</dd>
 <dt><code>CacheFlush</code> <i>Seconds</i></dt>
 <dd>When the <tt>&quot;rrdtool&quot;</tt> plugin uses a cache (by setting <code>CacheTimeout</code>, see below) it writes all values for a certain RRD-file if the oldest value is older than (or equal to) the number of seconds specified. If some RRD-file is not updated anymore for some reason (the computer was shut down, the network is broken, etc.) some values may still be in the cache. If <code>CacheFlush</code> is set, then the entire cache is searched for entries older than <code>CacheTimeout</code> seconds and written to disk every <i>Seconds</i> seconds. Since this is kind of expensive and does nothing under normal circumstances, this value should not be too small. 900 seconds might be a good value, though setting this to 7200 seconds doesn&#8217;t normally do much harm either.</dd>
 <dt><code>CacheTimeout</code> <i>Seconds</i></dt>
 <dd>If this option is set to a value greater than zero, the <tt>&quot;rrdtool plugin&quot;</tt> will save values in a cache, as described above. Writing multiple values at once reduces IO-operations and thus lessens the load produced by updating the files. The trade off is that the graphs kind of &#8220;drag behind&#8221; and that more memory is used.</dd>
 <dt><code>WritesPerSecond</code> <i>Updates</i></dt>
-<dd>When collecting many statistics with collectd and the <tt>&quot;rrdtool&quot;</tt> plugin, you will run serious performance problems. The <code>CacheFlush</code> setting and the internal update queue assert that collectd continues to work just fine even under heavy load, but the system may become very unresponsive and slow. This is a problem especially if you create graphs from the <font SIZE="-1">RRD</font> files on the same machine, for example using the <tt>&quot;graph.cgi&quot;</tt> script included in the <tt>&quot;contrib/collection3/&quot;</tt> directory. </dd>
-<p> This setting is designed for very large setups. Setting this option to a value between 25 and 80 updates per second, depending on your hardware, will leave the server responsive enough to draw graphs even while all the cached values are written to disk. Flushed values, i. e. values that are forced to disk by the <font SIZE="-1"><code>FLUSH</code></font> command, are <code>not</code> effected by this limit. They are still written as fast as possible, so that web frontends have up to date data when generating graphs. </p>
-<p> For example: If you have 100,000 <font SIZE="-1">RRD</font> files and set <code>WritesPerSecond</code> to 30 updates per second, writing all values to disk will take approximately 56 minutes. Together with the flushing ability that&#8217;s integrated into &#8220;collection3&#8221; you&#8217;ll end up with a responsive and fast system, up to date graphs and basically a &#8220;backup&#8221; of your values every hour.</p>
+<dd>When collecting many statistics with collectd and the <tt>&quot;rrdtool&quot;</tt> plugin, you will run serious performance problems. The <code>CacheFlush</code> setting and the internal update queue assert that collectd continues to work just fine even under heavy load, but the system may become very unresponsive and slow. This is a problem especially if you create graphs from the RRD files on the same machine, for example using the <tt>&quot;graph.cgi&quot;</tt> script included in the <tt>&quot;contrib/collection3/&quot;</tt> directory. </dd>
+<p> This setting is designed for very large setups. Setting this option to a value between 25 and 80 updates per second, depending on your hardware, will leave the server responsive enough to draw graphs even while all the cached values are written to disk. Flushed values, i. e. values that are forced to disk by the <code>FLUSH</code> command, are <code>not</code> effected by this limit. They are still written as fast as possible, so that web frontends have up to date data when generating graphs. </p>
+<p> For example: If you have 100,000 RRD files and set <code>WritesPerSecond</code> to 30 updates per second, writing all values to disk will take approximately 56 minutes. Together with the flushing ability that&#8217;s integrated into &#8220;collection3&#8221; you&#8217;ll end up with a responsive and fast system, up to date graphs and basically a &#8220;backup&#8221; of your values every hour.</p>
 <dt><code>RandomTimeout</code> <i>Seconds</i></dt>
 <dd>When set, the actual timeout for each value is chosen randomly between <i>CacheTimeout</i>&#8211;<i>RandomTimeout</i> and <i>CacheTimeout</i>+<i>RandomTimeout</i>. The intention is to avoid high load situations that appear when many values timeout at the same time. This is especially a problem shortly after the daemon starts, because all values were added to the internal cache at roughly the same time.</dd></dl>
 <h3>Plugin sensors</h3>
@@ -2872,20 +2872,20 @@ description: "collectd.conf – Configuration for the system statistics collecti
  &lt;/Plugin&gt;</pre>
 <dl>
 <dt><code>LogLevel</code> <code>0-5</code></dt>
-<dd>The <i>sigrok</i> logging level to pass on to the <i>collectd</i> log, as a number between <code>0</code> and <code>5</code> (inclusive). These levels correspond to <tt>&quot;None&quot;</tt>, <tt>&quot;Errors&quot;</tt>, <tt>&quot;Warnings&quot;</tt>, <tt>&quot;Informational&quot;</tt>, <tt>&quot;Debug &quot;</tt>and <tt>&quot;Spew&quot;</tt>, respectively. The default is <code>2</code> (<tt>&quot;Warnings&quot;</tt>). The <i>sigrok</i> log messages, regardless of their level, are always submitted to <i>collectd</i> at its <font SIZE="-1">INFO</font> log level.</dd>
+<dd>The <i>sigrok</i> logging level to pass on to the <i>collectd</i> log, as a number between <code>0</code> and <code>5</code> (inclusive). These levels correspond to <tt>&quot;None&quot;</tt>, <tt>&quot;Errors&quot;</tt>, <tt>&quot;Warnings&quot;</tt>, <tt>&quot;Informational&quot;</tt>, <tt>&quot;Debug &quot;</tt>and <tt>&quot;Spew&quot;</tt>, respectively. The default is <code>2</code> (<tt>&quot;Warnings&quot;</tt>). The <i>sigrok</i> log messages, regardless of their level, are always submitted to <i>collectd</i> at its INFO log level.</dd>
 <dt>&lt;<code>Device</code> <i>Name</i>&gt;</dt>
 <dd>A sigrok-supported device, uniquely identified by this section&#8217;s options. The <i>Name</i> is passed to <i>collectd</i> as the <i>plugin instance</i>.</dd>
 <dt><code>Driver</code> <i>DriverName</i></dt>
 <dd>The sigrok driver to use for this device.</dd>
 <dt><code>Conn</code> <i>ConnectionSpec</i></dt>
-<dd>If the device cannot be auto-discovered, or more than one might be discovered by the driver, <i>ConnectionSpec</i> specifies the connection string to the device. It can be of the form of a device path (e.g.&nbsp;<wbr><tt>&quot;/dev/ttyUSB2&quot;</tt>), or, in case of a non-serial USB-connected device, the <font SIZE="-1">USB </font><i>VendorID</i><code>.</code><i>ProductID</i> separated by a period (e.g.&nbsp;<wbr><tt>0403.6001</tt>). A <font SIZE="-1">USB</font> device can also be specified as <i>Bus</i><code>.</code><i>Address</i> (e.g.&nbsp;<wbr><tt>1.41</tt>).</dd>
+<dd>If the device cannot be auto-discovered, or more than one might be discovered by the driver, <i>ConnectionSpec</i> specifies the connection string to the device. It can be of the form of a device path (e.g.&nbsp;<wbr><tt>&quot;/dev/ttyUSB2&quot;</tt>), or, in case of a non-serial USB-connected device, the USB <i>VendorID</i><code>.</code><i>ProductID</i> separated by a period (e.g.&nbsp;<wbr><tt>0403.6001</tt>). A USB device can also be specified as <i>Bus</i><code>.</code><i>Address</i> (e.g.&nbsp;<wbr><tt>1.41</tt>).</dd>
 <dt><code>SerialComm</code> <i>SerialSpec</i></dt>
 <dd>For serial devices with non-standard port settings, this option can be used to specify them in a form understood by <i>sigrok</i>, e.g.&nbsp;<wbr><tt>&quot;9600/8n1&quot;</tt>. This should not be necessary; drivers know how to communicate with devices they support.</dd>
 <dt><code>MinimumInterval</code> <i>Seconds</i></dt>
-<dd>Specifies the minimum time between measurement dispatches to <i>collectd</i>, in seconds. Since some <i>sigrok</i> supported devices can acquire measurements many times per second, it may be necessary to throttle these. For example, the <i></i><font SIZE="-1"><i>RRD</i></font><i> plugin</i> cannot process writes more than once per second. </dd>
+<dd>Specifies the minimum time between measurement dispatches to <i>collectd</i>, in seconds. Since some <i>sigrok</i> supported devices can acquire measurements many times per second, it may be necessary to throttle these. For example, the <i></i><i>RRD</i><i> plugin</i> cannot process writes more than once per second. </dd>
 <p> The default <code>MinimumInterval</code> is <code>0</code>, meaning measurements received from the device are always dispatched to <i>collectd</i>. When throttled, unused measurements are discarded.</dl>
 <h3>Plugin smart</h3>
-<p>The <tt>&quot;smart&quot;</tt> plugin collects <font SIZE="-1">SMART</font> information from physical disks. Values collectd include temperature, power cycle count, poweron time and bad sectors. Also, all <font SIZE="-1">SMART</font> attributes are collected along with the normalized current value, the worst value, the threshold and a human readable value. </p>
+<p>The <tt>&quot;smart&quot;</tt> plugin collects SMART information from physical disks. Values collectd include temperature, power cycle count, poweron time and bad sectors. Also, all SMART attributes are collected along with the normalized current value, the worst value, the threshold and a human readable value. </p>
 <p> Using the following two options you can ignore some disks or configure the collection only of specific disks.</p>
 <dl>
 <dt><code>Disk</code> <i>Name</i></dt>
@@ -2895,20 +2895,20 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>IgnoreSelected</code> <code>true</code>|<code>false</code></dt>
 <dd>Sets whether selected disks, i. e. the ones matches by any of the <code>Disk</code> statements, are ignored or if all other disks are ignored. The behavior (hopefully) is intuitive: If no <code>Disk</code> option is configured, all disks are collected. If at least one <code>Disk</code> option is given and no <code>IgnoreSelected</code> or set to <code>false</code>, <code>only</code> matching disks will be collected. If <code>IgnoreSelected</code> is set to <code>true</code>, all disks are collected <code>except</code> the ones matched.</dd>
 <dt><code>IgnoreSleepMode</code> <code>true</code>|<code>false</code></dt>
-<dd>Normally, the <tt>&quot;smart&quot;</tt> plugin will ignore disks that are reported to be asleep. This option disables the sleep mode check and allows the plugin to collect data from these disks anyway. This is useful in cases where libatasmart mistakenly reports disks as asleep because it has not been updated to incorporate support for newer idle states in the <font SIZE="-1">ATA</font> spec.</dd>
+<dd>Normally, the <tt>&quot;smart&quot;</tt> plugin will ignore disks that are reported to be asleep. This option disables the sleep mode check and allows the plugin to collect data from these disks anyway. This is useful in cases where libatasmart mistakenly reports disks as asleep because it has not been updated to incorporate support for newer idle states in the ATA spec.</dd>
 <dt><code>UseSerial</code> <code>true</code>|<code>false</code></dt>
-<dd>A disk&#8217;s kernel name (e.g., sda) can change from one boot to the next. If this option is enabled, the <tt>&quot;smart&quot;</tt> plugin will use the disk&#8217;s serial number (e.g., <font SIZE="-1">HGST_HUH728080ALE600_2EJ8VH8X</font>) instead of the kernel name as the key for storing data. This ensures that the data for a given disk will be kept together even if the kernel name changes.</dd></dl>
+<dd>A disk&#8217;s kernel name (e.g., sda) can change from one boot to the next. If this option is enabled, the <tt>&quot;smart&quot;</tt> plugin will use the disk&#8217;s serial number (e.g., HGST_HUH728080ALE600_2EJ8VH8X) instead of the kernel name as the key for storing data. This ensures that the data for a given disk will be kept together even if the kernel name changes.</dd></dl>
 <h3>Plugin snmp</h3>
 <p>Since the configuration of the <tt>&quot;snmp plugin&quot;</tt> is a little more complicated than other plugins, its documentation has been moved to an own manpage, <i><a href="/docs/linux/man/5-collectd-snmp/">collectd-snmp</a></i>(5). Please see there for details.</p>
 <h3>Plugin statsd</h3>
-<p>The <i>statsd plugin</i> listens to a <font SIZE="-1">UDP</font> socket, reads &#8220;events&#8221; in the statsd protocol and dispatches rates or other aggregates of these numbers periodically. </p>
+<p>The <i>statsd plugin</i> listens to a UDP socket, reads &#8220;events&#8221; in the statsd protocol and dispatches rates or other aggregates of these numbers periodically. </p>
 <p> The plugin implements the <i>Counter</i>, <i>Timer</i>, <i>Gauge</i> and <i>Set</i> types which are dispatched as the <i>collectd</i> types <tt>&quot;derive&quot;</tt>, <tt>&quot;latency&quot;</tt>, <tt>&quot;gauge&quot;</tt> and <tt>&quot;objects&quot;</tt> respectively. </p>
 <p> The following configuration options are valid:</p>
 <dl>
 <dt><code>Host</code> <i>Host</i></dt>
 <dd>Bind to the hostname / address <i>Host</i>. By default, the plugin will bind to the &#8220;any&#8221; address, i.e. accept packets sent to any of the hosts addresses.</dd>
 <dt><code>Port</code> <i>Port</i></dt>
-<dd><font SIZE="-1">UDP</font> port to listen to. This can be either a service name or a port number. Defaults to <tt>8125</tt>.</dd>
+<dd>UDP port to listen to. This can be either a service name or a port number. Defaults to <tt>8125</tt>.</dd>
 <dt><code>DeleteCounters</code> <code>false</code>|<code>true</code></dt>
 <dd>
 </dd><dt><code>DeleteTimers</code> <code>false</code>|<code>true</code></dt>
@@ -2948,10 +2948,10 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>LogLevel</code> <code>debug|info|notice|warning|err</code></dt>
 <dd>Sets the log-level. If, for example, set to <code>notice</code>, then all events with severity <code>notice</code>, <code>warning</code>, or <code>err</code> will be submitted to the syslog-daemon. </dd>
 <p> Please note that <code>debug</code> is only available if collectd has been compiled with debugging support.</p>
-<dt><code>NotifyLevel</code> <font SIZE="-1"><code>OKAY</code></font>|<font SIZE="-1"><code>WARNING</code></font>|<font SIZE="-1"><code>FAILURE</code></font></dt>
-<dd>Controls which notifications should be sent to syslog. The default behaviour is not to send any. Less severe notifications always imply logging more severe notifications: Setting this to <font SIZE="-1"><code>OKAY</code></font> means all notifications will be sent to syslog, setting this to <font SIZE="-1"><code>WARNING</code></font> will send <font SIZE="-1"><code>WARNING</code></font> and <font SIZE="-1"><code>FAILURE</code></font> notifications but will dismiss <font SIZE="-1"><code>OKAY</code></font> notifications. Setting this option to <font SIZE="-1"><code>FAILURE</code></font> will only send failures to syslog.</dd></dl>
+<dt><code>NotifyLevel</code> <code>OKAY</code>|<code>WARNING</code>|<code>FAILURE</code></dt>
+<dd>Controls which notifications should be sent to syslog. The default behaviour is not to send any. Less severe notifications always imply logging more severe notifications: Setting this to <code>OKAY</code> means all notifications will be sent to syslog, setting this to <code>WARNING</code> will send <code>WARNING</code> and <code>FAILURE</code> notifications but will dismiss <code>OKAY</code> notifications. Setting this option to <code>FAILURE</code> will only send failures to syslog.</dd></dl>
 <h3>Plugin table</h3>
-<p>The <tt>&quot;table plugin&quot;</tt> provides generic means to parse tabular data and dispatch user specified values. Values are selected based on column numbers. For example, this plugin may be used to get values from the Linux <i><a href="/docs/linux/man/5-proc/">proc</a></i>(5) filesystem or <font SIZE="-1">CSV </font>(comma separated values) files. </p>
+<p>The <tt>&quot;table plugin&quot;</tt> provides generic means to parse tabular data and dispatch user specified values. Values are selected based on column numbers. For example, this plugin may be used to get values from the Linux <i><a href="/docs/linux/man/5-proc/">proc</a></i>(5) filesystem or CSV (comma separated values) files. </p>
 <pre> &lt;Plugin table&gt;
  &lt;Table &quot;/proc/slabinfo&quot;&gt;
  Instance &quot;slabinfo&quot;
@@ -3103,7 +3103,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Instance</code> <i>TypeInstance</i></dt>
 <dd>This optional setting sets the type instance to use.</dd></dl>
 <h3>Plugin tail_csv</h3>
-<p>The <i>tail_csv plugin</i> reads files in the <font SIZE="-1">CSV</font> format, e.g. the statistics file written by <i>Snort</i>. </p>
+<p>The <i>tail_csv plugin</i> reads files in the CSV format, e.g. the statistics file written by <i>Snort</i>. </p>
 <p> <code>Synopsis:</code> </p>
 <pre> &lt;Plugin &quot;tail_csv&quot;&gt;
  &lt;Metric &quot;snort-dropped&quot;&gt;
@@ -3117,10 +3117,10 @@ description: "collectd.conf – Configuration for the system statistics collecti
  Collect &quot;snort-dropped&quot;
  &lt;/File&gt;
  &lt;/Plugin&gt;</pre>
-<p>The configuration consists of one or more <code>Metric</code> blocks that define an index into the line of the <font SIZE="-1">CSV</font> file and how this value is mapped to <i>collectd&#8217;s</i> internal representation. These are followed by one or more <code>Instance</code> blocks which configure which file to read, in which interval and which metrics to extract.</p>
+<p>The configuration consists of one or more <code>Metric</code> blocks that define an index into the line of the CSV file and how this value is mapped to <i>collectd&#8217;s</i> internal representation. These are followed by one or more <code>Instance</code> blocks which configure which file to read, in which interval and which metrics to extract.</p>
 <dl>
 <dt>&lt;<code>Metric</code> <i>Name</i>&gt;</dt>
-<dd>The <code>Metric</code> block configures a new metric to be extracted from the statistics file and how it is mapped on <i>collectd&#8217;s</i> data model. The string <i>Name</i> is only used inside the <code>Instance</code> blocks to refer to this block, so you can use one <code>Metric</code> block for multiple <font SIZE="-1">CSV</font> files.</dd>
+<dd>The <code>Metric</code> block configures a new metric to be extracted from the statistics file and how it is mapped on <i>collectd&#8217;s</i> data model. The string <i>Name</i> is only used inside the <code>Instance</code> blocks to refer to this block, so you can use one <code>Metric</code> block for multiple CSV files.</dd>
 <dl>
 <dd>
 </dd><dl>
@@ -3134,7 +3134,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dl>
 <dd></dd></dl>
 <dt>&lt;<code>File</code> <i>Path</i>&gt;</dt>
-<dd>Each <code>File</code> block represents one <font SIZE="-1">CSV</font> file to read. There must be at least one <i>File</i> block but there can be multiple if you have multiple <font SIZE="-1">CSV</font> files.</dd>
+<dd>Each <code>File</code> block represents one CSV file to read. There must be at least one <i>File</i> block but there can be multiple if you have multiple CSV files.</dd>
 <dl>
 <dd>
 </dd><dl>
@@ -3162,17 +3162,17 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <pre> Server &quot;8767&quot;</pre>
 <p>This option, although numeric, needs to be a string, i. e. you <code>must</code> use quotes around it! If no such statement is given only global information will be collected.</dl>
 <h3>Plugin ted</h3>
-<p>The <i></i><font SIZE="-1"><i>TED</i></font><i></i> plugin connects to a device of &#8220;The Energy Detective&#8221;, a device to measure power consumption. These devices are usually connected to a serial (<font SIZE="-1">RS232</font>) or <font SIZE="-1">USB</font> port. The plugin opens a configured device and tries to read the current energy readings. For more information on <font SIZE="-1">TED,</font> visit &lt;<a rel="nofollow" href="http://www.theenergydetective.com/">http://www.theenergydetective.com/</a>&gt;. </p>
+<p>The <i></i><i>TED</i><i></i> plugin connects to a device of &#8220;The Energy Detective&#8221;, a device to measure power consumption. These devices are usually connected to a serial (RS232) or USB port. The plugin opens a configured device and tries to read the current energy readings. For more information on TED, visit &lt;<a rel="nofollow" href="http://www.theenergydetective.com/">http://www.theenergydetective.com/</a>&gt;. </p>
 <p> Available configuration options:</p>
 <dl>
 <dt><code>Device</code> <i>Path</i></dt>
-<dd>Path to the device on which <font SIZE="-1">TED</font> is connected. collectd will need read and write permissions on that file. </dd>
+<dd>Path to the device on which TED is connected. collectd will need read and write permissions on that file. </dd>
 <p> Default: <code>/dev/ttyUSB0</code></p>
 <dt><code>Retries</code> <i>Num</i></dt>
-<dd>Apparently reading from <font SIZE="-1">TED</font> is not that reliable. You can therefore configure a number of retries here. You only configure the <i>retries</i> here, to if you specify zero, one reading will be performed (but no retries if that fails); if you specify three, a maximum of four readings are performed. Negative values are illegal. </dd>
+<dd>Apparently reading from TED is not that reliable. You can therefore configure a number of retries here. You only configure the <i>retries</i> here, to if you specify zero, one reading will be performed (but no retries if that fails); if you specify three, a maximum of four readings are performed. Negative values are illegal. </dd>
 <p> Default: <code>0</code></dl>
 <h3>Plugin tcpconns</h3>
-<p>The <tt>&quot;tcpconns plugin&quot;</tt> counts the number of currently established <font SIZE="-1">TCP</font> connections based on the local port and/or the remote port. Since there may be a lot of connections the default if to count all connections with a local port, for which a listening socket is opened. You can use the following options to fine-tune the ports you are interested in:</p>
+<p>The <tt>&quot;tcpconns plugin&quot;</tt> counts the number of currently established TCP connections based on the local port and/or the remote port. Since there may be a lot of connections the default if to count all connections with a local port, for which a listening socket is opened. You can use the following options to fine-tune the ports you are interested in:</p>
 <dl>
 <dt><code>ListeningPorts</code> <i>true</i>|<i>false</i></dt>
 <dd>If this option is set to <i>true</i>, statistics for all local ports for which a listening socket exists are collected. The default depends on <code>LocalPort</code> and <code>RemotePort</code> (see below): If no port at all is specifically selected, the default is to collect listening ports. If specific ports (no matter if local or remote ports) are selected, this option defaults to <i>false</i>, i. e. only the selected ports will be collected unless this option is set to <i>true</i> specifically.</dd>
@@ -3197,20 +3197,20 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p>The <i>TokyoTyrant plugin</i> connects to a TokyoTyrant server and collects a couple metrics: number of records, and database size on disk.</p>
 <dl>
 <dt><code>Host</code> <i>Hostname/IP</i></dt>
-<dd>The hostname or <font SIZE="-1">IP</font> which identifies the server. Default: <code>127.0.0.1</code></dd>
+<dd>The hostname or IP which identifies the server. Default: <code>127.0.0.1</code></dd>
 <dt><code>Port</code> <i>Service/Port</i></dt>
 <dd>The query port of the server. This needs to be a string, even if the port is given in its numeric form. Default: <code>1978</code></dd></dl>
 <h3>Plugin turbostat</h3>
-<p>The <i>Turbostat plugin</i> reads <font SIZE="-1">CPU</font> frequency and C-state residency on modern Intel processors by using <i>Model Specific Registers</i>.</p>
+<p>The <i>Turbostat plugin</i> reads CPU frequency and C-state residency on modern Intel processors by using <i>Model Specific Registers</i>.</p>
 <dl>
 <dt><code>CoreCstates</code> <i>Bitmask(Integer)</i></dt>
-<dd>Bit mask of the list of core C-states supported by the processor. This option should only be used if the automated detection fails. Default value extracted from the <font SIZE="-1">CPU</font> model and family. </dd>
+<dd>Bit mask of the list of core C-states supported by the processor. This option should only be used if the automated detection fails. Default value extracted from the CPU model and family. </dd>
 <p> Currently supported C-states (by this plugin): 3, 6, 7 </p>
 <p> <code>Example:</code> </p>
 <pre> All states (3, 6 and 7):
  (1&lt;&lt;3) + (1&lt;&lt;6) + (1&lt;&lt;7) = 392</pre>
 <dt><code>PackageCstates</code> <i>Bitmask(Integer)</i></dt>
-<dd>Bit mask of the list of packages C-states supported by the processor. This option should only be used if the automated detection fails. Default value extracted from the <font SIZE="-1">CPU</font> model and family. </dd>
+<dd>Bit mask of the list of packages C-states supported by the processor. This option should only be used if the automated detection fails. Default value extracted from the CPU model and family. </dd>
 <p> Currently supported C-states (by this plugin): 2, 3, 6, 7, 8, 9, 10 </p>
 <p> <code>Example:</code> </p>
 <pre> States 2, 3, 6 and 7:
@@ -3220,7 +3220,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>DigitalTemperatureSensor</code> <i>true</i>|<i>false</i></dt>
 <dd>Boolean enabling the collection of the temperature of each core. This option should only be used if the automated detection fails or if you want to disable this feature.</dd>
 <dt><code>TCCActivationTemp</code> <i>Temperature</i></dt>
-<dd><i>Thermal Control Circuit Activation Temperature</i> of the installed <font SIZE="-1">CPU.</font> This temperature is used when collecting the temperature of cores or packages. This option should only be used if the automated detection fails. Default value extracted from <font SIZE="-1"><code>MSR_IA32_TEMPERATURE_TARGET</code></font>.</dd>
+<dd><i>Thermal Control Circuit Activation Temperature</i> of the installed CPU. This temperature is used when collecting the temperature of cores or packages. This option should only be used if the automated detection fails. Default value extracted from <code>MSR_IA32_TEMPERATURE_TARGET</code>.</dd>
 <dt><code>RunningAveragePowerLimit</code> <i>Bitmask(Integer)</i></dt>
 <dd>Bit mask of the list of elements to be thermally monitored. This option should only be used if the automated detection fails or if you want to disable some collections. The different bits of this bit mask accepted by this plugin are:</dd>
 <dl>
@@ -3228,7 +3228,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dd><dl>
 <dt>0 (&#8216;1&#8217;): Package</dt>
 <dd>
-</dd><dt>1 (&#8216;2&#8217;): <font SIZE="-1">DRAM</font></dt>
+</dd><dt>1 (&#8216;2&#8217;): DRAM</dt>
 <dd>
 </dd><dt>2 (&#8216;4&#8217;): Cores</dt>
 <dd>
@@ -3250,23 +3250,23 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>DeleteSocket</code> <code>false</code>|<code>true</code></dt>
 <dd>If set to <code>true</code>, delete the socket file before calling <i><a href="/docs/linux/man/2-bind/">bind</a></i>(2), if a file with the given name already exists. If <i>collectd</i> crashes a socket file may be left over, preventing the daemon from opening a new socket when restarted. Since this is potentially dangerous, this defaults to <code>false</code>.</dd></dl>
 <h3>Plugin uuid</h3>
-<p>This plugin, if loaded, causes the Hostname to be taken from the machine&#8217;s <font SIZE="-1">UUID.</font> The <font SIZE="-1">UUID</font> is a universally unique designation for the machine, usually taken from the machine&#8217;s <font SIZE="-1">BIOS.</font> This is most useful if the machine is running in a virtual environment such as Xen, in which case the <font SIZE="-1">UUID</font> is preserved across shutdowns and migration. </p>
-<p> The following methods are used to find the machine&#8217;s <font SIZE="-1">UUID,</font> in order:</p>
+<p>This plugin, if loaded, causes the Hostname to be taken from the machine&#8217;s UUID. The UUID is a universally unique designation for the machine, usually taken from the machine&#8217;s BIOS. This is most useful if the machine is running in a virtual environment such as Xen, in which case the UUID is preserved across shutdowns and migration. </p>
+<p> The following methods are used to find the machine&#8217;s UUID, in order:</p>
 <dl>
 <dt>&bull;</dt>
 <dd>Check <i>/etc/uuid</i> (or <i>UUIDFile</i>).</dd>
 <dt>&bull;</dt>
-<dd>Check for <font SIZE="-1">UUID</font> from <font SIZE="-1">HAL </font>(&lt;<a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/hal">http://www.freedesktop.org/wiki/Software/hal</a>&gt;) if present.</dd>
+<dd>Check for UUID from HAL (&lt;<a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/hal">http://www.freedesktop.org/wiki/Software/hal</a>&gt;) if present.</dd>
 <dt>&bull;</dt>
-<dd>Check for <font SIZE="-1">UUID</font> from <tt>&quot;dmidecode&quot;</tt> / <font SIZE="-1">SMBIOS.</font></dd>
+<dd>Check for UUID from <tt>&quot;dmidecode&quot;</tt> / SMBIOS.</dd>
 <dt>&bull;</dt>
-<dd>Check for <font SIZE="-1">UUID</font> from Xen hypervisor.</dd></dl>
-<p> If no <font SIZE="-1">UUID</font> can be found then the hostname is not modified.</p>
+<dd>Check for UUID from Xen hypervisor.</dd></dl>
+<p> If no UUID can be found then the hostname is not modified.</p>
 <dl>
 <dt><code>UUIDFile</code> <i>Path</i></dt>
-<dd>Take the <font SIZE="-1">UUID</font> from the given file (default <i>/etc/uuid</i>).</dd></dl>
+<dd>Take the UUID from the given file (default <i>/etc/uuid</i>).</dd></dl>
 <h3>Plugin varnish</h3>
-<p>The <i>varnish plugin</i> collects information about Varnish, an <font SIZE="-1">HTTP</font> accelerator. It collects a subset of the values displayed by <i><a href="/docs/linux/man/1-varnishstat/">varnishstat</a></i>(1), and organizes them in categories which can be enabled or disabled. Currently only metrics shown in <i><a href="/docs/linux/man/1-varnishstat/">varnishstat</a></i>(1)&#8217;s <i></i><font SIZE="-1"><i>MAIN</i></font><i></i> section are collected. The exact meaning of each metric can be found in <i><a href="/docs/linux/man/7-varnish-counters/">varnish-counters</a></i>(7). </p>
+<p>The <i>varnish plugin</i> collects information about Varnish, an HTTP accelerator. It collects a subset of the values displayed by <i><a href="/docs/linux/man/1-varnishstat/">varnishstat</a></i>(1), and organizes them in categories which can be enabled or disabled. Currently only metrics shown in <i><a href="/docs/linux/man/1-varnishstat/">varnishstat</a></i>(1)&#8217;s <i></i><i>MAIN</i><i></i> section are collected. The exact meaning of each metric can be found in <i><a href="/docs/linux/man/7-varnish-counters/">varnish-counters</a></i>(7). </p>
 <p> Synopsis: </p>
 <pre> &lt;Plugin &quot;varnish&quot;&gt;
  &lt;Instance &quot;example&quot;&gt;
@@ -3305,11 +3305,11 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>CollectConnections</code> <code>true</code>|<code>false</code></dt>
 <dd>Number of client connections received, accepted and dropped. True by default.</dd>
 <dt><code>CollectDirectorDNS</code> <code>true</code>|<code>false</code></dt>
-<dd><font SIZE="-1">DNS</font> director lookup cache statistics. Only available with Varnish 3.x. False by default.</dd>
+<dd>DNS director lookup cache statistics. Only available with Varnish 3.x. False by default.</dd>
 <dt><code>CollectESI</code> <code>true</code>|<code>false</code></dt>
-<dd>Edge Side Includes (<font SIZE="-1">ESI</font>) parse statistics. False by default.</dd>
+<dd>Edge Side Includes (ESI) parse statistics. False by default.</dd>
 <dt><code>CollectFetch</code> <code>true</code>|<code>false</code></dt>
-<dd>Statistics about fetches (<font SIZE="-1">HTTP</font> requests sent to the backend). False by default.</dd>
+<dd>Statistics about fetches (HTTP requests sent to the backend). False by default.</dd>
 <dt><code>CollectHCB</code> <code>true</code>|<code>false</code></dt>
 <dd>Inserts and look-ups in the crit bit tree based hash. Look-ups are divided into locked and unlocked look-ups. False by default.</dd>
 <dt><code>CollectObjects</code> <code>true</code>|<code>false</code></dt>
@@ -3333,13 +3333,13 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>CollectUptime</code> <code>true</code>|<code>false</code></dt>
 <dd>Varnish uptime. Only available with Varnish 3.x and above. False by default.</dd>
 <dt><code>CollectVCL</code> <code>true</code>|<code>false</code></dt>
-<dd>Number of total (available + discarded) <font SIZE="-1">VCL </font>(config files). False by default.</dd>
+<dd>Number of total (available + discarded) VCL (config files). False by default.</dd>
 <dt><code>CollectVSM</code> <code>true</code>|<code>false</code></dt>
 <dd>Collect statistics about Varnish&#8217;s shared memory usage (used by the logging and statistics subsystems). Only available with Varnish 4.x. False by default.</dd>
 <dt><code>CollectWorkers</code> <code>true</code>|<code>false</code></dt>
 <dd>Collect statistics about worker threads. False by default.</dd></dl>
 <h3>Plugin virt</h3>
-<p>This plugin allows <font SIZE="-1">CPU,</font> disk and network load to be collected for virtualized guests on the machine. This means that these metrics can be collected for guest systems without installing any software on them &#8211; <i>collectd</i> only runs on the host system. The statistics are collected through libvirt (&lt;<a rel="nofollow" href="http://libvirt.org/">http://libvirt.org/</a>&gt;). </p>
+<p>This plugin allows CPU, disk and network load to be collected for virtualized guests on the machine. This means that these metrics can be collected for guest systems without installing any software on them &#8211; <i>collectd</i> only runs on the host system. The statistics are collected through libvirt (&lt;<a rel="nofollow" href="http://libvirt.org/">http://libvirt.org/</a>&gt;). </p>
 <p> Only <i>Connection</i> is required.</p>
 <dl>
 <dt><code>Connection</code> <i>uri</i></dt>
@@ -3366,10 +3366,10 @@ description: "collectd.conf – Configuration for the system statistics collecti
  IgnoreSelected &quot;true&quot;</pre>
 <p>Ignore all <i>hdb</i> devices on any domain, but other block devices (eg. <i>hda</i>) will be collected.</p>
 <dt><code>BlockDeviceFormat</code> <code>target</code>|<code>source</code></dt>
-<dd>If <i>BlockDeviceFormat</i> is set to <code>target</code>, the default, then the device name seen by the guest will be used for reporting metrics. This corresponds to the <tt>&quot;&lt;target&gt;&quot;</tt> node in the <font SIZE="-1">XML</font> definition of the domain. </dd>
-<p> If <i>BlockDeviceFormat</i> is set to <code>source</code>, then metrics will be reported using the path of the source, e.g. an image file. This corresponds to the <tt>&quot;&lt;source&gt;&quot;</tt> node in the <font SIZE="-1">XML</font> definition of the domain. </p>
+<dd>If <i>BlockDeviceFormat</i> is set to <code>target</code>, the default, then the device name seen by the guest will be used for reporting metrics. This corresponds to the <tt>&quot;&lt;target&gt;&quot;</tt> node in the XML definition of the domain. </dd>
+<p> If <i>BlockDeviceFormat</i> is set to <code>source</code>, then metrics will be reported using the path of the source, e.g. an image file. This corresponds to the <tt>&quot;&lt;source&gt;&quot;</tt> node in the XML definition of the domain. </p>
 <p> <code>Example:</code> </p>
-<p> If the domain <font SIZE="-1">XML</font> have the following device defined: </p>
+<p> If the domain XML have the following device defined: </p>
 <pre> &lt;disk type='block' device='disk'&gt;
  &lt;driver name='qemu' type='raw' cache='none' io='native' discard='unmap'/&gt;
  &lt;source dev='/var/lib/libvirt/images/image1.qcow2'/&gt;
@@ -3384,17 +3384,17 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> Assume the device path (source tag) is <tt>&quot;/var/lib/libvirt/images/image1.qcow2&quot;</tt>. Setting <tt>&quot;BlockDeviceFormatBasename false&quot;</tt> will cause the <i>type instance</i> to be set to <tt>&quot;var_lib_libvirt_images_image1.qcow2&quot;</tt>. Setting <tt>&quot;BlockDeviceFormatBasename true&quot;</tt> will cause the <i>type instance</i> to be set to <tt>&quot;image1.qcow2&quot;</tt>.</p>
 <dt><code>HostnameFormat</code> <code>name|uuid|hostname|&#8230;</code></dt>
 <dd>When the virt plugin logs data, it sets the hostname of the collected data according to this setting. The default is to use the guest name as provided by the hypervisor, which is equal to setting <code>name</code>. </dd>
-<p> <code>uuid</code> means use the guest&#8217;s <font SIZE="-1">UUID.</font> This is useful if you want to track the same guest across migrations. </p>
+<p> <code>uuid</code> means use the guest&#8217;s UUID. This is useful if you want to track the same guest across migrations. </p>
 <p> <code>hostname</code> means to use the global <code>Hostname</code> setting, which is probably not useful on its own because all guests will appear to have the same name. </p>
-<p> You can also specify combinations of these fields. For example <code>name uuid</code> means to concatenate the guest name and <font SIZE="-1">UUID </font>(with a literal colon character between, thus <i>&#8220;foo:1234-1234-1234-1234&#8221;</i>). </p>
+<p> You can also specify combinations of these fields. For example <code>name uuid</code> means to concatenate the guest name and UUID (with a literal colon character between, thus <i>&#8220;foo:1234-1234-1234-1234&#8221;</i>). </p>
 <p> At the moment of writing (collectd-5.5), hostname string is limited to 62 characters. In case when combination of fields exceeds 62 characters, hostname will be truncated without a warning.</p>
 <dt><code>InterfaceFormat</code> <code>name</code>|<code>address</code></dt>
 <dd>When the virt plugin logs interface data, it sets the name of the collected data according to this setting. The default is to use the path as provided by the hypervisor (the &#8220;dev&#8221; property of the target node), which is equal to setting <code>name</code>. </dd>
 <p> <code>address</code> means use the interface&#8217;s mac address. This is useful since the interface path might change between reboots of a guest or across migrations.</p>
 <dt><code>PluginInstanceFormat</code> <code>name|uuid|none</code></dt>
 <dd>When the virt plugin logs data, it sets the plugin_instance of the collected data according to this setting. The default is to not set the plugin_instance. </dd>
-<p> <code>name</code> means use the guest&#8217;s name as provided by the hypervisor. <code>uuid</code> means use the guest&#8217;s <font SIZE="-1">UUID.</font> </p>
-<p> You can also specify combinations of the <code>name</code> and <code>uuid</code> fields. For example <code>name uuid</code> means to concatenate the guest name and <font SIZE="-1">UUID </font>(with a literal colon character between, thus <i>&#8220;foo:1234-1234-1234-1234&#8221;</i>).</dl>
+<p> <code>name</code> means use the guest&#8217;s name as provided by the hypervisor. <code>uuid</code> means use the guest&#8217;s UUID. </p>
+<p> You can also specify combinations of the <code>name</code> and <code>uuid</code> fields. For example <code>name uuid</code> means to concatenate the guest name and UUID (with a literal colon character between, thus <i>&#8220;foo:1234-1234-1234-1234&#8221;</i>).</dl>
 <h3>Plugin vmem</h3>
 <p>The <tt>&quot;vmem&quot;</tt> plugin collects information about the usage of virtual memory. Since the statistics provided by the Linux kernel are very detailed, they are collected very detailed. However, to get all the details, you have to switch them on manually. Most people just want an overview over, such as the number of pages read from swap space.</p>
 <dl>
@@ -3405,7 +3405,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> The <code>VServer</code> homepage can be found at &lt;<a rel="nofollow" href="http://linux-vserver.org/">http://linux-vserver.org/</a>&gt;. </p>
 <p> <code>Note</code>: The traffic collected by this plugin accounts for the amount of traffic passing a socket which might be a lot less than the actual on-wire traffic (e. g. due to headers and retransmission). If you want to collect on-wire traffic you could, for example, use the logging facilities of iptables to feed data for the guest IPs into the iptables plugin.</p>
 <h3>Plugin write_graphite</h3>
-<p>The <tt>&quot;write_graphite&quot;</tt> plugin writes data to <i>Graphite</i>, an open-source metrics storage and graphing project. The plugin connects to <i>Carbon</i>, the data layer of <i>Graphite</i>, via <i></i><font SIZE="-1"><i>TCP</i></font><i></i> or <i></i><font SIZE="-1"><i>UDP</i></font><i></i> and sends data via the &#8220;line based&#8221; protocol (per default using port 2003). The data will be sent in blocks of at most 1428 bytes to minimize the number of network packets. </p>
+<p>The <tt>&quot;write_graphite&quot;</tt> plugin writes data to <i>Graphite</i>, an open-source metrics storage and graphing project. The plugin connects to <i>Carbon</i>, the data layer of <i>Graphite</i>, via <i></i><i>TCP</i><i></i> or <i></i><i>UDP</i><i></i> and sends data via the &#8220;line based&#8221; protocol (per default using port 2003). The data will be sent in blocks of at most 1428 bytes to minimize the number of network packets. </p>
 <p> Synopsis: </p>
 <pre> &lt;Plugin write_graphite&gt;
  &lt;Node &quot;example&quot;&gt;
@@ -3427,7 +3427,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>ReconnectInterval</code> <i>Seconds</i></dt>
 <dd>When set to non-zero, forces the connection to the Graphite backend to be closed and re-opend periodically. This behavior is desirable in environments where the connection to the Graphite backend is done through load balancers, for example. When set to zero, the default, the connetion is kept open for as long as possible.</dd>
 <dt><code>LogSendErrors</code> <code>false</code>|<code>true</code></dt>
-<dd>If set to <code>true</code> (the default), logs errors when sending data to <i>Graphite</i>. If set to <code>false</code>, it will not log the errors. This is especially useful when using Protocol <font SIZE="-1">UDP</font> since many times we want to use the &#8220;fire-and-forget&#8221; approach and logging errors fills syslog with unneeded messages.</dd>
+<dd>If set to <code>true</code> (the default), logs errors when sending data to <i>Graphite</i>. If set to <code>false</code>, it will not log the errors. This is especially useful when using Protocol UDP since many times we want to use the &#8220;fire-and-forget&#8221; approach and logging errors fills syslog with unneeded messages.</dd>
 <dt><code>Prefix</code> <i>String</i></dt>
 <dd>When set, <i>String</i> is added in front of the host name. Dots and whitespace are <i>not</i> escaped in this string (see <code>EscapeCharacter</code> below).</dd>
 <dt><code>Postfix</code> <i>String</i></dt>
@@ -3439,14 +3439,14 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>SeparateInstances</code> <code>false</code>|<code>true</code></dt>
 <dd>If set to <code>true</code>, the plugin instance and type instance will be in their own path component, for example <tt>&quot;host.cpu.0.cpu.idle&quot;</tt>. If set to <code>false</code> (the default), the plugin and plugin instance (and likewise the type and type instance) are put into one component, for example <tt>&quot;host.cpu-0.cpu-idle&quot;</tt>.</dd>
 <dt><code>AlwaysAppendDS</code> <code>false</code>|<code>true</code></dt>
-<dd>If set to <code>true</code>, append the name of the <i>Data Source</i> (<font SIZE="-1">DS</font>) to the &#8220;metric&#8221; identifier. If set to <code>false</code> (the default), this is only done when there is more than one <font SIZE="-1">DS.</font></dd>
+<dd>If set to <code>true</code>, append the name of the <i>Data Source</i> (DS) to the &#8220;metric&#8221; identifier. If set to <code>false</code> (the default), this is only done when there is more than one DS.</dd>
 <dt><code>PreserveSeparator</code> <code>false</code>|<code>true</code></dt>
 <dd>If set to <code>false</code> (the default) the <tt>&quot;.&quot;</tt> (dot) character is replaced with <i>EscapeCharacter</i>. Otherwise, if set to <code>true</code>, the <tt>&quot;.&quot;</tt> (dot) character is preserved, i.e. passed through.</dd>
 <dt><code>DropDuplicateFields</code> <code>false</code>|<code>true</code></dt>
 <dd>If set to <code>true</code>, detect and remove duplicate components in Graphite metric names. For example, the metric name <tt>&quot;host.load.load.shortterm&quot;</tt> will be shortened to <tt>&quot;host.load.shortterm&quot;</tt>.</dd></dl>
 <h3>Plugin write_log</h3>
-<p>The <tt>&quot;write_log&quot;</tt> plugin writes metrics as <font SIZE="-1">INFO</font> log messages. </p>
-<p> This plugin supports two output formats: <i>Graphite</i> and <i></i><font SIZE="-1"><i>JSON</i></font><i></i>. </p>
+<p>The <tt>&quot;write_log&quot;</tt> plugin writes metrics as INFO log messages. </p>
+<p> This plugin supports two output formats: <i>Graphite</i> and <i></i><i>JSON</i><i></i>. </p>
 <p> Synopsis: </p>
 <pre> &lt;Plugin write_log&gt;
  Format Graphite
@@ -3455,7 +3455,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Format</code> <i>Format</i></dt>
 <dd>The output format to use. Can be one of <tt>&quot;Graphite&quot;</tt> or <tt>&quot;JSON&quot;</tt>.</dd></dl>
 <h3>Plugin write_tsdb</h3>
-<p>The <tt>&quot;write_tsdb&quot;</tt> plugin writes data to <i>OpenTSDB</i>, a scalable open-source time series database. The plugin connects to a <i></i><font SIZE="-1"><i>TSD</i></font><i></i>, a masterless, no shared state daemon that ingests metrics and stores them in HBase. The plugin uses <i></i><font SIZE="-1"><i>TCP</i></font><i></i> over the &#8220;line based&#8221; protocol with a default port 4242. The data will be sent in blocks of at most 1428 bytes to minimize the number of network packets. </p>
+<p>The <tt>&quot;write_tsdb&quot;</tt> plugin writes data to <i>OpenTSDB</i>, a scalable open-source time series database. The plugin connects to a <i></i><i>TSD</i><i></i>, a masterless, no shared state daemon that ingests metrics and stores them in HBase. The plugin uses <i></i><i>TCP</i><i></i> over the &#8220;line based&#8221; protocol with a default port 4242. The data will be sent in blocks of at most 1428 bytes to minimize the number of network packets. </p>
 <p> Synopsis: </p>
 <pre> &lt;Plugin write_tsdb&gt;
  &lt;Node &quot;example&quot;&gt;
@@ -3471,11 +3471,11 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Port</code> <i>Service</i></dt>
 <dd>Service name or port number to connect to. Defaults to <tt>4242</tt>.</dd>
 <dt><code>HostTags</code> <i>String</i></dt>
-<dd>When set, <i>HostTags</i> is added to the end of the metric. It is intended to be used for name=value pairs that the <font SIZE="-1">TSD</font> will tag the metric with. Dots and whitespace are <i>not</i> escaped in this string.</dd>
+<dd>When set, <i>HostTags</i> is added to the end of the metric. It is intended to be used for name=value pairs that the TSD will tag the metric with. Dots and whitespace are <i>not</i> escaped in this string.</dd>
 <dt><code>StoreRates</code> <code>false</code>|<code>true</code></dt>
 <dd>If set to <code>true</code>, convert counter values to rates. If set to <code>false</code> (the default) counter values are stored as is, as an increasing integer number.</dd>
 <dt><code>AlwaysAppendDS</code> <code>false</code>|<code>true</code></dt>
-<dd>If set the <code>true</code>, append the name of the <i>Data Source</i> (<font SIZE="-1">DS</font>) to the &#8220;metric&#8221; identifier. If set to <code>false</code> (the default), this is only done when there is more than one <font SIZE="-1">DS.</font></dd></dl>
+<dd>If set the <code>true</code>, append the name of the <i>Data Source</i> (DS) to the &#8220;metric&#8221; identifier. If set to <code>false</code> (the default), this is only done when there is more than one DS.</dd></dl>
 <h3>Plugin write_mongodb</h3>
 <p>The <i>write_mongodb plugin</i> will send values to <i>MongoDB</i>, a schema-less NoSQL database. </p>
 <p> <code>Synopsis:</code> </p>
@@ -3515,7 +3515,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p> <i>Prometheus</i> has a global setting, <tt>&quot;StalenessDelta&quot;</tt>, which controls after which time a metric without updates is considered &#8220;stale&#8221;. This setting effectively puts an upper limit on the interval in which metrics are reported. </p>
 <p> When the <i>write_prometheus plugin</i> encounters a metric with an interval exceeding this limit, it will inform you, the user, and provide the metric to <i>Prometheus</i> <code>without</code> a timestamp. That causes <i>Prometheus</i> to consider the metric &#8220;fresh&#8221; each time it is scraped, with the time of the scrape being considered the time of the update. The result is that there appear more datapoints in <i>Prometheus</i> than were actually created, but at least the metric doesn&#8217;t disappear periodically.</dl>
 <h3>Plugin write_http</h3>
-<p>This output plugin submits values to an <font SIZE="-1">HTTP</font> server using <font SIZE="-1">POST</font> requests and encoding metrics with <font SIZE="-1">JSON</font> or using the <tt>&quot;PUTVAL&quot;</tt> command described in <i><a href="/docs/linux/man/5-collectd-unixsock/">collectd-unixsock</a></i>(5). </p>
+<p>This output plugin submits values to an HTTP server using POST requests and encoding metrics with JSON or using the <tt>&quot;PUTVAL&quot;</tt> command described in <i><a href="/docs/linux/man/5-collectd-unixsock/">collectd-unixsock</a></i>(5). </p>
 <p> Synopsis: </p>
 <pre> &lt;Plugin &quot;write_http&quot;&gt;
  &lt;Node &quot;example&quot;&gt;
@@ -3525,35 +3525,35 @@ description: "collectd.conf – Configuration for the system statistics collecti
  Format JSON
  &lt;/Node&gt;
  &lt;/Plugin&gt;</pre>
-<p>The plugin can send values to multiple <font SIZE="-1">HTTP</font> servers by specifying one &lt;<code>Node</code>&nbsp;<wbr><i>Name</i>&gt; block for each server. Within each <code>Node</code> block, the following options are available:</p>
+<p>The plugin can send values to multiple HTTP servers by specifying one &lt;<code>Node</code>&nbsp;<wbr><i>Name</i>&gt; block for each server. Within each <code>Node</code> block, the following options are available:</p>
 <dl>
-<dt><font SIZE="-1"><code>URL</code></font> <i></i><font SIZE="-1"><i>URL</i></font><i></i></dt>
-<dd><font SIZE="-1">URL</font> to which the values are submitted to. Mandatory.</dd>
+<dt><code>URL</code> <i></i><i>URL</i><i></i></dt>
+<dd>URL to which the values are submitted to. Mandatory.</dd>
 <dt><code>User</code> <i>Username</i></dt>
 <dd>Optional user name needed for authentication.</dd>
 <dt><code>Password</code> <i>Password</i></dt>
 <dd>Optional password needed for authentication.</dd>
 <dt><code>VerifyPeer</code> <code>true</code>|<code>false</code></dt>
-<dd>Enable or disable peer <font SIZE="-1">SSL</font> certificate verification. See &lt;<a rel="nofollow" href="http://curl.haxx.se/docs/sslcerts.html">http://curl.haxx.se/docs/sslcerts.html</a>&gt; for details. Enabled by default.</dd>
+<dd>Enable or disable peer SSL certificate verification. See &lt;<a rel="nofollow" href="http://curl.haxx.se/docs/sslcerts.html">http://curl.haxx.se/docs/sslcerts.html</a>&gt; for details. Enabled by default.</dd>
 <dt><code>VerifyHost</code> <code>true|false</code></dt>
-<dd>Enable or disable peer host name verification. If enabled, the plugin checks if the <tt>&quot;Common Name&quot;</tt> or a <tt>&quot;Subject Alternate Name&quot;</tt> field of the <font SIZE="-1">SSL</font> certificate matches the host name provided by the <font SIZE="-1"><code>URL</code></font> option. If this identity check fails, the connection is aborted. Obviously, only works when connecting to a <font SIZE="-1">SSL</font> enabled server. Enabled by default.</dd>
+<dd>Enable or disable peer host name verification. If enabled, the plugin checks if the <tt>&quot;Common Name&quot;</tt> or a <tt>&quot;Subject Alternate Name&quot;</tt> field of the SSL certificate matches the host name provided by the <code>URL</code> option. If this identity check fails, the connection is aborted. Obviously, only works when connecting to a SSL enabled server. Enabled by default.</dd>
 <dt><code>CACert</code> <i>File</i></dt>
-<dd>File that holds one or more <font SIZE="-1">SSL</font> certificates. If you want to use <font SIZE="-1">HTTPS</font> you will possibly need this option. What <font SIZE="-1">CA</font> certificates come bundled with <tt>&quot;libcurl&quot;</tt> and are checked by default depends on the distribution you use.</dd>
+<dd>File that holds one or more SSL certificates. If you want to use HTTPS you will possibly need this option. What CA certificates come bundled with <tt>&quot;libcurl&quot;</tt> and are checked by default depends on the distribution you use.</dd>
 <dt><code>CAPath</code> <i>Directory</i></dt>
-<dd>Directory holding one or more <font SIZE="-1">CA</font> certificate files. You can use this if for some reason all the needed <font SIZE="-1">CA</font> certificates aren&#8217;t in the same file and can&#8217;t be pointed to using the <code>CACert</code> option. Requires <tt>&quot;libcurl&quot;</tt> to be built against OpenSSL.</dd>
+<dd>Directory holding one or more CA certificate files. You can use this if for some reason all the needed CA certificates aren&#8217;t in the same file and can&#8217;t be pointed to using the <code>CACert</code> option. Requires <tt>&quot;libcurl&quot;</tt> to be built against OpenSSL.</dd>
 <dt><code>ClientKey</code> <i>File</i></dt>
-<dd>File that holds the private key in <font SIZE="-1">PEM</font> format to be used for certificate-based authentication.</dd>
+<dd>File that holds the private key in PEM format to be used for certificate-based authentication.</dd>
 <dt><code>ClientCert</code> <i>File</i></dt>
-<dd>File that holds the <font SIZE="-1">SSL</font> certificate to be used for certificate-based authentication.</dd>
+<dd>File that holds the SSL certificate to be used for certificate-based authentication.</dd>
 <dt><code>ClientKeyPass</code> <i>Password</i></dt>
 <dd>Password required to load the private key in <code>ClientKey</code>.</dd>
 <dt><code>Header</code> <i>Header</i></dt>
-<dd>A <font SIZE="-1">HTTP</font> header to add to the request. Multiple headers are added if this option is specified more than once. Example: </dd>
+<dd>A HTTP header to add to the request. Multiple headers are added if this option is specified more than once. Example: </dd>
 <pre> Header &quot;X-Custom-Header: custom_value&quot;</pre>
 <dt><code>SSLVersion</code> <code>SSLv2</code>|<code>SSLv3</code>|<code>TLSv1</code>|<code>TLSv1_0</code>|<code>TLSv1_1</code>|<code>TLSv1_2</code></dt>
-<dd>Define which <font SIZE="-1">SSL</font> protocol version must be used. By default <tt>&quot;libcurl&quot;</tt> will attempt to figure out the remote <font SIZE="-1">SSL</font> protocol version. See <i><a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a></i>(3) for more details.</dd>
-<dt><code>Format</code> <code>Command</code>|<font SIZE="-1"><code>JSON</code></font>|<font SIZE="-1"><code>KAIROSDB</code></font></dt>
-<dd>Format of the output to generate. If set to <code>Command</code>, will create output that is understood by the <i>Exec</i> and <i>UnixSock</i> plugins. When set to <font SIZE="-1"><code>JSON</code></font>, will create output in the <i>JavaScript Object Notation</i> (<font SIZE="-1">JSON</font>). When set to <font SIZE="-1">KAIROSDB ,</font> will create output in the KairosDB format. </dd>
+<dd>Define which SSL protocol version must be used. By default <tt>&quot;libcurl&quot;</tt> will attempt to figure out the remote SSL protocol version. See <i><a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a></i>(3) for more details.</dd>
+<dt><code>Format</code> <code>Command</code>|<code>JSON</code>|<code>KAIROSDB</code></dt>
+<dd>Format of the output to generate. If set to <code>Command</code>, will create output that is understood by the <i>Exec</i> and <i>UnixSock</i> plugins. When set to <code>JSON</code>, will create output in the <i>JavaScript Object Notation</i> (JSON). When set to KAIROSDB , will create output in the KairosDB format. </dd>
 <p> Defaults to <code>Command</code>.</p>
 <dt><code>Metrics</code> <code>true</code>|<code>false</code></dt>
 <dd>Controls whether <i>metrics</i> are POSTed to this location. Defaults to <code>true</code>.</dd>
@@ -3562,14 +3562,14 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>StoreRates</code> <code>true|false</code></dt>
 <dd>If set to <code>true</code>, convert counter values to rates. If set to <code>false</code> (the default) counter values are stored as is, i.e. as an increasing integer number.</dd>
 <dt><code>BufferSize</code> <i>Bytes</i></dt>
-<dd>Sets the send buffer size to <i>Bytes</i>. By increasing this buffer, less <font SIZE="-1">HTTP</font> requests will be generated, but more metrics will be batched / metrics are cached for longer before being sent, introducing additional delay until they are available on the server side. <i>Bytes</i> must be at least 1024 and cannot exceed the size of an <tt>&quot;int&quot;</tt>, i.e. 2 GByte. Defaults to <tt>4096</tt>.</dd>
+<dd>Sets the send buffer size to <i>Bytes</i>. By increasing this buffer, less HTTP requests will be generated, but more metrics will be batched / metrics are cached for longer before being sent, introducing additional delay until they are available on the server side. <i>Bytes</i> must be at least 1024 and cannot exceed the size of an <tt>&quot;int&quot;</tt>, i.e. 2 GByte. Defaults to <tt>4096</tt>.</dd>
 <dt><code>LowSpeedLimit</code> <i>Bytes per Second</i></dt>
-<dd>Sets the minimal transfer rate in <i>Bytes per Second</i> below which the connection with the <font SIZE="-1">HTTP</font> server will be considered too slow and aborted. All the data submitted over this connection will probably be lost. Defaults to 0, which means no minimum transfer rate is enforced.</dd>
+<dd>Sets the minimal transfer rate in <i>Bytes per Second</i> below which the connection with the HTTP server will be considered too slow and aborted. All the data submitted over this connection will probably be lost. Defaults to 0, which means no minimum transfer rate is enforced.</dd>
 <dt><code>Timeout</code> <i>Timeout</i></dt>
-<dd>Sets the maximum time in milliseconds given for <font SIZE="-1">HTTP POST</font> operations to complete. When this limit is reached, the <font SIZE="-1">POST</font> operation will be aborted, and all the data in the current send buffer will probably be lost. Defaults to 0, which means the connection never times out.</dd>
+<dd>Sets the maximum time in milliseconds given for HTTP POST operations to complete. When this limit is reached, the POST operation will be aborted, and all the data in the current send buffer will probably be lost. Defaults to 0, which means the connection never times out.</dd>
 <dt><code>LogHttpError</code> <code>false</code>|<code>true</code></dt>
-<dd>Enables printing of <font SIZE="-1">HTTP</font> error code to log. Turned off by default. </dd>
-<p> The <tt>&quot;write_http&quot;</tt> plugin regularly submits the collected values to the <font SIZE="-1">HTTP</font> server. How frequently this happens depends on how much data you are collecting and the size of <code>BufferSize</code>. The optimal value to set <code>Timeout</code> to is slightly below this interval, which you can estimate by monitoring the network traffic between collectd and the <font SIZE="-1">HTTP</font> server.</dl>
+<dd>Enables printing of HTTP error code to log. Turned off by default. </dd>
+<p> The <tt>&quot;write_http&quot;</tt> plugin regularly submits the collected values to the HTTP server. How frequently this happens depends on how much data you are collecting and the size of <code>BufferSize</code>. The optimal value to set <code>Timeout</code> to is slightly below this interval, which you can estimate by monitoring the network traffic between collectd and the HTTP server.</dl>
 <h3>Plugin write_kafka</h3>
 <p>The <i>write_kafka plugin</i> will send values to a <i>Kafka</i> topic, a distributed queue. Synopsis: </p>
 <pre> &lt;Plugin &quot;write_kafka&quot;&gt;
@@ -3589,14 +3589,14 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>Configure the named property for the current topic. Properties are forwarded to the kafka producer library <code>librdkafka</code>.</dd>
 <dt><code>Key</code> <i>String</i></dt>
 <dd>Use the specified string as a partitioning key for the topic. Kafka breaks topic into partitions and guarantees that for a given topology, the same consumer will be used for a specific key. The special (case insensitive) string <code>Random</code> can be used to specify that an arbitrary partition should be used.</dd>
-<dt><code>Format</code> <code>Command</code>|<font SIZE="-1"><code>JSON</code></font>|<code>Graphite</code></dt>
+<dt><code>Format</code> <code>Command</code>|<code>JSON</code>|<code>Graphite</code></dt>
 <dd>Selects the format in which messages are sent to the broker. If set to <code>Command</code> (the default), values are sent as <tt>&quot;PUTVAL&quot;</tt> commands which are identical to the syntax used by the <i>Exec</i> and <i>UnixSock plugins</i>. </dd>
-<p> If set to <font SIZE="-1"><code>JSON</code></font>, the values are encoded in the <i>JavaScript Object Notation</i>, an easy and straight forward exchange format. </p>
+<p> If set to <code>JSON</code>, the values are encoded in the <i>JavaScript Object Notation</i>, an easy and straight forward exchange format. </p>
 <p> If set to <code>Graphite</code>, values are encoded in the <i>Graphite</i> format, which is <tt>&quot;&lt;metric&gt; &lt;value&gt; &lt;timestamp&gt;
 &quot;</tt>.</p>
 <dt><code>StoreRates</code> <code>true</code>|<code>false</code></dt>
 <dd>Determines whether or not <tt>&quot;COUNTER&quot;</tt>, <tt>&quot;DERIVE&quot;</tt> and <tt>&quot;ABSOLUTE&quot;</tt> data sources are converted to a <i>rate</i> (i.e. a <tt>&quot;GAUGE&quot;</tt> value). If set to <code>false</code> (the default), no conversion is performed. Otherwise the conversion is performed using the internal value cache. </dd>
-<p> Please note that currently this option is only used if the <code>Format</code> option has been set to <font SIZE="-1"><code>JSON</code></font>.</p>
+<p> Please note that currently this option is only used if the <code>Format</code> option has been set to <code>JSON</code>.</p>
 <dt><code>GraphitePrefix</code> (<code>Format</code>=<i>Graphite</i> only)</dt>
 <dd>A prefix can be added in the metric name when outputting in the <i>Graphite</i> format. It&#8217;s added before the <i>Host</i> name. Metric name will be <tt>&quot;&lt;prefix&gt;&lt;host&gt;&lt;postfix&gt;&lt;plugin&gt;&lt;type&gt;&lt;name&gt;&quot;</tt></dd>
 <dt><code>GraphitePostfix</code> (<code>Format</code>=<i>Graphite</i> only)</dt>
@@ -3606,7 +3606,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>GraphiteSeparateInstances</code> <code>false</code>|<code>true</code></dt>
 <dd>If set to <code>true</code>, the plugin instance and type instance will be in their own path component, for example <tt>&quot;host.cpu.0.cpu.idle&quot;</tt>. If set to <code>false</code> (the default), the plugin and plugin instance (and likewise the type and type instance) are put into one component, for example <tt>&quot;host.cpu-0.cpu-idle&quot;</tt>.</dd>
 <dt><code>GraphiteAlwaysAppendDS</code> <code>true</code>|<code>false</code></dt>
-<dd>If set to <code>true</code>, append the name of the <i>Data Source</i> (<font SIZE="-1">DS</font>) to the &#8220;metric&#8221; identifier. If set to <code>false</code> (the default), this is only done when there is more than one <font SIZE="-1">DS.</font></dd>
+<dd>If set to <code>true</code>, append the name of the <i>Data Source</i> (DS) to the &#8220;metric&#8221; identifier. If set to <code>false</code> (the default), this is only done when there is more than one DS.</dd>
 <dt><code>GraphitePreserveSeparator</code> <code>false</code>|<code>true</code></dt>
 <dd>If set to <code>false</code> (the default) the <tt>&quot;.&quot;</tt> (dot) character is replaced with <i>GraphiteEscapeChar</i>. Otherwise, if set to <code>true</code>, the <tt>&quot;.&quot;</tt> (dot) character is preserved, i.e. passed through.</dd>
 <dt><code>StoreRates</code> <code>true</code>|<code>false</code></dt>
@@ -3640,7 +3640,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Host</code> <i>Hostname</i></dt>
 <dd>The <code>Host</code> option is the hostname or IP-address where the <i>Redis</i> instance is running on.</dd>
 <dt><code>Port</code> <i>Port</i></dt>
-<dd>The <code>Port</code> option is the <font SIZE="-1">TCP</font> port on which the Redis instance accepts connections. Either a service name of a port number may be given. Please note that numerical port numbers must be given as a string, too.</dd>
+<dd>The <code>Port</code> option is the TCP port on which the Redis instance accepts connections. Either a service name of a port number may be given. Please note that numerical port numbers must be given as a string, too.</dd>
 <dt><code>Timeout</code> <i>Milliseconds</i></dt>
 <dd>The <code>Timeout</code> option sets the socket connection timeout, in milliseconds.</dd>
 <dt><code>Prefix</code> <i>Prefix</i></dt>
@@ -3652,7 +3652,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>StoreRates</code> <code>true</code>|<code>false</code></dt>
 <dd>If set to <code>true</code> (the default), convert counter values to rates. If set to <code>false</code> counter values are stored as is, i.e. as an increasing integer number.</dd></dl>
 <h3>Plugin write_riemann</h3>
-<p>The <i>write_riemann plugin</i> will send values to <i>Riemann</i>, a powerful stream aggregation and monitoring system. The plugin sends <i>Protobuf</i> encoded data to <i>Riemann</i> using <font SIZE="-1">UDP</font> packets. </p>
+<p>The <i>write_riemann plugin</i> will send values to <i>Riemann</i>, a powerful stream aggregation and monitoring system. The plugin sends <i>Protobuf</i> encoded data to <i>Riemann</i> using UDP packets. </p>
 <p> Synopsis: </p>
 <pre> &lt;Plugin &quot;write_riemann&quot;&gt;
  &lt;Node &quot;example&quot;&gt;
@@ -3677,16 +3677,16 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>Hostname or address to connect to. Defaults to <tt>&quot;localhost&quot;</tt>.</dd>
 <dt><code>Port</code> <i>Service</i></dt>
 <dd>Service name or port number to connect to. Defaults to <tt>5555</tt>.</dd>
-<dt><code>Protocol</code> <font SIZE="-1"><code>UDP</code></font>|<font SIZE="-1"><code>TCP</code></font>|<font SIZE="-1"><code>TLS</code></font></dt>
-<dd>Specify the protocol to use when communicating with <i>Riemann</i>. Defaults to <font SIZE="-1"><code>TCP</code></font>.</dd>
+<dt><code>Protocol</code> <code>UDP</code>|<code>TCP</code>|<code>TLS</code></dt>
+<dd>Specify the protocol to use when communicating with <i>Riemann</i>. Defaults to <code>TCP</code>.</dd>
 <dt><code>TLSCertFile</code> <i>Path</i></dt>
-<dd>When using the <font SIZE="-1"><code>TLS</code></font> protocol, path to a <font SIZE="-1">PEM</font> certificate to present to remote host.</dd>
+<dd>When using the <code>TLS</code> protocol, path to a PEM certificate to present to remote host.</dd>
 <dt><code>TLSCAFile</code> <i>Path</i></dt>
-<dd>When using the <font SIZE="-1"><code>TLS</code></font> protocol, path to a <font SIZE="-1">PEM CA</font> certificate to use to validate the remote hosts&#8217;s identity.</dd>
+<dd>When using the <code>TLS</code> protocol, path to a PEM CA certificate to use to validate the remote hosts&#8217;s identity.</dd>
 <dt><code>TLSKeyFile</code> <i>Path</i></dt>
-<dd>When using the <font SIZE="-1"><code>TLS</code></font> protocol, path to a <font SIZE="-1">PEM</font> private key associated with the certificate defined by <code>TLSCertFile</code>.</dd>
+<dd>When using the <code>TLS</code> protocol, path to a PEM private key associated with the certificate defined by <code>TLSCertFile</code>.</dd>
 <dt><code>Batch</code> <code>true</code>|<code>false</code></dt>
-<dd>If set to <code>true</code> and <code>Protocol</code> is set to <font SIZE="-1"><code>TCP</code></font>, events will be batched in memory and flushed at regular intervals or when <code>BatchMaxSize</code> is exceeded. </dd>
+<dd>If set to <code>true</code> and <code>Protocol</code> is set to <code>TCP</code>, events will be batched in memory and flushed at regular intervals or when <code>BatchMaxSize</code> is exceeded. </dd>
 <p> Notifications are not batched and sent as soon as possible. </p>
 <p> When enabled, it can occur that events get processed by the Riemann server close to or after their expiration time. Tune the <code>TTLFactor</code> and <code>BatchMaxSize</code> settings according to the amount of values collected, if this is an issue. </p>
 <p> Defaults to true</p>
@@ -3698,9 +3698,9 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>If set to <code>true</code> (the default), convert counter values to rates. If set to <code>false</code> counter values are stored as is, i.e. as an increasing integer number. </dd>
 <p> This will be reflected in the <tt>&quot;ds_type&quot;</tt> tag: If <code>StoreRates</code> is enabled, converted values will have &#8220;rate&#8221; appended to the data source type, e.g. <tt>&quot;ds_type:derive:rate&quot;</tt>.</p>
 <dt><code>AlwaysAppendDS</code> <code>false</code>|<code>true</code></dt>
-<dd>If set to <code>true</code>, append the name of the <i>Data Source</i> (<font SIZE="-1">DS</font>) to the &#8220;service&#8221;, i.e. the field that, together with the &#8220;host&#8221; field, uniquely identifies a metric in <i>Riemann</i>. If set to <code>false</code> (the default), this is only done when there is more than one <font SIZE="-1">DS.</font></dd>
+<dd>If set to <code>true</code>, append the name of the <i>Data Source</i> (DS) to the &#8220;service&#8221;, i.e. the field that, together with the &#8220;host&#8221; field, uniquely identifies a metric in <i>Riemann</i>. If set to <code>false</code> (the default), this is only done when there is more than one DS.</dd>
 <dt><code>TTLFactor</code> <i>Factor</i></dt>
-<dd><i>Riemann</i> events have a <i>Time to Live</i> (<font SIZE="-1">TTL</font>) which specifies how long each event is considered active. <i>collectd</i> populates this field based on the metrics interval setting. This setting controls the factor with which the interval is multiplied to set the <font SIZE="-1">TTL.</font> The default value is <code>2.0</code>. Unless you know exactly what you&#8217;re doing, you should only increase this setting from its default value.</dd>
+<dd><i>Riemann</i> events have a <i>Time to Live</i> (TTL) which specifies how long each event is considered active. <i>collectd</i> populates this field based on the metrics interval setting. This setting controls the factor with which the interval is multiplied to set the TTL. The default value is <code>2.0</code>. Unless you know exactly what you&#8217;re doing, you should only increase this setting from its default value.</dd>
 <dt><code>Notifications</code> <code>false</code>|<code>true</code></dt>
 <dd>If set to <code>true</code>, create riemann events for notifications. This is <code>true</code> by default. When processing thresholds from write_riemann, it might prove useful to avoid getting notification events.</dd>
 <dt><code>CheckThresholds</code> <code>false</code>|<code>true</code></dt>
@@ -3715,7 +3715,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Attribute</code> <i>String</i> <i>String</i></dt>
 <dd>Consider the two given strings to be the key and value of an additional attribute for each metric being sent out to <i>Riemann</i>.</dd></dl>
 <h3>Plugin write_sensu</h3>
-<p>The <i>write_sensu plugin</i> will send values to <i>Sensu</i>, a powerful stream aggregation and monitoring system. The plugin sends <i></i><font SIZE="-1"><i>JSON</i></font><i></i> encoded data to a local <i>Sensu</i> client using a <font SIZE="-1">TCP</font> socket. </p>
+<p>The <i>write_sensu plugin</i> will send values to <i>Sensu</i>, a powerful stream aggregation and monitoring system. The plugin sends <i></i><i>JSON</i><i></i> encoded data to a local <i>Sensu</i> client using a TCP socket. </p>
 <p> At the moment, the <i>write_sensu plugin</i> does not send over a collectd_host parameter so it is not possible to use one collectd instance as a gateway for others. Each collectd host must pair with one <i>Sensu</i> client. </p>
 <p> Synopsis: </p>
 <pre> &lt;Plugin &quot;write_sensu&quot;&gt;
@@ -3748,7 +3748,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>If set to <code>true</code> (the default), convert counter values to rates. If set to <code>false</code> counter values are stored as is, i.e. as an increasing integer number. </dd>
 <p> This will be reflected in the <tt>&quot;collectd_data_source_type&quot;</tt> tag: If <code>StoreRates</code> is enabled, converted values will have &#8220;rate&#8221; appended to the data source type, e.g. <tt>&quot;collectd_data_source_type:derive:rate&quot;</tt>.</p>
 <dt><code>AlwaysAppendDS</code> <code>false</code>|<code>true</code></dt>
-<dd>If set the <code>true</code>, append the name of the <i>Data Source</i> (<font SIZE="-1">DS</font>) to the &#8220;service&#8221;, i.e. the field that, together with the &#8220;host&#8221; field, uniquely identifies a metric in <i>Sensu</i>. If set to <code>false</code> (the default), this is only done when there is more than one <font SIZE="-1">DS.</font></dd>
+<dd>If set the <code>true</code>, append the name of the <i>Data Source</i> (DS) to the &#8220;service&#8221;, i.e. the field that, together with the &#8220;host&#8221; field, uniquely identifies a metric in <i>Sensu</i>. If set to <code>false</code> (the default), this is only done when there is more than one DS.</dd>
 <dt><code>Notifications</code> <code>false</code>|<code>true</code></dt>
 <dd>If set to <code>true</code>, create <i>Sensu</i> events for notifications. This is <code>false</code> by default. At least one of <code>Notifications</code> or <code>Metrics</code> should be enabled.</dd>
 <dt><code>Metrics</code> <code>false</code>|<code>true</code></dt>
@@ -3769,7 +3769,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>Attribute</code> <i>String</i> <i>String</i></dt>
 <dd>Consider the two given strings to be the key and value of an additional attribute for each metric being sent out to <i>Sensu</i>.</dd></dl>
 <h3>Plugin xencpu</h3>
-<p>This plugin collects metrics of hardware <font SIZE="-1">CPU</font> load for machine running Xen hypervisor. Load is calculated from &#8216;idle time&#8217; value, provided by Xen. Result is reported using the <tt>&quot;percent&quot;</tt> type, for each <font SIZE="-1">CPU </font>(core). </p>
+<p>This plugin collects metrics of hardware CPU load for machine running Xen hypervisor. Load is calculated from &#8216;idle time&#8217; value, provided by Xen. Result is reported using the <tt>&quot;percent&quot;</tt> type, for each CPU (core). </p>
 <p> This plugin doesn&#8217;t have any options (yet).</p>
 <h3>Plugin zookeeper</h3>
 <p>The <i>zookeeper plugin</i> will collect statistics from a <i>Zookeeper</i> server using the mntr command. It requires Zookeeper 3.4.0+ and access to the client port. </p>
@@ -3786,8 +3786,8 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <h2>Threshold Configuration</h2>
 <p>Starting with version <tt>4.3.0</tt> collectd has support for <code>monitoring</code>. By that we mean that the values are not only stored or sent somewhere, but that they are judged and, if a problem is recognized, acted upon. The only action collectd takes itself is to generate and dispatch a &#8220;notification&#8221;. Plugins can register to receive notifications and perform appropriate further actions. </p>
 <p> Since systems and what you expect them to do differ a lot, you can configure <code>thresholds</code> for your values freely. This gives you a lot of flexibility but also a lot of responsibility. </p>
-<p> Every time a value is out of range a notification is dispatched. This means that the idle percentage of your <font SIZE="-1">CPU</font> needs to be less then the configured threshold only once for a notification to be generated. There&#8217;s no such thing as a moving average or similar &#8211; at least not now. </p>
-<p> Also, all values that match a threshold are considered to be relevant or &#8220;interesting&#8221;. As a consequence collectd will issue a notification if they are not received for <code>Timeout</code> iterations. The <code>Timeout</code> configuration option is explained in section &#8220;<font SIZE="-1">GLOBAL OPTIONS&#8221;</font>. If, for example, <code>Timeout</code> is set to &#8220;2&#8221; (the default) and some hosts sends it&#8217;s <font SIZE="-1">CPU</font> statistics to the server every 60 seconds, a notification will be dispatched after about 120 seconds. It may take a little longer because the timeout is checked only once each <code>Interval</code> on the server. </p>
+<p> Every time a value is out of range a notification is dispatched. This means that the idle percentage of your CPU needs to be less then the configured threshold only once for a notification to be generated. There&#8217;s no such thing as a moving average or similar &#8211; at least not now. </p>
+<p> Also, all values that match a threshold are considered to be relevant or &#8220;interesting&#8221;. As a consequence collectd will issue a notification if they are not received for <code>Timeout</code> iterations. The <code>Timeout</code> configuration option is explained in section &#8220;GLOBAL OPTIONS&#8221;. If, for example, <code>Timeout</code> is set to &#8220;2&#8221; (the default) and some hosts sends it&#8217;s CPU statistics to the server every 60 seconds, a notification will be dispatched after about 120 seconds. It may take a little longer because the timeout is checked only once each <code>Interval</code> on the server. </p>
 <p> When a value comes within range again or is received after it was missing, an &#8220;OKAY-notification&#8221; is dispatched. </p>
 <p> Here is a configuration example to get you started. Read below for more information. </p>
 <pre> &lt;Plugin threshold&gt;
@@ -3825,11 +3825,11 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dt><code>FailureMax</code> <i>Value</i></dt>
 <dd>
 </dd><dt><code>WarningMax</code> <i>Value</i></dt>
-<dd>Sets the upper bound of acceptable values. If unset defaults to positive infinity. If a value is greater than <code>FailureMax</code> a <font SIZE="-1"><code>FAILURE</code></font> notification will be created. If the value is greater than <code>WarningMax</code> but less than (or equal to) <code>FailureMax</code> a <font SIZE="-1"><code>WARNING</code></font> notification will be created.</dd>
+<dd>Sets the upper bound of acceptable values. If unset defaults to positive infinity. If a value is greater than <code>FailureMax</code> a <code>FAILURE</code> notification will be created. If the value is greater than <code>WarningMax</code> but less than (or equal to) <code>FailureMax</code> a <code>WARNING</code> notification will be created.</dd>
 <dt><code>FailureMin</code> <i>Value</i></dt>
 <dd>
 </dd><dt><code>WarningMin</code> <i>Value</i></dt>
-<dd>Sets the lower bound of acceptable values. If unset defaults to negative infinity. If a value is less than <code>FailureMin</code> a <font SIZE="-1"><code>FAILURE</code></font> notification will be created. If the value is less than <code>WarningMin</code> but greater than (or equal to) <code>FailureMin</code> a <font SIZE="-1"><code>WARNING</code></font> notification will be created.</dd>
+<dd>Sets the lower bound of acceptable values. If unset defaults to negative infinity. If a value is less than <code>FailureMin</code> a <code>FAILURE</code> notification will be created. If the value is less than <code>WarningMin</code> but greater than (or equal to) <code>FailureMin</code> a <code>WARNING</code> notification will be created.</dd>
 <dt><code>DataSource</code> <i>DSName</i></dt>
 <dd>Some data sets have more than one &#8220;data source&#8221;. Interesting examples are the <tt>&quot;if_octets&quot;</tt> data set, which has received (<tt>&quot;rx&quot;</tt>) and sent (<tt>&quot;tx&quot;</tt>) bytes and the <tt>&quot;disk_ops&quot;</tt> data set, which holds <tt>&quot;read&quot;</tt> and <tt>&quot;write&quot;</tt> operations. The system load data set, <tt>&quot;load&quot;</tt>, even has three data sources: <tt>&quot;shortterm&quot;</tt>, <tt>&quot;midterm&quot;</tt>, and <tt>&quot;longterm&quot;</tt>. </dd>
 <p> Normally, all data sources are checked against a configured threshold. If this is undesirable, or if you want to specify different limits for each data source, you can use the <code>DataSource</code> option to have a threshold apply only to one data source.</p>
@@ -3842,7 +3842,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <dd>If set to <code>true</code>, the minimum and maximum values given are interpreted as percentage value, relative to the other data sources. This is helpful for example for the &#8220;df&#8221; type, where you may want to issue a warning when less than 5&nbsp;<wbr>% of the total space is available. Defaults to <code>false</code>.</dd>
 <dt><code>Hits</code> <i>Number</i></dt>
 <dd>Delay creating the notification until the threshold has been passed <i>Number</i> times. When a notification has been generated, or when a subsequent value is inside the threshold, the counter is reset. If, for example, a value is collected once every 10 seconds and <code>Hits</code> is set to 3, a notification will be dispatched at most once every 30 seconds. </dd>
-<p> This is useful when short bursts are not a problem. If, for example, 100% <font SIZE="-1">CPU</font> usage for up to a minute is normal (and data is collected every 10 seconds), you could set <code>Hits</code> to <code>6</code> to account for this.</p>
+<p> This is useful when short bursts are not a problem. If, for example, 100% CPU usage for up to a minute is normal (and data is collected every 10 seconds), you could set <code>Hits</code> to <code>6</code> to account for this.</p>
 <dt><code>Hysteresis</code> <i>Number</i></dt>
 <dd>When set to non-zero, a hysteresis value is applied when checking minimum and maximum bounds. This is useful for values that increase slowly and fluctuate a bit while doing so. When these values come close to the threshold, they may &#8220;flap&#8221;, i.e. switch between failure / warning case and okay case repeatedly. </dd>
 <p> If, for example, the threshold is configures as </p>
@@ -3983,12 +3983,12 @@ description: "collectd.conf – Configuration for the system statistics collecti
 <p>The following targets are built into the core daemon and therefore need no plugins to be loaded:</p>
 <dl>
 <dt><code>return</code></dt>
-<dd>Signals the &#8220;return&#8221; condition, see the &#8220;Flow control&#8221; section above. This causes the current chain to stop processing the value and returns control to the calling chain. The calling chain will continue processing targets and rules just after the <code>jump</code> target (see below). This is very similar to the <font SIZE="-1"><code>RETURN</code></font> target of iptables, see <i><a href="/docs/linux/man/8-iptables/">iptables</a></i>(8). </dd>
+<dd>Signals the &#8220;return&#8221; condition, see the &#8220;Flow control&#8221; section above. This causes the current chain to stop processing the value and returns control to the calling chain. The calling chain will continue processing targets and rules just after the <code>jump</code> target (see below). This is very similar to the <code>RETURN</code> target of iptables, see <i><a href="/docs/linux/man/8-iptables/">iptables</a></i>(8). </dd>
 <p> This target does not have any options. </p>
 <p> Example: </p>
 <pre> Target &quot;return&quot;</pre>
 <dt><code>stop</code></dt>
-<dd>Signals the &#8220;stop&#8221; condition, see the &#8220;Flow control&#8221; section above. This causes processing of the value to be aborted immediately. This is similar to the <font SIZE="-1"><code>DROP</code></font> target of iptables, see <i><a href="/docs/linux/man/8-iptables/">iptables</a></i>(8). </dd>
+<dd>Signals the &#8220;stop&#8221; condition, see the &#8220;Flow control&#8221; section above. This causes processing of the value to be aborted immediately. This is similar to the <code>DROP</code> target of iptables, see <i><a href="/docs/linux/man/8-iptables/">iptables</a></i>(8). </dd>
 <p> This target does not have any options. </p>
 <p> Example: </p>
 <pre> Target &quot;stop&quot;</pre>
@@ -4069,7 +4069,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dl>
 <dt><code>timediff</code></dt>
 <dd>Matches values that have a time which differs from the time on the server. </dd>
-<p> This match is mainly intended for servers that receive values over the <tt>&quot;network&quot;</tt> plugin and write them to disk using the <tt>&quot;rrdtool&quot;</tt> plugin. RRDtool is very sensitive to the timestamp used when updating the <font SIZE="-1">RRD</font> files. In particular, the time must be ever increasing. If a misbehaving client sends one packet with a timestamp far in the future, all further packets with a correct time will be ignored because of that one packet. What&#8217;s worse, such corrupted <font SIZE="-1">RRD</font> files are hard to fix. </p>
+<p> This match is mainly intended for servers that receive values over the <tt>&quot;network&quot;</tt> plugin and write them to disk using the <tt>&quot;rrdtool&quot;</tt> plugin. RRDtool is very sensitive to the timestamp used when updating the RRD files. In particular, the time must be ever increasing. If a misbehaving client sends one packet with a timestamp far in the future, all further packets with a correct time will be ignored because of that one packet. What&#8217;s worse, such corrupted RRD files are hard to fix. </p>
 <p> This match lets one match all values <code>outside</code> a specified time range (relative to the server&#8217;s time), so you can use the <code>stop</code> target (see below) to ignore the value, for example. </p>
 <p> Available options:</p>
 <dl>
@@ -4123,8 +4123,8 @@ description: "collectd.conf – Configuration for the system statistics collecti
  &lt;/Match&gt;</pre>
 </dl>
 <dt><code>empty_counter</code></dt>
-<dd>Matches all values with one or more data sources of type <font SIZE="-1"><code>COUNTER</code></font> and where all counter values are zero. These counters usually <i>never</i> increased since they started existing (and are therefore uninteresting), or got reset recently or overflowed and you had really, <i>really</i> bad luck. </dd>
-<p> Please keep in mind that ignoring such counters can result in confusing behavior: Counters which hardly ever increase will be zero for long periods of time. If the counter is reset for some reason (machine or service restarted, usually), the graph will be empty (<font SIZE="-1">NAN</font>) for a long time. People may not understand why.</p>
+<dd>Matches all values with one or more data sources of type <code>COUNTER</code> and where all counter values are zero. These counters usually <i>never</i> increased since they started existing (and are therefore uninteresting), or got reset recently or overflowed and you had really, <i>really</i> bad luck. </dd>
+<p> Please keep in mind that ignoring such counters can result in confusing behavior: Counters which hardly ever increase will be zero for long periods of time. If the counter is reset for some reason (machine or service restarted, usually), the graph will be empty (NAN) for a long time. People may not understand why.</p>
 <dt><code>hashed</code></dt>
 <dd>Calculates a hash value of the host name and matches values according to that hash value. This makes it possible to divide all hosts into groups and match only values that are in a specific group. The intended use is in load balancing, where you want to handle only part of all data and leave the rest for other servers. </dd>
 <p> The hashing function used tries to distribute the hosts evenly. First, it calculates a 32 bit hash value using the characters of the hostname: </p>
@@ -4136,7 +4136,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
  matches;
  else
  does not match;</pre>
-<p>Please note that when you set <i>Total</i> to two (i. e. you have only two groups), then the least significant bit of the hash value will be the <font SIZE="-1">XOR</font> of all least significant bits in the host name. One consequence is that when you have two hosts, &#8220;server0.example.com&#8221; and &#8220;server1.example.com&#8221;, where the host name differs in one digit only and the digits differ by one, those hosts will never end up in the same group. </p>
+<p>Please note that when you set <i>Total</i> to two (i. e. you have only two groups), then the least significant bit of the hash value will be the XOR of all least significant bits in the host name. One consequence is that when you have two hosts, &#8220;server0.example.com&#8221; and &#8220;server1.example.com&#8221;, where the host name differs in one digit only and the digits differ by one, those hosts will never end up in the same group. </p>
 <p> Available options:</p>
 <dl>
 <dd>
@@ -4195,8 +4195,8 @@ description: "collectd.conf – Configuration for the system statistics collecti
 </dl>
 <dl>
 <dd>Please note that these placeholders are <code>case sensitive</code>!</dd></dl>
-<dt><code>Severity</code> <code>&quot;</code><font SIZE="-1"><code>FAILURE&quot;</code></font>|<code>&quot;</code><font SIZE="-1"><code>WARNING&quot;</code></font>|<code>&quot;</code><font SIZE="-1"><code>OKAY&quot;</code></font></dt>
-<dd>Sets the severity of the message. If omitted, the severity <code>&#8220;</code><font SIZE="-1"><code>WARNING&#8221;</code></font> is used.</dd></dl>
+<dt><code>Severity</code> <code>&quot;</code><code>FAILURE&quot;</code>|<code>&quot;</code><code>WARNING&quot;</code>|<code>&quot;</code><code>OKAY&quot;</code></dt>
+<dd>Sets the severity of the message. If omitted, the severity <code>&#8220;</code><code>WARNING&#8221;</code> is used.</dd></dl>
 </dl>
 <dl>
 <dd>Example: </dd>
@@ -4287,7 +4287,7 @@ description: "collectd.conf – Configuration for the system statistics collecti
  &lt;/Chain&gt;</pre>
 <p>If you specify a <code>PostCacheChain</code>, the <code>write</code> target will not be added anywhere and you will have to make sure that it is called where appropriate. We suggest to add the above snippet as default target to your &#8220;PostCache&#8221; chain.</p>
 <h3>Examples</h3>
-<p>Ignore all values, where the hostname does not contain a dot, i. e. can&#8217;t be an <font SIZE="-1">FQDN.</font> </p>
+<p>Ignore all values, where the hostname does not contain a dot, i. e. can&#8217;t be an FQDN. </p>
 <pre> &lt;Chain &quot;PreCache&quot;&gt;
  &lt;Rule &quot;no_fqdn&quot;&gt;
  &lt;Match &quot;regex&quot;&gt;

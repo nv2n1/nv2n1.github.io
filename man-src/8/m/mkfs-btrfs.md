@@ -33,7 +33,7 @@ description: "mkfs.btrfs – create a btrfs filesystem"
 <p> The recommended size for the mixed mode is for filesystems less than 1GiB. The soft recommendation is to use it for filesystems smaller than 5GiB. The mixed mode may lead to degraded performance on larger filesystems, but is otherwise usable, even on multiple devices. </p>
 <p> The <i>nodesize</i> and <i>sectorsize</i> must be equal, and the block group types must match. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  versions up to 4.2.x forced the mixed mode for devices smaller than 1GiB. This has been removed in 4.3+ as it caused some usability issues. </dd>
 </dl>
 </dl>
@@ -45,7 +45,7 @@ description: "mkfs.btrfs – create a btrfs filesystem"
 <dd>Specify the nodesize, the tree block size in which btrfs stores metadata. The default value is 16KiB (16384) or the page size, whichever is bigger. Must be a multiple of the sectorsize and a power of 2, but not larger than 64KiB (65536). Leafsize always equals nodesize and the options are aliases. </dd>
 <p> Smaller node size increases fragmentation but leads to taller b-trees which in turn leads to lower locking contention. Higher node sizes give better packing and less fragmentation at the cost of more expensive memory operations while updating the metadata blocks. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  versions up to 3.11 set the nodesize to 4k. </dd>
 </dl>
 </dl>
@@ -63,7 +63,7 @@ description: "mkfs.btrfs – create a btrfs filesystem"
 <dl>
 <dd>Populate the toplevel subvolume with files from <i>rootdir</i>. This does not require root permissions to write the new files or to mount the filesystem. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  This option may enlarge the image or file to ensure it&#8217;s big enough to contain the files from <i>rootdir</i>. Since version 4.14.1 the filesystem size is not minimized. Please see option <i>&#8211;shrink</i> if you need that functionality. </dd>
 </dl>
 </dl>
@@ -72,7 +72,7 @@ description: "mkfs.btrfs – create a btrfs filesystem"
 <dd>Shrink the filesystem to its minimal size, only works with <i>&#8211;rootdir</i> option. </dd>
 <p> If the destination is a regular file, this option will also truncate the file to the minimal size. Otherwise it will reduce the filesystem available space. Extra space will not be usable unless the filesystem is mounted and resized using <i>btrfs filesystem resize</i>. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  prior to version 4.14.1, the shrinking was done automatically. </dd>
 </dl>
 </dl>
@@ -111,7 +111,7 @@ description: "mkfs.btrfs – create a btrfs filesystem"
 <pre># mount -o device=/dev/sdb,device=/dev/sdc /dev/sda /mnt</pre>
 </dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> that this means only scanning, if the devices do not exist in the system, mount will fail anyway. This can happen on systems without initramfs/initrd and root partition created with RAID1/10/5/6 profiles. The mount action can happen before all block devices are discovered. The waiting is usually done on the initramfs/initrd systems. </p>
 </dl>
 <p> As of kernel 4.14, RAID5/6 is still considered experimental and shouldn&#8217;t be employed for production use.</p>
@@ -272,7 +272,7 @@ description: "mkfs.btrfs – create a btrfs filesystem"
 </tr>
 </table>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font> </dd>
+<dd> <code>Warning</code>  </dd>
 <p> It&#8217;s not recommended to build btrfs with RAID0/1/10/5/6 profiles on partitions from the same device. Neither redundancy nor performance will be improved. </p>
 </dl>
 <p> <i>Note 1:</i> DUP may exist on more than 1 device if it starts on a single device and another one is added. Since version 4.5.1, <code>mkfs.btrfs</code> will let you create DUP on multiple devices. </p>

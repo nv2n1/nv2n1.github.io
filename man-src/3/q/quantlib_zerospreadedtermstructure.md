@@ -14,22 +14,22 @@ description: "QuantLib::ZeroSpreadedTermStructure – Term structure with an add
 <h3>Public Member Functions</h3>
 <p><code>ZeroSpreadedTermStructure</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;spread, Compounding comp=Continuous, <code>Frequency</code> freq=NoFrequency, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>()) </p>
 <p> <code>YieldTermStructure interface</code> </p>
-<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>the day counter used for date/time conversion </i><br />
- <code>Calendar</code> <code>calendar</code> () const<br />
- <i>the calendar used for reference and/or option date calculation </i><br />
- <code>Natural</code> <code>settlementDays</code> () const<br />
- <i>the settlementDays used for reference date calculation </i><br />
- const <code>Date</code> &amp; <code>referenceDate</code> () const<br />
- <i>the date at which discount = 1.0 and/or variance = 0.0 </i><br />
- <code>Date</code> <code>maxDate</code> () const<br />
- <i>the latest date for which the curve can return values </i><br />
- Time <code>maxTime</code> () const<br />
+<p> <code>DayCounter</code> <code>dayCounter</code> () const<br/>
+ <i>the day counter used for date/time conversion </i><br/>
+ <code>Calendar</code> <code>calendar</code> () const<br/>
+ <i>the calendar used for reference and/or option date calculation </i><br/>
+ <code>Natural</code> <code>settlementDays</code> () const<br/>
+ <i>the settlementDays used for reference date calculation </i><br/>
+ const <code>Date</code> &amp; <code>referenceDate</code> () const<br/>
+ <i>the date at which discount = 1.0 and/or variance = 0.0 </i><br/>
+ <code>Date</code> <code>maxDate</code> () const<br/>
+ <i>the latest date for which the curve can return values </i><br/>
+ Time <code>maxTime</code> () const<br/>
  <i>the latest time for which the curve can return values </i></p>
 <h3>Protected Member Functions</h3>
-<p><code>Rate</code> <code>zeroYieldImpl</code> (Time) const<br />
- <i>returns the spreaded zero yield rate </i><br />
- <code>Rate</code> <code>forwardImpl</code> (Time) const<br />
+<p><code>Rate</code> <code>zeroYieldImpl</code> (Time) const<br/>
+ <i>returns the spreaded zero yield rate </i><br/>
+ <code>Rate</code> <code>forwardImpl</code> (Time) const<br/>
  <i>returns the spreaded forward rate </i></p>
 <h2>Detailed Description</h2>
 <p>Term structure with an added spread on the zero yield rate. </p>

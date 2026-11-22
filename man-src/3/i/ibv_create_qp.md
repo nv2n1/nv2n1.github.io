@@ -36,7 +36,7 @@ struct ibv_qp_cap {
     uint32_t max_inline_data; /* Requested max number of data (bytes) that can be posted inline to the SQ, otherwise 0 */
 };
 </code></pre>
-<p> The function <code>ibv_create_qp()</code> will update the <i>qp_init_attr</i>-&gt;cap struct with the actual <font SIZE="-1">QP</font> values of the QP that was created; the values will be greater than or equal to the values requested. </p>
+<p> The function <code>ibv_create_qp()</code> will update the <i>qp_init_attr</i>-&gt;cap struct with the actual QP values of the QP that was created; the values will be greater than or equal to the values requested. </p>
 <p> <code>ibv_destroy_qp()</code> destroys the QP <i>qp</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>ibv_create_qp()</code> returns a pointer to the created QP, or NULL if the request fails. Check the QP number (<code>qp_num</code>) in the returned QP. </p>

@@ -20,7 +20,7 @@ description: "QuantLib::LazyObject – Framework for calculation on demand and r
 <p> bool <code>calculated_</code> </p>
 <p> bool <code>frozen_</code> </p>
 <h3>Calculations</h3>
-<p> These methods do not modify the structure of the object and are therefore declared as const. Data members which will be calculated on demand need to be declared as mutable.<br />
+<p> These methods do not modify the structure of the object and are therefore declared as const. Data members which will be calculated on demand need to be declared as mutable.<br/>
  void <code>recalculate</code> () </p>
 <p> void <code>freeze</code> () </p>
 <p> void <code>unfreeze</code> () </p>

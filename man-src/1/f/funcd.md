@@ -28,9 +28,9 @@ description: "funcd – deaemon for the Fedora Universal Network Controller"
 <p> See /etc/certmaster/minion.conf for other configuration options.</p>
 <h2>ACCESS CONTROLS</h2>
 <p> By default the certmaster host will always have full access to run all modules on minions, currently this behavior can be disabled by tweaking commonconfig.py. </p>
-<p> Additional ACLs can be used to let other (<font SIZE="-1">SSL</font> authenticated) hosts access to specific modules. Access control files take one acl per row with the format: </p>
+<p> Additional ACLs can be used to let other (SSL authenticated) hosts access to specific modules. Access control files take one acl per row with the format: </p>
 <p> &lt;common_name&gt;-&lt;certificate_hash&gt; = method[, method]&#8230; </p>
-<p> where common_name is the <font SIZE="-1">CN</font> from the host certificate and certificate_hash is its hash as obtained from </p>
+<p> where common_name is the CN from the host certificate and certificate_hash is its hash as obtained from </p>
 <p> openssl x509 -noout -in &lt;certificate_file&gt; -hash </p>
 <p> See <a rel="nofollow" href="https://fedorahosted.org/func/wiki/FuncSecurity">https://fedorahosted.org/func/wiki/FuncSecurity</a> for additional details.</p>
 <h2>FILES</h2>
@@ -41,7 +41,7 @@ description: "funcd – deaemon for the Fedora Universal Network Controller"
 <dd>
 </dd><dt><code>/etc/func/async_methods.conf</code><tt>&nbsp;<wbr></tt>configuration for async methods</dt>
 <dd>
-</dd><dt><code>/etc/func/minion-acl.d/</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>directory for <font SIZE="-1">ACL</font> files</dt>
+</dd><dt><code>/etc/func/minion-acl.d/</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>directory for ACL files</dt>
 <dd></dd></dl>
 <h2>ADDITONAL RESOURCES</h2>
 <p> See the project wiki at <a rel="nofollow" href="https://fedorahosted.org/func/">https://fedorahosted.org/func/</a></p>

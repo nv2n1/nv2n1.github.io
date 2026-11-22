@@ -10,13 +10,13 @@ description: "QuantLib::GaussHermiteIntegration – generalized Gauss-Hermite in
 
 <p>QuantLib::GaussHermiteIntegration &#8211; generalized Gauss-Hermite integration </p>
 
-<p> <br />
+<p> <br/>
  </p>
 <p>#include &lt;ql/math/integrals/gaussianquadratures.hpp&gt; </p>
 <p>Inherits <code>QuantLib::GaussianQuadrature</code>. </p>
 <h3>Public Member Functions</h3>
-<p> <br />
- <code>GaussHermiteIntegration</code> (Size n, <code>Real</code> mu=0.0) <br />
+<p> <br/>
+ <code>GaussHermiteIntegration</code> (Size n, <code>Real</code> mu=0.0) <br/>
   </p>
 <h2>Detailed Description</h2>
 <p>generalized Gauss-Hermite integration </p>

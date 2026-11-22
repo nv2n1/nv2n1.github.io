@@ -19,7 +19,7 @@ description: "yum-builddep – install missing dependencies for building an RPM 
 <h2>EXAMPLES</h2>
 <dl>
 <dt>Download and install all the RPMs needed to build the kernel RPM:</dt>
-<dd> <code>yumdownloader &#8211;source kernel &amp;&amp; rpm2cpio kernel*src.rpm | cpio -i kernel.spec &amp;&amp; \ </code><br />
+<dd> <code>yumdownloader &#8211;source kernel &amp;&amp; rpm2cpio kernel*src.rpm | cpio -i kernel.spec &amp;&amp; \ </code><br/>
  <code>yum-builddep kernel.spec</code></dd></dl>
 <p> The kernel includes specific BuildRequires dependencies for different architectures. In order to make sure that those dependencies are downloaded and installed, the SRPM should be downloaded, the .spec file extracted from it and used to determine the full dependency list. </p>
 <h2>FILES</h2>

@@ -10,7 +10,7 @@ description: "ztgex2.f –"
 <p>ztgex2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztgex2</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, J1, INFO)<br />
+<p>subroutine <code>ztgex2</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, J1, INFO)<br/>
  <i></i><code>ZTGEX2</code> swaps adjacent diagonal blocks in an upper (quasi) triangular matrix pair by an unitary equivalence transformation.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztgex2 (logicalWANTQ, logicalWANTZ, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldq, * )Q, integerLDQ, complex*16, dimension( ldz, * )Z, integerLDZ, integerJ1, integerINFO)</h3>

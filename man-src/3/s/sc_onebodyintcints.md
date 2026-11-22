@@ -18,11 +18,11 @@ description: "sc::OneBodyIntCints –"
 <p> void <code>set_multipole_origin</code> (const <code>Ref</code>&lt; <code>DipoleData</code> &gt; &amp;) </p>
 <p> void <code>set_EdotV_origin</code> (const <code>Ref</code>&lt; <code>EfieldDotVectorData</code> &gt; &amp;) </p>
 <p> void <code>set_Q_origin</code> (const <code>Ref</code>&lt; <code>PointChargeData</code> &gt; &amp;) </p>
-<p> void <code>compute_shell</code> (int, int)<br />
- <i>Computes the integrals between basis functions in the given shell pair. </i><br />
- bool <code>cloneable</code> ()<br />
- <i>Return true if the clone member can be called. </i><br />
- <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>clone</code> ()<br />
+<p> void <code>compute_shell</code> (int, int)<br/>
+ <i>Computes the integrals between basis functions in the given shell pair. </i><br/>
+ bool <code>cloneable</code> ()<br/>
+ <i>Return true if the clone member can be called. </i><br/>
+ <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>clone</code> ()<br/>
  <i>Returns a clone of this. </i></p>
 <h2>Detailed Description</h2>
 <p>This implements most one body integrals in the Cints library. </p>

@@ -21,6 +21,6 @@ description: "XtGetSelectionTimeout, XtSetSelectionTimeout – set and obtain se
 <p>The <code>XtGetSelectionTimeout</code> function has been superceded by <code>XtAppGetSelectionTimeout</code>. </p>
 <p> The <code>XtSetSelectionTimeout</code> function has been superceded by <code>XtAppSetSelectionTimeout</code>.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xtappgetselectiontimeout/">XtAppGetSelectionTimeout</a></code>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><code><a href="/docs/linux/man/3-xtappgetselectiontimeout/">XtAppGetSelectionTimeout</a></code>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

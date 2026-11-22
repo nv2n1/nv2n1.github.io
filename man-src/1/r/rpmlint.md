@@ -40,10 +40,10 @@ description: "rpmlint – check common problems in rpm packages"
 <dt><code>-f</code>, <code>&#8211;file</code>=<i>conffile</i></dt>
 <dd> Load user configuration from the specified file, default is $XDG_CONFIG_HOME/rpmlint (~/.config/rpmlint if $XDG_CONFIG_HOME is empty or not set).</dd>
 <dt><code>-o</code>, <code>&#8211;option</code>=<i>value</i></dt>
-<dd> Override a configuration option. <i>value</i> is a whitespace separated string, first word of which is the option name to set, and the Python eval() return value for the rest is set as the value for the option. Passing only an option name is treated as if None was passed as its value. See the file &quot;config&quot; shipped with rpmlint for the list of configuration options and their types. For example:<br />
-&nbsp;<wbr>-o&nbsp;<wbr>&quot;NetworkEnabled True&quot;<br />
-&nbsp;<wbr>-o&nbsp;<wbr>&quot;Distribution&nbsp;<wbr>&#8216;My favorite distro&#8217;&quot;<br />
-&nbsp;<wbr>-o&nbsp;<wbr>&quot;MaxLineLength 80&quot;<br />
+<dd> Override a configuration option. <i>value</i> is a whitespace separated string, first word of which is the option name to set, and the Python eval() return value for the rest is set as the value for the option. Passing only an option name is treated as if None was passed as its value. See the file &quot;config&quot; shipped with rpmlint for the list of configuration options and their types. For example:<br/>
+&nbsp;<wbr>-o&nbsp;<wbr>&quot;NetworkEnabled True&quot;<br/>
+&nbsp;<wbr>-o&nbsp;<wbr>&quot;Distribution&nbsp;<wbr>&#8216;My favorite distro&#8217;&quot;<br/>
+&nbsp;<wbr>-o&nbsp;<wbr>&quot;MaxLineLength 80&quot;<br/>
 &nbsp;<wbr>-o&nbsp;<wbr>&quot;ValidShells&nbsp;<wbr>(&#8216;/bin/sh&#8217;,&nbsp;<wbr>&#8216;/bin/bash&#8217;)&quot;</dd></dl>
 <h2>CAVEATS</h2>
 <p> All checks do not apply to all argument types. For best check coverage, run rpmlint on all source and binary packages your build produces. The set of checks rpmlint runs on source packages is a superset of the one for plain specfiles, the set of checks run for installed binary packages is a superset of the one for uninstalled binary package files, and the source and binary package check sets are quite different.</p>

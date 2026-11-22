@@ -39,11 +39,11 @@ description: "udp-receiver – receive files broadcast by udp-sender"
 <dt>&#8211;interface <i>interface</i></dt>
 <dd> Network interface used to send out the data. Default is <tt>&quot;eth0&quot;</tt></dd>
 <dt>&#8211;ttl <i>ttl</i></dt>
-<dd> Time to live for connection request packet (by default connection request is broadcast to the <font SIZE="-1">LAN</font>&#8216;s broadcast address. If ttl is set, the connection request is multicast instead to <tt>224.0.0.1</tt> with the given ttl, which should enable udpcast to work between LANs. Not tested though.</dd>
+<dd> Time to live for connection request packet (by default connection request is broadcast to the LAN&#8216;s broadcast address. If ttl is set, the connection request is multicast instead to <tt>224.0.0.1</tt> with the given ttl, which should enable udpcast to work between LANs. Not tested though.</dd>
 <dt>&#8211;mcast-rdv-address <i>address</i></dt>
 <dd> Uses a non-standard multicast address for the control connection (which is used by the sender and receivers to &#8220;find&#8221; each other). This is <code>not</code> the address that is used to transfer the data. By default <tt>&quot;mcast-rdv-address&quot;</tt> is the Ethernet broadcast address if <tt>&quot;ttl&quot;</tt> is 1, and <tt>224.0.0.1</tt> otherwise. This setting should not be used except in very special situations, such as when <tt>224.0.0.1</tt> cannot be used for policy reasons.</dd>
 <dt>&#8211;exit-wait <i>milliseconds</i></dt>
-<dd> When transmission is over, receiver will wait for this time after receiving the final <font SIZE="-1">REQACK.</font> This is done in order to guard against loss of the final <font SIZE="-1">ACK.</font> Is 500 milliseconds by default.</dd>
+<dd> When transmission is over, receiver will wait for this time after receiving the final REQACK. This is done in order to guard against loss of the final ACK. Is 500 milliseconds by default.</dd>
 <dt>&#8211;ignore-lost-data</dt>
 <dd> Do not stop reception when data loss is detected, but instead fill with random data. This is useful for multimedia transmission where 100% integrity is not need.</dd></dl>
 <h3>Statistics options</h3>

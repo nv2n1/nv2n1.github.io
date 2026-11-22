@@ -10,7 +10,7 @@ description: "dla_gbamv.f –"
 <p>dla_gbamv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dla_gbamv</code> (TRANS, M, N, KL, KU, ALPHA, AB, LDAB, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>dla_gbamv</code> (TRANS, M, N, KL, KU, ALPHA, AB, LDAB, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>DLA_GBAMV</code> performs a matrix-vector operation to calculate error bounds.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dla_gbamv (integerTRANS, integerM, integerN, integerKL, integerKU, double precisionALPHA, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )X, integerINCX, double precisionBETA, double precision, dimension( * )Y, integerINCY)</h3>

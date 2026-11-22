@@ -11,7 +11,7 @@ description: "clangt.f –"
 <p> clangt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>clangt</code> (NORM, N, DL, D, DU)<br />
+<p> REAL function <code>clangt</code> (NORM, N, DL, D, DU)<br/>
  <i></i><code>CLANGT</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general tridiagonal matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function clangt (characterNORM, integerN, complex, dimension( * )DL, complex, dimension( * )D, complex, dimension( * )DU)</h3>

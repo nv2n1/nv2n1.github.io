@@ -44,14 +44,14 @@ description: "mtrace, muntrace – malloc tracing"
 <h2>Examples</h2>
 <p>The shell session below demonstrates the use of the <code>mtrace</code>() function and the <code><a href="/docs/linux/man/1-mtrace/">mtrace</a></code>(1) command in a program that has memory leaks at two different locations. The demonstration uses the following program: </p>
 <p> $ <code>cat t_mtrace.c</code> #include &lt;mcheck.h&gt; #include &lt;stdlib.h&gt; #include &lt;stdio.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
+<p> int main(int argc, char *argv[]) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mtrace(); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int j&nbsp;=&nbsp;0;&nbsp;j&nbsp;&lt;&nbsp;2;&nbsp;j++)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int j&nbsp;=&nbsp;0;&nbsp;j&nbsp;&lt;&nbsp;2;&nbsp;j++)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;malloc(100);&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Never freed&#8211;a memory leak&nbsp;*/ </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;calloc(16, 16);&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Never freed&#8211;a memory leak&nbsp;*/<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;calloc(16, 16);&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Never freed&#8211;a memory leak&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); } </p>
 <p> When we run the program as follows, we see that <code>mtrace</code>() diagnosed memory leaks at two different locations in the program: </p>
-<p> $ <code>cc -g t_mtrace.c -o t_mtrace</code> $ <code>export MALLOC_TRACE=/tmp/t</code> $ <code>./t_mtrace</code> $ <code>mtrace ./t_mtrace $MALLOC_TRACE</code> Memory not freed: &#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />
+<p> $ <code>cc -g t_mtrace.c -o t_mtrace</code> $ <code>export MALLOC_TRACE=/tmp/t</code> $ <code>./t_mtrace</code> $ <code>mtrace ./t_mtrace $MALLOC_TRACE</code> Memory not freed: &#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Address&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Size&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Caller 0x084c9378 0x64 at /home/cecilia/t_mtrace.c:12 0x084c93e0 0x64 at /home/cecilia/t_mtrace.c:12 0x084c9448 0x100 at /home/cecilia/t_mtrace.c:16 </p>
 <p> The first two messages about unfreed memory correspond to the two <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) calls inside the <i>for</i> loop. The final message corresponds to the call to <code><a href="/docs/linux/man/3-calloc/">calloc</a></code>(3) (which in turn calls <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3)).</p>
 <h2>See Also</h2>

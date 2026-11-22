@@ -10,7 +10,7 @@ description: "claqgb.f –"
 <p>claqgb.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>claqgb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, EQUED)<br />
+<p>subroutine <code>claqgb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, EQUED)<br/>
  <i></i><code>CLAQGB</code> scales a general band matrix, using row and column scaling factors computed by sgbequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claqgb (integerM, integerN, integerKL, integerKU, complex, dimension( ldab, * )AB, integerLDAB, real, dimension( * )R, real, dimension( * )C, realROWCND, realCOLCND, realAMAX, characterEQUED)</h3>

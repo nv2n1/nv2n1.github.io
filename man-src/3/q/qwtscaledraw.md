@@ -16,26 +16,26 @@ description: "QwtScaleDraw –"
 <h3>Public Types</h3>
 <p>enum <code>Alignment</code> { <code>BottomScale</code>, <code>TopScale</code>, <code>LeftScale</code>, <code>RightScale</code> } </p>
 <h3>Public Member Functions</h3>
-<p><code>QwtScaleDraw</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtScaleDraw</code> ()<br />
- <i>Destructor. </i><br />
- void <code>getBorderDistHint</code> (const QFont &amp;, int &amp;start, int &amp;end) const<br />
- <i>Determine the minimum border distance. </i><br />
+<p><code>QwtScaleDraw</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtScaleDraw</code> ()<br/>
+ <i>Destructor. </i><br/>
+ void <code>getBorderDistHint</code> (const QFont &amp;, int &amp;start, int &amp;end) const<br/>
+ <i>Determine the minimum border distance. </i><br/>
  int <code>minLabelDist</code> (const QFont &amp;) const </p>
 <p> int <code>minLength</code> (const QFont &amp;) const </p>
 <p> virtual double <code>extent</code> (const QFont &amp;) const </p>
 <p> void <code>move</code> (double x, double y) </p>
-<p> void <code>move</code> (const QPointF &amp;)<br />
- <i>Move the position of the scale. </i><br />
+<p> void <code>move</code> (const QPointF &amp;)<br/>
+ <i>Move the position of the scale. </i><br/>
  void <code>setLength</code> (double <code>length</code>) </p>
 <p> <code>Alignment</code> <code>alignment</code> () const </p>
 <p> void <code>setAlignment</code> (<code>Alignment</code>) </p>
 <p> Qt::Orientation <code>orientation</code> () const </p>
 <p> QPointF <code>pos</code> () const </p>
 <p> double <code>length</code> () const </p>
-<p> void <code>setLabelAlignment</code> (Qt::Alignment)<br />
- <i>Change the label flags. </i><br />
+<p> void <code>setLabelAlignment</code> (Qt::Alignment)<br/>
+ <i>Change the label flags. </i><br/>
  Qt::Alignment <code>labelAlignment</code> () const </p>
 <p> void <code>setLabelRotation</code> (double rotation) </p>
 <p> double <code>labelRotation</code> () const </p>
@@ -44,7 +44,7 @@ description: "QwtScaleDraw –"
 <p> QPointF <code>labelPosition</code> (double val) const </p>
 <p> QRectF <code>labelRect</code> (const QFont &amp;, double val) const </p>
 <p> QSizeF <code>labelSize</code> (const QFont &amp;, double val) const </p>
-<p> QRect <code>boundingLabelRect</code> (const QFont &amp;, double val) const<br />
+<p> QRect <code>boundingLabelRect</code> (const QFont &amp;, double val) const<br/>
  <i>Find the bounding rectangle for the label. </i></p>
 <h3>Protected Member Functions</h3>
 <p>QTransform <code>labelTransformation</code> (const QPointF &amp;, const QSizeF &amp;) const </p>
@@ -87,7 +87,7 @@ description: "QwtScaleDraw –"
 <p>Find the bounding rectangle for the label. The coordinates of the rectangle are absolute ( calculated from <code>pos()</code> ). in direction of the tick. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>font</i> Font used for painting<br />
+<dd><i>font</i> Font used for painting<br/>
  <i>value</i> Value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -108,7 +108,7 @@ description: "QwtScaleDraw –"
 <p>Draws the label for a major scale tick </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>value</i> Value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -118,8 +118,8 @@ description: "QwtScaleDraw –"
 <p>Draw a tick </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>value</i> Value of the tick<br />
+<dd><i>painter</i> Painter<br/>
+ <i>value</i> Value of the tick<br/>
  <i>len</i> Length of the tick</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -142,8 +142,8 @@ description: "QwtScaleDraw –"
 <p>Determine the minimum border distance. This member function returns the minimum space needed to draw the mark labels at the scale&#8217;s endpoints. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>font</i> Font<br />
- <i>start</i> Start border distance<br />
+<dd><i>font</i> Font<br/>
+ <i>start</i> Start border distance<br/>
  <i>end</i> End border distance</dd></dl>
 <h3>Qt::Alignment QwtScaleDraw::labelAlignment () const</h3>
 <p><code>Returns:</code></p>
@@ -165,7 +165,7 @@ description: "QwtScaleDraw –"
 <p>Find the bounding rectangle for the label. The coordinates of the rectangle are relative to spacing + tick length from the backbone in direction of the tick. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>font</i> Font used for painting<br />
+<dd><i>font</i> Font used for painting<br/>
  <i>value</i> Value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -181,7 +181,7 @@ description: "QwtScaleDraw –"
 <p>Calculate the size that is needed to draw a label </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>font</i> Label font<br />
+<dd><i>font</i> Label font<br/>
  <i>value</i> Value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -190,7 +190,7 @@ description: "QwtScaleDraw –"
 <p>Calculate the transformation that is needed to paint a label depending on its alignment and rotation. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Position where to paint the label<br />
+<dd><i>pos</i> Position where to paint the label<br/>
  <i>size</i> Size of the label</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -245,7 +245,7 @@ description: "QwtScaleDraw –"
 <p>Move the position of the scale </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> X coordinate<br />
+<dd><i>x</i> X coordinate<br/>
  <i>y</i> Y coordinate</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

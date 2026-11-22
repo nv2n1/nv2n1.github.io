@@ -67,7 +67,7 @@ description: "amgetconf – look up configuration parameters and manipulate debu
 <dd>Kerberos parameters.</dd></dl>
 <h3>Debug Log Management</h3>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  That this application is responsible for debug logs is a historical quirk, but the functionality is widely used.  If <i>parameter</i> begins with <i>dbopen.</i>, the string following the period is a program name and an Amanda debug file will be created for the caller. The name of the logfile is returned. If <i>parameter</i> begins with <i>dbclose.</i>, the string following the period is a program name previously used with <i>dbopen.</i>, followed by a colon (:) and the previously opened file name. The name of the logfile is returned.</dd>
 <h2>Examples</h2>
 <p>Find out the path to the log file directory: </p>

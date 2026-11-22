@@ -11,7 +11,7 @@ clipaccumulate - Make a bunch of little clipboards into one big one.
 
 <h2>USAGE</h2>
 
- The first thing it says (which goes to <font SIZE="-1">STDERR,</font> so you can redirect into a file if you want), is how to exit, which is by copying the magic ``end'' string into the clipboard. Crufty? Yep. You can still do Ctrl+C if you don't like this (or if the string scrolls off the top of the screen). 
+ The first thing it says (which goes to STDERR, so you can redirect into a file if you want), is how to exit, which is by copying the magic ``end'' string into the clipboard. Crufty? Yep. You can still do Ctrl+C if you don't like this (or if the string scrolls off the top of the screen). 
 
  The next thing it does is wait for the clipboard to change, at which point it will print out the new data and go back to waiting for the clipboard to change. 
 

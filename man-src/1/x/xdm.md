@@ -414,17 +414,17 @@ xlogin *login.translations : #override Ctrl&lt;Key&gt; R : abort - display()
 </pre>
 <p> No arguments are passed to the script. <i>Xdm</i> waits until this script exits before starting the user session. If the exit value of this script is non-zero, <i>xdm</i> discontinues the session and starts another authentication cycle. </p>
 <p> The sample <i>Xstartup</i> file shown here prevents login while the file <i>/etc/nologin</i> exists. Thus this is not a complete example, but simply a demonstration of the available functionality. </p>
-<p> Here is a sample <i>Xstartup</i> script:<br />
-#!/ bin / sh<br />
-#<br />
-#Xstartup<br />
-#<br />
-#This program is run as root after the user is verified<br />
-#<br />
-if<br />
-    [-f / etc / nologin];<br />
-then<br />
-        xmessage &#8211;<br />
+<p> Here is a sample <i>Xstartup</i> script:<br/>
+#!/ bin / sh<br/>
+#<br/>
+#Xstartup<br/>
+#<br/>
+#This program is run as root after the user is verified<br/>
+#<br/>
+if<br/>
+    [-f / etc / nologin];<br/>
+then<br/>
+        xmessage &#8211;<br/>
     file / etc / nologin &#8211; timeout 30 &#8211; center exit 1 fi sessreg &#8211; a &#8211; l $DISPLAY &#8211; x / etc / X11 / xdm / Xservers $LOGNAME / etc / X11 / xdm / GiveConsole exit 0</p>
 <h2>SESSION PROGRAM</h2>
 <p> The <i>Xsession</i> program is the command which is run as the user&#8217;s session. It is run with the permissions of the authorized user. </p>
@@ -538,7 +538,7 @@ then<br />
 <dt><i>/tmp/K5C&lt;display&gt;</i></dt>
 <dd> Kerberos credentials cache</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/7-x/">X</a></i>(7), <i><a href="/docs/linux/man/1-xinit/">xinit</a></i>(1), <i><a href="/docs/linux/man/1-xauth/">xauth</a></i>(1), <i><a href="/docs/linux/man/1-xrdb/">xrdb</a></i>(1), <i><a href="/docs/linux/man/7-xsecurity/">Xsecurity</a></i>(7), <i><a href="/docs/linux/man/1-sessreg/">sessreg</a></i>(1), <i><a href="/docs/linux/man/1-xserver/">Xserver</a></i>(1), <i><a href="/docs/linux/man/5-fonts-conf/">fonts.conf</a></i>(5).<br />
+<p> <i><a href="/docs/linux/man/7-x/">X</a></i>(7), <i><a href="/docs/linux/man/1-xinit/">xinit</a></i>(1), <i><a href="/docs/linux/man/1-xauth/">xauth</a></i>(1), <i><a href="/docs/linux/man/1-xrdb/">xrdb</a></i>(1), <i><a href="/docs/linux/man/7-xsecurity/">Xsecurity</a></i>(7), <i><a href="/docs/linux/man/1-sessreg/">sessreg</a></i>(1), <i><a href="/docs/linux/man/1-xserver/">Xserver</a></i>(1), <i><a href="/docs/linux/man/5-fonts-conf/">fonts.conf</a></i>(5).<br/>
  <i>X Display Manager Control Protocol</i></p>
 <h2>AUTHOR</h2>
 <p> Keith Packard, MIT X Consortium </p>

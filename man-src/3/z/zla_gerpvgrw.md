@@ -10,7 +10,7 @@ description: "zla_gerpvgrw.f –"
 <p>zla_gerpvgrw.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>zla_gerpvgrw</code> (N, NCOLS, A, LDA, AF, LDAF)<br />
+<p>DOUBLE PRECISION function <code>zla_gerpvgrw</code> (N, NCOLS, A, LDA, AF, LDAF)<br/>
  <i></i><code>ZLA_GERPVGRW</code> multiplies a square real matrix by a complex matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function zla_gerpvgrw (integerN, integerNCOLS, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldaf, * )AF, integerLDAF)</h3>

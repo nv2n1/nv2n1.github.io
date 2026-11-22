@@ -18,7 +18,7 @@ description: "nbackup – Physical backup manager for Firebird"
 </dd><dt><code>nbackup</code> [<i>option</i>&#8230;] -r <i>database</i> <i>file0</i> [<i>file1</i>&#8230;]</dt>
 <dd></dd></dl>
 <h2>DESCRIPTION</h2>
-<p> <code>nbackup</code> allows making incremental backups of firebird databases. It also allows database files to be locked for copying with <font SIZE="-1">OS</font> tools like <code><a href="/docs/linux/man/1-cp/">cp</a></code>(1).</p>
+<p> <code>nbackup</code> allows making incremental backups of firebird databases. It also allows database files to be locked for copying with OS tools like <code><a href="/docs/linux/man/1-cp/">cp</a></code>(1).</p>
 <h2>COMMANDS</h2>
 <dl>
 <dt><code>-l</code> <i>database</i></dt>
@@ -54,7 +54,7 @@ description: "nbackup – Physical backup manager for Firebird"
 <dd>
 </dd><dt><code>-direct</code> <i>on|off</i></dt>
 <dd> Turns on or off direct I/O during database backup. </dd>
-<p> Direct I/O may be useful when database is much larger that <font SIZE="-1">RAM,</font> because in that case using buffered I/O may cause replacing useful cache contents with database file contents, which are generally read only once.</dl>
+<p> Direct I/O may be useful when database is much larger that RAM, because in that case using buffered I/O may cause replacing useful cache contents with database file contents, which are generally read only once.</dl>
 </dl>
 <dl>
 </dl>

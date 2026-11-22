@@ -10,7 +10,7 @@ description: "archmage – CHM(Compiled HTML) Decompressor."
 
 <p> archmage &#8211; CHM(Compiled HTML) Decompressor. </p>
 <h2>SYNOPSIS</h2>
-<p> <code>archmage</code> <i>chmfile directory</i><br />
+<p> <code>archmage</code> <i>chmfile directory</i><br/>
  <code>archmage</code> -p port <i>chmfile</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>archmage</code> command. This manual page was written for the Debian distribution because the original program does not have a manual page. </p>

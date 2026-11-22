@@ -33,11 +33,11 @@ description: "h5diff – Compares two HDF5 files and reports the differences."
 <dt><code>object1 object2</code></dt>
 <dd> Specific object(s) within the files to be compared.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> The following h5diff call compares the object /a/b in file1 with the object /a/c in file2:<br />
+<p> The following h5diff call compares the object /a/b in file1 with the object /a/c in file2:<br/>
 &nbsp;<wbr>h5diff file1 file2&nbsp;<wbr>/a/b&nbsp;<wbr>/a/c&nbsp;<wbr> </p>
-<p> This h5diff call compares the object /a/b in file1 with the same object in file2:<br />
+<p> This h5diff call compares the object /a/b in file1 with the same object in file2:<br/>
 &nbsp;<wbr>h5diff file1 file2&nbsp;<wbr>/a/b&nbsp;<wbr> </p>
-<p> And this h5diff call compares all objects in both files:<br />
+<p> And this h5diff call compares all objects in both files:<br/>
 &nbsp;<wbr>h5diff file1 file2</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-h5dump/">h5dump</a></i>(1), <i><a href="/docs/linux/man/1-h5ls/">h5ls</a></i>(1), <i><a href="/docs/linux/man/1-h5repart/">h5repart</a></i>(1), <i><a href="/docs/linux/man/1-h5import/">h5import</a></i>(1), <i><a href="/docs/linux/man/1-gif2h5/">gif2h5</a></i>(1), <i><a href="/docs/linux/man/1-h52gif/">h52gif</a></i>(1), <i>h5perf</i>(1) </p>

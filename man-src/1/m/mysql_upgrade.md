@@ -14,7 +14,7 @@ description: "mysql_upgrade – check and upgrade MySQL tables"
 <dt> <code>mysql_upgrade [</code><i>options</i><code>]</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <dl>
-<dd> <font SIZE="+1"> <code>Note</code> </font></dd>
+<dd>  <code>Note</code> </dd>
 <dd>
 </dd><dd>As of MySQL 8.0.16, the MySQL server performs the upgrade tasks previously handled by <code>mysql_upgrade</code> (for details, see Section 2.11.3, &#8220;What the MySQL Upgrade Process Upgrades&#8221;). Consequently, <code>mysql_upgrade</code> is unneeded and is deprecated as of that version, and will be removed in a future MySQL version. Because <code>mysql_upgrade</code> no longer performs upgrade tasks, it exits with status 0 unconditionally. </dd>
 </dl>
@@ -33,7 +33,7 @@ description: "mysql_upgrade – check and upgrade MySQL tables"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Caution</code> </font> </dd>
+  <code>Caution</code>  </dd>
 <p> You should always back up your current MySQL installation <i>before</i> performing an upgrade. See Section 7.2, &#8220;Database Backup Methods&#8221;. </p>
 <p> Some upgrade incompatibilities may require special handling <i>before</i> upgrading your MySQL installation and running <code>mysql_upgrade</code>. See Section 2.11, &#8220;Upgrading MySQL&#8221;, for instructions on determining whether any such incompatibilities apply to your installation and how to handle them. </p>
 </dl>
@@ -92,7 +92,7 @@ shell&gt; <code>mysql_upgrade [</code><i>options</i><code>]</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> If you run the server with the disabled_storage_engines system variable set to disable certain storage engines (for example, MyISAM), <code>mysql_upgrade</code> might fail with an error like this: </p>
 <dl>
 <dt>
@@ -110,7 +110,7 @@ mysql_upgrade: [ERROR] 3161: Storage engine MyISAM is disabled
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> The mysql_upgrade_info file is deprecated and will be removed in a future MySQL version. </p>
 </dl>
 <p> <code>mysql_upgrade</code> checks mysql.user system table rows and, for any row with an empty plugin column, sets that column to &#8216;mysql_native_password&#8217; if the credentials use a hash format compatible with that plugin. Rows with a pre-4.1 password hash must be upgraded manually. </p>
@@ -284,7 +284,7 @@ upgrade to succeed.
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If the OpenSSL FIPS Object Module is not available, the only permitted value for <code>&#8211;ssl-fips-mode</code> is OFF. In this case, setting <code>&#8211;ssl-fips-mode</code> to ON or STRICT causes the client to produce a warning at startup and to operate in non-FIPS mode. </dd>
 </dl>
 </dl>

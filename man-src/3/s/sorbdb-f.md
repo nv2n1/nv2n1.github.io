@@ -10,7 +10,7 @@ description: "sorbdb.f –"
 <p>sorbdb.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sorbdb</code> (TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, PHI, TAUP1, TAUP2, TAUQ1, TAUQ2, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sorbdb</code> (TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, PHI, TAUP1, TAUP2, TAUQ1, TAUQ2, WORK, LWORK, INFO)<br/>
  <i></i><code>SORBDB</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sorbdb (characterTRANS, characterSIGNS, integerM, integerP, integerQ, real, dimension( ldx11, * )X11, integerLDX11, real, dimension( ldx12, * )X12, integerLDX12, real, dimension( ldx21, * )X21, integerLDX21, real, dimension( ldx22, * )X22, integerLDX22, real, dimension( * )THETA, real, dimension( * )PHI, real, dimension( * )TAUP1, real, dimension( * )TAUP2, real, dimension( * )TAUQ1, real, dimension( * )TAUQ2, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

@@ -29,7 +29,7 @@ description: "sandbox – Run cmd under an SELinux sandbox"
 <dt><code>-s</code> <code>&#8211;shred</code></dt>
 <dd>Shred temporary files created in $HOME and /tmp, before deleting.</dd>
 <dt><code>-t</code> <code>&#8211;type</code></dt>
-<dd>Use alternate sandbox type, defaults to sandbox_t or sandbox_x_t for -X. <code>Examples:</code><br />
+<dd>Use alternate sandbox type, defaults to sandbox_t or sandbox_x_t for -X. <code>Examples:</code><br/>
  sandbox_t<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8211;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>No X, No Network Access, No Open, read/write on passed in file descriptors.</dd>
 <p> sandbox_min_t<tt>&nbsp;<wbr>&nbsp;<wbr></tt>&#8211;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>No Network Access</p>
 <p> sandbox_x_t<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8211;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Ports for X applications to run locally</p>

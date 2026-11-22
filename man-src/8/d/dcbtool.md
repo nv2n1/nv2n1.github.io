@@ -9,9 +9,9 @@ description: "dcbtool – manage the Data Center Bridging (DCB) settings of a CE
 
 <p>dcbtool &#8211; manage the Data Center Bridging (DCB) settings of a CEE DCB interface</p>
 <h2>Synopsis</h2>
-<p><code>dcbtool -h</code><br />
- <code>dcbtool -v</code><br />
- <code>dcbtool [-rR]</code><br />
+<p><code>dcbtool -h</code><br/>
+ <code>dcbtool -v</code><br/>
+ <code>dcbtool [-rR]</code><br/>
  <code>dcbtool [-rR] [</code><i>command</i><code>] [</code><i>command arguments</i><code>]</code> </p>
 <h2>Description</h2>
 <p><code>dcbtool</code> is used to query and set the DCB settings of a Converged Enhanced Ethernet (CEE) DCB capable Ethernet interface. It connects to the client interface of <code>lldpad</code> to perform these operations. <code>dcbtool</code> will operate in interactive mode if it is executed without a <i>command</i>. In interactive mode, <code>dcbtool</code> also functions as an event listener and will print out events received from <code>lldpad</code> as they arrive. It will use libreadline for interactive input when available. 802.1Qaz DCBX is not controllable from <code>dcbtool</code> instead <code>lldptool</code> can be used in this case.</p>
@@ -42,11 +42,11 @@ description: "dcbtool – manage the Data Center Bridging (DCB) settings of a CE
 <dt>&lt;<code>gc</code>|<code>go</code>&gt;<code> dcbx</code></dt>
 <dd>Get the configured or operational legacy version of the DCBX protocol which will be supported by <code>lldpad.</code> The configured version, if different from the operational version, will take effect after <code>lldpad</code> is restarted.</dd>
 <dt><code>sc dcbx v:</code>[<code>cin</code>|<code>cee</code>|<code>force-cin</code>|<code>force-cee</code>]</dt>
-<dd>Set the legacy version of DCBX which will be supported by <code>lldpad</code> the next time it is started.<br />
- Information about the CIN version can be found at:<br />
- &lt;<a rel="nofollow" href="http://download.intel.com/technology/eedc/dcb_cep_spec.pdf">http://download.intel.com/technology/eedc/dcb_cep_spec.pdf</a>&gt;<br />
- Information about the CEE version can be found at:<br />
- &lt;<a rel="nofollow" href="http://www.ieee802.org/1/files/public/docs2008/az-wadekar-dcbx-capability-exchange-discovery-protocol-1108-v1.01.pdf">http://www.ieee802.org/1/files/public/docs2008/az-wadekar-dcbx-capability-exchange-discovery-protocol-1108-v1.01.pdf</a>&gt;<br />
+<dd>Set the legacy version of DCBX which will be supported by <code>lldpad</code> the next time it is started.<br/>
+ Information about the CIN version can be found at:<br/>
+ &lt;<a rel="nofollow" href="http://download.intel.com/technology/eedc/dcb_cep_spec.pdf">http://download.intel.com/technology/eedc/dcb_cep_spec.pdf</a>&gt;<br/>
+ Information about the CEE version can be found at:<br/>
+ &lt;<a rel="nofollow" href="http://www.ieee802.org/1/files/public/docs2008/az-wadekar-dcbx-capability-exchange-discovery-protocol-1108-v1.01.pdf">http://www.ieee802.org/1/files/public/docs2008/az-wadekar-dcbx-capability-exchange-discovery-protocol-1108-v1.01.pdf</a>&gt;<br/>
  The dcbx setting is a global setting and changes only take effect when <code>lldpad</code> is restarted. The default DCBX version used is the IEEE standard version. If a pre-IEEE DCBX version is received (per port) which matches the dcbx setting, then <code>lldpad</code> will fall back to the configured global dcbx setting. If the dcbx setting is set to either &#8216;force-cin&#8217; or &#8216;force-cee&#8217; then any port doing DCBX will start out in the corresponding legacy DCBX mode.</dd></dl>
 <p> DCB per-interface commands:</p>
 <dl>
@@ -124,12 +124,12 @@ description: "dcbtool – manage the Data Center Bridging (DCB) settings of a CE
 <dd>For testing purposes, the logical link status may be set to 0 or 1. Changes to the logical link status are not saved in the configuration file. </dd>
 </dl>
 <h2>Examples</h2>
-<p>Enable DCB on interface <i>eth2</i> <code>dcbtool sc eth2 dcb on</code> Assign priorities 0-3 to priority group 0, priorities 4-6 to priority group 1 and priority 7 to the unrestricted priority. Also, allocate 25% of link bandwidth to priority group 0 and 75% to group 1. <code>dcbtool sc eth2 pg pgid:0000111f pgpct:25,75,0,0,0,0,0,0</code> Enable transmit of Priority Flow Control for priority 3 and assign FCoE to priority 3. <code>dcbtool sc eth2 pfc pfcup:00010000</code><br />
+<p>Enable DCB on interface <i>eth2</i> <code>dcbtool sc eth2 dcb on</code> Assign priorities 0-3 to priority group 0, priorities 4-6 to priority group 1 and priority 7 to the unrestricted priority. Also, allocate 25% of link bandwidth to priority group 0 and 75% to group 1. <code>dcbtool sc eth2 pg pgid:0000111f pgpct:25,75,0,0,0,0,0,0</code> Enable transmit of Priority Flow Control for priority 3 and assign FCoE to priority 3. <code>dcbtool sc eth2 pfc pfcup:00010000</code><br/>
  <code>dcbtool sc eth2 app:0 appcfg:08</code> </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lldpad/">lldpad</a></code>(8), <code><a href="/docs/linux/man/8-lldptool/">lldptool</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-dcbx/">lldptool-dcbx</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-ets/">lldptool-ets</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-pfc/">lldptool-pfc</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-app/">lldptool-app</a></code>(8) </p>
 <h2>Copyright</h2>
-<p>dcbtool &#8211; DCB configuration utility<br />
+<p>dcbtool &#8211; DCB configuration utility<br/>
  Copyright(c) 2007-2012 Intel Corporation. Portions of dcbtool are based on:</p>
 <dl>
 <dt>hostapd-0.5.7</dt>

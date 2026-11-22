@@ -29,5 +29,5 @@ int <i>screen</i>, XColor **<i>colors_out</i>, int *<i>ncolors</i>);
 <p>The <i>XcupGetReservedColormapEntries</i> function returns a list of colormap entries (pixels) that are reserved by the system. This list will, at a minimum, contain entries for the BlackPixel and WhitePixel of the specified screen. Use <i>XFree</i> to free <i>colors_out.</i> </p>
 <p> To minimize colormap flash, an application which installs its own private colormap should query the special colors by calling <i>XCupGetReservedColormapEntries</i>, and can then store those entries (in the proper location) in its private colormap using <i>XCupStoreColors</i>.</p>
 <h2>See Also</h2>
-<p><code>XcupQueryVersion</code>(3Xext), <code>XcupStoreColors</code>(3Xext), <code>XFree</code>(3X11),<br />
+<p><code>XcupQueryVersion</code>(3Xext), <code>XcupStoreColors</code>(3Xext), <code>XFree</code>(3X11),<br/>
  <i>Colormap Utilization Policy and Extension</i></p>

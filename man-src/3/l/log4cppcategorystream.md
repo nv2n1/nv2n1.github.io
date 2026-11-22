@@ -14,29 +14,29 @@ description: "log4cpp::CategoryStream –"
 <h3>Public Types</h3>
 <p>typedef <code>CategoryStream</code> &amp;(* <code>cspf</code> )(<code>CategoryStream</code> &amp;) </p>
 <h3>Public Member Functions</h3>
-<p><code>CategoryStream</code> (<code>Category</code> &amp;category, <code>Priority::Value</code> priority)<br />
- <i>Construct a </i><code>CategoryStream</code> for given <code>Category</code> with given priority.<br />
- <code>~CategoryStream</code> ()<br />
- <i>Destructor for </i><code>CategoryStream</code>.<br />
- <code>Category</code> &amp; <code>getCategory</code> () const<br />
- <i>Returns the destination </i><code>Category</code> for this stream.<br />
- <code>Priority::Value</code> <code>getPriority</code> () const throw ()<br />
- <i>Returns the priority for this stream. </i><br />
- void <code>flush</code> ()<br />
- <i>Flush the contents of the stream buffer to the </i><code>Category</code> and empties the buffer.<br />
- template&lt;typename T &gt; <code>CategoryStream</code> &amp; <code>operator&lt;&lt;</code> (const T &amp;t)<br />
- <i>Stream in arbitrary types and objects. </i><br />
+<p><code>CategoryStream</code> (<code>Category</code> &amp;category, <code>Priority::Value</code> priority)<br/>
+ <i>Construct a </i><code>CategoryStream</code> for given <code>Category</code> with given priority.<br/>
+ <code>~CategoryStream</code> ()<br/>
+ <i>Destructor for </i><code>CategoryStream</code>.<br/>
+ <code>Category</code> &amp; <code>getCategory</code> () const<br/>
+ <i>Returns the destination </i><code>Category</code> for this stream.<br/>
+ <code>Priority::Value</code> <code>getPriority</code> () const throw ()<br/>
+ <i>Returns the priority for this stream. </i><br/>
+ void <code>flush</code> ()<br/>
+ <i>Flush the contents of the stream buffer to the </i><code>Category</code> and empties the buffer.<br/>
+ template&lt;typename T &gt; <code>CategoryStream</code> &amp; <code>operator&lt;&lt;</code> (const T &amp;t)<br/>
+ <i>Stream in arbitrary types and objects. </i><br/>
  <code>CategoryStream</code> &amp; <code>operator&lt;&lt;</code> (const char *t) </p>
 <p> template&lt;typename T &gt; <code>CategoryStream</code> &amp; <code>operator&lt;&lt;</code> (const std::string &amp;t) </p>
-<p> std::streamsize <code>width</code> (std::streamsize wide)<br />
- <i>Set the width output on </i><code>CategoryStream</code>.<br />
+<p> std::streamsize <code>width</code> (std::streamsize wide)<br/>
+ <i>Set the width output on </i><code>CategoryStream</code>.<br/>
  <code>CategoryStream</code> &amp; <code>operator&lt;&lt;</code> (<code>cspf</code>) </p>
 <h3>Friends</h3>
-<p><code>LOG4CPP_EXPORT</code> friend<br />
- <code>CategoryStream</code> &amp; <code>eol</code> (<code>CategoryStream</code> &amp;os)&quot;<br />
- <i>eol manipulator </i><br />
- <code>LOG4CPP_EXPORT</code> friend<br />
- <code>CategoryStream</code> &amp; <code>left</code> (<code>CategoryStream</code> &amp;os)&quot;<br />
+<p><code>LOG4CPP_EXPORT</code> friend<br/>
+ <code>CategoryStream</code> &amp; <code>eol</code> (<code>CategoryStream</code> &amp;os)&quot;<br/>
+ <i>eol manipulator </i><br/>
+ <code>LOG4CPP_EXPORT</code> friend<br/>
+ <code>CategoryStream</code> &amp; <code>left</code> (<code>CategoryStream</code> &amp;os)&quot;<br/>
  <i>left manipulator </i></p>
 <h2>Detailed Description</h2>
 <p>This class enables streaming simple types and objects to a category. </p>
@@ -48,7 +48,7 @@ description: "log4cpp::CategoryStream –"
 <p>Construct a <code>CategoryStream</code> for given <code>Category</code> with given priority. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>category</i> The category this stream will send log messages to.<br />
+<dd><i>category</i> The category this stream will send log messages to.<br/>
  <i>priority</i> The priority the log messages will get or <code>Priority::NOTSET</code> to silently discard any streamed in messages.</dd></dl>
 <h3>log4cpp::CategoryStream::~CategoryStream ()</h3>
 <p>Destructor for <code>CategoryStream</code>.</p>

@@ -33,11 +33,11 @@ description: "opauploadall (Linux) Copies one or more files from a group of host
 &nbsp;<wbr><i>dest_file</i>&nbsp;<wbr></dt>
 <dd>Name of the file or directory on this system to copy to. It is relative to <i>upload_dir</i>/<i>HOSTNAME</i> .A local directory within <i>upload_dir</i>/ is created for each host. Each uploaded file is copied to upload_dir/<i>HOSTNAME</i>/<i>dest_file</i> within the local system. If more than one source file is specified, dest_file is treated as a directory name.</dd></dl>
 <h2>Example</h2>
-<p># upload two files from 2 hosts<br />
- opauploadall -h &#8216;arwen elrond&#8217; capture.tgz /etc/init.d/ipoib.cfg.<br />
- # upload two files from all hosts<br />
- opauploadall -p capture.tgz /etc/init.d/ipoib.cfg.<br />
- # upload network config files from all hosts<br />
+<p># upload two files from 2 hosts<br/>
+ opauploadall -h &#8216;arwen elrond&#8217; capture.tgz /etc/init.d/ipoib.cfg.<br/>
+ # upload two files from all hosts<br/>
+ opauploadall -p capture.tgz /etc/init.d/ipoib.cfg.<br/>
+ # upload network config files from all hosts<br/>
  opauploadall capture.tgz /etc/init.d/ipoib.cfg pre-install</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

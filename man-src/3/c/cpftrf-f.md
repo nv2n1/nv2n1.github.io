@@ -10,7 +10,7 @@ description: "cpftrf.f –"
 <p>cpftrf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cpftrf</code> (TRANSR, UPLO, N, A, INFO)<br />
+<p>subroutine <code>cpftrf</code> (TRANSR, UPLO, N, A, INFO)<br/>
  <i></i><code>CPFTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpftrf (characterTRANSR, characterUPLO, integerN, complex, dimension( 0: * )A, integerINFO)</h3>

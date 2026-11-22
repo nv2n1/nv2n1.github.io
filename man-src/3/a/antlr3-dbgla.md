@@ -19,19 +19,19 @@ description: "src/antlr3tokenstream.c –"
 <p> static void <code>antlr3CTSFree</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> stream) </p>
 <p> static void <code>antlr3TokenStreamFree</code> (<code>pANTLR3_TOKEN_STREAM</code> stream) </p>
 <p> ANTLR3_API <code>pANTLR3_TOKEN_STREAM</code> <code>antlr3TokenStreamNew</code> () </p>
-<p> static void <code>consume</code> (<code>pANTLR3_INT_STREAM</code> is)<br />
- <i>Move the input pointer to the next incoming token. </i><br />
- static void <code>consumeInitialHiddenTokens</code> (<code>pANTLR3_INT_STREAM</code> is)<br />
- <i>Debug only method to flag consumption of initial off-channel tokens in the input stream. </i><br />
- static void <code>dbgConsume</code> (<code>pANTLR3_INT_STREAM</code> is)<br />
- <i>As per ordinary consume but notifies the debugger about hidden tokens and so on. </i><br />
+<p> static void <code>consume</code> (<code>pANTLR3_INT_STREAM</code> is)<br/>
+ <i>Move the input pointer to the next incoming token. </i><br/>
+ static void <code>consumeInitialHiddenTokens</code> (<code>pANTLR3_INT_STREAM</code> is)<br/>
+ <i>Debug only method to flag consumption of initial off-channel tokens in the input stream. </i><br/>
+ static void <code>dbgConsume</code> (<code>pANTLR3_INT_STREAM</code> is)<br/>
+ <i>As per ordinary consume but notifies the debugger about hidden tokens and so on. </i><br/>
  static <code>ANTLR3_UINT32</code> <code>dbgLA</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_INT32</code> i) </p>
 <p> static <code>ANTLR3_MARKER</code> <code>dbgMark</code> (<code>pANTLR3_INT_STREAM</code> is) </p>
 <p> static void <code>dbgRewindLast</code> (<code>pANTLR3_INT_STREAM</code> is) </p>
 <p> static void <code>dbgRewindStream</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_MARKER</code> marker) </p>
 <p> static void <code>dbgSeek</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_MARKER</code> index) </p>
-<p> static <code>pANTLR3_COMMON_TOKEN</code> <code>dbgTokLT</code> (<code>pANTLR3_TOKEN_STREAM</code> ts, <code>ANTLR3_INT32</code> k)<br />
- <i>As per the normal tokLT but sends information to the debugger. </i><br />
+<p> static <code>pANTLR3_COMMON_TOKEN</code> <code>dbgTokLT</code> (<code>pANTLR3_TOKEN_STREAM</code> ts, <code>ANTLR3_INT32</code> k)<br/>
+ <i>As per the normal tokLT but sends information to the debugger. </i><br/>
  static void <code>discardOffChannel</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> cts, <code>ANTLR3_BOOLEAN</code> discard) </p>
 <p> static void <code>discardTokenType</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> cts, <code>ANTLR3_INT32</code> ttype) </p>
 <p> static void <code>fillBuffer</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> tokenStream) </p>
@@ -41,8 +41,8 @@ description: "src/antlr3tokenstream.c –"
 <p> static <code>pANTLR3_VECTOR</code> <code>getTokens</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> cts) </p>
 <p> static <code>pANTLR3_LIST</code> <code>getTokensList</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> cts, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop, <code>pANTLR3_LIST</code> list) </p>
 <p> static <code>pANTLR3_TOKEN_SOURCE</code> <code>getTokenSource</code> (<code>pANTLR3_TOKEN_STREAM</code> ts) </p>
-<p> static <code>pANTLR3_LIST</code> <code>getTokensSet</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> tokenStream, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop, <code>pANTLR3_BITSET</code> types)<br />
- <i>Given a start and stop index, return a List of all tokens in the token type BitSet. </i><br />
+<p> static <code>pANTLR3_LIST</code> <code>getTokensSet</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> tokenStream, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop, <code>pANTLR3_BITSET</code> types)<br/>
+ <i>Given a start and stop index, return a List of all tokens in the token type BitSet. </i><br/>
  static <code>pANTLR3_LIST</code> <code>getTokensType</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> cts, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop, <code>ANTLR3_UINT32</code> type) </p>
 <p> static <code>pANTLR3_COMMON_TOKEN</code> <code>LB</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> tokenStream, <code>ANTLR3_INT32</code> i) </p>
 <p> static <code>ANTLR3_MARKER</code> <code>mark</code> (<code>pANTLR3_INT_STREAM</code> is) </p>
@@ -52,14 +52,14 @@ description: "src/antlr3tokenstream.c –"
 <p> static void <code>seek</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_MARKER</code> index) </p>
 <p> static void <code>setDebugListener</code> (<code>pANTLR3_TOKEN_STREAM</code> ts, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger) </p>
 <p> static void <code>setTokenSource</code> (<code>pANTLR3_TOKEN_STREAM</code> ts, <code>pANTLR3_TOKEN_SOURCE</code> tokenSource) </p>
-<p> static void <code>setTokenTypeChannel</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> tokenStream, <code>ANTLR3_UINT32</code> ttype, <code>ANTLR3_UINT32</code> channel)<br />
- <i>A simple filter mechanism whereby you can tell this token stream to force all tokens of type ttype to be on channel. </i><br />
+<p> static void <code>setTokenTypeChannel</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> tokenStream, <code>ANTLR3_UINT32</code> ttype, <code>ANTLR3_UINT32</code> channel)<br/>
+ <i>A simple filter mechanism whereby you can tell this token stream to force all tokens of type ttype to be on channel. </i><br/>
  static <code>ANTLR3_UINT32</code> <code>size</code> (<code>pANTLR3_INT_STREAM</code> is) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>skipOffTokenChannels</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> tokenStream, <code>ANTLR3_INT32</code> i) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>skipOffTokenChannelsReverse</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> tokenStream, <code>ANTLR3_INT32</code> i) </p>
 <p> static <code>ANTLR3_MARKER</code> <code>tindex</code> (<code>pANTLR3_INT_STREAM</code> is) </p>
-<p> static <code>pANTLR3_COMMON_TOKEN</code> <code>tokLT</code> (<code>pANTLR3_TOKEN_STREAM</code> ts, <code>ANTLR3_INT32</code> k)<br />
- <i>Get the ith token from the current position 1..n where k=1 is the first symbol of lookahead. </i><br />
+<p> static <code>pANTLR3_COMMON_TOKEN</code> <code>tokLT</code> (<code>pANTLR3_TOKEN_STREAM</code> ts, <code>ANTLR3_INT32</code> k)<br/>
+ <i>Get the ith token from the current position 1..n where k=1 is the first symbol of lookahead. </i><br/>
  static <code>pANTLR3_STRING</code> <code>toString</code> (<code>pANTLR3_TOKEN_STREAM</code> ts) </p>
 <p> static <code>pANTLR3_STRING</code> <code>toStringSS</code> (<code>pANTLR3_TOKEN_STREAM</code> ts, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop) </p>
 <p> static <code>pANTLR3_STRING</code> <code>toStringTT</code> (<code>pANTLR3_TOKEN_STREAM</code> ts, <code>pANTLR3_COMMON_TOKEN</code> start, <code>pANTLR3_COMMON_TOKEN</code> stop) </p>

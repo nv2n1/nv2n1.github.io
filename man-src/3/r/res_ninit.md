@@ -154,14 +154,14 @@ int res_send(const unsigned char *msg, int msglen,
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>res_ninit</code>(), <code>res_nclose</code>(), <code>res_nquery</code>(),<br />
+<td> <code>res_ninit</code>(), <code>res_nclose</code>(), <code>res_nquery</code>(),<br/>
  <code>res_nsearch</code>(), <code>res_nquerydomain</code>(), <code>res_nsend</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>res_nmkquery</code>(), <code>dn_comp</code>(),<br />
+<td> <code>res_nmkquery</code>(), <code>dn_comp</code>(),<br/>
  <code>dn_expand</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

@@ -14,7 +14,7 @@ description: "ql/experimental/commodities/pricingperiod.hpp – Pricing period."
 #include &lt;ql/experimental/commodities/quantity.hpp&gt;
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>PricingPeriod</code><br />
+<p>class <code>PricingPeriod</code><br/>
  <i>Time pricingperiod described by a number of a given time unit. </i></p>
 <h3>Typedefs</h3>
 <p>typedef std::vector&lt; boost::shared_ptr&lt; PricingPeriod &gt; &gt; <code>PricingPeriods</code></p>

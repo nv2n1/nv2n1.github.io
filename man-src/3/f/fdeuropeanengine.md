@@ -10,11 +10,11 @@ description: "ql/pricingengines/vanilla/fdeuropeanengine.hpp – Finite-differen
 
 <p> ql/pricingengines/vanilla/fdeuropeanengine.hpp &#8211; Finite-difference European engine. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instruments/oneassetoption.hpp&gt;<br />
- #include &lt;ql/pricingengines/vanilla/fdvanillaengine.hpp&gt;<br />
+<p> #include &lt;ql/instruments/oneassetoption.hpp&gt;<br/>
+ #include &lt;ql/pricingengines/vanilla/fdvanillaengine.hpp&gt;<br/>
  #include &lt;ql/math/sampledcurve.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>FDEuropeanEngine</code><br />
+<p> class <code>FDEuropeanEngine</code><br/>
  <i>Pricing engine for European options using finite-differences. </i></p>
 <h2>Detailed Description</h2>
 <p> Finite-difference European engine. </p>

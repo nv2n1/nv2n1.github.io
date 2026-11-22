@@ -14,8 +14,8 @@ int umad_register_oui(int portid, int mgmt_class, uint8_t rmpp_version, uint8_t 
 <h2>Description</h2>
 <p><code>umad_register_oui()</code> registers the specified class in vendor range 2, the specified <i>oui</i>, and whether RMPP is being used for the port specified by the <i>portid</i> handle. If <i>method_mask</i> array is provided, the caller is registered as a replier (server) for the methods having their corresponding bit on in the <i>method_mask</i>. If <i>method_mask</i> is NULL, the caller is registered as a MAD client, meaning that it can only receive replies on MADs that it sent (solicited MADs).</p>
 <h2>Return Value</h2>
-<p><code>umad_register()</code> returns non-negative agent id number on success, and a negative value on error as follows:<br />
-&nbsp;<wbr>-EINVAL invalid port handle or class is not in the vendor class 2 range<br />
+<p><code>umad_register()</code> returns non-negative agent id number on success, and a negative value on error as follows:<br/>
+&nbsp;<wbr>-EINVAL invalid port handle or class is not in the vendor class 2 range<br/>
 &nbsp;<wbr>-EPERM&nbsp;<wbr>&nbsp;<wbr>registration failed</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-umad_register/">umad_register</a></code>(3), <code><a href="/docs/linux/man/3-umad_unregister/">umad_unregister</a></code>(3)</p>

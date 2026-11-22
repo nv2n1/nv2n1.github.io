@@ -11,7 +11,7 @@ description: "dsdot.f –"
 <p> dsdot.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dsdot</code> (N, SX, INCX, SY, INCY)<br />
+<p> DOUBLE PRECISION function <code>dsdot</code> (N, SX, INCX, SY, INCY)<br/>
  <i></i><code>DSDOT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dsdot (integerN, real, dimension(*)SX, integerINCX, real, dimension(*)SY, integerINCY)</h3>

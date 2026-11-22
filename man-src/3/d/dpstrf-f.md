@@ -10,7 +10,7 @@ description: "dpstrf.f –"
 <p>dpstrf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dpstrf</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br />
+<p>subroutine <code>dpstrf</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br/>
  <i></i><code>DPSTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpstrf (characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, integer, dimension( n )PIV, integerRANK, double precisionTOL, double precision, dimension( 2*n )WORK, integerINFO)</h3>

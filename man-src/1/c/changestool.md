@@ -15,13 +15,13 @@ description: "changestool – verify, dump, modify, create or fix Debian .change
 <h2>DESCRIPTION</h2>
 <p> changestool is a little program to operate on Debian .changes files, as they are produced by <code><a href="/docs/linux/man/1-dpkg-genchanges/">dpkg-genchanges</a></code>(1) and used to feed built Debian packages into Debian repository managers like <code><a href="/docs/linux/man/1-reprepro/">reprepro</a></code>(1) or <code>dak</code>. </p>
 <h2>EXAMPLES</h2>
-<p> <code>changestool </code><i>bloat.changes</i> setdistribution <i>local</i><br />
+<p> <code>changestool </code><i>bloat.changes</i> setdistribution <i>local</i><br/>
  will modify the <code>Distribution:</code> header inside <i>bloat.changes</i> to say <i>local</i> instead of what was there before. </p>
-<p> <code>changestool </code><i>reprepro_1.2.0-1.local_sparc.changes</i> includeallsources<br />
+<p> <code>changestool </code><i>reprepro_1.2.0-1.local_sparc.changes</i> includeallsources<br/>
  will modify the given file to also list <code>.orig.tar.gz</code> it does not list because you forgot to build it with <code>dpkg-buildpackage -sa</code>. </p>
-<p> <code>changestool </code><i>blafasel_1.0_abacus.changes</i> updatechecksums<br />
+<p> <code>changestool </code><i>blafasel_1.0_abacus.changes</i> updatechecksums<br/>
  will update the md5sums to those of the files referenced by this file. (So one can do quick&#8217;n&#8217;dirty corrections to them before uploading to your private package repository) </p>
-<p> <code>changestool &#8211;create </code><i>test.changes</i> add <i>bla_1-1.dsc bla_1-1_abacus.deb</i><br />
+<p> <code>changestool &#8211;create </code><i>test.changes</i> add <i>bla_1-1.dsc bla_1-1_abacus.deb</i><br/>
  will add the specified files (format detected by filename, use <code>adddeb</code> or <code>adddsc</code> if you know it). If the file <i>test.changes</i> does not exist yet, a minimal one will be generated. Though that might be too minimal for most direct uses. </p>
 <h2>GLOBAL OPTIONS</h2>
 <p> Options can be specified before the command. Each affects a different subset of commands and is ignored by other commands.</p>
@@ -72,5 +72,5 @@ description: "changestool – verify, dump, modify, create or fix Debian .change
 <h2>REPORTING BUGS</h2>
 <p> Report bugs or wishlist requests the Debian BTS (e.g. by using <code>reportbug reperepro</code>) or directly to &lt;brlink [at] debian.org&gt;. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2006-2009 Bernhard R. Link<br />
+<p> Copyright &#169; 2006-2009 Bernhard R. Link<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

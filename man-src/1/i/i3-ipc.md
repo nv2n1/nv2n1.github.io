@@ -16,20 +16,20 @@ description: "i3-ipc — inter-process communication with i3"
 <dl>
 <dt><code>0 (COMMAND)</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>The payload of the message is a command for i3<br />
-&nbsp;<wbr>&nbsp;<wbr>(like the commands you can bind to keys in the configuration file)<br />
-&nbsp;<wbr>&nbsp;<wbr>The command will be executed directly after receiving it.<br />
+&nbsp;<wbr>&nbsp;<wbr>The payload of the message is a command for i3<br/>
+&nbsp;<wbr>&nbsp;<wbr>(like the commands you can bind to keys in the configuration file)<br/>
+&nbsp;<wbr>&nbsp;<wbr>The command will be executed directly after receiving it.<br/>
 &nbsp;<wbr>&nbsp;<wbr>The reply will be always&nbsp;<wbr>{&quot;succes&quot;:true}&nbsp;<wbr>for now.</dd>
 <dt><code>1 (GET_WORKSPACES)</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>Gets the current workspaces.<br />
+&nbsp;<wbr>&nbsp;<wbr>Gets the current workspaces.<br/>
 &nbsp;<wbr>&nbsp;<wbr>The reply will be a JSON-encoded list of workspaces.</dd>
 <dt><code>2 (SUBSCRIBE)</code></dt>
 <dd>
 &nbsp;<wbr>&nbsp;<wbr>Subscribes your connection to the&nbsp;<wbr><code>workspace</code>&nbsp;<wbr>event.</dd>
 <dt><code>3 (GET_OUTPUTS)</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>Gets the current outputs.<br />
+&nbsp;<wbr>&nbsp;<wbr>Gets the current outputs.<br/>
 &nbsp;<wbr>&nbsp;<wbr>The reply will be a JSON-encoded list of outputs.</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>i3-ipc</code>&#8216;s default mode of operation is to send the command (type 0) specified on the command line. These options can be used to change this behavior:</p>

@@ -405,14 +405,14 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux httpd policy is very flexible allowing users to setup their httpd processes in as secure a method as possible. </p>
 <p> EQUIVALENCE DIRECTORIES</code> </p>
 <p> httpd policy stores data with multiple different file context types under the /var/lib/php directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/lib/php /srv/php</code><br />
+<p> <code>semanage fcontext -a -e /var/lib/php /srv/php</code><br/>
  <code>restorecon -R -v /srv/php</code> </p>
 <p> httpd policy stores data with multiple different file context types under the /var/www directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/www /srv/www</code><br />
+<p> <code>semanage fcontext -a -e /var/www /srv/www</code><br/>
  <code>restorecon -R -v /srv/www</code> </p>
 <p> <code>STANDARD FILE CONTEXT</code> </p>
 <p> SELinux defines the file context types for the httpd, if you wanted to store files with these types in a diffent paths, you need to execute the semanage command to sepecify alternate labeling and then use restorecon to put the labels on disk. </p>
-<p> <code>semanage fcontext -a -t httpd_var_run_t &#8216;/srv/myhttpd_content(/.*)?&#8217;</code><br />
+<p> <code>semanage fcontext -a -t httpd_var_run_t &#8216;/srv/myhttpd_content(/.*)?&#8217;</code><br/>
  <code>restorecon -R -v /srv/myhttpd_content</code> </p>
 <p> Note: SELinux often uses regular expressions to specify labels that match multiple files. </p>
 <p> <i>The following file types are defined for httpd:</i> </p>
@@ -542,13 +542,13 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <dl>
 <dt>Allow httpd servers to read the /var/httpd directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_t &quot;/var/httpd(/.*)?&quot;</code><br />
+<p> <code>semanage fcontext -a -t public_content_t &quot;/var/httpd(/.*)?&quot;</code><br/>
  <code>restorecon -F -R -v /var/httpd</code></p>
 <dl>
 <dt>Allow httpd servers to read and write /var/httpd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the httpd_anon_write boolean.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/httpd/incoming(/.*)?&quot;</code><br />
- <code>restorecon -F -R -v /var/httpd/incoming</code><br />
+<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/httpd/incoming(/.*)?&quot;</code><br/>
+ <code>restorecon -F -R -v /var/httpd/incoming</code><br/>
  <code>setsebool -P httpd_anon_write 1</code> </p>
 <p> If you want to allow Apache to modify public files used for public file transfer services. Directories/Files must be labeled public_content_rw_t., you must turn on the httpd_anon_write boolean. </p>
 <p> <code>setsebool -P httpd_anon_write 1</code></p>

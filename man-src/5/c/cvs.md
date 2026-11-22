@@ -49,7 +49,7 @@ description: "cvs – Concurrent Versions System support files"
 <dd>The `modules&#8217; file records your definitions of names for collections of source code. <code>cvs</code> will use these definitions if you use <code>cvs</code> to check in a file with the right format to `<code>$CVSROOT/CVSROOT/modules,v</code>&#8216;. </dd>
 <p> The `modules&#8217; file may contain blank lines and comments (lines beginning with `<code>#</code>&#8216;) as well as module definitions. Long lines can be continued on the next line by specifying a backslash (&#8220;\&#8221;) as the last character on the line. </p>
 <p> A <i>module definition</i> is a single line of the `modules&#8217; file, in either of two formats. In both cases, <i>mname</i> represents the symbolic module name, and the remainder of the line is its definition. </p>
-<p> <i>mname</i> <code>-a</code> <i>aliases</i>&#8230;<br />
+<p> <i>mname</i> <code>-a</code> <i>aliases</i>&#8230;<br/>
  This represents the simplest way of defining a module <i>mname</i>. The `<code>-a</code>&#8216; flags the definition as a simple alias: <code>cvs</code> will treat any use of <i>mname</i> (as a command argument) as if the list of names <i>aliases</i> had been specified instead. <i>aliases</i> may contain either other module names or paths. When you use paths in <i>aliases</i>, `<code>cvs checkout</code>&#8216; creates all intermediate directories in the working directory, just as if the path had been specified explicitly in the <code>cvs</code> arguments. </p>
 <pre><i>mname</i> [ <i>options</i> ] <i>dir</i> [ <i>files</i>... ] [ <code>&amp;</code><i>module</i>... ]</pre>
 <p>In the simplest case, this form of module definition reduces to `<i>mname dir</i>&#8216;. This defines all the files in directory <i>dir</i> as module <i>mname</i>. <i>dir</i> is a relative path (from <code>$CVSROOT</code>) to a directory of source in one of the source repositories. In this case, on <code>checkout</code>, a single directory called <i>mname</i> is created as a working directory; no intermediate directory levels are used by default, even if <i>dir</i> was a path involving several directory levels. </p>
@@ -57,10 +57,10 @@ description: "cvs – Concurrent Versions System support files"
 <pre><code>m4test unsupported/gnu/m4 foreach.m4 forloop.m4
 </code></pre>
 <p>With this definition, executing `<code>cvs checkout m4test</code>&#8216; will create a single working directory `m4test&#8217; containing the two files listed, which both come from a common directory several levels deep in the <code>cvs</code> source repository. </p>
-<p> A module definition can refer to other modules by including `<code>&amp;</code><i>module</i>&#8216; in its definition. <code>checkout</code> creates a subdirectory for each such <i>module</i>, in your working directory.<br />
+<p> A module definition can refer to other modules by including `<code>&amp;</code><i>module</i>&#8216; in its definition. <code>checkout</code> creates a subdirectory for each such <i>module</i>, in your working directory.<br/>
  <i>New in </i><code>cvs</code> 1.3; avoid this feature if sharing module definitions with older versions of <code>cvs</code>. </p>
 <p> Finally, you can use one or more of the following <i>options</i> in module definitions: </p>
-<p> `<code>-d</code> <i>name</i>&#8216;, to name the working directory something other than the module name.<br />
+<p> `<code>-d</code> <i>name</i>&#8216;, to name the working directory something other than the module name.<br/>
  <i>New in </i><code>cvs</code> 1.3; avoid this feature if sharing module definitions with older versions of <code>cvs</code>. </p>
 <p> `<code>-i</code> <i>prog</i>&#8216; allows you to specify a program <i>prog</i> to run whenever files in a module are committed. <i>prog</i> runs with a single argument, the full pathname of the affected directory in a source repository. The `commitinfo&#8217;, `loginfo&#8217;, and `editinfo&#8217; files provide other ways to call a program on <code>commit</code>. </p>
 <p> `<code>-o</code> <i>prog</i>&#8216; allows you to specify a program <i>prog</i> to run whenever files in a module are checked out. <i>prog</i> runs with a single argument, the module name. </p>

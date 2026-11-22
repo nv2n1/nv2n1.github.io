@@ -10,19 +10,19 @@ description: "setpgid, getpgid, setpgrp, getpgrp – set/get process group"
 
 <p> setpgid, getpgid, setpgrp, getpgrp &#8211; set/get process group </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;unistd.h&gt;</code> </p>
-<p> <code>int setpgid(pid_t </code><i>pid</i><code>, pid_t </code><i>pgid</i><code>);</code><br />
+<p> <code>int setpgid(pid_t </code><i>pid</i><code>, pid_t </code><i>pgid</i><code>);</code><br/>
  <code>pid_t getpgid(pid_t </code><i>pid</i><code>);</code> </p>
-<p> <code>pid_t getpgrp(void);</code> /* POSIX.1 version */<br />
+<p> <code>pid_t getpgrp(void);</code> /* POSIX.1 version */<br/>
  <code>pid_t getpgrp(pid_t </code><i>pid</i><code>);</code> /* BSD version */ </p>
-<p> <code>int setpgrp(void);</code> /* System V version */<br />
+<p> <code>int setpgrp(void);</code> /* System V version */<br/>
  <code>int setpgrp(pid_t </code><i>pid</i><code>, pid_t </code><i>pgid</i><code>);</code> /* BSD version */ </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>getpgid</code>():</p>
 <dl>
 <dt>
-</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd></dl>
 <p> <code>setpgrp</code>() (POSIX.1): </p>
 <pre><code>

@@ -15,9 +15,9 @@ modules - shorewall6 file
 
 <h2>Description</h2>
 
-<dd>These files specify which kernel modules shorewall6 will load before trying to determine your ip6tables/kernel's capabilities. The modules file is used when LOAD_HELPERS_ONLY=No in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5); the helpers file is used when LOAD_HELPERS_ONLY=Yes. Each record in the files has the following format:
-</dd><dl><dt> <b>loadmodule</b> <i>modulename</i> [<i>moduleoption</i>...]</dt></dl><dd>The <i>modulename</i> names a kernel module (without suffix). shorewall6 will search for modules based on your MODULESDIR and MODULE_SUFFIX settings in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5). The <i>moduleoption</i>s are passed to modprobe (if installed) or to insmod. The /usr/share/shorewall6/modules file contains a large number of modules. Users are encouraged to copy the file to /etc/shorewall6/modules and modify the copy to load only the modules required or use LOAD_HELPERS_ONLY=Yes..if n
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+<dd>These files specify which kernel modules shorewall6 will load before trying to determine your ip6tables/kernel's capabilities. The modules file is used when LOAD_HELPERS_ONLY=No in m[blue]<b>shorewall6.conf</b>m[][1](5); the helpers file is used when LOAD_HELPERS_ONLY=Yes. Each record in the files has the following format:
+</dd><dl><dt> <b>loadmodule</b> <i>modulename</i> [<i>moduleoption</i>...]</dt></dl><dd>The <i>modulename</i> names a kernel module (without suffix). shorewall6 will search for modules based on your MODULESDIR and MODULE_SUFFIX settings in m[blue]<b>shorewall6.conf</b>m[][1](5). The <i>moduleoption</i>s are passed to modprobe (if installed) or to insmod. The /usr/share/shorewall6/modules file contains a large number of modules. Users are encouraged to copy the file to /etc/shorewall6/modules and modify the copy to load only the modules required or use LOAD_HELPERS_ONLY=Yes..if n
+</dd><dl><dd> <b>Note</b>  
  If you build monolithic kernels and have not installed module-init-tools, then create an empty /etc/shorewall6/modules file; that will prevent shorewall6 from trying to load modules at all. 
 <h2>Example</h2>
 loadmodule ip_conntrack_ftp ports=21,221

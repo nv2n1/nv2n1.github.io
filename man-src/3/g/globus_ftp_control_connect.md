@@ -11,35 +11,35 @@ description: "GridFTP Control Client –"
 <p> GridFTP Control Client &#8211; </p>
 <p> Control Client.</p>
 <h3>Functions</h3>
-<p> globus_result_t <code>globus_ftp_control_handle_init</code> (globus_ftp_control_handle_t *handle)<br />
- <i>Initialize a globus ftp handle. </i><br />
- globus_result_t <code>globus_ftp_control_handle_destroy</code> (globus_ftp_control_handle_t *handle)<br />
- <i>Destroy a globus ftp handle. </i><br />
- globus_result_t <code>globus_ftp_control_connect</code> (globus_ftp_control_handle_t *handle, char *host, unsigned short port, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg)<br />
- <i>Create a new control connection to an FTP server. </i><br />
- globus_result_t <code>globus_ftp_control_response_destroy</code> (globus_ftp_control_response_t *response)<br />
- <i>Free the memory associated with a response. </i><br />
- globus_result_t <code>globus_ftp_control_response_copy</code> (globus_ftp_control_response_t *src, globus_ftp_control_response_t *dest)<br />
- <i>Copy a response structure. </i><br />
- globus_result_t <code>globus_ftp_control_authenticate</code> (globus_ftp_control_handle_t *handle, <code>globus_ftp_control_auth_info_t</code> *auth_info, globus_bool_t use_auth, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg)<br />
- <i>Authenticate the user to the FTP server. </i><br />
- globus_result_t <code>globus_ftp_control_authenticate_ex</code> (globus_ftp_control_handle_t *handle, <code>globus_ftp_control_auth_info_t</code> *auth_info, globus_bool_t use_auth, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg)<br />
- <i>Authenticate the user to the FTP server. </i><br />
- globus_result_t <code>globus_ftp_control_send_command</code> (globus_ftp_control_handle_t *handle, const char *cmdspec, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg,&#8230;)<br />
- <i>Send an FTP protocol command. </i><br />
- globus_result_t <code>globus_ftp_control_abort</code> (globus_ftp_control_handle_t *handle, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg)<br />
- <i>Send a GridFTP ABORT. </i><br />
- globus_result_t <code>globus_ftp_control_quit</code> (globus_ftp_control_handle_t *handle, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg)<br />
- <i>Send a GridFTP QUIT. </i><br />
- globus_result_t <code>globus_ftp_control_force_close</code> (globus_ftp_control_handle_t *handle, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg)<br />
- <i>Force a control connection to close. </i><br />
- globus_result_t <code>globus_ftp_control_auth_info_init</code> (<code>globus_ftp_control_auth_info_t</code> *auth_info, gss_cred_id_t credential_handle, globus_bool_t encrypt, char *user, char *password, char *account, char *subject)<br />
- <i>Initialize authentication information. </i><br />
- int <code>globus_ftp_control_auth_info_compare</code> (<code>globus_ftp_control_auth_info_t</code> *auth_info_1, <code>globus_ftp_control_auth_info_t</code> *auth_info_2)<br />
- <i>Compare authentication information. </i><br />
- globus_result_t <code>globus_ftp_control_client_get_connection_info_ex</code> (globus_ftp_control_handle_t *handle, globus_ftp_control_host_port_t *local_info, globus_ftp_control_host_port_t *remote_info)<br />
- <i>Not documented yet. </i><br />
- globus_result_t <code>globus_ftp_control_ipv6_allow</code> (globus_ftp_control_handle_t *handle, globus_bool_t allow)<br />
+<p> globus_result_t <code>globus_ftp_control_handle_init</code> (globus_ftp_control_handle_t *handle)<br/>
+ <i>Initialize a globus ftp handle. </i><br/>
+ globus_result_t <code>globus_ftp_control_handle_destroy</code> (globus_ftp_control_handle_t *handle)<br/>
+ <i>Destroy a globus ftp handle. </i><br/>
+ globus_result_t <code>globus_ftp_control_connect</code> (globus_ftp_control_handle_t *handle, char *host, unsigned short port, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg)<br/>
+ <i>Create a new control connection to an FTP server. </i><br/>
+ globus_result_t <code>globus_ftp_control_response_destroy</code> (globus_ftp_control_response_t *response)<br/>
+ <i>Free the memory associated with a response. </i><br/>
+ globus_result_t <code>globus_ftp_control_response_copy</code> (globus_ftp_control_response_t *src, globus_ftp_control_response_t *dest)<br/>
+ <i>Copy a response structure. </i><br/>
+ globus_result_t <code>globus_ftp_control_authenticate</code> (globus_ftp_control_handle_t *handle, <code>globus_ftp_control_auth_info_t</code> *auth_info, globus_bool_t use_auth, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg)<br/>
+ <i>Authenticate the user to the FTP server. </i><br/>
+ globus_result_t <code>globus_ftp_control_authenticate_ex</code> (globus_ftp_control_handle_t *handle, <code>globus_ftp_control_auth_info_t</code> *auth_info, globus_bool_t use_auth, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg)<br/>
+ <i>Authenticate the user to the FTP server. </i><br/>
+ globus_result_t <code>globus_ftp_control_send_command</code> (globus_ftp_control_handle_t *handle, const char *cmdspec, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg,&#8230;)<br/>
+ <i>Send an FTP protocol command. </i><br/>
+ globus_result_t <code>globus_ftp_control_abort</code> (globus_ftp_control_handle_t *handle, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg)<br/>
+ <i>Send a GridFTP ABORT. </i><br/>
+ globus_result_t <code>globus_ftp_control_quit</code> (globus_ftp_control_handle_t *handle, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg)<br/>
+ <i>Send a GridFTP QUIT. </i><br/>
+ globus_result_t <code>globus_ftp_control_force_close</code> (globus_ftp_control_handle_t *handle, <code>globus_ftp_control_response_callback_t</code> callback, void *callback_arg)<br/>
+ <i>Force a control connection to close. </i><br/>
+ globus_result_t <code>globus_ftp_control_auth_info_init</code> (<code>globus_ftp_control_auth_info_t</code> *auth_info, gss_cred_id_t credential_handle, globus_bool_t encrypt, char *user, char *password, char *account, char *subject)<br/>
+ <i>Initialize authentication information. </i><br/>
+ int <code>globus_ftp_control_auth_info_compare</code> (<code>globus_ftp_control_auth_info_t</code> *auth_info_1, <code>globus_ftp_control_auth_info_t</code> *auth_info_2)<br/>
+ <i>Compare authentication information. </i><br/>
+ globus_result_t <code>globus_ftp_control_client_get_connection_info_ex</code> (globus_ftp_control_handle_t *handle, globus_ftp_control_host_port_t *local_info, globus_ftp_control_host_port_t *remote_info)<br/>
+ <i>Not documented yet. </i><br/>
+ globus_result_t <code>globus_ftp_control_ipv6_allow</code> (globus_ftp_control_handle_t *handle, globus_bool_t allow)<br/>
  <i>Not documented yet. </i></p>
 <h2>Detailed Description</h2>
 <p> Control Client. </p>
@@ -51,8 +51,8 @@ description: "GridFTP Control Client –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A pointer to a GridFTP control handle. The ABORT command is issued to the server over the control channel associated with this handle.<br />
- <i>callback</i> The function to be called once the authentication process is complete or when an error occurs.<br />
+</dt><dd> <i>handle</i> A pointer to a GridFTP control handle. The ABORT command is issued to the server over the control channel associated with this handle.<br/>
+ <i>callback</i> The function to be called once the authentication process is complete or when an error occurs.<br/>
  <i>callback_arg</i> User supplied argument to the callback function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -91,7 +91,7 @@ description: "GridFTP Control Client –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>auth_info_1</i> The first authentication structure<br />
+</dt><dd> <i>auth_info_1</i> The first authentication structure<br/>
  <i>auth_info_2</i> The second authentication structure</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -106,12 +106,12 @@ description: "GridFTP Control Client –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>auth_info</i> The authentication structure to initialize.<br />
- <i>credential_handle</i> The credential to use for authentication. This may be GSS_C_NO_CREDENTIAL to use the user&#8217;s default credential.<br />
- <i>encrypt</i> Boolean whether or not to encrypt the control channel for this handle.<br />
- <i>user</i> The user name<br />
- <i>password</i> The password for the user name<br />
- <i>account</i> The account for the user name/password<br />
+</dt><dd> <i>auth_info</i> The authentication structure to initialize.<br/>
+ <i>credential_handle</i> The credential to use for authentication. This may be GSS_C_NO_CREDENTIAL to use the user&#8217;s default credential.<br/>
+ <i>encrypt</i> Boolean whether or not to encrypt the control channel for this handle.<br/>
+ <i>user</i> The user name<br/>
+ <i>password</i> The password for the user name<br/>
+ <i>account</i> The account for the user name/password<br/>
  <i>subject</i> The GSSAPI subject name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -136,7 +136,7 @@ description: "GridFTP Control Client –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A pointer to a unauthenticated GridFTP control handle. In the case of GSS authentication the GSS security context is stored in this structure.<br />
+</dt><dd> <i>handle</i> A pointer to a unauthenticated GridFTP control handle. In the case of GSS authentication the GSS security context is stored in this structure.<br/>
  <i>auth_info</i> This structure is used to pass the following information:</dd>
 <dl>
 <dt>&bull;</dt>
@@ -147,8 +147,8 @@ description: "GridFTP Control Client –"
 <dd> account This parameter is optional. If not used it should be set to GLOBUS_NULL. It might be needed by firewalls.</dd>
 <dt>&bull;</dt>
 <dd> auth_gssapi_subject The GSSAPI subject name of the server you are connecting to. If this is GLOBUS_NULL, and the gss_auth parameter is set to GLOBUS_TRUE, then the name will default to the host name.</dd></dl>
-<p> <i>use_auth</i> If set to GLOBUS_TRUE the above argument indicates that GSS authentication should be used, otherwise cleartext user/password authentication is used.<br />
- <i>callback</i> The function to be called once the authentication process is complete or when an error occurs.<br />
+<p> <i>use_auth</i> If set to GLOBUS_TRUE the above argument indicates that GSS authentication should be used, otherwise cleartext user/password authentication is used.<br/>
+ <i>callback</i> The function to be called once the authentication process is complete or when an error occurs.<br/>
  <i>callback_arg</i> User supplied argument to the callback function</dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -216,7 +216,7 @@ description: "GridFTP Control Client –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A pointer to a unauthenticated GridFTP control handle. In the case of GSS authentication the GSS security context is stored in this structure.<br />
+</dt><dd> <i>handle</i> A pointer to a unauthenticated GridFTP control handle. In the case of GSS authentication the GSS security context is stored in this structure.<br/>
  <i>auth_info</i> This structure is used to pass the following information:</dd>
 <dl>
 <dt>&bull;</dt>
@@ -227,8 +227,8 @@ description: "GridFTP Control Client –"
 <dd> account This parameter is optional. If not used it should be set to GLOBUS_NULL. It might be needed by firewalls.</dd>
 <dt>&bull;</dt>
 <dd> auth_gssapi_subject The GSSAPI subject name of the server you are connecting to. If this is GLOBUS_NULL, and the gss_auth parameter is set to GLOBUS_TRUE, then the name will default to the host name.</dd></dl>
-<p> <i>use_auth</i> If set to GLOBUS_TRUE the above argument indicates that GSS authentication should be used, otherwise cleartext user/password authentication is used.<br />
- <i>callback</i> The function to be called once the authentication process is complete or when an error occurs.<br />
+<p> <i>use_auth</i> If set to GLOBUS_TRUE the above argument indicates that GSS authentication should be used, otherwise cleartext user/password authentication is used.<br/>
+ <i>callback</i> The function to be called once the authentication process is complete or when an error occurs.<br/>
  <i>callback_arg</i> User supplied argument to the callback function</dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -286,10 +286,10 @@ description: "GridFTP Control Client –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A pointer to a initialized FTP control handle. This handle will be used for all subsequent FTP control operations.<br />
- <i>host</i> The hostname of the FTP server.<br />
- <i>port</i> The TCP port number of the FTP server.<br />
- <i>callback</i> A function to be called once the connection to the server is established, and a response has been read.<br />
+</dt><dd> <i>handle</i> A pointer to a initialized FTP control handle. This handle will be used for all subsequent FTP control operations.<br/>
+ <i>host</i> The hostname of the FTP server.<br/>
+ <i>port</i> The TCP port number of the FTP server.<br/>
+ <i>callback</i> A function to be called once the connection to the server is established, and a response has been read.<br/>
  <i>callback_arg</i> Parameter to the callback function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -347,8 +347,8 @@ description: "GridFTP Control Client –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A pointer to a GridFTP control handle. The quit message is issued to the server over the control channel associated with this handle.<br />
- <i>callback</i> The function to be called once the authentication process is complete or when an error occurs.<br />
+</dt><dd> <i>handle</i> A pointer to a GridFTP control handle. The quit message is issued to the server over the control channel associated with this handle.<br/>
+ <i>callback</i> The function to be called once the authentication process is complete or when an error occurs.<br/>
  <i>callback_arg</i> User supplied argument to the callback function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -412,8 +412,8 @@ description: "GridFTP Control Client –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A pointer to a GridFTP control handle. The quit message is issued to the server over the control channel associated with this handle.<br />
- <i>callback</i> The function to be called once the authentication process is complete or when an error occurs.<br />
+</dt><dd> <i>handle</i> A pointer to a GridFTP control handle. The quit message is issued to the server over the control channel associated with this handle.<br/>
+ <i>callback</i> The function to be called once the authentication process is complete or when an error occurs.<br/>
  <i>callback_arg</i> User supplied argument to the callback function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -452,7 +452,7 @@ description: "GridFTP Control Client –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>src</i> This parameter indicates the response structure to copy<br />
+</dt><dd> <i>src</i> This parameter indicates the response structure to copy<br/>
  <i>dest</i> This parameter specifies the target response structure</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -481,10 +481,10 @@ description: "GridFTP Control Client –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A pointer to a GridFTP control handle. The command described by the cmdspec is issued to the server over the control channel associated with this handle.<br />
- <i>cmdspec</i> A printf-style format string containing the text of the command to send to the server. The optional parameters to the format string are passed after the callback_arg in the function invocation.<br />
- <i>callback</i> The function to be called once the authentication process is complete or when an error occurs.<br />
- <i>callback_arg</i> User supplied argument to the callback function<br />
+</dt><dd> <i>handle</i> A pointer to a GridFTP control handle. The command described by the cmdspec is issued to the server over the control channel associated with this handle.<br/>
+ <i>cmdspec</i> A printf-style format string containing the text of the command to send to the server. The optional parameters to the format string are passed after the callback_arg in the function invocation.<br/>
+ <i>callback</i> The function to be called once the authentication process is complete or when an error occurs.<br/>
+ <i>callback_arg</i> User supplied argument to the callback function<br/>
  <i>&#8230;</i> Parameters which will be substituted into the % escapes in the cmdspec string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

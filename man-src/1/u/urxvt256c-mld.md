@@ -14,7 +14,7 @@ description: "urxvt256c-mld – urxvt256c-ml terminal daemon"
 <p> <code>urxvt256c-mld</code> -q -o -f # for .xsession use</p>
 <h2>DESCRIPTION</h2>
 <p> This manpage describes the urxvt256c-mld daemon, which is the same vt102 terminal emulator as urxvt256c-ml, but runs as a daemon that can open multiple terminal windows within the same process. </p>
-<p> You can run it from your X startup scripts, for example, although it is not dependent on a working <font SIZE="-1">DISPLAY</font> and, in fact, can open windows on multiple X displays on the same time. </p>
+<p> You can run it from your X startup scripts, for example, although it is not dependent on a working DISPLAY and, in fact, can open windows on multiple X displays on the same time. </p>
 <p> Advantages of running a urxvt256c-ml daemon include faster creation time for terminal windows and a lot of saved memory. </p>
 <p> The disadvantage is a possible impact on stability &#8211; if the main program crashes, all processes in the terminal windows are terminated. For example, as there is no way to cleanly react to abnormal connection closes, <tt>&quot;xkill&quot;</tt> and server resets/restarts will kill the <code>urxvt256c-mld</code> instance including all windows it has opened.</p>
 <h2>OPTIONS</h2>
@@ -28,8 +28,8 @@ description: "urxvt256c-mld – urxvt256c-ml terminal daemon"
 <dt><code>-f</code>, <code>&#8211;fork</code></dt>
 <dd> This makes <code>urxvt256c-mld</code> fork after it has bound itself to its control socket.</dd>
 <dt><code>-m</code>, <code>&#8211;mlock</code></dt>
-<dd> This makes <code>urxvt256c-mld</code> call <i><a href="/docs/linux/man/2-mlockall/">mlockall</a></i>(2) on itself. This locks <code>urxvt256c-mld</code> in <font SIZE="-1">RAM</font> and prevents it from being swapped out to disk, at the cost of consuming a lot more memory on most operating systems. </dd>
-<p> Note: In order to use this feature, your system administrator must have set your user&#8217;s <font SIZE="-1">RLIMIT_MEMLOCK</font> to a size greater than or equal to the size of the <code>urxvt256c-mld</code> binary (or to unlimited). See <i>/etc/security/limits.conf</i>. </p>
+<dd> This makes <code>urxvt256c-mld</code> call <i><a href="/docs/linux/man/2-mlockall/">mlockall</a></i>(2) on itself. This locks <code>urxvt256c-mld</code> in RAM and prevents it from being swapped out to disk, at the cost of consuming a lot more memory on most operating systems. </dd>
+<p> Note: In order to use this feature, your system administrator must have set your user&#8217;s RLIMIT_MEMLOCK to a size greater than or equal to the size of the <code>urxvt256c-mld</code> binary (or to unlimited). See <i>/etc/security/limits.conf</i>. </p>
 <p> Note 2: There is a known bug in glibc (possibly fixed in 2.8 and later versions) where calloc returns non-zeroed memory when mlockall is in effect. If you experience crashes or other odd behaviour while using &#8211;mlock, try it without it.</p>
 <dt><code>-e</code>, <code>&#8211;eval</code> <i>perlstring</i></dt>
 <dd> Evaluate the given perl code after basic initialisation (requires perl support to be enabled when compiling <code>urxvt256c-mld</code>). </dd>
@@ -43,9 +43,9 @@ description: "urxvt256c-mld – urxvt256c-ml terminal daemon"
 <p> This waits till the control socket is available, opens the current display and forks into the background. When you log-out, the server is reset and <code>urxvt256c-mld</code> is killed.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>RXVT_SOCKET</code></font></dt>
-<dd> Both <code>urxvt256c-mlc</code> and <code>urxvt256c-mld</code> use the environment variable <i></i><font SIZE="-1"><i>RXVT_SOCKET</i></font><i></i> to create a listening socket and to contact the urxvt256c-mld, respectively. If the variable is missing then <i></i>$HOME<i>/.urxvt/urxvtd-&lt;nodename&gt;</i> is used.</dd>
-<dt><font SIZE="-1"><code>DISPLAY</code></font></dt>
+<dt><code>RXVT_SOCKET</code></dt>
+<dd> Both <code>urxvt256c-mlc</code> and <code>urxvt256c-mld</code> use the environment variable <i></i><i>RXVT_SOCKET</i><i></i> to create a listening socket and to contact the urxvt256c-mld, respectively. If the variable is missing then <i></i>$HOME<i>/.urxvt/urxvtd-&lt;nodename&gt;</i> is used.</dd>
+<dt><code>DISPLAY</code></dt>
 <dd> Only used when the <tt>&quot;--opendisplay&quot;</tt> option is specified. Must contain a valid X display name.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-urxvt256c-ml/">urxvt256c-ml</a>(7), <a href="/docs/linux/man/1-urxvt256c-mlc/">urxvt256c-mlc</a>(1) </p>

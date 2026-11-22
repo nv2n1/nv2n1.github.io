@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-psdriver/"
 description: "PS driver – driver to create PostScript files (drivers)"
 ---
 
-<p> <i></i><code> PS driver</code> &#8211; driver to create PostScript files<br />
+<p> <i></i><code> PS driver</code> &#8211; driver to create PostScript files<br/>
  <i>(drivers)</i></p>
 <h2>DESCRIPTION</h2>
 <p> The PS driver generates a PostScript file from GRASS display commands. The driver is started as &#8216;pseudo&#8217; monitor (PS file instead) and when stopped, all output from previously used display commands are written to the PostScript file.</p>
@@ -32,10 +32,10 @@ description: "PS driver – driver to create PostScript files (drivers)"
 <p> GRASS_PS_TRAILER </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>if&nbsp;<wbr>&quot;FALSE&quot;, no trailer section is generated.</p>
 <h3>Example</h3>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>d.mon start=PS<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>d.mon start=PS<br/>
  Display raster map and vector polygons </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>d.rast&nbsp;<wbr><i>somerastermap</i> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>d.vect map=<i>somevectormap</i>&nbsp;<wbr>color=red<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>d.vect map=<i>somevectormap</i>&nbsp;<wbr>color=red<br/>
  Stop the driver subsequently. This will write a file named <i>map.ps</i> to be created in your current directory: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>d.mon stop=PS </p>
 <h2>NOTES</h2>
@@ -43,7 +43,7 @@ description: "PS driver – driver to create PostScript files (drivers)"
 <p> GRASS_TRUECOLOR requires either PostScript level 2 or level 1 plus the colorimage and setrgbcolor operators (this is the case for colour printers which pre-date level 2 PostScript). </p>
 <p> Only masked images (d.rast -o, d.rgb -o, d.his -n) require PostScript level 3.</p>
 <h2>SEE ALSO</h2>
-<p> <i> HTML map driver, PNG driver, XDRIVER<br />
+<p> <i> HTML map driver, PNG driver, XDRIVER<br/>
  d.frame, d.out.file, d.mon, d.rast, d.vect </i></p>
 <h2>AUTHOR</h2>
 <p> Glynn Clements, 2007 </p>

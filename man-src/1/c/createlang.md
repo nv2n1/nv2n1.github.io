@@ -19,7 +19,7 @@ description: "createlang – install a PostgreSQL procedural language"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Caution</code> </font> </dd>
+  <code>Caution</code>  </dd>
 <p> createlang is deprecated and may be removed in a future PostgreSQL release. Direct use of the <code>CREATE EXTENSION</code> command is recommended instead. </p>
 </dl>
 <h2>OPTIONS</h2>

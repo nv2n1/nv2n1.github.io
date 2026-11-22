@@ -19,8 +19,8 @@ description: "xt – tc iptables action"
 <h2>Examples</h2>
 <p>The following will attach a <code>u32</code> filter to the <code>ingress</code> qdisc matching ICMP replies and using the <code>xt</code> action to make the kernel yell &#8216;PONG&#8217; each time: </p>
 <dl>
-<dd>tc qdisc add dev eth0 ingress tc filter add dev eth0 parent ffff: proto ip u32 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>match ip protocol 1 0xff \<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>match ip icmp_type 0 0xff \<br />
+<dd>tc qdisc add dev eth0 ingress tc filter add dev eth0 parent ffff: proto ip u32 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>match ip protocol 1 0xff \<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>match ip icmp_type 0 0xff \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action xt -j LOG &#8211;log-prefix PONG
 </dd></dl>
 <h2>See Also</h2>

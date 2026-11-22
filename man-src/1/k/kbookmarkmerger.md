@@ -19,7 +19,7 @@ description: "kbookmarkmerger – A program for merging a given set of bookmarks
 <p> This mechanism is useful for system administrators who want to propagate a bookmark pointing to a certain document (for instance, important notes about the system) to all users. Distributors might find it useful as well, for instance by augmenting the software packages they supply with bookmark files which <code>kbookmarkmerger</code> merges into the user&#8217;s bookmark list when the package is installed. That way, documentation shipped with a software package is easily and visibly accessible right after the package has been installed. </p>
 <p> The only parameter required by <code>kbookmarkmerger</code> is the name of a directory which shall be scanned for bookmark files. All files in the given directory will be considered for being merged into the user&#8217;s setup. The files in the given directory should be valid XBEL files.</p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code>Konqueror manual</code>m[]<font SIZE="-2">[1]</font></p>
+<p> m[blue]<code>Konqueror manual</code>m[][1]</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
@@ -32,7 +32,7 @@ joe [at] hal9000:~&gt; <code>kbookmarkmerger </code><code>/usr/local/extra-bookm
 <h2>STANDARDS</h2>
 <dl>
 <dt>
-</dt><dd> m[blue]<code>XBEL specification</code>m[]<font SIZE="-2">[2]</font></dd></dl>
+</dt><dd> m[blue]<code>XBEL specification</code>m[][2]</dd></dl>
 <h2>RESTRICTIONS</h2>
 <p> When determining whether a given bookmark file has been merged into the user&#8217;s bookmarks already or not, <code>kbookmarkmerger</code> merely looks at the filename of the bookmark file &#8211; the contents are not checked at all. This means that changing a bookmark file which was already merged into a user&#8217;s bookmarks will not trigger merging it once again. </p>
 <p> Also note that in case a user modifies a bookmark which was merged into his setup, the original bookmark file will be left unmodified.</p>

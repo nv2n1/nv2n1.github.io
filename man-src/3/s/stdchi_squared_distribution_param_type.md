@@ -10,8 +10,8 @@ description: "std::chi_squared_distribution< _RealType >::param_type –"
 <p>std::chi_squared_distribution&lt; _RealType &gt;::param_type &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Public Types</h3>
-<p>typedef<br />
- <code>chi_squared_distribution</code><br />
+<p>typedef<br/>
+ <code>chi_squared_distribution</code><br/>
  &lt; _RealType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Attributes</h3>
 <pre><code>__pad0__ : _M_n(__n)

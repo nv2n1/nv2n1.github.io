@@ -130,7 +130,7 @@ auth required /lib/security/pam_unix.so \
  use_first_pass shadow nullok</pre>
 </dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> The PAM module pam_unix has recently replaced the module pam_pwdb. Some Linux systems use the module pam_unix2 in place of pam_unix. </p>
 </dl>
 <p> Note in particular the use of the <i>sufficient </i> keyword and the <i>use_first_pass</i> keyword. </p>

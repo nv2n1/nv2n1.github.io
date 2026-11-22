@@ -11,7 +11,7 @@ description: "slassq.f –"
 <p> slassq.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slassq</code> (N, X, INCX, SCALE, SUMSQ)<br />
+<p> subroutine <code>slassq</code> (N, X, INCX, SCALE, SUMSQ)<br/>
  <i></i><code>SLASSQ</code> updates a sum of squares represented in scaled form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slassq (integerN, real, dimension( * )X, integerINCX, realSCALE, realSUMSQ)</h3>

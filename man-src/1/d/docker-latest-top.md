@@ -15,7 +15,7 @@ description: "docker-top – Display the running processes of a container"
 <p> Display the running process of the container. ps-OPTION can be any of the options you would pass to a Linux ps command. </p>
 <p> All displayed information is from host&#8217;s point of view. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>EXAMPLES</h2>
 <p> Run <code>docker top</code> with the ps option of -x: </p>

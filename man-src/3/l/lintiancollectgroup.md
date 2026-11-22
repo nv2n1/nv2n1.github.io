@@ -18,8 +18,8 @@ Lintian::Collect::Group - Lintian interface to group data collection
  }</pre><h2>Description</h2>Lintian::Collect::Group is a ``group'' variant of the Lintian::Collect modules. It attempts to expose a similar interface as these and provide useful information about the processable group (or members of it).
 <h2>Class Methods</h2><dl COMPACT><dt>Lintian::Collect::Group-&gt;new ($group)
 </dt><dd>Creates a new object to provide information about <tt>$group</tt>.
-</dd><dt>direct_dependencies (<font SIZE="-1">PROC</font>)
-</dt><dd>If <font SIZE="-1">PROC</font> is a part of the underlying processable group, this method returns a listref containing all the direct dependencies of <font SIZE="-1">PROC.</font> If <font SIZE="-1">PROC</font> is not a part of the group, this returns undef. 
+</dd><dt>direct_dependencies (PROC)
+</dt><dd>If PROC is a part of the underlying processable group, this method returns a listref containing all the direct dependencies of PROC. If PROC is not a part of the group, this returns undef. 
  Note: Only strong dependencies (Pre-Depends and Depends) are considered. 
  Note: Self-dependencies (if any) are <i>not</i> included in the result.
 </dd><dt>$ginfo-&gt;type

@@ -71,11 +71,11 @@ description: "pmcollectl, pcp-collectl – collect data that describes the curre
 <dl>
 <dt><code>SUMMARY SUBSYSTEMS</code></dt>
 <dd></dd></dl>
-<p> c &#8211; CPU<br />
- d &#8211; Disk<br />
- f &#8211; NFS V3 Data<br />
- j &#8211; Interrupts<br />
- m &#8211; Memory<br />
+<p> c &#8211; CPU<br/>
+ d &#8211; Disk<br/>
+ f &#8211; NFS V3 Data<br/>
+ j &#8211; Interrupts<br/>
+ m &#8211; Memory<br/>
  n &#8211; Networks</p>
 <dl>
 </dl>
@@ -83,11 +83,11 @@ description: "pmcollectl, pcp-collectl – collect data that describes the curre
 <dt><code>DETAIL SUBSYSTEMS</code></dt>
 <dd></dd></dl>
 <p> This is the set of <code>detail</code> data from which in most cases the corresponding summary data is derived. So, if one has 3 disks and chooses <code>-sd,</code> one will only see a single total taken across all 3 disks. If one chooses <code>-sD,</code> individual disk totals will be reported but no totals. </p>
-<p> C &#8211; CPU<br />
- D &#8211; Disk<br />
- F &#8211; NFS Data<br />
- J &#8211; Interrupts<br />
- M &#8211; Memory node data, which is also known as NUMA data<br />
+<p> C &#8211; CPU<br/>
+ D &#8211; Disk<br/>
+ F &#8211; NFS Data<br/>
+ J &#8211; Interrupts<br/>
+ M &#8211; Memory node data, which is also known as NUMA data<br/>
  N &#8211; Networks</dl>
 <p> <code>&#8211;verbose</code></p>
 <dl>

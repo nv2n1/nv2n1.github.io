@@ -45,5 +45,5 @@ description: "lwres_herror, lwres_hstrerror – lightweight resolver error messa
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-herror/">herror</a></code>(3), <code><a href="/docs/linux/man/3-lwres_hstrerror/">lwres_hstrerror</a></code>(3).</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001 Internet Software Consortium. </p>

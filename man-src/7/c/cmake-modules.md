@@ -7304,7 +7304,7 @@ OpenCL_LIBRARY - the path to the OpenCL library</pre>
 <p> This module searches for the OpenSceneGraph core &quot;osg&quot; library as well as <code>FindOpenThreads</code>, and whatever additional <code>COMPONENTS</code> (nodekits) that you specify. </p>
 <pre>See <a rel="nofollow" href="http://www.openscenegraph.org">http://www.openscenegraph.org</a></pre>
 <p>NOTE: To use this module effectively you must either require <code>CMake &gt;= 2.6.3</code> with <code>cmake_minimum_required(VERSION 2.6.3)</code> or download and place <code>FindOpenThreads</code>, <code>Findosg</code> functions, <code>Findosg</code> and <code>Find&lt;etc&gt;.cmake</code> files into your <code>CMAKE_MODULE_PATH</code>. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <p> This module accepts the following variables (note mixed case) </p>
 <pre>OpenSceneGraph_DEBUG - Enable debugging output</pre>
@@ -9573,7 +9573,7 @@ vc110, vc110sp1, vc110sp2, vc110sp3, vc110sp4</pre>
 <p>Deprecated since version 3.6: Do not use. </p>
 <p> The macros provided by this module were once intended for use by cross-compiling toolchain files when CMake was not able to automatically detect the compiler identification. Since the introduction of this module, CMake&#8217;s compiler identification capabilities have improved and can now be taught to recognize any compiler. Furthermore, the suite of information CMake detects from a compiler is now too extensive to be provided by toolchain files using these macros. </p>
 <p> One common use case for this module was to skip CMake&#8217;s checks for a working compiler when using a cross-compiler that cannot link binaries without special flags or custom linker scripts. This case is now supported by setting the <code>CMAKE_TRY_COMPILE_TARGET_TYPE</code> variable in the toolchain file instead. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <p> Macro <code>CMAKE_FORCE_C_COMPILER</code> has the following signature: </p>
 <pre>CMAKE_FORCE_C_COMPILER(&lt;compiler&gt; &lt;compiler-id&gt;)</pre>

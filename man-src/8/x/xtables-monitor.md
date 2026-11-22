@@ -27,12 +27,12 @@ description: "xtables-monitor — show changes to rule set and trace-events"
 <h2>Example Output</h2>
 <dl>
 <dt><code>xtables-monitor &#8211;trace</code></dt>
-<dd>&nbsp;1 TRACE: 2 fc475095 raw:PREROUTING:rule:0x3:CONTINUE -4 -t raw -A PREROUTING -p icmp -j TRACE<br />
-&nbsp;2 PACKET: 0 fc475095 IN=lo LL=0x304 0000000000000000000000000800 SRC=127.0.0.1 DST=127.0.0.1 LEN=84 TOS=0x0 TTL=64 ID=38349DF<br />
-&nbsp;3 TRACE: 2 fc475095 raw:PREROUTING:return:<br />
-&nbsp;4 TRACE: 2 fc475095 raw:PREROUTING:policy:ACCEPT<br />
-&nbsp;5 TRACE: 2 fc475095 filter:INPUT:return:<br />
-&nbsp;6 TRACE: 2 fc475095 filter:INPUT:policy:DROP<br />
+<dd>&nbsp;1 TRACE: 2 fc475095 raw:PREROUTING:rule:0x3:CONTINUE -4 -t raw -A PREROUTING -p icmp -j TRACE<br/>
+&nbsp;2 PACKET: 0 fc475095 IN=lo LL=0x304 0000000000000000000000000800 SRC=127.0.0.1 DST=127.0.0.1 LEN=84 TOS=0x0 TTL=64 ID=38349DF<br/>
+&nbsp;3 TRACE: 2 fc475095 raw:PREROUTING:return:<br/>
+&nbsp;4 TRACE: 2 fc475095 raw:PREROUTING:policy:ACCEPT<br/>
+&nbsp;5 TRACE: 2 fc475095 filter:INPUT:return:<br/>
+&nbsp;6 TRACE: 2 fc475095 filter:INPUT:policy:DROP<br/>
 &nbsp;7 TRACE: 2 0df9d3d8 raw:PREROUTING:rule:0x3:CONTINUE -4 -t raw -A PREROUTING -p icmp -j TRACE</dd></dl>
 <p> The first line shows a packet entering rule set evaluation. The protocol number is shown (AF_INET in this case), then a packet identifier number that allows to correlate messages coming from rule set evaluation of this packet. After this, the rule that was matched by the packet is shown. This is the TRACE rule that turns on tracing events for this packet. </p>
 <p> The second line dumps information about the packet. Incoming interface and packet headers such as source and destination addresses are shown. </p>
@@ -41,15 +41,15 @@ description: "xtables-monitor — show changes to rule set and trace-events"
 <pre>iptables -t raw -A PREROUTING -p tcp --dport 80 --syn -m limit --limit 1/s -j TRACE</pre>
 <dl>
 <dt><code>xtables-monitor &#8211;event</code></dt>
-<dd>&nbsp;<wbr>&nbsp;1 EVENT: nft: NEW table: table filter ip flags 0 use 4 handle 444<br />
-&nbsp;<wbr>&nbsp;2 EVENT:&nbsp;#&nbsp;nft: ip filter INPUT use 2 type filter hook input prio 0 policy drop packets 0 bytes 0<br />
-&nbsp;<wbr>&nbsp;3 EVENT:&nbsp;#&nbsp;nft: ip filter FORWARD use 0 type filter hook forward prio 0 policy accept packets 0 bytes 0<br />
-&nbsp;<wbr>&nbsp;4 EVENT:&nbsp;#&nbsp;nft: ip filter OUTPUT use 0 type filter hook output prio 0 policy accept packets 0 bytes 0<br />
-&nbsp;<wbr>&nbsp;5 EVENT: -4 -t filter -N TCP<br />
-&nbsp;<wbr>&nbsp;6 EVENT: -4 -t filter -A TCP -s 192.168.0.0/16 -p tcp -m tcp &#8211;dport 22 -j ACCEPT<br />
-&nbsp;<wbr>&nbsp;7 EVENT: -4 -t filter -A TCP -p tcp -m multiport &#8211;dports 80,443 -j ACCEPT<br />
-&nbsp;<wbr>&nbsp;8 EVENT: -4 -t filter -A INPUT -p tcp -j TCP<br />
-&nbsp;<wbr>&nbsp;9 EVENT: -4 -t filter -A INPUT -m conntrack &#8211;ctstate RELATED,ESTABLISHED -j ACCEPT<br />
+<dd>&nbsp;<wbr>&nbsp;1 EVENT: nft: NEW table: table filter ip flags 0 use 4 handle 444<br/>
+&nbsp;<wbr>&nbsp;2 EVENT:&nbsp;#&nbsp;nft: ip filter INPUT use 2 type filter hook input prio 0 policy drop packets 0 bytes 0<br/>
+&nbsp;<wbr>&nbsp;3 EVENT:&nbsp;#&nbsp;nft: ip filter FORWARD use 0 type filter hook forward prio 0 policy accept packets 0 bytes 0<br/>
+&nbsp;<wbr>&nbsp;4 EVENT:&nbsp;#&nbsp;nft: ip filter OUTPUT use 0 type filter hook output prio 0 policy accept packets 0 bytes 0<br/>
+&nbsp;<wbr>&nbsp;5 EVENT: -4 -t filter -N TCP<br/>
+&nbsp;<wbr>&nbsp;6 EVENT: -4 -t filter -A TCP -s 192.168.0.0/16 -p tcp -m tcp &#8211;dport 22 -j ACCEPT<br/>
+&nbsp;<wbr>&nbsp;7 EVENT: -4 -t filter -A TCP -p tcp -m multiport &#8211;dports 80,443 -j ACCEPT<br/>
+&nbsp;<wbr>&nbsp;8 EVENT: -4 -t filter -A INPUT -p tcp -j TCP<br/>
+&nbsp;<wbr>&nbsp;9 EVENT: -4 -t filter -A INPUT -m conntrack &#8211;ctstate RELATED,ESTABLISHED -j ACCEPT<br/>
 &nbsp;10 NEWGEN: GENID=13904 PID=25167 NAME=iptables-nftables-restore</dd></dl>
 <p> This example shows event monitoring. Line one shows creation of a table (filter in this case), followed by three base hooks INPUT, FORWARD and OUTPUT. The iptables-nftables tools all create tables and base chains automatically when needed, so this is expected when a table was not yet initialized or when it is re-created from scratch by iptables-nftables-restore. Line five shows a new user-defined chain (TCP) being added, followed by addition a few rules. the last line shows that a new ruleset generation has become active, i.e., the rule set changes are now active. This also lists the process id and the programs name.</p>
 <h2>Limitations</h2>

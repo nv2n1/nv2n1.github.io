@@ -11,6 +11,6 @@ perlbot - Links to information on object-oriented programming in Perl
 
 <h2>DESCRIPTION</h2>
 
- For information on <font SIZE="-1">OO</font> programming with Perl, please see perlootut and perlobj. 
+ For information on OO programming with Perl, please see perlootut and perlobj. 
 
  (The above documents supersede the collection of tricks that was formerly here in perlbot.)

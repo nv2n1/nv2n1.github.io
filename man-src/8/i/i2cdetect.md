@@ -9,9 +9,9 @@ description: "i2cdetect – detect I2C chips"
 
 <p>i2cdetect &#8211; detect I2C chips </p>
 <h2>Synopsis</h2>
-<p><code>i2cdetect</code> [<i>-y</i>] [<i>-a</i>] [<i>-q</i>|<i>-r</i>] <i>i2cbus</i> [<i>first last</i>]<br />
- <code>i2cdetect</code> <i>-F</i> <i>i2cbus</i><br />
- <code>i2cdetect</code> <i>-V</i><br />
+<p><code>i2cdetect</code> [<i>-y</i>] [<i>-a</i>] [<i>-q</i>|<i>-r</i>] <i>i2cbus</i> [<i>first last</i>]<br/>
+ <code>i2cdetect</code> <i>-F</i> <i>i2cbus</i><br/>
+ <code>i2cdetect</code> <i>-V</i><br/>
  <code>i2cdetect</code> <i>-l</i> </p>
 <h2>Description</h2>
 <p>i2cdetect is a userspace program to scan an I2C bus for devices. It outputs a table with the list of detected devices on the specified bus. <i>i2cbus</i> indicates the number or name of the I2C bus to be scanned, and should correspond to one of the busses listed by <i>i2cdetect -l</i>. The optional parameters <i>first</i> and <i>last</i> restrict the scanning range (default: from 0x03 to 0x77). i2cdetect can also be used to query the functionalities of an I2C bus (see option <code>-F</code>.) </p>

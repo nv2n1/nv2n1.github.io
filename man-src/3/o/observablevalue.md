@@ -13,10 +13,10 @@ description: "QuantLib::ObservableValue – observable and assignable proxy to c
 <h3>Public Member Functions</h3>
 <p><code>ObservableValue</code> (const T &amp;) </p>
 <p> <code>ObservableValue</code> (const <code>ObservableValue</code>&lt; T &gt; &amp;) </p>
-<p> <code>operator T</code> () const<br />
- <i>implicit conversion </i><br />
+<p> <code>operator T</code> () const<br/>
+ <i>implicit conversion </i><br/>
  <code>operator boost::shared_ptr&lt; Observable &gt;</code> () const </p>
-<p> const T &amp; <code>value</code> () const<br />
+<p> const T &amp; <code>value</code> () const<br/>
  <i>explicit inspector </i> </p>
 <p> <code>controlled assignment</code> </p>
 <p> <code>ObservableValue</code>&lt; T &gt; &amp; <code>operator=</code> (const T &amp;) </p>

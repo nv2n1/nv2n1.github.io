@@ -128,7 +128,7 @@ description: "foremost – Recover files using their headers, footers, and data 
 <p> When compiling foremost on systems with versions of glibc 2.1.x or older, you will get some (harmless) compiler warnings regarding the implicit declaration of fseeko and ftello. You can safely ignore these warnings. </p>
 <h2>REPORTING BUGS</h2>
 <p> Because Foremost could be used to obtain evidence for criminal prosecutions, we take all bug reports <i>very</i> seriously. Any bug that jeopardizes the forensic integrity of this program could have serious consequenses. When submitting a bug report, please include a description of the problem, how you found it, and your contact information. </p>
-<p> Send bug reports to: <br />
+<p> Send bug reports to: <br/>
  namikus AT users d0t sf d0t net </p>
 <h2>COPYRIGHT</h2>
 <p> This program is a work of the US Government. In accordance with 17 USC 105, copyright protection is not available for any work of the US Government. </p>

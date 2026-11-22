@@ -14,20 +14,20 @@ description: "sc::MsgStateRecv –"
 <p> Inherits <code>sc::MsgStateBufRecv</code>. </p>
 <p> Inherited by <code>sc::BcastStateRecv</code>, and <code>sc::StateRecv</code>.</p>
 <h3>Public Member Functions</h3>
-<p> <code>MsgStateRecv</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;)<br />
- <i></i><code>MsgStateRecv</code> must be initialized with a <code>MessageGrp</code>.<br />
- int <code>version</code> (const <code>ClassDesc</code> *)<br />
- <i>Returns the version of the </i><code>ClassDesc</code>.<br />
- int <code>get</code> (const <code>ClassDesc</code> **)<br />
- <i>I only need to override get(ClassDesc**) but C++ will hide all of the other get&#8217;s so I must override everything. </i><br />
- int <code>get</code> (char &amp;r, const char *key=0)<br />
- <i>These restore data saved with StateOut&#8217;s put. members. </i><br />
+<p> <code>MsgStateRecv</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;)<br/>
+ <i></i><code>MsgStateRecv</code> must be initialized with a <code>MessageGrp</code>.<br/>
+ int <code>version</code> (const <code>ClassDesc</code> *)<br/>
+ <i>Returns the version of the </i><code>ClassDesc</code>.<br/>
+ int <code>get</code> (const <code>ClassDesc</code> **)<br/>
+ <i>I only need to override get(ClassDesc**) but C++ will hide all of the other get&#8217;s so I must override everything. </i><br/>
+ int <code>get</code> (char &amp;r, const char *key=0)<br/>
+ <i>These restore data saved with StateOut&#8217;s put. members. </i><br/>
  int <code>get</code> (unsigned int &amp;r, const char *key=0) </p>
 <p> int <code>get</code> (int &amp;r, const char *key=0) </p>
 <p> int <code>get</code> (float &amp;r, const char *key=0) </p>
 <p> int <code>get</code> (double &amp;r, const char *key=0) </p>
-<p> int <code>get</code> (char *&amp;)<br />
- <i>These restore data saved with StateOut&#8217;s put. </i><br />
+<p> int <code>get</code> (char *&amp;)<br/>
+ <i>These restore data saved with StateOut&#8217;s put. </i><br/>
  int <code>get</code> (unsigned int *&amp;) </p>
 <p> int <code>get</code> (int *&amp;) </p>
 <p> int <code>get</code> (float *&amp;) </p>

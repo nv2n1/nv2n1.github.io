@@ -24,17 +24,17 @@ ssize_t pwritev2(int fd, const struct iovec *iov, int iovcnt,
                  off_t offset, int flags);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>preadv</code>(), <code>pwritev</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> <code>preadv</code>(), <code>pwritev</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>readv</code>() system call reads <i>iovcnt</i> buffers from the file associated with the file descriptor <i>fd</i> into the buffers described by <i>iov</i> (&quot;scatter input&quot;). </p>
 <p> The <code>writev</code>() system call writes <i>iovcnt</i> buffers of data described by <i>iov</i> to the file associated with the file descriptor <i>fd</i> (&quot;gather output&quot;). </p>
 <p> The pointer <i>iov</i> points to an array of <i>iovec</i> structures, defined in <i>&lt;sys/uio.h&gt;</i> as: </p>
-<p> struct iovec {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;*iov_base;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Starting address&nbsp;*/<br />
+<p> struct iovec {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;*iov_base;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Starting address&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t iov_len;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of bytes to transfer&nbsp;*/ }; </p>
 <p> The <code>readv</code>() system call works just like <code><a href="/docs/linux/man/2-read/">read</a></code>(2) except that multiple buffers are filled. </p>
 <p> The <code>writev</code>() system call works just like <code><a href="/docs/linux/man/2-write/">write</a></code>(2) except that multiple buffers are written out. </p>

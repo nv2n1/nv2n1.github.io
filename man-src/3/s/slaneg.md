@@ -11,7 +11,7 @@ description: "slaneg.f –"
 <p> slaneg.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> INTEGER function <code>slaneg</code> (N, D, LLD, SIGMA, PIVMIN, R)<br />
+<p> INTEGER function <code>slaneg</code> (N, D, LLD, SIGMA, PIVMIN, R)<br/>
  <i></i><code>SLANEG</code> computes the Sturm count.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function slaneg (integerN, real, dimension( * )D, real, dimension( * )LLD, realSIGMA, realPIVMIN, integerR)</h3>

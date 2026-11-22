@@ -45,10 +45,10 @@ description: "oclock – round X clock"
 <p> If you would like your clock to be viewable in color, include the following in the #ifdef COLOR section you read with xrdb: </p>
 <p> *customization: -color </p>
 <p> This will cause oclock to pick up the colors in the app-defaults color customization file: /usr/lib/X11/app-defaults/Clock-color. Below are the default colors: </p>
-<p> Clock*Background: grey<br />
- Clock*BorderColor: light blue<br />
- Clock*hour: yellow<br />
- Clock*jewel: yellow<br />
+<p> Clock*Background: grey<br/>
+ Clock*BorderColor: light blue<br/>
+ Clock*hour: yellow<br/>
+ Clock*jewel: yellow<br/>
  Clock*minute: yellow</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), X Toolkit documentation</p>

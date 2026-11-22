@@ -13,19 +13,19 @@ description: "pack_fopen_chunk – Opens a sub-chunk of a file. Allegro game pro
 </code></pre>
 <p> <code>PACKFILE *pack_fopen_chunk(PACKFILE *f, int pack);</code></p>
 <h2>Description</h2>
-<p>Opens a sub-chunk of a file. Chunks are primarily intended for use by the datafile code, but they may also be useful for your own file routines. A chunk provides a logical view of part of a file, which can be compressed as an individual entity and will automatically insert and check length counts to prevent reading past the end of the chunk. The PACKFILE parameter is a previously opened file, and `pack&#8217; is a boolean parameter which will turn compression on for the sub-chunk if it is non-zero. Example: PACKFILE *input = pack_fopen(&quot;out.raw&quot;, &quot;rp&quot;);<br />
-&#8230; input = pack_fopen_chunk(input, 1);<br />
-/* Read data from the sub-chunk and close it. */<br />
+<p>Opens a sub-chunk of a file. Chunks are primarily intended for use by the datafile code, but they may also be useful for your own file routines. A chunk provides a logical view of part of a file, which can be compressed as an individual entity and will automatically insert and check length counts to prevent reading past the end of the chunk. The PACKFILE parameter is a previously opened file, and `pack&#8217; is a boolean parameter which will turn compression on for the sub-chunk if it is non-zero. Example: PACKFILE *input = pack_fopen(&quot;out.raw&quot;, &quot;rp&quot;);<br/>
+&#8230; input = pack_fopen_chunk(input, 1);<br/>
+/* Read data from the sub-chunk and close it. */<br/>
 &#8230; input = pack_fclose_chunk(input);</p>
-<p>This sequence will read the length counts created when the chunk was<br />
-    written,<br />
-    and automatically decompress the contents of the chunk if it<br />
-            was compressed.The length will also be used to prevent reading past the<br />
-                end of the<br />
-                chunk(Allegro will return EOF if you attempt this),<br />
-    and to<br />
-        automatically skip past any unread chunk data when you call<br />
-        pack_fclose_chunk()<br />
+<p>This sequence will read the length counts created when the chunk was<br/>
+    written,<br/>
+    and automatically decompress the contents of the chunk if it<br/>
+            was compressed.The length will also be used to prevent reading past the<br/>
+                end of the<br/>
+                chunk(Allegro will return EOF if you attempt this),<br/>
+    and to<br/>
+        automatically skip past any unread chunk data when you call<br/>
+        pack_fclose_chunk()<br/>
             . To read the chunk, use the following code: </p>
 <pre><code>PACKFILE *input = pack_fopen(&quot;out.raw&quot;, &quot;rp&quot;);
 ... input = pack_fopen_chunk(input, 1);

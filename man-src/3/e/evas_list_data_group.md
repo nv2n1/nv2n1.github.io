@@ -9,13 +9,13 @@ description: "Linked List Creation Functions – Functions that add data to an E
 
 <p>Linked List Creation Functions &#8211; Functions that add data to an Evas_List. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Evas_List</code> * <code>evas_list_append</code> (<code>Evas_List</code> *list, const void *data)<br />
- <i>Appends the given data to the given linked list. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_list_prepend</code> (<code>Evas_List</code> *list, const void *data)<br />
- <i>Prepends the given data to the given linked list. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_list_append_relative</code> (<code>Evas_List</code> *list, const void *data, const void *relative)<br />
- <i>Inserts the given data into the given linked list after the specified data. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_list_prepend_relative</code> (<code>Evas_List</code> *list, const void *data, const void *relative)<br />
+<p>EAPI <code>Evas_List</code> * <code>evas_list_append</code> (<code>Evas_List</code> *list, const void *data)<br/>
+ <i>Appends the given data to the given linked list. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_list_prepend</code> (<code>Evas_List</code> *list, const void *data)<br/>
+ <i>Prepends the given data to the given linked list. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_list_append_relative</code> (<code>Evas_List</code> *list, const void *data, const void *relative)<br/>
+ <i>Inserts the given data into the given linked list after the specified data. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_list_prepend_relative</code> (<code>Evas_List</code> *list, const void *data, const void *relative)<br/>
  <i>Prepend a data pointer to a linked list before the memeber specified. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that add data to an Evas_List.</p>
@@ -33,7 +33,7 @@ description: "Linked List Creation Functions – Functions that add data to an E
  }</pre>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given list. If NULL is given, then a new list is created.<br />
+<dd><i>list</i> The given list. If NULL is given, then a new list is created.<br/>
  <i>data</i> The data to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -61,8 +61,8 @@ description: "Linked List Creation Functions – Functions that add data to an E
  }</pre>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given linked list.<br />
- <i>data</i> The given data.<br />
+<dd><i>list</i> The given linked list.<br/>
+ <i>data</i> The given data.<br/>
  <i>relative</i> The data to insert after.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -82,7 +82,7 @@ description: "Linked List Creation Functions – Functions that add data to an E
  }</pre>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given list.<br />
+<dd><i>list</i> The given list.<br/>
  <i>data</i> The given data.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -93,8 +93,8 @@ description: "Linked List Creation Functions – Functions that add data to an E
 <p>Prepend a data pointer to a linked list before the memeber specified. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list handle to prepend data too<br />
- <i>data</i> The data pointer to prepend to list list before relative<br />
+<dd><i>list</i> The list handle to prepend data too<br/>
+ <i>data</i> The data pointer to prepend to list list before relative<br/>
  <i>relative</i> The data pointer before which to insert data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -119,8 +119,8 @@ description: "Linked List Creation Functions – Functions that add data to an E
  }</pre>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given linked list.<br />
- <i>data</i> The given data.<br />
+<dd><i>list</i> The given linked list.<br/>
+ <i>data</i> The given data.<br/>
  <i>relative</i> The data to insert before.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

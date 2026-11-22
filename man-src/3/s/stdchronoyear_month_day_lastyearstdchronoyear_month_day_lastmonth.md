@@ -19,11 +19,11 @@ description: "std::chrono::year_month_day_last::year,std::chrono::year_month_day
         noexcept;</code></pre>
 <p>Retrieves the field values stored in this year_month_day_last object. </p>
 <h2>Return values</h2>
-<p>1)&nbsp;<wbr>Returns the stored std::chrono::year value.<br />
-2)&nbsp;<wbr>Returns the stored std::chrono::month value.<br />
-3)&nbsp;<wbr>A std::chrono::day value corresponding to the last day of the stored year and<br />
-month.<br />
+<p>1)&nbsp;<wbr>Returns the stored std::chrono::year value.<br/>
+2)&nbsp;<wbr>Returns the stored std::chrono::month value.<br/>
+3)&nbsp;<wbr>A std::chrono::day value corresponding to the last day of the stored year and<br/>
+month.<br/>
 4)&nbsp;<wbr>A std::chrono::month_day_last constructed from month().</p>
 <h2>Notes</h2>
-<p>The behavior of&nbsp;<wbr><code>(3)</code>&nbsp;<wbr>when&nbsp;<wbr>!this-&gt;ok()&nbsp;<wbr>is not currently defined. It likely will be<br />
+<p>The behavior of&nbsp;<wbr><code>(3)</code>&nbsp;<wbr>when&nbsp;<wbr>!this-&gt;ok()&nbsp;<wbr>is not currently defined. It likely will be<br/>
 defined to return some invalid day in that case&nbsp;<wbr>(such as std::chrono::day<code>(0)</code>). </p>

@@ -14,7 +14,7 @@ description: "install-tl – TeX Live cross-platform installer"
 <p> install-tl-windows.bat [<i>option</i>]&#8230; </p>
 <p> install-tl-advanced.bat [<i>option</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>
-<p> This installer creates a runnable TeX Live installation from various media, including over the network, from local hard disk, a <font SIZE="-1">DVD,</font> etc. The installer works on all platforms supported by TeX Live. For information on initially downloading TeX Live, see &lt;<a rel="nofollow" href="https://tug.org/texlive/acquire.html">https://tug.org/texlive/acquire.html</a>&gt;. </p>
+<p> This installer creates a runnable TeX Live installation from various media, including over the network, from local hard disk, a DVD, etc. The installer works on all platforms supported by TeX Live. For information on initially downloading TeX Live, see &lt;<a rel="nofollow" href="https://tug.org/texlive/acquire.html">https://tug.org/texlive/acquire.html</a>&gt;. </p>
 <p> The basic idea of TeX Live installation is for you to choose one of the top-level <i>schemes</i>, each of which is defined as a different set of <i>collections</i> and <i>packages</i>, where a collection is a set of packages, and a package is what contains actual files. </p>
 <p> Within the installer, you can choose a scheme, and further customize the set of collections to install, but not the set of the packages. To work at the package level, use <tt>&quot;tlmgr&quot;</tt> (reference just below) after the initial installation is complete. </p>
 <p> The default is <tt>&quot;scheme-full&quot;</tt>, which installs everything, and this is highly recommended.</p>
@@ -26,7 +26,7 @@ description: "install-tl – TeX Live cross-platform installer"
 <p> As usual, all options can be specified in any order, and with either a leading <tt>&quot;-&quot;</tt> or <tt>&quot;--&quot;</tt>. An argument value can be separated from its option by either a space or <tt>&quot;=&quot;</tt>.</p>
 <dl>
 <dt><code>-gui</code> [[=]<i>module</i>]</dt>
-<dd> If no <i>module</i> is given, starts the Tcl/Tk (see below) <font SIZE="-1">GUI</font> installer. </dd>
+<dd> If no <i>module</i> is given, starts the Tcl/Tk (see below) GUI installer. </dd>
 <p> If <i>module</i> is given loads the given installer module. Currently the following modules are supported:</p>
 <dl>
 <dl>
@@ -38,52 +38,52 @@ description: "install-tl – TeX Live cross-platform installer"
 <dl>
 <dt>
 </dt><dd>
-<p> The default <font SIZE="-1">GUI</font> requires Tcl/Tk. This is standard on Macs (although it is considered deprecated since Catalina) and is often already installed on GNU/Linux, or can be easily installed through a distro package manager. For Windows, TeX Live provides a Tcl/Tk runtime.</dd></dl>
+<p> The default GUI requires Tcl/Tk. This is standard on Macs (although it is considered deprecated since Catalina) and is often already installed on GNU/Linux, or can be easily installed through a distro package manager. For Windows, TeX Live provides a Tcl/Tk runtime.</dd></dl>
 <dt><code>-no-gui</code></dt>
 <dd> Use the text mode installer (default except on Windows and Macs).</dd>
 <dt><code>-lang</code> <i>llcode</i></dt>
-<dd> By default, the Tcl <font SIZE="-1">GUI</font> uses the language detection built into Tcl/Tk. If that fails you can select a different language by giving this option with a language code (based on <font SIZE="-1">ISO 639-1</font>). Currently supported (but not necessarily completely translated) are: English (en, default), Czech (cs), German (de), French (fr), Italian (it), Japanese (ja), Dutch (nl), Polish (pl), Brazilian Portuguese (pt_BR), Russian (ru), Slovak (sk), Slovenian (sl), Serbian (sr), Ukrainian (uk), Vietnamese (vi), simplified Chinese (zh_CN), and traditional Chinese (zh_TW).</dd>
+<dd> By default, the Tcl GUI uses the language detection built into Tcl/Tk. If that fails you can select a different language by giving this option with a language code (based on ISO 639-1). Currently supported (but not necessarily completely translated) are: English (en, default), Czech (cs), German (de), French (fr), Italian (it), Japanese (ja), Dutch (nl), Polish (pl), Brazilian Portuguese (pt_BR), Russian (ru), Slovak (sk), Slovenian (sl), Serbian (sr), Ukrainian (uk), Vietnamese (vi), simplified Chinese (zh_CN), and traditional Chinese (zh_TW).</dd>
 <dt><code>-repository</code> <i>url|path</i></dt>
 <dd> Specify the package repository to be used as the source of the installation. In short, this can be a directory name or a url using http(s), ftp, or scp. The documentation for <tt>&quot;tlmgr&quot;</tt> has the details (&lt;<a rel="nofollow" href="https://tug.org/texlive/doc/tlmgr.html#OPTIONS">https://tug.org/texlive/doc/tlmgr.html#OPTIONS</a>&gt;). </dd>
-<p> For installation, the default is to pick a mirror automatically, using &lt;<a rel="nofollow" href="https://mirror.ctan.org/systems/texlive/tlnet">https://mirror.ctan.org/systems/texlive/tlnet</a>&gt;; the chosen mirror is used for the entire download. You can use the special argument <tt>&quot;ctan&quot;</tt> as an abbreviation for this. (See &lt;<a rel="nofollow" href="https://ctan.org">https://ctan.org</a>&gt; for more about <font SIZE="-1">CTAN</font> and its mirrors.) </p>
+<p> For installation, the default is to pick a mirror automatically, using &lt;<a rel="nofollow" href="https://mirror.ctan.org/systems/texlive/tlnet">https://mirror.ctan.org/systems/texlive/tlnet</a>&gt;; the chosen mirror is used for the entire download. You can use the special argument <tt>&quot;ctan&quot;</tt> as an abbreviation for this. (See &lt;<a rel="nofollow" href="https://ctan.org">https://ctan.org</a>&gt; for more about CTAN and its mirrors.) </p>
 <p> After installation is complete, you can use that installation as the repository for another installation. If you chose to install less than the full scheme containing all packages, the list of available schemes will be adjusted accordingly.</p>
 <dt><code>-select-repository</code></dt>
-<dd> This option allows you to choose a particular mirror from the current list of active <font SIZE="-1">CTAN</font> mirrors. This option is supported in the <tt>&quot;text&quot;</tt> and <tt>&quot;gui&quot;</tt> installer modes, and will also offer to install from local media if available, or from a repository specified on the command line. It&#8217;s useful when the (default) automatic redirection does not choose a good host for you.</dd>
+<dd> This option allows you to choose a particular mirror from the current list of active CTAN mirrors. This option is supported in the <tt>&quot;text&quot;</tt> and <tt>&quot;gui&quot;</tt> installer modes, and will also offer to install from local media if available, or from a repository specified on the command line. It&#8217;s useful when the (default) automatic redirection does not choose a good host for you.</dd>
 <dt><code>-all-options</code></dt>
 <dd> Normally options not relevant to the current platform are not shown (e.g., when running on Unix, Windows-specific options are omitted). Giving this command line option allows configuring such &#8220;foreign&#8221; settings.</dd>
 <dt><code>-custom-bin</code> <i>path</i></dt>
 <dd> If you have built your own set of TeX Live binaries (perhaps because your platform was not supported by TeX Live out of the box), this option allows you to specify the <i>path</i> to a directory where the binaries for the current system are present. The installation will continue as usual, but at the end all files from <i>path</i> are copied over to <tt>&quot;bin/custom/&quot;</tt> under your installation directory and this <tt>&quot;bin/custom/&quot;</tt> directory is what will be added to the path for the post-install actions. To install multiple custom binary sets, manually rename <tt>&quot;custom&quot;</tt> before doing each. </dd>
 <p> For more information on custom binaries, see &lt;<a rel="nofollow" href="https://tug.org/texlive/custom-bin.html">https://tug.org/texlive/custom-bin.html</a>&gt;. For general information on building TeX Live, see &lt;<a rel="nofollow" href="https://tug.org/texlive/build.html">https://tug.org/texlive/build.html</a>&gt;.</p>
 <dt><code>-debug-translation</code></dt>
-<dd> In the former Perl/Tk <font SIZE="-1">GUI</font> modes, this option reported any missing, or more likely untranslated, messages to standard error. Not yet implemented for the Tcl interface. Helpful for translators to see what remains to be done.</dd>
+<dd> In the former Perl/Tk GUI modes, this option reported any missing, or more likely untranslated, messages to standard error. Not yet implemented for the Tcl interface. Helpful for translators to see what remains to be done.</dd>
 <dt><code>-force-platform</code> <i>platform</i></dt>
 <dd> Instead of auto-detecting the current platform, use <i>platform</i>. Binaries for this platform must be present and they must actually be runnable, or installation will fail. <tt>&quot;-force-arch&quot;</tt> is a synonym.</dd>
 <dt><code>-help</code>, <code>&#8211;help</code>, <code>-?</code></dt>
 <dd> Display this help and exit. (This help is also on the web at &lt;<a rel="nofollow" href="https://tug.org/texlive/doc/install-tl.html">https://tug.org/texlive/doc/install-tl.html</a>&gt;). Sometimes the <tt>&quot;perldoc&quot;</tt> and/or <tt>&quot;PAGER&quot;</tt> programs on the system have problems, possibly resulting in control characters being literally output. This can&#8217;t always be detected, but you can set the <tt>&quot;NOPERLDOC&quot;</tt> environment variable and <tt>&quot;perldoc&quot;</tt> will not be used.</dd>
 <dt><code>-in-place</code></dt>
-<dd> This is a quick-and-dirty installation option in case you already have an rsync or svn checkout of TeX Live. It will use the checkout as-is and will just do the necessary post-install. Be warned that the file <tt>&quot;tlpkg/texlive.tlpdb&quot;</tt> may be rewritten, that removal has to be done manually, and that the only realistic way to maintain this installation is to redo it from time to time. This option is not available via the installer interfaces. <font SIZE="-1">USE AT YOUR OWN RISK.</font></dd>
+<dd> This is a quick-and-dirty installation option in case you already have an rsync or svn checkout of TeX Live. It will use the checkout as-is and will just do the necessary post-install. Be warned that the file <tt>&quot;tlpkg/texlive.tlpdb&quot;</tt> may be rewritten, that removal has to be done manually, and that the only realistic way to maintain this installation is to redo it from time to time. This option is not available via the installer interfaces. USE AT YOUR OWN RISK.</dd>
 <dt><code>-init-from-profile</code> <i>profile_file</i></dt>
-<dd> Similar to <code>-profile</code> (see &#8220;<font SIZE="-1">PROFILES&#8221;</font> below), but only initializes the installation configuration from <i>profile_file</i> and then starts a normal interactive session. Environment variables are not ignored.</dd>
+<dd> Similar to <code>-profile</code> (see &#8220;PROFILES&#8221; below), but only initializes the installation configuration from <i>profile_file</i> and then starts a normal interactive session. Environment variables are not ignored.</dd>
 <dt><code>-logfile</code> <i>file</i></dt>
 <dd> Write both all messages (informational, debugging, warnings) to <i>file</i>, in addition to standard output or standard error. </dd>
-<p> If this option is not given, the installer will create a log file in the root of the writable installation tree, for example, <tt>&quot;/usr/local/texlive/YYYY/install-tl.log&quot;</tt> for the <i></i><font SIZE="-1"><i>YYYY</i></font><i></i> release.</p>
+<p> If this option is not given, the installer will create a log file in the root of the writable installation tree, for example, <tt>&quot;/usr/local/texlive/YYYY/install-tl.log&quot;</tt> for the <i></i><i>YYYY</i><i></i> release.</p>
 <dt><code>-no-cls</code></dt>
 <dd> For the text mode installer only: do not clear the screen when entering a new menu (for debugging purposes).</dd>
 <dt><code>-no-persistent-downloads</code></dt>
 <dd>
 </dd><dt><code>-persistent-downloads</code></dt>
 <dd> For network installs, activating this option makes the installer try to set up a persistent connection using the <tt>&quot;Net::LWP&quot;</tt> Perl module. This opens only one connection between your computer and the server per session and reuses it, instead of initiating a new download for each package, which typically yields a significant speed-up. </dd>
-<p> This option is turned on by default, and the installation program will fall back to using <tt>&quot;wget&quot;</tt> if this is not possible. To disable usage of <font SIZE="-1">LWP</font> and persistent connections, use <tt>&quot;-no-persistent-downloads&quot;</tt>.</p>
+<p> This option is turned on by default, and the installation program will fall back to using <tt>&quot;wget&quot;</tt> if this is not possible. To disable usage of LWP and persistent connections, use <tt>&quot;-no-persistent-downloads&quot;</tt>.</p>
 <dt><code>-no-verify-downloads</code></dt>
-<dd> By default, if a GnuPG <tt>&quot;gpg&quot;</tt> binary is found in <font SIZE="-1">PATH,</font> downloads are verified against a cryptographic signature. This option disables such verification. The full description is in the Crytographic Verification section of the <tt>&quot;tlmgr&quot;</tt> documentation, e.g., &lt;<a rel="nofollow" href="https://tug.org/texlive/doc/tlmgr.html#CRYPTOGRAPHIC-VERIFICATION">https://tug.org/texlive/doc/tlmgr.html#CRYPTOGRAPHIC-VERIFICATION</a>&gt;</dd>
+<dd> By default, if a GnuPG <tt>&quot;gpg&quot;</tt> binary is found in PATH, downloads are verified against a cryptographic signature. This option disables such verification. The full description is in the Crytographic Verification section of the <tt>&quot;tlmgr&quot;</tt> documentation, e.g., &lt;<a rel="nofollow" href="https://tug.org/texlive/doc/tlmgr.html#CRYPTOGRAPHIC-VERIFICATION">https://tug.org/texlive/doc/tlmgr.html#CRYPTOGRAPHIC-VERIFICATION</a>&gt;</dd>
 <dt><code>-non-admin</code></dt>
 <dd> For Windows only: configure for the current user, not for all users.</dd>
 <dt><code>-portable</code></dt>
-<dd> Install for portable use, e.g., on a <font SIZE="-1">USB</font> stick. Also selectable from within the perltk and text installers.</dd>
+<dd> Install for portable use, e.g., on a USB stick. Also selectable from within the perltk and text installers.</dd>
 <dt><code>-print-platform</code></dt>
 <dd> Print the TeX Live identifier for the detected platform (hardware/operating system) combination to standard output, and exit. <tt>&quot;-print-arch&quot;</tt> is a synonym.</dd>
 <dt><code>-profile</code> <i>profile_file</i></dt>
-<dd> Load <i>profile_file</i> and do the installation with no user interaction, that is, a batch (unattended) install. Environment variables are ignored. See &#8220;<font SIZE="-1">PROFILES&#8221;</font> below.</dd>
+<dd> Load <i>profile_file</i> and do the installation with no user interaction, that is, a batch (unattended) install. Environment variables are ignored. See &#8220;PROFILES&#8221; below.</dd>
 <dt><code>-q</code></dt>
 <dd> Omit normal informational messages.</dd>
 <dt><code>-scheme</code> <i>scheme</i></dt>
@@ -125,11 +125,11 @@ description: "install-tl – TeX Live cross-platform installer"
 <dt>&quot;instopt_adjustpath&quot; (default 0 on Unix, 1 on Windows)</dt>
 <dd> Adjust <tt>&quot;PATH&quot;</tt> environment variable.</dd>
 <dt>&quot;instopt_adjustrepo&quot; (default 1)</dt>
-<dd> Set remote repository to a multiplexed <font SIZE="-1">CTAN</font> mirror after installation; see <tt>&quot;-repository&quot;</tt> above.</dd>
+<dd> Set remote repository to a multiplexed CTAN mirror after installation; see <tt>&quot;-repository&quot;</tt> above.</dd>
 <dt>&quot;instopt_letter&quot; (default 0)</dt>
 <dd> Set letter size paper as the default, instead of a4.</dd>
 <dt>&quot;instopt_portable&quot; (default 0)</dt>
-<dd> Install for portable use, e.g., on a <font SIZE="-1">USB</font> stick.</dd>
+<dd> Install for portable use, e.g., on a USB stick.</dd>
 <dt>&quot;instopt_write18_restricted&quot; (default 1)</dt>
 <dd> Enable <tt>&quot;\write18&quot;</tt> for a restricted set of programs.</dd></dl>
 <p> <code>tlpdb options</code> (prefix <tt>&quot;tlpdbopt_&quot;</tt>) </p>
@@ -150,7 +150,7 @@ description: "install-tl – TeX Live cross-platform installer"
   tlpdbopt_w32_multi_user
 </pre>
 <p> <code>platform options</code> (prefix <tt>&quot;binary_&quot;</tt>) </p>
-<p> For each supported platform in TeX Live (directories under <tt>&quot;bin/&quot;</tt>), the variable <tt>&quot;binary_&quot;</tt><i></i><font SIZE="-1"><i>PLATFORM</i></font><i></i> can be set with value 1. For example: </p>
+<p> For each supported platform in TeX Live (directories under <tt>&quot;bin/&quot;</tt>), the variable <tt>&quot;binary_&quot;</tt><i></i><i>PLATFORM</i><i></i> can be set with value 1. For example: </p>
 <pre>
   binary_x86_64-linux 1
 </pre>
@@ -195,5 +195,5 @@ description: "install-tl – TeX Live cross-platform installer"
 <dt>&quot;NOPERLDOC&quot;</dt>
 <dd> Don&#8217;t try to run the <tt>&quot;--help&quot;</tt> message through <tt>&quot;perldoc&quot;</tt>.</dd></dl>
 <h2>AUTHORS AND COPYRIGHT</h2>
-<p> This script and its documentation were written for the TeX Live distribution (&lt;<a rel="nofollow" href="https://tug.org/texlive">https://tug.org/texlive</a>&gt;) and both are licensed under the <font SIZE="-1">GNU</font> General Public License Version 2 or later. </p>
+<p> This script and its documentation were written for the TeX Live distribution (&lt;<a rel="nofollow" href="https://tug.org/texlive">https://tug.org/texlive</a>&gt;) and both are licensed under the GNU General Public License Version 2 or later. </p>
 <p> <tt>$Id:</tt> install-tl 59056 2021-05-02 21:48:01Z karl $ </p>

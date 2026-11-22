@@ -9,8 +9,8 @@ description: "pskgen – Pre-shared key generater and converter for IKE"
 
 <p><code>pskgen</code> &#8211; Pre-shared key generater and converter for IKE</p>
 <h2>Synopsis</h2>
-<p><code>pskgen</code> &#8211;<code>r</code> [-<code>s </code><i>length</i> ] [-<code>o </code><i>file</i> ] [-<code>d</code> ]<br />
-<code>pskgen</code> &#8211;<code>i </code><i>file</i> [-<code>h</code> ] [-<code>o </code><i>file</i> ] [-<code>d</code> ]<br />
+<p><code>pskgen</code> &#8211;<code>r</code> [-<code>s </code><i>length</i> ] [-<code>o </code><i>file</i> ] [-<code>d</code> ]<br/>
+<code>pskgen</code> &#8211;<code>i </code><i>file</i> [-<code>h</code> ] [-<code>o </code><i>file</i> ] [-<code>d</code> ]<br/>
 <code>pskgen</code> &#8211;<code>e </code><i>file</i> [-<code>o </code><i>file</i> ] [-<code>d</code> ]</p>
 <h2>Description</h2>
 <p><code>pskgen</code> creates a pre-share key file for the iked of the Racoon2 system. There are three modes. The first is that it will create a randomized key. The second is that it will create the key from the input file. Note that the Racoon2 only uses the first line of the input file that is plain text format except the case when the &#8211;<code>h</code> option is not specified. <code>pskgen</code> ignores the second line of the file specified and more than that. The third is that it will convert the key file to the format of the &#8211;<code>h</code> option.</p>

@@ -104,5 +104,5 @@ description: "trial – run unit tests"
 <h2>REPORTING BUGS</h2>
 <p> To report a bug, visit <a rel="nofollow" href="http://twistedmatrix.com/trac/newticket">http://twistedmatrix.com/trac/newticket</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2003-2013 Twisted Matrix Laboratories<br />
+<p> Copyright &#169; 2003-2013 Twisted Matrix Laboratories<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

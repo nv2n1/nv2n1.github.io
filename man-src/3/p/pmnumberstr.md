@@ -10,7 +10,7 @@ description: "pmNumberStr, pmNumberStr_r – fixed width output format for numbe
 <p><code>pmNumberStr</code>, <code>pmNumberStr_r</code> &#8211; fixed width output format for numbers</p>
 <h2>C Synopsis</h2>
 <p><code> #include &lt;pcp/pmapi.h&gt; </p>
-<p> const char *pmNumberStr(double </code><i>value</i>);<br />
+<p> const char *pmNumberStr(double </code><i>value</i>);<br/>
  char *pmNumberStr_r(double <i>value</i>, char *<i>buf</i>, int <i>buflen</i>); </p>
 <p> cc &#8230; -lpcp</p>
 <h2>Description</h2>

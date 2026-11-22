@@ -87,7 +87,7 @@ Definition of <code>User</code> accounts.
 <p> The <code>Functional Policy</code> button opens the dialogue for creating and editing the allocation of the functional shares (see and for a description of the different types of functional shares and the configurable weighting parameters). </p>
 <p> The <code>Override Policy</code> button opens the dialogue for creating and editing the allocation of override tickets (see and for a description of the different types of override tickets).</p>
 <h3><code>Project Conf</code></h3>
-<p> This button opens a dialog for creating projects.<br />
+<p> This button opens a dialog for creating projects.<br/>
  The dialogue offers a selection list for the existing projects and displays the configuration of the one being selected. By pushing the <code>Delete</code> button, the selected project is deleted from the configuration. Pushing the <code>Add</code>/<code>Modify</code> button will open a project configuration dialogue, which allows creating new projects changing existing ones. Project configuration in essence means giving or denying access to a project for usersets (see <code>User Conf</code> above as well as The Ok button registers the additional or modified project with</p>
 <h3><code>Browser</code></h3>
 <p> The <code>Object Browser</code> dialogue&#8217;s purpose is manifold: First of all, xxQS_NAMExx and <i>qmon</i> Messages, such as notification of error or success concerning a previously taken action, can be displayed in the dialogue&#8217;s output window. Also the standard output and the standard error output of <i>qmon</i> can be diverted to the <code>Object Browser</code> output window. </p>

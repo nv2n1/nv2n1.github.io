@@ -9,9 +9,9 @@ description: "anacron – runs commands periodically"
 
 <p>anacron &#8211; runs commands periodically</p>
 <h2>Synopsis</h2>
-<p><code>anacron </code>[<code>-s</code>] [<code>-f</code>] [<code>-n</code>] [<code>-d</code>] [<code>-q</code>] [<code>-t anacrontab</code>] [<code>-S spooldir</code>] [<i>job</i>] &#8230;<br />
- <code>anacron [-S spooldir</code>] -u [<code>-t anacrontab</code>] [<i>job</i>] &#8230;<br />
- <code>anacron </code>[<code>-V</code>|<code>-h</code>]<br />
+<p><code>anacron </code>[<code>-s</code>] [<code>-f</code>] [<code>-n</code>] [<code>-d</code>] [<code>-q</code>] [<code>-t anacrontab</code>] [<code>-S spooldir</code>] [<i>job</i>] &#8230;<br/>
+ <code>anacron [-S spooldir</code>] -u [<code>-t anacrontab</code>] [<i>job</i>] &#8230;<br/>
+ <code>anacron </code>[<code>-V</code>|<code>-h</code>]<br/>
  <code>anacron -T [-t anacrontab</code>]</p>
 <h2>Description</h2>
 <p>Anacron can be used to execute commands periodically, with a frequency specified in days. Unlike <code><a href="/docs/linux/man/8-cron/">cron</a>(8)</code>, it does not assume that the machine is running continuously. Hence, it can be used on machines that aren&#8217;t running 24 hours a day, to control daily, weekly, and monthly jobs that are usually controlled by <code>cron</code>. </p>

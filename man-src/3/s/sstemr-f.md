@@ -10,7 +10,7 @@ description: "sstemr.f –"
 <p>sstemr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sstemr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, M, W, Z, LDZ, NZC, ISUPPZ, TRYRAC, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>sstemr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, M, W, Z, LDZ, NZC, ISUPPZ, TRYRAC, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>SSTEMR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sstemr (characterJOBZ, characterRANGE, integerN, real, dimension( * )D, real, dimension( * )E, realVL, realVU, integerIL, integerIU, integerM, real, dimension( * )W, real, dimension( ldz, * )Z, integerLDZ, integerNZC, integer, dimension( * )ISUPPZ, logicalTRYRAC, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

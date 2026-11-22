@@ -10,7 +10,7 @@ description: "ctrexc.f –"
 <p>ctrexc.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ctrexc</code> (COMPQ, N, T, LDT, Q, LDQ, IFST, ILST, INFO)<br />
+<p>subroutine <code>ctrexc</code> (COMPQ, N, T, LDT, Q, LDQ, IFST, ILST, INFO)<br/>
  <i></i><code>CTREXC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctrexc (characterCOMPQ, integerN, complex, dimension( ldt, * )T, integerLDT, complex, dimension( ldq, * )Q, integerLDQ, integerIFST, integerILST, integerINFO)</h3>

@@ -64,7 +64,7 @@ XISDNLoad  xisdnload
 <dt><code>XENVIRONMENT</code></dt>
 <dd> to get the name of a resource file that overrides the global resources stored in the RESOURCE_MANAGER property.</dd></dl>
 <h2>FILES</h2>
-<p> &lt;XRoot&gt;/lib/X11/app-defaults/XISDNLoad &#8211; specifies required resources.<br />
+<p> &lt;XRoot&gt;/lib/X11/app-defaults/XISDNLoad &#8211; specifies required resources.<br/>
  /proc/net/route &#8211; kernel routing table. The proc filesystem is needed by xisdnload to detect wheather a dial-on-demand is active. </p>
 <h2>SEE ALSO</h2>
 <p> X(1), <a href="/docs/linux/man/1-xrdb/">xrdb</a>(1), <a href="/docs/linux/man/1-xload/">xload</a>(1), <a href="/docs/linux/man/4-mem/">mem</a>(4), Athena StripChart Widget.</p>
@@ -73,5 +73,5 @@ XISDNLoad  xisdnload
 <h2>COPYRIGHT</h2>
 <p> This program is based on <i>xload</i> which is Copyright (1988) X Consortium. See <i>X(1)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHORS</h2>
-<p> Besides the basic xload stuff, the ISDN parts are added by<br />
+<p> Besides the basic xload stuff, the ISDN parts are added by<br/>
  Frank Strauss &lt;strauss [at] escape.de&gt; (escape e.V., Braunschweig, Germany). In January 1998 Michael Deindl &lt;olmur [at] dwarf.bb.bawue.de&gt; contributed the `yellow&#8217; patch to make xisdnload recognize the phase of trying to connect and show this by a different background color. Markus Pilzecker &lt;mp [at] timesink.pilzecker.de&gt; detected a bug in the color assignment code resulting in seg faults which has been fixed in January 1998. </p>

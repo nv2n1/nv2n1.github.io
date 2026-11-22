@@ -14,7 +14,7 @@ description: "pf2afm – Make an AFM file from Postscript (PFB/PFA/PFM) font fil
 <h2>DESCRIPTION</h2>
 <p> This script invokes <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) to make an AFM file from PFB / PFA and (optionally) PFM files. Output goes to <i>fontfilename.afm</i>, which must not already exist.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gs/">gs</a>(1)<br />
+<p> <a href="/docs/linux/man/1-gs/">gs</a>(1)<br/>
  pf2afm.ps in the Ghostscript lib directory.</p>
 <h2>VERSION</h2>
 <p> This document was last revised for Ghostscript version 9.55.0.</p>

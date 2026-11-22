@@ -15,10 +15,10 @@ description: "sc::DFPUpdate –"
 <p> Inherits <code>sc::HessianUpdate</code>. Inherited by <code>sc::BFGSUpdate</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>DFPUpdate</code> (<code>StateIn</code> &amp;) </p>
-<p> <code>DFPUpdate</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor reads the following keywords:.<br />
- void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> <code>DFPUpdate</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor reads the following keywords:.<br/>
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>update</code> (const <code>RefSymmSCMatrix</code> &amp;ihessian, const <code>Ref</code>&lt; <code>Function</code> &gt; &amp;, const <code>RefSCVector</code> &amp;xnew, const <code>RefSCVector</code> &amp;gnew) </p>
 <p> void <code>apply_transform</code> (const <code>Ref</code>&lt; <code>NonlinearTransform</code> &gt; &amp;) </p>
 <p> void <code>set_inverse</code> ()</p>

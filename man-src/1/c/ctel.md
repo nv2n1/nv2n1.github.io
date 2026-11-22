@@ -17,16 +17,16 @@ description: "cssh, crsh, ctel, ccon – Cluster administration tool"
 <p> Connections are opened via ssh so a correctly installed and configured ssh installation is required. If, however, the program is called by &#8220;crsh&#8221; then the rsh protocol is used (and the communications channel is insecure), or by &#8220;ctel&#8221; then telnet is used, or by &#8220;ccon&#8221; then console is used. </p>
 <p> Extra caution should be taken when editing system files such as /etc/inet/hosts as lines may not necessarily be in the same order. Assuming line 5 is the same across all servers and modifying that is dangerous. Better to search for the specific line to be changed and double-check before changes are committed.</p>
 <h3>Further Notes</h3>
-<p> Please also see &#8220;<font SIZE="-1">KNOWN BUGS&#8221;</font>.</p>
+<p> Please also see &#8220;KNOWN BUGS&#8221;.</p>
 <dl>
 <dt>&bull;</dt>
 <dd> The dotted line on any sub-menu is a tear-off, i.e. click on it and the sub-menu is turned into its own window.</dd>
 <dt>&bull;</dt>
 <dd> Unchecking a hostname on the Hosts sub-menu will unplug the host from the cluster control window, so any text typed into the console is not sent to that host. Re-selecting it will plug it back in.</dd>
 <dt>&bull;</dt>
-<dd> If your window manager menu bars are obscured by terminal windows see the <tt>&quot;screen_reserve_XXXXX&quot;</tt> options in the <i></i>$HOME<i>/.clusterssh/config</i> file (see &#8220;<font SIZE="-1">FILES&#8221;</font>).</dd>
+<dd> If your window manager menu bars are obscured by terminal windows see the <tt>&quot;screen_reserve_XXXXX&quot;</tt> options in the <i></i>$HOME<i>/.clusterssh/config</i> file (see &#8220;FILES&#8221;).</dd>
 <dt>&bull;</dt>
-<dd> If the terminals overlap too much see the <tt>&quot;terminal_reserve_XXXXX&quot;</tt> options in the <i></i>$HOME<i>/.clusterssh/config</i> file (see &#8220;<font SIZE="-1">FILES&#8221;</font>).</dd>
+<dd> If the terminals overlap too much see the <tt>&quot;terminal_reserve_XXXXX&quot;</tt> options in the <i></i>$HOME<i>/.clusterssh/config</i> file (see &#8220;FILES&#8221;).</dd>
 <dt>&bull;</dt>
 <dd> If the code is called as crsh instead of cssh (i.e. a symlink called crsh points to the cssh file or the file is renamed) rsh is used as the communications protocol instead of ssh.</dd>
 <dt>&bull;</dt>
@@ -34,7 +34,7 @@ description: "cssh, crsh, ctel, ccon – Cluster administration tool"
 <dt>&bull;</dt>
 <dd> If the code is called as ccon instead of cssh (i.e. a symlink called ccon points to the cssh file or the file is renamed) console is used as the communications protocol instead of ssh.</dd>
 <dt>&bull;</dt>
-<dd> When using cssh on a large number of systems to connect back to a single system (e.g. you issue a command to the cluster to scp a file from a given location) and when these connections require authentication (i.e. you are going to authenticate with a password), the sshd daemon at that location may refuse connects after the number specified by MaxStartups in sshd_config is exceeded. (If this value is not set, it defaults to 10.) This is expected behavior; sshd uses this mechanism to prevent DoS attacks from unauthenticated sources. Please tune sshd_config and reload the <font SIZE="-1">SSH</font> daemon, or consider using the ~/.ssh/authorized_keys mechanism for authentication if you encounter this problem.</dd>
+<dd> When using cssh on a large number of systems to connect back to a single system (e.g. you issue a command to the cluster to scp a file from a given location) and when these connections require authentication (i.e. you are going to authenticate with a password), the sshd daemon at that location may refuse connects after the number specified by MaxStartups in sshd_config is exceeded. (If this value is not set, it defaults to 10.) This is expected behavior; sshd uses this mechanism to prevent DoS attacks from unauthenticated sources. Please tune sshd_config and reload the SSH daemon, or consider using the ~/.ssh/authorized_keys mechanism for authentication if you encounter this problem.</dd>
 <dt>&bull;</dt>
 <dd> If client windows fail to open, try running: </dd>
 <p> <tt>&quot;cssh -e {single host name}&quot;</tt> </p>
@@ -43,19 +43,19 @@ description: "cssh, crsh, ctel, ccon – Cluster administration tool"
 <p> Some of these options may also be defined within the configuration file. Default options are shown as appropriate.</p>
 <dl>
 <dt>&#8211;action,-a &#8216;&lt;command&gt;&#8217;</dt>
-<dd> Run the command in each session, i.e. <tt>&quot;-a 'vi /etc/hosts'&quot;</tt> to drop straight into a vi session. <font SIZE="-1">NOTE:</font> not all communications methods support this (ssh and rsh should, telnet and console will not).</dd>
+<dd> Run the command in each session, i.e. <tt>&quot;-a 'vi /etc/hosts'&quot;</tt> to drop straight into a vi session. NOTE: not all communications methods support this (ssh and rsh should, telnet and console will not).</dd>
 <dt>&#8211;autoclose,-A &lt;seconds&gt;</dt>
 <dd> Number of seconds to wait before closing finished terminal windows.</dd>
 <dt>&#8211;autoquit,-q|&#8211;no-autoquit,-Q</dt>
 <dd> Enable|Disable automatically quiting after the last client window has closed (overriding the config file)</dd>
 <dt>&#8211;cluster-file,-c &lt;file&gt;</dt>
-<dd> Use supplied file as additional cluster file (see also &#8220;<font SIZE="-1">FILES&#8221;</font>)</dd>
+<dd> Use supplied file as additional cluster file (see also &#8220;FILES&#8221;)</dd>
 <dt>&#8211;config-file,-C &lt;file&gt;</dt>
-<dd> Use supplied file as additional configuration file (see also &#8220;<font SIZE="-1">FILES&#8221;</font>)</dd>
+<dd> Use supplied file as additional configuration file (see also &#8220;FILES&#8221;)</dd>
 <dt>-d</dt>
-<dd> <font SIZE="-1">DEPRECATED. </font> See &#8216;&#8211;debug&#8217;.</dd>
+<dd> DEPRECATED.  See &#8216;&#8211;debug&#8217;.</dd>
 <dt>-D</dt>
-<dd> <font SIZE="-1">DEPRECATED. </font> See &#8216;&#8211;debug&#8217;.</dd>
+<dd> DEPRECATED.  See &#8216;&#8211;debug&#8217;.</dd>
 <dt>&#8211;debug [number].</dt>
 <dd> Enable debugging. Either a level can be provided or the option can be repeated multiple times. Maximum level is 4.</dd>
 <dt>&#8211;evaluate,-e [user@]&lt;hostname&gt;[:port]</dt>
@@ -74,27 +74,27 @@ description: "cssh, crsh, ctel, ccon – Cluster administration tool"
 <dd>
 </dd><dt>&#8211;options,-o &quot;&quot; &#8211; for rsh connections</dt>
 <dd> Specify arguments to be passed to ssh or rsh when making the connection. </dd>
-<p> <font SIZE="-1"><code>NOTE:</code></font> any &#8220;generic&#8221; change to the method (i.e. specifying the ssh port to use) should be done in the medium&#8217;s own config file (see <tt>&quot;ssh_config&quot;</tt> and <i></i>$HOME<i>/.ssh/config</i>).</p>
+<p> <code>NOTE:</code> any &#8220;generic&#8221; change to the method (i.e. specifying the ssh port to use) should be done in the medium&#8217;s own config file (see <tt>&quot;ssh_config&quot;</tt> and <i></i>$HOME<i>/.ssh/config</i>).</p>
 <dt>&#8211;output-config,-u</dt>
 <dd> Output the current configuration in the same format used by the <i></i>$HOME<i>/.clusterssh/config</i> file.</dd>
 <dt>&#8211;port,-p &lt;port&gt;</dt>
 <dd> Specify an alternate port for connections.</dd>
 <dt>&#8211;show-history,-s</dt>
-<dd> <font SIZE="-1">IN BETA:</font> Show history within console window. This code is still being worked upon, but may help some users.</dd>
+<dd> IN BETA: Show history within console window. This code is still being worked upon, but may help some users.</dd>
 <dt>&#8211;tag-file,-r &lt;file&gt;</dt>
-<dd> Use supplied file as additional tag file (see also &#8220;<font SIZE="-1">FILES&#8221;</font>)</dd>
+<dd> Use supplied file as additional tag file (see also &#8220;FILES&#8221;)</dd>
 <dt>&#8211;term-args,-t &quot;&quot;</dt>
 <dd> Specify arguments to be passed to terminals being used</dd>
 <dt>&#8211;tile,-g|&#8211;no-tile,-G</dt>
 <dd> Enable|Disable window tiling (overriding the config file)</dd>
-<dt>&#8211;title,-T &quot;<font SIZE="-1">CSSH&quot;</font></dt>
+<dt>&#8211;title,-T &quot;CSSH&quot;</dt>
 <dd> Specify the initial part of the title used in the console and client windows</dd>
 <dt>&#8211;unique-servers,-m</dt>
 <dd> Connect to each host only once</dd>
 <dt>&#8211;use_all_a_records,-A</dt>
-<dd> If a hostname resolves to multiple <font SIZE="-1">IP</font> addresses, toggle whether or not to connect to all of them, or just the first one (see also config file entry)</dd>
+<dd> If a hostname resolves to multiple IP addresses, toggle whether or not to connect to all of them, or just the first one (see also config file entry)</dd>
 <dt>&#8211;username,-l $LOGNAME</dt>
-<dd> Specify the default username to use for connections (if different from the currently logged in user). <font SIZE="-1"><code>NOTE:</code></font> will be overridden by &lt;user&gt;@&lt;host&gt;</dd>
+<dd> Specify the default username to use for connections (if different from the currently logged in user). <code>NOTE:</code> will be overridden by &lt;user&gt;@&lt;host&gt;</dd>
 <dt>&#8211;version,-v</dt>
 <dd> Show version information and exit</dd></dl>
 <h2>ARGUMENTS</h2>
@@ -103,7 +103,7 @@ description: "cssh, crsh, ctel, ccon – Cluster administration tool"
 <dt>[user@]&lt;hostname&gt;[:port] &#8230;</dt>
 <dd> Open an xterm to the given hostname and connect to the administration console. An optional port number can be used if sshd is not listening on standard port (e.g not listening on port 22) and ssh_config cannot be used.</dd>
 <dt>&lt;tag&gt; &#8230;</dt>
-<dd> Open a series of xterms defined by &lt;tag&gt; in one of the suplimentary configuration files (see &#8220;<font SIZE="-1">FILES&#8221;</font>). </dd>
+<dd> Open a series of xterms defined by &lt;tag&gt; in one of the suplimentary configuration files (see &#8220;FILES&#8221;). </dd>
 <p> Note: specifying a username on a cluster tag will override any usernames defined in the cluster</dl>
 <h2>KEY SHORTCUTS</h2>
 <p> The following key shortcuts are available within the console window, and all of them may be changed via the configuration files.</p>
@@ -124,7 +124,7 @@ description: "cssh, crsh, ctel, ccon – Cluster administration tool"
 <dd> $&nbsp;<wbr>cssh server1 server2 server3</dd>
 <dt>Open up a session to a cluster of servers identified by the tag &#8216;farm1&#8217; and give the controlling window a specific title, where the cluster is defined in one of the default configuration files</dt>
 <dd> $&nbsp;<wbr>cssh -T&nbsp;<wbr>&#8216;Web Farm Cluster 1&#8217;&nbsp;<wbr>farm1</dd>
-<dt>Connect to different servers using different login names. <font SIZE="-1">NOTE:</font> this can also be achieved by setting up appropriate options in the <i>.ssh/config</i> file. Do not close cssh when last terminal exits.</dt>
+<dt>Connect to different servers using different login names. NOTE: this can also be achieved by setting up appropriate options in the <i>.ssh/config</i> file. Do not close cssh when last terminal exits.</dt>
 <dd> $&nbsp;<wbr>cssh -Q user1 [at] server1 admin [at] server2</dd>
 <dt>Open up a cluster defined in a non-default configuration file</dt>
 <dd> $&nbsp;<wbr>cssh -c&nbsp;<wbr><tt>$HOME</tt>/cssh.config db_cluster</dd>
@@ -146,17 +146,17 @@ i.e.
 </code></pre>
 <p> All comments (marked by a #) and blank lines are ignored. Tags may be nested, but be aware of using recursive tags as they are not checked for. </p>
 <p> Extra cluster files may also be specified either as an option on the command line (see <tt>&quot;cluster-file&quot;</tt>) or in the users <i></i>$HOME<i>/.clusterssh/config</i> file (see <tt>&quot;extra_cluster_file&quot;</tt> configuration option). </p>
-<p> <font SIZE="-1">NOTE:</font> the last tag read overwrites any pre-existing tag of that name </p>
-<p> <font SIZE="-1">NOTE:</font> there is a special cluster tag called <tt>&quot;default&quot;</tt> &#8211; any tags or hosts included within this tag will be automatically opened if no other tags are specified on the command line.</p>
+<p> NOTE: the last tag read overwrites any pre-existing tag of that name </p>
+<p> NOTE: there is a special cluster tag called <tt>&quot;default&quot;</tt> &#8211; any tags or hosts included within this tag will be automatically opened if no other tags are specified on the command line.</p>
 <dt><i>/etc/tags</i>, <i>$HOME/.clusterssh/tags</i></dt>
 <dd> Very similar to <i>cluster</i> files but the definition is reversed. The format is: </dd>
 <p> &lt;host&gt;&nbsp;<wbr>&lt;tag&gt;&nbsp;<wbr>[&#8230;] </p>
 <p> This allows one host to be specified as a member of a number of tags. This format can be clearer than using <i>clusters</i> files. </p>
 <p> Extra tag files may be spcieid either an an option (see <tt>&quot;tag-file&quot;</tt>) or within the users <i></i>$HOME<i>/.clusterssh/config</i> file (see <tt>&quot;extra_tag_file&quot;</tt> configuration option). </p>
-<p> <font SIZE="-1">NOTE:</font> All tags are added together</p>
+<p> NOTE: All tags are added together</p>
 <dt><i>/etc/csshrc</i> &amp; <i>$HOME/.clusterssh/config</i></dt>
 <dd> This file contains configuration overrides &#8211; the defaults are as marked. Default options are overwritten first by the global file, and then by the user file. </dd>
-<p> <font SIZE="-1"><code>NOTE:</code></font> values for entries do not need to be quoted unless it is required for passing arguments, i.e. </p>
+<p> <code>NOTE:</code> values for entries do not need to be quoted unless it is required for passing arguments, i.e. </p>
 <pre>
   terminal_allow_send_events=&quot;-xrm '*.VT100.allowSendEvents:true'&quot;
 </pre>
@@ -190,7 +190,7 @@ clusters = &lt;tag1&gt;&lt;tag2&gt;&lt;tag3&gt;
  extra_cluster_file = ~/clusters, $HOME/clus
 </pre>
 <dt>ignore_host_errors</dt>
-<dd> <font SIZE="-1">THIS OPTION IS DEPRECATED. </font> It has been left in so current systems continue to function as expected.</dd>
+<dd> THIS OPTION IS DEPRECATED.  It has been left in so current systems continue to function as expected.</dd>
 <dt>key_addhost = Control-Shift-plus</dt>
 <dd> Default key sequence to open AddHost menu. See below notes on shortcuts.</dd>
 <dt>key_clientname = Alt-n</dt>
@@ -239,8 +239,8 @@ clusters = &lt;tag1&gt;&lt;tag2&gt;&lt;tag3&gt;
 <dd>
 </dd><dt>telnet_args = &lt;blank&gt;</dt>
 <dd> Sets any arguments to be used with the communication method (defaults to ssh arguments). </dd>
-<p> <font SIZE="-1"><code>NOTE:</code></font> The given defaults are based on OpenSSH, not commercial ssh software. </p>
-<p> <font SIZE="-1"><code>NOTE:</code></font> Any &#8220;generic&#8221; change to the method (i.e. specifying the ssh port to use) should be done in the medium&#8217;s own config file (see <tt>&quot;ssh_config&quot;</tt> and <i></i>$HOME<i>/.ssh/config</i>).</p>
+<p> <code>NOTE:</code> The given defaults are based on OpenSSH, not commercial ssh software. </p>
+<p> <code>NOTE:</code> Any &#8220;generic&#8221; change to the method (i.e. specifying the ssh port to use) should be done in the medium&#8217;s own config file (see <tt>&quot;ssh_config&quot;</tt> and <i></i>$HOME<i>/.ssh/config</i>).</p>
 <dt>screen_reserve_top = 0</dt>
 <dd>
 </dd><dt>screen_reserve_bottom = 60</dt>
@@ -280,9 +280,9 @@ clusters = &lt;tag1&gt;&lt;tag2&gt;&lt;tag3&gt;
 <dt>title = cssh</dt>
 <dd> Title of windows to use for both the console and terminals.</dd>
 <dt>unmap_on_redraw = no</dt>
-<dd> Tell Tk to use the UnmapWindow request before redrawing terminal windows. This defaults to &#8220;no&#8221; as it causes some problems with the <font SIZE="-1">FVWM</font> window manager. If you are experiencing problems with redraws, you can set it to &#8220;yes&#8221; to allow the window to be unmapped before it is repositioned.</dd>
+<dd> Tell Tk to use the UnmapWindow request before redrawing terminal windows. This defaults to &#8220;no&#8221; as it causes some problems with the FVWM window manager. If you are experiencing problems with redraws, you can set it to &#8220;yes&#8221; to allow the window to be unmapped before it is repositioned.</dd>
 <dt>use_all_a_records = no</dt>
-<dd> If a hostname resolves to multiple <font SIZE="-1">IP</font> addresses, set to <tt>&quot;yes&quot;</tt> to connect to all of them, not just the first one found.</dd>
+<dd> If a hostname resolves to multiple IP addresses, set to <tt>&quot;yes&quot;</tt> to connect to all of them, not just the first one found.</dd>
 <dt>use_hotkeys = yes</dt>
 <dd> Setting to anything other than <tt>&quot;yes&quot;</tt> will disable all hotkeys.</dd>
 <dt>user = $LOGNAME</dt>
@@ -295,7 +295,7 @@ clusters = &lt;tag1&gt;&lt;tag2&gt;&lt;tag3&gt;
 <dl>
 <dt>
 </dt><dd>
-<p> <font SIZE="-1"><code>NOTE:</code></font> The key shortcut modifiers must be in the form &#8220;Control&#8221;, &#8220;Alt&#8221;, or &#8220;Shift&#8221;, i.e. with the first letter capitalised and the rest lower case. Keys may also be disabled individually by setting to the word &#8220;null&#8221;.</dd></dl>
+<p> <code>NOTE:</code> The key shortcut modifiers must be in the form &#8220;Control&#8221;, &#8220;Alt&#8221;, or &#8220;Shift&#8221;, i.e. with the first letter capitalised and the rest lower case. Keys may also be disabled individually by setting to the word &#8220;null&#8221;.</dd></dl>
 <dt><i>$HOME/.csshrc_send_menu</i></dt>
 <dd> This (optional) file contains items to populate the send menu. The default entry could be written as: </dd>
 <pre>
@@ -355,12 +355,12 @@ clusters = &lt;tag1&gt;&lt;tag2&gt;&lt;tag3&gt;
 <dt>%h</dt>
 <dd> Hostname of server where cssh is being run from</dd>
 <dt>%n</dt>
-<dd> &lt;<font SIZE="-1">RETURN</font>&gt; code</dd></dl>
+<dd> &lt;RETURN&gt; code</dd></dl>
 </dl>
 <dl>
 <dt>
 </dt><dd>
-<p> <font SIZE="-1"><code>NOTE:</code></font> requires XML::Simple to be installed</dd></dl>
+<p> <code>NOTE:</code> requires XML::Simple to be installed</dd></dl>
 </dl>
 <h2>KNOWN BUGS</h2>
 <dl>
@@ -374,13 +374,13 @@ clusters = &lt;tag1&gt;&lt;tag2&gt;&lt;tag3&gt;
 <dl>
 <dl>
 <dt>a.</dt>
-<dd> Use square brackets around the IPv6 address, i.e.<br />
-&nbsp;<wbr>[2001:db8::1428]:2323 or<br />
+<dd> Use square brackets around the IPv6 address, i.e.<br/>
+&nbsp;<wbr>[2001:db8::1428]:2323 or<br/>
 &nbsp;<wbr>[2001:db8::1428:2323] as appropriate so there is no ambiguity</dd>
 <dt>b.</dt>
 <dd> Use the full IPv6 address if also using a port number &#8211; the 8th colon is assumed to be the port seperator.</dd>
 <dt>c.</dt>
-<dd> Define the IPv6 address in your /etc/hosts file, <font SIZE="-1">DNS</font> or other name service lookup mechanism and use the hostname instead of the address.</dd></dl>
+<dd> Define the IPv6 address in your /etc/hosts file, DNS or other name service lookup mechanism and use the hostname instead of the address.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -421,5 +421,5 @@ clusters = &lt;tag1&gt;&lt;tag2&gt;&lt;tag3&gt;
 <p> Duncan Ferguson, <tt>&quot;&lt;duncan_j_ferguson at yahoo.co.uk&gt;&quot;</tt></p>
 <h2>LICENSE AND COPYRIGHT</h2>
 <p> Copyright 1999-2010 Duncan Ferguson. </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of either: the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; or the Artistic License. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of either: the GNU General Public License as published by the Free Software Foundation; or the Artistic License. </p>
 <p> See <a rel="nofollow" href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a> for more information. </p>

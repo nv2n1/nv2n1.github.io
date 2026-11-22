@@ -10,7 +10,7 @@ description: "sbdsdc.f –"
 <p>sbdsdc.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sbdsdc</code> (UPLO, COMPQ, N, D, E, U, LDU, VT, LDVT, Q, IQ, WORK, IWORK, INFO)<br />
+<p>subroutine <code>sbdsdc</code> (UPLO, COMPQ, N, D, E, U, LDU, VT, LDVT, Q, IQ, WORK, IWORK, INFO)<br/>
  <i></i><code>SBDSDC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sbdsdc (characterUPLO, characterCOMPQ, integerN, real, dimension( * )D, real, dimension( * )E, real, dimension( ldu, * )U, integerLDU, real, dimension( ldvt, * )VT, integerLDVT, real, dimension( * )Q, integer, dimension( * )IQ, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

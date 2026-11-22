@@ -40,7 +40,7 @@ description: "checksec – check executables and kernel properties"
 <dd>Checks source for a signed update and updates the application if available </dd>
 </dl>
 <h2>Diagnostics</h2>
-<p>The following diagnostics may be issued on stderr:<br />
+<p>The following diagnostics may be issued on stderr:<br/>
 &nbsp;<wbr> Permission Denied.</p>
 <dl>
 <dd>For most of the checks you must be root..</dd></dl>

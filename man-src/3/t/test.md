@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-test/"
 description: "test – Test Suite"
 ---
 
-<p>test &#8211; Test Suite<br />
+<p>test &#8211; Test Suite<br/>
 &nbsp;<wbr></p>
 <dl>
 <dt><code>Class ActualActual</code></dt>

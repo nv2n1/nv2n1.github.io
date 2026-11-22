@@ -85,9 +85,9 @@ description: "sm-notify – send reboot notifications to NFS peers"
 <dd>kernel&#8217;s copy of the NSM state number</dd></dl>
 <h2>See Also</h2>
 <p><code>rpc.statd</code>(8), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/2-uname/">uname</a></code>(2), <code><a href="/docs/linux/man/7-hostname/">hostname</a></code>(7) </p>
-<p> RFC 1094 &#8211; &quot;NFS: Network File System Protocol Specification&quot;<br />
- RFC 1813 &#8211; &quot;NFS Version 3 Protocol Specification&quot;<br />
+<p> RFC 1094 &#8211; &quot;NFS: Network File System Protocol Specification&quot;<br/>
+ RFC 1813 &#8211; &quot;NFS Version 3 Protocol Specification&quot;<br/>
  OpenGroup Protocols for Interworking: XNFS, Version 3W &#8211; Chapter 11</p>
 <h2>Authors</h2>
-<p>Olaf Kirch &lt;okir [at] suse.de&gt;<br />
+<p>Olaf Kirch &lt;okir [at] suse.de&gt;<br/>
  Chuck Lever &lt;chuck.lever [at] oracle.com&gt;</p>

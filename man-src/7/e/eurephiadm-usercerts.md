@@ -7,7 +7,7 @@ url: "/docs/linux/man/7-eurephiadm-usercerts/"
 description: "eurephiadm usercerts – Managing user accounts and certificate relations"
 ---
 
-<p><code>eurephiadm usercerts</code><br />
+<p><code>eurephiadm usercerts</code><br/>
 &nbsp;<wbr>&#8211; Managing user accounts and certificate relations</p>
 <h2>Description</h2>
 <p>For a user to connect to a eurephia enabled OpenVPN server, a user account must have been created and activated and an SSL certificate available to the user must have been registered. The user account and certificate the user may use must then be linked together, and this linking the <code>eurephiadm usercert</code> command takes care of. </p>
@@ -31,15 +31,15 @@ description: "eurephiadm usercerts – Managing user accounts and certificate re
 <dt><code>-S</code> | <code>&#8211;sort</code> &lt;sort keys&gt;</dt>
 <dd>Define the sorting of the list </dd>
 <p> Valid sort keys are:</p>
-<dd><code>uid</code><br />
+<dd><code>uid</code><br/>
 &nbsp;<wbr>Nummeric User ID</dd>
-<dd><code>certid</code><br />
+<dd><code>certid</code><br/>
 &nbsp;<wbr>Nummeric Certificate ID</dd>
-<dd><code>accessprofile</code><br />
+<dd><code>accessprofile</code><br/>
 &nbsp;<wbr>Nummeric firewall profile ID</dd>
-<dd><code>registered</code><br />
+<dd><code>registered</code><br/>
 &nbsp;<wbr>According to when the user-cert was registered</dd>
-<dd><code>uicid</code><br />
+<dd><code>uicid</code><br/>
 &nbsp;<wbr>Nummeric user-cert link ID</dd></dl>
 <h2>Set Fw Profile Mode</h2>
 <p>The set-fwprofile mode will update the firewall access profile for a given user-cert link </p>

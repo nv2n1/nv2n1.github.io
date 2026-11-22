@@ -10,27 +10,27 @@ description: "Credential Operations –"
 
 <p> Credential Operations &#8211; </p>
 <h3>Functions</h3>
-<p> globus_result_t <code>globus_gsi_cred_read</code> (<code>globus_gsi_cred_handle_t</code> handle, X509_NAME *desired_subject)<br />
- <i>Read a credential. </i><br />
- globus_result_t <code>globus_gsi_cred_read_proxy</code> (<code>globus_gsi_cred_handle_t</code> handle, const char *proxy_filename)<br />
- <i>Read proxy credential. </i><br />
- globus_result_t <code>globus_gsi_cred_read_proxy_bio</code> (<code>globus_gsi_cred_handle_t</code> handle, BIO *bio)<br />
- <i>Read proxy credential from a BIO. </i><br />
- globus_result_t <code>globus_gsi_cred_read_key</code> (<code>globus_gsi_cred_handle_t</code> handle, const char *key_filename, int(*pw_cb)())<br />
- <i>Read a private key. </i><br />
- globus_result_t <code>globus_gsi_cred_read_cert</code> (<code>globus_gsi_cred_handle_t</code> handle, const char *cert_filename)<br />
- <i>Read a certificate chain from a file. </i><br />
- globus_result_t <code>globus_gsi_cred_read_cert_bio</code> (<code>globus_gsi_cred_handle_t</code> handle, BIO *bio)<br />
- <i>Read a certificate chain from a BIO. </i><br />
- globus_result_t <code>globus_gsi_cred_read_cert_buffer</code> (const char *pem_buf, <code>globus_gsi_cred_handle_t</code> *out_handle, X509 **out_cert, STACK_OF(X509)**out_cert_chain, char **out_subject)<br />
- <i>Read certificate chain from a buffer. </i><br />
- globus_result_t <code>globus_gsi_cred_read_pkcs12</code> (<code>globus_gsi_cred_handle_t</code> handle, const char *pkcs12_filename)<br />
- <i>Read certificate and key from a PKCS12 file. </i><br />
- globus_result_t <code>globus_gsi_cred_write</code> (<code>globus_gsi_cred_handle_t</code> handle, BIO *bio)<br />
- <i>Write Credential. </i><br />
- globus_result_t <code>globus_gsi_cred_write_proxy</code> (<code>globus_gsi_cred_handle_t</code> handle, const char *proxy_filename)<br />
- <i>Write a proxy credential. </i><br />
- globus_result_t <code>globus_gsi_cred_get_cert_type</code> (<code>globus_gsi_cred_handle_t</code> handle, globus_gsi_cert_utils_cert_type_t *type)<br />
+<p> globus_result_t <code>globus_gsi_cred_read</code> (<code>globus_gsi_cred_handle_t</code> handle, X509_NAME *desired_subject)<br/>
+ <i>Read a credential. </i><br/>
+ globus_result_t <code>globus_gsi_cred_read_proxy</code> (<code>globus_gsi_cred_handle_t</code> handle, const char *proxy_filename)<br/>
+ <i>Read proxy credential. </i><br/>
+ globus_result_t <code>globus_gsi_cred_read_proxy_bio</code> (<code>globus_gsi_cred_handle_t</code> handle, BIO *bio)<br/>
+ <i>Read proxy credential from a BIO. </i><br/>
+ globus_result_t <code>globus_gsi_cred_read_key</code> (<code>globus_gsi_cred_handle_t</code> handle, const char *key_filename, int(*pw_cb)())<br/>
+ <i>Read a private key. </i><br/>
+ globus_result_t <code>globus_gsi_cred_read_cert</code> (<code>globus_gsi_cred_handle_t</code> handle, const char *cert_filename)<br/>
+ <i>Read a certificate chain from a file. </i><br/>
+ globus_result_t <code>globus_gsi_cred_read_cert_bio</code> (<code>globus_gsi_cred_handle_t</code> handle, BIO *bio)<br/>
+ <i>Read a certificate chain from a BIO. </i><br/>
+ globus_result_t <code>globus_gsi_cred_read_cert_buffer</code> (const char *pem_buf, <code>globus_gsi_cred_handle_t</code> *out_handle, X509 **out_cert, STACK_OF(X509)**out_cert_chain, char **out_subject)<br/>
+ <i>Read certificate chain from a buffer. </i><br/>
+ globus_result_t <code>globus_gsi_cred_read_pkcs12</code> (<code>globus_gsi_cred_handle_t</code> handle, const char *pkcs12_filename)<br/>
+ <i>Read certificate and key from a PKCS12 file. </i><br/>
+ globus_result_t <code>globus_gsi_cred_write</code> (<code>globus_gsi_cred_handle_t</code> handle, BIO *bio)<br/>
+ <i>Write Credential. </i><br/>
+ globus_result_t <code>globus_gsi_cred_write_proxy</code> (<code>globus_gsi_cred_handle_t</code> handle, const char *proxy_filename)<br/>
+ <i>Write a proxy credential. </i><br/>
+ globus_result_t <code>globus_gsi_cred_get_cert_type</code> (<code>globus_gsi_cred_handle_t</code> handle, globus_gsi_cert_utils_cert_type_t *type)<br/>
  <i>Get the X.509 certificate type. </i></p>
 <h2>Detailed Description</h2>
 <p> Read/Write a GSI Credential Handle. </p>
@@ -41,7 +41,7 @@ description: "Credential Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle containing the certificate<br />
+</dt><dd> <i>handle</i> The credential handle containing the certificate<br/>
  <i>type</i> The returned X509 certificate type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -52,7 +52,7 @@ description: "Credential Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle to set. This credential handle should already be initialized using globus_gsi_cred_handle_init.<br />
+</dt><dd> <i>handle</i> The credential handle to set. This credential handle should already be initialized using globus_gsi_cred_handle_init.<br/>
  <i>desired_subject</i> The subject to check for when reading in a credential. The desired_subject should be either a exact match of the read cert&#8217;s subject or should just contain the /CN entry. If null, the credential read in is the first match based on the system configuration (paths and environment variables)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -72,7 +72,7 @@ description: "Credential Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> the handle to set based on the certificate that is read<br />
+</dt><dd> <i>handle</i> the handle to set based on the certificate that is read<br/>
  <i>cert_filename</i> the filename of the certificate to read</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -83,7 +83,7 @@ description: "Credential Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> the handle to set based on the certificate that is read<br />
+</dt><dd> <i>handle</i> the handle to set based on the certificate that is read<br/>
  <i>bio</i> the bio to read the certificate from</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -94,10 +94,10 @@ description: "Credential Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>pem_buf</i> The buffer containing the PEM formatted cert and chain.<br />
- <i>out_handle</i> The handle to initialize and set cert on.<br />
- <i>out_cert</i> The X509 certificate. This should be freed with X509_free().<br />
- <i>out_cert_chain</i> The X509 certificate chain. This should be freed with sk_X509_free().<br />
+</dt><dd> <i>pem_buf</i> The buffer containing the PEM formatted cert and chain.<br/>
+ <i>out_handle</i> The handle to initialize and set cert on.<br/>
+ <i>out_cert</i> The X509 certificate. This should be freed with X509_free().<br/>
+ <i>out_cert_chain</i> The X509 certificate chain. This should be freed with sk_X509_free().<br/>
  <i>out_subject</i> The identity name of the cert. This should be freed with OPENSSL_free().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -108,8 +108,8 @@ description: "Credential Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> the handle to set based on the key that is read<br />
- <i>key_filename</i> the filename of the key to read<br />
+</dt><dd> <i>handle</i> the handle to set based on the key that is read<br/>
+ <i>key_filename</i> the filename of the key to read<br/>
  <i>pw_cb</i> the callback for obtaining a password for decrypting the key.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -120,7 +120,7 @@ description: "Credential Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> the handle to populate with the read credential<br />
+</dt><dd> <i>handle</i> the handle to populate with the read credential<br/>
  <i>pkcs12_filename</i> the filename containing the credential to read</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -131,7 +131,7 @@ description: "Credential Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle to set based on the proxy credential read from the file<br />
+</dt><dd> <i>handle</i> The credential handle to set based on the proxy credential read from the file<br/>
  <i>proxy_filename</i> The file containing the proxy credential</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -142,7 +142,7 @@ description: "Credential Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential handle to set. The credential should handle be initialized (i.e. not NULL).<br />
+</dt><dd> <i>handle</i> The credential handle to set. The credential should handle be initialized (i.e. not NULL).<br/>
  <i>bio</i> The stream to read the credential from</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -153,7 +153,7 @@ description: "Credential Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential to write out<br />
+</dt><dd> <i>handle</i> The credential to write out<br/>
  <i>bio</i> The BIO stream to write out to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -164,7 +164,7 @@ description: "Credential Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The credential to write out<br />
+</dt><dd> <i>handle</i> The credential to write out<br/>
  <i>proxy_filename</i> The file to write out to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

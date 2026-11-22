@@ -34,22 +34,22 @@ description: "kcdirtest – command line interface to test the directory hash da
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br />
- <code>-rnd</code> : performs random test.<br />
- <code>-set</code> : performs setting operation only.<br />
- <code>-get</code> : performs getting operation only.<br />
- <code>-getw</code> : performs getting with a buffer operation only.<br />
- <code>-rem</code> : performs removing operation only.<br />
- <code>-etc</code> : performs miscellaneous operations.<br />
- <code>-tran</code> : performs transaction.<br />
- <code>-oat</code> : opens the database with the auto transaction option.<br />
- <code>-oas</code> : opens the database with the auto synchronization option.<br />
- <code>-onl</code> : opens the database with the no locking option.<br />
- <code>-otl</code> : opens the database with the try locking option.<br />
- <code>-onr</code> : opens the database with the no auto repair option.<br />
- <code>-tc</code> : tunes the database with the compression option.<br />
- <code>-lv</code> : reports all errors.<br />
- <code>-it </code><i>num</i> : specifies the number of repetition.<br />
+</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br/>
+ <code>-rnd</code> : performs random test.<br/>
+ <code>-set</code> : performs setting operation only.<br/>
+ <code>-get</code> : performs getting operation only.<br/>
+ <code>-getw</code> : performs getting with a buffer operation only.<br/>
+ <code>-rem</code> : performs removing operation only.<br/>
+ <code>-etc</code> : performs miscellaneous operations.<br/>
+ <code>-tran</code> : performs transaction.<br/>
+ <code>-oat</code> : opens the database with the auto transaction option.<br/>
+ <code>-oas</code> : opens the database with the auto synchronization option.<br/>
+ <code>-onl</code> : opens the database with the no locking option.<br/>
+ <code>-otl</code> : opens the database with the try locking option.<br/>
+ <code>-onr</code> : opens the database with the no auto repair option.<br/>
+ <code>-tc</code> : tunes the database with the compression option.<br/>
+ <code>-lv</code> : reports all errors.<br/>
+ <code>-it </code><i>num</i> : specifies the number of repetition.<br/>
  <code>-hard</code> : performs physical synchronization.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

@@ -215,7 +215,7 @@ description: "emacs – GNU project Emacs editor"
 <dd>Specify the &quot;visual&quot; that X should use. This tells X how to handle colors. The value should start with one of <i>TrueColor</i>, <i>PseudoColor</i>, <i>DirectColor</i>, <i>StaticColor</i>, <i>GrayScale</i>, and <i>StaticGray</i>, followed by <code>&#8211;</code><i>depth</i>, where <i>depth</i> is the number of color planes.</dd></dl>
 </dl>
 <h2>Manuals</h2>
-<p>You can order printed copies of the GNU Emacs Manual from the Free Software Foundation, which develops GNU software. See the online store at &lt;<a rel="nofollow" href="https://shop.fsf.org/">https://shop.fsf.org/</a>&gt;.<br />
+<p>You can order printed copies of the GNU Emacs Manual from the Free Software Foundation, which develops GNU software. See the online store at &lt;<a rel="nofollow" href="https://shop.fsf.org/">https://shop.fsf.org/</a>&gt;.<br/>
  Your local administrator might also have copies available. As with all software and publications from FSF, everyone is permitted to make and distribute copies of the Emacs manual. The Texinfo source to the manual is also included in the Emacs source distribution.</p>
 <h2>Files</h2>
 <p>/usr/local/share/info &#8212; files for the Info documentation browser. The complete text of the Emacs reference manual is included in a convenient tree structured form. Also includes the Emacs Lisp Reference Manual, useful to anyone wishing to write programs in the Emacs Lisp extension language, and the Introduction to Programming in Emacs Lisp. </p>

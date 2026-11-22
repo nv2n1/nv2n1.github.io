@@ -18,27 +18,27 @@ description: "axspawn – Allow automatic login to a Linux system."
 <p> Of course <code>axspawn</code> does callsign checking: Only letters and numbers are allowed, the callsign must be longer than 4 characters and shorter than 6 characters (without SSID). There must be at least one digit, and max. two digits within the call. The SSID must be within the range of 0 and 15. Please drop me a note if you know a valid Amateur Radio callsign that does not fit this pattern _and_ can be represented correctly in AX.25. </p>
 <p> axspawn also has the well known authentication mechanisms of the AX.25 bbs <code>baycom (sys)</code> and <code>md5</code> standards. axspawn searches in /etc/ax25/bcpasswd (first) and ~user/.bcpasswd (second) for a match of the required authentication mechanism and password. md5 and baycom passwords may differ. md5 passwords gain over baycom passwords. </p>
 <p> Note: you could &quot;lock&quot; special &quot;friends&quot; out by specifying an empty password in /etc/ax25/bcpasswd (line &quot;n0call:md5:&quot;). -&gt; md5 Passwords are enforced. But the length is shorter than the minimum (len 8 for md5, len 20 for baycom); user&#8217;s password file is not searched because in /etc/ax25/bcpasswd its already found.. </p>
-<p> Syntax and caveeats for /etc/ax25/bcpasswd:<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Has to be a regular file&nbsp;<wbr>(no symlink). Not world-readable/writable.<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Example lines:<br />
-&nbsp;<wbr>#&nbsp;<wbr>Thomas<br />
-&nbsp;<wbr>dl9sau:md5:abcdefgh<br />
-&nbsp;<wbr>#&nbsp;<wbr>Test<br />
-&nbsp;<wbr>te1st:sys:12345678901234567890<br />
-&nbsp;<wbr>#&nbsp;<wbr>root<br />
-&nbsp;<wbr>root:md5:ziz7AoxuAt6jeuthTheexet0uDa9iefuAeph3eelAetahmi0<br />
-&nbsp;<wbr>#&nbsp;<wbr>misconfiguration:<br />
-&nbsp;<wbr>thisbadlineisignored<br />
-&nbsp;<wbr>#&nbsp;<wbr>With this line<br />
-&nbsp;<wbr>systempasswordonly<br />
+<p> Syntax and caveeats for /etc/ax25/bcpasswd:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Has to be a regular file&nbsp;<wbr>(no symlink). Not world-readable/writable.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Example lines:<br/>
+&nbsp;<wbr>#&nbsp;<wbr>Thomas<br/>
+&nbsp;<wbr>dl9sau:md5:abcdefgh<br/>
+&nbsp;<wbr>#&nbsp;<wbr>Test<br/>
+&nbsp;<wbr>te1st:sys:12345678901234567890<br/>
+&nbsp;<wbr>#&nbsp;<wbr>root<br/>
+&nbsp;<wbr>root:md5:ziz7AoxuAt6jeuthTheexet0uDa9iefuAeph3eelAetahmi0<br/>
+&nbsp;<wbr>#&nbsp;<wbr>misconfiguration:<br/>
+&nbsp;<wbr>thisbadlineisignored<br/>
+&nbsp;<wbr>#&nbsp;<wbr>With this line<br/>
+&nbsp;<wbr>systempasswordonly<br/>
 &nbsp;<wbr>#&nbsp;<wbr>.. axspan will not look in user&#8217;s homedir for his .bcpasswd </p>
-<p> Syntax and caveeats for user&#8217;s .bcpasswd in his $HOME:<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Has to be a regular file&nbsp;<wbr>(no symlink). Neither group- nor world-<br />
-read-/writable. Has to be owned by the user or uid 0&nbsp;<wbr>(root).<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Example lines:<br />
-&nbsp;<wbr>#&nbsp;<wbr>could be shorter<br />
-&nbsp;<wbr>md5:abcdefgh<br />
-&nbsp;<wbr>#&nbsp;<wbr>should be longer<br />
+<p> Syntax and caveeats for user&#8217;s .bcpasswd in his $HOME:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Has to be a regular file&nbsp;<wbr>(no symlink). Neither group- nor world-<br/>
+read-/writable. Has to be owned by the user or uid 0&nbsp;<wbr>(root).<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Example lines:<br/>
+&nbsp;<wbr>#&nbsp;<wbr>could be shorter<br/>
+&nbsp;<wbr>md5:abcdefgh<br/>
+&nbsp;<wbr>#&nbsp;<wbr>should be longer<br/>
 &nbsp;<wbr>sys:12345678901234567890</p>
 <h2>Options</h2>
 <dl>

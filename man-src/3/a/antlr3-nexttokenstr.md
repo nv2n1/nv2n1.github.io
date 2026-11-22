@@ -14,12 +14,12 @@ description: "src/antlr3lexer.c –"
 <h3>Functions</h3>
 <p>ANTLR3_API <code>pANTLR3_LEXER</code> <code>antlr3LexerNew</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
 <p> ANTLR3_API <code>pANTLR3_LEXER</code> <code>antlr3LexerNewStream</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_INPUT_STREAM</code> input, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
-<p> static void <code>displayRecognitionError</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_UINT8</code> *tokenNames)<br />
- <i>Default lexer error handler (works for 8 bit streams only!!!). </i><br />
+<p> static void <code>displayRecognitionError</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_UINT8</code> *tokenNames)<br/>
+ <i>Default lexer error handler (works for 8 bit streams only!!!). </i><br/>
  static <code>pANTLR3_COMMON_TOKEN</code> <code>emit</code> (<code>pANTLR3_LEXER</code> lexer) </p>
 <p> static void <code>emitNew</code> (<code>pANTLR3_LEXER</code> lexer, <code>pANTLR3_COMMON_TOKEN</code> token) </p>
-<p> static void <code>freeLexer</code> (<code>pANTLR3_LEXER</code> lexer)<br />
- <i>Free the resources allocated by a lexer. </i><br />
+<p> static void <code>freeLexer</code> (<code>pANTLR3_LEXER</code> lexer)<br/>
+ <i>Free the resources allocated by a lexer. </i><br/>
  static <code>ANTLR3_MARKER</code> <code>getCharIndex</code> (<code>pANTLR3_LEXER</code> lexer) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>getCharPositionInLine</code> (<code>pANTLR3_LEXER</code> lexer) </p>
 <p> static void * <code>getCurrentInputSymbol</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_INT_STREAM</code> istream) </p>
@@ -27,21 +27,21 @@ description: "src/antlr3lexer.c –"
 <p> static void * <code>getMissingSymbol</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_INT_STREAM</code> istream, <code>pANTLR3_EXCEPTION</code> e, <code>ANTLR3_UINT32</code> expectedTokenType, <code>pANTLR3_BITSET_LIST</code> follow) </p>
 <p> static <code>pANTLR3_STRING</code> <code>getText</code> (<code>pANTLR3_LEXER</code> lexer) </p>
 <p> static void <code>matchAny</code> (<code>pANTLR3_LEXER</code> lexer) </p>
-<p> static <code>ANTLR3_BOOLEAN</code> <code>matchc</code> (<code>pANTLR3_LEXER</code> lexer, <code>ANTLR3_UCHAR</code> c)<br />
- <i>Implementation of matchc for the lexer, overrides any base implementation in the base recognizer. </i><br />
- static <code>ANTLR3_BOOLEAN</code> <code>matchRange</code> (<code>pANTLR3_LEXER</code> lexer, <code>ANTLR3_UCHAR</code> low, <code>ANTLR3_UCHAR</code> high)<br />
- <i>Implementation of match range for the lexer, overrides any base implementation in the base recognizer. </i><br />
- static <code>ANTLR3_BOOLEAN</code> <code>matchs</code> (<code>pANTLR3_LEXER</code> lexer, <code>ANTLR3_UCHAR</code> *string)<br />
- <i>Implementation of matchs for the lexer, overrides any base implementation in the base recognizer. </i><br />
+<p> static <code>ANTLR3_BOOLEAN</code> <code>matchc</code> (<code>pANTLR3_LEXER</code> lexer, <code>ANTLR3_UCHAR</code> c)<br/>
+ <i>Implementation of matchc for the lexer, overrides any base implementation in the base recognizer. </i><br/>
+ static <code>ANTLR3_BOOLEAN</code> <code>matchRange</code> (<code>pANTLR3_LEXER</code> lexer, <code>ANTLR3_UCHAR</code> low, <code>ANTLR3_UCHAR</code> high)<br/>
+ <i>Implementation of match range for the lexer, overrides any base implementation in the base recognizer. </i><br/>
+ static <code>ANTLR3_BOOLEAN</code> <code>matchs</code> (<code>pANTLR3_LEXER</code> lexer, <code>ANTLR3_UCHAR</code> *string)<br/>
+ <i>Implementation of matchs for the lexer, overrides any base implementation in the base recognizer. </i><br/>
  static void <code>mTokens</code> (<code>pANTLR3_LEXER</code> lexer) </p>
-<p> static <code>pANTLR3_COMMON_TOKEN</code> <code>nextToken</code> (<code>pANTLR3_TOKEN_SOURCE</code> toksource)<br />
- <i>Default implementation of the </i><code>nextToken()</code> call for a lexer.<br />
- static ANTLR3_INLINE <code>pANTLR3_COMMON_TOKEN</code> <code>nextTokenStr</code> (<code>pANTLR3_TOKEN_SOURCE</code> toksource)<br />
- <i>Returns the next available token from the current input stream. </i><br />
- static void <code>popCharStream</code> (<code>pANTLR3_LEXER</code> lexer)<br />
- <i>Stops using the current input stream and reverts to any prior input stream on the stack. </i><br />
- static void <code>pushCharStream</code> (<code>pANTLR3_LEXER</code> lexer, <code>pANTLR3_INPUT_STREAM</code> input)<br />
- <i>Change to a new input stream, remembering the old one. </i><br />
+<p> static <code>pANTLR3_COMMON_TOKEN</code> <code>nextToken</code> (<code>pANTLR3_TOKEN_SOURCE</code> toksource)<br/>
+ <i>Default implementation of the </i><code>nextToken()</code> call for a lexer.<br/>
+ static ANTLR3_INLINE <code>pANTLR3_COMMON_TOKEN</code> <code>nextTokenStr</code> (<code>pANTLR3_TOKEN_SOURCE</code> toksource)<br/>
+ <i>Returns the next available token from the current input stream. </i><br/>
+ static void <code>popCharStream</code> (<code>pANTLR3_LEXER</code> lexer)<br/>
+ <i>Stops using the current input stream and reverts to any prior input stream on the stack. </i><br/>
+ static void <code>pushCharStream</code> (<code>pANTLR3_LEXER</code> lexer, <code>pANTLR3_INPUT_STREAM</code> input)<br/>
+ <i>Change to a new input stream, remembering the old one. </i><br/>
  static void <code>recover</code> (<code>pANTLR3_LEXER</code> lexer) </p>
 <p> static void <code>reportError</code> (<code>pANTLR3_BASE_RECOGNIZER</code> rec) </p>
 <p> static void <code>reset</code> (<code>pANTLR3_BASE_RECOGNIZER</code> rec) </p>
@@ -154,7 +154,7 @@ description: "src/antlr3lexer.c –"
 <h3>static void pushCharStream (<code>pANTLR3_LEXER</code> lexer, <code>pANTLR3_INPUT_STREAM</code> input) [static]</h3>
 <p>Change to a new input stream, remembering the old one. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lexer</i> Pointer to the lexer instance to switch input streams for.<br />
+<dd><i>lexer</i> Pointer to the lexer instance to switch input streams for.<br/>
  <i>input</i> New input stream to install as the current one.</dd></dl>
 <p> Switches the current character input stream to a new one, saving the old one, which we will revert to at the end of this new one. </p>
 <p> References antlr3StackNew(), ANTLR3_LEXER_struct::input, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_INT_STREAM_struct::mark, ANTLR3_STACK_struct::push, ANTLR3_LEXER_struct::rec, ANTLR3_LEXER_struct::setCharStream, ANTLR3_BASE_RECOGNIZER_struct::state, and ANTLR3_RECOGNIZER_SHARED_STATE_struct::streams. </p>

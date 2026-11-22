@@ -400,21 +400,21 @@ description: "condor_q Display information about jobs in queue"
 <h2>Examples</h2>
 <p> The <code>-format</code> option provides a way to specify both the job attributes and formatting of those attributes. There must be only one conversion specification per <code>-format</code> option. As an example, to list only Jane Doe&#8217;s jobs in the queue, choosing to print and format only the owner of the job, the command line arguments for the job, and the process ID of the job: </p>
 <p> %condor_q -submitter jdoe -format &quot;%s&quot; Owner -format &quot; %s &quot; Args -format &quot;ProcId = %d
-&quot; ProcId<br />
- jdoe 16386 2800 ProcId = 0<br />
- jdoe 16386 3000 ProcId = 1<br />
- jdoe 16386 3200 ProcId = 2<br />
- jdoe 16386 3400 ProcId = 3<br />
- jdoe 16386 3600 ProcId = 4<br />
+&quot; ProcId<br/>
+ jdoe 16386 2800 ProcId = 0<br/>
+ jdoe 16386 3000 ProcId = 1<br/>
+ jdoe 16386 3200 ProcId = 2<br/>
+ jdoe 16386 3400 ProcId = 3<br/>
+ jdoe 16386 3600 ProcId = 4<br/>
  jdoe 16386 4200 ProcId = 7 </p>
 <p> To display only the JobID&#8217;s of Jane Doe&#8217;s jobs you can use the following. </p>
 <p> %condor_q -submitter jdoe -format &quot;%d.&quot; ClusterId -format &quot;%d
-&quot; ProcId<br />
- 27.0<br />
- 27.1<br />
- 27.2<br />
- 27.3<br />
- 27.4<br />
+&quot; ProcId<br/>
+ 27.0<br/>
+ 27.1<br/>
+ 27.2<br/>
+ 27.3<br/>
+ 27.4<br/>
  27.7 </p>
 <p> An example that shows the difference (first set of output) between not using an option to <i>condor_q</i> and (second set of output) using the <code>-globus</code> option: </p>
 <p>&nbsp;<wbr>ID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>OWNER&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SUBMITTED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RUN_TIME ST PRI SIZE CMD </p>
@@ -425,30 +425,30 @@ description: "condor_q Display information about jobs in queue"
 <p> An example that shows the analysis in summary format: </p>
 <p> $ condor_q -analyze:summary </p>
 <p> &#8212; Submitter: submit-1.chtc.wisc.edu : &lt;192.168.100.43:9618?sock=11794_95bb_3&gt; : </p>
-<p>&nbsp;<wbr>submit-1.chtc.wisc.edu<br />
+<p>&nbsp;<wbr>submit-1.chtc.wisc.edu<br/>
  Analyzing matches for 5979 slots </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Autocluster&nbsp;<wbr>&nbsp;<wbr>Matches&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Machine&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Running&nbsp;<wbr>&nbsp;<wbr>Serving </p>
-<p>&nbsp;<wbr>JobId&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Members/Idle&nbsp;<wbr>&nbsp;<wbr>Reqmnts&nbsp;<wbr>&nbsp;<wbr>Rejects Job&nbsp;<wbr>&nbsp;<wbr>Users Job Other User Avail Owner<br />
- &#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8211; &#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;- &#8212;&#8211; &#8212;&#8211;<br />
- 25764522.0 7/0 5910 820 7/10 5046 34 smith<br />
- 25764682.0 9/0 2172 603 9/9 1531 29 smith<br />
- 25765082.0 18/0 2172 603 18/9 1531 29 smith<br />
+<p>&nbsp;<wbr>JobId&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Members/Idle&nbsp;<wbr>&nbsp;<wbr>Reqmnts&nbsp;<wbr>&nbsp;<wbr>Rejects Job&nbsp;<wbr>&nbsp;<wbr>Users Job Other User Avail Owner<br/>
+ &#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8211; &#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;- &#8212;&#8211; &#8212;&#8211;<br/>
+ 25764522.0 7/0 5910 820 7/10 5046 34 smith<br/>
+ 25764682.0 9/0 2172 603 9/9 1531 29 smith<br/>
+ 25765082.0 18/0 2172 603 18/9 1531 29 smith<br/>
  25765900.0 1/0 2172 603 1/9 1531 29 smith </p>
 <p> An example that shows summary information by machine: </p>
 <p> $ condor_q -ana:sum,rev </p>
-<p> &#8212; Submitter: s-1.chtc.wisc.edu : &lt;192.168.100.43:9618?sock=11794_95bb_3&gt; : s-1.chtc.wisc.edu<br />
+<p> &#8212; Submitter: s-1.chtc.wisc.edu : &lt;192.168.100.43:9618?sock=11794_95bb_3&gt; : s-1.chtc.wisc.edu<br/>
  Analyzing matches for 2885 jobs </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Slot&nbsp;<wbr>&nbsp;<wbr>Slot&#8217;s Req&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Job&#8217;s Req&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Both<br />
- Name Type Matches Job Matches Slot Match %<br />
- &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212; &#8212;- &#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;-<br />
- slot1 [at] INFO.wisc.edu Stat 2729 0 0.00<br />
- slot2 [at] INFO.wisc.edu Stat 2729 0 0.00<br />
- slot1 [at] aci-001.chtc.wisc.edu Part 0 2793 0.00<br />
- slot1_1 [at] a-001.chtc.wisc.edu Dyn 2644 2792 91.37<br />
- slot1_2 [at] a-001.chtc.wisc.edu Dyn 2623 2601 85.10<br />
- slot1_3 [at] a-001.chtc.wisc.edu Dyn 2644 2632 85.82<br />
- slot1_4 [at] a-001.chtc.wisc.edu Dyn 2644 2792 91.37<br />
- slot1 [at] a-002.chtc.wisc.edu Part 0 2633 0.00<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Slot&nbsp;<wbr>&nbsp;<wbr>Slot&#8217;s Req&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Job&#8217;s Req&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Both<br/>
+ Name Type Matches Job Matches Slot Match %<br/>
+ &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212; &#8212;- &#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;-<br/>
+ slot1 [at] INFO.wisc.edu Stat 2729 0 0.00<br/>
+ slot2 [at] INFO.wisc.edu Stat 2729 0 0.00<br/>
+ slot1 [at] aci-001.chtc.wisc.edu Part 0 2793 0.00<br/>
+ slot1_1 [at] a-001.chtc.wisc.edu Dyn 2644 2792 91.37<br/>
+ slot1_2 [at] a-001.chtc.wisc.edu Dyn 2623 2601 85.10<br/>
+ slot1_3 [at] a-001.chtc.wisc.edu Dyn 2644 2632 85.82<br/>
+ slot1_4 [at] a-001.chtc.wisc.edu Dyn 2644 2792 91.37<br/>
+ slot1 [at] a-002.chtc.wisc.edu Part 0 2633 0.00<br/>
  slot1_10 [at] a-002.chtc.wisc.edu Den 2623 2601 85.10 </p>
 <h2>Exit Status</h2>
 <p> <i>condor_q</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>

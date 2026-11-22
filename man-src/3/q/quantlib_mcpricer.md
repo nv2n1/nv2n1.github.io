@@ -11,13 +11,13 @@ description: "QuantLib::McPricer – base class for Monte Carlo pricers"
 <h2>Synopsis</h2>
 <p>#include &lt;ql/legacy/pricers/mcpricer.hpp&gt; </p>
 <h3>Public Member Functions</h3>
-<p>Real <code>value</code> (Real tolerance, Size maxSamples=QL_MAX_INTEGER, Size minSamples=1023) const<br />
- <i>add samples until the required tolerance is reached </i><br />
- Real <code>valueWithSamples</code> (Size samples, Size minSamples=1023) const<br />
- <i>simulate a fixed number of samples </i><br />
- Real <code>errorEstimate</code> () const<br />
- <i>estimated error of the samples simulated so far </i><br />
- const S &amp; <code>sampleAccumulator</code> (void) const<br />
+<p>Real <code>value</code> (Real tolerance, Size maxSamples=QL_MAX_INTEGER, Size minSamples=1023) const<br/>
+ <i>add samples until the required tolerance is reached </i><br/>
+ Real <code>valueWithSamples</code> (Size samples, Size minSamples=1023) const<br/>
+ <i>simulate a fixed number of samples </i><br/>
+ Real <code>errorEstimate</code> () const<br/>
+ <i>estimated error of the samples simulated so far </i><br/>
+ const S &amp; <code>sampleAccumulator</code> (void) const<br/>
  <i>access to the sample accumulator for more statistics </i></p>
 <h3>Protected Attributes</h3>
 <p>boost::shared_ptr&lt; <code>MonteCarloModel</code>&lt; MC, RNG, S &gt; &gt; <code>mcModel_</code> </p>

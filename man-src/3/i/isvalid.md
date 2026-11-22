@@ -13,9 +13,9 @@ description: "QuantLib::Quote – purely virtual base class for market observabl
 <p> Inherits <code>QuantLib::Observable</code>. </p>
 <p> Inherited by <code>CompositeQuote&lt; BinaryFunction &gt;</code>, <code>DerivedQuote&lt; UnaryFunction &gt;</code>, <code>EurodollarFuturesImpliedStdDevQuote</code>, <code>ForwardSwapQuote</code>, <code>ForwardValueQuote</code>, <code>FuturesConvAdjustmentQuote</code>, <code>ImpliedStdDevQuote</code>, <code>LastFixingQuote</code>, and <code>SimpleQuote</code>. </p>
 <h3>Public Member Functions</h3>
-<p>virtual <code>Real</code> <code>value</code> () const =0<br />
- <i>returns the current value </i><br />
- virtual bool <code>isValid</code> () const =0<br />
+<p>virtual <code>Real</code> <code>value</code> () const =0<br/>
+ <i>returns the current value </i><br/>
+ virtual bool <code>isValid</code> () const =0<br/>
  <i>returns true if the </i><code>Quote</code> holds a valid value</p>
 <h2>Detailed Description</h2>
 <p>purely virtual base class for market observables </p>

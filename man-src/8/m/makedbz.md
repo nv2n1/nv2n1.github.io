@@ -24,7 +24,7 @@ description: "makedbz – Rebuild dbz files"
 <dd><code>makedbz</code> will also ignore any old database if the <code>-s</code> flag is used to specify the approximate number of entries in the new database. Accurately specifying the size is an optimization that will create a more efficient database. Size is measured in key-value pairs (i.e. lines). (The size should be the estimated eventual size of the file, typically the size of the old file.) </dd>
 <p> For more information, see the discussion of <code>dbzfresh</code> and <code>dbzsize</code> in <i><a href="/docs/linux/man/3-dbz/">dbz</a></i>(3).</dl>
 <h2>History</h2>
-<p>Written by Katsuhiro Kondou &lt;kondou [at] nec.co.jp&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
+<p>Written by Katsuhiro Kondou &lt;kondou [at] nec.co.jp&gt; for InterNetNews. Converted to POD by Julien Elie. </p>
 <p> <tt>$Id:</tt> makedbz.pod 8584 2009-08-20 21:54:07Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/3-dbz/">dbz</a></i>(3), <i><a href="/docs/linux/man/5-history/">history</a></i>(5). </p>

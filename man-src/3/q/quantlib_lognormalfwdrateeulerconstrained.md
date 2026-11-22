@@ -14,9 +14,9 @@ description: "QuantLib::LogNormalFwdRateEulerConstrained – euler stepping"
 <h3>Public Member Functions</h3>
 <p><code>LogNormalFwdRateEulerConstrained</code> (const boost::shared_ptr&lt; <code>MarketModel</code> &gt; &amp;, const BrownianGeneratorFactory &amp;, const std::vector&lt; Size &gt; &amp;numeraires, Size initialStep=0) </p>
 <p> <code>MarketModelConstrained interface</code> </p>
-<p> virtual void <code>setConstraintType</code> (const std::vector&lt; Size &gt; &amp;startIndexOfSwapRate, const std::vector&lt; Size &gt; &amp;endIndexOfSwapRate)<br />
- <i>call once </i><br />
- virtual void <code>setThisConstraint</code> (const std::vector&lt; Rate &gt; &amp;rateConstraints, const std::vector&lt; bool &gt; &amp;isConstraintActive)<br />
+<p> virtual void <code>setConstraintType</code> (const std::vector&lt; Size &gt; &amp;startIndexOfSwapRate, const std::vector&lt; Size &gt; &amp;endIndexOfSwapRate)<br/>
+ <i>call once </i><br/>
+ virtual void <code>setThisConstraint</code> (const std::vector&lt; Rate &gt; &amp;rateConstraints, const std::vector&lt; bool &gt; &amp;isConstraintActive)<br/>
  <i>call before each path </i> </p>
 <p> <code>MarketModel interface</code> </p>
 <p> const std::vector&lt; Size &gt; &amp; <code>numeraires</code> () const </p>

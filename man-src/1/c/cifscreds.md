@@ -14,7 +14,7 @@ description: "cifscreds – manage NTLM credentials in kernel keyring"
 <h2>DESCRIPTION</h2>
 <p> The <code>cifscreds</code> program is a tool for managing credentials (username and password) for the purpose of establishing sessions in multiuser mounts. </p>
 <p> When a cifs filesystem is mounted with the &#8220;multiuser&#8221; option, and does not use krb5 authentication, it needs to be able to get the credentials for each user from somewhere. The <code>cifscreds</code> program is the tool used to provide these credentials to the kernel. </p>
-<p> The first non-option argument to cifscreds is a command (see the <font SIZE="-1"><code>COMMANDS</code></font> section below). The second non-option argument is a hostname or address, or an <font SIZE="-1">NT</font> domain name.</p>
+<p> The first non-option argument to cifscreds is a command (see the <code>COMMANDS</code> section below). The second non-option argument is a hostname or address, or an NT domain name.</p>
 <h2>COMMANDS</h2>
 <dl>
 <dt><code>add</code></dt>
@@ -28,8 +28,8 @@ description: "cifscreds – manage NTLM credentials in kernel keyring"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-d</code>, <code>&#8211;domain</code></dt>
-<dd> The provided host/domain argument is a <font SIZE="-1">NT</font> domainname. </dd>
-<p> Ordinarily the second argument provided to cifscreds is treated as a hostname or <font SIZE="-1">IP</font> address. This option causes the cifscreds program to treat that argument as an <font SIZE="-1">NT</font> domainname instead. </p>
+<dd> The provided host/domain argument is a NT domainname. </dd>
+<p> Ordinarily the second argument provided to cifscreds is treated as a hostname or IP address. This option causes the cifscreds program to treat that argument as an NT domainname instead. </p>
 <p> If there are not host specific credentials for the mounted server, then the kernel will next look for a set of domain credentials equivalent to the domain= option provided at mount time.</p>
 <dt><code>-u</code>, <code>&#8211;username</code></dt>
 <dd> Ordinarily, the username is derived from the unix username of the user adding the credentials. This option allows the user to substitute a different username.</dd></dl>

@@ -22,7 +22,7 @@ Dpkg::Vendor - get access to some vendor specific information
 </dd><dt>$name = Dpkg::Vendor::get_vendor_file($name)
 </dt><dd>Check if there's a file for the given vendor and returns its name.
 </dd><dt>$name = <i>Dpkg::Vendor::get_current_vendor()</i>
-</dt><dd>Returns the name of the current vendor. If <font SIZE="-1">DEB_VENDOR</font> is set, it uses that first, otherwise it falls back to parsing <tt>$Dpkg::CONFDIR</tt>/origins/default. If that file doesn't exist, it returns undef.
+</dt><dd>Returns the name of the current vendor. If DEB_VENDOR is set, it uses that first, otherwise it falls back to parsing <tt>$Dpkg::CONFDIR</tt>/origins/default. If that file doesn't exist, it returns undef.
 </dd><dt>$object = Dpkg::Vendor::get_vendor_object($name)
 </dt><dd>Return the Dpkg::Vendor::* object of the corresponding vendor. If <tt>$name</tt> is omitted, return the object of the current vendor. If no vendor can be identified, then return the Dpkg::Vendor::Default object.
 </dd><dt>Dpkg::Vendor::run_vendor_hook($hookid, @params)

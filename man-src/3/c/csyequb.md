@@ -11,7 +11,7 @@ description: "csyequb.f –"
 <p> csyequb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>csyequb</code> (UPLO, N, A, LDA, S, SCOND, AMAX, WORK, INFO)<br />
+<p> subroutine <code>csyequb</code> (UPLO, N, A, LDA, S, SCOND, AMAX, WORK, INFO)<br/>
  <i></i><code>CSYEQUB</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine csyequb (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )S, realSCOND, realAMAX, complex, dimension( * )WORK, integerINFO)</h3>

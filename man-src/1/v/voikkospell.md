@@ -54,7 +54,7 @@ description: "voikkospell – test program for Voikko spell checker"
 <dt><code>ignore_dot=</code><i>n</i></dt>
 <dd> (voikkospell, voikkohyphenate)</dd>
 <dt><code>ignore_numbers=</code><i>n</i></dt>
-<dd> (voikkospell, voikkohyphenate)<br />
+<dd> (voikkospell, voikkohyphenate)<br/>
  Set the value of the specified boolean option. <i>n</i> can be either 0 (false) or 1 (true).</dd>
 <dt><code>-h, &#8211;help</code></dt>
 <dd> Print a help message and exit.</dd>

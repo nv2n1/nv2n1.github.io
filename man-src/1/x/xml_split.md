@@ -13,7 +13,7 @@ url: "/docs/linux/man/1-xml_split/"
 
 <h2>DESCRIPTION</h2>
 
- <tt>&quot;xml_split&quot;</tt> takes a (presumably big) <font SIZE="-1">XML</font> file and split it in several smaller files. The memory used is the memory needed for the biggest chunk (ie memory is reused for each new chunk). 
+ <tt>&quot;xml_split&quot;</tt> takes a (presumably big) XML file and split it in several smaller files. The memory used is the memory needed for the biggest chunk (ie memory is reused for each new chunk). 
 
  It can split at a given level in the tree (the default, splits children of the root), or on a condition (using the subset of XPath understood by XML::Twig, so <tt>&quot;section&quot;</tt> or <tt>&quot;/doc/section&quot;</tt>). 
 
@@ -32,9 +32,9 @@ url: "/docs/linux/man/1-xml_split/"
  xml_split -c &lt;section&gt; will put each <tt>&quot;section&quot;</tt> element in its own file (nested sections are handled too) 
  Note that at the moment this option is a lot slower than using <tt>&quot;-l&quot;</tt>
 </dd><dt>-s &lt;size&gt;
-</dt><dd> generates files of (approximately) &lt;size&gt;. The content of each file is enclosed in a new element (<tt>&quot;xml_split::root&quot;</tt>), so it's well-formed <font SIZE="-1">XML.</font> The size can be given in bytes, Kb, Mb or Gb.
+</dt><dd> generates files of (approximately) &lt;size&gt;. The content of each file is enclosed in a new element (<tt>&quot;xml_split::root&quot;</tt>), so it's well-formed XML. The size can be given in bytes, Kb, Mb or Gb.
 </dd><dt>-g &lt;nb&gt;
-</dt><dd> groups &lt;nb&gt; elements in a single file. The content of each file is enclosed in a new element (<tt>&quot;xml_split::root&quot;</tt>), so it's well-formed <font SIZE="-1">XML.</font>
+</dt><dd> groups &lt;nb&gt; elements in a single file. The content of each file is enclosed in a new element (<tt>&quot;xml_split::root&quot;</tt>), so it's well-formed XML.
 </dd><dt>-b &lt;name&gt;
 </dt><dd> base name for the output, files will be named &lt;base&gt;-&lt;nb&gt;&lt;.ext&gt; 
  &lt;nb&gt; is a sequence number, see below <tt>&quot;--nb_digits&quot;</tt> &lt;ext&gt; is an extension, see below <tt>&quot;--extension&quot;</tt> 

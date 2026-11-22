@@ -10,7 +10,7 @@ description: "XkbKeyTypesForCoreSymbols – Determine the Xkb key types appropri
 <p>XkbKeyTypesForCoreSymbols &#8211; Determine the Xkb key types appropriate for the symbols bound to a key in a core keyboard mapping </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>int XkbKeyTypesForCoreSymbols</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>int </code><i>map_width</i><code>,</code> <code>KeySym *</code><i>core_syms</i><code>,</code> <code>unsigned int </code><i>protected</i><code>,</code> <code>int *</code><i>types_inout</i><code>,</code> <code>KeySym *</code><i>xkb_syms_rtrn</i><code>);</code><br />
+<dt> <code>int XkbKeyTypesForCoreSymbols</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>int </code><i>map_width</i><code>,</code> <code>KeySym *</code><i>core_syms</i><code>,</code> <code>unsigned int </code><i>protected</i><code>,</code> <code>int *</code><i>types_inout</i><code>,</code> <code>KeySym *</code><i>xkb_syms_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -117,7 +117,7 @@ then
 <dl>
 <dt>
 </dt><dd>
-source ${ZDOTDIR : -$HOME} /.zkbd / $TERM &#8211; $VENDOR &#8211; $OSTYPE[[-n ${key[Left]}]] &amp;&amp; bindkey &#8220;${key[Left]}&#8221; backward &#8211; char[[-n ${key[Right]}]] &amp;&amp; bindkey &#8220;${key[Right]}&#8221; forward &#8211; char<br />
+source ${ZDOTDIR : -$HOME} /.zkbd / $TERM &#8211; $VENDOR &#8211; $OSTYPE[[-n ${key[Left]}]] &amp;&amp; bindkey &#8220;${key[Left]}&#8221; backward &#8211; char[[-n ${key[Right]}]] &amp;&amp; bindkey &#8220;${key[Right]}&#8221; forward &#8211; char<br/>
 #etc.
 </dd></dl>
 <p> Note that in order for `<code>autoload zkbd</code>&#8216; to work, the <code>zkdb</code> file must be in one of the directories named in your <code>fpath</code> array (see <i><a href="/docs/linux/man/1-zshparam/">zshparam</a></i>(1)). This should already be the case if you have a standard zsh installation; if it is not, copy <code>Functions/Misc/zkbd</code> to an appropriate directory. </p>
@@ -273,13 +273,13 @@ add-zsh-hook chpwd chpwd_recent_dirs</code>
 <dl>
 <dt>
 </dt><dd>
-zstyle &#8211; e &#8216;:chpwd:*&#8217; recent &#8211; dirs &#8211; file pick &#8211; recent &#8211; dirs &#8211; file pick &#8211; recent &#8211; dirs &#8211; file()<br />
-{<br />
-    if [[ $PWD = ~/text/writing(|/*) ]]; then<br />
-    reply=(~/.chpwd-recent-dirs-writing)<br />
-  else<br />
-    reply=(+)<br />
-  fi<br />
+zstyle &#8211; e &#8216;:chpwd:*&#8217; recent &#8211; dirs &#8211; file pick &#8211; recent &#8211; dirs &#8211; file pick &#8211; recent &#8211; dirs &#8211; file()<br/>
+{<br/>
+    if [[ $PWD = ~/text/writing(|/*) ]]; then<br/>
+    reply=(~/.chpwd-recent-dirs-writing)<br/>
+  else<br/>
+    reply=(+)<br/>
+  fi<br/>
 }
 </dd></dl>
 <p> In this example, if the current directory is <code>~/text/writing</code> or a directory under it, then use a special file for saving recent directories, else use the default.</dl>
@@ -476,8 +476,8 @@ add-zsh-hook -U zsh_directory_name zdn_mywrapper</code>
 <dl>
 <dt>
 </dt><dd>
-zstyle &#8216;:vcs_info:*&#8217; actionformats \<br />
-    &#8216;%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f &#8216; zstyle &#8216;:vcs_info:*&#8217; formats       \<br />
+zstyle &#8216;:vcs_info:*&#8217; actionformats \<br/>
+    &#8216;%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f &#8216; zstyle &#8216;:vcs_info:*&#8217; formats       \<br/>
     &#8216;%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f &#8216; zstyle &#8216;:vcs_info:(sv[nk]|bzr):*&#8217; branchformat &#8216;%b%F{1}:%F{3}%r&#8217; precmd(){vcs_info} PS1 = &#8216;%F{5}[%F{2}%n%F{5}] %F{3}%3~ ${vcs_info_msg_0_}%f%# &#8216;
 </dd></dl>
 <p> Obviously, the last two lines are there for demonstration. You need to call <code>vcs_info</code> from your <code>precmd</code> function. Once that is done you need a <i>single quoted</i> <code>&#8216;${vcs_info_msg_0_}&#8217;</code> in your prompt. </p>
@@ -486,20 +486,20 @@ zstyle &#8216;:vcs_info:*&#8217; actionformats \<br />
 <dl>
 <dt>
 </dt><dd>
-% vcs_info_printsys##list of supported version control backends :##disabled systems are prefixed by a hash sign(#)<br />
-                                                                     bzr<br />
-                                                                 cdv<br />
-                                                                 cvs<br />
-                                                                 darcs<br />
-                                                                 fossil<br />
-                                                                 git<br />
-                                                                 hg<br />
-                                                                 mtn<br />
-                                                                 p4<br />
-                                                                 svk<br />
-                                                                 svn<br />
-                                                                 tla<br />
-                                                                 ##flavours(cannot be used in the enable or disable styles; they##are enabled and disabled with their master[git &#8211; svn-&gt;git])##they *can *be used in contexts : &#8216;:vcs_info:git-svn:*&#8217;.git<br />
+% vcs_info_printsys##list of supported version control backends :##disabled systems are prefixed by a hash sign(#)<br/>
+                                                                     bzr<br/>
+                                                                 cdv<br/>
+                                                                 cvs<br/>
+                                                                 darcs<br/>
+                                                                 fossil<br/>
+                                                                 git<br/>
+                                                                 hg<br/>
+                                                                 mtn<br/>
+                                                                 p4<br/>
+                                                                 svk<br/>
+                                                                 svn<br/>
+                                                                 tla<br/>
+                                                                 ##flavours(cannot be used in the enable or disable styles; they##are enabled and disabled with their master[git &#8211; svn-&gt;git])##they *can *be used in contexts : &#8216;:vcs_info:git-svn:*&#8217;.git<br/>
     &#8211; p4 git &#8211; svn hg &#8211; git hg &#8211; hgsubversion hg &#8211; hgsvn
 </dd></dl>
 <p> You may not want all of these because there is no point in running the code to detect systems you do not use. So there is a way to disable some backends altogether: </p>
@@ -858,13 +858,13 @@ zstyle &#8216;:vcs_info:*&#8217; actionformats \<br />
 <dl>
 <dt>
 </dt><dd>
-+ vi &#8211; git &#8211; myfirsthook()<br />
-{<br />
-    user_data[myval] = $myval<br />
-}<br />
-+ vi &#8211; git &#8211; mysecondhook()<br />
-{<br />
-#do something with $ { user_data[myval] }<br />
++ vi &#8211; git &#8211; myfirsthook()<br/>
+{<br/>
+    user_data[myval] = $myval<br/>
+}<br/>
++ vi &#8211; git &#8211; mysecondhook()<br/>
+{<br/>
+#do something with $ { user_data[myval] }<br/>
 }
 </dd></dl>
 <p> There are a number of variables that are special in hook contexts: </p>
@@ -1014,11 +1014,11 @@ zstyle &#8216;:vcs_info:git:*&#8217; formats &#8216; GIT, BABY! [%b]&#8217; zsty
 <dl>
 <dt>
 </dt><dd>
-zstyle &#8216;:vcs_info:(svn|bzr):*&#8217; \<br />
-       branchformat &#8216;%b%{&#8216; $<br />
-{<br />
-    fg[yellow]<br />
-}<br />
+zstyle &#8216;:vcs_info:(svn|bzr):*&#8217; \<br/>
+       branchformat &#8216;%b%{&#8216; $<br/>
+{<br/>
+    fg[yellow]<br/>
+}<br/>
 &#8216;%}:%r&#8217;
 </dd></dl>
 <p> If you want colors, make sure you enclose the color codes in <code>%{</code><i>&#8230;</i><code>%}</code> if you want to use the string provided by <code>vcs_info</code> in prompts. </p>
@@ -1060,9 +1060,9 @@ zstyle &#8216;:vcs_info:(svn|bzr):*&#8217; \<br />
 <dl>
 <dt>
 </dt><dd>
-function + vi &#8211; svn2subversion()<br />
-{<br />
-    [[${hook_com[vcs_orig]} == svn]] &amp;&amp; hook_com[vcs] = subversion<br />
+function + vi &#8211; svn2subversion()<br/>
+{<br/>
+    [[${hook_com[vcs_orig]} == svn]] &amp;&amp; hook_com[vcs] = subversion<br/>
 }
 </dd></dl>
 <p> Simple enough. And it could have even been simpler, if only we had registered our function in a less generic context. If we do it only in the `<code>svn</code>&#8216; backend&#8217;s context, we don&#8217;t need to test which the active backend is:</p>
@@ -1076,9 +1076,9 @@ function + vi &#8211; svn2subversion()<br />
 <dl>
 <dt>
 </dt><dd>
-function + vi &#8211; svn2subversion()<br />
-{<br />
-    hook_com[vcs] = subversion<br />
+function + vi &#8211; svn2subversion()<br/>
+{<br/>
+    hook_com[vcs] = subversion<br/>
 }
 </dd></dl>
 <p> And finally a little more elaborate example, that uses a hook to create a customised bookmark string for the <code>hg</code> backend. </p>
@@ -1094,29 +1094,29 @@ function + vi &#8211; svn2subversion()<br />
 <dl>
 <dt>
 </dt><dd>
-function + vi &#8211; hgbookmarks()<br />
-{<br />
-#The default is to connect all bookmark names by<br />
-#commas.This mixes things up a little.<br />
-#Imagine, there&#8217;s one type of bookmarks that is<br />
-#special to you.Say, because it&#8217;s *your* work.<br />
-#Those bookmarks look always like this : &#8220;sh/*&#8221;<br />
-#(because your initials are sh, for example).<br />
-#This makes the bookmarks string use only those<br />
-#bookmarks.If there&#8217;s more than one, it<br />
-#concatenates them using commas.<br />
-#The bookmarks returned by `hg&#8217; are available in<br />
-#the function&#8217;s positional parameters.<br />
-    local s = &#8220;${(Mj:,:)@:#sh/*}&#8221;<br />
-#Now, the communication with the code that calls<br />
-#the hook functions is done via the hook_com[]<br />
-#hash.The key at which the `gen &#8211; hg &#8211; bookmark &#8211; string&#8217;<br />
-#hook looks is `hg &#8211; bookmark &#8211; string&#8217;. So:<br />
-        hook_com[hg &#8211; bookmark &#8211; string] = $s<br />
-#And to signal that we want to use the string we<br />
-#just generated, set the special variable `ret&#8217; to<br />
-#something other than the default zero:<br />
-            ret = 1 return 0<br />
+function + vi &#8211; hgbookmarks()<br/>
+{<br/>
+#The default is to connect all bookmark names by<br/>
+#commas.This mixes things up a little.<br/>
+#Imagine, there&#8217;s one type of bookmarks that is<br/>
+#special to you.Say, because it&#8217;s *your* work.<br/>
+#Those bookmarks look always like this : &#8220;sh/*&#8221;<br/>
+#(because your initials are sh, for example).<br/>
+#This makes the bookmarks string use only those<br/>
+#bookmarks.If there&#8217;s more than one, it<br/>
+#concatenates them using commas.<br/>
+#The bookmarks returned by `hg&#8217; are available in<br/>
+#the function&#8217;s positional parameters.<br/>
+    local s = &#8220;${(Mj:,:)@:#sh/*}&#8221;<br/>
+#Now, the communication with the code that calls<br/>
+#the hook functions is done via the hook_com[]<br/>
+#hash.The key at which the `gen &#8211; hg &#8211; bookmark &#8211; string&#8217;<br/>
+#hook looks is `hg &#8211; bookmark &#8211; string&#8217;. So:<br/>
+        hook_com[hg &#8211; bookmark &#8211; string] = $s<br/>
+#And to signal that we want to use the string we<br/>
+#just generated, set the special variable `ret&#8217; to<br/>
+#something other than the default zero:<br/>
+            ret = 1 return 0<br/>
 }
 </dd></dl>
 <p> Some longer examples and code snippets which might be useful are available in the examples file located at Misc/vcs_info-examples in the Zsh source directory. </p>
@@ -1308,12 +1308,12 @@ zstyle ':zle:*' word-chars ''</code>
 <dl>
 <dt>
 </dt><dd>
-zstyle &#8216;:zle:*&#8217; word &#8211; context \<br />
-       &#8220;*/*&#8221; filename &#8220;[[:space:]]&#8221; whitespace zstyle &#8216;:zle:transpose-words:whitespace&#8217; word &#8211;<br />
-    style shell<br />
-        zstyle &#8216;:zle:transpose-words:filename&#8217; word &#8211;<br />
-    style normal<br />
-        zstyle &#8216;:zle:transpose-words:filename&#8217; word &#8211;<br />
+zstyle &#8216;:zle:*&#8217; word &#8211; context \<br/>
+       &#8220;*/*&#8221; filename &#8220;[[:space:]]&#8221; whitespace zstyle &#8216;:zle:transpose-words:whitespace&#8217; word &#8211;<br/>
+    style shell<br/>
+        zstyle &#8216;:zle:transpose-words:filename&#8217; word &#8211;<br/>
+    style normal<br/>
+        zstyle &#8216;:zle:transpose-words:filename&#8217; word &#8211;<br/>
     chars &#8221;
 </dd></dl>
 <p> This provides two different ways of using <code>transpose-words</code> depending on whether the cursor is on whitespace between words or on a filename, here any word containing a <code>/</code>. On whitespace, complete arguments as defined by standard shell rules will be transposed. In a filename, only alphanumerics will be transposed. Elsewhere, words will be transposed using the default style for <code>:zle:transpose-words</code>. </p>
@@ -1981,14 +1981,14 @@ modify &#8211; current &#8211; argument &#8216;${(qq)${(Q)ARG}}&#8217;
 <dl>
 <dt>
 </dt><dd>
-expand &#8211; dir()<br />
-{<br />
-    REPLY = ${~1} REPLY = $<br />
-    {<br />
-    REPLY:<br />
-        a<br />
-    }<br />
-}<br />
+expand &#8211; dir()<br/>
+{<br/>
+    REPLY = ${~1} REPLY = $<br/>
+    {<br/>
+    REPLY:<br/>
+        a<br/>
+    }<br/>
+}<br/>
 modify &#8211; current &#8211; argument expand &#8211; dir
 </dd></dl>
 <p> In practice the function <code>expand-dir</code> would probably not be defined within the widget where <code>modify-current-argument</code> is called.</dl>
@@ -2094,40 +2094,40 @@ zstyle : insert &#8211; last &#8211; word match &#8216;*([[:digit:]]?|[[:alpha:]
 <dl>
 <dt>
 </dt><dd>
-{<br />
-#&#8221;try&#8221; block<br />
-#&#8230; nested code here calls &#8220;throw MyExcept&#8221;<br />
-} always<br />
-{<br />
-#&#8221;always&#8221; block<br />
-    if<br />
-        catch MyExcept;<br />
-    then<br />
-        print &#8220;Caught exception MyExcept&#8221; elif catch &#8221;;<br />
-    then<br />
-        print &#8220;Caught a shell error.  Propagating&#8230;&#8221; throw &#8221; fi<br />
-#Other exceptions are not handled but may be caught further<br />
-#up the call stack.<br />
+{<br/>
+#&#8221;try&#8221; block<br/>
+#&#8230; nested code here calls &#8220;throw MyExcept&#8221;<br/>
+} always<br/>
+{<br/>
+#&#8221;always&#8221; block<br/>
+    if<br/>
+        catch MyExcept;<br/>
+    then<br/>
+        print &#8220;Caught exception MyExcept&#8221; elif catch &#8221;;<br/>
+    then<br/>
+        print &#8220;Caught a shell error.  Propagating&#8230;&#8221; throw &#8221; fi<br/>
+#Other exceptions are not handled but may be caught further<br/>
+#up the call stack.<br/>
 }
 </dd></dl>
 <p> If all exceptions should be caught, the following idiom might be preferable. </p>
 <dl>
 <dt>
 </dt><dd>
-{<br />
-#&#8230; nested code here throws an exception<br />
-} always<br />
-{<br />
-    if<br />
-        catch *;<br />
-    then case $CAUGHT in(MyExcept)<br />
-        print &#8220;Caught my own exception&#8221;;<br />
-    ;<br />
-    (*)<br />
-        print &#8220;Caught some other exception&#8221;;<br />
-    ;<br />
-    esac<br />
-        fi<br />
+{<br/>
+#&#8230; nested code here throws an exception<br/>
+} always<br/>
+{<br/>
+    if<br/>
+        catch *;<br/>
+    then case $CAUGHT in(MyExcept)<br/>
+        print &#8220;Caught my own exception&#8221;;<br/>
+    ;<br/>
+    (*)<br/>
+        print &#8220;Caught some other exception&#8221;;<br/>
+    ;<br/>
+    esac<br/>
+        fi<br/>
 }
 </dd></dl>
 <p> In common with exception handling in other languages, the exception may be thrown by code deeply nested inside the `try&#8217; block. However, note that it must be thrown inside the current shell, not in a subshell forked for a pipeline, parenthesised current-shell construct, or some form of command or process substitution. </p>

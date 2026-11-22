@@ -38,12 +38,12 @@ On Linux-&gt;/ etc / lshell.conf On * BSD-&gt;/ usr / {pkg, local} / etc / lshel
 </dd><dl>
 <dt>
 </dt><dd>
-[global] -&gt; lshell system configuration(only 1)<br />
-             [default] -&gt; lshell default user configuration(only 1)<br />
-                              [foo]<br />
-                                  -&gt;UNIX username &#8220;foo&#8221; specific configuration<br />
-                          [grp:bar]<br />
-                                  -&gt;UNIX groupname &#8220;bar&#8221; specific configuration<br />
+[global] -&gt; lshell system configuration(only 1)<br/>
+             [default] -&gt; lshell default user configuration(only 1)<br/>
+                              [foo]<br/>
+                                  -&gt;UNIX username &#8220;foo&#8221; specific configuration<br/>
+                          [grp:bar]<br/>
+                                  -&gt;UNIX groupname &#8220;bar&#8221; specific configuration<br/>
  Order of priority when loading preferences is the following:</dd>
 <dl>
 <dt>
@@ -182,17 +182,17 @@ On Linux-&gt;/ etc / lshell.conf On * BSD-&gt;/ usr / {pkg, local} / etc / lshel
 </dd><dl>
 <dt>
 </dt><dd>
-&nbsp;<wbr>&#8211; must be able to access&nbsp;<wbr>/usr and&nbsp;<wbr>/var but not&nbsp;<wbr>/usr/local<br />
-&nbsp;<wbr>&#8211; user all command in his PATH but&nbsp;<wbr>&#8216;su&#8217;<br />
-&nbsp;<wbr>&#8211; has a warning counter set to 5<br />
+&nbsp;<wbr>&#8211; must be able to access&nbsp;<wbr>/usr and&nbsp;<wbr>/var but not&nbsp;<wbr>/usr/local<br/>
+&nbsp;<wbr>&#8211; user all command in his PATH but&nbsp;<wbr>&#8216;su&#8217;<br/>
+&nbsp;<wbr>&#8211; has a warning counter set to 5<br/>
 &nbsp;<wbr>&#8211; has his home path set to&nbsp;<wbr>&#8216;/home/users&#8217;</dd></dl>
 <dt><code>User bar:</code></dt>
 <dd>
 </dd><dl>
 <dt>
 </dt><dd>
-&nbsp;<wbr>&#8211; must be able to access&nbsp;<wbr>/etc and&nbsp;<wbr>/usr but not&nbsp;<wbr>/usr/local<br />
-&nbsp;<wbr>&#8211; is allowed default commands plus&nbsp;<wbr>&#8216;ping&#8217;&nbsp;<wbr>minus&nbsp;<wbr>&#8216;ls&#8217;<br />
+&nbsp;<wbr>&#8211; must be able to access&nbsp;<wbr>/etc and&nbsp;<wbr>/usr but not&nbsp;<wbr>/usr/local<br/>
+&nbsp;<wbr>&#8211; is allowed default commands plus&nbsp;<wbr>&#8216;ping&#8217;&nbsp;<wbr>minus&nbsp;<wbr>&#8216;ls&#8217;<br/>
 &nbsp;<wbr>&#8211; strictness is set to 1&nbsp;<wbr>(meaning he is not allowed to type an unknown command)</dd></dl>
 <p> In this case, my configuration file will look something like this:</p>
 <dl>

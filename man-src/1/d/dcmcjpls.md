@@ -40,106 +40,106 @@ dcmfile-out  DICOM output filename
          use config file f for the logger
 </code></pre>
 <h3>input options</h3>
-<p>input file format : +f&#8211; read &#8211; file<br />
-                                    read file format or<br />
-    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br />
-        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br />
-                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br />
-                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br />
+<p>input file format : +f&#8211; read &#8211; file<br/>
+                                    read file format or<br/>
+    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br/>
+        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br/>
+                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br/>
+                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br/>
                                                                                                       &#8211; ti&#8211; read &#8211; xfer &#8211; implicit read with implicit VR little endian TS</p>
 <h3>JPEG-LS encoding options</h3>
-<p>JPEG-LS process:<br />
-  +el  &#8211;encode-lossless<br />
-         encode JPEG-LS lossless only TS (default)<br />
-#This options selects the JPEG &#8211; LS lossless only transfer syntax<br />
-#and performs a lossless compression.<br />
-  +en  &#8211;encode-nearlossless<br />
-         encode JPEG-LS near-lossless TS (NEAR: 2)<br />
-#This options selects the JPEG &#8211; LS lossy transfer syntax<br />
-#and performs a near &#8211; lossless compression.<br />
-JPEG-LS bit rate (near-lossless only):<br />
-  +md  &#8211;max-deviation  [d]eviation: integer (default: 2)<br />
-         defines maximum deviation for an encoded pixel<br />
-#This option specifies the maximum deviation for a single pixel from<br />
-#the original pixel value.<br />
-lossless compression:<br />
-  +pr  &#8211;prefer-raw<br />
-         prefer raw encoder mode (default)<br />
-#This option enables the raw encoder.The raw encoder encodes the<br />
-#complete pixel cell as it was read from the source image without<br />
-#performing any modifications.<br />
-  +pc  &#8211;prefer-cooked<br />
-         prefer cooked encoder mode<br />
-#This option enables the cooked encoder.The cooked encoder moves<br />
-#overlay data to separate tags(60xx, 3000) and only encodes the<br />
-#stored bits in each pixel.<br />
-JPEG-LS compression:<br />
-  +t1  &#8211;threshold1  [t]hreshhold: integer (default for 8 bpp: 3)<br />
-         set JPEG-LS encoding parameter threshold 1<br />
-  +t2  &#8211;threshold2  [t]hreshhold: integer (default for 8 bpp: 7)<br />
-         set JPEG-LS encoding parameter threshold 2<br />
-  +t3  &#8211;threshold3  [t]hreshhold: integer (default for 8 bpp: 21)<br />
-         set JPEG-LS encoding parameter threshold 3<br />
-  +rs  &#8211;reset  [r]eset: integer (default: 64)<br />
-         set JPEG-LS encoding parameter reset<br />
-  +lm  &#8211;limit  [l]imit: integer (default: 0)<br />
-         set JPEG-LS encoding parameter limit<br />
-JPEG-LS interleave:<br />
-  +il  &#8211;interleave-line<br />
-         force line-interleaved JPEG-LS images (default)<br />
-#This flag forces line &#8211; interleaved mode for the resulting image.<br />
-#In line &#8211; interleave mode each line from the source image is<br />
-#compressed separately for each component and then the next line<br />
-#is encoded.<br />
-  +is  &#8211;interleave-sample<br />
-         force sample-interleaved JPEG-LS images<br />
-#This flag forces sample &#8211; interleaved mode for the resulting image.<br />
-#In sample &#8211; interleave mode each pixel&#8217;s components are encoded before<br />
-#the next pixe is encoded.<br />
-  +in  &#8211;interleave-none<br />
-         force uninterleaved JPEG-LS images<br />
-#This flag forces uninterleaved mode for the resulting image.<br />
-#In this mode, each of the image&#8217;s components are completely encoded<br />
-#before the next component is handled.<br />
-  +iv  &#8211;interleave-default<br />
-         use the fastest possible interleave mode<br />
-#This flag selects an interleave mode based on the source image&#8217;s mode.<br />
+<p>JPEG-LS process:<br/>
+  +el  &#8211;encode-lossless<br/>
+         encode JPEG-LS lossless only TS (default)<br/>
+#This options selects the JPEG &#8211; LS lossless only transfer syntax<br/>
+#and performs a lossless compression.<br/>
+  +en  &#8211;encode-nearlossless<br/>
+         encode JPEG-LS near-lossless TS (NEAR: 2)<br/>
+#This options selects the JPEG &#8211; LS lossy transfer syntax<br/>
+#and performs a near &#8211; lossless compression.<br/>
+JPEG-LS bit rate (near-lossless only):<br/>
+  +md  &#8211;max-deviation  [d]eviation: integer (default: 2)<br/>
+         defines maximum deviation for an encoded pixel<br/>
+#This option specifies the maximum deviation for a single pixel from<br/>
+#the original pixel value.<br/>
+lossless compression:<br/>
+  +pr  &#8211;prefer-raw<br/>
+         prefer raw encoder mode (default)<br/>
+#This option enables the raw encoder.The raw encoder encodes the<br/>
+#complete pixel cell as it was read from the source image without<br/>
+#performing any modifications.<br/>
+  +pc  &#8211;prefer-cooked<br/>
+         prefer cooked encoder mode<br/>
+#This option enables the cooked encoder.The cooked encoder moves<br/>
+#overlay data to separate tags(60xx, 3000) and only encodes the<br/>
+#stored bits in each pixel.<br/>
+JPEG-LS compression:<br/>
+  +t1  &#8211;threshold1  [t]hreshhold: integer (default for 8 bpp: 3)<br/>
+         set JPEG-LS encoding parameter threshold 1<br/>
+  +t2  &#8211;threshold2  [t]hreshhold: integer (default for 8 bpp: 7)<br/>
+         set JPEG-LS encoding parameter threshold 2<br/>
+  +t3  &#8211;threshold3  [t]hreshhold: integer (default for 8 bpp: 21)<br/>
+         set JPEG-LS encoding parameter threshold 3<br/>
+  +rs  &#8211;reset  [r]eset: integer (default: 64)<br/>
+         set JPEG-LS encoding parameter reset<br/>
+  +lm  &#8211;limit  [l]imit: integer (default: 0)<br/>
+         set JPEG-LS encoding parameter limit<br/>
+JPEG-LS interleave:<br/>
+  +il  &#8211;interleave-line<br/>
+         force line-interleaved JPEG-LS images (default)<br/>
+#This flag forces line &#8211; interleaved mode for the resulting image.<br/>
+#In line &#8211; interleave mode each line from the source image is<br/>
+#compressed separately for each component and then the next line<br/>
+#is encoded.<br/>
+  +is  &#8211;interleave-sample<br/>
+         force sample-interleaved JPEG-LS images<br/>
+#This flag forces sample &#8211; interleaved mode for the resulting image.<br/>
+#In sample &#8211; interleave mode each pixel&#8217;s components are encoded before<br/>
+#the next pixe is encoded.<br/>
+  +in  &#8211;interleave-none<br/>
+         force uninterleaved JPEG-LS images<br/>
+#This flag forces uninterleaved mode for the resulting image.<br/>
+#In this mode, each of the image&#8217;s components are completely encoded<br/>
+#before the next component is handled.<br/>
+  +iv  &#8211;interleave-default<br/>
+         use the fastest possible interleave mode<br/>
+#This flag selects an interleave mode based on the source image&#8217;s mode.<br/>
 #If possible, the image is not converted to a different interleave mode.</p>
 <h3>encapsulated pixel data encoding options</h3>
-<p>encapsulated pixel data fragmentation : +ff&#8211; fragment &#8211; per &#8211; frame encode each frame as one fragment(default)<br />
-#This option causes the creation of one compressed fragment for each<br />
-#frame(recommended).<br />
-                                        +<br />
-                                        fs&#8211; fragment &#8211; size[s] ize : integer limit fragment size to s kbytes<br />
-#This option limits the fragment size which may cause the creation of<br />
-#multiple fragments per frame.<br />
-                                                                      basic offset table encoding : +ot&#8211; offset<br />
-                                                                                                    &#8211;<br />
-                                                                                                    table &#8211; create create offset table(default)<br />
-#This option causes the creation of a valid offset table for the<br />
-#compressed JPEG fragments.<br />
-                                                                                                    &#8211;<br />
-                                                                                                    ot&#8211; offset &#8211; table &#8211; empty leave offset table empty<br />
-#This option causes the creation of an empty offset table<br />
-#for the compressed JPEG fragments.<br />
-                                                                                                    SOP Class UID : +cd&#8211; class<br />
-                                                                                                                    &#8211;<br />
-                                                                                                                    default keep SOP Class UID(default)<br />
-#Keep the SOP Class UID of the source image.<br />
-                                                                                                                    +<br />
-                                                                                                                    cs&#8211; class &#8211; sc convert to Secondary Capture Image(implies&#8211; uid &#8211; always)<br />
-#Convert the image to Secondary Capture.In addition to the SOP Class<br />
-#UID, all attributes required for a valid secondary capture image are<br />
-#added.A new SOP instance UID is always assigned.<br />
-                                                                                                                                     SOP Instance UID : +ud&#8211; uid<br />
-                                                                                                                                                        &#8211;<br />
-                                                                                                                                                        default assign new UID if lossy compression(default)<br />
-#Assigns a new SOP instance UID if the compression is lossy JPEG.<br />
-                                                                                                                                                        +<br />
-                                                                                                                                                        ua&#8211; uid &#8211; always always assign new UID<br />
-#Unconditionally assigns a new SOP instance UID.<br />
-                                                                                                                                                        +<br />
-                                                                                                                                                        un&#8211; uid &#8211; never never assign new UID<br />
+<p>encapsulated pixel data fragmentation : +ff&#8211; fragment &#8211; per &#8211; frame encode each frame as one fragment(default)<br/>
+#This option causes the creation of one compressed fragment for each<br/>
+#frame(recommended).<br/>
+                                        +<br/>
+                                        fs&#8211; fragment &#8211; size[s] ize : integer limit fragment size to s kbytes<br/>
+#This option limits the fragment size which may cause the creation of<br/>
+#multiple fragments per frame.<br/>
+                                                                      basic offset table encoding : +ot&#8211; offset<br/>
+                                                                                                    &#8211;<br/>
+                                                                                                    table &#8211; create create offset table(default)<br/>
+#This option causes the creation of a valid offset table for the<br/>
+#compressed JPEG fragments.<br/>
+                                                                                                    &#8211;<br/>
+                                                                                                    ot&#8211; offset &#8211; table &#8211; empty leave offset table empty<br/>
+#This option causes the creation of an empty offset table<br/>
+#for the compressed JPEG fragments.<br/>
+                                                                                                    SOP Class UID : +cd&#8211; class<br/>
+                                                                                                                    &#8211;<br/>
+                                                                                                                    default keep SOP Class UID(default)<br/>
+#Keep the SOP Class UID of the source image.<br/>
+                                                                                                                    +<br/>
+                                                                                                                    cs&#8211; class &#8211; sc convert to Secondary Capture Image(implies&#8211; uid &#8211; always)<br/>
+#Convert the image to Secondary Capture.In addition to the SOP Class<br/>
+#UID, all attributes required for a valid secondary capture image are<br/>
+#added.A new SOP instance UID is always assigned.<br/>
+                                                                                                                                     SOP Instance UID : +ud&#8211; uid<br/>
+                                                                                                                                                        &#8211;<br/>
+                                                                                                                                                        default assign new UID if lossy compression(default)<br/>
+#Assigns a new SOP instance UID if the compression is lossy JPEG.<br/>
+                                                                                                                                                        +<br/>
+                                                                                                                                                        ua&#8211; uid &#8211; always always assign new UID<br/>
+#Unconditionally assigns a new SOP instance UID.<br/>
+                                                                                                                                                        +<br/>
+                                                                                                                                                        un&#8211; uid &#8211; never never assign new UID<br/>
 #Never assigns a new SOP instance UID.</p>
 <h3>output options</h3>
 <pre><code>

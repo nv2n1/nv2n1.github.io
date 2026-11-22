@@ -36,14 +36,14 @@ description: "Icecream – A distributed compile system"
 <h2>How To Combine Icecream With Ccache</h2>
 <p>The easiest way to use ccache with icecream is putting the symlink masquerades into /opt/icream/bin and putting small wrapper scripts in /opt/ccache/bin </p>
 <dl>
-<dd>&nbsp;<wbr><br />
-&nbsp;<wbr>cat&nbsp;<wbr>/opt/ccache/bin/g++:<br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>#!&nbsp;<wbr>/bin/sh<br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>export CCACHE_PATH=/opt/icecream/bin<br />
-&nbsp;<wbr>export PATH=/opt/icecream/bin:/usr/bin:$PATH<br />
-&nbsp;<wbr>ccache g++&nbsp;<wbr>&quot;$@&quot;<br />
+<dd>&nbsp;<wbr><br/>
+&nbsp;<wbr>cat&nbsp;<wbr>/opt/ccache/bin/g++:<br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>#!&nbsp;<wbr>/bin/sh<br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>export CCACHE_PATH=/opt/icecream/bin<br/>
+&nbsp;<wbr>export PATH=/opt/icecream/bin:/usr/bin:$PATH<br/>
+&nbsp;<wbr>ccache g++&nbsp;<wbr>&quot;$@&quot;<br/>
 &nbsp;<wbr> </dd>
 </dl>
 <p> Then you can replace /opt/icecream/bin with /opt/ccache/bin in your <i>$PATH</i> and all icecream calls will go through ccache (and Qt will compile in 62s :) </p>

@@ -10,18 +10,18 @@ description: "dpmgr – administration utility for QDBM Depot"
 
 <p> dpmgr &#8211; administration utility for QDBM Depot </p>
 <h2>SYNOPSIS</h2>
-<p> <code>dpmgr create</code> [-s] [-bnum <i>num</i>] <i>name</i><br />
- <code>dpmgr put</code> [-kx|-ki] [-vx|-vi|-vf] [-keep|-cat] [-na] <i>name</i> <i>key</i> <i>val</i><br />
- <code>dpmgr out</code> [-kx|-ki] <i>name</i> <i>key</i><br />
- <code>dpmgr get</code> [-nl] [-kx|-ki] [-start <i>num</i>] [-max <i>num</i>] [-ox] [-n] <i>name</i> <i>key</i><br />
- <code>dpmgr list</code> [-nl] [-k|-v] [-ox] <i>name</i><br />
- <code>dpmgr optimize</code> [-bnum <i>num</i>] [-na] <i>name</i><br />
- <code>dpmgr inform</code> [-nl] <i>name</i><br />
- <code>dpmgr remove</code> <i>name</i><br />
- <code>dpmgr repair</code> <i>name</i><br />
- <code>dpmgr exportdb</code> <i>name file</i><br />
- <code>dpmgr importdb</code> <i>name file</i><br />
- <code>dpmgr snaffle</code> [-kx|-ki] [-ox] [-n] <i>name</i> <i>key</i><br />
+<p> <code>dpmgr create</code> [-s] [-bnum <i>num</i>] <i>name</i><br/>
+ <code>dpmgr put</code> [-kx|-ki] [-vx|-vi|-vf] [-keep|-cat] [-na] <i>name</i> <i>key</i> <i>val</i><br/>
+ <code>dpmgr out</code> [-kx|-ki] <i>name</i> <i>key</i><br/>
+ <code>dpmgr get</code> [-nl] [-kx|-ki] [-start <i>num</i>] [-max <i>num</i>] [-ox] [-n] <i>name</i> <i>key</i><br/>
+ <code>dpmgr list</code> [-nl] [-k|-v] [-ox] <i>name</i><br/>
+ <code>dpmgr optimize</code> [-bnum <i>num</i>] [-na] <i>name</i><br/>
+ <code>dpmgr inform</code> [-nl] <i>name</i><br/>
+ <code>dpmgr remove</code> <i>name</i><br/>
+ <code>dpmgr repair</code> <i>name</i><br/>
+ <code>dpmgr exportdb</code> <i>name file</i><br/>
+ <code>dpmgr importdb</code> <i>name file</i><br/>
+ <code>dpmgr snaffle</code> [-kx|-ki] [-ox] [-n] <i>name</i> <i>key</i><br/>
  <code>dpmgr version</code></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>dpmgr</code> commands. </p>

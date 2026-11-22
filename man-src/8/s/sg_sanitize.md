@@ -56,10 +56,10 @@ description: "sg_sanitize – remove all user data from disk with SCSI SANITIZE 
 <p> The SCSI SANITIZE command is related to the SCSI FORMAT UNIT command. It is likely that a block erase sanitize operation would take a similar amount of time as a format on the same disk (e.g. 9 hours for a 2 Terabyte disk). The primary goal of a format is the configuration of the disk at the end of a format (e.g. different logical block size or protection information added). Removal of user data is only a side effect of a format. With the SCSI SANITIZE command, removal of user data is the primary goal. If a sanitize operation is interrupted (e.g. the disk is power cycled) then after power up any remaining user data will not be available and the sanitize operation will continue. When a format is interrupted (e.g. the disk is power cycled) the drafts say very little about the state of the disk. In practice some of the original user data may remain and the format may need to be restarted. </p>
 <p> Finding out whether a disk (SCSI or ATA) supports SANITIZE can be a challenge. If the user really needs to find out and no other information is available then try &#8216;sg_sanitize &#8211;fail -vvv &lt;device&gt;&#8217; and observe the sense data returned may be the safest approach. Using the <i>&#8211;fail</i> variant of this utility should have no effect unless it follows an already failed sanitize operation. If the SCSI REPORT SUPPORTED OPERATION CODES command (see sg_opcodes) is supported then using it would be a better approach for finding if sanitize is supported.</p>
 <h2>Examples</h2>
-<p>These examples use Linux device names. For suitable device names in other supported Operating Systems see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. As a precaution if this utility is called with no options then apart from printing a usage message, nothing happens:<br />
-sg_sanitize&nbsp;<wbr>/dev/sdm To do a &quot;block erase&quot; sanitize the <i>&#8211;block</i> option is required. The user will be given a 15 second period to reconsider, the SCSI SANITIZE command will be started with the IMMED bit set, then this utility will poll for a progress indication with a REQUEST SENSE command until the sanitize operation is finished:<br />
-sg_sanitize &#8211;block&nbsp;<wbr>/dev/sdm To start a &quot;block erase&quot; sanitize and return from this utility once it is started (but not yet completed) use the <i>&#8211;early</i> option:<br />
-sg_sanitize &#8211;block &#8211;early&nbsp;<wbr>/dev/sdm If the 15 second reconsideration time is not required add the <i>&#8211;quick</i> option:<br />
+<p>These examples use Linux device names. For suitable device names in other supported Operating Systems see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. As a precaution if this utility is called with no options then apart from printing a usage message, nothing happens:<br/>
+sg_sanitize&nbsp;<wbr>/dev/sdm To do a &quot;block erase&quot; sanitize the <i>&#8211;block</i> option is required. The user will be given a 15 second period to reconsider, the SCSI SANITIZE command will be started with the IMMED bit set, then this utility will poll for a progress indication with a REQUEST SENSE command until the sanitize operation is finished:<br/>
+sg_sanitize &#8211;block&nbsp;<wbr>/dev/sdm To start a &quot;block erase&quot; sanitize and return from this utility once it is started (but not yet completed) use the <i>&#8211;early</i> option:<br/>
+sg_sanitize &#8211;block &#8211;early&nbsp;<wbr>/dev/sdm If the 15 second reconsideration time is not required add the <i>&#8211;quick</i> option:<br/>
 sg_sanitize &#8211;block &#8211;quick &#8211;early&nbsp;<wbr>/dev/sdm To do an &quot;overwrite&quot; sanitize a pattern file is required: </p>
 <pre><code>sg_sanitize --overwrite --pattern=rand.img /dev/sdm</code></pre>
 <p> If the length of that &quot;rand.img&quot; is 512 bytes (a typically logical block size) then to use only the first 17 bytes (repeatedly) in the &quot;overwrite&quot; sanitize operation: </p>
@@ -72,7 +72,7 @@ sg_sanitize &#8211;block &#8211;quick &#8211;early&nbsp;<wbr>/dev/sdm To do an &
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2011-2013 Douglas Gilbert<br />
+<p>Copyright &#169; 2011-2013 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sg_requests/">sg_requests</a>(8), <a href="/docs/linux/man/8-sg_format/">sg_format</a>(8)</code> </p>

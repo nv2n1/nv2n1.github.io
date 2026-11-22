@@ -65,7 +65,7 @@ description: "chntpw – utility to overwrite passwords of Windows systems"
 <h2>SEE ALSO</h2>
 <p> <code>reged, samusrgrp, sampasswd</code> </p>
 <p> If you are looking for an automated procedure for password recovery, you might want to check the bootdisks (can be used in CD and USB drives) provided by the upstream author at <code><a rel="nofollow" href="http://pogostick.net/~pnh/ntpasswd/">http://pogostick.net/~pnh/ntpasswd/</a></code> </p>
-<p> <br />
+<p> <br/>
  You will find more information available on how this program works, including in-depth details on how the registry works, in the text files <i>/usr/share/doc/chntpw/README.txt</i> and <i>/usr/share/doc/chntpw/MANUAL.txt</i> </p>
 <h2>AUTHOR</h2>
 <p> This program was written by Petter N Hagen. </p>

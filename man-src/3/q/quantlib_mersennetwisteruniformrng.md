@@ -16,7 +16,7 @@ description: "QuantLib::MersenneTwisterUniformRng – Uniform random number gene
 <p><code>MersenneTwisterUniformRng</code> (unsigned long seed=0) </p>
 <p> <code>MersenneTwisterUniformRng</code> (const std::vector&lt; unsigned long &gt; &amp;seeds) </p>
 <p> <code>sample_type</code> <code>next</code> () const </p>
-<p> unsigned long <code>nextInt32</code> () const<br />
+<p> unsigned long <code>nextInt32</code> () const<br/>
  <i>return a random number on [0,0xffffffff]-interval </i></p>
 <h2>Detailed Description</h2>
 <p>Uniform random number generator. </p>

@@ -10,7 +10,7 @@ description: "cptsvx.f –"
 <p>cptsvx.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cptsvx</code> (FACT, N, NRHS, D, E, DF, EF, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, RWORK, INFO)<br />
+<p>subroutine <code>cptsvx</code> (FACT, N, NRHS, D, E, DF, EF, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, RWORK, INFO)<br/>
  <i></i><code> CPTSVX computes the solution to system of linear equations A * X = B for PT matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cptsvx (characterFACT, integerN, integerNRHS, real, dimension( * )D, complex, dimension( * )E, real, dimension( * )DF, complex, dimension( * )EF, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldx, * )X, integerLDX, realRCOND, real, dimension( * )FERR, real, dimension( * )BERR, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

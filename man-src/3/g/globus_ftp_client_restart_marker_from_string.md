@@ -10,7 +10,7 @@ description: "Restart Markers –"
 
 <p> Restart Markers &#8211; </p>
 <h3>Data Structures</h3>
-<p> union <code>globus_ftp_client_restart_marker_t</code><br />
+<p> union <code>globus_ftp_client_restart_marker_t</code><br/>
  <i>Restart marker.</i> </p>
 <p> This structure is may be either a stream mode transfer offset, or an extended block mode byte range. &quot;</p>
 <h3>Functions</h3>
@@ -33,7 +33,7 @@ description: "Restart Markers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>new_marker</i> A pointer to a new restart marker.<br />
+</dt><dd> <i>new_marker</i> A pointer to a new restart marker.<br/>
  <i>marker</i> The marker to copy.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -55,7 +55,7 @@ description: "Restart Markers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>marker</i> The restart marker to be unitialized.<br />
+</dt><dd> <i>marker</i> The restart marker to be unitialized.<br/>
  <i>marker_string</i> The string containing a textual representation of a restart marker.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -67,7 +67,7 @@ description: "Restart Markers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>marker</i> A previously initialized or copied restart marker<br />
+</dt><dd> <i>marker</i> A previously initialized or copied restart marker<br/>
  <i>total_bytes</i> pointer to storage for total bytes in marker</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -93,8 +93,8 @@ description: "Restart Markers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>marker</i> A restart marker<br />
- <i>offset</i> The starting offset of the range.<br />
+</dt><dd> <i>marker</i> A restart marker<br/>
+ <i>offset</i> The starting offset of the range.<br/>
  <i>end_offset</i> The ending offset of the range.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -109,8 +109,8 @@ description: "Restart Markers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>marker</i> A restart marker<br />
- <i>offset</i> The local stream offset.<br />
+</dt><dd> <i>marker</i> A restart marker<br/>
+ <i>offset</i> The local stream offset.<br/>
  <i>ascii_offset</i> The network ascii representation of the offset.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -125,7 +125,7 @@ description: "Restart Markers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>marker</i> A restart marker<br />
+</dt><dd> <i>marker</i> A restart marker<br/>
  <i>offset</i> The stream offset</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -138,7 +138,7 @@ description: "Restart Markers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>marker</i> An initialized FTP client restart marker.<br />
+</dt><dd> <i>marker</i> An initialized FTP client restart marker.<br/>
  <i>marker_string</i> A pointer to a char * to be set to a freshly allocated marker string.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>

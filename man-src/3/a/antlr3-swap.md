@@ -16,18 +16,18 @@ description: "ANTLR3_VECTOR_struct –"
 <h3>Data Fields</h3>
 <p> <code>ANTLR3_UINT32</code>(* <code>add</code> )(struct <code>ANTLR3_VECTOR_struct</code> *vector, void *element, void(ANTLR3_CDECL *freeptr)(void *)) </p>
 <p> void(* <code>clear</code> )(struct <code>ANTLR3_VECTOR_struct</code> *vector) </p>
-<p> <code>ANTLR3_UINT32</code> <code>count</code><br />
- <i>Number of entries currently in the list;. </i><br />
+<p> <code>ANTLR3_UINT32</code> <code>count</code><br/>
+ <i>Number of entries currently in the list;. </i><br/>
  void(* <code>del</code> )(struct <code>ANTLR3_VECTOR_struct</code> *vector, <code>ANTLR3_UINT32</code> entry) </p>
-<p> <code>pANTLR3_VECTOR_ELEMENT</code> <code>elements</code><br />
- <i>Array of pointers to vector elements. </i><br />
- <code>ANTLR3_UINT32</code> <code>elementsSize</code><br />
- <i>Total number of entries in elements at any point in time. </i><br />
- <code>ANTLR3_BOOLEAN</code> <code>factoryMade</code><br />
- <i>Indicates if the structure was made by a factory, in which case only the factory can free the memory for the actual vector, though the vector free function is called and will recurse through its entries calling any free pointers for each entry. </i><br />
+<p> <code>pANTLR3_VECTOR_ELEMENT</code> <code>elements</code><br/>
+ <i>Array of pointers to vector elements. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>elementsSize</code><br/>
+ <i>Total number of entries in elements at any point in time. </i><br/>
+ <code>ANTLR3_BOOLEAN</code> <code>factoryMade</code><br/>
+ <i>Indicates if the structure was made by a factory, in which case only the factory can free the memory for the actual vector, though the vector free function is called and will recurse through its entries calling any free pointers for each entry. </i><br/>
  void *(* <code>get</code> )(struct <code>ANTLR3_VECTOR_struct</code> *vector, <code>ANTLR3_UINT32</code> entry) </p>
-<p> <code>ANTLR3_VECTOR_ELEMENT</code> <code>internal</code> [ANTLR3_VECTOR_INTERNAL_SIZE]<br />
- <i>Many times, a vector holds just a few nodes in an AST and it is too much overhead to malloc the space for elements so at the expense of a few bytes of memory, we hold the first few elements internally. </i><br />
+<p> <code>ANTLR3_VECTOR_ELEMENT</code> <code>internal</code> [ANTLR3_VECTOR_INTERNAL_SIZE]<br/>
+ <i>Many times, a vector holds just a few nodes in an AST and it is too much overhead to malloc the space for elements so at the expense of a few bytes of memory, we hold the first few elements internally. </i><br/>
  void *(* <code>remove</code> )(struct <code>ANTLR3_VECTOR_struct</code> *vector, <code>ANTLR3_UINT32</code> entry) </p>
 <p> <code>ANTLR3_UINT32</code>(* <code>set</code> )(struct <code>ANTLR3_VECTOR_struct</code> *vector, <code>ANTLR3_UINT32</code> entry, void *element, void(ANTLR3_CDECL *freeptr)(void *), <code>ANTLR3_BOOLEAN</code> freeExisting) </p>
 <p> <code>ANTLR3_UINT32</code>(* <code>size</code> )(struct <code>ANTLR3_VECTOR_struct</code> *vector) </p>

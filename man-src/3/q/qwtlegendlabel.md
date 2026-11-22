@@ -15,46 +15,46 @@ description: "QwtLegendLabel –"
 <h3>Public Slots</h3>
 <p>void <code>setChecked</code> (bool on) </p>
 <h3>Signals</h3>
-<p>void <code>clicked</code> ()<br />
- <i>Signal, when the legend item has been clicked. </i><br />
- void <code>pressed</code> ()<br />
- <i>Signal, when the legend item has been pressed. </i><br />
- void <code>released</code> ()<br />
- <i>Signal, when the legend item has been released. </i><br />
- void <code>checked</code> (bool)<br />
+<p>void <code>clicked</code> ()<br/>
+ <i>Signal, when the legend item has been clicked. </i><br/>
+ void <code>pressed</code> ()<br/>
+ <i>Signal, when the legend item has been pressed. </i><br/>
+ void <code>released</code> ()<br/>
+ <i>Signal, when the legend item has been released. </i><br/>
+ void <code>checked</code> (bool)<br/>
  <i>Signal, when the legend item has been toggled. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtLegendLabel</code> (QWidget *parent=0) </p>
-<p> virtual <code>~QwtLegendLabel</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtLegendLabel</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setData</code> (const <code>QwtLegendData</code> &amp;) </p>
 <p> const <code>QwtLegendData</code> &amp; <code>data</code> () const </p>
 <p> void <code>setItemMode</code> (<code>QwtLegendData::Mode</code>) </p>
 <p> <code>QwtLegendData::Mode</code> <code>itemMode</code> () const </p>
-<p> void <code>setSpacing</code> (int <code>spacing</code>)<br />
- <i>Change the spacing between icon and text. </i><br />
+<p> void <code>setSpacing</code> (int <code>spacing</code>)<br/>
+ <i>Change the spacing between icon and text. </i><br/>
  int <code>spacing</code> () const </p>
 <p> virtual void <code>setText</code> (const <code>QwtText</code> &amp;) </p>
 <p> void <code>setIcon</code> (const QPixmap &amp;) </p>
 <p> QPixmap <code>icon</code> () const </p>
-<p> virtual QSize <code>sizeHint</code> () const<br />
- <i>Return a size hint. </i><br />
- bool <code>isChecked</code> () const<br />
+<p> virtual QSize <code>sizeHint</code> () const<br/>
+ <i>Return a size hint. </i><br/>
+ bool <code>isChecked</code> () const<br/>
  <i>Return true, if the item is checked. </i></p>
 <h3>Protected Member Functions</h3>
-<p>void <code>setDown</code> (bool)<br />
- <i>Set the item being down. </i><br />
- bool <code>isDown</code> () const<br />
- <i>Return true, if the item is down. </i><br />
- virtual void <code>paintEvent</code> (QPaintEvent *)<br />
- <i>Paint event. </i><br />
- virtual void <code>mousePressEvent</code> (QMouseEvent *)<br />
- <i>Handle mouse press events. </i><br />
- virtual void <code>mouseReleaseEvent</code> (QMouseEvent *)<br />
- <i>Handle mouse release events. </i><br />
- virtual void <code>keyPressEvent</code> (QKeyEvent *)<br />
- <i>Handle key press events. </i><br />
- virtual void <code>keyReleaseEvent</code> (QKeyEvent *)<br />
+<p>void <code>setDown</code> (bool)<br/>
+ <i>Set the item being down. </i><br/>
+ bool <code>isDown</code> () const<br/>
+ <i>Return true, if the item is down. </i><br/>
+ virtual void <code>paintEvent</code> (QPaintEvent *)<br/>
+ <i>Paint event. </i><br/>
+ virtual void <code>mousePressEvent</code> (QMouseEvent *)<br/>
+ <i>Handle mouse press events. </i><br/>
+ virtual void <code>mouseReleaseEvent</code> (QMouseEvent *)<br/>
+ <i>Handle mouse release events. </i><br/>
+ virtual void <code>keyPressEvent</code> (QKeyEvent *)<br/>
+ <i>Handle key press events. </i><br/>
+ virtual void <code>keyReleaseEvent</code> (QKeyEvent *)<br/>
  <i>Handle key release events. </i></p>
 <h2>Detailed Description</h2>
 <p>A widget representing something on a <code>QwtLegend</code>.</p>

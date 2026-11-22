@@ -17,10 +17,10 @@ region
 OPTIONS := {
     -V[ersion] |
     -n[no-nice-names] }</code></pre>
-<p> <code>devlink region show</code> [ <i>DEV/REGION</i> ]<br />
- <code>devlink region del</code> <i>DEV/REGION</i> <code>snapshot</code> <i>SNAPSHOT_ID</i><br />
- <code>devlink region dump</code> <i>DEV/REGION</i> <code>snapshot</code> <i>SNAPSHOT_ID</i><br />
- <code>devlink region read</code> <i>DEV/REGION</i> <code>[ </code> <code>snapshot</code> <i>SNAPSHOT_ID</i> <code>]</code> <code>address</code> <i>ADDRESS</i> <code>length</code> <i>LENGTH</i><br />
+<p> <code>devlink region show</code> [ <i>DEV/REGION</i> ]<br/>
+ <code>devlink region del</code> <i>DEV/REGION</i> <code>snapshot</code> <i>SNAPSHOT_ID</i><br/>
+ <code>devlink region dump</code> <i>DEV/REGION</i> <code>snapshot</code> <i>SNAPSHOT_ID</i><br/>
+ <code>devlink region read</code> <i>DEV/REGION</i> <code>[ </code> <code>snapshot</code> <i>SNAPSHOT_ID</i> <code>]</code> <code>address</code> <i>ADDRESS</i> <code>length</code> <i>LENGTH</i><br/>
  <code>devlink region help</code> </p>
 <h2>Description</h2>
 <h3>devlink region show &#8211; Show all supported address regions names, snapshots and sizes</h3>

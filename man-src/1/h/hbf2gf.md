@@ -10,9 +10,9 @@ description: "hbf2gf – convert a CJK bitmap font into subfonts usable by TeX a
 
 <p> hbf2gf &#8211; convert a CJK bitmap font into subfonts usable by TeX and Omega. </p>
 <h2>SYNOPSIS</h2>
-<p> <code>hbf2gf</code> [<code>-q</code>] <i>configuration-file</i>[<i>.cfg</i>]<br />
- <code>hbf2gf</code> [<code>-q</code>] [<code>-p</code>] [<code>-g</code>] [<code>-n</code>] <i>subfont-name x-resolution</i> [<i>y-scale</i>&nbsp;|<i>&nbsp;y-resolution</i>]<br />
- <code>hbf2gf</code> <code>-t</code> [<code>-q</code>] <i>subfont-name</i><br />
+<p> <code>hbf2gf</code> [<code>-q</code>] <i>configuration-file</i>[<i>.cfg</i>]<br/>
+ <code>hbf2gf</code> [<code>-q</code>] [<code>-p</code>] [<code>-g</code>] [<code>-n</code>] <i>subfont-name x-resolution</i> [<i>y-scale</i>&nbsp;|<i>&nbsp;y-resolution</i>]<br/>
+ <code>hbf2gf</code> <code>-t</code> [<code>-q</code>] <i>subfont-name</i><br/>
  <code>hbf2gf &#8211;version</code> | <code>&#8211;help</code></p>
 <h2>DESCRIPTION</h2>
 <p> CJK bitmap fonts can&#8217;t be directly used with TeX because the number of characters in such fonts exceeds 256, the limit of a TeX font. Thus it is necessary to split these fonts into subfonts, and this is exactly what <code>hbf2gf</code> does. </p>
@@ -147,5 +147,5 @@ description: "hbf2gf – convert a CJK bitmap font into subfonts usable by TeX a
 <p> <code>hbf2gf</code> is part of the CJK macro package for LaTeX 2e available at the CTAN hosts and its mirrors. </p>
 <p> CJK fonts together with HBF header files can be found at and its mirrors.</p>
 <h2>AUTHORS</h2>
-<p> Werner Lemberg<br />
+<p> Werner Lemberg<br/>
  Ross Paterson (the HBF API) </p>

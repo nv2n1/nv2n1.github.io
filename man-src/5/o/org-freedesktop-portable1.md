@@ -272,7 +272,7 @@ description: "org.freedesktop.portable1 – The D-Bus interface of systemd-porta
 <p> <i>UsageExclusive</i> specifies the image disk usage (exclusive). </p>
 <p> <i>LimitExclusive</i> specifies the image disk usage limit (exclusive).</p>
 <h2>Versioning</h2>
-<p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[][1].</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

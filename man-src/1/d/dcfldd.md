@@ -163,7 +163,7 @@ description: "dcfldd – manual page for dcfldd (dcfldd) 1.3.4"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;nicholasharbour [at] yahoo.com&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1985-2006 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 1985-2006 Free Software Foundation, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>dcfldd</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>dcfldd</code> programs are properly installed at your site, the command</p>

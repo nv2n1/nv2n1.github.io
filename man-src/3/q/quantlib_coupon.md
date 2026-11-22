@@ -18,23 +18,23 @@ description: "QuantLib::Coupon – coupon accruing over a fixed period"
 <p> <code>Date</code> <code>date</code> () const </p>
 <p> <code>Inspectors</code> </p>
 <p> <code>Real</code> <code>nominal</code> () const </p>
-<p> const <code>Date</code> &amp; <code>accrualStartDate</code> () const<br />
- <i>start of the accrual period </i><br />
- const <code>Date</code> &amp; <code>accrualEndDate</code> () const<br />
- <i>end of the accrual period </i><br />
- const <code>Date</code> &amp; <code>referencePeriodStart</code> () const<br />
- <i>start date of the reference period </i><br />
- const <code>Date</code> &amp; <code>referencePeriodEnd</code> () const<br />
- <i>end date of the reference period </i><br />
- <code>Time</code> <code>accrualPeriod</code> () const<br />
- <i>accrual period as fraction of year </i><br />
- <code>Integer</code> <code>accrualDays</code> () const<br />
- <i>accrual period in days </i><br />
- virtual <code>Rate</code> <code>rate</code> () const =0<br />
- <i>accrued rate </i><br />
- virtual <code>DayCounter</code> <code>dayCounter</code> () const =0<br />
- <i>day counter for accrual calculation </i><br />
- virtual <code>Real</code> <code>accruedAmount</code> (const <code>Date</code> &amp;) const =0<br />
+<p> const <code>Date</code> &amp; <code>accrualStartDate</code> () const<br/>
+ <i>start of the accrual period </i><br/>
+ const <code>Date</code> &amp; <code>accrualEndDate</code> () const<br/>
+ <i>end of the accrual period </i><br/>
+ const <code>Date</code> &amp; <code>referencePeriodStart</code> () const<br/>
+ <i>start date of the reference period </i><br/>
+ const <code>Date</code> &amp; <code>referencePeriodEnd</code> () const<br/>
+ <i>end date of the reference period </i><br/>
+ <code>Time</code> <code>accrualPeriod</code> () const<br/>
+ <i>accrual period as fraction of year </i><br/>
+ <code>Integer</code> <code>accrualDays</code> () const<br/>
+ <i>accrual period in days </i><br/>
+ virtual <code>Rate</code> <code>rate</code> () const =0<br/>
+ <i>accrued rate </i><br/>
+ virtual <code>DayCounter</code> <code>dayCounter</code> () const =0<br/>
+ <i>day counter for accrual calculation </i><br/>
+ virtual <code>Real</code> <code>accruedAmount</code> (const <code>Date</code> &amp;) const =0<br/>
  <i>accrued amount at the given date </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>

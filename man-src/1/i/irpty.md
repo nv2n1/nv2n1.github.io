@@ -12,7 +12,7 @@ description: "irpty – pseudo tty driver"
 <h2>SYNOPSIS</h2>
 <p> <code>irpty</code> [<i>options</i>] <i>config_file &#8212; program </i>[<i>args </i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
-<p> irpty connects to lircd to receive infrared codes and converts them to key strokes. E.g. type irpty ~/.config/lircrc &#8212; workbone to control the CD-player program workbone. Of course you will have to create an appropriate config file for this purpose first. The config string will be passed to the desired application. Note that you can use escape sequences to specify non printable characters. Have a look at the<br />
+<p> irpty connects to lircd to receive infrared codes and converts them to key strokes. E.g. type irpty ~/.config/lircrc &#8212; workbone to control the CD-player program workbone. Of course you will have to create an appropriate config file for this purpose first. The config string will be passed to the desired application. Note that you can use escape sequences to specify non printable characters. Have a look at the<br/>
 &nbsp;<wbr>.lircrc file format description for details.</p>
 <h2>OPTIONS</h2>
 <dl>

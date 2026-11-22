@@ -13,8 +13,8 @@ description: "autokey-gtk – keyboard automation utility for GNOME and GTK"
 <p> <code>autokey-gtk</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>autokey-gtk</code> command. </p>
-<p> <code>autokey-gtk</code> AutoKey is a desktop automation utility for Linux and X11. It allows the automation of virtually any task by responding to typed abbreviations and hotkeys. It offers a full-featured GUI that makes it highly accessible for novices, as well as a scripting interface offering the full flexibility and power of the Python language.<br />
- For more information refer to the online wiki at:<br />
+<p> <code>autokey-gtk</code> AutoKey is a desktop automation utility for Linux and X11. It allows the automation of virtually any task by responding to typed abbreviations and hotkeys. It offers a full-featured GUI that makes it highly accessible for novices, as well as a scripting interface offering the full flexibility and power of the Python language.<br/>
+ For more information refer to the online wiki at:<br/>
 &nbsp;<wbr><a rel="nofollow" href="http://code.google.com/p/autokey/w/list">http://code.google.com/p/autokey/w/list</a></p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

@@ -47,10 +47,10 @@ description: "lsscsi – list SCSI devices (or hosts) and their attributes"
 <dt><code>-t</code>, <code>&#8211;transport</code></dt>
 <dd>Output transport information. This will be a target related information or, if <i>&#8211;hosts</i> is given, initiator related information. When used without <i>&#8211;list</i>, a name or identifier (or both) are output on a single line, usually prefixed by the type of transport. For devices this information replaces the normal vendor, product and revision strings. When the <i>&#8211;list</i> option is also given then additionally multiple lines of attribute_name=value pairs are output, each indented by two spaces. See the section on transports below.</dd>
 <dt><code>-u</code>, <code>&#8211;unit</code></dt>
-<dd>Output logical unit name, if available. If this option is given once or twice, then the 30 character field where the vendor, product and revision strings are usually placed is expanded to 32 characters and replaced by the logical unit name. The first found of the NAA, EUI-64 or SCSI name string is output unless a SCSI name string is found and the associated target port indicates the iSCSI protocol, in which case the SCSI name string is preferred.<br />
- If the name cannot fit in the 32 character field then it is truncated to the right and a trailing &#8216;_&#8217; character is used to alert the reader to the truncation. The 32 character width is chosen since that is large enough to hold 16 byte NAA or EUI-64 identifiers. However SCSI name strings as used by iSCSI can be larger than that.<br />
- If this option is used twice then this field is also 32 character wide. If the logical unit name cannot fit then it will be truncated to the left and a leading &#8216;_&#8217; character is used to alert the reader to the truncation.<br />
- If this option is used three times the whole logical unit name is output, and any remaining output on that line is skipped.<br />
+<dd>Output logical unit name, if available. If this option is given once or twice, then the 30 character field where the vendor, product and revision strings are usually placed is expanded to 32 characters and replaced by the logical unit name. The first found of the NAA, EUI-64 or SCSI name string is output unless a SCSI name string is found and the associated target port indicates the iSCSI protocol, in which case the SCSI name string is preferred.<br/>
+ If the name cannot fit in the 32 character field then it is truncated to the right and a trailing &#8216;_&#8217; character is used to alert the reader to the truncation. The 32 character width is chosen since that is large enough to hold 16 byte NAA or EUI-64 identifiers. However SCSI name strings as used by iSCSI can be larger than that.<br/>
+ If this option is used twice then this field is also 32 character wide. If the logical unit name cannot fit then it will be truncated to the left and a leading &#8216;_&#8217; character is used to alert the reader to the truncation.<br/>
+ If this option is used three times the whole logical unit name is output, and any remaining output on that line is skipped.<br/>
  In order for this option to work, it needs a Linux kernel from and including 3.15 . It accesses the sysfs vpd_pg83 file for the device in question. Old SCSI and ATA (SATA) equipment may not provide this information. If it is provided by ATA (SATA) then it will be the WWN.</dd>
 <dt><code>-v</code>, <code>&#8211;verbose</code></dt>
 <dd>outputs directory names where information is found. Use multiple times for more output.</dd>
@@ -91,7 +91,7 @@ description: "lsscsi – list SCSI devices (or hosts) and their attributes"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2003-2014 Douglas Gilbert<br />
+<p>Copyright &#169; 2003-2014 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>lspci</code> <code>lsusb</code> </p>

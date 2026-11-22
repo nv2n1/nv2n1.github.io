@@ -11,78 +11,78 @@ description: "Globus GSSAPI –"
 <p> Globus GSSAPI &#8211; </p>
 <p> GSI Implementation Details.</p>
 <h3>Modules</h3>
-<p> <code>Constants</code><br />
- <i>Implementation-specific Constants. </i><br />
- <code>Activation</code><br />
- <i>Module Activation. </i><br />
- <code>Request Flags</code><br />
- <i>Request Flags. </i><br />
- <code>Return Flags</code><br />
- <i>Return Flags. </i><br />
- <code>GSSAPI Extensions</code><br />
+<p> <code>Constants</code><br/>
+ <i>Implementation-specific Constants. </i><br/>
+ <code>Activation</code><br/>
+ <i>Module Activation. </i><br/>
+ <code>Request Flags</code><br/>
+ <i>Request Flags. </i><br/>
+ <code>Return Flags</code><br/>
+ <i>Return Flags. </i><br/>
+ <code>GSSAPI Extensions</code><br/>
  <i>extensions </i></p>
 <h3>Functions</h3>
-<p> OM_uint32 GSS_CALLCONV <code>gss_accept_sec_context</code> (OM_uint32 *minor_status, gss_ctx_id_t *context_handle_P, const gss_cred_id_t acceptor_cred_handle, const gss_buffer_t input_token, const gss_channel_bindings_t input_chan_bindings, gss_name_t *src_name_P, gss_OID *mech_type, gss_buffer_t output_token, OM_uint32 *ret_flags, OM_uint32 *time_rec, gss_cred_id_t *delegated_cred_handle_P)<br />
- <i>GSS Accept Security Context. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_acquire_cred</code> (OM_uint32 *minor_status, const gss_name_t desired_name_P, OM_uint32 time_req, const gss_OID_set desired_mechs, gss_cred_usage_t cred_usage, gss_cred_id_t *output_cred_handle_P, gss_OID_set *actual_mechs, OM_uint32 *time_rec)<br />
- <i>Acquire Credential. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_compare_name</code> (OM_uint32 *minor_status, const gss_name_t name1_P, const gss_name_t name2_P, int *name_equal)<br />
- <i>Compare Name. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_delete_sec_context</code> (OM_uint32 *minor_status, gss_ctx_id_t *context_handle_P, gss_buffer_t output_token)<br />
- <i>Delete Security Context. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_display_name</code> (OM_uint32 *minor_status, const gss_name_t input_name_P, gss_buffer_t output_name, gss_OID *output_name_type)<br />
- <i>Display Name. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_display_status</code> (OM_uint32 *minor_status, OM_uint32 status_value, int status_type, const gss_OID mech_type, OM_uint32 *message_context, gss_buffer_t status_string)<br />
+<p> OM_uint32 GSS_CALLCONV <code>gss_accept_sec_context</code> (OM_uint32 *minor_status, gss_ctx_id_t *context_handle_P, const gss_cred_id_t acceptor_cred_handle, const gss_buffer_t input_token, const gss_channel_bindings_t input_chan_bindings, gss_name_t *src_name_P, gss_OID *mech_type, gss_buffer_t output_token, OM_uint32 *ret_flags, OM_uint32 *time_rec, gss_cred_id_t *delegated_cred_handle_P)<br/>
+ <i>GSS Accept Security Context. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_acquire_cred</code> (OM_uint32 *minor_status, const gss_name_t desired_name_P, OM_uint32 time_req, const gss_OID_set desired_mechs, gss_cred_usage_t cred_usage, gss_cred_id_t *output_cred_handle_P, gss_OID_set *actual_mechs, OM_uint32 *time_rec)<br/>
+ <i>Acquire Credential. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_compare_name</code> (OM_uint32 *minor_status, const gss_name_t name1_P, const gss_name_t name2_P, int *name_equal)<br/>
+ <i>Compare Name. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_delete_sec_context</code> (OM_uint32 *minor_status, gss_ctx_id_t *context_handle_P, gss_buffer_t output_token)<br/>
+ <i>Delete Security Context. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_display_name</code> (OM_uint32 *minor_status, const gss_name_t input_name_P, gss_buffer_t output_name, gss_OID *output_name_type)<br/>
+ <i>Display Name. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_display_status</code> (OM_uint32 *minor_status, OM_uint32 status_value, int status_type, const gss_OID mech_type, OM_uint32 *message_context, gss_buffer_t status_string)<br/>
  <i>Display Status</i> </p>
-<p> Calls the OpenSSL error print routines to produce a printable message. This may need some work, as the OpenSSL error messages are more of a trace, and my not be the best for the user. Also don&#8217;t take advantage of being called in a loop. &quot;<br />
- OM_uint32 GSS_CALLCONV <code>gss_duplicate_name</code> (OM_uint32 *minor_status, const gss_name_t src_name, gss_name_t *dest_name)<br />
- <i>Duplicate Name. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_export_name</code> (OM_uint32 *minor_status, const gss_name_t input_name_P, gss_buffer_t exported_name)<br />
- <i>Export Name. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_get_mic</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, gss_qop_t qop_req, const gss_buffer_t message_buffer, gss_buffer_t message_token)<br />
+<p> Calls the OpenSSL error print routines to produce a printable message. This may need some work, as the OpenSSL error messages are more of a trace, and my not be the best for the user. Also don&#8217;t take advantage of being called in a loop. &quot;<br/>
+ OM_uint32 GSS_CALLCONV <code>gss_duplicate_name</code> (OM_uint32 *minor_status, const gss_name_t src_name, gss_name_t *dest_name)<br/>
+ <i>Duplicate Name. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_export_name</code> (OM_uint32 *minor_status, const gss_name_t input_name_P, gss_buffer_t exported_name)<br/>
+ <i>Export Name. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_get_mic</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, gss_qop_t qop_req, const gss_buffer_t message_buffer, gss_buffer_t message_token)<br/>
  <i>Get MIC</i> </p>
-<p> Calculates a cryptographic MIC (message integrity check) over an application message, and returns that MIC in the token. The token and message can then be passed to the peer application which calls <code>gss_verify_mic</code> to verify the MIC. &quot;<br />
- OM_uint32 GSS_CALLCONV <code>gss_sign</code> (OM_uint32 *minor_status, gss_ctx_id_t context_handle, int qop_req, gss_buffer_t message_buffer, gss_buffer_t message_token)<br />
- <i>Sign. </i><br />
+<p> Calculates a cryptographic MIC (message integrity check) over an application message, and returns that MIC in the token. The token and message can then be passed to the peer application which calls <code>gss_verify_mic</code> to verify the MIC. &quot;<br/>
+ OM_uint32 GSS_CALLCONV <code>gss_sign</code> (OM_uint32 *minor_status, gss_ctx_id_t context_handle, int qop_req, gss_buffer_t message_buffer, gss_buffer_t message_token)<br/>
+ <i>Sign. </i><br/>
  OM_uint32 GSS_CALLCONV <code>gss_import_name</code> (OM_uint32 *minor_status, const gss_buffer_t input_name_buffer, const gss_OID input_name_type, gss_name_t *output_name_P) </p>
-<p> OM_uint32 GSS_CALLCONV <code>gss_init_sec_context</code> (OM_uint32 *minor_status, const gss_cred_id_t initiator_cred_handle, gss_ctx_id_t *context_handle_P, const gss_name_t target_name, const gss_OID mech_type, OM_uint32 req_flags, OM_uint32 time_req, const gss_channel_bindings_t input_chan_bindings, const gss_buffer_t input_token, gss_OID *actual_mech_type, gss_buffer_t output_token, OM_uint32 *ret_flags, OM_uint32 *time_rec)<br />
- <i>Init Sec Context. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_inquire_context</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle_P, gss_name_t *src_name_P, gss_name_t *targ_name_P, OM_uint32 *lifetime_rec, gss_OID *mech_type, OM_uint32 *ctx_flags, int *locally_initiated, int *open)<br />
- <i>Inquire Context. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_context_time</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, OM_uint32 *time_rec)<br />
- <i>Context Time. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_inquire_cred</code> (OM_uint32 *minor_status, const gss_cred_id_t cred_handle_P, gss_name_t *name, OM_uint32 *lifetime, gss_cred_usage_t *cred_usage, gss_OID_set *mechanisms)<br />
- <i>Inquire Cred. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_add_oid_set_member</code> (OM_uint32 *minor_status, const gss_OID member_oid, gss_OID_set *oid_set)<br />
- <i>Add OID Set Member. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_create_empty_oid_set</code> (OM_uint32 *minor_status, gss_OID_set *oid_set)<br />
+<p> OM_uint32 GSS_CALLCONV <code>gss_init_sec_context</code> (OM_uint32 *minor_status, const gss_cred_id_t initiator_cred_handle, gss_ctx_id_t *context_handle_P, const gss_name_t target_name, const gss_OID mech_type, OM_uint32 req_flags, OM_uint32 time_req, const gss_channel_bindings_t input_chan_bindings, const gss_buffer_t input_token, gss_OID *actual_mech_type, gss_buffer_t output_token, OM_uint32 *ret_flags, OM_uint32 *time_rec)<br/>
+ <i>Init Sec Context. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_inquire_context</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle_P, gss_name_t *src_name_P, gss_name_t *targ_name_P, OM_uint32 *lifetime_rec, gss_OID *mech_type, OM_uint32 *ctx_flags, int *locally_initiated, int *open)<br/>
+ <i>Inquire Context. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_context_time</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, OM_uint32 *time_rec)<br/>
+ <i>Context Time. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_inquire_cred</code> (OM_uint32 *minor_status, const gss_cred_id_t cred_handle_P, gss_name_t *name, OM_uint32 *lifetime, gss_cred_usage_t *cred_usage, gss_OID_set *mechanisms)<br/>
+ <i>Inquire Cred. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_add_oid_set_member</code> (OM_uint32 *minor_status, const gss_OID member_oid, gss_OID_set *oid_set)<br/>
+ <i>Add OID Set Member. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_create_empty_oid_set</code> (OM_uint32 *minor_status, gss_OID_set *oid_set)<br/>
  <i>Create Empty OID Set</i> </p>
-<p> Creates an object identifier set containing no object identifiers, to which members may be subsequently added using the GSS_Add_OID_set_member() routine. These routines are intended to be used to construct sets of mechanism object identifiers, for input to GSS_Acquire_cred(). &quot;<br />
- OM_uint32 GSS_CALLCONV <code>gss_indicate_mechs</code> (OM_uint32 *minor_status, gss_OID_set *mech_set)<br />
- <i>Indicate Mechs. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_release_oid_set</code> (OM_uint32 *minor_status, gss_OID_set *mech_set)<br />
- <i>Release OID Set. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_test_oid_set_member</code> (OM_uint32 *minor_status, const gss_OID member, const gss_OID_set set, int *present)<br />
- <i>Test OID Set Member. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_release_buffer</code> (OM_uint32 *minor_status, gss_buffer_t buffer)<br />
- <i>Release Buffer. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_release_cred</code> (OM_uint32 *minor_status, gss_cred_id_t *cred_handle_P)<br />
- <i>Release Credential. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_release_name</code> (OM_uint32 *minor_status, gss_name_t *name_P)<br />
- <i>GSS Release Name. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_unwrap</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, const gss_buffer_t input_message_buffer, gss_buffer_t output_message_buffer, int *conf_state, gss_qop_t *qop_state)<br />
- <i>Unwrap. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_unseal</code> (OM_uint32 *minor_status, gss_ctx_id_t context_handle, gss_buffer_t input_message_buffer, gss_buffer_t output_message_buffer, int *conf_state, int *qop_state)<br />
- <i>Unseal. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_verify_mic</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, const gss_buffer_t message_buffer, const gss_buffer_t token_buffer, gss_qop_t *qop_state)<br />
- <i>Verify MIC. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_verify</code> (OM_uint32 *minor_status, gss_ctx_id_t context_handle, gss_buffer_t message_buffer, gss_buffer_t token_buffer, int *qop_state)<br />
- <i>Verify. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_wrap_size_limit</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, int conf_req_flag, gss_qop_t qop_req, OM_uint32 req_output_size, OM_uint32 *max_input_size)<br />
- <i>Wrap Size Limit. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_wrap</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, int conf_req_flag, gss_qop_t qop_req, const gss_buffer_t input_message_buffer, int *conf_state, gss_buffer_t output_message_buffer)<br />
- <i>Wrap. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_seal</code> (OM_uint32 *minor_status, gss_ctx_id_t context_handle, int conf_req_flag, int qop_req, gss_buffer_t input_message_buffer, int *conf_state, gss_buffer_t output_message_buffer)<br />
+<p> Creates an object identifier set containing no object identifiers, to which members may be subsequently added using the GSS_Add_OID_set_member() routine. These routines are intended to be used to construct sets of mechanism object identifiers, for input to GSS_Acquire_cred(). &quot;<br/>
+ OM_uint32 GSS_CALLCONV <code>gss_indicate_mechs</code> (OM_uint32 *minor_status, gss_OID_set *mech_set)<br/>
+ <i>Indicate Mechs. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_release_oid_set</code> (OM_uint32 *minor_status, gss_OID_set *mech_set)<br/>
+ <i>Release OID Set. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_test_oid_set_member</code> (OM_uint32 *minor_status, const gss_OID member, const gss_OID_set set, int *present)<br/>
+ <i>Test OID Set Member. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_release_buffer</code> (OM_uint32 *minor_status, gss_buffer_t buffer)<br/>
+ <i>Release Buffer. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_release_cred</code> (OM_uint32 *minor_status, gss_cred_id_t *cred_handle_P)<br/>
+ <i>Release Credential. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_release_name</code> (OM_uint32 *minor_status, gss_name_t *name_P)<br/>
+ <i>GSS Release Name. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_unwrap</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, const gss_buffer_t input_message_buffer, gss_buffer_t output_message_buffer, int *conf_state, gss_qop_t *qop_state)<br/>
+ <i>Unwrap. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_unseal</code> (OM_uint32 *minor_status, gss_ctx_id_t context_handle, gss_buffer_t input_message_buffer, gss_buffer_t output_message_buffer, int *conf_state, int *qop_state)<br/>
+ <i>Unseal. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_verify_mic</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, const gss_buffer_t message_buffer, const gss_buffer_t token_buffer, gss_qop_t *qop_state)<br/>
+ <i>Verify MIC. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_verify</code> (OM_uint32 *minor_status, gss_ctx_id_t context_handle, gss_buffer_t message_buffer, gss_buffer_t token_buffer, int *qop_state)<br/>
+ <i>Verify. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_wrap_size_limit</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, int conf_req_flag, gss_qop_t qop_req, OM_uint32 req_output_size, OM_uint32 *max_input_size)<br/>
+ <i>Wrap Size Limit. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_wrap</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, int conf_req_flag, gss_qop_t qop_req, const gss_buffer_t input_message_buffer, int *conf_state, gss_buffer_t output_message_buffer)<br/>
+ <i>Wrap. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_seal</code> (OM_uint32 *minor_status, gss_ctx_id_t context_handle, int conf_req_flag, int qop_req, gss_buffer_t input_message_buffer, int *conf_state, gss_buffer_t output_message_buffer)<br/>
  <i>Seal. </i></p>
 <h2>Detailed Description</h2>
 <p> GSI Implementation Details. </p>
@@ -109,16 +109,16 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>context_handle_P</i><br />
- <i>acceptor_cred_handle</i><br />
- <i>input_token</i><br />
- <i>input_chan_bindings</i><br />
- <i>src_name_P</i><br />
- <i>mech_type</i><br />
- <i>output_token</i><br />
- <i>ret_flags</i> Also used as req_flags for other functions<br />
- <i>time_rec</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>context_handle_P</i><br/>
+ <i>acceptor_cred_handle</i><br/>
+ <i>input_token</i><br/>
+ <i>input_chan_bindings</i><br/>
+ <i>src_name_P</i><br/>
+ <i>mech_type</i><br/>
+ <i>output_token</i><br/>
+ <i>ret_flags</i> Also used as req_flags for other functions<br/>
+ <i>time_rec</i><br/>
  <i>delegated_cred_handle_P</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -130,7 +130,7 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> Mechanism specific status code. In this implementation, the minor_status is a cast from a globus_result_t value, which is either GLOBUS_SUCCESS or a globus error object ID if an error occurred.<br />
+</dt><dd> <i>minor_status</i> Mechanism specific status code. In this implementation, the minor_status is a cast from a globus_result_t value, which is either GLOBUS_SUCCESS or a globus error object ID if an error occurred.<br/>
  <i>desired_name_P</i> Name of principle whose credentials should be acquired This parameter maps to the desired subject of the cert to be acquired as the credential. Possible values are:</dd>
 <dl>
 <dt>&bull;</dt>
@@ -141,33 +141,33 @@ description: "Globus GSSAPI –"
 <dd> For a proxy cert: <i>subject name</i></dd>
 <dt>&bull;</dt>
 <dd> For a user cert: <i>subject name</i> This parameter can be NULL, in which case the cert is chosen using a default search order of: host, proxy, user, service</dd></dl>
-<p> <i>time_req</i> Number of seconds that credentials should remain valid. This value can be GSS_C_INDEFINITE for an unlimited lifetime. NOTE: in the current implementation, this parameter is ignored, since you can&#8217;t change the expiration of a signed cert.<br />
- <i>desired_mechs</i><br />
- <i>cred_usage</i><br />
- <i>output_cred_handle_P</i><br />
- <i>actual_mechs</i><br />
+<p> <i>time_req</i> Number of seconds that credentials should remain valid. This value can be GSS_C_INDEFINITE for an unlimited lifetime. NOTE: in the current implementation, this parameter is ignored, since you can&#8217;t change the expiration of a signed cert.<br/>
+ <i>desired_mechs</i><br/>
+ <i>cred_usage</i><br/>
+ <i>output_cred_handle_P</i><br/>
+ <i>actual_mechs</i><br/>
  <i>time_rec</i></dl>
 <h3>OM_uint32 GSS_CALLCONV gss_add_oid_set_member (OM_uint32 *minor_status, const gss_OIDmember_oid, gss_OID_set *oid_set)</h3>
 <p> Add OID Set Member. Adds an Object Identifier to an Object Identifier set. This routine is intended for use in conjunction with GSS_Create_empty_OID_set() when constructing a set of mechanism OIDs for input to GSS_Acquire_cred(). </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>member_oid</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>member_oid</i><br/>
  <i>oid_set</i></dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GSS_S_COMPLETE</i> Success<br />
+</dt><dd> <i>GSS_S_COMPLETE</i> Success<br/>
  <i>GSS_S_FAILURE</i> Operation failed</dd></dl>
 <h3>OM_uint32 GSS_CALLCONV gss_compare_name (OM_uint32 *minor_status, const gss_name_tname1_P, const gss_name_tname2_P, int *name_equal)</h3>
 <p> Compare Name. Compare two names. GSSAPI names in this implementation are pointers to X.509 names. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> currently is always set to GLOBUS_SUCCESS<br />
- <i>name1_P</i><br />
- <i>name2_P</i><br />
+</dt><dd> <i>minor_status</i> currently is always set to GLOBUS_SUCCESS<br/>
+ <i>name1_P</i><br/>
+ <i>name2_P</i><br/>
  <i>name_equal</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -178,8 +178,8 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>context_handle</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>context_handle</i><br/>
  <i>time_rec</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -190,20 +190,20 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
+</dt><dd> <i>minor_status</i><br/>
  <i>oid_set</i></dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GSS_S_COMPLETE</i> Success<br />
+</dt><dd> <i>GSS_S_COMPLETE</i> Success<br/>
  <i>GSS_S_FAILURE</i> Operation failed</dd></dl>
 <h3>OM_uint32 GSS_CALLCONV gss_delete_sec_context (OM_uint32 *minor_status, gss_ctx_id_t *context_handle_P, gss_buffer_toutput_token)</h3>
 <p> Delete Security Context. Delete the GSS Security Context </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> The minor status result &#8211; this is a globus_result_t cast to a OM_uint32.<br />
- <i>context_handle_P</i> The context handle to be deleted<br />
+</dt><dd> <i>minor_status</i> The minor status result &#8211; this is a globus_result_t cast to a OM_uint32.<br/>
+ <i>context_handle_P</i> The context handle to be deleted<br/>
  <i>output_token</i> A token created upon destroying the context. If non-empty, this should be sent to the peer of the context to indicate that the context is closed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -214,9 +214,9 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>input_name_P</i><br />
- <i>output_name</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>input_name_P</i><br/>
+ <i>output_name</i><br/>
  <i>output_name_type</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -227,11 +227,11 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>status_value</i><br />
- <i>status_type</i><br />
- <i>mech_type</i><br />
- <i>message_context</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>status_value</i><br/>
+ <i>status_type</i><br/>
+ <i>mech_type</i><br/>
+ <i>message_context</i><br/>
  <i>status_string</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -241,8 +241,8 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>src_name</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>src_name</i><br/>
  <i>dest_name</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -255,10 +255,10 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>context_handle</i><br />
- <i>qop_req</i><br />
- <i>message_buffer</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>context_handle</i><br/>
+ <i>qop_req</i><br/>
+ <i>message_buffer</i><br/>
  <i>message_token</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -282,38 +282,38 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> Minor status<br />
- <i>input_name_buffer</i> Input name buffer which is interpreted based on the <i>input_name_type</i><br />
- <i>input_name_type</i> OID of the name<br />
+</dt><dd> <i>minor_status</i> Minor status<br/>
+ <i>input_name_buffer</i> Input name buffer which is interpreted based on the <i>input_name_type</i><br/>
+ <i>input_name_type</i> OID of the name<br/>
  <i>output_name_P</i> New gss_name_t value containing the name</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GSS_S_COMPLETE</i> indicates that a valid name representation is output in output_name and described by the type value in output_name_type.<br />
- <i>GSS_S_BAD_NAMETYPE</i> indicates that the input_name_type is unsupported by the applicable underlying GSS-API mechanism(s), so the import operation could not be completed.<br />
- <i>GSS_S_BAD_NAME</i> indicates that the provided input_name_string is ill-formed in terms of the input_name_type, so the import operation could not be completed.<br />
- <i>GSS_S_BAD_MECH</i> indicates that the input presented for import was an exported name object and that its enclosed mechanism type was not recognized or was unsupported by the GSS-API implementation.<br />
+</dt><dd> <i>GSS_S_COMPLETE</i> indicates that a valid name representation is output in output_name and described by the type value in output_name_type.<br/>
+ <i>GSS_S_BAD_NAMETYPE</i> indicates that the input_name_type is unsupported by the applicable underlying GSS-API mechanism(s), so the import operation could not be completed.<br/>
+ <i>GSS_S_BAD_NAME</i> indicates that the provided input_name_string is ill-formed in terms of the input_name_type, so the import operation could not be completed.<br/>
+ <i>GSS_S_BAD_MECH</i> indicates that the input presented for import was an exported name object and that its enclosed mechanism type was not recognized or was unsupported by the GSS-API implementation.<br/>
  <i>GSS_S_FAILURE</i> indicates that the requested operation could not be performed for reasons unspecified at the GSS-API level.</dd></dl>
 <h3>OM_uint32 GSS_CALLCONV gss_indicate_mechs (OM_uint32 *minor_status, gss_OID_set *mech_set)</h3>
 <p> Indicate Mechs. Passes back the mech set of available mechs. We only have one for now. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
+</dt><dd> <i>minor_status</i><br/>
  <i>mech_set</i></dd></dl>
 <h3>OM_uint32 GSS_CALLCONV gss_inquire_context (OM_uint32 *minor_status, const gss_ctx_id_tcontext_handle_P, gss_name_t *src_name_P, gss_name_t *targ_name_P, OM_uint32 *lifetime_rec, gss_OID *mech_type, OM_uint32 *ctx_flags, int *locally_initiated, int *open)</h3>
 <p> Inquire Context. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>context_handle_P</i><br />
- <i>src_name_P</i><br />
- <i>targ_name_P</i><br />
- <i>lifetime_rec</i><br />
- <i>mech_type</i><br />
- <i>ctx_flags</i><br />
- <i>locally_initiated</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>context_handle_P</i><br/>
+ <i>src_name_P</i><br/>
+ <i>targ_name_P</i><br/>
+ <i>lifetime_rec</i><br/>
+ <i>mech_type</i><br/>
+ <i>ctx_flags</i><br/>
+ <i>locally_initiated</i><br/>
  <i>open</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -326,11 +326,11 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>cred_handle_P</i><br />
- <i>name</i><br />
- <i>lifetime</i><br />
- <i>cred_usage</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>cred_handle_P</i><br/>
+ <i>name</i><br/>
+ <i>lifetime</i><br/>
+ <i>cred_usage</i><br/>
  <i>mechanisms</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -340,7 +340,7 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
+</dt><dd> <i>minor_status</i><br/>
  <i>buffer</i></dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -351,7 +351,7 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> The minor status result &#8211; this is a globus_result_t cast to a OM_uint32. To access the globus error object use: globus_error_get((globus_result_t) *minor_status)<br />
+</dt><dd> <i>minor_status</i> The minor status result &#8211; this is a globus_result_t cast to a OM_uint32. To access the globus error object use: globus_error_get((globus_result_t) *minor_status)<br/>
  <i>cred_handle_P</i> The gss cred handle to be released</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -362,19 +362,19 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> The minor status result &#8211; this is a globus_result_t cast to a (OM_uint32 *).<br />
+</dt><dd> <i>minor_status</i> The minor status result &#8211; this is a globus_result_t cast to a (OM_uint32 *).<br/>
  <i>name_P</i> The GSSAPI name to be released</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GSS_S_COMPLETE</i> Success<br />
+</dt><dd> <i>GSS_S_COMPLETE</i> Success<br/>
  <i>GSS_S_FAILURE</i> Failure</dd></dl>
 <h3>OM_uint32 GSS_CALLCONV gss_release_oid_set (OM_uint32 *minor_status, gss_OID_set *mech_set)</h3>
 <p> Release OID Set. Release the OID set. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
+</dt><dd> <i>minor_status</i><br/>
  <i>mech_set</i></dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -385,12 +385,12 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>context_handle</i><br />
- <i>conf_req_flag</i><br />
- <i>qop_req</i><br />
- <i>input_message_buffer</i><br />
- <i>conf_state</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>context_handle</i><br/>
+ <i>conf_req_flag</i><br/>
+ <i>qop_req</i><br/>
+ <i>input_message_buffer</i><br/>
+ <i>conf_state</i><br/>
  <i>output_message_buffer</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -400,10 +400,10 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>context_handle</i><br />
- <i>qop_req</i><br />
- <i>message_buffer</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>context_handle</i><br/>
+ <i>qop_req</i><br/>
+ <i>message_buffer</i><br/>
  <i>message_token</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -413,14 +413,14 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>member</i><br />
- <i>set</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>member</i><br/>
+ <i>set</i><br/>
  <i>present</i></dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GSS_S_COMPLETE</i> Success<br />
+</dt><dd> <i>GSS_S_COMPLETE</i> Success<br/>
  <i>GSS_S_FAILURE</i> Operation failed</dd></dl>
 <h3>OM_uint32 GSS_CALLCONV gss_unseal (OM_uint32 *minor_status, gss_ctx_id_tcontext_handle, gss_buffer_tinput_message_buffer, gss_buffer_toutput_message_buffer, int *conf_state, int *qop_state)</h3>
 <p> Unseal. Obsolete variant of gss_wrap for V1 compatibility allow for non 32 bit integer in qop_state. </p>
@@ -428,11 +428,11 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>context_handle</i><br />
- <i>input_message_buffer</i><br />
- <i>output_message_buffer</i><br />
- <i>conf_state</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>context_handle</i><br/>
+ <i>input_message_buffer</i><br/>
+ <i>output_message_buffer</i><br/>
+ <i>conf_state</i><br/>
  <i>qop_state</i></dd></dl>
 <h3>OM_uint32 GSS_CALLCONV gss_unwrap (OM_uint32 *minor_status, const gss_ctx_id_tcontext_handle, const gss_buffer_tinput_message_buffer, gss_buffer_toutput_message_buffer, int *conf_state, gss_qop_t *qop_state)</h3>
 <p> Unwrap. GSSAPI routine to unwrap a buffer which may have been received and wraped by wrap.c </p>
@@ -440,21 +440,21 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>context_handle</i><br />
- <i>input_message_buffer</i><br />
- <i>output_message_buffer</i><br />
- <i>conf_state</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>context_handle</i><br/>
+ <i>input_message_buffer</i><br/>
+ <i>output_message_buffer</i><br/>
+ <i>conf_state</i><br/>
  <i>qop_state</i></dd></dl>
 <h3>OM_uint32 GSS_CALLCONV gss_verify (OM_uint32 *minor_status, gss_ctx_id_tcontext_handle, gss_buffer_tmessage_buffer, gss_buffer_ttoken_buffer, int *qop_state)</h3>
 <p> Verify. Obsolete variant of gss_verify for V1 compatibility Check a MIC of the date </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>context_handle</i><br />
- <i>message_buffer</i><br />
- <i>token_buffer</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>context_handle</i><br/>
+ <i>message_buffer</i><br/>
+ <i>token_buffer</i><br/>
  <i>qop_state</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -464,10 +464,10 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>context_handle</i><br />
- <i>message_buffer</i><br />
- <i>token_buffer</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>context_handle</i><br/>
+ <i>message_buffer</i><br/>
+ <i>token_buffer</i><br/>
  <i>qop_state</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -477,12 +477,12 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>context_handle</i><br />
- <i>conf_req_flag</i><br />
- <i>qop_req</i><br />
- <i>input_message_buffer</i><br />
- <i>conf_state</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>context_handle</i><br/>
+ <i>conf_req_flag</i><br/>
+ <i>qop_req</i><br/>
+ <i>input_message_buffer</i><br/>
+ <i>conf_state</i><br/>
  <i>output_message_buffer</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -492,11 +492,11 @@ description: "Globus GSSAPI –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i><br />
- <i>context_handle</i><br />
- <i>conf_req_flag</i><br />
- <i>qop_req</i><br />
- <i>req_output_size</i><br />
+</dt><dd> <i>minor_status</i><br/>
+ <i>context_handle</i><br/>
+ <i>conf_req_flag</i><br/>
+ <i>qop_req</i><br/>
+ <i>req_output_size</i><br/>
  <i>max_input_size</i></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gssapi_gsi from the source code. </p>

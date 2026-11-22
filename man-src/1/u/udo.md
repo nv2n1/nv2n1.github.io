@@ -10,7 +10,7 @@ description: "udo – convert files from UDO into different formats"
 
 <p> udo &#8211; convert files from UDO into different formats</p>
 <h2>SYNOPSIS</h2>
-<p> udo [-adDghHilmnpqrstvwWxy] source file<br />
+<p> udo [-adDghHilmnpqrstvwWxy] source file<br/>
  udo [-adDghHilmnpqrstvwWxy] -o destination file source file </p>
 <h2>DESCRIPTION</h2>
 <p> <code>UDO</code> converts files from the UDO format into Apple-QuickView, ASCII, HTML, Texinfo, Linuxdoc-SGML, Manualpage, Pure-C-Help, Rich Text Format, ST-Guide, LaTeX, Turbo Vision Help or Windows Help. </p>
@@ -145,5 +145,5 @@ description: "udo – convert files from UDO into different formats"
 <dt><code>&gt;0</code></dt>
 <dd> An error has appeared.</dd></dl>
 <h2>AUTHOR</h2>
-<p> Copyright (c) 1995, 1996, 1997 by<br />
+<p> Copyright (c) 1995, 1996, 1997 by<br/>
  Dirk Hagedorn (Dirk Hagedorn @ MK2, DirkHage [at] aol.com) </p>

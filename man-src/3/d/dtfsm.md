@@ -11,7 +11,7 @@ description: "dtfsm.f –"
 <p> dtfsm.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtfsm</code> (TRANSR, SIDE, UPLO, TRANS, DIAG, M, N, ALPHA, A, B, LDB)<br />
+<p> subroutine <code>dtfsm</code> (TRANSR, SIDE, UPLO, TRANS, DIAG, M, N, ALPHA, A, B, LDB)<br/>
  <i></i><code>DTFSM</code> solves a matrix equation (one operand is a triangular matrix in RFP format).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtfsm (characterTRANSR, characterSIDE, characterUPLO, characterTRANS, characterDIAG, integerM, integerN, double precisionALPHA, double precision, dimension( 0: * )A, double precision, dimension( 0: ldb-1, 0: * )B, integerLDB)</h3>

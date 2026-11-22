@@ -22,10 +22,10 @@ description: "fenced – the I/O Fencing daemon"
 <p>Command line options override a corresponding setting in cluster.conf. </p>
 <dl>
 <dt><code>-D</code></dt>
-<dd>Enable debugging to stderr and don&#8217;t fork.<br />
+<dd>Enable debugging to stderr and don&#8217;t fork.<br/>
  See also <code>fence_tool dump</code> in <code><a href="/docs/linux/man/8-fence_tool/">fence_tool</a></code>(8).</dd>
 <dt><code>-L</code></dt>
-<dd>Enable debugging to log file.<br />
+<dd>Enable debugging to log file.<br/>
  See also <code>logging</code> in <code>cluster.conf</code>(5).</dd>
 <dt><code>-g</code><i> num</i></dt>
 <dd>groupd compatibility mode, 0 off, 1 on. Default 0.</dd>

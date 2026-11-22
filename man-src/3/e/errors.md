@@ -10,23 +10,23 @@ description: "ql/errors.hpp – Classes and functions for error handling."
 
 <p> ql/errors.hpp &#8211; Classes and functions for error handling. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/qldefines.hpp&gt;<br />
- #include &lt;boost/assert.hpp&gt;<br />
- #include &lt;boost/current_function.hpp&gt;<br />
- #include &lt;boost/shared_ptr.hpp&gt;<br />
- #include &lt;exception&gt;<br />
+<p> #include &lt;ql/qldefines.hpp&gt;<br/>
+ #include &lt;boost/assert.hpp&gt;<br/>
+ #include &lt;boost/current_function.hpp&gt;<br/>
+ #include &lt;boost/shared_ptr.hpp&gt;<br/>
+ #include &lt;exception&gt;<br/>
  #include &lt;sstream&gt; </p>
 <h3>Classes</h3>
-<p> class <code>Error</code><br />
+<p> class <code>Error</code><br/>
  <i>Base error class. </i></p>
 <h3>Defines</h3>
-<p> #define <code>QL_FAIL</code>(message)<br />
- <i>throw an error (possibly with file and line information) </i><br />
- #define <code>QL_ASSERT</code>(condition, message)<br />
- <i>throw an error if the given condition is not verified </i><br />
- #define <code>QL_REQUIRE</code>(condition, message)<br />
- <i>throw an error if the given pre-condition is not verified </i><br />
- #define <code>QL_ENSURE</code>(condition, message)<br />
+<p> #define <code>QL_FAIL</code>(message)<br/>
+ <i>throw an error (possibly with file and line information) </i><br/>
+ #define <code>QL_ASSERT</code>(condition, message)<br/>
+ <i>throw an error if the given condition is not verified </i><br/>
+ #define <code>QL_REQUIRE</code>(condition, message)<br/>
+ <i>throw an error if the given pre-condition is not verified </i><br/>
+ #define <code>QL_ENSURE</code>(condition, message)<br/>
  <i>throw an error if the given post-condition is not verified </i></p>
 <h2>Detailed Description</h2>
 <p> Classes and functions for error handling. </p>
@@ -43,19 +43,19 @@ do {
 <p> throw an error (possibly with file and line information) </p>
 <h3>#define QL_ASSERT(condition, message)</h3>
 <p> <code>Value:</code> </p>
-<p>if (!(condition)) {<br />
-    std::ostringstream _ql_msg_stream;<br />
-    _ql_msg_stream &lt;&lt; message;<br />
-    throw QuantLib::Error(__FILE__, __LINE__, BOOST_CURRENT_FUNCTION, _ql_msg_stream.str());<br />
-} else<br />
+<p>if (!(condition)) {<br/>
+    std::ostringstream _ql_msg_stream;<br/>
+    _ql_msg_stream &lt;&lt; message;<br/>
+    throw QuantLib::Error(__FILE__, __LINE__, BOOST_CURRENT_FUNCTION, _ql_msg_stream.str());<br/>
+} else<br/>
  throw an error if the given condition is not verified </p>
 <h3>#define QL_REQUIRE(condition, message)</h3>
 <p> <code>Value:</code> </p>
-<p>if (!(condition)) {<br />
-    std::ostringstream _ql_msg_stream;<br />
-    _ql_msg_stream &lt;&lt; message;<br />
-    throw QuantLib::Error(__FILE__, __LINE__, BOOST_CURRENT_FUNCTION, _ql_msg_stream.str());<br />
-} else<br />
+<p>if (!(condition)) {<br/>
+    std::ostringstream _ql_msg_stream;<br/>
+    _ql_msg_stream &lt;&lt; message;<br/>
+    throw QuantLib::Error(__FILE__, __LINE__, BOOST_CURRENT_FUNCTION, _ql_msg_stream.str());<br/>
+} else<br/>
  throw an error if the given pre-condition is not verified </p>
 <p> <code>Examples: </code> <code>DiscreteHedging.cpp</code>, and <code>swapvaluation.cpp</code>.</p>
 <h3>#define QL_ENSURE(condition, message)</h3>

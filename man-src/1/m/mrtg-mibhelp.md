@@ -10,8 +10,8 @@ description: "mrtg-mibhelp – A Table of some interesting OIDs"
 
 <p> mrtg-mibhelp &#8211; A Table of some interesting OIDs </p>
 <h2>OVERVIEW</h2>
-<p> This File Contains a collection of interesting <font SIZE="-1">MIB</font> Entries &#8230; mrtg knows about their names &#8230; depending on the <font SIZE="-1">ASN</font>.1 Syntax you may have to put <code>gauge</code> into the <code>Options[]:</code> parameter. </p>
-<p> For information about how to create a <code>Target[]:</code> parameter which references these <font SIZE="-1">MIB</font> entries, please consult mrtg-reference.</p>
+<p> This File Contains a collection of interesting MIB Entries &#8230; mrtg knows about their names &#8230; depending on the ASN.1 Syntax you may have to put <code>gauge</code> into the <code>Options[]:</code> parameter. </p>
+<p> For information about how to create a <code>Target[]:</code> parameter which references these MIB entries, please consult mrtg-reference.</p>
 <h2>MIB LIST</h2>
 <h3>ifOperStatus</h3>
 <pre>
@@ -123,12 +123,12 @@ description: "mrtg-mibhelp – A Table of some interesting OIDs"
 <pre>
  frInOctets.pp.dd&amp;frOutOctets.pp.dd:community [at] cisco.router
 </pre>
-<p> where pp is the physical port that the frame relay pvc is defined on and dd is the <font SIZE="-1">DLCI</font> of the pvc gets you the in and out octets for just that pvc.</p>
+<p> where pp is the physical port that the frame relay pvc is defined on and dd is the DLCI of the pvc gets you the in and out octets for just that pvc.</p>
 <h3>ifAdminHack and ifOperHack</h3>
-<p> The return values of ifAdminStatus and ifOperStatus are not very useful for graphing. Use ifOperHack and ifAdminHack instead. They return 1 for <font SIZE="-1">UP</font> and 0 otherwise. </p>
-<p> Note these are not real <font SIZE="-1">MIB</font> entities but mrtg hacks</p>
+<p> The return values of ifAdminStatus and ifOperStatus are not very useful for graphing. Use ifOperHack and ifAdminHack instead. They return 1 for UP and 0 otherwise. </p>
+<p> Note these are not real MIB entities but mrtg hacks</p>
 <h3>PseudoZero and PseudoOne</h3>
 <p> will return 0 and 1 respectively </p>
-<p> Note these are not real <font SIZE="-1">MIB</font> entities but mrtg hacks</p>
+<p> Note these are not real MIB entities but mrtg hacks</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>

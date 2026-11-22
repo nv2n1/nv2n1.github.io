@@ -16,7 +16,7 @@ debconf[options] command[args]
 <h2>DESCRIPTION</h2>
 <p> Debconf is a configuration system for Debian packages. For a debconf overview and documentation for sysadmins, see <code><a href="/docs/linux/man/7-debconf/">debconf</a></code>(7) (in the debconf-doc package). </p>
 <p> The <code>debconf</code> program runs a program under debconf&#8217;s control, setting it up to talk with debconf on stdio. The program&#8217;s output is expected to be debconf protocol commands, and it is expected to read result codes on stdin. See <code><a href="/docs/linux/man/7-debconf-devel/">debconf-devel</a></code>(7) for details about the debconf protocol. </p>
-<p> The command to be run under debconf must be specified in a way that will let your <font SIZE="-1">PATH</font> find it. </p>
+<p> The command to be run under debconf must be specified in a way that will let your PATH find it. </p>
 <p> This command is not the usual way that debconf is used. It&#8217;s more typical for debconf to be used via <code><a href="/docs/linux/man/8-dpkg-preconfigure/">dpkg-preconfigure</a></code>(8) or <code><a href="/docs/linux/man/8-dpkg-reconfigure/">dpkg-reconfigure</a></code>(8).</p>
 <h2>OPTIONS</h2>
 <dl>

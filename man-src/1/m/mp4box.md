@@ -34,8 +34,8 @@ description: "MP4Box – MPEG-4 Systems Toolbox"
 <dt><code>-nodes</code></dt>
 <dd> lists supported MPEG-4 Systems nodes in MP4Box current build.</dd>
 <dt><code>-node NodeName</code></dt>
-<dd> prints the node syntax. Each field is listed as<br />
- <i>eventType fieldType fieldName defaultValue</i><br />
+<dd> prints the node syntax. Each field is listed as<br/>
+ <i>eventType fieldType fieldName defaultValue</i><br/>
  and field quantization information and quantization bounds if any.</dd>
 <dt><code>-xnodes</code></dt>
 <dd> lists supported X3D nodes in MP4Box current build.</dd>
@@ -46,8 +46,8 @@ description: "MP4Box – MPEG-4 Systems Toolbox"
 <h2>GENERAL OPTIONS</h2>
 <dl>
 <dt><code>-inter duration</code></dt>
-<dd> interleaves media data in chunks of the maximum specified duration (expressed in milliseconds) and prepare file for HTTP/FTP streaming. By default MP4Box always stores with 0.5 second interleaving. An interleaving value of &#8216;0&#8217; stores without interleaving (meta-data then track after track).<br />
- <code>-old-inter duration</code> same as -inter but without drift adjustment<br />
+<dd> interleaves media data in chunks of the maximum specified duration (expressed in milliseconds) and prepare file for HTTP/FTP streaming. By default MP4Box always stores with 0.5 second interleaving. An interleaving value of &#8216;0&#8217; stores without interleaving (meta-data then track after track).<br/>
+ <code>-old-inter duration</code> same as -inter but without drift adjustment<br/>
  <code>NOTE: Track Edit Lists are ignored when performing interleaving.</code></dd>
 <dt><code>-flat</code></dt>
 <dd> stores file with all media data first, non interleaved. If used when creating a new file, no temporary file is created (faster storage).</dd>
@@ -66,7 +66,7 @@ description: "MP4Box – MPEG-4 Systems Toolbox"
 <dt><code>-isma</code></dt>
 <dd> rewrites the file as an ISMA 1.0 Audio/Video file (all systems info rewritten) with proper clock references.</dd>
 <dt><code>-ismax</code></dt>
-<dd> rewrites the file as an ISMA 1.0 Audio/Video file (all systems info rewritten) with ISMA clock references (streams not explicetly synchronized).<br />
+<dd> rewrites the file as an ISMA 1.0 Audio/Video file (all systems info rewritten) with ISMA clock references (streams not explicetly synchronized).<br/>
  <code>NOTE: Seeking may be broken with some players (in ISMA, audio and video streams do not depend on main scene clock).</code></dd>
 <dt><code>-3gp</code></dt>
 <dd> rewrites the file as a 3GP file (no more MPEG-4 Systems specific info). This option is turned on by default when input file extension is .3gp or .3g2.</dd>
@@ -111,11 +111,11 @@ description: "MP4Box – MPEG-4 Systems Toolbox"
 <dt><code>-split-rap start:end</code></dt>
 <dd> splits in files begining at each RAP. This will remove all MPEG-4 Systems media. Alias: -splitr</dd>
 <dt><code>-group-add fmt</code></dt>
-<dd> creates a new grouping information in the file. Format is a colon-separated list of following options:<br />
- refTrack=ID: ID of the track used as a group reference. If not set, the track will belong to the same group as the previous trackID specified. If 0 or no previous track specified, a new alternate group will be created.<br />
- switchID=ID: ID of the switch group to create. If 0, a new ID will be computed for you. If &lt;0, disables SwitchGroup.<br />
- criteria=string: list of space-separated 4CCs.<br />
- trackID=ID: ID of the track to add to this group.<br />
+<dd> creates a new grouping information in the file. Format is a colon-separated list of following options:<br/>
+ refTrack=ID: ID of the track used as a group reference. If not set, the track will belong to the same group as the previous trackID specified. If 0 or no previous track specified, a new alternate group will be created.<br/>
+ switchID=ID: ID of the switch group to create. If 0, a new ID will be computed for you. If &lt;0, disables SwitchGroup.<br/>
+ criteria=string: list of space-separated 4CCs.<br/>
+ trackID=ID: ID of the track to add to this group.<br/>
  *WARNING* Options modify state as they are parsed: trackID=1:criteria=lang:trackID=2 is different from: criteria=lang:trackID=1:trackID=2. <code>-group-rem-track ID</code> removes track from its group.</dd>
 <dt><code>-group-rem ID</code></dt>
 <dd> removes the track&#8217;s group.</dd>
@@ -185,11 +185,11 @@ description: "MP4Box – MPEG-4 Systems Toolbox"
 <h2>IMPORT OPTIONS</h2>
 <dl>
 <dt><code>-add &lt;src_file&gt;</code></dt>
-<dd> adds all src_file tracks to input file, creating it if not exisiting. Up to 20 cumulated -add operations can be used. Supported syntaxes are:<br />
- file#video: imports first video track from src_file.<br />
- file#audio: imports first audio track from src_file.<br />
- file#trackID=ID or file#ID: imports given trackfrom src_file. To get a listing of tracks in input file, use -info [ID]<br />
- [;lang=LAN]: specifies language of imported media.<br />
+<dd> adds all src_file tracks to input file, creating it if not exisiting. Up to 20 cumulated -add operations can be used. Supported syntaxes are:<br/>
+ file#video: imports first video track from src_file.<br/>
+ file#audio: imports first audio track from src_file.<br/>
+ file#trackID=ID or file#ID: imports given trackfrom src_file. To get a listing of tracks in input file, use -info [ID]<br/>
+ [;lang=LAN]: specifies language of imported media.<br/>
  [;delay=delay_ms]: specifies initial delay in milliseconds of imported media.</dd>
 <dt><code>-cat &lt;src_file&gt;</code></dt>
 <dd> concatenates all src_file tracks to input file, creating it if not exisiting. Media samples are added at the end of existing compatible tracks. If no compatible track is found for a media it is created. Up to 20 cumulated -cat operations can be used. Syntax is the same as -add.</dd>
@@ -258,16 +258,16 @@ description: "MP4Box – MPEG-4 Systems Toolbox"
 <dt><code>-set-kms [tkID=]kms_uri</code></dt>
 <dd> changes KMS location for all tracks or a given one if tkID is specified.</dd>
 <dt><code>DRM file syntax for GPAC ISMACryp</code></dt>
-<dd> File is XML and shall start with xml header. File root is an &quot;ISMACryp&quot; element. File is a list of &quot;ISMACrypTrack&quot; elements.<br />
- ISMACrypTrack attributes:<br />
- TrackID: ID of track to en/decrypt.<br />
- key: AES-128 key formatted (hex string 0x +32 chars.<br />
- salt: CTR IV salt key (64 bits) (hex string 0x +16 chars.<br />
- Encryption only attributes<br />
- Scheme_URI: URI of scheme used.<br />
- KMS_URI: URI of key management system &#8211; &#8216;self&#8217; writes key and salt in the file.<br />
- selectiveType selective encryption type &#8211; understood values are &quot;None&quot;: all samples encrypted (default), &quot;RAP&quot;: only encrypts random access units, &quot;Non-RAP&quot;: only encrypts non-random access units, &quot;Rand&quot;: random selection is performed&quot;, &quot;X&quot;: Encrypts every first sample out of X, &quot;RandX&quot;: Encrypts one random sample out of X.<br />
- ipmpType: IPMP Signaling Type: None, IPMP, IPMPX.<br />
+<dd> File is XML and shall start with xml header. File root is an &quot;ISMACryp&quot; element. File is a list of &quot;ISMACrypTrack&quot; elements.<br/>
+ ISMACrypTrack attributes:<br/>
+ TrackID: ID of track to en/decrypt.<br/>
+ key: AES-128 key formatted (hex string 0x +32 chars.<br/>
+ salt: CTR IV salt key (64 bits) (hex string 0x +16 chars.<br/>
+ Encryption only attributes<br/>
+ Scheme_URI: URI of scheme used.<br/>
+ KMS_URI: URI of key management system &#8211; &#8216;self&#8217; writes key and salt in the file.<br/>
+ selectiveType selective encryption type &#8211; understood values are &quot;None&quot;: all samples encrypted (default), &quot;RAP&quot;: only encrypts random access units, &quot;Non-RAP&quot;: only encrypts non-random access units, &quot;Rand&quot;: random selection is performed&quot;, &quot;X&quot;: Encrypts every first sample out of X, &quot;RandX&quot;: Encrypts one random sample out of X.<br/>
+ ipmpType: IPMP Signaling Type: None, IPMP, IPMPX.<br/>
  ipmpDescriptorID: IPMP_Descriptor ID to use if IPMP(X) is used. If not set MP4Box will generate one for you. </dd>
 </dl>
 <h2>EXTRACTING OPTIONS</h2>
@@ -346,14 +346,14 @@ description: "MP4Box – MPEG-4 Systems Toolbox"
 <p> MP4Box supports the Meta addition to IsoMedia file format, used to make the file a generic data container (timed or untimed).</p>
 <dl>
 <dt><code>-set-meta args</code></dt>
-<dd> sets meta object type. Syntax is &quot;ABCD[;tk=N] where:<br />
- ABCD is the four character code of the type, or O/NULL to remove the meta object<br />
+<dd> sets meta object type. Syntax is &quot;ABCD[;tk=N] where:<br/>
+ ABCD is the four character code of the type, or O/NULL to remove the meta object<br/>
  tk indicates whether the meta is at the root level (no &quot;tk&quot;), at the moov level (tk=0) or at the track level (tk=trackID).</dd>
 <dt><code>-add-item args</code></dt>
-<dd> adds resource to the given meta. args is the item file path followed by &#8216;;&#8217; separated options:<br />
- tk=N: same as above<br />
- name=item_name: specifies the item name, otherwise file name is used<br />
- mime=mimeType: specifies the item mime type, otherwise application/octet-stream is used<br />
+<dd> adds resource to the given meta. args is the item file path followed by &#8216;;&#8217; separated options:<br/>
+ tk=N: same as above<br/>
+ name=item_name: specifies the item name, otherwise file name is used<br/>
+ mime=mimeType: specifies the item mime type, otherwise application/octet-stream is used<br/>
  encoding=enctype: specifies the content encoding type Note that file path set to &quot;this&quot; or &quot;self&quot; will identify the item added as the whole IsoMedia file</dd>
 <dt><code>-rem-item args</code></dt>
 <dd> removes item from given meta. Syntax is itemID[;tk=ID].</dd>
@@ -404,14 +404,14 @@ description: "MP4Box – MPEG-4 Systems Toolbox"
 <dt><code>-rap=TIME</code></dt>
 <dd> duration in ms of base carousel &#8211; default: 0 (off). you can specify the RAP period of a single ESID (not in DIMS) with -rap=ESID=X:time.</dd>
 <dt><code>Runtime Options</code></dt>
-<dd> The following options can be used at prompt:<br />
- q: quits<br />
- u: inputs some commands to be sent<br />
- U: same as u but signals the updates as critical<br />
- e: inputs some commands to be sent without being aggregated<br />
- E: same as e but signals the updates as critical<br />
- f: forces RAP sending<br />
- F: forces RAP regeneration and sending<br />
+<dd> The following options can be used at prompt:<br/>
+ q: quits<br/>
+ u: inputs some commands to be sent<br/>
+ U: same as u but signals the updates as critical<br/>
+ e: inputs some commands to be sent without being aggregated<br/>
+ E: same as e but signals the updates as critical<br/>
+ f: forces RAP sending<br/>
+ F: forces RAP regeneration and sending<br/>
  p: dumps current scene</dd></dl>
 <h2>SWF OPTIONS</h2>
 <p> MP4Box can import very simple Macromedia Flash files (&quot;.SWF&quot;). You can specify a SWF input file with -bt, xmt and -mp4 switches.</p>
@@ -439,75 +439,75 @@ description: "MP4Box – MPEG-4 Systems Toolbox"
 <dt><code>RAW Formats and extensions</code></dt>
 <dd>
 </dd><dt>
-</dt><dd> NHNT (.media .nhnt .info)<br />
- MPEG Audio (.mp3)<br />
- ADTS-AAC (.aac)<br />
- MPEG-4 Visual (.cmp .m4v)<br />
- H263 Video (.263 .h263)<br />
- AVC/H264 Video (.h264 .h26L .264 .26L)<br />
- JPEG Images (.jpg .jpeg)<br />
- PNG Images (.png)<br />
- AMR(WB) Audio (.amr .awb)<br />
- EVRC Audio (.evc)<br />
+</dt><dd> NHNT (.media .nhnt .info)<br/>
+ MPEG Audio (.mp3)<br/>
+ ADTS-AAC (.aac)<br/>
+ MPEG-4 Visual (.cmp .m4v)<br/>
+ H263 Video (.263 .h263)<br/>
+ AVC/H264 Video (.h264 .h26L .264 .26L)<br/>
+ JPEG Images (.jpg .jpeg)<br/>
+ PNG Images (.png)<br/>
+ AMR(WB) Audio (.amr .awb)<br/>
+ EVRC Audio (.evc)<br/>
  SMV Audio (.smv)</dd>
 <dt><code>Container Formats and extensions</code></dt>
 <dd>
 </dd><dt>
-</dt><dd> AVI (.avi)<br />
- MPEG-PS (.mpg .mpeg .vob .vcd .svcd)<br />
- QCP (.qcp)<br />
- OGG (.ogg)<br />
+</dt><dd> AVI (.avi)<br/>
+ MPEG-PS (.mpg .mpeg .vob .vcd .svcd)<br/>
+ QCP (.qcp)<br/>
+ OGG (.ogg)<br/>
  ISO-Media files (no extension checking)</dd>
 <dt><code>Text Formats and extensions</code></dt>
 <dd>
 </dd><dt>
 </dt><dd>
- SRT Subtitles (.srt)<br />
- SUB Subtitles (.sub)<br />
- GPAC Timed Text (.ttxt)<br />
+ SRT Subtitles (.srt)<br/>
+ SUB Subtitles (.sub)<br/>
+ GPAC Timed Text (.ttxt)<br/>
  QuickTime TeXML Text (.xml) (cf QT documentation)</dd>
 <dt><code>Scene Formats and extensions</code></dt>
 <dd>
 </dd><dt>
 </dt><dd> MPEG-4 XMT-A (.xmt .xmta .xmt.gz .xmta.gz) </dd>
-<p> MPEG-4 BT (.bt .bt.gz)<br />
- VRML (.wrl .wrl.gz)<br />
- X3D-XML (.x3d .x3d.gz)<br />
- X3D-VRML (.x3dv .x3dv.gz)<br />
+<p> MPEG-4 BT (.bt .bt.gz)<br/>
+ VRML (.wrl .wrl.gz)<br/>
+ X3D-XML (.x3d .x3d.gz)<br/>
+ X3D-VRML (.x3dv .x3dv.gz)<br/>
  MacroMedia Flash (.swf) &#8211; very limitted import support only</dl>
 <h2>COMMON USAGE</h2>
 <dl>
 <dt><code>Importing a file</code></dt>
 <dd>
 </dd><dt>
-</dt><dd> Import an AVI: MP4Box -add myfile.avi mymp4.mp4<br />
- Import audio from an AVI: MP4Box -add myfile.avi#audio mymp4.mp4<br />
- Import video from an AVI: MP4Box -add myfile.avi#video mymp4.mp4<br />
- Import an MP3 and leave data outside: MP4Box -dref -add myfile.mp3 mymp4.mp4<br />
- Import a JPEG or PNG: MP4Box -add myfile.jpg mymp4.mp4<br />
+</dt><dd> Import an AVI: MP4Box -add myfile.avi mymp4.mp4<br/>
+ Import audio from an AVI: MP4Box -add myfile.avi#audio mymp4.mp4<br/>
+ Import video from an AVI: MP4Box -add myfile.avi#video mymp4.mp4<br/>
+ Import an MP3 and leave data outside: MP4Box -dref -add myfile.mp3 mymp4.mp4<br/>
+ Import a JPEG or PNG: MP4Box -add myfile.jpg mymp4.mp4<br/>
  Create a movie with subtitle: MP4Box -add video.avi -add audio.mp3 -add Subtitle.srt mymp4.mp4 </dd>
 <dt><code>Base File operations</code></dt>
 <dd>
 </dd><dt>
-</dt><dd> Convert file for HTTP/FTP streaming: MP4Box -inter 1000 myfile.mp4<br />
- Convert unknown file to ISMA for HTTP/FTP streaming: MP4Box -isma -inter 1000 myfile.mp4<br />
- Convert unknown file to ISMA and respect ISMA broken sync: MP4Box -ismax myfile.mp4<br />
+</dt><dd> Convert file for HTTP/FTP streaming: MP4Box -inter 1000 myfile.mp4<br/>
+ Convert unknown file to ISMA for HTTP/FTP streaming: MP4Box -isma -inter 1000 myfile.mp4<br/>
+ Convert unknown file to ISMA and respect ISMA broken sync: MP4Box -ismax myfile.mp4<br/>
  Convert unknown file to 3GP : MP4Box -3gp myfile.mp4 </dd>
 <dt><code>Hinting a File</code></dt>
 <dd>
 </dd><dt>
-</dt><dd> Prepare any mp4 for ISMA streaming: MP4Box -isma -hint myfile.mp4<br />
- Prepare any 3GP for streaming: MP4Box -hint myfile.3gp<br />
- Prepare any 3GP for streaming with RTP aggregation : MP4Box -hint -multi myfile.3gp<br />
- Prepare a simple audio/video mp4 optimized for server: MP4Box -hint -copy -tight myfile.mp4<br />
+</dt><dd> Prepare any mp4 for ISMA streaming: MP4Box -isma -hint myfile.mp4<br/>
+ Prepare any 3GP for streaming: MP4Box -hint myfile.3gp<br/>
+ Prepare any 3GP for streaming with RTP aggregation : MP4Box -hint -multi myfile.3gp<br/>
+ Prepare a simple audio/video mp4 optimized for server: MP4Box -hint -copy -tight myfile.mp4<br/>
  Prepare a complex mp4 with BIFS for streaming: MP4Box -ocr -iod -hint myfile.mp4 </dd>
 <dt><code>Encoding/Decoding a file</code></dt>
 <dd>
 </dd><dt>
-</dt><dd> Encode a BT file and keep node names for later inspection: MP4Box -mp4 -def pres.bt<br />
- Encode a XMT-A file: MP4Box -mp4 pres.xmt<br />
- Translate BT to XMT-A file: MP4Box -xmt pres.bt<br />
- Translate XMT-A to BT file: MP4Box -bt pres.xmt<br />
+</dt><dd> Encode a BT file and keep node names for later inspection: MP4Box -mp4 -def pres.bt<br/>
+ Encode a XMT-A file: MP4Box -mp4 pres.xmt<br/>
+ Translate BT to XMT-A file: MP4Box -xmt pres.bt<br/>
+ Translate XMT-A to BT file: MP4Box -bt pres.xmt<br/>
  Decode MP4 to BT: MP4Box -bt pres.mp4
 </dd></dl>
 <h2>BUGS and OTHER HELP</h2>

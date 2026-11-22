@@ -10,7 +10,7 @@ description: "sggglm.f –"
 <p>sggglm.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sggglm</code> (N, M, P, A, LDA, B, LDB, D, X, Y, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sggglm</code> (N, M, P, A, LDA, B, LDB, D, X, Y, WORK, LWORK, INFO)<br/>
  <i></i><code> SGGEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sggglm (integerN, integerM, integerP, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( * )D, real, dimension( * )X, real, dimension( * )Y, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

@@ -12,11 +12,11 @@ description: "ql/models/shortrate/onefactormodels/extendedcoxingersollross.hpp â
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/shortrate/onefactormodels/coxingersollross.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>ExtendedCoxIngersollRoss</code><br />
- <i>Extended Cox-Ingersoll-Ross model class. </i><br />
- class <code>Dynamics</code><br />
- <i>Short-rate dynamics in the extended Cox-Ingersoll-Ross model. </i><br />
- class <code>FittingParameter</code><br />
+<p> class <code>ExtendedCoxIngersollRoss</code><br/>
+ <i>Extended Cox-Ingersoll-Ross model class. </i><br/>
+ class <code>Dynamics</code><br/>
+ <i>Short-rate dynamics in the extended Cox-Ingersoll-Ross model. </i><br/>
+ class <code>FittingParameter</code><br/>
  <i>Analytical term-structure fitting parameter $ iled Description&quot;</i></p>
 <h2>Detailed Description</h2>
 <p> Extended Cox-Ingersoll-Ross model. </p>

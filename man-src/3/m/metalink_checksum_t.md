@@ -14,7 +14,7 @@ description: "metalink_checksum_t – The structure that holds a hash value of a
 <h2>DESCRIPTION</h2>
 <p> <code>metalink_checksum_t</code> is a structure that holds a hash value of an entire resource. It contains a hash value of a resource and its message digest algorithm name. </p>
 <h2>STRUCTURE MEMBERS</h2>
-<p> char *type;<br />
+<p> char *type;<br/>
  char *hash; </p>
 <h3>type</h3>
 <p> Null terminated string of a message digest algorithm name used to calculate hash value for a resource. </p>

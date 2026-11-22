@@ -9,14 +9,14 @@ description: "table_array – Helps you implement a table when data can be store
 
 <p>table_array &#8211; Helps you implement a table when data can be stored locally.</p>
 <h3>Functions</h3>
-<p>int <code>netsnmp_table_container_register</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_table_registration_info</code> *tabreg, <code>netsnmp_table_array_callbacks</code> *cb, <code>netsnmp_container</code> *container, int group_rows)<br />
- <i>register specified callbacks for the specified table/oid. </i><br />
+<p>int <code>netsnmp_table_container_register</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_table_registration_info</code> *tabreg, <code>netsnmp_table_array_callbacks</code> *cb, <code>netsnmp_container</code> *container, int group_rows)<br/>
+ <i>register specified callbacks for the specified table/oid. </i><br/>
  int <code>netsnmp_table_array_register</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_table_registration_info</code> *tabreg, <code>netsnmp_table_array_callbacks</code> *cb, <code>netsnmp_container</code> *container, int group_rows) </p>
-<p> <code>netsnmp_mib_handler</code> * <code>netsnmp_find_table_array_handler</code> (<code>netsnmp_handler_registration</code> *reginfo)<br />
- <i>find the handler for the table_array helper. </i><br />
- <code>netsnmp_container</code> * <code>netsnmp_extract_array_context</code> (<code>netsnmp_request_info</code> *request)<br />
- <i>find the context data used by the table_array helper </i><br />
- int <code>netsnmp_table_array_check_row_status</code> (<code>netsnmp_table_array_callbacks</code> *cb, <code>netsnmp_request_group</code> *ag, long *rs_new, long *rs_old)<br />
+<p> <code>netsnmp_mib_handler</code> * <code>netsnmp_find_table_array_handler</code> (<code>netsnmp_handler_registration</code> *reginfo)<br/>
+ <i>find the handler for the table_array helper. </i><br/>
+ <code>netsnmp_container</code> * <code>netsnmp_extract_array_context</code> (<code>netsnmp_request_info</code> *request)<br/>
+ <i>find the context data used by the table_array helper </i><br/>
+ int <code>netsnmp_table_array_check_row_status</code> (<code>netsnmp_table_array_callbacks</code> *cb, <code>netsnmp_request_group</code> *ag, long *rs_new, long *rs_old)<br/>
  <i>this function is called to validate RowStatus transitions. </i></p>
 <h2>Detailed Description</h2>
 <p>Helps you implement a table when data can be stored locally. </p>

@@ -90,7 +90,7 @@ prove[options][files or directories]
 
  Additional option files may be specified with the <tt>&quot;--rc&quot;</tt> option. Default option file processing is disabled by the <tt>&quot;--norc&quot;</tt> option. 
 
- Under Windows and <font SIZE="-1">VMS</font> the option file is named <i>_proverc</i> rather than <i>.proverc</i> and is sought only in the current directory.
+ Under Windows and VMS the option file is named <i>_proverc</i> rather than <i>.proverc</i> and is sought only in the current directory.
 
 <h3>Reading from STDIN</h3>
 
@@ -138,15 +138,15 @@ prove[options][files or directories]
 
 <h3>--merge</h3>
 
- If you need to make sure your diagnostics are displayed in the correct order relative to test results you can use the <tt>&quot;--merge&quot;</tt> option to merge the test scripts' <font SIZE="-1">STDERR</font> into their <font SIZE="-1">STDOUT.</font> 
+ If you need to make sure your diagnostics are displayed in the correct order relative to test results you can use the <tt>&quot;--merge&quot;</tt> option to merge the test scripts' STDERR into their STDOUT. 
 
- This guarantees that <font SIZE="-1">STDOUT</font> (where the test results appear) and <font SIZE="-1">STDERR</font> (where the diagnostics appear) will stay in sync. The harness will display any diagnostics your tests emit on <font SIZE="-1">STDERR.</font> 
+ This guarantees that STDOUT (where the test results appear) and STDERR (where the diagnostics appear) will stay in sync. The harness will display any diagnostics your tests emit on STDERR. 
 
- Caveat: this is a bit of a kludge. In particular note that if anything that appears on <font SIZE="-1">STDERR</font> looks like a test result the test harness will get confused. Use this option only if you understand the consequences and can live with the risk.
+ Caveat: this is a bit of a kludge. In particular note that if anything that appears on STDERR looks like a test result the test harness will get confused. Use this option only if you understand the consequences and can live with the risk.
 
 <h3>--trap</h3>
 
- The <tt>&quot;--trap&quot;</tt> option will attempt to trap <font SIZE="-1">SIGINT</font> (Ctrl-C) during a test run and display the test summary even if the run is interrupted
+ The <tt>&quot;--trap&quot;</tt> option will attempt to trap SIGINT (Ctrl-C) during a test run and display the test summary even if the run is interrupted
 
 <h3>--state</h3>
 
@@ -211,7 +211,7 @@ prove[options][files or directories]
 </dd><dt>&quot;fresh&quot;
 </dt><dd> Run those test scripts that have been modified since the last test run.
 </dd><dt>&quot;save&quot;
-</dt><dd> Save the state on exit. The state is stored in a file called <i>.prove</i> (<i>_prove</i> on Windows and <font SIZE="-1">VMS</font>) in the current directory.</dd></dl>
+</dt><dd> Save the state on exit. The state is stored in a file called <i>.prove</i> (<i>_prove</i> on Windows and VMS) in the current directory.</dd></dl>
  
 
  The <tt>&quot;--state&quot;</tt> switch may be used more than once. 
@@ -285,7 +285,7 @@ prove[options][files or directories]
 
 <h2>SOURCE HANDLERS</h2>
 
- You can load custom TAP::Parser::SourceHandlers, to change the way the parser interprets particular <i>sources</i> of <font SIZE="-1">TAP.</font> 
+ You can load custom TAP::Parser::SourceHandlers, to change the way the parser interprets particular <i>sources</i> of TAP. 
 
  <pre>
   prove --source MyHandler --source YetAnother t
@@ -323,10 +323,10 @@ prove-- source MyCustom-- source Perl-- perl - option 'foo=bar baz' --perl - opt
 
 <h3>Available Plugins</h3>
 
- For an up-to-date list of plugins available, please check <font SIZE="-1">CPAN:</font> 
+ For an up-to-date list of plugins available, please check CPAN: 
 
  &lt;<a rel="nofollow" HREF="http://search.cpan.org/search?query=App%3A%3AProve+Plugin">http://search.cpan.org/search?query=App%3A%3AProve+Plugin</a>&gt;
 
 <h3>Writing Plugins</h3>
 
- Please see ``<font SIZE="-1">PLUGINS''</font> in App::Prove.
+ Please see ``PLUGINS'' in App::Prove.

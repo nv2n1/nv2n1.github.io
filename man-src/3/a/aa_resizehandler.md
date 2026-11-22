@@ -11,8 +11,8 @@ description: "aa_resizehandler – Set user handler to be called on resize event
 <p> aa_resizehandler &#8211; Set user handler to be called on resize event.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
-<p> void aa_resizehandler<br />
- (<br />
+<p> void aa_resizehandler<br/>
+ (<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>aa_context *c,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>void (*handler)(aa_context *)</p>
 <p> ); </code></p>

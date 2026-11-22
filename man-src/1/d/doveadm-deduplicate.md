@@ -12,7 +12,7 @@ description: "doveadm-deduplicate – expunge duplicate messages"
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>deduplicate</code> [<code>-u</code> <i>user</i>|<code>-A</code>] [<code>-S</code> <i>socket_path</i>] [<code>-m</code>] <i>search_query</i></p>
 <h2>DESCRIPTION</h2>
-<p> This command is used to expunge duplicated messages in mailboxes. <code>doveadm deduplicate</code> is mainly useful to revert some (more or less) accidental duplication of messages, e.g. after <code>doveadm copy</code> or <code>doveadm import</code>. <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will delete the newest duplicated messages from the mailbox and keep the oldest.<br />
+<p> This command is used to expunge duplicated messages in mailboxes. <code>doveadm deduplicate</code> is mainly useful to revert some (more or less) accidental duplication of messages, e.g. after <code>doveadm copy</code> or <code>doveadm import</code>. <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will delete the newest duplicated messages from the mailbox and keep the oldest.<br/>
  Deduplication across multiple mailboxes is not supported.</p>
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
@@ -32,7 +32,7 @@ description: "doveadm-deduplicate – expunge duplicate messages"
 <dt><code>-m</code></dt>
 <dd> if the <code>-m</code> option is given, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will deduplicate by Message-Id header. By default deduplication will be done by message GUIDs.</dd>
 <dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
-<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
+<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br/>
  When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>

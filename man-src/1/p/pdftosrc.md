@@ -75,7 +75,7 @@ description: "pdftosrc – extract source file or stream from PDF file"
 <p> The wording <i>stream-object-number</i> has nothing to do with the `object streams&#8217; introduced by the Adobe PDF Reference, 5th edition, version 1.6.</p>
 <h2>EXAMPLES</h2>
 <p> When using pdftex, a source file can be embedded into some <i>PDF-file</i> by using pdftex primitives, as illustrated by the following example: </p>
-<p> \immediate\pdfobj<br />
+<p> \immediate\pdfobj<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;stream attr&nbsp;{/Type&nbsp;/SourceFile&nbsp;/SourceName&nbsp;(myfile.zip)}</p>
 <dl>
 </dl>

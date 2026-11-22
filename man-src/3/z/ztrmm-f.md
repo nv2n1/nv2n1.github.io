@@ -10,7 +10,7 @@ description: "ztrmm.f –"
 <p>ztrmm.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztrmm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br />
+<p>subroutine <code>ztrmm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br/>
  <i></i><code>ZTRMM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztrmm (characterSIDE, characterUPLO, characterTRANSA, characterDIAG, integerM, integerN, complex*16ALPHA, complex*16, dimension(lda,*)A, integerLDA, complex*16, dimension(ldb,*)B, integerLDB)</h3>

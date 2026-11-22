@@ -21,16 +21,16 @@ description: "osage – filter for drawing clustered graphs"
 <p> Alternative plugins providing support for a given output format can be found from the error message resulting from appending a &#8216;:&#8217; to the format. e.g. <code>-Tpng:</code> The first plugin listed is always the default.</p>
 <h2>GRAPH FILE LANGUAGE</h2>
 <p> Here is a synopsis of the graph file language, normally using the extension <code>.gv</code>, for graphs: </p>
-<p> [<code>strict</code>] (<code>graph</code>|<code>digraph</code>) <i>name</i> { <i>statement-list</i> }<br />
+<p> [<code>strict</code>] (<code>graph</code>|<code>digraph</code>) <i>name</i> { <i>statement-list</i> }<br/>
  Is the top level graph. If the graph is <code>strict</code> then multiple edges are not allowed between the same pairs of nodes. If it is a directed graph, indicated by <code>digraph</code>, then the <i>edgeop</i> must be &quot;-&gt;&quot;. If it is an undirected <code>graph</code> then the <i>edgeop</i> must be &quot;&#8211;&quot;. Statements may be: </p>
-<p> <i>name</i><code>=</code><i>val</i><code>;</code><br />
- <code>node [</code><i>name</i><code>=</code><i>val</i><code>];</code><br />
- <code>edge [</code><i>name</i><code>=</code><i>val</i><code>];</code><br />
+<p> <i>name</i><code>=</code><i>val</i><code>;</code><br/>
+ <code>node [</code><i>name</i><code>=</code><i>val</i><code>];</code><br/>
+ <code>edge [</code><i>name</i><code>=</code><i>val</i><code>];</code><br/>
  Set default graph, node, or edge attribute <i>name</i> to <i>val</i>. Any subgraph, node, or edge appearing after this inherits the new default attributes. </p>
 <p> <code>n0 [</code><i>name0=val0,name1=val1,&#8230;</i><code>];</code> Creates node <code>n0</code> (if it does not already exist) and sets its attributes according to the optional list. </p>
-<p> <code>n0 </code><i>edgeop</i> n1 <i>edgeop</i> <i>&#8230;</i><i>edgeop</i> nn [<i>name0=val0,name1=val1,&#8230;</i><code>];</code><br />
+<p> <code>n0 </code><i>edgeop</i> n1 <i>edgeop</i> <i>&#8230;</i><i>edgeop</i> nn [<i>name0=val0,name1=val1,&#8230;</i><code>];</code><br/>
  Creates edges between nodes <code>n0</code>, <code>n1</code>, &#8230;, <code>nn</code> and sets their attributes according to the optional list. Creates nodes as necessary. </p>
-<p> [<code>subgraph </code><i>name</i><code>] { </code><i>statement-list </i><code>}</code><br />
+<p> [<code>subgraph </code><i>name</i><code>] { </code><i>statement-list </i><code>}</code><br/>
  Creates a subgraph. Subgraphs may be used in place of <code>n0</code>, &#8230;, <code>nn</code> in the above statements to create edges. [<code>subgraph </code><i>name</i>] is optional; if missing, the subgraph is assigned an internal name. </p>
 <p> Comments may be /*C-like*/ or //C++-like. </p>
 <p> Attribute names and values are ordinary (C-style) strings. The following sections describe attributes that control graph layout. </p>
@@ -49,7 +49,7 @@ description: "osage – filter for drawing clustered graphs"
 <p> <code>splines</code>. If set to <i>true</i>, edges are drawn as splines. If set to <i>polyline</i>, edges are drawn as polylines. If set to <i>ortho</i>, edges are drawn as orthogonal polylines. In all of these cases, the nodes may not overlap. If <code>splines=</code><i>false</i> or <code>splines=</code><i>line</i>, edges are drawn as line segments. The default is <i>false</i>. </p>
 <h2>NODE ATTRIBUTES</h2>
 <p> <code>height=</code><i>d</i> or <code>width=</code><i>d</i> sets minimum height or width. Adding <code>fixedsize=true</code> forces these to be the actual size (text labels are ignored). </p>
-<p> <code>shape=record polygon epsf </code><i>builtin_polygon</i><br />
+<p> <code>shape=record polygon epsf </code><i>builtin_polygon</i><br/>
  <i>builtin_polygon</i> is one of: <code>plaintext ellipse oval circle egg triangle box diamond trapezium parallelogram house hexagon octagon note tab box3d component.</code> (Polygons are defined or modified by the following node attributes: <code>regular</code>, <code>peripheries</code>, <code>sides</code>, <code>orientation</code>, <code>distortion</code> and <code>skew</code>.) <code>epsf</code> uses the node&#8217;s <code>shapefile</code> attribute as the path name of an external EPSF file to be automatically loaded for the node shape. </p>
 <p> <code>label=</code><i>text</i> where <i>text</i> may include escaped newlines 
 , \l, or 
@@ -104,12 +104,12 @@ description: "osage – filter for drawing clustered graphs"
 <p> <code>decorate</code> draws line from edge to label. </p>
 <p> <code>samehead,sametail</code> aim edges having the same value to the same port, using the average landing point. </p>
 <p> <code>layer=</code><i>id</i> or <i>id:id</i> or &quot;all&quot; sets the edge&#8217;s active layers. The empty string means no layers (invisible). </p>
-<p> <code>(neato-specific attributes)</code><br />
+<p> <code>(neato-specific attributes)</code><br/>
  <code>w=</code><i>f</i> sets the weight (spring constant) of an edge to the given floating point value. The default is 1.0; greater values make the edge tend more toward its optimal length. </p>
 <p> <code>len=</code><i>f</i> sets the optimal length of an edge. The default is 1.0.</p>
 <h2>COMMAND LINE OPTIONS</h2>
-<p> <code>-G</code> sets a default graph attribute.<br />
- <code>-N</code> sets a default node attribute.<br />
+<p> <code>-G</code> sets a default graph attribute.<br/>
+ <code>-N</code> sets a default node attribute.<br/>
  <code>-E</code> sets a default edge attribute. Example: <code>-Gsize=&quot;7,8&quot; -Nshape=box -Efontsize=8</code> </p>
 <p> <code>-l</code><i>file</i> loads custom PostScript library files. Usually these define custom shapes or styles. If <code>-l</code> is given by itself, the standard library is omitted. </p>
 <p> <code>-T</code><i>lang</i> sets the output language as described above. </p>

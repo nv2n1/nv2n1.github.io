@@ -9,7 +9,7 @@ description: "fzdefaults.xml – Default options for FileZilla"
 
 <p>fzdefaults.xml &#8211; Default options for FileZilla</p>
 <h2>Synopsis</h2>
-<p><code>/etc/filezilla/fzdefaults.xml</code><br />
+<p><code>/etc/filezilla/fzdefaults.xml</code><br/>
  <code>~/.filezilla/fzdefaults.xml</code></p>
 <h2>Description</h2>
 <p>This configuration file can be used to specify some system-wide default options for FileZilla:</p>

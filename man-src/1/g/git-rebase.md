@@ -40,8 +40,8 @@ git rebase master topic
 <dl>
 <dt>
 </dt><dd>
-A &#8216;&#8211;B&#8217; &#8211;C&#8217; topic /<br />
-        D&#8211; &#8211;<br />
+A &#8216;&#8211;B&#8217; &#8211;C&#8217; topic /<br/>
+        D&#8211; &#8211;<br/>
     E&#8211; &#8211; F&#8211; &#8211; G master
 </dd></dl>
 <p> <code>NOTE:</code> The latter form is just a short-hand of <code>git checkout topic</code> followed by <code>git rebase master</code>. When rebase exits <code>topic</code> will remain the checked-out branch. </p>
@@ -55,8 +55,8 @@ A&#8211; &#8211; B&#8211; &#8211; C topic / D&#8211; &#8211; E&#8211; &#8211; A&
 <dl>
 <dt>
 </dt><dd>
-B &#8216;&#8212;C&#8217; topic /<br />
-        D&#8211; &#8211;<br />
+B &#8216;&#8212;C&#8217; topic /<br/>
+        D&#8211; &#8211;<br/>
     E&#8211; &#8211; A&#8217;&#8212;F master
 </dd></dl>
 <p> Here is how you would transplant a topic branch based on one branch to another, to pretend that you forked the topic branch from the latter branch, using <code>rebase &#8211;onto</code>. </p>
@@ -65,18 +65,18 @@ B &#8216;&#8212;C&#8217; topic /<br />
 <dt>
 </dt><dd>
 o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o master</dd>
-<p>                            o&#8211; &#8211;<br />
+<p>                            o&#8211; &#8211;<br/>
     o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o next</p>
-<p>                          o&#8211; &#8211;<br />
+<p>                          o&#8211; &#8211;<br/>
     o&#8211; &#8211; o topic
 </dl>
 <p> We want to make <i>topic</i> forked from branch <i>master</i>; for example, because the functionality on which <i>topic</i> depends was merged into the more stable <i>master</i> branch. We want our tree to look like this: </p>
 <dl>
 <dt>
 </dt><dd>
-o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o master |<br />
+o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o master |<br/>
     | o &#8216;&#8211;o&#8217; &#8211;o&#8217;  topic</dd>
-<p>          o&#8211; &#8211;<br />
+<p>          o&#8211; &#8211;<br/>
           o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o next
 </dl>
 <p> We can get this using the following command: </p>
@@ -105,9 +105,9 @@ git rebase --onto master topicA topicB
 <dl>
 <dt>
 </dt><dd>
-H &#8216;&#8211;I&#8217; &#8211;J&#8217;  topicB /<br />
-    | E&#8211; &#8211; F&#8211; &#8211; G topicA | /<br />
-                                     A&#8211; &#8211;<br />
+H &#8216;&#8211;I&#8217; &#8211;J&#8217;  topicB /<br/>
+    | E&#8211; &#8211; F&#8211; &#8211; G topicA | /<br/>
+                                     A&#8211; &#8211;<br/>
                                  B&#8211; &#8211; C&#8211; &#8211; D master
 </dd></dl>
 <p> This is useful when topicB does not depend on topicA. </p>
@@ -291,7 +291,7 @@ git rebase --abort
 <dl>
 <dt>
 </dt><dd> Individually replay all rebased commits instead of fast-forwarding over the unchanged ones. This ensures that the entire history of the rebased branch is composed of new commits. </dd>
-<p> You may find this helpful after reverting a topic branch merge, as this option recreates the topic branch with fresh commits so it can be remerged successfully without needing to &quot;revert the reversion&quot; (see the m[blue]<code>revert-a-faulty-merge How-To</code>m[]<font SIZE="-2">[1]</font> for details).</dl>
+<p> You may find this helpful after reverting a topic branch merge, as this option recreates the topic branch with fresh commits so it can be remerged successfully without needing to &quot;revert the reversion&quot; (see the m[blue]<code>revert-a-faulty-merge How-To</code>m[][1] for details).</dl>
 <p> &#8211;fork-point, &#8211;no-fork-point</p>
 <dl>
 <dt>
@@ -637,7 +637,7 @@ $ git rebase -i HEAD~5
 <dt>
 </dt><dd>
 X</dd>
-<p>        A&#8211; &#8211;<br />
+<p>        A&#8211; &#8211;<br/>
     M&#8211; &#8211; B / &#8212; -o&#8211; &#8211; O&#8211; &#8211; P&#8211; &#8211; Q
 </dl>
 <p> Suppose you want to rebase the side branch starting at &quot;A&quot; to &quot;Q&quot;. Make sure that the current HEAD is &quot;B&quot;, and call </p>
@@ -717,7 +717,7 @@ exec make test
 <dt>
 </dt><dd>
 o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o master</dd>
-<p>                                              o&#8211; &#8211;<br />
+<p>                                              o&#8211; &#8211;<br/>
     o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o subsystem</p>
 <p>                          * &#8212; -*&#8211; -*topic
 </dl>
@@ -725,7 +725,7 @@ o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8
 <dl>
 <dt>
 </dt><dd>
-o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o master<br />
+o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o master<br/>
          \ o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o o &#8216;&#8211;o&#8217; &#8211;o &#8216;&#8211;o&#8217; &#8211;o&#8217;  subsystem</dd>
 <p>                                        * &#8212; -*&#8211; -*topic
 </dl>
@@ -733,8 +733,8 @@ o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8
 <dl>
 <dt>
 </dt><dd>
-o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o master<br />
-         \ o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o o &#8216;&#8211;o&#8217; &#8211;o &#8216;&#8211;o&#8217; &#8211;o&#8217;&#8211;M  subsystem<br />
+o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o master<br/>
+         \ o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o o &#8216;&#8211;o&#8217; &#8211;o &#8216;&#8211;o&#8217; &#8211;o&#8217;&#8211;M  subsystem<br/>
                            \ / *&#8211; -*&#8211; -*-&#8230;&#8230;&#8230;.- *&#8211;*topic
 </dd></dl>
 <p> Such duplicates are generally frowned upon because they clutter up history, making it harder to follow. To clean things up, you need to transplant the commits on <i>topic</i> to the new <i>subsystem</i> tip, i.e., rebase <i>topic</i>. This becomes a ripple effect: anyone downstream from <i>topic</i> is forced to rebase too, and so on! </p>
@@ -746,7 +746,7 @@ o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8
 <p> Hard case: The changes are not the same.</p>
 <dl>
 <dt>
-</dt><dd> This happens if the <i>subsystem</i> rebase had conflicts, or used <code>&#8211;interactive</code> to omit, edit, squash, or fixup commits; or if the upstream used one of <code>commit &#8211;amend</code>, <code>reset</code>, or a full history rewriting command like m[blue]<code>filter-repo</code>m[]<font SIZE="-2">[2]</font>.</dd></dl>
+</dt><dd> This happens if the <i>subsystem</i> rebase had conflicts, or used <code>&#8211;interactive</code> to omit, edit, squash, or fixup commits; or if the upstream used one of <code>commit &#8211;amend</code>, <code>reset</code>, or a full history rewriting command like m[blue]<code>filter-repo</code>m[][2].</dd></dl>
 <h3>The easy case</h3>
 <p> Only works if the changes (patch IDs based on the diff contents) on <i>subsystem</i> are literally the same before and after the rebase <i>subsystem</i> did. </p>
 <p> In that case, the fix is easy because <i>git rebase</i> knows to skip changes that are already present in the new upstream (unless <code>&#8211;reapply-cherry-picks</code> is given). So if you say (assuming you&#8217;re on <i>topic</i>) </p>
@@ -772,7 +772,7 @@ o-- - o-- - o-- - o-- - o-- - o-- - o-- - o master
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> While an &quot;easy case recovery&quot; sometimes appears to be successful even in the hard case, it may have unintended consequences. For example, a commit that was removed via <code>git rebase &#8211;interactive</code> will be <code>resurrected</code>! </p>
 </dl>
 <p> The idea is to manually tell <i>git rebase</i> &quot;where the old <i>subsystem</i> ended and your <i>topic</i> began&quot;, that is, what the old merge base between them was. You will have to find a way to name the last commit of the old <i>subsystem</i>, for example: </p>

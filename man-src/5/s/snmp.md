@@ -168,7 +168,7 @@ description: "snmp.conf – configuration files for the Net-SNMP applications"
 <dt>showMibErrors (1|yes|true|0|no|false)</dt>
 <dd>whether to display MIB parsing errors.</dd>
 <dt>commentToEOL (1|yes|true|0|no|false)</dt>
-<dd>whether MIB parsing should be strict about comment termination. Many MIB writers assume that ASN.1 comments extend to the end of the text line, rather than being terminated by the next &quot;&#8211;&quot; token. This token can be used to accept such (strictly incorrect) MIBs.<br />
+<dd>whether MIB parsing should be strict about comment termination. Many MIB writers assume that ASN.1 comments extend to the end of the text line, rather than being terminated by the next &quot;&#8211;&quot; token. This token can be used to accept such (strictly incorrect) MIBs.<br/>
  Note that this directive was previous (mis-)named <i>strictCommentTerm</i>, but with the reverse behaviour from that implied by the name. This earlier token is still accepted for backwards compatibility.</dd>
 <dt>mibAllowUnderline (1|yes|true|0|no|false)</dt>
 <dd>whether to allow underline characters in MIB object names and enumeration values. This token can be used to accept such (strictly incorrect) MIBs.</dd>
@@ -209,13 +209,13 @@ description: "snmp.conf – configuration files for the Net-SNMP applications"
 <h2>Files</h2>
 <dl>
 <dt>System-wide configuration files:</dt>
-<dd>/etc/snmp/snmp.conf<br />
+<dd>/etc/snmp/snmp.conf<br/>
  /etc/snmp/snmp.local.conf</dd>
 <dt>User-specific configuration settings:</dt>
-<dd>$HOME/.snmp/snmp.conf<br />
+<dd>$HOME/.snmp/snmp.conf<br/>
  $HOME/.snmp/snmp.local.conf</dd>
 <dt>Destination host specific files:</dt>
-<dd>/etc/snmp/hosts/HOSTNAME.conf<br />
+<dd>/etc/snmp/hosts/HOSTNAME.conf<br/>
  $HOME/.snmp/hosts/HOSTNAME.conf </dd>
 </dl>
 <h2>See Also</h2>

@@ -30,7 +30,7 @@ description: "unflatten – adjust directed graphs to improve layout aspect rati
 <dt><i>files</i></dt>
 <dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
 <h2>AUTHORS</h2>
-<p> Stephen C. North &lt;north [at] research.att.com&gt;<br />
+<p> Stephen C. North &lt;north [at] research.att.com&gt;<br/>
  Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gc/">gc</a>(1), <a href="/docs/linux/man/1-dot/">dot</a>(1), <a href="/docs/linux/man/1-acyclic/">acyclic</a>(1), <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1), <a href="/docs/linux/man/1-gvcolor/">gvcolor</a>(1), <a href="/docs/linux/man/1-ccomps/">ccomps</a>(1), <a href="/docs/linux/man/1-tred/">tred</a>(1), libgraph(3) </p>

@@ -33,7 +33,7 @@ add password foo {bar} {table}</pre>
 <p> zero, meaning that the user is not automatically enabled and <i>clogin</i> should execute the enable command to gain enable privileges, unless negated by the noenable directive or -noenable command-line option. </p>
 <p> Also see the <code>noenable</code> directive.</p>
 <dt><code>add cyphertype &lt;router name glob&gt; {&lt;ssh encryption type&gt;}</code></dt>
-<dd>cyphertype defines which encryption algorithm is used with ssh. A device may not support the type ssh uses by default. See <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1)&#8217;s<br />
+<dd>cyphertype defines which encryption algorithm is used with ssh. A device may not support the type ssh uses by default. See <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1)&#8217;s<br/>
 &nbsp;<wbr>-c option for details. </dd>
 <p> Default: {3des}</p>
 <dt><code>add enableprompt &lt;router name glob&gt; {&lt;enable prompt&gt;}</code></dt>

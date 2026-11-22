@@ -10,7 +10,7 @@ description: "wdiff – display word differences between text files"
 
 <p> wdiff &#8211; display word differences between text files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>wdiff</code> [<i>,OPTION/</i>]&#8230; <i>,FILE1 FILE2/</i><br />
+<p> <code>wdiff</code> [<i>,OPTION/</i>]&#8230; <i>,FILE1 FILE2/</i><br/>
  <code>wdiff</code> <i>,-d /</i>[<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> wdiff &#8211; Compares words in two files and report differences. </p>
@@ -62,7 +62,7 @@ description: "wdiff – display word differences between text files"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;wdiff-bugs [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1992, 1997, 1998, 1999, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 1992, 1997, 1998, 1999, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>wdiff</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>wdiff</code> programs are properly installed at your site, the command</p>

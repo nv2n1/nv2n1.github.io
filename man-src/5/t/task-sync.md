@@ -13,8 +13,8 @@ description: "task-sync – A discussion and tutorial for the various"
 <p>Taskwarrior has several sync options, external and internal. If you wish to sync your data, choose one method only; mixing methods is only going to lead to problems. Each of the methods discussed have their own strengths.</p>
 <h2>Alternatives</h2>
 <p>There are three alternatives for syncing data, which are: </p>
-<p> 1) Version control systems, such as git, hg, svn<br />
- 2) File hosting systems, such as DropBox<br />
+<p> 1) Version control systems, such as git, hg, svn<br/>
+ 2) File hosting systems, such as DropBox<br/>
  3) Using the Taskserver and the &#8216;sync&#8217; command</p>
 <h2>Option 1: Version Control Systems</h2>
 <p>There are several good, distributed VCS systems (git, hg, &#8230;) and centralized VCS systems (svn &#8230;), and they function in a similar fashion for our purposes. </p>
@@ -43,12 +43,12 @@ description: "task-sync – A discussion and tutorial for the various"
 <p> There is a &#8216;sync&#8217; command built in to Taskwarrior (provided the GnuTLS library is installed), and with a server account and client configuration, syncing is done on demand. </p>
 <p> Setup is a matter of creating an account on a Taskserver (see your Taskserver provider or operate your own &#8211; see <a rel="nofollow" href="http://taskwarrior.org/docs/server_setup.html)">http://taskwarrior.org/docs/server_setup.html)</a> </p>
 <p> Once you have an account, you&#8217;ll receive a certificate, key, and credentials. You&#8217;ll need to put the certificate and key somewhere like this: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>cp&nbsp;<wbr>&lt;name&gt;.cert.pem&nbsp;<wbr>~/.task<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>cp&nbsp;<wbr>&lt;name&gt;.cert.pem&nbsp;<wbr>~/.task<br/>
 &nbsp;<wbr>$&nbsp;<wbr>cp&nbsp;<wbr>&lt;name&gt;.key.pem&nbsp;<wbr>~/.task </p>
 <p> Then you configure Taskwarrior, using the provided details: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task config taskd.certificate&nbsp;<wbr>~/.task/&lt;name&gt;.cert.pem<br />
-&nbsp;<wbr>$&nbsp;<wbr>task config taskd.key&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>~/.task/&lt;name&gt;.key.pem<br />
-&nbsp;<wbr>$&nbsp;<wbr>task config taskd.credentials&nbsp;<wbr>&lt;organization&gt;/&lt;name&gt;/&lt;UUID&gt;<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task config taskd.certificate&nbsp;<wbr>~/.task/&lt;name&gt;.cert.pem<br/>
+&nbsp;<wbr>$&nbsp;<wbr>task config taskd.key&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>~/.task/&lt;name&gt;.key.pem<br/>
+&nbsp;<wbr>$&nbsp;<wbr>task config taskd.credentials&nbsp;<wbr>&lt;organization&gt;/&lt;name&gt;/&lt;UUID&gt;<br/>
 &nbsp;<wbr>$&nbsp;<wbr>task config taskd.server&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;server domain&gt;:&lt;port&gt; </p>
 <p> If you are using a private server, you are likely also using a self-signed certificate, which means you will need one of the following additional entries: </p>
 <p>&nbsp;<wbr>$&nbsp;<wbr>task config taskd.ca&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>~/.task/ca.cert.pem </p>

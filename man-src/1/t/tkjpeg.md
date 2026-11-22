@@ -17,7 +17,7 @@ tkjpeg - simple JPEG viewer using perl/Tk
 
 <h2>DESCRIPTION</h2>
 
- Very simplistic image viewer that loads <font SIZE="-1">JPEG</font> image, (well actually anything for which Photo has a handler) and puts it into a Label for display. 
+ Very simplistic image viewer that loads JPEG image, (well actually anything for which Photo has a handler) and puts it into a Label for display. 
 
  It tries to find a fullcolour visual to use if display is deeper than 8-bit. (On 8-bit it uses a 4/4/4 palette.)
 

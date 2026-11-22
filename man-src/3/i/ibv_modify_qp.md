@@ -17,33 +17,33 @@ int ibv_modify_qp(struct ibv_qp *qp, struct ibv_qp_attr *attr,
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> <code>ibv_modify_qp()</code> modifies the attributes of QP <i>qp</i> with the attributes in <i>attr</i> according to the mask <i>attr_mask</i>. The argument <i>attr</i> is an ibv_qp_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
-<p>struct ibv_qp_attr {<br />
-    enum ibv_qp_state qp_state;        /* Move the QP to this state */<br />
-    enum ibv_qp_state cur_qp_state;    /* Assume this is the current QP state */<br />
-    enum ibv_mtu path_mtu;             /* Path MTU (valid only for RC/UC QPs) */<br />
-    enum ibv_mig_state path_mig_state; /* Path migration state (valid if HCA supports APM) */<br />
-    uint32_t qkey;                     /* Q_Key for the QP (valid only for UD QPs) */<br />
-    uint32_t rq_psn;                   /* PSN for receive queue (valid only for RC/UC QPs) */<br />
-    uint32_t sq_psn;                   /* PSN for send queue (valid only for RC/UC QPs) */<br />
-    uint32_t dest_qp_num;              /* Destination QP number (valid only for RC/UC QPs) */<br />
-    int qp_access_flags;               /* Mask of enabled remote access operations (valid only for RC/UC QPs) */<br />
-    struct ibv_qp_cap cap;             /* QP capabilities (valid if HCA supports QP resizing) */<br />
-    struct ibv_ah_attr ah_attr;        /* Primary path address vector (valid only for RC/UC QPs) */<br />
-    struct ibv_ah_attr alt_ah_attr;    /* Alternate path address vector (valid only for RC/UC QPs) */<br />
-    uint16_t pkey_index;               /* Primary P_Key index */<br />
-    uint16_t alt_pkey_index;           /* Alternate P_Key index */<br />
-    uint8_t en_sqd_async_notify;       /* Enable SQD.drained async notification (Valid only if qp_state is SQD) */<br />
-    uint8_t sq_draining;               /* Is the QP draining? Irrelevant for ibv_modify_qp() */<br />
-    uint8_t max_rd_atomic;             /* Number of outstanding RDMA reads &amp; atomic operations on the destination QP (valid only for RC QPs) */<br />
-    uint8_t max_dest_rd_atomic;        /* Number of responder resources for handling incoming RDMA reads &amp; atomic operations (valid only for RC QPs) */<br />
-    uint8_t min_rnr_timer;             /* Minimum RNR NAK timer (valid only for RC QPs) */<br />
-    uint8_t port_num;                  /* Primary port number */<br />
-    uint8_t timeout;                   /* Local ack timeout for primary path (valid only for RC QPs) */<br />
-    uint8_t retry_cnt;                 /* Retry count (valid only for RC QPs) */<br />
-    uint8_t rnr_retry;                 /* RNR retry (valid only for RC QPs) */<br />
-    uint8_t alt_port_num;              /* Alternate port number */<br />
-    uint8_t alt_timeout;               /* Local ack timeout for alternate path (valid only for RC QPs) */<br />
-    uint32_t rate_limit;               /* Rate limit in kbps for packet pacing */<br />
+<p>struct ibv_qp_attr {<br/>
+    enum ibv_qp_state qp_state;        /* Move the QP to this state */<br/>
+    enum ibv_qp_state cur_qp_state;    /* Assume this is the current QP state */<br/>
+    enum ibv_mtu path_mtu;             /* Path MTU (valid only for RC/UC QPs) */<br/>
+    enum ibv_mig_state path_mig_state; /* Path migration state (valid if HCA supports APM) */<br/>
+    uint32_t qkey;                     /* Q_Key for the QP (valid only for UD QPs) */<br/>
+    uint32_t rq_psn;                   /* PSN for receive queue (valid only for RC/UC QPs) */<br/>
+    uint32_t sq_psn;                   /* PSN for send queue (valid only for RC/UC QPs) */<br/>
+    uint32_t dest_qp_num;              /* Destination QP number (valid only for RC/UC QPs) */<br/>
+    int qp_access_flags;               /* Mask of enabled remote access operations (valid only for RC/UC QPs) */<br/>
+    struct ibv_qp_cap cap;             /* QP capabilities (valid if HCA supports QP resizing) */<br/>
+    struct ibv_ah_attr ah_attr;        /* Primary path address vector (valid only for RC/UC QPs) */<br/>
+    struct ibv_ah_attr alt_ah_attr;    /* Alternate path address vector (valid only for RC/UC QPs) */<br/>
+    uint16_t pkey_index;               /* Primary P_Key index */<br/>
+    uint16_t alt_pkey_index;           /* Alternate P_Key index */<br/>
+    uint8_t en_sqd_async_notify;       /* Enable SQD.drained async notification (Valid only if qp_state is SQD) */<br/>
+    uint8_t sq_draining;               /* Is the QP draining? Irrelevant for ibv_modify_qp() */<br/>
+    uint8_t max_rd_atomic;             /* Number of outstanding RDMA reads &amp; atomic operations on the destination QP (valid only for RC QPs) */<br/>
+    uint8_t max_dest_rd_atomic;        /* Number of responder resources for handling incoming RDMA reads &amp; atomic operations (valid only for RC QPs) */<br/>
+    uint8_t min_rnr_timer;             /* Minimum RNR NAK timer (valid only for RC QPs) */<br/>
+    uint8_t port_num;                  /* Primary port number */<br/>
+    uint8_t timeout;                   /* Local ack timeout for primary path (valid only for RC QPs) */<br/>
+    uint8_t retry_cnt;                 /* Retry count (valid only for RC QPs) */<br/>
+    uint8_t rnr_retry;                 /* RNR retry (valid only for RC QPs) */<br/>
+    uint8_t alt_port_num;              /* Alternate port number */<br/>
+    uint8_t alt_timeout;               /* Local ack timeout for alternate path (valid only for RC QPs) */<br/>
+    uint32_t rate_limit;               /* Rate limit in kbps for packet pacing */<br/>
 };</p>
 <p> For details on struct ibv_qp_cap see the description of <code>ibv_create_qp()</code>. For details on struct ibv_ah_attr see the description of <code>ibv_create_ah()</code>. </p>
 <p> The argument <i>attr_mask</i> specifies the QP attributes to be modified. The argument is either 0 or the bitwise OR of one or more of the following flags: </p>

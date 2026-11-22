@@ -13,7 +13,7 @@ description: "afpd.conf – Configuration file used by"
 <p>/etc/atalk//afpd.conf is the configuration file used by <code>afpd</code> to determine the behavior and configuration of the different virtual file servers that it provides. </p>
 <p> Any line not prefixed with # is interpreted. The configuration lines are composed like: server name [ options ] If a <code>&#8211;</code> is used instead of a server name, the default server is specified. Server names must be quoted if they contain spaces. They must not contain &quot;:&quot; or &quot;@&quot;. The path name must be a fully qualified path name, or a path name using either the ~ shell shorthand or any of the substitution variables, which are listed below. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Each server has to be configured on a <code>single</code> line. Though newline escaping is supported. </p>
 </dl>
 <p> The possible options and their meanings are:</p>
@@ -101,7 +101,7 @@ description: "afpd.conf – Configuration file used by"
 <dl>
 <dd>Allows Mac OS X clients (10.3.3 or above) to automagically establish a tunneled AFP connection through SSH. If this option is set, the server&#8217;s answers to client&#8217;s FPGetSrvrInfo requests contain an additional entry. It depends on both client&#8217;s settings and a correctly configured and running <code><a href="/docs/linux/man/8-sshd/">sshd</a></code>(8) on the server to let things work. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Setting this option is not recommended since globally encrypting AFP connections via SSH will increase the server&#8217;s load significantly. On the other hand, Apple&#8217;s client side implementation of this feature in MacOS X versions prior to 10.3.4 contained a security flaw. </dd>
 </dl>
 </dl>
@@ -134,7 +134,7 @@ description: "afpd.conf – Configuration file used by"
 <dl>
 <dd>Specifies the path to be used (per server) to store the files required to do CAP-style print authentication which papd will examine to determine if a print job should be allowed. These files are created at login and if they are to be properly removed, this directory probably needs to be umode 1777. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  <code>-authprintdir</code> will only work for clients connecting via DDP. Almost all modern Clients will use TCP. </dd>
 </dl>
 </dl>
@@ -142,7 +142,7 @@ description: "afpd.conf – Configuration file used by"
 <dl>
 <dd>With this switch enabled, afpd won&#8217;t advertise that it is capable of server notifications, so that connected clients poll the server every 10 seconds to detect changes in opened server windows. <i>Note</i>: Depending on the number of simultaneously connected clients and the network&#8217;s speed, this can lead to a significant higher load on your network! </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Do not use this option any longer as Netatalk 2.0 correctly supports server notifications, allowing connected clients to update folder listings in case another client changed the contents. </dd>
 </dl>
 </dl>
@@ -177,7 +177,7 @@ third -signature user:ADMINS</pre>
 <p> First two servers will appear as one logical AFP service to the clients &#8211; if user logs in to first one and then connects to second one, session will be automatically redirected to the first one. But if client connects to first and then to third, will be asked for password twice and will see resources of both servers. Traditional method of signature generation causes two independent afpd instances to have the same signature and thus cause clients to be redirected automatically to server (s)he logged in first.</dl>
 <h2>Logging Options</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Extended logging capabilities are only available if Netatalk was built using <code>&#8211;with-logfile</code>. As of Netatalk 2.0, the default is <code>&#8211;without-logfile</code> since the logger code is partially broken and needs a complete rewrite (the <code>-setuplog</code> option might not work as expected). If Netatalk was built without logger support then the daemons log to syslog. </p>
 </dl>
 <p> -[un]setuplog &quot;<i>&lt;logtype&gt; &lt;loglevel&gt; [&lt;filename&gt;]</i>&quot;</p>

@@ -27,14 +27,14 @@ description: "gnutls_x509_crt_get_subject_alt_othername_oid – API function"
 <p> This function is only useful if <code>gnutls_x509_crt_get_subject_alt_name()</code> returned <code>GNUTLS_SAN_OTHERNAME</code>. </p>
 <p> If <i>oid</i> is null then only the size will be filled. The <i>oid</i> returned will be null terminated, although <i>oid_size</i> will not account for the trailing null.</p>
 <h2>RETURNS</h2>
-<p> the alternative subject name type on success, one of the enumerated gnutls_x509_subject_alt_name_t. For supported OIDs, it will return one of the virtual (GNUTLS_SAN_OTHERNAME_*) types, e.g. <code>GNUTLS_SAN_OTHERNAME_XMPP</code>, and <code>GNUTLS_SAN_OTHERNAME</code> for unknown OIDs. It will return <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> if<br />
-&nbsp;<wbr><i>ian_size</i>&nbsp;<wbr>is not large enough to hold the value.&nbsp;<wbr>&nbsp;<wbr>In that case<br />
+<p> the alternative subject name type on success, one of the enumerated gnutls_x509_subject_alt_name_t. For supported OIDs, it will return one of the virtual (GNUTLS_SAN_OTHERNAME_*) types, e.g. <code>GNUTLS_SAN_OTHERNAME_XMPP</code>, and <code>GNUTLS_SAN_OTHERNAME</code> for unknown OIDs. It will return <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> if<br/>
+&nbsp;<wbr><i>ian_size</i>&nbsp;<wbr>is not large enough to hold the value.&nbsp;<wbr>&nbsp;<wbr>In that case<br/>
 &nbsp;<wbr><i>ian_size</i>&nbsp;<wbr>will be updated with the required size.&nbsp;<wbr>&nbsp;<wbr>If the certificate does not have an Alternative name with the specified sequence number and with the otherName type then <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> is returned.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br/>
  Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>

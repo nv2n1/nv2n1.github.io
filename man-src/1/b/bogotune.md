@@ -35,7 +35,7 @@ description: "bogotune – find optimum parameter settings for bogofilter"
 <p> Bogotune is not particularly robust when presented with garbage input.</p>
 <h2>AUTHOR</h2>
 <p> The bogofilter developer team. </p>
-<p> For updates, see m[blue]<code>the bogofilter project page</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> For updates, see m[blue]<code>the bogofilter project page</code>m[][1].</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-bogofilter/">bogofilter</a>(1), <a href="/docs/linux/man/1-bogolexer/">bogolexer</a>(1), <a href="/docs/linux/man/1-bogoupgrade/">bogoupgrade</a>(1), <a href="/docs/linux/man/1-bogoutil/">bogoutil</a>(1)</p>
 <h2>NOTES</h2>

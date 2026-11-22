@@ -16,14 +16,14 @@ packet_socket = socket(AF_PACKET, int socket_type, int protocol);</code></pre>
 <h2>Description</h2>
 <p>Packet sockets are used to receive or send raw packets at the device driver (OSI Layer 2) level. They allow the user to implement protocol modules in user space on top of the physical layer. The <i>socket_type</i> is either <code>SOCK_RAW</code> for raw packets including the link-level header or <code>SOCK_DGRAM</code> for cooked packets with the link-level header removed. The link-level header information is available in a common format in a <i>sockaddr_ll</i> structure. <i>protocol</i> is the IEEE 802.3 protocol number in network byte order. See the <i>&lt;linux/if_ether.h&gt;</i> include file for a list of allowed protocols. When protocol is set to <code>htons(ETH_P_ALL)</code>, then all protocols are received. All incoming packets of that protocol type will be passed to the packet socket before they are passed to the protocols implemented in the kernel. In order to create a packet socket, a process must have the <code>CAP_NET_RAW</code> capability in the user namespace that governs its network namespace. <code>SOCK_RAW</code> packets are passed to and from the device driver without any changes in the packet data. When receiving a packet, the address is still parsed and passed in a standard <i>sockaddr_ll</i> address structure. When transmitting a packet, the user-supplied buffer should contain the physical-layer header. That packet is then queued unmodified to the network driver of the interface defined by the destination address. Some device drivers always add other headers. <code>SOCK_RAW</code> is similar to but not compatible with the obsolete <code>AF_INET/SOCK_PACKET</code> of Linux 2.0. <code>SOCK_DGRAM</code> operates on a slightly higher level. The physical header is removed before the packet is passed to the user. Packets sent through a <code>SOCK_DGRAM</code> packet socket get a suitable physical-layer header based on the information in the <i>sockaddr_ll</i> destination address before they are queued. By default, all packets of the specified protocol type are passed to a packet socket. To get packets only from a specific interface use <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) specifying an address in a <i>struct sockaddr_ll</i> to bind the packet socket to an interface. Fields used for binding are <i>sll_family</i> (should be <code>AF_PACKET</code>), <i>sll_protocol</i>, and <i>sll_ifindex</i>. The <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) operation is not supported on packet sockets. When the <code>MSG_TRUNC</code> flag is passed to <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), or <code><a href="/docs/linux/man/2-recvfrom/">recvfrom</a></code>(2), the real length of the packet on the wire is always returned, even when it is longer than the buffer.</p>
 <h3>Address types</h3>
-<p>The <i>sockaddr_ll</i> structure is a device-independent physical-layer address. struct sockaddr_ll {<br />
-    unsigned short sll_family;   /* Always AF_PACKET */<br />
-    unsigned short sll_protocol; /* Physical-layer protocol */<br />
-    int sll_ifindex;             /* Interface number */<br />
-    unsigned short sll_hatype;   /* ARP hardware type */<br />
-    unsigned char sll_pkttype;   /* Packet type */<br />
-    unsigned char sll_halen;     /* Length of address */<br />
-    unsigned char sll_addr[8];   /* Physical-layer address */<br />
+<p>The <i>sockaddr_ll</i> structure is a device-independent physical-layer address. struct sockaddr_ll {<br/>
+    unsigned short sll_family;   /* Always AF_PACKET */<br/>
+    unsigned short sll_protocol; /* Physical-layer protocol */<br/>
+    int sll_ifindex;             /* Interface number */<br/>
+    unsigned short sll_hatype;   /* ARP hardware type */<br/>
+    unsigned char sll_pkttype;   /* Packet type */<br/>
+    unsigned char sll_halen;     /* Length of address */<br/>
+    unsigned char sll_addr[8];   /* Physical-layer address */<br/>
 }; The fields of this structure are as follows:</p>
 <dl>
 <dt>*</dt>
@@ -42,23 +42,23 @@ packet_socket = socket(AF_PACKET, int socket_type, int protocol);</code></pre>
 <dd>
 </dd><dt><code>PACKET_DROP_MEMBERSHIP</code></dt>
 <dd>Packet sockets can be used to configure physical-layer multicasting and promiscuous mode. <code>PACKET_ADD_MEMBERSHIP</code> adds a binding and <code>PACKET_DROP_MEMBERSHIP</code> drops it. They both expect a <i>packet_mreq</i> structure as argument:</dd>
-<dd>struct packet_mreq {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mr_ifindex;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;interface index&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short mr_type;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;action&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short mr_alen;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;address length&nbsp;*/<br />
+<dd>struct packet_mreq {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mr_ifindex;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;interface index&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short mr_type;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;action&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short mr_alen;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;address length&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;mr_address[8];&nbsp;/*&nbsp;physical-layer address&nbsp;*/ };</dd>
 <dd><i>mr_ifindex</i> contains the interface index for the interface whose status should be changed. The <i>mr_type</i> field specifies which action to perform. <code>PACKET_MR_PROMISC</code> enables receiving all packets on a shared medium (often known as &quot;promiscuous mode&quot;), <code>PACKET_MR_MULTICAST</code> binds the socket to the physical-layer multicast group specified in <i>mr_address</i> and <i>mr_alen</i>, and <code>PACKET_MR_ALLMULTI</code> sets the socket up to receive all multicast packets arriving at the interface.</dd>
 <dd>In addition, the traditional ioctls <code>SIOCSIFFLAGS</code>, <code>SIOCADDMULTI</code>, <code>SIOCDELMULTI</code> can be used for the same purpose.</dd>
 <dt><code>PACKET_AUXDATA</code> (since Linux 2.6.21)</dt>
 <dd>If this binary option is enabled, the packet socket passes a metadata structure along with each packet in the <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2) control field. The structure can be read with <code><a href="/docs/linux/man/3-cmsg/">cmsg</a></code>(3). It is defined as</dd>
-<dd>struct tpacket_auxdata {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 tp_status;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 tp_len;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;packet length&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 tp_snaplen;&nbsp;<wbr>&nbsp;/*&nbsp;captured length&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u16 tp_mac;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u16 tp_net;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u16 tp_vlan_tci;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u16 tp_vlan_tpid;&nbsp;/*&nbsp;Since Linux 3.14;&nbsp;earlier, these<br />
+<dd>struct tpacket_auxdata {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 tp_status;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 tp_len;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;packet length&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 tp_snaplen;&nbsp;<wbr>&nbsp;/*&nbsp;captured length&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u16 tp_mac;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u16 tp_net;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u16 tp_vlan_tci;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u16 tp_vlan_tpid;&nbsp;/*&nbsp;Since Linux 3.14;&nbsp;earlier, these<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;were unused padding bytes&nbsp;*/ };</dd>
 <dt><code>PACKET_FANOUT</code> (since Linux 3.1)</dt>
 <dd>To scale processing across threads, packet sockets can form a fanout group. In this mode, each matching packet is enqueued onto only one socket in the group. A socket joins a fanout group by calling <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2) with level <code>SOL_PACKET</code> and option <code>PACKET_FANOUT</code>. Each network namespace can have up to 65536 independent groups. A socket selects a group by encoding the ID in the first 16 bits of the integer option value. The first packet socket to join a group implicitly creates it. To successfully join an existing group, subsequent packet sockets must have the same protocol, device settings, fanout mode and flags (see below). Packet sockets can leave a fanout group only by closing the socket. The group is deleted when the last socket is closed.</dd>
@@ -89,8 +89,8 @@ packet_socket = socket(AF_PACKET, int socket_type, int protocol);</code></pre>
 <dd>Packet sockets implement multiple variants of the packet ring. The implementation details are described in <i>Documentation/networking/packet_mmap.rst</i> in the Linux kernel source tree.</dd>
 <dt><code>PACKET_STATISTICS</code></dt>
 <dd>Retrieve packet socket statistics in the form of a structure</dd>
-<dd>struct tpacket_stats {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int tp_packets;&nbsp;<wbr>&nbsp;/*&nbsp;Total packet count&nbsp;*/<br />
+<dd>struct tpacket_stats {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int tp_packets;&nbsp;<wbr>&nbsp;/*&nbsp;Total packet count&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int tp_drops;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Dropped packet count&nbsp;*/ };</dd>
 <dd>Receiving statistics resets the internal counters. The statistics structure differs when using a ring of variant <code>TPACKET_V3</code>.</dd>
 <dt><code>PACKET_TIMESTAMP</code> (with <code>PACKET_RX_RING</code>; since Linux 2.6.36)</dt>

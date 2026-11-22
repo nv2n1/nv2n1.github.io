@@ -11,7 +11,7 @@ description: "sptts2.f –"
 <p> sptts2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sptts2</code> (N, NRHS, D, E, B, LDB)<br />
+<p> subroutine <code>sptts2</code> (N, NRHS, D, E, B, LDB)<br/>
  <i></i><code>SPTTS2</code> solves a tridiagonal system of the form AX=B using the L D LH factorization computed by spttrf.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sptts2 (integerN, integerNRHS, real, dimension( * )D, real, dimension( * )E, real, dimension( ldb, * )B, integerLDB)</h3>

@@ -10,7 +10,7 @@ description: "zunmr3.f –"
 <p>zunmr3.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zunmr3</code> (SIDE, TRANS, M, N, K, L, A, LDA, TAU, C, LDC, WORK, INFO)<br />
+<p>subroutine <code>zunmr3</code> (SIDE, TRANS, M, N, K, L, A, LDA, TAU, C, LDC, WORK, INFO)<br/>
  <i></i><code>ZUNMR3</code> multiplies a general matrix by the unitary matrix from a RZ factorization determined by ctzrzf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zunmr3 (characterSIDE, characterTRANS, integerM, integerN, integerK, integerL, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )TAU, complex*16, dimension( ldc, * )C, integerLDC, complex*16, dimension( * )WORK, integerINFO)</h3>

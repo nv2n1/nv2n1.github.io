@@ -15,8 +15,8 @@ description: "cimsub – list, enable, disable,remove or create CIM indication s
 <p> <code>cimsub</code> <code>-d</code> [<code>-n</code> namespace] <code>-F</code> [fnamespace:]filtername <code>-H</code> [hnamespace:][hclassname.]handlername </p>
 <p> <code>cimsub</code> <code>-r</code> <code>s</code>|<code>f</code>|fBa [<code>-n</code> namespace][<code>-F</code> [fnamespace:]filtername][<code>-H</code> [hnamespace:][hclassname.]handlername] </p>
 <p> <code>cimsub</code> <code>-c</code> <code>f</code> [fnamespace:]filtername <code>-Q</code> query [<code>-L</code> querylanguage] [<code>-N</code> sourcenamespace(s)] </p>
-<p> <code>cimsub</code> <code>-c</code> <code>h</code> [hnamespace:][hclassname.]handlername [<code>-D</code> destination]|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-M</code>&nbsp;<wbr>mailto&nbsp;<wbr>[<code>-C</code>&nbsp;<wbr>mailcc]&nbsp;<wbr><code>-S</code>&nbsp;<wbr>mailsubject]|<br />
+<p> <code>cimsub</code> <code>-c</code> <code>h</code> [hnamespace:][hclassname.]handlername [<code>-D</code> destination]|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-M</code>&nbsp;<wbr>mailto&nbsp;<wbr>[<code>-C</code>&nbsp;<wbr>mailcc]&nbsp;<wbr><code>-S</code>&nbsp;<wbr>mailsubject]|<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-T</code>&nbsp;<wbr>snmptargethost&nbsp;<wbr>[<code>-P</code>&nbsp;<wbr>snmpportnumber]&nbsp;<wbr><code>-V</code>&nbsp;<wbr>snmpversion]&nbsp;<wbr>[<code>-U</code>&nbsp;<wbr>snmpsecurityname]&nbsp;<wbr>[<code>-E</code>&nbsp;<wbr>snmpengineid]] </p>
 <p> <code>cimsub</code> <code>-c</code> <code>s</code> [<code>-n</code> namespace] <code>-F</code> [fnamespace:]filtername <code>-H</code> [hnamespace:][hclassname.]handlername </p>
 <p> <code>cimsub</code> <code>&#8211;help</code> </p>
@@ -71,12 +71,12 @@ description: "cimsub – list, enable, disable,remove or create CIM indication s
 <dt><code>-P </code></dt>
 <dd> Specify Port Number of a PG_IndicationHandlerSNMPMapper Handler.(default 162)</dd>
 <dt><code>-V </code></dt>
-<dd> Specify SNMPVersion of a PG_IndicationHandlerSNMPMapper Handler.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2 : SNMPv1 Trap<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3 : SNMPv2C Trap<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4 : SNMPv2C Inform<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5 : SNMPv3 Trap<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>6 : SNMPv3 Inform<br />
+<dd> Specify SNMPVersion of a PG_IndicationHandlerSNMPMapper Handler.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2 : SNMPv1 Trap<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3 : SNMPv2C Trap<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4 : SNMPv2C Inform<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5 : SNMPv3 Trap<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>6 : SNMPv3 Inform<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Required option for SNMPMapper Handler</dd>
 <dt><code>-E </code></dt>
 <dd> Specify Engine ID of a PG_IndicationHandlerSNMPMapper Handler.</dd>

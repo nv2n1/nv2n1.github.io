@@ -25,8 +25,8 @@ description: "drand48_r, erand48_r, lrand48_r, nrand48_r, mrand48_r, jrand48_r, 
 <code>int lcong48_r(unsigned short </code><i>param[7]</i><code>,</code>
 <code> struct drand48_data *</code><i>buffer</i><code>);</code></pre>
 <p>Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> All functions shown above:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<p> All functions shown above:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</p>
 <h2>Description</h2>
 <p>These functions are the reentrant analogs of the functions described in <code><a href="/docs/linux/man/3-drand48/">drand48</a></code>(3). Instead of modifying the global random generator state, they use the supplied data <i>buffer</i>. </p>

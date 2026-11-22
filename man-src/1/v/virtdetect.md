@@ -37,4 +37,4 @@ description: "virtdetect — Detect if this system is running as a virtual machi
 <p> Sys::Detect::Virtualization, &lt;<a rel="nofollow" href="http://www.dmo.ca/blog/detecting-virtualization-on-linux">http://www.dmo.ca/blog/detecting-virtualization-on-linux</a>&gt;</p>
 <h2>LICENCE AND COPYRIGHT</h2>
 <p> Copyright (C) 2009 Roaring Penguin Software Inc. </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of either: the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; or the Artistic License. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of either: the GNU General Public License as published by the Free Software Foundation; or the Artistic License. </p>

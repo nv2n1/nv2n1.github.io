@@ -33,40 +33,40 @@ use utf8;
 #unneeded in v5 .16
 </code></pre>
 <p> This <i>does</i> make even Unix programmers <tt>&quot;binmode&quot;</tt> your binary streams, or open them with <tt>&quot;:raw&quot;</tt>, but that&#8217;s the only way to get at them portably anyway. </p>
-<p> <font SIZE="-1"><code>WARNING</code></font>: <tt>&quot;use autodie&quot;</tt> (pre 2.26) and <tt>&quot;use open&quot;</tt> do not get along with each other.</p>
+<p> <code>WARNING</code>: <tt>&quot;use autodie&quot;</tt> (pre 2.26) and <tt>&quot;use open&quot;</tt> do not get along with each other.</p>
 <h3>℞ 1: Generic Unicode-savvy filter</h3>
 <p> Always decompose on the way in, then recompose on the way out. </p>
-<p>use Unicode::Normalize;<br />
-while (&lt;&gt;) {<br />
-    $_ = NFD($_);<br />
-#decompose + reorder canonically&#8230;<br />
-}<br />
-continue<br />
-{<br />
-    print NFC($_);<br />
-#recompose(where possible) + reorder canonically<br />
+<p>use Unicode::Normalize;<br/>
+while (&lt;&gt;) {<br/>
+    $_ = NFD($_);<br/>
+#decompose + reorder canonically&#8230;<br/>
+}<br/>
+continue<br/>
+{<br/>
+    print NFC($_);<br/>
+#recompose(where possible) + reorder canonically<br/>
 }</p>
 <h3>℞ 2: Fine-tuning Unicode warnings</h3>
 <p> As of v5.14, Perl distinguishes three subclasses of UTF‑8 warnings. </p>
-<p>use v5 .14;<br />
-#subwarnings unavailable any earlier<br />
-    no warnings &#8220;nonchar&#8221;;<br />
-#the 66 forbidden non &#8211; characters<br />
-                            no warnings &#8220;surrogate&#8221;;<br />
-#UTF &#8211; 16 / CESU &#8211; 8 nonsense no warnings &#8220;non_unicode&#8221;;<br />
+<p>use v5 .14;<br/>
+#subwarnings unavailable any earlier<br/>
+    no warnings &#8220;nonchar&#8221;;<br/>
+#the 66 forbidden non &#8211; characters<br/>
+                            no warnings &#8220;surrogate&#8221;;<br/>
+#UTF &#8211; 16 / CESU &#8211; 8 nonsense no warnings &#8220;non_unicode&#8221;;<br/>
 #for codepoints over 0x10_FFFF</p>
 <h3>℞ 3: Declare source in utf8 for identifiers and literals</h3>
 <p> Without the all-critical <tt>&quot;use utf8&quot;</tt> declaration, putting UTF‑8 in your literals and identifiers won’t work right. If you used the standard preamble just given above, this already happened. If you did, you can do things like this: </p>
-<p>use utf8;<br />
-my $measure = &#8220;Ångström&#8221;;<br />
-my @μsoft = qw(cp852 cp1251 cp1252);<br />
-my @ὑπέρμεγας = qw(ὑπέρ μεγας);<br />
-my @鯉 = qw(koi8 &#8211; f koi8 &#8211; u koi8 &#8211; r);<br />
-my $motto = &#8221;  &#8220;;<br />
+<p>use utf8;<br/>
+my $measure = &#8220;Ångström&#8221;;<br/>
+my @μsoft = qw(cp852 cp1251 cp1252);<br/>
+my @ὑπέρμεγας = qw(ὑπέρ μεγας);<br/>
+my @鯉 = qw(koi8 &#8211; f koi8 &#8211; u koi8 &#8211; r);<br/>
+my $motto = &#8221;  &#8220;;<br/>
 #FAMILY, GROWING HEART, DROMEDARY CAMEL</p>
 <p> If you forget <tt>&quot;use utf8&quot;</tt>, high bytes will be misunderstood as separate characters, and nothing will work right.</p>
 <h3>℞ 4: Characters and their numbers</h3>
-<p> The <tt>&quot;ord&quot;</tt> and <tt>&quot;chr&quot;</tt> functions work transparently on all codepoints, not just on <font SIZE="-1">ASCII</font> alone — nor in fact, not even just on Unicode alone. </p>
+<p> The <tt>&quot;ord&quot;</tt> and <tt>&quot;chr&quot;</tt> functions work transparently on all codepoints, not just on ASCII alone — nor in fact, not even just on Unicode alone. </p>
 <pre>
  # ASCII characters
  ord(&quot;A&quot;)
@@ -131,8 +131,8 @@ my $motto = &#8221;  &#8220;;<br />
  &quot;\N{ecute}&quot;
  &quot;\N{APPLE LOGO}&quot;
 </code></pre>
-<font SIZE="-1"></font><h3>℞ 11: Names of CJK codepoints</h3>
-<p> Sinograms like “東京” come back with character names of <code>&quot;CJK UNIFIED IDEOGRAPH-6771&quot;</code> and <code>&quot;CJK UNIFIED IDEOGRAPH-4EAC&quot;</code>, because their “names” vary. The <font SIZE="-1">CPAN</font> <code>&quot;Unicode::Unihan&quot;</code> module has a large database for decoding these (and a whole lot more), provided you know how to understand its output. </p>
+<h3>℞ 11: Names of CJK codepoints</h3>
+<p> Sinograms like “東京” come back with character names of <code>&quot;CJK UNIFIED IDEOGRAPH-6771&quot;</code> and <code>&quot;CJK UNIFIED IDEOGRAPH-4EAC&quot;</code>, because their “names” vary. The CPAN <code>&quot;Unicode::Unihan&quot;</code> module has a large database for decoding these (and a whole lot more), provided you know how to understand its output. </p>
 <pre><code> # cpan -i Unicode::Unihan
  use Unicode::Unihan;
  my $str = &quot;東京&quot;;
@@ -182,7 +182,7 @@ my $motto = &#8221;  &#8220;;<br />
     # use &quot;locale&quot; as an arg to encode/decode
     @ARGV = map { decode(locale =&gt; $_, 1) } @ARGV;
 </code></pre>
-<font SIZE="-1"></font><h3>℞ 15: Declare STD{ IN,OUT,ERR } to be utf8</h3>
+<h3>℞ 15: Declare STD{ IN,OUT,ERR } to be utf8</h3>
 <p> Use a command-line option, an environment variable, or else call <code>&quot;binmode&quot;</code> explicitly: </p>
 <pre><code>     $ perl -CS ...
  or
@@ -194,7 +194,7 @@ my $motto = &#8221;  &#8220;;<br />
      binmode(STDOUT, &quot;:utf8&quot;);
      binmode(STDERR, &quot;:utf8&quot;);
 </code></pre>
-<font SIZE="-1"></font><h3>℞ 16: Declare STD{ IN,OUT,ERR } to be in locale encoding</h3>
+<h3>℞ 16: Declare STD{ IN,OUT,ERR } to be in locale encoding</h3>
 <pre><code>    # cpan -i Encode::Locale
     use Encode;
     use Encode::Locale;
@@ -204,7 +204,7 @@ my $motto = &#8221;  &#8220;;<br />
     binmode STDERR, &quot;:encoding(console_out)&quot; if -t STDERR;
 </code></pre>
 <h3>℞ 17: Make file I/O default to utf8</h3>
-<p> Files opened without an encoding argument will be in <font SIZE="-1">UTF-8:</font> </p>
+<p> Files opened without an encoding argument will be in UTF-8: </p>
 <pre><code>     $ perl -CD ...
  or
      $ export PERL_UNICODE=D
@@ -237,9 +237,9 @@ my $motto = &#8221;  &#8220;;<br />
  THEN
      print $out_file &quot;some text\n&quot;;
 </code></pre>
-<p> More layers than just the encoding can be specified here. For example, the incantation <code>&quot;:raw :encoding(UTF-16LE) :crlf&quot;</code> includes implicit <font SIZE="-1">CRLF</font> handling.  </p>
+<p> More layers than just the encoding can be specified here. For example, the incantation <code>&quot;:raw :encoding(UTF-16LE) :crlf&quot;</code> includes implicit CRLF handling.  </p>
 <h3>℞ 20: Unicode casing</h3>
-<p> Unicode casing is very different from <font SIZE="-1">ASCII</font> casing. </p>
+<p> Unicode casing is very different from ASCII casing. </p>
 <pre><code> uc(&quot;henry ⅷ&quot;) # &quot;HENRY Ⅷ&quot;
  uc(&quot;tschüß&quot;) # &quot;TSCHÜSS&quot; notice ß =&gt; SS
  # both are true:
@@ -247,7 +247,7 @@ my $motto = &#8221;  &#8220;;<br />
  &quot;Σίσυφος&quot; =~ /ΣΊΣΥΦΟΣ/i # notice Σ,σ,ς sameness
 </code></pre>
 <h3>℞ 21: Unicode case-insensitive comparisons</h3>
-<p> Also available in the <font SIZE="-1">CPAN</font> Unicode::CaseFold module, the new <code>&quot;fc&quot;</code> “foldcase” function from v5.16 grants access to the same Unicode casefolding as the <code>&quot;/i&quot;</code> pattern modifier has always used: </p>
+<p> Also available in the CPAN Unicode::CaseFold module, the new <code>&quot;fc&quot;</code> “foldcase” function from v5.16 grants access to the same Unicode casefolding as the <code>&quot;/i&quot;</code> pattern modifier has always used: </p>
 <pre><code> use feature &quot;fc&quot;; # fc() function is from v5.16
  # sort case-insensitively
  my @sorted = sort { fc($a) cmp fc($b) } @list;
@@ -256,7 +256,7 @@ my $motto = &#8221;  &#8220;;<br />
  fc(&quot;Σίσυφος&quot;) eq fc(&quot;ΣΊΣΥΦΟΣ&quot;)
 </code></pre>
 <h3>℞ 22: Match Unicode linebreak sequence in regex</h3>
-<p> A Unicode linebreak matches the two-character <font SIZE="-1">CRLF</font> grapheme or any of seven vertical whitespace characters. Good for dealing with textfiles coming from different operating systems. </p>
+<p> A Unicode linebreak matches the two-character CRLF grapheme or any of seven vertical whitespace characters. Good for dealing with textfiles coming from different operating systems. </p>
 <pre><code> \R
  s/\R/\n/g; # normalize all linebreaks to \n
 </code></pre>
@@ -266,7 +266,7 @@ my $motto = &#8221;  &#8220;;<br />
  my $cat = charinfo(0x3A3)-&gt;{category}; # &quot;Lu&quot;
 </code></pre>
 <h3>℞ 24: Disabling Unicode-awareness in builtin charclasses</h3>
-<p> Disable <code>&quot;\w&quot;</code>, <code>&quot;\b&quot;</code>, <code>&quot;\s&quot;</code>, <code>&quot;\d&quot;</code>, and the <font SIZE="-1">POSIX</font> classes from working correctly on Unicode either in this scope, or in just one regex. </p>
+<p> Disable <code>&quot;\w&quot;</code>, <code>&quot;\b&quot;</code>, <code>&quot;\s&quot;</code>, <code>&quot;\d&quot;</code>, and the POSIX classes from working correctly on Unicode either in this scope, or in just one regex. </p>
 <pre><code> use v5.14;
  use re &quot;/a&quot;;
  # OR
@@ -298,7 +298,7 @@ my $motto = &#8221;  &#8220;;<br />
  if (/\p{Is_GraecoRoman_Title}/ { ... }
 </code></pre>
 <h3>℞ 27: Unicode normalization</h3>
-<p> Typically render into <font SIZE="-1">NFD</font> on input and <font SIZE="-1">NFC</font> on output. Using <font SIZE="-1">NFKC</font> or <font SIZE="-1">NFKD</font> functions improves recall on searches, assuming you&#8217;ve already done to the same text to be searched. Note that this is about much more than just pre- combined compatibility glyphs; it also reorders marks according to their canonical combining classes and weeds out singletons. </p>
+<p> Typically render into NFD on input and NFC on output. Using NFKC or NFKD functions improves recall on searches, assuming you&#8217;ve already done to the same text to be searched. Note that this is about much more than just pre- combined compatibility glyphs; it also reorders marks according to their canonical combining classes and weeds out singletons. </p>
 <pre><code> use Unicode::Normalize;
  my $nfd = NFD($orig);
  my $nfc = NFC($orig);
@@ -306,7 +306,7 @@ my $motto = &#8221;  &#8220;;<br />
  my $nfkc = NFKC($orig);
 </code></pre>
 <h3>℞ 28: Convert non-ASCII Unicode numerics</h3>
-<p> Unless you’ve used <code>&quot;/a&quot;</code> or <code>&quot;/aa&quot;</code>, <code>&quot;\d&quot;</code> matches more than <font SIZE="-1">ASCII</font> digits only, but Perl’s implicit string-to-number conversion does not current recognize these. Here’s how to convert such strings manually. </p>
+<p> Unless you’ve used <code>&quot;/a&quot;</code> or <code>&quot;/aa&quot;</code>, <code>&quot;\d&quot;</code> matches more than ASCII digits only, but Perl’s implicit string-to-number conversion does not current recognize these. Here’s how to convert such strings manually. </p>
 <pre><code> use v5.14; # needed for num() function
  use Unicode::UCD qw(num);
  my $str = &quot;got Ⅻ and ४५६७ and ⅞ and here&quot;;
@@ -371,12 +371,12 @@ my $motto = &#8221;  &#8220;;<br />
  brûlée |
 </code></pre>
 <h3>℞ 35: Unicode collation</h3>
-<p> Text sorted by numeric codepoint follows no reasonable alphabetic order; use the <font SIZE="-1">UCA</font> for sorting text. </p>
+<p> Text sorted by numeric codepoint follows no reasonable alphabetic order; use the UCA for sorting text. </p>
 <pre><code> use Unicode::Collate;
  my $col = Unicode::Collate-&gt;new();
  my @list = $col-&gt;sort(@old_list);
 </code></pre>
-<p> See the <i>ucsort</i> program from the Unicode::Tussle <font SIZE="-1">CPAN</font> module for a convenient command-line interface to this module.  </p>
+<p> See the <i>ucsort</i> program from the Unicode::Tussle CPAN module for a convenient command-line interface to this module.  </p>
 <i></i><h3>℞ 36: Case- and accent-insensitive Unicode sort</h3>
 <p> Specify a collation strength of level 1 to ignore case and diacritics, only looking at the basic character. </p>
 <pre><code> use Unicode::Collate;
@@ -438,8 +438,8 @@ my $motto = &#8221;  &#8220;;<br />
  my $fmt = Unicode::LineBreak-&gt;new;
  print $fmt-&gt;break($para), &quot;\n&quot;;
 </code></pre>
-<font SIZE="-1"></font><h3>℞ 42: Unicode text in DBM hashes, the tedious way</h3>
-<p> Using a regular Perl string as a key or value for a <font SIZE="-1">DBM</font> hash will trigger a wide character exception if any codepoints won’t fit into a byte. Here’s how to manually manage the translation: </p>
+<h3>℞ 42: Unicode text in DBM hashes, the tedious way</h3>
+<p> Using a regular Perl string as a key or value for a DBM hash will trigger a wide character exception if any codepoints won’t fit into a byte. Here’s how to manually manage the translation: </p>
 <pre><code>    use DB_File;
     use Encode qw(encode decode);
     tie %dbhash, &quot;DB_File&quot;, &quot;pathname&quot;;
@@ -454,7 +454,7 @@ my $motto = &#8221;  &#8220;;<br />
     my $enc_value = $dbhash{$enc_key};
     my $uni_value = decode(&quot;UTF-8&quot;, $enc_value, 1);
 </code></pre>
-<font SIZE="-1"></font><h3>℞ 43: Unicode text in DBM hashes, the easy way</h3>
+<h3>℞ 43: Unicode text in DBM hashes, the easy way</h3>
 <p> Here’s how to implicitly manage the translation; all encoding and decoding is done automatically, just as with streams that have a particular encoding attached to them: </p>
 <pre><code>    use DB_File;
     use DBM_Filter;
@@ -467,7 +467,7 @@ my $motto = &#8221;  &#8220;;<br />
     # $uni_key holds a normal Perl string (abstract Unicode)
     my $uni_value = $dbhash{$uni_key};
 </code></pre>
-<font SIZE="-1"></font><h3>℞ 44: PROGRAM: Demo of Unicode collation and printing</h3>
+<h3>℞ 44: PROGRAM: Demo of Unicode collation and printing</h3>
 <p> Here’s a full program showing how to make use of locale-sensitive sorting, Unicode casing, and managing print widths when some of the characters take up zero or two columns, not just one column each time. When run, the following program produces this nicely aligned output: </p>
 <pre><code>    Crème Brûlée....... €2.00
     Éclair............. €1.60
@@ -559,25 +559,25 @@ my $motto = &#8221;  &#8220;;<br />
  }
 </code></pre>
 <h2>SEE ALSO</h2>
-<p> See these manpages, some of which are <font SIZE="-1">CPAN</font> modules: perlunicode, perluniprops, perlre, perlrecharclass, perluniintro, perlunitut, perlunifaq, PerlIO, DB_File, DBM_Filter, DBM_Filter::utf8, Encode, Encode::Locale, Unicode::UCD, Unicode::Normalize, Unicode::GCString, Unicode::LineBreak, Unicode::Collate, Unicode::Collate::Locale, Unicode::Unihan, Unicode::CaseFold, Unicode::Tussle, Lingua::JA::Romanize::Japanese, Lingua::ZH::Romanize::Pinyin, Lingua::KO::Romanize::Hangul. </p>
-<p> The Unicode::Tussle <font SIZE="-1">CPAN</font> module includes many programs to help with working with Unicode, including these programs to fully or partly replace standard utilities: <i>tcgrep</i> instead of <i>egrep</i>, <i>uniquote</i> instead of <i>cat -v</i> or <i>hexdump</i>, <i>uniwc</i> instead of <i>wc</i>, <i>unilook</i> instead of <i>look</i>, <i>unifmt</i> instead of <i>fmt</i>, and <i>ucsort</i> instead of <i>sort</i>. For exploring Unicode character names and character properties, see its <i>uniprops</i>, <i>unichars</i>, and <i>uninames</i> programs. It also supplies these programs, all of which are general filters that do Unicode-y things: <i>unititle</i> and <i>unicaps</i>; <i>uniwide</i> and <i>uninarrow</i>; <i>unisupers</i> and <i>unisubs</i>; <i>nfd</i>, <i>nfc</i>, <i>nfkd</i>, and <i>nfkc</i>; and <i>uc</i>, <i>lc</i>, and <i>tc</i>. </p>
+<p> See these manpages, some of which are CPAN modules: perlunicode, perluniprops, perlre, perlrecharclass, perluniintro, perlunitut, perlunifaq, PerlIO, DB_File, DBM_Filter, DBM_Filter::utf8, Encode, Encode::Locale, Unicode::UCD, Unicode::Normalize, Unicode::GCString, Unicode::LineBreak, Unicode::Collate, Unicode::Collate::Locale, Unicode::Unihan, Unicode::CaseFold, Unicode::Tussle, Lingua::JA::Romanize::Japanese, Lingua::ZH::Romanize::Pinyin, Lingua::KO::Romanize::Hangul. </p>
+<p> The Unicode::Tussle CPAN module includes many programs to help with working with Unicode, including these programs to fully or partly replace standard utilities: <i>tcgrep</i> instead of <i>egrep</i>, <i>uniquote</i> instead of <i>cat -v</i> or <i>hexdump</i>, <i>uniwc</i> instead of <i>wc</i>, <i>unilook</i> instead of <i>look</i>, <i>unifmt</i> instead of <i>fmt</i>, and <i>ucsort</i> instead of <i>sort</i>. For exploring Unicode character names and character properties, see its <i>uniprops</i>, <i>unichars</i>, and <i>uninames</i> programs. It also supplies these programs, all of which are general filters that do Unicode-y things: <i>unititle</i> and <i>unicaps</i>; <i>uniwide</i> and <i>uninarrow</i>; <i>unisupers</i> and <i>unisubs</i>; <i>nfd</i>, <i>nfc</i>, <i>nfkd</i>, and <i>nfkc</i>; and <i>uc</i>, <i>lc</i>, and <i>tc</i>. </p>
 <p> Finally, see the published Unicode Standard (page numbers are from version 6.0.0), including these specific annexes and technical reports: </p>
 <dl>
 <dt>§3.13 Default Case Algorithms, page 113; §4.2 Case, pages 120–122; Case Mappings, page 166–172, especially Caseless Matching starting on page 170.</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">UAX</font> #44: Unicode Character Database</dt>
+<dt>UAX #44: Unicode Character Database</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">UTS</font> #18: Unicode Regular Expressions</dt>
+<dt>UTS #18: Unicode Regular Expressions</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">UAX</font> #15: Unicode Normalization Forms</dt>
+<dt>UAX #15: Unicode Normalization Forms</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">UTS</font> #10: Unicode Collation Algorithm</dt>
+<dt>UTS #10: Unicode Collation Algorithm</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">UAX</font> #29: Unicode Text Segmentation</dt>
+<dt>UAX #29: Unicode Text Segmentation</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">UAX</font> #14: Unicode Line Breaking Algorithm</dt>
+<dt>UAX #14: Unicode Line Breaking Algorithm</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">UAX</font> #11: East Asian Width</dt>
+<dt>UAX #11: East Asian Width</dt>
 <dd>  </dd></dl>
 <h2>AUTHOR</h2>
 <p> Tom Christiansen &lt;tchrist [at] perl.com&gt; wrote this, with occasional kibbitzing from Larry Wall and Jeffrey Friedl in the background.  </p>

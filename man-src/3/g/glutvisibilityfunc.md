@@ -13,21 +13,21 @@ description: "glutVisibilityFunc – Sets the Visibility callback for the curren
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutVisibilityFunc void( *callback )( int status )</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>callback Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>callback Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Client hook for visibility changes.</p>
 <h2>Description</h2>
-<p>OpenGLUT may call this function when your window&#8217;s visbility status has changed. Bf Sy<br />
-&nbsp;<wbr>status Ef<br />
-&nbsp;<wbr>can take on two values: Bf Sy<br />
-&nbsp;<wbr>GLUT_NOT_VISIBLE Ef<br />
-&nbsp;<wbr>or&nbsp;<wbr> Bf Sy<br />
-&nbsp;<wbr>GLUT_VISIBLE Ef<br />
-&nbsp;<wbr>. If any pixel of your window (including descendants) is visible, your window is Bf Sy<br />
-&nbsp;<wbr>GLUT_VISIBLE Ef<br />
+<p>OpenGLUT may call this function when your window&#8217;s visbility status has changed. Bf Sy<br/>
+&nbsp;<wbr>status Ef<br/>
+&nbsp;<wbr>can take on two values: Bf Sy<br/>
+&nbsp;<wbr>GLUT_NOT_VISIBLE Ef<br/>
+&nbsp;<wbr>or&nbsp;<wbr> Bf Sy<br/>
+&nbsp;<wbr>GLUT_VISIBLE Ef<br/>
+&nbsp;<wbr>. If any pixel of your window (including descendants) is visible, your window is Bf Sy<br/>
+&nbsp;<wbr>GLUT_VISIBLE Ef<br/>
 &nbsp;<wbr>. </p>
-<p> The callback is bound to the Bf Li<br />
-&nbsp;<wbr>current window Ef<br />
+<p> The callback is bound to the Bf Li<br/>
+&nbsp;<wbr>current window Ef<br/>
 &nbsp;<wbr>. </p>
 <h2>Caveats</h2>
 <p>This is not a polling mechanism. You are only informed of transitions that OpenGLUT observes while your callback is in place. </p>

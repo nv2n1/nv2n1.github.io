@@ -16,8 +16,8 @@ description: "podofoimg2pdf – Convert images to PDF files"
 <p> Supported image formats:</p>
 <dl>
 <dt>
-</dt><dd> JPEG<br />
- PNG<br />
+</dt><dd> JPEG<br/>
+ PNG<br/>
  TIFF</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-useimgsize</code></p>

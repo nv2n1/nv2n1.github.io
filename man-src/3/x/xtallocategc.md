@@ -31,6 +31,6 @@ description: "XtAllocateGC – obtain a sharable GC with modifiable fields"
 <p> The <i>value_mask</i> argument specifies the fields of the GC that will be initialized with the respective members of the <i>values</i> structure. The <i>dynamic_mask</i> argument specifies fields that the caller intends to modify during program execution. The caller must ensure that the corresponding GC field is set prior to each use of the GC. The <i>unused_mask</i> argument specifies fields of the GC that are of no interest to the caller. The caller may make no assumptions about the contents of any fields specified in <i>unused_mask</i>. The caller may assume that at all times all fields not specified in either <i>dynamic_mask</i> or <i>unused_mask</i> have their default value if not specified in <i>value_mask</i> or the value specified by <i>values</i>. If a field is specified in both <i>value_mask</i> and dynamic_mask, the effect is as if it were specified only in <i>dynamic_mask</i> and then immediately set to the value in <i>values</i>. If a field is set in <i>unused_mask</i> and also in either <i>value_mask</i> or <i>dynamic_mask</i>, the specification in <i>unused_mask</i> is ignored. </p>
 <p> <code>XtAllocateGC</code> tries to minimize the number of unique GCs created by comparing the arguments with those of previous calls and returning an existing GC when there are no conflicts. <code>XtAllocateGC</code> may modify and return an existing GC if it was allocated with a nonzero <i>unused_mask</i>.</p>
 <h2>See Also</h2>
-<p><code>XtGetGC</code><br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><code>XtGetGC</code><br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

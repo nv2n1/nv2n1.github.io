@@ -9,7 +9,7 @@ description: "globus_xio_gsi.h – XIO GSI Driver."
 
 <p>globus_xio_gsi.h &#8211; XIO GSI Driver.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;gssapi.h&#8217;<br />
+<p>#include &#8216;gssapi.h&#8217;<br/>
  #include &#8216;globus_common.h&#8217; </p>
 <h3>Macros</h3>
 <p>#define <code>globus_xio_gsi_attr_cntl</code> globus_xio_attr_cntl </p>

@@ -10,7 +10,7 @@ description: "ssdeep – Computes context triggered piecewise hashes (fuzzy hash
 
 <p> ssdeep &#8211; Computes context triggered piecewise hashes (fuzzy hashes)</p>
 <h2>SYNOPSIS</h2>
-<p> <code>ssdeep [-m &lt;file&gt;] [-k &lt;file&gt;] [-vdprgsblcxa] [-t val] [FILES]</code><br />
+<p> <code>ssdeep [-m &lt;file&gt;] [-k &lt;file&gt;] [-vdprgsblcxa] [-t val] [FILES]</code><br/>
  <code>ssdeep [-V|h]</code> </p>
 <h2>DESCRIPTION</h2>
 <p> Computes a signature based on context triggered piecewise hashes for each input file, also called a fuzzy hash. If requested, the program matches those signatures against a file of known signatures and reports any possible matches. It can also examine one or more files of signatures and find any matches in those files. Output is written to standard out and errors to standard error. </p>
@@ -51,10 +51,10 @@ description: "ssdeep – Computes context triggered piecewise hashes (fuzzy hash
 <h2>RETURN VALUE</h2>
 <p> Returns 0 on success, 1 if there is a problem. Read errors, permission denied, and encountering directories while not in recursive mode are still considered successes. Problems are things like being unable to load the matching file, specifying both bare and relative paths, etc. </p>
 <h2>AUTHOR</h2>
-<p> ssdeep was written by Jesse Kornblum of Facebook,<br />
+<p> ssdeep was written by Jesse Kornblum of Facebook,<br/>
  research [at] jessekornblum.com </p>
 <h2>COPYRIGHT</h2>
 <p> This program is Copyright (C) 2014 Facebook and is licensed under the terms of the General Public License. See the file COPYING for details. </p>
 <h2>SEE ALSO</h2>
-<p> This program is based on SpamSum by Dr. Andrews Tridgell.<br />
+<p> This program is based on SpamSum by Dr. Andrews Tridgell.<br/>
  <a rel="nofollow" href="http://www.samba.org/ftp/unpacked/junkcode/spamsum/">http://www.samba.org/ftp/unpacked/junkcode/spamsum/</a> </p>

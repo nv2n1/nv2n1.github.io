@@ -9,9 +9,9 @@ description: "rarp – manipulate the system RARP table"
 
 <p>rarp &#8211; manipulate the system RARP table</p>
 <h2>Synopsis</h2>
-<p><code>rarp [-V] [&#8211;version] [-h] [&#8211;help]</code><br />
- <code>rarp -a</code><br />
- <code>rarp [-v] -d hostname &#8230;</code><br />
+<p><code>rarp [-V] [&#8211;version] [-h] [&#8211;help]</code><br/>
+ <code>rarp -a</code><br/>
+ <code>rarp [-v] -d hostname &#8230;</code><br/>
  <code>rarp [-v] [-t type] -s hostname hw_addr</code></p>
 <h2>Note</h2>
 <p>This program is obsolete. From version 2.3, the Linux kernel no longer contains RARP support. For a replacement RARP daemon, see <i><a href="ftp://ftp.dementia.org/pub/net-tools">ftp://ftp.dementia.org/pub/net-tools</a></i></p>
@@ -44,6 +44,6 @@ description: "rarp – manipulate the system RARP table"
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-arp/">arp</a>(8), <a href="/docs/linux/man/8-route/">route</a>(8), <a href="/docs/linux/man/8-ifconfig/">ifconfig</a>(8), <a href="/docs/linux/man/8-netstat/">netstat</a>(8)</p>
 <h2>Authors</h2>
-<p>Ross D. Martin, &lt;martin [at] trcsun3.eas.asu.edu&gt;<br />
- Fred N. van Kempen, &lt;waltje [at] uwalt.nl.mugnet.org&gt;<br />
+<p>Ross D. Martin, &lt;martin [at] trcsun3.eas.asu.edu&gt;<br/>
+ Fred N. van Kempen, &lt;waltje [at] uwalt.nl.mugnet.org&gt;<br/>
  Phil Blundell, &lt;Philip.Blundell [at] pobox.com&gt;</p>

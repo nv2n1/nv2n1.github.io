@@ -36,53 +36,53 @@ struct ck_elide_config {
 <h2>EXAMPLES</h2>
 <p> This example utilizes built-in lock elision facilities in ck_rwlock and ck_spinlock. </p>
 <blockquote><p>
-#include &lt;ck_rwlock.h&gt;<br />
-#include &lt;ck_spinlock.h&gt;<br />
-static ck_rwlock_t rw = CK_RWLOCK_INITIALIZER;<br />
-static struct ck_elide_config rw_config =<br />
-    CK_ELIDE_CONFIG_DEFAULT_INITIALIZER;<br />
-static __thread ck_elide_stat_t rw_stat =<br />
-    CK_ELIDE_STAT_INITIALIZER;<br />
-static ck_spinlock_t spinlock = CK_SPINLOCK_INITIALIZER;<br />
-static struct ck_elide_config spinlock_config =<br />
-    CK_ELIDE_CONFIG_DEFAULT_INITIALIZER;<br />
-static __thread ck_elide_stat_t spinlock_stat =<br />
-    CK_ELIDE_STAT_INITIALIZER;<br />
-void function(void)<br />
-{<br />
-    /* Lock-unlock write-side lock in weak best-effort manner. */<br />
-    CK_ELIDE_LOCK(ck_rwlock_write, &amp;rw);<br />
-    CK_ELIDE_UNLOCK(ck_rwlock_write, &amp;rw);<br />
-    /* Attempt to acquire the write-side lock. */<br />
-    if (CK_ELIDE_TRYLOCK(ck_rwlock_write, &amp;rw) == true)<br />
-        CK_ELIDE_UNLOCK(ck_rwlock_write, &amp;rw);<br />
-    /* Lock-unlock read-side lock in weak best-effort manner. */<br />
-    CK_ELIDE_LOCK(ck_rwlock_read, &amp;rw);<br />
-    CK_ELIDE_UNLOCK(ck_rwlock_read, &amp;rw);<br />
-    /* Attempt to acquire the read-side lock. */<br />
-    if (CK_ELIDE_TRYLOCK(ck_rwlock_read, &amp;rw) == true)<br />
-        CK_ELIDE_UNLOCK(ck_rwlock_read, &amp;rw);<br />
-    /* Lock-unlock write-side lock in an adaptive manner. */<br />
-    CK_ELIDE_LOCK_ADAPTIVE(ck_rwlock_write, &amp;rw_stat,<br />
-                           &amp;rw_config, &amp;rw);<br />
-    CK_ELIDE_UNLOCK_ADAPTIVE(ck_rwlock_write, &amp;rw_stat,<br />
-                             &amp;rw_config, &amp;rw);<br />
-    /* Lock-unlock read-side lock in an adaptive manner. */<br />
-    CK_ELIDE_LOCK_ADAPTIVE(ck_rwlock_read, &amp;rw_stat,<br />
-                           &amp;rw_config, &amp;rw);<br />
-    CK_ELIDE_UNLOCK_ADAPTIVE(ck_rwlock_read, &amp;rw_stat,<br />
-                             &amp;rw_config, &amp;rw);<br />
-    /* Lock-unlock spinlock in weak best-effort manner. */<br />
-    CK_ELIDE_LOCK(ck_spinlock, &amp;spinlock);<br />
-    CK_ELIDE_UNLOCK(ck_spinlock, &amp;spinlock);<br />
-    /* Attempt to acquire the lock. */<br />
-    if (CK_ELIDE_TRYLOCK(ck_spinlock, &amp;lock) == true)<br />
-        CK_ELIDE_UNLOCK(ck_spinlock, &amp;spinlock);<br />
-    /* Lock-unlock spinlock in an adaptive manner. */<br />
-    CK_ELIDE_LOCK_ADAPTIVE(ck_spinlock, &amp;spinlock_stat,<br />
-                           &amp;spinlock_config, &amp;spinlock);<br />
-    CK_ELIDE_UNLOCK_ADAPTIVE(ck_spinlock, &amp;spinlock_stat,<br />
-                             &amp;spinlock_config, &amp;spinlock);<br />
+#include &lt;ck_rwlock.h&gt;<br/>
+#include &lt;ck_spinlock.h&gt;<br/>
+static ck_rwlock_t rw = CK_RWLOCK_INITIALIZER;<br/>
+static struct ck_elide_config rw_config =<br/>
+    CK_ELIDE_CONFIG_DEFAULT_INITIALIZER;<br/>
+static __thread ck_elide_stat_t rw_stat =<br/>
+    CK_ELIDE_STAT_INITIALIZER;<br/>
+static ck_spinlock_t spinlock = CK_SPINLOCK_INITIALIZER;<br/>
+static struct ck_elide_config spinlock_config =<br/>
+    CK_ELIDE_CONFIG_DEFAULT_INITIALIZER;<br/>
+static __thread ck_elide_stat_t spinlock_stat =<br/>
+    CK_ELIDE_STAT_INITIALIZER;<br/>
+void function(void)<br/>
+{<br/>
+    /* Lock-unlock write-side lock in weak best-effort manner. */<br/>
+    CK_ELIDE_LOCK(ck_rwlock_write, &amp;rw);<br/>
+    CK_ELIDE_UNLOCK(ck_rwlock_write, &amp;rw);<br/>
+    /* Attempt to acquire the write-side lock. */<br/>
+    if (CK_ELIDE_TRYLOCK(ck_rwlock_write, &amp;rw) == true)<br/>
+        CK_ELIDE_UNLOCK(ck_rwlock_write, &amp;rw);<br/>
+    /* Lock-unlock read-side lock in weak best-effort manner. */<br/>
+    CK_ELIDE_LOCK(ck_rwlock_read, &amp;rw);<br/>
+    CK_ELIDE_UNLOCK(ck_rwlock_read, &amp;rw);<br/>
+    /* Attempt to acquire the read-side lock. */<br/>
+    if (CK_ELIDE_TRYLOCK(ck_rwlock_read, &amp;rw) == true)<br/>
+        CK_ELIDE_UNLOCK(ck_rwlock_read, &amp;rw);<br/>
+    /* Lock-unlock write-side lock in an adaptive manner. */<br/>
+    CK_ELIDE_LOCK_ADAPTIVE(ck_rwlock_write, &amp;rw_stat,<br/>
+                           &amp;rw_config, &amp;rw);<br/>
+    CK_ELIDE_UNLOCK_ADAPTIVE(ck_rwlock_write, &amp;rw_stat,<br/>
+                             &amp;rw_config, &amp;rw);<br/>
+    /* Lock-unlock read-side lock in an adaptive manner. */<br/>
+    CK_ELIDE_LOCK_ADAPTIVE(ck_rwlock_read, &amp;rw_stat,<br/>
+                           &amp;rw_config, &amp;rw);<br/>
+    CK_ELIDE_UNLOCK_ADAPTIVE(ck_rwlock_read, &amp;rw_stat,<br/>
+                             &amp;rw_config, &amp;rw);<br/>
+    /* Lock-unlock spinlock in weak best-effort manner. */<br/>
+    CK_ELIDE_LOCK(ck_spinlock, &amp;spinlock);<br/>
+    CK_ELIDE_UNLOCK(ck_spinlock, &amp;spinlock);<br/>
+    /* Attempt to acquire the lock. */<br/>
+    if (CK_ELIDE_TRYLOCK(ck_spinlock, &amp;lock) == true)<br/>
+        CK_ELIDE_UNLOCK(ck_spinlock, &amp;spinlock);<br/>
+    /* Lock-unlock spinlock in an adaptive manner. */<br/>
+    CK_ELIDE_LOCK_ADAPTIVE(ck_spinlock, &amp;spinlock_stat,<br/>
+                           &amp;spinlock_config, &amp;spinlock);<br/>
+    CK_ELIDE_UNLOCK_ADAPTIVE(ck_spinlock, &amp;spinlock_stat,<br/>
+                             &amp;spinlock_config, &amp;spinlock);<br/>
 }
  </p></blockquote>
 <p> In this example, user-defined locking functions are provided an elision implementation. </p>

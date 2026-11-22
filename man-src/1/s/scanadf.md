@@ -27,11 +27,11 @@ description: "scanadf – acquire multiple images from a scanner equipped with a
 <p> The <code>-S</code> or <code>&#8211;scan-script</code> option specifies the name of script to run after each scanned image is acquired. The script receives the name of the image output file as its first and only command line argument. Additionally the scan script can reference the following environment variables to get information about the parameters of the image. </p>
 <dl>
 <dt>
-</dt><dd> <code>SCAN_RES</code> &#8211; the image resolution (in DPI)<br />
- <code>SCAN_WIDTH</code> &#8211; the image width (in pixels)<br />
- <code>SCAN_HEIGHT</code> &#8211; the image height (in pixels)<br />
- <code>SCAN_DEPTH</code> &#8211; the image bit-depth (in bits)<br />
- <code>SCAN_FORMAT</code> &#8211; a string representing the image format (e.g. gray, g42d, text, etc)<br />
+</dt><dd> <code>SCAN_RES</code> &#8211; the image resolution (in DPI)<br/>
+ <code>SCAN_WIDTH</code> &#8211; the image width (in pixels)<br/>
+ <code>SCAN_HEIGHT</code> &#8211; the image height (in pixels)<br/>
+ <code>SCAN_DEPTH</code> &#8211; the image bit-depth (in bits)<br/>
+ <code>SCAN_FORMAT</code> &#8211; a string representing the image format (e.g. gray, g42d, text, etc)<br/>
  <code>SCAN_FORMAT_ID</code> &#8211; the numeric image format identifier
 </dd></dl>
 <p> If the <code>&#8211;scipt-wait</code> option is given, scanadf will wait until all scan-scripts have been finished before exiting. That will be useful if scanadf is used in conjunction with tools to modify the scanned images. </p>
@@ -58,7 +58,7 @@ description: "scanadf – acquire multiple images from a scanner equipped with a
 <dl>
 <dt>
 </dt><dd>
- <code>sane-bh</code> &#8211; Bell+Howell Copiscan II series scanners.<br />
- <code>sane-hp</code> &#8211; Hewlett Packard scanners. A patch to the sane-hp backend is necessary. The &#8211;scantype=ADF option must be specified (earlier versions of the backend used the &#8211;scan-from-adf option, instead).<br />
+ <code>sane-bh</code> &#8211; Bell+Howell Copiscan II series scanners.<br/>
+ <code>sane-hp</code> &#8211; Hewlett Packard scanners. A patch to the sane-hp backend is necessary. The &#8211;scantype=ADF option must be specified (earlier versions of the backend used the &#8211;scan-from-adf option, instead).<br/>
  <code>sane-umax</code> &#8211; UMAX scanners. Support exists in build 12 and later. The &#8211;source=&quot;Automatic Document Feeder&quot; option must be specified.
 </dd></dl>

@@ -10,16 +10,16 @@ description: "nfstest.test_util – Test utilities module"
 <p>nfstest.test_util &#8211; Test utilities module</p>
 <h2>Description</h2>
 <p>Provides a set of tools for testing either the NFS client or the NFS server, most of the functionality is focused mainly on testing the client. These tools include the following: </p>
-<p>&nbsp;<wbr>&#8211; Process command line arguments<br />
-&nbsp;<wbr>&#8211; Provide functionality for PASS/FAIL<br />
-&nbsp;<wbr>&#8211; Provide test grouping functionality<br />
-&nbsp;<wbr>&#8211; Provide multiple client support<br />
-&nbsp;<wbr>&#8211; Logging mechanism<br />
-&nbsp;<wbr>&#8211; Debug info control<br />
-&nbsp;<wbr>&#8211; Mount/Unmount control<br />
-&nbsp;<wbr>&#8211; Create files/directories<br />
-&nbsp;<wbr>&#8211; Provide mechanism to start a packet trace<br />
-&nbsp;<wbr>&#8211; Provide mechanism to simulate a network partition<br />
+<p>&nbsp;<wbr>&#8211; Process command line arguments<br/>
+&nbsp;<wbr>&#8211; Provide functionality for PASS/FAIL<br/>
+&nbsp;<wbr>&#8211; Provide test grouping functionality<br/>
+&nbsp;<wbr>&#8211; Provide multiple client support<br/>
+&nbsp;<wbr>&#8211; Logging mechanism<br/>
+&nbsp;<wbr>&#8211; Debug info control<br/>
+&nbsp;<wbr>&#8211; Mount/Unmount control<br/>
+&nbsp;<wbr>&#8211; Create files/directories<br/>
+&nbsp;<wbr>&#8211; Provide mechanism to start a packet trace<br/>
+&nbsp;<wbr>&#8211; Provide mechanism to simulate a network partition<br/>
 &nbsp;<wbr>&#8211; Support for pNFS testing </p>
 <p> In order to use some of the functionality available, the user id in all the client hosts must have access to run commands as root using the &#8216;sudo&#8217; command without the need for a password, this includes the host where the test is being executed. This is used to run commands like &#8216;mount&#8217; and &#8216;umount&#8217;. Furthermore, the user id must be able to ssh to remote hosts without the need for a password if test requires the use of multiple clients. </p>
 <p> Network partition is simulated by the use of &#8216;iptables&#8217;, please be advised that after every test run the iptables is flushed and reset so any rules previously setup will be lost. Currently, there is no mechanism to restore the iptables rules to their original state.</p>

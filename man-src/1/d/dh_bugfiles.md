@@ -24,7 +24,7 @@ description: "dh_bugfiles – install bug reporting customization files into pac
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-A</code>, <code>&#8211;all</code></dt>
-<dd> Install <i>debian/bug-*</i> files to <font SIZE="-1">ALL</font> packages acted on when respective <i>debian/package.bug-*</i> files do not exist. Normally, <i>debian/bug-*</i> will be installed to the first package only.</dd></dl>
+<dd> Install <i>debian/bug-*</i> files to ALL packages acted on when respective <i>debian/package.bug-*</i> files do not exist. Normally, <i>debian/bug-*</i> will be installed to the first package only.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>/usr/share/doc/reportbug/README.developers.gz</i> </p>
 <p> <i>debhelper</i>(1) </p>

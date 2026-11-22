@@ -10,16 +10,16 @@ description: "ibdmsh IB DATA MODEL – Extentended TCL shell"
 
 <p> <code>ibdmsh</code> IB DATA MODEL &#8211; Extentended TCL shell</p>
 <h2>DESCRIPTION</h2>
-<p> <code>ibdmsh</code> is a <font SIZE="-1">TCL</font> shell extended with interface for the <font SIZE="-1">IB</font> data model. To use this shell you will write <font SIZE="-1">TCL</font> code that directly access the <font SIZE="-1">IB</font> data model objects and functions. </p>
-<p> The following sub sections provide detailed definition for those objects and <font SIZE="-1">API</font>.</p>
+<p> <code>ibdmsh</code> is a TCL shell extended with interface for the IB data model. To use this shell you will write TCL code that directly access the IB data model objects and functions. </p>
+<p> The following sub sections provide detailed definition for those objects and API.</p>
 <h2>IBDM Constants</h2>
 <p> <code>Node Types</code> </p>
 <p> The following constants are used by the node object type field </p>
 <dl>
 <dt>
-</dt><dd> [ Constant : int ] <tt>$IB_UNKNOWN_NODE_TYPE</tt> = <font SIZE="-1">IB_UNKNOWN_NODE_TYPE</font> </dd>
-<p> [ Constant : int ] <tt>$IB_SW_NODE</tt> = <font SIZE="-1">IB_SW_NODE</font> </p>
-<p> [ Constant : int ] <tt>$IB_CA_NODE</tt> = <font SIZE="-1">IB_CA_NODE</font></dl>
+</dt><dd> [ Constant : int ] <tt>$IB_UNKNOWN_NODE_TYPE</tt> = IB_UNKNOWN_NODE_TYPE </dd>
+<p> [ Constant : int ] <tt>$IB_SW_NODE</tt> = IB_SW_NODE </p>
+<p> [ Constant : int ] <tt>$IB_CA_NODE</tt> = IB_CA_NODE</dl>
 <p> <code>Log Verbosity Flags</code> </p>
 <p> The following constants are used as argument bits for the global variable <tt>$FabricUtilsVerboseLevel</tt> </p>
 <dl>
@@ -34,24 +34,24 @@ description: "ibdmsh IB DATA MODEL – Extentended TCL shell"
 <dt>
 </dt><dd> [ Global : int ] <tt>$FabricUtilsVerboseLevel</tt></dd></dl>
 <h2>IBDM Objects</h2>
-<p> This section decribes the various object types exposed by <font SIZE="-1">IBDM</font>. </p>
-<p> <font SIZE="-1">IBDM</font> exposes some of its internal objects. The objects identifiers returned by the various function calls are formatted according to the following rules: </p>
+<p> This section decribes the various object types exposed by IBDM. </p>
+<p> IBDM exposes some of its internal objects. The objects identifiers returned by the various function calls are formatted according to the following rules: </p>
 <p> Fabric: fabric:&lt;idx&gt; </p>
 <p> System: system:&lt;fab idx&gt;:&lt;sys name&gt; </p>
 <p> SysPort: sysport:&lt;fab idx&gt;:&lt;sys name&gt;:&lt;port name&gt; </p>
 <p> Node: node:&lt;fab idx&gt;:&lt;node name&gt; </p>
 <p> Port: port:&lt;fab idx&gt;:&lt;node name&gt;/&lt;port num&gt; </p>
-<p> <font SIZE="-1">IBDM</font> Objects are standard Swig-Tcl objects. As such they have two flavors for their usage: Variables, Objects. </p>
-<p> <code>Variables/Pointers:</code><br />
-For each object attribute a&nbsp;<wbr>&#8220;get&#8221;&nbsp;<wbr>and&nbsp;<wbr>&#8220;set&#8221;&nbsp;<wbr>methods are provided.<br />
-The format of the methods is:&nbsp;<wbr>&lt;class&gt;_&lt;attribute&gt;_&lt;get|set&gt;.<br />
+<p> IBDM Objects are standard Swig-Tcl objects. As such they have two flavors for their usage: Variables, Objects. </p>
+<p> <code>Variables/Pointers:</code><br/>
+For each object attribute a&nbsp;<wbr>&#8220;get&#8221;&nbsp;<wbr>and&nbsp;<wbr>&#8220;set&#8221;&nbsp;<wbr>methods are provided.<br/>
+The format of the methods is:&nbsp;<wbr>&lt;class&gt;_&lt;attribute&gt;_&lt;get|set&gt;.<br/>
 The&nbsp;<wbr>&#8220;set&#8221;&nbsp;<wbr>method is only available for read/write attributes. </p>
 <pre><code>
 Example : set nodes[ibdm_get_nodes] set node[lindex $nodes 0] IBNode_numPorts_get $node
 </code></pre>
-<p> <code>Objects:</code><br />
-Given an object pointer one can convert it to a Tcl&nbsp;<wbr>&#8220;Object&#8221;<br />
-using the following command:<br />
+<p> <code>Objects:</code><br/>
+Given an object pointer one can convert it to a Tcl&nbsp;<wbr>&#8220;Object&#8221;<br/>
+using the following command:<br/>
 &lt;class&gt;&nbsp;<wbr>&lt;obj_name&gt;&nbsp;<wbr>-this&nbsp;<wbr>&lt;obj pointer&gt; </p>
 <pre>
    Once declared the &lt;obj-name&gt; can be used in conjunction to
@@ -70,7 +70,7 @@ using the following command:<br />
    rename VaTech &quot;&quot;
 </pre>
 <p> <code>class IBPort</code> </p>
-<p> The following are the different fields and methods of the <font SIZE="-1">IB</font> Port class which describes an <font SIZE="-1">IB</font> device (chip) physical port.</p>
+<p> The following are the different fields and methods of the IB Port class which describes an IB device (chip) physical port.</p>
 <dl>
 <dt>[ Member data: returns IBPort * ] -p_remotePort</dt>
 <dd> Port connected on the other side of link</dd>
@@ -102,18 +102,18 @@ using the following command:<br />
 <dd> Disconnect the port. Return 0 if successful
 </dd></dl>
 <p> <code>class IBNode</code> </p>
-<p> The <font SIZE="-1">IB</font> Node class represents a single <font SIZE="-1">IB</font> Device (chip)</p>
+<p> The IB Node class represents a single IB Device (chip)</p>
 <dl>
 <dt>[ Member data: returns string * ] -name</dt>
 <dd> Name of the node (instance name of the chip)</dd>
 <dt>[ Member data: returns IBNodeType ] -type</dt>
 <dd> Either a <tt>$IB_SW_NODE</tt> or <tt>$IB_CA_NODE</tt></dd>
 <dt>[ Member data: returns uint16_t * ] -devId</dt>
-<dd> The device <font SIZE="-1">ID</font> of the node</dd>
+<dd> The device ID of the node</dd>
 <dt>[ Member data: returns uint16_t * ] -revId</dt>
 <dd> The device revision Id.</dd>
 <dt>[ Member data: returns uint16_t * ] -vendId</dt>
-<dd> The device Vendor <font SIZE="-1">ID</font>.</dd>
+<dd> The device Vendor ID.</dd>
 <dt>[ Member data: returns string * ] -attributes</dt>
 <dd> Comma-sep string of arbitrary attributes k=v</dd>
 <dt>[ Member data: returns uint8_t ] -rank</dt>
@@ -127,13 +127,13 @@ using the following command:<br />
 <dt>[ Member data: returns vec_pport * ] -Ports</dt>
 <dd> Vector of all the ports</dd>
 <dt>[ Member data: returns vec_vec_byte * ] -MinHopsTable</dt>
-<dd> A table of the number of hops required to get from each port to each target <font SIZE="-1">LID</font></dd>
+<dd> A table of the number of hops required to get from each port to each target LID</dd>
 <dt>[ Member data: returns vec_byte * ] -LFT</dt>
-<dd> The <font SIZE="-1">LFT</font> of this node (for switches only) which is a long vector of target ports &#8211; index is the <font SIZE="-1">LID</font></dd>
+<dd> The LFT of this node (for switches only) which is a long vector of target ports &#8211; index is the LID</dd>
 <dt>[ Member : returns new_uint64_t ] guid_get</dt>
-<dd> Obtain the node <font SIZE="-1">GUID</font></dd>
+<dd> Obtain the node GUID</dd>
 <dt>[ Member : returns void ] guid_set guid</dt>
-<dd> Set the node <font SIZE="-1">GUID</font></dd>
+<dd> Set the node GUID</dd>
 <dt>[ Constructor: returns IBNode * ] IBNode name n p_fab p_sys t np</dt>
 <dd> Constractor</dd>
 <dt>[ Member : returns IBPort * ] makePort num</dt>
@@ -147,14 +147,14 @@ using the following command:<br />
 <dt>[ Member : returns IBPort * ] getFirstMinHopPort lid</dt>
 <dd> Scan the node ports and find the first port with min hop to the lid</dd>
 <dt>[ Member : returns void ] setLFTPortForLid lid portNum</dt>
-<dd> Set the Linear Forwarding Table for the given <font SIZE="-1">LID</font></dd>
+<dd> Set the Linear Forwarding Table for the given LID</dd>
 <dt>[ Member : returns int ] getLFTPortForLid lid</dt>
-<dd> Get the <font SIZE="-1">LFT</font> for a given <font SIZE="-1">LID</font></dd>
+<dd> Get the LFT for a given LID</dd>
 <dt>[ Member : returns void ] repHopTable</dt>
 <dd> Dump out the min hop table of the node
 </dd></dl>
 <p> <code>class IBSysPort</code> </p>
-<p> The IBSysPort class represents an <font SIZE="-1">IB</font> plug on the system front or back pannels</p>
+<p> The IBSysPort class represents an IB plug on the system front or back pannels</p>
 <dl>
 <dt>[ Member data: returns string * ] -name</dt>
 <dd> The front pannel name (silk) of the port</dd>
@@ -177,7 +177,7 @@ using the following command:<br />
 <dt>[ Member data: returns string * ] -name</dt>
 <dd> The &#8220;host&#8221; name of the system</dd>
 <dt>[ Member data: returns string * ] -type</dt>
-<dd> What is the type i.e. Cougar, Buffalo, <font SIZE="-1">MTS2400</font>, etc. A corresponding <font SIZE="-1">IBNL</font> file should exist &#8211; defining this system type</dd>
+<dd> What is the type i.e. Cougar, Buffalo, MTS2400, etc. A corresponding IBNL file should exist &#8211; defining this system type</dd>
 <dt>[ Member data: returns IBFabric * ] -p_fabric</dt>
 <dd> Fabric the system belongs to</dd>
 <dt>[ Member data: returns map_str_pnode * ] -NodeByName</dt>
@@ -187,9 +187,9 @@ using the following command:<br />
 <dt>[ Constructor: returns IBSystem * ] IBSystem name n p_fab t</dt>
 <dd> Constractor</dd>
 <dt>[ Member : returns new_uint64_t ] guid_get</dt>
-<dd> Obtain the system image <font SIZE="-1">GUID</font></dd>
+<dd> Obtain the system image GUID</dd>
 <dt>[ Member : returns void ] guid_set guid</dt>
-<dd> Set the system image <font SIZE="-1">GUID</font></dd>
+<dd> Set the system image GUID</dd>
 <dt>[ Member : returns IBSysPort * ] makeSysPort pName</dt>
 <dd> Make sure we got the port defined (so define it if not)</dd>
 <dt>[ Member : returns IBPort * ] getSysPortNodePortByName sysPortName</dt>
@@ -198,7 +198,7 @@ using the following command:<br />
 <dd> Get a Sys Port by name
 </dd></dl>
 <p> <code>class IBFabric</code> </p>
-<p> Represents an entire <font SIZE="-1">IB</font> subnet made of systems</p>
+<p> Represents an entire IB subnet made of systems</p>
 <dl>
 <dt>[ Member data: returns map_str_pnode * ] -NodeByName</dt>
 <dd> Provide a list of node name and pointer pairs</dd>
@@ -217,7 +217,7 @@ using the following command:<br />
 <dt>[ Member data: returns unsigned int ] -maxLid</dt>
 <dd> Track max lid used.</dd>
 <dt>[ Member data: returns unsigned int ] -lmc</dt>
-<dd> <font SIZE="-1">LMC</font> value used</dd>
+<dd> LMC value used</dd>
 <dt>[ Member : returns IBNode * ] makeNode n p_sys type numPorts</dt>
 <dd> Get the node by its name (create one of does not exist)</dd>
 <dt>[ Member : returns IBNode * ] getNode name</dt>
@@ -247,15 +247,15 @@ using the following command:<br />
 <dt>[ Member : returns int ] parseSubnetLinks fn</dt>
 <dd> Parse the OpenSM subnet.lst file and build the fabric from it.</dd>
 <dt>[ Member : returns int ] parseFdbFile fn</dt>
-<dd> Parse OpenSM <font SIZE="-1">FDB</font> dump file and fill in the switches <font SIZE="-1">LFT</font> tables</dd>
+<dd> Parse OpenSM FDB dump file and fill in the switches LFT tables</dd>
 <dt>[ Member : returns int ] parseMCFdbFile fn</dt>
-<dd> Parse an OpenSM MCFDBs file and set the <font SIZE="-1">MFT</font> table accordingly</dd>
+<dd> Parse an OpenSM MCFDBs file and set the MFT table accordingly</dd>
 <dt>[ Member : returns int ] parsePSLFile fn</dt>
-<dd> Parse Path to <font SIZE="-1">SL</font> mapping file. Each line with: src_node_guid <font SIZE="-1">DLID</font> <font SIZE="-1">SL</font></dd></dl>
+<dd> Parse Path to SL mapping file. Each line with: src_node_guid DLID SL</dd></dl>
 <p> Used by credit loop check</p>
 <dl>
 <dt>[ Member : returns int ] parseSLVLFile fn</dt>
-<dd> Parse <font SIZE="-1">SLVL</font> tables file. Each line holds: sw_node_guid in_port out_port 0x(sl0)(sl1) 0x(sl2)(sl3)&#8230;</dd>
+<dd> Parse SLVL tables file. Each line holds: sw_node_guid in_port out_port 0x(sl0)(sl1) 0x(sl2)(sl3)&#8230;</dd>
 <dt>[ Member : returns void ] setLidPort lid p_port</dt>
 <dd> Set a lid port</dd>
 <dt>[ Member : returns IBPort * ] getPortByLid lid</dt>
@@ -265,12 +265,12 @@ using the following command:<br />
 <dt>[ returns void ] delete_IBFabric p_fabric</dt>
 <dd> Destruct a fabric</dd></dl>
 <h2>IBDM Functions</h2>
-<p> This section provide the details about the functions <font SIZE="-1">IBDM</font> exposes. The order follows the expected order in a regular <font SIZE="-1">IBDM</font> flow. They all return 0 on succes. </p>
+<p> This section provide the details about the functions IBDM exposes. The order follows the expected order in a regular IBDM flow. They all return 0 on succes. </p>
 <p> <code>Subnet Utilities</code> </p>
 <p> The file holds a set of utilities to be run on the subnet to mimic OpenSM initialization and analyze the results:</p>
 <dl>
 <dt>[ returns int ] ibdmAssignLids p_smNodePort ?lmc?</dt>
-<dd> Assign LIDs with an optional <font SIZE="-1">LMC</font> (multiple <font SIZE="-1">LID</font> per port)</dd>
+<dd> Assign LIDs with an optional LMC (multiple LID per port)</dd>
 <dt>[ returns int ] ibdmCalcMinHopTables p_fabric</dt>
 <dd> Calculate and populate the MinHopTables required for running OpenSM style routing.</dd>
 <dt>[ returns int ] ibdmCalcUpDnMinHopTbls p_fabric rootNodesNameRex</dt>
@@ -278,15 +278,15 @@ using the following command:<br />
 <dt>[ returns int ] ibdmOsmRoute p_fabric</dt>
 <dd> Route the fabric with OpenSM style routing</dd>
 <dt>[ returns int ] ibdmEnhancedRoute p_fabric</dt>
-<dd> Route the fabric with OpenSM style routing enhanced with better support for <font SIZE="-1">LMC</font> &gt; 0</dd>
+<dd> Route the fabric with OpenSM style routing enhanced with better support for LMC &gt; 0</dd>
 <dt>[ returns int ] ibdmFatTreeRoute p_fabric rootNodes</dt>
 <dd> Route the fabric using algorithm that fits only full fat trees</dd>
 <dt>[ returns int ] ibdmFatTreeAnalysis p_fabric</dt>
 <dd> Analyze the fabric to see if it is a fat tree and route it if it is</dd>
 <dt>[ returns int ] ibdmVerifyCAtoCARoutes p_fabric</dt>
-<dd> Make sure all (H)CAs are connected to each other based on the <font SIZE="-1">LFT</font> settings</dd>
+<dd> Make sure all (H)CAs are connected to each other based on the LFT settings</dd>
 <dt>[ returns int ] ibdmVerifyAllPaths p_fabric</dt>
-<dd> Make sure all Switches and (H)CAs are connected to each other based on the <font SIZE="-1">LFT</font> settings</dd>
+<dd> Make sure all Switches and (H)CAs are connected to each other based on the LFT settings</dd>
 <dt>[ returns int ] ibdmAnalyzeLoops p_fabric</dt>
 <dd> A rigorous check for credit loops. This algorithm does a full and accurate check but its reporting of credit loop paths is hard to interpret. If you know the roots of the tree (or the tree is symmetrical) it is preferable to use the ibdmReportNonUpDownCa2CaPaths</dd>
 <dt>[ returns list_pnode ] ibdmFindSymmetricalTreeRoots p_fabric</dt>
@@ -312,7 +312,7 @@ using the following command:<br />
 <dt>[ returns int ] ibdmTraceRouteByMinHops p_fabric slid dlid</dt>
 <dd> Trace a path along the MinHop from the source to destination LIDs</dd>
 <dt>[ returns int ] ibdmTraceRouteByLFT p_fabric slid dlid hops p_nodesList</dt>
-<dd> Trace a path following the <font SIZE="-1">LFT</font> updating the hops and node list variables
+<dd> Trace a path following the LFT updating the hops and node list variables
 </dd></dl>
 <p> <code>Topology Matching Utilities</code> </p>
 <p> The following utilities matches two fabrics providing both missmatch messages and a unified fabric</p>
@@ -338,4 +338,4 @@ using the following command:<br />
 <dt>[ returns int ] ibdmCongDump p_fabric</dt>
 <dd> Dump all congestion tracking info</dd></dl>
 <h2>AUTHOR</h2>
-<p> Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il </p>
+<p> Eitan Zahavi, Mellanox Technologies LTD, eitan [at] mellanox.co.il </p>

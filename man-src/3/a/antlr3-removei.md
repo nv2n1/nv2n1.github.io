@@ -12,22 +12,22 @@ description: "ANTLR3_HASH_TABLE_struct –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p>int <code>allowDups</code><br />
- <i>Indicates whether the table allows duplicate keys. </i><br />
- <code>pANTLR3_HASH_BUCKET</code> <code>buckets</code><br />
- <i>Points to the memory where the array of buckets starts. </i><br />
- <code>ANTLR3_UINT32</code> <code>count</code><br />
- <i>How many elements currently exist in the table. </i><br />
+<p>int <code>allowDups</code><br/>
+ <i>Indicates whether the table allows duplicate keys. </i><br/>
+ <code>pANTLR3_HASH_BUCKET</code> <code>buckets</code><br/>
+ <i>Points to the memory where the array of buckets starts. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>count</code><br/>
+ <i>How many elements currently exist in the table. </i><br/>
  void(* <code>del</code> )(struct <code>ANTLR3_HASH_TABLE_struct</code> *table, void *key) </p>
 <p> void(* <code>delI</code> )(struct <code>ANTLR3_HASH_TABLE_struct</code> *table, <code>ANTLR3_INTKEY</code> key) </p>
-<p> <code>ANTLR3_BOOLEAN</code> <code>doStrdup</code><br />
- <i>Whether the hash table should strdup the keys it is given or not. </i><br />
- void(* <code>free</code> )(struct <code>ANTLR3_HASH_TABLE_struct</code> *table)<br />
- <i>Pointer to function to completely delete this table. </i><br />
+<p> <code>ANTLR3_BOOLEAN</code> <code>doStrdup</code><br/>
+ <i>Whether the hash table should strdup the keys it is given or not. </i><br/>
+ void(* <code>free</code> )(struct <code>ANTLR3_HASH_TABLE_struct</code> *table)<br/>
+ <i>Pointer to function to completely delete this table. </i><br/>
  void *(* <code>get</code> )(struct <code>ANTLR3_HASH_TABLE_struct</code> *table, void *key) </p>
 <p> void *(* <code>getI</code> )(struct <code>ANTLR3_HASH_TABLE_struct</code> *table, <code>ANTLR3_INTKEY</code> key) </p>
-<p> <code>ANTLR3_UINT32</code> <code>modulo</code><br />
- <i>Number of buckets available in this table. </i><br />
+<p> <code>ANTLR3_UINT32</code> <code>modulo</code><br/>
+ <i>Number of buckets available in this table. </i><br/>
  <code>ANTLR3_INT32</code>(* <code>put</code> )(struct <code>ANTLR3_HASH_TABLE_struct</code> *table, void *key, void *element, void(ANTLR3_CDECL *freeptr)(void *)) </p>
 <p> <code>ANTLR3_INT32</code>(* <code>putI</code> )(struct <code>ANTLR3_HASH_TABLE_struct</code> *table, <code>ANTLR3_INTKEY</code> key, void *element, void(ANTLR3_CDECL *freeptr)(void *)) </p>
 <p> <code>pANTLR3_HASH_ENTRY</code>(* <code>remove</code> )(struct <code>ANTLR3_HASH_TABLE_struct</code> *table, void *key) </p>

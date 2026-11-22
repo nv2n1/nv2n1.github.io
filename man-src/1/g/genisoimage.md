@@ -44,13 +44,13 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <dt><code>-allow-leading-dots</code></dt>
 <dd>
 </dd><dt><code>-ldots</code></dt>
-<dd> Allow ISO9660 filenames to begin with a period. Usually, a leading dot is replaced with an underscore in order to maintain MS-DOS compatibility.<br />
+<dd> Allow ISO9660 filenames to begin with a period. Usually, a leading dot is replaced with an underscore in order to maintain MS-DOS compatibility.<br/>
  This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</dd>
 <dt><code>-allow-lowercase</code></dt>
-<dd> This options allows lowercase characters to appear in ISO9660 filenames.<br />
+<dd> This options allows lowercase characters to appear in ISO9660 filenames.<br/>
  This violates the ISO9660 standard, but it happens to work on some systems. Use with caution.</dd>
 <dt><code>-allow-multidot</code></dt>
-<dd> This options allows more than one dot to appear in ISO9660 filenames. A leading dot is not affected by this option, it may be allowed separately using <code>-allow-leading-dots</code>.<br />
+<dd> This options allows more than one dot to appear in ISO9660 filenames. A leading dot is not affected by this option, it may be allowed separately using <code>-allow-leading-dots</code>.<br/>
  This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</dd>
 <dt><code>-biblio</code><i> file</i></dt>
 <dd> Specifies the bibliographic filename. There is space for 37 characters. Equivalent to <code>BIBL</code> in the <i>.genisoimagerc</i> file.</dd>
@@ -117,10 +117,10 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <dt><code>-copyright</code><i> file</i></dt>
 <dd> Specifies copyright information, typically a filename on the disc. There is space for 37 characters. Equivalent to <code>COPY</code> in the <i>.genisoimagerc</i> file.</dd>
 <dt><code>-d</code></dt>
-<dd> Do not append a period to files that do not have one.<br />
+<dd> Do not append a period to files that do not have one.<br/>
  This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</dd>
 <dt><code>-D</code></dt>
-<dd> Do not use deep directory relocation, and instead just pack them in the way we see them.<br />
+<dd> Do not use deep directory relocation, and instead just pack them in the way we see them.<br/>
  If ISO9660:1999 has not been selected, this violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</dd>
 <dt><code>-dir-mode</code><i> mode</i></dt>
 <dd> Overrides the mode of directories used to create the image to <i>mode</i>, specified as 4 digits of permission bits as in <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1). This option automatically enables Rock Ridge extensions.</dd>
@@ -209,7 +209,7 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <dt><code>-exclude-list</code><i> file</i></dt>
 <dd> A file containing a list of shell wildcards to be excluded. See <code>-m</code>.</dd>
 <dt><code>-max-iso9660-filenames</code></dt>
-<dd> Allow ISO9660 filenames to be up to 37 characters long. This option enables <code>-N</code> as the extra name space is taken from the space reserved for file version numbers.<br />
+<dd> Allow ISO9660 filenames to be up to 37 characters long. This option enables <code>-N</code> as the extra name space is taken from the space reserved for file version numbers.<br/>
  This violates the ISO9660 standard, but it happens to work on many systems. Although a conforming application needs to provide a buffer space of at least 37 characters, discs created with this option may cause a buffer overflow in the reading operating system. Use with extreme care.</dd>
 <dt><code>-M</code><i> path</i></dt>
 <dd>
@@ -218,7 +218,7 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 </dd><dt><code>-dev</code><i> device</i></dt>
 <dd> Specifies path to existing ISO9660 image to be merged. The alternate form takes a SCSI device specifier that uses the same syntax as the <code>dev=</code> parameter of <code>wodim</code>. The output of <code>genisoimage</code> will be a new session which should get written to the end of the image specified in <code>-M</code>. Typically this requires multisession capability for the CD recorder used to write the image. This option may only be used in conjunction with <code>-C</code>.</dd>
 <dt><code>-N</code></dt>
-<dd> Omit version numbers from ISO9660 filenames.<br />
+<dd> Omit version numbers from ISO9660 filenames.<br/>
  This violates the ISO9660 standard, but no one really uses the version numbers anyway. Use with caution.</dd>
 <dt><code>-new-dir-mode</code><i> mode</i></dt>
 <dd> Specify the mode, a 4-digit number as used in <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1), to use when creating new directories in the filesystem image. The default is 0555.</dd>
@@ -265,7 +265,7 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <dt><code>-r</code></dt>
 <dd> This is like the -R option, but file ownership and modes are set to more useful values. The uid and gid are set to zero, because they are usually only useful on the author&#8217;s system, and not useful to the client. All the file read bits are set true, so that files and directories are globally readable on the client. If any execute bit is set for a file, set all of the execute bits, so that executables are globally executable on the client. If any search bit is set for a directory, set all of the search bits, so that directories are globally searchable on the client. All write bits are cleared, because the filesystem will be mounted read-only in any case. If any of the special mode bits are set, clear them, because file locks are not useful on a read-only filesystem, and set-id bits are not desirable for uid 0 or gid 0. When used on Win32, the execute bit is set on <i>all</i> files. This is a result of the lack of file permissions on Win32 and the Cygwin POSIX emulation layer. See also <code>-uid</code>, <code>-gid</code>, <code>-dir-mode</code>, <code>-file-mode</code> and <code>-new-dir-mode</code>.</dd>
 <dt><code>-relaxed-filenames</code></dt>
-<dd> Allows ISO9660 filenames to include all 7-bit ASCII characters except lowercase letters.<br />
+<dd> Allows ISO9660 filenames to include all 7-bit ASCII characters except lowercase letters.<br/>
  This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</dd>
 <dt><code>-root</code><i> dir</i></dt>
 <dd> Moves all files and directories into <i>dir</i> in the image. This is essentially the same as using <code>-graft-points</code> and adding <i>dir</i> in front of every pathspec, but is easier to use. <i>dir</i> may actually be several levels deep. It is created with the same permissions as other graft points.</dd>
@@ -312,7 +312,7 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <dt><code>-U</code></dt>
 <dd> Allows &quot;untranslated&quot; filenames, completely violating the ISO9660 standards described above. Enables the following flags: <code>-d -l -N -allow-leading-dots -relaxed-filenames</code> <code>-allow-lowercase -allow-multidot -no-iso-translate</code>. Allows more than one `.&#8217; character in the filename, as well as mixed-case filenames. This is useful on HP-UX, where the built-in <i>cdfs</i> filesystem does not recognize any extensions. Use with extreme caution.</dd>
 <dt><code>-no-iso-translate</code></dt>
-<dd> Do not translate the characters `#&#8217; and `~&#8217; which are invalid for ISO9660 filenames. Although invalid, these characters are often used by Microsoft systems.<br />
+<dd> Do not translate the characters `#&#8217; and `~&#8217; which are invalid for ISO9660 filenames. Although invalid, these characters are often used by Microsoft systems.<br/>
  This violates the ISO9660 standard, but it happens to work on many systems. Use with caution.</dd>
 <dt><code>-V</code><i> volid</i></dt>
 <dd> Specifies the volume ID (volume name or label) to be written into the master block. There is space for 32 characters. Equivalent to <code>VOLI</code> in the <i>.genisoimagerc</i> file. The volume ID is used as the mount point by the Solaris volume manager and as a label assigned to a disc on various other platforms such as Windows and Apple Mac OS.</dd>
@@ -442,8 +442,8 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <p> The format of the character set files is the same as the mapping files available from <i><a rel="nofollow" href="http://www.unicode.org/Public/MAPPINGS">http://www.unicode.org/Public/MAPPINGS</a></i>. This format is:</p>
 <dl>
 <dt>
-</dt><dd> Column #1 is the input byte code (in hex as 0xXX)<br />
- Column #2 is the Unicode (in hex as 0xXXXX)<br />
+</dt><dd> Column #1 is the input byte code (in hex as 0xXX)<br/>
+ Column #2 is the Unicode (in hex as 0xXXXX)<br/>
  The rest of the line is ignored.</dd></dl>
 <p> Any blank line, line without two (or more) columns in the above format or comments lines (starting with the # character) are ignored without any warnings. Any missing input code is mapped to Unicode character 0x0000. </p>
 <p> Note that, while UTF-8 is supported, other Unicode encodings such as UCS-2/UTF-16 and UCS-4/UTF-32 are not, as POSIX operating systems cannot handle them natively. </p>
@@ -714,8 +714,8 @@ description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional
 <p> If you are not using Linux, you can use <code>hfsutils</code> to copy the icon file from the floppy. However, care has to be taken, as the icon file contains a control character. For example:</p>
 <dl>
 <dt>
-</dt><dd> hmount /dev/fd0<br />
- hdir -a<br />
+</dt><dd> hmount /dev/fd0<br/>
+ hdir -a<br/>
  hcopy -m Icon^V^M icon_dir/icon</dd></dl>
 <p> Where `^V^M&#8217; is control-V followed by control-M. Then run <code>genisoimage</code> by using something like:</p>
 <dl>
@@ -814,7 +814,7 @@ MD5sum   File size  Path
 <p> Current directory contains:</p>
 <dl>
 <dt>
-</dt><dd> % ls -F<br />
+</dt><dd> % ls -F<br/>
  README.hfs README.joliet README.Unix cd_dir/</dd></dl>
 <p> The following command puts the contents of the directory <i>cd_dir</i> on the CD along with the three README files &#8212; but only one will be seen from each of the three filesystems:</p>
 <dl>

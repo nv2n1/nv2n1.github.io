@@ -10,11 +10,11 @@ description: "lxqt-sudo, lxsu – execute a command as privileged user"
 
 <p> <code>lxqt-sudo</code>, <code>lxsu</code> &#8211; execute a command as privileged user</p>
 <h2>SYNOPSIS</h2>
-<p> <code>lxqt-sudo</code> <i>option</i> [<i>command</i> [<i>arguments</i>]]<br />
- <code>lxsu</code> [<i>option</i>] [<i>command</i> [<i>arguments</i>]]<br />
+<p> <code>lxqt-sudo</code> <i>option</i> [<i>command</i> [<i>arguments</i>]]<br/>
+ <code>lxsu</code> [<i>option</i>] [<i>command</i> [<i>arguments</i>]]<br/>
  <code>lxsudo</code> [<i>option</i>] [<i>command</i> [<i>arguments</i>]]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>lxqt-sudo</code> (and symlinks <code>lxsu</code>, <code>lxsudo</code>) is a graphical QT frontend for plain <code><a href="/docs/linux/man/8-sudo/">sudo</a>(8)</code> or <code><a href="/docs/linux/man/1-su/">su</a>(1)</code> (for requesting optional password in GUI fashion).<br />
+<p> <code>lxqt-sudo</code> (and symlinks <code>lxsu</code>, <code>lxsudo</code>) is a graphical QT frontend for plain <code><a href="/docs/linux/man/8-sudo/">sudo</a>(8)</code> or <code><a href="/docs/linux/man/1-su/">su</a>(1)</code> (for requesting optional password in GUI fashion).<br/>
  When invoked it simply spawns child <i>sudo</i> or <i>su</i> process with requested <i>command</i> (and optional <i>arguments</i>). If <i>sudo</i>/<i>su</i> requests user&#8217;s password, the GUI password dialog is shown and (after submit) the password is provided to backend. </p>
 <h2>OPTIONS</h2>
 <p> <code>option</code> is one of: </p>

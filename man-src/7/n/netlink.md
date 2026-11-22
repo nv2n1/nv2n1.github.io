@@ -58,16 +58,16 @@ netlink_socket = socket(AF_NETLINK, socket_type, netlink_family);</code></pre>
 <dd>Generic netlink family for simplified netlink usage.</dd>
 <dt><code>NETLINK_CRYPTO</code> (since Linux 3.2)</dt>
 <dd>Netlink interface to request information about ciphers registered with the kernel crypto API as well as allow configuration of the kernel crypto API.</dd></dl>
-<p> Netlink messages consist of a byte stream with one or multiple <i>nlmsghdr</i> headers and associated payload. The byte stream should be accessed only with the standard <code>NLMSG_*</code> macros. See <code><a href="/docs/linux/man/3-netlink/">netlink</a></code>(3) for further information. In multipart messages (multiple <i>nlmsghdr</i> headers with associated payload in one byte stream) the first and all following headers have the <code>NLM_F_MULTI</code> flag set, except for the last header which has the type <code>NLMSG_DONE</code>. After each <i>nlmsghdr</i> the payload follows. struct sockaddr_nl {<br />
-    sa_family_t nl_family; /* AF_NETLINK */<br />
-    unsigned short nl_pad; /* Zero */<br />
-    pid_t nl_pid;          /* Port ID */<br />
-    __u32 nl_groups;       /* Multicast groups mask */<br />
-}; <i>nlmsg_type</i> can be one of the standard message types: <code>NLMSG_NOOP</code> message is to be ignored, <code>NLMSG_ERROR</code> message signals an error and the payload contains an <i>nlmsgerr</i> structure, <code>NLMSG_DONE</code> message terminates a multipart message. struct sockaddr_nl {<br />
-    sa_family_t nl_family; /* AF_NETLINK */<br />
-    unsigned short nl_pad; /* Zero */<br />
-    pid_t nl_pid;          /* Port ID */<br />
-    __u32 nl_groups;       /* Multicast groups mask */<br />
+<p> Netlink messages consist of a byte stream with one or multiple <i>nlmsghdr</i> headers and associated payload. The byte stream should be accessed only with the standard <code>NLMSG_*</code> macros. See <code><a href="/docs/linux/man/3-netlink/">netlink</a></code>(3) for further information. In multipart messages (multiple <i>nlmsghdr</i> headers with associated payload in one byte stream) the first and all following headers have the <code>NLM_F_MULTI</code> flag set, except for the last header which has the type <code>NLMSG_DONE</code>. After each <i>nlmsghdr</i> the payload follows. struct sockaddr_nl {<br/>
+    sa_family_t nl_family; /* AF_NETLINK */<br/>
+    unsigned short nl_pad; /* Zero */<br/>
+    pid_t nl_pid;          /* Port ID */<br/>
+    __u32 nl_groups;       /* Multicast groups mask */<br/>
+}; <i>nlmsg_type</i> can be one of the standard message types: <code>NLMSG_NOOP</code> message is to be ignored, <code>NLMSG_ERROR</code> message signals an error and the payload contains an <i>nlmsgerr</i> structure, <code>NLMSG_DONE</code> message terminates a multipart message. struct sockaddr_nl {<br/>
+    sa_family_t nl_family; /* AF_NETLINK */<br/>
+    unsigned short nl_pad; /* Zero */<br/>
+    pid_t nl_pid;          /* Port ID */<br/>
+    __u32 nl_groups;       /* Multicast groups mask */<br/>
 }; A netlink family usually specifies more message types, see the appropriate manual pages for that, for example, <code><a href="/docs/linux/man/7-rtnetlink/">rtnetlink</a></code>(7) for <code>NETLINK_ROUTE</code>. </p>
 <table>
 <tr VALIGN=top>
@@ -127,7 +127,7 @@ netlink_socket = socket(AF_NETLINK, socket_type, netlink_family);</code></pre>
 </tr>
 <tr VALIGN=top>
 <td><code>NLM_F_DUMP</code></td>
-<td> Convenience macro; equivalent to<br />
+<td> Convenience macro; equivalent to<br/>
  (NLM_F_ROOT|NLM_F_MATCH).
 </td>
 </tr>
@@ -166,11 +166,11 @@ netlink_socket = socket(AF_NETLINK, socket_type, netlink_family);</code></pre>
 </table>
 <p> <i>nlmsg_seq</i> and <i>nlmsg_pid</i> are used to track messages. <i>nlmsg_pid</i> shows the origin of the message. Note that there isn&#8217;t a 1:1 relationship between <i>nlmsg_pid</i> and the PID of the process if the message originated from a netlink socket. See the <code>ADDRESS FORMATS</code> section for further information. Both <i>nlmsg_seq</i> and <i>nlmsg_pid</i> are opaque to netlink core. Netlink is not a reliable protocol. It tries its best to deliver a message to its destination(s), but may drop messages when an out-of-memory condition or other error occurs. For reliable transfer the sender can request an acknowledgement from the receiver by setting the <code>NLM_F_ACK</code> flag. An acknowledgment is an <code>NLMSG_ERROR</code> packet with the error field set to 0. The application must generate acknowledgements for received messages itself. The kernel tries to send an <code>NLMSG_ERROR</code> message for every failed packet. A user process should follow this convention too. However, reliable transmissions from kernel to user are impossible in any case. The kernel can&#8217;t send a netlink message if the socket buffer is full: the message will be dropped and the kernel and the user-space process will no longer have the same view of kernel state. It is up to the application to detect when this happens (via the <code>ENOBUFS</code> error returned by <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2)) and resynchronize.</p>
 <h3>Address formats</h3>
-<p>The <i>sockaddr_nl</i> structure describes a netlink client in user space or in the kernel. A <i>sockaddr_nl</i> can be either unicast (only sent to one peer) or sent to netlink multicast groups (<i>nl_groups</i> not equal 0). struct sockaddr_nl {<br />
-    sa_family_t nl_family; /* AF_NETLINK */<br />
-    unsigned short nl_pad; /* Zero */<br />
-    pid_t nl_pid;          /* Port ID */<br />
-    __u32 nl_groups;       /* Multicast groups mask */<br />
+<p>The <i>sockaddr_nl</i> structure describes a netlink client in user space or in the kernel. A <i>sockaddr_nl</i> can be either unicast (only sent to one peer) or sent to netlink multicast groups (<i>nl_groups</i> not equal 0). struct sockaddr_nl {<br/>
+    sa_family_t nl_family; /* AF_NETLINK */<br/>
+    unsigned short nl_pad; /* Zero */<br/>
+    pid_t nl_pid;          /* Port ID */<br/>
+    __u32 nl_groups;       /* Multicast groups mask */<br/>
 }; <i>nl_pid</i> is the unicast address of netlink socket. It&#8217;s always 0 if the destination is in the kernel. For a user-space process, <i>nl_pid</i> is usually the PID of the process owning the destination socket. However, <i>nl_pid</i> identifies a netlink socket, not a process. If a process owns several netlink sockets, then <i>nl_pid</i> can be equal to the process ID only for at most one socket. There are two ways to assign <i>nl_pid</i> to a netlink socket. If the application sets <i>nl_pid</i> before calling <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2), then it is up to the application to make sure that <i>nl_pid</i> is unique. If the application sets it to 0, the kernel takes care of assigning it. The kernel assigns the process ID to the first netlink socket the process opens and assigns a unique <i>nl_pid</i> to every netlink socket that the process subsequently creates. <i>nl_groups</i> is a bit mask with every bit representing a netlink group number. Each netlink family has a set of 32 multicast groups. When <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) is called on the socket, the <i>nl_groups</i> field in the <i>sockaddr_nl</i> should be set to a bit mask of the groups which it wishes to listen to. The default value for this field is zero which means that no multicasts will be received. A socket may multicast messages to any of the multicast groups by setting <i>nl_groups</i> to a bit mask of the groups it wishes to send to when it calls <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2) or does a <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2). Only processes with an effective UID of 0 or the <code>CAP_NET_ADMIN</code> capability may send or listen to a netlink multicast group. Since Linux 2.6.13, messages can&#8217;t be broadcast to multiple groups. Any replies to a message received for a multicast group should be sent back to the sending PID and the multicast group. Some Linux kernel subsystems may additionally allow other users to send and/or receive messages. As at Linux 3.0, the <code>NETLINK_KOBJECT_UEVENT</code>, <code>NETLINK_GENERIC</code>, <code>NETLINK_ROUTE</code>, and <code>NETLINK_SELINUX</code> groups allow other users to receive messages. No groups allow other users to send messages.</p>
 <h3>Socket options</h3>
 <p>To set or get a netlink socket option, call <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2) to read or <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2) to write the option with the option level argument set to <code>SOL_NETLINK</code>. Unless otherwise noted, <i>optval</i> is a pointer to an <i>int</i>.</p>
@@ -197,21 +197,21 @@ netlink_socket = socket(AF_NETLINK, socket_type, netlink_family);</code></pre>
 <h2>Bugs</h2>
 <p>This manual page is not complete.</p>
 <h2>Examples</h2>
-<p>The following example creates a <code>NETLINK_ROUTE</code> netlink socket which will listen to the <code>RTMGRP_LINK</code> (network interface create/delete/up/down events) and <code>RTMGRP_IPV4_IFADDR</code> (IPv4 addresses add/delete events) multicast groups. struct sockaddr_nl sa;<br />
-memset(&amp;sa, 0, sizeof(sa));<br />
-sa.nl_family = AF_NETLINK;<br />
-sa.nl_groups = RTMGRP_LINK | RTMGRP_IPV4_IFADDR;<br />
-fd = socket(AF_NETLINK, SOCK_RAW, NETLINK_ROUTE);<br />
-bind(fd, (struct sockaddr *)&amp;sa, sizeof(sa)); The next example demonstrates how to send a netlink message to the kernel (pid 0). Note that the application must take care of message sequence numbers in order to reliably track acknowledgements. struct nlmsghdr *nh; /* The nlmsghdr with payload to send */<br />
-struct sockaddr_nl sa;<br />
-struct iovec iov = {nh, nh-&gt;nlmsg_len};<br />
-struct msghdr msg;<br />
-msg = {&amp;sa, sizeof(sa), &amp;iov, 1, NULL, 0, 0};<br />
-memset(&amp;sa, 0, sizeof(sa));<br />
-sa.nl_family = AF_NETLINK;<br />
-nh-&gt;nlmsg_pid = 0;<br />
-nh-&gt;nlmsg_seq = ++sequence_number;<br />
-/* Request an ack from kernel by setting NLM_F_ACK */<br />
+<p>The following example creates a <code>NETLINK_ROUTE</code> netlink socket which will listen to the <code>RTMGRP_LINK</code> (network interface create/delete/up/down events) and <code>RTMGRP_IPV4_IFADDR</code> (IPv4 addresses add/delete events) multicast groups. struct sockaddr_nl sa;<br/>
+memset(&amp;sa, 0, sizeof(sa));<br/>
+sa.nl_family = AF_NETLINK;<br/>
+sa.nl_groups = RTMGRP_LINK | RTMGRP_IPV4_IFADDR;<br/>
+fd = socket(AF_NETLINK, SOCK_RAW, NETLINK_ROUTE);<br/>
+bind(fd, (struct sockaddr *)&amp;sa, sizeof(sa)); The next example demonstrates how to send a netlink message to the kernel (pid 0). Note that the application must take care of message sequence numbers in order to reliably track acknowledgements. struct nlmsghdr *nh; /* The nlmsghdr with payload to send */<br/>
+struct sockaddr_nl sa;<br/>
+struct iovec iov = {nh, nh-&gt;nlmsg_len};<br/>
+struct msghdr msg;<br/>
+msg = {&amp;sa, sizeof(sa), &amp;iov, 1, NULL, 0, 0};<br/>
+memset(&amp;sa, 0, sizeof(sa));<br/>
+sa.nl_family = AF_NETLINK;<br/>
+nh-&gt;nlmsg_pid = 0;<br/>
+nh-&gt;nlmsg_seq = ++sequence_number;<br/>
+/* Request an ack from kernel by setting NLM_F_ACK */<br/>
 nh-&gt;nlmsg_flags |= NLM_F_ACK; sendmsg(fd, &amp;msg, 0); And the last example is about reading netlink message. </p>
 <pre><code>int len;
 /* 8192 to avoid message truncation on platforms with

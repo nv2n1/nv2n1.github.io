@@ -10,7 +10,7 @@ description: "canonicalize_file_name – return the canonicalized absolute pathn
 
 <p> canonicalize_file_name &#8211; return the canonicalized absolute pathname </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
+<p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br/>
  <code>#include &lt;stdlib.h&gt;</code> </p>
 <p> <code>char *canonicalize_file_name(const char *</code><i>path</i><code>);</code></p>
 <h2>DESCRIPTION</h2>

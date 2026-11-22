@@ -10,19 +10,19 @@ description: "SAOimage 1.23 – X11 window based, interactive, color or halftone
 
 <p> SAOimage 1.23 &#8211; X11 window based, interactive, color or halftone image display program for astronomical images</p>
 <h2>SYNOPSIS</h2>
-<p> <code>saoimage</code> [ <code>-display </code><i>nodename:0.0 </i>] [ <code>-geometry | -gd </code><i>geometry </i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-pros | +/-imtool | -fits | -dfits | -oif </code>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-u1 | -u2 | -i2 | -i4 | -r4 | -r8 [ </code><i>width height </i>] ]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-byteswap </code>] [ <code>-skip </code><i>bytes </i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-upperleft | -lowerleft </code>] [ <code>-one | -zero </code>] [ <code>-rotate </code><i>code </i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-linear </code>| <code>-wrap </code>[ <i>wraps </i>] | <code>-log </code>[ <i>exponent </i>] | <code>-sqrt </code>[ <i>power </i>] | <code>-histeq </code>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-min </code><i>val </i>] [ <code>-max </code><i>val </i>] [ <code>-rmin </code><i>val </i>] [ <code>-rmax </code><i>val </i>] [ <code>-scalebias </code><i>scale bias </i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-palette </code><i>val </i>] [ <code>-red | -green | -blue </code>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-vertgraph | -horizgraph </code>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>+/-coord </code>] [ <code>+/-magnifier </code>] [ <code>-mag </code><i>val </i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-panboxav | -panboxsum | -panboxsample | -panboxmax </code>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-idev </code><i>pipename </i>] [ <code>-odev </code><i>pipename </i>] [ <code>-fbconfig </code><i>filename </i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>+/-verbose </code>] [ <code>-quiet </code>] [ <code>-lprbuttons </code>] [ <code>-mtf </code>] [ <code>-bordercolor </code><i>color </i>] [ <code>-lfrac </code><i>histogram fraction </i>] [ <code>-wcscom </code><i>WCS command </i>] [ <code>-gal | -fk4 | -fk5 </code>] [ <code>-zf </code><i>zoom factor</i>]<br />
+<p> <code>saoimage</code> [ <code>-display </code><i>nodename:0.0 </i>] [ <code>-geometry | -gd </code><i>geometry </i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-pros | +/-imtool | -fits | -dfits | -oif </code>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-u1 | -u2 | -i2 | -i4 | -r4 | -r8 [ </code><i>width height </i>] ]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-byteswap </code>] [ <code>-skip </code><i>bytes </i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-upperleft | -lowerleft </code>] [ <code>-one | -zero </code>] [ <code>-rotate </code><i>code </i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-linear </code>| <code>-wrap </code>[ <i>wraps </i>] | <code>-log </code>[ <i>exponent </i>] | <code>-sqrt </code>[ <i>power </i>] | <code>-histeq </code>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-min </code><i>val </i>] [ <code>-max </code><i>val </i>] [ <code>-rmin </code><i>val </i>] [ <code>-rmax </code><i>val </i>] [ <code>-scalebias </code><i>scale bias </i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-palette </code><i>val </i>] [ <code>-red | -green | -blue </code>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-vertgraph | -horizgraph </code>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>+/-coord </code>] [ <code>+/-magnifier </code>] [ <code>-mag </code><i>val </i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-panboxav | -panboxsum | -panboxsample | -panboxmax </code>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-idev </code><i>pipename </i>] [ <code>-odev </code><i>pipename </i>] [ <code>-fbconfig </code><i>filename </i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>+/-verbose </code>] [ <code>-quiet </code>] [ <code>-lprbuttons </code>] [ <code>-mtf </code>] [ <code>-bordercolor </code><i>color </i>] [ <code>-lfrac </code><i>histogram fraction </i>] [ <code>-wcscom </code><i>WCS command </i>] [ <code>-gal | -fk4 | -fk5 </code>] [ <code>-zf </code><i>zoom factor</i>]<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <i>filename</i> | <code>-name </code><i>filename </i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>SAOimage</i> is a utility for displaying astronomical images which runs under the X11 window environment. Image files can be read directly, or image data may be passed through a named pipe (Unix) or a mailbox (VMS) from IRAF display tasks. <i>SAOimage</i> provides a large selection of options for zooming, panning, scaling, coloring, pixel readback, display blinking, and region specification. User interactions are generally performed with the mouse. </p>
@@ -122,7 +122,7 @@ description: "SAOimage 1.23 – X11 window based, interactive, color or halftone
 <dt><code>-scalebias </code><i>scale bias</i></dt>
 <dd> The data in the image file should be scaled and biased to get the true image value (TrueValue = (scale * FileValue) + bias). This cannot be used with the <code>-fits</code> image type (scale and bias are in the FITS header), nor with <code>-imtool</code> or <code>-pros</code> (they are passed by IRAF). <code>-sb</code> is a shorthand for <code>-scalebias</code>.</dd>
 <dt><code>-skip </code><i>bytes</i></dt>
-<dd> Skip over the given number of bytes at the head of the file before reading<tt>&nbsp;<wbr></tt>data. This is used to skip header information or the first<br />
+<dd> Skip over the given number of bytes at the head of the file before reading<tt>&nbsp;<wbr></tt>data. This is used to skip header information or the first<br/>
  image if two images are stored in one file. <code>-header</code> and <code>-sk</code> are aliases for <code>-skip</code>.</dd>
 <dt><code>-sqrt </code>[<i>inverse of exponent for geometric curve</i>]</dt>
 <dd> Set the scaling function to square root (geometric), and set the inverse of the exponent for the x sup {1/n} curve, if given.</dd>

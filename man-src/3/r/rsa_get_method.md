@@ -58,7 +58,7 @@ description: "RSA functions –"
 <p>Set the application data for the RSA object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rsa</i> the rsa object to set the parameter for<br />
+<dd><i>rsa</i> the rsa object to set the parameter for<br/>
  <i>arg</i> the data object to store</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -67,7 +67,7 @@ description: "RSA functions –"
 <p>Set a new method for the RSA keypair. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rsa</i> rsa parameter.<br />
+<dd><i>rsa</i> rsa parameter.<br/>
  <i>method</i> the new method for the RSA parameter.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

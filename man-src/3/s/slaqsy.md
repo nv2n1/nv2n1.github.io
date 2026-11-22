@@ -11,7 +11,7 @@ description: "slaqsy.f –"
 <p> slaqsy.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slaqsy</code> (UPLO, N, A, LDA, S, SCOND, AMAX, EQUED)<br />
+<p> subroutine <code>slaqsy</code> (UPLO, N, A, LDA, S, SCOND, AMAX, EQUED)<br/>
  <i></i><code>SLAQSY</code> scales a symmetric/Hermitian matrix, using scaling factors computed by spoequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaqsy (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )S, realSCOND, realAMAX, characterEQUED)</h3>

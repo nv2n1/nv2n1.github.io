@@ -86,21 +86,21 @@ description: "cpfind – Feature matching for panoramic stitching"
 <dd> Ransac: homography estimation distance threshold (pixels) (default: 25)</dd>
 <dt><code>&#8211;ransacmode</code> (auto, hom, rpy, rpyv, rpyb)</dt>
 <dd> Select the model used in the ransac step. </dd>
-<p> hom: Assume a homography. Only applicable for non-wide angle<br />
-&nbsp;<wbr>&nbsp;<wbr>views. Uses the original panomatic code. It is also more flexible<br />
-&nbsp;<wbr>&nbsp;<wbr>than required and can generate false matches, particularly if most<br />
+<p> hom: Assume a homography. Only applicable for non-wide angle<br/>
+&nbsp;<wbr>&nbsp;<wbr>views. Uses the original panomatic code. It is also more flexible<br/>
+&nbsp;<wbr>&nbsp;<wbr>than required and can generate false matches, particularly if most<br/>
 &nbsp;<wbr>&nbsp;<wbr>of the matches are located on a single line. </p>
-<p> rpy: Align images using roll, pitch and yaw. This requires a good<br />
-&nbsp;<wbr>&nbsp;<wbr>estimate for the horizontal field of view&nbsp;<wbr>(and distortion, for<br />
-&nbsp;<wbr>&nbsp;<wbr>heavily distorted images). It is the preferred mode if a<br />
-&nbsp;<wbr>&nbsp;<wbr>calibrated lens is used, or the&nbsp;<wbr><font SIZE="-1">HFOV</font>&nbsp;<wbr>could be read successfully<br />
-&nbsp;<wbr>&nbsp;<wbr>from the&nbsp;<wbr><font SIZE="-1">EXIF</font>&nbsp;<wbr>data. </p>
-<p> rpyv: Align pair by optimizing roll, pitch, yaw and field of<br />
-view. Should work without prior knowledge of the field of view,<br />
-but might fail more often, due to error function used in the<br />
+<p> rpy: Align images using roll, pitch and yaw. This requires a good<br/>
+&nbsp;<wbr>&nbsp;<wbr>estimate for the horizontal field of view&nbsp;<wbr>(and distortion, for<br/>
+&nbsp;<wbr>&nbsp;<wbr>heavily distorted images). It is the preferred mode if a<br/>
+&nbsp;<wbr>&nbsp;<wbr>calibrated lens is used, or the&nbsp;<wbr>HFOV&nbsp;<wbr>could be read successfully<br/>
+&nbsp;<wbr>&nbsp;<wbr>from the&nbsp;<wbr>EXIF&nbsp;<wbr>data. </p>
+<p> rpyv: Align pair by optimizing roll, pitch, yaw and field of<br/>
+view. Should work without prior knowledge of the field of view,<br/>
+but might fail more often, due to error function used in the<br/>
 panotools optimizer, it tends to shrink the fov to 0. </p>
-<p> rpyvb: Align pair by optimizing roll, pitch, yaw, field of view and<br />
-&nbsp;<wbr>the&nbsp;<wbr>&#8220;b&#8221;&nbsp;<wbr>distortion parameter.&nbsp;<wbr>&nbsp;<wbr>Probably very fragile, just<br />
+<p> rpyvb: Align pair by optimizing roll, pitch, yaw, field of view and<br/>
+&nbsp;<wbr>the&nbsp;<wbr>&#8220;b&#8221;&nbsp;<wbr>distortion parameter.&nbsp;<wbr>&nbsp;<wbr>Probably very fragile, just<br/>
 &nbsp;<wbr>implemented for testing. </p>
 <p> auto: Use homography for images with hfov &lt; 65 degrees and rpy otherwise.</p>
 <dt><code>&#8211;minmatches</code> &lt;int&gt;</dt>

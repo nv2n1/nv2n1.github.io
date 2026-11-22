@@ -14,16 +14,16 @@ description: "strptime – convert a string representation of time to a time tm 
 char *strptime(const char *s, const char *format,
                struct tm *tm);</code></pre>
 <h2>Description</h2>
-<p>The <code>strptime</code>() function is the converse of <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3); it converts the character string pointed to by <i>s</i> to values which are stored in the &quot;broken-down time&quot; structure pointed to by <i>tm</i>, using the format specified by <i>format</i>. The broken-down time structure <i>tm</i> is defined in <i>&lt;time.h&gt;</i> as follows: struct tm {<br />
-    int tm_sec;   /* Seconds (0-60) */<br />
-    int tm_min;   /* Minutes (0-59) */<br />
-    int tm_hour;  /* Hours (0-23) */<br />
-    int tm_mday;  /* Day of the month (1-31) */<br />
-    int tm_mon;   /* Month (0-11) */<br />
-    int tm_year;  /* Year &#8211; 1900 */<br />
-    int tm_wday;  /* Day of the week (0-6, Sunday = 0) */<br />
-    int tm_yday;  /* Day in the year (0-365, 1 Jan = 0) */<br />
-    int tm_isdst; /* Daylight saving time */<br />
+<p>The <code>strptime</code>() function is the converse of <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3); it converts the character string pointed to by <i>s</i> to values which are stored in the &quot;broken-down time&quot; structure pointed to by <i>tm</i>, using the format specified by <i>format</i>. The broken-down time structure <i>tm</i> is defined in <i>&lt;time.h&gt;</i> as follows: struct tm {<br/>
+    int tm_sec;   /* Seconds (0-60) */<br/>
+    int tm_min;   /* Minutes (0-59) */<br/>
+    int tm_hour;  /* Hours (0-23) */<br/>
+    int tm_mday;  /* Day of the month (1-31) */<br/>
+    int tm_mon;   /* Month (0-11) */<br/>
+    int tm_year;  /* Year &#8211; 1900 */<br/>
+    int tm_wday;  /* Day of the week (0-6, Sunday = 0) */<br/>
+    int tm_yday;  /* Day in the year (0-365, 1 Jan = 0) */<br/>
+    int tm_isdst; /* Daylight saving time */<br/>
 }; For more details on the <i>tm</i> structure, see <code><a href="/docs/linux/man/3-ctime/">ctime</a></code>(3). The <i>format</i> argument is a character string that consists of field descriptors and text characters, reminiscent of <code><a href="/docs/linux/man/3-scanf/">scanf</a></code>(3). Each field descriptor consists of a <code>%</code> character followed by another character that specifies the replacement for the field descriptor. All other characters in the <i>format</i> string must have a matching character in the input string, except for whitespace, which matches zero or more whitespace characters in the input string. There should be whitespace or other alphanumeric characters between any two field descriptors. The <code>strptime</code>() function processes the input string from left to right. Each of the three possible input elements (whitespace, literal, or format) are handled one after the other. If the input cannot be matched to the format string, the function stops. The remainder of the format and input strings are not processed. The supported input field descriptors are listed below. In case a text string (such as the name of a day of the week or a month name) is to be matched, the comparison is case insensitive. In case a number is to be matched, leading zeros are permitted but not required.</p>
 <dl>
 <dt><code>%%</code></dt>
@@ -109,7 +109,7 @@ char *strptime(const char *s, const char *format,
 <dt><code>%OU</code></dt>
 <dd>The week number of the year (Sunday as the first day of the week) using the locale&#8217;s alternative numeric symbols.</dd>
 <dt><code>%Ow</code></dt>
-<dd>The ordinal number of the day of the week (Sunday=0),<br />
+<dd>The ordinal number of the day of the week (Sunday=0),<br/>
 &nbsp;using the locale&#8217;s alternative numeric symbols.</dd>
 <dt><code>%OW</code></dt>
 <dd>The week number of the year (Monday as the first day of the week) using the locale&#8217;s alternative numeric symbols.</dd>

@@ -45,6 +45,6 @@ description: "mimeopen – Open files by mimetype"
 <p> Jaap Karssenberg &lt;pardus [at] cpan.org&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2002, 2012 Jaap G Karssenberg. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font></p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-mimetype/">mimetype</a></i>(1), <i><a href="/docs/linux/man/1-update-mime-database/">update-mime-database</a></i>(1), <i><a href="/docs/linux/man/1-update-desktop-database/">update-desktop-database</a></i>(1), <i>File::MimeInfo</i>(3), <i>File::MimeInfo::Applications</i>(3) </p>

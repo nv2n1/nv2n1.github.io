@@ -35,7 +35,7 @@ description: "pldd – display dynamic shared objects linked into a process"
 <p> lsof -p PID </p>
 <p> also shows output that includes the dynamic shared objects that are linked into a process. </p>
 <p> The <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1) <i>info shared</i> command also shows the shared libraries being used by a process, so that one can obtain similar output to <code>pldd</code> using a command such as the following (to monitor the process with the specified <i>pid</i>): </p>
-<p> $ <code>gdb -ex &quot;set confirm off&quot; -ex &quot;set height 0&quot; -ex &quot;info shared&quot; \</code><br />
+<p> $ <code>gdb -ex &quot;set confirm off&quot; -ex &quot;set height 0&quot; -ex &quot;info shared&quot; \</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>-ex&nbsp;&quot;quit&quot;&nbsp;-p&nbsp;$pid | grep&nbsp;&#8216;ha0x.*0x&#8217;</code></p>
 <h2>BUGS</h2>
 <p> From glibc 2.19 to 2.29, <code>pldd</code> was broken: it just hung when executed. This problem was fixed in glibc 2.30, and the fix has been backported to earlier glibc versions in some distributions.</p>

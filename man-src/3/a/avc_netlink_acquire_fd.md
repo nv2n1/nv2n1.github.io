@@ -10,7 +10,7 @@ description: "avc_netlink_open, avc_netlink_close, avc_netlink_acquire_fd, avc_n
 
 <p> avc_netlink_open, avc_netlink_close, avc_netlink_acquire_fd, avc_netlink_release_fd, avc_netlink_check_nb, avc_netlink_loop &#8211; SELinux netlink processing </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
+<p> <code>#include &lt;selinux/selinux.h&gt;</code><br/>
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>int avc_netlink_open(int </code><i>blocking</i><code>);</code> </p>
 <p> <code>void avc_netlink_close(void);</code> </p>

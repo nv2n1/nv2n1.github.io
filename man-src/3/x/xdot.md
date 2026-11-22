@@ -106,7 +106,7 @@ void freeXDot(xdot *);</code></pre>
 <p>A value of this type represents one xdot operation. The operation is specified by the <i>kind</i> field. The corresponding data is stored in the union <i>u</i>, with the subfield associated with a given <i>kind</i> indicated by the comments. The <i>drawfunc</i> field allows the user to attach a drawing-specific function to the operation, providing an object-based interface. These functions can be automatically attached during parsing by providing a non-NULL second argument to <i>parseXDotF</i>.</p>
 <h3> xop_kind</h3>
 <p>This type provides an enumeration of the allowed xdot operations. See </p>
-<p>&nbsp;<wbr><a rel="nofollow" href="http://www.graphviz.org/doc/info/output.html#d:xdot">http://www.graphviz.org/doc/info/output.html#d:xdot</a>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><a rel="nofollow" href="http://www.graphviz.org/doc/info/output.html#d:xdot">http://www.graphviz.org/doc/info/output.html#d:xdot</a>&nbsp;<wbr><br/>
  for the specific semantics associated with each operation.</p>
 <h3> xdot_rect</h3>
 <p>This represents a rectangle. For ellipses, the <i>x</i> and <i>x</i> fields represent the center of the rectangle, and <i>w</i> and <i>h</i> give the half-width and half-height, respectively. For images, (<i>x</i>,<i>y</i>) gives the lower left corner of the rectangle, and <i>w</i> and <i>h</i> give the width and height, respectively.</p>

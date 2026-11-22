@@ -11,7 +11,7 @@ description: "cptts2.f –"
 <p> cptts2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cptts2</code> (IUPLO, N, NRHS, D, E, B, LDB)<br />
+<p> subroutine <code>cptts2</code> (IUPLO, N, NRHS, D, E, B, LDB)<br/>
  <i></i><code>CPTTS2</code> solves a tridiagonal system of the form AX=B using the L D LH factorization computed by spttrf.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cptts2 (integerIUPLO, integerN, integerNRHS, real, dimension( * )D, complex, dimension( * )E, complex, dimension( ldb, * )B, integerLDB)</h3>

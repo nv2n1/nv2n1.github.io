@@ -10,32 +10,32 @@ description: "The tevent queue functions –"
 <p>The tevent queue functions &#8211; </p>
 <p> A tevent_queue is used to queue up async requests that must be serialized.</p>
 <h3>Typedefs</h3>
-<p>typedef void(* <code>tevent_queue_trigger_fn_t</code> )(struct tevent_req *req, void *private_data)<br />
+<p>typedef void(* <code>tevent_queue_trigger_fn_t</code> )(struct tevent_req *req, void *private_data)<br/>
  <i>A callback trigger function run by the queue. </i></p>
 <h3>Functions</h3>
-<p>struct tevent_queue * <code>tevent_queue_create</code> (TALLOC_CTX *mem_ctx, const char *name)<br />
- <i>Create and start a tevent queue. </i><br />
- bool <code>tevent_queue_add</code> (struct tevent_queue *queue, struct tevent_context *ev, struct tevent_req *req, <code>tevent_queue_trigger_fn_t</code> trigger, void *private_data)<br />
- <i>Add a tevent request to the queue. </i><br />
- struct tevent_queue_entry * <code>tevent_queue_add_entry</code> (struct tevent_queue *queue, struct tevent_context *ev, struct tevent_req *req, <code>tevent_queue_trigger_fn_t</code> trigger, void *private_data)<br />
- <i>Add a tevent request to the queue. </i><br />
- struct tevent_queue_entry * <code>tevent_queue_add_optimize_empty</code> (struct tevent_queue *queue, struct tevent_context *ev, struct tevent_req *req, <code>tevent_queue_trigger_fn_t</code> trigger, void *private_data)<br />
- <i>Add a tevent request to the queue using a possible optimization. </i><br />
- void <code>tevent_queue_start</code> (struct tevent_queue *queue)<br />
- <i>Start a tevent queue. </i><br />
- void <code>tevent_queue_stop</code> (struct tevent_queue *queue)<br />
- <i>Stop a tevent queue. </i><br />
- size_t <code>tevent_queue_length</code> (struct tevent_queue *queue)<br />
- <i>Get the length of the queue. </i><br />
- bool <code>tevent_queue_running</code> (struct tevent_queue *queue)<br />
- <i>Is the tevent queue running. </i><br />
- struct tevent_req * <code>tevent_queue_wait_send</code> (TALLOC_CTX *mem_ctx, struct tevent_context *ev, struct tevent_queue *queue)<br />
- <i>Create a tevent subrequest that waits in a tevent_queue. </i><br />
- bool <code>tevent_queue_wait_recv</code> (struct tevent_req *req)<br />
- <i>Check if we no longer need to wait in the queue. </i><br />
- struct tevent_thread_proxy * <code>tevent_thread_proxy_create</code> (struct tevent_context *dest_ev_ctx)<br />
- <i>Create a tevent_thread_proxy for message passing between threads. </i><br />
- void <code>tevent_thread_proxy_schedule</code> (struct tevent_thread_proxy *tp, struct tevent_immediate **pp_im, <code>tevent_immediate_handler_t</code> handler, void *pp_private_data)<br />
+<p>struct tevent_queue * <code>tevent_queue_create</code> (TALLOC_CTX *mem_ctx, const char *name)<br/>
+ <i>Create and start a tevent queue. </i><br/>
+ bool <code>tevent_queue_add</code> (struct tevent_queue *queue, struct tevent_context *ev, struct tevent_req *req, <code>tevent_queue_trigger_fn_t</code> trigger, void *private_data)<br/>
+ <i>Add a tevent request to the queue. </i><br/>
+ struct tevent_queue_entry * <code>tevent_queue_add_entry</code> (struct tevent_queue *queue, struct tevent_context *ev, struct tevent_req *req, <code>tevent_queue_trigger_fn_t</code> trigger, void *private_data)<br/>
+ <i>Add a tevent request to the queue. </i><br/>
+ struct tevent_queue_entry * <code>tevent_queue_add_optimize_empty</code> (struct tevent_queue *queue, struct tevent_context *ev, struct tevent_req *req, <code>tevent_queue_trigger_fn_t</code> trigger, void *private_data)<br/>
+ <i>Add a tevent request to the queue using a possible optimization. </i><br/>
+ void <code>tevent_queue_start</code> (struct tevent_queue *queue)<br/>
+ <i>Start a tevent queue. </i><br/>
+ void <code>tevent_queue_stop</code> (struct tevent_queue *queue)<br/>
+ <i>Stop a tevent queue. </i><br/>
+ size_t <code>tevent_queue_length</code> (struct tevent_queue *queue)<br/>
+ <i>Get the length of the queue. </i><br/>
+ bool <code>tevent_queue_running</code> (struct tevent_queue *queue)<br/>
+ <i>Is the tevent queue running. </i><br/>
+ struct tevent_req * <code>tevent_queue_wait_send</code> (TALLOC_CTX *mem_ctx, struct tevent_context *ev, struct tevent_queue *queue)<br/>
+ <i>Create a tevent subrequest that waits in a tevent_queue. </i><br/>
+ bool <code>tevent_queue_wait_recv</code> (struct tevent_req *req)<br/>
+ <i>Check if we no longer need to wait in the queue. </i><br/>
+ struct tevent_thread_proxy * <code>tevent_thread_proxy_create</code> (struct tevent_context *dest_ev_ctx)<br/>
+ <i>Create a tevent_thread_proxy for message passing between threads. </i><br/>
+ void <code>tevent_thread_proxy_schedule</code> (struct tevent_thread_proxy *tp, struct tevent_immediate **pp_im, <code>tevent_immediate_handler_t</code> handler, void *pp_private_data)<br/>
  <i>Schedule an immediate event on an event context from another thread. </i></p>
 <h2>Detailed Description</h2>
 <p>A tevent_queue is used to queue up async requests that must be serialized. </p>
@@ -46,7 +46,7 @@ description: "The tevent queue functions –"
 <p>A callback trigger function run by the queue. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The tevent request the trigger function is executed on.<br />
+<dd><i>req</i> The tevent request the trigger function is executed on.<br/>
  <i>private_data</i> The private data pointer specified by <code>tevent_queue_add()</code>.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -58,10 +58,10 @@ description: "The tevent queue functions –"
 <p>Add a tevent request to the queue. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>queue</i> The queue to add the request.<br />
- <i>ev</i> The event handle to use for the request.<br />
- <i>req</i> The tevent request to add to the queue.<br />
- <i>trigger</i> The function triggered by the queue when the request is called. Since tevent 0.9.14 it&#8217;s possible to pass NULL, in order to just add a &#8216;blocker&#8217; to the queue.<br />
+<dd><i>queue</i> The queue to add the request.<br/>
+ <i>ev</i> The event handle to use for the request.<br/>
+ <i>req</i> The tevent request to add to the queue.<br/>
+ <i>trigger</i> The function triggered by the queue when the request is called. Since tevent 0.9.14 it&#8217;s possible to pass NULL, in order to just add a &#8216;blocker&#8217; to the queue.<br/>
  <i>private_data</i> The private data passed to the trigger function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -70,10 +70,10 @@ description: "The tevent queue functions –"
 <p>Add a tevent request to the queue. The request can be removed from the queue by calling talloc_free() (or a similar function) on the returned queue entry. This is the only difference to <code>tevent_queue_add()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>queue</i> The queue to add the request.<br />
- <i>ev</i> The event handle to use for the request.<br />
- <i>req</i> The tevent request to add to the queue.<br />
- <i>trigger</i> The function triggered by the queue when the request is called. Since tevent 0.9.14 it&#8217;s possible to pass NULL, in order to just add a &#8216;blocker&#8217; to the queue.<br />
+<dd><i>queue</i> The queue to add the request.<br/>
+ <i>ev</i> The event handle to use for the request.<br/>
+ <i>req</i> The tevent request to add to the queue.<br/>
+ <i>trigger</i> The function triggered by the queue when the request is called. Since tevent 0.9.14 it&#8217;s possible to pass NULL, in order to just add a &#8216;blocker&#8217; to the queue.<br/>
  <i>private_data</i> The private data passed to the trigger function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -88,10 +88,10 @@ description: "The tevent queue functions –"
 <p> The request can be removed from the queue by calling talloc_free() (or a similar function) on the returned queue entry. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>queue</i> The queue to add the request.<br />
- <i>ev</i> The event handle to use for the request.<br />
- <i>req</i> The tevent request to add to the queue.<br />
- <i>trigger</i> The function triggered by the queue when the request is called. Since tevent 0.9.14 it&#8217;s possible to pass NULL, in order to just add a &#8216;blocker&#8217; to the queue.<br />
+<dd><i>queue</i> The queue to add the request.<br/>
+ <i>ev</i> The event handle to use for the request.<br/>
+ <i>req</i> The tevent request to add to the queue.<br/>
+ <i>trigger</i> The function triggered by the queue when the request is called. Since tevent 0.9.14 it&#8217;s possible to pass NULL, in order to just add a &#8216;blocker&#8217; to the queue.<br/>
  <i>private_data</i> The private data passed to the trigger function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -104,7 +104,7 @@ description: "The tevent queue functions –"
 <p>Create and start a tevent queue. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>mem_ctx</i> The talloc memory context to allocate the queue.<br />
+<dd><i>mem_ctx</i> The talloc memory context to allocate the queue.<br/>
  <i>name</i> The name to use to identify the queue.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -154,8 +154,8 @@ description: "The tevent queue functions –"
 <p>Create a tevent subrequest that waits in a tevent_queue. The idea is that always the same syntax for tevent requests. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>mem_ctx</i> The talloc memory context to use.<br />
- <i>ev</i> The event handle to setup the request.<br />
+<dd><i>mem_ctx</i> The talloc memory context to use.<br/>
+ <i>ev</i> The event handle to setup the request.<br/>
  <i>queue</i> The queue to wait in.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -180,9 +180,9 @@ description: "The tevent queue functions –"
 <p> *pp_private_data must be a talloced area of memory with no destructors. Ownership of this memory will be transferred to the tevent library and *pp_private_data will be set to NULL on successful completion of the call. Set pp_private to NULL if no parameter transfer needed (a pure callback). This is an asynchronous request, caller does not wait for callback to be completed before returning. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>tp</i> The tevent_thread_proxy to use.<br />
- <i>pp_im</i> Pointer to immediate event pointer.<br />
- <i>handler</i> The function that will be called.<br />
+<dd><i>tp</i> The tevent_thread_proxy to use.<br/>
+ <i>pp_im</i> Pointer to immediate event pointer.<br/>
+ <i>handler</i> The function that will be called.<br/>
  <i>pp_private_data</i> The talloced memory to transfer.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>

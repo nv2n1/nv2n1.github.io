@@ -464,7 +464,7 @@ description: "capabilities – overview of Linux capabilities"
 <h3>Transformation of capabilities during execve()</h3>
 <p>During an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), the kernel calculates the new capabilities of the process using the following algorithm: </p>
 <p> P'(ambient) = (file is privileged) ? 0 : P(ambient) </p>
-<p> P'(permitted) = (P(inheritable) &amp; F(inheritable)) |<br />
+<p> P'(permitted) = (P(inheritable) &amp; F(inheritable)) |<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(F(permitted)&nbsp;&amp;&nbsp;P(bounding))&nbsp;| P'(ambient) </p>
 <p> P'(effective) = F(effective) ? P'(permitted) : P'(ambient) </p>
 <p> P'(inheritable) = P(inheritable) [i.e., unchanged] </p>
@@ -569,14 +569,14 @@ description: "capabilities – overview of Linux capabilities"
 <p> The <i>securebits</i> flags can be modified and retrieved using the <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_SECUREBITS</code> and <code>PR_GET_SECUREBITS</code> operations. The <code>CAP_SETPCAP</code> capability is required to modify the flags. Note that the <code>SECBIT_*</code> constants are available only after including the <i>&lt;linux/securebits.h&gt;</i> header file. </p>
 <p> The <i>securebits</i> flags are inherited by child processes. During an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), all of the flags are preserved, except <code>SECBIT_KEEP_CAPS</code> which is always cleared. </p>
 <p> An application can use the following call to lock itself, and all of its descendants, into an environment where the only way of gaining capabilities is by executing a program with associated file capabilities: </p>
-<p> prctl(PR_SET_SECUREBITS,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;SECBIT_KEEP_CAPS off&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;SECBIT_KEEP_CAPS_LOCKED |<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;SECBIT_NO_SETUID_FIXUP |<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;SECBIT_NO_SETUID_FIXUP_LOCKED |<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;SECBIT_NOROOT |<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;SECBIT_NOROOT_LOCKED);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Setting/locking SECBIT_NO_CAP_AMBIENT_RAISE<br />
+<p> prctl(PR_SET_SECUREBITS,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;SECBIT_KEEP_CAPS off&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;SECBIT_KEEP_CAPS_LOCKED |<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;SECBIT_NO_SETUID_FIXUP |<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;SECBIT_NO_SETUID_FIXUP_LOCKED |<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;SECBIT_NOROOT |<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;SECBIT_NOROOT_LOCKED);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Setting/locking SECBIT_NO_CAP_AMBIENT_RAISE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;is not required&nbsp;*/</p>
 <h3>Per-user-namespace set-user-ID-root programs</h3>
 <p>A set-user-ID program whose UID matches the UID that created a user namespace will confer capabilities in the process&#8217;s permitted and effective sets when executed by any process inside that namespace or any descendant user namespace. </p>

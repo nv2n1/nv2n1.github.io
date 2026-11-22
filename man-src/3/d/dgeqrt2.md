@@ -11,7 +11,7 @@ description: "dgeqrt2.f –"
 <p> dgeqrt2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgeqrt2</code> (M, N, A, LDA, T, LDT, INFO)<br />
+<p> subroutine <code>dgeqrt2</code> (M, N, A, LDA, T, LDT, INFO)<br/>
  <i></i><code>DGEQRT2</code> computes a QR factorization of a general real or complex matrix using the compact WY representation of Q.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgeqrt2 (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldt, * )T, integerLDT, integerINFO)</h3>

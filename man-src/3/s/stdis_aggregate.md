@@ -13,27 +13,27 @@ description: "std::is_aggregate – std::is_aggregate"
     template &lt;class T&gt;
     (since C++ 17)
         struct is_aggregate;</code></pre>
-<p>Checks if T is an aggregate_type. The member constant value is equal to true if T is an aggregate type and false otherwise.<br />
+<p>Checks if T is an aggregate_type. The member constant value is equal to true if T is an aggregate type and false otherwise.<br/>
 The behavior is undefined if std::remove_all_extents_t&lt;T&gt; is an incomplete type other than (possibly cv-qualified) void. </p>
 <h2>Template parameters</h2>
 <p>T &#8211; a type to check </p>
 <p>Helper variable template </p>
-<p>template&lt; class T &gt; <i>(since C++17)</i><br />
+<p>template&lt; class T &gt; <i>(since C++17)</i><br/>
 inline constexpr bool is_aggregate_v = is_aggregate&lt;T&gt;::value; </p>
 <p>Inherited from std::integral_constant</p>
 <h2>Member constants</h2>
-<p>value true if T is an aggregate type , false otherwise<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br />
+<p>value true if T is an aggregate type , false otherwise<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br/>
 <code>[static]</code></p>
 <h2>Member functions</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts the object to bool, returns value<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts the object to bool, returns value<br/>
 operator bool <i>(public member function)</i> </p>
-<p>operator() returns value<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br />
+<p>operator() returns value<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br/>
 <i>(C++14)</i></p>
 <h2>Member types</h2>
-<p>Type Definition<br />
-value_type bool<br />
+<p>Type Definition<br/>
+value_type bool<br/>
 type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>

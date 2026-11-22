@@ -24,7 +24,7 @@ description: "pam_sge-qrsh-setup – PAM module for tight integration with xxQS_
 <dl>
 <dd>&nbsp;auth required pam_sge-qrsh-setup.so</dd></dl>
 <h2>Files</h2>
-<p><code>/var/run/sge-qrsh-setup</code><br />
+<p><code>/var/run/sge-qrsh-setup</code><br/>
  <code>$SGE_ROOT/util/resources/wrappers/rshd-wrapper</code></p>
 <h2>See Also</h2>
 <h2>Author</h2>

@@ -10,7 +10,7 @@ description: "flickcurl – call Flickr API"
 
 <p> flickcurl &#8211; call Flickr API</p>
 <h2>SYNOPSIS</h2>
-<p> <code>flickcurl</code> <code>-a </code><i>FROB</i><br />
+<p> <code>flickcurl</code> <code>-a </code><i>FROB</i><br/>
  <code>flickcurl</code> [<code>-d </code><i>DELAY</i>] [<code>-h</code>] [<code>-o FILE</code>] [<code>-q</code>] [<code>-v</code>] [<code>-V</code>] [<i>commands</i>] &#8230; </p>
 <h2>DESCRIPTION</h2>
 <p> <code>flickcurl</code> is a utility program to call the Flickr APIs via the flickcurl library. Run <i>flickcurl -h</i> to get a list of the supported commands and their arguments. </p>
@@ -33,8 +33,8 @@ description: "flickcurl – call Flickr API"
 <dt><code>-V, &#8211;verbose</code></dt>
 <dd> Display more information while the program runs.</dd></dl>
 <h2>COMMANDS</h2>
-<p> In the following list of commands:<br />
- <i>PER-PAGE</i> is photos per result page or &#8216;-&#8216; for default (10)<br />
+<p> In the following list of commands:<br/>
+ <i>PER-PAGE</i> is photos per result page or &#8216;-&#8216; for default (10)<br/>
  <i>PAGE</i> is result page number or &#8216;-&#8216; for default (1 = first page) </p>
 <dl>
 <dt><code>activity.userComments</code> <i>[PER-PAGE [PAGE]]</i></dt>
@@ -124,11 +124,11 @@ description: "flickcurl – call Flickr API"
 <dt><code>groups.search</code> <i>TEXT [PER-PAGE [PAGE]]</i></dt>
 <dd> Search for groups matching TEXT paging PER-PAGE and PAGE.</dd>
 <dt><code>interestingness.getList</code> <i>[PARAMS]</i></dt>
-<dd> Get interesting photos with optional parameters<br />
- date DATE<br />
- extras EXTRAS<br />
- per-page PER-PAGE<br />
- page PAGE<br />
+<dd> Get interesting photos with optional parameters<br/>
+ date DATE<br/>
+ extras EXTRAS<br/>
+ per-page PER-PAGE<br/>
+ page PAGE<br/>
  format FORMAT</dd>
 <dt><code>machinetags.getNamespaces</code> <i>[PREDICATE [PER-PAGE [PAGE]]]</i></dt>
 <dd> Get a list of namespaces with optional PREDICATE</dd>
@@ -159,16 +159,16 @@ description: "flickcurl – call Flickr API"
 <dt><code>people.getInfo</code> <i>USER-NSID</i></dt>
 <dd> Get information about one person with id USER-NSID</dd>
 <dt><code>people.getPhotos</code> <i>USER-NSID</i></dt>
-<dd> Get photos from user USER-NSID with optional parameters<br />
- safe-search 1-3<br />
- min-upload-date DATE<br />
- max-upload-date DATE<br />
- min-taken date DATE<br />
- max-taken-date DATE<br />
- content-type 1-7<br />
- privacy-filter 1-5<br />
- per-page PER-PAGE<br />
- page PAGE<br />
+<dd> Get photos from user USER-NSID with optional parameters<br/>
+ safe-search 1-3<br/>
+ min-upload-date DATE<br/>
+ max-upload-date DATE<br/>
+ min-taken date DATE<br/>
+ max-taken-date DATE<br/>
+ content-type 1-7<br/>
+ privacy-filter 1-5<br/>
+ per-page PER-PAGE<br/>
+ page PAGE<br/>
  format FORMAT</dd>
 <dt><code>people.getPhotosOf</code> <i>USER-NSID [PER-PAGE [PAGE [FORMAT]]]</i></dt>
 <dd> Get public photos of a user USER-NSID</dd>
@@ -189,8 +189,8 @@ description: "flickcurl – call Flickr API"
 <dt><code>photos.comments.getList</code> <i>PHOTO-ID</i></dt>
 <dd> Get the comments for a photo PHOTO-ID.</dd>
 <dt><code>photos.comments.getRecentForContacts</code> <i>[PARAMS]</i></dt>
-<dd> Get the list of photos for user contacts with recent comments<br />
- since DATE-LAST-COMMENT filter CONTACTS-FILTER<br />
+<dd> Get the list of photos for user contacts with recent comments<br/>
+ since DATE-LAST-COMMENT filter CONTACTS-FILTER<br/>
  per-page PER-PAGE page PAGE format FORMAT</dd>
 <dt><code>photos.delete</code> <i>PHOTO-ID</i></dt>
 <dd> Delete a PHOTO-ID.</dd>
@@ -259,33 +259,33 @@ description: "flickcurl – call Flickr API"
 <dt><code>photos.removeTag</code> <i>PHOTO-ID TAG-ID</i></dt>
 <dd> Remove a tag TAG-ID from a photo.</dd>
 <dt><code>photos.search</code> <i>[PARAMS] tags TAGS&#8230;</i></dt>
-<dd> Search for photos/videos with many optional parameters<br />
- user USER<br />
- tag-mode any|all<br />
- text TEXT<br />
- (min|max)-(upload|taken)-date DATE<br />
- license LICENSE<br />
- privacy PRIVACY<br />
- bbox a,b,c,d<br />
- sort date-(posted|taken)-(asc|desc)|interestingness-(desc|asc)|relevance<br />
- accuracy 1-16<br />
- safe-search 1-3<br />
- type 1-4<br />
- machine-tags TAGS<br />
- machine-tag-mode any|all<br />
- group-id ID<br />
- place-id ID<br />
- extras EXTRAS<br />
- per-page PER-PAGE<br />
- page PAGES<br />
- media all|photos|videos<br />
- has-geo<br />
- lat LAT lon LON radius RADIUS radius-units km|mi<br />
- contacts (all|ff)<br />
- format FORMAT<br />
- woeid WOEID<br />
- geo-context 1-2<br />
- in-commons<br />
+<dd> Search for photos/videos with many optional parameters<br/>
+ user USER<br/>
+ tag-mode any|all<br/>
+ text TEXT<br/>
+ (min|max)-(upload|taken)-date DATE<br/>
+ license LICENSE<br/>
+ privacy PRIVACY<br/>
+ bbox a,b,c,d<br/>
+ sort date-(posted|taken)-(asc|desc)|interestingness-(desc|asc)|relevance<br/>
+ accuracy 1-16<br/>
+ safe-search 1-3<br/>
+ type 1-4<br/>
+ machine-tags TAGS<br/>
+ machine-tag-mode any|all<br/>
+ group-id ID<br/>
+ place-id ID<br/>
+ extras EXTRAS<br/>
+ per-page PER-PAGE<br/>
+ page PAGES<br/>
+ media all|photos|videos<br/>
+ has-geo<br/>
+ lat LAT lon LON radius RADIUS radius-units km|mi<br/>
+ contacts (all|ff)<br/>
+ format FORMAT<br/>
+ woeid WOEID<br/>
+ geo-context 1-2<br/>
+ in-commons<br/>
  in-gallery</dd>
 <dt><code>photos.setContentType</code> <i>PHOTO-ID TYPE</i></dt>
 <dd> Set photo TYPE to one of &#8216;photo&#8217;, &#8216;screenshot&#8217; or &#8216;other&#8217;</dd>
@@ -358,12 +358,12 @@ description: "flickcurl – call Flickr API"
 <dt><code>places.placesForBoundingBox</code> <i>PLACE-TYPE MIN-LONG MIN-LAT MAX-LONG MAX-LAT</i></dt>
 <dd> Find user places of PLACE-TYPE in bbox.</dd>
 <dt><code>places.placesForContacts</code> <i>PLACE-TYPE WOE-ID|- PLACE-ID|- THRESHOLD [PARAMS]</i></dt>
-<dd> Find top 100 unique places clustered by a given PLACE-TYPE for a<br />
- user&#8217;s contacts with optional parameters<br />
- contacts CONTACTS<br />
- min-upload MIN-UPLOAD-DATE<br />
- max-upload MAX-UPLOAD-DATE<br />
- min-taken MIN-TAKEN-DATE<br />
+<dd> Find top 100 unique places clustered by a given PLACE-TYPE for a<br/>
+ user&#8217;s contacts with optional parameters<br/>
+ contacts CONTACTS<br/>
+ min-upload MIN-UPLOAD-DATE<br/>
+ max-upload MAX-UPLOAD-DATE<br/>
+ min-taken MIN-TAKEN-DATE<br/>
  max-taken MAX-TAKEN-DATE</dd>
 <dt><code>places.placesForUser</code> <i>PLACE-TYPE [WOE-ID] [PLACE-ID [THRESHOLD]]]</i></dt>
 <dd> Find user places of PLACE-TYPE.</dd>
@@ -372,10 +372,10 @@ description: "flickcurl – call Flickr API"
 <dt><code>places.resolvePlaceURL</code> <i>PLACE-URL</i></dt>
 <dd> Find places information by PLACE-URL.</dd>
 <dt><code>places.tagsForPlace</code> <i>PLACE-ID|- [WOE-ID|-]</i></dt>
-<dd> Get tags for a place by PLACE-ID or WOE-ID with optional parameters<br />
- min-upload MIN-UPLOAD-DATE<br />
- max-upload MAX-UPLOAD-DATE<br />
- min-taken MIN-TAKEN-DATE<br />
+<dd> Get tags for a place by PLACE-ID or WOE-ID with optional parameters<br/>
+ min-upload MIN-UPLOAD-DATE<br/>
+ max-upload MAX-UPLOAD-DATE<br/>
+ min-taken MIN-TAKEN-DATE<br/>
  max-taken MAX-TAKEN-DATE</dd>
 <dt><code>prefs.getContentType</code> <i></i></dt>
 <dd> Get default content type preference for user.</dd>
@@ -446,15 +446,15 @@ description: "flickcurl – call Flickr API"
 <dt><code>test.null</code> <i>KEY VALUE</i></dt>
 <dd> Test null API call: no return</dd>
 <dt><code>upload</code> <i>FILE [PARAMS&#8230;]</i></dt>
-<dd> Upload a photo FILE with optional parameters PARAM or PARAM VALUE<br />
- title TITLE<br />
- description DESC<br />
- safety_level &#8216;safe&#8217; (default) or &#8216;moderate&#8217; or &#8216;restricted&#8217;<br />
- content_type &#8216;photo&#8217; (default) or screenshot&#8217; or &#8216;other&#8217;<br />
- hidden &#8216;public&#8217; (default) or &#8216;hidden&#8217;<br />
- friend<br />
- public<br />
- family<br />
+<dd> Upload a photo FILE with optional parameters PARAM or PARAM VALUE<br/>
+ title TITLE<br/>
+ description DESC<br/>
+ safety_level &#8216;safe&#8217; (default) or &#8216;moderate&#8217; or &#8216;restricted&#8217;<br/>
+ content_type &#8216;photo&#8217; (default) or screenshot&#8217; or &#8216;other&#8217;<br/>
+ hidden &#8216;public&#8217; (default) or &#8216;hidden&#8217;<br/>
+ friend<br/>
+ public<br/>
+ family<br/>
  tags TAGS&#8230; [must be last param]</dd>
 <dt><code>urls.getGroup</code> <i>GROUP-ID</i></dt>
 <dd> Get the url of the group page for GROUP-ID.</dd>

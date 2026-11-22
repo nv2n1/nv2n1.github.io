@@ -13,25 +13,25 @@ description: "blazetheme – an introduction to BlazeBlogger theme creation"
 <h2>BlazeBlogger Theme Structure</h2>
 <p>To make it as easy to alter as possible, BlazeBlogger theme consists of two parts: the template file located in the <tt>&quot;.blaze/theme/&quot;</tt> and corresponding stylesheet in the <tt>&quot;.blaze/style/&quot;</tt> directory. This way, you can easily switch between different styles (e.g. bright and dark one) without even touching the template file, which generally does not tend to vary much.</p>
 <h2>Creating the Template File</h2>
-<p>The template file is where the page layout is described. It is a bare <font SIZE="-1">HTML</font> (or <font SIZE="-1">XHTML</font>, it really does not matter) file with various placeholders to be substituted by appropriate data. Most of the placeholders are just ordinary <font SIZE="-1">HTML</font> comments with a reserved strings in them. Note that while the case is not significant, the fact that the whole placeholder has to be on a single line is. </p>
+<p>The template file is where the page layout is described. It is a bare HTML (or XHTML, it really does not matter) file with various placeholders to be substituted by appropriate data. Most of the placeholders are just ordinary HTML comments with a reserved strings in them. Note that while the case is not significant, the fact that the whole placeholder has to be on a single line is. </p>
 <p> For the example usage, see the default template file. </p>
 <p> <i>List of Head Placeholders</i> </p>
-<p> These are the placeholders that usually appear in the <font SIZE="-1">HEAD</font> section of the <font SIZE="-1">HTML/XHTML</font> document.</p>
+<p> These are the placeholders that usually appear in the HEAD section of the HTML/XHTML document.</p>
 <dl>
 <dt><code>&lt;!&#8211; content-type &#8211;&gt;</code></dt>
-<dd>The Content-Type <font SIZE="-1">META</font> tag.</dd>
+<dd>The Content-Type META tag.</dd>
 <dt><code>&lt;!&#8211; generator &#8211;&gt;</code></dt>
-<dd>The Generator <font SIZE="-1">META</font> tag.</dd>
+<dd>The Generator META tag.</dd>
 <dt><code>&lt;!&#8211; date &#8211;&gt;</code></dt>
-<dd>The Date <font SIZE="-1">META</font> tag.</dd>
+<dd>The Date META tag.</dd>
 <dt><code>&lt;!&#8211; stylesheet &#8211;&gt;</code></dt>
-<dd>The Stylesheet <font SIZE="-1">LINK</font> tag.</dd>
+<dd>The Stylesheet LINK tag.</dd>
 <dt><code>&lt;!&#8211; rss &#8211;&gt;</code></dt>
-<dd>The <font SIZE="-1">RSS</font> feed <font SIZE="-1">LINK</font> tag.</dd>
+<dd>The RSS feed LINK tag.</dd>
 <dt><code>&lt;!&#8211; page-title &#8211;&gt;</code></dt>
-<dd>Current page title, usually used inside <font SIZE="-1">TITLE</font> element.</dd></dl>
+<dd>Current page title, usually used inside TITLE element.</dd></dl>
 <p> <i>List of Body Placeholders</i> </p>
-<p> These are the placeholders that usually appear in the <font SIZE="-1">BODY</font> section of the <font SIZE="-1">HTML/XHTML</font> document.</p>
+<p> These are the placeholders that usually appear in the BODY section of the HTML/XHTML document.</p>
 <dl>
 <dt><code>&lt;!&#8211; title &#8211;&gt;</code></dt>
 <dd>The blog title, see <tt>&quot;blog.title&quot;</tt> in the BlazeBlogger configuration.</dd>
@@ -64,7 +64,7 @@ description: "blazetheme – an introduction to BlazeBlogger theme creation"
 <dt><code>%tag[</code><i>name</i><code>]%</code></dt>
 <dd>Relative path to the tag with given <i>name</i>; to be used inside links. Note that this placeholder can safely appear in the post/page body as well and will be still taken into account.</dd></dl>
 <h2>Creating the Stylesheet</h2>
-<p>The stylesheet is just a plain <font SIZE="-1">CSS</font> file (<font SIZE="-1">CSS</font> 2.1 is recommended, although not required) with most of its parts dependent on elements, classes and IDs introduced in the theme file. Those few that are produced by the <code><a href="/docs/linux/man/1-blaze-make/">blaze-make</a></code>(1) are described below. </p>
+<p>The stylesheet is just a plain CSS file (CSS 2.1 is recommended, although not required) with most of its parts dependent on elements, classes and IDs introduced in the theme file. Those few that are produced by the <code><a href="/docs/linux/man/1-blaze-make/">blaze-make</a></code>(1) are described below. </p>
 <p> For the example usage, see the default stylesheet. </p>
 <p> <i>List of Obligatory Classes</i></p>
 <dl>
@@ -98,5 +98,5 @@ description: "blazetheme – an introduction to BlazeBlogger theme creation"
 <p><code><a href="/docs/linux/man/1-blaze-config/">blaze-config</a></code>(1), <code><a href="/docs/linux/man/1-blaze-make/">blaze-make</a></code>(1).</p>
 <h2>Author</h2>
 <p>Written by Jaromir Hradilek &lt;jhradilek [at] gmail.com&gt; </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
-<p> A copy of the license is included as a file called <font SIZE="-1">FDL</font> in the main directory of the BlazeBlogger source package.</p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
+<p> A copy of the license is included as a file called FDL in the main directory of the BlazeBlogger source package.</p>

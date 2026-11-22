@@ -23,8 +23,8 @@ description: "wbinfo – Query information from winbind daemon"
 <dd> <p> Attempt to authenticate a user via <code><a href="/docs/linux/man/8-winbindd/">winbindd</a></code>(8). This checks both authentication methods and reports its results. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  Do not be tempted to use this functionality for authentication in third-party applications. Instead use <code><a href="/docs/linux/man/1-ntlm_auth/">ntlm_auth</a></code>(1). </p>
  </dd></dl>
 </dl>

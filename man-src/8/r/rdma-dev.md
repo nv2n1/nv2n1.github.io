@@ -17,10 +17,10 @@ dev
 OPTIONS := {
     -V[ersion] |
     -d[etails] }</code></pre>
-<p> <code>rdma dev show</code> [ <i>DEV</i> ]<br />
- <code>rdma dev set</code> [ <i>DEV</i> ] <code>name</code> <code>NEWNAME</code><br />
- <code>rdma dev set</code> [ <i>DEV</i> ] <code>netns</code> <code>NSNAME</code><br />
- <code>rdma dev set</code> [ <i>DEV</i> ] <code>adaptive-moderation</code> <code>[on/off]</code><br />
+<p> <code>rdma dev show</code> [ <i>DEV</i> ]<br/>
+ <code>rdma dev set</code> [ <i>DEV</i> ] <code>name</code> <code>NEWNAME</code><br/>
+ <code>rdma dev set</code> [ <i>DEV</i> ] <code>netns</code> <code>NSNAME</code><br/>
+ <code>rdma dev set</code> [ <i>DEV</i> ] <code>adaptive-moderation</code> <code>[on/off]</code><br/>
  <code>rdma dev help</code> </p>
 <h2>Description</h2>
 <h3>rdma dev set &#8211; rename RDMA device or set network namespace or set RDMA device adaptive-moderation</h3>

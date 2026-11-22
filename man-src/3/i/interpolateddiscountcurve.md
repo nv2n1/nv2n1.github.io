@@ -15,8 +15,8 @@ description: "QuantLib::InterpolatedDiscountCurve – Term structure based on in
 <h3>Public Member Functions</h3>
 <p><code>InterpolatedDiscountCurve</code> (const std::vector&lt; <code>Date</code> &gt; &amp;dates, const std::vector&lt; <code>DiscountFactor</code> &gt; &amp;dfs, const <code>DayCounter</code> &amp;dayCounter, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), const Interpolator &amp;interpolator=Interpolator()) </p>
 <p> <code>Inspectors</code> </p>
-<p> <code>Date</code> <code>maxDate</code> () const<br />
- <i>the latest date for which the curve can return values </i><br />
+<p> <code>Date</code> <code>maxDate</code> () const<br/>
+ <i>the latest date for which the curve can return values </i><br/>
  const std::vector&lt; Time &gt; &amp; <code>times</code> () const </p>
 <p> const std::vector&lt; <code>Date</code> &gt; &amp; <code>dates</code> () const </p>
 <p> const std::vector&lt; <code>DiscountFactor</code> &gt; &amp; <code>discounts</code> () const </p>
@@ -25,7 +25,7 @@ description: "QuantLib::InterpolatedDiscountCurve – Term structure based on in
 <p><code>InterpolatedDiscountCurve</code> (const <code>DayCounter</code> &amp;, const Interpolator &amp;interpolator=Interpolator()) </p>
 <p> <code>InterpolatedDiscountCurve</code> (const <code>Date</code> &amp;referenceDate, const <code>DayCounter</code> &amp;, const Interpolator &amp;interpolator=Interpolator()) </p>
 <p> <code>InterpolatedDiscountCurve</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, const <code>DayCounter</code> &amp;, const Interpolator &amp;interpolator=Interpolator()) </p>
-<p> <code>DiscountFactor</code> <code>discountImpl</code> (Time) const<br />
+<p> <code>DiscountFactor</code> <code>discountImpl</code> (Time) const<br/>
  <i>discount calculation </i></p>
 <h3>Protected Attributes</h3>
 <p>std::vector&lt; <code>Date</code> &gt; <code>dates_</code> </p>

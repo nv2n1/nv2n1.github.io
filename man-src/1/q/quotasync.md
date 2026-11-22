@@ -10,8 +10,8 @@ description: "quotasync – synchronize in-kernel file system usage and limits t
 
 <p> quotasync &#8211; synchronize in-kernel file system usage and limits to disk format</p>
 <h2>SYNOPSIS</h2>
-<p> <code>quotasync</code> [ <code>-ug</code> ] <i>mount-point</i>&#8230;<br />
- <code>quotasync</code> [ <code>-ug</code> ] <code>-a</code><br />
+<p> <code>quotasync</code> [ <code>-ug</code> ] <i>mount-point</i>&#8230;<br/>
+ <code>quotasync</code> [ <code>-ug</code> ] <code>-a</code><br/>
  <code>quotasync</code> <code>-h</code> | <code>-V</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>quotasync</code> flushes file system usage and limits from kernel memory to quota files stored in the file system. By default only the user quotas are synchronized. </p>

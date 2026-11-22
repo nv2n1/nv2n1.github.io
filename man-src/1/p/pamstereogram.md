@@ -92,7 +92,7 @@ description: "pamstereogram – create a single-image stereogram from a PAM dept
 <dt>&bull;</dt>
 <dd> <i>eyesep</i> = 2 * <i>far</i></dd>
 <dt>&bull;</dt>
-<dd> <i>depth</i> = 2 * (<i>far</i> &amp;minus; <i>near</i>) /<br />
+<dd> <i>depth</i> = 2 * (<i>far</i> &amp;minus; <i>near</i>) /<br/>
 (2&nbsp;<wbr>*&nbsp;<wbr><i>far</i>&nbsp;<wbr>&amp;minus;&nbsp;<wbr><i>near</i>) </dd>
 <p> The number of distinct 3-D depths is <i>far</i> &amp;minus; <i>near</i> + 1. One might say that <code>-eyesep</code> and <code>-depth</code> are a more human-friendly way to specify stereoscopic parameters (distance between eyes and tradeoff between perceptibility and depth) while <code>-planes</code> is a more computer-centric way (pixel distances in the resulting stereogram). </p>
 <p> This option was new in Netpbm 10.59 (June 2012). </p>
@@ -179,7 +179,7 @@ description: "pamstereogram – create a single-image stereogram from a PAM dept
 <p> Mapped-texture Stereograms</p>
 </dd><dt>&bull;</dt>
 <dd>
-<p> Miscellaneous<br />
+<p> Miscellaneous<br/>
 &nbsp;<wbr>&nbsp;<wbr> </p>
 </dd><dt>&bull;</dt>
 <dd>

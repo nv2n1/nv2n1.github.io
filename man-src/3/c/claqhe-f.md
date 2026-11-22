@@ -10,7 +10,7 @@ description: "claqhe.f –"
 <p>claqhe.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>claqhe</code> (UPLO, N, A, LDA, S, SCOND, AMAX, EQUED)<br />
+<p>subroutine <code>claqhe</code> (UPLO, N, A, LDA, S, SCOND, AMAX, EQUED)<br/>
  <i></i><code>CLAQHE</code> scales a Hermitian matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claqhe (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )S, realSCOND, realAMAX, characterEQUED)</h3>

@@ -11,7 +11,7 @@ description: "cher2.f –"
 <p> cher2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cher2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br />
+<p> subroutine <code>cher2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br/>
  <i></i><code>CHER2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cher2 (characterUPLO, integerN, complexALPHA, complex, dimension(*)X, integerINCX, complex, dimension(*)Y, integerINCY, complex, dimension(lda,*)A, integerLDA)</h3>

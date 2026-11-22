@@ -9,7 +9,7 @@ description: "smtpctl, mailq – control the Simple Mail Transfer Protocol daemo
 
 <p><code>smtpctl</code>, <code>mailq</code> &#8211; control the Simple Mail Transfer Protocol daemon</p>
 <h2>Synopsis</h2>
-<p><code>smtpctl</code> <i>command</i> [<i>argument</i> &#8230;]<br />
+<p><code>smtpctl</code> <i>command</i> [<i>argument</i> &#8230;]<br/>
  <code>mailq</code></p>
 <h2>Description</h2>
 <p>The <code>smtpctl</code> program controls <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8). Commands may be abbreviated to the minimum unambiguous prefix; for example, <code>sh</code> ro for <code>show</code> routes. </p>

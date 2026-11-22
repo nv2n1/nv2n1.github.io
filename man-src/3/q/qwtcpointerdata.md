@@ -14,8 +14,8 @@ description: "QwtCPointerData –"
 <p> Inherits <code>QwtSeriesData&lt; QPointF &gt;</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtCPointerData</code> (const double *x, const double *y, size_t <code>size</code>) </p>
-<p> virtual QRectF <code>boundingRect</code> () const<br />
- <i>Calculate the bounding rectangle. </i><br />
+<p> virtual QRectF <code>boundingRect</code> () const<br/>
+ <i>Calculate the bounding rectangle. </i><br/>
  virtual size_t <code>size</code> () const </p>
 <p> virtual QPointF <code>sample</code> (size_t i) const </p>
 <p> const double * <code>xData</code> () const </p>
@@ -28,8 +28,8 @@ description: "QwtCPointerData –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> Array of x values<br />
- <i>y</i> Array of y values<br />
+<dd><i>x</i> Array of x values<br/>
+ <i>y</i> Array of y values<br/>
  <i>size</i> Size of the x and y arrays</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>

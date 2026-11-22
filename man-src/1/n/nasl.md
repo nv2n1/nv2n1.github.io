@@ -22,7 +22,7 @@ description: "nasl – Nessus Attack Scripting Language"
 <dt><code>-s</code></dt>
 <dd> Sets the return value of safe_checks() to 1. (See the nessusd manual to know what the safe checks are) </dd>
 <dt><code>-D</code></dt>
-<dd> Only run the description part of the script.<br />
+<dd> Only run the description part of the script.<br/>
 &nbsp;<wbr></dd>
 <dt><code>-L</code></dt>
 <dd> <code>Lint</code> the script (run extended checks). </dd>

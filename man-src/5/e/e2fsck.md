@@ -136,7 +136,7 @@ tag2 = value_e
 <p>max_count_problems = 16</p>
 <p>log_dir = /var/log/e2fsck</p>
 <p>log_filename = e2fsck-%N.%h.INFO.%D-%T</p>
-<p>log_dir_wait = true<br />
+<p>log_dir_wait = true<br/>
  The following recipe will cause an e2fsck logfile to be written to the directory /var/log/e2fsck, with a filename that contains the device name, the hostname of the system, the date, and time: e.g., &quot;e2fsck-sda3.server.INFO.20120314-112142&quot;. If the directory containing /var/log is located on the root file system which is initially mounted read-only, then the output will be saved in memory and written out once the root file system has been remounted read/write. To avoid too much detail from being written to the serial console (which could potentially slow down the boot sequence), only print no more than 16 instances of each type of file system corruption. </p>
 <pre><code>[options]
 max_count_problems = 16

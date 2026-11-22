@@ -25,7 +25,7 @@ munindoc - Munin documentation
 
 <h2>AUTHOR</h2>
 
- (C) 2008-2009 Nicolai Langfeldt, Redpill Linpro <font SIZE="-1">AS. ..</font>.But all the work is handed off to the perldoc command once we have located the Munin documentation files.
+ (C) 2008-2009 Nicolai Langfeldt, Redpill Linpro AS. ...But all the work is handed off to the perldoc command once we have located the Munin documentation files.
 
 <h2>LICENSE</h2>
 

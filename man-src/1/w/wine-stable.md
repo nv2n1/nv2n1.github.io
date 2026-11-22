@@ -10,8 +10,8 @@ description: "wine – run Windows programs on Unix"
 
 <p> wine &#8211; run Windows programs on Unix </p>
 <h2>SYNOPSIS</h2>
-<p> <code>wine</code> <i>program </i>[<i>arguments</i>]<br />
- <code>wine &#8211;help</code><br />
+<p> <code>wine</code> <i>program </i>[<i>arguments</i>]<br/>
+ <code>wine &#8211;help</code><br/>
  <code>wine &#8211;version</code> </p>
 <p> For instructions on passing arguments to Windows programs, please see the <code>PROGRAM/ARGUMENTS</code> section of the man page.</p>
 <h2>DESCRIPTION</h2>
@@ -77,7 +77,7 @@ description: "wine – run Windows programs on Unix"
 </dt><dd>
 <p> For a permanent alternative, edit (create if needed) the <code>PATH</code> value under the <code>HKEY_CURRENT_USER\Environment</code> registry key.</dd></dl>
 <dt><code>WINEARCH</code></dt>
-<dd> Specifies the Windows architecture to support. It can be set either to <code>win32</code> (support only 32-bit applications), or to <code>win64</code> (support both 64-bit applications and 32-bit ones in WoW64 mode).<br />
+<dd> Specifies the Windows architecture to support. It can be set either to <code>win32</code> (support only 32-bit applications), or to <code>win64</code> (support both 64-bit applications and 32-bit ones in WoW64 mode).<br/>
  The architecture supported by a given Wine prefix is set at prefix creation time and cannot be changed afterwards. When running with an existing prefix, Wine will refuse to start if <code>WINEARCH</code> doesn&#8217;t match the prefix architecture.</dd>
 <dt><code>DISPLAY</code></dt>
 <dd> Specifies the X11 display to use.</dd>
@@ -102,7 +102,7 @@ description: "wine – run Windows programs on Unix"
 <dt><i>/usr/lib/x86_64-linux-gnu/wine</i></dt>
 <dd> Directory containing Wine shared libraries</dd>
 <dt><i>$WINEPREFIX/dosdevices</i></dt>
-<dd> Directory containing the DOS device mappings. Each file in that directory is a symlink to the Unix device file implementing a given device. For instance, if COM1 is mapped to <i>/dev/ttyS0</i> you&#8217;d have a symlink of the form <i>$WINEPREFIX/dosdevices/com1</i> -&gt; <i>/dev/ttyS0</i>.<br />
+<dd> Directory containing the DOS device mappings. Each file in that directory is a symlink to the Unix device file implementing a given device. For instance, if COM1 is mapped to <i>/dev/ttyS0</i> you&#8217;d have a symlink of the form <i>$WINEPREFIX/dosdevices/com1</i> -&gt; <i>/dev/ttyS0</i>.<br/>
  DOS drives are also specified with symlinks; for instance if drive D: corresponds to the CDROM mounted at <i>/mnt/cdrom</i>, you&#8217;d have a symlink <i>$WINEPREFIX/dosdevices/d:</i> -&gt; <i>/mnt/cdrom</i>. The Unix device corresponding to a DOS drive can be specified the same way, except with &#8216;::&#8217; instead of &#8216;:&#8217;. So for the previous example, if the CDROM device is mounted from <i>/dev/hdc</i>, the corresponding symlink would be <i>$WINEPREFIX/dosdevices/d::</i> -&gt; <i>/dev/hdc</i>.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Wine is available thanks to the work of many developers. For a listing of the authors, please see the file <i>AUTHORS</i> in the top-level directory of the source distribution.</p>
@@ -114,5 +114,5 @@ description: "wine – run Windows programs on Unix"
 <h2>AVAILABILITY</h2>
 <p> The most recent public version of <code>wine</code> is available through WineHQ, the <code>Wine development headquarters</code></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-wineserver/">wineserver</a></code>(1), <code><a href="/docs/linux/man/1-winedbg/">winedbg</a></code>(1),<br />
+<p> <code><a href="/docs/linux/man/1-wineserver/">wineserver</a></code>(1), <code><a href="/docs/linux/man/1-winedbg/">winedbg</a></code>(1),<br/>
  <code>Wine documentation and support</code> </p>

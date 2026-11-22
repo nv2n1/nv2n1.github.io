@@ -40,7 +40,7 @@ description: "tunelp – set various parameters for the lp device"
 <h2>Bugs</h2>
 <p>By some unfortunate coincidence the ioctl LPSTRICT of 2.0.36 has the same number as the ioctl LPTRUSTIRQ introduced in 2.1.131. So, use of the -T option on a 2.0.36 kernel with an tunelp compiled under 2.1.131 or later may have unexpected effects. </p>
 <h2>Files</h2>
-<p><i>/dev/lp?</i><br />
+<p><i>/dev/lp?</i><br/>
  <i>/proc/parport/*/*</i></p>
 <h2>Availability</h2>
 <p>The tunelp command is part of the util-linux package and is available from <a href="ftp://ftp.kernel.org/pub/linux/utils/util-linux/.">ftp://ftp.kernel.org/pub/linux/utils/util-linux/.</a></p>

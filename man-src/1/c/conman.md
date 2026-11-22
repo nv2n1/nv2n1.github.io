@@ -80,11 +80,11 @@ description: "conman – ConMan client"
 <h2>ENVIRONMENT</h2>
 <p> The following environment variables override the default settings.</p>
 <dl>
-<dt><font SIZE="-1">CONMAN_HOST</font></dt>
+<dt>CONMAN_HOST</dt>
 <dd> Specifies the hostname or IP address at which to contact <code>conmand</code>, but may be overridden by the &#8216;<code>-d</code>&#8216; command-line option. A port number separated by a colon may follow the hostname (i.e., <i>host:port</i>), although the CONMAN_PORT environment variable takes precedence. If not set, the default host [127.0.0.1] will be used.</dd>
-<dt><font SIZE="-1">CONMAN_PORT</font></dt>
+<dt>CONMAN_PORT</dt>
 <dd> Specifies the port on which to contact <code>conmand</code>, but may be overridden by the &#8216;<code>-d</code>&#8216; command-line option. If not set, the default port [7890] will be used.</dd>
-<dt><font SIZE="-1">CONMAN_ESCAPE</font></dt>
+<dt>CONMAN_ESCAPE</dt>
 <dd> The first character of this variable specifies the escape character, but may be overridden by the &#8216;<code>-e</code>&#8216; command-line option. If not set, the default escape character [<code>&amp;</code>] will be used. </dd>
 </dl>
 <h2>SECURITY</h2>
@@ -92,7 +92,7 @@ description: "conman – ConMan client"
 <h2>AUTHOR</h2>
 <p> Chris Dunlap &lt;cdunlap [at] llnl.gov&gt; </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2007-2011 Lawrence Livermore National Security, LLC.<br />
+<p> Copyright (C) 2007-2011 Lawrence Livermore National Security, LLC.<br/>
  Copyright (C) 2001-2007 The Regents of the University of California. </p>
 <p> ConMan is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>
 <h2>SEE ALSO</h2>

@@ -31,7 +31,7 @@ description: "asn1_get_octet_der – API function"
 <h2>RETURNS</h2>
 <p> Returns <code>ASN1_SUCCESS</code> on success, or an error.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>

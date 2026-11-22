@@ -13,7 +13,7 @@ description: "btrfs-scrub – scrub btrfs filesystem, verify block checksums"
 <h2>Description</h2>
 <p><code>btrfs scrub</code> is used to scrub a btrfs filesystem, which will read all data and metadata blocks from all devices and verify checksums. Automatically repair corrupted blocks if there&#8217;s a correct copy available.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Scrub is not a filesystem checker (fsck) and does not verify nor repair structural damage in the filesystem. It really only checks checksums of data and tree blocks, it doesn&#8217;t ensure the content of tree blocks is valid and consistent. There&#8217;s some validation performed when metadata blocks are read from disk but it&#8217;s not extensive and cannot substitute full <i>btrfs check</i> run.  The user is supposed to run it manually or via a periodic system service. The recommended period is a month but could be less. The estimated device bandwidth utilization is about 80% on an idle filesystem. The IO priority class is by default <i>idle</i> so background scrub should not significantly interfere with normal filesystem operation. The scrubbing status is recorded in <i>/var/lib/btrfs/</i> in textual files named <i>scrub.status.UUID</i> for a filesystem identified by the given UUID. (Progress state is communicated through a named pipe in file <i>scrub.progress.UUID</i> in the same directory.) The status file is updated every 5 seconds. A resumed scrub will continue from the last saved position.</dd>
 <h2>Subcommand</h2>
 <p><code>cancel</code> <i>&lt;path&gt;</i>|<i>&lt;device&gt;</i></p>

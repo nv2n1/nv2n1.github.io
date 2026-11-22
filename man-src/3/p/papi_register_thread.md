@@ -13,14 +13,14 @@ description: "PAPI_register_thread –"
 <h2>Detailed Description</h2>
 <p><code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt;<br />
+<dd>#include &lt;<code>papi.h</code>&gt;<br/>
  int <code>PAPI_register_thread</code> (void);</dd></dl>
 <p> <code>PAPI_register_thread()</code> should be called when the user wants to force PAPI to initialize a thread that PAPI has not seen before. </p>
 <p> Usually this is not necessary as PAPI implicitly detects the thread when an eventset is created or other thread local PAPI functions are called. However, it can be useful for debugging and performance enhancements in the run-time systems of performance tools. </p>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_ENOMEM</i> Space could not be allocated to store the new thread information.<br />
- <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.<br />
+<dd><i>PAPI_ENOMEM</i> Space could not be allocated to store the new thread information.<br/>
+ <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.<br/>
  <i>PAPI_ECMP</i> Hardware counters for this thread could not be initialized.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

@@ -11,7 +11,7 @@ description: "dpbequ.f –"
 <p> dpbequ.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dpbequ</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, INFO)<br />
+<p> subroutine <code>dpbequ</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, INFO)<br/>
  <i></i><code>DPBEQU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpbequ (characterUPLO, integerN, integerKD, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )S, double precisionSCOND, double precisionAMAX, integerINFO)</h3>

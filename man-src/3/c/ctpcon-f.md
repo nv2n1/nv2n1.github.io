@@ -10,7 +10,7 @@ description: "ctpcon.f –"
 <p>ctpcon.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ctpcon</code> (NORM, UPLO, DIAG, N, AP, RCOND, WORK, RWORK, INFO)<br />
+<p>subroutine <code>ctpcon</code> (NORM, UPLO, DIAG, N, AP, RCOND, WORK, RWORK, INFO)<br/>
  <i></i><code>CTPCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctpcon (characterNORM, characterUPLO, characterDIAG, integerN, complex, dimension( * )AP, realRCOND, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

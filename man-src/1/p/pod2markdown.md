@@ -28,7 +28,7 @@ pod2markdown - Convert POD text to Markdown
 
 <h2>DESCRIPTION</h2>
 
- This program uses Pod::Markdown to convert <font SIZE="-1">POD</font> into Markdown sources. 
+ This program uses Pod::Markdown to convert POD into Markdown sources. 
 
  It accepts two optional arguments:
 <dl>

@@ -16,8 +16,8 @@ description: "dictSearch – search for value in dictionary."
 void *dictSearch(dictCtx dict, const char *id, void **plock);
 </pre>
 <h2>Arguments</h2>
-<p> dict &#8211; dictionary to search in.<br />
- id &#8211; identifier of item to find.<br />
+<p> dict &#8211; dictionary to search in.<br/>
+ id &#8211; identifier of item to find.<br/>
  plock &#8211; place for value lock (or NULL). </p>
 <h2>Description</h2>
 <p> Searches for &lt;id&gt; in &lt;dict&gt;, and returns value if found, or NULL if not. If &lt;plock&gt; is non-NULL, then the lock returned in &lt;plock&gt; will be associated with the returned value. Until this lock is passed to dictReleaseLock(), the value will not be passed to the dictCleanupFunc callback (see dictCleanup()). </p>

@@ -13,18 +13,18 @@ description: "sc::DerivCenters –"
 <pre><code>
 #include &lt;dercent.h&gt;
 Public Member Functions</code></pre>
-<p> <code>DerivCenters</code> ()<br />
+<p> <code>DerivCenters</code> ()<br/>
  <i>Construct a new, empty </i><code>DerivCenters</code> object. <code>Routines to Modify DerivCenters</code> </p>
-<p>&nbsp;<wbr><br />
- void <code>clear</code> ()<br />
- <i>Clear the list of centers. </i><br />
- void <code>add_center</code> (int center, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;bs, int shell)<br />
- <i>Add a center using a basis set and the shell number. </i><br />
- void <code>add_center</code> (int center, int atom)<br />
- <i>Add a center using the atom number. </i><br />
- void <code>add_omitted</code> (int center, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;bs, int shell)<br />
- <i>Add the omitted center using a basis set and the shell number. </i><br />
- void <code>add_omitted</code> (int center, int atom)<br />
+<p>&nbsp;<wbr><br/>
+ void <code>clear</code> ()<br/>
+ <i>Clear the list of centers. </i><br/>
+ void <code>add_center</code> (int center, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;bs, int shell)<br/>
+ <i>Add a center using a basis set and the shell number. </i><br/>
+ void <code>add_center</code> (int center, int atom)<br/>
+ <i>Add a center using the atom number. </i><br/>
+ void <code>add_omitted</code> (int center, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;bs, int shell)<br/>
+ <i>Add the omitted center using a basis set and the shell number. </i><br/>
+ void <code>add_omitted</code> (int center, int atom)<br/>
  <i>Add the omitted center using the atom number. </i> <code>Routines to Query DerivCenters</code> </p>
 <p>&nbsp;<wbr> </p>
 <pre><code>int n () const
@@ -40,24 +40,24 @@ int omitted_atom () const</code></pre>
 <h3>void sc::DerivCenters::add_center (int center, int atom)</h3>
 <p>Add a center using the atom number. <code>Parameters:</code></p>
 <dl>
-<dd><i>center</i> The center number (between 0 and 3 inclusive).<br />
+<dd><i>center</i> The center number (between 0 and 3 inclusive).<br/>
  <i>atom</i> The center within a <code>GaussianBasisSet</code>.</dd></dl>
 <h3>void sc::DerivCenters::add_center (int center, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp; bs, int shell)</h3>
 <p>Add a center using a basis set and the shell number. <code>Parameters:</code></p>
 <dl>
-<dd><i>center</i> The center number (between 0 and 3 inclusive).<br />
- <i>bs</i> The basis set for this center.<br />
+<dd><i>center</i> The center number (between 0 and 3 inclusive).<br/>
+ <i>bs</i> The basis set for this center.<br/>
  <i>shell</i> The shell number for this center.</dd></dl>
 <h3>void sc::DerivCenters::add_omitted (int center, int atom)</h3>
 <p>Add the omitted center using the atom number. <code>Parameters:</code></p>
 <dl>
-<dd><i>center</i> The center number (between 0 and 3 inclusive).<br />
+<dd><i>center</i> The center number (between 0 and 3 inclusive).<br/>
  <i>atom</i> The center within a <code>GaussianBasisSet</code>.</dd></dl>
 <h3>void sc::DerivCenters::add_omitted (int center, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp; bs, int shell)</h3>
 <p>Add the omitted center using a basis set and the shell number. <code>Parameters:</code></p>
 <dl>
-<dd><i>center</i> The center number (between 0 and 3 inclusive).<br />
- <i>bs</i> The basis set for this center.<br />
+<dd><i>center</i> The center number (between 0 and 3 inclusive).<br/>
+ <i>bs</i> The basis set for this center.<br/>
  <i>shell</i> The shell number for this center.</dd></dl>
 <h3>int sc::DerivCenters::atom (int i) const [inline]<code>Parameters:</code></h3>
 <dl>

@@ -10,7 +10,7 @@ description: "pnmgamma – perform gamma correction on a portable anymap"
 
 <p> pnmgamma &#8211; perform gamma correction on a portable anymap</p>
 <h2>SYNOPSIS</h2>
-<p> <code>pnmgamma </code> [<code>-ungamma</code>] [<code>-cieramp</code>|<code>-srgbramp</code>] [<i>value</i> [<i>pnmfile</i>]]<br />
+<p> <code>pnmgamma </code> [<code>-ungamma</code>] [<code>-cieramp</code>|<code>-srgbramp</code>] [<i>value</i> [<i>pnmfile</i>]]<br/>
  <code>pnmgamma</code> [<code>-ungamma</code>] [<code>-cieramp</code>|<code>-srgbramp</code>] <i>redgamma greengamma bluegamma</i> [<i>pnmfile</i>] </p>
 <h2>DESCRIPTION</h2>
 <p> Performs gamma correction on pseudo-PNM images. </p>

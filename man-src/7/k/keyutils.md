@@ -31,7 +31,7 @@ description: "keyutils – in-kernel key management utilities"
 <p> The kernel has the ability to upcall to userspace to fabricate new keys. This can be triggered by <code>request_key</code>(), but userspace is better off using <code>add_key</code>() instead if it possibly can. </p>
 <p> The upcalling mechanism is usually routed via the <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8) program. What this does with any particular key is configurable in: </p>
 <dl>
-<dd><i>/etc/request-key.conf</i><br />
+<dd><i>/etc/request-key.conf</i><br/>
  <i>/etc/request-key.d/</i></dd></dl>
 <p> See the <code><a href="/docs/linux/man/5-request-key-conf/">request-key.conf</a></code>(5) and the <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8) manual pages for more information.</p>
 <h2>See Also</h2>

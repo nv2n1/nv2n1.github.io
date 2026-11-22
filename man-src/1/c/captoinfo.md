@@ -430,5 +430,5 @@ description: "captoinfo – convert a termcap description into a terminfo descri
 <p> <code><a href="/docs/linux/man/1-infocmp/">infocmp</a></code>(1), <code>ncurses</code>(3NCURSES), <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5) </p>
 <p> This describes <code>ncurses</code> version 6.3 (patch 20211021).</p>
 <h2>AUTHOR</h2>
-<p> Eric S. Raymond &lt;esr [at] snark.thyrsus.com&gt; and<br />
+<p> Eric S. Raymond &lt;esr [at] snark.thyrsus.com&gt; and<br/>
  Thomas E. Dickey &lt;dickey [at] invisible-island.net&gt; </p>

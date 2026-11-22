@@ -38,7 +38,7 @@ $ pwhich[-a][-v] programname[programname...]
 
 <h2>SUPPORT</h2>
 
- Bugs should be reported via the <font SIZE="-1">CPAN</font> bug tracker at 
+ Bugs should be reported via the CPAN bug tracker at 
 
  &lt;<a rel="nofollow" HREF="http://rt.cpan.org/NoAuth/ReportBug.html?Queue=File-Which">http://rt.cpan.org/NoAuth/ReportBug.html?Queue=File-Which</a>&gt; 
 

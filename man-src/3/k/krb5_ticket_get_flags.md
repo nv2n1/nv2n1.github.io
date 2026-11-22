@@ -10,7 +10,7 @@ description: "Heimdal Kerberos 5 ticket functions –"
 
 <p> Heimdal Kerberos 5 ticket functions &#8211; </p>
 <h3>Functions</h3>
-<p> KRB5_LIB_FUNCTION unsigned<br />
+<p> KRB5_LIB_FUNCTION unsigned<br/>
  long KRB5_LIB_CALL <code>krb5_ticket_get_flags</code> (krb5_context, const krb5_ticket *)&quot; </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -19,7 +19,7 @@ description: "Heimdal Kerberos 5 ticket functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
  <i>ticket</i> Kerberos ticket</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

@@ -4469,7 +4469,7 @@ add_executable(... $&lt;TARGET_OBJECTS:objlib&gt; ...)
 </code></pre>
 <p>This creates a test <code>mytest</code> whose command runs a <code>testDriver</code> tool passing the configuration name and the full path to the executable file produced by target <code>myexe</code>. </p>
 <p> <code>NOTE:</code> CMake will generate tests only if the <code>enable_testing()</code> command has been invoked. The <code>CTest</code> module invokes the command automatically unless the <code>BUILD_TESTING</code> option is turned <code>OFF</code>. </p>
-<p> <center> ----<br />
+<p> <center> ----<br/>
  </center> </p>
 <pre><code>add_test(&lt;name&gt; &lt;command&gt; [&lt;arg&gt;...])
 </code></pre>

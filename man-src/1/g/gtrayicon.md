@@ -29,16 +29,16 @@ description: "gtrayicon – Generic tray icon for GNOME"
 <dd> start in &#8216;activated&#8217; state (default: &#8216;deactivated&#8217; state) </dd>
 </dl>
 <h2>EXAMPLE</h2>
-<p> Activate action: start webfs (web server) setting a pid file<br />
+<p> Activate action: start webfs (web server) setting a pid file<br/>
  Deactivate action: kill that webfs instance </p>
 <dl>
 <dt>gtrayicon \</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&#8211;activate=&quot;/usr/bin/webfsd -k&nbsp;<wbr>/tmp/pid.file -r&nbsp;<wbr>/var/www&quot;&nbsp;<wbr>\<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211;activate=&quot;/usr/bin/webfsd -k&nbsp;<wbr>/tmp/pid.file -r&nbsp;<wbr>/var/www&quot;&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;deactivate=&quot;cat&nbsp;<wbr>/tmp/pid.file | xargs -ipid kill -TERM pid&quot; </dd>
 </dl>
 <h2>MENU</h2>
-<p> For an example on how to write a menu file,see<br />
+<p> For an example on how to write a menu file,see<br/>
  /usr/share/doc/gtrayicon/examples/sample.menu </p>
 <h2>SEE ALSO</h2>
 <p> Website: <a rel="nofollow" href="http://gtrayicon.sourceforge.net/">http://gtrayicon.sourceforge.net/</a> </p>

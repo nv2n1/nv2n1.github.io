@@ -10,9 +10,9 @@ description: "pmdanginx – nginx performance metrics domain agent (PMDA)"
 
 <p> <code>pmdanginx</code> &#8211; nginx performance metrics domain agent (PMDA)</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdanginx</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports performance metrics from <code><a href="/docs/linux/man/8-nginx/">nginx</a></code>(8) &#8211; an HTTP and reverse proxy server, a mail proxy server, and a generic TCP proxy server.</p>
+<p> <code>pmdanginx</code> is a Performance Metrics Domain Agent (PMDA) which exports performance metrics from <code><a href="/docs/linux/man/8-nginx/">nginx</a></code>(8) &#8211; an HTTP and reverse proxy server, a mail proxy server, and a generic TCP proxy server.</p>
 <h2>INSTALLATION</h2>
-<p> This <font SIZE="-1">PMDA</font> requires that the <code>nginx</code> stub_status module is active and available at <a rel="nofollow" href="http://localhost/nginx_status">http://localhost/nginx_status</a> </p>
+<p> This PMDA requires that the <code>nginx</code> stub_status module is active and available at <a rel="nofollow" href="http://localhost/nginx_status">http://localhost/nginx_status</a> </p>
 <p> In order to enable this module, the &quot;server&quot; section of the <i>nginx.conf</i> configuration file should contain the following. </p>
 <pre><code>
 location / nginx_status
@@ -25,9 +25,9 @@ location / nginx_status
 }
 </code></pre>
 <p> Instrumentation availability can be verified using these commands (compile-time then run-time checks): </p>
-<p>#&nbsp;<wbr>nginx -V 2&gt;&amp;1 | grep -o with-http_stub_status_module<br />
+<p>#&nbsp;<wbr>nginx -V 2&gt;&amp;1 | grep -o with-http_stub_status_module<br/>
 #&nbsp;<wbr>curl&nbsp;<wbr><a rel="nofollow" href="http://localhost/nginx_status">http://localhost/nginx_status</a> </p>
-<p> Install the nginx <font SIZE="-1">PMDA</font> by using the Install script as root: </p>
+<p> Install the nginx PMDA by using the Install script as root: </p>
 <p>#&nbsp;<wbr>cd&nbsp;<wbr>$PCP_PMDAS_DIR/nginx </p>
 <p>#&nbsp;<wbr>./Install </p>
 <p> To uninstall, do the following as root: </p>

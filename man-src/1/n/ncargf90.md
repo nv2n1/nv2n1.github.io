@@ -37,6 +37,6 @@ description: "ncargf90 – Command for compiling Fortran code that uses the NCAR
 <h2>SEE ALSO</h2>
 <p> Online: <code>ictrans(1NCARG),</code> <code>gcaps(1NCARG),</code> <code>ncargcc(1NCARG),</code> <code>nhlcc(1NCARG),</code> <code>nhlf90(1NCARG),</code> <code>ncargintro(5NCARG)</code> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2000<br />
- University Corporation for Atmospheric Research<br />
+<p> Copyright (C) 2000<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement. </p>

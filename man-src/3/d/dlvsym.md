@@ -12,7 +12,7 @@ description: "dlsym, dlvsym – obtain address of a symbol in a shared object or
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;dlfcn.h&gt;</code> </p>
 <p> <code>void *dlsym(void *</code><i>handle</i><code>, const char *</code><i>symbol</i><code>);</code> </p>
-<p> <code>#define _GNU_SOURCE</code><br />
+<p> <code>#define _GNU_SOURCE</code><br/>
  <code>#include &lt;dlfcn.h&gt;</code> </p>
 <p> <code>void *dlvsym(void *</code><i>handle</i><code>, char *</code><i>symbol</i><code>, char *</code><i>version</i><code>);</code> </p>
 <p> Link with <i>-ldl</i>.</p>

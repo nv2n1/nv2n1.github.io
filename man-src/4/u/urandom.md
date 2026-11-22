@@ -29,8 +29,8 @@ int ioctl(fd, RNDrequest, param);</code></pre>
 <p>If your system does not have <i>/dev/random</i> and <i>/dev/urandom</i> created already, they can be created with the following commands: </p>
 <p> mknod -m 666 /dev/random c 1 8 mknod -m 666 /dev/urandom c 1 9 chown root:root /dev/random /dev/urandom </p>
 <p> When a Linux system starts up without much operator interaction, the entropy pool may be in a fairly predictable state. This reduces the actual amount of noise in the entropy pool below the estimate. In order to counteract this effect, it helps to carry entropy pool information across shut-downs and start-ups. To do this, add the lines to an appropriate script which is run during the Linux system start-up sequence: </p>
-<p> echo &quot;Initializing random number generator&#8230;&quot; random_seed=/var/run/random-seed # Carry a random seed from start-up to start-up # Load and then save the whole entropy pool if [ -f $random_seed ]; then<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cat&nbsp;$random_seed&nbsp;&gt;/dev/urandom else<br />
+<p> echo &quot;Initializing random number generator&#8230;&quot; random_seed=/var/run/random-seed # Carry a random seed from start-up to start-up # Load and then save the whole entropy pool if [ -f $random_seed ]; then<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cat&nbsp;$random_seed&nbsp;&gt;/dev/urandom else<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;touch&nbsp;$random_seed fi chmod 600 $random_seed poolfile=/proc/sys/kernel/random/poolsize [ -r $poolfile ] &amp;&amp; bits=$(cat $poolfile) || bits=4096 bytes=$(expr $bits / 8) dd if=/dev/urandom of=$random_seed count=1 bs=$bytes </p>
 <p> Also, add the following lines in an appropriate script which is run during the Linux system shutdown: </p>
 <p> # Carry a random seed from shut-down to start-up # Save the whole entropy pool echo &quot;Saving random seed&#8230;&quot; random_seed=/var/run/random-seed touch $random_seed chmod 600 $random_seed poolfile=/proc/sys/kernel/random/poolsize [ -r $poolfile ] &amp;&amp; bits=$(cat $poolfile) || bits=4096 bytes=$(expr $bits / 8) dd if=/dev/urandom of=$random_seed count=1 bs=$bytes </p>
@@ -67,15 +67,15 @@ int ioctl(fd, RNDrequest, param);</code></pre>
 <dd>Removed in Linux 2.6.9.</dd>
 <dt><code>RNDADDENTROPY</code></dt>
 <dd>Add some additional entropy to the input pool, incrementing the entropy count. This differs from writing to <i>/dev/random</i> or <i>/dev/urandom</i>, which only adds some data but does not increment the entropy count. The following structure is used:</dd>
-<dd>struct rand_pool_info {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entropy_count;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;buf_size;<br />
+<dd>struct rand_pool_info {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;entropy_count;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;buf_size;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32&nbsp;<wbr>&nbsp;buf[0]; };</dd>
 <dd>Here <i>entropy_count</i> is the value added to (or subtracted from) the entropy count, and <i>buf</i> is the buffer of size <i>buf_size</i> which gets added to the entropy pool.</dd>
 <dt><code>RNDZAPENTCNT</code>, <code>RNDCLEARPOOL</code></dt>
 <dd>Zero the entropy count of all pools and add some system data (such as wall clock) to the pools.</dd></dl>
 <h2>Files</h2>
-<p><i>/dev/random</i><br />
+<p><i>/dev/random</i><br/>
  <i>/dev/urandom</i></p>
 <h2>Notes</h2>
 <p>For an overview and comparison of the various interfaces that can be used to obtain randomness, see <code><a href="/docs/linux/man/7-random/">random</a></code>(7).</p>

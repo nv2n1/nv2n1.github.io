@@ -15,7 +15,7 @@ description: "ndbd – the MySQL Cluster data node daemon"
 <p><code>ndbd</code></p>
 <dd>is the process that is used to handle all the data in tables using the NDB Cluster storage engine. This is the process that empowers a data node to accomplish distributed transaction handling, node recovery, checkpointing to disk, online backup, and related tasks. In a MySQL Cluster, a set of <code>ndbd</code> processes cooperate in handling data. These processes can execute on the same computer (host) or on different computers. The correspondences between data nodes and Cluster hosts is completely configurable. The following table includes command options specific to the MySQL Cluster data node program <code>ndbd</code>. Additional descriptions follow the table. For options common to all MySQL Cluster programs, see Section 17.4.2, lqOptions Common to MySQL Cluster Programsrq.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  All of these options also apply to the multi-threaded version of this program &#8212; <code>ndbmtd</code>, which is available in MySQL Cluster NDB 7.0 &#8212; and you may substitute lq<code>ndbmtd</code>rq for lq<code>ndbd</code>rq wherever the latter occurs in this section.  For options common to all NDBCLUSTER programs, see Section 17.4.2, lqOptions Common to MySQL Cluster Programsrq.</dd>
 <dl>
 <dd>* <code>&#8211;bind-address</code> </dd>
@@ -100,7 +100,7 @@ description: "ndbd – the MySQL Cluster data node daemon"
 <dl>
 <dd>Use of this option prevents the StartPartialTimeout and StartPartitionedTimeout configuration parameters from having any effect.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
+<dd> <code>Important</code> <br/>
  This option does <i>not</i> affect either of the following:</dd>
 <dl>
 <dd>* Backup files that have already been created by the affected node</dd></dl>
@@ -143,9 +143,9 @@ description: "ndbd – the MySQL Cluster data node daemon"
 shell&gt; <code>ndbd --ndb-nodeid=4 --nowait-nodes=3 --initial-start</code>
 shell&gt; <code>ndbd --ndb-nodeid=5 --nowait-nodes=3 --initial-start</code></pre>
 </dd></dl>
-<p> Prior to MySQL 5.1.19, it was not possible to perform DDL operations involving Disk Data tables on a partially started cluster. (See m[blue]<code>Bug#24631</code>m[]<font SIZE="-2">[1]</font>.) When using this option, you must also specify the node ID for the data node being started with the <code>&#8211;ndb-nodeid</code> option. This option was added in MySQL 5.1.11.</p>
+<p> Prior to MySQL 5.1.19, it was not possible to perform DDL operations involving Disk Data tables on a partially started cluster. (See m[blue]<code>Bug#24631</code>m[][1].) When using this option, you must also specify the node ID for the data node being started with the <code>&#8211;ndb-nodeid</code> option. This option was added in MySQL 5.1.11.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
+<dd> <code>Important</code> <br/>
  Do not confuse this option with the <code>&#8211;nowait-nodes</code> option added for <code>ndb_mgmd</code> in MySQL Cluster NDB 7.0.10, which can be used to allow a cluster configured with multiple management servers to be started without all management servers being online. </dd>
 <dl>
 <dd>* <code>&#8211;nowait-nodes=</code><i>node_id_1</i><code>[, </code><i>node_id_2</i><code>[, &#8230;]]</code> </dd>
@@ -210,7 +210,7 @@ shell&gt; <code>ndbd --ndb-nodeid=5 --nowait-nodes=3 --initial-start</code></pre
 <td> TRUE </td>
 </tr>
 </table>
-<p> Instructs <code>ndbd</code> not to start as a daemon process. This is useful when <code>ndbd</code> is being debugged and you want output to be redirected to the screen. As of MySQL Cluster NDB 7.0.8, the default behavior for <code>ndbd</code> and <code>ndbmtd</code> on Windows is to run in the foreground, making this option unnecessary on Windows platforms. (m[blue]<code>Bug#45588</code>m[]<font SIZE="-2">[2]</font>)</dl>
+<p> Instructs <code>ndbd</code> not to start as a daemon process. This is useful when <code>ndbd</code> is being debugged and you want output to be redirected to the screen. As of MySQL Cluster NDB 7.0.8, the default behavior for <code>ndbd</code> and <code>ndbmtd</code> on Windows is to run in the foreground, making this option unnecessary on Windows platforms. (m[blue]<code>Bug#45588</code>m[][2])</dl>
 <dl>
 <dd>* <code>&#8211;nostart</code>, <code>-n</code> </dd>
 <table BORDER>
@@ -250,9 +250,9 @@ ProcessID: 14909
 TraceFile: ndb_2_trace.log.2
 ***EOM***</pre>
 </dd></dl>
-<p> Listings of possible <code>ndbd</code> exit codes and messages generated when a data node process shuts down prematurely can be found in m[blue]<code>ndbd Error Messages</code>m[]<font SIZE="-2">[3]</font>.</p>
+<p> Listings of possible <code>ndbd</code> exit codes and messages generated when a data node process shuts down prematurely can be found in m[blue]<code>ndbd Error Messages</code>m[][3].</p>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
+<dd> <code>Important</code> <br/>
  <i>The last entry in the error log file is not necessarily the newest one</i> (nor is it likely to be). Entries in the error log are <i>not</i> listed in chronological order; rather, they correspond to the order of the trace files as determined in the ndb_<i>node_id</i>_trace.log.next file (see below). Error log entries are thus overwritten in a cyclical and not sequential fashion. </dd>
 <dl>
 <dd>* ndb_<i>node_id</i>_trace.log.<i>trace_id</i> is a trace file describing exactly what happened just before the error occurred. This information is useful for analysis by the MySQL Cluster development team. It is possible to configure the number of these trace files that will be created before old files are overwritten. <i>trace_id</i> is a number which is incremented for each successive trace file.</dd></dl>

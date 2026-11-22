@@ -33,7 +33,7 @@ perlirix - Perl version 5 on Irix systems
         sh Configure -Dcc='cc -64' -Duse64bitint
 </pre> 
 
- This requires require a 64-bit <font SIZE="-1">MIPS CPU</font> (R8000, R10000, ...) 
+ This requires require a 64-bit MIPS CPU (R8000, R10000, ...) 
 
  You can also use 
 
@@ -49,7 +49,7 @@ perlirix - Perl version 5 on Irix systems
         sh Configure -Dcc='cc -n32' -Duse64bitint
 </pre> 
 
- to use long longs for the 64-bit integer type, in case you don't have a 64-bit <font SIZE="-1">CPU.</font> 
+ to use long longs for the 64-bit integer type, in case you don't have a 64-bit CPU. 
 
  If you are using gcc, just 
 
@@ -61,7 +61,7 @@ perlirix - Perl version 5 on Irix systems
 
 <h3>About Compiler Versions of Irix</h3>
 
- Some Irix cc versions, e.g. 7.3.1.1m (try cc -version) have been known to have issues (coredumps) when compiling perl.c. If you've used -OPT:fast_io=ON and this happens, try removing it. If that fails, or you didn't use that, then try adjusting other optimization options (-LNO, -INLINE, -O3 to -O2, etcetera). The compiler bug has been reported to <font SIZE="-1">SGI.</font> (Allen Smith &lt;easmith [at] beatrice.rutgers.edu&gt;)
+ Some Irix cc versions, e.g. 7.3.1.1m (try cc -version) have been known to have issues (coredumps) when compiling perl.c. If you've used -OPT:fast_io=ON and this happens, try removing it. If that fails, or you didn't use that, then try adjusting other optimization options (-LNO, -INLINE, -O3 to -O2, etcetera). The compiler bug has been reported to SGI. (Allen Smith &lt;easmith [at] beatrice.rutgers.edu&gt;)
 
 <h3>Linker Problems in Irix</h3>
 
@@ -85,7 +85,7 @@ perlirix - Perl version 5 on Irix systems
         2401 6.2 all platform kernel rollup
 </pre> 
 
- <font SIZE="-1"><b>IMPORTANT</b></font>: Without patch 2401, a kernel bug in Irix 6.2 will cause your machine to panic and crash when running threaded perl. Irix 6.3 and later are okay. 
+ <b>IMPORTANT</b>: Without patch 2401, a kernel bug in Irix 6.2 will cause your machine to panic and crash when running threaded perl. Irix 6.3 and later are okay. 
 
  <pre>
     Thanks to Hannu Napari &lt;Hannu.Napari [at] hut.fi&gt; for the IRIX
@@ -102,7 +102,7 @@ perlirix - Perl version 5 on Irix systems
         You may want to remove it from your link line.
 </pre> 
 
- Ignore them: in <font SIZE="-1">IRIX 5.3</font> there is no way to quieten ld about this. 
+ Ignore them: in IRIX 5.3 there is no way to quieten ld about this. 
 
  During compilation you will see this warning from toke.c: 
 
@@ -114,14 +114,14 @@ perlirix - Perl version 5 on Irix systems
 
  Ignore the warning. 
 
- In <font SIZE="-1">IRIX 5.3</font> and with Perl 5.8.1 (Perl 5.8.0 didn't compile in <font SIZE="-1">IRIX 5.3</font>) the following failures are known. 
+ In IRIX 5.3 and with Perl 5.8.1 (Perl 5.8.0 didn't compile in IRIX 5.3) the following failures are known. 
 
  <pre><code>
 Failed Test Stat Wstat Total Fail Failed List of Failed-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -../ ext / List / Util / t / shuffle.t 0 139 ? ? ? ? % ? ?../ lib / Math / Trig.t 255 65280 29 12 41.38 % 24 - 29../ lib / sort.t 0 138 119 72 60.50 % 48 - 119 56 tests and 474 subtests skipped.Failed 3 / 811 test scripts, 99.63 % okay.78 / 75813 subtests failed,
     99.90 % okay.
 </code></pre> 
 
- They are suspected to be compiler errors (at least the shuffle.t failure is known from some <font SIZE="-1">IRIX 6</font> setups) and math library errors (the Trig.t failure), but since <font SIZE="-1">IRIX 5</font> is long since end-of-lifed, further fixes for the <font SIZE="-1">IRIX</font> are unlikely. If you can get gcc for 5.3, you could try that, too, since gcc in <font SIZE="-1">IRIX 6</font> is a known workaround for at least the shuffle.t and sort.t failures.
+ They are suspected to be compiler errors (at least the shuffle.t failure is known from some IRIX 6 setups) and math library errors (the Trig.t failure), but since IRIX 5 is long since end-of-lifed, further fixes for the IRIX are unlikely. If you can get gcc for 5.3, you could try that, too, since gcc in IRIX 6 is a known workaround for at least the shuffle.t and sort.t failures.
 
 <h2>AUTHOR</h2>
 

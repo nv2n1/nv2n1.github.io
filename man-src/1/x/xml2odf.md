@@ -20,12 +20,12 @@ description: "xml2odf – Create ODF package from OpenDocument in XML form"
 <h2>Example</h2>
 <dl>
 <dt>
-</dt><dd> <font SIZE="-1"> </font></dd>
+</dt><dd>  </dd>
 <pre>
 xml2odf -o testdocument -s xml-file
 </pre>
-<p> <font SIZE="+1"></dl>
-<p> </font></p>
+<p> </dl>
+<p> </p>
 <h2>See Also</h2>
 <p> <code>odftools</code>(1), <code><a href="/docs/linux/man/1-odf2xml/">odf2xml</a></code>(1)</p>
 <h2>Bugs</h2>

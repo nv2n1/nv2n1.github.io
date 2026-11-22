@@ -29,7 +29,7 @@ description: "rpc.svcgssd – server-side rpcsec_gss daemon"
 <h2>See Also</h2>
 <p><code>rpc.gssd(8),</code></p>
 <h2>Authors</h2>
-<p>Dug Song &lt;dugsong [at] umich.edu&gt;<br />
- Andy Adamson &lt;andros [at] umich.edu&gt;<br />
- Marius Aamodt Eriksen &lt;marius [at] umich.edu&gt;<br />
+<p>Dug Song &lt;dugsong [at] umich.edu&gt;<br/>
+ Andy Adamson &lt;andros [at] umich.edu&gt;<br/>
+ Marius Aamodt Eriksen &lt;marius [at] umich.edu&gt;<br/>
  J. Bruce Fields &lt;bfields [at] umich.edu&gt;</p>

@@ -11,7 +11,7 @@ description: "dgbtrs.f –"
 <p> dgbtrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgbtrs</code> (TRANS, N, KL, KU, NRHS, AB, LDAB, IPIV, B, LDB, INFO)<br />
+<p> subroutine <code>dgbtrs</code> (TRANS, N, KL, KU, NRHS, AB, LDAB, IPIV, B, LDB, INFO)<br/>
  <i></i><code>DGBTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgbtrs (characterTRANS, integerN, integerKL, integerKU, integerNRHS, double precision, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

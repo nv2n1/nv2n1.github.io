@@ -38,7 +38,7 @@ description: "MPD – A daemon for playing music"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-mpd-conf/">mpd.conf</a>(5), <a href="/docs/linux/man/1-mpc/">mpc</a>(1)</p>
 <h2>BUGS</h2>
-<p> If you find a bug, please report it at<br />
+<p> If you find a bug, please report it at<br/>
  &lt;<code><a rel="nofollow" href="http://bugs.musicpd.org/bug_report_page.php">http://bugs.musicpd.org/bug_report_page.php</a></code>&gt;.</p>
 <h2>AUTHORS</h2>
 <p> Max Kellermann &lt;max [at] duempel.org&gt; </p>

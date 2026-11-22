@@ -45,5 +45,5 @@ description: "XtMalloc, XtCalloc, XtRealloc, XtFree, XtNew, XtNewString – memo
 <p> <code>XtNewString</code> returns a pointer to a new string which is a duplicate of <i>string</i>. If there is insufficient memory to allocate the new block, or the argument is NULL <code>XtNewString</code> returns NULL. The memory can be freed with <code>XtFree</code>. </p>
 <p> The <code>XtAsprintf</code> function allocates space for a string large enough to hold the string specified by the sprintf(3c) format pattern when used with the remaining arguments, and fills it with the formatted results. The address of the allocated string is placed into the pointer passed as ret. The length of the string (not including the terminating null byte) is returned. If there is insufficient memory to allocate the new block, <code>XtAsprintf</code> calls <code>XtErrorMsg</code>.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

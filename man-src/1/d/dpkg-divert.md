@@ -23,7 +23,7 @@ description: "dpkg-divert – override a package’s version of a file"
 <dt><code>&#8211;list</code> <i>glob-pattern</i></dt>
 <dd> List diversions matching <i>glob-pattern</i>.</dd>
 <dt><code>&#8211;listpackage</code> <i>file</i></dt>
-<dd> Print the name of the package that diverts <i>file</i> (since dpkg 1.15.0). Prints <font SIZE="-1">LOCAL</font> if <i>file</i> is locally diverted and nothing if <i>file</i> is not diverted.</dd>
+<dd> Print the name of the package that diverts <i>file</i> (since dpkg 1.15.0). Prints LOCAL if <i>file</i> is locally diverted and nothing if <i>file</i> is not diverted.</dd>
 <dt><code>&#8211;truename</code> <i>file</i></dt>
 <dd> Print the real name for a diverted file.</dd></dl>
 <h2>OPTIONS</h2>
@@ -60,13 +60,13 @@ description: "dpkg-divert – override a package’s version of a file"
 <dd> Fatal or unrecoverable error due to invalid command-line usage, or interactions with the system, such as accesses to the database, memory allocations, etc.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_ROOT</code></font></dt>
+<dt><code>DPKG_ROOT</code></dt>
 <dd> If set and the <code>&#8211;instdir</code> or <code>&#8211;root</code> options have not been specified, it will be used as the filesystem root directory (since dpkg 1.19.2).</dd>
-<dt><font SIZE="-1"><code>DPKG_ADMINDIR</code></font></dt>
+<dt><code>DPKG_ADMINDIR</code></dt>
 <dd> If set and the <code>&#8211;admindir</code> or <code>&#8211;root</code> options have not been specified, it will be used as the <code>dpkg</code> data directory.</dd>
-<dt><font SIZE="-1"><code>DPKG_MAINTSCRIPT_PACKAGE</code></font></dt>
+<dt><code>DPKG_MAINTSCRIPT_PACKAGE</code></dt>
 <dd> If set and the <code>&#8211;local</code> and <code>&#8211;package</code> options have not been specified, <code>dpkg-divert</code> will use it as the package name.</dd>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd></dl>
 <h2>FILES</h2>
 <dl>
@@ -76,7 +76,7 @@ description: "dpkg-divert – override a package’s version of a file"
 <h2>NOTES</h2>
 <p> When adding, default is <code>&#8211;local</code> and <code>&#8211;divert</code> <i>original</i><code>.distrib</code>. When removing, <code>&#8211;package</code> or <code>&#8211;local</code> and <code>&#8211;divert</code> must match if specified. </p>
 <p> Directories can&#8217;t be diverted with <code>dpkg-divert</code>. </p>
-<p> Care should be taken when diverting shared libraries, <code><a href="/docs/linux/man/8-ldconfig/">ldconfig</a></code>(8) creates a symbolic link based on the <font SIZE="-1">DT_SONAME</font> field embedded in the library. Because <code>ldconfig</code> doesn&#8217;t honour diverts (only <code>dpkg</code> does), the symlink may end up pointing at the diverted library, if a diverted library has the same <font SIZE="-1">SONAME</font> as the undiverted one.</p>
+<p> Care should be taken when diverting shared libraries, <code><a href="/docs/linux/man/8-ldconfig/">ldconfig</a></code>(8) creates a symbolic link based on the DT_SONAME field embedded in the library. Because <code>ldconfig</code> doesn&#8217;t honour diverts (only <code>dpkg</code> does), the symlink may end up pointing at the diverted library, if a diverted library has the same SONAME as the undiverted one.</p>
 <h2>EXAMPLES</h2>
 <p> To divert all copies of a <i>/usr/bin/example</i> to <i>/usr/bin/example.foo</i>, i.e. directs all packages providing <i>/usr/bin/example</i> to install it as <i>/usr/bin/example.foo</i>, performing the rename if required: </p>
 <pre>

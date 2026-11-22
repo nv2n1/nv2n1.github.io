@@ -16,7 +16,7 @@ description: "QuantLib::OneFactorAffineModel – Single-factor affine base class
 <p><code>OneFactorAffineModel</code> (Size nArguments) </p>
 <p> virtual <code>Real</code> <code>discountBond</code> (Time now, Time maturity, <code>Array</code> factors) const </p>
 <p> <code>Real</code> <code>discountBond</code> (Time now, Time maturity, Rate rate) const </p>
-<p> <code>DiscountFactor</code> <code>discount</code> (Time t) const<br />
+<p> <code>DiscountFactor</code> <code>discount</code> (Time t) const<br/>
  <i>Implied discount curve. </i></p>
 <h3>Protected Member Functions</h3>
 <p>virtual <code>Real</code> <code>A</code> (Time t, Time T) const =0 </p>

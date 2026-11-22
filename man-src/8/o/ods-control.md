@@ -9,13 +9,13 @@ description: "ods-control – OpenDNSSEC control utility"
 
 <p><code>ods-control</code> &#8211; OpenDNSSEC control utility</p>
 <h2>Synopsis</h2>
-<p><code>ods-control ksm &#8230;</code><br />
- <code>ods-control hsm &#8230;</code><br />
- <code>ods-control signer &#8230;</code><br />
- <code>ods-control start</code><br />
- <code>ods-control stop</code><br />
- <code>ods-control enforcer start</code><br />
- <code>ods-control enforcer stop</code><br />
+<p><code>ods-control ksm &#8230;</code><br/>
+ <code>ods-control hsm &#8230;</code><br/>
+ <code>ods-control signer &#8230;</code><br/>
+ <code>ods-control start</code><br/>
+ <code>ods-control stop</code><br/>
+ <code>ods-control enforcer start</code><br/>
+ <code>ods-control enforcer stop</code><br/>
  <code>ods-control enforcer notify</code></p>
 <h2>Description</h2>
 <p>ods-control is a helper utility which gives a combined interface for different command utilities within OpenDNSSEC. It can also start and stop OpenDNSSEC by controlling the two daemons.</p>

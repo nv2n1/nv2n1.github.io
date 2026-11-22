@@ -14,11 +14,11 @@ description: "docker-stats â€“ Display a live stream of one or more containersâ€
 <h2>DESCRIPTION</h2>
 <p> Display a live stream of one or more containers&#8217; resource usage statistics </p>
 <h2>OPTIONS</h2>
-<p> <code>-a</code>, <code>&#8211;all</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-a</code>, <code>&#8211;all</code>=<i>true</i>|<i>false</i><br/>
 Show all containers. Only running containers are shown by default. The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>&#8211;no-stream</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;no-stream</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Disable streaming stats and only pull the first result, default setting is false. </p>
 <h2>EXAMPLES</h2>
 <p> Running docker stats on all running containers </p>

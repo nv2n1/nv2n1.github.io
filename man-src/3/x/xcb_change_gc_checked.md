@@ -36,24 +36,24 @@ Request function
 <dt><i>XCB_GC_LINE_WIDTH</i></dt>
 <dd>The line-width is measured in pixels and can be greater than or equal to one, a wide line, or the special value zero, a thin line.</dd>
 <dt><i>XCB_GC_LINE_STYLE</i></dt>
-<dd>The line-style defines which sections of a line are drawn: Solid The full path of the line is drawn. DoubleDash The full path of the line is drawn, but the even dashes are filled differently<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>than the odd dashes&nbsp;<wbr>(see fill-style), with Butt cap-style used where even and<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>odd dashes meet. OnOffDash Only the even dashes are drawn, and cap-style applies to all internal ends of<br />
+<dd>The line-style defines which sections of a line are drawn: Solid The full path of the line is drawn. DoubleDash The full path of the line is drawn, but the even dashes are filled differently<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>than the odd dashes&nbsp;<wbr>(see fill-style), with Butt cap-style used where even and<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>odd dashes meet. OnOffDash Only the even dashes are drawn, and cap-style applies to all internal ends of<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the individual dashes&nbsp;<wbr>(except NotLast is treated as Butt).</dd>
 <dt><i>XCB_GC_CAP_STYLE</i></dt>
-<dd>The cap-style defines how the endpoints of a path are drawn: NotLast The result is equivalent to Butt, except that for a line-width of zero the final<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>endpoint is not drawn. Butt The result is square at the endpoint (perpendicular to the slope of the line)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>with no projection beyond. Round The result is a circular arc with its diameter equal to the line-width, centered<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>on the endpoint;&nbsp;<wbr>it is equivalent to Butt for line-width zero. Projecting The result is square at the end, but the path continues beyond the endpoint for<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>a distance equal to half the line-width;&nbsp;<wbr>it is equivalent to Butt for line-width<br />
+<dd>The cap-style defines how the endpoints of a path are drawn: NotLast The result is equivalent to Butt, except that for a line-width of zero the final<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>endpoint is not drawn. Butt The result is square at the endpoint (perpendicular to the slope of the line)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>with no projection beyond. Round The result is a circular arc with its diameter equal to the line-width, centered<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>on the endpoint;&nbsp;<wbr>it is equivalent to Butt for line-width zero. Projecting The result is square at the end, but the path continues beyond the endpoint for<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>a distance equal to half the line-width;&nbsp;<wbr>it is equivalent to Butt for line-width<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>zero.</dd>
 <dt><i>XCB_GC_JOIN_STYLE</i></dt>
-<dd>The join-style defines how corners are drawn for wide lines: Miter The outer edges of the two lines extend to meet at an angle. However, if the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>angle is less than 11 degrees, a Bevel join-style is used instead. Round The result is a circular arc with a diameter equal to the line-width, centered<br />
+<dd>The join-style defines how corners are drawn for wide lines: Miter The outer edges of the two lines extend to meet at an angle. However, if the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>angle is less than 11 degrees, a Bevel join-style is used instead. Round The result is a circular arc with a diameter equal to the line-width, centered<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>on the joinpoint. Bevel The result is Butt endpoint styles, and then the triangular notch is filled.</dd>
 <dt><i>XCB_GC_FILL_STYLE</i></dt>
-<dd>The fill-style defines the contents of the source for line, text, and fill requests. For all text and fill requests (for example, PolyText8, PolyText16, PolyFillRectangle, FillPoly, and PolyFillArc) as well as for line requests with line-style Solid, (for example, PolyLine, PolySegment, PolyRectangle, PolyArc) and for the even dashes for line requests with line-style OnOffDash or DoubleDash: Solid Foreground Tiled Tile OpaqueStippled A tile with the same width and height as stipple but with background<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>everywhere stipple has a zero and with foreground everywhere stipple<br />
+<dd>The fill-style defines the contents of the source for line, text, and fill requests. For all text and fill requests (for example, PolyText8, PolyText16, PolyFillRectangle, FillPoly, and PolyFillArc) as well as for line requests with line-style Solid, (for example, PolyLine, PolySegment, PolyRectangle, PolyArc) and for the even dashes for line requests with line-style OnOffDash or DoubleDash: Solid Foreground Tiled Tile OpaqueStippled A tile with the same width and height as stipple but with background<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>everywhere stipple has a zero and with foreground everywhere stipple<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>has a one Stippled Foreground masked by stipple For the odd dashes for line requests with line-style DoubleDash: Solid Background Tiled Same as for even dashes OpaqueStippled Same as for even dashes Stippled Background masked by stipple</dd>
 <dt><i>XCB_GC_FILL_RULE</i></dt>
 <dd>

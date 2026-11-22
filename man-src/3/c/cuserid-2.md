@@ -10,7 +10,7 @@ description: "getlogin, getlogin_r, cuserid – get username"
 <p>getlogin, getlogin_r, cuserid &#8211; get username </p>
 <h2>Synopsis</h2>
 <p><code>#include &lt;unistd.h&gt;</code> </p>
-<p> <code>char *getlogin(void);</code><br />
+<p> <code>char *getlogin(void);</code><br/>
  <code>int getlogin_r(char *</code><i>buf</i><code>, size_t </code><i>bufsize</i><code>);</code> </p>
 <p> <code>#include &lt;stdio.h&gt;</code> </p>
 <p> <code>char *cuserid(char *</code><i>string</i><code>);</code> </p>

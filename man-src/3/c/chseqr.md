@@ -11,7 +11,7 @@ description: "chseqr.f –"
 <p> chseqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chseqr</code> (JOB, COMPZ, N, ILO, IHI, H, LDH, W, Z, LDZ, WORK, LWORK, INFO)<br />
+<p> subroutine <code>chseqr</code> (JOB, COMPZ, N, ILO, IHI, H, LDH, W, Z, LDZ, WORK, LWORK, INFO)<br/>
  <i></i><code>CHSEQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chseqr (characterJOB, characterCOMPZ, integerN, integerILO, integerIHI, complex, dimension( ldh, * )H, integerLDH, complex, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

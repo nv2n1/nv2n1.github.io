@@ -10,7 +10,7 @@ description: "policyeditor – view and modify security policy settings for java
 
 <p> policyeditor &#8211; view and modify security policy settings for <code>javaws </code> and the <code>browser plugin</code></p>
 <h2>SYNOPSIS</h2>
-<p> <code>policyeditor </code><br />
+<p> <code>policyeditor </code><br/>
  <code>policyeditor [-file] </code> policy_file <code>[-codebase] </code> url</p>
 <h2>DESCRIPTION</h2>
 <p> <code>policyeditor </code> is a GUI application with small command line support to view and edit applet security policy settings used by the IcedTea-Web implementation of <code>javaws </code> and the <code>browser plugin. </code> It is intended as a simpler, easier to use, and more accessible alternative to the standard <code>JDK Policy Tool. </code> Administrators and power users who need fine grained control over policy files should probably use Policy Tool instead of PolicyEditor. </p>
@@ -44,13 +44,13 @@ description: "policyeditor – view and modify security policy settings for java
 </dl>
 <p> Where $XDG_CONFIG_DIR, $XDG_CACHE_DIR and $XDG_RUNTIME_DIR are set as ~/.config, ~/.cache and /tmp or /var/tmp if not set.</p>
 <h2>BUGS</h2>
-<p> There aren&#8217;t any known bugs. If you come across one, please file it at:<br />
- <a rel="nofollow" href="http://icedtea.classpath.org/wiki/IcedTea-Web#Filing_bugs">http://icedtea.classpath.org/wiki/IcedTea-Web#Filing_bugs</a><br />
+<p> There aren&#8217;t any known bugs. If you come across one, please file it at:<br/>
+ <a rel="nofollow" href="http://icedtea.classpath.org/wiki/IcedTea-Web#Filing_bugs">http://icedtea.classpath.org/wiki/IcedTea-Web#Filing_bugs</a><br/>
  <a rel="nofollow" href="http://icedtea.classpath.org/bugzilla">http://icedtea.classpath.org/bugzilla</a> </p>
 <p> Please run in debug (-verbose switch or itw-settings setting or ICEDTEAPLUGIN_DEBUG variable set to true) mode and include that output (best is from java console) with URL to jnlp or html file (or the jnlp/html file or application itself) when filing out the bug report. </p>
 <h2>AUTHOR</h2>
 <p> Please run in debug (-verbose switch or itw-settings setting or ICEDTEAPLUGIN_DEBUG variable set to true) mode and include that output (best is from java console) with URL to jnlp or html file (or the jnlp/html file or application itself) when filing out the bug report. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icedtea-web/">icedtea-web</a></code>(1) <code>javaws</code>(1) <code><a href="/docs/linux/man/1-icedtea-web-plugin/">icedtea-web-plugin</a></code>(1) <code><a href="/docs/linux/man/1-itweb-settings/">itweb-settings</a></code>(1) <code><a href="/docs/linux/man/1-policyeditor/">policyeditor</a></code>(1) <code>policytool</code>(1) <code><a href="/docs/linux/man/1-java/">java</a></code>(1) </p>
-<p> <a rel="nofollow" href="http://icedtea.classpath.org/wiki/IcedTea-Web">http://icedtea.classpath.org/wiki/IcedTea-Web</a><br />
+<p> <a rel="nofollow" href="http://icedtea.classpath.org/wiki/IcedTea-Web">http://icedtea.classpath.org/wiki/IcedTea-Web</a><br/>
  <a rel="nofollow" href="http://icedtea.classpath.org/hg/icedtea-web">http://icedtea.classpath.org/hg/icedtea-web</a> </p>

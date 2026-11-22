@@ -46,8 +46,8 @@ description: "cs2cs – cartographic coordinate system filter"
 <dl>
 <dt>
 </dt><dd>
-&nbsp;<wbr><tt>cs2cs&nbsp;<wbr>+proj=latlong&nbsp;<wbr>+datum=NAD83&nbsp;<wbr><br />
-&nbsp;<wbr>+to&nbsp;<wbr>+proj=utm&nbsp;<wbr>+zone=10&nbsp;<wbr>+datum=NAD27 -r&nbsp;<wbr>&lt;&lt;EOF<br />
+&nbsp;<wbr><tt>cs2cs&nbsp;<wbr>+proj=latlong&nbsp;<wbr>+datum=NAD83&nbsp;<wbr><br/>
+&nbsp;<wbr>+to&nbsp;<wbr>+proj=utm&nbsp;<wbr>+zone=10&nbsp;<wbr>+datum=NAD27 -r&nbsp;<wbr>&lt;&lt;EOF<br/>
 &nbsp;<wbr>45d15'33.1&quot;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>111.5W</dd>
 <p>&nbsp;<wbr>45d15.551666667N<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-111d30</p>
 <p>&nbsp;<wbr>+45.25919444444<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>111d30'000w</p>
@@ -59,10 +59,10 @@ description: "cs2cs – cartographic coordinate system filter"
 &nbsp;<wbr><tt>1402285.99&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5076292.42 0.000</dd></dl>
 <p> </tt></p>
 <h2>SEE ALSO</h2>
-<p> <code>proj(1U),</code><br />
- <i>Cartographic Projection Procedures for the UNIX Environment&#8212;A User&#8217;s Manual,</i> (Evenden, 1990, Open-file report 90-284).<br />
- <i>Map Projections Used by the U. S. Geological Survey</i> (Snyder, 1984, USGS Bulletin 1532).<br />
- <i>Map Projections&#8212;A Working Manual</i> (Snyder, 1988, USGS Prof. Paper 1395).<br />
+<p> <code>proj(1U),</code><br/>
+ <i>Cartographic Projection Procedures for the UNIX Environment&#8212;A User&#8217;s Manual,</i> (Evenden, 1990, Open-file report 90-284).<br/>
+ <i>Map Projections Used by the U. S. Geological Survey</i> (Snyder, 1984, USGS Bulletin 1532).<br/>
+ <i>Map Projections&#8212;A Working Manual</i> (Snyder, 1988, USGS Prof. Paper 1395).<br/>
  <i>An Album of Map Projections</i> (Snyder &amp; Voxland, 1989, USGS Prof. Paper 1453).</p>
 <h2>HOME PAGE</h2>
 <p> <a rel="nofollow" href="http://www.remotesensing.org/proj">http://www.remotesensing.org/proj</a> </p>

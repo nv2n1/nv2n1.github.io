@@ -10,8 +10,8 @@ description: "compress, uncompress, zcat – compress and expand data"
 
 <p> compress, uncompress, zcat &#8211; compress and expand data</p>
 <h2>SYNOPSIS</h2>
-<p> <code>compress</code> [ <code>-f</code> ] [ <code>-v</code> ] [ <code>-c</code> ] [ <code>-V</code> ] [ <code>-r</code> ] [ <code>-b</code> <i>bits</i> ] [ <i>name &#8230;</i> ]<br />
- <code>uncompress</code> [ <code>-f</code> ] [ <code>-v</code> ] [ <code>-c</code> ] [ <code>-V</code> ] [ <i>name &#8230;</i> ]<br />
+<p> <code>compress</code> [ <code>-f</code> ] [ <code>-v</code> ] [ <code>-c</code> ] [ <code>-V</code> ] [ <code>-r</code> ] [ <code>-b</code> <i>bits</i> ] [ <i>name &#8230;</i> ]<br/>
+ <code>uncompress</code> [ <code>-f</code> ] [ <code>-v</code> ] [ <code>-c</code> ] [ <code>-V</code> ] [ <i>name &#8230;</i> ]<br/>
  <code>zcat</code> [ <code>-V</code> ] [ <i>name &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Compress</i> reduces the size of the named files using adaptive Lempel-Ziv coding. Whenever possible, each file is replaced by one with the extension <code>.Z,</code> while keeping the same ownership modes, access and modification times. If no files are specified, the standard input is compressed to the standard output. <i>Compress</i> will only attempt to compress regular files. In particular, it will ignore symbolic links. If a file has multiple hard links, <i>compress</i> will refuse to compress it unless the <code>-f</code> flag is given. </p>

@@ -11,7 +11,7 @@ description: "clarscl2.f –"
 <p> clarscl2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clarscl2</code> (M, N, D, X, LDX)<br />
+<p> subroutine <code>clarscl2</code> (M, N, D, X, LDX)<br/>
  <i></i><code>CLARSCL2</code> performs reciprocal diagonal scaling on a vector.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clarscl2 (integerM, integerN, real, dimension( * )D, complex, dimension( ldx, * )X, integerLDX)</h3>

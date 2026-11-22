@@ -45,7 +45,7 @@ description: "xrdp-genkeymap – key map generator for XRDP"
 </dl>
 </dl>
 <h2>Authors</h2>
-<p>Jay Sorg &lt;jsorg71 [at] users.sourceforge.net&gt;<br />
+<p>Jay Sorg &lt;jsorg71 [at] users.sourceforge.net&gt;<br/>
  Simone Fedele &lt;ilsimo [at] users.sourceforge.net&gt;</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-xrdp/">xrdp</a></code>(8), <code><a href="/docs/linux/man/1-setxkbmap/">setxkbmap</a></code>(1), <code><a href="/docs/linux/man/7-unicode/">unicode</a></code>(7), for more info on <code>xrdp</code> see <a rel="nofollow" href="http://www.xrdp.org/">http://www.xrdp.org/</a> </p>

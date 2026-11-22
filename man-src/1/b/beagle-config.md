@@ -10,9 +10,9 @@ description: "beagle-config – command-line interface to Beagle configuration"
 
 <p> beagle-config &#8211; command-line interface to Beagle configuration</p>
 <h2>SYNOPSIS</h2>
-<p> <code>beagle-config</code> <i>options</i><br />
- <code>beagle-config</code> <i>sections</i><br />
- <code>beagle-config</code> <i>sections</i> <i>section-options</i> [<i>params</i>]<br />
+<p> <code>beagle-config</code> <i>options</i><br/>
+ <code>beagle-config</code> <i>sections</i><br/>
+ <code>beagle-config</code> <i>sections</i> <i>section-options</i> [<i>params</i>]<br/>
  <code>beagle-config</code> <i>xml-options</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>beagle-config</code> is a command line tool designed to manipulate the Beagle configuration. </p>
@@ -41,7 +41,7 @@ description: "beagle-config – command-line interface to Beagle configuration"
 <dt><i>string option</i></dt>
 <dd> PARAMS is the value of the section-option.</dd>
 <dt><i>list option</i></dt>
-<dd> To add a list option, pass a comma separated list of options <i>value1,value2,&#8230;.</i> Run <code>beagle-config section-name section-option</code> for the number of items in the list and their explanations.<br />
+<dd> To add a list option, pass a comma separated list of options <i>value1,value2,&#8230;.</i> Run <code>beagle-config section-name section-option</code> for the number of items in the list and their explanations.<br/>
  To remove a list option, pass <i>&#8211; value1,value2,&#8230;</i> where value1,value2,&#8230; are the exact values of the option that you want to remove.</dd></dl>
 <h2>XML OPTIONS</h2>
 <p> Non-C# programs who want to get/set configuration values can use these options. If an error occurs, the return value can be checked to determine the kind of the error. The return value is</p>

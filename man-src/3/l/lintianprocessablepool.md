@@ -17,9 +17,9 @@ Lintian::ProcessablePool -- Pool of processables
  foreach my $gname ($pool-&gt;get_group_names){
  my $group = $pool-&gt;get_group($gname);
  process($gname, $group);
- }</pre><h2>Methods</h2><dl COMPACT><dt>Lintian::ProcessablePool-&gt;new ([<font SIZE="-1">LAB</font>])
+ }</pre><h2>Methods</h2><dl COMPACT><dt>Lintian::ProcessablePool-&gt;new ([LAB])
 </dt><dd>Creates a new empty pool. 
- If <font SIZE="-1">LAB</font> is given, it is assumed to be a Lintian::Lab. In this case, any processable added to this pool will be stored as a lab entry from <font SIZE="-1">LAB.</font>
+ If LAB is given, it is assumed to be a Lintian::Lab. In this case, any processable added to this pool will be stored as a lab entry from LAB.
 </dd><dt>$pool-&gt;add_file($file)
 </dt><dd>Adds a file to the pool. The <tt>$file</tt> will be turned into a processable and grouped together with other processables from the same source package (if any).
 </dd><dt>$pool-&gt;add_proc ($proc)

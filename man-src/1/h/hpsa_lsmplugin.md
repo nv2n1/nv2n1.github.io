@@ -32,8 +32,8 @@ description: "hpsa_lsmplugin — LibstorageMgmt HP SmartArray plugin"
 <p> This plugin requires both <code>lsmd</code> daemon and API client running as root user. Please check manpage <i>lsmd.conf (5)</i> for detail. </p>
 <h2>SUPPORTED HARDWARES</h2>
 <p> Please refer to HP website for hardware support status of hpssacli. Detailed support status can be queried via: </p>
-<p>&nbsp;<wbr>*&nbsp;<wbr><code>lsm.Client.capabilities()</code>&nbsp;<wbr>&nbsp;<wbr>(Python API)<br />
-&nbsp;<wbr>*&nbsp;<wbr><code>lsm_capabilities()</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(C API)<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr><code>lsm.Client.capabilities()</code>&nbsp;<wbr>&nbsp;<wbr>(Python API)<br/>
+&nbsp;<wbr>*&nbsp;<wbr><code>lsm_capabilities()</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(C API)<br/>
 &nbsp;<wbr>*&nbsp;<wbr><code>lsmcli capabilities</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(lsmcli command line). </p>
 <h2>FIREWALL RULES</h2>
 <p> This plugin only execute <code>hpssacli</code> on localhost. No network connection required. </p>

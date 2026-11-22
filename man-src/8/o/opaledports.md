@@ -46,7 +46,7 @@ description: "opaledports"
 <dd>File listing the links to process. The list is of the form: </dd>
 <dd>NodeGUID;PortNum;NodeType;NodeDesc;NodeGUID;PortNum;NodeType; NodeDesc;Dontcare</dd></dl>
 <h2>Examples</h2>
-<p>echo &quot;0x001175010165ac1d;1;FI;phkpstl035 hfi1_0&quot;|opaledports on<br />
- opaledports on #8217lt; portlist.csv<br />
- opaextractsellinks -F led:on | opaledports off<br />
+<p>echo &quot;0x001175010165ac1d;1;FI;phkpstl035 hfi1_0&quot;|opaledports on<br/>
+ opaledports on #8217lt; portlist.csv<br/>
+ opaextractsellinks -F led:on | opaledports off<br/>
  opaledports -C </p>

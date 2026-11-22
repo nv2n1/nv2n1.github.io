@@ -17,19 +17,19 @@ int getaddrinfo(const char *node, const char *service,
                 struct addrinfo **res);
 void freeaddrinfo(struct addrinfo *res);
 const char *gai_strerror(int errcode);</code></pre>
-<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>getaddrinfo</code>(), <code>freeaddrinfo</code>(), <code>gai_strerror</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.22:&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>getaddrinfo</code>(), <code>freeaddrinfo</code>(), <code>gai_strerror</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.22:&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.21 and earlier:&nbsp;_POSIX_C_SOURCE</p>
 <h2>Description</h2>
-<p>Given <i>node</i> and <i>service</i>, which identify an Internet host and a service, <code>getaddrinfo</code>() returns one or more <i>addrinfo</i> structures, each of which contains an Internet address that can be specified in a call to <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) or <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2). The <code>getaddrinfo</code>() function combines the functionality provided by the <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3) and <code><a href="/docs/linux/man/3-getservbyname/">getservbyname</a></code>(3) functions into a single interface, but unlike the latter functions, <code>getaddrinfo</code>() is reentrant and allows programs to eliminate IPv4-versus-IPv6 dependencies. The <i>addrinfo</i> structure used by <code>getaddrinfo</code>() contains the following fields: struct addrinfo {<br />
-    int ai_flags;<br />
-    int ai_family;<br />
-    int ai_socktype;<br />
-    int ai_protocol;<br />
-    socklen_t ai_addrlen;<br />
-    struct sockaddr *ai_addr;<br />
-    char *ai_canonname;<br />
-    struct addrinfo *ai_next;<br />
+<p>Given <i>node</i> and <i>service</i>, which identify an Internet host and a service, <code>getaddrinfo</code>() returns one or more <i>addrinfo</i> structures, each of which contains an Internet address that can be specified in a call to <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) or <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2). The <code>getaddrinfo</code>() function combines the functionality provided by the <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3) and <code><a href="/docs/linux/man/3-getservbyname/">getservbyname</a></code>(3) functions into a single interface, but unlike the latter functions, <code>getaddrinfo</code>() is reentrant and allows programs to eliminate IPv4-versus-IPv6 dependencies. The <i>addrinfo</i> structure used by <code>getaddrinfo</code>() contains the following fields: struct addrinfo {<br/>
+    int ai_flags;<br/>
+    int ai_family;<br/>
+    int ai_socktype;<br/>
+    int ai_protocol;<br/>
+    socklen_t ai_addrlen;<br/>
+    struct sockaddr *ai_addr;<br/>
+    char *ai_canonname;<br/>
+    struct addrinfo *ai_next;<br/>
 }; The <i>hints</i> argument points to an <i>addrinfo</i> structure that specifies criteria for selecting the socket address structures returned in the list pointed to by <i>res</i>. If <i>hints</i> is not NULL it points to an <i>addrinfo</i> structure whose <i>ai_family</i>, <i>ai_socktype</i>, and <i>ai_protocol</i> specify criteria that limit the set of socket addresses returned by <code>getaddrinfo</code>(), as follows:</p>
 <dl>
 <dt><i>ai_family</i></dt>

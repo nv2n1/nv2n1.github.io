@@ -10,7 +10,7 @@ description: "XkbGetAutoRepeatRate – Gets the current attributes of the Repeat
 <p>XkbGetAutoRepeatRate &#8211; Gets the current attributes of the RepeatKeys control for a keyboard device </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbGetAutoRepeatRate</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int *</code><i>timeout_rtrn</i><code>,</code> <code>unsigned int *</code><i>interval_rtrn</i><code>);</code><br />
+<dt> <code>Bool XkbGetAutoRepeatRate</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int *</code><i>timeout_rtrn</i><code>,</code> <code>unsigned int *</code><i>interval_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -12,14 +12,14 @@ description: "ql/termstructures/inflationtermstructure.hpp – Base classes for 
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/yieldtermstructure.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>InflationTermStructure</code><br />
- <i>Interface for inflation term structures. </i><br />
- class <code>ZeroInflationTermStructure</code><br />
- <i>Interface for zero inflation term structures. </i><br />
- class <code>YoYInflationTermStructure</code><br />
+<p> class <code>InflationTermStructure</code><br/>
+ <i>Interface for inflation term structures. </i><br/>
+ class <code>ZeroInflationTermStructure</code><br/>
+ <i>Interface for zero inflation term structures. </i><br/>
+ class <code>YoYInflationTermStructure</code><br/>
  <i>Base class for year-on-year inflation term structures. </i></p>
 <h3>Functions</h3>
-<p> std::pair&lt; Date, Date &gt; <code>inflationPeriod</code> (const Date &amp;, Frequency)<br />
+<p> std::pair&lt; Date, Date &gt; <code>inflationPeriod</code> (const Date &amp;, Frequency)<br/>
  <i>utility function giving the inflation period for a given date </i></p>
 <h2>Detailed Description</h2>
 <p> Base classes for inflation term structures. </p>

@@ -11,7 +11,7 @@ description: "sorg2l.f –"
 <p> sorg2l.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sorg2l</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
+<p> subroutine <code>sorg2l</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>SORG2L</code> generates all or part of the orthogonal matrix Q from a QL factorization determined by sgeqlf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sorg2l (integerM, integerN, integerK, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK, integerINFO)</h3>

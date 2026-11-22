@@ -14,16 +14,16 @@ description: "vsock – Linux VSOCK address family"
 stream_socket = socket(AF_VSOCK, SOCK_STREAM, 0);
 datagram_socket = socket(AF_VSOCK, SOCK_DGRAM, 0);</code></pre>
 <h2>Description</h2>
-<p>The VSOCK address family facilitates communication between virtual machines and the host they are running on. This address family is used by guest agents and hypervisor services that need a communications channel that is independent of virtual machine network configuration. Valid socket types are <code>SOCK_STREAM</code> and <code>SOCK_DGRAM</code>. <code>SOCK_STREAM</code> provides connection-oriented byte streams with guaranteed, in-order delivery. <code>SOCK_DGRAM</code> provides a connectionless datagram packet service with best-effort delivery and best-effort ordering. Availability of these socket types is dependent on the underlying hypervisor. A new socket is created with struct sockaddr_vm {<br />
-    sa_family_t svm_family; /* Address family: AF_VSOCK */<br />
-    unsigned short svm_reserved1;<br />
-    unsigned int svm_port; /* Port # in host byte order */<br />
-    unsigned int svm_cid;  /* Address in host byte order */<br />
-    unsigned char svm_zero[sizeof(struct sockaddr) &#8211;<br />
-                           sizeof(sa_family_t) &#8211;<br />
-                           sizeof(unsigned short) &#8211;<br />
-                           sizeof(unsigned int) &#8211;<br />
-                           sizeof(unsigned int)];<br />
+<p>The VSOCK address family facilitates communication between virtual machines and the host they are running on. This address family is used by guest agents and hypervisor services that need a communications channel that is independent of virtual machine network configuration. Valid socket types are <code>SOCK_STREAM</code> and <code>SOCK_DGRAM</code>. <code>SOCK_STREAM</code> provides connection-oriented byte streams with guaranteed, in-order delivery. <code>SOCK_DGRAM</code> provides a connectionless datagram packet service with best-effort delivery and best-effort ordering. Availability of these socket types is dependent on the underlying hypervisor. A new socket is created with struct sockaddr_vm {<br/>
+    sa_family_t svm_family; /* Address family: AF_VSOCK */<br/>
+    unsigned short svm_reserved1;<br/>
+    unsigned int svm_port; /* Port # in host byte order */<br/>
+    unsigned int svm_cid;  /* Address in host byte order */<br/>
+    unsigned char svm_zero[sizeof(struct sockaddr) &#8211;<br/>
+                           sizeof(sa_family_t) &#8211;<br/>
+                           sizeof(unsigned short) &#8211;<br/>
+                           sizeof(unsigned int) &#8211;<br/>
+                           sizeof(unsigned int)];<br/>
 }; When a process wants to establish a connection, it calls <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) with a given destination socket address. The socket is automatically bound to a free port if unbound. A process can listen for incoming connections by first binding to a socket address using <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) and then calling <code><a href="/docs/linux/man/2-listen/">listen</a></code>(2). Data is transmitted using the <code><a href="/docs/linux/man/2-send/">send</a></code>(2) or <code><a href="/docs/linux/man/2-write/">write</a></code>(2) families of system calls and data is received using the <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2) or <code><a href="/docs/linux/man/2-read/">read</a></code>(2) families of system calls.</p>
 <h3>Address format</h3>
 <p>A socket address is defined as a combination of a 32-bit Context Identifier (CID) and a 32-bit port number. The CID identifies the source or destination, which is either a virtual machine or the host. The port number differentiates between multiple services running on a single machine. </p>

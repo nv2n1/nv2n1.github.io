@@ -54,53 +54,53 @@ comment
 <dl>
 <dt>
 </dt><dd>
-variable      type       semantics<br />
-width          integer    screen width or component width<br />
-length         integer    screen length or component length<br />
-offset         integer    positions to indent &#8220;component: &#8221;<br />
-overflowtext   string     text to use at the beginning of an<br />
-                          overflow line<br />
-overflowoffset integer    positions to indent overflow lines<br />
-compwidth      integer    positions to indent component text<br />
-                          after the first line is output<br />
-uppercase      flag       output text of this component in all<br />
-                          upper case<br />
-nouppercase    flag       don&#8217;t uppercase<br />
-clearscreen    flag/G     clear the screen prior to each page<br />
-noclearscreen  flag/G     don&#8217;t clearscreen<br />
-bell           flag/G     ring the bell at the end of each page<br />
-nobell         flag/G     don&#8217;t bell<br />
-component      string/L   name to use instead of &#8220;component&#8221; for<br />
-                          this component<br />
-nocomponent    flag       don&#8217;t output &#8220;component: &#8221; for this<br />
-                          component<br />
-center         flag       center component on line (works for<br />
-                          one-line components only)<br />
-nocenter       flag       don&#8217;t center<br />
-leftadjust     flag       strip off leading whitespace on each<br />
-                          line of text<br />
-noleftadjust   flag       don&#8217;t leftadjust<br />
-compress       flag       change newlines in text to spaces<br />
-nocompress     flag       don&#8217;t compress<br />
-wrap           flag       Wrap lines that exceed width (default)<br />
-nowrap         flag       Do not perform line wrapping<br />
-split          flag       don&#8217;t combine multiple fields into<br />
-                          a single field<br />
-nosplit        flag       combine multiple fields into<br />
-                          a single field<br />
-newline        flag       print newline at end of components<br />
-                          (this is the default)<br />
-nonewline      flag       don&#8217;t print newline at end of components<br />
-formatfield    string     format string for this component<br />
-                          (see below)<br />
-decode         flag       decode text as RFC 2047 encoded<br />
-                          header field<br />
-addrfield      flag       field contains addresses<br />
-datefield      flag       field contains dates<br />
-format         flag       Run component through formatproc filter<br />
-                          (body only)<br />
-noformat       flag       Do not run component through<br />
-                          formatproc filter (default)<br />
+variable      type       semantics<br/>
+width          integer    screen width or component width<br/>
+length         integer    screen length or component length<br/>
+offset         integer    positions to indent &#8220;component: &#8221;<br/>
+overflowtext   string     text to use at the beginning of an<br/>
+                          overflow line<br/>
+overflowoffset integer    positions to indent overflow lines<br/>
+compwidth      integer    positions to indent component text<br/>
+                          after the first line is output<br/>
+uppercase      flag       output text of this component in all<br/>
+                          upper case<br/>
+nouppercase    flag       don&#8217;t uppercase<br/>
+clearscreen    flag/G     clear the screen prior to each page<br/>
+noclearscreen  flag/G     don&#8217;t clearscreen<br/>
+bell           flag/G     ring the bell at the end of each page<br/>
+nobell         flag/G     don&#8217;t bell<br/>
+component      string/L   name to use instead of &#8220;component&#8221; for<br/>
+                          this component<br/>
+nocomponent    flag       don&#8217;t output &#8220;component: &#8221; for this<br/>
+                          component<br/>
+center         flag       center component on line (works for<br/>
+                          one-line components only)<br/>
+nocenter       flag       don&#8217;t center<br/>
+leftadjust     flag       strip off leading whitespace on each<br/>
+                          line of text<br/>
+noleftadjust   flag       don&#8217;t leftadjust<br/>
+compress       flag       change newlines in text to spaces<br/>
+nocompress     flag       don&#8217;t compress<br/>
+wrap           flag       Wrap lines that exceed width (default)<br/>
+nowrap         flag       Do not perform line wrapping<br/>
+split          flag       don&#8217;t combine multiple fields into<br/>
+                          a single field<br/>
+nosplit        flag       combine multiple fields into<br/>
+                          a single field<br/>
+newline        flag       print newline at end of components<br/>
+                          (this is the default)<br/>
+nonewline      flag       don&#8217;t print newline at end of components<br/>
+formatfield    string     format string for this component<br/>
+                          (see below)<br/>
+decode         flag       decode text as RFC 2047 encoded<br/>
+                          header field<br/>
+addrfield      flag       field contains addresses<br/>
+datefield      flag       field contains dates<br/>
+format         flag       Run component through formatproc filter<br/>
+                          (body only)<br/>
+noformat       flag       Do not run component through<br/>
+                          formatproc filter (default)<br/>
 formatarg      string     Argument to format filter
 </dd></dl>
 <p> To specify the value of integer-valued and string-valued variables, follow their name with an equals-sign and the value. Integer-valued variables are given decimal values, while string-valued variables are given arbitrary text bracketed by double-quotes. If a value is suffixed by &#8220;/G&#8221; or &#8220;/L&#8221;, then its value is useful in a global-only or local-only context (respectively). </p>

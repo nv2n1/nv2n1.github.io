@@ -24,7 +24,7 @@ description: "gbak — backup /restore Firebird database"
 <dt><code>-ro</code> <i>string</i></dt>
 <dd>
 </dd><dt><code>-role</code> <i>string</i></dt>
-<dd> <font SIZE="-1">SQL</font> role to use when connecting to theh database.</dd>
+<dd> SQL role to use when connecting to theh database.</dd>
 <dt><code>-pas</code> <i>string</i></dt>
 <dd>
 </dd><dt><code>-password</code> <i>string</i></dt>
@@ -104,7 +104,7 @@ description: "gbak — backup /restore Firebird database"
 <dt><code>-e</code></dt>
 <dd>
 </dd><dt><code>-expand</code></dt>
-<dd> Normally, Firebird uses <font SIZE="-1">RLE</font> compression for strings when storing them on disk. This option turns this compression off.</dd>
+<dd> Normally, Firebird uses RLE compression for strings when storing them on disk. This option turns this compression off.</dd>
 <dt><code>-i</code></dt>
 <dd>
 </dd><dt><code>-inactive</code></dt>
@@ -136,20 +136,20 @@ description: "gbak — backup /restore Firebird database"
 </dd><dt><code>-use_all_space</code></dt>
 <dd> Normally, Fireburd reserves some space on each data page for further use. This reserved space is used for newly inserted data and for keeping older versions of the data. Having space reserved for this purpose &#8220;near&#8221; to the data speeds up modifications. If the database will be used mainly for read operations, specifying this option will save disk space.</dd>
 <dt><code>-fix_fss_metadata</code> <i>string</i></dt>
-<dd> When restoring metadata, in case it is not valid <font SIZE="-1">UTF8,</font> try to convert it from the specified character set. Useful when table descriptions are given in some national non-UTF8 encoding, which was possible with Firebird before version 2.5.</dd>
+<dd> When restoring metadata, in case it is not valid UTF8, try to convert it from the specified character set. Useful when table descriptions are given in some national non-UTF8 encoding, which was possible with Firebird before version 2.5.</dd>
 <dt><code>-fix_fss_data</code> <i>string</i></dt>
-<dd> When restoring table data, in case a column defined with <font SIZE="-1">UNICODE_FSS</font> character set contains no valid <font SIZE="-1">UTF8</font> (which was possible with versions of Firebird prior to 2.5), try to convert the data from the specified character set.</dd></dl>
-<h3><font SIZE="-1">RESTORING TO</font> MULTIPLE-FILE <font SIZE="-1">DATABASE</font></h3>
+<dd> When restoring table data, in case a column defined with UNICODE_FSS character set contains no valid UTF8 (which was possible with versions of Firebird prior to 2.5), try to convert the data from the specified character set.</dd></dl>
+<h3>RESTORING TO MULTIPLE-FILE DATABASE</h3>
 <p> When the <i>target</i> argument is in the form <i>file_1</i> <i>pages_1</i> &#8230; <i>file_N</i>, the restored database is written in several files with <i>file_i</i> not bigger than <i>pages_i</i> pages. This may be useful if the file system that holds the database file can&#8217;t handle files above certain size. </p>
 <p> <code>Note 1</code>: the file size limit is in <code>pages</code>. </p>
 <p> <code>Note 1</code>: there is no limit on the size of the last file.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>ISC_USER</code></font></dt>
+<dt><code>ISC_USER</code></dt>
 <dd> Default value for the -user option.</dd>
-<dt><font SIZE="-1"><code>ISC_ROLE</code></font></dt>
+<dt><code>ISC_ROLE</code></dt>
 <dd> Default value for the -role option.</dd>
-<dt><font SIZE="-1"><code>ISC_PASSWORD</code></font></dt>
+<dt><code>ISC_PASSWORD</code></dt>
 <dd> Default value for the -password option.</dd></dl>
 <h2>EXAMPLES</h2>
 <h3>Backup a database into a compressed format</h3>

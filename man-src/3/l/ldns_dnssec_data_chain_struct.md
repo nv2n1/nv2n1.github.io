@@ -10,7 +10,7 @@ description: "ldns_dnssec_data_chain, ldns_dnssec_data_chain_struct, ldns_dnssec
 
 <p> ldns_dnssec_data_chain, ldns_dnssec_data_chain_struct, ldns_dnssec_trust_tree </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p>&nbsp;<wbr>ldns_dnssec_data_chain_struct(); </p>
@@ -18,10 +18,10 @@ description: "ldns_dnssec_data_chain, ldns_dnssec_data_chain_struct, ldns_dnssec
 <dl>
 <dt> <i>ldns_dnssec_data_chain</i></dt>
 <dd>
-</dd><dd>Chain structure that contains all DNSSEC data needed to<br />
- verify an rrset<br />
- struct ldns_dnssec_data_chain_struct<br />
- {<br />
+</dd><dd>Chain structure that contains all DNSSEC data needed to<br/>
+ verify an rrset<br/>
+ struct ldns_dnssec_data_chain_struct<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_list *rrset;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_list *signatures;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_type parent_type;</p>
@@ -36,13 +36,13 @@ description: "ldns_dnssec_data_chain, ldns_dnssec_data_chain_struct, ldns_dnssec
 <dl>
 <dt> <i>ldns_dnssec_trust_tree</i></dt>
 <dd>
-</dd><dd>Tree structure that contains the relation of DNSSEC data,<br />
+</dd><dd>Tree structure that contains the relation of DNSSEC data,<br/>
  and their cryptographic status. </dd>
-<p> This tree is derived from a data_chain, and can be used<br />
- to look whether there is a connection between an RRSET<br />
- and a trusted key. The tree only contains pointers to the<br />
- data_chain, and therefore one should *never* free() the<br />
- data_chain when there is still a trust tree derived from<br />
+<p> This tree is derived from a data_chain, and can be used<br/>
+ to look whether there is a connection between an RRSET<br/>
+ and a trusted key. The tree only contains pointers to the<br/>
+ data_chain, and therefore one should *never* free() the<br/>
+ data_chain when there is still a trust tree derived from<br/>
  that chain. </p>
 <p> Example tree: </p>
 <p>&nbsp;<wbr>key&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>key&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>key </p>
@@ -56,12 +56,12 @@ description: "ldns_dnssec_data_chain, ldns_dnssec_data_chain_struct, ldns_dnssec
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>key </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rr </p>
-<p> For each signature there is a parent; if the parent<br />
- pointer is null, it couldn&#8217;t be found and there was no<br />
- denial; otherwise is a tree which contains either a<br />
- DNSKEY, a DS, or a NSEC rr<br />
- struct ldns_dnssec_trust_tree_struct<br />
- {<br />
+<p> For each signature there is a parent; if the parent<br/>
+ pointer is null, it couldn&#8217;t be found and there was no<br/>
+ denial; otherwise is a tree which contains either a<br/>
+ DNSKEY, a DS, or a NSEC rr<br/>
+ struct ldns_dnssec_trust_tree_struct<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr *rr;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/* the complete rrset this rr was in */</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_list *rrset;</p>

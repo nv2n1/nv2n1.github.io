@@ -13,25 +13,25 @@ description: "glutBitmapCharacter – Draw a bitmapped character"
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutBitmapCharacter void *font int character</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>font Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>font Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>A bitmapped font identifier. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>character Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>character Ef<br/>
 &nbsp;<wbr>A character code.</p>
 <h2>Description</h2>
-<p>Draw a Bf Sy<br />
-&nbsp;<wbr>character Ef<br />
-&nbsp;<wbr>at the current OpenGL raster position using a bitmapped Bf Sy<br />
-&nbsp;<wbr>font. Ef<br />
+<p>Draw a Bf Sy<br/>
+&nbsp;<wbr>character Ef<br/>
+&nbsp;<wbr>at the current OpenGL raster position using a bitmapped Bf Sy<br/>
+&nbsp;<wbr>font. Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>The raster position is advanced by the width of the character. </p>
-<p> Nothing is drawn, and the raster position is unaffected when either:<br />
-&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
-&nbsp;<wbr>character Ef<br />
-&nbsp;<wbr>is out of range<br />
-&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
-&nbsp;<wbr>font Ef<br />
-&nbsp;<wbr>is not a valid OpenGLUT bitmap font<br />
+<p> Nothing is drawn, and the raster position is unaffected when either:<br/>
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br/>
+&nbsp;<wbr>character Ef<br/>
+&nbsp;<wbr>is out of range<br/>
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br/>
+&nbsp;<wbr>font Ef<br/>
+&nbsp;<wbr>is not a valid OpenGLUT bitmap font<br/>
 &nbsp;<wbr>&#8211; The current OpenGL raster position is invalid </p>
 <h2>Caveats</h2>
 <p>glutBitmapString() is generally more efficient for strings of characters. </p>

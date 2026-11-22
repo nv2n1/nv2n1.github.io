@@ -13,16 +13,16 @@ description: "daala_image_plane –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;codec.h&gt;</p>
 <h3>Data Fields</h3>
-<p> unsigned char * <code>data</code><br />
- <i>Image data is stored as an unsigned octet type whether it&#8217;s actually 8 bit or a multi-byte depth. </i><br />
- unsigned char <code>xdec</code><br />
- <i>The decimation factor in the x and y direction. </i><br />
+<p> unsigned char * <code>data</code><br/>
+ <i>Image data is stored as an unsigned octet type whether it&#8217;s actually 8 bit or a multi-byte depth. </i><br/>
+ unsigned char <code>xdec</code><br/>
+ <i>The decimation factor in the x and y direction. </i><br/>
  unsigned char <code>ydec</code> </p>
-<p> int <code>xstride</code><br />
- <i>Distance in memory between two pixels horizontally next to each other. </i><br />
- int <code>ystride</code><br />
- <i>Distance in memory between two pixels vertically next to each other. </i><br />
- int <code>bitdepth</code><br />
+<p> int <code>xstride</code><br/>
+ <i>Distance in memory between two pixels horizontally next to each other. </i><br/>
+ int <code>ystride</code><br/>
+ <i>Distance in memory between two pixels vertically next to each other. </i><br/>
+ int <code>bitdepth</code><br/>
  <i>8 for &#8216;normal&#8217; video precision; data is unsigned bytes centered on 128. </i></p>
 <h2>Detailed Description</h2>
 <p> Representation of a single component within an image or frame. </p>

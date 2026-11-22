@@ -53,5 +53,5 @@ description: "XOpenIM, XCloseIM, XSetIMValues, XGetIMValues, XDisplayOfIM, XLoca
 <p> The function returns <code>True</code> if it succeeds; otherwise, it returns <code>False</code>. </p>
 <p> The <code>XUnregisterIMInstantiateCallback</code> function removes an input method instantiation callback previously registered. The function returns <code>True</code> if it succeeds; otherwise, it returns <code>False</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcreateic/">XCreateIC</a>(3), <a href="/docs/linux/man/3-xseticfocus/">XSetICFocus</a>(3), <a href="/docs/linux/man/3-xseticvalues/">XSetICValues</a>(3), <a href="/docs/linux/man/3-xmbresetic/">XmbResetIC</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcreateic/">XCreateIC</a>(3), <a href="/docs/linux/man/3-xseticfocus/">XSetICFocus</a>(3), <a href="/docs/linux/man/3-xseticvalues/">XSetICValues</a>(3), <a href="/docs/linux/man/3-xmbresetic/">XmbResetIC</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -143,7 +143,7 @@ stash @{0} : WIP on submit : 6ebd0e2&#8230; Update git &#8211; stash documentati
 <dl>
 <dt>
 </dt><dd>
-.&#8211; &#8211;W / /<br />
+.&#8211; &#8211;W / /<br/>
     &#8212; &#8212; -H&#8211; &#8211;I
 </dd></dl>
 <p> where <code>H</code> is the <code>HEAD</code> commit, <code>I</code> is a commit that records the state of the index, and <code>W</code> is a commit that records the state of the working tree.</p>
@@ -173,8 +173,8 @@ $ git stash pop
 <dl>
 <dt>
 </dt><dd>
-#&#8230; hack hack hack&#8230;<br />
-$ git switch &#8211; c my_wip $ git commit &#8211; a &#8211; m &#8220;WIP&#8221; $ git switch master $ edit emergency fix $ git commit &#8211; a &#8211; m &#8220;Fix in a hurry&#8221; $ git switch my_wip $ git reset&#8211; soft HEAD ^<br />
+#&#8230; hack hack hack&#8230;<br/>
+$ git switch &#8211; c my_wip $ git commit &#8211; a &#8211; m &#8220;WIP&#8221; $ git switch master $ edit emergency fix $ git commit &#8211; a &#8211; m &#8220;Fix in a hurry&#8221; $ git switch my_wip $ git reset&#8211; soft HEAD ^<br/>
 #&#8230; continue hacking&#8230;
 </dd></dl>
 <p> You can use <i>git stash</i> to simplify the above, like this: </p>

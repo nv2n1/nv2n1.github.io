@@ -10,7 +10,7 @@ description: "XkbGetDeviceButtonActions – Query the button actions associated 
 <p>XkbGetDeviceButtonActions &#8211; Query the button actions associated with an X Input Extension device </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetDeviceButtonActions</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>Bool </code><i>all_buttons</i><code>,</code> <code>unsigned int </code><i>first_button</i><code>,</code> <code>unsigned int </code><i>num_buttons</i><code>);</code><br />
+<dt> <code>Status XkbGetDeviceButtonActions</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>Bool </code><i>all_buttons</i><code>,</code> <code>unsigned int </code><i>first_button</i><code>,</code> <code>unsigned int </code><i>num_buttons</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

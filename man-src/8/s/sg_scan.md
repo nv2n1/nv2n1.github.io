@@ -34,7 +34,7 @@ description: "sg_scan – scans sg devices (or SCSI/ATAPI/ATA devices) and print
 <h2>Authors</h2>
 <p>Written by D. Gilbert and F. Jansen</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 1999-2013 Douglas Gilbert<br />
+<p>Copyright &#169; 1999-2013 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lsscsi/">lsscsi</a>(8)</code> </p>

@@ -25,10 +25,10 @@ description: "sane-net – SANE network backend"
 <dd>Timeout (in seconds) for the initial connection to the <code><a href="/docs/linux/man/8-saned/">saned</a></code>(8) server. This will prevent the backend from blocking for several minutes trying to connect to an unresponsive <code><a href="/docs/linux/man/8-saned/">saned</a></code>(8) host (network outage, host down, &#8230;). The environment variable <code>SANE_NET_TIMEOUT</code> can also be used to specify the timeout at runtime.</dd></dl>
 <p> Empty lines and lines starting with a hash mark (#) are ignored. Note that IPv6 addresses in this file do not need to be enclosed in square brackets. A sample configuration file is shown below: </p>
 <dl>
-<dd>scan-server.somedomain.firm<br />
- 192.168.0.1<br />
- # this is a comment<br />
- localhost<br />
+<dd>scan-server.somedomain.firm<br/>
+ 192.168.0.1<br/>
+ # this is a comment<br/>
+ localhost<br/>
  ::1</dd></dl>
 <p> The above list of hosts can be extended at run-time using environment variable <code>SANE_NET_HOSTS</code>. This environment variable is a colon-separated list of hostnames or IP addresses that should be contacted in addition to the hosts mentioned in the configuration file. For example, a user could set the environment variable to the string: </p>
 <dl>

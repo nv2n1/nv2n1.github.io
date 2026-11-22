@@ -19,8 +19,8 @@ description: "QuantLib::InterpolatedForwardCurve – Term structure based on int
 <p> std::vector&lt; <code>Rate</code> &gt; <code>data_</code> </p>
 <p> <code>Interpolation</code> <code>interpolation_</code> </p>
 <p> Interpolator <code>interpolator_</code> </p>
-<p> <code>Date</code> <code>maxDate</code> () const<br />
- <i>the latest date for which the curve can return values </i><br />
+<p> <code>Date</code> <code>maxDate</code> () const<br/>
+ <i>the latest date for which the curve can return values </i><br/>
  const std::vector&lt; Time &gt; &amp; <code>times</code> () const </p>
 <p> const std::vector&lt; <code>Date</code> &gt; &amp; <code>dates</code> () const </p>
 <p> const std::vector&lt; <code>Rate</code> &gt; &amp; <code>forwards</code> () const </p>
@@ -28,8 +28,8 @@ description: "QuantLib::InterpolatedForwardCurve – Term structure based on int
 <p> <code>InterpolatedForwardCurve</code> (const <code>DayCounter</code> &amp;, const Interpolator &amp;interpolator=Interpolator()) </p>
 <p> <code>InterpolatedForwardCurve</code> (const <code>Date</code> &amp;referenceDate, const <code>DayCounter</code> &amp;, const Interpolator &amp;interpolator=Interpolator()) </p>
 <p> <code>InterpolatedForwardCurve</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, const <code>DayCounter</code> &amp;, const Interpolator &amp;interpolator=Interpolator()) </p>
-<p> <code>Rate</code> <code>forwardImpl</code> (Time t) const<br />
- <i>instantaneous forward-rate calculation </i><br />
+<p> <code>Rate</code> <code>forwardImpl</code> (Time t) const<br/>
+ <i>instantaneous forward-rate calculation </i><br/>
  <code>Rate</code> <code>zeroYieldImpl</code> (Time t) const </p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class Interpolator&gt; class QuantLib::InterpolatedForwardCurve&lt; Interpolator &gt;</h3>

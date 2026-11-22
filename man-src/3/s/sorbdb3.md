@@ -10,7 +10,7 @@ description: "sorbdb3.f –"
 <p>sorbdb3.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sorbdb3</code> (M, P, Q, X11, LDX11, X21, LDX21, THETA, PHI, TAUP1, TAUP2, TAUQ1, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sorbdb3</code> (M, P, Q, X11, LDX11, X21, LDX21, THETA, PHI, TAUP1, TAUP2, TAUQ1, WORK, LWORK, INFO)<br/>
  <i></i><code>SORBDB3</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sorbdb3 (integerM, integerP, integerQ, real, dimension(ldx11,*)X11, integerLDX11, real, dimension(ldx21,*)X21, integerLDX21, real, dimension(*)THETA, real, dimension(*)PHI, real, dimension(*)TAUP1, real, dimension(*)TAUP2, real, dimension(*)TAUQ1, real, dimension(*)WORK, integerLWORK, integerINFO)</h3>

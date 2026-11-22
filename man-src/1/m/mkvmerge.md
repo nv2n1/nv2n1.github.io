@@ -13,11 +13,11 @@ description: "mkvmerge – Merge multimedia streams into a Matroska(TM) file"
 <dl>
 <dt> <code>mkvmerge</code> [global options] {-o out} [options1] {file1} [[options2]&nbsp;<wbr>{file2}] [@optionsfile]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This program takes the input from several media files and joins their streams (all of them or just a selection) into a Matroska(TM) file; see m[blue]<code>the Matroska(TM) website</code>m[]<font SIZE="-2">[1]</font>. </dd>
+<dd>This program takes the input from several media files and joins their streams (all of them or just a selection) into a Matroska(TM) file; see m[blue]<code>the Matroska(TM) website</code>m[][1]. </dd>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font> </dd>
+  <code>Important</code>  </dd>
 <p> The order of command line options is important. Please read the section &quot;Option order&quot; if you&#8217;re new to the program. </p>
 </dl>
 <h3>Global options</h3>
@@ -185,7 +185,7 @@ description: "mkvmerge – Merge multimedia streams into a Matroska(TM) file"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  Note that <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) only makes decisions about splitting at key frame positions. This applies to both the start and the end of each range. So even if an end timecode is between two key frames <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) will continue outputting the frames up to but excluding the following key frame. </dd>
 </dl>
 </dl>
@@ -210,7 +210,7 @@ description: "mkvmerge – Merge multimedia streams into a Matroska(TM) file"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  Note that <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) only makes decisions about splitting at key frame positions. This applies to both the start and the end of each range. So even if an end frame/field number is between two key frames <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) will continue outputting the frames up to but excluding the following key frame. </dd>
 </dl>
 <p> In example 1 <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) will create two files. The first will contain the content starting from the first key frame at or after 137 up to but excluding the first key frame at or after 258. The second file will contain the content starting from 548 until 1211. </p>
@@ -220,7 +220,7 @@ description: "mkvmerge – Merge multimedia streams into a Matroska(TM) file"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  The numbers given with this argument are interpreted based on the number of Matroska(TM) blocks that are output. A single Matroska(TM) block contains either a full frame (for progressive content) or a single field (for interlaced content). mkvmerge does not distinguish between those two and simply counts the number of blocks. For example: If one wanted to split after the 25th full frame with interlaced content one would have to use 50 (two fields per full frame) as the split point. </dd>
 </dl>
 </dl>
@@ -235,7 +235,7 @@ description: "mkvmerge – Merge multimedia streams into a Matroska(TM) file"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  The numbers given with this argument are interpreted based on the number of Matroska(TM) blocks that are output. A single Matroska(TM) block contains either a full frame (for progressive content) or a single field (for interlaced content). mkvmerge does not distinguish between those two and simply counts the number of blocks. For example: If one wanted to split after the 25th full frame with interlaced content one would have to use 50 (two fields per full frame) as the split point. </dd>
 </dl>
 </dl>
@@ -250,7 +250,7 @@ description: "mkvmerge – Merge multimedia streams into a Matroska(TM) file"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  The Matroska(TM) file format supports arbitrary deeply nested chapter structures called &#8216;edition entries&#8217; and &#8216;chapter atoms&#8217;. However, this mode only considers the top-most level of chapters across all edition entries. </dd>
 </dl>
 </dl>
@@ -339,7 +339,7 @@ $ mkvmerge -o out.mkv '(' file.mkv ')'
 <p> <code>&#8211;attachment-mime-type</code> <i>MIME type</i></p>
 <dl>
 <dt>
-</dt><dd> MIME type of the following attachment. Applies to the next <code>&#8211;attach-file</code> or <code>&#8211;attach-file-once</code> option. A list of officially recognized MIME types can be found e.g. at m[blue]<code>the IANA homepage</code>m[]<font SIZE="-2">[2]</font>. The MIME type is mandatory for an attachment.</dd></dl>
+</dt><dd> MIME type of the following attachment. Applies to the next <code>&#8211;attach-file</code> or <code>&#8211;attach-file-once</code> option. A list of officially recognized MIME types can be found e.g. at m[blue]<code>the IANA homepage</code>m[][2]. The MIME type is mandatory for an attachment.</dd></dl>
 <p> <code>&#8211;attachment-name</code> <i>name</i></p>
 <dl>
 <dt>
@@ -484,7 +484,7 @@ $ mkvmerge -o out.mkv '(' file.mkv ')'
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  This has only been implemented for AVC/h.264 video tracks so far. </dd>
 </dl>
 </dl>
@@ -622,7 +622,7 @@ $ mkvmerge -o out.mkv '(' file.mkv ')'
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font> </dd>
+  <code>Important</code>  </dd>
 <p> The order of command line options is important. Please read the section &quot;Option order&quot; if you&#8217;re new to the program. </p>
 </dl>
 <h2>OPTION ORDER</h2>
@@ -836,7 +836,7 @@ Track ID 1: audio (A_MPEG/L3)
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> This section applies to all programs in MKVToolNix even if it only mentions <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1). </p>
 </dl>
 <h3>Introduction</h3>
@@ -939,7 +939,7 @@ sound.ogg
  </dd></dl>
 <p> If a Matroska(TM) containing attachments file is used as an input file then <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) will copy the attachments into the new file. The selection which attachments are copied and which are not can be changed with the options <code>--attachments</code> and <code>--no-attachments</code>.  </p>
 <h2>CHAPTERS</h2>
-<p> The Matroska(TM) chapter system is more powerful than the old known system used by OGM files. The full specifications can be found at m[blue]<code>the Matroska(TM) website</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> The Matroska(TM) chapter system is more powerful than the old known system used by OGM files. The full specifications can be found at m[blue]<code>the Matroska(TM) website</code>m[][1]. </p>
 <p> <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) supports two kinds of chapter files as its input. The first format, called &#8216;simple chapter format&#8217;, is the same format that the OGM tools expect. The second format is a XML based chapter format which supports all of Matroska(TM)&#8216;s chapter functionality.  </p>
 <h3>The simple chapter format</h3>
 <p> This formmat consists of pairs of lines that start with &#8216;CHAPTERxx=&#8216; and &#8216;CHAPTERxxNAME=&#8216; respectively. The first one contains the start timecode while the second one contains the title. Here&#8217;s an example: </p>
@@ -1031,7 +1031,7 @@ CHAPTER03NAME=Baby rocks the house
 <h3>Introduction</h3>
 <p> Matroska(TM) supports an extensive set of tags that is deprecated and a new, simpler system like it is is used in most other containers: <i>KEY=VALUE</i>. However, in Matroska(TM) these tags can also be nested, and both the <i>KEY</i> and the <i>VALUE</i> are elements of their own. The example file example-tags-2.xml shows how to use this new system.  </p>
 <h3>Scope of the tags</h3>
-<p> Matroska(TM) tags do not automatically apply to the complete file. They can, but they also may apply to different parts of the file: to one or more tracks, to one or more chapters, or even to a combination of both. The m[blue]<code>the Matroska(TM) specification</code>m[]<font SIZE="-2">[3]</font> gives more details about this fact. </p>
+<p> Matroska(TM) tags do not automatically apply to the complete file. They can, but they also may apply to different parts of the file: to one or more tracks, to one or more chapters, or even to a combination of both. The m[blue]<code>the Matroska(TM) specification</code>m[][3] gives more details about this fact. </p>
 <p> One important fact is that tags are linked to tracks or chapters with the TargetsMatroska(TM) tag element, and that the UIDs used for this linking are <i>not</i> the track IDs <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) uses everywhere. Instead the numbers used are the UIDs which <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) calculates automatically (if the track is taken from a file format other than Matroska(TM)) or which are copied from the source file if the track&#8217;s source file is a Matroska(TM) file. Therefore it is difficult to know which UIDs to use in the tag file before the file is handed over to <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1). </p>
 <p> <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) knows two options with which you can add tags to Matroska(TM) files: The <code>--global-tags</code> and the <code>--tags</code> options. The difference is that the former option, <code>--global-tags</code>, will make the tags apply to the complete file by removing any of those Targets elements mentioned above. The latter option, <code>--tags</code>, automatically inserts the UID that <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) generates for the tag specified with the <i>TID</i> part of the <code>--tags</code> option.  </p>
 <h3>Example</h3>
@@ -1041,7 +1041,7 @@ CHAPTER03NAME=Baby rocks the house
 </code></pre>
  </dd></dl>
 <h3>Tag file format</h3>
-<p> <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) supports a XML based tag file format. The format is very closely modeled after m[blue]<code>the Matroska(TM) specification</code>m[]<font SIZE="-2">[3]</font>. Both the binary and the source distributions of MKVToolNix come with a sample file called example-tags-2.xml which simply lists all known tags and which can be used as a basis for real life tag files. </p>
+<p> <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) supports a XML based tag file format. The format is very closely modeled after m[blue]<code>the Matroska(TM) specification</code>m[][3]. Both the binary and the source distributions of MKVToolNix come with a sample file called example-tags-2.xml which simply lists all known tags and which can be used as a basis for real life tag files. </p>
 <p> The basics are: </p>
 <dl>
 <dd> <p> &bull; The outermost element must be &lt;Tags&gt;. </p>
@@ -1178,7 +1178,7 @@ gap, 10.050
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mkvinfo/">mkvinfo</a></code>(1), <code><a href="/docs/linux/man/1-mkvextract/">mkvextract</a></code>(1), <code><a href="/docs/linux/man/1-mkvpropedit/">mkvpropedit</a></code>(1), <code><a href="/docs/linux/man/1-mmg/">mmg</a></code>(1)  </p>
 <h2>WWW</h2>
-<p> The latest version can always be found at m[blue]<code>the MKVToolNix homepage</code>m[]<font SIZE="-2">[4]</font>.  </p>
+<p> The latest version can always be found at m[blue]<code>the MKVToolNix homepage</code>m[][4].  </p>
 <h2>AUTHOR</h2>
 <p> <code>Moritz Bunkus</code> &lt;moritz [at] bunkus.org&gt; </p>
 <dl>

@@ -68,7 +68,7 @@ description: "jnettop – View hosts/ports taking up the most network traffic"
 <dt><code>resolve_rule &quot;&lt;network address&gt;&quot; &quot;&lt;network mask&gt;&quot; [normal|external] (&lt;arguments&gt; &#8230;)</code></dt>
 <dd>The <code>resolve_rule</code> keyword adds one resolver into list of resolvers for specified address. When resolving, jnettop examines all the rules in the order how they were specified in configuration file. If the network address matches specified range, declared resolver is used. Resolver can be <code>normal</code>, which means the standard DNS lookup or <code>external</code>, which executes specified external program to perform resolving. This can be used with bundled jnettop-lookup-nmb script, which looks up IP addresses using <a href="/docs/linux/man/1-nmblookup/">nmblookup</a>(1) tool. If a tool returns empty string or DNS is not found, next rule is examined. If jnettop runs out of rules, than the standard DNS lookup is executed.</dd>
 <dl>
-<dd>resolve_rule &quot;192.168.0.0&quot; &quot;255.255.255.0&quot; normal<br />
+<dd>resolve_rule &quot;192.168.0.0&quot; &quot;255.255.255.0&quot; normal<br/>
  resolve_rule &quot;192.168.0.0&quot; &quot;255.255.255.0&quot; external &quot;/usr/share/jnettop/jnettop-lookup-nbm&quot;</dd></dl>
 <dt><code>rule &quot;&lt;rule_name&gt;&quot; &quot;&lt;rule_definition&gt;&quot;</code></dt>
 <dd>The <code>rule</code> keyword defines a set of predefined tcpdump(1)-like filters to apply. You can specify various filters as &quot;show me what 192.168.1.32&quot; sends:</dd>

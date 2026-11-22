@@ -50,7 +50,7 @@ description: "mmafm – creates AFM font metrics for multiple master fonts"
 <dd> You haven&#8217;t yet created an AMCP file for <i>Font</i>.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Eddie Kohler, ekohler [at] gmail.com </p>
-<p> The latest version is available from:<br />
- <a rel="nofollow" href="http://www.lcdf.org/type/">http://www.lcdf.org/type/</a><br />
+<p> The latest version is available from:<br/>
+ <a rel="nofollow" href="http://www.lcdf.org/type/">http://www.lcdf.org/type/</a><br/>
  AMFM and AFM files for Adobe Type Library fonts are also available at that URL. </p>
 <p> Thanks to Melissa O&#8217;Neill for suggestions and patient debugging. </p>

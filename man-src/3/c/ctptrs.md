@@ -11,7 +11,7 @@ description: "ctptrs.f –"
 <p> ctptrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctptrs</code> (UPLO, TRANS, DIAG, N, NRHS, AP, B, LDB, INFO)<br />
+<p> subroutine <code>ctptrs</code> (UPLO, TRANS, DIAG, N, NRHS, AP, B, LDB, INFO)<br/>
  <i></i><code>CTPTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctptrs (characterUPLO, characterTRANS, characterDIAG, integerN, integerNRHS, complex, dimension( * )AP, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

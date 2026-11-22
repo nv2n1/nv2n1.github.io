@@ -11,7 +11,7 @@ description: "dlanhs.f –"
 <p> dlanhs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dlanhs</code> (NORM, N, A, LDA, WORK)<br />
+<p> DOUBLE PRECISION function <code>dlanhs</code> (NORM, N, A, LDA, WORK)<br/>
  <i></i><code>DLANHS</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of an upper Hessenberg matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dlanhs (characterNORM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )WORK)</h3>

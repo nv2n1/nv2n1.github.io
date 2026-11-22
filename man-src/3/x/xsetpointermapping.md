@@ -31,5 +31,5 @@ description: "XSetPointerMapping, XGetPointerMapping – manipulate pointer sett
 <dt><code>BadValue</code></dt>
 <dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xchangekeyboardcontrol/">XChangeKeyboardControl</a>(3), <a href="/docs/linux/man/3-xchangekeyboardmapping/">XChangeKeyboardMapping</a>(3)<br />
+<p><a href="/docs/linux/man/3-xchangekeyboardcontrol/">XChangeKeyboardControl</a>(3), <a href="/docs/linux/man/3-xchangekeyboardmapping/">XChangeKeyboardMapping</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

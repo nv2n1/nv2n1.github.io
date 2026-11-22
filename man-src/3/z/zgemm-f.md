@@ -10,7 +10,7 @@ description: "zgemm.f –"
 <p>zgemm.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgemm</code> (TRANSA, TRANSB, M, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
+<p>subroutine <code>zgemm</code> (TRANSA, TRANSB, M, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br/>
  <i></i><code>ZGEMM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgemm (characterTRANSA, characterTRANSB, integerM, integerN, integerK, complex*16ALPHA, complex*16, dimension(lda,*)A, integerLDA, complex*16, dimension(ldb,*)B, integerLDB, complex*16BETA, complex*16, dimension(ldc,*)C, integerLDC)</h3>

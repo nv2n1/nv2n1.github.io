@@ -12,7 +12,7 @@ smokeping_master_slave - How to run multiple distributed instances of SmokePing
 
 Normally smokeping probes run their tests from the host where smokeping runs to some target host and monitor the latency of the connection between the two. 
 
- The Master/Slave concept enables all smokeping probes to run remotely. The use case for this is to measure the overall connectivity in a network. If you are interested in checking that your central <font SIZE="-1">DNS</font> server or your file server works for everyone, you could setup several smokeping instances checking up on on the two servers from multiple locations within your network. With the Master/Slave smokeping configuration this process becomes much simpler, as one smokeping master server can control multiple slaves. 
+ The Master/Slave concept enables all smokeping probes to run remotely. The use case for this is to measure the overall connectivity in a network. If you are interested in checking that your central DNS server or your file server works for everyone, you could setup several smokeping instances checking up on on the two servers from multiple locations within your network. With the Master/Slave smokeping configuration this process becomes much simpler, as one smokeping master server can control multiple slaves. 
 
  All monitoring data is stored and presented on the server, but collected by the slaves. The slaves will also get their configuration information from the master, so that you just have to maintain the master server configuration file and the rest is taken care of automatically.
 
@@ -24,7 +24,7 @@ The slaves communicate with the master smokeping server via the normal smokeping
 
  If the assignment for a slave changes, the master will tell the slave after the slave has delivered its results. 
 
- The master and the slaves sign their messages by supplying an <font SIZE="-1">HMAC-MD5</font> code (<font SIZE="-1">RFC 2104</font>) of the message and a shared secret. Optionally the whole communication can run over ssl. 
+ The master and the slaves sign their messages by supplying an HMAC-MD5 code (RFC 2104) of the message and a shared secret. Optionally the whole communication can run over ssl. 
 
  <pre> [slave 1] [slave 2] [slave 3]
  | | |
@@ -81,7 +81,7 @@ A smokeping slave setup has no configuration file. It just needs to know that it
 
  <pre> ./smokeping --master-url=<a rel="nofollow" HREF="http://smokeping/smokeping.cgi">http://smokeping/smokeping.cgi</a> \
  --cache-dir=/var/smokeping/ \
- --shared-secret=/var/smokeping/secret.txt</pre>The <i>secret.txt</i> file contains a single word, the secret of this slave. It is <font SIZE="-1">NOT</font> the same as the <i>slavesecrets.conf</i> file the master uses.
+ --shared-secret=/var/smokeping/secret.txt</pre>The <i>secret.txt</i> file contains a single word, the secret of this slave. It is NOT the same as the <i>slavesecrets.conf</i> file the master uses.
 
 <h2>Security Considerations</h2>
 
@@ -91,15 +91,15 @@ The master effectively has full access to slave hosts as the user running the sl
 
 <h2>Copyright</h2>
 
-Copyright (c) 2007 by Tobias Oetiker, <font SIZE="-1">OETIKER+PARTNER AG.</font> All right reserved.
+Copyright (c) 2007 by Tobias Oetiker, OETIKER+PARTNER AG. All right reserved.
 
 <h2>License</h2>
 
-This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
 
- This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. 
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. 
 
- You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font>
+ You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 <h2>Author</h2>
 

@@ -11,7 +11,7 @@ description: "dspr.f –"
 <p> dspr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dspr</code> (UPLO, N, ALPHA, X, INCX, AP)<br />
+<p> subroutine <code>dspr</code> (UPLO, N, ALPHA, X, INCX, AP)<br/>
  <i></i><code>DSPR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dspr (characterUPLO, integerN, double precisionALPHA, double precision, dimension(*)X, integerINCX, double precision, dimension(*)AP)</h3>

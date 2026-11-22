@@ -10,15 +10,15 @@ description: "ql/indexes/ibor/jpylibor.hpp – JPY LIBOR rate"
 
 <p> ql/indexes/ibor/jpylibor.hpp &#8211; JPY LIBOR rate </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/indexes/ibor/libor.hpp&gt;<br />
- #include &lt;ql/time/calendars/unitedkingdom.hpp&gt;<br />
- #include &lt;ql/time/calendars/japan.hpp&gt;<br />
- #include &lt;ql/time/daycounters/actual360.hpp&gt;<br />
+<p> #include &lt;ql/indexes/ibor/libor.hpp&gt;<br/>
+ #include &lt;ql/time/calendars/unitedkingdom.hpp&gt;<br/>
+ #include &lt;ql/time/calendars/japan.hpp&gt;<br/>
+ #include &lt;ql/time/daycounters/actual360.hpp&gt;<br/>
  #include &lt;ql/currencies/asia.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>JPYLibor</code><br />
- <i>JPY LIBOR rate </i><br />
- class <code>DailyTenorJPYLibor</code><br />
+<p> class <code>JPYLibor</code><br/>
+ <i>JPY LIBOR rate </i><br/>
+ class <code>DailyTenorJPYLibor</code><br/>
  <i>base class for the one day deposit BBA JPY LIBOR indexes </i></p>
 <h2>Detailed Description</h2>
 <p> JPY LIBOR rate </p>

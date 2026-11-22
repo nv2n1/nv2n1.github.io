@@ -36,10 +36,10 @@ description: "Performance Marker Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> this the client handle that this transfer will be occurring on<br />
- <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br />
- <i>source_url</i> source of the transfer (GLOBUS_NULL if &#8216;put&#8217;)<br />
- <i>dest_url</i> dest of the transfer (GLOBUS_NULL if &#8216;get&#8217;)<br />
+</dt><dd> <i>handle</i> this the client handle that this transfer will be occurring on<br/>
+ <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br/>
+ <i>source_url</i> source of the transfer (GLOBUS_NULL if &#8216;put&#8217;)<br/>
+ <i>dest_url</i> dest of the transfer (GLOBUS_NULL if &#8216;get&#8217;)<br/>
  <i>restart</i> boolean indicating whether this callback is result of a restart</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -53,8 +53,8 @@ description: "Performance Marker Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> this the client handle that this transfer was occurring on<br />
- <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br />
+</dt><dd> <i>handle</i> this the client handle that this transfer was occurring on<br/>
+ <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br/>
  <i>success</i> indicates whether this transfer completed successfully or was interrupted (by error or abort)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -68,11 +68,11 @@ description: "Performance Marker Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> this the client handle that this transfer is occurring on<br />
- <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br />
- <i>time_stamp</i> the timestamp at which the number of bytes is valid<br />
- <i>stripe_ndx</i> the stripe index this data refers to<br />
- <i>num_stripes</i> total number of stripes involved in this transfer<br />
+</dt><dd> <i>handle</i> this the client handle that this transfer is occurring on<br/>
+ <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br/>
+ <i>time_stamp</i> the timestamp at which the number of bytes is valid<br/>
+ <i>stripe_ndx</i> the stripe index this data refers to<br/>
+ <i>num_stripes</i> total number of stripes involved in this transfer<br/>
  <i>nbytes</i> the total bytes transferred on this stripe</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -129,7 +129,7 @@ description: "Performance Marker Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> plugin previously initialized with init (above)<br />
+</dt><dd> <i>plugin</i> plugin previously initialized with init (above)<br/>
  <i>user_specific</i> pointer to storage for user_specific pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -147,10 +147,10 @@ description: "Performance Marker Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> a pointer to a plugin type to be initialized<br />
- <i>user_specific</i> a pointer to some user specific data that will be provided to all callbacks<br />
- <i>begin_cb</i> the callback to be called upon the start of a transfer<br />
- <i>marker_cb</i> the callback to be called with every performance marker received<br />
+</dt><dd> <i>plugin</i> a pointer to a plugin type to be initialized<br/>
+ <i>user_specific</i> a pointer to some user specific data that will be provided to all callbacks<br/>
+ <i>begin_cb</i> the callback to be called upon the start of a transfer<br/>
+ <i>marker_cb</i> the callback to be called with every performance marker received<br/>
  <i>complete_cb</i> the callback to be called to indicate transfer completion</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -168,8 +168,8 @@ description: "Performance Marker Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> plugin previously initialized with init (above)<br />
- <i>copy_cb</i> func to be called when a copy is needed<br />
+</dt><dd> <i>plugin</i> plugin previously initialized with init (above)<br/>
+ <i>copy_cb</i> func to be called when a copy is needed<br/>
  <i>destroy_cb</i> func to be called when a copy is to be destroyed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

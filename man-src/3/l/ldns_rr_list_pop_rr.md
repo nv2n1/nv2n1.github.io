@@ -10,7 +10,7 @@ description: "ldns_rr_list_cat, ldns_rr_list_push_rr, ldns_rr_list_pop_rr"
 
 <p> ldns_rr_list_cat, ldns_rr_list_push_rr, ldns_rr_list_pop_rr </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_rr_list_cat(ldns_rr_list *left, ldns_rr_list *right); </p>

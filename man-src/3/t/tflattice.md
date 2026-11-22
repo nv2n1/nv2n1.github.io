@@ -13,7 +13,7 @@ description: "ql/methods/lattices/tflattice.hpp – Binomial Tsiveriotis-Fernand
 #include &lt;ql/methods/lattices/bsmlattice.hpp&gt;
 #include &lt;ql/pricingengines/hybrid/discretizedconvertible.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>TsiveriotisFernandesLattice&lt; T &gt;</code><br />
+<p>class <code>TsiveriotisFernandesLattice&lt; T &gt;</code><br/>
  <i>Binomial lattice approximating the Tsiveriotis-Fernandes model. </i></p>
 <h2>Detailed Description</h2>
 <p>Binomial Tsiveriotis-Fernandes tree model.</p>

@@ -11,25 +11,25 @@ perlhpux - Perl version 5 on Hewlett-Packard Unix (HP-UX) systems
 
 <h2>DESCRIPTION</h2>
 
- This document describes various features of <font SIZE="-1">HP</font>'s Unix operating system (HP-UX) that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
+ This document describes various features of HP's Unix operating system (HP-UX) that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
 
 <h3>Using perl as shipped with HP-UX</h3>
 
- Application release September 2001, HP-UX 11.00 is the first to ship with Perl. By the time it was perl-5.6.1 in /opt/perl. The first occurrence is on <font SIZE="-1">CD 5012-7954</font> and can be installed using 
+ Application release September 2001, HP-UX 11.00 is the first to ship with Perl. By the time it was perl-5.6.1 in /opt/perl. The first occurrence is on CD 5012-7954 and can be installed using 
 
  <pre>
   swinstall -s /cdrom perl
 </pre> 
 
- assuming you have mounted that <font SIZE="-1">CD</font> on /cdrom. 
+ assuming you have mounted that CD on /cdrom. 
 
  That build was a portable hppa-1.1 multithread build that supports large files compiled with gcc-2.9-hppa-991112. 
 
  If you perform a new installation, then (a newer) Perl will be installed automatically. Pre-installed HP-UX systems now have more recent versions of Perl and the updated modules. 
 
- The official (threaded) builds from <font SIZE="-1">HP,</font> as they are shipped on the Application <font SIZE="-1">DVD/CD</font>'s are available on &lt;<a rel="nofollow" HREF="http://www.software.hp.com/portal/swdepot/displayProductInfo.do?productNumber=PERL">http://www.software.hp.com/portal/swdepot/displayProductInfo.do?productNumber=PERL</a>&gt; for both PA-RISC and <font SIZE="-1">IPF</font> (Itanium Processor Family). They are built with the <font SIZE="-1">HP</font> ANSI-C compiler. Up till 5.8.8 that was done by ActiveState. 
+ The official (threaded) builds from HP, as they are shipped on the Application DVD/CD's are available on &lt;<a rel="nofollow" HREF="http://www.software.hp.com/portal/swdepot/displayProductInfo.do?productNumber=PERL">http://www.software.hp.com/portal/swdepot/displayProductInfo.do?productNumber=PERL</a>&gt; for both PA-RISC and IPF (Itanium Processor Family). They are built with the HP ANSI-C compiler. Up till 5.8.8 that was done by ActiveState. 
 
- To see what version is included on the <font SIZE="-1">DVD</font> (assumed here to be mounted on /cdrom), issue this command: 
+ To see what version is included on the DVD (assumed here to be mounted on /cdrom), issue this command: 
 
  <pre>
   # swlist -s /cdrom perl
@@ -55,15 +55,15 @@ perlhpux - Perl version 5 on Hewlett-Packard Unix (HP-UX) systems
     perl.Perl5-64.PERL-RUN  E.5.8.8.J  64-bit Perl Binaries for IA
 </code></pre>
 
-<h3>Using perl from <font SIZE="-1">HP</font>'s porting centre</h3>
+<h3>Using perl from HP's porting centre</h3>
 
- <font SIZE="-1">HP</font> porting centre tries to keep up with customer demand and release updates from the Open Source community. Having precompiled Perl binaries available is obvious, though ``up-to-date'' is something relative. At the moment of writing perl-5.10.1 and 5.28.0 were available. 
+ HP porting centre tries to keep up with customer demand and release updates from the Open Source community. Having precompiled Perl binaries available is obvious, though ``up-to-date'' is something relative. At the moment of writing perl-5.10.1 and 5.28.0 were available. 
 
- The <font SIZE="-1">HP</font> porting centres are limited in what systems they are allowed to port to and they usually choose the two most recent <font SIZE="-1">OS</font> versions available. 
+ The HP porting centres are limited in what systems they are allowed to port to and they usually choose the two most recent OS versions available. 
 
- <font SIZE="-1">HP</font> has asked the porting centre to move Open Source binaries from /opt to /usr/local, so binaries produced since the start of July 2002 are located in /usr/local. 
+ HP has asked the porting centre to move Open Source binaries from /opt to /usr/local, so binaries produced since the start of July 2002 are located in /usr/local. 
 
- One of <font SIZE="-1">HP</font> porting centres <font SIZE="-1">URL</font>'s is &lt;<a rel="nofollow" HREF="http://hpux.connect.org.uk/">http://hpux.connect.org.uk/</a>&gt; The port currently available is built with <font SIZE="-1">GNU</font> gcc. As porting modern <font SIZE="-1">GNU</font> gcc is extremely hard on HP-UX, they are stuck at version gcc-4.2.3.
+ One of HP porting centres URL's is &lt;<a rel="nofollow" HREF="http://hpux.connect.org.uk/">http://hpux.connect.org.uk/</a>&gt; The port currently available is built with GNU gcc. As porting modern GNU gcc is extremely hard on HP-UX, they are stuck at version gcc-4.2.3.
 
 <h3>Other prebuilt perl binaries</h3>
 
@@ -71,21 +71,21 @@ perlhpux - Perl version 5 on Hewlett-Packard Unix (HP-UX) systems
 
 <h3>Compiling Perl 5 on HP-UX</h3>
 
- When compiling Perl, you must use an <font SIZE="-1">ANSI C</font> compiler. The C compiler that ships with all HP-UX systems is a K&amp;R compiler that should only be used to build new kernels. 
+ When compiling Perl, you must use an ANSI C compiler. The C compiler that ships with all HP-UX systems is a K&amp;R compiler that should only be used to build new kernels. 
 
- Perl can be compiled with either <font SIZE="-1">HP</font>'s <font SIZE="-1">ANSI C</font> compiler or with gcc. The former is recommended, as not only can it compile Perl with no difficulty, but also can take advantage of features listed later that require the use of <font SIZE="-1">HP</font> compiler-specific command-line flags. 
+ Perl can be compiled with either HP's ANSI C compiler or with gcc. The former is recommended, as not only can it compile Perl with no difficulty, but also can take advantage of features listed later that require the use of HP compiler-specific command-line flags. 
 
- If you decide to use gcc, make sure your installation is recent and complete, and be sure to read the Perl <font SIZE="-1">INSTALL</font> file for more gcc-specific details.
+ If you decide to use gcc, make sure your installation is recent and complete, and be sure to read the Perl INSTALL file for more gcc-specific details.
 
 <h3>PA-RISC</h3>
 
- The last and final version of PA-RISC is 2.0, <font SIZE="-1">HP</font> no longer sells any system with these <font SIZE="-1">CPU</font>'s. 
+ The last and final version of PA-RISC is 2.0, HP no longer sells any system with these CPU's. 
 
- <font SIZE="-1">HP</font>'s <font SIZE="-1">HP9000</font> Unix systems run on <font SIZE="-1">HP</font>'s own Precision Architecture (PA-RISC) chip. HP-UX used to run on the Motorola <font SIZE="-1">MC68000</font> family of chips, but any machine with this chip in it is quite obsolete and this document will not attempt to address issues for compiling Perl on the Motorola chipset. Even though PA-RISC hardware is not sold anymore, a lot of machines still running on these <font SIZE="-1">CPU</font>'s can be found in the wild. 
+ HP's HP9000 Unix systems run on HP's own Precision Architecture (PA-RISC) chip. HP-UX used to run on the Motorola MC68000 family of chips, but any machine with this chip in it is quite obsolete and this document will not attempt to address issues for compiling Perl on the Motorola chipset. Even though PA-RISC hardware is not sold anymore, a lot of machines still running on these CPU's can be found in the wild. 
 
- The last order date for <font SIZE="-1">HP 9000</font> systems was December 31, 2008. 
+ The last order date for HP 9000 systems was December 31, 2008. 
 
- <font SIZE="-1">HP</font> PA-RISC systems are usually referred to with model description ``<font SIZE="-1">HP 9000''.</font> The last <font SIZE="-1">CPU</font> in this series is the <font SIZE="-1">PA-8900.</font> Support for PA-RISC architectured machines officially ended as shown in the following table: 
+ HP PA-RISC systems are usually referred to with model description ``HP 9000''. The last CPU in this series is the PA-8900. Support for PA-RISC architectured machines officially ended as shown in the following table: 
 
  
 PA - RISC End - of - Life Roadmap + -- -- -- --+-- -- -- -- -- -- -- --+-- -- -- -- -- -- -- --+-- -- -- -- -- -- -- -- -+ | HP9000 | Superdome | PA - 8700 | Spring 2011 |
@@ -108,7 +108,7 @@ PA - RISC End - of - Life Roadmap + -- -- -- --+-- -- -- -- -- -- -- --+-- -- --
         +-- -- -- --+-- -- -- -- -- -- -- --+-- -- -- -- -- -- -- --+-- -- -- -- -- -- -- -- -+
  
 
- A complete list of models at the time the <font SIZE="-1">OS</font> was built is in the file /usr/sam/lib/mo/sched.models. The first column corresponds to the last part of the output of the ``model'' command. The second column is the PA-RISC version and the third column is the exact chip type used. (Start browsing at the bottom to prevent confusion ;-) 
+ A complete list of models at the time the OS was built is in the file /usr/sam/lib/mo/sched.models. The first column corresponds to the last part of the output of the ``model'' command. The second column is the PA-RISC version and the third column is the exact chip type used. (Start browsing at the bottom to prevent confusion ;-) 
 
  <pre>
   # model
@@ -119,7 +119,7 @@ PA - RISC End - of - Life Roadmap + -- -- -- --+-- -- -- -- -- -- -- --+-- -- --
 
 <h3>PA-RISC 1.0</h3>
 
- The original version of PA-RISC, <font SIZE="-1">HP</font> no longer sells any system with this chip. 
+ The original version of PA-RISC, HP no longer sells any system with this chip. 
 
  The following systems contained PA-RISC 1.0 chips: 
 
@@ -164,7 +164,7 @@ PA - RISC End - of - Life Roadmap + -- -- -- --+-- -- -- -- -- -- -- --+-- -- --
   T600, V2000, V2200, V2250, V2500, V2600
 </pre> 
 
- Just before <font SIZE="-1">HP</font> took over Compaq, some systems were renamed. the link that contained the explanation is dead, so here's a short summary: 
+ Just before HP took over Compaq, some systems were renamed. the link that contained the explanation is dead, so here's a short summary: 
 
  <pre>
   HP 9000 A-Class servers, now renamed HP Server rp2400 series.
@@ -202,17 +202,17 @@ PA - RISC End - of - Life Roadmap + -- -- -- --+-- -- -- -- -- -- -- --+-- -- --
 
  It is no longer possible to compile PA-RISC 1.0 executables on either the PA-RISC 1.1 or 2.0 platforms. The command-line flags are accepted, but the resulting executable will not run when transferred to a PA-RISC 1.0 system.
 
-<h3>Itanium Processor Family (<font SIZE="-1">IPF</font>) and HP-UX</h3>
+<h3>Itanium Processor Family (IPF) and HP-UX</h3>
 
  HP-UX also runs on the newer Itanium processor. This requires the use of HP-UX version 11.23 (11i v2) or 11.31 (11i v3), and with the exception of a few differences detailed below and in later sections, Perl should compile with no problems. 
 
  Although PA-RISC binaries can run on Itanium systems, you should not attempt to use a PA-RISC version of Perl on an Itanium system. This is because shared libraries created on an Itanium system cannot be loaded while running a PA-RISC executable. 
 
- <font SIZE="-1">HP</font> Itanium 2 systems are usually referred to with model description ``<font SIZE="-1">HP</font> Integrity''.
+ HP Itanium 2 systems are usually referred to with model description ``HP Integrity''.
 
 <h3>Itanium, Itanium 2 &amp; Madison 6</h3>
 
- <font SIZE="-1">HP</font> also ships servers with the 128-bit Itanium processor(s). The cx26x0 is told to have Madison 6. As of the date of this document's last update, the following systems contain Itanium or Itanium 2 chips (this is likely to be out of date): 
+ HP also ships servers with the 128-bit Itanium processor(s). The cx26x0 is told to have Madison 6. As of the date of this document's last update, the following systems contain Itanium or Itanium 2 chips (this is likely to be out of date): 
 
  <pre>
   BL60p, BL860c, BL870c, BL890c, cx2600, cx2620, rx1600, rx1620, rx2600,
@@ -231,7 +231,7 @@ PA - RISC End - of - Life Roadmap + -- -- -- --+-- -- -- -- -- -- -- --+-- -- --
 
 <h3>HP-UX versions</h3>
 
- Not all architectures (<font SIZE="-1">PA</font> = PA-RISC, <font SIZE="-1">IPF</font> = Itanium Processor Family) support all versions of HP-UX, here is a short list 
+ Not all architectures (PA = PA-RISC, IPF = Itanium Processor Family) support all versions of HP-UX, here is a short list 
 
  
 HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- - -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --10.20 32 bit PA 30 - Jun - 2003 11.00 32 / 64 PA 31 - Dec - 2006 11.11 11i v1 32 / 64 PA 31 - Dec - 2015 11.22 11i v2 64 IPF 30 - Apr - 2004 11.23 11i v2 64 PA &amp;IPF 31 - Dec - 2015 11.31 11i v3 64 PA &amp;IPF 31 - Dec - 2020(PA)31 - Dec - 2025(IPF)
@@ -265,11 +265,11 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
 
  You may create a shared library that refers to another library, which may be either an archive library or a shared library. If this second library is a shared library, this is called a ``dependent library''. The dependent library's name is recorded in the main shared library, but it is not linked into the shared library. Instead, it is loaded when the main shared library is loaded. This can cause problems if you build an extension on one system and move it to another system where the libraries may not be located in the same place as on the first system. 
 
- If the referred library is an archive library, then it is treated as a simple collection of .o modules (all of which must contain <font SIZE="-1">PIC</font>). These modules are then linked into the shared library. 
+ If the referred library is an archive library, then it is treated as a simple collection of .o modules (all of which must contain PIC). These modules are then linked into the shared library. 
 
  Note that it is okay to create a library which contains a dependent library that is already linked into perl. 
 
- Some extensions, like DB_File and Compress::Zlib use/require prebuilt libraries for the perl extensions/modules to work. If these libraries are built using the default configuration, it might happen that you run into an error like ``invalid loader fixup'' during load phase. <font SIZE="-1">HP</font> is aware of this problem. Search the HP-UX cxx-dev forums for discussions about the subject. The short answer is that <b>everything</b> (all libraries, everything) must be compiled with <tt>&quot;+z&quot;</tt> or <tt>&quot;+Z&quot;</tt> to be <font SIZE="-1">PIC</font> (position independent code). (For gcc, that would be <tt>&quot;-fpic&quot;</tt> or <tt>&quot;-fPIC&quot;</tt>). In HP-UX 11.00 or newer the linker error message should tell the name of the offending object file. 
+ Some extensions, like DB_File and Compress::Zlib use/require prebuilt libraries for the perl extensions/modules to work. If these libraries are built using the default configuration, it might happen that you run into an error like ``invalid loader fixup'' during load phase. HP is aware of this problem. Search the HP-UX cxx-dev forums for discussions about the subject. The short answer is that <b>everything</b> (all libraries, everything) must be compiled with <tt>&quot;+z&quot;</tt> or <tt>&quot;+Z&quot;</tt> to be PIC (position independent code). (For gcc, that would be <tt>&quot;-fpic&quot;</tt> or <tt>&quot;-fPIC&quot;</tt>). In HP-UX 11.00 or newer the linker error message should tell the name of the offending object file. 
 
  A more general approach is to intervene manually, as with an example for the DB_File module, which requires SleepyCat's libdb.sl: 
 
@@ -310,25 +310,25 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
 
  PA-RISC and Itanium object files are not interchangeable. Although you may be able to use ar to create an archive library of PA-RISC object files on an Itanium system, you cannot link against it using an Itanium link editor.
 
-<h3>The <font SIZE="-1">HP ANSI C</font> Compiler</h3>
+<h3>The HP ANSI C Compiler</h3>
 
  When using this compiler to build Perl, you should make sure that the flag -Aa is added to the cpprun and cppstdin variables in the config.sh file (though see the section on 64-bit perl below). If you are using a recent version of the Perl distribution, these flags are set automatically. 
 
- Even though HP-UX 10.20 and 11.00 are not actively maintained by <font SIZE="-1">HP</font> anymore, updates for the <font SIZE="-1">HP ANSI C</font> compiler are still available from time to time, and it might be advisable to see if updates are applicable. At the moment of writing, the latests available patches for 11.00 that should be applied are <font SIZE="-1">PHSS_35098, PHSS_35175, PHSS_35100, PHSS_33036,</font> and <font SIZE="-1">PHSS_33902</font>). If you have a <font SIZE="-1">SUM</font> account, you can use it to search for updates/patches. Enter ``<font SIZE="-1">ANSI''</font> as keyword.
+ Even though HP-UX 10.20 and 11.00 are not actively maintained by HP anymore, updates for the HP ANSI C compiler are still available from time to time, and it might be advisable to see if updates are applicable. At the moment of writing, the latests available patches for 11.00 that should be applied are PHSS_35098, PHSS_35175, PHSS_35100, PHSS_33036, and PHSS_33902). If you have a SUM account, you can use it to search for updates/patches. Enter ``ANSI'' as keyword.
 
-<h3>The <font SIZE="-1">GNU C</font> Compiler</h3>
+<h3>The GNU C Compiler</h3>
 
- When you are going to use the <font SIZE="-1">GNU C</font> compiler (gcc), and you don't have gcc yet, you can either build it yourself (if you feel masochistic enough) from the sources (available from e.g. &lt;<a rel="nofollow" HREF="http://gcc.gnu.org/mirrors.html">http://gcc.gnu.org/mirrors.html</a>&gt;) or fetch a prebuilt binary from the <font SIZE="-1">HP</font> porting center at &lt;<a rel="nofollow" HREF="http://hpux.connect.org.uk/hppd/cgi-bin/search?term=gcc">http://hpux.connect.org.uk/hppd/cgi-bin/search?term=gcc</a>&amp;Search=Search&gt; or from the <font SIZE="-1">DSPP</font> (you need to be a member) at &lt;<a rel="nofollow" HREF="http://h21007.www2.hp.com/portal/site/dspp/menuitem.863c3e4cbcdc3f3515b49c108973a801?ciid=2a08725cc2f02110725cc2f02110275d6e10RCRD">http://h21007.www2.hp.com/portal/site/dspp/menuitem.863c3e4cbcdc3f3515b49c108973a801?ciid=2a08725cc2f02110725cc2f02110275d6e10RCRD</a>&amp;jumpid=reg_r1002_usen_c-001_title_r0001&gt; (Browse through the list, because there are often multiple versions of the same package available). 
+ When you are going to use the GNU C compiler (gcc), and you don't have gcc yet, you can either build it yourself (if you feel masochistic enough) from the sources (available from e.g. &lt;<a rel="nofollow" HREF="http://gcc.gnu.org/mirrors.html">http://gcc.gnu.org/mirrors.html</a>&gt;) or fetch a prebuilt binary from the HP porting center at &lt;<a rel="nofollow" HREF="http://hpux.connect.org.uk/hppd/cgi-bin/search?term=gcc">http://hpux.connect.org.uk/hppd/cgi-bin/search?term=gcc</a>&amp;Search=Search&gt; or from the DSPP (you need to be a member) at &lt;<a rel="nofollow" HREF="http://h21007.www2.hp.com/portal/site/dspp/menuitem.863c3e4cbcdc3f3515b49c108973a801?ciid=2a08725cc2f02110725cc2f02110275d6e10RCRD">http://h21007.www2.hp.com/portal/site/dspp/menuitem.863c3e4cbcdc3f3515b49c108973a801?ciid=2a08725cc2f02110725cc2f02110275d6e10RCRD</a>&amp;jumpid=reg_r1002_usen_c-001_title_r0001&gt; (Browse through the list, because there are often multiple versions of the same package available). 
 
- Most mentioned distributions are depots. H.Merijn Brand has made prebuilt gcc binaries available on &lt;<a rel="nofollow" HREF="http://mirrors.develooper.com/hpux/">http://mirrors.develooper.com/hpux/</a>&gt; and/or &lt;<a rel="nofollow" HREF="http://www.cmve.net/~merijn/">http://www.cmve.net/~merijn/</a>&gt; for HP-UX 10.20 (only 32bit), HP-UX 11.00, HP-UX 11.11 (HP-UX 11i v1), and HP-UX 11.23 (HP-UX 11i v2 PA-RISC) in both 32- and 64-bit versions. For HP-UX 11.23 <font SIZE="-1">IPF</font> and HP-UX 11.31 <font SIZE="-1">IPF</font> depots are available too. The <font SIZE="-1">IPF</font> versions do not need two versions of <font SIZE="-1">GNU</font> gcc. 
+ Most mentioned distributions are depots. H.Merijn Brand has made prebuilt gcc binaries available on &lt;<a rel="nofollow" HREF="http://mirrors.develooper.com/hpux/">http://mirrors.develooper.com/hpux/</a>&gt; and/or &lt;<a rel="nofollow" HREF="http://www.cmve.net/~merijn/">http://www.cmve.net/~merijn/</a>&gt; for HP-UX 10.20 (only 32bit), HP-UX 11.00, HP-UX 11.11 (HP-UX 11i v1), and HP-UX 11.23 (HP-UX 11i v2 PA-RISC) in both 32- and 64-bit versions. For HP-UX 11.23 IPF and HP-UX 11.31 IPF depots are available too. The IPF versions do not need two versions of GNU gcc. 
 
- On PA-RISC you need a different compiler for 32-bit applications and for 64-bit applications. On PA-RISC, 32-bit objects and 64-bit objects do not mix. Period. There is no different behaviour for <font SIZE="-1">HP</font> C-ANSI-C or <font SIZE="-1">GNU</font> gcc. So if you require your perl binary to use 64-bit libraries, like Oracle-64bit, you <font SIZE="-1">MUST</font> build a 64-bit perl. 
+ On PA-RISC you need a different compiler for 32-bit applications and for 64-bit applications. On PA-RISC, 32-bit objects and 64-bit objects do not mix. Period. There is no different behaviour for HP C-ANSI-C or GNU gcc. So if you require your perl binary to use 64-bit libraries, like Oracle-64bit, you MUST build a 64-bit perl. 
 
- Building a 64-bit capable gcc on PA-RISC from source is possible only when you have the <font SIZE="-1">HP C-ANSI C</font> compiler or an already working 64-bit binary of gcc available. Best performance for perl is achieved with <font SIZE="-1">HP</font>'s native compiler.
+ Building a 64-bit capable gcc on PA-RISC from source is possible only when you have the HP C-ANSI C compiler or an already working 64-bit binary of gcc available. Best performance for perl is achieved with HP's native compiler.
 
 <h3>Using Large Files with Perl on HP-UX</h3>
 
- Beginning with HP-UX version 10.20, files larger than 2GB (2^31 bytes) may be created and manipulated. Three separate methods of doing this are available. Of these methods, the best method for Perl is to compile using the -Duselargefiles flag to Configure. This causes Perl to be compiled using structures and functions in which these are 64 bits wide, rather than 32 bits wide. (Note that this will only work with <font SIZE="-1">HP</font>'s <font SIZE="-1">ANSI C</font> compiler. If you want to compile Perl using gcc, you will have to get a version of the compiler that supports 64-bit operations. See above for where to find it.) 
+ Beginning with HP-UX version 10.20, files larger than 2GB (2^31 bytes) may be created and manipulated. Three separate methods of doing this are available. Of these methods, the best method for Perl is to compile using the -Duselargefiles flag to Configure. This causes Perl to be compiled using structures and functions in which these are 64 bits wide, rather than 32 bits wide. (Note that this will only work with HP's ANSI C compiler. If you want to compile Perl using gcc, you will have to get a version of the compiler that supports 64-bit operations. See above for where to find it.) 
 
  There are some drawbacks to this approach. One is that any extension which calls any file-manipulating C function will need to be recompiled (just follow the usual ``perl Makefile.PL; make; make test; make install'' procedure). 
 
@@ -342,7 +342,7 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
 &nbsp;<wbr>&nbsp;statvfs,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;statvfsdev,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tmpfile, 
 &nbsp;<wbr>&nbsp;truncate,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;getrlimit,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;setrlimit 
 
- Another drawback is only valid for Perl versions before 5.6.0. This drawback is that the seek and tell functions (both the builtin version and <font SIZE="-1">POSIX</font> module version) will not perform correctly. 
+ Another drawback is only valid for Perl versions before 5.6.0. This drawback is that the seek and tell functions (both the builtin version and POSIX module version) will not perform correctly. 
 
  It is strongly recommended that you use this flag when you run Configure. If you do not do this, but later answer the question about large files when Configure asks you, you may get a configuration that cannot be compiled, or that does not function as expected.
 
@@ -352,9 +352,9 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
 
  To compile Perl with threads, add -Dusethreads to the arguments of Configure. Verify that the -D_POSIX_C_SOURCE=199506L compiler flag is automatically added to the list of flags. Also make sure that -lpthread is listed before -lc in the list of libraries to link Perl with. The hints provided for HP-UX during Configure will try very hard to get this right for you. 
 
- HP-UX versions before 10.30 require a separate installation of a <font SIZE="-1">POSIX</font> threads library package. Two examples are the <font SIZE="-1">HP DCE</font> package, available on ``HP-UX Hardware Extensions 3.0, Install and Core <font SIZE="-1">OS,</font> Release 10.20, April 1999 (B3920-13941)'' or the Freely available <font SIZE="-1">PTH</font> package, available on H.Merijn's site (&lt;<a rel="nofollow" HREF="http://mirrors.develooper.com/hpux/">http://mirrors.develooper.com/hpux/</a>&gt;). The use of <font SIZE="-1">PTH</font> will be unsupported in perl-5.12 and up and is rather buggy in 5.11.x. 
+ HP-UX versions before 10.30 require a separate installation of a POSIX threads library package. Two examples are the HP DCE package, available on ``HP-UX Hardware Extensions 3.0, Install and Core OS, Release 10.20, April 1999 (B3920-13941)'' or the Freely available PTH package, available on H.Merijn's site (&lt;<a rel="nofollow" HREF="http://mirrors.develooper.com/hpux/">http://mirrors.develooper.com/hpux/</a>&gt;). The use of PTH will be unsupported in perl-5.12 and up and is rather buggy in 5.11.x. 
 
- If you are going to use the <font SIZE="-1">HP DCE</font> package, the library used for threading is /usr/lib/libcma.sl, but there have been multiple updates of that library over time. Perl will build with the first version, but it will not pass the test suite. Older Oracle versions might be a compelling reason not to update that library, otherwise please find a newer version in one of the following patches: <font SIZE="-1">PHSS_19739, PHSS_20608,</font> or <font SIZE="-1">PHSS_23672</font> 
+ If you are going to use the HP DCE package, the library used for threading is /usr/lib/libcma.sl, but there have been multiple updates of that library over time. Perl will build with the first version, but it will not pass the test suite. Older Oracle versions might be a compelling reason not to update that library, otherwise please find a newer version in one of the following patches: PHSS_19739, PHSS_20608, or PHSS_23672 
 
  reformatted output: 
 
@@ -375,7 +375,7 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
   d3:/usr/lib 107 &gt;
 </pre> 
 
- If you choose for the <font SIZE="-1">PTH</font> package, use swinstall to install pth in the default location (/opt/pth), and then make symbolic links to the libraries from /usr/lib 
+ If you choose for the PTH package, use swinstall to install pth in the default location (/opt/pth), and then make symbolic links to the libraries from /usr/lib 
 
  <pre>
   # cd /usr/lib
@@ -386,11 +386,11 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
 
 <h3>64-bit Perl on HP-UX</h3>
 
- Beginning with HP-UX 11.00, programs compiled under HP-UX can take advantage of the <font SIZE="-1">LP64</font> programming environment (<font SIZE="-1">LP64</font> means Longs and Pointers are 64 bits wide), in which scalar variables will be able to hold numbers larger than 2^32 with complete precision. Perl has proven to be consistent and reliable in 64bit mode since 5.8.1 on all HP-UX 11.xx. 
+ Beginning with HP-UX 11.00, programs compiled under HP-UX can take advantage of the LP64 programming environment (LP64 means Longs and Pointers are 64 bits wide), in which scalar variables will be able to hold numbers larger than 2^32 with complete precision. Perl has proven to be consistent and reliable in 64bit mode since 5.8.1 on all HP-UX 11.xx. 
 
- As of the date of this document, Perl is fully 64-bit compliant on HP-UX 11.00 and up for both cc- and gcc builds. If you are about to build a 64-bit perl with <font SIZE="-1">GNU</font> gcc, please read the gcc section carefully. 
+ As of the date of this document, Perl is fully 64-bit compliant on HP-UX 11.00 and up for both cc- and gcc builds. If you are about to build a 64-bit perl with GNU gcc, please read the gcc section carefully. 
 
- Should a user have the need for compiling Perl in the <font SIZE="-1">LP64</font> environment, use the -Duse64bitall flag to Configure. This will force Perl to be compiled in a pure <font SIZE="-1">LP64</font> environment (with the +DD64 flag for <font SIZE="-1">HP</font> C-ANSI-C, with no additional options for <font SIZE="-1">GNU</font> gcc 64-bit on PA-RISC, and with -mlp64 for <font SIZE="-1">GNU</font> gcc on Itanium). If you want to compile Perl using gcc, you will have to get a version of the compiler that supports 64-bit operations.) 
+ Should a user have the need for compiling Perl in the LP64 environment, use the -Duse64bitall flag to Configure. This will force Perl to be compiled in a pure LP64 environment (with the +DD64 flag for HP C-ANSI-C, with no additional options for GNU gcc 64-bit on PA-RISC, and with -mlp64 for GNU gcc on Itanium). If you want to compile Perl using gcc, you will have to get a version of the compiler that supports 64-bit operations.) 
 
  You can also use the -Duse64bitint flag to Configure. Although there are some minor differences between compiling Perl with this flag versus the -Duse64bitall flag, they should not be noticeable from a Perl user's perspective. When configuring -Duse64bitint using a 64bit gcc on a pa-risc architecture, -Duse64bitint is silently promoted to -Duse64bitall. 
 
@@ -398,7 +398,7 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
 
 <h3>Oracle on HP-UX</h3>
 
- Using perl to connect to Oracle databases through <font SIZE="-1">DBI</font> and DBD::Oracle has caused a lot of people many headaches. Read <font SIZE="-1">README</font>.hpux in the DBD::Oracle for much more information. The reason to mention it here is that Oracle requires a perl built with libcl and libpthread, the latter even when perl is build without threads. Building perl using all defaults, but still enabling to build DBD::Oracle later on can be achieved using 
+ Using perl to connect to Oracle databases through DBI and DBD::Oracle has caused a lot of people many headaches. Read README.hpux in the DBD::Oracle for much more information. The reason to mention it here is that Oracle requires a perl built with libcl and libpthread, the latter even when perl is build without threads. Building perl using all defaults, but still enabling to build DBD::Oracle later on can be achieved using 
 
  <pre>
   Configure -A prepend:libswanted='cl pthread ' ...
@@ -406,11 +406,11 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
 
  Do not forget the space before the trailing quote. 
 
- Also note that this does not (yet) work with all configurations, it is known to fail with 64-bit versions of <font SIZE="-1">GCC.</font>
+ Also note that this does not (yet) work with all configurations, it is known to fail with 64-bit versions of GCC.
 
-<h3><font SIZE="-1">GDBM</font> and Threads on HP-UX</h3>
+<h3>GDBM and Threads on HP-UX</h3>
 
- If you attempt to compile Perl with (<font SIZE="-1">POSIX</font>) threads on an 11.X system and also link in the <font SIZE="-1">GDBM</font> library, then Perl will immediately core dump when it starts up. The only workaround at this point is to relink the <font SIZE="-1">GDBM</font> library under 11.X, then relink it into Perl. 
+ If you attempt to compile Perl with (POSIX) threads on an 11.X system and also link in the GDBM library, then Perl will immediately core dump when it starts up. The only workaround at this point is to relink the GDBM library under 11.X, then relink it into Perl. 
 
  the error might show something like: 
 
@@ -418,15 +418,15 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
 
  and Configure will give up.
 
-<h3><font SIZE="-1">NFS</font> filesystems and <b><a HREF="/docs/linux/man/2-utime/">utime</a></b>(2) on HP-UX</h3>
+<h3>NFS filesystems and <b><a HREF="/docs/linux/man/2-utime/">utime</a></b>(2) on HP-UX</h3>
 
- If you are compiling Perl on a remotely-mounted <font SIZE="-1">NFS</font> filesystem, the test io/fs.t may fail on test #18. This appears to be a bug in HP-UX and no fix is currently available.
+ If you are compiling Perl on a remotely-mounted NFS filesystem, the test io/fs.t may fail on test #18. This appears to be a bug in HP-UX and no fix is currently available.
 
 <h3>HP-UX Kernel Parameters (maxdsiz) for Compiling Perl</h3>
 
- By default, HP-UX comes configured with a maximum data segment size of 64MB. This is too small to correctly compile Perl with the maximum optimization levels. You can increase the size of the maxdsiz kernel parameter through the use of <font SIZE="-1">SAM.</font> 
+ By default, HP-UX comes configured with a maximum data segment size of 64MB. This is too small to correctly compile Perl with the maximum optimization levels. You can increase the size of the maxdsiz kernel parameter through the use of SAM. 
 
- When using the <font SIZE="-1">GUI</font> version of <font SIZE="-1">SAM,</font> click on the Kernel Configuration icon, then the Configurable Parameters icon. Scroll down and select the maxdsiz line. From the Actions menu, select the Modify Configurable Parameter item. Insert the new formula into the Formula/Value box. Then follow the instructions to rebuild your kernel and reboot your system. 
+ When using the GUI version of SAM, click on the Kernel Configuration icon, then the Configurable Parameters icon. Scroll down and select the maxdsiz line. From the Actions menu, select the Modify Configurable Parameter item. Insert the new formula into the Formula/Value box. Then follow the instructions to rebuild your kernel and reboot your system. 
 
  In general, a value of 256MB (or ``256*1024*1024'') is sufficient for Perl to compile at maximum optimization.
 
@@ -454,11 +454,11 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
   passwd: files
 </pre> 
 
- Whether you are using <font SIZE="-1">NIS</font> does not matter. Amazingly enough, the same bug also affects Solaris.
+ Whether you are using NIS does not matter. Amazingly enough, the same bug also affects Solaris.
 
 <h2>error: pasting ) and l does not give a valid preprocessing token</h2>
 
- There seems to be a broken system header file in HP-UX 11.00 that breaks perl building in 32bit mode with <font SIZE="-1">GNU</font> gcc-4.x causing this error. The same file for HP-UX 11.11 (even though the file is older) does not show this failure, and has the correct definition, so the best fix is to patch the header to match: 
+ There seems to be a broken system header file in HP-UX 11.00 that breaks perl building in 32bit mode with GNU gcc-4.x causing this error. The same file for HP-UX 11.11 (even though the file is older) does not show this failure, and has the correct definition, so the best fix is to patch the header to match: 
 
  <pre><code>
 -- - / usr / include / inttypes.h 2001 - 04 - 20 18 : 42 : 14 + 0200 ++ + / usr / include / inttypes.h 2000 - 11 - 14 09 : 00 : 00 + 0200 @ @-72, 7 + 72, 7 @ @
@@ -497,7 +497,7 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
 
 <h2>Miscellaneous</h2>
 
- HP-UX 11 Y2K patch ``Y2K-1100 B.11.00.B0125 HP-UX Core <font SIZE="-1">OS</font> Year 2000 Patch Bundle'' has been reported to break the io/fs test #18 which tests whether <b>utime()</b> can change timestamps. The Y2K patch seems to break <b>utime()</b> so that over <font SIZE="-1">NFS</font> the timestamps do not get changed (on local filesystems <b>utime()</b> still works). This has probably been fixed on your system by now.
+ HP-UX 11 Y2K patch ``Y2K-1100 B.11.00.B0125 HP-UX Core OS Year 2000 Patch Bundle'' has been reported to break the io/fs test #18 which tests whether <b>utime()</b> can change timestamps. The Y2K patch seems to break <b>utime()</b> so that over NFS the timestamps do not get changed (on local filesystems <b>utime()</b> still works). This has probably been fixed on your system by now.
 
 <h2>AUTHOR</h2>
 

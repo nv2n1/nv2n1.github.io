@@ -497,13 +497,13 @@ git format - patch[-k][(-o | --output - directory) &lt; dir &gt; | --stdout]
 <dt>
 </dt><dd>
 [format] headers = &#8220;Organization: git-foo
-&#8221; subjectPrefix = CHANGE<br />
-    suffix =.txt<br />
-                numbered = auto<br />
-        to = &lt;email&gt;<br />
-            cc = &lt;email&gt;<br />
-                attach[= mime &#8211; boundary &#8211; string] signOff = true outputDirectory = &lt;directory&gt;<br />
-                    coverLetter = auto<br />
+&#8221; subjectPrefix = CHANGE<br/>
+    suffix =.txt<br/>
+                numbered = auto<br/>
+        to = &lt;email&gt;<br/>
+            cc = &lt;email&gt;<br/>
+                attach[= mime &#8211; boundary &#8211; string] signOff = true outputDirectory = &lt;directory&gt;<br/>
+                    coverLetter = auto<br/>
                         coverFromDescription = auto
 </dd></dl>
 <h2>DISCUSSION</h2>
@@ -511,17 +511,17 @@ git format - patch[-k][(-o | --output - directory) &lt; dir &gt; | --stdout]
 <dl>
 <dt>
 </dt><dd>
-From 8f72bad1baf19a53459661343e21d6491c3908d3 Mon Sep 17 00 : 00 : 00 2001 From : Tony Luck&lt;tony.luck[at] intel.com&gt;<br />
-                                                                                      Date : Tue,<br />
-                                                                                             13 Jul 2010 11 : 42 : 54 &#8211; 0700 Subject : [PATCH] = ? UTF &#8211; 8 ? q ? [IA64] = 20Put = 20ia64 = 20config = 20files = 20on = 20the = 20         ? =<br />
-                                                                                                                                                                                                                                        = ? UTF &#8211; 8 ? q ? Uwe = 20Kleine-K = C3 = B6nig = 20diet ? =<br />
-                                                                                                                                                                                                                                                                                                       MIME &#8211; Version<br />
-                                                                                                                                                                                                                                                                                                 : 1.0 Content &#8211; Type<br />
-                                                                                                                                                                                                                                                        : text / plain; charset=UTF-8<br />
-Content-Transfer-Encoding: 8bit<br />
-arch/arm config files were slimmed down using a python script<br />
-(See commit c2330e286f68f1c408b4aa6515ba49d57f05beae comment)<br />
-Do the same for ia64 so we can have sleek &amp; trim looking<br />
+From 8f72bad1baf19a53459661343e21d6491c3908d3 Mon Sep 17 00 : 00 : 00 2001 From : Tony Luck&lt;tony.luck[at] intel.com&gt;<br/>
+                                                                                      Date : Tue,<br/>
+                                                                                             13 Jul 2010 11 : 42 : 54 &#8211; 0700 Subject : [PATCH] = ? UTF &#8211; 8 ? q ? [IA64] = 20Put = 20ia64 = 20config = 20files = 20on = 20the = 20         ? =<br/>
+                                                                                                                                                                                                                                        = ? UTF &#8211; 8 ? q ? Uwe = 20Kleine-K = C3 = B6nig = 20diet ? =<br/>
+                                                                                                                                                                                                                                                                                                       MIME &#8211; Version<br/>
+                                                                                                                                                                                                                                                                                                 : 1.0 Content &#8211; Type<br/>
+                                                                                                                                                                                                                                                        : text / plain; charset=UTF-8<br/>
+Content-Transfer-Encoding: 8bit<br/>
+arch/arm config files were slimmed down using a python script<br/>
+(See commit c2330e286f68f1c408b4aa6515ba49d57f05beae comment)<br/>
+Do the same for ia64 so we can have sleek &amp; trim looking<br/>
 &#8230;
 </dd></dl>
 <p> Typically it will be placed in a MUA&#8217;s drafts folder, edited to add timely commentary that should not go in the changelog after the three dashes, and then sent as a message whose body, in our example, starts with &quot;arch/arm config files were&#8230;&quot;. On the receiving end, readers can save interesting patches in a UNIX mailbox and apply them with <code><a href="/docs/linux/man/1-git-am/">git-am</a></code>(1). </p>
@@ -529,9 +529,9 @@ Do the same for ia64 so we can have sleek &amp; trim looking<br />
 <dl>
 <dt>
 </dt><dd>
-&#8230; &gt; So we should do such &#8211; and-such.Makes sense to me.How about this patch ? &#8212; &gt; 8 &#8211;Subject : [IA64] Put ia64 config files on the Uwe Kleine &#8211; K &amp;ouml;<br />
-nig diet<br />
-        arch /<br />
+&#8230; &gt; So we should do such &#8211; and-such.Makes sense to me.How about this patch ? &#8212; &gt; 8 &#8211;Subject : [IA64] Put ia64 config files on the Uwe Kleine &#8211; K &amp;ouml;<br/>
+nig diet<br/>
+        arch /<br/>
     arm config files were slimmed down using a python script&#8230;
 </dd></dl>
 <p> When sending a patch this way, most often you are sending your own patch, so in addition to the &quot;<code>From $SHA1 $magic_timestamp</code>&quot; marker you should omit <code>From:</code> and <code>Date:</code> lines from the patch file. The patch title is likely to be different from the subject of the discussion the patch is in response to, so it is likely that you would want to keep the Subject: line, like the example above.</p>
@@ -556,7 +556,7 @@ nig diet<br />
 <dl>
 <dt>
 </dt><dd>
-$ git fetch&lt;project&gt; master : test &#8211; apply $ git switch test &#8211; apply $ git restore&#8211; source = HEAD&#8211; staged&#8211; worktree : /<br />
+$ git fetch&lt;project&gt; master : test &#8211; apply $ git switch test &#8211; apply $ git restore&#8211; source = HEAD&#8211; staged&#8211; worktree : /<br/>
                                                                                                                          $ git am a.patch
 </dd></dl>
 </dl>
@@ -580,12 +580,12 @@ $ git fetch&lt;project&gt; master : test &#8211; apply $ git switch test &#8211;
 <h3>Thunderbird</h3>
 <p> By default, Thunderbird will both wrap emails as well as flag them as being <i>format=flowed</i>, both of which will make the resulting email unusable by Git. </p>
 <p> There are three different approaches: use an add-on to turn off line wraps, configure Thunderbird to not mangle patches, or use an external editor to keep Thunderbird from mangling the patches. </p>
-<p> <font SIZE="+1"> <code>Approach #1 (add-on)</code></p>
+<p>  <code>Approach #1 (add-on)</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> Install the Toggle Word Wrap add-on that is available from m[blue]<code><a rel="nofollow" href="https://addons.mozilla.org/thunderbird/addon/toggle-word-wrap/">https://addons.mozilla.org/thunderbird/addon/toggle-word-wrap/</a></code>m[] It adds a menu entry &quot;Enable Word Wrap&quot; in the composer&#8217;s &quot;Options&quot; menu that you can tick off. Now you can compose the message as you otherwise do (cut + paste, <i>git format-patch</i> | <i>git imap-send</i>, etc), but you have to insert line breaks manually in any text that you type.</dd></dl>
-<p> </font><font SIZE="+2"> <code>Approach #2 (configuration)</code></p>
+<p>  <code>Approach #2 (configuration)</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -602,7 +602,7 @@ $ git fetch&lt;project&gt; master : test &#8211; apply $ git switch test &#8211;
 <dt>
 </dt><dd> 3. Disable the use of format=flowed: Edit..Preferences..Advanced..Config Editor. Search for &quot;mailnews.send_plaintext_flowed&quot;. Toggle it to make sure it is set to <code>false</code>.</dd></dl>
 <p> After that is done, you should be able to compose email as you otherwise would (cut + paste, <i>git format-patch</i> | <i>git imap-send</i>, etc), and the patches will not be mangled.</dl>
-<p> </font><font SIZE="+3"> <code>Approach #3 (external editor)</code></p>
+<p>  <code>Approach #3 (external editor)</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -618,7 +618,7 @@ $ git fetch&lt;project&gt; master : test &#8211; apply $ git switch test &#8211;
 </dt><dd> 3. In the main Thunderbird window, <i>before</i> you open the compose window for the patch, use Tools&rarr;about:config to set the following to the indicated values: </dd>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
         mailnews.send_plaintext_flowed  =&gt; false
         mailnews.wraplength             =&gt; 0

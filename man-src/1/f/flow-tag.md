@@ -49,94 +49,94 @@ tag - action command Description / Example-- -- -- -- -- -- -- -- -- -- -- -- --
 <p>definition command Description / Example&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -tag &#8211; definition Begin tag &#8211; defintion secrion tag &#8211; definition bar term Begin a list of actions to be evaluated that match the filter rule.term input &#8211; filter List of input ifIndexes the flow must match.input &#8211; filter 1, 2, 3, 4 output &#8211; filter List of output ifIndexes the flow must match.output &#8211; filter 1, 2, 3, 4 exporter IP address of exporter the flow must match.exporter 1.2.3.4 action Name of action to evaluate.Actions are evaluated in the order they appear in a definition.action foo</p>
 <h2>EXAMPLES</h2>
 <p> The meaning of a tag is user defined. The following example uses 16 bits of a tag as a customer ID and 4 bits as a customer type. <code>flow-xlate</code> can be used to apply a mask to these fields. </p>
-<p>#file : gigapop &#8211; tags<br />
-#tag format<br />
-#<br />
-# 0 7 15 23 31<br />
-# 0000 0000 0000 0000 0000 0000 0000 0000(32 bits)<br />
-#RRRRRRRRRRRRRR TTTT NNNNNNNNNNNNNNNNNNN<br />
-#| | | Site name<br />
-#| | Site type<br />
-#| Reserved<br />
-#<br />
-#<br />
-#SITE_NAME_MASK = 0x0000FFFF<br />
-#SITE_TYPE_MASK = 0x00FF0000<br />
-#<br />
-#ID Name<br />
-#&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br />
-# 0x0001 OSU<br />
-# 0x0002 CWRU<br />
-# 0x0003 BGSU<br />
-#&#8230; etc<br />
-# 0x0019 MULTICAST<br />
-#<br />
-#ID Type<br />
-#&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;<br />
-# 0x01 Participant<br />
-# 0x02 SEGP<br />
-# 0x03 Sponsored &#8211; Participant<br />
-# 0x04 Gigapop<br />
-# 0x05 MULTICAST<br />
-tag &#8211; action OHIO &#8211; GIGAPOP_DST type destination &#8211; prefix<br />
-#OSU<br />
-                                                           match 128.146 /<br />
-                                                       16 set &#8211;<br />
-    destination 0x010001 match 164.107 / 16 set &#8211; destination 0x010001 match 140.254 / 16 set &#8211; destination 0x010001 match 192.153.26 / 24 set &#8211; destination 0x010001<br />
-#CWRU<br />
-                                                                                                                                                     match 129.22 /<br />
-                                                                                                                                                     16 set &#8211;<br />
-    destination 0x010002 match 192.5.110 / 24 set &#8211; destination 0x010002<br />
-#BGSU<br />
-                                                        match 129.1 /<br />
-                                                        16 set &#8211;<br />
-    destination 0x010003<br />
-#&#8230; etc<br />
-#MULTICAST<br />
-        match 224 /<br />
-        4 set &#8211;<br />
-    destination 0x050019 tag &#8211; action OHIO &#8211; GIGAPOP_SRC type source &#8211; prefix<br />
-#OSU<br />
-                                                                               match 128.146 /<br />
-                                                                           16 set &#8211;<br />
-    source 0x010001 match 164.107 / 16 set &#8211; source 0x010001 match 140.254 / 16 set &#8211; source 0x010001 match 192.153.26 / 24 set &#8211; source 0x010001<br />
-#CWRU<br />
-                                                                                                                                      match 129.22 /<br />
-                                                                                                                                      16 set &#8211;<br />
-    source 0x010002 match 192.5.110 / 24 set &#8211; source 0x010002<br />
-#BGSU<br />
-                                                   match 129.1 /<br />
-                                                   16 set &#8211;<br />
-    source 0x010003<br />
-#&#8230; etc<br />
-    tag &#8211;<br />
-    action OTHER_DST<br />
-        type destination &#8211;<br />
-    prefix<br />
-            match 0 /<br />
-        0 set &#8211;<br />
+<p>#file : gigapop &#8211; tags<br/>
+#tag format<br/>
+#<br/>
+# 0 7 15 23 31<br/>
+# 0000 0000 0000 0000 0000 0000 0000 0000(32 bits)<br/>
+#RRRRRRRRRRRRRR TTTT NNNNNNNNNNNNNNNNNNN<br/>
+#| | | Site name<br/>
+#| | Site type<br/>
+#| Reserved<br/>
+#<br/>
+#<br/>
+#SITE_NAME_MASK = 0x0000FFFF<br/>
+#SITE_TYPE_MASK = 0x00FF0000<br/>
+#<br/>
+#ID Name<br/>
+#&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br/>
+# 0x0001 OSU<br/>
+# 0x0002 CWRU<br/>
+# 0x0003 BGSU<br/>
+#&#8230; etc<br/>
+# 0x0019 MULTICAST<br/>
+#<br/>
+#ID Type<br/>
+#&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;<br/>
+# 0x01 Participant<br/>
+# 0x02 SEGP<br/>
+# 0x03 Sponsored &#8211; Participant<br/>
+# 0x04 Gigapop<br/>
+# 0x05 MULTICAST<br/>
+tag &#8211; action OHIO &#8211; GIGAPOP_DST type destination &#8211; prefix<br/>
+#OSU<br/>
+                                                           match 128.146 /<br/>
+                                                       16 set &#8211;<br/>
+    destination 0x010001 match 164.107 / 16 set &#8211; destination 0x010001 match 140.254 / 16 set &#8211; destination 0x010001 match 192.153.26 / 24 set &#8211; destination 0x010001<br/>
+#CWRU<br/>
+                                                                                                                                                     match 129.22 /<br/>
+                                                                                                                                                     16 set &#8211;<br/>
+    destination 0x010002 match 192.5.110 / 24 set &#8211; destination 0x010002<br/>
+#BGSU<br/>
+                                                        match 129.1 /<br/>
+                                                        16 set &#8211;<br/>
+    destination 0x010003<br/>
+#&#8230; etc<br/>
+#MULTICAST<br/>
+        match 224 /<br/>
+        4 set &#8211;<br/>
+    destination 0x050019 tag &#8211; action OHIO &#8211; GIGAPOP_SRC type source &#8211; prefix<br/>
+#OSU<br/>
+                                                                               match 128.146 /<br/>
+                                                                           16 set &#8211;<br/>
+    source 0x010001 match 164.107 / 16 set &#8211; source 0x010001 match 140.254 / 16 set &#8211; source 0x010001 match 192.153.26 / 24 set &#8211; source 0x010001<br/>
+#CWRU<br/>
+                                                                                                                                      match 129.22 /<br/>
+                                                                                                                                      16 set &#8211;<br/>
+    source 0x010002 match 192.5.110 / 24 set &#8211; source 0x010002<br/>
+#BGSU<br/>
+                                                   match 129.1 /<br/>
+                                                   16 set &#8211;<br/>
+    source 0x010003<br/>
+#&#8230; etc<br/>
+    tag &#8211;<br/>
+    action OTHER_DST<br/>
+        type destination &#8211;<br/>
+    prefix<br/>
+            match 0 /<br/>
+        0 set &#8211;<br/>
     destination 0x0</p>
-<p>    tag &#8211;<br />
-    action OTHER_SRC<br />
-        type source &#8211;<br />
-    prefix<br />
-            match 0 /<br />
-        0 set &#8211;<br />
-    source 0x0 tag &#8211; definition OHIO &#8211; GIGAPOP term<br />
-#Abilene interface<br />
-                                           input &#8211;<br />
-    filter 25<br />
-#clear tag first&#8211; it defaults to 0, so this may not be necessary.<br />
-    action OTHER_DST<br />
-        action OHIO &#8211;<br />
-    GIGAPOP_DST<br />
-        term<br />
-#Abilene interface<br />
-            output &#8211;<br />
-    filter 25<br />
-#clear tag first&#8211; it defaults to 0, so this may not be necessary.<br />
-    action OTHER_SRC<br />
-        action OHIO &#8211;<br />
+<p>    tag &#8211;<br/>
+    action OTHER_SRC<br/>
+        type source &#8211;<br/>
+    prefix<br/>
+            match 0 /<br/>
+        0 set &#8211;<br/>
+    source 0x0 tag &#8211; definition OHIO &#8211; GIGAPOP term<br/>
+#Abilene interface<br/>
+                                           input &#8211;<br/>
+    filter 25<br/>
+#clear tag first&#8211; it defaults to 0, so this may not be necessary.<br/>
+    action OTHER_DST<br/>
+        action OHIO &#8211;<br/>
+    GIGAPOP_DST<br/>
+        term<br/>
+#Abilene interface<br/>
+            output &#8211;<br/>
+    filter 25<br/>
+#clear tag first&#8211; it defaults to 0, so this may not be necessary.<br/>
+    action OTHER_SRC<br/>
+        action OHIO &#8211;<br/>
     GIGAPOP_SRC</p>
 <p> First populate <i>/etc/flow-tools/sym/tag</i> for <code>flow-stat</code> to use as symbols. </p>
 <pre>
@@ -154,18 +154,18 @@ tag &#8211; action OHIO &#8211; GIGAPOP_DST type destination &#8211; prefix<br /
 <pre>
 flow-cat <i>flows</i> | flow-filter -I25 | flow-tag -t gigapop-tags -TOHIO-GIGAPOP | flow-xlate -t0x0000FFFF | flow-stat -n -f30 -S2
 </pre>
-<p>#&#8211; &#8211; &#8212; &#8212; &#8212; &#8212; Report Information &#8212; &#8211; &#8212; &#8211; &#8212; &#8211;<br />
-#<br />
-#Fields : Total<br />
-#Symbols : Enabled<br />
-#Sorting : Descending Field 2<br />
-#Name : Source Tag<br />
-#<br />
-#Args :../ flow &#8211; stat &#8211; n &#8211; f30 &#8211; S2<br />
-#<br />
-#<br />
-#Src Tag flows octets packets<br />
-#<br />
+<p>#&#8211; &#8211; &#8212; &#8212; &#8212; &#8212; Report Information &#8212; &#8211; &#8212; &#8211; &#8212; &#8211;<br/>
+#<br/>
+#Fields : Total<br/>
+#Symbols : Enabled<br/>
+#Sorting : Descending Field 2<br/>
+#Name : Source Tag<br/>
+#<br/>
+#Args :../ flow &#8211; stat &#8211; n &#8211; f30 &#8211; S2<br/>
+#<br/>
+#<br/>
+#Src Tag flows octets packets<br/>
+#<br/>
 OSU 4942230 181326237007 302476793 CWRU 874883 54358312807 70589318 BGSU 1008797 7600209852 22060870</p>
 <p> To generate a report for inbound traffic from Abilene based on customer type: </p>
 <pre>

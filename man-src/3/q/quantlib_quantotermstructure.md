@@ -14,18 +14,18 @@ description: "QuantLib::QuantoTermStructure – Quanto term structure."
 <h3>Public Member Functions</h3>
 <p><code>QuantoTermStructure</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;underlyingDividendTS, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;riskFreeTS, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;foreignRiskFreeTS, const <code>Handle</code>&lt; <code>BlackVolTermStructure</code> &gt; &amp;underlyingBlackVolTS, Real strike, const <code>Handle</code>&lt; <code>BlackVolTermStructure</code> &gt; &amp;exchRateBlackVolTS, Real exchRateATMlevel, Real underlyingExchRateCorrelation) </p>
 <p> <code>YieldTermStructure interface</code> </p>
-<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>the day counter used for date/time conversion </i><br />
- <code>Calendar</code> <code>calendar</code> () const<br />
- <i>the calendar used for reference and/or option date calculation </i><br />
- <code>Natural</code> <code>settlementDays</code> () const<br />
- <i>the settlementDays used for reference date calculation </i><br />
- const <code>Date</code> &amp; <code>referenceDate</code> () const<br />
- <i>the date at which discount = 1.0 and/or variance = 0.0 </i><br />
- <code>Date</code> <code>maxDate</code> () const<br />
+<p> <code>DayCounter</code> <code>dayCounter</code> () const<br/>
+ <i>the day counter used for date/time conversion </i><br/>
+ <code>Calendar</code> <code>calendar</code> () const<br/>
+ <i>the calendar used for reference and/or option date calculation </i><br/>
+ <code>Natural</code> <code>settlementDays</code> () const<br/>
+ <i>the settlementDays used for reference date calculation </i><br/>
+ const <code>Date</code> &amp; <code>referenceDate</code> () const<br/>
+ <i>the date at which discount = 1.0 and/or variance = 0.0 </i><br/>
+ <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i></p>
 <h3>Protected Member Functions</h3>
-<p><code>Rate</code> <code>zeroYieldImpl</code> (Time) const<br />
+<p><code>Rate</code> <code>zeroYieldImpl</code> (Time) const<br/>
  <i>returns the zero yield as seen from the evaluation date </i></p>
 <h2>Detailed Description</h2>
 <p>Quanto term structure. </p>

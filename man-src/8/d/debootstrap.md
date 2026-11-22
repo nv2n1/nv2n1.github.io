@@ -107,13 +107,13 @@ description: "debootstrap – Bootstrap a basic Debian system"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;debootstrap stretch ./stretch-chroot&nbsp;<a rel="nofollow" href="http://deb.debian.org/debian">http://deb.debian.org/debian</a> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;debootstrap stretch ./stretch-chroot file:///LOCAL_MIRROR/debian </p>
 <p> Full process to create a complete Debian installation of <i>sid</i> (unstable) in a chroot: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;debootstrap sid sid-root&nbsp;<a rel="nofollow" href="http://deb.debian.org/debian/">http://deb.debian.org/debian/</a><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&nbsp;&#8230; watch it download the whole system&nbsp;]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;echo&nbsp;&quot;proc sid-root/proc proc defaults 0 0&quot;&nbsp;&gt;&gt;&nbsp;/etc/fstab<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;mount proc sid-root/proc -t proc<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;echo&nbsp;&quot;sysfs sid-root/sys sysfs defaults 0 0&quot;&nbsp;&gt;&gt;&nbsp;/etc/fstab<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;mount sysfs sid-root/sys -t sysfs<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;cp&nbsp;/etc/hosts sid-root/etc/hosts<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;debootstrap sid sid-root&nbsp;<a rel="nofollow" href="http://deb.debian.org/debian/">http://deb.debian.org/debian/</a><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&nbsp;&#8230; watch it download the whole system&nbsp;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;echo&nbsp;&quot;proc sid-root/proc proc defaults 0 0&quot;&nbsp;&gt;&gt;&nbsp;/etc/fstab<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;mount proc sid-root/proc -t proc<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;echo&nbsp;&quot;sysfs sid-root/sys sysfs defaults 0 0&quot;&nbsp;&gt;&gt;&nbsp;/etc/fstab<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;mount sysfs sid-root/sys -t sysfs<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;cp&nbsp;/etc/hosts sid-root/etc/hosts<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main&nbsp;#&nbsp;chroot sid-root&nbsp;/bin/bash</p>
 <h2>Author</h2>
 <p><code>debootstrap</code> was written by Anthony Towns &lt;ajt [at] debian.org&gt;. This manpage was written by Matt Kraai &lt;kraai [at] debian.org&gt;.</p>

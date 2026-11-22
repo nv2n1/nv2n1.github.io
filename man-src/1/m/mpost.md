@@ -39,10 +39,10 @@ description: "mpost, pmpost, upmpost – MetaPost, a system for creating graphic
 <dt><i>$TEXMFMAIN/doc/metapost/*</i></dt>
 <dd> The MetaPost manual and tutorial source, also including sample figures</dd></dl>
 <h2>SUGGESTED READING</h2>
-<p> Donald E. Knuth, <i>The Metafontbook</i> (Volume C of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13445-4.<br />
+<p> Donald E. Knuth, <i>The Metafontbook</i> (Volume C of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13445-4.<br/>
  <i>TUGboat</i> (the journal of the TeX Users Group).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-dvitomp/">dvitomp</a></code>(1), <code><a href="/docs/linux/man/1-epstopdf/">epstopdf</a></code>(1), <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), <code><a href="/docs/linux/man/1-mptopdf/">mptopdf</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1),<br />
+<p> <code><a href="/docs/linux/man/1-dvitomp/">dvitomp</a></code>(1), <code><a href="/docs/linux/man/1-epstopdf/">epstopdf</a></code>(1), <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), <code><a href="/docs/linux/man/1-mptopdf/">mptopdf</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1),<br/>
  MetaPost home page &lt;URL: <a rel="nofollow" href="https://tug.org/metapost/">https://tug.org/metapost/</a> &gt;.</p>
 <h2>AUTHORS</h2>
 <p> MetaPost was created by John D. Hobby, incorporating algorithms from Metafont by Donald E. Knuth. It was originally implemented on Unix, incorporating system-dependent routines from <code>web2c</code>, while not relying on it except for the actual Web-to-C translator. </p>

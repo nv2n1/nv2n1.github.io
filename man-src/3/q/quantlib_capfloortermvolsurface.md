@@ -12,21 +12,21 @@ description: "QuantLib::CapFloorTermVolSurface – Cap/floor smile volatility su
 <p>#include &lt;ql/termstructures/volatility/capfloor/capfloortermvolsurface.hpp&gt; </p>
 <p> Inherits <code>QuantLib::CapFloorTermVolatilityStructure</code>, and <code>QuantLib::LazyObject</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>CapFloorTermVolSurface</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; Rate &gt; &amp;strikes, const std::vector&lt; std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &gt; &amp;, const <code>DayCounter</code> &amp;dc=<code>Actual365Fixed</code>())<br />
- <i>floating reference date, floating market data </i><br />
- <code>CapFloorTermVolSurface</code> (const <code>Date</code> &amp;settlementDate, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; Rate &gt; &amp;strikes, const std::vector&lt; std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &gt; &amp;, const <code>DayCounter</code> &amp;dc=<code>Actual365Fixed</code>())<br />
- <i>fixed reference date, floating market data </i><br />
- <code>CapFloorTermVolSurface</code> (const <code>Date</code> &amp;settlementDate, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; Rate &gt; &amp;strikes, const <code>Matrix</code> &amp;volatilities, const <code>DayCounter</code> &amp;dc=<code>Actual365Fixed</code>())<br />
- <i>fixed reference date, fixed market data </i><br />
- <code>CapFloorTermVolSurface</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; Rate &gt; &amp;strikes, const <code>Matrix</code> &amp;volatilities, const <code>DayCounter</code> &amp;dc=<code>Actual365Fixed</code>())<br />
+<p><code>CapFloorTermVolSurface</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; Rate &gt; &amp;strikes, const std::vector&lt; std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &gt; &amp;, const <code>DayCounter</code> &amp;dc=<code>Actual365Fixed</code>())<br/>
+ <i>floating reference date, floating market data </i><br/>
+ <code>CapFloorTermVolSurface</code> (const <code>Date</code> &amp;settlementDate, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; Rate &gt; &amp;strikes, const std::vector&lt; std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &gt; &amp;, const <code>DayCounter</code> &amp;dc=<code>Actual365Fixed</code>())<br/>
+ <i>fixed reference date, floating market data </i><br/>
+ <code>CapFloorTermVolSurface</code> (const <code>Date</code> &amp;settlementDate, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; Rate &gt; &amp;strikes, const <code>Matrix</code> &amp;volatilities, const <code>DayCounter</code> &amp;dc=<code>Actual365Fixed</code>())<br/>
+ <i>fixed reference date, fixed market data </i><br/>
+ <code>CapFloorTermVolSurface</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; Rate &gt; &amp;strikes, const <code>Matrix</code> &amp;volatilities, const <code>DayCounter</code> &amp;dc=<code>Actual365Fixed</code>())<br/>
  <i>floating reference date, fixed market data </i> </p>
 <p> <code>TermStructure interface</code> </p>
-<p> <code>Date</code> <code>maxDate</code> () const<br />
+<p> <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i> </p>
 <p> <code>VolatilityTermStructure interface</code> </p>
-<p> <code>Real</code> <code>minStrike</code> () const<br />
- <i>the minimum strike for which the term structure can return vols </i><br />
- <code>Real</code> <code>maxStrike</code> () const<br />
+<p> <code>Real</code> <code>minStrike</code> () const<br/>
+ <i>the minimum strike for which the term structure can return vols </i><br/>
+ <code>Real</code> <code>maxStrike</code> () const<br/>
  <i>the maximum strike for which the term structure can return vols </i> </p>
 <p> <code>LazyObject interface</code> </p>
 <p> void <code>update</code> () </p>
@@ -37,7 +37,7 @@ description: "QuantLib::CapFloorTermVolSurface – Cap/floor smile volatility su
 <p> const std::vector&lt; Time &gt; &amp; <code>optionTimes</code> () const </p>
 <p> const std::vector&lt; Rate &gt; &amp; <code>strikes</code> () const </p>
 <h3>Protected Member Functions</h3>
-<p><code>Volatility</code> <code>volatilityImpl</code> (Time t, Rate strike) const<br />
+<p><code>Volatility</code> <code>volatilityImpl</code> (Time t, Rate strike) const<br/>
  <i>implements the actual volatility calculation in derived classes </i></p>
 <h2>Detailed Description</h2>
 <p>Cap/floor smile volatility surface. </p>

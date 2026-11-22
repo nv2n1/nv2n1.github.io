@@ -10,7 +10,7 @@ description: "ldns_buffer_remaining_at, ldns_buffer_remaining, ldns_buffer_avail
 
 <p> ldns_buffer_remaining_at, ldns_buffer_remaining, ldns_buffer_available_at, ldns_buffer_available, ldns_buffer_status, ldns_buffer_status_ok </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> size_t ldns_buffer_remaining_at(ldns_buffer *buffer, size_t at); </p>

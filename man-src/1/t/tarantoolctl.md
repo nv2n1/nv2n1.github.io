@@ -87,4 +87,4 @@ tarantoolctl - an utility to control tarantool instances
 
 <h2>COPYRIGHT</h2>
 
- Copyright (C) 2010-2013 Tarantool <font SIZE="-1">AUTHORS:</font> please see <font SIZE="-1">AUTHORS</font> file.
+ Copyright (C) 2010-2013 Tarantool AUTHORS: please see AUTHORS file.

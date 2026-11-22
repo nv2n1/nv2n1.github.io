@@ -75,40 +75,40 @@ description: "carbon-c-relay — graphite relay, aggregator and rewriter https:/
 </dl>
 <h2>CONFIGURATION SYNTAX</h2>
 <p> The config file supports the following syntax, where comments start with a <code>#</code> character and can appear at any position on a line and suppress input until the end of that line: </p>
-<p> ` cluster &lt;name&gt;<br />
-&nbsp;<wbr>&lt;&nbsp;<wbr>&lt;forward | any<i>of | failover&gt;&nbsp;<wbr>[useall]&nbsp;<wbr>|<br />
-&lt;carbon</i>ch | fnv1a<i>ch | jump</i>fnv1a_ch&gt;&nbsp;<wbr>[replication&nbsp;<wbr>&lt;count&gt;]&nbsp;<wbr>&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;host[:port][=instance]&nbsp;<wbr>[proto&nbsp;<wbr>&lt;udp | tcp&gt;]&gt;&nbsp;<wbr>&#8230;<br />
+<p> ` cluster &lt;name&gt;<br/>
+&nbsp;<wbr>&lt;&nbsp;<wbr>&lt;forward | any<i>of | failover&gt;&nbsp;<wbr>[useall]&nbsp;<wbr>|<br/>
+&lt;carbon</i>ch | fnv1a<i>ch | jump</i>fnv1a_ch&gt;&nbsp;<wbr>[replication&nbsp;<wbr>&lt;count&gt;]&nbsp;<wbr>&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;host[:port][=instance]&nbsp;<wbr>[proto&nbsp;<wbr>&lt;udp | tcp&gt;]&gt;&nbsp;<wbr>&#8230;<br/>
 &nbsp;<wbr>; </p>
-<p> cluster &lt;name&gt;<br />
-&nbsp;<wbr>file&nbsp;<wbr>[ip]<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;/path/to/file&gt;&nbsp;<wbr>&#8230;<br />
+<p> cluster &lt;name&gt;<br/>
+&nbsp;<wbr>file&nbsp;<wbr>[ip]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;/path/to/file&gt;&nbsp;<wbr>&#8230;<br/>
 &nbsp;<wbr>; </p>
-<p> match<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;*&nbsp;<wbr>| expression &#8230;&gt;<br />
-&nbsp;<wbr>[validate&nbsp;<wbr>&lt;expression&gt;&nbsp;<wbr>else&nbsp;<wbr>&lt;log | drop&gt;]<br />
-&nbsp;<wbr>send to&nbsp;<wbr>&lt;cluster &#8230; | blackhole&gt;<br />
-&nbsp;<wbr>[stop]<br />
+<p> match<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;*&nbsp;<wbr>| expression &#8230;&gt;<br/>
+&nbsp;<wbr>[validate&nbsp;<wbr>&lt;expression&gt;&nbsp;<wbr>else&nbsp;<wbr>&lt;log | drop&gt;]<br/>
+&nbsp;<wbr>send to&nbsp;<wbr>&lt;cluster &#8230; | blackhole&gt;<br/>
+&nbsp;<wbr>[stop]<br/>
 &nbsp;<wbr>; </p>
-<p> rewrite &lt;expression&gt;<br />
-&nbsp;<wbr>into&nbsp;<wbr>&lt;replacement&gt;<br />
+<p> rewrite &lt;expression&gt;<br/>
+&nbsp;<wbr>into&nbsp;<wbr>&lt;replacement&gt;<br/>
 &nbsp;<wbr>; </p>
-<p> aggregate<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;expression&gt;&nbsp;<wbr>&#8230;<br />
-&nbsp;<wbr>every&nbsp;<wbr>&lt;interval&gt;&nbsp;<wbr>seconds<br />
-&nbsp;<wbr>expire after&nbsp;<wbr>&lt;expiration&gt;&nbsp;<wbr>seconds<br />
-&nbsp;<wbr>[timestamp at&nbsp;<wbr>&lt;start | middle | end&gt;&nbsp;<wbr>of bucket]<br />
-&nbsp;<wbr>compute&nbsp;<wbr>&lt;sum | count | max | min | average |<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>median | percentile&lt;%&gt;&nbsp;<wbr>| variance | stddev&gt;&nbsp;<wbr>write to<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;metric&gt;<br />
-&nbsp;<wbr>[compute &#8230;]<br />
-&nbsp;<wbr>[send to&nbsp;<wbr>&lt;cluster &#8230;&gt;]<br />
-&nbsp;<wbr>[stop]<br />
+<p> aggregate<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;expression&gt;&nbsp;<wbr>&#8230;<br/>
+&nbsp;<wbr>every&nbsp;<wbr>&lt;interval&gt;&nbsp;<wbr>seconds<br/>
+&nbsp;<wbr>expire after&nbsp;<wbr>&lt;expiration&gt;&nbsp;<wbr>seconds<br/>
+&nbsp;<wbr>[timestamp at&nbsp;<wbr>&lt;start | middle | end&gt;&nbsp;<wbr>of bucket]<br/>
+&nbsp;<wbr>compute&nbsp;<wbr>&lt;sum | count | max | min | average |<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>median | percentile&lt;%&gt;&nbsp;<wbr>| variance | stddev&gt;&nbsp;<wbr>write to<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;metric&gt;<br/>
+&nbsp;<wbr>[compute &#8230;]<br/>
+&nbsp;<wbr>[send to&nbsp;<wbr>&lt;cluster &#8230;&gt;]<br/>
+&nbsp;<wbr>[stop]<br/>
 &nbsp;<wbr>; </p>
-<p> send statistics to &lt;cluster &#8230;&gt;<br />
-&nbsp;<wbr>[stop]<br />
+<p> send statistics to &lt;cluster &#8230;&gt;<br/>
+&nbsp;<wbr>[stop]<br/>
 &nbsp;<wbr>; </p>
-<p> include &lt;/path/to/file/or/glob&gt;<br />
+<p> include &lt;/path/to/file/or/glob&gt;<br/>
 &nbsp;<wbr>;&nbsp;<wbr>` </p>
 <p> Multiple clusters can be defined, and need not to be referenced by a match rule. All clusters point to one or more hosts, except the <code>file</code> cluster which writes to files in the local filesystem. <code>host</code> may be an IPv4 or IPv6 address, or a hostname. Since host is followed by an optional <code>:</code> and port, for IPv6 addresses not to be interpreted wrongly, either a port must be given, or the IPv6 address surrounded by brackets, e.g. <code>[::1]</code>. An optional <code>proto udp</code> or <code>proto tcp</code> may be added to specify the use of UDP or TCP to connect to the remote server. When omitted this defaults to a TCP connection. </p>
 <p> The <code>forward</code> and <code>file</code> clusters simply send everything they receive to all defined members (host addresses or files). The <code>any_of</code> cluster is a small variant of the <code>forward</code> cluster, but instead of sending to all defined members, it sends each incoming metric to one of defined members. This is not much useful in itself, but since any of the members can receive each metric, this means that when one of the members is unreachable, the other members will receive all of the metrics. This can be useful when the cluster points to other relays. The <code>any_of</code> router tries to send the same metrics consistently to the same destination. The <code>failover</code> cluster is like the <code>any_of</code> cluster, but sticks to the order in which servers are defined. This is to implement a pure failover scenario between servers. The <code>carbon_ch</code> cluster sends the metrics to the member that is responsible according to the consistent hash algorithm (as used in the original carbon), or multiple members if replication is set to more than 1. The <code>fnv1a_ch</code> cluster is a identical in behaviour to <code>carbon_ch</code>, but it uses a different hash technique (FNV1a) which is faster but more importantly defined to get by a limitation of <code>carbon_ch</code> to use both host and port from the members. This is useful when multiple targets live on the same host just separated by port. The instance that original carbon uses to get around this can be set by appending it after the port, separated by an equals sign, e.g. <code>127.0.0.1:2006=a</code> for instance <code>a</code>. When using the <code>fnv1a_ch</code> cluster, this instance overrides the hash key in use. This allows for many things, including masquerading old IP addresses, but mostly to make the hash key location to become agnostic of the (physical) location of that key. For example, usage like <code>10.0.0.1:2003=4d79d13554fa1301476c1f9fe968b0ac</code> would allow to change port and/or ip address of the server that receives data for the instance key. Obviously, this way migration of data can be dealt with much more conveniently. The <code>jump_fnv1a_ch</code> cluster is also a consistent hash cluster like the previous two, but it does not take the server information into account at all. Whether this is useful to you depends on your scenario. The jump hash has a much better balancing over the servers defined in the cluster, at the expense of not being able to remove any server but the last in order. What this means is that this hash is fine to use with ever growing clusters where older nodes are also replaced at some point. If you have a cluster where removal of old nodes takes place often, the jump hash is not suitable for you. Jump hash works with servers in an ordered list without gaps. To influence the ordering, the instance given to the server will be used as sorting key. Without, the order will be as given in the file. It is a good practice to fix the order of the servers with instances such that it is explicit what the right nodes for the jump hash are. </p>
@@ -121,54 +121,54 @@ description: "carbon-c-relay — graphite relay, aggregator and rewriter https:/
 <h2>EXAMPLES</h2>
 <p> <code>carbon-c-relay</code> evolved over time, growing features on demand as the tool proved to be stable and fitting the job well. Below follow some annotated examples of constructs that can be used with the relay. </p>
 <p> Clusters can be defined as much as necessary. They receive data from match rules, and their type defines which members of the cluster finally get the metric data. The simplest cluster form is a <code>forward</code> cluster: </p>
-<p> <code> cluster send-through<br />
-&nbsp;<wbr>forward<br />
-&nbsp;<wbr>&nbsp;<wbr>10.1.0.1<br />
+<p> <code> cluster send-through<br/>
+&nbsp;<wbr>forward<br/>
+&nbsp;<wbr>&nbsp;<wbr>10.1.0.1<br/>
 &nbsp;<wbr>;</code> </p>
 <p> Any metric sent to the <code>send-through</code> cluster would simply be forwarded to the server at IPv4 address <code>10.1.0.1</code>. If we define multiple servers, all of those servers would get the same metric, thus: </p>
-<p> <code> cluster send-through<br />
-&nbsp;<wbr>forward<br />
-&nbsp;<wbr>&nbsp;<wbr>10.1.0.1<br />
-&nbsp;<wbr>&nbsp;<wbr>10.2.0.1<br />
+<p> <code> cluster send-through<br/>
+&nbsp;<wbr>forward<br/>
+&nbsp;<wbr>&nbsp;<wbr>10.1.0.1<br/>
+&nbsp;<wbr>&nbsp;<wbr>10.2.0.1<br/>
 &nbsp;<wbr>;</code> </p>
 <p> The above results in a duplication of metrics send to both machines. This can be useful, but most of the time it is not. The <code>any_of</code> cluster type is like <code>forward</code>, but it sends each incoming metric to any of the members. The same example with such cluster would be: </p>
-<p> <code> cluster send-to-any-one<br />
+<p> <code> cluster send-to-any-one<br/>
 &nbsp;<wbr>any_of 10.1.0.1:2010 10.1.0.1:2011;</code> </p>
 <p> This would implement a multipath scenario, where two servers are used, the load between them is spread, but should any of them fail, all metrics are sent to the remaining one. This typically works well for upstream relays, or for balancing carbon-cache processes running on the same machine. Should any member become unavailable, for instance due to a rolling restart, the other members receive the traffic. If it is necessary to have true fail-over, where the secondary server is only used if the first is down, the following would implement that: </p>
-<p> <code> cluster try-first-then-second<br />
+<p> <code> cluster try-first-then-second<br/>
 &nbsp;<wbr>failover 10.1.0.1:2010 10.1.0.1:2011;</code> </p>
 <p> These types are different from the two consistent hash cluster types: </p>
-<p> <code> cluster graphite<br />
-&nbsp;<wbr>carbon_ch<br />
-&nbsp;<wbr>&nbsp;<wbr>127.0.0.1:2006=a<br />
-&nbsp;<wbr>&nbsp;<wbr>127.0.0.1:2007=b<br />
-&nbsp;<wbr>&nbsp;<wbr>127.0.0.1:2008=c<br />
+<p> <code> cluster graphite<br/>
+&nbsp;<wbr>carbon_ch<br/>
+&nbsp;<wbr>&nbsp;<wbr>127.0.0.1:2006=a<br/>
+&nbsp;<wbr>&nbsp;<wbr>127.0.0.1:2007=b<br/>
+&nbsp;<wbr>&nbsp;<wbr>127.0.0.1:2008=c<br/>
 &nbsp;<wbr>;</code> </p>
 <p> If a member in this example fails, all metrics that would go to that member are kept in the queue, waiting for the member to return. This is useful for clusters of carbon-cache machines where it is desirable that the same metric ends up on the same server always. The <code>carbon_ch</code> cluster type is compatible with carbon-relay consistent hash, and can be used for existing clusters populated by carbon-relay. For new clusters, however, it is better to use the <code>fnv1a_ch</code> cluster type, for it is faster, and allows to balance over the same address but different ports without an instance number, in constrast to <code>carbon_ch</code>. </p>
 <p> Because we can use multiple clusters, we can also replicate without the use of the <code>forward</code> cluster type, in a more intelligent way: </p>
-<p> ` cluster dc-old<br />
-&nbsp;<wbr>carbon<i>ch replication 2<br />
-&nbsp;<wbr>&nbsp;<wbr>10.1.0.1<br />
-&nbsp;<wbr>&nbsp;<wbr>10.1.0.2<br />
-&nbsp;<wbr>&nbsp;<wbr>10.1.0.3<br />
-&nbsp;<wbr>; cluster dc-new1<br />
-&nbsp;<wbr>fnv1a</i>ch replication 2<br />
-&nbsp;<wbr>&nbsp;<wbr>10.2.0.1<br />
-&nbsp;<wbr>&nbsp;<wbr>10.2.0.2<br />
-&nbsp;<wbr>&nbsp;<wbr>10.2.0.3<br />
-&nbsp;<wbr>; cluster dc-new2<br />
-&nbsp;<wbr>fnv1a_ch replication 2<br />
-&nbsp;<wbr>&nbsp;<wbr>10.3.0.1<br />
-&nbsp;<wbr>&nbsp;<wbr>10.3.0.2<br />
-&nbsp;<wbr>&nbsp;<wbr>10.3.0.3<br />
+<p> ` cluster dc-old<br/>
+&nbsp;<wbr>carbon<i>ch replication 2<br/>
+&nbsp;<wbr>&nbsp;<wbr>10.1.0.1<br/>
+&nbsp;<wbr>&nbsp;<wbr>10.1.0.2<br/>
+&nbsp;<wbr>&nbsp;<wbr>10.1.0.3<br/>
+&nbsp;<wbr>; cluster dc-new1<br/>
+&nbsp;<wbr>fnv1a</i>ch replication 2<br/>
+&nbsp;<wbr>&nbsp;<wbr>10.2.0.1<br/>
+&nbsp;<wbr>&nbsp;<wbr>10.2.0.2<br/>
+&nbsp;<wbr>&nbsp;<wbr>10.2.0.3<br/>
+&nbsp;<wbr>; cluster dc-new2<br/>
+&nbsp;<wbr>fnv1a_ch replication 2<br/>
+&nbsp;<wbr>&nbsp;<wbr>10.3.0.1<br/>
+&nbsp;<wbr>&nbsp;<wbr>10.3.0.2<br/>
+&nbsp;<wbr>&nbsp;<wbr>10.3.0.3<br/>
 &nbsp;<wbr>; </p>
-<p> match <i><br />
-&nbsp;<wbr>send to dc-old<br />
-&nbsp;<wbr>; match </i><br />
-&nbsp;<wbr>send to<br />
-&nbsp;<wbr>&nbsp;<wbr>dc-new1<br />
-&nbsp;<wbr>&nbsp;<wbr>dc-new2<br />
-&nbsp;<wbr>stop<br />
+<p> match <i><br/>
+&nbsp;<wbr>send to dc-old<br/>
+&nbsp;<wbr>; match </i><br/>
+&nbsp;<wbr>send to<br/>
+&nbsp;<wbr>&nbsp;<wbr>dc-new1<br/>
+&nbsp;<wbr>&nbsp;<wbr>dc-new2<br/>
+&nbsp;<wbr>stop<br/>
 &nbsp;<wbr>;&nbsp;<wbr>` </p>
 <p> In this example all incoming metrics are first sent to <code>dc-old</code>, then <code>dc-new1</code> and finally to <code>dc-new2</code>. Note that the cluster type of <code>dc-old</code> is different. Each incoming metric will be send to 2 members of all three clusters, thus replicating to in total 6 destinations. For each cluster the destination members are computed independently. Failure of clusters or members does not affect the others, since all have individual queues. The above example could also be written using three match rules for each dc, or one match rule for all three dcs. The difference is mainly in performance, the number of times the incoming metric has to be matched against an expression. The <code>stop</code> rule in <code>dc-new</code> match rule is not strictly necessary in this example, because there are no more following match rules. However, if the match would target a specific subset, e.g. <code>^sys\.</code>, and more clusters would be defined, this could be necessary, as for instance in the following abbreviated example: </p>
 <p> ` cluster dc1-sys &#8230; ; cluster dc2-sys &#8230; ; </p>
@@ -177,10 +177,10 @@ description: "carbon-c-relay — graphite relay, aggregator and rewriter https:/
 <p> match <i> send to dc1-misc; match </i> send to dc2-misc stop; ` </p>
 <p> As can be seen, without the <code>stop</code> in dc2-sys&#8217; match rule, all metrics starting with <code>sys.</code> would also be send to dc1-misc and dc2-misc. It can be that this is desired, of course, but in this example there is a dedicated cluster for the <code>sys</code> metrics. </p>
 <p> Suppose there would be some unwanted metric that unfortunately is generated, let&#8217;s assume some bad/old software. We don&#8217;t want to store this metric. The <code>blackhole</code> cluster is suitable for that, when it is harder to actually whitelist all wanted metrics. Consider the following: </p>
-<p> <code> match<br />
-&nbsp;<wbr>&nbsp;<wbr>some_legacy1$<br />
-&nbsp;<wbr>&nbsp;<wbr>some_legacy2$<br />
-&nbsp;<wbr>send to blackhole<br />
+<p> <code> match<br/>
+&nbsp;<wbr>&nbsp;<wbr>some_legacy1$<br/>
+&nbsp;<wbr>&nbsp;<wbr>some_legacy2$<br/>
+&nbsp;<wbr>send to blackhole<br/>
 &nbsp;<wbr>stop;</code> </p>
 <p> This would throw away all metrics that end with <code>some_legacy</code>, that would otherwise be hard to filter out. Since the order matters, it can be used in a construct like this: </p>
 <p> ` cluster old &#8230; ; cluster new &#8230; ; </p>
@@ -189,20 +189,20 @@ description: "carbon-c-relay — graphite relay, aggregator and rewriter https:/
 <p> match * send to new; ` </p>
 <p> In this example the old cluster would receive the metric that&#8217;s unwanted for the new cluster. So, the order in which the rules occur does matter for the execution. </p>
 <p> Validation can be used to ensure the data for metrics is as expected. A global validation for just number (no floating point) values could be: </p>
-<p> <code> match *<br />
+<p> <code> match *<br/>
 &nbsp;<wbr>validate&nbsp;<wbr>^[0-9]+\&nbsp;<wbr>[0-9]+$&nbsp;<wbr>else drop <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>;</code></p>
 <p> (Note the escape with backslash <code>\</code> of the space, you might be able to use <code>\s</code> or <code>[:space:]</code> instead, this depends on your libc implementation.) </p>
 <p> The validation clause can exist on every match rule, so in principle, the following is valid: </p>
-<p> <code> match ^foo <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>validate ^[0-9]+\ [0-9]+$ else drop<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>send to integer-cluster<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>;<br />
- match ^foo <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>validate ^[0-9.e+-]+\ [0-9.e+-]+$ else drop<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>send to float-cluster<br />
+<p> <code> match ^foo <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>validate ^[0-9]+\ [0-9]+$ else drop<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>send to integer-cluster<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>;<br/>
+ match ^foo <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>validate ^[0-9.e+-]+\ [0-9.e+-]+$ else drop<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>send to float-cluster<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>stop;</code></p>
 <p> Note that the behaviour is different in the previous two examples. When no <code>send to</code> clusters are specified, a validation error makes the match behave like the <code>stop</code> keyword is present. Likewise, when validation passes, processing continues with the next rule. When destination clusters are present, the <code>match</code> respects the <code>stop</code> keyword as normal. When specified, processing will always stop when specified so. However, if validation fails, the rule does not send anything to the destination clusters, the metric will be dropped or logged, but never sent. </p>
 <p> The relay is capable of rewriting incoming metrics on the fly. This process is done based on regular expressions with capture groups that allow to substitute parts in a replacement string. Rewrite rules allow to cleanup metrics from applications, or provide a migration path. In it&#8217;s simplest form a rewrite rule looks like this: </p>
-<p> <code> rewrite ^server\.(.+)\.(.+)\.([a-zA-Z]+)([0-9]+)<br />
-&nbsp;<wbr>into server.\_1.\2.\3.\3\4<br />
+<p> <code> rewrite ^server\.(.+)\.(.+)\.([a-zA-Z]+)([0-9]+)<br/>
+&nbsp;<wbr>into server.\_1.\2.\3.\3\4<br/>
 &nbsp;<wbr>;</code> </p>
 <p> In this example a metric like <code>server.DC.role.name123</code> would be transformed into <code>server.dc.role.name.name123</code>. For rewrite rules hold the same as for matches, that their order matters. Hence to build on top of the old/new cluster example done earlier, the following would store the original metric name in the old cluster, and the new metric name in the new cluster: </p>
 <p> ` match * send to old; </p>
@@ -210,46 +210,46 @@ description: "carbon-c-relay — graphite relay, aggregator and rewriter https:/
 <p> match * send to new; ` </p>
 <p> Note that after the rewrite, the original metric name is no longer available, as the rewrite happens in-place. </p>
 <p> Aggregations are probably the most complex part of carbon-c-relay. Two ways of specifying aggregates are supported by carbon-c-relay. The first, static rules, are handled by an optimiser which tries to fold thousands of rules into groups to make the matching more efficient. The second, dynamic rules, are very powerful compact definitions with possibly thousands of internal instantiations. A typical static aggregation looks like: </p>
-<p> <code> aggregate<br />
-&nbsp;<wbr>&nbsp;<wbr>^sys\.dc1\.somehost-[0-9]+\.somecluster\.mysql\.replication_delay<br />
-&nbsp;<wbr>&nbsp;<wbr>^sys\.dc2\.somehost-[0-9]+\.somecluster\.mysql\.replication_delay<br />
-&nbsp;<wbr>every 10 seconds<br />
-&nbsp;<wbr>expire after 35 seconds<br />
-&nbsp;<wbr>timestamp at end of bucket<br />
-&nbsp;<wbr>compute sum write to<br />
-&nbsp;<wbr>&nbsp;<wbr>mysql.somecluster.total_replication_delay<br />
-&nbsp;<wbr>compute average write to<br />
-&nbsp;<wbr>&nbsp;<wbr>mysql.somecluster.average_replication_delay<br />
-&nbsp;<wbr>compute max write to<br />
-&nbsp;<wbr>&nbsp;<wbr>mysql.somecluster.max_replication_delay<br />
-&nbsp;<wbr>compute count write to<br />
-&nbsp;<wbr>&nbsp;<wbr>mysql.somecluster.replication_delay_metric_count<br />
+<p> <code> aggregate<br/>
+&nbsp;<wbr>&nbsp;<wbr>^sys\.dc1\.somehost-[0-9]+\.somecluster\.mysql\.replication_delay<br/>
+&nbsp;<wbr>&nbsp;<wbr>^sys\.dc2\.somehost-[0-9]+\.somecluster\.mysql\.replication_delay<br/>
+&nbsp;<wbr>every 10 seconds<br/>
+&nbsp;<wbr>expire after 35 seconds<br/>
+&nbsp;<wbr>timestamp at end of bucket<br/>
+&nbsp;<wbr>compute sum write to<br/>
+&nbsp;<wbr>&nbsp;<wbr>mysql.somecluster.total_replication_delay<br/>
+&nbsp;<wbr>compute average write to<br/>
+&nbsp;<wbr>&nbsp;<wbr>mysql.somecluster.average_replication_delay<br/>
+&nbsp;<wbr>compute max write to<br/>
+&nbsp;<wbr>&nbsp;<wbr>mysql.somecluster.max_replication_delay<br/>
+&nbsp;<wbr>compute count write to<br/>
+&nbsp;<wbr>&nbsp;<wbr>mysql.somecluster.replication_delay_metric_count<br/>
 &nbsp;<wbr>;</code> </p>
 <p> In this example, four aggregations are produced from the incoming matching metrics. In this example we could have written the two matches as one, but for demonstration purposes we did not. Obviously they can refer to different metrics, if that makes sense. The <code>every 10 seconds</code> clause specifies in what interval the aggregator can expect new metrics to arrive. This interval is used to produce the aggregations, thus each 10 seconds 4 new metrics are generated from the data received sofar. Because data may be in transit for some reason, or generation stalled, the <code>expire after</code> clause specifies how long the data should be kept before considering a data bucket (which is aggregated) to be complete. In the example, 35 was used, which means after 35 seconds the first aggregates are produced. It also means that metrics can arrive 35 seconds late, and still be taken into account. The exact time at which the aggregate metrics are produced is random between 0 and interval (10 in this case) seconds after the expiry time. This is done to prevent thundering herds of metrics for large aggregation sets. The <code>timestamp</code> that is used for the aggregations can be specified to be the <code>start</code>, <code>middle</code> or <code>end</code> of the bucket. Original carbon-aggregator.py uses <code>start</code>, while carbon-c-relay&#8217;s default has always been <code>end</code>. The <code>compute</code> clauses demonstrate a single aggregation rule can produce multiple aggregates, as often is the case. Internally, this comes for free, since all possible aggregates are always calculated, whether or not they are used. The produced new metrics are resubmitted to the relay, hence matches defined before in the configuration can match output of the aggregator. It is important to avoid loops, that can be generated this way. In general, splitting aggregations to their own carbon-c-relay instance, such that it is easy to forward the produced metrics to another relay instance is a good practice. </p>
 <p> The previous example could also be written as follows to be dynamic: </p>
-<p> <code> aggregate<br />
-&nbsp;<wbr>&nbsp;<wbr>^sys\.dc[0-9].(somehost-[0-9]+)\.([^.]+)\.mysql\.replication_delay<br />
-&nbsp;<wbr>every 10 seconds<br />
-&nbsp;<wbr>expire after 35 seconds<br />
-&nbsp;<wbr>compute sum write to<br />
-&nbsp;<wbr>&nbsp;<wbr>mysql.host.\1.replication_delay<br />
-&nbsp;<wbr>compute sum write to<br />
-&nbsp;<wbr>&nbsp;<wbr>mysql.host.all.replication_delay<br />
-&nbsp;<wbr>compute sum write to<br />
-&nbsp;<wbr>&nbsp;<wbr>mysql.cluster.\2.replication_delay<br />
-&nbsp;<wbr>compute sum write to<br />
-&nbsp;<wbr>&nbsp;<wbr>mysql.cluster.all.replication_delay<br />
+<p> <code> aggregate<br/>
+&nbsp;<wbr>&nbsp;<wbr>^sys\.dc[0-9].(somehost-[0-9]+)\.([^.]+)\.mysql\.replication_delay<br/>
+&nbsp;<wbr>every 10 seconds<br/>
+&nbsp;<wbr>expire after 35 seconds<br/>
+&nbsp;<wbr>compute sum write to<br/>
+&nbsp;<wbr>&nbsp;<wbr>mysql.host.\1.replication_delay<br/>
+&nbsp;<wbr>compute sum write to<br/>
+&nbsp;<wbr>&nbsp;<wbr>mysql.host.all.replication_delay<br/>
+&nbsp;<wbr>compute sum write to<br/>
+&nbsp;<wbr>&nbsp;<wbr>mysql.cluster.\2.replication_delay<br/>
+&nbsp;<wbr>compute sum write to<br/>
+&nbsp;<wbr>&nbsp;<wbr>mysql.cluster.all.replication_delay<br/>
 &nbsp;<wbr>;</code> </p>
 <p> Here a single match, results in four aggregations, each of a different scope. In this example aggregation based on hostname and cluster are being made, as well as the more general <code>all</code> targets, which in this example have both identical values. Note that with this single aggregation rule, both per-cluster, per-host and total aggregations are produced. Obviously, the input metrics define which hosts and clusters are produced. </p>
 <p> With use of the <code>send to</code> clause, aggregations can be made more intuitive and less error-prone. Consider the below example: </p>
 <p> ` cluster graphite fnv1a_ch ip1 ip2 ip3; </p>
-<p> aggregate ^sys.somemetric<br />
-&nbsp;<wbr>every 60 seconds<br />
-&nbsp;<wbr>expire after 75 seconds<br />
-&nbsp;<wbr>compute sum write to<br />
-&nbsp;<wbr>&nbsp;<wbr>sys.somemetric<br />
-&nbsp;<wbr>send to graphite<br />
-&nbsp;<wbr>stop<br />
+<p> aggregate ^sys.somemetric<br/>
+&nbsp;<wbr>every 60 seconds<br/>
+&nbsp;<wbr>expire after 75 seconds<br/>
+&nbsp;<wbr>compute sum write to<br/>
+&nbsp;<wbr>&nbsp;<wbr>sys.somemetric<br/>
+&nbsp;<wbr>send to graphite<br/>
+&nbsp;<wbr>stop<br/>
 &nbsp;<wbr>; </p>
 <p> match * send to graphite; ` </p>
 <p> It sends all incoming metrics to the graphite cluster, except the sys.somemetric ones, which it replaces with a sum of all the incoming ones. Without a <code>stop</code> in the aggregate, this causes a loop, and without the <code>send to</code>, the metric name can&#8217;t be kept its original name, for the output now directly goes to the cluster.</p>

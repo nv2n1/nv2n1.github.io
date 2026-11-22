@@ -30,12 +30,12 @@ description: "odfimgimport – Import external images"
 <h2>Example</h2>
 <dl>
 <dt>
-</dt><dd> <font SIZE="-1"> </font></dd>
+</dt><dd>  </dd>
 <pre>
 odfimgimport -v -o newfile.odt oldfile.odt
 </pre>
-<p> <font SIZE="+1"></dl>
-<p> </font></p>
+<p> </dl>
+<p> </p>
 <h2>Author</h2>
 <p> <code>S&oslash;ren Roug</code></p>
 <dl>

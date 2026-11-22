@@ -51,7 +51,7 @@ description: "xxqs_name_sxx_resource_quota – xxQS_NAMExx resource quota file f
 <dt>dynamic limits</dt>
 <dd>A dynamic limit is a simple algebraic expression used to derive the limit value. The formula can reference complex attributes, whose value is used for the calculation of the resulting limit. The formula expression syntax is that of a sum of weighted complex values, that is: </dd>
 <pre>{<i>w1</i>|<code>$</code><i>complex1</i>[<code>*</code><i>w1</i>]}[{<code>+</code>|<code>-</code>}{<i>w2</i>|<code>$</code><i>complex2</i>[<code>*</code><i>w2</i>]}[{<code>+</code>|<code>-</code>}...]]</pre>
-<p>The weighting factors (<i>w1</i>, &#8230;) are positive integers or floating point numbers in double precision. The complex values (<i>complex1</i>, &#8230;) must be of numerical type (INT, DOUBLE, MEMORY, or TIME), as specified by the complex&#8217;s type in the complex list (see and defined either on global, queue, or host level to resolve the value.<br />
+<p>The weighting factors (<i>w1</i>, &#8230;) are positive integers or floating point numbers in double precision. The complex values (<i>complex1</i>, &#8230;) must be of numerical type (INT, DOUBLE, MEMORY, or TIME), as specified by the complex&#8217;s type in the complex list (see and defined either on global, queue, or host level to resolve the value.<br/>
  <code>Note:</code> Dynamic limits can only be configured for a host-specific rule, and must be defined for an expanded host list (or individual host). Also, if a load value corresponding to a complex used is not available, a large value is used for it to suggest an overloaded condition. Dynamic limits may slow the scheduler significantly.</dl>
 </dl>
 </dl>

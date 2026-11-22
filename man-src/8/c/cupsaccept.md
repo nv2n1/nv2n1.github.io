@@ -9,7 +9,7 @@ description: "cupsaccept/cupsreject – accept/reject jobs sent to a destination
 
 <p>cupsaccept/cupsreject &#8211; accept/reject jobs sent to a destination</p>
 <h2>Synopsis</h2>
-<p><code>cupsaccept</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-h</code> <i>hostname[:port]</i> ] <i>destination(s)</i><br />
+<p><code>cupsaccept</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-h</code> <i>hostname[:port]</i> ] <i>destination(s)</i><br/>
  <code>cupsreject</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-h</code> <i>hostname[:port]</i> ] [ <code>-r</code> <i>reason</i> ] <i>destination(s)</i></p>
 <h2>Description</h2>
 <p>The <code>cupsaccept</code> command instructs the printing system to accept print jobs to the specified destinations. </p>
@@ -29,7 +29,7 @@ description: "cupsaccept/cupsreject – accept/reject jobs sent to a destination
 <p>The <code>cupsaccept</code> and <code>cupsreject</code> commands correspond to the System V printing system commands &quot;accept&quot; and &quot;reject&quot;, respectively. Unlike the System V printing system, CUPS allows printer names to contain any printable character except SPACE, TAB, &quot;/&quot;, or &quot;#&quot;. Also, printer and class names are <i>not</i> case-sensitive. </p>
 <p> Finally, the CUPS versions may ask the user for an access password depending on the printing system configuration.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-cancel/">cancel</a></code>(1), <code><a href="/docs/linux/man/8-cupsenable/">cupsenable</a></code>(8), <code><a href="/docs/linux/man/1-lp/">lp</a></code>(1), <code><a href="/docs/linux/man/8-lpadmin/">lpadmin</a></code>(8), <code><a href="/docs/linux/man/1-lpstat/">lpstat</a></code>(1),<br />
+<p><code><a href="/docs/linux/man/1-cancel/">cancel</a></code>(1), <code><a href="/docs/linux/man/8-cupsenable/">cupsenable</a></code>(8), <code><a href="/docs/linux/man/1-lp/">lp</a></code>(1), <code><a href="/docs/linux/man/8-lpadmin/">lpadmin</a></code>(8), <code><a href="/docs/linux/man/1-lpstat/">lpstat</a></code>(1),<br/>
  CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2021-2022 by OpenPrinting.</p>

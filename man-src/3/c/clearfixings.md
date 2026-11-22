@@ -13,23 +13,23 @@ description: "QuantLib::Index – purely virtual base class for indexes"
 <p> Inherits <code>QuantLib::Observable</code>. </p>
 <p> Inherited by <code>InflationIndex</code>, and <code>InterestRateIndex</code>. </p>
 <h3>Public Member Functions</h3>
-<p>virtual std::string <code>name</code> () const =0<br />
- <i>Returns the name of the index. </i><br />
- virtual <code>Calendar</code> <code>fixingCalendar</code> () const =0<br />
- <i>returns the calendar defining valid fixing dates </i><br />
- virtual bool <code>isValidFixingDate</code> (const <code>Date</code> &amp;fixingDate) const =0<br />
- <i>returns TRUE if the fixing date is a valid one </i><br />
- virtual Real <code>fixing</code> (const <code>Date</code> &amp;fixingDate, bool forecastTodaysFixing=false) const =0<br />
- <i>returns the fixing at the given date </i><br />
- const <code>TimeSeries</code>&lt; Real &gt; &amp; <code>timeSeries</code> () const<br />
- <i>returns the fixing </i><code>TimeSeries</code><br />
- virtual void <code>addFixing</code> (const <code>Date</code> &amp;fixingDate, Real fixing, bool forceOverwrite=false)<br />
- <i>stores the historical fixing at the given date </i><br />
- void <code>addFixings</code> (const <code>TimeSeries</code>&lt; Real &gt; &amp;t, bool forceOverwrite=false)<br />
- <i>stores historical fixings from a </i><code>TimeSeries</code><br />
- template&lt;class DateIterator , class ValueIterator &gt; void <code>addFixings</code> (DateIterator dBegin, DateIterator dEnd, ValueIterator vBegin, bool forceOverwrite=false)<br />
- <i>stores historical fixings at the given dates </i><br />
- void <code>clearFixings</code> ()<br />
+<p>virtual std::string <code>name</code> () const =0<br/>
+ <i>Returns the name of the index. </i><br/>
+ virtual <code>Calendar</code> <code>fixingCalendar</code> () const =0<br/>
+ <i>returns the calendar defining valid fixing dates </i><br/>
+ virtual bool <code>isValidFixingDate</code> (const <code>Date</code> &amp;fixingDate) const =0<br/>
+ <i>returns TRUE if the fixing date is a valid one </i><br/>
+ virtual Real <code>fixing</code> (const <code>Date</code> &amp;fixingDate, bool forecastTodaysFixing=false) const =0<br/>
+ <i>returns the fixing at the given date </i><br/>
+ const <code>TimeSeries</code>&lt; Real &gt; &amp; <code>timeSeries</code> () const<br/>
+ <i>returns the fixing </i><code>TimeSeries</code><br/>
+ virtual void <code>addFixing</code> (const <code>Date</code> &amp;fixingDate, Real fixing, bool forceOverwrite=false)<br/>
+ <i>stores the historical fixing at the given date </i><br/>
+ void <code>addFixings</code> (const <code>TimeSeries</code>&lt; Real &gt; &amp;t, bool forceOverwrite=false)<br/>
+ <i>stores historical fixings from a </i><code>TimeSeries</code><br/>
+ template&lt;class DateIterator , class ValueIterator &gt; void <code>addFixings</code> (DateIterator dBegin, DateIterator dEnd, ValueIterator vBegin, bool forceOverwrite=false)<br/>
+ <i>stores historical fixings at the given dates </i><br/>
+ void <code>clearFixings</code> ()<br/>
  <i>clears all stored historical fixings </i></p>
 <h2>Detailed Description</h2>
 <p>purely virtual base class for indexes </p>

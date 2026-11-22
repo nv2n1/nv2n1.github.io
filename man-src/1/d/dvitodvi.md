@@ -43,7 +43,7 @@ description: "dvitodvi – rearrange pages in a DVI file"
 <h2>AUTHOR</h2>
 <p> Angus Duggan, from <a href="/docs/linux/man/1-dviselect/">dviselect</a>(1), by Chris Torek, University of Maryland. Currently maintained as part of TeX Live (<a rel="nofollow" href="https://tug.org/texlive">https://tug.org/texlive</a>).</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-dvibook/">dvibook</a>(1), <a href="/docs/linux/man/1-dviconcat/">dviconcat</a>(1), <a href="/docs/linux/man/1-dviselect/">dviselect</a>(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), <a href="/docs/linux/man/1-tex/">tex</a>(1)<br />
+<p> <a href="/docs/linux/man/1-dvibook/">dvibook</a>(1), <a href="/docs/linux/man/1-dviconcat/">dviconcat</a>(1), <a href="/docs/linux/man/1-dviselect/">dviselect</a>(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), <a href="/docs/linux/man/1-tex/">tex</a>(1)<br/>
  <i>MC-TeX User&#8217;s Guide</i></p>
 <h2>BUGS</h2>
 <p> <i>Dvitodvi</i> does not adjust some of the parameters in the postamble. This may be a problem if these values are used to size certain structures in the output conversion programs. </p>

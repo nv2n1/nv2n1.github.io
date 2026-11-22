@@ -20,58 +20,58 @@ description: "g_tcaf – calculates viscosities of liquids"
 <p> The k-dependent viscosities in the <code> -ov</code> file should be fitted to eta(k) = eta0 (1 &#8211; a k2) to obtain the viscosity at infinite wavelength. </p>
 <p> NOTE: make sure you write coordinates and velocities often enough. The initial, non-exponential, part of the autocorrelation function is very important for obtaining a good fit.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> traj.trr</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.trr</i> <code>Input</code><br/>
 &nbsp;<wbr>Full precision trajectory: trr trj cpt&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure+mass(db): tpr tpb tpa gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-ot</code><i> transcur.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-ot</code><i> transcur.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-oa</code><i> tcaf_all.xvg</i> <code>Output</code><br />
+<p> <code>-oa</code><i> tcaf_all.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-o</code><i> tcaf.xvg</i> <code>Output</code><br />
+<p> <code>-o</code><i> tcaf.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-of</code><i> tcaf_fit.xvg</i> <code>Output</code><br />
+<p> <code>-of</code><i> tcaf_fit.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-oc</code><i> tcaf_cub.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-oc</code><i> tcaf_cub.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-ov</code><i> visc_k.xvg</i> <code>Output</code><br />
+<p> <code>-ov</code><i> visc_k.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-[no]mol</code><i>no </i><br />
+<p> <code>-[no]mol</code><i>no </i><br/>
 &nbsp;<wbr>Calculate tcaf of molecules </p>
-<p> <code>-[no]k34</code><i>no </i><br />
+<p> <code>-[no]k34</code><i>no </i><br/>
 &nbsp;<wbr>Also use k=(3,0,0)&nbsp;<wbr>and k=(4,0,0) </p>
-<p> <code>-wt</code><i> real</i><code> 5 </code><br />
+<p> <code>-wt</code><i> real</i><code> 5 </code><br/>
 &nbsp;<wbr>Exponential decay time for the TCAF fit weights </p>
-<p> <code>-acflen</code><i> int</i><code> -1</code><br />
+<p> <code>-acflen</code><i> int</i><code> -1</code><br/>
 &nbsp;<wbr>Length of the ACF, default is half the number of frames </p>
-<p> <code>-[no]normalize</code><i>yes </i><br />
+<p> <code>-[no]normalize</code><i>yes </i><br/>
 &nbsp;<wbr>Normalize ACF </p>
-<p> <code>-P</code><i> enum</i><code> 0</code><br />
+<p> <code>-P</code><i> enum</i><code> 0</code><br/>
 &nbsp;<wbr>Order of Legendre polynomial for ACF&nbsp;<wbr>(0 indicates none):&nbsp;<wbr><code>&nbsp;<wbr>0</code>,&nbsp;<wbr><code>&nbsp;<wbr>1</code>,&nbsp;<wbr><code>&nbsp;<wbr>2</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>3</code> </p>
-<p> <code>-fitfn</code><i> enum</i><code> none</code><br />
+<p> <code>-fitfn</code><i> enum</i><code> none</code><br/>
 &nbsp;<wbr>Fit function:&nbsp;<wbr><code>&nbsp;<wbr>none</code>,&nbsp;<wbr><code>&nbsp;<wbr>exp</code>,&nbsp;<wbr><code>&nbsp;<wbr>aexp</code>,&nbsp;<wbr><code>&nbsp;<wbr>exp_exp</code>,&nbsp;<wbr><code>&nbsp;<wbr>vac</code>,&nbsp;<wbr><code>&nbsp;<wbr>exp5</code>,&nbsp;<wbr><code>&nbsp;<wbr>exp7</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>exp9</code> </p>
-<p> <code>-ncskip</code><i> int</i><code> 0</code><br />
+<p> <code>-ncskip</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Skip N points in the output file of correlation functions </p>
-<p> <code>-beginfit</code><i> real</i><code> 0 </code><br />
+<p> <code>-beginfit</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Time where to begin the exponential fit of the correlation function </p>
-<p> <code>-endfit</code><i> real</i><code> -1 </code><br />
+<p> <code>-endfit</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Time where to end the exponential fit of the correlation function, -1 is till the end </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

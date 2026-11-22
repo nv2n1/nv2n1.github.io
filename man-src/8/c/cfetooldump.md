@@ -11,14 +11,14 @@ description: "cfetool dump – dump the contents of a database in XML format"
 <h2>Synopsis</h2>
 <p><code>cfetool</code> <code>dump</code> <i>name</i> [<code>&#8211;path</code>|<code>-p</code>&nbsp;<wbr><i>directory name</i>] [<code>&#8211;file</code>|<code>-f</code>&nbsp;<wbr><i>filename</i>] [<code>&#8211;daily</code>|<code>-d</code>] [<code>&#8211;weekly</code>|<code>-w</code>] [<code>&#8211;yearly</code>|<code>-y</code>] [<code>&#8211;verbose</code>|<code>-v</code>] [<code>&#8211;help</code>|<code>-h</code>]</p>
 <h2>Description</h2>
-<p>Prints the contents of the specified database in <font SIZE="-1">XML</font> format, with comments for human readability. This format can be read by <code>cfetool import</code>. </p>
+<p>Prints the contents of the specified database in XML format, with comments for human readability. This format can be read by <code>cfetool import</code>. </p>
 <p> The <code>-d</code>, <code>-w</code>, and <code>-y</code> options specify which databases to include in the dump, and may be combined. If they are all ommitted, the default is to only dump the weekly database.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>&#8211;path</code>|<code>-p</code> <i>directory name</i></dt>
 <dd>Names the directory in which the database specified by <i>name</i> can be found.</dd>
 <dt><code>&#8211;file</code>|<code>-f</code> <i>filename</i></dt>
-<dd>Names a file to print the <font SIZE="-1">XML</font> to. If this option is omitted, the <font SIZE="-1">XML</font> will be printed to the standard output stream.</dd>
+<dd>Names a file to print the XML to. If this option is omitted, the XML will be printed to the standard output stream.</dd>
 <dt><code>&#8211;daily</code>|<code>-d</code></dt>
 <dd>Include the daily pattern database in the dump.</dd>
 <dt><code>&#8211;weekly</code>|<code>-w</code></dt>

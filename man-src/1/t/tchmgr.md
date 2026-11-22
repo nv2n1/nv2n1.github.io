@@ -54,25 +54,25 @@ description: "tchmgr – the command line utility of the hash database API"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-tl</code> : enable the option `HDBTLARGE&#8217;.<br />
- <code>-td</code> : enable the option `HDBTDEFLATE&#8217;.<br />
- <code>-tb</code> : enable the option `HDBTBZIP&#8217;.<br />
- <code>-tt</code> : enable the option `HDBTTCBS&#8217;.<br />
- <code>-tx</code> : enable the option `HDBTEXCODEC&#8217;.<br />
- <code>-nl</code> : enable the option `HDBNOLCK&#8217;.<br />
- <code>-nb</code> : enable the option `HDBLCKNB&#8217;.<br />
- <code>-sx</code> : the input data is evaluated as a hexadecimal data string.<br />
- <code>-dk</code> : use the function `tchdbputkeep&#8217; instead of `tchdbput&#8217;.<br />
- <code>-dc</code> : use the function `tchdbputcat&#8217; instead of `tchdbput&#8217;.<br />
- <code>-dai</code> : use the function `tchdbaddint&#8217; instead of `tchdbput&#8217;.<br />
- <code>-dad</code> : use the function `tchdbadddouble&#8217; instead of `tchdbput&#8217;.<br />
- <code>-px</code> : the output data is converted into a hexadecimal data string.<br />
- <code>-pz</code> : do not append line feed at the end of the output.<br />
- <code>-m </code><i>num</i> : specify the maximum number of the output.<br />
- <code>-pv</code> : print values of records also.<br />
- <code>-fm </code><i>str</i> : specify the prefix of keys.<br />
- <code>-tz</code> : enable the option `UINT8_MAX&#8217;.<br />
- <code>-df</code> : perform defragmentation only.<br />
+</dt><dd> <code>-tl</code> : enable the option `HDBTLARGE&#8217;.<br/>
+ <code>-td</code> : enable the option `HDBTDEFLATE&#8217;.<br/>
+ <code>-tb</code> : enable the option `HDBTBZIP&#8217;.<br/>
+ <code>-tt</code> : enable the option `HDBTTCBS&#8217;.<br/>
+ <code>-tx</code> : enable the option `HDBTEXCODEC&#8217;.<br/>
+ <code>-nl</code> : enable the option `HDBNOLCK&#8217;.<br/>
+ <code>-nb</code> : enable the option `HDBLCKNB&#8217;.<br/>
+ <code>-sx</code> : the input data is evaluated as a hexadecimal data string.<br/>
+ <code>-dk</code> : use the function `tchdbputkeep&#8217; instead of `tchdbput&#8217;.<br/>
+ <code>-dc</code> : use the function `tchdbputcat&#8217; instead of `tchdbput&#8217;.<br/>
+ <code>-dai</code> : use the function `tchdbaddint&#8217; instead of `tchdbput&#8217;.<br/>
+ <code>-dad</code> : use the function `tchdbadddouble&#8217; instead of `tchdbput&#8217;.<br/>
+ <code>-px</code> : the output data is converted into a hexadecimal data string.<br/>
+ <code>-pz</code> : do not append line feed at the end of the output.<br/>
+ <code>-m </code><i>num</i> : specify the maximum number of the output.<br/>
+ <code>-pv</code> : print values of records also.<br/>
+ <code>-fm </code><i>str</i> : specify the prefix of keys.<br/>
+ <code>-tz</code> : enable the option `UINT8_MAX&#8217;.<br/>
+ <code>-df</code> : perform defragmentation only.<br/>
  <code>-sc</code> : normalize keys as lower cases.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

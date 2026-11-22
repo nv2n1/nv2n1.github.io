@@ -26,7 +26,7 @@ description: "ypset – bind ypbind to a particular NIS server"
 <dt><code>-d</code><i> domain</i></dt>
 <dd>Specify a domain other than the default domain as returned by <code>domainname</code>(8).</dd>
 <dt><code>-h</code><i> hostname</i></dt>
-<dd>Set the NIS binding on host <i>hostname</i><br />
+<dd>Set the NIS binding on host <i>hostname</i><br/>
 &nbsp;<wbr>instead of the local machine.</dd></dl>
 <h2>See Also</h2>
 <p><code>domainname</code>(8), <code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8), <code>ypcat</code>(8), <code><a href="/docs/linux/man/1-ypmatch/">ypmatch</a></code>(1), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/8-yppoll/">yppoll</a></code>(8), <code><a href="/docs/linux/man/1-ypwhich/">ypwhich</a></code>(1) </p>

@@ -9,21 +9,21 @@ description: "Debugging macros –"
 
 <p>Debugging macros &#8211; </p>
 <h3>Defines</h3>
-<p>#define <code>QL_TRACE_ENABLE</code><br />
- <i>enable tracing </i><br />
- #define <code>QL_TRACE_DISABLE</code><br />
- <i>disable tracing </i><br />
- #define <code>QL_TRACE_ON</code>(out)<br />
- <i>set tracing stream </i><br />
- #define <code>QL_TRACE</code>(message)<br />
- <i>output tracing information </i><br />
- #define <code>QL_TRACE_ENTER_FUNCTION</code><br />
- <i>output tracing information </i><br />
- #define <code>QL_TRACE_EXIT_FUNCTION</code><br />
- <i>output tracing information </i><br />
- #define <code>QL_TRACE_LOCATION</code><br />
- <i>output tracing information </i><br />
- #define <code>QL_TRACE_VARIABLE</code>(variable)<br />
+<p>#define <code>QL_TRACE_ENABLE</code><br/>
+ <i>enable tracing </i><br/>
+ #define <code>QL_TRACE_DISABLE</code><br/>
+ <i>disable tracing </i><br/>
+ #define <code>QL_TRACE_ON</code>(out)<br/>
+ <i>set tracing stream </i><br/>
+ #define <code>QL_TRACE</code>(message)<br/>
+ <i>output tracing information </i><br/>
+ #define <code>QL_TRACE_ENTER_FUNCTION</code><br/>
+ <i>output tracing information </i><br/>
+ #define <code>QL_TRACE_EXIT_FUNCTION</code><br/>
+ <i>output tracing information </i><br/>
+ #define <code>QL_TRACE_LOCATION</code><br/>
+ <i>output tracing information </i><br/>
+ #define <code>QL_TRACE_VARIABLE</code>(variable)<br/>
  <i>output tracing information </i></p>
 <h2>Detailed Description</h2>
 <p>For debugging purposes, macros can be used to output information about the code being executed.</p>

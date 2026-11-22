@@ -11,11 +11,11 @@ description: "Return Flags –"
 <p> Return Flags &#8211; </p>
 <p> Return Flags.</p>
 <h3>Macros</h3>
-<p> #define <code>GSS_C_GLOBUS_RECEIVED_LIMITED_PROXY_FLAG</code><br />
- <i>Received Limited Proxy Flag. </i><br />
- #define <code>GSS_C_GLOBUS_RECEIVED_LIMITED_PROXY_DURING_DELEGATION_FLAG</code><br />
- <i>Received Limited Proxy During Delegation Flag. </i><br />
- #define <code>GSS_C_GLOBUS_LIMITED_PROXY_MANY_FLAG</code><br />
+<p> #define <code>GSS_C_GLOBUS_RECEIVED_LIMITED_PROXY_FLAG</code><br/>
+ <i>Received Limited Proxy Flag. </i><br/>
+ #define <code>GSS_C_GLOBUS_RECEIVED_LIMITED_PROXY_DURING_DELEGATION_FLAG</code><br/>
+ <i>Received Limited Proxy During Delegation Flag. </i><br/>
+ #define <code>GSS_C_GLOBUS_LIMITED_PROXY_MANY_FLAG</code><br/>
  <i>Limited Proxy Many Flag. </i></p>
 <h2>Detailed Description</h2>
 <p> Return Flags. </p>

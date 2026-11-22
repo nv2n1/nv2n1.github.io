@@ -15,8 +15,8 @@ hpigensimdata[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-r res_id][-f filename][
                                                                                                           [--resource = res_id][--file = filename][--mode = UPD | INIT][--help]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> hpigensimdata generates data for the dynamic simulator plugin by reading the current configuration. It will print all <font SIZE="-1">HPI</font> information in a format that can be parsed by Dynamic Simulator plugin. To spare some encoding/decoding function, values of enums are printed as int values instead of encode them to <font SIZE="-1">ASCII</font> values and decode them afterwards. Since this client is primarily for the Dynamic Simulator, the output functions don&#8217;t depend on the oh_.. &#8211; output function. Therefore they can be easily changed without influence on other clients. </p>
-<p> Please refer to <font SIZE="-1">README</font> and detailed documentation with the plugin. </p>
+<p> hpigensimdata generates data for the dynamic simulator plugin by reading the current configuration. It will print all HPI information in a format that can be parsed by Dynamic Simulator plugin. To spare some encoding/decoding function, values of enums are printed as int values instead of encode them to ASCII values and decode them afterwards. Since this client is primarily for the Dynamic Simulator, the output functions don&#8217;t depend on the oh_.. &#8211; output function. Therefore they can be easily changed without influence on other clients. </p>
+<p> Please refer to README and detailed documentation with the plugin. </p>
 <p> If no domain or host is selected, ohparam uses the default domain as specified in the openhpiclient.conf file. </p>
 <p> If no file name is specified, the data is displayed on console.</p>
 <h2>OPTIONS</h2>
@@ -35,7 +35,7 @@ hpigensimdata[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-r res_id][-f filename][
 <dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></dt>
 <dd> Select domain id <i>nn</i></dd>
 <dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dd> Open session to the domain served by the daemon at the specified URL (host:port). This option overrides the OPENHPI_DAEMON_HOST and OPENHPI_DAEMON_PORT environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
 <dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
 <dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SEE ALSO</h2>

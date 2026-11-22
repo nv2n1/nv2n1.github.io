@@ -11,7 +11,7 @@ description: "mosquitto-tls – Configure SSL/TLS support for Mosquitto"
 <h2>Description</h2>
 <p><code>mosquitto</code> provides SSL support for encrypted network connections and authentication. This manual describes how to create the files needed.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  It is important to use different certificate subject parameters for your CA, server and clients. If the certificates appear identical, even though generated separately, the broker/client will not be able to distinguish between them and you will experience difficult to diagnose errors. </dd>
 <h2>Certificate Authority</h2>
 <p>Generate a certificate authority certificate and key. </p>

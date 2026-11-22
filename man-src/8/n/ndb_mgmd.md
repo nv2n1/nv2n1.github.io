@@ -219,7 +219,7 @@ description: "ndb_mgmd – the MySQL Cluster management server daemon"
 </tr>
 </table>
 <p> Instructs <code>ndb_mgmd</code> not to start as a daemon process. </p>
-<p> As of MySQL Cluster NDB 7.0.8, the default behavior for <code>ndb_mgmd</code> on Windows is to run in the foreground, making this option unnecessary on Windows platforms. (m[blue]<code>Bug#45588</code>m[]<font SIZE="-2">[1]</font>)</dl>
+<p> As of MySQL Cluster NDB 7.0.8, the default behavior for <code>ndb_mgmd</code> on Windows is to run in the foreground, making this option unnecessary on Windows platforms. (m[blue]<code>Bug#45588</code>m[][1])</dl>
 <dl>
 <dd>* <code>&#8211;print-full-config</code>, <code>-P</code> </dd>
 <table BORDER>
@@ -349,7 +349,7 @@ HostName = 192.168.0.201</pre>
 <p> When used with <code>ndb_mgmd</code>, this option affects the behavior of the management node with regard to other management nodes only. Do not confuse it with the <code>&#8211;nowait-nodes</code> option used with <code>ndbd</code> (or <code>ndbmtd</code> in MySQL Cluster NDB 7.0 and later) to allow a cluster to start with fewer than its full complement of data nodes; when used with data nodes, this option affects their behavior only with regard to other data nodes. </p>
 <p> Multiple management node IDs may be passed to this option as a comma-separated list. Each node ID must be no less than 1 and no greater than 255. In practice, it is quite rare to use more than two management servers for the same MySQL Cluster (or to have any need for doing so); in most cases you need to pass to this option only the single node ID for the one management server that you do not wish to use when starting the cluster. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  When you later start the lqmissingrq management server, its configuration must match that of the management server that is already in use by the cluster. Otherwise, it fails the configuration check performed by the existing management server, and does not start. </dd>
 </dl>
 <p> This option was introduced in MySQL Cluster NDB 7.0.10.</dl>

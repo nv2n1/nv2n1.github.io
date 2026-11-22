@@ -9,19 +9,19 @@ description: "Evas Render Engine Functions – Functions that are used to set th
 
 <p>Evas Render Engine Functions &#8211; Functions that are used to set the render engine for a given function, and then get that engine working. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_output_method_set</code> (<code>Evas</code> *e, int render_method)<br />
- <i>Sets the output engine for the given evas. </i><br />
- EAPI int <code>evas_output_method_get</code> (const <code>Evas</code> *e)<br />
- <i>Retrieves the number of the output engine used for the given evas. </i><br />
- EAPI <code>Evas_Engine_Info</code> * <code>evas_engine_info_get</code> (const <code>Evas</code> *e)<br />
- <i>Retrieves the current render engine info struct from the given evas. </i><br />
- EAPI void <code>evas_engine_info_set</code> (<code>Evas</code> *e, <code>Evas_Engine_Info</code> *info)<br />
- <i>Applies the engine settings for the given evas from the given </i>Evas_Engine_Info structure.<br />
- EAPI int <code>evas_render_method_lookup</code> (const char *name)<br />
- <i>Look up a numeric ID from a string name of a rendering engine. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_render_method_list</code> (void)<br />
- <i>List all the rendering engines compiled into the copy of the Evas library. </i><br />
- EAPI void <code>evas_render_method_list_free</code> (<code>Evas_List</code> *list)<br />
+<p>EAPI void <code>evas_output_method_set</code> (<code>Evas</code> *e, int render_method)<br/>
+ <i>Sets the output engine for the given evas. </i><br/>
+ EAPI int <code>evas_output_method_get</code> (const <code>Evas</code> *e)<br/>
+ <i>Retrieves the number of the output engine used for the given evas. </i><br/>
+ EAPI <code>Evas_Engine_Info</code> * <code>evas_engine_info_get</code> (const <code>Evas</code> *e)<br/>
+ <i>Retrieves the current render engine info struct from the given evas. </i><br/>
+ EAPI void <code>evas_engine_info_set</code> (<code>Evas</code> *e, <code>Evas_Engine_Info</code> *info)<br/>
+ <i>Applies the engine settings for the given evas from the given </i>Evas_Engine_Info structure.<br/>
+ EAPI int <code>evas_render_method_lookup</code> (const char *name)<br/>
+ <i>Look up a numeric ID from a string name of a rendering engine. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_render_method_list</code> (void)<br/>
+ <i>List all the rendering engines compiled into the copy of the Evas library. </i><br/>
+ EAPI void <code>evas_render_method_list_free</code> (<code>Evas_List</code> *list)<br/>
  <i>This function should be called to free a list of engine names. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that are used to set the render engine for a given function, and then get that engine working. </p>
@@ -62,7 +62,7 @@ description: "Evas Render Engine Functions – Functions that are used to set th
 <p> Example: </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The pointer to the Evas Canvas<br />
+<dd><i>e</i> The pointer to the Evas Canvas<br/>
  <i>info</i> The pointer to the Engine Info to use</dd></dl>
 <p> References _Evas_Engine_Info::magic.</p>
 <h3>EAPI int evas_output_method_get (const <code>Evas</code> * e)</h3>
@@ -78,7 +78,7 @@ description: "Evas Render Engine Functions – Functions that are used to set th
 <p> Once the output engine for an evas is set, any attempt to change it will be ignored. The value for render_method can be found using <code>evas_render_method_lookup</code> . </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given evas.<br />
+<dd><i>e</i> The given evas.<br/>
  <i>render_method</i> The numeric engine value to use.</dd></dl>
 <p> References _Evas_List::data, and _Evas_List::next.</p>
 <h3>EAPI <code>Evas_List</code>* evas_render_method_list (void)</h3>

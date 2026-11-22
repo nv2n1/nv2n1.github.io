@@ -11,7 +11,7 @@ description: "dpbtrs.f –"
 <p> dpbtrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dpbtrs</code> (UPLO, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br />
+<p> subroutine <code>dpbtrs</code> (UPLO, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br/>
  <i></i><code>DPBTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpbtrs (characterUPLO, integerN, integerKD, integerNRHS, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

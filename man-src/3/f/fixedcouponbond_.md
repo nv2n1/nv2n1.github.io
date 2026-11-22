@@ -15,13 +15,13 @@ description: "QuantLib::FixedRateBondForward – Forward contract on a fixed-rat
 <p><code>Constructors</code> </p>
 <p> <code>FixedRateBondForward</code> (const <code>Date</code> &amp;valueDate, const <code>Date</code> &amp;maturityDate, Position::Type type, <code>Real</code> strike, <code>Natural</code> settlementDays, const <code>DayCounter</code> &amp;dayCounter, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> businessDayConvention, const boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; &amp;fixedCouponBond, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;(), const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;incomeDiscountCurve=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;()) </p>
 <p> <code>Calculations</code> </p>
-<p> <code>Real</code> <code>forwardPrice</code> () const<br />
- <i>(dirty) forward bond price </i><br />
- <code>Real</code> <code>cleanForwardPrice</code> () const<br />
- <i>(dirty) forward bond price minus accrued on bond at delivery </i><br />
- <code>Real</code> <code>spotIncome</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;incomeDiscountCurve) const<br />
- <i>NPV of bond coupons discounted using incomeDiscountCurve. </i><br />
- <code>Real</code> <code>spotValue</code> () const<br />
+<p> <code>Real</code> <code>forwardPrice</code> () const<br/>
+ <i>(dirty) forward bond price </i><br/>
+ <code>Real</code> <code>cleanForwardPrice</code> () const<br/>
+ <i>(dirty) forward bond price minus accrued on bond at delivery </i><br/>
+ <code>Real</code> <code>spotIncome</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;incomeDiscountCurve) const<br/>
+ <i>NPV of bond coupons discounted using incomeDiscountCurve. </i><br/>
+ <code>Real</code> <code>spotValue</code> () const<br/>
  <i>NPV of underlying bond. </i></p>
 <h3>Protected Member Functions</h3>
 <p>void <code>performCalculations</code> () const </p>

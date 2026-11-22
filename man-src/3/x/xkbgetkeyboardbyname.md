@@ -10,7 +10,7 @@ description: "XkbGetKeyboardByName – Build a new keyboard description from a s
 <p>XkbGetKeyboardByName &#8211; Build a new keyboard description from a set of named components, and to optionally have the server use the resulting description to replace an active one </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbDescPtr XkbGetKeyboardByName</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>XkbComponentNamesPtr </code><i>names</i><code>,</code> <code>unsigned int </code><i>want</i><code>,</code> <code>unsigned int </code><i>need</i><code>,</code> <code>Bool </code><i>load</i><code>);</code><br />
+<dt> <code>XkbDescPtr XkbGetKeyboardByName</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>XkbComponentNamesPtr </code><i>names</i><code>,</code> <code>unsigned int </code><i>want</i><code>,</code> <code>unsigned int </code><i>need</i><code>,</code> <code>Bool </code><i>load</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
@@ -30,7 +30,7 @@ description: "XkbGetKeyboardByName – Build a new keyboard description from a s
 <h2>Description</h2>
 <p>A client may request that the server fetch one or more components from its database and use those components to build a new server keyboard description. The new keyboard description may be built from scratch, or it may be built starting with the current keyboard description for a particular device. Once the keyboard description is built, all or part of it may be returned to the client. The parts returned to the client need not include all of the parts used to build the description. At the time it requests the server to build a new keyboard description, a client may also request that the server use the new description internally to replace the current keyboard description for a specific device, in which case the behavior of the device changes accordingly. </p>
 <p> To build a new keyboard description from a set of named components, and to optionally have the server use the resulting description to replace an active one, use <i>XkbGetKeyboardByName.</i> </p>
-<p> <i>names </i> contains a set of expressions describing the keyboard components the server should use to build the new keyboard description. <i>want </i> and <i>need </i> are bit fields describing the parts of the resulting keyboard description that should be present in the returned XkbDescRec.<br />
+<p> <i>names </i> contains a set of expressions describing the keyboard components the server should use to build the new keyboard description. <i>want </i> and <i>need </i> are bit fields describing the parts of the resulting keyboard description that should be present in the returned XkbDescRec.<br/>
 &nbsp; The individual fields in <i>names </i> are <i>component expressions </i> composed of keyboard component names (no wildcarding as may be used in <i>XkbListComponents), </i> the special component name symbol `%&#8217;, and the special operator characters `+&#8217; and `|&#8217;. A component expression is parsed left to right, as follows: </p>
 <dl COMPACT>
 <dt>&bull;</dt>

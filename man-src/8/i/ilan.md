@@ -9,12 +9,12 @@ description: "ipmiutil_lan – show and configure IPMI LAN parameters, users, an
 
 <p>ipmiutil_lan &#8211; show and configure IPMI LAN parameters, users, and set up a PEF rule to send BMC LAN Alerts for OS Critical Stop log events</p>
 <h2>Synopsis</h2>
-<p><code>ipmiutil lan [-abcdefghijklmnopq#rstuvwxyzBDQK -i eth1 ]</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-I ipadr -M macadr -S subnet -B baud_sol&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-G gwyip -H gwymac -L lan_channel_num&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-A alertip -X alertmac -C community&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-u user_to_set -p password_to_set&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-N nodename&nbsp;<wbr>&nbsp;<wbr>-U username -Fimb&nbsp;<wbr>]<br />
+<p><code>ipmiutil lan [-abcdefghijklmnopq#rstuvwxyzBDQK -i eth1 ]</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-I ipadr -M macadr -S subnet -B baud_sol&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-G gwyip -H gwymac -L lan_channel_num&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-A alertip -X alertmac -C community&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-u user_to_set -p password_to_set&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-N nodename&nbsp;<wbr>&nbsp;<wbr>-U username -Fimb&nbsp;<wbr>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-P/-R rmt_node_pswd -EFJTVY&nbsp;<wbr>] </p>
 <h2>Description</h2>
 <p><i>ipmiutil lan</i> shows or sets all of the IPMI LAN Parameters and users to enable remote LAN sessions or BMC LAN Alerts. The IP address and MAC address of the local system, the default gateway, and the alert destination can be defaulted to those specified in Linux, or can be overridden by specific parameters. It also creates a new Platform Event Filter table rule for an OS Critical Stop (0x20) SEL firmware log event, so that it will be enabled to send a BMC LAN Alert. This utility will skip the PEF records if the system does not support IPMI 1.5 or greater. This utility can use either the /dev/ipmi0 driver from OpenIPMI, the /dev/imb driver from Intel, the /dev/ipmikcs driver from valinux, direct user-space IOs, or the IPMI LAN interface if -N. </p>
@@ -40,7 +40,7 @@ description: "ipmiutil_lan – show and configure IPMI LAN parameters, users, an
 <dt>-i ethif</dt>
 <dd>By default, the eth0 interface is used to find IP and MAC addresses. Sometimes, however, the first ethernet port on the baseboard may be represented by Linux as eth1 or eth2 instead. If so, use this option to indicate the correct ethernet interface to use. By default, ipmiutil lan will scan up to 32 eth interfaces for the onboard one that BMC LAN uses.</dd>
 <dt>-j</dt>
-<dd>This sets a custom PEF rule as the last PEF entry. The input is a series of 10 hex bytes, forming the PEF entry. For example, this sample PEF entry would perform a power down action if the Baseboard Temp reached its threshold.<br />
+<dd>This sets a custom PEF rule as the last PEF entry. The input is a series of 10 hex bytes, forming the PEF entry. For example, this sample PEF entry would perform a power down action if the Baseboard Temp reached its threshold.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;ipmiutil lan -e -j020110ffff013001950a&quot;</dd>
 <dt>-k</dt>
 <dd>This causes ipmiutil lan to also insert two rules to send alerts for transition-to-OK events, including Power Redundancy OK and Temperature OK.</dd>
@@ -124,35 +124,35 @@ description: "ipmiutil_lan – show and configure IPMI LAN parameters, users, an
 <dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Examples</h2>
-<p>To read existing settings:<br />
- ipmiutil lan -r To enable IPMI LAN with default settings detected, assuming shared MAC/IP:<br />
- ipmiutil lan -e To set up IPMI LAN for a unique IP address and set PEF SNMP Alerts:<br />
- ipmiutil lan -e -I 192.168.1.1 -A 192.168.1.10 To set the IPMI LAN password for the default user:<br />
- ipmiutil lan -e -p mypassword To disable access to the IPMI LAN channel:<br />
+<p>To read existing settings:<br/>
+ ipmiutil lan -r To enable IPMI LAN with default settings detected, assuming shared MAC/IP:<br/>
+ ipmiutil lan -e To set up IPMI LAN for a unique IP address and set PEF SNMP Alerts:<br/>
+ ipmiutil lan -e -I 192.168.1.1 -A 192.168.1.10 To set the IPMI LAN password for the default user:<br/>
+ ipmiutil lan -e -p mypassword To disable access to the IPMI LAN channel:<br/>
  ipmiutil lan -d </p>
 <h2>Sample Pef Table</h2>
-<p>These 11 PEF table entries are configured from the factory for various Intel Sahalee BMC systems, and will be applied as the defaults for a system with an empty PEF table:<br />
- PEF(01): 01 Temperature Sensor event &#8211; enabled for alert<br />
- 01 c0 01 01 00 ff ff 01 ff 01 95 0a 00 00 00 00 00 00 00 00 00<br />
- PEF(02): 02 Voltage Sensor event &#8211; enabled for alert<br />
- 02 c0 01 01 00 ff ff 02 ff 01 95 0a 00 00 00 00 00 00 00 00 00<br />
- PEF(03): 04 Fan Failure event &#8211; enabled for alert<br />
- 03 c0 01 01 00 ff ff 04 ff 01 95 0a 00 00 00 00 00 00 00 00 00<br />
- PEF(04): 05 Chassis Intrusion event &#8211; enabled for alert<br />
- 04 c0 01 01 00 ff ff 05 05 6f 01 00 00 00 00 00 00 00 00 00 00<br />
- PEF(05): 08 Power Supply Fault event &#8211; enabled for alert<br />
- 05 c0 01 01 00 ff ff 08 ff 6f 06 00 00 00 00 00 00 00 00 00 00<br />
- PEF(06): 0c Memory ECC Error event &#8211; enabled for alert<br />
- 06 c0 01 01 00 ff ff 0c 08 6f 02 00 00 00 00 00 00 00 00 00 00<br />
- PEF(07): 0f FRB Failure event &#8211; enabled for alert<br />
- 07 c0 01 01 00 ff ff 0f 06 6f 01 00 00 00 00 00 00 00 00 00 00<br />
- PEF(08): 07 BIOS POST Error event &#8211; enabled for alert<br />
- 08 c0 01 01 00 ff ff 07 ff 6f 1c 00 00 00 00 00 00 00 00 00 00<br />
- PEF(09): 13 Fatal NMI event &#8211; enabled for alert<br />
- 09 c0 01 01 00 ff ff 13 ff 6f 3e 03 00 00 00 00 00 00 00 00 00<br />
- PEF(10): 23 Watchdog Timer Reset event &#8211; enabled for alert<br />
- 0a c0 01 01 00 ff ff 23 03 6f 0e 00 00 00 00 00 00 00 00 00 00<br />
- PEF(11): 12 System Restart event &#8211; enabled for alert<br />
+<p>These 11 PEF table entries are configured from the factory for various Intel Sahalee BMC systems, and will be applied as the defaults for a system with an empty PEF table:<br/>
+ PEF(01): 01 Temperature Sensor event &#8211; enabled for alert<br/>
+ 01 c0 01 01 00 ff ff 01 ff 01 95 0a 00 00 00 00 00 00 00 00 00<br/>
+ PEF(02): 02 Voltage Sensor event &#8211; enabled for alert<br/>
+ 02 c0 01 01 00 ff ff 02 ff 01 95 0a 00 00 00 00 00 00 00 00 00<br/>
+ PEF(03): 04 Fan Failure event &#8211; enabled for alert<br/>
+ 03 c0 01 01 00 ff ff 04 ff 01 95 0a 00 00 00 00 00 00 00 00 00<br/>
+ PEF(04): 05 Chassis Intrusion event &#8211; enabled for alert<br/>
+ 04 c0 01 01 00 ff ff 05 05 6f 01 00 00 00 00 00 00 00 00 00 00<br/>
+ PEF(05): 08 Power Supply Fault event &#8211; enabled for alert<br/>
+ 05 c0 01 01 00 ff ff 08 ff 6f 06 00 00 00 00 00 00 00 00 00 00<br/>
+ PEF(06): 0c Memory ECC Error event &#8211; enabled for alert<br/>
+ 06 c0 01 01 00 ff ff 0c 08 6f 02 00 00 00 00 00 00 00 00 00 00<br/>
+ PEF(07): 0f FRB Failure event &#8211; enabled for alert<br/>
+ 07 c0 01 01 00 ff ff 0f 06 6f 01 00 00 00 00 00 00 00 00 00 00<br/>
+ PEF(08): 07 BIOS POST Error event &#8211; enabled for alert<br/>
+ 08 c0 01 01 00 ff ff 07 ff 6f 1c 00 00 00 00 00 00 00 00 00 00<br/>
+ PEF(09): 13 Fatal NMI event &#8211; enabled for alert<br/>
+ 09 c0 01 01 00 ff ff 13 ff 6f 3e 03 00 00 00 00 00 00 00 00 00<br/>
+ PEF(10): 23 Watchdog Timer Reset event &#8211; enabled for alert<br/>
+ 0a c0 01 01 00 ff ff 23 03 6f 0e 00 00 00 00 00 00 00 00 00 00<br/>
+ PEF(11): 12 System Restart event &#8211; enabled for alert<br/>
  0b c0 01 01 00 ff ff 12 ff 6f 02 00 00 00 00 00 00 00 00 00 00</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ipmiutil/">ipmiutil</a>(8) <a href="/docs/linux/man/8-ialarms/">ialarms</a>(8) <a href="/docs/linux/man/8-iconfig/">iconfig</a>(8) <a href="/docs/linux/man/8-icmd/">icmd</a>(8) <a href="/docs/linux/man/8-idiscover/">idiscover</a>(8) <a href="/docs/linux/man/8-ievents/">ievents</a>(8) <a href="/docs/linux/man/8-ifru/">ifru</a>(8) <a href="/docs/linux/man/8-igetevent/">igetevent</a>(8) <a href="/docs/linux/man/8-ihealth/">ihealth</a>(8) <a href="/docs/linux/man/8-ireset/">ireset</a>(8) <a href="/docs/linux/man/8-isel/">isel</a>(8) <a href="/docs/linux/man/8-isensor/">isensor</a>(8) <a href="/docs/linux/man/8-iserial/">iserial</a>(8) <a href="/docs/linux/man/8-isol/">isol</a>(8) <a href="/docs/linux/man/8-iwdt/">iwdt</a>(8) </p>

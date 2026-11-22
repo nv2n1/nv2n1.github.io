@@ -10,8 +10,8 @@ description: "httpry – HTTP logging and information retrieval tool"
 
 <p> httpry &#8211; HTTP logging and information retrieval tool</p>
 <h2>SYNOPSIS</h2>
-<p> <code>httpry [ -dFpq ] [ -b file ] [ -f format ] [ -i device ] [ -m methods ] [ -n count ] [ -o file ] [ -P file ] [ -r file ] [ -S bytes ] [ -u user ] [ &#8216;expression&#8217; ]</code><br />
- <code>httpry -s [ -l threshold ] [ -t seconds ]</code><br />
+<p> <code>httpry [ -dFpq ] [ -b file ] [ -f format ] [ -i device ] [ -m methods ] [ -n count ] [ -o file ] [ -P file ] [ -r file ] [ -S bytes ] [ -u user ] [ &#8216;expression&#8217; ]</code><br/>
+ <code>httpry -s [ -l threshold ] [ -t seconds ]</code><br/>
  <code>httpry -h</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <i>httpry</i> is a tool designed for displaying and logging HTTP traffic. It is not designed to perform analysis itself, but instead to capture, parse and log the traffic for later analysis. It can be run in real-time displaying the live traffic on the wire, or as a daemon process that logs to an output file.</p>
@@ -55,8 +55,8 @@ description: "httpry – HTTP logging and information retrieval tool"
 <dd> Specify an alternate user to take ownership of the process and any output files. You will need root privileges to do this; it will switch to the new user after initialization.</dd>
 <dt>&#8216;expression&#8217;</dt>
 <dd> Specify a bpf-style capture filter, overriding the default. Here are a few basic examples starting with the default filter: </dd>
-<p>&nbsp;<wbr>&#8216;tcp port 80 or 8080&#8217;<br />
-&nbsp;<wbr>&#8216;tcp dst port 80&#8217;<br />
+<p>&nbsp;<wbr>&#8216;tcp port 80 or 8080&#8217;<br/>
+&nbsp;<wbr>&#8216;tcp dst port 80&#8217;<br/>
 &nbsp;<wbr>&#8216;tcp dst port 80 and src host 192.168.1.1&#8217; </p>
 <p> These filters will capture all web traffic both directions on two common ports, capture only requests made to port 80, and capture requests to port 80 by a particular host, respectively. See &#8216;man tcpdump&#8217; for further information on the syntax and available primitives.</dl>
 <h2>AUTHOR</h2>

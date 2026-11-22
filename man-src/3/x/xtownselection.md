@@ -35,6 +35,6 @@ description: "XtOwnSelection, XtOwnSelectionIncremental, XtDisownSelection – s
 <p> The <code>XtDisownSelection</code> function informs the Intrinsics selection mechanism that the specified widget is to lose ownership of the selection. If the widget does not currently own the selection either because it lost the selection or because it never had the selection to begin with, <code>XtDisownSelection</code> does nothing. </p>
 <p> After a widget has called <code>XtDisownSelection</code>, its convert procedure is not called even if a request arrives later with a timestamp during the period that this widget owned the selection. However, its done procedure will be called if a conversion that started before the call to <code>XtDisownSelection</code> finishes after the call to <code>XtDisownSelection</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappgetselectiontimeout/">XtAppGetSelectionTimeout</a>(3), <a href="/docs/linux/man/3-xtgetselectionvalue/">XtGetSelectionValue</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappgetselectiontimeout/">XtAppGetSelectionTimeout</a>(3), <a href="/docs/linux/man/3-xtgetselectionvalue/">XtGetSelectionValue</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

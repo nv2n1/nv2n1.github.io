@@ -10,16 +10,16 @@ description: "dieharder – A testing and benchmarking tool for random number ge
 
 <p> <code>dieharder &#8211; A testing and benchmarking tool for random number</code> <code>generators.</code> </p>
 <h2>SYNOPSIS</h2>
-<p> dieharder [-a] [-d dieharder test number] [-f filename] [-B]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-D output flag&nbsp;<wbr>[-D output flag]&nbsp;<wbr>&#8230;&nbsp;<wbr>]&nbsp;<wbr>[-F]&nbsp;<wbr>[-c separator]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-g generator number or -1]&nbsp;<wbr>[-h]&nbsp;<wbr>[-k ks_flag]&nbsp;<wbr>[-l]&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-L overlap]&nbsp;<wbr>[-m multiply_p]&nbsp;<wbr>[-n ntuple]&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-p number of p samples]&nbsp;<wbr>[-P Xoff]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-o filename]&nbsp;<wbr>[-s seed strategy]&nbsp;<wbr>[-S random number seed]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-n ntuple]&nbsp;<wbr>[-p number of p samples]&nbsp;<wbr>[-o filename]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-s seed strategy]&nbsp;<wbr>[-S random number seed]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-t number of test samples]&nbsp;<wbr>[-v verbose flag]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-W weak]&nbsp;<wbr>[-X fail]&nbsp;<wbr>[-Y Xtrategy]<br />
+<p> dieharder [-a] [-d dieharder test number] [-f filename] [-B]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-D output flag&nbsp;<wbr>[-D output flag]&nbsp;<wbr>&#8230;&nbsp;<wbr>]&nbsp;<wbr>[-F]&nbsp;<wbr>[-c separator]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-g generator number or -1]&nbsp;<wbr>[-h]&nbsp;<wbr>[-k ks_flag]&nbsp;<wbr>[-l]&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-L overlap]&nbsp;<wbr>[-m multiply_p]&nbsp;<wbr>[-n ntuple]&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-p number of p samples]&nbsp;<wbr>[-P Xoff]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-o filename]&nbsp;<wbr>[-s seed strategy]&nbsp;<wbr>[-S random number seed]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-n ntuple]&nbsp;<wbr>[-p number of p samples]&nbsp;<wbr>[-o filename]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-s seed strategy]&nbsp;<wbr>[-S random number seed]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-t number of test samples]&nbsp;<wbr>[-v verbose flag]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-W weak]&nbsp;<wbr>[-X fail]&nbsp;<wbr>[-Y Xtrategy]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-x xvalue]&nbsp;<wbr>[-y yvalue]&nbsp;<wbr>[-z zvalue] </p>
 <h2>dieharder OPTIONS</h2>
 <dl>
@@ -118,7 +118,7 @@ description: "dieharder – A testing and benchmarking tool for random number ge
 <p> Finally, the dieharder binary is remarkably autodocumenting even if the man page is not available. All users should try the following commands to see what they do: </p>
 <p>dieharder -h </p>
 <p> (prints the command synopsis like the one above). </p>
-<p>dieharder -a -h<br />
+<p>dieharder -a -h<br/>
 dieharder -d 6 -h </p>
 <p> (prints the test descriptions only for -a(ll) tests or for the specific test indicated). </p>
 <p>dieharder -l </p>
@@ -182,14 +182,14 @@ dieharder -d 6 -h </p>
 <p> To use it with an ascii formatted file: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>dieharder -g 202 -f testrands.txt -a </p>
 <p> (testrands.txt should consist of a header such as: </p>
-<p>&nbsp;<wbr>#==================================================================<br />
-&nbsp;<wbr>#&nbsp;<wbr>generator mt19937_1999&nbsp;<wbr>&nbsp;<wbr>seed&nbsp;<wbr>=&nbsp;<wbr>1274511046<br />
-&nbsp;<wbr>#==================================================================<br />
-&nbsp;<wbr>type: d<br />
-&nbsp;<wbr>count: 100000<br />
-&nbsp;<wbr>numbit: 32<br />
-&nbsp;<wbr>3129711816<br />
-85411969<br />
+<p>&nbsp;<wbr>#==================================================================<br/>
+&nbsp;<wbr>#&nbsp;<wbr>generator mt19937_1999&nbsp;<wbr>&nbsp;<wbr>seed&nbsp;<wbr>=&nbsp;<wbr>1274511046<br/>
+&nbsp;<wbr>#==================================================================<br/>
+&nbsp;<wbr>type: d<br/>
+&nbsp;<wbr>count: 100000<br/>
+&nbsp;<wbr>numbit: 32<br/>
+&nbsp;<wbr>3129711816<br/>
+85411969<br/>
 &nbsp;<wbr>2545911541 </p>
 <p> etc.). </p>
 <p> To use it with a binary file </p>

@@ -9,10 +9,10 @@ description: "gsexec – Switch user before executing external programs"
 
 <p><code>gsexec </code> &#8211; Switch user before executing external programs </p>
 <h2>Synopsis</h2>
-<p>&nbsp;<wbr> <code>gsexec</code> [-V]<br />
+<p>&nbsp;<wbr> <code>gsexec</code> [-V]<br/>
 &nbsp;<wbr></p>
 <h2>Summary</h2>
-<p>gsexec is used by the Apache HTTP Server to switch to another user before executing CGI programs. In order to achieve this, it must run as root. Since the HTTP daemon normally doesn&#8217;t run as root, the gsexec executable needs the setuid bit set and must be owned by root. It should never be writable for any other person than root.<br />
+<p>gsexec is used by the Apache HTTP Server to switch to another user before executing CGI programs. In order to achieve this, it must run as root. Since the HTTP daemon normally doesn&#8217;t run as root, the gsexec executable needs the setuid bit set and must be owned by root. It should never be writable for any other person than root.<br/>
 &nbsp;<wbr> gsexec is based on Apache&#8217;s suexec, and its behaviour is controlled with the Apache configuration file directives <code>GridSiteExecMethod</code> and <code>GridSiteUserGroup</code> added to Apache by <code><a href="/docs/linux/man/8-mod_gridsite/">mod_gridsite</a>(8)</code> Four execution methods are supported: nosetuid, suexec, X509DN and directory, and these may be set on a per-directory basis within the Apache configuration file.</p>
 <h2>Nosetuid Method</h2>
 <p>This is the default behaviour, but can also be produced by giving <code>GridSiteExecMethod nosetuid</code> </p>
@@ -31,7 +31,7 @@ description: "gsexec – Switch user before executing external programs"
 <p>&nbsp;<wbr></p>
 <dl>
 <dt>-V</dt>
-<dd>If you are root, this option displays the compile options of gsexec. For security reasons all configuration options are changeable only at compile time.<br />
+<dd>If you are root, this option displays the compile options of gsexec. For security reasons all configuration options are changeable only at compile time.<br/>
 &nbsp;<wbr></dd></dl>
 <h2>More Information</h2>
 <p>For further information about the concepts and the security model of the original Apache suexec please refer to the suexec documentation: </p>

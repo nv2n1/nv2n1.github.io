@@ -10,7 +10,7 @@ description: "zcmp, zdiff – compare compressed files"
 
 <p> zcmp, zdiff &#8211; compare compressed files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>zcmp</code> [ cmp_options ] file1 [ file2 ]<br />
+<p> <code>zcmp</code> [ cmp_options ] file1 [ file2 ]<br/>
  <code>zdiff</code> [ diff_options ] file1 [ file2 ]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Zcmp</i> and <i>zdiff</i> are used to invoke the <i>cmp</i> or the <i>diff</i> program on files compressed via <i>gzip</i>. All options specified are passed directly to <i>cmp</i> or <i>diff</i>. If only <i>file1</i> is specified, it is compared to the uncompressed contents of <i>file1</i>.gz. If two files are specified, their contents (uncompressed if necessary) are fed to <i>cmp</i> or <i>diff</i>. The input files are not modified. The exit status from <i>cmp</i> or <i>diff</i> is preserved.</p>

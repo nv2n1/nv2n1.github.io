@@ -12,19 +12,19 @@ description: "lvmdump — create lvm2 information dumps for diagnostic purposes"
 <p><code>lvmdump</code> [<code>-a</code>] [<code>-c</code>] [<code>-d</code> <i>directory</i>] [<code>-h</code>] [<code>-l</code>] [<code>-m</code>] [<code>-p</code>] [<code>-s</code>] [<code>-u</code>]</p>
 <h2>Description</h2>
 <p>lvmdump is a tool to dump various information concerning LVM2. By default, it creates a tarball suitable for submission along with a problem report. </p>
-<p> The content of the tarball is as follows:<br />
- &#8211; dmsetup info<br />
- &#8211; table of currently running processes<br />
- &#8211; recent entries from /var/log/messages (containing system messages)<br />
- &#8211; complete lvm configuration and cache (content of /etc/lvm)<br />
- &#8211; list of device nodes present under /dev<br />
- &#8211; list of files present /sys/block<br />
- &#8211; list of files present /sys/devices/virtual/block<br />
- &#8211; if enabled with -m, metadata dump will be also included<br />
- &#8211; if enabled with -a, debug output of vgscan, pvscan and list of all available volume groups, physical volumes and logical volumes will be included<br />
- &#8211; if enabled with -l, lvmetad state if running<br />
- &#8211; if enabled with -p, lvmpolld state if running<br />
- &#8211; if enabled with -s, system info and context<br />
+<p> The content of the tarball is as follows:<br/>
+ &#8211; dmsetup info<br/>
+ &#8211; table of currently running processes<br/>
+ &#8211; recent entries from /var/log/messages (containing system messages)<br/>
+ &#8211; complete lvm configuration and cache (content of /etc/lvm)<br/>
+ &#8211; list of device nodes present under /dev<br/>
+ &#8211; list of files present /sys/block<br/>
+ &#8211; list of files present /sys/devices/virtual/block<br/>
+ &#8211; if enabled with -m, metadata dump will be also included<br/>
+ &#8211; if enabled with -a, debug output of vgscan, pvscan and list of all available volume groups, physical volumes and logical volumes will be included<br/>
+ &#8211; if enabled with -l, lvmetad state if running<br/>
+ &#8211; if enabled with -p, lvmpolld state if running<br/>
+ &#8211; if enabled with -s, system info and context<br/>
  &#8211; if enabled with -u, udev info and context</p>
 <h2>Options</h2>
 <dl>

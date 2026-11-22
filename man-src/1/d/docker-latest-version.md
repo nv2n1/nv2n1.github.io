@@ -14,9 +14,9 @@ description: "docker-version – Show the Docker version information."
 <h2>DESCRIPTION</h2>
 <p> This command displays version information for both the Docker client and daemon. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>Print usage statement </p>
-<p> <code>-f</code>, <code>&#8211;format</code>=&quot;&quot;<br />
+<p> <code>-f</code>, <code>&#8211;format</code>=&quot;&quot;<br/>
 &nbsp;<wbr>Format the output using the given go template. </p>
 <h2>EXAMPLES</h2>
 <h2>Display Docker version information</h2>

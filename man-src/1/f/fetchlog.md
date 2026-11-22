@@ -93,13 +93,13 @@ description: "fetchlog – fetch and convert new messages of a logfile"
 <p> Alexander Haderer, LoeScap Technology GmbH, Berlin &#8211; Germany </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-tail/">tail</a></i>(1), <i><a href="/docs/linux/man/1-cat/">cat</a></i>(1), <i><a href="/docs/linux/man/1-head/">head</a></i>(1), <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1), <i><a href="/docs/linux/man/7-re_format/">re_format</a></i>(7), <i>syslogd</i>(8), <i>newsyslog</i>(8) </p>
-<p> NET-SNMP &#8211; Various tools relating to the Simple Network Management Protocol SNMP (NET-SNMP: formerly known as UCD-SNMP)<br />
+<p> NET-SNMP &#8211; Various tools relating to the Simple Network Management Protocol SNMP (NET-SNMP: formerly known as UCD-SNMP)<br/>
  <a rel="nofollow" href="http://www.net-snmp.org">http://www.net-snmp.org</a> </p>
-<p> Nagios &#8211; A Network monitoring system<br />
+<p> Nagios &#8211; A Network monitoring system<br/>
  <a rel="nofollow" href="http://www.nagios.org">http://www.nagios.org</a> </p>
-<p> Nagios Plugins &#8211; Plugins for Nagios<br />
+<p> Nagios Plugins &#8211; Plugins for Nagios<br/>
  <a rel="nofollow" href="http://nagiosplug.sourceforge.net">http://nagiosplug.sourceforge.net</a> </p>
-<p> fetchlog homepage &#8211; download, support and bugtracking<br />
+<p> fetchlog homepage &#8211; download, support and bugtracking<br/>
  <a rel="nofollow" href="http://fetchlog.sourceforge.net">http://fetchlog.sourceforge.net</a> </p>
 <h2>BUGS</h2>
 <p> Bookmarkfiles are not portable across plattforms or fetchlog versions. </p>

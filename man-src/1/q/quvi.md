@@ -30,7 +30,7 @@ description: "quvi – query video tool"
 <dt><code>&#8211;page-title</code>=<i>string</i></dt>
 <dd> Match parsed video page title to <i>string</i>.</dd>
 <dt><code>&#8211;video-id</code>=<i>string</i></dt>
-<dd> Match parsed video <font SIZE="-1">ID</font> to <i>string</i>.</dd>
+<dd> Match parsed video ID to <i>string</i>.</dd>
 <dt><code>&#8211;file-length</code>=<i>length</i></dt>
 <dd> Match parsed video file length to <i>length</i>.</dd>
 <dt><code>&#8211;file-suffix</code>=<i>string</i></dt>
@@ -44,21 +44,21 @@ description: "quvi – query video tool"
 <dt><code>&#8211;agent</code>=<i>string</i></dt>
 <dd> Identify quvi as <i>string</i> to servers. Default is &#8220;Mozilla/5.0&#8221;.</dd>
 <dt><code>&#8211;proxy</code>=<i>host[:port]</i></dt>
-<dd> Use the specified <font SIZE="-1">HTTP</font> proxy. Note that quvi will use http_proxy environment setting if it is set.</dd>
+<dd> Use the specified HTTP proxy. Note that quvi will use http_proxy environment setting if it is set.</dd>
 <dt><code>&#8211;connect-timeout</code>=<i>seconds</i></dt>
 <dd> Maximum seconds allowed connection to server take. Default is 30.</dd>
 <dt><code>-f, &#8211;format</code>[=]<i>format_id</i></dt>
 <dd> Query video format, <i>format_id</i> depends on the host, see <code>&#8211;hosts</code> output.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>quvi <font SIZE="-1">URL</font></dt>
-<dd> Test <font SIZE="-1">URL</font>.</dd>
+<dt>quvi URL</dt>
+<dd> Test URL.</dd>
 <dt>quvi -a</dt>
 <dd> Run all built-in host tests.</dd>
 <dt>quvi -t youtube</dt>
 <dd> Match &#8216;youtube&#8217; string to built-in video page links and test it.</dd>
-<dt>quvi <font SIZE="-1">URL</font> -f best</dt>
-<dd> Query &#8216;best&#8217; of the video from the <font SIZE="-1">URL</font>.</dd></dl>
+<dt>quvi URL -f best</dt>
+<dd> Query &#8216;best&#8217; of the video from the URL.</dd></dl>
 <h2>BUGS</h2>
 <p> Sure to be some. Please report them. </p>
 <pre>
@@ -66,7 +66,7 @@ description: "quvi – query video tool"
 </pre>
 <h2>DEBUGGING</h2>
 <dl>
-<dt>quvi &#8211;debug <font SIZE="-1">URL</font></dt>
+<dt>quvi &#8211;debug URL</dt>
 <dd> Spew out libcurl verbose mode messages.</dd>
 <dt>$prefix/share/quvi/lua/README</dt>
 <dd>
@@ -84,7 +84,7 @@ agent = some_agent / 1.0 #--agent
                                         no -
                                         verify #--no - verify debug #--debug
 </code></pre>
-<p> Note that you can also define <font SIZE="-1">QUVI_HOME</font> and use it instead.</dl>
+<p> Note that you can also define QUVI_HOME and use it instead.</dl>
 <h2>EXIT STATUS</h2>
 <p> quvi exits with 0 on success and &gt;0 if an error occurred. </p>
 <pre>
@@ -108,7 +108,7 @@ agent = some_agent / 1.0 #--agent
 <dl>
 <dt>Project page:</dt>
 <dd> &lt;<a rel="nofollow" href="http://quvi.googlecode.com/">http://quvi.googlecode.com/</a>&gt;</dd>
-<dt><font SIZE="-1">FAQ:</font></dt>
+<dt>FAQ:</dt>
 <dd> &lt;<a rel="nofollow" href="http://code.google.com/p/quvi/wiki/FAQ">http://code.google.com/p/quvi/wiki/FAQ</a>&gt;</dd>
 <dt>Development code:</dt>
 <dd> % git clone <a href="git://repo.or.cz/quvi.git">git://repo.or.cz/quvi.git</a></dd></dl>

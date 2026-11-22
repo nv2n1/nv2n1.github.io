@@ -41,7 +41,7 @@ robohdrs -s -p myproj -l script test.tcl
 </pre>
 <p> Insert headers to a Tcl/Tk script. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2003 Frans Slothouber and Petteri Kettunen and Jacco van Weert.<br />
+<p> Copyright &#169; 2003 Frans Slothouber and Petteri Kettunen and Jacco van Weert.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-robodoc/">robodoc</a>(1)</code> </p>

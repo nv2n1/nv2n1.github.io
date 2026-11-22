@@ -10,7 +10,7 @@ description: "sgbtf2.f –"
 <p>sgbtf2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgbtf2</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br />
+<p>subroutine <code>sgbtf2</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br/>
  <i></i><code>SGBTF2</code> computes the LU factorization of a general band matrix using the unblocked version of the algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgbtf2 (integerM, integerN, integerKL, integerKU, real, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, integerINFO)</h3>

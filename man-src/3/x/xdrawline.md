@@ -47,7 +47,7 @@ description: "XDrawLine, XDrawLines, XDrawSegments, XSegment – draw lines, pol
 <p> <code>XDrawLine</code>, <code>XDrawLines</code>, and <code>XDrawSegments</code> can generate <code>BadDrawable</code>, <code>BadGC</code>, and <code>BadMatch</code> errors. <code>XDrawLines</code> can also generate a <code>BadValue</code> error.</p>
 <h2>Structures</h2>
 <p>The <code>XSegment</code> structure contains: </p>
-<p> typedef struct {<br />
+<p> typedef struct {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short x1, y1, x2, y2; } XSegment; </p>
 <p> All x and y members are signed integers. The width and height members are 16-bit unsigned integers. You should be careful not to generate coordinates and sizes out of the 16-bit ranges, because the protocol only has 16-bit fields for these values.</p>
 <h2>Diagnostics</h2>
@@ -63,5 +63,5 @@ description: "XDrawLine, XDrawLines, XDrawSegments, XSegment – draw lines, pol
 <dt><code>BadValue</code></dt>
 <dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xdrawarc/">XDrawArc</a>(3), <a href="/docs/linux/man/3-xdrawpoint/">XDrawPoint</a>(3), <a href="/docs/linux/man/3-xdrawrectangle/">XDrawRectangle</a>(3)<br />
+<p><a href="/docs/linux/man/3-xdrawarc/">XDrawArc</a>(3), <a href="/docs/linux/man/3-xdrawpoint/">XDrawPoint</a>(3), <a href="/docs/linux/man/3-xdrawrectangle/">XDrawRectangle</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

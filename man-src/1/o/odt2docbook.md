@@ -395,7 +395,7 @@ Default server is 'localhost'.
 <dl>
 <dt>
 </dt><dd> &bull; Width</dd></dl>
-<p> <font SIZE="+1"> <code>BMP EXPORT FILTER OPTIONS</code></p>
+<p>  <code>BMP EXPORT FILTER OPTIONS</code></p>
 <dl>
 <dl>
 <dt>
@@ -404,7 +404,7 @@ Default server is 'localhost'.
 <dt>
 </dt><dd> &bull; RLEEncoding</dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>JPEG EXPORT FILTER OPTIONS</code></p>
+<p>  <code>JPEG EXPORT FILTER OPTIONS</code></p>
 <dl>
 <dl>
 <dt>
@@ -413,13 +413,13 @@ Default server is 'localhost'.
 <dt>
 </dt><dd> &bull; Quality</dd></dl>
 </dl>
-<p> </font><font SIZE="+3"> <code>PBM/PGM/PPM EXPORT FILTER OPTIONS</code></p>
+<p>  <code>PBM/PGM/PPM EXPORT FILTER OPTIONS</code></p>
 <dl>
 <dl>
 <dt>
 </dt><dd> &bull; Encoding</dd></dl>
 </dl>
-<p> </font><font SIZE="+4"> <code>PNG EXPORT FILTER OPTIONS</code></p>
+<p>  <code>PNG EXPORT FILTER OPTIONS</code></p>
 <dl>
 <dl>
 <dt>
@@ -428,7 +428,7 @@ Default server is 'localhost'.
 <dt>
 </dt><dd> &bull; InterlacedMode</dd></dl>
 </dl>
-<p> </font><font SIZE="+5"> <code>GIF EXPORT FILTER OPTIONS</code></p>
+<p>  <code>GIF EXPORT FILTER OPTIONS</code></p>
 <dl>
 <dl>
 <dt>
@@ -437,7 +437,7 @@ Default server is 'localhost'.
 <dt>
 </dt><dd> &bull; Transparency</dd></dl>
 </dl>
-<p> </font><font SIZE="+6"> <code>EPS EXPORT FILTER OPTIONS</code></p>
+<p>  <code>EPS EXPORT FILTER OPTIONS</code></p>
 <dl>
 <dl>
 <dt>
@@ -452,7 +452,7 @@ Default server is 'localhost'.
 <dt>
 </dt><dd> &bull; Version</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h2>EXAMPLES</h2>
 <p> You can use unoconv in standalone mode, this means that in absence of an LibreOffice listener, it will starts its own: </p>
 <dl>
@@ -538,7 +538,7 @@ Code: 16 (ERRCODE_IO_CANTWRITE)
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Please see the TODO file for known bugs and future plans. </p>
 </dl>
 <h2>REFERENCES</h2>
@@ -570,7 +570,7 @@ Code: 16 (ERRCODE_IO_CANTWRITE)
 </dt><dd>
 <p> m[blue]<code><a rel="nofollow" href="http://wiki.services.openoffice.org/wiki/Framework/Article/Filter/FilterList_OOo_3_0">http://wiki.services.openoffice.org/wiki/Framework/Article/Filter/FilterList_OOo_3_0</a></code>m[]</dd></dl>
 <h2>AUTHOR</h2>
-<p> Written by Dag Wieers, &lt;m[blue]<code>dag [at] wieers.com</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
+<p> Written by Dag Wieers, &lt;m[blue]<code>dag [at] wieers.com</code>m[][1]&gt;</p>
 <h2>RESOURCES</h2>
 <p> Main web site: m[blue]<code><a rel="nofollow" href="http://dag.wieers.com/home-made/unoconv/">http://dag.wieers.com/home-made/unoconv/</a></code>m[]</p>
 <h2>COPYING</h2>

@@ -10,7 +10,7 @@ description: "XkbChangeMap – Update only partial components of a keyboard desc
 <p>XkbChangeMap &#8211; Update only partial components of a keyboard description, modify the appropriate fields in the server and map components of a local copy of the keyboard description </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbChangeMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbMapChangesPtr </code><i>changes</i><code>);</code><br />
+<dt> <code>Bool XkbChangeMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbMapChangesPtr </code><i>changes</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -18,10 +18,10 @@ description: "ql/time/period.hpp – period- and frequency-related classes and e
 <h3>Functions</h3>
 <p>std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const long_period_holder &amp;) </p>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const short_period_holder &amp;) </p>
-<p> detail::long_period_holder <code>long_period</code> (const Period &amp;)<br />
- <i>output periods in long format (e.g. &#8216;2 weeks&#8217;) </i><br />
- detail::short_period_holder <code>short_period</code> (const Period &amp;)<br />
- <i>output periods in short format (e.g. &#8216;2w&#8217;) </i><br />
+<p> detail::long_period_holder <code>long_period</code> (const Period &amp;)<br/>
+ <i>output periods in long format (e.g. &#8216;2 weeks&#8217;) </i><br/>
+ detail::short_period_holder <code>short_period</code> (const Period &amp;)<br/>
+ <i>output periods in short format (e.g. &#8216;2w&#8217;) </i><br/>
  template&lt;typename T &gt; Period <code>operator*</code> (T n, TimeUnit units) </p>
 <p> template&lt;typename T &gt; Period <code>operator*</code> (TimeUnit units, T n) </p>
 <p> Period <code>operator-</code> (const Period &amp;p) </p>

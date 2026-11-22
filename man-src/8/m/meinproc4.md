@@ -83,7 +83,7 @@ The trick is to look at the first error, fix that error, save the file, and run 
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/7-kdeoptions/">kdeoptions</a></i>(7), <i><a href="/docs/linux/man/7-qtoptions/">qtoptions</a></i>(7)</p>
 <h2>Bugs</h2>
-<p>There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[]<font SIZE="-2">[1]</font> to report them.</p>
+<p>There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[][1] to report them.</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

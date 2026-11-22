@@ -14,9 +14,9 @@ description: "rpmbuild – Build RPM Package(s)"
 <h3>Miscellaneous:</h3>
 <p><code>rpmbuild</code> <code>&#8211;showrc</code></p>
 <h3>rpmbuild-options</h3>
-<p>&nbsp;<wbr>[<code>&#8211;buildroot&nbsp;<wbr></code><i>DIRECTORY</i>]&nbsp;<wbr>[<code>&#8211;clean</code>]&nbsp;<wbr>[<code>&#8211;nobuild</code>]<br />
-&nbsp;<wbr>[<code>&#8211;rmsource</code>]&nbsp;<wbr>[<code>&#8211;rmspec</code>]&nbsp;<wbr>[<code>&#8211;short-circuit</code>]<br />
-&nbsp;<wbr>[<code>&#8211;noclean</code>]&nbsp;<wbr>[<code>&#8211;nocheck</code>]<br />
+<p>&nbsp;<wbr>[<code>&#8211;buildroot&nbsp;<wbr></code><i>DIRECTORY</i>]&nbsp;<wbr>[<code>&#8211;clean</code>]&nbsp;<wbr>[<code>&#8211;nobuild</code>]<br/>
+&nbsp;<wbr>[<code>&#8211;rmsource</code>]&nbsp;<wbr>[<code>&#8211;rmspec</code>]&nbsp;<wbr>[<code>&#8211;short-circuit</code>]<br/>
+&nbsp;<wbr>[<code>&#8211;noclean</code>]&nbsp;<wbr>[<code>&#8211;nocheck</code>]<br/>
 &nbsp;<wbr>[<code>&#8211;target&nbsp;<wbr></code><i>PLATFORM</i>] </p>
 <h2>Description</h2>
 <p><code>rpmbuild</code> is used to build both binary and source software packages. A <code>package</code> consists of an archive of files and meta-data used to install and erase the archive files. The meta-data includes helper scripts, file attributes, and descriptive information about the package. <code>Packages</code> come in two varieties: binary packages, used to encapsulate software to be installed, and source packages, containing the source code and recipe necessary to produce binary packages. </p>

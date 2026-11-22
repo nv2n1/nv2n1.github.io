@@ -21,7 +21,7 @@ description: "dh_installinfo – install info files"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-A</code>, <code>&#8211;all</code></dt>
-<dd> Install all files specified by command line parameters in <font SIZE="-1">ALL</font> packages acted on.</dd>
+<dd> Install all files specified by command line parameters in ALL packages acted on.</dd>
 <dt><code>&#8211;sourcedir=</code><i>dir</i></dt>
 <dd> Look in the specified directory for files to be installed. This option requires compat 11 or later (it is silently ignored in compat 10 or earlier). </dd>
 <p> Note that this is not the same as the <code>&#8211;sourcedirectory</code> option used by the <code>dh_auto_</code><i>*</i> commands. You rarely need to use this option, since <code>dh_installinfo</code> automatically looks for files in <i>debian/tmp</i> in debhelper compatibility level 11 and above.</p>

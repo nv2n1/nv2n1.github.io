@@ -13,7 +13,7 @@ description: "tilestache-seed – seed a single layer in your TileStache configu
 <p> <code>tilestache-seed</code> [<i>options</i>]<i> zoom</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>tilestache-seed</code> command. </p>
-<p> <code>tilestache-seed</code> seeds a single layer in your TileStache configuration. No images are returned, but TileStache ends up with a pre-filled cache. Bounding box is given as a pair of lat/lon coordinates, e.g. &quot;37.788 -122.349 37.833 -122.246&quot;. Output is a list of tile paths as they are created.<br />
+<p> <code>tilestache-seed</code> seeds a single layer in your TileStache configuration. No images are returned, but TileStache ends up with a pre-filled cache. Bounding box is given as a pair of lat/lon coordinates, e.g. &quot;37.788 -122.349 37.833 -122.246&quot;. Output is a list of tile paths as they are created.<br/>
  Configuration, BBox, and Layer options are required.</p>
 <h2>REQUIRED OPTIONS</h2>
 <dl>
@@ -38,7 +38,7 @@ description: "tilestache-seed – seed a single layer in your TileStache configu
 <dt><code>-i, &#8211;include-path</code></dt>
 <dd> Add the following colon-separated list of paths to Python&#8217;s include path (aka sys.path).</dd>
 <dt><code>-d, &#8211;output-directory</code></dt>
-<dd> Optional output directory for tiles, to override configured cache with the equivalent of:<br />
+<dd> Optional output directory for tiles, to override configured cache with the equivalent of:<br/>
 &nbsp;<wbr>{&quot;name&quot;:&nbsp;<wbr>&quot;Disk&quot;,&nbsp;<wbr>&quot;path&quot;:&nbsp;<wbr>&lt;output directory&gt;,&nbsp;<wbr>&quot;dirs&quot;:&nbsp;<wbr>&quot;portable&quot;,&nbsp;<wbr>&quot;gzip&quot;:&nbsp;<wbr>[]}. </dd>
 <p> More information in <a rel="nofollow" href="http://tilestache.org/doc/#caches.">http://tilestache.org/doc/#caches.</a></p>
 <dt><code>&#8211;to-mbtiles</code></dt>

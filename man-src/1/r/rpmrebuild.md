@@ -79,52 +79,52 @@ description: "rpmrebuild – a tool to build an rpm package from an installed pa
 <p> rpmrebuild use may be extended with plugins. Plugins are searched in <code>/usr/lib/rpmrebuild/plugins</code> and then in $PATH</p>
 <dl>
 <dt><code>&#8211;change-files</code>=&lt;<i>command</i>&gt;</dt>
-<dd> Invoke plugin which change package&#8217;s files. Note, that these files are copied before to the temporary location, so installed package&#8217;s files not changed.<br />
+<dd> Invoke plugin which change package&#8217;s files. Note, that these files are copied before to the temporary location, so installed package&#8217;s files not changed.<br/>
  Can&#8217;t be used with <code>&#8211;spec-only</code></dd></dl>
-<p> <code>&#8211;change-spec-whole</code>=&lt;<i>command</i>&gt;<br />
+<p> <code>&#8211;change-spec-whole</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-whole</p>
 <dl>
 <dt>
 </dt><dd> Invoke plugin or editor to change specfile.</dd></dl>
-<p> &#8211;change-spec-preamble</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-preamble</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-preamble </p>
-<p> &#8211;change-spec-conflicts</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-conflicts</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-conflicts </p>
-<p> &#8211;change-spec-obsoletes</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-obsoletes</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-obsoletes </p>
-<p> &#8211;change-spec-provides</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-provides</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-provides </p>
-<p> &#8211;change-spec-requires</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-requires</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-requires </p>
-<p> &#8211;change-spec-suggests</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-suggests</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-suggests </p>
-<p> &#8211;change-spec-enhances</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-enhances</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-enhances </p>
-<p> &#8211;change-spec-description</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-description</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-description </p>
-<p> &#8211;change-spec-files</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-files</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-files </p>
-<p> &#8211;change-spec-triggers</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-triggers</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-triggers </p>
-<p> &#8211;change-spec-pre</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-pre</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-pre </p>
-<p> &#8211;change-spec-post</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-post</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-post </p>
-<p> &#8211;change-spec-preun</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-preun</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-preun </p>
-<p> &#8211;change-spec-postun</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-postun</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-postun </p>
-<p> &#8211;change-spec-pretrans</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-pretrans</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-postrans </p>
-<p> &#8211;change-spec-postrans</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-postrans</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-postrans </p>
-<p> &#8211;change-spec-verifyscript</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-verifyscript</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-verifyscript </p>
-<p> &#8211;change-spec-changelog</code>=&lt;<i>command</i>&gt;<br />
+<p> &#8211;change-spec-changelog</code>=&lt;<i>command</i>&gt;<br/>
  <code>&#8211;edit-changelog </p>
 <dl>
 <dt>
-</dt><dd> Invoke plugin or editor to change preamble, conflicts, obsoletes, provides, requires, description, files, triggers, preinstall, postinstall, preuninstall, postuninstall, verifyscript or changelog.<br />
+</dt><dd> Invoke plugin or editor to change preamble, conflicts, obsoletes, provides, requires, description, files, triggers, preinstall, postinstall, preuninstall, postuninstall, verifyscript or changelog.<br/>
  None of these options can be specified after &#8211;change-spec-whole</code> or <code>&#8211;edit-whole</code>. </dd>
 </dl>
 <h2>INCLUDE FILES</h2>
@@ -157,7 +157,7 @@ description: "rpmrebuild – a tool to build an rpm package from an installed pa
 <p> Then include file should be written like:</p>
 <dl>
 <dt>
-</dt><dd> change-files pgm1 a b c<br />
+</dt><dd> change-files pgm1 a b c<br/>
  change-spec-pre pgm2 bb
 </dd></dl>
 <h2>FILES</h2>
@@ -200,7 +200,7 @@ description: "rpmrebuild – a tool to build an rpm package from an installed pa
 <p> batch change of version tag </p>
 <p> <code>rpmrebuild &#8211;change-spec-preamble=&#8217;sed -e &quot;s/^Version:.*/Version: YourVersion/&quot;&#8217; YourPackage</code> </p>
 <h2>AUTHORS</h2>
-<p> Eric Gerbier &lt;gerbier [at] users.sourceforge.net&gt;<br />
+<p> Eric Gerbier &lt;gerbier [at] users.sourceforge.net&gt;<br/>
  Valery Reznic &lt;valery_reznic [at] users.sourceforge.net&gt;</p>
 <dl>
 <dt>See &lt;URL:<a rel="nofollow" href="http://rpmrebuild.sourceforge.net/">http://rpmrebuild.sourceforge.net/</a>&gt;.</dt>
@@ -210,15 +210,15 @@ description: "rpmrebuild – a tool to build an rpm package from an installed pa
 <dl>
 <dt>rpmrebuild can not reproduce exactly a package, so</dt>
 <dd>
- &#8211; md5 checksum will not match original ones.<br />
+ &#8211; md5 checksum will not match original ones.<br/>
  &#8211; gpg or pgp signatures are lost</dd>
 <dt>packages which contains file with globbing characters (* .. ? ) will not build</dt>
 <dd>
 </dd></dl>
 <h2>COPYRIGHT</h2>
-<p> rpmrebuild is copyright (C) 2002 by Eric Gerbier.<br />
- this program is distributed under GNU General Public License<br />
- It is provided &quot;as is&quot;, without any express or implied warranties.<br />
+<p> rpmrebuild is copyright (C) 2002 by Eric Gerbier.<br/>
+ this program is distributed under GNU General Public License<br/>
+ It is provided &quot;as is&quot;, without any express or implied warranties.<br/>
  See the file COPYING for details. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-rpm/">rpm</a>(8), <a href="/docs/linux/man/8-rpmbuild/">rpmbuild</a>(8), <a href="/docs/linux/man/1-rpmrebuild_plugins/">rpmrebuild_plugins</a>(1), &#8216;man -k rrp&#8217; for plugins specific manpages. </p>

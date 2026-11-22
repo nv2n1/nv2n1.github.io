@@ -11,7 +11,7 @@ description: "dgbbrd.f –"
 <p> dgbbrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgbbrd</code> (VECT, M, N, NCC, KL, KU, AB, LDAB, D, E, Q, LDQ, PT, LDPT, C, LDC, WORK, INFO)<br />
+<p> subroutine <code>dgbbrd</code> (VECT, M, N, NCC, KL, KU, AB, LDAB, D, E, Q, LDQ, PT, LDPT, C, LDC, WORK, INFO)<br/>
  <i></i><code>DGBBRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgbbrd (characterVECT, integerM, integerN, integerNCC, integerKL, integerKU, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( ldq, * )Q, integerLDQ, double precision, dimension( ldpt, * )PT, integerLDPT, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( * )WORK, integerINFO)</h3>
@@ -109,8 +109,8 @@ LDQ &gt;= 1 otherwise.
           If VECT = 'N' or 'Q', the array PT is not referenced.
 </pre>
 <p> <i>LDPT</i> </p>
-<p>LDPT is INTEGER<br />
-        The leading dimension of the array PT.LDPT &gt;= max(1, N) if VECT = &#8216;P&#8217; or &#8216;B&#8217;;<br />
+<p>LDPT is INTEGER<br/>
+        The leading dimension of the array PT.LDPT &gt;= max(1, N) if VECT = &#8216;P&#8217; or &#8216;B&#8217;;<br/>
 LDPT &gt;= 1 otherwise.</p>
 <p> <i>C</i> </p>
 <pre>

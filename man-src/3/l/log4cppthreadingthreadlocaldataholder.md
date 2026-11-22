@@ -30,28 +30,28 @@ description: "log4cpp::threading::ThreadLocalDataHolder< T > –"
 <p> void <code>reset</code> (T *p=NULL) </p>
 <p> <code>ThreadLocalDataHolder</code> () </p>
 <p> <code>~ThreadLocalDataHolder</code> () </p>
-<p> T * <code>get</code> () const<br />
- <i>Obtains the Object held for the current thread. </i><br />
- T * <code>operator-&gt;</code> () const<br />
- <i>Obtains the Object held for the current thread. </i><br />
- T &amp; <code>operator*</code> () const<br />
- <i>Obtains the Object held for the current thread. </i><br />
- T * <code>release</code> ()<br />
- <i>Releases the Object held for the current thread. </i><br />
- void <code>reset</code> (T *p=NULL)<br />
- <i>Sets a new Object to be held for the current thread. </i><br />
+<p> T * <code>get</code> () const<br/>
+ <i>Obtains the Object held for the current thread. </i><br/>
+ T * <code>operator-&gt;</code> () const<br/>
+ <i>Obtains the Object held for the current thread. </i><br/>
+ T &amp; <code>operator*</code> () const<br/>
+ <i>Obtains the Object held for the current thread. </i><br/>
+ T * <code>release</code> ()<br/>
+ <i>Releases the Object held for the current thread. </i><br/>
+ void <code>reset</code> (T *p=NULL)<br/>
+ <i>Sets a new Object to be held for the current thread. </i><br/>
  <code>ThreadLocalDataHolder</code> () </p>
 <p> <code>~ThreadLocalDataHolder</code> () </p>
-<p> T * <code>get</code> () const<br />
- <i>Obtains the Object held for the current thread. </i><br />
- T * <code>operator-&gt;</code> () const<br />
- <i>Obtains the Object held for the current thread. </i><br />
- T &amp; <code>operator*</code> () const<br />
- <i>Obtains the Object held for the current thread. </i><br />
- T * <code>release</code> ()<br />
- <i>Releases the Object held for the current thread. </i><br />
- void <code>reset</code> (T *p=NULL)<br />
- <i>Sets a new Object to be held for the current thread. </i><br />
+<p> T * <code>get</code> () const<br/>
+ <i>Obtains the Object held for the current thread. </i><br/>
+ T * <code>operator-&gt;</code> () const<br/>
+ <i>Obtains the Object held for the current thread. </i><br/>
+ T &amp; <code>operator*</code> () const<br/>
+ <i>Obtains the Object held for the current thread. </i><br/>
+ T * <code>release</code> ()<br/>
+ <i>Releases the Object held for the current thread. </i><br/>
+ void <code>reset</code> (T *p=NULL)<br/>
+ <i>Sets a new Object to be held for the current thread. </i><br/>
  <code>ThreadLocalDataHolder</code> () </p>
 <p> <code>~ThreadLocalDataHolder</code> () </p>
 <p> T * <code>get</code> () const </p>

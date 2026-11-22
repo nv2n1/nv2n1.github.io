@@ -13,9 +13,9 @@ description: "nerr_pass_ctx"
 </code></pre>
 <pre>nerr_pass_ctx()</pre>
 <h2>Arguments</h2>
-<p>with the macro, the function name, file and lineno are<br />
- automagically recorded. Just pass the error and<br />
- a printf format string giving more information about where<br />
+<p>with the macro, the function name, file and lineno are<br/>
+ automagically recorded. Just pass the error and<br/>
+ a printf format string giving more information about where<br/>
  the error is occuring.</p>
 <h2>Description</h2>
 <p>this function is used to pass an error up a level in the call chain (ie, if the error isn&#8217;t handled at the current level). This allows us to track the traceback of the error. This version includes context information about lower errors </p>

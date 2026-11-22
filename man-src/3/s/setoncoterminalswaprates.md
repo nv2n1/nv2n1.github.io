@@ -13,7 +13,7 @@ description: "QuantLib::CoterminalSwapCurveState – Curve state for coterminal-
 <p> Inherits <code>QuantLib::CurveState</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>CoterminalSwapCurveState</code> (const std::vector&lt; <code>Time</code> &gt; &amp;rateTimes) </p>
-<p> std::auto_ptr&lt; <code>CurveState</code> &gt; <code>clone</code> () const<br />
+<p> std::auto_ptr&lt; <code>CurveState</code> &gt; <code>clone</code> () const<br/>
  <code>Modifiers</code> </p>
 <pre><code>void setOnCoterminalSwapRates (const std::vector&lt; Rate &gt; &amp;swapRates, Size firstValidIndex=0)</code></pre>
 <p> <code>Inspectors</code> </p>

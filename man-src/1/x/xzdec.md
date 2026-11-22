@@ -10,7 +10,7 @@ description: "xzdec, lzmadec – Small .xz and .lzma decompressors"
 
 <p> xzdec, lzmadec &#8211; Small .xz and .lzma decompressors</p>
 <h2>SYNOPSIS</h2>
-<p> <code>xzdec</code> [<i>option&#8230;</i>] [<i>file&#8230;</i>]<br />
+<p> <code>xzdec</code> [<i>option&#8230;</i>] [<i>file&#8230;</i>]<br/>
  <code>lzmadec</code> [<i>option&#8230;</i>] [<i>file&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>xzdec</code> is a liblzma-based decompression-only tool for <code>.xz</code> (and only <code>.xz</code>) files. <code>xzdec</code> is intended to work as a drop-in replacement for <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) in the most common situations where a script has been written to use <code>xz &#8211;decompress &#8211;stdout</code> (and possibly a few other commonly used options) to decompress <code>.xz</code> files. <code>lzmadec</code> is identical to <code>xzdec</code> except that <code>lzmadec</code> supports <code>.lzma</code> files instead of <code>.xz</code> files. </p>

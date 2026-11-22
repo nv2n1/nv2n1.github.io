@@ -10,18 +10,18 @@ description: "ql/math/interpolations/interpolation2d.hpp – abstract base class
 
 <p> ql/math/interpolations/interpolation2d.hpp &#8211; abstract base classes for 2-D interpolations </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/math/interpolations/extrapolation.hpp&gt;<br />
- #include &lt;ql/math/comparison.hpp&gt;<br />
- #include &lt;ql/math/matrix.hpp&gt;<br />
- #include &lt;ql/errors.hpp&gt;<br />
- #include &lt;ql/types.hpp&gt;<br />
+<p> #include &lt;ql/math/interpolations/extrapolation.hpp&gt;<br/>
+ #include &lt;ql/math/comparison.hpp&gt;<br/>
+ #include &lt;ql/math/matrix.hpp&gt;<br/>
+ #include &lt;ql/errors.hpp&gt;<br/>
+ #include &lt;ql/types.hpp&gt;<br/>
  #include &lt;vector&gt; </p>
 <h3>Classes</h3>
-<p> class <code>Interpolation2D</code><br />
- <i>base class for 2-D interpolations. </i><br />
- class <code>Impl</code><br />
- <i>abstract base class for 2-D interpolation implementations </i><br />
- class <code>templateImpl&lt; I1, I2, M &gt;</code><br />
+<p> class <code>Interpolation2D</code><br/>
+ <i>base class for 2-D interpolations. </i><br/>
+ class <code>Impl</code><br/>
+ <i>abstract base class for 2-D interpolation implementations </i><br/>
+ class <code>templateImpl&lt; I1, I2, M &gt;</code><br/>
  <i>basic template implementation </i></p>
 <h2>Detailed Description</h2>
 <p> abstract base classes for 2-D interpolations </p>

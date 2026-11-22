@@ -10,7 +10,7 @@ description: "zlalsa.f –"
 <p>zlalsa.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlalsa</code> (ICOMPQ, SMLSIZ, N, NRHS, B, LDB, BX, LDBX, U, LDU, VT, K, DIFL, DIFR, Z, POLES, GIVPTR, GIVCOL, LDGCOL, PERM, GIVNUM, C, S, RWORK, IWORK, INFO)<br />
+<p>subroutine <code>zlalsa</code> (ICOMPQ, SMLSIZ, N, NRHS, B, LDB, BX, LDBX, U, LDU, VT, K, DIFL, DIFR, Z, POLES, GIVPTR, GIVCOL, LDGCOL, PERM, GIVNUM, C, S, RWORK, IWORK, INFO)<br/>
  <i></i><code>ZLALSA</code> computes the SVD of the coefficient matrix in compact form. Used by sgelsd.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlalsa (integerICOMPQ, integerSMLSIZ, integerN, integerNRHS, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldbx, * )BX, integerLDBX, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldu, * )VT, integer, dimension( * )K, double precision, dimension( ldu, * )DIFL, double precision, dimension( ldu, * )DIFR, double precision, dimension( ldu, * )Z, double precision, dimension( ldu, * )POLES, integer, dimension( * )GIVPTR, integer, dimension( ldgcol, * )GIVCOL, integerLDGCOL, integer, dimension( ldgcol, * )PERM, double precision, dimension( ldu, * )GIVNUM, double precision, dimension( * )C, double precision, dimension( * )S, double precision, dimension( * )RWORK, integer, dimension( * )IWORK, integerINFO)</h3>

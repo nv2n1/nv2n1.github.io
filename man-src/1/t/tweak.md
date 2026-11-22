@@ -22,36 +22,36 @@ filename
 <p> <code>tweak</code> is a hex editor. It allows you to edit a file at very low level, letting you see the full and exact binary contents of the file. It can be useful for modifying binary files such as executables, editing disk or CD images, debugging programs that generate binary file formats incorrectly, and many other things. </p>
 <p> Unlike simpler hex editors, <code>tweak</code> possesses a fully functional insert mode. This is not useful when editing many of the types of file described above, but can be useful in other situations. Also, an insert mode makes it easy to use <code>tweak</code> to construct new files from scratch. </p>
 <p> When you open a file in <code>tweak</code>, you can expect to see the screen contents looking something like this: </p>
-<p>00000000 &amp; nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-7F 45 4C 46 01 01 01 00 &amp; nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-.ELF&#8230;.00000008 &amp; nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-00 00 00 00 00 00 00 00 &amp; nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&#8230;&#8230;..00000010 &amp; nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-02 00 03 00 01 00 00 00 &amp; nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&#8230;&#8230;..00000018 &amp; nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-D0 8E 04 08 34 00 00 00 &amp; nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&#8230; .4&#8230; 00000020 &amp; nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-2C EF 01 00 00 00 00 00 &amp; nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
+<p>00000000 &amp; nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+7F 45 4C 46 01 01 01 00 &amp; nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+.ELF&#8230;.00000008 &amp; nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+00 00 00 00 00 00 00 00 &amp; nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&#8230;&#8230;..00000010 &amp; nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+02 00 03 00 01 00 00 00 &amp; nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&#8230;&#8230;..00000018 &amp; nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+D0 8E 04 08 34 00 00 00 &amp; nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&#8230; .4&#8230; 00000020 &amp; nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+2C EF 01 00 00 00 00 00 &amp; nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
 , &#8230;&#8230;.</p>
 <p> The central column shows you the hexadecimal value of each byte in the file you are editing. The column on the right shows the ASCII interpretation of those bytes, where applicable. In the example above, the sequence <code>45 4C 46</code> on the first line translates into the ASCII upper-case letters `ELF&#8217;, but the subsequent sequence <code>01 01 01 00</code> does not have any printable ASCII representation and so the right-hand column simply prints dots. </p>
 <p> The column on the left shows the position within the file of the start of each row. </p>

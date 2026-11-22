@@ -10,8 +10,8 @@ description: "lseek64 – reposition 64-bit read/write file offset"
 
 <p> lseek64 &#8211; reposition 64-bit read/write file offset </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#define _LARGEFILE64_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
- <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#define _LARGEFILE64_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br/>
+ <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>off64_t lseek64(int </code><i>fd</i><code>, off64_t </code><i>offset</i><code>, int </code><i>whence</i><code>);</code></p>
 <h2>DESCRIPTION</h2>

@@ -10,23 +10,23 @@ description: "gprof – display call graph profile data"
 
 <p> gprof &#8211; display call graph profile data </p>
 <h2>SYNOPSIS</h2>
-<p> gprof [ -[abcDhilLrsTvwxyz] ] [ -[ACeEfFJnNOpPqQRStZ][<i>name</i>] ]<br />
-&nbsp;[&nbsp;-I&nbsp;<i>dirs</i>&nbsp;]&nbsp;[&nbsp;-d[<i>num</i>]&nbsp;]&nbsp;[&nbsp;-k&nbsp;<i>from/to</i>&nbsp;]<br />
-&nbsp;[&nbsp;-m&nbsp;<i>min-count</i>&nbsp;]&nbsp;[&nbsp;-R&nbsp;<i>map_file</i>&nbsp;]&nbsp;[&nbsp;-t&nbsp;<i>table-length</i>&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;[no-]annotated-source[=<i>name</i>]&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;[no-]exec-counts[=<i>name</i>]&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;[no-]flat-profile[=<i>name</i>]&nbsp;]&nbsp;[&nbsp;&#8211;[no-]graph[=<i>name</i>]&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;[no-]time=<i>name</i>]&nbsp;[&nbsp;&#8211;all-lines&nbsp;]&nbsp;[&nbsp;&#8211;brief&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;debug[=<i>level</i>]&nbsp;]&nbsp;[&nbsp;&#8211;function-ordering&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;file-ordering&nbsp;<i>map_file</i>&nbsp;]&nbsp;[&nbsp;&#8211;directory-path=<i>dirs</i>&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;display-unused-functions&nbsp;]&nbsp;[&nbsp;&#8211;file-format=<i>name</i>&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;file-info&nbsp;]&nbsp;[&nbsp;&#8211;help&nbsp;]&nbsp;[&nbsp;&#8211;line&nbsp;]&nbsp;[&nbsp;&#8211;inline-file-names&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;min-count=<i>n</i>&nbsp;]&nbsp;[&nbsp;&#8211;no-static&nbsp;]&nbsp;[&nbsp;&#8211;print-path&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;separate-files&nbsp;]&nbsp;[&nbsp;&#8211;static-call-graph&nbsp;]&nbsp;[&nbsp;&#8211;sum&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;table-length=<i>len</i>&nbsp;]&nbsp;[&nbsp;&#8211;traditional&nbsp;]&nbsp;[&nbsp;&#8211;version&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;width=<i>n</i>&nbsp;]&nbsp;[&nbsp;&#8211;ignore-non-functions&nbsp;]<br />
-&nbsp;[&nbsp;&#8211;demangle[=<i></i><font SIZE="-1"><i>STYLE</i></font><i></i>]&nbsp;]&nbsp;[&nbsp;&#8211;no-demangle&nbsp;]<br />
-&nbsp;[&#8211;external-symbol-table=name]<br />
+<p> gprof [ -[abcDhilLrsTvwxyz] ] [ -[ACeEfFJnNOpPqQRStZ][<i>name</i>] ]<br/>
+&nbsp;[&nbsp;-I&nbsp;<i>dirs</i>&nbsp;]&nbsp;[&nbsp;-d[<i>num</i>]&nbsp;]&nbsp;[&nbsp;-k&nbsp;<i>from/to</i>&nbsp;]<br/>
+&nbsp;[&nbsp;-m&nbsp;<i>min-count</i>&nbsp;]&nbsp;[&nbsp;-R&nbsp;<i>map_file</i>&nbsp;]&nbsp;[&nbsp;-t&nbsp;<i>table-length</i>&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;[no-]annotated-source[=<i>name</i>]&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;[no-]exec-counts[=<i>name</i>]&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;[no-]flat-profile[=<i>name</i>]&nbsp;]&nbsp;[&nbsp;&#8211;[no-]graph[=<i>name</i>]&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;[no-]time=<i>name</i>]&nbsp;[&nbsp;&#8211;all-lines&nbsp;]&nbsp;[&nbsp;&#8211;brief&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;debug[=<i>level</i>]&nbsp;]&nbsp;[&nbsp;&#8211;function-ordering&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;file-ordering&nbsp;<i>map_file</i>&nbsp;]&nbsp;[&nbsp;&#8211;directory-path=<i>dirs</i>&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;display-unused-functions&nbsp;]&nbsp;[&nbsp;&#8211;file-format=<i>name</i>&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;file-info&nbsp;]&nbsp;[&nbsp;&#8211;help&nbsp;]&nbsp;[&nbsp;&#8211;line&nbsp;]&nbsp;[&nbsp;&#8211;inline-file-names&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;min-count=<i>n</i>&nbsp;]&nbsp;[&nbsp;&#8211;no-static&nbsp;]&nbsp;[&nbsp;&#8211;print-path&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;separate-files&nbsp;]&nbsp;[&nbsp;&#8211;static-call-graph&nbsp;]&nbsp;[&nbsp;&#8211;sum&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;table-length=<i>len</i>&nbsp;]&nbsp;[&nbsp;&#8211;traditional&nbsp;]&nbsp;[&nbsp;&#8211;version&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;width=<i>n</i>&nbsp;]&nbsp;[&nbsp;&#8211;ignore-non-functions&nbsp;]<br/>
+&nbsp;[&nbsp;&#8211;demangle[=<i></i><i>STYLE</i><i></i>]&nbsp;]&nbsp;[&nbsp;&#8211;no-demangle&nbsp;]<br/>
+&nbsp;[&#8211;external-symbol-table=name]<br/>
 &nbsp;[&nbsp;<i>image-file</i>&nbsp;]&nbsp;[&nbsp;<i>profile-file</i>&nbsp;&#8230;&nbsp;]</p>
 <h2>DESCRIPTION</h2>
 <p> <tt>&quot;gprof&quot;</tt> produces an execution profile of C, Pascal, or Fortran77 programs. The effect of called routines is incorporated in the profile of each caller. The profile data is taken from the call graph profile file (<i>gmon.out</i> default) which is created by programs that are compiled with the <code>-pg</code> option of <tt>&quot;cc&quot;</tt>, <tt>&quot;pc&quot;</tt>, and <tt>&quot;f77&quot;</tt>. The <code>-pg</code> option also links in versions of the library routines that are compiled for profiling. <tt>&quot;Gprof&quot;</tt> reads the given object file (the default is <tt>&quot;a.out&quot;</tt>) and establishes the relation between its symbol table and the call graph profile from <i>gmon.out</i>. If more than one profile file is specified, the <tt>&quot;gprof&quot;</tt> output shows the sum of the profile information in the given profile files. </p>
@@ -61,7 +61,7 @@ description: "gprof – display call graph profile data"
 <dt>&quot;-I <i>dirs</i>&quot;</dt>
 <dd>
 </dd><dt>&quot;&#8211;directory-path=<i>dirs</i>&quot;</dt>
-<dd> The <code>-I</code> option specifies a list of search directories in which to find source files. Environment variable <i></i><font SIZE="-1"><i>GPROF_PATH</i></font><i></i> can also be used to convey this information. Used mostly for annotated source output.</dd>
+<dd> The <code>-I</code> option specifies a list of search directories in which to find source files. Environment variable <i></i><i>GPROF_PATH</i><i></i> can also be used to convey this information. Used mostly for annotated source output.</dd>
 <dt>&quot;-J[<i>symspec</i>]&quot;</dt>
 <dd>
 </dd><dt>&quot;&#8211;no-annotated-source[=<i>symspec</i>]&quot;</dt>
@@ -119,11 +119,11 @@ description: "gprof – display call graph profile data"
         c-decl.o:00000000 T print_lang_type
         ...
 </pre>
-<p> To create a <i>map_file</i> with <font SIZE="-1">GNU</font> <tt>&quot;nm&quot;</tt>, type a command like <tt>&quot;nm --extern-only --defined-only -v --print-file-name program-name&quot;</tt>.</p>
+<p> To create a <i>map_file</i> with GNU <tt>&quot;nm&quot;</tt>, type a command like <tt>&quot;nm --extern-only --defined-only -v --print-file-name program-name&quot;</tt>.</p>
 <dt>&quot;-T&quot;</dt>
 <dd>
 </dd><dt>&quot;&#8211;traditional&quot;</dt>
-<dd> The <code>-T</code> option causes <tt>&quot;gprof&quot;</tt> to print its output in &#8220;traditional&#8221; <font SIZE="-1">BSD</font> style.</dd>
+<dd> The <code>-T</code> option causes <tt>&quot;gprof&quot;</tt> to print its output in &#8220;traditional&#8221; BSD style.</dd>
 <dt>&quot;-w <i>width</i>&quot;</dt>
 <dd>
 </dd><dt>&quot;&#8211;width=<i>width</i>&quot;</dt>
@@ -135,7 +135,7 @@ description: "gprof – display call graph profile data"
 <dt>&quot;&#8211;demangle[=<i>style</i>]&quot;</dt>
 <dd>
 </dd><dt>&quot;&#8211;no-demangle&quot;</dt>
-<dd> These options control whether C<font SIZE="-2">++</font> symbol names should be demangled when printing output. The default is to demangle symbols. The <tt>&quot;--no-demangle&quot;</tt> option may be used to turn off demangling. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd></dl>
+<dd> These options control whether C++ symbol names should be demangled when printing output. The default is to demangle symbols. The <tt>&quot;--no-demangle&quot;</tt> option may be used to turn off demangling. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd></dl>
 <h3>Analysis Options</h3>
 <dl>
 <dt>&quot;-a&quot;</dt>
@@ -149,7 +149,7 @@ description: "gprof – display call graph profile data"
 <dt>&quot;-D&quot;</dt>
 <dd>
 </dd><dt>&quot;&#8211;ignore-non-functions&quot;</dt>
-<dd> The <code>-D</code> option causes <tt>&quot;gprof&quot;</tt> to ignore symbols which are not known to be functions. This option will give more accurate profile data on systems where it is supported (Solaris and <font SIZE="-1">HPUX</font> for example).</dd>
+<dd> The <code>-D</code> option causes <tt>&quot;gprof&quot;</tt> to ignore symbols which are not known to be functions. This option will give more accurate profile data on systems where it is supported (Solaris and HPUX for example).</dd>
 <dt>&quot;-k <i>from</i>/<i>to</i>&quot;</dt>
 <dd> The <code>-k</code> option allows you to delete from the call graph any arcs from symbols matching symspec <i>from</i> to those matching symspec <i>to</i>.</dd>
 <dt>&quot;-l&quot;</dt>
@@ -228,7 +228,7 @@ description: "gprof – display call graph profile data"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cc/">cc</a></code>(1), <code>prof</code>(1), and the Info entry for <i>gprof</i>. </p>
 <p> &#8220;An Execution Profiler for Modular Programs&#8221;, by S. Graham, P. Kessler, M. McKusick; Software &#8211; Practice and Experience, Vol. 13, pp. 671-685, 1983. </p>
-<p> &#8220;gprof: A Call Graph Execution Profiler&#8221;, by S. Graham, P. Kessler, M. McKusick; Proceedings of the <font SIZE="-1">SIGPLAN</font> &#8217;82 Symposium on Compiler Construction, <font SIZE="-1">SIGPLAN</font> Notices, Vol. 17, No 6, pp. 120-126, June 1982.</p>
+<p> &#8220;gprof: A Call Graph Execution Profiler&#8221;, by S. Graham, P. Kessler, M. McKusick; Proceedings of the SIGPLAN &#8217;82 Symposium on Compiler Construction, SIGPLAN Notices, Vol. 17, No 6, pp. 120-126, June 1982.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1988-2022 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

@@ -15,13 +15,13 @@ zmq_msg_init_data - initialise 0MQ message from a supplied buffer
 <h2>Description</h2>
 
 The <i>zmq_msg_init_data()</i> function shall initialise the message object referenced by <i>msg</i> to represent the content referenced by the buffer located at address <i>data</i>, <i>size</i> bytes long. No copy of <i>data</i> shall be performed and 0MQ shall take ownership of the supplied buffer. If provided, the deallocation function <i>ffn</i> shall be called once the data buffer is no longer required by 0MQ, with the <i>data</i> and <i>hint</i> arguments supplied to <i>zmq_msg_init_data()</i>.
-<dl><dd><font SIZE="+1"> <b>Caution</b> </font> 
+<dl><dd> <b>Caution</b>  
  Never access <i>zmq_msg_t</i> members directly, instead always use the <i>zmq_msg</i> family of functions. 
-</dd><dl><dd><font SIZE="+1"> <b>Caution</b> </font> 
+</dd><dl><dd> <b>Caution</b>  
  The deallocation function <i>ffn</i> needs to be thread-safe, since it will be called from an arbitrary thread. 
-</dd><dl><dd><font SIZE="+1"> <b>Caution</b> </font> 
+</dd><dl><dd> <b>Caution</b>  
  If the deallocation function is not provided, the allocated memory will not be freed, and this may cause a memory leak. 
-</dd><dl><dd><font SIZE="+1"> <b>Caution</b> </font> 
+</dd><dl><dd> <b>Caution</b>  
  The functions <i>zmq_msg_init()</i>, <i>zmq_msg_init_data()</i> and <i>zmq_msg_init_size()</i> are mutually exclusive. Never initialize the same <i>zmq_msg_t</i> twice. 
 <h2>Return Value</h2>
 The <i>zmq_msg_init_data()</i> function shall return zero if successful. Otherwise it shall return -1 and set <i>errno</i> to one of the values defined below.

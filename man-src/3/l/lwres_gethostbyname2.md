@@ -94,5 +94,5 @@ struct hostent {
 <p> <code>lwres_gethostbyname()</code>, <code>lwres_gethostbyname2()</code>, <code>lwres_gethostbyaddr()</code> and <code>lwres_endhostent()</code> are not thread safe; they return pointers to static data and provide error codes through a global variable. Thread-safe versions for name and address lookup are provided by <code>lwres_gethostbyname_r()</code>, and <code>lwres_gethostbyaddr_r()</code> respectively. </p>
 <p> The resolver daemon does not currently support any non-DNS name services such as <i>/etc/hosts</i> or <code>NIS</code>, consequently the above functions don&#8217;t, either.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2001 Internet Software Consortium. </p>

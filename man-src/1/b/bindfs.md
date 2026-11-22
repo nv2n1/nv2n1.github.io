@@ -92,15 +92,15 @@ description: "bindfs – mount –bind in user-space"
 <h2>PERMISSION SPECIFICATION</h2>
 <p> The <code>-p</code> option takes a comma- or colon-separated list of either octal numeric permission bits or symbolic representations of permission bit operations. The symbolic representation is based on that of the <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1) command. setuid, setgid and sticky bits are ignored. </p>
 <p> This program extends the chmod symbolic representation with the following operands: </p>
-<p> `<code>D</code>&#8216; (right hand side)<br />
+<p> `<code>D</code>&#8216; (right hand side)<br/>
 &nbsp;<wbr>Works like&nbsp;<wbr><code>X</code>&nbsp;<wbr>but applies only to directories&nbsp;<wbr>(not to executables). </p>
-<p> `<code>d</code>&#8216; and `<code>f</code>&#8216; (left hand side)<br />
-&nbsp;<wbr>Makes this directive only apply to directories&nbsp;<wbr>(d)&nbsp;<wbr>or files&nbsp;<wbr>(f).<br />
+<p> `<code>d</code>&#8216; and `<code>f</code>&#8216; (left hand side)<br/>
+&nbsp;<wbr>Makes this directive only apply to directories&nbsp;<wbr>(d)&nbsp;<wbr>or files&nbsp;<wbr>(f).<br/>
 &nbsp;<wbr>e.g.&nbsp;<wbr><code>gd-w</code>&nbsp;<wbr>would remove the group write bit from all directories. </p>
-<p> `<code>u</code>&#8216;, `<code>g</code>&#8216;, `<code>o</code>&#8216; (right hand side)<br />
-&nbsp;<wbr>Uses the user&nbsp;<wbr>(u), group&nbsp;<wbr>(g)&nbsp;<wbr>or others&nbsp;<wbr>(o)&nbsp;<wbr>permission bits of<br />
-&nbsp;<wbr>the original file.<br />
-&nbsp;<wbr>e.g.&nbsp;<wbr><code>g=u</code>&nbsp;<wbr>would copy the user&#8217;s permission bits to the group.<br />
+<p> `<code>u</code>&#8216;, `<code>g</code>&#8216;, `<code>o</code>&#8216; (right hand side)<br/>
+&nbsp;<wbr>Uses the user&nbsp;<wbr>(u), group&nbsp;<wbr>(g)&nbsp;<wbr>or others&nbsp;<wbr>(o)&nbsp;<wbr>permission bits of<br/>
+&nbsp;<wbr>the original file.<br/>
+&nbsp;<wbr>e.g.&nbsp;<wbr><code>g=u</code>&nbsp;<wbr>would copy the user&#8217;s permission bits to the group.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>ug+o</code>&nbsp;<wbr>would add the others&#8217;&nbsp;<wbr>permissions to the owner and group. </p>
 <p> <i>Examples</i></p>
 <dl>

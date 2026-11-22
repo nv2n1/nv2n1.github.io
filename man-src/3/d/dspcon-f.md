@@ -10,7 +10,7 @@ description: "dspcon.f –"
 <p>dspcon.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dspcon</code> (UPLO, N, AP, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dspcon</code> (UPLO, N, AP, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>DSPCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dspcon (characterUPLO, integerN, double precision, dimension( * )AP, integer, dimension( * )IPIV, double precisionANORM, double precisionRCOND, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

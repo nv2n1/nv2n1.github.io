@@ -32,16 +32,16 @@ description: "pstops – shuffle pages in a PostScript file"
 <p> Pstops normally prints the page numbers of the pages re-arranged; the <i>-q</i> option suppresses this.</p>
 <h2>EXAMPLES</h2>
 <p> This section contains some sample re-arrangements. To put two pages on one sheet (of A4 paper), the pagespec to use is: </p>
-<p> <center> &quot;2:0L@.7(21cm,0)+1L@.7(21cm,14.85cm)&quot;<br />
+<p> <center> &quot;2:0L@.7(21cm,0)+1L@.7(21cm,14.85cm)&quot;<br/>
  </center> </p>
 <p> To select all of the odd pages in reverse order, use: </p>
-<p> <center> 2:-0<br />
+<p> <center> 2:-0<br/>
  </center> </p>
 <p> To re-arrange pages for printing 2-up booklets, use </p>
-<p> <center> &quot;4:-3L@.7(21cm,0)+0L@.7(21cm,14.85cm)&quot;<br />
+<p> <center> &quot;4:-3L@.7(21cm,0)+0L@.7(21cm,14.85cm)&quot;<br/>
  </center> </p>
 <p> for the front sides, and </p>
-<p> <center> &quot;4:1L@.7(21cm,0)+-2L@.7(21cm,14.85cm)&quot;<br />
+<p> <center> &quot;4:1L@.7(21cm,0)+-2L@.7(21cm,14.85cm)&quot;<br/>
  </center> </p>
 <p> for the reverse sides (or join them with a comma for duplex printing).</p>
 <h2>AUTHOR</h2>

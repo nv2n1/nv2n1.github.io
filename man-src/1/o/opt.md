@@ -12,10 +12,10 @@ description: "opt – LLVM optimizer"
 <h2>SYNOPSIS</h2>
 <p> <code>opt</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> The <code>opt</code> command is the modular <font SIZE="-1">LLVM</font> optimizer and analyzer. It takes <font SIZE="-1">LLVM</font> source files as input, runs the specified optimizations or analyses on it, and then outputs the optimized file or the analysis results. The function of <code>opt</code> depends on whether the <code>-analyze</code> option is given. </p>
+<p> The <code>opt</code> command is the modular LLVM optimizer and analyzer. It takes LLVM source files as input, runs the specified optimizations or analyses on it, and then outputs the optimized file or the analysis results. The function of <code>opt</code> depends on whether the <code>-analyze</code> option is given. </p>
 <p> When <code>-analyze</code> is specified, <code>opt</code> performs various analyses of the input source. It will usually print the results on standard output, but in a few cases, it will print output to standard error or generate a file with the analysis output, which is usually done when the output is meant for another program. </p>
 <p> While <code>-analyze</code> is <i>not</i> given, <code>opt</code> attempts to produce an optimized output file. The optimizations available via <code>opt</code> depend upon what libraries were linked into it as well as any additional libraries that have been loaded with the <code>-load</code> option. Use the <code>-help</code> option to determine what optimizations you can use. </p>
-<p> If <i>filename</i> is omitted from the command line or is <i>&#8211;</i>, <code>opt</code> reads its input from standard input. Inputs can be in either the <font SIZE="-1">LLVM</font> assembly language format (.ll) or the <font SIZE="-1">LLVM</font> bitcode format (.bc). </p>
+<p> If <i>filename</i> is omitted from the command line or is <i>&#8211;</i>, <code>opt</code> reads its input from standard input. Inputs can be in either the LLVM assembly language format (.ll) or the LLVM bitcode format (.bc). </p>
 <p> If an output filename is not specified with the <code>-o</code> option, <code>opt</code> writes its output to the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -26,9 +26,9 @@ description: "opt – LLVM optimizer"
 <dt><code>-o</code> <i>filename</i></dt>
 <dd> Specify the output filename.</dd>
 <dt><code>-S</code></dt>
-<dd> Write output in <font SIZE="-1">LLVM</font> intermediate language (instead of bitcode).</dd>
+<dd> Write output in LLVM intermediate language (instead of bitcode).</dd>
 <dt><code>-{passname}</code></dt>
-<dd> <code>opt</code> provides the ability to run any of <font SIZE="-1">LLVM</font>&#8216;s optimization or analysis passes in any order. The <code>-help</code> option lists all the passes available. The order in which the options occur on the command line are the order in which they are executed (within pass constraints).</dd>
+<dd> <code>opt</code> provides the ability to run any of LLVM&#8216;s optimization or analysis passes in any order. The <code>-help</code> option lists all the passes available. The order in which the options occur on the command line are the order in which they are executed (within pass constraints).</dd>
 <dt><code>-std-compile-opts</code></dt>
 <dd> This is short hand for a standard list of <i>compile time optimization</i> passes. This is typically used to optimize the output from the llvm-gcc front end. It might be useful for other front end compilers as well. To discover the full set of options available, use the following command: </dd>
 <pre>
@@ -49,7 +49,7 @@ description: "opt – LLVM optimizer"
 <dt><code>-time-passes</code></dt>
 <dd> Record the amount of time needed for each pass and print it to standard error.</dd>
 <dt><code>-debug</code></dt>
-<dd> If this is a debug build, this option will enable debug printouts from passes which use the <i></i><font SIZE="-1"><i>DEBUG</i></font><i>()</i> macro. See the <font SIZE="-1"><code>LLVM</code></font><code> Programmer&#8217;s Manual</code>, section <i>#DEBUG</i> for more information.</dd>
+<dd> If this is a debug build, this option will enable debug printouts from passes which use the <i></i><i>DEBUG</i><i>()</i> macro. See the <code>LLVM</code><code> Programmer&#8217;s Manual</code>, section <i>#DEBUG</i> for more information.</dd>
 <dt><code>-load</code>=<i>plugin</i></dt>
 <dd> Load the dynamic object <i>plugin</i>. This object should register new optimization or analysis passes. Once loaded, the object will add new command line options to enable various optimizations or analyses. To see the new complete list of optimizations, use the <code>-help</code> and <code>-load</code> options together. For example: </dd>
 <pre>
@@ -60,4 +60,4 @@ description: "opt – LLVM optimizer"
 <h2>EXIT STATUS</h2>
 <p> If <code>opt</code> succeeds, it will exit with 0. Otherwise, if an error occurs, it will exit with a non-zero value.</p>
 <h2>AUTHORS</h2>
-<p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
+<p> Maintained by the LLVM Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>

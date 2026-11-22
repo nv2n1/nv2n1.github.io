@@ -15,14 +15,14 @@ description: "QuantLib::CalibratedModel – Calibrated model class."
 <h3>Public Member Functions</h3>
 <p><code>CalibratedModel</code> (Size nArguments) </p>
 <p> void <code>update</code> () </p>
-<p> void <code>calibrate</code> (const std::vector&lt; boost::shared_ptr&lt; <code>CalibrationHelper</code> &gt; &gt; &amp;, <code>OptimizationMethod</code> &amp;method, const <code>EndCriteria</code> &amp;endCriteria, const <code>Constraint</code> &amp;constraint=<code>Constraint</code>(), const std::vector&lt; <code>Real</code> &gt; &amp;weights=std::vector&lt; <code>Real</code> &gt;())<br />
- <i>Calibrate to a set of market instruments (caps/swaptions). </i><br />
+<p> void <code>calibrate</code> (const std::vector&lt; boost::shared_ptr&lt; <code>CalibrationHelper</code> &gt; &gt; &amp;, <code>OptimizationMethod</code> &amp;method, const <code>EndCriteria</code> &amp;endCriteria, const <code>Constraint</code> &amp;constraint=<code>Constraint</code>(), const std::vector&lt; <code>Real</code> &gt; &amp;weights=std::vector&lt; <code>Real</code> &gt;())<br/>
+ <i>Calibrate to a set of market instruments (caps/swaptions). </i><br/>
  <code>Real</code> <code>value</code> (const <code>Array</code> &amp;params, const std::vector&lt; boost::shared_ptr&lt; <code>CalibrationHelper</code> &gt; &gt; &amp;) </p>
 <p> const boost::shared_ptr&lt; <code>Constraint</code> &gt; &amp; <code>constraint</code> () const </p>
-<p> EndCriteria::Type <code>endCriteria</code> ()<br />
- <i>returns end criteria result </i><br />
- <code>Disposable</code>&lt; <code>Array</code> &gt; <code>params</code> () const<br />
- <i>Returns array of arguments on which calibration is done. </i><br />
+<p> EndCriteria::Type <code>endCriteria</code> ()<br/>
+ <i>returns end criteria result </i><br/>
+ <code>Disposable</code>&lt; <code>Array</code> &gt; <code>params</code> () const<br/>
+ <i>Returns array of arguments on which calibration is done. </i><br/>
  virtual void <code>setParams</code> (const <code>Array</code> &amp;params) </p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>generateArguments</code> () </p>

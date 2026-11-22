@@ -10,7 +10,7 @@ description: "XkbSetAutoResetControls – Changes the current values of the Auto
 <p>XkbSetAutoResetControls &#8211; Changes the current values of the AutoReset control attributes </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbSetAutoResetControls</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>changes</i><code>,</code> <code>unsigned int *</code><i>auto_ctrls</i><code>,</code> <code>unsigned int *</code><i>auto_values</i><code>);</code><br />
+<dt> <code>Bool XkbSetAutoResetControls</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>changes</i><code>,</code> <code>unsigned int *</code><i>auto_ctrls</i><code>,</code> <code>unsigned int *</code><i>auto_values</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

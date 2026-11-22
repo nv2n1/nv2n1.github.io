@@ -13,10 +13,10 @@ description: "zmq_msg_init – initialise empty 0MQ message"
 <h2>Description</h2>
 <p>The <i>zmq_msg_init()</i> function shall initialise the message object referenced by <i>msg</i> to represent an empty message. This function is most useful when called before receiving a message with <i>zmq_recv()</i>.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  Never access <i>zmq_msg_t</i> members directly, instead always use the <i>zmq_msg</i> family of functions. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  The functions <i>zmq_msg_init()</i>, <i>zmq_msg_init_data()</i> and <i>zmq_msg_init_size()</i> are mutually exclusive. Never initialize the same <i>zmq_msg_t</i> twice. </dd>
 <h2>Return Value</h2>
 <p>The <i>zmq_msg_init()</i> function always returns zero.</p>

@@ -21,31 +21,31 @@ description: "geoclue.conf – geoclue configuration parameters"
 <dd>whitelist=geoclue-demo-agent;gnome-shell;io.elementary.desktop.agent-geoclue2</code> </dd>
 <dt><code>[network-nmea]</dt>
 <dd>Network NMEA source configuration options</dd>
-<dd>enable=true </code><br />
+<dd>enable=true </code><br/>
  Fetch location from NMEA sources on local network? </dd>
 <dt><code>[3G]</dt>
 <dd>3G source configuration options</dd>
-<dd>enable=true </code><br />
+<dd>enable=true </code><br/>
  Enable 3G source </dd>
 <dt><code>[cdma]</dt>
 <dd>CDMA source configuration options</dd>
-<dd>enable=true </code><br />
+<dd>enable=true </code><br/>
  Enable CDMA source </dd>
 <dt><code>[modem-gps]</dt>
 <dd>Modem GPS source configuration options</dd>
-<dd>enable=true </code><br />
+<dd>enable=true </code><br/>
  Enable Modem-GPS source </dd>
 <dt><code>[wifi]</dt>
 <dd>WiFi source configuration options</dd>
-<dd>enable=true </code><br />
+<dd>enable=true </code><br/>
  Enable WiFi source</dd>
-<dd><code>url=</code><i><a rel="nofollow" href="https://location.services.mozilla.com/v1/geolocate?key=geoclue">https://location.services.mozilla.com/v1/geolocate?key=geoclue</a></i><br />
+<dd><code>url=</code><i><a rel="nofollow" href="https://location.services.mozilla.com/v1/geolocate?key=geoclue">https://location.services.mozilla.com/v1/geolocate?key=geoclue</a></i><br/>
  URL to the wifi geolocation service. The key can currenty be anything, just needs to be present but that is likely going to change in future.</dd>
-<dd><code>submit-data=false</code> Submit data to Mozilla Location Service<br />
+<dd><code>submit-data=false</code> Submit data to Mozilla Location Service<br/>
  If set to true, geoclue will automatically submit network data to Mozilla each time it gets a GPS lock.</dd>
-<dd><code>submission-url=</code><i><a rel="nofollow" href="https://location.services.mozilla.com/v1/submit?key=geoclue">https://location.services.mozilla.com/v1/submit?key=geoclue</a></i><br />
+<dd><code>submission-url=</code><i><a rel="nofollow" href="https://location.services.mozilla.com/v1/submit?key=geoclue">https://location.services.mozilla.com/v1/submit?key=geoclue</a></i><br/>
  URL to submission API of Mozilla Location Service</dd>
-<dd><code>submission-nick=geoclue</code><br />
+<dd><code>submission-nick=geoclue</code><br/>
  A nickname to submit network data with. A nickname must be 2-32 characters long.
 </dd></dl>
 <h2>Application Configuration Options</h2>
@@ -55,40 +55,40 @@ description: "geoclue.conf – geoclue configuration parameters"
 <dt>Format:</dt>
 <dd>
 </dd><dl>
-<dd><code>[random-app]</code><br />
+<dd><code>[random-app]</code><br/>
  Desktop ID of application without .desktop part </dd>
-<p> <code>allowed=true|false</code><br />
+<p> <code>allowed=true|false</code><br/>
  Allowed access to location information? </p>
-<p> <code>system=true|false</code><br />
+<p> <code>system=true|false</code><br/>
  Is application a system component? </p>
-<p> <code>users=</code><br />
+<p> <code>users=</code><br/>
  List of UIDs of all users for which this application is allowed location info access, separate by &#8216;;&#8217;. Keep it empty for allowing it for all users.</dl>
 <dt>Examples:</dt>
 <dd>
 </dd><dl>
-<dd><code>[gnome-datetime-panel]</code><br />
- allowed=true<br />
- system=true<br />
+<dd><code>[gnome-datetime-panel]</code><br/>
+ allowed=true<br/>
+ system=true<br/>
  users= </dd>
-<p> <code>[gnome-color-panel]</code><br />
- allowed=true<br />
- system=true<br />
+<p> <code>[gnome-color-panel]</code><br/>
+ allowed=true<br/>
+ system=true<br/>
  users= </p>
-<p> <code>[org.gnome.Shell]</code><br />
- allowed=true<br />
- system=true<br />
+<p> <code>[org.gnome.Shell]</code><br/>
+ allowed=true<br/>
+ system=true<br/>
  users= </p>
-<p> <code>[io.elementary.desktop.agent-geoclue2]</code><br />
- allowed=true<br />
- system=true<br />
+<p> <code>[io.elementary.desktop.agent-geoclue2]</code><br/>
+ allowed=true<br/>
+ system=true<br/>
  users= </p>
-<p> <code>[epiphany]</code><br />
- allowed=true<br />
- system=false<br />
+<p> <code>[epiphany]</code><br/>
+ allowed=true<br/>
+ system=false<br/>
  users= </p>
-<p> <code>[firefox]</code><br />
- allowed=true<br />
- system=false<br />
+<p> <code>[firefox]</code><br/>
+ allowed=true<br/>
+ system=false<br/>
  users=
 </dl>
 </dl>

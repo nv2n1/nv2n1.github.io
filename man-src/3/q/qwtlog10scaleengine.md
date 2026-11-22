@@ -31,9 +31,9 @@ description: "QwtLog10ScaleEngine – A scale engine for logarithmic (base 10) s
 <p>Align and divide an interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>maxNumSteps</i> Max. number of steps<br />
- <i>x1</i> First limit of the interval (In/Out)<br />
- <i>x2</i> Second limit of the interval (In/Out)<br />
+<dd><i>maxNumSteps</i> Max. number of steps<br/>
+ <i>x1</i> First limit of the interval (In/Out)<br/>
+ <i>x2</i> Second limit of the interval (In/Out)<br/>
  <i>stepSize</i> Step size (Out)</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
@@ -43,10 +43,10 @@ description: "QwtLog10ScaleEngine – A scale engine for logarithmic (base 10) s
 <p>Calculate a scale division. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x1</i> First interval limit<br />
- <i>x2</i> Second interval limit<br />
- <i>maxMajSteps</i> Maximum for the number of major steps<br />
- <i>maxMinSteps</i> Maximum number of minor steps<br />
+<dd><i>x1</i> First interval limit<br/>
+ <i>x2</i> Second interval limit<br/>
+ <i>maxMajSteps</i> Maximum for the number of major steps<br/>
+ <i>maxMinSteps</i> Maximum number of minor steps<br/>
  <i>stepSize</i> Step size. If stepSize == 0, the scaleEngine calculates one.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>

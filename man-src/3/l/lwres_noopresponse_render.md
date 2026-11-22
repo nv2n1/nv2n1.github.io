@@ -33,9 +33,9 @@ description: "lwres_nooprequest_render, lwres_noopresponse_render, lwres_noopreq
 <dl>
 <dt>
 </dt><dd>
-typedef struct {<br />
-    lwres_uint16_t datalength;<br />
-    unsigned char *data;<br />
+typedef struct {<br/>
+    lwres_uint16_t datalength;<br/>
+    unsigned char *data;<br/>
 } lwres_nooprequest_t;
 </dd></dl>
 <dl>
@@ -57,5 +57,5 @@ typedef struct {
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-lwres_packet/">lwres_packet</a></code>(3)</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001 Internet Software Consortium. </p>

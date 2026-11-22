@@ -14,7 +14,7 @@ description: "psbbox.sh – Replace BoundingBox line in PostScript files by \"re
 <h2>DESCRIPTION</h2>
 <p> This program replaces the BoundingBox line in all PostScript files specified on the command line by a BoundingBox determined by the bbox modules of Ghostscript.</p>
 <h2>KNOWN LIMITATIONS</h2>
-<p> Works only for single-page PostScript files. Other limitations are the limitations of the Ghostscript bbox module.<br />
+<p> Works only for single-page PostScript files. Other limitations are the limitations of the Ghostscript bbox module.<br/>
  EPS Ghostscript 7.07 occasionally produces no BoundingBox at all. Try using AFPL Ghostscipt 8.00 or later instead.</p>
 <h2>OBSOLETE</h2>
 <p> With the production of <code>ps2raster</code>, this script became obsolete.</p>

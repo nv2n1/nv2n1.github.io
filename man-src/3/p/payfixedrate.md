@@ -22,9 +22,9 @@ void setupArguments (PricingEngine::arguments *args) const
 void fetchResults (const PricingEngine::results *) const</code></pre>
 <p> Inherits <code>QuantLib::Swap</code>.</p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for asset swap calculation </i><br />
- class <code>results</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for asset swap calculation </i><br/>
+ class <code>results</code><br/>
  <i>Results from simple swap calculation </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>AssetSwap (bool payFixedRate, const boost::shared_ptr&lt; Bond &gt; &amp;bond, Real bondCleanPrice, const boost::shared_ptr&lt; IborIndex &gt; &amp;index, Spread spread, const Handle&lt; YieldTermStructure &gt; &amp;discountCurve, const Schedule &amp;floatSchedule=Schedule(), const DayCounter &amp;floatingDayCount=DayCounter(), bool parAssetSwap=true)

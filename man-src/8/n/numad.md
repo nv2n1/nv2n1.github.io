@@ -51,8 +51,8 @@ description: "numad – A user-level daemon that provides placement advice and p
 <dt><code>-R</code> &lt;<i>CPU_LIST</i>&gt;</dt>
 <dd>Specify a list of CPUs that numad should assume are reserved for non-numad use. No processes will be bound to the specified CPUs by numad. This option is effective only when starting numad. You cannot change reserved CPUs dynamically while numad is already running.</dd>
 <dt><code>-S</code> &lt;<i>0|1</i>&gt;</dt>
-<dd>This option controls whether numad scans all system processes or only the processes on the explicit inclusion PID list. The default is to scan all processes. Use <i>-S 0</i> to scan only the explicit inclusion PID list. Use <i>-S 1</i> to again scan all system processes (excepting those on the explicit exclusion list). Starting numad as<br />
- <i>numad -S 0 -p &lt;PID-1&gt; -p &lt;PID-2&gt; -p &lt;PID-3&gt;</i><br />
+<dd>This option controls whether numad scans all system processes or only the processes on the explicit inclusion PID list. The default is to scan all processes. Use <i>-S 0</i> to scan only the explicit inclusion PID list. Use <i>-S 1</i> to again scan all system processes (excepting those on the explicit exclusion list). Starting numad as<br/>
+ <i>numad -S 0 -p &lt;PID-1&gt; -p &lt;PID-2&gt; -p &lt;PID-3&gt;</i><br/>
  will limit scanning, and thus also automatic NUMA management, to only those three explicitly specified processes.</dd>
 <dt><code>-t</code> &lt;<i>logical_CPU_percent</i>&gt;</dt>
 <dd>Specify the resource value of logical CPUs. Hardware threads typically share most core resources, and so logical CPUs add only a fraction of CPU power for many workloads. By default numad considers logical CPUs to be only 20 percent of a dedicated hardware core.</dd>
@@ -63,15 +63,15 @@ description: "numad – A user-level daemon that provides placement advice and p
 <dt><code>-V</code></dt>
 <dd>Display version information and exit.</dd>
 <dt><code>-w</code> &lt;<i>NCPUS[:MB]</i>&gt;</dt>
-<dd>Queries numad for the best NUMA nodes to bind an entity that needs &lt;<i>NCPUS</i>&gt;. The amount of memory (in MBs) is optional, but should normally be specified as well &lt;<i>:MB</i>&gt; so numad can recommend NUMA nodes with available CPU capacity and adequate free memory. This query option can be used regardless of whether numad is running as a daemon. (An invocation using this option when numad is not running as a daemon, will not cause the daemon to start.) Output of this option is a string that contains a NUMA node list. For example: 2-3,6. The recommended node list could be saved in a shell variable (e.g., NODES) and then used as the node list parameter in a<br />
- <i>numactl -m $NODES -N $NODES &#8230; </i><br />
+<dd>Queries numad for the best NUMA nodes to bind an entity that needs &lt;<i>NCPUS</i>&gt;. The amount of memory (in MBs) is optional, but should normally be specified as well &lt;<i>:MB</i>&gt; so numad can recommend NUMA nodes with available CPU capacity and adequate free memory. This query option can be used regardless of whether numad is running as a daemon. (An invocation using this option when numad is not running as a daemon, will not cause the daemon to start.) Output of this option is a string that contains a NUMA node list. For example: 2-3,6. The recommended node list could be saved in a shell variable (e.g., NODES) and then used as the node list parameter in a<br/>
+ <i>numactl -m $NODES -N $NODES &#8230; </i><br/>
  command. See <a href="/docs/linux/man/8-numactl/">numactl</a>(8).</dd>
 <dt><code>-x</code> &lt;<i>PID</i>&gt;</dt>
 <dd>Add PID to explicit exclusion list of processes to blacklist from managing. Multiple <i>-x PID</i> options can be specified at daemon start, but after daemon start, only one PID can be added to the exclusion list per subsequent numad invocation. Use with -S to precisely control the scope of processes numad can manage.</dd></dl>
 <h2>Files</h2>
-<p><i>/usr/bin/numad</i><br />
- <i>/etc/numad.conf</i><br />
- <i>/var/log/numad.log</i><br />
+<p><i>/usr/bin/numad</i><br/>
+ <i>/etc/numad.conf</i><br/>
+ <i>/var/log/numad.log</i><br/>
  <i>/var/run/numad.pid</i></p>
 <h2>Environment Variables</h2>
 <dl>

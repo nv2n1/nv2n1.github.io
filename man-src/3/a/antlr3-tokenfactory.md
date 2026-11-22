@@ -21,8 +21,8 @@ description: "ANTLR3_BASE_TREE_ADAPTOR_struct –"
 <p> void *(* <code>createTypeText</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, <code>ANTLR3_UINT32</code> tokenType, <code>pANTLR3_UINT8</code> text) </p>
 <p> void *(* <code>createTypeToken</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, <code>ANTLR3_UINT32</code> tokenType, <code>pANTLR3_COMMON_TOKEN</code> fromToken) </p>
 <p> void *(* <code>createTypeTokenText</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, <code>ANTLR3_UINT32</code> tokenType, <code>pANTLR3_COMMON_TOKEN</code> fromToken, <code>pANTLR3_UINT8</code> text) </p>
-<p> <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>debugger</code><br />
- <i>If set to something other than NULL, then this structure is points to an instance of the debugger interface. </i><br />
+<p> <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>debugger</code><br/>
+ <i>If set to something other than NULL, then this structure is points to an instance of the debugger interface. </i><br/>
  void(* <code>deleteChild</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *t, <code>ANTLR3_UINT32</code> i) </p>
 <p> void *(* <code>dupNode</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *treeNode) </p>
 <p> void *(* <code>dupTree</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *tree) </p>
@@ -40,11 +40,11 @@ description: "ANTLR3_BASE_TREE_ADAPTOR_struct –"
 <p> <code>ANTLR3_UINT32</code>(* <code>getType</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *t) </p>
 <p> <code>ANTLR3_UINT32</code>(* <code>getUniqueID</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *) </p>
 <p> <code>ANTLR3_BOOLEAN</code>(* <code>isNilNode</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *t) </p>
-<p> <code>pANTLR3_STRING</code>(* <code>makeDot</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *theTree)<br />
- <i>Produce a DOT (see graphviz freeware suite) from a base tree. </i><br />
+<p> <code>pANTLR3_STRING</code>(* <code>makeDot</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *theTree)<br/>
+ <i>Produce a DOT (see graphviz freeware suite) from a base tree. </i><br/>
  void *(* <code>nilNode</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor) </p>
-<p> void(* <code>replaceChildren</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *parent, <code>ANTLR3_INT32</code> startChildIndex, <code>ANTLR3_INT32</code> stopChildIndex, void *t)<br />
- <i>Replace from start to stop child index of parent with t, which might be a list. </i><br />
+<p> void(* <code>replaceChildren</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *parent, <code>ANTLR3_INT32</code> startChildIndex, <code>ANTLR3_INT32</code> stopChildIndex, void *t)<br/>
+ <i>Replace from start to stop child index of parent with t, which might be a list. </i><br/>
  void *(* <code>rulePostProcessing</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *root) </p>
 <p> void(* <code>setChild</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *t, <code>ANTLR3_UINT32</code> i, void *child) </p>
 <p> void(* <code>setChildIndex</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *t, <code>ANTLR3_UINT32</code> i) </p>
@@ -54,10 +54,10 @@ description: "ANTLR3_BASE_TREE_ADAPTOR_struct –"
 <p> void(* <code>setText8</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, <code>pANTLR3_UINT8</code> t) </p>
 <p> void(* <code>setTokenBoundaries</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *t, <code>pANTLR3_COMMON_TOKEN</code> startToken, <code>pANTLR3_COMMON_TOKEN</code> stopToken) </p>
 <p> void(* <code>setType</code> )(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *t, <code>ANTLR3_UINT32</code> type) </p>
-<p> <code>pANTLR3_STRING_FACTORY</code> <code>strFactory</code><br />
- <i>We need a string factory for creating imaginary tokens, we take this from the stream we are supplied to walk. </i><br />
- void * <code>super</code><br />
- <i>Pointer to any enclosing structure/interface that contains this structure. </i><br />
+<p> <code>pANTLR3_STRING_FACTORY</code> <code>strFactory</code><br/>
+ <i>We need a string factory for creating imaginary tokens, we take this from the stream we are supplied to walk. </i><br/>
+ void * <code>super</code><br/>
+ <i>Pointer to any enclosing structure/interface that contains this structure. </i><br/>
  <code>pANTLR3_TOKEN_FACTORY</code> <code>tokenFactory</code> </p>
 <h2>Field Documentation</h2>
 <h3>void(* <code>ANTLR3_BASE_TREE_ADAPTOR_struct::addChild</code>)(struct <code>ANTLR3_BASE_TREE_ADAPTOR_struct</code> *adaptor, void *t, void *child)</h3>

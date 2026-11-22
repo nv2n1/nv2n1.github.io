@@ -10,141 +10,141 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Eet.h &#8211; The file that provides the eet functions. </p>
 <h2>Synopsis</h2>
 <h3>Defines</h3>
-<p>#define <code>EET_T_UNKNOW</code> 0<br />
- <i>Unknown data encoding type. </i><br />
- #define <code>EET_T_CHAR</code> 1<br />
- <i>Data type: char. </i><br />
- #define <code>EET_T_SHORT</code> 2<br />
- <i>Data type: short. </i><br />
- #define <code>EET_T_INT</code> 3<br />
- <i>Data type: int. </i><br />
- #define <code>EET_T_LONG_LONG</code> 4<br />
- <i>Data type: long long. </i><br />
- #define <code>EET_T_FLOAT</code> 5<br />
- <i>Data type: float. </i><br />
- #define <code>EET_T_DOUBLE</code> 6<br />
- <i>Data type: double. </i><br />
- #define <code>EET_T_UCHAR</code> 7<br />
- <i>Data type: unsigned char. </i><br />
- #define <code>EET_T_USHORT</code> 8<br />
- <i>Data type: unsigned short. </i><br />
- #define <code>EET_T_UINT</code> 9<br />
- <i>Data type: unsigned int. </i><br />
- #define <code>EET_T_ULONG_LONG</code> 10<br />
- <i>Data type: unsigned long long. </i><br />
- #define <code>EET_T_STRING</code> 11<br />
- <i>Data type: char *. </i><br />
- #define <code>EET_T_INLINED_STRING</code> 12<br />
- <i>Data type: char * (but compressed inside the resulting eet). </i><br />
- #define <code>EET_T_LAST</code> 13<br />
- <i>Last data type. </i><br />
- #define <code>EET_G_UNKNOWN</code> 100<br />
- <i>Unknown group data encoding type. </i><br />
- #define <code>EET_G_ARRAY</code> 101<br />
- <i>Fixed size array group type. </i><br />
- #define <code>EET_G_VAR_ARRAY</code> 102<br />
- <i>Variable size array group type. </i><br />
- #define <code>EET_G_LIST</code> 103<br />
- <i>Linked list group type. </i><br />
- #define <code>EET_G_HASH</code> 104<br />
- <i>Hash table group type. </i><br />
- #define <code>EET_G_LAST</code> 105<br />
- <i>Last group type. </i><br />
- #define <code>EET_DATA_DESCRIPTOR_ADD_BASIC</code>(edd, struct_type, name, member, type)<br />
- <i>Add a basic data element to a data descriptor. </i><br />
- #define <code>EET_DATA_DESCRIPTOR_ADD_SUB</code>(edd, struct_type, name, member, subtype)<br />
- <i>Add a sub-element type to a data descriptor. </i><br />
- #define <code>EET_DATA_DESCRIPTOR_ADD_LIST</code>(edd, struct_type, name, member, subtype)<br />
- <i>Add a linked list type to a data descriptor. </i><br />
- #define <code>EET_DATA_DESCRIPTOR_ADD_HASH</code>(edd, struct_type, name, member, subtype)<br />
- <i>Add a hash type to a data descriptor. </i><br />
- #define <code>EET_DATA_DESCRIPTOR_ADD_ARRAY</code>(edd, struct_type, name, member, subtype)<br />
- <i>Add a fixed size array type to a data descriptor. </i><br />
- #define <code>EET_DATA_DESCRIPTOR_ADD_VAR_ARRAY</code>(edd, struct_type, name, member, subtype)<br />
+<p>#define <code>EET_T_UNKNOW</code> 0<br/>
+ <i>Unknown data encoding type. </i><br/>
+ #define <code>EET_T_CHAR</code> 1<br/>
+ <i>Data type: char. </i><br/>
+ #define <code>EET_T_SHORT</code> 2<br/>
+ <i>Data type: short. </i><br/>
+ #define <code>EET_T_INT</code> 3<br/>
+ <i>Data type: int. </i><br/>
+ #define <code>EET_T_LONG_LONG</code> 4<br/>
+ <i>Data type: long long. </i><br/>
+ #define <code>EET_T_FLOAT</code> 5<br/>
+ <i>Data type: float. </i><br/>
+ #define <code>EET_T_DOUBLE</code> 6<br/>
+ <i>Data type: double. </i><br/>
+ #define <code>EET_T_UCHAR</code> 7<br/>
+ <i>Data type: unsigned char. </i><br/>
+ #define <code>EET_T_USHORT</code> 8<br/>
+ <i>Data type: unsigned short. </i><br/>
+ #define <code>EET_T_UINT</code> 9<br/>
+ <i>Data type: unsigned int. </i><br/>
+ #define <code>EET_T_ULONG_LONG</code> 10<br/>
+ <i>Data type: unsigned long long. </i><br/>
+ #define <code>EET_T_STRING</code> 11<br/>
+ <i>Data type: char *. </i><br/>
+ #define <code>EET_T_INLINED_STRING</code> 12<br/>
+ <i>Data type: char * (but compressed inside the resulting eet). </i><br/>
+ #define <code>EET_T_LAST</code> 13<br/>
+ <i>Last data type. </i><br/>
+ #define <code>EET_G_UNKNOWN</code> 100<br/>
+ <i>Unknown group data encoding type. </i><br/>
+ #define <code>EET_G_ARRAY</code> 101<br/>
+ <i>Fixed size array group type. </i><br/>
+ #define <code>EET_G_VAR_ARRAY</code> 102<br/>
+ <i>Variable size array group type. </i><br/>
+ #define <code>EET_G_LIST</code> 103<br/>
+ <i>Linked list group type. </i><br/>
+ #define <code>EET_G_HASH</code> 104<br/>
+ <i>Hash table group type. </i><br/>
+ #define <code>EET_G_LAST</code> 105<br/>
+ <i>Last group type. </i><br/>
+ #define <code>EET_DATA_DESCRIPTOR_ADD_BASIC</code>(edd, struct_type, name, member, type)<br/>
+ <i>Add a basic data element to a data descriptor. </i><br/>
+ #define <code>EET_DATA_DESCRIPTOR_ADD_SUB</code>(edd, struct_type, name, member, subtype)<br/>
+ <i>Add a sub-element type to a data descriptor. </i><br/>
+ #define <code>EET_DATA_DESCRIPTOR_ADD_LIST</code>(edd, struct_type, name, member, subtype)<br/>
+ <i>Add a linked list type to a data descriptor. </i><br/>
+ #define <code>EET_DATA_DESCRIPTOR_ADD_HASH</code>(edd, struct_type, name, member, subtype)<br/>
+ <i>Add a hash type to a data descriptor. </i><br/>
+ #define <code>EET_DATA_DESCRIPTOR_ADD_ARRAY</code>(edd, struct_type, name, member, subtype)<br/>
+ <i>Add a fixed size array type to a data descriptor. </i><br/>
+ #define <code>EET_DATA_DESCRIPTOR_ADD_VAR_ARRAY</code>(edd, struct_type, name, member, subtype)<br/>
  <i>Add a variable size array type to a data descriptor. </i></p>
 <h3>Typedefs</h3>
-<p>typedef int(* <code>Eet_Key_Password_Callback</code> )(char *buffer, int size, int rwflag, void *data)<br />
+<p>typedef int(* <code>Eet_Key_Password_Callback</code> )(char *buffer, int size, int rwflag, void *data)<br/>
  <i>Callback used to request if needed the password of a private key. </i></p>
 <h3>Functions</h3>
-<p>EAPI int <code>eet_init</code> (void)<br />
- <i>Initialize the EET library. </i><br />
- EAPI int <code>eet_shutdown</code> (void)<br />
- <i>Shut down the EET library. </i><br />
- EAPI void <code>eet_clearcache</code> (void)<br />
- <i>Clear eet cache. </i><br />
- EAPI Eet_File * <code>eet_open</code> (const char *file, Eet_File_Mode mode)<br />
- <i>Open an eet file on disk, and returns a handle to it. </i><br />
- EAPI Eet_File * <code>eet_memopen_read</code> (const void *data, size_t size)<br />
- <i>Open an eet file directly from a memory location. </i><br />
- EAPI Eet_File_Mode <code>eet_mode_get</code> (Eet_File *ef)<br />
- <i>Get the mode an Eet_File was opened with. </i><br />
- EAPI Eet_Error <code>eet_close</code> (Eet_File *ef)<br />
- <i>Close an eet file handle and flush and writes pending. </i><br />
- EAPI Eet_Key * <code>eet_identity_open</code> (const char *certificate_file, const char *private_key_file, <code>Eet_Key_Password_Callback</code> cb)<br />
- <i>Create an Eet_Key needed for signing an eet file. </i><br />
- EAPI void <code>eet_identity_close</code> (Eet_Key *key)<br />
- <i>Close and release all ressource used by an Eet_Key. </i><br />
- EAPI Eet_Error <code>eet_identity_set</code> (Eet_File *ef, Eet_Key *key)<br />
- <i>Set a key to sign a file. </i><br />
- EAPI void <code>eet_identity_print</code> (Eet_Key *key, FILE *out)<br />
- <i>Display both private and public key of an Eet_Key. </i><br />
- EAPI const void * <code>eet_identity_x509</code> (Eet_File *ef, int *der_length)<br />
- <i>Get the x509 der certificate associated with an Eet_File. </i><br />
- EAPI void <code>eet_identity_certificate_print</code> (const unsigned char *certificate, int der_length, FILE *out)<br />
- <i>Display the x509 der certificate to out. </i><br />
- EAPI Eet_Dictionary * <code>eet_dictionary_get</code> (Eet_File *ef)<br />
- <i>Return a handle to the shared string dictionary of the Eet file. </i><br />
- EAPI int <code>eet_dictionary_string_check</code> (Eet_Dictionary *ed, const char *string)<br />
- <i>Check if a given string comes from a given dictionary. </i><br />
- EAPI void * <code>eet_read</code> (Eet_File *ef, const char *name, int *size_ret)<br />
- <i>Read a specified entry from an eet file and return data. </i><br />
- EAPI const void * <code>eet_read_direct</code> (Eet_File *ef, const char *name, int *size_ret)<br />
- <i>Read a specified entry from an eet file and return data. </i><br />
- EAPI int <code>eet_write</code> (Eet_File *ef, const char *name, const void *data, int size, int compress)<br />
- <i>Write a specified entry to an eet file handle. </i><br />
- EAPI int <code>eet_delete</code> (Eet_File *ef, const char *name)<br />
- <i>Delete a specified entry from an Eet file being written or re-written. </i><br />
- EAPI char ** <code>eet_list</code> (Eet_File *ef, const char *glob, int *count_ret)<br />
- <i>List all entries in eet file matching shell glob. </i><br />
- EAPI int <code>eet_num_entries</code> (Eet_File *ef)<br />
- <i>Return the number of entries in the specified eet file. </i><br />
- EAPI int <code>eet_data_image_header_read</code> (Eet_File *ef, const char *name, unsigned int *w, unsigned int *h, int *alpha, int *compress, int *quality, int *lossy)<br />
- <i>Read just the header data for an image and dont decode the pixels. </i><br />
- EAPI void * <code>eet_data_image_read</code> (Eet_File *ef, const char *name, unsigned int *w, unsigned int *h, int *alpha, int *compress, int *quality, int *lossy)<br />
- <i>Read image data from the named key in the eet file. </i><br />
- EAPI int <code>eet_data_image_read_to_surface</code> (Eet_File *ef, const char *name, unsigned int src_x, unsigned int src_y, unsigned int *d, unsigned int w, unsigned int h, unsigned int row_stride, int *alpha, int *compress, int *quality, int *lossy)<br />
- <i>Read image data from the named key in the eet file. </i><br />
- EAPI int <code>eet_data_image_write</code> (Eet_File *ef, const char *name, const void *data, unsigned int w, unsigned int h, int alpha, int compress, int quality, int lossy)<br />
- <i>Write image data to the named key in an eet file. </i><br />
- EAPI int <code>eet_data_image_header_decode</code> (const void *data, int size, unsigned int *w, unsigned int *h, int *alpha, int *compress, int *quality, int *lossy)<br />
- <i>Decode Image data header only to get information. </i><br />
- EAPI void * <code>eet_data_image_decode</code> (const void *data, int size, unsigned int *w, unsigned int *h, int *alpha, int *compress, int *quality, int *lossy)<br />
- <i>Decode Image data into pixel data. </i><br />
- EAPI int <code>eet_data_image_decode_to_surface</code> (const void *data, int size, unsigned int src_x, unsigned int src_y, unsigned int *d, unsigned int w, unsigned int h, unsigned int row_stride, int *alpha, int *compress, int *quality, int *lossy)<br />
- <i>Decode Image data into pixel data. </i><br />
- EAPI void * <code>eet_data_image_encode</code> (const void *data, int *size_ret, unsigned int w, unsigned int h, int alpha, int compress, int quality, int lossy)<br />
- <i>Encode image data for storage or transmission. </i><br />
- EAPI Eet_Data_Descriptor * <code>eet_data_descriptor_new</code> (const char *name, int size, void *(*func_list_next)(void *l), void *(*func_list_append)(void *l, void *d), void *(*func_list_data)(void *l), void *(*func_list_free)(void *l), void(*func_hash_foreach)(void *h, int(*func)(void *h, const char *k, void *dt, void *fdt), void *fdt), void *(*func_hash_add)(void *h, const char *k, void *d), void(*func_hash_free)(void *h))<br />
- <i>Create a new empty data structure descriptor. </i><br />
- EAPI void <code>eet_data_descriptor_free</code> (Eet_Data_Descriptor *edd)<br />
- <i>This function frees a data descriptor when it is not needed anymore. </i><br />
- EAPI void <code>eet_data_descriptor_element_add</code> (Eet_Data_Descriptor *edd, const char *name, int type, int group_type, int offset, int count, const char *counter_name, Eet_Data_Descriptor *subtype)<br />
- <i>This function is an internal used by macros. </i><br />
- EAPI void * <code>eet_data_read</code> (Eet_File *ef, Eet_Data_Descriptor *edd, const char *name)<br />
- <i>Read a data structure from an eet file and decodes it. </i><br />
- EAPI int <code>eet_data_write</code> (Eet_File *ef, Eet_Data_Descriptor *edd, const char *name, const void *data, int compress)<br />
- <i>Write a data structure from memory and store in an eet file. </i><br />
- EAPI int <code>eet_data_text_dump</code> (const void *data_in, int size_in, void(*dumpfunc)(void *data, const char *str), void *dumpdata)<br />
- <i>Dump an eet encoded data structure into ascii text. </i><br />
- EAPI void * <code>eet_data_text_undump</code> (const char *text, int textlen, int *size_ret)<br />
- <i>Take an ascii encoding from </i><code>eet_data_text_dump()</code> and re-encode in binary.<br />
- EAPI int <code>eet_data_dump</code> (Eet_File *ef, const char *name, void(*dumpfunc)(void *data, const char *str), void *dumpdata)<br />
- <i>Dump an eet encoded data structure from an eet file into ascii text. </i><br />
- EAPI int <code>eet_data_undump</code> (Eet_File *ef, const char *name, const char *text, int textlen, int compress)<br />
- <i>Take an ascii encoding from </i><code>eet_data_dump()</code> and re-encode in binary.<br />
- EAPI void * <code>eet_data_descriptor_decode</code> (Eet_Data_Descriptor *edd, const void *data_in, int size_in)<br />
- <i>Decode a data structure from an arbitary location in memory. </i><br />
- EAPI void * <code>eet_data_descriptor_encode</code> (Eet_Data_Descriptor *edd, const void *data_in, int *size_ret)<br />
+<p>EAPI int <code>eet_init</code> (void)<br/>
+ <i>Initialize the EET library. </i><br/>
+ EAPI int <code>eet_shutdown</code> (void)<br/>
+ <i>Shut down the EET library. </i><br/>
+ EAPI void <code>eet_clearcache</code> (void)<br/>
+ <i>Clear eet cache. </i><br/>
+ EAPI Eet_File * <code>eet_open</code> (const char *file, Eet_File_Mode mode)<br/>
+ <i>Open an eet file on disk, and returns a handle to it. </i><br/>
+ EAPI Eet_File * <code>eet_memopen_read</code> (const void *data, size_t size)<br/>
+ <i>Open an eet file directly from a memory location. </i><br/>
+ EAPI Eet_File_Mode <code>eet_mode_get</code> (Eet_File *ef)<br/>
+ <i>Get the mode an Eet_File was opened with. </i><br/>
+ EAPI Eet_Error <code>eet_close</code> (Eet_File *ef)<br/>
+ <i>Close an eet file handle and flush and writes pending. </i><br/>
+ EAPI Eet_Key * <code>eet_identity_open</code> (const char *certificate_file, const char *private_key_file, <code>Eet_Key_Password_Callback</code> cb)<br/>
+ <i>Create an Eet_Key needed for signing an eet file. </i><br/>
+ EAPI void <code>eet_identity_close</code> (Eet_Key *key)<br/>
+ <i>Close and release all ressource used by an Eet_Key. </i><br/>
+ EAPI Eet_Error <code>eet_identity_set</code> (Eet_File *ef, Eet_Key *key)<br/>
+ <i>Set a key to sign a file. </i><br/>
+ EAPI void <code>eet_identity_print</code> (Eet_Key *key, FILE *out)<br/>
+ <i>Display both private and public key of an Eet_Key. </i><br/>
+ EAPI const void * <code>eet_identity_x509</code> (Eet_File *ef, int *der_length)<br/>
+ <i>Get the x509 der certificate associated with an Eet_File. </i><br/>
+ EAPI void <code>eet_identity_certificate_print</code> (const unsigned char *certificate, int der_length, FILE *out)<br/>
+ <i>Display the x509 der certificate to out. </i><br/>
+ EAPI Eet_Dictionary * <code>eet_dictionary_get</code> (Eet_File *ef)<br/>
+ <i>Return a handle to the shared string dictionary of the Eet file. </i><br/>
+ EAPI int <code>eet_dictionary_string_check</code> (Eet_Dictionary *ed, const char *string)<br/>
+ <i>Check if a given string comes from a given dictionary. </i><br/>
+ EAPI void * <code>eet_read</code> (Eet_File *ef, const char *name, int *size_ret)<br/>
+ <i>Read a specified entry from an eet file and return data. </i><br/>
+ EAPI const void * <code>eet_read_direct</code> (Eet_File *ef, const char *name, int *size_ret)<br/>
+ <i>Read a specified entry from an eet file and return data. </i><br/>
+ EAPI int <code>eet_write</code> (Eet_File *ef, const char *name, const void *data, int size, int compress)<br/>
+ <i>Write a specified entry to an eet file handle. </i><br/>
+ EAPI int <code>eet_delete</code> (Eet_File *ef, const char *name)<br/>
+ <i>Delete a specified entry from an Eet file being written or re-written. </i><br/>
+ EAPI char ** <code>eet_list</code> (Eet_File *ef, const char *glob, int *count_ret)<br/>
+ <i>List all entries in eet file matching shell glob. </i><br/>
+ EAPI int <code>eet_num_entries</code> (Eet_File *ef)<br/>
+ <i>Return the number of entries in the specified eet file. </i><br/>
+ EAPI int <code>eet_data_image_header_read</code> (Eet_File *ef, const char *name, unsigned int *w, unsigned int *h, int *alpha, int *compress, int *quality, int *lossy)<br/>
+ <i>Read just the header data for an image and dont decode the pixels. </i><br/>
+ EAPI void * <code>eet_data_image_read</code> (Eet_File *ef, const char *name, unsigned int *w, unsigned int *h, int *alpha, int *compress, int *quality, int *lossy)<br/>
+ <i>Read image data from the named key in the eet file. </i><br/>
+ EAPI int <code>eet_data_image_read_to_surface</code> (Eet_File *ef, const char *name, unsigned int src_x, unsigned int src_y, unsigned int *d, unsigned int w, unsigned int h, unsigned int row_stride, int *alpha, int *compress, int *quality, int *lossy)<br/>
+ <i>Read image data from the named key in the eet file. </i><br/>
+ EAPI int <code>eet_data_image_write</code> (Eet_File *ef, const char *name, const void *data, unsigned int w, unsigned int h, int alpha, int compress, int quality, int lossy)<br/>
+ <i>Write image data to the named key in an eet file. </i><br/>
+ EAPI int <code>eet_data_image_header_decode</code> (const void *data, int size, unsigned int *w, unsigned int *h, int *alpha, int *compress, int *quality, int *lossy)<br/>
+ <i>Decode Image data header only to get information. </i><br/>
+ EAPI void * <code>eet_data_image_decode</code> (const void *data, int size, unsigned int *w, unsigned int *h, int *alpha, int *compress, int *quality, int *lossy)<br/>
+ <i>Decode Image data into pixel data. </i><br/>
+ EAPI int <code>eet_data_image_decode_to_surface</code> (const void *data, int size, unsigned int src_x, unsigned int src_y, unsigned int *d, unsigned int w, unsigned int h, unsigned int row_stride, int *alpha, int *compress, int *quality, int *lossy)<br/>
+ <i>Decode Image data into pixel data. </i><br/>
+ EAPI void * <code>eet_data_image_encode</code> (const void *data, int *size_ret, unsigned int w, unsigned int h, int alpha, int compress, int quality, int lossy)<br/>
+ <i>Encode image data for storage or transmission. </i><br/>
+ EAPI Eet_Data_Descriptor * <code>eet_data_descriptor_new</code> (const char *name, int size, void *(*func_list_next)(void *l), void *(*func_list_append)(void *l, void *d), void *(*func_list_data)(void *l), void *(*func_list_free)(void *l), void(*func_hash_foreach)(void *h, int(*func)(void *h, const char *k, void *dt, void *fdt), void *fdt), void *(*func_hash_add)(void *h, const char *k, void *d), void(*func_hash_free)(void *h))<br/>
+ <i>Create a new empty data structure descriptor. </i><br/>
+ EAPI void <code>eet_data_descriptor_free</code> (Eet_Data_Descriptor *edd)<br/>
+ <i>This function frees a data descriptor when it is not needed anymore. </i><br/>
+ EAPI void <code>eet_data_descriptor_element_add</code> (Eet_Data_Descriptor *edd, const char *name, int type, int group_type, int offset, int count, const char *counter_name, Eet_Data_Descriptor *subtype)<br/>
+ <i>This function is an internal used by macros. </i><br/>
+ EAPI void * <code>eet_data_read</code> (Eet_File *ef, Eet_Data_Descriptor *edd, const char *name)<br/>
+ <i>Read a data structure from an eet file and decodes it. </i><br/>
+ EAPI int <code>eet_data_write</code> (Eet_File *ef, Eet_Data_Descriptor *edd, const char *name, const void *data, int compress)<br/>
+ <i>Write a data structure from memory and store in an eet file. </i><br/>
+ EAPI int <code>eet_data_text_dump</code> (const void *data_in, int size_in, void(*dumpfunc)(void *data, const char *str), void *dumpdata)<br/>
+ <i>Dump an eet encoded data structure into ascii text. </i><br/>
+ EAPI void * <code>eet_data_text_undump</code> (const char *text, int textlen, int *size_ret)<br/>
+ <i>Take an ascii encoding from </i><code>eet_data_text_dump()</code> and re-encode in binary.<br/>
+ EAPI int <code>eet_data_dump</code> (Eet_File *ef, const char *name, void(*dumpfunc)(void *data, const char *str), void *dumpdata)<br/>
+ <i>Dump an eet encoded data structure from an eet file into ascii text. </i><br/>
+ EAPI int <code>eet_data_undump</code> (Eet_File *ef, const char *name, const char *text, int textlen, int compress)<br/>
+ <i>Take an ascii encoding from </i><code>eet_data_dump()</code> and re-encode in binary.<br/>
+ EAPI void * <code>eet_data_descriptor_decode</code> (Eet_Data_Descriptor *edd, const void *data_in, int size_in)<br/>
+ <i>Decode a data structure from an arbitary location in memory. </i><br/>
+ EAPI void * <code>eet_data_descriptor_encode</code> (Eet_Data_Descriptor *edd, const void *data_in, int *size_ret)<br/>
  <i>Encode a dsata struct to memory and return that encoded data. </i></p>
 <h2>Detailed Description</h2>
 <p>The file that provides the eet functions. </p>
@@ -156,10 +156,10 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Add a fixed size array type to a data descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>edd</i> The data descriptor to add the type to.<br />
- <i>struct_type</i> The type of the struct.<br />
- <i>name</i> The string name to use to encode/decode this member (must be a constant global and never change).<br />
- <i>member</i> The struct member itself to be encoded.<br />
+<dd><i>edd</i> The data descriptor to add the type to.<br/>
+ <i>struct_type</i> The type of the struct.<br/>
+ <i>name</i> The string name to use to encode/decode this member (must be a constant global and never change).<br/>
+ <i>member</i> The struct member itself to be encoded.<br/>
  <i>subtype</i> The type of hash member to add.</dd></dl>
 <p> This macro lets you easily add a fixed size array of other data types. All the parameters are the same as for <code>EET_DATA_DESCRIPTOR_ADD_BASIC()</code>, with the subtype being the exception. This must be the data descriptor of the element that is in each member of the hash to be stored. </p>
 <p> <code>Since:</code></p>
@@ -171,10 +171,10 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Add a basic data element to a data descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>edd</i> The data descriptor to add the type to.<br />
- <i>struct_type</i> The type of the struct.<br />
- <i>name</i> The string name to use to encode/decode this member (must be a constant global and never change).<br />
- <i>member</i> The struct member itself to be encoded.<br />
+<dd><i>edd</i> The data descriptor to add the type to.<br/>
+ <i>struct_type</i> The type of the struct.<br/>
+ <i>name</i> The string name to use to encode/decode this member (must be a constant global and never change).<br/>
+ <i>member</i> The struct member itself to be encoded.<br/>
  <i>type</i> The type of the member to encode.</dd></dl>
 <p> This macro is a convenience macro provided to add a member to the data descriptor edd. The type of the structure is provided as the struct_type parameter (for example: struct my_struct). The name parameter defines a string that will be used to uniquely name that member of the struct (it is suggested to use the struct member itself). The member parameter is the actual struct member itself (for eet_dictionary_string_check * example: values), and type is the basic data type of the member which must be one of: EET_T_CHAR, EET_T_SHORT, EET_T_INT, EET_T_LONG_LONG, EET_T_FLOAT, EET_T_DOUBLE, EET_T_UCHAR, EET_T_USHORT, EET_T_UINT, EET_T_ULONG_LONG or EET_T_STRING. </p>
 <p> <code>Since:</code></p>
@@ -186,10 +186,10 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Add a hash type to a data descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>edd</i> The data descriptor to add the type to.<br />
- <i>struct_type</i> The type of the struct.<br />
- <i>name</i> The string name to use to encode/decode this member (must be a constant global and never change).<br />
- <i>member</i> The struct member itself to be encoded.<br />
+<dd><i>edd</i> The data descriptor to add the type to.<br/>
+ <i>struct_type</i> The type of the struct.<br/>
+ <i>name</i> The string name to use to encode/decode this member (must be a constant global and never change).<br/>
+ <i>member</i> The struct member itself to be encoded.<br/>
  <i>subtype</i> The type of hash member to add.</dd></dl>
 <p> This macro lets you easily add a hash of other data types. All the parameters are the same as for <code>EET_DATA_DESCRIPTOR_ADD_BASIC()</code>, with the subtype being the exception. This must be the data descriptor of the element that is in each member of the hash to be stored. </p>
 <p> <code>Since:</code></p>
@@ -201,10 +201,10 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Add a linked list type to a data descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>edd</i> The data descriptor to add the type to.<br />
- <i>struct_type</i> The type of the struct.<br />
- <i>name</i> The string name to use to encode/decode this member (must be a constant global and never change).<br />
- <i>member</i> The struct member itself to be encoded.<br />
+<dd><i>edd</i> The data descriptor to add the type to.<br/>
+ <i>struct_type</i> The type of the struct.<br/>
+ <i>name</i> The string name to use to encode/decode this member (must be a constant global and never change).<br/>
+ <i>member</i> The struct member itself to be encoded.<br/>
  <i>subtype</i> The type of linked list member to add.</dd></dl>
 <p> This macro lets you easily add a linked list of other data types. All the parameters are the same as for <code>EET_DATA_DESCRIPTOR_ADD_BASIC()</code>, with the subtype being the exception. This must be the data descriptor of the element that is in each member of the linked list to be stored. </p>
 <p> <code>Since:</code></p>
@@ -216,10 +216,10 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Add a sub-element type to a data descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>edd</i> The data descriptor to add the type to.<br />
- <i>struct_type</i> The type of the struct.<br />
- <i>name</i> The string name to use to encode/decode this member (must be a constant global and never change).<br />
- <i>member</i> The struct member itself to be encoded.<br />
+<dd><i>edd</i> The data descriptor to add the type to.<br/>
+ <i>struct_type</i> The type of the struct.<br/>
+ <i>name</i> The string name to use to encode/decode this member (must be a constant global and never change).<br/>
+ <i>member</i> The struct member itself to be encoded.<br/>
  <i>subtype</i> The type of sub-type struct to add.</dd></dl>
 <p> This macro lets you easily add a sub-type (a struct that&#8217;s pointed to by this one). All the parameters are the same as for <code>EET_DATA_DESCRIPTOR_ADD_BASIC()</code>, with the subtype being the exception. This must be the data descriptor of the struct that is pointed to by this element. </p>
 <p> <code>Since:</code></p>
@@ -231,10 +231,10 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Add a variable size array type to a data descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>edd</i> The data descriptor to add the type to.<br />
- <i>struct_type</i> The type of the struct.<br />
- <i>name</i> The string name to use to encode/decode this member (must be a constant global and never change).<br />
- <i>member</i> The struct member itself to be encoded.<br />
+<dd><i>edd</i> The data descriptor to add the type to.<br/>
+ <i>struct_type</i> The type of the struct.<br/>
+ <i>name</i> The string name to use to encode/decode this member (must be a constant global and never change).<br/>
+ <i>member</i> The struct member itself to be encoded.<br/>
  <i>subtype</i> The type of hash member to add.</dd></dl>
 <p> This macro lets you easily add a fixed size array of other data types. All the parameters are the same as for <code>EET_DATA_DESCRIPTOR_ADD_BASIC()</code>, with the subtype being the exception. This must be the data descriptor of the element that is in each member of the hash to be stored. </p>
 <p> <code>Since:</code></p>
@@ -267,8 +267,8 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Decode a data structure from an arbitary location in memory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>edd</i> The data descriptor to use when decoding.<br />
- <i>data_in</i> The pointer to the data to decode into a struct.<br />
+<dd><i>edd</i> The data descriptor to use when decoding.<br/>
+ <i>data_in</i> The pointer to the data to decode into a struct.<br/>
  <i>size_in</i> The size of the data pointed to in bytes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -290,8 +290,8 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Encode a dsata struct to memory and return that encoded data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>edd</i> The data descriptor to use when encoding.<br />
- <i>data_in</i> The pointer to the struct to encode into data.<br />
+<dd><i>edd</i> The data descriptor to use when encoding.<br/>
+ <i>data_in</i> The pointer to the struct to encode into data.<br/>
  <i>size_ret</i> A pointer to the an int to be filled with the decoded size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -316,14 +316,14 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Create a new empty data structure descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> The string name of this data structure (most be a global constant and never change).<br />
- <i>size</i> The size of the struct (in bytes).<br />
- <i>func_list_next</i> The function to get the next list node.<br />
- <i>func_list_append</i> The function to append a member to a list.<br />
- <i>func_list_data</i> The function to get the data from a list node.<br />
- <i>func_list_free</i> The function to free an entire linked list.<br />
- <i>func_hash_foreach</i> The function to iterate through all hash table entries.<br />
- <i>func_hash_add</i> The function to add a member to a hash table.<br />
+<dd><i>name</i> The string name of this data structure (most be a global constant and never change).<br/>
+ <i>size</i> The size of the struct (in bytes).<br/>
+ <i>func_list_next</i> The function to get the next list node.<br/>
+ <i>func_list_append</i> The function to append a member to a list.<br/>
+ <i>func_list_data</i> The function to get the data from a list node.<br/>
+ <i>func_list_free</i> The function to free an entire linked list.<br/>
+ <i>func_hash_foreach</i> The function to iterate through all hash table entries.<br/>
+ <i>func_hash_add</i> The function to add a member to a hash table.<br/>
  <i>func_hash_free</i> The function to free an entire hash table.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -456,9 +456,9 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Dump an eet encoded data structure from an eet file into ascii text. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> A valid eet file handle.<br />
- <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br />
- <i>dumpfunc</i> The function to call passed a string when new data is converted to text<br />
+<dd><i>ef</i> A valid eet file handle.<br/>
+ <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br/>
+ <i>dumpfunc</i> The function to call passed a string when new data is converted to text<br/>
  <i>dumpdata</i> The data to pass to the dumpfunc callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -471,13 +471,13 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Decode Image data into pixel data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> The encoded pixel data.<br />
- <i>size</i> The size, in bytes, of the encoded pixel data.<br />
- <i>w</i> A pointer to the unsigned int to hold the width in pixels.<br />
- <i>h</i> A pointer to the unsigned int to hold the height in pixels.<br />
- <i>alpha</i> A pointer to the int to hold the alpha flag.<br />
- <i>compress</i> A pointer to the int to hold the compression amount.<br />
- <i>quality</i> A pointer to the int to hold the quality amount.<br />
+<dd><i>data</i> The encoded pixel data.<br/>
+ <i>size</i> The size, in bytes, of the encoded pixel data.<br/>
+ <i>w</i> A pointer to the unsigned int to hold the width in pixels.<br/>
+ <i>h</i> A pointer to the unsigned int to hold the height in pixels.<br/>
+ <i>alpha</i> A pointer to the int to hold the alpha flag.<br/>
+ <i>compress</i> A pointer to the int to hold the compression amount.<br/>
+ <i>quality</i> A pointer to the int to hold the quality amount.<br/>
  <i>lossy</i> A pointer to the int to hold the lossiness flag.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -492,17 +492,17 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Decode Image data into pixel data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> The encoded pixel data.<br />
- <i>size</i> The size, in bytes, of the encoded pixel data.<br />
- <i>src_x</i> The starting x coordinate from where to dump the stream.<br />
- <i>src_y</i> The starting y coordinate from where to dump the stream.<br />
- <i>d</i> A pointer to the pixel surface.<br />
- <i>w</i> The expected width in pixels of the pixel surface to decode.<br />
- <i>h</i> The expected height in pixels of the pixel surface to decode.<br />
- <i>row_stride</i> The length of a pixels line in the destination surface.<br />
- <i>alpha</i> A pointer to the int to hold the alpha flag.<br />
- <i>compress</i> A pointer to the int to hold the compression amount.<br />
- <i>quality</i> A pointer to the int to hold the quality amount.<br />
+<dd><i>data</i> The encoded pixel data.<br/>
+ <i>size</i> The size, in bytes, of the encoded pixel data.<br/>
+ <i>src_x</i> The starting x coordinate from where to dump the stream.<br/>
+ <i>src_y</i> The starting y coordinate from where to dump the stream.<br/>
+ <i>d</i> A pointer to the pixel surface.<br/>
+ <i>w</i> The expected width in pixels of the pixel surface to decode.<br/>
+ <i>h</i> The expected height in pixels of the pixel surface to decode.<br/>
+ <i>row_stride</i> The length of a pixels line in the destination surface.<br/>
+ <i>alpha</i> A pointer to the int to hold the alpha flag.<br/>
+ <i>compress</i> A pointer to the int to hold the compression amount.<br/>
+ <i>quality</i> A pointer to the int to hold the quality amount.<br/>
  <i>lossy</i> A pointer to the int to hold the lossiness flag.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -517,13 +517,13 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Encode image data for storage or transmission. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> A pointer to the image pixel data.<br />
- <i>size_ret</i> A pointer to an int to hold the size of the returned data.<br />
- <i>w</i> The width of the image in pixels.<br />
- <i>h</i> The height of the image in pixels.<br />
- <i>alpha</i> The alpha channel flag.<br />
- <i>compress</i> The compression amount.<br />
- <i>quality</i> The quality encoding amount.<br />
+<dd><i>data</i> A pointer to the image pixel data.<br/>
+ <i>size_ret</i> A pointer to an int to hold the size of the returned data.<br/>
+ <i>w</i> The width of the image in pixels.<br/>
+ <i>h</i> The height of the image in pixels.<br/>
+ <i>alpha</i> The alpha channel flag.<br/>
+ <i>compress</i> The compression amount.<br/>
+ <i>quality</i> The quality encoding amount.<br/>
  <i>lossy</i> The lossiness flag.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -538,13 +538,13 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Decode Image data header only to get information. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> The encoded pixel data.<br />
- <i>size</i> The size, in bytes, of the encoded pixel data.<br />
- <i>w</i> A pointer to the unsigned int to hold the width in pixels.<br />
- <i>h</i> A pointer to the unsigned int to hold the height in pixels.<br />
- <i>alpha</i> A pointer to the int to hold the alpha flag.<br />
- <i>compress</i> A pointer to the int to hold the compression amount.<br />
- <i>quality</i> A pointer to the int to hold the quality amount.<br />
+<dd><i>data</i> The encoded pixel data.<br/>
+ <i>size</i> The size, in bytes, of the encoded pixel data.<br/>
+ <i>w</i> A pointer to the unsigned int to hold the width in pixels.<br/>
+ <i>h</i> A pointer to the unsigned int to hold the height in pixels.<br/>
+ <i>alpha</i> A pointer to the int to hold the alpha flag.<br/>
+ <i>compress</i> A pointer to the int to hold the compression amount.<br/>
+ <i>quality</i> A pointer to the int to hold the quality amount.<br/>
  <i>lossy</i> A pointer to the int to hold the lossiness flag.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -559,13 +559,13 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Read just the header data for an image and dont decode the pixels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> A valid eet file handle opened for reading.<br />
- <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br />
- <i>w</i> A pointer to the unsigned int to hold the width in pixels.<br />
- <i>h</i> A pointer to the unsigned int to hold the height in pixels.<br />
- <i>alpha</i> A pointer to the int to hold the alpha flag.<br />
- <i>compress</i> A pointer to the int to hold the compression amount.<br />
- <i>quality</i> A pointer to the int to hold the quality amount.<br />
+<dd><i>ef</i> A valid eet file handle opened for reading.<br/>
+ <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br/>
+ <i>w</i> A pointer to the unsigned int to hold the width in pixels.<br/>
+ <i>h</i> A pointer to the unsigned int to hold the height in pixels.<br/>
+ <i>alpha</i> A pointer to the int to hold the alpha flag.<br/>
+ <i>compress</i> A pointer to the int to hold the compression amount.<br/>
+ <i>quality</i> A pointer to the int to hold the quality amount.<br/>
  <i>lossy</i> A pointer to the int to hold the lossiness flag.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -580,13 +580,13 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Read image data from the named key in the eet file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> A valid eet file handle opened for reading.<br />
- <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br />
- <i>w</i> A pointer to the unsigned int to hold the width in pixels.<br />
- <i>h</i> A pointer to the unsigned int to hold the height in pixels.<br />
- <i>alpha</i> A pointer to the int to hold the alpha flag.<br />
- <i>compress</i> A pointer to the int to hold the compression amount.<br />
- <i>quality</i> A pointer to the int to hold the quality amount.<br />
+<dd><i>ef</i> A valid eet file handle opened for reading.<br/>
+ <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br/>
+ <i>w</i> A pointer to the unsigned int to hold the width in pixels.<br/>
+ <i>h</i> A pointer to the unsigned int to hold the height in pixels.<br/>
+ <i>alpha</i> A pointer to the int to hold the alpha flag.<br/>
+ <i>compress</i> A pointer to the int to hold the compression amount.<br/>
+ <i>quality</i> A pointer to the int to hold the quality amount.<br/>
  <i>lossy</i> A pointer to the int to hold the lossiness flag.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -601,17 +601,17 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Read image data from the named key in the eet file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> A valid eet file handle opened for reading.<br />
- <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br />
- <i>src_x</i> The starting x coordinate from where to dump the stream.<br />
- <i>src_y</i> The starting y coordinate from where to dump the stream.<br />
- <i>d</i> A pointer to the pixel surface.<br />
- <i>w</i> The expected width in pixels of the pixel surface to decode.<br />
- <i>h</i> The expected height in pixels of the pixel surface to decode.<br />
- <i>row_stride</i> The length of a pixels line in the destination surface.<br />
- <i>alpha</i> A pointer to the int to hold the alpha flag.<br />
- <i>compress</i> A pointer to the int to hold the compression amount.<br />
- <i>quality</i> A pointer to the int to hold the quality amount.<br />
+<dd><i>ef</i> A valid eet file handle opened for reading.<br/>
+ <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br/>
+ <i>src_x</i> The starting x coordinate from where to dump the stream.<br/>
+ <i>src_y</i> The starting y coordinate from where to dump the stream.<br/>
+ <i>d</i> A pointer to the pixel surface.<br/>
+ <i>w</i> The expected width in pixels of the pixel surface to decode.<br/>
+ <i>h</i> The expected height in pixels of the pixel surface to decode.<br/>
+ <i>row_stride</i> The length of a pixels line in the destination surface.<br/>
+ <i>alpha</i> A pointer to the int to hold the alpha flag.<br/>
+ <i>compress</i> A pointer to the int to hold the compression amount.<br/>
+ <i>quality</i> A pointer to the int to hold the quality amount.<br/>
  <i>lossy</i> A pointer to the int to hold the lossiness flag.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -626,14 +626,14 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Write image data to the named key in an eet file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> A valid eet file handle opened for writing.<br />
- <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br />
- <i>data</i> A pointer to the image pixel data.<br />
- <i>w</i> The width of the image in pixels.<br />
- <i>h</i> The height of the image in pixels.<br />
- <i>alpha</i> The alpha channel flag.<br />
- <i>compress</i> The compression amount.<br />
- <i>quality</i> The quality encoding amount.<br />
+<dd><i>ef</i> A valid eet file handle opened for writing.<br/>
+ <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br/>
+ <i>data</i> A pointer to the image pixel data.<br/>
+ <i>w</i> The width of the image in pixels.<br/>
+ <i>h</i> The height of the image in pixels.<br/>
+ <i>alpha</i> The alpha channel flag.<br/>
+ <i>compress</i> The compression amount.<br/>
+ <i>quality</i> The quality encoding amount.<br/>
  <i>lossy</i> The lossiness flag.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -648,8 +648,8 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Read a data structure from an eet file and decodes it. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> The eet file handle to read from.<br />
- <i>edd</i> The data descriptor handle to use when decoding.<br />
+<dd><i>ef</i> The eet file handle to read from.<br/>
+ <i>edd</i> The data descriptor handle to use when decoding.<br/>
  <i>name</i> The key the data is stored under in the eet file.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -663,9 +663,9 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Dump an eet encoded data structure into ascii text. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data_in</i> The pointer to the data to decode into a struct.<br />
- <i>size_in</i> The size of the data pointed to in bytes.<br />
- <i>dumpfunc</i> The function to call passed a string when new data is converted to text<br />
+<dd><i>data_in</i> The pointer to the data to decode into a struct.<br/>
+ <i>size_in</i> The size of the data pointed to in bytes.<br/>
+ <i>dumpfunc</i> The function to call passed a string when new data is converted to text<br/>
  <i>dumpdata</i> The data to pass to the dumpfunc callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -697,8 +697,8 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Take an ascii encoding from <code>eet_data_text_dump()</code> and re-encode in binary. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>text</i> The pointer to the string data to parse and encode.<br />
- <i>textlen</i> The size of the string in bytes (not including 0 byte terminator).<br />
+<dd><i>text</i> The pointer to the string data to parse and encode.<br/>
+ <i>textlen</i> The size of the string in bytes (not including 0 byte terminator).<br/>
  <i>size_ret</i> This gets filled in with the encoded data blob size in bytes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -711,10 +711,10 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Take an ascii encoding from <code>eet_data_dump()</code> and re-encode in binary. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> A valid eet file handle.<br />
- <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br />
- <i>text</i> The pointer to the string data to parse and encode.<br />
- <i>textlen</i> The size of the string in bytes (not including 0 byte terminator).<br />
+<dd><i>ef</i> A valid eet file handle.<br/>
+ <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br/>
+ <i>text</i> The pointer to the string data to parse and encode.<br/>
+ <i>textlen</i> The size of the string in bytes (not including 0 byte terminator).<br/>
  <i>compress</i> Compression flags (1 == compress, 0 = don&#8217;t compress).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -728,10 +728,10 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Write a data structure from memory and store in an eet file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> The eet file handle to write to.<br />
- <i>edd</i> The data descriptor to use when encoding.<br />
- <i>name</i> The key to store the data under in the eet file.<br />
- <i>data</i> A pointer to the data structure to ssave and encode.<br />
+<dd><i>ef</i> The eet file handle to write to.<br/>
+ <i>edd</i> The data descriptor to use when encoding.<br/>
+ <i>name</i> The key to store the data under in the eet file.<br/>
+ <i>data</i> A pointer to the data structure to ssave and encode.<br/>
  <i>compress</i> Compression flags for storage.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -744,7 +744,7 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Delete a specified entry from an Eet file being written or re-written. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> A valid eet file handle opened for writing.<br />
+<dd><i>ef</i> A valid eet file handle opened for writing.<br/>
  <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -771,7 +771,7 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Check if a given string comes from a given dictionary. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ed</i> A valid dictionary handle<br />
+<dd><i>ed</i> A valid dictionary handle<br/>
  <i>string</i> A valid 0 byte terminated C string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -825,8 +825,8 @@ description: "Eet.h – The file that provides the eet functions."
 <p>List all entries in eet file matching shell glob. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> A valid eet file handle.<br />
- <i>glob</i> A shell glob to match against.<br />
+<dd><i>ef</i> A valid eet file handle.<br/>
+ <i>glob</i> A shell glob to match against.<br/>
  <i>count_ret</i> Number of entries found to match.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -871,7 +871,7 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Open an eet file on disk, and returns a handle to it. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>file</i> The file path to the eet file. eg: &#8216;/tmp/file.eet&#8217;.<br />
+<dd><i>file</i> The file path to the eet file. eg: &#8216;/tmp/file.eet&#8217;.<br/>
  <i>mode</i> The mode for opening. Either EET_FILE_MODE_READ, EET_FILE_MODE_WRITE or EET_FILE_MODE_READ_WRITE.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -919,8 +919,8 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Read a specified entry from an eet file and return data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> A valid eet file handle opened for reading.<br />
- <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br />
+<dd><i>ef</i> A valid eet file handle opened for reading.<br/>
+ <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br/>
  <i>size_ret</i> Number of bytes read from entry and returned.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -934,8 +934,8 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Read a specified entry from an eet file and return data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> A valid eet file handle opened for reading.<br />
- <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br />
+<dd><i>ef</i> A valid eet file handle opened for reading.<br/>
+ <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br/>
  <i>size_ret</i> Number of bytes read from entry and returned.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -957,10 +957,10 @@ description: "Eet.h – The file that provides the eet functions."
 <p>Write a specified entry to an eet file handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> A valid eet file handle opened for writing.<br />
- <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br />
- <i>data</i> Pointer to the data to be stored.<br />
- <i>size</i> Length in bytes in the data to be stored.<br />
+<dd><i>ef</i> A valid eet file handle opened for writing.<br/>
+ <i>name</i> Name of the entry. eg: &#8216;/base/file_i_want&#8217;.<br/>
+ <i>data</i> Pointer to the data to be stored.<br/>
+ <i>size</i> Length in bytes in the data to be stored.<br/>
  <i>compress</i> Compression flags (1 == compress, 0 = don&#8217;t compress).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

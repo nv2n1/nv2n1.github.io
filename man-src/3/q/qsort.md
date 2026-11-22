@@ -46,11 +46,11 @@ void qsort_r(void *base, size_t nmemb, size_t size,
 <h2>Notes</h2>
 <p>To compare C strings, the comparison function can call <code><a href="/docs/linux/man/3-strcmp/">strcmp</a></code>(3), as shown in the example below.</p>
 <h2>Examples</h2>
-<p>For one example of use, see the example under <code><a href="/docs/linux/man/3-bsearch/">bsearch</a></code>(3). Another example is the following program, which sorts the strings given in its command-line arguments: #include &lt;stdio.h&gt;<br />
-#include &lt;stdlib.h&gt;<br />
-#include &lt;string.h&gt; static int cmpstringp(const void *p1, const void *p2) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;The actual arguments to this function are&nbsp;&quot;pointers to<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pointers to char&quot;, but&nbsp;<a href="/docs/linux/man/3-strcmp/">strcmp</a>(3)&nbsp;arguments are&nbsp;&quot;pointers<br />
+<p>For one example of use, see the example under <code><a href="/docs/linux/man/3-bsearch/">bsearch</a></code>(3). Another example is the following program, which sorts the strings given in its command-line arguments: #include &lt;stdio.h&gt;<br/>
+#include &lt;stdlib.h&gt;<br/>
+#include &lt;string.h&gt; static int cmpstringp(const void *p1, const void *p2) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;The actual arguments to this function are&nbsp;&quot;pointers to<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pointers to char&quot;, but&nbsp;<a href="/docs/linux/man/3-strcmp/">strcmp</a>(3)&nbsp;arguments are&nbsp;&quot;pointers<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;to char&quot;, hence the following cast plus dereference&nbsp;*/ </p>
 <pre><code>return strcmp(*(const char **)p1, *(const char **)p2);
 }

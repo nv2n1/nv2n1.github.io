@@ -30,7 +30,7 @@ description: "PAPI_set_debug –"
 </dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i><br />
+<dd><i>PAPI_OK</i><br/>
  <i>PAPI_EINVAL</i> The debug level is invalid. </dd>
 <p>&nbsp;<wbr>The current debug level is used by both the internal error and debug message handler subroutines.&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>The debug handler is only used if the library was compiled with -DDEBUG.&nbsp;<wbr> </p>

@@ -18,7 +18,7 @@ description: "cpclean – Remove wrong control points by statistical methods"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-o</code> output.pto</dt>
-<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &#8216;&lt;filename&gt;_clean.pto&#8217;.</dd>
+<dd> Output Hugin PTO file. Default: &#8216;&lt;filename&gt;_clean.pto&#8217;.</dd>
 <dt><code>-n</code> num</dt>
 <dd> distance factor for checking (default: 2)</dd>
 <dt><code>-p</code></dt>

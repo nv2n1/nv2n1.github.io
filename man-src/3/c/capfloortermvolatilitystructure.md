@@ -13,22 +13,22 @@ description: "QuantLib::CapFloorTermVolatilityStructure – Cap/floor term-volat
 <p> Inherits <code>QuantLib::VolatilityTermStructure</code>. </p>
 <p> Inherited by <code>CapFloorTermVolCurve</code>, <code>CapFloorTermVolSurface</code>, and <code>ConstantCapFloorTermVolatility</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors</code><br />
+<p><code>Constructors</code><br/>
  See the <code>TermStructure</code> documentation for issues regarding constructors. </p>
-<p> <code>CapFloorTermVolatilityStructure</code> (const <code>Calendar</code> &amp;cal, <code>BusinessDayConvention</code> bdc, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
- <i>default constructor </i><br />
- <code>CapFloorTermVolatilityStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal, <code>BusinessDayConvention</code> bdc, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
- <i>initialize with a fixed reference date </i><br />
- <code>CapFloorTermVolatilityStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, <code>BusinessDayConvention</code> bdc, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
+<p> <code>CapFloorTermVolatilityStructure</code> (const <code>Calendar</code> &amp;cal, <code>BusinessDayConvention</code> bdc, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
+ <i>default constructor </i><br/>
+ <code>CapFloorTermVolatilityStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal, <code>BusinessDayConvention</code> bdc, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
+ <i>initialize with a fixed reference date </i><br/>
+ <code>CapFloorTermVolatilityStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, <code>BusinessDayConvention</code> bdc, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
  <i>calculate the reference date based on the global evaluation date </i> </p>
 <p> <code>Volatility</code> </p>
-<p> <code>Volatility</code> <code>volatility</code> (const <code>Period</code> &amp;length, Rate strike, bool extrapolate=false) const<br />
- <i>returns the volatility for a given cap/floor length and strike rate </i><br />
+<p> <code>Volatility</code> <code>volatility</code> (const <code>Period</code> &amp;length, Rate strike, bool extrapolate=false) const<br/>
+ <i>returns the volatility for a given cap/floor length and strike rate </i><br/>
  <code>Volatility</code> <code>volatility</code> (const <code>Date</code> &amp;end, Rate strike, bool extrapolate=false) const </p>
-<p> <code>Volatility</code> <code>volatility</code> (Time t, Rate strike, bool extrapolate=false) const<br />
+<p> <code>Volatility</code> <code>volatility</code> (Time t, Rate strike, bool extrapolate=false) const<br/>
  <i>returns the volatility for a given end time and strike rate </i></p>
 <h3>Protected Member Functions</h3>
-<p>virtual <code>Volatility</code> <code>volatilityImpl</code> (Time length, Rate strike) const =0<br />
+<p>virtual <code>Volatility</code> <code>volatilityImpl</code> (Time length, Rate strike) const =0<br/>
  <i>implements the actual volatility calculation in derived classes </i></p>
 <h2>Detailed Description</h2>
 <p>Cap/floor term-volatility structure. </p>

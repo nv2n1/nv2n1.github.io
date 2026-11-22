@@ -10,7 +10,7 @@ description: "ldns_str2period"
 
 <p> ldns_str2period </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> uint32_t ldns_str2period(const char *nptr, const char **endptr); </p>

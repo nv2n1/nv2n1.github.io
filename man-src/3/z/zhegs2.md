@@ -10,7 +10,7 @@ description: "zhegs2.f –"
 <p>zhegs2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhegs2</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br />
+<p>subroutine <code>zhegs2</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br/>
  <i></i><code>ZHEGS2</code> reduces a Hermitian definite generalized eigenproblem to standard form, using the factorization results obtained from cpotrf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhegs2 (integerITYPE, characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

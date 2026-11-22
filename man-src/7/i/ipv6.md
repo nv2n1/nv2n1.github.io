@@ -17,11 +17,11 @@ udp6_socket = socket(AF_INET6, SOCK_DGRAM, protocol);</code></pre>
 <h2>Description</h2>
 <p>Linux 2.2 optionally implements the Internet Protocol, version 6. This man page contains a description of the IPv6 basic API as implemented by the Linux kernel and glibc 2.1. The interface is based on the BSD sockets interface; see <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7). The IPv6 API aims to be mostly compatible with the IPv4 API (see <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7)). Only differences are described in this man page. To bind an <code>AF_INET6</code> socket to any process, the local address should be copied from the <i>in6addr_any</i> variable which has <i>in6_addr</i> type. In static initializations, <code>IN6ADDR_ANY_INIT</code> may also be used, which expands to a constant expression. Both of them are in network byte order. The IPv6 loopback address (::1) is available in the global <i>in6addr_loopback</i> variable. For initializations, <code>IN6ADDR_LOOPBACK_INIT</code> should be used. IPv4 connections can be handled with the v6 API by using the v4-mapped-on-v6 address type; thus a program needs to support only this API type to support both protocols. This is handled transparently by the address handling functions in the C library. IPv4 and IPv6 share the local port space. When you get an IPv4 connection or packet to an IPv6 socket, its source address will be mapped to v6 and it will be mapped to v6.</p>
 <h3>Address format</h3>
-<p>struct sockaddr_in6 {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sa_family_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sin6_family;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;AF_INET6&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in_port_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sin6_port;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;port number&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sin6_flowinfo;&nbsp;/*&nbsp;IPv6 flow information&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in6_addr sin6_addr;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;IPv6 address&nbsp;*/<br />
+<p>struct sockaddr_in6 {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sa_family_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sin6_family;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;AF_INET6&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in_port_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sin6_port;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;port number&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sin6_flowinfo;&nbsp;/*&nbsp;IPv6 flow information&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in6_addr sin6_addr;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;IPv6 address&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sin6_scope_id;&nbsp;/*&nbsp;Scope ID&nbsp;(new in 2.4)&nbsp;*/ }; </p>
 <pre><code>struct in6_addr {
     unsigned char s6_addr[16]; /* IPv6 address */

@@ -16,53 +16,53 @@ description: "sc::Function –"
 <h3>Public Member Functions</h3>
 <p><code>Function</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>Function</code> (const <code>Function</code> &amp;) </p>
-<p> <code>Function</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;, double funcacc=DBL_EPSILON, double gradacc=DBL_EPSILON, double hessacc=DBL_EPSILON)<br />
- <i>The keyval constructor reads the following keywords:. </i><br />
+<p> <code>Function</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;, double funcacc=DBL_EPSILON, double gradacc=DBL_EPSILON, double hessacc=DBL_EPSILON)<br/>
+ <i>The keyval constructor reads the following keywords:. </i><br/>
  <code>Function</code> &amp; <code>operator=</code> (const <code>Function</code> &amp;) </p>
-<p> <code>Ref</code>&lt; <code>SCMatrixKit</code> &gt; <code>matrixkit</code> () const<br />
- <i>Return the </i><code>SCMatrixKit</code> used to construct vectors and matrices.<br />
- <code>RefSCDimension</code> <code>dimension</code> () const<br />
- <i>Return the </i><code>SCDimension</code> of the problem.<br />
- virtual void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- virtual double <code>value</code> ()<br />
- <i>Return the value of the function. </i><br />
- int <code>value_needed</code> () const<br />
- <i>Returns nonzero if the current value is not up-to-date. </i><br />
- int <code>do_value</code> (int)<br />
- <i>If passed a nonzero number, compute the value the next time </i><code>compute()</code> is called.<br />
+<p> <code>Ref</code>&lt; <code>SCMatrixKit</code> &gt; <code>matrixkit</code> () const<br/>
+ <i>Return the </i><code>SCMatrixKit</code> used to construct vectors and matrices.<br/>
+ <code>RefSCDimension</code> <code>dimension</code> () const<br/>
+ <i>Return the </i><code>SCDimension</code> of the problem.<br/>
+ virtual void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ virtual double <code>value</code> ()<br/>
+ <i>Return the value of the function. </i><br/>
+ int <code>value_needed</code> () const<br/>
+ <i>Returns nonzero if the current value is not up-to-date. </i><br/>
+ int <code>do_value</code> (int)<br/>
+ <i>If passed a nonzero number, compute the value the next time </i><code>compute()</code> is called.<br/>
  <code>AccResultdouble</code> &amp; <code>value_result</code> () </p>
-<p> virtual void <code>set_desired_value_accuracy</code> (double)<br />
- <i>Set the accuracy to which the value is to be computed. </i><br />
- virtual double <code>actual_value_accuracy</code> () const<br />
- <i>Return the accuracy with which the value has been computed. </i><br />
- virtual double <code>desired_value_accuracy</code> () const<br />
- <i>Return the accuracy with which the value is to be computed. </i><br />
- virtual void <code>guess_hessian</code> (<code>RefSymmSCMatrix</code> &amp;)<br />
- <i></i><code>Compute</code> a quick, approximate hessian.<br />
+<p> virtual void <code>set_desired_value_accuracy</code> (double)<br/>
+ <i>Set the accuracy to which the value is to be computed. </i><br/>
+ virtual double <code>actual_value_accuracy</code> () const<br/>
+ <i>Return the accuracy with which the value has been computed. </i><br/>
+ virtual double <code>desired_value_accuracy</code> () const<br/>
+ <i>Return the accuracy with which the value is to be computed. </i><br/>
+ virtual void <code>guess_hessian</code> (<code>RefSymmSCMatrix</code> &amp;)<br/>
+ <i></i><code>Compute</code> a quick, approximate hessian.<br/>
  virtual <code>RefSymmSCMatrix</code> <code>inverse_hessian</code> (<code>RefSymmSCMatrix</code> &amp;) </p>
-<p> virtual int <code>value_implemented</code> () const<br />
- <i>Information about the availability of values, gradients, and hessians. </i><br />
+<p> virtual int <code>value_implemented</code> () const<br/>
+ <i>Information about the availability of values, gradients, and hessians. </i><br/>
  virtual int <code>gradient_implemented</code> () const </p>
 <p> virtual int <code>hessian_implemented</code> () const </p>
-<p> virtual void <code>set_x</code> (const <code>RefSCVector</code> &amp;)<br />
- <i>Set and retrieve the coordinate values. </i><br />
+<p> virtual void <code>set_x</code> (const <code>RefSCVector</code> &amp;)<br/>
+ <i>Set and retrieve the coordinate values. </i><br/>
  <code>RefSCVector</code> <code>get_x</code> () const </p>
 <p> const <code>RefSCVector</code> &amp; <code>get_x_no_copy</code> () const </p>
-<p> virtual <code>Ref</code>&lt; <code>NonlinearTransform</code> &gt; <code>change_coordinates</code> ()<br />
- <i>An optimizer can call change coordinates periodically to give the function an opportunity to change its coordinate system. </i><br />
- virtual void <code>print</code> (std::ostream &amp;=ExEnv::out0()) const<br />
- <i>Print information about the object. </i> <code>Gradient Members</code><br />
- These are analogous to the routines that deal with values, but work with gradients instead.<br />
+<p> virtual <code>Ref</code>&lt; <code>NonlinearTransform</code> &gt; <code>change_coordinates</code> ()<br/>
+ <i>An optimizer can call change coordinates periodically to give the function an opportunity to change its coordinate system. </i><br/>
+ virtual void <code>print</code> (std::ostream &amp;=ExEnv::out0()) const<br/>
+ <i>Print information about the object. </i> <code>Gradient Members</code><br/>
+ These are analogous to the routines that deal with values, but work with gradients instead.<br/>
  virtual <code>RefSCVector</code> <code>gradient</code> () </p>
 <p> int <code>gradient_needed</code> () const </p>
 <p> int <code>do_gradient</code> (int) </p>
 <p> virtual void <code>set_desired_gradient_accuracy</code> (double) </p>
 <p> virtual double <code>actual_gradient_accuracy</code> () const </p>
 <p> virtual double <code>desired_gradient_accuracy</code> () const </p>
-<p> <code>AccResultRefSCVector</code> &amp; <code>gradient_result</code> ()<br />
- <code>Hessian Members</code><br />
- These are analogous to the routines that deal with values, but work with the hessian instead.<br />
+<p> <code>AccResultRefSCVector</code> &amp; <code>gradient_result</code> ()<br/>
+ <code>Hessian Members</code><br/>
+ These are analogous to the routines that deal with values, but work with the hessian instead.<br/>
  virtual <code>RefSymmSCMatrix</code> <code>hessian</code> () </p>
 <p> int <code>hessian_needed</code> () const </p>
 <p> int <code>do_hessian</code> (int) </p>
@@ -71,34 +71,34 @@ description: "sc::Function –"
 <p> virtual double <code>desired_hessian_accuracy</code> () const </p>
 <p> <code>AccResultRefSymmSCMatrix</code> &amp; <code>hessian_result</code> ()</p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>set_matrixkit</code> (const <code>Ref</code>&lt; <code>SCMatrixKit</code> &gt; &amp;)<br />
- <i>Set the </i><code>SCMatrixKit</code> that should be used to construct the requisite vectors and matrices.<br />
+<p>virtual void <code>set_matrixkit</code> (const <code>Ref</code>&lt; <code>SCMatrixKit</code> &gt; &amp;)<br/>
+ <i>Set the </i><code>SCMatrixKit</code> that should be used to construct the requisite vectors and matrices.<br/>
  virtual void <code>set_dimension</code> (const <code>RefSCDimension</code> &amp;) </p>
-<p> <code>RefSCVector</code> &amp; <code>get_x_reference</code> ()<br />
- <i>Get read/write access to the coordinates for modification. </i><br />
- void <code>do_change_coordinates</code> (const <code>Ref</code>&lt; <code>NonlinearTransform</code> &gt; &amp;)<br />
- <i>Change the coordinate system and apply the given transform to intermediates matrices and vectors. </i> <code>Update Members</code><br />
- Update the various computable results.<br />
+<p> <code>RefSCVector</code> &amp; <code>get_x_reference</code> ()<br/>
+ <i>Get read/write access to the coordinates for modification. </i><br/>
+ void <code>do_change_coordinates</code> (const <code>Ref</code>&lt; <code>NonlinearTransform</code> &gt; &amp;)<br/>
+ <i>Change the coordinate system and apply the given transform to intermediates matrices and vectors. </i> <code>Update Members</code><br/>
+ Update the various computable results.<br/>
  virtual void <code>set_value</code> (double) </p>
 <p> virtual void <code>set_gradient</code> (<code>RefSCVector</code> &amp;) </p>
-<p> virtual void <code>set_hessian</code> (<code>RefSymmSCMatrix</code> &amp;)<br />
- <code>Accuracy Setting Members</code><br />
- Set the accuracies with which the various computables have been computed.<br />
+<p> virtual void <code>set_hessian</code> (<code>RefSymmSCMatrix</code> &amp;)<br/>
+ <code>Accuracy Setting Members</code><br/>
+ Set the accuracies with which the various computables have been computed.<br/>
  virtual void <code>set_actual_value_accuracy</code> (double) </p>
 <p> virtual void <code>set_actual_gradient_accuracy</code> (double) </p>
 <p> virtual void <code>set_actual_hessian_accuracy</code> (double)</p>
 <h3>Protected Attributes</h3>
-<p><code>Ref</code>&lt; <code>SCMatrixKit</code> &gt; <code>matrixkit_</code><br />
- <i>Used to construct new matrices. </i><br />
- <code>RefSCVector</code> <code>x_</code><br />
- <i>The variables. </i><br />
- <code>RefSCDimension</code> <code>dim_</code><br />
- <i>The dimension of x_. </i><br />
- <code>AccResultdouble</code> <code>value_</code><br />
- <i>The value of the function at x_. </i><br />
- <code>AccResultRefSCVector</code> <code>gradient_</code><br />
- <i>The gradient at x_. </i><br />
- <code>AccResultRefSymmSCMatrix</code> <code>hessian_</code><br />
+<p><code>Ref</code>&lt; <code>SCMatrixKit</code> &gt; <code>matrixkit_</code><br/>
+ <i>Used to construct new matrices. </i><br/>
+ <code>RefSCVector</code> <code>x_</code><br/>
+ <i>The variables. </i><br/>
+ <code>RefSCDimension</code> <code>dim_</code><br/>
+ <i>The dimension of x_. </i><br/>
+ <code>AccResultdouble</code> <code>value_</code><br/>
+ <i>The value of the function at x_. </i><br/>
+ <code>AccResultRefSCVector</code> <code>gradient_</code><br/>
+ <i>The gradient at x_. </i><br/>
+ <code>AccResultRefSymmSCMatrix</code> <code>hessian_</code><br/>
  <i>The hessian at x_. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>Function</code> class is an abstract base class that, given a set of coordinates, will compute a value and possibly a gradient and hessian at that <code>point</code>.</p>

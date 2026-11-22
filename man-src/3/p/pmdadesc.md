@@ -9,8 +9,8 @@ description: "pmdaDesc – get the description of a metric from a PMDA"
 
 <p><code>pmdaDesc</code> &#8211; get the description of a metric from a PMDA</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> int pmdaDesc(pmID </code><i>pmid</i>, pmDesc *<i>desc</i>, pmdaExt *<i>pmda</i>); </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>

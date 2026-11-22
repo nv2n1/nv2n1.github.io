@@ -28,11 +28,11 @@ description: "customizable_types – The SELinux customizable types configuratio
 <dd>The type defined in the policy that can be customised.</dd></dl>
 </dl>
 <h2>Example</h2>
-<p># ./contexts/customizable_types<br />
- mount_loopback_t<br />
- public_content_rw_t<br />
- public_content_t<br />
- swapfile_t<br />
+<p># ./contexts/customizable_types<br/>
+ mount_loopback_t<br/>
+ public_content_rw_t<br/>
+ public_content_t<br/>
+ swapfile_t<br/>
  sysadm_untrusted_content_t</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code>selinux_customizable_types_path</code>(3), <code>is_context_customizable</code>(3), <code><a href="/docs/linux/man/8-semanage/">semanage</a></code>(8), <code><a href="/docs/linux/man/8-setfiles/">setfiles</a></code>(8), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>

@@ -25,7 +25,7 @@ description: "removable_context – The SELinux removable devices context config
 <dd>A user, role, type and optional range (for MCS/MLS) separated by colons (:) that will be applied to removable devices.</dd></dl>
 </dl>
 <h2>Example</h2>
-<p># ./contexts/removable_contexts<br />
+<p># ./contexts/removable_contexts<br/>
  system_u:object_r:removable_t:s0</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-selinux_removable_context_path/">selinux_removable_context_path</a></code>(3), <code><a href="/docs/linux/man/5-selabel_media/">selabel_media</a></code>(5), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>

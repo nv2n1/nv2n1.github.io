@@ -34,6 +34,6 @@ description: "odf2xliff – Convert OpenDocument (ODF) files to XLIFF localizati
 <dt>-S/&#8211;timestamp</dt>
 <dd> skip conversion if the output file has newer timestamp</dd>
 <dt>&#8211;engine</dt>
-<dd> Choose whether itools (&#8211;engine=itools) or the translate toolkit (&#8211;engine=toolkit)<br />
+<dd> Choose whether itools (&#8211;engine=itools) or the translate toolkit (&#8211;engine=toolkit)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>should be used as the engine to convert an ODF file to an XLIFF file. </dd>
 </dl>

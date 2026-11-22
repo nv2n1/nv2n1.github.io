@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-tpmunsealstrerror/"
 description: "tpmUnsealFile, tpmUnsealShred, tpmUnsealStrerror – unseal routines"
 ---
 
-<p>TPM Management &#8211; tpmUnsealFile, tpmUnsealShred, tpmUnsealStrerror<br />
+<p>TPM Management &#8211; tpmUnsealFile, tpmUnsealShred, tpmUnsealStrerror<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpmUnsealFile, tpmUnsealShred, tpmUnsealStrerror &#8211; unseal routines</p>

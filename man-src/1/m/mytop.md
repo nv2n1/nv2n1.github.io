@@ -12,7 +12,7 @@ description: "mytop – display MySQL server performance info like `top’"
 <h2>SYNOPSIS</h2>
 <p> <code>mytop</code> [options]</p>
 <h2>AVAILABILITY</h2>
-<p> The latest version of <code>mytop</code> is available from <a rel="nofollow" href="http://jeremy.zawodny.com/mysql/mytop/">http://jeremy.zawodny.com/mysql/mytop/</a> it <code>might</code> also be on <font SIZE="-1">CPAN</font> as well.</p>
+<p> The latest version of <code>mytop</code> is available from <a rel="nofollow" href="http://jeremy.zawodny.com/mysql/mytop/">http://jeremy.zawodny.com/mysql/mytop/</a> it <code>might</code> also be on CPAN as well.</p>
 <h2>REQUIREMENTS</h2>
 <p> In order for <code>mytop</code> to function properly, you must have the following: </p>
 <pre>
@@ -21,20 +21,20 @@ description: "mytop – display MySQL server performance info like `top’"
   * DBI and DBD::mysql
   * Term::ReadKey from CPAN
 </pre>
-<p> Most systems are likely to have all of those installed&#8212;except for Term::ReadKey. You will need to pick that up from the <font SIZE="-1">CPAN.</font> You can pick up Term::ReadKey here: </p>
+<p> Most systems are likely to have all of those installed&#8212;except for Term::ReadKey. You will need to pick that up from the CPAN. You can pick up Term::ReadKey here: </p>
 <pre>
     <a rel="nofollow" href="http://search.cpan.org/search?dist=TermReadKey">http://search.cpan.org/search?dist=TermReadKey</a>
 </pre>
-<p> And you obviously need access to a MySQL server (version 3.22.x or 3.23.x) with the necessary security to run the <i></i><font SIZE="-1"><i>SHOW PROCESSLIST</i></font><i></i> and <i></i><font SIZE="-1"><i>SHOW GLOBAL STATUS</i></font><i></i> commands. </p>
-<p> If you are a Windows user, using ActiveState&#8217;s Perl, you can use <font SIZE="-1">PPM </font>(the Perl Package Manager) to install the MySQL and Term::ReadKey modules.</p>
+<p> And you obviously need access to a MySQL server (version 3.22.x or 3.23.x) with the necessary security to run the <i></i><i>SHOW PROCESSLIST</i><i></i> and <i></i><i>SHOW GLOBAL STATUS</i><i></i> commands. </p>
+<p> If you are a Windows user, using ActiveState&#8217;s Perl, you can use PPM (the Perl Package Manager) to install the MySQL and Term::ReadKey modules.</p>
 <h3>Optional Color Support</h3>
-<p> In additon, if you want a color <code>mytop</code> (recommended), install Term::ANSIColor from the <font SIZE="-1">CPAN:</font> </p>
+<p> In additon, if you want a color <code>mytop</code> (recommended), install Term::ANSIColor from the CPAN: </p>
 <pre>
     <a rel="nofollow" href="http://search.cpan.org/search?dist=ANSIColor">http://search.cpan.org/search?dist=ANSIColor</a>
 </pre>
 <p> Once you do, <code>mytop</code> will automatically use it. However, color is not yet working on Windows. Patches welcome. :-)</p>
 <h3>Optional Hi-Res Timing</h3>
-<p> If you want <code>mytop</code> to provide more accurate real-time queries-per-second statistics, install the Time::HiRes module from <font SIZE="-1">CPAN. </font><code>mytop</code> will automatically notice that you have it and use it rather than the standard timing mechanism.</p>
+<p> If you want <code>mytop</code> to provide more accurate real-time queries-per-second statistics, install the Time::HiRes module from CPAN. <code>mytop</code> will automatically notice that you have it and use it rather than the standard timing mechanism.</p>
 <h3>Platforms</h3>
 <p> <code>mytop</code> is known to work on: </p>
 <pre>
@@ -47,16 +47,16 @@ description: "mytop – display MySQL server performance info like `top’"
 </pre>
 <p> If you find that it works on another platform, please let me know. Given that it is all Perl code, I expect it to be rather portable to Unix and Unix-like systems. Heck, it <i>might</i> even work on Win32 systems.</p>
 <h2>DESCRIPTION</h2>
-<p> Help is always welcome in improving this software. Feel free to contact the author (see &#8220;<font SIZE="-1">AUTHOR&#8221;</font> below) with bug reports, fixes, suggestions, and comments. Additionally &#8220;<font SIZE="-1">BUGS&#8221;</font> will provide a list of things this software is not able to do yet. </p>
+<p> Help is always welcome in improving this software. Feel free to contact the author (see &#8220;AUTHOR&#8221; below) with bug reports, fixes, suggestions, and comments. Additionally &#8220;BUGS&#8221; will provide a list of things this software is not able to do yet. </p>
 <p> Having said that, here are the details on how it works and what you can do with it.</p>
 <h3>The Basics</h3>
 <p> <code>mytop</code> was inspired by the system monitoring tool <code>top</code>. I routinely use <code>top</code> on Linux, FreeBSD, and Solaris. You are likely to notice features from each of them here. </p>
-<p> <code>mytop</code> will connect to a MySQL server and periodically run the <i></i><font SIZE="-1"><i>SHOW PROCESSLIST</i></font><i></i> and <i></i><font SIZE="-1"><i>SHOW GLOBAL STATUS</i></font><i></i> commands and attempt to summarize the information from them in a useful format.</p>
+<p> <code>mytop</code> will connect to a MySQL server and periodically run the <i></i><i>SHOW PROCESSLIST</i><i></i> and <i></i><i>SHOW GLOBAL STATUS</i><i></i> commands and attempt to summarize the information from them in a useful format.</p>
 <h3>The Display</h3>
 <p> The <code>mytop</code> display screen is really broken into two parts. The top 4 lines (header) contain summary information about your MySQL server. For example, you might see something like: </p>
-<p> MySQL on localhost (4.0.13-log) up 1+11:13:00 [23:29:11]<br />
-&nbsp;<wbr>Queries: 19.3M&nbsp;<wbr>&nbsp;<wbr>qps:&nbsp;<wbr>&nbsp;<wbr>160 Slow:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1.0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Se/In/Up/De(%):&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>00/80/03/17<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>qps now:&nbsp;<wbr>&nbsp;<wbr>219 Slow qps: 0.0&nbsp;<wbr>&nbsp;<wbr>Threads:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>(&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1/&nbsp;<wbr>&nbsp;<wbr>16)&nbsp;<wbr>00/74/00/25<br />
+<p> MySQL on localhost (4.0.13-log) up 1+11:13:00 [23:29:11]<br/>
+&nbsp;<wbr>Queries: 19.3M&nbsp;<wbr>&nbsp;<wbr>qps:&nbsp;<wbr>&nbsp;<wbr>160 Slow:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1.0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Se/In/Up/De(%):&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>00/80/03/17<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>qps now:&nbsp;<wbr>&nbsp;<wbr>219 Slow qps: 0.0&nbsp;<wbr>&nbsp;<wbr>Threads:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>(&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1/&nbsp;<wbr>&nbsp;<wbr>16)&nbsp;<wbr>00/74/00/25<br/>
 &nbsp;<wbr>Key Efficiency: 99.3%&nbsp;<wbr>&nbsp;<wbr>Bps in/out: 30.5k/162.8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Now in/out: 32.7k/&nbsp;<wbr>3.3k </p>
 <p> The first line identifies the hostname of the server (localhost) and the version of MySQL it is running. The right had side shows the uptime of the MySQL server process in days+hours:minutes:seconds format (much like FreeBSD&#8217;s top) as well as the current time. </p>
 <p> The second line displays the total number of queries the server has processed, the average number of queries per second, the number of slow queries, and the percentage of Select, Insert, Update, and Delete queries. </p>
@@ -92,10 +92,10 @@ Id User Host Dbase Time Cmd Query or State-- -- -- -- -- -- -- - -- -- -- - -- -
 <dt><code>-d</code> or <code>-db</code> or <code>-database</code> database</dt>
 <dd> Use if you&#8217;d like <code>mytop</code> to connect to a specific database by default. Default: &#8220;test&#8221;.</dd>
 <dt><code>-b</code> or <code>-batch</code> or <code>-batchmode</code></dt>
-<dd> In batch mode, mytop runs only once, does not clear the screen, and places no limit on the number of lines it will print. This is suitable for running periodically (perhaps from cron) to capture the information into a file for later viewing. You might use batch mode in a <font SIZE="-1">CGI</font> script to occasionally display your MySQL server status on the web. </dd>
+<dd> In batch mode, mytop runs only once, does not clear the screen, and places no limit on the number of lines it will print. This is suitable for running periodically (perhaps from cron) to capture the information into a file for later viewing. You might use batch mode in a CGI script to occasionally display your MySQL server status on the web. </dd>
 <p> Default: unset.</p>
 <dt><code>-S</code> or <code>-socket</code> /path/to/socket</dt>
-<dd> If you&#8217;re running <code>mytop</code> on the same host as MySQL, you may wish to have it use the MySQL socket directly rather than a standard <font SIZE="-1">TCP/IP</font> connection. If you do,just specify one. </dd>
+<dd> If you&#8217;re running <code>mytop</code> on the same host as MySQL, you may wish to have it use the MySQL socket directly rather than a standard TCP/IP connection. If you do,just specify one. </dd>
 <p> Note that specifying a socket will make <code>mytop</code> ignore any host and/or port that you might have specified. If the socket does not exist (or the file specified is not a socket), this option will be ignored and <code>mytop</code> will use the hostname and port number instead. </p>
 <p> Default: none.</p>
 <dt><code>-header</code> or <code>-noheader</code></dt>
@@ -111,9 +111,9 @@ Id User Host Dbase Time Cmd Query or State-- -- -- -- -- -- -- - -- -- -- - -- -
 <dd> Specify if you want to be prompted to type in your database password. This provides a little bit more security since it not only prevents the password from viewable in a process list, but also doesn&#8217;t require the password to be stored in plain text in your ~/.mytop config file. You will <code>only</code> be prompted if a password has not been specified in your config file or through another command line option. </dd>
 <p> Default: noprompt.</p>
 <dt><code>-resolve</code></dt>
-<dd> If you have skip-resolve set on MySQL (to keep it from doing a reverse <font SIZE="-1">DNS</font> lookup on each inbound connection), mytop can replace <font SIZE="-1">IP</font> addresses with hostnames but toggling this option. </dd>
+<dd> If you have skip-resolve set on MySQL (to keep it from doing a reverse DNS lookup on each inbound connection), mytop can replace IP addresses with hostnames but toggling this option. </dd>
 <p> Default: noresolve</dl>
-<p> Command-line arguments will always take precedence over config file options. That happens because the config file is read <i></i><font SIZE="-1"><i>BEFORE</i></font><i></i> the command-line arguments are applied.</p>
+<p> Command-line arguments will always take precedence over config file options. That happens because the config file is read <i></i><i>BEFORE</i><i></i> the command-line arguments are applied.</p>
 <h3>Config File</h3>
 <p> Instead of always using bulky command-line parameters, you can also use a config file in your home directory (<tt>&quot;~/.mytop&quot;</tt>). If present, <code>mytop</code> will read it automatically. It is read <i>before</i> any of your command-line arguments are processed, so your command-line arguments will override directives in the config file. </p>
 <p> Here is a sample config file <tt>&quot;~/.mytop&quot;</tt> which implements the defaults described above. </p>
@@ -138,7 +138,7 @@ Id User Host Dbase Time Cmd Query or State-- -- -- -- -- -- -- - -- -- -- - -- -
 <dt><code>?</code></dt>
 <dd> Display help.</dd>
 <dt><code>c</code></dt>
-<dd> Show &#8220;command counters&#8221; based on the Com_* values in <font SIZE="-1">SHOW GLOBAL STATUS. </font> This is a new feature. Feedback welcome.</dd>
+<dd> Show &#8220;command counters&#8221; based on the Com_* values in SHOW GLOBAL STATUS.  This is a new feature. Feedback welcome.</dd>
 <dt><code>d</code></dt>
 <dd> Show only threads connected to a particular database.</dd>
 <dt><code>f</code></dt>
@@ -152,7 +152,7 @@ Id User Host Dbase Time Cmd Query or State-- -- -- -- -- -- -- - -- -- -- - -- -
 <dt><code>i</code></dt>
 <dd> Toggle the display of idle (sleeping) threads. If sleeping threads are filtered, the default sorting order is reversed so that the longest running queries appear at the top of the list.</dd>
 <dt><code>I</code></dt>
-<dd> Switch to InnoDB Status mode. The output of &#8220;<font SIZE="-1">SHOW INNODB STATUS&#8221;</font> will be displayed every cycle. In a future version, this may actually summarize that data rather than producing raw output.</dd>
+<dd> Switch to InnoDB Status mode. The output of &#8220;SHOW INNODB STATUS&#8221; will be displayed every cycle. In a future version, this may actually summarize that data rather than producing raw output.</dd>
 <dt><code>k</code></dt>
 <dd> Kill a thread.</dd>
 <dt><code>m</code></dt>
@@ -165,7 +165,7 @@ Id User Host Dbase Time Cmd Query or State-- -- -- -- -- -- -- - -- -- -- - -- -
 <dt><code>q</code></dt>
 <dd> Quit <code>mytop</code></dd>
 <dt><code>r</code></dt>
-<dd> Reset the server&#8217;s status counters via a <i></i><font SIZE="-1"><i>FLUSH STATUS</i></font><i></i> command.</dd>
+<dd> Reset the server&#8217;s status counters via a <i></i><i>FLUSH STATUS</i><i></i> command.</dd>
 <dt><code>s</code></dt>
 <dd> Change the sleep time (number of seconds between display refreshes).</dd>
 <dt><code>u</code></dt>
@@ -173,17 +173,17 @@ Id User Host Dbase Time Cmd Query or State-- -- -- -- -- -- -- - -- -- -- - -- -
 <p> The <code>s</code> key has a command-line counterpart: <code>-s</code>. </p>
 <p> The <code>h</code> key has two command-line counterparts: <code>-header</code> and <code>-noheader</code>.</p>
 <h2>BUGS</h2>
-<p> This is more of a <font SIZE="-1">BUGS +</font> WishList. </p>
-<p> Some performance information is not available when talking to a version 3.22.x MySQL server. Additional information (about threads mostly) was added to the output of <i></i><font SIZE="-1"><i>SHOW STATUS</i></font><i></i> in MySQL 3.23.x and <code>mytop</code> makes use of it. If the information is not available, you will simply see zeros where the real numbers should be. </p>
+<p> This is more of a BUGS + WishList. </p>
+<p> Some performance information is not available when talking to a version 3.22.x MySQL server. Additional information (about threads mostly) was added to the output of <i></i><i>SHOW STATUS</i><i></i> in MySQL 3.23.x and <code>mytop</code> makes use of it. If the information is not available, you will simply see zeros where the real numbers should be. </p>
 <p> Simply running this program will increase your overall counters (such as the number of queries run). But you may or may not view that as a bug. </p>
-<p> <code>mytop</code> consumes too much <font SIZE="-1">CPU</font> time when running (verified on older versions of Linux and FreeBSD). It&#8217;s likely a problem related to Term::ReadKey. I haven&#8217;t had time to investigate yet, so <code>mytop</code> now automatically lowers its priority when you run it. You may also think about running <code>mytop</code> on another workstation instead of your database server. However, <tt>&quot;mytop&quot;</tt> on Solaris does <code>not</code> have this problem. Newer versions of Linux and FreeBSD seem to have fixed this. </p>
+<p> <code>mytop</code> consumes too much CPU time when running (verified on older versions of Linux and FreeBSD). It&#8217;s likely a problem related to Term::ReadKey. I haven&#8217;t had time to investigate yet, so <code>mytop</code> now automatically lowers its priority when you run it. You may also think about running <code>mytop</code> on another workstation instead of your database server. However, <tt>&quot;mytop&quot;</tt> on Solaris does <code>not</code> have this problem. Newer versions of Linux and FreeBSD seem to have fixed this. </p>
 <p> You can&#8217;t specify the maximum number of threads to list. If you have many threads and a tall xterm, <code>mytop</code> will always try to display as many as it can fit. </p>
 <p> The size of most of the columns in the display has a small maximum width. If you have fairly long database/user/host names the display may appear odd. I have no good idea as to how best to deal with that yet. Suggestions are welcome. </p>
 <p> It&#8217;d be nice if you could just add <code>mytop</code> configuration directives in your <tt>&quot;my.cnf&quot;</tt> file instead of having a separate config file. </p>
 <p> You should be able to specify the columns you&#8217;d like to see in the display and the order in which they appear. If you only have one username that connects to your database, it&#8217;s probably not worth having the User column appear, for example.</p>
 <h2>AUTHOR</h2>
 <p> mytop was developed and is maintained by Jeremy D. Zawodny (Jeremy [at] Zawodny.com). </p>
-<p> If you wish to e-mail me regarding this software, <font SIZE="-1"><code>PLEASE</code></font> subscribe to the <code>mytop</code> mailing list. See the <code>mytop</code> homepage for details.</p>
+<p> If you wish to e-mail me regarding this software, <code>PLEASE</code> subscribe to the <code>mytop</code> mailing list. See the <code>mytop</code> homepage for details.</p>
 <h2>DISCLAIMER</h2>
 <p> While I use this software in my job at Yahoo!, I am solely responsible for it. Yahoo! does not necessarily support this software in any way. It is merely a personal idea which happened to be very useful in my job.</p>
 <h2>RECRUITING</h2>
@@ -213,7 +213,7 @@ Id User Host Dbase Time Cmd Query or State-- -- -- -- -- -- -- - -- -- -- - -- -
 <dt>Justin Mecham &lt;justin [at] aspect.net&gt;</dt>
 <dd> Suggested setting <tt>$0</tt> to `mytop&#8217;.</dd>
 <dt>Thorsten Kunz &lt;thorsten.kunz [at] de.tiscali.com&gt;</dt>
-<dd> Provided a fix for cases when we try remove the domain name from the display even if it is actually an <font SIZE="-1">IP</font> address.</dd>
+<dd> Provided a fix for cases when we try remove the domain name from the display even if it is actually an IP address.</dd>
 <dt>Sasha Pachev &lt;sasha [at] mysql.com&gt;</dt>
 <dd> Provided the idea of real-time queries per second in the main display.</dd>
 <dt>Paul DuBois &lt;paul [at] snake.net&gt;</dt>
@@ -234,4 +234,4 @@ Id User Host Dbase Time Cmd Query or State-- -- -- -- -- -- -- - -- -- -- - -- -
 <dd> Supplied an excellent patch to tidy up the top display. This includes showing most values in short form, such as 10k rather than 10000.</dd></dl>
 <p> See the Changes file on the <code>mytop</code> distribution page for more details on what has changed.</p>
 <h2>LICENSE</h2>
-<p> <code>mytop</code> is licensed under the <font SIZE="-1">GNU</font> General Public License version 2. For the full license information, please visit <a rel="nofollow" href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a> </p>
+<p> <code>mytop</code> is licensed under the GNU General Public License version 2. For the full license information, please visit <a rel="nofollow" href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a> </p>

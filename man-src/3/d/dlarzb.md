@@ -11,7 +11,7 @@ description: "dlarzb.f –"
 <p> dlarzb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlarzb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br />
+<p> subroutine <code>dlarzb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br/>
  <i></i><code>DLARZB</code> applies a block reflector or its transpose to a general matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarzb (characterSIDE, characterTRANS, characterDIRECT, characterSTOREV, integerM, integerN, integerK, integerL, double precision, dimension( ldv, * )V, integerLDV, double precision, dimension( ldt, * )T, integerLDT, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( ldwork, * )WORK, integerLDWORK)</h3>

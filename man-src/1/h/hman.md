@@ -10,14 +10,14 @@ description: "hman – browse the on-line manual pages"
 
 <p> hman &#8211; browse the on-line manual pages </p>
 <h2>SYNOPSIS</h2>
-<p> <code>hman</code> [ -P <i>browser</i> ] [ -H <i>host</i> ] [ <i>section</i> ] <i>name</i><br />
+<p> <code>hman</code> [ -P <i>browser</i> ] [ -H <i>host</i> ] [ <i>section</i> ] <i>name</i><br/>
  <code>hman</code> [ -P <i>browser</i> ] [ -H <i>host</i> ] [ <i>section</i> ] [ index ]</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>hman</code> script is an interface to <a href="/docs/linux/man/1-man2html/">man2html</a>(1) that allows you to enter man page requests at the command line and view the output in your favourite browser. The behaviour reminds of that of <code><a href="/docs/linux/man/1-man/">man</a></code>(1) so that many people will be able to alias <code>hman</code> to <code>man</code>. If the browser used is netscape, and an incarnation of netscape is running already, <code>hman</code> will pass the request to the existing browser. </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-P browser</code></dt>
-<dd> Specify which browser (like lynx, xmosaic, arena, chimera, netscape, amaya, &#8230;) to use. This option overrides the <code>MANHTMLPAGER</code> environment variable. The default is <code>sensible-browser</code>.<br />
+<dd> Specify which browser (like lynx, xmosaic, arena, chimera, netscape, amaya, &#8230;) to use. This option overrides the <code>MANHTMLPAGER</code> environment variable. The default is <code>sensible-browser</code>.<br/>
  A special value <i>lynxcgi</i> can be used for the non-httpd version of <code>lynx</code>, but this requires the <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1) command to be installed and approprietly configured.</dd>
 <dt><code>-H host</code></dt>
 <dd> Specify from what host to get the man pages. This option overrides the <code>MANHTMLHOST</code> environment variable. The default is <code>localhost</code>. </dd>

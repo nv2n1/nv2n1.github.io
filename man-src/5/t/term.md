@@ -15,7 +15,7 @@ description: "term – format of compiled term file."
 <p>Compiled terminfo descriptions are placed under the directory <code>/etc/terminfo</code>. Two configurations are supported (when building the <code>ncurses</code> libraries):</p>
 <dl>
 <dt><code>directory tree</code></dt>
-<dd>A two-level scheme is used to avoid a linear search of a huge <font SIZE="-1">UNIX</font> system directory: <code>/etc/terminfo/c/name</code> where <i>name</i> is the name of the terminal, and <i>c</i> is the first character of <i>name</i>. Thus, <i>act4</i> can be found in the file <code>/etc/terminfo/a/act4</code>. Synonyms for the same terminal are implemented by multiple links to the same compiled file.</dd>
+<dd>A two-level scheme is used to avoid a linear search of a huge UNIX system directory: <code>/etc/terminfo/c/name</code> where <i>name</i> is the name of the terminal, and <i>c</i> is the first character of <i>name</i>. Thus, <i>act4</i> can be found in the file <code>/etc/terminfo/a/act4</code>. Synonyms for the same terminal are implemented by multiple links to the same compiled file.</dd>
 <dt><code>hashed database</code></dt>
 <dd>Using Berkeley database, two types of records are stored: the terminfo data in the same format as stored in a directory tree with the terminfo&#8217;s primary name as a key, and records containing only aliases pointing to the primary name.</dd>
 <dd>If built to write hashed databases, <code>ncurses</code> can still read terminfo databases organized as a directory tree, but cannot write entries into the directory tree. It can write (or rewrite) entries in the hashed database.</dd>
@@ -57,17 +57,17 @@ description: "term – format of compiled term file."
 <dd></dd></dl>
 </dl>
 <p> The capabilities in the <i>boolean flags</i>, <i>numbers</i>, and <i>strings</i> sections are in the same order as the file &lt;term.h&gt;. </p>
-<p> Short integers are signed, in the range -32768 to 32767. They are stored as two 8-bit bytes. The first byte contains the least significant 8 bits of the value, and the second byte contains the most significant 8 bits. (Thus, the value represented is 256*second+first.) This format corresponds to the hardware of the <font SIZE="-1">VAX</font> and <font SIZE="-1">PDP</font>-11 (that is, little-endian machines). Machines where this does not correspond to the hardware must read the integers as two bytes and compute the little-endian value. </p>
-<p> Numbers in a terminal description, whether they are entries in the <i>numbers</i> or <i>strings</i> table, are positive integers. Boolean flags are treated as positive one-byte integers. In each case, those positive integers represent a terminal capability. The terminal compiler tic uses negative integers to handle the cases where a capability is not available:<br />
+<p> Short integers are signed, in the range -32768 to 32767. They are stored as two 8-bit bytes. The first byte contains the least significant 8 bits of the value, and the second byte contains the most significant 8 bits. (Thus, the value represented is 256*second+first.) This format corresponds to the hardware of the VAX and PDP-11 (that is, little-endian machines). Machines where this does not correspond to the hardware must read the integers as two bytes and compute the little-endian value. </p>
+<p> Numbers in a terminal description, whether they are entries in the <i>numbers</i> or <i>strings</i> table, are positive integers. Boolean flags are treated as positive one-byte integers. In each case, those positive integers represent a terminal capability. The terminal compiler tic uses negative integers to handle the cases where a capability is not available:<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If a capability is absent from this terminal, tic stores a -1 in the corresponding table.</p>
 <dl>
-<dd>The integer value -1 is represented by two bytes 0377, 0377.<br />
- Absent boolean values are represented by the byte 0 (false).<br />
+<dd>The integer value -1 is represented by two bytes 0377, 0377.<br/>
+ Absent boolean values are represented by the byte 0 (false).<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If a capability has been canceled from this terminal, tic stores a -2 in the corresponding table.</dd>
-<dd>The integer value -2 is represented by two bytes 0377, 0376.<br />
+<dd>The integer value -2 is represented by two bytes 0377, 0376.<br/>
  The boolean value -2 is represented by the byte 0376. </dd>
 <p>&nbsp;.IP&nbsp;&bull;&nbsp;4 Other negative values are illegal.</dl>
-<p> The <i>terminal names</i> section comes after the <i>header</i>. It contains the first line of the terminfo description, listing the various names for the terminal, separated by the &#8220;|&#8221; character. The <i>terminal names</i> section is terminated with an <font SIZE="-1">ASCII NUL</font> character. </p>
+<p> The <i>terminal names</i> section comes after the <i>header</i>. It contains the first line of the terminfo description, listing the various names for the terminal, separated by the &#8220;|&#8221; character. The <i>terminal names</i> section is terminated with an ASCII NUL character. </p>
 <p> The <i>boolean flags</i> section has one byte for each flag. Boolean capabilities are either 1 or 0 (true or false) according to whether the terminal supports the given capability or not. </p>
 <p> Between the <i>boolean flags</i> section and the <i>number</i> section, a null byte will be inserted, if necessary, to ensure that the <i>number</i> section begins on an even byte This is a relic of the PDP-11&#8217;s word-addressed architecture, originally designed to avoid traps induced by addressing a word on an odd byte boundary. All short integers are aligned on a short word boundary. </p>
 <p> The <i>numbers</i> section is similar to the <i>boolean flags</i> section. Each capability takes up two bytes, and is stored as a little-endian short integer. </p>
@@ -101,8 +101,8 @@ description: "term – format of compiled term file."
 <p> The extended string table contains values for string capabilities. After the end of these values, it contains the names for each of the extended capabilities in order, e.g., booleans, then numbers and finally strings. </p>
 <p> Applications which manipulate terminal data can use the definitions described in <code><a href="/docs/linux/man/3X-term_variables/">term_variables</a></code>(3X) which associate the long capability names with members of a <code>TERMTYPE</code> structure.  </p>
 <h3>EXTENDED NUMBER FORMAT</h3>
-<p> On occasion, 16-bit signed integers are not large enough. With <code>ncurses</code> 6.1, a new format was introduced by making a few changes to the legacy format: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 a different magic number (octal 01036) <br />
+<p> On occasion, 16-bit signed integers are not large enough. With <code>ncurses</code> 6.1, a new format was introduced by making a few changes to the legacy format: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 a different magic number (octal 01036) <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 changing the type for the <i>number</i> array from signed 16-bit integers to signed 32-bit integers. </p>
 <p> To maintain compatibility, the library presents the same data structures to direct users of the <code>TERMTYPE</code> structure as in previous formats. However, that cannot provide callers with the extended numbers. The library uses a similar but hidden data structure <code>TERMTYPE2</code> to provide data for the terminfo functions.  </p>
 <h2>PORTABILITY</h2>
@@ -119,8 +119,8 @@ description: "term – format of compiled term file."
 <h3>Mixed-case terminal names</h3>
 <p> A small number of terminal descriptions use uppercase characters in their names. If the underlying filesystem ignores the difference between uppercase and lowercase, <code>ncurses</code> represents the ``first character&#8217;&#8216; of the terminal name used as the intermediate level of a directory tree in (two-character) hexadecimal form.  </p>
 <h2>EXAMPLE</h2>
-<p> As an example, here is a description for the Lear-Siegler ADM-3, a popular though rather stupid early terminal: <br />
-&nbsp;.sp <br />
+<p> As an example, here is a description for the Lear-Siegler ADM-3, a popular though rather stupid early terminal: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>adm3a|lsi adm3a,
         am,
@@ -130,7 +130,7 @@ description: "term – format of compiled term file."
         home=^^, ind=^J,
  .sp .in +4
 and a hexadecimal dump of the compiled terminal description:
- .sp .in +4<font SIZE="-2">0000 1a 01 10 00 02 00 03 00 82 00 31 00 61 64 6d 33 ........ ..1.adm3
+ .sp .in +40000 1a 01 10 00 02 00 03 00 82 00 31 00 61 64 6d 33 ........ ..1.adm3
 0010 61 7c 6c 73 69 20 61 64 6d 33 61 00 00 01 50 00 a|lsi ad m3a...P.
 0020 ff ff 18 00 ff ff 00 00 02 00 ff ff ff ff 04 00 ........ ........
 0030 ff ff ff ff ff ff ff ff 0a 00 25 00 27 00 ff ff ........ ..%.'...
@@ -151,25 +151,25 @@ and a hexadecimal dump of the compiled terminal description:
 0120 ff ff ff ff ff ff 2f 00 07 00 0d 00 1a 24 3c 31 ....../. .....$&lt;1
 0130 3e 00 1b 3d 25 70 31 25 7b 33 32 7d 25 2b 25 63 &gt;..=%p1% {32}%+%c
 0140 25 70 32 25 7b 33 32 7d 25 2b 25 63 00 0a 00 1e %p2%{32} %+%c....
-0150 00 08 00 0c 00 0b 00 0a 00 ........ .</font>
+0150 00 08 00 0c 00 0b 00 0a 00 ........ .
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
 <h2>LIMITS</h2>
-<p> Some limitations: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 total compiled entries cannot exceed 4096 bytes in the legacy format. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 total compiled entries cannot exceed 32768 bytes in the extended format. <br />
+<p> Some limitations: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 total compiled entries cannot exceed 4096 bytes in the legacy format. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 total compiled entries cannot exceed 32768 bytes in the extended format. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 the name field cannot exceed 128 bytes. </p>
 <p> Compiled entries are limited to 32768 bytes because offsets into the <i>strings table</i> use two-byte integers. The legacy format could have supported 32768-byte entries, but was limited a virtual memory page&#8217;s 4096 bytes.  </p>
 <h2>FILES</h2>
-<p> /etc/terminfo/*/*<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>compiled terminal capability database<br />
+<p> /etc/terminfo/*/*<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>compiled terminal capability database<br/>
   </p>
 <h2>SEE ALSO</h2>
 <p> <code>ncurses</code>(3NCURSES), <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5).  </p>
 <h2>AUTHORS</h2>
-<p> Thomas E. Dickey <br />
- extended terminfo format for ncurses 5.0 <br />
- hashed database support for ncurses 5.6 <br />
+<p> Thomas E. Dickey <br/>
+ extended terminfo format for ncurses 5.0 <br/>
+ hashed database support for ncurses 5.6 <br/>
  extended number support for ncurses 6.1 </p>
-<p> Eric S. Raymond <br />
+<p> Eric S. Raymond <br/>
  documented legacy terminfo format, e.g., from pcurses. </p>

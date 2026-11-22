@@ -24,8 +24,8 @@ description: "blkmapd – pNFS block layout mapping daemon"
 <dd>Runs <code>blkmapd</code> in the foreground and sends output to stderr (as opposed to syslogd)</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8) </p>
-<p> RFC 5661 for the NFS version 4.1 specification.<br />
+<p> RFC 5661 for the NFS version 4.1 specification.<br/>
  RFC 5663 for the pNFS block layout specification.</p>
 <h2>Authors</h2>
-<p>Haiying Tang &lt;Tang_Haiying [at] emc.com&gt;<br />
+<p>Haiying Tang &lt;Tang_Haiying [at] emc.com&gt;<br/>
  Jim Rees &lt;rees [at] umich.edu&gt;</p>

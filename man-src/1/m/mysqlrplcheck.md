@@ -47,7 +47,7 @@ description: "mysqlrplcheck – Check Replication Prerequisitiess"
 <p> The utility runs each test in turn unless there is a fatal error preventing further testing, such as a loss of connection to the servers. </p>
 <p> Each test can complete with one of the following states: pass (the prerequisites are met), fail (the prerequisites were met but one or more errors occurred or there are exceptions to consider), or warn (the test found some unusual settings that should be examined further but may not be in error). </p>
 <p> Use the <code>&#8211;verbose</code> option to see additional information such as server IDs, lower_case_table_name settings, and the contents of the master information file on the slave. </p>
-<p> To see the values from the <code>SHOW SLAVE STATUS</code> statement, use the <code>&#8211;show-slave-status</code> option.<br />
+<p> To see the values from the <code>SHOW SLAVE STATUS</code> statement, use the <code>&#8211;show-slave-status</code> option.<br/>
 OPTIONS </p>
 <p> <code>mysqlrplcheck</code> accepts the following command-line options: </p>
 <dl>
@@ -94,7 +94,7 @@ OPTIONS </p>
 <p> The login user must have the appropriate permissions to execute <code>SHOW SLAVE STATUS</code>, <code>SHOW MASTER STATUS</code>, and <code>SHOW VARIABLES</code> on the appropriate servers. </p>
 <p> Mixing IP and hostnames is not recommended. The replication-specific utilities will attempt to compare hostnames and IP addresses as aliases for checking slave connectivity to the master. However, if your installation does not support reverse name lookup, the comparison could fail. Without the ability to do a reverse name lookup, the replication utilities could report a false negative that the slave is (not) connected to the master. </p>
 <p> For example, if you setup replication using MASTER_HOST=ubuntu.net on the slave and later connect to the slave with mysqlrplcheck and have the master specified as &#8211;master=192.168.0.6 using the valid IP address for ubuntu.net, you must have the ability to do a reverse name lookup to compare the IP (192.168.0.6) and the hostname (ubuntu.net) to determine if they are the same machine. </p>
-<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br />
+<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br/>
 EXAMPLES </p>
 <p> To check the prerequisites of a master and slave that currently are actively performing replication, use the following command: </p>
 <dl>

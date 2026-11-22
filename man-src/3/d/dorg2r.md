@@ -11,7 +11,7 @@ description: "dorg2r.f –"
 <p> dorg2r.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dorg2r</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
+<p> subroutine <code>dorg2r</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>DORG2R</code> generates all or part of the orthogonal matrix Q from a QR factorization determined by sgeqrf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dorg2r (integerM, integerN, integerK, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAU, double precision, dimension( * )WORK, integerINFO)</h3>

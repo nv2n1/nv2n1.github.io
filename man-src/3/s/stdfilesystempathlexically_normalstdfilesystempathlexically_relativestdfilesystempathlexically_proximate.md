@@ -9,10 +9,10 @@ description: "std::filesystem::path::lexically_normal,std::filesystem::path::lex
 
 <p>std::filesystem::path::lexically_normal,std::filesystem::path::lexically_relative,std::filesystem::path::lexically_proximate &#8211; std::filesystem::path::lexically_normal,std::filesystem::path::lexically_relative,std::filesystem::path::lexically_proximate</p>
 <h2>Synopsis</h2>
-<p>path lexically_normal() const; <code>(1)</code> <i>(since C++17)</i><br />
-path lexically_relative(const path&amp; base) const; <code>(2)</code> <i>(since C++17)</i><br />
-path lexically_proximate(const path&amp; base) const; <code>(3)</code> <i>(since C++17)</i><br />
-1) Returns *this converted to normal_form in its generic format<br />
+<p>path lexically_normal() const; <code>(1)</code> <i>(since C++17)</i><br/>
+path lexically_relative(const path&amp; base) const; <code>(2)</code> <i>(since C++17)</i><br/>
+path lexically_proximate(const path&amp; base) const; <code>(3)</code> <i>(since C++17)</i><br/>
+1) Returns *this converted to normal_form in its generic format<br/>
 2) Returns *this made relative to base. </p>
 <pre><code>*First, if root_name () != base.root_name() || is_absolute() != base.is_absolute() || (!has_root_directory() &amp;&amp; base.has_root_directory()), returns a default - constructed path.*Otherwise, first determines the first mismatched element of *this and base as if by auto [a, b] = mismatch(begin(), end(), base.begin(), base.end()), then
                                                                                                                                                                                                                                                                                                                                                     *if a
@@ -30,13 +30,13 @@ path lexically_proximate(const path&amp; base) const; <code>(3)</code> <i>(since
 <h2>Parameters</h2>
 <p><i>(none)</i></p>
 <h2>Return value</h2>
-<p>1) The normal form of the path<br />
-2) The relative form of the path<br />
+<p>1) The normal form of the path<br/>
+2) The relative form of the path<br/>
 3) The proximate form of the path </p>
 <h2>Exceptions</h2>
 <p><i>(none)</i></p>
 <h2>Notes</h2>
-<p>These conversions are purely lexical. They do not check that the paths exist, do not follow symlinks, and do not access the filesystem at all. For symlink-following counterparts of lexically_relative and lexically_proximate, see relative and proximate.<br />
+<p>These conversions are purely lexical. They do not check that the paths exist, do not follow symlinks, and do not access the filesystem at all. For symlink-following counterparts of lexically_relative and lexically_proximate, see relative and proximate.<br/>
 On Windows, the returned path has backslashes (the preferred separators), </p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -56,11 +56,11 @@ int main()
     assert(fs::path(&quot;a/b&quot;).lexically_relative(&quot;c/d&quot;) == &quot;../../a/b&quot;);
 }
 </code></pre>
-<p>Defect reports<br />
-The following behavior-changing defect reports were applied retroactively to previously published C++ standards.<br />
-DR Applied to Behavior as published Correct behavior<br />
+<p>Defect reports<br/>
+The following behavior-changing defect reports were applied retroactively to previously published C++ standards.<br/>
+DR Applied to Behavior as published Correct behavior<br/>
 LWG_3096 C++17 trailing &quot;/&quot; and &quot;/.&quot; are handled incorrectly corrected </p>
 <h2>See also</h2>
-<p>relative composes a relative path<br />
-proximate <i>(function)</i><br />
+<p>relative composes a relative path<br/>
+proximate <i>(function)</i><br/>
 <i>(C++17)</i> </p>

@@ -128,20 +128,20 @@ description: "pki_tomcat_selinux – Security Enhanced Linux Policy for the pki_
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux pki_tomcat policy is very flexible allowing users to setup their pki_tomcat processes in as secure a method as possible. </p>
 <p> EQUIVALENCE DIRECTORIES</code> </p>
 <p> pki_tomcat policy stores data with multiple different file context types under the /var/lib/pki-ca directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/lib/pki-ca /srv/pki-ca</code><br />
+<p> <code>semanage fcontext -a -e /var/lib/pki-ca /srv/pki-ca</code><br/>
  <code>restorecon -R -v /srv/pki-ca</code> </p>
 <p> pki_tomcat policy stores data with multiple different file context types under the /var/lib/pki-kra directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/lib/pki-kra /srv/pki-kra</code><br />
+<p> <code>semanage fcontext -a -e /var/lib/pki-kra /srv/pki-kra</code><br/>
  <code>restorecon -R -v /srv/pki-kra</code> </p>
 <p> pki_tomcat policy stores data with multiple different file context types under the /var/lib/pki-ocsp directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/lib/pki-ocsp /srv/pki-ocsp</code><br />
+<p> <code>semanage fcontext -a -e /var/lib/pki-ocsp /srv/pki-ocsp</code><br/>
  <code>restorecon -R -v /srv/pki-ocsp</code> </p>
 <p> pki_tomcat policy stores data with multiple different file context types under the /var/lib/pki-tks directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/lib/pki-tks /srv/pki-tks</code><br />
+<p> <code>semanage fcontext -a -e /var/lib/pki-tks /srv/pki-tks</code><br/>
  <code>restorecon -R -v /srv/pki-tks</code> </p>
 <p> <code>STANDARD FILE CONTEXT</code> </p>
 <p> SELinux defines the file context types for the pki_tomcat, if you wanted to store files with these types in a diffent paths, you need to execute the semanage command to sepecify alternate labeling and then use restorecon to put the labels on disk. </p>
-<p> <code>semanage fcontext -a -t pki_tomcat_var_run_t &#8216;/srv/mypki_tomcat_content(/.*)?&#8217;</code><br />
+<p> <code>semanage fcontext -a -t pki_tomcat_var_run_t &#8216;/srv/mypki_tomcat_content(/.*)?&#8217;</code><br/>
  <code>restorecon -R -v /srv/mypki_tomcat_content</code> </p>
 <p> Note: SELinux often uses regular expressions to specify labels that match multiple files. </p>
 <p> <i>The following file types are defined for pki_tomcat:</i> </p>

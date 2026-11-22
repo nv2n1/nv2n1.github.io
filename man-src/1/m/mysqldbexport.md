@@ -82,7 +82,7 @@ mysqldbexport-- server = root[at] server1 : 3306 --format = csv db1-- export = d
 <p> If you attempt to export databases on a server with GTIDs enabled (GTID_MODE = ON), a warning will be generated if the export does not include all databases. This is because the GTID statements generated include the GTIDs for all databases and not only those databases in the export. </p>
 <p> The utility will also generate a warning if you export databases on a GTID enabled server but use the <code>&#8211;skip-gtid </code> option. </p>
 <p> To make the most use of GTIDs and export/import, you should export all of the databases on the server with the <code>&#8211;all</code> option. This will generate an export file with all of the databases and the GTIDs executed to that point. </p>
-<p> Importing this file on another server will ensure that server has all of the data as well as all of the GTIDs recorded correctly in its logs.<br />
+<p> Importing this file on another server will ensure that server has all of the data as well as all of the GTIDs recorded correctly in its logs.<br/>
 OPTIONS </p>
 <p> <code>mysqldbexport</code> accepts the following command-line options: </p>
 <dl>
@@ -181,137 +181,137 @@ OPTIONS </p>
 <p> Some combinations of the options may result in errors when the export is imported later. For example, eliminating tables but not views may result in an error when a view is imported on another server. </p>
 <p> For the <code>&#8211;format</code>, <code>&#8211;export</code>, and <code>&#8211;display</code> options, the permitted values are not case sensitive. In addition, values may be specified as any unambiguous prefix of a valid value. For example, <code>&#8211;format=g</code> specifies the grid format. An error occurs if a prefix matches more than one valid value. </p>
 <p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf). </p>
-<p> If any database identifier specified as an argument contains special characters or is a reserved word, then it must be appropriately quoted with backticks (<code>`</code>). In turn, names quoted with backticks must also be quoted with single or double quotes depending on the operating system, i.e. (<code>&quot;</code>) in Windows or (<code>&#8216;</code>) in non-Windows systems, in order for the utilities to read backtick quoted identifiers as a single argument. For example, to export a database with the name <code>weird`db.name</code>, it must be specified as argument using the following syntax (in non-Windows): <code>&#8216;`weird&#8220;db.name`&#8217;</code>.<br />
+<p> If any database identifier specified as an argument contains special characters or is a reserved word, then it must be appropriately quoted with backticks (<code>`</code>). In turn, names quoted with backticks must also be quoted with single or double quotes depending on the operating system, i.e. (<code>&quot;</code>) in Windows or (<code>&#8216;</code>) in non-Windows systems, in order for the utilities to read backtick quoted identifiers as a single argument. For example, to export a database with the name <code>weird`db.name</code>, it must be specified as argument using the following syntax (in non-Windows): <code>&#8216;`weird&#8220;db.name`&#8217;</code>.<br/>
 EXAMPLES </p>
 <p> To export the definitions of the database dev from a MySQL server on the local host via port 3306, producing output consisting of <code>CREATE</code> statements, use this command: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqldbexport&#8211; server = root : pass[at] localhost&#8211; skip = GRANTS&#8211; export = DEFINITIONS util_test<br />
-#Source on localhost : &#8230; connected.<br />
-#Exporting metadata from util_test<br />
-                                      DROP DATABASE IF EXISTS util_test;<br />
-CREATE DATABASE util_test;<br />
-USE util_test;<br />
-#TABLE : util_test.t1<br />
-CREATE TABLE `t1` (<br />
-  `a` char(30) DEFAULT NULL)ENGINE = MEMORY DEFAULT CHARSET = latin1;<br />
-#TABLE : util_test.t2<br />
-CREATE TABLE `t2` (<br />
-  `a` char(30) DEFAULT NULL)ENGINE = MyISAM DEFAULT CHARSET = latin1;<br />
-#TABLE : util_test.t3<br />
-CREATE TABLE `t3` (<br />
-  `a` int(11) NOT NULL AUTO_INCREMENT,<br />
-  `b` char(30) DEFAULT NULL,<br />
-    PRIMARY KEY(`a`))ENGINE = InnoDB AUTO_INCREMENT = 4 DEFAULT CHARSET = latin1;<br />
-#TABLE : util_test.t4<br />
-CREATE TABLE `t4` (<br />
-  `c` int(11) NOT NULL,<br />
-  `d` int(11) NOT NULL,<br />
-    KEY `ref_t3` (`c`),<br />
-    CONSTRAINT `ref_t3` FOREIGN KEY(`c`) REFERENCES `t3` (`a`))ENGINE = InnoDB DEFAULT CHARSET = latin1;<br />
-#VIEW : util_test.v1<br />
-[&#8230;]<br />
+$ mysqldbexport&#8211; server = root : pass[at] localhost&#8211; skip = GRANTS&#8211; export = DEFINITIONS util_test<br/>
+#Source on localhost : &#8230; connected.<br/>
+#Exporting metadata from util_test<br/>
+                                      DROP DATABASE IF EXISTS util_test;<br/>
+CREATE DATABASE util_test;<br/>
+USE util_test;<br/>
+#TABLE : util_test.t1<br/>
+CREATE TABLE `t1` (<br/>
+  `a` char(30) DEFAULT NULL)ENGINE = MEMORY DEFAULT CHARSET = latin1;<br/>
+#TABLE : util_test.t2<br/>
+CREATE TABLE `t2` (<br/>
+  `a` char(30) DEFAULT NULL)ENGINE = MyISAM DEFAULT CHARSET = latin1;<br/>
+#TABLE : util_test.t3<br/>
+CREATE TABLE `t3` (<br/>
+  `a` int(11) NOT NULL AUTO_INCREMENT,<br/>
+  `b` char(30) DEFAULT NULL,<br/>
+    PRIMARY KEY(`a`))ENGINE = InnoDB AUTO_INCREMENT = 4 DEFAULT CHARSET = latin1;<br/>
+#TABLE : util_test.t4<br/>
+CREATE TABLE `t4` (<br/>
+  `c` int(11) NOT NULL,<br/>
+  `d` int(11) NOT NULL,<br/>
+    KEY `ref_t3` (`c`),<br/>
+    CONSTRAINT `ref_t3` FOREIGN KEY(`c`) REFERENCES `t3` (`a`))ENGINE = InnoDB DEFAULT CHARSET = latin1;<br/>
+#VIEW : util_test.v1<br/>
+[&#8230;]<br/>
 #&#8230; done.
 </dd></dl>
 <p> Similarly, to export the data of the database util_test, producing bulk insert statements, use this command: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqldbexport&#8211; server = root : pass[at] localhost&#8211; export = DATA&#8211; bulk &#8211; insert util_test<br />
-#Source on localhost : &#8230; connected.<br />
-                                                                                  USE util_test;<br />
-#Exporting data from util_test<br />
-#Data for table util_test.t1:<br />
-INSERT INTO util_test.t1 VALUES(&#8217;01 Test Basic database example&#8217;),<br />
-    (&#8217;02 Test Basic database example&#8217;),<br />
-    (&#8217;03 Test Basic database example&#8217;),<br />
-    (&#8217;04 Test Basic database example&#8217;),<br />
-    (&#8217;05 Test Basic database example&#8217;),<br />
-    (&#8217;06 Test Basic database example&#8217;),<br />
-    (&#8217;07 Test Basic database example&#8217;);<br />
-#Data for table util_test.t2:<br />
-INSERT INTO util_test.t2 VALUES(&#8217;11 Test Basic database example&#8217;),<br />
-    (&#8217;12 Test Basic database example&#8217;),<br />
-    (&#8217;13 Test Basic database example&#8217;);<br />
-#Data for table util_test.t3:<br />
-INSERT INTO util_test.t3 VALUES(1, &#8217;14 test fkeys&#8217;),<br />
-    (2, &#8217;15 test fkeys&#8217;),<br />
-    (3, &#8217;16 test fkeys&#8217;);<br />
-#Data for table util_test.t4:<br />
-INSERT INTO util_test.t4 VALUES(3, 2);<br />
+$ mysqldbexport&#8211; server = root : pass[at] localhost&#8211; export = DATA&#8211; bulk &#8211; insert util_test<br/>
+#Source on localhost : &#8230; connected.<br/>
+                                                                                  USE util_test;<br/>
+#Exporting data from util_test<br/>
+#Data for table util_test.t1:<br/>
+INSERT INTO util_test.t1 VALUES(&#8217;01 Test Basic database example&#8217;),<br/>
+    (&#8217;02 Test Basic database example&#8217;),<br/>
+    (&#8217;03 Test Basic database example&#8217;),<br/>
+    (&#8217;04 Test Basic database example&#8217;),<br/>
+    (&#8217;05 Test Basic database example&#8217;),<br/>
+    (&#8217;06 Test Basic database example&#8217;),<br/>
+    (&#8217;07 Test Basic database example&#8217;);<br/>
+#Data for table util_test.t2:<br/>
+INSERT INTO util_test.t2 VALUES(&#8217;11 Test Basic database example&#8217;),<br/>
+    (&#8217;12 Test Basic database example&#8217;),<br/>
+    (&#8217;13 Test Basic database example&#8217;);<br/>
+#Data for table util_test.t3:<br/>
+INSERT INTO util_test.t3 VALUES(1, &#8217;14 test fkeys&#8217;),<br/>
+    (2, &#8217;15 test fkeys&#8217;),<br/>
+    (3, &#8217;16 test fkeys&#8217;);<br/>
+#Data for table util_test.t4:<br/>
+INSERT INTO util_test.t4 VALUES(3, 2);<br/>
 #&#8230; done.
 </dd></dl>
 <p> If the database to be exported does not contain only InnoDB tables and you want to ensure data integrity of the exported data by locking the tables during the read step, add a <code>&#8211;locking=lock-all</code> option to the command: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqldbexport&#8211; server = root : pass[at] localhost&#8211; export = DATA&#8211; bulk &#8211; insert util_test&#8211; locking = lock &#8211; all<br />
-#Source on localhost : &#8230; connected.<br />
-                                                                                                                      USE util_test;<br />
-#Exporting data from util_test<br />
-#Data for table util_test.t1:<br />
-INSERT INTO util_test.t1 VALUES(&#8217;01 Test Basic database example&#8217;),<br />
-    (&#8217;02 Test Basic database example&#8217;),<br />
-    (&#8217;03 Test Basic database example&#8217;),<br />
-    (&#8217;04 Test Basic database example&#8217;),<br />
-    (&#8217;05 Test Basic database example&#8217;),<br />
-    (&#8217;06 Test Basic database example&#8217;),<br />
-    (&#8217;07 Test Basic database example&#8217;);<br />
-#Data for table util_test.t2:<br />
-INSERT INTO util_test.t2 VALUES(&#8217;11 Test Basic database example&#8217;),<br />
-    (&#8217;12 Test Basic database example&#8217;),<br />
-    (&#8217;13 Test Basic database example&#8217;);<br />
-#Data for table util_test.t3:<br />
-INSERT INTO util_test.t3 VALUES(1, &#8217;14 test fkeys&#8217;),<br />
-    (2, &#8217;15 test fkeys&#8217;),<br />
-    (3, &#8217;16 test fkeys&#8217;);<br />
-#Data for table util_test.t4:<br />
-INSERT INTO util_test.t4 VALUES(3, 2);<br />
+$ mysqldbexport&#8211; server = root : pass[at] localhost&#8211; export = DATA&#8211; bulk &#8211; insert util_test&#8211; locking = lock &#8211; all<br/>
+#Source on localhost : &#8230; connected.<br/>
+                                                                                                                      USE util_test;<br/>
+#Exporting data from util_test<br/>
+#Data for table util_test.t1:<br/>
+INSERT INTO util_test.t1 VALUES(&#8217;01 Test Basic database example&#8217;),<br/>
+    (&#8217;02 Test Basic database example&#8217;),<br/>
+    (&#8217;03 Test Basic database example&#8217;),<br/>
+    (&#8217;04 Test Basic database example&#8217;),<br/>
+    (&#8217;05 Test Basic database example&#8217;),<br/>
+    (&#8217;06 Test Basic database example&#8217;),<br/>
+    (&#8217;07 Test Basic database example&#8217;);<br/>
+#Data for table util_test.t2:<br/>
+INSERT INTO util_test.t2 VALUES(&#8217;11 Test Basic database example&#8217;),<br/>
+    (&#8217;12 Test Basic database example&#8217;),<br/>
+    (&#8217;13 Test Basic database example&#8217;);<br/>
+#Data for table util_test.t3:<br/>
+INSERT INTO util_test.t3 VALUES(1, &#8217;14 test fkeys&#8217;),<br/>
+    (2, &#8217;15 test fkeys&#8217;),<br/>
+    (3, &#8217;16 test fkeys&#8217;);<br/>
+#Data for table util_test.t4:<br/>
+INSERT INTO util_test.t4 VALUES(3, 2);<br/>
 #&#8230; done.
 </dd></dl>
 <p> To export a database and include the replication commands to use the current server as the master (for example, to start a new slave using the current server as the master), use the following command: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqldbexport&#8211; server = root[at] localhost : 3311 util_test&#8211; export = both&#8211; rpl &#8211; user = rpl : rpl&#8211; rpl = master &#8211; v<br />
-#Source on localhost : &#8230; connected.<br />
-#<br />
-#Stopping slave<br />
-                                                                                                                             STOP SLAVE;<br />
-#<br />
-#Source on localhost : &#8230; connected.<br />
-#Exporting metadata from util_test<br />
-DROP DATABASE IF EXISTS util_test;<br />
-CREATE DATABASE util_test;<br />
-USE util_test;<br />
-#TABLE : util_test.t1<br />
-CREATE TABLE `t1` (<br />
-  `a` char(30) DEFAULT NULL)ENGINE = MEMORY DEFAULT CHARSET = latin1;<br />
-#&#8230; done.<br />
-#Source on localhost : &#8230; connected.<br />
-USE util_test;<br />
-#Exporting data from util_test<br />
-#Data for table util_test.t1:<br />
-INSERT INTO util_test.t1 VALUES(&#8217;01 Test Basic database example&#8217;);<br />
-INSERT INTO util_test.t1 VALUES(&#8217;02 Test Basic database example&#8217;);<br />
-INSERT INTO util_test.t1 VALUES(&#8217;03 Test Basic database example&#8217;);<br />
-INSERT INTO util_test.t1 VALUES(&#8217;04 Test Basic database example&#8217;);<br />
-INSERT INTO util_test.t1 VALUES(&#8217;05 Test Basic database example&#8217;);<br />
-INSERT INTO util_test.t1 VALUES(&#8217;06 Test Basic database example&#8217;);<br />
-INSERT INTO util_test.t1 VALUES(&#8217;07 Test Basic database example&#8217;);<br />
-#&#8230; done.<br />
-#<br />
-#Connecting to the current server as master<br />
-CHANGE MASTER TO MASTER_HOST = &#8216;localhost&#8217;,<br />
-                 MASTER_USER = &#8216;rpl&#8217;,<br />
-                 MASTER_PASSWORD = &#8216;rpl&#8217;,<br />
-                 MASTER_PORT = 3311,<br />
-                 MASTER_LOG_FILE = &#8216;clone-bin.000001&#8217;,<br />
-                 MASTER_LOG_POS = 106;<br />
-#<br />
-#Starting slave<br />
-START SLAVE;<br />
+$ mysqldbexport&#8211; server = root[at] localhost : 3311 util_test&#8211; export = both&#8211; rpl &#8211; user = rpl : rpl&#8211; rpl = master &#8211; v<br/>
+#Source on localhost : &#8230; connected.<br/>
+#<br/>
+#Stopping slave<br/>
+                                                                                                                             STOP SLAVE;<br/>
+#<br/>
+#Source on localhost : &#8230; connected.<br/>
+#Exporting metadata from util_test<br/>
+DROP DATABASE IF EXISTS util_test;<br/>
+CREATE DATABASE util_test;<br/>
+USE util_test;<br/>
+#TABLE : util_test.t1<br/>
+CREATE TABLE `t1` (<br/>
+  `a` char(30) DEFAULT NULL)ENGINE = MEMORY DEFAULT CHARSET = latin1;<br/>
+#&#8230; done.<br/>
+#Source on localhost : &#8230; connected.<br/>
+USE util_test;<br/>
+#Exporting data from util_test<br/>
+#Data for table util_test.t1:<br/>
+INSERT INTO util_test.t1 VALUES(&#8217;01 Test Basic database example&#8217;);<br/>
+INSERT INTO util_test.t1 VALUES(&#8217;02 Test Basic database example&#8217;);<br/>
+INSERT INTO util_test.t1 VALUES(&#8217;03 Test Basic database example&#8217;);<br/>
+INSERT INTO util_test.t1 VALUES(&#8217;04 Test Basic database example&#8217;);<br/>
+INSERT INTO util_test.t1 VALUES(&#8217;05 Test Basic database example&#8217;);<br/>
+INSERT INTO util_test.t1 VALUES(&#8217;06 Test Basic database example&#8217;);<br/>
+INSERT INTO util_test.t1 VALUES(&#8217;07 Test Basic database example&#8217;);<br/>
+#&#8230; done.<br/>
+#<br/>
+#Connecting to the current server as master<br/>
+CHANGE MASTER TO MASTER_HOST = &#8216;localhost&#8217;,<br/>
+                 MASTER_USER = &#8216;rpl&#8217;,<br/>
+                 MASTER_PASSWORD = &#8216;rpl&#8217;,<br/>
+                 MASTER_PORT = 3311,<br/>
+                 MASTER_LOG_FILE = &#8216;clone-bin.000001&#8217;,<br/>
+                 MASTER_LOG_POS = 106;<br/>
+#<br/>
+#Starting slave<br/>
+START SLAVE;<br/>
 #
 </dd></dl>
 <p> Similarly, to export a database and include the replication commands to use the current server&#8217;s master (for example, to start a new slave using the same the master), use the following command: </p>

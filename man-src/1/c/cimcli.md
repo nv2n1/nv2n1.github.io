@@ -12,9 +12,9 @@ description: "cimcli – command line WBEM Client"
 <h2>SYNOPSIS</h2>
 <p> <i>Operation</i> [<i>OperationTarget</i>] [<i>ValueParameter</i> <i>&#8230;</i>] [ <code>-hc</code> ] [ <code>-h </code><i>operationName</i> ] [ <code>-ho</code> ] [ <code>&#8211;help</code> ] [ <code>-n </code><i>namespace</i> ] [ <code>-l </code><i>location</i> ] [ <code>-u </code><i>user </i><code>name</code> ] [ <code>-p </code><i>password</i> ] [ <code>-s</code> ] [ <code>&#8211;cert </code><i>certFilePath</i> ] [ <code>&#8211;key </code><i>keyFilePath</i> ] [ <code>&#8211;truststore </code><i>clientTrustStorePath</i> ] [ <code>&#8211;sort</code> ] [ <code>&#8211;r </code><i>repeat </i><code>count</code> ] [ <code>-delay </code><i>seconds</i> ] [ <code>&#8211;sum</code> ] [ <code>&#8211;count </code><i>object </i><code>count</code> ] [ <code>&#8211;timeout </code><i>seconds</i> ] [ <code>-o </code><i>XML|MOF|TABLE</i> ] [ <code>&#8211;verbose</code> ] [ <code>-pl </code><i>propertyList</i> ] [ <code>-niq</code> ] [ <code>-di</code> ] [ <code>-ic</code> ] [ <code>-ac </code><i>associationClassName</i> ] [ <code>-rc </code><i>resultClassName</i> ] [ <code>-r </code><i>role</i> ] [ <code>-rr </code><i>resultRole</i> ] [ <code>-f </code><i>filter</i> ] [ <code>-ql </code><i>query </i><code>language</code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;expExit </code><i>exitCode</i> ] [ <code>&nbsp;<wbr>-pt </code><i>pullTimeout</i> ] [ <code>-mr </code><i>maxObjectsToReceive</i> ] [ <code>-pullDelay </code><i>pullDelayinSec</i> ] [ <code>-mo </code><i>maxObjectCount</i> ] </p>
 <h2>DESCRIPTION</h2>
-<p> <code>cimcli</code> is a command line tool for executing CIM client operations using the CIM/XML protocol. It implements all of the DMTF CIM operations defined in the DMTF specification DSP0200 (CIM Operations over HTTP) except for the modify and create class/instance operations and includes several other operations that are useful in working with CIM Servers.<br />
+<p> <code>cimcli</code> is a command line tool for executing CIM client operations using the CIM/XML protocol. It implements all of the DMTF CIM operations defined in the DMTF specification DSP0200 (CIM Operations over HTTP) except for the modify and create class/instance operations and includes several other operations that are useful in working with CIM Servers.<br/>
 &nbsp;<wbr> <code>cimcli</code> is available for all platforms that support the Pegasus CIM Server. </p>
-<p> For the execution of the DMTF defined CIM operations (ex. enumerateInstances CIM/XML operation). <code>cimcli</code> includes as command line options all of the parameters defined in the DMTF specification. (ex. -di for deep inheritance for the enumerateInstances operation).<br />
+<p> For the execution of the DMTF defined CIM operations (ex. enumerateInstances CIM/XML operation). <code>cimcli</code> includes as command line options all of the parameters defined in the DMTF specification. (ex. -di for deep inheritance for the enumerateInstances operation).<br/>
 &nbsp;<wbr> Effective OpenPegasus 2.14 <code>cimcli</code> incorporates the pull operations defined by DMTF into its operations list . See the section on Pull Client Operations </p>
 <p> In addition to the CIM Operations defined in the DMTF specification DMTF DSP0200, <code>cimcli</code> implements a number of other operations that support testing and querying CIM servers (ex. operation to query for namespaces and another to get all instances in a namespace) which require multiple CIM Operations. The additional operations include: </p>
 <dl>
@@ -64,10 +64,10 @@ description: "cimcli – command line WBEM Client"
 <p> As an example, the input for a getInstance might be: </p>
 <dl>
 <dt>
-</dt><dd> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cimcli gi TennisPlayer.first=\&quot;Patrick\&quot;,last=\&quot;Rafter\&quot;<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>or<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cimcli gi &#8216;TennisPlayer.first=&quot;Patrick&quot;,last=&quot;Rafter&quot;&#8217;<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>or the simplified form:<br />
+</dt><dd> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cimcli gi TennisPlayer.first=\&quot;Patrick\&quot;,last=\&quot;Rafter\&quot;<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>or<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cimcli gi &#8216;TennisPlayer.first=&quot;Patrick&quot;,last=&quot;Rafter&quot;&#8217;<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>or the simplified form:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cimcli gi TennisPlayer first=Patrick last=Rafter
 </dd></dl>
 <p> In the second case, <code>cimcli</code> gets the class from the CIM Server and uses the parameters to form a correct CIMObjectPath. In the first case, generally <code>cimcli</code> uses the input path directly without getting the class from the server. The quotation marks in the first case are required by the CIMObjectPath format defined by the DMTF. </p>
@@ -100,7 +100,7 @@ description: "cimcli – command line WBEM Client"
 <dd> requires a defined keyword following the option. </dd>
 </dl>
 <h3>CONNECTION OPTIONS</h3>
-<p> The following set of options re general to all of the CIM Operations and most of the compound operations They provide parameters for the initiation or execution of the operations (ie. identify the target server and namespace and set connection security parameters).<br />
+<p> The following set of options re general to all of the CIM Operations and most of the compound operations They provide parameters for the initiation or execution of the operations (ie. identify the target server and namespace and set connection security parameters).<br/>
 &nbsp;<wbr>&nbsp;<wbr> These include:</p>
 <dl>
 <dt><code>-n [namespace]</code></dt>
@@ -140,10 +140,10 @@ description: "cimcli – command line WBEM Client"
 <dt>
 </dt><dd>
 &nbsp;<wbr>&nbsp;<wbr>&quot;Failed count test. Expected=&nbsp;<wbr>xx. Received=&nbsp;<wbr>yy&quot;&nbsp;<wbr>is output to cerr.</dd></dl>
-<p> <code>Example:</code><br />
+<p> <code>Example:</code><br/>
 cimcli en CIM_ManagedElement -count 100 </p>
-<p>&nbsp;<wbr>If the count of instances returned is not equal to 100,<br />
-&nbsp;<wbr>cimcli exits with error code 60 and the Failed count test&nbsp;<wbr><br />
+<p>&nbsp;<wbr>If the count of instances returned is not equal to 100,<br/>
+&nbsp;<wbr>cimcli exits with error code 60 and the Failed count test&nbsp;<wbr><br/>
 &nbsp;<wbr>error message.</p>
 <dt><code>&#8211;timeout [seconds]</code></dt>
 <dd> When defined, set the connect timeout [seconds] seconds rather than the default timeout.</dd>
@@ -160,17 +160,17 @@ cimcli en CIM_ManagedElement -count 100 </p>
 <p> Options that define request parameters for specific <code>cimcli</code> Operation requests. These are typically optional parameters on the CIM operation request that modify the behavior of the server to the request. This includes things like requesting localonly, deep inheritance, etc. Note that the actual behavior may be dependent on the particular operation request type. The full definition of these options is below here and their use with each specific <code>cimcli</code> operation is defined with the operations.</p>
 <dl>
 <dt><code>-pl [propertylist]</code></dt>
-<dd> String Option. Set the propertylist parameter for those operations that allow this parameter. The propertylist value for this parameter is a comma-separated list of class properties (without spaces between items). This sets the optionsl propertylist parameter on those CIM operations that allow this parameter including: getClass, getInstance, modifyInstance, enumerateInstances, associators, references, OpenEnumerateInstances, OpenReferenceInstances, and OpenAssociatorInstances. If this option is not defined on the execution of one of these operations, <code>cimcli</code> sets the propertylist parameter to NULL indicating that all properties should be returned.<br />
-&nbsp;<wbr> If a comma-separated list of one or more properties is defined as the value for this option, a propertylist with these values is set on the CIM request operation.<br />
+<dd> String Option. Set the propertylist parameter for those operations that allow this parameter. The propertylist value for this parameter is a comma-separated list of class properties (without spaces between items). This sets the optionsl propertylist parameter on those CIM operations that allow this parameter including: getClass, getInstance, modifyInstance, enumerateInstances, associators, references, OpenEnumerateInstances, OpenReferenceInstances, and OpenAssociatorInstances. If this option is not defined on the execution of one of these operations, <code>cimcli</code> sets the propertylist parameter to NULL indicating that all properties should be returned.<br/>
+&nbsp;<wbr> If a comma-separated list of one or more properties is defined as the value for this option, a propertylist with these values is set on the CIM request operation.<br/>
 &nbsp;<wbr> Since this CIM request parameter specifically allows 3 options: 1) list of properties, 2) NULL which is the indicator that all properties are to be returned, and 3) Empty which is the indicator that no properties are to be include in the response, the <code>cimcli</code> options specifically allows defining the empty option by setting propertylist to either &quot;&quot; or \&quot;\&quot;. <code>cimcli</code> accepts either an input that the command processor interprets as an empty string or as a string consisting of two quotation marks. </dd>
 <p> The syntax of propertylist is: </p>
 <p> <code>&lt;propertyName&gt;[,&lt;propertyName&gt;]* | </code> </p>
-<p> <code>Examples:</code><br />
-&nbsp;<wbr>&nbsp;<wbr>cimcli gc CIM_ManagedElement -pl Caption<br />
+<p> <code>Examples:</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>cimcli gc CIM_ManagedElement -pl Caption<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>getclass with a propertylist with one property </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>cimcli gc CIM_ManagedElement -pl Caption,Description<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>cimcli gc CIM_ManagedElement -pl Caption,Description<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>getClass with a propertylist with two properties </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>cimcli gc CIM_ManagedElement -pl&nbsp;<wbr>\&quot;\&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>cimcli gc CIM_ManagedElement -pl&nbsp;<wbr>\&quot;\&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>gc operation with empty property list&nbsp;<wbr>(return no <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> properties)</p>
 <dt><code>-niq</code></dt>
 <dd> Boolean (not_include_Qualifiers) that sets the operation parameter for include_qualifiers to false. Note that this form is required because the default for this option in the DMTF CIM Operations is true (include qualifiers). Not including this option sets the request to include qualifiers on those commands to which this option applies.</dd>
@@ -200,23 +200,23 @@ cimcli en CIM_ManagedElement -count 100 </p>
 <p> This option allows specification of filter query languages like the DMTF FQL which apply specifically to filtering instances from enumerations. </p>
 <p> WQL and CQL are not allowed with this parameter in the pull operations except for pullExecQuery. FQL is the single normalized filter query language for the pull operations. </p>
 <p> Since FQL is a required query language for systems that support the pull operations, it is the definition normally used for this option (&quot;DMTF:FQL&quot;) </p>
-<p> <code>-f [filter]</code> Optional filter for the language defined in the -ql option. The response is filtered using this filter specification. The required query language is FQL (Filter Query Language) which is a simple query language that allows only comparison between properties within an instance and literals boolean combinations of these property comparison expressions with AND and OR documented in detail in the DMTF specification DSP0212 and generally is of the form:<br />
-property comparison expression:<br />
-Scalarproperty operation scalarliteral or ScalarProperty<br />
-ArrayProperty operation arrayLiteral or ArrayProperty<br />
-ArrayProperty arrayOps scalarProperty or scalarLiteral<br />
+<p> <code>-f [filter]</code> Optional filter for the language defined in the -ql option. The response is filtered using this filter specification. The required query language is FQL (Filter Query Language) which is a simple query language that allows only comparison between properties within an instance and literals boolean combinations of these property comparison expressions with AND and OR documented in detail in the DMTF specification DSP0212 and generally is of the form:<br/>
+property comparison expression:<br/>
+Scalarproperty operation scalarliteral or ScalarProperty<br/>
+ArrayProperty operation arrayLiteral or ArrayProperty<br/>
+ArrayProperty arrayOps scalarProperty or scalarLiteral<br/>
 Arrayproperty[index]&nbsp;<wbr>operation&nbsp;<wbr>(scalarLiteral or scalarProprty or <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> ArrayProperty[index])</p>
-<p>literals: <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ScalarLteral which may be:<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> integer (decimal, hex, octal) 123, 0123, 0X1abc<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> String &quot;&#8217;&quot; chars &quot;&#8217;&quot;<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> real<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> DateTime<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> Reference<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ArrayLiteral:<br />
+<p>literals: <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ScalarLteral which may be:<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> integer (decimal, hex, octal) 123, 0123, 0X1abc<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> String &quot;&#8217;&quot; chars &quot;&#8217;&quot;<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> real<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> DateTime<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> Reference<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ArrayLiteral:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;{&quot; scalarLiteral * (&quot;,&quot; ScalarLiteral ) &quot;}&quot;</p>
-<p>&nbsp;<wbr>Operation:<br />
+<p>&nbsp;<wbr>Operation:<br/>
 &nbsp;<wbr>&nbsp;<wbr>where the operations allowed are dependent on the <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>left argument of the expression and may include:</p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>equality comparison&nbsp;<wbr>&quot;=&quot;&nbsp;<wbr>&quot;&lt;&gt;&quot;&nbsp;<wbr>&quot;LIKE&quot;&nbsp;<wbr>&quot;NOT LIKE&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> * ordering &quot;&gt;=&quot; &quot;&lt;=&quot; &quot;&gt;&quot; &quot;&lt;&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>equality comparison&nbsp;<wbr>&quot;=&quot;&nbsp;<wbr>&quot;&lt;&gt;&quot;&nbsp;<wbr>&quot;LIKE&quot;&nbsp;<wbr>&quot;NOT LIKE&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> * ordering &quot;&gt;=&quot; &quot;&lt;=&quot; &quot;&gt;&quot; &quot;&lt;&quot;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> * arrayOps &quot;ANY&quot;, &quot;EVERY&quot;</p>
 <dl>
 <dt><code>-pt [pullTimeout]</code></dt>
@@ -230,12 +230,12 @@ Arrayproperty[index]&nbsp;<wbr>operation&nbsp;<wbr>(scalarLiteral or scalarPropr
 </dl>
 <h3>ci CreateInstance Operation</h3>
 <p> The CreateInstance operation executes the DMTF CIM/XML createInstance operation request. It builds an instance of the class defined on the command line building the properties of the instance from a combination of the class retrieved from the CIM server and value parameters provided with the input. <code>cimcli</code> issues the CIM operation createInstance with the created instance It requires the [OperationTarget] parameter defining the class for which the instance is to be created and optional set of property definition (name=value) parameters that define properties and their values for the created instance. </p>
-<p> CreateInstance returns the object path of the created instance if the call to the CIM server was executed successfully. Otherwise it returns the exception from the server.<br />
+<p> CreateInstance returns the object path of the created instance if the call to the CIM server was executed successfully. Otherwise it returns the exception from the server.<br/>
 &nbsp;<wbr> <code>cimcli</code> can define property values for either scalar or array properties for any of the CIM Data types including embedded instance and embedded object types </p>
 <p> The syntax for createInstance is: </p>
 <dl>
 <dt>
-</dt><dd> <code>cimcli ci &lt;className&gt; &lt;propertyDef[,&lt;propertyDef&gt;]*</code><br />
+</dt><dd> <code>cimcli ci &lt;className&gt; &lt;propertyDef[,&lt;propertyDef&gt;]*</code><br/>
 &nbsp;<wbr> where &lt;propertyDef&gt; is defined as follows: </dd>
 <dl>
 <dt>&lt;propertyName&gt;=&lt;scalarValueString&gt;</dt>
@@ -247,7 +247,7 @@ Arrayproperty[index]&nbsp;<wbr>operation&nbsp;<wbr>(scalarLiteral or scalarPropr
 <dt>&lt;propertyName]&gt;=</dt>
 <dd> Defines a property with NULL value.</dd>
 <dt>&lt;propertyName&gt;={&lt;embeddedClassName&gt; [&lt;propertyDef&gt;]* }</dt>
-<dd> Defines a property that is an embedded instance, embedded object, or reference(CIMObjectPath) where &lt;embeddedClassName&gt; is the class name for the embedded object or instance and &lt;propertyDefinition&gt;.<br />
+<dd> Defines a property that is an embedded instance, embedded object, or reference(CIMObjectPath) where &lt;embeddedClassName&gt; is the class name for the embedded object or instance and &lt;propertyDefinition&gt;.<br/>
 &nbsp;<wbr>This syntax is recursive so that instances of embedded classes can be embedded in properties that are themselves embedded instance types.</dd>
 <dt>&lt;propertyName&gt;={&lt;embeddedClassName&gt; [&lt;propertyDef&gt;]* [}.{ [&lt;propertyDef&gt;]*]*</dt>
 <dd> Defines a property that is an array of embedded instances or embedded objects &lt;embeddedClassName&gt; is the class name for the embedded object or instance and &lt;propertyDefinition&gt;</dd></dl>
@@ -282,50 +282,50 @@ Arrayproperty[index]&nbsp;<wbr>operation&nbsp;<wbr>(scalarLiteral or scalarPropr
 <dd> Define the property multiple times. Each time the property is defined for an embedded instance (with the same property name and same class name) the new definition is appended to the array. </dd>
 <dt>&bull;</dt>
 <dd> Use the special terminator &quot;},{&quot; which allows <code>cimcli</code> to start a new instance definition (in effect using the comma separated values as in the arrays of other CIM types. </dd>
-<p> <code>Examples:</code><br />
-&nbsp;<wbr>cimcli ci CIM_xxxx ID=abc size=32 age=O12<br />
-&nbsp;<wbr>&nbsp;<wbr>Creates an instance of CIM_xxxx with&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>property ID value&nbsp;<wbr>=&nbsp;<wbr>abc,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>property size with value 32<br />
+<p> <code>Examples:</code><br/>
+&nbsp;<wbr>cimcli ci CIM_xxxx ID=abc size=32 age=O12<br/>
+&nbsp;<wbr>&nbsp;<wbr>Creates an instance of CIM_xxxx with&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>property ID value&nbsp;<wbr>=&nbsp;<wbr>abc,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>property size with value 32<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>property age with value octal 012 </p>
-<p>&nbsp;<wbr>cimcli ci CIM_xxxx ID=grrrr&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>arrayParam={abc,def,ghi,&quot;jkl mno&quot;&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>numArray=1,2,3,4<br />
-&nbsp;<wbr>&nbsp;<wbr>Creates an instance of CIM_xxxx with<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>property ID with value&nbsp;<wbr>=&nbsp;<wbr>grrr<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>property arrayParam&nbsp;<wbr>(a String array property)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>with the values<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>abc<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>def<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ghi<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>jkl mno<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>property numArray&nbsp;<wbr>(Uint32 array)&nbsp;<wbr>with<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the values&nbsp;<wbr>&nbsp;<wbr>1, 2, 3, 4<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>cimcli ci CIM_xxxx ID=blah&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>numArray=1,2,3 numArray=4,5<br />
-&nbsp;<wbr>&nbsp;<wbr>Creates an instance with the ID property and<br />
-&nbsp;<wbr>&nbsp;<wbr>the numArray property having the&nbsp;<wbr>&nbsp;<wbr>values<br />
+<p>&nbsp;<wbr>cimcli ci CIM_xxxx ID=grrrr&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>arrayParam={abc,def,ghi,&quot;jkl mno&quot;&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>numArray=1,2,3,4<br/>
+&nbsp;<wbr>&nbsp;<wbr>Creates an instance of CIM_xxxx with<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>property ID with value&nbsp;<wbr>=&nbsp;<wbr>grrr<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>property arrayParam&nbsp;<wbr>(a String array property)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>with the values<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>abc<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>def<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ghi<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>jkl mno<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>property numArray&nbsp;<wbr>(Uint32 array)&nbsp;<wbr>with<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the values&nbsp;<wbr>&nbsp;<wbr>1, 2, 3, 4<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>cimcli ci CIM_xxxx ID=blah&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>numArray=1,2,3 numArray=4,5<br/>
+&nbsp;<wbr>&nbsp;<wbr>Creates an instance with the ID property and<br/>
+&nbsp;<wbr>&nbsp;<wbr>the numArray property having the&nbsp;<wbr>&nbsp;<wbr>values<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1,2,3,4,5 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>cimcli ci&nbsp;<wbr>&nbsp;<wbr>Test_yyy id=301&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>comment=&quot;test with multiple embedded instances&quot;&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>embeddedInst{Test_CLITestEmbedded1 Id=302&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>comment=&quot;First property with embedded instance&quot;&nbsp;<wbr>}&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>embeddedInst2{Test_CLITestEmbedded2 Id=303 name=fred&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>comment=&quot;Second property with embedded instance&quot;&nbsp;<wbr>}<br />
-&nbsp;<wbr>&nbsp;<wbr>Creates an instance of class Test_yyy with a single scalar<br />
-&nbsp;<wbr>&nbsp;<wbr>property&nbsp;<wbr>(comment)&nbsp;<wbr>and two embedded instance properties<br />
-&nbsp;<wbr>&nbsp;<wbr>(embeddedInst and embeddedInst2). Each of the embedded<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>cimcli ci&nbsp;<wbr>&nbsp;<wbr>Test_yyy id=301&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>comment=&quot;test with multiple embedded instances&quot;&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>embeddedInst{Test_CLITestEmbedded1 Id=302&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>comment=&quot;First property with embedded instance&quot;&nbsp;<wbr>}&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>embeddedInst2{Test_CLITestEmbedded2 Id=303 name=fred&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>comment=&quot;Second property with embedded instance&quot;&nbsp;<wbr>}<br/>
+&nbsp;<wbr>&nbsp;<wbr>Creates an instance of class Test_yyy with a single scalar<br/>
+&nbsp;<wbr>&nbsp;<wbr>property&nbsp;<wbr>(comment)&nbsp;<wbr>and two embedded instance properties<br/>
+&nbsp;<wbr>&nbsp;<wbr>(embeddedInst and embeddedInst2). Each of the embedded<br/>
 &nbsp;<wbr>&nbsp;<wbr>instances contains 3 properties&nbsp;<wbr>(Id, name, and comment). </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>//&nbsp;<wbr>create an association with two REF properties, parent and child<br />
-&nbsp;<wbr>&nbsp;<wbr>cimcli ci Test_assoc&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>//&nbsp;<wbr>create an association with two REF properties, parent and child<br/>
+&nbsp;<wbr>&nbsp;<wbr>cimcli ci Test_assoc&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>parent={Test_target id=301&nbsp;<wbr>}&nbsp;<wbr>\ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> child={Test_associated id=972 }</p>
-<p>&nbsp;<wbr>&nbsp;<wbr>same as defining the<br />
-&nbsp;<wbr>&nbsp;<wbr>cimcli ci Test_assoc&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>same as defining the<br/>
+&nbsp;<wbr>&nbsp;<wbr>cimcli ci Test_assoc&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>parent=Test_target.id=301&nbsp;<wbr>}&nbsp;<wbr>\ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> child=Test_associated.id=972 }</p>
 </dl>
 <h3>mi ModifyInstance Operation</h3>
-<p> This operation allows the modification of existing instances in the target server by building the properties from a combination of the target Class and properties provided with the input. The command issues the CIM operation modifyInstance with an instance built from the parameters provided. It requires the [OperationTarget] parameter defining the class for which the instance is to be created and a set of value parameters that define properties to be provided in the created instance in the format defined for CreateInstance above. The modified instance may also be built from a combination of the CIMObjectPath for the instance to be modified and value parameters for other properties.<br />
+<p> This operation allows the modification of existing instances in the target server by building the properties from a combination of the target Class and properties provided with the input. The command issues the CIM operation modifyInstance with an instance built from the parameters provided. It requires the [OperationTarget] parameter defining the class for which the instance is to be created and a set of value parameters that define properties to be provided in the created instance in the format defined for CreateInstance above. The modified instance may also be built from a combination of the CIMObjectPath for the instance to be modified and value parameters for other properties.<br/>
 &nbsp;<wbr> In the same manner as the createInstance, this command first acquires the class or objectPath definition for the server and uses the property type information from the class to properly create the property value types from the input property values. </p>
 <p> This operation also allows the specific interactive mode where the classname and properties to be modified (minus key properties) are supplied and <code>cimcli</code> presents a selection of instance names that can be modified. </p>
 <p> For a detailed definition of the name/value input see the createInstance description. </p>
@@ -338,24 +338,24 @@ Arrayproperty[index]&nbsp;<wbr>operation&nbsp;<wbr>(scalarLiteral or scalarPropr
 <dl>
 <dt>
 </dt><dd>
-&nbsp;<wbr>&nbsp;<wbr>where the properties defined MUST include the key<br />
+&nbsp;<wbr>&nbsp;<wbr>where the properties defined MUST include the key<br/>
 &nbsp;<wbr>&nbsp;<wbr>properties</dd></dl>
 <p>&nbsp;<wbr>or </p>
 <p> <code>cimcli mi &lt;objectPath&gt; [&lt;propertyDef&gt;]* [-pl &lt;propertyList]</code></p>
 <dl>
 <dt>
 </dt><dd>
-&nbsp;<wbr>&nbsp;<wbr>where the properties defined do not include the key<br />
+&nbsp;<wbr>&nbsp;<wbr>where the properties defined do not include the key<br/>
 &nbsp;<wbr>&nbsp;<wbr>properties</dd></dl>
 </dl>
 <p> See createInstance operation for detailed definition of &lt;propertyDef&gt; and more examples: </p>
-<p> <code>Examples:</code><br />
-&nbsp;<wbr>cimcli mi CIM_xxxx name=abc size=zyx<br />
-&nbsp;<wbr>or<br />
-&nbsp;<wbr>cimcli mi&nbsp;<wbr>&#8216;CIM_xxx.name=&quot;abc&quot;&#8217;&nbsp;<wbr>size=zyx<br />
-&nbsp;<wbr>or<br />
-&nbsp;<wbr>cimcli mi CIM_xxxx name=abc arrayParam=&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>{abc,def,ghi,&quot;jkl mno&quot;&nbsp;<wbr>\<br />
+<p> <code>Examples:</code><br/>
+&nbsp;<wbr>cimcli mi CIM_xxxx name=abc size=zyx<br/>
+&nbsp;<wbr>or<br/>
+&nbsp;<wbr>cimcli mi&nbsp;<wbr>&#8216;CIM_xxx.name=&quot;abc&quot;&#8217;&nbsp;<wbr>size=zyx<br/>
+&nbsp;<wbr>or<br/>
+&nbsp;<wbr>cimcli mi CIM_xxxx name=abc arrayParam=&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>{abc,def,ghi,&quot;jkl mno&quot;&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>numericArray=1,2,3,4 </p>
 <h3>ec EnumerateClasses Operation</h3>
 <p> Issues the enumerateClasses CIM operation which enumerates the class hierarchy starting at the level defined by &lt;classname&gt;. </p>
@@ -366,7 +366,7 @@ Arrayproperty[index]&nbsp;<wbr>operation&nbsp;<wbr>(scalarLiteral or scalarPropr
 <p> <code>-nlo </code> Boolean that defines whether properties from superclasses are included in the response. the -nlo option turns this parameter off </p>
 <p> <code>-ic</code> Boolean parameter sets the operation parameter includeClassOrigin in the operation request. the CIM server is expected to return classOrigin information as part of the response. </p>
 <p> <code>-pl [propertyList]</code> Optional property list for the operation. </p>
-<p> <code>Example:</code><br />
+<p> <code>Example:</code><br/>
 cimcli ec CIM_ManagedElement -di -nlo </p>
 <h3>nc EnumerateClassNames Operation</h3>
 <p> The EnumerateClassNames <code>cimcli</code> operation issues the enumerateClassNames CIM Operation. </p>
@@ -375,8 +375,8 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> The classname parameter optional and the default it is not provided is to return the class names of the top level classes. </p>
 <p> The options specific to this operation include; </p>
 <p> <code>-di</code> set the operation deepInheritance parameter = true not localOnly </p>
-<p> <code>Examples:</code><br />
-&nbsp;<wbr>&nbsp;<wbr>cimcli nc CIM_door<br />
+<p> <code>Examples:</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>cimcli nc CIM_door<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Issue getClass CIM Operation for the class CIM_Door. </p>
 <dl>
 <dt><code>ni EnumerateInstanceNames Operation</code></dt>
@@ -385,14 +385,14 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> Where: </p>
 <p> <code>&lt;classname&gt;</code> &#8211; classname for which instance names are to be enumerated. </p>
 <p> It displays the instances names that were returned by the CIM server in response to the enumerateInstances CIM operation with the defined input parameters. </p>
-<p> <code>Examples:</code><br />
-&nbsp;<wbr>cimcli ni CIM_ManagedElement -p password -n name&nbsp;<wbr>\<br />
+<p> <code>Examples:</code><br/>
+&nbsp;<wbr>cimcli ni CIM_ManagedElement -p password -n name&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>-n root/PG_Interop &#8211;sort </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Execute the enumerateInstanceNames operation on<br />
-&nbsp;<wbr>&nbsp;<wbr>CIM_ManagedElement in the root/PG_Interop namespace.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Execute the enumerateInstanceNames operation on<br/>
+&nbsp;<wbr>&nbsp;<wbr>CIM_ManagedElement in the root/PG_Interop namespace.<br/>
 &nbsp;<wbr>&nbsp;<wbr>Sort the returned list of instance paths. </p>
-<p>&nbsp;<wbr>cimcli ni CIM_Door &#8211;sum<br />
-&nbsp;<wbr>&nbsp;<wbr>Execute the enumerateInstanceNames operation on the class<br />
+<p>&nbsp;<wbr>cimcli ni CIM_Door &#8211;sum<br/>
+&nbsp;<wbr>&nbsp;<wbr>Execute the enumerateInstanceNames operation on the class<br/>
 &nbsp;<wbr>&nbsp;<wbr>CIM_Door and return the count of instance paths returned. </p>
 </dl>
 <h3>ei EnumerateInstances Operation</h3>
@@ -403,28 +403,28 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> <code>-nlo</code> not local only operation parameter to false. Note that this negative form for the option is used because the default for local only parameter is true. Thus, not including this parameter means that the parameter is not set. </p>
 <p> <code>-iq</code> Boolean (include_Qualifiers) that sets the operation parameter for include_qualifiers to true, </p>
 <p> <code>-ic</code> Boolean to set include class origin operation parameter to true. </p>
-<p> <code>-di</code> Set deep inheritance operation parameter to true.<br />
+<p> <code>-di</code> Set deep inheritance operation parameter to true.<br/>
 &nbsp;<wbr> <code>-o [xml|mof|table]</code> Set the output format for the instances to display the returns as mof </p>
-<p> <code>-pl [propertyList]</code> Optional property list for the operation<br />
+<p> <code>-pl [propertyList]</code> Optional property list for the operation<br/>
 &nbsp;<wbr>&nbsp;<wbr> It returns the instances found either as MOF, XML, or a table of property values with each property a column in the table depending on the output options parameter. </p>
-<p> <code>Examples:</code><br />
-&nbsp;<wbr>cimcli ei CIM_ComputerSystem -niq -di<br />
-&nbsp;<wbr>&nbsp;<wbr>This example enumerates CIM_ComputerSystem in the<br />
-&nbsp;<wbr>&nbsp;<wbr>namespace root/CIMV2&nbsp;<wbr>(default)&nbsp;<wbr>requesting without<br />
+<p> <code>Examples:</code><br/>
+&nbsp;<wbr>cimcli ei CIM_ComputerSystem -niq -di<br/>
+&nbsp;<wbr>&nbsp;<wbr>This example enumerates CIM_ComputerSystem in the<br/>
+&nbsp;<wbr>&nbsp;<wbr>namespace root/CIMV2&nbsp;<wbr>(default)&nbsp;<wbr>requesting without<br/>
 &nbsp;<wbr>&nbsp;<wbr>qualifiers&nbsp;<wbr>(-niq)&nbsp;<wbr>with deepInheritance&nbsp;<wbr>(-di).&nbsp;<wbr>&nbsp;<wbr> </p>
 <h3>niall enumerateallinstanceNames Operation</h3>
 <p> Execute an enumerateinstancenames on all classes to get all class names within the defined namespace or class hiearchy below the target input class. if no class name is psecified on input this function enumerates the complete set of classes namespace to get the classes and the enumerateInstanceNames command to enumerate all of the instances for each class. It returns the list of all of the instance names found in the namespace and a summary of the number of instances of each class that has instances. </p>
 <p> The syntax for this operation is: </p>
 <p> <code>cimcli niall [className] [options]</code> </p>
 <p> where the options include any of the universal options (ex. namespace, location, etc.). Specifically the &#8211;sum option allows returning only the summary information including count of instances for each class that has instances in the namespace. </p>
-<p> <code>Examples:</code><br />
+<p> <code>Examples:</code><br/>
 &nbsp;<wbr>cimcli niall -n test/testproviders </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Returns all instancenames in the namespace<br />
-&nbsp;<wbr>&nbsp;<wbr>test/testproviders by executing<br />
-&nbsp;<wbr>&nbsp;<wbr>enumerateinstancenames on each class in<br />
-&nbsp;<wbr>&nbsp;<wbr>the namespace.<br />
-&nbsp;<wbr>cimcli niall CIM_OperatingSystem<br />
-&nbsp;<wbr>&nbsp;<wbr>Returns all instance names in the namespace root/cimv2 for<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Returns all instancenames in the namespace<br/>
+&nbsp;<wbr>&nbsp;<wbr>test/testproviders by executing<br/>
+&nbsp;<wbr>&nbsp;<wbr>enumerateinstancenames on each class in<br/>
+&nbsp;<wbr>&nbsp;<wbr>the namespace.<br/>
+&nbsp;<wbr>cimcli niall CIM_OperatingSystem<br/>
+&nbsp;<wbr>&nbsp;<wbr>Returns all instance names in the namespace root/cimv2 for<br/>
 &nbsp;<wbr>&nbsp;<wbr>classes in the hiearchy starting at PG_OperatingSystem. </p>
 <h3>gi GetInstance Operation</h3>
 <p> Gets the instance defined by the instance name parameter and displays it in the format chosen for this operation (xml, mof, or table). </p>
@@ -440,31 +440,31 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> <code>-nlo</code> </p>
 <p> localonly </p>
 <p> <code>-pl [propertyList]</code> Optional property list for the operation </p>
-<p> <code>Examples:</code><br />
+<p> <code>Examples:</code><br/>
 &nbsp;<wbr>cimcli gi cim_ManagedElement </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>This is an interactive request that returns a list of<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CIMObjectPaths from an enumerateInstance of<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CIM_ManagedElement from which the user can select<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>one path which cimcli will uses as the&nbsp;<wbr>[objectname]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>to execute a getInstance operation returning the<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>This is an interactive request that returns a list of<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CIMObjectPaths from an enumerateInstance of<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CIM_ManagedElement from which the user can select<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>one path which cimcli will uses as the&nbsp;<wbr>[objectname]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>to execute a getInstance operation returning the<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>instance. </p>
 <h3>di deleteInstance Operation</h3>
 <p> Delete instance executed a single deleteInstance command to the CIM Server. The syntax is: </p>
 <p> <code>cimcli di [objectname] [&lt;option&gt;]*</code> </p>
 <p> This command requires the [objectname] parameter. If this parameter is a full instance name with className and key bindings, the deleteInstance CIM Operation is executed directly. If it is a class name with no keybindings, the enumerateInstances CIM Operation is executed and the list of returned instance paths presented to the console for the user to senroff manpages html tablect one to delete. <code>cimcli</code> then executes CIM deleteInstance operation with the selected [objectname] and returns the response. </p>
 <p> The response to this operation is either an empty response if the instance was successfully deleted or an exception return if there were any errors. </p>
-<p> <code>Examples:</code><br />
+<p> <code>Examples:</code><br/>
 &nbsp;<wbr>cimcli di President.&quot;name=fred&quot;&nbsp;<wbr>-n test/testnamespace </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Attempt to delete the instance of President with the key<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Attempt to delete the instance of President with the key<br/>
 &nbsp;<wbr>&nbsp;<wbr>property name(fred)&nbsp;<wbr>from the test/testnamespace namespace. </p>
 <p>&nbsp;<wbr>cimcli di President&nbsp;<wbr>&nbsp;<wbr>-n test/testnamespace </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>cimcli requests instance paths for the President class in<br />
-&nbsp;<wbr>&nbsp;<wbr>the test/testnamespace and puts the complete list on the<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>cimcli requests instance paths for the President class in<br/>
+&nbsp;<wbr>&nbsp;<wbr>the test/testnamespace and puts the complete list on the<br/>
 &nbsp;<wbr>&nbsp;<wbr>console for the user to select one instance to delete. </p>
 <h3>gq getQualifier Operation</h3>
 <p> getQualifier displays the target qualifier. The syntax is: </p>
 <p> <code>cimcli gq [qualifier name] [&lt;option&gt;]*</code> </p>
-<p> <code>Examples:</code><br />
+<p> <code>Examples:</code><br/>
 &nbsp;<wbr>cimcli gq abstract </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>returns the mof or XML for the abstract qualifier. </p>
 <h3>sq setQualifier Operation</h3>
@@ -478,7 +478,7 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> <code>cimcli dq [qualifier_name] [&lt;option&gt;]*</code> </p>
 <p> NOTE: This operation should be used with great caution as it removes qualifier declarations that may be used by other components of the model. </p>
 <h3>a associators Operation</h3>
-<p> Execute the CIM Operation enumerate associators for the target object name. The syntax for this operation is:<br />
+<p> Execute the CIM Operation enumerate associators for the target object name. The syntax for this operation is:<br/>
 &nbsp;<wbr> <code>cimcli a [objectname] [&lt;option&gt;]*</code> </p>
 <p> Note that the objectname may be either a classname or an instancename. If classname is supplied, the return is a set of classes that match the objectname supplied unless the -i (interactive) parameter is used. If objectname is used, the response is instances of the association that matches the classname. </p>
 <p> The options provide the various operation parameters including; </p>
@@ -510,15 +510,15 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> <code>-ic</code> Boolean to set include class origin operation parameter to true. </p>
 <p> <code>-pl [propertyList]</code> Optional property list for the operation </p>
 <p> <code>-i</code> Interactive request &#8211; This option is used only with commands that will accept either classname or object name as input (reference, referencenames, associatiors, associatornames). It allows the interactive mode where the user picks an instance from a list returned by <code>cimcli</code> (similar to gi where if only the classname is supplied, <code>cimcli</code> knows that the user wants to pick from a list) with these commands. If this parameter is supplied and the objectname is a classname, the environment performs an enumerateinstances on the objectname and presents the list of possible instances for user selection. Thus, the user can execute interactive reference, etc. operations </p>
-<p> <code>Examples:</code><br />
-&nbsp;<wbr>&nbsp;<wbr>cimcli a CIM_ManagedElement<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>would return classs that associate with<br />
+<p> <code>Examples:</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>cimcli a CIM_ManagedElement<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>would return classs that associate with<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CIM_ManagedElement </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>cimcli a CIM_ManagedElement -i<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>executes an enumerateInstanceNames on<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CIM_ManagedElement and presents the user with<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>a list of instances names so that the user can<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pick an instance name that will be used for<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>cimcli a CIM_ManagedElement -i<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>executes an enumerateInstanceNames on<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>CIM_ManagedElement and presents the user with<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>a list of instances names so that the user can<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pick an instance name that will be used for<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the associator request. </p>
 <h3>rn referencenames Operation</h3>
 <p> Executes the CIM Operation referencenames that returns CIMObject paths of the references of the objectname parameter. </p>
@@ -548,16 +548,16 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <dd> Defines a parameter that is an array of embedded instances or embedded objects &lt;className&gt; is the class name for the embedded object or instance and &lt;paramDefinition&gt; </dd>
 <p> NOTE: The value of array prammeters may also be defined by simply repeating the prameter definition multiple times with the different values. <code>cimcli</code> will consolidate these multiple property definitions into an array </p>
 <p> The completed operations displays the return code from the command and any returned parameters that are qualified as OUT parameters. </p>
-<p> <code>Example:</code><br />
-&nbsp;<wbr>&nbsp;<wbr>cimcli PG_WBEMSLPTemplate register -n root/PG_Interop<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Calls PG_WBEMSLPTemplate class with the method named<br />
+<p> <code>Example:</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>cimcli PG_WBEMSLPTemplate register -n root/PG_Interop<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Calls PG_WBEMSLPTemplate class with the method named<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>register </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>cimcli PG_XXX dosomething input1=true input2=1111<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Calls PG_XXX class method dosomething with two<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>parameters:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>input1 is boolean parameter with value true<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>cimcli PG_XXX dosomething input1=true input2=1111<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Calls PG_XXX class method dosomething with two<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>parameters:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>input1 is boolean parameter with value true<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>input2 is Uint32 parameter with value 1111 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>The completed operation displays the return code from the <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> command and any returned parameters that are qualified as<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>The completed operation displays the return code from the <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> command and any returned parameters that are qualified as<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> OUT parameters.</p>
 </dl>
 <h3>gp getProperty Operation</h3>
@@ -568,7 +568,7 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <dt>
 </dt><dd> <code>gp &lt;objectPath&gt; &lt;propertyName&gt;</code></dd></dl>
 <h3>sp setProperty Operation</h3>
-<p> The setProperty executes the setProperty operation which attempts to set a single property on an instance in the CIM Server.<br />
+<p> The setProperty executes the setProperty operation which attempts to set a single property on an instance in the CIM Server.<br/>
  The syntax of this operation is: </p>
 <dl>
 <dt>
@@ -577,9 +577,9 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> The execQuery operation directly executes the CIM Operation execQuery with the input parameter supplied either by direct parameter input or the options for filter and querylanguage. The syntax of the operation is </p>
 <p>cimcli xq&nbsp;<wbr>&lt;query_filter&gt;&nbsp;<wbr>&lt;query_language&gt;&nbsp;<wbr>[&lt;option&gt;]* The query_filter and the query_language may be supplied directly on the command line as parameter or as options (-f for the query filter and -ql for query language. </p>
 <p> The execQuery CIM Operation is executed directly with the input parameters or options. If neither a query_filter parameter or option are supplied <code>cimcli</code> returns an error. If the query_language parameter (-ql) is omitted the default is &quot;WQL&quot;. The operation does not validate the query language parameter but simply passes the input string on to the CIM server </p>
-<p> <code>Examples</code><br />
+<p> <code>Examples</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>cimcli xq&nbsp;<wbr>&quot;Select&nbsp;<wbr>*&nbsp;<wbr>from CIM_Something&quot;&nbsp;<wbr>CQL </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>cimcli xq&nbsp;<wbr>&quot;Select&nbsp;<wbr>*&nbsp;<wbr>from CIM_blah&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>cimcli xq&nbsp;<wbr>&quot;Select&nbsp;<wbr>*&nbsp;<wbr>from CIM_blah&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>uses WQL as default query language </p>
 <h3>pei pullEnumerateInstances Operation</h3>
 <p> Execute the CIM enumeration sequence to pull instances from the server. This compromises the openEnumerateInstances possible followed by pullInstancesWithPath operations. This <code>cimcli</code> operation executes the complete sequence. The syntax for this operation is: </p>
@@ -589,7 +589,7 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> <code>-nlo</code> not local only operation parameter to false. Note that this negative form for the option is used because the default for local only parameter is true. Thus, not including this parameter means that the parameter is not set. </p>
 <p> <code>-iq</code> Boolean (include_Qualifiers) that sets the operation parameter for include_qualifiers to true, </p>
 <p> <code>-ic</code> Boolean to set include class origin operation parameter to true. </p>
-<p> <code>-di</code> Set deep inheritance operation parameter to true.<br />
+<p> <code>-di</code> Set deep inheritance operation parameter to true.<br/>
 &nbsp;<wbr> <code>-o [xml|mof|table]</code> Set the output format for the instances to display the returns as mof </p>
 <p> <code>-pl [propertyList]</code> Optional property list for the operation </p>
 <p> <code>-ql [filterQueryLanguage]</code> Optional definition of the filter query language used for this operation </p>
@@ -597,14 +597,14 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> <code>-pt [pullTimeout]</code> The timeout value that <code>cimcli</code> sends to the server as part of the open request. This is the minimum time in seconds that the server will keep the enumeration context open between sending a response and receiving the next request within a single pull sequence. </p>
 <p> <code>-mr [maxObjectsToReceive]</code> The maximum number of instances or paths that will be accepted by cimcli before issuing a close operation. </p>
 <p> <code>-pullDelay [pullDelayinSec]</code> Delay in seconds that <code>cimcli</code> will execute between each of the operations of the pullsequence. The primary use for this is testing delay issues. </p>
-<p> <code>-mo [maxObjectCount]</code> The maximum object count that <code>cimcli</code> ends to the server for each request in an enumeration context. The server returns no more than this number of instances or paths<br />
+<p> <code>-mo [maxObjectCount]</code> The maximum object count that <code>cimcli</code> ends to the server for each request in an enumeration context. The server returns no more than this number of instances or paths<br/>
 &nbsp;<wbr>&nbsp;<wbr> It returns the instances found either as MOF, XML, or a table of property values with each property a column in the table depending on the output options parameter. </p>
-<p> <code>Example:</code><br />
-&nbsp;<wbr>cimcli pei CIM_ComputerSystem -niq -di -mo 100<br />
-&nbsp;<wbr>&nbsp;<wbr>This example enumerates CIM_ComputerSystem in the<br />
-&nbsp;<wbr>&nbsp;<wbr>namespace root/CIMV2&nbsp;<wbr>(default)&nbsp;<wbr>requesting without<br />
+<p> <code>Example:</code><br/>
+&nbsp;<wbr>cimcli pei CIM_ComputerSystem -niq -di -mo 100<br/>
+&nbsp;<wbr>&nbsp;<wbr>This example enumerates CIM_ComputerSystem in the<br/>
+&nbsp;<wbr>&nbsp;<wbr>namespace root/CIMV2&nbsp;<wbr>(default)&nbsp;<wbr>requesting without<br/>
 &nbsp;<wbr>&nbsp;<wbr>qualifiers&nbsp;<wbr>(-niq)&nbsp;<wbr>with deepInheritance&nbsp;<wbr>(-di). Each response to <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> cimcli will contain no more than 100 instances</p>
-<p>&nbsp;<wbr>cimcli pei CIM_ComputerSystem -ql&nbsp;<wbr>&quot;DMTF:FQL&quot;&nbsp;<wbr>-f&nbsp;<wbr>&quot;Dedicated&nbsp;<wbr>=&nbsp;<wbr>3&quot;<br />
+<p>&nbsp;<wbr>cimcli pei CIM_ComputerSystem -ql&nbsp;<wbr>&quot;DMTF:FQL&quot;&nbsp;<wbr>-f&nbsp;<wbr>&quot;Dedicated&nbsp;<wbr>=&nbsp;<wbr>3&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Enumerate CIM_Computer system in root/CIMV2 and return any <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> instances where the dedicated property equals 3</p>
 <p>&nbsp;<wbr>&nbsp;<wbr> </p>
 <h3>pni pullEnumerateInstancePaths Operation</h3>
@@ -618,15 +618,15 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> <code>-pt [pullTimeout]</code> The timeout value that <code>cimcli</code> sends to the server as part of the open request. This is the minimum time in seconds that the server will keep the enumeration context open between sending a response and receiving the next request within a single pull sequence. </p>
 <p> <code>-mr [maxObjectsToReceive]</code> The maximum number of instances or paths that will be accepted by cimcli before issuing a close operation. </p>
 <p> <code>-pullDelay [pullDelayinSec]</code> Delay in seconds that <code>cimcli</code> will execute between each of the operations of the pullsequence. The primary use for this is testing delay issues. </p>
-<p> <code>-mo [maxObjectCount]</code> The maximum object count that <code>cimcli</code> sends to the server for each request in an enumeration context. The server returns no more than this number of instances or paths<br />
+<p> <code>-mo [maxObjectCount]</code> The maximum object count that <code>cimcli</code> sends to the server for each request in an enumeration context. The server returns no more than this number of instances or paths<br/>
 &nbsp;<wbr>&nbsp;<wbr> It returns the instances found either as MOF, XML, or a table of property values with each property a column in the table depending on the output options parameter. </p>
-<p> <code>Example:</code><br />
-&nbsp;<wbr>cimcli pni CIM_ComputerSystem -n root/testproviders -mo 100<br />
-&nbsp;<wbr>&nbsp;<wbr>This example enumerates the paths of CIM_ComputerSystem in the<br />
+<p> <code>Example:</code><br/>
+&nbsp;<wbr>cimcli pni CIM_ComputerSystem -n root/testproviders -mo 100<br/>
+&nbsp;<wbr>&nbsp;<wbr>This example enumerates the paths of CIM_ComputerSystem in the<br/>
 &nbsp;<wbr>&nbsp;<wbr>namespace root/testProviders&nbsp;<wbr>(default). Each response to <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> cimcli will contain no more than 100 paths</p>
 <h3>pa pullAssociators Operation</h3>
 <p> Execute the enumeration context that starts with openAssociatorInstances and may continue with pullInstancesWithPath for the target object name. This is similar to the associators operation. </p>
-<p> The syntax for this operation is:<br />
+<p> The syntax for this operation is:<br/>
 &nbsp;<wbr> <code>cimcli pa [objectname] [&lt;option&gt;]*</code> </p>
 <p> Note that the objectname may be either a classname or an instancename. If classname is supplied, the interactive mode is used and a list of possible objectnames for the target of the association is presented to the user. If objectname is used, the response is instances of the association that matches the classname. </p>
 <p> The options provide the various operation parameters including; </p>
@@ -642,15 +642,15 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> <code>-mr [maxObjectsToReceive]</code> The maximum number of instances or paths that will be accepted by cimcli before issuing a close operation. </p>
 <p> <code>-pullDelay [pullDelayinSec]</code> Delay in seconds that <code>cimcli</code> will execute between each of the operations of the pullsequence. The primary use for this is testing delay issues. </p>
 <p> <code>-mo [maxObjectCount]</code> The maximum object count that <code>cimcli</code> sends to the server for each request in an enumeration context. The server returns no more than this number of instances or paths </p>
-<p> <code>Example:</code><br />
+<p> <code>Example:</code><br/>
 &nbsp;<wbr>cimcli pa -n test/providers Test_CLITestProviderClass.Id=<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-ac Test_CLITestProviderLinkClass -rc Test_CLITestProviderClass&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-r child -rr parent -pl requestInputParameters</p>
-<p>&nbsp;<wbr><br />
-&nbsp;<wbr>defines an associators request where the target object is:<br />
-&nbsp;<wbr>&nbsp;<wbr>Test_CLITestProviderClass.Id=&quot;Mike&quot;<br />
-&nbsp;<wbr>the associated class is: Test_CLITestProviderLinkClass<br />
-&nbsp;<wbr>the associated role is: child<br />
-&nbsp;<wbr>the reference role is: parent<br />
-&nbsp;<wbr>and the propertylist includes a single property: requestInputParameters<br />
+<p>&nbsp;<wbr><br/>
+&nbsp;<wbr>defines an associators request where the target object is:<br/>
+&nbsp;<wbr>&nbsp;<wbr>Test_CLITestProviderClass.Id=&quot;Mike&quot;<br/>
+&nbsp;<wbr>the associated class is: Test_CLITestProviderLinkClass<br/>
+&nbsp;<wbr>the associated role is: child<br/>
+&nbsp;<wbr>the reference role is: parent<br/>
+&nbsp;<wbr>and the propertylist includes a single property: requestInputParameters<br/>
 &nbsp;<wbr> </p>
 <h3>pan pullAssociatorPaths Operation</h3>
 <p> Execute the enumeration context that starts with openAssociatorInstancePaths and may continue with pullInstancesPaths for the target object name. This is similar to the associators operation associatorPaths except that only instances are returned. </p>
@@ -685,9 +685,9 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> <code>-mr [maxObjectsToReceive]</code> The maximum number of instances or paths that will be accepted by cimcli before issuing a close operation. </p>
 <p> <code>-pullDelay [pullDelayinSec]</code> Delay in seconds that <code>cimcli</code> will execute between each of the operations of the pullsequence. The primary use for this is testing delay issues. </p>
 <p> <code>-mo [maxObjectCount]</code> The maximum object count that<code>cimcli</code>sends to the server for each request in an enumeration context. The server returns no more than this number of instances or paths </p>
-<p> <code>Examples:</code><br />
-&nbsp;<wbr>cimcli pr CIM_ManagedElement<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>enter the interactive mode and presents the cimcli user with a <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> list of all objectPaths for CIM_ManagedElement from which it<br />
+<p> <code>Examples:</code><br/>
+&nbsp;<wbr>cimcli pr CIM_ManagedElement<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>enter the interactive mode and presents the cimcli user with a <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> list of all objectPaths for CIM_ManagedElement from which it<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> builds the openReferenceInstances request.</p>
 <h3>prn pullreferencePaths Operation</h3>
 <p> Executes an enumeration sequence that startes with openReferencePaths and continues with pullInstancePaths. This operation is the pull parallel of the referenceNames operation. </p>
@@ -705,14 +705,14 @@ cimcli ec CIM_ManagedElement -di -nlo </p>
 <p> <code>-mo [maxObjectCount]</code> The maximum object count that <code>cimcli</code> sends to the server for each request in an enumeration context. The server returns no more than this number of instances or paths </p>
 <h3>pxq pullExecQuery Operation</h3>
 <p> The pullExecQuery executes an enumeration sequence that opens with the openQueryInstances client request and continues with pullInstances if required. This operation is parallel to the execQuery <code>cimcli</code> operation. </p>
-<p> <code>Example:</code><br />
+<p> <code>Example:</code><br/>
 cimcli pxq&nbsp;<wbr>&lt;query_filter&gt;&nbsp;<wbr>&lt;query_language&gt;&nbsp;<wbr>[&lt;option&gt;]* The query_filter and the query_language may be supplied directly on the command line as parameter or as options (-f for the query filter and -ql for query language. </p>
 <p> The query languages used for this operation are languages like WQL and CQL. they are NOT FQL which supports only the enumerate, associator, and reference type operations. </p>
 <p> The pullExecQuery CIM Operation is executed directly with the input parameters or options. If neither a query_filter parameter or option are supplied <code>cimcli</code> returns an error. If the query_language parameter (-ql) is omitted the default is &quot;WQL&quot;. The operation does not validate the query language parameter but simply passes the input string on to the CIM server. </p>
 <p> Today this operation does not support the openQueryInstances client request parameter returnQueryResultClass that requests that the cimserver generate a class corresponding to the returned objects. </p>
-<p> <code>Examples</code><br />
+<p> <code>Examples</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>cimcli pxq&nbsp;<wbr>&quot;Select&nbsp;<wbr>*&nbsp;<wbr>from CIM_Something&quot;&nbsp;<wbr>CQL </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>cimcli pxq&nbsp;<wbr>&quot;Select&nbsp;<wbr>*&nbsp;<wbr>from CIM_blah&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>cimcli pxq&nbsp;<wbr>&quot;Select&nbsp;<wbr>*&nbsp;<wbr>from CIM_blah&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>uses WQL as default query language </p>
 <h3>son Operation (Deprecated)</h3>
 <p> Set the CIM server statistics to enabled by doing a modify instance of the CIM_ObjectManager instance that defines the server. This depends on the server having implemented statistics and having also implemented the functionality of enabling and disabling statistics through setting this property in CIM_ObjectManager. This should be considered a temporary operation in <code>cimcli</code> until a more permanent utility is provided with OpenPegasus to manage this type of functionality. The corresponding operation soff will attempt to disable statistics on the server. This works with OpenPegasus servers starting with version 2.5.1. </p>
@@ -730,8 +730,8 @@ cimcli pxq&nbsp;<wbr>&lt;query_filter&gt;&nbsp;<wbr>&lt;query_language&gt;&nbsp;
 <p> The syntax for this operation is: </p>
 <p> <code>cimcli ns [&lt;option&gt;]*</code> </p>
 <p> Note that since this operation enumerates namespaces, the namespace option (-n) is not used. </p>
-<p> <code>Examples</code><br />
-cimcli ns<br />
+<p> <code>Examples</code><br/>
+cimcli ns<br/>
 &nbsp;<wbr>request list of all namespaces from the CIM server </p>
 <h3>cci countInstances Operation</h3>
 <p> Counts the number of instances by class in a namespace (if no [OperationTarget] is specified or of the subclasses of the class specified by [OperationTarget]. </p>
@@ -742,7 +742,7 @@ cimcli ns<br />
 <dt>
 </dt><dd> <code>cimcli cci &lt;[targetClass]&gt; [option]&#8230;</code></dd></dl>
 <p> The output option does not apply. The output is always a text display of classes with instances and count of number of instances. All association class instances are suffixed with an asterick(*). </p>
-<p> <code>Examples</code><br />
+<p> <code>Examples</code><br/>
 &nbsp;<wbr>cimcli cci </p>
 <p>&nbsp;<wbr>cimcli cci CIM_ComputerSystem -n PG_InterOp -l localhost </p>
 <h3>ct classtree Operation</h3>
@@ -753,16 +753,16 @@ cimcli ns<br />
 <dl>
 <dt>
 </dt><dd> <code>cimcli ct &lt;classname&gt; [&lt;option&gt;]*</code></dd></dl>
-<p> <code>Examples</code><br />
-&nbsp;<wbr>cimcli ct<br />
-&nbsp;<wbr>&nbsp;<wbr>displays class tree for one namespace<br />
-&nbsp;<wbr>cimcli ct CIM_ComputerSystem<br />
-&nbsp;<wbr>&nbsp;<wbr>displays class tree starting at CIM_ComputerSystem<br />
-&nbsp;<wbr>cimcli ct CIM_ComputerSystem -nlo<br />
-&nbsp;<wbr>&nbsp;<wbr>displays a tree of the superclasses of CIM_ComputerSystem<br />
-&nbsp;<wbr>cimcli ct CIM_ComputerSystem -o txt<br />
-&nbsp;<wbr>&nbsp;<wbr>displays class tree startign at CIM_Computer system and for<br />
-&nbsp;<wbr>&nbsp;<wbr>any association class displays the class defined for each<br />
+<p> <code>Examples</code><br/>
+&nbsp;<wbr>cimcli ct<br/>
+&nbsp;<wbr>&nbsp;<wbr>displays class tree for one namespace<br/>
+&nbsp;<wbr>cimcli ct CIM_ComputerSystem<br/>
+&nbsp;<wbr>&nbsp;<wbr>displays class tree starting at CIM_ComputerSystem<br/>
+&nbsp;<wbr>cimcli ct CIM_ComputerSystem -nlo<br/>
+&nbsp;<wbr>&nbsp;<wbr>displays a tree of the superclasses of CIM_ComputerSystem<br/>
+&nbsp;<wbr>cimcli ct CIM_ComputerSystem -o txt<br/>
+&nbsp;<wbr>&nbsp;<wbr>displays class tree startign at CIM_Computer system and for<br/>
+&nbsp;<wbr>&nbsp;<wbr>any association class displays the class defined for each<br/>
 &nbsp;<wbr>&nbsp;<wbr>reference property </p>
 <h2>OPTIONS LIST</h2>
 <p> There are a significant number of options to this utility, some if which provide specific information for one or more commands and some of which are universal across all of the commands. In general, the program does not check for spurious options so that if you input an option that is not used by a particular operation, it is simply ignored. Note that some of the options require parameters. </p>
@@ -770,19 +770,19 @@ cimcli ns<br />
 <dl>
 <dt><code>-ac [assocatonClassName]</code></dt>
 <dd> The association class name parameter defines an assocClass string for Associator calls (associators and associatornames). Default(). </dd>
-<p> <code>Example:</code><br />
+<p> <code>Example:</code><br/>
 -ac CIM_ManagedElement</p>
 <dt><code>-ar association_role_name</code></dt>
 <dd> Defines an association role for associator operations. Example: -ar dependent. This optional parameter is used only with the association CIM Operations. </dd>
 <dt><code>&#8211;cert [certificateFilePath]</code></dt>
 <dd> Defines a certificate to be used with the client connect if the -s option is set. This is optional and used only with the -s and &#8211;key options. The parameter value certificateFilePath is required with the parameter and defined the file containing the certificate. If this parameter exists the &#8211;key parameter must also exist to be a valid SSL request. This represents the X509 certificate of the client that will be sent to the server during an SLL handshake if the server requests it. </dd>
 <dt><code>&#8211;count [object_count]</code></dt>
-<dd> Defines an expected count of objects to be returned in the response. <code>cimcli</code> is terminated with an error exit if the number of objects returned does not match the object_count supplied with the option. This test can be used in batch files to test for number of objects returned by an operation. In addition to the error status code, a message of the general form:<br />
+<dd> Defines an expected count of objects to be returned in the response. <code>cimcli</code> is terminated with an error exit if the number of objects returned does not match the object_count supplied with the option. This test can be used in batch files to test for number of objects returned by an operation. In addition to the error status code, a message of the general form:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;Failed count test. Expected=&nbsp;<wbr>xx. Received=&nbsp;<wbr>yy&quot; is output to cerr. </dd>
-<p> <code>Example:</code><br />
+<p> <code>Example:</code><br/>
 cimcli en CIM_ManagedElement -count 100 </p>
-<p>&nbsp;<wbr>If the count of instances returned is not equal to 100,<br />
-&nbsp;<wbr>cimcli exits with error code 60 and the Failed count test&nbsp;<wbr><br />
+<p>&nbsp;<wbr>If the count of instances returned is not equal to 100,<br/>
+&nbsp;<wbr>cimcli exits with error code 60 and the Failed count test&nbsp;<wbr><br/>
 &nbsp;<wbr>error message.</p>
 <dt><code>-delay [time in seconds]</code></dt>
 <dd> Delay between connection and request . Default(0). example -delay 3 delays 3 seconds between the call and the transmission of the actual CIM operation. This is used only in some testing environments.</dd>
@@ -811,7 +811,7 @@ cimcli en CIM_ManagedElement -count 100 </p>
 <p> The meaning of the keywords is:</p>
 <dt>
 </dt><dd> /fBxml.fR Display class or instance in CIM-XML format /fBmof/fR Display class or instance as MOF /fBtable/fR Display instance as a table with one column per property an a row for each instance returned. This format does NOT wrap at 80 columns or wrap long strings. </dd>
-<p>&nbsp;<wbr>-o xml<br />
+<p>&nbsp;<wbr>-o xml<br/>
 &nbsp;<wbr>display the output in xml </p>
 <dt><code>-iq</code></dt>
 <dd> Specifies the includeQualifiers operation input parameter for selected commands.Since the CIM/XML default for this parameter is true for some operations (class operations) and false for others (instance operations), the option is useful only for instance operations. Also the includeQualifiers parameter has been deprecated in the CIM/XML specification so the results for instance operations is undetermined. See also -niq for the includeQualifiers parameter for class operations. </dd>
@@ -842,7 +842,7 @@ cimcli en CIM_ManagedElement -count 100 </p>
 <dt><code>-rc [resultClassName]</code></dt>
 <dd> Defines a resultClass string for References and Associators. Default() </dd>
 <dt><code>-rr [resultRole]</code></dt>
-<dd> Defines a role string for associators operation resultRole parameter.<br />
+<dd> Defines a role string for associators operation resultRole parameter.<br/>
 &nbsp;<wbr></dd>
 <dt><code>&#8211;setRtnHostNames [SubstituteHostName]</code></dt>
 <dd> String option with a required parameter that set a substitute host name which <code>cimcli</code> will insert into returned objects to replace host names returned from the server. This option was defined because the object paths/references returned by the CIM Server may include the host name as part of the returned object path which makes it difficult to compare the returned paths to a defined path. Using this option forces any returned host names to be changed to the string parameter supplied with the option. </dd>
@@ -889,11 +889,11 @@ cimcli en CIM_ManagedElement -count 100 </p>
 <p> Enumerate class names from the namespace &quot;root&quot;: </p>
 <p>&nbsp;<wbr>cimcli ec&nbsp;<wbr>/n root &#8212; Enumerate classnames from namespace root. </p>
 <p>&nbsp;<wbr>cimcli ec -o xml&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; Enumerate classes with XML output starting at root. </p>
-<p>&nbsp;<wbr>cimcli enumerateclasses CIM_ComputerSystem -di<br />
-&nbsp;<wbr>&#8212; Enumerate classes starting at CIM_ComputerSystem and the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>remainder of the class hiearchy&nbsp;<wbr>(-di)&nbsp;<wbr>with mof output of the<br />
+<p>&nbsp;<wbr>cimcli enumerateclasses CIM_ComputerSystem -di<br/>
+&nbsp;<wbr>&#8212; Enumerate classes starting at CIM_ComputerSystem and the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>remainder of the class hiearchy&nbsp;<wbr>(-di)&nbsp;<wbr>with mof output of the<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>classes. </p>
-<p>&nbsp;<wbr>cimcli getclass CIM_door -a -u guest -p guest<br />
+<p>&nbsp;<wbr>cimcli getclass CIM_door -a -u guest -p guest<br/>
 &nbsp;<wbr>&#8212; Get class with authentication set and user&nbsp;<wbr>=&nbsp;<wbr>guest, password&nbsp;<wbr>=&nbsp;<wbr>guest. </p>
 <p>&nbsp;<wbr>cimcli rn TST_Person.name=@MIKE@&nbsp;<wbr>-n root/sampleprovider -rc TST_Lineage. </p>
 <p>&nbsp;<wbr>cimcli ec -o XML &#8212; enumerate classes and output XML rather than MOF. </p>

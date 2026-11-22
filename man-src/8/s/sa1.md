@@ -26,7 +26,7 @@ description: "sa1 – Collect and store binary data in the system activity daily
 <h3>Debian note</h3>
 <p>The Debian sysstat package has already placed such an entry in your system crontab. Please refer to the <i>/usr/share/doc/sysstat/README.Debian</i> file for details. </p>
 <h2>Files</h2>
-<p><i>/var/log/sysstat/saDD</i><br />
+<p><i>/var/log/sysstat/saDD</i><br/>
  <i>/var/log/sysstat/saYYYYMMDD</i></p>
 <dl>
 <dd>The standard system activity daily data files and their default location. <i>YYYY </i>stands for the current year, <i>MM </i>for the current month and <i>DD</i> for the current day. </dd>
@@ -34,5 +34,5 @@ description: "sa1 – Collect and store binary data in the system activity daily
 <h2>Author</h2>
 <p>Sebastien Godard (sysstat &lt;at&gt; orange.fr)</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-sar/">sar</a></code>(1), <code><a href="/docs/linux/man/8-sadc/">sadc</a></code>(8), <code><a href="/docs/linux/man/8-sa2/">sa2</a></code>(8), <code><a href="/docs/linux/man/1-sadf/">sadf</a></code>(1), <code><a href="/docs/linux/man/5-sysstat/">sysstat</a></code>(5) <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br />
+<p><code><a href="/docs/linux/man/1-sar/">sar</a></code>(1), <code><a href="/docs/linux/man/8-sadc/">sadc</a></code>(8), <code><a href="/docs/linux/man/8-sa2/">sa2</a></code>(8), <code><a href="/docs/linux/man/1-sadf/">sadf</a></code>(1), <code><a href="/docs/linux/man/5-sysstat/">sysstat</a></code>(5) <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br/>
  <i><a rel="nofollow" href="http://pagesperso-orange.fr/sebastien.godard/">http://pagesperso-orange.fr/sebastien.godard/</a></i> </p>

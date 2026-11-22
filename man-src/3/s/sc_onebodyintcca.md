@@ -15,11 +15,11 @@ description: "sc::OneBodyIntCCA –"
 <p> Inherits <code>sc::OneBodyInt</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>OneBodyIntCCA</code> (<code>Integral</code> *, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, IntegralEvaluatorFactory, IntegralFunction, bool) </p>
-<p> void <code>compute_shell</code> (int, int)<br />
- <i>Computes the integrals between basis functions in the given shell pair. </i><br />
- bool <code>cloneable</code> ()<br />
- <i>Return true if the clone member can be called. </i><br />
- <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>clone</code> ()<br />
+<p> void <code>compute_shell</code> (int, int)<br/>
+ <i>Computes the integrals between basis functions in the given shell pair. </i><br/>
+ bool <code>cloneable</code> ()<br/>
+ <i>Return true if the clone member can be called. </i><br/>
+ <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>clone</code> ()<br/>
  <i>Returns a clone of this. </i></p>
 <h3>Protected Types</h3>
 <p>typedef void(sc::Int1eCCA::* <code>IntegralFunction</code> )(int, int)</p>

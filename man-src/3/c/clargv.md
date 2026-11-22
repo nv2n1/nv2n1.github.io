@@ -11,7 +11,7 @@ description: "clargv.f –"
 <p> clargv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clargv</code> (N, X, INCX, Y, INCY, C, INCC)<br />
+<p> subroutine <code>clargv</code> (N, X, INCX, Y, INCY, C, INCC)<br/>
  <i></i><code>CLARGV</code> generates a vector of plane rotations with real cosines and complex sines.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clargv (integerN, complex, dimension( * )X, integerINCX, complex, dimension( * )Y, integerINCY, real, dimension( * )C, integerINCC)</h3>

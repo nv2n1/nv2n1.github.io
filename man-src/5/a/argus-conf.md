@@ -57,37 +57,37 @@ description: "argus.conf – argus resource file."
 <code>ARGUS_BIND_IP=</code>&quot;192.168.0.68&quot;</pre>
 <h2>Argus_Interface</h2>
 <p>By default, Argus will open the first appropriate interface on a system that it encounters. For systems that have only one network interface, this is a reasonable thing to do. But, when there are more than one suitable interface, you should specify the interface(s) Argus should use either on the command line or in this file. </p>
-<p> Argus can track packets from any or all interfaces, concurrently. The interfaces can be tracked as:<br />
-&nbsp;<wbr>&nbsp;<wbr>1.&nbsp;<wbr>&nbsp;<wbr>independant &#8211; this is where argus tracks flows from each<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>interface independant from the packets seen on any other<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>interface.&nbsp;<wbr>&nbsp;<wbr>This is useful for hosts/routers that<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>have full-duplex interfaces, and you want to distinguish<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>flows based on their interface. There is an option to specify<br />
+<p> Argus can track packets from any or all interfaces, concurrently. The interfaces can be tracked as:<br/>
+&nbsp;<wbr>&nbsp;<wbr>1.&nbsp;<wbr>&nbsp;<wbr>independant &#8211; this is where argus tracks flows from each<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>interface independant from the packets seen on any other<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>interface.&nbsp;<wbr>&nbsp;<wbr>This is useful for hosts/routers that<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>have full-duplex interfaces, and you want to distinguish<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>flows based on their interface. There is an option to specify<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>a distinct srcid to each independant modeler. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>2.&nbsp;<wbr>&nbsp;<wbr>duplex &#8211; where argus tracks packets from 2 interfaces<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>as if they were two half duplex streams of the same link.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Because there is a single modeler tracking the 2<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>interfaces, there is a single srcid that can be passed as<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>2.&nbsp;<wbr>&nbsp;<wbr>duplex &#8211; where argus tracks packets from 2 interfaces<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>as if they were two half duplex streams of the same link.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Because there is a single modeler tracking the 2<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>interfaces, there is a single srcid that can be passed as<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>an option. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>3.&nbsp;<wbr>&nbsp;<wbr>bonded &#8211; where argus tracks packets from multiple interfaces<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>as if they were from the same stream.&nbsp;<wbr>&nbsp;<wbr>Because there is a<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>single modeler tracking the 2 interfaces, there is a single<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>3.&nbsp;<wbr>&nbsp;<wbr>bonded &#8211; where argus tracks packets from multiple interfaces<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>as if they were from the same stream.&nbsp;<wbr>&nbsp;<wbr>Because there is a<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>single modeler tracking the 2 interfaces, there is a single<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>srcid that can be passed as an option. </p>
-<p>&nbsp;<wbr>Interfaces can be specified as groups using&nbsp;<wbr>&#8216;[&#8216;,&#8217;]&#8217;&nbsp;<wbr>notation, to build<br />
-&nbsp;<wbr>flexible definitions of packet sources.&nbsp;<wbr>&nbsp;<wbr>However, each interface<br />
-&nbsp;<wbr>should be referenced only once&nbsp;<wbr>(this is due to performance and OS<br />
+<p>&nbsp;<wbr>Interfaces can be specified as groups using&nbsp;<wbr>&#8216;[&#8216;,&#8217;]&#8217;&nbsp;<wbr>notation, to build<br/>
+&nbsp;<wbr>flexible definitions of packet sources.&nbsp;<wbr>&nbsp;<wbr>However, each interface<br/>
+&nbsp;<wbr>should be referenced only once&nbsp;<wbr>(this is due to performance and OS<br/>
 &nbsp;<wbr>limitations, so if your OS has no problem with this, go ahead). </p>
-<p>&nbsp;<wbr>The lo&nbsp;<wbr>(loopback)&nbsp;<wbr>interface will be included only if it is specifically<br />
+<p>&nbsp;<wbr>The lo&nbsp;<wbr>(loopback)&nbsp;<wbr>interface will be included only if it is specifically<br/>
 &nbsp;<wbr>indicated in the option. </p>
-<p>&nbsp;<wbr>The syntax for specifying this either on the command line or in this file:<br />
-&nbsp;<wbr>-i ind:all<br />
-&nbsp;<wbr>-i dup:en0,en1/srcid<br />
-&nbsp;<wbr>-i bond:en0,en1/srcid<br />
-&nbsp;<wbr>-i dup:[bond:en0,en1],en2/srcid<br />
-&nbsp;<wbr>-i en0/srcid -i en1/srcid&nbsp;<wbr>&nbsp;<wbr>(equivalent&nbsp;<wbr>&#8216;-i ind:en0/srcid,en1/srcid&#8217;)<br />
+<p>&nbsp;<wbr>The syntax for specifying this either on the command line or in this file:<br/>
+&nbsp;<wbr>-i ind:all<br/>
+&nbsp;<wbr>-i dup:en0,en1/srcid<br/>
+&nbsp;<wbr>-i bond:en0,en1/srcid<br/>
+&nbsp;<wbr>-i dup:[bond:en0,en1],en2/srcid<br/>
+&nbsp;<wbr>-i en0/srcid -i en1/srcid&nbsp;<wbr>&nbsp;<wbr>(equivalent&nbsp;<wbr>&#8216;-i ind:en0/srcid,en1/srcid&#8217;)<br/>
 &nbsp;<wbr>-i en0 en1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(equivalent&nbsp;<wbr>&#8216;-i bond:en0,en1&#8217;) </p>
-<p>&nbsp;<wbr>In all cases, if there is a&nbsp;<wbr>&quot;-e srcid&quot;&nbsp;<wbr>provided, this is used as the<br />
-&nbsp;<wbr>default.&nbsp;<wbr>&nbsp;<wbr>If a srcid is specified using this option, it overrides<br />
+<p>&nbsp;<wbr>In all cases, if there is a&nbsp;<wbr>&quot;-e srcid&quot;&nbsp;<wbr>provided, this is used as the<br/>
+&nbsp;<wbr>default.&nbsp;<wbr>&nbsp;<wbr>If a srcid is specified using this option, it overrides<br/>
 &nbsp;<wbr>the default. </p>
 <p>&nbsp;<wbr>Srcid&#8217;s are specified using the notion used for ARGUS_MONITOR_ID, as above. </p>
 <p> Commandline equivalent -i </p>
@@ -125,8 +125,8 @@ description: "argus.conf – argus resource file."
 <pre><code>ARGUS_OUTPUT_FILE=</code>/var/log/argus/argus.out</pre>
 <h2>Argus_Output_Stream</h2>
 <p>Argus can write its output to one or a number of remote hosts. The default limit is 5 concurrent output streams, each with their own independant filters. </p>
-<p> The format is:<br />
-&nbsp;<wbr>&nbsp;<wbr>ARGUS_OUTPUT_STREAM=&quot;URI&nbsp;<wbr>[filter]&quot;<br />
+<p> The format is:<br/>
+&nbsp;<wbr>&nbsp;<wbr>ARGUS_OUTPUT_STREAM=&quot;URI&nbsp;<wbr>[filter]&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>ARGUS_OUTPUT_STREAN=&quot;argus-<a href="udp://host:port">udp://host:port</a>&nbsp;<wbr>&#8216;tcp and not udp&#8217;&quot; </p>
 <p> Most sites will have argus listen() for remote sites to request argus data, but for some sites and applications sending records without registration is desired. This option will cause argus to transmit records that match the optional filter, to the configured targets using UDP as the transport mechanism. </p>
 <p> Commandline equivalent -w argus-<a href="udp://host:port">udp://host:port</a> </p>
@@ -169,7 +169,7 @@ description: "argus.conf – argus resource file."
 <pre><code>ARGUS_GENERATE_MAC_DATA=</code>no</pre>
 <h2>Argus_Generate_Appbyte_Metric</h2>
 <p>Argus can be configured to generate metrics that include the application byte counts as well as the packet count and byte counters. </p>
-<p> Commandline equivalent -A<br />
+<p> Commandline equivalent -A<br/>
 &nbsp;<wbr> </p>
 <pre><code>ARGUS_GENERATE_APPBYTE_METRIC=</code>no</pre>
 <h2>Argus_Generate_Tcp_Perf_Metric</h2>

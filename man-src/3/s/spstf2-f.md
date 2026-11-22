@@ -10,7 +10,7 @@ description: "spstf2.f –"
 <p>spstf2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>spstf2</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br />
+<p> subroutine <code>spstf2</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br/>
  <i></i><code>SPSTF2</code> computes the Cholesky factorization with complete pivoting of a real symmetric or complex Hermitian positive semi-definite matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spstf2 (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, integer, dimension( n )PIV, integerRANK, realTOL, real, dimension( 2*n )WORK, integerINFO)</h3>

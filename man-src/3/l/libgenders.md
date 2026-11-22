@@ -50,16 +50,16 @@ description: "libgenders – a library of functions to parse and retrieve gender
 <p> The genders library functions are a set of functions used to parse and retrieve data from a genders file. For API details, please see the individual manpages for each of the functions above, or read the comments written in /usr/include/genders.h. </p>
 <h2>GENDERS FILE FORMAT</h2>
 <p> Each line of the genders file has one of the following formats. See the section HOST RANGES below for information on host range formatting. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>nodename&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>attr[=value],attr[=value],&#8230;<br />
-&nbsp;<wbr>&nbsp;<wbr>nodename1,nodename2,&#8230; attr[=value],attr[=value],&#8230;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>nodename&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>attr[=value],attr[=value],&#8230;<br/>
+&nbsp;<wbr>&nbsp;<wbr>nodename1,nodename2,&#8230; attr[=value],attr[=value],&#8230;<br/>
 &nbsp;<wbr>&nbsp;<wbr>nodenames[A-B]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>attr[=value],attr[=value],&#8230; </p>
 <p> The nodename(s) are the shortened hostnames of a node. This is followed by any number of spaces or tabs, and then the comma-separated list of attributes, each of which can optionally have a value. The substitution string &quot;%n&quot; can be used in an attribute value to represent the nodename. Nodenames can be listed on multiple lines, so a node&#8217;s attributes can be specified on multiple lines. However, no single node may have duplicate attributes. </p>
 <p> There must be no spaces embedded in the attribute list and there is no provision for continuation lines. Commas and equal characters are special and cannot appear in attribute names or their values. Comments are prefixed with the hash chracter (#) and can appear anywhere in the file. The active genders file is typically found at /etc/genders or /admin/etc/genders. </p>
 <p> Here is an example genders file from a small 16-node linux cluster: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>slc cluster genders file<br />
-&nbsp;<wbr>&nbsp;<wbr>slci,slcj,slc[0-15]&nbsp;<wbr>&nbsp;<wbr>eth2=e%n,cluster=slc,all<br />
-&nbsp;<wbr>&nbsp;<wbr>slci&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>passwdhost&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>slci,slcj&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>management<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>slc cluster genders file<br/>
+&nbsp;<wbr>&nbsp;<wbr>slci,slcj,slc[0-15]&nbsp;<wbr>&nbsp;<wbr>eth2=e%n,cluster=slc,all<br/>
+&nbsp;<wbr>&nbsp;<wbr>slci&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>passwdhost&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>slci,slcj&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>management<br/>
 &nbsp;<wbr>&nbsp;<wbr>slc[1-15]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>compute </p>
 <h2>HOST RANGES</h2>
 <p> As noted in sections above, the genders database accepts ranges of nodenames in the general form: prefix[n-m,l-k,&#8230;], where n &lt; m and l &lt; k, etc., as an alternative to explicit lists of nodenames. </p>

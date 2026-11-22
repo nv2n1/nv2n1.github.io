@@ -61,7 +61,7 @@ description: "cdk_display – Curses Development Kit Display Capabilities."
     exit(0);
 }
 </code></pre>
-<p> <center> <i>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</i><br />
+<p> <center> <i>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</i><br/>
  </center> </p>
 <h3>How To Use Different Character Attributes</h3>
 <p> Cdk also provides attribute commands which allow different character attributes to be displayed in a Cdk widget. To use a character attribute the format command is <i>&lt;/X&gt;</i> where <i>X</i> is one of several command characters. To turn a attribute off use the command <i>&lt;!X&gt;</i>. The following table outlines the command characters: </p>
@@ -121,34 +121,34 @@ description: "cdk_display – Curses Development Kit Display Capabilities."
 <p></center> </p>
 <p> The following example demonstrates the use of character display attributes. </p>
 <p>&#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;</p>
-<p>#include &lt;cdk/cdk.h&gt;<br />
-                                                         void<br />
-                                                         main()<br />
-{<br />
-    CDKSCREEN *cdkscreen;<br />
-    CDKLABEL *demo;<br />
-    WINDOW *screen;<br />
-    char *mesg[4];<br />
-    /* Initialize the Cdk screen.  */<br />
-    screen = initscr();<br />
-    cdkscreen = initCDKScreen(screen);<br />
-    /* Start CDK Colors */<br />
-    initCDKColor();<br />
-    /* Set the labels up.  */<br />
-    mesg[0] = &#8220;&lt;/B/31&gt;Bold text            yellow foreground / blue background.&lt;!31&gt;&#8221;;<br />
-    mesg[1] = &#8220;&lt;/U/05&gt;Underlined text      white  foreground / blue background.&lt;!05&gt;&#8221;;<br />
-    mesg[2] = &#8220;&lt;/K/26&gt;Blinking text        yellow foreground / red  background.&lt;!26&gt;&#8221;;<br />
-    mesg[3] = &#8220;&lt;C&gt;This line uses the screen default colors.&#8221;;<br />
-    /* Declare the labels.  */<br />
-    demo = newCDKLabel(cdkscreen, CENTER, CENTER, mesg, 4, TRUE, TRUE);<br />
-    /* Draw the label */<br />
-    drawCDKLabel(demo, TRUE);<br />
-    waitCDKLabel(demo, &#8216; &#8216;);<br />
-    /* Clean up */<br />
-    destroyCDKLabel(demo);<br />
-    destroyCDKScreen(cdkscreen);<br />
-    endCDK();<br />
-    exit(0);<br />
+<p>#include &lt;cdk/cdk.h&gt;<br/>
+                                                         void<br/>
+                                                         main()<br/>
+{<br/>
+    CDKSCREEN *cdkscreen;<br/>
+    CDKLABEL *demo;<br/>
+    WINDOW *screen;<br/>
+    char *mesg[4];<br/>
+    /* Initialize the Cdk screen.  */<br/>
+    screen = initscr();<br/>
+    cdkscreen = initCDKScreen(screen);<br/>
+    /* Start CDK Colors */<br/>
+    initCDKColor();<br/>
+    /* Set the labels up.  */<br/>
+    mesg[0] = &#8220;&lt;/B/31&gt;Bold text            yellow foreground / blue background.&lt;!31&gt;&#8221;;<br/>
+    mesg[1] = &#8220;&lt;/U/05&gt;Underlined text      white  foreground / blue background.&lt;!05&gt;&#8221;;<br/>
+    mesg[2] = &#8220;&lt;/K/26&gt;Blinking text        yellow foreground / red  background.&lt;!26&gt;&#8221;;<br/>
+    mesg[3] = &#8220;&lt;C&gt;This line uses the screen default colors.&#8221;;<br/>
+    /* Declare the labels.  */<br/>
+    demo = newCDKLabel(cdkscreen, CENTER, CENTER, mesg, 4, TRUE, TRUE);<br/>
+    /* Draw the label */<br/>
+    drawCDKLabel(demo, TRUE);<br/>
+    waitCDKLabel(demo, &#8216; &#8216;);<br/>
+    /* Clean up */<br/>
+    destroyCDKLabel(demo);<br/>
+    destroyCDKScreen(cdkscreen);<br/>
+    endCDK();<br/>
+    exit(0);<br/>
 }</p>
 <p>&#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;</p>
 <p> Note that color commands and format commands can be mixed inside the same format marker. The above example underlines the label marker, which also sets color pair number 2.</p>
@@ -203,38 +203,38 @@ description: "cdk_display – Curses Development Kit Display Capabilities."
 </table>
 </table>
 <p></center> </p>
-<p> The following example demonstrates how to use the justification commands in a Cdk widget. <center> <i>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</i><br />
- </center><br />
-#include &lt;cdk/cdk.h&gt;<br />
-void main()<br />
-{<br />
-    CDKSCREEN *cdkscreen;<br />
-    CDKLABEL *demo;<br />
-    WINDOW *screen;<br />
-    char *mesg[5];<br />
-    /* Initialize the Cdk screen.  */<br />
-    screen = initscr();<br />
-    cdkscreen = initCDKScreen(screen);<br />
-    /* Start CDK Colors */<br />
-    initCDKColor();<br />
-    /* Set the labels up.  */<br />
-    mesg[0] = &#8220;&lt;R&gt;&lt;/B/31&gt;This line should have a yellow foreground and a blue background.&lt;!31&gt;&#8221;;<br />
-    mesg[1] = &#8220;&lt;/U/05&gt;This line should have a white  foreground and a blue background.&lt;!05&gt;&#8221;;<br />
-    mesg[2] = &#8220;&lt;B=+&gt;This is a bullet.&#8221;;<br />
-    mesg[3] = &#8220;&lt;I=10&gt;This is indented 10 characters.&#8221;;<br />
-    mesg[4] = &#8220;&lt;C&gt;This line should be set to whatever the screen default is.&#8221;;<br />
-    /* Declare the labels.  */<br />
-    demo = newCDKLabel(cdkscreen, CENTER, CENTER, mesg, 5, TRUE, TRUE);<br />
-    /* Draw the label */<br />
-    drawCDKLabel(demo, TRUE);<br />
-    waitCDKLabel(demo, &#8216; &#8216;);<br />
-    /* Clean up */<br />
-    destroyCDKLabel(demo);<br />
-    destroyCDKScreen(cdkscreen);<br />
-    endCDK();<br />
-    exit(0);<br />
-}<br />
- <center> <i>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</i><br />
+<p> The following example demonstrates how to use the justification commands in a Cdk widget. <center> <i>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</i><br/>
+ </center><br/>
+#include &lt;cdk/cdk.h&gt;<br/>
+void main()<br/>
+{<br/>
+    CDKSCREEN *cdkscreen;<br/>
+    CDKLABEL *demo;<br/>
+    WINDOW *screen;<br/>
+    char *mesg[5];<br/>
+    /* Initialize the Cdk screen.  */<br/>
+    screen = initscr();<br/>
+    cdkscreen = initCDKScreen(screen);<br/>
+    /* Start CDK Colors */<br/>
+    initCDKColor();<br/>
+    /* Set the labels up.  */<br/>
+    mesg[0] = &#8220;&lt;R&gt;&lt;/B/31&gt;This line should have a yellow foreground and a blue background.&lt;!31&gt;&#8221;;<br/>
+    mesg[1] = &#8220;&lt;/U/05&gt;This line should have a white  foreground and a blue background.&lt;!05&gt;&#8221;;<br/>
+    mesg[2] = &#8220;&lt;B=+&gt;This is a bullet.&#8221;;<br/>
+    mesg[3] = &#8220;&lt;I=10&gt;This is indented 10 characters.&#8221;;<br/>
+    mesg[4] = &#8220;&lt;C&gt;This line should be set to whatever the screen default is.&#8221;;<br/>
+    /* Declare the labels.  */<br/>
+    demo = newCDKLabel(cdkscreen, CENTER, CENTER, mesg, 5, TRUE, TRUE);<br/>
+    /* Draw the label */<br/>
+    drawCDKLabel(demo, TRUE);<br/>
+    waitCDKLabel(demo, &#8216; &#8216;);<br/>
+    /* Clean up */<br/>
+    destroyCDKLabel(demo);<br/>
+    destroyCDKScreen(cdkscreen);<br/>
+    endCDK();<br/>
+    exit(0);<br/>
+}<br/>
+ <center> <i>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</i><br/>
  </center> </p>
 <p> The bullet format command can take either a single character or a string. The bullet in the above example would look like</p>
 <dl>
@@ -405,7 +405,7 @@ void main()<br />
 <p></center> </p>
 <p> The character formats can be repeated using an optional numeric repeat value. To repeat a character add the repeat count within parentheses to the end of the character format. The following example draws 10 horizontal-line characters: </p>
 <p> &lt;#HL(10)&gt; </p>
-<p> The following example draws a box within a label window: <center> <i>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</i><br />
+<p> The following example draws a box within a label window: <center> <i>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</i><br/>
  </center> </p>
 <pre><code>
 #include &lt;cdk/cdk.h&gt;
@@ -450,7 +450,7 @@ void main()
     exit(0);
 }
 </code></pre>
-<p> <center> <i>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</i><br />
+<p> <center> <i>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</i><br/>
  </center> </p>
 <p> Notice that drawn text can also be justified. </p>
 <h3>Edit/Display Type Codes (EDisplayType)</h3>

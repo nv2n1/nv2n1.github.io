@@ -259,7 +259,7 @@ description: "magic – file command’s magic pattern file"
 <dd>  </dd>
 <dt><code>QQuadBig8</code></dt>
 <dd>  </dd></dl>
-<p>That way variable length structures can be examined:<br />
+<p>That way variable length structures can be examined:<br/>
  </p>
 <blockquote><pre><code># MS Windows executables are also valid MS-DOS executables
 0 string MZ

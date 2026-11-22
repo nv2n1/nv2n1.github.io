@@ -10,7 +10,7 @@ description: "cptcon.f –"
 <p>cptcon.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cptcon</code> (N, D, E, ANORM, RCOND, RWORK, INFO)<br />
+<p>subroutine <code>cptcon</code> (N, D, E, ANORM, RCOND, RWORK, INFO)<br/>
  <i></i><code>CPTCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cptcon (integerN, real, dimension( * )D, complex, dimension( * )E, realANORM, realRCOND, real, dimension( * )RWORK, integerINFO)</h3>

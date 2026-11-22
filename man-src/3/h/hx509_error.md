@@ -30,10 +30,10 @@ description: "hx509 error functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>exit_code</i> exit() code from process.<br />
- <i>error_code</i> Error code for the reason to exit.<br />
- <i>fmt</i> format string with the exit message.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>exit_code</i> exit() code from process.<br/>
+ <i>error_code</i> Error code for the reason to exit.<br/>
+ <i>fmt</i> format string with the exit message.<br/>
  <i>&#8230;</i> argument to format string.</dd></dl>
 <h3>void hx509_free_error_string (char *str)</h3>
 <p> Free error string returned by <code>hx509_get_error_string()</code>. </p>
@@ -46,7 +46,7 @@ description: "hx509 error functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
  <i>error_code</i> Get error message for this error code.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -57,26 +57,26 @@ description: "hx509 error functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
  <i>flags</i></dd>
 <dl>
 <dt>&bull;</dt>
 <dd> HX509_ERROR_APPEND appends the error string to the old messages (code is updated).</dd></dl>
-<p> <i>code</i> error code related to error message<br />
- <i>fmt</i> error message format<br />
+<p> <i>code</i> error code related to error message<br/>
+ <i>fmt</i> error message format<br/>
  <i>&#8230;</i> arguments to error message format</dl>
 <h3>void hx509_set_error_stringv (hx509_contextcontext, intflags, intcode, const char *fmt, va_listap)</h3>
 <p> Add an error message to the hx509 context. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
  <i>flags</i></dd>
 <dl>
 <dt>&bull;</dt>
 <dd> HX509_ERROR_APPEND appends the error string to the old messages (code is updated).</dd></dl>
-<p> <i>code</i> error code related to error message<br />
- <i>fmt</i> error message format<br />
+<p> <i>code</i> error code related to error message<br/>
+ <i>fmt</i> error message format<br/>
  <i>ap</i> arguments to error message format</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>

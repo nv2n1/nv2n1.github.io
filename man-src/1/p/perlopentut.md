@@ -33,17 +33,17 @@ while (&lt;ARGV&gt;) {
 
  Where:
 <dl>
-<dt><i></i><font SIZE="-1"><i>OK</i></font><i></i>
+<dt><i></i><i>OK</i><i></i>
 </dt><dd> will be some defined value if the open succeeds, but <tt>&quot;undef&quot;</tt> if it fails;
-</dd><dt><i></i><font SIZE="-1"><i>HANDLE</i></font><i></i>
+</dd><dt><i></i><i>HANDLE</i><i></i>
 </dt><dd> should be an undefined scalar variable to be filled in by the <tt>&quot;open&quot;</tt> function if it succeeds;
-</dd><dt><i></i><font SIZE="-1"><i>MODE</i></font><i></i>
+</dd><dt><i></i><i>MODE</i><i></i>
 </dt><dd> is the access mode and the encoding format to open the file with;
-</dd><dt><i></i><font SIZE="-1"><i>PATHNAME</i></font><i></i>
+</dd><dt><i></i><i>PATHNAME</i><i></i>
 </dt><dd> is the external name of the file you want opened.</dd></dl>
  
 
- Most of the complexity of the <tt>&quot;open&quot;</tt> function lies in the many possible values that the <i></i><font SIZE="-1"><i>MODE</i></font><i></i> parameter can take on. 
+ Most of the complexity of the <tt>&quot;open&quot;</tt> function lies in the many possible values that the <i></i><i>MODE</i><i></i> parameter can take on. 
 
  One last thing before we show you how to open files: opening files does not (usually) automatically lock them in Perl. See perlfaq5 for how to lock.
 
@@ -89,7 +89,7 @@ if (defined $line) {
     $line = &lt;$handle&gt; // die &quot;no input found&quot;;
 </pre> 
 
- However, if hitting <font SIZE="-1">EOF</font> is an expected and normal event, you do not want to exit simply because you have run out of input. Instead, you probably just want to exit an input loop. You can then test to see if an actual error has caused the loop to terminate, and act accordingly: 
+ However, if hitting EOF is an expected and normal event, you do not want to exit simply because you have run out of input. Instead, you probably just want to exit an input loop. You can then test to see if an actual error has caused the loop to terminate, and act accordingly: 
 
  
 while (&lt;$handle&gt;) {

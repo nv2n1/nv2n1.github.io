@@ -20,7 +20,7 @@ perlsh - one-line perl evaluator with line editing function and <tt>&nbsp;<wbr>&
 
  This program reads input a line, and evaluates it by perl interpreter, and prints the result. If the result is a list value then each value of the list is printed line by line. This program can be used as a very strong calculator which has whole perl functions. 
 
- This is a sample program Term::ReadLine::Gnu module. When you input a line, the line editing function of <font SIZE="-1">GNU</font> Readline Library is available. Perl symbol name completion function is also available. 
+ This is a sample program Term::ReadLine::Gnu module. When you input a line, the line editing function of GNU Readline Library is available. Perl symbol name completion function is also available. 
 
  Before invoking, this program reads <i>~/.perlshrc</i> and evaluates the content of the file. 
 
@@ -80,13 +80,13 @@ sub afterinit
 </dd><dt><i>~/.perlsh_history</i>
 </dt><dd>
 </dd><dt><i>~/.inputrc</i>
-</dt><dd> A initialization file for the <font SIZE="-1">GNU</font> Readline Library. Refer its manual for details.</dd></dl>
+</dt><dd> A initialization file for the GNU Readline Library. Refer its manual for details.</dd></dl>
 
 <h2>SEE ALSO</h2>
 
  Term::ReadLine::Gnu &lt;<a rel="nofollow" HREF="http://search.cpan.org/dist/Term-ReadLine-Gnu/">http://search.cpan.org/dist/Term-ReadLine-Gnu/</a>&gt; 
 
- <font SIZE="-1">GNU</font> Readline Library &lt;<a rel="nofollow" HREF="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html">http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html</a>&gt;
+ GNU Readline Library &lt;<a rel="nofollow" HREF="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html">http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html</a>&gt;
 
 <h2>AUTHOR</h2>
 

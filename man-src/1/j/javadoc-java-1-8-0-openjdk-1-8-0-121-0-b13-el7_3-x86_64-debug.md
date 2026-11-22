@@ -824,14 +824,14 @@ description: "javadoc – Generates HTML pages of API documentation from Java so
 <p> The <code>javadoc</code> command does not necessarily look in subclasses, nor will it look in other packages even when their documentation is being generated in the same run. For example, if the <code>@see</code> tag is in the <code>java.awt.event.KeyEvent</code> class and refers to a name in the <code>java.awt package</code>, then the <code>javadoc</code> command does not look in that package unless that class imports it. </p>
 <p> How a Name Appears </p>
 <p> <i></i>If <code>label</code> is omitted, then <code>package.class.member</code> appears. In general, it is suitably shortened relative to the current class and package. Shortened means the <code>javadoc</code> command displays only the minimum name necessary. For example, if the <code>String.toUpperCase()</code> method contains references to a member of the same class and to a member of a different class, then the class name is displayed only in the latter case, as shown in the following listing. Use the <code>-noqualifier</code> option to globally remove the package names. </p>
-<p> <i>Type of reference</i>: The <code>@see</code> tag refers to a member of the same class, same package<br />
- <i>Example in</i>: <code>@see String#toLowerCase()</code><br />
+<p> <i>Type of reference</i>: The <code>@see</code> tag refers to a member of the same class, same package<br/>
+ <i>Example in</i>: <code>@see String#toLowerCase()</code><br/>
  <i>Appears as</i>: <code>toLowerCase()</code> &#8211; omits the package and class names </p>
-<p> <i>Type of reference</i>: The <code>@see</code> tag refers to a member of a different class, same package<br />
- <i>Example in</i>: <code>@see Character#toLowerCase(char)</code><br />
+<p> <i>Type of reference</i>: The <code>@see</code> tag refers to a member of a different class, same package<br/>
+ <i>Example in</i>: <code>@see Character#toLowerCase(char)</code><br/>
  <i>Appears as</i>: <code>Character.toLowerCase(char)</code> &#8211; omits the package name, includes the class name </p>
-<p> <i>Type of reference</i>: The <code>@see</code> tag refers to a member of a different class, different package<br />
- <i>Example in</i>: <code>@see java.io.File#exists()</code><br />
+<p> <i>Type of reference</i>: The <code>@see</code> tag refers to a member of a different class, different package<br/>
+ <i>Example in</i>: <code>@see java.io.File#exists()</code><br/>
  <i>Appears as</i>: <code>java.io.File.exists()</code> &#8211; includes the package and class names </p>
 <p> Examples of the @see Tag </p>
 <p> The comment to the right shows how the name appears when the <code>@see</code> tag is in a class in another package, such as <code>java.applet.Applet</code>. See @see in How to Write Doc Comments for the Javadoc Tool at <a rel="nofollow" href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html#@see">http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html#@see</a> </p>

@@ -60,7 +60,7 @@ description: "munge – MUNGE credential encoder"
 <h2>AUTHOR</h2>
 <p> Chris Dunlap &lt;cdunlap [at] llnl.gov&gt; </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2007-2013 Lawrence Livermore National Security, LLC.<br />
+<p> Copyright (C) 2007-2013 Lawrence Livermore National Security, LLC.<br/>
  Copyright (C) 2002-2007 The Regents of the University of California. </p>
 <p> MUNGE is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>
 <p> Additionally for the MUNGE library (libmunge), you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>

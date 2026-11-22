@@ -10,7 +10,7 @@ description: "sgeev.f –"
 <p>sgeev.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgeev</code> (JOBVL, JOBVR, N, A, LDA, WR, WI, VL, LDVL, VR, LDVR, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sgeev</code> (JOBVL, JOBVR, N, A, LDA, WR, WI, VL, LDVL, VR, LDVR, WORK, LWORK, INFO)<br/>
  <i></i><code> SGEEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgeev (characterJOBVL, characterJOBVR, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )WR, real, dimension( * )WI, real, dimension( ldvl, * )VL, integerLDVL, real, dimension( ldvr, * )VR, integerLDVR, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

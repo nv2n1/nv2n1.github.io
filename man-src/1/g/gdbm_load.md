@@ -10,10 +10,10 @@ description: "gdbm_load – re-create a GDBM database from a dump file."
 
 <p> gdbm_load &#8211; re-create a GDBM database from a dump file.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>gdbm_load</code> [<code>-Mnr</code>] [<code>-b</code> <i>NUM</i>] [<code>-c</code> <i>NUM]<br />
-&nbsp;<wbr>[</i><code>-m</code>&nbsp;<wbr><i>MODE</i>]&nbsp;<wbr>[<code>-u</code>&nbsp;<wbr><i>NAME</i>|<i>UID</i>[:<i>NAME</i>|<i>GID</i>]]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;block-size</code>=<i>NUM</i>]&nbsp;<wbr>[<code>&#8211;cache-size</code>=<i>NUM</i>]&nbsp;<wbr>[<code>&#8211;mmap</code>=<i>NUM</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;mode</code>=<i>MODE</i>]&nbsp;<wbr>[<code>&#8211;no-meta</code>]&nbsp;<wbr>[<code>&#8211;replace</code>]<br />
+<p> <code>gdbm_load</code> [<code>-Mnr</code>] [<code>-b</code> <i>NUM</i>] [<code>-c</code> <i>NUM]<br/>
+&nbsp;<wbr>[</i><code>-m</code>&nbsp;<wbr><i>MODE</i>]&nbsp;<wbr>[<code>-u</code>&nbsp;<wbr><i>NAME</i>|<i>UID</i>[:<i>NAME</i>|<i>GID</i>]]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;block-size</code>=<i>NUM</i>]&nbsp;<wbr>[<code>&#8211;cache-size</code>=<i>NUM</i>]&nbsp;<wbr>[<code>&#8211;mmap</code>=<i>NUM</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;mode</code>=<i>MODE</i>]&nbsp;<wbr>[<code>&#8211;no-meta</code>]&nbsp;<wbr>[<code>&#8211;replace</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;user</code>=<i>NAME</i>|<i>UID</i>[:<i>NAME</i>|<i>GID</i>]]&nbsp;<wbr><i>FILE</i>&nbsp;<wbr>[<i>DB_FILE</i>] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </p>
 <p> <code>gdbm_load</code> [<code>-Vh</code>] [<code>&#8211;help</code>] [<code>&#8211;usage</code>] [<code>&#8211;version</code>]</p>
 <h2>DESCRIPTION</h2>
@@ -48,6 +48,6 @@ description: "gdbm_load – re-create a GDBM database from a dump file."
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-gdbm [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2013 Free Software Foundation, Inc<br />
- License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 2013 Free Software Foundation, Inc<br/>
+ License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>

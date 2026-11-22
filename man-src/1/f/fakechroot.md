@@ -13,7 +13,7 @@ description: "fakechroot – gives a fake chroot environment"
 <p> <code>fakechroot</code> [<code>-s</code>|<code>&#8211;use-system-libs</code>] [<code>-l</code>|<code>&#8211;lib</code>&nbsp;<wbr><i>library</i>] [<code>&#8212;</code>] [<i>command</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> fakechroot runs a command in an environment were is additional possibility to use <i><a href="/docs/linux/man/8-chroot/">chroot</a></i>(8) command without root privileges. This is useful for allowing users to create own chrooted environment with possibility to install another packages without need for root privileges. </p>
-<p> fakechroot replaces more library functions (<i><a href="/docs/linux/man/2-chroot/">chroot</a></i>(2), <i><a href="/docs/linux/man/2-open/">open</a></i>(2), etc.) by ones that simulate the effect the real library functions would have had, had the user really been in chroot. These wrapper functions are in a shared library <i>/usr/lib/fakechroot/libfakechroot.so</i> which is loaded through the <font SIZE="-1"><code>LD_PRELOAD</code></font> mechanism of the dynamic loader. (See <i><a href="/docs/linux/man/8-ld-so/">ld.so</a></i>(8)) </p>
+<p> fakechroot replaces more library functions (<i><a href="/docs/linux/man/2-chroot/">chroot</a></i>(2), <i><a href="/docs/linux/man/2-open/">open</a></i>(2), etc.) by ones that simulate the effect the real library functions would have had, had the user really been in chroot. These wrapper functions are in a shared library <i>/usr/lib/fakechroot/libfakechroot.so</i> which is loaded through the <code>LD_PRELOAD</code> mechanism of the dynamic loader. (See <i><a href="/docs/linux/man/8-ld-so/">ld.so</a></i>(8)) </p>
 <p> In fake chroot you can install Debian bootstrap with `debootstrap &#8211;variant=fakechroot&#8217; command. In this environment you can use i.e. <i><a href="/docs/linux/man/8-apt-get/">apt-get</a></i>(8) command to install another packages from common user&#8217;s account. </p>
 <p> In the current version, the fakechroot does not provide the <i><a href="/docs/linux/man/1-fakeroot/">fakeroot</a></i>(1) functionality! You might to call fakechroot with fakeroot command, if you want to emulate root environment, i.e.: </p>
 <pre>
@@ -73,15 +73,15 @@ description: "fakechroot – gives a fake chroot environment"
 <dd> The shared library containing the wrapper functions.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>FAKECHROOT</code></font></dt>
+<dt><code>FAKECHROOT</code></dt>
 <dd> The value is true for fake chroot environment.</dd>
-<dt><font SIZE="-1"><code>FAKECHROOT_VERSION</code></font></dt>
+<dt><code>FAKECHROOT_VERSION</code></dt>
 <dd> The version of current fakechroot library.</dd>
-<dt><font SIZE="-1"><code>FAKECHROOT_BASE</code></font></dt>
+<dt><code>FAKECHROOT_BASE</code></dt>
 <dd> The root directory for fake chroot environment.</dd>
-<dt><font SIZE="-1"><code>FAKECHROOT_EXCLUDE_PATH</code></font></dt>
+<dt><code>FAKECHROOT_EXCLUDE_PATH</code></dt>
 <dd> The list of directories which are excluded from being chrooted. The elements of list are separated with colon.</dd>
-<dt><font SIZE="-1"><code>FAKECHROOT_CMD_SUBST</code></font></dt>
+<dt><code>FAKECHROOT_CMD_SUBST</code></dt>
 <dd> A list of command substitutions. If a program tries to execute one of the commands given (path relative to the chroot) then the substitute command runs instead (path to substitute command is not chrooted). </dd>
 <p> For example: </p>
 <pre>
@@ -89,8 +89,8 @@ description: "fakechroot – gives a fake chroot environment"
 </pre>
 <p> will substitute <tt>&quot;/tmp/ldconfig-wrapper&quot;</tt> for <tt>&quot;/sbin/ldconfig&quot;</tt>. </p>
 <p> Give as many substitute commands as you want, separated by <tt>&quot;:&quot;</tt> (colon) characters.</p>
-<dt><font SIZE="-1"><code>LD_LIBRARY_PATH</code></font>, <font SIZE="-1"><code>LD_PRELOAD</code></font></dt>
-<dd> Fakechroot is implemented by wrapping system calls. This is accomplished by setting LD_LIBRARY_PATH=/usr/lib/fakechroot and LD_PRELOAD=libfakechroot.so. That library is loaded before the system&#8217;s C library, and so most of the library functions are intercepted by it. If you need to set either <font SIZE="-1"><code>LD_LIBRARY_PATH</code></font> or <font SIZE="-1"><code>LD_PRELOAD</code></font> from within a fakechroot environment, it should be set relative to the given paths, as in LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/foo/bar/</dd></dl>
+<dt><code>LD_LIBRARY_PATH</code>, <code>LD_PRELOAD</code></dt>
+<dd> Fakechroot is implemented by wrapping system calls. This is accomplished by setting LD_LIBRARY_PATH=/usr/lib/fakechroot and LD_PRELOAD=libfakechroot.so. That library is loaded before the system&#8217;s C library, and so most of the library functions are intercepted by it. If you need to set either <code>LD_LIBRARY_PATH</code> or <code>LD_PRELOAD</code> from within a fakechroot environment, it should be set relative to the given paths, as in LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/foo/bar/</dd></dl>
 <h2>LIMITATIONS</h2>
 <dl>
 <dt>o</dt>
@@ -98,7 +98,7 @@ description: "fakechroot – gives a fake chroot environment"
 <dt>o</dt>
 <dd> Every command executed within fakechroot needs to be linked to the same version of the C library as fakechroot itself. If the libraries in chroot are not compatible, try to use <code>&#8211;use-system-libs</code> option.</dd>
 <dt>o</dt>
-<dd> You can provide symlinks to the outside. The symlink have to be created before chroot is called. It can be useful for accessing the real <i>/proc</i> and <i>/dev</i> directory. You can also set the <font SIZE="-1"><code>FAKECHROOT_EXCLUDE_PATH</code></font> environment variable: </dd>
+<dd> You can provide symlinks to the outside. The symlink have to be created before chroot is called. It can be useful for accessing the real <i>/proc</i> and <i>/dev</i> directory. You can also set the <code>FAKECHROOT_EXCLUDE_PATH</code> environment variable: </dd>
 <pre>
  $ export FAKECHROOT_EXCLUDE_PATH=/tmp:/proc:/dev:/var/run
 </pre>
@@ -115,7 +115,7 @@ description: "fakechroot – gives a fake chroot environment"
 <dt>o</dt>
 <dd> <i>debuild</i>(1) cleans environment. Use &#8211;preserve-env option to prevent this behaviour.</dd></dl>
 <h2>COPYING</h2>
-<p> fakechroot is distributed under the <font SIZE="-1">GNU</font> Lesser General Public License (<font SIZE="-1">LGPL</font> 2.1 or greater).</p>
+<p> fakechroot is distributed under the GNU Lesser General Public License (LGPL 2.1 or greater).</p>
 <h2>AUTHORS</h2>
 <p> Copyright (c) 2003-2008 Piotr Roszatycki &lt;dexter [at] debian.org&gt; </p>
 <p> Copyright (c) 2006-2007 Lionel Tricon &lt;lionel.tricon [at] free.fr&gt; </p>

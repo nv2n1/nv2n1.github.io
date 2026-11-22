@@ -10,7 +10,7 @@ description: "sopgtr.f –"
 <p>sopgtr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sopgtr</code> (UPLO, N, AP, TAU, Q, LDQ, WORK, INFO)<br />
+<p>subroutine <code>sopgtr</code> (UPLO, N, AP, TAU, Q, LDQ, WORK, INFO)<br/>
  <i></i><code>SOPGTR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sopgtr (characterUPLO, integerN, real, dimension( * )AP, real, dimension( * )TAU, real, dimension( ldq, * )Q, integerLDQ, real, dimension( * )WORK, integerINFO)</h3>

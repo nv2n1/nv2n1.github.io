@@ -10,7 +10,7 @@ description: "zgbrfs.f –"
 <p>zgbrfs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgbrfs</code> (TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
+<p>subroutine <code>zgbrfs</code> (TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br/>
  <i></i><code>ZGBRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgbrfs (characterTRANS, integerN, integerKL, integerKU, integerNRHS, complex*16, dimension( ldab, * )AB, integerLDAB, complex*16, dimension( ldafb, * )AFB, integerLDAFB, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldx, * )X, integerLDX, double precision, dimension( * )FERR, double precision, dimension( * )BERR, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

@@ -19,15 +19,15 @@ description: "gnutls_x509_trust_list_deinit – API function"
 <dt>unsigned int all</dt>
 <dd> if non-zero it will deinitialize all the certificates and CRLs contained in the structure.</dd></dl>
 <h2>DESCRIPTION</h2>
-<p> This function will deinitialize a trust list. Note that the<br />
+<p> This function will deinitialize a trust list. Note that the<br/>
 &nbsp;<wbr><i>all</i>&nbsp;<wbr>flag should be typically non-zero unless you have specified your certificates using <code>gnutls_x509_trust_list_add_cas()</code> and you want to prevent them from being deinitialized by this function.</p>
 <h2>SINCE</h2>
 <p> 3.0.0</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br/>
  Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>

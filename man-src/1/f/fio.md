@@ -324,7 +324,7 @@ description: "fio – flexible I/O tester"
 <dt><code>cpuio</code></dt>
 <dd> Doesn&#8217;t transfer any data, but burns CPU cycles according to <code>cpuload</code> and <code>cpucycles</code> parameters.</dd>
 <dt><code>guasi</code></dt>
-<dd> The GUASI I/O engine is the Generic Userspace Asynchronous Syscall Interface approach to asynchronous I/O.<br />
+<dd> The GUASI I/O engine is the Generic Userspace Asynchronous Syscall Interface approach to asynchronous I/O.<br/>
  See &lt;<a rel="nofollow" href="http://www.xmailserver.org/guasi-lib.html">http://www.xmailserver.org/guasi-lib.html</a>&gt;.</dd>
 <dt><code>rdma</code></dt>
 <dd> The RDMA I/O engine supports both RDMA memory semantics (RDMA_WRITE/RDMA_READ) and channel semantics (Send/Recv) for the InfiniBand, RoCE and iWARP protocols.</dd>
@@ -355,7 +355,7 @@ IO engine that does regular linux native fallocate call to simulate data transfe
 <dt><code>iodepth_batch</code><i></i>=int</dt>
 <dd> Number of I/Os to submit at once. Default: <code>iodepth</code>.</dd>
 <dt><code>iodepth_batch_complete</code><i></i>=int</dt>
-<dd> This defines how many pieces of IO to retrieve at once. It defaults to 1 which<br />
+<dd> This defines how many pieces of IO to retrieve at once. It defaults to 1 which<br/>
 &nbsp;<wbr>means that we&#8217;ll ask for a minimum of 1 IO in the retrieval process from the kernel. The IO retrieval will go on until we hit the limit set by <code>iodepth_low</code>. If this variable is set to 0, then fio will always check for completed events before queuing more IO. This helps reduce IO latency, at the cost of more retrieval system calls.</dd>
 <dt><code>iodepth_low</code><i></i>=int</dt>
 <dd> Low watermark indicating when to start filling the queue again. Default: <code>iodepth</code>.</dd>
@@ -713,10 +713,10 @@ IO engine that does regular linux native fallocate call to simulate data transfe
 <dt><code>gtod_cpu</code><i></i>=int</dt>
 <dd> Sometimes it&#8217;s cheaper to dedicate a single thread of execution to just getting the current time. Fio (and databases, for instance) are very intensive on <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2) calls. With this option, you can set one CPU aside for doing nothing but logging current time to a shared memory location. Then the other threads/processes that run IO workloads need only copy that segment, instead of entering the kernel with a <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2) call. The CPU set aside for doing these time calls will be excluded from other uses. Fio will manually clear it from the CPU mask of other jobs.</dd>
 <dt><code>ignore_error</code><i></i>=str</dt>
-<dd> Sometimes you want to ignore some errors during test in that case you can specify error list for each error type.<br />
- ignore_error=READ_ERR_LIST,WRITE_ERR_LIST,VERIFY_ERR_LIST<br />
- errors for given error type is separated with &#8216;:&#8217;. Error may be symbol (&#8216;ENOSPC&#8217;, &#8216;ENOMEM&#8217;) or an integer.<br />
- Example: ignore_error=EAGAIN,ENOSPC:122 .<br />
+<dd> Sometimes you want to ignore some errors during test in that case you can specify error list for each error type.<br/>
+ ignore_error=READ_ERR_LIST,WRITE_ERR_LIST,VERIFY_ERR_LIST<br/>
+ errors for given error type is separated with &#8216;:&#8217;. Error may be symbol (&#8216;ENOSPC&#8217;, &#8216;ENOMEM&#8217;) or an integer.<br/>
+ Example: ignore_error=EAGAIN,ENOSPC:122 .<br/>
  This option will ignore EAGAIN from READ, and ENOSPC and 122(EDQUOT) from WRITE.</dd>
 <dt><code>error_dump</code><i></i>=bool</dt>
 <dd> If set dump every error even if it is non fatal, true by default. If disabled only fatal error will be dumped</dd>
@@ -1025,19 +1025,19 @@ IO engine that does regular linux native fallocate call to simulate data transfe
 <p> fio &#8211;client=server &#8211;remote-config /path/to/file.fio </p>
 <p> Then fio will open this local (to the server) job file instead of being passed one from the client. </p>
 <p> If you have many servers (example: 100 VMs/containers), you can input a pathname of a file containing host IPs/names as the parameter value for the &#8211;client option. For example, here is an example &quot;host.list&quot; file containing 2 hostnames: </p>
-<p> host1.your.dns.domain<br />
+<p> host1.your.dns.domain<br/>
  host2.your.dns.domain </p>
 <p> The fio command would then be: </p>
 <p> fio &#8211;client=host.list &lt;job file&gt; </p>
 <p> In this mode, you cannot input server-specific parameters or job files, and all servers receive the same job file. </p>
 <p> In order to enable fio &#8211;client runs utilizing a shared filesystem from multiple hosts, fio &#8211;client now prepends the IP address of the server to the filename. For example, if fio is using directory /mnt/nfs/fio and is writing filename fileio.tmp, with a &#8211;client hostfile containing two hostnames h1 and h2 with IP addresses 192.168.10.120 and 192.168.10.121, then fio will create two files: </p>
-<p> /mnt/nfs/fio/192.168.10.120.fileio.tmp<br />
+<p> /mnt/nfs/fio/192.168.10.120.fileio.tmp<br/>
  /mnt/nfs/fio/192.168.10.121.fileio.tmp </p>
 <h2>AUTHORS</h2>
-<p> <code>fio</code> was written by Jens Axboe &lt;jens.axboe [at] oracle.com&gt;, now Jens Axboe &lt;axboe [at] fb.com&gt;.<br />
+<p> <code>fio</code> was written by Jens Axboe &lt;jens.axboe [at] oracle.com&gt;, now Jens Axboe &lt;axboe [at] fb.com&gt;.<br/>
  This man page was written by Aaron Carroll &lt;aaronc [at] cse.unsw.edu.au&gt; based on documentation by Jens Axboe.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to the <code>fio</code> mailing list &lt;fio [at] vger.kernel.org&gt;. See <code>README</code>.</p>
 <h2>SEE ALSO</h2>
-<p> For further documentation see <code>HOWTO</code> and <code>README</code>.<br />
+<p> For further documentation see <code>HOWTO</code> and <code>README</code>.<br/>
  Sample jobfiles are available in the <code>examples</code> directory. </p>

@@ -20,7 +20,7 @@ git filter - branch[--setup&lt;command&gt;][--subdirectory - filter&lt;directory
                    [--state - branch&lt;branch&gt;][--][&lt;rev - list options&gt;...]
 </code></pre>
 <h2>WARNING</h2>
-<p> <i>git filter-branch</i> has a plethora of pitfalls that can produce non-obvious manglings of the intended history rewrite (and can leave you with little time to investigate such problems since it has such abysmal performance). These safety and performance issues cannot be backward compatibly fixed and as such, its use is not recommended. Please use an alternative history filtering tool such as m[blue]<code>git filter-repo</code>m[]<font SIZE="-2">[1]</font>. If you still need to use <i>git filter-branch</i>, please carefully read the section called &#8220;SAFETY&#8221; (and the section called &#8220;PERFORMANCE&#8221;) to learn about the land mines of filter-branch, and then vigilantly avoid as many of the hazards listed there as reasonably possible.</p>
+<p> <i>git filter-branch</i> has a plethora of pitfalls that can produce non-obvious manglings of the intended history rewrite (and can leave you with little time to investigate such problems since it has such abysmal performance). These safety and performance issues cannot be backward compatibly fixed and as such, its use is not recommended. Please use an alternative history filtering tool such as m[blue]<code>git filter-repo</code>m[][1]. If you still need to use <i>git filter-branch</i>, please carefully read the section called &#8220;SAFETY&#8221; (and the section called &#8220;PERFORMANCE&#8221;) to learn about the land mines of filter-branch, and then vigilantly avoid as many of the hazards listed there as reasonably possible.</p>
 <h2>DESCRIPTION</h2>
 <p> Lets you rewrite Git revision history by rewriting the branches mentioned in the &lt;rev-list options&gt;, applying custom filters on each revision. Those filters can modify each tree (e.g. removing a file or running a perl rewrite on all files) or information about each commit. Otherwise, all information (including original commit times or merge information) will be preserved. </p>
 <p> The command will only rewrite the <i>positive</i> refs mentioned in the command line (e.g. if you pass <i>a..b</i>, only <i>b</i> will be rewritten). If you specify no filters, the commits will be recommitted without any changes, which would normally have no effect. Nevertheless, this may be useful in the future for compensating for some Git bugs or such, therefore such a usage is permitted. </p>
@@ -160,26 +160,26 @@ git filter-branch $graft-id..HEAD
 <dl>
 <dt>
 </dt><dd>
-git filter &#8211; branch&#8211; commit &#8211; filter &#8216; if[&#8220;$GIT_AUTHOR_NAME&#8221; = &#8220;Darl McBribe&#8221;];<br />
-then<br />
-    skip_commit &#8220;$@&#8221;;<br />
-else git commit &#8211; tree &#8220;$@&#8221;;<br />
+git filter &#8211; branch&#8211; commit &#8211; filter &#8216; if[&#8220;$GIT_AUTHOR_NAME&#8221; = &#8220;Darl McBribe&#8221;];<br/>
+then<br/>
+    skip_commit &#8220;$@&#8221;;<br/>
+else git commit &#8211; tree &#8220;$@&#8221;;<br/>
 fi&#8217; HEAD
 </dd></dl>
 <p> The function <i>skip_commit</i> is defined as follows: </p>
 <dl>
 <dt>
 </dt><dd>
-skip_commit()<br />
-{<br />
-    shift;<br />
-    while<br />
-        [-n &#8220;$1&#8221;];<br />
-    do<br />
-        shift;<br />
-    map &#8220;$1&#8221;;<br />
-    shift;<br />
-    done;<br />
+skip_commit()<br/>
+{<br/>
+    shift;<br/>
+    while<br/>
+        [-n &#8220;$1&#8221;];<br/>
+    do<br/>
+        shift;<br/>
+    map &#8220;$1&#8221;;<br/>
+    shift;<br/>
+    done;<br/>
 }
 </dd></dl>
 <p> The shift magic first throws away the tree id and then the -p parameters. Note that this handles merges properly! In case Darl committed a merge between P1 and P2, it will be propagated properly and all children of the merge will become merge commits with P1,P2 as their parents instead of the merge commit. </p>
@@ -198,18 +198,18 @@ git filter-branch --msg-filter '
 <dl>
 <dt>
 </dt><dd>
-git filter &#8211; branch&#8211; msg &#8211; filter &#8216; cat &amp;&amp;echo &#8220;Acked-by: Bugs Bunny &lt;bunny [at] bugzilla.org&gt;&#8221;<br />
+git filter &#8211; branch&#8211; msg &#8211; filter &#8216; cat &amp;&amp;echo &#8220;Acked-by: Bugs Bunny &lt;bunny [at] bugzilla.org&gt;&#8221;<br/>
 &#8216; HEAD~10..HEAD
 </dd></dl>
 <p> The <code>&#8211;env-filter</code> option can be used to modify committer and/or author identity. For example, if you found out that your commits have the wrong identity due to a misconfigured user.email, you can make a correction, before publishing the project, like this: </p>
 <dl>
 <dt>
 </dt><dd>
-git filter &#8211; branch&#8211; env &#8211; filter &#8216; if test &#8220;$GIT_AUTHOR_EMAIL&#8221; = &#8220;root [at] localhost&#8221; then<br />
-    GIT_AUTHOR_EMAIL = john[at] example.com<br />
-                           fi if test &#8220;$GIT_COMMITTER_EMAIL&#8221; = &#8220;root [at] localhost&#8221; then<br />
-        GIT_COMMITTER_EMAIL = john[at] example.com<br />
-                                  fi<br />
+git filter &#8211; branch&#8211; env &#8211; filter &#8216; if test &#8220;$GIT_AUTHOR_EMAIL&#8221; = &#8220;root [at] localhost&#8221; then<br/>
+    GIT_AUTHOR_EMAIL = john[at] example.com<br/>
+                           fi if test &#8220;$GIT_COMMITTER_EMAIL&#8221; = &#8220;root [at] localhost&#8221; then<br/>
+        GIT_COMMITTER_EMAIL = john[at] example.com<br/>
+                                  fi<br/>
 &#8216; &#8212; &#8211;all
 </dd></dl>
 <p> To restrict rewriting to only part of the history, specify a revision range in addition to the new branch name. The new branch name will point to the top-most revision that a <i>git rev-list</i> of this range will print. </p>
@@ -304,7 +304,7 @@ git filter-branch --index-filter \
 <dt>
 </dt><dd> &bull; Side note: Unfortunately, people tend to fixate on the written-in-shell aspect and periodically ask if git-filter-branch could be rewritten in another language to fix the performance issues. Not only does that ignore the bigger intrinsic problems with the design, it&#8217;d help less than you&#8217;d expect: if git-filter-branch itself were not shell, then the convenience functions (map(), skip_commit(), etc) and the <code>&#8211;setup</code> argument could no longer be executed once at the beginning of the program but would instead need to be prepended to every user filter (and thus re-executed with every commit).</dd></dl>
 </dl>
-<p> The m[blue]<code>git filter-repo</code>m[]<font SIZE="-2">[1]</font> tool is an alternative to git-filter-branch which does not suffer from these performance problems or the safety problems (mentioned below). For those with existing tooling which relies upon git-filter-branch, <i>git filter-repo</i> also provides m[blue]<code>filter-lamely</code>m[]<font SIZE="-2">[2]</font>, a drop-in git-filter-branch replacement (with a few caveats). While filter-lamely suffers from all the same safety issues as git-filter-branch, it at least ameliorates the performance issues a little.</p>
+<p> The m[blue]<code>git filter-repo</code>m[][1] tool is an alternative to git-filter-branch which does not suffer from these performance problems or the safety problems (mentioned below). For those with existing tooling which relies upon git-filter-branch, <i>git filter-repo</i> also provides m[blue]<code>filter-lamely</code>m[][2], a drop-in git-filter-branch replacement (with a few caveats). While filter-lamely suffers from all the same safety issues as git-filter-branch, it at least ameliorates the performance issues a little.</p>
 <h2>SAFETY</h2>
 <p> git-filter-branch is riddled with gotchas resulting in various ways to easily corrupt repos or end up with a mess worse than what you started with: </p>
 <dl>

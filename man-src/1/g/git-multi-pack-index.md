@@ -108,7 +108,7 @@ $ git multi-pack-index verify
 </dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
-<p> See m[blue]<code>The Multi-Pack-Index Design Document</code>m[]<font SIZE="-2">[1]</font> and m[blue]<code>The Multi-Pack-Index Format</code>m[]<font SIZE="-2">[2]</font> for more information on the multi-pack-index feature.</p>
+<p> See m[blue]<code>The Multi-Pack-Index Design Document</code>m[][1] and m[blue]<code>The Multi-Pack-Index Format</code>m[][2] for more information on the multi-pack-index feature.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>NOTES</h2>

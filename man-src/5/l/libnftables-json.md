@@ -316,14 +316,14 @@ add rule inet mytable mychain tcp dport 22 accept</pre>
 <p> <code>size</code></p>
 <dl>
 <dd>Maximum number of elements supported.</dd></dl>
-<p> <font SIZE="+1"> <code>TYPE</code></p>
+<p>  <code>TYPE</code></p>
 <dl>
 <dd>The set type might be a string, such as <code>&quot;ipv4_addr&quot;</code> or an array consisting of strings (for concatenated types).</dd></dl>
-<p> </font><font SIZE="+2"> <code>ELEM</code></p>
+<p>  <code>ELEM</code></p>
 <dl>
 <dd>A single set element might be given as string, integer or boolean value for simple cases. If additional properties are required, a formal <code>elem</code> object may be used. </dd>
 <p> Multiple elements may be given in an array.</dl>
-<p> </font></p>
+<p> </p>
 <h3>Element</h3>
 <dl>
 <dd>
@@ -649,9 +649,9 @@ add rule inet mytable mychain tcp dport 22 accept</pre>
 <p> <code>op</code></p>
 <dl>
 <dd>Operator indicating the type of comparison.</dd></dl>
-<p> <font SIZE="+1"> <code>OPERATORS</code></p>
+<p>  <code>OPERATORS</code></p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -738,14 +738,14 @@ add rule inet mytable mychain tcp dport 22 accept</pre>
 </td>
 </tr>
 </table>
-<p> <font SIZE="+1"> </p>
+<p>  </p>
 <p> Unlike with the standard API, the operator is mandatory here. In the standard API, a missing operator may be resolved in two ways, depending on the type of expression on the RHS: </p>
 <dl>
 <dd>&bull; If the RHS is a bitmask or a list of bitmasks, the expression resolves into a binary operation with the inequality operator, like this: <i>LHS &amp; RHS != 0</i>.</dd></dl>
 <dl>
 <dd>&bull; In any other case, the equality operator is simply inserted.</dd></dl>
 <p> For the non-trivial first case, the JSON API supports the <code>in</code> operator.</dl>
-<p> </font></p>
+<p> </p>
 <h3>Counter</h3>
 <dl>
 <dd>

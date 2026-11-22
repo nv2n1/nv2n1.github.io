@@ -35,5 +35,5 @@ description: "bitmap_parse_user – convert an ASCII hex string in a user buffer
 <p>Wrapper for <code>__bitmap_parse</code>, providing it with user buffer. </p>
 <p>We cannot have this as an inline function in bitmap.h because it needs linux/uaccess.h to get the <code>access_ok</code> declaration and this causes cyclic dependencies.  </p>
 <h2>COPYRIGHT</h2>
-<p> <br />
+<p> <br/>
  </p>

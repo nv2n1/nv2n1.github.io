@@ -50,7 +50,7 @@ description: "tcpvmexportd – transcode PVM3 export interface"
 <p> <code>tcpvmexportd -m -C -f mylistfile.lst</code> </p>
 <p> Check the config or the merge file. </p>
 <h2>AUTHORS</h2>
-<p> <code>tcpvmexportd</code> was written by Marzio Malanchini<br />
+<p> <code>tcpvmexportd</code> was written by Marzio Malanchini<br/>
  &lt;marzio_malanchini [at] vodafone.it&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) </p>

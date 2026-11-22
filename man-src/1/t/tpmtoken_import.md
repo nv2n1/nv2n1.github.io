@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-tpmtoken_import/"
 description: "tpmtoken_import – import an X.509 certficate and/or an RSA key pair into the user’s TPM PKCS#11 data store"
 ---
 
-<p>TPM Management &#8211; tpmtoken_import<br />
+<p>TPM Management &#8211; tpmtoken_import<br/>
  </center></p>
 
 <p> tpmtoken_import &#8211; import an X.509 certficate and/or an RSA key pair into the user&#8217;s TPM PKCS#11 data store </p>

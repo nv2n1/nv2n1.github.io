@@ -15,13 +15,13 @@ description: "qbipc_common.h –"
 <h3>Data Structures</h3>
 <p>struct qb_ipc_request_header</p>
 <p>struct qb_ipc_response_header</p>
-<p>Macros<br />
+<p>Macros<br/>
 #define QB_IPC_MSG_NEW_MESSAGE   0</p>
 <p>#define QB_IPC_MSG_USER_START   QB_IPC_MSG_NEW_MESSAGE</p>
 <p>#define QB_IPC_MSG_AUTHENTICATE   -1</p>
 <p>#define QB_IPC_MSG_NEW_EVENT_SOCK   -2</p>
 <p>#define QB_IPC_MSG_DISCONNECT   -3</p>
-<p>Enumerations<br />
+<p>Enumerations<br/>
  enum <code>qb_ipc_type</code> { <code>QB_IPC_SOCKET</code>, <code>QB_IPC_SHM</code>, <code>QB_IPC_POSIX_MQ</code>, <code>QB_IPC_SYSV_MQ</code>, <code>QB_IPC_NATIVE</code> }</p>
 <h3>Functions</h3>
 <pre><code>struct qb_ipc_request_header __attribute__ ((aligned(8)))

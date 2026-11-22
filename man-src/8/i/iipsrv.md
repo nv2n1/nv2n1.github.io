@@ -49,7 +49,7 @@ description: "IIPSRV – IIPImage Image Server"
 <dt>BASE_URL</dt>
 <dd>Set a base URL for use in certain protocol requests if web server rewriting has taken place and the public URL is not the same as that supplied to <code>iipsrv</code></dd>
 <dt>CACHE_CONTROL</dt>
-<dd>Set the HTTP Cache-Control header. See <a rel="nofollow" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9</a> for a full list of options. If not set, header defaults to &quot;max-age=86400&quot; (24 hours).<br />
+<dd>Set the HTTP Cache-Control header. See <a rel="nofollow" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9</a> for a full list of options. If not set, header defaults to &quot;max-age=86400&quot; (24 hours).<br/>
 &nbsp;<wbr> </dd>
 </dl>
 <h2>Examples</h2>

@@ -9,10 +9,10 @@ description: "read_only – Make your handler read_only automatically The only p
 
 <p>read_only &#8211; Make your handler read_only automatically The only purpose of this handler is to return an appropriate error for any requests passed to it in a SET mode.</p>
 <h3>Functions</h3>
-<p><code>netsnmp_mib_handler</code> * <code>netsnmp_get_read_only_handler</code> (void)<br />
- <i>returns a read_only handler that can be injected into a given handler chain. </i><br />
+<p><code>netsnmp_mib_handler</code> * <code>netsnmp_get_read_only_handler</code> (void)<br/>
+ <i>returns a read_only handler that can be injected into a given handler chain. </i><br/>
  int <code>netsnmp_read_only_helper</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests) </p>
-<p> void <code>netsnmp_init_read_only_helper</code> (void)<br />
+<p> void <code>netsnmp_init_read_only_helper</code> (void)<br/>
  <i>initializes the read_only helper which then registers a read_only handler as a run-time injectable handler for configuration file use. </i></p>
 <h2>Detailed Description</h2>
 <p>Make your handler read_only automatically The only purpose of this handler is to return an appropriate error for any requests passed to it in a SET mode. </p>

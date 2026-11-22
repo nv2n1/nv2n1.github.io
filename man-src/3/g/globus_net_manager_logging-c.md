@@ -10,8 +10,8 @@ description: "logging/globus_net_manager_logging.c –"
 <p>logging/globus_net_manager_logging.c &#8211; </p>
 <p> Logging Network Manager Implementation.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;globus_common.h&#8217;<br />
- #include &#8216;globus_net_manager.h&#8217;<br />
+<p>#include &#8216;globus_common.h&#8217;<br/>
+ #include &#8216;globus_net_manager.h&#8217;<br/>
  #include &#8216;version.h&#8217; </p>
 <h3>Variables</h3>
 <p>globus_module_descriptor_t <code>globus_net_manager_logging_module</code> </p>

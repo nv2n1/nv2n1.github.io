@@ -13,7 +13,7 @@ perllinux - Perl version 5 on Linux systems
 
  This document describes various features of Linux that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
 
-<h3>Experimental Support for Sun Studio Compilers for Linux <font SIZE="-1">OS</font></h3>
+<h3>Experimental Support for Sun Studio Compilers for Linux OS</h3>
 
  Sun Microsystems has released a port of their Sun Studio compilers for Linux. As of November 2005, only an alpha version has been released. Until a release of these compilers is made, support for compiling Perl with these compiler experimental. 
 

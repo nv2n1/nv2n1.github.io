@@ -48,38 +48,38 @@ ATTR_OP_REMOVE /* remove the indicated attr */
 <p> The <i>am_attrname</i> field is a pointer to a NULL terminated string giving the attribute name that the sub-operation should operate on. </p>
 <p> The <i>am_attrvalue,</i> <i>am_length</i> and <i>am_flags</i> fields are used to store the value of the named attribute, and some control flags for that sub-operation, respectively. Their use varies depending on the value of the <i>am_opcode</i> field.</p>
 <dl>
-<dt><font SIZE="-1"><code>ATTR_OP_GET</code> </font></dt>
+<dt><code>ATTR_OP_GET</code> </dt>
 <dd> The <i>am_attrvalue</i> field is a pointer to a empty buffer that will be overwritten with the value of the named attribute. The <i>am_length</i> field is initially the total size of the memory buffer that the <i>am_attrvalue</i> field points to. After the operation, the <i>am_length</i> field contains the actual size of the attribute&#8217;s value. The <i>am_flags</i> field may be set to the <tt>ATTR_ROOT</tt> flag. If the process has appropriate priviledges, the ROOT namespace will be searched for the named attribute, otherwise the USER namespace will be searched.</dd>
-<dt><font SIZE="-1"><code>ATTR_OP_SET</code> </font></dt>
+<dt><code>ATTR_OP_SET</code> </dt>
 <dd> The <i>am_attrvalue</i> and <i>am_length</i> fields contain the new value for the given attribute name and its length. The <tt>ATTR_ROOT</tt> flag may be set in the <i>am_flags</i> field. If the process has appropriate priviledges, the ROOT namespace will be searched for the named attribute, otherwise the USER namespace will be searched. The <tt>ATTR_CREATE</tt> and the <tt>ATTR_REPLACE</tt> flags may also be set in the <i>am_flags</i> field (but not simultaneously). If the <tt>ATTR_CREATE</tt> flag is set, the sub-operation will set the <i>am_error</i> field to EEXIST if the named attribute already exists. If the <tt>ATTR_REPLACE</tt> flag is set, the sub-operation will set the <i>am_error</i> field to ENOATTR if the named attribute does not already exist. If neither of those two flags are set and the attribute does not exist, then the attribute will be created with the given value. If neither of those two flags are set and the attribute already exists, then the value will be replaced with the given value.</dd>
-<dt><font SIZE="-1"><code>ATTR_OP_REMOVE</code> </font></dt>
+<dt><code>ATTR_OP_REMOVE</code> </dt>
 <dd> The <i>am_attrvalue</i> and <i>am_length</i> fields are not used and are ignored. The <i>am_flags</i> field may be set to the <tt>ATTR_ROOT</tt> flag. If the process has appropriate priviledges, the ROOT namespace will be searched for the named attribute, otherwise the USER namespace will be searched.</dd></dl>
 <p> The <i>flags</i> argument to the <code>attr_multi</code> call is used to control following of symbolic links in the <i>path</i> argument. The default is to follow symbolic links, <i>flags</i> should be set to ATTR_DONTFOLLOW to not follow symbolic links. </p>
 <p> <code>attr_multi</code> will fail if one or more of the following are true:</p>
 <dl>
-<dt><font SIZE="-1">[ENOENT]</font></dt>
+<dt>[ENOENT]</dt>
 <dd> The named file does not exist.</dd>
-<dt><font SIZE="-1">[EPERM]</font></dt>
-<dd> The effective user <font SIZE="-1">ID</font> does not match the owner of the file and the effective user <font SIZE="-1">ID</font> is not super-user.</dd>
-<dt><font SIZE="-1">[ENOTDIR]</font></dt>
+<dt>[EPERM]</dt>
+<dd> The effective user ID does not match the owner of the file and the effective user ID is not super-user.</dd>
+<dt>[ENOTDIR]</dt>
 <dd> A component of the path prefix is not a directory.</dd>
-<dt><font SIZE="-1">[EACCES]</font></dt>
+<dt>[EACCES]</dt>
 <dd> Search permission is denied on a component of the path prefix.</dd>
-<dt><font SIZE="-1">[EINVAL]</font></dt>
+<dt>[EINVAL]</dt>
 <dd> A bit other than ATTR_DONTFOLLOW was set in the <i>flag</i> argument.</dd>
-<dt><font SIZE="-1">[EFAULT]</font></dt>
+<dt>[EFAULT]</dt>
 <dd> <i>Path,</i> or <i>oplist</i> points outside the allocated address space of the process.</dd>
-<dt><font SIZE="-1">[ELOOP]</font></dt>
+<dt>[ELOOP]</dt>
 <dd> A path name lookup involved too many symbolic links.</dd>
-<dt><font SIZE="-1">[ENAMETOOLONG]</font></dt>
-<dd> The length of <i>path</i> exceeds <font SIZE="-1">{<i>MAXPATHLEN</i>}, </font> or a pathname component is longer than <font SIZE="-1">{<i>MAXNAMELEN</i>}. </font></dd></dl>
+<dt>[ENAMETOOLONG]</dt>
+<dd> The length of <i>path</i> exceeds {<i>MAXPATHLEN</i>},  or a pathname component is longer than {<i>MAXNAMELEN</i>}. </dd></dl>
 <p> <code>attr_multif</code> will fail if:</p>
 <dl>
-<dt><font SIZE="-1">[EINVAL]</font></dt>
+<dt>[EINVAL]</dt>
 <dd> A bit was set in the <i>flag</i> argument, or <i>fd</i> refers to a socket, not a file.</dd>
-<dt><font SIZE="-1">[EFAULT]</font></dt>
+<dt>[EFAULT]</dt>
 <dd> <i>Oplist</i> points outside the allocated address space of the process.</dd>
-<dt><font SIZE="-1">[EBADF]</font></dt>
+<dt>[EBADF]</dt>
 <dd> <i>Fd</i> does not refer to a valid descriptor.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately. Note that the individual operations listed in the <i>oplist</i> array each have their own error return fields. The <i>errno</i> variable only records the result of the <i>attr_multi</i> call itself, not the result of any of the sub-operations.</p>

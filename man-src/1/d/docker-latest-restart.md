@@ -14,9 +14,9 @@ description: "docker-restart – Restart one or more containers"
 <h2>DESCRIPTION</h2>
 <p> Restart each container listed. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-t</code>, <code>&#8211;time</code>=<i>10</i><br />
+<p> <code>-t</code>, <code>&#8211;time</code>=<i>10</i><br/>
 Number of seconds to try to stop for before killing the container. Once killed it will then be restarted. Default is 10 seconds. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>

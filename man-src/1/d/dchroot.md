@@ -188,8 +188,8 @@ description: "dchroot – enter a chroot environment"
 <p> Use <i>&#8212;</i> to allow options beginning with &#8216;-&#8216; or &#8216;&#8211;&#8216; in the command to run in the chroot. This prevents them being interpreted as options for dchroot itself. Note that the top line was echoed to standard error, and the remaining lines to standard output. This is intentional, so that program output from commands run in the chroot may be piped and redirected as required; the data will be the same as if the command was run directly on the host system.</p>
 <h2>TROUBLESHOOTING</h2>
 <p> If something is not working, and it&#8217;s not clear from the error messages what is wrong, try using the <code>&#8211;debug=</code><i>level</i> option to turn on debugging messages. This gives a great deal more information. Valid debug levels are &#8216;none&#8217;, and &#8216;notice&#8217;, &#8216;info&#8217;, &#8216;warning&#8217; and &#8216;critical&#8217; in order of increasing severity. The lower the severity level, the more output. </p>
-<p> If you are still having trouble, the developers may be contacted on the mailing list:<br />
- Debian buildd-tools Developers<br />
+<p> If you are still having trouble, the developers may be contacted on the mailing list:<br/>
+ Debian buildd-tools Developers<br/>
  &lt;buildd-tools-devel [at] lists.alioth.debian.org&gt;</p>
 <h2>BUGS</h2>
 <p> On the <code>mips</code> and <code>mipsel</code> architectures, Linux kernels up to and including at least version 2.6.17 have broken <code><a href="/docs/linux/man/2-personality/">personality</a></code>(2) support, which results in a failure to set the personality. This will be seen as an &#8220;Operation not permitted&#8221; (EPERM) error. To work around this problem, set personality to &#8216;undefined&#8217;, or upgrade to a more recent kernel.</p>

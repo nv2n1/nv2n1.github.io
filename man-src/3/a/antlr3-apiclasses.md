@@ -12,7 +12,7 @@ description: "API Classes –"
 <p> The API classes are divided into the typdefs (and their underlying structs) that are the containers for each &#8216;object&#8217; within the ANTLR3C runtime, and their implementations (the functions that are installed by default in to these structures when you create them.</p>
 <h3>Modules</h3>
 <p> <code>API Typedefs and Structs</code> </p>
-<p> <i>These structures (and the typedefs that you use to reference them and their pointers) are the C equivalent of objects. </i><br />
+<p> <i>These structures (and the typedefs that you use to reference them and their pointers) are the C equivalent of objects. </i><br/>
  <code>API Implementation functions</code> </p>
 <p> <i>API implementation functions are the default implementation of each of the methods in a particular typedef structure. </i></p>
 <h2>Detailed Description</h2>

@@ -10,7 +10,7 @@ description: "zlaev2.f –"
 <p>zlaev2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaev2</code> (A, B, C, RT1, RT2, CS1, SN1)<br />
+<p>subroutine <code>zlaev2</code> (A, B, C, RT1, RT2, CS1, SN1)<br/>
  <i></i><code>ZLAEV2</code> computes the eigenvalues and eigenvectors of a 2-by-2 symmetric/Hermitian matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaev2 (complex*16A, complex*16B, complex*16C, double precisionRT1, double precisionRT2, double precisionCS1, complex*16SN1)</h3>

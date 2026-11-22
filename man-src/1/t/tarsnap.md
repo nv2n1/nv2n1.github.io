@@ -10,15 +10,15 @@ description: "tarsnap – manipulate remote encrypted backups"
 
 <p> <code>tarsnap</code> &#8211; manipulate remote encrypted backups</p>
 <h2>SYNOPSIS</h2>
-<p> Br q Fl c &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i> &#8211;<code>f </code><i>archive-name</i> [<i>options</i> ] [<i>files | directories</i> ]<br />
- Br q Fl d &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i> &#8211;<code>f </code><i>archive-name</i> [<i>options</i> ]<br />
- Br q Fl t | Fl x &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>f </code><i>archive-name</i> [<i>options</i> ] [<i>patterns</i> ]<br />
- Br q Fl r &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>f </code><i>archive-name</i><br />
- Br q Fl -list-archives &#8211;<code>-keyfile </code><i>key-file</i><br />
- Br q Fl -print-stats &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i> [-<code>f </code><i>archive-name</i> ]<br />
- Br q Fl -recover &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i><br />
- Br q Fl -fsck &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i><br />
- Br q Fl -fsck-prune &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i><br />
+<p> Br q Fl c &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i> &#8211;<code>f </code><i>archive-name</i> [<i>options</i> ] [<i>files | directories</i> ]<br/>
+ Br q Fl d &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i> &#8211;<code>f </code><i>archive-name</i> [<i>options</i> ]<br/>
+ Br q Fl t | Fl x &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>f </code><i>archive-name</i> [<i>options</i> ] [<i>patterns</i> ]<br/>
+ Br q Fl r &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>f </code><i>archive-name</i><br/>
+ Br q Fl -list-archives &#8211;<code>-keyfile </code><i>key-file</i><br/>
+ Br q Fl -print-stats &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i> [-<code>f </code><i>archive-name</i> ]<br/>
+ Br q Fl -recover &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i><br/>
+ Br q Fl -fsck &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i><br/>
+ Br q Fl -fsck-prune &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i><br/>
  Br q Fl -nuke &#8211;<code>-keyfile </code><i>key-file</i></p>
 <h2>DESCRIPTION</h2>
 <p> creates, reads, deletes, and otherwise manages online backups. </p>

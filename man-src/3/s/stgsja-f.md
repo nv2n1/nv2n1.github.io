@@ -10,7 +10,7 @@ description: "stgsja.f –"
 <p>stgsja.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>stgsja</code> (JOBU, JOBV, JOBQ, M, P, N, K, L, A, LDA, B, LDB, TOLA, TOLB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, NCYCLE, INFO)<br />
+<p>subroutine <code>stgsja</code> (JOBU, JOBV, JOBQ, M, P, N, K, L, A, LDA, B, LDB, TOLA, TOLB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, NCYCLE, INFO)<br/>
  <i></i><code>STGSJA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stgsja (characterJOBU, characterJOBV, characterJOBQ, integerM, integerP, integerN, integerK, integerL, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, realTOLA, realTOLB, real, dimension( * )ALPHA, real, dimension( * )BETA, real, dimension( ldu, * )U, integerLDU, real, dimension( ldv, * )V, integerLDV, real, dimension( ldq, * )Q, integerLDQ, real, dimension( * )WORK, integerNCYCLE, integerINFO)</h3>

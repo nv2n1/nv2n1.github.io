@@ -10,7 +10,7 @@ description: "ldns_get_rr_list_addr_by_name, ldns_get_rr_list_name_by_addr"
 
 <p> ldns_get_rr_list_addr_by_name, ldns_get_rr_list_name_by_addr </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr_list* ldns_get_rr_list_addr_by_name(ldns_resolver *r, ldns_rdf *name, ldns_rr_class c, uint16_t flags); </p>

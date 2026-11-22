@@ -17,7 +17,7 @@ urifind - find URIs in a document and dump them to STDOUT.
 
 <h2>DESCRIPTION</h2>
 
- <i>urifind</i> is a simple script that finds URIs in one or more files (using <tt>&quot;URI::Find&quot;</tt>), and outputs them to to <font SIZE="-1">STDOUT. </font> That's it. 
+ <i>urifind</i> is a simple script that finds URIs in one or more files (using <tt>&quot;URI::Find&quot;</tt>), and outputs them to to STDOUT.  That's it. 
 
  To find all the URIs in <i>file1</i>, use: 
 
@@ -37,7 +37,7 @@ urifind - find URIs in a document and dump them to STDOUT.
     $ wget <a rel="nofollow" HREF="http://www.boston.com/">http://www.boston.com/</a> -O - | urifind
 </pre> 
 
- When multiple files are listed, <i>urifind</i> prefixes each found <font SIZE="-1">URI</font> with the file from which it came: 
+ When multiple files are listed, <i>urifind</i> prefixes each found URI with the file from which it came: 
 
  <pre>
     $ urifind file1 file2

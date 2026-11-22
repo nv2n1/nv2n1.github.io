@@ -15,9 +15,9 @@ description: "goa-daemon – GNOME Online Accounts Daemon"
 <dd>The <code>goa-daemon</code> program provides the <i>org.gnome.OnlineAccounts</i> name on the session message bus. Users or administrators should never need to start this daemon as it will be automatically started by <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1) whenever an application sends a D-Bus message to the <i>org.gnome.OnlineAccounts</i> name on the session bus.</dd>
 <h2>Configuration File</h2>
 <p>The <code>goa-daemon</code> program stores configuration in the $XDG_CONFIG_HOME/goa-1.0/accounts.conf (typically ~/.config/goa-1.0/accounts.conf) file. The format of this file is private and 3rd party programs or libraries should never read it. This file does not contain any passwords or secrets. </p>
-<p> See the m[blue]<code>XDG Base Directory Specification</code>m[]<font SIZE="-2">[1]</font> for more information about $XDG_CONFIG_HOME.</p>
+<p> See the m[blue]<code>XDG Base Directory Specification</code>m[][1] for more information about $XDG_CONFIG_HOME.</p>
 <h2>Secrets</h2>
-<p>The <code>goa-daemon</code> program stores secrets (such as OAuth tokens) in m[blue]<code>GNOME Keyring</code>m[]<font SIZE="-2">[2]</font>. The format of the stored secrets is private and 3rd party programs or libraries should never read, modify or delete these secrets.</p>
+<p>The <code>goa-daemon</code> program stores secrets (such as OAuth tokens) in m[blue]<code>GNOME Keyring</code>m[][2]. The format of the stored secrets is private and 3rd party programs or libraries should never read, modify or delete these secrets.</p>
 <h2>Options</h2>
 <p><code>&#8211;replace</code></p>
 <dl>

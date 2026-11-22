@@ -245,7 +245,7 @@ define dumptype rsh_example {
 <p> To use SSH, you need to set up SSH keys either by storing the passphrase in cleartext, using ssh-agent, or using no passphrase at all. All of these options have security implications which should be carefully considered before adoption. </p>
 <p> When you use a public key on the client to do data encryption (see <a rel="nofollow" href="http://wiki.zmanda.com/index.php/How_To:Set_up_data_encryption">http://wiki.zmanda.com/index.php/How_To:Set_up_data_encryption</a>), you can lock away the private key in a secure place. Both, transport and storage will be encrypted with such a setup. See <a href="http://wiki.zmanda.com/index.php/Encryption">http://wiki.zmanda.com/index.php/Encryption</a> for an overview of encryption options. </p>
 <p> Enable SSH authentication and set the <code>ssh-keys</code> option in all DLEs for that host by adding the following to the DLE itself or to the corresponding dumptype in amanda.conf: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>auth&nbsp;<wbr>&quot;ssh&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>auth&nbsp;<wbr>&quot;ssh&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>ssh-keys&nbsp;<wbr>&quot;/home/amandabackup/.ssh/id_rsa_amdump&quot; </p>
 <p> <code>ssh-keys</code> is the path to the private key on the client. If the username to which Amanda should connect is different from the default, then you should also add </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>client-username&nbsp;<wbr>&quot;otherusername&quot; </p>

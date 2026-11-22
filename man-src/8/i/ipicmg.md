@@ -80,8 +80,8 @@ description: "ipmiutil_picmg – send specific PICMG extended IPMI commands"
 </dl>
 </dl>
 <h2>Examples</h2>
-<p>ipmiutil picmg properties<br />
- Gets PICMG properties from the default target address (slave address 0x20). ipmiutil picmg -N 192.168.1.1 -U root -P pswd addrinfo<br />
+<p>ipmiutil picmg properties<br/>
+ Gets PICMG properties from the default target address (slave address 0x20). ipmiutil picmg -N 192.168.1.1 -U root -P pswd addrinfo<br/>
  Gets PICMG Address Information from the specified IP address. </p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ipmiutil/">ipmiutil</a>(8) <a href="/docs/linux/man/8-ialarms/">ialarms</a>(8) <a href="/docs/linux/man/8-iconfig/">iconfig</a>(8) <a href="/docs/linux/man/8-idiscover/">idiscover</a>(8) <a href="/docs/linux/man/8-ievents/">ievents</a>(8) <a href="/docs/linux/man/8-ifru/">ifru</a>(8) <a href="/docs/linux/man/8-igetevent/">igetevent</a>(8) <a href="/docs/linux/man/8-ihealth/">ihealth</a>(8) <a href="/docs/linux/man/8-ilan/">ilan</a>(8) <a href="/docs/linux/man/8-ireset/">ireset</a>(8) <a href="/docs/linux/man/8-isel/">isel</a>(8) <a href="/docs/linux/man/8-isensor/">isensor</a>(8) <a href="/docs/linux/man/8-iserial/">iserial</a>(8) <a href="/docs/linux/man/8-isol/">isol</a>(8) <a href="/docs/linux/man/8-iwdt/">iwdt</a>(8) </p>

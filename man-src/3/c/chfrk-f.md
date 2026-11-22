@@ -10,7 +10,7 @@ description: "chfrk.f –"
 <p>chfrk.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>chfrk</code> (TRANSR, UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C)<br />
+<p>subroutine <code>chfrk</code> (TRANSR, UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C)<br/>
  <i></i><code>CHFRK</code> performs a Hermitian rank-k operation for matrix in RFP format.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chfrk (characterTRANSR, characterUPLO, characterTRANS, integerN, integerK, realALPHA, complex, dimension( lda, * )A, integerLDA, realBETA, complex, dimension( * )C)</h3>

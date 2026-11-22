@@ -43,7 +43,7 @@ description: "apt-sortpkgs – Utility to sort package index files"
 <h2>DIAGNOSTICS</h2>
 <p> <code>apt-sortpkgs</code> returns zero on normal operation, decimal 100 on error.</p>
 <h2>BUGS</h2>
-<p> m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
+<p> m[blue]<code>APT bug page</code>m[][1]. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>AUTHORS</h2>
 <p> <code>Jason Gunthorpe</code></p>
 <dl>

@@ -15,8 +15,8 @@ description: "QuantLib::DZero – $ D_{0} $ matricial representation"
 <p><code>DZero</code> (Size gridPoints, Real h) </p>
 <h2>Detailed Description</h2>
 <p>$ D_{0} $ matricial representation </p>
-<p> The differential operator $ D_{0} $ discretizes the first derivative with the second-order formula [ ac{<br />
- artial u_{i}}{<br />
+<p> The differential operator $ D_{0} $ discretizes the first derivative with the second-order formula [ ac{<br/>
+ artial u_{i}}{<br/>
  artial x} pprox ac{u_{i+1}-u_{i-1}}{2h} = D_{0} u_{i} ] </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>

@@ -15,23 +15,23 @@ description: "sc::ProcMemoryGrp –"
 <p> Inherits <code>sc::MemoryGrp</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>ProcMemoryGrp</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> void <code>set_localsize</code> (size_t)<br />
- <i>Set the size of locally held memory. </i><br />
- void * <code>localdata</code> ()<br />
- <i>Returns a pointer to the local data. </i><br />
- void * <code>obtain_readwrite</code> (<code>distsize_t</code> offset, int size)<br />
- <i>Only one thread can have an unreleased obtain_readwrite at a time. </i><br />
- void * <code>obtain_readonly</code> (<code>distsize_t</code> offset, int size)<br />
- <i>This gives read access to the memory location. No locking is done. </i><br />
- void * <code>obtain_writeonly</code> (<code>distsize_t</code> offset, int size)<br />
- <i>This gives write access to the memory location. No locking is done. </i><br />
- void <code>release_readonly</code> (void *data, <code>distsize_t</code> offset, int size)<br />
- <i>This is called when read access is no longer needed. </i><br />
- void <code>release_writeonly</code> (void *data, <code>distsize_t</code> offset, int size)<br />
- <i>This is called when write access is no longer needed. </i><br />
- void <code>release_readwrite</code> (void *data, <code>distsize_t</code> offset, int size)<br />
- <i>This is called when read/write access is no longer needed. </i><br />
- void <code>sync</code> ()<br />
+<p> void <code>set_localsize</code> (size_t)<br/>
+ <i>Set the size of locally held memory. </i><br/>
+ void * <code>localdata</code> ()<br/>
+ <i>Returns a pointer to the local data. </i><br/>
+ void * <code>obtain_readwrite</code> (<code>distsize_t</code> offset, int size)<br/>
+ <i>Only one thread can have an unreleased obtain_readwrite at a time. </i><br/>
+ void * <code>obtain_readonly</code> (<code>distsize_t</code> offset, int size)<br/>
+ <i>This gives read access to the memory location. No locking is done. </i><br/>
+ void * <code>obtain_writeonly</code> (<code>distsize_t</code> offset, int size)<br/>
+ <i>This gives write access to the memory location. No locking is done. </i><br/>
+ void <code>release_readonly</code> (void *data, <code>distsize_t</code> offset, int size)<br/>
+ <i>This is called when read access is no longer needed. </i><br/>
+ void <code>release_writeonly</code> (void *data, <code>distsize_t</code> offset, int size)<br/>
+ <i>This is called when write access is no longer needed. </i><br/>
+ void <code>release_readwrite</code> (void *data, <code>distsize_t</code> offset, int size)<br/>
+ <i>This is called when read/write access is no longer needed. </i><br/>
+ void <code>sync</code> ()<br/>
  <i>Synchronizes all the nodes. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>ProcMemoryGrp</code> concrete class provides an implementation of <code>MemoryGrp</code> for a single processor.</p>

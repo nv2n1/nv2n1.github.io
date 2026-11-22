@@ -23,9 +23,9 @@ description: "hx509 enviroment functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>env</i> enviroment to add the enviroment variable too.<br />
- <i>key</i> key to add<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>env</i> enviroment to add the enviroment variable too.<br/>
+ <i>key</i> key to add<br/>
  <i>value</i> value to add</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -36,9 +36,9 @@ description: "hx509 enviroment functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>env</i> enviroment to add the enviroment variable too.<br />
- <i>key</i> key to add<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>env</i> enviroment to add the enviroment variable too.<br/>
+ <i>key</i> key to add<br/>
  <i>list</i> binding list to add</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -49,8 +49,8 @@ description: "hx509 enviroment functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>env</i> enviroment to add the enviroment variable too.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>env</i> enviroment to add the enviroment variable too.<br/>
  <i>key</i> key to search for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -61,8 +61,8 @@ description: "hx509 enviroment functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>env</i> enviroment to add the enviroment variable too.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>env</i> enviroment to add the enviroment variable too.<br/>
  <i>key</i> key to search for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -79,9 +79,9 @@ description: "hx509 enviroment functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>env</i> enviroment to add the enviroment variable too.<br />
- <i>key</i> key to search for.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>env</i> enviroment to add the enviroment variable too.<br/>
+ <i>key</i> key to search for.<br/>
  <i>len</i> length of key.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

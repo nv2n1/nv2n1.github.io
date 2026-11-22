@@ -17,8 +17,8 @@ description: "lldptool – manage the LLDP settings and status of lldpad"
 <dt><code>-i [ifname]</code></dt>
 <dd>specifies the network interface to which the command applies. Most lldptool commands require specifying a network interface.</dd>
 <dt><code>-V [tlvid]</code></dt>
-<dd>specifies the TLV identifier<br />
- The tlvid is an integer value used to identify specific LLDP TLVs. The tlvid value is the Type value for types not equal to 127 (the organizationally specific type). For organizationally specific TLVs, the tlvid is the value represented by the 3 byte OUI and 1 byte subtype &#8211; where the subtype is the lowest order byte of the tlvid.<br />
+<dd>specifies the TLV identifier<br/>
+ The tlvid is an integer value used to identify specific LLDP TLVs. The tlvid value is the Type value for types not equal to 127 (the organizationally specific type). For organizationally specific TLVs, the tlvid is the value represented by the 3 byte OUI and 1 byte subtype &#8211; where the subtype is the lowest order byte of the tlvid.<br/>
  The tlvid can be entered as a numerical value (e.g. 10 or 0xa), or for supported TLVs, as a keyword. Review the <code>lldptool</code> help output to see the list of supported TLV keywords.</dd>
 <dt><code>-n</code></dt>
 <dd>&quot;neighbor&quot; option for commands which can use it (e.g. get-tlv)</dd>
@@ -67,28 +67,28 @@ description: "lldptool – manage the LLDP settings and status of lldpad"
 <h2>Examples</h2>
 <dl>
 <dt>Configure LLDP adminStatus to Receive and Transmit for interface <i>eth2</i></dt>
-<dd><code>lldptool -L -i eth2 adminStatus=rxtx</code><br />
+<dd><code>lldptool -L -i eth2 adminStatus=rxtx</code><br/>
  <code>lldptool set-lldp -i eth2 adminStatus=rxtx</code></dd>
 <dt>Query the LLDP adminStatus for interface <i>eth3</i></dt>
-<dd><code>lldptool -l -i eth3 adminStatus</code><br />
+<dd><code>lldptool -l -i eth3 adminStatus</code><br/>
  <code>lldptool get-lldp -i eth3 adminStatus</code></dd>
 <dt>Query the LLDP statistics for interface <i>eth3</i></dt>
-<dd><code>lldptool -S -i eth3 adminStatus</code><br />
+<dd><code>lldptool -S -i eth3 adminStatus</code><br/>
  <code>lldptool stats -i eth3 adminStatus</code></dd>
 <dt>Query the local TLVs which are being transmitted for a given interface:</dt>
-<dd><code>lldptool -t -i eth3</code><br />
+<dd><code>lldptool -t -i eth3</code><br/>
  <code>lldptool get-tlv -i eth3</code></dd>
 <dt>Query the received neighbor TLVs received on a given interface:</dt>
-<dd><code>lldptool -t -n -i eth3</code><br />
+<dd><code>lldptool -t -n -i eth3</code><br/>
  <code>lldptool get-tlv -n -i eth3</code></dd>
 <dt>Query the value of the System Description TLV as received from the neighbor on a given interface:</dt>
-<dd><code>lldptool -t -n -i eth3 -V sysDesc</code><br />
+<dd><code>lldptool -t -n -i eth3 -V sysDesc</code><br/>
  <code>lldptool get-tlv -n -i eth3 -V 6</code></dd>
 <dt>Disable transmit of the IEEE 802.3 MAC/PHY Configuration Status TLV for a given interface:</dt>
-<dd><code>lldptool -T -i eth3 -V macPhyCfg enableTx=no</code><br />
+<dd><code>lldptool -T -i eth3 -V macPhyCfg enableTx=no</code><br/>
  <code>lldptool set-tlv -i eth3 -V 0x120f01 enableTx=no</code></dd>
 <dt>Query value of the transmit setting for the Port Description TLV for a given interface:</dt>
-<dd><code>lldptool -t -i eth3 -V portDesc -c enableTx</code><br />
+<dd><code>lldptool -t -i eth3 -V portDesc -c enableTx</code><br/>
  <code>lldptool get-tlv -i eth3 -V 4 -c enableTx</code></dd>
 <dt>Set a Management Address TLV on eth3 to carry IPv4 address 192.168.10.10</dt>
 <dd><code>lldptool -T -i eth3 -V mngAddr ipv4=192.168.10.10</code></dd>
@@ -107,7 +107,7 @@ description: "lldptool – manage the LLDP settings and status of lldpad"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lldptool-dcbx/">lldptool-dcbx</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-ets/">lldptool-ets</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-pfc/">lldptool-pfc</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-app/">lldptool-app</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-med/">lldptool-med</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-vdp/">lldptool-vdp</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-evb/">lldptool-evb</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-evb22/">lldptool-evb22</a></code>(8), <code><a href="/docs/linux/man/8-dcbtool/">dcbtool</a></code>(8), <code><a href="/docs/linux/man/8-lldpad/">lldpad</a></code>(8) </p>
 <h2>Copyright</h2>
-<p>lldptool &#8211; LLDP agent configuration utility<br />
+<p>lldptool &#8211; LLDP agent configuration utility<br/>
  Copyright(c) 2007-2012 Intel Corporation. Portions of lldptool are based on:</p>
 <dl>
 <dt>hostapd-0.5.7</dt>

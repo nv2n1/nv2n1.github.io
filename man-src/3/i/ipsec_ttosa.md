@@ -11,16 +11,16 @@ description: "ipsec_ttosa, ipsec_satot, ipsec_initsaid – convert IPsec Securit
 <p> ipsec_ttosa, ipsec_satot, ipsec_initsaid &#8211; convert IPsec Security Association IDs to and from text, initialize an SA ID</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
-<p> <code>typedef struct {</code><br />
- &nbsp;<wbr> <code>ip_address dst;</code><br />
- &nbsp;<wbr> <code>ipsec_spi_t spi;</code><br />
- &nbsp;<wbr> <code>int proto;</code><br />
+<p> <code>typedef struct {</code><br/>
+ &nbsp;<wbr> <code>ip_address dst;</code><br/>
+ &nbsp;<wbr> <code>ipsec_spi_t spi;</code><br/>
+ &nbsp;<wbr> <code>int proto;</code><br/>
  <code>} ip_said;</code> </p>
-<p> <code>const char *ttosa(const char *src, size_t srclen,</code><br />
- &nbsp;<wbr> <code>ip_said *sa);</code><br />
- <code>size_t satot(const ip_said *sa, int format,</code><br />
- &nbsp;<wbr> <code>char *dst, size_t dstlen);</code><br />
- <code>void initsaid(const ip_address *addr, ipsec_spi_t spi,</code><br />
+<p> <code>const char *ttosa(const char *src, size_t srclen,</code><br/>
+ &nbsp;<wbr> <code>ip_said *sa);</code><br/>
+ <code>size_t satot(const ip_said *sa, int format,</code><br/>
+ &nbsp;<wbr> <code>char *dst, size_t dstlen);</code><br/>
+ <code>void initsaid(const ip_address *addr, ipsec_spi_t spi,</code><br/>
  &nbsp;<wbr> <code>int proto, ip_said *dst);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <i>Ttosa</i> converts an ASCII Security Association (SA) specifier into an <code>ip_said</code> structure (containing a destination-host address in network byte order, an SPI number in network byte order, and a protocol code). <i>Satot</i> does the reverse conversion, back to a text SA specifier. <i>Initsaid</i> initializes an <code>ip_said</code> from separate items of information. </p>

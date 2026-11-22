@@ -10,7 +10,7 @@ description: "dlasd0.f –"
 <p>dlasd0.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlasd0</code> (N, SQRE, D, E, U, LDU, VT, LDVT, SMLSIZ, IWORK, WORK, INFO)<br />
+<p>subroutine <code>dlasd0</code> (N, SQRE, D, E, U, LDU, VT, LDVT, SMLSIZ, IWORK, WORK, INFO)<br/>
  <i></i><code>DLASD0</code> computes the singular values of a real upper bidiagonal n-by-m matrix B with diagonal d and off-diagonal e. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasd0 (integerN, integerSQRE, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldvt, * )VT, integerLDVT, integerSMLSIZ, integer, dimension( * )IWORK, double precision, dimension( * )WORK, integerINFO)</h3>

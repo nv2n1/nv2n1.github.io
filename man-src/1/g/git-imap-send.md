@@ -108,7 +108,7 @@ git imap - send[-v][-q][--[no - ] curl]
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> You may want to use <code>sslVerify=false</code> while troubleshooting, if you suspect that the reason you are having trouble connecting is because the certificate you use at the private server <code>example.com</code> you are trying to set up (or have set up) may not be verified correctly. </p>
 </dl>
 <p> Using Gmail&#8217;s IMAP interface: </p>
@@ -124,13 +124,13 @@ git imap - send[-v][-q][--[no - ] curl]
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> You might need to instead use: <code>folder = &quot;[Google Mail]/Drafts&quot;</code> if you get an error that the &quot;Folder doesn&#8217;t exist&quot;. </p>
 </dl>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> If your Gmail account is set to another language than English, the name of the &quot;Drafts&quot; folder will be localized. </p>
 </dl>
 <p> Once the commits are ready to be sent, run the following command: </p>

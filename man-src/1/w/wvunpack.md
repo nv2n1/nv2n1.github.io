@@ -115,5 +115,5 @@ description: "wvunpack – decodes wavpack encoded files"
 <dt>
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2005 Sebastian Dröge<br />
+<p> Copyright &#169; 2005 Sebastian Dröge<br/>
  Copyright &#169; 2009 David Bryant </p>

@@ -38,7 +38,7 @@ description: "dvitype, odvitype – translate a dvi file for humans"
 <h2>ENVIRONMENT</h2>
 <p> The environment variable TEXFONTS is used to search for the TFM files used in the DVI file. See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching. If TEXFONTS is not set, it uses the system default.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gftype/">gftype</a></code>(1), <code><a href="/docs/linux/man/1-pktype/">pktype</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-gftype/">gftype</a></code>(1), <code><a href="/docs/linux/man/1-pktype/">pktype</a></code>(1).<br/>
  Donald E. Knuth, <i>TeXware</i>.</p>
 <h2>AUTHORS</h2>
 <p> Donald E. Knuth wrote the program. It was published as part of the <i>TeXware</i> technical report, available from the TeX Users Group. Howard Trickey and Pavel Curtis originally ported it to Unix. </p>

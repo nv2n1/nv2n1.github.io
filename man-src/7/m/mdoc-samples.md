@@ -180,7 +180,7 @@ description: "‘ macro is mandatory. If not specified, the headers, footers and
 <dd>Report title (in a reference).</dd>
 <dt><code>%T</code></dt>
 <dd>Title of article in a book or journal.</dd></dl>
-<p> One way of passing a string containing blank spaces is to use the hard or unpaddable space character `\<br />
+<p> One way of passing a string containing blank spaces is to use the hard or unpaddable space character `\<br/>
 &nbsp;,&#8217; that is, a blank space preceded by the escape character `\&#8217; This method may be used with any macro but has the side effect of interfering with the adjustment of text over the length of a line. Troff sees the hard space as if it were any other printable character and cannot split the string into blank or newline separated pieces as one would expect. The method is useful for strings which are not expected to overlap a line boundary. For example:</p>
 <dl>
 <dt><code>Fn </code>fetch char&nbsp;*str</dt>
@@ -248,7 +248,7 @@ description: "‘ macro is mandatory. If not specified, the headers, footers and
 <dd>
 </dd><dt><code>PRMUNIX Programmer&#8217;s Manual</code></dt>
 <dd></dd></dl>
-<p> The default volume labeling is<br />
+<p> The default volume labeling is<br/>
  <code>URM</code> for sections 1, 6, and 7; <code>SMM</code> for section 8; <code>PRM</code> for sections 2, 3, 4, and 5.</p>
 <dt><code>.operating_system release# </code></dt>
 <dd>The name of the operating system should be the common acronym, for example, <code>BSD</code> or <code>FreeBSD</code> or <code>ATT</code> The release should be the standard release nomenclature for the system specified, for example, 4.3, 4.3+Tahoe, V.3, V.4. Unrecognized arguments are displayed as given in the page footer. For instance, a typical footer might be: </dd>
@@ -584,13 +584,13 @@ description: "‘ macro is mandatory. If not specified, the headers, footers and
 <p>The concept of enclosure is similar to quoting. The object being to enclose one or more strings between a pair of characters like quotes or parentheses. The terms quoting and enclosure are used interchangeably throughout this document. Most of the one line enclosure macros end in small letter `q&#8217; to give a hint of quoting, but there are a few irregularities. For each enclosure macro there is also a pair of open and close macros which end in small letters `o&#8217; and `c&#8217; respectively. These can be used across one or more lines of text and while they have nesting limitations, the one line quote macros can be used inside of them. </p>
 <blockquote>
 <dl>
-<p> <i> Quote<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> Close<tt>&nbsp;<wbr>&nbsp;</tt> Open<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Function<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Result</i> .Aq<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Ac<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Ao<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Angle Bracket Enclosure&lt;string&gt;<br />
- .Bq<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Bc<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Bo<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Bracket Enclosure<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[string]<br />
- .Dq<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Dc<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Do<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Double Quote<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8220;string&#8221;<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Ec<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Eo<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Enclose String (in XX)<tt>&nbsp;<wbr>&nbsp;</tt>XXstringXX<br />
- .Pq<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Pc<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Po<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Parenthesis Enclosure<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>(string)<br />
- .Ql<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Quoted Literal<tt>&nbsp;<wbr>&nbsp;</tt>`st&#8217; or string<br />
- .Qq<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Qc<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Qo<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Straight Double Quote<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&quot;string&quot;<br />
+<p> <i> Quote<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> Close<tt>&nbsp;<wbr>&nbsp;</tt> Open<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Function<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Result</i> .Aq<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Ac<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Ao<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Angle Bracket Enclosure&lt;string&gt;<br/>
+ .Bq<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Bc<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Bo<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Bracket Enclosure<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[string]<br/>
+ .Dq<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Dc<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Do<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Double Quote<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8220;string&#8221;<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Ec<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Eo<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Enclose String (in XX)<tt>&nbsp;<wbr>&nbsp;</tt>XXstringXX<br/>
+ .Pq<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Pc<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Po<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Parenthesis Enclosure<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>(string)<br/>
+ .Ql<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Quoted Literal<tt>&nbsp;<wbr>&nbsp;</tt>`st&#8217; or string<br/>
+ .Qq<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Qc<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Qo<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Straight Double Quote<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&quot;string&quot;<br/>
  .Sq<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.Sc<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>.So<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Single Quote<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>`string&#8217;
 </dl>
 </blockquote>

@@ -12,8 +12,8 @@ description: "cpufreq-aperf – Calculates the average frequency over a time per
 <h2>SYNTAX</h2>
 <p> cpufreq-aperf [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> On latest processors exist two MSR registers refered to as:<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; MPERF increasing with maxium&nbsp;<wbr>(P0)&nbsp;<wbr>frequency in C0<br />
+<p> On latest processors exist two MSR registers refered to as:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; MPERF increasing with maxium&nbsp;<wbr>(P0)&nbsp;<wbr>frequency in C0<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211; APERF increasing with current/actual frequency in C0 </p>
 <p> From this information the average frequency over a time period can be calculated and this is what this tool does. </p>
 <p> A nice falloff feature beside the average frequency is the time a processor core remained in C0 (working state) or any CX (sleep state) processor sleep state during the measured time period. This information can be determined from the fact that MPERF only increases in C0 state.</p>

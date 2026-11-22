@@ -11,7 +11,7 @@ description: "ctpqrt2.f –"
 <p> ctpqrt2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctpqrt2</code> (M, N, L, A, LDA, B, LDB, T, LDT, INFO)<br />
+<p> subroutine <code>ctpqrt2</code> (M, N, L, A, LDA, B, LDB, T, LDT, INFO)<br/>
  <i></i><code>CTPQRT2</code> computes a QR factorization of a real or complex &#8216;triangular-pentagonal&#8217; matrix, which is composed of a triangular block and a pentagonal block, using the compact WY representation for Q.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctpqrt2 (integerM, integerN, integerL, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldt, * )T, integerLDT, integerINFO)</h3>

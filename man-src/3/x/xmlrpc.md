@@ -11,54 +11,54 @@ url: "/docs/linux/man/3-xmlrpc/"
 <h2>Description</h2>
 <p>This is an HTTP 1.1 compliant XML-RPC Erlang library. It is designed to make it easy to write XML-RPC Erlang clients and/or servers. The library is compliant with the XML-RPC specification published by <i><a rel="nofollow" href="http://www.xmlrpc.org/">http://www.xmlrpc.org/</a></i>.</p>
 <h2>Exports</h2>
-<p><code>call(</code><i>Socket</i><code>, </code><i>URI</i><code>, </code><i>Payload</i><code>)</code><br />
- <code>call(</code><i>Host</i><code>, </code><i>Port</i><code>, </code><i>URI</i><code>, </code><i>Payload</i><code>)</code><br />
- <code>call(</code><i>Socket</i><code>, </code><i>URI</i><code>, </code><i>Payload</i><code>, </code><i>KeepAlive</i><code>, </code><i>Timeout</i><code>)</code><br />
+<p><code>call(</code><i>Socket</i><code>, </code><i>URI</i><code>, </code><i>Payload</i><code>)</code><br/>
+ <code>call(</code><i>Host</i><code>, </code><i>Port</i><code>, </code><i>URI</i><code>, </code><i>Payload</i><code>)</code><br/>
+ <code>call(</code><i>Socket</i><code>, </code><i>URI</i><code>, </code><i>Payload</i><code>, </code><i>KeepAlive</i><code>, </code><i>Timeout</i><code>)</code><br/>
  <code>call(</code><i>Host</i><code>, </code><i>Port</i><code>, </code><i>URI</i><code>, </code><i>Payload</i><code>, </code><i>KeepAlive</i><code>, </code><i>Timeout</i><code>) -&gt; </code><i>Result</i></p>
 <dl>
 <dd>
 </dd><dl>
 <dt>Types</dt>
-<dd>Socket = socket()<br />
- URI = string()<br />
- Payload = {call, Method, [Value]}<br />
- Method = atom()<br />
- Value = integer() | float() | string() | Boolean | ISO8601Date | Base64 | Struct | Array<br />
- Boolean = true | false<br />
- ISO8601Date = {date, string()}<br />
- Base64 = {base64, string()}<br />
- Struct = {struct, [{Key, Value}]}<br />
- Key = atom()<br />
- Array = {array, [Value]}<br />
- Host = string() | ip()<br />
- Port = integer()<br />
- KeepAlive = true | false<br />
- Timeout = integer()<br />
- ResponsePayload = {response, [Value]} | {response, Fault}<br />
- Fault = {fault, FaultCode, FaultString}<br />
- FaultCode = integer()<br />
- FaultString = string()<br />
- Result = {ok, ResponsePayload} | {error, Reason} | {ok, Socket, ResponsePayload} | {error, Socket, Reason}<br />
+<dd>Socket = socket()<br/>
+ URI = string()<br/>
+ Payload = {call, Method, [Value]}<br/>
+ Method = atom()<br/>
+ Value = integer() | float() | string() | Boolean | ISO8601Date | Base64 | Struct | Array<br/>
+ Boolean = true | false<br/>
+ ISO8601Date = {date, string()}<br/>
+ Base64 = {base64, string()}<br/>
+ Struct = {struct, [{Key, Value}]}<br/>
+ Key = atom()<br/>
+ Array = {array, [Value]}<br/>
+ Host = string() | ip()<br/>
+ Port = integer()<br/>
+ KeepAlive = true | false<br/>
+ Timeout = integer()<br/>
+ ResponsePayload = {response, [Value]} | {response, Fault}<br/>
+ Fault = {fault, FaultCode, FaultString}<br/>
+ FaultCode = integer()<br/>
+ FaultString = string()<br/>
+ Result = {ok, ResponsePayload} | {error, Reason} | {ok, Socket, ResponsePayload} | {error, Socket, Reason}<br/>
  Reason = term()</dd></dl>
 <p> Calls an XML-RPC server listening on <i>Host</i>:<i>Port</i>. The <i>URI</i> and <i>Payload</i> is used in the HTTP POST request being sent to the server. The <i>Value</i> is converted to XML (see <code>DATA TYPES</code> below) and is used as request body. </p>
 <p> If <i>KeepAlive</i> is <code>true</code> a <i>Socket</i> is returned. The socket can be used to send several calls on the same connection in accordance with HTTP 1.1. If no server response is received within <i>Timeout</i> milli-seconds <code>{error, timeout}</code> or <code>{error, </code><i>Socket</i><code>, timeout}</code> is returned. </p>
 <p> <i>KeepAlive</i> and <i>Timeout</i> default to <code>false</code> and 60000 milli-seconds. </p>
 <p> See <code>EXAMPLES</code> section below.</dl>
-<p> <code>start_link(</code><i>Handler</i><code>)</code><br />
- <code>start_link(</code><i>Port</i><code>, </code><i>MaxSessions</i><code>, </code><i>Timeout</i><code>, </code><i>Handler</i><code>, </code><i>State</i><code>)</code><br />
+<p> <code>start_link(</code><i>Handler</i><code>)</code><br/>
+ <code>start_link(</code><i>Port</i><code>, </code><i>MaxSessions</i><code>, </code><i>Timeout</i><code>, </code><i>Handler</i><code>, </code><i>State</i><code>)</code><br/>
  <code>start_link(</code><i>IP</i><code>, </code><i>Port</i><code>, </code><i>MaxSessions</i><code>, </code><i>Timeout</i><code>, </code><i>Handler</i><code>, </code><i>State</i><code>) -&gt; </code><i>Result</i></p>
 <dl>
 <dd>
 </dd><dl>
 <dt>Types</dt>
-<dd>Handler = {Module, Function}<br />
- Module = Function = atom()<br />
- Port = MaxSessions = integer()<br />
- Timeout = integer()<br />
- State = term()<br />
- IP = ip()<br />
- Result = {ok, Pid} | {error, Reason}<br />
- Pid = pid()<br />
+<dd>Handler = {Module, Function}<br/>
+ Module = Function = atom()<br/>
+ Port = MaxSessions = integer()<br/>
+ Timeout = integer()<br/>
+ State = term()<br/>
+ IP = ip()<br/>
+ Result = {ok, Pid} | {error, Reason}<br/>
+ Pid = pid()<br/>
  Reason = term()</dd></dl>
 <p> Starts an XML-RPC server listening on <i>IP</i>:<i>Port</i>. If no <i>IP</i> address is given the server listens on <i>Port</i> for all available <i>IP</i> addresses. <i>MaxSessions</i> is used to restrict the number of concurrent connections. If <i>MaxSessions</i> is reached the server accepts no new connections for 5 seconds, i.e. blocking new connect attempts. </p>
 <p> <i>Handler</i> is a callback, implemented by <i>Module</i>:<i>Function</i>/2, which is used to instantiate an XML-RPC server. The <i>Timeout</i> value is used if the handler is keepalive oriented. <i>State</i> is the initial state given to <i>Module</i>:<i>Function</i>/2. The resulting <i>Pid</i> can be used as input to <code>xmlrpc:stop/1</code>. </p>
@@ -68,7 +68,7 @@ url: "/docs/linux/man/3-xmlrpc/"
 <dd>
 </dd><dl>
 <dt>Types</dt>
-<dd>Pid = pid()<br />
+<dd>Pid = pid()<br/>
  Result = void()</dd></dl>
 <p> Stops a running XML-RPC server.</dl>
 <p> <i>Module</i><code>:</code><i>Function</i><code>(</code><i>State</i><code>, </code><i>Payload</i><code>) -&gt; </code><i>Result</i></p>
@@ -76,11 +76,11 @@ url: "/docs/linux/man/3-xmlrpc/"
 <dd>
 </dd><dl>
 <dt>Types</dt>
-<dd>State = term()<br />
- Payload = &lt;See above&gt;<br />
- Result = {KeepAlive, ResponsePayload} | {KeepAlive, State, Timeout, ResponsePayload}<br />
- KeepAlive = true | false<br />
- ResponsePayload = &lt;See above&gt;<br />
+<dd>State = term()<br/>
+ Payload = &lt;See above&gt;<br/>
+ Result = {KeepAlive, ResponsePayload} | {KeepAlive, State, Timeout, ResponsePayload}<br/>
+ KeepAlive = true | false<br/>
+ ResponsePayload = &lt;See above&gt;<br/>
  Timeout = integer()</dd></dl>
 <p> It is up to you to implement <i>Function</i> clauses in <i>Module</i> to instantiate an XML-RPC server. Every time an XML-RPC call arrives the <i>Value</i> in the <i>Payload</i> gets converted to Erlang format and is passed on to <i>Module</i>:<i>Function</i>/2. </p>
 <p> A <i>Function</i> clause is supposed to return either a 2-tuple or a 4-tuple. <i>KeepAlive</i> <code>must</code> be <code>false</code> in a 2-tuple and <code>true</code> in a 4-tuple. <i>KeepAlive</i> decides if the connection to the client should be kept open or not, i.e. compare with the <i>KeepAlive</i> argument to <code>call/{3,4,5,6}</code> above. </p>

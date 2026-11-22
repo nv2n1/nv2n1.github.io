@@ -9,16 +9,16 @@ description: "c++filt – Demangle C++ and Java symbols."
 
 <p>c++filt &#8211; Demangle C++ and Java symbols. </p>
 <h2>Synopsis</h2>
-<p>c++filt [<code>-_</code>|<code>&#8211;strip-underscores</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-n</code>|<code>&#8211;no-strip-underscores</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;no-params</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>|<code>&#8211;types</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>|<code>&#8211;no-verbose</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-s</code>&nbsp;<wbr><i>format</i>|<code>&#8211;format=</code><i>format</i>]<br />
+<p>c++filt [<code>-_</code>|<code>&#8211;strip-underscores</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-n</code>|<code>&#8211;no-strip-underscores</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;no-params</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>|<code>&#8211;types</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>|<code>&#8211;no-verbose</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-s</code>&nbsp;<wbr><i>format</i>|<code>&#8211;format=</code><i>format</i>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;help</code>]&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>&nbsp;<wbr>[<i>symbol</i>&#8230;]</p>
 <h2>Description</h2>
-<p>The C<font SIZE="-2">++</font> and Java languages provide function overloading, which means that you can write many functions with the same name, providing that each function takes parameters of different types. In order to be able to distinguish these similarly named functions C<font SIZE="-2">++</font> and Java encode them into a low-level assembler name which uniquely identifies each different version. This process is known as <i>mangling</i>. The <code>c++filt</code> [1] program does the inverse mapping: it decodes (<i>demangles</i>) low-level names into user-level names so that they can be read. </p>
-<p> Every alphanumeric word (consisting of letters, digits, underscores, dollars, or periods) seen in the input is a potential mangled name. If the name decodes into a C<font SIZE="-2">++</font> name, the C<font SIZE="-2">++</font> name replaces the low-level name in the output, otherwise the original word is output. In this way you can pass an entire assembler source file, containing mangled names, through <code>c++filt</code> and see the same source file containing demangled names. </p>
+<p>The C++ and Java languages provide function overloading, which means that you can write many functions with the same name, providing that each function takes parameters of different types. In order to be able to distinguish these similarly named functions C++ and Java encode them into a low-level assembler name which uniquely identifies each different version. This process is known as <i>mangling</i>. The <code>c++filt</code> [1] program does the inverse mapping: it decodes (<i>demangles</i>) low-level names into user-level names so that they can be read. </p>
+<p> Every alphanumeric word (consisting of letters, digits, underscores, dollars, or periods) seen in the input is a potential mangled name. If the name decodes into a C++ name, the C++ name replaces the low-level name in the output, otherwise the original word is output. In this way you can pass an entire assembler source file, containing mangled names, through <code>c++filt</code> and see the same source file containing demangled names. </p>
 <p> You can also use <code>c++filt</code> to decipher individual symbols by passing them on the command line: </p>
 <pre> c++filt &lt;symbol&gt;</pre>
 <p>If no <i>symbol</i> arguments are given, <code>c++filt</code> reads symbol names from the standard input instead. All the results are printed on the standard output. The difference between reading names from the command line versus reading names from the standard input is that command line arguments are expected to be just mangled names and no checking is performed to separate them from surrounding text. Thus for example: </p>
@@ -34,11 +34,11 @@ description: "c++filt – Demangle C++ and Java symbols."
 <dt><code>-_</code></dt>
 <dd>
 </dd><dt><code>&#8211;strip-underscores</code></dt>
-<dd>On some systems, both the C and C<font SIZE="-2">++</font> compilers put an underscore in front of every name. For example, the C name <tt>&quot;foo&quot;</tt> gets the low-level name <tt>&quot;_foo&quot;</tt>. This option removes the initial underscore. Whether <code>c++filt</code> removes the underscore by default is target dependent.</dd>
+<dd>On some systems, both the C and C++ compilers put an underscore in front of every name. For example, the C name <tt>&quot;foo&quot;</tt> gets the low-level name <tt>&quot;_foo&quot;</tt>. This option removes the initial underscore. Whether <code>c++filt</code> removes the underscore by default is target dependent.</dd>
 <dt><code>-j</code></dt>
 <dd>
 </dd><dt><code>&#8211;java</code></dt>
-<dd>Prints demangled names using Java syntax. The default is to use C<font SIZE="-2">++</font> syntax.</dd>
+<dd>Prints demangled names using Java syntax. The default is to use C++ syntax.</dd>
 <dt><code>-n</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-strip-underscores</code></dt>
@@ -65,21 +65,21 @@ description: "c++filt – Demangle C++ and Java symbols."
 <dt>auto</dt>
 <dd>Automatic selection based on executable (the default method)</dd>
 <dt>gnu</dt>
-<dd>the one used by the <font SIZE="-1">GNU</font> C<font SIZE="-2">++</font> compiler (g++)</dd>
+<dd>the one used by the GNU C++ compiler (g++)</dd>
 <dt>lucid</dt>
 <dd>the one used by the Lucid compiler (lcc)</dd>
 <dt>arm</dt>
-<dd>the one specified by the C<font SIZE="-2">++</font> Annotated Reference Manual</dd>
+<dd>the one specified by the C++ Annotated Reference Manual</dd>
 <dt>hp</dt>
-<dd>the one used by the <font SIZE="-1">HP</font> compiler (aCC)</dd>
+<dd>the one used by the HP compiler (aCC)</dd>
 <dt>edg</dt>
-<dd>the one used by the <font SIZE="-1">EDG</font> compiler</dd>
+<dd>the one used by the EDG compiler</dd>
 <dt>gnu-v3</dt>
-<dd>the one used by the <font SIZE="-1">GNU</font> C<font SIZE="-2">++</font> compiler (g++) with the V3 <font SIZE="-1">ABI</font>.</dd>
+<dd>the one used by the GNU C++ compiler (g++) with the V3 ABI.</dd>
 <dt>java</dt>
-<dd>the one used by the <font SIZE="-1">GNU</font> Java compiler (gcj)</dd>
+<dd>the one used by the GNU Java compiler (gcj)</dd>
 <dt>gnat</dt>
-<dd>the one used by the <font SIZE="-1">GNU</font> Ada compiler (<font SIZE="-1">GNAT</font>).</dd></dl>
+<dd>the one used by the GNU Ada compiler (GNAT).</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
@@ -93,9 +93,9 @@ description: "c++filt – Demangle C++ and Java symbols."
 <h2>Footnotes</h2>
 <dl>
 <dt>1.</dt>
-<dd>MS-DOS does not allow <tt>&quot;+&quot;</tt> characters in file names, so on MS-DOS this program is named <font SIZE="-1"><code>CXXFILT</code></font>.</dd></dl>
+<dd>MS-DOS does not allow <tt>&quot;+&quot;</tt> characters in file names, so on MS-DOS this program is named <code>CXXFILT</code>.</dd></dl>
 <h2>See Also</h2>
 <p>the Info entries for <i>binutils</i>.</p>
 <h2>Copyright</h2>
 <p>Copyright (c) 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;.</p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;.</p>

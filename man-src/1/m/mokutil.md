@@ -10,49 +10,49 @@ description: "mokutil – utility to manipulate machine owner keys"
 
 <p> mokutil &#8211; utility to manipulate machine owner keys</p>
 <h2>SYNOPSIS</h2>
-<p> <code>mokutil</code> [&#8211;list-enrolled | -l]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br />
- <code>mokutil</code> [&#8211;list-new | -N]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br />
- <code>mokutil</code> [&#8211;list-delete | -D]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br />
- <code>mokutil</code> [&#8211;import <i>keylist</i>| -i <i>keylist</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;hash-file&nbsp;<i>hashfile</i>&nbsp;| -f&nbsp;<i>hashfile</i>]&nbsp;|&nbsp;[&#8211;root-pw | -P]&nbsp;|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;simple-hash | -s]&nbsp;|&nbsp;[&#8211;mokx | -X])<br />
- <code>mokutil</code> [&#8211;delete <i>keylist</i> | -d <i>keylist</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;hash-file&nbsp;<i>hashfile</i>&nbsp;| -f&nbsp;<i>hashfile</i>]&nbsp;|&nbsp;[&#8211;root-pw | -P]&nbsp;|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;simple-hash | -s]&nbsp;|&nbsp;[&#8211;mokx |- X])<br />
- <code>mokutil</code> [&#8211;revoke-import]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br />
- <code>mokutil</code> [&#8211;revoke-delete]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br />
- <code>mokutil</code> [&#8211;export | -x]<br />
- <code>mokutil</code> [&#8211;password | -p]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;hash-file&nbsp;<i>hashfile</i>&nbsp;| -f&nbsp;<i>hashfile</i>]&nbsp;|&nbsp;[&#8211;root-pw | -P]&nbsp;|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;simple-hash | -s])<br />
- <code>mokutil</code> [&#8211;clear-password | -c]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;simple-hash | -s])<br />
- <code>mokutil</code> [&#8211;disable-validation]<br />
- <code>mokutil</code> [&#8211;enable-validation]<br />
- <code>mokutil</code> [&#8211;sb-state]<br />
- <code>mokutil</code> [&#8211;test-key <i>keyfile</i> | -t <i>keyfile</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br />
- <code>mokutil</code> [&#8211;reset]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;hash-file&nbsp;<i>hashfile</i>&nbsp;| -f&nbsp;<i>hashfile</i>]&nbsp;|&nbsp;[&#8211;root-pw | -P]&nbsp;|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;simple-hash | -s]&nbsp;|&nbsp;[&#8211;mok | -X])<br />
- <code>mokutil</code> [&#8211;generate-hash=<i>password</i> | -g<i>password</i>]<br />
- <code>mokutil</code> [&#8211;ignore-db]<br />
- <code>mokutil</code> [&#8211;use-db]<br />
- <code>mokutil</code> [&#8211;import-hash <i>hash</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;hash-file&nbsp;<i>hashfile</i>&nbsp;| -f&nbsp;<i>hashfile</i>]&nbsp;|&nbsp;[&#8211;root-pw | -P]&nbsp;|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;simple-hash | -s]&nbsp;|&nbsp;[&#8211;mokx | -X])<br />
- <code>mokutil</code> [&#8211;delete-hash <i>hash</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;hash-file&nbsp;<i>hashfile</i>&nbsp;| -f&nbsp;<i>hashfile</i>]&nbsp;|&nbsp;[&#8211;root-pw | -P]&nbsp;|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;simple-hash | -s]&nbsp;|&nbsp;[&#8211;mokx | -X])<br />
- <code>mokutil</code> [&#8211;set-verbosity (<i>true</i> | <i>false</i>)]<br />
- <code>mokutil</code> [&#8211;pk]<br />
- <code>mokutil</code> [&#8211;kek]<br />
- <code>mokutil</code> [&#8211;db]<br />
+<p> <code>mokutil</code> [&#8211;list-enrolled | -l]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br/>
+ <code>mokutil</code> [&#8211;list-new | -N]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br/>
+ <code>mokutil</code> [&#8211;list-delete | -D]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br/>
+ <code>mokutil</code> [&#8211;import <i>keylist</i>| -i <i>keylist</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;hash-file&nbsp;<i>hashfile</i>&nbsp;| -f&nbsp;<i>hashfile</i>]&nbsp;|&nbsp;[&#8211;root-pw | -P]&nbsp;|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;simple-hash | -s]&nbsp;|&nbsp;[&#8211;mokx | -X])<br/>
+ <code>mokutil</code> [&#8211;delete <i>keylist</i> | -d <i>keylist</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;hash-file&nbsp;<i>hashfile</i>&nbsp;| -f&nbsp;<i>hashfile</i>]&nbsp;|&nbsp;[&#8211;root-pw | -P]&nbsp;|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;simple-hash | -s]&nbsp;|&nbsp;[&#8211;mokx |- X])<br/>
+ <code>mokutil</code> [&#8211;revoke-import]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br/>
+ <code>mokutil</code> [&#8211;revoke-delete]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br/>
+ <code>mokutil</code> [&#8211;export | -x]<br/>
+ <code>mokutil</code> [&#8211;password | -p]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;hash-file&nbsp;<i>hashfile</i>&nbsp;| -f&nbsp;<i>hashfile</i>]&nbsp;|&nbsp;[&#8211;root-pw | -P]&nbsp;|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;simple-hash | -s])<br/>
+ <code>mokutil</code> [&#8211;clear-password | -c]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;simple-hash | -s])<br/>
+ <code>mokutil</code> [&#8211;disable-validation]<br/>
+ <code>mokutil</code> [&#8211;enable-validation]<br/>
+ <code>mokutil</code> [&#8211;sb-state]<br/>
+ <code>mokutil</code> [&#8211;test-key <i>keyfile</i> | -t <i>keyfile</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br/>
+ <code>mokutil</code> [&#8211;reset]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;hash-file&nbsp;<i>hashfile</i>&nbsp;| -f&nbsp;<i>hashfile</i>]&nbsp;|&nbsp;[&#8211;root-pw | -P]&nbsp;|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;simple-hash | -s]&nbsp;|&nbsp;[&#8211;mok | -X])<br/>
+ <code>mokutil</code> [&#8211;generate-hash=<i>password</i> | -g<i>password</i>]<br/>
+ <code>mokutil</code> [&#8211;ignore-db]<br/>
+ <code>mokutil</code> [&#8211;use-db]<br/>
+ <code>mokutil</code> [&#8211;import-hash <i>hash</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;hash-file&nbsp;<i>hashfile</i>&nbsp;| -f&nbsp;<i>hashfile</i>]&nbsp;|&nbsp;[&#8211;root-pw | -P]&nbsp;|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;simple-hash | -s]&nbsp;|&nbsp;[&#8211;mokx | -X])<br/>
+ <code>mokutil</code> [&#8211;delete-hash <i>hash</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;hash-file&nbsp;<i>hashfile</i>&nbsp;| -f&nbsp;<i>hashfile</i>]&nbsp;|&nbsp;[&#8211;root-pw | -P]&nbsp;|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;simple-hash | -s]&nbsp;|&nbsp;[&#8211;mokx | -X])<br/>
+ <code>mokutil</code> [&#8211;set-verbosity (<i>true</i> | <i>false</i>)]<br/>
+ <code>mokutil</code> [&#8211;pk]<br/>
+ <code>mokutil</code> [&#8211;kek]<br/>
+ <code>mokutil</code> [&#8211;db]<br/>
  <code>mokutil</code> [&#8211;dbx] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>mokutil</code> is a tool to import or delete the machines owner keys (MOK) stored in the database of shim. </p>
@@ -95,7 +95,7 @@ description: "mokutil – utility to manipulate machine owner keys"
 <dt><code>-P, &#8211;root-pw</code></dt>
 <dd> Use the root password hash from /etc/shadow</dd>
 <dt><code>-s, &#8211;simple-hash</code></dt>
-<dd> Use the old SHA256 password hash method to hash the password<br />
+<dd> Use the old SHA256 password hash method to hash the password<br/>
  Note: &#8211;root-pw invalidates &#8211;simple-hash</dd>
 <dt><code>&#8211;ignore-db</code></dt>
 <dd> Tell shim to not use the keys in db to verify EFI images</dd>

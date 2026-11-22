@@ -11,7 +11,7 @@ description: "cgegv.f –"
 <p> cgegv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgegv</code> (JOBVL, JOBVR, N, A, LDA, B, LDB, ALPHA, BETA, VL, LDVL, VR, LDVR, WORK, LWORK, RWORK, INFO)<br />
+<p> subroutine <code>cgegv</code> (JOBVL, JOBVR, N, A, LDA, B, LDB, ALPHA, BETA, VL, LDVL, VR, LDVR, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code> CGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgegv (characterJOBVL, characterJOBVR, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( * )ALPHA, complex, dimension( * )BETA, complex, dimension( ldvl, * )VL, integerLDVL, complex, dimension( ldvr, * )VR, integerLDVR, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerINFO)</h3>
@@ -171,24 +171,24 @@ description: "cgegv.f –"
           RWORK is REAL array, dimension (8*N)
 </pre>
 <p> <i>INFO</i> </p>
-<p>          INFO is INTEGER<br />
-          = 0:  successful exit<br />
-          &lt; 0:  if INFO = -i, the i-th argument had an illegal value.<br />
-          =1,&#8230;,N:<br />
-                The QZ iteration failed.  No eigenvectors have been<br />
-                calculated, but ALPHA(j) and BETA(j) should be<br />
-                correct for j=INFO+1,&#8230;,N.<br />
-          &gt; N:  errors that usually indicate LAPACK problems:<br />
-                =N+1: error return from CGGBAL<br />
-                =N+2: error return from CGEQRF<br />
-                =N+3: error return from CUNMQR<br />
-                =N+4: error return from CUNGQR<br />
-                =N+5: error return from CGGHRD<br />
-                =N+6: error return from CHGEQZ (other than failed<br />
-                                               iteration)<br />
-                =N+7: error return from CTGEVC<br />
-                =N+8: error return from CGGBAK (computing VL)<br />
-                =N+9: error return from CGGBAK (computing VR)<br />
+<p>          INFO is INTEGER<br/>
+          = 0:  successful exit<br/>
+          &lt; 0:  if INFO = -i, the i-th argument had an illegal value.<br/>
+          =1,&#8230;,N:<br/>
+                The QZ iteration failed.  No eigenvectors have been<br/>
+                calculated, but ALPHA(j) and BETA(j) should be<br/>
+                correct for j=INFO+1,&#8230;,N.<br/>
+          &gt; N:  errors that usually indicate LAPACK problems:<br/>
+                =N+1: error return from CGGBAL<br/>
+                =N+2: error return from CGEQRF<br/>
+                =N+3: error return from CUNMQR<br/>
+                =N+4: error return from CUNGQR<br/>
+                =N+5: error return from CGGHRD<br/>
+                =N+6: error return from CHGEQZ (other than failed<br/>
+                                               iteration)<br/>
+                =N+7: error return from CTGEVC<br/>
+                =N+8: error return from CGGBAK (computing VL)<br/>
+                =N+9: error return from CGGBAK (computing VR)<br/>
                 =N+10: error return from CLASCL (various calls)</p>
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>

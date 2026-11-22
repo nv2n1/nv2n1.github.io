@@ -9,10 +9,10 @@ description: "backup-manager-purge – backup-manager’s wrapper for outdating 
 
 <p>backup-manager-purge &#8211; backup-manager&#8217;s wrapper for outdating files</p>
 <h2>Synopsis</h2>
-<p>backup-manager-purge [<font SIZE="-1">TTL</font>] &lt;options&gt;</p>
+<p>backup-manager-purge [TTL] &lt;options&gt;</p>
 <h2>Description</h2>
 <p><code>backup-manager-purge</code> is the only authorized entity that can say if an archive should be purged or not. Any tasks used by backup-manager may have to know if an archive is deprecated (eg: the purging phase of an upload method). This tool is here to fulfill that need. </p>
-<p> Given a <i>time to live (</i><font SIZE="-1"><i>TTL</i></font><i>)</i> and a list of archives, <code>backup-manager-purge</code> will return another list of archives, corresponding to the ones that are outdated by the <font SIZE="-1">TTL. </font></p>
+<p> Given a <i>time to live (</i><i>TTL</i><i>)</i> and a list of archives, <code>backup-manager-purge</code> will return another list of archives, corresponding to the ones that are outdated by the TTL. </p>
 <h2>Required Args</h2>
 <dl>
 <dt><code>&#8211;ttl=</code><i>time-to-live</i></dt>
@@ -20,9 +20,9 @@ description: "backup-manager-purge – backup-manager’s wrapper for outdating 
 <h2>Optional Args</h2>
 <dl>
 <dt><code>&#8211;files-from=</code>file</dt>
-<dd>A file containing a list of archives to parse, one archive per line. If this option is not used, <font SIZE="-1">STDIN</font> will be used for catching the files to parse.</dd></dl>
+<dd>A file containing a list of archives to parse, one archive per line. If this option is not used, STDIN will be used for catching the files to parse.</dd></dl>
 <h2>Return</h2>
-<p><code>backup-manager-purge</code> will return the list of outdated files on <font SIZE="-1">STDOUT,</font> one file per line.</p>
+<p><code>backup-manager-purge</code> will return the list of outdated files on STDOUT, one file per line.</p>
 <h2>Error Codes</h2>
 <p>If an error occurs, it will print the error message on stderr and will exit with an error code greater than 0. </p>
 <p> Here are the possible error codes:</p>

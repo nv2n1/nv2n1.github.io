@@ -9,42 +9,42 @@ description: "cache_handler – Maintains a cache of data for use by lower level
 
 <p>cache_handler &#8211; Maintains a cache of data for use by lower level handlers.</p>
 <h3>Functions</h3>
-<p><code>netsnmp_cache</code> * <code>netsnmp_cache_get_head</code> (void)<br />
- <i>get cache head </i><br />
- <code>netsnmp_cache</code> * <code>netsnmp_cache_find_by_oid</code> (oid *rootoid, int rootoid_len)<br />
- <i>find existing cache </i><br />
- <code>netsnmp_cache</code> * <code>netsnmp_cache_create</code> (int timeout, NetsnmpCacheLoad *load_hook, NetsnmpCacheFree *free_hook, oid *rootoid, int rootoid_len)<br />
- <i>returns a cache </i><br />
- unsigned int <code>netsnmp_cache_timer_start</code> (<code>netsnmp_cache</code> *cache)<br />
- <i>starts the recurring cache_load callback </i><br />
- void <code>netsnmp_cache_timer_stop</code> (<code>netsnmp_cache</code> *cache)<br />
- <i>stops the recurring cache_load callback </i><br />
- <code>netsnmp_mib_handler</code> * <code>netsnmp_cache_handler_get</code> (<code>netsnmp_cache</code> *cache)<br />
- <i>returns a cache handler that can be injected into a given handler chain. </i><br />
- <code>netsnmp_mib_handler</code> * <code>netsnmp_get_cache_handler</code> (int timeout, NetsnmpCacheLoad *load_hook, NetsnmpCacheFree *free_hook, oid *rootoid, int rootoid_len)<br />
- <i>returns a cache handler that can be injected into a given handler chain. </i><br />
- int <code>netsnmp_cache_handler_register</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_cache</code> *cache)<br />
- <i>functionally the same as calling </i><code>netsnmp_register_handler()</code> but also injects a cache handler at the same time for you.<br />
- int <code>netsnmp_register_cache_handler</code> (<code>netsnmp_handler_registration</code> *reginfo, int timeout, NetsnmpCacheLoad *load_hook, NetsnmpCacheFree *free_hook)<br />
- <i>functionally the same as calling </i><code>netsnmp_register_handler()</code> but also injects a cache handler at the same time for you.<br />
+<p><code>netsnmp_cache</code> * <code>netsnmp_cache_get_head</code> (void)<br/>
+ <i>get cache head </i><br/>
+ <code>netsnmp_cache</code> * <code>netsnmp_cache_find_by_oid</code> (oid *rootoid, int rootoid_len)<br/>
+ <i>find existing cache </i><br/>
+ <code>netsnmp_cache</code> * <code>netsnmp_cache_create</code> (int timeout, NetsnmpCacheLoad *load_hook, NetsnmpCacheFree *free_hook, oid *rootoid, int rootoid_len)<br/>
+ <i>returns a cache </i><br/>
+ unsigned int <code>netsnmp_cache_timer_start</code> (<code>netsnmp_cache</code> *cache)<br/>
+ <i>starts the recurring cache_load callback </i><br/>
+ void <code>netsnmp_cache_timer_stop</code> (<code>netsnmp_cache</code> *cache)<br/>
+ <i>stops the recurring cache_load callback </i><br/>
+ <code>netsnmp_mib_handler</code> * <code>netsnmp_cache_handler_get</code> (<code>netsnmp_cache</code> *cache)<br/>
+ <i>returns a cache handler that can be injected into a given handler chain. </i><br/>
+ <code>netsnmp_mib_handler</code> * <code>netsnmp_get_cache_handler</code> (int timeout, NetsnmpCacheLoad *load_hook, NetsnmpCacheFree *free_hook, oid *rootoid, int rootoid_len)<br/>
+ <i>returns a cache handler that can be injected into a given handler chain. </i><br/>
+ int <code>netsnmp_cache_handler_register</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_cache</code> *cache)<br/>
+ <i>functionally the same as calling </i><code>netsnmp_register_handler()</code> but also injects a cache handler at the same time for you.<br/>
+ int <code>netsnmp_register_cache_handler</code> (<code>netsnmp_handler_registration</code> *reginfo, int timeout, NetsnmpCacheLoad *load_hook, NetsnmpCacheFree *free_hook)<br/>
+ <i>functionally the same as calling </i><code>netsnmp_register_handler()</code> but also injects a cache handler at the same time for you.<br/>
  NETSNMP_STATIC_INLINE char * <code>_build_cache_name</code> (const char *name) </p>
-<p> void <code>netsnmp_cache_reqinfo_insert</code> (<code>netsnmp_cache</code> *cache, <code>netsnmp_agent_request_info</code> *reqinfo, const char *name)<br />
- <i>Insert the cache information for a given request (PDU). </i><br />
- <code>netsnmp_cache</code> * <code>netsnmp_cache_reqinfo_extract</code> (<code>netsnmp_agent_request_info</code> *reqinfo, const char *name)<br />
- <i>Extract the cache information for a given request (PDU). </i><br />
- <code>netsnmp_cache</code> * <code>netsnmp_extract_cache_info</code> (<code>netsnmp_agent_request_info</code> *reqinfo)<br />
- <i>Extract the cache information for a given request (PDU). </i><br />
- int <code>netsnmp_cache_check_expired</code> (<code>netsnmp_cache</code> *cache)<br />
- <i>Check if the cache timeout has passed. </i><br />
- int <code>netsnmp_cache_check_and_reload</code> (<code>netsnmp_cache</code> *cache)<br />
- <i>Reload the cache if required. </i><br />
- int <code>netsnmp_cache_is_valid</code> (<code>netsnmp_agent_request_info</code> *reqinfo, const char *name)<br />
- <i>Is the cache valid for a given request? </i><br />
- int <code>netsnmp_is_cache_valid</code> (<code>netsnmp_agent_request_info</code> *reqinfo)<br />
- <i>for backwards compat </i><br />
- int <code>netsnmp_cache_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)<br />
- <i>Implements the cache handler. </i><br />
- void <code>release_cached_resources</code> (unsigned int regNo, void *clientargs)<br />
+<p> void <code>netsnmp_cache_reqinfo_insert</code> (<code>netsnmp_cache</code> *cache, <code>netsnmp_agent_request_info</code> *reqinfo, const char *name)<br/>
+ <i>Insert the cache information for a given request (PDU). </i><br/>
+ <code>netsnmp_cache</code> * <code>netsnmp_cache_reqinfo_extract</code> (<code>netsnmp_agent_request_info</code> *reqinfo, const char *name)<br/>
+ <i>Extract the cache information for a given request (PDU). </i><br/>
+ <code>netsnmp_cache</code> * <code>netsnmp_extract_cache_info</code> (<code>netsnmp_agent_request_info</code> *reqinfo)<br/>
+ <i>Extract the cache information for a given request (PDU). </i><br/>
+ int <code>netsnmp_cache_check_expired</code> (<code>netsnmp_cache</code> *cache)<br/>
+ <i>Check if the cache timeout has passed. </i><br/>
+ int <code>netsnmp_cache_check_and_reload</code> (<code>netsnmp_cache</code> *cache)<br/>
+ <i>Reload the cache if required. </i><br/>
+ int <code>netsnmp_cache_is_valid</code> (<code>netsnmp_agent_request_info</code> *reqinfo, const char *name)<br/>
+ <i>Is the cache valid for a given request? </i><br/>
+ int <code>netsnmp_is_cache_valid</code> (<code>netsnmp_agent_request_info</code> *reqinfo)<br/>
+ <i>for backwards compat </i><br/>
+ int <code>netsnmp_cache_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)<br/>
+ <i>Implements the cache handler. </i><br/>
+ void <code>release_cached_resources</code> (unsigned int regNo, void *clientargs)<br/>
  <i>run regularly to automatically release cached resources. </i></p>
 <h2>Detailed Description</h2>
 <p>Maintains a cache of data for use by lower level handlers. </p>

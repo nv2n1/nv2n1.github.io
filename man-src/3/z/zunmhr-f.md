@@ -10,7 +10,7 @@ description: "zunmhr.f –"
 <p>zunmhr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zunmhr</code> (SIDE, TRANS, M, N, ILO, IHI, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
+<p>subroutine <code>zunmhr</code> (SIDE, TRANS, M, N, ILO, IHI, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br/>
  <i></i><code>ZUNMHR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zunmhr (characterSIDE, characterTRANS, integerM, integerN, integerILO, integerIHI, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )TAU, complex*16, dimension( ldc, * )C, integerLDC, complex*16, dimension( * )WORK, integerLWORK, integerINFO)</h3>

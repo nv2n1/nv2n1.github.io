@@ -40,9 +40,9 @@ int pthread_mutexattr_setrobust(const pthread_mutexattr_t *attr,
 <h2>Conforming To</h2>
 <p>POSIX.1-2008.</p>
 <h2>Notes</h2>
-<p>In the Linux implementation, when using process-shared robust mutexes, a waiting thread also receives the <code>EOWNERDEAD</code> notification if the owner of a robust mutex performs an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) without first unlocking the mutex. POSIX.1 does not specify this detail, but the same behavior also occurs in at least some other implementations. Before the addition of <code>pthread_mutexattr_getrobust</code>() and <code>pthread_mutexattr_setrobust</code>() to POSIX, glibc defined the following equivalent nonstandard functions if <code>_GNU_SOURCE</code> was defined: int pthread_mutexattr_getrobust_np(const pthread_mutexattr_t *attr,<br />
-                                   int *robustness);<br />
-int pthread_mutexattr_setrobust_np(const pthread_mutexattr_t *attr,<br />
+<p>In the Linux implementation, when using process-shared robust mutexes, a waiting thread also receives the <code>EOWNERDEAD</code> notification if the owner of a robust mutex performs an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) without first unlocking the mutex. POSIX.1 does not specify this detail, but the same behavior also occurs in at least some other implementations. Before the addition of <code>pthread_mutexattr_getrobust</code>() and <code>pthread_mutexattr_setrobust</code>() to POSIX, glibc defined the following equivalent nonstandard functions if <code>_GNU_SOURCE</code> was defined: int pthread_mutexattr_getrobust_np(const pthread_mutexattr_t *attr,<br/>
+                                   int *robustness);<br/>
+int pthread_mutexattr_setrobust_np(const pthread_mutexattr_t *attr,<br/>
                                    int robustness); Correspondingly, the constants <code>PTHREAD_MUTEX_STALLED_NP</code> and <code>PTHREAD_MUTEX_ROBUST_NP</code> were also defined. These GNU-specific APIs, which first appeared in glibc 2.4, are nowadays obsolete and should not be used in new programs.</p>
 <h2>Examples</h2>
 <p>The program below demonstrates the use of the robustness attribute of a mutex attributes object. In this program, a thread holding the mutex dies prematurely without unlocking the mutex. The main thread subsequently acquires the mutex successfully and gets the error <code>EOWNERDEAD</code>, after which it makes the mutex consistent. The following shell session shows what we see when running this program: </p>

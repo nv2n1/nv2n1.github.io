@@ -10,7 +10,7 @@ description: "XkbGetCompatMap – Fetch any combination of the current compatibi
 <p>XkbGetCompatMap &#8211; Fetch any combination of the current compatibility map components from the server </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetCompatMap</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescRec *</code><i>xkb</i><code>);</code><br />
+<dt> <code>Status XkbGetCompatMap</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescRec *</code><i>xkb</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

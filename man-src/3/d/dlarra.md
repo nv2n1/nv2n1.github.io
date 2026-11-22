@@ -11,7 +11,7 @@ description: "dlarra.f –"
 <p> dlarra.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlarra</code> (N, D, E, E2, SPLTOL, TNRM, NSPLIT, ISPLIT, INFO)<br />
+<p> subroutine <code>dlarra</code> (N, D, E, E2, SPLTOL, TNRM, NSPLIT, ISPLIT, INFO)<br/>
  <i></i><code>DLARRA</code> computes the splitting points with the specified threshold.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarra (integerN, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( * )E2, double precisionSPLTOL, double precisionTNRM, integerNSPLIT, integer, dimension( * )ISPLIT, integerINFO)</h3>

@@ -20,7 +20,7 @@ description: "mip6d – UMIP Mobile IPv6 and NEMO Basic Support protocol impleme
 <dt><code>-?, -h, &#8211;help</code></dt>
 <dd> Display this help text</dd>
 <dt><code>-c &lt;file&gt;</code></dt>
-<dd> Read configuration from &lt;file&gt;. If option is not present, default path (/etc/mip6d.conf) is used.<br />
+<dd> Read configuration from &lt;file&gt;. If option is not present, default path (/etc/mip6d.conf) is used.<br/>
 &nbsp;<wbr></dd></dl>
 <p> These options override values read from config file:</p>
 <dl>

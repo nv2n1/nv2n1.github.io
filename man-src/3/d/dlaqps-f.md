@@ -10,7 +10,7 @@ description: "dlaqps.f –"
 <p>dlaqps.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlaqps</code> (M, N, OFFSET, NB, KB, A, LDA, JPVT, TAU, VN1, VN2, AUXV, F, LDF)<br />
+<p>subroutine <code>dlaqps</code> (M, N, OFFSET, NB, KB, A, LDA, JPVT, TAU, VN1, VN2, AUXV, F, LDF)<br/>
  <i></i><code>DLAQPS</code> computes a step of QR factorization with column pivoting of a real m-by-n matrix A by using BLAS level 3.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaqps (integerM, integerN, integerOFFSET, integerNB, integerKB, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )JPVT, double precision, dimension( * )TAU, double precision, dimension( * )VN1, double precision, dimension( * )VN2, double precision, dimension( * )AUXV, double precision, dimension( ldf, * )F, integerLDF)</h3>

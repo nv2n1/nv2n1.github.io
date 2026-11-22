@@ -50,19 +50,19 @@ description: "XSetWMProperties, XmbSetWMProperties, Xutf8SetWMProperties – set
 <p> The function <code>Xutf8SetWMProperties</code> is an extension introduced by The XFree86 Project, Inc., in their 4.0.2 release. Its presence is indicated by the macro <code>X_HAVE_UTF8_STRING</code>.</p>
 <h2>Properties</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">WM_CLASS</font></dt>
+<dt>WM_CLASS</dt>
 <dd>Set by application programs to allow window and session managers to obtain the application&#8217;s resources from the resource database.</dd>
-<dt><font SIZE="-1">WM_CLIENT_MACHINE</font></dt>
+<dt>WM_CLIENT_MACHINE</dt>
 <dd>The string name of the machine on which the client application is running.</dd>
-<dt><font SIZE="-1">WM_COMMAND</font></dt>
+<dt>WM_COMMAND</dt>
 <dd>The command and arguments, null-separated, used to invoke the application.</dd>
-<dt><font SIZE="-1">WM_HINTS</font></dt>
+<dt>WM_HINTS</dt>
 <dd>Additional hints set by the client for use by the window manager. The C type of this property is <code>XWMHints</code>.</dd>
-<dt><font SIZE="-1">WM_ICON_NAME</font></dt>
+<dt>WM_ICON_NAME</dt>
 <dd>The name to be used in an icon.</dd>
-<dt><font SIZE="-1">WM_NAME</font></dt>
+<dt>WM_NAME</dt>
 <dd>The name of the application.</dd>
-<dt><font SIZE="-1">WM_NORMAL_HINTS</font></dt>
+<dt>WM_NORMAL_HINTS</dt>
 <dd>Size hints for a window in its normal state. The C type of this property is <code>XSizeHints</code>.</dd></dl>
 <h2>Diagnostics</h2>
 <dl COMPACT>
@@ -71,5 +71,5 @@ description: "XSetWMProperties, XmbSetWMProperties, Xutf8SetWMProperties – set
 <dt><code>BadWindow</code></dt>
 <dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xallocclasshint/">XAllocClassHint</a>(3), <a href="/docs/linux/man/3-xallociconsize/">XAllocIconSize</a>(3), <a href="/docs/linux/man/3-xallocsizehints/">XAllocSizeHints</a>(3), <a href="/docs/linux/man/3-xallocwmhints/">XAllocWMHints</a>(3), <a href="/docs/linux/man/3-xparsegeometry/">XParseGeometry</a>(3), <a href="/docs/linux/man/3-xsetcommand/">XSetCommand</a>(3), <a href="/docs/linux/man/3-xsettransientforhint/">XSetTransientForHint</a>(3), <a href="/docs/linux/man/3-xsettextproperty/">XSetTextProperty</a>(3), <a href="/docs/linux/man/3-xsetwmclientmachine/">XSetWMClientMachine</a>(3), <a href="/docs/linux/man/3-xsetwmcolormapwindows/">XSetWMColormapWindows</a>(3), <a href="/docs/linux/man/3-xsetwmiconname/">XSetWMIconName</a>(3), <a href="/docs/linux/man/3-xsetwmname/">XSetWMName</a>(3), <a href="/docs/linux/man/3-xsetwmprotocols/">XSetWMProtocols</a>(3), <a href="/docs/linux/man/3-xstringlisttotextproperty/">XStringListToTextProperty</a>(3), XTextListToTextProperty(3)<br />
+<p><a href="/docs/linux/man/3-xallocclasshint/">XAllocClassHint</a>(3), <a href="/docs/linux/man/3-xallociconsize/">XAllocIconSize</a>(3), <a href="/docs/linux/man/3-xallocsizehints/">XAllocSizeHints</a>(3), <a href="/docs/linux/man/3-xallocwmhints/">XAllocWMHints</a>(3), <a href="/docs/linux/man/3-xparsegeometry/">XParseGeometry</a>(3), <a href="/docs/linux/man/3-xsetcommand/">XSetCommand</a>(3), <a href="/docs/linux/man/3-xsettransientforhint/">XSetTransientForHint</a>(3), <a href="/docs/linux/man/3-xsettextproperty/">XSetTextProperty</a>(3), <a href="/docs/linux/man/3-xsetwmclientmachine/">XSetWMClientMachine</a>(3), <a href="/docs/linux/man/3-xsetwmcolormapwindows/">XSetWMColormapWindows</a>(3), <a href="/docs/linux/man/3-xsetwmiconname/">XSetWMIconName</a>(3), <a href="/docs/linux/man/3-xsetwmname/">XSetWMName</a>(3), <a href="/docs/linux/man/3-xsetwmprotocols/">XSetWMProtocols</a>(3), <a href="/docs/linux/man/3-xstringlisttotextproperty/">XStringListToTextProperty</a>(3), XTextListToTextProperty(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

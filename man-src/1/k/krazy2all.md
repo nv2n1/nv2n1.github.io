@@ -31,17 +31,17 @@ description: "krazy2all – Sanity checks KDE source code."
 <dd> With this option the checker programs aren&#8217;t run; instead, the command line for each check that would be run is printed.</dd>
 <dt><code>&#8211;priority</code> &lt;low|normal|high|important|all&gt;</dt>
 <dd> Tell each checker program to report issues with the specified priority only. This option is useful to help put issues into &#8220;fix-first&#8221; order. </dd>
-<p> Supported priorites are:<br />
-&nbsp;<wbr>&nbsp;<wbr>low -&gt;&nbsp;<wbr>print low priority issues only<br />
-&nbsp;<wbr>&nbsp;<wbr>normal -&gt;&nbsp;<wbr>print normal priority issues only<br />
-&nbsp;<wbr>&nbsp;<wbr>high -&gt;&nbsp;<wbr>print high priority issues only<br />
-&nbsp;<wbr>&nbsp;<wbr>important -&gt;&nbsp;<wbr>print issues with normal or high priority<br />
+<p> Supported priorites are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>low -&gt;&nbsp;<wbr>print low priority issues only<br/>
+&nbsp;<wbr>&nbsp;<wbr>normal -&gt;&nbsp;<wbr>print normal priority issues only<br/>
+&nbsp;<wbr>&nbsp;<wbr>high -&gt;&nbsp;<wbr>print high priority issues only<br/>
+&nbsp;<wbr>&nbsp;<wbr>important -&gt;&nbsp;<wbr>print issues with normal or high priority<br/>
 &nbsp;<wbr>&nbsp;<wbr>all -&gt;&nbsp;<wbr>print all issues&nbsp;<wbr>(default)</p>
 <dt><code>&#8211;strict</code> &lt;normal|super|all&gt;</dt>
 <dd> Tell each checker program to report issues match the strictness level only. Use this option to help filter out issues of less importance. </dd>
-<p> Support strictness levels are:<br />
-&nbsp;<wbr>&nbsp;<wbr>normal -&gt;&nbsp;<wbr>print non-super strict issues only<br />
-&nbsp;<wbr>&nbsp;<wbr>super -&gt;&nbsp;<wbr>print super strict issues only<br />
+<p> Support strictness levels are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>normal -&gt;&nbsp;<wbr>print non-super strict issues only<br/>
+&nbsp;<wbr>&nbsp;<wbr>super -&gt;&nbsp;<wbr>print super strict issues only<br/>
 &nbsp;<wbr>&nbsp;<wbr>all -&gt;&nbsp;<wbr>print all issues&nbsp;<wbr>(default)</p>
 <dt><code>&#8211;check</code> &lt;prog[,prog1,prog2,&#8230;,progN]&gt;</dt>
 <dd> Run the specified checker program(s) only. You may not combine this option with <code>&#8211;check-sets</code>. </dd>
@@ -50,23 +50,23 @@ description: "krazy2all – Sanity checks KDE source code."
 <dd> Run the checker programs belonging to the specified set(s) only. You may not combine this option with <code>&#8211;check</code>. </dd>
 <p> Use the <code>&#8211;list-sets</code> option to see the list of available check sets and programs.</p>
 <dt><code>&#8211;exclude</code> &lt;prog[,prog1,prog2,&#8230;,progN]&gt;</dt>
-<dd> Do <font SIZE="-1"><code>NOT</code></font> run the specified checker program(s).</dd>
+<dd> Do <code>NOT</code> run the specified checker program(s).</dd>
 <dt><code>&#8211;extra</code> &lt;prog[,prog1,prog2,&#8230;,progN]&gt;</dt>
-<dd> Add the specified &#8220;extra&#8221; program(s) to the list of checkers to run. Use the &#8211;list option to show the list of available &#8220;extra&#8221; checkers; they will be marked with the tag [<font SIZE="-1">EXTRA</font>] by the checker description line.</dd>
+<dd> Add the specified &#8220;extra&#8221; program(s) to the list of checkers to run. Use the &#8211;list option to show the list of available &#8220;extra&#8221; checkers; they will be marked with the tag [EXTRA] by the checker description line.</dd>
 <dt><code>&#8211;types</code> &lt;type[,type1,type2,&#8230;,typeN]&gt;</dt>
 <dd> Check the specified file type(s) only.</dd>
 <dt><code>&#8211;exclude-types</code> &lt;type[,type1,type2,&#8230;,typeN]&gt;</dt>
-<dd> Do <font SIZE="-1">NOT</font> check the specified file type(s).</dd>
+<dd> Do NOT check the specified file type(s).</dd>
 <dt><code>&#8211;export</code> &lt;text|textlist|textedit|xml&gt;</dt>
-<dd> Output in one of the following formats:<br />
-&nbsp;<wbr>&nbsp;<wbr>text&nbsp;<wbr>(default)<br />
-&nbsp;<wbr>&nbsp;<wbr>textlist -&gt;&nbsp;<wbr>plain old text, 1 offending file-per-line<br />
-&nbsp;<wbr>&nbsp;<wbr>textedit -&gt;&nbsp;<wbr>text formatted for IDEs, 1 issue-per-line&nbsp;<wbr>(file:line:issue)<br />
-&nbsp;<wbr>&nbsp;<wbr>xml -&gt;&nbsp;<wbr><font SIZE="-1">XML</font>&nbsp;<wbr>formatted</dd>
+<dd> Output in one of the following formats:<br/>
+&nbsp;<wbr>&nbsp;<wbr>text&nbsp;<wbr>(default)<br/>
+&nbsp;<wbr>&nbsp;<wbr>textlist -&gt;&nbsp;<wbr>plain old text, 1 offending file-per-line<br/>
+&nbsp;<wbr>&nbsp;<wbr>textedit -&gt;&nbsp;<wbr>text formatted for IDEs, 1 issue-per-line&nbsp;<wbr>(file:line:issue)<br/>
+&nbsp;<wbr>&nbsp;<wbr>xml -&gt;&nbsp;<wbr>XML&nbsp;<wbr>formatted</dd>
 <dt><code>&#8211;title</code></dt>
 <dd> Give the output report a project title.</dd>
 <dt><code>&#8211;cms</code></dt>
-<dd> An acronym for &#8220;component/module/subdir&#8221;. Used to write the breadcrumbs line in the <font SIZE="-1">XML</font> output. Must be a slash-delimited triple containing the component, module, and subdir which is being scanned.</dd>
+<dd> An acronym for &#8220;component/module/subdir&#8221;. Used to write the breadcrumbs line in the XML output. Must be a slash-delimited triple containing the component, module, and subdir which is being scanned.</dd>
 <dt><code>&#8211;brief</code></dt>
 <dd> Only print the output for checkers that have at least 1 issue.</dd>
 <dt><code>&#8211;quiet</code></dt>
@@ -74,9 +74,9 @@ description: "krazy2all – Sanity checks KDE source code."
 <dt><code>&#8211;verbose</code></dt>
 <dd> Print the offending content for each file processed</dd></dl>
 <h2>ENVIRONMENT</h2>
-<p> <font SIZE="-1">KRAZY_PLUGIN_PATH</font> &#8211; this is a colon-separated list of paths which is searched when locating plugins. By default, plugins are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-plugins:krazy-plugins</i>. </p>
-<p> <font SIZE="-1">KRAZY_EXTRA_PATH</font> &#8211; this is a colon-separated list of paths which is searched when locating &#8220;extra&#8221; plugins. By default, the &#8220;extras&#8221; are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-extras:krazy-extras</i>. </p>
-<p> <font SIZE="-1">KRAZY_SET_PATH</font> &#8211; this is a colon-separated list of paths which is searched when locating checker sets. By default, the sets are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-sets:krazy-sets</i>. </p>
+<p> KRAZY_PLUGIN_PATH &#8211; this is a colon-separated list of paths which is searched when locating plugins. By default, plugins are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-plugins:krazy-plugins</i>. </p>
+<p> KRAZY_EXTRA_PATH &#8211; this is a colon-separated list of paths which is searched when locating &#8220;extra&#8221; plugins. By default, the &#8220;extras&#8221; are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-extras:krazy-extras</i>. </p>
+<p> KRAZY_SET_PATH &#8211; this is a colon-separated list of paths which is searched when locating checker sets. By default, the sets are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-sets:krazy-sets</i>. </p>
 <p> where <tt>$TOP</tt> is the top-level installation directory (eg. <i>/usr/local</i>, <i>/usr/local/Krazy2</i>)</p>
 <h2>EXIT STATUS</h2>
 <p> In normal operation, krazy2all exits with a status 0. </p>
@@ -84,14 +84,14 @@ description: "krazy2all – Sanity checks KDE source code."
 <p> If krazy2all was envoked with the <code>&#8211;help</code>, <code>&#8211;version</code> <code>&#8211;list</code> or <code>&#8211;list-types</code> options it will exit with status=0.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2005-2010 by Allen Winter &lt;winter [at] kde.org&gt; </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA</font> 02110-1301, <font SIZE="-1">USA</font>.</p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
 <h2>FILES</h2>
 <p> <i>.krazy</i> (see <i>krazyrc</i>(5)) </p>
 <p> krazy2all looks up the current working directory tree for a <i>.krazy</i> file in the project subdirectory. Only <i>.krazy</i> files found at the project subdirectory level are read. </p>
 <p> For example, if the current working dir is <i>/my/kde/trunk/KDE/kdepimlibs/kcal/versit</i>, then krazy2all will look for <i>/my/kde/trunk/KDE/kdepimlibs/kcal/.krazy</i>, since kcal is the project within the kdepimlibs module. </p>
-<p> If the current working dir is not within a <font SIZE="-1">KDE</font> module, or if the current working dir is above a project subdir, then a <i>.krazy</i> file will not be read.</p>
+<p> If the current working dir is not within a KDE module, or if the current working dir is above a project subdir, then a <i>.krazy</i> file will not be read.</p>
 <h2>SEE ALSO</h2>
 <p> <i>krazyrc</i>(5), <i><a href="/docs/linux/man/1-krazy2/">krazy2</a></i>(1), <i><a href="/docs/linux/man/1-krazy2xml/">krazy2xml</a></i>(1)</p>
 <h2>AUTHORS</h2>

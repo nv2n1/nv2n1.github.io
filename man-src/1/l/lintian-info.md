@@ -24,7 +24,7 @@ description: "lintian-info – give detailed information about Lintian’s error
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Display usage information and exit.</dd>
 <dt><code>&#8211;include-dir</code> dir</dt>
-<dd> Use dir as an additional &#8220;Lintian root&#8221;. The directory is expected have a similar layout to the <font SIZE="-1">LINTIAN_ROOT</font> (if it exists), but does not need to be a full self-contained root. </dd>
+<dd> Use dir as an additional &#8220;Lintian root&#8221;. The directory is expected have a similar layout to the LINTIAN_ROOT (if it exists), but does not need to be a full self-contained root. </dd>
 <p> Unlike <code>lintian</code>, <code>lintian-info</code> will <i>not</i> load any code from these additional directories. </p>
 <p> This option may appear more than once; each time adding an additional directory. </p>
 <p> <code>Note</code>: This option should be the very first if given.</p>

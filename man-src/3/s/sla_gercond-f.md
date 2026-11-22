@@ -10,7 +10,7 @@ description: "sla_gercond.f –"
 <p>sla_gercond.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>sla_gercond</code> (TRANS, N, A, LDA, AF, LDAF, IPIV, CMODE, C, INFO, WORK, IWORK)<br />
+<p> REAL function <code>sla_gercond</code> (TRANS, N, A, LDA, AF, LDAF, IPIV, CMODE, C, INFO, WORK, IWORK)<br/>
  <i></i><code>SLA_GERCOND</code> estimates the Skeel condition number for a general matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function sla_gercond (characterTRANS, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, integerCMODE, real, dimension( * )C, integerINFO, real, dimension( * )WORK, integer, dimension( * )IWORK)</h3>

@@ -31,11 +31,11 @@ description: "ftff – fault tolerant file find utility"
 <dt><i>-f</i></dt>
 <dd> Follow symbolic links on directories. Note: a symbolic link like &quot;somewhere -&gt; ..&quot; causes naturally an endless loop. By default <code>ftff</code> does not follow symbolic links to directories.</dd>
 <dt><i>-F</i></dt>
-<dd> Classify the file type by appending a character to each file name. This character is:<br />
- <i>&#8216;*&#8217; </i> for regular files that are executable<br />
- <i>&#8216;/&#8217; </i> for directories<br />
- <i>&#8216;@&#8217; </i> for symbolic links<br />
- <i>&#8216;|&#8217; </i> for FIFOs<br />
+<dd> Classify the file type by appending a character to each file name. This character is:<br/>
+ <i>&#8216;*&#8217; </i> for regular files that are executable<br/>
+ <i>&#8216;/&#8217; </i> for directories<br/>
+ <i>&#8216;@&#8217; </i> for symbolic links<br/>
+ <i>&#8216;|&#8217; </i> for FIFOs<br/>
  <i>&#8216;=&#8217; </i> for sockets</dd>
 <dt><i>-p</i></dt>
 <dd> print the actual distance value in front of the filename. This value is equal to the number of insertions, deletions and replacements necessary to transform the file that was found into the search key (the file_to_find).</dd>
@@ -47,8 +47,8 @@ description: "ftff – fault tolerant file find utility"
 <dd> Do case sensitive search (default is case in-sensitive)</dd></dl>
 <dl>
 <dt><i>file_to_find</i></dt>
-<dd> The filename to search for. &#8216;*&#8217; and &#8216;?&#8217; can be used as wildcards.<br />
- &#8216;?&#8217; denotes one single character.<br />
+<dd> The filename to search for. &#8216;*&#8217; and &#8216;?&#8217; can be used as wildcards.<br/>
+ &#8216;?&#8217; denotes one single character.<br/>
  &#8216;*&#8217; denotes an arbitrary number of characters.</dd>
 <dt><i>start_directory</i></dt>
 <dd> The directory to start the search. The current directory is the default.</dd></dl>

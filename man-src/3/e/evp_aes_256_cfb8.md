@@ -9,166 +9,166 @@ url: "/docs/linux/man/3-evp_aes_256_cfb8/"
 
 <p> EVP generic crypto functions &#8211; </p>
 <h3>Functions</h3>
-<p> <br />
- const EVP_CIPHER * <code>EVP_wincrypt_des_ede3_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_aes_128_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_aes_192_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_aes_256_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_aes_128_cfb8</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_aes_192_cfb8</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_aes_256_cfb8</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_hcrypto_sha256</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_hcrypto_sha384</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_hcrypto_sha512</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_hcrypto_sha1</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_hcrypto_md5</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_hcrypto_md4</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_hcrypto_md2</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_des_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_des_ede3_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_rc2_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_rc2_40_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_rc2_64_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_camellia_128_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_camellia_192_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_hcrypto_camellia_256_cbc</code> (void) <br />
- <br />
- size_t <code>EVP_MD_size</code> (const EVP_MD *md) <br />
- <br />
- size_t <code>EVP_MD_block_size</code> (const EVP_MD *md) <br />
- <br />
- EVP_MD_CTX * <code>EVP_MD_CTX_create</code> (void) <br />
- <br />
- void <code>EVP_MD_CTX_init</code> (EVP_MD_CTX *ctx) HC_DEPRECATED <br />
- <br />
- void <code>EVP_MD_CTX_destroy</code> (EVP_MD_CTX *ctx) <br />
- <br />
- int <code>EVP_MD_CTX_cleanup</code> (EVP_MD_CTX *ctx) HC_DEPRECATED <br />
- <br />
- const EVP_MD * <code>EVP_MD_CTX_md</code> (EVP_MD_CTX *ctx) <br />
- <br />
- size_t <code>EVP_MD_CTX_size</code> (EVP_MD_CTX *ctx) <br />
- <br />
- size_t <code>EVP_MD_CTX_block_size</code> (EVP_MD_CTX *ctx) <br />
- <br />
- int <code>EVP_DigestInit_ex</code> (EVP_MD_CTX *ctx, const EVP_MD *md, ENGINE *engine) <br />
- <br />
- int <code>EVP_DigestUpdate</code> (EVP_MD_CTX *ctx, const void *data, size_t size) <br />
- <br />
- int <code>EVP_DigestFinal_ex</code> (EVP_MD_CTX *ctx, void *hash, unsigned int *size) <br />
- <br />
- int <code>EVP_Digest</code> (const void *data, size_t dsize, void *hash, unsigned int *hsize, const EVP_MD *md, ENGINE *engine) <br />
- <br />
- const EVP_MD * <code>EVP_sha256</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_sha384</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_sha512</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_sha1</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_sha</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_md5</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_md4</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_md2</code> (void) <br />
- <br />
- const EVP_MD * <code>EVP_md_null</code> (void) <br />
- <br />
- size_t <code>EVP_CIPHER_block_size</code> (const EVP_CIPHER *c) <br />
- <br />
- size_t <code>EVP_CIPHER_key_length</code> (const EVP_CIPHER *c) <br />
- <br />
- size_t <code>EVP_CIPHER_iv_length</code> (const EVP_CIPHER *c) <br />
- <br />
- void <code>EVP_CIPHER_CTX_init</code> (EVP_CIPHER_CTX *c) <br />
- <br />
- int <code>EVP_CIPHER_CTX_cleanup</code> (EVP_CIPHER_CTX *c) <br />
- <br />
- int <code>EVP_CIPHER_CTX_set_key_length</code> (EVP_CIPHER_CTX *c, int length) <br />
- <br />
- const EVP_CIPHER * <code>EVP_CIPHER_CTX_cipher</code> (EVP_CIPHER_CTX *ctx) <br />
- <br />
- size_t <code>EVP_CIPHER_CTX_block_size</code> (const EVP_CIPHER_CTX *ctx) <br />
- <br />
- size_t <code>EVP_CIPHER_CTX_key_length</code> (const EVP_CIPHER_CTX *ctx) <br />
- <br />
- size_t <code>EVP_CIPHER_CTX_iv_length</code> (const EVP_CIPHER_CTX *ctx) <br />
- <br />
- unsigned long <code>EVP_CIPHER_CTX_flags</code> (const EVP_CIPHER_CTX *ctx) <br />
- <br />
- int <code>EVP_CIPHER_CTX_mode</code> (const EVP_CIPHER_CTX *ctx) <br />
- <br />
- void * <code>EVP_CIPHER_CTX_get_app_data</code> (EVP_CIPHER_CTX *ctx) <br />
- <br />
- void <code>EVP_CIPHER_CTX_set_app_data</code> (EVP_CIPHER_CTX *ctx, void *data) <br />
- <br />
- int <code>EVP_CipherInit_ex</code> (EVP_CIPHER_CTX *ctx, const EVP_CIPHER *c, ENGINE *engine, const void *key, const void *iv, int encp) <br />
- <br />
- int <code>EVP_CipherUpdate</code> (EVP_CIPHER_CTX *ctx, void *out, int *outlen, void *in, size_t inlen) <br />
- <br />
- int <code>EVP_CipherFinal_ex</code> (EVP_CIPHER_CTX *ctx, void *out, int *outlen) <br />
- <br />
- const EVP_CIPHER * <code>EVP_enc_null</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_rc2_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_rc2_40_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_rc2_64_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_rc4</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_rc4_40</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_des_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_des_ede3_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_aes_128_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_aes_192_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_aes_256_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_aes_128_cfb8</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_aes_192_cfb8</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_aes_256_cfb8</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_camellia_128_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_camellia_192_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_camellia_256_cbc</code> (void) <br />
- <br />
- const EVP_CIPHER * <code>EVP_get_cipherbyname</code> (const char *name) <br />
- <br />
- int <code>EVP_BytesToKey</code> (const EVP_CIPHER *type, const EVP_MD *md, const void *salt, const void *data, size_t datalen, unsigned int count, void *keydata, void *ivdata) <br />
+<p> <br/>
+ const EVP_CIPHER * <code>EVP_wincrypt_des_ede3_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_aes_128_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_aes_192_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_aes_256_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_aes_128_cfb8</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_aes_192_cfb8</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_aes_256_cfb8</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_hcrypto_sha256</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_hcrypto_sha384</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_hcrypto_sha512</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_hcrypto_sha1</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_hcrypto_md5</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_hcrypto_md4</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_hcrypto_md2</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_des_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_des_ede3_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_rc2_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_rc2_40_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_rc2_64_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_camellia_128_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_camellia_192_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_hcrypto_camellia_256_cbc</code> (void) <br/>
+ <br/>
+ size_t <code>EVP_MD_size</code> (const EVP_MD *md) <br/>
+ <br/>
+ size_t <code>EVP_MD_block_size</code> (const EVP_MD *md) <br/>
+ <br/>
+ EVP_MD_CTX * <code>EVP_MD_CTX_create</code> (void) <br/>
+ <br/>
+ void <code>EVP_MD_CTX_init</code> (EVP_MD_CTX *ctx) HC_DEPRECATED <br/>
+ <br/>
+ void <code>EVP_MD_CTX_destroy</code> (EVP_MD_CTX *ctx) <br/>
+ <br/>
+ int <code>EVP_MD_CTX_cleanup</code> (EVP_MD_CTX *ctx) HC_DEPRECATED <br/>
+ <br/>
+ const EVP_MD * <code>EVP_MD_CTX_md</code> (EVP_MD_CTX *ctx) <br/>
+ <br/>
+ size_t <code>EVP_MD_CTX_size</code> (EVP_MD_CTX *ctx) <br/>
+ <br/>
+ size_t <code>EVP_MD_CTX_block_size</code> (EVP_MD_CTX *ctx) <br/>
+ <br/>
+ int <code>EVP_DigestInit_ex</code> (EVP_MD_CTX *ctx, const EVP_MD *md, ENGINE *engine) <br/>
+ <br/>
+ int <code>EVP_DigestUpdate</code> (EVP_MD_CTX *ctx, const void *data, size_t size) <br/>
+ <br/>
+ int <code>EVP_DigestFinal_ex</code> (EVP_MD_CTX *ctx, void *hash, unsigned int *size) <br/>
+ <br/>
+ int <code>EVP_Digest</code> (const void *data, size_t dsize, void *hash, unsigned int *hsize, const EVP_MD *md, ENGINE *engine) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_sha256</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_sha384</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_sha512</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_sha1</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_sha</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_md5</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_md4</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_md2</code> (void) <br/>
+ <br/>
+ const EVP_MD * <code>EVP_md_null</code> (void) <br/>
+ <br/>
+ size_t <code>EVP_CIPHER_block_size</code> (const EVP_CIPHER *c) <br/>
+ <br/>
+ size_t <code>EVP_CIPHER_key_length</code> (const EVP_CIPHER *c) <br/>
+ <br/>
+ size_t <code>EVP_CIPHER_iv_length</code> (const EVP_CIPHER *c) <br/>
+ <br/>
+ void <code>EVP_CIPHER_CTX_init</code> (EVP_CIPHER_CTX *c) <br/>
+ <br/>
+ int <code>EVP_CIPHER_CTX_cleanup</code> (EVP_CIPHER_CTX *c) <br/>
+ <br/>
+ int <code>EVP_CIPHER_CTX_set_key_length</code> (EVP_CIPHER_CTX *c, int length) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_CIPHER_CTX_cipher</code> (EVP_CIPHER_CTX *ctx) <br/>
+ <br/>
+ size_t <code>EVP_CIPHER_CTX_block_size</code> (const EVP_CIPHER_CTX *ctx) <br/>
+ <br/>
+ size_t <code>EVP_CIPHER_CTX_key_length</code> (const EVP_CIPHER_CTX *ctx) <br/>
+ <br/>
+ size_t <code>EVP_CIPHER_CTX_iv_length</code> (const EVP_CIPHER_CTX *ctx) <br/>
+ <br/>
+ unsigned long <code>EVP_CIPHER_CTX_flags</code> (const EVP_CIPHER_CTX *ctx) <br/>
+ <br/>
+ int <code>EVP_CIPHER_CTX_mode</code> (const EVP_CIPHER_CTX *ctx) <br/>
+ <br/>
+ void * <code>EVP_CIPHER_CTX_get_app_data</code> (EVP_CIPHER_CTX *ctx) <br/>
+ <br/>
+ void <code>EVP_CIPHER_CTX_set_app_data</code> (EVP_CIPHER_CTX *ctx, void *data) <br/>
+ <br/>
+ int <code>EVP_CipherInit_ex</code> (EVP_CIPHER_CTX *ctx, const EVP_CIPHER *c, ENGINE *engine, const void *key, const void *iv, int encp) <br/>
+ <br/>
+ int <code>EVP_CipherUpdate</code> (EVP_CIPHER_CTX *ctx, void *out, int *outlen, void *in, size_t inlen) <br/>
+ <br/>
+ int <code>EVP_CipherFinal_ex</code> (EVP_CIPHER_CTX *ctx, void *out, int *outlen) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_enc_null</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_rc2_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_rc2_40_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_rc2_64_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_rc4</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_rc4_40</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_des_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_des_ede3_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_aes_128_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_aes_192_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_aes_256_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_aes_128_cfb8</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_aes_192_cfb8</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_aes_256_cfb8</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_camellia_128_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_camellia_192_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_camellia_256_cbc</code> (void) <br/>
+ <br/>
+ const EVP_CIPHER * <code>EVP_get_cipherbyname</code> (const char *name) <br/>
+ <br/>
+ int <code>EVP_BytesToKey</code> (const EVP_CIPHER *type, const EVP_MD *md, const void *salt, const void *data, size_t datalen, unsigned int count, void *keydata, void *ivdata) <br/>
   </p>
 <h2>Detailed Description</h2>
 <p> See the <code>EVP &#8211; generic crypto interface</code> for description and examples.  </p>
@@ -215,13 +215,13 @@ url: "/docs/linux/man/3-evp_aes_256_cfb8/"
 <p> New protocols should use new string to key functions like NIST SP56-800A or PKCS#5 v2.0 (see <code>PKCS5_PBKDF2_HMAC_SHA1()</code>). </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>type</i> type of cipher to use <br />
- <i>md</i> message digest to use <br />
- <i>salt</i> salt salt string, should be an binary 8 byte buffer. <br />
- <i>data</i> the password/input key string. <br />
- <i>datalen</i> length of data parameter. <br />
- <i>count</i> iteration counter. <br />
- <i>keydata</i> output keydata, needs to of the size <code>EVP_CIPHER_key_length()</code>. <br />
+<dd> <p> <i>type</i> type of cipher to use <br/>
+ <i>md</i> message digest to use <br/>
+ <i>salt</i> salt salt string, should be an binary 8 byte buffer. <br/>
+ <i>data</i> the password/input key string. <br/>
+ <i>datalen</i> length of data parameter. <br/>
+ <i>count</i> iteration counter. <br/>
+ <i>keydata</i> output keydata, needs to of the size <code>EVP_CIPHER_key_length()</code>. <br/>
  <i>ivdata</i> output ivdata, needs to of the size <code>EVP_CIPHER_block_size()</code>. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -349,14 +349,14 @@ url: "/docs/linux/man/3-evp_aes_256_cfb8/"
 <p> Set the app data for an EVP_CIPHER_CTX context. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>ctx</i> the EVP_CIPHER_CTX to set the app data for <br />
+<dd> <p> <i>ctx</i> the EVP_CIPHER_CTX to set the app data for <br/>
  <i>data</i> the app data to set for an EVP_CIPHER_CTX. </p>
  </dd></dl>
 <h3>int EVP_CIPHER_CTX_set_key_length (EVP_CIPHER_CTX *c, intlength)</h3>
 <p> If the cipher type supports it, change the key length </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>c</i> the cipher context to change the key length for <br />
+<dd> <p> <i>c</i> the cipher context to change the key length for <br/>
  <i>length</i> new key length </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -389,8 +389,8 @@ url: "/docs/linux/man/3-evp_aes_256_cfb8/"
 <p> Encipher/decipher final data </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>ctx</i> the cipher context. <br />
- <i>out</i> output data from the operation. <br />
+<dd> <p> <i>ctx</i> the cipher context. <br/>
+ <i>out</i> output data from the operation. <br/>
  <i>outlen</i> output length </p>
  </dd></dl>
 <p> The input length needs to be at least <code>EVP_CIPHER_block_size()</code> bytes long. </p>
@@ -404,11 +404,11 @@ url: "/docs/linux/man/3-evp_aes_256_cfb8/"
 <p> Initiate the EVP_CIPHER_CTX context to encrypt or decrypt data. Clean up with <code>EVP_CIPHER_CTX_cleanup()</code>. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>ctx</i> context to initiate <br />
- <i>c</i> cipher to use. <br />
- <i>engine</i> crypto engine to use, NULL to select default. <br />
- <i>key</i> the crypto key to use, NULL will use the previous value. <br />
- <i>iv</i> the IV to use, NULL will use the previous value. <br />
+<dd> <p> <i>ctx</i> context to initiate <br/>
+ <i>c</i> cipher to use. <br/>
+ <i>engine</i> crypto engine to use, NULL to select default. <br/>
+ <i>key</i> the crypto key to use, NULL will use the previous value. <br/>
+ <i>iv</i> the IV to use, NULL will use the previous value. <br/>
  <i>encp</i> non zero will encrypt, -1 use the previous value. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -420,10 +420,10 @@ url: "/docs/linux/man/3-evp_aes_256_cfb8/"
 <p> Encipher/decipher partial data </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>ctx</i> the cipher context. <br />
- <i>out</i> output data from the operation. <br />
- <i>outlen</i> output length <br />
- <i>in</i> input data to the operation. <br />
+<dd> <p> <i>ctx</i> the cipher context. <br/>
+ <i>out</i> output data from the operation. <br/>
+ <i>outlen</i> output length <br/>
+ <i>in</i> input data to the operation. <br/>
  <i>inlen</i> length of data. </p>
  </dd></dl>
 <p> The output buffer length should at least be <code>EVP_CIPHER_block_size()</code> byte longer then the input length. </p>
@@ -450,11 +450,11 @@ url: "/docs/linux/man/3-evp_aes_256_cfb8/"
 <p> Do the whole <code>EVP_MD_CTX_create()</code>, <code>EVP_DigestInit_ex()</code>, <code>EVP_DigestUpdate()</code>, <code>EVP_DigestFinal_ex()</code>, <code>EVP_MD_CTX_destroy()</code> dance in one call. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>data</i> the data to update the context with <br />
- <i>dsize</i> length of data <br />
- <i>hash</i> output data of at least <code>EVP_MD_size()</code> length. <br />
- <i>hsize</i> output length of hash. <br />
- <i>md</i> message digest to use <br />
+<dd> <p> <i>data</i> the data to update the context with <br/>
+ <i>dsize</i> length of data <br/>
+ <i>hash</i> output data of at least <code>EVP_MD_size()</code> length. <br/>
+ <i>hsize</i> output length of hash. <br/>
+ <i>md</i> message digest to use <br/>
  <i>engine</i> engine to use, NULL for default engine. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -465,8 +465,8 @@ url: "/docs/linux/man/3-evp_aes_256_cfb8/"
 <p> Complete the message digest. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>ctx</i> the context to complete. <br />
- <i>hash</i> the output of the message digest function. At least <code>EVP_MD_size()</code>. <br />
+<dd> <p> <i>ctx</i> the context to complete. <br/>
+ <i>hash</i> the output of the message digest function. At least <code>EVP_MD_size()</code>. <br/>
  <i>size</i> the output size of hash. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -477,8 +477,8 @@ url: "/docs/linux/man/3-evp_aes_256_cfb8/"
 <p> Init a EVP_MD_CTX for use a specific message digest and engine. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>ctx</i> the message digest context to init. <br />
- <i>md</i> the message digest to use. <br />
+<dd> <p> <i>ctx</i> the message digest context to init. <br/>
+ <i>md</i> the message digest to use. <br/>
  <i>engine</i> the engine to use, NULL to use the default engine. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -489,8 +489,8 @@ url: "/docs/linux/man/3-evp_aes_256_cfb8/"
 <p> Update the digest with some data. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>ctx</i> the context to update <br />
- <i>data</i> the data to update the context with <br />
+<dd> <p> <i>ctx</i> the context to update <br/>
+ <i>data</i> the data to update the context with <br/>
  <i>size</i> length of data </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>

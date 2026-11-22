@@ -8,29 +8,29 @@ url: "/docs/linux/man/1-cjklatex/"
 description: "bg5latex – Use LaTeX directly on a Big5 encoded .tex file bg5pdflatex – Use pdfLaTeX directly on a Big5 encoded .tex file bg5+latex – Use LaTeX directly on a Big5+ encoded .tex file bg5+pdflatex – ..."
 ---
 
-<p> bg5latex &#8211; Use LaTeX directly on a Big5 encoded .tex file<br />
- bg5pdflatex &#8211; Use pdfLaTeX directly on a Big5 encoded .tex file<br />
- bg5+latex &#8211; Use LaTeX directly on a Big5+ encoded .tex file<br />
- bg5+pdflatex &#8211; Use pdfLaTeX directly on a Big5+ encoded .tex file<br />
+<p> bg5latex &#8211; Use LaTeX directly on a Big5 encoded .tex file<br/>
+ bg5pdflatex &#8211; Use pdfLaTeX directly on a Big5 encoded .tex file<br/>
+ bg5+latex &#8211; Use LaTeX directly on a Big5+ encoded .tex file<br/>
+ bg5+pdflatex &#8211; Use pdfLaTeX directly on a Big5+ encoded .tex file<br/>
  cef5latex &#8211; Use LaTeX directly on a Big5 encoded .tex file </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;containing CEF macros<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;containing CEF macros<br/>
  cef5pdflatex &#8211; Use pdfLaTeX directly on a Big5 encoded .tex file </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;containing CEF macros<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;containing CEF macros<br/>
  ceflatex &#8211; Use LaTeX directly on a .tex file containing CEF </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;macros<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;macros<br/>
  cefpdflatex &#8211; Use pdfLaTeX directly on a .tex file containing CEF </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;macros<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;macros<br/>
  cefslatex &#8211; Use LaTeX directly on an SJIS encoded .tex file </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;containing CEF macros<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;containing CEF macros<br/>
  cefspdflatex &#8211; Use pdfLaTeX directly on an SJIS encoded .tex file </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;containing CEF macros<br />
- gbklatex &#8211; Use LaTeX directly on a GBK encoded .tex file<br />
- gbkpdflatex &#8211; Use pdfLaTeX directly on a GBK encoded .tex file<br />
- sjislatex &#8211; Use LaTeX directly on an SJIS encoded .tex file<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;containing CEF macros<br/>
+ gbklatex &#8211; Use LaTeX directly on a GBK encoded .tex file<br/>
+ gbkpdflatex &#8211; Use pdfLaTeX directly on a GBK encoded .tex file<br/>
+ sjislatex &#8211; Use LaTeX directly on an SJIS encoded .tex file<br/>
  sjispdflatex &#8211; Use pdfLaTeX directly on an SJIS encoded .tex file </p>
 <h2>SYNOPSIS</h2>
-<p> <code>bg5latex</code> file.tex<br />
- <code>bg5pdflatex</code> file.tex<br />
+<p> <code>bg5latex</code> file.tex<br/>
+ <code>bg5pdflatex</code> file.tex<br/>
  etc.</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the different <code>*latex</code> batch files that come with the CJK LaTeX macro. </p>

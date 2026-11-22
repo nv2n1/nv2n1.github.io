@@ -34,5 +34,5 @@ description: "paperconfig – configure the system default paper size"
 <h2>Author</h2>
 <p>Yves Arrouye &lt;arrouye [at] debian.org&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-paperconf/">paperconf</a></code>(1)<br />
+<p><code><a href="/docs/linux/man/1-paperconf/">paperconf</a></code>(1)<br/>
  <code><a href="/docs/linux/man/5-papersize/">papersize</a></code>(5) </p>

@@ -5,6 +5,6 @@ section: "3"
 letter: "s"
 url: "/docs/linux/man/3-scatterscreenshots/"
 ---
-<p>scatterscreenshots &#8211; Scatter Plot <br />
+<p>scatterscreenshots &#8211; Scatter Plot <br/>
 &nbsp;<wbr> </p>
 <hr />

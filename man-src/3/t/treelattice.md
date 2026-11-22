@@ -16,11 +16,11 @@ description: "QuantLib::TreeLattice – Tree-based lattice-method base class."
 <p> const <code>Array</code> &amp; <code>statePrices</code> (Size i) const </p>
 <p> void <code>stepback</code> (Size i, const <code>Array</code> &amp;values, <code>Array</code> &amp;newValues) const </p>
 <p> <code>Lattice interface</code> </p>
-<p> void <code>initialize</code> (<code>DiscretizedAsset</code> &amp;, Time t) const<br />
- <i>initialize an asset at the given time. </i><br />
+<p> void <code>initialize</code> (<code>DiscretizedAsset</code> &amp;, Time t) const<br/>
+ <i>initialize an asset at the given time. </i><br/>
  void <code>rollback</code> (<code>DiscretizedAsset</code> &amp;, Time to) const </p>
 <p> void <code>partialRollback</code> (<code>DiscretizedAsset</code> &amp;, Time to) const </p>
-<p> <code>Real</code> <code>presentValue</code> (<code>DiscretizedAsset</code> &amp;) const<br />
+<p> <code>Real</code> <code>presentValue</code> (<code>DiscretizedAsset</code> &amp;) const<br/>
  <i>Computes the present value of an asset using Arrow-Debrew prices. </i></p>
 <h3>Protected Member Functions</h3>
 <p>void <code>computeStatePrices</code> (Size until) const </p>

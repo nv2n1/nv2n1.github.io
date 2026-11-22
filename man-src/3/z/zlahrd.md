@@ -10,7 +10,7 @@ description: "zlahrd.f –"
 <p>zlahrd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlahrd</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br />
+<p>subroutine <code>zlahrd</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br/>
  <i></i><code>ZLAHRD</code> reduces the first nb columns of a general rectangular matrix A so that elements below the k-th subdiagonal are zero, and returns auxiliary matrices which are needed to apply the transformation to the unreduced part of A.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlahrd (integerN, integerK, integerNB, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( nb )TAU, complex*16, dimension( ldt, nb )T, integerLDT, complex*16, dimension( ldy, nb )Y, integerLDY)</h3>

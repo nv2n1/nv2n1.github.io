@@ -31,9 +31,9 @@ description: "ttf2pt1_x2gs – font installer for Ghostscript"
 <dt>&bull;</dt>
 <dd> /usr/share/ttf2pt1/scripts/*</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">/usr/share/doc/ttf2pt1-3.4.4/README</font></dd>
+<dd> /usr/share/doc/ttf2pt1-3.4.4/README</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">/usr/share/doc/ttf2pt1-3.4.4/FONTS</font></dd>
+<dd> /usr/share/doc/ttf2pt1-3.4.4/FONTS</dd>
 <dt>&bull;</dt>
 <dd> /usr/share/ttf2pt1/*</dd>
 <dt>&bull;</dt>

@@ -10,7 +10,7 @@ description: "cgbsvx.f –"
 <p>cgbsvx.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgbsvx</code> (FACT, TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, RWORK, INFO)<br />
+<p>subroutine <code>cgbsvx</code> (FACT, TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, RWORK, INFO)<br/>
  <i></i><code> CGBSVX computes the solution to system of linear equations A * X = B for GB matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgbsvx (characterFACT, characterTRANS, integerN, integerKL, integerKU, integerNRHS, complex, dimension( ldab, * )AB, integerLDAB, complex, dimension( ldafb, * )AFB, integerLDAFB, integer, dimension( * )IPIV, characterEQUED, real, dimension( * )R, real, dimension( * )C, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldx, * )X, integerLDX, realRCOND, real, dimension( * )FERR, real, dimension( * )BERR, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

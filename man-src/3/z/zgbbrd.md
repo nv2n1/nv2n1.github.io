@@ -10,7 +10,7 @@ description: "zgbbrd.f –"
 <p>zgbbrd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgbbrd</code> (VECT, M, N, NCC, KL, KU, AB, LDAB, D, E, Q, LDQ, PT, LDPT, C, LDC, WORK, RWORK, INFO)<br />
+<p>subroutine <code>zgbbrd</code> (VECT, M, N, NCC, KL, KU, AB, LDAB, D, E, Q, LDQ, PT, LDPT, C, LDC, WORK, RWORK, INFO)<br/>
  <i></i><code>ZGBBRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgbbrd (characterVECT, integerM, integerN, integerNCC, integerKL, integerKU, complex*16, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )D, double precision, dimension( * )E, complex*16, dimension( ldq, * )Q, integerLDQ, complex*16, dimension( ldpt, * )PT, integerLDPT, complex*16, dimension( ldc, * )C, integerLDC, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

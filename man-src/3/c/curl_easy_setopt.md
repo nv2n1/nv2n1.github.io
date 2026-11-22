@@ -785,7 +785,7 @@ return socket(addr-&gt;family, addr-&gt;socktype, addr-&gt;protocol);
  </dd>
 <dt>CURLOPT_CUSTOMREQUEST</dt>
 <dd> <p> Pass a pointer to a zero terminated string as parameter. It can be used to specify the request instead of GET or HEAD when performing HTTP based requests, instead of LIST and NLST when performing FTP directory listings and instead of LIST and RETR when issuing POP3 based commands. This is particularly useful, for example, for performing a HTTP DELETE request or a POP3 DELE command. </p>
-<p> Please don&#8217;t perform this at will, on HTTP based requests, by making sure your server supports the command you are sending first. <br />
+<p> Please don&#8217;t perform this at will, on HTTP based requests, by making sure your server supports the command you are sending first. <br/>
 &nbsp;<wbr> When you change the request method by setting <code>CURLOPT_CUSTOMREQUEST</code> to something, you don&#8217;t actually change how libcurl behaves or acts in regards to the particular request method, it will only change the actual string sent in the request. </p>
 <p> For example: </p>
 <p> With the HTTP protocol when you tell libcurl to do a HEAD request, but then specify a GET though a custom request libcurl will still act as if it sent a HEAD. To switch to a proper HEAD use <i>CURLOPT_NOBODY</i>, to switch to a proper POST use <i>CURLOPT_POST</i> or <i>CURLOPT_POSTFIELDS</i> and to switch to a proper GET use CURLOPT_HTTPGET. </p>
@@ -1097,7 +1097,7 @@ return socket(addr-&gt;family, addr-&gt;socktype, addr-&gt;protocol);
 <dd> <p> The host+key is rejected, but the SSH connection is asked to be kept alive. This feature could be used when the app wants to somehow return back and act on the host+key situation and then retry without needing the overhead of setting it up from scratch again. </p>
  </dd></dl>
 </dl>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>(Added in 7.19.6) </p>
 <dt>CURLOPT_SSH_KEYDATA</dt>
 <dd> <p> Pass a void * as parameter. This pointer will be passed along verbatim to the callback set with <i>CURLOPT_SSH_KEYFUNCTION</i>. (Added in 7.19.6) </p>

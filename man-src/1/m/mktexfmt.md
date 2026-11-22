@@ -8,13 +8,13 @@ url: "/docs/linux/man/1-mktexfmt/"
 description: "fmtutil – manage TeX formats and Metafont bases, per-user fmtutil-sys – manage TeX formats and Metafont bases, system-wide mktexfmt – create a TeX format or Metafont base"
 ---
 
-<p> fmtutil &#8211; manage TeX formats and Metafont bases, per-user<br />
- fmtutil-sys &#8211; manage TeX formats and Metafont bases, system-wide<br />
+<p> fmtutil &#8211; manage TeX formats and Metafont bases, per-user<br/>
+ fmtutil-sys &#8211; manage TeX formats and Metafont bases, system-wide<br/>
  mktexfmt &#8211; create a TeX format or Metafont base </p>
 <h2>SYNOPSIS</h2>
-<p> <code>fmtutil</code> [<i>,-user|-sys/</i>] [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]<br />
- <code>fmtutil-sys</code> [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]<br />
- <code>fmtutil-user</code> [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]<br />
+<p> <code>fmtutil</code> [<i>,-user|-sys/</i>] [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]<br/>
+ <code>fmtutil-sys</code> [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]<br/>
+ <code>fmtutil-user</code> [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]<br/>
  <code>mktexfmt</code> <i>,FORMAT.fmt|BASE.base|FMTNAME/</i></p>
 <h2>DESCRIPTION</h2>
 <p> fmtutil version r59143 (2021-05-09 04:23:44 +0200) </p>
@@ -168,5 +168,5 @@ TEXMFDIST      <i>,$TEXLIVE/YYYY/texmf-dist/web2c/fmtutil.cnf/</i>
 <dt>
 </dt><dd> If an engine name ends with &quot;-dev&quot;, formats are created in the respective directory with the <code>-dev</code> stripped. This allows for easily running development binaries in parallel with the released binaries.</dd></dl>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to: tex-live [at] tug.org<br />
+<p> Report bugs to: tex-live [at] tug.org<br/>
  TeX Live home page: &lt;<a rel="nofollow" href="https://tug.org/texlive/">https://tug.org/texlive/</a>&gt; </p>

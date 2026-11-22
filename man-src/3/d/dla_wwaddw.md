@@ -11,7 +11,7 @@ description: "dla_wwaddw.f –"
 <p> dla_wwaddw.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dla_wwaddw</code> (N, X, Y, W)<br />
+<p> subroutine <code>dla_wwaddw</code> (N, X, Y, W)<br/>
  <i></i><code>DLA_WWADDW</code> adds a vector into a doubled-single vector.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dla_wwaddw (integerN, double precision, dimension( * )X, double precision, dimension( * )Y, double precision, dimension( * )W)</h3>

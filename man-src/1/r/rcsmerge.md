@@ -12,8 +12,8 @@ description: "rcsmerge – merge RCS revisions"
 <h2>SYNOPSIS</h2>
 <p> <code>rcsmerge</code> [<i>options</i>]<i> file</i></p>
 <h2>DESCRIPTION</h2>
-<p> <code>rcsmerge</code> incorporates the changes between two revisions of an <font SIZE="-1">RCS</font> file into the corresponding working file. </p>
-<p> Filenames matching an <font SIZE="-1">RCS</font> suffix denote <font SIZE="-1">RCS</font> files; all others denote working files. Names are paired as explained in <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1). </p>
+<p> <code>rcsmerge</code> incorporates the changes between two revisions of an RCS file into the corresponding working file. </p>
+<p> Filenames matching an RCS suffix denote RCS files; all others denote working files. Names are paired as explained in <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1). </p>
 <p> At least one revision must be specified with one of the options described below, usually <code>-r</code>. At most two revisions may be specified. If only one revision is specified, the latest revision on the default branch (normally the highest branch on the trunk) is assumed for the second revision. Revisions may be specified numerically or symbolically. </p>
 <p> <code>rcsmerge</code> prints a warning if there are overlaps, and delimits the overlapping regions as explained in <code><a href="/docs/linux/man/1-merge/">merge</a></code>(1). The command is useful for incorporating changes into a checked-out revision.</p>
 <h2>OPTIONS</h2>
@@ -31,48 +31,48 @@ description: "rcsmerge – merge RCS revisions"
 <dt><code>-r</code>[<i>rev</i>]</dt>
 <dd> Merge with respect to revision <i>rev</i>. Here an empty <i>rev</i> stands for the latest revision on the default branch, normally the head.</dd>
 <dt><code>-T</code></dt>
-<dd> This option has no effect; it is present for compatibility with other <font SIZE="-1">RCS</font> commands.</dd>
+<dd> This option has no effect; it is present for compatibility with other RCS commands.</dd>
 <dt><code>-V</code></dt>
-<dd> Print <font SIZE="-1">RCS</font>&#8216;s version number.</dd>
+<dd> Print RCS&#8216;s version number.</dd>
 <dt><code>-V</code><i>n</i></dt>
-<dd> Emulate <font SIZE="-1">RCS</font> version <i>n</i>. See <code><a href="/docs/linux/man/1-co/">co</a></code>(1) for details.</dd>
+<dd> Emulate RCS version <i>n</i>. See <code><a href="/docs/linux/man/1-co/">co</a></code>(1) for details.</dd>
 <dt><code>-x</code><i>suffixes</i></dt>
-<dd> Use <i>suffixes</i> to characterize <font SIZE="-1">RCS</font> files. See <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1) for details.</dd>
+<dd> Use <i>suffixes</i> to characterize RCS files. See <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1) for details.</dd>
 <dt><code>-z</code><i>zone</i></dt>
 <dd> Use <i>zone</i> as the time zone for keyword substitution. See <code><a href="/docs/linux/man/1-co/">co</a></code>(1) for details.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Suppose you have released revision 2.8 of <code>f.c</code>. Assume furthermore that after you complete an unreleased revision 3.4, you receive updates to release 2.8 from someone else. To combine the updates to 2.8 and your changes between 2.8 and 3.4, put the updates to 2.8 into file f.c and execute </p>
 <p> <code> rcsmerge -p -r2.8 -r3.4 f.c &gt;f.merged.c</code> </p>
-<p> Then examine <code>f.merged.c</code>. Alternatively, if you want to save the updates to 2.8 in the <font SIZE="-1">RCS</font> file, check them in as revision 2.8.1.1 and execute <code>co -j:</code> </p>
-<p> <code> ci -r2.8.1.1 f.c</code><br />
+<p> Then examine <code>f.merged.c</code>. Alternatively, if you want to save the updates to 2.8 in the RCS file, check them in as revision 2.8.1.1 and execute <code>co -j:</code> </p>
+<p> <code> ci -r2.8.1.1 f.c</code><br/>
  <code> co -r3.4 -j2.8:2.8.1.1 f.c</code> </p>
 <p> As another example, the following command undoes the changes between revision 2.4 and 2.8 in your currently checked out revision in <code>f.c</code>. </p>
 <p> <code> rcsmerge -r2.8 -r2.4 f.c</code> </p>
 <p> Note the order of the arguments, and that <code>f.c</code> will be overwritten.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>RCSINIT</code></font></dt>
-<dd> Options prepended to the argument list, separated by spaces. A backslash escapes spaces within an option. The <font SIZE="-1"><code>RCSINIT</code></font> options are prepended to the argument lists of most <font SIZE="-1">RCS</font> commands. Useful <font SIZE="-1"><code>RCSINIT</code></font> options include <code>-q</code>, <code>-V</code>, <code>-x</code>, and <code>-z</code>.</dd>
-<dt><font SIZE="-1"><code>RCS_MEM_LIMIT</code></font></dt>
-<dd> An integer <i>lim</i>, measured in kilobytes, specifying the threshold under which commands will try to use memory-based operations for processing the <font SIZE="-1">RCS</font> file. (For <font SIZE="-1">RCS</font> files of size <i>lim</i> kilobytes or greater, RCS will use the slower standard input/output routines.) Default value is 256.</dd>
-<dt><font SIZE="-1"><code>TMPDIR</code></font></dt>
-<dd> Name of the temporary directory. If not set, the environment variables <font SIZE="-1"><code>TMP</code></font> and <font SIZE="-1"><code>TEMP</code></font> are inspected instead and the first value found is taken; if none of them are set, a host-dependent default is used, typically <code>/tmp</code>.</dd></dl>
+<dt><code>RCSINIT</code></dt>
+<dd> Options prepended to the argument list, separated by spaces. A backslash escapes spaces within an option. The <code>RCSINIT</code> options are prepended to the argument lists of most RCS commands. Useful <code>RCSINIT</code> options include <code>-q</code>, <code>-V</code>, <code>-x</code>, and <code>-z</code>.</dd>
+<dt><code>RCS_MEM_LIMIT</code></dt>
+<dd> An integer <i>lim</i>, measured in kilobytes, specifying the threshold under which commands will try to use memory-based operations for processing the RCS file. (For RCS files of size <i>lim</i> kilobytes or greater, RCS will use the slower standard input/output routines.) Default value is 256.</dd>
+<dt><code>TMPDIR</code></dt>
+<dd> Name of the temporary directory. If not set, the environment variables <code>TMP</code> and <code>TEMP</code> are inspected instead and the first value found is taken; if none of them are set, a host-dependent default is used, typically <code>/tmp</code>.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> Exit status is 0 for no overlaps, 1 for some overlaps, 2 for trouble.</p>
 <h2>IDENTIFICATION</h2>
-<p> Author: Walter F. Tichy.<br />
- Manual Page Revision: 5.9.0; Release Date: 2014-06-10.<br />
- Copyright &#169; 2010-2013 Thien-Thi Nguyen.<br />
- Copyright &#169; 1990, 1991, 1992, 1993, 1994, 1995 Paul Eggert.<br />
+<p> Author: Walter F. Tichy.<br/>
+ Manual Page Revision: 5.9.0; Release Date: 2014-06-10.<br/>
+ Copyright &#169; 2010-2013 Thien-Thi Nguyen.<br/>
+ Copyright &#169; 1990, 1991, 1992, 1993, 1994, 1995 Paul Eggert.<br/>
  Copyright &#169; 1982, 1988, 1989 Walter F. Tichy. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1), <code><a href="/docs/linux/man/1-co/">co</a></code>(1), <code><a href="/docs/linux/man/1-ident/">ident</a></code>(1), <code><a href="/docs/linux/man/1-merge/">merge</a></code>(1), <code><a href="/docs/linux/man/1-rcs/">rcs</a></code>(1), <code><a href="/docs/linux/man/1-rcsdiff/">rcsdiff</a></code>(1), <code><a href="/docs/linux/man/1-rlog/">rlog</a></code>(1), <code><a href="/docs/linux/man/5-rcsfile/">rcsfile</a></code>(5). </p>
-<p> Walter F. Tichy, <font SIZE="-1">RCS</font>&#8211;A System for Version Control, <i>Software&#8211;Practice &amp; Experience</i> <code>15</code>, 7 (July 1985), 637-654. </p>
-<p> The full documentation for <font SIZE="-1">RCS</font> is maintained as a Texinfo manual. If the <code><a href="/docs/linux/man/1-info/">info</a></code>(1) and <font SIZE="-1">RCS</font> programs are properly installed at your site, the command</p>
+<p> Walter F. Tichy, RCS&#8211;A System for Version Control, <i>Software&#8211;Practice &amp; Experience</i> <code>15</code>, 7 (July 1985), 637-654. </p>
+<p> The full documentation for RCS is maintained as a Texinfo manual. If the <code><a href="/docs/linux/man/1-info/">info</a></code>(1) and RCS programs are properly installed at your site, the command</p>
 <dl>
 <dt>
 </dt><dd> <code>info rcs</code></dd></dl>
-<p> should give you access to the complete manual. Additionally, the <font SIZE="-1">RCS</font> homepage:</p>
+<p> should give you access to the complete manual. Additionally, the RCS homepage:</p>
 <dl>
 <dt>
 </dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/rcs/">http://www.gnu.org/software/rcs/</a></code></dd></dl>

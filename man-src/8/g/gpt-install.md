@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-gpt-install/"
 description: "gpt-install – Installs GPT packages."
 ---
 
-<p><code>gpt-install</code> &#8211; Installs <font SIZE="-1">GPT</font> packages.</p>
+<p><code>gpt-install</code> &#8211; Installs GPT packages.</p>
 <h2>Synopsis</h2>
 <p><code>gpt-install</code> [options] [packages or bundles] </p>
 <pre> Options:
@@ -21,7 +21,7 @@ description: "gpt-install – Installs GPT packages."
  -tmpdir=PATH Path to tmp disk space
  [packages or bundles] List of binary packages and bundles to install.</pre>
 <h2>Description</h2>
-<p><code>gpt-install</code> takes a <font SIZE="-1">GPT</font> described package or bundle and installs it. The program can install either <font SIZE="-1">RPM</font>&#8216;s or <font SIZE="-1">GPT</font> packages.</p>
+<p><code>gpt-install</code> takes a GPT described package or bundle and installs it. The program can install either RPM&#8216;s or GPT packages.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-force</code></dt>
@@ -37,7 +37,7 @@ description: "gpt-install – Installs GPT packages."
 <dt><code>-man</code></dt>
 <dd>Prints the manual page and exits.</dd>
 <dt><code>-version</code></dt>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
+<dd>Prints the version of GPT and exits.</dd></dl>
 <h2>Examples</h2>
 <p>For the command: </p>
 <pre> gpt-install foo-2.1-gcc32-pgm.tar.gz

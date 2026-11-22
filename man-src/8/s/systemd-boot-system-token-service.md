@@ -14,7 +14,7 @@ description: "systemd-boot-system-token.service – Generate an initial boot loa
 <p>systemd-boot-system-token.service is a system service that automatically generates a &#8216;system token&#8217; to store in an EFI variable in the system&#8217;s NVRAM and a random seed to store on the EFI System Partition ESP on disk. The boot loader may then combine these two randomized data fields by cryptographic hashing, and pass it to the OS it boots as initialization seed for its entropy pool. The random seed stored in the ESP is refreshed on each reboot ensuring that multiple subsequent boots will boot with different seeds. The &#8216;system token&#8217; is generated randomly once, and then persistently stored in the system&#8217;s EFI variable storage. </p>
 <p> The systemd-boot-system-token.service unit invokes the <code>bootctl random-seed</code> command, which updates the random seed in the ESP, and initializes the &#8216;system token&#8217; if it&#8217;s not initialized yet. The service is conditionalized so that it is run only when all of the below apply: </p>
 <dl>
-<dd>&bull; A boot loader is used that implements the m[blue]<code>Boot Loader Interface</code>m[]<font SIZE="-2">[1]</font> (which defines the &#8216;system token&#8217; concept).</dd></dl>
+<dd>&bull; A boot loader is used that implements the m[blue]<code>Boot Loader Interface</code>m[][1] (which defines the &#8216;system token&#8217; concept).</dd></dl>
 <dl>
 <dd>&bull; Either a &#8216;system token&#8217; was not set yet, or the boot loader has not passed the OS a random seed yet (and thus most likely has been missing the random seed file in the ESP).</dd></dl>
 <dl>

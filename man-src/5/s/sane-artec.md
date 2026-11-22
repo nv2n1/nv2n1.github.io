@@ -11,13 +11,13 @@ description: "sane-artec – SANE backend for Artec flatbed scanners"
 <h2>Description</h2>
 <p>The <code>sane-artec</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to Artec/Ultima SCSI flatbed scanners. At present, the following scanners are known to work at least partially with this backend:</p>
 <dl>
-<dd>* Artec A6000C<br />
- * Artec A6000C PLUS<br />
- * Artec ViewStation AT3<br />
- * BlackWidow BW4800SP (rebadged Artec AT3)<br />
- * Artec ViewStation AT6<br />
- * Artec ViewStation AT12<br />
- * Artec AM12S<br />
+<dd>* Artec A6000C<br/>
+ * Artec A6000C PLUS<br/>
+ * Artec ViewStation AT3<br/>
+ * BlackWidow BW4800SP (rebadged Artec AT3)<br/>
+ * Artec ViewStation AT6<br/>
+ * Artec ViewStation AT12<br/>
+ * Artec AM12S<br/>
  * Plustek 19200S (rebadged Artec AM12S)</dd></dl>
 <p> Although this manual page is generally updated with each release, up-to-date information on new releases and extraneous helpful hints are available from the backend homepage: <i><a rel="nofollow" href="http://www4.infi.net/~cpinkham/sane">http://www4.infi.net/~cpinkham/sane</a></i>. </p>
 <h2>Configuration</h2>
@@ -51,7 +51,7 @@ model AT3
 /dev/sge
 #</pre>
 <h2>Scsi Adapter Tips</h2>
-<p>Some Artec scanners come with an included SCSI adapter. If your scanner came with a DTC ISA SCSI cards, you can probably use it with recent (&gt;= 2.2.0) kernels using the generic NCR5380 support. You must pass the following boot argument to the kernel: &quot;dtc3181e=0x2c0,0&quot;<br />
+<p>Some Artec scanners come with an included SCSI adapter. If your scanner came with a DTC ISA SCSI cards, you can probably use it with recent (&gt;= 2.2.0) kernels using the generic NCR5380 support. You must pass the following boot argument to the kernel: &quot;dtc3181e=0x2c0,0&quot;<br/>
  I do not have any information on the PCI SCSI adapter included with some newer Artec scanners.</p>
 <h2>Files</h2>
 <dl>

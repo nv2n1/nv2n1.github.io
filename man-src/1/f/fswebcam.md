@@ -48,8 +48,8 @@ description: "fswebcam – Small and simple webcam for *nix."
 <dt><code>&#8211;log</code> <i>[file/syslog:]&lt;filename&gt;</i></dt>
 <dd> Redirect log messages to a file or syslog. For example</dd>
 <dt>
-</dt><dd> &#8211;log output.log<br />
- &#8211;log file:output.log<br />
+</dt><dd> &#8211;log output.log<br/>
+ &#8211;log file:output.log<br/>
  &#8211;log syslog </dd>
 <dt><code>&#8211;gmt</code></dt>
 <dd> Use GMT instead of the local timezone when formatting text with <code>strftime</code>. </dd>
@@ -63,10 +63,10 @@ description: "fswebcam – Small and simple webcam for *nix."
 <dt>
 </dt><dd> Available source modules, in order of preference:</dd>
 <dt>
-</dt><dd> V4L2 &#8211; Capture images from a V4L2 compatible video device.<br />
- V4L1 &#8211; Capture images from a V4L1 compatible video device.<br />
- FILE &#8211; Capture an image from a JPEG or PNG image file.<br />
- RAW &#8211; Reads images straight from a device or file.<br />
+</dt><dd> V4L2 &#8211; Capture images from a V4L2 compatible video device.<br/>
+ V4L1 &#8211; Capture images from a V4L1 compatible video device.<br/>
+ FILE &#8211; Capture an image from a JPEG or PNG image file.<br/>
+ RAW &#8211; Reads images straight from a device or file.<br/>
  TEST &#8211; Draws colour bars. </dd>
 <dt><code>-i</code>, <code>&#8211;input</code> <i>&lt;input number or name&gt;</i></dt>
 <dd> Set the input to use. You may select an input by either it&#8217;s number or name.</dd>
@@ -87,21 +87,21 @@ description: "fswebcam – Small and simple webcam for *nix."
 <dt>
 </dt><dd> Supported formats:</dd>
 <dt>
-</dt><dd> PNG<br />
- JPEG<br />
- MJPEG<br />
- RGB32<br />
- RGB24<br />
- BGR32<br />
- BGR24<br />
- YUYV<br />
- UYVY<br />
- YUV420P<br />
- BAYER<br />
- SGBRG8<br />
- SGRBG8<br />
- RGB565<br />
- RGB555<br />
+</dt><dd> PNG<br/>
+ JPEG<br/>
+ MJPEG<br/>
+ RGB32<br/>
+ RGB24<br/>
+ BGR32<br/>
+ BGR24<br/>
+ YUYV<br/>
+ UYVY<br/>
+ YUV420P<br/>
+ BAYER<br/>
+ SGBRG8<br/>
+ SGRBG8<br/>
+ RGB565<br/>
+ RGB555<br/>
  GREY </dd>
 <dt><code>-r</code>, <code>&#8211;resolution</code> <i>&lt;dimensions&gt;</i></dt>
 <dd> Set the image resolution of the source or device. The actual resolution used may differ if the source or device cannot capture at the specified resolution.</dd>
@@ -165,9 +165,9 @@ description: "fswebcam – Small and simple webcam for *nix."
 <dt><code>&#8211;banner-colour</code> <i>&lt;#AARRGGBB&gt;</i></dt>
 <dd> Set the colour of the banner. Uses the web-style hexadecimal format (#RRGGBB) to describe the colour, and can support an alpha channel (#AARRGGBB). Examples:</dd>
 <dt>
-</dt><dd> &quot;#FF0000&quot; is pure red.<br />
- &quot;#80000000&quot; is semi-transparent black.<br />
- &quot;#FF000000&quot; is invisible (alpha channel is at maximum).<br />
+</dt><dd> &quot;#FF0000&quot; is pure red.<br/>
+ &quot;#80000000&quot; is semi-transparent black.<br/>
+ &quot;#FF000000&quot; is invisible (alpha channel is at maximum).<br/>
  Default is &quot;#40263A93&quot;. </dd>
 <dt><code>&#8211;line-colour</code> <i>&lt;#AARRGGBB&gt;</i></dt>
 <dd> Set the colour of the divider line. See <code>&#8211;banner-colour</code> for more information.</dd>
@@ -234,12 +234,12 @@ description: "fswebcam – Small and simple webcam for *nix."
 <dt><code>&#8211;flip</code> <i>&lt;direction[,direction]&gt;</dt>
 <dd> Flips the image. Direction can be (h)orizontal or (v)ertical. Example:</dd>
 <dt>
-</dt><dd> &#8211;flip h Flips the image horizontally.<br />
+</dt><dd> &#8211;flip h Flips the image horizontally.<br/>
  &#8211;flip h,v Flips the image both horizontally and vertically. </dd>
 <dt></i><code>&#8211;crop</code> <i>&lt;dimensions[,offset]&gt;</i></dt>
 <dd> Crop the image. With no offset the cropped area will be the center of the image. Example:</dd>
 <dt>
-</dt><dd> &#8211;crop 320&#215;240 Crops the center 320&#215;240 area of the image.<br />
+</dt><dd> &#8211;crop 320&#215;240 Crops the center 320&#215;240 area of the image.<br/>
  &#8211;crop 10&#215;10,0x0 Crops the 10&#215;10 area at the top left corner of the image. </dd>
 <dt><code>&#8211;scale</code> &lt;dimensions&gt;</dt>
 <dd> Scale the image.</dd>

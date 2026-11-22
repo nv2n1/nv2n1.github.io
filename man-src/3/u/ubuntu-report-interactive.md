@@ -13,14 +13,14 @@ description: "ubuntu-report-interactive – Interactive mode, alias to running t
 <h2>Description</h2>
 <p>Interactive mode, alias to running this tool without any subcommands. </p>
 <h2>Options</h2>
-<p><code>-h</code>, <code>&#8211;help</code>[=false]<br />
+<p><code>-h</code>, <code>&#8211;help</code>[=false]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;help for interactive </p>
-<p> <code>-u</code>, <code>&#8211;url</code>=&quot; &lt;<a rel="nofollow" href="https://metrics.ubuntu.com">https://metrics.ubuntu.com</a>&quot;&gt;<br />
+<p> <code>-u</code>, <code>&#8211;url</code>=&quot; &lt;<a rel="nofollow" href="https://metrics.ubuntu.com">https://metrics.ubuntu.com</a>&quot;&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;server url to send report to. Leave empty for default.</p>
 <h2>Options Inherited From Parent Commands</h2>
-<p><code>-f</code>, <code>&#8211;force</code>[=false]<br />
+<p><code>-f</code>, <code>&#8211;force</code>[=false]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;collect and send new report even if already reported </p>
-<p> <code>-v</code>, <code>&#8211;verbose</code>[=0]<br />
+<p> <code>-v</code>, <code>&#8211;verbose</code>[=0]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;issue INFO&nbsp;(-v)&nbsp;and DEBUG&nbsp;(-vv)&nbsp;output</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-ubuntu-report/">ubuntu-report</a>(3)</code> </p>

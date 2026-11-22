@@ -24,9 +24,9 @@ description: "pam_ssh_add – PAM module to auto load ssh keys into an agent"
  session optional pam_ssh_add.so</pre>
 </dd></dl>
 <h2>Author</h2>
-<p>Cockpit has been written by many m[blue]<code>contributors</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p>Cockpit has been written by many m[blue]<code>contributors</code>m[][1].</p>
 <h2>Bugs</h2>
-<p>Please send bug reports to either the distribution bug tracker or the m[blue]<code>upstream bug tracker</code>m[]<font SIZE="-2">[2]</font>.</p>
+<p>Please send bug reports to either the distribution bug tracker or the m[blue]<code>upstream bug tracker</code>m[][2].</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

@@ -56,7 +56,7 @@ r - 500-900</pre>
 <dd>Add a range of numeric UIDs/GIDs to the pool to allocate new UIDs and GIDs from. If no line of this type is specified, the range of UIDs/GIDs is set to some compiled-in default. Note that both UIDs and GIDs are allocated from the same pool, in order to ensure that users and groups of the same name are likely to carry the same numeric UID and GID.</dd></dl>
 <h3>Name</h3>
 <p>The name field specifies the user or group name. The specified name must consist only of the characters a-z, A-Z, 0-9, &quot;_&quot; and &quot;-&quot;, except for the first character which must be one of a-z, A-Z or &quot;_&quot; (i.e. numbers and &quot;-&quot; are not permitted as first character). The user/group name must have at least one character, and at most 31. </p>
-<p> For further details about the syntax of user/group names, see m[blue]<code>User/Group Name Syntax</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> For further details about the syntax of user/group names, see m[blue]<code>User/Group Name Syntax</code>m[][1]. </p>
 <p> It is strongly recommended to pick user and group names that are unlikely to clash with normal users created by the administrator. A good scheme to guarantee this is by prefixing all system and group names with the underscore, and avoiding too generic names. </p>
 <p> For <i>m</i> lines, this field should contain the user name to add to a group. </p>
 <p> For lines of type <i>r</i>, this field should be set to &quot;-&quot;.</p>

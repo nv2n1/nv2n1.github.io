@@ -16,38 +16,38 @@ description: "sc::AtomInfo –"
 <h3>Classes</h3>
 <pre><code>struct atom
 Public Member Functions</code></pre>
-<p> <code>AtomInfo</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>AtomInfo</code> <code>KeyVal</code> constructor is used to generate a <code>AtomInfo</code> object from the input.<br />
+<p> <code>AtomInfo</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>AtomInfo</code> <code>KeyVal</code> constructor is used to generate a <code>AtomInfo</code> object from the input.<br/>
  <code>AtomInfo</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;s)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- double <code>vdw_radius</code> (int Z) const<br />
- <i>These return various measures of the atom&#8217;s radius. </i><br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;s)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ double <code>vdw_radius</code> (int Z) const<br/>
+ <i>These return various measures of the atom&#8217;s radius. </i><br/>
  double <code>bragg_radius</code> (int Z) const </p>
 <p> double <code>atomic_radius</code> (int Z) const </p>
 <p> double <code>maxprob_radius</code> (int Z) const </p>
-<p> double <code>ip</code> (int Z) const<br />
- <i>Returns the atomization potential for atomic number Z. </i><br />
- double <code>vdw_radius_scale</code> () const<br />
- <i>Return the scale factor for the VdW radii. </i><br />
- double <code>bragg_radius_scale</code> () const<br />
- <i>Return the scale factor for the Bragg radii. </i><br />
- double <code>atomic_radius_scale</code> () const<br />
- <i>Return the scale factor for the atomic radii. </i><br />
- double <code>maxprob_radius_scale</code> () const<br />
- <i>Return the scale factor for the maximum probability radii. </i><br />
- double <code>rgb</code> (int Z, int color) const<br />
- <i>These return information about the color of the atom for visualization programs. </i><br />
+<p> double <code>ip</code> (int Z) const<br/>
+ <i>Returns the atomization potential for atomic number Z. </i><br/>
+ double <code>vdw_radius_scale</code> () const<br/>
+ <i>Return the scale factor for the VdW radii. </i><br/>
+ double <code>bragg_radius_scale</code> () const<br/>
+ <i>Return the scale factor for the Bragg radii. </i><br/>
+ double <code>atomic_radius_scale</code> () const<br/>
+ <i>Return the scale factor for the atomic radii. </i><br/>
+ double <code>maxprob_radius_scale</code> () const<br/>
+ <i>Return the scale factor for the maximum probability radii. </i><br/>
+ double <code>rgb</code> (int Z, int color) const<br/>
+ <i>These return information about the color of the atom for visualization programs. </i><br/>
  double <code>red</code> (int Z) const </p>
 <p> double <code>green</code> (int Z) const </p>
 <p> double <code>blue</code> (int Z) const </p>
-<p> double <code>mass</code> (int Z) const<br />
- <i>This returns the mass of the most abundant isotope. </i><br />
- std::string <code>name</code> (int Z)<br />
- <i>This returns the full name of the element. </i><br />
- std::string <code>symbol</code> (int Z)<br />
- <i>This returns the symbol for the element. </i><br />
- int <code>string_to_Z</code> (const std::string &amp;, int allow_exceptions=1)<br />
+<p> double <code>mass</code> (int Z) const<br/>
+ <i>This returns the mass of the most abundant isotope. </i><br/>
+ std::string <code>name</code> (int Z)<br/>
+ <i>This returns the full name of the element. </i><br/>
+ std::string <code>symbol</code> (int Z)<br/>
+ <i>This returns the symbol for the element. </i><br/>
+ int <code>string_to_Z</code> (const std::string &amp;, int allow_exceptions=1)<br/>
  <i>This converts a name or symbol to the atomic number. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>AtomInfo</code> class provides information about atoms. </p>

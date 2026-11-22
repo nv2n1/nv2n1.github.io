@@ -19,7 +19,7 @@ description: "pnmtofiasco – Convert a portable anymap to FIASCO compressed fil
 <dl>
 <dt><code>-i</code> <i>name</i>, <code>&#8211;input-name=</code><i>name</i></dt>
 <dd> Compress the named images, not Standard Input. If <i>name</i> is <code>&#8211;</code>, read Standard Input. <i>name</i> has to be either an image filename or a template of the form: </dd>
-<p> <center> prefix[start-end{+,-}step]suffix<br />
+<p> <center> prefix[start-end{+,-}step]suffix<br/>
  </center> </p>
 <p> Templates are useful when compressing video streams: e.g., if you specify the template <code>img0[12-01-2].pgm</code>, then <code>pnmtofiasco</code> compresses the images img012.pgm, img010.pgm, &#8230;, img002.pgm. </p>
 <p> If <i>name</i> is a relative path, <code>pnmtofiasco </code> searches for the image files in the current directory and in the (colon-separated) list of directories given by the environment variable <code>FIASCO_IMAGES</code>. </p>
@@ -50,7 +50,7 @@ description: "pnmtofiasco – Convert a portable anymap to FIASCO compressed fil
 <dt>The options for advanced users are:</dt>
 <dd>
 </dd><dt>-b</code> <i>name</i>, <code>&#8211;basis-name=</code><i>name</i></dt>
-<dd> Preload compression basis <i>name</i> into FIASCO. The basis <i>name</i> provides the initial compression dictionary. Either use one of the files &quot;small.fco&quot;, &quot;medium.fco&quot;, or &quot;large.fco&quot; that come with <code>pnmtofiasco </code> or create a new ASCII basis file.<br />
+<dd> Preload compression basis <i>name</i> into FIASCO. The basis <i>name</i> provides the initial compression dictionary. Either use one of the files &quot;small.fco&quot;, &quot;medium.fco&quot;, or &quot;large.fco&quot; that come with <code>pnmtofiasco </code> or create a new ASCII basis file.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;</dd>
 <dt><code>-z</code> <i>N</i>, <code>&#8211;optimize=</code><i>N</i> Set optimization level to</dt>
 <dd> <i>N</i>. Level is 0 (fastes) to 3 (slowest); default is 1. Be warned, the encoding time dramatically increased when <i>N</i>=<code>2</code> or <i>N</i>=<code>3</code> while the compression performance only slightly improves. </dd>
@@ -124,7 +124,7 @@ description: "pnmtofiasco – Convert a portable anymap to FIASCO compressed fil
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fiascotopnm/">fiascotopnm</a></code>(1), <code><a href="/docs/linux/man/1-ppmtojpeg/">ppmtojpeg</a></code>(1), <code><a href="/docs/linux/man/1-pnmtojbig/">pnmtojbig</a></code>(1), <code><a href="/docs/linux/man/1-ppmtogif/">ppmtogif</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
-<p> Ullrich Hafner, Juergen Albert, Stefan Frank, and Michael Unger. <code>Weighted Finite Automata for Video Compression</code>, IEEE Journal on Selected Areas In Communications, January 1998<br />
+<p> Ullrich Hafner, Juergen Albert, Stefan Frank, and Michael Unger. <code>Weighted Finite Automata for Video Compression</code>, IEEE Journal on Selected Areas In Communications, January 1998<br/>
  Ullrich Hafner. <code>Low Bit-Rate Image and Video Coding with Weighted Finite Automata</code>, Ph.D. thesis, Mensch &amp; Buch Verlag, ISBN 3-89820-002-7, October 1999. </p>
 <h2>AUTHOR</h2>
 <p> Ullrich Hafner &lt;hafner [at] bigfoot.de&gt; </p>

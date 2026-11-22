@@ -13,83 +13,83 @@ description: "ANTLR3_DEBUG_EVENT_LISTENER_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3debugeventlistener.h">antlr3debugeventlistener.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> void(* <code>ack</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br />
- <i>Retrieve acknowledge response from the debugger. </i><br />
- <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>adaptor</code><br />
- <i>Allows the debug event system to access the adapter in use by the recognizer, if this is a tree parser of some sort. </i><br />
- void(* <code>addChild</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> root, <code>pANTLR3_BASE_TREE</code> child)<br />
- <i>Make childID a child of rootID. </i><br />
- void(* <code>becomeRoot</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> newRoot, <code>pANTLR3_BASE_TREE</code> oldRoot)<br />
- <i>Make a node the new root of an existing root. </i><br />
+<p> void(* <code>ack</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br/>
+ <i>Retrieve acknowledge response from the debugger. </i><br/>
+ <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>adaptor</code><br/>
+ <i>Allows the debug event system to access the adapter in use by the recognizer, if this is a tree parser of some sort. </i><br/>
+ void(* <code>addChild</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> root, <code>pANTLR3_BASE_TREE</code> child)<br/>
+ <i>Make childID a child of rootID. </i><br/>
+ void(* <code>becomeRoot</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> newRoot, <code>pANTLR3_BASE_TREE</code> oldRoot)<br/>
+ <i>Make a node the new root of an existing root. </i><br/>
  void(* <code>beginBacktrack</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int level) </p>
-<p> void(* <code>beginResync</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br />
- <i>Indicates the recognizer is about to consume tokens to resynchronize the parser. </i><br />
- void(* <code>commence</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br />
- <i>Announce that parsing has begun. </i><br />
- void(* <code>consumeHiddenToken</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_COMMON_TOKEN</code> t)<br />
- <i>An off-channel input token was consumed. </i><br />
- void(* <code>consumeNode</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> t)<br />
- <i>Input for a tree parser is an AST, but we know nothing for sure about a node except its type and text (obtained from the adaptor). </i><br />
- void(* <code>consumeToken</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_COMMON_TOKEN</code> t)<br />
- <i>An input token was consumed; matched by any kind of element. </i><br />
- void(* <code>createNode</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> t)<br />
- <i>Announce a new node built from token elements such as type etc. </i><br />
- void(* <code>createNodeTok</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> node, <code>pANTLR3_COMMON_TOKEN</code> token)<br />
- <i>Announce a new node built from an existing token. </i><br />
+<p> void(* <code>beginResync</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br/>
+ <i>Indicates the recognizer is about to consume tokens to resynchronize the parser. </i><br/>
+ void(* <code>commence</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br/>
+ <i>Announce that parsing has begun. </i><br/>
+ void(* <code>consumeHiddenToken</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_COMMON_TOKEN</code> t)<br/>
+ <i>An off-channel input token was consumed. </i><br/>
+ void(* <code>consumeNode</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> t)<br/>
+ <i>Input for a tree parser is an AST, but we know nothing for sure about a node except its type and text (obtained from the adaptor). </i><br/>
+ void(* <code>consumeToken</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_COMMON_TOKEN</code> t)<br/>
+ <i>An input token was consumed; matched by any kind of element. </i><br/>
+ void(* <code>createNode</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> t)<br/>
+ <i>Announce a new node built from token elements such as type etc. </i><br/>
+ void(* <code>createNodeTok</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> node, <code>pANTLR3_COMMON_TOKEN</code> token)<br/>
+ <i>Announce a new node built from an existing token. </i><br/>
  void(* <code>endBacktrack</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int level, <code>ANTLR3_BOOLEAN</code> successful) </p>
-<p> void(* <code>endResync</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br />
- <i>Indicates that the recognizer has finished consuming tokens in order to resynchronize. </i><br />
- void(* <code>enterAlt</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int alt)<br />
- <i>Because rules can have lots of alternatives, it is very useful to know which alt you are entering. </i><br />
- void(* <code>enterDecision</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int decisionNumber)<br />
- <i>Every decision, fixed k or arbitrary, has an enter/exit event so that a GUI can easily track what LT/consume events are associated with prediction. </i><br />
- void(* <code>enterRule</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, const char *<code>grammarFileName</code>, const char *ruleName)<br />
- <i>The parser has just entered a rule. </i><br />
- void(* <code>enterSubRule</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int decisionNumber)<br />
- <i>Track entry into any (. </i><br />
- void(* <code>errorNode</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> t)<br />
- <i>If a syntax error occurs, recognizers bracket the error with an error node if they are building ASTs. </i><br />
+<p> void(* <code>endResync</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br/>
+ <i>Indicates that the recognizer has finished consuming tokens in order to resynchronize. </i><br/>
+ void(* <code>enterAlt</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int alt)<br/>
+ <i>Because rules can have lots of alternatives, it is very useful to know which alt you are entering. </i><br/>
+ void(* <code>enterDecision</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int decisionNumber)<br/>
+ <i>Every decision, fixed k or arbitrary, has an enter/exit event so that a GUI can easily track what LT/consume events are associated with prediction. </i><br/>
+ void(* <code>enterRule</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, const char *<code>grammarFileName</code>, const char *ruleName)<br/>
+ <i>The parser has just entered a rule. </i><br/>
+ void(* <code>enterSubRule</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int decisionNumber)<br/>
+ <i>Track entry into any (. </i><br/>
+ void(* <code>errorNode</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> t)<br/>
+ <i>If a syntax error occurs, recognizers bracket the error with an error node if they are building ASTs. </i><br/>
  void(* <code>exitDecision</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int decisionNumber) </p>
-<p> void(* <code>exitRule</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, const char *<code>grammarFileName</code>, const char *ruleName)<br />
- <i>This is the last thing executed before leaving a rule. </i><br />
+<p> void(* <code>exitRule</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, const char *<code>grammarFileName</code>, const char *ruleName)<br/>
+ <i>This is the last thing executed before leaving a rule. </i><br/>
  void(* <code>exitSubRule</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int decisionNumber) </p>
-<p> void(* <code>free</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br />
- <i>Free up the resources allocated to this structure. </i><br />
- <code>pANTLR3_STRING</code> <code>grammarFileName</code><br />
- <i>The name of the grammar file that we are debugging. </i><br />
- <code>ANTLR3_BOOLEAN</code>(* <code>handshake</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br />
- <i>Wait for a connection from the debugger and initiate the debugging session. </i><br />
- <code>ANTLR3_BOOLEAN</code> <code>initialized</code><br />
- <i>Indicates whether we have already connected or not. </i><br />
- void(* <code>location</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int line, int pos)<br />
- <i>To watch a parser move through the grammar, the parser needs to inform the debugger what line/charPos it is passing in the grammar. </i><br />
- void(* <code>LT</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int i, <code>pANTLR3_COMMON_TOKEN</code> t)<br />
- <i>Somebody (anybody) looked ahead. </i><br />
- void(* <code>LTT</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int i, <code>pANTLR3_BASE_TREE</code> t)<br />
- <i>The tree parser looked ahead. </i><br />
- void(* <code>mark</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>ANTLR3_MARKER</code> marker)<br />
- <i>The parser is going to look arbitrarily ahead; mark this location, the token stream&#8217;s marker is sent in case you need it. </i><br />
- void(* <code>nilNode</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> t)<br />
- <i>A nil was created (even nil nodes have a unique ID. </i><br />
- <code>ANTLR3_UINT32</code> <code>port</code><br />
- <i>The port number which the debug listener should listen on for a connection. </i><br />
- int <code>PROTOCOL_VERSION</code><br />
- <i>The version of the debugging protocol supported by the providing instance of the debug event listener. </i><br />
- void(* <code>recognitionException</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_EXCEPTION</code> e)<br />
- <i>A recognition exception occurred such as NoViableAltException. </i><br />
- void(* <code>rewind</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>ANTLR3_MARKER</code> marker)<br />
- <i>After an arbitrarily long lookahead as with a cyclic DFA (or with any backtrack), this informs the debugger that stream should be rewound to the position associated with marker. </i><br />
- void(* <code>rewindLast</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br />
- <i>Rewind to the input position of the last marker. </i><br />
- void(* <code>semanticPredicate</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>ANTLR3_BOOLEAN</code> result, const char *predicate)<br />
- <i>A semantic predicate was evaluate with this result and action text. </i><br />
- void(* <code>setTokenBoundaries</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> t, <code>ANTLR3_MARKER</code> tokenStartIndex, <code>ANTLR3_MARKER</code> tokenStopIndex)<br />
- <i>Set the token start/stop token index for a subtree root or node. </i><br />
- <code>SOCKET</code> <code>socket</code><br />
- <i>The socket structure we receive after a successful accept on the serverSocket. </i><br />
- void(* <code>terminate</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br />
- <i>Parsing is over; successfully or not. </i><br />
- <code>pANTLR3_STRING</code> <code>tokenString</code><br />
+<p> void(* <code>free</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br/>
+ <i>Free up the resources allocated to this structure. </i><br/>
+ <code>pANTLR3_STRING</code> <code>grammarFileName</code><br/>
+ <i>The name of the grammar file that we are debugging. </i><br/>
+ <code>ANTLR3_BOOLEAN</code>(* <code>handshake</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br/>
+ <i>Wait for a connection from the debugger and initiate the debugging session. </i><br/>
+ <code>ANTLR3_BOOLEAN</code> <code>initialized</code><br/>
+ <i>Indicates whether we have already connected or not. </i><br/>
+ void(* <code>location</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int line, int pos)<br/>
+ <i>To watch a parser move through the grammar, the parser needs to inform the debugger what line/charPos it is passing in the grammar. </i><br/>
+ void(* <code>LT</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int i, <code>pANTLR3_COMMON_TOKEN</code> t)<br/>
+ <i>Somebody (anybody) looked ahead. </i><br/>
+ void(* <code>LTT</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int i, <code>pANTLR3_BASE_TREE</code> t)<br/>
+ <i>The tree parser looked ahead. </i><br/>
+ void(* <code>mark</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>ANTLR3_MARKER</code> marker)<br/>
+ <i>The parser is going to look arbitrarily ahead; mark this location, the token stream&#8217;s marker is sent in case you need it. </i><br/>
+ void(* <code>nilNode</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> t)<br/>
+ <i>A nil was created (even nil nodes have a unique ID. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>port</code><br/>
+ <i>The port number which the debug listener should listen on for a connection. </i><br/>
+ int <code>PROTOCOL_VERSION</code><br/>
+ <i>The version of the debugging protocol supported by the providing instance of the debug event listener. </i><br/>
+ void(* <code>recognitionException</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_EXCEPTION</code> e)<br/>
+ <i>A recognition exception occurred such as NoViableAltException. </i><br/>
+ void(* <code>rewind</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>ANTLR3_MARKER</code> marker)<br/>
+ <i>After an arbitrarily long lookahead as with a cyclic DFA (or with any backtrack), this informs the debugger that stream should be rewound to the position associated with marker. </i><br/>
+ void(* <code>rewindLast</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br/>
+ <i>Rewind to the input position of the last marker. </i><br/>
+ void(* <code>semanticPredicate</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>ANTLR3_BOOLEAN</code> result, const char *predicate)<br/>
+ <i>A semantic predicate was evaluate with this result and action text. </i><br/>
+ void(* <code>setTokenBoundaries</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> t, <code>ANTLR3_MARKER</code> tokenStartIndex, <code>ANTLR3_MARKER</code> tokenStopIndex)<br/>
+ <i>Set the token start/stop token index for a subtree root or node. </i><br/>
+ <code>SOCKET</code> <code>socket</code><br/>
+ <i>The socket structure we receive after a successful accept on the serverSocket. </i><br/>
+ void(* <code>terminate</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br/>
+ <i>Parsing is over; successfully or not. </i><br/>
+ <code>pANTLR3_STRING</code> <code>tokenString</code><br/>
  <i>Used to serialize the values of any particular token we need to send back to the debugger. </i></p>
 <h2>Detailed Description</h2>
 <p> The ANTLR3 debugging interface for communicating with ANLTR Works. </p>

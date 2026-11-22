@@ -11,7 +11,7 @@ description: "dlasd4.f –"
 <p> dlasd4.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlasd4</code> (N, I, D, Z, DELTA, RHO, SIGMA, WORK, INFO)<br />
+<p> subroutine <code>dlasd4</code> (N, I, D, Z, DELTA, RHO, SIGMA, WORK, INFO)<br/>
  <i></i><code>DLASD4</code> computes the square root of the i-th updated eigenvalue of a positive symmetric rank-one modification to a positive diagonal matrix. Used by dbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasd4 (integerN, integerI, double precision, dimension( * )D, double precision, dimension( * )Z, double precision, dimension( * )DELTA, double precisionRHO, double precisionSIGMA, double precision, dimension( * )WORK, integerINFO)</h3>

@@ -11,7 +11,7 @@ description: "srotg.f –"
 <p> srotg.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>srotg</code> (SA, SB, C, S)<br />
+<p> subroutine <code>srotg</code> (SA, SB, C, S)<br/>
  <i></i><code>SROTG</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine srotg (realSA, realSB, realC, realS)</h3>

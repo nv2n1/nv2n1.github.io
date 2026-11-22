@@ -58,7 +58,7 @@ description: "flow-tools – Tool set for working with NetFlow data."
 <p> Mark Fullmer &lt;maf [at] splintered.net&gt; </p>
 <p> <code>flow-merge</code> by Larry Lidz &lt;ellidz [at] eridu.uchicago.edu&gt; </p>
 <p> Patches and other contribitions by a list too long to mention here. </p>
-<p> <code>flow-tools</code> is avalable at<br />
+<p> <code>flow-tools</code> is avalable at<br/>
 &nbsp;<wbr>&lt;URL:<a rel="nofollow" href="http://www.splintered.net/sw/flow-tools">http://www.splintered.net/sw/flow-tools</a>&gt;. </p>
 <p> A mailing list is maintained at &lt;flow-tools [at] splintered.net&gt;</p>
 <h2>SEE ALSO</h2>

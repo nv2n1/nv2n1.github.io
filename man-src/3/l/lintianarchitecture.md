@@ -14,7 +14,7 @@ Lintian::Architecture -- Lintian API for handling architectures and wildcards
  print &quot;either arch or wc\n&quot; if is_arch_or_wildcard ('linux-any');
  foreach my $arch (expand_arch_wildcard ('any')) {
  print &quot;any expands to $arch\n&quot;;
- }</pre><h2>Description</h2>Lintian <font SIZE="-1">API</font> for checking and expanding architectures and architecture wildcards. The functions are backed by a data file, so it may be out of date (use private/refresh-archs to update it). 
+ }</pre><h2>Description</h2>Lintian API for checking and expanding architectures and architecture wildcards. The functions are backed by a data file, so it may be out of date (use private/refresh-archs to update it). 
 
  Generally all architecture names are in the format ``$os-$arch'' and wildcards are ``$os-any'' or ``any-$cpu'', though there are exceptions:
 <dl COMPACT><dt>&bull;
@@ -34,7 +34,7 @@ Lintian::Architecture -- Lintian API for handling architectures and wildcards
 </dt><dd>Returns a truth value if <tt>$wc</tt> is a known architecture wildcard. 
  Note: 'any' is considered a wildcard and not an architecture.
 </dd><dt>is_arch ($arch)
-</dt><dd>Returns a truth value if <tt>$arch</tt> is (an alias of) a Debian machine architecture <font SIZE="-1">OR</font> the special value ``all''. It returns a false value for architecture wildcards (including ``any'') and unknown architectures.
+</dt><dd>Returns a truth value if <tt>$arch</tt> is (an alias of) a Debian machine architecture OR the special value ``all''. It returns a false value for architecture wildcards (including ``any'') and unknown architectures.
 </dd><dt>is_arch_or_wildcard ($arch)
 </dt><dd>Returns a truth value if <tt>$arch</tt> is either an architecture or an architecture wildcard. 
  Shorthand for: 

@@ -20,6 +20,6 @@ description: "mkSimNodeDir – Create a /proc like files for a simulated node"
 <dd>Dump file to use. default is ./ibmgtsim.guids.txt</dd></dl>
 <h2>Limitations</h2>
 <p>Only HCAs are supported. </p>
-<p> Single <font SIZE="-1">HCA</font> per guid.</p>
+<p> Single HCA per guid.</p>
 <h2>Author</h2>
-<p>Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il</p>
+<p>Eitan Zahavi, Mellanox Technologies LTD, eitan [at] mellanox.co.il</p>

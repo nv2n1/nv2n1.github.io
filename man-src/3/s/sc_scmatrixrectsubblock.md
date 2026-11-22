@@ -16,8 +16,8 @@ description: "sc::SCMatrixRectSubBlock –"
 <h3>Public Member Functions</h3>
 <p><code>SCMatrixRectSubBlock</code> (int is, int ie, int istride, int js, int je, double *data) </p>
 <p> <code>SCMatrixRectSubBlock</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>process</code> (<code>SCElementOp</code> *) </p>
 <p> void <code>process</code> (<code>SCElementOp2</code> *, <code>SCMatrixBlock</code> *) </p>
 <p> void <code>process</code> (<code>SCElementOp3</code> *, <code>SCMatrixBlock</code> *, <code>SCMatrixBlock</code> *)</p>

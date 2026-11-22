@@ -9,8 +9,8 @@ description: "flashrom – detect, read, write, verify and erase flash chips"
 
 <p>flashrom &#8211; detect, read, write, verify and erase flash chips</p>
 <h2>Synopsis</h2>
-<p><code>flashrom </code>[<code>-n</code>] [<code>-V</code>] [<code>-f</code>] [<code>-h</code>|<code>-R</code>|<code>-L</code>|<code>-z</code>|<code>-E</code>|<code>-r</code> &lt;file&gt;|<code>-w</code> &lt;file&gt;|<code>-v</code> &lt;file&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-c</code>&nbsp;<wbr>&lt;chipname&gt;]&nbsp;<wbr>[<code>-m</code>&nbsp;<wbr>[&lt;vendor&gt;:]&lt;board&gt;]&nbsp;<wbr>[<code>-l</code>&nbsp;<wbr>&lt;file&gt;]<br />
+<p><code>flashrom </code>[<code>-n</code>] [<code>-V</code>] [<code>-f</code>] [<code>-h</code>|<code>-R</code>|<code>-L</code>|<code>-z</code>|<code>-E</code>|<code>-r</code> &lt;file&gt;|<code>-w</code> &lt;file&gt;|<code>-v</code> &lt;file&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-c</code>&nbsp;<wbr>&lt;chipname&gt;]&nbsp;<wbr>[<code>-m</code>&nbsp;<wbr>[&lt;vendor&gt;:]&lt;board&gt;]&nbsp;<wbr>[<code>-l</code>&nbsp;<wbr>&lt;file&gt;]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>&nbsp;<wbr>&lt;image&gt;]&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr>&lt;programmername&gt;[:&lt;parameters&gt;]]</p>
 <h2>Description</h2>
 <p><code>flashrom</code> is a utility for detecting, reading, writing, verifying and erasing flash chips. It&#8217;s often used to flash BIOS/EFI/coreboot/firmware images in-system using a supported mainboard, but it also supports flashing of network cards (NICs), SATA controller cards, and other external devices which can program flash chips. </p>
@@ -49,15 +49,15 @@ description: "flashrom – detect, read, write, verify and erase flash chips"
 <dt><code>-l, &#8211;layout &lt;file&gt;</code></dt>
 <dd>Read ROM layout from <code>&lt;file&gt;</code>. </dd>
 <p> flashrom supports ROM layouts. This allows you to flash certain parts of the flash chip only. A ROM layout file looks like follows: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>00000000:00008fff gfxrom<br />
-&nbsp;<wbr>&nbsp;<wbr>00009000:0003ffff normal<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>00000000:00008fff gfxrom<br/>
+&nbsp;<wbr>&nbsp;<wbr>00009000:0003ffff normal<br/>
 &nbsp;<wbr>&nbsp;<wbr>00040000:0007ffff fallback </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>i.e.:<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>i.e.:<br/>
 &nbsp;<wbr>&nbsp;<wbr>startaddr:endaddr name </p>
 <p> All addresses are offsets within the file, not absolute addresses! If you only want to update the normal image in a ROM you can say: </p>
 <p> <code> flashrom &#8211;layout rom.layout &#8211;image normal -w agami_aruma.rom</code> </p>
 <p> To update normal and fallback but leave the VGA BIOS alone, say: </p>
-<p> <code> flashrom -l rom.layout -i normal<br />
+<p> <code> flashrom -l rom.layout -i normal<br/>
  </code> <code> -i fallback -w agami_aruma.rom</code> </p>
 <p> Currently overlapping sections are not supported.</p>
 <dt><code>-i, &#8211;image &lt;name&gt;</code></dt>
@@ -171,40 +171,40 @@ description: "flashrom – detect, read, write, verify and erase flash chips"
 <h2>Copyright</h2>
 <p>Please see the individual files.</p>
 <h2>Authors</h2>
-<p>Andrew Morgan<br />
- Carl-Daniel Hailfinger<br />
- Claus Gindhart<br />
- David Borg<br />
- David Hendricks<br />
- Dominik Geyer<br />
- Eric Biederman<br />
- Giampiero Giancipoli<br />
- Helge Wagner<br />
- Idwer Vollering<br />
- Joe Bao<br />
- Jörg Fischer<br />
- Joshua Roys<br />
- Luc Verhaegen<br />
- Li-Ta Lo<br />
- Markus Boas<br />
- Mattias Mattsson<br />
- Michael Karcher<br />
- Nikolay Petukhov<br />
- Patrick Georgi<br />
- Peter Lemenkov<br />
- Peter Stuge<br />
- Reinder E.N. de Haan<br />
- Ronald G. Minnich<br />
- Ronald Hoogenboom<br />
- Sean Nelson<br />
- Stefan Reinauer<br />
- Stefan Wildemann<br />
- Stephan Guilloux<br />
- Steven James<br />
- Uwe Hermann<br />
- Wang Qingpei<br />
- Yinghai Lu<br />
- some others, please see the flashrom svn changelog for details.<br />
+<p>Andrew Morgan<br/>
+ Carl-Daniel Hailfinger<br/>
+ Claus Gindhart<br/>
+ David Borg<br/>
+ David Hendricks<br/>
+ Dominik Geyer<br/>
+ Eric Biederman<br/>
+ Giampiero Giancipoli<br/>
+ Helge Wagner<br/>
+ Idwer Vollering<br/>
+ Joe Bao<br/>
+ Jörg Fischer<br/>
+ Joshua Roys<br/>
+ Luc Verhaegen<br/>
+ Li-Ta Lo<br/>
+ Markus Boas<br/>
+ Mattias Mattsson<br/>
+ Michael Karcher<br/>
+ Nikolay Petukhov<br/>
+ Patrick Georgi<br/>
+ Peter Lemenkov<br/>
+ Peter Stuge<br/>
+ Reinder E.N. de Haan<br/>
+ Ronald G. Minnich<br/>
+ Ronald Hoogenboom<br/>
+ Sean Nelson<br/>
+ Stefan Reinauer<br/>
+ Stefan Wildemann<br/>
+ Stephan Guilloux<br/>
+ Steven James<br/>
+ Uwe Hermann<br/>
+ Wang Qingpei<br/>
+ Yinghai Lu<br/>
+ some others, please see the flashrom svn changelog for details.<br/>
  All authors can be reached via e-mail at &lt;flashrom [at] flashrom.org&gt;. </p>
 <p> This manual page was written by Uwe Hermann &lt;uwe [at] hermann-uwe.de&gt; and Carl-Daniel Hailfinger. It is licensed under the terms of the GNU GPL (version 2 or later).</p>
 </p>

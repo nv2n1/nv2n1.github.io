@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_getpubek/"
 description: "tpm_getpubek – display the public portion of the TPM’s Endorsement Key"
 ---
 
-<p>TPM Management &#8211; tpm_getpubek<br />
+<p>TPM Management &#8211; tpm_getpubek<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_getpubek &#8211; display the public portion of the TPM&#8217;s Endorsement Key</p>

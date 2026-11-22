@@ -13,13 +13,13 @@ description: "sc::Timer –"
 <pre><code>
 #include &lt;regtime.h&gt;
 Public Member Functions</code></pre>
-<p> <code>Timer</code> (const char *name)<br />
- <i>Start timing a region using the default </i><code>RegionTimer</code> and activate the timer.<br />
- <code>Timer</code> (const <code>Ref</code>&lt; <code>RegionTimer</code> &gt; &amp;, const char *name)<br />
- <i>Start timing a region using the given </i><code>RegionTimer</code>.<br />
- <code>~Timer</code> ()<br />
- <i>Stop timing a region, if active. </i><br />
- void <code>reset</code> (const char *=0)<br />
+<p> <code>Timer</code> (const char *name)<br/>
+ <i>Start timing a region using the default </i><code>RegionTimer</code> and activate the timer.<br/>
+ <code>Timer</code> (const <code>Ref</code>&lt; <code>RegionTimer</code> &gt; &amp;, const char *name)<br/>
+ <i>Start timing a region using the given </i><code>RegionTimer</code>.<br/>
+ <code>~Timer</code> ()<br/>
+ <i>Stop timing a region, if active. </i><br/>
+ void <code>reset</code> (const char *=0)<br/>
  <i>Stop timing the current region, if active. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>Timer</code> class uses <code>RegionTimer</code> to time intervals in an exception safe manner. </p>

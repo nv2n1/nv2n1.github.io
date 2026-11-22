@@ -26,7 +26,7 @@ description: "doveadm-auth – Test authentication for a user"
 <dd> This option is used to specify an absolute path to an alternative UNIX domain socket. </dd>
 <p> By default <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will use the socket <i>/var/run/dovecot/auth-client</i>. The socket may be located in another directory, when the default <i>base_dir</i> setting was overridden in <i>/etc/dovecot/dovecot.conf</i>.</p>
 <dt><code>-x&nbsp;<wbr></code><i>auth_info</i></dt>
-<dd> <i>auth_info</i> specifies additional conditions for the <code>auth</code> command. The <i>auth_info</i> option string has to be given as <i>name</i><code>=</code><i>value</i> pair. For multiple conditions the <code>-x</code> option could be supplied multiple times.<br />
+<dd> <i>auth_info</i> specifies additional conditions for the <code>auth</code> command. The <i>auth_info</i> option string has to be given as <i>name</i><code>=</code><i>value</i> pair. For multiple conditions the <code>-x</code> option could be supplied multiple times.<br/>
  Possible names for the <i>auth_info</i> are:</dd>
 <dl>
 <dl>

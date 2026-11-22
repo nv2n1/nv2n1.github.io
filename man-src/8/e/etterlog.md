@@ -11,7 +11,7 @@ description: "etterlog NG-0.7.3 – Log analyzer for ettercap log files"
 <h2>Synopsis</h2>
 <p><code>etterlog</code> [<i>OPTIONS</i>] <i>FILE</i> </p>
 <h2>Description</h2>
-<p>Etterlog is the log analyzer for logfiles created by ettercap. It can handle both compressed (created with -Lc) or uncompressed logfiles. With this tool you can manipulate binary files as you like and you can print data in different ways all the times you want (in contrast with the previous logging system which was used to dump in a single static manner).<br />
+<p>Etterlog is the log analyzer for logfiles created by ettercap. It can handle both compressed (created with -Lc) or uncompressed logfiles. With this tool you can manipulate binary files as you like and you can print data in different ways all the times you want (in contrast with the previous logging system which was used to dump in a single static manner).<br/>
  You will be able to dump traffic from only one connection of your choice, from only one or more hosts, print data in hex, ascii, binary etc&#8230; TIP: All unuseful messages are printed to stderr, so you can save the output from etterlog with the following command:</p>
 <dl>
 <dt><i>etterlog [options] logfile &gt; outfile</i></dt>
@@ -23,18 +23,18 @@ description: "etterlog NG-0.7.3 – Log analyzer for ettercap log files"
 <dt><code>-c</code>, <code>&#8211;connections</code></dt>
 <dd>Parse the log file and print a table of unique connections (port to port). This option can be used only on LOG_PACKET logfiles. On LOG_INFO logfiles it is useless. TIP: you can search for a particular host by using the following command: etterlog -c logfile.ecp | grep 10.0.0.1</dd>
 <dt><code>-f</code>, <code>&#8211;filter &lt;TARGET&gt;</code></dt>
-<dd>Print only packets coming from or going to TARGET. The TARGET specification is the same as in ettercap.<br />
+<dd>Print only packets coming from or going to TARGET. The TARGET specification is the same as in ettercap.<br/>
  <i>TARGET</i> is in the form <i>MAC/IPs/PORTs</i>. Omitting one or more of its parts will be equivalent to set them to ANY. If the log type is LOG_INFO the target is used to display hosts matching the mac, ip and having the specified port(s) open. For example the target //80 will display only information about hosts with a running web server.</dd>
 <dt><code>-r</code>, <code>&#8211;reverse</code></dt>
 <dd>Reverse the matching in the TARGET selection. It means not(TARGET). All but the selected TARGET.</dd>
 <dt><code>-t</code>, <code>&#8211;proto &lt;PROTO&gt;</code></dt>
-<dd>Sniff only PROTO packets (default is TCP + UDP). This option is only useful in &quot;simple&quot; mode. If you start ettercap in interactive mode both TCP and UDP are sniffed.<br />
+<dd>Sniff only PROTO packets (default is TCP + UDP). This option is only useful in &quot;simple&quot; mode. If you start ettercap in interactive mode both TCP and UDP are sniffed.<br/>
  PROTO can be &quot;tcp&quot;, &quot;udp&quot; or &quot;all&quot; for both.</dd>
 <dt><code>-F</code>, <code>&#8211;filcon &lt;CONNECTION&gt;</code></dt>
-<dd>Print packets belonging only to this CONNECTION.<br />
+<dd>Print packets belonging only to this CONNECTION.<br/>
  CONNECTION is in the form PROTO:SOURCE:DEST. SOURCE and DEST are in the form IP:PORT. example: etterlog -F TCP:10.0.0.23:3318:198.182.196.56:80</dd>
 <dt><code>-s</code>, <code>&#8211;only-source</code></dt>
-<dd>Display only packets that are sent by the source of the selected CONNECTION. This option makes sense only in conjunction with the -F option. TIP: if you want to save a file transferred in an HTTP or FTP connection, you can use the following command: etterlog -B -s -n -F TCP:10.0.0.1:20:10.0.0.2:35426 logfile.ecp &gt; example.tar.gz<br />
+<dd>Display only packets that are sent by the source of the selected CONNECTION. This option makes sense only in conjunction with the -F option. TIP: if you want to save a file transferred in an HTTP or FTP connection, you can use the following command: etterlog -B -s -n -F TCP:10.0.0.1:20:10.0.0.2:35426 logfile.ecp &gt; example.tar.gz<br/>
 &nbsp;<wbr>&nbsp;<wbr></dd>
 <dt><code>-d</code>, <code>&#8211;only-dest</code></dt>
 <dd>Same as &#8211;only-source but it filters on the destination host.</dd>
@@ -45,15 +45,15 @@ description: "etterlog NG-0.7.3 – Log analyzer for ettercap log files"
 <dt><code>-k</code>, <code>&#8211;color</code></dt>
 <dd>If used in conjunction with -F it displays the source and dest of the connection using different colors. If used with a LOG_INFO file it prints LAN hosts in green, REMOTE hosts in blue and GATEWAYS in red.</dd>
 <dt><code>-l</code>, <code>&#8211;only-local</code></dt>
-<dd>Used displaying an INFO file, it displays information only about local hosts.<br />
+<dd>Used displaying an INFO file, it displays information only about local hosts.<br/>
 &nbsp;<wbr>&nbsp;<wbr></dd>
 <dt><code>-L</code>, <code>&#8211;only-remote</code></dt>
 <dd>Used displaying an INFO file, it displays information only about remote hosts.</dd>
 <dt><code>SEARCH OPTIONS</code></dt>
 <dd>
 </dd><dt><code>-e</code>, <code>&#8211;regex &lt;REGEX&gt;</code></dt>
-<dd>Display only packets matching the regex &lt;REGEX&gt;.<br />
- If this option is used agains a LOG_PACKET logfile, the regex is executed on the payload of the packet. If the type is LOG_INFO, the regex is executed on all the fields of the host profile (OS, banners, service and ethernet adapter).<br />
+<dd>Display only packets matching the regex &lt;REGEX&gt;.<br/>
+ If this option is used agains a LOG_PACKET logfile, the regex is executed on the payload of the packet. If the type is LOG_INFO, the regex is executed on all the fields of the host profile (OS, banners, service and ethernet adapter).<br/>
  NOTE: the regex is compiled with the REG_ICASE flag (case insensitive).</dd>
 <dt><code>-u</code>, <code>&#8211;user &lt;USER&gt;</code></dt>
 <dd>Display information about this user. The search is performed over all the user/pass couples collected across all hosts.</dd>
@@ -66,7 +66,7 @@ description: "etterlog NG-0.7.3 – Log analyzer for ettercap log files"
 <dt><code>EDITING OPTIONS</code></dt>
 <dd>
 </dd><dt><code>-C</code>, <code>&#8211;concat</code></dt>
-<dd>Use this option to concatenate two (or more) files into one single file. This is useful if you have collected ettercap log files from multiple sources and want to have an unified report. The output file must be specified with the -o option and the input files are listed as normal arguments. example:<br />
+<dd>Use this option to concatenate two (or more) files into one single file. This is useful if you have collected ettercap log files from multiple sources and want to have an unified report. The output file must be specified with the -o option and the input files are listed as normal arguments. example:<br/>
  etterlog -C -o outfile input1 input2 input3</dd>
 <dt><code>-o</code>, <code>&#8211;outfile &lt;FILE&gt;</code></dt>
 <dd>specifies the output file for a concatenation.</dd>
@@ -75,8 +75,8 @@ description: "etterlog NG-0.7.3 – Log analyzer for ettercap log files"
 <dt><code>-B</code>, <code>&#8211;binary</code></dt>
 <dd>Print data as they are, in binary form. Useful to dump binary data to a file (as described above).</dd>
 <dt><code>-X</code>, <code>&#8211;hex</code></dt>
-<dd>Print the packets in hex format. example: the string &quot;HTTP/1.1 304 Not Modified&quot; becomes: 0000: 4854 5450 2f31 2e31 2033 3034 204e 6f74 HTTP/1.1 304 Not<br />
- 0010: 204d 6f64 6966 6965 64 Modified<br />
+<dd>Print the packets in hex format. example: the string &quot;HTTP/1.1 304 Not Modified&quot; becomes: 0000: 4854 5450 2f31 2e31 2033 3034 204e 6f74 HTTP/1.1 304 Not<br/>
+ 0010: 204d 6f64 6966 6965 64 Modified<br/>
 &nbsp;<wbr></dd>
 <dt><code>-A</code>, <code>&#8211;ascii</code></dt>
 <dd>Print only &quot;printable&quot; characters, the others are displayed as dots &#8216;.&#8217;</dd>
@@ -89,10 +89,10 @@ description: "etterlog NG-0.7.3 – Log analyzer for ettercap log files"
 <dt><code>-U</code>, <code>&#8211;utf8 &lt;encoding&gt;</code></dt>
 <dd>Print the packets in UTF-8 format. The &lt;encoding&gt; parameter specifies the encoding to be used while performing the conversion. Use the `iconv &#8211;list` command to obtain a list of all supported encodings.</dd>
 <dt><code>-Z</code>, <code>&#8211;zero</code></dt>
-<dd>Print always the void string. i.e. print only header information and no packet content will be printed.<br />
+<dd>Print always the void string. i.e. print only header information and no packet content will be printed.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></dd>
 <dt><code>-x</code>, <code>&#8211;xml</code></dt>
-<dd>Print the host information in xml form, so you can parse it with your favourite program. The DTD associated with the xml output is in share/etterlog.dtd<br />
+<dd>Print the host information in xml form, so you can parse it with your favourite program. The DTD associated with the xml output is in share/etterlog.dtd<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></dd>
 <dt><code>STANDARD OPTIONS</code></dt>
 <dd>
@@ -130,7 +130,7 @@ description: "etterlog NG-0.7.3 – Log analyzer for ettercap log files"
 <dt><code>etterlog -B -s -n -F TCP:10.0.0.1:20:10.0.0.2:35426 logfile.ecp &gt; example.tar.gz</code></dt>
 <dd>Dumps in binary form the data sent by 10.0.0.1 over the data port of FTP. Since the headers are omitted, you will get the file as it was. </dd>
 <h2>Authors</h2>
-<p>Alberto Ornaghi (ALoR) &lt;alor [at] users.sf.net&gt;<br />
+<p>Alberto Ornaghi (ALoR) &lt;alor [at] users.sf.net&gt;<br/>
  Marco Valleri (NaGA) &lt;naga [at] antifork.org&gt;</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-ettercap/">ettercap</a>(8)</i> <i><a href="/docs/linux/man/8-etterfilter/">etterfilter</a>(8)</i> <i>etter.conf(5)</i> <i><a href="/docs/linux/man/8-ettercap_curses/">ettercap_curses</a>(8)</i> <i><a href="/docs/linux/man/8-ettercap_plugins/">ettercap_plugins</a>(8)</i> </p>

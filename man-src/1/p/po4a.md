@@ -43,12 +43,12 @@ description: "po4a – update both the po files and translated documents in one 
 <pre>
  [po4a_paths] doc/l10n/project.doc.pot $lang:doc/l10n/$lang.po
 </pre>
-<p> You can also use <tt>$master</tt> to refer to the document basename. In this case, po4a will use a splitted mode: one <font SIZE="-1">POT</font> and one <font SIZE="-1">PO</font> (for each language) will be created for each document specified in the po4a configuration file. See the <code>Splitted mode</code> section. </p>
+<p> You can also use <tt>$master</tt> to refer to the document basename. In this case, po4a will use a splitted mode: one POT and one PO (for each language) will be created for each document specified in the po4a configuration file. See the <code>Splitted mode</code> section. </p>
 <pre>
  [po4a_paths] doc/$master/$master.pot $lang:doc/$master/$lang.po
 </pre>
 <h2>Autodetection of the paths and languages</h2>
-<p> Another command can be used to specify the name of a directory where the <font SIZE="-1">PO</font> and <font SIZE="-1">POT</font> files are located. When it is used, po4a will detect the <font SIZE="-1">POT</font> file as the only &#8220;*.pot&#8221; file from the specified directory. Po4a will also use the list of &#8220;*.po&#8221; files to define the list of languages (by stripping out the extension). These languages will be used for the substitution of the <tt>$lang</tt> variable in the rest of the configuration file. </p>
+<p> Another command can be used to specify the name of a directory where the PO and POT files are located. When it is used, po4a will detect the POT file as the only &#8220;*.pot&#8221; file from the specified directory. Po4a will also use the list of &#8220;*.po&#8221; files to define the list of languages (by stripping out the extension). These languages will be used for the substitution of the <tt>$lang</tt> variable in the rest of the configuration file. </p>
 <p> This command should not be used together with the po4a_langs or po4a_paths commands. </p>
 <pre>
  [po_directory] po4a/po/
@@ -76,26 +76,26 @@ description: "po4a – update both the po files and translated documents in one 
 <h2>Specifying options for the modules</h2>
 <p> po4a accepts options that will be passed to the module. These options are module specific and are specified with the -o switch. </p>
 <p> If you need a specific option for one of the document you want to translate, you can also specify it in the configuration file. Options are introduced by the <i>opt</i> keyword. The argument of the <i>opt</i> keyword must be quoted with double quotes if it contains a space (e.g. if you specify multiple options, or an option with an argument). You can also specify options that will only apply to a specific language by using the opt_<i>lang</i> keyword. </p>
-<p> Here is an example:<br />
-&nbsp;<wbr>[type:man]&nbsp;<wbr>data-05/test2_man.1&nbsp;<wbr><tt>$lang:tmp</tt>/test2_man.$lang.1&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>opt:&#8220;-k 75&#8221;&nbsp;<wbr>opt_it:&#8220;-L&nbsp;<wbr><font SIZE="-1">UTF-8</font>&#8221;&nbsp;<wbr>opt_fr:-v </p>
-<p> Arguments may contain spaces if you use single quotes or escaped double quotes:<br />
+<p> Here is an example:<br/>
+&nbsp;<wbr>[type:man]&nbsp;<wbr>data-05/test2_man.1&nbsp;<wbr><tt>$lang:tmp</tt>/test2_man.$lang.1&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>opt:&#8220;-k 75&#8221;&nbsp;<wbr>opt_it:&#8220;-L&nbsp;<wbr>UTF-8&#8221;&nbsp;<wbr>opt_fr:-v </p>
+<p> Arguments may contain spaces if you use single quotes or escaped double quotes:<br/>
 &nbsp;<wbr>[po4a_alias:man]&nbsp;<wbr>man opt:&#8220;-o&nbsp;<wbr>\&#8221;mdoc=NAME,SEE ALSO\&#8220;&nbsp;<wbr>-k 20&#8221; </p>
 <p> If you want to specify the same options for many documents, you may want to use an alias (see the <code>Specifying aliases</code> section below). </p>
-<p> You can also set options for all the documents specified in the configuration file:<br />
+<p> You can also set options for all the documents specified in the configuration file:<br/>
 &nbsp;<wbr>[options]&nbsp;<wbr>opt:&#8220;&#8230;&#8221;&nbsp;<wbr>opt_fr:&#8220;&#8230;&#8221;</p>
 <h2>Specifying aliases</h2>
 <p> If you must specify the same options for multiple files, you may be interested in defining a module alias. This can be done this way: </p>
 <p> [po4a_alias:test] man opt:&#8220;-k 21&#8221; opt_es:&#8220;-o debug=splitargs&#8221; </p>
 <p> This define a module alias named <i>test</i>, based on the <i>man</i> module, with the <i>-k 21</i> apply to all the languages and with <i>-o debug=splitargs</i> applied to the Spanish translation. </p>
 <p> This module alias can then be use like a regular module: </p>
-<p> [type:test] data-05/test2_man.1 <tt>$lang:tmp</tt>/test2_man.$lang.1 \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>opt_it:&#8220;-L&nbsp;<wbr><font SIZE="-1">UTF-8</font>&#8221;&nbsp;<wbr>opt_fr:-v </p>
+<p> [type:test] data-05/test2_man.1 <tt>$lang:tmp</tt>/test2_man.$lang.1 \<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>opt_it:&#8220;-L&nbsp;<wbr>UTF-8&#8221;&nbsp;<wbr>opt_fr:-v </p>
 <p> Note that you can specify additional options on a per file basis.</p>
 <h2>Splitted mode</h2>
 <p> The splitted mode is used when <tt>$master</tt> is used in the [po4a_paths] line. </p>
-<p> When the splitted mode is used, a temporary big <font SIZE="-1">POT</font> and temporary big POs are used. This permits to share the translations between all the POs. </p>
-<p> If two POs have different translations for the same string, po4a will mark this string as fuzzy and will submit both translations in all the POs which contain this string. Then, when a translator updates the translation and removes the fuzzy tag in one <font SIZE="-1">PO</font>, the translation of this string will be updated in every POs automatically.</p>
+<p> When the splitted mode is used, a temporary big POT and temporary big POs are used. This permits to share the translations between all the POs. </p>
+<p> If two POs have different translations for the same string, po4a will mark this string as fuzzy and will submit both translations in all the POs which contain this string. Then, when a translator updates the translation and removes the fuzzy tag in one PO, the translation of this string will be updated in every POs automatically.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt>-k, &#8211;keep</dt>
@@ -117,26 +117,26 @@ description: "po4a – update both the po files and translated documents in one 
 <dt>-d, &#8211;debug</dt>
 <dd> Output some debugging information.</dd>
 <dt>-f, &#8211;force</dt>
-<dd> Always generate the <font SIZE="-1">POT</font> and <font SIZE="-1">PO</font> files, even if po4a considers it is not necessary. </dd>
+<dd> Always generate the POT and PO files, even if po4a considers it is not necessary. </dd>
 <p> The default behavior (when &#8211;force is not specified) is the following:</p>
 <dt>-o, &#8211;option</dt>
 <dd> Extra option(s) to pass to the format plugin. Specify each option in the &#8216;name=value&#8217; format. See the documentation of each plugin for more information about the valid options and their meanings.</dd>
 <dl>
 <dl>
 <dt>
-</dt><dd> If the <font SIZE="-1">POT</font> file already exists, it is regenerated if a master document or the configuration file is more recent. The <font SIZE="-1">POT</font> file is also written in a temporary document and po4a verifies that the changes are really needed. </dd>
-<p> Also, a translation is regenerated only if its master document, the <font SIZE="-1">PO</font> file, one of its addenda or the configuration file is more recent. To avoid trying to regenerate translations which do not pass the threshold test (see <code>&#8211;keep</code>), a file with the &#8216;.po4a-stamp&#8217; extension can be created (see <code>&#8211;stamp</code>).</dl>
+</dt><dd> If the POT file already exists, it is regenerated if a master document or the configuration file is more recent. The POT file is also written in a temporary document and po4a verifies that the changes are really needed. </dd>
+<p> Also, a translation is regenerated only if its master document, the PO file, one of its addenda or the configuration file is more recent. To avoid trying to regenerate translations which do not pass the threshold test (see <code>&#8211;keep</code>), a file with the &#8216;.po4a-stamp&#8217; extension can be created (see <code>&#8211;stamp</code>).</dl>
 </dl>
 <dl>
 <dt>
 </dt><dd>
 <p> If a master document includes files, you should use the <code>&#8211;force</code> flag because the modification time of these included files are not taken into account. </p>
-<p> The <font SIZE="-1">PO</font> files are always re-generated based on the <font SIZE="-1">POT</font> with <code>msgmerge -U</code>.</dd></dl>
+<p> The PO files are always re-generated based on the POT with <code>msgmerge -U</code>.</dd></dl>
 <dt>&#8211;stamp</dt>
 <dd> Tells po4a to create stamp files when a translation is not generated because it it does not reach the threshold. These stamp files are named according to the expected translated document, with the <i>.po4a-stamp</i> extension. </dd>
 <p> Note: This only activates the creation of the <i>.po4a-stamp</i> files. The stamp files are always used if they exist, and they are removed with <code>&#8211;rm-translations</code> or when the file is finally translated.</p>
 <dt>&#8211;no-translations</dt>
-<dd> Do not generate the translated documents, only update the <font SIZE="-1">POT</font> and <font SIZE="-1">PO</font> files.</dd>
+<dd> Do not generate the translated documents, only update the POT and PO files.</dd>
 <dt>&#8211;rm-translations</dt>
 <dd> Remove the translated files (implies &#8211;no-translations).</dd>
 <dt>&#8211;no-backups</dt>
@@ -146,13 +146,13 @@ description: "po4a – update both the po files and translated documents in one 
 <dt>&#8211;variable <i>var</i>=<i>value</i></dt>
 <dd> Define a variable that will be expanded in the po4a configuration file. Every occurrence of <i>$(var)</i> will be replaced by <i>value</i>. This option can be used multiple times.</dd>
 <dt>&#8211;msgid-bugs-address email [at] address</dt>
-<dd> Set the report address for msgid bugs. By default, the created <font SIZE="-1">POT</font> files have no Report-Msgid-Bugs-To fields.</dd>
+<dd> Set the report address for msgid bugs. By default, the created POT files have no Report-Msgid-Bugs-To fields.</dd>
 <dt>&#8211;copyright-holder string</dt>
-<dd> Set the copyright holder in the <font SIZE="-1">POT</font> header. The default value is &#8220;Free Software Foundation, Inc.&#8221;</dd>
+<dd> Set the copyright holder in the POT header. The default value is &#8220;Free Software Foundation, Inc.&#8221;</dd>
 <dt>&#8211;package-name string</dt>
-<dd> Set the package name for the <font SIZE="-1">POT</font> header. The default is &#8220;<font SIZE="-1">PACKAGE</font>&#8221;.</dd>
+<dd> Set the package name for the POT header. The default is &#8220;PACKAGE&#8221;.</dd>
 <dt>&#8211;package-version string</dt>
-<dd> Set the package version for the <font SIZE="-1">POT</font> header. The default is &#8220;<font SIZE="-1">VERSION</font>&#8221;.</dd>
+<dd> Set the package version for the POT header. The default is &#8220;VERSION&#8221;.</dd>
 <dt>&#8211;msgmerge-opt options</dt>
 <dd> Extra options for msgmerge.</dd>
 <dt>&#8211;previous</dt>
@@ -170,5 +170,5 @@ description: "po4a – update both the po files and translated documents in one 
  Martin Quinson (mquinson#debian.org)
 </pre>
 <h2>COPYRIGHT AND LICENSE</h2>
-<p> Copyright 2002, 2003, 2004 by <font SIZE="-1">SPI</font>, inc. </p>
-<p> This program is free software; you may redistribute it and/or modify it under the terms of <font SIZE="-1">GPL</font> (see the <font SIZE="-1">COPYING</font> file). </p>
+<p> Copyright 2002, 2003, 2004 by SPI, inc. </p>
+<p> This program is free software; you may redistribute it and/or modify it under the terms of GPL (see the COPYING file). </p>

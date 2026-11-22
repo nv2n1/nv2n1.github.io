@@ -9,7 +9,7 @@ description: "cppw, cpgr – copy with locking the given file to the password or
 
 <p>cppw, cpgr &#8211; copy with locking the given file to the password or group file</p>
 <h2>Synopsis</h2>
-<p><code>cppw</code> [<code>-h</code>] [<code>-s</code>] password_file<br />
+<p><code>cppw</code> [<code>-h</code>] [<code>-s</code>] password_file<br/>
  <code>cpgr</code> [<code>-h</code>] [<code>-s</code>] group_file </p>
 <h2>Description</h2>
 <p><code>cppw</code> and <code>cpgr</code> will copy, with locking, the given file to <i>/etc/passwd</i> and <i>/etc/group</i>, respectively. With the <code>-s</code> flag, they will copy the shadow versions of those files, <i>/etc/shadow</i> and <i>/etc/gshadow</i>, respectively. </p>

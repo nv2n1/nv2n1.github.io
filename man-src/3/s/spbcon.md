@@ -11,7 +11,7 @@ description: "spbcon.f –"
 <p> spbcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>spbcon</code> (UPLO, N, KD, AB, LDAB, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p> subroutine <code>spbcon</code> (UPLO, N, KD, AB, LDAB, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>SPBCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spbcon (characterUPLO, integerN, integerKD, real, dimension( ldab, * )AB, integerLDAB, realANORM, realRCOND, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

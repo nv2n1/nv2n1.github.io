@@ -9,12 +9,12 @@ description: "bulk_to_next – Convert GETBULK requests into GETNEXT requests fo
 
 <p>bulk_to_next &#8211; Convert GETBULK requests into GETNEXT requests for the handler.</p>
 <h3>Functions</h3>
-<p><code>netsnmp_mib_handler</code> * <code>netsnmp_get_bulk_to_next_handler</code> (void)<br />
- <i>returns a bulk_to_next handler that can be injected into a given handler chain. </i><br />
- void <code>netsnmp_bulk_to_next_fix_requests</code> (<code>netsnmp_request_info</code> *requests)<br />
- <i>takes answered requests and decrements the repeat count and updates the requests to the next to-do varbind in the list </i><br />
+<p><code>netsnmp_mib_handler</code> * <code>netsnmp_get_bulk_to_next_handler</code> (void)<br/>
+ <i>returns a bulk_to_next handler that can be injected into a given handler chain. </i><br/>
+ void <code>netsnmp_bulk_to_next_fix_requests</code> (<code>netsnmp_request_info</code> *requests)<br/>
+ <i>takes answered requests and decrements the repeat count and updates the requests to the next to-do varbind in the list </i><br/>
  int <code>netsnmp_bulk_to_next_helper</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests) </p>
-<p> void <code>netsnmp_init_bulk_to_next_helper</code> (void)<br />
+<p> void <code>netsnmp_init_bulk_to_next_helper</code> (void)<br/>
  <i>initializes the bulk_to_next helper which then registers a bulk_to_next handler as a run-time injectable handler for configuration file use. </i></p>
 <h2>Detailed Description</h2>
 <p>Convert GETBULK requests into GETNEXT requests for the handler. </p>

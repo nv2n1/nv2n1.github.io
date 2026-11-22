@@ -19,9 +19,9 @@ description: "deb-origin – Vendor-specific information files"
 <dt><code>Vendor:</code> <i>vendor-name</i> (required)</dt>
 <dd>The value of this field determines the vendor name.</dd>
 <dt><code>Vendor-URL:</code> <i>vendor-url</i></dt>
-<dd>The value of this field determines the vendor <font SIZE="-1">URL.</font></dd>
+<dd>The value of this field determines the vendor URL.</dd>
 <dt><code>Bugs:</code> <i>bug-url</i></dt>
-<dd>The value of this field determines the type and address of the bug tracking system used by this vendor. It can be a mailto <font SIZE="-1">URL</font> or a debbugs <font SIZE="-1">URL</font> (e.g., debbugs://bugs.debian.org/).</dd>
+<dd>The value of this field determines the type and address of the bug tracking system used by this vendor. It can be a mailto URL or a debbugs URL (e.g., debbugs://bugs.debian.org/).</dd>
 <dt><code>Parent:</code> <i>vendor-name</i></dt>
 <dd>The value of this field determines the vendor name of the vendor that this vendor derives from.</dd></dl>
 <h2>Example</h2>

@@ -68,10 +68,10 @@ description: "perl5137delta – what is new for perl v5.13.7"
 <p> The <code>&quot;/r&quot;</code> flag, which was added to <code>&quot;s///&quot;</code> in 5.13.2, has been extended to the <code>&quot;y///&quot;</code> operator. </p>
 <p> It causes it to perform the substitution on a <i>copy</i> of its operand, returning that copy instead of a character count.  </p>
 <h3>New global variable ${^GLOBAL_PHASE}</h3>
-<p> A new global variable, <code>&quot;${^GLOBAL_PHASE}&quot;</code>, has been added to allow introspection of the current phase of the perl interpreter. It&#8217;s explained in detail in ``${^GLOBAL_PHASE}&#8216;&#8216; in perlvar and ``<font SIZE="-1">BEGIN</font>, <font SIZE="-1">UNITCHECK</font>, <font SIZE="-1">CHECK</font>, <font SIZE="-1">INIT</font> and <font SIZE="-1">END</font>&#8216;&#8216; in perlmod.  </p>
+<p> A new global variable, <code>&quot;${^GLOBAL_PHASE}&quot;</code>, has been added to allow introspection of the current phase of the perl interpreter. It&#8217;s explained in detail in ``${^GLOBAL_PHASE}&#8216;&#8216; in perlvar and ``BEGIN, UNITCHECK, CHECK, INIT and END&#8216;&#8216; in perlmod.  </p>
 <h3>Unicode Version 6.0 is now supported (mostly)</h3>
 <p> Perl comes with the Unicode 6.0 data base updated with Corrigendum #8 &lt;<a rel="nofollow" href="http://www.unicode.org/versions/corrigendum8.html">http://www.unicode.org/versions/corrigendum8.html</a>&gt;, with one exception noted below. See &lt;<a rel="nofollow" href="http://unicode.org/versions/Unicode6.0.0">http://unicode.org/versions/Unicode6.0.0</a>&gt; for details on the new release. Perl does not support any Unicode provisional properties, including the new ones for this release, but their database files are packaged with Perl. </p>
-<p> Unicode 6.0 has chosen to use the name <code>&quot;BELL&quot;</code> for the character at U+1F514, which is a symbol that looks like a bell, and used in Japanese cell phones. This conflicts with the long-standing Perl usage of having <code>&quot;BELL&quot;</code> mean the <font SIZE="-1">ASCII</font> <code>&quot;BEL&quot;</code> character, U+0007. In Perl 5.14, <code>&quot;\N{BELL}&quot;</code> will continue to mean U+0007, but its use will generate a deprecated warning message, unless such warnings are turned off. The new name for U+0007 in Perl will be <code>&quot;ALERT&quot;</code>, which corresponds nicely with the existing shorthand sequence for it, <code>&quot;\a&quot;</code>. <code>&quot;\N{BEL}&quot;</code> will mean U+0007, with no warning given. The character at U+1F514 will not have a name in 5.14, but can be referred to by <code>&quot;\N{U+1F514}&quot;</code>. The plan is that in Perl 5.16, <code>&quot;\N{BELL}&quot;</code> will refer to U+1F514, and so all code that uses <code>&quot;\N{BELL}&quot;</code> should convert by then to using <code>&quot;\N{ALERT}&quot;</code>, <code>&quot;\N{BEL}&quot;</code>, or <code>&quot;\a&quot;</code> instead.  </p>
+<p> Unicode 6.0 has chosen to use the name <code>&quot;BELL&quot;</code> for the character at U+1F514, which is a symbol that looks like a bell, and used in Japanese cell phones. This conflicts with the long-standing Perl usage of having <code>&quot;BELL&quot;</code> mean the ASCII <code>&quot;BEL&quot;</code> character, U+0007. In Perl 5.14, <code>&quot;\N{BELL}&quot;</code> will continue to mean U+0007, but its use will generate a deprecated warning message, unless such warnings are turned off. The new name for U+0007 in Perl will be <code>&quot;ALERT&quot;</code>, which corresponds nicely with the existing shorthand sequence for it, <code>&quot;\a&quot;</code>. <code>&quot;\N{BEL}&quot;</code> will mean U+0007, with no warning given. The character at U+1F514 will not have a name in 5.14, but can be referred to by <code>&quot;\N{U+1F514}&quot;</code>. The plan is that in Perl 5.16, <code>&quot;\N{BELL}&quot;</code> will refer to U+1F514, and so all code that uses <code>&quot;\N{BELL}&quot;</code> should convert by then to using <code>&quot;\N{ALERT}&quot;</code>, <code>&quot;\N{BEL}&quot;</code>, or <code>&quot;\a&quot;</code> instead.  </p>
 <h3>Improved support for custom OPs</h3>
 <p> Custom ops can now be registered with the new <code>&quot;custom_op_register&quot;</code> C function and the <code>&quot;XOP&quot;</code> structure. This will make it easier to add new properties of custom ops in the future. Two new properties have been added already, <code>&quot;xop_class&quot;</code> and <code>&quot;xop_peep&quot;</code>. </p>
 <p> <code>&quot;xop_class&quot;</code> is one of the OA_*OP constants, and allows B and other introspection mechanisms to work with custom ops that aren&#8217;t BASEOPs. <code>&quot;xop_peep&quot;</code> is a pointer to a function that will be called for ops of this type from <code>&quot;Perl_rpeep&quot;</code>. </p>
@@ -136,7 +136,7 @@ description: "perl5137delta – what is new for perl v5.13.7"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;CGI&quot;</code> has been upgraded from 3.49 to 3.50 </p>
-<p> This provides the following security fixes: the <font SIZE="-1">MIME</font> boundary in multipart_init is now random and improvements to the handling of newlines embedded in header values. </p>
+<p> This provides the following security fixes: the MIME boundary in multipart_init is now random and improvements to the handling of newlines embedded in header values. </p>
 <p> The documentation for <i>param_fetch()</i> has been corrected and clarified. </p>
  </dd>
 <dt>&bull;</dt>
@@ -158,7 +158,7 @@ description: "perl5137delta – what is new for perl v5.13.7"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;ExtUtils::Constant&quot;</code> has been upgraded from 0.22 to 0.23. </p>
-<p> The <code>&quot;AUTOLOAD&quot;</code> helper code generated by <code>&quot;ExtUtils::Constant::ProxySubs&quot;</code> can now <code>&quot;croak&quot;</code> for missing constants, or generate a complete <code>&quot;AUTOLOAD&quot;</code> subroutine in <font SIZE="-1">XS</font>, allowing simplification of many modules that use it. (<code>&quot;Fcntl&quot;</code>, <code>&quot;File::Glob&quot;</code>, <code>&quot;GDBM_File&quot;</code>, <code>&quot;I18N::Langinfo&quot;</code>, <code>&quot;POSIX&quot;</code>, <code>&quot;Socket&quot;</code>) </p>
+<p> The <code>&quot;AUTOLOAD&quot;</code> helper code generated by <code>&quot;ExtUtils::Constant::ProxySubs&quot;</code> can now <code>&quot;croak&quot;</code> for missing constants, or generate a complete <code>&quot;AUTOLOAD&quot;</code> subroutine in XS, allowing simplification of many modules that use it. (<code>&quot;Fcntl&quot;</code>, <code>&quot;File::Glob&quot;</code>, <code>&quot;GDBM_File&quot;</code>, <code>&quot;I18N::Langinfo&quot;</code>, <code>&quot;POSIX&quot;</code>, <code>&quot;Socket&quot;</code>) </p>
 <p> <code>&quot;ExtUtils::Constant::ProxySubs&quot;</code> can now optionally push the names of all constants onto the package&#8217;s C{@EXPORT_OK}. This has been used to replace less space-efficient code in <code>&quot;B&quot;</code>, helping considerably shrink the size of its shared object. </p>
  </dd>
 <dt>&bull;</dt>
@@ -167,7 +167,7 @@ description: "perl5137delta – what is new for perl v5.13.7"
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;File::Fetch&quot;</code> has been upgraded from 0.24 to 0.28 </p>
 <p> <code>&quot;HTTP::Lite&quot;</code> is now supported for &#8216;http&#8217; scheme. </p>
-<p> The <code>&quot;fetch&quot;</code> utility is supported on FreeBSD, NetBSD and Dragonfly <font SIZE="-1">BSD</font> for the <code>&quot;http&quot;</code> and <code>&quot;ftp&quot;</code> schemes. </p>
+<p> The <code>&quot;fetch&quot;</code> utility is supported on FreeBSD, NetBSD and Dragonfly BSD for the <code>&quot;http&quot;</code> and <code>&quot;ftp&quot;</code> schemes. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;File::Glob&quot;</code> has been upgraded from 1.09 to 1.10. </p>
@@ -178,7 +178,7 @@ description: "perl5137delta – what is new for perl v5.13.7"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;GDBM_File&quot;</code> has been upgraded from 1.11 to 1.12. </p>
-<p> This fixes a memory leak when <font SIZE="-1">DBM</font> filters are used. </p>
+<p> This fixes a memory leak when DBM filters are used. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;Hash::Util&quot;</code> has been upgraded from 0.09 to 0.10. </p>
@@ -210,11 +210,11 @@ description: "perl5137delta – what is new for perl v5.13.7"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;NDBM_File&quot;</code> has been upgraded from 1.09 to 1.10. </p>
-<p> This fixes a memory leak when <font SIZE="-1">DBM</font> filters are used. </p>
+<p> This fixes a memory leak when DBM filters are used. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;ODBM_File&quot;</code> has been upgraded from 1.08 to 1.09. </p>
-<p> This fixes a memory leak when <font SIZE="-1">DBM</font> filters are used. </p>
+<p> This fixes a memory leak when DBM filters are used. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;Opcode&quot;</code> has been upgraded from 1.16 to 1.17. </p>
@@ -258,18 +258,18 @@ description: "perl5137delta – what is new for perl v5.13.7"
 <p> This release newly adds locales <code>&quot;ja&quot;</code> <code>&quot;ko&quot;</code> and <code>&quot;zh&quot;</code> and its variants ( <code>&quot;zh__big5han&quot;</code>, <code>&quot;zh__gb2312han&quot;</code>, <code>&quot;zh__pinyin&quot;</code>, <code>&quot;zh__stroke&quot;</code> ). </p>
 <p> Supported UCA_Version 22 for Unicode 6.0.0. </p>
 <p> The following modules have been added: </p>
-<p> <code>&quot;Unicode::Collate::CJK::Big5&quot;</code> for <code>&quot;zh__big5han&quot;</code> which makes tailoring of <font SIZE="-1">CJK</font> Unified Ideographs in the order of <font SIZE="-1">CLDR</font>&#8216;s big5han ordering. </p>
-<p> <code>&quot;Unicode::Collate::CJK::GB2312&quot;</code> for <code>&quot;zh__gb2312han&quot;</code> which makes tailoring of <font SIZE="-1">CJK</font> Unified Ideographs in the order of <font SIZE="-1">CLDR</font>&#8216;s gb2312han ordering. </p>
-<p> <code>&quot;Unicode::Collate::CJK::JISX0208&quot;</code> which makes tailoring of 6355 kanji (<font SIZE="-1">CJK</font> Unified Ideographs) in the <font SIZE="-1">JIS</font> X 0208 order. </p>
-<p> <code>&quot;Unicode::Collate::CJK::Korean&quot;</code> which makes tailoring of <font SIZE="-1">CJK</font> Unified Ideographs in the order of <font SIZE="-1">CLDR</font>&#8216;s Korean ordering. </p>
-<p> <code>&quot;Unicode::Collate::CJK::Pinyin&quot;</code> for <code>&quot;zh__pinyin&quot;</code> which makes tailoring of <font SIZE="-1">CJK</font> Unified Ideographs in the order of <font SIZE="-1">CLDR</font>&#8216;s pinyin ordering. </p>
-<p> <code>&quot;Unicode::Collate::CJK::Stroke&quot;</code> for <code>&quot;zh__stroke&quot;</code> which makes tailoring of <font SIZE="-1">CJK</font> Unified Ideographs in the order of <font SIZE="-1">CLDR</font>&#8216;s stroke ordering. </p>
+<p> <code>&quot;Unicode::Collate::CJK::Big5&quot;</code> for <code>&quot;zh__big5han&quot;</code> which makes tailoring of CJK Unified Ideographs in the order of CLDR&#8216;s big5han ordering. </p>
+<p> <code>&quot;Unicode::Collate::CJK::GB2312&quot;</code> for <code>&quot;zh__gb2312han&quot;</code> which makes tailoring of CJK Unified Ideographs in the order of CLDR&#8216;s gb2312han ordering. </p>
+<p> <code>&quot;Unicode::Collate::CJK::JISX0208&quot;</code> which makes tailoring of 6355 kanji (CJK Unified Ideographs) in the JIS X 0208 order. </p>
+<p> <code>&quot;Unicode::Collate::CJK::Korean&quot;</code> which makes tailoring of CJK Unified Ideographs in the order of CLDR&#8216;s Korean ordering. </p>
+<p> <code>&quot;Unicode::Collate::CJK::Pinyin&quot;</code> for <code>&quot;zh__pinyin&quot;</code> which makes tailoring of CJK Unified Ideographs in the order of CLDR&#8216;s pinyin ordering. </p>
+<p> <code>&quot;Unicode::Collate::CJK::Stroke&quot;</code> for <code>&quot;zh__stroke&quot;</code> which makes tailoring of CJK Unified Ideographs in the order of CLDR&#8216;s stroke ordering. </p>
  </dd></dl>
 <h2>Documentation</h2>
 <p> perlvar reorders the variables and groups them by topic. Each variable introduced after Perl 5.000 notes the first version in which it is available. perlvar also has a new section for deprecated variables to note when they were removed.  </p>
 <h3>New Documentation</h3>
 <p> <i>perlpodstyle</i> </p>
-<p> New style guide for <font SIZE="-1">POD</font> documentation, split mostly from the <font SIZE="-1">NOTES</font> section of the pod2man man page. </p>
+<p> New style guide for POD documentation, split mostly from the NOTES section of the pod2man man page. </p>
 <p> ( This was added to <code>&quot;v5.13.6&quot;</code> but was not documented with that release ).  </p>
 <h3>Changes to Existing Documentation</h3>
 <dl>
@@ -307,25 +307,25 @@ description: "perl5137delta – what is new for perl v5.13.7"
 <dl>
 <dt>Windows</dt>
 <dd> <p> Directory handles are now properly cloned when threads are created. In perl 5.13.6, child threads simply stopped inheriting directory handles. In previous versions, threads would share handles, resulting in crashes. </p>
-<p> Support for building with Visual C<font SIZE="-2">++</font> 2010 is now underway, but is not yet complete. See <i></i><font SIZE="-1"><i>README</i></font><i>.win32</i> for more details. </p>
+<p> Support for building with Visual C++ 2010 is now underway, but is not yet complete. See <i></i><i>README</i><i>.win32</i> for more details. </p>
  </dd>
-<dt><font SIZE="-1">VMS</font></dt>
+<dt>VMS</dt>
 <dd> <p> Record-oriented files (record format variable or variable with fixed control) opened for write by the perlio layer will now be line buffered to prevent the introduction of spurious line breaks whenever the perlio buffer fills up. </p>
  </dd></dl>
 <h2>Internal Changes</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;lex_start&quot;</code> has been added to the <font SIZE="-1">API</font>, but is considered experimental. </p>
+<dd> <p> <code>&quot;lex_start&quot;</code> has been added to the API, but is considered experimental. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A new <code>&quot;parse_block&quot;</code> function has been added to the <font SIZE="-1">API</font> [perl #78222] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78222">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78222</a>&gt;. </p>
+<dd> <p> A new <code>&quot;parse_block&quot;</code> function has been added to the API [perl #78222] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78222">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78222</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A new, experimental <font SIZE="-1">API</font> has been added for accessing the internal structure that Perl uses for <code>&quot;%^H&quot;</code>. See the functions beginning with <code>&quot;cophh_&quot;</code> in perlapi. </p>
+<dd> <p> A new, experimental API has been added for accessing the internal structure that Perl uses for <code>&quot;%^H&quot;</code>. See the functions beginning with <code>&quot;cophh_&quot;</code> in perlapi. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A stash can now have a list of effective names in addition to its usual name. The first effective name can be accessed via the <code>&quot;HvENAME&quot;</code> macro, which is now the recommended name to use in <font SIZE="-1">MRO</font> linearisations (<code>&quot;HvNAME&quot;</code> being a fallback if there is no <code>&quot;HvENAME&quot;</code>). </p>
-<p> These names are added and deleted via <code>&quot;hv_ename_add&quot;</code> and <code>&quot;hv_ename_delete&quot;</code>. These two functions are <i>not</i> part of the <font SIZE="-1">API</font>. </p>
+<dd> <p> A stash can now have a list of effective names in addition to its usual name. The first effective name can be accessed via the <code>&quot;HvENAME&quot;</code> macro, which is now the recommended name to use in MRO linearisations (<code>&quot;HvNAME&quot;</code> being a fallback if there is no <code>&quot;HvENAME&quot;</code>). </p>
+<p> These names are added and deleted via <code>&quot;hv_ename_add&quot;</code> and <code>&quot;hv_ename_delete&quot;</code>. These two functions are <i>not</i> part of the API. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The way the parser handles labels has been cleaned up and refactored. As a result, the <code>&quot;newFOROP()&quot;</code> constructor function no longer takes a parameter stating what label is to go in the state op. </p>
@@ -340,10 +340,10 @@ description: "perl5137delta – what is new for perl v5.13.7"
 <dd> <p> A new <code>&quot;parse_label()&quot;</code> function has been added, that parses a statement label, separate from statements. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;CvSTASH()&quot;</code> macro can now only be used as an rvalue. <code>&quot;CvSTASH_set()&quot;</code> has been added to replace assignment to <code>&quot;CvSTASH()&quot;</code>. This is to ensure that backreferences are handled properly. These macros are not part of the <font SIZE="-1">API</font>. </p>
+<dd> <p> The <code>&quot;CvSTASH()&quot;</code> macro can now only be used as an rvalue. <code>&quot;CvSTASH_set()&quot;</code> has been added to replace assignment to <code>&quot;CvSTASH()&quot;</code>. This is to ensure that backreferences are handled properly. These macros are not part of the API. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;op_scope()&quot;</code> and <code>&quot;op_lvalue()&quot;</code> functions have been added to the <font SIZE="-1">API</font>, but are considered experimental. </p>
+<dd> <p> The <code>&quot;op_scope()&quot;</code> and <code>&quot;op_lvalue()&quot;</code> functions have been added to the API, but are considered experimental. </p>
  </dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
@@ -366,7 +366,7 @@ description: "perl5137delta – what is new for perl v5.13.7"
 <dd> <p> Various bugs related to typeglob dereferencing have been fixed. See ``Dereferencing typeglobs&#8217;&#8216;, above. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;SvPVbyte&quot;</code> function available to <font SIZE="-1">XS</font> modules now calls magic before downgrading the <font SIZE="-1">SV</font>, to avoid warnings about wide characters [perl #72398] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=72398">http://rt.perl.org/rt3/Public/Bug/Display.html?id=72398</a>&gt;. </p>
+<dd> <p> The <code>&quot;SvPVbyte&quot;</code> function available to XS modules now calls magic before downgrading the SV, to avoid warnings about wide characters [perl #72398] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=72398">http://rt.perl.org/rt3/Public/Bug/Display.html?id=72398</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The <code>&quot;=&quot;</code> operator used to ignore magic (e.g., tie methods) on its right-hand side if the scalar happened to hold a typeglob. This could happen if a typeglob was the last thing returned from or assigned to a tied scalar [perl #77498] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=77498">http://rt.perl.org/rt3/Public/Bug/Display.html?id=77498</a>&gt;. </p>
@@ -381,7 +381,7 @@ description: "perl5137delta – what is new for perl v5.13.7"
 <dd> <p> Concatenating long strings under <code>&quot;use encoding&quot;</code> no longer causes perl to crash [perl #78674] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78674">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78674</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Typeglob assignments would crash if the glob&#8217;s stash no longer existed, so long as the glob assigned to was named &#8216;<font SIZE="-1">ISA</font>&#8216; or the glob on either side of the assignment contained a subroutine. </p>
+<dd> <p> Typeglob assignments would crash if the glob&#8217;s stash no longer existed, so long as the glob assigned to was named &#8216;ISA&#8216; or the glob on either side of the assignment contained a subroutine. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Calling <code>&quot;-&gt;import&quot;</code> on a class lacking an import method could corrupt the stack, resulting in strange behaviour. For instance, </p>
@@ -393,17 +393,17 @@ description: "perl5137delta – what is new for perl v5.13.7"
 <dd> <p> Creating an alias to a package when that package had been detached from the symbol table would result in corrupted isa caches [perl #77358] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=77358">http://rt.perl.org/rt3/Public/Bug/Display.html?id=77358</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;.=&quot;</code> followed by <code>&quot;&lt;&gt;&quot;</code> or <code>&quot;readline&quot;</code> would leak memory if <code>$/</code> contained characters beyond the octet range and the scalar assigned to happened to be encoded as <font SIZE="-1">UTF8</font> internally [perl #72246] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=72246">http://rt.perl.org/rt3/Public/Bug/Display.html?id=72246</a>&gt;. </p>
+<dd> <p> <code>&quot;.=&quot;</code> followed by <code>&quot;&lt;&gt;&quot;</code> or <code>&quot;readline&quot;</code> would leak memory if <code>$/</code> contained characters beyond the octet range and the scalar assigned to happened to be encoded as UTF8 internally [perl #72246] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=72246">http://rt.perl.org/rt3/Public/Bug/Display.html?id=72246</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;recv&quot;</code> function could crash when called with the <font SIZE="-1">MSG_TRUNC</font> flag [perl #75082] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=75082">http://rt.perl.org/rt3/Public/Bug/Display.html?id=75082</a>&gt;. </p>
+<dd> <p> The <code>&quot;recv&quot;</code> function could crash when called with the MSG_TRUNC flag [perl #75082] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=75082">http://rt.perl.org/rt3/Public/Bug/Display.html?id=75082</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Evaluating a simple glob (like <code>*a</code>) was calling get-magic on the glob, even when its contents were not being used [perl #78580] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78580">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78580</a>&gt;. </p>
 <p> This bug was introduced in 5.13.2 and did not affect earlier perl versions. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Matching a Unicode character against an alternation containing characters that happened to match continuation bytes in the former&#8217;s <font SIZE="-1">UTF8</font> representation (<code>&quot;qq{\x{30ab}} =~ /\xab|\xa9/&quot;</code>) would cause erroneous warnings [perl #70998] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=70998">http://rt.perl.org/rt3/Public/Bug/Display.html?id=70998</a>&gt;. </p>
+<dd> <p> Matching a Unicode character against an alternation containing characters that happened to match continuation bytes in the former&#8217;s UTF8 representation (<code>&quot;qq{\x{30ab}} =~ /\xab|\xa9/&quot;</code>) would cause erroneous warnings [perl #70998] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=70998">http://rt.perl.org/rt3/Public/Bug/Display.html?id=70998</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;s///r&quot;</code> (added in 5.13.2) no longer leaks. </p>
@@ -439,20 +439,20 @@ description: "perl5137delta – what is new for perl v5.13.7"
 <dd> <p> A signal handler called within a signal handler could cause leaks or double-frees. Now fixed. [perl #76248] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=76248">http://rt.perl.org/rt3/Public/Bug/Display.html?id=76248</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> When trying to report <code>&quot;Use of uninitialized value $Foo::BAR&quot;</code>, crashes could occur if the <font SIZE="-1">GLOB</font> of the global variable causing the warning has been detached from its original stash by, for example <code>&quot;delete $::{&#8216;Foo::&#8216;}&quot;</code>. This has been fixed by disabling the reporting of variable names in the warning in those cases. </p>
+<dd> <p> When trying to report <code>&quot;Use of uninitialized value $Foo::BAR&quot;</code>, crashes could occur if the GLOB of the global variable causing the warning has been detached from its original stash by, for example <code>&quot;delete $::{&#8216;Foo::&#8216;}&quot;</code>. This has been fixed by disabling the reporting of variable names in the warning in those cases. </p>
  </dd></dl>
 <h2>Obituary</h2>
 <p> Randy Kobes, creator of the kobesearch alternative to search.cpan.org and contributor/maintainer to several core Perl toolchain modules, passed away on September 18, 2010 after a battle with lung cancer. His contributions to the Perl community will be missed.  </p>
 <h2>Acknowledgements</h2>
 <p> Perl 5.13.7 represents approximately one month of development since Perl 5.13.6 and contains 73100 lines of changes across 518 files from 39 authors and committers: </p>
-<p> Abhijit Menon-Sen, Abigail, Ben Morrow, Chas. J. Owens <font SIZE="-1">IV</font>, Chris &#8216;BinGOs&#8217; Williams, Craig A. Berry, David Golden, David Mitchell, Father Chrysostomos, Fingle Nark, Florian Ragwitz, George Greer, Grant McLean, H.Merijn Brand, Ian Goodacre, Jan Dubois, Jerry D. Hedden, Jesse Vincent, Karl Williamson, Lubomir Rintel, Marty Pauley, Moritz Lenz, Nicholas Clark, Nicolas Kaiser, Niko Tyni, Peter John Acklam, Rafael Garcia-Suarez, Shlomi Fish, Steffen Mueller, Steve Hay, Tatsuhiko Miyagawa, Tim Bunce, Todd Rinaldo, Tom Christiansen, Tom Hukins, Tony Cook, Yves Orton, Zefram and brian d foy </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish.  </p>
+<p> Abhijit Menon-Sen, Abigail, Ben Morrow, Chas. J. Owens IV, Chris &#8216;BinGOs&#8217; Williams, Craig A. Berry, David Golden, David Mitchell, Father Chrysostomos, Fingle Nark, Florian Ragwitz, George Greer, Grant McLean, H.Merijn Brand, Ian Goodacre, Jan Dubois, Jerry D. Hedden, Jesse Vincent, Karl Williamson, Lubomir Rintel, Marty Pauley, Moritz Lenz, Nicholas Clark, Nicolas Kaiser, Niko Tyni, Peter John Acklam, Rafael Garcia-Suarez, Shlomi Fish, Steffen Mueller, Steve Hay, Tatsuhiko Miyagawa, Tim Bunce, Todd Rinaldo, Tom Christiansen, Tom Hukins, Tony Cook, Yves Orton, Zefram and brian d foy </p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish.  </p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN</font>.  </p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

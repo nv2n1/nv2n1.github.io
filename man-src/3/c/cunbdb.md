@@ -11,7 +11,7 @@ description: "cunbdb.f –"
 <p> cunbdb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cunbdb</code> (TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, PHI, TAUP1, TAUP2, TAUQ1, TAUQ2, WORK, LWORK, INFO)<br />
+<p> subroutine <code>cunbdb</code> (TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, PHI, TAUP1, TAUP2, TAUQ1, TAUQ2, WORK, LWORK, INFO)<br/>
  <i></i><code>CUNBDB</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cunbdb (characterTRANS, characterSIGNS, integerM, integerP, integerQ, complex, dimension( ldx11, * )X11, integerLDX11, complex, dimension( ldx12, * )X12, integerLDX12, complex, dimension( ldx21, * )X21, integerLDX21, complex, dimension( ldx22, * )X22, integerLDX22, real, dimension( * )THETA, real, dimension( * )PHI, complex, dimension( * )TAUP1, complex, dimension( * )TAUP2, complex, dimension( * )TAUQ1, complex, dimension( * )TAUQ2, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -75,35 +75,35 @@ description: "cunbdb.f –"
           MIN(P,M-P,M-Q).
 </pre>
 <p> <i>X11</i> </p>
-<p>X11 is COMPLEX array, dimension(LDX11, Q) On entry, the top &#8211; left block of the unitary matrix to be reduced.On exit, the form depends on TRANS : If TRANS = &#8216;N&#8217;, then the columns of tril(X11) specify reflectors for P1,<br />
-             the rows of triu(X11,1) specify reflectors for Q1;<br />
-else TRANS = &#8216;T&#8217;, and the rows of triu(X11) specify reflectors for P1,<br />
+<p>X11 is COMPLEX array, dimension(LDX11, Q) On entry, the top &#8211; left block of the unitary matrix to be reduced.On exit, the form depends on TRANS : If TRANS = &#8216;N&#8217;, then the columns of tril(X11) specify reflectors for P1,<br/>
+             the rows of triu(X11,1) specify reflectors for Q1;<br/>
+else TRANS = &#8216;T&#8217;, and the rows of triu(X11) specify reflectors for P1,<br/>
              the columns of tril(X11,-1) specify reflectors for Q1.</p>
 <p> <i>LDX11</i> </p>
-<p>LDX11 is INTEGER<br />
-    The leading dimension of X11.If TRANS = &#8216;N&#8217;,<br />
-                                    then LDX11 &gt;=<br />
-                                        P;<br />
+<p>LDX11 is INTEGER<br/>
+    The leading dimension of X11.If TRANS = &#8216;N&#8217;,<br/>
+                                    then LDX11 &gt;=<br/>
+                                        P;<br/>
 else LDX11 &gt;= Q.</p>
 <p> <i>X12</i> </p>
-<p>X12 is COMPLEX array, dimension(LDX12, M &#8211; Q) On entry, the top &#8211; right block of the unitary matrix to be reduced.On exit, the form depends on TRANS : If TRANS = &#8216;N&#8217;, then the rows of triu(X12) specify the first P reflectors for<br />
-             Q2;<br />
-else TRANS = &#8216;T&#8217;, and the columns of tril(X12) specify the first P reflectors<br />
+<p>X12 is COMPLEX array, dimension(LDX12, M &#8211; Q) On entry, the top &#8211; right block of the unitary matrix to be reduced.On exit, the form depends on TRANS : If TRANS = &#8216;N&#8217;, then the rows of triu(X12) specify the first P reflectors for<br/>
+             Q2;<br/>
+else TRANS = &#8216;T&#8217;, and the columns of tril(X12) specify the first P reflectors<br/>
              for Q2.</p>
 <p> <i>LDX12</i> </p>
-<p>LDX12 is INTEGER<br />
-    The leading dimension of X12.If TRANS = &#8216;N&#8217;,<br />
-                                    then LDX12 &gt;=<br />
-                                        P;<br />
+<p>LDX12 is INTEGER<br/>
+    The leading dimension of X12.If TRANS = &#8216;N&#8217;,<br/>
+                                    then LDX12 &gt;=<br/>
+                                        P;<br/>
 else LDX11 &gt;= M &#8211; Q.</p>
 <p> <i>X21</i> </p>
-<p>X21 is COMPLEX array, dimension(LDX21, Q) On entry, the bottom &#8211; left block of the unitary matrix to be reduced.On exit, the form depends on TRANS : If TRANS = &#8216;N&#8217;, then the columns of tril(X21) specify reflectors for P2;<br />
+<p>X21 is COMPLEX array, dimension(LDX21, Q) On entry, the bottom &#8211; left block of the unitary matrix to be reduced.On exit, the form depends on TRANS : If TRANS = &#8216;N&#8217;, then the columns of tril(X21) specify reflectors for P2;<br/>
 else TRANS = &#8216;T&#8217;, and the rows of triu(X21) specify reflectors for P2.</p>
 <p> <i>LDX21</i> </p>
-<p>LDX21 is INTEGER<br />
-    The leading dimension of X21.If TRANS = &#8216;N&#8217;,<br />
-                                    then LDX21 &gt;=<br />
-                                        M &#8211; P;<br />
+<p>LDX21 is INTEGER<br/>
+    The leading dimension of X21.If TRANS = &#8216;N&#8217;,<br/>
+                                    then LDX21 &gt;=<br/>
+                                        M &#8211; P;<br/>
 else LDX21 &gt;= Q.</p>
 <p> <i>X22</i> </p>
 <pre>
@@ -118,10 +118,10 @@ else LDX21 &gt;= Q.</p>
              M-P-Q reflectors for P2.
 </pre>
 <p> <i>LDX22</i> </p>
-<p>LDX22 is INTEGER<br />
-    The leading dimension of X22.If TRANS = &#8216;N&#8217;,<br />
-                                    then LDX22 &gt;=<br />
-                                        M &#8211; P;<br />
+<p>LDX22 is INTEGER<br/>
+    The leading dimension of X22.If TRANS = &#8216;N&#8217;,<br/>
+                                    then LDX22 &gt;=<br/>
+                                        M &#8211; P;<br/>
 else LDX22 &gt;= M &#8211; Q.</p>
 <p> <i>THETA</i> </p>
 <pre>

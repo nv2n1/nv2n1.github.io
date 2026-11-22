@@ -16,20 +16,20 @@ description: "terminfo – terminal capability database"
 <p> <i>Terminfo</i> describes terminals by giving a set of capabilities which they have, by specifying how to perform screen operations, and by specifying padding requirements and initialization sequences. </p>
 <p>This manual describes <code>ncurses</code> version 6.3 (patch 20211021).  </p>
 <h3>Terminfo Entry Syntax</h3>
-<p>Entries in <i>terminfo</i> consist of a sequence of fields: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Each field ends with a comma ``,&#8216;&#8216; (embedded commas may be escaped with a backslash or written as ``\054&#8217;&#8216;). <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 White space between fields is ignored. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The first field in a <i>terminfo</i> entry begins in the first column. <br />
+<p>Entries in <i>terminfo</i> consist of a sequence of fields: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Each field ends with a comma ``,&#8216;&#8216; (embedded commas may be escaped with a backslash or written as ``\054&#8217;&#8216;). <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 White space between fields is ignored. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The first field in a <i>terminfo</i> entry begins in the first column. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Newlines and leading whitespace (spaces or tabs) may be used for formatting entries for readability. These are removed from parsed entries. </p>
 <dl>
-<dd> <p> The <code>infocmp</code> <code>-f</code> and <code>-W</code> options rely on this to format if-then-else expressions, or to enforce maximum line-width. The resulting formatted terminal description can be read by <code>tic</code>. <br />
+<dd> <p> The <code>infocmp</code> <code>-f</code> and <code>-W</code> options rely on this to format if-then-else expressions, or to enforce maximum line-width. The resulting formatted terminal description can be read by <code>tic</code>. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The first field for each terminal gives the names which are known for the terminal, separated by ``|&#8216;&#8216; characters. </p>
  </dd>
 <dd> <p> The first name given is the most common abbreviation for the terminal (its primary name), the last name given should be a long name fully identifying the terminal (see <code>longname</code>(3X)), and all others are treated as synonyms (aliases) for the primary terminal name. </p>
  </dd>
 <dd> <p> X/Open Curses advises that all names but the last should be in lower case and contain no blanks; the last name may well contain upper case and blanks for readability. </p>
  </dd>
-<dd> <p> This implementation is not so strict; it allows mixed case in the primary name and aliases. If the last name has no embedded blanks, it allows that to be both an alias and a verbose name (but will warn about this ambiguity). <br />
+<dd> <p> This implementation is not so strict; it allows mixed case in the primary name and aliases. If the last name has no embedded blanks, it allows that to be both an alias and a verbose name (but will warn about this ambiguity). <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Lines beginning with a ``#&#8216;&#8216; in the first column are treated as comments. </p>
  </dd>
 <dd> <p> While comment lines are legal at any point, the output of <code>captoinfo</code> and <code>infotocap</code> (aliases for <code>tic</code>) will move comments so they occur only between entries. </p>
@@ -126,18 +126,18 @@ description: "terminfo – terminal capability database"
 <p>For more on terminal naming conventions, see the <code><a href="/docs/linux/man/7-term/">term</a></code>(7) manual page.  </p>
 <h3>Terminfo Capabilities Syntax</h3>
 <p>The terminfo entry consists of several <i>capabilities</i>, i.e., features that the terminal has, or methods for exercising the terminal&#8217;s features. </p>
-<p>After the first field (giving the name(s) of the terminal entry), there should be one or more <i>capability</i> fields. These are boolean, numeric or string names with corresponding values: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Boolean capabilities are true when present, false when absent. There is no explicit value for boolean capabilities. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Numeric capabilities have a ``#&#8216;&#8216; following the name, then an unsigned decimal integer value. <br />
+<p>After the first field (giving the name(s) of the terminal entry), there should be one or more <i>capability</i> fields. These are boolean, numeric or string names with corresponding values: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Boolean capabilities are true when present, false when absent. There is no explicit value for boolean capabilities. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Numeric capabilities have a ``#&#8216;&#8216; following the name, then an unsigned decimal integer value. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 String capabilities have a ``=&#8216;&#8216; following the name, then an string of characters making up the capability value. </p>
 <dl>
 <dd> <p> String capabilities can be split into multiple lines, just as the fields comprising a terminal entry can be split into multiple lines. While blanks between fields are ignored, blanks embedded within a string value are retained, except for leading blanks on a line. </p>
  </dd></dl>
 <p>Any capability can be <i>canceled</i>, i.e., suppressed from the terminal entry, by following its name with ``@&#8216;&#8216; rather than a capability value.  </p>
 <h3>Similar Terminals</h3>
-<p>If there are two very similar terminals, one (the variant) can be defined as being just like the other (the base) with certain exceptions. In the definition of the variant, the string capability <code>use</code> can be given with the name of the base terminal: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The capabilities given before <code>use</code> override those in the base type named by <code>use</code>. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If there are multiple <code>use</code> capabilities, they are merged in reverse order. That is, the rightmost <code>use</code> reference is processed first, then the one to its left, and so forth. <br />
+<p>If there are two very similar terminals, one (the variant) can be defined as being just like the other (the base) with certain exceptions. In the definition of the variant, the string capability <code>use</code> can be given with the name of the base terminal: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The capabilities given before <code>use</code> override those in the base type named by <code>use</code>. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If there are multiple <code>use</code> capabilities, they are merged in reverse order. That is, the rightmost <code>use</code> reference is processed first, then the one to its left, and so forth. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Capabilities given explicitly in the entry override those brought in by <code>use</code> references. </p>
 <p>A capability can be canceled by placing <code>xx@</code> to the left of the use reference that imports it, where <i>xx</i> is the capability. For example, the entry </p>
 <dl>
@@ -146,7 +146,7 @@ description: "terminfo – terminal capability database"
 <p>defines a 2621-nl that does not have the <code>smkx</code> or <code>rmkx</code> capabilities, and hence does not turn on the function key labels when in visual mode. This is useful for different modes for a terminal, or for different user preferences. </p>
 <p>An entry included via <code>use</code> can contain canceled capabilities, which have the same effect as if those cancels were inline in the using terminal entry.  </p>
 <h3>Predefined Capabilities</h3>
-<p> <font SIZE="-1"> The following is a complete table of the capabilities included in a terminfo description block and available to terminfo-using code. In each line of the table, </p>
+<p>  The following is a complete table of the capabilities included in a terminfo description block and available to terminfo-using code. In each line of the table, </p>
 <p>The <code>variable</code> is the name by which the programmer (at the terminfo level) accesses the capability. </p>
 <p>The <code>capname</code> is the short name used in the text of the database, and is used by a person updating the database. Whenever possible, capnames are chosen to be the same as or similar to the ANSI X3.64-1979 standard (now superseded by ECMA-48, which uses identical or very similar names). Semantics are also intended to match those of the specification. </p>
 <p>The termcap code is the old <code>termcap</code> capability name (some capabilities are new, and have names which termcap did not originate). </p>
@@ -168,7 +168,7 @@ description: "terminfo – terminal capability database"
 <dd> <p> indicates the <i>i</i>th parameter. </p>
  </dd></dl>
 <p>These are the boolean capabilities: </p>
-<p> </font><center> </p>
+<p> <center> </p>
 <table>
 <tr VALIGN=top>
 <td><code>Variable</code></td>
@@ -444,9 +444,9 @@ description: "terminfo – terminal capability database"
 </td>
 </tr>
 </table>
-<p> </center> <font SIZE="-1"> </p>
+<p> </center>  </p>
 <p>These are the numeric capabilities: </p>
-<p> </font><center> </p>
+<p> <center> </p>
 <table>
 <tr VALIGN=top>
 <td><code>Variable</code></td>
@@ -575,9 +575,9 @@ description: "terminfo – terminal capability database"
 </td>
 </tr>
 </table>
-<p> </center> <font SIZE="-1"> </p>
+<p> </center>  </p>
 <p>The following numeric capabilities are present in the SVr4.0 term structure, but are not yet documented in the man page. They came in with SVr4&#8217;s printer support. </p>
-<p> </font><center> </p>
+<p> <center> </p>
 <table>
 <tr VALIGN=top>
 <td><code>Variable</code></td>
@@ -713,9 +713,9 @@ description: "terminfo – terminal capability database"
 </td>
 </tr>
 </table>
-<p> </center> <font SIZE="-1"> </p>
+<p> </center>  </p>
 <p>These are the string capabilities: </p>
-<p> </font><center> </p>
+<p> <center> </p>
 <table>
 <tr VALIGN=top>
 <td><code>Variable</code></td>
@@ -3210,9 +3210,9 @@ description: "terminfo – terminal capability database"
 </td>
 </tr>
 </table>
-<p> </center> <font SIZE="-1"> </p>
+<p> </center>  </p>
 <p>The following string capabilities are present in the SVr4.0 term structure, but were originally not documented in the man page. </p>
-<p> </font><center> </p>
+<p> <center> </p>
 <table>
 <tr VALIGN=top>
 <td><code>Variable</code></td>
@@ -3453,9 +3453,9 @@ description: "terminfo – terminal capability database"
 </td>
 </tr>
 </table>
-<p> </center> <font SIZE="-1"> </p>
+<p> </center>  </p>
 <p>The XSI Curses standard added these hardcopy capabilities. They were used in some post-4.1 versions of System V curses, e.g., Solaris 2.5 and IRIX 6.x. Except for <code>YI</code>, the <code>ncurses</code> termcap names for them are invented. According to the XSI Curses standard, they have no termcap names. If your compiled terminfo entries use these, they may not be binary-compatible with System V terminfo entries after SVr4.1; beware! </p>
-<p> </font><center> </p>
+<p> <center> </p>
 <table>
 <tr VALIGN=top>
 <td><code>Variable</code></td>
@@ -3528,18 +3528,18 @@ description: "terminfo – terminal capability database"
 </td>
 </tr>
 </table>
-<p> </center> <font SIZE="-1"> </font>  </p>
+<p> </center>    </p>
 <h3>User-Defined Capabilities</h3>
 <p> The preceding section listed the <i>predefined</i> capabilities. They deal with some special features for terminals no longer (or possibly never) produced. Occasionally there are special features of newer terminals which are awkward or impossible to represent by reusing the predefined capabilities. </p>
-<p> <code>ncurses</code> addresses this limitation by allowing user-defined capabilities. The <code>tic</code> and <code>infocmp</code> programs provide the <code>-x</code> option for this purpose. When <code>-x</code> is set, <code>tic</code> treats unknown capabilities as user-defined. That is, if <code>tic</code> encounters a capability name which it does not recognize, it infers its type (boolean, number or string) from the syntax and makes an extended table entry for that capability. The <code>use_extended_names</code>(3X) function makes this information conditionally available to applications. The ncurses library provides the data leaving most of the behavior to applications: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 User-defined capability strings whose name begins with ``k&#8217;&#8216; are treated as function keys. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The types (boolean, number, string) determined by <code>tic</code> can be inferred by successful calls on <code>tigetflag</code>, etc. <br />
+<p> <code>ncurses</code> addresses this limitation by allowing user-defined capabilities. The <code>tic</code> and <code>infocmp</code> programs provide the <code>-x</code> option for this purpose. When <code>-x</code> is set, <code>tic</code> treats unknown capabilities as user-defined. That is, if <code>tic</code> encounters a capability name which it does not recognize, it infers its type (boolean, number or string) from the syntax and makes an extended table entry for that capability. The <code>use_extended_names</code>(3X) function makes this information conditionally available to applications. The ncurses library provides the data leaving most of the behavior to applications: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 User-defined capability strings whose name begins with ``k&#8217;&#8216; are treated as function keys. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The types (boolean, number, string) determined by <code>tic</code> can be inferred by successful calls on <code>tigetflag</code>, etc. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If the capability name happens to be two characters, the capability is also available through the termcap interface. </p>
 <p>While termcap is said to be extensible because it does not use a predefined set of capabilities, in practice it has been limited to the capabilities defined by terminfo implementations. As a rule, user-defined capabilities intended for use by termcap applications should be limited to booleans and numbers to avoid running past the 1023 byte limit assumed by termcap implementations and their applications. In particular, providing extended sets of function keys (past the 60 numbered keys and the handful of special named keys) is best done using the longer names available using terminfo.  </p>
 <h3>A Sample Entry</h3>
 <p> The following entry, describing an ANSI-standard terminal, is representative of what a <code>terminfo</code> entry for a modern terminal typically looks like. </p>
 <pre><code>
-<font SIZE="-2">ansi|ansi/pc-term compatible with color,
+ansi|ansi/pc-term compatible with color,
         am, mc5i, mir, msgr,
         colors#8, cols#80, it#8, lines#24, ncv#3, pairs#64,
         acsc=+\020\,\021-\030.^Y0\333`\004a\261f\370g\361h\260
@@ -3569,17 +3569,17 @@ description: "terminfo – terminal capability database"
         sgr0=\E[0;10m, smacs=\E[11m, smpch=\E[11m, smso=\E[7m,
         smul=\E[4m, tbc=\E[3g, u6=\E[%i%d;%dR, u7=\E[6n,
         u8=\E[?%[;0123456789]c, u9=\E[c, vpa=\E[%i%p1%dd,
-</font></code></pre>
-<p>Entries may continue onto multiple lines by placing white space at the beginning of each line except the first. Comments may be included on lines beginning with ``#&#8216;&#8216;. Capabilities in <i>terminfo</i> are of three types: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Boolean capabilities which indicate that the terminal has some particular feature, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 numeric capabilities giving the size of the terminal or the size of particular delays, and <br />
+</code></pre>
+<p>Entries may continue onto multiple lines by placing white space at the beginning of each line except the first. Comments may be included on lines beginning with ``#&#8216;&#8216;. Capabilities in <i>terminfo</i> are of three types: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Boolean capabilities which indicate that the terminal has some particular feature, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 numeric capabilities giving the size of the terminal or the size of particular delays, and <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 string capabilities, which give a sequence which can be used to perform particular terminal operations. </p>
 <h3>Types of Capabilities</h3>
 <p>All capabilities have names. For instance, the fact that ANSI-standard terminals have <i>automatic margins</i> (i.e., an automatic return and line-feed when the end of a line is reached) is indicated by the capability <code>am</code>. Hence the description of ansi includes <code>am</code>. Numeric capabilities are followed by the character ``#&#8216;&#8216; and then a positive value. Thus <code>cols</code>, which indicates the number of columns the terminal has, gives the value ``80&#8217;&#8216; for ansi. Values for numeric capabilities may be specified in decimal, octal or hexadecimal, using the C programming language conventions (e.g., 255, 0377 and 0xff or 0xFF). </p>
 <p>Finally, string valued capabilities, such as <code>el</code> (clear to end of line sequence) are given by the two-character code, an ``=&#8216;&#8216;, and then a string ending at the next following ``,&#8216;&#8216;. </p>
-<p>A number of escape sequences are provided in the string valued capabilities for easy encoding of characters there: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Both <code>\E</code> and <code>\e</code> map to an <font SIZE="-1">ESCAPE</font> character, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>^x</code> maps to a control-x for any appropriate <i>x</i>, and <br />
+<p>A number of escape sequences are provided in the string valued capabilities for easy encoding of characters there: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Both <code>\E</code> and <code>\e</code> map to an ESCAPE character, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>^x</code> maps to a control-x for any appropriate <i>x</i>, and <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 the sequences </p>
 <dl>
 <dd> <p> <code>\n</code>, <code>\l</code>, <code>\r</code>, <code>\t</code>, <code>\b</code>, <code>\f</code>, and <code>\s</code> </p>
@@ -3593,11 +3593,11 @@ description: "terminfo – terminal capability database"
 <dd> <p> respectively. </p>
  </dd></dl>
 <p>X/Open Curses does not say what ``appropriate <i>x</i>&#8216;&#8216; might be. In practice, that is a printable ASCII graphic character. The special case ``^?&#8216;&#8216; is interpreted as DEL (127). In all other cases, the character value is AND&#8217;d with 0x1f, mapping to ASCII control codes in the range 0 through 31. </p>
-<p>Other escapes include <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>\^</code> for <code>^</code>, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>\\</code> for <code>\</code>, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>\</code>, for comma, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>\:</code> for <code>:</code>, <br />
+<p>Other escapes include <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>\^</code> for <code>^</code>, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>\\</code> for <code>\</code>, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>\</code>, for comma, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>\:</code> for <code>:</code>, <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 and <code>\0</code> for null. </p>
 <dl>
 <dd> <p> <code>\0</code> will produce \200, which does not terminate a string but behaves as a null character on most terminals, providing CS7 is specified. See <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1). </p>
@@ -3605,27 +3605,27 @@ description: "terminfo – terminal capability database"
 <dd> <p> The reason for this quirk is to maintain binary compatibility of the compiled terminfo files with other implementations, e.g., the SVr4 systems, which document this. Compiled terminfo files use null-terminated strings, with no lengths. Modifying this would require a new binary format, which would not work with other implementations. </p>
  </dd></dl>
 <p>Finally, characters may be given as three octal digits after a <code>\</code>. </p>
-<p>A delay in milliseconds may appear anywhere in a string capability, enclosed in $&lt;..&gt; brackets, as in <code>el</code>=\EK$&lt;5&gt;, and padding characters are supplied by <code>tputs</code>(3X) to provide this delay. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The delay must be a number with at most one decimal place of precision; it may be followed by suffixes ``*&#8216;&#8216; or ``/&#8216;&#8216; or both. <br />
+<p>A delay in milliseconds may appear anywhere in a string capability, enclosed in $&lt;..&gt; brackets, as in <code>el</code>=\EK$&lt;5&gt;, and padding characters are supplied by <code>tputs</code>(3X) to provide this delay. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The delay must be a number with at most one decimal place of precision; it may be followed by suffixes ``*&#8216;&#8216; or ``/&#8216;&#8216; or both. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 A ``*&#8216;&#8216; indicates that the padding required is proportional to the number of lines affected by the operation, and the amount given is the per-affected-unit padding required. (In the case of insert character, the factor is still the number of <i>lines</i> affected.) </p>
 <dl>
-<dd> <p> Normally, padding is advisory if the device has the <code>xon</code> capability; it is used for cost computation but does not trigger delays. <br />
+<dd> <p> Normally, padding is advisory if the device has the <code>xon</code> capability; it is used for cost computation but does not trigger delays. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 A ``/&#8216;&#8216; suffix indicates that the padding is mandatory and forces a delay of the given number of milliseconds even on devices for which <code>xon</code> is present to indicate flow control. </p>
  </dd></dl>
-<p>Sometimes individual capabilities must be commented out. To do this, put a period before the capability name. For example, see the second <code>ind</code> in the example above. <br />
+<p>Sometimes individual capabilities must be commented out. To do this, put a period before the capability name. For example, see the second <code>ind</code> in the example above. <br/>
  </p>
 <h3>Fetching Compiled Descriptions</h3>
-<p>The <code>ncurses</code> library searches for terminal descriptions in several places. It uses only the first description found. The library has a compiled-in list of places to search which can be overridden by environment variables. Before starting to search, <code>ncurses</code> eliminates duplicates in its search list. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the environment variable TERMINFO is set, it is interpreted as the pathname of a directory containing the compiled description you are working on. Only that directory is searched. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If TERMINFO is not set, <code>ncurses</code> will instead look in the directory <code>$HOME/.terminfo</code> for a compiled description. <br />
+<p>The <code>ncurses</code> library searches for terminal descriptions in several places. It uses only the first description found. The library has a compiled-in list of places to search which can be overridden by environment variables. Before starting to search, <code>ncurses</code> eliminates duplicates in its search list. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the environment variable TERMINFO is set, it is interpreted as the pathname of a directory containing the compiled description you are working on. Only that directory is searched. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If TERMINFO is not set, <code>ncurses</code> will instead look in the directory <code>$HOME/.terminfo</code> for a compiled description. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Next, if the environment variable TERMINFO_DIRS is set, <code>ncurses</code> will interpret the contents of that variable as a list of colon-separated directories (or database files) to be searched. </p>
 <dl>
-<dd> <p> An empty directory name (i.e., if the variable begins or ends with a colon, or contains adjacent colons) is interpreted as the system location <i>/etc/terminfo</i>. <br />
+<dd> <p> An empty directory name (i.e., if the variable begins or ends with a colon, or contains adjacent colons) is interpreted as the system location <i>/etc/terminfo</i>. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Finally, <code>ncurses</code> searches these compiled-in locations: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 a list of directories (no default value), and <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 a list of directories (no default value), and <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 the system terminfo directory, <i>/etc/terminfo</i> (the compiled-in default). </p>
  </dd></dl>
 </dl>
@@ -3633,22 +3633,22 @@ description: "terminfo – terminal capability database"
 <p>We now outline how to prepare descriptions of terminals. The most effective way to prepare a terminal description is by imitating the description of a similar terminal in <i>terminfo</i> and to build up a description gradually, using partial descriptions with <i>vi</i> or some other screen-oriented program to check that they are correct. Be aware that a very unusual terminal may expose deficiencies in the ability of the <i>terminfo</i> file to describe it or bugs in the screen-handling code of the test program. </p>
 <p>To get the padding for insert line right (if the terminal manufacturer did not document it) a severe test is to edit a large file at 9600 baud, delete 16 or so lines from the middle of the screen, then hit the ``u&#8217;&#8216; key several times quickly. If the terminal messes up, more padding is usually needed. A similar test can be used for insert character. </p>
 <h3>Basic Capabilities</h3>
-<p>The number of columns on each line for the terminal is given by the <code>cols</code> numeric capability. If the terminal is a <font SIZE="-1">CRT</font>, then the number of lines on the screen is given by the <code>lines</code> capability. If the terminal wraps around to the beginning of the next line when it reaches the right margin, then it should have the <code>am</code> capability. If the terminal can clear its screen, leaving the cursor in the home position, then this is given by the <code>clear</code> string capability. If the terminal overstrikes (rather than clearing a position when a character is struck over) then it should have the <code>os</code> capability. If the terminal is a printing terminal, with no soft copy unit, give it both <code>hc</code> and <code>os</code>. (<code>os</code> applies to storage scope terminals, such as <font SIZE="-1">TEKTRONIX</font> 4010 series, as well as hard copy and APL terminals.) If there is a code to move the cursor to the left edge of the current row, give this as <code>cr</code>. (Normally this will be carriage return, control/M.) If there is a code to produce an audible signal (bell, beep, etc) give this as <code>bel</code>. </p>
+<p>The number of columns on each line for the terminal is given by the <code>cols</code> numeric capability. If the terminal is a CRT, then the number of lines on the screen is given by the <code>lines</code> capability. If the terminal wraps around to the beginning of the next line when it reaches the right margin, then it should have the <code>am</code> capability. If the terminal can clear its screen, leaving the cursor in the home position, then this is given by the <code>clear</code> string capability. If the terminal overstrikes (rather than clearing a position when a character is struck over) then it should have the <code>os</code> capability. If the terminal is a printing terminal, with no soft copy unit, give it both <code>hc</code> and <code>os</code>. (<code>os</code> applies to storage scope terminals, such as TEKTRONIX 4010 series, as well as hard copy and APL terminals.) If there is a code to move the cursor to the left edge of the current row, give this as <code>cr</code>. (Normally this will be carriage return, control/M.) If there is a code to produce an audible signal (bell, beep, etc) give this as <code>bel</code>. </p>
 <p>If there is a code to move the cursor one position to the left (such as backspace) that capability should be given as <code>cub1</code>. Similarly, codes to move to the right, up, and down should be given as <code>cuf1</code>, <code>cuu1</code>, and <code>cud1</code>. These local cursor motions should not alter the text they pass over, for example, you would not normally use ``<code>cuf1</code>=&nbsp;&#8216;&#8216; because the space would erase the character moved over. </p>
-<p>A very important point here is that the local cursor motions encoded in <i>terminfo</i> are undefined at the left and top edges of a <font SIZE="-1">CRT</font> terminal. Programs should never attempt to backspace around the left edge, unless <code>bw</code> is given, and never attempt to go up locally off the top. In order to scroll text up, a program will go to the bottom left corner of the screen and send the <code>ind</code> (index) string. </p>
+<p>A very important point here is that the local cursor motions encoded in <i>terminfo</i> are undefined at the left and top edges of a CRT terminal. Programs should never attempt to backspace around the left edge, unless <code>bw</code> is given, and never attempt to go up locally off the top. In order to scroll text up, a program will go to the bottom left corner of the screen and send the <code>ind</code> (index) string. </p>
 <p>To scroll text down, a program goes to the top left corner of the screen and sends the <code>ri</code> (reverse index) string. The strings <code>ind</code> and <code>ri</code> are undefined when not on their respective corners of the screen. </p>
 <p>Parameterized versions of the scrolling sequences are <code>indn</code> and <code>rin</code> which have the same semantics as <code>ind</code> and <code>ri</code> except that they take one parameter, and scroll that many lines. They are also undefined except at the appropriate edge of the screen. </p>
 <p>The <code>am</code> capability tells whether the cursor sticks at the right edge of the screen when text is output, but this does not necessarily apply to a <code>cuf1</code> from the last column. The only local motion which is defined from the left edge is if <code>bw</code> is given, then a <code>cub1</code> from the left edge will move to the right edge of the previous row. If <code>bw</code> is not given, the effect is undefined. This is useful for drawing a box around the edge of the screen, for example. If the terminal has switch selectable automatic margins, the <i>terminfo</i> file usually assumes that this is on; i.e., <code>am</code>. If the terminal has a command which moves to the first column of the next line, that command can be given as <code>nel</code> (newline). It does not matter if the command clears the remainder of the current line, so if the terminal has no <code>cr</code> and <code>lf</code> it may still be possible to craft a working <code>nel</code> out of one or both of them. </p>
 <p>These capabilities suffice to describe hard-copy and ``glass-tty&#8217;&#8216; terminals. Thus the model 33 teletype is described as </p>
 <pre><code>
-<font SIZE="-1">33|tty33|tty|model 33 teletype,
-        bel=^G, cols#72, cr=^M, cud1=^J, hc, ind=^J, os,</font>
+33|tty33|tty|model 33 teletype,
+        bel=^G, cols#72, cr=^M, cud1=^J, hc, ind=^J, os,
 </code></pre>
-<p>while the Lear Siegler <font SIZE="-1">ADM-3</font> is described as </p>
+<p>while the Lear Siegler ADM-3 is described as </p>
 <pre><code>
-<font SIZE="-1">adm3|3|lsi adm3,
+adm3|3|lsi adm3,
         am, bel=^G, clear=^Z, cols#80, cr=^M, cub1=^H, cud1=^J,
-        ind=^J, lines#24,</font>
+        ind=^J, lines#24,
 </code></pre>
 <h3>Parameterized Strings</h3>
 <p>Cursor addressing and other strings requiring parameters in the terminal are described by a parameterized string capability, with <i>printf</i>-like escapes such as <i>%x</i> in it. For example, to address the cursor, the <code>cup</code> capability is given, using two parameters: the row and column to address to. (Rows and columns are numbered from zero and refer to the physical screen visible to the user, not to any unseen memory.) If the terminal has memory relative cursor addressing, that can be indicated by <code>mrcup</code>. </p>
@@ -3685,12 +3685,12 @@ description: "terminfo – terminal capability database"
 <dd> <p> The terms ``static&#8217;&#8216; and ``dynamic&#8217;&#8216; are misleading. Historically, these are simply two different sets of variables, whose values are not reset between calls to <code>tparm</code>(3X). However, that fact is not documented in other implementations. Relying on it will adversely impact portability to other implementations: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 SVr2 curses supported <i>dynamic</i> variables. Those are set only by a <code>%P</code> operator. A <code>%g</code> for a given variable without first setting it with <code>%P</code> will give unpredictable results, because dynamic variables are an uninitialized local array on the stack in the <code>tparm</code> function. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 SVr3.2 curses supported <i>static</i> variables. Those are an array in the <code>TERMINAL</code> structure (declared in <code>term.h</code>), and are zeroed automatically when the <code>setupterm</code> function allocates the data. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 SVr4 curses made no further improvements to the <i>dynamic/static</i> variable feature. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Solaris XPG4 curses does not distinguish between <i>dynamic</i> and <i>static</i> variables. They are the same. Like SVr4 curses, XPG4 curses does not initialize these explicitly. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Before version 6.3, ncurses stores both <i>dynamic</i> and <i>static</i> variables in persistent storage, initialized to zeros. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 SVr2 curses supported <i>dynamic</i> variables. Those are set only by a <code>%P</code> operator. A <code>%g</code> for a given variable without first setting it with <code>%P</code> will give unpredictable results, because dynamic variables are an uninitialized local array on the stack in the <code>tparm</code> function. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 SVr3.2 curses supported <i>static</i> variables. Those are an array in the <code>TERMINAL</code> structure (declared in <code>term.h</code>), and are zeroed automatically when the <code>setupterm</code> function allocates the data. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 SVr4 curses made no further improvements to the <i>dynamic/static</i> variable feature. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Solaris XPG4 curses does not distinguish between <i>dynamic</i> and <i>static</i> variables. They are the same. Like SVr4 curses, XPG4 curses does not initialize these explicitly. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Before version 6.3, ncurses stores both <i>dynamic</i> and <i>static</i> variables in persistent storage, initialized to zeros. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Beginning with version 6.3, ncurses stores <i>static</i> and <i>dynamic</i> variables in the same manner as SVr4. Unlike other implementations, ncurses zeros dynamic variables before the first <code>%g</code> or <code>%P</code> operator. </p>
  </dd></dl>
 <dt><code>%&#8216;</code><i>c</i><code>&#8216;</code></dt>
@@ -3734,28 +3734,28 @@ description: "terminfo – terminal capability database"
  </dd></dl>
 <p>Binary operations are in postfix form with the operands in the usual order. That is, to get x-5 one would use ``%gx%{5}%-&#8216;&#8216;. <code>%P</code> and <code>%g</code> variables are persistent across escape-string evaluations. </p>
 <p>Consider the HP2645, which, to get to row 3 and column 12, needs to be sent \E&amp;a12c03Y padded for 6 milliseconds. Note that the order of the rows and columns is inverted here, and that the row and column are printed as two digits. Thus its <code>cup</code> capability is ``cup=6\E&amp;%p2%2dc%p1%2dY&#8217;&#8216;. </p>
-<p>The Microterm <font SIZE="-1">ACT-IV</font> needs the current row and column sent preceded by a <code>^T</code>, with the row and column simply encoded in binary, ``cup=^T%p1%c%p2%c&#8217;&#8216;. Terminals which use ``%c&#8217;&#8216; need to be able to backspace the cursor (<code>cub1</code>), and to move the cursor up one line on the screen (<code>cuu1</code>). This is necessary because it is not always safe to transmit <code>\n</code> <code>^D</code> and <code>\r</code>, as the system may change or discard them. (The library routines dealing with terminfo set tty modes so that tabs are never expanded, so \t is safe to send. This turns out to be essential for the Ann Arbor 4080.) </p>
-<p>A final example is the <font SIZE="-1">LSI ADM</font>-3a, which uses row and column offset by a blank character, thus ``cup=\E=%p1%&#8216; &#8216;%+%c%p2%&#8216; &#8216;%+%c&#8217;&#8216;. After sending ``\E=&#8216;&#8216;, this pushes the first parameter, pushes the ASCII value for a space (32), adds them (pushing the sum on the stack in place of the two previous values) and outputs that value as a character. Then the same is done for the second parameter. More complex arithmetic is possible using the stack. </p>
+<p>The Microterm ACT-IV needs the current row and column sent preceded by a <code>^T</code>, with the row and column simply encoded in binary, ``cup=^T%p1%c%p2%c&#8217;&#8216;. Terminals which use ``%c&#8217;&#8216; need to be able to backspace the cursor (<code>cub1</code>), and to move the cursor up one line on the screen (<code>cuu1</code>). This is necessary because it is not always safe to transmit <code>\n</code> <code>^D</code> and <code>\r</code>, as the system may change or discard them. (The library routines dealing with terminfo set tty modes so that tabs are never expanded, so \t is safe to send. This turns out to be essential for the Ann Arbor 4080.) </p>
+<p>A final example is the LSI ADM-3a, which uses row and column offset by a blank character, thus ``cup=\E=%p1%&#8216; &#8216;%+%c%p2%&#8216; &#8216;%+%c&#8217;&#8216;. After sending ``\E=&#8216;&#8216;, this pushes the first parameter, pushes the ASCII value for a space (32), adds them (pushing the sum on the stack in place of the two previous values) and outputs that value as a character. Then the same is done for the second parameter. More complex arithmetic is possible using the stack. </p>
 <h3>Cursor Motions</h3>
 <p>If the terminal has a fast way to home the cursor (to very upper left corner of screen) then this can be given as <code>home</code>; similarly a fast way of getting to the lower left-hand corner can be given as <code>ll</code>; this may involve going up with <code>cuu1</code> from the home position, but a program should never do this itself (unless <code>ll</code> does) because it can make no assumption about the effect of moving up from the home position. Note that the home position is the same as addressing to (0,0): to the top left corner of the screen, not of memory. (Thus, the \EH sequence on HP terminals cannot be used for <code>home</code>.) </p>
-<p>If the terminal has row or column absolute cursor addressing, these can be given as single parameter capabilities <code>hpa</code> (horizontal position absolute) and <code>vpa</code> (vertical position absolute). Sometimes these are shorter than the more general two parameter sequence (as with the hp2645) and can be used in preference to <code>cup</code>. If there are parameterized local motions (e.g., move <i>n</i> spaces to the right) these can be given as <code>cud</code>, <code>cub</code>, <code>cuf</code>, and <code>cuu</code> with a single parameter indicating how many spaces to move. These are primarily useful if the terminal does not have <code>cup</code>, such as the <font SIZE="-1">TEKTRONIX</font> 4025. </p>
-<p>If the terminal needs to be in a special mode when running a program that uses these capabilities, the codes to enter and exit this mode can be given as <code>smcup</code> and <code>rmcup</code>. This arises, for example, from terminals like the Concept with more than one page of memory. If the terminal has only memory relative cursor addressing and not screen relative cursor addressing, a one screen-sized window must be fixed into the terminal for cursor addressing to work properly. This is also used for the <font SIZE="-1">TEKTRONIX</font> 4025, where <code>smcup</code> sets the command character to be the one used by terminfo. If the <code>smcup</code> sequence will not restore the screen after an <code>rmcup</code> sequence is output (to the state prior to outputting <code>rmcup</code>), specify <code>nrrmc</code>. </p>
+<p>If the terminal has row or column absolute cursor addressing, these can be given as single parameter capabilities <code>hpa</code> (horizontal position absolute) and <code>vpa</code> (vertical position absolute). Sometimes these are shorter than the more general two parameter sequence (as with the hp2645) and can be used in preference to <code>cup</code>. If there are parameterized local motions (e.g., move <i>n</i> spaces to the right) these can be given as <code>cud</code>, <code>cub</code>, <code>cuf</code>, and <code>cuu</code> with a single parameter indicating how many spaces to move. These are primarily useful if the terminal does not have <code>cup</code>, such as the TEKTRONIX 4025. </p>
+<p>If the terminal needs to be in a special mode when running a program that uses these capabilities, the codes to enter and exit this mode can be given as <code>smcup</code> and <code>rmcup</code>. This arises, for example, from terminals like the Concept with more than one page of memory. If the terminal has only memory relative cursor addressing and not screen relative cursor addressing, a one screen-sized window must be fixed into the terminal for cursor addressing to work properly. This is also used for the TEKTRONIX 4025, where <code>smcup</code> sets the command character to be the one used by terminfo. If the <code>smcup</code> sequence will not restore the screen after an <code>rmcup</code> sequence is output (to the state prior to outputting <code>rmcup</code>), specify <code>nrrmc</code>. </p>
 <h3>Margins</h3>
-<p> SVr4 (and X/Open Curses) list several string capabilities for setting margins. Two were intended for use with terminals, and another six were intended for use with printers. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The two terminal capabilities assume that the terminal may have the capability of setting the left and/or right margin at the current cursor column position. <br />
+<p> SVr4 (and X/Open Curses) list several string capabilities for setting margins. Two were intended for use with terminals, and another six were intended for use with printers. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The two terminal capabilities assume that the terminal may have the capability of setting the left and/or right margin at the current cursor column position. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The printer capabilities assume that the printer may have two types of capability: </p>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 the ability to set a top and/or bottom margin using the current line position, and <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 the ability to set a top and/or bottom margin using the current line position, and <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 parameterized capabilities for setting the top, bottom, left, right margins given the number of rows or columns. </p>
  </dd></dl>
-<p>In practice, the categorization into ``terminal&#8217;&#8216; and ``printer&#8217;&#8216; is not suitable: <br />
+<p>In practice, the categorization into ``terminal&#8217;&#8216; and ``printer&#8217;&#8216; is not suitable: <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The AT&amp;T SVr4 terminal database uses <code>smgl</code> four times, for AT&amp;T hardware. </p>
 <dl>
-<dd> <p> Three of the four are printers. They lack the ability to set left/right margins by specifying the column. <br />
+<dd> <p> Three of the four are printers. They lack the ability to set left/right margins by specifying the column. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Other (non-AT&amp;T) terminals may support margins but using different assumptions from AT&amp;T. </p>
  </dd>
-<dd> <p> For instance, the DEC VT420 supports left/right margins, but only using a column parameter. As an added complication, the VT420 uses two settings to fully enable left/right margins (left/right margin mode, and origin mode). The former enables the margins, which causes printed text to wrap within margins, but the latter is needed to prevent cursor-addressing outside those margins. <br />
+<dd> <p> For instance, the DEC VT420 supports left/right margins, but only using a column parameter. As an added complication, the VT420 uses two settings to fully enable left/right margins (left/right margin mode, and origin mode). The former enables the margins, which causes printed text to wrap within margins, but the latter is needed to prevent cursor-addressing outside those margins. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Both DEC VT420 left/right margins are set with a single control sequence. If either is omitted, the corresponding margin is set to the left or right edge of the display (rather than leaving the margin unmodified). </p>
  </dd></dl>
 <p>These are the margin-related capabilities: <center> </p>
@@ -3818,19 +3818,19 @@ description: "terminfo – terminal capability database"
 </tr>
 </table>
 <p> </center> </p>
-<p>When writing an application that uses these string capabilities, the pairs should be first checked to see if each capability in the pair is set or only one is set: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If both <code>smglp</code> and <code>smgrp</code> are set, each is used with a single argument, <i>N</i>, that gives the column number of the left and right margin, respectively. <br />
+<p>When writing an application that uses these string capabilities, the pairs should be first checked to see if each capability in the pair is set or only one is set: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If both <code>smglp</code> and <code>smgrp</code> are set, each is used with a single argument, <i>N</i>, that gives the column number of the left and right margin, respectively. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If both <code>smgtp</code> and <code>smgbp</code> are set, each is used to set the top and bottom margin, respectively: </p>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>smgtp</code> is used with a single argument, <i>N</i>, the line number of the top margin. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>smgtp</code> is used with a single argument, <i>N</i>, the line number of the top margin. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <code>smgbp</code> is used with two arguments, <i>N</i> and <i>M</i>, that give the line number of the bottom margin, the first counting from the top of the page and the second counting from the bottom. This accommodates the two styles of specifying the bottom margin in different manufacturers&#8217; printers. </p>
  </dd></dl>
 <dl>
 <dd> <p> When designing a terminfo entry for a printer that has a settable bottom margin, only the first or second argument should be used, depending on the printer. When developing an application that uses <code>smgbp</code> to set the bottom margin, both arguments must be given. </p>
  </dd></dl>
-<p>Conversely, when only one capability in the pair is set: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If only one of <code>smglp</code> and <code>smgrp</code> is set, then it is used with two arguments, the column number of the left and right margins, in that order. <br />
+<p>Conversely, when only one capability in the pair is set: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If only one of <code>smglp</code> and <code>smgrp</code> is set, then it is used with two arguments, the column number of the left and right margins, in that order. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Likewise, if only one of <code>smgtp</code> and <code>smgbp</code> is set, then it is used with two arguments that give the top and bottom margins, in that order, counting from the top of the page. </p>
 <dl>
 <dd> <p> When designing a terminfo entry for a printer that requires setting both left and right or top and bottom margins simultaneously, only one capability in the pairs <code>smglp</code> and <code>smgrp</code> or <code>smgtp</code> and <code>smgbp</code> should be defined, leaving the other unset. </p>
@@ -4021,40 +4021,40 @@ description: "terminfo – terminal capability database"
 <h3>Keypad and Function Keys</h3>
 <p>If the terminal has a keypad that transmits codes when the keys are pressed, this information can be given. Note that it is not possible to handle terminals where the keypad only works in local (this applies, for example, to the unshifted HP 2621 keys). If the keypad can be set to transmit or not transmit, give these codes as <code>smkx</code> and <code>rmkx</code>. Otherwise the keypad is assumed to always transmit. </p>
 <p>The codes sent by the left arrow, right arrow, up arrow, down arrow, and home keys can be given as <code>kcub1, kcuf1, kcuu1, kcud1, </code>and <code> khome</code> respectively. If there are function keys such as f0, f1, ..., f10, the codes they send can be given as <code>kf0, kf1, ..., kf10</code>. If these keys have labels other than the default f0 through f10, the labels can be given as <code>lf0, lf1, ..., lf10</code>. </p>
-<p>The codes transmitted by certain other special keys can be given: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kll</code> (home down), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kbs</code> (backspace), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>ktbc</code> (clear all tabs), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kctab</code> (clear the tab stop in this column), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kclr</code> (clear screen or erase key), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kdch1</code> (delete character), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kdl1</code> (delete line), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>krmir</code> (exit insert mode), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kel</code> (clear to end of line), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>ked</code> (clear to end of screen), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kich1</code> (insert character or enter insert mode), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kil1</code> (insert line), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>knp</code> (next page), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kpp</code> (previous page), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kind</code> (scroll forward/down), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kri</code> (scroll backward/up), <br />
+<p>The codes transmitted by certain other special keys can be given: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kll</code> (home down), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kbs</code> (backspace), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>ktbc</code> (clear all tabs), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kctab</code> (clear the tab stop in this column), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kclr</code> (clear screen or erase key), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kdch1</code> (delete character), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kdl1</code> (delete line), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>krmir</code> (exit insert mode), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kel</code> (clear to end of line), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>ked</code> (clear to end of screen), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kich1</code> (insert character or enter insert mode), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kil1</code> (insert line), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>knp</code> (next page), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kpp</code> (previous page), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kind</code> (scroll forward/down), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>kri</code> (scroll backward/up), <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <code>khts</code> (set a tab stop in this column). </p>
 <p>In addition, if the keypad has a 3 by 3 array of keys including the four arrow keys, the other five keys can be given as <code>ka1</code>, <code>ka3</code>, <code>kb2</code>, <code>kc1</code>, and <code>kc3</code>. These keys are useful when the effects of a 3 by 3 directional pad are needed. </p>
 <p>Strings to program function keys can be given as <code>pfkey</code>, <code>pfloc</code>, and <code>pfx</code>. A string to program screen labels should be specified as <code>pln</code>. Each of these strings takes two parameters: the function key number to program (from 0 to 10) and the string to program it with. Function key numbers out of this range may program undefined keys in a terminal dependent manner. The difference between the capabilities is that <code>pfkey</code> causes pressing the given key to be the same as the user typing the given string; <code>pfloc</code> causes the string to be executed by the terminal in local; and <code>pfx</code> causes the string to be transmitted to the computer. </p>
 <p>The capabilities <code>nlab</code>, <code>lw</code> and <code>lh</code> define the number of programmable screen labels and their width and height. If there are commands to turn the labels on and off, give them in <code>smln</code> and <code>rmln</code>. <code>smln</code> is normally output after one or more pln sequences to make sure that the change becomes visible. </p>
 <h3>Tabs and Initialization</h3>
-<p>A few capabilities are used only for tabs: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the terminal has hardware tabs, the command to advance to the next tab stop can be given as <code>ht</code> (usually control/I). <br />
+<p>A few capabilities are used only for tabs: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the terminal has hardware tabs, the command to advance to the next tab stop can be given as <code>ht</code> (usually control/I). <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 A ``back-tab&#8217;&#8216; command which moves leftward to the preceding tab stop can be given as <code>cbt</code>. </p>
 <dl>
-<dd> <p> By convention, if the teletype modes indicate that tabs are being expanded by the computer rather than being sent to the terminal, programs should not use <code>ht</code> or <code>cbt</code> even if they are present, since the user may not have the tab stops properly set. <br />
+<dd> <p> By convention, if the teletype modes indicate that tabs are being expanded by the computer rather than being sent to the terminal, programs should not use <code>ht</code> or <code>cbt</code> even if they are present, since the user may not have the tab stops properly set. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If the terminal has hardware tabs which are initially set every <i>n</i> spaces when the terminal is powered up, the numeric parameter <code>it</code> is given, showing the number of spaces the tabs are set to. </p>
  </dd>
 <dd> <p> The <code>it</code> capability is normally used by the <code>tset</code> command to determine whether to set the mode for hardware tab expansion, and whether to set the tab stops. If the terminal has tab stops that can be saved in non-volatile memory, the terminfo description can assume that they are properly set. </p>
  </dd></dl>
-<p>Other capabilities include <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>is1</code>, <code>is2</code>, and <code>is3</code>, initialization strings for the terminal, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>iprog</code>, the path name of a program to be run to initialize the terminal, <br />
+<p>Other capabilities include <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>is1</code>, <code>is2</code>, and <code>is3</code>, initialization strings for the terminal, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>iprog</code>, the path name of a program to be run to initialize the terminal, <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 and <code>if</code>, the name of a file containing long initialization strings. </p>
 <p>These strings are expected to set the terminal into modes consistent with the rest of the terminfo description. They are normally sent to the terminal, by the <i>init</i> option of the <code>tput</code> program, each time the user logs in. They will be printed in the following order: </p>
 <dl>
@@ -4064,13 +4064,13 @@ description: "terminfo – terminal capability database"
 <dd> <p> <code>iprog</code> </p>
  </dd>
 <dt>output</dt>
-<dd> <p> <br />
- <code>is1</code> and <br />
+<dd> <p> <br/>
+ <code>is1</code> and <br/>
  <code>is2</code> </p>
  </dd>
 <dt>set the margins using</dt>
-<dd> <p> <code>mgc</code> or <br />
- <code>smglp</code> and <code>smgrp</code> or <br />
+<dd> <p> <code>mgc</code> or <br/>
+ <code>smglp</code> and <code>smgrp</code> or <br/>
  <code>smgl</code> and <code>smgr</code> </p>
  </dd>
 <dt>set tabs using</dt>
@@ -4088,11 +4088,11 @@ description: "terminfo – terminal capability database"
 <p>The <code>reset</code> program writes strings including <code>iprog</code>, etc., in the same order as the <i>init</i> program, using <code>rs1</code>, etc., instead of <code>is1</code>, etc. If any of <code>rs1</code>, <code>rs2</code>, <code>rs3</code>, or <code>rf</code> reset capability strings are missing, the <code>reset</code> program falls back upon the corresponding initialization capability string. </p>
 <p>If there are commands to set and clear tab stops, they can be given as <code>tbc</code> (clear all tab stops) and <code>hts</code> (set a tab stop in the current column of every row). If a more complex sequence is needed to set the tabs than can be described by this, the sequence can be placed in <code>is2</code> or <code>if</code>. </p>
 <p>The <code>tput reset</code> command uses the same capability strings as the <code>reset</code> command, although the two programs (<code>tput</code> and <code>reset</code>) provide different command-line options. </p>
-<p>In practice, these terminfo capabilities are not often used in initialization of tabs (though they are required for the <code>tabs</code> program): <br />
+<p>In practice, these terminfo capabilities are not often used in initialization of tabs (though they are required for the <code>tabs</code> program): <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Almost all hardware terminals (at least those which supported tabs) initialized those to every <i>eight</i> columns: </p>
 <dl>
-<dd> <p> The only exception was the AT&amp;T 2300 series, which set tabs to every <i>five</i> columns. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 In particular, developers of the hardware terminals which are commonly used as models for modern terminal emulators provided documentation demonstrating that <i>eight</i> columns were the standard. <br />
+<dd> <p> The only exception was the AT&amp;T 2300 series, which set tabs to every <i>five</i> columns. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 In particular, developers of the hardware terminals which are commonly used as models for modern terminal emulators provided documentation demonstrating that <i>eight</i> columns were the standard. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Because of this, the terminal initialization programs <code>tput</code> and <code>tset</code> use the <code>tbc</code> (<code>clear_all_tabs</code>) and <code>hts</code> (<code>set_tab</code>) capabilities directly only when the <code>it</code> (<code>init_tabs</code>) capability is set to a value other than <i>eight</i>. </p>
  </dd></dl>
 <h3>Delays and Padding</h3>
@@ -4390,9 +4390,9 @@ description: "terminfo – terminal capability database"
 </tr>
 </table>
 <p> </center> </p>
-<p>A few notes apply to the table itself: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 X/Open Curses incorrectly states that the mapping for <i>lantern</i> is uppercase ``I&#8217;&#8216; although Unix implementations use the lowercase ``i&#8217;&#8216; mapping. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The DEC VT100 implemented graphics using the alternate character set feature, temporarily switching <i>modes</i> and sending characters in the range 0x60 (96) to 0x7e (126) (the <code>acsc Value</code> column in the table). <br />
+<p>A few notes apply to the table itself: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 X/Open Curses incorrectly states that the mapping for <i>lantern</i> is uppercase ``I&#8217;&#8216; although Unix implementations use the lowercase ``i&#8217;&#8216; mapping. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The DEC VT100 implemented graphics using the alternate character set feature, temporarily switching <i>modes</i> and sending characters in the range 0x60 (96) to 0x7e (126) (the <code>acsc Value</code> column in the table). <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The AT&amp;T terminal added graphics characters outside that range. </p>
 <dl>
 <dd> <p> Some of the characters within the range do not match the VT100; presumably they were used in the AT&amp;T terminal: <i>board of squares</i> replaces the VT100 <i>newline</i> symbol, while <i>lantern symbol</i> replaces the VT100 <i>vertical tab</i> symbol. The other VT100 symbols for control characters (<i>horizontal tab</i>, <i>carriage return</i> and <i>line-feed</i>) are not (re)used in curses. </p>
@@ -4400,12 +4400,12 @@ description: "terminfo – terminal capability database"
 <p>The best way to define a new device&#8217;s graphics set is to add a column to a copy of this table for your terminal, giving the character which (when emitted between <code>smacs</code>/<code>rmacs</code> switches) will be rendered as the corresponding graphic. Then read off the VT100/your terminal character pairs right to left in sequence; these become the ACSC string. </p>
 <h3>Color Handling</h3>
 <p>The curses library functions <code>init_pair</code> and <code>init_color</code> manipulate the <i>color pairs</i> and <i>color values</i> discussed in this section (see <code>curs_color</code>(3X) for details on these and related functions). </p>
-<p>Most color terminals are either ``Tektronix-like&#8217;&#8216; or ``HP-like&#8217;&#8216;: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Tektronix-like terminals have a predefined set of <i>N</i> colors (where <i>N</i> is usually 8), and can set character-cell foreground and background characters independently, mixing them into <i>N</i>&nbsp;*&nbsp;<i>N</i> color-pairs. <br />
+<p>Most color terminals are either ``Tektronix-like&#8217;&#8216; or ``HP-like&#8217;&#8216;: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Tektronix-like terminals have a predefined set of <i>N</i> colors (where <i>N</i> is usually 8), and can set character-cell foreground and background characters independently, mixing them into <i>N</i>&nbsp;*&nbsp;<i>N</i> color-pairs. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 On HP-like terminals, the user must set each color pair up separately (foreground and background are not independently settable). Up to <i>M</i> color-pairs may be set up from 2*<i>M</i> different colors. ANSI-compatible terminals are Tektronix-like. </p>
 <p>Some basic color capabilities are independent of the color method. The numeric capabilities <code>colors</code> and <code>pairs</code> specify the maximum numbers of colors and color-pairs that can be displayed simultaneously. The <code>op</code> (original pair) string resets foreground and background colors to their default values for the terminal. The <code>oc</code> string resets all colors or color-pairs to their default values for the terminal. Some terminals (including many PC terminal emulators) erase screen areas with the current background color rather than the power-up default background; these should have the boolean capability <code>bce</code>. </p>
-<p>While the curses library works with <i>color pairs</i> (reflecting the inability of some devices to set foreground and background colors independently), there are separate capabilities for setting these features: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 To change the current foreground or background color on a Tektronix-type terminal, use <code>setaf</code> (set ANSI foreground) and <code>setab</code> (set ANSI background) or <code>setf</code> (set foreground) and <code>setb</code> (set background). These take one parameter, the color number. The SVr4 documentation describes only <code>setaf</code>/<code>setab</code>; the XPG4 draft says that &quot;If the terminal supports ANSI escape sequences to set background and foreground, they should be coded as <code>setaf</code> and <code>setab</code>, respectively. <br />
+<p>While the curses library works with <i>color pairs</i> (reflecting the inability of some devices to set foreground and background colors independently), there are separate capabilities for setting these features: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 To change the current foreground or background color on a Tektronix-type terminal, use <code>setaf</code> (set ANSI foreground) and <code>setab</code> (set ANSI background) or <code>setf</code> (set foreground) and <code>setb</code> (set background). These take one parameter, the color number. The SVr4 documentation describes only <code>setaf</code>/<code>setab</code>; the XPG4 draft says that &quot;If the terminal supports ANSI escape sequences to set background and foreground, they should be coded as <code>setaf</code> and <code>setab</code>, respectively. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If the terminal supports other escape sequences to set background and foreground, they should be coded as <code>setf</code> and <code>setb</code>, respectively. The <code>vidputs</code> and the <code>refresh</code>(3X) functions use the <code>setaf</code> and <code>setab</code> capabilities if they are defined. </p>
 <p>The <code>setaf</code>/<code>setab</code> and <code>setf</code>/<code>setb</code> capabilities take a single numeric argument each. Argument values 0-7 of <code>setaf</code>/<code>setab</code> are portably defined as follows (the middle column is the symbolic #define available in the header for the <code>curses</code> or <code>ncurses</code> libraries). The terminal hardware is free to map these as it likes, but the RGB values indicate normal locations in color space. </p>
 <p> <center> </p>
@@ -4544,8 +4544,8 @@ description: "terminfo – terminal capability database"
 <p> </center> </p>
 <p>It is important to not confuse the two sets of color capabilities; otherwise red/blue will be interchanged on the display. </p>
 <p>On an HP-like terminal, use <code>scp</code> with a color-pair number parameter to set which color pair is current. </p>
-<p>Some terminals allow the <i>color values</i> to be modified: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 On a Tektronix-like terminal, the capability <code>ccc</code> may be present to indicate that colors can be modified. If so, the <code>initc</code> capability will take a color number (0 to <code>colors</code> - 1)and three more parameters which describe the color. These three parameters default to being interpreted as RGB (Red, Green, Blue) values. If the boolean capability <code>hls</code> is present, they are instead as HLS (Hue, Lightness, Saturation) indices. The ranges are terminal-dependent. <br />
+<p>Some terminals allow the <i>color values</i> to be modified: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 On a Tektronix-like terminal, the capability <code>ccc</code> may be present to indicate that colors can be modified. If so, the <code>initc</code> capability will take a color number (0 to <code>colors</code> - 1)and three more parameters which describe the color. These three parameters default to being interpreted as RGB (Red, Green, Blue) values. If the boolean capability <code>hls</code> is present, they are instead as HLS (Hue, Lightness, Saturation) indices. The ranges are terminal-dependent. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 On an HP-like terminal, <code>initp</code> may give a capability for changing a color-pair value. It will take seven parameters; a color-pair number (0 to <code>max_pairs</code> - 1), and two triples describing first background and then foreground colors. These parameters must be (Red, Green, Blue) or (Hue, Lightness, Saturation) depending on <code>hls</code>. </p>
 <p>On some color terminals, colors collide with highlights. You can register these collisions with the <code>ncv</code> capability. This is a bit-mask of attributes not to be used when colors are enabled. The correspondence with the attributes understood by <code>curses</code> is as follows: </p>
 <p> <center> </p>
@@ -4677,11 +4677,11 @@ description: "terminfo – terminal capability database"
 <p> If the terminal requires other than a null (zero) character as a pad, then this can be given as pad. Only the first character of the pad string is used. If the terminal does not have a pad character, specify npc. Note that ncurses implements the termcap-compatible <code>PC</code> variable; though the application may set this value to something other than a null, ncurses will test <code>npc</code> first and use napms if the terminal has no pad character. </p>
 <p>If the terminal can move up or down half a line, this can be indicated with <code>hu</code> (half-line up) and <code>hd</code> (half-line down). This is primarily useful for superscripts and subscripts on hard-copy terminals. If a hard-copy terminal can eject to the next page (form feed), give this as <code>ff</code> (usually control/L). </p>
 <p>If there is a command to repeat a given character a given number of times (to save time transmitting a large number of identical characters) this can be indicated with the parameterized string <code>rep</code>. The first parameter is the character to be repeated and the second is the number of times to repeat it. Thus, tparm(repeat_char, &#8216;x&#8217;, 10) is the same as ``xxxxxxxxxx&#8217;&#8216;. </p>
-<p>If the terminal has a settable command character, such as the <font SIZE="-1">TEKTRONIX</font> 4025, this can be indicated with <code>cmdch</code>. A prototype command character is chosen which is used in all capabilities. This character is given in the <code>cmdch</code> capability to identify it. The following convention is supported on some UNIX systems: The environment is to be searched for a <code>CC</code> variable, and if found, all occurrences of the prototype character are replaced with the character in the environment variable. </p>
+<p>If the terminal has a settable command character, such as the TEKTRONIX 4025, this can be indicated with <code>cmdch</code>. A prototype command character is chosen which is used in all capabilities. This character is given in the <code>cmdch</code> capability to identify it. The following convention is supported on some UNIX systems: The environment is to be searched for a <code>CC</code> variable, and if found, all occurrences of the prototype character are replaced with the character in the environment variable. </p>
 <p>Terminal descriptions that do not represent a specific kind of known terminal, such as <i>switch</i>, <i>dialup</i>, <i>patch</i>, and <i>network</i>, should include the <code>gn</code> (generic) capability so that programs can complain that they do not know how to talk to the terminal. (This capability does not apply to <i>virtual</i> terminal descriptions for which the escape sequences are known.) </p>
 <p>If the terminal has a ``meta key&#8217;&#8216; which acts as a shift key, setting the 8th bit of any character transmitted, this fact can be indicated with <code>km</code>. Otherwise, software will assume that the 8th bit is parity and it will usually be cleared. If strings exist to turn this ``meta mode&#8217;&#8216; on and off, they can be given as <code>smm</code> and <code>rmm</code>. </p>
 <p>If the terminal has more lines of memory than will fit on the screen at once, the number of lines of memory can be indicated with <code>lm</code>. A value of <code>lm</code>#0 indicates that the number of lines is not fixed, but that there is still more memory than fits on the screen. </p>
-<p>If the terminal is one of those supported by the <font SIZE="-1">UNIX</font> virtual terminal protocol, the terminal number can be given as <code>vt</code>. </p>
+<p>If the terminal is one of those supported by the UNIX virtual terminal protocol, the terminal number can be given as <code>vt</code>. </p>
 <p>Media copy strings which control an auxiliary printer connected to the terminal can be given as <code>mc0</code>: print the contents of the screen, <code>mc4</code>: turn off the printer, and <code>mc5</code>: turn on the printer. When the printer is on, all text sent to the terminal will be sent to the printer. It is undefined whether the text is also displayed on the terminal screen when the printer is on. A variation <code>mc5p</code> takes one parameter, and leaves the printer on for as many characters as the value of the parameter, then turns the printer off. The parameter should not exceed 255. All text, including <code>mc4</code>, is transparently passed to the printer while an <code>mc5p</code> is in effect. </p>
 <h3>Glitches and Braindamage</h3>
 <p>Hazeltine terminals, which do not allow ``~&#8216;&#8216; characters to be displayed should indicate <code>hz</code>. </p>
@@ -4695,10 +4695,10 @@ description: "terminfo – terminal capability database"
 <p>The man pages for 4.3BSD and older versions of <code>tgetent</code> instruct the user to allocate a 1024-byte buffer for the termcap entry. The entry gets null-terminated by the termcap library, so that makes the maximum safe length for a termcap entry 1k-1 (1023) bytes. Depending on what the application and the termcap library being used does, and where in the termcap file the terminal type that <code>tgetent</code> is searching for is, several bad things can happen. </p>
 <p>Some termcap libraries print a warning message or exit if they find an entry that&#8217;s longer than 1023 bytes; others do not; others truncate the entries to 1023 bytes. Some application programs allocate more than the recommended 1K for the termcap entry; others do not. </p>
 <p>Each termcap entry has two important sizes associated with it: before ``tc&#8217;&#8216; expansion, and after ``tc&#8217;&#8216; expansion. ``tc&#8217;&#8216; is the capability that tacks on another termcap entry to the end of the current one, to add on its capabilities. If a termcap entry does not use the ``tc&#8217;&#8216; capability, then of course the two lengths are the same. </p>
-<p>The ``before tc expansion&#8217;&#8216; length is the most important one, because it affects more than just users of that particular terminal. This is the length of the entry as it exists in /etc/termcap, minus the backslash-newline pairs, which <code>tgetent</code> strips out while reading it. Some termcap libraries strip off the final newline, too (GNU termcap does not). Now suppose: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 a termcap entry before expansion is more than 1023 bytes long, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 and the application has only allocated a 1k buffer, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 and the termcap library (like the one in BSD/OS 1.1 and GNU) reads the whole entry into the buffer, no matter what its length, to see if it is the entry it wants, <br />
+<p>The ``before tc expansion&#8217;&#8216; length is the most important one, because it affects more than just users of that particular terminal. This is the length of the entry as it exists in /etc/termcap, minus the backslash-newline pairs, which <code>tgetent</code> strips out while reading it. Some termcap libraries strip off the final newline, too (GNU termcap does not). Now suppose: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 a termcap entry before expansion is more than 1023 bytes long, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 and the application has only allocated a 1k buffer, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 and the termcap library (like the one in BSD/OS 1.1 and GNU) reads the whole entry into the buffer, no matter what its length, to see if it is the entry it wants, <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 and <code>tgetent</code> is searching for a terminal type that either is the long entry, appears in the termcap file after the long entry, or does not appear in the file at all (so that <code>tgetent</code> has to search the whole termcap file). </p>
 <p>Then <code>tgetent</code> will overwrite memory, perhaps its stack, and probably core dump the program. Programs like telnet are particularly vulnerable; modern telnets pass along values like the terminal type automatically. The results are almost as undesirable with a termcap library, like SunOS 4.1.3 and Ultrix 4.4, that prints warning messages when it reads an overly long termcap entry. If a termcap library truncates long entries, like OSF/1 3.0, it is immune to dying here but will return incorrect data for the terminal. </p>
 <p>The ``after tc expansion&#8217;&#8216; length will have a similar effect to the above, but only for people who actually set TERM to that terminal type, since <code>tgetent</code> only does ``tc&#8217;&#8216; expansion once it is found the terminal type it was looking for, not while searching. </p>
@@ -4714,12 +4714,12 @@ description: "terminfo – terminal capability database"
 <p>The parameter substitutions for <code>set_clock</code> and <code>display_clock</code> are not documented in SVr4 or the XSI Curses standard. They are deduced from the documentation for the AT&amp;T 505 terminal. </p>
 <p>Be careful assigning the <code>kmous</code> capability. The <code>ncurses</code> library wants to interpret it as <code>KEY_MOUSE</code>, for use by terminals and emulators like xterm that can return mouse-tracking information in the keyboard-input stream. </p>
 <p>X/Open Curses does not mention italics. Portable applications must assume that numeric capabilities are signed 16-bit values. This includes the <i>no_color_video</i> (ncv) capability. The 32768 mask value used for italics with ncv can be confused with an absent or cancelled ncv. If italics should work with colors, then the ncv value must be specified, even if it is zero. </p>
-<p>Different commercial ports of terminfo and curses support different subsets of the XSI Curses standard and (in some cases) different extension sets. Here is a summary, accurate as of October 1995: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>SVR4, Solaris, ncurses</code> -- These support all SVr4 capabilities. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>SGI</code> -- Supports the SVr4 set, adds one undocumented extended string capability (<code>set_pglen</code>). <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>SVr1, Ultrix</code> -- These support a restricted subset of terminfo capabilities. The booleans end with <code>xon_xoff</code>; the numerics with <code>width_status_line</code>; and the strings with <code>prtr_non</code>. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>HP/UX</code> -- Supports the SVr1 subset, plus the SVr[234] numerics <code>num_labels</code>, <code>label_height</code>, <code>label_width</code>, plus function keys 11 through 63, plus <code>plab_norm</code>, <code>label_on</code>, and <code>label_off</code>, plus some incompatible extensions in the string table. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>AIX</code> -- Supports the SVr1 subset, plus function keys 11 through 63, plus a number of incompatible string table extensions. <br />
+<p>Different commercial ports of terminfo and curses support different subsets of the XSI Curses standard and (in some cases) different extension sets. Here is a summary, accurate as of October 1995: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>SVR4, Solaris, ncurses</code> -- These support all SVr4 capabilities. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>SGI</code> -- Supports the SVr4 set, adds one undocumented extended string capability (<code>set_pglen</code>). <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>SVr1, Ultrix</code> -- These support a restricted subset of terminfo capabilities. The booleans end with <code>xon_xoff</code>; the numerics with <code>width_status_line</code>; and the strings with <code>prtr_non</code>. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>HP/UX</code> -- Supports the SVr1 subset, plus the SVr[234] numerics <code>num_labels</code>, <code>label_height</code>, <code>label_width</code>, plus function keys 11 through 63, plus <code>plab_norm</code>, <code>label_on</code>, and <code>label_off</code>, plus some incompatible extensions in the string table. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>AIX</code> -- Supports the SVr1 subset, plus function keys 11 through 63, plus a number of incompatible string table extensions. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <code>OSF</code> -- Supports both the SVr4 set and the AIX extensions.  </p>
 <h2>FILES</h2>
 <dl>

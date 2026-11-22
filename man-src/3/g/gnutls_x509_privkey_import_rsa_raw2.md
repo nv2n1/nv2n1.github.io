@@ -33,15 +33,15 @@ description: "gnutls_x509_privkey_import_rsa_raw2 – API function"
 <dt>const gnutls_datum_t * e2</dt>
 <dd> holds e2 = d mod (q-1) (optional)</dd></dl>
 <h2>DESCRIPTION</h2>
-<p> This function will convert the given RSA raw parameters to the native <code>gnutls_x509_privkey_t</code> format. The output will be stored in<br />
+<p> This function will convert the given RSA raw parameters to the native <code>gnutls_x509_privkey_t</code> format. The output will be stored in<br/>
 &nbsp;<wbr><i>key</i>&nbsp;<wbr>.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br/>
  Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>

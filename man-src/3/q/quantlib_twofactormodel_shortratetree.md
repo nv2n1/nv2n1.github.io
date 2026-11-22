@@ -12,8 +12,8 @@ description: "QuantLib::TwoFactorModel::ShortRateTree – Recombining two-dimens
 <p>#include &lt;ql/models/shortrate/twofactormodel.hpp&gt; </p>
 <p> Inherits <code>TreeLattice2D&lt; TwoFactorModel::ShortRateTree, TrinomialTree &gt;</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>ShortRateTree</code> (const boost::shared_ptr&lt; <code>TrinomialTree</code> &gt; &amp;tree1, const boost::shared_ptr&lt; <code>TrinomialTree</code> &gt; &amp;tree2, const boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; &amp;dynamics)<br />
- <i>Plain tree build-up from short-rate dynamics. </i><br />
+<p><code>ShortRateTree</code> (const boost::shared_ptr&lt; <code>TrinomialTree</code> &gt; &amp;tree1, const boost::shared_ptr&lt; <code>TrinomialTree</code> &gt; &amp;tree2, const boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; &amp;dynamics)<br/>
+ <i>Plain tree build-up from short-rate dynamics. </i><br/>
  <code>DiscountFactor</code> <code>discount</code> (Size i, Size index) const </p>
 <h2>Detailed Description</h2>
 <p>Recombining two-dimensional tree discretizing the state variable. </p>

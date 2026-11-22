@@ -14,12 +14,12 @@ description: "mimetype – Determine file type"
 <h2>DESCRIPTION</h2>
 <p> This script tries to determine the mime type of a file using the Shared MIME-info database. It is intended as a kind of <i><a href="/docs/linux/man/1-file/">file</a>(1)</i> work-alike, but uses mimetypes instead of descriptions. </p>
 <p> If one symlinks the <i>file</i> command to <i>mimetype</i> it will behave a little more compatible, see &#8220;&#8211;file-compat&#8221;. Commandline options to specify alternative magic files are not implemented the same because of the conflicting data formats. Also the wording of the descriptions will differ. </p>
-<p> For naming switches I followed the manpage of <i><a href="/docs/linux/man/1-file/">file</a></i>(1) version 4.02 when possible. They seem to differ completely from the spec in the &#8216;utilities&#8217; chapter of <font SIZE="-1">IEEE</font> Std 1003.1-2001 (<font SIZE="-1">POSIX</font>).</p>
+<p> For naming switches I followed the manpage of <i><a href="/docs/linux/man/1-file/">file</a></i>(1) version 4.02 when possible. They seem to differ completely from the spec in the &#8216;utilities&#8217; chapter of IEEE Std 1003.1-2001 (POSIX).</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-a</code>, <code>&#8211;all</code></dt>
 <dd> Show output of all rules that match the file. </dd>
-<p> <font SIZE="-1">TODO:</font> this method now just returns one match for each method (globs, magic, etc.).</p>
+<p> TODO: this method now just returns one match for each method (globs, magic, etc.).</p>
 <dt><code>-b</code>, <code>&#8211;brief</code></dt>
 <dd> Do not prepend filenames to output lines (brief mode).</dd>
 <dt><code>&#8211;database</code>=<i>mimedir</i>:<i>mimedir</i>:&#8230;</dt>
@@ -58,24 +58,24 @@ description: "mimetype – Determine file type"
 </pre>
 <p> Alignment is not available when using this, you need to post-process the output to do that.</p>
 <dt><code>&#8211;stdin</code></dt>
-<dd> Determine type of content from <font SIZE="-1">STDIN,</font> less powerful then normal file checking because it only uses magic typing. This will happen also if the <font SIZE="-1">STDIN</font> filehandle is a pipe. </dd>
+<dd> Determine type of content from STDIN, less powerful then normal file checking because it only uses magic typing. This will happen also if the STDIN filehandle is a pipe. </dd>
 <p> To use this option IO::Scalar needs to be installed.</p>
 <dt><code>-v</code>, <code>&#8211;version</code></dt>
 <dd> Print the version of the program and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1">XDG_DATA_HOME</font></dt>
+<dt>XDG_DATA_HOME</dt>
 <dd>
-</dd><dt><font SIZE="-1">XDG_DATA_DIRS</font></dt>
+</dd><dt>XDG_DATA_DIRS</dt>
 <dd> These variables can list base directories to search for data files. The shared mime-info will be expected in the &#8220;mime&#8221; sub directory of one of these directories. If these are not set, there will be searched for the following directories: </dd>
 <pre>
         $HOME/.local/share/mime
         /usr/local/share/mime
         /usr/share/mime
 </pre>
-<p> See also the &#8220;<font SIZE="-1">XDG</font> Base Directory Specification&#8221; &lt;<a rel="nofollow" href="http://freedesktop.org/Standards/basedir-spec">http://freedesktop.org/Standards/basedir-spec</a>&gt;</dl>
+<p> See also the &#8220;XDG Base Directory Specification&#8221; &lt;<a rel="nofollow" href="http://freedesktop.org/Standards/basedir-spec">http://freedesktop.org/Standards/basedir-spec</a>&gt;</dl>
 <h2>FILES</h2>
-<p> The base dir for all data files is determined by two environment variables, see &#8220;<font SIZE="-1">ENVIRONMENT&#8221;</font>.</p>
+<p> The base dir for all data files is determined by two environment variables, see &#8220;ENVIRONMENT&#8221;.</p>
 <dl>
 <dt><i>BASE/mime/packages/SOURCE.xml</i></dt>
 <dd> All other files are compiled from these source files. To re-compile them use <a href="/docs/linux/man/1-update-mime-database/">update-mime-database</a><code>(1)</code>.</dd>
@@ -97,6 +97,6 @@ description: "mimetype – Determine file type"
 <p> Jaap Karrssenberg &lt;pardus [at] cpan.org&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2003, 2012 Jaap G Karssenberg. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font></p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-file/">file</a></i>(1), <i><a href="/docs/linux/man/1-update-mime-database/">update-mime-database</a></i>(1), <i>File::MimeInfo</i>(3), &lt;<a rel="nofollow" href="http://freedesktop.org/Software/shared-mime-info">http://freedesktop.org/Software/shared-mime-info</a>&gt; </p>

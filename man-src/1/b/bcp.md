@@ -10,9 +10,9 @@ description: "bcp – extract subsets of Boost"
 
 <p> bcp &#8211; extract subsets of Boost </p>
 <h2>SYNOPSIS</h2>
-<p> <code>bcp</code> <code>&#8211;list</code> [<i>options</i>] <i>module-list</i><br />
- <code>bcp</code> [<i>options</i>] <i>module-list output-path</i><br />
- <code>bcp</code> <code>&#8211;report</code> [<i>options</i>] <i>module-list html-file</i><br />
+<p> <code>bcp</code> <code>&#8211;list</code> [<i>options</i>] <i>module-list</i><br/>
+ <code>bcp</code> [<i>options</i>] <i>module-list output-path</i><br/>
+ <code>bcp</code> <code>&#8211;report</code> [<i>options</i>] <i>module-list html-file</i><br/>
  <code>bcp</code> <code>&#8211;help</code></p>
 <h2>DESCRIPTION</h2>
 <p> Copies all the files, including dependencies, found in <i>module-list</i> to <i>output-path</i>. <i>output-path</i> must be an existing path. </p>

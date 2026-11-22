@@ -22,9 +22,9 @@ tarantool- a Lua application server and a NoSQL database
  Its key properties include:
 <dl>
 <dt>&bull;
-</dt><dd> Licence: simplified <font SIZE="-1">BSD</font>
+</dt><dd> Licence: simplified BSD
 </dd><dt>&bull;
-</dt><dd> All data is maintained in <font SIZE="-1">RAM</font>
+</dt><dd> All data is maintained in RAM
 </dd><dt>&bull;
 </dt><dd> Data persistence is implemented using Write Ahead Log and snapshotting
 </dd><dt>&bull;
@@ -32,7 +32,7 @@ tarantool- a Lua application server and a NoSQL database
 </dd><dt>&bull;
 </dt><dd> Uses coroutines and asynchronous I/O to implement high-performance lock-free access to data
 </dd><dt>&bull;
-</dt><dd> Available on Linux, FreeBSD, Mac <font SIZE="-1">OS X</font>
+</dt><dd> Available on Linux, FreeBSD, Mac OS X
 </dd><dt>&bull;
 </dt><dd> Stored procedures in Lua are supported.</dd></dl>
 

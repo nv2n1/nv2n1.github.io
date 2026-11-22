@@ -10,7 +10,7 @@ description: "dlaqr4.f –"
 <p>dlaqr4.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlaqr4</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, WR, WI, ILOZ, IHIZ, Z, LDZ, WORK, LWORK, INFO)<br />
+<p>subroutine <code>dlaqr4</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, WR, WI, ILOZ, IHIZ, Z, LDZ, WORK, LWORK, INFO)<br/>
  <i></i><code>DLAQR4</code> computes the eigenvalues of a Hessenberg matrix, and optionally the matrices from the Schur decomposition.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaqr4 (logicalWANTT, logicalWANTZ, integerN, integerILO, integerIHI, double precision, dimension( ldh, * )H, integerLDH, double precision, dimension( * )WR, double precision, dimension( * )WI, integerILOZ, integerIHIZ, double precision, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

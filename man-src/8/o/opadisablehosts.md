@@ -25,5 +25,5 @@ description: "opadisablehosts"
 <dd>Information about the links disabled is written to a CSV file. By default, this file is named /opa/disabled:hfi:port.csv where the hfi:port part of the file name is replaced by the HFI number and the port number being operated on (such as 0:0 or 1:2). This CSV file can be used as input to opaenableports.</dd>
 <dd>The list is of the form: NodeGUID;PortNum;NodeType;NodeDesc;NodeGUID; PortNum;NodeType;NodeDesc;Reason For each listed link, the switch port closer to this is the one that has been disabled.</dd></dl>
 <h2>Examples</h2>
-<p>opadisablehosts &#8216;bad DRAM&#8217; compute001 compute045<br />
+<p>opadisablehosts &#8216;bad DRAM&#8217; compute001 compute045<br/>
  opadisablehosts -h 1 -p 2 &#8216;crashed&#8217; compute001 compute045 </p>

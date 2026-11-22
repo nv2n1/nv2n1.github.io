@@ -10,7 +10,7 @@ description: "stpmqrt.f –"
 <p>stpmqrt.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>stpmqrt</code> (SIDE, TRANS, M, N, K, L, NB, V, LDV, T, LDT, A, LDA, B, LDB, WORK, INFO)<br />
+<p>subroutine <code>stpmqrt</code> (SIDE, TRANS, M, N, K, L, NB, V, LDV, T, LDT, A, LDA, B, LDB, WORK, INFO)<br/>
  <i></i><code>STPMQRT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stpmqrt (characterSIDE, characterTRANS, integerM, integerN, integerK, integerL, integerNB, real, dimension( ldv, * )V, integerLDV, real, dimension( ldt, * )T, integerLDT, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( * )WORK, integerINFO)</h3>

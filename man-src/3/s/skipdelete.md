@@ -16,7 +16,7 @@ description: "skipDelete – delete an item."
 void skipDelete(skipList list, UINT32 key);
 </pre>
 <h2>Arguments</h2>
-<p> list &#8211; list to delete item from.<br />
+<p> list &#8211; list to delete item from.<br/>
  key &#8211; key identifying value to delete. </p>
 <h2>Description</h2>
 <p> Delete the item associated with &lt;key&gt; from &lt;list&gt;. </p>

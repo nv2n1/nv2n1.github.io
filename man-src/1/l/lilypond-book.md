@@ -50,8 +50,8 @@ description: "lilypond-book – manual page for lilypond-book 2.12.2"
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-</dt><dd> <tt>$ lilypond-book --filter=&quot;tr '[a-z]' '[A-Z]'&quot; BOOK</tt><br />
- <tt>$ lilypond-book -F &quot;convert-ly --no-version --from=2.0.0 -&quot; BOOK</tt><br />
+</dt><dd> <tt>$ lilypond-book --filter=&quot;tr '[a-z]' '[A-Z]'&quot; BOOK</tt><br/>
+ <tt>$ lilypond-book -F &quot;convert-ly --no-version --from=2.0.0 -&quot; BOOK</tt><br/>
  <tt>$ lilypond-book --process='lilypond -I include' BOOK</tt></dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs via <a rel="nofollow" href="http://post.gmane.org/post.php?group=gmane.comp.gnu.lilypond.bugs">http://post.gmane.org/post.php?group=gmane.comp.gnu.lilypond.bugs</a></p>

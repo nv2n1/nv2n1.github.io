@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-tpmtoken_protect/"
 description: "tpmtoken_protect – encrypt or decrypt data using a symmetric key stored in the user’s TPM PKCS#11 data store"
 ---
 
-<p>TPM Management &#8211; tpmtoken_protect<br />
+<p>TPM Management &#8211; tpmtoken_protect<br/>
  </center></p>
 
 <p> tpmtoken_protect &#8211; encrypt or decrypt data using a symmetric key stored in the user&#8217;s TPM PKCS#11 data store </p>

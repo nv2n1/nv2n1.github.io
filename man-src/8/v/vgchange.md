@@ -61,8 +61,8 @@ description: "vgchange – Change volume group attributes"
 <h2>Description</h2>
 <p>vgchange changes VG attributes, changes LV activation in the kernel, and includes other utilities for VG maintenance.</p>
 <h2>Usage</h2>
-<p>Change a general VG attribute.<br />
- For options listed in parentheses, any one is<br />
+<p>Change a general VG attribute.<br/>
+ For options listed in parentheses, any one is<br/>
  required, after which the others are optional. </p>
 <p> <code>vgchange</code></p>
 <dl>
@@ -80,13 +80,13 @@ description: "vgchange – Change volume group attributes"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>&#8211;detachprofile</code>, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>&#8211;metadataprofile</code>&nbsp;<i>String</i>&nbsp;)</dl>
 <dl>
-<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br />
- [ <code>-f</code>|<code>&#8211;force</code> ]<br />
- [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;ignoremonitoring</code> ]<br />
- [ <code>&#8211;noudevsync</code> ]<br />
- [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br />
+<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br/>
+ [ <code>-f</code>|<code>&#8211;force</code> ]<br/>
+ [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;ignoremonitoring</code> ]<br/>
+ [ <code>&#8211;noudevsync</code> ]<br/>
+ [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>VG</i>|<i>Tag</i>|<i>Select</i> &#8230; ]</dd></dl>
@@ -94,15 +94,15 @@ description: "vgchange – Change volume group attributes"
 <p> Start or stop monitoring LVs from dmeventd. </p>
 <p> <code>vgchange</code> <code>&#8211;monitor</code> <code>y</code>|<code>n</code> </p>
 <dl>
-<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br />
- [ <code>-f</code>|<code>&#8211;force</code> ]<br />
- [ <code>&#8211;sysinit</code> ]<br />
- [ <code>&#8211;ignorelockingfailure</code> ]<br />
- [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;ignoremonitoring</code> ]<br />
- [ <code>&#8211;noudevsync</code> ]<br />
- [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br />
+<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br/>
+ [ <code>-f</code>|<code>&#8211;force</code> ]<br/>
+ [ <code>&#8211;sysinit</code> ]<br/>
+ [ <code>&#8211;ignorelockingfailure</code> ]<br/>
+ [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;ignoremonitoring</code> ]<br/>
+ [ <code>&#8211;noudevsync</code> ]<br/>
+ [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>VG</i>|<i>Tag</i>|<i>Select</i> &#8230; ]</dd></dl>
@@ -110,13 +110,13 @@ description: "vgchange – Change volume group attributes"
 <p> Start or stop processing LV conversions. </p>
 <p> <code>vgchange</code> <code>&#8211;poll</code> <code>y</code>|<code>n</code> </p>
 <dl>
-<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br />
- [ <code>-f</code>|<code>&#8211;force</code> ]<br />
- [ <code>&#8211;ignorelockingfailure</code> ]<br />
- [ <code>&#8211;ignoremonitoring</code> ]<br />
- [ <code>&#8211;noudevsync</code> ]<br />
- [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br />
+<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br/>
+ [ <code>-f</code>|<code>&#8211;force</code> ]<br/>
+ [ <code>&#8211;ignorelockingfailure</code> ]<br/>
+ [ <code>&#8211;ignoremonitoring</code> ]<br/>
+ [ <code>&#8211;noudevsync</code> ]<br/>
+ [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>VG</i>|<i>Tag</i>|<i>Select</i> &#8230; ]</dd></dl>
@@ -124,20 +124,20 @@ description: "vgchange – Change volume group attributes"
 <p> Activate or deactivate LVs. </p>
 <p> <code>vgchange</code> <code>-a</code>|<code>&#8211;activate</code> <code>y</code>|<code>n</code>|<code>ay</code> </p>
 <dl>
-<dd>[ <code>-K</code>|<code>&#8211;ignoreactivationskip</code> ]<br />
- [ <code>-P</code>|<code>&#8211;partial</code> ]<br />
- [ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br />
- [ <code>-f</code>|<code>&#8211;force</code> ]<br />
- [ <code>&#8211;activationmode</code> <code>partial</code>|<code>degraded</code>|<code>complete</code> ]<br />
- [ <code>&#8211;sysinit</code> ]<br />
- [ <code>&#8211;readonly</code> ]<br />
- [ <code>&#8211;ignorelockingfailure</code> ]<br />
- [ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;ignoremonitoring</code> ]<br />
- [ <code>&#8211;noudevsync</code> ]<br />
- [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br />
+<dd>[ <code>-K</code>|<code>&#8211;ignoreactivationskip</code> ]<br/>
+ [ <code>-P</code>|<code>&#8211;partial</code> ]<br/>
+ [ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br/>
+ [ <code>-f</code>|<code>&#8211;force</code> ]<br/>
+ [ <code>&#8211;activationmode</code> <code>partial</code>|<code>degraded</code>|<code>complete</code> ]<br/>
+ [ <code>&#8211;sysinit</code> ]<br/>
+ [ <code>&#8211;readonly</code> ]<br/>
+ [ <code>&#8211;ignorelockingfailure</code> ]<br/>
+ [ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;ignoremonitoring</code> ]<br/>
+ [ <code>&#8211;noudevsync</code> ]<br/>
+ [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>VG</i>|<i>Tag</i>|<i>Select</i> &#8230; ]</dd></dl>
@@ -145,15 +145,15 @@ description: "vgchange – Change volume group attributes"
 <p> Reactivate LVs using the latest metadata. </p>
 <p> <code>vgchange</code> <code>&#8211;refresh</code> </p>
 <dl>
-<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br />
- [ <code>-f</code>|<code>&#8211;force</code> ]<br />
- [ <code>&#8211;sysinit</code> ]<br />
- [ <code>&#8211;ignorelockingfailure</code> ]<br />
- [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;ignoremonitoring</code> ]<br />
- [ <code>&#8211;noudevsync</code> ]<br />
- [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br />
+<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br/>
+ [ <code>-f</code>|<code>&#8211;force</code> ]<br/>
+ [ <code>&#8211;sysinit</code> ]<br/>
+ [ <code>&#8211;ignorelockingfailure</code> ]<br/>
+ [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;ignoremonitoring</code> ]<br/>
+ [ <code>&#8211;noudevsync</code> ]<br/>
+ [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>VG</i>|<i>Tag</i>|<i>Select</i> &#8230; ]</dd></dl>
@@ -166,7 +166,7 @@ description: "vgchange – Change volume group attributes"
 <p> Start the lockspace of a shared VG in lvmlockd. </p>
 <p> <code>vgchange</code> <code>&#8211;lockstart</code> </p>
 <dl>
-<dd>[ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br />
+<dd>[ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>VG</i>|<i>Tag</i>|<i>Select</i> &#8230; ]</dd></dl>
@@ -174,7 +174,7 @@ description: "vgchange – Change volume group attributes"
 <p> Stop the lockspace of a shared VG in lvmlockd. </p>
 <p> <code>vgchange</code> <code>&#8211;lockstop</code> </p>
 <dl>
-<dd>[ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br />
+<dd>[ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>VG</i>|<i>Tag</i>|<i>Select</i> &#8230; ]</dd></dl>
@@ -189,19 +189,19 @@ description: "vgchange – Change volume group attributes"
 <dd></dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>
@@ -365,9 +365,9 @@ description: "vgchange – Change volume group attributes"
 <h2>Notes</h2>
 <p>If vgchange recognizes COW snapshot LVs that were dropped because they ran out of space, it displays a message informing the administrator that the snapshots should be removed.</p>
 <h2>Examples</h2>
-<p>Activate all LVs in all VGs on all existing devices.<br />
+<p>Activate all LVs in all VGs on all existing devices.<br/>
  <code>vgchange -a y</code> </p>
-<p> Change the maximum number of LVs for an inactive VG.<br />
+<p> Change the maximum number of LVs for an inactive VG.<br/>
  <code>vgchange -l 128 vg00</code></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8) <code><a href="/docs/linux/man/8-pvchange/">pvchange</a></code>(8) <code><a href="/docs/linux/man/8-pvck/">pvck</a></code>(8) <code><a href="/docs/linux/man/8-pvcreate/">pvcreate</a></code>(8) <code><a href="/docs/linux/man/8-pvdisplay/">pvdisplay</a></code>(8) <code><a href="/docs/linux/man/8-pvmove/">pvmove</a></code>(8) <code><a href="/docs/linux/man/8-pvremove/">pvremove</a></code>(8) <code><a href="/docs/linux/man/8-pvresize/">pvresize</a></code>(8) <code><a href="/docs/linux/man/8-pvs/">pvs</a></code>(8) <code><a href="/docs/linux/man/8-pvscan/">pvscan</a></code>(8) <code><a href="/docs/linux/man/8-vgcfgbackup/">vgcfgbackup</a></code>(8) <code><a href="/docs/linux/man/8-vgcfgrestore/">vgcfgrestore</a></code>(8) <code><a href="/docs/linux/man/8-vgchange/">vgchange</a></code>(8) <code><a href="/docs/linux/man/8-vgck/">vgck</a></code>(8) <code><a href="/docs/linux/man/8-vgcreate/">vgcreate</a></code>(8) <code><a href="/docs/linux/man/8-vgconvert/">vgconvert</a></code>(8) <code><a href="/docs/linux/man/8-vgdisplay/">vgdisplay</a></code>(8) <code><a href="/docs/linux/man/8-vgexport/">vgexport</a></code>(8) <code><a href="/docs/linux/man/8-vgextend/">vgextend</a></code>(8) <code><a href="/docs/linux/man/8-vgimport/">vgimport</a></code>(8) <code><a href="/docs/linux/man/8-vgimportclone/">vgimportclone</a></code>(8) <code><a href="/docs/linux/man/8-vgmerge/">vgmerge</a></code>(8) <code><a href="/docs/linux/man/8-vgmknodes/">vgmknodes</a></code>(8) <code><a href="/docs/linux/man/8-vgreduce/">vgreduce</a></code>(8) <code><a href="/docs/linux/man/8-vgremove/">vgremove</a></code>(8) <code><a href="/docs/linux/man/8-vgrename/">vgrename</a></code>(8) <code><a href="/docs/linux/man/8-vgs/">vgs</a></code>(8) <code><a href="/docs/linux/man/8-vgscan/">vgscan</a></code>(8) <code><a href="/docs/linux/man/8-vgsplit/">vgsplit</a></code>(8) <code><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></code>(8) <code><a href="/docs/linux/man/8-lvchange/">lvchange</a></code>(8) <code><a href="/docs/linux/man/8-lvconvert/">lvconvert</a></code>(8) <code><a href="/docs/linux/man/8-lvdisplay/">lvdisplay</a></code>(8) <code><a href="/docs/linux/man/8-lvextend/">lvextend</a></code>(8) <code><a href="/docs/linux/man/8-lvreduce/">lvreduce</a></code>(8) <code><a href="/docs/linux/man/8-lvremove/">lvremove</a></code>(8) <code><a href="/docs/linux/man/8-lvrename/">lvrename</a></code>(8) <code><a href="/docs/linux/man/8-lvresize/">lvresize</a></code>(8) <code><a href="/docs/linux/man/8-lvs/">lvs</a></code>(8) <code><a href="/docs/linux/man/8-lvscan/">lvscan</a></code>(8) <code><a href="/docs/linux/man/8-lvm-fullreport/">lvm-fullreport</a></code>(8) <code><a href="/docs/linux/man/8-lvm-lvpoll/">lvm-lvpoll</a></code>(8) <code><a href="/docs/linux/man/8-lvm2-activation-generator/">lvm2-activation-generator</a></code>(8) <code><a href="/docs/linux/man/8-blkdeactivate/">blkdeactivate</a></code>(8) <code><a href="/docs/linux/man/8-lvmdump/">lvmdump</a></code>(8) <code><a href="/docs/linux/man/8-dmeventd/">dmeventd</a></code>(8) <code><a href="/docs/linux/man/8-lvmpolld/">lvmpolld</a></code>(8) <code><a href="/docs/linux/man/8-lvmlockd/">lvmlockd</a></code>(8) <code><a href="/docs/linux/man/8-lvmlockctl/">lvmlockctl</a></code>(8) <code><a href="/docs/linux/man/8-cmirrord/">cmirrord</a></code>(8) <code>lvmdbusd</code>(8) <code><a href="/docs/linux/man/7-lvmsystemid/">lvmsystemid</a></code>(7) <code><a href="/docs/linux/man/7-lvmreport/">lvmreport</a></code>(7) <code><a href="/docs/linux/man/7-lvmraid/">lvmraid</a></code>(7) <code><a href="/docs/linux/man/7-lvmthin/">lvmthin</a></code>(7) <code><a href="/docs/linux/man/7-lvmcache/">lvmcache</a></code>(7) </p>

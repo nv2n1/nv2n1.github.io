@@ -13,16 +13,16 @@ description: "QuantLib::AbcdFunction – Abcd functional form for instantaneous 
 <p> Inherits std::unary_function&lt;Real, Real&gt;. </p>
 <h3>Public Member Functions</h3>
 <p><code>AbcdFunction</code> (<code>Real</code> a=-0.06, <code>Real</code> b=0.17, <code>Real</code> c=0.54, <code>Real</code> d=0.17) </p>
-<p> <code>Real</code> <code>operator()</code> (<code>Time</code> u) const<br />
- <i>volatility function value at time u: [ f(u) ] </i><br />
- <code>Real</code> <code>maximumLocation</code> () const<br />
- <i>time at which the volatility function reaches maximum (if any) </i><br />
- <code>Real</code> <code>maximumVolatility</code> () const<br />
- <i>maximum value of the volatility function </i><br />
- <code>Real</code> <code>shortTermVolatility</code> () const<br />
- <i>volatility function value at time 0: [ f(0) ] </i><br />
- <code>Real</code> <code>longTermVolatility</code> () const<br />
- <i>volatility function value at time +inf: [ f(inf) ] </i><br />
+<p> <code>Real</code> <code>operator()</code> (<code>Time</code> u) const<br/>
+ <i>volatility function value at time u: [ f(u) ] </i><br/>
+ <code>Real</code> <code>maximumLocation</code> () const<br/>
+ <i>time at which the volatility function reaches maximum (if any) </i><br/>
+ <code>Real</code> <code>maximumVolatility</code> () const<br/>
+ <i>maximum value of the volatility function </i><br/>
+ <code>Real</code> <code>shortTermVolatility</code> () const<br/>
+ <i>volatility function value at time 0: [ f(0) ] </i><br/>
+ <code>Real</code> <code>longTermVolatility</code> () const<br/>
+ <i>volatility function value at time +inf: [ f(inf) ] </i><br/>
  <code>Real</code> <code>covariance</code> (<code>Time</code> t, <code>Time</code> T, <code>Time</code> S) const </p>
 <p> <code>Real</code> <code>covariance</code> (<code>Time</code> t1, <code>Time</code> t2, <code>Time</code> T, <code>Time</code> S) const </p>
 <p> <code>Real</code> <code>volatility</code> (<code>Time</code> T, <code>Time</code> tMax, <code>Time</code> tMin) const </p>

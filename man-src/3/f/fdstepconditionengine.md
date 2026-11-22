@@ -10,11 +10,11 @@ description: "ql/pricingengines/vanilla/fdstepconditionengine.hpp – Finite-dif
 
 <p> ql/pricingengines/vanilla/fdstepconditionengine.hpp &#8211; Finite-differences step-condition engine. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/pricingengines/vanilla/fdvanillaengine.hpp&gt;<br />
- #include &lt;ql/methods/finitedifferences/fdtypedefs.hpp&gt;<br />
+<p> #include &lt;ql/pricingengines/vanilla/fdvanillaengine.hpp&gt;<br/>
+ #include &lt;ql/methods/finitedifferences/fdtypedefs.hpp&gt;<br/>
  #include &lt;ql/methods/finitedifferences/boundarycondition.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>FDStepConditionEngine</code><br />
+<p> class <code>FDStepConditionEngine</code><br/>
  <i>Finite-differences pricing engine for American-style vanilla options. </i></p>
 <h2>Detailed Description</h2>
 <p> Finite-differences step-condition engine. </p>

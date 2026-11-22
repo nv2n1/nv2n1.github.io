@@ -13,11 +13,11 @@ description: "QwtCurveFitter –"
 <p>#include &lt;qwt_curve_fitter.h&gt; </p>
 <p> Inherited by <code>QwtSplineCurveFitter</code>, and <code>QwtWeedingCurveFitter</code>.</p>
 <h3>Public Member Functions</h3>
-<p>virtual <code>~QwtCurveFitter</code> ()<br />
- <i>Destructor. </i><br />
+<p>virtual <code>~QwtCurveFitter</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual QPolygonF <code>fitCurve</code> (const QPolygonF &amp;polygon) const =0 </p>
 <h3>Protected Member Functions</h3>
-<p><code>QwtCurveFitter</code> ()<br />
+<p><code>QwtCurveFitter</code> ()<br/>
  <i>Constructor. </i></p>
 <h2>Detailed Description</h2>
 <p>Abstract base class for a curve fitter.</p>

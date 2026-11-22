@@ -11,7 +11,7 @@ description: "dgesdd.f –"
 <p> dgesdd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgesdd</code> (JOBZ, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, IWORK, INFO)<br />
+<p> subroutine <code>dgesdd</code> (JOBZ, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>DGESDD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgesdd (characterJOBZ, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )S, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldvt, * )VT, integerLDVT, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -75,12 +75,12 @@ description: "dgesdd.f –"
           The number of columns of the input matrix A.  N &gt;= 0.
 </pre>
 <p> <i>A</i> </p>
-<p>A is DOUBLE PRECISION array, dimension(LDA, N) On entry, the M &#8211; by &#8211; N matrix A.On exit,<br />
-    if JOBZ = &#8216;O&#8217;, A is overwritten with the first N columns of U(the left singular vectors, stored columnwise) if M &gt;= N;<br />
-A is overwritten with the first M rows<br />
-    of V **<br />
-    T(the right singular vectors, stored<br />
-                                      rowwise) otherwise.if JOBZ.ne.&#8217;O&#8217;,<br />
+<p>A is DOUBLE PRECISION array, dimension(LDA, N) On entry, the M &#8211; by &#8211; N matrix A.On exit,<br/>
+    if JOBZ = &#8216;O&#8217;, A is overwritten with the first N columns of U(the left singular vectors, stored columnwise) if M &gt;= N;<br/>
+A is overwritten with the first M rows<br/>
+    of V **<br/>
+    T(the right singular vectors, stored<br/>
+                                      rowwise) otherwise.if JOBZ.ne.&#8217;O&#8217;,<br/>
     the contents of A are destroyed.</p>
 <p> <i>LDA</i> </p>
 <pre>
@@ -93,31 +93,31 @@ A is overwritten with the first M rows<br />
           The singular values of A, sorted so that S(i) &gt;= S(i+1).
 </pre>
 <p> <i>U</i> </p>
-<p>U is DOUBLE PRECISION array, dimension(LDU, UCOL)<br />
-                                 UCOL = M if JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N;<br />
-UCOL = min(M, N) if JOBZ = &#8216;S&#8217;.If JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N, U contains the M &#8211; by &#8211; M orthogonal matrix U;<br />
-if JOBZ<br />
-    = &#8216;S&#8217;, U contains the first min(M, N) columns of U(the left singular vectors, stored columnwise);<br />
-if JOBZ<br />
+<p>U is DOUBLE PRECISION array, dimension(LDU, UCOL)<br/>
+                                 UCOL = M if JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N;<br/>
+UCOL = min(M, N) if JOBZ = &#8216;S&#8217;.If JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N, U contains the M &#8211; by &#8211; M orthogonal matrix U;<br/>
+if JOBZ<br/>
+    = &#8216;S&#8217;, U contains the first min(M, N) columns of U(the left singular vectors, stored columnwise);<br/>
+if JOBZ<br/>
 = &#8216;O&#8217; and M &gt;= N, or JOBZ = &#8216;N&#8217;, U is not referenced.</p>
 <p> <i>LDU</i> </p>
-<p>LDU is INTEGER<br />
-        The leading dimension of the array U.LDU &gt;= 1;<br />
-if JOBZ<br />
+<p>LDU is INTEGER<br/>
+        The leading dimension of the array U.LDU &gt;= 1;<br/>
+if JOBZ<br/>
 = &#8216;S&#8217; or &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N, LDU &gt;= M.</p>
 <p> <i>VT</i> </p>
-<p>VT is DOUBLE PRECISION array, dimension(LDVT, N) If JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &gt;= N, VT contains the N &#8211; by &#8211; N orthogonal matrix V **T;<br />
-if JOBZ<br />
-    = &#8216;S&#8217;, VT contains the first min(M, N) rows of<br />
-        V **T(the right singular vectors, stored rowwise);<br />
-if JOBZ<br />
+<p>VT is DOUBLE PRECISION array, dimension(LDVT, N) If JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &gt;= N, VT contains the N &#8211; by &#8211; N orthogonal matrix V **T;<br/>
+if JOBZ<br/>
+    = &#8216;S&#8217;, VT contains the first min(M, N) rows of<br/>
+        V **T(the right singular vectors, stored rowwise);<br/>
+if JOBZ<br/>
 = &#8216;O&#8217; and M &lt; N, or JOBZ = &#8216;N&#8217;, VT is not referenced.</p>
 <p> <i>LDVT</i> </p>
-<p>LDVT is INTEGER<br />
-        The leading dimension of the array VT.LDVT &gt;= 1;<br />
-if JOBZ<br />
-    = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &gt;= N, LDVT &gt;= N;<br />
-if JOBZ<br />
+<p>LDVT is INTEGER<br/>
+        The leading dimension of the array VT.LDVT &gt;= 1;<br/>
+if JOBZ<br/>
+    = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &gt;= N, LDVT &gt;= N;<br/>
+if JOBZ<br/>
 = &#8216;S&#8217;, LDVT &gt;= min(M, N).</p>
 <p> <i>WORK</i> </p>
 <pre>

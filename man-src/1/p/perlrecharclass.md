@@ -47,13 +47,13 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <p> <i>Digits</i> </p>
 <p> <code>&quot;\d&quot;</code> matches a single character considered to be a decimal <i>digit</i>. If the <code>&quot;/a&quot;</code> regular expression modifier is in effect, it matches [0-9]. Otherwise, it matches anything that is matched by <code>&quot;\p{Digit}&quot;</code>, which includes [0-9]. (An unlikely possible exception is that under locale matching rules, the current locale might not have <code>&quot;[0-9]&quot;</code> matched by <code>&quot;\d&quot;</code>, and/or might match other characters whose code point is less than 256. The only such locale definitions that are legal would be to match <code>&quot;[0-9]&quot;</code> plus another set of 10 consecutive digit characters; anything else would be in violation of the C language standard, but Perl doesn&#8217;t currently assume anything in regard to this.) </p>
 <p> What this means is that unless the <code>&quot;/a&quot;</code> modifier is in effect <code>&quot;\d&quot;</code> not only matches the digits &#8216;0&#8217; - &#8216;9&#8217;, but also Arabic, Devanagari, and digits from other languages. This may cause some confusion, and some security issues. </p>
-<p> Some digits that <code>&quot;\d&quot;</code> matches look like some of the [0-9] ones, but have different values. For example, <font SIZE="-1">BENGALI DIGIT FOUR</font> (U+09EA) looks very much like an <font SIZE="-1">ASCII DIGIT EIGHT</font> (U+0038), and <font SIZE="-1">LEPCHA DIGIT SIX</font> (U+1C46) looks very much like an <font SIZE="-1">ASCII DIGIT FIVE</font> (U+0035). An application that is expecting only the <font SIZE="-1">ASCII</font> digits might be misled, or if the match is <code>&quot;\d+&quot;</code>, the matched string might contain a mixture of digits from different writing systems that look like they signify a number different than they actually do. ``<code>num()</code>&#8216;&#8216; in Unicode::UCD can be used to safely calculate the value, returning <code>&quot;undef&quot;</code> if the input string contains such a mixture. Otherwise, for example, a displayed price might be deliberately different than it appears. </p>
+<p> Some digits that <code>&quot;\d&quot;</code> matches look like some of the [0-9] ones, but have different values. For example, BENGALI DIGIT FOUR (U+09EA) looks very much like an ASCII DIGIT EIGHT (U+0038), and LEPCHA DIGIT SIX (U+1C46) looks very much like an ASCII DIGIT FIVE (U+0035). An application that is expecting only the ASCII digits might be misled, or if the match is <code>&quot;\d+&quot;</code>, the matched string might contain a mixture of digits from different writing systems that look like they signify a number different than they actually do. ``<code>num()</code>&#8216;&#8216; in Unicode::UCD can be used to safely calculate the value, returning <code>&quot;undef&quot;</code> if the input string contains such a mixture. Otherwise, for example, a displayed price might be deliberately different than it appears. </p>
 <p> What <code>&quot;\p{Digit}&quot;</code> means (and hence <code>&quot;\d&quot;</code> except under the <code>&quot;/a&quot;</code> modifier) is <code>&quot;\p{General_Category=Decimal_Number}&quot;</code>, or synonymously, <code>&quot;\p{General_Category=Digit}&quot;</code>. Starting with Unicode version 4.1, this is the same set of characters matched by <code>&quot;\p{Numeric_Type=Decimal}&quot;</code>. But Unicode also has a different property with a similar name, <code>&quot;\p{Numeric_Type=Digit}&quot;</code>, which matches a completely different set of characters. These characters are things such as <code>&quot;CIRCLED DIGIT ONE&quot;</code> or subscripts, or are from writing systems that lack all ten digits. </p>
 <p> The design intent is for <code>&quot;\d&quot;</code> to exactly match the set of characters that can safely be used with ``normal&#8217;&#8216; big-endian positional decimal syntax, where, for example 123 means one &#8216;hundred&#8217;, plus two &#8216;tens&#8217;, plus three &#8216;ones&#8217;. This positional notation does not necessarily apply to characters that match the other type of ``digit&#8217;&#8216;, <code>&quot;\p{Numeric_Type=Digit}&quot;</code>, and so <code>&quot;\d&quot;</code> doesn&#8217;t match them. </p>
 <p> The Tamil digits (U+0BE6 - U+0BEF) can also legally be used in old-style Tamil numbers in which they would appear no more than one in a row, separated by characters that mean ``times 10&#8217;&#8216;, ``times 100&#8217;&#8216;, etc. (See &lt;<a rel="nofollow" href="http://www.unicode.org/notes/tn21">http://www.unicode.org/notes/tn21</a>&gt;.) </p>
 <p> Any character not matched by <code>&quot;\d&quot;</code> is matched by <code>&quot;\D&quot;</code>. </p>
 <p> <i>Word characters</i> </p>
-<p> A <code>&quot;\w&quot;</code> matches a single alphanumeric character (an alphabetic character, or a decimal digit); or a connecting punctuation character, such as an underscore (``_&#8216;&#8216;); or a ``mark&#8217;&#8216; character (like some sort of accent) that attaches to one of those. It does not match a whole word. To match a whole word, use <code>&quot;\w+&quot;</code>. This isn&#8217;t the same thing as matching an English word, but in the <font SIZE="-1">ASCII</font> range it is the same as a string of Perl-identifier characters. </p>
+<p> A <code>&quot;\w&quot;</code> matches a single alphanumeric character (an alphabetic character, or a decimal digit); or a connecting punctuation character, such as an underscore (``_&#8216;&#8216;); or a ``mark&#8217;&#8216; character (like some sort of accent) that attaches to one of those. It does not match a whole word. To match a whole word, use <code>&quot;\w+&quot;</code>. This isn&#8217;t the same thing as matching an English word, but in the ASCII range it is the same as a string of Perl-identifier characters. </p>
 <dl>
 <dt>If the &quot;/a&quot; modifier is in effect ...</dt>
 <dd> <p> <code>&quot;\w&quot;</code> matches the 63 characters [a-zA-Z0-9_]. </p>
@@ -90,7 +90,7 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 </dl>
 <p> Which rules apply are determined as described in ``Which character set modifier is in effect?&#8216;&#8216; in perlre. </p>
 <p> There are a number of security issues with the full Unicode list of word characters. See &lt;<a rel="nofollow" href="http://unicode.org/reports/tr36">http://unicode.org/reports/tr36</a>&gt;. </p>
-<p> Also, for a somewhat finer-grained set of characters that are in programming language identifiers beyond the <font SIZE="-1">ASCII</font> range, you may wish to instead use the more customized ``Unicode Properties&#8217;&#8216;, <code>&quot;\p{ID_Start}&quot;</code>, <code>&quot;\p{ID_Continue}&quot;</code>, <code>&quot;\p{XID_Start}&quot;</code>, and <code>&quot;\p{XID_Continue}&quot;</code>. See &lt;<a rel="nofollow" href="http://unicode.org/reports/tr31">http://unicode.org/reports/tr31</a>&gt;. </p>
+<p> Also, for a somewhat finer-grained set of characters that are in programming language identifiers beyond the ASCII range, you may wish to instead use the more customized ``Unicode Properties&#8217;&#8216;, <code>&quot;\p{ID_Start}&quot;</code>, <code>&quot;\p{ID_Continue}&quot;</code>, <code>&quot;\p{XID_Start}&quot;</code>, and <code>&quot;\p{XID_Continue}&quot;</code>. See &lt;<a rel="nofollow" href="http://unicode.org/reports/tr31">http://unicode.org/reports/tr31</a>&gt;. </p>
 <p> Any character not matched by <code>&quot;\w&quot;</code> is matched by <code>&quot;\W&quot;</code>. </p>
 <p> <i>Whitespace</i> </p>
 <p> <code>&quot;\s&quot;</code> matches any single character considered whitespace. </p>
@@ -133,7 +133,7 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <p> <code>&quot;\h&quot;</code> matches any character considered horizontal whitespace; this includes the platform&#8217;s space and tab characters and several others listed in the table below. <code>&quot;\H&quot;</code> matches any character not considered horizontal whitespace. They use the platform&#8217;s native character set, and do not consider any locale that may otherwise be in use. </p>
 <p> <code>&quot;\v&quot;</code> matches any character considered vertical whitespace; this includes the platform&#8217;s carriage return and line feed characters (newline) plus several other characters, all listed in the table below. <code>&quot;\V&quot;</code> matches any character not considered vertical whitespace. They use the platform&#8217;s native character set, and do not consider any locale that may otherwise be in use. </p>
 <p> <code>&quot;\R&quot;</code> matches anything that can be considered a newline under Unicode rules. It can match a multi-character sequence. It cannot be used inside a bracketed character class; use <code>&quot;\v&quot;</code> instead (vertical whitespace). It uses the platform&#8217;s native character set, and does not consider any locale that may otherwise be in use. Details are discussed in perlrebackslash. </p>
-<p> Note that unlike <code>&quot;\s&quot;</code> (and <code>&quot;\d&quot;</code> and <code>&quot;\w&quot;</code>), <code>&quot;\h&quot;</code> and <code>&quot;\v&quot;</code> always match the same characters, without regard to other factors, such as the active locale or whether the source string is in <font SIZE="-1">UTF-8</font> format. </p>
+<p> Note that unlike <code>&quot;\s&quot;</code> (and <code>&quot;\d&quot;</code> and <code>&quot;\w&quot;</code>), <code>&quot;\h&quot;</code> and <code>&quot;\v&quot;</code> always match the same characters, without regard to other factors, such as the active locale or whether the source string is in UTF-8 format. </p>
 <p> One might think that <code>&quot;\s&quot;</code> is equivalent to <code>&quot;[\h\v]&quot;</code>. This is indeed true starting in Perl v5.18, but prior to that, the sole difference was that the vertical tab (<code>&quot;\cK&quot;</code>) was not matched by <code>&quot;\s&quot;</code>. </p>
 <p> The following table is a complete listing of characters matched by <code>&quot;\s&quot;</code>, <code>&quot;\h&quot;</code> and <code>&quot;\v&quot;</code> as of Unicode 6.3. </p>
 <p> The first column gives the Unicode code point of the character (in hex format), the second column gives the (Unicode) name. The third column indicates by which class(es) the character is matched (assuming no locale is in effect that changes the <code>&quot;\s&quot;</code> matching). </p>
@@ -168,7 +168,7 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <dd> <p> Prior to Perl v5.18, <code>&quot;\s&quot;</code> did not match the vertical tab. <code>&quot;[^\S\cK]&quot;</code> (obscurely) matches what <code>&quot;\s&quot;</code> traditionally did. </p>
  </dd>
 <dt>[2]</dt>
-<dd> <p> <font SIZE="-1">NEXT LINE</font> and NO-BREAK <font SIZE="-1">SPACE</font> may or may not match <code>&quot;\s&quot;</code> depending on the rules in effect. See the beginning of this section. </p>
+<dd> <p> NEXT LINE and NO-BREAK SPACE may or may not match <code>&quot;\s&quot;</code> depending on the rules in effect. See the beginning of this section. </p>
  </dd></dl>
 <p> <i>Unicode Properties</i> </p>
 <p> <code>&quot;\pP&quot;</code> and <code>&quot;\p{Prop}&quot;</code> are character classes to match characters that fit given Unicode properties. One letter property names can be used in the <code>&quot;\pP&quot;</code> form, with the property name following the <code>&quot;\p&quot;</code>, otherwise, braces are required. When using braces, there is a single form, which is just the property name enclosed in the braces, and a compound form which looks like <code>&quot;\p{name=value}&quot;</code>, which means to match if the property ``name&#8217;&#8216; for the character has that particular ``value&#8217;&#8216;. For instance, a match for a number can be written as <code>&quot;/\pN/&quot;</code> or as <code>&quot;/\p{Number}/&quot;</code>, or as <code>&quot;/\p{Number=True}/&quot;</code>. Lowercase letters are matched by the property <i>Lowercase_Letter</i> which has the short form <i>Ll</i>. They need the braces, so are written as <code>&quot;/\p{Ll}/&quot;</code> or <code>&quot;/\p{Lowercase_Letter}/&quot;</code>, or <code>&quot;/\p{General_Category=Lowercase_Letter}/&quot;</code> (the underscores are optional). <code>&quot;/\pLl/&quot;</code> is valid, but means something different. It matches a two character string: a letter (Unicode property <code>&quot;\pL&quot;</code>), followed by a lowercase <code>&quot;l&quot;</code>. </p>
@@ -249,8 +249,8 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <p> The sequence <code>&quot;\b&quot;</code> is special inside a bracketed character class. While outside the character class, <code>&quot;\b&quot;</code> is an assertion indicating a point that does not have either two word characters or two non-word characters on either side, inside a bracketed character class, <code>&quot;\b&quot;</code> matches a backspace character. </p>
 <p> The sequences <code>&quot;\a&quot;</code>, <code>&quot;\c&quot;</code>, <code>&quot;\e&quot;</code>, <code>&quot;\f&quot;</code>, <code>&quot;\n&quot;</code>, <code>&quot;\N{</code>NAME <code>}&quot;</code>, <code>&quot;\N{U+</code>hex char <code>}&quot;</code>, <code>&quot;\r&quot;</code>, <code>&quot;\t&quot;</code>, and <code>&quot;\x&quot;</code> are also special and have the same meanings as they do outside a bracketed character class. </p>
 <p> Also, a backslash followed by two or three octal digits is considered an octal number. </p>
-<p> A <code>&quot;[&quot;</code> is not special inside a character class, unless it&#8217;s the start of a <font SIZE="-1">POSIX</font> character class (see ``<font SIZE="-1">POSIX</font> Character Classes&#8217;&#8216; below). It normally does not need escaping. </p>
-<p> A <code>&quot;]&quot;</code> is normally either the end of a <font SIZE="-1">POSIX</font> character class (see ``<font SIZE="-1">POSIX</font> Character Classes&#8217;&#8216; below), or it signals the end of the bracketed character class. If you want to include a <code>&quot;]&quot;</code> in the set of characters, you must generally escape it. </p>
+<p> A <code>&quot;[&quot;</code> is not special inside a character class, unless it&#8217;s the start of a POSIX character class (see ``POSIX Character Classes&#8217;&#8216; below). It normally does not need escaping. </p>
+<p> A <code>&quot;]&quot;</code> is normally either the end of a POSIX character class (see ``POSIX Character Classes&#8217;&#8216; below), or it signals the end of the bracketed character class. If you want to include a <code>&quot;]&quot;</code> in the set of characters, you must generally escape it. </p>
 <p> However, if the <code>&quot;]&quot;</code> is the <i>first</i> (or the second if the first character is a caret) character of a bracketed character class, it does not denote the end of the class (as you cannot have an empty class) and is considered part of the set of characters that can be matched without escaping. </p>
 <p> Examples: </p>
 <pre><code> &quot;+&quot; =~ /[+?*]/ # Match, &quot;+&quot; in a character class is not special.
@@ -263,18 +263,18 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
                       # followed by a ].
 </code></pre>
 <p> <i>Bracketed Character Classes and the </i>&quot;/xx&quot;<i> pattern modifier</i> </p>
-<p> Normally <font SIZE="-1">SPACE</font> and <font SIZE="-1">TAB</font> characters have no special meaning inside a bracketed character class; they are just added to the list of characters matched by the class. But if the <code>&quot;/xx&quot;</code> pattern modifier is in effect, they are generally ignored and can be added to improve readability. They can&#8217;t be added in the middle of a single construct: </p>
+<p> Normally SPACE and TAB characters have no special meaning inside a bracketed character class; they are just added to the list of characters matched by the class. But if the <code>&quot;/xx&quot;</code> pattern modifier is in effect, they are generally ignored and can be added to improve readability. They can&#8217;t be added in the middle of a single construct: </p>
 <pre><code> / [ \x{10 FFFF} ] /xx # WRONG!
 </code></pre>
-<p> The <font SIZE="-1">SPACE</font> in the middle of the hex constant is illegal. </p>
-<p> To specify a literal <font SIZE="-1">SPACE</font> character, you can escape it with a backslash, like: </p>
+<p> The SPACE in the middle of the hex constant is illegal. </p>
+<p> To specify a literal SPACE character, you can escape it with a backslash, like: </p>
 <pre><code> /[ a e i o u \ ]/xx
 </code></pre>
-<p> This matches the English vowels plus the <font SIZE="-1">SPACE</font> character. </p>
+<p> This matches the English vowels plus the SPACE character. </p>
 <p> For clarity, you should already have been using <code>&quot;\t&quot;</code> to specify a literal tab, and <code>&quot;\t&quot;</code> is unaffected by <code>&quot;/xx&quot;</code>. </p>
 <p> <i>Character Ranges</i> </p>
-<p> It is not uncommon to want to match a range of characters. Luckily, instead of listing all characters in the range, one may use the hyphen (<code>&quot;-&quot;</code>). If inside a bracketed character class you have two characters separated by a hyphen, it&#8217;s treated as if all characters between the two were in the class. For instance, <code>&quot;[0-9]&quot;</code> matches any <font SIZE="-1">ASCII</font> digit, and <code>&quot;[a-m]&quot;</code> matches any lowercase letter from the first half of the <font SIZE="-1">ASCII</font> alphabet. </p>
-<p> Note that the two characters on either side of the hyphen are not necessarily both letters or both digits. Any character is possible, although not advisable. <code>&quot;[&#8216;-?]&quot;</code> contains a range of characters, but most people will not know which characters that means. Furthermore, such ranges may lead to portability problems if the code has to run on a platform that uses a different character set, such as <font SIZE="-1">EBCDIC.</font> </p>
+<p> It is not uncommon to want to match a range of characters. Luckily, instead of listing all characters in the range, one may use the hyphen (<code>&quot;-&quot;</code>). If inside a bracketed character class you have two characters separated by a hyphen, it&#8217;s treated as if all characters between the two were in the class. For instance, <code>&quot;[0-9]&quot;</code> matches any ASCII digit, and <code>&quot;[a-m]&quot;</code> matches any lowercase letter from the first half of the ASCII alphabet. </p>
+<p> Note that the two characters on either side of the hyphen are not necessarily both letters or both digits. Any character is possible, although not advisable. <code>&quot;[&#8216;-?]&quot;</code> contains a range of characters, but most people will not know which characters that means. Furthermore, such ranges may lead to portability problems if the code has to run on a platform that uses a different character set, such as EBCDIC. </p>
 <p> If a hyphen in a character class cannot syntactically be part of a range, for instance because it is the first or the last character of the character class, or if it immediately follows a range, the hyphen isn&#8217;t special, and so is considered a character to be matched literally. If you want a hyphen in your set of characters to be matched and its position in the class is such that it could be considered part of a range, you must escape that hyphen with a backslash. </p>
 <p> Examples: </p>
 <pre><code> [a-z] # Matches a character that is a lower case ASCII letter.
@@ -295,8 +295,8 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
  [\N{U+00}-\t] # No warning;
 </code></pre>
 <p> Both of the above match the characters <code>&quot;\N{U+00}&quot;</code> <code>&quot;\N{U+01}&quot;</code>, ... <code>&quot;\N{U+08}&quot;</code>, <code>&quot;\N{U+09}&quot;</code>, but the <code>&quot;\x09&quot;</code> looks like it could be a mistake so the warning is raised (under <code>&quot;re &#8216;strict&#8217;&quot;</code>) for it. </p>
-<p> Perl also guarantees that the ranges <code>&quot;A-Z&quot;</code>, <code>&quot;a-z&quot;</code>, <code>&quot;0-9&quot;</code>, and any subranges of these match what an English-only speaker would expect them to match on any platform. That is, <code>&quot;[A-Z]&quot;</code> matches the 26 <font SIZE="-1">ASCII</font> uppercase letters; <code>&quot;[a-z]&quot;</code> matches the 26 lowercase letters; and <code>&quot;[0-9]&quot;</code> matches the 10 digits. Subranges, like <code>&quot;[h-k]&quot;</code>, match correspondingly, in this case just the four letters <code>&quot;h&quot;</code>, <code>&quot;i&quot;</code>, <code>&quot;j&quot;</code>, and <code>&quot;k&quot;</code>. This is the natural behavior on <font SIZE="-1">ASCII</font> platforms where the code points (ordinal values) for <code>&quot;h&quot;</code> through <code>&quot;k&quot;</code> are consecutive integers (0x68 through 0x6B). But special handling to achieve this may be needed on platforms with a non-ASCII native character set. For example, on <font SIZE="-1">EBCDIC</font> platforms, the code point for <code>&quot;h&quot;</code> is 0x88, <code>&quot;i&quot;</code> is 0x89, <code>&quot;j&quot;</code> is 0x91, and <code>&quot;k&quot;</code> is 0x92. Perl specially treats <code>&quot;[h-k]&quot;</code> to exclude the seven code points in the gap: 0x8A through 0x90. This special handling is only invoked when the range is a subrange of one of the <font SIZE="-1">ASCII</font> uppercase, lowercase, and digit ranges, <font SIZE="-1">AND</font> each end of the range is expressed either as a literal, like <code>&quot;A&quot;</code>, or as a named character (<code>&quot;\N{...}&quot;</code>, including the <code>&quot;\N{U+...&quot;</code> form). </p>
-<p> <font SIZE="-1">EBCDIC</font> Examples: </p>
+<p> Perl also guarantees that the ranges <code>&quot;A-Z&quot;</code>, <code>&quot;a-z&quot;</code>, <code>&quot;0-9&quot;</code>, and any subranges of these match what an English-only speaker would expect them to match on any platform. That is, <code>&quot;[A-Z]&quot;</code> matches the 26 ASCII uppercase letters; <code>&quot;[a-z]&quot;</code> matches the 26 lowercase letters; and <code>&quot;[0-9]&quot;</code> matches the 10 digits. Subranges, like <code>&quot;[h-k]&quot;</code>, match correspondingly, in this case just the four letters <code>&quot;h&quot;</code>, <code>&quot;i&quot;</code>, <code>&quot;j&quot;</code>, and <code>&quot;k&quot;</code>. This is the natural behavior on ASCII platforms where the code points (ordinal values) for <code>&quot;h&quot;</code> through <code>&quot;k&quot;</code> are consecutive integers (0x68 through 0x6B). But special handling to achieve this may be needed on platforms with a non-ASCII native character set. For example, on EBCDIC platforms, the code point for <code>&quot;h&quot;</code> is 0x88, <code>&quot;i&quot;</code> is 0x89, <code>&quot;j&quot;</code> is 0x91, and <code>&quot;k&quot;</code> is 0x92. Perl specially treats <code>&quot;[h-k]&quot;</code> to exclude the seven code points in the gap: 0x8A through 0x90. This special handling is only invoked when the range is a subrange of one of the ASCII uppercase, lowercase, and digit ranges, AND each end of the range is expressed either as a literal, like <code>&quot;A&quot;</code>, or as a named character (<code>&quot;\N{...}&quot;</code>, including the <code>&quot;\N{U+...&quot;</code> form). </p>
+<p> EBCDIC Examples: </p>
 <pre><code> [i-j] # Matches either &quot;i&quot; or &quot;j&quot;
  [i-\N{LATIN SMALL LETTER J}] # Same
  [i-\N{U+6A}] # Same
@@ -309,7 +309,7 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
                      # case
 </code></pre>
 <p> <i>Negation</i> </p>
-<p> It is also possible to instead list the characters you do not want to match. You can do so by using a caret (<code>&quot;^&quot;</code>) as the first character in the character class. For instance, <code>&quot;[^a-z]&quot;</code> matches any character that is not a lowercase <font SIZE="-1">ASCII</font> letter, which therefore includes more than a million Unicode code points. The class is said to be ``negated&#8217;&#8216; or ``inverted&#8217;&#8216;. </p>
+<p> It is also possible to instead list the characters you do not want to match. You can do so by using a caret (<code>&quot;^&quot;</code>) as the first character in the character class. For instance, <code>&quot;[^a-z]&quot;</code> matches any character that is not a lowercase ASCII letter, which therefore includes more than a million Unicode code points. The class is said to be ``negated&#8217;&#8216; or ``inverted&#8217;&#8216;. </p>
 <p> This syntax make the caret a special character inside a bracketed character class, but only if it is the first character of the class. So if you want the caret as one of the characters to match, either escape the caret or else don&#8217;t list it first. </p>
 <p> In inverted bracketed character classes, Perl ignores the Unicode rules that normally say that named sequence, and certain characters should match a sequence of multiple characters use under caseless <code>&quot;/i&quot;</code> matching. Following those rules could lead to highly confusing situations: </p>
 <pre><code> &quot;ss&quot; =~ /^[^\xDF]+$/ui; # Matches!
@@ -323,7 +323,7 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 </code></pre>
 <p> <i>Backslash Sequences</i> </p>
 <p> You can put any backslash sequence character class (with the exception of <code>&quot;\N&quot;</code> and <code>&quot;\R&quot;</code>) inside a bracketed character class, and it will act just as if you had put all characters matched by the backslash sequence inside the character class. For instance, <code>&quot;[a-f\d]&quot;</code> matches any decimal digit, or any of the lowercase letters between &#8216;a&#8217; and &#8216;f&#8217; inclusive. </p>
-<p> <code>&quot;\N&quot;</code> within a bracketed character class must be of the forms <code>&quot;\N{</code>name <code>}&quot;</code> or <code>&quot;\N{U+</code>hex char <code>}&quot;</code>, and <font SIZE="-1">NOT</font> be the form that matches non-newlines, for the same reason that a dot <code>&quot;.&quot;</code> inside a bracketed character class loses its special meaning: it matches nearly anything, which generally isn&#8217;t what you want to happen. </p>
+<p> <code>&quot;\N&quot;</code> within a bracketed character class must be of the forms <code>&quot;\N{</code>name <code>}&quot;</code> or <code>&quot;\N{U+</code>hex char <code>}&quot;</code>, and NOT be the form that matches non-newlines, for the same reason that a dot <code>&quot;.&quot;</code> inside a bracketed character class loses its special meaning: it matches nearly anything, which generally isn&#8217;t what you want to happen. </p>
 <p> Examples: </p>
 <pre><code> /[\p{Thai}\d]/ # Matches a character that is either a Thai
                     # character, or a digit.
@@ -333,8 +333,8 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <p> Backslash sequence character classes cannot form one of the endpoints of a range. Thus, you can&#8217;t say: </p>
 <pre><code> /[\p{Thai}-\d]/ # Wrong!
 </code></pre>
-<p> <i></i><font SIZE="-1"><i>POSIX</i></font><i> Character Classes</i> </p>
-<p> <font SIZE="-1">POSIX</font> character classes have the form <code>&quot;[:class:]&quot;</code>, where <i>class</i> is the name, and the <code>&quot;[:&quot;</code> and <code>&quot;:]&quot;</code> delimiters. <font SIZE="-1">POSIX</font> character classes only appear <i>inside</i> bracketed character classes, and are a convenient and descriptive way of listing a group of characters. </p>
+<p> <i></i><i>POSIX</i><i> Character Classes</i> </p>
+<p> POSIX character classes have the form <code>&quot;[:class:]&quot;</code>, where <i>class</i> is the name, and the <code>&quot;[:&quot;</code> and <code>&quot;:]&quot;</code> delimiters. POSIX character classes only appear <i>inside</i> bracketed character classes, and are a convenient and descriptive way of listing a group of characters. </p>
 <p> Be careful about the syntax, </p>
 <pre><code> # Correct:
  $string =~ /[[:alpha:]]/
@@ -342,11 +342,11 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
  $string =~ /[:alpha:]/
 </code></pre>
 <p> The latter pattern would be a character class consisting of a colon, and the letters <code>&quot;a&quot;</code>, <code>&quot;l&quot;</code>, <code>&quot;p&quot;</code> and <code>&quot;h&quot;</code>. </p>
-<p> <font SIZE="-1">POSIX</font> character classes can be part of a larger bracketed character class. For example, </p>
+<p> POSIX character classes can be part of a larger bracketed character class. For example, </p>
 <pre><code> [01[:alpha:]%]
 </code></pre>
 <p> is valid and matches &#8216;0&#8217;, &#8216;1&#8217;, any alphabetic character, and the percent sign. </p>
-<p> Perl recognizes the following <font SIZE="-1">POSIX</font> character classes: </p>
+<p> Perl recognizes the following POSIX character classes: </p>
 <pre><code> alpha Any alphabetical character (e.g., [A-Za-z]).
  alnum Any alphanumeric character (e.g., [A-Za-z0-9]).
  ascii Any character in the ASCII character set.
@@ -363,10 +363,10 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
  word A Perl extension (e.g., [A-Za-z0-9_]), equivalent to &quot;\w&quot;.
  xdigit Any hexadecimal digit (e.g., [0-9a-fA-F]). Note [7].
 </code></pre>
-<p> Like the Unicode properties, most of the <font SIZE="-1">POSIX</font> properties match the same regardless of whether case-insensitive (<code>&quot;/i&quot;</code>) matching is in effect or not. The two exceptions are <code>&quot;[:upper:]&quot;</code> and <code>&quot;[:lower:]&quot;</code>. Under <code>&quot;/i&quot;</code>, they each match the union of <code>&quot;[:upper:]&quot;</code> and <code>&quot;[:lower:]&quot;</code>. </p>
-<p> Most <font SIZE="-1">POSIX</font> character classes have two Unicode-style <code>&quot;\p&quot;</code> property counterparts. (They are not official Unicode properties, but Perl extensions derived from official Unicode properties.) The table below shows the relation between <font SIZE="-1">POSIX</font> character classes and these counterparts. </p>
-<p> One counterpart, in the column labelled ``ASCII-range Unicode&#8217;&#8216; in the table, matches only characters in the <font SIZE="-1">ASCII</font> character set. </p>
-<p> The other counterpart, in the column labelled ``Full-range Unicode&#8217;&#8216;, matches any appropriate characters in the full Unicode character set. For example, <code>&quot;\p{Alpha}&quot;</code> matches not just the <font SIZE="-1">ASCII</font> alphabetic characters, but any character in the entire Unicode character set considered alphabetic. An entry in the column labelled ``backslash sequence&#8217;&#8216; is a (short) equivalent. </p>
+<p> Like the Unicode properties, most of the POSIX properties match the same regardless of whether case-insensitive (<code>&quot;/i&quot;</code>) matching is in effect or not. The two exceptions are <code>&quot;[:upper:]&quot;</code> and <code>&quot;[:lower:]&quot;</code>. Under <code>&quot;/i&quot;</code>, they each match the union of <code>&quot;[:upper:]&quot;</code> and <code>&quot;[:lower:]&quot;</code>. </p>
+<p> Most POSIX character classes have two Unicode-style <code>&quot;\p&quot;</code> property counterparts. (They are not official Unicode properties, but Perl extensions derived from official Unicode properties.) The table below shows the relation between POSIX character classes and these counterparts. </p>
+<p> One counterpart, in the column labelled ``ASCII-range Unicode&#8217;&#8216; in the table, matches only characters in the ASCII character set. </p>
+<p> The other counterpart, in the column labelled ``Full-range Unicode&#8217;&#8216;, matches any appropriate characters in the full Unicode character set. For example, <code>&quot;\p{Alpha}&quot;</code> matches not just the ASCII alphabetic characters, but any character in the entire Unicode character set considered alphabetic. An entry in the column labelled ``backslash sequence&#8217;&#8216; is a (short) equivalent. </p>
 <pre><code> [[:...:]] ASCII-range Full-range backslash Note
                  Unicode Unicode sequence
  -----------------------------------------------------
@@ -392,7 +392,7 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <dd> <p> <code>&quot;\p{Blank}&quot;</code> and <code>&quot;\p{HorizSpace}&quot;</code> are synonyms. </p>
  </dd>
 <dt>[2]</dt>
-<dd> <p> Control characters don&#8217;t produce output as such, but instead usually control the terminal somehow: for example, newline and backspace are control characters. On <font SIZE="-1">ASCII</font> platforms, in the <font SIZE="-1">ASCII</font> range, characters whose code points are between 0 and 31 inclusive, plus 127 (<code>&quot;DEL&quot;</code>) are control characters; on <font SIZE="-1">EBCDIC</font> platforms, their counterparts are control characters. </p>
+<dd> <p> Control characters don&#8217;t produce output as such, but instead usually control the terminal somehow: for example, newline and backspace are control characters. On ASCII platforms, in the ASCII range, characters whose code points are between 0 and 31 inclusive, plus 127 (<code>&quot;DEL&quot;</code>) are control characters; on EBCDIC platforms, their counterparts are control characters. </p>
  </dd>
 <dt>[3]</dt>
 <dd> <p> Any character that is <i>graphical</i>, that is, visible. This class consists of all alphanumeric characters and all punctuation characters. </p>
@@ -401,21 +401,21 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <dd> <p> All printable characters, which is the set of all graphical characters plus those whitespace characters which are not also controls. </p>
  </dd>
 <dt>[5]</dt>
-<dd> <p> <code>&quot;\p{PosixPunct}&quot;</code> and <code>&quot;[[:punct:]]&quot;</code> in the <font SIZE="-1">ASCII</font> range match all non-controls, non-alphanumeric, non-space characters: <code>&quot;[-!&quot;#$%&amp;&#8216;()*+,./:;&lt;=&gt;?@[\\\]^_`{|}~]&quot;</code> (although if a locale is in effect, it could alter the behavior of <code>&quot;[[:punct:]]&quot;</code>). </p>
-<p> The similarly named property, <code>&quot;\p{Punct}&quot;</code>, matches a somewhat different set in the <font SIZE="-1">ASCII</font> range, namely <code>&quot;[-!&quot;#%&amp;&#8216;()*,./:;?@[\\\]_{}]&quot;</code>. That is, it is missing the nine characters <code>&quot;[$+&lt;=&gt;^`|~]&quot;</code>. This is because Unicode splits what <font SIZE="-1">POSIX</font> considers to be punctuation into two categories, Punctuation and Symbols. </p>
-<p> <code>&quot;\p{XPosixPunct}&quot;</code> and (under Unicode rules) <code>&quot;[[:punct:]]&quot;</code>, match what <code>&quot;\p{PosixPunct}&quot;</code> matches in the <font SIZE="-1">ASCII</font> range, plus what <code>&quot;\p{Punct}&quot;</code> matches. This is different than strictly matching according to <code>&quot;\p{Punct}&quot;</code>. Another way to say it is that if Unicode rules are in effect, <code>&quot;[[:punct:]]&quot;</code> matches all characters that Unicode considers punctuation, plus all ASCII-range characters that Unicode considers symbols. </p>
+<dd> <p> <code>&quot;\p{PosixPunct}&quot;</code> and <code>&quot;[[:punct:]]&quot;</code> in the ASCII range match all non-controls, non-alphanumeric, non-space characters: <code>&quot;[-!&quot;#$%&amp;&#8216;()*+,./:;&lt;=&gt;?@[\\\]^_`{|}~]&quot;</code> (although if a locale is in effect, it could alter the behavior of <code>&quot;[[:punct:]]&quot;</code>). </p>
+<p> The similarly named property, <code>&quot;\p{Punct}&quot;</code>, matches a somewhat different set in the ASCII range, namely <code>&quot;[-!&quot;#%&amp;&#8216;()*,./:;?@[\\\]_{}]&quot;</code>. That is, it is missing the nine characters <code>&quot;[$+&lt;=&gt;^`|~]&quot;</code>. This is because Unicode splits what POSIX considers to be punctuation into two categories, Punctuation and Symbols. </p>
+<p> <code>&quot;\p{XPosixPunct}&quot;</code> and (under Unicode rules) <code>&quot;[[:punct:]]&quot;</code>, match what <code>&quot;\p{PosixPunct}&quot;</code> matches in the ASCII range, plus what <code>&quot;\p{Punct}&quot;</code> matches. This is different than strictly matching according to <code>&quot;\p{Punct}&quot;</code>. Another way to say it is that if Unicode rules are in effect, <code>&quot;[[:punct:]]&quot;</code> matches all characters that Unicode considers punctuation, plus all ASCII-range characters that Unicode considers symbols. </p>
  </dd>
 <dt>[6]</dt>
 <dd> <p> <code>&quot;\p{XPerlSpace}&quot;</code> and <code>&quot;\p{Space}&quot;</code> match identically starting with Perl v5.18. In earlier versions, these differ only in that in non-locale matching, <code>&quot;\p{XPerlSpace}&quot;</code> did not match the vertical tab, <code>&quot;\cK&quot;</code>. Same for the two ASCII-only range forms. </p>
  </dd>
 <dt>[7]</dt>
-<dd> <p> Unlike <code>&quot;[[:digit:]]&quot;</code> which matches digits in many writing systems, such as Thai and Devanagari, there are currently only two sets of hexadecimal digits, and it is unlikely that more will be added. This is because you not only need the ten digits, but also the six <code>&quot;[A-F]&quot;</code> (and <code>&quot;[a-f]&quot;</code>) to correspond. That means only the Latin script is suitable for these, and Unicode has only two sets of these, the familiar <font SIZE="-1">ASCII</font> set, and the fullwidth forms starting at U+FF10 (<font SIZE="-1">FULLWIDTH DIGIT ZERO</font>). </p>
+<dd> <p> Unlike <code>&quot;[[:digit:]]&quot;</code> which matches digits in many writing systems, such as Thai and Devanagari, there are currently only two sets of hexadecimal digits, and it is unlikely that more will be added. This is because you not only need the ten digits, but also the six <code>&quot;[A-F]&quot;</code> (and <code>&quot;[a-f]&quot;</code>) to correspond. That means only the Latin script is suitable for these, and Unicode has only two sets of these, the familiar ASCII set, and the fullwidth forms starting at U+FF10 (FULLWIDTH DIGIT ZERO). </p>
  </dd></dl>
 <p> There are various other synonyms that can be used besides the names listed in the table. For example, <code>&quot;\p{XPosixAlpha}&quot;</code> can be written as <code>&quot;\p{Alpha}&quot;</code>. All are listed in ``Properties accessible through \p{} and \P{}&#8216;&#8216; in perluniprops. </p>
-<p> Both the <code>&quot;\p&quot;</code> counterparts always assume Unicode rules are in effect. On <font SIZE="-1">ASCII</font> platforms, this means they assume that the code points from 128 to 255 are Latin-1, and that means that using them under locale rules is unwise unless the locale is guaranteed to be Latin-1 or <font SIZE="-1">UTF-8.</font> In contrast, the <font SIZE="-1">POSIX</font> character classes are useful under locale rules. They are affected by the actual rules in effect, as follows: </p>
+<p> Both the <code>&quot;\p&quot;</code> counterparts always assume Unicode rules are in effect. On ASCII platforms, this means they assume that the code points from 128 to 255 are Latin-1, and that means that using them under locale rules is unwise unless the locale is guaranteed to be Latin-1 or UTF-8. In contrast, the POSIX character classes are useful under locale rules. They are affected by the actual rules in effect, as follows: </p>
 <dl>
 <dt>If the &quot;/a&quot; modifier, is in effect ...</dt>
-<dd> <p> Each of the <font SIZE="-1">POSIX</font> classes matches exactly the same as their ASCII-range counterparts. </p>
+<dd> <p> Each of the POSIX classes matches exactly the same as their ASCII-range counterparts. </p>
  </dd>
 <dt>otherwise ...</dt>
 <dd>  </dd>
@@ -423,7 +423,7 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <dd>  </dd>
 <dl>
 <dt>For code points above 255 ...</dt>
-<dd> <p> The <font SIZE="-1">POSIX</font> class matches the same as its Full-range counterpart. </p>
+<dd> <p> The POSIX class matches the same as its Full-range counterpart. </p>
  </dd>
 <dt>For code points below 256 ...</dt>
 <dd>  </dd>
@@ -431,7 +431,7 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <dd>  </dd>
 <dl>
 <dt>if locale rules are in effect ...</dt>
-<dd> <p> The <font SIZE="-1">POSIX</font> class matches according to the locale, except: </p>
+<dd> <p> The POSIX class matches according to the locale, except: </p>
  </dd>
 <dl>
 <dd>  </dd>
@@ -440,19 +440,19 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <dd> <p> also includes the platform&#8217;s native underscore character, no matter what the locale is. </p>
  </dd>
 <dt>&quot;ascii&quot;</dt>
-<dd> <p> on platforms that don&#8217;t have the <font SIZE="-1">POSIX</font> <code>&quot;ascii&quot;</code> extension, this matches just the platform&#8217;s native ASCII-range characters. </p>
+<dd> <p> on platforms that don&#8217;t have the POSIX <code>&quot;ascii&quot;</code> extension, this matches just the platform&#8217;s native ASCII-range characters. </p>
  </dd>
 <dt>&quot;blank&quot;</dt>
-<dd> <p> on platforms that don&#8217;t have the <font SIZE="-1">POSIX</font> <code>&quot;blank&quot;</code> extension, this matches just the platform&#8217;s native tab and space characters. </p>
+<dd> <p> on platforms that don&#8217;t have the POSIX <code>&quot;blank&quot;</code> extension, this matches just the platform&#8217;s native tab and space characters. </p>
  </dd></dl>
 </dl>
 <dl>
 <dd>  </dd></dl>
 <dt>if, instead, Unicode rules are in effect ...</dt>
-<dd> <p> The <font SIZE="-1">POSIX</font> class matches the same as the Full-range counterpart. </p>
+<dd> <p> The POSIX class matches the same as the Full-range counterpart. </p>
  </dd>
 <dt>otherwise ...</dt>
-<dd> <p> The <font SIZE="-1">POSIX</font> class matches the same as the <font SIZE="-1">ASCII</font> range counterpart. </p>
+<dd> <p> The POSIX class matches the same as the ASCII range counterpart. </p>
  </dd></dl>
 </dl>
 <dl>
@@ -463,8 +463,8 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <dd>  </dd></dl>
 </dl>
 <p> Which rules apply are determined as described in ``Which character set modifier is in effect?&#8216;&#8216; in perlre. </p>
-<p> Negation of <font SIZE="-1">POSIX</font> character classes </p>
-<p> A Perl extension to the <font SIZE="-1">POSIX</font> character class is the ability to negate it. This is done by prefixing the class name with a caret (<code>&quot;^&quot;</code>). Some examples: </p>
+<p> Negation of POSIX character classes </p>
+<p> A Perl extension to the POSIX character class is the ability to negate it. This is done by prefixing the class name with a caret (<code>&quot;^&quot;</code>). Some examples: </p>
 <pre><code>     POSIX ASCII-range Full-range backslash
                     Unicode Unicode sequence
  -----------------------------------------------------
@@ -473,9 +473,9 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
                 \P{PerlSpace} \P{XPerlSpace} \S
  [[:^word:]] \P{PerlWord} \P{XPosixWord} \W
 </code></pre>
-<p> The backslash sequence can mean either <font SIZE="-1">ASCII-</font> or Full-range Unicode, depending on various factors as described in ``Which character set modifier is in effect?&#8216;&#8216; in perlre. </p>
+<p> The backslash sequence can mean either ASCII- or Full-range Unicode, depending on various factors as described in ``Which character set modifier is in effect?&#8216;&#8216; in perlre. </p>
 <p> [= =] and [. .] </p>
-<p> Perl recognizes the <font SIZE="-1">POSIX</font> character classes <code>&quot;[=class=]&quot;</code> and <code>&quot;[.class.]&quot;</code>, but does not (yet?) support them. Any attempt to use either construct raises an exception. </p>
+<p> Perl recognizes the POSIX character classes <code>&quot;[=class=]&quot;</code> and <code>&quot;[.class.]&quot;</code>, but does not (yet?) support them. Any attempt to use either construct raises an exception. </p>
 <p> Examples </p>
 <pre><code> /[[:digit:]]/ # Matches a character that is a digit.
  /[01[:lower:]]/ # Matches a character that is either a
@@ -542,15 +542,15 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <pre><code> /(?[ [\xDF] ])/iu
 </code></pre>
 <p> does not match the string <code>&quot;ss&quot;</code>. </p>
-<p> You don&#8217;t have to enclose <font SIZE="-1">POSIX</font> class names inside double brackets, hence both of the following work: </p>
+<p> You don&#8217;t have to enclose POSIX class names inside double brackets, hence both of the following work: </p>
 <pre><code> /(?[ [:word:] - [:lower:] ])/
  /(?[ [[:word:]] - [[:lower:]] ])/
 </code></pre>
-<p> Any contained <font SIZE="-1">POSIX</font> character classes, including things like <code>&quot;\w&quot;</code> and <code>&quot;\D&quot;</code> respect the <code>&quot;/a&quot;</code> (and <code>&quot;/aa&quot;</code>) modifiers. </p>
+<p> Any contained POSIX character classes, including things like <code>&quot;\w&quot;</code> and <code>&quot;\D&quot;</code> respect the <code>&quot;/a&quot;</code> (and <code>&quot;/aa&quot;</code>) modifiers. </p>
 <p> Note that <code>&quot;(?[ ])&quot;</code> is a regex-compile-time construct. Any attempt to use something which isn&#8217;t knowable at the time the containing regular expression is compiled is a fatal error. In practice, this means just three limitations: </p>
 <dl>
 <dt>1.</dt>
-<dd> <p> When compiled within the scope of <code>&quot;use locale&quot;</code> (or the <code>&quot;/l&quot;</code> regex modifier), this construct assumes that the execution-time locale will be a <font SIZE="-1">UTF-8</font> one, and the generated pattern always uses Unicode rules. What gets matched or not thus isn&#8217;t dependent on the actual runtime locale, so tainting is not enabled. But a <code>&quot;locale&quot;</code> category warning is raised if the runtime locale turns out to not be <font SIZE="-1">UTF-8.</font> </p>
+<dd> <p> When compiled within the scope of <code>&quot;use locale&quot;</code> (or the <code>&quot;/l&quot;</code> regex modifier), this construct assumes that the execution-time locale will be a UTF-8 one, and the generated pattern always uses Unicode rules. What gets matched or not thus isn&#8217;t dependent on the actual runtime locale, so tainting is not enabled. But a <code>&quot;locale&quot;</code> category warning is raised if the runtime locale turns out to not be UTF-8. </p>
  </dd>
 <dt>2.</dt>
 <dd> <p> Any user-defined property used must be already defined by the time the regular expression is compiled (but note that this construct can be used instead of such properties). </p>

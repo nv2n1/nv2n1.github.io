@@ -206,7 +206,7 @@ resume=UUID=3f5ad593-4546-4a94-a374-bcfb68aa11f7</pre>
 </dd></dl>
 <p> As you see, you can skip colons in such a case.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  dracut pipes key to cryptsetup with <i>-d &#8211;</i> argument, therefore you need to pipe to crypsetup luksFormat with <i>-d &#8211;</i>, too! Here follows example for key encrypted with GPG:</dd>
 <dl>
 <dd>
@@ -267,7 +267,7 @@ boot=LABEL=&lt;label&gt;</pre>
 <dd>skip checksum check of the kernel image. Useful, if the kernel image is not in a separate boot partition.</dd></dl>
 <h3>Network</h3>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
+<dd> <code>Important</code> <br/>
  It is recommended to either bind an interface to a MAC with the <code>ifname</code> argument, or to use the systemd-udevd predictable network interface names. Predictable network interface device names based on:</dd>
 <dl>
 <dd>&bull; firmware/bios-provided index numbers for on-board devices</dd></dl>
@@ -376,7 +376,7 @@ ip={dhcp|on|any|dhcp6|auto6}</code></pre>
 <dl>
 <dd>Assign network device name &lt;interface&gt; (ie &quot;bootnet&quot;) to the NIC with MAC &lt;MAC&gt;.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Do <code>not</code> use the default kernel naming scheme for the interface name, as it can conflict with the kernel names. So, don&#8217;t use &quot;eth[0-9]+&quot; for the interface name. Better name it &quot;bootnet&quot; or &quot;bluesocket&quot;.  <code>rd.route=</code><i>&lt;net&gt;</i>/<i>&lt;netmask&gt;</i>:<i>&lt;gateway&gt;</i>[:<i>&lt;interface&gt;</i>]</dd>
 <dl>
 <dd>Add a static route with route options, which are separated by a colon. IPv6 addresses have to be put in brackets. <code>Example</code>.</dd>
@@ -465,7 +465,7 @@ ip={dhcp|on|any|dhcp6|auto6}</code></pre>
 <dl>
 <dd>mount cifs share from &lt;server-ip&gt;:/&lt;root-dir&gt;, if no server-ip is given, use dhcp next_server. if server-ip is an IPv6 address it has to be put in brackets, e.g. [2001:DB8::1]. If a username or password are not specified as part of the root, then they must be passed on the command line through cifsuser/cifspass.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Passwords specified on the kernel command line are visible for all users via the file <i>/proc/cmdline</i> and via dmesg or can be sniffed on the network, when using DHCP with DHCP root-path.  <code>cifsuser</code>=<i>&lt;username&gt;</i></dd>
 <dl>
 <dd>Set the cifs username, if not specified as part of the root.</dd></dl>
@@ -473,15 +473,15 @@ ip={dhcp|on|any|dhcp6|auto6}</code></pre>
 <dl>
 <dd>Set the cifs password, if not specified as part of the root.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Passwords specified on the kernel command line are visible for all users via the file <i>/proc/cmdline</i> and via dmesg or can be sniffed on the network, when using DHCP with DHCP root-path.</dd></dl>
 </dl>
 <h3>iSCSI</h3>
 <p><code>root=</code>iscsi:[<i>&lt;username&gt;</i>:<i>&lt;password&gt;</i>[:<i>&lt;reverse&gt;</i>:<i>&lt;password&gt;</i>]@][<i>&lt;servername&gt;</i>]:[<i>&lt;protocol&gt;</i>]:[<i>&lt;port&gt;</i>][:[<i>&lt;iscsi_iface_name&gt;</i>]:[<i>&lt;netdev_name&gt;</i>]]:[<i>&lt;LUN&gt;</i>]:<i>&lt;targetname&gt;</i></p>
 <dl>
-<dd>protocol defaults to &quot;6&quot;, LUN defaults to &quot;0&quot;. If the &quot;servername&quot; field is provided by BOOTP or DHCP, then that field is used in conjunction with other associated fields to contact the boot server in the Boot stage. However, if the &quot;servername&quot; field is not provided, then the &quot;targetname&quot; field is then used in the Discovery Service stage in conjunction with other associated fields. See m[blue]<code>rfc4173</code>m[]<font SIZE="-2">[1]</font>.</dd>
+<dd>protocol defaults to &quot;6&quot;, LUN defaults to &quot;0&quot;. If the &quot;servername&quot; field is provided by BOOTP or DHCP, then that field is used in conjunction with other associated fields to contact the boot server in the Boot stage. However, if the &quot;servername&quot; field is not provided, then the &quot;targetname&quot; field is then used in the Discovery Service stage in conjunction with other associated fields. See m[blue]<code>rfc4173</code>m[][1].</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Passwords specified on the kernel command line are visible for all users via the file <i>/proc/cmdline</i> and via dmesg or can be sniffed on the network, when using DHCP with DHCP root-path.  <code>Example</code>.</dd>
 <dl>
 <dd>
@@ -507,12 +507,12 @@ netroot=iscsi:192.168.50.1::::iqn.2009-06.dracut:target1</pre>
 <pre>netroot=iscsi:[2001:DB8::1]::::iqn.2009-06.dracut:target0</pre>
 </dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Passwords specified on the kernel command line are visible for all users via the file <i>/proc/cmdline</i> and via dmesg or can be sniffed on the network, when using DHCP with DHCP root-path. You may want to use rd.iscsi.firmware.  <code>root=</code><i>???</i> <code>rd.iscsi.initiator=</code><i>&lt;initiator&gt;</i> <code>rd.iscsi.target.name=</code><i>&lt;target name&gt;</i> <code>rd.iscsi.target.ip=</code><i>&lt;target ip&gt;</i> <code>rd.iscsi.target.port=</code><i>&lt;target port&gt;</i> <code>rd.iscsi.target.group=</code><i>&lt;target group&gt;</i> <code>rd.iscsi.username=</code><i>&lt;username&gt;</i> <code>rd.iscsi.password=</code><i>&lt;password&gt;</i> <code>rd.iscsi.in.username=</code><i>&lt;in username&gt;</i> <code>rd.iscsi.in.password=</code><i>&lt;in password&gt;</i></dd>
 <dl>
 <dd>manually specify all iscsistart parameter (see <code>iscsistart &#8211;help</code>)</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Passwords specified on the kernel command line are visible for all users via the file <i>/proc/cmdline</i> and via dmesg or can be sniffed on the network, when using DHCP with DHCP root-path. You may want to use rd.iscsi.firmware.  <code>root=</code><i>???</i> <code>netroot=</code>iscsi <code>rd.iscsi.firmware=1</code></dd>
 <dl>
 <dd>will read the iscsi parameter from the BIOS firmware</dd></dl>
@@ -533,7 +533,7 @@ netroot=iscsi:192.168.50.1::::iqn.2009-06.dracut:target1</pre>
 <dl>
 <dd>Try to connect to a FCoE SAN through the NIC specified by <i>&lt;interface&gt;</i> or <i>&lt;MAC&gt;</i> or EDD settings. For the second argument, currently only nodcb is supported. This parameter can be specified multiple times.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  letters in the MAC-address must be lowercase!</dd></dl>
 </dl>
 <h3>Nbd</h3>
@@ -629,7 +629,7 @@ root=live:<a href="ftp://ftp.example.com/liveboot.img">ftp://ftp.example.com/liv
 <dl>
 <dd>Enables writable filesystem support. The system will boot with a fully writable filesystem without snapshots <i>(see notes above about available live boot options)</i>. You can use the <code>rootflags</code> option to set mount options for the live filesystem as well <i>(see documentation about rootflags in the </i><i></i><code>Standard</code><i> section above)</i>. This implies that the whole image is copied to RAM before the boot continues.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  There must be enough free RAM available to hold the complete image.</dd></dl>
 <p> This method is very suitable for diskless boots.</dl>
 <h3>Plymouth Boot Splash</h3>

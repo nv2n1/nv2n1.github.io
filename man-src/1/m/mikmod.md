@@ -321,5 +321,5 @@ description: "mikmod – play soundtracker etc. modules on a Unix machine."
 <h2>AUTHORS</h2>
 <p> <i>MikMod</i> is the result of the work of many people, including: Jean-Paul Mikkers, Jake Stine, Miodrag Vallat, Frank Loemker, Andrew Zabolotny, Raphael Assenat, Steve McIntyre, Peter Amstutz, &quot;MenTaLguY&quot;, Dimitri Boldyrev, Shlomi Fish, Stefan Tibus, Tinic Urou. A full list of people having worked on libmikmod and MikMod is displayed when MikMod starts. </p>
 <h2>LOCATING NEWER VERSIONS&#8230;</h2>
-<p> The official MikMod and libmikmod home page is located on<br />
+<p> The official MikMod and libmikmod home page is located on<br/>
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://mikmod.raphnet.net">http://mikmod.raphnet.net</a> </p>

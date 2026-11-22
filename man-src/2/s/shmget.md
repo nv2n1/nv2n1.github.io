@@ -10,7 +10,7 @@ description: "shmget – allocates a System V shared memory segment"
 
 <p> shmget &#8211; allocates a System V shared memory segment </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/ipc.h&gt;</code><br />
+<p> <code>#include &lt;sys/ipc.h&gt;</code><br/>
  <code>#include &lt;sys/shm.h&gt;</code> </p>
 <p> <code>int shmget(key_t </code><i>key</i><code>, size_t </code><i>size</i><code>, int </code><i>shmflg</i><code>);</code></p>
 <h2>DESCRIPTION</h2>

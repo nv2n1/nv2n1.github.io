@@ -14,7 +14,7 @@ description: "gliv – An OpenGL Image Viewer"
 <h2>DESCRIPTION</h2>
 <p> <i>gliv</i> uses gdk-pixbuf to load images and OpenGL to render them. It allows to do some moving, rotating, zooming and slide show.  </p>
 <h2>OPTIONS</h2>
-<p> The options are first set to their default values, &quot;off&quot; for flags, then read either from ~/.glivrc or /etc/glivrc or a configuration file specified on the command line, and finally read from the command line. <br />
+<p> The options are first set to their default values, &quot;off&quot; for flags, then read either from ~/.glivrc or /etc/glivrc or a configuration file specified on the command line, and finally read from the command line. <br/>
  Omitting the argument for an option that takes an &quot;on|off&quot; argument (flags) is like giving it &quot;on&quot;, so --foo is the same as --foo=on if foo is an on|off flag. </p>
 <dl>
 <dt><code>-h, --help</code></dt>
@@ -60,51 +60,51 @@ description: "gliv – An OpenGL Image Viewer"
 <dd> <p> Initial window geometry. This option can be used to specify the position and dimension of the <i>gliv</i> window. It expects a geometry argument in the XParseGeometry(3X11) format like: 640x480+20-30 for example. </p>
  </dd></dl>
 <h2>COLLECTIONS</h2>
-<p> Starting with version 1.8, <i>gliv</i> supports a file format called &quot;GLiv collection&quot;. It contains an images list and the associated thumbnails, this way, when you load a collection the images menus rebuilding is faster since it does not have to make thumbnails. <br />
+<p> Starting with version 1.8, <i>gliv</i> supports a file format called &quot;GLiv collection&quot;. It contains an images list and the associated thumbnails, this way, when you load a collection the images menus rebuilding is faster since it does not have to make thumbnails. <br/>
  <i>gliv</i> supports also transparent decompression, so the collections can be compressed in bzip2, gzip or <a href="/docs/linux/man/1-compress/">compress</a>(1) provided that you have the corresponding decompressor.  </p>
 <h2>CONTROLS</h2>
-<p> ESC, q : Quit <br />
- f : Full-screen/window <br />
- +/=/- : Zoom in/in/out <br />
- n/p : Next/previous image <br />
- Pause : Start/stop the slide show <br />
- l : Reduce the image to the window <br />
- M : Maximize the image to the window <br />
- m : Make the image fit the window <br />
- r : Reset position and size <br />
- b : Toggle display of the menu bar <br />
- i : Toggle display of the info bar <br />
- s : Toggle display of the scrollbars <br />
- a : Toggle display of the alpha checks <br />
- h : Toggle display of the help box <br />
- w : Toggle display of floating windows <br />
- o : Display the open dialog <br />
- g : Display the image selector <br />
- t : Display the options dialog <br />
- d : Hide the cursor <br />
- u : Undo <br />
- y : Redo <br />
- c : Clear the history <br />
- Delete : Delete the current file <br />
- C-up : Rotate by +90 degrees <br />
- C-down : Rotate by -90 degrees <br />
- C-left : Rotate by +0.1 degree <br />
- C-right: Rotate by -0.1 degree <br />
- z : Horizontal flip <br />
- e : Vertical flip <br />
+<p> ESC, q : Quit <br/>
+ f : Full-screen/window <br/>
+ +/=/- : Zoom in/in/out <br/>
+ n/p : Next/previous image <br/>
+ Pause : Start/stop the slide show <br/>
+ l : Reduce the image to the window <br/>
+ M : Maximize the image to the window <br/>
+ m : Make the image fit the window <br/>
+ r : Reset position and size <br/>
+ b : Toggle display of the menu bar <br/>
+ i : Toggle display of the info bar <br/>
+ s : Toggle display of the scrollbars <br/>
+ a : Toggle display of the alpha checks <br/>
+ h : Toggle display of the help box <br/>
+ w : Toggle display of floating windows <br/>
+ o : Display the open dialog <br/>
+ g : Display the image selector <br/>
+ t : Display the options dialog <br/>
+ d : Hide the cursor <br/>
+ u : Undo <br/>
+ y : Redo <br/>
+ c : Clear the history <br/>
+ Delete : Delete the current file <br/>
+ C-up : Rotate by +90 degrees <br/>
+ C-down : Rotate by -90 degrees <br/>
+ C-left : Rotate by +0.1 degree <br/>
+ C-right: Rotate by -0.1 degree <br/>
+ z : Horizontal flip <br/>
+ e : Vertical flip <br/>
  </p>
-<p> The first mouse button and the arrow keys will move the image unless the Control key is pressed. In which case the image will be rotated around the window center. <br />
+<p> The first mouse button and the arrow keys will move the image unless the Control key is pressed. In which case the image will be rotated around the window center. <br/>
  </p>
-<p> Your mouse wheel (if supported) will zoom the image and switch it when you press the button. <br />
+<p> Your mouse wheel (if supported) will zoom the image and switch it when you press the button. <br/>
  </p>
-<p> You can also zoom by dragging the mouse vertically while holding Shift and the first button. <br />
+<p> You can also zoom by dragging the mouse vertically while holding Shift and the first button. <br/>
  </p>
-<p> Space and Backspace act like n and p. <br />
+<p> Space and Backspace act like n and p. <br/>
  </p>
-<p> Draw a rectangle with the third button and <i>gliv</i> will zoom in it. <br />
+<p> Draw a rectangle with the third button and <i>gliv</i> will zoom in it. <br/>
  </p>
 <h2>FILE</h2>
 <p> <code>~/.glivrc</code> - This file is absolutely not mandatory.  </p>
 <h2>AUTHOR</h2>
-<p> Guillaume Chazarain &lt;guichaz [at] yahoo.fr&gt; <br />
+<p> Guillaume Chazarain &lt;guichaz [at] yahoo.fr&gt; <br/>
  See <a rel="nofollow" href="http://guichaz.free.fr/gliv">http://guichaz.free.fr/gliv</a> </p>

@@ -10,8 +10,8 @@ description: "wimlib-imagex-mount, wimlib-imagex-mountrw, wimlib-imagex-unmount 
 
 <p> wimlib-imagex-mount, wimlib-imagex-mountrw, wimlib-imagex-unmount &#8211; Mount and unmount an image from a WIM archive</p>
 <h2>SYNOPSIS</h2>
-<p> <code>wimlib-imagex mount</code> <i>WIMFILE</i> [<i>IMAGE</i>] <i>DIRECTORY</i> [<i>OPTION</i>&#8230;]<br />
- <code>wimlib-imagex mountrw</code> <i>WIMFILE</i> [<i>IMAGE</i>] <i>DIRECTORY</i> [<i>OPTION</i>&#8230;]<br />
+<p> <code>wimlib-imagex mount</code> <i>WIMFILE</i> [<i>IMAGE</i>] <i>DIRECTORY</i> [<i>OPTION</i>&#8230;]<br/>
+ <code>wimlib-imagex mountrw</code> <i>WIMFILE</i> [<i>IMAGE</i>] <i>DIRECTORY</i> [<i>OPTION</i>&#8230;]<br/>
  <code>wimlib-imagex unmount</code> <i>DIRECTORY</i> [<i>OPTION</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> On Linux-based systems, the <code>wimlib-imagex mount</code> and <code>wimlib-imagex mountrw</code> commands will mount the image in the Windows Imaging (WIM) file <i>WIMFILE</i> specified by <i>IMAGE</i> on the directory <i>DIRECTORY</i> using FUSE (Filesystem in Userspace). <code>wimlib-imagex mount</code> will mount the image read-only, while <code>wimlib-imagex mountrw</code> will mount the image read-write. These commands are also available as simply <code>wimmount</code>, <code>wimmountrw</code>, and <code>wimunmount</code> if the appropriate hard links are installed. </p>

@@ -11,7 +11,7 @@ Perlbal - Reverse-proxy load balancer and webserver
 
 <h2>DESCRIPTION</h2>
 
- For now, see example configuration files in conf/ from the <font SIZE="-1">CPAN</font> tarball 
+ For now, see example configuration files in conf/ from the CPAN tarball 
 
  <a rel="nofollow" HREF="http://search.cpan.org/dist/Perlbal/">http://search.cpan.org/dist/Perlbal/</a>
 

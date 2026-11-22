@@ -14,10 +14,10 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <p> Single Process Multiple Data (SPMD) Model: </p>
 <p> <code>mpirun</code> [ options ] <code>&lt;program&gt;</code> [ &lt;args&gt; ] </p>
 <p> Multiple Instruction Multiple Data (MIMD) Model: </p>
-<p> <code>mpirun</code> [ global_options ]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&nbsp;local_options1&nbsp;] <code>&lt;program1&gt;</code> [ &lt;args1&gt; ] :<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&nbsp;local_options2&nbsp;] <code>&lt;program2&gt;</code> [ &lt;args2&gt; ] :<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8230; :<br />
+<p> <code>mpirun</code> [ global_options ]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&nbsp;local_options1&nbsp;] <code>&lt;program1&gt;</code> [ &lt;args1&gt; ] :<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&nbsp;local_options2&nbsp;] <code>&lt;program2&gt;</code> [ &lt;args2&gt; ] :<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8230; :<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&nbsp;local_optionsN&nbsp;] <code>&lt;programN&gt;</code> [ &lt;argsN&gt; ] </p>
 <p> Note that in both models, invoking <i>mpirun</i> via an absolute path name is equivalent to specifying the <i>&#8211;prefix</i> option with a <i>&lt;dir&gt;</i> value equivalent to the directory where <i>mpirun</i> resides, minus its last subdirectory. For example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;/usr/local/bin/mpirun &#8230; </p>
@@ -169,7 +169,7 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <dt><code>-wdir </code>&lt;dir&gt;</dt>
 <dd> Change to the directory &lt;dir&gt; before the user&#8217;s program executes. See the &quot;Current Working Directory&quot; section for notes on relative paths. <code>Note:</code> If the <i>-wdir</i> option appears both on the command line and in an application context, the context will take precedence over the command line. Thus, if the path to the desired wdir is different on the backend nodes, then it must be specified as an absolute path that is correct for the backend node.</dd>
 <dt><code>-x </code>&lt;env&gt;</dt>
-<dd> Export the specified environment variables to the remote nodes before executing the program. Only one environment variable can be specified per <i>-x</i> option. Existing environment variables can be specified or new variable names specified with corresponding values. For example:<br />
+<dd> Export the specified environment variables to the remote nodes before executing the program. Only one environment variable can be specified per <i>-x</i> option. Existing environment variables can be specified or new variable names specified with corresponding values. For example:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;mpirun -x DISPLAY -x OFILE=/tmp/out &#8230; </dd>
 <p> The parser for the <i>-x</i> option is not very sophisticated; it does not even understand quoted values. Users are advised to set variables in the environment, and then use <i>-x</i> to export (not define) them.</dl>
 <p> Setting MCA parameters:</p>
@@ -277,9 +277,9 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <dt>mpirun -H aa,aa,bb ./a.out</dt>
 <dd> launches two processes on node aa and one on bb.</dd></dl>
 <p> Or, consider the hostfile </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;cat myhostfile<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;aa slots=2<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;bb slots=2<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;cat myhostfile<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;aa slots=2<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;bb slots=2<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;cc slots=2 </p>
 <p> Here, we list both the host names (aa, bb, and cc) but also how many &quot;slots&quot; there are for each. Slots indicate how many processes can potentially execute on a node. For best performance, the number of slots may be chosen to be the number of cores on the node or the number of processor sockets. If the hostfile does not provide slots information, Open MPI will attempt to discover the number of cores (or hwthreads, if the use-hwthreads-as-cpus option is set) and set the number of slots to that value. This default behavior also occurs when specifying the <i>-host</i> option with a single hostname. Thus, the command</p>
 <dl>
@@ -306,9 +306,9 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <dt>mpirun -H aa,bb -pernode ./a.out</dt>
 <dd> is the same as <i>-npernode</i> 1.</dd></dl>
 <p> Another alternative is to specify the number of processes with the <i>-np</i> option. Consider now the hostfile </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;cat myhostfile<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;aa slots=4<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;bb slots=4<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;cat myhostfile<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;aa slots=4<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;bb slots=4<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;cc slots=4 </p>
 <p> Now,</p>
 <dl>
@@ -331,10 +331,10 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <dl>
 <dt>mpirun -hostfile myhostfile -np 14 -nooversubscribe ./a.out</dt>
 <dd> will produce an error since <i>-nooversubscribe</i> prevents oversubscription.</dd></dl>
-<p> Limits to oversubscription can also be specified in the hostfile itself:<br />
-&nbsp;%&nbsp;cat myhostfile<br />
-&nbsp;aa slots=4 max_slots=4<br />
-&nbsp;bb&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;max_slots=4<br />
+<p> Limits to oversubscription can also be specified in the hostfile itself:<br/>
+&nbsp;%&nbsp;cat myhostfile<br/>
+&nbsp;aa slots=4 max_slots=4<br/>
+&nbsp;bb&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;max_slots=4<br/>
 &nbsp;cc slots=4 </p>
 <p> The <i>max_slots</i> field specifies such a limit. When it does, the <i>slots</i> value defaults to the limit. Now:</p>
 <dl>
@@ -377,61 +377,61 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <p> Alternatively, processes mapped by l2cache and then bound to socket will simply be bound to all the processors in the socket where they are located. In this manner, users can exert detailed control over relative MCW rank location and binding. </p>
 <p> Finally, <i>&#8211;report-bindings</i> can be used to report bindings. </p>
 <p> As an example, consider a node with two processor sockets, each comprising four cores. We run <i>mpirun</i> with <i>-np 4 &#8211;report-bindings</i> and the following additional options: </p>
-<p>&nbsp;%&nbsp;mpirun &#8230; &#8211;map-by core &#8211;bind-to core<br />
-&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,0]&nbsp;to cpus 0001<br />
-&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,1]&nbsp;to cpus 0002<br />
-&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,2]&nbsp;to cpus 0004<br />
+<p>&nbsp;%&nbsp;mpirun &#8230; &#8211;map-by core &#8211;bind-to core<br/>
+&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,0]&nbsp;to cpus 0001<br/>
+&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,1]&nbsp;to cpus 0002<br/>
+&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,2]&nbsp;to cpus 0004<br/>
 &nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,3]&nbsp;to cpus 0008 </p>
-<p>&nbsp;%&nbsp;mpirun &#8230; &#8211;map-by socket &#8211;bind-to socket<br />
-&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,0]&nbsp;to socket 0 cpus 000f<br />
-&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,1]&nbsp;to socket 1 cpus 00f0<br />
-&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,2]&nbsp;to socket 0 cpus 000f<br />
+<p>&nbsp;%&nbsp;mpirun &#8230; &#8211;map-by socket &#8211;bind-to socket<br/>
+&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,0]&nbsp;to socket 0 cpus 000f<br/>
+&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,1]&nbsp;to socket 1 cpus 00f0<br/>
+&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,2]&nbsp;to socket 0 cpus 000f<br/>
 &nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,3]&nbsp;to socket 1 cpus 00f0 </p>
-<p>&nbsp;%&nbsp;mpirun &#8230; &#8211;map-by core:PE=2 &#8211;bind-to core<br />
-&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,0]&nbsp;to cpus 0003<br />
-&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,1]&nbsp;to cpus 000c<br />
-&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,2]&nbsp;to cpus 0030<br />
+<p>&nbsp;%&nbsp;mpirun &#8230; &#8211;map-by core:PE=2 &#8211;bind-to core<br/>
+&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,0]&nbsp;to cpus 0003<br/>
+&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,1]&nbsp;to cpus 000c<br/>
+&nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,2]&nbsp;to cpus 0030<br/>
 &nbsp;[&#8230;]&nbsp;&#8230; binding child&nbsp;[&#8230;,3]&nbsp;to cpus 00c0 </p>
 <p>&nbsp;%&nbsp;mpirun &#8230; &#8211;bind-to none </p>
 <p> Here, <i>&#8211;report-bindings</i> shows the binding of each process as a mask. In the first case, the processes bind to successive cores as indicated by the masks 0001, 0002, 0004, and 0008. In the second case, processes bind to all cores on successive sockets as indicated by the masks 000f and 00f0. The processes cycle through the processor sockets in a round-robin fashion as many times as are needed. In the third case, the masks show us that 2 cores have been bound per process. In the fourth case, binding is turned off and no bindings are reported. </p>
 <p> Open MPI&#8217;s support for process binding depends on the underlying operating system. Therefore, certain process binding options may not be available on every system. </p>
 <p> Process binding can also be set with MCA parameters. Their usage is less convenient than that of <i>mpirun</i> options. On the other hand, MCA parameters can be set not only on the <i>mpirun</i> command line, but alternatively in a system or user mca-params.conf file or as environment variables, as described in the MCA section below. Some examples include: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mpirun option&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;MCA parameter key&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;value </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;map-by core&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rmaps_base_mapping_policy&nbsp;<wbr>&nbsp;<wbr>&nbsp;core<br />
-&nbsp;<wbr>&nbsp;&#8211;map-by socket&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rmaps_base_mapping_policy&nbsp;<wbr>&nbsp;<wbr>&nbsp;socket<br />
-&nbsp;<wbr>&nbsp;&#8211;rank-by core&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rmaps_base_ranking_policy&nbsp;<wbr>&nbsp;<wbr>&nbsp;core<br />
-&nbsp;<wbr>&nbsp;&#8211;bind-to core&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hwloc_base_binding_policy&nbsp;<wbr>&nbsp;<wbr>&nbsp;core<br />
-&nbsp;<wbr>&nbsp;&#8211;bind-to socket&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hwloc_base_binding_policy&nbsp;<wbr>&nbsp;<wbr>&nbsp;socket<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;map-by core&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rmaps_base_mapping_policy&nbsp;<wbr>&nbsp;<wbr>&nbsp;core<br/>
+&nbsp;<wbr>&nbsp;&#8211;map-by socket&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rmaps_base_mapping_policy&nbsp;<wbr>&nbsp;<wbr>&nbsp;socket<br/>
+&nbsp;<wbr>&nbsp;&#8211;rank-by core&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rmaps_base_ranking_policy&nbsp;<wbr>&nbsp;<wbr>&nbsp;core<br/>
+&nbsp;<wbr>&nbsp;&#8211;bind-to core&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hwloc_base_binding_policy&nbsp;<wbr>&nbsp;<wbr>&nbsp;core<br/>
+&nbsp;<wbr>&nbsp;&#8211;bind-to socket&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hwloc_base_binding_policy&nbsp;<wbr>&nbsp;<wbr>&nbsp;socket<br/>
 &nbsp;<wbr>&nbsp;&#8211;bind-to none&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hwloc_base_binding_policy&nbsp;<wbr>&nbsp;<wbr>&nbsp;none</p>
 <h3>Rankfiles</h3>
 <p> Rankfiles are text files that specify detailed information about how individual processes should be mapped to nodes, and to which processor(s) they should be bound. Each line of a rankfile specifies the location of one process (for MPI jobs, the process&#8217; &quot;rank&quot; refers to its rank in MPI_COMM_WORLD). The general form of each line in the rankfile is: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank&nbsp;&lt;N&gt;=&lt;hostname&gt;&nbsp;slot=&lt;slot list&gt; </p>
 <p> For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;cat myrankfile<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 0=aa slot=1:0-2<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 1=bb slot=0:0,1<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 2=cc slot=1-2<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;cat myrankfile<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 0=aa slot=1:0-2<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 1=bb slot=0:0,1<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 2=cc slot=1-2<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;mpirun -H aa,bb,cc,dd -rf myrankfile ./a.out </p>
 <p> Means that </p>
-<p>&nbsp;<wbr>&nbsp;Rank 0 runs on node aa, bound to logical socket 1, cores 0-2.<br />
-&nbsp;<wbr>&nbsp;Rank 1 runs on node bb, bound to logical socket 0, cores 0 and 1.<br />
+<p>&nbsp;<wbr>&nbsp;Rank 0 runs on node aa, bound to logical socket 1, cores 0-2.<br/>
+&nbsp;<wbr>&nbsp;Rank 1 runs on node bb, bound to logical socket 0, cores 0 and 1.<br/>
 &nbsp;<wbr>&nbsp;Rank 2 runs on node cc, bound to logical cores 1 and 2. </p>
 <p> Rankfiles can alternatively be used to specify <i>physical</i> processor locations. In this case, the syntax is somewhat different. Sockets are no longer recognized, and the slot number given must be the number of the physical PU as most OS&#8217;s do not assign a unique physical identifier to each core in the node. Thus, a proper physical rankfile looks something like the following: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;cat myphysicalrankfile<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 0=aa slot=1<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 1=bb slot=8<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;cat myphysicalrankfile<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 0=aa slot=1<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 1=bb slot=8<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 2=cc slot=6 </p>
 <p> This means that </p>
-<p>&nbsp;<wbr>&nbsp;Rank 0 will run on node aa, bound to the core that contains physical PU 1<br />
-&nbsp;<wbr>&nbsp;Rank 1 will run on node bb, bound to the core that contains physical PU 8<br />
+<p>&nbsp;<wbr>&nbsp;Rank 0 will run on node aa, bound to the core that contains physical PU 1<br/>
+&nbsp;<wbr>&nbsp;Rank 1 will run on node bb, bound to the core that contains physical PU 8<br/>
 &nbsp;<wbr>&nbsp;Rank 2 will run on node cc, bound to the core that contains physical PU 6 </p>
 <p> Rankfiles are treated as <i>logical</i> by default, and the MCA parameter rmaps_rank_file_physical must be set to 1 to indicate that the rankfile is to be considered as <i>physical</i>. </p>
 <p> The hostnames listed above are &quot;absolute,&quot; meaning that actual resolveable hostnames are specified. However, hostnames can also be specified as &quot;relative,&quot; meaning that they are specified in relation to an externally-specified list of hostnames (e.g., by mpirun&#8217;s &#8211;host argument, a hostfile, or a job scheduler). </p>
 <p> The &quot;relative&quot; specification is of the form &quot;+n&lt;X&gt;&quot;, where X is an integer specifying the Xth hostname in the set of all available hostnames, indexed from 0. For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;cat myrankfile<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 0=+n0 slot=1:0-2<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 1=+n1 slot=0:0,1<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 2=+n2 slot=1-2<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;cat myrankfile<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 0=+n0 slot=1:0-2<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 1=+n1 slot=0:0,1<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rank 2=+n2 slot=1-2<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;mpirun -H aa,bb,cc,dd -rf myrankfile ./a.out </p>
 <p> Starting with Open MPI v1.7, all socket/core slot locations are be specified as <i>logical</i> indexes (the Open MPI v1.6 series used <i>physical</i> indexes). You can use tools such as HWLOC&#8217;s &quot;lstopo&quot; to find the logical indexes of socket and cores.</p>
 <h3>Application Context or Executable Program?</h3>
@@ -516,7 +516,7 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <dd> if the cmd line option &#8211;report-child-jobs-separately is set, we will return -only- the exit status of the primary job. Any non-zero exit status in secondary jobs will be reported solely in a summary print statement.</dd></dl>
 <p> By default, OMPI records and notes that MPI processes exited with non-zero termination status. This is generally not considered an &quot;abnormal termination&quot; &#8211; i.e., OMPI will not abort an MPI job if one or more processes return a non-zero status. Instead, the default behavior simply reports the number of processes terminating with non-zero status upon completion of the job. </p>
 <p> However, in some cases it can be desirable to have the job abort when any process terminates with non-zero status. For example, a non-MPI job might detect a bad result from a calculation and want to abort, but doesn&#8217;t want to generate a core file. Or an MPI job might continue past a call to MPI_Finalize, but indicate that all processes should abort due to some post-MPI result. </p>
-<p> It is not anticipated that this situation will occur frequently. However, in the interest of serving the broader community, OMPI now has a means for allowing users to direct that jobs be aborted upon any process exiting with non-zero status. Setting the MCA parameter &quot;orte_abort_on_non_zero_status&quot; to 1 will cause OMPI to abort all processes once any process<br />
+<p> It is not anticipated that this situation will occur frequently. However, in the interest of serving the broader community, OMPI now has a means for allowing users to direct that jobs be aborted upon any process exiting with non-zero status. Setting the MCA parameter &quot;orte_abort_on_non_zero_status&quot; to 1 will cause OMPI to abort all processes once any process<br/>
 &nbsp;exits with non-zero status. </p>
 <p> Terminations caused in this manner will be reported on the console as an &quot;abnormal termination&quot;, with the first process to so exit identified along with its exit status. </p>
 <h2>EXAMPLES</h2>
@@ -526,7 +526,7 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <dd> Run 4 copies of prog1 using the &quot;ib&quot;, &quot;tcp&quot;, and &quot;self&quot; BTL&#8217;s for the transport of MPI messages.</dd>
 <dt>mpirun -np 4 -mca btl tcp,sm,self</dt>
 <dd>
- &#8211;mca btl_tcp_if_include eth0 prog1<br />
+ &#8211;mca btl_tcp_if_include eth0 prog1<br/>
  Run 4 copies of prog1 using the &quot;tcp&quot;, &quot;sm&quot; and &quot;self&quot; BTLs for the transport of MPI messages, with TCP using only the eth0 interface to communicate. Note that other BTLs have similar if_include MCA parameters.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> <i>mpirun</i> returns 0 if all processes started by <i>mpirun</i> exit after calling MPI_FINALIZE. A non-zero value is returned if an internal error occurred in mpirun, or one or more processes exited before calling MPI_FINALIZE. If an internal error occurred in mpirun, the corresponding error code is returned. In the event that one or more processes exit before calling MPI_FINALIZE, the return value of the MPI_COMM_WORLD rank of the process that <i>mpirun</i> first notices died before calling MPI_FINALIZE will be returned. Note that, in general, this will be the first process that died but is not guaranteed to be so. </p>

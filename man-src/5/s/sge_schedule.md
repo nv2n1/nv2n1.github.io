@@ -13,8 +13,8 @@ description: "sge_schedule – format of the xxQS_NAMExx schedule file"
 <p> Note that the file tends to grow rapidly, and should be truncated/rotated, e.g. with <i>logrotate</i>(1). Also it should probably be placed on local disk, not an NFS-mounted filesystem, for instance, because of the large number of small writes it typically gets &#8211; e.g. make a symbolic link into the qmaster spool area (assuming that is local). </p>
 <p> See for a tool to process the data and produce information on reservations.</p>
 <h2>Format</h2>
-<p>A line containing<br />
- <code>::::::::</code><br />
+<p>A line containing<br/>
+ <code>::::::::</code><br/>
  indicates the start of a scheduling interval. It is followed by lines showing the resource usage considered for the interval. They contain the following fields, delimited by &#8216;<code>:</code>&#8216;.</p>
 <dl>
 <dt><code>job id</code></dt>

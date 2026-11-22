@@ -359,7 +359,7 @@ description: "ss – another utility to investigate sockets"
 <dt><code>ss -a -A &#8216;all,!tcp&#8217;</code></dt>
 <dd>List sockets in all states from all socket tables but TCP.</dd></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-ip/">ip</a></code>(8),<br />
+<p><code><a href="/docs/linux/man/8-ip/">ip</a></code>(8),<br/>
  <code>RFC</code> 793 &#8211; <a rel="nofollow" href="https://tools.ietf.org/rfc/rfc793.txt">https://tools.ietf.org/rfc/rfc793.txt</a> (TCP states) </p>
 <h2>Author</h2>
 <p><i>ss</i> was written by Alexey Kuznetsov, &lt;kuznet [at] ms2.inr.ac.ru&gt;. </p>

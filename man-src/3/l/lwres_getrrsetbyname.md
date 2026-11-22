@@ -20,9 +20,9 @@ description: "lwres_getrrsetbyname, lwres_freerrset – retrieve DNS records"
 <dl>
 <dt>
 </dt><dd>
-struct rdatainfo {<br />
-    unsigned int rdi_length; /* length of data */<br />
-    unsigned char *rdi_data; /* record data */<br />
+struct rdatainfo {<br/>
+    unsigned int rdi_length; /* length of data */<br/>
+    unsigned char *rdi_data; /* record data */<br/>
 };
 </dd></dl>
 <dl>
@@ -73,5 +73,5 @@ struct rrsetinfo {
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-lwres/">lwres</a></code>(3).</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001 Internet Software Consortium. </p>

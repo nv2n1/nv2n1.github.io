@@ -15,14 +15,14 @@ description: "QuantLib::ExtendedBlackVarianceSurface – Black volatility surfac
 <p>enum <code>Extrapolation</code> { <code>ConstantExtrapolation</code>, <code>InterpolatorDefaultExtrapolation</code> } </p>
 <h3>Public Member Functions</h3>
 <p><code>ExtendedBlackVarianceSurface</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;calendar, const std::vector&lt; <code>Date</code> &gt; &amp;dates, const std::vector&lt; Real &gt; &amp;strikes, const std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &amp;volatilities, const <code>DayCounter</code> &amp;dayCounter, Extrapolation lowerExtrapolation=InterpolatorDefaultExtrapolation, Extrapolation upperExtrapolation=InterpolatorDefaultExtrapolation) </p>
-<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>the day counter used for date/time conversion </i><br />
- <code>Date</code> <code>maxDate</code> () const<br />
- <i>the latest date for which the curve can return values </i><br />
- Real <code>minStrike</code> () const<br />
- <i>the minimum strike for which the term structure can return vols </i><br />
- Real <code>maxStrike</code> () const<br />
- <i>the maximum strike for which the term structure can return vols </i><br />
+<p> <code>DayCounter</code> <code>dayCounter</code> () const<br/>
+ <i>the day counter used for date/time conversion </i><br/>
+ <code>Date</code> <code>maxDate</code> () const<br/>
+ <i>the latest date for which the curve can return values </i><br/>
+ Real <code>minStrike</code> () const<br/>
+ <i>the minimum strike for which the term structure can return vols </i><br/>
+ Real <code>maxStrike</code> () const<br/>
+ <i>the maximum strike for which the term structure can return vols </i><br/>
  template&lt;class Interpolator &gt; void <code>setInterpolation</code> (const Interpolator &amp;i=Interpolator()) </p>
 <p> void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>
 <p> void <code>update</code> () </p>

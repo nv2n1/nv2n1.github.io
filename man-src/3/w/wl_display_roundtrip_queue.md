@@ -34,7 +34,7 @@ int wl_display_dispatch_queue_pending (struct wl_display *display, struct wl_eve
 <p>Dispatch events in an event queue </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object<br />
+<dd><i>display</i> The display context object<br/>
  <i>queue</i> The event queue to dispatch</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -53,7 +53,7 @@ int wl_display_dispatch_queue_pending (struct wl_display *display, struct wl_eve
 <p>Dispatch pending events in an event queue </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object<br />
+<dd><i>display</i> The display context object<br/>
  <i>queue</i> The event queue to dispatch</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -66,7 +66,7 @@ int wl_display_dispatch_queue_pending (struct wl_display *display, struct wl_eve
 <p>Prepare to read events from the display to this queue </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object<br />
+<dd><i>display</i> The display context object<br/>
  <i>queue</i> The event queue to use</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -79,7 +79,7 @@ int wl_display_dispatch_queue_pending (struct wl_display *display, struct wl_eve
 <p>Block until all pending request are processed by the server </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object<br />
+<dd><i>display</i> The display context object<br/>
  <i>queue</i> The queue on which to run the roundtrip</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

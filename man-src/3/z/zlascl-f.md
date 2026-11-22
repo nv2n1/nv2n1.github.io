@@ -10,7 +10,7 @@ description: "zlascl.f –"
 <p>zlascl.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlascl</code> (TYPE, KL, KU, CFROM, CTO, M, N, A, LDA, INFO)<br />
+<p>subroutine <code>zlascl</code> (TYPE, KL, KU, CFROM, CTO, M, N, A, LDA, INFO)<br/>
  <i></i><code>ZLASCL</code> multiplies a general rectangular matrix by a real scalar defined as cto/cfrom.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlascl (characterTYPE, integerKL, integerKU, double precisionCFROM, double precisionCTO, integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, integerINFO)</h3>

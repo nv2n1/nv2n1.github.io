@@ -10,14 +10,14 @@ description: "ql/pricingengines/forward/mcvarianceswapengine.hpp – Monte Carlo
 
 <p> ql/pricingengines/forward/mcvarianceswapengine.hpp &#8211; Monte Carlo variance-swap engine. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/pricingengines/mcsimulation.hpp&gt;<br />
- #include &lt;ql/math/integrals/segmentintegral.hpp&gt;<br />
- #include &lt;ql/instruments/varianceswap.hpp&gt;<br />
+<p> #include &lt;ql/pricingengines/mcsimulation.hpp&gt;<br/>
+ #include &lt;ql/math/integrals/segmentintegral.hpp&gt;<br/>
+ #include &lt;ql/instruments/varianceswap.hpp&gt;<br/>
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>MCVarianceSwapEngine&lt; RNG, S &gt;</code><br />
- <i>Variance-swap pricing engine using Monte Carlo simulation,. </i><br />
- class <code>MakeMCVarianceSwapEngine&lt; RNG, S &gt;</code><br />
+<p> class <code>MCVarianceSwapEngine&lt; RNG, S &gt;</code><br/>
+ <i>Variance-swap pricing engine using Monte Carlo simulation,. </i><br/>
+ class <code>MakeMCVarianceSwapEngine&lt; RNG, S &gt;</code><br/>
  <i>Monte Carlo variance-swap engine factory. </i></p>
 <h2>Detailed Description</h2>
 <p> Monte Carlo variance-swap engine. </p>

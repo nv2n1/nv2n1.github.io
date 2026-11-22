@@ -8,10 +8,10 @@ url: "/docs/linux/man/1-pdcp/"
 description: "pdcp – copy files to groups of hosts in parallel rpdcp – (reverse pdcp) copy files from a group of hosts in parallel"
 ---
 
-<p> pdcp &#8211; copy files to groups of hosts in parallel<br />
+<p> pdcp &#8211; copy files to groups of hosts in parallel<br/>
  rpdcp &#8211; (reverse pdcp) copy files from a group of hosts in parallel</p>
 <h2>SYNOPSIS</h2>
-<p> <code>pdcp</code> [<i>options</i>]&#8230; src [src2&#8230;] dest<br />
+<p> <code>pdcp</code> [<i>options</i>]&#8230; src [src2&#8230;] dest<br/>
  <code>rpdcp</code> [<i>options</i>]&#8230; src [src2&#8230;] dir </p>
 <h2>DESCRIPTION</h2>
 <p> <code>pdcp</code> is a variant of the <a href="/docs/linux/man/1-rcp/">rcp</a>(1) command. Unlike <a href="/docs/linux/man/1-rcp/">rcp</a>(1), which copies files to a single remote host, <code>pdcp</code> can copy files to multiple remote hosts in parallel. However, <code>pdcp</code> does not recognize files in the format &#8220;rname [at] rhost:path,&#8221; therefore all source files must be on the local host machine. Destination nodes must be listed on the <code>pdcp</code> command line using a suitable target nodelist option (See the <i>OPTIONS</i> section below). Each destination node listed must have <code>pdcp</code> installed for the copy to succeed. </p>

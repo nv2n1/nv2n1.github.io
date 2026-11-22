@@ -13,7 +13,7 @@ description: "std::tr2::dynamic_bitset< _WordT, _Alloc > –"
 <h3>Classes</h3>
 <p>class <code>reference</code></p>
 <h3>Public Types</h3>
-<p>typedef <code>__dynamic_bitset_base</code><br />
+<p>typedef <code>__dynamic_bitset_base</code><br/>
  &lt; _WordT, _Alloc &gt; <code>_Base</code>&quot; </p>
 <p> typedef _Alloc <code>allocator_type</code> </p>
 <p> typedef _WordT <code>block_type</code> </p>
@@ -81,7 +81,7 @@ dynamic_bitset&lt; _WordT, _Alloc &gt; &amp; operator-= (const dynamic_bitset&lt
 <h3>Static Public Attributes</h3>
 <p>static const size_type bits_per_block</p>
 <p>static const size_type npos</p>
-<p>Private Member Functions<br />
+<p>Private Member Functions<br/>
 size_t _M_are_all_aux () const</p>
 <p>void _M_assign (const __dynamic_bitset_base &amp;__b)</p>
 <p>void _M_clear ()</p>
@@ -113,13 +113,13 @@ size_t _M_are_all_aux () const</p>
 <p>void _M_resize (size_t __nbits, bool __value)</p>
 <p>size_type _M_size () const noexcept</p>
 <p>void _M_swap (__dynamic_bitset_base &amp;__b)</p>
-<p>Static Private Member Functions<br />
+<p>Static Private Member Functions<br/>
 static block_type _S_maskbit (size_type __pos) noexcept</p>
 <p>static size_type _S_whichbit (size_type __pos) noexcept</p>
 <p>static size_type _S_whichbyte (size_type __pos) noexcept</p>
 <p>static size_type _S_whichword (size_type __pos) noexcept</p>
-<p>Private Attributes<br />
- <code>std::vector</code>&lt; block_type,<br />
+<p>Private Attributes<br/>
+ <code>std::vector</code>&lt; block_type,<br/>
  allocator_type &gt; <code>_M_w</code>&quot;</p>
 <h3>Static Private Attributes</h3>
 <pre><code>static const size_type _S_bits_per_block
@@ -165,12 +165,12 @@ Friends</code></pre>
 <p>Use a subset of a string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__str</i> A string of &#8216;0&#8217; and &#8216;1&#8217; characters.<br />
- <i>__pos</i> Index of the first character in __str to use.<br />
+<dd><i>__str</i> A string of &#8216;0&#8217; and &#8216;1&#8217; characters.<br/>
+ <i>__pos</i> Index of the first character in __str to use.<br/>
  <i>__n</i> The number of characters to copy.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl>
-<dd><i>std::out_of_range</i> If __pos is bigger the size of __str.<br />
+<dd><i>std::out_of_range</i> If __pos is bigger the size of __str.<br/>
  <i>std::invalid_argument</i> If a character appears in the string which is neither &#8216;0&#8217; nor &#8216;1&#8217;.</dd></dl>
 <p> Definition at line 749 of file dynamic_bitset. </p>
 <p> References std::tr2::dynamic_bitset&lt; _WordT, _Alloc &gt;::resize(), and std::basic_string&lt; _CharT, _Traits, _Alloc &gt;::size().</p>
@@ -388,7 +388,7 @@ Friends</code></pre>
 <p>Sets a given bit to a particular value. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__pos</i> The index of the bit.<br />
+<dd><i>__pos</i> The index of the bit.<br/>
  <i>__val</i> Either true or false, defaults to true.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl>

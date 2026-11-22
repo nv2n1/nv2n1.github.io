@@ -189,54 +189,54 @@ otftotfm - a - e texnansx MinionPro - Regular.otf - fkern - fliga LY1-- MinionPr
 <p>otftotfm &#8211; a &#8211; e texnansx MinionPro &#8211; Regular.otf &#8211; fkern &#8211; fliga &#8211; fsmcp LY1&#8211; MinionPro &#8211; Regular&#8211; fsmcp otftotfm &#8211; a &#8211; e texnansx MinionPro &#8211; Semibold.otf &#8211; fkern &#8211; fliga &#8211; fsmcp LY1&#8211; MinionPro &#8211; Semibold&#8211; fsmcp otftotfm &#8211; a &#8211; e texnansx MinionPro &#8211; Bold.otf &#8211; fkern &#8211; fliga &#8211; fsmcp LY1&#8211; MinionPro &#8211; Bold&#8211; fsmcp</p>
 <p> To get old-style numerals, just add the &quot;<code>-f</code>onum&quot; option to each invocation &#8212; and, to reduce confusion, append &quot;&#8211;fonum&quot; to the font metric names. </p>
 <p> At this point, all our font metric files are installed, and it&#8217;s finally time to create the &quot;.fd&quot; file. (The &quot;.fd&quot; format is documented in <i>The LaTeX Companion</i>.) Let&#8217;s call the LaTeX font family &quot;MinionPro&quot;. Then the &quot;.fd&quot; file is &quot;LY1MinionPro.fd&quot;, and it contains: </p>
-<p>\DeclareFontFamily{LY1} {MinionPro}<br />
-{<br />
-}<br />
-\DeclareFontShape{LY1} {MinionPro} {m} {n} %<br />
-    { &lt;-&gt;LY1&#8211; MinionPro &#8211; Regular}<br />
-{<br />
-}<br />
-\DeclareFontShape{LY1} {MinionPro} {m} {it} { &lt;-&gt;LY1&#8211; MinionPro &#8211; It}<br />
-{<br />
-}<br />
-\DeclareFontShape{LY1} {MinionPro} {m} {sc} %<br />
-    { &lt;-&gt;LY1&#8211; MinionPro &#8211; Regular&#8211; fsmcp}<br />
-{<br />
-}<br />
-\DeclareFontShape{LY1} {MinionPro} {sb} {n} %<br />
-    { &lt;-&gt;LY1&#8211; MinionPro &#8211; Semibold}<br />
-{<br />
-}<br />
-\DeclareFontShape{LY1} {MinionPro} {sb} {it} %<br />
-    { &lt;-&gt;LY1&#8211; MinionPro &#8211; SemiboldIt}<br />
-{<br />
-}<br />
-\DeclareFontShape{LY1} {MinionPro} {sb} {sc} %<br />
-    { &lt;-&gt;LY1&#8211; MinionPro &#8211; Semibold&#8211; fsmcp}<br />
-{<br />
-}<br />
-\DeclareFontShape{LY1} {MinionPro} {b} {n} { &lt;-&gt;LY1&#8211; MinionPro &#8211; Bold}<br />
-{<br />
-}<br />
-\DeclareFontShape{LY1} {MinionPro} {b} {it} %<br />
-    { &lt;-&gt;LY1&#8211; MinionPro &#8211; BoldIt}<br />
-{<br />
-}<br />
-\DeclareFontShape{LY1} {MinionPro} {b} {sc} %<br />
-    { &lt;-&gt;LY1&#8211; MinionPro &#8211; Bold&#8211; fsmcp}<br />
-{<br />
-}<br />
-\DeclareFontShape{LY1} {MinionPro} {bx} {n} %<br />
-    { &lt;-&gt;ssub * MinionPro / b / n}<br />
-{<br />
-}<br />
-\DeclareFontShape{LY1} {MinionPro} {bx} {it} %<br />
-    { &lt;-&gt;ssub * MinionPro / b / it}<br />
-{<br />
-}<br />
-\DeclareFontShape{LY1} {MinionPro} {bx} {sc} %<br />
-    { &lt;-&gt;ssub * MinionPro / b / sc}<br />
-{<br />
+<p>\DeclareFontFamily{LY1} {MinionPro}<br/>
+{<br/>
+}<br/>
+\DeclareFontShape{LY1} {MinionPro} {m} {n} %<br/>
+    { &lt;-&gt;LY1&#8211; MinionPro &#8211; Regular}<br/>
+{<br/>
+}<br/>
+\DeclareFontShape{LY1} {MinionPro} {m} {it} { &lt;-&gt;LY1&#8211; MinionPro &#8211; It}<br/>
+{<br/>
+}<br/>
+\DeclareFontShape{LY1} {MinionPro} {m} {sc} %<br/>
+    { &lt;-&gt;LY1&#8211; MinionPro &#8211; Regular&#8211; fsmcp}<br/>
+{<br/>
+}<br/>
+\DeclareFontShape{LY1} {MinionPro} {sb} {n} %<br/>
+    { &lt;-&gt;LY1&#8211; MinionPro &#8211; Semibold}<br/>
+{<br/>
+}<br/>
+\DeclareFontShape{LY1} {MinionPro} {sb} {it} %<br/>
+    { &lt;-&gt;LY1&#8211; MinionPro &#8211; SemiboldIt}<br/>
+{<br/>
+}<br/>
+\DeclareFontShape{LY1} {MinionPro} {sb} {sc} %<br/>
+    { &lt;-&gt;LY1&#8211; MinionPro &#8211; Semibold&#8211; fsmcp}<br/>
+{<br/>
+}<br/>
+\DeclareFontShape{LY1} {MinionPro} {b} {n} { &lt;-&gt;LY1&#8211; MinionPro &#8211; Bold}<br/>
+{<br/>
+}<br/>
+\DeclareFontShape{LY1} {MinionPro} {b} {it} %<br/>
+    { &lt;-&gt;LY1&#8211; MinionPro &#8211; BoldIt}<br/>
+{<br/>
+}<br/>
+\DeclareFontShape{LY1} {MinionPro} {b} {sc} %<br/>
+    { &lt;-&gt;LY1&#8211; MinionPro &#8211; Bold&#8211; fsmcp}<br/>
+{<br/>
+}<br/>
+\DeclareFontShape{LY1} {MinionPro} {bx} {n} %<br/>
+    { &lt;-&gt;ssub * MinionPro / b / n}<br/>
+{<br/>
+}<br/>
+\DeclareFontShape{LY1} {MinionPro} {bx} {it} %<br/>
+    { &lt;-&gt;ssub * MinionPro / b / it}<br/>
+{<br/>
+}<br/>
+\DeclareFontShape{LY1} {MinionPro} {bx} {sc} %<br/>
+    { &lt;-&gt;ssub * MinionPro / b / sc}<br/>
+{<br/>
 }</p>
 <p> We&#8217;re now ready to use MinionPro in LaTeX, with lines like this in the document preamble: </p>
 <p> </p>

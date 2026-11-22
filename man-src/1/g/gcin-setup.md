@@ -24,31 +24,31 @@ description: "gcin-setup – configuration tools of gcin"
 <dl>
 <dt><code>$HOME/.gcin/config/default-input-method</code> <i>number</i></dt>
 <dd> Default input method when gcin is called.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 Chanjei input method, version 3<br />
- 2 Chanjei input method, version 5<br />
- 3 Bopomofo input method<br />
- 4 Symbols virtual keyboard<br />
- 5 Pinyin input method<br />
- <code>6 Tsin intelligent Bopomofo input method</code><br />
- 7 Dayi input method<br />
- 8 Array input method, 30 keys version<br />
- 9 Boshiamy input method, aka Liu&#8217;s input method<br />
- 10 Direct input for UTF-32 (U+) or Big-5 characters<br />
- 11 Simple Chanjei input method<br />
- 12 Japanese anthy input method<br />
- 13 Greek letters input method<br />
- 14 Latin letters input method<br />
- 15 Jyutping input method<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 Chanjei input method, version 3<br/>
+ 2 Chanjei input method, version 5<br/>
+ 3 Bopomofo input method<br/>
+ 4 Symbols virtual keyboard<br/>
+ 5 Pinyin input method<br/>
+ <code>6 Tsin intelligent Bopomofo input method</code><br/>
+ 7 Dayi input method<br/>
+ 8 Array input method, 30 keys version<br/>
+ 9 Boshiamy input method, aka Liu&#8217;s input method<br/>
+ 10 Direct input for UTF-32 (U+) or Big-5 characters<br/>
+ 11 Simple Chanjei input method<br/>
+ 12 Japanese anthy input method<br/>
+ 13 Greek letters input method<br/>
+ 14 Latin letters input method<br/>
+ 15 Jyutping input method<br/>
  16 NewCJ3 input method</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcb-position</code> <i>number</i></dt>
 <dd> Disable or enable gcb clipboard manager.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 0 Disable<br />
- 1 Enable, at lower left corner<br />
- 2 Enable, at upper left corner<br />
- 3 Enable, at lower right corner<br />
+<p> OPTIONS MEANINGS<br/>
+ 0 Disable<br/>
+ 1 Enable, at lower left corner<br/>
+ 2 Enable, at upper left corner<br/>
+ 3 Enable, at lower right corner<br/>
  <code>4 Enable, at upper right corner</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcb-position-x</code> <i>number</i></dt>
@@ -59,19 +59,19 @@ description: "gcin-setup – configuration tools of gcin"
 <dd> Volume of bell ring, between -100 to 100. Default is <code>-97</code>.</dd>
 <dt><code>$HOME/.gcin/config/gcin-capslock-lower</code> <i>boolean</i></dt>
 <dd> Input lower-case letters when Caps Lock key is ON.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-eng-phrase-enabled</code> <i>boolean</i></dt>
 <dd> Enable Alt-Shift phrases in alphabet-numeric mode.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-flags-im-enabled</code> <i>number</i></dt>
 <dd> Available input methods to be cyclic selected by Control-Shift.</dd></dl>
-<p> OPTIONS MEANINGS<br />
+<p> OPTIONS MEANINGS<br/>
  <code>2147483647 All input methods are enabled.</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>Ctrl-Alt-1 Chanjei input method, version 3 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4&nbsp;<wbr>&nbsp;<wbr>Ctrl-Alt-2 Chanjei input method, version 5 </p>
@@ -95,8 +95,8 @@ description: "gcin-setup – configuration tools of gcin"
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-font-name</code> <i>string</i></dt>
 <dd> Default font.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>sans Sans-serif</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>sans Sans-serif</code><br/>
  serif Serif</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-font-size</code> <i>number</i></dt>
@@ -113,40 +113,40 @@ description: "gcin-setup – configuration tools of gcin"
 <dd> Font size of phrase pre-selection window in Tsin IM. Default is <code>16</code>.</dd>
 <dt><code>$HOME/.gcin/config/gcin-im-toggle-keys</code> <i>number</i></dt>
 <dd> Toggle Key for IM window ON/OFF.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>0 Control-Space</code><br />
- 1 Shift-Space<br />
- 2 Alt-Space<br />
+<p> OPTIONS MEANINGS<br/>
+ <code>0 Control-Space</code><br/>
+ 1 Shift-Space<br/>
+ 2 Alt-Space<br/>
  3 Windows-Space</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-init-im-enabled</code> <i>boolean</i></dt>
 <dd> Enable input method mode without pressing toggle keys. This option is not available in XIM mode.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-inner-frame</code> <i>boolean</i></dt>
 <dd> Show frame border in gcin window.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-input-style</code> <i>number</i></dt>
 <dd> Window style of gcin.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 OverTheSpot (Follow the cursor)</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 OverTheSpot (Follow the cursor)</code><br/>
  2 Root (Fixed index window)</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-pop-up-win</code> <i>boolean</i></dt>
 <dd> Dynamic pop up window.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-remote-client</code> <i>boolean</i></dt>
 <dd> Use gcin in remote applications.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-root-x</code> <i>number</i></dt>
@@ -155,265 +155,265 @@ description: "gcin-setup – configuration tools of gcin"
 <dd> Window position in Y-axis when window style is Root (Fixed index window). Default is <code>1200</code>.</dd>
 <dt><code>$HOME/.gcin/config/gcin-sel-key-color</code> <i>hex</i></dt>
 <dd> Color of selection Key.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- #FF0000 Red<br />
- #00FF00 Green<br />
- <code>#0000FF Blue</code><br />
- #FFFF00 Yellow<br />
- #FF00FF Magenta<br />
+<p> OPTIONS MEANINGS<br/>
+ #FF0000 Red<br/>
+ #00FF00 Green<br/>
+ <code>#0000FF Blue</code><br/>
+ #FFFF00 Yellow<br/>
+ #FF00FF Magenta<br/>
  #00FFFF Cyan</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-shift-space-eng-full</code> <i>boolean</i></dt>
 <dd> Toggle to double-wide English character mode with Shift-Space.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-sound-play-overlap</code> <i>boolean</i></dt>
 <dd> Play all sound when text-to-speech is enabled.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-status-tray</code> <i>boolean</i></dt>
 <dd> Show gcin status in system tray.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-win-color-bg</code> <i>hex</i></dt>
 <dd> Background color of gcin window. Default is <code>#005BFF</code>.</dd>
 <dt><code>$HOME/.gcin/config/gcin-win-color-fg</code> <i>hex</i></dt>
 <dd> Foreground color of gcin window.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- #FF0000 Red<br />
- #00FF00 Green<br />
- #0000FF Blue<br />
- #FFFF00 Yellow<br />
- #FF00FF Magenta<br />
+<p> OPTIONS MEANINGS<br/>
+ #FF0000 Red<br/>
+ #00FF00 Green<br/>
+ #0000FF Blue<br/>
+ #FFFF00 Yellow<br/>
+ #FF00FF Magenta<br/>
  <code>#FFFFFF White</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-win-color-use</code> <i>boolean</i></dt>
 <dd> Customized colors in gcin window.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gcin-win-sym-click-close</code> <i>boolean</i></dt>
 <dd> Close symbol-selection window after choosing a symbol.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-auto-select-by_phrase</code> <i>boolean</i></dt>
 <dd> Auto-select according to Tsin phrase database in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-capslock-in-eng</code> <i>boolean</i></dt>
 <dd> Toggle Chinese/English mode with Caps Lock key in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-disp-im-name</code> <i>boolean</i></dt>
 <dd> Display input method name in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-disp-key-codes</code> <i>boolean</i></dt>
 <dd> Show all possible key codes of character in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-disp-partial-match</code> <i>boolean</i></dt>
 <dd> Display partial matched characters in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-dup-select-bell</code> <i>boolean</i></dt>
 <dd> Bell ring when multiple selections are available in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-hide-row2</code> <i>boolean</i></dt>
 <dd> Hide second row of window in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-in-row1</code> <i>boolean</i></dt>
 <dd> Show key codes in first row of window in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-invalid-key-in</code> <i>boolean</i></dt>
 <dd> Clear key codes input area when invalid key and Space key are pressed.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-pre-select</code> <i>boolean</i></dt>
 <dd> Show candidate characters before pressing endkey (Space key). For gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-press-full-auto-send</code> <i>boolean</i></dt>
 <dd> Auto-send character when key codes input area is filled in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-que-wild-card</code> <i>boolean</i></dt>
 <dd> Use ? as wildcard.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-shift-phrase-key</code> <i>boolean</i></dt>
 <dd> Use single Shift key to input Alt-Shift phrases in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-space-auto-first</code> <i>number</i></dt>
 <dd> Function of Space Key in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>0 Auto-selected by definition in .gtab file.</code><br />
- 1 Send first character in Boshiamy input method.<br />
- 2 Send first character in character-selection area.<br />
+<p> OPTIONS MEANINGS<br/>
+ <code>0 Auto-selected by definition in .gtab file.</code><br/>
+ 1 Send first character in Boshiamy input method.<br/>
+ 2 Send first character in character-selection area.<br/>
  4 Does not send first character. (For Array input method.)</p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-unique-auto-send</code> <i>boolean</i></dt>
 <dd> Auto send characters when there is only one choice in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/gtab-vertical-select</code> <i>boolean</i></dt>
 <dd> Vertical selection window in gtab input methods.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/left-right-button-tips</code> <i>boolean</i></dt>
 <dd> Show button tips when mouse cursor stays on gcin window. Default is ON, but it will be turned OFF after <code>gcin-setup</code> is executed.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/pho-hide-row2</code> <i>boolean</i></dt>
 <dd> Hide second row of window in Bopomofo and Tsin IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/pho-in-row1</code> <i>boolean</i></dt>
 <dd> Show key codes in first row of window in Bopomofo IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/phonetic-char-dynamic-sequence</code> <i>boolean</i></dt>
 <dd> Dynamic character sequence adjustment in Bopomofo and Tsin IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/phonetic-huge-tab</code> <i>boolean</i></dt>
 <dd> Input all Traditional Chinese, Simplified Chinese, and Japanese characters provided by pho-huge.tab in Bopomofo and Tsin IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/phonetic-keyboard</code> <i>string</i></dt>
 <dd> Key codes arrangement style in Bopomofo, Tsin, and Japanese anthy IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- zo Standard style with 1234 selection method<br />
- <code>zo-asdf Standard style with asdf selection method</code><br />
- et Eten style with 1234 selection method<br />
- et-asdf Eten style with asdf selection method<br />
- et26 Eten 26 keys style with 1234 selection method<br />
- et26-asdf Eten 26 keys style with asdf selection method<br />
- hsu Mr. Hsu&#8217;s style (Kuo-Yin IM, Natural Bopomofo IM)<br />
- pinyin Phonetic Pinyin style with 1234 selection method<br />
- pinyin-asdf Phonetic Pinyin style with asdf selection method<br />
- dvorak Dvorak style<br />
- ibm IBM style<br />
+<p> OPTIONS MEANINGS<br/>
+ zo Standard style with 1234 selection method<br/>
+ <code>zo-asdf Standard style with asdf selection method</code><br/>
+ et Eten style with 1234 selection method<br/>
+ et-asdf Eten style with asdf selection method<br/>
+ et26 Eten 26 keys style with 1234 selection method<br/>
+ et26-asdf Eten 26 keys style with asdf selection method<br/>
+ hsu Mr. Hsu&#8217;s style (Kuo-Yin IM, Natural Bopomofo IM)<br/>
+ pinyin Phonetic Pinyin style with 1234 selection method<br/>
+ pinyin-asdf Phonetic Pinyin style with asdf selection method<br/>
+ dvorak Dvorak style<br/>
+ ibm IBM style<br/>
  mitac Mitac style</p>
 <dl>
 <dt><code>$HOME/.gcin/config/phonetic-speak</code> <i>boolean</i></dt>
 <dd> Enable text-to-speech. You have to install speech data for this feature.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/phonetic-speak-sel</code> <i>string</i></dt>
 <dd> Speech data filename for text-to-speech.</dd>
 <dt><code>$HOME/.gcin/config/tsin-buffer-editing-mode</code> <i>boolean</i></dt>
 <dd> VI-like editing mode in Tsin IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/tsin-buffer-size</code> <i>number</i></dt>
 <dd> Size of buffer (editing area) in Tsin IM. Default is <code>40</code>.</dd>
 <dt><code>$HOME/.gcin/config/tsin-chinese-english-toggle_key</code> <i>number</i></dt>
 <dd> Toggle key for Chinese/English mode in Tsin IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 Caps Lock key</code><br />
- 2 Tab key<br />
- 4 Shift key (Not available in XIM mode).<br />
- 8 Left Shift key (Not available in XIM mode).<br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 Caps Lock key</code><br/>
+ 2 Tab key<br/>
+ 4 Shift key (Not available in XIM mode).<br/>
+ 8 Left Shift key (Not available in XIM mode).<br/>
  16 Right Shift key (Not available in XIM mode).</p>
 <dl>
 <dt><code>$HOME/.gcin/config/tsin-cursor-color</code> <i>hex</i></dt>
 <dd> Color of cursor in Tsin IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- #FF0000 Red<br />
- #00FF00 Green<br />
- <code>#0000FF Blue</code><br />
- #FFFF00 Yellow<br />
- #FF00FF Magenta<br />
+<p> OPTIONS MEANINGS<br/>
+ #FF0000 Red<br/>
+ #00FF00 Green<br/>
+ <code>#0000FF Blue</code><br/>
+ #FFFF00 Yellow<br/>
+ #FF00FF Magenta<br/>
  #00FFFF Cyan</p>
 <dl>
 <dt><code>$HOME/.gcin/config/tsin-phrase-line-color</code> <i>hex</i></dt>
 <dd> Color of phrase-underline in Tsin IM. Default is <code>#0000FF</code>.</dd>
 <dt><code>$HOME/.gcin/config/tsin-phrase-pre-select</code> <i>boolean</i></dt>
 <dd> Show phrase pre-selection window in Tsin IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 ON</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 ON</code><br/>
  0 OFF</p>
 <dl>
 <dt><code>$HOME/.gcin/config/tsin-space-opt</code> <i>number</i></dt>
 <dd> Function of Space key in Tsin IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- <code>1 Select other same phonetic characters.</code><br />
+<p> OPTIONS MEANINGS<br/>
+ <code>1 Select other same phonetic characters.</code><br/>
  2 Send space to buffer of Tsin IM.</p>
 <dl>
 <dt><code>$HOME/.gcin/config/tsin-tab-phrase-end</code> <i>boolean</i></dt>
 <dd> Use Escape key or Tab key to stop phrase-auto-selection in Tsin IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/tsin-tail-select-key</code> <i>boolean</i></dt>
 <dd> Show selection keys follows choices in Tsin IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <dl>
 <dt><code>$HOME/.gcin/config/tsin-tone-char-input</code> <i>boolean</i></dt>
 <dd> Input tone sympols of Bopomofo in Tsin IM.</dd></dl>
-<p> OPTIONS MEANINGS<br />
- 1 ON<br />
+<p> OPTIONS MEANINGS<br/>
+ 1 ON<br/>
  <code>0 OFF</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gcin/">gcin</a></code>(1) </p>

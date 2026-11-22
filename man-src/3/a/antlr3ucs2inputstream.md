@@ -13,17 +13,17 @@ description: "src/antlr3ucs2inputstream.c –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3input.h">antlr3input.h</a>&gt; </p>
 <h3>Functions</h3>
-<p> static void <code>antlr3UCS2Consume</code> (<code>pANTLR3_INT_STREAM</code> is)<br />
- <i>Consume the next character in an 8 bit ASCII input stream. </i><br />
- static <code>ANTLR3_MARKER</code> <code>antlr3UCS2Index</code> (<code>pANTLR3_INT_STREAM</code> is)<br />
- <i>Calculate the current index in the output stream. </i><br />
- static <code>ANTLR3_UCHAR</code> <code>antlr3UCS2LA</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_INT32</code> la)<br />
- <i>Return the input element assuming an 8 bit ascii input. </i><br />
- static void <code>antlr3UCS2Seek</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_MARKER</code> seekPoint)<br />
- <i>Rewind the lexer input to the state specified by the supplied mark. </i><br />
- void <code>antlr3UCS2SetupStream</code> (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> type)<br />
- <i>Common function to setup function interface for a 16 bit &#8216;UCS2&#8217; input stream. </i><br />
- static <code>pANTLR3_STRING</code> <code>antlr3UCS2Substr</code> (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_MARKER</code> start, <code>ANTLR3_MARKER</code> stop)<br />
+<p> static void <code>antlr3UCS2Consume</code> (<code>pANTLR3_INT_STREAM</code> is)<br/>
+ <i>Consume the next character in an 8 bit ASCII input stream. </i><br/>
+ static <code>ANTLR3_MARKER</code> <code>antlr3UCS2Index</code> (<code>pANTLR3_INT_STREAM</code> is)<br/>
+ <i>Calculate the current index in the output stream. </i><br/>
+ static <code>ANTLR3_UCHAR</code> <code>antlr3UCS2LA</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_INT32</code> la)<br/>
+ <i>Return the input element assuming an 8 bit ascii input. </i><br/>
+ static void <code>antlr3UCS2Seek</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_MARKER</code> seekPoint)<br/>
+ <i>Rewind the lexer input to the state specified by the supplied mark. </i><br/>
+ void <code>antlr3UCS2SetupStream</code> (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> type)<br/>
+ <i>Common function to setup function interface for a 16 bit &#8216;UCS2&#8217; input stream. </i><br/>
+ static <code>pANTLR3_STRING</code> <code>antlr3UCS2Substr</code> (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_MARKER</code> start, <code>ANTLR3_MARKER</code> stop)<br/>
  <i>Return a substring of the ucs2 (16 bit) input stream in newly allocated memory. </i></p>
 <h2>Detailed Description</h2>
 <p> Base functions to initialize and manipulate a UCS2 input stream. </p>
@@ -46,7 +46,7 @@ description: "src/antlr3ucs2inputstream.c –"
 <p> Return the input element assuming an 8 bit ascii input. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>input</i> Input stream context pointer<br />
+</dt><dd> <i>input</i> Input stream context pointer<br/>
  <i>la</i> 1 based offset of next input stream element</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -82,8 +82,8 @@ description: "src/antlr3ucs2inputstream.c –"
 <p> Return a substring of the ucs2 (16 bit) input stream in newly allocated memory. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>input</i> Input stream context pointer<br />
- <i>start</i> Offset in input stream where the string starts<br />
+</dt><dd> <i>input</i> Input stream context pointer<br/>
+ <i>start</i> Offset in input stream where the string starts<br/>
  <i>stop</i> Offset in the input stream where the string ends.</dd></dl>
 <p> References ANTLR3_UINT32_CAST, ANTLR3_STRING_FACTORY_struct::newPtr, and ANTLR3_INPUT_STREAM_struct::strFactory. </p>
 <p> Referenced by antlr3UCS2SetupStream().</p>

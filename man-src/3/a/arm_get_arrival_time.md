@@ -11,7 +11,7 @@ description: "arm_get_arrival_time – store current time"
 <p> arm_get_arrival_time &#8211; store current time</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
-<p> <code>arm_error_t<br />
+<p> <code>arm_error_t<br/>
  arm_get_arrival_time( </p>
 <p>&nbsp;<wbr>arm_arrival_time_t&nbsp;<wbr>*</code><i>opaque_time</i><code>);</code></p>
 <h2>DESCRIPTION</h2>

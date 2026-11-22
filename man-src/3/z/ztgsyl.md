@@ -10,7 +10,7 @@ description: "ztgsyl.f –"
 <p>ztgsyl.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztgsyl</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, DIF, WORK, LWORK, IWORK, INFO)<br />
+<p>subroutine <code>ztgsyl</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, DIF, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>ZTGSYL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztgsyl (characterTRANS, integerIJOB, integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldc, * )C, integerLDC, complex*16, dimension( ldd, * )D, integerLDD, complex*16, dimension( lde, * )E, integerLDE, complex*16, dimension( ldf, * )F, integerLDF, double precisionSCALE, double precisionDIF, complex*16, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>

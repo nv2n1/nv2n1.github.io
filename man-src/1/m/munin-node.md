@@ -25,7 +25,7 @@ description: "munin-node – A daemon to gather information in cooperation with 
 <dt><code> &#8211;[no]debug </code></dt>
 <dd> View debug messages. This can be very verbose.</dd>
 <dt><code> &#8211;[no]pidebug </code></dt>
-<dd> Plugin debug. Sets the environment variable <font SIZE="-1">MUNIN_DEBUG</font> to 1 so that plugins may enable debugging. [&#8211;nopidebug]</dd></dl>
+<dd> Plugin debug. Sets the environment variable MUNIN_DEBUG to 1 so that plugins may enable debugging. [&#8211;nopidebug]</dd></dl>
 <h2>FILES</h2>
 <pre>
     /etc/munin/munin-node.conf
@@ -42,9 +42,9 @@ description: "munin-node – A daemon to gather information in cooperation with 
 <h2>BUGS</h2>
 <p> Please see &lt;<a rel="nofollow" href="http://munin-monitoring.org/report/1">http://munin-monitoring.org/report/1</a>&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2002-2006 Audun Ytterdal, Jimmy Olsen, and Tore Anderson / Linpro <font SIZE="-1">AS.</font> </p>
-<p> This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> </p>
-<p> This program is released under the <font SIZE="-1">GNU</font> General Public License</p>
+<p> Copyright (C) 2002-2006 Audun Ytterdal, Jimmy Olsen, and Tore Anderson / Linpro AS. </p>
+<p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
+<p> This program is released under the GNU General Public License</p>
 <h2>SEE ALSO</h2>
 <p> For information on configuration options, please refer to the man page for <i>munin-node.conf</i>. </p>
 <p> Many plugins can report whether or not they can reasonably be used on the node. <tt>&quot;munin-node-configure&quot;</tt> can use this information to help manage installed plugins. </p>

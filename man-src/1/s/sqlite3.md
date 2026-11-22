@@ -16,21 +16,21 @@ description: "sqlite3 – A command line interface for SQLite version 3"
 <h2>DESCRIPTION</h2>
 <p> To start a <code>sqlite3</code> interactive session, invoke the <code>sqlite3</code> command and optionally provide the name of a database file. If the database file does not exist, it will be created. If the database file does exist, it will be opened. </p>
 <p> For example, to create a new database file named &quot;mydata.db&quot;, create a table named &quot;memos&quot; and insert a couple of records into that table: </p>
-<p> $ <code>sqlite3 mydata.db</code><br />
- SQLite version 3.1.3<br />
- Enter &quot;.help&quot; for instructions<br />
- sqlite&gt; <code>create table memos(text, priority INTEGER);</code><br />
- sqlite&gt; <code>insert into memos values(&#8216;deliver project description&#8217;, 10);</code><br />
- sqlite&gt; <code>insert into memos values(&#8216;lunch with Christine&#8217;, 100);</code><br />
- sqlite&gt; <code>select * from memos;</code><br />
- deliver project description|10<br />
- lunch with Christine|100<br />
+<p> $ <code>sqlite3 mydata.db</code><br/>
+ SQLite version 3.1.3<br/>
+ Enter &quot;.help&quot; for instructions<br/>
+ sqlite&gt; <code>create table memos(text, priority INTEGER);</code><br/>
+ sqlite&gt; <code>insert into memos values(&#8216;deliver project description&#8217;, 10);</code><br/>
+ sqlite&gt; <code>insert into memos values(&#8216;lunch with Christine&#8217;, 100);</code><br/>
+ sqlite&gt; <code>select * from memos;</code><br/>
+ deliver project description|10<br/>
+ lunch with Christine|100<br/>
  sqlite&gt; </p>
 <p> If no database name is supplied, the ATTACH sql command can be used to attach to existing or create new database files. ATTACH can also be used to attach to multiple databases within the same interactive session. This is useful for migrating data between databases, possibly changing the schema along the way. </p>
 <p> Optionally, a SQL statement or set of SQL statements can be supplied as a single argument. Multiple statements should be separated by semi-colons. </p>
 <p> For example: </p>
 <p> $ <code>sqlite3 -line mydata.db &#8216;select * from memos where priority &gt; 20;&#8217;</code> </p>
-<p>&nbsp;<wbr>text&nbsp;<wbr>=&nbsp;<wbr>lunch with Christine<br />
+<p>&nbsp;<wbr>text&nbsp;<wbr>=&nbsp;<wbr>lunch with Christine<br/>
  priority = 100 </p>
 <h3>SQLITE META-COMMANDS</h3>
 <p> The interactive interpreter offers a set of meta-commands that can be used to control the output format, examine the currently attached database files, or perform administrative operations upon the attached databases (such as rebuilding indices). Meta-commands are always prefixed with a dot (.). </p>
@@ -110,7 +110,7 @@ continue prompt = &quot;   ...&gt; &quot;
 <p> o If the -init option is present, the specified file is processed. </p>
 <p> o All other command line options are processed. </p>
 <h2>SEE ALSO</h2>
-<p> <a rel="nofollow" href="http://www.sqlite.org/">http://www.sqlite.org/</a><br />
+<p> <a rel="nofollow" href="http://www.sqlite.org/">http://www.sqlite.org/</a><br/>
  The sqlite-doc package</p>
 <h2>AUTHOR</h2>
 <p> This manual page was originally written by Andreas Rottmann &lt;rotty [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). It was subsequently revised by Bill Bumgarner &lt;bbum [at] mac.com&gt;. </p>

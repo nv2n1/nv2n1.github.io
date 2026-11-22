@@ -23,10 +23,10 @@ description: "corosync_overview – Corosync overview"
 <p> The directory contains the file corosync.conf. Please read the <a href="/docs/linux/man/5-corosync-conf/">corosync.conf</a>(5) man page for details on the configuration options. The corosync project will work out of the box with the default configuration options, although the administrator may desire different options. </p>
 <p> The corosync executive uses cryptographic techniques to ensure authenticity and privacy of the messages. In order for corosync to be secure and operate, a private key must be generated and shared to all processors. </p>
 <p> First generate the key on one of the nodes: </p>
-<p> unix# corosync-keygen<br />
- Corosync Cluster Engine Authentication key generator.<br />
- Gathering 1024 bits for key from /dev/random.<br />
- Press keys on your keyboard to generate entropy.<br />
+<p> unix# corosync-keygen<br/>
+ Corosync Cluster Engine Authentication key generator.<br/>
+ Gathering 1024 bits for key from /dev/random.<br/>
+ Press keys on your keyboard to generate entropy.<br/>
  Writing corosync key to /etc/corosync/authkey. </p>
 <p> After this operation, a private key will be in the file /etc/corosync/authkey. This private key must be copied to every processor in the cluster. If the private key isn&#8217;t the same for every node, those nodes with nonmatching private keys will not be able to join the same configuration. </p>
 <p> Copy the key to some security transportable storage or use ssh to transmit the key from node to node. Then install the key with the command: </p>

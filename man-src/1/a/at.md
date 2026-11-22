@@ -10,13 +10,13 @@ description: "at, batch, atq, atrm – queue, examine or delete jobs for later e
 
 <p> at, batch, atq, atrm &#8211; queue, examine or delete jobs for later execution</p>
 <h2>SYNOPSIS</h2>
-<p> <code>at</code> [<code>-V</code>] [<code>-q</code> <i>queue</i>] [<code>-f</code> <i>file</i>] [<code>-mMlv</code>] <i>timespec</i>&#8230;<br />
- <code>at</code> [<code>-V</code>] [<code>-q</code> <i>queue</i>] [<code>-f</code> <i>file</i>] [<code>-mMkv</code>] [<code>-t</code> <i>time</i>]<br />
- <code>at -c</code> <i>job</i> [<i>job&#8230;</i>]<br />
- <code>atq</code> [<code>-V</code>] [<code>-q</code> <i>queue</i>]<br />
- <code>at</code> [<code>-rd</code>] <i>job</i> [<i>job&#8230;</i>]<br />
- <code>atrm</code> [<code>-V</code>] <i>job</i> [<i>job&#8230;</i>]<br />
- <code>batch</code><br />
+<p> <code>at</code> [<code>-V</code>] [<code>-q</code> <i>queue</i>] [<code>-f</code> <i>file</i>] [<code>-mMlv</code>] <i>timespec</i>&#8230;<br/>
+ <code>at</code> [<code>-V</code>] [<code>-q</code> <i>queue</i>] [<code>-f</code> <i>file</i>] [<code>-mMkv</code>] [<code>-t</code> <i>time</i>]<br/>
+ <code>at -c</code> <i>job</i> [<i>job&#8230;</i>]<br/>
+ <code>atq</code> [<code>-V</code>] [<code>-q</code> <i>queue</i>]<br/>
+ <code>at</code> [<code>-rd</code>] <i>job</i> [<i>job&#8230;</i>]<br/>
+ <code>atrm</code> [<code>-V</code>] <i>job</i> [<i>job&#8230;</i>]<br/>
+ <code>batch</code><br/>
  <code>at -b</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>at</code> and <code>batch</code> read commands from standard input or a specified file which are to be executed at a later time, using <code>/bin/sh</code>.</p>
@@ -65,11 +65,11 @@ description: "at, batch, atq, atrm – queue, examine or delete jobs for later e
 <dt><code>-c</code></dt>
 <dd> cats the jobs listed on the command line to standard output.</dd></dl>
 <h2>FILES</h2>
-<p> <i>/var/spool/at</i><br />
- <i>/var/spool/at/spool</i><br />
- <i>/proc/loadavg</i><br />
- <i>/var/run/utmp</i><br />
- <i>/etc/at.allow</i><br />
+<p> <i>/var/spool/at</i><br/>
+ <i>/var/spool/at/spool</i><br/>
+ <i>/proc/loadavg</i><br/>
+ <i>/var/run/utmp</i><br/>
+ <i>/etc/at.allow</i><br/>
  <i>/etc/at.deny</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-at-allow/">at.allow</a></code>(5), <code>at.deny</code>(5), <code><a href="/docs/linux/man/8-atd/">atd</a></code>(8), <code>cron</code>(1), <code><a href="/docs/linux/man/1-nice/">nice</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2).</p>

@@ -10,7 +10,7 @@ description: "lockfile – conditional semaphore-file creator"
 
 <p> lockfile &#8211; conditional semaphore-file creator </p>
 <h2>SYNOPSIS</h2>
-<p> <code>lockfile</code> <i></i><code>&#8211;</code>sleeptime | <i></i><code>-r </code>retries |<br />
+<p> <code>lockfile</code> <i></i><code>&#8211;</code>sleeptime | <i></i><code>-r </code>retries |<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <i></i><code>-l </code>locktimeout | <i></i><code>-s </code>suspend | <code>-!</code> | <code>-ml</code> | <code>-mu</code> | <i>filename</i> &#8230; </p>
 <h2>DESCRIPTION</h2>
 <p> <code>lockfile</code> can be used to create one or more <i>semaphore</i> <i>files</i>. If lockfile can&#8217;t create all the specified files (in the specified order), it waits <i>sleeptime</i> (defaults to 8) seconds and retries the last file that didn&#8217;t succeed. You can specify the number of <i>retries</i> to do until failure is returned. If the number of <i>retries</i> is -1 (default, i.e., <code>-r-1</code>) lockfile will retry forever. </p>
@@ -37,18 +37,18 @@ rm -f important.lock
 <h2>ENVIRONMENT</h2>
 <p> Tp 2.3i <code>LOGNAME</code> used as a hint to determine the invoker&#8217;s loginname </p>
 <h2>FILES</h2>
-<p> Tp 2.3i <code>/etc/passwd</code> to verify and/or correct the invoker&#8217;s loginname (and to find out his HOME directory, if needed)<br />
+<p> Tp 2.3i <code>/etc/passwd</code> to verify and/or correct the invoker&#8217;s loginname (and to find out his HOME directory, if needed)<br/>
  Tp <code>/var/mail/$LOGNAME.lock</code> lockfile for the system mailbox, the environment variables present in here will not be taken from the environment, but will be determined by looking in /etc/passwd </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rm/">rm</a></code>(1), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code>sendmail</code>(8), <code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1) </p>
 <h2>DIAGNOSTICS</h2>
-<p> Tp 2.3i Filename too long, &#8230; Use shorter filenames.<br />
- Tp Forced unlock denied on &quot;x&quot; No write permission in the directory where lockfile &quot;x&quot; resides, or more than one lockfile trying to force a lock at exactly the same time.<br />
- Tp Forcing lock on &quot;x&quot; Lockfile &quot;x&quot; is going to be removed by force because of a timeout (compare <code>LOCKTIMEOUT</code> in <code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1)).<br />
- Tp Out of memory, &#8230; The system is out of swap space.<br />
- Tp Signal received, &#8230; Lockfile will remove anything it created till now and terminate.<br />
- Tp Sorry, &#8230; The <i>retries</i> limit has been reached.<br />
- Tp Truncating &quot;x&quot; and retrying lock &quot;x&quot; does not seem to be a valid filename.<br />
+<p> Tp 2.3i Filename too long, &#8230; Use shorter filenames.<br/>
+ Tp Forced unlock denied on &quot;x&quot; No write permission in the directory where lockfile &quot;x&quot; resides, or more than one lockfile trying to force a lock at exactly the same time.<br/>
+ Tp Forcing lock on &quot;x&quot; Lockfile &quot;x&quot; is going to be removed by force because of a timeout (compare <code>LOCKTIMEOUT</code> in <code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1)).<br/>
+ Tp Out of memory, &#8230; The system is out of swap space.<br/>
+ Tp Signal received, &#8230; Lockfile will remove anything it created till now and terminate.<br/>
+ Tp Sorry, &#8230; The <i>retries</i> limit has been reached.<br/>
+ Tp Truncating &quot;x&quot; and retrying lock &quot;x&quot; does not seem to be a valid filename.<br/>
  Tp Try praying, &#8230; Missing subdirectories or insufficient privileges. </p>
 <h2>BUGS</h2>
 <p> Definitely less than one. </p>

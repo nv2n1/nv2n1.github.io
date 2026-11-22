@@ -10,7 +10,7 @@ description: "dpteqr.f –"
 <p>dpteqr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dpteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br />
+<p>subroutine <code>dpteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br/>
  <i></i><code>DPTEQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpteqr (characterCOMPZ, integerN, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integerINFO)</h3>

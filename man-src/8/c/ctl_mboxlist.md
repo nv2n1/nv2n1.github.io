@@ -13,10 +13,10 @@ description: "ctl_mboxlist – perform operations on the mailbox list database"
 <p>ctl_mboxlist &#8211; perform operations on the mailbox list database</p>
 <h2>Synopsis</h2>
 <p><code>ctl_mboxlist</code> [ <code>-C</code> <i>config-file</i> ] <code>-d</code> [ <code>-x</code> ] [ <code>-p </code><i>partition</i> ] </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-f </code><i>filename</i> ]<br />
- <code>ctl_mboxlist</code> [ <code>-C</code> <i>config-file</i> ] <code>-u</code> [ <code>-f </code><i>filename</i> ]<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-f </code><i>filename</i> ]<br/>
+ <code>ctl_mboxlist</code> [ <code>-C</code> <i>config-file</i> ] <code>-u</code> [ <code>-f </code><i>filename</i> ]<br/>
  <code>ctl_mboxlist</code> [ <code>-C</code> <i>config-file</i> ] <code>-m</code> [ <code>-a </code> ] [ <code>-w </code> ] [ <code>-i </code> ] </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-f </code><i>filename</i> ]<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-f </code><i>filename</i> ]<br/>
  <code>ctl_mboxlist</code> [ <code>-C</code> <i>config-file</i> ] <code>-v</code> [ <code>-f </code><i>filename</i> ]</p>
 <h2>Description</h2>
 <p><i>Ctl_mboxlist</i> is used to perform various administrative operations on the mailbox list database. </p>

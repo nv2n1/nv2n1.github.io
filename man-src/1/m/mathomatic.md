@@ -8,10 +8,10 @@ url: "/docs/linux/man/1-mathomatic/"
 description: "mathomatic – a computer algebra system rmath – a computer algebra system with functions"
 ---
 
-<p> mathomatic &#8211; a computer algebra system<br />
+<p> mathomatic &#8211; a computer algebra system<br/>
  rmath &#8211; a computer algebra system with functions</p>
 <h2>SYNOPSIS</h2>
-<p> <code>mathomatic</code> [ <code>-bchqrtuvwx</code> ] [ <code>-s</code> level ] [ <code>-m</code> number ] [ input_files ]<br />
+<p> <code>mathomatic</code> [ <code>-bchqrtuvwx</code> ] [ <code>-s</code> level ] [ <code>-m</code> number ] [ input_files ]<br/>
  <code>rmath</code> [ input_files ] </p>
 <h2>DESCRIPTION</h2>
 <p> Mathomatic is a portable Computer Algebra System (CAS) that can solve, simplify, combine, and compare algebraic equations, perform general complex number and polynomial arithmetic, etc. It does some calculus and handles all elementary algebra, except logarithms. Plotting expressions with gnuplot is also supported. </p>

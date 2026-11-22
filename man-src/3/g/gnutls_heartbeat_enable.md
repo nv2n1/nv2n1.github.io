@@ -19,17 +19,17 @@ description: "gnutls_heartbeat_enable – API function"
 <dt>unsigned int type</dt>
 <dd> one of the GNUTLS_HB_* flags</dd></dl>
 <h2>DESCRIPTION</h2>
-<p> If this function is called with the <code>GNUTLS_HB_PEER_ALLOWED_TO_SEND</code><br />
+<p> If this function is called with the <code>GNUTLS_HB_PEER_ALLOWED_TO_SEND</code><br/>
 &nbsp;<wbr><i>type</i>&nbsp;<wbr>, GnuTLS will allow heartbeat messages to be received. Moreover it also request the peer to accept heartbeat messages. </p>
 <p> If the <i>type</i> used is <code>GNUTLS_HB_LOCAL_ALLOWED_TO_SEND</code>, then the peer will be asked to accept heartbeat messages but not send ones. </p>
 <p> The function <code>gnutls_heartbeat_allowed()</code> can be used to test Whether locally generated heartbeat messages can be accepted by the peer.</p>
 <h2>SINCE</h2>
 <p> 3.1.2</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br/>
  Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>

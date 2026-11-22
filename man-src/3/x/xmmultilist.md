@@ -572,12 +572,12 @@ description: "XmMultiList — The Multi-column List widget"
  short pix_depth; /* of the pixmap. */
  Boolean old_sel_state;
 } XmMultiListRowInfo;</pre>
-<p><i>values</i><tt>&nbsp;<wbr></tt>This is an array of strings of length numColumns which<br />
- represents the strings displayed in each column of this row. The data is allocated and maintained by the client. If firstColumnPixmaps is True, then value[0] is never referenced. <i>pixmap</i><tt>&nbsp;<wbr>&nbsp;<wbr></tt>This is the pixmap displayed to the left of this row. If<br />
- firstColumnPixmaps is True then this value is never referenced and mayn remain unset. If no pixmap is desired for this row, even though firstColumnPixmaps is True, set the value of pixmap to None. Color pixmaps may be used. <i>sort_id</i><tt>&nbsp;<wbr></tt>This is provided for the convenience of the client and is expected<br />
- to be used as a sort index for this row. One value should be specified for each column of the row. See &quot;sortFunctions&quot; below for details. <i>data</i><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This is provided for the convenience of the client and may be<br />
+<p><i>values</i><tt>&nbsp;<wbr></tt>This is an array of strings of length numColumns which<br/>
+ represents the strings displayed in each column of this row. The data is allocated and maintained by the client. If firstColumnPixmaps is True, then value[0] is never referenced. <i>pixmap</i><tt>&nbsp;<wbr>&nbsp;<wbr></tt>This is the pixmap displayed to the left of this row. If<br/>
+ firstColumnPixmaps is True then this value is never referenced and mayn remain unset. If no pixmap is desired for this row, even though firstColumnPixmaps is True, set the value of pixmap to None. Color pixmaps may be used. <i>sort_id</i><tt>&nbsp;<wbr></tt>This is provided for the convenience of the client and is expected<br/>
+ to be used as a sort index for this row. One value should be specified for each column of the row. See &quot;sortFunctions&quot; below for details. <i>data</i><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This is provided for the convenience of the client and may be<br/>
  used for any purpose. It is intended to be used as an identifier for the object pointed to by this row </p>
-<p> <i>selected</i><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This value is True if this row is selected; may be set by the<br />
+<p> <i>selected</i><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This value is True if this row is selected; may be set by the<br/>
  application. </p>
 <p> Neither <i>sort_id</i> nor <i>data</i> are used by the MultiList widget; they exist solely for the convenience of the programmer. </p>
 <table BORDER>

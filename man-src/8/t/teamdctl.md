@@ -9,7 +9,7 @@ description: "teamdctl — team daemon control tool"
 
 <p>teamdctl &#8212; team daemon control tool</p>
 <h2>Synopsis</h2>
-<p><code>teamdctl</code> [<i>options</i>] <i>team_device command </i>[<i>command_args</i>&#8230;]<br />
+<p><code>teamdctl</code> [<i>options</i>] <i>team_device command </i>[<i>command_args</i>&#8230;]<br/>
  <code>teamdctl -h</code></p>
 <h2>Description</h2>
 <p>teamdctl is a tool that allows a user to interact with a running teamd instance. It defaults to using Unix Domain Sockets, but will fall back to using the D-Bus API, to ensure reliable operation in all environments.</p>

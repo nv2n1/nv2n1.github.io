@@ -11,7 +11,7 @@ description: "slarfg.f –"
 <p> slarfg.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slarfg</code> (N, ALPHA, X, INCX, TAU)<br />
+<p> subroutine <code>slarfg</code> (N, ALPHA, X, INCX, TAU)<br/>
  <i></i><code>SLARFG</code> generates an elementary reflector (Householder matrix).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slarfg (integerN, realALPHA, real, dimension( * )X, integerINCX, realTAU)</h3>

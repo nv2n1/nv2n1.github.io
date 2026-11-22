@@ -20,62 +20,62 @@ description: "g_enemat – extracts an energy matrix from an energy file"
 <p> then energy groups with names like &#8216;Coul-SR:Protein-SOL&#8217; and &#8216;LJ:Protein-SOL&#8217; are expected in the energy file (although <code> g_enemat</code> is most useful if many groups are analyzed simultaneously). Matrices for different energy types are written out separately, as controlled by the <code> -[no]coul</code>, <code> -[no]coulr</code>, <code> -[no]coul14</code>, <code> -[no]lj</code>, <code> -[no]lj14</code>, <code> -[no]bham</code> and <code> -[no]free</code> options. Finally, the total interaction energy energy per group can be calculated (<code> -etot</code>). </p>
 <p> An approximation of the free energy can be calculated using: E(free) = E0 + kT log( exp((E-E0)/kT) ), where &#8221; stands for time-average. A file with reference free energies can be supplied to calculate the free energy difference with some reference state. Group names (e.g. residue names) in the reference file should correspond to the group names as used in the <code> -groups</code> file, but a appended number (e.g. residue number) in the <code> -groups</code> will be ignored in the comparison.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> ener.edr</i> <code>Input, Opt.</code><br />
+<p> <code>-f</code><i> ener.edr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Energy file: edr ene&nbsp;<wbr> </p>
-<p> <code>-groups</code><i> groups.dat</i> <code>Input</code><br />
+<p> <code>-groups</code><i> groups.dat</i> <code>Input</code><br/>
 &nbsp;<wbr>Generic data file&nbsp;<wbr> </p>
-<p> <code>-eref</code><i> eref.dat</i> <code>Input, Opt.</code><br />
+<p> <code>-eref</code><i> eref.dat</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Generic data file&nbsp;<wbr> </p>
-<p> <code>-emat</code><i> emat.xpm</i> <code>Output</code><br />
+<p> <code>-emat</code><i> emat.xpm</i> <code>Output</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
-<p> <code>-etot</code><i> energy.xvg</i> <code>Output</code><br />
+<p> <code>-etot</code><i> energy.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-[no]sum</code><i>no </i><br />
+<p> <code>-[no]sum</code><i>no </i><br/>
 &nbsp;<wbr>Sum the energy terms selected rather than display them all </p>
-<p> <code>-skip</code><i> int</i><code> 0</code><br />
+<p> <code>-skip</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Skip number of frames between data points </p>
-<p> <code>-[no]mean</code><i>yes </i><br />
+<p> <code>-[no]mean</code><i>yes </i><br/>
 &nbsp;<wbr>with -groups extracts matrix of mean energies in stead of matrix for each timestep </p>
-<p> <code>-nlevels</code><i> int</i><code> 20</code><br />
+<p> <code>-nlevels</code><i> int</i><code> 20</code><br/>
 &nbsp;<wbr>number of levels for matrix colors </p>
-<p> <code>-max</code><i> real</i><code> 1e+20 </code><br />
+<p> <code>-max</code><i> real</i><code> 1e+20 </code><br/>
 &nbsp;<wbr>max value for energies </p>
-<p> <code>-min</code><i> real</i><code> -1e+20</code><br />
+<p> <code>-min</code><i> real</i><code> -1e+20</code><br/>
 &nbsp;<wbr>min value for energies </p>
-<p> <code>-[no]coul</code><i>yes </i><br />
+<p> <code>-[no]coul</code><i>yes </i><br/>
 &nbsp;<wbr>extract Coulomb SR energies </p>
-<p> <code>-[no]coulr</code><i>no </i><br />
+<p> <code>-[no]coulr</code><i>no </i><br/>
 &nbsp;<wbr>extract Coulomb LR energies </p>
-<p> <code>-[no]coul14</code><i>no </i><br />
+<p> <code>-[no]coul14</code><i>no </i><br/>
 &nbsp;<wbr>extract Coulomb 1-4 energies </p>
-<p> <code>-[no]lj</code><i>yes </i><br />
+<p> <code>-[no]lj</code><i>yes </i><br/>
 &nbsp;<wbr>extract Lennard-Jones SR energies </p>
-<p> <code>-[no]lj</code><i>no </i><br />
+<p> <code>-[no]lj</code><i>no </i><br/>
 &nbsp;<wbr>extract Lennard-Jones LR energies </p>
-<p> <code>-[no]lj14</code><i>no </i><br />
+<p> <code>-[no]lj14</code><i>no </i><br/>
 &nbsp;<wbr>extract Lennard-Jones 1-4 energies </p>
-<p> <code>-[no]bhamsr</code><i>no </i><br />
+<p> <code>-[no]bhamsr</code><i>no </i><br/>
 &nbsp;<wbr>extract Buckingham SR energies </p>
-<p> <code>-[no]bhamlr</code><i>no </i><br />
+<p> <code>-[no]bhamlr</code><i>no </i><br/>
 &nbsp;<wbr>extract Buckingham LR energies </p>
-<p> <code>-[no]free</code><i>yes </i><br />
+<p> <code>-[no]free</code><i>yes </i><br/>
 &nbsp;<wbr>calculate free energy </p>
-<p> <code>-temp</code><i> real</i><code> 300 </code><br />
+<p> <code>-temp</code><i> real</i><code> 300 </code><br/>
 &nbsp;<wbr>reference temperature for free energy calculation </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

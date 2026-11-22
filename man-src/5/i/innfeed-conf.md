@@ -13,13 +13,13 @@ description: "innfeed.conf – Configuration file for innfeed"
 <p> <i>key</i>:<i>value</i> entries are a keyword and a value separated by a colon (which can itself be surrounded by whitespace). For example: </p>
 <pre> max-connections: 10</pre>
 <p>A legal <i>key</i> starts with a letter and contains only letters, digits, and the <tt>&quot;_&quot;</tt> and <tt>&quot;-&quot;</tt> characters. There are 5 different types of values: integers, floating-point numbers, characters, booleans, and strings. </p>
-<p> Integer and floating-point numbers are as to be expected, except that exponents in floating-point numbers are not supported.<tt>&nbsp;<wbr>&nbsp;<wbr></tt>A boolean value<br />
+<p> Integer and floating-point numbers are as to be expected, except that exponents in floating-point numbers are not supported.<tt>&nbsp;<wbr>&nbsp;<wbr></tt>A boolean value<br/>
  is either <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt> (case is not significant). A character value is a single-quoted character as defined by the C-language. A string value is any other sequence of characters. If the string needs to contain whitespace, then it must be quoted with double quotes, and uses the same format for embedding non-printing characters as normal C-language string. </p>
 <p> Peer entries look like: </p>
 <pre> peer &lt;name&gt; {
  # body ...
  }</pre>
-<p>The word <tt>&quot;peer&quot;</tt> is required. The <i>&lt;name&gt;</i> is the same as the site name in <font SIZE="-1">INN</font>&#8216;s <i>newsfeeds</i> configuration file. The body of a peer entry contains some number (possibly zero) of <i>key</i>:<i>value</i> entries. </p>
+<p>The word <tt>&quot;peer&quot;</tt> is required. The <i>&lt;name&gt;</i> is the same as the site name in INN&#8216;s <i>newsfeeds</i> configuration file. The body of a peer entry contains some number (possibly zero) of <i>key</i>:<i>value</i> entries. </p>
 <p> Group entries look like: </p>
 <pre> group &lt;name&gt; {
  # body ...
@@ -80,9 +80,9 @@ description: "innfeed.conf – Configuration file for innfeed"
 <dt><i>initial-sleep</i></dt>
 <dd>This key requires a positive integer. The default value is <tt>2</tt>. It defines the number of seconds to wait when <code>innfeed</code> (or a fork) starts, before beginning to open connections to remote hosts.</dd>
 <dt><i>fast-exit</i></dt>
-<dd>This key requires a boolean value and defaults to false. If set to true, when <code>innfeed</code> receives a <font SIZE="-1">SIGTERM</font> or <font SIZE="-1">SIGQUIT</font> signal, it will close its listeners as soon as it can, even if it means dropping articles.</dd>
+<dd>This key requires a boolean value and defaults to false. If set to true, when <code>innfeed</code> receives a SIGTERM or SIGQUIT signal, it will close its listeners as soon as it can, even if it means dropping articles.</dd>
 <dt><i>use-mmap</i></dt>
-<dd>This key requires a boolean value. It specifies whether mmaping should be used if <code>innfeed</code> has been built with <i><a href="/docs/linux/man/2-mmap/">mmap</a></i>(2) support. If article data on disk is not in NNTP-ready format (<font SIZE="-1">CR/LF</font> at the end of each line), then after mmaping, the article is read into memory and fixed up, so mmaping has no positive effect (and possibly some negative effect depending on your system), and so in such a case this value should be <tt>&quot;false&quot;</tt>, which is the default value. This corresponds to the <code>-M</code> command-line option.</dd>
+<dd>This key requires a boolean value. It specifies whether mmaping should be used if <code>innfeed</code> has been built with <i><a href="/docs/linux/man/2-mmap/">mmap</a></i>(2) support. If article data on disk is not in NNTP-ready format (CR/LF at the end of each line), then after mmaping, the article is read into memory and fixed up, so mmaping has no positive effect (and possibly some negative effect depending on your system), and so in such a case this value should be <tt>&quot;false&quot;</tt>, which is the default value. This corresponds to the <code>-M</code> command-line option.</dd>
 <dt><i>log-file</i></dt>
 <dd>This key requires a pathname value and defaults to <i>innfeed.log</i>. It specifies where any logging messages that could not be sent via <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3) should go (such as those generated when a positive value for <i>debug-value</i> is used). This corresponds to the <code>-l</code> command-line option. </dd>
 <p> This pathname is relative to <i>pathlog</i> in <i>inn.conf</i>.</p>
@@ -102,7 +102,7 @@ description: "innfeed.conf – Configuration file for innfeed"
 <dt><i>dns-retry</i></dt>
 <dd>This key requires a positive integer value and defaults to <tt>900</tt>. It defines the number of seconds between attempts to re-lookup host information that previously failed to be resolved.</dd>
 <dt><i>dns-expire</i></dt>
-<dd>This key requires a positive integer value and defaults to <tt>86400</tt>. It defines the number of seconds between refreshes of name to address <font SIZE="-1">DNS</font> translation. This is so long-running processes do not get stuck with stale data, should peer <font SIZE="-1">IP</font> addresses change.</dd>
+<dd>This key requires a positive integer value and defaults to <tt>86400</tt>. It defines the number of seconds between refreshes of name to address DNS translation. This is so long-running processes do not get stuck with stale data, should peer IP addresses change.</dd>
 <dt><i>gen-html</i></dt>
 <dd>This key requires a boolean value and defaults to false. It specifies whether the <i>status-file</i> should be HTML-ified.</dd>
 <dt><i>status-file</i></dt>
@@ -131,11 +131,11 @@ description: "innfeed.conf – Configuration file for innfeed"
 <dt><i>deliver-username</i></dt>
 <dd>The username is who you want to &#8220;act&#8221; as, that is, who is actually going to be using the server.</dd>
 <dt><i>deliver-realm</i></dt>
-<dd>In this case, the &#8220;realm&#8221; is the realm in which the specified authname is valid. Currently this is only needed by the <font SIZE="-1">DIGEST-MD5</font> <font SIZE="-1">SASL</font> mechanism.</dd>
+<dd>In this case, the &#8220;realm&#8221; is the realm in which the specified authname is valid. Currently this is only needed by the DIGEST-MD5 SASL mechanism.</dd>
 <dt><i>deliver-rcpt-to</i></dt>
-<dd>A <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format string for creating the envelope recipient address. The pattern <font SIZE="-1">MUST</font> include a single string specifier which will be replaced with the newgroup (e.g. <tt>&quot;bb+%s&quot;</tt>). The default is <tt>&quot;+%s&quot;</tt>.</dd>
+<dd>A <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format string for creating the envelope recipient address. The pattern MUST include a single string specifier which will be replaced with the newgroup (e.g. <tt>&quot;bb+%s&quot;</tt>). The default is <tt>&quot;+%s&quot;</tt>.</dd>
 <dt><i>deliver-to-header</i></dt>
-<dd>An optional <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format string for creating a To: header field to be prepended to the article. The pattern <font SIZE="-1">MUST</font> include a single string specifier which will be replaced with the newgroup (e.g. <tt>&quot;post+%s [at] domain&quot;</tt>). If not specified, the To: header field will not be prepended.</dd></dl>
+<dd>An optional <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format string for creating a To: header field to be prepended to the article. The pattern MUST include a single string specifier which will be replaced with the newgroup (e.g. <tt>&quot;post+%s [at] domain&quot;</tt>). If not specified, the To: header field will not be prepended.</dd></dl>
 <h2>Global Peer Defaults</h2>
 <p>All the <i>key</i>:<i>value</i> pairs mentioned in this section can be specified at global scope. They may also be specified inside a group or peer definition. Note that when peers are added dynamically (i.e. when <code>innfeed</code> receives an article for an unspecified peer), it will add the peer site using the parameters specified at global scope.</p>
 <h3>Required keys</h3>
@@ -152,7 +152,7 @@ description: "innfeed.conf – Configuration file for innfeed"
 <dt><i>max-connections</i></dt>
 <dd>This key requires a positive integer value. The default value is <tt>2</tt> but may be increased if needed or for large feeds. It defines the maximum number of connections to run in parallel to the peer. A value of <tt>0</tt> specifies an unlimited number of maximum connections. In general, use of an unlimited number of maximum connections is not recommended. Do not ever set <i>max-connections</i> to zero with <i>dynamic-method</i> 0 set, as this will saturate peer hosts with connections.</dd>
 <dt><i>close-period</i></dt>
-<dd>This key requires a positive integer value and defaults to <tt>86400</tt>. It is the maximum number of seconds a connection should be kept open. Some <font SIZE="-1">NNTP</font> servers do not deal well with connections being held open for long periods.</dd>
+<dd>This key requires a positive integer value and defaults to <tt>86400</tt>. It is the maximum number of seconds a connection should be kept open. Some NNTP servers do not deal well with connections being held open for long periods.</dd>
 <dt><i>dynamic-method</i></dt>
 <dd>This key requires an integer value between 0 and 3. The default value is <tt>3</tt>. It controls how connections are opened, up to the maximum specified by <i>max-connections</i>. In general (and specifically, with <i>dynamic-method</i> 0), a new connection is opened when the current number of connections is below <i>max-connections</i>, and an article is to be sent while no current connections are idle. Without further restraint (i.e. using <i>dynamic-method</i> 0), in practice this means that <i>max-connections</i> connections are established while articles are being sent. Use of other <i>dynamic-method</i> settings imposes a further limit on the amount of connections opened below that specified by <i>max-connections</i>. This limit is calculated in different ways, depending of the value of <i>dynamic-method</i>. </dd>
 <p> Users should note that adding additional connections is not always productive &#8212; just because opening twice as many connections results in a small percentage increase of articles accepted by the remote peer, this may be at considerable resource cost both locally and at the remote site, whereas the remote site might well have received the extra articles sent from another peer a fraction of a second later. Opening large numbers of connections is considered antisocial. </p>
@@ -172,11 +172,11 @@ description: "innfeed.conf – Configuration file for innfeed"
 <dl>
 <dd></dd></dl>
 <dt><i>dynamic-backlog-low</i></dt>
-<dd>This key requires a floating-point value between 0 and 100. It represents (as a percentage) the low water mark for the host queue. If the host queue falls below this level while using <i>dynamic-method</i> 2 or 3, and if 2 or more connections are open, <code>innfeed</code> will attempt to drop connections to the host. An Infinite Impulse Response (<font SIZE="-1">IIR</font>) filter is applied to the value to prevent connection flap (see <i>dynamic-filter</i>). The default value is <tt>20.0</tt>. This value must be smaller than <i>dynamic-backlog-high</i>.</dd>
+<dd>This key requires a floating-point value between 0 and 100. It represents (as a percentage) the low water mark for the host queue. If the host queue falls below this level while using <i>dynamic-method</i> 2 or 3, and if 2 or more connections are open, <code>innfeed</code> will attempt to drop connections to the host. An Infinite Impulse Response (IIR) filter is applied to the value to prevent connection flap (see <i>dynamic-filter</i>). The default value is <tt>20.0</tt>. This value must be smaller than <i>dynamic-backlog-high</i>.</dd>
 <dt><i>dynamic-backlog-high</i></dt>
-<dd>This key requires a floating-point value between 0 and 100. It represents (as a percentage) the high water mark for the host queue. If the host queue rises above this level while using <i>dynamic-method</i> 2 or 3, and if less than <i>max-connections</i> are open to the host, <code>innfeed</code> will attempt to open further connections to the host. An Infinite Impulse Response (<font SIZE="-1">IIR</font>) filter is applied to the value to prevent connection flap (see <i>dynamic-filter</i>). The default value is <tt>50.0</tt>. This value must be larger than <i>dynamic-backlog-low</i>.</dd>
+<dd>This key requires a floating-point value between 0 and 100. It represents (as a percentage) the high water mark for the host queue. If the host queue rises above this level while using <i>dynamic-method</i> 2 or 3, and if less than <i>max-connections</i> are open to the host, <code>innfeed</code> will attempt to open further connections to the host. An Infinite Impulse Response (IIR) filter is applied to the value to prevent connection flap (see <i>dynamic-filter</i>). The default value is <tt>50.0</tt>. This value must be larger than <i>dynamic-backlog-low</i>.</dd>
 <dt><i>dynamic-backlog-filter</i></dt>
-<dd>This key requires a floating-point value between 0 and 1. It represents the filter coefficient used by the Infinite Impulse Response (<font SIZE="-1">IIR</font>) filter used to implement <i>dynamic-method</i> 2 and 3. The default value of this filter is <tt>0.7</tt>, giving a time constant of 1/(1-0.7) articles. Higher values will result in slower response to queue fullness changes; lower values in faster response.</dd>
+<dd>This key requires a floating-point value between 0 and 1. It represents the filter coefficient used by the Infinite Impulse Response (IIR) filter used to implement <i>dynamic-method</i> 2 and 3. The default value of this filter is <tt>0.7</tt>, giving a time constant of 1/(1-0.7) articles. Higher values will result in slower response to queue fullness changes; lower values in faster response.</dd>
 <dt><i>max-queue-size</i></dt>
 <dd>This key requires a positive integer value. The default value is <tt>5</tt>. It defines the maximum number of articles to process at one time when using streaming to transmit to a peer. Larger numbers mean more memory consumed as articles usually get pulled into memory (see the description of <i>use-mmap</i>).</dd>
 <dt><i>streaming</i></dt>
@@ -186,9 +186,9 @@ description: "innfeed.conf – Configuration file for innfeed"
 <dt><i>no-check-low</i></dt>
 <dd>This key requires a floating-point number which must be in the range [0.0, 100.0], and it must be smaller that the value for <i>no-check-high</i>. When running in no-CHECK mode, as described above, if the percentage of articles the remote server accepts drops below this number, then the no-CHECK optimization is turned off until the percentage gets above the <i>no-check-high</i> value again. If there is small difference between this and the <i>no-check-high</i> value (less than about 5.0), then <code>innfeed</code> may frequently go in and out of no-CHECK mode. If the difference is too big, then it will make it harder to get out of no-CHECK mode when necessary (wasting bandwidth). Keeping this to between 5.0 and 10.0 less than <code>no-check-high</code> usually works pretty well. The default value is <tt>90.0</tt>.</dd>
 <dt><i>no-check-filter</i></dt>
-<dd>This is a floating-point value representing the time constant, in articles, over which the CHECK/no-CHECK calculations are done. The default value is <tt>50.0</tt>, which will implement an Infinite Impulse Response (<font SIZE="-1">IIR</font>) filter of time constant 50. This roughly equates to making a decision about the mode over the previous 50 articles. A higher number will result in a slower response to changing percentages of articles accepted; a lower number will result in a faster response.</dd>
+<dd>This is a floating-point value representing the time constant, in articles, over which the CHECK/no-CHECK calculations are done. The default value is <tt>50.0</tt>, which will implement an Infinite Impulse Response (IIR) filter of time constant 50. This roughly equates to making a decision about the mode over the previous 50 articles. A higher number will result in a slower response to changing percentages of articles accepted; a lower number will result in a faster response.</dd>
 <dt><i>port-number</i></dt>
-<dd>This key requires a positive integer value. It defines the <font SIZE="-1">TCP/IP</font> port number to use when connecting to the remote. Usually, port number 119 is used, which is the default value.</dd>
+<dd>This key requires a positive integer value. It defines the TCP/IP port number to use when connecting to the remote. Usually, port number 119 is used, which is the default value.</dd>
 <dt><i>force-ipv4</i></dt>
 <dd>This key requires a boolean value. By default, it is set to false. Setting it to true is the same as setting <i>bindaddress6</i> to <tt>&quot;none&quot;</tt> and removing <i>bindaddress</i> from <tt>&quot;none&quot;</tt> if it was set.</dd>
 <dt><i>drop-deferred</i></dt>
@@ -217,20 +217,20 @@ description: "innfeed.conf – Configuration file for innfeed"
 <dd>This key requires a string value. It behaves like <i>bindaddress</i> except for outgoing IPv6 connections. It must be in numeric IPv6 format (note that a value containing colons must be enclosed in double quotes), <tt>&quot;any&quot;</tt>, or <tt>&quot;none&quot;</tt>. If set to <tt>&quot;none&quot;</tt>, <code>innfeed</code> will not use IPv6 for outgoing connections to peers in this scope. </dd>
 <p> If not set in <i>innfeed.conf</i>, <code>innfeed</code> defaults to the value of <i>sourceaddress6</i> from <i>inn.conf</i> (which by default is unset).</p>
 <dt><i>username</i></dt>
-<dd>This key requires a string value. If the value is defined, then <code>innfeed</code> tries to authenticate by <font SIZE="-1">AUTHINFO</font> <font SIZE="-1">USER</font> and this value used for user name. <i>password</i> must also be defined, if this key is defined.</dd>
+<dd>This key requires a string value. If the value is defined, then <code>innfeed</code> tries to authenticate by AUTHINFO USER and this value used for user name. <i>password</i> must also be defined, if this key is defined.</dd>
 <dt><i>password</i></dt>
-<dd>This key requires a string value. The value is the password used for <font SIZE="-1">AUTHINFO</font> <font SIZE="-1">PASS</font>. <i>username</i> must also be defined, if this key is defined.</dd></dl>
+<dd>This key requires a string value. The value is the password used for AUTHINFO PASS. <i>username</i> must also be defined, if this key is defined.</dd></dl>
 <h2>Peer Values</h2>
 <p>As previously explained, the peer definitions can contain redefinitions of any of the <i>key</i>:<i>value</i> pairs described in the section about global peer defaults above. There is one <i>key</i>:<i>value</i> pair that is specific to a peer definition.</p>
 <dl>
 <dt><i>ip-name</i></dt>
-<dd>This key requires a word value. The word is the host&#8217;s <font SIZE="-1">FQDN</font>, or the dotted quad IP-address. If this value is not specified, then the name of the peer in the enclosing <i>peer</i> block is taken to also be its <i>ip-name</i>.</dd></dl>
+<dd>This key requires a word value. The word is the host&#8217;s FQDN, or the dotted quad IP-address. If this value is not specified, then the name of the peer in the enclosing <i>peer</i> block is taken to also be its <i>ip-name</i>.</dd></dl>
 <h2>Reloading</h2>
-<p>If <code>innfeed</code> gets a <font SIZE="-1">SIGHUP</font> signal, then it will reread the configuration file. All values at global scope except for <i>backlog-directory</i> can be changed (although note that <i>bindaddress</i> and <i>bindaddress6</i> changes will only affect new connections). </p>
+<p>If <code>innfeed</code> gets a SIGHUP signal, then it will reread the configuration file. All values at global scope except for <i>backlog-directory</i> can be changed (although note that <i>bindaddress</i> and <i>bindaddress6</i> changes will only affect new connections). </p>
 <p> Any new peers are added and any missing peers have their connections closed. </p>
 <p> The log file is also reopened.</p>
 <h2>Example</h2>
-<p>For a comprehensive example, see the sample <i>innfeed.conf</i> distributed with <font SIZE="-1">INN</font> and installed as a starting point. </p>
+<p>For a comprehensive example, see the sample <i>innfeed.conf</i> distributed with INN and installed as a starting point. </p>
 <p> Here are examples of how to format values: </p>
 <pre> eg-string: &quot;New	config	file
 &quot;
@@ -246,8 +246,8 @@ description: "innfeed.conf – Configuration file for innfeed"
  eg-char: 'a'
  eg-ctrl-g: ''</pre>
 <h2>History</h2>
-<p>Written by James Brister &lt;brister [at] vix.com&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
-<p> Earlier versions of <code>innfeed</code> (up to 0.10.1) were shipped separately; <code>innfeed</code> is now part of <font SIZE="-1">INN</font> and shares the same version number. Please note that the <i>innfeed.conf</i> format has changed dramatically since version 0.9.3. </p>
+<p>Written by James Brister &lt;brister [at] vix.com&gt; for InterNetNews. Converted to POD by Julien Elie. </p>
+<p> Earlier versions of <code>innfeed</code> (up to 0.10.1) were shipped separately; <code>innfeed</code> is now part of INN and shares the same version number. Please note that the <i>innfeed.conf</i> format has changed dramatically since version 0.9.3. </p>
 <p> <tt>$Id:</tt> innfeed.conf.pod 9479 2013-06-03 18:12:39Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/8-innfeed/">innfeed</a></i>(8), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5). </p>

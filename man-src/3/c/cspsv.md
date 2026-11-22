@@ -11,7 +11,7 @@ description: "cspsv.f –"
 <p> cspsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cspsv</code> (UPLO, N, NRHS, AP, IPIV, B, LDB, INFO)<br />
+<p> subroutine <code>cspsv</code> (UPLO, N, NRHS, AP, IPIV, B, LDB, INFO)<br/>
  <i></i><code> CSPSV computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cspsv (characterUPLO, integerN, integerNRHS, complex, dimension( * )AP, integer, dimension( * )IPIV, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

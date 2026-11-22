@@ -34,7 +34,7 @@ description: "mysqldbcopy – Copy Database Objects Between Servers"
 <p> To include the replication user in the <code>CHANGE MASTER</code> statement, use the <code>&#8211;rpl-user</code> option to specify the user and password. If this option is omitted, the utility attempts to identify the replication user. In the event that there are multiple candidates or the user requires a password, the utility aborts with an error. </p>
 <p> If you attempt to copy databases on a server with GTIDs enabled (GTID_MODE = ON), a warning will be generated if the copy does not include all databases. This is because the GTID statements generated include the GTIDs for all databases and not only those databases in the export. </p>
 <p> The utility will also generate a warning if you copy databases on a GTID enabled server but use the <code>&#8211;skip-gtid </code> option. </p>
-<p> To make the most use of GTIDs, you should copy all of the databases on the server with the <code>&#8211;all</code> option.<br />
+<p> To make the most use of GTIDs, you should copy all of the databases on the server with the <code>&#8211;all</code> option.<br/>
 OPTIONS </p>
 <p> <code>mysqldbcopy</code> accepts the following command-line options: </p>
 <dl>
@@ -121,7 +121,7 @@ OPTIONS </p>
 <p> When copying data and including the GTID commands, you may encounter an error similar to &quot;GTID_PURGED can only be set when GTID_EXECUTED is empty&quot;. This occurs because the destination server is not in a clean replication state. To aleviate this problem, you can issue a &quot;RESET MASTER&quot; command on the destination prior to executing the copy. </p>
 <p> Cloning databases that contain foreign key constraints does not change the constraint in the cloned table. For example, if table db1.t1 has a foreign key constraint on table db1.t2, when db1 is cloned to db2, table db2.t1 will have a foreign key constraint on db1.t2. </p>
 <p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf). </p>
-<p> If any database identifier specified as an argument contains special characters or is a reserved word, then it must be appropriately quoted with backticks (<code>`</code>). In turn, names quoted with backticks must also be quoted with single or double quotes depending on the operating system, i.e. (<code>&quot;</code>) in Windows or (<code>&#8216;</code>) in non-Windows systems, in order for the utilities to read backtick quoted identifiers as a single argument. For example, to copy a database with the name <code>weird`db.name</code> with <code>other:weird`db.name</code>, the database pair must be specified using the following syntax (in non-Windows): <code>&#8216;`weird&#8220;db.name`:`other:weird&#8220;db.name`&#8217;</code>.<br />
+<p> If any database identifier specified as an argument contains special characters or is a reserved word, then it must be appropriately quoted with backticks (<code>`</code>). In turn, names quoted with backticks must also be quoted with single or double quotes depending on the operating system, i.e. (<code>&quot;</code>) in Windows or (<code>&#8216;</code>) in non-Windows systems, in order for the utilities to read backtick quoted identifiers as a single argument. For example, to copy a database with the name <code>weird`db.name</code> with <code>other:weird`db.name</code>, the database pair must be specified using the following syntax (in non-Windows): <code>&#8216;`weird&#8220;db.name`:`other:weird&#8220;db.name`&#8217;</code>.<br/>
 EXAMPLES </p>
 <p> The following example demonstrates how to use the utility to copy a database named util_test to a new database named util_test_copy on the same server: </p>
 <dl>
@@ -153,40 +153,40 @@ $ mysqldbcopy-- source = root : pass[at] localhost : 3310 : / test123 / mysql.so
 <dl>
 <dt>
 </dt><dd>
-$ mysqldbcopy&#8211; source = root : pass[at] localhost : 3310 : / test123 / mysql.sock&#8211; destination = root : pass[at] localhost : 3310 : / test123 / mysql.sock util_test : util_test_copy&#8211; locking = lock &#8211; all<br />
-#Source on localhost : &#8230; connected.<br />
-#Destination on localhost : &#8230; connected.<br />
-#Copying database util_test renamed as util_test_copy<br />
-#Copying TABLE util_test.t1<br />
-#Copying table data.<br />
-#Copying TABLE util_test.t2<br />
-#Copying table data.<br />
-#Copying TABLE util_test.t3<br />
-#Copying table data.<br />
-#Copying TABLE util_test.t4<br />
-#Copying table data.<br />
-#Copying VIEW util_test.v1<br />
-#Copying TRIGGER util_test.trg<br />
-#Copying PROCEDURE util_test.p1<br />
-#Copying FUNCTION util_test.f1<br />
-#Copying EVENT util_test.e1<br />
-#Copying GRANTS from util_test<br />
+$ mysqldbcopy&#8211; source = root : pass[at] localhost : 3310 : / test123 / mysql.sock&#8211; destination = root : pass[at] localhost : 3310 : / test123 / mysql.sock util_test : util_test_copy&#8211; locking = lock &#8211; all<br/>
+#Source on localhost : &#8230; connected.<br/>
+#Destination on localhost : &#8230; connected.<br/>
+#Copying database util_test renamed as util_test_copy<br/>
+#Copying TABLE util_test.t1<br/>
+#Copying table data.<br/>
+#Copying TABLE util_test.t2<br/>
+#Copying table data.<br/>
+#Copying TABLE util_test.t3<br/>
+#Copying table data.<br/>
+#Copying TABLE util_test.t4<br/>
+#Copying table data.<br/>
+#Copying VIEW util_test.v1<br/>
+#Copying TRIGGER util_test.trg<br/>
+#Copying PROCEDURE util_test.p1<br/>
+#Copying FUNCTION util_test.f1<br/>
+#Copying EVENT util_test.e1<br/>
+#Copying GRANTS from util_test<br/>
 #&#8230; done.
 </dd></dl>
 <p> To copy one or more databases from a master to a slave, you can use the following command to copy the databases. Use the master as the source and the slave as the destination: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqldbcopy&#8211; source = root[at] localhost : 3310 &#8211;destination = root[at] localhost : 3311 test123&#8211; rpl = master&#8211; rpl &#8211; user = rpl<br />
-#Source on localhost : &#8230; connected.<br />
-#Destination on localhost : &#8230; connected.<br />
-#Source on localhost : &#8230; connected.<br />
-#Stopping slave<br />
-#Copying database test123<br />
-#Copying TABLE test123.t1<br />
-#Copying data for TABLE test123.t1<br />
-#Connecting to the current server as master<br />
-#Starting slave<br />
+$ mysqldbcopy&#8211; source = root[at] localhost : 3310 &#8211;destination = root[at] localhost : 3311 test123&#8211; rpl = master&#8211; rpl &#8211; user = rpl<br/>
+#Source on localhost : &#8230; connected.<br/>
+#Destination on localhost : &#8230; connected.<br/>
+#Source on localhost : &#8230; connected.<br/>
+#Stopping slave<br/>
+#Copying database test123<br/>
+#Copying TABLE test123.t1<br/>
+#Copying data for TABLE test123.t1<br/>
+#Connecting to the current server as master<br/>
+#Starting slave<br/>
 #&#8230; done.
 </dd></dl>
 <p> To copy a database from one slave to another attached to the same master, you can use the following command using the slave with the database to be copied as the source and the slave where the database needs to copied to as the destination: </p>

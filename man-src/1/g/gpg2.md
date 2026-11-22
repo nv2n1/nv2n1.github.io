@@ -1139,11 +1139,11 @@ Heine
 <dt><code>GNUPGHOME</code></dt>
 <dd> If set directory used instead of &quot;~/.gnupg&quot;. </dd>
 <dt><code>GPG_AGENT_INFO</code></dt>
-<dd> Used to locate the gpg-agent.<br />
-&nbsp;<wbr>&nbsp;<wbr>The value consists of 3 colon delimited fields: The first is the path<br />
-&nbsp;<wbr>&nbsp;<wbr>to the Unix Domain Socket, the second the PID of the gpg-agent and the<br />
-&nbsp;<wbr>&nbsp;<wbr>protocol version which should be set to 1. When starting the gpg-agent<br />
-&nbsp;<wbr>&nbsp;<wbr>as described in its documentation, this variable is set to the correct<br />
+<dd> Used to locate the gpg-agent.<br/>
+&nbsp;<wbr>&nbsp;<wbr>The value consists of 3 colon delimited fields: The first is the path<br/>
+&nbsp;<wbr>&nbsp;<wbr>to the Unix Domain Socket, the second the PID of the gpg-agent and the<br/>
+&nbsp;<wbr>&nbsp;<wbr>protocol version which should be set to 1. When starting the gpg-agent<br/>
+&nbsp;<wbr>&nbsp;<wbr>as described in its documentation, this variable is set to the correct<br/>
 &nbsp;<wbr>&nbsp;<wbr>value. The option&nbsp;<wbr><code>&#8211;gpg-agent-info</code>&nbsp;<wbr>can be used to override it. </dd>
 <dt><code>PINENTRY_USER_DATA</code></dt>
 <dd> This value is passed via gpg-agent to pinentry. It is useful to convey extra information to a custom pinentry. </dd>

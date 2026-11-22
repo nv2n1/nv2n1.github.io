@@ -24,20 +24,20 @@ dcmfile-in  stored print file(s) to be spooled
 </pre>
 <h2>OPTIONS</h2>
 <h3>general options</h3>
-<p>&#8211; h&#8211; help<br />
-        print this help text and exit&#8211; version<br />
-            print version information and exit&#8211; arguments<br />
-                print expanded command line arguments &#8211;<br />
-    q&#8211; quiet<br />
-        quiet mode,<br />
-    print no warnings and errors &#8211; v&#8211; verbose<br />
-                                       verbose mode,<br />
-    print processing details &#8211; d&#8211; debug<br />
-                                   debug mode,<br />
-    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br />
-                                                       constant(fatal, error, warn, info, debug, trace)<br />
-         use level l for the logger<br />
-  -lc  &#8211;log-config  [f]ilename: string<br />
+<p>&#8211; h&#8211; help<br/>
+        print this help text and exit&#8211; version<br/>
+            print version information and exit&#8211; arguments<br/>
+                print expanded command line arguments &#8211;<br/>
+    q&#8211; quiet<br/>
+        quiet mode,<br/>
+    print no warnings and errors &#8211; v&#8211; verbose<br/>
+                                       verbose mode,<br/>
+    print processing details &#8211; d&#8211; debug<br/>
+                                   debug mode,<br/>
+    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br/>
+                                                       constant(fatal, error, warn, info, debug, trace)<br/>
+         use level l for the logger<br/>
+  -lc  &#8211;log-config  [f]ilename: string<br/>
          use config file f for the logger</p>
 <h3>print options</h3>
 <pre>
@@ -49,18 +49,18 @@ dcmfile-in  stored print file(s) to be spooled
          transmit basic grayscale images in MONOCHROME1
 </pre>
 <h3>mode options</h3>
-<p>+ p&#8211; print<br />
-    printer mode,<br />
-    print file(s)and terminate(default) + s&#8211; spool[n] ame:string<br />
-                                                           spooler mode,<br />
+<p>+ p&#8211; print<br/>
+    printer mode,<br/>
+    print file(s)and terminate(default) + s&#8211; spool[n] ame:string<br/>
+                                                           spooler mode,<br/>
                                                            use job prefix n</p>
 <h3>processing options</h3>
-<p>&#8211; c&#8211; config[f] ilename:string<br />
-                            process using settings from configuration file &#8211;<br />
-                        p&#8211; printer[n]<br />
-                    ame:string(default:1st printer in cfg file)<br />
-                            select printer with identifier n from cfg file<br />
-                        + d&#8211; dump<br />
+<p>&#8211; c&#8211; config[f] ilename:string<br/>
+                            process using settings from configuration file &#8211;<br/>
+                        p&#8211; printer[n]<br/>
+                    ame:string(default:1st printer in cfg file)<br/>
+                            select printer with identifier n from cfg file<br/>
+                        + d&#8211; dump<br/>
                         dump all DIMSE messages</p>
 <h3>spooler options (only with &#8211;spool)</h3>
 <pre>

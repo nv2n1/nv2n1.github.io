@@ -12,7 +12,7 @@ description: "fFind – find a file lock."
 <pre>#include &lt;util/ulocks.h&gt;</pre>
 <pre>NEOERR *fFind(int *plock, const char *file);</pre>
 <h2>Arguments</h2>
-<p>plock &#8211; place for lock.<br />
+<p>plock &#8211; place for lock.<br/>
  file &#8211; path of file to use as lock. </p>
 <h2>Description</h2>
 <p>Find a file identified by the path &lt;file&gt;, and returns a lock identifier for it in &lt;plock&gt;. If the file doesn&#8217;t exist, returns true. </p>

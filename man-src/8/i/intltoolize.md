@@ -38,8 +38,8 @@ description: "intltoolize – copy intltool related files to software package"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugs.launchpad.net/intltool">http://bugs.launchpad.net/intltool</a></p>
 <h2>Author</h2>
-<p>Darin Adler &lt;darin [at] bentspoon.com&gt;<br />
- Kenneth Christiansen &lt;kenneth [at] gnu.org&gt;<br />
+<p>Darin Adler &lt;darin [at] bentspoon.com&gt;<br/>
+ Kenneth Christiansen &lt;kenneth [at] gnu.org&gt;<br/>
  Maciej Stachowiak &lt;mjs [at] eazel.com&gt;</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-intltool-prepare/">intltool-prepare</a></code>(8), <code><a href="/docs/linux/man/8-intltool-extract/">intltool-extract</a></code>(8), <code><a href="/docs/linux/man/8-intltool-merge/">intltool-merge</a></code>(8), <code><a href="/docs/linux/man/8-intltool-update/">intltool-update</a></code>(8) </p>

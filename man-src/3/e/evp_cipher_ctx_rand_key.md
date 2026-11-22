@@ -20,9 +20,9 @@ description: "hcrypto function controlling behavior –"
 <p>Perform a operation on a ctx </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> context to perform operation on.<br />
- <i>type</i> type of operation.<br />
- <i>arg</i> argument to operation.<br />
+<dd><i>ctx</i> context to perform operation on.<br/>
+ <i>type</i> type of operation.<br/>
+ <i>arg</i> argument to operation.<br/>
  <i>data</i> addition data to operation.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -31,7 +31,7 @@ description: "hcrypto function controlling behavior –"
 <p>Generate a random key for the specificed EVP_CIPHER. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> EVP_CIPHER_CTX type to build the key for.<br />
+<dd><i>ctx</i> EVP_CIPHER_CTX type to build the key for.<br/>
  <i>key</i> return key, must be at least <code>EVP_CIPHER_key_length()</code> byte long.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

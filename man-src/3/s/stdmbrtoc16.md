@@ -14,23 +14,23 @@ description: "std::mbrtoc16 – std::mbrtoc16"
                          const char *s, (since C++ 11)
                                             std::size_t n,
                          std::mbstate_t *ps);</code></pre>
-<p>Converts a narrow multibyte character to UTF-16 character representation.<br />
-If s is not a null pointer, inspects at most n bytes of the multibyte character string, beginning with the byte pointed to by s to determine the number of bytes necessary to complete the next multibyte character (including any shift sequences). If the function determines that the next multibyte character in s is complete and valid, converts it to the corresponding 16-bit character and stores it in *pc16 (if pc16 is not null).<br />
-If the multibyte character in *s corresponds to a multi-char16_t sequence (e.g. a surrogate pair in UTF-16), then after the first call to this function, *ps is updated in such a way that the next call to mbrtoc16 will write out the additional char16_t, without considering *s.<br />
-If s is a null pointer, the values of n and pc16 are ignored and the call is equivalent to std::mbrtoc16(NULL, &quot;&quot;, 1, ps).<br />
-If the wide character produced is the null character, the conversion state *ps represents the initial shift state.<br />
+<p>Converts a narrow multibyte character to UTF-16 character representation.<br/>
+If s is not a null pointer, inspects at most n bytes of the multibyte character string, beginning with the byte pointed to by s to determine the number of bytes necessary to complete the next multibyte character (including any shift sequences). If the function determines that the next multibyte character in s is complete and valid, converts it to the corresponding 16-bit character and stores it in *pc16 (if pc16 is not null).<br/>
+If the multibyte character in *s corresponds to a multi-char16_t sequence (e.g. a surrogate pair in UTF-16), then after the first call to this function, *ps is updated in such a way that the next call to mbrtoc16 will write out the additional char16_t, without considering *s.<br/>
+If s is a null pointer, the values of n and pc16 are ignored and the call is equivalent to std::mbrtoc16(NULL, &quot;&quot;, 1, ps).<br/>
+If the wide character produced is the null character, the conversion state *ps represents the initial shift state.<br/>
 The multibyte encoding used by this function is specified by the currently active C locale. </p>
 <h2>Parameters</h2>
-<p>pc16 &#8211; pointer to the location where the resulting 16-bit character will be written<br />
-s &#8211; pointer to the multibyte character string used as input<br />
-n &#8211; limit on the number of bytes in s that can be examined<br />
+<p>pc16 &#8211; pointer to the location where the resulting 16-bit character will be written<br/>
+s &#8211; pointer to the multibyte character string used as input<br/>
+n &#8211; limit on the number of bytes in s that can be examined<br/>
 ps &#8211; pointer to the conversion state object used when interpreting the multibyte string</p>
 <h2>Return value</h2>
-<p>The first of the following that applies:<br />
-* 0 if the character converted from s (and stored in *pc16 if non-null) was the null character<br />
-* the number of bytes [1&#8230;n] of the multibyte character successfully converted from s<br />
-* -3 if the next char16_t from a multi-char16_t character (e.g. a surrogate pair) has now been written to *pc16. No bytes are processed from the input in this case.<br />
-* -2 if the next n bytes constitute an incomplete, but so far valid, multibyte character. Nothing is written to *pc16.<br />
+<p>The first of the following that applies:<br/>
+* 0 if the character converted from s (and stored in *pc16 if non-null) was the null character<br/>
+* the number of bytes [1&#8230;n] of the multibyte character successfully converted from s<br/>
+* -3 if the next char16_t from a multi-char16_t character (e.g. a surrogate pair) has now been written to *pc16. No bytes are processed from the input in this case.<br/>
+* -2 if the next n bytes constitute an incomplete, but so far valid, multibyte character. Nothing is written to *pc16.<br/>
 * -1 if encoding error occurs. Nothing is written to *pc16, the value EILSEQ is stored in errno and the value of *ps is unspecified. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -73,16 +73,16 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;Processing 10 bytes: [ 0x7a 0xc3 0x9f 0xe6 0xb0 0xb4 0xf0 0x9f 0x8d 0x8c ]<br />
-&nbsp;<wbr>&nbsp;Next UTF-16 char: 0x7a obtained from 1 bytes [ 0x7a ]<br />
-&nbsp;<wbr>&nbsp;Next UTF-16 char: 0xdf obtained from 2 bytes [ 0xc3 0x9f ]<br />
-&nbsp;<wbr>&nbsp;Next UTF-16 char: 0x6c34 obtained from 3 bytes [ 0xe6 0xb0 0xb4 ]<br />
-&nbsp;<wbr>&nbsp;Next UTF-16 char: 0xd83c obtained from 4 bytes [ 0xf0 0x9f 0x8d 0x8c ]<br />
+<p>&nbsp;<wbr>&nbsp;Processing 10 bytes: [ 0x7a 0xc3 0x9f 0xe6 0xb0 0xb4 0xf0 0x9f 0x8d 0x8c ]<br/>
+&nbsp;<wbr>&nbsp;Next UTF-16 char: 0x7a obtained from 1 bytes [ 0x7a ]<br/>
+&nbsp;<wbr>&nbsp;Next UTF-16 char: 0xdf obtained from 2 bytes [ 0xc3 0x9f ]<br/>
+&nbsp;<wbr>&nbsp;Next UTF-16 char: 0x6c34 obtained from 3 bytes [ 0xe6 0xb0 0xb4 ]<br/>
+&nbsp;<wbr>&nbsp;Next UTF-16 char: 0xd83c obtained from 4 bytes [ 0xf0 0x9f 0x8d 0x8c ]<br/>
 &nbsp;<wbr>&nbsp;Next UTF-16 char: 0xdf4c obtained from earlier surrogate pair</p>
 <h2>See also</h2>
-<p>c16rtomb convert a 16-bit wide character to narrow multibyte string<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br />
-<i>(C++11)</i><br />
-do_in converts a string from externT to internT, such as when reading from file<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::codecvt&lt;InternT,ExternT,State&gt;)</i><br />
+<p>c16rtomb convert a 16-bit wide character to narrow multibyte string<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br/>
+<i>(C++11)</i><br/>
+do_in converts a string from externT to internT, such as when reading from file<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::codecvt&lt;InternT,ExternT,State&gt;)</i><br/>
 <code>[virtual]</code> </p>

@@ -10,22 +10,22 @@ description: "log4cpp::threading –"
 <p>log4cpp::threading &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Classes</h3>
-<p>class <code>ThreadLocalDataHolder</code><br />
- <i>This class holds Thread local data of type T, i.e. </i><br />
- class <code>MSMutex</code><br />
- <i>A simple object wrapper around CreateMutex() and DeleteMutex() </i><br />
- class <code>MSScopedLock</code><br />
- <i>A simple object wrapper around WaitForSingleObject() and ReleaseMutex() </i><br />
+<p>class <code>ThreadLocalDataHolder</code><br/>
+ <i>This class holds Thread local data of type T, i.e. </i><br/>
+ class <code>MSMutex</code><br/>
+ <i>A simple object wrapper around CreateMutex() and DeleteMutex() </i><br/>
+ class <code>MSScopedLock</code><br/>
+ <i>A simple object wrapper around WaitForSingleObject() and ReleaseMutex() </i><br/>
  class <code>Mutex</code> </p>
-<p> class <code>ScopedLock</code><br />
+<p> class <code>ScopedLock</code><br/>
  <i>definition of </i><code>ScopedLock</code>;</p>
 <h3>Typedefs</h3>
-<p>typedef boost::mutex <code>Mutex</code><br />
- <i>Dummy type &#8216;int&#8217; for </i><code>Mutex</code>.<br />
- typedef boost::mutex::scoped_lock <code>ScopedLock</code><br />
+<p>typedef boost::mutex <code>Mutex</code><br/>
+ <i>Dummy type &#8216;int&#8217; for </i><code>Mutex</code>.<br/>
+ typedef boost::mutex::scoped_lock <code>ScopedLock</code><br/>
  <i>Dummy type &#8216;int&#8217; defintion of </i><code>ScopedLock</code>;.</p>
 <h3>Functions</h3>
-<p>static std::string <code>getThreadId</code> ()<br />
+<p>static std::string <code>getThreadId</code> ()<br/>
  <i>Return an identifier for the current thread. </i></p>
 <h2>Typedef Documentation</h2>
 <h3>typedef omni_mutex <code>log4cpp::threading::Mutex</code></h3>

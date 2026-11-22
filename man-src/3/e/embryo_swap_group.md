@@ -9,9 +9,9 @@ description: "Byte Swapping Functions – Functions that are used to ensure that
 
 <p>Byte Swapping Functions &#8211; Functions that are used to ensure that integers passed to the virtual machine are in small endian format. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>embryo_swap_16</code> (unsigned short *v)<br />
- <i>Ensures that the given unsigned short integer is in the small endian format. </i><br />
- EAPI void <code>embryo_swap_32</code> (unsigned int *v)<br />
+<p>EAPI void <code>embryo_swap_16</code> (unsigned short *v)<br/>
+ <i>Ensures that the given unsigned short integer is in the small endian format. </i><br/>
+ EAPI void <code>embryo_swap_32</code> (unsigned int *v)<br/>
  <i>Ensures that the given unsigned integer is in the small endian format. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that are used to ensure that integers passed to the virtual machine are in small endian format. </p>

@@ -14,7 +14,7 @@ description: "dcb-buffer – show / manipulate port buffer settings of the DCB (
 buffer
 { COMMAND | help }
 </code></pre>
-<p> <code>dcb buffer show dev</code> DEV [ <code>prio-buffer</code> ] [ <code>buffer-size</code> ] [ <code>total-size</code> ]<br />
+<p> <code>dcb buffer show dev</code> DEV [ <code>prio-buffer</code> ] [ <code>buffer-size</code> ] [ <code>total-size</code> ]<br/>
  <code>dcb buffer set dev</code> DEV [ <code>prio-buffer</code> <i>PRIO-MAP</i> ] [ <code>buffer-size</code> <i>SIZE-MAP</i> ] </p>
 <pre><code>PRIO-MAP := [ PRIO-MAP ] PRIO-MAPPING
 PRIO-MAPPING := { PRIO | all }:BUFFER
@@ -42,9 +42,9 @@ SIZE := { INTEGER | INTEGERK | INTEGERM | ... }
 <p> Set sizes of all buffers to 10KB, except for buffer 6, which will have the size 1MB: </p>
 <p> # dcb buffer set dev eth0 buffer-size all:10K 6:1M </p>
 <p> Show what was set: </p>
-<p> # dcb buffer show dev eth0<br />
- prio-buffer 0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7<br />
- buffer-size 0:10Kb 1:10Kb 2:10Kb 3:10Kb 4:10Kb 5:10Kb 6:1Mb 7:10Kb<br />
+<p> # dcb buffer show dev eth0<br/>
+ prio-buffer 0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7<br/>
+ buffer-size 0:10Kb 1:10Kb 2:10Kb 3:10Kb 4:10Kb 5:10Kb 6:1Mb 7:10Kb<br/>
  total-size 1222Kb</p>
 <h2>Exit Status</h2>
 <p>Exit status is 0 if command was successful or a positive integer upon failure.</p>

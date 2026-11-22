@@ -10,18 +10,18 @@ description: "gawk – pattern scanning and processing language"
 
 <p> gawk - pattern scanning and processing language  </p>
 <h2>SYNOPSIS</h2>
-<p> <code>gawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ... <br />
- <code>gawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] [ <code>--</code> ] <i>program-text</i> file ... </p>
-<p> <code>pgawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ... <br />
- <code>pgawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] [ <code>--</code> ] <i>program-text</i> file ... </p>
-<p> <code>dgawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ...  </p>
+<p> <code>gawk</code> [ POSIX or GNU style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ... <br/>
+ <code>gawk</code> [ POSIX or GNU style options ] [ <code>--</code> ] <i>program-text</i> file ... </p>
+<p> <code>pgawk</code> [ POSIX or GNU style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ... <br/>
+ <code>pgawk</code> [ POSIX or GNU style options ] [ <code>--</code> ] <i>program-text</i> file ... </p>
+<p> <code>dgawk</code> [ POSIX or GNU style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ...  </p>
 <h2>DESCRIPTION</h2>
-<p> <i>Gawk</i> is the <font SIZE="-1">GNU</font> Project&#8217;s implementation of the <font SIZE="-1">AWK</font> programming language. It conforms to the definition of the language in the <font SIZE="-1">POSIX</font> 1003.1 Standard. This version in turn is based on the description in <i>The AWK Programming Language</i>, by Aho, Kernighan, and Weinberger. <i>Gawk</i> provides the additional features found in the current version of <font SIZE="-1">UNIX</font> <i>awk</i> and a number of <font SIZE="-1">GNU</font>-specific extensions. </p>
-<p> The command line consists of options to <i>gawk</i> itself, the <font SIZE="-1">AWK</font> program text (if not supplied via the <code>-f</code> or <code>--file</code> options), and values to be made available in the <code>ARGC</code> and <code>ARGV</code> pre-defined <font SIZE="-1">AWK</font> variables. </p>
+<p> <i>Gawk</i> is the GNU Project&#8217;s implementation of the AWK programming language. It conforms to the definition of the language in the POSIX 1003.1 Standard. This version in turn is based on the description in <i>The AWK Programming Language</i>, by Aho, Kernighan, and Weinberger. <i>Gawk</i> provides the additional features found in the current version of UNIX <i>awk</i> and a number of GNU-specific extensions. </p>
+<p> The command line consists of options to <i>gawk</i> itself, the AWK program text (if not supplied via the <code>-f</code> or <code>--file</code> options), and values to be made available in the <code>ARGC</code> and <code>ARGV</code> pre-defined AWK variables. </p>
 <p> <i>Pgawk</i> is the profiling version of <i>gawk</i>. It is identical in every way to <i>gawk</i>, except that programs run more slowly, and it automatically produces an execution profile in the file <code>awkprof.out</code> when done. See the <code>--profile</code> option, below. </p>
 <p> <i>Dgawk</i> is an <i>awk</i> debugger. Instead of running the program directly, it loads the AWK source code and then prompts for debugging commands. Unlike <i>gawk</i> and <i>pgawk</i>, <i>dgawk</i> only processes AWK program source provided with the <code>-f</code> option. The debugger is documented in <i>GAWK: Effective AWK Programming</i>.  </p>
 <h2>OPTION FORMAT</h2>
-<p> <i>Gawk</i> options may be either traditional <font SIZE="-1">POSIX</font>-style one letter options, or <font SIZE="-1">GNU</font>-style long options. <font SIZE="-1">POSIX</font> options start with a single ``-&#8216;&#8216;, while long options start with ``--&#8216;&#8216;. Long options are provided for both <font SIZE="-1">GNU</font>-specific features and for <font SIZE="-1">POSIX</font>-mandated features. </p>
+<p> <i>Gawk</i> options may be either traditional POSIX-style one letter options, or GNU-style long options. POSIX options start with a single ``-&#8216;&#8216;, while long options start with ``--&#8216;&#8216;. Long options are provided for both GNU-specific features and for POSIX-mandated features. </p>
 <p> <i>Gawk</i>- specific options are typically used in long-option form. Arguments to long options are either joined with the option by an <code>=</code> sign, with no intervening spaces, or they may be provided in the next command line argument. Long options may be abbreviated, as long as the abbreviation remains unique. </p>
 <p> Additionally, each long option has a corresponding short option, so that the option&#8217;s functionality may be used from within <code>#!</code> executable scripts.  </p>
 <h2>OPTIONS</h2>
@@ -29,7 +29,7 @@ description: "gawk – pattern scanning and processing language"
 <dl>
 <dd> <p> <code>-f</code><i> program-file</i> </p>
  </dd>
-<dd> <p> <code>--file</code><i> program-file</i> Read the <font SIZE="-1">AWK</font> program source from the file <i>program-file</i>, instead of from the first command line argument. Multiple <code>-f</code> (or <code>--file</code>) options may be used. </p>
+<dd> <p> <code>--file</code><i> program-file</i> Read the AWK program source from the file <i>program-file</i>, instead of from the first command line argument. Multiple <code>-f</code> (or <code>--file</code>) options may be used. </p>
  </dd>
 <dd> <p> <code>-F</code><i> fs</i> </p>
  </dd>
@@ -37,7 +37,7 @@ description: "gawk – pattern scanning and processing language"
  </dd>
 <dd> <p> <code>-v</code><i> var</i><code>=</code><i>val</i> </p>
  </dd>
-<dd> <p> <code>--assign </code><i>var</i><code>=</code><i>val</i> Assign the value <i>val</i> to the variable <i>var</i>, before execution of the program begins. Such variable values are available to the <code>BEGIN</code> block of an <font SIZE="-1">AWK</font> program. </p>
+<dd> <p> <code>--assign </code><i>var</i><code>=</code><i>val</i> Assign the value <i>val</i> to the variable <i>var</i>, before execution of the program begins. Such variable values are available to the <code>BEGIN</code> block of an AWK program. </p>
  </dd>
 <dd> <p> <code>-b</code> </p>
  </dd>
@@ -45,11 +45,11 @@ description: "gawk – pattern scanning and processing language"
  </dd>
 <dd> <p> <code>-c</code> </p>
  </dd>
-<dd> <p> <code>--traditional</code> Run in <i>compatibility</i> mode. In compatibility mode, <i>gawk</i> behaves identically to <font SIZE="-1">UNIX</font> <i>awk</i>; none of the <font SIZE="-1">GNU</font>-specific extensions are recognized. See <code>GNU EXTENSIONS</code>, below, for more information. </p>
+<dd> <p> <code>--traditional</code> Run in <i>compatibility</i> mode. In compatibility mode, <i>gawk</i> behaves identically to UNIX <i>awk</i>; none of the GNU-specific extensions are recognized. See <code>GNU EXTENSIONS</code>, below, for more information. </p>
  </dd>
 <dd> <p> <code>-C</code> </p>
  </dd>
-<dd> <p> <code>--copyright</code> Print the short version of the <font SIZE="-1">GNU</font> copyright information message on the standard output and exit successfully. </p>
+<dd> <p> <code>--copyright</code> Print the short version of the GNU copyright information message on the standard output and exit successfully. </p>
  </dd>
 <dd> <p> <code>-d</code>[<i>file</i>] </p>
  </dd>
@@ -58,7 +58,7 @@ description: "gawk – pattern scanning and processing language"
  </dd>
 <dd> <p> <code>-e </code><i>program-text</i> </p>
  </dd>
-<dd> <p> <code>--source</code><i> program-text</i> Use <i>program-text</i> as <font SIZE="-1">AWK</font> program source code. This option allows the easy intermixing of library functions (used via the <code>-f</code> and <code>--file</code> options) with source code entered on the command line. It is intended primarily for medium to large <font SIZE="-1">AWK</font> programs used in shell scripts. </p>
+<dd> <p> <code>--source</code><i> program-text</i> Use <i>program-text</i> as AWK program source code. This option allows the easy intermixing of library functions (used via the <code>-f</code> and <code>--file</code> options) with source code entered on the command line. It is intended primarily for medium to large AWK programs used in shell scripts. </p>
  </dd>
 <dd> <p> <code>-E </code><i>file</i> </p>
  </dd>
@@ -66,7 +66,7 @@ description: "gawk – pattern scanning and processing language"
  </dd>
 <dd> <p> <code>-g</code> </p>
  </dd>
-<dd> <p> <code>--gen-pot</code> Scan and parse the <font SIZE="-1">AWK</font> program, and generate a <font SIZE="-1">GNU</font> <code>.pot</code> (Portable Object Template) format file on standard output with entries for all localizable strings in the program. The program itself is not executed. See the <font SIZE="-1">GNU</font> <i>gettext</i> distribution for more information on <code>.pot</code> files. </p>
+<dd> <p> <code>--gen-pot</code> Scan and parse the AWK program, and generate a GNU <code>.pot</code> (Portable Object Template) format file on standard output with entries for all localizable strings in the program. The program itself is not executed. See the GNU <i>gettext</i> distribution for more information on <code>.pot</code> files. </p>
  </dd>
 <dd> <p> <code>-h</code> </p>
  </dd>
@@ -74,7 +74,7 @@ description: "gawk – pattern scanning and processing language"
  </dd>
 <dd> <p> <code>-L </code>[<i>value</i>] </p>
  </dd>
-<dd> <p> <code>--lint</code>[<code>=</code><i>value</i>] Provide warnings about constructs that are dubious or non-portable to other <font SIZE="-1">AWK</font> implementations. With an optional argument of <code>fatal</code>, lint warnings become fatal errors. This may be drastic, but its use will certainly encourage the development of cleaner <font SIZE="-1">AWK</font> programs. With an optional argument of <code>invalid</code>, only warnings about things that are actually invalid are issued. (This is not fully implemented yet.) </p>
+<dd> <p> <code>--lint</code>[<code>=</code><i>value</i>] Provide warnings about constructs that are dubious or non-portable to other AWK implementations. With an optional argument of <code>fatal</code>, lint warnings become fatal errors. This may be drastic, but its use will certainly encourage the development of cleaner AWK programs. With an optional argument of <code>invalid</code>, only warnings about things that are actually invalid are issued. (This is not fully implemented yet.) </p>
  </dd>
 <dd> <p> <code>-n</code> </p>
  </dd>
@@ -117,7 +117,7 @@ description: "gawk – pattern scanning and processing language"
 </dl>
 <dd> <p> <code>-r</code> </p>
  </dd>
-<dd> <p> <code>--re-interval</code> Enable the use of <i>interval expressions</i> in regular expression matching (see <code>Regular Expressions</code>, below). Interval expressions were not traditionally available in the <font SIZE="-1">AWK</font> language. The <font SIZE="-1">POSIX</font> standard added them, to make <i>awk</i> and <i>egrep</i> consistent with each other. They are enabled by default, but this option remains for use with <code>--traditional</code>. </p>
+<dd> <p> <code>--re-interval</code> Enable the use of <i>interval expressions</i> in regular expression matching (see <code>Regular Expressions</code>, below). Interval expressions were not traditionally available in the AWK language. The POSIX standard added them, to make <i>awk</i> and <i>egrep</i> consistent with each other. They are enabled by default, but this option remains for use with <code>--traditional</code>. </p>
  </dd>
 <dd> <p> <code>-R</code> </p>
  </dd>
@@ -136,30 +136,30 @@ description: "gawk – pattern scanning and processing language"
 <dd> <p> <code>--version</code> Print version information for this particular copy of <i>gawk</i> on the standard output. This is useful mainly for knowing if the current copy of <i>gawk</i> on your system is up to date with respect to whatever the Free Software Foundation is distributing. This is also useful when reporting bugs. (Per the <i>GNU Coding Standards</i>, these options cause an immediate, successful exit.) </p>
  </dd>
 <dt><code>--</code></dt>
-<dd> <p> Signal the end of options. This is useful to allow further arguments to the <font SIZE="-1">AWK</font> program itself to start with a ``-&#8216;&#8216;. This provides consistency with the argument parsing convention used by most other <font SIZE="-1">POSIX</font> programs. </p>
+<dd> <p> Signal the end of options. This is useful to allow further arguments to the AWK program itself to start with a ``-&#8216;&#8216;. This provides consistency with the argument parsing convention used by most other POSIX programs. </p>
  </dd></dl>
-<p> In compatibility mode, any other options are flagged as invalid, but are otherwise ignored. In normal operation, as long as program text has been supplied, unknown options are passed on to the <font SIZE="-1">AWK</font> program in the <code>ARGV</code> array for processing. This is particularly useful for running <font SIZE="-1">AWK</font> programs via the ``#!&#8216;&#8216; executable interpreter mechanism.  </p>
+<p> In compatibility mode, any other options are flagged as invalid, but are otherwise ignored. In normal operation, as long as program text has been supplied, unknown options are passed on to the AWK program in the <code>ARGV</code> array for processing. This is particularly useful for running AWK programs via the ``#!&#8216;&#8216; executable interpreter mechanism.  </p>
 <h2>AWK PROGRAM EXECUTION</h2>
-<p> An <font SIZE="-1">AWK</font> program consists of a sequence of pattern-action statements and optional function definitions. </p>
+<p> An AWK program consists of a sequence of pattern-action statements and optional function definitions. </p>
 <dl>
-<dd> <p> <code>@include &quot;</code><i>filename</i><code>&quot; </code><i>pattern</i><code><code>&nbsp;<wbr></code>{ </code><i>action statements</i><code> }</code><br />
- <br />
+<dd> <p> <code>@include &quot;</code><i>filename</i><code>&quot; </code><i>pattern</i><code><code>&nbsp;<wbr></code>{ </code><i>action statements</i><code> }</code><br/>
+ <br/>
  <code>function </code><i>name</i><code>(</code><i>parameter list</i><code>) { </code><i>statements</i><code> }</code> </p>
  </dd></dl>
-<p> <i>Gawk</i> first reads the program source from the <i>program-file</i>(s) if specified, from arguments to <code>--source</code>, or from the first non-option argument on the command line. The <code>-f</code> and <code>--source</code> options may be used multiple times on the command line. <i>Gawk</i> reads the program text as if all the <i>program-file</i>s and command line source texts had been concatenated together. This is useful for building libraries of <font SIZE="-1">AWK</font> functions, without having to include them in each new <font SIZE="-1">AWK</font> program that uses them. It also provides the ability to mix library functions with command line programs. </p>
+<p> <i>Gawk</i> first reads the program source from the <i>program-file</i>(s) if specified, from arguments to <code>--source</code>, or from the first non-option argument on the command line. The <code>-f</code> and <code>--source</code> options may be used multiple times on the command line. <i>Gawk</i> reads the program text as if all the <i>program-file</i>s and command line source texts had been concatenated together. This is useful for building libraries of AWK functions, without having to include them in each new AWK program that uses them. It also provides the ability to mix library functions with command line programs. </p>
 <p> In addition, lines beginning with <code>@include</code> may be used to include other source files into your program, making library use even easier. </p>
 <p> The environment variable <code>AWKPATH</code> specifies a search path to use when finding source files named with the <code>-f</code> option. If this variable does not exist, the default path is <code>&quot;.:/usr/local/share/awk&quot;</code>. (The actual directory may vary, depending upon how <i>gawk</i> was built and installed.) If a file name given to the <code>-f</code> option contains a ``/&#8216;&#8216; character, no path search is performed. </p>
-<p> <i>Gawk</i> executes <font SIZE="-1">AWK</font> programs in the following order. First, all variable assignments specified via the <code>-v</code> option are performed. Next, <i>gawk</i> compiles the program into an internal form. Then, <i>gawk</i> executes the code in the <code>BEGIN</code> block(s) (if any), and then proceeds to read each file named in the <code>ARGV</code> array (up to <code>ARGV[ARGC]</code>). If there are no files named on the command line, <i>gawk</i> reads the standard input. </p>
-<p> If a filename on the command line has the form <i>var</i><code>=</code><i>val</i> it is treated as a variable assignment. The variable <i>var</i> will be assigned the value <i>val</i>. (This happens after any <code>BEGIN</code> block(s) have been run.) Command line variable assignment is most useful for dynamically assigning values to the variables <font SIZE="-1">AWK</font> uses to control how input is broken into fields and records. It is also useful for controlling state if multiple passes are needed over a single data file. </p>
+<p> <i>Gawk</i> executes AWK programs in the following order. First, all variable assignments specified via the <code>-v</code> option are performed. Next, <i>gawk</i> compiles the program into an internal form. Then, <i>gawk</i> executes the code in the <code>BEGIN</code> block(s) (if any), and then proceeds to read each file named in the <code>ARGV</code> array (up to <code>ARGV[ARGC]</code>). If there are no files named on the command line, <i>gawk</i> reads the standard input. </p>
+<p> If a filename on the command line has the form <i>var</i><code>=</code><i>val</i> it is treated as a variable assignment. The variable <i>var</i> will be assigned the value <i>val</i>. (This happens after any <code>BEGIN</code> block(s) have been run.) Command line variable assignment is most useful for dynamically assigning values to the variables AWK uses to control how input is broken into fields and records. It is also useful for controlling state if multiple passes are needed over a single data file. </p>
 <p> If the value of a particular element of <code>ARGV</code> is empty (<code>&quot;&quot;</code>), <i>gawk</i> skips over it. </p>
 <p> For each input file, if a <code>BEGINFILE</code> rule exists, <i>gawk</i> executes the associated code before processing the contents of the file. Similarly, <i>gawk</i> executes the code associated with <code>ENDFILE</code> after processing the file. </p>
-<p> For each record in the input, <i>gawk</i> tests to see if it matches any <i>pattern</i> in the <font SIZE="-1">AWK</font> program. For each pattern that the record matches, the associated <i>action</i> is executed. The patterns are tested in the order they occur in the program. </p>
+<p> For each record in the input, <i>gawk</i> tests to see if it matches any <i>pattern</i> in the AWK program. For each pattern that the record matches, the associated <i>action</i> is executed. The patterns are tested in the order they occur in the program. </p>
 <p> Finally, after all the input is exhausted, <i>gawk</i> executes the code in the <code>END</code> block(s) (if any).  </p>
 <h3>Command Line Directories</h3>
 <p> According to POSIX, files named on the <i>awk</i> command line must be text files. The behavior is ``undefined&#8217;&#8216; if they are not. Most versions of <i>awk</i> treat a directory on the command line as a fatal error. </p>
 <p> Starting with version 4.0 of <i>gawk</i>, a directory on the command line produces a warning, but is otherwise skipped. If either of the <code>--posix</code> or <code>--traditional</code> options is given, then <i>gawk</i> reverts to treating directories on the command line as a fatal error.  </p>
 <h2>VARIABLES, RECORDS AND FIELDS</h2>
-<p> <font SIZE="-1">AWK</font> variables are dynamic; they come into existence when they are first used. Their values are either floating-point numbers or strings, or both, depending upon how they are used. <font SIZE="-1">AWK</font> also has one dimensional arrays; arrays with multiple dimensions may be simulated. Several pre-defined variables are set as a program runs; these are described as needed and summarized below.  </p>
+<p> AWK variables are dynamic; they come into existence when they are first used. Their values are either floating-point numbers or strings, or both, depending upon how they are used. AWK also has one dimensional arrays; arrays with multiple dimensions may be simulated. Several pre-defined variables are set as a program runs; these are described as needed and summarized below.  </p>
 <h3>Records</h3>
 <p> Normally, records are separated by newline characters. You can control how records are separated by assigning values to the built-in variable <code>RS</code>. If <code>RS</code> is any single character, that character separates records. Otherwise, <code>RS</code> is a regular expression. Text in the input that matches this regular expression separates the record. However, in compatibility mode, only the first character of its string value is used for separating records. If <code>RS</code> is set to the null string, then records are separated by blank lines. When <code>RS</code> is set to the null string, the newline character always acts as a field separator, in addition to whatever value <code>FS</code> may have.  </p>
 <h3>Fields</h3>
@@ -168,7 +168,7 @@ description: "gawk – pattern scanning and processing language"
 <p> Similarly, if the <code>FPAT</code> variable is set to a string representing a regular expression, each field is made up of text that matches that regular expression. In this case, the regular expression describes the fields themselves, instead of the text that separates the fields. Assigning a new value to <code>FS</code> or <code>FIELDWIDTHS</code> overrides the use of <code>FPAT</code>. </p>
 <p> Each field in the input record may be referenced by its position, <code>$1</code>, <code>$2</code>, and so on. <code>$0</code> is the whole record. Fields need not be referenced by constants: </p>
 <dl>
-<dd> <p> <code> n = 5 <br />
+<dd> <p> <code> n = 5 <br/>
  print $n </code> </p>
  </dd></dl>
 <p> prints the fifth field in the input record. </p>
@@ -216,10 +216,10 @@ description: "gawk – pattern scanning and processing language"
  </dd>
 <dt><code>IGNORECASE</code></dt>
 <dd> <p> Controls the case-sensitivity of all regular expression and string operations. If <code>IGNORECASE</code> has a non-zero value, then string comparisons and pattern matching in rules, field splitting with <code>FS</code> and <code>FPAT</code>, record separating with <code>RS</code>, regular expression matching with <code>~</code> and <code>!~</code>, and the <code>gensub()</code>, <code>gsub()</code>, <code>index()</code>, <code>match()</code>, <code>patsplit()</code>, <code>split()</code>, and <code>sub()</code> built-in functions all ignore case when doing regular expression operations. <code>NOTE</code>: Array subscripting is <i>not</i> affected. However, the <code>asort()</code> and <code>asorti()</code> functions are affected. </p>
-<p> Thus, if <code>IGNORECASE</code> is not equal to zero, <code>/aB/</code> matches all of the strings <code>&quot;ab&quot;</code>, <code>&quot;aB&quot;</code>, <code>&quot;Ab&quot;</code>, and <code>&quot;AB&quot;</code>. As with all <font SIZE="-1">AWK</font> variables, the initial value of <code>IGNORECASE</code> is zero, so all regular expression and string operations are normally case-sensitive. </p>
+<p> Thus, if <code>IGNORECASE</code> is not equal to zero, <code>/aB/</code> matches all of the strings <code>&quot;ab&quot;</code>, <code>&quot;aB&quot;</code>, <code>&quot;Ab&quot;</code>, and <code>&quot;AB&quot;</code>. As with all AWK variables, the initial value of <code>IGNORECASE</code> is zero, so all regular expression and string operations are normally case-sensitive. </p>
  </dd>
 <dt><code>LINT</code></dt>
-<dd> <p> Provides dynamic control of the <code>--lint</code> option from within an <font SIZE="-1">AWK</font> program. When true, <i>gawk</i> prints lint warnings. When false, it does not. When assigned the string value <code>&quot;fatal&quot;</code>, lint warnings become fatal errors, exactly like <code>--lint=fatal</code>. Any other true value just prints warnings. </p>
+<dd> <p> Provides dynamic control of the <code>--lint</code> option from within an AWK program. When true, <i>gawk</i> prints lint warnings. When false, it does not. When assigned the string value <code>&quot;fatal&quot;</code>, lint warnings become fatal errors, exactly like <code>--lint=fatal</code>. Any other true value just prints warnings. </p>
  </dd>
 <dt><code>NF</code></dt>
 <dd> <p> The number of fields in the current input record. </p>
@@ -237,7 +237,7 @@ description: "gawk – pattern scanning and processing language"
 <dd> <p> The output record separator, by default a newline. </p>
  </dd>
 <dt><code>PROCINFO</code></dt>
-<dd> <p> The elements of this array provide access to information about the running <font SIZE="-1">AWK</font> program. On some systems, there may be elements in the array, <code>&quot;group1&quot;</code> through <code>&quot;group</code><i>n</i><code>&quot;</code> for some <i>n</i>, which is the number of supplementary groups that the process has. Use the <code>in</code> operator to test for these elements. The following elements are guaranteed to be available: </p>
+<dd> <p> The elements of this array provide access to information about the running AWK program. On some systems, there may be elements in the array, <code>&quot;group1&quot;</code> through <code>&quot;group</code><i>n</i><code>&quot;</code> for some <i>n</i>, which is the number of supplementary groups that the process has. Use the <code>in</code> operator to test for these elements. The following elements are guaranteed to be available: </p>
  </dd>
 <dl>
 <dd>  </dd>
@@ -297,15 +297,15 @@ description: "gawk – pattern scanning and processing language"
 <dd> <p> The character used to separate multiple subscripts in array elements, by default <code>&quot;\034&quot;</code>. </p>
  </dd>
 <dt><code>TEXTDOMAIN</code></dt>
-<dd> <p> The text domain of the <font SIZE="-1">AWK</font> program; used to find the localized translations for the program&#8217;s strings. </p>
+<dd> <p> The text domain of the AWK program; used to find the localized translations for the program&#8217;s strings. </p>
  </dd></dl>
 <h3>Arrays</h3>
 <p> Arrays are subscripted with an expression between square brackets (<code>[</code> and <code>]</code>). If the expression is an expression list (<i>expr</i>, <i>expr</i> ...) then the array subscript is a string consisting of the concatenation of the (string) value of each expression, separated by the value of the <code>SUBSEP</code> variable. This facility is used to simulate multiply dimensioned arrays. For example: </p>
 <dl>
-<dd> <p> <code> i = &quot;A&quot;; j = &quot;B&quot;; k = &quot;C&quot; <br />
+<dd> <p> <code> i = &quot;A&quot;; j = &quot;B&quot;; k = &quot;C&quot; <br/>
  x[i, j, k] = &quot;hello, world\n&quot; </code> </p>
  </dd></dl>
-<p> assigns the string <code>&quot;hello, world\n&quot;</code> to the element of the array <code>x</code> which is indexed by the string <code>&quot;A\034B\034C&quot;</code>. All arrays in <font SIZE="-1">AWK</font> are associative, i.e. indexed by string values. </p>
+<p> assigns the string <code>&quot;hello, world\n&quot;</code> to the element of the array <code>x</code> which is indexed by the string <code>&quot;A\034B\034C&quot;</code>. All arrays in AWK are associative, i.e. indexed by string values. </p>
 <p> The special operator <code>in</code> may be used to test if an array has an index consisting of a particular value: </p>
 <dl>
 <dd> <pre><code>if (val in array)
@@ -325,7 +325,7 @@ a[2][2] = 7
 <h3>Variable Typing And Conversion</h3>
 <p> Variables and fields may be (floating point) numbers, or strings, or both. How the value of a variable is interpreted depends upon its context. If used in a numeric expression, it will be treated as a number; if used as a string it will be treated as a string. </p>
 <p> To force a variable to be treated as a number, add 0 to it; to force it to be treated as a string, concatenate it with the null string. </p>
-<p> When a string must be converted to a number, the conversion is accomplished using <i><a href="/docs/linux/man/3-strtod/">strtod</a></i>(3). A number is converted to a string by using the value of <code>CONVFMT</code> as a format string for <i><a href="/docs/linux/man/3-sprintf/">sprintf</a></i>(3), with the numeric value of the variable as the argument. However, even though all numbers in <font SIZE="-1">AWK</font> are floating-point, integral values are <i>always</i> converted as integers. Thus, given </p>
+<p> When a string must be converted to a number, the conversion is accomplished using <i><a href="/docs/linux/man/3-strtod/">strtod</a></i>(3). A number is converted to a string by using the value of <code>CONVFMT</code> as a format string for <i><a href="/docs/linux/man/3-sprintf/">sprintf</a></i>(3), with the numeric value of the variable as the argument. However, even though all numbers in AWK are floating-point, integral values are <i>always</i> converted as integers. Thus, given </p>
 <dl>
 <dd> <pre><code>CONVFMT = &quot;%2.2f&quot;
 a = 12
@@ -340,13 +340,13 @@ b = a &quot;&quot;
 <h3>Octal and Hexadecimal Constants</h3>
 <p> You may use C-style octal and hexadecimal constants in your AWK program source code. For example, the octal value <code>011</code> is equal to decimal <code>9</code>, and the hexadecimal value <code>0x11</code> is equal to decimal 17.  </p>
 <h3>String Constants</h3>
-<p> String constants in <font SIZE="-1">AWK</font> are sequences of characters enclosed between double quotes (like <code>&quot;value&quot;</code>). Within strings, certain <i>escape sequences</i> are recognized, as in C. These are: </p>
+<p> String constants in AWK are sequences of characters enclosed between double quotes (like <code>&quot;value&quot;</code>). Within strings, certain <i>escape sequences</i> are recognized, as in C. These are: </p>
 <dl>
 <dt><code>\\</code></dt>
 <dd> <p> A literal backslash. </p>
  </dd>
 <dt><code>\a</code></dt>
-<dd> <p> The ``alert&#8217;&#8216; character; usually the <font SIZE="-1">ASCII</font> <font SIZE="-1">BEL</font> character. </p>
+<dd> <p> The ``alert&#8217;&#8216; character; usually the ASCII BEL character. </p>
  </dd>
 <dt><code>\b</code></dt>
 <dd> <p> backspace. </p>
@@ -367,10 +367,10 @@ b = a &quot;&quot;
 <dd> <p> vertical tab. </p>
  </dd>
 <dt><code>\x</code><i>hex digits</i></dt>
-<dd> <p> The character represented by the string of hexadecimal digits following the <code>\x</code>. As in <font SIZE="-1">ANSI</font> C, all following hexadecimal digits are considered part of the escape sequence. (This feature should tell us something about language design by committee.) E.g., <code>&quot;\x1B&quot;</code> is the <font SIZE="-1">ASCII</font> <font SIZE="-1">ESC</font> (escape) character. </p>
+<dd> <p> The character represented by the string of hexadecimal digits following the <code>\x</code>. As in ANSI C, all following hexadecimal digits are considered part of the escape sequence. (This feature should tell us something about language design by committee.) E.g., <code>&quot;\x1B&quot;</code> is the ASCII ESC (escape) character. </p>
  </dd>
 <dt><code>\</code><i>ddd</i></dt>
-<dd> <p> The character represented by the 1-, 2-, or 3-digit sequence of octal digits. E.g., <code>&quot;\033&quot;</code> is the <font SIZE="-1">ASCII</font> <font SIZE="-1">ESC</font> (escape) character. </p>
+<dd> <p> The character represented by the 1-, 2-, or 3-digit sequence of octal digits. E.g., <code>&quot;\033&quot;</code> is the ASCII ESC (escape) character. </p>
  </dd>
 <dt><code>\</code><i>c</i></dt>
 <dd> <p> The literal character <i>c</i>. </p>
@@ -378,7 +378,7 @@ b = a &quot;&quot;
 <p> The escape sequences may also be used inside constant regular expressions (e.g., <code>/[&nbsp;<wbr>\t\f\n\r\v]/</code> matches whitespace characters). </p>
 <p> In compatibility mode, the characters represented by octal and hexadecimal escape sequences are treated literally when used in regular expression constants. Thus, <code>/a\52b/</code> is equivalent to <code>/a\*b/</code>.  </p>
 <h2>PATTERNS AND ACTIONS</h2>
-<p> <font SIZE="-1">AWK</font> is a line-oriented language. The pattern comes first, and then the action. Action statements are enclosed in <code>{</code> and <code>}</code>. Either the pattern may be missing, or the action may be missing, but, of course, not both. If the pattern is missing, the action is executed for every single record of input. A missing action is equivalent to </p>
+<p> AWK is a line-oriented language. The pattern comes first, and then the action. Action statements are enclosed in <code>{</code> and <code>}</code>. Either the pattern may be missing, or the action may be missing, but, of course, not both. If the pattern is missing, the action is executed for every single record of input. A missing action is equivalent to </p>
 <dl>
 <dd> <p> <code>{ print }</code> </p>
  </dd></dl>
@@ -386,7 +386,7 @@ b = a &quot;&quot;
 <p> Comments begin with the <code>#</code> character, and continue until the end of the line. Blank lines may be used to separate statements. Normally, a statement ends with a newline, however, this is not the case for lines ending in a comma, <code>{</code>, <code>?</code>, <code>:</code>, <code>&amp;&amp;</code>, or <code>||</code>. Lines ending in <code>do</code> or <code>else</code> also have their statements automatically continued on the following line. In other cases, a line can be continued by ending it with a ``\&#8216;&#8216;, in which case the newline is ignored. </p>
 <p> Multiple statements may be put on one line by separating them with a ``;&#8216;&#8216;. This applies to both the statements within the action part of a pattern-action pair (the usual case), and to the pattern-action statements themselves.  </p>
 <h3>Patterns</h3>
-<p> <font SIZE="-1">AWK</font> patterns may be one of the following: </p>
+<p> AWK patterns may be one of the following: </p>
 <dl>
 <dd> <pre><code>
  BEGIN 
@@ -489,8 +489,8 @@ b = a &quot;&quot;
 <dd> <p> matches the empty string at the end of a buffer. </p>
  </dd></dl>
 <p> The escape sequences that are valid in string constants (see below) are also valid in regular expressions. </p>
-<p> <i>Character classes</i> are a feature introduced in the <font SIZE="-1">POSIX</font> standard. A character class is a special notation for describing lists of characters that have a specific attribute, but where the actual characters themselves can vary from country to country and/or from character set to character set. For example, the notion of what is an alphabetic character differs in the USA and in France. </p>
-<p> A character class is only valid in a regular expression <i>inside</i> the brackets of a character list. Character classes consist of <code>[:</code>, a keyword denoting the class, and <code>:]</code>. The character classes defined by the <font SIZE="-1">POSIX</font> standard are: </p>
+<p> <i>Character classes</i> are a feature introduced in the POSIX standard. A character class is a special notation for describing lists of characters that have a specific attribute, but where the actual characters themselves can vary from country to country and/or from character set to character set. For example, the notion of what is an alphabetic character differs in the USA and in France. </p>
+<p> A character class is only valid in a regular expression <i>inside</i> the brackets of a character list. Character classes consist of <code>[:</code>, a keyword denoting the class, and <code>:]</code>. The character classes defined by the POSIX standard are: </p>
 <dl>
 <dt><code>[:alnum:]</code></dt>
 <dd> <p> Alphanumeric characters. </p>
@@ -528,8 +528,8 @@ b = a &quot;&quot;
 <dt><code>[:xdigit:]</code></dt>
 <dd> <p> Characters that are hexadecimal digits. </p>
  </dd></dl>
-<p> For example, before the <font SIZE="-1">POSIX</font> standard, to match alphanumeric characters, you would have had to write <code>/[A-Za-z0-9]/</code>. If your character set had other alphabetic characters in it, this would not match them, and if your character set collated differently from <font SIZE="-1">ASCII</font>, this might not even match the <font SIZE="-1">ASCII</font> alphanumeric characters. With the <font SIZE="-1">POSIX</font> character classes, you can write <code>/[[:alnum:]]/</code>, and this matches the alphabetic and numeric characters in your character set, no matter what it is. </p>
-<p> Two additional special sequences can appear in character lists. These apply to non-<font SIZE="-1">ASCII</font> character sets, which can have single symbols (called <i>collating elements</i>) that are represented with more than one character, as well as several characters that are equivalent for <i>collating</i>, or sorting, purposes. (E.g., in French, a plain ``e&#8217;&#8216; and a grave-accented ``e`&#8216;&#8216; are equivalent.) </p>
+<p> For example, before the POSIX standard, to match alphanumeric characters, you would have had to write <code>/[A-Za-z0-9]/</code>. If your character set had other alphabetic characters in it, this would not match them, and if your character set collated differently from ASCII, this might not even match the ASCII alphanumeric characters. With the POSIX character classes, you can write <code>/[[:alnum:]]/</code>, and this matches the alphabetic and numeric characters in your character set, no matter what it is. </p>
+<p> Two additional special sequences can appear in character lists. These apply to non-ASCII character sets, which can have single symbols (called <i>collating elements</i>) that are represented with more than one character, as well as several characters that are equivalent for <i>collating</i>, or sorting, purposes. (E.g., in French, a plain ``e&#8217;&#8216; and a grave-accented ``e`&#8216;&#8216; are equivalent.) </p>
 <dl>
 <dt>Collating Symbols</dt>
 <dd> <p> A collating symbol is a multi-character collating element enclosed in <code>[.</code> and <code>.]</code>. For example, if <code>ch</code> is a collating element, then <code>[[.ch.]]</code> is a regular expression that matches this collating element, while <code>[ch]</code> is a regular expression that matches either <code>c</code> or <code>h</code>. </p>
@@ -537,18 +537,18 @@ b = a &quot;&quot;
 <dt>Equivalence Classes</dt>
 <dd> <p> An equivalence class is a locale-specific name for a list of characters that are equivalent. The name is enclosed in <code>[=</code> and <code>=]</code>. For example, the name <code>e</code> might be used to represent all of ``e,&#8216;&#8216; ``e&#8217;,&#8216;&#8216; and ``e`.&#8216;&#8216; In this case, <code>[[=e=]]</code> is a regular expression that matches any of <code>e</code>, <code>e&#8217;</code>, or <code>e`</code>. </p>
  </dd></dl>
-<p> These features are very valuable in non-English speaking locales. The library functions that <i>gawk</i> uses for regular expression matching currently only recognize <font SIZE="-1">POSIX</font> character classes; they do not recognize collating symbols or equivalence classes. </p>
-<p> The <code>\y</code>, <code>\B</code>, <code>\&lt;</code>, <code>\&gt;</code>, <code>\s</code>, <code>\S</code>, <code>\w</code>, <code>\W</code>, <code>\`</code>, and <code>\&#8216;</code> operators are specific to <i>gawk</i>; they are extensions based on facilities in the <font SIZE="-1">GNU</font> regular expression libraries. </p>
+<p> These features are very valuable in non-English speaking locales. The library functions that <i>gawk</i> uses for regular expression matching currently only recognize POSIX character classes; they do not recognize collating symbols or equivalence classes. </p>
+<p> The <code>\y</code>, <code>\B</code>, <code>\&lt;</code>, <code>\&gt;</code>, <code>\s</code>, <code>\S</code>, <code>\w</code>, <code>\W</code>, <code>\`</code>, and <code>\&#8216;</code> operators are specific to <i>gawk</i>; they are extensions based on facilities in the GNU regular expression libraries. </p>
 <p> The various command line options control how <i>gawk</i> interprets characters in regular expressions. </p>
 <dl>
 <dt>No options</dt>
-<dd> <p> In the default case, <i>gawk</i> provide all the facilities of <font SIZE="-1">POSIX</font> regular expressions and the <font SIZE="-1">GNU</font> regular expression operators described above. </p>
+<dd> <p> In the default case, <i>gawk</i> provide all the facilities of POSIX regular expressions and the GNU regular expression operators described above. </p>
  </dd>
 <dt><code>--posix</code></dt>
-<dd> <p> Only <font SIZE="-1">POSIX</font> regular expressions are supported, the <font SIZE="-1">GNU</font> operators are not special. (E.g., <code>\w</code> matches a literal <code>w</code>). </p>
+<dd> <p> Only POSIX regular expressions are supported, the GNU operators are not special. (E.g., <code>\w</code> matches a literal <code>w</code>). </p>
  </dd>
 <dt><code>--traditional</code></dt>
-<dd> <p> Traditional Unix <i>awk</i> regular expressions are matched. The <font SIZE="-1">GNU</font> operators are not special, and interval expressions are not available. Characters described by octal and hexadecimal escape sequences are treated literally, even if they represent regular expression metacharacters. </p>
+<dd> <p> Traditional Unix <i>awk</i> regular expressions are matched. The GNU operators are not special, and interval expressions are not available. Characters described by octal and hexadecimal escape sequences are treated literally, even if they represent regular expression metacharacters. </p>
  </dd>
 <dt><code>--re-interval</code></dt>
 <dd> <p> Allow interval expressions in regular expressions, even if <code>--traditional</code> has been provided. </p>
@@ -556,7 +556,7 @@ b = a &quot;&quot;
 <h3>Actions</h3>
 <p> Action statements are enclosed in braces, <code>{</code> and <code>}</code>. Action statements consist of the usual assignment, conditional, and looping statements found in most languages. The operators, control statements, and input/output statements available are patterned after those in C.  </p>
 <h3>Operators</h3>
-<p> The operators in <font SIZE="-1">AWK</font>, in order of decreasing precedence, are </p>
+<p> The operators in AWK, in order of decreasing precedence, are </p>
 <dl>
 <dt><code>(</code>...<code>)</code></dt>
 <dd> <p> Grouping </p>
@@ -653,10 +653,10 @@ case  value  |  regex   :  statement
 <dd> <p> Run <i>command</i> as a co-process piping the output either into <code>$0</code> or <i>var</i>, as above. Co-processes are a <i>gawk</i> extension. (<i>command</i> can also be a socket. See the subsection <code>Special File Names</code>, below.) </p>
  </dd>
 <dt><code>next</code></dt>
-<dd> <p> Stop processing the current input record. The next input record is read and processing starts over with the first pattern in the <font SIZE="-1">AWK</font> program. If the end of the input data is reached, the <code>END</code> block(s), if any, are executed. </p>
+<dd> <p> Stop processing the current input record. The next input record is read and processing starts over with the first pattern in the AWK program. If the end of the input data is reached, the <code>END</code> block(s), if any, are executed. </p>
  </dd>
 <dt><code>nextfile</code></dt>
-<dd> <p> Stop processing the current input file. The next input record read comes from the next input file. <code>FILENAME</code> and <code>ARGIND</code> are updated, <code>FNR</code> is reset to 1, and processing starts over with the first pattern in the <font SIZE="-1">AWK</font> program. If the end of the input data is reached, the <code>END</code> block(s), if any, are executed. </p>
+<dd> <p> Stop processing the current input file. The next input record read comes from the next input file. <code>FILENAME</code> and <code>ARGIND</code> are updated, <code>FNR</code> is reset to 1, and processing starts over with the first pattern in the AWK program. If the end of the input data is reached, the <code>END</code> block(s), if any, are executed. </p>
  </dd>
 <dt><code>print</code></dt>
 <dd> <p> Print the current record. The output record is terminated with the value of the <code>ORS</code> variable. </p>
@@ -674,7 +674,7 @@ case  value  |  regex   :  statement
 <dd> <p> Format and print on <i>file</i>. </p>
  </dd>
 <dt><code>system(</code><i>cmd-line</i><code>)</code></dt>
-<dd> <p> Execute the command <i>cmd-line</i>, and return the exit status. (This may not be available on non-<font SIZE="-1">POSIX</font> systems.) </p>
+<dd> <p> Execute the command <i>cmd-line</i>, and return the exit status. (This may not be available on non-POSIX systems.) </p>
  </dd>
 <dt><code>fflush(</code>[<i>file</i>]<code>)</code></dt>
 <dd> <p> Flush any buffers associated with the open output file or pipe <i>file</i>. If <i>file</i> is missing or if it is the null string, then flush all open output files and pipes. </p>
@@ -691,9 +691,9 @@ case  value  |  regex   :  statement
 <dd> <p> Sends data to a co-process or socket. (See also the subsection <code>Special File Names</code>, below.) </p>
  </dd></dl>
 <p> The <code>getline</code> command returns 1 on success, 0 on end of file, and -1 on an error. Upon an error, <code>ERRNO</code> contains a string describing the problem. </p>
-<p> <code>NOTE</code>: Failure in opening a two-way socket will result in a non-fatal error being returned to the calling function. If using a pipe, co-process, or socket to <code>getline</code>, or from <code>print</code> or <code>printf</code> within a loop, you <i>must</i> use <code>close()</code> to create new instances of the command or socket. <font SIZE="-1">AWK</font> does not automatically close pipes, sockets, or co-processes when they return EOF.  </p>
+<p> <code>NOTE</code>: Failure in opening a two-way socket will result in a non-fatal error being returned to the calling function. If using a pipe, co-process, or socket to <code>getline</code>, or from <code>print</code> or <code>printf</code> within a loop, you <i>must</i> use <code>close()</code> to create new instances of the command or socket. AWK does not automatically close pipes, sockets, or co-processes when they return EOF.  </p>
 <i></i><h3>The printf Statement</h3>
-<p> The <font SIZE="-1">AWK</font> versions of the <code>printf</code> statement and <code>sprintf()</code> function (see below) accept the following conversion specification formats: </p>
+<p> The AWK versions of the <code>printf</code> statement and <code>sprintf()</code> function (see below) accept the following conversion specification formats: </p>
 <dl>
 <dt><code>%c</code></dt>
 <dd> <p> A single character. If the argument used for <code>%c</code> is numeric, it is treated as a character and printed. Otherwise, the argument is assumed to be a string, and the only first character of that string is printed. </p>
@@ -750,7 +750,7 @@ case  value  |  regex   :  statement
 <dt><code>.</code><i>prec</i></dt>
 <dd> <p> A number that specifies the precision to use when printing. For the <code>%e</code>, <code>%E</code>, <code>%f</code> and <code>%F</code>, formats, this specifies the number of digits you want printed to the right of the decimal point. For the <code>%g</code>, and <code>%G</code> formats, it specifies the maximum number of significant digits. For the <code>%d</code>, <code>%i</code>, <code>%o</code>, <code>%u</code>, <code>%x</code>, and <code>%X</code> formats, it specifies the minimum number of digits to print. For <code>%s</code>, it specifies the maximum number of characters from the string that should be printed. </p>
  </dd></dl>
-<p> The dynamic <i>width</i> and <i>prec</i> capabilities of the <font SIZE="-1">ANSI</font> C <code>printf()</code> routines are supported. A <code>*</code> in place of either the <code>width</code> or <code>prec</code> specifications causes their values to be taken from the argument list to <code>printf</code> or <code>sprintf()</code>. To use a positional specifier with a dynamic width or precision, supply the <i>count</i><code>$</code> after the <code>*</code> in the format string. For example, <code>&quot;%3$*2$.*1$s&quot;</code>.  </p>
+<p> The dynamic <i>width</i> and <i>prec</i> capabilities of the ANSI C <code>printf()</code> routines are supported. A <code>*</code> in place of either the <code>width</code> or <code>prec</code> specifications causes their values to be taken from the argument list to <code>printf</code> or <code>sprintf()</code>. To use a positional specifier with a dynamic width or precision, supply the <i>count</i><code>$</code> after the <code>*</code> in the format string. For example, <code>&quot;%3$*2$.*1$s&quot;</code>.  </p>
 <h3>Special File Names</h3>
 <p> When doing I/O redirection from either <code>print</code> or <code>printf</code> into a file, or via <code>getline</code> from a file, <i>gawk</i> recognizes certain special filenames internally. These filenames allow access to open file descriptors inherited from <i>gawk</i>&#8216;s parent process (usually the shell). These file names may also be used on the command line to name data files. The filenames are: </p>
 <dl>
@@ -789,7 +789,7 @@ case  value  |  regex   :  statement
 <dd> <p> <code>/inet6/udp/</code><i>lport</i><code>/</code><i>rhost</i><code>/</code><i>rport</i> Similar, but use UDP/IP instead of TCP/IP. </p>
  </dd></dl>
 <h3>Numeric Functions</h3>
-<p> <font SIZE="-1">AWK</font> has the following built-in arithmetic functions: </p>
+<p> AWK has the following built-in arithmetic functions: </p>
 <dl>
 <dt><code>atan2(</code><i>y</i><code>,</code><i> x</i><code>)</code></dt>
 <dd> <p> Return the arctangent of <i>y/x</i> in radians. </p>
@@ -868,16 +868,16 @@ case  value  |  regex   :  statement
  </dd></dl>
 <p> <i>Gawk</i> is multibyte aware. This means that <code>index()</code>, <code>length()</code>, <code>substr()</code> and <code>match()</code> all work in terms of characters, not bytes.  </p>
 <h3>Time Functions</h3>
-<p> Since one of the primary uses of <font SIZE="-1">AWK</font> programs is processing log files that contain time stamp information, <i>gawk</i> provides the following functions for obtaining time stamps and formatting them. </p>
+<p> Since one of the primary uses of AWK programs is processing log files that contain time stamp information, <i>gawk</i> provides the following functions for obtaining time stamps and formatting them. </p>
 <dl>
 <dt><code>mktime(</code><i>datespec</i><code>)</code></dt>
 <dd> <p> Turn <i>datespec</i> into a time stamp of the same form as returned by <code>systime()</code>, and return the result. The <i>datespec</i> is a string of the form <i>YYYY MM DD HH MM SS[ DST]</i>. The contents of the string are six or seven numbers representing respectively the full year including century, the month from 1 to 12, the day of the month from 1 to 31, the hour of the day from 0 to 23, the minute from 0 to 59, the second from 0 to 60, and an optional daylight saving flag. The values of these numbers need not be within the ranges specified; for example, an hour of -1 means 1 hour before midnight. The origin-zero Gregorian calendar is assumed, with year 0 preceding year 1 and year -1 preceding year 0. The time is assumed to be in the local timezone. If the daylight saving flag is positive, the time is assumed to be daylight saving time; if zero, the time is assumed to be standard time; and if negative (the default), <code>mktime()</code> attempts to determine whether daylight saving time is in effect for the specified time. If <i>datespec</i> does not contain enough elements or if the resulting time is out of range, <code>mktime()</code> returns -1. </p>
  </dd>
 <dt><code>strftime(</code>[<i>format </i>[<code>, </code><i>timestamp</i>[<code>, </code><i>utc-flag</i>]]]<code>)</code></dt>
-<dd> <p> Format <i>timestamp</i> according to the specification in <i>format</i>. If <i>utc-flag</i> is present and is non-zero or non-null, the result is in UTC, otherwise the result is in local time. The <i>timestamp</i> should be of the same form as returned by <code>systime()</code>. If <i>timestamp</i> is missing, the current time of day is used. If <i>format</i> is missing, a default format equivalent to the output of <i><a href="/docs/linux/man/1-date/">date</a></i>(1) is used. The default format is available in <code>PROCINFO[strftime]</code>. See the specification for the <code>strftime()</code> function in <font SIZE="-1">ANSI</font> C for the format conversions that are guaranteed to be available. </p>
+<dd> <p> Format <i>timestamp</i> according to the specification in <i>format</i>. If <i>utc-flag</i> is present and is non-zero or non-null, the result is in UTC, otherwise the result is in local time. The <i>timestamp</i> should be of the same form as returned by <code>systime()</code>. If <i>timestamp</i> is missing, the current time of day is used. If <i>format</i> is missing, a default format equivalent to the output of <i><a href="/docs/linux/man/1-date/">date</a></i>(1) is used. The default format is available in <code>PROCINFO[strftime]</code>. See the specification for the <code>strftime()</code> function in ANSI C for the format conversions that are guaranteed to be available. </p>
  </dd>
 <dt><code>systime()</code></dt>
-<dd> <p> Return the current time of day as the number of seconds since the Epoch (1970-01-01 00:00:00 UTC on <font SIZE="-1">POSIX</font> systems). </p>
+<dd> <p> Return the current time of day as the number of seconds since the Epoch (1970-01-01 00:00:00 UTC on POSIX systems). </p>
  </dd></dl>
 <h3>Bit Manipulations Functions</h3>
 <p> <i>Gawk</i> supplies the following bit manipulation functions. They work by converting double-precision floating point values to <code>uintmax_t</code> integers, doing the operation, and then converting the result back to floating point. The functions are: </p>
@@ -922,12 +922,12 @@ case  value  |  regex   :  statement
 <p> If you supply a value for <i>category</i>, it must be a string equal to one of the known locale categories described in <i>GAWK: Effective AWK Programming</i>. You must also supply a text domain. Use <code>TEXTDOMAIN</code> if you want to use the current domain. </p>
  </dd></dl>
 <h2>USER-DEFINED FUNCTIONS</h2>
-<p> Functions in <font SIZE="-1">AWK</font> are defined as follows: </p>
+<p> Functions in AWK are defined as follows: </p>
 <dl>
 <dd> <p> <code>function </code><i>name</i><code>(</code><i>parameter list</i><code>) { </code><i>statements </i><code>}</code> </p>
  </dd></dl>
 <p> Functions are executed when they are called from within expressions in either patterns or actions. Actual parameters supplied in the function call are used to instantiate the formal parameters declared in the function. Arrays are passed by reference, other variables are passed by value. </p>
-<p> Since functions were not originally part of the <font SIZE="-1">AWK</font> language, the provision for local variables is rather clumsy: They are declared as extra parameters in the parameter list. The convention is to separate local variables from real parameters by extra spaces in the parameter list. For example: </p>
+<p> Since functions were not originally part of the AWK language, the provision for local variables is rather clumsy: They are declared as extra parameters in the parameter list. The convention is to separate local variables from real parameters by extra spaces in the parameter list. For example: </p>
 <dl>
 <dd> <pre><code>function f(p, q, a, b) # a and b are local
 {
@@ -965,7 +965,7 @@ case  value  |  regex   :  statement
 <h2>SIGNALS</h2>
 <p> <i>pgawk</i> accepts two signals. <code>SIGUSR1</code> causes it to dump a profile and function call stack to the profile file, which is either <code>awkprof.out</code>, or whatever file was named with the <code>--profile</code> option. It then continues to run. <code>SIGHUP</code> causes <i>pgawk</i> to dump the profile and function call stack and then exit.  </p>
 <h2>INTERNATIONALIZATION</h2>
-<p> String constants are sequences of characters enclosed in double quotes. In non-English speaking environments, it is possible to mark strings in the <font SIZE="-1">AWK</font> program as requiring translation to the local natural language. Such strings are marked in the <font SIZE="-1">AWK</font> program with a leading underscore (``_&#8216;&#8216;). For example, </p>
+<p> String constants are sequences of characters enclosed in double quotes. In non-English speaking environments, it is possible to mark strings in the AWK program as requiring translation to the local natural language. Such strings are marked in the AWK program with a leading underscore (``_&#8216;&#8216;). For example, </p>
 <dl>
 <dd> <p> <code> gawk &#8216;BEGIN { print &quot;hello, world&quot; }&#8216; </p>
  </dd></dl>
@@ -974,7 +974,7 @@ case  value  |  regex   :  statement
 <dd> <p> <code> gawk &#8216;BEGIN { print _&quot;hello, world&quot; }&#8216; </p>
  </dd></dl>
 <p> </code> might print <code>bonjour, monde</code> in France. </p>
-<p> There are several steps involved in producing and running a localizable <font SIZE="-1">AWK</font> program. </p>
+<p> There are several steps involved in producing and running a localizable AWK program. </p>
 <dl>
 <dt>1.</dt>
 <dd> <p> Add a <code>BEGIN</code> action to assign a value to the <code>TEXTDOMAIN</code> variable to set the text domain to a name associated with your program: </p>
@@ -997,26 +997,26 @@ case  value  |  regex   :  statement
  </dd></dl>
 <p> The internationalization features are described in full detail in <i>GAWK: Effective AWK Programming</i>.  </p>
 <h2>POSIX COMPATIBILITY</h2>
-<p> A primary goal for <i>gawk</i> is compatibility with the <font SIZE="-1">POSIX</font> standard, as well as with the latest version of <font SIZE="-1">UNIX</font> <i>awk</i>. To this end, <i>gawk</i> incorporates the following user visible features which are not described in the <font SIZE="-1">AWK</font> book, but are part of the Bell Laboratories version of <i>awk</i>, and are in the <font SIZE="-1">POSIX</font> standard. </p>
-<p> The book indicates that command line variable assignment happens when <i>awk</i> would otherwise open the argument as a file, which is after the <code>BEGIN</code> block is executed. However, in earlier implementations, when such an assignment appeared before any file names, the assignment would happen <i>before</i> the <code>BEGIN</code> block was run. Applications came to depend on this ``feature.&#8216;&#8216; When <i>awk</i> was changed to match its documentation, the <code>-v</code> option for assigning variables before program execution was added to accommodate applications that depended upon the old behavior. (This feature was agreed upon by both the Bell Laboratories and the <font SIZE="-1">GNU</font> developers.) </p>
-<p> When processing arguments, <i>gawk</i> uses the special option ``--&#8216;&#8216; to signal the end of arguments. In compatibility mode, it warns about but otherwise ignores undefined options. In normal operation, such arguments are passed on to the <font SIZE="-1">AWK</font> program for it to process. </p>
-<p> The <font SIZE="-1">AWK</font> book does not define the return value of <code>srand()</code>. The <font SIZE="-1">POSIX</font> standard has it return the seed it was using, to allow keeping track of random number sequences. Therefore <code>srand()</code> in <i>gawk</i> also returns its current seed. </p>
-<p> Other new features are: The use of multiple <code>-f</code> options (from MKS <i>awk</i>); the <code>ENVIRON</code> array; the <code>\a</code>, and <code>\v</code> escape sequences (done originally in <i>gawk</i> and fed back into the Bell Laboratories version); the <code>tolower()</code> and <code>toupper()</code> built-in functions (from the Bell Laboratories version); and the <font SIZE="-1">ANSI</font> C conversion specifications in <code>printf</code> (done first in the Bell Laboratories version).  </p>
+<p> A primary goal for <i>gawk</i> is compatibility with the POSIX standard, as well as with the latest version of UNIX <i>awk</i>. To this end, <i>gawk</i> incorporates the following user visible features which are not described in the AWK book, but are part of the Bell Laboratories version of <i>awk</i>, and are in the POSIX standard. </p>
+<p> The book indicates that command line variable assignment happens when <i>awk</i> would otherwise open the argument as a file, which is after the <code>BEGIN</code> block is executed. However, in earlier implementations, when such an assignment appeared before any file names, the assignment would happen <i>before</i> the <code>BEGIN</code> block was run. Applications came to depend on this ``feature.&#8216;&#8216; When <i>awk</i> was changed to match its documentation, the <code>-v</code> option for assigning variables before program execution was added to accommodate applications that depended upon the old behavior. (This feature was agreed upon by both the Bell Laboratories and the GNU developers.) </p>
+<p> When processing arguments, <i>gawk</i> uses the special option ``--&#8216;&#8216; to signal the end of arguments. In compatibility mode, it warns about but otherwise ignores undefined options. In normal operation, such arguments are passed on to the AWK program for it to process. </p>
+<p> The AWK book does not define the return value of <code>srand()</code>. The POSIX standard has it return the seed it was using, to allow keeping track of random number sequences. Therefore <code>srand()</code> in <i>gawk</i> also returns its current seed. </p>
+<p> Other new features are: The use of multiple <code>-f</code> options (from MKS <i>awk</i>); the <code>ENVIRON</code> array; the <code>\a</code>, and <code>\v</code> escape sequences (done originally in <i>gawk</i> and fed back into the Bell Laboratories version); the <code>tolower()</code> and <code>toupper()</code> built-in functions (from the Bell Laboratories version); and the ANSI C conversion specifications in <code>printf</code> (done first in the Bell Laboratories version).  </p>
 <h2>HISTORICAL FEATURES</h2>
-<p> There is one feature of historical <font SIZE="-1">AWK</font> implementations that <i>gawk</i> supports: It is possible to call the <code>length()</code> built-in function not only with no argument, but even without parentheses! Thus, </p>
+<p> There is one feature of historical AWK implementations that <i>gawk</i> supports: It is possible to call the <code>length()</code> built-in function not only with no argument, but even without parentheses! Thus, </p>
 <dl>
-<dd> <p> <code> a = length <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code># Holy Algol 60, Batman!<br />
+<dd> <p> <code> a = length <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code># Holy Algol 60, Batman!<br/>
  </code> </p>
  </dd></dl>
 <p> is the same as either of </p>
 <dl>
-<dd> <p> <code> a = length() <br />
+<dd> <p> <code> a = length() <br/>
  a = length($0) </code> </p>
  </dd></dl>
 <p> Using this feature is poor practice, and <i>gawk</i> issues a warning about its use if <code>--lint</code> is specified on the command line.  </p>
 <h2>GNU EXTENSIONS</h2>
-<p> <i>Gawk</i> has a number of extensions to <font SIZE="-1">POSIX</font> <i>awk</i>. They are described in this section. All the extensions described here can be disabled by invoking <i>gawk</i> with the <code>--traditional</code> or <code>--posix</code> options. </p>
-<p> The following features of <i>gawk</i> are not available in <font SIZE="-1">POSIX</font> <i>awk</i>. </p>
+<p> <i>Gawk</i> has a number of extensions to POSIX <i>awk</i>. They are described in this section. All the extensions described here can be disabled by invoking <i>gawk</i> with the <code>--traditional</code> or <code>--posix</code> options. </p>
+<p> The following features of <i>gawk</i> are not available in POSIX <i>awk</i>. </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> No path search is performed for files named via the <code>-f</code> option. Therefore the <code>AWKPATH</code> environment variable is not special. </p>
@@ -1093,7 +1093,7 @@ case  value  |  regex   :  statement
 <dt>&bull;</dt>
 <dd> <p> Adding new built-in functions dynamically with the <code>extension()</code> function. </p>
  </dd></dl>
-<p> The <font SIZE="-1">AWK</font> book does not define the return value of the <code>close()</code> function. <i>Gawk</i>&#8216;s <code>close()</code> returns the value from <i><a href="/docs/linux/man/3-fclose/">fclose</a></i>(3), or <i><a href="/docs/linux/man/3-pclose/">pclose</a></i>(3), when closing an output file or pipe, respectively. It returns the process&#8217;s exit status when closing an input pipe. The return value is -1 if the named file, pipe or co-process was not opened with a redirection. </p>
+<p> The AWK book does not define the return value of the <code>close()</code> function. <i>Gawk</i>&#8216;s <code>close()</code> returns the value from <i><a href="/docs/linux/man/3-fclose/">fclose</a></i>(3), or <i><a href="/docs/linux/man/3-pclose/">pclose</a></i>(3), when closing an output file or pipe, respectively. It returns the process&#8217;s exit status when closing an input pipe. The return value is -1 if the named file, pipe or co-process was not opened with a redirection. </p>
 <p> When <i>gawk</i> is invoked with the <code>--traditional</code> option, if the <i>fs</i> argument to the <code>-F</code> option is ``t&#8217;&#8216;, then <code>FS</code> is set to the tab character. Note that typing <code>gawk -F\t ...</code> simply causes the shell to quote the ``t,&#8216;&#8216; and does not pass ``\t&#8217;&#8216; to the <code>-F</code> option. Since this is a rather ugly special case, it is not the default behavior. This behavior also does not occur if <code>--posix</code> has been specified. To really get a tab character as the field separator, it is best to use single quotes: <code>gawk -F&#8217;\t&#8217; ...</code>.  </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The <code>AWKPATH</code> environment variable can be used to provide a list of directories that <i>gawk</i> searches when looking for files named via the <code>-f</code> and <code>--file</code> options. </p>
@@ -1107,8 +1107,8 @@ case  value  |  regex   :  statement
 <h2>VERSION INFORMATION</h2>
 <p> This man page documents <i>gawk</i>, version 4.0.  </p>
 <h2>AUTHORS</h2>
-<p> The original version of <font SIZE="-1">UNIX</font> <i>awk</i> was designed and implemented by Alfred Aho, Peter Weinberger, and Brian Kernighan of Bell Laboratories. Brian Kernighan continues to maintain and enhance it. </p>
-<p> Paul Rubin and Jay Fenlason, of the Free Software Foundation, wrote <i>gawk</i>, to be compatible with the original version of <i>awk</i> distributed in Seventh Edition <font SIZE="-1">UNIX</font>. John Woods contributed a number of bug fixes. David Trueman, with contributions from Arnold Robbins, made <i>gawk</i> compatible with the new version of <font SIZE="-1">UNIX</font> <i>awk</i>. Arnold Robbins is the current maintainer. </p>
+<p> The original version of UNIX <i>awk</i> was designed and implemented by Alfred Aho, Peter Weinberger, and Brian Kernighan of Bell Laboratories. Brian Kernighan continues to maintain and enhance it. </p>
+<p> Paul Rubin and Jay Fenlason, of the Free Software Foundation, wrote <i>gawk</i>, to be compatible with the original version of <i>awk</i> distributed in Seventh Edition UNIX. John Woods contributed a number of bug fixes. David Trueman, with contributions from Arnold Robbins, made <i>gawk</i> compatible with the new version of UNIX <i>awk</i>. Arnold Robbins is the current maintainer. </p>
 <p> The initial DOS port was done by Conrad Kwok and Scott Garfinkle. Scott Deifik maintains the port to MS-DOS using DJGPP. Eli Zaretskii maintains the port to MS-Windows using MinGW. Pat Rankin did the port to VMS, and Michal Jaegermann did the port to the Atari ST. The port to OS/2 was done by Kai Uwe Rommel, with contributions and help from Darrel Hankerson. Andreas Buening now maintains the OS/2 port. The late Fred Fish supplied support for the Amiga, and Martin Brown provided the BeOS port. Stephen Davies provided the original Tandem port, and Matthew Woehlke provided changes for Tandem&#8217;s POSIX-compliant systems. Dave Pitts provided the port to z/OS. </p>
 <p> See the <i>README</i> file in the <i>gawk</i> distribution for up-to-date information about maintainers and which ports are currently supported.  </p>
 <h2>BUG REPORTS</h2>

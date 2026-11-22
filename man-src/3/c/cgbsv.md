@@ -11,7 +11,7 @@ description: "cgbsv.f –"
 <p> cgbsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgbsv</code> (N, KL, KU, NRHS, AB, LDAB, IPIV, B, LDB, INFO)<br />
+<p> subroutine <code>cgbsv</code> (N, KL, KU, NRHS, AB, LDAB, IPIV, B, LDB, INFO)<br/>
  <i></i><code> CGBSV computes the solution to system of linear equations A * X = B for GB matrices</code> (simple driver)</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgbsv (integerN, integerKL, integerKU, integerNRHS, complex, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

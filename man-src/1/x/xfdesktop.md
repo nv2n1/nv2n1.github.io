@@ -10,7 +10,7 @@ description: "xfdesktop – The Xfce 4 Desktop Environment’s desktop manager"
 
 <p> xfdesktop &#8211; The Xfce 4 Desktop Environment&#8217;s desktop manager</p>
 <h2>SYNOPSIS</h2>
-<p> <code>xfdesktop</code><br />
+<p> <code>xfdesktop</code><br/>
  <code>xfdesktop</code> <i>[options]</i> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>xfdesktop</code> manages the desktop itself in the Xfce 4 Desktop Environment. This includes drawing the desktop backdrop and providing a right-click applications menu and middle-click window list menu, as well as drawing icons on the desktop. Only one instance of xfdesktop can be running at a time, and should be started by running <code>xfdesktop</code> without any arguments. </p>
@@ -62,8 +62,8 @@ description: "xfdesktop – The Xfce 4 Desktop Environment’s desktop manager"
 <h2>FILES</h2>
 <p> <code>xfdesktop</code> searches for a menu description file in <i>$XDG_CONFIG_DIRS/menus/xfce-applications.menu</i>. <code>xfdesktop</code> can also use a user-customized menu in <i>$XDG_CONFIG_HOME/menus/</i>. </p>
 <h2>BUGS</h2>
-<p> Please report any bugs to <i><a rel="nofollow" href="https://bugzilla.xfce.org/">https://bugzilla.xfce.org/</a></i>.<br />
- Development discussion should be conducted on the <i>xfce4-dev [at] xfce.org</i> mailing list.<br />
+<p> Please report any bugs to <i><a rel="nofollow" href="https://bugzilla.xfce.org/">https://bugzilla.xfce.org/</a></i>.<br/>
+ Development discussion should be conducted on the <i>xfce4-dev [at] xfce.org</i> mailing list.<br/>
  Usage-related questions should be directed to the <i>xfce [at] xfce.org</i> mailing list. </p>
 <h2>HOMEPAGE</h2>
 <p> <i><a rel="nofollow" href="https://xfce.org/">https://xfce.org/</a></i> </p>

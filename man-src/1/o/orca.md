@@ -59,9 +59,9 @@ description: "orca – a scriptable screen reader"
 <p> <code>Insert+B and Insert+Shift+B</code> move between the given bookmarks for the given application or page. </p>
 <p> <code>Alt+Insert+B</code> save the defined bookmarks for the current application or page. </p>
 <p> <code>Miscellaneous functions</code> </p>
-<p> <code>Numpad+Plus</code><br />
+<p> <code>Numpad+Plus</code><br/>
 &nbsp;&#8216;say all&#8217;&nbsp;command;&nbsp;reads from the current position of the caret to the end of the document. </p>
-<p> <code>Numpad+Enter</code><br />
+<p> <code>Numpad+Enter</code><br/>
 &nbsp;&#8216;Where am I&#8217;&nbsp;command;&nbsp;speaks information such as the title of the current application window, as well as the name of the control that currently has focus. </p>
 <p> <code>Insert+H</code> enter into orca&#8217;s &#8216;learn mode&#8217;; press Escape to exit. </p>
 <p> <code>Insert+Shift+Backslash</code> toggle live regions monitoring on and off. </p>
@@ -90,8 +90,8 @@ description: "orca – a scriptable screen reader"
 <p> <code>Caps_Lock+Band Caps_Lock+Shift+B</code> move between the given bookmarks for the given application or page. </p>
 <p> <code>Alt+Caps_Lock+B</code> save the defined bookmarks for the current application or page. </p>
 <p> <code>Miscellaneous functions</code> </p>
-<p> <code>Caps_Lock+Semicolon</code><br />
-&nbsp;&#8216;Say all&#8217;&nbsp;command;&nbsp;reads from the current position of the caret to the end of the document. <code>Caps_Lock+Enter</code><br />
+<p> <code>Caps_Lock+Semicolon</code><br/>
+&nbsp;&#8216;Say all&#8217;&nbsp;command;&nbsp;reads from the current position of the caret to the end of the document. <code>Caps_Lock+Enter</code><br/>
 &nbsp;&#8216;Where am I&#8217;&nbsp;command;&nbsp;speaks information such as the title of the current application window, as well as the name of the control that currently has focus. </p>
 <p> <code>Caps_Lock+H</code> enter learn mode (press Escape to exit). </p>
 <p> <code>Caps_Lock+Shift+Backslash</code> toggle live regions monitoring on and off. </p>

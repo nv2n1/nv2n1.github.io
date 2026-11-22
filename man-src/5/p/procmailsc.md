@@ -24,11 +24,11 @@ w * Sum x = w * -------
  k=1 x - 1
 </dd></dl></pre>
 <p>It represents the total added score for this condition if <code>n</code> matches are found. </p>
-<p> Note that the following case distinctions can be made:<br />
- Tp 8 x=0 Only the first match will contribute w to the score. Any subsequent matches are ignored.<br />
- Tp x=1 Every match will contribute the same w to the score. The score grows linearly with the number of matches found.<br />
- Tp 0&lt;x&lt;1 Every match will contribute less to the score than the previous one. The score will asymptotically approach a certain value (see the <code>NOTES</code> section below).<br />
- Tp 1&lt;x Every match will contribute more to the score than the previous one. The score will grow exponentially.<br />
+<p> Note that the following case distinctions can be made:<br/>
+ Tp 8 x=0 Only the first match will contribute w to the score. Any subsequent matches are ignored.<br/>
+ Tp x=1 Every match will contribute the same w to the score. The score grows linearly with the number of matches found.<br/>
+ Tp 0&lt;x&lt;1 Every match will contribute less to the score than the previous one. The score will asymptotically approach a certain value (see the <code>NOTES</code> section below).<br/>
+ Tp 1&lt;x Every match will contribute more to the score than the previous one. The score will grow exponentially.<br/>
  Tp x&lt;0 Can be utilised to favour odd or even number of matches. </p>
 <p> If the regular expression is negated (i.e., matches if it isn&#8217;t found), then <code>n</code> obviously can either be zero or one.</p>
 <h2>Weighted program conditions</h2>
@@ -93,8 +93,8 @@ priority_folder
 </dd></dl></pre>
 <p>For further examples you should look in the <code><a href="/docs/linux/man/5-procmailex/">procmailex</a></code>(5) man page.</p>
 <h2>Caveats</h2>
-<p>Because this speeds up the search by an order of magnitude, the procmail internal egrep will always search for the leftmost <i>shortest</i> match, unless it is determining what to assign to <code>MATCH</code>, in which case it searches the leftmost <i>longest</i> match. E.g. for the leftmost <i>shortest</i> match, by itself, the regular expression:<br />
- Tp <code>.*</code> will always match a zero length string at the same spot.<br />
+<p>Because this speeds up the search by an order of magnitude, the procmail internal egrep will always search for the leftmost <i>shortest</i> match, unless it is determining what to assign to <code>MATCH</code>, in which case it searches the leftmost <i>longest</i> match. E.g. for the leftmost <i>shortest</i> match, by itself, the regular expression:<br/>
+ Tp <code>.*</code> will always match a zero length string at the same spot.<br/>
  Tp <code>.+</code> will always match one character (except newlines of course).</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1), <code><a href="/docs/linux/man/5-procmailrc/">procmailrc</a></code>(5), <code><a href="/docs/linux/man/5-procmailex/">procmailex</a></code>(5), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1), <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1),</p>

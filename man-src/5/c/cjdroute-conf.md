@@ -29,12 +29,12 @@ description: "cjdroute.conf – Cjdns configuration file"
 <p> <i>&quot;user&quot;:</i> &quot;&#8230;&quot;</p>
 <dl>
 <dd>An optional human-readable string that identifies what password a peer is using on the admin interface. If omitted, the password will be identified by its position within the array (starting from 0)</dd></dl>
-<p> Example:<br />
- &quot;authorizedPasswords&quot;:<br />
- [<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;password&quot;:&nbsp;<wbr>&quot;AnExamplePassword&quot;,&nbsp;<wbr>&quot;user&quot;:&nbsp;<wbr>&quot;Bob&quot;&nbsp;<wbr>},<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;password&quot;:&nbsp;<wbr>&quot;YetAnotherExample&quot;,&nbsp;<wbr>&quot;user&quot;:&nbsp;<wbr>&quot;Alice&quot;&nbsp;<wbr>},<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;password&quot;:&nbsp;<wbr>&quot;j3fus4r3gkhv80xdz1yqc0qvn1p91hr&quot;,&nbsp;<wbr>&quot;user&quot;:&nbsp;<wbr>&quot;Eve&quot;&nbsp;<wbr>}<br />
+<p> Example:<br/>
+ &quot;authorizedPasswords&quot;:<br/>
+ [<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;password&quot;:&nbsp;<wbr>&quot;AnExamplePassword&quot;,&nbsp;<wbr>&quot;user&quot;:&nbsp;<wbr>&quot;Bob&quot;&nbsp;<wbr>},<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;password&quot;:&nbsp;<wbr>&quot;YetAnotherExample&quot;,&nbsp;<wbr>&quot;user&quot;:&nbsp;<wbr>&quot;Alice&quot;&nbsp;<wbr>},<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;password&quot;:&nbsp;<wbr>&quot;j3fus4r3gkhv80xdz1yqc0qvn1p91hr&quot;,&nbsp;<wbr>&quot;user&quot;:&nbsp;<wbr>&quot;Eve&quot;&nbsp;<wbr>}<br/>
  ]</dl>
 <p> <code>&quot;admin&quot;:</code> {&#8230;}</p>
 <dl>
@@ -49,26 +49,26 @@ description: "cjdroute.conf – Cjdns configuration file"
 <dl>
 <dd>This option is only found in ETHInterface and defines whether auto-connecting beacons should be sent or listened to. This is useful for a zeroconf local network. </dd>
 <dl>
-<dd>0 &#8212; Disabled.<br />
- 1 &#8212; Accept incoming beacons and try connecting to the sender.<br />
+<dd>0 &#8212; Disabled.<br/>
+ 1 &#8212; Accept incoming beacons and try connecting to the sender.<br/>
  2 &#8212; Accept incoming beacons and broadcast beacons to the local network.</dd></dl>
 </dl>
 <p> <i>&quot;connectTo&quot;:</i> {&#8230;}</p>
 <dl>
 <dd>Defines which nodes cjdns should connect to with the specified interface. Multiple nodes may be placed in a single &quot;connectTo&quot; as long as each are seperated by commas. If a node happens to be offline or become offline during runtime, cjdns will attempt to reconnect at regular intervals. The one difference in this option between UDPInterface and ETHInterface is that UDPInterface connects to an &quot;IP:PORT&quot; while ETHInterface connects to a MAC address. </dd>
-<p> UDPInterface Example:<br />
- &quot;connectTo&quot;:<br />
+<p> UDPInterface Example:<br/>
+ &quot;connectTo&quot;:<br/>
  {</p>
 <dl>
-<dd>&quot;1.2.3.4:54321&quot;:<br />
- {<br />
-&nbsp;<wbr>&quot;password&quot;:&nbsp;<wbr>&quot;password From Your Peer&#8217;s authorizedPasswords&quot;,<br />
-&nbsp;<wbr>&quot;publicKey&quot;:&nbsp;<wbr>&quot;Your Peer&#8217;s publicKey.k&quot;<br />
- },<br />
- &quot;5.6.7.8:46321&quot;:<br />
- {<br />
-&nbsp;<wbr>&quot;password&quot;:&nbsp;<wbr>&quot;Correct Horse Battery Staple&quot;,<br />
-&nbsp;<wbr>&quot;publicKey&quot;:&nbsp;<wbr>&quot;Other Peer&#8217;s publicKey.k&quot;<br />
+<dd>&quot;1.2.3.4:54321&quot;:<br/>
+ {<br/>
+&nbsp;<wbr>&quot;password&quot;:&nbsp;<wbr>&quot;password From Your Peer&#8217;s authorizedPasswords&quot;,<br/>
+&nbsp;<wbr>&quot;publicKey&quot;:&nbsp;<wbr>&quot;Your Peer&#8217;s publicKey.k&quot;<br/>
+ },<br/>
+ &quot;5.6.7.8:46321&quot;:<br/>
+ {<br/>
+&nbsp;<wbr>&quot;password&quot;:&nbsp;<wbr>&quot;Correct Horse Battery Staple&quot;,<br/>
+&nbsp;<wbr>&quot;publicKey&quot;:&nbsp;<wbr>&quot;Other Peer&#8217;s publicKey.k&quot;<br/>
  }</dd></dl>
 <p> }</dl>
 </dl>
@@ -86,30 +86,30 @@ description: "cjdroute.conf – Cjdns configuration file"
 <dl>
 <dd>Nodes allowed to connect to us, specified by their public key, and what IP address(es) to give them. It is fine to only specify one address. </dd>
 <p> Example: </p>
-<p> &quot;allowedConnections&quot;:<br />
+<p> &quot;allowedConnections&quot;:<br/>
  [ </p>
-<p>&nbsp;<wbr>{<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;publicKey&quot;:&nbsp;<wbr>&quot;f64hfl7c4uxt6krmhPutTheRealAddressOfANodeHere7kfm5m0.k&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;ip4Address&quot;:&nbsp;<wbr>&quot;192.168.1.24&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;ip4Prefix&quot;: 24,<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;ip6Address&quot;:&nbsp;<wbr>&quot;2001:123:ab::10&quot;,<br />
+<p>&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;publicKey&quot;:&nbsp;<wbr>&quot;f64hfl7c4uxt6krmhPutTheRealAddressOfANodeHere7kfm5m0.k&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;ip4Address&quot;:&nbsp;<wbr>&quot;192.168.1.24&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;ip4Prefix&quot;: 24,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;ip6Address&quot;:&nbsp;<wbr>&quot;2001:123:ab::10&quot;,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;ip6Prefix&quot;: 0 </p>
 <p>&nbsp;<wbr>}, </p>
-<p>&nbsp;<wbr>{<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;publicKey&quot;:&nbsp;<wbr>&quot;ydq8csdk8p8ThisIsJustAnExampleAddresstxuyqdf27hvn2z0.k&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;ip4Address&quot;:&nbsp;<wbr>&quot;192.168.1.25&quot;,<br />
+<p>&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;publicKey&quot;:&nbsp;<wbr>&quot;ydq8csdk8p8ThisIsJustAnExampleAddresstxuyqdf27hvn2z0.k&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;ip4Address&quot;:&nbsp;<wbr>&quot;192.168.1.25&quot;,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;ip4Prefix&quot;: 24 </p>
-<p>&nbsp;<wbr>}<br />
+<p>&nbsp;<wbr>}<br/>
  ]</dl>
 <p> <i>&quot;outgoingConnections&quot;:</i> [&#8230;]</p>
 <dl>
 <dd>An array of nodes to connect and ask for IP addresses. </dd>
 <p> Example: </p>
-<p> &quot;outgoingConnections&quot;:<br />
- [<br />
-&nbsp;<wbr>&quot;6743gf5tw80ExampleExampleExampleExamplevlyb23zfnuzv0.k&quot;,<br />
-&nbsp;<wbr>&quot;pw9tfmr8pcrExampleExampleExampleExample8rhg1pgwpwf80.k&quot;,<br />
-&nbsp;<wbr>&quot;g91lxyxhq0kExampleExampleExampleExample6t0mknuhw75l0.k&quot;<br />
+<p> &quot;outgoingConnections&quot;:<br/>
+ [<br/>
+&nbsp;<wbr>&quot;6743gf5tw80ExampleExampleExampleExamplevlyb23zfnuzv0.k&quot;,<br/>
+&nbsp;<wbr>&quot;pw9tfmr8pcrExampleExampleExampleExample8rhg1pgwpwf80.k&quot;,<br/>
+&nbsp;<wbr>&quot;g91lxyxhq0kExampleExampleExampleExample6t0mknuhw75l0.k&quot;<br/>
  ] </p>
 </dl>
 </dl>
@@ -124,7 +124,7 @@ description: "cjdroute.conf – Cjdns configuration file"
 <p> <i>&quot;exemptAngel&quot;:</i> Integer</p>
 <dl>
 <dd>Whether or not to exempt the Angel process from the user change. The Angel is a small isolated piece of code which exists outside of the core&#8217;s strict sandbox but does not handle network traffic. This option must be enabled for ipTunnel to automatically set IP addresses for the TUN device. </dd>
-<p> 0 &#8212; False<br />
+<p> 0 &#8212; False<br/>
  1 &#8212; True</dl>
 </dl>
 <p> <code>&quot;logging&quot;:</code> {&#8230;}</p>

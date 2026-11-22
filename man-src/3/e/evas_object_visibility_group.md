@@ -9,11 +9,11 @@ description: "Generic Object Visibility Functions – Functions that deal with t
 
 <p>Generic Object Visibility Functions &#8211; Functions that deal with the visibility of evas objects. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_object_show</code> (<code>Evas_Object</code> *obj)<br />
- <i>Makes the given evas object visible. </i><br />
- EAPI void <code>evas_object_hide</code> (<code>Evas_Object</code> *obj)<br />
- <i>Makes the given evas object invisible. </i><br />
- EAPI Evas_Bool <code>evas_object_visible_get</code> (const <code>Evas_Object</code> *obj)<br />
+<p>EAPI void <code>evas_object_show</code> (<code>Evas_Object</code> *obj)<br/>
+ <i>Makes the given evas object visible. </i><br/>
+ EAPI void <code>evas_object_hide</code> (<code>Evas_Object</code> *obj)<br/>
+ <i>Makes the given evas object invisible. </i><br/>
+ EAPI Evas_Bool <code>evas_object_visible_get</code> (const <code>Evas_Object</code> *obj)<br/>
  <i>Retrieves whether or not the given evas object is visible. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that deal with the visibility of evas objects.</p>

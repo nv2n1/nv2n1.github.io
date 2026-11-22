@@ -34,10 +34,10 @@ description: "Performance Marker Plugin –"
 <p> This callback is called when a get, put, or third party transfer is started. Note that it is possible for this callback to be made multiple times before ever receiving the complete callback&#8230; this would be the case if a transfer was restarted. The &#8216;restart&#8217; will indicate whether or not we have been restarted. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>handle</i> this the client handle that this transfer will be occurring on<br />
- <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br />
- <i>source_url</i> source of the transfer (GLOBUS_NULL if &#8216;put&#8217;)<br />
- <i>dest_url</i> dest of the transfer (GLOBUS_NULL if &#8216;get&#8217;)<br />
+<dd><i>handle</i> this the client handle that this transfer will be occurring on<br/>
+ <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br/>
+ <i>source_url</i> source of the transfer (GLOBUS_NULL if &#8216;put&#8217;)<br/>
+ <i>dest_url</i> dest of the transfer (GLOBUS_NULL if &#8216;get&#8217;)<br/>
  <i>restart</i> boolean indicating whether this callback is result of a restart</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -51,8 +51,8 @@ description: "Performance Marker Plugin –"
 <p> This callback will be called upon transfer completion (successful or otherwise) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>handle</i> this the client handle that this transfer was occurring on<br />
- <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br />
+<dd><i>handle</i> this the client handle that this transfer was occurring on<br/>
+ <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br/>
  <i>success</i> indicates whether this transfer completed successfully or was interrupted (by error or abort)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -66,11 +66,11 @@ description: "Performance Marker Plugin –"
 <p> This callback is called for all types of transfers except a third party in which extended block mode is not used (because 112 perf markers wont be sent in that case). For extended mode &#8216;put&#8217; and &#8216;3pt&#8217;, actual 112 perf markers will be used and the frequency of this callback is dependent upon the frequency those messages are received. For &#8216;put&#8217; in which extended block mode is not enabled and &#8216;get&#8217; transfers, the information in this callback will be determined locally and the frequency of this callback will be at a maximum of one per second. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>handle</i> this the client handle that this transfer is occurring on<br />
- <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br />
- <i>time_stamp</i> the timestamp at which the number of bytes is valid<br />
- <i>stripe_ndx</i> the stripe index this data refers to<br />
- <i>num_stripes</i> total number of stripes involved in this transfer<br />
+<dd><i>handle</i> this the client handle that this transfer is occurring on<br/>
+ <i>user_specific</i> this is user specific data either created by the copy method, or, if a copy method was not specified, the value passed to init<br/>
+ <i>time_stamp</i> the timestamp at which the number of bytes is valid<br/>
+ <i>stripe_ndx</i> the stripe index this data refers to<br/>
+ <i>num_stripes</i> total number of stripes involved in this transfer<br/>
  <i>nbytes</i> the total bytes transferred on this stripe</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -127,7 +127,7 @@ description: "Performance Marker Plugin –"
 <p>Retrieve user specific pointer </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i> plugin previously initialized with init (above)<br />
+<dd><i>plugin</i> plugin previously initialized with init (above)<br/>
  <i>user_specific</i> pointer to storage for user_specific pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -145,10 +145,10 @@ description: "Performance Marker Plugin –"
 <p> This function initializes a performance marker plugin. Any params except for the plugin may be GLOBUS_NULL </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i> a pointer to a plugin type to be initialized<br />
- <i>user_specific</i> a pointer to some user specific data that will be provided to all callbacks<br />
- <i>begin_cb</i> the callback to be called upon the start of a transfer<br />
- <i>marker_cb</i> the callback to be called with every performance marker received<br />
+<dd><i>plugin</i> a pointer to a plugin type to be initialized<br/>
+ <i>user_specific</i> a pointer to some user specific data that will be provided to all callbacks<br/>
+ <i>begin_cb</i> the callback to be called upon the start of a transfer<br/>
+ <i>marker_cb</i> the callback to be called with every performance marker received<br/>
  <i>complete_cb</i> the callback to be called to indicate transfer completion</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -166,8 +166,8 @@ description: "Performance Marker Plugin –"
 <p> Use this to have the plugin make callbacks any time a copy of this plugin is being made. This will allow the user to keep state for different handles. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i> plugin previously initialized with init (above)<br />
- <i>copy_cb</i> func to be called when a copy is needed<br />
+<dd><i>plugin</i> plugin previously initialized with init (above)<br/>
+ <i>copy_cb</i> func to be called when a copy is needed<br/>
  <i>destroy_cb</i> func to be called when a copy is to be destroyed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

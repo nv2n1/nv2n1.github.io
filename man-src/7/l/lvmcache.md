@@ -129,18 +129,18 @@ $ lvconvert --type cache --cachepool fast --poolmetadata fastmeta vg/main</pre>
 <p> A second cache mode is &quot;writeback&quot;. Writeback delays writing data blocks from the cache back to the origin LV. This mode will increase performance, but the loss of a cache device can result in lost data. </p>
 <p> With the &#8211;cachemode option, the cache mode can be set when caching is started, or changed on an LV that is already cached. The current cache mode can be displayed with the cache_mode reporting option: </p>
 <p> <code>lvs -o+cache_mode VG/LV</code> </p>
-<p> <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>allocation/cache_mode</code><br />
+<p> <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>allocation/cache_mode</code><br/>
  defines the default cache mode. </p>
 <pre>$ lvconvert --type cache --cachevol fast \
  --cachemode writethrough vg/main</pre>
 <h3>dm-cache chunk size</h3>
 <p>The size of data blocks managed by dm-cache can be specified with the &#8211;chunksize option when caching is started. The default unit is KiB. The value must be a multiple of 32KiB between 32KiB and 1GiB. </p>
 <p> Using a chunk size that is too large can result in wasteful use of the cache, in which small reads and writes cause large sections of an LV to be stored in the cache. However, choosing a chunk size that is too small can result in more overhead trying to manage the numerous chunks that become mapped into the cache. Overhead can include both excessive CPU time searching for chunks, and excessive memory tracking chunks. </p>
-<p> Command to display the chunk size:<br />
+<p> Command to display the chunk size:<br/>
  <code>lvs -o+chunksize VG/LV</code> </p>
-<p> <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>cache_pool_chunk_size</code><br />
+<p> <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>cache_pool_chunk_size</code><br/>
  controls the default chunk size. </p>
-<p> The default value is shown by:<br />
+<p> The default value is shown by:<br/>
  <code>lvmconfig &#8211;type default allocation/cache_pool_chunk_size</code></p>
 <h3>dm-cache cache policy</h3>
 <p>The dm-cache subsystem has additional per-LV parameters: the cache policy to use, and possibly tunable parameters for the cache policy. Three policies are currently available: &quot;smq&quot; is the default policy, &quot;mq&quot; is an older implementation, and &quot;cleaner&quot; is used to force the cache to write back (flush) all cached writes to the origin LV. </p>
@@ -150,9 +150,9 @@ $ lvconvert --type cache --cachepool fast --poolmetadata fastmeta vg/main</pre>
 <pre>Change the cache policy and settings of an existing LV.
 $ lvchange --cachepolicy mq --cachesettings \
  'migration_threshold=2048 random_threshold=4' vg/main</pre>
-<p><code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>allocation/cache_policy</code><br />
+<p><code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>allocation/cache_policy</code><br/>
  defines the default cache policy. </p>
-<p> <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>allocation/cache_settings</code><br />
+<p> <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>allocation/cache_settings</code><br/>
  defines the default cache settings.</p>
 <h3>dm-cache spare metadata LV</h3>
 <p>See <code><a href="/docs/linux/man/7-lvmthin/">lvmthin</a></code>(7) for a description of the &quot;pool metadata spare&quot; LV. The same concept is used for cache pools.</p>

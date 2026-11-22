@@ -42,7 +42,7 @@ description: "unify – manual page for unify 1.2.2"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;wdiff-bugs [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1994, 1997 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 1994, 1997 Free Software Foundation, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>unify</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>unify</code> programs are properly installed at your site, the command</p>

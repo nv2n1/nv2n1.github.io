@@ -49,7 +49,7 @@ description: "man-recode – convert manual pages to another encoding"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1), <i><a href="/docs/linux/man/1-man/">man</a></i>(1), <i><a href="/docs/linux/man/1-manconv/">manconv</a></i>(1)</p>
 <h2>BUGS</h2>
-<p> <a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br />
+<p> <a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br/>
  <a rel="nofollow" href="https://savannah.nongnu.org/bugs/?group=man-db">https://savannah.nongnu.org/bugs/?group=man-db</a></p>
 <h2>AUTHOR</h2>
 <pre>

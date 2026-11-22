@@ -11,7 +11,7 @@ description: "chpsv.f –"
 <p> chpsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chpsv</code> (UPLO, N, NRHS, AP, IPIV, B, LDB, INFO)<br />
+<p> subroutine <code>chpsv</code> (UPLO, N, NRHS, AP, IPIV, B, LDB, INFO)<br/>
  <i></i><code> CHPSV computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chpsv (characterUPLO, integerN, integerNRHS, complex, dimension( * )AP, integer, dimension( * )IPIV, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

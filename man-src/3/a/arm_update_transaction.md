@@ -11,7 +11,7 @@ description: "arm_update_transaction – get transaction status"
 <p> arm_update_transaction &#8211; get transaction status</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
-<p> <code>arm_error_t<br />
+<p> <code>arm_error_t<br/>
  arm_update_transaction( </p>
 <p>&nbsp;<wbr>const arm_tran_start_handle_t&nbsp;<wbr></code><i>tran_handle</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>const arm_int32_t&nbsp;<wbr></code><i>flags</i><code>, </p>
@@ -20,7 +20,7 @@ description: "arm_update_transaction – get transaction status"
 <p> <code>arm_update_transaction()</code> signals that a transaction is still processing. </p>
 <p> <code>arm_update_transaction()</code> is useful as a heartbeat. It is also used to pass additional data about a transaction. It can be called from any thread in the process that executed the <code>arm_start_transaction()</code>. </p>
 <p> <i>buffer4</i> is a pointer to the user data buffer, if any. If the pointer is null (<code>ARM_BUF4_NONE</code>), there is no buffer. The sub-buffer that might be used is <code>arm_subbuffer_metric_values_t</code>. </p>
-<p> <i>flags</i> contains 32-bit flags. No values are currently defined. The field should be zero (<code>ARM_FLAG_NONE</code>).<br />
+<p> <i>flags</i> contains 32-bit flags. No values are currently defined. The field should be zero (<code>ARM_FLAG_NONE</code>).<br/>
 &nbsp;<wbr> <i>tran_handle</i> is a handle returned in an out parameter from an <code>arm_start_transaction()</code> call in the same process. </p>
 <h2>RETURN VALUE</h2>
 <p> On success, the function returns <code>ARM_SUCCESS</code>. A non-zero value indicates an error.</p>

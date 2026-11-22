@@ -38,7 +38,7 @@ description: "iptables-restore — Restore IP Tables"
 <h2>Bugs</h2>
 <p>None known as of iptables-1.2.1 release</p>
 <h2>Authors</h2>
-<p>Harald Welte &lt;laforge [at] gnumonks.org&gt; wrote iptables-restore based on code from Rusty Russell.<br />
+<p>Harald Welte &lt;laforge [at] gnumonks.org&gt; wrote iptables-restore based on code from Rusty Russell.<br/>
  Andras Kis-Szabo &lt;kisza [at] sch.bme.hu&gt; contributed ip6tables-restore.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-iptables-apply/">iptables-apply</a></code>(8),<code><a href="/docs/linux/man/8-iptables-save/">iptables-save</a></code>(8), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8) The iptables-HOWTO, which details more iptables usage, the NAT-HOWTO, which details NAT, and the netfilter-hacking-HOWTO which details the internals. </p>

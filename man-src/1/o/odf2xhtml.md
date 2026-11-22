@@ -23,12 +23,12 @@ description: "odf2xhtml – Convert ODF to HTML"
 <h2>Example</h2>
 <dl>
 <dt>
-</dt><dd> <font SIZE="-1"> </font></dd>
+</dt><dd>  </dd>
 <pre>
 odf2xhtml odf-file
 </pre>
-<p> <font SIZE="+1"></dl>
-<p> </font></p>
+<p> </dl>
+<p> </p>
 <h2>See Also</h2>
 <p> <code><a href="/docs/linux/man/1-odf2mht/">odf2mht</a></code>(1)</p>
 <h2>Author</h2>

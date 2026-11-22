@@ -10,15 +10,15 @@ description: "ql/termstructures/yield/fittedbonddiscountcurve.hpp – discount c
 
 <p> ql/termstructures/yield/fittedbonddiscountcurve.hpp &#8211; discount curve fitted to a set of fixed-coupon bonds </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/yield/bondhelpers.hpp&gt;<br />
- #include &lt;ql/patterns/lazyobject.hpp&gt;<br />
- #include &lt;ql/math/array.hpp&gt;<br />
- #include &lt;ql/utilities/clone.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/yield/bondhelpers.hpp&gt;<br/>
+ #include &lt;ql/patterns/lazyobject.hpp&gt;<br/>
+ #include &lt;ql/math/array.hpp&gt;<br/>
+ #include &lt;ql/utilities/clone.hpp&gt;<br/>
  #include &lt;vector&gt; </p>
 <h3>Classes</h3>
-<p> class <code>FittedBondDiscountCurve</code><br />
- <i></i><code>Discount</code> curve fitted to a set of fixed-coupon bonds.<br />
- class <code>FittingMethod</code><br />
+<p> class <code>FittedBondDiscountCurve</code><br/>
+ <i></i><code>Discount</code> curve fitted to a set of fixed-coupon bonds.<br/>
+ class <code>FittingMethod</code><br/>
  <i>Base fitting method used to construct a fitted bond discount curve. </i></p>
 <h2>Detailed Description</h2>
 <p> discount curve fitted to a set of fixed-coupon bonds </p>

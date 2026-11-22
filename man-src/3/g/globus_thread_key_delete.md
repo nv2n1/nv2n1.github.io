@@ -10,13 +10,13 @@ description: "Thread-Specific Storage –"
 
 <p> Thread-Specific Storage &#8211; </p>
 <h3>Functions</h3>
-<p> int <code>globus_thread_key_create</code> (<code>globus_thread_key_t</code> *key, <code>globus_thread_key_destructor_func_t</code> destructor)<br />
- <i>Create a key for thread-specific storage. </i><br />
- int <code>globus_thread_key_delete</code> (<code>globus_thread_key_t</code> key)<br />
- <i>Delete a thread-local storage key. </i><br />
- void * <code>globus_thread_getspecific</code> (<code>globus_thread_key_t</code> key)<br />
- <i>Get a thread-specific data value. </i><br />
- int <code>globus_thread_setspecific</code> (<code>globus_thread_key_t</code> key, void *value)<br />
+<p> int <code>globus_thread_key_create</code> (<code>globus_thread_key_t</code> *key, <code>globus_thread_key_destructor_func_t</code> destructor)<br/>
+ <i>Create a key for thread-specific storage. </i><br/>
+ int <code>globus_thread_key_delete</code> (<code>globus_thread_key_t</code> key)<br/>
+ <i>Delete a thread-local storage key. </i><br/>
+ void * <code>globus_thread_getspecific</code> (<code>globus_thread_key_t</code> key)<br/>
+ <i>Get a thread-specific data value. </i><br/>
+ int <code>globus_thread_setspecific</code> (<code>globus_thread_key_t</code> key, void *value)<br/>
  <i>Set a thread-specific data value. </i></p>
 <h2>Detailed Description</h2>
 <p> The <code>globus_thread_key_t</code> data type acts as a key to thread-specific storage. For each key created by <code>globus_thread_key_create()</code>, each thread may store and retrieve its own value.</p>
@@ -36,7 +36,7 @@ description: "Thread-Specific Storage –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> Pointer to be set to the new key.<br />
+</dt><dd> <i>key</i> Pointer to be set to the new key.<br/>
  <i>destructor</i> Pointer to a function to call when a thread exits to free the key&#8217;s value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -57,7 +57,7 @@ description: "Thread-Specific Storage –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> Thread-specific data key to store.<br />
+</dt><dd> <i>key</i> Thread-specific data key to store.<br/>
  <i>value</i> A pointer to data to store as the thread-specific data for this thread.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

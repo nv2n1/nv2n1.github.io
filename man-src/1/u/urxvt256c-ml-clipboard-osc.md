@@ -17,4 +17,4 @@ clipboard-osc - implement the clipboard operating system command sequence
 
 <h2>DESCRIPTION</h2>
 
- This extension implements the clipboard;copy Perl <font SIZE="-1">OSC.</font>
+ This extension implements the clipboard;copy Perl OSC.

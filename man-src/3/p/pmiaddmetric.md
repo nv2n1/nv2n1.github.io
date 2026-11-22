@@ -9,8 +9,8 @@ description: "pmiAddMetric – add a new metric definition to a LOGIMPORT contex
 
 <p><code>pmiAddMetric</code> &#8211; add a new metric definition to a LOGIMPORT context</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/import.h&gt; </p>
 <p> int pmiAddMetric(const char *</code><i>name</i>, pmID <i>pmid</i>, int&nbsp;<wbr><i>type</i>, pmInDom&nbsp;<wbr><i>indom</i>, int&nbsp;<wbr><i>sem</i>, pmUnits&nbsp;<wbr><i>units</i>); </p>
 <p> cc &#8230; -lpcp_import -lpcp</p>

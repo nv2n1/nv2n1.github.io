@@ -10,7 +10,7 @@ description: "slapy3.f –"
 <p>slapy3.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>slapy3</code> (X, Y, Z)<br />
+<p>REAL function <code>slapy3</code> (X, Y, Z)<br/>
  <i></i><code>SLAPY3</code> returns sqrt(x2+y2+z2).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function slapy3 (realX, realY, realZ)</h3>

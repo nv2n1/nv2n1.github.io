@@ -10,67 +10,67 @@ description: "The tevent request functions. –"
 <p>The tevent request functions. &#8211; </p>
 <p> A tevent_req represents an asynchronous computation.</p>
 <h3>Typedefs</h3>
-<p>typedef void(* <code>tevent_req_fn</code> )(struct tevent_req *req)<br />
- <i>A tevent request callback function. </i><br />
- typedef char *(* <code>tevent_req_print_fn</code> )(struct tevent_req *req, TALLOC_CTX *ctx)<br />
- <i>The print function which can be set for a tevent async request. </i><br />
- typedef bool(* <code>tevent_req_cancel_fn</code> )(struct tevent_req *req)<br />
- <i>A typedef for a cancel function for a tevent request. </i><br />
- typedef void(* <code>tevent_req_cleanup_fn</code> )(struct tevent_req *req, enum <code>tevent_req_state</code> req_state)<br />
+<p>typedef void(* <code>tevent_req_fn</code> )(struct tevent_req *req)<br/>
+ <i>A tevent request callback function. </i><br/>
+ typedef char *(* <code>tevent_req_print_fn</code> )(struct tevent_req *req, TALLOC_CTX *ctx)<br/>
+ <i>The print function which can be set for a tevent async request. </i><br/>
+ typedef bool(* <code>tevent_req_cancel_fn</code> )(struct tevent_req *req)<br/>
+ <i>A typedef for a cancel function for a tevent request. </i><br/>
+ typedef void(* <code>tevent_req_cleanup_fn</code> )(struct tevent_req *req, enum <code>tevent_req_state</code> req_state)<br/>
  <i>A typedef for a cleanup function for a tevent request. </i></p>
 <h3>Enumerations</h3>
-<p>enum <code>tevent_req_state</code> { <code>TEVENT_REQ_INIT</code>, <code>TEVENT_REQ_IN_PROGRESS</code>, <code>TEVENT_REQ_DONE</code>, <code>TEVENT_REQ_USER_ERROR</code>, <code>TEVENT_REQ_TIMED_OUT</code>, <code>TEVENT_REQ_NO_MEMORY</code>, <code>TEVENT_REQ_RECEIVED</code> }<br />
+<p>enum <code>tevent_req_state</code> { <code>TEVENT_REQ_INIT</code>, <code>TEVENT_REQ_IN_PROGRESS</code>, <code>TEVENT_REQ_DONE</code>, <code>TEVENT_REQ_USER_ERROR</code>, <code>TEVENT_REQ_TIMED_OUT</code>, <code>TEVENT_REQ_NO_MEMORY</code>, <code>TEVENT_REQ_RECEIVED</code> }<br/>
  <i>An async request moves from TEVENT_REQ_INIT to TEVENT_REQ_IN_PROGRESS. </i></p>
 <h3>Functions</h3>
-<p>void <code>tevent_req_set_callback</code> (struct tevent_req *req, <code>tevent_req_fn</code> fn, void *pvt)<br />
- <i>Set an async request callback. </i><br />
- void * <code>tevent_req_callback_data</code> (struct tevent_req *req,#type)<br />
- <i>Get the private data cast to the given type for a callback from a tevent request structure. </i><br />
- void * <code>tevent_req_callback_data_void</code> (struct tevent_req *req)<br />
- <i>Get the private data for a callback from a tevent request structure. </i><br />
- void * <code>tevent_req_data</code> (struct tevent_req *req,#type)<br />
- <i>Get the private data from a tevent request structure. </i><br />
- void <code>tevent_req_set_print_fn</code> (struct tevent_req *req, <code>tevent_req_print_fn</code> fn)<br />
- <i>This function sets a print function for the given request. </i><br />
- char * <code>tevent_req_default_print</code> (struct tevent_req *req, TALLOC_CTX *mem_ctx)<br />
- <i>The default print function for creating debug messages. </i><br />
- char * <code>tevent_req_print</code> (TALLOC_CTX *mem_ctx, struct tevent_req *req)<br />
- <i>Print an tevent_req structure in debug messages. </i><br />
- void <code>tevent_req_set_cancel_fn</code> (struct tevent_req *req, <code>tevent_req_cancel_fn</code> fn)<br />
- <i>This function sets a cancel function for the given tevent request. </i><br />
- bool <code>tevent_req_cancel</code> (struct tevent_req *req)<br />
- <i>Try to cancel the given tevent request. </i><br />
- void <code>tevent_req_set_cleanup_fn</code> (struct tevent_req *req, <code>tevent_req_cleanup_fn</code> fn)<br />
- <i>This function sets a cleanup function for the given tevent request. </i><br />
- struct tevent_req * <code>tevent_req_create</code> (TALLOC_CTX *mem_ctx, void **pstate,#type)<br />
- <i>Create an async tevent request. </i><br />
- bool <code>tevent_req_set_endtime</code> (struct tevent_req *req, struct tevent_context *ev, struct timeval endtime)<br />
- <i>Set a timeout for an async request. </i><br />
- void <code>tevent_req_notify_callback</code> (struct tevent_req *req)<br />
- <i>Call the notify callback of the given tevent request manually. </i><br />
- void <code>tevent_req_done</code> (struct tevent_req *req)<br />
- <i>An async request has successfully finished. </i><br />
- bool <code>tevent_req_error</code> (struct tevent_req *req, uint64_t error)<br />
- <i>An async request has seen an error. </i><br />
- bool <code>tevent_req_nomem</code> (const void *p, struct tevent_req *req)<br />
- <i>Helper function for nomem check. </i><br />
- void <code>tevent_req_oom</code> (struct tevent_req *req)<br />
- <i>Indicate out of memory to a request. </i><br />
- struct tevent_req * <code>tevent_req_post</code> (struct tevent_req *req, struct tevent_context *ev)<br />
- <i>Finish a request before the caller had the change to set the callback. </i><br />
- void <code>tevent_req_defer_callback</code> (struct tevent_req *req, struct tevent_context *ev)<br />
- <i>Finish multiple requests within one function. </i><br />
- bool <code>tevent_req_is_in_progress</code> (struct tevent_req *req)<br />
- <i>Check if the given request is still in progress. </i><br />
- bool <code>tevent_req_poll</code> (struct tevent_req *req, struct tevent_context *ev)<br />
- <i>Actively poll for the given request to finish. </i><br />
- bool <code>tevent_req_is_error</code> (struct tevent_req *req, enum <code>tevent_req_state</code> *state, uint64_t *error)<br />
- <i>Get the tevent request state and the actual error set by tevent_req_error. </i><br />
- void <code>tevent_req_received</code> (struct tevent_req *req)<br />
- <i>Use as the last action of a _recv() function. </i><br />
- struct tevent_req * <code>tevent_wakeup_send</code> (TALLOC_CTX *mem_ctx, struct tevent_context *ev, struct timeval wakeup_time)<br />
- <i>Create a tevent subrequest at a given time. </i><br />
- bool <code>tevent_wakeup_recv</code> (struct tevent_req *req)<br />
+<p>void <code>tevent_req_set_callback</code> (struct tevent_req *req, <code>tevent_req_fn</code> fn, void *pvt)<br/>
+ <i>Set an async request callback. </i><br/>
+ void * <code>tevent_req_callback_data</code> (struct tevent_req *req,#type)<br/>
+ <i>Get the private data cast to the given type for a callback from a tevent request structure. </i><br/>
+ void * <code>tevent_req_callback_data_void</code> (struct tevent_req *req)<br/>
+ <i>Get the private data for a callback from a tevent request structure. </i><br/>
+ void * <code>tevent_req_data</code> (struct tevent_req *req,#type)<br/>
+ <i>Get the private data from a tevent request structure. </i><br/>
+ void <code>tevent_req_set_print_fn</code> (struct tevent_req *req, <code>tevent_req_print_fn</code> fn)<br/>
+ <i>This function sets a print function for the given request. </i><br/>
+ char * <code>tevent_req_default_print</code> (struct tevent_req *req, TALLOC_CTX *mem_ctx)<br/>
+ <i>The default print function for creating debug messages. </i><br/>
+ char * <code>tevent_req_print</code> (TALLOC_CTX *mem_ctx, struct tevent_req *req)<br/>
+ <i>Print an tevent_req structure in debug messages. </i><br/>
+ void <code>tevent_req_set_cancel_fn</code> (struct tevent_req *req, <code>tevent_req_cancel_fn</code> fn)<br/>
+ <i>This function sets a cancel function for the given tevent request. </i><br/>
+ bool <code>tevent_req_cancel</code> (struct tevent_req *req)<br/>
+ <i>Try to cancel the given tevent request. </i><br/>
+ void <code>tevent_req_set_cleanup_fn</code> (struct tevent_req *req, <code>tevent_req_cleanup_fn</code> fn)<br/>
+ <i>This function sets a cleanup function for the given tevent request. </i><br/>
+ struct tevent_req * <code>tevent_req_create</code> (TALLOC_CTX *mem_ctx, void **pstate,#type)<br/>
+ <i>Create an async tevent request. </i><br/>
+ bool <code>tevent_req_set_endtime</code> (struct tevent_req *req, struct tevent_context *ev, struct timeval endtime)<br/>
+ <i>Set a timeout for an async request. </i><br/>
+ void <code>tevent_req_notify_callback</code> (struct tevent_req *req)<br/>
+ <i>Call the notify callback of the given tevent request manually. </i><br/>
+ void <code>tevent_req_done</code> (struct tevent_req *req)<br/>
+ <i>An async request has successfully finished. </i><br/>
+ bool <code>tevent_req_error</code> (struct tevent_req *req, uint64_t error)<br/>
+ <i>An async request has seen an error. </i><br/>
+ bool <code>tevent_req_nomem</code> (const void *p, struct tevent_req *req)<br/>
+ <i>Helper function for nomem check. </i><br/>
+ void <code>tevent_req_oom</code> (struct tevent_req *req)<br/>
+ <i>Indicate out of memory to a request. </i><br/>
+ struct tevent_req * <code>tevent_req_post</code> (struct tevent_req *req, struct tevent_context *ev)<br/>
+ <i>Finish a request before the caller had the change to set the callback. </i><br/>
+ void <code>tevent_req_defer_callback</code> (struct tevent_req *req, struct tevent_context *ev)<br/>
+ <i>Finish multiple requests within one function. </i><br/>
+ bool <code>tevent_req_is_in_progress</code> (struct tevent_req *req)<br/>
+ <i>Check if the given request is still in progress. </i><br/>
+ bool <code>tevent_req_poll</code> (struct tevent_req *req, struct tevent_context *ev)<br/>
+ <i>Actively poll for the given request to finish. </i><br/>
+ bool <code>tevent_req_is_error</code> (struct tevent_req *req, enum <code>tevent_req_state</code> *state, uint64_t *error)<br/>
+ <i>Get the tevent request state and the actual error set by tevent_req_error. </i><br/>
+ void <code>tevent_req_received</code> (struct tevent_req *req)<br/>
+ <i>Use as the last action of a _recv() function. </i><br/>
+ struct tevent_req * <code>tevent_wakeup_send</code> (TALLOC_CTX *mem_ctx, struct tevent_context *ev, struct timeval wakeup_time)<br/>
+ <i>Create a tevent subrequest at a given time. </i><br/>
+ bool <code>tevent_wakeup_recv</code> (struct tevent_req *req)<br/>
  <i>Check if the wakeup has been correctly executed. </i></p>
 <h2>Detailed Description</h2>
 <p>A tevent_req represents an asynchronous computation. </p>
@@ -110,7 +110,7 @@ description: "The tevent request functions. –"
 <p>A typedef for a cleanup function for a tevent request. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The tevent request calling this function.<br />
+<dd><i>req</i> The tevent request calling this function.<br/>
  <i>req_state</i> The current tevent_req_state.</dd></dl>
 <h3>typedef void(* tevent_req_fn)(struct tevent_req *req)</h3>
 <p>A tevent request callback function. </p>
@@ -121,7 +121,7 @@ description: "The tevent request functions. –"
 <p>The print function which can be set for a tevent async request. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The tevent async request.<br />
+<dd><i>req</i> The tevent async request.<br/>
  <i>ctx</i> A talloc memory context which can be uses to allocate memory.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -172,7 +172,7 @@ description: "The tevent request functions. –"
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The structure to get the callback data from.<br />
+<dd><i>req</i> The structure to get the callback data from.<br/>
  <i>type</i> The type of the private callback data to get.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -181,7 +181,7 @@ description: "The tevent request functions. –"
 <p>Get the private data for a callback from a tevent request structure. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The structure to get the callback data from.<br />
+<dd><i>req</i> The structure to get the callback data from.<br/>
  <i>req</i> The structure to get the data from.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -207,8 +207,8 @@ description: "The tevent request functions. –"
 <p>Tevent_req_create() allocates and zeros the state variable as a talloc child of its result. The state variable should be used as the talloc parent for all temporary variables that are allocated during the async computation. This way, when the user of the async computation frees the request, the state as a talloc child will be free&#8217;d along with all the temporary variables hanging off the state. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>mem_ctx</i> The memory context for the result.<br />
- <i>pstate</i> Pointer to the private request state.<br />
+<dd><i>mem_ctx</i> The memory context for the result.<br/>
+ <i>pstate</i> Pointer to the private request state.<br/>
  <i>type</i> The name of the request.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -217,7 +217,7 @@ description: "The tevent request functions. –"
 <p>Get the private data from a tevent request structure. When the tevent_req has been created by tevent_req_create, the result of <code>tevent_req_data()</code> is the state variable created by <code>tevent_req_create()</code> as a child of the req. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The structure to get the private data from.<br />
+<dd><i>req</i> The structure to get the private data from.<br/>
  <i>type</i> The type of the private data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -226,7 +226,7 @@ description: "The tevent request functions. –"
 <p>The default print function for creating debug messages. The function should not be used by users of the async API, but custom print function can use it and append custom text to the string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The request to be printed.<br />
+<dd><i>req</i> The request to be printed.<br/>
  <i>mem_ctx</i> The memory context for the result.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -252,7 +252,7 @@ description: "The tevent request functions. –"
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The finished request.<br />
+<dd><i>req</i> The finished request.<br/>
  <i>ev</i> The tevent_context for the immediate event.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -267,7 +267,7 @@ description: "The tevent request functions. –"
 <p> If error is 0 the function returns false and does nothing more. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The request with an error.<br />
+<dd><i>req</i> The request with an error.<br/>
  <i>error</i> The error code.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -301,8 +301,8 @@ description: "The tevent request functions. –"
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The tevent request to get the error from.<br />
- <i>state</i> A pointer to store the tevent request error state.<br />
+<dd><i>req</i> The tevent request to get the error from.<br/>
+ <i>state</i> A pointer to store the tevent request error state.<br/>
  <i>error</i> A pointer to store the error set by <code>tevent_req_error()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -322,7 +322,7 @@ description: "The tevent request functions. –"
 <p>Helper function for nomem check. Convenience helper to easily check alloc failure within a callback implementing the next step of an async request. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>p</i> The pointer to be checked.<br />
+<dd><i>p</i> The pointer to be checked.<br/>
  <i>req</i> The request being processed.</dd></dl>
 <pre>* p = talloc(mem_ctx, bla);
 * if (tevent_req_nomem(p, req)) {
@@ -347,7 +347,7 @@ description: "The tevent request functions. –"
 <p>Actively poll for the given request to finish. This function is typically used by sync wrapper functions. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The request to poll.<br />
+<dd><i>req</i> The request to poll.<br/>
  <i>ev</i> The tevent_context to be used.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -386,7 +386,7 @@ description: "The tevent request functions. –"
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The finished request.<br />
+<dd><i>req</i> The finished request.<br/>
  <i>ev</i> The tevent_context for the immediate event.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -395,7 +395,7 @@ description: "The tevent request functions. –"
 <p>Print an tevent_req structure in debug messages. This function should be used by callers of the async API. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>mem_ctx</i> The memory context for the result.<br />
+<dd><i>mem_ctx</i> The memory context for the result.<br/>
  <i>req</i> The request to be printed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -409,14 +409,14 @@ description: "The tevent request functions. –"
 <p>Set an async request callback. See the documentation of <code>tevent_req_post()</code> for an example how this is supposed to be used. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The async request to set the callback.<br />
- <i>fn</i> The callback function to set.<br />
+<dd><i>req</i> The async request to set the callback.<br/>
+ <i>fn</i> The callback function to set.<br/>
  <i>pvt</i> A pointer to private data to pass to the async request callback.</dd></dl>
 <h3>void tevent_req_set_cancel_fn (struct tevent_req *req, <code>tevent_req_cancel_fn</code>fn)</h3>
 <p>This function sets a cancel function for the given tevent request. This function can be used to setup a cancel function for the given request. This will be triggered if the <code>tevent_req_cancel()</code> function was called on the given request. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The request to use.<br />
+<dd><i>req</i> The request to use.<br/>
  <i>fn</i> A pointer to the cancel function.</dd></dl>
 <h3>void tevent_req_set_cleanup_fn (struct tevent_req *req, <code>tevent_req_cleanup_fn</code>fn)</h3>
 <p>This function sets a cleanup function for the given tevent request. This function can be used to setup a cleanup function for the given request. This will be triggered when the <code>tevent_req_done()</code> or <code>tevent_req_error()</code> function was called, before notifying the callers callback function, and also before scheduling the deferred trigger. </p>
@@ -425,14 +425,14 @@ description: "The tevent request functions. –"
 <p> The cleanup function is also called by <code>tevent_req_received()</code> (possibly triggered from tevent_req_destructor()) before destroying the private data of the tevent_req. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The request to use.<br />
+<dd><i>req</i> The request to use.<br/>
  <i>fn</i> A pointer to the cancel function.</dd></dl>
 <h3>bool tevent_req_set_endtime (struct tevent_req *req, struct tevent_context *ev, struct timevalendtime)</h3>
 <p>Set a timeout for an async request. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The request to set the timeout for.<br />
- <i>ev</i> The event context to use for the timer.<br />
+<dd><i>req</i> The request to set the timeout for.<br/>
+ <i>ev</i> The event context to use for the timer.<br/>
  <i>endtime</i> The endtime of the request.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -441,7 +441,7 @@ description: "The tevent request functions. –"
 <p>This function sets a print function for the given request. This function can be used to setup a print function for the given request. This will be triggered if the <code>tevent_req_print()</code> function was called on the given request. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>req</i> The request to use.<br />
+<dd><i>req</i> The request to use.<br/>
  <i>fn</i> A pointer to the print function</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -461,8 +461,8 @@ description: "The tevent request functions. –"
 <p>Create a tevent subrequest at a given time. The idea is that always the same syntax for tevent requests. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>mem_ctx</i> The talloc memory context to use.<br />
- <i>ev</i> The event handle to setup the request.<br />
+<dd><i>mem_ctx</i> The talloc memory context to use.<br/>
+ <i>ev</i> The event handle to setup the request.<br/>
  <i>wakeup_time</i> The time to wakeup and execute the request.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

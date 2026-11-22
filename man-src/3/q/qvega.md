@@ -17,7 +17,7 @@ description: "QuantLib::QuantoBarrierOption – Quanto version of a barrier opti
 <p> typedef <code>QuantoOptionResults</code>&lt; BarrierOption::results &gt; <code>results</code></p>
 <h3>Public Member Functions</h3>
 <p><code>QuantoBarrierOption</code> (Barrier::Type barrierType, <code>Real</code> barrier, <code>Real</code> rebate, const boost::shared_ptr&lt; <code>StrikedTypePayoff</code> &gt; &amp;payoff, const boost::shared_ptr&lt; <code>Exercise</code> &gt; &amp;exercise) </p>
-<p> void <code>fetchResults</code> (const PricingEngine::results *) const<br />
+<p> void <code>fetchResults</code> (const PricingEngine::results *) const<br/>
  <code>greeks</code> </p>
 <p> <code>Real</code> <code>qvega</code> () const </p>
 <p> <code>Real</code> <code>qrho</code> () const </p>

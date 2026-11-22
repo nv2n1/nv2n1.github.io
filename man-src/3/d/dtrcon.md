@@ -11,7 +11,7 @@ description: "dtrcon.f –"
 <p> dtrcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtrcon</code> (NORM, UPLO, DIAG, N, A, LDA, RCOND, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dtrcon</code> (NORM, UPLO, DIAG, N, A, LDA, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>DTRCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtrcon (characterNORM, characterUPLO, characterDIAG, integerN, double precision, dimension( lda, * )A, integerLDA, double precisionRCOND, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

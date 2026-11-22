@@ -14,12 +14,12 @@ Dpkg::Control::FieldsCore - manage (list of official) control fields
 </dd><dt>field_is_official($fname)
 </dt><dd>Returns true if the field is official and known.
 </dd><dt>field_is_allowed_in($fname, @types)
-</dt><dd>Returns true (1) if the field <tt>$fname</tt> is allowed in all the types listed in the list. Note that you can use type sets instead of individual types (ex: <font SIZE="-1">CTRL_FILE_CHANGES</font> | <font SIZE="-1">CTRL_CHANGELOG</font>). 
+</dt><dd>Returns true (1) if the field <tt>$fname</tt> is allowed in all the types listed in the list. Note that you can use type sets instead of individual types (ex: CTRL_FILE_CHANGES | CTRL_CHANGELOG). 
  field_allowed_in(A|B, C) returns true only if the field is allowed in C and either A or B. 
  Undef is returned for non-official fields.
 </dd><dt>field_transfer_single($from, $to, $field)
 </dt><dd>If appropriate, copy the value of the field named <tt>$field</tt> taken from the <tt>$from</tt> Dpkg::Control object to the <tt>$to</tt> Dpkg::Control object. 
- Official fields are copied only if the field is allowed in both types of objects. Custom fields are treated in a specific manner. When the target is not among <font SIZE="-1">CTRL_PKG_SRC, CTRL_PKG_DEB</font> or <font SIZE="-1">CTRL_FILE_CHANGES,</font> then they are alway copied as is (the X- prefix is kept). Otherwise they are not copied except if the target object matches the target destination encoded in the field name. The initial X denoting custom fields can be followed by one or more letters among ``S'' (Source: corresponds to <font SIZE="-1">CTRL_PKG_SRC</font>), ``B'' (Binary: corresponds to <font SIZE="-1">CTRL_PKG_DEB</font>) or ``C'' (Changes: corresponds to <font SIZE="-1">CTRL_FILE_CHANGES</font>). 
+ Official fields are copied only if the field is allowed in both types of objects. Custom fields are treated in a specific manner. When the target is not among CTRL_PKG_SRC, CTRL_PKG_DEB or CTRL_FILE_CHANGES, then they are alway copied as is (the X- prefix is kept). Otherwise they are not copied except if the target object matches the target destination encoded in the field name. The initial X denoting custom fields can be followed by one or more letters among ``S'' (Source: corresponds to CTRL_PKG_SRC), ``B'' (Binary: corresponds to CTRL_PKG_DEB) or ``C'' (Changes: corresponds to CTRL_FILE_CHANGES). 
  Returns undef if nothing has been copied or the name of the new field added to <tt>$to</tt> otherwise.
 </dd><dt>field_transfer_all($from, $to)
 </dt><dd>Transfer all appropriate fields from <tt>$from</tt> to <tt>$to</tt>. Calls <i>field_transfer_single()</i> on all fields available in <tt>$from</tt>. 
@@ -33,7 +33,7 @@ Dpkg::Control::FieldsCore - manage (list of official) control fields
 </dd><dt>field_get_dep_type($field)
 </dt><dd>Return the type of the dependency expressed by the given field. Can either be ``normal'' for a real dependency field (Pre-Depends, Depends, ...) or ``union'' for other relation fields sharing the same syntax (Conflicts, Breaks, ...). Returns undef for fields which are not dependencies.
 </dd><dt>field_get_sep_type($field)
-</dt><dd>Return the type of the field value separator. Can be one of <font SIZE="-1">FIELD_SEP_UNKNOWN, FIELD_SEP_SPACE, FIELD_SEP_COMMA</font> or <font SIZE="-1">FIELD_SEP_LINE.</font>
+</dt><dd>Return the type of the field value separator. Can be one of FIELD_SEP_UNKNOWN, FIELD_SEP_SPACE, FIELD_SEP_COMMA or FIELD_SEP_LINE.
 </dd><dt>field_register($field, $allowed_types, %opts)
 </dt><dd>Register a new field as being allowed in control information of specified types. <tt>%opts</tt> is optional
 </dd><dt>field_insert_after($type, $ref, @fields)

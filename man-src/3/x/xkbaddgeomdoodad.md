@@ -10,7 +10,7 @@ description: "XkbAddGeomDoodad – Add one doodad to a section of a keyboard geo
 <p>XkbAddGeomDoodad &#8211; Add one doodad to a section of a keyboard geometry or to the top-level geometry </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbDoodadPtr XkbAddGeomDoodad</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>XkbSectionPtr </code><i>section</i><code>,</code> <code>Atom </code><i>name</i><code>);</code><br />
+<dt> <code>XkbDoodadPtr XkbAddGeomDoodad</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>XkbSectionPtr </code><i>section</i><code>,</code> <code>Atom </code><i>name</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

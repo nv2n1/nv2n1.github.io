@@ -38,7 +38,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>The interface mode defines the manner in which data is shown in the browser. Since version 1.4.0 it has been possible to display the graphic data using plain text tables. This allows Monitorix to be used by those running screen reader software, and also simplifies automatic data processing through scripts. </dd>
 <p> The possible values are:</p>
 <dl>
-<dd><i>graph</i> for rendered graphs.<br />
+<dd><i>graph</i> for rendered graphs.<br/>
  <i>text</i> for plain text representation.</dd></dl>
 <p> Default value: <i>graph</i></dl>
 <p> <code>enable_zoom</code></p>
@@ -58,7 +58,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This option toggles between values in Celsius or in Fahrenheit in those graphs that represent temperatures. </dd>
 <p> The possible values are:</p>
 <dl>
-<dd><i>c</i> for Celsius.<br />
+<dd><i>c</i> for Celsius.<br/>
  <i>f</i> for Fahrenheit.</dd></dl>
 <p> Default value: <i>c</i></dl>
 <p> <code>show_gaps</code></p>
@@ -125,22 +125,22 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This is the absolute path to the directory where all the web elements are located: </dd>
 <dl>
-<dd><i>cgi/</i> directory where resides <code>monitorix.cgi</code>.<br />
- <i>imgs/</i> directory for the .png graph images.<br />
- <i>index.html</i> Monitorix main page.<br />
- <i>logo_bot.png</i> Monitorix bottom logo.<br />
- <i>logo_top.png</i> Monitorix top logo.<br />
+<dd><i>cgi/</i> directory where resides <code>monitorix.cgi</code>.<br/>
+ <i>imgs/</i> directory for the .png graph images.<br/>
+ <i>index.html</i> Monitorix main page.<br/>
+ <i>logo_bot.png</i> Monitorix bottom logo.<br/>
+ <i>logo_top.png</i> Monitorix top logo.<br/>
  <i>monitorixico.png</i> Monitorix favicon logo.</dd></dl>
-<p> Default value: <i>/var/lib/monitorix/www/</i><br />
+<p> Default value: <i>/var/lib/monitorix/www/</i><br/>
  (depends on the operating system)</dl>
 <p> <code>base_lib</code></p>
 <dl>
 <dd>This is the absolute path to the directory where all of the monthly reports, daily traffic usage, and RRD files are located: </dd>
 <dl>
-<dd><i>reports/</i> monthly reports localization directory.<br />
- <i>usage/</i> daily traffic usage data directory.<br />
+<dd><i>reports/</i> monthly reports localization directory.<br/>
+ <i>usage/</i> daily traffic usage data directory.<br/>
  <i>*.rrd</i> RRD files.</dd></dl>
-<p> Default value: <i>/var/lib/monitorix/</i><br />
+<p> Default value: <i>/var/lib/monitorix/</i><br/>
  (depends on the operating system)</dl>
 <p> <code>base_url</code></p>
 <dl>
@@ -166,7 +166,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> <code>user/group</code></p>
 <dl>
 <dd>This sets the user and group that the HTTP server will run as. </dd>
-<p> Default value for user: <i>nobody</i><br />
+<p> Default value for user: <i>nobody</i><br/>
  Default value for group: <i>nobody</i></dl>
 <p> <code>log_file</code></p>
 <dl>
@@ -204,7 +204,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This option sets the path to the password file that was created with the help of the <i>htpasswd.pl</i> script. That script encrypts and validates passwords using the system&#8217;s crypt() routine. If your Monitorix package doesn&#8217;t come with that script, you may use the similar <i><a href="/docs/linux/man/1-htpasswd/">htpasswd</a></i>(1) program provided with the Apache web server. </dd>
 <p> The format of the password file consist of one or more lines with a username and password separated by a colon. </p>
 <p> The following is an example of a password file: </p>
-<p> paul:oGkEsQK6RYIII<br />
+<p> paul:oGkEsQK6RYIII<br/>
  peter:HF1r7qRL4Kg6E </p>
 <p> Since the script uses the crypt() algorithm, only the first 8 characters of the password are used to form the password. If the supplied password is longer, the extra characters will be silently discarded. </p>
 <p> WARNING: don&#8217;t use the character colon &#8216;:&#8217; as part of your name or password since this character is used as field separator. </p>
@@ -299,8 +299,8 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This is the full path name of the script that will be executed by this alert. </dd>
 <p> It will receive the following three parameters: </p>
-<p> 1st &#8211; the value currently defined in <code>loadavg_timeintvl</code>.<br />
- 2nd &#8211; the value currently defined in <code>loadavg_threshold</code>.<br />
+<p> 1st &#8211; the value currently defined in <code>loadavg_timeintvl</code>.<br/>
+ 2nd &#8211; the value currently defined in <code>loadavg_threshold</code>.<br/>
  3rd &#8211; the current 15min CPU load average. </p>
 <p> Default value: <i>/path/to/script.sh</i></dl>
 <h3>Global kernel usage (kern.rrd)</h3>
@@ -325,11 +325,11 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This option sets the size of all processors graphs. </dd>
 <p> The possible values are:</p>
 <dl>
-<dd><i>main</i> for 450&#215;150 graphs.<br />
- <i>medium</i> for 325&#215;150 graphs.<br />
- <i>medium2</i> for 325&#215;70 graphs.<br />
- <i>small</i> for 200&#215;66 graphs.<br />
- <i>mini</i> for 183&#215;66 graphs.<br />
+<dd><i>main</i> for 450&#215;150 graphs.<br/>
+ <i>medium</i> for 325&#215;150 graphs.<br/>
+ <i>medium2</i> for 325&#215;70 graphs.<br/>
+ <i>small</i> for 200&#215;66 graphs.<br/>
+ <i>mini</i> for 183&#215;66 graphs.<br/>
  <i>tiny</i> for 110&#215;40 graphs.</dd></dl>
 <p> Default value: <i>medium</i></dl>
 <p> <code>DATA</code></p>
@@ -341,11 +341,11 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This list will hold the defined temperature sensors for each graph. You must have installed the command <i>hplog</i> that comes with HP ProLiant System Health Application and Command Line Utilities. </dd>
 <p> Each graph has a limited number of IDs: </p>
-<p> <code>graph_0</code> up to 8 IDs.<br />
- <code>graph_1</code> up to 6 IDs.<br />
+<p> <code>graph_0</code> up to 8 IDs.<br/>
+ <code>graph_1</code> up to 6 IDs.<br/>
  <code>graph_2</code> up to 6 IDs. </p>
 <p> The following is a configuration example of selected IDs: </p>
-<p> # hplog -t<br />
+<p> # hplog -t<br/>
  ID TYPE LOCATION STATUS CURRENT THRESHOLD </p>
 <p>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>Basic Sensor Ambient&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Normal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>75F/&nbsp;<wbr>24C 107F/&nbsp;<wbr>42C&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>Basic Sensor CPU&nbsp;<wbr>(1)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Normal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>104F/&nbsp;<wbr>40C 179F/&nbsp;<wbr>82C&nbsp;<wbr> </p>
@@ -355,18 +355,18 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p>&nbsp;<wbr>6&nbsp;<wbr>&nbsp;<wbr>Basic Sensor Memory Board&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Normal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212;F/&#8212;C 188F/&nbsp;<wbr>87C&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>7&nbsp;<wbr>&nbsp;<wbr>Basic Sensor System Board&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Normal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>89F/&nbsp;<wbr>32C 192F/&nbsp;<wbr>89C&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>8&nbsp;<wbr>&nbsp;<wbr>Basic Sensor System Board&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Normal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212;F/&#8212;C 192F/&nbsp;<wbr>89C&nbsp;<wbr> </p>
-<p>&nbsp;<wbr>9&nbsp;<wbr>&nbsp;<wbr>Basic Sensor System Board&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Normal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>84F/&nbsp;<wbr>29C 192F/&nbsp;<wbr>89C&nbsp;<wbr><br />
- 10 Basic Sensor System Board Normal 118F/ 48C 230F/110C<br />
- 11 Basic Sensor System Board Normal 96F/ 36C 192F/ 89C<br />
- 12 Basic Sensor System Board Normal 84F/ 29C 154F/ 68C<br />
- 13 Basic Sensor System Board Normal 87F/ 31C 154F/ 68C<br />
- 14 Basic Sensor System Board Normal 89F/ 32C 156F/ 69C<br />
- 15 Basic Sensor System Board Normal 93F/ 34C 161F/ 72C<br />
- 16 Basic Sensor Ambient Normal &#8212;F/&#8212;C 192F/ 89C<br />
- 17 Basic Sensor System Board Normal &#8212;F/&#8212;C 192F/ 89C<br />
+<p>&nbsp;<wbr>9&nbsp;<wbr>&nbsp;<wbr>Basic Sensor System Board&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Normal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>84F/&nbsp;<wbr>29C 192F/&nbsp;<wbr>89C&nbsp;<wbr><br/>
+ 10 Basic Sensor System Board Normal 118F/ 48C 230F/110C<br/>
+ 11 Basic Sensor System Board Normal 96F/ 36C 192F/ 89C<br/>
+ 12 Basic Sensor System Board Normal 84F/ 29C 154F/ 68C<br/>
+ 13 Basic Sensor System Board Normal 87F/ 31C 154F/ 68C<br/>
+ 14 Basic Sensor System Board Normal 89F/ 32C 156F/ 69C<br/>
+ 15 Basic Sensor System Board Normal 93F/ 34C 161F/ 72C<br/>
+ 16 Basic Sensor Ambient Normal &#8212;F/&#8212;C 192F/ 89C<br/>
+ 17 Basic Sensor System Board Normal &#8212;F/&#8212;C 192F/ 89C<br/>
  18 Basic Sensor SCSI Backplane Normal 32F/ 0C 140F/ 60C </p>
 <dl>
-<dd>&lt;list&gt;<br />
+<dd>&lt;list&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>graph_0 = 2, 3</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>graph_1 = 1, 5, 18</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>graph_2 = 7, 9, 10, 11, 12, 13</p>
@@ -377,33 +377,33 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>In this list you may specify the sensors you want to monitor with the same names as they appear in your <i><a href="/docs/linux/man/1-sensors/">sensors</a></i>(1) command. </dd>
 <p> For example, imagine a <i><a href="/docs/linux/man/1-sensors/">sensors</a></i>(1) output like this: </p>
-<p> # sensors<br />
- coretemp-isa-0000<br />
- Adapter: ISA adapter<br />
+<p> # sensors<br/>
+ coretemp-isa-0000<br/>
+ Adapter: ISA adapter<br/>
  Core 0: +51.0°C (high = +78.0°C, crit = +100.0°C) </p>
-<p> coretemp-isa-0001<br />
- Adapter: ISA adapter<br />
+<p> coretemp-isa-0001<br/>
+ Adapter: ISA adapter<br/>
  Core 1: +49.0°C (high = +78.0°C, crit = +100.0°C) </p>
-<p> f71882fg-isa-0a00<br />
- Adapter: ISA adapter<br />
- 3.3V: +3.30 V<br />
- Vcore: +1.21 V (max = +2.04 V)<br />
- Vdimm: +1.82 V<br />
- Vchip: +1.38 V<br />
- +5V: +5.00 V<br />
- 12V: +14.37 V<br />
- 5VSB: +4.33 V<br />
- 3VSB: +3.30 V<br />
- Battery: +3.22 V<br />
- CPU: 2035 RPM<br />
- System: 1765 RPM ALARM<br />
- Power: 2110 RPM ALARM<br />
- Aux: 2080 RPM ALARM<br />
- M/B Temp: +36.00 C<br />
+<p> f71882fg-isa-0a00<br/>
+ Adapter: ISA adapter<br/>
+ 3.3V: +3.30 V<br/>
+ Vcore: +1.21 V (max = +2.04 V)<br/>
+ Vdimm: +1.82 V<br/>
+ Vchip: +1.38 V<br/>
+ +5V: +5.00 V<br/>
+ 12V: +14.37 V<br/>
+ 5VSB: +4.33 V<br/>
+ 3VSB: +3.30 V<br/>
+ Battery: +3.22 V<br/>
+ CPU: 2035 RPM<br/>
+ System: 1765 RPM ALARM<br/>
+ Power: 2110 RPM ALARM<br/>
+ Aux: 2080 RPM ALARM<br/>
+ M/B Temp: +36.00 C<br/>
  CPU Temp: +29.00 C </p>
 <p> Then you may want to configure that <code>list</code> as: </p>
 <dl>
-<dd>&lt;list&gt;<br />
+<dd>&lt;list&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>core0 = Core 0</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>core1 = Core 1</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>mb0 = M/B Temp</p>
@@ -427,18 +427,18 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> The last one, <i>gpu0</i>, is set here just in case you have a supported graphics card and want to monitor its temperature. Currently only NVIDIA and ATI graphic cards are supported; with the values <i>nvidia</i> and <i>ati</i> respectively. It requires the official NVIDIA or ATI drivers. </p>
 <p> This list has the following maximums allowed: </p>
 <dl>
-<dd>Up to 16 <i>core</i> keys (from core0 to core15).<br />
- Up to 2 <i>mb</i> keys (mb0 and mb1).<br />
- Up to 4 <i>cpu</i> keys (from cpu0 to cpu3).<br />
- Up to 9 <i>fan</i> keys (from fan0 to fan8).<br />
- Up to 12 <i>volt</i> keys (from volt0 to volt11).<br />
+<dd>Up to 16 <i>core</i> keys (from core0 to core15).<br/>
+ Up to 2 <i>mb</i> keys (mb0 and mb1).<br/>
+ Up to 4 <i>cpu</i> keys (from cpu0 to cpu3).<br/>
+ Up to 9 <i>fan</i> keys (from fan0 to fan8).<br/>
+ Up to 12 <i>volt</i> keys (from volt0 to volt11).<br/>
  Up to 9 <i>gpu</i> keys (from gpu0 to gpu8).</dd></dl>
 </dl>
 <p> <code>desc</code></p>
 <dl>
 <dd>This list complements the <code>list</code> option only for the graphs: MB and CPU temperatures, Fans speeds and GPU temperatures. It basically allows you to change the name that will appear in the graph, hiding the real name of the sensor. If no association is defined, then Monitorix will display the name of the key (left side) in the <code>desc</code> option (in uppercase). </dd>
 <dl>
-<dd>&lt;desc&gt;<br />
+<dd>&lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>mb0 = M/B</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>fan0 = CPUFan</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>gpu0 = ATI</p>
@@ -451,7 +451,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This is a fixed list that can only hold two keys (0 and 1). Each key though can hold up to 9 different entries separated by comma which corresponds to the names of the sensors present in your computer. The key 0 is only for temperature sensors and the key 1 is for CPU frequencies. All this is hard-coded and a bit rigid currently but it might change in the future. </dd>
 <p> An example would be: </p>
 <dl>
-<dd>&lt;list&gt;<br />
+<dd>&lt;list&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = temp0, temp1</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 = cpu0, cpu1, cpu2, cpu3</p>
 <p> &lt;/list&gt;</dl>
@@ -460,7 +460,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>In this option you must associate the complete pathname of the file from where to get the value of each entry defined in the <i>Blist</i>. Following the settings in the example above: </dd>
 <dl>
-<dd>&lt;desc&gt;<br />
+<dd>&lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>temp0 = /sys/devices/virtual/thermal/thermal_zone0/temp</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>temp1 = /sys/devices/virtual/thermal/thermal_zone1/temp</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cpu0 = /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq</p>
@@ -473,7 +473,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>With this option you can define the order of magnitude associated to a specific value. This is used in both temperatures and CPU frequencies, since this kind of temperature sensors tend to give the value in 1000ths of degrees Celsius. In the case of CPU frequencies the values come in Mhz which means that they need to be converted to Hz by multiplying them by 1000. Therefore you can define something like this: </dd>
 <dl>
-<dd>&lt;unit&gt;<br />
+<dd>&lt;unit&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>temp0 = 1000</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>temp1 = 1000</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cpu0 = 0.001</p>
@@ -486,7 +486,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>With this option you can optionally rename any of the sensor names defined in the <code>list</code> option. Following the above example: </dd>
 <dl>
-<dd>&lt;map&gt;<br />
+<dd>&lt;map&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>temp0 = Temperature Zone 0</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>temp1 = Temperature Zone 1</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cpu0 = CPU0 frequency</p>
@@ -511,12 +511,12 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> To collect the disk drive temperatures and health the <i>smartmontools</i> or the <i>hddtemp</i> command are required. </p>
 <p> It is recommended that you first check if either <i><a href="/docs/linux/man/8-smartctl/">smartctl</a></i>(8) or <i>hddtemp</i> are able to collect data from the disk drive(s) that you plan to monitor. You may test this with the following command: </p>
 <dl>
-<dd># hddtemp /dev/sdb<br />
+<dd># hddtemp /dev/sdb<br/>
  /dev/sdb: WDC WD1600AABS-00M1A0: 48°C </dd>
 </dl>
 <p> If you see good results as above, you can add it to the group 0 like this: </p>
 <dl>
-<dd>&lt;list&gt;<br />
+<dd>&lt;list&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = /dev/sda, /dev/sdb</dd>
 <p> &lt;/list&gt;</dl>
 <p> The maximum number of disk device names allowed per group is 8.</dl>
@@ -538,8 +538,8 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This is the full path name of the script that will be executed by this alert. </dd>
 <p> It will receive the following three parameters: </p>
-<p> 1st &#8211; the value currently defined in <code>realloc_timeintvl</code>.<br />
- 2nd &#8211; the value currently defined in <code>realloc_threshold</code>.<br />
+<p> 1st &#8211; the value currently defined in <code>realloc_timeintvl</code>.<br/>
+ 2nd &#8211; the value currently defined in <code>realloc_threshold</code>.<br/>
  3rd &#8211; the current number of reallocated sectors. </p>
 <p> Default value: <i>/path/to/script.sh</i></dl>
 <p> <code>pendsect_enabled</code></p>
@@ -560,8 +560,8 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This is the full path name of the script that will be executed by this alert. </dd>
 <p> It will receive the following three parameters: </p>
-<p> 1st &#8211; the value currently defined in <code>pendsect_timeintvl</code>.<br />
- 2nd &#8211; the value currently defined in <code>pendsect_threshold</code>.<br />
+<p> 1st &#8211; the value currently defined in <code>pendsect_timeintvl</code>.<br/>
+ 2nd &#8211; the value currently defined in <code>pendsect_threshold</code>.<br/>
  3rd &#8211; the current number of pending sectors. </p>
 <p> Default value: <i>/path/to/script.sh</i></dl>
 <p> <code>accept_invalid_disk</code></p>
@@ -577,7 +577,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> WARNING: Every time the number of groups in this option changes, Monitorix will resize the <i>fs.rrd</i> file accordingly, removing all historical data. </p>
 <p> Take special care to use the same name as appears in the output of the <i><a href="/docs/linux/man/1-df/">df</a></i>(1) command (the <i>swap</i> device is a special case). An example would be: </p>
 <dl>
-<dd>&lt;list&gt;<br />
+<dd>&lt;list&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = /, swap, boot, home, /mnt/backup</dd>
 <p> &lt;/list&gt;</dl>
 <p> The maximum number of filesystems allowed per group is 8.</dl>
@@ -585,7 +585,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This list complements the <code>list</code> option. It basically allows you to change the name that will appear in the graph, hiding the real name of the mount point. If no association is defined, then Monitorix will display the name specified in the <code>list</code> option. </dd>
 <dl>
-<dd>&lt;desc&gt;<br />
+<dd>&lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/ = Root FS</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/home = My Home</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/mnt/backup = Backups</p>
@@ -616,7 +616,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 </dl>
 <p> Just an example:</p>
 <dl>
-<dd>&lt;devmap&gt;<br />
+<dd>&lt;devmap&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/mnt/home = dm-1</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/mnt/backup = cciss/c0d2p6</p>
 <p> &lt;/devmap&gt;</dl>
@@ -631,15 +631,15 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> The default Monitorix installation includes an example of a shell-script alert called <i>monitorix-alert.sh</i> which you can use as a base for your own script. </p>
 <p> The following is an example of an alert defined for the root filesystem: </p>
 <dl>
-<dd>&lt;alerts&gt;<br />
+<dd>&lt;alerts&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/ = 3600, 98, /path/to/script</dd>
 <p> &lt;/alerts&gt; </p>
 </dl>
 <p> Such alert means that if the percentage of disk space used in the root filesystem reaches or exceeds 98 (more than 98) during at least one hour (3600 seconds) the script in <i>/path/to/script</i> will be executed. </p>
 <p> The external script will receive the following arguments: </p>
 <dl>
-<dd>1st &#8211; the value defined as <i>time interval</i>.<br />
- 2nd &#8211; the value defined as <i>threshold</i>.<br />
+<dd>1st &#8211; the value defined as <i>time interval</i>.<br/>
+ 2nd &#8211; the value defined as <i>threshold</i>.<br/>
  3rd &#8211; the filesystem disk usage. </dd>
 </dl>
 </dl>
@@ -665,7 +665,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> <code>desc</code></p>
 <dl>
 <dd>This is a list of directories per group defined. </dd>
-<p> &lt;desc&gt;<br />
+<p> &lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = /var/spool/mail, /var/spool/mqueue, /etc, /var/ftp, /tmp</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 = /home/ace, /home/gene, /home/paul, /home/peter</p>
 <p> &lt;/desc&gt; </p>
@@ -696,7 +696,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This is the option where each network interface specified in <code>list</code> is described. Each definition consists of three parameters separated by comma: the description of the interface and the rigid and limit values. </dd>
 <p> Put one description for each interface listed. An example would be: </p>
 <dl>
-<dd>&lt;desc&gt;<br />
+<dd>&lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>eth0 = FastEthernet LAN, 0, 1000</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>eth1 = ADSL 10Mbs Internet, 0, 1000</p>
 <p> &lt;/desc&gt;</dl>
@@ -721,7 +721,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This is the option where you define the queue disciplines you want to monitor for each network interface specified in <code>list</code>. </dd>
 <p> An example would be: </p>
 <dl>
-<dd>&lt;desc&gt;<br />
+<dd>&lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>eth0 = cbq 1, sfq 10, sfq 20, sfq 30, ingress ffff</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>eth1 = htb 1, pfifo 20, pfifo 21, pfifo 22</p>
 <p> &lt;/desc&gt;</dl>
@@ -732,7 +732,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> Since the qdisc names have the space character in their names, they can&#8217;t be used as the key in the association, instead you must the use their position number (starting by 0) in the <code>desc</code> option. </p>
 <p> An example would be: </p>
 <dl>
-<dd>&lt;map&gt;<br />
+<dd>&lt;map&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;eth0&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = Class Based Queueing</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 = Stochastic Fairness Queueing 10</p>
@@ -758,7 +758,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> WARNING: Every time the number of groups in this option changes, Monitorix will resize the <i>libvirt.rrd</i> file accordingly, removing all historical data. </p>
 <p> An example would be: </p>
 <dl>
-<dd>&lt;list&gt;<br />
+<dd>&lt;list&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = centos6, winxp</dd>
 <p> &lt;/list&gt;</dl>
 <p> The maximum number of virtual machines allowed per group is 8.</dl>
@@ -766,13 +766,13 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This list complements the <code>list</code> option and is mandatory for every virtual machine listed. You must define the virtual block device and the MAC address of the virtual network device that you want to monitor for every virtual machine. Just like this: </dd>
 <dl>
-<dd>&lt;desc&gt;<br />
+<dd>&lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>centos6 = CentOS 6, vda, 52:54:00:45:d0:e7</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>winxp = MS Windows XP, hda, 52:54:00:97:1c:e5</p>
 <p> &lt;/desc&gt;</dl>
 <p> You might also define this list using sections for each virtual machine, this way you&#8217;ll be able to define multiple disks and multiple network interfaces for each virtual machine. Just like this: </p>
 <dl>
-<dd>&lt;desc&gt;<br />
+<dd>&lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;centos6&gt;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>desc = &quot;CentOS 6&quot;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>disk = vda, vdb, vdc</p>
@@ -780,14 +780,14 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;/centos6&gt;</p>
 <p> &lt;/desc&gt;</dl>
 <p> To obtain all these values you might want to use the following commands: </p>
-<p> # virsh domblklist centos6<br />
- Target Source<br />
- &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />
- vda /home/jordi/kvm/centos6.img<br />
+<p> # virsh domblklist centos6<br/>
+ Target Source<br/>
+ &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br/>
+ vda /home/jordi/kvm/centos6.img<br/>
  hdc &#8211; </p>
-<p> # virsh domiflist centos6<br />
- Interface Type Source Model MAC<br />
- &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
+<p> # virsh domiflist centos6<br/>
+ Interface Type Source Model MAC<br/>
+ &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br/>
  vnet3 network default virtio 52:54:00:45:d0:e7 </p>
 <p> This option also allows you to change the name that will appear in the graph, hiding the real name of the virtual machine. If no association is defined, then Monitorix will display the name specified in the <code>list</code> option.</dl>
 <h3>Process statistics (process.rrd)</h3>
@@ -803,7 +803,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> Therefore names in the process list must *EXACTLY* correspond to those in the <i>comm</i> (or <i>command</i>) field of the above command (no substring, no wildcard). </p>
 <p> An example of this option would be: </p>
 <dl>
-<dd>&lt;list&gt;<br />
+<dd>&lt;list&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = httpd, sshd, ntpd, mysqld, proftpd, clamd, imap, sendmail, named, bash</dd>
 <p> &lt;/list&gt;</dl>
 <p> The maximum number of processes allowed per group is 10.</dl>
@@ -811,7 +811,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This list complements the <code>list</code> option. It basically allows you to change the name that will appear in the graph, hiding the real name of the process. If no association is defined, then Monitorix will display the name specified in the <code>list</code> option. </dd>
 <dl>
-<dd>&lt;desc&gt;<br />
+<dd>&lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>httpd = Apache</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>imap = Dovecot</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>named = Bind</p>
@@ -823,7 +823,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This option toggles the way the System Services Demand data is represented in the graph. There are two possible values: </dd>
 <dl>
-<dd><i>i</i> for incremental style.<br />
+<dd><i>i</i> for incremental style.<br/>
  <i>l</i> for load (peaks) style.</dd></dl>
 <p> Default value: <i>i</i></dl>
 <h3>Mail statistics (mail.rrd)</h3>
@@ -832,7 +832,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This option specifies the MTA that Monitorix will use to collect mail statistics. The currently supported MTAs are:</dd>
 <dl>
-<dd><i>Sendmail</i><br />
+<dd><i>Sendmail</i><br/>
  <i>Postfix</i></dd></dl>
 <p> NOTE: the <i>pflogsumm</i> utility is required when using the <code>Postfix</code> MTA. </p>
 <p> Default value: <i>sendmail</i></dl>
@@ -862,8 +862,8 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This is the full path name of the script that will be executed by this alert. </dd>
 <p> It will receive the following three parameters: </p>
-<p> 1st &#8211; the value currently defined in <code>delvd_timeintvl</code>.<br />
- 2nd &#8211; the value currently defined in <code>delvd_threshold</code>.<br />
+<p> 1st &#8211; the value currently defined in <code>delvd_timeintvl</code>.<br/>
+ 2nd &#8211; the value currently defined in <code>delvd_threshold</code>.<br/>
  3rd &#8211; the number of delivered messages. </p>
 <p> Default value: <i>/path/to/script.sh</i></dl>
 <p> <code>mqueued_enabled</code></p>
@@ -885,8 +885,8 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This is the full path name of the script that will be executed by this alert. </dd>
 <p> It will receive the following three parameters: </p>
-<p> 1st &#8211; the value currently defined in <code>mqueued_timeintvl</code>.<br />
- 2nd &#8211; the value currently defined in <code>mqueued_threshold</code>.<br />
+<p> 1st &#8211; the value currently defined in <code>mqueued_timeintvl</code>.<br/>
+ 2nd &#8211; the value currently defined in <code>mqueued_threshold</code>.<br/>
  3rd &#8211; the number of messages in the mail queue. </p>
 <p> Default value: <i>/path/to/script.sh</i></dl>
 <h3>Network port traffic (port.rrd)</h3>
@@ -909,8 +909,8 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> There is also support (Linux only) for IPv6 network ports activity by using protocol names as <i>tcp6</i> or <i>udp6</i>. </p>
 <p> An example would be:</p>
 <dl>
-<dd>list = 25, 25ip6, 80, 53<br />
- &lt;desc&gt;<br />
+<dd>list = 25, 25ip6, 80, 53<br/>
+ &lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>25 = SMTP, tcp, in/out, 0, 1000</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>25ip6 = SMTP, tcp6, in/out, 0, 1000</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>80 = HTTP, tcp, in, 0, 1000</p>
@@ -933,8 +933,8 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This option specifies the FTP server. The currently supported FTP servers are:</dd>
 <dl>
-<dd><i>ProFTPD</i><br />
- <i>vsftpd</i><br />
+<dd><i>ProFTPD</i><br/>
+ <i>vsftpd</i><br/>
  <i>Pure-FTPd</i></dd></dl>
 <p> Default value: <i>proftpd</i></dl>
 <p> <code>anon_user</code></p>
@@ -959,15 +959,15 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> The default Monitorix installation includes an example of a shell-script alert called <i>monitorix-alert.sh</i> which you can use as a base for your own script. </p>
 <p> The following is an example of an alert defined for the local Apache: </p>
 <dl>
-<dd>&lt;alerts&gt;<br />
+<dd>&lt;alerts&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a rel="nofollow" href="http://localhost/server-status?auto">http://localhost/server-status?auto</a> = 3600, 5, /path/to/script</dd>
 <p> &lt;/alerts&gt; </p>
 </dl>
 <p> Such alert means that if the remaining free slots reaches or exceeds 5 (less than 5) during at least one hour (3600 seconds) the script in <i>/path/to/script</i> will be executed. </p>
 <p> The external script will receive the following arguments: </p>
 <dl>
-<dd>1st &#8211; the value defined as <i>time interval</i>.<br />
- 2nd &#8211; the value defined as <i>threshold</i>.<br />
+<dd>1st &#8211; the value defined as <i>time interval</i>.<br/>
+ 2nd &#8211; the value defined as <i>threshold</i>.<br/>
  3rd &#8211; the remaining free slots. </dd>
 </dl>
 </dl>
@@ -997,7 +997,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <h3>MySQL statistics (mysql.rrd)</h3>
 <p>This graph requires that you create a password protected MySQL user that is NOT granted privileges on any DB. </p>
 <p> Example: </p>
-<p> mysql&gt; CREATE USER &#8216;user&#8217;@&#8217;localhost&#8217; IDENTIFIED BY &#8216;password&#8217;;<br />
+<p> mysql&gt; CREATE USER &#8216;user&#8217;@&#8217;localhost&#8217; IDENTIFIED BY &#8216;password&#8217;;<br/>
  mysql&gt; FLUSH PRIVILEGES; </p>
 <p> where <i>user</i> is the new user name and <i>password</i> is the password that will be used for that user. </p>
 <p> This graph is able to monitor an unlimited number of local and remote MySQL web servers. </p>
@@ -1006,7 +1006,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This option toggles the way how Monitorix establishes the connection with the MySQL server. There are two possible values: </dd>
 <dl>
-<dd><i>host</i> using the network (hostname and IP address).<br />
+<dd><i>host</i> using the network (hostname and IP address).<br/>
  <i>socket</i> using a socket file.</dd></dl>
 <p> Default value: <i>host</i></dl>
 <p> <code>list</code></p>
@@ -1019,40 +1019,40 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This is the option where each entry specified in the list is described. Each definition consists of three parameters separated by comma: the port, the username and the password. </dd>
 <p> An example using the <i>host</i> type would be:</p>
 <dl>
-<dd>&lt;desc&gt;<br />
+<dd>&lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>localhost = 3306, user, secret</dd>
 <p> &lt;/desc&gt;</dl>
 <p> When using the <i>socket</i> type the network port is, of course, irrelevant but its field is still mandatory. This means that you must respect the three comma-separated values. </p>
 <p> Some of the values shown in the graphs are the result of a calculation of two values from either <i>SHOW [GLOBAL] STATUS</i> or <i>SHOW VARIABLES</i>. The following is an explanation of them: </p>
-<p> <code>Thread Cache Hit Rate</code><br />
- <code>(1 &#8211; (Threads_created / Connections)) * 100</code><br />
- When an application connects to a MySQL database, the database has to create a thread to manage the connection and the queries that will be sent in that connection. The database instructs the kernel to create a new thread, and the kernel allocates resources and creates the thread, then returns it to the MySQL service. When the connection is terminated by the application, MySQL tells the kernel to destroy the thread and free the resources. This create/destroy mechanism causes considerable overhead if the MySQL server has many new connections per second.<br />
- If MySQL doesn&#8217;t destroy the thread when the connection is terminated, but reuses it and assigns it to the next connection then this will decrease the kernel overhead. This is why a high <code>Thread Cache Hit Rate</code> improves MySQL performance and decreases the system&#8217;s CPU usage.<br />
- Setting the parameter <i>thread_cache_size</i> in the <i>my.cnf</i> file accordingly will help to correctly balance between having a great thread cache and keeping MySQL memory consumption reasonable.<br />
+<p> <code>Thread Cache Hit Rate</code><br/>
+ <code>(1 &#8211; (Threads_created / Connections)) * 100</code><br/>
+ When an application connects to a MySQL database, the database has to create a thread to manage the connection and the queries that will be sent in that connection. The database instructs the kernel to create a new thread, and the kernel allocates resources and creates the thread, then returns it to the MySQL service. When the connection is terminated by the application, MySQL tells the kernel to destroy the thread and free the resources. This create/destroy mechanism causes considerable overhead if the MySQL server has many new connections per second.<br/>
+ If MySQL doesn&#8217;t destroy the thread when the connection is terminated, but reuses it and assigns it to the next connection then this will decrease the kernel overhead. This is why a high <code>Thread Cache Hit Rate</code> improves MySQL performance and decreases the system&#8217;s CPU usage.<br/>
+ Setting the parameter <i>thread_cache_size</i> in the <i>my.cnf</i> file accordingly will help to correctly balance between having a great thread cache and keeping MySQL memory consumption reasonable.<br/>
  Higher is better. </p>
-<p> <code>Query Cache Hit Rate</code><br />
- <code>Qcache_hits / (Qcache_hits + Com_select) * 100</code><br />
- Higher should be considered better.<br />
- A query cache size increase is recommended if the query cache usage is very close to 100% and the query cache hit rate is far from 100%. But sometimes a size increase will not lead to a better hit rate: this means that the increase was not needed and that the application do not run enough cacheable SELECT queries.<br />
+<p> <code>Query Cache Hit Rate</code><br/>
+ <code>Qcache_hits / (Qcache_hits + Com_select) * 100</code><br/>
+ Higher should be considered better.<br/>
+ A query cache size increase is recommended if the query cache usage is very close to 100% and the query cache hit rate is far from 100%. But sometimes a size increase will not lead to a better hit rate: this means that the increase was not needed and that the application do not run enough cacheable SELECT queries.<br/>
  This value should grow proportionally with the number of executed queries as long as the query cache is performing well. Please also have a look at the <code>Query cache usage</code> percentage to know if your query_cache configuration is appropriate. </p>
 <p> For more information please refer to <a rel="nofollow" href="http://www.databasejournal.com/features/mysql/article.php/3808841/Optimizing-the-MySQL-Query-Cache.htm">http://www.databasejournal.com/features/mysql/article.php/3808841/Optimizing-the-MySQL-Query-Cache.htm</a> </p>
-<p> <code>Query Cache Usage</code><br />
- <code>(1 &#8211; (Qcache_free_memory / query_cache_size)) * 100</code><br />
+<p> <code>Query Cache Usage</code><br/>
+ <code>(1 &#8211; (Qcache_free_memory / query_cache_size)) * 100</code><br/>
  This value should be reasonably far from 100%, otherwise consider incrementing the <i>query_cache_size</i> parameter in <i>my.cnf</i>. </p>
-<p> <code>Connections Usage</code><br />
- <code>(Max_used_connections / max_connections) * 100</code><br />
+<p> <code>Connections Usage</code><br/>
+ <code>(Max_used_connections / max_connections) * 100</code><br/>
  This value should be reasonably far from 100%, otherwise consider incrementing the <i>max_connections</i> parameter in <i>my.cnf</i>. </p>
-<p> <code>Key Buffer Usage</code><br />
- <code>(Key_blocks_used / (Key_blocks_used + Key_blocks_unused)) * 100</code><br />
+<p> <code>Key Buffer Usage</code><br/>
+ <code>(Key_blocks_used / (Key_blocks_used + Key_blocks_unused)) * 100</code><br/>
  This value should be reasonably far from 100%, otherwise consider incrementing the <i>key_buffer_size</i> parameter in <i>my.cnf</i>. </p>
-<p> <code>InnoDB Buffer Pool Usage</code><br />
- <code>(1 &#8211; (Innodb_buffer_pool_pages_free / Innodb_buffer_pool_pages_total)) * 100</code><br />
+<p> <code>InnoDB Buffer Pool Usage</code><br/>
+ <code>(1 &#8211; (Innodb_buffer_pool_pages_free / Innodb_buffer_pool_pages_total)) * 100</code><br/>
  This value should be reasonably far from 100%, otherwise consider incrementing the <i>innodb_buffer_pool_size</i> parameter in <i>my.cnf</i>. </p>
-<p> <code>Temp. Tables To Disk</code><br />
- <code>(Created_temp_disk_tables / Created_temp_disk_tables + Created_temp_tables)) * 100</code><br />
- During operation, MySQL has to create some temporary tables (that can be explicit, so created by the web application, or implicit, so for example MySQL has to create one when he runs some &quot;SELECT DISTINCT&quot;, &quot;UNION&quot; or &quot;VIEW&quot; queries). MySQL will prefer to save this tmp tables to memory, for a fast access. But if <i>tmp_table_size</i> gets saturated, he has to write them on the disk instead, making the access slower.<br />
- Note that if you modify the value of <i>tmp_table_size</i> in the MySQL configuration file, you should also modify the value of <i>max_heap_table_size</i> as well, since both values should have the same value because MySQL uses the minimum of both, so raising one of them is useless.<br />
- Therefore this value helps to know how many tmp tables go to the disk instead than to the memory. Keep in mind that some large queries, involving TEXT and BLOB columns, are directly written to the disk instead than to the memory, because they would be too big. So you probably will want to avoid having a high % of tmp tables written to the disk, but you will never reach 0% on a big site, and this is fine.<br />
+<p> <code>Temp. Tables To Disk</code><br/>
+ <code>(Created_temp_disk_tables / Created_temp_disk_tables + Created_temp_tables)) * 100</code><br/>
+ During operation, MySQL has to create some temporary tables (that can be explicit, so created by the web application, or implicit, so for example MySQL has to create one when he runs some &quot;SELECT DISTINCT&quot;, &quot;UNION&quot; or &quot;VIEW&quot; queries). MySQL will prefer to save this tmp tables to memory, for a fast access. But if <i>tmp_table_size</i> gets saturated, he has to write them on the disk instead, making the access slower.<br/>
+ Note that if you modify the value of <i>tmp_table_size</i> in the MySQL configuration file, you should also modify the value of <i>max_heap_table_size</i> as well, since both values should have the same value because MySQL uses the minimum of both, so raising one of them is useless.<br/>
+ Therefore this value helps to know how many tmp tables go to the disk instead than to the memory. Keep in mind that some large queries, involving TEXT and BLOB columns, are directly written to the disk instead than to the memory, because they would be too big. So you probably will want to avoid having a high % of tmp tables written to the disk, but you will never reach 0% on a big site, and this is fine.<br/>
  Lower is better &#8230; but 0% is not reachable and you should not try to reach it, usually.</dl>
 <h3>Varnish cache statistics (varnish.rrd)</h3>
 <p>This graph monitors a local installation of the Varnish HTTP accelerator. </p>
@@ -1071,7 +1071,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This command displays statistics about the Squid HTTP proxy process and is the main command used to collect all data. </dd>
 <p> Default value: <i>squidclient -h 127.0.0.1</i> </p>
 </dl>
-<p> <code>graph_0</code><br />
+<p> <code>graph_0</code><br/>
  <code>graph_1</code></p>
 <dl>
 <dd>These two lists hold the selected Squid result or status codes to be shown in each graph. Feel free to mix result status and code status in any of the two options. </dd>
@@ -1083,13 +1083,13 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This option specifies which NFS server version is running in the system in order to correctly gather the correct values. </dd>
 <p> The possible values are:</p>
 <dl>
-<dd><i>2</i> for NFS v2.<br />
- <i>3</i> for NFS v3.<br />
+<dd><i>2</i> for NFS v2.<br/>
+ <i>3</i> for NFS v3.<br/>
  <i>4</i> for NFS v4.</dd></dl>
 <p> Default value: <i>3</i> </p>
 </dl>
-<p> <code>graph_0</code><br />
- <code>graph_1</code><br />
+<p> <code>graph_0</code><br/>
+ <code>graph_1</code><br/>
  <code>graph_2</code></p>
 <dl>
 <dd>These three lists hold the defined NFS server activity statistics to be shown in each graph. Put every statistic name exactly as they appear in the output of the <i><a href="/docs/linux/man/8-nfsstat/">nfsstat</a></i>(8) command. </dd>
@@ -1100,28 +1100,28 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This option specifies which NFS server version is running in the system in order to correctly gather the correct values. </dd>
 <p> The possible values are:</p>
 <dl>
-<dd><i>2</i> for NFS v2.<br />
- <i>3</i> for NFS v3.<br />
+<dd><i>2</i> for NFS v2.<br/>
+ <i>3</i> for NFS v3.<br/>
  <i>4</i> for NFS v4.</dd></dl>
 <p> Default value: <i>3</i> </p>
 </dl>
-<p> <code>graph_1</code><br />
- <code>graph_2</code><br />
- <code>graph_3</code><br />
- <code>graph_4</code><br />
+<p> <code>graph_1</code><br/>
+ <code>graph_2</code><br/>
+ <code>graph_3</code><br/>
+ <code>graph_4</code><br/>
  <code>graph_5</code></p>
 <dl>
 <dd>These five lists hold the defined NFS client activity statistics to be shown in each graph. Put every statistic name exactly as they appear in the output of the <i><a href="/docs/linux/man/8-nfsstat/">nfsstat</a></i>(8) command. </dd>
 <p> Each graph has the following limit number of entries: </p>
-<p> <code>graph_1</code> up to 10 entries.<br />
- <code>graph_2</code> up to 10 entries.<br />
- <code>graph_3</code> up to 4 entries.<br />
- <code>graph_4</code> up to 4 entries.<br />
+<p> <code>graph_1</code> up to 10 entries.<br/>
+ <code>graph_2</code> up to 10 entries.<br/>
+ <code>graph_3</code> up to 4 entries.<br/>
+ <code>graph_4</code> up to 4 entries.<br/>
  <code>graph_5</code> up to 4 entries.</dl>
 <h3>BIND statistics (bind.rrd)</h3>
 <p>This graph requires a BIND server with version 9.5 or higher, and in order to see all statistics provided by BIND you must configure the <i>statistics-channels</i> option like this: </p>
 <p> statistics-channels { </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>inet 127.0.0.1 port 8053;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>inet 127.0.0.1 port 8053;<br/>
  }; </p>
 <p> This graph is able to monitor an unlimited number of BIND servers. </p>
 <p> <code>list</code></p>
@@ -1133,35 +1133,35 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This is a comma-separated list of RR (Resource Records) types for each BIND server specified in <code>list</code> option. The RR types defined here will appear in the Incoming Queries graph which shows the number of incoming queries for each RR type. </dd>
 <p> For a complete list of RR types check the BIND 9 Administrator Reference Manual at &lt;<a rel="nofollow" href="http://ftp.isc.org/www/bind/arm95/Bv9ARM.html">http://ftp.isc.org/www/bind/arm95/Bv9ARM.html</a>&gt;. </p>
-<p> &lt;in_queries_list&gt;<br />
+<p> &lt;in_queries_list&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a rel="nofollow" href="http://localhost:8053/">http://localhost:8053/</a> = A, AAAA, ANY, DS, MX, NS, PTR, SOA, SRV, TXT, NAPTR, A6, CNAME, SPF, KEY, DNSKEY, HINFO, WKS, PX, NSAP</p>
 <p> &lt;/in_queries_list&gt; </p>
 <p> The maximum number of RR types allowed for this graph is 20.</dl>
 <p> <code>out_queries_list</code></p>
 <dl>
 <dd>This is a comma-separated list of RR (Resource Records) types for each BIND server. The RR types defined here will appear in the Outgoing Queries graph (_default view) which shows the number of outgoing queries sent by the DNS server resolver for each RR type. </dd>
-<p> &lt;out_queries_list&gt;<br />
+<p> &lt;out_queries_list&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a rel="nofollow" href="http://localhost:8053/">http://localhost:8053/</a> = A, AAAA, ANY, DS, MX, NS, PTR, SOA, SRV, TXT, NAPTR, A6, CNAME, SPF, KEY, DNSKEY, HINFO, WKS, PX, NSAP</p>
 <p> &lt;/out_queries_list&gt; </p>
 <p> The maximum number of RR types allowed for this graph is 20.</dl>
 <p> <code>server_stats_list</code></p>
 <dl>
 <dd>This is a comma-separated list of counters about incoming request processing. The counters defined here will appear in the Server Statistics graph. </dd>
-<p> &lt;server_stats_list&gt;<br />
+<p> &lt;server_stats_list&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a rel="nofollow" href="http://localhost:8053/">http://localhost:8053/</a> = Requestv4, Requestv6, ReqEdns0, ReqBadEDNSVer, ReqTSIG, ReqSIG0, ReqBadSIG, ReqTCP, Response, QrySuccess, QryAuthAns, QryNoauthAns, QryReferral, QryNxrrset, QrySERVFAIL, QryNXDOMAIN, QryRecursion, QryDuplicate, QryDropped, QryFailure</p>
 <p> &lt;/server_stats_list&gt; </p>
 <p> The maximum number of counters allowed for this graph is 20.</dl>
 <p> <code>resolver_stats_list</code></p>
 <dl>
 <dd>This is a comma-separated list of counters about name resolution performed in the internal resolver. The counters defined here will appear in the Resolver Statistics graph (_default view). </dd>
-<p> &lt;resolver_stats_list&gt;<br />
+<p> &lt;resolver_stats_list&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a rel="nofollow" href="http://localhost:8053/">http://localhost:8053/</a> = Queryv4, Queryv6, Responsev4, Responsev6, NXDOMAIN, SERVFAIL, FORMERR, OtherError, EDNS0Fail, Truncated, Lame, Retry, QueryTimeout, GlueFetchv4, GlueFetchv6, GlueFetchv4Fail, GlueFetchv6Fail, ValAttempt, ValOk, ValNegOk</p>
 <p> &lt;/resolver_stats_list&gt; </p>
 <p> The maximum number of counters allowed for this graph is 20.</dl>
 <p> <code>cache_rrsets_list</code></p>
 <dl>
 <dd>This is a comma-separated list of RR (Resource Records) types for each BIND server. The RR types defined here will appear in the Cache DB RRsets graph (_default view) which shows the number of RRsets per RR type (positive or negative) and nonexistent names stored in the cache database. </dd>
-<p> &lt;cache_rrsets_list&gt;<br />
+<p> &lt;cache_rrsets_list&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a rel="nofollow" href="http://localhost:8053/">http://localhost:8053/</a> = A, !A, AAAA, !AAAA, DLV, !DLV, DS, !DS, MX, NS, CNAME, !CNAME, SOA, !SOA, !ANY, PTR, RRSIG, NSEC, DNSKEY, NXDOMAIN</p>
 <p> &lt;/cache_rrsets_list&gt; </p>
 <p> The maximum number of RR types allowed for this graph is 20.</dl>
@@ -1175,10 +1175,10 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> <code>desc</code></p>
 <dl>
 <dd>This is a list of groups of Reference Identifier and Kiss-o&#8217;-Death Codes for every hostname specified in the <code>list</code> option. </dd>
-<p> For more information on these NTP codes:<br />
- &lt;<a rel="nofollow" href="http://www.iana.org/assignments/ntp-parameters/ntp-parameters.xml">http://www.iana.org/assignments/ntp-parameters/ntp-parameters.xml</a>&gt;<br />
+<p> For more information on these NTP codes:<br/>
+ &lt;<a rel="nofollow" href="http://www.iana.org/assignments/ntp-parameters/ntp-parameters.xml">http://www.iana.org/assignments/ntp-parameters/ntp-parameters.xml</a>&gt;<br/>
  &lt;<a rel="nofollow" href="http://www.iana.org/go/rfc5905">http://www.iana.org/go/rfc5905</a>&gt; </p>
-<p> &lt;desc&gt;<br />
+<p> &lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>localhost = AUTH, AUTO, CRYP, DENY, GPS, INIT, NKEY, RATE, RMOT, RSTR</p>
 <p> &lt;/desc&gt; </p>
 <p> The maximum number of codes allowed for each hostname is 10.</dl>
@@ -1206,7 +1206,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> <code>desc</code></p>
 <dl>
 <dd>This is a list of jails per group defined in your Fail2ban configuration. </dd>
-<p> &lt;desc&gt;<br />
+<p> &lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = [apache], [apache-mod-security], [apache-overflows], [courierauth], [ssh], [pam-generic], [php-url-fopen], [vsftpd]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 = [apache-imdbphp], [apache-evasive], [apache-badbots], [apache-robots-txt], [communigate], [named-refused-udp], [named-refused-tcp], [trac-ticketspam]</p>
 <p> &lt;/desc&gt; </p>
@@ -1225,7 +1225,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> <code>desc</code></p>
 <dl>
 <dd>This is a comma-separated list of Mount Points configured for every URL specified in the <code>list</code> option. IMPORTANT: the Mount Points must be specified in the same order that appears in the Icecast Server Status page. </dd>
-<p> &lt;desc&gt;<br />
+<p> &lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a rel="nofollow" href="http://localhost:8000/status.xsl">http://localhost:8000/status.xsl</a> = stream1, stream2, stream3</p>
 <p> &lt;/desc&gt; </p>
 <p> The maximum number of mountpoints allowed for each URL is 9.</dl>
@@ -1294,7 +1294,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p> <code>desc</code></p>
 <dl>
 <dd>This is a comma-separated list of applications configured for every URL specified in the <code>list</code> option. </dd>
-<p> &lt;desc&gt;<br />
+<p> &lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a rel="nofollow" href="http://localhost:8086/connectioncounts">http://localhost:8086/connectioncounts</a> = channel1, channel2, channel3</p>
 <p> &lt;/desc&gt; </p>
 <p> The maximum number of applications allowed for each URL is 8.</dl>
@@ -1331,7 +1331,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This is the list of IP addresses with network masks and email addresses corresponding to the entries defined in the <code>list</code>. This option is only used when the those entries are not resolvable through a DNS query. </dd>
 <p> An example would be: </p>
 <dl>
-<dd>&lt;desc&gt;<br />
+<dd>&lt;desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = 192.168.1.101/32, ace [at] example.com</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 = 192.168.1.102/32, gene [at] example.com</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>2 = 192.168.1.103/32, paul [at] example.com</p>
@@ -1390,7 +1390,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This is a numbered list that describes each of the names defined in the <code>remotehost_list</code> option and the remote values of <code>base_url</code> and <code>base_cgi</code> options. </dd>
 <p> An example would be: </p>
 <dl>
-<dd>&lt;remotehost_desc&gt;<br />
+<dd>&lt;remotehost_desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = <a rel="nofollow" href="http://www.example.com,/monitorix,/monitorix-cgi">http://www.example.com,/monitorix,/monitorix-cgi</a></dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 = <a rel="nofollow" href="http://10.0.0.1,/monitorix,/monitorix-cgi">http://10.0.0.1,/monitorix,/monitorix-cgi</a></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>2 = <a rel="nofollow" href="http://192.168.0.100:8080,/,/">http://192.168.0.100:8080,/,/</a></p>
@@ -1412,7 +1412,7 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dd>This is a numbered list that describes each of the names defined in the <code>remotegroup_list</code> option. </dd>
 <p> An example would be: </p>
 <dl>
-<dd>&lt;remotegroup_desc&gt;<br />
+<dd>&lt;remotegroup_desc&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = server2, server 3</dd>
 <p> &lt;/remotegroup_desc&gt;</dl>
 </dl>
@@ -1447,15 +1447,15 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <dl>
 <dd>This is the minute when the email reports will be sent. </dd>
 <p> Default value: <i>0</i></dl>
-<p> <code>daily</code><br />
- <code>weekly</code><br />
- <code>monthly</code><br />
+<p> <code>daily</code><br/>
+ <code>weekly</code><br/>
+ <code>monthly</code><br/>
  <code>yearly</code></p>
 <dl>
 <dd>The email reports are sent based on the following schedule: </dd>
-<p> <i>daily</i> reports will be sent every day at 00:00h.<br />
- <i>weekly</i> reports will be sent the first Monday of each week.<br />
- <i>monthly</i> reports will be sent the first day of each month.<br />
+<p> <i>daily</i> reports will be sent every day at 00:00h.<br/>
+ <i>weekly</i> reports will be sent the first Monday of each week.<br/>
+ <i>monthly</i> reports will be sent the first day of each month.<br/>
  <i>yearly</i> reports will be sent the first day of each year.</dl>
 <p> <code>enabled</code></p>
 <dl>
@@ -1476,18 +1476,18 @@ description: "monitorix.conf – Configuration file for Monitorix."
 <p><code>rigid</code></p>
 <dl>
 <dd>This value defines how the graph must be scaled. Its possible values are: </dd>
-<p> <i>0</i> No rigid, the graph will be scaled automatically. Only the lower-limit value will be used if it&#8217;s defined.<br />
- <i>1</i> The graph will be scaled by default according the values in <code>limit</code> but without rigidness.<br />
+<p> <i>0</i> No rigid, the graph will be scaled automatically. Only the lower-limit value will be used if it&#8217;s defined.<br/>
+ <i>1</i> The graph will be scaled by default according the values in <code>limit</code> but without rigidness.<br/>
  <i>2</i> The graph will be forced to scale using the contents of <code>limit</code> as its upper-limit and lower-limit values.</dl>
 <p> <code>limit</code></p>
 <dl>
 <dd>This is where you can enter the upper-limit and lower-limit values (separated by a colon) for a graph. The lower-limit value is optional. Some examples would be: </dd>
-<p> <i>100:0</i> which means <i>100</i> as the upper-limit value and <i>0</i> for the lower-limit value. This is commonly used for percentage values.<br />
+<p> <i>100:0</i> which means <i>100</i> as the upper-limit value and <i>0</i> for the lower-limit value. This is commonly used for percentage values.<br/>
  <i>1000</i> which means <i>1000</i> as the upper-limit value and leaving undefined the lower-limit value. This can also be written as <i>1000:</i>.</dl>
 <h2>Author</h2>
 <p>Monitorix is written by Jordi Sanfeliu &lt;jordi [at] fibranet.cat&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2005-2016 Jordi Sanfeliu<br />
+<p>Copyright &#169; 2005-2016 Jordi Sanfeliu<br/>
  Licensed under the GNU General Public License version 2 (GPLv2).</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-monitorix/">monitorix</a></code>(8), <code><a href="/docs/linux/man/1-rrdtool/">rrdtool</a></code>(1) </p>

@@ -10,7 +10,7 @@ description: "slasd7.f –"
 <p>slasd7.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slasd7</code> (ICOMPQ, NL, NR, SQRE, K, D, Z, ZW, VF, VFW, VL, VLW, ALPHA, BETA, DSIGMA, IDX, IDXP, IDXQ, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, C, S, INFO)<br />
+<p>subroutine <code>slasd7</code> (ICOMPQ, NL, NR, SQRE, K, D, Z, ZW, VF, VFW, VL, VLW, ALPHA, BETA, DSIGMA, IDX, IDXP, IDXQ, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, C, S, INFO)<br/>
  <i></i><code>SLASD7</code> merges the two sets of singular values together into a single sorted set. Then it tries to deflate the size of the problem. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasd7 (integerICOMPQ, integerNL, integerNR, integerSQRE, integerK, real, dimension( * )D, real, dimension( * )Z, real, dimension( * )ZW, real, dimension( * )VF, real, dimension( * )VFW, real, dimension( * )VL, real, dimension( * )VLW, realALPHA, realBETA, real, dimension( * )DSIGMA, integer, dimension( * )IDX, integer, dimension( * )IDXP, integer, dimension( * )IDXQ, integer, dimension( * )PERM, integerGIVPTR, integer, dimension( ldgcol, * )GIVCOL, integerLDGCOL, real, dimension( ldgnum, * )GIVNUM, integerLDGNUM, realC, realS, integerINFO)</h3>

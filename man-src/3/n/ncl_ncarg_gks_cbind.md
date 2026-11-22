@@ -87,15 +87,15 @@ gset_vp
 gset_win
 gtext
 gupd_ws</pre>
-<p>Please see the man page for any of these for more information on that<br />
-particular function.  In the future, as higher level GKS Fortran functions<br />
-are implemented, there may be C-bindings created for them as well.<br />
-Notice that since the NCAR Graphics GKS C-binding adheres to the<br />
-standard, the names for the C-bindings are not like the Fortran names.<br />
-Instead, the functions names are more descriptive, like<br />
-gset_fill_colr_ind which corresponds to the Fortran GKS routine<br />
-GSFACI.  If you know the name of the Fortran GKS routine and you<br />
-need the C-binding name, you can look at the man page for the Fortran<br />
+<p>Please see the man page for any of these for more information on that<br/>
+particular function.  In the future, as higher level GKS Fortran functions<br/>
+are implemented, there may be C-bindings created for them as well.<br/>
+Notice that since the NCAR Graphics GKS C-binding adheres to the<br/>
+standard, the names for the C-bindings are not like the Fortran names.<br/>
+Instead, the functions names are more descriptive, like<br/>
+gset_fill_colr_ind which corresponds to the Fortran GKS routine<br/>
+GSFACI.  If you know the name of the Fortran GKS routine and you<br/>
+need the C-binding name, you can look at the man page for the Fortran<br/>
 routine to get the name of the C-binding routine.</p>
 <h2>Argument Lists</h2>
 <p>The argument list of each GKS C-binding closely corresponds with the argument list of the Fortran routine, but in many cases, the arguments are represented in the form of a C structure. These structures are defined in the include file &lt;ncarg/gks.h&gt;.</p>
@@ -115,6 +115,6 @@ Hardcopy:
 NCAR Graphics Fundamentals, UNIX Version
 User's Guide for NCAR GKS-0A Graphics</code></pre>
 <h2>Copyright</h2>
-<p>Copyright (C) 1987-2002<br />
+<p>Copyright (C) 1987-2002<br/>
  University Corporation for Atmospheric Research </p>
 <p> The use of this Software is governed by a License Agreement.</p>

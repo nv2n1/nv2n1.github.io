@@ -36,6 +36,6 @@ int ares_set_servers(ares_channel channel, struct ares_addr_node *servers)
 <h2>AVAILABILITY</h2>
 <p> <a href="/docs/linux/man/3-ares_set_servers/">ares_set_servers</a>(3) was added in c-ares 1.7.1</p>
 <h2>AUTHOR</h2>
-<p> Implementation of this function and associated library internals are based on code, comments and feedback provided in November and December of 2008 by Daniel Stenberg, Gregor Jasny, Phil Blundell and Yang Tse, December 2009 by Cedric Bail, February 2010 by Jakub Hrozek. On March 2010 Yang Tse shuffled all the bits and this function popped out.<br />
- Copyright 1998 by the Massachusetts Institute of Technology.<br />
+<p> Implementation of this function and associated library internals are based on code, comments and feedback provided in November and December of 2008 by Daniel Stenberg, Gregor Jasny, Phil Blundell and Yang Tse, December 2009 by Cedric Bail, February 2010 by Jakub Hrozek. On March 2010 Yang Tse shuffled all the bits and this function popped out.<br/>
+ Copyright 1998 by the Massachusetts Institute of Technology.<br/>
  Copyright (C) 2008-2010 by Daniel Stenberg </p>

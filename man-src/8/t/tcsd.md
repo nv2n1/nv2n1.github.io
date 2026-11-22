@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tcsd/"
 description: "tcsd – daemon that manages Trusted Computing resources"
 ---
 
-<p>TCG Software Stack<br />
+<p>TCG Software Stack<br/>
  </center></p>
 <h2>Name</h2>
 <p>tcsd &#8211; daemon that manages Trusted Computing resources</p>

@@ -7,10 +7,10 @@ url: "/docs/linux/man/3-mongoc_iovec_t/"
 description: "mongoc_iovec_t – Synopsis #include <mongoc.h>"
 ---
 
-<p>mongoc_iovec_t &#8211; Synopsis<br />
+<p>mongoc_iovec_t &#8211; Synopsis<br/>
 &nbsp;<wbr>#include&nbsp;<wbr>&lt;mongoc.h&gt; </p>
-<p> #ifdef _WIN32 typedef struct {<br />
-u_long&nbsp;<wbr>&nbsp;<wbr>iov_len;<br />
+<p> #ifdef _WIN32 typedef struct {<br/>
+u_long&nbsp;<wbr>&nbsp;<wbr>iov_len;<br/>
 char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*iov_base; } mongoc_iovec_t; #else typedef struct iovec mongoc_iovec_t; #endif</p>
 <h2>Synopsis</h2>
 <h2>Synopsis</h2>

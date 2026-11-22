@@ -10,7 +10,7 @@ description: "dlas2.f –"
 <p>dlas2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlas2</code> (F, G, H, SSMIN, SSMAX)<br />
+<p>subroutine <code>dlas2</code> (F, G, H, SSMIN, SSMAX)<br/>
  <i></i><code>DLAS2</code> computes singular values of a 2-by-2 triangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlas2 (double precisionF, double precisionG, double precisionH, double precisionSSMIN, double precisionSSMAX)</h3>

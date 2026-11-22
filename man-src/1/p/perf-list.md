@@ -109,7 +109,7 @@ perf record -e r1a8 ...
 </dt><dd> 6. If none of the above is matched, it will apply the supplied glob to all events, printing the ones that match.</dd></dl>
 <p> One or more types can be used at the same time, listing the events for the types specified.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-perf-stat/">perf-stat</a></code>(1), <code><a href="/docs/linux/man/1-perf-top/">perf-top</a></code>(1), <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), m[blue]<code>Intel&#174; 64 and IA-32 Architectures Software Developer&#8217;s Manual Volume 3B: System Programming Guide</code>m[]<font SIZE="-2">[1]</font>, m[blue]<code>AMD64 Architecture Programmer&#8217;s Manual Volume 2: System Programming</code>m[]<font SIZE="-2">[2]</font></p>
+<p> <code><a href="/docs/linux/man/1-perf-stat/">perf-stat</a></code>(1), <code><a href="/docs/linux/man/1-perf-top/">perf-top</a></code>(1), <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), m[blue]<code>Intel&#174; 64 and IA-32 Architectures Software Developer&#8217;s Manual Volume 3B: System Programming Guide</code>m[][1], m[blue]<code>AMD64 Architecture Programmer&#8217;s Manual Volume 2: System Programming</code>m[][2]</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

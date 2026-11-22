@@ -14,7 +14,7 @@ description: "mysql_fix_privilege_tables – upgrade MySQL system tables"
 <dt> <code>mysql_fix_privilege_tables &#8211;password=</code><i>root_password</i></dt></dl>
 <h2>DESCRIPTION</h2>
 <dl>
-<dd> <font SIZE="+1"> <code>Note</code> </font></dd>
+<dd>  <code>Note</code> </dd>
 <dd>
 </dd><dd>In MySQL 5.1.7, <code>mysql_fix_privilege_tables</code> was superseded by <code>mysql_upgrade</code>, which should be used instead. See <code><a href="/docs/linux/man/1-mysql_upgrade/">mysql_upgrade</a></code>(1). </dd>
 </dl>
@@ -52,7 +52,7 @@ mysql&gt; <code>SOURCE share/mysql_fix_privilege_tables.sql</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Prior to version 5.1.17, the mysql_fix_privilege_tables.sql script is found in the scripts directory. </p>
 </dl>
 <p> The <code>mysql</code> command will prompt you for the root password; enter it when prompted. </p>

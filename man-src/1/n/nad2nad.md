@@ -35,10 +35,10 @@ description: "nad2nad – North American Datum conversion filter"
 <dd> use high precision conversion zone <i>ss.</i> Certain States have ancillary correction tables to further refine the basic conus table. <i>Ss</i> key and States are:</dd>
 <dl>
 <dt>
-</dt><dd> FL Florida<br />
- MD Maryland<br />
- TN Tennessee<br />
- WI Wisconsin<br />
+</dt><dd> FL Florida<br/>
+ MD Maryland<br/>
+ TN Tennessee<br/>
+ WI Wisconsin<br/>
  WO Washington, Oregon and northern part of California.</dd></dl>
 </dl>
 </dl>
@@ -50,12 +50,12 @@ description: "nad2nad – North American Datum conversion filter"
 <dd> specifies which regional conversion table to employ which are identified by the following:</dd>
 <dl>
 <dt>
-</dt><dd> conus &#8211; conterminous 48 States<br />
- alaska &#8211; State of Alaska<br />
- hawaii &#8211; State of Hawaii<br />
- prvi &#8211; Puerto Rico and Virgin Islands<br />
- stgeorge &#8211; St. George Is, Alaska<br />
- stpaul &#8211; St. Paul Is, Alaska<br />
+</dt><dd> conus &#8211; conterminous 48 States<br/>
+ alaska &#8211; State of Alaska<br/>
+ hawaii &#8211; State of Hawaii<br/>
+ prvi &#8211; Puerto Rico and Virgin Islands<br/>
+ stgeorge &#8211; St. George Is, Alaska<br/>
+ stpaul &#8211; St. Paul Is, Alaska<br/>
  stlrnc &#8211; St. Lawrence Is, Alaska</dd>
 <dl>
 <dt><code>-E</code></dt>
@@ -70,7 +70,7 @@ description: "nad2nad – North American Datum conversion filter"
 <p> Output data will be in tab separated fields of DMS or grid coordinates in meters or feet. </p>
 <p> Any data after the two input values are echoed after the two output data values.</p>
 <h2>SEE ALSO</h2>
-<p> <code>cs2cs(1U), proj(1U),</code><br />
+<p> <code>cs2cs(1U), proj(1U),</code><br/>
  <i>Cartographic Projection Procedures for the UNIX Environment&#8212;A User&#8217;s Manual,</i> (Evenden, 1990, Open-file report 90-284).</p>
 <h2>HOME PAGE</h2>
 <p> <a rel="nofollow" href="http://www.remotesensing.org/proj">http://www.remotesensing.org/proj</a> </p>

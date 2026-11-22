@@ -10,7 +10,7 @@ description: "ldns_key_rr2ds"
 
 <p> ldns_key_rr2ds </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr* ldns_key_rr2ds(const ldns_rr *key, ldns_hash h); </p>

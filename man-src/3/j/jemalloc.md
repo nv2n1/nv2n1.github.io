@@ -10,7 +10,7 @@ description: "jemalloc – general purpose memory allocation functions"
 
 <p> jemalloc &#8211; general purpose memory allocation functions </p>
 <h2>LIBRARY</h2>
-<p> This manual describes jemalloc 3.6.0-0-g46c0af68bd248b04df75e4f92d5fb804c3d75340. More information can be found at the m[blue]<code>jemalloc website</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> This manual describes jemalloc 3.6.0-0-g46c0af68bd248b04df75e4f92d5fb804c3d75340. More information can be found at the m[blue]<code>jemalloc website</code>m[][1].</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;jemalloc/jemalloc.h&gt;
@@ -292,15 +292,15 @@ for (i = 0; i &lt; nbins; i++) {
 <p> &quot;opt.junk&quot; (<code>bool</code>) r- [<code>&#8211;enable-fill</code>]</p>
 <dl>
 <dt>
-</dt><dd> Junk filling enabled/disabled. If enabled, each byte of uninitialized allocated memory will be initialized to 0xa5. All deallocated memory will be initialized to 0x5a. This is intended for debugging and will impact performance negatively. This option is disabled by default unless <code>&#8211;enable-debug</code> is specified during configuration, in which case it is enabled by default unless running inside m[blue]<code>Valgrind</code>m[]<font SIZE="-2">[2]</font>.</dd></dl>
+</dt><dd> Junk filling enabled/disabled. If enabled, each byte of uninitialized allocated memory will be initialized to 0xa5. All deallocated memory will be initialized to 0x5a. This is intended for debugging and will impact performance negatively. This option is disabled by default unless <code>&#8211;enable-debug</code> is specified during configuration, in which case it is enabled by default unless running inside m[blue]<code>Valgrind</code>m[][2].</dd></dl>
 <p> &quot;opt.quarantine&quot; (<code>size_t</code>) r- [<code>&#8211;enable-fill</code>]</p>
 <dl>
 <dt>
-</dt><dd> Per thread quarantine size in bytes. If non-zero, each thread maintains a FIFO object quarantine that stores up to the specified number of bytes of memory. The quarantined memory is not freed until it is released from quarantine, though it is immediately junk-filled if the &quot;opt.junk&quot; option is enabled. This feature is of particular use in combination with m[blue]<code>Valgrind</code>m[]<font SIZE="-2">[2]</font>, which can detect attempts to access quarantined objects. This is intended for debugging and will impact performance negatively. The default quarantine size is 0 unless running inside Valgrind, in which case the default is 16 MiB.</dd></dl>
+</dt><dd> Per thread quarantine size in bytes. If non-zero, each thread maintains a FIFO object quarantine that stores up to the specified number of bytes of memory. The quarantined memory is not freed until it is released from quarantine, though it is immediately junk-filled if the &quot;opt.junk&quot; option is enabled. This feature is of particular use in combination with m[blue]<code>Valgrind</code>m[][2], which can detect attempts to access quarantined objects. This is intended for debugging and will impact performance negatively. The default quarantine size is 0 unless running inside Valgrind, in which case the default is 16 MiB.</dd></dl>
 <p> &quot;opt.redzone&quot; (<code>bool</code>) r- [<code>&#8211;enable-fill</code>]</p>
 <dl>
 <dt>
-</dt><dd> Redzones enabled/disabled. If enabled, small allocations have redzones before and after them. Furthermore, if the &quot;opt.junk&quot; option is enabled, the redzones are checked for corruption during deallocation. However, the primary intended purpose of this feature is to be used in combination with m[blue]<code>Valgrind</code>m[]<font SIZE="-2">[2]</font>, which needs redzones in order to do effective buffer overflow/underflow detection. This option is intended for debugging and will impact performance negatively. This option is disabled by default unless running inside Valgrind.</dd></dl>
+</dt><dd> Redzones enabled/disabled. If enabled, small allocations have redzones before and after them. Furthermore, if the &quot;opt.junk&quot; option is enabled, the redzones are checked for corruption during deallocation. However, the primary intended purpose of this feature is to be used in combination with m[blue]<code>Valgrind</code>m[][2], which needs redzones in order to do effective buffer overflow/underflow detection. This option is intended for debugging and will impact performance negatively. This option is disabled by default unless running inside Valgrind.</dd></dl>
 <p> &quot;opt.zero&quot; (<code>bool</code>) r- [<code>&#8211;enable-fill</code>]</p>
 <dl>
 <dt>
@@ -312,7 +312,7 @@ for (i = 0; i &lt; nbins; i++) {
 <p> &quot;opt.valgrind&quot; (<code>bool</code>) r- [<code>&#8211;enable-valgrind</code>]</p>
 <dl>
 <dt>
-</dt><dd> m[blue]<code>Valgrind</code>m[]<font SIZE="-2">[2]</font> support enabled/disabled. This option is vestigal because jemalloc auto-detects whether it is running inside Valgrind. This option is disabled by default, unless running inside Valgrind.</dd></dl>
+</dt><dd> m[blue]<code>Valgrind</code>m[][2] support enabled/disabled. This option is vestigal because jemalloc auto-detects whether it is running inside Valgrind. This option is disabled by default, unless running inside Valgrind.</dd></dl>
 <p> &quot;opt.xmalloc&quot; (<code>bool</code>) r- [<code>&#8211;enable-xmalloc</code>]</p>
 <dl>
 <dt>
@@ -328,7 +328,7 @@ malloc_conf = &quot;xmalloc:true&quot;;
 <p> &quot;opt.tcache&quot; (<code>bool</code>) r- [<code>&#8211;enable-tcache</code>]</p>
 <dl>
 <dt>
-</dt><dd> Thread-specific caching enabled/disabled. When there are multiple threads, each thread uses a thread-specific cache for objects up to a certain size. Thread-specific caching allows many allocations to be satisfied without performing any thread synchronization, at the cost of increased memory use. See the &quot;opt.lg_tcache_max&quot; option for related tuning information. This option is enabled by default unless running inside m[blue]<code>Valgrind</code>m[]<font SIZE="-2">[2]</font>.</dd></dl>
+</dt><dd> Thread-specific caching enabled/disabled. When there are multiple threads, each thread uses a thread-specific cache for objects up to a certain size. Thread-specific caching allows many allocations to be satisfied without performing any thread synchronization, at the cost of increased memory use. See the &quot;opt.lg_tcache_max&quot; option for related tuning information. This option is enabled by default unless running inside m[blue]<code>Valgrind</code>m[][2].</dd></dl>
 <p> &quot;opt.lg_tcache_max&quot; (<code>size_t</code>) r- [<code>&#8211;enable-tcache</code>]</p>
 <dl>
 <dt>
@@ -336,7 +336,7 @@ malloc_conf = &quot;xmalloc:true&quot;;
 <p> &quot;opt.prof&quot; (<code>bool</code>) r- [<code>&#8211;enable-prof</code>]</p>
 <dl>
 <dt>
-</dt><dd> Memory profiling enabled/disabled. If enabled, profile memory allocation activity. See the &quot;opt.prof_active&quot; option for on-the-fly activation/deactivation. See the &quot;opt.lg_prof_sample&quot; option for probabilistic sampling control. See the &quot;opt.prof_accum&quot; option for control of cumulative sample reporting. See the &quot;opt.lg_prof_interval&quot; option for information on interval-triggered profile dumping, the &quot;opt.prof_gdump&quot; option for information on high-water-triggered profile dumping, and the &quot;opt.prof_final&quot; option for final profile dumping. Profile output is compatible with the included <code>pprof</code> Perl script, which originates from the m[blue]<code>gperftools package</code>m[]<font SIZE="-2">[3]</font>.</dd></dl>
+</dt><dd> Memory profiling enabled/disabled. If enabled, profile memory allocation activity. See the &quot;opt.prof_active&quot; option for on-the-fly activation/deactivation. See the &quot;opt.lg_prof_sample&quot; option for probabilistic sampling control. See the &quot;opt.prof_accum&quot; option for control of cumulative sample reporting. See the &quot;opt.lg_prof_interval&quot; option for information on interval-triggered profile dumping, the &quot;opt.prof_gdump&quot; option for information on high-water-triggered profile dumping, and the &quot;opt.prof_final&quot; option for final profile dumping. Profile output is compatible with the included <code>pprof</code> Perl script, which originates from the m[blue]<code>gperftools package</code>m[][3].</dd></dl>
 <p> &quot;opt.prof_prefix&quot; (<code>const char *</code>) r- [<code>&#8211;enable-prof</code>]</p>
 <dl>
 <dt>
@@ -632,7 +632,7 @@ malloc_conf = &quot;xmalloc:true&quot;;
 <h2>DEBUGGING MALLOC PROBLEMS</h2>
 <p> When debugging, it is a good idea to configure/build jemalloc with the <code>&#8211;enable-debug</code> and <code>&#8211;enable-fill</code> options, and recompile the program with suitable options and symbols for debugger support. When so configured, jemalloc incorporates a wide variety of run-time assertions that catch application errors such as double-free, write-after-free, etc. </p>
 <p> Programs often accidentally depend on &#8220;uninitialized&#8221; memory actually being filled with zero bytes. Junk filling (see the &quot;opt.junk&quot; option) tends to expose such bugs in the form of obviously incorrect results and/or coredumps. Conversely, zero filling (see the &quot;opt.zero&quot; option) eliminates the symptoms of such bugs. Between these two options, it is usually possible to quickly detect, diagnose, and eliminate such bugs. </p>
-<p> This implementation does not provide much detail about the problems it detects, because the performance impact for storing such information would be prohibitive. However, jemalloc does integrate with the most excellent m[blue]<code>Valgrind</code>m[]<font SIZE="-2">[2]</font> tool if the <code>&#8211;enable-valgrind</code> configuration option is enabled.</p>
+<p> This implementation does not provide much detail about the problems it detects, because the performance impact for storing such information would be prohibitive. However, jemalloc does integrate with the most excellent m[blue]<code>Valgrind</code>m[][2] tool if the <code>&#8211;enable-valgrind</code> configuration option is enabled.</p>
 <h2>DIAGNOSTIC MESSAGES</h2>
 <p> If any of the memory allocation/deallocation functions detect an error or warning condition, a message will be printed to file descriptor <code>STDERR_FILENO</code>. Errors will result in the process dumping core. If the &quot;opt.abort&quot; option is set, most warnings are treated as errors. </p>
 <p> The <i>malloc_message</i> variable allows the programmer to override the function which emits the text strings forming the errors and warnings if for some reason the <code>STDERR_FILENO</code> file descriptor is not suitable for this. <code>malloc_message</code> takes the <i>cbopaque</i> pointer argument that is <code>NULL</code> unless overridden by the arguments in a call to <code>malloc_stats_print</code>, followed by a string pointer. Please note that doing anything which tries to allocate memory in this function is likely to result in a crash or deadlock. </p>

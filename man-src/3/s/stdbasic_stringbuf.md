@@ -9,13 +9,13 @@ description: "std::basic_stringbuf<CharT,Traits,Allocator>::underflow – std::b
 
 <p>std::basic_stringbuf&lt;CharT,Traits,Allocator&gt;::underflow &#8211; std::basic_stringbuf&lt;CharT,Traits,Allocator&gt;::underflow</p>
 <h2>Synopsis</h2>
-<p>protected:<br />
-virtual int_type underflow()<br />
-Reads the next character from the get area of the buffer.<br />
-Specifically:<br />
-1) If the input sequence has a read position available (egptr() &gt; gptr()), returns Traits::to_int_type(*gptr())<br />
-2) Otherwise, if pptr() &gt; egptr() (some characters were inserted into the stream since the last time overflow() changed egptr()) then extends the end of the get area to include the most recently inserted characters, by changing egptr() to equal pptr(), and then returns Traits::to_int_type(*gptr())<br />
-3) Otherwise, returns Traits::eof().<br />
+<p>protected:<br/>
+virtual int_type underflow()<br/>
+Reads the next character from the get area of the buffer.<br/>
+Specifically:<br/>
+1) If the input sequence has a read position available (egptr() &gt; gptr()), returns Traits::to_int_type(*gptr())<br/>
+2) Otherwise, if pptr() &gt; egptr() (some characters were inserted into the stream since the last time overflow() changed egptr()) then extends the end of the get area to include the most recently inserted characters, by changing egptr() to equal pptr(), and then returns Traits::to_int_type(*gptr())<br/>
+3) Otherwise, returns Traits::eof().<br/>
 Any character in the buffer which has been initialized, regardless of whether it originated from the string passed in the constructor or was appended by overflow(), is considered to be part of the input sequence. </p>
 <h2>Parameters</h2>
 <p><i>(none)</i></p>
@@ -90,28 +90,28 @@ int main()
 }
 </code></pre>
 <h2>Possible output:</h2>
-<p>&nbsp;<wbr>&nbsp;Before underflow(): get area size is 3 put area size is 3<br />
-&nbsp;<wbr>&nbsp;After underflow(): get area size is 3 put area size is 3<br />
-&nbsp;<wbr>&nbsp;underflow() returns EOF<br />
-&nbsp;<wbr>&nbsp;123<br />
-&nbsp;<wbr>&nbsp;Before overflow(): get area size is 3 the put area size is 3<br />
-&nbsp;<wbr>&nbsp;After overflow(): get area size is 4 put area size is 35<br />
-&nbsp;<wbr>&nbsp;Before underflow(): get area size is 4 put area size is 35<br />
-&nbsp;<wbr>&nbsp;After underflow(): get area size is 6 put area size is 35<br />
-&nbsp;<wbr>&nbsp;underflow() returns &#8216;5&#8217;<br />
-&nbsp;<wbr>&nbsp;Before underflow(): get area size is 6 put area size is 35<br />
-&nbsp;<wbr>&nbsp;After underflow(): get area size is 6 put area size is 35<br />
-&nbsp;<wbr>&nbsp;underflow() returns EOF<br />
+<p>&nbsp;<wbr>&nbsp;Before underflow(): get area size is 3 put area size is 3<br/>
+&nbsp;<wbr>&nbsp;After underflow(): get area size is 3 put area size is 3<br/>
+&nbsp;<wbr>&nbsp;underflow() returns EOF<br/>
+&nbsp;<wbr>&nbsp;123<br/>
+&nbsp;<wbr>&nbsp;Before overflow(): get area size is 3 the put area size is 3<br/>
+&nbsp;<wbr>&nbsp;After overflow(): get area size is 4 put area size is 35<br/>
+&nbsp;<wbr>&nbsp;Before underflow(): get area size is 4 put area size is 35<br/>
+&nbsp;<wbr>&nbsp;After underflow(): get area size is 6 put area size is 35<br/>
+&nbsp;<wbr>&nbsp;underflow() returns &#8216;5&#8217;<br/>
+&nbsp;<wbr>&nbsp;Before underflow(): get area size is 6 put area size is 35<br/>
+&nbsp;<wbr>&nbsp;After underflow(): get area size is 6 put area size is 35<br/>
+&nbsp;<wbr>&nbsp;underflow() returns EOF<br/>
 &nbsp;<wbr>&nbsp;456</p>
 <h2>See also</h2>
-<p>underflow reads characters from the associated input sequence to the get area<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::basic_streambuf&lt;CharT,Traits&gt;)</i><br />
-<code>[virtual]</code><br />
-underflow reads from the associated file<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::basic_filebuf&lt;CharT,Traits&gt;)</i><br />
-<code>[virtual]</code><br />
-underflow reads a character from the input sequence without advancing the next pointer<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::strstreambuf)</i><br />
-<code>[virtual]</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;reads one character from the input sequence without advancing the sequence<br />
+<p>underflow reads characters from the associated input sequence to the get area<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::basic_streambuf&lt;CharT,Traits&gt;)</i><br/>
+<code>[virtual]</code><br/>
+underflow reads from the associated file<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::basic_filebuf&lt;CharT,Traits&gt;)</i><br/>
+<code>[virtual]</code><br/>
+underflow reads a character from the input sequence without advancing the next pointer<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::strstreambuf)</i><br/>
+<code>[virtual]</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;reads one character from the input sequence without advancing the sequence<br/>
 sgetc <i>(public member function of std::basic_streambuf&lt;CharT,Traits&gt;)</i> </p>

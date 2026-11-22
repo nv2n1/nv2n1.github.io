@@ -39,7 +39,7 @@ description: "Connection Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>certfile</i> Name of X509 certificate file.<br />
+</dt><dd> <i>certfile</i> Name of X509 certificate file.<br/>
  <i>keyfile</i> Name of X509 key file.</dd></dl>
 <h3>void globus_rls_client_proxy_certificate (char * proxy)</h3>
 <p> Set X509_USER_PROXY environment variable to specified file. <code>Parameters:</code></p>
@@ -50,7 +50,7 @@ description: "Connection Management –"
 <p> Open connection to RLS server. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>url</i> URL of server to connect to. URL scheme should be <code>RLS</code> or <code>RLSN</code>, eg <code>RLS://my.host</code>. If the URL scheme is <code>RLSN</code> then no authentication is performed (the RLS server must be started with authentication disabled as well, this option is primarily intended for testing).<br />
+</dt><dd> <i>url</i> URL of server to connect to. URL scheme should be <code>RLS</code> or <code>RLSN</code>, eg <code>RLS://my.host</code>. If the URL scheme is <code>RLSN</code> then no authentication is performed (the RLS server must be started with authentication disabled as well, this option is primarily intended for testing).<br/>
  <i>h</i> If the connection is successful <i>*h</i> will be set to the connection handle. This handle is required by all other functions in the API.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>

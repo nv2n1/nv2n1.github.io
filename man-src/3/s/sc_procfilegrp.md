@@ -15,24 +15,24 @@ description: "sc::ProcFileGrp –"
 <p> Inherits <code>sc::FileGrp</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>ProcFileGrp</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> <code>ProcFileGrp</code> * <code>clone</code> ()<br />
- <i>Clones the given </i><code>FileGrp</code>. The new <code>FileGrp</code> may need to be initialized additionally.<br />
- void <code>set_localsize</code> (size_t)<br />
- <i>Set the size of locally held data. </i><br />
+<p> <code>ProcFileGrp</code> * <code>clone</code> ()<br/>
+ <i>Clones the given </i><code>FileGrp</code>. The new <code>FileGrp</code> may need to be initialized additionally.<br/>
+ void <code>set_localsize</code> (size_t)<br/>
+ <i>Set the size of locally held data. </i><br/>
  void * <code>localdata</code> () </p>
-<p> void * <code>obtain_readwrite</code> (<code>distsize_t</code> offset, int size)<br />
- <i>Only one thread can have an unreleased obtain_readwrite at a time. </i><br />
- void * <code>obtain_readonly</code> (<code>distsize_t</code> offset, int size)<br />
- <i>This gives read access to the file location. No locking is done. </i><br />
- void * <code>obtain_writeonly</code> (<code>distsize_t</code> offset, int size)<br />
- <i>This gives write access to the data location. No locking is done. </i><br />
- void <code>release_readonly</code> (void *data, <code>distsize_t</code> offset, int size)<br />
- <i>This is called when read access is no longer needed. </i><br />
- void <code>release_writeonly</code> (void *data, <code>distsize_t</code> offset, int size)<br />
- <i>This is called when write access is no longer needed. </i><br />
- void <code>release_readwrite</code> (void *data, <code>distsize_t</code> offset, int size)<br />
- <i>This is called when read/write access is no longer needed. </i><br />
- void <code>sync</code> ()<br />
+<p> void * <code>obtain_readwrite</code> (<code>distsize_t</code> offset, int size)<br/>
+ <i>Only one thread can have an unreleased obtain_readwrite at a time. </i><br/>
+ void * <code>obtain_readonly</code> (<code>distsize_t</code> offset, int size)<br/>
+ <i>This gives read access to the file location. No locking is done. </i><br/>
+ void * <code>obtain_writeonly</code> (<code>distsize_t</code> offset, int size)<br/>
+ <i>This gives write access to the data location. No locking is done. </i><br/>
+ void <code>release_readonly</code> (void *data, <code>distsize_t</code> offset, int size)<br/>
+ <i>This is called when read access is no longer needed. </i><br/>
+ void <code>release_writeonly</code> (void *data, <code>distsize_t</code> offset, int size)<br/>
+ <i>This is called when write access is no longer needed. </i><br/>
+ void <code>release_readwrite</code> (void *data, <code>distsize_t</code> offset, int size)<br/>
+ <i>This is called when read/write access is no longer needed. </i><br/>
+ void <code>sync</code> ()<br/>
  <i>Synchronizes all the nodes. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>ProcFileGrp</code> concrete class provides an implementation of <code>FileGrp</code> for a single processor.</p>

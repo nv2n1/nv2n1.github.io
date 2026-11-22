@@ -10,21 +10,21 @@ description: "ql/instruments/capfloor.hpp – cap and floor class"
 
 <p> ql/instruments/capfloor.hpp &#8211; cap and floor class </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instrument.hpp&gt;<br />
- #include &lt;ql/cashflows/iborcoupon.hpp&gt;<br />
+<p> #include &lt;ql/instrument.hpp&gt;<br/>
+ #include &lt;ql/cashflows/iborcoupon.hpp&gt;<br/>
  #include &lt;ql/handle.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>CapFloor</code><br />
- <i>Base class for cap-like instruments. </i><br />
- class <code>Cap</code><br />
- <i>Concrete cap class. </i><br />
- class <code>Floor</code><br />
- <i>Concrete floor class. </i><br />
- class <code>Collar</code><br />
- <i>Concrete collar class. </i><br />
- class <code>arguments</code><br />
- <i>Arguments for cap/floor calculation </i><br />
- class <code>engine</code><br />
+<p> class <code>CapFloor</code><br/>
+ <i>Base class for cap-like instruments. </i><br/>
+ class <code>Cap</code><br/>
+ <i>Concrete cap class. </i><br/>
+ class <code>Floor</code><br/>
+ <i>Concrete floor class. </i><br/>
+ class <code>Collar</code><br/>
+ <i>Concrete collar class. </i><br/>
+ class <code>arguments</code><br/>
+ <i>Arguments for cap/floor calculation </i><br/>
+ class <code>engine</code><br/>
  <i>base class for cap/floor engines </i></p>
 <h3>Functions</h3>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, CapFloor::Type) </p>

@@ -10,20 +10,20 @@ description: "jw, docbook2dvi, docbook2html, docbook2man, docbook2pdf, docbook2p
 
 <p> jw, docbook2dvi, docbook2html, docbook2man, docbook2pdf, docbook2ps, docbook2rtf, docbook2tex, docbook2texi, docbook2txt &#8211; (Jade Wrapper) converts SGML files to other formats </p>
 <h2>SYNOPSIS</h2>
-<p> <code>jw</code> [ <code>-f </code><i>frontend</i> | <code>&#8211;frontend </code><i>frontend</i> ]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-b </code><i>backend</i> | <code>&#8211;backend </code><i>backend</i> ]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-c&nbsp;<wbr></code><i>file</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;cat&nbsp;<wbr></code><i>file</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-n</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;nostd</code>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-d </code><i>file</i><code>|default|none</code> | <code>&#8211;dsl </code><i>file</i><code>|default|none</code> ]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-l&nbsp;<wbr></code><i>file</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;dcl&nbsp;<wbr></code><i>file</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-s&nbsp;<wbr></code><i>path</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;sgmlbase&nbsp;<wbr></code><i>path</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-p&nbsp;<wbr></code><i>program</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;parser&nbsp;<wbr></code><i>program</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-o&nbsp;<wbr></code><i>directory</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;output&nbsp;<wbr></code><i>directory</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-V </code><i>variable</i><code>[=</code><i>value</i><code>]</code> ]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-u</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;nochunks</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-i&nbsp;<wbr></code><i>section</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;include&nbsp;<wbr></code><i>section</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-w&nbsp;<wbr></code><i>type</i><code>|list</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;warning&nbsp;<wbr></code><i>type</i><code>|list</code>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-e&nbsp;<wbr></code><i>type</i><code>|list</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;error&nbsp;<wbr></code><i>type</i><code>|list</code>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-h</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;help</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-v</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;version</code>&nbsp;<wbr>]<br />
+<p> <code>jw</code> [ <code>-f </code><i>frontend</i> | <code>&#8211;frontend </code><i>frontend</i> ]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-b </code><i>backend</i> | <code>&#8211;backend </code><i>backend</i> ]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-c&nbsp;<wbr></code><i>file</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;cat&nbsp;<wbr></code><i>file</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-n</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;nostd</code>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-d </code><i>file</i><code>|default|none</code> | <code>&#8211;dsl </code><i>file</i><code>|default|none</code> ]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-l&nbsp;<wbr></code><i>file</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;dcl&nbsp;<wbr></code><i>file</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-s&nbsp;<wbr></code><i>path</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;sgmlbase&nbsp;<wbr></code><i>path</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-p&nbsp;<wbr></code><i>program</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;parser&nbsp;<wbr></code><i>program</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-o&nbsp;<wbr></code><i>directory</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;output&nbsp;<wbr></code><i>directory</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-V </code><i>variable</i><code>[=</code><i>value</i><code>]</code> ]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-u</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;nochunks</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-i&nbsp;<wbr></code><i>section</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;include&nbsp;<wbr></code><i>section</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-w&nbsp;<wbr></code><i>type</i><code>|list</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;warning&nbsp;<wbr></code><i>type</i><code>|list</code>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-e&nbsp;<wbr></code><i>type</i><code>|list</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;error&nbsp;<wbr></code><i>type</i><code>|list</code>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-h</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;help</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-v</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;version</code>&nbsp;<wbr>]<br/>
 &nbsp;<wbr><i>SGML-file</i> </p>
 <p> <code>docbook2dvi</code> <i>SGML-file</i> </p>
 <p> <code>docbook2html</code> <i>SGML-file</i> </p>

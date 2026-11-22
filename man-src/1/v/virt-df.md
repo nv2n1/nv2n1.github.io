@@ -23,7 +23,7 @@ virt - df[--options] - d domname virt - df[--options] - a disk.img[-a disk.img..
 <h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-df&quot;</tt> is a command line tool to display free space on virtual machine filesystems. Unlike other tools, it doesn&#8217;t just display the size of disk allocated to a virtual machine, but can look inside disk images to see how much space is really being used. </p>
 <p> If used without any <i>-a</i> or <i>-d</i> arguments, <tt>&quot;virt-df&quot;</tt> checks with libvirt to get a list of all active and inactive guests, and performs a <tt>&quot;df&quot;</tt>-type operation on each one in turn, printing out the results. </p>
-<p> If any <i>-a</i> or <i>-d</i> arguments are specified, <tt>&quot;virt-df&quot;</tt> performs a <tt>&quot;df&quot;</tt>-type operation on either the single named libvirt domain, or on the disk image(s) listed on the command line (which must all belong to a single <font SIZE="-1">VM</font>). <code>In this mode (with arguments), </code>&quot;virt-df&quot;<code> will only work for a single guest</code>. If you want to run on multiple guests, then you have to invoke <tt>&quot;virt-df&quot;</tt> multiple times. </p>
+<p> If any <i>-a</i> or <i>-d</i> arguments are specified, <tt>&quot;virt-df&quot;</tt> performs a <tt>&quot;df&quot;</tt>-type operation on either the single named libvirt domain, or on the disk image(s) listed on the command line (which must all belong to a single VM). <code>In this mode (with arguments), </code>&quot;virt-df&quot;<code> will only work for a single guest</code>. If you want to run on multiple guests, then you have to invoke <tt>&quot;virt-df&quot;</tt> multiple times. </p>
 <p> Use the <i>&#8211;csv</i> option to get a format which can be easily parsed by other programs. Other options are similar to the standard <i><a href="/docs/linux/man/1-df/">df</a></i>(1) command.</p>
 <h2>EXAMPLES</h2>
 <p> Show disk usage for a single libvirt guest called <tt>&quot;F14x64&quot;</tt>. Make the output human-readable: </p>
@@ -56,17 +56,17 @@ virt - df[--options] - d domname virt - df[--options] - a disk.img[-a disk.img..
 </dd><dt><code>&#8211;add</code> file</dt>
 <dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
+<dt><code>-a </code><code>URI</code></dt>
 <dd>
-</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
-<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
+</dd><dt><code>&#8211;add </code><code>URI</code></dt>
+<dd> Add a remote disk. See &#8220;ADDING REMOTE STORAGE&#8221; in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>-c</code> URI</dt>
 <dd>
-</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
+</dd><dt><code>&#8211;connect</code> URI</dt>
+<dd> If using libvirt, connect to the given <i></i><i>URI</i><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
 <dt><code>&#8211;csv</code></dt>
-<dd> Write out the results in <font SIZE="-1">CSV</font> format (comma-separated values). This format can be imported easily into databases and spreadsheets, but read &#8220;<font SIZE="-1">NOTE ABOUT CSV FORMAT&#8221;</font> below.</dd>
+<dd> Write out the results in CSV format (comma-separated values). This format can be imported easily into databases and spreadsheets, but read &#8220;NOTE ABOUT CSV FORMAT&#8221; below.</dd>
 <dt><code>-d</code> guest</dt>
 <dd>
 </dd><dt><code>&#8211;domain</code> guest</dt>
@@ -84,7 +84,7 @@ virt - df[--options] - d domname virt - df[--options] - a disk.img[-a disk.img..
  virt-df --format=raw -a disk.img --format -a another.img
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
-<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
+<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (CVE-2010-3851).</p>
 <dt><code>-h</code></dt>
 <dd>
 </dd><dt><code>&#8211;human-readable</code></dt>
@@ -111,7 +111,7 @@ virt - df[--options] - d domname virt - df[--options] - a disk.img[-a disk.img..
 </dd><dt><code>&#8211;version</code></dt>
 <dd> Display version number and exit.</dd>
 <dt><code>-x</code></dt>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
+<dd> Enable tracing of libguestfs API calls.</dd></dl>
 <h2>STATVFS NUMBERS</h2>
 <p> <tt>&quot;virt-df&quot;</tt> (and <i><a href="/docs/linux/man/1-df/">df</a></i>(1)) get information by issuing a <i><a href="/docs/linux/man/3-statvfs/">statvfs</a></i>(3) system call. You can get the same information directly, either from the host (using libguestfs) or inside the guest:</p>
 <dl>
@@ -128,7 +128,7 @@ python - c 'import os; s = os.statvfs ("/"); print s'
 </code></pre>
 <p> (change <i>/</i> to see stats for other filesystems).</dl>
 <h2>NOTE ABOUT CSV FORMAT</h2>
-<p> Comma-separated values (<font SIZE="-1">CSV</font>) is a deceptive format. It <i>seems</i> like it should be easy to parse, but it is definitely not easy to parse. </p>
+<p> Comma-separated values (CSV) is a deceptive format. It <i>seems</i> like it should be easy to parse, but it is definitely not easy to parse. </p>
 <p> Myth: Just split fields at commas. Reality: This does <i>not</i> work reliably. This example has two columns: </p>
 <pre>
  &quot;foo,bar&quot;,baz
@@ -139,8 +139,8 @@ python - c 'import os; s = os.statvfs ("/"); print s'
  bar&quot;,baz
 </pre>
 <p> For shell scripts, use <tt>&quot;csvtool&quot;</tt> (<a rel="nofollow" href="https://github.com/Chris00/ocaml-csv">https://github.com/Chris00/ocaml-csv</a> also packaged in major Linux distributions). </p>
-<p> For other languages, use a <font SIZE="-1">CSV</font> processing library (eg. <tt>&quot;Text::CSV&quot;</tt> for Perl or Python&#8217;s built-in csv library). </p>
-<p> Most spreadsheets and databases can import <font SIZE="-1">CSV</font> directly.</p>
+<p> For other languages, use a CSV processing library (eg. <tt>&quot;Text::CSV&quot;</tt> for Perl or Python&#8217;s built-in csv library). </p>
+<p> Most spreadsheets and databases can import CSV directly.</p>
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or non-zero if there was an error.</p>
 <h2>SEE ALSO</h2>
@@ -150,9 +150,9 @@ python - c 'import os; s = os.statvfs ("/"); print s'
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009-2016 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

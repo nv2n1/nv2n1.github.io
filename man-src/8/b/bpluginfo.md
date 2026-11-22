@@ -29,10 +29,10 @@ description: "bpluginfo – Bacula Plugin information utility"
 <p><code>bpluginfo</code> returns 0 on success, and non-zero on error.</p>
 <dl>
 <dt>You can check return code to find what was a cause of the error.</dt>
-<dd>&nbsp;<wbr>*&nbsp;<wbr>0 &#8211; success<br />
-&nbsp;<wbr>*&nbsp;<wbr>1 &#8211; cannot load a plugin<br />
-&nbsp;<wbr>*&nbsp;<wbr>2 &#8211; cannot find a loadPlugin function<br />
-&nbsp;<wbr>*&nbsp;<wbr>3 &#8211; cannot find an unloadPlugin function<br />
+<dd>&nbsp;<wbr>*&nbsp;<wbr>0 &#8211; success<br/>
+&nbsp;<wbr>*&nbsp;<wbr>1 &#8211; cannot load a plugin<br/>
+&nbsp;<wbr>*&nbsp;<wbr>2 &#8211; cannot find a loadPlugin function<br/>
+&nbsp;<wbr>*&nbsp;<wbr>3 &#8211; cannot find an unloadPlugin function<br/>
 &nbsp;<wbr>*&nbsp;<wbr>10 &#8211; not enough memory</dd></dl>
 <h2>Example Usage</h2>
 <p>This is an example of bplufinfo usage with verbose option (-v) and default plugin. </p>
@@ -69,7 +69,7 @@ Plugin functions:
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;support [at] inteos.pl&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2012 Free Software Foundation Europe e.V.<br />
+<p>Copyright &#169; 2012 Free Software Foundation Europe e.V.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>bacula-dir,</code> <code>bacula-sd,</code> <code>bacula-fd,</code> <code>Bacula Plugins API</code> </p>

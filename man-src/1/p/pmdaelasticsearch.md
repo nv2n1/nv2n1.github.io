@@ -10,10 +10,10 @@ description: "pmdaelasticsearch – elasticsearch performance metrics domain age
 
 <p> <code>pmdaelasticsearch</code> &#8211; elasticsearch performance metrics domain agent (PMDA)</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdaelasticsearch</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports performance metrics from elasticsearch.</p>
+<p> <code>pmdaelasticsearch</code> is a Performance Metrics Domain Agent (PMDA) which exports performance metrics from elasticsearch.</p>
 <h2>INSTALLATION</h2>
-<p> This <font SIZE="-1">PMDA</font> requires that elasticsearch is running on the local host and is accepting queries on <font SIZE="-1">TCP</font> port 9200. </p>
-<p> Install the elasticsearch <font SIZE="-1">PMDA</font> by using the Install script as root: </p>
+<p> This PMDA requires that elasticsearch is running on the local host and is accepting queries on TCP port 9200. </p>
+<p> Install the elasticsearch PMDA by using the Install script as root: </p>
 <p>#&nbsp;<wbr>cd&nbsp;<wbr>$PCP_PMDAS_DIR/elasticsearch </p>
 <p>#&nbsp;<wbr>./Install </p>
 <p> To uninstall, do the following as root: </p>

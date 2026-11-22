@@ -34,51 +34,51 @@ dcmfile-out  DICOM output filename
 </pre>
 <h2>OPTIONS</h2>
 <h3>general options</h3>
-<p>&#8211; h&#8211; help<br />
-        print this help text and exit&#8211; version<br />
-            print version information and exit&#8211; arguments<br />
-                print expanded command line arguments &#8211;<br />
-    q&#8211; quiet<br />
-        quiet mode,<br />
-    print no warnings and errors &#8211; v&#8211; verbose<br />
-                                       verbose mode,<br />
-    print processing details &#8211; d&#8211; debug<br />
-                                   debug mode,<br />
-    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br />
-                                                       constant(fatal, error, warn, info, debug, trace)<br />
-          use level l for the logger<br />
-  -lc   &#8211;log-config  [f]ilename: string<br />
+<p>&#8211; h&#8211; help<br/>
+        print this help text and exit&#8211; version<br/>
+            print version information and exit&#8211; arguments<br/>
+                print expanded command line arguments &#8211;<br/>
+    q&#8211; quiet<br/>
+        quiet mode,<br/>
+    print no warnings and errors &#8211; v&#8211; verbose<br/>
+                                       verbose mode,<br/>
+    print processing details &#8211; d&#8211; debug<br/>
+                                   debug mode,<br/>
+    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br/>
+                                                       constant(fatal, error, warn, info, debug, trace)<br/>
+          use level l for the logger<br/>
+  -lc   &#8211;log-config  [f]ilename: string<br/>
           use config file f for the logger</p>
 <h3>input options</h3>
-<p>input file format : +f&#8211; read &#8211; file<br />
-                                    read file format or<br />
-    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br />
-        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br />
-                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br />
-                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br />
+<p>input file format : +f&#8211; read &#8211; file<br/>
+                                    read file format or<br/>
+    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br/>
+        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br/>
+                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br/>
+                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br/>
                                                                                                       &#8211; ti&#8211; read &#8211; xfer &#8211; implicit read with implicit VR little endian TS</p>
 <h3>signature commands</h3>
-<p>&#8211;verify<br />
-        verify all signatures(default) +<br />
-    s&#8211; sign[p] rivate key file,<br />
-    [c] ertificate file : string<br />
-                          create signature in main object<br />
-                          +<br />
-                          si&#8211; sign &#8211; item[k] eyfile,<br />
+<p>&#8211;verify<br/>
+        verify all signatures(default) +<br/>
+    s&#8211; sign[p] rivate key file,<br/>
+    [c] ertificate file : string<br/>
+                          create signature in main object<br/>
+                          +<br/>
+                          si&#8211; sign &#8211; item[k] eyfile,<br/>
     [c] ertfile, [i] tem location : string create signature in sequence item + r&#8211; remove[s] ignature UID : string remove signature + ra&#8211; remove &#8211; all remove all signatures from data set</p>
 <h3>signature creation options (only with &#8211;sign or &#8211;sign-item):</h3>
-<p>private<br />
-key password : +ps&#8211; std &#8211; passwd prompt user to type password on stdin(default) + pw&#8211; use &#8211; passwd[p] assword : string use specified password<br />
-                                                                                                                  &#8211;<br />
-                                                                                                                  pw&#8211; null &#8211; passwd use empty string as password key and certificate file format : -pem&#8211; pem &#8211; keys read keys / certificates as PEM file(default) &#8211; der&#8211; der &#8211; keys read keys / certificates as DER file digital signature profile : -pf&#8211; profile &#8211; none don&#8217;t enforce any signature profile (default) + pb&#8211; profile &#8211; base enforce base RSA signature profile<br />
-                                                                                                                                                                                                    +<br />
-                                                                                                                                                                                                    pc&#8211; profile &#8211; creator enforce creator RSA signature profile<br />
-                                                                                                                                                                                                    +<br />
-                                                                                                                                                                                                    pa&#8211; profile &#8211; auth enforce authorization signature profile MAC algorithm : +mr&#8211; mac &#8211; ripemd160 use RIPEMD 160(default) + ms&#8211; mac &#8211; sha1 use SHA &#8211; 1 + mm&#8211; mac &#8211; md5 use MD 5 tag selection : -t&#8211; tag[t] ag : &#8220;gggg,eeee&#8221; or<br />
-    dictionary name<br />
-        sign only specified tag(this option can be specified multiple times) &#8211;<br />
-        tf&#8211; tag &#8211; file[f] ilename : string read list of tags from text file signature format : -fn&#8211; format &#8211; new use correct DICOM signature format(default) &#8211; fo&#8211; format &#8211; old use old(pre &#8211; 3.5.4) DCMTK signature format,<br />
-    non &#8211; conformant<br />
+<p>private<br/>
+key password : +ps&#8211; std &#8211; passwd prompt user to type password on stdin(default) + pw&#8211; use &#8211; passwd[p] assword : string use specified password<br/>
+                                                                                                                  &#8211;<br/>
+                                                                                                                  pw&#8211; null &#8211; passwd use empty string as password key and certificate file format : -pem&#8211; pem &#8211; keys read keys / certificates as PEM file(default) &#8211; der&#8211; der &#8211; keys read keys / certificates as DER file digital signature profile : -pf&#8211; profile &#8211; none don&#8217;t enforce any signature profile (default) + pb&#8211; profile &#8211; base enforce base RSA signature profile<br/>
+                                                                                                                                                                                                    +<br/>
+                                                                                                                                                                                                    pc&#8211; profile &#8211; creator enforce creator RSA signature profile<br/>
+                                                                                                                                                                                                    +<br/>
+                                                                                                                                                                                                    pa&#8211; profile &#8211; auth enforce authorization signature profile MAC algorithm : +mr&#8211; mac &#8211; ripemd160 use RIPEMD 160(default) + ms&#8211; mac &#8211; sha1 use SHA &#8211; 1 + mm&#8211; mac &#8211; md5 use MD 5 tag selection : -t&#8211; tag[t] ag : &#8220;gggg,eeee&#8221; or<br/>
+    dictionary name<br/>
+        sign only specified tag(this option can be specified multiple times) &#8211;<br/>
+        tf&#8211; tag &#8211; file[f] ilename : string read list of tags from text file signature format : -fn&#8211; format &#8211; new use correct DICOM signature format(default) &#8211; fo&#8211; format &#8211; old use old(pre &#8211; 3.5.4) DCMTK signature format,<br/>
+    non &#8211; conformant<br/>
         if signature includes compressed pixel data</p>
 <h3>output options</h3>
 <p>output transfer syntax : +t = &#8211;write &#8211; xfer &#8211; same write with same TS as input(default) + te&#8211; write &#8211; xfer &#8211; little write with explicit VR little endian TS + tb&#8211; write &#8211; xfer &#8211; big write with explicit VR big endian TS + ti&#8211; write &#8211; xfer &#8211; implicit write with implicit VR little endian TS length encoding in sequences and items : +e&#8211; length &#8211; explicit write with explicit lengths(default) &#8211; e&#8211; length &#8211; undefined write with undefined lengths other output options : +d&#8211; dump[f] ilename : string dump byte stream fed into the MAC codec to file(only with&#8211; sign or &#8211;sign &#8211; item)</p>

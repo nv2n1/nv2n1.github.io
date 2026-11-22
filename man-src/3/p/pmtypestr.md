@@ -10,7 +10,7 @@ description: "pmTypeStr, pmTypeStr_r – convert a performance metric type into 
 <p><code>pmTypeStr</code>, <code>pmTypeStr_r</code> &#8211; convert a performance metric type into a string</p>
 <h2>C Synopsis</h2>
 <p><code> #include &lt;pcp/pmapi.h&gt; </p>
-<p> const char *pmTypeStr(int </code><i>type</i>);<br />
+<p> const char *pmTypeStr(int </code><i>type</i>);<br/>
  char *pmTypeStr_r(int <i>type</i>, char *<i>buf</i>, int <i>buflen</i>); </p>
 <p> cc &#8230; -lpcp</p>
 <h2>Description</h2>

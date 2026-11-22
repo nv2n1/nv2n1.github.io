@@ -45,10 +45,10 @@ description: "libguestfs-test-tool – Diagnostics for libguestfs"
 <h2>TRYING OUT A DIFFERENT VERSION OF QEMU</h2>
 <p> If you have compiled another version of qemu from source and would like to try that, then you can use the <i>&#8211;qemudir</i> option to point to the qemu source directory. </p>
 <p> If you have downloaded a qemu binary from somewhere, use the <i>&#8211;qemu</i> option to point to the binary. </p>
-<p> Note when using these options, you can ignore the business of qemu wrapper scripts (&#8220;<font SIZE="-1">QEMU WRAPPERS&#8221;</font> in <i>guestfs</i>(3)), since libguestfs-test-tool writes a wrapper script for you if one is needed.</p>
+<p> Note when using these options, you can ignore the business of qemu wrapper scripts (&#8220;QEMU WRAPPERS&#8221; in <i>guestfs</i>(3)), since libguestfs-test-tool writes a wrapper script for you if one is needed.</p>
 <h2>TRYING OUT A DIFFERENT KERNEL</h2>
 <p> You can tell supermin to try a different kernel. You do this by setting the environment variables <tt>&quot;SUPERMIN_KERNEL&quot;</tt>, <tt>&quot;SUPERMIN_KERNEL_VERSION&quot;</tt> and/or <tt>&quot;SUPERMIN_MODULES&quot;</tt>. </p>
-<p> Refer to &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i><a href="/docs/linux/man/1-supermin/">supermin</a></i>(1) for further information.</p>
+<p> Refer to &#8220;ENVIRONMENT VARIABLES&#8221; in <i><a href="/docs/linux/man/1-supermin/">supermin</a></i>(1) for further information.</p>
 <h2>TRYING OUT A DIFFERENT VERSION OF LIBVIRT</h2>
 <p> To find out which backend is the default in your libguestfs package, do: </p>
 <pre>
@@ -75,7 +75,7 @@ description: "libguestfs-test-tool – Diagnostics for libguestfs"
 <pre>
  export LIBGUESTFS_BACKEND=libvirt
 </pre>
-<p> or with libvirt and a specific libvirt <font SIZE="-1">URI</font>: </p>
+<p> or with libvirt and a specific libvirt URI: </p>
 <pre>
  export LIBGUESTFS_BACKEND=libvirt:<a href="qemu:///session">qemu:///session</a>
 </pre>
@@ -103,7 +103,7 @@ description: "libguestfs-test-tool – Diagnostics for libguestfs"
  setenforce Enforcing
 </pre>
 <h2>SELF-DIAGNOSIS</h2>
-<p> Refer to &#8220;<font SIZE="-1">APPLIANCE BOOT PROCESS&#8221;</font> in <i>guestfs</i>(3) to understand the messages produced by libguestfs-test-tool and/or possible errors.</p>
+<p> Refer to &#8220;APPLIANCE BOOT PROCESS&#8221; in <i>guestfs</i>(3) to understand the messages produced by libguestfs-test-tool and/or possible errors.</p>
 <h2>EXIT STATUS</h2>
 <p> libguestfs-test-tool returns <i>0</i> if the tests completed without error, or <i>1</i> if there was an error.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
@@ -115,9 +115,9 @@ description: "libguestfs-test-tool – Diagnostics for libguestfs"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009-2016 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

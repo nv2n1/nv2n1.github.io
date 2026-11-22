@@ -121,11 +121,11 @@ description: "mcpp – Matsui CPP, an alternative C preprocessor"
 <dt>-S &lt;n&gt;</dt>
 <dd> Redefine __STDC__ to &lt;n&gt;, undefine old style macros.</dd>
 <dt>-std=&lt;STANDARD&gt;</dt>
-<dd> Specify the standard to which the code should conform. &lt;STANDARD&gt; may be one of: c90, c99, iso9899:1990, iso14882, etc.<br />
+<dd> Specify the standard to which the code should conform. &lt;STANDARD&gt; may be one of: c90, c99, iso9899:1990, iso14882, etc.<br/>
  iso9899:&lt;n&gt;, iso14882:&lt;n&gt; : Same as -V &lt;n&gt; (long in decimals).</dd>
 <dt>-V &lt;n&gt;</dt>
-<dd> Redefine __STDC_VERSION__ or __cplusplus to &lt;n&gt;.<br />
- C with -V199901L specifies C99 mode.<br />
+<dd> Redefine __STDC_VERSION__ or __cplusplus to &lt;n&gt;.<br/>
+ C with -V199901L specifies C99 mode.<br/>
  C++ with -V199901L specifies C99 compatible mode.</dd>
 <dt>-x c++</dt>
 <dd> Same as -+.</dd></dl>
@@ -164,12 +164,12 @@ description: "mcpp – Matsui CPP, an alternative C preprocessor"
 <dt>#pragma MCPP put_defines</dt>
 <dd> Putout all the macro definitions currently valid.</dd>
 <dt>#pragma MCPP debug &lt;args&gt;</dt>
-<dd> Start to putout debugging informations.<br />
-&nbsp;<wbr>&lt;args&gt;&nbsp;<wbr>should be one or more of:<br />
+<dd> Start to putout debugging informations.<br/>
+&nbsp;<wbr>&lt;args&gt;&nbsp;<wbr>should be one or more of:<br/>
 &nbsp;<wbr>token expand macro_call path if expression memory getc</dd>
 <dt>#pragma MCPP end_debug &lt;args&gt;</dt>
-<dd> Stop to putout debugging informations.<br />
-&nbsp;<wbr>&lt;args&gt;&nbsp;<wbr>are the same with&nbsp;<wbr>&#8216;debug&#8217;.<br />
+<dd> Stop to putout debugging informations.<br/>
+&nbsp;<wbr>&lt;args&gt;&nbsp;<wbr>are the same with&nbsp;<wbr>&#8216;debug&#8217;.<br/>
 &nbsp;<wbr>No argument specifies all arguments.</dd>
 <dt>#pragma MCPP push_macro( &quot;MACRO&quot;)</dt>
 <dd> Save the macro definition to the stack.</dd>

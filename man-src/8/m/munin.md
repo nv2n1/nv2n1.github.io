@@ -29,8 +29,8 @@ Jimmy Olsen, Audun Ytterdal, Brian de Wolf, Nicolai Langfeldt
 
 <h2>Copyright</h2>
 
-Copyright (C) 2002-2008 Audun Ytterdal, Jimmy Olsen, Nicolai Langfeldt, Linpro <font SIZE="-1">AS</font> and others. 
+Copyright (C) 2002-2008 Audun Ytterdal, Jimmy Olsen, Nicolai Langfeldt, Linpro AS and others. 
 
- This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> 
+ This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
 
- This program is released under the <font SIZE="-1">GNU</font> General Public License
+ This program is released under the GNU General Public License

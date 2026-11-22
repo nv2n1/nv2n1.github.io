@@ -13,9 +13,9 @@ description: "ql/indexes/swap/usdliborswap.hpp – USD Libor Swap indexes"
 #include &lt;ql/indexes/swapindex.hpp&gt;
 #include &lt;ql/termstructures/yieldtermstructure.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>UsdLiborSwapIsdaFixAm</code><br />
- <i>UsdLiborSwapIsdaFixAm index base class </i><br />
- class <code>UsdLiborSwapIsdaFixPm</code><br />
+<p>class <code>UsdLiborSwapIsdaFixAm</code><br/>
+ <i>UsdLiborSwapIsdaFixAm index base class </i><br/>
+ class <code>UsdLiborSwapIsdaFixPm</code><br/>
  <i>UsdLiborSwapIsdaFixPm index base class </i></p>
 <h2>Detailed Description</h2>
 <p>USD Libor Swap indexes</p>

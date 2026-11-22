@@ -14,9 +14,9 @@ description: "opasaquery"
 <p> The command opasaquery is installed on all hosts as part of the Intel(R) Omni-Path Fabric Host Software, but it is also included in Intel(R) Omni-Path Fabric Suite FastFabric Toolset. </p>
 <p> By default, opasaquery uses the first active port on the local system. However, if the node is connected to more than one fabric (for example, a subnet), the Intel(R) Omni-Path Host Fabric Interface (HFI) and port may be specified to select the fabric whose SA is to be queried.</p>
 <h2>Syntax</h2>
-<p> opasaquery [-v [-v] [-v]] [-I] [-h <i>hfi</i>] [-p <i>port</i>] [-o <i>type</i>] [-l <i>lid</i>]<br />
- [-t <i>type</i>] [-s <i>guid</i>] [-n <i>guid</i>] [-g <i>guid</i>] [-k <i>pkey</i>] [-i <i>vfIndex</i>]<br />
- [-S <i>serviceId</i>] [-L <i>sl</i>] [-u <i>gid</i>] [-m <i>gid</i>] [-d <i>name</i>] [-P &#8216;<i>guid guid</i>&#8216;]<br />
+<p> opasaquery [-v [-v] [-v]] [-I] [-h <i>hfi</i>] [-p <i>port</i>] [-o <i>type</i>] [-l <i>lid</i>]<br/>
+ [-t <i>type</i>] [-s <i>guid</i>] [-n <i>guid</i>] [-g <i>guid</i>] [-k <i>pkey</i>] [-i <i>vfIndex</i>]<br/>
+ [-S <i>serviceId</i>] [-L <i>sl</i>] [-u <i>gid</i>] [-m <i>gid</i>] [-d <i>name</i>] [-P &#8216;<i>guid guid</i>&#8216;]<br/>
  [-G &#8216;<i>gid gid</i>&#8216;] [-a &#8216;<i>sguid</i>&#8230;; <i>dguid</i>&#8230;&#8217;] [-A#8217#160;&#8217;<i>sgid</i>&#8230;; <i>dgid</i>&#8230;&#8217;]</p>
 <h2>Options</h2>
 <dl>
@@ -178,9 +178,9 @@ description: "opasaquery"
 <p> name:index:pkey:sl:mtu:rate:optionflag </p>
 <p> The only difference between these two formats is how the MTU and rate are output. vfinfocsv outputs MTU and rate in human/text readable format. vfinfocsv2 outputs MTU and rate as enumerations defined for the SMA protocol. The opagetvf command is based on this capability of opasaquery. For more information, see <i>opagetvf</i></p>
 <h2>Example</h2>
-<p> opasaquery -o desc -t fi<br />
- opasaquery -o portinfo -l 2<br />
- opasaquery -o sminfo<br />
+<p> opasaquery -o desc -t fi<br/>
+ opasaquery -o portinfo -l 2<br/>
+ opasaquery -o sminfo<br/>
  opasaquery -o pkey</p>
 <h2>Input Options vs. Output Permitted</h2>
 <p> The following list shows the input (assorted query by options) and outputs (-o) that are permitted.</p>

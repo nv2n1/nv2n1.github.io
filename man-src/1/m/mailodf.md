@@ -33,12 +33,12 @@ description: "mailodf – Email ODF file as HTML archive"
 <h2>Example</h2>
 <dl>
 <dt>
-</dt><dd> <font SIZE="-1"> </font></dd>
+</dt><dd>  </dd>
 <pre>
 mailodf -f lars.oppermann [at] sun.com -s &quot;F.Y.I&quot; odf-file
 </pre>
-<p> <font SIZE="+1"></dl>
-<p> </font></p>
+<p> </dl>
+<p> </p>
 <h2>See Also</h2>
 <p> odf2mht</p>
 <h2>Author</h2>

@@ -10,8 +10,8 @@ description: "gzip, gunzip, zcat – compress or expand files"
 
 <p> gzip, gunzip, zcat &#8211; compress or expand files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>gzip</code> [<code> -acdfhklLnNrtvV19 </code>] [<code>-S suffix</code>] [ <i>name &#8230;</i> ]<br />
- <code>gunzip</code> [<code> -acfhklLnNrtvV </code>] [<code>-S suffix</code>] [ <i>name &#8230;</i> ]<br />
+<p> <code>gzip</code> [<code> -acdfhklLnNrtvV19 </code>] [<code>-S suffix</code>] [ <i>name &#8230;</i> ]<br/>
+ <code>gunzip</code> [<code> -acfhklLnNrtvV </code>] [<code>-S suffix</code>] [ <i>name &#8230;</i> ]<br/>
  <code>zcat</code> [<code> -fhLV </code>] [ <i>name &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Gzip</i> reduces the size of the named files using Lempel-Ziv coding (LZ77). Whenever possible, each file is replaced by one with the extension <code>.gz</code>, while keeping the same ownership modes, access and modification times. (The default extension is <code>z</code> for MSDOS, OS/2 FAT, Windows NT FAT and Atari.) If no files are specified, or if a file name is &quot;-&quot;, the standard input is compressed to the standard output. <i>Gzip</i> will only attempt to compress regular files. In particular, it will ignore symbolic links. </p>
@@ -40,15 +40,15 @@ description: "gzip, gunzip, zcat – compress or expand files"
 <dd> Keep (don&#8217;t delete) input files during compression or decompression.</dd>
 <dt><code>-l &#8211;list</code></dt>
 <dd> For each compressed file, list the following fields: </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;compressed size: size of the compressed file<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uncompressed size: size of the uncompressed file<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ratio: compression ratio&nbsp;(0.0%&nbsp;if unknown)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;compressed size: size of the compressed file<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uncompressed size: size of the uncompressed file<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ratio: compression ratio&nbsp;(0.0%&nbsp;if unknown)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uncompressed_name: name of the uncompressed file </p>
 <p> The uncompressed size is given as -1 for files not in gzip format, such as compressed .Z files. To get the uncompressed size for such a file, you can use: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;zcat file.Z | wc -c </p>
 <p> In combination with the &#8211;verbose option, the following fields are also displayed: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;method: compression method<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;crc: the 32-bit CRC of the uncompressed data<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;method: compression method<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;crc: the 32-bit CRC of the uncompressed data<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;date&nbsp;&amp;&nbsp;time: timestamp for the uncompressed file </p>
 <p> The compression methods currently supported are deflate, compress, lzh (SCO compress -H) and pack. The crc is given as ffffffff for a file not in gzip format. </p>
 <p> With &#8211;name, the uncompressed name, date and time are those stored within the compress file if present. </p>
@@ -80,7 +80,7 @@ description: "gzip, gunzip, zcat – compress or expand files"
 <dd> When you synchronize a compressed file between two computers, this option allows rsync to transfer only files that were changed in the archive instead of the entire archive. Normally, after a change is made to any file in the archive, the compression algorithm can generate a new version of the archive that does not match the previous version of the archive. In this case, rsync transfers the entire new version of the archive to the remote computer. With this option, rsync can transfer only the changed files as well as a small amount of metadata that is required to update the archive structure in the area that was changed.</dd></dl>
 <h2>ADVANCED USAGE</h2>
 <p> Multiple compressed files can be concatenated. In this case, <i>gunzip</i> will extract all members at once. For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gzip -c file1&nbsp;<wbr>&nbsp;&gt;&nbsp;foo.gz<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gzip -c file1&nbsp;<wbr>&nbsp;&gt;&nbsp;foo.gz<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gzip -c file2&nbsp;&gt;&gt;&nbsp;foo.gz </p>
 <p> Then </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gunzip -c foo </p>
@@ -98,12 +98,12 @@ description: "gzip, gunzip, zcat – compress or expand files"
 <h2>ENVIRONMENT</h2>
 <p> The obsolescent environment variable <code>GZIP</code> can hold a set of default options for <i>gzip</i>. These options are interpreted first and can be overwritten by explicit command line parameters. As this can cause problems when using scripts, this feature is supported only for options that are reasonably likely to not cause too much harm, and <i>gzip</i> warns if it is used. This feature will be removed in a future release of <i>gzip</i>. </p>
 <p> You can use an alias or script instead. For example, if <i>gzip</i> is in the directory <code>/usr/bin</code> you can prepend <code>$HOME/bin</code> to your <code>PATH</code> and create an executable script <code>$HOME/bin/gzip</code> containing the following: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#!&nbsp;/bin/sh<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;export PATH=/usr/bin<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#!&nbsp;/bin/sh<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;export PATH=/usr/bin<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exec gzip -9&nbsp;&quot;$@&quot;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-znew/">znew</a>(1), <a href="/docs/linux/man/1-zcmp/">zcmp</a>(1), <a href="/docs/linux/man/1-zmore/">zmore</a>(1), <a href="/docs/linux/man/1-zforce/">zforce</a>(1), <a href="/docs/linux/man/1-gzexe/">gzexe</a>(1), <a href="/docs/linux/man/1-zip/">zip</a>(1), <a href="/docs/linux/man/1-unzip/">unzip</a>(1), <a href="/docs/linux/man/1-compress/">compress</a>(1) </p>
-<p> The <i>gzip</i> file format is specified in P. Deutsch, <font SIZE="-1">GZIP</font> file format specification version 4.3, <code>&lt;<a rel="nofollow" href="https://www.ietf.org/rfc/rfc1952.txt">https://www.ietf.org/rfc/rfc1952.txt</a>&gt;</code>, Internet RFC 1952 (May 1996). The <i>zip</i> deflation format is specified in P. Deutsch, <font SIZE="-1">DEFLATE</font> Compressed Data Format Specification version 1.3, <code>&lt;<a rel="nofollow" href="https://www.ietf.org/rfc/rfc1951.txt">https://www.ietf.org/rfc/rfc1951.txt</a>&gt;</code>, Internet RFC 1951 (May 1996).</p>
+<p> The <i>gzip</i> file format is specified in P. Deutsch, GZIP file format specification version 4.3, <code>&lt;<a rel="nofollow" href="https://www.ietf.org/rfc/rfc1952.txt">https://www.ietf.org/rfc/rfc1952.txt</a>&gt;</code>, Internet RFC 1952 (May 1996). The <i>zip</i> deflation format is specified in P. Deutsch, DEFLATE Compressed Data Format Specification version 1.3, <code>&lt;<a rel="nofollow" href="https://www.ietf.org/rfc/rfc1951.txt">https://www.ietf.org/rfc/rfc1951.txt</a>&gt;</code>, Internet RFC 1951 (May 1996).</p>
 <h2>DIAGNOSTICS</h2>
 <p> Exit status is normally 0; if an error occurs, exit status is 1. If a warning occurs, exit status is 2.</p>
 <dl>
@@ -136,7 +136,7 @@ description: "gzip, gunzip, zcat – compress or expand files"
 <p> The &#8211;list option reports sizes as -1 and crc as ffffffff if the compressed file is on a non seekable media. </p>
 <p> In some rare cases, the &#8211;best option gives worse compression than the default compression level (-6). On some highly redundant files, <i>compress</i> compresses better than <i>gzip</i>.</p>
 <h2>COPYRIGHT NOTICE</h2>
-<p> Copyright &#169; 1998-1999, 2001-2002, 2012, 2015-2018 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 1998-1999, 2001-2002, 2012, 2015-2018 Free Software Foundation, Inc.<br/>
  Copyright &#169; 1992, 1993 Jean-loup Gailly </p>
 <p> Permission is granted to make and distribute verbatim copies of this manual provided the copyright notice and this permission notice are preserved on all copies. </p>
 <p> Permission is granted to copy and distribute modified versions of this manual under the conditions for verbatim copying, provided that the entire resulting derived work is distributed under the terms of a permission notice identical to this one. </p>

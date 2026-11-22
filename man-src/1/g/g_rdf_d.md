@@ -20,60 +20,60 @@ description: "g_rdf – calculates radial distribution functions"
 <p> Option <code> -cn</code> produces the cumulative number rdf, i.e. the average number of particles within a distance r. </p>
 <p> To bridge the gap between theory and experiment structure factors can be computed (option <code> -sq</code>). The algorithm uses FFT, the gridspacing of which is determined by option <code> -grid</code>.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure+mass(db): tpr tpb tpa gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-o</code><i> rdf.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-o</code><i> rdf.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-sq</code><i> sq.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-sq</code><i> sq.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-cn</code><i> rdf_cn.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-cn</code><i> rdf_cn.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-hq</code><i> hq.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-hq</code><i> hq.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-bin</code><i> real</i><code> 0.002 </code><br />
+<p> <code>-bin</code><i> real</i><code> 0.002 </code><br/>
 &nbsp;<wbr>Binwidth&nbsp;<wbr>(nm) </p>
-<p> <code>-[no]com</code><i>no </i><br />
+<p> <code>-[no]com</code><i>no </i><br/>
 &nbsp;<wbr>RDF with respect to the center of mass of first group </p>
-<p> <code>-rdf</code><i> enum</i><code> atom</code><br />
+<p> <code>-rdf</code><i> enum</i><code> atom</code><br/>
 &nbsp;<wbr>RDF type:&nbsp;<wbr><code>&nbsp;<wbr>atom</code>,&nbsp;<wbr><code>&nbsp;<wbr>mol_com</code>,&nbsp;<wbr><code>&nbsp;<wbr>mol_cog</code>,&nbsp;<wbr><code>&nbsp;<wbr>res_com</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>res_cog</code> </p>
-<p> <code>-[no]pbc</code><i>yes </i><br />
+<p> <code>-[no]pbc</code><i>yes </i><br/>
 &nbsp;<wbr>Use periodic boundary conditions for computing distances. Without PBC the maximum range will be three times the larges box edge. </p>
-<p> <code>-[no]norm</code><i>yes </i><br />
+<p> <code>-[no]norm</code><i>yes </i><br/>
 &nbsp;<wbr>Normalize for volume and density </p>
-<p> <code>-[no]xy</code><i>no </i><br />
+<p> <code>-[no]xy</code><i>no </i><br/>
 &nbsp;<wbr>Use only the x and y components of the distance </p>
-<p> <code>-cut</code><i> real</i><code> 0 </code><br />
+<p> <code>-cut</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Shortest distance&nbsp;<wbr>(nm)&nbsp;<wbr>to be considered </p>
-<p> <code>-ng</code><i> int</i><code> 1</code><br />
+<p> <code>-ng</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>Number of secondary groups to compute RDFs around a central group </p>
-<p> <code>-fade</code><i> real</i><code> 0 </code><br />
+<p> <code>-fade</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>From this distance onwards the RDF is tranformed by g'(r)&nbsp;<wbr>=&nbsp;<wbr>1&nbsp;<wbr>+&nbsp;<wbr>[g(r)-1]&nbsp;<wbr>exp(-(r/fade-1)2 to make it go to 1 smoothly. If fade is 0.0 nothing is done. </p>
-<p> <code>-nlevel</code><i> int</i><code> 20</code><br />
+<p> <code>-nlevel</code><i> int</i><code> 20</code><br/>
 &nbsp;<wbr>Number of different colors in the diffraction image </p>
-<p> <code>-startq</code><i> real</i><code> 0 </code><br />
+<p> <code>-startq</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Starting q&nbsp;<wbr>(1/nm)&nbsp;<wbr> </p>
-<p> <code>-endq</code><i> real</i><code> 60 </code><br />
+<p> <code>-endq</code><i> real</i><code> 60 </code><br/>
 &nbsp;<wbr>Ending q&nbsp;<wbr>(1/nm) </p>
-<p> <code>-energy</code><i> real</i><code> 12 </code><br />
+<p> <code>-energy</code><i> real</i><code> 12 </code><br/>
 &nbsp;<wbr>Energy of the incoming X-ray&nbsp;<wbr>(keV)&nbsp;<wbr> </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

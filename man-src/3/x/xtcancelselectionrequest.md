@@ -28,5 +28,5 @@ description: "XtCreateSelectionRequest, XtSendSelectionRequest, XtCancelSelectio
 <p> Multi-threaded applications should lock the application context before calling <code>XtCreateSelectionRequest</code> and release the lock after calling <code>XtSendSelectionRequest</code> to ensure that the thread assembling the request is safe from interference by another thread assembling a different request naming the same widget and selection. </p>
 <p> When <code>XtCancelSelectionRequest</code> is called, any requests queued since the last call to <code>XtCreateSelectionRequest</code> are cleaned up. Subsequent calls to <code>XtGetSelectionValue</code>, <code>XtGetSelectionValues</code>, <code>XtGetSelectionValueIncremental</code>, and <code>XtGetSelectionValuesIncremental</code> will not be deferred.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

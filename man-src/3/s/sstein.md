@@ -11,7 +11,7 @@ description: "sstein.f –"
 <p> sstein.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sstein</code> (N, D, E, M, W, IBLOCK, ISPLIT, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
+<p> subroutine <code>sstein</code> (N, D, E, M, W, IBLOCK, ISPLIT, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br/>
  <i></i><code>SSTEIN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sstein (integerN, real, dimension( * )D, real, dimension( * )E, integerM, real, dimension( * )W, integer, dimension( * )IBLOCK, integer, dimension( * )ISPLIT, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integer, dimension( * )IWORK, integer, dimension( * )IFAIL, integerINFO)</h3>

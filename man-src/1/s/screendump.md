@@ -23,7 +23,7 @@ description: "screendump – dump the contents of a virtual console to stdout"
 <p> Ensure these files exist, using </p>
 <dl>
 <dt>
-</dt><dd> cd /dev for i in 0 1 2 3 &#8230;; do<br />
+</dt><dd> cd /dev for i in 0 1 2 3 &#8230;; do<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>mknod vcs$i c 7 $i</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>mknod vcsa$i c 7 `expr 128 + $i`</p>
 <p> done</dl>

@@ -11,10 +11,10 @@ description: "include/antlr3filestream.h –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt; </p>
 <h3>Functions</h3>
-<p>ANTLR3_API void <code>antlr3Fclose</code> (<code>ANTLR3_FDSC</code> fd)<br />
- <i>Close an operating system file and free any handles etc. </i><br />
- ANTLR3_API <code>ANTLR3_FDSC</code> <code>antlr3Fopen</code> (<code>pANTLR3_UINT8</code> filename, const char *mode)<br />
- <i>Open an operating system file and return the descriptor We just use the common open() and related functions here. </i><br />
+<p>ANTLR3_API void <code>antlr3Fclose</code> (<code>ANTLR3_FDSC</code> fd)<br/>
+ <i>Close an operating system file and free any handles etc. </i><br/>
+ ANTLR3_API <code>ANTLR3_FDSC</code> <code>antlr3Fopen</code> (<code>pANTLR3_UINT8</code> filename, const char *mode)<br/>
+ <i>Open an operating system file and return the descriptor We just use the common open() and related functions here. </i><br/>
  ANTLR3_API <code>ANTLR3_UINT32</code> <code>antlr3Fread</code> (<code>ANTLR3_FDSC</code> fdsc, <code>ANTLR3_UINT32</code> count, void *data) </p>
 <p> ANTLR3_API <code>ANTLR3_UINT32</code> <code>antlr3Fsize</code> (<code>pANTLR3_UINT8</code> filename) </p>
 <p> ANTLR3_API <code>ANTLR3_UINT32</code> <code>antlr3readAscii</code> (<code>pANTLR3_INPUT_STREAM</code> input, <code>pANTLR3_UINT8</code> fileName) </p>

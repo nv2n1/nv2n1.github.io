@@ -10,13 +10,13 @@ description: "ql/cashflows/digitalcmscoupon.hpp – Cms-rate coupon with digital
 
 <p> ql/cashflows/digitalcmscoupon.hpp &#8211; Cms-rate coupon with digital call/put option. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/cashflows/digitalcoupon.hpp&gt;<br />
- #include &lt;ql/cashflows/cmscoupon.hpp&gt;<br />
+<p> #include &lt;ql/cashflows/digitalcoupon.hpp&gt;<br/>
+ #include &lt;ql/cashflows/cmscoupon.hpp&gt;<br/>
  #include &lt;ql/time/schedule.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>DigitalCmsCoupon</code><br />
- <i>Cms-rate coupon with digital digital call/put option. </i><br />
- class <code>DigitalCmsLeg</code><br />
+<p> class <code>DigitalCmsCoupon</code><br/>
+ <i>Cms-rate coupon with digital digital call/put option. </i><br/>
+ class <code>DigitalCmsLeg</code><br/>
  <i>helper class building a sequence of digital ibor-rate coupons </i></p>
 <h2>Detailed Description</h2>
 <p> Cms-rate coupon with digital call/put option. </p>

@@ -10,10 +10,10 @@ description: "test – check file types and compare values"
 
 <p> test &#8211; check file types and compare values </p>
 <h2>SYNOPSIS</h2>
-<p> <code>test</code> <i>EXPRESSION</i><br />
- <code>test</code><br />
- <code>[</code> <i>EXPRESSION</i> <code>]</code><br />
- <code>[ ]</code><br />
+<p> <code>test</code> <i>EXPRESSION</i><br/>
+ <code>test</code><br/>
+ <code>[</code> <i>EXPRESSION</i> <code>]</code><br/>
+ <code>[ ]</code><br/>
  <code>[</code> <i>OPTION</i></p>
 <h2>DESCRIPTION</h2>
 <p> Exit with the status determined by EXPRESSION.</p>
@@ -107,11 +107,11 @@ description: "test – check file types and compare values"
 <h2>AUTHOR</h2>
 <p> Written by Kevin Braunsdorf and Matthew Bradburn.</p>
 <h2>REPORTING BUGS</h2>
-<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br/>
  Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
-<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/[">https://www.gnu.org/software/coreutils/[</a>&gt;<br />
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/[">https://www.gnu.org/software/coreutils/[</a>&gt;<br/>
  or available locally via: info &#8216;(coreutils) test invocation&#8217; </p>

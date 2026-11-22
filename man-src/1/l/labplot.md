@@ -10,7 +10,7 @@ description: "LabPlot – data plotting and function analysis tool for KDE"
 
 <p> LabPlot &#8211; data plotting and function analysis tool for KDE</p>
 <h2>SYNOPSIS</h2>
-<p> <code>LabPlot</code> [ <i>generic-options</i> ] [ <i>file</i> &#8230; ]<br />
+<p> <code>LabPlot</code> [ <i>generic-options</i> ] [ <i>file</i> &#8230; ]<br/>
  <code>labplot</code> [ <i>generic-options</i> ] [ <i>file</i> &#8230; ] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>LabPlot</code> is a data plotting and analysis tool for the KDE desktop. </p>
@@ -21,5 +21,5 @@ description: "LabPlot – data plotting and function analysis tool for KDE"
 <h2>SEE ALSO</h2>
 <p> Full user documentation is available through the KDE Help Centre. You can also enter the URL <i>help:/LabPlot/</i> directly into konqueror or you can run `<i>khelpcenter help:/LabPlot/</i>&#8216; from the command-line. </p>
 <h2>AUTHOR</h2>
-<p> LabPlot was written by Stefan Gerlach &lt;gerlach [at] mbi-berlin.de&gt;.<br />
+<p> LabPlot was written by Stefan Gerlach &lt;gerlach [at] mbi-berlin.de&gt;.<br/>
  This manual page was prepared by Helen Faulkner &lt;helen_ml_faulkner [at] yahoo.co.uk&gt; for the Debian GNU/Linux system (but may be used by others). </p>

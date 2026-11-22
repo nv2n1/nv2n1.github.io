@@ -24,8 +24,8 @@ description: "tftopl – convert TeX font metric (tfm) files to property lists"
 <dt><code>-verbose</code></dt>
 <dd> Without this option, <code>tftopl</code> operates silently. With it, a banner and progress report are printed on <i>stdout</i>.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-pltotf/">pltotf</a></code>(1),<br />
- Donald E. Knuth, <i>TeXware</i>.<br />
+<p> <code><a href="/docs/linux/man/1-pltotf/">pltotf</a></code>(1),<br/>
+ Donald E. Knuth, <i>TeXware</i>.<br/>
  Donald E. Knuth, <i>The Metafontbook</i> (Volume C of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13445-4.</p>
 <h2>AUTHORS</h2>
 <p> Donald E. Knuth wrote the program. It was published as part of the <i>TeXware</i> technical report, available from the TeX Users Group. Howard Trickey and Pavel Curtis originally ported it to Unix. </p>

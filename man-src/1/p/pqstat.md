@@ -10,7 +10,7 @@ description: "pqstat – List jobs in NetWare print queue"
 
 <p> pqstat &#8211; List jobs in NetWare print queue</p>
 <h2>SYNOPSIS</h2>
-<p> <code>pqstat</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i><br />
+<p> <code>pqstat</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i><br/>
 &nbsp;<wbr>| <code>-n</code> ] [ <code>-C</code> ] [ <code>-B</code> ] <i>queue name</i> [ <i>job count</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pqstat</code> lists specified number of jobs from the specified NetWare print queue available to you on some server. If you are already connected to some server, this one is used. </p>

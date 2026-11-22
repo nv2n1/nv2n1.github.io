@@ -15,16 +15,16 @@ description: "snmp_config – handling of Net-SNMP configuration files"
 <p> Additionally, the above default search path can be overridden by setting the environment variable SNMPCONFPATH to a colon-separated list of directories to search for. The path for the persistent data should be included when running applications that use persistent storage, such as snmpd. </p>
 <p> Applications will read persistent configuration files in the following order of preference:</p>
 <dl>
-<dd>file in <code>SNMP_PERSISTENT_FILE</code> environment variable<br />
- directories in <code>SNMPCONFPATH</code> environment variable<br />
- directory defined by <code>persistentDir </code> snmp.conf variable<br />
- directory in <code>SNMP_PERSISTENT_DIR </code> environment variable<br />
+<dd>file in <code>SNMP_PERSISTENT_FILE</code> environment variable<br/>
+ directories in <code>SNMPCONFPATH</code> environment variable<br/>
+ directory defined by <code>persistentDir </code> snmp.conf variable<br/>
+ directory in <code>SNMP_PERSISTENT_DIR </code> environment variable<br/>
  default <code>/var/lib/snmp </code> directory</dd></dl>
 <p> Finally, applications will write persistent configuration files in the following order of preference:</p>
 <dl>
-<dd>file in <code>SNMP_PERSISTENT_FILE</code> environment variable<br />
- directory defined by <code>persistentDir </code> snmp.conf variable<br />
- directory in <code>SNMP_PERSISTENT_DIR </code> environment variable<br />
+<dd>file in <code>SNMP_PERSISTENT_FILE</code> environment variable<br/>
+ directory defined by <code>persistentDir </code> snmp.conf variable<br/>
+ directory in <code>SNMP_PERSISTENT_DIR </code> environment variable<br/>
  default <code>/var/lib/snmp </code> directory</dd></dl>
 <p> Note: When using SNMP_PERSISTENT_FILE, the filename should match the application name. For example, /var/net-snmp/snmpd.conf.</p>
 <h2>Configuration File Types</h2>

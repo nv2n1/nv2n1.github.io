@@ -199,13 +199,13 @@ int_value ]</code></pre>
 </dl>
 <h2>Examples</h2>
 <dl>
-<dd>tc filter add dev eth0 parent 999:0 prio 99 protocol ip u32 \<br />
+<dd>tc filter add dev eth0 parent 999:0 prio 99 protocol ip u32 \<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match ip src 192.168.8.0/24 classid 1:1</dd></dl>
 <p> This attaches a filter to the qdisc identified by <code>999:0.</code> It&#8217;s priority is <code>99</code>, which affects in which order multiple filters attached to the same <code>parent</code> are consulted (the lower the earlier). The filter handles packets of <code>protocol</code> type <code>ip</code>, and <code>match</code>es if the IP header&#8217;s source address is within the <code>192.168.8.0/24</code> subnet. Matching packets are classified into class <code>1.1</code>. The effect of this command might be surprising at first glance: </p>
 <dl>
-<dd>filter parent 1: protocol ip pref 99 u32 filter parent 1: protocol ip pref 99 u32 \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fh 800: ht divisor 1 filter parent 1: protocol ip pref 99 u32 \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fh 800::800 order 2048 key ht 800 bkt 0 flowid 1:1&nbsp;\<br />
+<dd>filter parent 1: protocol ip pref 99 u32 filter parent 1: protocol ip pref 99 u32 \<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fh 800: ht divisor 1 filter parent 1: protocol ip pref 99 u32 \<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fh 800::800 order 2048 key ht 800 bkt 0 flowid 1:1&nbsp;\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match c0a80800/ffffff00 at 12</dd></dl>
 <p> So parent <code>1:</code> is assigned a new <code>u32</code> filter, which contains a hash table of size 1 (as the <code>divisor</code> indicates). The table ID is <code>800</code>. The third line then shows the actual filter which was added above: it sits in table <code>800</code> and bucket <code>0</code>, classifies packets into class ID <code>1:1</code> and matches the upper three bytes of the four byte value at offset <code>12</code> to be <code>0xc0a808</code>, which is 192, 168 and 8. </p>
 <p> Now for something more complicated, namely creating a custom hash table: </p>
@@ -217,29 +217,29 @@ int_value ]</code></pre>
 <p> So along with the requested hash table (handle <code>1:</code>), the kernel has created his own table of size 1 to hold other filters of the same priority. </p>
 <p> The next step is to create a filter which links to the created hash table: </p>
 <dl>
-<dd>tc filter add dev eth0 parent 1: prio 1 u32 \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;link 1: hashkey mask 0x0000ff00 at 12&nbsp;\<br />
+<dd>tc filter add dev eth0 parent 1: prio 1 u32 \<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;link 1: hashkey mask 0x0000ff00 at 12&nbsp;\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match ip src 192.168.0.0/16</dd></dl>
 <p> The filter is given a lower priority than the hash table itself so <code>u32</code> consults it before manually traversing the hash table. The options <code>link</code> and <code>hashkey</code> determine which table and bucket to redirect to. In this case the hash key should be constructed out of the second byte at offset 12, which corresponds to an IP packet&#8217;s third byte of the source address field. Along with the <code>match</code> statement, this effectively maps all class C networks below 192.168.0.0/16 to different buckets of the hash table. </p>
 <p> Filters for certain subnets can be created like so: </p>
 <dl>
-<dd>tc filter add dev eth0 parent 1: prio 99 u32 \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ht 1: sample u32 0x00000800 0x0000ff00 at 12&nbsp;\<br />
+<dd>tc filter add dev eth0 parent 1: prio 99 u32 \<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ht 1: sample u32 0x00000800 0x0000ff00 at 12&nbsp;\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match ip src 192.168.8.0/24 classid 1:1</dd></dl>
 <p> The bucket is defined using the <code>sample</code> option: In this case, the second byte at offset 12 must be 0x08, exactly. In this case, the resulting bucket ID is obviously 8, but as soon as <code>sample</code> selects an amount of data which could exceed the <code>divisor</code>, one would have to know the kernel-internal algorithm to deduce the destination bucket. This filter&#8217;s <code>match</code> statement is redundant in this case, as the entropy for the hash key does not exceed the table size and therefore no collisions can occur. Otherwise it&#8217;s necessary to prevent matching unwanted packets. </p>
 <p> Matching upper layer fields is problematic since IPv4 header length is variable and IPv6 supports extension headers which affect upper layer header offset. To overcome this, there is the possibility to specify <code>nexthdr+</code> when giving an offset, and to make things easier there are the <code>tcp</code> and <code>udp</code> matches which use <code>nexthdr+</code> implicitly. This offset has to be calculated in beforehand though, and the only way to achieve that is by doing it in a separate filter which then links to the filter which wants to use it. Here is an example of doing so: </p>
 <dl>
-<dd>tc filter add dev eth0 parent 1:0 protocol ip handle 1: \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u32 divisor 1 tc filter add dev eth0 parent 1:0 protocol ip \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u32 ht 1:&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match tcp src 22 FFFF&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;classid 1:2 tc filter add dev eth0 parent 1:0 protocol ip \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u32 ht 800:&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match ip protocol 6 FF&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match ip firstfrag&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;offset at 0 mask 0f00 shift 6&nbsp;\<br />
+<dd>tc filter add dev eth0 parent 1:0 protocol ip handle 1: \<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u32 divisor 1 tc filter add dev eth0 parent 1:0 protocol ip \<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u32 ht 1:&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match tcp src 22 FFFF&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;classid 1:2 tc filter add dev eth0 parent 1:0 protocol ip \<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u32 ht 800:&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match ip protocol 6 FF&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match ip firstfrag&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;offset at 0 mask 0f00 shift 6&nbsp;\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;link 1:</dd></dl>
 <p> This is what is being done: In the first call, a single element sized hash table is created so there is a place to hold the linked to filter and a known handle (<code>1:</code>) to reference to it. The second call then adds the actual filter, which pushes packets with TCP source port 22 into class <code>1:2</code>. Using <code>ht</code>, it is moved into the hash table created by the first call. The third call then does the actual magic: It matches IPv4 packets with next layer protocol 6 (TCP), only if it&#8217;s the first fragment (usually TCP sets DF bit, but if it doesn&#8217;t and the packet is fragmented, only the first one contains the TCP header), and then sets the offset based on the IP header&#8217;s IHL field (right-shifting by 6 eliminates the offset of the field and at the same time converts the value into byte unit). Finally, using <code>link</code>, the hash table from first call is referenced which holds the filter from second call.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8),<br />
+<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8),<br/>
  <code>cls_u32.txt</code> at <code><a rel="nofollow" href="http://linux-tc-notes.sourceforge.net/">http://linux-tc-notes.sourceforge.net/</a></code> </p>

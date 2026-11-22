@@ -13,23 +13,23 @@ description: "getdns_general, getdns_general_sync — do a getdns DNS lookup"
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_general</code> (getdns_context *context,</p>
 <dl>
 <dt>
-</dt><dd> const char *name,<br />
- uint16_t request_type<br />
- getdns_dict *extensions,<br />
- void *userarg,<br />
- getdns_transaction_t *transaction_id,<br />
+</dt><dd> const char *name,<br/>
+ uint16_t request_type<br/>
+ getdns_dict *extensions,<br/>
+ void *userarg,<br/>
+ getdns_transaction_t *transaction_id,<br/>
  getdns_callback_t callbackfn)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_general_sync</code> (getdns_context *context,</p>
 <dl>
 <dt>
-</dt><dd> const char *name,<br />
- uint16_t request_type<br />
- getdns_dict *extensions,<br />
+</dt><dd> const char *name,<br/>
+ uint16_t request_type<br/>
+ getdns_dict *extensions,<br/>
  getdns_dict **response)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/3-getdns_general/">getdns_general</a>(3) and getdns_general_sync functions provide public entry points into the getdns API library to retrieve any valid responses to a query from the DNS (note that other namespaces in the context are not used). Most typical use cases for applications are probably satisifed via calls to <a href="/docs/linux/man/3-getdns_address/">getdns_address</a>(3) which would replace <a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a>(3). </p>
@@ -124,7 +124,7 @@ description: "getdns_general, getdns_general_sync — do a getdns DNS lookup"
 <h2>EXAMPLES</h2>
 <p> TBD </p>
 <h2>FILES</h2>
-<p> /etc/hosts<br />
+<p> /etc/hosts<br/>
  /etc/resolv.conf </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_address/">getdns_address</a></code>(3), <code><a href="/docs/linux/man/3-getdns_context/">getdns_context</a></code>(3), <code>getdns_free_sync_request_memory</code>(3), <code><a href="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service/">getdns_service</a></code>(3), </p>

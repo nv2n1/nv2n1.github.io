@@ -10,7 +10,7 @@ description: "XkbUpdateMapFromCore – Update a local Xkb keyboard map to reflec
 <p>XkbUpdateMapFromCore &#8211; Update a local Xkb keyboard map to reflect the mapping expressed by a core format mapping </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbUpdateMapFromCore</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>first_key</i><code>,</code> <code>int </code><i>num_keys</i><code>,</code> <code>int </code><i>map_width</i><code>,</code> <code>KeySym *</code><i>core_keysyms</i><code>,</code> <code>XkbChangesPtr </code><i>changes</i><code>);</code><br />
+<dt> <code>Bool XkbUpdateMapFromCore</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>first_key</i><code>,</code> <code>int </code><i>num_keys</i><code>,</code> <code>int </code><i>map_width</i><code>,</code> <code>KeySym *</code><i>core_keysyms</i><code>,</code> <code>XkbChangesPtr </code><i>changes</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

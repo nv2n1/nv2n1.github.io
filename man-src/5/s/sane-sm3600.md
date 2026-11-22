@@ -37,12 +37,12 @@ Microtek ScanMaker 3750 reported to work</pre>
 <dl>
 <dt><code>SANE_DEBUG_SM3600</code></dt>
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. To see error messages on stderr set <code>SANE_DEBUG_SM3600</code> to 1. </dd>
-<p> E.g. just say:<br />
+<p> E.g. just say:<br/>
  export SANE_DEBUG_SM3600=5 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7)<code>,</code> <code><a href="/docs/linux/man/5-sane-microtek/">sane-microtek</a></code>(5), <code><a href="/docs/linux/man/5-sane-microtek2/">sane-microtek2</a></code>(5)<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7)<code>,</code> <code><a href="/docs/linux/man/5-sane-microtek/">sane-microtek</a></code>(5), <code><a href="/docs/linux/man/5-sane-microtek2/">sane-microtek2</a></code>(5)<br/>
  <i><a rel="nofollow" href="http://sm3600.sourceforge.net">http://sm3600.sourceforge.net</a></i> </p>
 <h2>Author</h2>
-<p>Marian Eichholz &lt;<i>eichholz [at] computer.org</i>&gt;<br />
+<p>Marian Eichholz &lt;<i>eichholz [at] computer.org</i>&gt;<br/>
  Glenn Ramsey &lt;<i>glenn [at] componic.com</i>&gt;</p>

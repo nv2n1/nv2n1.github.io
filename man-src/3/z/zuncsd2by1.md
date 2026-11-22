@@ -10,7 +10,7 @@ description: "zuncsd2by1.f –"
 <p>zuncsd2by1.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zuncsd2by1</code> (JOBU1, JOBU2, JOBV1T, M, P, Q, X11, LDX11, X21, LDX21, THETA, U1, LDU1, U2, LDU2, V1T, LDV1T, WORK, LWORK, RWORK, LRWORK, IWORK, INFO)<br />
+<p>subroutine <code>zuncsd2by1</code> (JOBU1, JOBU2, JOBV1T, M, P, Q, X11, LDX11, X21, LDX21, THETA, U1, LDU1, U2, LDU2, V1T, LDV1T, WORK, LWORK, RWORK, LRWORK, IWORK, INFO)<br/>
  <i></i><code>ZUNCSD2BY1</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zuncsd2by1 (characterJOBU1, characterJOBU2, characterJOBV1T, integerM, integerP, integerQ, complex*16, dimension(ldx11,*)X11, integerLDX11, complex*16, dimension(ldx21,*)X21, integerLDX21, double precision, dimension(*)THETA, complex*16, dimension(ldu1,*)U1, integerLDU1, complex*16, dimension(ldu2,*)U2, integerLDU2, complex*16, dimension(ldv1t,*)V1T, integerLDV1T, complex*16, dimension(*)WORK, integerLWORK, double precision, dimension(*)RWORK, integerLRWORK, integer, dimension(*)IWORK, integerINFO)</h3>
@@ -127,7 +127,7 @@ description: "zuncsd2by1.f –"
  <br>
 aram[out] IWORK
  nsion (M-MIN(P,M-P,Q,M-Q))</pre>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  <i>INFO</i> </p>
 <pre> INFO is INTEGER
  = 0: successful exit.

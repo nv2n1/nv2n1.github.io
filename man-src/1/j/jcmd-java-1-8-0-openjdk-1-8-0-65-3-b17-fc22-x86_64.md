@@ -28,7 +28,7 @@ description: "jcmd – Sends diagnostic command requests to a running Java Virtu
 <h2>Description</h2>
 <p>The <code>jcmd</code> utility is used to send diagnostic command requests to the JVM. It must be used on the same machine on which the JVM is running, and have the same effective user and group identifiers that were used to launch the JVM. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <table BORDER>
 <tr VALIGN=top>
 <td>
@@ -54,7 +54,7 @@ description: "jcmd – Sends diagnostic command requests to a running Java Virtu
 <p> -f <i>filename</i></p>
 <dl>
 <dd>Reads commands from the specified file. This option can be used only if you specify the process identifier or the main class as the first argument. Each command in the file must be written on a single line. Lines starting with a number sign (<code>#</code>) are ignored. Processing of the file ends when all lines have been read or when a line containing the <code>stop</code> keyword is read.</dd></dl>
-<p> -h<br />
+<p> -h<br/>
  -help</p>
 <dl>
 <dd>Prints a help message.</dd></dl>

@@ -9,10 +9,10 @@ description: "update-java-alternatives – update alternatives for jre/sdk insta
 
 <p>update-java-alternatives &#8211; update alternatives for jre/sdk installations</p>
 <h2>Synopsis</h2>
-<p><code>update-java-alternatives [&#8211;jre] [&#8211;plugin] [-v|&#8211;verbose]</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-l|&#8211;list&nbsp;[&lt;jname&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-s|&#8211;set&nbsp;&lt;jname&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-a|&#8211;auto<br />
+<p><code>update-java-alternatives [&#8211;jre] [&#8211;plugin] [-v|&#8211;verbose]</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-l|&#8211;list&nbsp;[&lt;jname&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-s|&#8211;set&nbsp;&lt;jname&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-a|&#8211;auto<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-h|-?|&#8211;help</p>
 <h2>Description</h2>
 <p>update-java-alternatives updates all alternatives belonging to one runtime or development kit for the Java language. A package does provide these information of it&#8217;s alternatives in /usr/lib/jvm/.&lt;jname&gt;.jinfo.</p>

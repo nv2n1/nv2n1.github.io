@@ -32,12 +32,12 @@ description: "FQ – Fair Queue traffic policing"
 <h3>ce_threshold</h3>
 <p>sets a threshold above which all packets are marked with ECN Congestion Experienced. This is useful for DCTCP-style congestion control algorithms that require marking at very shallow queueing thresholds.</p>
 <h2>Examples</h2>
-<p>#tc qdisc add dev eth0 root fq ce_threshold 4ms<br />
- #tc -s -d qdisc show dev eth0<br />
- qdisc fq 8001: dev eth0 root refcnt 2 limit 10000p flow_limit 100p buckets 1024 orphan_mask 1023 quantum 3028b initial_quantum 15140b low_rate_threshold 550Kbit refill_delay 40.0ms ce_threshold 4.0ms<br />
-&nbsp;Sent 72149092 bytes 48062 pkt&nbsp;(dropped 2176, overlimits 0 requeues 0)<br />
-&nbsp;backlog 1937920b 1280p requeues 0<br />
-&nbsp;<wbr>&nbsp;flows 34&nbsp;(inactive 17 throttled 0)<br />
+<p>#tc qdisc add dev eth0 root fq ce_threshold 4ms<br/>
+ #tc -s -d qdisc show dev eth0<br/>
+ qdisc fq 8001: dev eth0 root refcnt 2 limit 10000p flow_limit 100p buckets 1024 orphan_mask 1023 quantum 3028b initial_quantum 15140b low_rate_threshold 550Kbit refill_delay 40.0ms ce_threshold 4.0ms<br/>
+&nbsp;Sent 72149092 bytes 48062 pkt&nbsp;(dropped 2176, overlimits 0 requeues 0)<br/>
+&nbsp;backlog 1937920b 1280p requeues 0<br/>
+&nbsp;<wbr>&nbsp;flows 34&nbsp;(inactive 17 throttled 0)<br/>
 &nbsp;<wbr>&nbsp;gc 0 highprio 0 throttled 0 ce_mark 47622 flows_plimit 2176</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7)</p>

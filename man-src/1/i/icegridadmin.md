@@ -12,7 +12,7 @@ description: "icegridadmin – The IceGrid command-line administrative utility."
 <h2>SYNOPSIS</h2>
 <p> icegridadmin [options] </p>
 <h2>DESCRIPTION</h2>
-<p> The icegridadmin utility is a command-line tool for administering an IceGrid domain. Deploying an application with this utility requires an XML file that defines the descriptors. Full documentation for icegridadmin is available online at:<br />
+<p> The icegridadmin utility is a command-line tool for administering an IceGrid domain. Deploying an application with this utility requires an XML file that defines the descriptors. Full documentation for icegridadmin is available online at:<br/>
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/icegridadmin+Command+Line+Tool">http://doc.zeroc.com/display/Ice/icegridadmin+Command+Line+Tool</a>&quot;. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_clear/"
 description: "tpm_clear – return the TPM to the default state (unowned, disabled, inactive)"
 ---
 
-<p>TPM Management &#8211; tpm_clear<br />
+<p>TPM Management &#8211; tpm_clear<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_clear &#8211; return the TPM to the default state (unowned, disabled, inactive)</p>

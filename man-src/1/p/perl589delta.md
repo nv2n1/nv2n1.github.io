@@ -14,7 +14,7 @@ description: "perl589delta – what is new for perl v5.8.9"
 <h2>Notice</h2>
 <p> The 5.8.9 release will be the last significant release of the 5.8.x series. Any future releases of 5.8.x will likely only be to deal with security issues, and platform build failures. Hence you should look to migrating to 5.10.x, if you have not started already. See &#8220;Known Problems&#8221; for more information.</p>
 <h2>Incompatible Changes</h2>
-<p> A particular construction in the source code of extensions written in C<font SIZE="-2">++</font> may need changing. See &#8220;Changed Internals&#8221; for more details. All extensions written in C, most written in C<font SIZE="-2">++</font>, and all existing compiled extensions are unaffected. This was necessary to improve C<font SIZE="-2">++</font> support. </p>
+<p> A particular construction in the source code of extensions written in C++ may need changing. See &#8220;Changed Internals&#8221; for more details. All extensions written in C, most written in C++, and all existing compiled extensions are unaffected. This was necessary to improve C++ support. </p>
 <p> Other than this, there are no changes intentionally incompatible with 5.8.8. If any exist, they are bugs and reports are welcome.</p>
 <h2>Core Enhancements</h2>
 <h3>Unicode Character Database 5.1.0.</h3>
@@ -27,8 +27,8 @@ description: "perl589delta – what is new for perl v5.8.9"
 <p> The constant folding routine is now wrapped in an exception handler, and if folding throws an exception (such as attempting to evaluate 0/0), perl now retains the current optree, rather than aborting the whole program. Without this change, programs would not compile if they had expressions that happened to generate exceptions, even though those expressions were in code that could never be reached at runtime. (Nicholas Clark, Dave Mitchell)</p>
 <h3>no VERSION</h3>
 <p> You can now use <tt>&quot;no&quot;</tt> followed by a version number to specify that you want to use a version of perl older than the specified one.</p>
-<h3>Improved internal <font SIZE="-1">UTF-8</font> caching code</h3>
-<p> The code that caches calculated <font SIZE="-1">UTF-8</font> byte offsets for character offsets for a string has been re-written. Several bugs have been located and eliminated, and the code now makes better use of the information it has, so should be faster. In particular, it doesn&#8217;t scan to the end of a string before calculating an offset within the string, which should speed up some operations on long strings. It is now possible to disable the caching code at run time, to verify that it is not the cause of suspected problems.</p>
+<h3>Improved internal UTF-8 caching code</h3>
+<p> The code that caches calculated UTF-8 byte offsets for character offsets for a string has been re-written. Several bugs have been located and eliminated, and the code now makes better use of the information it has, so should be faster. In particular, it doesn&#8217;t scan to the end of a string before calculating an offset within the string, which should speed up some operations on long strings. It is now possible to disable the caching code at run time, to verify that it is not the cause of suspected problems.</p>
 <h3>Runtime relocatable installations</h3>
 <p> There is now <i>Configure</i> support for creating a perl tree that is relocatable at run time. see &#8220;Relocatable installations&#8221;.</p>
 <h3>New internal variables</h3>
@@ -36,21 +36,21 @@ description: "perl589delta – what is new for perl v5.8.9"
 <dt>&quot;${^CHILD_ERROR_NATIVE}&quot;</dt>
 <dd> This variable gives the native status returned by the last pipe close, backtick command, successful call to <tt>&quot;wait&quot;</tt> or <tt>&quot;waitpid&quot;</tt>, or from the <tt>&quot;system&quot;</tt> operator. See perlvar for details. (Contributed by Gisle Aas.)</dd>
 <dt>&quot;${^UTF8CACHE}&quot;</dt>
-<dd> This variable controls the state of the internal <font SIZE="-1">UTF-8</font> offset caching code. 1 for on (the default), 0 for off, -1 to debug the caching code by checking all its results against linear scans, and panicking on any discrepancy.</dd></dl>
+<dd> This variable controls the state of the internal UTF-8 offset caching code. 1 for on (the default), 0 for off, -1 to debug the caching code by checking all its results against linear scans, and panicking on any discrepancy.</dd></dl>
 <h3>readpipe is now overridable</h3>
 <p> The built-in function <tt>&quot;readpipe&quot;</tt> is now overridable. Overriding it permits also to override its operator counterpart, <tt>&quot;qx//&quot;</tt> (also known as <tt>&quot;``&quot;</tt>).</p>
 <h3>simple exception handling macros</h3>
-<p> Perl 5.8.9 (and 5.10.0 onwards) now provides a couple of macros to do very basic exception handling in <font SIZE="-1">XS</font> modules. You can use these macros if you call code that may <tt>&quot;croak&quot;</tt>, but you need to do some cleanup before giving control back to Perl. See &#8220;Exception Handling&#8221; in perlguts for more details.</p>
+<p> Perl 5.8.9 (and 5.10.0 onwards) now provides a couple of macros to do very basic exception handling in XS modules. You can use these macros if you call code that may <tt>&quot;croak&quot;</tt>, but you need to do some cleanup before giving control back to Perl. See &#8220;Exception Handling&#8221; in perlguts for more details.</p>
 <h3>-D option enhancements</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> <tt>&quot;-Dq&quot;</tt> suppresses the <i></i><font SIZE="-1"><i>EXECUTING&#8230;</i></font><i></i> message when running under <tt>&quot;-D&quot;</tt></dd>
+<dd> <tt>&quot;-Dq&quot;</tt> suppresses the <i></i><i>EXECUTING&#8230;</i><i></i> message when running under <tt>&quot;-D&quot;</tt></dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;-Dl&quot;</tt> logs runops loop entry and exit, and jump level popping.</dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;-Dv&quot;</tt> displays the process id as part of the trace output.</dd></dl>
-<h3>XS-assisted <font SIZE="-1">SWASHGET</font></h3>
-<p> Some pure-perl code that the regexp engine was using to retrieve Unicode properties and transliteration mappings has been reimplemented in <font SIZE="-1">XS</font> for faster execution. (<font SIZE="-1">SADAHIRO</font> Tomoyuki)</p>
+<h3>XS-assisted SWASHGET</h3>
+<p> Some pure-perl code that the regexp engine was using to retrieve Unicode properties and transliteration mappings has been reimplemented in XS for faster execution. (SADAHIRO Tomoyuki)</p>
 <h3>Constant subroutines</h3>
 <p> The interpreter internals now support a far more memory efficient form of inlineable constants. Storing a reference to a constant value in a symbol table is equivalent to a full typeglob referencing a constant subroutine, but using about 400 bytes less memory. This proxy constant subroutine is automatically upgraded to a real typeglob with subroutine if necessary. The approach taken is analogous to the existing space optimisation for subroutine stub declarations, which are stored as plain scalars in place of the full typeglob. </p>
 <p> However, to aid backwards compatibility of existing code, which (wrongly) does not expect anything other than typeglobs in symbol tables, nothing in core uses this feature, other than the regression tests. </p>
@@ -63,9 +63,9 @@ description: "perl589delta – what is new for perl v5.8.9"
 <dt>&bull;</dt>
 <dd> MidnightBSD</dd>
 <dt>&bull;</dt>
-<dd> MirOS <font SIZE="-1">BSD</font></dd>
+<dd> MirOS BSD</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">RISC OS</font></dd>
+<dd> RISC OS</dd>
 <dt>&bull;</dt>
 <dd> Cray XT4/Catamount</dd></dl>
 <h2>Modules and Pragmata</h2>
@@ -106,7 +106,7 @@ description: "perl589delta – what is new for perl v5.8.9"
 <dt>&bull;</dt>
 <dd> bugs fixed in the handling of <tt>&quot;PMOP&quot;</tt>s.</dd>
 <dt>&bull;</dt>
-<dd> <tt>&quot;B::BM::PREVIOUS&quot;</tt> returns now <tt>&quot;U32&quot;</tt>, not <tt>&quot;U16&quot;</tt>. <tt>&quot;B::CV::START&quot;</tt> and <tt>&quot;B:CV::ROOT&quot;</tt> return now <tt>&quot;NULL&quot;</tt> on an <font SIZE="-1">XSUB,</font> <tt>&quot;B::CV::XSUB&quot;</tt> and <tt>&quot;B::CV::XSUBANY&quot;</tt> return 0 on a non-XSUB.</dd></dl>
+<dd> <tt>&quot;B::BM::PREVIOUS&quot;</tt> returns now <tt>&quot;U32&quot;</tt>, not <tt>&quot;U16&quot;</tt>. <tt>&quot;B::CV::START&quot;</tt> and <tt>&quot;B:CV::ROOT&quot;</tt> return now <tt>&quot;NULL&quot;</tt> on an XSUB, <tt>&quot;B::CV::XSUB&quot;</tt> and <tt>&quot;B::CV::XSUBANY&quot;</tt> return 0 on a non-XSUB.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -117,7 +117,7 @@ description: "perl589delta – what is new for perl v5.8.9"
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> new option <tt>&quot;-src&quot;</tt> causes the rendering of each statement (starting with the nextstate <font SIZE="-1">OP</font>) to be preceded by the first line of source code that generates it.</dd>
+<dd> new option <tt>&quot;-src&quot;</tt> causes the rendering of each statement (starting with the nextstate OP) to be preceded by the first line of source code that generates it.</dd>
 <dt>&bull;</dt>
 <dd> new option <tt>&quot;-stash=&quot;somepackage&quot;&quot;</tt>, <tt>&quot;require&quot;</tt>s &#8220;somepackage&#8221;, and then renders each function defined in its namespace.</dd>
 <dt>&bull;</dt>
@@ -134,7 +134,7 @@ description: "perl589delta – what is new for perl v5.8.9"
 <dt>&bull;</dt>
 <dd> properly deparse <tt>&quot;print readpipe $x, $y&quot;</tt>.</dd>
 <dt>&bull;</dt>
-<dd> now handles <tt>&quot;''-&gt;()&quot;</tt>, <tt>&quot;::()&quot;</tt>, <tt>&quot;sub :: {}&quot;</tt>, <i>etc.</i> correctly [<font SIZE="-1">RT</font> #43010]. All bugs in parsing these kinds of syntax are now fixed: </dd>
+<dd> now handles <tt>&quot;''-&gt;()&quot;</tt>, <tt>&quot;::()&quot;</tt>, <tt>&quot;sub :: {}&quot;</tt>, <i>etc.</i> correctly [RT #43010]. All bugs in parsing these kinds of syntax are now fixed: </dd>
 <pre><code>
 perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' perl - MO = Deparse - e 'sub :: {}' perl - MO = Deparse - e 'package a; sub a::b::c {}' perl - MO = Deparse - e 'sub the::main::road {}'
 </code></pre>
@@ -180,13 +180,13 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dt>&bull;</dt>
 <dd> <tt>&quot;CPAN&quot;</tt> upgraded to version 1.9301</dd>
 <dt>&bull;</dt>
-<dd> <tt>&quot;Cwd&quot;</tt> upgraded to version 3.29 with some platform specific improvements (including for <font SIZE="-1">VMS</font>).</dd>
+<dd> <tt>&quot;Cwd&quot;</tt> upgraded to version 3.29 with some platform specific improvements (including for VMS).</dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Data::Dumper&quot;</tt> upgraded to version 2.121_17</dd>
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> Fixes hash iterator current position with the pure Perl version [<font SIZE="-1">RT</font> #40668]</dd>
+<dd> Fixes hash iterator current position with the pure Perl version [RT #40668]</dd>
 <dt>&bull;</dt>
 <dd> Performance enhancements, which will be most evident on platforms where repeated calls to C&#8217;s <tt>&quot;realloc()&quot;</tt> are slow, such as Win32.</dd></dl>
 </dl>
@@ -222,7 +222,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <p> <tt>&quot;DynaLoader&quot;</tt> can now dynamically load a loadable object from a file with a non-default file extension.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Encode&quot;</tt> upgraded to version 2.26 </dd>
-<p> <tt>&quot;Encode::Alias&quot;</tt> includes a fix for encoding &#8220;646&#8221; on Solaris (better known as <font SIZE="-1">ASCII</font>).</p>
+<p> <tt>&quot;Encode::Alias&quot;</tt> includes a fix for encoding &#8220;646&#8221; on Solaris (better known as ASCII).</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;English&quot;</tt> upgraded to version 1.03</dd>
 <dt>&bull;</dt>
@@ -302,7 +302,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dt>&bull;</dt>
 <dd> improved handling of bad arguments.</dd>
 <dt>&bull;</dt>
-<dd> some platform specific improvements (including for <font SIZE="-1">VMS</font> and Cygwin), with an optimisation on <tt>&quot;abs2rel&quot;</tt> when handling both relative arguments.</dd></dl>
+<dd> some platform specific improvements (including for VMS and Cygwin), with an optimisation on <tt>&quot;abs2rel&quot;</tt> when handling both relative arguments.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -374,7 +374,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> improve <i>g++</i> handling for systems using <font SIZE="-1">GDBM</font> compatibility headers.</dd></dl>
+<dd> improve <i>g++</i> handling for systems using GDBM compatibility headers.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -402,7 +402,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> [<font SIZE="-1">RT</font> #40267] <tt>&quot;PerlIO::scalar&quot;</tt> doesn&#8217;t respect readonly-ness.</dd></dl>
+<dd> [RT #40267] <tt>&quot;PerlIO::scalar&quot;</tt> doesn&#8217;t respect readonly-ness.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -425,7 +425,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dt>&bull;</dt>
 <dd> <tt>&quot;POSIX::setlocale&quot;</tt> safer to call multiple times.</dd>
 <dt>&bull;</dt>
-<dd> <tt>&quot;POSIX::SigRt&quot;</tt> added, which provides access to <font SIZE="-1">POSIX</font> realtime signal functionality on systems that support it.</dd></dl>
+<dd> <tt>&quot;POSIX::SigRt&quot;</tt> added, which provides access to POSIX realtime signal functionality on systems that support it.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -530,7 +530,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dt>&bull;</dt>
 <dd> <tt>&quot;Time::Local&quot;</tt> upgraded to version 1.1901</dd>
 <dt>&bull;</dt>
-<dd> <tt>&quot;Time::HiRes&quot;</tt> upgraded to version 1.9715 with various build improvements (including <font SIZE="-1">VMS</font>) and minor platform-specific bug fixes (including for HP-UX 11 ia64).</dd>
+<dd> <tt>&quot;Time::HiRes&quot;</tt> upgraded to version 1.9715 with various build improvements (including VMS) and minor platform-specific bug fixes (including for HP-UX 11 ia64).</dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;threads&quot;</tt> upgraded to 1.71</dd>
 <dl>
@@ -588,17 +588,17 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dt>&bull;</dt>
 <dd> <tt>&quot;NEXT::AUTOLOAD&quot;</tt> no longer emits warnings under the debugger.</dd>
 <dt>&bull;</dt>
-<dd> The debugger should now correctly find tty the device on <font SIZE="-1">OS X 10.5</font> and <font SIZE="-1">VMS</font> when the program <tt>&quot;fork&quot;</tt>s.</dd>
+<dd> The debugger should now correctly find tty the device on OS X 10.5 and VMS when the program <tt>&quot;fork&quot;</tt>s.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">LVALUE</font> subs now work inside the debugger.</dd></dl>
+<dd> LVALUE subs now work inside the debugger.</dd></dl>
 <h3><i>perlthanks</i></h3>
 <p> Perl 5.8.9 adds a new utility <i>perlthanks</i>, which is a variant of <i>perlbug</i>, but for sending non-bug-reports to the authors and maintainers of Perl. Getting nothing but bug reports can become a bit demoralising &#8211; we&#8217;ll see if this changes things.</p>
 <h3><i>perlbug</i></h3>
-<p> <i>perlbug</i> now checks if you&#8217;re reporting about a non-core module and suggests you report it to the <font SIZE="-1">CPAN</font> author instead.</p>
+<p> <i>perlbug</i> now checks if you&#8217;re reporting about a non-core module and suggests you report it to the CPAN author instead.</p>
 <h3><i>h2xs</i></h3>
 <dl>
 <dt>&bull;</dt>
-<dd> won&#8217;t define an empty string as a constant [<font SIZE="-1">RT</font> #25366]</dd>
+<dd> won&#8217;t define an empty string as a constant [RT #25366]</dd>
 <dt>&bull;</dt>
 <dd> has examples for <tt>&quot;h2xs -X&quot;</tt></dd></dl>
 <h3><i>h2ph</i></h3>
@@ -606,14 +606,14 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dt>&bull;</dt>
 <dd> now attempts to deal sensibly with the difference in path implications between <tt>&quot;&quot;</tt> and <tt>&quot;&lt;&gt;&quot;</tt> quoting in <tt>&quot;#include&quot;</tt> statements.</dd>
 <dt>&bull;</dt>
-<dd> now generates correct code for <tt>&quot;#if defined A || defined B&quot;</tt> [<font SIZE="-1">RT</font> #39130]</dd></dl>
+<dd> now generates correct code for <tt>&quot;#if defined A || defined B&quot;</tt> [RT #39130]</dd></dl>
 <h2>New Documentation</h2>
 <p> As usual, the documentation received its share of corrections, clarifications and other nitfixes. More <tt>&quot;&quot;</tt> tags were added for indexing. </p>
 <p> perlunitut is a tutorial written by Juerd Waalboer on Unicode-related terminology and how to correctly handle Unicode in Perl scripts. </p>
 <p> perlunicode is updated in section user defined properties. </p>
 <p> perluniintro has been updated in the example of detecting data that is not valid in particular encoding. </p>
 <p> perlcommunity provides an overview of the Perl Community along with further resources. </p>
-<p> <font SIZE="-1">CORE</font> documents the pseudo-namespace for Perl&#8217;s core routines.</p>
+<p> CORE documents the pseudo-namespace for Perl&#8217;s core routines.</p>
 <h2>Changes to Existing Documentation</h2>
 <p> perlglossary adds <i>deprecated modules and features</i> and <i>to be dropped modules</i>. </p>
 <p> perlhack has been updated and added resources on smoke testing. </p>
@@ -638,14 +638,14 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <p> perlreguts describe the internals of the regular expressions engine. It has been contributed by Yves Orton. </p>
 <p> perlrebackslash describes all perl regular expression backslash and escape sequences. </p>
 <p> perlrecharclass describes the syntax and use of character classes in Perl Regular Expressions. </p>
-<p> perlrun is updated to clarify on the hash seed <i></i><font SIZE="-1"><i>PERL_HASH_SEED</i></font><i></i>. Also more information in options <tt>&quot;-x&quot;</tt> and <tt>&quot;-u&quot;</tt>. </p>
+<p> perlrun is updated to clarify on the hash seed <i></i><i>PERL_HASH_SEED</i><i></i>. Also more information in options <tt>&quot;-x&quot;</tt> and <tt>&quot;-u&quot;</tt>. </p>
 <p> perlsub example is updated to use a lexical variable for <tt>&quot;opendir&quot;</tt> syntax. </p>
-<p> perlvar fixes confusion about real <font SIZE="-1">GID</font> <tt>$(</tt> and effective <font SIZE="-1">GID</font> <tt>$)</tt>. </p>
+<p> perlvar fixes confusion about real GID <tt>$(</tt> and effective GID <tt>$)</tt>. </p>
 <p> Perl thread tutorial example is fixed in section &#8220;Queues: Passing Data Around&#8221; in perlthrtut and perlthrtut. </p>
 <p> perlhack documentation extensively improved by Jarkko Hietaniemi and others. </p>
 <p> perltoot provides information on modifying <tt>@UNIVERSAL::ISA</tt>. </p>
 <p> perlport documentation extended to include different <tt>&quot;kill(-9, ...)&quot;</tt> semantics on Windows. It also clearly states <tt>&quot;dump&quot;</tt> is not supported on Win32 and cygwin. </p>
-<p> <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> has been updated and modernised.</p>
+<p> <i></i><i>INSTALL</i><i></i> has been updated and modernised.</p>
 <h2>Performance Enhancements</h2>
 <dl>
 <dt>&bull;</dt>
@@ -660,9 +660,9 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dt>&bull;</dt>
 <dd> Many calls to <tt>&quot;strlen()&quot;</tt> have been eliminated, either because the length was already known, or by adopting or enhancing APIs that pass lengths. This has been aided by the adoption of a <tt>&quot;my_sprintf()&quot;</tt> wrapper, which returns the correct C89 value &#8211; the length of the formatted string. Previously we could not rely on the return value of <tt>&quot;sprintf()&quot;</tt>, because on some ancient but extant platforms it still returns <tt>&quot;char *&quot;</tt>.</dd>
 <dt>&bull;</dt>
-<dd> <tt>&quot;index&quot;</tt> is now faster if the search string is stored in <font SIZE="-1">UTF-8</font> but only contains characters in the Latin-1 range.</dd>
+<dd> <tt>&quot;index&quot;</tt> is now faster if the search string is stored in UTF-8 but only contains characters in the Latin-1 range.</dd>
 <dt>&bull;</dt>
-<dd> The Unicode swatch cache inside the regexp engine is now used. (the lookup had a key mismatch, present since the initial implementation). [<font SIZE="-1">RT</font> #42839]</dd></dl>
+<dd> The Unicode swatch cache inside the regexp engine is now used. (the lookup had a key mismatch, present since the initial implementation). [RT #42839]</dd></dl>
 <h2>Installation and Configuration Improvements</h2>
 <h3>Relocatable installations</h3>
 <p> There is now <i>Configure</i> support for creating a relocatable perl tree. If you <i>Configure</i> with <tt>&quot;-Duserelocatableinc&quot;</tt>, then the paths in <tt>@INC</tt> (and everything else in <tt>%Config</tt>) can be optionally located via the path of the <i>perl</i> executable. </p>
@@ -683,13 +683,13 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dt>&bull;</dt>
 <dd> static library files of statically linked extensions when a shared perl library is being used. (They are not needed. See &#8220;Windows&#8221; below).</dd>
 <dt>&bull;</dt>
-<dd> <i></i><font SIZE="-1"><i>SIGNATURE</i></font><i></i> and <i>PAUSE*.pub</i> (<font SIZE="-1">CPAN</font> files)</dd>
+<dd> <i></i><i>SIGNATURE</i><i></i> and <i>PAUSE*.pub</i> (CPAN files)</dd>
 <dt>&bull;</dt>
-<dd> <i></i><font SIZE="-1"><i>NOTES</i></font><i></i> and <i></i><font SIZE="-1"><i>PATCHING</i></font><i></i> (ExtUtils files)</dd>
+<dd> <i></i><i>NOTES</i><i></i> and <i></i><i>PATCHING</i><i></i> (ExtUtils files)</dd>
 <dt>&bull;</dt>
 <dd> <i>perlld</i> and <i>ld2</i> (Cygwin files)</dd></dl>
 <h3>Platform Specific Changes</h3>
-<p> There are improved hints for <font SIZE="-1">AIX,</font> Cygwin, <font SIZE="-1">DEC/OSF,</font> FreeBSD, <font SIZE="-1">HP/UX,</font> Irix 6 Linux, MachTen, NetBSD, <font SIZE="-1">OS/390, QNX, SCO,</font> Solaris, SunOS, System V Release 5.x (UnixWare 7, OpenUNIX 8), Ultrix, <font SIZE="-1">UMIPS,</font> uts and <font SIZE="-1">VOS.</font> </p>
+<p> There are improved hints for AIX, Cygwin, DEC/OSF, FreeBSD, HP/UX, Irix 6 Linux, MachTen, NetBSD, OS/390, QNX, SCO, Solaris, SunOS, System V Release 5.x (UnixWare 7, OpenUNIX 8), Ultrix, UMIPS, uts and VOS. </p>
 <p> <i>FreeBSD</i></p>
 <dl>
 <dt>&bull;</dt>
@@ -697,27 +697,27 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <p> <i>Solaris</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Starting with Solaris 10, we do not want versioned shared libraries, because those often indicate a private use only library. These problems could often be triggered when SUNWbdb (Berkeley <font SIZE="-1">DB</font>) was installed. Hence if Solaris 10 is detected set <tt>&quot;ignore_versioned_solibs=y&quot;</tt>.</dd></dl>
-<p> <i></i><font SIZE="-1"><i>VMS</i></font><i></i></p>
+<dd> Starting with Solaris 10, we do not want versioned shared libraries, because those often indicate a private use only library. These problems could often be triggered when SUNWbdb (Berkeley DB) was installed. Hence if Solaris 10 is detected set <tt>&quot;ignore_versioned_solibs=y&quot;</tt>.</dd></dl>
+<p> <i></i><i>VMS</i><i></i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Allow <font SIZE="-1">IEEE</font> math to be deselected on OpenVMS I64 (but it remains the default).</dd>
+<dd> Allow IEEE math to be deselected on OpenVMS I64 (but it remains the default).</dd>
 <dt>&bull;</dt>
-<dd> Record <font SIZE="-1">IEEE</font> usage in <tt>&quot;config.h&quot;</tt></dd>
+<dd> Record IEEE usage in <tt>&quot;config.h&quot;</tt></dd>
 <dt>&bull;</dt>
-<dd> Help older <font SIZE="-1">VMS</font> compilers by using <tt>&quot;ccflags&quot;</tt> when building <tt>&quot;munchconfig.exe&quot;</tt>.</dd>
+<dd> Help older VMS compilers by using <tt>&quot;ccflags&quot;</tt> when building <tt>&quot;munchconfig.exe&quot;</tt>.</dd>
 <dt>&bull;</dt>
-<dd> Don&#8217;t try to build old <tt>&quot;Thread&quot;</tt> extension on <font SIZE="-1">VMS</font> when <tt>&quot;-Duseithreads&quot;</tt> has been chosen.</dd>
+<dd> Don&#8217;t try to build old <tt>&quot;Thread&quot;</tt> extension on VMS when <tt>&quot;-Duseithreads&quot;</tt> has been chosen.</dd>
 <dt>&bull;</dt>
 <dd> Passing a raw string of &#8220;NaN&#8221; to <i>nawk</i> causes a core dump &#8211; so the string has been changed to &#8220;*NaN*&#8221;</dd>
 <dt>&bull;</dt>
-<dd> <i>t/op/stat.t</i> tests will now test hard links on <font SIZE="-1">VMS</font> if they are supported.</dd></dl>
+<dd> <i>t/op/stat.t</i> tests will now test hard links on VMS if they are supported.</dd></dl>
 <p> <i>Windows</i></p>
 <dl>
 <dt>&bull;</dt>
 <dd> When using a shared perl library <i>installperl</i> no longer installs static library files, import library files and export library files (of statically linked extensions) and empty bootstrap files (of dynamically linked extensions). This fixes a problem building PAR-Packer on Win32 with a debug build of perl.</dd>
 <dt>&bull;</dt>
-<dd> Various improvements to the win32 build process, including support for Visual C<font SIZE="-2">++</font> 2005 Express Edition (aka Visual C<font SIZE="-2">++</font> 8.x).</dd>
+<dd> Various improvements to the win32 build process, including support for Visual C++ 2005 Express Edition (aka Visual C++ 8.x).</dd>
 <dt>&bull;</dt>
 <dd> <i>perl.exe</i> will now have an icon if built with MinGW or Borland.</dd>
 <dt>&bull;</dt>
@@ -727,28 +727,28 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dt>&bull;</dt>
 <dd> The <i>WinCE</i> directory has been merged into the <i>Win32</i> directory.</dd>
 <dt>&bull;</dt>
-<dd> <tt>&quot;setlocale&quot;</tt> tests have been re-enabled for Windows <font SIZE="-1">XP</font> onwards.</dd></dl>
+<dd> <tt>&quot;setlocale&quot;</tt> tests have been re-enabled for Windows XP onwards.</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <h3>Unicode</h3>
-<p> Many many bugs related to the internal Unicode implementation (<font SIZE="-1">UTF-8</font>) have been fixed. In particular, long standing bugs related to returning Unicode via <tt>&quot;tie&quot;</tt>, overloading or <tt>$@</tt> are now gone, some of which were never reported. </p>
-<p> <tt>&quot;unpack&quot;</tt> will internally convert the string back from <font SIZE="-1">UTF-8</font> on numeric types. This is a compromise between the full consistency now in 5.10, and the current behaviour, which is often used as a &#8220;feature&#8221; on string types. </p>
-<p> Using <tt>&quot;:crlf&quot;</tt> and <tt>&quot;UTF-16&quot;</tt> <font SIZE="-1">IO</font> layers together will now work. </p>
+<p> Many many bugs related to the internal Unicode implementation (UTF-8) have been fixed. In particular, long standing bugs related to returning Unicode via <tt>&quot;tie&quot;</tt>, overloading or <tt>$@</tt> are now gone, some of which were never reported. </p>
+<p> <tt>&quot;unpack&quot;</tt> will internally convert the string back from UTF-8 on numeric types. This is a compromise between the full consistency now in 5.10, and the current behaviour, which is often used as a &#8220;feature&#8221; on string types. </p>
+<p> Using <tt>&quot;:crlf&quot;</tt> and <tt>&quot;UTF-16&quot;</tt> IO layers together will now work. </p>
 <p> Fixed problems with <tt>&quot;split&quot;</tt>, Unicode <tt>&quot;/\s+/&quot;</tt> and <tt>&quot;/</tt> \0/&quot;</code>. </p>
-<p> Fixed bug <font SIZE="-1">RT</font> #40641 &#8211; encoding of Unicode characters in regular expressions. </p>
-<p> Fixed a bug where using certain patterns in a regexp led to a panic. [<font SIZE="-1">RT</font> #45337] </p>
-<p> Perl no longer segfaults (due to infinite internal recursion) if the locale&#8217;s character is not <font SIZE="-1">UTF-8</font> [<font SIZE="-1">RT</font> #41442]: </p>
+<p> Fixed bug RT #40641 &#8211; encoding of Unicode characters in regular expressions. </p>
+<p> Fixed a bug where using certain patterns in a regexp led to a panic. [RT #45337] </p>
+<p> Perl no longer segfaults (due to infinite internal recursion) if the locale&#8217;s character is not UTF-8 [RT #41442]: </p>
 <pre><code>    use open ':locale';
     print STDERR &quot;\x{201e}&quot;; # &amp;bdquo;
 </code></pre>
 <h3>PerlIO</h3>
-<p> Inconsistencies have been fixed in the reference counting PerlIO uses to keep track of Unix file descriptors, and the <font SIZE="-1">API</font> used by <font SIZE="-1">XS</font> code to manage getting and releasing <code>&quot;FILE *&quot;</code>s  </p>
+<p> Inconsistencies have been fixed in the reference counting PerlIO uses to keep track of Unix file descriptors, and the API used by XS code to manage getting and releasing <code>&quot;FILE *&quot;</code>s  </p>
 <h3>Magic</h3>
 <p> Several bugs have been fixed in Magic, the internal system used to implement features such as <code>&quot;tie&quot;</code>, tainting and threads sharing. </p>
 <p> <code>&quot;undef @array&quot;</code> on a tied array now correctly calls the <code>&quot;CLEAR&quot;</code> method. </p>
-<p> Some of the bitwise ops were not checking whether their arguments were magical before using them. [<font SIZE="-1">RT</font> #24816] </p>
+<p> Some of the bitwise ops were not checking whether their arguments were magical before using them. [RT #24816] </p>
 <p> Magic is no longer invoked twice by the expression <code>&quot;\&amp;$x&quot;</code> </p>
-<p> A bug with assigning large numbers and tainting has been resolved. [<font SIZE="-1">RT</font> #40708] </p>
-<p> A new entry has been added to the <font SIZE="-1">MAGIC</font> vtable &#8211; <code>&quot;svt_local&quot;</code>. This is used when copying magic to the new value during <code>&quot;local&quot;</code>, allowing certain problems with localising shared variables to be resolved. </p>
+<p> A bug with assigning large numbers and tainting has been resolved. [RT #40708] </p>
+<p> A new entry has been added to the MAGIC vtable &#8211; <code>&quot;svt_local&quot;</code>. This is used when copying magic to the new value during <code>&quot;local&quot;</code>, allowing certain problems with localising shared variables to be resolved. </p>
 <p> For the implementation details, see ``Magic Virtual Tables&#8217;&#8216; in perlguts.  </p>
 <h3>Reblessing overloaded objects now works</h3>
 <p> Internally, perl object-ness is on the referent, not the reference, even though methods can only be called via a reference. However, the original implementation of overloading stored flags related to overloading on the reference, relying on the flags being copied when the reference was copied, or set at the creation of a new reference. This manifests in a bug &#8211; if you rebless an object from a class that has overloading, into one that does not, then any other existing references think that they (still) point to an overloaded object, choose these C code paths, and then throw errors. Analogously, blessing into an overloaded class when other references exist will result in them not using overloading. </p>
@@ -782,40 +782,40 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <p> In the presence of <code>&quot;my&quot;</code> in the conditional of a <code>&quot;while()&quot;</code>, <code>&quot;until()&quot;</code>, or <code>&quot;for(;;)&quot;</code> loop, we now add an extra scope to the body so that <code>&quot;redo&quot;</code> doesn&#8217;t <code>&quot;undef&quot;</code> the lexical. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;encoding&quot;</code> pragma now correctly ignores anything following an <code>&quot;@&quot;</code> character in the <code>&quot;LC_ALL&quot;</code> and <code>&quot;LANG&quot;</code> environment variables. [<font SIZE="-1">RT</font> # 49646] </p>
+<dd> <p> The <code>&quot;encoding&quot;</code> pragma now correctly ignores anything following an <code>&quot;@&quot;</code> character in the <code>&quot;LC_ALL&quot;</code> and <code>&quot;LANG&quot;</code> environment variables. [RT # 49646] </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A segfault observed with some <i>gcc</i> 3.3 optimisations is resolved. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A possible segfault when <code>&quot;unpack&quot;</code> used in scalar context with <code>&quot;()&quot;</code> groups is resolved. [<font SIZE="-1">RT</font> #50256] </p>
+<dd> <p> A possible segfault when <code>&quot;unpack&quot;</code> used in scalar context with <code>&quot;()&quot;</code> groups is resolved. [RT #50256] </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Resolved issue where <code>$!</code> could be changed by a signal handler interrupting a <code>&quot;system&quot;</code> call. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed bug <font SIZE="-1">RT</font> #37886, symbolic dereferencing was allowed in the argument of <code>&quot;defined&quot;</code> even under the influence of <code>&quot;use strict &#8216;refs&#8217;&quot;</code>. </p>
+<dd> <p> Fixed bug RT #37886, symbolic dereferencing was allowed in the argument of <code>&quot;defined&quot;</code> even under the influence of <code>&quot;use strict &#8216;refs&#8217;&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed bug <font SIZE="-1">RT</font> #43207, where <code>&quot;lc&quot;</code>/<code>&quot;uc&quot;</code> inside <code>&quot;sort&quot;</code> affected the return value. </p>
+<dd> <p> Fixed bug RT #43207, where <code>&quot;lc&quot;</code>/<code>&quot;uc&quot;</code> inside <code>&quot;sort&quot;</code> affected the return value. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed bug <font SIZE="-1">RT</font> #45607, where <code>&quot;*{&quot;BONK&quot;} = \&amp;{&quot;BONK&quot;}&quot;</code> didn&#8217;t work correctly. </p>
+<dd> <p> Fixed bug RT #45607, where <code>&quot;*{&quot;BONK&quot;} = \&amp;{&quot;BONK&quot;}&quot;</code> didn&#8217;t work correctly. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed bug <font SIZE="-1">RT</font> #35878, croaking from a <font SIZE="-1">XSUB</font> called via <code>&quot;goto &amp;xsub&quot;</code> corrupts perl internals. </p>
+<dd> <p> Fixed bug RT #35878, croaking from a XSUB called via <code>&quot;goto &amp;xsub&quot;</code> corrupts perl internals. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed bug <font SIZE="-1">RT</font> #32539, <i>DynaLoader.o</i> is moved into <i>libperl.so</i> to avoid the need to statically link DynaLoader into the stub perl executable. With this <i>libperl.so</i> provides everything needed to get a functional embedded perl interpreter to run. </p>
+<dd> <p> Fixed bug RT #32539, <i>DynaLoader.o</i> is moved into <i>libperl.so</i> to avoid the need to statically link DynaLoader into the stub perl executable. With this <i>libperl.so</i> provides everything needed to get a functional embedded perl interpreter to run. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fix bug <font SIZE="-1">RT</font> #36267 so that assigning to a tied hash doesn&#8217;t change the underlying hash. </p>
+<dd> <p> Fix bug RT #36267 so that assigning to a tied hash doesn&#8217;t change the underlying hash. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fix bug <font SIZE="-1">RT</font> #6006, regexp replaces using large replacement variables fail some of the time, <i>i.e.</i> when substitution contains something like <code>&quot;${10}&quot;</code> (note the bracket) instead of just <code>$10</code>. </p>
+<dd> <p> Fix bug RT #6006, regexp replaces using large replacement variables fail some of the time, <i>i.e.</i> when substitution contains something like <code>&quot;${10}&quot;</code> (note the bracket) instead of just <code>$10</code>. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fix bug <font SIZE="-1">RT</font> #45053, <code>&quot;Perl_newCONSTSUB()&quot;</code> is now thread safe. </p>
+<dd> <p> Fix bug RT #45053, <code>&quot;Perl_newCONSTSUB()&quot;</code> is now thread safe. </p>
  </dd></dl>
 <h3>Platform Specific Fixes</h3>
 <p> <i>Darwin / MacOS X</i> </p>
@@ -829,7 +829,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dt>&bull;</dt>
 <dd> <p> Added forked terminal support to the debugger, with the ability to update the window title. </p>
  </dd></dl>
-<p> <i></i><font SIZE="-1"><i>OS/2</i></font><i></i> </p>
+<p> <i></i><i>OS/2</i><i></i> </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> A build problem with specifying <code>&quot;USE_MULTI&quot;</code> and <code>&quot;USE_ITHREADS&quot;</code> but without <code>&quot;USE_IMP_SYS&quot;</code> has been fixed. </p>
@@ -845,14 +845,14 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <p> <i>RedHat Linux</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Revisited a patch from 5.6.1 for <font SIZE="-1">RH7.2</font> for Intel&#8217;s <i>icc</i> [<font SIZE="-1">RT</font> #7916], added an additional check for <code>$Config{gccversion}</code>. </p>
+<dd> <p> Revisited a patch from 5.6.1 for RH7.2 for Intel&#8217;s <i>icc</i> [RT #7916], added an additional check for <code>$Config{gccversion}</code>. </p>
  </dd></dl>
 <p> <i>Solaris/i386</i> </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> Use <code>&quot;-DPTR_IS_LONG&quot;</code> when using 64 bit integers </p>
  </dd></dl>
-<p> <i></i><font SIZE="-1"><i>VMS</i></font><i></i> </p>
+<p> <i></i><i>VMS</i><i></i> </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> Fixed <code>&quot;PerlIO::Scalar&quot;</code> in-memory file record-style reads. </p>
@@ -861,18 +861,18 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dd> <p> pipe shutdown at process exit should now be more robust. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Bugs in <font SIZE="-1">VMS</font> exit handling tickled by <code>&quot;Test::Harness&quot;</code> 2.64 have been fixed. </p>
+<dd> <p> Bugs in VMS exit handling tickled by <code>&quot;Test::Harness&quot;</code> 2.64 have been fixed. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Fix <code>&quot;fcntl()&quot;</code> locking capability test in <i>configure.com</i>. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Replaced <code>&quot;shrplib=&#8216;define&#8217;&quot;</code> with <code>&quot;useshrplib=&#8216;true&#8217;&quot;</code> on <font SIZE="-1">VMS.</font> </p>
+<dd> <p> Replaced <code>&quot;shrplib=&#8216;define&#8217;&quot;</code> with <code>&quot;useshrplib=&#8216;true&#8217;&quot;</code> on VMS. </p>
  </dd></dl>
 <p> <i>Windows</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;File::Find&quot;</code> used to fail when the target directory is a bare drive letter and <code>&quot;no_chdir&quot;</code> is 1 (the default is 0). [<font SIZE="-1">RT</font> #41555] </p>
+<dd> <p> <code>&quot;File::Find&quot;</code> used to fail when the target directory is a bare drive letter and <code>&quot;no_chdir&quot;</code> is 1 (the default is 0). [RT #41555] </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A build problem with specifying <code>&quot;USE_MULTI&quot;</code> and <code>&quot;USE_ITHREADS&quot;</code> but without <code>&quot;USE_IMP_SYS&quot;</code> has been fixed. </p>
@@ -881,7 +881,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dd> <p> The process id is no longer truncated to 16 bits on some Windows platforms ( <a rel="nofollow" href="http://bugs.activestate.com/show_bug.cgi?id=72443">http://bugs.activestate.com/show_bug.cgi?id=72443</a> ) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed bug <font SIZE="-1">RT</font> #54828 in <i>perlio.c</i> where calling <code>&quot;binmode&quot;</code> on Win32 and Cygwin may cause a segmentation fault. </p>
+<dd> <p> Fixed bug RT #54828 in <i>perlio.c</i> where calling <code>&quot;binmode&quot;</code> on Win32 and Cygwin may cause a segmentation fault. </p>
  </dd></dl>
 <h3>Smaller fixes</h3>
 <dl>
@@ -895,7 +895,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dd> <p> The reference count of <code>&quot;PerlIO&quot;</code> file descriptors is now correctly handled. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> On <font SIZE="-1">VMS,</font> escaped dots will be preserved when converted to Unix syntax. </p>
+<dd> <p> On VMS, escaped dots will be preserved when converted to Unix syntax. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;keys %+&quot;</code> no longer throws an <code>&#8216;ambiguous&#8217;</code> warning. </p>
@@ -910,16 +910,16 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dd> <p> Code references in <code>@INC</code> report the correct file name when <code>&quot;__FILE__&quot;</code> is used. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Width and precision in sprintf didn&#8217;t handle characters above 255 correctly. [<font SIZE="-1">RT</font> #40473] </p>
+<dd> <p> Width and precision in sprintf didn&#8217;t handle characters above 255 correctly. [RT #40473] </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> List slices with indices out of range now work more consistently. [<font SIZE="-1">RT</font> #39882] </p>
+<dd> <p> List slices with indices out of range now work more consistently. [RT #39882] </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A change introduced with perl 5.8.1 broke the parsing of arguments of the form <code>&quot;-foo=bar&quot;</code> with the <code>&quot;-s&quot;</code> on the &lt;#!&gt; line. This has been fixed. See <a rel="nofollow" href="http://bugs.activestate.com/show_bug.cgi?id=43483">http://bugs.activestate.com/show_bug.cgi?id=43483</a> </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;tr///&quot;</code> is now threadsafe. Previously it was storing a swash inside its <font SIZE="-1">OP,</font> rather than in a pad. </p>
+<dd> <p> <code>&quot;tr///&quot;</code> is now threadsafe. Previously it was storing a swash inside its OP, rather than in a pad. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <i>pod2html</i> labels anchors more consistently and handles nested definition lists better. </p>
@@ -935,29 +935,29 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
  </dd></dl>
 <h2>New or Changed Diagnostics</h2>
 <h3>panic: sv_chop %s</h3>
-<p> This new fatal error occurs when the C routine <code>&quot;Perl_sv_chop()&quot;</code> was passed a position that is not within the scalar&#8217;s string buffer. This is caused by buggy <font SIZE="-1">XS</font> code, and at this point recovery is not possible.  </p>
+<p> This new fatal error occurs when the C routine <code>&quot;Perl_sv_chop()&quot;</code> was passed a position that is not within the scalar&#8217;s string buffer. This is caused by buggy XS code, and at this point recovery is not possible.  </p>
 <h3>Maximal count of pending signals (%s) exceeded</h3>
 <p> This new fatal error occurs when the perl process has to abort due to too many pending signals, which is bound to prevent perl from being able to handle further incoming signals safely.  </p>
 <h3>panic: attempt to call %s in %s</h3>
-<p> This new fatal error occurs when the <font SIZE="-1">ACL</font> version file test operator is used where it is not available on the current platform. Earlier checks mean that it should never be possible to get this.  </p>
-<font SIZE="-1"></font><h3>FETCHSIZE returned a negative value</h3>
+<p> This new fatal error occurs when the ACL version file test operator is used where it is not available on the current platform. Earlier checks mean that it should never be possible to get this.  </p>
+<h3>FETCHSIZE returned a negative value</h3>
 <p> New error indicating that a tied array has claimed to have a negative number of elements.  </p>
 <h3>Can't upgrade %s (%d) to %d</h3>
-<p> Previously the internal error from the <font SIZE="-1">SV</font> upgrade code was the less informative <i>Can&#8217;t upgrade that kind of scalar</i>. It now reports the current internal type, and the new type requested.  </p>
-<font SIZE="-1"></font><font SIZE="-1"></font><h3>%s argument is not a HASH or ARRAY element or a subroutine</h3>
-<p> This error, thrown if an invalid argument is provided to <code>&quot;exists&quot;</code> now correctly includes ``or a subroutine&#8217;&#8216;. [<font SIZE="-1">RT</font> #38955]  </p>
+<p> Previously the internal error from the SV upgrade code was the less informative <i>Can&#8217;t upgrade that kind of scalar</i>. It now reports the current internal type, and the new type requested.  </p>
+<h3>%s argument is not a HASH or ARRAY element or a subroutine</h3>
+<p> This error, thrown if an invalid argument is provided to <code>&quot;exists&quot;</code> now correctly includes ``or a subroutine&#8217;&#8216;. [RT #38955]  </p>
 <h3>Cannot make the non-overridable builtin %s fatal</h3>
 <p> This error in <code>&quot;Fatal&quot;</code> previously did not show the name of the builtin in question (now represented by <code>%s</code> above).  </p>
 <h3>Unrecognized character '%s' in column %d</h3>
 <p> This error previously did not state the column.  </p>
 <h3>Offset outside string</h3>
 <p> This can now also be generated by a <code>&quot;seek&quot;</code> on a file handle using <code>&quot;PerlIO::scalar&quot;</code>.  </p>
-<font SIZE="-1"></font><h3>Invalid escape in the specified encoding in regexp; marked by <-- HERE in m/%s/</h3>
-<p> New error, introduced as part of the fix to <font SIZE="-1">RT</font> #40641 to handle encoding of Unicode characters in regular expression comments.  </p>
+<h3>Invalid escape in the specified encoding in regexp; marked by <-- HERE in m/%s/</h3>
+<p> New error, introduced as part of the fix to RT #40641 to handle encoding of Unicode characters in regular expression comments.  </p>
 <h3>Your machine doesn't support dump/undump.</h3>
 <p> A more informative fatal error issued when calling <code>&quot;dump&quot;</code> on Win32 and Cygwin. (Given that the purpose of <code>&quot;dump&quot;</code> is to abort with a core dump, and core dumps can&#8217;t be produced on these platforms, this is more useful than silently exiting.)  </p>
 <h2>Changed Internals</h2>
-<p> The perl sources can now be compiled with a C<font SIZE="-2">++</font> compiler instead of a C compiler. A necessary implementation details is that under C<font SIZE="-2">++</font>, the macro <code>&quot;XS&quot;</code> used to define XSUBs now includes an <code>&quot;extern &quot;C&quot;&quot;</code> definition. A side effect of this is that <code>C<font SIZE="-2">++</font></code> code that used the construction </p>
+<p> The perl sources can now be compiled with a C++ compiler instead of a C compiler. A necessary implementation details is that under C++, the macro <code>&quot;XS&quot;</code> used to define XSUBs now includes an <code>&quot;extern &quot;C&quot;&quot;</code> definition. A side effect of this is that <code>C++</code> code that used the construction </p>
 <pre><code>    typedef XS(SwigPerlWrapper);
 </code></pre>
 <p> now needs to be written </p>
@@ -965,8 +965,8 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 </code></pre>
 <p> using the new <code>&quot;XSPROTO&quot;</code> macro, in order to compile. C extensions are unaffected, although C extensions are encouraged to use <code>&quot;XSPROTO&quot;</code> too. This change was present in the 5.10.0 release of perl, so any actively maintained code that happened to use this construction should already have been adapted. Code that needs changing will fail with a compilation error. </p>
 <p> <code>&quot;set&quot;</code> magic on localizing/assigning to a magic variable will now only trigger for <i>container magics</i>, i.e. it will for <code>%ENV</code> or <code>%SIG</code> but not for <code>$#array</code>. </p>
-<p> The new <font SIZE="-1">API</font> macro <code>&quot;newSVpvs()&quot;</code> can be used in place of constructions such as <code>&quot;newSVpvn(&quot;ISA&quot;, 3)&quot;</code>. It takes a single string constant, and at C compile time determines its length. </p>
-<p> The new <font SIZE="-1">API</font> function <code>&quot;Perl_newSV_type()&quot;</code> can be used as a more efficient replacement of the common idiom </p>
+<p> The new API macro <code>&quot;newSVpvs()&quot;</code> can be used in place of constructions such as <code>&quot;newSVpvn(&quot;ISA&quot;, 3)&quot;</code>. It takes a single string constant, and at C compile time determines its length. </p>
+<p> The new API function <code>&quot;Perl_newSV_type()&quot;</code> can be used as a more efficient replacement of the common idiom </p>
 <pre><code>    sv = newSV(0);
     sv_upgrade(sv, type);
 </code></pre>
@@ -985,9 +985,9 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <p> The values of <code>&quot;PERL_REVISION&quot;</code>, <code>&quot;PERL_VERSION&quot;</code> and <code>&quot;PERL_SUBVERSION&quot;</code> are now baked into global variables (and hence into any shared perl library). Additionally under <code>&quot;MULTIPLICITY&quot;</code>, the perl executable now records the size of the interpreter structure (total, and for this version). Coupled with <code>&quot;PL_bincompat_options&quot;</code> this will allow 5.8.10 (and later), when compiled with a shared perl library, to perform sanity checks in <code>&quot;main()&quot;</code> to verify that the shared library is indeed binary compatible. </p>
 <p> Symbolic references can now have embedded NULs. The new public function <code>&quot;Perl_get_cvn_flags()&quot;</code> can be used in extensions if you have to handle them.  </p>
 <h3>Macro cleanups</h3>
-<p> The core code, and <font SIZE="-1">XS</font> code in <i>ext</i> that is not dual-lived on <font SIZE="-1">CPAN,</font> no longer uses the macros <code>&quot;PL_na&quot;</code>, <code>&quot;NEWSV()&quot;</code>, <code>&quot;Null()&quot;</code>, <code>&quot;Nullav&quot;</code>, <code>&quot;Nullcv&quot;</code>, <code>&quot;Nullhv&quot;</code>, <code>&quot;Nullhv&quot;</code> <i>etc</i>. Their use is discouraged in new code, particularly <code>&quot;PL_na&quot;</code>, which is a small performance hit.  </p>
+<p> The core code, and XS code in <i>ext</i> that is not dual-lived on CPAN, no longer uses the macros <code>&quot;PL_na&quot;</code>, <code>&quot;NEWSV()&quot;</code>, <code>&quot;Null()&quot;</code>, <code>&quot;Nullav&quot;</code>, <code>&quot;Nullcv&quot;</code>, <code>&quot;Nullhv&quot;</code>, <code>&quot;Nullhv&quot;</code> <i>etc</i>. Their use is discouraged in new code, particularly <code>&quot;PL_na&quot;</code>, which is a small performance hit.  </p>
 <h2>New Tests</h2>
-<p> Many modules updated from <font SIZE="-1">CPAN</font> incorporate new tests. Some core specific tests have been added: </p>
+<p> Many modules updated from CPAN incorporate new tests. Some core specific tests have been added: </p>
 <dl>
 <dt>ext/DynaLoader/t/DynaLoader.t</dt>
 <dd> <p> Tests for the <code>&quot;DynaLoader&quot;</code> module. </p>
@@ -1014,10 +1014,10 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dd> <p> Tests for source filters returned from code references in <code>@INC</code>. </p>
  </dd>
 <dt>t/op/kill0.t</dt>
-<dd> <p> Tests for <font SIZE="-1">RT</font> #30970. </p>
+<dd> <p> Tests for RT #30970. </p>
  </dd>
 <dt>t/op/qrstack.t</dt>
-<dd> <p> Tests for <font SIZE="-1">RT</font> #41484. </p>
+<dd> <p> Tests for RT #41484. </p>
  </dd>
 <dt>t/op/qr.t</dt>
 <dd> <p> Tests for the <code>&quot;qr//&quot;</code> construct. </p>
@@ -1029,7 +1029,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dd> <p> Tests for the <code>&quot;qr//&quot;</code> construct. </p>
  </dd>
 <dt>t/op/rxcode.t</dt>
-<dd> <p> Tests for <font SIZE="-1">RT</font> #32840. </p>
+<dd> <p> Tests for RT #32840. </p>
  </dd>
 <dt>t/op/studytied.t</dt>
 <dd> <p> Tests for <code>&quot;study&quot;</code> on tied scalars. </p>
@@ -1044,7 +1044,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dd> <p> Tests for <code>&quot;Perl_sv_upgrade()&quot;</code>. </p>
  </dd>
 <dt>t/mro/package_aliases.t</dt>
-<dd> <p> <font SIZE="-1">MRO</font> tests for <code>&quot;isa&quot;</code> and package aliases. </p>
+<dd> <p> MRO tests for <code>&quot;isa&quot;</code> and package aliases. </p>
  </dd>
 <dt>t/pod/twice.t</dt>
 <dd> <p> Tests for calling <code>&quot;Pod::Parser&quot;</code> twice. </p>
@@ -1053,16 +1053,16 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dd> <p> Tests for inheriting file descriptors across <code>&quot;exec&quot;</code> (close-on-exec). </p>
  </dd>
 <dt>t/uni/cache.t</dt>
-<dd> <p> Tests for the <font SIZE="-1">UTF-8</font> caching code. </p>
+<dd> <p> Tests for the UTF-8 caching code. </p>
  </dd>
 <dt>t/uni/chr.t</dt>
 <dd> <p> Test that strange encodings do not upset <code>&quot;Perl_pp_chr()&quot;</code>. </p>
  </dd>
 <dt>t/uni/greek.t</dt>
-<dd> <p> Tests for <font SIZE="-1">RT</font> #40641. </p>
+<dd> <p> Tests for RT #40641. </p>
  </dd>
 <dt>t/uni/latin2.t</dt>
-<dd> <p> Tests for <font SIZE="-1">RT</font> #40641. </p>
+<dd> <p> Tests for RT #40641. </p>
  </dd>
 <dt>t/uni/overload.t</dt>
 <dd> <p> Tests for returning Unicode from overloaded values. </p>
@@ -1091,7 +1091,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;File::Spec::Win32&quot;</code> upgraded to version 3.2701 </p>
  </dd></dl>
-<font SIZE="-1"></font><h3>OS/2</h3>
+<h3>OS/2</h3>
 <p> <i>Updated Modules</i> </p>
 <dl>
 <dt>&bull;</dt>
@@ -1101,7 +1101,7 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;OS2::REXX::DLL&quot;</code>, <code>&quot;OS2::REXX&quot;</code> updated to version 1.03 </p>
  </dd></dl>
-<font SIZE="-1"></font><h3>VMS</h3>
+<h3>VMS</h3>
 <p> <i>Updated Modules</i> </p>
 <dl>
 <dt>&bull;</dt>
@@ -1116,19 +1116,19 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <h2>Obituary</h2>
 <p> Nick Ing-Simmons, long time Perl hacker, author of the <code>&quot;Tk&quot;</code> and <code>&quot;Encode&quot;</code> modules, <i>perlio.c</i> in the core, and 5.003_02 pumpking, died of a heart attack on 25th September 2006. He will be missed.  </p>
 <h2>Acknowledgements</h2>
-<p> Some of the work in this release was funded by a <font SIZE="-1">TPF</font> grant. </p>
-<p> Steve Hay worked behind the scenes working out the causes of the differences between core modules, their <font SIZE="-1">CPAN</font> releases, and previous core releases, and the best way to rectify them. He doesn&#8217;t want to do it again. I know this feeling, and I&#8217;m very glad he did it this time, instead of me. </p>
+<p> Some of the work in this release was funded by a TPF grant. </p>
+<p> Steve Hay worked behind the scenes working out the causes of the differences between core modules, their CPAN releases, and previous core releases, and the best way to rectify them. He doesn&#8217;t want to do it again. I know this feeling, and I&#8217;m very glad he did it this time, instead of me. </p>
 <p> Paul Fenwick assembled a team of 18 volunteers, who broke the back of writing this document. In particular, Bradley Dean, Eddy Tan, and Vincent Pit provided half the team&#8217;s contribution. </p>
 <p> Schwern verified the list of updated module versions, correcting quite a few errors that I (and everyone else) had missed, both wrongly stated module versions, and changed modules that had not been listed. </p>
-<p> The crack Berlin-based <font SIZE="-1">QA</font> team of Andreas König and Slaven Rezic tirelessly re-built snapshots, tested most everything <font SIZE="-1">CPAN</font> against them, and then identified the changes responsible for any module regressions, ensuring that several show-stopper bugs were stomped before the first release candidate was cut. </p>
-<p> The other core committers contributed most of the changes, and applied most of the patches sent in by the hundreds of contributors listed in <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i>. </p>
+<p> The crack Berlin-based QA team of Andreas König and Slaven Rezic tirelessly re-built snapshots, tested most everything CPAN against them, and then identified the changes responsible for any module regressions, ensuring that several show-stopper bugs were stomped before the first release candidate was cut. </p>
+<p> The other core committers contributed most of the changes, and applied most of the patches sent in by the hundreds of contributors listed in <i></i><i>AUTHORS</i><i></i>. </p>
 <p> And obviously, Larry Wall, without whom we wouldn&#8217;t have Perl.  </p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://bugs.perl.org.">http://bugs.perl.org.</a> There may also be information at <a rel="nofollow" href="http://www.perl.org,">http://www.perl.org,</a> the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. You can browse and search the Perl 5 bugs at <a rel="nofollow" href="http://bugs.perl.org/">http://bugs.perl.org/</a> </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font>  </p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

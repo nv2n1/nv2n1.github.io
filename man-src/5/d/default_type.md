@@ -26,8 +26,8 @@ description: "default_type – The SELinux default type configuration file"
 <dd>The domain type that is returned for this role.</dd></dl>
 </dl>
 <h2>Example</h2>
-<p># ./contexts/default_type<br />
- auditadm_r:auditadm_t<br />
+<p># ./contexts/default_type<br/>
+ auditadm_r:auditadm_t<br/>
  user_r:user_t</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-get_default_type/">get_default_type</a></code>(3), <code><a href="/docs/linux/man/1-newrole/">newrole</a></code>(1), <code><a href="/docs/linux/man/3-selinux_default_type_path/">selinux_default_type_path</a></code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>

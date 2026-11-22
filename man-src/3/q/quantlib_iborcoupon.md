@@ -15,7 +15,7 @@ description: "QuantLib::IborCoupon – Coupon paying a Libor-type index"
 <p><code>IborCoupon</code> (const <code>Date</code> &amp;paymentDate, const <code>Real</code> nominal, const <code>Date</code> &amp;startDate, const <code>Date</code> &amp;endDate, const <code>Natural</code> fixingDays, const boost::shared_ptr&lt; <code>IborIndex</code> &gt; &amp;index, const <code>Real</code> gearing=1.0, const <code>Spread</code> spread=0.0, const <code>Date</code> &amp;refPeriodStart=<code>Date</code>(), const <code>Date</code> &amp;refPeriodEnd=<code>Date</code>(), const <code>DayCounter</code> &amp;dayCounter=<code>DayCounter</code>(), bool isInArrears=false) </p>
 <p> <code>Inspectors</code> </p>
 <p> const boost::shared_ptr&lt; <code>IborIndex</code> &gt; &amp; <code>iborIndex</code> () const </p>
-<p> <code>Rate</code> <code>indexFixing</code> () const<br />
+<p> <code>Rate</code> <code>indexFixing</code> () const<br/>
  <i>Implemented in order to manage the case of par coupon. </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>

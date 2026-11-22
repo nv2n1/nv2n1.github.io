@@ -10,19 +10,19 @@ description: "nm – list symbols from object files"
 
 <p> nm &#8211; list symbols from object files </p>
 <h2>SYNOPSIS</h2>
-<p> nm [<code>-a</code>|<code>&#8211;debug-syms</code>]<br />
-[<code>-g</code>|<code>&#8211;extern-only</code>][<code>&#8211;plugin</code>&nbsp;<wbr><i>name</i>]<br />
-[<code>-B</code>]&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]]&nbsp;<wbr>[<code>-D</code>|<code>&#8211;dynamic</code>]<br />
-[<code>-S</code>|<code>&#8211;print-size</code>]&nbsp;<wbr>[<code>-s</code>|<code>&#8211;print-armap</code>]<br />
-[<code>-A</code>|<code>-o</code>|<code>&#8211;print-file-name</code>][<code>&#8211;special-syms</code>]<br />
-[<code>-n</code>|<code>-v</code>|<code>&#8211;numeric-sort</code>]&nbsp;<wbr>[<code>-p</code>|<code>&#8211;no-sort</code>]<br />
-[<code>-r</code>|<code>&#8211;reverse-sort</code>]&nbsp;<wbr>[<code>&#8211;size-sort</code>]&nbsp;<wbr>[<code>-u</code>|<code>&#8211;undefined-only</code>]<br />
-[<code>-t</code>&nbsp;<wbr><i>radix</i>|<code>&#8211;radix=</code><i>radix</i>]&nbsp;<wbr>[<code>-P</code>|<code>&#8211;portability</code>]<br />
-[<code>&#8211;target=</code><i>bfdname</i>]&nbsp;<wbr>[<code>-f</code><i>format</i>|<code>&#8211;format=</code><i>format</i>]<br />
-[<code>&#8211;defined-only</code>]&nbsp;<wbr>[<code>-l</code>|<code>&#8211;line-numbers</code>]&nbsp;<wbr>[<code>&#8211;no-demangle</code>]<br />
+<p> nm [<code>-a</code>|<code>&#8211;debug-syms</code>]<br/>
+[<code>-g</code>|<code>&#8211;extern-only</code>][<code>&#8211;plugin</code>&nbsp;<wbr><i>name</i>]<br/>
+[<code>-B</code>]&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]]&nbsp;<wbr>[<code>-D</code>|<code>&#8211;dynamic</code>]<br/>
+[<code>-S</code>|<code>&#8211;print-size</code>]&nbsp;<wbr>[<code>-s</code>|<code>&#8211;print-armap</code>]<br/>
+[<code>-A</code>|<code>-o</code>|<code>&#8211;print-file-name</code>][<code>&#8211;special-syms</code>]<br/>
+[<code>-n</code>|<code>-v</code>|<code>&#8211;numeric-sort</code>]&nbsp;<wbr>[<code>-p</code>|<code>&#8211;no-sort</code>]<br/>
+[<code>-r</code>|<code>&#8211;reverse-sort</code>]&nbsp;<wbr>[<code>&#8211;size-sort</code>]&nbsp;<wbr>[<code>-u</code>|<code>&#8211;undefined-only</code>]<br/>
+[<code>-t</code>&nbsp;<wbr><i>radix</i>|<code>&#8211;radix=</code><i>radix</i>]&nbsp;<wbr>[<code>-P</code>|<code>&#8211;portability</code>]<br/>
+[<code>&#8211;target=</code><i>bfdname</i>]&nbsp;<wbr>[<code>-f</code><i>format</i>|<code>&#8211;format=</code><i>format</i>]<br/>
+[<code>&#8211;defined-only</code>]&nbsp;<wbr>[<code>-l</code>|<code>&#8211;line-numbers</code>]&nbsp;<wbr>[<code>&#8211;no-demangle</code>]<br/>
 [<code>-V</code>|<code>&#8211;version</code>]&nbsp;<wbr>[<code>-X 32_64</code>]&nbsp;<wbr>[<code>&#8211;help</code>]&nbsp;<wbr>&nbsp;<wbr>[<i>objfile</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
-<p> <font SIZE="-1">GNU</font> <code>nm</code> lists the symbols from object files <i>objfile</i>&#8230;. If no object files are listed as arguments, <code>nm</code> assumes the file <i>a.out</i>. </p>
+<p> GNU <code>nm</code> lists the symbols from object files <i>objfile</i>&#8230;. If no object files are listed as arguments, <code>nm</code> assumes the file <i>a.out</i>. </p>
 <p> For each symbol, <code>nm</code> shows:</p>
 <dl>
 <dt>*</dt>
@@ -36,7 +36,7 @@ description: "nm – list symbols from object files"
 <dt>B</dt>
 <dd>
 </dd><dt>b</dt>
-<dd> The symbol is in the uninitialized data section (known as <font SIZE="-1">BSS</font>).</dd>
+<dd> The symbol is in the uninitialized data section (known as BSS).</dd>
 <dt>C</dt>
 <dd> The symbol is common. Common symbols are uninitialized data. When linking, multiple common symbols may appear with the same name. If the symbol is defined anywhere, the common symbols are treated as undefined references.</dd>
 <dt>D</dt>
@@ -98,11 +98,11 @@ description: "nm – list symbols from object files"
 </dd><dt><code>&#8211;debug-syms</code></dt>
 <dd> Display all symbols, even debugger-only symbols; normally these are not listed.</dd>
 <dt><code>-B</code></dt>
-<dd> The same as <code>&#8211;format=bsd</code> (for compatibility with the <font SIZE="-1">MIPS</font> <code>nm</code>).</dd>
+<dd> The same as <code>&#8211;format=bsd</code> (for compatibility with the MIPS <code>nm</code>).</dd>
 <dt><code>-C</code></dt>
 <dd>
 </dd><dt><code>&#8211;demangle[=</code><i>style</i><code>]</code></dt>
-<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C<font SIZE="-2">++</font> function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
+<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C++ function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
 <dt><code>&#8211;no-demangle</code></dt>
 <dd> Do not demangle low-level symbol names. This is the default.</dd>
 <dt><code>-D</code></dt>
@@ -136,7 +136,7 @@ description: "nm – list symbols from object files"
 <dt><code>-P</code></dt>
 <dd>
 </dd><dt><code>&#8211;portability</code></dt>
-<dd> Use the <font SIZE="-1">POSIX</font>.2 standard output format instead of the default format. Equivalent to <code>-f posix</code>.</dd>
+<dd> Use the POSIX.2 standard output format instead of the default format. Equivalent to <code>-f posix</code>.</dd>
 <dt><code>-S</code></dt>
 <dd>
 </dd><dt><code>&#8211;print-size</code></dt>
@@ -152,7 +152,7 @@ description: "nm – list symbols from object files"
 <dt><code>&#8211;size-sort</code></dt>
 <dd> Sort symbols by size. The size is computed as the difference between the value of the symbol and the value of the symbol with the next higher value. If the <tt>&quot;bsd&quot;</tt> output format is used the size of the symbol is printed, rather than the value, and <code>-S</code> must be used in order both size and value to be printed.</dd>
 <dt><code>&#8211;special-syms</code></dt>
-<dd> Display symbols which have a target-specific special meaning. These symbols are usually used by the target for some special processing and are not normally helpful when included included in the normal symbol lists. For example for <font SIZE="-1">ARM</font> targets this option would skip the mapping symbols used to mark transitions between <font SIZE="-1">ARM</font> code, <font SIZE="-1">THUMB</font> code and data.</dd>
+<dd> Display symbols which have a target-specific special meaning. These symbols are usually used by the target for some special processing and are not normally helpful when included included in the normal symbol lists. For example for ARM targets this option would skip the mapping symbols used to mark transitions between ARM code, THUMB code and data.</dd>
 <dt><code>-t</code> <i>radix</i></dt>
 <dd>
 </dd><dt><code>&#8211;radix=</code><i>radix</i></dt>
@@ -170,7 +170,7 @@ description: "nm – list symbols from object files"
 </dd><dt><code>&#8211;version</code></dt>
 <dd> Show the version number of <code>nm</code> and exit.</dd>
 <dt><code>-X</code></dt>
-<dd> This option is ignored for compatibility with the <font SIZE="-1">AIX</font> version of <code>nm</code>. It takes one parameter which must be the string <code>32_64</code>. The default mode of <font SIZE="-1">AIX</font> <code>nm</code> corresponds to <code>-X 32</code>, which is not supported by <font SIZE="-1">GNU</font> <code>nm</code>.</dd>
+<dd> This option is ignored for compatibility with the AIX version of <code>nm</code>. It takes one parameter which must be the string <code>32_64</code>. The default mode of AIX <code>nm</code> corresponds to <code>-X 32</code>, which is not supported by GNU <code>nm</code>.</dd>
 <dt><code>&#8211;help</code></dt>
 <dd> Show a summary of the options to <code>nm</code> and exit.</dd>
 <dt><code>@</code><i>file</i></dt>
@@ -180,4 +180,4 @@ description: "nm – list symbols from object files"
 <p> <i><a href="/docs/linux/man/1-ar/">ar</a></i>(1), <i><a href="/docs/linux/man/1-objdump/">objdump</a></i>(1), <i><a href="/docs/linux/man/1-ranlib/">ranlib</a></i>(1), and the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

@@ -11,7 +11,7 @@ description: "dswap.f –"
 <p> dswap.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dswap</code> (N, DX, INCX, DY, INCY)<br />
+<p> subroutine <code>dswap</code> (N, DX, INCX, DY, INCY)<br/>
  <i></i><code>DSWAP</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dswap (integerN, double precision, dimension(*)DX, integerINCX, double precision, dimension(*)DY, integerINCY)</h3>

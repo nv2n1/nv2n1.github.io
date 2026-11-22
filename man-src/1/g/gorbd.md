@@ -15,11 +15,11 @@ description: "gorbd – – An object request broker daemon"
 <p> To be written &#8230;</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-ORBInitialPort</code> <i></i><font SIZE="-1"><i>PORT</i></font><i></i></dt>
+<dt><code>-ORBInitialPort</code> <i></i><i>PORT</i><i></i></dt>
 <dd> Port on which persistent naming service is to be started.</dd>
-<dt><code>-ior</code> <i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
-<dd> File in which to store persistent naming service&#8217;s <font SIZE="-1">IOR</font> reference</dd>
-<dt><code>-directory</code> <i></i><font SIZE="-1"><i>DIR</i></font><i></i></dt>
+<dt><code>-ior</code> <i></i><i>FILE</i><i></i></dt>
+<dd> File in which to store persistent naming service&#8217;s IOR reference</dd>
+<dt><code>-directory</code> <i></i><i>DIR</i><i></i></dt>
 <dd> Directory in which to store persistent data.</dd>
 <dt><code>-restart</code></dt>
 <dd> Restart persistent naming service, clearing persistent naming database.</dd></dl>
@@ -29,7 +29,7 @@ description: "gorbd – – An object request broker daemon"
 <dd> Print help text, then exit.</dd>
 <dt><code>-version</code></dt>
 <dd> Print version number, then exit.</dd>
-<dt><code>-J</code><i></i><font SIZE="-1"><i>OPTION</i></font><i></i></dt>
+<dt><code>-J</code><i></i><i>OPTION</i><i></i></dt>
 <dd> Pass argument to the Java runtime.</dd></dl>
 <h2>BUGS</h2>
 <h2>SEE ALSO</h2>

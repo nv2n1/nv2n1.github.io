@@ -18,9 +18,9 @@ volumes early provisioned with docker volume command</pre>
 </dl>
 <p> The only thing allowed will be just bind mounts. </p>
 <h2>Options</h2>
-<p><code>&#8211;cert-path</code>=&quot;&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>Certificates path to connect to Docker&nbsp;<wbr>(cert.pem, key.pem) <code>&#8211;host</code>=&quot;<a href="unix:///var/run/docker.sock">unix:///var/run/docker.sock</a>&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>Specifies the host where to contact the docker daemon. <code>&#8211;tls-verify</code>=&quot;false&quot;<br />
+<p><code>&#8211;cert-path</code>=&quot;&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>Certificates path to connect to Docker&nbsp;<wbr>(cert.pem, key.pem) <code>&#8211;host</code>=&quot;<a href="unix:///var/run/docker.sock">unix:///var/run/docker.sock</a>&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>Specifies the host where to contact the docker daemon. <code>&#8211;tls-verify</code>=&quot;false&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Whether to verify certificates or not</p>
 <h2>Authors</h2>
 <p>Antonio Murdaca &lt;runcom [at] redhat.com&gt;</p>

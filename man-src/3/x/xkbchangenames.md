@@ -10,7 +10,7 @@ description: "XkbChangeNames – _summary-line_"
 <p>XkbChangeNames &#8211; _summary-line_ </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbChangeNames</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>Xkb</i><code>);</code><br />
+<dt> <code>Bool XkbChangeNames</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>Xkb</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

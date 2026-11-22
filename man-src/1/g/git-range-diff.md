@@ -81,19 +81,19 @@ $ git range &#8211; diff @{u} @{1} @
 <dl>
 <dt>
 </dt><dd>
--:  &#8212;&#8212;- &gt; 1:  0ddba11 Prepare for the inevitable!<br />
-1:  c0debee = 2:  cab005e Add a helpful message at the start<br />
-2:  f00dbal ! 3:  decafe1 Describe a bug<br />
-    @@ -1,3 +1,3 @@<br />
-     Author: A U Thor &lt;author [at] example.com&gt;<br />
-    -TODO: Describe a bug<br />
-    +Describe a bug<br />
-    @@ -324,5 +324,6<br />
-      This is expected.<br />
-    -+What is unexpected is that it will also crash.<br />
-    ++Unexpectedly, it also crashes. This is a bug, and the jury is<br />
-    ++still out there how to fix it best. See ticket #314 for details.<br />
-      Contact<br />
+-:  &#8212;&#8212;- &gt; 1:  0ddba11 Prepare for the inevitable!<br/>
+1:  c0debee = 2:  cab005e Add a helpful message at the start<br/>
+2:  f00dbal ! 3:  decafe1 Describe a bug<br/>
+    @@ -1,3 +1,3 @@<br/>
+     Author: A U Thor &lt;author [at] example.com&gt;<br/>
+    -TODO: Describe a bug<br/>
+    +Describe a bug<br/>
+    @@ -324,5 +324,6<br/>
+      This is expected.<br/>
+    -+What is unexpected is that it will also crash.<br/>
+    ++Unexpectedly, it also crashes. This is a bug, and the jury is<br/>
+    ++still out there how to fix it best. See ticket #314 for details.<br/>
+      Contact<br/>
 3:  bedead &lt; -:  &#8212;&#8212;- TO-UNDO
 </dd></dl>
 <p> In this example, there are 3 old and 3 new commits, where the developer removed the 3rd, added a new one before the first two, and modified the commit message of the 2nd commit as well its diff. </p>
@@ -118,26 +118,26 @@ $ git range &#8211; diff @{u} @{1} @
 <dl>
 <dt>
 </dt><dd>
-1 A /<br />
+1 A /<br/>
     2 &#8212; &#8212; &#8212; &#8211;&#8216;  B C
 </dd></dl>
 <p> This explanation comes for &quot;free&quot; because there was no change. Similarly <code>C</code> could be explained using <code>1</code>, but that comes at some cost c&gt;0 because of the modification: </p>
 <dl>
 <dt>
 </dt><dd>
-1 &#8212; &#8211;.A | /<br />
-                2 &#8212; &#8211;+&#8211; -&#8216;  B |<br />
-          `&#8211; &#8212; -C<br />
+1 &#8212; &#8211;.A | /<br/>
+                2 &#8212; &#8211;+&#8211; -&#8216;  B |<br/>
+          `&#8211; &#8212; -C<br/>
                     c &gt; 0
 </dd></dl>
 <p> In mathematical terms, what we are looking for is some sort of a minimum cost bipartite matching; &#8216;1` is matched to <code>C</code> at some cost, etc. The underlying graph is in fact a complete bipartite graph; the cost we associate with every edge is the size of the diff between the two commits&#8217; patches. To explain also new commits, we introduce dummy nodes on both sides: </p>
 <dl>
 <dt>
 </dt><dd>
-1 &#8212; &#8211;.A | /<br />
-                2 &#8212; &#8211;+&#8211; -&#8216;  B |<br />
-    o     `&#8211; &#8212; -C<br />
-            c &gt; 0 o o<br />
+1 &#8212; &#8211;.A | /<br/>
+                2 &#8212; &#8211;+&#8211; -&#8216;  B |<br/>
+    o     `&#8211; &#8212; -C<br/>
+            c &gt; 0 o o<br/>
                     o o
 </dd></dl>
 <p> The cost of an edge <code>o&#8211;C</code> is the size of <code>C</code>&#8216;s diff, modified by a fudge factor that should be smaller than 100%. The cost of an edge <code>o&#8211;o</code> is free. The fudge factor is necessary because even if <code>1</code> and <code>C</code> have nothing in common, they may still share a few empty lines and such, possibly making the assignment <code>1&#8211;C</code>, <code>o&#8211;o</code> slightly cheaper than <code>1&#8211;o</code>, <code>o&#8211;C</code> even if <code>1</code> and <code>C</code> have nothing in common. With the fudge factor we require a much larger common part to consider patches as corresponding. </p>

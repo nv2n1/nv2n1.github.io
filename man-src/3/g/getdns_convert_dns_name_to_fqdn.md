@@ -13,12 +13,12 @@ description: "getdns_convert, getdns_convert_dns_name_to_fqdn, getdns_convert_fq
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_convert_dns_name_to_fqdn</code> (const getdns_bindata *dns_name_wire_fmt, </p>
 <dl>
 <dt>
 </dt><dd> char **fqdn_as_string)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_convert_fqdn_to_dns_name</code> (char *fqdn_as_string, </p>
 <dl>
 <dt>

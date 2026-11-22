@@ -11,7 +11,7 @@ description: "sgeequb.f –"
 <p> sgeequb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgeequb</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br />
+<p> subroutine <code>sgeequb</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br/>
  <i></i><code>SGEEQUB</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgeequb (integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )R, real, dimension( * )C, realROWCND, realCOLCND, realAMAX, integerINFO)</h3>

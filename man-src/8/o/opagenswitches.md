@@ -96,10 +96,10 @@ description: "opagenswitches"
 <dt><code>FF_TOPOLOGY_FILE</code></dt>
 <dd>File containing topology XML data, used in absence of -T.</dd></dl>
 <h2>Examples</h2>
-<p>opagenswitches<br />
- opagenswitches -p &#8216;1:1 2:1&#8217;<br />
- opagenswitches -o switches<br />
- opagenswitches -s -o switches<br />
- opagenswitches -L switches -s -o switches<br />
- opagenswitches -s -T topology.%P.xml<br />
+<p>opagenswitches<br/>
+ opagenswitches -p &#8216;1:1 2:1&#8217;<br/>
+ opagenswitches -o switches<br/>
+ opagenswitches -s -o switches<br/>
+ opagenswitches -L switches -s -o switches<br/>
+ opagenswitches -s -T topology.%P.xml<br/>
  opagenswitches -L switches -s -T topology.%P.xml -X snapshot.%P.xml </p>

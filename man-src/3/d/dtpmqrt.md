@@ -11,7 +11,7 @@ description: "dtpmqrt.f –"
 <p> dtpmqrt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtpmqrt</code> (SIDE, TRANS, M, N, K, L, NB, V, LDV, T, LDT, A, LDA, B, LDB, WORK, INFO)<br />
+<p> subroutine <code>dtpmqrt</code> (SIDE, TRANS, M, N, K, L, NB, V, LDV, T, LDT, A, LDA, B, LDB, WORK, INFO)<br/>
  <i></i><code>DTPMQRT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtpmqrt (characterSIDE, characterTRANS, integerM, integerN, integerK, integerL, integerNB, double precision, dimension( ldv, * )V, integerLDV, double precision, dimension( ldt, * )T, integerLDT, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )WORK, integerINFO)</h3>
@@ -106,9 +106,9 @@ if SIDE
           Q*C or Q**T*C or C*Q or C*Q**T.  See Further Details.
 </pre>
 <p> <i>LDA</i> </p>
-<p>LDA is INTEGER<br />
-    The leading dimension of the array A.If SIDE = &#8216;L&#8217;,<br />
-                                            LDC &gt;= max(1, K);<br />
+<p>LDA is INTEGER<br/>
+    The leading dimension of the array A.If SIDE = &#8216;L&#8217;,<br/>
+                                            LDC &gt;= max(1, K);<br/>
 If SIDE = &#8216;R&#8217;, LDC &gt;= max(1, M).</p>
 <p> <i>B</i> </p>
 <pre>

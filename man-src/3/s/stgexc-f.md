@@ -10,7 +10,7 @@ description: "stgexc.f –"
 <p>stgexc.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>stgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, WORK, LWORK, INFO)<br />
+<p>subroutine <code>stgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, WORK, LWORK, INFO)<br/>
  <i></i><code>STGEXC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stgexc (logicalWANTQ, logicalWANTZ, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( ldq, * )Q, integerLDQ, real, dimension( ldz, * )Z, integerLDZ, integerIFST, integerILST, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

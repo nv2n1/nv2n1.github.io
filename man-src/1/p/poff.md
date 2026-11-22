@@ -10,8 +10,8 @@ description: "pon, poff, plog – starts up, shuts down or lists the log of PPP 
 
 <p> pon, poff, plog &#8211; starts up, shuts down or lists the log of PPP connections </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pon</code> [ isp-name [ options ] ]<br />
- <code>poff</code> [ -r ] [ -d ] [ -c ] [ -a ] [ -h ] [ isp-name ]<br />
+<p> <code>pon</code> [ isp-name [ options ] ]<br/>
+ <code>poff</code> [ -r ] [ -d ] [ -c ] [ -a ] [ -h ] [ isp-name ]<br/>
  <code>plog</code> [ arguments ]</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page describes the <code>pon</code>, <code>plog</code> and <code>poff</code> scripts, which allow users to control PPP connections. </p>
@@ -70,7 +70,7 @@ description: "pon, poff, plog – starts up, shuts down or lists the log of PPP 
 <dt><i>/var/log/ppp.log</i></dt>
 <dd> The default PPP log file.</dd></dl>
 <h2>AUTHORS</h2>
-<p> The p-commands were written by Christoph Lameter &lt;clameter [at] debian.org&gt;. Updated and revised by Philip Hands &lt;phil [at] hands.com&gt;.<br />
+<p> The p-commands were written by Christoph Lameter &lt;clameter [at] debian.org&gt;. Updated and revised by Philip Hands &lt;phil [at] hands.com&gt;.<br/>
  This manual was written by Othmar Pasteka &lt;othmar [at] tron.at&gt;. Modified by Rob Levin &lt;lilo [at] openprojects.net&gt;, with some extensions taken from the old p-commands manual written by John Hasler &lt;jhasler [at] debian.org&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8), <code><a href="/docs/linux/man/8-chat/">chat</a></code>(8), <code><a href="/docs/linux/man/1-tail/">tail</a></code>(1). </p>

@@ -20,18 +20,18 @@ description: "idlj – The IDL-to-Java Compiler"
 <dd>To generate Java bindings for an IDL file named My.idl: <i>idlj My.idl</i> </dd>
 <p> This generates the client-side bindings and is equivalent to: <i>idlj </i><tt>-fclient</tt><i> My.idl</i> </p>
 <p> The client-side bindings do not include the server-side skeleton. If you want to generate the server-side bindings for the interfaces: <i>idlj </i><tt>-fserver</tt><i> My.idl</i> </p>
-<p> Server-side bindings include the client-side bindings plus the skeleton, all of which are <i>POA</i> (that is, Inheritance Model) classes. If you want to generate both client and server-side bindings, use one of the following (equivalent) commands: <i>idlj </i><tt>-fclient -fserver</tt><i> My.idl</i><br />
+<p> Server-side bindings include the client-side bindings plus the skeleton, all of which are <i>POA</i> (that is, Inheritance Model) classes. If you want to generate both client and server-side bindings, use one of the following (equivalent) commands: <i>idlj </i><tt>-fclient -fserver</tt><i> My.idl</i><br/>
  <i>idlj </i><tt>-fall</tt><i> My.idl</i> </p>
 <p> There are two possible server-side models: the Inheritance Model and the Tie Delegation Model. </p>
 <p> The default server-side model is the <i>Portable Servant Inheritance Model</i>. Given an interface <i>My</i> defined in <i>My.idl</i>, the file <i>MyPOA.java</i> is generated. You must provide the implementation for <i>My</i> and it must inherit from <i>MyPOA</i>. </p>
 <p> <i>MyPOA.java</i> is a stream-based skeleton that extends <i>org.omg.PortableServer.Servant</i> and implements the <i>InvokeHandler</i> interface and the operations interface associated with the IDL interface the skeleton implements. </p>
 <p> The <i>PortableServer</i> module for the Portable Object Adapter (POA) defines the native <i>Servant</i> type. In the Java programming language, the <i>Servant</i> type is mapped to the Java <i>org.omg.PortableServer.Servant</i> class. It serves as the base class for all POA servant implementations and provides a number of methods that may be invoked by the application programmer, as well as methods which are invoked by the POA itself and may be overridden by the user to control aspects of servant behavior. </p>
 <p> Another option for the Inheritance Model is to use the <i>-oldImplBase</i> flag in order to generate server-side bindings that are compatible with versions of the Java programming language prior to J2SE 1.4. Note that using the <i>-oldImplBase</i> flag is non-standard: these APIs are being deprecated. You would use this flag ONLY for compatibility with existing servers written in J2SE 1.3. In that case, you would need to modify an existing MAKEFILE to add the <i>-oldImplBase</i> flag to the <i>idlj</i> compiler, otherwise POA-based server-side mappings will be generated. To generate server-side bindings that are backwards compatible: </p>
-<p> <i>idlj </i><tt>-fclient -fserver</tt><i> </i><tt>-oldImplBase</tt><i> My.idl</i><br />
+<p> <i>idlj </i><tt>-fclient -fserver</tt><i> </i><tt>-oldImplBase</tt><i> My.idl</i><br/>
  <i>idlj </i><tt>-fall</tt><i> </i><tt>-oldImplBase</tt><i> My.idl</i> </p>
 <p> Given an interface <i>My</i> defined in <i>My.idl</i>, the file <i>_MyImplBase.java</i> is generated. You must provide the implementation for <i>My</i> and it must inherit from <i>_MyImplBase</i>. </p>
 <p> The other server-side model is called the Tie Model. This is a delegation model. Because it is not possible to generate ties and skeletons at the same time, they must be generated separately. The following commands generate the bindings for the Tie Model: </p>
-<p> <i>idlj </i><tt>-fall</tt><i> My.idl</i><br />
+<p> <i>idlj </i><tt>-fall</tt><i> My.idl</i><br/>
  <i>idlj </i><tt>-fallTIE</tt><i> My.idl</i> </p>
 <p> For the interface <i>My</i>, the second command generates <i>MyPOATie.java</i>. The constructor to <i>MyPOATie</i> takes a <i>delegate</i>. In this example, using the default POA model, the constructor also needs a <i>poa</i>. You must provide the implementation for <i>delegate</i>, but it does not have to inherit from any other class, only the interface <i>MyOperations</i>. But to use it with the ORB, you must wrap your implementation within <i>MyPOATie</i>. For instance: </p>
 <pre><code> ORB orb = ORB.init(args, System.getProperties());
@@ -47,7 +47,7 @@ description: "idlj – The IDL-to-Java Compiler"
  My ref = tie._this(orb);</code></pre>
 <p>You might want to use the Tie model instead of the typical Inheritance model if your implementation must inherit from some other implementation. Java allows any number of interface inheritance, but there is only one slot for class inheritance. If you use the inheritance model, that slot is used up . By using the Tie Model, that slot is freed up for your own use. The drawback is that it introduces a level of indirection: one extra method call occurs when invoking a method. </p>
 <p> To generate server-side, Tie model bindings that are compatible with versions of the IDL to Java language mapping in versions prior to J2SE 1.4. </p>
-<p> <i>idlj </i><tt>-oldImplBase</tt><i> </i><tt>-fall</tt><i> My.idl</i><br />
+<p> <i>idlj </i><tt>-oldImplBase</tt><i> </i><tt>-fall</tt><i> My.idl</i><br/>
  <i>idlj </i><tt>-oldImplBase</tt><i> </i><tt>-fallTIE</tt><i> My.idl</i> </p>
 <p> For the interface <i>My</i>, this will generate <i>My_Tie.java</i>. The constructor to <i>My_Tie</i> takes a <i>impl</i>. You must provide the implementation for <i>impl</i>, but it does not have to inherit from any other class, only the interface <i>HelloOperations</i>. But to use it with the ORB, you must wrap your implementation within <i>My_Tie</i>. For instance: </p>
 <pre><code> ORB orb = ORB.init(args, System.getProperties());
@@ -74,46 +74,46 @@ description: "idlj – The IDL-to-Java Compiler"
 <h3>Emitting Bindings for Include Files</h3>
 <dl>
 <dd>By default, only those interfaces, structs, etc, that are defined in the idl file on the command line have Java bindings generated for them. The types defined in included files are not generated. For example, assume the following two idl files: <tt>My.idl</tt> </dd>
-<p> <i>#include &lt;MyOther.idl&gt;</i><br />
- <i>interface My</i><br />
- <i>{</i><br />
- <i>};</i><br />
+<p> <i>#include &lt;MyOther.idl&gt;</i><br/>
+ <i>interface My</i><br/>
+ <i>{</i><br/>
+ <i>};</i><br/>
  <tt>MyOther.idl</tt> </p>
-<p> <i>interface MyOther</i><br />
- <i>{</i><br />
+<p> <i>interface MyOther</i><br/>
+ <i>{</i><br/>
  <i>};</i>&nbsp;<wbr> </p>
 <p> The following command will only generate the java bindings for <i>My</i>: <i>idlj My.idl</i> </p>
 <p> To generate all of the types in <i>My.idl</i> and all of the types in the files that <i>My.idl</i> includes (in this example, <i>MyOther.idl</i>), use the following command: <i>idlj </i><tt>-emitAll</tt><i> My.idl</i> </p>
 <p> There is a caveat to the default rule. <i>#include</i> statements which appear at global scope are treated as described. These <i>#include</i> statements can be thought of as import statements. <i>#include</i> statements which appear within some enclosing scope are treated as true <i>#include</i> statements, meaning that the code within the included file is treated as if it appeared in the original file and, therefore, Java bindings are emitted for it. Here is an example: <tt>My.idl</tt> </p>
-<p> <i>#include &lt;MyOther.idl&gt;</i><br />
- <i>interface My</i><br />
- <i>{</i><br />
- <i>&nbsp;<wbr> #include &lt;Embedded.idl&gt;</i><br />
+<p> <i>#include &lt;MyOther.idl&gt;</i><br/>
+ <i>interface My</i><br/>
+ <i>{</i><br/>
+ <i>&nbsp;<wbr> #include &lt;Embedded.idl&gt;</i><br/>
  <i>};&nbsp;<wbr></i> <tt>MyOther.idl</tt> </p>
-<p> <i>interface MyOther</i><br />
- <i>{</i><br />
+<p> <i>interface MyOther</i><br/>
+ <i>{</i><br/>
  <i>};&nbsp;<wbr></i> <tt>Embedded.idl</tt> </p>
 <p> <i>enum E {one, two, three};</i>&nbsp;<wbr> </p>
 <p> Running the following command: <i>idlj My.idl</i> </p>
-<p> will generate the following list of Java files: <i>./MyHolder.java</i><br />
- <i>./MyHelper.java</i><br />
- <i>./_MyStub.java</i><br />
- <i>./MyPackage</i><br />
- <i>./MyPackage/EHolder.java</i><br />
- <i>./MyPackage/EHelper.java</i><br />
- <i>./MyPackage/E.java</i><br />
+<p> will generate the following list of Java files: <i>./MyHolder.java</i><br/>
+ <i>./MyHelper.java</i><br/>
+ <i>./_MyStub.java</i><br/>
+ <i>./MyPackage</i><br/>
+ <i>./MyPackage/EHolder.java</i><br/>
+ <i>./MyPackage/EHelper.java</i><br/>
+ <i>./MyPackage/E.java</i><br/>
  <i>./My.java</i> </p>
 <p> Notice that <i>MyOther.java</i> was not generated because it is defined in an import-like <i>#include</i>. But <i>E.java</i> <i>was</i> generated because it was defined in a true <i>#include</i>. Also notice that since <i>Embedded.idl</i> was included within the scope of the interface <i>My</i>, it appears within the scope of <i>My</i> (that is,in <i>MyPackage</i>). </p>
 <p> If the <i>-emitAll</i> flag had been used in the previous example, then all types in all included files would be emitted. </p>
 </dl>
 <h3>Inserting Package Prefixes</h3>
 <dl>
-<dd>Suppose that you work for a company named ABC that has constructed the following IDL file:<br />
+<dd>Suppose that you work for a company named ABC that has constructed the following IDL file:<br/>
  <tt>Widgets.idl</tt> </dd>
-<p> <i>module Widgets</i><br />
- <i>{</i><br />
- <i>&nbsp;<wbr> interface W1 {&#8230;};</i><br />
- <i>&nbsp;<wbr> interface W2 {&#8230;};</i><br />
+<p> <i>module Widgets</i><br/>
+ <i>{</i><br/>
+ <i>&nbsp;<wbr> interface W1 {&#8230;};</i><br/>
+ <i>&nbsp;<wbr> interface W2 {&#8230;};</i><br/>
  <i>};</i>&nbsp;<wbr> </p>
 <p> Running this file through the IDL-to-Java compiler will place the Java bindings for <i>W1</i> and <i>W2</i> within the package <i>Widgets</i>. But there is an industry convention that states that a company&#8217;s packages should reside within a package named <i>com.&lt;company name&gt;</i>. The <i>Widgets</i> package is not good enough. To follow convention, it should be <i>com.abc.Widgets</i>. To place this package prefix onto the <i>Widgets</i> module, execute the following: <i>idlj </i><tt>-pkgPrefix Widgets com.abc</tt><i> Widgets.idl</i> </p>
 <p> If you have an IDL file which includes <i>Widgets.idl</i>, the <i>-pkgPrefix</i> flag must appear in that command also. If it does not, then your IDL file will be looking for a <i>Widgets</i> package rather than a <i>com.abc.Widgets</i> package. </p>

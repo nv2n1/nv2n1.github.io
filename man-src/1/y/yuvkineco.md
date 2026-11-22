@@ -10,35 +10,35 @@ description: "yuvkineco – revert 2-3 pulldown movie"
 
 <p> yuvkineco &#8211; revert 2-3 pulldown movie</p>
 <h2>SYNOPSIS</h2>
-<p> <code>yuvkineco</code> [<i>options</i>] [<code>-C</code> <i>PATH</i>]<br />
+<p> <code>yuvkineco</code> [<i>options</i>] [<code>-C</code> <i>PATH</i>]<br/>
  <code>yuvkineco</code> [<i>options</i>] <code>-O</code>|<code>N</code> <i>PATH</i> </p>
 <h2>DESCRIPTION</h2>
-<p> <code>yuvkineco</code> reverts to original non-interlaced frames, from NTSC video which was film sourced and 2-3 pulled down. Input fps code must be 4(29.97fps), output fps code can be selected from 1(23.97fps) to 4(29.97fps). If 2, 3 or 4 selected, duplicated frames remain but they are reverted to non-interlaced. If input was non-interlaced only remove duplicate frames. Interlaced frame detection may fail in conditions like:<br />
-&nbsp;<wbr>Pull down cycle changed&nbsp;<wbr>(video editing).<br />
-&nbsp;<wbr>Low quality pull down.<br />
-&nbsp;<wbr>Motionless scene.<br />
- If <code>-C</code> <i>PATH</i> was specified, <code>yuvkineco</code> outputs 2-3 pull down cycle list to the file. You can edit this file by hand and feed it to <code>yuvkineco</code> with <code>-O</code> or <code>-N</code> option to correct mistake of 1st <code>yuvkineco</code>. Try <code>-C</code> and see cycle list.<br />
-&nbsp;<wbr>&nbsp;<wbr>EXAMPLE&nbsp;<wbr>#1: for 24p movie&nbsp;<wbr>/&nbsp;<wbr>automatically<br />
-&nbsp;<wbr><code>lav2yuv 60i.eli |&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>yuvkineco -F 1 | yuv2lav -f a -I 0 -o 24p.avi</code><br />
-&nbsp;<wbr>&nbsp;<wbr>EXAMPLE&nbsp;<wbr>#2: for 30p/24p mix&nbsp;<wbr>/&nbsp;<wbr>automatically<br />
-&nbsp;<wbr><code>lav2yuv 60i.eli |&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>yuvkineco -F 4 | yuv2lav -f a -I 0 -o 30p.avi</code><br />
-&nbsp;<wbr>&nbsp;<wbr>EXAMPLE&nbsp;<wbr>#3: for 24p movie&nbsp;<wbr>/&nbsp;<wbr>check and repair<br />
-&nbsp;<wbr><code>lav2yuv 60i.eli |&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>yuvkineco -F 1 -C 60i.23c |&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>yuv2lav -f a -I 1 -o take1.avi<br />
-&nbsp;<wbr>glav -F&nbsp;<wbr>+n take1.avi</code>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>check and edit 60i.23c<br />
-&nbsp;<wbr><code>lav2yuv take1.avi |&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>yuvkineco -F 1 -N 60i.23c |&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>yuv2lav -f a -I 0 -o take2.avi</code><br />
-&nbsp;<wbr>&nbsp;<wbr>EXAMPLE&nbsp;<wbr>#4: for 24p movie&nbsp;<wbr>/&nbsp;<wbr>check and retry<br />
-&nbsp;<wbr><code>lav2yuv 60i.eli |&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>yuvkineco -F 1 -C 60i.23c |&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>yuv2lav -f a -I 0 -o take1.avi<br />
-&nbsp;<wbr>glav -F&nbsp;<wbr>+n take1.avi</code>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>check and edit 60i.23c<br />
-&nbsp;<wbr><code>lav2yuv 60i.eli |&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>yuvkineco -F 1 -O 60i.23c |&nbsp;<wbr>\<br />
+<p> <code>yuvkineco</code> reverts to original non-interlaced frames, from NTSC video which was film sourced and 2-3 pulled down. Input fps code must be 4(29.97fps), output fps code can be selected from 1(23.97fps) to 4(29.97fps). If 2, 3 or 4 selected, duplicated frames remain but they are reverted to non-interlaced. If input was non-interlaced only remove duplicate frames. Interlaced frame detection may fail in conditions like:<br/>
+&nbsp;<wbr>Pull down cycle changed&nbsp;<wbr>(video editing).<br/>
+&nbsp;<wbr>Low quality pull down.<br/>
+&nbsp;<wbr>Motionless scene.<br/>
+ If <code>-C</code> <i>PATH</i> was specified, <code>yuvkineco</code> outputs 2-3 pull down cycle list to the file. You can edit this file by hand and feed it to <code>yuvkineco</code> with <code>-O</code> or <code>-N</code> option to correct mistake of 1st <code>yuvkineco</code>. Try <code>-C</code> and see cycle list.<br/>
+&nbsp;<wbr>&nbsp;<wbr>EXAMPLE&nbsp;<wbr>#1: for 24p movie&nbsp;<wbr>/&nbsp;<wbr>automatically<br/>
+&nbsp;<wbr><code>lav2yuv 60i.eli |&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>yuvkineco -F 1 | yuv2lav -f a -I 0 -o 24p.avi</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>EXAMPLE&nbsp;<wbr>#2: for 30p/24p mix&nbsp;<wbr>/&nbsp;<wbr>automatically<br/>
+&nbsp;<wbr><code>lav2yuv 60i.eli |&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>yuvkineco -F 4 | yuv2lav -f a -I 0 -o 30p.avi</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>EXAMPLE&nbsp;<wbr>#3: for 24p movie&nbsp;<wbr>/&nbsp;<wbr>check and repair<br/>
+&nbsp;<wbr><code>lav2yuv 60i.eli |&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>yuvkineco -F 1 -C 60i.23c |&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>yuv2lav -f a -I 1 -o take1.avi<br/>
+&nbsp;<wbr>glav -F&nbsp;<wbr>+n take1.avi</code>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>check and edit 60i.23c<br/>
+&nbsp;<wbr><code>lav2yuv take1.avi |&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>yuvkineco -F 1 -N 60i.23c |&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>yuv2lav -f a -I 0 -o take2.avi</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>EXAMPLE&nbsp;<wbr>#4: for 24p movie&nbsp;<wbr>/&nbsp;<wbr>check and retry<br/>
+&nbsp;<wbr><code>lav2yuv 60i.eli |&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>yuvkineco -F 1 -C 60i.23c |&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>yuv2lav -f a -I 0 -o take1.avi<br/>
+&nbsp;<wbr>glav -F&nbsp;<wbr>+n take1.avi</code>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>check and edit 60i.23c<br/>
+&nbsp;<wbr><code>lav2yuv 60i.eli |&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>yuvkineco -F 1 -O 60i.23c |&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>yuv2lav -f a -I 0 -o take2.avi</code> </p>
 <h2>OPTIONS</h2>
 <p> <code>yuvkineco</code> accepts the following options:</p>
@@ -63,8 +63,8 @@ description: "yuvkineco – revert 2-3 pulldown movie"
 <dd> Set interlace information in header of output to unknown (default: non-interlaced). </dd>
 </dl>
 <h2>AUTHOR</h2>
-<p> <code>yuvkineco</code> was written by Kawamata/Hitoshi.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> <code>yuvkineco</code> was written by Kawamata/Hitoshi.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

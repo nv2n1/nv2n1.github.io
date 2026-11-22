@@ -9,19 +9,19 @@ description: "IPC Server Functions – Functions the deal with IPC server object
 
 <p>IPC Server Functions &#8211; Functions the deal with IPC server objects. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Ecore_Ipc_Server</code> * <code>ecore_ipc_server_add</code> (Ecore_Ipc_Type compl_type, const char *name, int port, const void *data)<br />
- <i>Creates an IPC server that listens for connections. </i><br />
- EAPI <code>Ecore_Ipc_Server</code> * <code>ecore_ipc_server_connect</code> (Ecore_Ipc_Type compl_type, char *name, int port, const void *data)<br />
- <i>Creates an IPC server object to represent the IPC server listening on the given port. </i><br />
- EAPI void * <code>ecore_ipc_server_del</code> (<code>Ecore_Ipc_Server</code> *svr)<br />
- <i>Closes the connection and frees the given IPC server. </i><br />
- EAPI void * <code>ecore_ipc_server_data_get</code> (<code>Ecore_Ipc_Server</code> *svr)<br />
- <i>Retrieves the data associated with the given IPC server. </i><br />
- EAPI int <code>ecore_ipc_server_connected_get</code> (<code>Ecore_Ipc_Server</code> *svr)<br />
- <i>Retrieves whether the given IPC server is currently connected. </i><br />
- EAPI Ecore_List * <code>ecore_ipc_server_clients_get</code> (<code>Ecore_Ipc_Server</code> *svr)<br />
- <i>Retrieves the list of clients for this server. </i><br />
- EAPI int <code>ecore_ipc_server_send</code> (<code>Ecore_Ipc_Server</code> *svr, int major, int minor, int ref, int ref_to, int response, const void *data, int size)<br />
+<p>EAPI <code>Ecore_Ipc_Server</code> * <code>ecore_ipc_server_add</code> (Ecore_Ipc_Type compl_type, const char *name, int port, const void *data)<br/>
+ <i>Creates an IPC server that listens for connections. </i><br/>
+ EAPI <code>Ecore_Ipc_Server</code> * <code>ecore_ipc_server_connect</code> (Ecore_Ipc_Type compl_type, char *name, int port, const void *data)<br/>
+ <i>Creates an IPC server object to represent the IPC server listening on the given port. </i><br/>
+ EAPI void * <code>ecore_ipc_server_del</code> (<code>Ecore_Ipc_Server</code> *svr)<br/>
+ <i>Closes the connection and frees the given IPC server. </i><br/>
+ EAPI void * <code>ecore_ipc_server_data_get</code> (<code>Ecore_Ipc_Server</code> *svr)<br/>
+ <i>Retrieves the data associated with the given IPC server. </i><br/>
+ EAPI int <code>ecore_ipc_server_connected_get</code> (<code>Ecore_Ipc_Server</code> *svr)<br/>
+ <i>Retrieves whether the given IPC server is currently connected. </i><br/>
+ EAPI Ecore_List * <code>ecore_ipc_server_clients_get</code> (<code>Ecore_Ipc_Server</code> *svr)<br/>
+ <i>Retrieves the list of clients for this server. </i><br/>
+ EAPI int <code>ecore_ipc_server_send</code> (<code>Ecore_Ipc_Server</code> *svr, int major, int minor, int ref, int ref_to, int response, const void *data, int size)<br/>
  <i>Sends a message to the given IPC server. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions the deal with IPC server objects.</p>
@@ -31,9 +31,9 @@ description: "IPC Server Functions – Functions the deal with IPC server object
 <p> For more details about the compl_type, name and port parameters, see the <code>ecore_con_server_add</code> documentation. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>compl_type</i> The connection type.<br />
- <i>name</i> Name to associate with the socket used for connection.<br />
- <i>port</i> Number to identify with socket used for connection.<br />
+<dd><i>compl_type</i> The connection type.<br/>
+ <i>name</i> Name to associate with the socket used for connection.<br/>
+ <i>port</i> Number to identify with socket used for connection.<br/>
  <i>data</i> Data to associate with the IPC server.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -55,9 +55,9 @@ description: "IPC Server Functions – Functions the deal with IPC server object
 <p> For more details about the compl_type, name and port parameters, see the <code>ecore_con_server_connect</code> documentation. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>compl_type</i> The IPC connection type.<br />
- <i>name</i> Name used to determine which socket to use for the IPC connection.<br />
- <i>port</i> Number used to identify the socket to use for the IPC connection.<br />
+<dd><i>compl_type</i> The IPC connection type.<br/>
+ <i>name</i> Name used to determine which socket to use for the IPC connection.<br/>
+ <i>port</i> Number used to identify the socket to use for the IPC connection.<br/>
  <i>data</i> Data to associate with the server.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -98,13 +98,13 @@ description: "IPC Server Functions – Functions the deal with IPC server object
 <p> The content of the parameters, excluding the svr paramter, is up to the client. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>svr</i> The given IPC server.<br />
- <i>major</i> Major opcode of the message.<br />
- <i>minor</i> Minor opcode of the message.<br />
- <i>ref</i> Message reference number.<br />
- <i>ref_to</i> Reference number of the message this message refers to.<br />
- <i>response</i> Requires response.<br />
- <i>data</i> The data to send as part of the message.<br />
+<dd><i>svr</i> The given IPC server.<br/>
+ <i>major</i> Major opcode of the message.<br/>
+ <i>minor</i> Minor opcode of the message.<br/>
+ <i>ref</i> Message reference number.<br/>
+ <i>ref_to</i> Reference number of the message this message refers to.<br/>
+ <i>response</i> Requires response.<br/>
+ <i>data</i> The data to send as part of the message.<br/>
  <i>size</i> Length of the data, in bytes, to send.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

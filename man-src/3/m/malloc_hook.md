@@ -37,22 +37,22 @@ void (*__after_morecore_hook)(void);
 <p> /* Prototypes for our hooks. */ static void my_init_hook(void); static void *my_malloc_hook(size_t, const void *); </p>
 <p> /* Variables to save original hooks. */ static void *(*old_malloc_hook)(size_t, const void *); </p>
 <p> /* Override initializing hook from the C library. */ void (*__malloc_initialize_hook) (void) = my_init_hook; </p>
-<p> static void my_init_hook(void) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;old_malloc_hook&nbsp;=&nbsp;__malloc_hook;<br />
+<p> static void my_init_hook(void) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;old_malloc_hook&nbsp;=&nbsp;__malloc_hook;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__malloc_hook&nbsp;=&nbsp;my_malloc_hook; } </p>
-<p> static void * my_malloc_hook(size_t size, const void *caller) {<br />
+<p> static void * my_malloc_hook(size_t size, const void *caller) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;*result; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Restore all old hooks&nbsp;*/<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Restore all old hooks&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__malloc_hook&nbsp;=&nbsp;old_malloc_hook; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Call recursively&nbsp;*/<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Call recursively&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;result&nbsp;=&nbsp;malloc(size); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Save underlying hooks&nbsp;*/<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Save underlying hooks&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;old_malloc_hook&nbsp;=&nbsp;__malloc_hook; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;printf()&nbsp;might call malloc(), so protect it too.&nbsp;*/<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;printf()&nbsp;might call malloc(), so protect it too.&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;malloc(%zu)&nbsp;called from&nbsp;%p returns&nbsp;%p
-&quot;,<br />
+&quot;,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size, caller, result); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Restore our own hooks&nbsp;*/<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Restore our own hooks&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__malloc_hook&nbsp;=&nbsp;my_malloc_hook; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return result; }</p>
 <h2>SEE ALSO</h2>

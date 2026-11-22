@@ -9,7 +9,7 @@ description: "table_data – Helps you implement a table with datamatted storage
 
 <p>table_data &#8211; Helps you implement a table with datamatted storage.</p>
 <h3>Modules</h3>
-<p><code>table_dataset</code><br />
+<p><code>table_dataset</code><br/>
  <i>Helps you implement a table with automatted storage. </i></p>
 <h3>Functions</h3>
 <pre><code>void netsnmp_table_data_generate_index_oid (netsnmp_table_row *row)

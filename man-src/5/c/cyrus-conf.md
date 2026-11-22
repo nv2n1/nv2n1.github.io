@@ -17,10 +17,10 @@ description: "cyrus.conf – Cyrus configuration file"
 <dl>
 <dd><i>section</i> {</dd>
 <dl>
-<dd><i>name arguments<br />
+<dd><i>name arguments<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8230;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8230;</p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8230;<br />
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8230;<br/>
  </i></dl>
 <p> }</dl>
 <p> where <i>section</i> is the name of the section, <i>name</i> is the name of the entry and <i>arguments</i> is the whitespace-separated list of arguments for the entry. </p>
@@ -42,13 +42,13 @@ description: "cyrus.conf – Cyrus configuration file"
 <dd>The command (with options) to spawn as a child process. This string argument is required.</dd>
 <dt><code>listen=</code>&lt;no default&gt;</dt>
 <dd>The UNIX or internet socket to listen on. This string field is required and takes one of the following forms: </dd>
-<p> <i>path</i><br />
+<p> <i>path</i><br/>
  [ <i>host</i> <code>: </code>] <i>port</i> </p>
 <p> where <i>path</i> is the explicit path to a UNIX socket, <i>host</i> is either the hostname or bracket-enclosed IP address of a network interface, and <i>port</i> is either a port number or service name (as listed in <code>/etc/services</code>).</p>
 <dt><code>proto=</code>tcp</dt>
 <dd>The protocol used for this service (<i>tcp</i>, <i>tcp4</i>, <i>tcp6</i>, <i>udp</i>, <i>udp4</i>, <i>udp6</i>). This string argument is optional. </dd>
-<p> <code>tcp4</code>, <code>udp4</code>: These arguments are used to bind the service to IPv4 only.<br />
- <code>tcp6</code>, <code>udp6</code>: These arguments are used to bind the service to IPv6 only, if the operating system supports this.<br />
+<p> <code>tcp4</code>, <code>udp4</code>: These arguments are used to bind the service to IPv4 only.<br/>
+ <code>tcp6</code>, <code>udp6</code>: These arguments are used to bind the service to IPv6 only, if the operating system supports this.<br/>
  <code>tcp</code>, <code>udp</code>: These arguments are used to bind to both IPv4 and IPv6 if possible.</p>
 <dt><code>prefork=</code>0</dt>
 <dd>The number of instances of this service to always have running and waiting for a connection (for faster initial response time). This integer value is optional. Note that if you are listening on multiple network types (i.e. ipv4 and ipv6) then one process will be forked for each address, causing twice as many processes as you might expect.</dd>

@@ -12,7 +12,7 @@ description: "djview3 – Standalone DjVu viewer"
 <h2>SYNOPSIS</h2>
 <p> <code>djview3 [</code><i>options</i><code>] [</code><i>djvufile</i><code>]</code> </p>
 <h2>DESCRIPTION</h2>
-<p> Standalone viewer for DjVu files. Features include navigating documents, zooming and panning page images, producing and displaying thumbnails, searching documents for particular words in the hidden text layer, copying hidden text to the clipboard, exporting page images as <font SIZE="-1">PNM</font> files, saving pages and documents as bundled or indirect multi-page files, and printing page and documents to Postscript printers. </p>
+<p> Standalone viewer for DjVu files. Features include navigating documents, zooming and panning page images, producing and displaying thumbnails, searching documents for particular words in the hidden text layer, copying hidden text to the clipboard, exporting page images as PNM files, saving pages and documents as bundled or indirect multi-page files, and printing page and documents to Postscript printers. </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-help</code></dt>
@@ -24,9 +24,9 @@ description: "djview3 – Standalone DjVu viewer"
 <dt><code>-fullscreen, -fs </code></dt>
 <dd> Start <code>djview3 </code> in full screen mode. This only works if you also provide a DjVu file name on the command line.</dd>
 <dt><code>-geometry=</code><i>geom</i></dt>
-<dd> Specify the initial window size. The <font SIZE="-1">X11</font> geometry specification <i>geom</i> often has the form <i>w</i><code>x</code><i>h</i><code>+</code><i>x</i><code>+</code><i>y</i> where <i>w</i> and <i>h</i> are the window width and height, and <i>x</i> and <i>y</i> indicate the window position.</dd>
+<dd> Specify the initial window size. The X11 geometry specification <i>geom</i> often has the form <i>w</i><code>x</code><i>h</i><code>+</code><i>x</i><code>+</code><i>y</i> where <i>w</i> and <i>h</i> are the window width and height, and <i>x</i> and <i>y</i> indicate the window position.</dd>
 <dt><code>-display=</code><i>disp</i></dt>
-<dd> Specify that the <code>djview3</code> windows should appear on the <font SIZE="-1">X11</font> display <i>disp</i>.</dd>
+<dd> Specify that the <code>djview3</code> windows should appear on the X11 display <i>disp</i>.</dd>
 <dt><code>-fn </code><i>fontname</i></dt>
 <dd> Specify the name of the default font used for buttons and menus.</dd>
 <dt><code>-bg </code><i>color</i></dt>
@@ -46,7 +46,7 @@ description: "djview3 – Standalone DjVu viewer"
 </dl>
 <h2>USING DJVIEW3 AS A BROWSER PLUGIN</h2>
 <p> The djvulibre browser plugin works by invoking a standalone DjVu viewer with the special option <code>-netscape</code>. See the man page <code><a href="/docs/linux/man/1-nsdejavu/">nsdejavu</a></code>(1) for more details. </p>
-<p> When <code>djview3</code> is invoked by the djvulibre browser plugin, a number of options can be specified as <font SIZE="-1">CGI</font> style arguments in document <font SIZE="-1">URL</font> according to the following template:</p>
+<p> When <code>djview3</code> is invoked by the djvulibre browser plugin, a number of options can be specified as CGI style arguments in document URL according to the following template:</p>
 <dl>
 <dt>
 </dt><dd> <code><a rel="nofollow" href="http://server/dir/file.djvu?djvuopts">http://server/dir/file.djvu?djvuopts</a>&amp;</code><i>keyword=value</i><code>&amp;</code><i>keyword=value</i><code>&amp;</code><i>&#8230;</i></dd></dl>
@@ -69,7 +69,7 @@ description: "djview3 – Standalone DjVu viewer"
 <dt><code>page=</code><i>pagenum</i></dt>
 <dd> Specify the initial page to be displayed. Page numbers are numbered from 1.</dd>
 <dt><code>zoom=</code><i>zoomfactor</i></dt>
-<dd> Specify the initial zoom factor. Unless the toolbar, pop-up menu and keyboard are disabled, the user will be able to change the zoom factor. Legal values for <i>zoomfactor</i> are shown in the below:<br />
+<dd> Specify the initial zoom factor. Unless the toolbar, pop-up menu and keyboard are disabled, the user will be able to change the zoom factor. Legal values for <i>zoomfactor</i> are shown in the below:<br/>
  <center></dd>
 <table BORDER>
 <tr>
@@ -105,7 +105,7 @@ description: "djview3 – Standalone DjVu viewer"
 <p></center></dl>
 <dl>
 <dt><code>mode=</code><i>modespec</i></dt>
-<dd> Specify the initial display mode. Unless the toolbar and pop-up menu are disabled, the user will be able to change it. Legal values for <i>modespec</i> are shown in the below:<br />
+<dd> Specify the initial display mode. Unless the toolbar and pop-up menu are disabled, the user will be able to change it. Legal values for <i>modespec</i> are shown in the below:<br/>
  <center></dd>
 <table BORDER>
 <tr>
@@ -140,7 +140,7 @@ description: "djview3 – Standalone DjVu viewer"
 <dt><code>ver_align=</code><i>keyword</i></dt>
 <dd> Specify the vertical position of the page in the viewer window. (This does not specify what part of the page will be shown, but rather how margins will be laid out around the page in the plugin window.) Argument <i>keyword</i> must be <code>top</code>, <code>center</code>, or <code>bottom</code>.</dd>
 <dt><code>toolbar=</code><i>keyword</i><code>{(,|+|-)</code><i>keyword</i><code>}</code></dt>
-<dd> Controls the appearance and the contents of the toolbar. The argument of option <code>toolbar</code> is composed of a number of keywords separated by characters comma, plus or minus. The appearance of the toolbar is controlled by keywords placed before the first occurrence of a character plus or minus. The following keywords are recognized in this context:<br />
+<dd> Controls the appearance and the contents of the toolbar. The argument of option <code>toolbar</code> is composed of a number of keywords separated by characters comma, plus or minus. The appearance of the toolbar is controlled by keywords placed before the first occurrence of a character plus or minus. The following keywords are recognized in this context:<br/>
  <center></dd>
 <table BORDER>
 <tr>
@@ -175,7 +175,7 @@ description: "djview3 – Standalone DjVu viewer"
 </table>
 <p></center></p>
 <dt>
-</dt><dd> The contents of the toolbar is controlled by keywords placed after the first occurrence of a character plus or minus. Each keyword adds (after a plus) or remove (after a minus) a particular toolbar button or group of buttons. The initial content of the toolbar is determined by the first occurrence of a character plus or minus. When this is a plus the toolbar is initially empty. When this is a minus the toolbar is initially full. The following keywords are recognized:<br />
+</dt><dd> The contents of the toolbar is controlled by keywords placed after the first occurrence of a character plus or minus. Each keyword adds (after a plus) or remove (after a minus) a particular toolbar button or group of buttons. The initial content of the toolbar is determined by the first occurrence of a character plus or minus. When this is a plus the toolbar is initially empty. When this is a minus the toolbar is initially full. The following keywords are recognized:<br/>
  <center></dd>
 <table BORDER>
 <tr>
@@ -254,14 +254,14 @@ description: "djview3 – Standalone DjVu viewer"
 <p></center></dl>
 <dl>
 <dt><code>highlight=</code><i>x</i><code>,</code><i>y</i><code>,</code><i>w</i><code>,</code><i>h</i><code>[,</code><i>color</i><code>]</code></dt>
-<dd> Display a highlighted rectangle at the specified coordinates and with the specified color. Coordinates <i>x</i>, <i>y</i>, <i>w</i>, and <i>h</i> are measured in document image coordinates (not screen coordinates). The origin is set at the bottom left corner of the image. The color <i>color</i> must be given in hexadecimal <font SIZE="-1">RRGGBB</font> format. Omitting the color argument means to use <font SIZE="-1">XOR</font> highlighting. Multiple highlighted zone can be specified.</dd>
+<dd> Display a highlighted rectangle at the specified coordinates and with the specified color. Coordinates <i>x</i>, <i>y</i>, <i>w</i>, and <i>h</i> are measured in document image coordinates (not screen coordinates). The origin is set at the bottom left corner of the image. The color <i>color</i> must be given in hexadecimal RRGGBB format. Omitting the color argument means to use XOR highlighting. Multiple highlighted zone can be specified.</dd>
 <dt><code>rotate=(0|90|180|270)</code></dt>
 <dd> Rotate the djvu image by the specified angle expressed in degrees counter-clockwise.</dd>
 <dt><code>print=(yes|no)</code></dt>
 <dd> Enable or disable printing the djvu image. Printing is enabled by default.</dd>
 <dt><code>cache=(yes|no)</code></dt>
-<dd> Enable or disable the caching of fully decoded pages of the document. Caching is on by default. Caching of documents whose <font SIZE="-1">URL</font> does not contain extension <code>.djvu</code> or <code>.djv</code> is off by default.</dd></dl>
-<p> The same options can be specified as parameters of <font SIZE="-1">EMBED</font> or <font SIZE="-1">OBJECT</font> tags in a <font SIZE="-1">HTML</font> file. See <code><a href="/docs/linux/man/1-nsdejavu/">nsdejavu</a></code>(1) for more details. </p>
+<dd> Enable or disable the caching of fully decoded pages of the document. Caching is on by default. Caching of documents whose URL does not contain extension <code>.djvu</code> or <code>.djv</code> is off by default.</dd></dl>
+<p> The same options can be specified as parameters of EMBED or OBJECT tags in a HTML file. See <code><a href="/docs/linux/man/1-nsdejavu/">nsdejavu</a></code>(1) for more details. </p>
 <h2>CREDITS</h2>
 <p> This program was written by Andrei Erofeev &lt;andrew_erofeev [at] yahoo.com&gt; and was then improved by Bill Riemers &lt;docbill [at] sourceforge.net&gt; and L&#8217;eon Bottou &lt;leonb [at] users.sourceforge.net&gt;. </p>
 <h2>SEE ALSO</h2>

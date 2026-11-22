@@ -74,8 +74,8 @@ pe_list pe_name</pre>
 <dt><i>posix_compliant</i></dt>
 <dd>POSIX does not consider first script line comments such a `#!/bin/csh&#8217; as being significant. The POSIX standard for batch queuing systems (P1003.2d) therefore requires a compliant queuing system to ignore such lines but to use user specified or configured default command interpreters instead. Thus, if <code>shell_start_mode</code> is set to <i>posix_compliant</i> Grid Engine will either use the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see above).</dd>
 <dt><i>script_from_stdin</i></dt>
-<dd>Setting the <code>shell_start_mode</code> parameter either to <i>posix_compliant</i> or <i>unix_behavior</i> requires you to set the umask in use for such that every user has read access to the active_jobs directory in the spool directory of the corresponding execution daemon. In case you have <code>prolog</code> and <code>epilog</code> scripts configured, they also need to be readable by any user who may execute jobs.<br />
- If this violates your site&#8217;s security policies you may want to set <code>shell_start_mode</code> to <i>script_from_stdin</i>. This will force Grid Engine to open the job script as well as the epilogue and prologue scripts for reading into STDIN as root (if was started as root) before changing to the job owner&#8217;s user account. The script is then fed into the STDIN stream of the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see above).<br />
+<dd>Setting the <code>shell_start_mode</code> parameter either to <i>posix_compliant</i> or <i>unix_behavior</i> requires you to set the umask in use for such that every user has read access to the active_jobs directory in the spool directory of the corresponding execution daemon. In case you have <code>prolog</code> and <code>epilog</code> scripts configured, they also need to be readable by any user who may execute jobs.<br/>
+ If this violates your site&#8217;s security policies you may want to set <code>shell_start_mode</code> to <i>script_from_stdin</i>. This will force Grid Engine to open the job script as well as the epilogue and prologue scripts for reading into STDIN as root (if was started as root) before changing to the job owner&#8217;s user account. The script is then fed into the STDIN stream of the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see above).<br/>
  Thus setting <code>shell_start_mode</code> to <i>script_from_stdin</i> also implies <i>posix_compliant</i> behavior. <code>Note</code>, however, that feeding scripts into the STDIN stream of a command interpreter may cause trouble if commands like are invoked inside a job script as they also process the STDIN stream of the command interpreter. These problems can usually be resolved by redirecting the STDIN channel of those commands to come from /dev/null (e.g. rsh host date &lt; /dev/null). <code>Note also</code>, that any command-line options associated with the job are passed to the executing shell. The shell will only forward them to the job if they are not recognized as valid shell options.</dd></dl>
 <p> The default for <code>shell_start_mode</code> is <i>posix_compliant</i>. Note, though, that the <code>shell_start_mode</code> can only be used for batch jobs submitted by and can&#8217;t be used for interactive jobs submitted by</p>
 <h3><code>prolog</code></h3>
@@ -83,18 +83,18 @@ pe_list pe_name</pre>
 <p> The default for <code>prolog</code> is the special value NONE, which prevents from execution of a prologue script. The special variables for constituting a command line are the same like in <code>prolog</code> definitions of the cluster configuration (see </p>
 <p> Exit codes for the prolog attribute can be interpreted based on the following exit values:</p>
 <dl>
-<dd>0: Success<br />
- 99: Reschedule job<br />
- 100: Put job in error state<br />
+<dd>0: Success<br/>
+ 99: Reschedule job<br/>
+ 100: Put job in error state<br/>
  Anything else: Put queue in error state</dd></dl>
 <h3><code>epilog</code></h3>
 <p>The executable path of a shell script that is started after execution of Grid Engine jobs with the same environment setting as that for the Grid Engine jobs that has just completed. An optional prefix &quot;user@&quot; specifies the user under which this procedure is to be started. The procedures standard output and the error output stream are written to the same file used also for the standard output and error output of each job. This procedure is intended as a means for the Grid Engine administrator to automate the execution of general site specific tasks like the cleaning up of temporary file systems with the need for the same context information as the job. This queue configuration entry overwrites cluster global or execution host specific <code>epilog</code> definitions (see </p>
 <p> The default for <code>epilog</code> is the special value NONE, which prevents from execution of a epilogue script. The special variables for constituting a command line are the same like in <code>prolog</code> definitions of the cluster configuration (see </p>
 <p> Exit codes for the epilog attribute can be interpreted based on the following exit values:</p>
 <dl>
-<dd>0: Success<br />
- 99: Reschedule job<br />
- 100: Put job in error state<br />
+<dd>0: Success<br/>
+ 99: Reschedule job<br/>
+ 100: Put job in error state<br/>
  Anything else: Put queue in error state</dd></dl>
 <h3><code>starter_method</code></h3>
 <p>The specified executable path will be used as a job starter facility responsible for starting batch jobs. The executable path will be executed instead of the configured shell to start the job. The job arguments will be passed as arguments to the job starter. The following environment variables are used to pass information to the job starter concerning the shell environment which was configured or requested to start the job. </p>

@@ -9,12 +9,12 @@ description: "std::showbase,std::noshowbase – std::showbase,std::noshowbase"
 
 <p>std::showbase,std::noshowbase &#8211; std::showbase,std::noshowbase</p>
 <h2>Synopsis</h2>
-<p>Defined in header &lt;ios&gt;<br />
-std::ios_base&amp; showbase( std::ios_base&amp; str ); <code>(1)</code><br />
-std::ios_base&amp; noshowbase( std::ios_base&amp; str ); <code>(2)</code><br />
-1) enables the showbase flag in the stream str as if by calling str.setf(std::ios_base::showbase)<br />
-2) disables the showbase flag in the stream str as if by calling str.unsetf(std::ios_base::showbase)<br />
-This is an I/O manipulator, it may be called with an expression such as out &lt;&lt; std::showbase for any out of type std::basic_ostream or with an expression such as in &gt;&gt; std::showbase for any in of type std::basic_istream.<br />
+<p>Defined in header &lt;ios&gt;<br/>
+std::ios_base&amp; showbase( std::ios_base&amp; str ); <code>(1)</code><br/>
+std::ios_base&amp; noshowbase( std::ios_base&amp; str ); <code>(2)</code><br/>
+1) enables the showbase flag in the stream str as if by calling str.setf(std::ios_base::showbase)<br/>
+2) disables the showbase flag in the stream str as if by calling str.unsetf(std::ios_base::showbase)<br/>
+This is an I/O manipulator, it may be called with an expression such as out &lt;&lt; std::showbase for any out of type std::basic_ostream or with an expression such as in &gt;&gt; std::showbase for any in of type std::basic_istream.<br/>
 The showbase flag affects the behavior of integer output (see std::num_put::put), monetary input (see std::money_get::get) and monetary output (see std::money_put::put). </p>
 <h2>Parameters</h2>
 <p>str &#8211; reference to I/O stream</p>
@@ -50,12 +50,12 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;showbase: 0x2a<br />
-&nbsp;<wbr>&nbsp;noshowbase: 2a<br />
-&nbsp;<wbr>&nbsp;With showbase, parsing 3.14 as money gives 0<br />
+<p>&nbsp;<wbr>&nbsp;showbase: 0x2a<br/>
+&nbsp;<wbr>&nbsp;noshowbase: 2a<br/>
+&nbsp;<wbr>&nbsp;With showbase, parsing 3.14 as money gives 0<br/>
 &nbsp;<wbr>&nbsp;Without showbase, parsing 3.14 as money gives 314</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clears the specified ios_base flags<br />
-resetiosflags <i>(function)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets the specified ios_base flags<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clears the specified ios_base flags<br/>
+resetiosflags <i>(function)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets the specified ios_base flags<br/>
 setiosflags <i>(function)</i> </p>

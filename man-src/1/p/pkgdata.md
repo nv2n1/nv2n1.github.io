@@ -50,7 +50,7 @@ description: "pkgdata – package data for use by ICU"
 <dt><code>-T</code>, <code>&#8211;tempdir</code><i> directory</i></dt>
 <dd> Set the directory used to generate temporary files to <i>directory</i>. The default temporary directory is the same as the destination directory as set by the <code>-d</code>, <code>&#8211;destdir</code> option.</dd></dl>
 <h2>AUTHORS</h2>
-<p> Steven Loomis<br />
+<p> Steven Loomis<br/>
  Yves Arrouye</p>
 <h2>VERSION</h2>
 <p> 70.1</p>

@@ -61,8 +61,8 @@ description: "pskctool – Portable Symmetric Key Container (PSKC) tool"
 <h2>AUTHOR</h2>
 <p> Written by Simon Josefsson.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to: oath-toolkit-help [at] nongnu.org pskctool home page: &lt;<a rel="nofollow" href="http://www.nongnu.org/oath-toolkit/">http://www.nongnu.org/oath-toolkit/</a>&gt;<br />
+<p> Report bugs to: oath-toolkit-help [at] nongnu.org pskctool home page: &lt;<a rel="nofollow" href="http://www.nongnu.org/oath-toolkit/">http://www.nongnu.org/oath-toolkit/</a>&gt;<br/>
  General help using GNU software: &lt;<a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2013 Simon Josefsson. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright &#169; 2013 Simon Josefsson. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>

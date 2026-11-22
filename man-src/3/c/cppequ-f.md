@@ -10,7 +10,7 @@ description: "cppequ.f –"
 <p>cppequ.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cppequ</code> (UPLO, N, AP, S, SCOND, AMAX, INFO)<br />
+<p>subroutine <code>cppequ</code> (UPLO, N, AP, S, SCOND, AMAX, INFO)<br/>
  <i></i><code>CPPEQU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cppequ (characterUPLO, integerN, complex, dimension( * )AP, real, dimension( * )S, realSCOND, realAMAX, integerINFO)</h3>

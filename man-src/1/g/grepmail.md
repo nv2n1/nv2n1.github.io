@@ -23,7 +23,7 @@ grepmail[--help | --version][-abBDFhHilLmrRuvVw][-C&lt;cache - file&gt;]
 <p> By default <i>grepmail</i> looks in both header and body for the specified pattern. </p>
 <p> When redirected to a file, the result is another mailbox, which can, in turn, be handled by standard User Agents, such as <i>elm</i>, or even used as input for another instance of <i>grepmail</i>. </p>
 <p> At least one of <code>-E</code>, <code>-e</code>, <code>-d</code>, <code>-s</code>, or <code>-u</code> must be specified. The pattern is optional if <code>-d</code>, <code>-s</code>, and/or <code>-u</code> is used. The <code>-e</code> flag is optional if there is no file whose name is the pattern. The <code>-E</code> option can be used to specify complex search expressions involving logical operators. (See below.) </p>
-<p> If a mailbox can not be found, grepmail first searches the directory specified by the <font SIZE="-1">MAILDIR</font> environment variable (if one is defined), then searches the <tt>$HOME</tt>/mail, <tt>$HOME</tt>/Mail, and <tt>$HOME</tt>/Mailbox directories.</dl>
+<p> If a mailbox can not be found, grepmail first searches the directory specified by the MAILDIR environment variable (if one is defined), then searches the <tt>$HOME</tt>/mail, <tt>$HOME</tt>/Mail, and <tt>$HOME</tt>/Mailbox directories.</dl>
 <h2>OPTIONS AND ARGUMENTS</h2>
 <p> Many of the options and arguments are analogous to those of grep.</p>
 <dl>
@@ -31,8 +31,8 @@ grepmail[--help | --version][-abBDFhHilLmrRuvVw][-C&lt;cache - file&gt;]
 <dd> The pattern to search for in the mail message. May be any Perl regular expression, but should be quoted on the command line to protect against globbing (shell expansion). To search for more than one pattern, use the form &#8220;(pattern1|pattern2|&#8230;)&#8221;. </dd>
 <p> Note that complex pattern features such as &#8220;(?&gt;&#8230;)&#8221; require that you use a version of perl which supports them. You can use the pattern &#8220;()&#8221; to indicate that you do not want to match anything. This is useful if you want to initialize the cache without printing any output.</p>
 <dt><code>mailbox</code></dt>
-<dd> Mailboxes must be traditional, <font SIZE="-1">UNIX</font> <tt>&quot;/bin/mail&quot;</tt> mailbox format. The mailboxes may be compressed by gzip, or bzip2, in which case gunzip, or bzip2 must be installed on the system. </dd>
-<p> If no mailbox is specified, takes input from stdin, which can be compressed or not. grepmail&#8217;s behavior is undefined when <font SIZE="-1">ASCII</font> and binary data is piped together as input.</p>
+<dd> Mailboxes must be traditional, UNIX <tt>&quot;/bin/mail&quot;</tt> mailbox format. The mailboxes may be compressed by gzip, or bzip2, in which case gunzip, or bzip2 must be installed on the system. </dd>
+<p> If no mailbox is specified, takes input from stdin, which can be compressed or not. grepmail&#8217;s behavior is undefined when ASCII and binary data is piped together as input.</p>
 <dt><code>-a</code></dt>
 <dd> Use arrival date instead of sent date.</dd>
 <dt><code>-b</code></dt>
@@ -44,10 +44,10 @@ grepmail[--help | --version][-abBDFhHilLmrRuvVw][-C&lt;cache - file&gt;]
 <dt><code>-D</code></dt>
 <dd> Enable debug mode, which prints diagnostic messages.</dd>
 <dt><code>-d</code></dt>
-<dd> Date specifications must be of the form of:<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; a date like&nbsp;<wbr>&#8220;today&#8221;,&nbsp;<wbr>&#8220;yesterday&#8221;,&nbsp;<wbr>&#8220;5/18/93&#8221;,&nbsp;<wbr>&#8220;5 days ago&#8221;,&nbsp;<wbr>&#8220;5 weeks ago&#8221;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr><font SIZE="-1">OR</font>&nbsp;<wbr>&#8220;before&#8221;,&nbsp;<wbr>&#8220;after&#8221;, or&nbsp;<wbr>&#8220;since&#8221;, followed by a date as defined above,<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr><font SIZE="-1">OR</font>&nbsp;<wbr>&#8220;between&nbsp;<wbr>&lt;date&gt;&nbsp;<wbr>and&nbsp;<wbr>&lt;date&gt;&#8221;, where&nbsp;<wbr>&lt;date&gt;&nbsp;<wbr>is defined as above. </dd>
+<dd> Date specifications must be of the form of:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; a date like&nbsp;<wbr>&#8220;today&#8221;,&nbsp;<wbr>&#8220;yesterday&#8221;,&nbsp;<wbr>&#8220;5/18/93&#8221;,&nbsp;<wbr>&#8220;5 days ago&#8221;,&nbsp;<wbr>&#8220;5 weeks ago&#8221;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>OR&nbsp;<wbr>&#8220;before&#8221;,&nbsp;<wbr>&#8220;after&#8221;, or&nbsp;<wbr>&#8220;since&#8221;, followed by a date as defined above,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>OR&nbsp;<wbr>&#8220;between&nbsp;<wbr>&lt;date&gt;&nbsp;<wbr>and&nbsp;<wbr>&lt;date&gt;&#8221;, where&nbsp;<wbr>&lt;date&gt;&nbsp;<wbr>is defined as above. </dd>
 <p> Simple date expressions will first be parsed by Date::Parse. If this fails, grepmail will attempt to parse the date with Date::Manip, if the module is installed on the system. Use an empty pattern (i.e. <code>-d &quot;&quot;</code>) to find emails without a &#8220;Date: &#8230;&#8221; line in the header. </p>
 <p> Date specifications without times are interpreted as having a time of midnight of that day (which is the morning), except for &#8220;after&#8221; and &#8220;since&#8221; specifications, which are interpreted as midnight of the following day. For example, &#8220;between today and tomorrow&#8221; is the same as simply &#8220;today&#8221;, and returns emails whose date has the current day. (&#8220;now&#8221; is interpreted as &#8220;today&#8221;.) The date specification &#8220;after July 5th&#8221; will return emails whose date is midnight July 6th or later.</p>
 <dt><code>-E</code></dt>
@@ -58,13 +58,13 @@ grepmail[--help | --version][-abBDFhHilLmrRuvVw][-C&lt;cache - file&gt;]
 </pre>
 <p> will find all emails which originate from coppit.org (you must escape the &#8220;@&#8221; sign with a backslash), and which contain the keyword &#8220;grepmail&#8221; anywhere in the message, in any capitalization. </p>
 <p> <code>-E</code> is incompatible with <code>-b</code>, <code>-h</code>, and <code>-e</code>. <code>-i</code>, <code>-M</code>, <code>-S</code>, and <code>-Y</code> have not yet been implemented. </p>
-<p> <font SIZE="-1">NOTE:</font> The syntax of search expressions may change in the future. In particular, support for size, date, and other constraints may be added. The syntax may also be simplified in order to make expression formation easier to use (and perhaps at the expense of reduced functionality).</p>
+<p> NOTE: The syntax of search expressions may change in the future. In particular, support for size, date, and other constraints may be added. The syntax may also be simplified in order to make expression formation easier to use (and perhaps at the expense of reduced functionality).</p>
 <dt><code>-e</code></dt>
 <dd> Explicitly specify the search pattern. This is useful for specifying patterns that begin with &#8220;-&#8221;, which would otherwise be interpreted as a flag.</dd>
 <dt><code>-f</code></dt>
-<dd> Obtain patterns from <font SIZE="-1">FILE</font>, one per line. The empty file contains zero patterns, and therefore matches nothing.</dd>
+<dd> Obtain patterns from FILE, one per line. The empty file contains zero patterns, and therefore matches nothing.</dd>
 <dt><code>-F</code></dt>
-<dd> Force grepmail to process all files and streams as though they were mailboxes. (i.e. Skip checks for non-mailbox <font SIZE="-1">ASCII</font> files or binary files that don&#8217;t look like they are compressed using known schemes.)</dd>
+<dd> Force grepmail to process all files and streams as though they were mailboxes. (i.e. Skip checks for non-mailbox ASCII files or binary files that don&#8217;t look like they are compressed using known schemes.)</dd>
 <dt><code>-h</code></dt>
 <dd> Asserts that the pattern must match in the header of the email.</dd>
 <dt><code>-H</code></dt>
@@ -72,17 +72,17 @@ grepmail[--help | --version][-abBDFhHilLmrRuvVw][-C&lt;cache - file&gt;]
 <dt><code>-i</code></dt>
 <dd> Make the search case-insensitive (by analogy to <i>grep -i</i>).</dd>
 <dt><code>-j</code></dt>
-<dd> Asserts that the email &#8220;Status:&#8221; header must contain the given flags. Order and case are not important, so use <i>-j </i><font SIZE="-1"><i>AR</i></font><i></i> or <i>-j ra</i> to search for emails which have been read and answered.</dd>
+<dd> Asserts that the email &#8220;Status:&#8221; header must contain the given flags. Order and case are not important, so use <i>-j </i><i>AR</i><i></i> or <i>-j ra</i> to search for emails which have been read and answered.</dd>
 <dt><code>-l</code></dt>
 <dd> Output the names of files having an email matching the expression, (by analogy to <i>grep -l</i>).</dd>
 <dt><code>-L</code></dt>
 <dd> Follow symbolic links. (Implies <i>-R</i>)</dd>
 <dt><code>-M</code></dt>
-<dd> Causes grepmail to ignore non-text <font SIZE="-1">MIME</font> attachments. This removes false positives resulting from binaries encoded as <font SIZE="-1">ASCII</font> attachments.</dd>
+<dd> Causes grepmail to ignore non-text MIME attachments. This removes false positives resulting from binaries encoded as ASCII attachments.</dd>
 <dt><code>-m</code></dt>
 <dd> Append &#8220;X-Mailfolder: &lt;folder&gt;&#8221; to all email headers, indicating which folder contained the matched email.</dd>
 <dt><code>-n</code></dt>
-<dd> Prefix each line with line number information. If multiple files are specified, the filename will precede the line number. <font SIZE="-1">NOTE:</font> When used in conjunction with <code>-m</code>, the X-Mailfolder header has the same line number as the next (blank) line.</dd>
+<dd> Prefix each line with line number information. If multiple files are specified, the filename will precede the line number. NOTE: When used in conjunction with <code>-m</code>, the X-Mailfolder header has the same line number as the next (blank) line.</dd>
 <dt><code>-q</code></dt>
 <dd> Quiet mode. Suppress the output of warning messages about non-mailbox files, directories, etc.</dd>
 <dt><code>-r</code></dt>
@@ -91,10 +91,10 @@ grepmail[--help | --version][-abBDFhHilLmrRuvVw][-C&lt;cache - file&gt;]
 <dd> Causes grepmail to recurse any directories encountered.</dd>
 <dt><code>-s</code></dt>
 <dd> Return emails which match the size (in bytes) specified with this flag. Note that this size includes the length of the header. </dd>
-<p> Size constraints must be of the form of:<br />
-&nbsp;<wbr>&#8211; 12345: match size of exactly 12345<br />
-&nbsp;<wbr>&#8211;&nbsp;<wbr>&lt;12345,&nbsp;<wbr>&lt;=12345,&nbsp;<wbr>&gt;12345,&nbsp;<wbr>&gt;=12345: match size less than, less than or equal,<br />
-greater than, or greater than or equal to 12345<br />
+<p> Size constraints must be of the form of:<br/>
+&nbsp;<wbr>&#8211; 12345: match size of exactly 12345<br/>
+&nbsp;<wbr>&#8211;&nbsp;<wbr>&lt;12345,&nbsp;<wbr>&lt;=12345,&nbsp;<wbr>&gt;12345,&nbsp;<wbr>&gt;=12345: match size less than, less than or equal,<br/>
+greater than, or greater than or equal to 12345<br/>
 &nbsp;<wbr>&#8211; 10000-12345: match size between 10000 and 12345 inclusive</p>
 <dt><code>-S</code></dt>
 <dd> Ignore signatures. The signature consists of everything after a line consisting of &#8220;&#8211; &#8221;.</dd>
@@ -200,8 +200,8 @@ greater than, or greater than or equal to 12345<br />
 <h2>FILES</h2>
 <p> grepmail will <i>not</i> create temporary files while decompressing compressed archives. The last version to do this was 3.5. While the new design uses more memory, the code is much simpler, and there is less chance that email can be read by malicious third parties. Memory usage is determined by the size of the largest email message in the mailbox.</p>
 <h2>ENVIRONMENT</h2>
-<p> The <font SIZE="-1">MAILDIR</font> environment variable can be used to specify the default mail directory. This directory will be searched if the specified mailbox can not be found directly. </p>
-<p> The <font SIZE="-1">HOME</font> environment variable is also used to find mailboxes if they can not be found directly. It is also used to store grepmail state information such as its cache file.</p>
+<p> The MAILDIR environment variable can be used to specify the default mail directory. This directory will be searched if the specified mailbox can not be found directly. </p>
+<p> The HOME environment variable is also used to find mailboxes if they can not be found directly. It is also used to store grepmail state information such as its cache file.</p>
 <h2>BUGS AND LIMITATIONS</h2>
 <dl>
 <dt>Patterns containing $ may cause problems</dt>
@@ -209,15 +209,15 @@ greater than, or greater than or equal to 12345<br />
 &#8221; or &#8220;
 &#8221;). This may cause problems with complex patterns specified with -E, but I&#8217;m not aware of any.</dd>
 <dt>Mails without bodies cause problems</dt>
-<dd> According to <font SIZE="-1">RFC</font> 822, mail messages need not have message bodies. I&#8217;ve found and removed one bug related to this. I&#8217;m not sure if there are others.</dd>
+<dd> According to RFC 822, mail messages need not have message bodies. I&#8217;ve found and removed one bug related to this. I&#8217;m not sure if there are others.</dd>
 <dt>Complex single-point dates not parsed correctly</dt>
 <dd> If you specify a point date like &#8220;September 1, 2004&#8221;, grepmail creates a date range that includes the entire day of September 1, 2004. If you specify a complex point date such as &#8220;today&#8221;, &#8220;1st Monday in July&#8221;, or &#8220;9/1/2004 at 0:00&#8221; grepmail may parse the time incorrectly. </dd>
 <p> The reason for this problem is that Date::Manip, as of version 5.42, forces default values for parsed dates and times. This means that grepmail has a hard time determining whether the user supplied certain time/date fields. (e.g. Did Date::Manip provide a default time of 0:00, or did the user specify it?) grepmail tries to work around this problem, but the workaround is inherently incomplete in some rare cases.</p>
 <dt>File names that look like flags cause problems.</dt>
 <dd> In some special circumstances, grepmail will be confused by files whose names look like flags. In such cases, use the <code>-e</code> flag to specify the search pattern.</dd></dl>
 <h2>LICENSE</h2>
-<p> This code is distributed under the <font SIZE="-1">GNU</font> General Public License (<font SIZE="-1">GPL</font>). See the file <font SIZE="-1">LICENSE</font> in the distribution, <a rel="nofollow" href="http://www.opensource.org/gpl-license.html,">http://www.opensource.org/gpl-license.html,</a> and <a rel="nofollow" href="http://www.opensource.org/.">http://www.opensource.org/.</a></p>
+<p> This code is distributed under the GNU General Public License (GPL). See the file LICENSE in the distribution, <a rel="nofollow" href="http://www.opensource.org/gpl-license.html,">http://www.opensource.org/gpl-license.html,</a> and <a rel="nofollow" href="http://www.opensource.org/.">http://www.opensource.org/.</a></p>
 <h2>AUTHOR</h2>
 <p> David Coppit &lt;david [at] coppit.org&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <i>elm</i>(1), <i><a href="/docs/linux/man/1-mail/">mail</a></i>(1), <i><a href="/docs/linux/man/1-grep/">grep</a></i>(1), <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i>printmail</i>(1), <i>Mail::Internet</i>(3), <i><a href="/docs/linux/man/5-procmailrc/">procmailrc</a></i>(5). Crocker, D. H., Standard for the Format of Arpa Internet Text Messages, <font SIZE="-1">RFC</font> 822. </p>
+<p> <i>elm</i>(1), <i><a href="/docs/linux/man/1-mail/">mail</a></i>(1), <i><a href="/docs/linux/man/1-grep/">grep</a></i>(1), <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i>printmail</i>(1), <i>Mail::Internet</i>(3), <i><a href="/docs/linux/man/5-procmailrc/">procmailrc</a></i>(5). Crocker, D. H., Standard for the Format of Arpa Internet Text Messages, RFC 822. </p>

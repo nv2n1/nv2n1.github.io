@@ -11,7 +11,7 @@ description: "sgebrd.f –"
 <p> sgebrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgebrd</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, LWORK, INFO)<br />
+<p> subroutine <code>sgebrd</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, LWORK, INFO)<br/>
  <i></i><code>SGEBRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgebrd (integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )D, real, dimension( * )E, real, dimension( * )TAUQ, real, dimension( * )TAUP, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -70,9 +70,9 @@ the
           D(i) = A(i,i).
 </pre>
 <p> <i>E</i> </p>
-<p>          E is REAL array, dimension (min(M,N)-1)<br />
-          The off-diagonal elements of the bidiagonal matrix B:<br />
-          if m &gt;= n, E(i) = A(i,i+1) for i = 1,2,&#8230;,n-1;<br />
+<p>          E is REAL array, dimension (min(M,N)-1)<br/>
+          The off-diagonal elements of the bidiagonal matrix B:<br/>
+          if m &gt;= n, E(i) = A(i,i+1) for i = 1,2,&#8230;,n-1;<br/>
           if m &lt; n, E(i) = A(i+1,i) for i = 1,2,&#8230;,m-1.</p>
 <p> <i>TAUQ</i> </p>
 <pre>

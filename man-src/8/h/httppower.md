@@ -29,7 +29,7 @@ description: "httppower – communicate with HTTP based power distribution units
 <dd>Send an HTTP POST to the base URL with the optional URL-suffix appended, and key-value pairs as argument. </dd>
 </dl>
 <h2>Files</h2>
-<p>/usr/sbin/httppower<br />
+<p>/usr/sbin/httppower<br/>
  /etc/powerman/powerman.conf</p>
 <h2>Origin</h2>
 <p>PowerMan was originally developed by Andrew Uselton on LLNL&#8217;s Linux clusters. This software is open source and distributed under the terms of the GNU GPL.</p>

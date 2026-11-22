@@ -15,11 +15,11 @@ description: "std::experimental::source_location::source_location – std::exper
 (2)(library fundamentals TS v2)(implicitly declared)
     source_location(source_location &amp;&amp;other) = default;
 (3)(library fundamentals TS v2)(implicitly declared)</code></pre>
-<p>1) Constructs an source_location object whose values are implementation defined.<br />
+<p>1) Constructs an source_location object whose values are implementation defined.<br/>
 2-3) Implicitly declared copy and move constructors. </p>
 <h2>Parameters</h2>
 <p>other &#8211; another source_location to copy from</p>
 <h2>See also</h2>
-<p>current constructs a new source_location<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>current constructs a new source_location<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>

@@ -102,14 +102,14 @@ description: "innd_selinux – Security Enhanced Linux Policy for the innd proce
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux innd policy is very flexible allowing users to setup their innd processes in as secure a method as possible. </p>
 <p> EQUIVALENCE DIRECTORIES</code> </p>
 <p> innd policy stores data with multiple different file context types under the /var/run/news directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/run/news /srv/news</code><br />
+<p> <code>semanage fcontext -a -e /var/run/news /srv/news</code><br/>
  <code>restorecon -R -v /srv/news</code> </p>
 <p> innd policy stores data with multiple different file context types under the /var/run/innd directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/run/innd /srv/innd</code><br />
+<p> <code>semanage fcontext -a -e /var/run/innd /srv/innd</code><br/>
  <code>restorecon -R -v /srv/innd</code> </p>
 <p> <code>STANDARD FILE CONTEXT</code> </p>
 <p> SELinux defines the file context types for the innd, if you wanted to store files with these types in a diffent paths, you need to execute the semanage command to sepecify alternate labeling and then use restorecon to put the labels on disk. </p>
-<p> <code>semanage fcontext -a -t innd_var_run_t &#8216;/srv/myinnd_content(/.*)?&#8217;</code><br />
+<p> <code>semanage fcontext -a -t innd_var_run_t &#8216;/srv/myinnd_content(/.*)?&#8217;</code><br/>
  <code>restorecon -R -v /srv/myinnd_content</code> </p>
 <p> Note: SELinux often uses regular expressions to specify labels that match multiple files. </p>
 <p> <i>The following file types are defined for innd:</i> </p>

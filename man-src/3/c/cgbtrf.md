@@ -11,7 +11,7 @@ description: "cgbtrf.f –"
 <p> cgbtrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgbtrf</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br />
+<p> subroutine <code>cgbtrf</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br/>
  <i></i><code>CGBTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgbtrf (integerM, integerN, integerKL, integerKU, complex, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, integerINFO)</h3>

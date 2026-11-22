@@ -15,14 +15,14 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <p> The Configuration file has a tree-like structure with section headings at various levels. It also contains variable assignments and tables. </p>
 <p> Warning: this manual is rather long. See smokeping_examples for simple configuration examples.</p>
 <h2>Reference</h2>
-<h3><font SIZE="-1">GENERAL SYNTAX</font></h3>
+<h3>GENERAL SYNTAX</h3>
 <p>The text below describes the general syntax of the SmokePing configuration file. It was copied from the Config::Grammar documentation. </p>
 <p> &#8216;#&#8217; denotes a comment up to the end-of-line, empty lines are allowed and space at the beginning and end of lines is trimmed. </p>
 <p> &#8216;\&#8217; at the end of the line marks a continued line on the next line. A single space will be inserted between the concatenated lines. </p>
 <p> &#8216;@include filename&#8217; is used to include another file. </p>
 <p> &#8216;@define a some value&#8217; will replace all occurences of &#8216;a&#8217; in the following text with &#8216;some value&#8217;. </p>
 <p> Fields in tables that contain white space can be enclosed in either <tt>&quot;'&quot;</tt> or <tt>&quot;&quot;&quot;</tt>. Whitespace can also be escaped with <tt>&quot;\&quot;</tt>. Quotes inside quotes are allowed but must be escaped with a backslash as well.</p>
-<h3><font SIZE="-1">SPECIFIC SYNTAX</font></h3>
+<h3>SPECIFIC SYNTAX</h3>
 <p>The text below describes the specific syntax of the SmokePing configuration file.</p>
 <h3>*** General *** <i>(mandatory section)</i></h3>
 <p>General configuration values valid for the whole SmokePing setup. </p>
@@ -33,28 +33,28 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <dt><code>imgcache</code> <i>(mandatory setting)</i></dt>
 <dd>A directory which is visible on your webserver where SmokePing can cache graphs.</dd>
 <dt><code>imgurl</code> <i>(mandatory setting)</i></dt>
-<dd>Either an absolute <font SIZE="-1">URL</font> to the <code>imgcache</code> directory or one relative to the directory where you keep the SmokePing cgi.</dd>
+<dd>Either an absolute URL to the <code>imgcache</code> directory or one relative to the directory where you keep the SmokePing cgi.</dd>
 <dt><code>datadir</code> <i>(mandatory setting)</i></dt>
 <dd>The directory where SmokePing can keep its rrd files.</dd>
 <dt><code>dyndir</code></dt>
-<dd>The base directory where SmokePing keeps the files related to the <font SIZE="-1">DYNAMIC</font> function. This directory must be writeable by the <font SIZE="-1">WWW</font> server. It is also used for temporary storage of slave polling results by the master in the master/slave mode. </dd>
+<dd>The base directory where SmokePing keeps the files related to the DYNAMIC function. This directory must be writeable by the WWW server. It is also used for temporary storage of slave polling results by the master in the master/slave mode. </dd>
 <p> If this variable is not specified, the value of <tt>&quot;datadir&quot;</tt> will be used instead.</p>
 <dt><code>pagedir</code></dt>
 <dd>Directory to store static representations of pages.</dd>
 <dt><code>piddir</code> <i>(mandatory setting)</i></dt>
 <dd>The directory where SmokePing keeps its pid when daemonised.</dd>
 <dt><code>sendmail</code></dt>
-<dd>Path to your sendmail binary. It will be used for sending mails in connection with the support of <font SIZE="-1">DYNAMIC</font> addresses.</dd>
+<dd>Path to your sendmail binary. It will be used for sending mails in connection with the support of DYNAMIC addresses.</dd>
 <dt><code>offset</code></dt>
-<dd>If you run many instances of smokeping you may want to prevent them from hitting your network all at the same time. Using the offset parameter you can change the point in time when the probes are run. Offset is specified in % of total interval, or alternatively as &#8216;random&#8217;. I recommend to use &#8216;random&#8217;. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. The default offset is &#8216;random&#8217;.</dd>
+<dd>If you run many instances of smokeping you may want to prevent them from hitting your network all at the same time. Using the offset parameter you can change the point in time when the probes are run. Offset is specified in % of total interval, or alternatively as &#8216;random&#8217;. I recommend to use &#8216;random&#8217;. Note that this does NOT influence the rrds itself, it is just a matter of when data acqusition is initiated. The default offset is &#8216;random&#8217;.</dd>
 <dt><code>smokemail</code> <i>(mandatory setting)</i></dt>
-<dd>Path to the mail template for <font SIZE="-1">DYNAMIC</font> hosts. This mail template must contain keywords of the form <code>&lt;##</code><i>keyword</i><code>##&gt;</code>. There is a sample template included with SmokePing.</dd>
+<dd>Path to the mail template for DYNAMIC hosts. This mail template must contain keywords of the form <code>&lt;##</code><i>keyword</i><code>##&gt;</code>. There is a sample template included with SmokePing.</dd>
 <dt><code>cgiurl</code> <i>(mandatory setting)</i></dt>
-<dd>Complete <font SIZE="-1">URL</font> path of the SmokePing.cgi</dd>
+<dd>Complete URL path of the SmokePing.cgi</dd>
 <dt><code>mailhost</code></dt>
-<dd>Instead of using sendmail, you can specify the name of an smtp server and use perl&#8217;s Net::SMTP module to send mail (for alerts and <font SIZE="-1">DYNAMIC</font> client script). Several comma separated mailhosts can be specified. SmokePing will try one after the other if one does not answer for 5 seconds.</dd>
+<dd>Instead of using sendmail, you can specify the name of an smtp server and use perl&#8217;s Net::SMTP module to send mail (for alerts and DYNAMIC client script). Several comma separated mailhosts can be specified. SmokePing will try one after the other if one does not answer for 5 seconds.</dd>
 <dt><code>snpphost</code></dt>
-<dd>If you have a <font SIZE="-1">SNPP </font>(Simple Network Pager Protocol) server at hand, you can have alerts sent there too. Use the syntax <code>snpp:someaddress</code> to use a snpp address in any place where you can use a mail address otherwhise.</dd>
+<dd>If you have a SNPP (Simple Network Pager Protocol) server at hand, you can have alerts sent there too. Use the syntax <code>snpp:someaddress</code> to use a snpp address in any place where you can use a mail address otherwhise.</dd>
 <dt><code>contact</code> <i>(mandatory setting)</i></dt>
 <dd>Mail address of the person responsible for this smokeping installation.</dd>
 <dt><code>display_name</code></dt>
@@ -69,12 +69,12 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <dd>When using &#8216;concurrentprobes&#8217; (see above), this controls whether the probe subprocesses should change their argv string to indicate their probe in the process name. If set to &#8216;yes&#8217; (the default), the probe name will be appended to the process name as &#8216;[probe]&#8217;, eg. &#8216;/usr/bin/smokeping [FPing]&#8217;. If you don&#8217;t like this behaviour, set this variable to &#8216;no&#8217;. If &#8216;concurrentprobes&#8217; is not set to &#8216;yes&#8217;, this variable has no effect. </dd>
 <p> Default value: changeprocessnames = yes</p>
 <dt><code>tmail</code></dt>
-<dd>Path to your tSmoke <font SIZE="-1">HTML</font> mail template file. See the tSmoke documentation for details.</dd>
+<dd>Path to your tSmoke HTML mail template file. See the tSmoke documentation for details.</dd>
 <dt><code>changecgiprogramname</code></dt>
-<dd>Usually the Smokeping <font SIZE="-1">CGI</font> tries to log any possible errors with an extended program name that includes the <font SIZE="-1">IP</font> address of the remote client for easier debugging. If this variable is set to &#8216;no&#8217;, the program name will not be modified. The only reason you would want this is if you have a very old version of the CGI::Carp module. See the installation document for details. </dd>
+<dd>Usually the Smokeping CGI tries to log any possible errors with an extended program name that includes the IP address of the remote client for easier debugging. If this variable is set to &#8216;no&#8217;, the program name will not be modified. The only reason you would want this is if you have a very old version of the CGI::Carp module. See the installation document for details. </dd>
 <p> Default value: changecgiprogramname = yes</p>
 <dt><code>linkstyle</code></dt>
-<dd>How the <font SIZE="-1">CGI</font> self-referring links are created. The possible values are</dd>
+<dd>How the CGI self-referring links are created. The possible values are</dd>
 <dl>
 <dd>
 </dd><dl>
@@ -100,10 +100,10 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <p> The following variables can be set in this section:</p>
 <dl>
 <dt><code>step</code> <i>(mandatory setting)</i></dt>
-<dd>Duration of the base operation interval of SmokePing in seconds. SmokePing will venture out every <code>step</code> seconds to ping your target hosts. If &#8216;concurrent_probes&#8217; is set to &#8216;yes&#8217; (see above), this variable can be overridden by each probe. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them.</dd>
+<dd>Duration of the base operation interval of SmokePing in seconds. SmokePing will venture out every <code>step</code> seconds to ping your target hosts. If &#8216;concurrent_probes&#8217; is set to &#8216;yes&#8217; (see above), this variable can be overridden by each probe. Note that the step in the RRD files is fixed when they are originally generated, and if you change the step parameter afterwards, you&#8217;ll have to delete the old RRD files or somehow convert them.</dd>
 <dt><code>pings</code> <i>(mandatory setting)</i></dt>
-<dd>How many pings should be sent to each target. Suggested: 20 pings. Minimum value: 3 pings. This can be overridden by each probe. Some probes (those derived from basefork.pm, ie. most except the FPing variants) will even let this be overridden target-specifically. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them.</dd></dl>
-<p> This section also contains a table describing the setup of the SmokePing database. Below are reasonable defaults. Only change them if you know rrdtool and its workings. Each row in the table describes one <font SIZE="-1">RRA.</font> </p>
+<dd>How many pings should be sent to each target. Suggested: 20 pings. Minimum value: 3 pings. This can be overridden by each probe. Some probes (those derived from basefork.pm, ie. most except the FPing variants) will even let this be overridden target-specifically. Note that the number of pings in the RRD files is fixed when they are originally generated, and if you change this parameter afterwards, you&#8217;ll have to delete the old RRD files or somehow convert them.</dd></dl>
+<p> This section also contains a table describing the setup of the SmokePing database. Below are reasonable defaults. Only change them if you know rrdtool and its workings. Each row in the table describes one RRA. </p>
 <pre> # cons xff steps rows
  AVERAGE 0.5 1 1008
  AVERAGE 0.5 12 4320
@@ -118,9 +118,9 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <dt>column 1</dt>
 <dd>What part of the consolidated intervals must be known to warrant a known entry.</dd>
 <dt>column 2</dt>
-<dd>How many <code>steps</code> to consolidate into for each <font SIZE="-1">RRA</font> entry.</dd>
+<dd>How many <code>steps</code> to consolidate into for each RRA entry.</dd>
 <dt>column 3</dt>
-<dd>How many <code>rows</code> this <font SIZE="-1">RRA</font> should have.</dd></dl>
+<dd>How many <code>rows</code> this RRA should have.</dd></dl>
 <h3>*** Presentation *** <i>(mandatory section)</i></h3>
 <p>Defines how the SmokePing data should be presented. </p>
 <p> The following variables can be set in this section:</p>
@@ -211,7 +211,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <dl>
 <dd></dd></dl>
 <dt><code>++uptime_colors</code></dt>
-<dd>When monitoring a host with <font SIZE="-1">DYNAMIC</font> addressing, SmokePing will keep track of how long the machine is able to keep the same <font SIZE="-1">IP</font> address. This time is plotted as a color in the graphs background. SmokePing comes with a reasonable default setting, but you may choose to disagree. The table below lets you specify your own coloring </dd>
+<dd>When monitoring a host with DYNAMIC addressing, SmokePing will keep track of how long the machine is able to keep the same IP address. This time is plotted as a color in the graphs background. SmokePing comes with a reasonable default setting, but you may choose to disagree. The table below lets you specify your own coloring </dd>
 <p> Example: </p>
 <pre> # Uptime Color Legend
  3600 00ff00 &quot;&lt;1h&quot;
@@ -781,7 +781,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 </dl>
 <dl>
 <dd>(End of dynamical grammar changes for example instance <tt>&quot;Curl&quot;</tt>.)</dd></dl>
-<dt><font SIZE="-1"><code>DNS</code></font>: (See the separate module documentation for details about each variable.)</dt>
+<dt><code>DNS</code>: (See the separate module documentation for details about each variable.)</dt>
 <dd>The following new variables are valid:</dd>
 <dl>
 <dd>
@@ -2148,7 +2148,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 </dl>
 <dl>
 <dd>(End of dynamical grammar changes for example instance <tt>&quot;IOSPing&quot;</tt>.)</dd></dl>
-<dt><font SIZE="-1"><code>LDAP</code></font>: (See the separate module documentation for details about each variable.)</dt>
+<dt><code>LDAP</code>: (See the separate module documentation for details about each variable.)</dt>
 <dd>The following new variables are valid:</dd>
 <dl>
 <dd>
@@ -2705,7 +2705,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 </dl>
 <dl>
 <dd>(End of dynamical grammar changes for example instance <tt>&quot;RemoteFPing&quot;</tt>.)</dd></dl>
-<dt><font SIZE="-1"><code>SSH</code></font>: (See the separate module documentation for details about each variable.)</dt>
+<dt><code>SSH</code>: (See the separate module documentation for details about each variable.)</dt>
 <dd>The following new variables are valid:</dd>
 <dl>
 <dd>
@@ -2985,7 +2985,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <dd>see above</dd>
 <dt><code>authtype</code></dt>
 <dd>(This variable can be overridden target-specifically in the Targets section.) </dd>
-<p> Default value: authtype = <font SIZE="-1">ASCII</font></p>
+<p> Default value: authtype = ASCII</p>
 <dt><code>mininterval</code></dt>
 <dd>(This variable can be overridden target-specifically in the Targets section.) </dd>
 <p> Default value: mininterval = 1</p>
@@ -3028,7 +3028,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <p> This variable <i>inherits</i> its value from the parent section if nothing is specified here.</p>
 <dt><code>authtype</code></dt>
 <dd>This variable <i>inherits</i> its value from the parent section if nothing is specified here. </dd>
-<p> Default value: authtype = <font SIZE="-1">ASCII</font></p>
+<p> Default value: authtype = ASCII</p>
 <dt><code>mininterval</code></dt>
 <dd>This variable <i>inherits</i> its value from the parent section if nothing is specified here. </dd>
 <p> Default value: mininterval = 1</p>
@@ -3290,7 +3290,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <dt><code>slaves</code></dt>
 <dd>List of slave servers. It gets inherited by all targets.</dd>
 <dt><code>menuextra</code></dt>
-<dd><font SIZE="-1">HTML</font> String to be added to the end of each menu entry. The <tt>&quot;{HOST}&quot;</tt> entry will be replaced by the host property of the relevant section. The <tt>&quot;{CLASS}&quot;</tt> entry will be replaced by the same class as the other tags in the manu line.</dd>
+<dd>HTML String to be added to the end of each menu entry. The <tt>&quot;{HOST}&quot;</tt> entry will be replaced by the host property of the relevant section. The <tt>&quot;{CLASS}&quot;</tt> entry will be replaced by the same class as the other tags in the manu line.</dd>
 <dt><code>parents</code></dt>
 <dd></dd></dl>
 <p> The following sections are valid on level 1:</p>
@@ -3313,9 +3313,9 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <dd>Comma separated list of alert names </dd>
 <p> This variable <i>inherits</i> its value from the parent section if nothing is specified here.</p>
 <dt><code>note</code></dt>
-<dd>Some information about this entry which does <font SIZE="-1">NOT</font> get displayed on the web.</dd>
+<dd>Some information about this entry which does NOT get displayed on the web.</dd>
 <dt><code>email</code></dt>
-<dd>This is the contact address for the owner of the current host. In connection with the <font SIZE="-1"><code>DYNAMIC</code></font> hosts, the address will be used for sending the belowmentioned script.</dd>
+<dd>This is the contact address for the owner of the current host. In connection with the <code>DYNAMIC</code> hosts, the address will be used for sending the belowmentioned script.</dd>
 <dt><code>host</code></dt>
 <dd>There are three types of &#8220;hosts&#8221; in smokeping.</dd>
 <dl>
@@ -3324,8 +3324,8 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <dt>1.</dt>
 <dd>The &#8216;hostname&#8217; is a name of a host you want to target from smokeping</dd>
 <dt>2.</dt>
-<dd>The string <font SIZE="-1"><code>DYNAMIC</code></font>. Is for machines that have a dynamic <font SIZE="-1">IP</font> address. These boxes are required to regularly contact the SmokePing server to confirm their <font SIZE="-1">IP</font> address.<br />
-&nbsp;<wbr>When starting SmokePing with the commandline argument <code>&#8211;email</code> it will add a secret password to each of the <font SIZE="-1"><code>DYNAMIC</code></font> host lines and send a script to the owner of each host. This script must be started periodically (cron) on the host in question to let smokeping know where the host is curently located. If the target machine supports <font SIZE="-1">SNMP</font> SmokePing will also query the hosts sysContact, sysName and sysLocation properties to make sure it is still the same host.</dd>
+<dd>The string <code>DYNAMIC</code>. Is for machines that have a dynamic IP address. These boxes are required to regularly contact the SmokePing server to confirm their IP address.<br/>
+&nbsp;<wbr>When starting SmokePing with the commandline argument <code>&#8211;email</code> it will add a secret password to each of the <code>DYNAMIC</code> host lines and send a script to the owner of each host. This script must be started periodically (cron) on the host in question to let smokeping know where the host is curently located. If the target machine supports SNMP SmokePing will also query the hosts sysContact, sysName and sysLocation properties to make sure it is still the same host.</dd>
 <dt>3.</dt>
 <dd>A space separated list of &#8216;target-path&#8217; entries (multihost target). All targets mentioned in this list will be displayed in one graph. Note that the graph will look different from the normal smokeping graphs. The syntax for multihost targets is as follows: </dd>
 <pre> host = /world/town/host1 /world/town2/host33 /world/town2/host1~slave</pre>
@@ -3336,7 +3336,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <dt><code>remark</code></dt>
 <dd>
 </dd><dt><code>rawlog</code></dt>
-<dd>Log the raw data, gathered for this target, in tab separated format, to a file with the same basename as the corresponding <font SIZE="-1">RRD</font> file. Use posix strftime to format the timestamp to be put into the file name. The filename is built like this: </dd>
+<dd>Log the raw data, gathered for this target, in tab separated format, to a file with the same basename as the corresponding RRD file. Use posix strftime to format the timestamp to be put into the file name. The filename is built like this: </dd>
 <pre> basename.strftime.csv</pre>
 <p>Example: </p>
 <pre> rawlog=%Y-%m-%d</pre>
@@ -3349,7 +3349,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <dd>The slave names must match the slaves you have setup in the slaves section. </dd>
 <p> This variable <i>inherits</i> its value from the parent section if nothing is specified here.</p>
 <dt><code>menuextra</code></dt>
-<dd><font SIZE="-1">HTML</font> String to be added to the end of each menu entry. The following tags will be replaced: </dd>
+<dd>HTML String to be added to the end of each menu entry. The following tags will be replaced: </dd>
 <pre> {HOST} -&gt; #$hostname
  {HOSTNAME} -&gt; $hostname
  {CLASS} -&gt; same class as the other tags in the menu line
@@ -3711,7 +3711,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 </dl>
 <dl>
 <dd>(End of dynamical grammar changes for variable <tt>&quot;probe&quot;</tt> example value <tt>&quot;Curl&quot;</tt>.)</dd></dl>
-<dt><font SIZE="-1"><code>DNS</code></font>: (See the separate module documentation for details about each variable.)</dt>
+<dt><code>DNS</code>: (See the separate module documentation for details about each variable.)</dt>
 <dd>The following new variables are valid:</dd>
 <dl>
 <dd>
@@ -4622,7 +4622,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 </dl>
 <dl>
 <dd>(End of dynamical grammar changes for variable <tt>&quot;probe&quot;</tt> example value <tt>&quot;IOSPing&quot;</tt>.)</dd></dl>
-<dt><font SIZE="-1"><code>LDAP</code></font>: (See the separate module documentation for details about each variable.)</dt>
+<dt><code>LDAP</code>: (See the separate module documentation for details about each variable.)</dt>
 <dd>The following new variables are valid:</dd>
 <dl>
 <dd>
@@ -4878,7 +4878,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <dt><code>RemoteFPing</code>: (See the separate module documentation for details about each variable.)</dt>
 <dd>No changes that can be automatically described. </dd>
 <p> (End of dynamical grammar changes for variable <tt>&quot;probe&quot;</tt> example value <tt>&quot;RemoteFPing&quot;</tt>.)</p>
-<dt><font SIZE="-1"><code>SSH</code></font>: (See the separate module documentation for details about each variable.)</dt>
+<dt><code>SSH</code>: (See the separate module documentation for details about each variable.)</dt>
 <dd>The following new variables are valid:</dd>
 <dl>
 <dd>
@@ -5187,10 +5187,10 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 </dl>
 <p> (End of dynamical grammar changes for example values of variable <tt>&quot;probe&quot;</tt>.)</p>
 <h3>*** Alerts ***</h3>
-<p>The Alert section lets you setup loss and <font SIZE="-1">RTT</font> pattern detectors. After each round of polling, SmokePing will examine its data and determine which detectors match. Detectors are enabled per target and get inherited by the targets children. </p>
-<p> Detectors are not just simple thresholds which go off at first sight of a problem. They are configurable to detect special loss or <font SIZE="-1">RTT</font> patterns. They let you look at a number of past readings to make a more educated decision on what kind of alert should be sent, or if an alert should be sent at all. </p>
+<p>The Alert section lets you setup loss and RTT pattern detectors. After each round of polling, SmokePing will examine its data and determine which detectors match. Detectors are enabled per target and get inherited by the targets children. </p>
+<p> Detectors are not just simple thresholds which go off at first sight of a problem. They are configurable to detect special loss or RTT patterns. They let you look at a number of past readings to make a more educated decision on what kind of alert should be sent, or if an alert should be sent at all. </p>
 <p> The patterns are numbers prefixed with an operator indicating the type of comparison required for a match. </p>
-<p> The following <font SIZE="-1">RTT</font> pattern detects if a target&#8217;s <font SIZE="-1">RTT</font> goes from constantly below 10ms to constantly 100ms and more: </p>
+<p> The following RTT pattern detects if a target&#8217;s RTT goes from constantly below 10ms to constantly 100ms and more: </p>
 <pre> old ------------------------------&gt; new
  &lt;10,&lt;10,&lt;10,&lt;10,&lt;10,&gt;10,&gt;100,&gt;100,&gt;100</pre>
 <p>Loss patterns work in a similar way, except that the loss is defined as the percentage the total number of received packets is of the total number of packets sent. </p>
@@ -5268,7 +5268,7 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <dt><code>comment</code> <i>(mandatory setting)</i></dt>
 <dd>
 </dd><dt><code>to</code></dt>
-<dd>Similar to the &#8220;to&#8221; parameter on the top-level except that it will only be used <font SIZE="-1">IN ADDITION</font> to the value of the toplevel parameter. Same rules apply.</dd>
+<dd>Similar to the &#8220;to&#8221; parameter on the top-level except that it will only be used IN ADDITION to the value of the toplevel parameter. Same rules apply.</dd>
 <dt><code>edgetrigger</code></dt>
 <dd>This variable <i>inherits</i> its value from the parent section if nothing is specified here. </dd>
 <p> Default value: edgetrigger = no</p>
@@ -5333,8 +5333,8 @@ description: "smokeping_config – Reference for the SmokePing Config File"
 <h2>Copyright</h2>
 <p>Copyright (c) 2001-2007 by Tobias Oetiker. All right reserved.</p>
 <h2>License</h2>
-<p>This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font></p>
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>
 <h2>Author</h2>
 <p>Tobias Oetiker &lt;tobi [at] oetiker.ch&gt;</p>

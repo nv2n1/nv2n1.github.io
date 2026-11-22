@@ -10,7 +10,7 @@ description: "pmdads389 – 389 Directory Server PMDA"
 
 <p> <code>pmdads389</code> &#8211; 389 Directory Server PMDA</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdads389</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which extracts live performance data from a running 389 Directory Server instance. </p>
+<p> <code>pmdads389</code> is a Performance Metrics Domain Agent (PMDA) which extracts live performance data from a running 389 Directory Server instance. </p>
 <p> See the Red Hat Directory Server Administration Guide for description for each metric. </p>
 <h2>INSTALLATION</h2>
 <p> <code>pmdads389</code> uses a configuration file</p>
@@ -20,9 +20,9 @@ description: "pmdads389 – 389 Directory Server PMDA"
 <p> This file can contain overridden values (Perl code) for the settings listed at the start of <i>pmdads389.pl</i>, namely:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">LDAP</font> server</dd>
+<dd> LDAP server</dd>
 <dt>&bull;</dt>
-<dd> bind <font SIZE="-1">DN</font></dd>
+<dd> bind DN</dd>
 <dt>&bull;</dt>
 <dd> bind password</dd>
 <dt>&bull;</dt>

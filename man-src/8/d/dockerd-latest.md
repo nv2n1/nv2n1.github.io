@@ -13,138 +13,138 @@ description: "dockerd – Enable daemon mode"
 <h2>Description</h2>
 <p><code>dockerd</code> is used for starting the Docker daemon(i.e., to command the daemon to manage images, containers etc.) So <code>dockerd</code> is a server, as a daemon. To run the Docker daemon you can specify <code>dockerd</code>. You can check the daemon options using <code>dockerd &#8211;help</code>. Daemon options should be specified after the <code>dockerd</code> keyword in the following format. <code>dockerd [OPTIONS]</code> </p>
 <h2>Options</h2>
-<p><code>&#8211;add-runtime</code>=[]<br />
+<p><code>&#8211;add-runtime</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Set additional OCI compatible runtime. </p>
-<p> <code>&#8211;add-registry</code>=[]<br />
+<p> <code>&#8211;add-registry</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>EXPERIMENTAL</code>&nbsp;<wbr>Each given registry will be queried before a public Docker registry during image pulls or searches. They will be searched in the order given. Registry mirrors won&#8217;t apply to them. </p>
-<p> <code>&#8211;api-cors-header</code>=&quot;&quot;<br />
+<p> <code>&#8211;api-cors-header</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Set CORS headers in the remote API. Default is cors disabled. Give urls like&nbsp;<wbr>&quot; &lt;<a rel="nofollow" href="http://foo">http://foo</a>&gt;, &lt;<a rel="nofollow" href="http://bar">http://bar</a>&gt;, &#8230;&quot;. Give &quot;*&quot; to allow all. </p>
-<p> <code>&#8211;authorization-plugin</code>=&quot;&quot;<br />
+<p> <code>&#8211;authorization-plugin</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Set authorization plugins to load </p>
-<p> <code>-b</code>, <code>&#8211;bridge</code>=&quot;&quot;<br />
+<p> <code>-b</code>, <code>&#8211;bridge</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Attach containers to a pre-existing network bridge;&nbsp;<wbr>use&nbsp;<wbr>&#8216;none&#8217;&nbsp;<wbr>to disable container networking </p>
-<p> <code>&#8211;bip</code>=&quot;&quot;<br />
+<p> <code>&#8211;bip</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Use the provided CIDR notation address for the dynamically created bridge&nbsp;<wbr>(docker0);&nbsp;<wbr>Mutually exclusive of -b </p>
-<p> <code>&#8211;block-registry</code>=[]<br />
+<p> <code>&#8211;block-registry</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>EXPERIMENTAL</code>&nbsp;<wbr>Prevent Docker daemon from contacting specified registries. There are two special keywords recognized. The first is&nbsp;<wbr>&quot;public&quot;&nbsp;<wbr>and represents public Docker registry. The second is&nbsp;<wbr>&quot;all&quot;&nbsp;<wbr>which causes all registries but those added with&nbsp;<wbr><code>&#8211;add-registry</code>&nbsp;<wbr>flag to be blocked. </p>
-<p> <code>&#8211;cgroup-parent</code>=&quot;&quot;<br />
+<p> <code>&#8211;cgroup-parent</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Set parent cgroup for all containers. Default is&nbsp;<wbr>&quot;/docker&quot;&nbsp;<wbr>for fs cgroup driver and&nbsp;<wbr>&quot;system.slice&quot;&nbsp;<wbr>for systemd cgroup driver. </p>
-<p> <code>&#8211;cluster-store</code>=&quot;&quot;<br />
+<p> <code>&#8211;cluster-store</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>URL of the distributed storage backend </p>
-<p> <code>&#8211;cluster-advertise</code>=&quot;&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>Specifies the&nbsp;<wbr>&#8216;host:port&#8217;&nbsp;<wbr>or interface:port combination that this particular<br />
-&nbsp;<wbr>&nbsp;<wbr>daemon instance should use when advertising itself to the cluster. The daemon<br />
+<p> <code>&#8211;cluster-advertise</code>=&quot;&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>Specifies the&nbsp;<wbr>&#8216;host:port&#8217;&nbsp;<wbr>or interface:port combination that this particular<br/>
+&nbsp;<wbr>&nbsp;<wbr>daemon instance should use when advertising itself to the cluster. The daemon<br/>
 &nbsp;<wbr>&nbsp;<wbr>is reached through this value. </p>
-<p> <code>&#8211;cluster-store-opt</code>=&quot;&quot;<br />
+<p> <code>&#8211;cluster-store-opt</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Specifies options for the Key/Value store. </p>
-<p> <code>&#8211;config-file</code>=&quot;/etc/docker/daemon.json&quot;<br />
+<p> <code>&#8211;config-file</code>=&quot;/etc/docker/daemon.json&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Specifies the JSON file path to load the configuration from. </p>
-<p> <code>&#8211;containerd</code>=&quot;&quot;<br />
+<p> <code>&#8211;containerd</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Path to containerd socket. </p>
-<p> <code>-D</code>, <code>&#8211;debug</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-D</code>, <code>&#8211;debug</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Enable debug mode. Default is false. </p>
-<p> <code>&#8211;default-gateway</code>=&quot;&quot;<br />
+<p> <code>&#8211;default-gateway</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>IPv4 address of the container default gateway;&nbsp;<wbr>this address must be part of the bridge subnet&nbsp;<wbr>(which is defined by -b or &#8211;bip) </p>
-<p> <code>&#8211;default-gateway-v6</code>=&quot;&quot;<br />
+<p> <code>&#8211;default-gateway-v6</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>IPv6 address of the container default gateway </p>
-<p> <code>&#8211;default-ulimit</code>=[]<br />
+<p> <code>&#8211;default-ulimit</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Default ulimits for containers. </p>
-<p> <code>&#8211;disable-legacy-registry</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;disable-legacy-registry</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Disable contacting legacy registries </p>
-<p> <code>&#8211;dns</code>=&quot;&quot;<br />
+<p> <code>&#8211;dns</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Force Docker to use specific DNS servers </p>
-<p> <code>&#8211;dns-opt</code>=&quot;&quot;<br />
+<p> <code>&#8211;dns-opt</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>DNS options to use. </p>
-<p> <code>&#8211;dns-search</code>=[]<br />
+<p> <code>&#8211;dns-search</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>DNS search domains to use. </p>
-<p> <code>&#8211;enable-secrets</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;enable-secrets</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Allow subscription-manager inside the containers to use subscriptions available on the host. Default is true. </p>
-<p> <code>&#8211;exec-opt</code>=[]<br />
+<p> <code>&#8211;exec-opt</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Set runtime execution options. See RUNTIME EXECUTION OPTIONS. </p>
-<p> <code>&#8211;exec-root</code>=&quot;&quot;<br />
+<p> <code>&#8211;exec-root</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Path to use as the root of the Docker execution state files. Default is&nbsp;<wbr>/var/run/docker. </p>
-<p> <code>&#8211;fixed-cidr</code>=&quot;&quot;<br />
+<p> <code>&#8211;fixed-cidr</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>IPv4 subnet for fixed IPs&nbsp;<wbr>(e.g., 10.20.0.0/16);&nbsp;<wbr>this subnet must be nested in the bridge subnet&nbsp;<wbr>(which is defined by -b or &#8211;bip) </p>
-<p> <code>&#8211;fixed-cidr-v6</code>=&quot;&quot;<br />
+<p> <code>&#8211;fixed-cidr-v6</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>IPv6 subnet for global IPv6 addresses&nbsp;<wbr>(e.g., 2a00:1450::/64) </p>
-<p> <code>-G</code>, <code>&#8211;group</code>=&quot;&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>Group to assign the unix socket specified by -H when running in daemon mode.<br />
+<p> <code>-G</code>, <code>&#8211;group</code>=&quot;&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>Group to assign the unix socket specified by -H when running in daemon mode.<br/>
 &nbsp;<wbr>&nbsp;<wbr>use&nbsp;<wbr>&#8221;&nbsp;<wbr>(the empty string)&nbsp;<wbr>to disable setting of a group. Default is docker. </p>
-<p> <code>-g</code>, <code>&#8211;graph</code>=&quot;&quot;<br />
+<p> <code>-g</code>, <code>&#8211;graph</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Path to use as the root of the Docker runtime. Default is&nbsp;<wbr>/var/lib/docker. </p>
-<p> <code>-H</code>, <code>&#8211;host</code>=[<i><a href="unix:///var/run/docker.sock">unix:///var/run/docker.sock</a></i>]: <a href="tcp://[host:port]">tcp://[host:port]</a> to bind or <a href="unix://[/path/to/socket]">unix://[/path/to/socket]</a> to use.<br />
-&nbsp;<wbr>&nbsp;<wbr>The socket(s)&nbsp;<wbr>to bind to in daemon mode specified using one or more<br />
+<p> <code>-H</code>, <code>&#8211;host</code>=[<i><a href="unix:///var/run/docker.sock">unix:///var/run/docker.sock</a></i>]: <a href="tcp://[host:port]">tcp://[host:port]</a> to bind or <a href="unix://[/path/to/socket]">unix://[/path/to/socket]</a> to use.<br/>
+&nbsp;<wbr>&nbsp;<wbr>The socket(s)&nbsp;<wbr>to bind to in daemon mode specified using one or more<br/>
 &nbsp;<wbr>&nbsp;<wbr><a href="tcp://host:port,">tcp://host:port,</a>&nbsp;<wbr><a href="unix:///path/to/socket,">unix:///path/to/socket,</a>&nbsp;<wbr>fd://*&nbsp;<wbr>or fd://socketfd. </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>&#8211;icc</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;icc</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Allow unrestricted inter-container and Docker daemon host communication. If disabled, containers can still be linked together using the&nbsp;<wbr><code>&#8211;link</code>&nbsp;<wbr>option&nbsp;<wbr>(see&nbsp;<wbr><code><a href="/docs/linux/man/1-docker-run/">docker-run</a>(1)</code>). Default is true. </p>
-<p> <code>&#8211;insecure-registry</code>=[]<br />
+<p> <code>&#8211;insecure-registry</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Enable insecure registry communication, i.e., enable un-encrypted and/or untrusted communication. </p>
 <p> List of insecure registries can contain an element with CIDR notation to specify a whole subnet. Insecure registries accept HTTP and/or accept HTTPS with certificates from unknown CAs. </p>
 <p> Enabling &#8211;insecure-registry is useful when running a local registry. However, because its use creates security vulnerabilities it should ONLY be enabled for testing purposes. For increased security, users should add their CA to their system&#8217;s list of trusted CAs instead of using &#8211;insecure-registry. </p>
-<p> <code>&#8211;ip</code>=&quot;&quot;<br />
+<p> <code>&#8211;ip</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Default IP address to use when binding container ports. Default is 0.0.0.0. </p>
-<p> <code>&#8211;ip-forward</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;ip-forward</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Enables IP forwarding on the Docker host. The default is true. This flag interacts with the IP forwarding setting on your host system&#8217;s kernel. If your system has IP forwarding disabled, this setting enables it. If your system has IP forwarding enabled, setting this flag to &#8211;ip-forward=false has no effect. </p>
 <p> This setting will also enable IPv6 forwarding if you have both &#8211;ip-forward=true and &#8211;fixed-cidr-v6 set. Note that this may reject Router Advertisements and interfere with the host&#8217;s existing IPv6 configuration. For more information, please consult the documentation about &quot;Advanced Networking &#8211; IPv6&quot;. </p>
-<p> <code>&#8211;ip-masq</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;ip-masq</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Enable IP masquerading for bridge&#8217;s IP range. Default is true. </p>
-<p> <code>&#8211;iptables</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;iptables</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Enable Docker&#8217;s addition of iptables rules. Default is true. </p>
-<p> <code>&#8211;ipv6</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;ipv6</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Enable IPv6 support. Default is false. Docker will create an IPv6-enabled bridge with address fe80::1 which will allow you to create IPv6-enabled containers. Use together with &#8211;fixed-cidr-v6 to provide globally routable IPv6 addresses. IPv6 forwarding will be enabled if not used with &#8211;ip-forward=false. This may collide with your host&#8217;s current IPv6 settings. For more information please consult the documentation about&nbsp;<wbr>&quot;Advanced Networking &#8211; IPv6&quot;. </p>
-<p> <code>&#8211;isolation</code>=&quot;<i>default</i>&quot;<br />
+<p> <code>&#8211;isolation</code>=&quot;<i>default</i>&quot;<br/>
 Isolation specifies the type of isolation technology used by containers. Note that the default on Windows server is process, and the default on Windows client is hyperv. Linux only supports default. </p>
-<p> <code>-l</code>, <code>&#8211;log-level</code>=&quot;<i>debug</i>|<i>info</i>|<i>warn</i>|<i>error</i>|<i>fatal</i>&quot;<br />
+<p> <code>-l</code>, <code>&#8211;log-level</code>=&quot;<i>debug</i>|<i>info</i>|<i>warn</i>|<i>error</i>|<i>fatal</i>&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Set the logging level. Default is info. </p>
-<p> <code>&#8211;label</code>=&quot;[]&quot;<br />
+<p> <code>&#8211;label</code>=&quot;[]&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Set key=value labels to the daemon&nbsp;<wbr>(displayed in docker info) </p>
-<p> <code>&#8211;live-restore</code>=<i>false</i><br />
+<p> <code>&#8211;live-restore</code>=<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Enable live restore of running containers when the daemon starts so that they are not restarted. </p>
-<p> <code>&#8211;log-driver</code>=&quot;<i>json-file</i>|<i>syslog</i>|<i>journald</i>|<i>gelf</i>|<i>fluentd</i>|<i>awslogs</i>|<i>splunk</i>|<i>etwlogs</i>|<i>gcplogs</i>|<i>none</i>&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>Default driver for container logs. Default is json-file.<br />
+<p> <code>&#8211;log-driver</code>=&quot;<i>json-file</i>|<i>syslog</i>|<i>journald</i>|<i>gelf</i>|<i>fluentd</i>|<i>awslogs</i>|<i>splunk</i>|<i>etwlogs</i>|<i>gcplogs</i>|<i>none</i>&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>Default driver for container logs. Default is json-file.<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>Warning</code>: docker logs command works only for json-file logging driver. </p>
-<p> <code>&#8211;log-opt</code>=[]<br />
+<p> <code>&#8211;log-opt</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Logging driver specific options. </p>
-<p> <code>&#8211;mtu</code>=<i>0</i><br />
+<p> <code>&#8211;mtu</code>=<i>0</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Set the containers network mtu. Default is 0. </p>
-<p> <code>&#8211;max-concurrent-downloads</code>=<i>3</i><br />
+<p> <code>&#8211;max-concurrent-downloads</code>=<i>3</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Set the max concurrent downloads for each pull. Default is 3. </p>
-<p> <code>&#8211;max-concurrent-uploads</code>=<i>5</i><br />
+<p> <code>&#8211;max-concurrent-uploads</code>=<i>5</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Set the max concurrent uploads for each push. Default is 5. </p>
-<p> <code>-p</code>, <code>&#8211;pidfile</code>=&quot;&quot;<br />
+<p> <code>-p</code>, <code>&#8211;pidfile</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Path to use for daemon PID file. Default is&nbsp;<wbr>/var/run/docker.pid </p>
 <p> <code>&#8211;raw-logs</code> Output daemon logs in full timestamp format without ANSI coloring. If this flag is not set, the daemon outputs condensed, colorized logs if a terminal is detected, or full (&quot;raw&quot;) output otherwise. </p>
-<p> <code>&#8211;registry-mirror</code>=<i>&lt;scheme&gt;://&lt;host&gt;</i><br />
+<p> <code>&#8211;registry-mirror</code>=<i>&lt;scheme&gt;://&lt;host&gt;</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Prepend a registry mirror to be used for image pulls. May be specified multiple times. </p>
-<p> <code>-s</code>, <code>&#8211;storage-driver</code>=&quot;&quot;<br />
+<p> <code>-s</code>, <code>&#8211;storage-driver</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Force the Docker runtime to use a specific storage driver. </p>
-<p> <code>&#8211;selinux-enabled</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;selinux-enabled</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Enable selinux support. Default is false. </p>
-<p> <code>&#8211;signature-verification</code>=<i>true</i>|<i>false</i><br />
-&nbsp;<wbr>&nbsp;<wbr>Enable image signature verification. Default is true. WARNING: this option doesn&#8217;t work<br />
+<p> <code>&#8211;signature-verification</code>=<i>true</i>|<i>false</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>Enable image signature verification. Default is true. WARNING: this option doesn&#8217;t work<br/>
 &nbsp;<wbr>&nbsp;<wbr>with images being pulled from v1 docker registries. See SIGNATURE VERIFICATION. </p>
-<p> <code>&#8211;storage-opt</code>=[]<br />
+<p> <code>&#8211;storage-opt</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Set storage driver options. See STORAGE DRIVER OPTIONS. </p>
-<p> <code>&#8211;swarm-default-advertise-addr</code>=<i>IP|INTERFACE</i><br />
-&nbsp;<wbr>&nbsp;<wbr>Set default address or interface for swarm to advertise as its externally-reachable address to other cluster<br />
-&nbsp;<wbr>&nbsp;<wbr>members. This can be a hostname, an IP address, or an interface such as eth0. A port cannot be specified with<br />
+<p> <code>&#8211;swarm-default-advertise-addr</code>=<i>IP|INTERFACE</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>Set default address or interface for swarm to advertise as its externally-reachable address to other cluster<br/>
+&nbsp;<wbr>&nbsp;<wbr>members. This can be a hostname, an IP address, or an interface such as eth0. A port cannot be specified with<br/>
 &nbsp;<wbr>&nbsp;<wbr>this option. </p>
-<p> <code>&#8211;tls</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;tls</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Use TLS;&nbsp;<wbr>implied by &#8211;tlsverify. Default is false. </p>
-<p> <code>&#8211;tlscacert</code>=<i>~/.docker/ca.pem</i><br />
+<p> <code>&#8211;tlscacert</code>=<i>~/.docker/ca.pem</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Trust certs signed only by this CA. </p>
-<p> <code>&#8211;tlscert</code>=<i>~/.docker/cert.pem</i><br />
+<p> <code>&#8211;tlscert</code>=<i>~/.docker/cert.pem</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Path to TLS certificate file. </p>
-<p> <code>&#8211;tlskey</code>=<i>~/.docker/key.pem</i><br />
+<p> <code>&#8211;tlskey</code>=<i>~/.docker/key.pem</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Path to TLS key file. </p>
-<p> <code>&#8211;tlsverify</code>=<i>true</i>|<i>false</i><br />
-&nbsp;<wbr>&nbsp;<wbr>Use TLS and verify the remote&nbsp;<wbr>(daemon: verify client, client: verify daemon).<br />
+<p> <code>&#8211;tlsverify</code>=<i>true</i>|<i>false</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>Use TLS and verify the remote&nbsp;<wbr>(daemon: verify client, client: verify daemon).<br/>
 &nbsp;<wbr>&nbsp;<wbr>Default is false. </p>
-<p> <code>&#8211;userland-proxy</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;userland-proxy</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>Rely on a userland proxy implementation for inter-container and outside-to-container loopback communications. Default is true. </p>
-<p> <code>&#8211;userns-remap</code>=<i>default</i>|<i>uid:gid</i>|<i>user:group</i>|<i>user</i>|<i>uid</i><br />
+<p> <code>&#8211;userns-remap</code>=<i>default</i>|<i>uid:gid</i>|<i>user:group</i>|<i>user</i>|<i>uid</i><br/>
 &nbsp;<wbr>Enable user namespaces for containers on the daemon. Specifying&nbsp;<wbr>&quot;default&quot;&nbsp;<wbr>will cause a new user and group to be created to handle UID and GID range remapping for the user namespace mappings used for contained processes. Specifying a user&nbsp;<wbr>(or uid)&nbsp;<wbr>and optionally a group&nbsp;<wbr>(or gid)&nbsp;<wbr>will cause the daemon to lookup the user and group&#8217;s subordinate ID ranges for use as the user namespace mappings for contained processes.</p>
 <h2>Signature Verification</h2>
 <p>Docker supports GPG image signatures verification when <code>&#8211;signature-verification</code> flag is <i>true</i>. This functionality works only at pull time and for images being pulled from docker registries version 2. You can sign an image using <a href="/docs/linux/man/1-skopeo/">skopeo</a>(1) or <a href="/docs/linux/man/1-atomic/">atomic</a>(1). See &lt;<a rel="nofollow" href="https://access.redhat.com/articles/2750891">https://access.redhat.com/articles/2750891</a>&gt;.</p>
@@ -160,7 +160,7 @@ Isolation specifies the type of isolation technology used by containers. Note th
 <p> Managing the thin-pool outside of Engine makes for the most feature-rich method of having Docker utilize device mapper thin provisioning as the backing storage for Docker containers. The highlights of the lvm-based thin-pool management feature include: automatic or interactive thin-pool resize support, dynamically changing thin-pool features, automatic thinp metadata checking when lvm activates the thin-pool, etc. </p>
 <p> As a fallback if no thin pool is provided, loopback files are created. Loopback is very slow, but can be used without any pre-configuration of storage. It is strongly recommended that you do not use loopback in production. Ensure your Engine daemon has a &#8211;storage-opt dm.thinpooldev argument provided. </p>
 <p> Example use: </p>
-<p> $ dockerd \<br />
+<p> $ dockerd \<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;storage-opt dm.thinpooldev=/dev/mapper/thin-pool</p>
 <h3>dm.basesize</h3>
 <p>Specifies the size to use when creating the base device, which limits the size of images and containers. The default value is 10G. Note, thin devices are inherently &quot;sparse&quot;, so a 10G device which is mostly empty doesn&#8217;t use 10 GB of space on the pool. However, the filesystem will use more space for base images the larger the device is. </p>

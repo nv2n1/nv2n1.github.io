@@ -10,7 +10,7 @@ description: "zhetrf_rook.f –"
 <p>zhetrf_rook.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhetrf_rook</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br />
+<p>subroutine <code>zhetrf_rook</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br/>
  <i></i><code>ZHETRF_ROOK</code> computes the factorization of a complex Hermitian indefinite matrix using the bounded Bunch-Kaufman (&#8216;rook&#8217;) diagonal pivoting method (blocked algorithm, calling Level 3 BLAS).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhetrf_rook (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( * )WORK, integerLWORK, integerINFO)</h3>

@@ -40,18 +40,18 @@ description: "ecryptfs-setup-private – setup an eCryptfs private directory."
 <h2>DESCRIPTION</h2>
 <p> <code>ecryptfs-setup-private</code> is a program that sets up a private cryptographic mountpoint for a non-root user. </p>
 <p> Be sure to properly escape your parameters according to your shell&#8217;s special character nuances, and also surround the parameters by double quotes, if necessary. Any of the parameters may be: </p>
-<p>&nbsp;<wbr>&nbsp;1)&nbsp;exported as environment variables<br />
-&nbsp;<wbr>&nbsp;2)&nbsp;specified on the command line<br />
+<p>&nbsp;<wbr>&nbsp;1)&nbsp;exported as environment variables<br/>
+&nbsp;<wbr>&nbsp;2)&nbsp;specified on the command line<br/>
 &nbsp;<wbr>&nbsp;3)&nbsp;left empty and interactively prompted </p>
 <p> <code>The user SHOULD ABSOLUTELY RECORD THE MOUNT PASSPHRASE AND STORE IN A SAFE LOCATION. If the mount passphase file is lost, or the mount passphrase is forgotten, THERE IS NO WAY TO RECOVER THE ENCRYPTED DATA.</code> </p>
-<p> Using the values of USER, MOUNTPASS, and LOGINPASS, <code>ecryptfs-setup-private</code> will:<br />
-&nbsp;<wbr>&nbsp;&#8211; Create&nbsp;~/.Private&nbsp;(permission 700)<br />
-&nbsp;<wbr>&nbsp;&#8211; Create&nbsp;~/Private&nbsp;(permission 500)<br />
-&nbsp;<wbr>&nbsp;&#8211; Backup any existing wrapped passphrases<br />
-&nbsp;<wbr>&nbsp;&#8211; Use LOGINPASS to wrap and encrypt MOUNTPASS<br />
-&nbsp;<wbr>&nbsp;&#8211; Write to&nbsp;~/.ecryptfs/wrapped-passphrase<br />
-&nbsp;<wbr>&nbsp;&#8211; Add the passphrase to the current keyring<br />
-&nbsp;<wbr>&nbsp;&#8211; Write the passphrase signature to&nbsp;~/.ecryptfs/Private.sig<br />
+<p> Using the values of USER, MOUNTPASS, and LOGINPASS, <code>ecryptfs-setup-private</code> will:<br/>
+&nbsp;<wbr>&nbsp;&#8211; Create&nbsp;~/.Private&nbsp;(permission 700)<br/>
+&nbsp;<wbr>&nbsp;&#8211; Create&nbsp;~/Private&nbsp;(permission 500)<br/>
+&nbsp;<wbr>&nbsp;&#8211; Backup any existing wrapped passphrases<br/>
+&nbsp;<wbr>&nbsp;&#8211; Use LOGINPASS to wrap and encrypt MOUNTPASS<br/>
+&nbsp;<wbr>&nbsp;&#8211; Write to&nbsp;~/.ecryptfs/wrapped-passphrase<br/>
+&nbsp;<wbr>&nbsp;&#8211; Add the passphrase to the current keyring<br/>
+&nbsp;<wbr>&nbsp;&#8211; Write the passphrase signature to&nbsp;~/.ecryptfs/Private.sig<br/>
 &nbsp;<wbr>&nbsp;&#8211; Test the cryptographic mount with a few reads and writes </p>
 <p> The system administrator can add the pam_ecryptfs.so module to the PAM stack which will automatically use the login passphrase to unwrap the mount passphrase, add the passphrase to the user&#8217;s kernel keyring, and automatically perform the mount. See <a href="/docs/linux/man/8-pam_ecryptfs/">pam_ecryptfs</a>(8). </p>
 <h2>FILES</h2>

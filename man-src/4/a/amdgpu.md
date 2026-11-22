@@ -32,10 +32,10 @@ description: "amdgpu – AMD RADEON GPU video driver"
 <dt><code>Option &#34;SWcursor&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Selects software cursor. The default is <code>off.</code></dd>
 <dt><code>Option &#34;Accel&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
-<dd>Enables or disables all hardware acceleration.<br />
+<dd>Enables or disables all hardware acceleration.<br/>
  The default is <code>on.</code> </dd>
 <dt><code>Option &#34;ZaphodHeads&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
-<dd>Specify the RandR output(s) to use with zaphod mode for a particular driver instance. If you use this option you must use this option for all instances of the driver.<br />
+<dd>Specify the RandR output(s) to use with zaphod mode for a particular driver instance. If you use this option you must use this option for all instances of the driver.<br/>
  For example: <code>Option &#34;ZaphodHeads&#34; &#34;LVDS,VGA-0&#34;</code> will assign xrandr outputs LVDS and VGA-0 to this instance of the driver.</dd>
 <dt><code>Option &#34;DRI&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
 <dd>Define the maximum level of DRI to enable. Valid values are 2 for DRI2 or 3 for DRI3. The default is <code>3 for DRI3</code> if the Xorg version is &gt;= 1.18.3, otherwise <code>2 for DRI2.</code></dd>
@@ -44,12 +44,12 @@ description: "amdgpu – AMD RADEON GPU video driver"
 <dt><code>Option &#34;TearFree&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Set the default value of the per-output &#8216;TearFree&#8217; property, which controls tearing prevention using the hardware page flipping mechanism. TearFree is on for any CRTC associated with one or more outputs with TearFree on. Two separate scanout buffers need to be allocated for each CRTC with TearFree on. If this option is set, the default value of the property is &#8216;on&#8217; or &#8216;off&#8217; accordingly. If this option isn&#8217;t set, the default value of the property is <code>auto,</code> which means that TearFree is on for rotated outputs, outputs with RandR transforms applied and for RandR 1.4 secondary outputs, otherwise off.</dd>
 <dt><code>Option &#34;VariableRefresh&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
-<dd>Enables support for enabling variable refresh on the Screen&#8217;s CRTCs when an suitable application is flipping via the Present extension.<br />
+<dd>Enables support for enabling variable refresh on the Screen&#8217;s CRTCs when an suitable application is flipping via the Present extension.<br/>
  The default is <code>off.</code></dd>
 <dt><code>Option &#34;AsyncFlipSecondaries&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Use async flips for secondary video outputs on multi-display setups. If a screen has multiple displays attached and DRI3 page flipping is used, then only one of the displays will have its page flip synchronized to vblank for tear-free presentation. This is the display that is used for presentation timing and timestamping, usually the one covering the biggest pixel area of the screen. All other displays (&quot;Secondaries&quot;) will not synchronize their flips. This may cause some tearing on these displays, but it prevents a permanent or periodic slowdown or irritating judder of animations if not all video outputs are running synchronized with each other and with the same refresh rate. There is no perfect solution apart from perfectly synchronized outputs, but this option may give preferrable results if the displays in a multi-display setup mirror or clone each other. The default is <code>off.</code></dd>
 <dt><code>Option &#34;AccelMethod&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
-<dd>Setting this option to <code>none</code> disables use of the glamor acceleration architecture. In that case, all 2D rendering is done by the CPU, but 3D and video hardware acceleration can still work. This is mainly useful for OpenGL driver bring-up.<br />
+<dd>Setting this option to <code>none</code> disables use of the glamor acceleration architecture. In that case, all 2D rendering is done by the CPU, but 3D and video hardware acceleration can still work. This is mainly useful for OpenGL driver bring-up.<br/>
  The default is to use glamor. </dd>
 </dl>
 <p> The following driver <code>Option</code> is supported for <code>glamor</code> :</p>

@@ -46,7 +46,7 @@ description: "perlexperiment – A listing of experimental features in Perl"
 <dd> Introduced in Perl 5.22.0 </dd>
 <p> Using this feature triggers warnings in the category <tt>&quot;experimental::re_strict&quot;</tt>. </p>
 <p> See &#8220;&#8217;strict&#8217; mode&#8221; in re</p>
-<dt>The &lt;:win32&gt; <font SIZE="-1">IO</font> pseudolayer</dt>
+<dt>The &lt;:win32&gt; IO pseudolayer</dt>
 <dd> The ticket for this feature is [perl #119453] &lt;<a rel="nofollow" href="https://rt.perl.org/rt3/Ticket/Display.html?id=119453">https://rt.perl.org/rt3/Ticket/Display.html?id=119453</a>&gt;. </dd>
 <p> See also perlrun</p>
 <dt>Declaring a reference to a variable</dt>
@@ -56,7 +56,7 @@ description: "perlexperiment – A listing of experimental features in Perl"
 <p> See also: &#8220;Declaring a Reference to a Variable&#8221; in perlref</p>
 <dt>There is an &quot;installhtml&quot; target in the Makefile.</dt>
 <dd> The ticket for this feature is [perl #116487] &lt;<a rel="nofollow" href="https://rt.perl.org/rt3/Ticket/Display.html?id=116487">https://rt.perl.org/rt3/Ticket/Display.html?id=116487</a>&gt;.</dd>
-<dt>Unicode in Perl on <font SIZE="-1">EBCDIC</font></dt>
+<dt>Unicode in Perl on EBCDIC</dt>
 <dd>
 </dd><dt>Script runs</dt>
 <dd> Introduced in Perl 5.28.0 </dd>
@@ -73,7 +73,7 @@ description: "perlexperiment – A listing of experimental features in Perl"
 <dd> Introduced in Perl 5.005</dd>
 <dt>die accepts a reference</dt>
 <dd> Introduced in Perl 5.005</dd>
-<dt><font SIZE="-1">DB</font> module</dt>
+<dt>DB module</dt>
 <dd> Introduced in Perl 5.6.0 </dd>
 <p> See also perldebug, perldebtut</p>
 <dt>Weak references</dt>
@@ -99,7 +99,7 @@ description: "perlexperiment – A listing of experimental features in Perl"
 <p> See also perlre</p>
 <dt>Linux abstract Unix domain sockets</dt>
 <dd> Introduced in Perl 5.9.2 </dd>
-<p> Accepted before Perl 5.20.0. The Socket library is now primarily maintained on <font SIZE="-1">CPAN,</font> rather than in the perl core. </p>
+<p> Accepted before Perl 5.20.0. The Socket library is now primarily maintained on CPAN, rather than in the perl core. </p>
 <p> See also Socket</p>
 <dt>Lvalue subroutines</dt>
 <dd> Introduced in Perl 5.6.0 </dd>
@@ -109,7 +109,7 @@ description: "perlexperiment – A listing of experimental features in Perl"
 <dd> <tt>&quot;(*ACCEPT)&quot;</tt> </dd>
 <p> Introduced in Perl 5.10 </p>
 <p> Accepted in Perl 5.20.0</p>
-<dt>The &lt;:pop&gt; <font SIZE="-1">IO</font> pseudolayer</dt>
+<dt>The &lt;:pop&gt; IO pseudolayer</dt>
 <dd> See also perlrun </dd>
 <p> Accepted in Perl 5.20.0</p>
 <dt>&quot;\s&quot; in regexp matches vertical tab</dt>
@@ -131,7 +131,7 @@ description: "perlexperiment – A listing of experimental features in Perl"
 <p> Removed in Perl 5.10</p>
 <dt>perlcc</dt>
 <dd> Introduced in Perl 5.005 </dd>
-<p> Moved from Perl 5.9.0 to <font SIZE="-1">CPAN</font></p>
+<p> Moved from Perl 5.9.0 to CPAN</p>
 <dt>The pseudo-hash data type</dt>
 <dd> Introduced in Perl 5.6.0 </dd>
 <p> Removed in Perl 5.9.0</p>
@@ -143,7 +143,7 @@ description: "perlexperiment – A listing of experimental features in Perl"
 <p> Introduced in Perl 5.9.0 </p>
 <p> Removed in Perl 5.9.5</p>
 <dt>Test::Harness::Straps</dt>
-<dd> Moved from Perl 5.10.1 to <font SIZE="-1">CPAN</font></dd>
+<dd> Moved from Perl 5.10.1 to CPAN</dd>
 <dt>&quot;legacy&quot;</dt>
 <dd> The experimental <tt>&quot;legacy&quot;</tt> pragma was swallowed by the <tt>&quot;feature&quot;</tt> pragma. </dd>
 <p> Introduced in Perl 5.11.2 </p>

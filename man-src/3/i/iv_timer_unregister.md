@@ -18,9 +18,9 @@ struct iv_timer {
     void (*handler)(void *);
 };
 </code></pre>
-<p> <code>void IV_TIMER_INIT(struct iv_timer *</code><i>timer</i><code>);</code><br />
- <code>void iv_timer_register(struct iv_timer *</code><i>timer</i><code>);</code><br />
- <code>void iv_timer_unregister(struct iv_timer *</code><i>timer</i><code>);</code><br />
+<p> <code>void IV_TIMER_INIT(struct iv_timer *</code><i>timer</i><code>);</code><br/>
+ <code>void iv_timer_register(struct iv_timer *</code><i>timer</i><code>);</code><br/>
+ <code>void iv_timer_unregister(struct iv_timer *</code><i>timer</i><code>);</code><br/>
  <code>int iv_timer_registered(struct iv_timer *</code><i>timer</i><code>);</code> </p>
 <h2>DESCRIPTION</h2>
 <p> The functions <code>iv_timer_register</code> and <code>iv_timer_unregister</code> register, respectively unregister, a timer with the current thread&#8217;s ivykis event loop. <code>iv_timer_registered</code> on a timer returns true if that timer is currently registered with ivykis. </p>

@@ -9,9 +9,9 @@ description: "nfs.systemd – managing NFS services through systemd."
 
 <p>nfs.systemd &#8211; managing NFS services through systemd.</p>
 <h2>Synopsis</h2>
-<p>nfs-utils.service<br />
- nfs-server.service<br />
- nfs-client.target<br />
+<p>nfs-utils.service<br/>
+ nfs-server.service<br/>
+ nfs-client.target<br/>
  <i>etc</i></p>
 <h2>Description</h2>
 <p>The <i>nfs-utils</i> package provides a suite of <i>systemd</i> unit files which allow the various services to be started and managed. These unit files ensure that the services are started in the correct order, and the prerequisites are active before dependant services start. As there are quite few unit files, it is not immediately obvious how best to achieve certain results. The following subsections attempt to cover the issues that are most likely to come up.</p>
@@ -54,8 +54,8 @@ ExecStart= /usr/sbin/rpc.mountd $RPCMOUNTDOPTS</pre>
 <dl>
 <dd><code>systemctl mask idmapd</code></dd></dl>
 <h2>Files</h2>
-<p>/etc/nfs.conf<br />
- /etc/nfsmount.conf<br />
+<p>/etc/nfs.conf<br/>
+ /etc/nfsmount.conf<br/>
  /etc/idmapd.conf</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5), <code><a href="/docs/linux/man/5-nfs-conf/">nfs.conf</a></code>(5), <code><a href="/docs/linux/man/5-nfsmount-conf/">nfsmount.conf</a></code>(5). </p>

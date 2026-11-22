@@ -13,48 +13,48 @@ description: "pvscan – List all physical volumes"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&nbsp;<i>option_args</i>&nbsp;] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&nbsp;<i>position_args</i>&nbsp;]</p>
 <h2>Description</h2>
-<p>When called without the &#8211;cache option, pvscan lists PVs on the system, like <code><a href="/docs/linux/man/8-pvs/">pvs</a></code>(8) or <code><a href="/docs/linux/man/8-pvdisplay/">pvdisplay</a></code>(8). When the &#8211;cache and -aay options are used, pvscan records which PVs are available on the system, and activates LVs in completed VGs. A VG is complete when pvscan sees that the final PV in the VG has appeared. This is used by event-based system startup (systemd, udev) to activate LVs. The four main variations of this are: <code>pvscan &#8211;cache</code> <i>device</i> If device is present, lvm adds a record that the PV on device is online. If device is not present, lvm removes the online record for the PV. In most cases, the pvscan will only read the named devices. <code>pvscan &#8211;cache -aay</code> <i>device</i>&#8230; This begins by performing the same steps as above. Afterward, if the VG for the specified PV is complete, then pvscan will activate LVs in the VG (the same as vgchange -aay vgname would do.) <code>pvscan &#8211;cache</code> This first clears all existing PV online records, then scans all devices on the system, adding PV online records for any PVs that are found. <code>pvscan &#8211;cache -aay</code> This begins by performing the same steps as pvscan &#8211;cache. Afterward, it activates LVs in any complete VGs. To prevent devices from being scanned by pvscan &#8211;cache, add them to <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>devices/global_filter.</code> For more information, see:<br />
- <code>lvmconfig &#8211;withcomments devices/global_filter</code> Auto-activation of VGs or LVs can be enabled/disabled using:<br />
- <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>activation/auto_activation_volume_list</code> For more information, see:<br />
+<p>When called without the &#8211;cache option, pvscan lists PVs on the system, like <code><a href="/docs/linux/man/8-pvs/">pvs</a></code>(8) or <code><a href="/docs/linux/man/8-pvdisplay/">pvdisplay</a></code>(8). When the &#8211;cache and -aay options are used, pvscan records which PVs are available on the system, and activates LVs in completed VGs. A VG is complete when pvscan sees that the final PV in the VG has appeared. This is used by event-based system startup (systemd, udev) to activate LVs. The four main variations of this are: <code>pvscan &#8211;cache</code> <i>device</i> If device is present, lvm adds a record that the PV on device is online. If device is not present, lvm removes the online record for the PV. In most cases, the pvscan will only read the named devices. <code>pvscan &#8211;cache -aay</code> <i>device</i>&#8230; This begins by performing the same steps as above. Afterward, if the VG for the specified PV is complete, then pvscan will activate LVs in the VG (the same as vgchange -aay vgname would do.) <code>pvscan &#8211;cache</code> This first clears all existing PV online records, then scans all devices on the system, adding PV online records for any PVs that are found. <code>pvscan &#8211;cache -aay</code> This begins by performing the same steps as pvscan &#8211;cache. Afterward, it activates LVs in any complete VGs. To prevent devices from being scanned by pvscan &#8211;cache, add them to <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>devices/global_filter.</code> For more information, see:<br/>
+ <code>lvmconfig &#8211;withcomments devices/global_filter</code> Auto-activation of VGs or LVs can be enabled/disabled using:<br/>
+ <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>activation/auto_activation_volume_list</code> For more information, see:<br/>
  <code>lvmconfig &#8211;withcomments activation/auto_activation_volume_list</code> To disable auto-activation, explicitly set this list to an empty list, i.e. auto_activation_volume_list = [ ]. When this setting is undefined (e.g. commented), then all LVs are auto-activated. </p>
 <h2>Usage</h2>
 <p>Display PV information. </p>
 <p> <code>pvscan</code> </p>
 <dl>
-<dd>[ <code>-e</code>|<code>&#8211;exported</code> ]<br />
- [ <code>-n</code>|<code>&#8211;novolumegroup</code> ]<br />
- [ <code>-s</code>|<code>&#8211;short</code> ]<br />
- [ <code>-u</code>|<code>&#8211;uuid</code> ]<br />
+<dd>[ <code>-e</code>|<code>&#8211;exported</code> ]<br/>
+ [ <code>-n</code>|<code>&#8211;novolumegroup</code> ]<br/>
+ [ <code>-s</code>|<code>&#8211;short</code> ]<br/>
+ [ <code>-u</code>|<code>&#8211;uuid</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> Autoactivate a VG when all PVs are online. </p>
 <p> <code>pvscan</code> <code>&#8211;cache</code> </p>
 <dl>
-<dd>[ <code>-a</code>|<code>&#8211;activate</code> <code>ay</code> ]<br />
- [ <code>-j</code>|<code>&#8211;major</code> <i>Number</i> ]<br />
- [ <code>&#8211;minor</code> <i>Number</i> ]<br />
- [ <code>&#8211;noudevsync</code> ]<br />
+<dd>[ <code>-a</code>|<code>&#8211;activate</code> <code>ay</code> ]<br/>
+ [ <code>-j</code>|<code>&#8211;major</code> <i>Number</i> ]<br/>
+ [ <code>&#8211;minor</code> <i>Number</i> ]<br/>
+ [ <code>&#8211;noudevsync</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>String</i>|<i>PV</i> &#8230; ]</dd></dl>
 <p> Common options for command:</p>
 <dl>
-<dd>[ <code>&#8211;ignorelockingfailure</code> ]<br />
+<dd>[ <code>&#8211;ignorelockingfailure</code> ]<br/>
  [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>

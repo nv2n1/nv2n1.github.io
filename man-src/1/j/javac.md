@@ -335,13 +335,13 @@ javac[options][sourcefiles][classes][@argfiles]
 <pre>
 <code>  */</code>
 </pre>
-<p>public<br />
-static void deprecatedMethood()<br />
-{<br />
+<p>public<br/>
+static void deprecatedMethood()<br/>
+{<br/>
 }</p>
-<p>public<br />
-static void newMethod()<br />
-{<br />
+<p>public<br/>
+static void newMethod()<br/>
+{<br/>
 }</p>
 <pre>
 </pre>
@@ -360,7 +360,7 @@ static void newMethod()<br />
 <pre>
 <code>    void m() {</code>
 </pre>
-<p>if (true)<br />
+<p>if (true)<br/>
     ;</p>
 <pre>
 <code>    }</code>
@@ -450,8 +450,8 @@ static void newMethod()<br />
 <pre>
 <code>   @Override</code>
 </pre>
-<p>void varargsMethod(String[] s)<br />
-{<br />
+<p>void varargsMethod(String[] s)<br/>
+{<br/>
 }</p>
 <pre>
 <code>}</code>
@@ -619,12 +619,12 @@ static void newMethod()<br />
 <pre>
 <code>class XLintStatic {</code>
 </pre>
-<p>static void m1()<br />
-{<br />
+<p>static void m1()<br/>
+{<br/>
 }</p>
-<p>void m2()<br />
-{<br />
-    this.m1();<br />
+<p>void m2()<br/>
+{<br/>
+    this.m1();<br/>
 }</p>
 <pre>
 <code>}</code>
@@ -783,9 +783,9 @@ static void newMethod()<br />
 <h3>OLD INTERFACE</h3>
 <p> <i>Note:</i> This API is retained for backward compatibility only. All new code should use the newer Java Compiler API. </p>
 <p> The <code>com.sun.tools.javac.Main</code> class provides two static methods to call the compiler from a program: </p>
-<p>public<br />
+<p>public<br/>
 static int compile(String[] args);</p>
-<p>public<br />
+<p>public<br/>
 static int compile(String[] args, PrintWriter out);</p>
 <pre>
 </pre>
@@ -805,8 +805,8 @@ static int compile(String[] args, PrintWriter out);</p>
 <pre>
 <code>public class Hello {</code>
 </pre>
-<p>public<br />
-static void main(String[] args)<br />
+<p>public<br/>
+static void main(String[] args)<br/>
 {</p>
 <pre><code>
 for (int i = 0; i &lt; args.length; i++) {

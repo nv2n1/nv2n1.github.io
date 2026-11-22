@@ -71,8 +71,8 @@ description: "gtypist – manual page for gtypist 2.8.1"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to bug-gtypist [at] gnu.org</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1998, 1999, 2000, 2001, 2002, 2003 Simon Baldwin.<br />
- Copyright &#169; 2003, 2004, 2008 GNU Typist Development Team. This program comes with ABSOLUTELY NO WARRANTY; for details please see the file &#8216;COPYING&#8217; supplied with the source code.<br />
+<p> Copyright &#169; 1998, 1999, 2000, 2001, 2002, 2003 Simon Baldwin.<br/>
+ Copyright &#169; 2003, 2004, 2008 GNU Typist Development Team. This program comes with ABSOLUTELY NO WARRANTY; for details please see the file &#8216;COPYING&#8217; supplied with the source code.<br/>
  This is free software, and you are welcome to redistribute it under certain conditions; again, see &#8216;COPYING&#8217; for details. This program is released under the GNU General Public License.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gtypist</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gtypist</code> programs are properly installed at your site, the command</p>

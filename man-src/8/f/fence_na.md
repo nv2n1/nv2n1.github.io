@@ -14,7 +14,7 @@ description: "fence_na"
 <h2>Description</h2>
 <p>This fence agent takes argument from the command line or from the &#8216;fenced&#8217; program and interprets them into calls to send to the Node Assassin fence device. It analyzes the returned information and exits with an appropriate exit code as dictated by the FenceAgentAPI.</p>
 <h2>Usage</h2>
-<p>Arguments are read from <font SIZE="-1">STDIN</font> as &#8216;variable=value&#8217; pairs, one pair per new line. This is the method used by &#8216;fenced&#8217;. </p>
+<p>Arguments are read from STDIN as &#8216;variable=value&#8217; pairs, one pair per new line. This is the method used by &#8216;fenced&#8217;. </p>
 <p> For testing or manual control, arguments may be passed as command line arguments.</p>
 <h2>Overview</h2>
 <p>This takes arguments that defined which Node Assassin to call, what node to work on and what action should be taken. These arguments are defined by the FenceAgentAPI. These actions are then translated into a set of Node Assassin states which then get passed to the device.</p>
@@ -24,7 +24,7 @@ description: "fence_na"
 <h2>Node Assassin States</h2>
 <p>Each Node Assassin port can be set to one of four states. They are:</p>
 <h2>0</h2>
-<p>This will release the fence on the specified <font SIZE="-1">NA</font> node&#8217;s power and reset ports.</p>
+<p>This will release the fence on the specified NA node&#8217;s power and reset ports.</p>
 <h2>1</h2>
 <p>This state will fence the node specified by the &#8220;port&#8221; argument. The fence will remain active until released. Further, the fence will &#8220;lock out&#8221; the node&#8217;s front-panel buttons until the fence is released.</p>
 <h2>2</h2>
@@ -32,7 +32,7 @@ description: "fence_na"
 <h2>3</h2>
 <p>This state will fence the node for five seconds to 30 seconds, depending on how long it takes for the power feed to drop low. This is meant to provide a way to force crashed nodes to power off without the front-panel lock.</p>
 <h2>Options</h2>
-<p>Which options are valid depends on how the arguments are passed in. The &#8220;main&#8221; method of passing arguments is via <font SIZE="-1">STDIN</font> as a series of &#8216;varible=value&#8217; pairs, one per line. All arguments accepted this way have command-line arguments passed in via single-dashes switches. Each option below shows either calling method&#8217;s arguments, where available.</p>
+<p>Which options are valid depends on how the arguments are passed in. The &#8220;main&#8221; method of passing arguments is via STDIN as a series of &#8216;varible=value&#8217; pairs, one per line. All arguments accepted this way have command-line arguments passed in via single-dashes switches. Each option below shows either calling method&#8217;s arguments, where available.</p>
 <h2>-h</h2>
 <p>Prints this help message.</p>
 <h2>-v</tt>, <tt>-V</h2>
@@ -43,14 +43,14 @@ description: "fence_na"
 <p>Tells this fence agent to print debug messages.</p>
 <h2>-a address</tt>, <tt>ipaddr=address</h2>
 <p>Tells the fence agent which Node Assassin to use. </p>
-<p> </tt><i></i><font SIZE="-1"><i>NOTE</i></font><i>!</i> The name or <font SIZE="-1">IP</font> addresses *MUST* match a name or <font SIZE="-1">IP</font> address defined in <tt>&quot;/etc/cluster/fence_na.conf&quot;</tt>! Specifically, it must match one of the <tt>&quot;node::X::ipaddr&quot;</tt> entries where <tt>&quot;X&quot;</tt> is the <font SIZE="-1">ID</font> of the Node Assassin.</p>
+<p> </tt><i></i><i>NOTE</i><i>!</i> The name or IP addresses *MUST* match a name or IP address defined in <tt>&quot;/etc/cluster/fence_na.conf&quot;</tt>! Specifically, it must match one of the <tt>&quot;node::X::ipaddr&quot;</tt> entries where <tt>&quot;X&quot;</tt> is the ID of the Node Assassin.</p>
 <h2>-l name</tt>, <tt>login=name</h2>
 <p>This is the login name used to connect to this fence agent. It must match the value &quot;system::username&quot;</tt> in <tt>&quot;/etc/cluster/fence_na.conf&quot;</tt>.</p>
 <h2>-p secret</tt>, <tt>passwd=secret</h2>
 <p>This is the login password used to connect to this fence agent. It must match the value &quot;system::password&quot;</tt> in <tt>&quot;/etc/cluster/fence_na.conf&quot;</tt>.</p>
 <h2>-n #</tt>, <tt>port=#</h2>
 <p>This tells the fence agent which node to act on. </p>
-<p> </tt><i></i><font SIZE="-1"><i>NOTE</i></font><i>!</i> Please do not confuse this with the Node Assassin&#8217;s internal concept of a port.</p>
+<p> </tt><i></i><i>NOTE</i><i>!</i> Please do not confuse this with the Node Assassin&#8217;s internal concept of a port.</p>
 <h2>-o val</tt>, <tt>action=val</h2>
 <p>This is the &quot;action&quot;</tt> (formerly <tt>&quot;option&quot;</tt>) to perform on the selected node. Valid actions and how Node Assassin implements them are: </p>
 <p> <i></i>&quot;off&quot;<i></i> </p>
@@ -65,7 +65,7 @@ description: "fence_na"
 <p> Note that this argument is designed to be used by the fence agent and will not print any output to <tt>&quot;STDOUT&quot;</tt>. </p>
 <p> <i></i>&quot;monitor&quot;<i>, </i>&quot;list&quot;<i></i></p>
 <h2>Node Assassin Specific Actions</h2>
-<p><i></i><font SIZE="-1"><i>NOTE</i></font><i></i>: The following states are supported by Node Assassin only. These states are not used by the <tt>&quot;fenced&quot;</tt> daemon and are provided here as a convenience for the user. </p>
+<p><i></i><i>NOTE</i><i></i>: The following states are supported by Node Assassin only. These states are not used by the <tt>&quot;fenced&quot;</tt> daemon and are provided here as a convenience for the user. </p>
 <p> Any commands named <tt>*_all</tt> ignore the node value, if set.</p>
 <h2>release</h2>
 <p>If the node is fenced, the fence will be released. The difference from <tt>&quot;on&quot;</tt> being that this will not boot the node after the fence is released.</p>

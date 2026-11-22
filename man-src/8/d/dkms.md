@@ -182,12 +182,12 @@ description: "dkms – Dynamic Kernel Module Support"
 <dd>This directive allows you to specify a kernel version that obsoletes the necessity for this particular DKMS module. This can be specified as a particular upstream kernel or an ABI bump of a kernel. For example, &quot;2.6.24&quot; would be an upstream kernel and &quot;2.6.24-16&quot; would represent an ABI bump for a kernel. Both are valid in this area. </dd>
 <p> Please avoid the use of <code>OBSOLETE_BY</code> wherever possible. It&#8217;s use indicates a lack of proper module versioning using <code>MODULE_VERSION()</code> tags in the module source itself. It is better to fix the <code>MODULE_VERSION()</code> tags than use <code>OBSOLETE_BY.</code> This also introduces a implicit distribution/version dependency on the package, as the value of <code>OBSOLETE_BY</code> is meaningful only in the context of a single distribution/version. </p>
 <p> If you feel you must use it, please use as such in dkms.conf: </p>
-<p>&nbsp;ubuntu_804=&quot;Ubuntu<br />
-&nbsp;8.04&quot;<br />
-&nbsp;if&nbsp;[&nbsp;-x&nbsp;/usr/bin/lsb_release&nbsp;];&nbsp;then<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;[&nbsp;&quot;$(/usr/bin/lsb_release -sir)&quot;&nbsp;==&nbsp;&quot;${ubuntu_804}&quot;&nbsp;];&nbsp;then<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;OBSOLETE_BY=&quot;2.6.25&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;fi<br />
+<p>&nbsp;ubuntu_804=&quot;Ubuntu<br/>
+&nbsp;8.04&quot;<br/>
+&nbsp;if&nbsp;[&nbsp;-x&nbsp;/usr/bin/lsb_release&nbsp;];&nbsp;then<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;[&nbsp;&quot;$(/usr/bin/lsb_release -sir)&quot;&nbsp;==&nbsp;&quot;${ubuntu_804}&quot;&nbsp;];&nbsp;then<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;OBSOLETE_BY=&quot;2.6.25&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;fi<br/>
 &nbsp;fi </p>
 <dt><code>PATCH[#]=</code></dt>
 <dd>Use the PATCH directive array to specify patches which should be applied to your source before a build occurs. All patches are expected to be in -p1 format and are applied with the patch -p1 command. Each directive should specify the filename of the patch to apply, and all patches must be located in the patches subdirectory of your source directory ( <i>/usr/src/&lt;module&gt;-&lt;module-version&gt;/patches/</i> ). If any patch fails to apply, the build will be halted and the rejections can be inspected in <i>/var/lib/dkms/&lt;module&gt;/&lt;module-version&gt;/build/.</i> If a PATCH should only be applied conditionally, the <code>PATCH_MATCH[#]</code> array should be used, and a corresponding regular expression should be placed in <code>PATCH_MATCH[#]</code> which will alert dkms to only use that <code>PATCH[#]</code> if the regular expression matches the kernel which the module is currently being built for.</dd>
@@ -227,9 +227,9 @@ description: "dkms – Dynamic Kernel Module Support"
 <dd>This variable holds the value of the location of your kernel source directory. Usually, this will be <i>/lib/modules/$kernelver/build</i> , unless otherwise specified with the <code>&#8211;kernelsourcedir</code> option.</dd></dl>
 <h2>Dkms.Conf Overrides</h2>
 <p>You can override the module-provided <i>dkms.conf</i> files. Every time after a dkms.conf file is read, dkms will look for and read the following files in order: </p>
-<p> <i>/etc/dkms/&lt;module&gt;.conf</i><br />
- <i>/etc/dkms/&lt;module&gt;-&lt;module-version&gt;.conf</i><br />
- <i>/etc/dkms/&lt;module&gt;-&lt;module-version&gt;-&lt;kernel&gt;.conf</i><br />
+<p> <i>/etc/dkms/&lt;module&gt;.conf</i><br/>
+ <i>/etc/dkms/&lt;module&gt;-&lt;module-version&gt;.conf</i><br/>
+ <i>/etc/dkms/&lt;module&gt;-&lt;module-version&gt;-&lt;kernel&gt;.conf</i><br/>
  <i>/etc/dkms/&lt;module&gt;-&lt;module-version&gt;-&lt;kernel&gt;-&lt;arch&gt;.conf</i> </p>
 <p> You can use these files to override settings in the module-provided dkms.conf files.</p>
 <h2>/etc/dkms/framework.conf</h2>

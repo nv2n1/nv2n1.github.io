@@ -10,9 +10,9 @@ description: "freeze, unfreeze, melt, fcat – compress and uncompress files"
 
 <p> freeze, unfreeze, melt, fcat &#8211; compress and uncompress files</p>
 <h2>SYNOPSIS</h2>
-<p> <code>freeze</code> [ <code>-cdfvVgx</code> ] [ <i>filename | type &#8230;</i> ]<br />
- <code>unfreeze</code> [ <code>-cfvV</code> ] [ <i>filename &#8230;</i> ]<br />
- <code>melt</code> [ <code>-cfvV</code> ] [ <i>filename &#8230;</i> ]<br />
+<p> <code>freeze</code> [ <code>-cdfvVgx</code> ] [ <i>filename | type &#8230;</i> ]<br/>
+ <code>unfreeze</code> [ <code>-cfvV</code> ] [ <i>filename &#8230;</i> ]<br/>
+ <code>melt</code> [ <code>-cfvV</code> ] [ <i>filename &#8230;</i> ]<br/>
  <code>fcat</code> [ <i>filename &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> Compresses the specified files or standard input. Each file is replaced by a file with the extension <code>.F,</code> but only if the file got smaller. If no files are specified, the compression is applied to the standard input and is written to standard output regardless of the results. Compressed files can be restored to their original form by specifying the <code>-d</code> option, or by running <i>melt</i> or <i>unfreeze</i> (both linked to <i>freeze</i>), on the <code>.F</code> files or the standard input. </p>

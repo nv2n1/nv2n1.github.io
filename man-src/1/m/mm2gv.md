@@ -51,7 +51,7 @@ description: "mm2gv – Matrix Market-DOT converters"
 <h2>RETURN CODES</h2>
 <p> Return <code>0</code> if there were no problems during conversion; and non-zero if any error occurred.</p>
 <h2>AUTHORS</h2>
-<p> Yifan Hu &lt;yifanhu [at] yahoo.com&gt;<br />
+<p> Yifan Hu &lt;yifanhu [at] yahoo.com&gt;<br/>
  Emden R. Gansner &lt;erg [at] graphviz.com&gt;</p>
 <h2>ADDITIONAL INFO</h2>
 <p> See <a rel="nofollow" href="http://math.nist.gov/MatrixMarket/">http://math.nist.gov/MatrixMarket/</a> for description of the format and <a rel="nofollow" href="http://www.cise.ufl.edu/research/sparse/matrices/">http://www.cise.ufl.edu/research/sparse/matrices/</a> for a large collection of sparse matrices in this format. </p>

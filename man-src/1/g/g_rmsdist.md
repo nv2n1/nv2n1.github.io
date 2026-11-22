@@ -18,48 +18,48 @@ description: "g_rmsdist – calculates atom pair distances averaged with power 2
 <p> <code> 3 SER HB1 3 SER HB2</code> </p>
 <p> Residue and atom names must exactly match those in the structure file, including case. Specifying non-sequential atoms is undefined.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br/>
 &nbsp;<wbr>Structure+mass(db): tpr tpb tpa gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-equiv</code><i> equiv.dat</i> <code>Input, Opt.</code><br />
+<p> <code>-equiv</code><i> equiv.dat</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Generic data file&nbsp;<wbr> </p>
-<p> <code>-o</code><i> distrmsd.xvg</i> <code>Output</code><br />
+<p> <code>-o</code><i> distrmsd.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-rms</code><i> rmsdist.xpm</i> <code>Output, Opt.</code><br />
+<p> <code>-rms</code><i> rmsdist.xpm</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
-<p> <code>-scl</code><i> rmsscale.xpm</i> <code>Output, Opt.</code><br />
+<p> <code>-scl</code><i> rmsscale.xpm</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
-<p> <code>-mean</code><i> rmsmean.xpm</i> <code>Output, Opt.</code><br />
+<p> <code>-mean</code><i> rmsmean.xpm</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
-<p> <code>-nmr3</code><i> nmr3.xpm</i> <code>Output, Opt.</code><br />
+<p> <code>-nmr3</code><i> nmr3.xpm</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
-<p> <code>-nmr6</code><i> nmr6.xpm</i> <code>Output, Opt.</code><br />
+<p> <code>-nmr6</code><i> nmr6.xpm</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
-<p> <code>-noe</code><i> noe.dat</i> <code>Output, Opt.</code><br />
+<p> <code>-noe</code><i> noe.dat</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Generic data file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-nlevels</code><i> int</i><code> 40</code><br />
+<p> <code>-nlevels</code><i> int</i><code> 40</code><br/>
 &nbsp;<wbr>Discretize rms in&nbsp;<wbr>&nbsp;<wbr>levels </p>
-<p> <code>-max</code><i> real</i><code> -1 </code><br />
+<p> <code>-max</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Maximum level in matrices </p>
-<p> <code>-[no]sumh</code><i>yes </i><br />
+<p> <code>-[no]sumh</code><i>yes </i><br/>
 &nbsp;<wbr>average distance over equivalent hydrogens </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

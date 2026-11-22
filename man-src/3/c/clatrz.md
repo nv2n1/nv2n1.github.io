@@ -11,7 +11,7 @@ description: "clatrz.f –"
 <p> clatrz.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clatrz</code> (M, N, L, A, LDA, TAU, WORK)<br />
+<p> subroutine <code>clatrz</code> (M, N, L, A, LDA, TAU, WORK)<br/>
  <i></i><code>CLATRZ</code> factors an upper trapezoidal matrix by means of unitary transformations.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clatrz (integerM, integerN, integerL, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( * )WORK)</h3>

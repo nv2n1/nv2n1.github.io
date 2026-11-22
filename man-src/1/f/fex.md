@@ -72,14 +72,14 @@ description: "fex – simple and powerful field extraction"
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Show the <font SIZE="-1">MTU</font> for a given interface</dt>
+<dt>Show the MTU for a given interface</dt>
 <dd> The &#8216;mtu&#8217; in ifconfig output looks like &#8216;mtu:1500&#8217;. So have fex split by space, then grab fields matching /mtu:/, split by colon, and choose the last field. </dd>
 <pre>
   % ifconfig wlan0 | fex ' /mtu:/:-1'
   1500
 </pre>
 <dt>Parse apache logs</dt>
-<dd> Pull the <font SIZE="-1">IP</font> address (first field by space) and the path requested (2nd field in &#8220;<font SIZE="-1">GET</font> &lt;path&gt; &#8230;&#8221;) </dd>
+<dd> Pull the IP address (first field by space) and the path requested (2nd field in &#8220;GET &lt;path&gt; &#8230;&#8221;) </dd>
 <pre>
     % fex 1 '&quot;2 2' &lt; /b/logs/access
     65.57.245.11 /
@@ -93,9 +93,9 @@ description: "fex – simple and powerful field extraction"
 <p> Source Code: &lt;<a rel="nofollow" href="https://github.com/jordansissel/fex">https://github.com/jordansissel/fex</a>&gt;</p>
 <h2>CONTACT</h2>
 <p> Please send questions to jls [at] semicomplete.com </p>
-<p> File bugs and feature requests at the following <font SIZE="-1">URL:</font> </p>
+<p> File bugs and feature requests at the following URL: </p>
 <p> &lt;<a rel="nofollow" href="https://github.com/jordansissel/fex/issues">https://github.com/jordansissel/fex/issues</a>&gt; </p>
 <p> Alternately, if you prefer email, feel free to file bugs by email. Whatever works for you :) </p>
-<p> Patches, ideas, and other contributions by many, nice folks. See the <font SIZE="-1">CHANGELIST</font> file for who provided what.</p>
+<p> Patches, ideas, and other contributions by many, nice folks. See the CHANGELIST file for who provided what.</p>
 <h2>AUTHOR</h2>
 <p> fex was written by Jordan Sissel. </p>

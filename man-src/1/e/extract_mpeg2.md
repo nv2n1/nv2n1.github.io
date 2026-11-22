@@ -21,14 +21,14 @@ description: "extract_mpeg2 – extract MPEG video streams from a multiplexed st
 <dt><code>-t pid</code></dt>
 <dd> use transport stream demultiplexer, pid 0x10-0x1ffe</dd></dl>
 <h2>AUTHORS</h2>
-<p> Michel Lespinasse &lt;walken [at] zoy.org&gt;<br />
- Aaron Holtzman &lt;aholtzma [at] ess.engr.uvic.ca&gt;<br />
+<p> Michel Lespinasse &lt;walken [at] zoy.org&gt;<br/>
+ Aaron Holtzman &lt;aholtzma [at] ess.engr.uvic.ca&gt;<br/>
  And many others on the net.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;libmpeg2-devel [at] lists.sourceforge.net&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2000-2003 Michel Lespinasse<br />
- Copyright &#169; 1999-2000 Aaron Holtzman<br />
+<p> Copyright &#169; 2000-2003 Michel Lespinasse<br/>
+ Copyright &#169; 1999-2000 Aaron Holtzman<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mpeg2dec/">mpeg2dec</a></code>(1) </p>

@@ -26,8 +26,8 @@ description: "ipmiutil_sel – show firmware System Event Log records"
 <dt>-e</dt>
 <dd>Show Extended sensor descriptions for events if run locally. This option will attempt to get the full sensor description from /var/lib/ipmiutil/sensor_out.txt, and also use its SDR to decode any raw threshold values in the event, if present. </dd>
 <dt>-f sel_file</dt>
-<dd>Interpret a file containing raw ascii text SEL data captured with ipmiutil sel -r, or some other similar utility. Each line in the file should be in this form, with no leading spaces:<br />
- 04 00 02 76 a9 4a 47 20 00 04 10 09 6f 42 0f ff<br />
+<dd>Interpret a file containing raw ascii text SEL data captured with ipmiutil sel -r, or some other similar utility. Each line in the file should be in this form, with no leading spaces:<br/>
+ 04 00 02 76 a9 4a 47 20 00 04 10 09 6f 42 0f ff<br/>
  Lines not in this format will be ignored. </dd>
 <dt>-l N</dt>
 <dd>Show last N SEL records, in reverse order (newest first). For some BMC implementations, this may not show all N records specified.</dd>

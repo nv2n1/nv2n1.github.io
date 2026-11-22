@@ -50,7 +50,7 @@ description: "org.freedesktop.locale1 – The D-Bus interface of systemd-localed
 <p> The boolean argument <i>convert</i> may be set to optionally convert the console keyboard configuration to X11 keyboard mappings and vice versa. If true and <code>SetVConsoleKeyboard()</code> is used, the nearest X11 keyboard setting for the chosen console setting is set. If true and <code>SetX11Keyboard()</code> is used, the nearest console keyboard setting for the chosen X11 setting is set. Hence, it is usually sufficient to call only one of the two functions. </p>
 <p> For graphical UIs that need to set the system keyboard mapping simply invoke <code>SetX11Keyboard()</code>, set <i>convert=true</i> and ignore <code>SetVConsoleKeyboard()</code>. </p>
 <p> Use the empty string for the keymap parameters you wish not to set. </p>
-<p> The <i>interactive</i> boolean parameters can be used to control whether m[blue]<code>polkit</code>m[]<font SIZE="-2">[1]</font> should interactively ask the user for authentication credentials if required.</p>
+<p> The <i>interactive</i> boolean parameters can be used to control whether m[blue]<code>polkit</code>m[][1] should interactively ask the user for authentication credentials if required.</p>
 <h3>Signals</h3>
 <p>Whenever the system locale or keymap is changed via the daemon, <code>PropertyChanged</code> signals are sent out to which clients can subscribe.</p>
 <h3>Properties</h3>
@@ -67,7 +67,7 @@ description: "org.freedesktop.locale1 – The D-Bus interface of systemd-localed
  --object-path /org/freedesktop/locale1</pre>
 </dd></dl>
 <h2>Versioning</h2>
-<p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[2]</font>.</p>
+<p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[][2].</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

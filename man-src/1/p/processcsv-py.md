@@ -20,15 +20,15 @@ description: "processcsv.py – process virt-top CSV files"
 <p>The second command will <code>overwrite</code> the following files in the current directory:</p>
 <dl COMPACT>
 <dt>&quot;global.csv&quot;</dt>
-<dd>This contains the global (host) statistics columns from the <font SIZE="-1">CSV</font> file.</dd>
+<dd>This contains the global (host) statistics columns from the CSV file.</dd>
 <dt>&quot;domainNN<tt>.csv&quot; (multiple files)</dt>
-<dd>For each libvirt domain </tt><font SIZE="-1"><tt>ID </tt></font><tt></tt><i></i><font SIZE="-1"><i>NN</i></font><i></i>, a file is created containing the per-domain statistics from the <font SIZE="-1">CSV</font> file.</dd></dl>
+<dd>For each libvirt domain </tt><tt>ID </tt><tt></tt><i></i><i>NN</i><i></i>, a file is created containing the per-domain statistics from the CSV file.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-virt-top/">virt-top</a></i>(1)</p>
 <h2>Authors</h2>
 <p>Richard W.M. Jones &lt;rjones @ redhat . com&gt;</p>
 <h2>Copyright</h2>
 <p>(C) Copyright 2007-2012 Red Hat Inc., Richard W.M. Jones <a rel="nofollow" href="http://libvirt.org/">http://libvirt.org/</a> </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>

@@ -13,10 +13,10 @@ description: "include/antlr3recognizersharedstate.h –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt; </p>
 <h3>Data Structures</h3>
-<p> struct <code>ANTLR3_RECOGNIZER_SHARED_STATE_struct</code><br />
+<p> struct <code>ANTLR3_RECOGNIZER_SHARED_STATE_struct</code><br/>
  <i>All the data elements required to track the current state of any recognizer (lexer, parser, tree parser). </i></p>
 <h3>Typedefs</h3>
-<p> typedef struct <code>ANTLR3_RECOGNIZER_SHARED_STATE_struct</code> <code>ANTLR3_RECOGNIZER_SHARED_STATE</code><br />
+<p> typedef struct <code>ANTLR3_RECOGNIZER_SHARED_STATE_struct</code> <code>ANTLR3_RECOGNIZER_SHARED_STATE</code><br/>
  <i>All the data elements required to track the current state of any recognizer (lexer, parser, tree parser). </i></p>
 <h2>Detailed Description</h2>
 <p> While the C runtime does not need to model the state of multiple lexers and parsers in the same way as the Java runtime does it is no overhead to reflect that model. </p>

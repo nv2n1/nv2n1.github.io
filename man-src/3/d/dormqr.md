@@ -11,7 +11,7 @@ description: "dormqr.f –"
 <p> dormqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dormqr</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dormqr</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br/>
  <i></i><code>DORMQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dormqr (characterSIDE, characterTRANS, integerM, integerN, integerK, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAU, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -74,10 +74,10 @@ if SIDE
           DGEQRF in the first k columns of its array argument A.
 </pre>
 <p> <i>LDA</i> </p>
-<p>LDA is INTEGER<br />
-    The leading dimension of the array A.If SIDE = &#8216;L&#8217;,<br />
-                                            LDA &gt;= max(1, M);<br />
-if SIDE<br />
+<p>LDA is INTEGER<br/>
+    The leading dimension of the array A.If SIDE = &#8216;L&#8217;,<br/>
+                                            LDA &gt;= max(1, M);<br/>
+if SIDE<br/>
 = &#8216;R&#8217;, LDA &gt;= max(1, N).</p>
 <p> <i>TAU</i> </p>
 <pre>

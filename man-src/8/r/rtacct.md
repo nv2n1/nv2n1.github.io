@@ -9,7 +9,7 @@ description: "nstat, rtacct – network statistics tools."
 
 <p>nstat, rtacct &#8211; network statistics tools.</p>
 <h2>Synopsis</h2>
-<p>Usage: nstat [ -h?vVzrnasd:t:jp ] [ PATTERN [ PATTERN ] ]<br />
+<p>Usage: nstat [ -h?vVzrnasd:t:jp ] [ PATTERN [ PATTERN ] ]<br/>
  Usage: rtacct [ -h?vVzrnasd:t: ] [ ListOfRealms ] </p>
 <h2>Description</h2>
 <p><code>nstat</code> and <code>rtacct</code> are simple tools to monitor kernel snmp counters and network interface statistics. <code>nstat</code> can filter kernel snmp counters by name with one or several specified wildcards. Wildcards are case-insensitive and can include special symbols <code>?</code> and <code>*</code> </p>

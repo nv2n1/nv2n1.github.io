@@ -10,7 +10,7 @@ description: "dlasda.f –"
 <p>dlasda.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlasda</code> (ICOMPQ, SMLSIZ, N, SQRE, D, E, U, LDU, VT, K, DIFL, DIFR, Z, POLES, GIVPTR, GIVCOL, LDGCOL, PERM, GIVNUM, C, S, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dlasda</code> (ICOMPQ, SMLSIZ, N, SQRE, D, E, U, LDU, VT, K, DIFL, DIFR, Z, POLES, GIVPTR, GIVCOL, LDGCOL, PERM, GIVNUM, C, S, WORK, IWORK, INFO)<br/>
  <i></i><code>DLASDA</code> computes the singular value decomposition (SVD) of a real upper bidiagonal matrix with diagonal d and off-diagonal e. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasda (integerICOMPQ, integerSMLSIZ, integerN, integerSQRE, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldu, * )VT, integer, dimension( * )K, double precision, dimension( ldu, * )DIFL, double precision, dimension( ldu, * )DIFR, double precision, dimension( ldu, * )Z, double precision, dimension( ldu, * )POLES, integer, dimension( * )GIVPTR, integer, dimension( ldgcol, * )GIVCOL, integerLDGCOL, integer, dimension( ldgcol, * )PERM, double precision, dimension( ldu, * )GIVNUM, double precision, dimension( * )C, double precision, dimension( * )S, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

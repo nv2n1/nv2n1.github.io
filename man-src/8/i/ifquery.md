@@ -11,8 +11,8 @@ description: "ifup – bring a network interface up"
 <p> ifdown &#8211; take a network interface down </p>
 <p> ifquery &#8211; parse interface configuration</p>
 <h2>Synopsis</h2>
-<p><code>ifup </code> [<code>-nv</code>] [<code>&#8211;no-act</code>] [<code>&#8211;verbose</code>] [<code>-i</code> <i>FILE</i>|<code>&#8211;interfaces=</code><i>FILE</i>] [<code>&#8211;state-dir=</code><i>DIR</i>] [<code>&#8211;allow</code> <i>CLASS</i>] <code>-a</code>|<i>IFACE</i>&#8230;<br />
- <code>ifup </code> <code>-h</code>|<code>&#8211;help</code><br />
+<p><code>ifup </code> [<code>-nv</code>] [<code>&#8211;no-act</code>] [<code>&#8211;verbose</code>] [<code>-i</code> <i>FILE</i>|<code>&#8211;interfaces=</code><i>FILE</i>] [<code>&#8211;state-dir=</code><i>DIR</i>] [<code>&#8211;allow</code> <i>CLASS</i>] <code>-a</code>|<i>IFACE</i>&#8230;<br/>
+ <code>ifup </code> <code>-h</code>|<code>&#8211;help</code><br/>
  <code>ifup </code> <code>-V</code>|<code>&#8211;version</code> </p>
 <p> <code>ifdown</code> [<code>-nv</code>] [<code>&#8211;no-act</code>] [<code>&#8211;verbose</code>] [<code>-i</code> <i>FILE</i>|<code>&#8211;interfaces=</code><i>FILE</i>] [<code>&#8211;state-dir=</code><i>DIR</i>] [<code>&#8211;allow</code> <i>CLASS</i>] <code>-a</code>|<i>IFACE</i>&#8230; </p>
 <p> <code>ifquery</code> [<code>-nv</code>] [<code>&#8211;verbose</code>] [<code>-i</code> <i>FILE</i>|<code>&#8211;interfaces=</code><i>FILE</i>] [<code>&#8211;state-dir=</code><i>DIR</i>] [<code>&#8211;allow</code> <i>CLASS</i>] <i>IFACE</i>&#8230; </p>

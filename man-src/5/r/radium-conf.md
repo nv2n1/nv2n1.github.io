@@ -68,7 +68,7 @@ description: "radium.conf – radium resource file."
 <p>&nbsp;<wbr></p>
 <h2>Radium_Adjust_Time</h2>
 <p>Radium can correct for time synchronization problems that may exist between data sources. If configured to do so, radium will adjust all the timestamps in records by the calculated drift between radium and its many data sources. Records whose timevalues have been &#8216;corrected&#8217; are marked so that subsequent readers can differentiate between true primitive time and modified time. </p>
-<p> Commandline equivalent -T<br />
+<p> Commandline equivalent -T<br/>
 &nbsp;<wbr> <code>RADIUM_ADJUST_TIME=</code>no</p>
 <h2>Radium_Mar_Status_Interval</h2>
 <p>Radium will periodically report on a its own health, providing interface status, total packet and bytes counts, packet drop rates, and flow oriented statistics. </p>
@@ -93,13 +93,13 @@ description: "radium.conf – radium resource file."
 <p>Radium supports <a href="/docs/linux/man/2-chroot/">chroot</a>(2) in order to control the file system that radium exists in and can access. Generally used when radium is running with privleges, this limits the negative impacts that radium could inflict on its host machine. </p>
 <p> This option will cause the output file names to be relative to this directory, and so consider this when trying to find your output files. </p>
 <p> Commandline equivalent -C </p>
-<p> <code>RADIUM_CHROOT_DIR=</code>&quot;&quot;<br />
-&nbsp;<wbr><br />
+<p> <code>RADIUM_CHROOT_DIR=</code>&quot;&quot;<br/>
+&nbsp;<wbr><br/>
 &nbsp;<wbr></p>
 <h2>Radium_Setuser_Id</h2>
 <p>Radium can be directed to change its user id using the setuid() system call. This is can used when radium is started as root, in order to access privleged resources, but then after the resources are opened, this directive will cause radium to change its user id value to a &#8216;lesser&#8217; capable account. Recommended when radium is running as a daemon. </p>
 <p> Commandline equivalent -u </p>
-<p> <code>RADIUM_SETUSER_ID=</code>&quot;user&quot;<br />
+<p> <code>RADIUM_SETUSER_ID=</code>&quot;user&quot;<br/>
 &nbsp;<wbr></p>
 <h2>Radium_Setgroup_Id</h2>
 <p>&nbsp;<wbr> Radium can be directed to change its group id using the setgid() system call. This is can used when radium is started as root, in order to access privleged resources, but then after the resources are opened, this directive can be used to change argu&#8217;s group id value to a &#8216;lesser&#8217; capable account. Recommended when radium is running as a daemon. </p>

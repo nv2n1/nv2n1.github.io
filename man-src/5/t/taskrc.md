@@ -11,8 +11,8 @@ description: "taskrc – Configuration details for the"
 <p>taskrc &#8211; Configuration details for the </p>
 <p> <a href="/docs/linux/man/1-task/">task</a>(1) command </p>
 
-<p> <code>$HOME/.taskrc</code> <br />
- <code>task rc:&lt;directory-path&gt;/.taskrc ...</code> <br />
+<p> <code>$HOME/.taskrc</code> <br/>
+ <code>task rc:&lt;directory-path&gt;/.taskrc ...</code> <br/>
  <code>TASKRC=&lt;directory-path&gt;/.taskrc task ...</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>Taskwarrior</code> obtains its configuration data from a file called <i>.taskrc</i> . This file is normally located in the user&#8217;s home directory: </p>
@@ -81,7 +81,7 @@ description: "taskrc – Configuration details for the"
 <p>By using include files you can divide your main configuration file into several ones containing just the relevant configuration data like colors, etc. </p>
 <p>There are two excellent uses of includes in your .taskrc, shown here: </p>
 <dl>
-<dd> <p> include /usr/share/doc/task/rc/holidays.en-US.rc <br />
+<dd> <p> include /usr/share/doc/task/rc/holidays.en-US.rc <br/>
  include /usr/share/doc/task/rc/dark-16.theme </p>
  </dd></dl>
 <p>This includes two standard files that are distributed with Taskwarrior, which define a set of US holidays, and set up a 16-color theme to use, to color the reports and calendar. </p>
@@ -144,33 +144,33 @@ description: "taskrc – Configuration details for the"
 <dd> <p> When set to &quot;on&quot; (the default), helpful explanatory comments are added to all output from Taskwarrior. Setting this to &quot;off&quot; means that you would see regular output. </p>
 <p>The special value &quot;nothing&quot; can be used to eliminate all optional output, which results in only the formatted data being shown, with nothing else. This output is most readily parsed and used by shell scripts. </p>
 <p>Alternatively, you can specify a comma-separated list of verbosity tokens that control specific occasions when output is generated. This list may contain: </p>
-<p> <br />
-&nbsp;<wbr>blank&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Inserts extra blank lines in output, for clarity <br />
-&nbsp;<wbr>header&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Messages that appear before report output <br />
-&nbsp;<wbr>footnote&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Messages that appear after report output <br />
-&nbsp;<wbr>label&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Column labels on tabular reports <br />
-&nbsp;<wbr>new-id&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Provides feedback of any new task IDs <br />
-&nbsp;<wbr>new-uuid&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Provides feedback of any new task UUIDs. Deprecated, to be <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>merged with new-id. <br />
-&nbsp;<wbr>affected&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Reports&nbsp;<wbr>&#8216;N tasks affected&#8217;&nbsp;<wbr>and similar <br />
-&nbsp;<wbr>edit&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Used the verbose template for the&nbsp;<wbr>&#8216;edit&#8217;&nbsp;<wbr>command <br />
-&nbsp;<wbr>special&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Feedback when applying special tags <br />
-&nbsp;<wbr>project&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Feedback about project status changes <br />
-&nbsp;<wbr>sync&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Feedback about sync <br />
-&nbsp;<wbr>filter&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Shows the filter used in the command <br />
-&nbsp;<wbr>unwait&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Notification when a task leaves the&nbsp;<wbr>&#8216;waiting&#8217;&nbsp;<wbr>state <br />
+<p> <br/>
+&nbsp;<wbr>blank&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Inserts extra blank lines in output, for clarity <br/>
+&nbsp;<wbr>header&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Messages that appear before report output <br/>
+&nbsp;<wbr>footnote&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Messages that appear after report output <br/>
+&nbsp;<wbr>label&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Column labels on tabular reports <br/>
+&nbsp;<wbr>new-id&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Provides feedback of any new task IDs <br/>
+&nbsp;<wbr>new-uuid&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Provides feedback of any new task UUIDs. Deprecated, to be <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>merged with new-id. <br/>
+&nbsp;<wbr>affected&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Reports&nbsp;<wbr>&#8216;N tasks affected&#8217;&nbsp;<wbr>and similar <br/>
+&nbsp;<wbr>edit&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Used the verbose template for the&nbsp;<wbr>&#8216;edit&#8217;&nbsp;<wbr>command <br/>
+&nbsp;<wbr>special&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Feedback when applying special tags <br/>
+&nbsp;<wbr>project&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Feedback about project status changes <br/>
+&nbsp;<wbr>sync&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Feedback about sync <br/>
+&nbsp;<wbr>filter&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Shows the filter used in the command <br/>
+&nbsp;<wbr>unwait&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Notification when a task leaves the&nbsp;<wbr>&#8216;waiting&#8217;&nbsp;<wbr>state <br/>
 &nbsp;<wbr>recur&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Notification when a new recurring task instance is created </p>
 <p>&quot;affected&quot;, &quot;new-id&quot;, &quot;new-uuid&quot; &quot;project&quot; and &quot;unwait&quot; imply &quot;footnote&quot;. </p>
 <p>Note that the &quot;on&quot; setting is equivalent to all the tokens being specified, and the &quot;nothing&quot; setting is equivalent to none of the tokens being specified. </p>
 <p>Here are the shortcut equivalents: </p>
-<p> <br />
-&nbsp;<wbr>verbose=on <br />
+<p> <br/>
+&nbsp;<wbr>verbose=on <br/>
 &nbsp;<wbr>verbose=blank,header,footnote,label,new-id,affected,edit,special,project,sync,filter,unwait </p>
-<p> <br />
-&nbsp;<wbr>verbose=off <br />
+<p> <br/>
+&nbsp;<wbr>verbose=off <br/>
 &nbsp;<wbr>verbose=blank,label,new-id,edit </p>
-<p> <br />
-&nbsp;<wbr>verbose=nothing <br />
+<p> <br/>
+&nbsp;<wbr>verbose=nothing <br/>
 &nbsp;<wbr>verbose= </p>
 <p>Those additional comments are sent to the standard error for header, footnote and project. The others are sent to standard output. </p>
  </dd>
@@ -315,25 +315,25 @@ description: "taskrc – Configuration details for the"
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> m minimal-digit month, for example 1 or 12 <br />
- d minimal-digit day, for example 1 or 30 <br />
- y two-digit year, for example 09 or 12 <br />
- D two-digit day, for example 01 or 30 <br />
- M two-digit month, for example 01 or 12 <br />
- Y four-digit year, for example 2009 or 2015 <br />
- a short name of weekday, for example Mon or Wed <br />
- A long name of weekday, for example Monday or Wednesday <br />
- b short name of month, for example Jan or Aug <br />
- B long name of month, for example January or August <br />
- v minimal-digit week, for example 3 or 37 <br />
- V two-digit week, for example 03 or 37 <br />
- h minimal-digit hour, for example 3 or 21 <br />
- n minimal-digit minutes, for example 5 or 42 <br />
- s minimal-digit seconds, for example 7 or 47 <br />
- H two-digit hour, for example 03 or 21 <br />
- N two-digit minutes, for example 05 or 42 <br />
- S two-digit seconds, for example 07 or 47 <br />
- J three-digit Julian day, for example 023 or 365 <br />
+<dd> <p> m minimal-digit month, for example 1 or 12 <br/>
+ d minimal-digit day, for example 1 or 30 <br/>
+ y two-digit year, for example 09 or 12 <br/>
+ D two-digit day, for example 01 or 30 <br/>
+ M two-digit month, for example 01 or 12 <br/>
+ Y four-digit year, for example 2009 or 2015 <br/>
+ a short name of weekday, for example Mon or Wed <br/>
+ A long name of weekday, for example Monday or Wednesday <br/>
+ b short name of month, for example Jan or Aug <br/>
+ B long name of month, for example January or August <br/>
+ v minimal-digit week, for example 3 or 37 <br/>
+ V two-digit week, for example 03 or 37 <br/>
+ h minimal-digit hour, for example 3 or 21 <br/>
+ n minimal-digit minutes, for example 5 or 42 <br/>
+ s minimal-digit seconds, for example 7 or 47 <br/>
+ H two-digit hour, for example 03 or 21 <br/>
+ N two-digit minutes, for example 05 or 42 <br/>
+ S two-digit seconds, for example 07 or 47 <br/>
+ J three-digit Julian day, for example 023 or 365 <br/>
  j Julian day, for example 23 or 365 </p>
  </dd></dl>
 </dl>
@@ -346,9 +346,9 @@ description: "taskrc – Configuration details for the"
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> <br />
- d/m/Y would use for input and output 24/7/2009 <br />
- yMD would use for input and output 090724 <br />
+<dd> <p> <br/>
+ d/m/Y would use for input and output 24/7/2009 <br/>
+ yMD would use for input and output 090724 <br/>
  M-D-Y would use for input and output 07-24-2009 </p>
  </dd></dl>
 </dl>
@@ -358,12 +358,12 @@ description: "taskrc – Configuration details for the"
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> <br />
- a D b Y (V) would emit &quot;Fri 24 Jul 2009 (30)&quot; <br />
- A, B D, Y would emit &quot;Friday, July 24, 2009&quot; <br />
- wV a Y-M-D would emit &quot;w30 Fri 2009-07-24&quot; <br />
- yMD.HN would emit &quot;110124.2342&quot; <br />
- m/d/Y H:N would emit &quot;1/24/2011 10:42&quot; <br />
+<dd> <p> <br/>
+ a D b Y (V) would emit &quot;Fri 24 Jul 2009 (30)&quot; <br/>
+ A, B D, Y would emit &quot;Friday, July 24, 2009&quot; <br/>
+ wV a Y-M-D would emit &quot;w30 Fri 2009-07-24&quot; <br/>
+ yMD.HN would emit &quot;110124.2342&quot; <br/>
+ m/d/Y H:N would emit &quot;1/24/2011 10:42&quot; <br/>
  a D b Y H:N:S would emit &quot;Mon 24 Jan 2011 11:19:42&quot; </p>
  </dd></dl>
 </dl>
@@ -373,8 +373,8 @@ description: "taskrc – Configuration details for the"
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> <br />
- 8/1/2013 with m/d/Y implies August 1, 2013 at midnight (inferred) <br />
+<dd> <p> <br/>
+ 8/1/2013 with m/d/Y implies August 1, 2013 at midnight (inferred) <br/>
  8/1 20:40 with m/d H:N implies August 1, 2013 (inferred) at 20:40 </p>
  </dd></dl>
 </dl>
@@ -427,10 +427,10 @@ description: "taskrc – Configuration details for the"
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> <br />
- holiday.towel.name=Day of the towel <br />
- holiday.towel.date=20100525 <br />
- holiday.sysadmin.name=System Administrator Appreciation Day <br />
+<dd> <p> <br/>
+ holiday.towel.name=Day of the towel <br/>
+ holiday.towel.date=20100525 <br/>
+ holiday.sysadmin.name=System Administrator Appreciation Day <br/>
  holiday.sysadmin.date=20100730 </p>
  </dd></dl>
 </dl>
@@ -443,8 +443,8 @@ description: "taskrc – Configuration details for the"
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> <br />
- holiday.eastersunday.name=Easter <br />
+<dd> <p> <br/>
+ holiday.eastersunday.name=Easter <br/>
  holiday.eastersunday.date=easter </p>
  </dd></dl>
 </dl>
@@ -452,7 +452,7 @@ description: "taskrc – Configuration details for the"
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> <br />
+<dd> <p> <br/>
  include /usr/share/doc/task/rc/holidays.en-US.rc </p>
  </dd></dl>
 </dl>
@@ -484,19 +484,19 @@ description: "taskrc – Configuration details for the"
 <dd> <p> Note that no default values are listed here - the defaults now correspond to the dark-256.theme (Linux) and dark-16.theme (other) theme values. The coloration rules are as follows: </p>
  </dd></dl>
 <dl>
-<dd> <p> <code>color.due.today</code> Task is due today <br />
- <code>color.active</code> Task is started, therefore active. <br />
- <code>color.scheduled</code> Task is scheduled, therefore ready for work. <br />
- <code>color.until</code> Task has an expiration date. <br />
- <code>color.blocking</code> Task is blocking another in a dependency. <br />
- <code>color.blocked</code> Task is blocked by a dependency. <br />
- <code>color.overdue</code> Task is overdue (due some time prior to now). <br />
- <code>color.due</code> Task is coming due. <br />
- <code>color.project.none</code> Task does not have an assigned project. <br />
- <code>color.tag.none</code> Task has no tags. <br />
- <code>color.tagged</code> Task has at least one tag. <br />
- <code>color.recurring</code> Task is recurring. <br />
- <code>color.completed</code> Task is completed. <br />
+<dd> <p> <code>color.due.today</code> Task is due today <br/>
+ <code>color.active</code> Task is started, therefore active. <br/>
+ <code>color.scheduled</code> Task is scheduled, therefore ready for work. <br/>
+ <code>color.until</code> Task has an expiration date. <br/>
+ <code>color.blocking</code> Task is blocking another in a dependency. <br/>
+ <code>color.blocked</code> Task is blocked by a dependency. <br/>
+ <code>color.overdue</code> Task is overdue (due some time prior to now). <br/>
+ <code>color.due</code> Task is coming due. <br/>
+ <code>color.project.none</code> Task does not have an assigned project. <br/>
+ <code>color.tag.none</code> Task has no tags. <br/>
+ <code>color.tagged</code> Task has at least one tag. <br/>
+ <code>color.recurring</code> Task is recurring. <br/>
+ <code>color.completed</code> Task is completed. <br/>
  <code>color.deleted</code> Task is deleted. </p>
  </dd></dl>
 <dl>
@@ -582,31 +582,31 @@ description: "taskrc – Configuration details for the"
 <dd> <p> Color of alternate tasks. This is to apply a specific color to every other task in a report, which can make it easier to visually separate tasks. This is especially useful when tasks are displayed over multiple lines due to long descriptions or annotations. </p>
  </dd>
 <dt><code>color.history.add=on red</code></dt>
-<dd> <p> <br />
- <code>color.history.done=on green</code> <br />
+<dd> <p> <br/>
+ <code>color.history.done=on green</code> <br/>
  <code>color.history.delete=on yellow</code> </p>
  </dd>
 <dl>
 <dd> <p> Colors the bars on the ghistory report graphs. Defaults to red, green and yellow bars. </p>
  </dd></dl>
 <dt><code>color.burndown.pending=on red</code></dt>
-<dd> <p> <br />
- <code>color.burndown.started=on yellow</code> <br />
+<dd> <p> <br/>
+ <code>color.burndown.started=on yellow</code> <br/>
  <code>color.burndown.done=on green</code> </p>
  </dd>
 <dl>
 <dd> <p> Colors the bars on the burndown reports graphs. Defaults to red, green and yellow bars. </p>
  </dd></dl>
 <dt><code>color.undo.before=red</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>color.undo.after=green</code> </p>
  </dd>
 <dl>
 <dd> <p> Colors used by the undo command, to indicate the values both before and after a change that is to be reverted. </p>
  </dd></dl>
 <dt><code>color.sync.added=green</code></dt>
-<dd> <p> <br />
- <code>color.sync.changed=yellow</code> <br />
+<dd> <p> <br/>
+ <code>color.sync.changed=yellow</code> <br/>
  <code>color.sync.rejected=red</code> </p>
  </dd>
 <dl>
@@ -726,11 +726,11 @@ description: "taskrc – Configuration details for the"
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> $ task <br />
- [task project:foo list] <br />
- <br />
- ID Project Pri Description <br />
-&nbsp;<wbr>1 foo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>H&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Design foo <br />
+<dd> <p> $ task <br/>
+ [task project:foo list] <br/>
+ <br/>
+ ID Project Pri Description <br/>
+&nbsp;<wbr>1 foo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>H&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Design foo <br/>
 &nbsp;<wbr>2 foo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Build foo </p>
  </dd></dl>
 </dl>
@@ -750,10 +750,10 @@ description: "taskrc – Configuration details for the"
  </dd>
 <dt><code>report.X.sort</code></dt>
 <dd> <p> The sort order of the tasks in the generated report X. The sort order is specified by using the column ids post-fixed by a &quot;+&quot; for ascending sort order or a &quot;-&quot; for descending sort order. The sort IDs are separated by commas. For example: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>report.list.sort=due+,priority-,start.active-,project+ </p>
 <p>Additionally, after the &quot;+&quot; or &quot;-&quot;, there can be a solidus &quot;/&quot; which indicates that there are breaks after the column values change. For example: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>report.minimal.sort=project+/,description+ </p>
 <p>This sort order now specifies that there is a listing break between each project. A listing break is simply a blank line, which provides a visual grouping. </p>
 <p>A special sort value of &quot;none&quot; indicates that no sorting is required, and tasks will be presented in the order (if any) in which they are selected. </p>
@@ -842,13 +842,13 @@ description: "taskrc – Configuration details for the"
 <dd> <p> This example shows an &#8216;estimate&#8217; UDA that stores specific values for the size of a task. Note the blank value after &#8216;trivial&#8217;. </p>
  </dd>
 <dl>
-<dd> <p> <code>uda.estimate.type=string</code> <br />
- <code>uda.estimate.label=Size Estimate</code> <br />
+<dd> <p> <code>uda.estimate.type=string</code> <br/>
+ <code>uda.estimate.label=Size Estimate</code> <br/>
  <code>uda.estimate.values=huge,large,medium,small,trivial,</code> </p>
  </dd></dl>
 <dl>
 <dd> <p> Note that the value are sorted </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>huge&nbsp;<wbr>&gt;&nbsp;<wbr>large&nbsp;<wbr>&gt;&nbsp;<wbr>medium&nbsp;<wbr>&gt;&nbsp;<wbr>small&nbsp;<wbr>&gt;&nbsp;<wbr>trivial&nbsp;<wbr>&gt;&nbsp;<wbr>&#8216;&#8216; </p>
  </dd></dl>
 <h3>CONTEXT</h3>

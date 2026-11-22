@@ -41,72 +41,72 @@ description: "make_edi – generate input files for essential dynamics sampling"
 <p> -alpha is a fudge parameter to control the width of the flooding potential. A value of 2 has been found to give good results for most standard cases in flooding of proteins. Alpha basically accounts for incomplete sampling, if you sampled further the width of the ensemble would increase, this is mimicked by alpha1. For restraining alpha1 can give you smaller width in the restraining potential. </p>
 <p> RESTART and FLOODING: If you want to restart a crashed flooding simulation please find the values deltaF and Efl in the output file and manually put them into the .edi file under DELTA_F0 and EFL_NULL.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> eigenvec.trr</i> <code>Input</code><br />
+<p> <code>-f</code><i> eigenvec.trr</i> <code>Input</code><br/>
 &nbsp;<wbr>Full precision trajectory: trr trj cpt&nbsp;<wbr> </p>
-<p> <code>-eig</code><i> eigenval.xvg</i> <code>Input, Opt.</code><br />
+<p> <code>-eig</code><i> eigenval.xvg</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br/>
 &nbsp;<wbr>Structure+mass(db): tpr tpb tpa gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-tar</code><i> target.gro</i> <code>Input, Opt.</code><br />
+<p> <code>-tar</code><i> target.gro</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-ori</code><i> origin.gro</i> <code>Input, Opt.</code><br />
+<p> <code>-ori</code><i> origin.gro</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-o</code><i> sam.edi</i> <code>Output</code><br />
+<p> <code>-o</code><i> sam.edi</i> <code>Output</code><br/>
 &nbsp;<wbr>ED sampling input&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-mon</code><i> string</i><br />
+<p> <code>-mon</code><i> string</i><br/>
 &nbsp;<wbr>Indices of eigenvectors for projections of x&nbsp;<wbr>(e.g. 1,2-5,9)&nbsp;<wbr>or 1-100:10 means 1 11 21 31 &#8230; 91 </p>
-<p> <code>-linfix</code><i> string</i><br />
+<p> <code>-linfix</code><i> string</i><br/>
 &nbsp;<wbr>Indices of eigenvectors for fixed increment linear sampling </p>
-<p> <code>-linacc</code><i> string</i><br />
+<p> <code>-linacc</code><i> string</i><br/>
 &nbsp;<wbr>Indices of eigenvectors for acceptance linear sampling </p>
-<p> <code>-flood</code><i> string</i><br />
+<p> <code>-flood</code><i> string</i><br/>
 &nbsp;<wbr>Indices of eigenvectors for flooding </p>
-<p> <code>-radfix</code><i> string</i><br />
+<p> <code>-radfix</code><i> string</i><br/>
 &nbsp;<wbr>Indices of eigenvectors for fixed increment radius expansion </p>
-<p> <code>-radacc</code><i> string</i><br />
+<p> <code>-radacc</code><i> string</i><br/>
 &nbsp;<wbr>Indices of eigenvectors for acceptance radius expansion </p>
-<p> <code>-radcon</code><i> string</i><br />
+<p> <code>-radcon</code><i> string</i><br/>
 &nbsp;<wbr>Indices of eigenvectors for acceptance radius contraction </p>
-<p> <code>-outfrq</code><i> int</i><code> 100</code><br />
+<p> <code>-outfrq</code><i> int</i><code> 100</code><br/>
 &nbsp;<wbr>Freqency&nbsp;<wbr>(in steps)&nbsp;<wbr>of writing output in .edo file </p>
-<p> <code>-slope</code><i> real</i><code> 0 </code><br />
+<p> <code>-slope</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Minimal slope in acceptance radius expansion </p>
-<p> <code>-maxedsteps</code><i> int</i><code> 0</code><br />
+<p> <code>-maxedsteps</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Max nr of steps per cycle </p>
-<p> <code>-deltaF0</code><i> real</i><code> 150 </code><br />
+<p> <code>-deltaF0</code><i> real</i><code> 150 </code><br/>
 &nbsp;<wbr>Target destabilization energy&nbsp;<wbr>&nbsp;<wbr>&#8211; used for flooding </p>
-<p> <code>-deltaF</code><i> real</i><code> 0 </code><br />
+<p> <code>-deltaF</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Start deltaF with this parameter &#8211; default 0, i.e. nonzero values only needed for restart </p>
-<p> <code>-tau</code><i> real</i><code> 0.1 </code><br />
+<p> <code>-tau</code><i> real</i><code> 0.1 </code><br/>
 &nbsp;<wbr>Coupling constant for adaption of flooding strength according to deltaF0, 0&nbsp;<wbr>=&nbsp;<wbr>infinity i.e. constant flooding strength </p>
-<p> <code>-eqsteps</code><i> int</i><code> 0</code><br />
+<p> <code>-eqsteps</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Number of steps to run without any perturbations&nbsp;<wbr> </p>
-<p> <code>-Eflnull</code><i> real</i><code> 0 </code><br />
+<p> <code>-Eflnull</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>This is the starting value of the flooding strength. The flooding strength is updated according to the adaptive flooding scheme. To use a constant flooding strength use -tau 0.&nbsp;<wbr> </p>
-<p> <code>-T</code><i> real</i><code> 300 </code><br />
+<p> <code>-T</code><i> real</i><code> 300 </code><br/>
 &nbsp;<wbr>T is temperature, the value is needed if you want to do flooding&nbsp;<wbr> </p>
-<p> <code>-alpha</code><i> real</i><code> 1 </code><br />
+<p> <code>-alpha</code><i> real</i><code> 1 </code><br/>
 &nbsp;<wbr>Scale width of gaussian flooding potential with alpha2&nbsp;<wbr> </p>
-<p> <code>-linstep</code><i> string</i><br />
+<p> <code>-linstep</code><i> string</i><br/>
 &nbsp;<wbr>Stepsizes&nbsp;<wbr>(nm/step)&nbsp;<wbr>for fixed increment linear sampling&nbsp;<wbr>(put in quotes!&nbsp;<wbr>&quot;1.0 2.3 5.1 -3.1&quot;) </p>
-<p> <code>-accdir</code><i> string</i><br />
+<p> <code>-accdir</code><i> string</i><br/>
 &nbsp;<wbr>Directions for acceptance linear sampling &#8211; only sign counts!&nbsp;<wbr>(put in quotes!&nbsp;<wbr>&quot;-1&nbsp;<wbr>+1 -1.1&quot;) </p>
-<p> <code>-radstep</code><i> real</i><code> 0 </code><br />
+<p> <code>-radstep</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Stepsize&nbsp;<wbr>(nm/step)&nbsp;<wbr>for fixed increment radius expansion </p>
-<p> <code>-[no]restrain</code><i>no </i><br />
+<p> <code>-[no]restrain</code><i>no </i><br/>
 &nbsp;<wbr>Use the flooding potential with inverted sign &#8211; effects as quasiharmonic restraining potential </p>
-<p> <code>-[no]hessian</code><i>no </i><br />
+<p> <code>-[no]hessian</code><i>no </i><br/>
 &nbsp;<wbr>The eigenvectors and eigenvalues are from a Hessian matrix </p>
-<p> <code>-[no]harmonic</code><i>no </i><br />
+<p> <code>-[no]harmonic</code><i>no </i><br/>
 &nbsp;<wbr>The eigenvalues are interpreted as spring constant </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

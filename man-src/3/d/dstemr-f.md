@@ -10,7 +10,7 @@ description: "dstemr.f –"
 <p>dstemr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dstemr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, M, W, Z, LDZ, NZC, ISUPPZ, TRYRAC, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>dstemr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, M, W, Z, LDZ, NZC, ISUPPZ, TRYRAC, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>DSTEMR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dstemr (characterJOBZ, characterRANGE, integerN, double precision, dimension( * )D, double precision, dimension( * )E, double precisionVL, double precisionVU, integerIL, integerIU, integerM, double precision, dimension( * )W, double precision, dimension( ldz, * )Z, integerLDZ, integerNZC, integer, dimension( * )ISUPPZ, logicalTRYRAC, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

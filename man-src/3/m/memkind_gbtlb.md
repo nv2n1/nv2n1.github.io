@@ -8,7 +8,7 @@ url: "/docs/linux/man/3-memkind_gbtlb/"
 description: "memkind_gbtlb.h – gigabyte TLB memkind operations. Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove."
 ---
 
-<p> memkind_gbtlb.h &#8211; gigabyte TLB memkind operations.<br />
+<p> memkind_gbtlb.h &#8211; gigabyte TLB memkind operations.<br/>
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

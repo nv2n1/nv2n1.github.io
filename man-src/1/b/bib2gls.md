@@ -29,13 +29,13 @@ url: "/docs/linux/man/1-bib2gls/"
 <dd> <p> Switch on verbose mode. </p>
  </dd>
 <dt><code>--no-verbose</code> (or <code>--noverbose</code>)</dt>
-<dd> <p> Switch off verbose mode. (Some messages will still be written to <font SIZE="-1">STDOUT.</font>) </p>
+<dd> <p> Switch off verbose mode. (Some messages will still be written to STDOUT.) </p>
  </dd>
 <dt><code>--silent</code></dt>
 <dd> <p> Only display error messages. All other messages are just written to the transcript file. </p>
  </dd>
 <dt><code>--locale</code><i>lang</i> (or <code>-l</code><i>lang</i>)</dt>
-<dd> <p> Use language resource file for <i>lang</i> (which should be an <font SIZE="-1">IETF</font> locale tag). </p>
+<dd> <p> Use language resource file for <i>lang</i> (which should be an IETF locale tag). </p>
  </dd>
 <dt><code>--log-file</code><i>file</i> (or <code>-t</code> &lt;file&gt;)</dt>
 <dd> <p> Set the transcript file. </p>
@@ -193,7 +193,7 @@ url: "/docs/linux/man/1-bib2gls/"
 <h2>REQUIRES</h2>
 <p> Java 7 or later and a TeX distribution.  </p>
 <h2>LICENSE</h2>
-<p> License GPLv3+: <font SIZE="-1">GNU GPL</font> version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt; This is free software: you are free to change and redistribute it. There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law.  </p>
+<p> License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt; This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.  </p>
 <h2>RECOMMENDED READING</h2>
 <p> The bib2gls manual: </p>
 <pre><code>        texdoc bib2gls

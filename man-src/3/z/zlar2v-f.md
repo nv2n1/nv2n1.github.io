@@ -10,7 +10,7 @@ description: "zlar2v.f –"
 <p>zlar2v.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlar2v</code> (N, X, Y, Z, INCX, C, S, INCC)<br />
+<p>subroutine <code>zlar2v</code> (N, X, Y, Z, INCX, C, S, INCC)<br/>
  <i></i><code>ZLAR2V</code> applies a vector of plane rotations with real cosines and complex sines from both sides to a sequence of 2-by-2 symmetric/Hermitian matrices.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlar2v (integerN, complex*16, dimension( * )X, complex*16, dimension( * )Y, complex*16, dimension( * )Z, integerINCX, double precision, dimension( * )C, complex*16, dimension( * )S, integerINCC)</h3>

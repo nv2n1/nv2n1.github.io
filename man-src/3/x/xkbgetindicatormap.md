@@ -10,7 +10,7 @@ description: "XkbGetIndicatorMap – Gets the map for one or more indicators, us
 <p>XkbGetIndicatorMap &#8211; Gets the map for one or more indicators, using a mask to specify the indicators </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetIndicatorMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>desc</i><code>);</code><br />
+<dt> <code>Status XkbGetIndicatorMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>desc</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

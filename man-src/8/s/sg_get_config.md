@@ -55,7 +55,7 @@ description: "sg_get_config – send SCSI GET CONFIGURATION command (MMC-4 +)"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2004-2012 Douglas Gilbert<br />
+<p>Copyright &#169; 2004-2012 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sginfo/">sginfo</a>(8), <a href="/docs/linux/man/8-sg_modes/">sg_modes</a>(8), <a href="/docs/linux/man/8-sg_inq/">sg_inq</a>(8), <a href="/docs/linux/man/8-sg_prevent/">sg_prevent</a>(8),</code> <code><a href="/docs/linux/man/8-sg_start/">sg_start</a>(8) [all in sg3_utils],</code> <code><a href="/docs/linux/man/8-sdparm/">sdparm</a>(8)</code> </p>

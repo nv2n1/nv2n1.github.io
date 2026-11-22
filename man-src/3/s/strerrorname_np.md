@@ -18,11 +18,11 @@ int strerror_r(int errnum, char *buf, size_t buflen);
 char *strerror_r(int errnum, char *buf, size_t buflen);
 /* GNU-specific */
 char *strerror_l(int errnum, locale_t locale);</code></pre>
-<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>strerrorname_np</code>(), <code>strerrordesc_np</code>():<br />
+<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>strerrorname_np</code>(), <code>strerrordesc_np</code>():<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_GNU_SOURCE <code>strerror_r</code>():</p>
 <dl>
-<dd>The XSI-compliant version is provided if:<br />
- (_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L) &amp;&amp; ! &nbsp;_GNU_SOURCE<br />
+<dd>The XSI-compliant version is provided if:<br/>
+ (_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L) &amp;&amp; ! &nbsp;_GNU_SOURCE<br/>
  Otherwise, the GNU-specific version is provided.</dd></dl>
 <h2>Description</h2>
 <p>The <code>strerror</code>() function returns a pointer to a string that describes the error code passed in the argument <i>errnum</i>, possibly using the <code>LC_MESSAGES</code> part of the current locale to select the appropriate language. (For example, if <i>errnum</i> is <code>EINVAL</code>, the returned description will be &quot;Invalid argument&quot;.) This string must not be modified by the application, but may be modified by a subsequent call to <code>strerror</code>() or <code>strerror_l</code>(). No other library function, including <code><a href="/docs/linux/man/3-perror/">perror</a></code>(3), will modify this string. </p>

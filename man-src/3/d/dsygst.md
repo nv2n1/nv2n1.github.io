@@ -11,7 +11,7 @@ description: "dsygst.f –"
 <p> dsygst.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dsygst</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br />
+<p> subroutine <code>dsygst</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br/>
  <i></i><code>DSYGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsygst (integerITYPE, characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

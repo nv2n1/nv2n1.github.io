@@ -28,7 +28,7 @@ description: "buffchan – Buffered file-writing backend for INN"
 <h2>Options</h2>
 <dl>
 <dt><code>-b</code></dt>
-<dd>Force the output to be buffered. (This is generally the default, but it may depend on the operating system.) If <code>-b</code> is given, a buffer size of <font SIZE="-1">BUFSIZ</font> (a constant of the system standard I/O library) is used.</dd>
+<dd>Force the output to be buffered. (This is generally the default, but it may depend on the operating system.) If <code>-b</code> is given, a buffer size of BUFSIZ (a constant of the system standard I/O library) is used.</dd>
 <dt><code>-c</code> <i>lines</i></dt>
 <dd>If the <code>-c</code> flag is given, <code>buffchan</code> will close and reopen a file after every <i>lines</i> lines are written to the file.</dd>
 <dt><code>-C</code> <i>seconds</i></dt>
@@ -49,7 +49,7 @@ description: "buffchan – Buffered file-writing backend for INN"
  foo:foo.com
  munnari:munnari.oz.au</pre>
 <dt><code>-p</code> <i>pid-file</i></dt>
-<dd>If the <code>-p</code> option is given, <code>buffchan</code> will write a line containing its process <font SIZE="-1">ID</font> (in text) to the specified file when it starts.</dd>
+<dd>If the <code>-p</code> option is given, <code>buffchan</code> will write a line containing its process ID (in text) to the specified file when it starts.</dd>
 <dt><code>-r</code></dt>
 <dd>By default, <code>buffchan</code> sends its error messages to <i>pathlog</i>/errlog. To suppress this redirection and send error messages to standard error, use the <code>-r</code> flag.</dd>
 <dt><code>-s</code></dt>
@@ -72,7 +72,7 @@ description: "buffchan – Buffered file-writing backend for INN"
  news/software/b/133 &lt;102060 [at] litchi.foo.com&gt;
  comp/sources/unix/2002 &lt;999 [at] news.foo.com&gt;</pre>
 <h2>History</h2>
-<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
+<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to POD by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
 <p> <tt>$Id:</tt> buffchan.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8), <i><a href="/docs/linux/man/8-filechan/">filechan</a></i>(8), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5). </p>

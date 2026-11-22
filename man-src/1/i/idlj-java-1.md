@@ -71,13 +71,13 @@ My ref = tie._this(orb);
 idlj <code>-oldImplBase</code> <code>-fallTIE</code> My.idl
 </pre>
 <p> For the interface <i>My</i>, this will generate <i>My_Tie.java</i>. The constructor to <i>My_Tie</i> takes a <i>impl</i>. You must provide the implementation for <i>impl</i>, but it does not have to inherit from any other class, only the interface <i>HelloOperations</i>. But to use it with the ORB, you must wrap your implementation within <i>My_Tie</i>. For instance: </p>
-<p>ORB orb = ORB.init(args, System.getProperties());<br />
-// create servant and register it with the ORB<br />
-MyServant myDelegate = new MyServant();<br />
-myDelegate.setORB(orb);<br />
-// create a tie, with servant being the delegate.<br />
-MyPOATie tie = new MyPOATie(myDelegate);<br />
-// obtain the objectRef for the tie<br />
+<p>ORB orb = ORB.init(args, System.getProperties());<br/>
+// create servant and register it with the ORB<br/>
+MyServant myDelegate = new MyServant();<br/>
+myDelegate.setORB(orb);<br/>
+// create a tie, with servant being the delegate.<br/>
+MyPOATie tie = new MyPOATie(myDelegate);<br/>
+// obtain the objectRef for the tie<br/>
 My ref = tie._this(orb);</p>
 <h3>Specifying Alternate Locations for Emitted Files</h3>
 <p> If you want to direct the emitted files to a directory other than the current directory, invoke the compiler as: </p>
@@ -102,9 +102,9 @@ My ref = tie._this(orb);</p>
 <h3>Emitting Bindings for Include Files</h3>
 <p> By default, only those interfaces, structs, etc, that are defined in the idl file on the command line have Java bindings generated for them. The types defined in included files are not generated. For example, assume the following two idl files: </p>
 <p> <tt>My.idl</tt> </p>
-<p>#include &lt;MyOther.idl&gt;<br />
-interface My<br />
-{<br />
+<p>#include &lt;MyOther.idl&gt;<br/>
+interface My<br/>
+{<br/>
 };</p>
 <p> <tt>MyOther.idl</tt> </p>
 <pre>
@@ -122,10 +122,10 @@ interface My<br />
 </pre>
 <p> There is a caveat to the default rule. <i>#include</i> statements which appear at global scope are treated as described. These <i>#include</i> statements can be thought of as import statements. <i>#include</i> statements which appear within some enclosing scope are treated as true <i>#include</i> statements, meaning that the code within the included file is treated as if it appeared in the original file and, therefore, Java bindings are emitted for it. Here is an example: </p>
 <p> <tt>My.idl</tt> </p>
-<p>#include &lt;MyOther.idl&gt;<br />
-interface My<br />
-{<br />
-#include &lt;Embedded.idl&gt;<br />
+<p>#include &lt;MyOther.idl&gt;<br/>
+interface My<br/>
+{<br/>
+#include &lt;Embedded.idl&gt;<br/>
 };</p>
 <p> <tt>MyOther.idl</tt> </p>
 <pre>
@@ -134,8 +134,8 @@ interface My<br />
 };</code>
 </pre>
 <p> <tt>Embedded.idl</tt> </p>
-<p>enum E { one,<br />
-         two,<br />
+<p>enum E { one,<br/>
+         two,<br/>
          three };</p>
 <p> Running the following command: </p>
 <pre>
@@ -147,16 +147,16 @@ interface My<br />
 <h3>Inserting Package Prefixes</h3>
 <p> Suppose that you work for a company named ABC that has constructed the following IDL file: </p>
 <p> <tt>Widgets.idl</tt> </p>
-<p>module Widgets<br />
-{<br />
-    interface W1<br />
-    {<br />
-        &#8230;<br />
-    };<br />
-    interface W2<br />
-    {<br />
-        &#8230;<br />
-    };<br />
+<p>module Widgets<br/>
+{<br/>
+    interface W1<br/>
+    {<br/>
+        &#8230;<br/>
+    };<br/>
+    interface W2<br/>
+    {<br/>
+        &#8230;<br/>
+    };<br/>
 };</p>
 <p> Running this file through the IDL-to-Java compiler will place the Java bindings for <i>W1</i> and <i>W2</i> within the package <i>Widgets</i>. But there is an industry convention that states that a company&#8217;s packages should reside within a package named <i>com.&lt;company name&gt;</i>. The <i>Widgets</i> package is not good enough. To follow convention, it should be <i>com.abc.Widgets</i>. To place this package prefix onto the <i>Widgets</i> module, execute the following: </p>
 <pre>

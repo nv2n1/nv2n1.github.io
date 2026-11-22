@@ -24,16 +24,16 @@ ultra_s = socket(PF_INET, SOCK_DGRAM, IRDAPROTO_ULTRA);</code></pre>
 <p>The Linux-IrDA socket interface offers 4 types of sockets:</p>
 <dl>
 <dt><code>Stream socket &#8211; SOCK_STREAM, 0</code></dt>
-<dd>Stream sockets provides a reliable, stream oriented, full duplex connection between two sockets on top of <i>IrTTP</i>, similar to TCP sockets. IrTTP guarantees that the data arrives in order and manages flow control, IrLAP retransmits lost packets.<br />
+<dd>Stream sockets provides a reliable, stream oriented, full duplex connection between two sockets on top of <i>IrTTP</i>, similar to TCP sockets. IrTTP guarantees that the data arrives in order and manages flow control, IrLAP retransmits lost packets.<br/>
  Stream sockets does not preserve record boundaries.</dd>
 <dt><code>SeqPacket socket &#8211; SOCK_SEQPACKET, 0</code></dt>
-<dd>SeqPacket sockets provides a reliable, datagram oriented, full duplex connection between two sockets on top of <i>IrTTP</i>. IrTTP guarantees that the data arrives in order and manages flow control, IrLAP retransmits lost packets.<br />
+<dd>SeqPacket sockets provides a reliable, datagram oriented, full duplex connection between two sockets on top of <i>IrTTP</i>. IrTTP guarantees that the data arrives in order and manages flow control, IrLAP retransmits lost packets.<br/>
  SeqPacket sockets preserve record boundaries. Large datagrams will be fragmented as needed.</dd>
 <dt><code>Datagram socket &#8211; SOCK_DGRAM, IRDAPROTO_UNITDATA</code></dt>
-<dd>SeqPacket sockets provides a reliable, datagram oriented, full duplex connection between two sockets on top of <i>IrLMP</i>. There is no guarantee that the data arrives in order and there is no flow control, however IrLAP retransmits lost packets.<br />
+<dd>SeqPacket sockets provides a reliable, datagram oriented, full duplex connection between two sockets on top of <i>IrLMP</i>. There is no guarantee that the data arrives in order and there is no flow control, however IrLAP retransmits lost packets.<br/>
  Datagram sockets preserve record boundaries. No fragmentation is provided, datagrams larger than the IrDA link MTU are truncated or discarded.</dd>
 <dt><code>Ultra socket &#8211; SOCK_DGRAM, IRDAPROTO_ULTRA</code></dt>
-<dd>Ultra sockets provides a connectionless, unreliable datagram packet service on top of <i>IrLAP-Ultra</i>. Ultra datagrams are sent and received only when no IrLAP connection is established and otherwise discarded. They are always transmitted at 9600 bauds. Datagrams may be lost or reordered, and there is no flow control.<br />
+<dd>Ultra sockets provides a connectionless, unreliable datagram packet service on top of <i>IrLAP-Ultra</i>. Ultra datagrams are sent and received only when no IrLAP connection is established and otherwise discarded. They are always transmitted at 9600 bauds. Datagrams may be lost or reordered, and there is no flow control.<br/>
  Ultra sockets preserve record boundaries. No fragmentation is provided, datagrams larger than the Ultra MTU (382 bytes) are truncated or discarded.</dd></dl>
 <h2>Address Format</h2>
 <p>An <code>IrDA socket address</code> is defined as a combination of an IrDA interface address and a <i>service name</i>. Service names are automatically resolved to lsap through the <i>IrIAP</i> protocol. </p>

@@ -34,7 +34,7 @@ description: "mailaddr – mail addressing description"
 <h3>Postmaster</h3>
 <p>Every site is required to have a user or user alias designated &quot;postmaster&quot; to which problems with the mail system may be addressed. The &quot;postmaster&quot; address is not case sensitive.</p>
 <h2>Files</h2>
-<p><i>/etc/aliases</i><br />
+<p><i>/etc/aliases</i><br/>
  <i>~/.forward</i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5), <code><a href="/docs/linux/man/5-forward/">forward</a></code>(5), <code>sendmail</code>(8) </p>

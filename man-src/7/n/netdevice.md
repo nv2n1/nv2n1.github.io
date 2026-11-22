@@ -12,23 +12,23 @@ description: "netdevice – low-level access to Linux network devices"
 <pre><code>#include &lt;sys/ioctl.h&gt;
 #include &lt;net/if.h&gt;</code></pre>
 <h2>Description</h2>
-<p>This man page describes the sockets interface which is used to configure network devices. Linux supports some standard ioctls to configure network devices. They can be used on any socket&#8217;s file descriptor regardless of the family or type. Most of them pass an <i>ifreq</i> structure: struct ifreq {<br />
-    char ifr_name[IFNAMSIZ]; /* Interface name */<br />
-    union {<br />
-        struct sockaddr ifr_addr;<br />
-        struct sockaddr ifr_dstaddr;<br />
-        struct sockaddr ifr_broadaddr;<br />
-        struct sockaddr ifr_netmask;<br />
-        struct sockaddr ifr_hwaddr;<br />
-        short ifr_flags;<br />
-        int ifr_ifindex;<br />
-        int ifr_metric;<br />
-        int ifr_mtu;<br />
-        struct ifmap ifr_map;<br />
-        char ifr_slave[IFNAMSIZ];<br />
-        char ifr_newname[IFNAMSIZ];<br />
-        char *ifr_data;<br />
-    };<br />
+<p>This man page describes the sockets interface which is used to configure network devices. Linux supports some standard ioctls to configure network devices. They can be used on any socket&#8217;s file descriptor regardless of the family or type. Most of them pass an <i>ifreq</i> structure: struct ifreq {<br/>
+    char ifr_name[IFNAMSIZ]; /* Interface name */<br/>
+    union {<br/>
+        struct sockaddr ifr_addr;<br/>
+        struct sockaddr ifr_dstaddr;<br/>
+        struct sockaddr ifr_broadaddr;<br/>
+        struct sockaddr ifr_netmask;<br/>
+        struct sockaddr ifr_hwaddr;<br/>
+        short ifr_flags;<br/>
+        int ifr_ifindex;<br/>
+        int ifr_metric;<br/>
+        int ifr_mtu;<br/>
+        struct ifmap ifr_map;<br/>
+        char ifr_slave[IFNAMSIZ];<br/>
+        char ifr_newname[IFNAMSIZ];<br/>
+        char *ifr_data;<br/>
+    };<br/>
 }; Normally, the user specifies which device to affect by setting <i>ifr_name</i> to the name of the interface. All other members of the structure may share memory.</p>
 <h3>Ioctls</h3>
 <p>If an ioctl is marked as privileged, then using it requires an effective user ID of 0 or the <code>CAP_NET_ADMIN</code> capability. If this is not the case, <code>EPERM</code> will be returned.</p>
@@ -212,12 +212,12 @@ description: "netdevice – low-level access to Linux network devices"
 <dd>Set the hardware broadcast address of a device from <i>ifr_hwaddr</i>. This is a privileged operation.</dd>
 <dt><code>SIOCGIFMAP</code>, <code>SIOCSIFMAP</code></dt>
 <dd>Get or set the interface&#8217;s hardware parameters using <i>ifr_map</i>. Setting the parameters is a privileged operation.</dd>
-<dd>struct ifmap {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long&nbsp;<wbr>&nbsp;<wbr>&nbsp;mem_start;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long&nbsp;<wbr>&nbsp;<wbr>&nbsp;mem_end;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short&nbsp;<wbr>&nbsp;base_addr;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;<wbr>&nbsp;irq;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;<wbr>&nbsp;dma;<br />
+<dd>struct ifmap {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long&nbsp;<wbr>&nbsp;<wbr>&nbsp;mem_start;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long&nbsp;<wbr>&nbsp;<wbr>&nbsp;mem_end;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short&nbsp;<wbr>&nbsp;base_addr;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;<wbr>&nbsp;irq;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;<wbr>&nbsp;dma;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;<wbr>&nbsp;port; };</dd>
 <dd>The interpretation of the ifmap structure depends on the device driver and the architecture.</dd>
 <dt><code>SIOCADDMULTI</code>, <code>SIOCDELMULTI</code></dt>
@@ -228,11 +228,11 @@ description: "netdevice – low-level access to Linux network devices"
 <dd>Changes the name of the interface specified in <i>ifr_name</i> to <i>ifr_newname</i>. This is a privileged operation. It is allowed only when the interface is not up.</dd>
 <dt><code>SIOCGIFCONF</code></dt>
 <dd>Return a list of interface (network layer) addresses. This currently means only addresses of the <code>AF_INET</code> (IPv4) family for compatibility. Unlike the others, this ioctl passes an <i>ifconf</i> structure:</dd>
-<dd>struct ifconf {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ifc_len;&nbsp;/*&nbsp;size of buffer&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;union&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*ifc_buf;&nbsp;/*&nbsp;buffer address&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ifreq&nbsp;<wbr>&nbsp;<wbr>&nbsp;*ifc_req;&nbsp;/*&nbsp;array of structures&nbsp;*/<br />
+<dd>struct ifconf {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ifc_len;&nbsp;/*&nbsp;size of buffer&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;union&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*ifc_buf;&nbsp;/*&nbsp;buffer address&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ifreq&nbsp;<wbr>&nbsp;<wbr>&nbsp;*ifc_req;&nbsp;/*&nbsp;array of structures&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}; };</dd>
 <dd>If <i>ifc_req</i> is NULL, <code>SIOCGIFCONF</code> returns the necessary buffer size in bytes for receiving all available addresses in <i>ifc_len</i>. Otherwise, <i>ifc_req</i> contains a pointer to an array of <i>ifreq</i> structures to be filled with all currently active L3 interface addresses. <i>ifc_len</i> contains the size of the array in bytes. Within each <i>ifreq</i> structure, <i>ifr_name</i> will receive the interface name, and <i>ifr_addr</i> the address. The actual number of bytes transferred is returned in <i>ifc_len</i>.</dd>
 <dd>If the size specified by <i>ifc_len</i> is insufficient to store all the addresses, the kernel will skip the exceeding ones and return success. There is no reliable way of detecting this condition once it has occurred. It is therefore recommended to either determine the necessary buffer size beforehand by calling <code>SIOCGIFCONF</code> with <i>ifc_req</i> set to NULL, or to retry the call with a bigger buffer whenever <i>ifc_len</i> upon return differs by less than <i>sizeof(struct ifreq)</i> from its original value.</dd>

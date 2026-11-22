@@ -13,7 +13,7 @@ description: "mkinitrd – is a compat wrapper, which calls dracut to generate a
 <h2>Description</h2>
 <p>mkinitrd creates an initramfs image &lt;initrd-image&gt; for the kernel with version &lt;kernel-version&gt; by calling &quot;dracut&quot;.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
+<dd> <code>Important</code> <br/>
  If a more fine grained control over the resulting image is needed, &quot;dracut&quot; should be called directly. </dd>
 <h2>Options</h2>
 <p><code>&#8211;version</code></p>

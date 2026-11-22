@@ -167,13 +167,13 @@ xrdcp[options] source destination
 <p> <i>source</i></p>
 <dl>
 <dt>
-</dt><dd> a dash (i.e. <code>&#8211;</code>) indicating stanard in, a local file, a local directory name suffixed by /, or an xrootd URL in the form of <center> <code><a href="xroot://[">xroot://[</a></code><i>user</i><code>@</code>]<i>host[</i><code>:</code><i>port</i>]<code>/</code><i>absolutepath</i><br />
+</dt><dd> a dash (i.e. <code>&#8211;</code>) indicating stanard in, a local file, a local directory name suffixed by /, or an xrootd URL in the form of <center> <code><a href="xroot://[">xroot://[</a></code><i>user</i><code>@</code>]<i>host[</i><code>:</code><i>port</i>]<code>/</code><i>absolutepath</i><br/>
  </center> The <i>absolutepath</i> can be a directory. </dd>
 </dl>
 <p> <i>destination</i></p>
 <dl>
 <dt>
-</dt><dd> a dash (i.e. <code>&#8211;</code>) indicating stanard out, a local file, a local directory name suffixed by /, or an xrootd URL in the form <center> <code><a href="xroot://[">xroot://[</a></code><i>user</i><code>@</code>]<i>host[</i><code>:</code><i>port</i>]<code>/</code><i>absolutepath</i><br />
+</dt><dd> a dash (i.e. <code>&#8211;</code>) indicating stanard out, a local file, a local directory name suffixed by /, or an xrootd URL in the form <center> <code><a href="xroot://[">xroot://[</a></code><i>user</i><code>@</code>]<i>host[</i><code>:</code><i>port</i>]<code>/</code><i>absolutepath</i><br/>
  </center> The <i>absolutepath</i> can be a directory. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
@@ -337,5 +337,5 @@ xrdcp[options] source destination
 <p> LGPL </p>
 <h2>SUPPORT LEVEL</h2>
 <p> The <code>xrdcp</code> command is supported by the xrootd collaboration. Contact information can be found at: </p>
-<p> <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
+<p> <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br/>
  </center> </p>

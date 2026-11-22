@@ -18,8 +18,8 @@ description: "nanosleep – high-resolution sleep"
 <p> <code>nanosleep</code>() suspends the execution of the calling thread until either at least the time specified in <i>*req</i> has elapsed, or the delivery of a signal that triggers the invocation of a handler in the calling thread or that terminates the process. </p>
 <p> If the call is interrupted by a signal handler, <code>nanosleep</code>() returns -1, sets <i>errno</i> to <code>EINTR</code>, and writes the remaining time into the structure pointed to by <i>rem</i> unless <i>rem</i> is NULL. The value of <i>*rem</i> can then be used to call <code>nanosleep</code>() again and complete the specified pause (but see NOTES). </p>
 <p> The structure <i>timespec</i> is used to specify intervals of time with nanosecond precision. It is defined as follows: </p>
-<p> struct timespec {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br />
+<p> struct timespec {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_nsec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;nanoseconds&nbsp;*/ }; </p>
 <p> The value of the nanoseconds field must be in the range 0 to 999999999. </p>
 <p> Compared to <code><a href="/docs/linux/man/3-sleep/">sleep</a></code>(3) and <code><a href="/docs/linux/man/3-usleep/">usleep</a></code>(3), <code>nanosleep</code>() has the following advantages: it provides a higher resolution for specifying the sleep interval; POSIX.1 explicitly specifies that it does not interact with signals; and it makes the task of resuming a sleep that has been interrupted by a signal handler easier.</p>

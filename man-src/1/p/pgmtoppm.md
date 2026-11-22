@@ -10,8 +10,8 @@ description: "pgmtoppm – colorize a portable graymap into a portable pixmap"
 
 <p> pgmtoppm &#8211; colorize a portable graymap into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pgmtoppm</code> <i>colorspec</i> [<i>pgmfile</i>]<br />
- <code>pgmtoppm</code> <i>colorspec1</i><code>&#8211;</code><i>colorspec2</i> [<i>pgmfile</i>]<br />
+<p> <code>pgmtoppm</code> <i>colorspec</i> [<i>pgmfile</i>]<br/>
+ <code>pgmtoppm</code> <i>colorspec1</i><code>&#8211;</code><i>colorspec2</i> [<i>pgmfile</i>]<br/>
  <code>pgmtoppm -map</code> <i>mapfile</i> [<i>pgmfile</i>] </p>
 <h2>DESCRIPTION</h2>
 <p> Reads a PGM as input. Produces a PPM file as output with a specific color assigned to each gray value in the input. </p>

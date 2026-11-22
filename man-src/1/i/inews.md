@@ -51,11 +51,11 @@ description: "inews – Post a Usenet article to the local news server"
 <dt><code>-S</code></dt>
 <dd> Do not attempt to append <i>~/.signature</i> to the message, even if it exists.</dd></dl>
 <h2>NOTES</h2>
-<p> If the <font SIZE="-1">NNTP</font> server requests authentication, <code>inews</code> will try to read <i>passwd.nntp</i> to get the username and password to use and will therefore need read access to that file. This is typically done by making that file group-readable and adding all users who should be able to use <code>inews</code> to post to that server to the appropriate group. </p>
+<p> If the NNTP server requests authentication, <code>inews</code> will try to read <i>passwd.nntp</i> to get the username and password to use and will therefore need read access to that file. This is typically done by making that file group-readable and adding all users who should be able to use <code>inews</code> to post to that server to the appropriate group. </p>
 <p> <code>inews</code> used to do even more than it does now, and all of the remaining checks that are not dependent on the user running <code>inews</code> should probably be removed in favor of letting the news server handle them. </p>
-<p> Since <font SIZE="-1">INN</font>&#8216;s <code>inews</code> uses <i>inn.conf</i> and some other corners of an <font SIZE="-1">INN</font> installation, it&#8217;s not very appropriate as a general stand-alone <code>inews</code> program for general use on a system that&#8217;s not running a news server. Other, more suitable versions of <code>inews</code> are available as part of various Unix news clients or by themselves.</p>
+<p> Since INN&#8216;s <code>inews</code> uses <i>inn.conf</i> and some other corners of an INN installation, it&#8217;s not very appropriate as a general stand-alone <code>inews</code> program for general use on a system that&#8217;s not running a news server. Other, more suitable versions of <code>inews</code> are available as part of various Unix news clients or by themselves.</p>
 <h2>HISTORY</h2>
-<p> Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Rewritten in <font SIZE="-1">POD</font> by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
+<p> Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Rewritten in POD by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
 <p> <tt>$Id:</tt> inews.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/5-passwd-nntp/">passwd.nntp</a></i>(5), <i><a href="/docs/linux/man/1-rnews/">rnews</a></i>(1). </p>

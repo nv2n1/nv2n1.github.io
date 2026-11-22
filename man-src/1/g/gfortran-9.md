@@ -10,21 +10,21 @@ description: "gfortran – GNU Fortran compiler"
 
 <p> gfortran - GNU Fortran compiler </p>
 <h2>SYNOPSIS</h2>
-<p> gfortran [<code>-c</code>|<code>-S</code>|<code>-E</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-g</code>]&nbsp;[<code>-pg</code>]&nbsp;[<code>-O</code><i>level</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-W</code><i>warn</i>...]&nbsp;[<code>-pedantic</code>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-I</code><i>dir</i>...]&nbsp;[<code>-L</code><i>dir</i>...] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-D</code><i>macro</i>[=<i>defn</i>]...]&nbsp;[<code>-U</code><i>macro</i>] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-f</code><i>option</i>...] <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-m</code><i>machine-option</i>...] <br />
+<p> gfortran [<code>-c</code>|<code>-S</code>|<code>-E</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-g</code>]&nbsp;[<code>-pg</code>]&nbsp;[<code>-O</code><i>level</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-W</code><i>warn</i>...]&nbsp;[<code>-pedantic</code>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-I</code><i>dir</i>...]&nbsp;[<code>-L</code><i>dir</i>...] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-D</code><i>macro</i>[=<i>defn</i>]...]&nbsp;[<code>-U</code><i>macro</i>] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-f</code><i>option</i>...] <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-m</code><i>machine-option</i>...] <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>&nbsp;<i>outfile</i>]&nbsp;<i>infile</i>... </p>
 <p> Only the most useful options are listed here; see below for the remainder.  </p>
 <h2>DESCRIPTION</h2>
-<p> The <code>gfortran</code> command supports all the options supported by the <code>gcc</code> command. Only options specific to <font SIZE="-1">GNU</font> Fortran are documented here. </p>
-<p> All <font SIZE="-1">GCC</font> and <font SIZE="-1">GNU</font> Fortran options are accepted both by <code>gfortran</code> and by <code>gcc</code> (as well as any other drivers built at the same time, such as <code>g++</code>), since adding <font SIZE="-1">GNU</font> Fortran to the <font SIZE="-1">GCC</font> distribution enables acceptance of <font SIZE="-1">GNU</font> Fortran options by all of the relevant drivers. </p>
+<p> The <code>gfortran</code> command supports all the options supported by the <code>gcc</code> command. Only options specific to GNU Fortran are documented here. </p>
+<p> All GCC and GNU Fortran options are accepted both by <code>gfortran</code> and by <code>gcc</code> (as well as any other drivers built at the same time, such as <code>g++</code>), since adding GNU Fortran to the GCC distribution enables acceptance of GNU Fortran options by all of the relevant drivers. </p>
 <p> In some cases, options have positive and negative forms; the negative form of <code>-ffoo</code> would be <code>-fno-foo</code>. This manual documents only one of these two forms, whichever one is not the default.  </p>
 <h2>OPTIONS</h2>
-<p> Here is a summary of all the options specific to <font SIZE="-1">GNU</font> Fortran, grouped by type. Explanations are in the following sections. </p>
+<p> Here is a summary of all the options specific to GNU Fortran, grouped by type. Explanations are in the following sections. </p>
 <dl>
 <dt><i>Fortran Language Options</i></dt>
 <dd> <p> <code>-fall-intrinsics -fbackslash -fcray-pointer -fd-lines-as-code -fd-lines-as-comments -fdec -fdec-structure -fdec-intrinsic-ints -fdec-static -fdec-math -fdec-include -fdefault-double-8 -fdefault-integer-8 -fdefault-real-8 -fdefault-real-10 -fdefault-real-16 -fdollar-ok -ffixed-line-length-</code><i>n</i> <code>-ffixed-line-length-none -fpad-source -ffree-form -ffree-line-length-</code><i>n</i> <code>-ffree-line-length-none -fimplicit-none -finteger-4-integer-8 -fmax-identifier-length -fmodule-private -ffixed-form -fno-range-check -fopenacc -fopenmp -freal-4-real-10 -freal-4-real-16 -freal-4-real-8 -freal-8-real-10 -freal-8-real-16 -freal-8-real-4 -std=</code><i>std</i> <code>-ftest-forall-temp</code> </p>
@@ -70,30 +70,30 @@ description: "gfortran – GNU Fortran compiler"
 <dd> <p> Enable special treatment for lines beginning with <code>&quot;d&quot;</code> or <code>&quot;D&quot;</code> in fixed form sources. If the <code>-fd-lines-as-code</code> option is given they are treated as if the first column contained a blank. If the <code>-fd-lines-as-comments</code> option is given, they are treated as comment lines. </p>
  </dd>
 <dt><code>-fdec</code></dt>
-<dd> <p> <font SIZE="-1">DEC</font> compatibility mode. Enables extensions and other features that mimic the default behavior of older compilers (such as <font SIZE="-1">DEC</font>). These features are non-standard and should be avoided at all costs. For details on <font SIZE="-1">GNU</font> Fortran&#8217;s implementation of these extensions see the full documentation. </p>
+<dd> <p> DEC compatibility mode. Enables extensions and other features that mimic the default behavior of older compilers (such as DEC). These features are non-standard and should be avoided at all costs. For details on GNU Fortran&#8217;s implementation of these extensions see the full documentation. </p>
 <p> Other flags enabled by this switch are: <code>-fdollar-ok</code> <code>-fcray-pointer</code> <code>-fdec-structure</code> <code>-fdec-intrinsic-ints</code> <code>-fdec-static</code> <code>-fdec-math</code> </p>
 <p> If <code>-fd-lines-as-code</code>/<code>-fd-lines-as-comments</code> are unset, then <code>-fdec</code> also sets <code>-fd-lines-as-comments</code>. </p>
  </dd>
 <dt><code>-fdec-structure</code></dt>
-<dd> <p> Enable <font SIZE="-1">DEC</font> <code>&quot;STRUCTURE&quot;</code> and <code>&quot;RECORD&quot;</code> as well as <code>&quot;UNION&quot;</code>, <code>&quot;MAP&quot;</code>, and dot (&#8216;.&#8216;) as a member separator (in addition to &#8216;%&#8216;). This is provided for compatibility only; Fortran 90 derived types should be used instead where possible. </p>
+<dd> <p> Enable DEC <code>&quot;STRUCTURE&quot;</code> and <code>&quot;RECORD&quot;</code> as well as <code>&quot;UNION&quot;</code>, <code>&quot;MAP&quot;</code>, and dot (&#8216;.&#8216;) as a member separator (in addition to &#8216;%&#8216;). This is provided for compatibility only; Fortran 90 derived types should be used instead where possible. </p>
  </dd>
 <dt><code>-fdec-intrinsic-ints</code></dt>
-<dd> <p> Enable B/I/J/K kind variants of existing integer functions (e.g. <font SIZE="-1">BIAND, IIAND, JIAND,</font> etc...). For a complete list of intrinsics see the full documentation. </p>
+<dd> <p> Enable B/I/J/K kind variants of existing integer functions (e.g. BIAND, IIAND, JIAND, etc...). For a complete list of intrinsics see the full documentation. </p>
  </dd>
 <dt><code>-fdec-math</code></dt>
-<dd> <p> Enable legacy math intrinsics such as <font SIZE="-1">COTAN</font> and degree-valued trigonometric functions (e.g. <font SIZE="-1">TAND, ATAND,</font> etc...) for compatability with older code. </p>
+<dd> <p> Enable legacy math intrinsics such as COTAN and degree-valued trigonometric functions (e.g. TAND, ATAND, etc...) for compatability with older code. </p>
  </dd>
 <dt><code>-fdec-static</code></dt>
-<dd> <p> Enable DEC-style <font SIZE="-1">STATIC</font> and <font SIZE="-1">AUTOMATIC</font> attributes to explicitly specify the storage of variables and other objects. </p>
+<dd> <p> Enable DEC-style STATIC and AUTOMATIC attributes to explicitly specify the storage of variables and other objects. </p>
  </dd>
 <dt><code>-fdec-include</code></dt>
-<dd> <p> Enable parsing of <font SIZE="-1">INCLUDE</font> as a statement in addition to parsing it as <font SIZE="-1">INCLUDE</font> line. When parsed as <font SIZE="-1">INCLUDE</font> statement, <font SIZE="-1">INCLUDE</font> does not have to be on a single line and can use line continuations. </p>
+<dd> <p> Enable parsing of INCLUDE as a statement in addition to parsing it as INCLUDE line. When parsed as INCLUDE statement, INCLUDE does not have to be on a single line and can use line continuations. </p>
  </dd>
 <dt><code>-fdollar-ok</code></dt>
 <dd> <p> Allow <code>$</code> as a valid non-first character in a symbol name. Symbols that start with <code>$</code> are rejected since it is unclear which rules to apply to implicit typing as different vendors implement different rules. Using <code>$</code> in <code>&quot;IMPLICIT&quot;</code> statements is also rejected. </p>
  </dd>
 <dt><code>-fbackslash</code></dt>
-<dd> <p> Change the interpretation of backslashes in string literals from a single backslash character to ``C-style&#8217;&#8216; escape characters. The following combinations are expanded <code>&quot;\a&quot;</code>, <code>&quot;\b&quot;</code>, <code>&quot;\f&quot;</code>, <code>&quot;\n&quot;</code>, <code>&quot;\r&quot;</code>, <code>&quot;\t&quot;</code>, <code>&quot;\v&quot;</code>, <code>&quot;\\&quot;</code>, and <code>&quot;\0&quot;</code> to the <font SIZE="-1">ASCII</font> characters alert, backspace, form feed, newline, carriage return, horizontal tab, vertical tab, backslash, and <font SIZE="-1">NUL,</font> respectively. Additionally, <code>&quot;\x&quot;</code><i>nn</i>, <code>&quot;\u&quot;</code><i>nnnn</i> and <code>&quot;\U&quot;</code><i>nnnnnnnn</i> (where each <i>n</i> is a hexadecimal digit) are translated into the Unicode characters corresponding to the specified code points. All other combinations of a character preceded by \ are unexpanded. </p>
+<dd> <p> Change the interpretation of backslashes in string literals from a single backslash character to ``C-style&#8217;&#8216; escape characters. The following combinations are expanded <code>&quot;\a&quot;</code>, <code>&quot;\b&quot;</code>, <code>&quot;\f&quot;</code>, <code>&quot;\n&quot;</code>, <code>&quot;\r&quot;</code>, <code>&quot;\t&quot;</code>, <code>&quot;\v&quot;</code>, <code>&quot;\\&quot;</code>, and <code>&quot;\0&quot;</code> to the ASCII characters alert, backspace, form feed, newline, carriage return, horizontal tab, vertical tab, backslash, and NUL, respectively. Additionally, <code>&quot;\x&quot;</code><i>nn</i>, <code>&quot;\u&quot;</code><i>nnnn</i> and <code>&quot;\U&quot;</code><i>nnnnnnnn</i> (where each <i>n</i> is a hexadecimal digit) are translated into the Unicode characters corresponding to the specified code points. All other combinations of a character preceded by \ are unexpanded. </p>
  </dd>
 <dt><code>-fmodule-private</code></dt>
 <dd> <p> Set the default accessibility of module entities to <code>&quot;PRIVATE&quot;</code>. Use-associated entities will not be accessible unless they are explicitly declared as <code>&quot;PUBLIC&quot;</code>. </p>
@@ -119,13 +119,13 @@ description: "gfortran – GNU Fortran compiler"
  </dd>
 <dt><code>-fopenacc</code></dt>
 <dd> <p> Enable the OpenACC extensions. This includes OpenACC <code>&quot;!$acc&quot;</code> directives in free form and <code>&quot;c$acc&quot;</code>, <code>*$acc</code> and <code>&quot;!$acc&quot;</code> directives in fixed form, <code>&quot;!$&quot;</code> conditional compilation sentinels in free form and <code>&quot;c$&quot;</code>, <code>&quot;*$&quot;</code> and <code>&quot;!$&quot;</code> sentinels in fixed form, and when linking arranges for the OpenACC runtime library to be linked in. </p>
-<p> Note that this is an experimental feature, incomplete, and subject to change in future versions of <font SIZE="-1">GCC.</font> See &lt;<code><a rel="nofollow" href="https://gcc.gnu.org/wiki/OpenACC">https://gcc.gnu.org/wiki/OpenACC</a></code>&gt; for more information. </p>
+<p> Note that this is an experimental feature, incomplete, and subject to change in future versions of GCC. See &lt;<code><a rel="nofollow" href="https://gcc.gnu.org/wiki/OpenACC">https://gcc.gnu.org/wiki/OpenACC</a></code>&gt; for more information. </p>
  </dd>
 <dt><code>-fopenmp</code></dt>
 <dd> <p> Enable the OpenMP extensions. This includes OpenMP <code>&quot;!$omp&quot;</code> directives in free form and <code>&quot;c$omp&quot;</code>, <code>*$omp</code> and <code>&quot;!$omp&quot;</code> directives in fixed form, <code>&quot;!$&quot;</code> conditional compilation sentinels in free form and <code>&quot;c$&quot;</code>, <code>&quot;*$&quot;</code> and <code>&quot;!$&quot;</code> sentinels in fixed form, and when linking arranges for the OpenMP runtime library to be linked in. The option <code>-fopenmp</code> implies <code>-frecursive</code>. </p>
  </dd>
 <dt><code>-fno-range-check</code></dt>
-<dd> <p> Disable range checking on results of simplification of constant expressions during compilation. For example, <font SIZE="-1">GNU</font> Fortran will give an error at compile time when simplifying <code>&quot;a = 1. / 0&quot;</code>. With this option, no error will be given and <code>&quot;a&quot;</code> will be assigned the value <code>&quot;+Infinity&quot;</code>. If an expression evaluates to a value outside of the relevant range of [<code>&quot;-HUGE()&quot;</code>:<code>&quot;HUGE()&quot;</code>], then the expression will be replaced by <code>&quot;-Inf&quot;</code> or <code>&quot;+Inf&quot;</code> as appropriate. Similarly, <code>&quot;DATA i/Z&#8217;FFFFFFFF&#8217;/&quot;</code> will result in an integer overflow on most systems, but with <code>-fno-range-check</code> the value will ``wrap around&#8217;&#8216; and <code>&quot;i&quot;</code> will be initialized to -1 instead. </p>
+<dd> <p> Disable range checking on results of simplification of constant expressions during compilation. For example, GNU Fortran will give an error at compile time when simplifying <code>&quot;a = 1. / 0&quot;</code>. With this option, no error will be given and <code>&quot;a&quot;</code> will be assigned the value <code>&quot;+Infinity&quot;</code>. If an expression evaluates to a value outside of the relevant range of [<code>&quot;-HUGE()&quot;</code>:<code>&quot;HUGE()&quot;</code>], then the expression will be replaced by <code>&quot;-Inf&quot;</code> or <code>&quot;+Inf&quot;</code> as appropriate. Similarly, <code>&quot;DATA i/Z&#8217;FFFFFFFF&#8217;/&quot;</code> will result in an integer overflow on most systems, but with <code>-fno-range-check</code> the value will ``wrap around&#8217;&#8216; and <code>&quot;i&quot;</code> will be initialized to -1 instead. </p>
  </dd>
 <dt><code>-fdefault-integer-8</code></dt>
 <dd> <p> Set the default integer and logical types to an 8 byte wide type. This option also affects the kind of integer constants like <code>42</code>. Unlike <code>-finteger-4-integer-8</code>, it does not promote variables with explicit kind declaration. </p>
@@ -143,7 +143,7 @@ description: "gfortran – GNU Fortran compiler"
 <dd> <p> Set the <code>&quot;DOUBLE PRECISION&quot;</code> type and double real constants like <code>&quot;1.d0&quot;</code> to an 8 byte wide type. Do nothing if this is already the default. This option prevents <code>-fdefault-real-8</code>, <code>-fdefault-real-10</code>, and <code>-fdefault-real-16</code>, from promoting <code>&quot;DOUBLE PRECISION&quot;</code> and double real constants like <code>&quot;1.d0&quot;</code> to 16 bytes. </p>
  </dd>
 <dt><code>-finteger-4-integer-8</code></dt>
-<dd> <p> Promote all <code>&quot;INTEGER(KIND=4)&quot;</code> entities to an <code>&quot;INTEGER(KIND=8)&quot;</code> entities. If <code>&quot;KIND=8&quot;</code> is unavailable, then an error will be issued. This option should be used with care and may not be suitable for your codes. Areas of possible concern include calls to external procedures, alignment in <code>&quot;EQUIVALENCE&quot;</code> and/or <code>&quot;COMMON&quot;</code>, generic interfaces, <font SIZE="-1">BOZ</font> literal constant conversion, and I/O. Inspection of the intermediate representation of the translated Fortran code, produced by <code>-fdump-tree-original</code>, is suggested. </p>
+<dd> <p> Promote all <code>&quot;INTEGER(KIND=4)&quot;</code> entities to an <code>&quot;INTEGER(KIND=8)&quot;</code> entities. If <code>&quot;KIND=8&quot;</code> is unavailable, then an error will be issued. This option should be used with care and may not be suitable for your codes. Areas of possible concern include calls to external procedures, alignment in <code>&quot;EQUIVALENCE&quot;</code> and/or <code>&quot;COMMON&quot;</code>, generic interfaces, BOZ literal constant conversion, and I/O. Inspection of the intermediate representation of the translated Fortran code, produced by <code>-fdump-tree-original</code>, is suggested. </p>
  </dd>
 <dt><code>-freal-4-real-8</code></dt>
 <dd>  </dd>
@@ -156,10 +156,10 @@ description: "gfortran – GNU Fortran compiler"
 <dt><code>-freal-8-real-10</code></dt>
 <dd>  </dd>
 <dt><code>-freal-8-real-16</code></dt>
-<dd> <p> Promote all <code>&quot;REAL(KIND=M)&quot;</code> entities to <code>&quot;REAL(KIND=N)&quot;</code> entities. If <code>&quot;REAL(KIND=N)&quot;</code> is unavailable, then an error will be issued. All other real kind types are unaffected by this option. These options should be used with care and may not be suitable for your codes. Areas of possible concern include calls to external procedures, alignment in <code>&quot;EQUIVALENCE&quot;</code> and/or <code>&quot;COMMON&quot;</code>, generic interfaces, <font SIZE="-1">BOZ</font> literal constant conversion, and I/O. Inspection of the intermediate representation of the translated Fortran code, produced by <code>-fdump-tree-original</code>, is suggested. </p>
+<dd> <p> Promote all <code>&quot;REAL(KIND=M)&quot;</code> entities to <code>&quot;REAL(KIND=N)&quot;</code> entities. If <code>&quot;REAL(KIND=N)&quot;</code> is unavailable, then an error will be issued. All other real kind types are unaffected by this option. These options should be used with care and may not be suitable for your codes. Areas of possible concern include calls to external procedures, alignment in <code>&quot;EQUIVALENCE&quot;</code> and/or <code>&quot;COMMON&quot;</code>, generic interfaces, BOZ literal constant conversion, and I/O. Inspection of the intermediate representation of the translated Fortran code, produced by <code>-fdump-tree-original</code>, is suggested. </p>
  </dd>
 <dt><code>-std=</code><i>std</i></dt>
-<dd> <p> Specify the standard to which the program is expected to conform, which may be one of <code>f95</code>, <code>f2003</code>, <code>f2008</code>, <code>f2018</code>, <code>gnu</code>, or <code>legacy</code>. The default value for <i>std</i> is <code>gnu</code>, which specifies a superset of the latest Fortran standard that includes all of the extensions supported by <font SIZE="-1">GNU</font> Fortran, although warnings will be given for obsolete extensions not recommended for use in new code. The <code>legacy</code> value is equivalent but without the warnings for obsolete extensions, and may be useful for old non-standard programs. The <code>f95</code>, <code>f2003</code>, <code>f2008</code>, and <code>f2018</code> values specify strict conformance to the Fortran 95, Fortran 2003, Fortran 2008 and Fortran 2018 standards, respectively; errors are given for all extensions beyond the relevant language standard, and warnings are given for the Fortran 77 features that are permitted but obsolescent in later standards. The deprecated option <code>-std=f2008ts</code> acts as an alias for <code>-std=f2018</code>. It is only present for backwards compatibility with earlier gfortran versions and should not be used any more. </p>
+<dd> <p> Specify the standard to which the program is expected to conform, which may be one of <code>f95</code>, <code>f2003</code>, <code>f2008</code>, <code>f2018</code>, <code>gnu</code>, or <code>legacy</code>. The default value for <i>std</i> is <code>gnu</code>, which specifies a superset of the latest Fortran standard that includes all of the extensions supported by GNU Fortran, although warnings will be given for obsolete extensions not recommended for use in new code. The <code>legacy</code> value is equivalent but without the warnings for obsolete extensions, and may be useful for old non-standard programs. The <code>f95</code>, <code>f2003</code>, <code>f2008</code>, and <code>f2018</code> values specify strict conformance to the Fortran 95, Fortran 2003, Fortran 2008 and Fortran 2018 standards, respectively; errors are given for all extensions beyond the relevant language standard, and warnings are given for the Fortran 77 features that are permitted but obsolescent in later standards. The deprecated option <code>-std=f2008ts</code> acts as an alias for <code>-std=f2018</code>. It is only present for backwards compatibility with earlier gfortran versions and should not be used any more. </p>
  </dd>
 <dt><code>-ftest-forall-temp</code></dt>
 <dd> <p> Enhance test coverage by forcing most forall assignments to use temporary. </p>
@@ -193,13 +193,13 @@ description: "gfortran – GNU Fortran compiler"
 <dd> <p> Output <code>&#8216;#include&#8217;</code> directives in addition to the result of preprocessing. </p>
  </dd>
 <dt><code>-fworking-directory</code></dt>
-<dd> <p> Enable generation of linemarkers in the preprocessor output that will let the compiler know the current working directory at the time of preprocessing. When this option is enabled, the preprocessor will emit, after the initial linemarker, a second linemarker with the current working directory followed by two slashes. <font SIZE="-1">GCC</font> will use this directory, when it is present in the preprocessed input, as the directory emitted as the current working directory in some debugging information formats. This option is implicitly enabled if debugging information is enabled, but this can be inhibited with the negated form <code>-fno-working-directory</code>. If the <code>-P</code> flag is present in the command line, this option has no effect, since no <code>&quot;#line&quot;</code> directives are emitted whatsoever. </p>
+<dd> <p> Enable generation of linemarkers in the preprocessor output that will let the compiler know the current working directory at the time of preprocessing. When this option is enabled, the preprocessor will emit, after the initial linemarker, a second linemarker with the current working directory followed by two slashes. GCC will use this directory, when it is present in the preprocessed input, as the directory emitted as the current working directory in some debugging information formats. This option is implicitly enabled if debugging information is enabled, but this can be inhibited with the negated form <code>-fno-working-directory</code>. If the <code>-P</code> flag is present in the command line, this option has no effect, since no <code>&quot;#line&quot;</code> directives are emitted whatsoever. </p>
  </dd>
 <dt><code>-idirafter</code><i>dir</i></dt>
 <dd> <p> Search <i>dir</i> for include files, but do it after all directories specified with <code>-I</code> and the standard system directories have been exhausted. <i>dir</i> is treated as a system include directory. If dir begins with <code>&quot;=&quot;</code>, then the <code>&quot;=&quot;</code> will be replaced by the sysroot prefix; see <code>--sysroot</code> and <code>-isysroot</code>. </p>
  </dd>
 <dt><code>-imultilib</code><i>dir</i></dt>
-<dd> <p> Use <i>dir</i> as a subdirectory of the directory containing target-specific C<font SIZE="-2">++</font> headers. </p>
+<dd> <p> Use <i>dir</i> as a subdirectory of the directory containing target-specific C++ headers. </p>
  </dd>
 <dt><code>-iprefix</code><i>prefix</i></dt>
 <dd> <p> Specify <i>prefix</i> as the prefix for subsequent <code>-iwithprefix</code> options. If the <i>prefix</i> represents a directory, you should include the final <code>&#8216;/&#8216;</code>. </p>
@@ -232,8 +232,8 @@ description: "gfortran – GNU Fortran compiler"
  </dd>
 <dt><code>-CC</code></dt>
 <dd> <p> Do not discard comments, including during macro expansion. This is like <code>-C</code>, except that comments contained within macros are also passed through to the output file where the macro is expanded. </p>
-<p> In addition to the side-effects of the <code>-C</code> option, the <code>-CC</code> option causes all C<font SIZE="-2">++</font>-style comments inside a macro to be converted to C-style comments. This is to prevent later use of that macro from inadvertently commenting out the remainder of the source line. The <code>-CC</code> option is generally used to support lint comments. </p>
-<p> Warning: this currently handles C- and C<font SIZE="-2">++</font>-Style comments only. The preprocessor does not yet recognize Fortran-style comments. </p>
+<p> In addition to the side-effects of the <code>-C</code> option, the <code>-CC</code> option causes all C++-style comments inside a macro to be converted to C-style comments. This is to prevent later use of that macro from inadvertently commenting out the remainder of the source line. The <code>-CC</code> option is generally used to support lint comments. </p>
+<p> Warning: this currently handles C- and C++-Style comments only. The preprocessor does not yet recognize Fortran-style comments. </p>
  </dd>
 <dt><code>-D</code><i>name</i></dt>
 <dd> <p> Predefine name as a macro, with definition <code>1</code>. </p>
@@ -254,13 +254,13 @@ description: "gfortran – GNU Fortran compiler"
 <dd> <p> Cancel any previous definition of <i>name</i>, either built in or provided with a <code>-D</code> option. </p>
  </dd></dl>
 <h3>Options to request or suppress errors and warnings</h3>
-<p> Errors are diagnostic messages that report that the <font SIZE="-1">GNU</font> Fortran compiler cannot compile the relevant piece of source code. The compiler will continue to process the program in an attempt to report further errors to aid in debugging, but will not produce any compiled output. </p>
+<p> Errors are diagnostic messages that report that the GNU Fortran compiler cannot compile the relevant piece of source code. The compiler will continue to process the program in an attempt to report further errors to aid in debugging, but will not produce any compiled output. </p>
 <p> Warnings are diagnostic messages that report constructions which are not inherently erroneous but which are risky or suggest there is likely to be a bug in the program. Unless <code>-Werror</code> is specified, they do not prevent compilation of the program. </p>
 <p> You can request many specific warnings with options beginning <code>-W</code>, for example <code>-Wimplicit</code> to request warnings on implicit declarations. Each of these specific warning options also has a negative form beginning <code>-Wno-</code> to turn off warnings; for example, <code>-Wno-implicit</code>. This manual lists only one of the two forms, whichever is not the default. </p>
-<p> These options control the amount and kinds of errors and warnings produced by <font SIZE="-1">GNU</font> Fortran: </p>
+<p> These options control the amount and kinds of errors and warnings produced by GNU Fortran: </p>
 <dl>
 <dt><code>-fmax-errors=</code><i>n</i></dt>
-<dd> <p> Limits the maximum number of error messages to <i>n</i>, at which point <font SIZE="-1">GNU</font> Fortran bails out rather than attempting to continue processing the source code. If <i>n</i> is 0, there is no limit on the number of error messages produced. </p>
+<dd> <p> Limits the maximum number of error messages to <i>n</i>, at which point GNU Fortran bails out rather than attempting to continue processing the source code. If <i>n</i> is 0, there is no limit on the number of error messages produced. </p>
  </dd>
 <dt><code>-fsyntax-only</code></dt>
 <dd> <p> Check the code for syntax errors, but do not actually compile it. This will generate module files for each module present in the code, but no other output file. </p>
@@ -268,9 +268,9 @@ description: "gfortran – GNU Fortran compiler"
 <dt><code>-Wpedantic</code></dt>
 <dd>  </dd>
 <dt><code>-pedantic</code></dt>
-<dd> <p> Issue warnings for uses of extensions to Fortran. <code>-pedantic</code> also applies to C-language constructs where they occur in <font SIZE="-1">GNU</font> Fortran source files, such as use of <code>\e</code> in a character constant within a directive like <code>&quot;#include&quot;</code>. </p>
-<p> Valid Fortran programs should compile properly with or without this option. However, without this option, certain <font SIZE="-1">GNU</font> extensions and traditional Fortran features are supported as well. With this option, many of them are rejected. </p>
-<p> Some users try to use <code>-pedantic</code> to check programs for conformance. They soon find that it does not do quite what they want---it finds some nonstandard practices, but not all. However, improvements to <font SIZE="-1">GNU</font> Fortran in this area are welcome. </p>
+<dd> <p> Issue warnings for uses of extensions to Fortran. <code>-pedantic</code> also applies to C-language constructs where they occur in GNU Fortran source files, such as use of <code>\e</code> in a character constant within a directive like <code>&quot;#include&quot;</code>. </p>
+<p> Valid Fortran programs should compile properly with or without this option. However, without this option, certain GNU extensions and traditional Fortran features are supported as well. With this option, many of them are rejected. </p>
+<p> Some users try to use <code>-pedantic</code> to check programs for conformance. They soon find that it does not do quite what they want---it finds some nonstandard practices, but not all. However, improvements to GNU Fortran in this area are welcome. </p>
 <p> This should be used in conjunction with <code>-std=f95</code>, <code>-std=f2003</code>, <code>-std=f2008</code> or <code>-std=f2018</code>. </p>
  </dd>
 <dt><code>-pedantic-errors</code></dt>
@@ -293,7 +293,7 @@ description: "gfortran – GNU Fortran compiler"
 </code></pre>
  </dd>
 <dt><code>-Wampersand</code></dt>
-<dd> <p> Warn about missing ampersand in continued character constants. The warning is given with <code>-Wampersand</code>, <code>-pedantic</code>, <code>-std=f95</code>, <code>-std=f2003</code>, <code>-std=f2008</code> and <code>-std=f2018</code>. Note: With no ampersand given in a continued character constant, <font SIZE="-1">GNU</font> Fortran assumes continuation at the first non-comment, non-whitespace character after the ampersand that initiated the continuation. </p>
+<dd> <p> Warn about missing ampersand in continued character constants. The warning is given with <code>-Wampersand</code>, <code>-pedantic</code>, <code>-std=f95</code>, <code>-std=f2003</code>, <code>-std=f2008</code> and <code>-std=f2018</code>. Note: With no ampersand given in a continued character constant, GNU Fortran assumes continuation at the first non-comment, non-whitespace character after the ampersand that initiated the continuation. </p>
  </dd>
 <dt><code>-Wargument-mismatch</code></dt>
 <dd> <p> Warn about type, rank, and other mismatches between formal parameters and actual arguments to functions and subroutines. These warnings are recommended and thus enabled by default. </p>
@@ -345,13 +345,13 @@ description: "gfortran – GNU Fortran compiler"
 <dd>  </dd>
 <dl>
 <dt>*</dt>
-<dd> <p> An <font SIZE="-1">INTEGER SELECT</font> construct has a <font SIZE="-1">CASE</font> that can never be matched as its lower value is greater than its upper value. </p>
+<dd> <p> An INTEGER SELECT construct has a CASE that can never be matched as its lower value is greater than its upper value. </p>
  </dd>
 <dt>*</dt>
-<dd> <p> A <font SIZE="-1">LOGICAL SELECT</font> construct has three <font SIZE="-1">CASE</font> statements. </p>
+<dd> <p> A LOGICAL SELECT construct has three CASE statements. </p>
  </dd>
 <dt>*</dt>
-<dd> <p> A <font SIZE="-1">TRANSFER</font> specifies a source that is shorter than the destination. </p>
+<dd> <p> A TRANSFER specifies a source that is shorter than the destination. </p>
  </dd>
 <dt>*</dt>
 <dd> <p> The type of a function result is declared more than once with the same type. If <code>-pedantic</code> or standard-conforming mode is enabled, this is an error. </p>
@@ -366,10 +366,10 @@ description: "gfortran – GNU Fortran compiler"
 <dd> <p> By default, tabs are accepted as whitespace, but tabs are not members of the Fortran Character Set. For continuation lines, a tab followed by a digit between 1 and 9 is supported. <code>-Wtabs</code> will cause a warning to be issued if a tab is encountered. Note, <code>-Wtabs</code> is active for <code>-pedantic</code>, <code>-std=f95</code>, <code>-std=f2003</code>, <code>-std=f2008</code>, <code>-std=f2018</code> and <code>-Wall</code>. </p>
  </dd>
 <dt><code>-Wundefined-do-loop</code></dt>
-<dd> <p> Warn if a <font SIZE="-1">DO</font> loop with step either 1 or -1 yields an underflow or an overflow during iteration of an induction variable of the loop. This option is implied by <code>-Wall</code>. </p>
+<dd> <p> Warn if a DO loop with step either 1 or -1 yields an underflow or an overflow during iteration of an induction variable of the loop. This option is implied by <code>-Wall</code>. </p>
  </dd>
 <dt><code>-Wunderflow</code></dt>
-<dd> <p> Produce a warning when numerical constant expressions are encountered, which yield an <font SIZE="-1">UNDERFLOW</font> during compilation. Enabled by default. </p>
+<dd> <p> Produce a warning when numerical constant expressions are encountered, which yield an UNDERFLOW during compilation. Enabled by default. </p>
  </dd>
 <dt><code>-Wintrinsic-shadow</code></dt>
 <dd> <p> Warn if a user-defined procedure or module procedure has the same name as an intrinsic; in this case, an explicit interface or <code>&quot;EXTERNAL&quot;</code> or <code>&quot;INTRINSIC&quot;</code> declaration might be needed to get calls later resolved to the desired intrinsic/procedure. This option is implied by <code>-Wall</code>. </p>
@@ -405,7 +405,7 @@ description: "gfortran – GNU Fortran compiler"
 <dd> <p> Warn if a <code>&quot;DO&quot;</code> loop is known to execute zero times at compile time. This option is implied by <code>-Wall</code>. </p>
  </dd>
 <dt><code>-Wdo-subscript</code></dt>
-<dd> <p> Warn if an array subscript inside a <font SIZE="-1">DO</font> loop could lead to an out-of-bounds access even if the compiler cannot prove that the statement is actually executed, in cases like </p>
+<dd> <p> Warn if an array subscript inside a DO loop could lead to an out-of-bounds access even if the compiler cannot prove that the statement is actually executed, in cases like </p>
 <pre><code>          reala(3)
           do i=1,4
             if (condition(i)) then
@@ -419,23 +419,23 @@ description: "gfortran – GNU Fortran compiler"
 <dd> <p> Turns all warnings into errors. </p>
  </dd></dl>
 <p> Some of these have no effect when compiling programs written in Fortran.  </p>
-<font SIZE="-1"></font><h3>Options for debugging your program or GNU Fortran</h3>
-<p> <font SIZE="-1">GNU</font> Fortran has various special options that are used for debugging either your program or the <font SIZE="-1">GNU</font> Fortran compiler. </p>
+<h3>Options for debugging your program or GNU Fortran</h3>
+<p> GNU Fortran has various special options that are used for debugging either your program or the GNU Fortran compiler. </p>
 <dl>
 <dt><code>-fdump-fortran-original</code></dt>
-<dd> <p> Output the internal parse tree after translating the source program into internal representation. This option is mostly useful for debugging the <font SIZE="-1">GNU</font> Fortran compiler itself. The output generated by this option might change between releases. This option may also generate internal compiler errors for features which have only recently been added. </p>
+<dd> <p> Output the internal parse tree after translating the source program into internal representation. This option is mostly useful for debugging the GNU Fortran compiler itself. The output generated by this option might change between releases. This option may also generate internal compiler errors for features which have only recently been added. </p>
  </dd>
 <dt><code>-fdump-fortran-optimized</code></dt>
-<dd> <p> Output the parse tree after front-end optimization. Mostly useful for debugging the <font SIZE="-1">GNU</font> Fortran compiler itself. The output generated by this option might change between releases. This option may also generate internal compiler errors for features which have only recently been added. </p>
+<dd> <p> Output the parse tree after front-end optimization. Mostly useful for debugging the GNU Fortran compiler itself. The output generated by this option might change between releases. This option may also generate internal compiler errors for features which have only recently been added. </p>
  </dd>
 <dt><code>-fdump-parse-tree</code></dt>
-<dd> <p> Output the internal parse tree after translating the source program into internal representation. Mostly useful for debugging the <font SIZE="-1">GNU</font> Fortran compiler itself. The output generated by this option might change between releases. This option may also generate internal compiler errors for features which have only recently been added. This option is deprecated; use <code>&quot;-fdump-fortran-original&quot;</code> instead. </p>
+<dd> <p> Output the internal parse tree after translating the source program into internal representation. Mostly useful for debugging the GNU Fortran compiler itself. The output generated by this option might change between releases. This option may also generate internal compiler errors for features which have only recently been added. This option is deprecated; use <code>&quot;-fdump-fortran-original&quot;</code> instead. </p>
  </dd>
 <dt><code>-fdump-fortran-global</code></dt>
-<dd> <p> Output a list of the global identifiers after translating into middle-end representation. Mostly useful for debugging the <font SIZE="-1">GNU</font> Fortran compiler itself. The output generated by this option might change between releases. This option may also generate internal compiler errors for features which have only recently been added. </p>
+<dd> <p> Output a list of the global identifiers after translating into middle-end representation. Mostly useful for debugging the GNU Fortran compiler itself. The output generated by this option might change between releases. This option may also generate internal compiler errors for features which have only recently been added. </p>
  </dd>
 <dt><code>-ffpe-trap=</code><i>list</i></dt>
-<dd> <p> Specify a list of floating point exception traps to enable. On most systems, if a floating point exception occurs and the trap for that exception is enabled, a <font SIZE="-1">SIGFPE</font> signal will be sent and the program being aborted, producing a core file useful for debugging. <i>list</i> is a (possibly empty) comma-separated list of the following exceptions: <code>invalid</code> (invalid floating point operation, such as <code>&quot;SQRT(-1.0)&quot;</code>), <code>zero</code> (division by zero), <code>overflow</code> (overflow in a floating point operation), <code>underflow</code> (underflow in a floating point operation), <code>inexact</code> (loss of precision during operation), and <code>denormal</code> (operation performed on a denormal value). The first five exceptions correspond to the five <font SIZE="-1">IEEE 754</font> exceptions, whereas the last one (<code>denormal</code>) is not part of the <font SIZE="-1">IEEE 754</font> standard but is available on some common architectures such as x86. </p>
+<dd> <p> Specify a list of floating point exception traps to enable. On most systems, if a floating point exception occurs and the trap for that exception is enabled, a SIGFPE signal will be sent and the program being aborted, producing a core file useful for debugging. <i>list</i> is a (possibly empty) comma-separated list of the following exceptions: <code>invalid</code> (invalid floating point operation, such as <code>&quot;SQRT(-1.0)&quot;</code>), <code>zero</code> (division by zero), <code>overflow</code> (overflow in a floating point operation), <code>underflow</code> (underflow in a floating point operation), <code>inexact</code> (loss of precision during operation), and <code>denormal</code> (operation performed on a denormal value). The first five exceptions correspond to the five IEEE 754 exceptions, whereas the last one (<code>denormal</code>) is not part of the IEEE 754 standard but is available on some common architectures such as x86. </p>
 <p> The first three exceptions (<code>invalid</code>, <code>zero</code>, and <code>overflow</code>) often indicate serious errors, and unless the program has provisions for dealing with these exceptions, enabling traps for these three exceptions is probably a good idea. </p>
 <p> If the option is used more than once in the command line, the lists will be joined: &#8216;<code>&quot;ffpe-trap=&quot;</code><i>list1</i> <code>&quot;ffpe-trap=&quot;</code><i>list2</i>&#8216; is equivalent to <code>&quot;ffpe-trap=&quot;</code><i>list1</i>,<i>list2</i>. </p>
 <p> Note that once enabled an exception cannot be disabled (no negative form). </p>
@@ -448,10 +448,10 @@ description: "gfortran – GNU Fortran compiler"
 <p> By default, a summary for all exceptions but <code>inexact</code> is shown. </p>
  </dd>
 <dt><code>-fno-backtrace</code></dt>
-<dd> <p> When a serious runtime error is encountered or a deadly signal is emitted (segmentation fault, illegal instruction, bus error, floating-point exception, and the other <font SIZE="-1">POSIX</font> signals that have the action <code>core</code>), the Fortran runtime library tries to output a backtrace of the error. <code>&quot;-fno-backtrace&quot;</code> disables the backtrace generation. This option only has influence for compilation of the Fortran main program. </p>
+<dd> <p> When a serious runtime error is encountered or a deadly signal is emitted (segmentation fault, illegal instruction, bus error, floating-point exception, and the other POSIX signals that have the action <code>core</code>), the Fortran runtime library tries to output a backtrace of the error. <code>&quot;-fno-backtrace&quot;</code> disables the backtrace generation. This option only has influence for compilation of the Fortran main program. </p>
  </dd></dl>
 <h3>Options for directory search</h3>
-<p> These options affect how <font SIZE="-1">GNU</font> Fortran searches for files specified by the <code>&quot;INCLUDE&quot;</code> directive and where it searches for previously compiled modules. </p>
+<p> These options affect how GNU Fortran searches for files specified by the <code>&quot;INCLUDE&quot;</code> directive and where it searches for previously compiled modules. </p>
 <p> It also affects the search paths used by <code>cpp</code> when used to preprocess Fortran source. </p>
 <dl>
 <dt><code>-I</code><i>dir</i></dt>
@@ -473,11 +473,11 @@ description: "gfortran – GNU Fortran compiler"
 <dd> <p> On systems that provide <i>libgfortran</i> as a shared and a static library, this option forces the use of the static version. If no shared version of <i>libgfortran</i> was built when the compiler was configured, this option has no effect. </p>
  </dd></dl>
 <h3>Influencing runtime behavior</h3>
-<p> These options affect the runtime behavior of programs compiled with <font SIZE="-1">GNU</font> Fortran. </p>
+<p> These options affect the runtime behavior of programs compiled with GNU Fortran. </p>
 <dl>
 <dt><code>-fconvert=</code><i>conversion</i></dt>
 <dd> <p> Specify the representation of data for unformatted files. Valid values for conversion are: <code>native</code>, the default; <code>swap</code>, swap between big- and little-endian; <code>big-endian</code>, use big-endian representation for unformatted files; <code>little-endian</code>, use little-endian representation for unformatted files. </p>
-<p> <i>This option has an effect only when used in the main program. The </i>&quot;CONVERT&quot;<i> specifier and the </i><font SIZE="-1"><i>GFORTRAN_CONVERT_UNIT</i></font><i> environment variable override the default specified by </i>-fconvert <i>.</i> </p>
+<p> <i>This option has an effect only when used in the main program. The </i>&quot;CONVERT&quot;<i> specifier and the </i><i>GFORTRAN_CONVERT_UNIT</i><i> environment variable override the default specified by </i>-fconvert <i>.</i> </p>
  </dd>
 <dt><code>-frecord-marker=</code><i>length</i></dt>
 <dd> <p> Specify the length of record markers for unformatted files. Valid values for <i>length</i> are 4 and 8. Default is 4. <i>This is different from previous versions of</i> <code>gfortran</code>, which specified a default record marker length of 8 on most systems. If you want to read or write files compatible with earlier versions of <code>gfortran</code>, use <code>-frecord-marker=8</code>. </p>
@@ -493,21 +493,21 @@ description: "gfortran – GNU Fortran compiler"
 <p> Most of them have both positive and negative forms; the negative form of <code>-ffoo</code> would be <code>-fno-foo</code>. In the table below, only one of the forms is listed---the one which is not the default. You can figure out the other form by either removing <code>no-</code> or adding it. </p>
 <dl>
 <dt><code>-fno-automatic</code></dt>
-<dd> <p> Treat each program unit (except those marked as <font SIZE="-1">RECURSIVE</font>) as if the <code>&quot;SAVE&quot;</code> statement were specified for every local variable and array referenced in it. Does not affect common blocks. (Some Fortran compilers provide this option under the name <code>-static</code> or <code>-save</code>.) The default, which is <code>-fautomatic</code>, uses the stack for local variables smaller than the value given by <code>-fmax-stack-var-size</code>. Use the option <code>-frecursive</code> to use no static memory. </p>
+<dd> <p> Treat each program unit (except those marked as RECURSIVE) as if the <code>&quot;SAVE&quot;</code> statement were specified for every local variable and array referenced in it. Does not affect common blocks. (Some Fortran compilers provide this option under the name <code>-static</code> or <code>-save</code>.) The default, which is <code>-fautomatic</code>, uses the stack for local variables smaller than the value given by <code>-fmax-stack-var-size</code>. Use the option <code>-frecursive</code> to use no static memory. </p>
 <p> Local variables or arrays having an explicit <code>&quot;SAVE&quot;</code> attribute are silently ignored unless the <code>-pedantic</code> option is added. </p>
  </dd>
 <dt><code>-ff2c</code></dt>
 <dd> <p> Generate code designed to be compatible with code generated by <code>g77</code> and <code>f2c</code>. </p>
-<p> The calling conventions used by <code>g77</code> (originally implemented in <code>f2c</code>) require functions that return type default <code>&quot;REAL&quot;</code> to actually return the C type <code>&quot;double&quot;</code>, and functions that return type <code>&quot;COMPLEX&quot;</code> to return the values via an extra argument in the calling sequence that points to where to store the return value. Under the default <font SIZE="-1">GNU</font> calling conventions, such functions simply return their results as they would in <font SIZE="-1">GNU</font> C---default <code>&quot;REAL&quot;</code> functions return the C type <code>&quot;float&quot;</code>, and <code>&quot;COMPLEX&quot;</code> functions return the <font SIZE="-1">GNU C</font> type <code>&quot;complex&quot;</code>. Additionally, this option implies the <code>-fsecond-underscore</code> option, unless <code>-fno-second-underscore</code> is explicitly requested. </p>
+<p> The calling conventions used by <code>g77</code> (originally implemented in <code>f2c</code>) require functions that return type default <code>&quot;REAL&quot;</code> to actually return the C type <code>&quot;double&quot;</code>, and functions that return type <code>&quot;COMPLEX&quot;</code> to return the values via an extra argument in the calling sequence that points to where to store the return value. Under the default GNU calling conventions, such functions simply return their results as they would in GNU C---default <code>&quot;REAL&quot;</code> functions return the C type <code>&quot;float&quot;</code>, and <code>&quot;COMPLEX&quot;</code> functions return the GNU C type <code>&quot;complex&quot;</code>. Additionally, this option implies the <code>-fsecond-underscore</code> option, unless <code>-fno-second-underscore</code> is explicitly requested. </p>
 <p> This does not affect the generation of code that interfaces with the <code>libgfortran</code> library. </p>
 <p> <i>Caution:</i> It is not a good idea to mix Fortran code compiled with <code>-ff2c</code> with code compiled with the default <code>-fno-f2c</code> calling conventions as, calling <code>&quot;COMPLEX&quot;</code> or default <code>&quot;REAL&quot;</code> functions between program parts which were compiled with different calling conventions will break at execution time. </p>
 <p> <i>Caution:</i> This will break code which passes intrinsic functions of type default <code>&quot;REAL&quot;</code> or <code>&quot;COMPLEX&quot;</code> as actual arguments, as the library implementations use the <code>-fno-f2c</code> calling conventions. </p>
  </dd>
 <dt><code>-fno-underscoring</code></dt>
 <dd> <p> Do not transform names of entities specified in the Fortran source file by appending underscores to them. </p>
-<p> With <code>-funderscoring</code> in effect, <font SIZE="-1">GNU</font> Fortran appends one underscore to external names with no underscores. This is done to ensure compatibility with code produced by many <font SIZE="-1">UNIX</font> Fortran compilers. </p>
-<p> <i>Caution</i>: The default behavior of <font SIZE="-1">GNU</font> Fortran is incompatible with <code>f2c</code> and <code>g77</code>, please use the <code>-ff2c</code> option if you want object files compiled with <font SIZE="-1">GNU</font> Fortran to be compatible with object code created with these tools. </p>
-<p> Use of <code>-fno-underscoring</code> is not recommended unless you are experimenting with issues such as integration of <font SIZE="-1">GNU</font> Fortran into existing system environments (vis-a-vis existing libraries, tools, and so on). </p>
+<p> With <code>-funderscoring</code> in effect, GNU Fortran appends one underscore to external names with no underscores. This is done to ensure compatibility with code produced by many UNIX Fortran compilers. </p>
+<p> <i>Caution</i>: The default behavior of GNU Fortran is incompatible with <code>f2c</code> and <code>g77</code>, please use the <code>-ff2c</code> option if you want object files compiled with GNU Fortran to be compatible with object code created with these tools. </p>
+<p> Use of <code>-fno-underscoring</code> is not recommended unless you are experimenting with issues such as integration of GNU Fortran into existing system environments (vis-a-vis existing libraries, tools, and so on). </p>
 <p> For example, with <code>-funderscoring</code>, and assuming that <code>&quot;j()&quot;</code> and <code>&quot;max_count()&quot;</code> are external functions while <code>&quot;my_var&quot;</code> and <code>&quot;lvar&quot;</code> are local variables, a statement like </p>
 <pre><code>        I = J() + MAX_COUNT (MY_VAR, LVAR)
 </code></pre>
@@ -517,13 +517,13 @@ description: "gfortran – GNU Fortran compiler"
 <p> With <code>-fno-underscoring</code>, the same statement is implemented as: </p>
 <pre><code>        i = j() + max_count(&amp;my_var, &amp;lvar);
 </code></pre>
-<p> Use of <code>-fno-underscoring</code> allows direct specification of user-defined names while debugging and when interfacing <font SIZE="-1">GNU</font> Fortran code with other languages. </p>
-<p> Note that just because the names match does <i>not</i> mean that the interface implemented by <font SIZE="-1">GNU</font> Fortran for an external name matches the interface implemented by some other language for that same name. That is, getting code produced by <font SIZE="-1">GNU</font> Fortran to link to code produced by some other compiler using this or any other method can be only a small part of the overall solution---getting the code generated by both compilers to agree on issues other than naming can require significant effort, and, unlike naming disagreements, linkers normally cannot detect disagreements in these other areas. </p>
+<p> Use of <code>-fno-underscoring</code> allows direct specification of user-defined names while debugging and when interfacing GNU Fortran code with other languages. </p>
+<p> Note that just because the names match does <i>not</i> mean that the interface implemented by GNU Fortran for an external name matches the interface implemented by some other language for that same name. That is, getting code produced by GNU Fortran to link to code produced by some other compiler using this or any other method can be only a small part of the overall solution---getting the code generated by both compilers to agree on issues other than naming can require significant effort, and, unlike naming disagreements, linkers normally cannot detect disagreements in these other areas. </p>
 <p> Also, note that with <code>-fno-underscoring</code>, the lack of appended underscores introduces the very real possibility that a user-defined external name will conflict with a name in a system library, which could make finding unresolved-reference bugs quite difficult in some cases---they might occur at program run time, and show up only as buggy behavior at run time. </p>
-<p> In future versions of <font SIZE="-1">GNU</font> Fortran we hope to improve naming and linking issues so that debugging always involves using the names as they appear in the source, even if the names as seen by the linker are mangled to prevent accidental linking between procedures with incompatible interfaces. </p>
+<p> In future versions of GNU Fortran we hope to improve naming and linking issues so that debugging always involves using the names as they appear in the source, even if the names as seen by the linker are mangled to prevent accidental linking between procedures with incompatible interfaces. </p>
  </dd>
 <dt><code>-fsecond-underscore</code></dt>
-<dd> <p> By default, <font SIZE="-1">GNU</font> Fortran appends an underscore to external names. If this option is used <font SIZE="-1">GNU</font> Fortran appends two underscores to names with underscores and one underscore to external names with no underscores. <font SIZE="-1">GNU</font> Fortran also appends two underscores to internal names with underscores to avoid naming collisions with external names. </p>
+<dd> <p> By default, GNU Fortran appends an underscore to external names. If this option is used GNU Fortran appends two underscores to names with underscores and one underscore to external names with no underscores. GNU Fortran also appends two underscores to internal names with underscores to avoid naming collisions with external names. </p>
 <p> This option has no effect if <code>-fno-underscoring</code> is in effect. It is implied by the <code>-ff2c</code> option. </p>
 <p> Otherwise, with this option, an external name such as <code>&quot;MAX_COUNT&quot;</code> is implemented as a reference to the link-time external symbol <code>&quot;max_count__&quot;</code>, instead of <code>&quot;max_count_&quot;</code>. This is required for compatibility with <code>g77</code> and <code>f2c</code>, and is implied by use of the <code>-ff2c</code> option. </p>
  </dd>
@@ -539,7 +539,7 @@ description: "gfortran – GNU Fortran compiler"
 <dd> <p> Single-image mode, i.e. <code>&quot;num_images()&quot;</code> is always one. </p>
  </dd>
 <dt><code>lib</code></dt>
-<dd> <p> Library-based coarray parallelization; a suitable <font SIZE="-1">GNU</font> Fortran coarray library needs to be linked. </p>
+<dd> <p> Library-based coarray parallelization; a suitable GNU Fortran coarray library needs to be linked. </p>
  </dd></dl>
 </dl>
 <dl>
@@ -587,11 +587,11 @@ description: "gfortran – GNU Fortran compiler"
 <dt><code>-ftail-call-workaround</code></dt>
 <dd>  </dd>
 <dt><code>-ftail-call-workaround=</code><i>n</i></dt>
-<dd> <p> Some C interfaces to Fortran codes violate the gfortran <font SIZE="-1">ABI</font> by omitting the hidden character length arguments as described in <br />
+<dd> <p> Some C interfaces to Fortran codes violate the gfortran ABI by omitting the hidden character length arguments as described in <br/>
 &nbsp;<wbr>&nbsp;This can lead to crashes because pushing arguments for tail calls can overflow the stack. </p>
 <p> To provide a workaround for existing binary packages, this option disables tail call optimization for gfortran procedures with character arguments. With <code>-ftail-call-workaround=2</code> tail call optimization is disabled in all gfortran procedures with character arguments, with <code>-ftail-call-workaround=1</code> or equivalent <code>-ftail-call-workaround</code> only in gfortran procedures with character arguments that call implicitly prototyped procedures. </p>
 <p> Using this option can lead to problems including crashes due to insufficient stack space. </p>
-<p> It is <i>very strongly</i> recommended to fix the code in question. The <code>-fc-prototypes-external</code> option can be used to generate prototypes which conform to gfortran&#8217;s <font SIZE="-1">ABI,</font> for inclusion in the source code. </p>
+<p> It is <i>very strongly</i> recommended to fix the code in question. The <code>-fc-prototypes-external</code> option can be used to generate prototypes which conform to gfortran&#8217;s ABI, for inclusion in the source code. </p>
 <p> Support for this option will likely be withdrawn in a future release of gfortran. </p>
 <p> The negative form, <code>-fno-tail-call-workaround</code> or equivalent <code>-ftail-call-workaround=0</code>, can be used to disable this option. </p>
 <p> Default is currently <code>-ftail-call-workaround</code>, this will change in future releases. </p>
@@ -613,28 +613,28 @@ description: "gfortran – GNU Fortran compiler"
 <p> The default value for <i>n</i> is 65535. </p>
  </dd>
 <dt><code>-fmax-stack-var-size=</code><i>n</i></dt>
-<dd> <p> This option specifies the size in bytes of the largest array that will be put on the stack; if the size is exceeded static memory is used (except in procedures marked as <font SIZE="-1">RECURSIVE</font>). Use the option <code>-frecursive</code> to allow for recursive procedures which do not have a <font SIZE="-1">RECURSIVE</font> attribute or for parallel programs. Use <code>-fno-automatic</code> to never use the stack. </p>
-<p> This option currently only affects local arrays declared with constant bounds, and may not apply to all character variables. Future versions of <font SIZE="-1">GNU</font> Fortran may improve this behavior. </p>
+<dd> <p> This option specifies the size in bytes of the largest array that will be put on the stack; if the size is exceeded static memory is used (except in procedures marked as RECURSIVE). Use the option <code>-frecursive</code> to allow for recursive procedures which do not have a RECURSIVE attribute or for parallel programs. Use <code>-fno-automatic</code> to never use the stack. </p>
+<p> This option currently only affects local arrays declared with constant bounds, and may not apply to all character variables. Future versions of GNU Fortran may improve this behavior. </p>
 <p> The default value for <i>n</i> is 32768. </p>
  </dd>
 <dt><code>-fstack-arrays</code></dt>
 <dd> <p> Adding this option will make the Fortran compiler put all arrays of unknown size and array temporaries onto stack memory. If your program uses very large local arrays it is possible that you will have to extend your runtime limits for stack memory on some operating systems. This flag is enabled by default at optimization level <code>-Ofast</code> unless <code>-fmax-stack-var-size</code> is specified. </p>
  </dd>
 <dt><code>-fpack-derived</code></dt>
-<dd> <p> This option tells <font SIZE="-1">GNU</font> Fortran to pack derived type members as closely as possible. Code compiled with this option is likely to be incompatible with code compiled without this option, and may execute slower. </p>
+<dd> <p> This option tells GNU Fortran to pack derived type members as closely as possible. Code compiled with this option is likely to be incompatible with code compiled without this option, and may execute slower. </p>
  </dd>
 <dt><code>-frepack-arrays</code></dt>
-<dd> <p> In some circumstances <font SIZE="-1">GNU</font> Fortran may pass assumed shape array sections via a descriptor describing a noncontiguous area of memory. This option adds code to the function prologue to repack the data into a contiguous block at runtime. </p>
+<dd> <p> In some circumstances GNU Fortran may pass assumed shape array sections via a descriptor describing a noncontiguous area of memory. This option adds code to the function prologue to repack the data into a contiguous block at runtime. </p>
 <p> This should result in faster accesses to the array. However it can introduce significant overhead to the function call, especially when the passed data is noncontiguous. </p>
  </dd>
 <dt><code>-fshort-enums</code></dt>
-<dd> <p> This option is provided for interoperability with C code that was compiled with the <code>-fshort-enums</code> option. It will make <font SIZE="-1">GNU</font> Fortran choose the smallest <code>&quot;INTEGER&quot;</code> kind a given enumerator set will fit in, and give all its enumerators this kind. </p>
+<dd> <p> This option is provided for interoperability with C code that was compiled with the <code>-fshort-enums</code> option. It will make GNU Fortran choose the smallest <code>&quot;INTEGER&quot;</code> kind a given enumerator set will fit in, and give all its enumerators this kind. </p>
  </dd>
 <dt><code>-fexternal-blas</code></dt>
-<dd> <p> This option will make <code>gfortran</code> generate calls to <font SIZE="-1">BLAS</font> functions for some matrix operations like <code>&quot;MATMUL&quot;</code>, instead of using our own algorithms, if the size of the matrices involved is larger than a given limit (see <code>-fblas-matmul-limit</code>). This may be profitable if an optimized vendor <font SIZE="-1">BLAS</font> library is available. The <font SIZE="-1">BLAS</font> library will have to be specified at link time. </p>
+<dd> <p> This option will make <code>gfortran</code> generate calls to BLAS functions for some matrix operations like <code>&quot;MATMUL&quot;</code>, instead of using our own algorithms, if the size of the matrices involved is larger than a given limit (see <code>-fblas-matmul-limit</code>). This may be profitable if an optimized vendor BLAS library is available. The BLAS library will have to be specified at link time. </p>
  </dd>
 <dt><code>-fblas-matmul-limit=</code><i>n</i></dt>
-<dd> <p> Only significant when <code>-fexternal-blas</code> is in effect. Matrix multiplication of matrices with size larger than (or equal to) <i>n</i> will be performed by calls to <font SIZE="-1">BLAS</font> functions, while others will be handled by <code>gfortran</code> internal algorithms. If the matrices involved are not square, the size comparison is performed using the geometric mean of the dimensions of the argument and result matrices. </p>
+<dd> <p> Only significant when <code>-fexternal-blas</code> is in effect. Matrix multiplication of matrices with size larger than (or equal to) <i>n</i> will be performed by calls to BLAS functions, while others will be handled by <code>gfortran</code> internal algorithms. If the matrices involved are not square, the size comparison is performed using the geometric mean of the dimensions of the argument and result matrices. </p>
 <p> The default value for <i>n</i> is 30. </p>
  </dd>
 <dt><code>-finline-matmul-limit=</code><i>n</i></dt>
@@ -655,7 +655,7 @@ description: "gfortran – GNU Fortran compiler"
 <dt><code>-finit-logical=</code><i>&lt;true|false&gt;</i></dt>
 <dd>  </dd>
 <dt><code>-finit-character=</code><i>n</i></dt>
-<dd> <p> The <code>-finit-local-zero</code> option instructs the compiler to initialize local <code>&quot;INTEGER&quot;</code>, <code>&quot;REAL&quot;</code>, and <code>&quot;COMPLEX&quot;</code> variables to zero, <code>&quot;LOGICAL&quot;</code> variables to false, and <code>&quot;CHARACTER&quot;</code> variables to a string of null bytes. Finer-grained initialization options are provided by the <code>-finit-integer=</code><i>n</i>, <code>-finit-real=</code><i>&lt;zero|inf|-inf|nan|snan&gt;</i> (which also initializes the real and imaginary parts of local <code>&quot;COMPLEX&quot;</code> variables), <code>-finit-logical=</code><i>&lt;true|false&gt;</i>, and <code>-finit-character=</code><i>n</i> (where <i>n</i> is an <font SIZE="-1">ASCII</font> character value) options. </p>
+<dd> <p> The <code>-finit-local-zero</code> option instructs the compiler to initialize local <code>&quot;INTEGER&quot;</code>, <code>&quot;REAL&quot;</code>, and <code>&quot;COMPLEX&quot;</code> variables to zero, <code>&quot;LOGICAL&quot;</code> variables to false, and <code>&quot;CHARACTER&quot;</code> variables to a string of null bytes. Finer-grained initialization options are provided by the <code>-finit-integer=</code><i>n</i>, <code>-finit-real=</code><i>&lt;zero|inf|-inf|nan|snan&gt;</i> (which also initializes the real and imaginary parts of local <code>&quot;COMPLEX&quot;</code> variables), <code>-finit-logical=</code><i>&lt;true|false&gt;</i>, and <code>-finit-character=</code><i>n</i> (where <i>n</i> is an ASCII character value) options. </p>
 <p> With <code>-finit-derived</code>, components of derived type variables will be initialized according to these flags. Components whose type is not covered by an explicit <code>-finit-*</code> flag will be treated as described above with <code>-finit-local-zero</code>. </p>
 <p> These options do not initialize </p>
  </dd>
@@ -663,7 +663,7 @@ description: "gfortran – GNU Fortran compiler"
 <dd>  </dd>
 <dl>
 <dt>*</dt>
-<dd> <p> objects with the <font SIZE="-1">POINTER</font> attribute </p>
+<dd> <p> objects with the POINTER attribute </p>
  </dd>
 <dt>*</dt>
 <dd> <p> allocatable arrays </p>
@@ -723,14 +723,14 @@ description: "gfortran – GNU Fortran compiler"
 <h2>SEE ALSO</h2>
 <p> <code>gpl</code>(7), <code>gfdl</code>(7), <code>fsf-funding</code>(7), <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1), <code><a href="/docs/linux/man/1-gcov/">gcov</a></code>(1), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code><a href="/docs/linux/man/1-as/">as</a></code>(1), <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <code>dbx</code>(1) and the Info entries for <i>gcc</i>, <i>cpp</i>, <i>gfortran</i>, <i>as</i>, <i>ld</i>, <i>binutils</i> and <i>gdb</i>.  </p>
 <h2>AUTHOR</h2>
-<p> See the Info entry for <code>gfortran</code> for contributors to <font SIZE="-1">GCC</font> and <font SIZE="-1">GNU</font> Fortran.  </p>
+<p> See the Info entry for <code>gfortran</code> for contributors to GCC and GNU Fortran.  </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2004-2019 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with the Invariant Sections being ``Funding Free Software&#8217;&#8216;, the Front-Cover Texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the <code>gfdl</code>(7) man page. </p>
-<p> (a) The <font SIZE="-1">FSF</font>&#8216;s Front-Cover Text is: </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with the Invariant Sections being ``Funding Free Software&#8217;&#8216;, the Front-Cover Texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the <code>gfdl</code>(7) man page. </p>
+<p> (a) The FSF&#8216;s Front-Cover Text is: </p>
 <pre><code>     A GNU Manual
 </code></pre>
-<p> (b) The <font SIZE="-1">FSF</font>&#8216;s Back-Cover Text is: </p>
+<p> (b) The FSF&#8216;s Back-Cover Text is: </p>
 <pre><code>     You have freedom to copy and modify this GNU Manual, like GNU
      software. Copies published by the Free Software Foundation raise
      funds for GNU development.

@@ -17,18 +17,18 @@ description: "lame – create mp3 audio files"
 <p> Input options:</p>
 <dl>
 <dt><code>-r</code></dt>
-<dd> Assume the input file is raw pcm. Sampling rate and mono/stereo/jstereo must be specified on the command line. For each stereo sample, LAME expects the input data to be ordered left channel first, then right channel. By default, LAME expects them to be signed integers with a bitwidth of 16. Without <code>-r,</code> LAME will perform several <i>fseek()&#8217;s</i> on the input file looking for WAV and AIFF headers.<br />
+<dd> Assume the input file is raw pcm. Sampling rate and mono/stereo/jstereo must be specified on the command line. For each stereo sample, LAME expects the input data to be ordered left channel first, then right channel. By default, LAME expects them to be signed integers with a bitwidth of 16. Without <code>-r,</code> LAME will perform several <i>fseek()&#8217;s</i> on the input file looking for WAV and AIFF headers.<br/>
  Might not be available on your release.</dd>
 <dt><code>-x</code></dt>
-<dd> Swap bytes in the input file or output file when using <code>&#8211;decode.</code><br />
- For sorting out little endian/big endian type problems. If your encodings sounds like static, try this first.<br />
+<dd> Swap bytes in the input file or output file when using <code>&#8211;decode.</code><br/>
+ For sorting out little endian/big endian type problems. If your encodings sounds like static, try this first.<br/>
  Without using <code>-x,</code> LAME will treat input file as native endian.</dd>
 <dt><code>-s</code><i> sfreq</i></dt>
 <dd> <i>sfreq</i> = 8/11.025/12/16/22.05/24/32/44.1/48 </dd>
 <p> Required only for raw PCM input files. Otherwise it will be determined from the header of the input file. </p>
 <p> LAME will automatically resample the input file to one of the supported MP3 samplerates if necessary.</p>
 <dt><code>&#8211;bitwidth</code><i> n</i></dt>
-<dd> Input bit width per sample.<br />
+<dd> Input bit width per sample.<br/>
  <i>n</i> = 8, 16, 24, 32 (default 16) </dd>
 <p> Required only for raw PCM input files. Otherwise it will be determined from the header of the input file.</p>
 <dt><code>&#8211;signed</code></dt>
@@ -44,11 +44,11 @@ description: "lame – create mp3 audio files"
 <dd> Instructs LAME that the samples from the input are in big-endian form. </dd>
 <p> Required only for raw PCM input files.</p>
 <dt><code>&#8211;mp2input</code></dt>
-<dd> Assume the input file is a MPEG Layer II (ie MP2) file.<br />
+<dd> Assume the input file is a MPEG Layer II (ie MP2) file.<br/>
  If the filename ends in &quot;.mp2&quot; LAME will assume it is a MPEG Layer II file. For stdin or Layer II files which do not end in .mp2 you need to use this switch.</dd>
 <dt><code>&#8211;mp3input</code></dt>
-<dd> Assume the input file is a MP3 file.<br />
- Useful for downsampling from one mp3 to another. As an example, it can be useful for streaming through an IceCast server.<br />
+<dd> Assume the input file is a MP3 file.<br/>
+ Useful for downsampling from one mp3 to another. As an example, it can be useful for streaming through an IceCast server.<br/>
  If the filename ends in &quot;.mp3&quot; LAME will assume it is an MP3. For stdin or MP3 files which do not end in .mp3 you need to use this switch.</dd>
 <dt><code>&#8211;nogap</code><i> file1 file2 &#8230;</i></dt>
 <dd> gapless encoding for a set of contiguous files</dd>
@@ -60,23 +60,23 @@ description: "lame – create mp3 audio files"
 <dt><code>-m</code><i> mode</i></dt>
 <dd> <i>mode</i> = s, j, f, d, m, l, r </dd>
 <p> Joint-stereo is the default mode for stereo files with VBR when <code>-V</code> is more than 4 or fixed bitrates of 160kbs or less. At higher fixed bitrates or higher VBR settings, the default is stereo. </p>
-<p> <code>(s)imple stereo </code><br />
+<p> <code>(s)imple stereo </code><br/>
  In this mode, the encoder makes no use of potentially existing correlations between the two input channels. It can, however, negotiate the bit demand between both channel, i.e. give one channel more bits if the other contains silence or needs less bits because of a lower complexity. </p>
-<p> <code>(j)oint stereo</code><br />
+<p> <code>(j)oint stereo</code><br/>
  In this mode, the encoder will make use of a correlation between both channels. The signal will be matrixed into a sum (&quot;mid&quot;), computed by L+R, and difference (&quot;side&quot;) signal, computed by L-R, and more bits are allocated to the mid channel. This will effectively increase the bandwidth if the signal does not have too much stereo separation, thus giving a significant gain in encoding quality. </p>
 <p> Using mid/side stereo inappropriately can result in audible compression artifacts. To much switching between mid/side and regular stereo can also sound bad. To determine when to switch to mid/side stereo, LAME uses a much more sophisticated algorithm than that described in the ISO documentation, and thus is safe to use in joint stereo mode. </p>
-<p> <code>(f)orced MS stereo </code><br />
+<p> <code>(f)orced MS stereo </code><br/>
  This mode will force MS stereo on all frames. It is slightly faster than joint stereo, but it should be used only if you are sure that every frame of the input file has very little stereo separation. </p>
-<p> <code>(d)ual mono</code><br />
+<p> <code>(d)ual mono</code><br/>
  In this mode, the 2 channels will be totally independently encoded. Each channel will have exactly half of the bitrate. This mode is designed for applications like dual languages encoding (for example: English in one channel and French in the other). Using this encoding mode for regular stereo files will result in a lower quality encoding. </p>
-<p> <code>(m)ono</code><br />
+<p> <code>(m)ono</code><br/>
  The input will be encoded as a mono signal. If it was a stereo signal, it will be downsampled to mono. The downmix is calculated as the sum of the left and right channel, attenuated by 6 dB. </p>
-<p> <code>(l)eft channel only</code><br />
+<p> <code>(l)eft channel only</code><br/>
  The input will be encoded as a mono signal. If it was a stereo signal, the left channel will be encoded only. </p>
-<p> <code>(r)ight channel only</code><br />
+<p> <code>(r)ight channel only</code><br/>
  The input will be encoded as a mono signal. If it was a stereo signal, the right channel will be encoded only. </p>
 <dt><code>-a</code></dt>
-<dd> Mix the stereo input file to mono and encode as mono.<br />
+<dd> Mix the stereo input file to mono and encode as mono.<br/>
  The downmix is calculated as the sum of the left and right channel, attenuated by 6 dB. </dd>
 <p> This option is only needed in the case of raw PCM stereo input (because LAME cannot determine the number of channels in the input file). To encode a stereo PCM input file as mono, use <code>lame -m</code> <i>s</i> <code>-a.</code> </p>
 <p> For WAV and AIFF input files, using <code>-m</code> will always produce a mono .mp3 file from both mono and stereo input.</p>
@@ -85,18 +85,18 @@ description: "lame – create mp3 audio files"
 <dt><code>&#8211;freeformat</code></dt>
 <dd> Produces a free format bitstream. With this option, you can use <code>-b</code> with any bitrate higher than 8 kbps. </dd>
 <p> However, even if an mp3 decoder is required to support free bitrates at least up to 320 kbps, many players are unable to deal with it. </p>
-<p> Tests have shown that the following decoders support free format:<br />
- <code>FreeAmp</code> up to 440 kbps<br />
- <code>in_mpg123</code> up to 560 kbps<br />
- <code>l3dec</code> up to 310 kbps<br />
- <code>LAME</code> up to 560 kbps<br />
+<p> Tests have shown that the following decoders support free format:<br/>
+ <code>FreeAmp</code> up to 440 kbps<br/>
+ <code>in_mpg123</code> up to 560 kbps<br/>
+ <code>l3dec</code> up to 310 kbps<br/>
+ <code>LAME</code> up to 560 kbps<br/>
  <code>MAD</code> up to 640 kbps</p>
 <dt><code>&#8211;decode</code></dt>
 <dd> Uses LAME for decoding to a wav file. The input file can be any input type supported by encoding, including layer II files. LAME uses a bugfixed version of mpglib for decoding. </dd>
 <p> If <code>-t</code> is used (disable wav header), LAME will output raw pcm in native endian format. You can use <code>-x</code> to swap bytes order. </p>
 <p> This option is not usable if the MP3 decoder was <code>explicitly</code> disabled in the build of LAME.</p>
 <dt><code>-t</code></dt>
-<dd> Disable writing of the INFO Tag on encoding.<br />
+<dd> Disable writing of the INFO Tag on encoding.<br/>
  This tag in embedded in frame 0 of the MP3 file. It includes some information about the encoding options of the file, and in VBR it lets VBR aware players correctly seek and compute playing times of VBR files. </dd>
 <p> When <code>&#8211;decode</code> is specified (decode to WAV), this flag will disable writing of the WAV header. The output will be raw pcm, native endian format. Use <code>-x</code> to swap bytes.</p>
 <dt><code>&#8211;comp</code><i> arg</i></dt>
@@ -107,8 +107,8 @@ description: "lame – create mp3 audio files"
 <dd>
 </dd><dt><code>&#8211;scale-r</code><i> n</i></dt>
 <dd> Scales input (every channel, only left channel or only right channel) by <i>n.</i> This just multiplies the PCM data (after it has been converted to floating point) by <i>n. </i> </dd>
-<p> <i>n</i> &gt; 1: increase volume<br />
- <i>n</i> = 1: no effect<br />
+<p> <i>n</i> &gt; 1: increase volume<br/>
+ <i>n</i> = 1: no effect<br/>
  <i>n</i> &lt; 1: reduce volume </p>
 <p> Use with care, since most MP3 decoders will truncate data which decodes to values greater than 32768.</p>
 <dt><code>&#8211;replaygain-fast</code></dt>
@@ -120,7 +120,7 @@ description: "lame – create mp3 audio files"
 <p> See also: <code>&#8211;replaygain-accurate, &#8211;noreplaygain</code></p>
 <dt><code>&#8211;replaygain-accurate</code></dt>
 <dd> Compute ReplayGain more accurately and find the peak sample. </dd>
-<p> This enables decoding on the fly, computes &quot;Radio&quot; ReplayGain on the decoded data stream, finds the peak sample of the decoded data stream and stores it in the file.<br />
+<p> This enables decoding on the fly, computes &quot;Radio&quot; ReplayGain on the decoded data stream, finds the peak sample of the decoded data stream and stores it in the file.<br/>
 &nbsp;<wbr> The ReplayGain analysis does <i>not</i> affect the content of a compressed data stream itself, it is a value stored in the header of a sound file. Information on the purpose of ReplayGain and the algorithms used is available from <code><a rel="nofollow" href="http://www.replaygain.org/.">http://www.replaygain.org/.</a></code> </p>
 <p>&nbsp;<wbr> By default, LAME performs ReplayGain analysis on the input data (after the user-specified volume scaling). This behavior might give slightly inaccurate results because the data on the output of a lossy compression/decompression sequence differs from the initial input data. When <code>&#8211;replaygain-accurate</code> is specified the mp3 stream gets decoded on the fly and the analysis is performed on the decoded data stream. Although theoretically this method gives more accurate results, it has several disadvantages:</p>
 <dl>
@@ -142,8 +142,8 @@ description: "lame – create mp3 audio files"
 <dl>
 <dt>
 </dt><dd>
-&nbsp;<wbr> Only the &quot;RadioGain&quot; ReplayGain value is computed, it is stored in the LAME tag. The analysis is performed with the reference volume equal to 89dB. Note: the reference volume has been changed from 83dB on transition from version 3.95 to 3.95.1.<br />
-&nbsp;<wbr> This option is not usable if the MP3 decoder was <code>explicitly</code> disabled in the build of LAME. (Note: if LAME is compiled without the MP3 decoder, ReplayGain analysis is performed on the input data after user-specified volume scaling).<br />
+&nbsp;<wbr> Only the &quot;RadioGain&quot; ReplayGain value is computed, it is stored in the LAME tag. The analysis is performed with the reference volume equal to 89dB. Note: the reference volume has been changed from 83dB on transition from version 3.95 to 3.95.1.<br/>
+&nbsp;<wbr> This option is not usable if the MP3 decoder was <code>explicitly</code> disabled in the build of LAME. (Note: if LAME is compiled without the MP3 decoder, ReplayGain analysis is performed on the input data after user-specified volume scaling).<br/>
 &nbsp;<wbr> See also: <code>&#8211;replaygain-fast, &#8211;noreplaygain &#8211;clipdetect</code></dd></dl>
 <dt><code>&#8211;noreplaygain</code></dt>
 <dd> Disable ReplayGain analysis. </dd>
@@ -151,7 +151,7 @@ description: "lame – create mp3 audio files"
 <p> See also: <code>&#8211;replaygain-fast, &#8211;replaygain-accurate</code></p>
 <dt><code>&#8211;clipdetect</code></dt>
 <dd> Clipping detection. </dd>
-<p> Enable <code>&#8211;replaygain-accurate</code> and print a message whether clipping occurs and how far in dB the waveform is from full scale.<br />
+<p> Enable <code>&#8211;replaygain-accurate</code> and print a message whether clipping occurs and how far in dB the waveform is from full scale.<br/>
 &nbsp;<wbr>&nbsp;<wbr> This option is not usable if the MP3 decoder was <code>explicitly</code> disabled in the build of LAME. </p>
 <p> See also: <code>&#8211;replaygain-accurate</code></p>
 <dt><code>&#8211;preset type | [cbr] kbps</code></dt>
@@ -168,7 +168,7 @@ description: "lame – create mp3 audio files"
 <dt><code>&#8211;disptime</code><i> n</i></dt>
 <dd> Set the delay in seconds between two display updates.</dd>
 <dt><code>&#8211;nohist</code></dt>
-<dd> By default, LAME will display a bitrate histogram while producing VBR mp3 files. This will disable that feature.<br />
+<dd> By default, LAME will display a bitrate histogram while producing VBR mp3 files. This will disable that feature.<br/>
  Histogram display might not be available on your release.</dd>
 <dt><code>-S</code></dt>
 <dd>
@@ -186,18 +186,18 @@ description: "lame – create mp3 audio files"
 <dt><code>-q</code><i> qual</i></dt>
 <dd> 0 &lt;= <i>qual</i> &lt;= 9 </dd>
 <p> Bitrate is of course the main influence on quality. The higher the bitrate, the higher the quality. But for a given bitrate, we have a choice of algorithms to determine the best scalefactors and Huffman encoding (noise shaping). </p>
-<p> <code>-q 0:</code><br />
+<p> <code>-q 0:</code><br/>
  use slowest &amp; best possible version of all algorithms. <code>-q 0</code> and <code>-q 1</code> are slow and may not produce significantly higher quality. </p>
-<p> <code>-q 2:</code><br />
+<p> <code>-q 2:</code><br/>
  recommended. Same as <code>-h.</code> </p>
-<p> <code>-q 5:</code><br />
+<p> <code>-q 5:</code><br/>
  default value. Good speed, reasonable quality. </p>
-<p> <code>-q 7:</code><br />
+<p> <code>-q 7:</code><br/>
  same as <code>-f.</code> Very fast, ok quality. Psycho acoustics are used for pre-echo &amp; M/S, but no noise shaping is done. </p>
-<p> <code>-q 9:</code><br />
+<p> <code>-q 9:</code><br/>
  disables almost all algorithms including psy-model. Poor quality.</p>
 <dt><code>-h</code></dt>
-<dd> Use some quality improvements. Encoding will be slower, but the result will be of higher quality. The behavior is the same as the <code>-q 2</code> switch.<br />
+<dd> Use some quality improvements. Encoding will be slower, but the result will be of higher quality. The behavior is the same as the <code>-q 2</code> switch.<br/>
  This switch is always enabled when using VBR.</dd>
 <dt><code>-f</code></dt>
 <dd> This switch forces the encoder to use a faster encoding mode, but with a lower quality. The behavior is the same as the <code>-q 7</code> switch. </dd>
@@ -206,11 +206,11 @@ description: "lame – create mp3 audio files"
 <p> CBR (constant bitrate, the default) options:</p>
 <dl>
 <dt><code>-b</code><i> n</i></dt>
-<dd> For MPEG-1 (sampling frequencies of 32, 44.1 and 48 kHz)<br />
+<dd> For MPEG-1 (sampling frequencies of 32, 44.1 and 48 kHz)<br/>
  <i>n</i> = 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320 </dd>
-<p> For MPEG-2 (sampling frequencies of 16, 22.05 and 24 kHz)<br />
+<p> For MPEG-2 (sampling frequencies of 16, 22.05 and 24 kHz)<br/>
  <i>n</i> = 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160 </p>
-<p> For MPEG-2.5 (sampling frequencies of 8, 11.025 and 12 kHz)<br />
+<p> For MPEG-2.5 (sampling frequencies of 8, 11.025 and 12 kHz)<br/>
  <i>n</i> = 8, 16, 24, 32, 40, 48, 56, 64 </p>
 <p> Default is 128 for MPEG1 and 64 for MPEG2.</p>
 <dt><code>&#8211;cbr</code></dt>
@@ -232,30 +232,30 @@ description: "lame – create mp3 audio files"
 <dt><code>&#8211;vbr-new</code></dt>
 <dd> Invokes the newest VBR algorithm. During the development of version 3.90, considerable tuning was done on this algorithm, and it is now considered to be on par with the original <code>&#8211;vbr-old. </code> It has the added advantage of being very fast (over twice as fast as <code>&#8211;vbr-old).</code></dd>
 <dt><code>-V</code><i> n</i></dt>
-<dd> 0 &lt;= <i>n</i> &lt;= 9<br />
+<dd> 0 &lt;= <i>n</i> &lt;= 9<br/>
  Enable VBR (Variable BitRate) and specifies the value of VBR quality (default = 4). 0 = highest quality. </dd>
 </dl>
 <p> ABR and VBR options:</p>
 <dl>
 <dt><code>-b</code><i> bitrate</i></dt>
-<dd> For MPEG-1 (sampling frequencies of 32, 44.1 and 48 kHz)<br />
+<dd> For MPEG-1 (sampling frequencies of 32, 44.1 and 48 kHz)<br/>
  <i>n</i> = 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320 </dd>
-<p> For MPEG-2 (sampling frequencies of 16, 22.05 and 24 kHz)<br />
+<p> For MPEG-2 (sampling frequencies of 16, 22.05 and 24 kHz)<br/>
  <i>n</i> = 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160 </p>
-<p> For MPEG-2.5 (sampling frequencies of 8, 11.025 and 12 kHz)<br />
+<p> For MPEG-2.5 (sampling frequencies of 8, 11.025 and 12 kHz)<br/>
  <i>n</i> = 8, 16, 24, 32, 40, 48, 56, 64 </p>
 <p> Specifies the minimum bitrate to be used. However, in order to avoid wasted space, the smallest frame size available will be used during silences.</p>
 <dt><code>-B</code><i> bitrate</i></dt>
-<dd> For MPEG-1 (sampling frequencies of 32, 44.1 and 48 kHz)<br />
+<dd> For MPEG-1 (sampling frequencies of 32, 44.1 and 48 kHz)<br/>
  <i>n</i> = 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320 </dd>
-<p> For MPEG-2 (sampling frequencies of 16, 22.05 and 24 kHz)<br />
+<p> For MPEG-2 (sampling frequencies of 16, 22.05 and 24 kHz)<br/>
  <i>n</i> = 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160 </p>
-<p> For MPEG-2.5 (sampling frequencies of 8, 11.025 and 12 kHz)<br />
+<p> For MPEG-2.5 (sampling frequencies of 8, 11.025 and 12 kHz)<br/>
  <i>n</i> = 8, 16, 24, 32, 40, 48, 56, 64 </p>
 <p> Specifies the maximum allowed bitrate. </p>
 <p> Note: If you own an mp3 hardware player build upon a MAS 3503 chip, you must set maximum bitrate to no more than 224 kpbs.</p>
 <dt><code>-F</code></dt>
-<dd> Strictly enforce the <code>-b</code> option.<br />
+<dd> Strictly enforce the <code>-b</code> option.<br/>
  This is mainly for use with hardware players that do not support low bitrate mp3. </dd>
 <p> Without this option, the minimum bitrate will be ignored for passages of analog silence, i.e. when the music level is below the absolute threshold of human hearing (ATH). </p>
 </dl>
@@ -264,32 +264,32 @@ description: "lame – create mp3 audio files"
 <dt><code>-X</code><i> n</i></dt>
 <dd> 0 &lt;= <i>n</i> &lt;= 7 </dd>
 <p> When LAME searches for a &quot;good&quot; quantization, it has to compare the actual one with the best one found so far. The comparison says which one is better, the best so far or the actual. The <code>-X</code> parameter selects between different approaches to make this decision, <code>-X0</code> being the default mode: </p>
-<p> <code>-X0 </code><br />
- The criteria are (in order of importance):<br />
- * less distorted scalefactor bands<br />
- * the sum of noise over the thresholds is lower<br />
+<p> <code>-X0 </code><br/>
+ The criteria are (in order of importance):<br/>
+ * less distorted scalefactor bands<br/>
+ * the sum of noise over the thresholds is lower<br/>
  * the total noise is lower </p>
-<p> <code>-X1</code><br />
+<p> <code>-X1</code><br/>
  The actual is better if the maximum noise over all scalefactor bands is less than the best so far. </p>
-<p> <code>-X2</code><br />
+<p> <code>-X2</code><br/>
  The actual is better if the total sum of noise is lower than the best so far. </p>
-<p> <code>-X3</code><br />
+<p> <code>-X3</code><br/>
  The actual is better if the total sum of noise is lower than the best so far and the maximum noise over all scalefactor bands is less than the best so far plus 2dB. </p>
-<p> <code>-X4</code><br />
+<p> <code>-X4</code><br/>
  Not yet documented. </p>
-<p> <code>-X5</code><br />
- The criteria are (in order of importance):<br />
- * the sum of noise over the thresholds is lower<br />
+<p> <code>-X5</code><br/>
+ The criteria are (in order of importance):<br/>
+ * the sum of noise over the thresholds is lower<br/>
  * the total sum of noise is lower </p>
-<p> <code>-X6 </code><br />
- The criteria are (in order of importance):<br />
- * the sum of noise over the thresholds is lower<br />
- * the maximum noise over all scalefactor bands is lower<br />
+<p> <code>-X6 </code><br/>
+ The criteria are (in order of importance):<br/>
+ * the sum of noise over the thresholds is lower<br/>
+ * the maximum noise over all scalefactor bands is lower<br/>
  * the total sum of noise is lower </p>
-<p> <code>-X7 </code><br />
- The criteria are:<br />
- * less distorted scalefactor bands<br />
- or<br />
+<p> <code>-X7 </code><br/>
+ The criteria are:<br/>
+ * less distorted scalefactor bands<br/>
+ or<br/>
  * the sum of noise over the thresholds is lower</p>
 <dt><code>-Y</code></dt>
 <dd> lets LAME ignore noise in sfb21, like in CBR </dd>
@@ -298,8 +298,8 @@ description: "lame – create mp3 audio files"
 <dl>
 <dt><code>-e</code><i> emp</i></dt>
 <dd> <i>emp</i> = n, 5, c </dd>
-<p> n = (none, default)<br />
- 5 = 0/15 microseconds<br />
+<p> n = (none, default)<br/>
+ 5 = 0/15 microseconds<br/>
  c = citt j.17 </p>
 <p> All this does is set a flag in the bitstream. If you have a PCM input file where one of the above types of (obsolete) emphasis has been applied, you can set this flag in LAME. Then the mp3 decoder should de-emphasize the output during playback, although most decoders ignore this flag. </p>
 <p> A better solution would be to apply the de-emphasis with a standalone utility before encoding, and then encode without <code>-e. </code></p>
@@ -308,12 +308,12 @@ description: "lame – create mp3 audio files"
 <dt><code>-o</code></dt>
 <dd> Mark the encoded file as being a copy.</dd>
 <dt><code>-p</code></dt>
-<dd> Turn on CRC error protection.<br />
+<dd> Turn on CRC error protection.<br/>
  It will add a cyclic redundancy check (CRC) code in each frame, allowing to detect transmission errors that could occur on the MP3 stream. However, it takes 16 bits per frame that would otherwise be used for encoding, and then will slightly reduce the sound quality.</dd>
 <dt><code>&#8211;nores</code></dt>
 <dd> Disable the bit reservoir. Each frame will then become independent from previous ones, but the quality will be lower.</dd>
 <dt><code>&#8211;strictly-enforce-ISO</code></dt>
-<dd> With this option, LAME will enforce the 7680 bit limitation on total frame size.<br />
+<dd> With this option, LAME will enforce the 7680 bit limitation on total frame size.<br/>
  This results in many wasted bits for high bitrate encodings but will ensure strict ISO compatibility. This compatibility might be important for hardware players. </dd>
 </dl>
 <p> Filter options:</p>
@@ -327,8 +327,8 @@ description: "lame – create mp3 audio files"
 <dt><code>&#8211;highpass-width</code><i> freq</i></dt>
 <dd> Set the width of the highpass filter in kHz. The default value is 15% of the highpass frequency.</dd>
 <dt><code>&#8211;resample</code><i> sfreq</i></dt>
-<dd> <i>sfreq</i> = 8, 11.025, 12, 16, 22.05, 24, 32, 44.1, 48<br />
- Select output sampling frequency (only supported for encoding).<br />
+<dd> <i>sfreq</i> = 8, 11.025, 12, 16, 22.05, 24, 32, 44.1, 48<br/>
+ Select output sampling frequency (only supported for encoding).<br/>
  If not specified, LAME will automatically resample the input when using high compression ratios. </dd>
 </dl>
 <p> ID3 tag options:</p>
@@ -406,7 +406,7 @@ description: "lame – create mp3 audio files"
 <dt><code>&#8211;preset kbps</code></dt>
 <dd> Using this preset will usually give you good quality at a specified bitrate. Depending on the bitrate entered, this preset will determine the optimal settings for that particular situation. While this approach works, it is not nearly as flexible as VBR, and usually will not attain the same level of quality as VBR at higher bitrates.</dd></dl>
 <p> The following options are also available for the corresponding profiles: </p>
-<p> <code>standard|extreme</code><br />
+<p> <code>standard|extreme</code><br/>
  <code>cbr kbps</code> </p>
 <dl>
 <dt><code>cbr</code></dt>

@@ -9,9 +9,9 @@ description: "Ecore Connection Library Functions – Utility functions that set 
 
 <p>Ecore Connection Library Functions &#8211; Utility functions that set up and shut down the Ecore Connection library. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_con_init</code> (void)<br />
- <i>Initialises the Ecore_Con library. </i><br />
- EAPI int <code>ecore_con_shutdown</code> (void)<br />
+<p>EAPI int <code>ecore_con_init</code> (void)<br/>
+ <i>Initialises the Ecore_Con library. </i><br/>
+ EAPI int <code>ecore_con_shutdown</code> (void)<br/>
  <i>Shuts down the Ecore_Con library. </i></p>
 <h2>Detailed Description</h2>
 <p>Utility functions that set up and shut down the Ecore Connection library.</p>

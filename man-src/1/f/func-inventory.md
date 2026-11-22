@@ -51,7 +51,7 @@ func-inventory -- Takes inventory of data from func minions, and stores them in 
 
 <h2>ALTERNATIVE OUTPUT FORMATS</h2>
 
- func-inventory can be passed a --json or --xmlrpc parameter to override the default output format. These output formats are much less readable in the git-produced diffs, but are more easily loaded by other programs that may want to ``mine'' the output of a func-inventory tree. Using --json requires that the python-simplejson <font SIZE="-1">RPM</font> be installed.
+ func-inventory can be passed a --json or --xmlrpc parameter to override the default output format. These output formats are much less readable in the git-produced diffs, but are more easily loaded by other programs that may want to ``mine'' the output of a func-inventory tree. Using --json requires that the python-simplejson RPM be installed.
 
 <h2>ADDITONAL RESOURCES</h2>
 

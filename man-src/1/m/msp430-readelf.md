@@ -10,35 +10,35 @@ description: "readelf – Displays information about ELF files."
 
 <p> readelf &#8211; Displays information about ELF files.</p>
 <h2>SYNOPSIS</h2>
-<p> readelf [<code>-a</code>|<code>&#8211;all</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-h</code>|<code>&#8211;file-header</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-l</code>|<code>&#8211;program-headers</code>|<code>&#8211;segments</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-S</code>|<code>&#8211;section-headers</code>|<code>&#8211;sections</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-g</code>|<code>&#8211;section-groups</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>|<code>&#8211;section-details</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>|<code>&#8211;headers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-s</code>|<code>&#8211;syms</code>|<code>&#8211;symbols</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-n</code>|<code>&#8211;notes</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-r</code>|<code>&#8211;relocs</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-u</code>|<code>&#8211;unwind</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-d</code>|<code>&#8211;dynamic</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version-info</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-A</code>|<code>&#8211;arch-specific</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-D</code>|<code>&#8211;use-dynamic</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-x</code>&nbsp;<wbr>&lt;number or name&gt;|<code>&#8211;hex-dump=</code>&lt;number or name&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr>&lt;number or name&gt;|<code>&#8211;string-dump=</code>&lt;number or name&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-c</code>|<code>&#8211;archive-index</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-w[lLiaprmfFsoR]</code>|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;debug-dump</code>[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=frames-interp,=str,=loc,=Ranges]]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-I</code>|<code>-histogram</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-v</code>|<code>&#8211;version</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-W</code>|<code>&#8211;wide</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-H</code>|<code>&#8211;help</code>]<br />
+<p> readelf [<code>-a</code>|<code>&#8211;all</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-h</code>|<code>&#8211;file-header</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-l</code>|<code>&#8211;program-headers</code>|<code>&#8211;segments</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-S</code>|<code>&#8211;section-headers</code>|<code>&#8211;sections</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-g</code>|<code>&#8211;section-groups</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>|<code>&#8211;section-details</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>|<code>&#8211;headers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-s</code>|<code>&#8211;syms</code>|<code>&#8211;symbols</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-n</code>|<code>&#8211;notes</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-r</code>|<code>&#8211;relocs</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-u</code>|<code>&#8211;unwind</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-d</code>|<code>&#8211;dynamic</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version-info</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-A</code>|<code>&#8211;arch-specific</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-D</code>|<code>&#8211;use-dynamic</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-x</code>&nbsp;<wbr>&lt;number or name&gt;|<code>&#8211;hex-dump=</code>&lt;number or name&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr>&lt;number or name&gt;|<code>&#8211;string-dump=</code>&lt;number or name&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-c</code>|<code>&#8211;archive-index</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-w[lLiaprmfFsoR]</code>|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;debug-dump</code>[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=frames-interp,=str,=loc,=Ranges]]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-I</code>|<code>-histogram</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-v</code>|<code>&#8211;version</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-W</code>|<code>&#8211;wide</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-H</code>|<code>&#8211;help</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>elffile</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
-<p> <code>readelf</code> displays information about one or more <font SIZE="-1">ELF</font> format object files. The options control what particular information to display. </p>
-<p> <i>elffile</i>&#8230; are the object files to be examined. 32-bit and 64-bit <font SIZE="-1">ELF</font> files are supported, as are archives containing <font SIZE="-1">ELF</font> files. </p>
-<p> This program performs a similar function to <code>objdump</code> but it goes into more detail and it exists independently of the <font SIZE="-1">BFD</font> library, so if there is a bug in <font SIZE="-1">BFD</font> then readelf will not be affected.</p>
+<p> <code>readelf</code> displays information about one or more ELF format object files. The options control what particular information to display. </p>
+<p> <i>elffile</i>&#8230; are the object files to be examined. 32-bit and 64-bit ELF files are supported, as are archives containing ELF files. </p>
+<p> This program performs a similar function to <code>objdump</code> but it goes into more detail and it exists independently of the BFD library, so if there is a bug in BFD then readelf will not be affected.</p>
 <h2>OPTIONS</h2>
 <p> The long and short forms of options, shown here as alternatives, are equivalent. At least one option besides <code>-v</code> or <code>-H</code> must be given.</p>
 <dl>
@@ -49,7 +49,7 @@ description: "readelf – Displays information about ELF files."
 <dt><code>-h</code></dt>
 <dd>
 </dd><dt><code>&#8211;file-header</code></dt>
-<dd> Displays the information contained in the <font SIZE="-1">ELF</font> header at the start of the file.</dd>
+<dd> Displays the information contained in the ELF header at the start of the file.</dd>
 <dt><code>-l</code></dt>
 <dd>
 </dd><dt><code>&#8211;program-headers</code></dt>
@@ -83,7 +83,7 @@ description: "readelf – Displays information about ELF files."
 <dt><code>-n</code></dt>
 <dd>
 </dd><dt><code>&#8211;notes</code></dt>
-<dd> Displays the contents of the <font SIZE="-1">NOTE</font> segments and/or sections, if any.</dd>
+<dd> Displays the contents of the NOTE segments and/or sections, if any.</dd>
 <dt><code>-r</code></dt>
 <dd>
 </dd><dt><code>&#8211;relocs</code></dt>
@@ -91,7 +91,7 @@ description: "readelf – Displays information about ELF files."
 <dt><code>-u</code></dt>
 <dd>
 </dd><dt><code>&#8211;unwind</code></dt>
-<dd> Displays the contents of the file&#8217;s unwind section, if it has one. Only the unwind sections for <font SIZE="-1">IA64</font> <font SIZE="-1">ELF</font> files are currently supported.</dd>
+<dd> Displays the contents of the file&#8217;s unwind section, if it has one. Only the unwind sections for IA64 ELF files are currently supported.</dd>
 <dt><code>-d</code></dt>
 <dd>
 </dd><dt><code>&#8211;dynamic</code></dt>
@@ -119,7 +119,7 @@ description: "readelf – Displays information about ELF files."
 <dt><code>-c</code></dt>
 <dd>
 </dd><dt><code>&#8211;archive-index</code></dt>
-<dd> Displays the file symbol index infomation contained in the header part of binary archives. Performs the same function as the <code>t</code> command to <code>ar</code>, but without using the <font SIZE="-1">BFD</font> library.</dd>
+<dd> Displays the file symbol index infomation contained in the header part of binary archives. Performs the same function as the <code>t</code> command to <code>ar</code>, but without using the BFD library.</dd>
 <dt><code>-w[lLiaprmfFsoR]</code></dt>
 <dd>
 </dd><dt><code>&#8211;debug-dump[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=frames-interp,=str,=loc,=Ranges]</code></dt>
@@ -136,7 +136,7 @@ description: "readelf – Displays information about ELF files."
 <dt><code>-W</code></dt>
 <dd>
 </dd><dt><code>&#8211;wide</code></dt>
-<dd> Don&#8217;t break output lines to fit into 80 columns. By default <code>readelf</code> breaks section header and segment listing lines for 64-bit <font SIZE="-1">ELF</font> files, so that they fit into 80 columns. This option causes <code>readelf</code> to print each section header resp. each segment one a single line, which is far more readable on terminals wider than 80 columns.</dd>
+<dd> Don&#8217;t break output lines to fit into 80 columns. By default <code>readelf</code> breaks section header and segment listing lines for 64-bit ELF files, so that they fit into 80 columns. This option causes <code>readelf</code> to print each section header resp. each segment one a single line, which is far more readable on terminals wider than 80 columns.</dd>
 <dt><code>-H</code></dt>
 <dd>
 </dd><dt><code>&#8211;help</code></dt>
@@ -148,4 +148,4 @@ description: "readelf – Displays information about ELF files."
 <p> <i><a href="/docs/linux/man/1-objdump/">objdump</a></i>(1), and the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

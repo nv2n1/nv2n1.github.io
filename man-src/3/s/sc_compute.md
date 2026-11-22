@@ -14,7 +14,7 @@ description: "sc::Compute –"
 #include &lt;compute.h&gt;</code></pre>
 <p> Inherited by <code>sc::Function</code>.</p>
 <h3>Public Member Functions</h3>
-<p>virtual void <code>obsolete</code> ()<br />
+<p>virtual void <code>obsolete</code> ()<br/>
  <i>Marks all results as being out of date. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>virtual void compute ()=0

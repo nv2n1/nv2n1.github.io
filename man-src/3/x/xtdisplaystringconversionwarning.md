@@ -24,6 +24,6 @@ description: "XtDisplayStringConversionWarning – issue a conversion warning me
 <p>The <code>XtDisplayStringConversionWarning</code> function issues a warning message using <code>XtAppWarningMsg</code> with name &#8220;conversionError&#8221;, type &#8220;string&#8221;, class &#8220;XtToolkitError&#8221;, and the default message string &#8220;Cannot convert &quot;<i>from_value</i>&quot; to type <i>to_type</i>&#8221;. </p>
 <p> To issue other types of warning or error messages, the type converter should use <code>XtAppWarningMsg</code> or <code>XtAppErrorMsg</code>.</p>
 <h2>See Also</h2>
-<p>XtAppWarningMsg(3t)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p>XtAppWarningMsg(3t)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

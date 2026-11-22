@@ -33,9 +33,9 @@ description: "extresso – wrapper for wrestool and icotool"
 <dd> Output version information and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Extract all resources from shell32.dll using the resource script &#8220;win98_shell32&#8221;, assuming it is available in &#8220;/windows/windows/system/shell32.dll&#8221;, and placing output in &#8220;out/&#8221;: </p>
-<p>&nbsp;<wbr>&nbsp;$&nbsp;extresso ../data/resscripts/win98_shell32 &#8211;base=/windows/windows &#8211;output=out/<br />
-&nbsp;<wbr>&nbsp;$&nbsp;find out/&nbsp;-type f | wc -l<br />
-&nbsp;<wbr>&nbsp;339<br />
+<p>&nbsp;<wbr>&nbsp;$&nbsp;extresso ../data/resscripts/win98_shell32 &#8211;base=/windows/windows &#8211;output=out/<br/>
+&nbsp;<wbr>&nbsp;$&nbsp;find out/&nbsp;-type f | wc -l<br/>
+&nbsp;<wbr>&nbsp;339<br/>
 &nbsp;<wbr>&nbsp;$</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-genresscript/">genresscript</a></code>(1), <code><a href="/docs/linux/man/1-icotool/">icotool</a></code>(1), <code><a href="/docs/linux/man/1-wrestool/">wrestool</a></code>(1).</p>

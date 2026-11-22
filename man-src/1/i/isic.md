@@ -10,15 +10,15 @@ description: "ISIC – IP Stack Integrity Checker"
 
 <p> ISIC &#8211; IP Stack Integrity Checker</p>
 <h2>SYNOPSIS</h2>
-<p> <code>esic -i</code> <i>&lt;interface&gt;</i> <code>[&#8230;]</code><br />
- <code>isic -s </code> <i>&lt;source ip&gt; </i> <code>-d </code> <i>&lt;destination ip&gt; </i> <code>[&#8230;]</code><br />
- <code>tcpsic -s </code> <i>&lt;source ip&gt;[,port]</i> <code>-d </code> <i>&lt;destination ip&gt;[,port]</i> <code>[&#8230;]</code><br />
- <code>udpsic -s </code> <i>&lt;source ip&gt;[,port]</i> <code>-d </code> <i>&lt;destination ip&gt;[,port]</i> <code>[&#8230;]</code><br />
- <code>icmpsic -s </code> <i>&lt;source ip&gt;</i> <code>-d </code> <i>&lt;destination ip&gt;</i> <code>[&#8230;]</code><br />
- <code>multisic -s</code> <i>&lt;source ip&gt;[,port]</i> <code>-d</code> <i>&lt;destination ip&gt;[,port]</i> <code>-i</code> <i>&lt;interface&gt;</i> <code>[&#8230;]</code><br />
- <code>isic6 -s </code> <i>&lt;source ip&gt;</i> <code>-d </code> <i>&lt;destination ip&gt;</i> <code>[&#8230;]</code><br />
- <code>tcpsic6 -s </code> <i>&lt;source ip&gt;[,port]</i> <code>-d </code> <i>&lt;destination ip&gt;[,port]</i> <code>[&#8230;]</code><br />
- <code>udpsic6 -s </code> <i>&lt;source ip&gt;[,port]</i> <code>-d </code> <i>&lt;destination ip&gt;[,port]</i> <code>[&#8230;]</code><br />
+<p> <code>esic -i</code> <i>&lt;interface&gt;</i> <code>[&#8230;]</code><br/>
+ <code>isic -s </code> <i>&lt;source ip&gt; </i> <code>-d </code> <i>&lt;destination ip&gt; </i> <code>[&#8230;]</code><br/>
+ <code>tcpsic -s </code> <i>&lt;source ip&gt;[,port]</i> <code>-d </code> <i>&lt;destination ip&gt;[,port]</i> <code>[&#8230;]</code><br/>
+ <code>udpsic -s </code> <i>&lt;source ip&gt;[,port]</i> <code>-d </code> <i>&lt;destination ip&gt;[,port]</i> <code>[&#8230;]</code><br/>
+ <code>icmpsic -s </code> <i>&lt;source ip&gt;</i> <code>-d </code> <i>&lt;destination ip&gt;</i> <code>[&#8230;]</code><br/>
+ <code>multisic -s</code> <i>&lt;source ip&gt;[,port]</i> <code>-d</code> <i>&lt;destination ip&gt;[,port]</i> <code>-i</code> <i>&lt;interface&gt;</i> <code>[&#8230;]</code><br/>
+ <code>isic6 -s </code> <i>&lt;source ip&gt;</i> <code>-d </code> <i>&lt;destination ip&gt;</i> <code>[&#8230;]</code><br/>
+ <code>tcpsic6 -s </code> <i>&lt;source ip&gt;[,port]</i> <code>-d </code> <i>&lt;destination ip&gt;[,port]</i> <code>[&#8230;]</code><br/>
+ <code>udpsic6 -s </code> <i>&lt;source ip&gt;[,port]</i> <code>-d </code> <i>&lt;destination ip&gt;[,port]</i> <code>[&#8230;]</code><br/>
  <code>imcpsic6 -s </code> <i>&lt;source ip&gt;</i> <code>-d </code> <i>&lt;destination ip&gt;</i> <code>[&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>ISIC</code> is a suite of utilities to exercise the stability of an IP Stack and its component stacks (TCP, UDP, ICMP et. al.) It generates piles of pseudo random packets of the target protocol. The packets are given tendancies to conform to. For example 50% of the packets generated can have IP Options, and 25% of the packets can be IP fragments&#8230; But the percentages are arbitrary and most of the packet fields have a configurable tendancy. </p>
@@ -105,7 +105,7 @@ description: "ISIC – IP Stack Integrity Checker"
 <h2>AUTHOR</h2>
 <p> Shu Xiao &lt;sxiao [at] cisco.com&gt;</p>
 <h2>SEE ALSO</h2>
-<p> Libnet (<a rel="nofollow" href="http://www.packetfactory.net/projects/libnet)">http://www.packetfactory.net/projects/libnet)</a><br />
- ISIC online (<a rel="nofollow" href="http://www.packetfactory.net/projects/ISIC)">http://www.packetfactory.net/projects/ISIC)</a> or<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(<a rel="nofollow" href="http://isic.sourceforge.net)">http://isic.sourceforge.net)</a><br />
+<p> Libnet (<a rel="nofollow" href="http://www.packetfactory.net/projects/libnet)">http://www.packetfactory.net/projects/libnet)</a><br/>
+ ISIC online (<a rel="nofollow" href="http://www.packetfactory.net/projects/ISIC)">http://www.packetfactory.net/projects/ISIC)</a> or<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(<a rel="nofollow" href="http://isic.sourceforge.net)">http://isic.sourceforge.net)</a><br/>
  ip6sic (<a rel="nofollow" href="http://ip6sic.sourceforge.net)">http://ip6sic.sourceforge.net)</a> </p>

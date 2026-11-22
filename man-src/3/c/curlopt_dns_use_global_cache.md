@@ -10,7 +10,7 @@ description: "CURLOPT_DNS_USE_GLOBAL_CACHE – enable/disable global DNS cache"
 <p>CURLOPT_DNS_USE_GLOBAL_CACHE &#8211; enable/disable global DNS cache</p>
 <h2>Synopsis</h2>
 <p>#include &lt;curl/curl.h&gt; </p>
-<p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_DNS_USE_GLOBAL_CACHE,<br />
+<p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_DNS_USE_GLOBAL_CACHE,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>long enable);</p>
 <h2>Description</h2>
 <p>Pass a long. If the <i>enable</i> value is 1, it tells curl to use a global DNS cache that will survive between easy handle creations and deletions. This is not thread-safe and this will use a global variable. </p>

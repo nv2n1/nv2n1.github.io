@@ -10,11 +10,11 @@ description: "Error Data Accessors and Modifiers –"
 
 <p> Error Data Accessors and Modifiers &#8211; </p>
 <h3>Functions</h3>
-<p> OM_uint32 <code>globus_error_gssapi_get_major_status</code> (globus_object_t *error)<br />
- <i>Get Major Status. </i><br />
- void <code>globus_error_gssapi_set_major_status</code> (globus_object_t *error, const OM_uint32 major_status)<br />
- <i>Set Major Status. </i><br />
- OM_uint32 <code>globus_error_gssapi_get_minor_status</code> (globus_object_t *error)<br />
+<p> OM_uint32 <code>globus_error_gssapi_get_major_status</code> (globus_object_t *error)<br/>
+ <i>Get Major Status. </i><br/>
+ void <code>globus_error_gssapi_set_major_status</code> (globus_object_t *error, const OM_uint32 major_status)<br/>
+ <i>Set Major Status. </i><br/>
+ OM_uint32 <code>globus_error_gssapi_get_minor_status</code> (globus_object_t *error)<br/>
  <i>Get Minor Status. </i></p>
 <h2>Detailed Description</h2>
 <p> Get and set data in a Globus GSSAPI Error object. </p>
@@ -45,7 +45,7 @@ description: "Error Data Accessors and Modifiers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The error object for which to set the major status<br />
+</dt><dd> <i>error</i> The error object for which to set the major status<br/>
  <i>major_status</i> The major status</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

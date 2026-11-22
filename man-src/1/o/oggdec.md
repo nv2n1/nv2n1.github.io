@@ -36,7 +36,7 @@ description: "oggdec – simple decoder, Ogg Vorbis file to PCM audio file (Wave
 <dd> Write output to specified filename. This option is only valid if one input [file] is specified, or if raw mode is used. </dd>
 </dl>
 <h2>EXAMPLES</h2>
-<p> Decode a file <code>enabler.ogg</code> to <code>enabler.wav</code><br />
+<p> Decode a file <code>enabler.ogg</code> to <code>enabler.wav</code><br/>
 &nbsp;<wbr>as little-endian unsigned 16-bit&nbsp;<wbr>(default options):</p>
 <dl>
 <dt>

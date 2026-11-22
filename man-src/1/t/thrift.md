@@ -10,7 +10,7 @@ description: "thrift – program to do something"
 
 <p> thrift &#8211; program to do something </p>
 <h2>SYNOPSIS</h2>
-<p> <code>thrift</code> [<i>options</i>]<i> files</i>&#8230;<br />
+<p> <code>thrift</code> [<i>options</i>]<i> files</i>&#8230;<br/>
  <code>bar</code> [<i>options</i>]<i> files</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>thrift</code> and <code>bar</code> commands. </p>
@@ -23,7 +23,7 @@ description: "thrift – program to do something"
 <dt><code>-v, &#8211;version</code></dt>
 <dd> Show version of program.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code>bar</code>(1), <code><a href="/docs/linux/man/1-baz/">baz</a></code>(1).<br />
+<p> <code>bar</code>(1), <code><a href="/docs/linux/man/1-baz/">baz</a></code>(1).<br/>
  The programs are documented fully by <i>The Rise and Fall of a Fooish Bar</i>, available via the Info system.</p>
 <h2>AUTHOR</h2>
 <p> thrift was written by &lt;upstream author&gt;. </p>

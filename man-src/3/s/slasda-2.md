@@ -10,7 +10,7 @@ description: "slasda.f –"
 <p>slasda.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slasda</code> (ICOMPQ, SMLSIZ, N, SQRE, D, E, U, LDU, VT, K, DIFL, DIFR, Z, POLES, GIVPTR, GIVCOL, LDGCOL, PERM, GIVNUM, C, S, WORK, IWORK, INFO)<br />
+<p>subroutine <code>slasda</code> (ICOMPQ, SMLSIZ, N, SQRE, D, E, U, LDU, VT, K, DIFL, DIFR, Z, POLES, GIVPTR, GIVCOL, LDGCOL, PERM, GIVNUM, C, S, WORK, IWORK, INFO)<br/>
  <i></i><code>SLASDA</code> computes the singular value decomposition (SVD) of a real upper bidiagonal matrix with diagonal d and off-diagonal e. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasda (integerICOMPQ, integerSMLSIZ, integerN, integerSQRE, real, dimension( * )D, real, dimension( * )E, real, dimension( ldu, * )U, integerLDU, real, dimension( ldu, * )VT, integer, dimension( * )K, real, dimension( ldu, * )DIFL, real, dimension( ldu, * )DIFR, real, dimension( ldu, * )Z, real, dimension( ldu, * )POLES, integer, dimension( * )GIVPTR, integer, dimension( ldgcol, * )GIVCOL, integerLDGCOL, integer, dimension( ldgcol, * )PERM, real, dimension( ldu, * )GIVNUM, real, dimension( * )C, real, dimension( * )S, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

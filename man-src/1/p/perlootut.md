@@ -17,19 +17,19 @@ perlootut - Object-Oriented Programming in Perl Tutorial
 
 <h2>DESCRIPTION</h2>
 
- This document provides an introduction to object-oriented programming in Perl. It begins with a brief overview of the concepts behind object oriented design. Then it introduces several different <font SIZE="-1">OO</font> systems from <font SIZE="-1">CPAN</font> &lt;<a rel="nofollow" HREF="http://search.cpan.org">http://search.cpan.org</a>&gt; which build on top of what Perl provides. 
+ This document provides an introduction to object-oriented programming in Perl. It begins with a brief overview of the concepts behind object oriented design. Then it introduces several different OO systems from CPAN &lt;<a rel="nofollow" HREF="http://search.cpan.org">http://search.cpan.org</a>&gt; which build on top of what Perl provides. 
 
- By default, Perl's built-in <font SIZE="-1">OO</font> system is very minimal, leaving you to do most of the work. This minimalism made a lot of sense in 1994, but in the years since Perl 5.0 we've seen a number of common patterns emerge in Perl <font SIZE="-1">OO.</font> Fortunately, Perl's flexibility has allowed a rich ecosystem of Perl <font SIZE="-1">OO</font> systems to flourish. 
+ By default, Perl's built-in OO system is very minimal, leaving you to do most of the work. This minimalism made a lot of sense in 1994, but in the years since Perl 5.0 we've seen a number of common patterns emerge in Perl OO. Fortunately, Perl's flexibility has allowed a rich ecosystem of Perl OO systems to flourish. 
 
- If you want to know how Perl <font SIZE="-1">OO</font> works under the hood, the perlobj document explains the nitty gritty details. 
+ If you want to know how Perl OO works under the hood, the perlobj document explains the nitty gritty details. 
 
  This document assumes that you already understand the basics of Perl syntax, variable types, operators, and subroutine calls. If you don't understand these concepts yet, please read perlintro first. You should also read the perlsyn, perlop, and perlsub documents.
 
 <h2>OBJECT-ORIENTED FUNDAMENTALS</h2>
 
- Most object systems share a number of common concepts. You've probably heard terms like ``class'', ``object, ''method``, and ''attribute&quot; before. Understanding the concepts will make it much easier to read and write object-oriented code. If you're already familiar with these terms, you should still skim this section, since it explains each concept in terms of Perl's <font SIZE="-1">OO</font> implementation. 
+ Most object systems share a number of common concepts. You've probably heard terms like ``class'', ``object, ''method``, and ''attribute&quot; before. Understanding the concepts will make it much easier to read and write object-oriented code. If you're already familiar with these terms, you should still skim this section, since it explains each concept in terms of Perl's OO implementation. 
 
- Perl's <font SIZE="-1">OO</font> system is class-based. Class-based <font SIZE="-1">OO</font> is fairly common. It's used by Java, C<font SIZE="-2">++</font>, C#, Python, Ruby, and many other languages. There are other object orientation paradigms as well. JavaScript is the most popular language to use another paradigm. JavaScript's <font SIZE="-1">OO</font> system is prototype-based.
+ Perl's OO system is class-based. Class-based OO is fairly common. It's used by Java, C++, C#, Python, Ruby, and many other languages. There are other object orientation paradigms as well. JavaScript is the most popular language to use another paradigm. JavaScript's OO system is prototype-based.
 
 <h3>Object</h3>
 
@@ -39,7 +39,7 @@ perlootut - Object-Oriented Programming in Perl Tutorial
 
  The methods associated with a file might include <tt>&quot;rename()&quot;</tt> and <tt>&quot;write()&quot;</tt>. 
 
- In Perl most objects are hashes, but the <font SIZE="-1">OO</font> systems we recommend keep you from having to worry about this. In practice, it's best to consider an object's internal data structure opaque.
+ In Perl most objects are hashes, but the OO systems we recommend keep you from having to worry about this. In practice, it's best to consider an object's internal data structure opaque.
 
 <h3>Class</h3>
 
@@ -53,7 +53,7 @@ perlootut - Object-Oriented Programming in Perl Tutorial
   package File;
 </pre> 
 
- In Perl, there is no special keyword for constructing an object. However, most <font SIZE="-1">OO</font> modules on <font SIZE="-1">CPAN</font> use a method named <tt>&quot;new()&quot;</tt> to construct a new object: 
+ In Perl, there is no special keyword for constructing an object. However, most OO modules on CPAN use a method named <tt>&quot;new()&quot;</tt> to construct a new object: 
 
  <pre>
   my $hostname = File-&gt;new(
@@ -138,7 +138,7 @@ $file-&gt;print_info("The file is located at ");
 
 <h3>Polymorphism</h3>
 
- <b>Polymorphism</b> is a fancy way of saying that objects from two different classes share an <font SIZE="-1">API.</font> For example, we could have <tt>&quot;File&quot;</tt> and <tt>&quot;WebPage&quot;</tt> classes which both have a <tt>&quot;print_content()&quot;</tt> method. This method might produce different output for each class, but they share a common interface. 
+ <b>Polymorphism</b> is a fancy way of saying that objects from two different classes share an API. For example, we could have <tt>&quot;File&quot;</tt> and <tt>&quot;WebPage&quot;</tt> classes which both have a <tt>&quot;print_content()&quot;</tt> method. This method might produce different output for each class, but they share a common interface. 
 
  While the two classes may differ in many ways, when it comes to the <tt>&quot;print_content()&quot;</tt> method, they are the same. This means that we can try to call the <tt>&quot;print_content()&quot;</tt> method on an object of either class, and <b>we don't have to know what class the object belongs to!</b> 
 
@@ -220,9 +220,9 @@ sub print_info
 
  <b>Encapsulation</b> is the idea that an object is opaque. When another developer uses your class, they don't need to know <i>how</i> it is implemented, they just need to know <i>what</i> it does. 
 
- Encapsulation is important for several reasons. First, it allows you to separate the public <font SIZE="-1">API</font> from the private implementation. This means you can change that implementation without breaking the <font SIZE="-1">API.</font> 
+ Encapsulation is important for several reasons. First, it allows you to separate the public API from the private implementation. This means you can change that implementation without breaking the API. 
 
- Second, when classes are well encapsulated, they become easier to subclass. Ideally, a subclass uses the same APIs to access object data that its parent class uses. In reality, subclassing sometimes involves violating encapsulation, but a good <font SIZE="-1">API</font> can minimize the need to do this. 
+ Second, when classes are well encapsulated, they become easier to subclass. Ideally, a subclass uses the same APIs to access object data that its parent class uses. In reality, subclassing sometimes involves violating encapsulation, but a good API can minimize the need to do this. 
 
  We mentioned earlier that most Perl objects are implemented as hashes under the hood. The principle of encapsulation tells us that we should not rely on this. Instead, we should use accessor methods to access the data in that hash. The object systems that we recommend below all automate the generation of accessor methods. If you use one of them, you should never have to access the object as a hash directly.
 
@@ -240,13 +240,13 @@ sub print_info
 
  We could have both classes inherit from a common parent, like <tt>&quot;Machine&quot;</tt>, but not all machines have on/off switches. We could create a parent class called <tt>&quot;HasOnOffSwitch&quot;</tt>, but that is very artificial. Radios and computers are not specializations of this parent. This parent is really a rather ridiculous creation. 
 
- This is where roles come in. It makes a lot of sense to create a <tt>&quot;HasOnOffSwitch&quot;</tt> role and apply it to both classes. This role would define a known <font SIZE="-1">API</font> like providing <tt>&quot;turn_on()&quot;</tt> and <tt>&quot;turn_off()&quot;</tt> methods. 
+ This is where roles come in. It makes a lot of sense to create a <tt>&quot;HasOnOffSwitch&quot;</tt> role and apply it to both classes. This role would define a known API like providing <tt>&quot;turn_on()&quot;</tt> and <tt>&quot;turn_off()&quot;</tt> methods. 
 
- Perl does not have any built-in way to express roles. In the past, people just bit the bullet and used multiple inheritance. Nowadays, there are several good choices on <font SIZE="-1">CPAN</font> for using roles.
+ Perl does not have any built-in way to express roles. In the past, people just bit the bullet and used multiple inheritance. Nowadays, there are several good choices on CPAN for using roles.
 
-<h3>When to Use <font SIZE="-1">OO</font></h3>
+<h3>When to Use OO</h3>
 
- Object Orientation is not the best solution to every problem. In <i>Perl Best Practices</i> (copyright 2004, Published by O'Reilly Media, Inc.), Damian Conway provides a list of criteria to use when deciding if <font SIZE="-1">OO</font> is the right fit for your problem:
+ Object Orientation is not the best solution to every problem. In <i>Perl Best Practices</i> (copyright 2004, Published by O'Reilly Media, Inc.), Damian Conway provides a list of criteria to use when deciding if OO is the right fit for your problem:
 <dl>
 <dt>&bull;
 </dt><dd> The system being designed is large, or is likely to become large.
@@ -271,7 +271,7 @@ sub print_info
 
 <h2>PERL OO SYSTEMS</h2>
 
- As we mentioned before, Perl's built-in <font SIZE="-1">OO</font> system is very minimal, but also quite flexible. Over the years, many people have developed systems which build on top of Perl's built-in system to provide more features and convenience. 
+ As we mentioned before, Perl's built-in OO system is very minimal, but also quite flexible. Over the years, many people have developed systems which build on top of Perl's built-in system to provide more features and convenience. 
 
  We strongly recommend that you use one of these systems. Even the most minimal of them eliminates a lot of repetitive boilerplate. There's really no good reason to write your classes from scratch in Perl. 
 
@@ -281,7 +281,7 @@ sub print_info
 
  Moose bills itself as a ``postmodern object system for Perl 5''. Don't be scared, the ``postmodern'' label is a callback to Larry's description of Perl as ``the first postmodern computer language''. 
 
- <tt>&quot;Moose&quot;</tt> provides a complete, modern <font SIZE="-1">OO</font> system. Its biggest influence is the Common Lisp Object System, but it also borrows ideas from Smalltalk and several other languages. <tt>&quot;Moose&quot;</tt> was created by Stevan Little, and draws heavily from his work on the Perl 6 <font SIZE="-1">OO</font> design. 
+ <tt>&quot;Moose&quot;</tt> provides a complete, modern OO system. Its biggest influence is the Common Lisp Object System, but it also borrows ideas from Smalltalk and several other languages. <tt>&quot;Moose&quot;</tt> was created by Stevan Little, and draws heavily from his work on the Perl 6 OO design. 
 
  Here is our <tt>&quot;File&quot;</tt> class using <tt>&quot;Moose&quot;</tt>: 
 
@@ -329,10 +329,10 @@ sub turn_off
  Perl's built-in introspection features are fairly minimal. <tt>&quot;Moose&quot;</tt> builds on top of them and creates a full introspection layer for your classes. This lets you ask questions like ``what methods does the File class implement?'' It also lets you modify your classes programmatically.
 </dd><dt>&bull;
 </dt><dd> Self-hosted and extensible 
- <tt>&quot;Moose&quot;</tt> describes itself using its own introspection <font SIZE="-1">API.</font> Besides being a cool trick, this means that you can extend <tt>&quot;Moose&quot;</tt> using <tt>&quot;Moose&quot;</tt> itself.
+ <tt>&quot;Moose&quot;</tt> describes itself using its own introspection API. Besides being a cool trick, this means that you can extend <tt>&quot;Moose&quot;</tt> using <tt>&quot;Moose&quot;</tt> itself.
 </dd><dt>&bull;
 </dt><dd> Rich ecosystem 
- There is a rich ecosystem of <tt>&quot;Moose&quot;</tt> extensions on <font SIZE="-1">CPAN</font> under the MooseX &lt;<a rel="nofollow" HREF="http://search.cpan.org/search?query=MooseX">http://search.cpan.org/search?query=MooseX</a>&amp;mode=dist&gt; namespace. In addition, many modules on <font SIZE="-1">CPAN</font> already use <tt>&quot;Moose&quot;</tt>, providing you with lots of examples to learn from.
+ There is a rich ecosystem of <tt>&quot;Moose&quot;</tt> extensions on CPAN under the MooseX &lt;<a rel="nofollow" HREF="http://search.cpan.org/search?query=MooseX">http://search.cpan.org/search?query=MooseX</a>&amp;mode=dist&gt; namespace. In addition, many modules on CPAN already use <tt>&quot;Moose&quot;</tt>, providing you with lots of examples to learn from.
 </dd><dt>&bull;
 </dt><dd> Many more features 
  <tt>&quot;Moose&quot;</tt> is a very powerful tool, and we can't cover all of its features here. We encourage you to learn more by reading the <tt>&quot;Moose&quot;</tt> documentation, starting with Moose::Manual &lt;<a rel="nofollow" HREF="http://search.cpan.org/perldoc?Moose::Manual">http://search.cpan.org/perldoc?Moose::Manual</a>&gt;.</dd></dl>
@@ -342,7 +342,7 @@ sub turn_off
 
  <tt>&quot;Moose&quot;</tt> can make your code slower to load. <tt>&quot;Moose&quot;</tt> itself is not small, and it does a <i>lot</i> of code generation when you define your class. This code generation means that your runtime code is as fast as it can be, but you pay for this when your modules are first loaded. 
 
- This load time hit can be a problem when startup speed is important, such as with a command-line script or a ``plain vanilla'' <font SIZE="-1">CGI</font> script that must be loaded each time it is executed. 
+ This load time hit can be a problem when startup speed is important, such as with a command-line script or a ``plain vanilla'' CGI script that must be loaded each time it is executed. 
 
  Before you panic, know that many people do use <tt>&quot;Moose&quot;</tt> for command-line tools and other startup-sensitive code. We encourage you to try <tt>&quot;Moose&quot;</tt> out first before worrying about startup speed. 
 
@@ -350,11 +350,11 @@ sub turn_off
 
  <i>Moo</i> 
 
- If you try <tt>&quot;Moose&quot;</tt> and find that one of these issues is preventing you from using <tt>&quot;Moose&quot;</tt>, we encourage you to consider Moo next. <tt>&quot;Moo&quot;</tt> implements a subset of <tt>&quot;Moose&quot;</tt>'s functionality in a simpler package. For most features that it does implement, the end-user <font SIZE="-1">API</font> is <i>identical</i> to <tt>&quot;Moose&quot;</tt>, meaning you can switch from <tt>&quot;Moo&quot;</tt> to <tt>&quot;Moose&quot;</tt> quite easily. 
+ If you try <tt>&quot;Moose&quot;</tt> and find that one of these issues is preventing you from using <tt>&quot;Moose&quot;</tt>, we encourage you to consider Moo next. <tt>&quot;Moo&quot;</tt> implements a subset of <tt>&quot;Moose&quot;</tt>'s functionality in a simpler package. For most features that it does implement, the end-user API is <i>identical</i> to <tt>&quot;Moose&quot;</tt>, meaning you can switch from <tt>&quot;Moo&quot;</tt> to <tt>&quot;Moose&quot;</tt> quite easily. 
 
- <tt>&quot;Moo&quot;</tt> does not implement most of <tt>&quot;Moose&quot;</tt>'s introspection <font SIZE="-1">API,</font> so it's often faster when loading your modules. Additionally, none of its dependencies require <font SIZE="-1">XS,</font> so it can be installed on machines without a compiler. 
+ <tt>&quot;Moo&quot;</tt> does not implement most of <tt>&quot;Moose&quot;</tt>'s introspection API, so it's often faster when loading your modules. Additionally, none of its dependencies require XS, so it can be installed on machines without a compiler. 
 
- One of <tt>&quot;Moo&quot;</tt>'s most compelling features is its interoperability with <tt>&quot;Moose&quot;</tt>. When someone tries to use <tt>&quot;Moose&quot;</tt>'s introspection <font SIZE="-1">API</font> on a <tt>&quot;Moo&quot;</tt> class or role, it is transparently inflated into a <tt>&quot;Moose&quot;</tt> class or role. This makes it easier to incorporate <tt>&quot;Moo&quot;</tt>-using code into a <tt>&quot;Moose&quot;</tt> code base and vice versa. 
+ One of <tt>&quot;Moo&quot;</tt>'s most compelling features is its interoperability with <tt>&quot;Moose&quot;</tt>. When someone tries to use <tt>&quot;Moose&quot;</tt>'s introspection API on a <tt>&quot;Moo&quot;</tt> class or role, it is transparently inflated into a <tt>&quot;Moose&quot;</tt> class or role. This makes it easier to incorporate <tt>&quot;Moo&quot;</tt>-using code into a <tt>&quot;Moose&quot;</tt> code base and vice versa. 
 
  For example, a <tt>&quot;Moose&quot;</tt> class can subclass a <tt>&quot;Moo&quot;</tt> class using <tt>&quot;extends&quot;</tt> or consume a <tt>&quot;Moo&quot;</tt> role using <tt>&quot;with&quot;</tt>. 
 
@@ -364,7 +364,7 @@ sub turn_off
 
  Class::Accessor is the polar opposite of <tt>&quot;Moose&quot;</tt>. It provides very few features, nor is it self-hosting. 
 
- It is, however, very simple, pure Perl, and it has no non-core dependencies. It also provides a ``Moose-like'' <font SIZE="-1">API</font> on demand for the features it supports. 
+ It is, however, very simple, pure Perl, and it has no non-core dependencies. It also provides a ``Moose-like'' API on demand for the features it supports. 
 
  Even though it doesn't do much, it is still preferable to writing your own classes from scratch. 
 
@@ -389,7 +389,7 @@ sub print_info
 
 <h3>Class::Tiny</h3>
 
- Finally, we have Class::Tiny. This module truly lives up to its name. It has an incredibly minimal <font SIZE="-1">API</font> and absolutely no dependencies on any recent Perl. Still, we think it's a lot easier to use than writing your own <font SIZE="-1">OO</font> code from scratch. 
+ Finally, we have Class::Tiny. This module truly lives up to its name. It has an incredibly minimal API and absolutely no dependencies on any recent Perl. Still, we think it's a lot easier to use than writing your own OO code from scratch. 
 
  Here's our <tt>&quot;File&quot;</tt> class once more: 
 
@@ -411,11 +411,11 @@ sub print_info
 
 <h3>Role::Tiny</h3>
 
- As we mentioned before, roles provide an alternative to inheritance, but Perl does not have any built-in role support. If you choose to use Moose, it comes with a full-fledged role implementation. However, if you use one of our other recommended <font SIZE="-1">OO</font> modules, you can still use roles with Role::Tiny 
+ As we mentioned before, roles provide an alternative to inheritance, but Perl does not have any built-in role support. If you choose to use Moose, it comes with a full-fledged role implementation. However, if you use one of our other recommended OO modules, you can still use roles with Role::Tiny 
 
  <tt>&quot;Role::Tiny&quot;</tt> provides some of the same features as Moose's role system, but in a much smaller package. Most notably, it doesn't support any sort of attribute declaration, so you have to do that by hand. Still, it's useful, and works well with <tt>&quot;Class::Accessor&quot;</tt> and <tt>&quot;Class::Tiny&quot;</tt>
 
-<h3><font SIZE="-1">OO</font> System Summary</h3>
+<h3>OO System Summary</h3>
 
  Here's a brief recap of the options we covered:
 <dl>
@@ -432,21 +432,21 @@ sub print_info
 </dt><dd> Role::Tiny 
  Use <tt>&quot;Role::Tiny&quot;</tt> with <tt>&quot;Class::Accessor&quot;</tt> or <tt>&quot;Class::Tiny&quot;</tt> if you find yourself considering multiple inheritance. If you go with <tt>&quot;Moose&quot;</tt>, it comes with its own role implementation.</dd></dl>
 
-<h3>Other <font SIZE="-1">OO</font> Systems</h3>
+<h3>Other OO Systems</h3>
 
- There are literally dozens of other OO-related modules on <font SIZE="-1">CPAN</font> besides those covered here, and you're likely to run across one or more of them if you work with other people's code. 
+ There are literally dozens of other OO-related modules on CPAN besides those covered here, and you're likely to run across one or more of them if you work with other people's code. 
 
- In addition, plenty of code in the wild does all of its <font SIZE="-1">OO</font> ``by hand'', using just the Perl built-in <font SIZE="-1">OO</font> features. If you need to maintain such code, you should read perlobj to understand exactly how Perl's built-in <font SIZE="-1">OO</font> works.
+ In addition, plenty of code in the wild does all of its OO ``by hand'', using just the Perl built-in OO features. If you need to maintain such code, you should read perlobj to understand exactly how Perl's built-in OO works.
 
 <h2>CONCLUSION</h2>
 
- As we said before, Perl's minimal <font SIZE="-1">OO</font> system has led to a profusion of <font SIZE="-1">OO</font> systems on <font SIZE="-1">CPAN.</font> While you can still drop down to the bare metal and write your classes by hand, there's really no reason to do that with modern Perl. 
+ As we said before, Perl's minimal OO system has led to a profusion of OO systems on CPAN. While you can still drop down to the bare metal and write your classes by hand, there's really no reason to do that with modern Perl. 
 
  For small systems, Class::Tiny and Class::Accessor both provide minimal object systems that take care of basic boilerplate for you. 
 
- For bigger projects, Moose provides a rich set of features that will let you focus on implementing your business logic. Moo provides a nice alternative to Moose when you want a lot of features but need faster compile time or to avoid <font SIZE="-1">XS.</font> 
+ For bigger projects, Moose provides a rich set of features that will let you focus on implementing your business logic. Moo provides a nice alternative to Moose when you want a lot of features but need faster compile time or to avoid XS. 
 
- We encourage you to play with and evaluate Moose, Moo, Class::Accessor, and Class::Tiny to see which <font SIZE="-1">OO</font> system is right for you. 
+ We encourage you to play with and evaluate Moose, Moo, Class::Accessor, and Class::Tiny to see which OO system is right for you. 
 
 
 

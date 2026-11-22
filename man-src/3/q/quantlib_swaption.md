@@ -12,17 +12,17 @@ description: "QuantLib::Swaption – Swaption class"
 <p>#include &lt;ql/instruments/swaption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Option</code>. </p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for swaption calculation </i><br />
- class <code>engine</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for swaption calculation </i><br/>
+ class <code>engine</code><br/>
  <i>base class for swaption engines </i></p>
 <h3>Public Member Functions</h3>
 <p><code>Swaption</code> (const boost::shared_ptr&lt; <code>VanillaSwap</code> &gt; &amp;swap, const boost::shared_ptr&lt; <code>Exercise</code> &gt; &amp;exercise, Settlement::Type delivery=Settlement::Physical) </p>
-<p> <code>Volatility</code> <code>impliedVolatility</code> (<code>Real</code> price, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve, <code>Volatility</code> guess, <code>Real</code> accuracy=1.0e-4, Natural maxEvaluations=100, Volatility minVol=1.0e-7, Volatility maxVol=4.0) const<br />
+<p> <code>Volatility</code> <code>impliedVolatility</code> (<code>Real</code> price, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve, <code>Volatility</code> guess, <code>Real</code> accuracy=1.0e-4, Natural maxEvaluations=100, Volatility minVol=1.0e-7, Volatility maxVol=4.0) const<br/>
  <i>implied volatility </i> </p>
 <p> <code>Instrument interface</code> </p>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  void <code>setupArguments</code> (PricingEngine::arguments *) const </p>
 <p> <code>Inspectors</code> </p>
 <p> Settlement::Type <code>settlementType</code> () const </p>

@@ -10,18 +10,18 @@ description: "include/antlr3defs.h –"
 <p>include/antlr3defs.h &#8211; </p>
 <p> Basic type and constant definitions for ANTLR3 Runtime.</p>
 <h2>Synopsis</h2>
-<p> #include &lt;<a href="file:/usr/include/antlr3errors.h">antlr3errors.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/antlr3config.h">antlr3config.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/stdio.h">stdio.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/antlr3interfaces.h">antlr3interfaces.h</a>&gt;<br />
+<p> #include &lt;<a href="file:/usr/include/antlr3errors.h">antlr3errors.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/antlr3config.h">antlr3config.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/stdio.h">stdio.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/antlr3interfaces.h">antlr3interfaces.h</a>&gt;<br/>
  #include &lt;<a href="file:/usr/include/antlr3convertutf.h">antlr3convertutf.h</a>&gt; </p>
 <h3>Defines</h3>
 <p> #define <code>_stat</code> stat </p>
 <p> #define <code>ANTLR3_API</code> </p>
 <p> #define <code>ANTLR3_API</code> </p>
 <p> #define <code>ANTLR3_AVERAGE</code> </p>
-<p> #define <code>ANTLR3_CALLOC</code>(numEl, elSize) calloc (numEl, (size_t)(elSize))<br />
- <i>Default definition of ANTLR3_CALLOC. </i><br />
+<p> #define <code>ANTLR3_CALLOC</code>(numEl, elSize) calloc (numEl, (size_t)(elSize))<br/>
+ <i>Default definition of ANTLR3_CALLOC. </i><br/>
  #define <code>ANTLR3_CDECL</code> </p>
 <p> #define <code>ANTLR3_CLOSESOCKET</code> close </p>
 <p> #define <code>ANTLR3_ENCODING_LATIN1</code> 0 </p>
@@ -29,30 +29,30 @@ description: "include/antlr3defs.h –"
 <p> #define <code>ANTLR3_ENCODING_UTF32</code> 3 </p>
 <p> #define <code>ANTLR3_ENCODING_UTF8</code> 2 </p>
 <p> #define <code>ANTLR3_FASTCALL</code> </p>
-<p> #define <code>ANTLR3_FPRINTF</code> fprintf<br />
- <i>Default definition of fprintf, set this to something other than fprintf before including </i><code>antlr3.h</code> if your system does not have a fprintf.<br />
- #define <code>ANTLR3_FREE</code>(ptr) free ((void *)(ptr))<br />
- <i>Default definition of ANTLR3_FREE. </i><br />
- #define <code>ANTLR3_FREE_FUNC</code> free<br />
- <i>Default definition of ANTLR3_FREE_FUNC . </i><br />
+<p> #define <code>ANTLR3_FPRINTF</code> fprintf<br/>
+ <i>Default definition of fprintf, set this to something other than fprintf before including </i><code>antlr3.h</code> if your system does not have a fprintf.<br/>
+ #define <code>ANTLR3_FREE</code>(ptr) free ((void *)(ptr))<br/>
+ <i>Default definition of ANTLR3_FREE. </i><br/>
+ #define <code>ANTLR3_FREE_FUNC</code> free<br/>
+ <i>Default definition of ANTLR3_FREE_FUNC . </i><br/>
  #define <code>ANTLR3_FUNC_PTR</code>(ptr) (void *)((<code>ANTLR3_UINT32</code>)(ptr)) </p>
 <p> #define <code>ANTLR3_INLINE</code> inline </p>
 <p> #define <code>ANTLR3_LIST_SIZE_HINT</code> 63 </p>
-<p> #define <code>ANTLR3_MALLOC</code>(request) malloc ((size_t)(request))<br />
- <i>Default definition of ANTLR3_MALLOC. </i><br />
- #define <code>ANTLR3_MEMCPY</code>(target, source, size) memcpy((void *)(target), (const void *)(source), (size_t)(size))<br />
- <i>Default definition of ANTLR3_MEMCPY. </i><br />
- #define <code>ANTLR3_MEMMOVE</code>(target, source, size) memmove((void *)(target), (const void *)(source), (size_t)(size))<br />
- <i>Default definition of ANTLR3_MEMMOVE. </i><br />
- #define <code>ANTLR3_MEMSET</code>(target, byte, size) memset((void *)(target), (int)(byte), (size_t)(size))<br />
- <i>Default definition of ANTLR3_MEMSET. </i><br />
- #define <code>ANTLR3_PRINTF</code> printf<br />
- <i>Default definition of printf, set this to something other than printf before including </i><code>antlr3.h</code> if your system does not have a printf.<br />
- #define <code>ANTLR3_REALLOC</code>(current, request) realloc ((void *)(current), (size_t)(request))<br />
- <i>Default definition of ANTLR3_REALLOC. </i><br />
+<p> #define <code>ANTLR3_MALLOC</code>(request) malloc ((size_t)(request))<br/>
+ <i>Default definition of ANTLR3_MALLOC. </i><br/>
+ #define <code>ANTLR3_MEMCPY</code>(target, source, size) memcpy((void *)(target), (const void *)(source), (size_t)(size))<br/>
+ <i>Default definition of ANTLR3_MEMCPY. </i><br/>
+ #define <code>ANTLR3_MEMMOVE</code>(target, source, size) memmove((void *)(target), (const void *)(source), (size_t)(size))<br/>
+ <i>Default definition of ANTLR3_MEMMOVE. </i><br/>
+ #define <code>ANTLR3_MEMSET</code>(target, byte, size) memset((void *)(target), (int)(byte), (size_t)(size))<br/>
+ <i>Default definition of ANTLR3_MEMSET. </i><br/>
+ #define <code>ANTLR3_PRINTF</code> printf<br/>
+ <i>Default definition of printf, set this to something other than printf before including </i><code>antlr3.h</code> if your system does not have a printf.<br/>
+ #define <code>ANTLR3_REALLOC</code>(current, request) realloc ((void *)(current), (size_t)(request))<br/>
+ <i>Default definition of ANTLR3_REALLOC. </i><br/>
  #define <code>ANTLR3_SIZE_HINT</code> 1025 </p>
-<p> #define <code>ANTLR3_STRDUP</code>(instr) (<code>pANTLR3_UINT8</code>)(strdup ((const char *)(instr)))<br />
- <i>Default definition of ANTLR3_STRDUP. </i><br />
+<p> #define <code>ANTLR3_STRDUP</code>(instr) (<code>pANTLR3_UINT8</code>)(strdup ((const char *)(instr)))<br/>
+ <i>Default definition of ANTLR3_STRDUP. </i><br/>
  #define <code>ANTLR3_TRIE_DEPTH</code> 31 </p>
 <p> #define <code>ANTLR3_UINT32_CAST</code>(ptr) (<code>ANTLR3_UINT32</code>)(ptr) </p>
 <p> #define <code>ANTLR3_UINT64_CAST</code>(ptr) (<code>ANTLR3_UINT64</code>)((<code>ANTLR3_UINT32</code>)(ptr)) </p>
@@ -93,27 +93,27 @@ description: "include/antlr3defs.h –"
 <p> typedef uint8_t * <code>pANTLR3_UINT8</code> </p>
 <p> typedef int <code>SOCKET</code> </p>
 <h3>Functions</h3>
-<p> ANTLR3_API <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>ANTLR3_TREE_ADAPTORDebugNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)<br />
- <i>Debugging version of the tree adaptor (not normally called as generated code calls setDebugEventListener instead which changes a normal token stream to a debugging stream and means that a user&#8217;s instantiation code does not need to be changed just to debug with AW. </i><br />
- ANTLR3_API <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>ANTLR3_TREE_ADAPTORNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory)<br />
- <i>Create a new tree adaptor. </i><br />
+<p> ANTLR3_API <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>ANTLR3_TREE_ADAPTORDebugNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)<br/>
+ <i>Debugging version of the tree adaptor (not normally called as generated code calls setDebugEventListener instead which changes a normal token stream to a debugging stream and means that a user&#8217;s instantiation code does not need to be changed just to debug with AW. </i><br/>
+ ANTLR3_API <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>ANTLR3_TREE_ADAPTORNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory)<br/>
+ <i>Create a new tree adaptor. </i><br/>
  ANTLR3_API <code>pANTLR3_ARBORETUM</code> <code>antlr3ArboretumNew</code> (<code>pANTLR3_STRING_FACTORY</code> factory) </p>
-<p> ANTLR3_API <code>pANTLR3_INPUT_STREAM</code> <code>antlr3AsciiFileStreamNew</code> (<code>pANTLR3_UINT8</code> fileName)<br />
- <i>Use the contents of an operating system file as the input for an input stream. </i><br />
+<p> ANTLR3_API <code>pANTLR3_INPUT_STREAM</code> <code>antlr3AsciiFileStreamNew</code> (<code>pANTLR3_UINT8</code> fileName)<br/>
+ <i>Use the contents of an operating system file as the input for an input stream. </i><br/>
  ANTLR3_API <code>pANTLR3_BASE_RECOGNIZER</code> <code>antlr3BaseRecognizerNew</code> (<code>ANTLR3_UINT32</code> type, <code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
-<p> ANTLR3_API void <code>antlr3BaseTreeAdaptorInit</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)<br />
- <i>Given a pointer to a base tree adaptor structure (which is usually embedded in the super class the implements the tree adaptor used in the parse), initialize its function pointers and so on. </i><br />
+<p> ANTLR3_API void <code>antlr3BaseTreeAdaptorInit</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)<br/>
+ <i>Given a pointer to a base tree adaptor structure (which is usually embedded in the super class the implements the tree adaptor used in the parse), initialize its function pointers and so on. </i><br/>
  ANTLR3_API <code>pANTLR3_BASE_TREE</code> <code>antlr3BaseTreeNew</code> (<code>pANTLR3_BASE_TREE</code> tree) </p>
 <p> ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetCopy</code> (<code>pANTLR3_BITSET_LIST</code> blist) </p>
 <p> ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetList</code> (<code>pANTLR3_HASH_TABLE</code> list) </p>
-<p> ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetLoad</code> (<code>pANTLR3_BITSET_LIST</code> blist)<br />
- <i>Creates a new bitset with at least one 64 bit bset of bits, but as many 64 bit sets as are required. </i><br />
+<p> ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetLoad</code> (<code>pANTLR3_BITSET_LIST</code> blist)<br/>
+ <i>Creates a new bitset with at least one 64 bit bset of bits, but as many 64 bit sets as are required. </i><br/>
  ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetNew</code> (<code>ANTLR3_UINT32</code> numBits) </p>
-<p> ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetOf</code> (<code>ANTLR3_INT32</code> bit,&#8230;)<br />
- <i>Creates a new bitset with at least one element, but as many elements are required. </i><br />
+<p> ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetOf</code> (<code>ANTLR3_INT32</code> bit,&#8230;)<br/>
+ <i>Creates a new bitset with at least one element, but as many elements are required. </i><br/>
  ANTLR3_API void <code>antlr3BitsetSetAPI</code> (<code>pANTLR3_BITSET</code> bitset) </p>
-<p> ANTLR3_API <code>ANTLR3_UCHAR</code> <code>antlr3c8toAntlrc</code> (<code>ANTLR3_INT8</code> inc)<br />
- <i>Provides basic utility functions to convert between the various Unicode character conversions. </i><br />
+<p> ANTLR3_API <code>ANTLR3_UCHAR</code> <code>antlr3c8toAntlrc</code> (<code>ANTLR3_INT8</code> inc)<br/>
+ <i>Provides basic utility functions to convert between the various Unicode character conversions. </i><br/>
  ANTLR3_API <code>pANTLR3_COMMON_TOKEN_STREAM</code> <code>antlr3CommonTokenDebugStreamSourceNew</code> (<code>ANTLR3_UINT32</code> hint, <code>pANTLR3_TOKEN_SOURCE</code> source, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger) </p>
 <p> ANTLR3_API <code>pANTLR3_COMMON_TOKEN</code> <code>antlr3CommonTokenNew</code> (<code>ANTLR3_UINT32</code> ttype) </p>
 <p> ANTLR3_API <code>pANTLR3_COMMON_TOKEN_STREAM</code> <code>antlr3CommonTokenStreamNew</code> (<code>ANTLR3_UINT32</code> hint) </p>
@@ -124,35 +124,35 @@ description: "include/antlr3defs.h –"
 <p> ANTLR3_API <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>antlr3CommonTreeNodeStreamNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory, <code>ANTLR3_UINT32</code> hint) </p>
 <p> ANTLR3_API <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>antlr3CommonTreeNodeStreamNewStream</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> inStream) </p>
 <p> ANTLR3_API <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>antlr3CommonTreeNodeStreamNewTree</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>ANTLR3_UINT32</code> hint) </p>
-<p> ANTLR3_API <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>antlr3DebugListenerNew</code> ()<br />
- <i>Create and initialize a new debug event listener that can be connected to by ANTLRWorks and any other debugger via a socket. </i><br />
- ANTLR3_API <code>ANTLR3_INT32</code> <code>antlr3dfapredict</code> (void *ctx, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_CYCLIC_DFA</code> cdfa)<br />
- <i>From the input stream, predict what alternative will succeed using this DFA (representing the covering regular approximation to the underlying CFL). </i><br />
- ANTLR3_API <code>ANTLR3_INT32</code> <code>antlr3dfaspecialStateTransition</code> (void *ctx, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_CYCLIC_DFA</code> dfa, <code>ANTLR3_INT32</code> s)<br />
- <i>Default special state implementation. </i><br />
+<p> ANTLR3_API <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>antlr3DebugListenerNew</code> ()<br/>
+ <i>Create and initialize a new debug event listener that can be connected to by ANTLRWorks and any other debugger via a socket. </i><br/>
+ ANTLR3_API <code>ANTLR3_INT32</code> <code>antlr3dfapredict</code> (void *ctx, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_CYCLIC_DFA</code> cdfa)<br/>
+ <i>From the input stream, predict what alternative will succeed using this DFA (representing the covering regular approximation to the underlying CFL). </i><br/>
+ ANTLR3_API <code>ANTLR3_INT32</code> <code>antlr3dfaspecialStateTransition</code> (void *ctx, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_CYCLIC_DFA</code> dfa, <code>ANTLR3_INT32</code> s)<br/>
+ <i>Default special state implementation. </i><br/>
  ANTLR3_API <code>ANTLR3_INT32</code> <code>antlr3dfaspecialTransition</code> (void *ctx, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_CYCLIC_DFA</code> dfa, <code>ANTLR3_INT32</code> s) </p>
-<p> ANTLR3_API <code>pANTLR3_HASH_ENUM</code> <code>antlr3EnumNew</code> (<code>pANTLR3_HASH_TABLE</code> table)<br />
- <i>Creates an enumeration structure to traverse the hash table. </i><br />
- ANTLR3_API <code>pANTLR3_EXCEPTION</code> <code>antlr3ExceptionNew</code> (<code>ANTLR3_UINT32</code> exception, void *name, void *message, <code>ANTLR3_BOOLEAN</code> freeMessage)<br />
- <i>Creates a new ANTLR3 exception structure. </i><br />
- ANTLR3_API <code>ANTLR3_UINT32</code> <code>antlr3Hash</code> (void *key, <code>ANTLR3_UINT32</code> keylen)<br />
- <i>Given an input key of arbitrary length, return a hash value of it. </i><br />
+<p> ANTLR3_API <code>pANTLR3_HASH_ENUM</code> <code>antlr3EnumNew</code> (<code>pANTLR3_HASH_TABLE</code> table)<br/>
+ <i>Creates an enumeration structure to traverse the hash table. </i><br/>
+ ANTLR3_API <code>pANTLR3_EXCEPTION</code> <code>antlr3ExceptionNew</code> (<code>ANTLR3_UINT32</code> exception, void *name, void *message, <code>ANTLR3_BOOLEAN</code> freeMessage)<br/>
+ <i>Creates a new ANTLR3 exception structure. </i><br/>
+ ANTLR3_API <code>ANTLR3_UINT32</code> <code>antlr3Hash</code> (void *key, <code>ANTLR3_UINT32</code> keylen)<br/>
+ <i>Given an input key of arbitrary length, return a hash value of it. </i><br/>
  ANTLR3_API <code>pANTLR3_HASH_TABLE</code> <code>antlr3HashTableNew</code> (<code>ANTLR3_UINT32</code> sizeHint) </p>
 <p> ANTLR3_API <code>pANTLR3_INT_STREAM</code> <code>antlr3IntStreamNew</code> (void) </p>
 <p> ANTLR3_API <code>pANTLR3_INT_TRIE</code> <code>antlr3IntTrieNew</code> (<code>ANTLR3_UINT32</code> depth) </p>
 <p> ANTLR3_API <code>pANTLR3_LEXER</code> <code>antlr3LexerNew</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
 <p> ANTLR3_API <code>pANTLR3_LEXER</code> <code>antlr3LexerNewStream</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_INPUT_STREAM</code> input, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
 <p> ANTLR3_API <code>pANTLR3_LIST</code> <code>antlr3ListNew</code> (<code>ANTLR3_UINT32</code> sizeHint) </p>
-<p> ANTLR3_API void <code>antlr3MTExceptionNew</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br />
- <i>Creates a new Mismatched Token Exception and inserts in the recognizer exception stack. </i><br />
- ANTLR3_API void <code>antlr3MTNExceptionNew</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br />
- <i>Creates a new Mismatched Tree Nde Exception and inserts in the recognizer exception stack. </i><br />
- ANTLR3_API <code>pANTLR3_INPUT_STREAM</code> <code>antlr3NewAsciiStringCopyStream</code> (<code>pANTLR3_UINT8</code> inString, <code>ANTLR3_UINT32</code> size, <code>pANTLR3_UINT8</code> name)<br />
- <i>Create an ASCII string stream as input to ANTLR 3, copying the input string. </i><br />
- ANTLR3_API <code>pANTLR3_INPUT_STREAM</code> <code>antlr3NewAsciiStringInPlaceStream</code> (<code>pANTLR3_UINT8</code> inString, <code>ANTLR3_UINT32</code> size, <code>pANTLR3_UINT8</code> name)<br />
- <i>Create an in-place ASCII string stream as input to ANTLR 3. </i><br />
- ANTLR3_API <code>pANTLR3_INPUT_STREAM</code> <code>antlr3NewUCS2StringInPlaceStream</code> (<code>pANTLR3_UINT16</code> inString, <code>ANTLR3_UINT32</code> size, <code>pANTLR3_UINT16</code> name)<br />
- <i>Create an in-place UCS2 string stream as input to ANTLR 3. </i><br />
+<p> ANTLR3_API void <code>antlr3MTExceptionNew</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br/>
+ <i>Creates a new Mismatched Token Exception and inserts in the recognizer exception stack. </i><br/>
+ ANTLR3_API void <code>antlr3MTNExceptionNew</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br/>
+ <i>Creates a new Mismatched Tree Nde Exception and inserts in the recognizer exception stack. </i><br/>
+ ANTLR3_API <code>pANTLR3_INPUT_STREAM</code> <code>antlr3NewAsciiStringCopyStream</code> (<code>pANTLR3_UINT8</code> inString, <code>ANTLR3_UINT32</code> size, <code>pANTLR3_UINT8</code> name)<br/>
+ <i>Create an ASCII string stream as input to ANTLR 3, copying the input string. </i><br/>
+ ANTLR3_API <code>pANTLR3_INPUT_STREAM</code> <code>antlr3NewAsciiStringInPlaceStream</code> (<code>pANTLR3_UINT8</code> inString, <code>ANTLR3_UINT32</code> size, <code>pANTLR3_UINT8</code> name)<br/>
+ <i>Create an in-place ASCII string stream as input to ANTLR 3. </i><br/>
+ ANTLR3_API <code>pANTLR3_INPUT_STREAM</code> <code>antlr3NewUCS2StringInPlaceStream</code> (<code>pANTLR3_UINT16</code> inString, <code>ANTLR3_UINT32</code> size, <code>pANTLR3_UINT16</code> name)<br/>
+ <i>Create an in-place UCS2 string stream as input to ANTLR 3. </i><br/>
  ANTLR3_API <code>pANTLR3_PARSER</code> <code>antlr3ParserNew</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
 <p> ANTLR3_API <code>pANTLR3_PARSER</code> <code>antlr3ParserNewStream</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_TOKEN_STREAM</code> tstream, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
 <p> ANTLR3_API <code>pANTLR3_PARSER</code> <code>antlr3ParserNewStreamDbg</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_TOKEN_STREAM</code> tstream, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> dbg, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
@@ -172,16 +172,16 @@ description: "include/antlr3defs.h –"
 <p> ANTLR3_API <code>pANTLR3_STACK</code> <code>antlr3StackNew</code> (<code>ANTLR3_UINT32</code> sizeHint) </p>
 <p> ANTLR3_API <code>pANTLR3_STRING_FACTORY</code> <code>antlr3StringFactoryNew</code> (void) </p>
 <p> ANTLR3_API <code>pANTLR3_TOKEN_FACTORY</code> <code>antlr3TokenFactoryNew</code> (<code>pANTLR3_INPUT_STREAM</code> input) </p>
-<p> ANTLR3_API <code>pANTLR3_TOPO</code> <code>antlr3TopoNew</code> ()<br />
- <i>Allocate and initialize a new ANTLR3 topological sorter, which can be used to define edges that identify numerical node indexes that depend on other numerical node indexes, which can then be sorted topologically such that any node is sorted after all its dependent nodes. </i><br />
+<p> ANTLR3_API <code>pANTLR3_TOPO</code> <code>antlr3TopoNew</code> ()<br/>
+ <i>Allocate and initialize a new ANTLR3 topological sorter, which can be used to define edges that identify numerical node indexes that depend on other numerical node indexes, which can then be sorted topologically such that any node is sorted after all its dependent nodes. </i><br/>
  ANTLR3_API <code>pANTLR3_TREE_NODE_STREAM</code> <code>antlr3TreeNodeStreamNew</code> () </p>
 <p> ANTLR3_API <code>pANTLR3_TREE_PARSER</code> <code>antlr3TreeParserNewStream</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctnstream, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
-<p> ANTLR3_API <code>pANTLR3_STRING_FACTORY</code> <code>antlr3UCS2StringFactoryNew</code> (void)<br />
- <i>Create a string factory that is UCS2 (16 bit) encoding based. </i><br />
+<p> ANTLR3_API <code>pANTLR3_STRING_FACTORY</code> <code>antlr3UCS2StringFactoryNew</code> (void)<br/>
+ <i>Create a string factory that is UCS2 (16 bit) encoding based. </i><br/>
  ANTLR3_API <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>antlr3UnbufTreeNodeStreamNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory, <code>ANTLR3_UINT32</code> hint) </p>
 <p> ANTLR3_API <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>antlr3UnbufTreeNodeStreamNewTree</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>ANTLR3_UINT32</code> hint) </p>
-<p> ANTLR3_API <code>pANTLR3_VECTOR_FACTORY</code> <code>antlr3VectorFactoryNew</code> (<code>ANTLR3_UINT32</code> sizeHint)<br />
- <i>Vector factory creation. </i><br />
+<p> ANTLR3_API <code>pANTLR3_VECTOR_FACTORY</code> <code>antlr3VectorFactoryNew</code> (<code>ANTLR3_UINT32</code> sizeHint)<br/>
+ <i>Vector factory creation. </i><br/>
  ANTLR3_API <code>pANTLR3_VECTOR</code> <code>antlr3VectorNew</code> (<code>ANTLR3_UINT32</code> sizeHint) </p>
 <p> ANTLR3_API void <code>fillBufferExt</code> (<code>pANTLR3_COMMON_TOKEN_STREAM</code> tokenStream) </p>
 <h2>Detailed Description</h2>
@@ -425,8 +425,8 @@ description: "include/antlr3defs.h –"
 <p> Creates a new ANTLR3 exception structure. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>exception</i> One of the ANTLR3_xxx_EXCEPTION indicators such as <code>ANTLR3_RECOGNITION_EXCEPTION</code><br />
- <i>message</i> Pointer to message string<br />
+</dt><dd> <i>exception</i> One of the ANTLR3_xxx_EXCEPTION indicators such as <code>ANTLR3_RECOGNITION_EXCEPTION</code><br/>
+ <i>message</i> Pointer to message string<br/>
  <i>freeMessage</i> Set to ANTLR3_TRUE if the message parameter should be freed by a call to <code>ANTLR3_FREE()</code> when the exception is destroyed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -472,8 +472,8 @@ description: "include/antlr3defs.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>inString</i> Pointer to the string to be copied as the input stream<br />
- <i>size</i> Size (in 8 bit ASCII characters) of the input string<br />
+</dt><dd> <i>inString</i> Pointer to the string to be copied as the input stream<br/>
+ <i>size</i> Size (in 8 bit ASCII characters) of the input string<br/>
  <i>name</i> NAme to attach the input stream (can be NULL pointer)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -497,8 +497,8 @@ description: "include/antlr3defs.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>inString</i> Pointer to the string to be used as the input stream<br />
- <i>size</i> Size (in 8 bit ASCII characters) of the input string<br />
+</dt><dd> <i>inString</i> Pointer to the string to be used as the input stream<br/>
+ <i>size</i> Size (in 8 bit ASCII characters) of the input string<br/>
  <i>name</i> NAme to attach the input stream (can be NULL pointer)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -522,8 +522,8 @@ description: "include/antlr3defs.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>inString</i> Pointer to the string to be used as the input stream<br />
- <i>size</i> Size (in 16 bit ASCII characters) of the input string<br />
+</dt><dd> <i>inString</i> Pointer to the string to be used as the input stream<br/>
+ <i>size</i> Size (in 16 bit ASCII characters) of the input string<br/>
  <i>name</i> Name to attach the input stream (can be NULL pointer)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

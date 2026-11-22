@@ -11,7 +11,7 @@ description: "sasum.f –"
 <p> sasum.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>sasum</code> (N, SX, INCX)<br />
+<p> REAL function <code>sasum</code> (N, SX, INCX)<br/>
  <i></i><code>SASUM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function sasum (integerN, real, dimension(*)SX, integerINCX)</h3>

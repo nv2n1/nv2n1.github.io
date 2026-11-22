@@ -21,9 +21,9 @@ description: "mplex – MPEG 1/2 program/system stream multiplexer"
 <dd> This mandatory option sets the pattern for the name(s) of output files. </dd>
 <p> An integer format code (e.g. %d) in the name is replaced by the number of the file generated (see <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3)).</p>
 <dt><code>-v|&#8211;verbose</code><i>&nbsp;<wbr>num</i></dt>
-<dd> Set verbosity level to <i>num</i>:<br />
-&nbsp;<wbr>0 &#8211; warnings and errors only,<br />
-&nbsp;<wbr>1 &#8211; information as well,<br />
+<dd> Set verbosity level to <i>num</i>:<br/>
+&nbsp;<wbr>0 &#8211; warnings and errors only,<br/>
+&nbsp;<wbr>1 &#8211; information as well,<br/>
 &nbsp;<wbr>2 &#8211; really verbose.</dd>
 <dt><code>-?|&#8211;help</code></dt>
 <dd> Display a synopsis of the command syntax.
@@ -34,18 +34,18 @@ description: "mplex – MPEG 1/2 program/system stream multiplexer"
 <dd> This command allows one of a number of convenient preset output formats or generic MPEG1 or MPEG2 output to be selected. For the generic formats other function letters can be used to control many aspects of the multiplexed stream. For VCD/SVCD/DVD compliant output the corresponding formats <i>must</i> be used as the standards require the multiplexer to enforce a variety of special constraints on the structure of the output stream.</dd>
 <dt>
 </dt><dd>
-&nbsp;<wbr>0 &#8211; Generic MPEG1.&nbsp;<wbr>&nbsp;<wbr>A simple general-purpose MPEG1 format primarily suitable for software decoders. Buffer sizes and VBR must be specified. Bit-rate can be auto-detected.<br />
-&nbsp;<wbr>1 &#8211; VCD.&nbsp;<wbr>&nbsp;<wbr>Standard VCD.&nbsp;<wbr>&nbsp;<wbr>Overrides other option settings.<br />
-&nbsp;<wbr>2 &#8211; User VCD.&nbsp;<wbr>&nbsp;<wbr>VCD format but buffer size, bit rate and VBR can be set manually.<br />
-&nbsp;<wbr>3 &#8211; Generic MPEG2.&nbsp;<wbr>&nbsp;<wbr>Like 0 except MPEG2.<br />
-&nbsp;<wbr>4 &#8211; SVCD.&nbsp;<wbr>&nbsp;<wbr>Standard SVCD.&nbsp;<wbr>&nbsp;<wbr>Overrides other option settings.<br />
-&nbsp;<wbr>5 &#8211; User-rate SVCD.&nbsp;<wbr>&nbsp;<wbr>SVCD format but buffer size bit rate and VBR can be set.<br />
+&nbsp;<wbr>0 &#8211; Generic MPEG1.&nbsp;<wbr>&nbsp;<wbr>A simple general-purpose MPEG1 format primarily suitable for software decoders. Buffer sizes and VBR must be specified. Bit-rate can be auto-detected.<br/>
+&nbsp;<wbr>1 &#8211; VCD.&nbsp;<wbr>&nbsp;<wbr>Standard VCD.&nbsp;<wbr>&nbsp;<wbr>Overrides other option settings.<br/>
+&nbsp;<wbr>2 &#8211; User VCD.&nbsp;<wbr>&nbsp;<wbr>VCD format but buffer size, bit rate and VBR can be set manually.<br/>
+&nbsp;<wbr>3 &#8211; Generic MPEG2.&nbsp;<wbr>&nbsp;<wbr>Like 0 except MPEG2.<br/>
+&nbsp;<wbr>4 &#8211; SVCD.&nbsp;<wbr>&nbsp;<wbr>Standard SVCD.&nbsp;<wbr>&nbsp;<wbr>Overrides other option settings.<br/>
+&nbsp;<wbr>5 &#8211; User-rate SVCD.&nbsp;<wbr>&nbsp;<wbr>SVCD format but buffer size bit rate and VBR can be set.<br/>
 &nbsp;<wbr>6 &#8211; VCD Stills stream&nbsp;<wbr>(mixed mode with hi-res and standard-res image streams <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> multiplexed are supported).</dd>
-<p>&nbsp;<wbr>7 &#8211; SVCD Stills stream.<br />
-&nbsp;<wbr>8 &#8211; DVD&nbsp;<wbr>(with NAV sectors). Don&#8217;t get too excited.&nbsp;<wbr>&nbsp;<wbr>This is really a<br />
-&nbsp;<wbr>very minimal mux format.&nbsp;<wbr>&nbsp;<wbr>It includes empty versions of the peculiar<br />
-&nbsp;<wbr>VOBU start sectors DVD VOB&#8217;s include.&nbsp;<wbr>&nbsp;<wbr>This is enough to persuade some<br />
-&nbsp;<wbr>hardware players to play the stream but is a long way from full DVD authoring.<br />
+<p>&nbsp;<wbr>7 &#8211; SVCD Stills stream.<br/>
+&nbsp;<wbr>8 &#8211; DVD&nbsp;<wbr>(with NAV sectors). Don&#8217;t get too excited.&nbsp;<wbr>&nbsp;<wbr>This is really a<br/>
+&nbsp;<wbr>very minimal mux format.&nbsp;<wbr>&nbsp;<wbr>It includes empty versions of the peculiar<br/>
+&nbsp;<wbr>VOBU start sectors DVD VOB&#8217;s include.&nbsp;<wbr>&nbsp;<wbr>This is enough to persuade some<br/>
+&nbsp;<wbr>hardware players to play the stream but is a long way from full DVD authoring.<br/>
 &nbsp;<wbr>9 &#8211; DVD.&nbsp;<wbr>&nbsp;<wbr>As above but without the empty VOBU sectors.</p>
 <dt><code>-W|&#8211;workarounds</code><i>&nbsp;<wbr>workaround_flag&nbsp;<wbr></i><i>[,</i><i>workaround_flag</i><i>&#8230;]</i></dt>
 <dd>
@@ -55,9 +55,9 @@ description: "mplex – MPEG 1/2 program/system stream multiplexer"
 <dt><code>-b|&#8211;video-buffer</code><i>&nbsp;<wbr>numlist</i></dt>
 <dd> A comma-seperateed list of video decoder buffer sizes in KB for the video streams (given in the order the video streams appear on the command line). The default is 46KB the (tiny) size specified for VCD. The size to use for SVCD is the (more reasonable) 230KB. If you are encoding for a half-decent software decoder it makes sense to push this up to 500K or more.</dd>
 <dt><code>-L|&#8211;lpcm-params</code></dt>
-<dd> <i>samples_per_sec:channels:bits_per_sample</i><br />
- [, <i>samples_per_sec:channels:bits_per_sample</i><br />
-&nbsp;<wbr>&#8230;]<br />
+<dd> <i>samples_per_sec:channels:bits_per_sample</i><br/>
+ [, <i>samples_per_sec:channels:bits_per_sample</i><br/>
+&nbsp;<wbr>&#8230;]<br/>
  A comma-seperated list of paramter sets for the lpcm audio streams (given in the order the lpcm streams appear on the command line). Each parameter set comprises the sampling rate in Hz, the number of channels, and the number of bits per sample seperated by colons. For example, the default 48kHz two-channel 16-bit audio would be specified as 48000:2:16.</dd>
 <dt>
 </dt><dd>
@@ -103,10 +103,10 @@ description: "mplex – MPEG 1/2 program/system stream multiplexer"
 <h2>BUGS</h2>
 <p> The multiplexer should handle MPEG(5.1) audio.</p>
 <h2>AUTHOR</h2>
-<p> This man page was written by Andrew Stevens.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was written by Andrew Stevens.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
-<p> For more info, see our website at<br />
+<p> For more info, see our website at<br/>
 &nbsp;<wbr>&nbsp;<wbr><i><a rel="nofollow" href="http://mjpeg.sourceforge.net">http://mjpeg.sourceforge.net</a></i> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a></code>(1), <code><a href="/docs/linux/man/1-mp2enc/">mp2enc</a></code>(1), <code><a href="/docs/linux/man/1-lavrec/">lavrec</a></code>(1), <code><a href="/docs/linux/man/1-lavplay/">lavplay</a></code>(1), <code><a href="/docs/linux/man/1-lav2yuv/">lav2yuv</a></code>(1), <code><a href="/docs/linux/man/1-lav2wav/">lav2wav</a></code>(1), <code><a href="/docs/linux/man/1-yuvscaler/">yuvscaler</a></code>(1) </p>

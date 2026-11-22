@@ -10,15 +10,15 @@ description: "ql/math/integrals/kronrodintegral.hpp – Integral of a 1-dimensio
 
 <p> ql/math/integrals/kronrodintegral.hpp &#8211; Integral of a 1-dimensional function using the Gauss-Kronrod method. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/errors.hpp&gt;<br />
- #include &lt;ql/types.hpp&gt;<br />
- #include &lt;ql/utilities/null.hpp&gt;<br />
- #include &lt;ql/math/integrals/integral.hpp&gt;<br />
+<p> #include &lt;ql/errors.hpp&gt;<br/>
+ #include &lt;ql/types.hpp&gt;<br/>
+ #include &lt;ql/utilities/null.hpp&gt;<br/>
+ #include &lt;ql/math/integrals/integral.hpp&gt;<br/>
  #include &lt;boost/function.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>GaussKronrodNonAdaptive</code><br />
- <i>Integral of a 1-dimensional function using the Gauss-Kronrod methods. </i><br />
- class <code>GaussKronrodAdaptive</code><br />
+<p> class <code>GaussKronrodNonAdaptive</code><br/>
+ <i>Integral of a 1-dimensional function using the Gauss-Kronrod methods. </i><br/>
+ class <code>GaussKronrodAdaptive</code><br/>
  <i>Integral of a 1-dimensional function using the Gauss-Kronrod methods. </i></p>
 <h2>Detailed Description</h2>
 <p> Integral of a 1-dimensional function using the Gauss-Kronrod method. </p>

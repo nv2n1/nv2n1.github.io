@@ -13,21 +13,21 @@ description: "glutSetColor – Sets an indexed color-mode entry."
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutSetColor int nColor GLfloat red GLfloat green GLfloat blue</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>nColor Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>nColor Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The palette entry to change. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>red Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>red Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>New red value for palette entry. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>green Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>green Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>New green value for palette entry. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>blue Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>blue Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>New blue value for palette entry.</p>
 <h2>Description</h2>
-<p>glutSetCursor() allows you to set individual color-map entries in a Bf Sy<br />
-&nbsp;<wbr>GLUT_INDEX Ef<br />
+<p>glutSetCursor() allows you to set individual color-map entries in a Bf Sy<br/>
+&nbsp;<wbr>GLUT_INDEX Ef<br/>
 &nbsp;<wbr>type of display.&nbsp;<wbr>&nbsp;<wbr>Respects the current overlay setting. </p>
 <h2>Bugs</h2>
 <p>Unimplemented. </p>

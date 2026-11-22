@@ -86,25 +86,25 @@ description: "mbuffer – measuring buffer"
 <dt><code>-W</code> &lt;<i>timeout</i>&gt;</dt>
 <dd> Activates a watchdog that gets triggered every <i>timeout</i> seconds and checks weather I/O activity has stalled. If either channel has stalled for a complete period, the watchdog writes an error message and terminates mbuffer via SIGINT. Be aware that the watchdog is unaware of tape-change activities. So choose the watchdog timeout greater that the worst-case tape-change time.</dd></dl>
 <h2>DEFAULT VALUES</h2>
-<p> The default values for following options can be set as <i>key = value</i> pairs in the ~/.mbuffer.rc file:<br />
- <i>blocksize</i>: block size (option -s)<br />
- <i>timeout</i>: watchdog timeout (option -W)<br />
- <i>totalmem</i>: total buffer size (option -m)<br />
- <i>maxreadspeed</i>: maximum read speed (option -r)<br />
- <i>maxwritespeed</i>: maximum write speed (option -R)<br />
- <i>startwrite</i>: threshold for start writing (option -P)<br />
- <i>startread</i>: threshold for start reading (option -p)<br />
- <i>pause</i>: pause after writing a block (option -u)<br />
- <i>numblocks</i>: number of blocks in buffer (option -b)<br />
- <i>memlock</i>: lock buffer in memory (option -L)<br />
- <i>showstatus</i>: print transfer status on console (option -q)<br />
- <i>logstatus</i>: write transfer status to logfile (option -Q)<br />
+<p> The default values for following options can be set as <i>key = value</i> pairs in the ~/.mbuffer.rc file:<br/>
+ <i>blocksize</i>: block size (option -s)<br/>
+ <i>timeout</i>: watchdog timeout (option -W)<br/>
+ <i>totalmem</i>: total buffer size (option -m)<br/>
+ <i>maxreadspeed</i>: maximum read speed (option -r)<br/>
+ <i>maxwritespeed</i>: maximum write speed (option -R)<br/>
+ <i>startwrite</i>: threshold for start writing (option -P)<br/>
+ <i>startread</i>: threshold for start reading (option -p)<br/>
+ <i>pause</i>: pause after writing a block (option -u)<br/>
+ <i>numblocks</i>: number of blocks in buffer (option -b)<br/>
+ <i>memlock</i>: lock buffer in memory (option -L)<br/>
+ <i>showstatus</i>: print transfer status on console (option -q)<br/>
+ <i>logstatus</i>: write transfer status to logfile (option -Q)<br/>
  <i>tcpbuffer</i>: TCP buffer size (option &#8211;tcpbuffer) </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> If TMPDIR is set, mbuffer allocates storage for file-based buffers in this directory. If TMPDIR is unset, <i>/var/tmp</i> will be used.</p>
 <h2>FILES</h2>
-<p> <i>/usr/bin/mbuffer</i><br />
- <i>/var/tmp/mbuffer-*</i><br />
+<p> <i>/usr/bin/mbuffer</i><br/>
+ <i>/var/tmp/mbuffer-*</i><br/>
  <i>~/.mbuffer.rc</i></p>
 <h2>EXAMPLES</h2>
 <p> To run this program with the default options just type: </p>

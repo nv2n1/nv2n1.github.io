@@ -18,7 +18,7 @@ description: "anno – annotate messages"
 <p> The messages are either the <i>msgs</i> in the named folder, or the draft if invoked with the <code>-draft</code> option. </p>
 <p> Usually, annotation is performed by the commands <code>dist</code>, <code>forw</code>, and <code>repl</code>, if they are given the <code>-anno</code> switch. This allows you to keep track of your distribution of, forwarding of, and replies to a message. </p>
 <p> By using <code>anno</code>, you can perform arbitrary annotations of your own. Each message selected will be annotated with the lines </p>
-<p>&nbsp;<wbr>field: date<br />
+<p>&nbsp;<wbr>field: date<br/>
 &nbsp;<wbr>field: body </p>
 <p> The <code>-nodate</code> switch inhibits the date annotation, leaving only the body annotation. </p>
 <p> By default, <code>anno</code> prepends the annotations to the message. Annotations are instead appended if the <code>-append</code> option is specified. </p>

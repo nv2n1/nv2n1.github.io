@@ -23,7 +23,7 @@ description: "scl2trd – Convert .scl disk images to .trd."
 <p> None known.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-fuse/">fuse</a></i>(1), <i><a href="/docs/linux/man/1-fuse-utils/">fuse-utils</a></i>(1) </p>
-<p> The comp.sys.sinclair Spectrum FAQ, at<br />
+<p> The comp.sys.sinclair Spectrum FAQ, at<br/>
  <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/index.html">http://www.worldofspectrum.org/faq/index.html</a></i>.</p>
 <h2>AUTHOR</h2>
 <p> Philip Kendall (philip-fuse [at] shadowmagic.org.uk). </p>

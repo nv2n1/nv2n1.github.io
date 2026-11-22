@@ -10,8 +10,8 @@ description: "doveadm-import – Import messages matching given search query"
 
 <p> doveadm-import &#8211; Import messages matching given search query</p>
 <h2>SYNOPSIS</h2>
-<p> <code>doveadm</code> [<code>-Dv</code>] <code>import</code> [<code>-S</code> <i>socket_path</i>] [<code>-s</code>] <i>source_location dest_parent search_query</i><br />
- <code>doveadm</code> [<code>-Dv</code>] <code>import</code> [<code>-S</code> <i>socket_path</i>] [<code>-s</code>] <code>-A</code><i> source_location dest_parent search_query</i><br />
+<p> <code>doveadm</code> [<code>-Dv</code>] <code>import</code> [<code>-S</code> <i>socket_path</i>] [<code>-s</code>] <i>source_location dest_parent search_query</i><br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>import</code> [<code>-S</code> <i>socket_path</i>] [<code>-s</code>] <code>-A</code><i> source_location dest_parent search_query</i><br/>
  <code>doveadm</code> [<code>-Dv</code>] <code>import</code> [<code>-S</code> <i>socket_path</i>] [<code>-s</code>] <code>-u</code><i> user source_location dest_parent search_query</i></p>
 <h2>DESCRIPTION</h2>
 <p> This command can be used to import mails from another mail storage specified by <i>source_location</i> to one or more user&#8217;s mailboxes. All the mailboxes are imported under the given <i>dest_parent</i> mailbox, or to root level if <i>dest_parent</i> is empty (&quot;&quot;). The <i>search_query</i> can be used to restrict which mailboxes or messages are imported. </p>
@@ -36,7 +36,7 @@ description: "doveadm-import – Import messages matching given search query"
 <dt><code>-s</code></dt>
 <dd> When the <code>-s</code> option is present, <i>dest_parent</i> and all new mailboxes under it will be listed in the <i>subscriptions</i> file.</dd>
 <dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
-<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
+<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br/>
  When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>

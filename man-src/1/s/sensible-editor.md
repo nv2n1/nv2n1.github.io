@@ -25,8 +25,8 @@ description: "sensible-editor – sensible editing"
 <dt>step]</dt>
 <dd> finally run <code>nano-tiny [OPTIONS]</code> command</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7) for documentation of the EDITOR, VISUAL variables<br />
- <code><a href="/docs/linux/man/1-select-editor/">select-editor</a></code>(1) for changing a user&#8217;s default editor.<br />
+<p> <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7) for documentation of the EDITOR, VISUAL variables<br/>
+ <code><a href="/docs/linux/man/1-select-editor/">select-editor</a></code>(1) for changing a user&#8217;s default editor.<br/>
  <code><a href="/docs/linux/man/1-editor/">editor</a></code>(1) for default system wide editor.</p>
 <h2>BUGS</h2>
 <p> This command is protected against trivial fork bomb, when user set <code>EDITOR=sensible-editor</code> wider loops are still possible.</p>

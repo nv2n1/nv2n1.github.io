@@ -20,19 +20,19 @@ description: "FvwmConsoleC.pl – Command editor for fvwm command input interfac
 <dd>
 </dd><dl>
 <dt><code>bind</code></dt>
-<dd><i>Meta-k, Ctrl-x Ctrl-b</i><br />
+<dd><i>Meta-k, Ctrl-x Ctrl-b</i><br/>
  List up key bindings and substitutions.</dd>
 <dt><code>boh</code></dt>
 <dd>Move to the beginning of history.</dd>
 <dt><code>boh_ign_mode</code> <i>Esc-&lt;</i></dt>
 <dd>Move to the beginning of history. If it is in search mode, continue.</dd>
 <dt><code>bol</code></dt>
-<dd><i>Home, Ctrl-a</i><br />
+<dd><i>Home, Ctrl-a</i><br/>
  Move cursor to the beginning of the line.</dd>
 <dt><code>bs[(n)]</code> <i>BackSpace, Ctrl-h</i></dt>
 <dd>Backspace n times. default of n is 1.</dd>
 <dt><code>cancel</code></dt>
-<dd><i>Ctrl-x Ctrl-k</i><br />
+<dd><i>Ctrl-x Ctrl-k</i><br/>
  Cancel the current input.</dd>
 <dt><code>del_back_line</code></dt>
 <dd>Delete the line from the beginning to the cursor.</dd>
@@ -47,7 +47,7 @@ description: "FvwmConsoleC.pl – Command editor for fvwm command input interfac
 <dt><code>del_line</code> <i>Ctrl-u</i></dt>
 <dd>Delete the entire line.</dd>
 <dt><code>enter</code></dt>
-<dd><i>Enter, Ctrl-j, Ctrl-m</i><br />
+<dd><i>Enter, Ctrl-j, Ctrl-m</i><br/>
  Perform substitution if applicable and send the line to fvwm.</dd>
 <dt><code>enter_wo_subst</code> <i>Meta-Enter</i></dt>
 <dd>Send the line to fvwm without any substitution.</dd>
@@ -56,7 +56,7 @@ description: "FvwmConsoleC.pl – Command editor for fvwm command input interfac
 <dt><code>eoh_ign_mode</code> <i>Esc-&gt;</i></dt>
 <dd>Move to the end of history. If it is in search mode, continue.</dd>
 <dt><code>eol</code></dt>
-<dd><i>End, Ctrl-e</i><br />
+<dd><i>End, Ctrl-e</i><br/>
  Move the cursor to the end of line.</dd>
 <dt><code>ins_char (str)</code></dt>
 <dd>Insert string at the cursor.</dd>
@@ -81,15 +81,15 @@ description: "FvwmConsoleC.pl – Command editor for fvwm command input interfac
 <dt><code>prev_word</code> <i>Meta-b</i></dt>
 <dd>Move the cursor to the previous word.</dd>
 <dt><code>quote</code></dt>
-<dd><i>Ctrl-q</i><br />
+<dd><i>Ctrl-q</i><br/>
  Insert the next character typed into the buffer literally.</dd>
 <dt><code>search</code></dt>
-<dd><i>Ctrl-s</i><br />
+<dd><i>Ctrl-s</i><br/>
  Search pattern in history.</dd>
 <dt><code>search_rev</code> <i>Ctrl-r</i></dt>
 <dd>Search pattern in history in reverse order.</dd>
 <dt><code>subst</code></dt>
-<dd><i>Meta-s</i><br />
+<dd><i>Meta-s</i><br/>
  Substitute all patterns to strings and reprint the line. The substitutions are not nested and performed in the order that they are defined.</dd></dl>
 </dl>
 <h2>Configuration</h2>

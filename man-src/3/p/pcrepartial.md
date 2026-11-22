@@ -15,7 +15,7 @@ description: "PCRE – Perl-compatible regular expressions"
 <p> If the application sees the user&#8217;s keystrokes one by one, and can check that what has been typed so far is potentially valid, it is able to raise an error as soon as a mistake is made, by beeping and not reflecting the character that has been typed, for example. This immediate feedback is likely to be a better user interface than a check that is delayed until the entire string has been entered. Partial matching can also be useful when the subject string is very long and is not all available at once. </p>
 <p> PCRE supports partial matching by means of the PCRE_PARTIAL_SOFT and PCRE_PARTIAL_HARD options, which can be set when calling any of the matching functions. For backwards compatibility, PCRE_PARTIAL is a synonym for PCRE_PARTIAL_SOFT. The essential difference between the two options is whether or not a partial match is preferred to an alternative complete match, though the details differ between the two types of matching function. If both options are set, PCRE_PARTIAL_HARD takes precedence. </p>
 <p> If you want to use partial matching with just-in-time optimized code, you must call <code>pcre_study()</code>, <code>pcre16_study()</code> or <code>pcre32_study()</code> with one or both of these options: </p>
-<p>&nbsp;<wbr>&nbsp;PCRE_STUDY_JIT_PARTIAL_SOFT_COMPILE<br />
+<p>&nbsp;<wbr>&nbsp;PCRE_STUDY_JIT_PARTIAL_SOFT_COMPILE<br/>
 &nbsp;<wbr>&nbsp;PCRE_STUDY_JIT_PARTIAL_HARD_COMPILE </p>
 <p> PCRE_STUDY_JIT_COMPILE should also be set if you are going to run non-partial matches on the same pattern. If the appropriate JIT study mode has not been set for a match, the interpretive matching code is used. </p>
 <p> Setting a partial matching option disables two of PCRE&#8217;s standard optimizations. PCRE remembers the last literal data unit in a pattern, and abandons matching immediately if it is not present in the subject string. This optimization cannot be used for a subject string that might match only partially. If the pattern was studied, PCRE knows the minimum length of a matching string, and does not bother to run the matching function on shorter strings. This optimization is also disabled for partial matching.</p>
@@ -41,7 +41,7 @@ description: "PCRE – Perl-compatible regular expressions"
 <p> This matches either &quot;dog&quot; or &quot;dogsbody&quot;, greedily (that is, it prefers the longer string if possible). If it is matched against the string &quot;dog&quot; with PCRE_PARTIAL_SOFT, it yields a complete match for &quot;dog&quot;. However, if PCRE_PARTIAL_HARD is set, the result is PCRE_ERROR_PARTIAL. On the other hand, if the pattern is made ungreedy the result is different: </p>
 <p>&nbsp;<wbr>&nbsp;/dog(sbody)??/ </p>
 <p> In this case the result is always a complete match because that is found first, and matching never continues after finding a complete match. It might be easier to follow this explanation by thinking of the two patterns like this: </p>
-<p>&nbsp;<wbr>&nbsp;/dog(sbody)?/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;is the same as&nbsp;<wbr>&nbsp;/dogsbody|dog/<br />
+<p>&nbsp;<wbr>&nbsp;/dog(sbody)?/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;is the same as&nbsp;<wbr>&nbsp;/dogsbody|dog/<br/>
 &nbsp;<wbr>&nbsp;/dog(sbody)??/&nbsp;<wbr>&nbsp;<wbr>&nbsp;is the same as&nbsp;<wbr>&nbsp;/dog|dogsbody/ </p>
 <p> The second pattern will never match &quot;dogsbody&quot;, because it will always find the shorter match first.</p>
 <h2>PARTIAL MATCHING USING pcre_dfa_exec() OR pcre[16|32]_dfa_exec()</h2>
@@ -59,26 +59,26 @@ description: "PCRE – Perl-compatible regular expressions"
 <p> Items that were formerly restricted were repeated single characters and repeated metasequences. If PCRE_PARTIAL was set for a pattern that did not conform to the restrictions, <code>pcre_exec()</code> returned the error code PCRE_ERROR_BADPARTIAL (-13). This error code is no longer in use. The PCRE_INFO_OKPARTIAL call to <code>pcre_fullinfo()</code> to find out if a compiled pattern can be used for partial matching now always returns 1.</p>
 <h2>Example Of Partial Matching Using Pcretest</h2>
 <p>If the escape sequence \P is present in a <code>pcretest</code> data line, the PCRE_PARTIAL_SOFT option is used for the match. Here is a run of <code>pcretest</code> that uses the date example quoted above: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/^\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d$/<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;25jun04\P<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: 25jun04<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;1: jun<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;25dec3\P<br />
-&nbsp;<wbr>&nbsp;Partial match: 23dec3<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;3ju\P<br />
-&nbsp;<wbr>&nbsp;Partial match: 3ju<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;3juj\P<br />
-&nbsp;<wbr>&nbsp;No match<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;j\P<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/^\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d$/<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;25jun04\P<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: 25jun04<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;1: jun<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;25dec3\P<br/>
+&nbsp;<wbr>&nbsp;Partial match: 23dec3<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;3ju\P<br/>
+&nbsp;<wbr>&nbsp;Partial match: 3ju<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;3juj\P<br/>
+&nbsp;<wbr>&nbsp;No match<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;j\P<br/>
 &nbsp;<wbr>&nbsp;No match </p>
 <p> The first data string is matched completely, so <code>pcretest</code> shows the matched substrings. The remaining four strings do not match the complete pattern, but the first two are partial matches. Similar output is obtained if DFA matching is used. </p>
 <p> If the escape sequence \P is present more than once in a <code>pcretest</code> data line, the PCRE_PARTIAL_HARD option is set for the match.</p>
 <h2>MULTI-SEGMENT MATCHING WITH pcre_dfa_exec() OR pcre[16|32]_dfa_exec()</h2>
 <p>When a partial match has been found using a DFA matching function, it is possible to continue the match by providing additional subject data and calling the function again with the same compiled regular expression, this time setting the PCRE_DFA_RESTART option. You must pass the same working space as before, because this is where details of the previous partial match are stored. Here is an example using <code>pcretest</code>, using the \R escape sequence to set the PCRE_DFA_RESTART option (\D specifies the use of the DFA matching function): </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/^\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d$/<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;23ja\P\D<br />
-&nbsp;<wbr>&nbsp;Partial match: 23ja<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;n05\R\D<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/^\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d$/<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;23ja\P\D<br/>
+&nbsp;<wbr>&nbsp;Partial match: 23ja<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;n05\R\D<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;0: n05 </p>
 <p> The first call has &quot;23ja&quot; as the subject, and requests partial matching; the second call has &quot;n05&quot; as the subject for the continued (restarted) match. Notice that when the match is complete, only the last part is shown; PCRE does not retain the previously partially-matched string. It is up to the calling program to do that if it needs to. </p>
 <p> That means that, for an unanchored pattern, if a continued match fails, it is not possible to try again at a new starting point. All this facility is capable of doing is continuing with the previous match attempt. In the previous example, if the second set of data is &quot;ug23&quot; the result is no match, even though there would be a match for &quot;aug23&quot; if the entire string were given at once. Depending on the application, this may or may not be what you want. The only way to allow for starting again at the next character is to retain the matched part of the subject and try a new complete match. </p>
@@ -86,8 +86,8 @@ description: "PCRE – Perl-compatible regular expressions"
 <h2>MULTI-SEGMENT MATCHING WITH pcre_exec() OR pcre[16|32]_exec()</h2>
 <p>From release 8.00, the standard matching functions can also be used to do multi-segment matching. Unlike the DFA functions, it is not possible to restart the previous match with a new segment of data. Instead, new data must be added to the previous subject string, and the entire match re-run, starting from the point where the partial match occurred. Earlier data can be discarded. </p>
 <p> It is best to use PCRE_PARTIAL_HARD in this situation, because it does not treat the end of a segment as the end of the subject when matching \z, \Z, , \B, and $. Consider an unanchored pattern that matches dates: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d/<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;The date is 23ja\P\P<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d/<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;The date is 23ja\P\P<br/>
 &nbsp;<wbr>&nbsp;Partial match: 23ja </p>
 <p> At this stage, an application could discard the text preceding &quot;23ja&quot;, add on text from the next segment, and call the matching function again. Unlike the DFA matching functions, the entire matching string must always be available, and the complete matching process occurs for each call, so more memory and more processing time is needed. </p>
 <p> <code>Note:</code> If the pattern contains lookbehind assertions, or \K, or starts with  or \B, the string that is returned for a partial match includes characters that precede the start of what would be returned for a complete match, because it contains all the characters that were inspected during the partial match.</p>
@@ -97,43 +97,43 @@ description: "PCRE – Perl-compatible regular expressions"
 <p> 2. Lookbehind assertions that have already been obeyed are catered for in the offsets that are returned for a partial match. However a lookbehind assertion later in the pattern could require even earlier characters to be inspected. You can handle this case by using the PCRE_INFO_MAXLOOKBEHIND option of the <code>pcre_fullinfo()</code> or <code>pcre[16|32]_fullinfo()</code> functions to obtain the length of the longest lookbehind in the pattern. This length is given in characters, not bytes. If you always retain at least that many characters before the partially matched string, all should be well. (Of course, near the start of the subject, fewer characters may be present; in that case all characters should be retained.) </p>
 <p> From release 8.33, there is a more accurate way of deciding which characters to retain. Instead of subtracting the length of the longest lookbehind from the earliest inspected character (<i>offsets[0]</i>), the match start position (<i>offsets[2]</i>) should be used, and the next match attempt started at the <i>offsets[2]</i> character by setting the <i>startoffset</i> argument of <code>pcre_exec()</code> or <code>pcre_dfa_exec()</code>. </p>
 <p> For example, if the pattern &quot;(?&lt;=123)abc&quot; is partially matched against the string &quot;xx123a&quot;, the three offset values returned are 2, 6, and 5. This indicates that the matching process that gave a partial match started at offset 5, but the characters &quot;123a&quot; were all inspected. The maximum lookbehind for that pattern is 3, so taking that away from 5 shows that we need only keep &quot;123a&quot;, and the next match attempt can be started at offset 3 (that is, at &quot;a&quot;) when further characters have been added. When the match start is not the earliest inspected character, <code>pcretest</code> shows it explicitly: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;&quot;(?&lt;=123)abc&quot;<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;xx123a\P\P<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;&quot;(?&lt;=123)abc&quot;<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;xx123a\P\P<br/>
 &nbsp;<wbr>&nbsp;Partial match at offset 5: 123a </p>
 <p> 3. Because a partial match must always contain at least one character, what might be considered a partial match of an empty string actually gives a &quot;no match&quot; result. For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/c(?&lt;=abc)x/<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;ab\P<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/c(?&lt;=abc)x/<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;ab\P<br/>
 &nbsp;<wbr>&nbsp;No match </p>
 <p> If the next segment begins &quot;cx&quot;, a match should be found, but this will only happen if characters from the previous segment are retained. For this reason, a &quot;no match&quot; result should be interpreted as &quot;partial match of an empty string&quot; when the pattern contains lookbehinds. </p>
 <p> 4. Matching a subject string that is split into multiple segments may not always produce exactly the same result as matching over one single long string, especially when PCRE_PARTIAL_SOFT is used. The section &quot;Partial Matching and Word Boundaries&quot; above describes an issue that arises if the pattern ends with  or \B. Another kind of difference may occur when there are multiple matching possibilities, because (for PCRE_PARTIAL_SOFT) a partial match result is given only when there are no completed matches. This means that as soon as the shortest match has been found, continuation to a new subject segment is no longer possible. Consider again this <code>pcretest</code> example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/dog(sbody)?/<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;dogsb\P<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: dog<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;do\P\D<br />
-&nbsp;<wbr>&nbsp;Partial match: do<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;gsb\R\P\D<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: g<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;dogsbody\D<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: dogsbody<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/dog(sbody)?/<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;dogsb\P<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: dog<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;do\P\D<br/>
+&nbsp;<wbr>&nbsp;Partial match: do<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;gsb\R\P\D<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: g<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;dogsbody\D<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: dogsbody<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;1: dog </p>
 <p> The first data line passes the string &quot;dogsb&quot; to a standard matching function, setting the PCRE_PARTIAL_SOFT option. Although the string is a partial match for &quot;dogsbody&quot;, the result is not PCRE_ERROR_PARTIAL, because the shorter string &quot;dog&quot; is a complete match. Similarly, when the subject is presented to a DFA matching function in several parts (&quot;do&quot; and &quot;gsb&quot; being the first two) the match stops when &quot;dog&quot; has been found, and it is not possible to continue. On the other hand, if &quot;dogsbody&quot; is presented as a single string, a DFA matching function finds both matches. </p>
 <p> Because of these problems, it is best to use PCRE_PARTIAL_HARD when matching multi-segment data. The example above then behaves differently: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/dog(sbody)?/<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;dogsb\P\P<br />
-&nbsp;<wbr>&nbsp;Partial match: dogsb<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;do\P\D<br />
-&nbsp;<wbr>&nbsp;Partial match: do<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;gsb\R\P\P\D<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/dog(sbody)?/<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;dogsb\P\P<br/>
+&nbsp;<wbr>&nbsp;Partial match: dogsb<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;do\P\D<br/>
+&nbsp;<wbr>&nbsp;Partial match: do<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;gsb\R\P\P\D<br/>
 &nbsp;<wbr>&nbsp;Partial match: gsb </p>
 <p> 5. Patterns that contain alternatives at the top level which do not all start with the same pattern item may not work as expected when PCRE_DFA_RESTART is used. For example, consider this pattern: </p>
 <p>&nbsp;<wbr>&nbsp;1234|3789 </p>
 <p> If the first part of the subject is &quot;ABC123&quot;, a partial match of the first alternative is found at offset 3. There is no partial match for the second alternative, because such a match does not start at the same point in the subject string. Attempting to continue with the string &quot;7890&quot; does not yield a match because only those alternatives that match at one point in the subject are remembered. The problem arises because the start of the second alternative matches within the first alternative. There is no problem with anchored patterns or patterns such as: </p>
 <p>&nbsp;<wbr>&nbsp;1234|ABCD </p>
 <p> where no string can be a partial match for both alternatives. This is not a problem if a standard matching function is used, because the entire match has to be rerun each time: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/1234|3789/<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;ABC123\P\P<br />
-&nbsp;<wbr>&nbsp;Partial match: 123<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;1237890<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/1234|3789/<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;ABC123\P\P<br/>
+&nbsp;<wbr>&nbsp;Partial match: 123<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;1237890<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;0: 3789 </p>
 <p> Of course, instead of using PCRE_DFA_RESTART, the same technique of re-running the entire match can also be used with the DFA matching functions. Another possibility is to work with two buffers. If a partial match at offset <i>n</i> in the first buffer is followed by &quot;no match&quot; when PCRE_DFA_RESTART is used on the second buffer, you can then try a new match starting at offset <i>n+1</i> in the first buffer.</p>
 <h2>Author</h2>

@@ -17,7 +17,7 @@ description: "zlib_decompress – decompress mysqlpump ZLIB-compressed output"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> If MySQL was configured with the <code>-DWITH_ZLIB=system</code> option, <code>zlib_decompress</code> is not built. In this case, the system <code>openssl zlib</code> command can be used instead. </p>
 </dl>
 <p> Invoke <code>zlib_decompress</code> like this: </p>

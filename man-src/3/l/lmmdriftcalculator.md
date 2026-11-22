@@ -12,8 +12,8 @@ description: "QuantLib::LMMDriftCalculator – Drift computation for log-normal 
 <p>#include &lt;ql/models/marketmodels/driftcomputation/lmmdriftcalculator.hpp&gt; </p>
 <h3>Public Member Functions</h3>
 <p><code>LMMDriftCalculator</code> (const <code>Matrix</code> &amp;pseudo, const std::vector&lt; <code>Spread</code> &gt; &amp;displacements, const std::vector&lt; <code>Time</code> &gt; &amp;taus, Size numeraire, Size alive) </p>
-<p> void <code>compute</code> (const <code>LMMCurveState</code> &amp;cs, std::vector&lt; <code>Real</code> &gt; &amp;drifts) const<br />
- <i>Computes the drifts. </i><br />
+<p> void <code>compute</code> (const <code>LMMCurveState</code> &amp;cs, std::vector&lt; <code>Real</code> &gt; &amp;drifts) const<br/>
+ <i>Computes the drifts. </i><br/>
  void <code>compute</code> (const std::vector&lt; <code>Rate</code> &gt; &amp;fwds, std::vector&lt; <code>Real</code> &gt; &amp;drifts) const </p>
 <p> void <code>computePlain</code> (const <code>LMMCurveState</code> &amp;cs, std::vector&lt; <code>Real</code> &gt; &amp;drifts) const </p>
 <p> void <code>computePlain</code> (const std::vector&lt; <code>Rate</code> &gt; &amp;fwds, std::vector&lt; <code>Real</code> &gt; &amp;drifts) const </p>

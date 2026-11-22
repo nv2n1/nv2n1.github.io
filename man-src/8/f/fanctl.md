@@ -9,12 +9,12 @@ description: "fanctl – fan bridge administration"
 
 <p>fanctl &#8211; fan bridge administration</p>
 <h2>Synopsis</h2>
-<p><code>fanctl up [&lt;options&gt;&#8230;]</code><br />
- <code>fanctl down [&lt;options&gt;&#8230;]</code><br />
- <code>fanctl up -a</code><br />
- <code>fanctl down -a</code><br />
- <code>fanctl down -e</code><br />
- <code>fanctl show</code><br />
+<p><code>fanctl up [&lt;options&gt;&#8230;]</code><br/>
+ <code>fanctl down [&lt;options&gt;&#8230;]</code><br/>
+ <code>fanctl up -a</code><br/>
+ <code>fanctl down -a</code><br/>
+ <code>fanctl down -e</code><br/>
+ <code>fanctl show</code><br/>
  <code>fanctl help</code></p>
 <h2>Description</h2>
 <p><code>fanctl</code> is used to set up, tear down, and inspect Fan bridge mappings and devices in the linux kernel.</p>
@@ -42,7 +42,7 @@ fan-250 172.16.3.4/16 250.0.0.0/8 dhcp host-reserve 1
 </dd></dl></pre>
 <dl>
 <dt><code>fanctl config set -u &lt;underlay&gt; -o &lt;overlay&gt; [&lt;options&gt;&#8230;]</code></dt>
-<dd>Sets configuration options for the underlay/overlay combination specified (or clears any individual configuration if no options are specified).<br />
+<dd>Sets configuration options for the underlay/overlay combination specified (or clears any individual configuration if no options are specified).<br/>
  To add options, the current set of options has to be obtained via <code>fanctl config show</code> and added to the list of new options.</dd>
 <dt><code>fanctl config show -u &lt;underlay&gt; -o &lt;overlay&gt;</code></dt>
 <dd>Displays any additional configuration options for the underlay/overlay combination specified.</dd>
@@ -110,5 +110,5 @@ fan-250 172.16.3.4/16 250.0.0.0/8 dhcp host-reserve 1
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-fanatic/">fanatic</a></i>(8), <code>/usr/share/doc/ubuntu-fan/README</code></p>
 <h2>AUTHOR(s)</h2>
-<p>Andy Whitcroft &lt;apw [at] canonical.com&gt;,<br />
+<p>Andy Whitcroft &lt;apw [at] canonical.com&gt;,<br/>
  Stefan Bader &lt;stefan.bader [at] canonical.com&gt;</p>

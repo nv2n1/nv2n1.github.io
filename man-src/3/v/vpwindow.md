@@ -47,11 +47,11 @@ description: "vpWindow – multiply the projection matrix by a perspective or or
 <p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>B<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>E</p>
 <p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>C<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>F</p>
 <p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1</p>
-<p> A = 2 / <i>(right &#8211; left)</i><br />
- B = 2 / <i>(top &#8211; bottom)</i><br />
- C = 2 / <i>(far &#8211; near)</i><br />
- D = <i>(left + right) / (left &#8211; right)</i><br />
- E = <i>(bottom + top) / (bottom &#8211; top)</i><br />
+<p> A = 2 / <i>(right &#8211; left)</i><br/>
+ B = 2 / <i>(top &#8211; bottom)</i><br/>
+ C = 2 / <i>(far &#8211; near)</i><br/>
+ D = <i>(left + right) / (left &#8211; right)</i><br/>
+ E = <i>(bottom + top) / (bottom &#8211; top)</i><br/>
  F = <i>(near + far) / (near &#8211; far)</i></dl>
 <p> The matrix is multiplied into the projection matrix, even if the projection matrix is not the current matrix. By default, the matrix is post-multiplied (N = N*<i>m</i> where N is the current matrix and <i>m</i> is the argument to <code>vpMultMatrix</code>). The VP_CONCAT_MODE option to <code>vpSeti</code> can be used to select pre-multiplication. The default window is a parallel projection with left = bottom = near = -0.5, and right = top = far = 0.5.</p>
 <h2>State Variables</h2>

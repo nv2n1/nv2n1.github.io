@@ -15,8 +15,8 @@ description: "sched_rr_get_interval – get the SCHED_RR interval for the named 
 <h2>DESCRIPTION</h2>
 <p> <code>sched_rr_get_interval</code>() writes into the <i>timespec</i> structure pointed to by <i>tp</i> the round-robin time quantum for the process identified by <i>pid</i>. The specified process should be running under the <code>SCHED_RR</code> scheduling policy. </p>
 <p> The <i>timespec</i> structure has the following form: </p>
-<p> struct timespec {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br />
+<p> struct timespec {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_nsec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;nanoseconds&nbsp;*/ }; </p>
 <p> If <i>pid</i> is zero, the time quantum for the calling process is written into <i>*tp</i>.</p>
 <h2>RETURN VALUE</h2>

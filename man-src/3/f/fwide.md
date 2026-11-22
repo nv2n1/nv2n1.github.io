@@ -18,7 +18,7 @@ int fwide(FILE *stream, int mode);
 <p> <code>fwide</code>():</p>
 <dl>
 <dt>
-</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _ISOC99_SOURCE ||<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _ISOC99_SOURCE ||<br/>
  _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> When <i>mode</i> is zero, the <code>fwide</code>() function determines the current orientation of <i>stream</i>. It returns a positive value if <i>stream</i> is wide-character oriented, that is, if wide-character I/O is permitted but char I/O is disallowed. It returns a negative value if <i>stream</i> is byte oriented&#8212;that is, if char I/O is permitted but wide-character I/O is disallowed. It returns zero if <i>stream</i> has no orientation yet; in this case the next I/O operation might change the orientation (to byte oriented if it is a char I/O operation, or to wide-character oriented if it is a wide-character I/O operation). </p>

@@ -28,7 +28,7 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Try to find the profile given a name. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>name</i> name of the profile.<br />
+<dd><i>name</i> name of the profile.<br/>
  <i>flags</i> the resulting profile.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -37,9 +37,9 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Convert an UCS4 string to a puny-coded DNS label string suitable when combined with delimiters and other labels for DNS lookup. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in</i> an UCS4 string to convert<br />
- <i>in_len</i> the length of in.<br />
- <i>out</i> the resulting puny-coded string. The string is not NUL terminatied.<br />
+<dd><i>in</i> an UCS4 string to convert<br/>
+ <i>in_len</i> the length of in.<br/>
+ <i>out</i> the resulting puny-coded string. The string is not NUL terminatied.<br/>
  <i>out_len</i> before processing out_len should be the length of the out variable, after processing it will be the length of the out string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -48,10 +48,10 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Process a input UCS4 string according a string-prep profile. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in</i> input UCS4 string to process<br />
- <i>in_len</i> length of the input string<br />
- <i>out</i> output UCS4 string<br />
- <i>out_len</i> length of the output string.<br />
+<dd><i>in</i> input UCS4 string to process<br/>
+ <i>in_len</i> length of the input string<br/>
+ <i>out</i> output UCS4 string<br/>
+ <i>out_len</i> length of the output string.<br/>
  <i>flags</i> stringprep profile.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -60,10 +60,10 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Read in an UCS2 from a buffer. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The input buffer to read from.<br />
- <i>len</i> the length of the input buffer.<br />
- <i>flags</i> Flags to control the behavior of the function.<br />
- <i>out</i> the output UCS2, the array must be at least out/2 long.<br />
+<dd><i>ptr</i> The input buffer to read from.<br/>
+ <i>len</i> the length of the input buffer.<br/>
+ <i>flags</i> Flags to control the behavior of the function.<br/>
+ <i>out</i> the output UCS2, the array must be at least out/2 long.<br/>
  <i>out_len</i> the output length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -75,9 +75,9 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Convert an UCS2 string to a UTF-8 string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in</i> an UCS2 string to convert.<br />
- <i>in_len</i> the length of the in UCS2 string.<br />
- <i>out</i> the resulting UTF-8 strint, must be at least <code>wind_ucs2utf8_length()</code> long. If out is NULL, the function will calculate the needed space for the out variable (just like <code>wind_ucs2utf8_length()</code>).<br />
+<dd><i>in</i> an UCS2 string to convert.<br/>
+ <i>in_len</i> the length of the in UCS2 string.<br/>
+ <i>out</i> the resulting UTF-8 strint, must be at least <code>wind_ucs2utf8_length()</code> long. If out is NULL, the function will calculate the needed space for the out variable (just like <code>wind_ucs2utf8_length()</code>).<br/>
  <i>out_len</i> before processing out_len should be the length of the out variable, after processing it will be the length of the out string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -86,8 +86,8 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Calculate the length of from converting a UCS2 string to an UTF-8 string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in</i> an UCS2 string to convert.<br />
- <i>in_len</i> an UCS2 string length to convert.<br />
+<dd><i>in</i> an UCS2 string to convert.<br/>
+ <i>in_len</i> an UCS2 string length to convert.<br/>
  <i>out_len</i> the length of the resulting UTF-8 string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -96,10 +96,10 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Write an UCS2 string to a buffer. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in</i> The input UCS2 string.<br />
- <i>in_len</i> the length of the input buffer.<br />
- <i>flags</i> Flags to control the behavior of the function.<br />
- <i>ptr</i> The input buffer to write to, the array must be at least (in + 1) * 2 bytes long.<br />
+<dd><i>in</i> The input UCS2 string.<br/>
+ <i>in_len</i> the length of the input buffer.<br/>
+ <i>flags</i> Flags to control the behavior of the function.<br/>
+ <i>ptr</i> The input buffer to write to, the array must be at least (in + 1) * 2 bytes long.<br/>
  <i>out_len</i> the output length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -112,9 +112,9 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Convert an UCS4 string to a UTF-8 string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in</i> an UCS4 string to convert.<br />
- <i>in_len</i> the length input array.<br />
- <i>out</i> the resulting UTF-8 strint, must be at least <code>wind_ucs4utf8_length()</code> + 1 long (the extra char for the NUL). If out is NULL, the function will calculate the needed space for the out variable (just like <code>wind_ucs4utf8_length()</code>).<br />
+<dd><i>in</i> an UCS4 string to convert.<br/>
+ <i>in_len</i> the length input array.<br/>
+ <i>out</i> the resulting UTF-8 strint, must be at least <code>wind_ucs4utf8_length()</code> + 1 long (the extra char for the NUL). If out is NULL, the function will calculate the needed space for the out variable (just like <code>wind_ucs4utf8_length()</code>).<br/>
  <i>out_len</i> before processing out_len should be the length of the out variable, after processing it will be the length of the out string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -123,8 +123,8 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Calculate the length of from converting a UCS4 string to an UTF-8 string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in</i> an UCS4 string to convert.<br />
- <i>in_len</i> the length of UCS4 string to convert.<br />
+<dd><i>in</i> an UCS4 string to convert.<br/>
+ <i>in_len</i> the length of UCS4 string to convert.<br/>
  <i>out_len</i> the length of the resulting UTF-8 string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -133,8 +133,8 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Convert an UTF-8 string to an UCS2 string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in</i> an UTF-8 string to convert.<br />
- <i>out</i> the resulting UCS2 strint, must be at least <code>wind_utf8ucs2_length()</code> long. If out is NULL, the function will calculate the needed space for the out variable (just like <code>wind_utf8ucs2_length()</code>).<br />
+<dd><i>in</i> an UTF-8 string to convert.<br/>
+ <i>out</i> the resulting UCS2 strint, must be at least <code>wind_utf8ucs2_length()</code> long. If out is NULL, the function will calculate the needed space for the out variable (just like <code>wind_utf8ucs2_length()</code>).<br/>
  <i>out_len</i> before processing out_len should be the length of the out variable, after processing it will be the length of the out string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -143,7 +143,7 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Calculate the length of from converting a UTF-8 string to a UCS2 string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in</i> an UTF-8 string to convert.<br />
+<dd><i>in</i> an UTF-8 string to convert.<br/>
  <i>out_len</i> the length of the resulting UCS4 string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -152,8 +152,8 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Convert an UTF-8 string to an UCS4 string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in</i> an UTF-8 string to convert.<br />
- <i>out</i> the resulting UCS4 strint, must be at least <code>wind_utf8ucs4_length()</code> long. If out is NULL, the function will calculate the needed space for the out variable (just like <code>wind_utf8ucs4_length()</code>).<br />
+<dd><i>in</i> an UTF-8 string to convert.<br/>
+ <i>out</i> the resulting UCS4 strint, must be at least <code>wind_utf8ucs4_length()</code> long. If out is NULL, the function will calculate the needed space for the out variable (just like <code>wind_utf8ucs4_length()</code>).<br/>
  <i>out_len</i> before processing out_len should be the length of the out variable, after processing it will be the length of the out string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -162,7 +162,7 @@ int wind_ucs2utf8_length (const uint16_t *in, size_t in_len, size_t *out_len)</c
 <p>Calculate the length of from converting a UTF-8 string to a UCS4 string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in</i> an UTF-8 string to convert.<br />
+<dd><i>in</i> an UTF-8 string to convert.<br/>
  <i>out_len</i> the length of the resulting UCS4 string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

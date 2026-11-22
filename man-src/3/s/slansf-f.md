@@ -10,7 +10,7 @@ description: "slansf.f –"
 <p>slansf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>slansf</code> (NORM, TRANSR, UPLO, N, A, WORK)<br />
+<p>REAL function <code>slansf</code> (NORM, TRANSR, UPLO, N, A, WORK)<br/>
  <i></i><code>SLANSF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function slansf (characterNORM, characterTRANSR, characterUPLO, integerN, real, dimension( 0: * )A, real, dimension( 0: * )WORK)</h3>

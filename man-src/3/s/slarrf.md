@@ -11,7 +11,7 @@ description: "slarrf.f –"
 <p> slarrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slarrf</code> (N, D, L, LD, CLSTRT, CLEND, W, WGAP, WERR, SPDIAM, CLGAPL, CLGAPR, PIVMIN, SIGMA, DPLUS, LPLUS, WORK, INFO)<br />
+<p> subroutine <code>slarrf</code> (N, D, L, LD, CLSTRT, CLEND, W, WGAP, WERR, SPDIAM, CLGAPL, CLGAPR, PIVMIN, SIGMA, DPLUS, LPLUS, WORK, INFO)<br/>
  <i></i><code>SLARRF</code> finds a new relatively robust representation such that at least one of the eigenvalues is relatively isolated.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slarrf (integerN, real, dimension( * )D, real, dimension( * )L, real, dimension( * )LD, integerCLSTRT, integerCLEND, real, dimension( * )W, real, dimension( * )WGAP, real, dimension( * )WERR, realSPDIAM, realCLGAPL, realCLGAPR, realPIVMIN, realSIGMA, real, dimension( * )DPLUS, real, dimension( * )LPLUS, real, dimension( * )WORK, integerINFO)</h3>

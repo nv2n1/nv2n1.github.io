@@ -19,9 +19,9 @@ description: "latex-git-log – Generates the version history of a git project a
 <dl>
 <dt><code>&#8211;width</code></dt>
 <dd> Set the width in cm of the commit message field in the LaTeX table. If this parameter is not set then the table is not vertically limited. That means that if you have a very long commit message then the table will probably not fit on the page and you will get a &#8220;Overfull&#8221; error message from TeX. </dd>
-<p> In this case you should specify the width of the column containing the commit messages. I normally use something like &#8211;width=14 for <font SIZE="-1">DIN</font> A4 in landscape.</p>
+<p> In this case you should specify the width of the column containing the commit messages. I normally use something like &#8211;width=14 for DIN A4 in landscape.</p>
 <dt><code>&#8211;git-c-add</code></dt>
-<dd> Set an base <font SIZE="-1">URL</font> to link to a commit. This script will automatically try to use the base <font SIZE="-1">URL</font> for github.</dd>
+<dd> Set an base URL to link to a commit. This script will automatically try to use the base URL for github.</dd>
 <dt><code>&#8211;lang</code></dt>
 <dd> Set the language of the legend and all strings in the output. Be default the language of your system is used but you can overwrite this with this parameter. </dd>
 <p> Currently this script only supports English and German. If you need a translation to another language then you can either create a .po file or I can register this project on one of those websites for online translation.</dl>
@@ -54,9 +54,9 @@ description: "latex-git-log – Generates the version history of a git project a
 <p> Please report bugs and feature requests at <a rel="nofollow" href="https://github.com/ypid/typesetting/issues">https://github.com/ypid/typesetting/issues</a></p>
 <h2>LICENSE AND COPYRIGHT</h2>
 <p> Copyright (C) 2012-2013 by Robin Schneider </p>
-<p> This program is free software: you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program. If not, see &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;. </p>
-<p> Dieses Programm ist Freie Software: Sie kA~Xnnen es unter den Bedingungen der <font SIZE="-1">GNU</font> General Public License, wie von der Free Software Foundation, Version 3 der Lizenz oder (nach Ihrer Option) jeder spA~Xteren verA~Xffentlichten Version, weiterverbreiten und/oder modifizieren. </p>
-<p> Dieses Programm wird in der Hoffnung, dass es nA~Xtzlich sein wird, aber <font SIZE="-1">OHNE</font> <font SIZE="-1">JEDE</font> GEWA~XHRLEISTUNG, bereitgestellt; sogar ohne die implizite GewA~Xhrleistung der MARKTFA~XHIGKEIT oder <font SIZE="-1">EIGNUNG</font> FA~XR <font SIZE="-1">EINEN</font> <font SIZE="-1">BESTIMMTEN</font> <font SIZE="-1">ZWECK</font>. Siehe die <font SIZE="-1">GNU</font> General Public License fA~Xr weitere Details. </p>
-<p> Sie sollten eine Kopie der <font SIZE="-1">GNU</font> General Public License zusammen mit diesem Programm erhalten haben. Wenn nicht, siehe &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;. </p>
+<p> This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program. If not, see &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;. </p>
+<p> Dieses Programm ist Freie Software: Sie kA~Xnnen es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation, Version 3 der Lizenz oder (nach Ihrer Option) jeder spA~Xteren verA~Xffentlichten Version, weiterverbreiten und/oder modifizieren. </p>
+<p> Dieses Programm wird in der Hoffnung, dass es nA~Xtzlich sein wird, aber OHNE JEDE GEWA~XHRLEISTUNG, bereitgestellt; sogar ohne die implizite GewA~Xhrleistung der MARKTFA~XHIGKEIT oder EIGNUNG FA~XR EINEN BESTIMMTEN ZWECK. Siehe die GNU General Public License fA~Xr weitere Details. </p>
+<p> Sie sollten eine Kopie der GNU General Public License zusammen mit diesem Programm erhalten haben. Wenn nicht, siehe &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;. </p>

@@ -20,7 +20,7 @@ description: "dh_testroot – ensure that a package is built with necessary leve
 <dt>&quot;no&quot;</dt>
 <dd> <code>dh_testroot</code> returns successfully.</dd>
 <dt>Any other value than the above</dt>
-<dd> <code>dh_testroot</code> asserts that it is either run as root (or under <i><a href="/docs/linux/man/1-fakeroot/">fakeroot</a></i>(1)) or the builder has provided the <font SIZE="-1"><code>DEB_GAIN_ROOT_CMD</code></font> environment variable (e.g. via dpkg-buildpackage -r).</dd></dl>
+<dd> <code>dh_testroot</code> asserts that it is either run as root (or under <i><a href="/docs/linux/man/1-fakeroot/">fakeroot</a></i>(1)) or the builder has provided the <code>DEB_GAIN_ROOT_CMD</code> environment variable (e.g. via dpkg-buildpackage -r).</dd></dl>
 <p> For backwards compatibility, <code>dh_testroot</code> will consider the absence of the R³ field as if the R³ field was set to &#8220;binary-targets&#8221;.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>

@@ -17,7 +17,7 @@ description: "pam_pkcs11 – PAM Authentication Module for PKCS#11 token librari
 <p> <code>pam_pkcs11</code> can be used in the &lt;auth&gt; PAM chain. </p>
 <p> For details on how to configure PAM services, see the PAM documentation for your system. This manual does not cover PAM configuration details. The existing PAM service definitions for other applications on your system is also a good source for examples on how to configure a PAM service.</p>
 <h2>Files</h2>
-<p><i>/etc/pam_pkcs11/pam_pkcs11.conf</i><br />
+<p><i>/etc/pam_pkcs11/pam_pkcs11.conf</i><br/>
  <i>/usr/lib/pam_pkcs11/*_mapper.so</i></p>
 <h2>Author</h2>
 <p>Original PAM-pkcs11 was written by Mario Strasser &lt;mast [at] gmx.net&gt;. Newer versions are from Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;.</p>

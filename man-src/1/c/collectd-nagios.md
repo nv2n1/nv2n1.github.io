@@ -12,12 +12,12 @@ description: "collectd-nagios – Nagios plugin for querying collectd"
 <h2>SYNOPSIS</h2>
 <p> collectd-nagios <code>-s</code> <i>socket</i> <code>-n</code> <i>value_spec</i> <code>-H</code> <i>hostname</i> <i>[options]</i></p>
 <h2>DESCRIPTION</h2>
-<p> This small program is the glue between collectd and nagios. collectd collects various performance statistics which it provides via the <tt>&quot;unixsock plugin&quot;</tt>, see <i><a href="/docs/linux/man/5-collectd-unixsock/">collectd-unixsock</a></i>(5). This program is called by Nagios, connects to the <font SIZE="-1">UNIX</font> socket and reads the values from collectd. It then returns <font SIZE="-1"><code>OKAY</code></font>, <font SIZE="-1"><code>WARNING</code></font> or <font SIZE="-1"><code>CRITICAL</code></font> depending on the values and the ranges provided by Nagios.</p>
+<p> This small program is the glue between collectd and nagios. collectd collects various performance statistics which it provides via the <tt>&quot;unixsock plugin&quot;</tt>, see <i><a href="/docs/linux/man/5-collectd-unixsock/">collectd-unixsock</a></i>(5). This program is called by Nagios, connects to the UNIX socket and reads the values from collectd. It then returns <code>OKAY</code>, <code>WARNING</code> or <code>CRITICAL</code> depending on the values and the ranges provided by Nagios.</p>
 <h2>ARGUMENTS AND OPTIONS</h2>
 <p> The following arguments and options are required and understood by collectd-nagios. The order of the arguments generally doesn&#8217;t matter, as long as no argument is passed more than once.</p>
 <dl>
 <dt><code>-s</code> <i>socket</i></dt>
-<dd> Path of the <font SIZE="-1">UNIX</font> socket opened by collectd&#8217;s <tt>&quot;unixsock plugin&quot;</tt>.</dd>
+<dd> Path of the UNIX socket opened by collectd&#8217;s <tt>&quot;unixsock plugin&quot;</tt>.</dd>
 <dt><code>-n</code> <i>value_spec</i></dt>
 <dd> The value to read from collectd. The argument is in the form <tt>&quot;plugin[-instance]/type[-instance]&quot;</tt>.</dd>
 <dt><code>-H</code> <i>hostname</i></dt>
@@ -49,7 +49,7 @@ description: "collectd-nagios – Nagios plugin for querying collectd"
 <dt><code>-m</code></dt>
 <dd> If this option is given, &#8220;Not a Number&#8221; (NaN) is treated as <i>critical</i>. By default, the <i>none</i> consolidation reports NaNs as <i>warning</i>. Other consolidations simply ignore NaN values.</dd></dl>
 <h2>RETURN VALUE</h2>
-<p> As usual for Nagios plugins, this program writes a short, one line status message to <font SIZE="-1">STDOUT</font> and signals success or failure with it&#8217;s return value. It exits with a return value of <code>0</code> for <i>success</i>, <code>1</code> for <i>warning</i> and <code>2</code> for <i>critical</i>. If the values are not available or some other error occurred, it returns <code>3</code> for <i>unknown</i>.</p>
+<p> As usual for Nagios plugins, this program writes a short, one line status message to STDOUT and signals success or failure with it&#8217;s return value. It exits with a return value of <code>0</code> for <i>success</i>, <code>1</code> for <i>warning</i> and <code>2</code> for <i>critical</i>. If the values are not available or some other error occurred, it returns <code>3</code> for <i>unknown</i>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-collectd/">collectd</a></i>(1), <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5), <i><a href="/docs/linux/man/5-collectd-unixsock/">collectd-unixsock</a></i>(5), &lt;<a rel="nofollow" href="http://nagios.org/">http://nagios.org/</a>&gt;</p>
 <h2>AUTHOR</h2>

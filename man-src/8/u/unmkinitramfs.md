@@ -9,7 +9,7 @@ description: "unmkinitramfs – extract content from an initramfs image"
 
 <p>unmkinitramfs &#8211; extract content from an initramfs image</p>
 <h2>Synopsis</h2>
-<p><code>unmkinitramfs</code> [<code>-v</code>] <i>initramfs-file</i> <i>directory</i><br />
+<p><code>unmkinitramfs</code> [<code>-v</code>] <i>initramfs-file</i> <i>directory</i><br/>
  <code>unmkinitramfs</code> <code>-h</code> </p>
 <h2>Description</h2>
 <p>The <code>unmkinitramfs</code> command extracts the content of a given initramfs image using <code>cpio</code>. If the image contains multiple segments, each are passed to <code>cpio</code> in order. </p>

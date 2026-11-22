@@ -10,8 +10,8 @@ description: "nmbscan – NMB/SMB network scanner"
 
 <p> nmbscan &#8211; NMB/SMB network scanner</p>
 <h2>SYNOPSIS</h2>
-<p> <code>nmbscan</code> -L<br />
- <code>nmbscan</code> {-d|-m|-a}<br />
+<p> <code>nmbscan</code> -L<br/>
+ <code>nmbscan</code> {-d|-m|-a}<br/>
  <code>nmbscan</code> {-h|-n} host1 [host2 [&#8230;]]</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>nmbscan</code> command. </p>

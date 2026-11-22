@@ -10,9 +10,9 @@ description: "brlapi_protocol.h –"
 <p>brlapi_protocol.h &#8211; </p>
 <p> types and constants for <i>BrlAPI&#8217;s</i> protocol</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;brlapi.h&#8217;<br />
- #include &lt;inttypes.h&gt;<br />
- #include &lt;unistd.h&gt;<br />
+<p>#include &#8216;brlapi.h&#8217;<br/>
+ #include &lt;inttypes.h&gt;<br/>
+ #include &lt;unistd.h&gt;<br/>
  #include &lt;pthread.h&gt; </p>
 <h3>Data Structures</h3>
 <p>struct <code>brlapi_header_t</code> </p>

@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_setoperatorauth/"
 description: "tpm_setoperatorauth – sets the operator authorization value in the TPM"
 ---
 
-<p>TPM Management &#8211; tpm_setoperatorauth<br />
+<p>TPM Management &#8211; tpm_setoperatorauth<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_setoperatorauth &#8211; sets the operator authorization value in the TPM</p>

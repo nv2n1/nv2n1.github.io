@@ -145,7 +145,7 @@ description: "Attributes and Cntls –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>listener_min_port</i> The lower bound on the listener port. (default 0 &#8212; no bound)<br />
+</dt><dd> <i>listener_min_port</i> The lower bound on the listener port. (default 0 &#8212; no bound)<br/>
  <i>listener_max_port</i> The upper bound on the listener port. (default 0 &#8212; no bound)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -156,7 +156,7 @@ description: "Attributes and Cntls –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>listener_min_port_out</i> The lower bound will be stored here.<br />
+</dt><dd> <i>listener_min_port_out</i> The lower bound will be stored here.<br/>
  <i>listener_max_port_out</i> The upper bound will be stored here.</dd></dl>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_UDP_SET_INTERFACE</code>, const char *interface)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the interface to bind the socket to. </p>

@@ -111,7 +111,7 @@ description: "cadaver – A command-line WebDAV client for Unix."
 <dl>
 <dt>
 </dt><dd> Specifies the username to use when logging in to the remote machine.</dd></dl>
-<p> <code>password</code> <i>string</i><br />
+<p> <code>password</code> <i>string</i><br/>
  <code>passwd</code> <i>string</i></p>
 <dl>
 <dt>

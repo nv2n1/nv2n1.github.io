@@ -24,7 +24,7 @@ description: "upsmon.conf – Configuration for Network UPS Tools upsmon"
 <p> If you need to let your users do something in between those events, increase this number. Remember, at this point your UPS battery is almost depleted, so don&#8217;t make this too big. </p>
 <p> Alternatively, you can set this very low so you don&#8217;t wait around when it&#8217;s time to shut down. Some UPSes don&#8217;t give much warning for low battery and will require a value of 0 here for a safe shutdown. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If FINALDELAY on the slave is greater than HOSTSYNC on the master, the master will give up waiting for the slave to disconnect. </dd>
 </dl>
 </dl>

@@ -14,22 +14,22 @@ description: "QwtPickerMachine –"
 <p> Inherited by <code>QwtPickerClickPointMachine</code>, <code>QwtPickerClickRectMachine</code>, <code>QwtPickerDragLineMachine</code>, <code>QwtPickerDragPointMachine</code>, <code>QwtPickerDragRectMachine</code>, <code>QwtPickerPolygonMachine</code>, and <code>QwtPickerTrackerMachine</code>.</p>
 <h3>Public Types</h3>
 <p>enum <code>SelectionType</code> { <code>NoSelection</code> = -1, <code>PointSelection</code>, <code>RectSelection</code>, <code>PolygonSelection</code> } </p>
-<p> enum <code>Command</code> { <code>Begin</code>, <code>Append</code>, <code>Move</code>, <code>Remove</code>, <code>End</code> }<br />
+<p> enum <code>Command</code> { <code>Begin</code>, <code>Append</code>, <code>Move</code>, <code>Remove</code>, <code>End</code> }<br/>
  <i>Commands &#8211; the output of a state machine. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPickerMachine</code> (<code>SelectionType</code>)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPickerMachine</code> ()<br />
- <i>Destructor. </i><br />
- virtual QList&lt; <code>Command</code> &gt; <code>transition</code> (const <code>QwtEventPattern</code> &amp;, const QEvent *)=0<br />
- <i>Transition. </i><br />
- void <code>reset</code> ()<br />
- <i>Set the current state to 0. </i><br />
- int <code>state</code> () const<br />
- <i>Return the current state. </i><br />
- void <code>setState</code> (int)<br />
- <i>Change the current state. </i><br />
- <code>SelectionType</code> <code>selectionType</code> () const<br />
+<p><code>QwtPickerMachine</code> (<code>SelectionType</code>)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPickerMachine</code> ()<br/>
+ <i>Destructor. </i><br/>
+ virtual QList&lt; <code>Command</code> &gt; <code>transition</code> (const <code>QwtEventPattern</code> &amp;, const QEvent *)=0<br/>
+ <i>Transition. </i><br/>
+ void <code>reset</code> ()<br/>
+ <i>Set the current state to 0. </i><br/>
+ int <code>state</code> () const<br/>
+ <i>Return the current state. </i><br/>
+ void <code>setState</code> (int)<br/>
+ <i>Change the current state. </i><br/>
+ <code>SelectionType</code> <code>selectionType</code> () const<br/>
  <i>Return the selection type. </i></p>
 <h2>Detailed Description</h2>
 <p>A state machine for <code>QwtPicker</code> selections. </p>

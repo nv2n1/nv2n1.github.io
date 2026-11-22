@@ -81,9 +81,9 @@ description: "pdfbook2 – transform pdf files into booklets for double-sided pr
 <h2>SEE ALSO</h2>
 <p> <code>pdfbook</code>(1), <code><a href="/docs/linux/man/1-pdfjam/">pdfjam</a></code>(1), <code>pdfcrop</code>(1) </p>
 <h2>ABOUT</h2>
-<p> pdfbook2 v1.4 (<a rel="nofollow" href="https://github.com/jenom/pdfbook2)">https://github.com/jenom/pdfbook2)</a><br />
- (c) 2015 &#8211; 2020 Johannes Neumann (<a rel="nofollow" href="http://www.neumannjo.de)">http://www.neumannjo.de)</a><br />
- licensed under GPLv3 (<a rel="nofollow" href="http://www.gnu.org/licenses/gpl-3.0)">http://www.gnu.org/licenses/gpl-3.0)</a><br />
+<p> pdfbook2 v1.4 (<a rel="nofollow" href="https://github.com/jenom/pdfbook2)">https://github.com/jenom/pdfbook2)</a><br/>
+ (c) 2015 &#8211; 2020 Johannes Neumann (<a rel="nofollow" href="http://www.neumannjo.de)">http://www.neumannjo.de)</a><br/>
+ licensed under GPLv3 (<a rel="nofollow" href="http://www.gnu.org/licenses/gpl-3.0)">http://www.gnu.org/licenses/gpl-3.0)</a><br/>
  based on pdfbook by David Firth with help from Marco Pessotto </p>
 <h2>LICENSE</h2>
 <p> This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>

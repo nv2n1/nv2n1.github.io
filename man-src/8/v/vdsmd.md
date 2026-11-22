@@ -7,41 +7,41 @@ url: "/docs/linux/man/8-vdsmd/"
 description: "vdsmd – Virtual Desktops and Servers Manager @ENGINENAME@ host agent"
 ---
 
-<p>vdsmd &#8211; Virtual Desktops and Servers Manager<br />
+<p>vdsmd &#8211; Virtual Desktops and Servers Manager<br/>
  @ENGINENAME@ host agent</p>
 <h2>Synopsis</h2>
 <p><code>service vdsmd start</code></p>
 <h2>Description</h2>
 <p>The <code>VDSM</code> service is required by a <code>@ENGINENAME@</code> to manage oVirt Nodes and Linux hosts. Currently, only Fedora and Red Hat Enterprise Linux are supported. VDSM manages and monitors the host&#8217;s storage, memory and networks as well as virtual machine creation, other host administration tasks, statistics gathering, and log collection. VDSM should be run as a daemon on each node managed by @ENGINENAME@. It answers XML-RPC calls from clients (mostly @ENGINENAME@). </p>
 <h2>Hooks</h2>
-<p>VDSM is extendible: it has hooks in strategic locations, where it executes external scripts. <code>Hooks API is new and is subject to future changes.</code> Currently-supported hooks have self-explanatory names:<br />
-&nbsp;<wbr>before_vm_start, after_vm_start,<br />
-&nbsp;<wbr>before_vm_cont, after_vm_cont,<br />
-&nbsp;<wbr>before_vm_pause, after_vm_pause,<br />
-&nbsp;<wbr>before_vm_hibernate, after_vm_hibernate,<br />
-&nbsp;<wbr>before_vm_dehibernate, after_vm_dehibernate,<br />
-&nbsp;<wbr>before_vm_migrate_source, after_vm_migrate_source,<br />
-&nbsp;<wbr>before_vm_migrate_destination, after_vm_migrate_destination,<br />
-&nbsp;<wbr>before_device_migrate_source, after_device_migrate_source,<br />
-&nbsp;<wbr>before_device_migrate_destination, after_device_migrate_destination,<br />
-&nbsp;<wbr>before_vm_destroy, after_vm_destroy,<br />
-&nbsp;<wbr>before_vm_set_ticket, after_vm_set_ticket,<br />
-&nbsp;<wbr>before_device_create, after_device_create,<br />
-&nbsp;<wbr>before_device_destroy, after_device_destroy,<br />
-&nbsp;<wbr>before_nic_hotplug, after_nic_hotplug, after_nic_hotplug_fail,<br />
-&nbsp;<wbr>before_nic_hotunplug, after_nic_hotunplug, after_nic_hotunplug_fail,<br />
-&nbsp;<wbr>before_update_device, after_update_device, after_update_device_fail,<br />
-&nbsp;<wbr>before_disk_hotplug, after_disk_hotplug,<br />
-&nbsp;<wbr>before_disk_hotunplug, after_disk_hotunplug,<br />
-&nbsp;<wbr>before_vdsm_start, after_vdsm_stop,<br />
-&nbsp;<wbr>before_network_setup, after_network_setup, after_network_setup_fail,<br />
-&nbsp;<wbr>before_set_num_of_cpus, after_set_num_of_cpus,<br />
-&nbsp;<wbr>before_get_vm_stats, after_get_vm_stats,<br />
-&nbsp;<wbr>before_get_all_vm_stats, after_get_all_vm_stats,<br />
-&nbsp;<wbr>before_get_caps, after_get_caps,<br />
-&nbsp;<wbr>before_get_stats, after_get_stats,<br />
-&nbsp;<wbr>after_hostdev_list_by_caps,<br />
-&nbsp;<wbr>before_memory_hotplug, after_memory_hotplug,<br />
+<p>VDSM is extendible: it has hooks in strategic locations, where it executes external scripts. <code>Hooks API is new and is subject to future changes.</code> Currently-supported hooks have self-explanatory names:<br/>
+&nbsp;<wbr>before_vm_start, after_vm_start,<br/>
+&nbsp;<wbr>before_vm_cont, after_vm_cont,<br/>
+&nbsp;<wbr>before_vm_pause, after_vm_pause,<br/>
+&nbsp;<wbr>before_vm_hibernate, after_vm_hibernate,<br/>
+&nbsp;<wbr>before_vm_dehibernate, after_vm_dehibernate,<br/>
+&nbsp;<wbr>before_vm_migrate_source, after_vm_migrate_source,<br/>
+&nbsp;<wbr>before_vm_migrate_destination, after_vm_migrate_destination,<br/>
+&nbsp;<wbr>before_device_migrate_source, after_device_migrate_source,<br/>
+&nbsp;<wbr>before_device_migrate_destination, after_device_migrate_destination,<br/>
+&nbsp;<wbr>before_vm_destroy, after_vm_destroy,<br/>
+&nbsp;<wbr>before_vm_set_ticket, after_vm_set_ticket,<br/>
+&nbsp;<wbr>before_device_create, after_device_create,<br/>
+&nbsp;<wbr>before_device_destroy, after_device_destroy,<br/>
+&nbsp;<wbr>before_nic_hotplug, after_nic_hotplug, after_nic_hotplug_fail,<br/>
+&nbsp;<wbr>before_nic_hotunplug, after_nic_hotunplug, after_nic_hotunplug_fail,<br/>
+&nbsp;<wbr>before_update_device, after_update_device, after_update_device_fail,<br/>
+&nbsp;<wbr>before_disk_hotplug, after_disk_hotplug,<br/>
+&nbsp;<wbr>before_disk_hotunplug, after_disk_hotunplug,<br/>
+&nbsp;<wbr>before_vdsm_start, after_vdsm_stop,<br/>
+&nbsp;<wbr>before_network_setup, after_network_setup, after_network_setup_fail,<br/>
+&nbsp;<wbr>before_set_num_of_cpus, after_set_num_of_cpus,<br/>
+&nbsp;<wbr>before_get_vm_stats, after_get_vm_stats,<br/>
+&nbsp;<wbr>before_get_all_vm_stats, after_get_all_vm_stats,<br/>
+&nbsp;<wbr>before_get_caps, after_get_caps,<br/>
+&nbsp;<wbr>before_get_stats, after_get_stats,<br/>
+&nbsp;<wbr>after_hostdev_list_by_caps,<br/>
+&nbsp;<wbr>before_memory_hotplug, after_memory_hotplug,<br/>
 &nbsp;<wbr>before_ifcfg_write, after_ifcfg_write. </p>
 <p> Each hook executes the scripts under <i>/usr/libexec/vdsm/hooks/&lt;hook-name&gt;/</i> in lexicographic order.</p>
 <h3>Hook environment</h3>
@@ -65,16 +65,16 @@ description: "vdsmd – Virtual Desktops and Servers Manager @ENGINENAME@ host a
 <p> before_migration_destination (and before_dehibernation) hooks currently receive the xml of the domain from the source host. The xml of the domain at the destination will differ in various details. </p>
 <p> The environment of before_vm_set_ticket and after_vm_set_ticket hooks is augmented with a set of params passed by the caller of setVmTicket. </p>
 <p> The environment of before_vm_dehibernate and after_vm_dehibernate hooks have FROM_SNAPSHOT variable set to True if the VM is being restored from a live snapshot. </p>
-<p> The environment of hooks specific to devices:<br />
-&nbsp;<wbr>before_nic_hotplug, after_nic_hotplug, after_nic_hotplug_fail,<br />
-&nbsp;<wbr>before_nic_hotunplug, after_nic_hotunplug, after_nic_hotunplug_fail,<br />
-&nbsp;<wbr>before_update_device, after_update_device, after_update_device_fail,<br />
-&nbsp;<wbr>before_disk_hotplug, after_disk_hotplug,<br />
-&nbsp;<wbr>before_disk_hotunplug, after_disk_hotunplug,<br />
-&nbsp;<wbr>before_device_create, after_device_create,<br />
-&nbsp;<wbr>before_device_destroy, after_device_destroy,<br />
-&nbsp;<wbr>before_device_migrate_source, after_device_migrate_source,<br />
-&nbsp;<wbr>before_device_migrate_destination, after_device_migrate_destination,<br />
+<p> The environment of hooks specific to devices:<br/>
+&nbsp;<wbr>before_nic_hotplug, after_nic_hotplug, after_nic_hotplug_fail,<br/>
+&nbsp;<wbr>before_nic_hotunplug, after_nic_hotunplug, after_nic_hotunplug_fail,<br/>
+&nbsp;<wbr>before_update_device, after_update_device, after_update_device_fail,<br/>
+&nbsp;<wbr>before_disk_hotplug, after_disk_hotplug,<br/>
+&nbsp;<wbr>before_disk_hotunplug, after_disk_hotunplug,<br/>
+&nbsp;<wbr>before_device_create, after_device_create,<br/>
+&nbsp;<wbr>before_device_destroy, after_device_destroy,<br/>
+&nbsp;<wbr>before_device_migrate_source, after_device_migrate_source,<br/>
+&nbsp;<wbr>before_device_migrate_destination, after_device_migrate_destination,<br/>
 &nbsp;<wbr>before_memory_hotplug, after_memory_hotplug. </p>
 <p> Are all augmented by custom properties specific to those devices, sent by the caller of the hook. For example if before_nic_hotplug is called with custom: {qos: &#8216;0.5&#8217;, color: &#8216;red&#8217;} then qos and color will be directly available as environment variables when before_nic_hotplug is called. </p>
 <p> before_get_vm_stats and before_get_all_vm_stats are called upon API request to get VM statistics, before getVmStats and getAllVmStats respectively. Those hooks do not receive any parameters. </p>
@@ -126,7 +126,7 @@ description: "vdsmd – Virtual Desktops and Servers Manager @ENGINENAME@ host a
 <dd>VDSM&#8217;s image repository, or more exactly, links to NFS exports and iSCSI or FiberChannel devices which VDSM uses. </dd>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-vdsclient/">vdsClient</a>(1)</code><br />
+<p><code><a href="/docs/linux/man/1-vdsclient/">vdsClient</a>(1)</code><br/>
  <code><a rel="nofollow" href="http://www.ovirt.org/wiki/Category:Vdsm">http://www.ovirt.org/wiki/Category:Vdsm</a></code> </p>
 <h2>Author</h2>
 <p>VDSM was written by Ayal Baron, Barak Azulay, Cyril Plisko, Dan Kenigsberg, Doron Fediuck, Igor Lvovsky, Saggi Mizrahi, Shahar Frank, Simon Grinberg, and probably others.</p>

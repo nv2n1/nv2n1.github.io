@@ -10,7 +10,7 @@ description: "Heimdal Kerberos 5 digest service –"
 
 <p> Heimdal Kerberos 5 digest service &#8211; </p>
 <h3>Functions</h3>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_digest_probe</code> (krb5_context context, krb5_realm realm, krb5_ccache ccache, unsigned *flags)&quot; </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -19,9 +19,9 @@ description: "Heimdal Kerberos 5 digest service –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Keberos context.<br />
- <i>realm</i> The realm of the KDC.<br />
- <i>ccache</i> The credential cache to use when talking to the KDC.<br />
+</dt><dd> <i>context</i> A Keberos context.<br/>
+ <i>realm</i> The realm of the KDC.<br/>
+ <i>ccache</i> The credential cache to use when talking to the KDC.<br/>
  <i>flags</i> The supported mechanism.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

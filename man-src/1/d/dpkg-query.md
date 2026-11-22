@@ -85,8 +85,8 @@ description: "dpkg-query – a tool to query the dpkg database"
 <dt><code>-L</code>, <code>&#8211;listfiles</code> <i>package-name</i>&#8230;</dt>
 <dd> List files installed to your system from <i>package-name</i>. When multiple <i>package-name</i>s are listed, the requested lists of files are separated by an empty line, with the same order as specified on the argument list. </dd>
 <p> Each file diversion is printed on its own line after its diverted file, prefixed with one of the following localized strings: </p>
-<p>&nbsp;<wbr>&nbsp;locally diverted to:&nbsp;<i>diverted-to</i><br />
-&nbsp;<wbr>&nbsp;package diverts others to:&nbsp;<i>diverted-to</i><br />
+<p>&nbsp;<wbr>&nbsp;locally diverted to:&nbsp;<i>diverted-to</i><br/>
+&nbsp;<wbr>&nbsp;package diverts others to:&nbsp;<i>diverted-to</i><br/>
 &nbsp;<wbr>&nbsp;diverted by&nbsp;<i>pkg</i>&nbsp;to:&nbsp;<i>diverted-to</i> </p>
 <p> Hint: When machine parsing the output, it is customary to set the locale to <code>C.UTF-8</code> to get reproducible results. </p>
 <p> This command will not list extra files created by maintainer scripts, nor will it list alternatives.</p>
@@ -107,10 +107,10 @@ description: "dpkg-query – a tool to query the dpkg database"
   pkgname3: pathname2
 </pre>
 <p> File diversions are printed with the following localized strings: </p>
-<p>&nbsp;<wbr>&nbsp;diversion by&nbsp;<i>pkgname</i>&nbsp;from:&nbsp;<i>diverted-from</i><br />
+<p>&nbsp;<wbr>&nbsp;diversion by&nbsp;<i>pkgname</i>&nbsp;from:&nbsp;<i>diverted-from</i><br/>
 &nbsp;<wbr>&nbsp;diversion by&nbsp;<i>pkgname</i>&nbsp;to:&nbsp;<i>diverted-to</i> </p>
 <p> or for local diversions: </p>
-<p>&nbsp;<wbr>&nbsp;local diversion from:&nbsp;<i>diverted-from</i><br />
+<p>&nbsp;<wbr>&nbsp;local diversion from:&nbsp;<i>diverted-from</i><br/>
 &nbsp;<wbr>&nbsp;local diversion to:&nbsp;<i>diverted-to</i> </p>
 <p> Hint: When machine parsing the output, it is customary to set the locale to <code>C.UTF-8</code> to get reproducible results.</p>
 <dt><code>-p</code>, <code>&#8211;print-avail</code> [<i>package-name</i>&#8230;]</dt>
@@ -273,21 +273,21 @@ dpkg - query - f = '${binary:Package} ${Version}	${Maintainer}
 <h2>ENVIRONMENT</h2>
 <h3>External environment</h3>
 <dl>
-<dt><font SIZE="-1"><code>SHELL</code></font></dt>
+<dt><code>SHELL</code></dt>
 <dd> Sets the program to execute when spawning a command via a shell (since dpkg 1.19.2).</dd>
-<dt><font SIZE="-1"><code>PAGER</code></font></dt>
+<dt><code>PAGER</code></dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>DPKG_PAGER</code></font></dt>
-<dd> Sets the pager command to use (since dpkg 1.19.1), which will be executed with &laquo;$SHELL<code> -c</code>&raquo;. If <font SIZE="-1"><code>SHELL</code></font> is not set, &laquo;<code>sh</code>&raquo; will be used instead. The <font SIZE="-1"><code>DPKG_PAGER</code></font> overrides the <font SIZE="-1"><code>PAGER</code></font> environment variable (since dpkg 1.19.2).</dd>
-<dt><font SIZE="-1"><code>DPKG_ROOT</code></font></dt>
+</dd><dt><code>DPKG_PAGER</code></dt>
+<dd> Sets the pager command to use (since dpkg 1.19.1), which will be executed with &laquo;$SHELL<code> -c</code>&raquo;. If <code>SHELL</code> is not set, &laquo;<code>sh</code>&raquo; will be used instead. The <code>DPKG_PAGER</code> overrides the <code>PAGER</code> environment variable (since dpkg 1.19.2).</dd>
+<dt><code>DPKG_ROOT</code></dt>
 <dd> If set and the <code>&#8211;root</code> option has not been specified, it will be used as the filesystem root directory (since dpkg 1.21.0).</dd>
-<dt><font SIZE="-1"><code>DPKG_ADMINDIR</code></font></dt>
+<dt><code>DPKG_ADMINDIR</code></dt>
 <dd> If set and the <code>&#8211;admindir</code> option has not been specified, it will be used as the <code>dpkg</code> data directory.</dd>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd></dl>
 <h3>Internal environment</h3>
 <dl>
-<dt><font SIZE="-1"><code>LESS</code></font></dt>
-<dd> Defined by <code>dpkg-query</code> to &#8220;<code>-FRSXMQ</code>&#8220;, if not already set, when spawning a pager (since dpkg 1.19.2). To change the default behavior, this variable can be preset to some other value including an empty string, or the <font SIZE="-1"><code>PAGER</code></font> or <font SIZE="-1"><code>DPKG_PAGER</code></font> variables can be set to disable specific options with &laquo;<code>-+</code>&raquo;, for example <code>DPKG_PAGER=&#8220;less -+F&#8221;</code>.</dd></dl>
+<dt><code>LESS</code></dt>
+<dd> Defined by <code>dpkg-query</code> to &#8220;<code>-FRSXMQ</code>&#8220;, if not already set, when spawning a pager (since dpkg 1.19.2). To change the default behavior, this variable can be preset to some other value including an empty string, or the <code>PAGER</code> or <code>DPKG_PAGER</code> variables can be set to disable specific options with &laquo;<code>-+</code>&raquo;, for example <code>DPKG_PAGER=&#8220;less -+F&#8221;</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1). </p>

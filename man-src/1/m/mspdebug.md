@@ -186,9 +186,9 @@ description: "MSPDebug – debugging tool for MSP430 MCUs"
 <p> An address value may be either a decimal value, a hexadecimal value preceeded by the prefix <code>0x</code>, or a symbol name. </p>
 <p> The operators recognised are the usual algebraic operators: <code>+</code>, <code>&#8211;</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>(</code> and <code>)</code>. Operator precedence is the same as in C-like languages, and the <code>&#8211;</code> operator may be used as a unary negation operator. </p>
 <p> The following are all valid examples of address expressions: </p>
-<p> <code>2+2</code><br />
- <code>table_start + (elem_size + elem_pad)*4</code><br />
- <code>main+0x3f</code><br />
+<p> <code>2+2</code><br/>
+ <code>table_start + (elem_size + elem_pad)*4</code><br/>
+ <code>main+0x3f</code><br/>
  <code>__bss_end-__bss_start</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nm/">nm</a></code>(1), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <code><a href="/docs/linux/man/1-objcopy/">objcopy</a></code>(1)</p>

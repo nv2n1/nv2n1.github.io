@@ -9,8 +9,8 @@ description: "pktsetup – set up and tear down packet device associations"
 
 <p>pktsetup &#8211; set up and tear down packet device associations</p>
 <h2>Synopsis</h2>
-<p><code>pktsetup</code> <i>packet_device block_device</i><br />
- <code>pktsetup</code> <code>-d</code> <i>packet_device</i><br />
+<p><code>pktsetup</code> <i>packet_device block_device</i><br/>
+ <code>pktsetup</code> <code>-d</code> <i>packet_device</i><br/>
  <code>pktsetup</code> <code>-s</code></p>
 <h2>Description</h2>
 <p><code>Pktsetup</code> is used to associate packet devices with CD or DVD block devices, so that the packet device can then be mounted and potentially used as a read/write filesystem. This requires kernel support for the packet device, and the UDF filesystem. See: <a rel="nofollow" href="http://packet-cd.sourceforge.net/">http://packet-cd.sourceforge.net/</a> </p>

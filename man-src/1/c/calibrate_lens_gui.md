@@ -12,8 +12,8 @@ description: "calibrate_lens_gui – Lens distortion calibration by straight lin
 <h2>SYNOPSIS</h2>
 <p> <code>calibrate_lens_gui</code></p>
 <h2>DESCRIPTION</h2>
-<p> <code>calibrate_lens_gui</code> is a <font SIZE="-1">GUI</font> tool for lens calibration. </p>
-<p> This man page is a stub, complete documentation of the <font SIZE="-1">GUI</font> can be found in the online manual available in the <i><a href="/docs/linux/man/1-hugin/">Hugin</a></i>(1) Help menu.</p>
+<p> <code>calibrate_lens_gui</code> is a GUI tool for lens calibration. </p>
+<p> This man page is a stub, complete documentation of the GUI can be found in the online manual available in the <i><a href="/docs/linux/man/1-hugin/">Hugin</a></i>(1) Help menu.</p>
 <h2>OPTIONS</h2>
 <p> <code>calibrate_lens_gui</code> has no command-line options or parameters.</p>
 <h2>SEE ALSO</h2>

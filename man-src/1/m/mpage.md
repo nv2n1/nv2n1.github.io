@@ -127,7 +127,7 @@ description: "mpage – print multiple pages per sheet on PostScript printer"
 <p> it would (in the absence of other command line arguments) print 2 pages per sheet, 60 lines per page, with outlines, on the printer named <code>qms</code> (overriding the <code>PRINTER</code>/<code>LPDEST</code> environment variable, if it exists.) In the environment variable, white space is used as an option delimiter, and no quoting is recognized. </p>
 <p> Any command line options will override both the <code>PRINTER</code> and <code>MPAGE</code> environment variables. </p>
 <h2>FILES</h2>
-<p> /usr/tmp/mpageXXXXXX<br />
+<p> /usr/tmp/mpageXXXXXX<br/>
  /usr/share/mpage </p>
 <h2>BUGS</h2>
 <p> Suffers under the burden of far too many switches. (But <code>you</code> wanted the choices!) </p>
@@ -135,11 +135,11 @@ description: "mpage – print multiple pages per sheet on PostScript printer"
 <p> Many others, we&#8217;re sure. </p>
 <p> Mpage is year 2000 compliant, as long as the underlying operating system is!!! </p>
 <h2>VERSION</h2>
-<p> Version 2.5.6, Released Januari 2008.<br />
+<p> Version 2.5.6, Released Januari 2008.<br/>
  Location:</p>
 <dl>
 <dt>
-</dt><dd> <a rel="nofollow" href="http://www.mesa.nl/pub/mpage">http://www.mesa.nl/pub/mpage</a><br />
+</dt><dd> <a rel="nofollow" href="http://www.mesa.nl/pub/mpage">http://www.mesa.nl/pub/mpage</a><br/>
  <a href="ftp://ftp.mesa.nl/pub/mpage">ftp://ftp.mesa.nl/pub/mpage</a></dd></dl>
 <h2>AUTHORS</h2>
 <p> Marcel Mol &lt;marcel [at] mesa.nl&gt; (current maintainer). </p>

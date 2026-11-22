@@ -9,8 +9,8 @@ description: "std::filesystem::path::remove_filename – std::filesystem::path::
 
 <p>std::filesystem::path::remove_filename &#8211; std::filesystem::path::remove_filename</p>
 <h2>Synopsis</h2>
-<p>path&amp; remove_filename() <code>(1)</code> <i>(since C++17)</i><br />
-Removes a single generic-format filename component (as returned by filename) from the given generic-format path.<br />
+<p>path&amp; remove_filename() <code>(1)</code> <i>(since C++17)</i><br/>
+Removes a single generic-format filename component (as returned by filename) from the given generic-format path.<br/>
 After this function completes, has_filename returns false. </p>
 <h2>Parameters</h2>
 <p><i>(none)</i></p>
@@ -36,14 +36,14 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;&quot;foo/&quot;<br />
-&nbsp;<wbr>&nbsp;&quot;foo/&quot;<br />
-&nbsp;<wbr>&nbsp;&quot;/&quot;<br />
+<p>&nbsp;<wbr>&nbsp;&quot;foo/&quot;<br/>
+&nbsp;<wbr>&nbsp;&quot;foo/&quot;<br/>
+&nbsp;<wbr>&nbsp;&quot;/&quot;<br/>
 &nbsp;<wbr>&nbsp;&quot;/&quot;</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;returns the filename path component<br />
-filename <i>(public member function)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;replaces the last path component with another path<br />
-replace_filename <i>(public member function)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;checks if the corresponding path element is not empty<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;returns the filename path component<br/>
+filename <i>(public member function)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;replaces the last path component with another path<br/>
+replace_filename <i>(public member function)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;checks if the corresponding path element is not empty<br/>
 has_filename <i>(public member function)</i> </p>

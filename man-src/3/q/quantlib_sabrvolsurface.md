@@ -17,22 +17,22 @@ description: "QuantLib::SabrVolSurface – SABR volatility (smile) surface."
 <p> std::vector&lt; <code>Volatility</code> &gt; <code>volatilitySpreads</code> (const <code>Period</code> &amp;) const </p>
 <p> std::vector&lt; <code>Volatility</code> &gt; <code>volatilitySpreads</code> (const <code>Date</code> &amp;) const </p>
 <p> <code>TermStructure interface</code> </p>
-<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>the day counter used for date/time conversion </i><br />
- <code>Date</code> <code>maxDate</code> () const<br />
- <i>the latest date for which the curve can return values </i><br />
- Time <code>maxTime</code> () const<br />
- <i>the latest time for which the curve can return values </i><br />
- const <code>Date</code> &amp; <code>referenceDate</code> () const<br />
- <i>the date at which discount = 1.0 and/or variance = 0.0 </i><br />
- <code>Calendar</code> <code>calendar</code> () const<br />
- <i>the calendar used for reference and/or option date calculation </i><br />
- <code>Natural</code> <code>settlementDays</code> () const<br />
+<p> <code>DayCounter</code> <code>dayCounter</code> () const<br/>
+ <i>the day counter used for date/time conversion </i><br/>
+ <code>Date</code> <code>maxDate</code> () const<br/>
+ <i>the latest date for which the curve can return values </i><br/>
+ Time <code>maxTime</code> () const<br/>
+ <i>the latest time for which the curve can return values </i><br/>
+ const <code>Date</code> &amp; <code>referenceDate</code> () const<br/>
+ <i>the date at which discount = 1.0 and/or variance = 0.0 </i><br/>
+ <code>Calendar</code> <code>calendar</code> () const<br/>
+ <i>the calendar used for reference and/or option date calculation </i><br/>
+ <code>Natural</code> <code>settlementDays</code> () const<br/>
  <i>the settlementDays used for reference date calculation </i> </p>
 <p> <code>VolatilityTermStructure interface</code> </p>
-<p> <code>Real</code> <code>minStrike</code> () const<br />
- <i>the minimum strike for which the term structure can return vols </i><br />
- <code>Real</code> <code>maxStrike</code> () const<br />
+<p> <code>Real</code> <code>minStrike</code> () const<br/>
+ <i>the minimum strike for which the term structure can return vols </i><br/>
+ <code>Real</code> <code>maxStrike</code> () const<br/>
  <i>the maximum strike for which the term structure can return vols </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>

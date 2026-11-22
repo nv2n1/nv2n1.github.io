@@ -10,7 +10,7 @@ description: "zsymv.f –"
 <p>zsymv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zsymv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>zsymv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>ZSYMV</code> computes a matrix-vector product for a complex symmetric matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zsymv (characterUPLO, integerN, complex*16ALPHA, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )X, integerINCX, complex*16BETA, complex*16, dimension( * )Y, integerINCY)</h3>

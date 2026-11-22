@@ -11,7 +11,7 @@ description: "oggSplit – demultiplexes ogv files"
 <h2>Synopsis</h2>
 <p><code>oggSplit outfile.ogv </code></p>
 <h2>Description</h2>
-<p><code>oggSplit</code> demultiplexes a multiplexed ogg file into several files with one stream each.<br />
+<p><code>oggSplit</code> demultiplexes a multiplexed ogg file into several files with one stream each.<br/>
 &nbsp;<wbr> An ogg video file (with extension .ogv) usually consist of an audio and a video stream. The command line tool oggSplit disjoins these streams into seperate files. This is also often called demultiplexing. </p>
 <p> After that you have all embedded files of this input file with the following naming: </p>
 <p> <i>theora_&lt;ID&gt;.ogv:</i> This is the video stream encoded with the theora codec. The &lt;ID&gt; is the stream ID that is created by the encoder to uniquely identify this stream. </p>

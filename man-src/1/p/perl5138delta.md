@@ -28,12 +28,12 @@ open my $fh, "&gt;", $file;
 $fh-&gt;binmode(":raw");
 #loads IO::File and succeeds
 </code></pre>
-<p> This also works for globs like <font SIZE="-1">STDOUT</font>, <font SIZE="-1">STDERR</font> and <font SIZE="-1">STDIN:</font> </p>
+<p> This also works for globs like STDOUT, STDERR and STDIN: </p>
 <p>STDOUT-&gt;autoflush(1);</p>
 <p> Because this on-demand load only happens if method resolution fails, the legacy approach of manually loading an IO::File parent class for partial method support still works as expected: </p>
-<p>use IO::Handle;<br />
-open my $fh, &#8220;&gt;&#8221;, $file;<br />
-$fh-&gt;autoflush(1);<br />
+<p>use IO::Handle;<br/>
+open my $fh, &#8220;&gt;&#8221;, $file;<br/>
+$fh-&gt;autoflush(1);<br/>
 #IO::File not loaded</p>
 <h3>Full functionality for use feature &#8216;unicode_strings&#8217;</h3>
 <p> This release provides full functionality for <tt>&quot;use feature 'unicode_strings'&quot;</tt>. Under its scope, all string operations executed and regular expressions compiled (even if executed outside its scope) have Unicode semantics. See feature. </p>
@@ -47,10 +47,10 @@ $fh-&gt;autoflush(1);<br />
 <h3>DTrace probes now include package name</h3>
 <p> The DTrace probes now include an additional argument (<tt>&quot;arg3&quot;</tt>) which contains the package the subroutine being entered or left was compiled in. </p>
 <p> For example using the following DTrace script: </p>
-<p>perl$target:: : sub &#8211; entry<br />
-{<br />
+<p>perl$target:: : sub &#8211; entry<br/>
+{<br/>
     printf(&#8220;%s::%s
-&#8221;, copyinstr(arg0), copyinstr(arg3));<br />
+&#8221;, copyinstr(arg0), copyinstr(arg3));<br/>
 }</p>
 <p> and then running: </p>
 <pre>
@@ -65,7 +65,7 @@ $fh-&gt;autoflush(1);<br />
 <h2>Incompatible Changes</h2>
 <h3>:= is now a syntax error</h3>
 <p> Previously <tt>&quot;my $pi := 4;&quot;</tt> was exactly equivalent to <tt>&quot;my $pi : = 4;&quot;</tt>, with the <tt>&quot;:&quot;</tt> being treated as the start of an attribute list, ending before the <tt>&quot;=&quot;</tt>. The use of <tt>&quot;:=&quot;</tt> to mean <tt>&quot;: =&quot;</tt> was deprecated in 5.12.0, and is now a syntax error. This will allow the future use of <tt>&quot;:=&quot;</tt> as a new token. </p>
-<p> We find no Perl 5 code on <font SIZE="-1">CPAN</font> using this construction, outside the core&#8217;s tests for it, so we believe that this change will have very little impact on real-world codebases. </p>
+<p> We find no Perl 5 code on CPAN using this construction, outside the core&#8217;s tests for it, so we believe that this change will have very little impact on real-world codebases. </p>
 <p> If it is absolutely necessary to have empty attribute lists (for example, because of a code generator) then avoid the error by adding a space before the <tt>&quot;=&quot;</tt>.</p>
 <h3>Run-time code block in regular expressions</h3>
 <p> Code blocks in regular expressions (<tt>&quot;(?{...})&quot;</tt> and <tt>&quot;(??{...})&quot;</tt>) used not to inherit any pragmata (strict, warnings, etc.) if the regular expression was compiled at run time as happens in cases like these two: </p>
@@ -80,8 +80,8 @@ $foo = ~$bar;
 <h3>?PATTERN? is deprecated</h3>
 <p> <tt>&quot;?PATTERN?&quot;</tt> (without the initial m) has been deprecated and now produces a warning. This is to allow future use of <tt>&quot;?&quot;</tt> in new operators. The match-once functionality is still available in the form of <tt>&quot;m?PATTERN?&quot;</tt>.</p>
 <h3>sv_compile_2op() is now deprecated</h3>
-<p> The <tt>&quot;sv_compile_2op()&quot;</tt> <font SIZE="-1">API</font> function is now deprecated. Searches suggest that nothing on <font SIZE="-1">CPAN</font> is using it, so this should have zero impact. </p>
-<p> It attempted to provide an <font SIZE="-1">API</font> to compile code down to an optree, but failed to bind correctly to lexicals in the enclosing scope. It&#8217;s not possible to fix this problem within the constraints of its parameters and return value.</p>
+<p> The <tt>&quot;sv_compile_2op()&quot;</tt> API function is now deprecated. Searches suggest that nothing on CPAN is using it, so this should have zero impact. </p>
+<p> It attempted to provide an API to compile code down to an optree, but failed to bind correctly to lexicals in the enclosing scope. It&#8217;s not possible to fix this problem within the constraints of its parameters and return value.</p>
 <h3>Tie functions on scalars holding typeglobs</h3>
 <p> Calling a tie function (<tt>&quot;tie&quot;</tt>, <tt>&quot;tied&quot;</tt>, <tt>&quot;untie&quot;</tt>) with a scalar argument acts on a file handle if the scalar happens to hold a typeglob. </p>
 <p> This is a long-standing bug that will be removed in Perl 5.16, as there is currently no way to tie the scalar itself when it holds a typeglob, and no way to untie a scalar that has had a typeglob assigned to it. </p>
@@ -94,7 +94,7 @@ $foo = ~$bar;
 <p> Skip extracting pax extended headers.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;autodie&quot;</tt> has been upgraded from version 2.10 to 2.1001. </dd>
-<p> Test fix in blead for <font SIZE="-1">VMS</font>.</p>
+<p> Test fix in blead for VMS.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;B&quot;</tt> has been upgraded from version 1.26 to 1.27. </dd>
 <p> Avoid compiler warnings.</p>
@@ -120,27 +120,27 @@ $foo = ~$bar;
 <dt>&bull;</dt>
 <dd> <tt>&quot;Digest::SHA&quot;</tt> has been upgraded from 5.48 to 5.50. </dd>
 <p> <tt>&quot;shasum&quot;</tt> now more closely mimics <tt>&quot;sha1sum&quot;</tt>/<tt>&quot;md5sum&quot;</tt>. </p>
-<p> <tt>&quot;Addfile&quot;</tt> accepts all <font SIZE="-1">POSIX</font> filenames.</p>
+<p> <tt>&quot;Addfile&quot;</tt> accepts all POSIX filenames.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Dumpvalue&quot;</tt> has been upgraded from version 1.14 to 1.15. </dd>
 <p> Test improvements.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;DynaLoader&quot;</tt> has been upgraded from version 1.11 to 1.12. </dd>
-<p> Remove obsolete <font SIZE="-1">RCS</font> keywords.</p>
+<p> Remove obsolete RCS keywords.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Env&quot;</tt> has been upgraded from version 1.01 to 1.02. </dd>
 <p> Test improvements.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;ExtUtils::CBuilder&quot;</tt> has been upgraded from 0.2703 to 0.280201. </dd>
-<p> Handle C and C<font SIZE="-2">++</font> compilers separately. </p>
-<p> Preserves exit status on <font SIZE="-1">VMS</font>. </p>
+<p> Handle C and C++ compilers separately. </p>
+<p> Preserves exit status on VMS. </p>
 <p> Test improvements.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;ExtUtils::Constant::Utils&quot;</tt> has been upgraded from 0.02 to 0.03. </dd>
-<p> Refactoring and fixing of backcompat code, preparing for resynchronisation with <font SIZE="-1">CPAN</font>.</p>
+<p> Refactoring and fixing of backcompat code, preparing for resynchronisation with CPAN.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;ExtUtils::Embed&quot;</tt> has been upgraded from 1.29 to 1.30. </dd>
-<p> Remove obsolete <font SIZE="-1">RCS</font> keywords.</p>
+<p> Remove obsolete RCS keywords.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;ExtUtils::ParseXS&quot;</tt> has been upgraded from 2.2207 to 2.2208. </dd>
 <p> Avoid compiler warnings.</p>
@@ -161,7 +161,7 @@ $foo = ~$bar;
 <dt>&bull;</dt>
 <dd> <tt>&quot;GDBM_File&quot;</tt> has been upgraded from 1.12 to 1.13. </dd>
 <p> Test improvements. </p>
-<p> Remove obsolete <font SIZE="-1">RCS</font> keywords.</p>
+<p> Remove obsolete RCS keywords.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Hash::Util::FieldHash&quot;</tt> has been upgraded from 1.06 to 1.07. </dd>
 <p> Avoid compiler warnings.</p>
@@ -181,7 +181,7 @@ $foo = ~$bar;
 <p> Documentation enhancements.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;IPC::Open3&quot;</tt> has been upgraded from 1.07 to 1.08. </dd>
-<p> Remove obsolete <font SIZE="-1">RCS</font> keywords. </p>
+<p> Remove obsolete RCS keywords. </p>
 <p> Test improvements.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Locale::Codes&quot;</tt> has been upgraded from version 3.14 to 3.15. </dd>
@@ -191,24 +191,24 @@ $foo = ~$bar;
 <p> Documentation and comment spelling fixes.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Memoize&quot;</tt> has been upgraded from version 1.01_03 to 1.02. </dd>
-<p> Remove obsolete <font SIZE="-1">RCS</font> keywords. </p>
+<p> Remove obsolete RCS keywords. </p>
 <p> Whitespace changes.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;MIME::Base64&quot;</tt> has been upgraded from 3.10 to 3.13. </dd>
-<p> Now provides <tt>&quot;encode_base64url&quot;</tt> and <tt>&quot;decode_base64url&quot;</tt> functions to process the base64 scheme for &#8220;<font SIZE="-1">URL</font> applications&#8221;.</p>
+<p> Now provides <tt>&quot;encode_base64url&quot;</tt> and <tt>&quot;decode_base64url&quot;</tt> functions to process the base64 scheme for &#8220;URL applications&#8221;.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;mro&quot;</tt> has been upgraded from version 1.05 to 1.06. </dd>
-<p> <tt>&quot;next::method&quot;</tt> <i>et al.</i> now take into account that every class inherits from <font SIZE="-1">UNIVERSAL</font> [perl #68654] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=68654">http://rt.perl.org/rt3/Public/Bug/Display.html?id=68654</a>&gt;.</p>
+<p> <tt>&quot;next::method&quot;</tt> <i>et al.</i> now take into account that every class inherits from UNIVERSAL [perl #68654] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=68654">http://rt.perl.org/rt3/Public/Bug/Display.html?id=68654</a>&gt;.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;NDBM_File&quot;</tt> has been upgraded from 1.10 to 1.11. </dd>
-<p> Remove obsolete <font SIZE="-1">RCS</font> keywords. </p>
+<p> Remove obsolete RCS keywords. </p>
 <p> Test improvements.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Net::Ping&quot;</tt> has been upgraded from 2.36 to 2.37. </dd>
-<p> Remove obsolete <font SIZE="-1">RCS</font> keywords.</p>
+<p> Remove obsolete RCS keywords.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;ODBM_File&quot;</tt> has been upgraded from 1.09 to 1.10. </dd>
-<p> Remove obsolete <font SIZE="-1">RCS</font> keywords. </p>
+<p> Remove obsolete RCS keywords. </p>
 <p> Test improvements.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Opcode&quot;</tt> has been upgraded from 1.17 to 1.18. </dd>
@@ -221,7 +221,7 @@ $foo = ~$bar;
 <dt>&bull;</dt>
 <dd> <tt>&quot;PerlIO::encoding&quot;</tt> has been upgraded from 0.13 to 0.14. </dd>
 <p> Avoid compiler warnings. </p>
-<p> Remove obsolete <font SIZE="-1">RCS</font> keywords. </p>
+<p> Remove obsolete RCS keywords. </p>
 <p> Test improvements.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;PerlIO::scalar&quot;</tt> has been upgraded from 0.10 to 0.11. </dd>
@@ -239,14 +239,14 @@ $foo = ~$bar;
 <dt>&bull;</dt>
 <dd> <tt>&quot;SDBM_File&quot;</tt> has been upgraded from 1.08 to 1.09. </dd>
 <p> Avoid compiler warnings. </p>
-<p> Remove obsolete <font SIZE="-1">RCS</font> keywords. </p>
+<p> Remove obsolete RCS keywords. </p>
 <p> Test improvements.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Socket&quot;</tt> has been upgraded from 1.91 to 1.92. </dd>
 <p> It has several new functions for handling IPv6 addresses.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Storable&quot;</tt> has been upgraded from 2.24 to 2.25. </dd>
-<p> This adds support for serialising code references that contain <font SIZE="-1">UTF-8</font> strings correctly. The Storable minor version number changed as a result, meaning that Storable users who set <tt>$Storable::accept_future_minor</tt> to a <tt>&quot;FALSE&quot;</tt> value will see errors (see &#8220;<font SIZE="-1">FORWARD</font> <font SIZE="-1">COMPATIBILITY</font>&#8221; in Storable for more details). </p>
+<p> This adds support for serialising code references that contain UTF-8 strings correctly. The Storable minor version number changed as a result, meaning that Storable users who set <tt>$Storable::accept_future_minor</tt> to a <tt>&quot;FALSE&quot;</tt> value will see errors (see &#8220;FORWARD COMPATIBILITY&#8221; in Storable for more details). </p>
 <p> Freezing no longer gets confused if the Perl stack gets reallocated during freezing [perl #80074] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=80074">http://rt.perl.org/rt3/Public/Bug/Display.html?id=80074</a>&gt;. </p>
 <p> Avoid compiler warnings.</p>
 <dt>&bull;</dt>
@@ -257,7 +257,7 @@ $foo = ~$bar;
 <p> Avoid compiler warnings.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Time::HiRes&quot;</tt> has been upgraded from 1.9721 to 1.9721_01. </dd>
-<p> Build fix in blead for <font SIZE="-1">VMS</font>.</p>
+<p> Build fix in blead for VMS.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Unicode::Collate&quot;</tt> has been upgraded from 0.67 to 0.6801. </dd>
 <p> Documentation clarification. </p>
@@ -279,10 +279,10 @@ $foo = ~$bar;
 <p> Corrections to names returned by <tt>&quot;Win32::GetOSName&quot;</tt> and <tt>&quot;Win32::GetOSDisplayName&quot;</tt>.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;XS::APItest&quot;</tt> has been upgraded from 0.26 to 0.27. </dd>
-<p> Test new <font SIZE="-1">API</font> functions. </p>
+<p> Test new API functions. </p>
 <p> Avoid compiler warnings.</dl>
 <h3>Dual-life Modules and Pragmata</h3>
-<p> These modules were formerly distributed only in the Perl core distribution, and are now dual-lifed (meaning they are now also available separately on <font SIZE="-1">CPAN</font>):</p>
+<p> These modules were formerly distributed only in the Perl core distribution, and are now dual-lifed (meaning they are now also available separately on CPAN):</p>
 <dl>
 <dt>&bull;</dt>
 <dd> <tt>&quot;autouse&quot;</tt></dd>
@@ -324,9 +324,9 @@ $foo = ~$bar;
 <h2>Internal Changes</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> The <tt>&quot;mg_findext()&quot;</tt> and <tt>&quot;sv_unmagicext()&quot;</tt> functions have been added to the <font SIZE="-1">API</font>. They allow extension authors to find and remove magic attached to scalars based on both the magic type and the magic virtual table, similar to how <tt>&quot;sv_magicext()&quot;</tt> attaches magic of a certain type and with a given virtual table to a scalar. This eliminates the need for extensions to walk the list of <tt>&quot;MAGIC&quot;</tt> pointers of an <tt>&quot;SV&quot;</tt> to find the magic that belongs to them.</dd>
+<dd> The <tt>&quot;mg_findext()&quot;</tt> and <tt>&quot;sv_unmagicext()&quot;</tt> functions have been added to the API. They allow extension authors to find and remove magic attached to scalars based on both the magic type and the magic virtual table, similar to how <tt>&quot;sv_magicext()&quot;</tt> attaches magic of a certain type and with a given virtual table to a scalar. This eliminates the need for extensions to walk the list of <tt>&quot;MAGIC&quot;</tt> pointers of an <tt>&quot;SV&quot;</tt> to find the magic that belongs to them.</dd>
 <dt>&bull;</dt>
-<dd> The <tt>&quot;parse_fullexpr()&quot;</tt>, <tt>&quot;parse_listexpr()&quot;</tt>, <tt>&quot;parse_termexpr()&quot;</tt>, and <tt>&quot;parse_arithexpr()&quot;</tt> functions have been added to the <font SIZE="-1">API</font>. They perform recursive-descent parsing of expressions at various precedence levels. They are expected to be used by syntax plugins.</dd></dl>
+<dd> The <tt>&quot;parse_fullexpr()&quot;</tt>, <tt>&quot;parse_listexpr()&quot;</tt>, <tt>&quot;parse_termexpr()&quot;</tt>, and <tt>&quot;parse_arithexpr()&quot;</tt> functions have been added to the API. They perform recursive-descent parsing of expressions at various precedence levels. They are expected to be used by syntax plugins.</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
 <dt>&bull;</dt>
@@ -338,7 +338,7 @@ $foo = ~$bar;
 <dt>&bull;</dt>
 <dd> PerlIO no longer crashes when called recursively, e.g., from a signal handler. Now it just leaks memory [perl #75556] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=75556">http://rt.perl.org/rt3/Public/Bug/Display.html?id=75556</a>&gt;.</dd>
 <dt>&bull;</dt>
-<dd> Defining a constant with the same name as one of perl&#8217;s special blocks (e.g., <font SIZE="-1">INIT</font>) stopped working in 5.12.0, but has now been fixed [perl #78634] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78634">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78634</a>&gt;.</dd>
+<dd> Defining a constant with the same name as one of perl&#8217;s special blocks (e.g., INIT) stopped working in 5.12.0, but has now been fixed [perl #78634] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=78634">http://rt.perl.org/rt3/Public/Bug/Display.html?id=78634</a>&gt;.</dd>
 <dt>&bull;</dt>
 <dd> A reference to a literal value used as a hash key (<tt>$hash{\&quot;foo&quot;}</tt>) used to be stringified, even if the hash was tied [perl #79178] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=79178">http://rt.perl.org/rt3/Public/Bug/Display.html?id=79178</a>&gt;.</dd>
 <dt>&bull;</dt>
@@ -358,7 +358,7 @@ $foo = ~$bar;
 <dt>&bull;</dt>
 <dd> <tt>&quot;require&quot;</tt> no longer causes <tt>&quot;caller&quot;</tt> to return the wrong file name for the scope that called <tt>&quot;require&quot;</tt> and other scopes higher up that had the same file name [perl #68712] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=68712">http://rt.perl.org/rt3/Public/Bug/Display.html?id=68712</a>&gt;.</dd>
 <dt>&bull;</dt>
-<dd> The ref types in the typemap for <font SIZE="-1">XS</font> bindings now support magical variables [perl #72684] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=72684">http://rt.perl.org/rt3/Public/Bug/Display.html?id=72684</a>&gt;.</dd>
+<dd> The ref types in the typemap for XS bindings now support magical variables [perl #72684] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=72684">http://rt.perl.org/rt3/Public/Bug/Display.html?id=72684</a>&gt;.</dd>
 <dt>&bull;</dt>
 <dd> Match variables (e.g., <tt>$1</tt>) no longer persist between calls to a sort subroutine [perl #76026] &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=76026">http://rt.perl.org/rt3/Public/Bug/Display.html?id=76026</a>&gt;.</dd>
 <dt>&bull;</dt>
@@ -374,9 +374,9 @@ $foo = ~$bar;
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN</font>.</p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

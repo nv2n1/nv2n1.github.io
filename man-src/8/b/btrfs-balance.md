@@ -13,7 +13,7 @@ description: "btrfs-balance – balance block groups on a btrfs filesystem"
 <h2>Description</h2>
 <p>The primary purpose of the balance feature is to spread block groups across all devices so they match constraints defined by the respective profiles. See <code><a href="/docs/linux/man/8-mkfs-btrfs/">mkfs.btrfs</a></code>(8) section <i>PROFILES</i> for more details. The scope of the balancing process can be further tuned by use of filters that can select the block groups to process. Balance works only on a mounted filesystem. The balance operation is cancellable by the user. The on-disk state of the filesystem is always consistent so an unexpected interruption (eg. system crash, reboot) does not corrupt the filesystem. The progress of the balance operation is temporarily stored as an internal state and will be resumed upon mount, unless the mount option <i>skip_balance</i> is specified.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  running balance without filters will take a lot of time as it basically rewrites the entire filesystem and needs to update all block pointers.  The filters can be used to perform following actions:</dd>
 <dl>
 <dd>&bull; convert block group profiles (filter <i>convert</i>)</dd></dl>
@@ -23,15 +23,15 @@ description: "btrfs-balance – balance block groups on a btrfs filesystem"
 <dd>&bull; perform actions only on a given device (filters <i>devid</i>, <i>drange</i>)</dd></dl>
 <p> The filters can be applied to a combination of block group types (data, metadata, system). Note that changing <i>system</i> needs the force option.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  the balance operation needs enough work space, ie. space that is completely unused in the filesystem, otherwise this may lead to ENOSPC reports. See the section <i>ENOSPC</i> for more details. </dd>
 <h2>Compatibility</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> The balance subcommand also exists under the <code>btrfs filesystem</code> namespace. This still works for backward compatibility but is deprecated and should not be used any more. </p>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> A short syntax <code>btrfs balance </code><i>&lt;path&gt;</i> works due to backward compatibility but is deprecated and should not be used any more. Use <code>btrfs balance start</code> command instead. </p>
 </dl>
 <h2>Performance Implications</h2>
@@ -51,7 +51,7 @@ description: "btrfs-balance – balance block groups on a btrfs filesystem"
 <dl>
 <dd>start the balance operation according to the specified filters, no filters will rewrite the entire filesystem. The process runs in the foreground. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  the balance command without filters will basically rewrite everything in the filesystem. The run time is potentially very long, depending on the filesystem size. To prevent starting a full balance by accident, the user is warned and has a few seconds to cancel the operation before it starts. The warning and delay can be skipped with <i>&#8211;full-balance</i> option. </dd>
 </dl>
 <p> Please note that the filters must be written together with the <i>-d</i>, <i>-m</i> and <i>-s</i> options, because they&#8217;re optional and bare <i>-d</i> etc also work and mean no filters. </p>
@@ -103,11 +103,11 @@ description: "btrfs-balance – balance block groups on a btrfs filesystem"
 <dl>
 <dd>Convert each selected block group to the given profile name identified by parameters. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  starting with kernel 4.5, the <i>data</i> chunks can be converted to/from the <i>DUP</i> profile on a single device. </dd>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  starting with kernel 4.6, all profiles can be converted to/from <i>DUP</i> on multi-device filesystems. </dd>
 </dl>
 </dl>

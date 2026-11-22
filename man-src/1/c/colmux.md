@@ -130,7 +130,7 @@ description: "colmux – multiplex communications to multiple systems running co
 <p> <code>-reverse</code></p>
 <dl>
 <dt>
-</dt><dd> Reverse the default sort order. You can also change the direction of the sort interactively with the UP/DOWN arrow keys IF the ReadKey module is installed (see colmux -version)<br />
+</dt><dd> Reverse the default sort order. You can also change the direction of the sort interactively with the UP/DOWN arrow keys IF the ReadKey module is installed (see colmux -version)<br/>
 &nbsp;<wbr>OR simply type the r key and&nbsp;<wbr>&lt;ENTER&gt;.&nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <p> <code>-zero</code></p>
 <dl>
@@ -241,7 +241,7 @@ description: "colmux – multiplex communications to multiple systems running co
 <p> Do the same for yesterday, between the hours of 5AM and 6AM, being sure to stall for 1/2 second between intervals. Note, if you leave off -addr you could put all the logs into /var/log/collectl on the local host and play them back from there. </p>
 <p> <code>colmux -addr n[1-10] -command -sZ -p/var/log/collectl/YESTERDAY -from 05:00-06:00 -column 5 -delay .5</code> </p>
 <p> Look at the amount of mapped and slab memory consumed on nodes n1-n10 and n15 in real-time, every 2 seconds using single-line format. Include totals and preface each line with the time. Since memory sizes tend to be rather large, divide each by 1024 so we see MB rather than KB. Note that the columns numbers are always displayed are ascending order regardless of their order in -cols. To be sure, first test the column numbers. </p>
-<p> <code>colmux -addr n[1-10,15] -command -sm -i2 -oT -cols 6,7 -coltot -colk -test</code><br />
+<p> <code>colmux -addr n[1-10,15] -command -sm -i2 -oT -cols 6,7 -coltot -colk -test</code><br/>
  <code>colmux -addr n[1-10,15] -command -sm -i2 -oT -cols 6,7 -coltot -colk</code> </p>
 <p> Display most active disks, based on KB written, on nodes n1, n4 and n5. </p>
 <p> <code>colmux -addr n1,n4,n5 -command -sD -column 6</code> </p>
@@ -254,7 +254,7 @@ description: "colmux – multiplex communications to multiple systems running co
 <p> There are actually a couple of possibilities here, one of which is a firewall is preventing connections and the easiest way to test this is run collectl on the local machine like this: collectl -Aserver. This tells collectl run as a server, listening for connections just like colmux. Then log into a remote machine and run /usr/share/collectl/util/client.pl addr-of-server which tells client.pl to open a socket to that copy of collectl. It should fail just like when it was run via colmux, so try opening the firewall and try it again. If it fixes the problem, it was indeed the firewall blocking things and colmux should now work just fine. </p>
 <p> Sometimes there are multiple interfaces defined on the machine hosting colmux and in some cases only some addresses will allow socket connections. Again, using client.pl on the remote machine try connecting back to collectl over different addresses and when you find one that works, tell colmux to use that address for communication via the -retaddr switch. </p>
 <h2>AUTHOR</h2>
-<p> This program was written by Mark Seger (mjseger [at] gmail.com).<br />
+<p> This program was written by Mark Seger (mjseger [at] gmail.com).<br/>
  Copyright 2016 Hewlett-Packard Development Company, L.P. </p>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://collectl-utils.sourceforge.net/colmux.html">http://collectl-utils.sourceforge.net/colmux.html</a> </p>

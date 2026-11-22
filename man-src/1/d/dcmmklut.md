@@ -41,68 +41,68 @@ dcmimg-out  DICOM output filename
          use config file f for the logger
 </code></pre>
 <h3>LUT creation options</h3>
-<p>LUT type:<br />
-  +Tm  &#8211;modality<br />
-         create as Modality LUT<br />
-  +Tp  &#8211;presentation<br />
-         create as Presentation LUT<br />
-  +Tv  &#8211;voi<br />
-         create as VOI LUT (default)<br />
-LUT placement:<br />
-  +Pa  &#8211;add<br />
-         add to existing transform<br />
-         (default for and only with &#8211;voi)<br />
-  +Pr  &#8211;replace<br />
-         replace existing transform<br />
-         (default for &#8211;modality and &#8211;presentation)<br />
-LUT content:<br />
-  +Cg  &#8211;gamma  [g]amma: float<br />
-         use gamma value (default: 1.0)<br />
-  +Cm  &#8211;map-file  [f]ilename: string<br />
-         read input data from MAP file<br />
-  +Ct  &#8211;text-file  [f]ilename: string<br />
-         read input data from text file<br />
-LUT options:<br />
-  +Og  &#8211;inverse-gsdf<br />
-         apply inverse GSDF (print presentation LUT in OD)<br />
-       &#8211;min-density  [v]alue: integer (0..65535, default: 20)<br />
-         set min density to v (in hundreds of OD)<br />
-       &#8211;max-density  [v]alue: integer (0..65535, default: 300)<br />
-         set max density to v (in hundreds of OD)<br />
-  +Oi  &#8211;illumination  [v]alue: integer (0..65535, default: 2000)<br />
-         set illumination to v (in cd/m^2)<br />
-  +Or  &#8211;reflection  [v]alue: integer (0..65535, default: 10)<br />
-         set reflected ambient light to v (in cd/m^2)<br />
-LUT structure:<br />
-  -b   &#8211;bits  [n]umber: integer<br />
-         create LUT with n bit values (8..16, default: 16)<br />
-  -e   &#8211;entries  [n]umber: integer<br />
-         create LUT with n entries (1..65536, default: 256)<br />
-  -f   &#8211;first-mapped  [n]umber: integer<br />
-         first input value mapped (-31768..65535, default: 0)<br />
-  -r   &#8211;random  [n]umber: unsigned integer<br />
-         perform n randomly selected permutations on the LUT<br />
-  -rs  &#8211;random-seed  [n]umber: unsigned integer<br />
-         initialize the random-number generator with n<br />
-         (default: 0, for reproducible results)<br />
-  -o   &#8211;order  [n]umber: integer<br />
-         use polynomial curve fitting algorithm with order n<br />
-         (0..99, default: 5)<br />
-  -E   &#8211;explanation  [n]ame: string<br />
-         LUT explanation (default: automatically created)<br />
-LUT data alignment:<br />
-  -a   &#8211;byte-align<br />
-         create byte-aligned LUT<br />
-         (default for and only with 8 bit values)<br />
-  +a   &#8211;word-align<br />
-         create word-aligned LUT<br />
-         (default for 9-16 bit values)<br />
-LUT data VR:<br />
-  +Dw  &#8211;data-ow<br />
-         write LUT Data as OW (default)<br />
-  +Du  &#8211;data-us<br />
-         write LUT Data as US<br />
-  +Ds  &#8211;data-ss<br />
+<p>LUT type:<br/>
+  +Tm  &#8211;modality<br/>
+         create as Modality LUT<br/>
+  +Tp  &#8211;presentation<br/>
+         create as Presentation LUT<br/>
+  +Tv  &#8211;voi<br/>
+         create as VOI LUT (default)<br/>
+LUT placement:<br/>
+  +Pa  &#8211;add<br/>
+         add to existing transform<br/>
+         (default for and only with &#8211;voi)<br/>
+  +Pr  &#8211;replace<br/>
+         replace existing transform<br/>
+         (default for &#8211;modality and &#8211;presentation)<br/>
+LUT content:<br/>
+  +Cg  &#8211;gamma  [g]amma: float<br/>
+         use gamma value (default: 1.0)<br/>
+  +Cm  &#8211;map-file  [f]ilename: string<br/>
+         read input data from MAP file<br/>
+  +Ct  &#8211;text-file  [f]ilename: string<br/>
+         read input data from text file<br/>
+LUT options:<br/>
+  +Og  &#8211;inverse-gsdf<br/>
+         apply inverse GSDF (print presentation LUT in OD)<br/>
+       &#8211;min-density  [v]alue: integer (0..65535, default: 20)<br/>
+         set min density to v (in hundreds of OD)<br/>
+       &#8211;max-density  [v]alue: integer (0..65535, default: 300)<br/>
+         set max density to v (in hundreds of OD)<br/>
+  +Oi  &#8211;illumination  [v]alue: integer (0..65535, default: 2000)<br/>
+         set illumination to v (in cd/m^2)<br/>
+  +Or  &#8211;reflection  [v]alue: integer (0..65535, default: 10)<br/>
+         set reflected ambient light to v (in cd/m^2)<br/>
+LUT structure:<br/>
+  -b   &#8211;bits  [n]umber: integer<br/>
+         create LUT with n bit values (8..16, default: 16)<br/>
+  -e   &#8211;entries  [n]umber: integer<br/>
+         create LUT with n entries (1..65536, default: 256)<br/>
+  -f   &#8211;first-mapped  [n]umber: integer<br/>
+         first input value mapped (-31768..65535, default: 0)<br/>
+  -r   &#8211;random  [n]umber: unsigned integer<br/>
+         perform n randomly selected permutations on the LUT<br/>
+  -rs  &#8211;random-seed  [n]umber: unsigned integer<br/>
+         initialize the random-number generator with n<br/>
+         (default: 0, for reproducible results)<br/>
+  -o   &#8211;order  [n]umber: integer<br/>
+         use polynomial curve fitting algorithm with order n<br/>
+         (0..99, default: 5)<br/>
+  -E   &#8211;explanation  [n]ame: string<br/>
+         LUT explanation (default: automatically created)<br/>
+LUT data alignment:<br/>
+  -a   &#8211;byte-align<br/>
+         create byte-aligned LUT<br/>
+         (default for and only with 8 bit values)<br/>
+  +a   &#8211;word-align<br/>
+         create word-aligned LUT<br/>
+         (default for 9-16 bit values)<br/>
+LUT data VR:<br/>
+  +Dw  &#8211;data-ow<br/>
+         write LUT Data as OW (default)<br/>
+  +Du  &#8211;data-us<br/>
+         write LUT Data as US<br/>
+  +Ds  &#8211;data-ss<br/>
          write LUT Data as SS (minimal support)</p>
 <h3>file options</h3>
 <pre><code>

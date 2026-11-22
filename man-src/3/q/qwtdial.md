@@ -14,29 +14,29 @@ description: "QwtDial –"
 <p> Inherits <code>QwtAbstractSlider</code>. </p>
 <p> Inherited by <code>QwtAnalogClock</code>, and <code>QwtCompass</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>Shadow</code> { <code>Plain</code> = QFrame::Plain, <code>Raised</code> = QFrame::Raised, <code>Sunken</code> = QFrame::Sunken }<br />
- <i>Frame shadow. </i><br />
- enum <code>Mode</code> { <code>RotateNeedle</code>, <code>RotateScale</code> }<br />
+<p>enum <code>Shadow</code> { <code>Plain</code> = QFrame::Plain, <code>Raised</code> = QFrame::Raised, <code>Sunken</code> = QFrame::Sunken }<br/>
+ <i>Frame shadow. </i><br/>
+ enum <code>Mode</code> { <code>RotateNeedle</code>, <code>RotateScale</code> }<br/>
  <i>Mode controlling whether the needle or the scale is rotating. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtDial</code> (QWidget *parent=NULL)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtDial</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtDial</code> (QWidget *parent=NULL)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtDial</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setFrameShadow</code> (<code>Shadow</code>) </p>
 <p> <code>Shadow</code> <code>frameShadow</code> () const </p>
 <p> void <code>setLineWidth</code> (int) </p>
 <p> int <code>lineWidth</code> () const </p>
-<p> void <code>setMode</code> (<code>Mode</code>)<br />
- <i>Change the mode of the dial. </i><br />
+<p> void <code>setMode</code> (<code>Mode</code>)<br/>
+ <i>Change the mode of the dial. </i><br/>
  <code>Mode</code> <code>mode</code> () const </p>
 <p> void <code>setScaleArc</code> (double min, double max) </p>
 <p> void <code>setMinScaleArc</code> (double min) </p>
 <p> double <code>minScaleArc</code> () const </p>
 <p> void <code>setMaxScaleArc</code> (double min) </p>
 <p> double <code>maxScaleArc</code> () const </p>
-<p> virtual void <code>setOrigin</code> (double)<br />
- <i>Change the origin. </i><br />
+<p> virtual void <code>setOrigin</code> (double)<br/>
+ <i>Change the origin. </i><br/>
  double <code>origin</code> () const </p>
 <p> void <code>setNeedle</code> (<code>QwtDialNeedle</code> *) </p>
 <p> const <code>QwtDialNeedle</code> * <code>needle</code> () const </p>
@@ -54,19 +54,19 @@ description: "QwtDial –"
 <p> virtual void <code>paintEvent</code> (QPaintEvent *) </p>
 <p> virtual void <code>changeEvent</code> (QEvent *) </p>
 <p> virtual void <code>drawFrame</code> (QPainter *p) </p>
-<p> virtual void <code>drawContents</code> (QPainter *) const<br />
- <i>Draw the contents inside the frame. </i><br />
+<p> virtual void <code>drawContents</code> (QPainter *) const<br/>
+ <i>Draw the contents inside the frame. </i><br/>
  virtual void <code>drawFocusIndicator</code> (QPainter *) const </p>
 <p> void <code>invalidateCache</code> () </p>
 <p> virtual void <code>drawScale</code> (QPainter *, const QPointF &amp;center, double radius) const </p>
 <p> virtual void <code>drawScaleContents</code> (QPainter *painter, const QPointF &amp;center, double radius) const </p>
 <p> virtual void <code>drawNeedle</code> (QPainter *, const QPointF &amp;, double radius, double direction, QPalette::ColorGroup) const </p>
-<p> virtual double <code>scrolledTo</code> (const QPoint &amp;) const<br />
- <i>Determine the value for a new position of the slider handle. </i><br />
- virtual bool <code>isScrollPosition</code> (const QPoint &amp;) const<br />
- <i>Determine what to do when the user presses a mouse button. </i><br />
- virtual void <code>sliderChange</code> ()<br />
- <i>Calling update() </i><br />
+<p> virtual double <code>scrolledTo</code> (const QPoint &amp;) const<br/>
+ <i>Determine the value for a new position of the slider handle. </i><br/>
+ virtual bool <code>isScrollPosition</code> (const QPoint &amp;) const<br/>
+ <i>Determine what to do when the user presses a mouse button. </i><br/>
+ virtual void <code>sliderChange</code> ()<br/>
+ <i>Calling update() </i><br/>
  virtual void <code>scaleChange</code> () </p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>
@@ -148,26 +148,26 @@ description: "QwtDial –"
 <p>Draw the needle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>center</i> Center of the dial<br />
- <i>radius</i> Length for the needle<br />
- <i>direction</i> Direction of the needle in degrees, counter clockwise<br />
+<dd><i>painter</i> Painter<br/>
+ <i>center</i> Center of the dial<br/>
+ <i>radius</i> Length for the needle<br/>
+ <i>direction</i> Direction of the needle in degrees, counter clockwise<br/>
  <i>colorGroup</i> ColorGroup</dd></dl>
 <p> Reimplemented in <code>QwtAnalogClock</code>.</p>
 <h3>void QwtDial::drawScale (QPainter *painter, const QPointF &amp;center, doubleradius) const [protected], [virtual]</h3>
 <p>Draw the scale </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>center</i> Center of the dial<br />
+<dd><i>painter</i> Painter<br/>
+ <i>center</i> Center of the dial<br/>
  <i>radius</i> Radius of the scale</dd></dl>
 <h3>void QwtDial::drawScaleContents (QPainter *painter, const QPointF &amp;center, doubleradius) const [protected], [virtual]</h3>
 <p>Draw the contents inside the scale </p>
 <p> Paints nothing. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>center</i> Center of the contents circle<br />
+<dd><i>painter</i> Painter<br/>
+ <i>center</i> Center of the contents circle<br/>
  <i>radius</i> Radius of the contents circle</dd></dl>
 <p> Reimplemented in <code>QwtCompass</code>.</p>
 <h3><code>QwtDial::Shadow</code> QwtDial::frameShadow () const</h3>
@@ -349,7 +349,7 @@ description: "QwtDial –"
 <p>Change the arc of the scale </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>minArc</i> Lower limit<br />
+<dd><i>minArc</i> Lower limit<br/>
  <i>maxArc</i> Upper limit</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

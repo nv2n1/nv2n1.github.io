@@ -33,14 +33,14 @@ description: "XvCreateImage, XvShmCreateImage – create an XvImage"
 <p><code><a href="/docs/linux/man/3-xvcreateimage/">XvCreateImage</a></code>(3) is similar to <code><a href="/docs/linux/man/3-xcreateimage/">XCreateImage</a></code>(3). <code><a href="/docs/linux/man/3-xvshmcreateimage/">XvShmCreateImage</a></code>(3) is similar to <code><a href="/docs/linux/man/3-xshmcreateimage/">XShmCreateImage</a></code>(3). The library will allocate the XvImage structure and fill out all fields except for <i>data</i>. <i>Width</i> and <i>height</i> may be enlarged in some YUV formats. The size of the data buffer that needs to be allocated will be given in the <i>data_size</i> field in the XvImage. Image data is not allocated by this function. The client may pass a pointer to the preallocated memory as <i>data</i> or may allocate the memory and fill in the XvImage structure&#8217;s data field after the <i>data_size</i> field has been filled out by the server. The XvImage structure may be freed by <code><a href="/docs/linux/man/3-xfree/">XFree</a></code>(3). Shared memory segments are attached/detached with <code><a href="/docs/linux/man/3-xshmattach/">XShmAttach</a></code>(3)/<code><a href="/docs/linux/man/3-xshmdetach/">XShmDetach</a></code>(3).</p>
 <h2>Return Values</h2>
 <p>XvImage has the following structure: </p>
-<p> typedef struct {<br />
-int id;<br />
-int width, height;<br />
-int data_size;<br />
-int num_planes;<br />
-int&nbsp;<wbr>*pitches;<br />
-int&nbsp;<wbr>*offsets;<br />
-char&nbsp;<wbr>*data;<br />
+<p> typedef struct {<br/>
+int id;<br/>
+int width, height;<br/>
+int data_size;<br/>
+int num_planes;<br/>
+int&nbsp;<wbr>*pitches;<br/>
+int&nbsp;<wbr>*offsets;<br/>
+char&nbsp;<wbr>*data;<br/>
 XPointer obdata; } XvImage; </p>
 <dl COMPACT>
 <dt><i>id</i></dt>

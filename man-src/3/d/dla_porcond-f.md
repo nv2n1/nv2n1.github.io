@@ -10,7 +10,7 @@ description: "dla_porcond.f –"
 <p>dla_porcond.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>dla_porcond</code> (UPLO, N, A, LDA, AF, LDAF, CMODE, C, INFO, WORK, IWORK)<br />
+<p>DOUBLE PRECISION function <code>dla_porcond</code> (UPLO, N, A, LDA, AF, LDAF, CMODE, C, INFO, WORK, IWORK)<br/>
  <i></i><code>DLA_PORCOND</code> estimates the Skeel condition number for a symmetric positive-definite matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dla_porcond (characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldaf, * )AF, integerLDAF, integerCMODE, double precision, dimension( * )C, integerINFO, double precision, dimension( * )WORK, integer, dimension( * )IWORK)</h3>

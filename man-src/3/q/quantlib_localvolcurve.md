@@ -14,16 +14,16 @@ description: "QuantLib::LocalVolCurve – Local volatility curve derived from a 
 <h3>Public Member Functions</h3>
 <p><code>LocalVolCurve</code> (const <code>Handle</code>&lt; <code>BlackVarianceCurve</code> &gt; &amp;curve) </p>
 <p> <code>TermStructure interface</code> </p>
-<p> const <code>Date</code> &amp; <code>referenceDate</code> () const<br />
- <i>the date at which discount = 1.0 and/or variance = 0.0 </i><br />
- <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>the day counter used for date/time conversion </i><br />
- <code>Date</code> <code>maxDate</code> () const<br />
+<p> const <code>Date</code> &amp; <code>referenceDate</code> () const<br/>
+ <i>the date at which discount = 1.0 and/or variance = 0.0 </i><br/>
+ <code>DayCounter</code> <code>dayCounter</code> () const<br/>
+ <i>the day counter used for date/time conversion </i><br/>
+ <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i> </p>
 <p> <code>VolatilityTermStructure interface</code> </p>
-<p> Real <code>minStrike</code> () const<br />
- <i>the minimum strike for which the term structure can return vols </i><br />
- Real <code>maxStrike</code> () const<br />
+<p> Real <code>minStrike</code> () const<br/>
+ <i>the minimum strike for which the term structure can return vols </i><br/>
+ Real <code>maxStrike</code> () const<br/>
  <i>the maximum strike for which the term structure can return vols </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>

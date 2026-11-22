@@ -32,7 +32,7 @@ description: "busctl – Introspect the bus"
 <p> <code>capture</code> [<i>SERVICE</i>&#8230;]</p>
 <dl>
 <dt>
-</dt><dd> Similar to <code>monitor</code> but writes the output in pcap format (for details, see the m[blue]<code>Libpcap File Format</code>m[]<font SIZE="-2">[1]</font> description). Make sure to redirect standard output to a file. Tools like <code><a href="/docs/linux/man/1-wireshark/">wireshark</a></code>(1) may be used to dissect and view the resulting files.</dd></dl>
+</dt><dd> Similar to <code>monitor</code> but writes the output in pcap format (for details, see the m[blue]<code>Libpcap File Format</code>m[][1] description). Make sure to redirect standard output to a file. Tools like <code><a href="/docs/linux/man/1-wireshark/">wireshark</a></code>(1) may be used to dissect and view the resulting files.</dd></dl>
 <p> <code>tree</code> [<i>SERVICE</i>&#8230;]</p>
 <dl>
 <dt>
@@ -180,7 +180,7 @@ description: "busctl – Introspect the bus"
 <dt>
 </dt><dd> Print a short version string and exit.</dd></dl>
 <h2>PARAMETER FORMATTING</h2>
-<p> The <code>call</code> and <code>set-property</code> commands take a signature string followed by a list of parameters formatted as string (for details on D-Bus signature strings, see the m[blue]<code>Type system chapter of the D-Bus specification</code>m[]<font SIZE="-2">[2]</font>). For simple types, each parameter following the signature should simply be the parameter&#8217;s value formatted as string. Positive boolean values may be formatted as &quot;true&quot;, &quot;yes&quot;, &quot;on&quot;, or &quot;1&quot;; negative boolean values may be specified as &quot;false&quot;, &quot;no&quot;, &quot;off&quot;, or &quot;0&quot;. For arrays, a numeric argument for the number of entries followed by the entries shall be specified. For variants, the signature of the contents shall be specified, followed by the contents. For dictionaries and structs, the contents of them shall be directly specified. </p>
+<p> The <code>call</code> and <code>set-property</code> commands take a signature string followed by a list of parameters formatted as string (for details on D-Bus signature strings, see the m[blue]<code>Type system chapter of the D-Bus specification</code>m[][2]). For simple types, each parameter following the signature should simply be the parameter&#8217;s value formatted as string. Positive boolean values may be formatted as &quot;true&quot;, &quot;yes&quot;, &quot;on&quot;, or &quot;1&quot;; negative boolean values may be specified as &quot;false&quot;, &quot;no&quot;, &quot;off&quot;, or &quot;0&quot;. For arrays, a numeric argument for the number of entries followed by the entries shall be specified. For variants, the signature of the contents shall be specified, followed by the contents. For dictionaries and structs, the contents of them shall be directly specified. </p>
 <p> For example, </p>
 <dl>
 <dt>
@@ -245,7 +245,7 @@ o &quot;/org/freedesktop/systemd1/job/42684&quot;
 </pre>
 </dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), m[blue]<code>D-Bus</code>m[]<font SIZE="-2">[3]</font>, <code>sd-bus</code>(3), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-machinectl/">machinectl</a></code>(1), <code><a href="/docs/linux/man/1-wireshark/">wireshark</a></code>(1)</p>
+<p> <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), m[blue]<code>D-Bus</code>m[][3], <code>sd-bus</code>(3), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-machinectl/">machinectl</a></code>(1), <code><a href="/docs/linux/man/1-wireshark/">wireshark</a></code>(1)</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

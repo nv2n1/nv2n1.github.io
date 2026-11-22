@@ -12,7 +12,7 @@ description: "start-stop-daemon – start and stop system daemon programs"
 <p><code>start-stop-daemon</code> [<i>option</i>&#8230;] <i>command</i></p>
 <h2>Description</h2>
 <p><code>start-stop-daemon</code> is used to control the creation and termination of system-level processes. Using one of the matching options, <code>start-stop-daemon</code> can be configured to find existing instances of a running process. </p>
-<p> <code>Note:</code> Unless <code>&#8211;pid</code> or <code>&#8211;pidfile</code> are specified, <code>start-stop-daemon</code> behaves similar to <code><a href="/docs/linux/man/1-killall/">killall</a></code>(1). <code>start-stop-daemon</code> will scan the process table looking for any processes which match the process name, parent pid, uid, and/or gid (if specified). Any matching process will prevent <code>&#8211;start</code> from starting the daemon. All matching processes will be sent the <font SIZE="-1">TERM</font> signal (or the one specified via <code>&#8211;signal</code> or <code>&#8211;retry</code>) if <code>&#8211;stop</code> is specified. For daemons which have long-lived children which need to live through a <code>&#8211;stop</code>, you must specify a pidfile.</p>
+<p> <code>Note:</code> Unless <code>&#8211;pid</code> or <code>&#8211;pidfile</code> are specified, <code>start-stop-daemon</code> behaves similar to <code><a href="/docs/linux/man/1-killall/">killall</a></code>(1). <code>start-stop-daemon</code> will scan the process table looking for any processes which match the process name, parent pid, uid, and/or gid (if specified). Any matching process will prevent <code>&#8211;start</code> from starting the daemon. All matching processes will be sent the TERM signal (or the one specified via <code>&#8211;signal</code> or <code>&#8211;retry</code>) if <code>&#8211;stop</code> is specified. For daemons which have long-lived children which need to live through a <code>&#8211;stop</code>, you must specify a pidfile.</p>
 <h2>Commands</h2>
 <dl>
 <dt><code>-S</code>, <code>&#8211;start</code> [<code>&#8212;</code>] <i>arguments</i></dt>
@@ -20,7 +20,7 @@ description: "start-stop-daemon – start and stop system daemon programs"
 <dt><code>-K</code>, <code>&#8211;stop</code></dt>
 <dd>Checks for the existence of a specified process. If such a process exists, <code>start-stop-daemon</code> sends it the signal specified by <code>&#8211;signal</code>, and exits with error status 0. If such a process does not exist, <code>start-stop-daemon</code> exits with error status 1 (0 if <code>&#8211;oknodo</code> is specified). If <code>&#8211;retry</code> is specified, then <code>start-stop-daemon</code> will check that the process(es) have terminated.</dd>
 <dt><code>-T</code>, <code>&#8211;status</code></dt>
-<dd>Check for the existence of a specified process, and returns an exit status code, according to the <font SIZE="-1">LSB</font> Init Script Actions (since version 1.16.1).</dd>
+<dd>Check for the existence of a specified process, and returns an exit status code, according to the LSB Init Script Actions (since version 1.16.1).</dd>
 <dt><code>-H</code>, <code>&#8211;help</code></dt>
 <dd>Show usage information and exit.</dd>
 <dt><code>-V</code>, <code>&#8211;version</code></dt>
@@ -50,7 +50,7 @@ description: "start-stop-daemon – start and stop system daemon programs"
 <dt><code>-g</code>, <code>&#8211;group</code> <i>group</i>|<i>gid</i></dt>
 <dd>Change to <i>group</i> or <i>gid</i> when starting the process.</dd>
 <dt><code>-s</code>, <code>&#8211;signal</code> <i>signal</i></dt>
-<dd>With <code>&#8211;stop</code>, specifies the signal to send to processes being stopped (default <font SIZE="-1">TERM</font>).</dd>
+<dd>With <code>&#8211;stop</code>, specifies the signal to send to processes being stopped (default TERM).</dd>
 <dt><code>-R</code>, <code>&#8211;retry</code> <i>timeout</i>|<i>schedule</i></dt>
 <dd>With <code>&#8211;stop</code>, specifies that <code>start-stop-daemon</code> is to check whether the process(es) do finish. It will check repeatedly whether any matching processes are running, until none are. If the processes do not exit it will then take further action as determined by the schedule. </dd>
 <p> If <i>timeout</i> is specified instead of <i>schedule</i>, then the schedule <i>signal</i><code>/</code><i>timeout</i><code>/KILL/</code><i>timeout</i> is used, where <i>signal</i> is the signal specified with <code>&#8211;signal</code>. </p>
@@ -65,7 +65,7 @@ description: "start-stop-daemon – start and stop system daemon programs"
 <dt><code>-q</code>, <code>&#8211;quiet</code></dt>
 <dd>Do not print informational messages; only display error messages.</dd>
 <dt><code>-c</code>, <code>&#8211;chuid</code> <i>username</i>|<i>uid</i>[<code>:</code><i>group</i>|<i>gid</i>]</dt>
-<dd>Change to this username/uid before starting the process. You can also specify a group by appending a <code>:</code>, then the group or gid in the same way as you would for the <code><a href="/docs/linux/man/1-chown/">chown</a></code>(1) command (<i>user</i><code>:</code><i>group</i>). If a user is specified without a group, the primary <font SIZE="-1">GID</font> for that user is used. When using this option you must realize that the primary and supplemental groups are set as well, even if the <code>&#8211;group</code> option is not specified. The <code>&#8211;group</code> option is only for groups that the user isn&#8217;t normally a member of (like adding per process group membership for generic users like <code>nobody</code>).</dd>
+<dd>Change to this username/uid before starting the process. You can also specify a group by appending a <code>:</code>, then the group or gid in the same way as you would for the <code><a href="/docs/linux/man/1-chown/">chown</a></code>(1) command (<i>user</i><code>:</code><i>group</i>). If a user is specified without a group, the primary GID for that user is used. When using this option you must realize that the primary and supplemental groups are set as well, even if the <code>&#8211;group</code> option is not specified. The <code>&#8211;group</code> option is only for groups that the user isn&#8217;t normally a member of (like adding per process group membership for generic users like <code>nobody</code>).</dd>
 <dt><code>-r</code>, <code>&#8211;chroot</code> <i>root</i></dt>
 <dd>Change directory and chroot to <i>root</i> before starting the process. Please note that the pidfile is also written after the chroot.</dd>
 <dt><code>-d</code>, <code>&#8211;chdir</code> <i>path</i></dt>
@@ -98,7 +98,7 @@ description: "start-stop-daemon – start and stop system daemon programs"
 <dt><code>-P</code>, <code>&#8211;procsched</code> <i>policy</i><code>:</code><i>priority</i></dt>
 <dd>This alters the process scheduler policy and priority of the process before starting it (since version 1.15.0). The priority can be optionally specified by appending a <code>:</code> followed by the value. The default <i>priority</i> is 0. The currently supported policy values are <code>other</code>, <code>fifo</code> and <code>rr</code>.</dd>
 <dt><code>-I</code>, <code>&#8211;iosched</code> <i>class</i><code>:</code><i>priority</i></dt>
-<dd>This alters the <font SIZE="-1">IO</font> scheduler class and priority of the process before starting it (since version 1.15.0). The priority can be optionally specified by appending a <code>:</code> followed by the value. The default <i>priority</i> is 4, unless <i>class</i> is <code>idle</code>, then <i>priority</i> will always be 7. The currently supported values for <i>class</i> are <code>idle</code>, <code>best-effort</code> and <code>real-time</code>.</dd>
+<dd>This alters the IO scheduler class and priority of the process before starting it (since version 1.15.0). The priority can be optionally specified by appending a <code>:</code> followed by the value. The default <i>priority</i> is 4, unless <i>class</i> is <code>idle</code>, then <i>priority</i> will always be 7. The currently supported values for <i>class</i> are <code>idle</code>, <code>best-effort</code> and <code>real-time</code>.</dd>
 <dt><code>-k</code>, <code>&#8211;umask</code> <i>mask</i></dt>
 <dd>This sets the umask of the process before starting it (since version 1.13.22).</dd>
 <dt><code>-m</code>, <code>&#8211;make-pidfile</code></dt>
@@ -133,7 +133,7 @@ description: "start-stop-daemon – start and stop system daemon programs"
 <pre> start-stop-daemon --start --oknodo --user food --name food \
  --pidfile /run/food.pid --startas /usr/sbin/food \
  --chuid food -- --daemon</pre>
-<p>Send <font SIZE="-1"><code>SIGTERM</code></font> to <code>food</code> and wait up to 5 seconds for it to stop: </p>
+<p>Send <code>SIGTERM</code> to <code>food</code> and wait up to 5 seconds for it to stop: </p>
 <pre> start-stop-daemon --stop --oknodo --user food --name food \
  --pidfile /run/food.pid --retry 5</pre>
 <p>Demonstration of a custom schedule for stopping <code>food</code>: </p>

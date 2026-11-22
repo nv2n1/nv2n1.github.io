@@ -10,7 +10,7 @@ description: "zheev.f –"
 <p>zheev.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zheev</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, INFO)<br />
+<p>subroutine <code>zheev</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code> ZHEEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for HE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zheev (characterJOBZ, characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, double precision, dimension( * )W, complex*16, dimension( * )WORK, integerLWORK, double precision, dimension( * )RWORK, integerINFO)</h3>

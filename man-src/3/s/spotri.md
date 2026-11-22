@@ -11,7 +11,7 @@ description: "spotri.f –"
 <p> spotri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>spotri</code> (UPLO, N, A, LDA, INFO)<br />
+<p> subroutine <code>spotri</code> (UPLO, N, A, LDA, INFO)<br/>
  <i></i><code>SPOTRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spotri (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, integerINFO)</h3>

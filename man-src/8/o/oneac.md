@@ -76,11 +76,11 @@ description: "oneac – Driver for Oneac UPS equipment"
 <h2>Writable Variables</h2>
 <p>See <code><a href="/docs/linux/man/8-upsrw/">upsrw</a></code>(8) to see what variables are writable for the UPS. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If your UPS supports writing battery.runtime.low, the new set value is to be entered in minutes (up to 99) but the reported value is reported in seconds (set value * 60). </p>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If your UPS supports input.transfer.low and input.transfer.high, those values are used to create an allowable output range. The UPS will do what it can to keep the output voltage value within the defined range (for example: tap change or switch to inverter). </p>
 </dl>
 <h2>Author</h2>

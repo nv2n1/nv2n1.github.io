@@ -21,10 +21,10 @@ description: "ldns-keyfetcher – retrieve the DNSSEC DNSKEYs for a zone"
 <p> <code>-i</code> Insecurer mode; there will only be one query for the DNSKEYS. There will not be crosschecking of all authoritative nameservers. </p>
 <p> <code>-v</code> <i>verbosity</i> </p>
 <p> Set the verbosity level. The following levels are available: </p>
-<p>&nbsp;<wbr>0: default, only print the DNSKEY RRset found, or an error on failure.<br />
-&nbsp;<wbr>1: Show the nameservers that are queried<br />
-&nbsp;<wbr>2: Show more info on what is checked<br />
-&nbsp;<wbr>3: Show the intermediate results&nbsp;<wbr>(authority and dnskey rrsets)<br />
+<p>&nbsp;<wbr>0: default, only print the DNSKEY RRset found, or an error on failure.<br/>
+&nbsp;<wbr>1: Show the nameservers that are queried<br/>
+&nbsp;<wbr>2: Show more info on what is checked<br/>
+&nbsp;<wbr>3: Show the intermediate results&nbsp;<wbr>(authority and dnskey rrsets)<br/>
 &nbsp;<wbr>4: Print the answer packets that are returned </p>
 <p> <code>-r</code> <i>file</i> </p>
 <p> Use file as the root hints file, should contain A records in presentation format. The default is /etc/named.root. You can get this file from <a rel="nofollow" href="http://www.internic.net/zones/named.root.">http://www.internic.net/zones/named.root.</a> </p>

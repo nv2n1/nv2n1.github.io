@@ -604,7 +604,7 @@ typedef union hblock {
 <dd> <p> set the user undeletable flag (owner or super-user). </p>
  </dd>
 <dt>uunlink</dt>
-<dd> <p> Alias for <code>uunlnk</code>. <br />
+<dd> <p> Alias for <code>uunlnk</code>. <br/>
  </p>
  </dd></dl>
 <p>The following flags are only available on Linux: </p>

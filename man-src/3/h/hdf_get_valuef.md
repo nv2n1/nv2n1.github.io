@@ -18,7 +18,7 @@ char *hdf_get_valuef(HDF *hdf, const char *namefmt, ...)
     ATTRIBUTE_PRINTF(2, 3);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf -&gt; the dataset node to start from<br />
+<p> hdf -&gt; the dataset node to start from<br/>
  namefmt -&gt; the printf-style format string </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_get_valuef walks the data set pointed to by hdf via namefmt printf expanded with varargs, and returns the string value located there, or NULL if it doesn&#8217;t exist. This differs from hdf_get_value in that there is no default value possible. </p>

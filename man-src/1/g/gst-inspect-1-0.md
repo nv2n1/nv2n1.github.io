@@ -55,7 +55,7 @@ description: "gst-inspect-1.0 – print info about a GStreamer plugin or element
 <p><i>gst-inspect-1.0</i> reads the following environment variables, in addition to the generic <i>GStreamer</i> environment variables also described in <code><a href="/docs/linux/man/1-gst-launch-1-0/">gst-launch-1.0</a></code>(1):</p>
 <dl>
 <dt><code>GST_LESS</code></dt>
-<dd>Override the options passed to <i>less</i> (by default &quot;RXF&quot;).<br />
+<dd>Override the options passed to <i>less</i> (by default &quot;RXF&quot;).<br/>
  See <code><a href="/docs/linux/man/1-less/">less</a></code>(1) for more information.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-gst-launch-1-0/">gst-launch-1.0</a></code>(1), <code><a href="/docs/linux/man/1-gst-typefind-1-0/">gst-typefind-1.0</a></code>(1)</p>

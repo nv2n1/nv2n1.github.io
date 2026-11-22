@@ -13,8 +13,8 @@ description: "iproxy – proxy that enables tcp service access to iPhone/iPod"
 <p> <code>iproxy </code> [LOCAL_TCP_PORT] [DEVICE_TCP_PORT] </p>
 <h2>DESCRIPTION</h2>
 <p> iproxy allows you to forward localhost ports to the device&#8212;allows SSH over USB on jailbroken devices, or allowing access the lockdown daemon (and then to all of the file access, sync, notification and backup services running on the device). </p>
-<p> Example :<br />
-&nbsp;<wbr>./iproxy 2222 22&nbsp;<wbr>&amp;<br />
+<p> Example :<br/>
+&nbsp;<wbr>./iproxy 2222 22&nbsp;<wbr>&amp;<br/>
 &nbsp;<wbr>ssh -p 2222 root [at] localhost </p>
 <h2>AUTHORS</h2>
 <p> Nikias Bassen &lt;nikias [at] gmx.li&gt; </p>

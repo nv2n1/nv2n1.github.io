@@ -12,7 +12,7 @@ description: "QuantLib::BasketOption – Basket option on a number of assets."
 <p>#include &lt;ql/instruments/basketoption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::MultiAssetOption</code>. </p>
 <h3>Classes</h3>
-<p>class <code>engine</code><br />
+<p>class <code>engine</code><br/>
  <i>Basket-option engine base class </i></p>
 <h3>Public Member Functions</h3>
 <p><code>BasketOption</code> (const boost::shared_ptr&lt; BasketPayoff &gt; &amp;, const boost::shared_ptr&lt; <code>Exercise</code> &gt; &amp;) </p>

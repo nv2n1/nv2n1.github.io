@@ -10,7 +10,7 @@ description: "slasq5.f –"
 <p>slasq5.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slasq5</code> (I0, N0, Z, PP, TAU, SIGMA, DMIN, DMIN1, DMIN2, DN, DNM1, DNM2, IEEE, EPS)<br />
+<p>subroutine <code>slasq5</code> (I0, N0, Z, PP, TAU, SIGMA, DMIN, DMIN1, DMIN2, DN, DNM1, DNM2, IEEE, EPS)<br/>
  <i></i><code>SLASQ5</code> computes one dqds transform in ping-pong form. Used by sbdsqr and sstegr.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasq5 (integerI0, integerN0, real, dimension( * )Z, integerPP, realTAU, realSIGMA, realDMIN, realDMIN1, realDMIN2, realDN, realDNM1, realDNM2, logicalIEEE, realEPS)</h3>

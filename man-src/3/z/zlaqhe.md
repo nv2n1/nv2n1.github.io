@@ -10,7 +10,7 @@ description: "zlaqhe.f –"
 <p>zlaqhe.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaqhe</code> (UPLO, N, A, LDA, S, SCOND, AMAX, EQUED)<br />
+<p>subroutine <code>zlaqhe</code> (UPLO, N, A, LDA, S, SCOND, AMAX, EQUED)<br/>
  <i></i><code>ZLAQHE</code> scales a Hermitian matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaqhe (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, double precision, dimension( * )S, double precisionSCOND, double precisionAMAX, characterEQUED)</h3>

@@ -22,29 +22,29 @@ description: "isdnlog – isdn log system (and more)"
 <dd>isdnlog will read from this device and from /dev/isdninfo. You should give /dev/isdnctrl0 for the first isdn card (or /dev/isdnctrl2 for the second). </dd>
 <p> Isdnlog has a replay mode for debugging, where you can simulate previous recorded events. In that case use &quot;-&quot; instead of a device. </p>
 <dt><code>-A</code><i>x</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>amt=value</code></dt>
-<dd>Set digits necessary to get an outside line, when connected through a PABX.<br />
+<dd>Set digits necessary to get an outside line, when connected through a PABX.<br/>
  You can give several codes padded with a &quot;:&quot; (e.g. -A0:80:81:82). </dd>
 <dd>(There is no commandline option for this.) Overwrite area code from isdn.conf. A machine connected to subscriber lines with different area codes and thus several isdnlogs running requires this non global setting. </dd>
 <dt><code>-B</code><i>vbn</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>vbn=value</code></dt>
-<dd>Set the provider preselection to the given value. More prefixes may be separated<br />
- by a &quot;:&quot;.<br />
+<dd>Set the provider preselection to the given value. More prefixes may be separated<br/>
+ by a &quot;:&quot;.<br/>
  Values are e.g. &quot;010&quot; for DE, &quot;10&quot; for AT, &quot;16:17&quot; for NL, &quot;9&quot; for FR. </dd>
 <dt><code>-R</code><i>prefix</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>preselected=value</code></dt>
-<dd>Set the preselected (i.e the provider chosen, if no prefix is dialed)<br />
+<dd>Set the preselected (i.e the provider chosen, if no prefix is dialed)<br/>
  provider to value. Value should be without <i>vbn</i>. </dd>
 <dt><code>skipProv=</code><i>skiplist</i></dt>
 <dd>(There is no commandline option for this.) Ignore certain providers from the rate-file. The format of <i>skiplist</i> is the same as for Q: tags in rate.conf and described in <a href="/docs/linux/man/5-rate-conf/">rate.conf</a>(5). </dd>
 <dt><code>-0</code><i>x:y</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>trim=value[:value]</code></dt>
-<dd>Suppress leading digits. If isdnlog is connected through a PABX, it is<br />
- sometimes not possible to let isdnlog distinguish between a national and an international call, even with help of the <code>-A</code> option.<br />
- This option requires two values separated with &quot;:&quot; as an argument. These values tell isdnlog how many leading digits to remove from incoming and outgoing calls respectively. If only one value is given, it is used for both incoming and outgoing calls.<br />
+<dd>Suppress leading digits. If isdnlog is connected through a PABX, it is<br/>
+ sometimes not possible to let isdnlog distinguish between a national and an international call, even with help of the <code>-A</code> option.<br/>
+ This option requires two values separated with &quot;:&quot; as an argument. These values tell isdnlog how many leading digits to remove from incoming and outgoing calls respectively. If only one value is given, it is used for both incoming and outgoing calls.<br/>
  Don&#8217;t use this in combination with the <code>-A</code> option! This will confuse the system (and possibly you). </dd>
 <p> Example: a PABX in Germany shows the number of an incoming call from Hamburg as &quot;00040&#8230;&quot;. When calling out to Hamburg, it shows the number as &quot;0040&#8230;&quot;. This means that on incoming calls, three zeroes must be removed, and on outgoing calls two zeroes must be removed (the number must be normalized to be without any leading zeroes in the case of a national number; international numbers must have one leading zero). So, in this case, the option <code>-03:2</code> would be correct. </p>
 <dt><code>-i</code><i>x</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>internS0=value</code></dt>
-<dd>Telephone numbers shorter then<br />
+<dd>Telephone numbers shorter then<br/>
  <i>value</i> are considered to be internal numbers on your PABX. </dd>
 <dt><code>-o<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>other={yes|no}</code></dt>
-<dd>Normally &quot;causes&quot; (e.g. &quot;non-selected user clearing&quot;) for other connected<br />
+<dd>Normally &quot;causes&quot; (e.g. &quot;non-selected user clearing&quot;) for other connected<br/>
  ISDN devices are not displayed, only those which are related to the connection will be shown. With this option the causes for the other devices are also displayed. </dd>
 <dt><code>-Hx watchdog</code></dt>
 <dd>
@@ -55,16 +55,16 @@ description: "isdnlog – isdn log system (and more)"
 </dd><dt><code>-a any</code></dt>
 <dd>
 </dd><dt><code>-u</code><i>x</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ignoreRR=value</code></dt>
-<dd>Ignore &quot;housekeeping&quot; frames.<br />
+<dd>Ignore &quot;housekeeping&quot; frames.<br/>
  <i>x</i> may be 1 (ignore RR=Receiver ready) or 2 (ignore EMP=Euracom Management Protokoll) frames. </dd>
 <dt><code>-U</code><i>x[:y]</i><code><tt>&nbsp;<wbr></tt>ignoreCOLP=value[:value]</code></dt>
-<dd>Ignore COLP/CLIP frames when value is 1 or greater.<br />
- Value 0 is default, and tells isdnlog to not ignore COLP/CLIP frames. With value 2 the ignored COLP/CLIP number is displayed.<br />
- The first value applies to COLP the second to CLIP. If only one value is given, it applies to COLP and CLIP.<br />
+<dd>Ignore COLP/CLIP frames when value is 1 or greater.<br/>
+ Value 0 is default, and tells isdnlog to not ignore COLP/CLIP frames. With value 2 the ignored COLP/CLIP number is displayed.<br/>
+ The first value applies to COLP the second to CLIP. If only one value is given, it applies to COLP and CLIP.<br/>
  Sometimes the COLP number is a number in a different areacode to the number that was dialled, and then the cost calculation would be wrong. </dd>
 <dd>(There is no commandline option for this.) A PABX may cause numerous messages like &quot;Unexpected discriminator 0x47 &#8212; ignored!&quot; resulting from protocol discriminator values in layer 3 not known to isdnlog. Set ignoreUPD to yes to suppress this messages. </dd>
 <dt><code>-2</code><i>x</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>dual=value</code></dt>
-<dd>Enable dual mode. You need this if you have a second isdn card attached with<br />
+<dd>Enable dual mode. You need this if you have a second isdn card attached with<br/>
  crossed lines so it can listen to what other isdn devices like telephones are doing. With <i>x</i>=2 you can increase the debug output &#8211; every single digit will be displayed. </dd>
 <p> Some setups may require workarounds for reliable logging. These workarounds are enabled by addition of the following numbers to the dual value. They are intended for the dualmode but may also be useful without. In this case, specify only the sum of the following numbers without 1 or 2 for the dual mode. </p>
 <dl>
@@ -79,8 +79,8 @@ description: "isdnlog – isdn log system (and more)"
 <dd>Enable this when unanswered incoming calls are logged multiple times (revealed by isdnrep -E).</dd></dl>
 </dl>
 <dt><code>-1</code></dt>
-<dd>A HFC-based card is used for echo mode. Enable echo mode for the HFC card with<br />
- <i>hisaxctrl id 10 1</i><br />
+<dd>A HFC-based card is used for echo mode. Enable echo mode for the HFC card with<br/>
+ <i>hisaxctrl id 10 1</i><br/>
  <i>hisaxctrl id 12 1</i> </dd>
 </dl>
 <h2>Debug Module</h2>
@@ -88,12 +88,12 @@ description: "isdnlog – isdn log system (and more)"
 <dt><code>-r</code></dt>
 <dd>Replay a debug file (e.g. /tmp/isdnctrl0) to find bugs. With this flag you should give a filename with the debug information instead of a device. It will also work with files not created by isdnlog (e.g. &quot;cat /dev/isdnctrl0&quot;). </dd>
 <dt><code>-n<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>newline={yes|no}</code></dt>
-<dd>Display throughput messages on the same line (only useful with logging to<br />
+<dd>Display throughput messages on the same line (only useful with logging to<br/>
  stderr or a console device). </dd>
 <dt><code>-W</code><i>X</i><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>width=value</dt>
 <dd>Limit all messages to X characters per line.</dd>
 <dt><code>-v</code><i>X</i><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>log=X</dt>
-<dd>Isdnlog can copy all information to /tmp/DEVICE (e.g. /tmp/isdnctrl0 if<br />
+<dd>Isdnlog can copy all information to /tmp/DEVICE (e.g. /tmp/isdnctrl0 if<br/>
  you started isdnlog with /dev/isdnctrl0). Choose what debugging you want from the following list, add the corresponding numbers together and use that for X: </dd>
 <dl>
 <dd>
@@ -109,13 +109,13 @@ description: "isdnlog – isdn log system (and more)"
 <p> Isdnlog will close and reopen this file after a &quot;kill -HUP&quot;.</dl>
 </dl>
 <dt><code>-s<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>flush={yes|no}</code></dt>
-<dd>Isdnlog will flush the debug file /tmp/DEVICE (e.g. /tmp/isdnctrl0) after<br />
+<dd>Isdnlog will flush the debug file /tmp/DEVICE (e.g. /tmp/isdnctrl0) after<br/>
  each write access. </dd>
 <dt><code>-P<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pipe={yes|no}</code></dt>
-<dd>Copy the debug information to stdout. This way you can run isdnlog as the<br />
+<dd>Copy the debug information to stdout. This way you can run isdnlog as the<br/>
  source of a pipe like &quot;isdnlog -P /dev/isdnctrl0 |prog &#8230; &quot;. </dd>
 <dt><code>-D<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>daemon={yes|no}</code></dt>
-<dd>Start isdnlog as daemon: it will fork into the background, and use syslog<br />
+<dd>Start isdnlog as daemon: it will fork into the background, and use syslog<br/>
  as the default logging method (if you did not specify -m). </dd>
 <dt><code>-T</code></dt>
 <dd>Trace mode: isdnlog will wait for a key after processing a line from /dev/isdnctrl0 (or whatever device you specified). </dd>
@@ -154,7 +154,7 @@ description: "isdnlog – isdn log system (and more)"
 <dt>0x800</dt>
 <dd>Show state of B-channels (use with -M monitor). </dd>
 <dt>0x1000</dt>
-<dd>Show service indicator.<br />
+<dd>Show service indicator.<br/>
  You should log at least 0x7 (errors, warnings, notice) messages. </dd>
 <dt>0x2000</dt>
 <dd>Log estimated time till next charge signal. </dd>
@@ -167,31 +167,31 @@ description: "isdnlog – isdn log system (and more)"
 </dd><dt><code>-m</code><i>X</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>stdout=value</code></dt>
 <dd>Log to stderr.</dd>
 <dt><code>-O</code><i>X</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>outfile=path</code></dt>
-<dd>Log to file <i>X</i> instead of stderr. Isdnlog will close this device when it<br />
- gets a signal -SIGHUP (-1). Only valid with -m option.<br />
+<dd>Log to file <i>X</i> instead of stderr. Isdnlog will close this device when it<br/>
+ gets a signal -SIGHUP (-1). Only valid with -m option.<br/>
  If the name starts with a &quot;+&quot;, new data will be appended to the existing file. Default behaviour is to truncate the file when isdnlog opens it. </dd>
 <dt><code>-C </code><i>X</i><code> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>console=path</code></dt>
-<dd>Log to console <i>X</i> instead of stderr. You can use -O and -C together,<br />
+<dd>Log to console <i>X</i> instead of stderr. You can use -O and -C together,<br/>
  so that isdnlog copies output to both. Specify a full pathname. Beware: you must put a space between -C and X ! </dd>
 <dt><code>-M<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>monitor={yes|no}</code></dt>
-<dd>With this flag, isdnlog will generate output for monitor programs like<br />
+<dd>With this flag, isdnlog will generate output for monitor programs like<br/>
  imon, imontty or isdnmon. You must also give -m with 0x800 enabled. </dd>
 <dt><code>-l</code><i>X</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>syslog=value</code></dt>
-<dd>Log to syslog. <i>X</i> is the log code. You can log to syslog and to stdout at<br />
+<dd>Log to syslog. <i>X</i> is the log code. You can log to syslog and to stdout at<br/>
  the same time. </dd>
 <dt><code>-x</code><i>X</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>xisdn=value</code></dt>
-<dd>Pass information to x11 client. X is the log code. You can pass<br />
+<dd>Pass information to x11 client. X is the log code. You can pass<br/>
  information to x11 clients and log to syslog and/or stdout at the same time. </dd>
 <dt><code>-p</code><i>PORT</i><code> port=value</code></dt>
 <dd>Pass information to x11 client on this <i>PORT</i>. </dd>
 <dt><code>-c</code><i>X</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>calls=value</code></dt>
-<dd>Only with -x<i>X</i> : save the last <i>X</i> calls and pass this information to an<br />
+<dd>Only with -x<i>X</i> : save the last <i>X</i> calls and pass this information to an<br/>
  x11 client. Default value is 100. </dd>
 <dt><code>-L</code><i>X</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>xlog=value</code></dt>
-<dd>Only with -x<i>X</i> : save the last <i>X</i> messages and pass this information to an<br />
+<dd>Only with -x<i>X</i> : save the last <i>X</i> messages and pass this information to an<br/>
  x11 client. Default value is 500. </dd>
 <dt><code>-w</code><i>X</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>thruput=value</code></dt>
-<dd>If you enabled throughput logging (0x400), isdnlog will log the throughput<br />
+<dd>If you enabled throughput logging (0x400), isdnlog will log the throughput<br/>
  every <i>X</i> seconds. </dd>
 <dt><code>-I</code><i>x:y</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ciinterval=value[:value]</code></dt>
 <dd>Interval for printing of charge messages (0x20).</dd>
@@ -201,37 +201,37 @@ description: "isdnlog – isdn log system (and more)"
 <dl>
 <dt><code>-d</code><i>x</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>abclcr=value</code></dt>
 <dd>Value is a bitmap:</dd>
-<p> 0 &#8230; off<br />
- 1 &#8230; calls to different area / country<br />
- 2 &#8230; local calls too<br />
- 4 &#8230; special numbers e.g. ISP<br />
- This needs a kernel patch to work. If the kernel patch is not found a simulation is done.<br />
+<p> 0 &#8230; off<br/>
+ 1 &#8230; calls to different area / country<br/>
+ 2 &#8230; local calls too<br/>
+ 4 &#8230; special numbers e.g. ISP<br/>
+ This needs a kernel patch to work. If the kernel patch is not found a simulation is done.<br/>
  Note: depending on your telephone provider local area calls may or may not be routed to alternate providers. For changing the ISP a script is called. s. next option &#8216;providerchange&#8217; </p>
 <dd>(There is no commandline option for this.) This script is called with 3 parameters, the new provider number (from rate-CC.dat), the number, which would be dialed, and the servicename. The script should adjust routing, name resolution and so on to connect to the ISP. If the script returns non zero, LCR will not be done. </dd>
 </dl>
 <h2>Time Module</h2>
 <dl>
 <dt><code>-t</code><i>X</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>time={0|1|2}</code></dt>
-<dd>Isdnlog will set your local system time to the time transmitted by your<br />
+<dd>Isdnlog will set your local system time to the time transmitted by your<br/>
  isdn service provider: -t1 = once, -t2 = every time. </dd>
 </dl>
 <h2>Chargehup Module</h2>
 <dl>
 <dt><code>-h</code><i>X</i><code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>hangup=value</code></dt>
-<dd>The isdn kernel system has a chargehup system, so it will hang up a few<br />
+<dd>The isdn kernel system has a chargehup system, so it will hang up a few<br/>
  seconds before the next charge signal. If you don&#8217;t get a charge signal from your phone company, isdnlog can emulate it. </dd>
 <p> On every outgoing connection, isdnlog will calculate the charge time from day of week, time of day and the distance zone of the connection. </p>
 <p> The kernel needs to know how long the charge time is, and how many seconds before the next charge signal it should hang up. You have to set the second parameter with X in the form number:number (hang up seconds before next charge signal for charge times greater than or equal to 20 seconds : for charge times of less than 20 seconds). </p>
 <p> With this information, isdnlog will call &quot;isdnctrl chargeint &lt;device&gt; &lt;charge time&gt;&quot; and &quot;isdnctrl huptimeout &lt;device&gt; &lt;seconds before charge signal&gt;&quot; (it actually communicates directly with isdn, without calling isdnctrl, but this would have the same effect). </p>
 <p> You should run isdnlog with -t1 or better with -t2, so isdnlog sets the local time in sync with telephone switching office. </p>
-<p> If there is a third number in value, this is the minimum connection time for providers charging a basic rate per connection.<br />
+<p> If there is a third number in value, this is the minimum connection time for providers charging a basic rate per connection.<br/>
  e.g. hangup 3:5:60 </p>
 </dl>
 <h2>Start Module</h2>
 <p>isdnlog can react on any event and start programs. This feature is disabled unless you activate it with: </p>
 <dl>
 <dt><code>-S<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>start={yes|no}</code></dt>
-<dd>active &quot;START&quot; feature. Please read <a href="/docs/linux/man/5-callerid-conf/">callerid.conf</a>(5) for more<br />
+<dd>active &quot;START&quot; feature. Please read <a href="/docs/linux/man/5-callerid-conf/">callerid.conf</a>(5) for more<br/>
  information. </dd>
 <dd>(There is no commandline option for this.) If set to yes, isdnlog will close all unnecessarily opened file descriptors before a &quot;START&quot; program is executed. This closing will also take place at isdnlog&#8217;s restart after SIGHUP. Default is no. </dd>
 </dl>
@@ -286,8 +286,8 @@ time=2 # set time: 0 = never; 1 = once; 2 = every time
 #hangup= # simulate charge signals
 start=yes # enable starting programs</pre>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-isdnconf/">isdnconf</a>(1) <a href="/docs/linux/man/5-isdn-conf/">isdn.conf</a>(5) <a href="/docs/linux/man/5-callerid-conf/">callerid.conf</a>(5)</code><br />
- <code><a href="/docs/linux/man/5-rate-files/">rate-files</a>(5) <a href="/docs/linux/man/5-rate-conf/">rate.conf</a>(5)</code><br />
+<p><code><a href="/docs/linux/man/1-isdnconf/">isdnconf</a>(1) <a href="/docs/linux/man/5-isdn-conf/">isdn.conf</a>(5) <a href="/docs/linux/man/5-callerid-conf/">callerid.conf</a>(5)</code><br/>
+ <code><a href="/docs/linux/man/5-rate-files/">rate-files</a>(5) <a href="/docs/linux/man/5-rate-conf/">rate.conf</a>(5)</code><br/>
  <code><a href="/docs/linux/man/5-isdnlog/">isdnlog</a>(5) <a href="/docs/linux/man/1-isdnrep/">isdnrep</a>(1) <a href="/docs/linux/man/1-isdnrate/">isdnrate</a>(1)</code> </p>
 <h2>Author</h2>
 <p>This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux, updated by Leopold Toetsch &lt;lt [at] toetsch.at&gt;.</p>

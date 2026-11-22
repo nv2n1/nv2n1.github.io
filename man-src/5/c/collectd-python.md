@@ -43,12 +43,12 @@ description: "collectd-python – Documentation of collectd’s \"python plugin\
 <dt>&bull;</dt>
 <dd><code>1.</code> collectd will try to import the <code>readline</code> module to give you a decent way of entering your commands. The daemonized collectd won&#8217;t do that.</dd>
 <dt>&bull;</dt>
-<dd><code>2.</code> Python will be handling <i></i><font SIZE="-1"><i>SIGINT</i></font><i></i>. Pressing <i>Ctrl+C</i> will usually cause collectd to shut down. This would be problematic in an interactive session, therefore Python will be handling it in interactive sessions. This allows you to use <i>Ctrl+C</i> to interrupt Python code without killing collectd. This also means you can catch <i>KeyboardInterrupt</i> exceptions which does not work during normal operation. </dd>
-<p> To quit collectd send <i></i><font SIZE="-1"><i>EOF</i></font><i></i> (press <i>Ctrl+D</i> at the beginning of a new line).</p>
+<dd><code>2.</code> Python will be handling <i></i><i>SIGINT</i><i></i>. Pressing <i>Ctrl+C</i> will usually cause collectd to shut down. This would be problematic in an interactive session, therefore Python will be handling it in interactive sessions. This allows you to use <i>Ctrl+C</i> to interrupt Python code without killing collectd. This also means you can catch <i>KeyboardInterrupt</i> exceptions which does not work during normal operation. </dd>
+<p> To quit collectd send <i></i><i>EOF</i><i></i> (press <i>Ctrl+D</i> at the beginning of a new line).</p>
 <dt>&bull;</dt>
-<dd><code>3.</code> collectd handles <i></i><font SIZE="-1"><i>SIGCHLD</i></font><i></i>. This means that Python won&#8217;t be able to determine the return code of spawned processes with <i>system()</i>, <i>popen()</i> and subprocess. This will result in Python not using external programs like less to display help texts. You can override this behavior with the <font SIZE="-1"><code>PAGER</code></font> environment variable, e.g. <i>export PAGER=less</i> before starting collectd. Depending on your version of Python this might or might not result in an <code>OSError</code> exception which can be ignored. </dd>
-<p> If you really need to spawn new processes from Python you can register an init callback and reset the action for <font SIZE="-1">SIGCHLD</font> to the default behavior. Please note that this <i>will</i> break the exec plugin. Do not even load the exec plugin if you intend to do this! </p>
-<p> There is an example script located in <code>contrib/python/getsigchld.py</code> to do this. If you import this from <i>collectd.conf</i> <font SIZE="-1">SIGCHLD</font> will be handled normally and spawning processes from Python will work as intended.</dl>
+<dd><code>3.</code> collectd handles <i></i><i>SIGCHLD</i><i></i>. This means that Python won&#8217;t be able to determine the return code of spawned processes with <i>system()</i>, <i>popen()</i> and subprocess. This will result in Python not using external programs like less to display help texts. You can override this behavior with the <code>PAGER</code> environment variable, e.g. <i>export PAGER=less</i> before starting collectd. Depending on your version of Python this might or might not result in an <code>OSError</code> exception which can be ignored. </dd>
+<p> If you really need to spawn new processes from Python you can register an init callback and reset the action for SIGCHLD to the default behavior. Please note that this <i>will</i> break the exec plugin. Do not even load the exec plugin if you intend to do this! </p>
+<p> There is an example script located in <code>contrib/python/getsigchld.py</code> to do this. If you import this from <i>collectd.conf</i> SIGCHLD will be handled normally and spawning processes from Python will work as intended.</dl>
 </dl>
 <dl>
 <dd></dd></dl>
@@ -58,10 +58,10 @@ description: "collectd-python – Documentation of collectd’s \"python plugin\
 <h2>Strings</h2>
 <p>There are a lot of places where strings are sent from collectd to Python and from Python to collectd. How exactly this works depends on whether byte or unicode strings or Python2 or Python3 are used. </p>
 <p> Python2 has <i>str</i>, which is just bytes, and <i>unicode</i>. Python3 has <i>str</i>, which is a unicode object, and <i>bytes</i>. </p>
-<p> When passing strings from Python to collectd all of these object are supported in all places, however <i>str</i> should be used if possible. These strings must not contain a <font SIZE="-1">NUL</font> byte. Ignoring this will result in a <i>TypeError</i> exception. If a byte string was used it will be used as is by collectd. If a unicode object was used it will be encoded using the default encoding (see above). If this is not possible Python will raise a <i>UnicodeEncodeError</i> exception. </p>
+<p> When passing strings from Python to collectd all of these object are supported in all places, however <i>str</i> should be used if possible. These strings must not contain a NUL byte. Ignoring this will result in a <i>TypeError</i> exception. If a byte string was used it will be used as is by collectd. If a unicode object was used it will be encoded using the default encoding (see above). If this is not possible Python will raise a <i>UnicodeEncodeError</i> exception. </p>
 <p> When passing strings from collectd to Python the behavior depends on the Python version used. Python2 will always receive a <i>str</i> object. Python3 will usually receive a <i>str</i> object as well, however the original string will be decoded to unicode using the default encoding. If this fails because the string is not a valid sequence for this encoding a <i>bytes</i> object will be returned instead.</p>
 <h2>Writing Your Own Plugins</h2>
-<p>Writing your own plugins is quite simple. collectd manages plugins by means of <code>dispatch functions</code> which call the appropriate <code>callback functions</code> registered by the plugins. Any plugin basically consists of the implementation of these callback functions and initializing code which registers the functions with collectd. See the section &#8220;<font SIZE="-1">EXAMPLES&#8221;</font> below for a really basic example. The following types of <code>callback functions</code> are known to collectd (all of them are optional):</p>
+<p>Writing your own plugins is quite simple. collectd manages plugins by means of <code>dispatch functions</code> which call the appropriate <code>callback functions</code> registered by the plugins. Any plugin basically consists of the implementation of these callback functions and initializing code which registers the functions with collectd. See the section &#8220;EXAMPLES&#8221; below for a really basic example. The following types of <code>callback functions</code> are known to collectd (all of them are optional):</p>
 <dl>
 <dt>configuration functions</dt>
 <dd>These are called during configuration if an appropriate <code>Module</code> block has been encountered. It is called once for each <code>Module</code> block which matches the name of the callback as provided with the <code>register_config</code> method &#8211; see below. </dd>
@@ -77,11 +77,11 @@ description: "collectd-python – Documentation of collectd’s \"python plugin\
 <dt>log functions</dt>
 <dd>These are used to pass messages of plugins or the daemon itself to the user.</dd>
 <dt>notification function</dt>
-<dd>These are used to act upon notifications. In general, a notification is a status message that may be associated with a data instance. Usually, a notification is generated by the daemon if a configured threshold has been exceeded (see the section &#8220;<font SIZE="-1">THRESHOLD CONFIGURATION&#8221;</font> in <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5) for more details), but any plugin may dispatch notifications as well.</dd>
+<dd>These are used to act upon notifications. In general, a notification is a status message that may be associated with a data instance. Usually, a notification is generated by the daemon if a configured threshold has been exceeded (see the section &#8220;THRESHOLD CONFIGURATION&#8221; in <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5) for more details), but any plugin may dispatch notifications as well.</dd>
 <dt>shutdown functions</dt>
 <dd>These are called once before the daemon shuts down. It should be used to clean up the plugin (e.g. close sockets, &#8230;).</dd></dl>
 <p> Any function (except log functions) may throw an exception in case of errors. The exception will be passed on to the user using collectd&#8217;s logging mechanism. If a log callback throws an exception it will be printed to standard error instead. </p>
-<p> See the documentation of the various <code>register_</code> methods in the section &#8220;<font SIZE="-1">FUNCTIONS&#8221;</font> below for the number and types of arguments passed to each <code>callback function</code>. This section also explains how to register <code>callback functions</code> with collectd. </p>
+<p> See the documentation of the various <code>register_</code> methods in the section &#8220;FUNCTIONS&#8221; below for the number and types of arguments passed to each <code>callback function</code>. This section also explains how to register <code>callback functions</code> with collectd. </p>
 <p> To enable a module, copy it to a place where Python can find it (i. e. a directory listed in <code>sys.path</code>) just as any other Python plugin and add an appropriate <code>Import</code> option to the configuration file. After restarting collectd you&#8217;re done.</p>
 <h2>Classes</h2>
 <p>The following complex types are used to pass values between the Python plugin and collectd:</p>
@@ -177,7 +177,7 @@ description: "collectd-python – Documentation of collectd’s \"python plugin\
 <dt>message</dt>
 <dd>Some kind of description of what&#8217;s going on and why this Notification was generated.</dd>
 <dt>severity</dt>
-<dd>The severity of this notification. Assign or compare to <i></i><font SIZE="-1"><i>NOTIF_FAILURE</i></font><i></i>, <i></i><font SIZE="-1"><i>NOTIF_WARNING</i></font><i></i> or <i></i><font SIZE="-1"><i>NOTIF_OKAY</i></font><i></i>.</dd></dl>
+<dd>The severity of this notification. Assign or compare to <i></i><i>NOTIF_FAILURE</i><i></i>, <i></i><i>NOTIF_WARNING</i><i></i> or <i></i><i>NOTIF_OKAY</i><i></i>.</dd></dl>
 <h2>Functions</h2>
 <p>The following functions provide the C-interface to Python-modules.</p>
 <dl>
@@ -196,7 +196,7 @@ description: "collectd-python – Documentation of collectd’s \"python plugin\
 <dd><i>identifier</i> is the full identifier assigned to this callback.</dd></dl>
 </dl>
 <dl>
-<dd>These functions are called in the various stages of the daemon (see the section &#8220;<font SIZE="-1">WRITING YOUR OWN PLUGINS&#8221;</font> above) and are passed the following arguments:</dd>
+<dd>These functions are called in the various stages of the daemon (see the section &#8220;WRITING YOUR OWN PLUGINS&#8221; above) and are passed the following arguments:</dd>
 <dl>
 <dt>register_config</dt>
 <dd>The only argument passed is a <i>Config</i> object. See above for the layout of this data type. Note that you cannot receive the whole config files this way, only <code>Module</code> blocks inside the Python configuration block. Additionally you will only receive blocks where your callback identifier matches <code>python.</code><i>blockname</i>.</dd>
@@ -213,7 +213,7 @@ description: "collectd-python – Documentation of collectd’s \"python plugin\
 <dd>Like <code>register_config</code> is important for this callback because it determines what flush requests the plugin will receive. </dd>
 <p> The arguments passed are <i>timeout</i> and <i>identifier</i>. <i>timeout</i> indicates that only data older than <i>timeout</i> seconds is to be flushed. <i>identifier</i> specifies which values are to be flushed.</p>
 <dt>register_log</dt>
-<dd>The arguments are <i>severity</i> and <i>message</i>. The severity is an integer and small for important messages and high for less important messages. The least important level is <font SIZE="-1"><code>LOG_DEBUG</code></font>, the most important level is <font SIZE="-1"><code>LOG_ERR</code></font>. In between there are (from least to most important): <font SIZE="-1"><code>LOG_INFO</code></font>, <font SIZE="-1"><code>LOG_NOTICE</code></font>, and <font SIZE="-1"><code>LOG_WARNING</code></font>. <i>message</i> is simply a string <code>without</code> a newline at the end. </dd>
+<dd>The arguments are <i>severity</i> and <i>message</i>. The severity is an integer and small for important messages and high for less important messages. The least important level is <code>LOG_DEBUG</code>, the most important level is <code>LOG_ERR</code>. In between there are (from least to most important): <code>LOG_INFO</code>, <code>LOG_NOTICE</code>, and <code>LOG_WARNING</code>. <i>message</i> is simply a string <code>without</code> a newline at the end. </dd>
 <p> If this callback throws an exception it will <code>not</code> be logged. It will just be printed to <code>sys.stderr</code> which usually means silently ignored.</p>
 <dt>register_notification</dt>
 <dd>The only argument passed is a <i>Notification</i> object. See above for the layout of this data type.</dd></dl>
@@ -230,7 +230,7 @@ description: "collectd-python – Documentation of collectd’s \"python plugin\
 <dt>name</dt>
 <dd>A string, the name of the data source.</dd>
 <dt>type</dt>
-<dd>A string that is equal to either of the variables <font SIZE="-1"><code>DS_TYPE_COUNTER</code></font>, <font SIZE="-1"><code>DS_TYPE_GAUGE</code></font>, <font SIZE="-1"><code>DS_TYPE_DERIVE</code></font> or <font SIZE="-1"><code>DS_TYPE_ABSOLUTE</code></font>.</dd>
+<dd>A string that is equal to either of the variables <code>DS_TYPE_COUNTER</code>, <code>DS_TYPE_GAUGE</code>, <code>DS_TYPE_DERIVE</code> or <code>DS_TYPE_ABSOLUTE</code>.</dd>
 <dt>min</dt>
 <dd>A float or None, the minimum value.</dd>
 <dt>max</dt>
@@ -258,7 +258,7 @@ description: "collectd-python – Documentation of collectd’s \"python plugin\
 <p>To register those functions with collectd: </p>
 <pre> collectd.register_read(read)
  collectd.register_write(write)</pre>
-<p>See the section &#8220;<font SIZE="-1">CLASSES&#8221;</font> above for a complete documentation of the data types used by the read, write and match functions.</p>
+<p>See the section &#8220;CLASSES&#8221; above for a complete documentation of the data types used by the read, write and match functions.</p>
 <h2>Caveats</h2>
 <dl>
 <dt>&bull;</dt>
@@ -267,11 +267,11 @@ description: "collectd-python – Documentation of collectd’s \"python plugin\
 <dt>&bull;</dt>
 <dd>The Python thread module is initialized just before calling the init callbacks. This means you must not use Python&#8217;s threading module prior to this point. This includes all config and possibly other callback as well.</dd>
 <dt>&bull;</dt>
-<dd>The python plugin exports the internal <font SIZE="-1">API</font> of collectd which is considered unstable and subject to change at any time. We try hard to not break backwards compatibility in the Python <font SIZE="-1">API</font> during the life cycle of one major release. However, this cannot be guaranteed at all times. Watch out for warnings dispatched by the python plugin after upgrades.</dd></dl>
+<dd>The python plugin exports the internal API of collectd which is considered unstable and subject to change at any time. We try hard to not break backwards compatibility in the Python API during the life cycle of one major release. However, this cannot be guaranteed at all times. Watch out for warnings dispatched by the python plugin after upgrades.</dd></dl>
 <h2>Known Bugs</h2>
 <dl>
 <dt>&bull;</dt>
-<dd>Not all aspects of the collectd <font SIZE="-1">API</font> are accessible from Python. This includes but is not limited to filters and data sets.</dd></dl>
+<dd>Not all aspects of the collectd API are accessible from Python. This includes but is not limited to filters and data sets.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-collectd/">collectd</a></i>(1), <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5), <i><a href="/docs/linux/man/5-collectd-perl/">collectd-perl</a></i>(5), <i><a href="/docs/linux/man/5-collectd-exec/">collectd-exec</a></i>(5), <i><a href="/docs/linux/man/5-types-db/">types.db</a></i>(5), <i><a href="/docs/linux/man/1-python/">python</a></i>(1),</p>
 <h2>Author</h2>

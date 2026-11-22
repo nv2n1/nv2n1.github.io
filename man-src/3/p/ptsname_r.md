@@ -14,12 +14,12 @@ char *ptsname(int fd);
 int ptsname_r(int fd, char *buf, size_t buflen);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>ptsname</code>(): </p>
 <dl>
-<dd>Since glibc 2.24:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 ||<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE_EXTENDED)<br />
- Glibc 2.23 and earlier:<br />
+<dd>Since glibc 2.24:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 ||<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE_EXTENDED)<br/>
+ Glibc 2.23 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE</dd></dl>
-<p> <code>ptsname_r</code>():<br />
+<p> <code>ptsname_r</code>():<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_GNU_SOURCE</p>
 <h2>Description</h2>
 <p>The <code>ptsname</code>() function returns the name of the slave pseudoterminal device corresponding to the master referred to by the file descriptor <i>fd</i>. </p>
@@ -60,7 +60,7 @@ int ptsname_r(int fd, char *buf, size_t buflen);</code></pre>
 </tr>
 </table>
 <h2>Conforming To</h2>
-<p><code>ptsname</code>():<br />
+<p><code>ptsname</code>():<br/>
 &nbsp;POSIX.1-2001, POSIX.1-2008. </p>
 <p> <code>ptsname</code>() is part of the UNIX 98 pseudoterminal support (see <code><a href="/docs/linux/man/4-pts/">pts</a></code>(4)). </p>
 <p> <code>ptsname_r</code>() is a Linux extension, that is proposed for inclusion in the next major revision of POSIX.1 (Issue 8). A version of this function is documented on Tru64 and HP-UX, but on those implementations, -1 is returned on error, with <i>errno</i> set to indicate the error. Avoid using this function in portable programs.</p>

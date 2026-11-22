@@ -39,6 +39,6 @@ description: "XtAppErrorMsg, XtAppSetErrorMsgHandler, XtAppSetWarningMsgHandler,
 <p> The <code>XtAppSetWarningMsgHandler</code> function registers the specified procedure, which is called when a nonfatal error condition occurs. </p>
 <p> The <code>XtAppWarningMsg</code> function calls the high-level error handler and passes the specified information.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappgeterrordatabase/">XtAppGetErrorDatabase</a>(3), <a href="/docs/linux/man/3-xtapperror/">XtAppError</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappgeterrordatabase/">XtAppGetErrorDatabase</a>(3), <a href="/docs/linux/man/3-xtapperror/">XtAppError</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

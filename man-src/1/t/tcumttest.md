@@ -26,9 +26,9 @@ description: "tcutest – test cases of the on-memory database API"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> -rnd</code> : select keys at random.<br />
- <code>-nc</code> : omit the comparison test.<br />
- -rr <i>num</i> : specifiy the ratio of reading operation by percentage.<br />
+</dt><dd> -rnd</code> : select keys at random.<br/>
+ <code>-nc</code> : omit the comparison test.<br/>
+ -rr <i>num</i> : specifiy the ratio of reading operation by percentage.<br/>
  <code>-tr</code> : use on-memory tree database object.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

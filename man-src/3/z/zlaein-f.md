@@ -10,7 +10,7 @@ description: "zlaein.f –"
 <p>zlaein.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaein</code> (RIGHTV, NOINIT, N, H, LDH, W, V, B, LDB, RWORK, EPS3, SMLNUM, INFO)<br />
+<p>subroutine <code>zlaein</code> (RIGHTV, NOINIT, N, H, LDH, W, V, B, LDB, RWORK, EPS3, SMLNUM, INFO)<br/>
  <i></i><code>ZLAEIN</code> computes a specified right or left eigenvector of an upper Hessenberg matrix by inverse iteration.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaein (logicalRIGHTV, logicalNOINIT, integerN, complex*16, dimension( ldh, * )H, integerLDH, complex*16W, complex*16, dimension( * )V, complex*16, dimension( ldb, * )B, integerLDB, double precision, dimension( * )RWORK, double precisionEPS3, double precisionSMLNUM, integerINFO)</h3>

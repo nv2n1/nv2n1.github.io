@@ -10,7 +10,7 @@ description: "ztrevc.f –"
 <p>ztrevc.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztrevc</code> (SIDE, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, MM, M, WORK, RWORK, INFO)<br />
+<p>subroutine <code>ztrevc</code> (SIDE, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, MM, M, WORK, RWORK, INFO)<br/>
  <i></i><code>ZTREVC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztrevc (characterSIDE, characterHOWMNY, logical, dimension( * )SELECT, integerN, complex*16, dimension( ldt, * )T, integerLDT, complex*16, dimension( ldvl, * )VL, integerLDVL, complex*16, dimension( ldvr, * )VR, integerLDVR, integerMM, integerM, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

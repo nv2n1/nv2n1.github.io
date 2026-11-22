@@ -10,7 +10,7 @@ description: "XkbOutOfRangeGroupInfo – Returns only the out-of-range processin
 <p>XkbOutOfRangeGroupInfo &#8211; Returns only the out-of-range processing information from the group_info field of an XkbSymMapRec structure </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>unsigned char XkbOutOfRangeGroupInfo</code> <code>(unsigned char </code><i>grp_inf</i><code>);</code><br />
+<dt> <code>unsigned char XkbOutOfRangeGroupInfo</code> <code>(unsigned char </code><i>grp_inf</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

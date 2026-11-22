@@ -10,7 +10,7 @@ description: "XkbGetIndicatorState – Obtains the current state of the keyboard
 <p>XkbGetIndicatorState &#8211; Obtains the current state of the keyboard indicators </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetIndicatorState</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>state_return</i><code>);</code><br />
+<dt> <code>Status XkbGetIndicatorState</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>state_return</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

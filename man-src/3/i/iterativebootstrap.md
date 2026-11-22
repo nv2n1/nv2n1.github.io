@@ -10,13 +10,13 @@ description: "ql/termstructures/iterativebootstrap.hpp – universal piecewise-t
 
 <p> ql/termstructures/iterativebootstrap.hpp &#8211; universal piecewise-term-structure boostrapper. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/bootstraphelper.hpp&gt;<br />
- #include &lt;ql/termstructures/bootstraperror.hpp&gt;<br />
- #include &lt;ql/math/interpolations/linearinterpolation.hpp&gt;<br />
- #include &lt;ql/math/solvers1d/brent.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/bootstraphelper.hpp&gt;<br/>
+ #include &lt;ql/termstructures/bootstraperror.hpp&gt;<br/>
+ #include &lt;ql/math/interpolations/linearinterpolation.hpp&gt;<br/>
+ #include &lt;ql/math/solvers1d/brent.hpp&gt;<br/>
  #include &lt;ql/utilities/dataformatters.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>IterativeBootstrap&lt; Curve &gt;</code><br />
+<p> class <code>IterativeBootstrap&lt; Curve &gt;</code><br/>
  <i>Universal piecewise-term-structure boostrapper. </i></p>
 <h2>Detailed Description</h2>
 <p> universal piecewise-term-structure boostrapper. </p>

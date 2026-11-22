@@ -10,73 +10,73 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 
 <p> Heimdal Kerberos 5 deprecated functions &#8211; </p>
 <h3>Functions</h3>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_change_password</code> (krb5_context context, krb5_creds *creds, const char *newpw, int *result_code, krb5_data *result_code_string, krb5_data *result_string) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_config_parse_string_multi</code> (krb5_context context, const char *string, krb5_config_section **res) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_keytype_to_enctypes</code> (krb5_context context, krb5_keytype keytype, unsigned *len, krb5_enctype **val) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_enctypes_compatible_keys</code> (krb5_context context, krb5_enctype etype1, krb5_enctype etype2) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>KRB5_DEPRECATED_FUNCTION</code> (&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_keytype_to_enctypes_default</code> (krb5_context context, krb5_keytype keytype, unsigned *len, krb5_enctype **val) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_keytype_to_string</code> (krb5_context context, krb5_keytype keytype, char **string) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_string_to_keytype</code> (krb5_context context, const char *string, krb5_keytype *keytype) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_CALLCONV <code>krb5_password_key_proc</code> (krb5_context context, krb5_enctype type, krb5_salt salt, krb5_const_pointer keyseed, krb5_keyblock **key) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_in_tkt_with_password</code> (krb5_context context, krb5_flags options, krb5_addresses *addrs, const krb5_enctype *etypes, const krb5_preauthtype *pre_auth_types, const char *password, krb5_ccache ccache, krb5_creds *creds, krb5_kdc_rep *ret_as_reply) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_in_tkt_with_skey</code> (krb5_context context, krb5_flags options, krb5_addresses *addrs, const krb5_enctype *etypes, const krb5_preauthtype *pre_auth_types, const krb5_keyblock *key, krb5_ccache ccache, krb5_creds *creds, krb5_kdc_rep *ret_as_reply) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_CALLCONV <code>krb5_keytab_key_proc</code> (krb5_context context, krb5_enctype enctype, krb5_salt salt, krb5_const_pointer keyseed, krb5_keyblock **key) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_in_tkt_with_keytab</code> (krb5_context context, krb5_flags options, krb5_addresses *addrs, const krb5_enctype *etypes, const krb5_preauthtype *pre_auth_types, krb5_keytab keytab, krb5_ccache ccache, krb5_creds *creds, krb5_kdc_rep *ret_as_reply) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_realm<br />
+<p> KRB5_LIB_FUNCTION krb5_realm<br/>
  *KRB5_LIB_CALL <code>krb5_princ_realm</code> (krb5_context context, krb5_principal principal) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_princ_set_realm</code> (krb5_context context, krb5_principal principal, krb5_realm *realm) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>__attribute__</code> ((format(printf, 2, 3)))&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>__attribute__</code> ((format(printf, 2, 0)))&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_cred_from_kdc_opt</code> (krb5_context context, krb5_ccache ccache, krb5_creds *in_creds, krb5_creds **out_creds, krb5_creds ***ret_tgts, krb5_flags flags) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_cred_from_kdc</code> (krb5_context context, krb5_ccache ccache, krb5_creds *in_creds, krb5_creds **out_creds, krb5_creds ***ret_tgts) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_generate_subkey</code> (krb5_context context, const krb5_keyblock *key, krb5_keyblock **subkey) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_auth_getremoteseqnumber</code> (krb5_context context, krb5_auth_context auth_context, int32_t *seqnumber) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_init_creds_opt_get_error</code> (krb5_context context, krb5_get_init_creds_opt *opt, KRB_ERROR **error) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_c_enctype_compare</code> (krb5_context, krb5_enctype, krb5_enctype, krb5_boolean *) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_free_creds_contents</code> (krb5_context, krb5_creds *) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_free_data_contents</code> (krb5_context, krb5_data *) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_free_error_string</code> (krb5_context, char *) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_free_unparsed_name</code> (krb5_context, char *) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
- KRB5_LIB_CALL<br />
- KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION void<br/>
+ KRB5_LIB_CALL<br/>
+ KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_set_error_string</code> (krb5_context, const char *,&#8230;) <code>__attribute__</code>((format(printf&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
- krb5_error_code KRB5_LIB_CALL<br />
- KRB5_LIB_FUNCTION<br />
- krb5_error_code KRB5_LIB_CALL<br />
- KRB5_LIB_FUNCTION void<br />
- KRB5_LIB_CALL<br />
- KRB5_LIB_FUNCTION void<br />
- KRB5_LIB_CALL<br />
- KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
+ krb5_error_code KRB5_LIB_CALL<br/>
+ KRB5_LIB_FUNCTION<br/>
+ krb5_error_code KRB5_LIB_CALL<br/>
+ KRB5_LIB_FUNCTION void<br/>
+ KRB5_LIB_CALL<br/>
+ KRB5_LIB_FUNCTION void<br/>
+ KRB5_LIB_CALL<br/>
+ KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_vset_error_string</code> (krb5_context, const char *, va_list) <code>__attribute__</code>((format(printf&quot; </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -86,7 +86,7 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
  <i>fmt</i> error message to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -98,7 +98,7 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
  <i>msg</i> error message to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -113,11 +113,11 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context<br />
- <i>creds</i><br />
- <i>newpw</i><br />
- <i>result_code</i><br />
- <i>result_code_string</i><br />
+</dt><dd> <i>context</i> a Keberos context<br/>
+ <i>creds</i><br/>
+ <i>newpw</i><br/>
+ <i>result_code</i><br/>
+ <i>result_code_string</i><br/>
  <i>result_string</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -132,7 +132,7 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context.<br />
+</dt><dd> <i>context</i> Kerberos 5 context.<br/>
  <i>data</i> krb5_data to free.</dd></dl>
 <p> Deprecated: use <code>krb5_free_cred_contents()</code> </p>
 <p> Free the error message returned by krb5_get_error_string(). </p>
@@ -140,7 +140,7 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
  <i>str</i> error message to free</dd></dl>
 <p> Clear the error message returned by krb5_get_error_string(). </p>
 <p> Deprecated: use <code>krb5_clear_error_message()</code> </p>
@@ -161,7 +161,7 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context.<br />
+</dt><dd> <i>context</i> Kerberos 5 context.<br/>
  <i>data</i> krb5_data to free.</dd></dl>
 <h3>KRB5_LIB_FUNCTION void KRB5_LIB_CALL krb5_free_error_string (krb5_context, char *)</h3>
 <p> Free the error message returned by krb5_get_error_string(). </p>
@@ -169,7 +169,7 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
  <i>str</i> error message to free</dd></dl>
 <h3>KRB5_LIB_FUNCTION void KRB5_LIB_CALL krb5_free_unparsed_name (krb5_context, char *)</h3>
 <p> Deprecated: use krb5_xfree().</p>
@@ -207,7 +207,7 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
  <i>fmt</i> error message to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -221,7 +221,7 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
  <i>msg</i> error message to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

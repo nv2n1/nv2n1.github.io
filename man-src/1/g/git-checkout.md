@@ -217,14 +217,14 @@ a---b---c  branch 'master' (refers to commit 'c')
 <dl>
 <dt>
 </dt><dd>
-$ edit;<br />
-git add;<br />
-git commit<br />
-    HEAD(refers to branch &#8216;master&#8217;) |<br />
-    v<br />
-            a&#8211; &#8211;<br />
-            b&#8211; &#8211; c&#8211; &#8211; d branch &#8216;master'(refers to commit &#8216;d&#8217;) ^<br />
-    |<br />
+$ edit;<br/>
+git add;<br/>
+git commit<br/>
+    HEAD(refers to branch &#8216;master&#8217;) |<br/>
+    v<br/>
+            a&#8211; &#8211;<br/>
+            b&#8211; &#8211; c&#8211; &#8211; d branch &#8216;master'(refers to commit &#8216;d&#8217;) ^<br/>
+    |<br/>
     tag &#8216;v2.0&#8242;(refers to commit &#8216;b&#8217;)
 </dd></dl>
 <p> It is sometimes useful to be able to checkout a commit that is not at the tip of any named branch, or even to create a new commit that is not referenced by a named branch. Let&#8217;s look at what happens when we checkout commit <code>b</code> (here we show two ways this may be done): </p>
@@ -247,33 +247,33 @@ a---b---c---d  branch 'master' (refers to commit 'd')
 <dl>
 <dt>
 </dt><dd>
-$ edit;<br />
-git add;<br />
-git commit<br />
-    HEAD(refers to commit &#8216;e&#8217;) |<br />
-    v<br />
-                e<br />
-                /<br />
-                a&#8211; &#8211;<br />
-            b&#8211; &#8211; c&#8211; &#8211; d branch &#8216;master'(refers to commit &#8216;d&#8217;) ^<br />
-    |<br />
+$ edit;<br/>
+git add;<br/>
+git commit<br/>
+    HEAD(refers to commit &#8216;e&#8217;) |<br/>
+    v<br/>
+                e<br/>
+                /<br/>
+                a&#8211; &#8211;<br/>
+            b&#8211; &#8211; c&#8211; &#8211; d branch &#8216;master'(refers to commit &#8216;d&#8217;) ^<br/>
+    |<br/>
     tag &#8216;v2.0&#8242;(refers to commit &#8216;b&#8217;)
 </dd></dl>
 <p> There is now a new commit <code>e</code>, but it is referenced only by <code>HEAD</code>. We can of course add yet another commit in this state: </p>
 <dl>
 <dt>
 </dt><dd>
-$ edit;<br />
-git add;<br />
-git commit<br />
-    HEAD(refers to commit &#8216;f&#8217;) |<br />
-    v<br />
-            e&#8211; &#8211;<br />
-            f<br />
-                /<br />
-                a&#8211; &#8211;<br />
-            b&#8211; &#8211; c&#8211; &#8211; d branch &#8216;master'(refers to commit &#8216;d&#8217;) ^<br />
-    |<br />
+$ edit;<br/>
+git add;<br/>
+git commit<br/>
+    HEAD(refers to commit &#8216;f&#8217;) |<br/>
+    v<br/>
+            e&#8211; &#8211;<br/>
+            f<br/>
+                /<br/>
+                a&#8211; &#8211;<br/>
+            b&#8211; &#8211; c&#8211; &#8211; d branch &#8216;master'(refers to commit &#8216;d&#8217;) ^<br/>
+    |<br/>
     tag &#8216;v2.0&#8242;(refers to commit &#8216;b&#8217;)
 </dd></dl>
 <p> In fact, we can perform all the normal Git operations. But, let&#8217;s look at what happens when we then checkout <code>master</code>: </p>
@@ -303,8 +303,8 @@ $ git branch foo        <code>(2)</code>
 $ git tag foo           <code>(3)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>creates a new branch <code>foo</code>, which refers to commit <code>f</code>, and then updates <code>HEAD</code> to refer to branch <code>foo</code>. In other words, we&#8217;ll no longer be in detached <code>HEAD</code> state after this command.<br />
- <code>2. </code>similarly creates a new branch <code>foo</code>, which refers to commit <code>f</code>, but leaves <code>HEAD</code> detached.<br />
+<p> <code>1. </code>creates a new branch <code>foo</code>, which refers to commit <code>f</code>, and then updates <code>HEAD</code> to refer to branch <code>foo</code>. In other words, we&#8217;ll no longer be in detached <code>HEAD</code> state after this command.<br/>
+ <code>2. </code>similarly creates a new branch <code>foo</code>, which refers to commit <code>f</code>, but leaves <code>HEAD</code> detached.<br/>
  <code>3. </code>creates a new tag <code>foo</code>, which refers to commit <code>f</code>, leaving <code>HEAD</code> detached. </p>
 <p> If we have moved away from commit <code>f</code>, then we must first recover its object name (typically by using git reflog), and then we can create a reference to it. For example, to see the last two commits to which <code>HEAD</code> referred, we can use either of these commands: </p>
 <dl>
@@ -331,8 +331,8 @@ $ rm -f hello.c
 $ git checkout hello.c            <code>(3)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>switch branch<br />
- <code>2. </code>take a file out of another commit<br />
+<p> <code>1. </code>switch branch<br/>
+ <code>2. </code>take a file out of another commit<br/>
  <code>3. </code>restore <code>hello.c</code> from the index </p>
 <p> If you want to check out <i>all</i> C source files out of the index, you can say </p>
 <dl>

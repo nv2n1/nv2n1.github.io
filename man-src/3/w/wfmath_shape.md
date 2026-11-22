@@ -11,45 +11,45 @@ description: "WFMath::Shape – A fake class which documents the generic parts o
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/shape.h">shape.h</a>&gt; </p>
 <h3>Public Member Functions</h3>
-<p>bool <code>isEqualTo</code> (const <code>Shape</code> &amp;s, double tolerance=WFMATH_EPSILON) const<br />
- <i>generic: check if two classes are equal, up to a given tolerance </i><br />
- bool <code>operator==</code> (const <code>Shape</code> &amp;s) const<br />
- <i>generic: check if two classes are equal, up to tolerance WFMATH_EPSILON </i><br />
- bool <code>operator!=</code> (const <code>Shape</code> &amp;s) const<br />
- <i>generic: check if two classes are not equal, up to tolerance WFMATH_EPSILON </i><br />
- bool <code>isValid</code> () const<br />
- <i>generic: returns true if the class instance has been initialized </i><br />
- int <code>numCorners</code> () const<br />
- <i>shape: return the number of corners in the shape. </i><br />
- <code>Point</code>&lt; dim &gt; <code>getCorner</code> (int i) const<br />
- <i>shape: return the position of the i&#8217;th corner, where 0 &lt;= i &lt; </i><code>numCorners()</code><br />
- <code>Point</code>&lt; dim &gt; <code>getCenter</code> () const<br />
- <i>shape: return the position of the center of the shape </i><br />
- <code>Shape</code> &amp; <code>shift</code> (const <code>Vector</code>&lt; dim &gt; &amp;v)<br />
- <i>shape: move the shape by an amount given by the </i><code>Vector</code> v<br />
- <code>Shape</code> &amp; <code>moveCornerTo</code> (const <code>Point</code>&lt; dim &gt; &amp;p, int corner)<br />
- <i>shape: move the shape, moving the given corner to the </i><code>Point</code> p<br />
- <code>Shape</code> &amp; <code>moveCenterTo</code> (const <code>Point</code>&lt; dim &gt; &amp;p)<br />
- <i>shape: move the shape, moving the center to the </i><code>Point</code> p<br />
- <code>Shape</code> &amp; <code>rotateCorner</code> (const <code>RotMatrix</code>&lt; dim &gt; &amp;m, int corner)<br />
- <i>shape: rotate the shape while holding the given corner fixed </i><br />
- <code>Shape</code> &amp; <code>rotateCenter</code> (const <code>RotMatrix</code>&lt; dim &gt; &amp;m)<br />
- <i>shape: rotate the shape while holding the center fixed </i><br />
- <code>Shape</code> &amp; <code>rotatePoint</code> (const <code>RotMatrix</code>&lt; dim &gt; &amp;m, const <code>Point</code>&lt; dim &gt; &amp;p)<br />
- <i>shape: rotate the shape while holding the </i><code>Point</code> p fixed.<br />
- <code>AxisBox</code>&lt; dim &gt; <code>boundingBox</code> () const<br />
- <i>shape: return the minimal axis-aligned bounding box </i><br />
- <code>Ball</code>&lt; dim &gt; <code>boundingSphere</code> () const<br />
- <i>shape: return the minimal bounding sphere </i><br />
+<p>bool <code>isEqualTo</code> (const <code>Shape</code> &amp;s, double tolerance=WFMATH_EPSILON) const<br/>
+ <i>generic: check if two classes are equal, up to a given tolerance </i><br/>
+ bool <code>operator==</code> (const <code>Shape</code> &amp;s) const<br/>
+ <i>generic: check if two classes are equal, up to tolerance WFMATH_EPSILON </i><br/>
+ bool <code>operator!=</code> (const <code>Shape</code> &amp;s) const<br/>
+ <i>generic: check if two classes are not equal, up to tolerance WFMATH_EPSILON </i><br/>
+ bool <code>isValid</code> () const<br/>
+ <i>generic: returns true if the class instance has been initialized </i><br/>
+ int <code>numCorners</code> () const<br/>
+ <i>shape: return the number of corners in the shape. </i><br/>
+ <code>Point</code>&lt; dim &gt; <code>getCorner</code> (int i) const<br/>
+ <i>shape: return the position of the i&#8217;th corner, where 0 &lt;= i &lt; </i><code>numCorners()</code><br/>
+ <code>Point</code>&lt; dim &gt; <code>getCenter</code> () const<br/>
+ <i>shape: return the position of the center of the shape </i><br/>
+ <code>Shape</code> &amp; <code>shift</code> (const <code>Vector</code>&lt; dim &gt; &amp;v)<br/>
+ <i>shape: move the shape by an amount given by the </i><code>Vector</code> v<br/>
+ <code>Shape</code> &amp; <code>moveCornerTo</code> (const <code>Point</code>&lt; dim &gt; &amp;p, int corner)<br/>
+ <i>shape: move the shape, moving the given corner to the </i><code>Point</code> p<br/>
+ <code>Shape</code> &amp; <code>moveCenterTo</code> (const <code>Point</code>&lt; dim &gt; &amp;p)<br/>
+ <i>shape: move the shape, moving the center to the </i><code>Point</code> p<br/>
+ <code>Shape</code> &amp; <code>rotateCorner</code> (const <code>RotMatrix</code>&lt; dim &gt; &amp;m, int corner)<br/>
+ <i>shape: rotate the shape while holding the given corner fixed </i><br/>
+ <code>Shape</code> &amp; <code>rotateCenter</code> (const <code>RotMatrix</code>&lt; dim &gt; &amp;m)<br/>
+ <i>shape: rotate the shape while holding the center fixed </i><br/>
+ <code>Shape</code> &amp; <code>rotatePoint</code> (const <code>RotMatrix</code>&lt; dim &gt; &amp;m, const <code>Point</code>&lt; dim &gt; &amp;p)<br/>
+ <i>shape: rotate the shape while holding the </i><code>Point</code> p fixed.<br/>
+ <code>AxisBox</code>&lt; dim &gt; <code>boundingBox</code> () const<br/>
+ <i>shape: return the minimal axis-aligned bounding box </i><br/>
+ <code>Ball</code>&lt; dim &gt; <code>boundingSphere</code> () const<br/>
+ <i>shape: return the minimal bounding sphere </i><br/>
  <code>Ball</code>&lt; dim &gt; <code>boundingSphereSloppy</code> () const </p>
 <h3>Friends</h3>
-<p>std::ostream &amp; <code>operator</code> (std::ostream &amp;os, const <code>Shape</code> &amp;s)<br />
- <i>generic: Print an instance to a stream </i><br />
- std::istream &amp; <code>operator&gt;&gt;</code> (std::istream &amp;is, <code>Shape</code> &amp;s)<br />
- <i>generic: Parse an instance from a stream </i><br />
- bool <code>Intersect</code> (<code>Shape</code>&lt; dim &gt; &amp;s1, <code>Shape</code>&lt; dim &gt; &amp;s2, bool proper)<br />
- <i>shape: Returns true if the two shapes intersect. </i><br />
- bool <code>Contains</code> (<code>Shape</code>&lt; dim &gt; &amp;s1, <code>Shape</code>&lt; dim &gt; &amp;s2, bool proper)<br />
+<p>std::ostream &amp; <code>operator</code> (std::ostream &amp;os, const <code>Shape</code> &amp;s)<br/>
+ <i>generic: Print an instance to a stream </i><br/>
+ std::istream &amp; <code>operator&gt;&gt;</code> (std::istream &amp;is, <code>Shape</code> &amp;s)<br/>
+ <i>generic: Parse an instance from a stream </i><br/>
+ bool <code>Intersect</code> (<code>Shape</code>&lt; dim &gt; &amp;s1, <code>Shape</code>&lt; dim &gt; &amp;s2, bool proper)<br/>
+ <i>shape: Returns true if the two shapes intersect. </i><br/>
+ bool <code>Contains</code> (<code>Shape</code>&lt; dim &gt; &amp;s1, <code>Shape</code>&lt; dim &gt; &amp;s2, bool proper)<br/>
  <i>shape: Returns true if the first shape contains the second. </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;const int dim&gt; class WFMath::Shape&lt; dim &gt;</h3>

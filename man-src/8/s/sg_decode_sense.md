@@ -38,8 +38,8 @@ description: "sg_decode_sense – decode SCSI sense data"
 <h2>Notes</h2>
 <p>Unlike most utilities in this package, this utility does not access a SCSI device (logical unit). This utility accesses a library associated with this package. Amongst other things the library decodes SCSI sense data.</p>
 <h2>Examples</h2>
-<p>Sense data is often printed out in kernel logs and sometimes on the command line when verbose or debug flags are given. It will be at least 8 bytes long, often 18 bytes long but may be longer. A sense data string might look like this: f0 00 03 00 00 12 34 0a 00 00 00 00 11 00 00 00<br />
- 00 00 Cut and paste it after the sg_decode_sense command:<br />
+<p>Sense data is often printed out in kernel logs and sometimes on the command line when verbose or debug flags are given. It will be at least 8 bytes long, often 18 bytes long but may be longer. A sense data string might look like this: f0 00 03 00 00 12 34 0a 00 00 00 00 11 00 00 00<br/>
+ 00 00 Cut and paste it after the sg_decode_sense command:<br/>
 &nbsp;<wbr>&nbsp;<wbr>sg_decode_sense f0 00 03 00 00 12 34 0a 00 00 00 00 11 00 00 00 00 00 and for this sense data the output should look like this: </p>
 <pre><code>Fixed format, current;  Sense key: Medium Error
 Additional sense: Unrecovered read error
@@ -52,7 +52,7 @@ Info fld=0x1234 [4660]</code></pre>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2010-2011 Douglas Gilbert<br />
+<p>Copyright &#169; 2010-2011 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_requests(sg3_utils)</code> </p>

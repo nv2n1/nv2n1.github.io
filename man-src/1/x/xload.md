@@ -63,8 +63,8 @@ XLoad  xload
 <p> On older platforms, this program may require the ability to open and read the special system file <i>/dev/kmem</i>. Sites that do not allow general access to this file may need to make <i>xload</i> belong to the same group as <i>/dev/kmem</i> and turn on the <i>set group id</i> permission flag. </p>
 <p> Reading the load average is inherently non-portable. Therefore, the routine used to read it (get_load.c) must be ported to each new operating system.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; X Consortium<br />
+<p> Copyright &#169; X Consortium<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHORS</h2>
-<p> K. Shane Hartman (MIT-LCS) and Stuart A. Malone (MIT-LCS);<br />
+<p> K. Shane Hartman (MIT-LCS) and Stuart A. Malone (MIT-LCS);<br/>
  with features added by Jim Gettys (MIT-Athena), Bob Scheifler (MIT-LCS), Tony Della Fera (MIT-Athena), and Chris Peterson (MIT-LCS). </p>

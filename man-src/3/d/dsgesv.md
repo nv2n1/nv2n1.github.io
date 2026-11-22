@@ -11,7 +11,7 @@ description: "dsgesv.f –"
 <p> dsgesv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dsgesv</code> (N, NRHS, A, LDA, IPIV, B, LDB, X, LDX, WORK, SWORK, ITER, INFO)<br />
+<p> subroutine <code>dsgesv</code> (N, NRHS, A, LDA, IPIV, B, LDB, X, LDX, WORK, SWORK, ITER, INFO)<br/>
  <i></i><code> DSGESV computes the solution to system of linear equations A * X = B for GE matrices</code> (mixed precision with iterative refinement)</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsgesv (integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldx, * )X, integerLDX, double precision, dimension( n, * )WORK, real, dimension( * )SWORK, integerITER, integerINFO)</h3>

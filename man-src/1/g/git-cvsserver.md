@@ -202,7 +202,7 @@ cvs -d &quot;:ext;CVS_SERVER=git cvsserver:user [at] server/path/repo.git&quot; 
 <dt>
 </dt><dd> Database table name prefix. Supports variable substitution (see below). Any non-alphabetic characters will be replaced with underscores.</dd></dl>
 <p> All variables can also be set per access method, see above. </p>
-<p> <font SIZE="+1"> <code>Variable substitution</code></p>
+<p>  <code>Variable substitution</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -228,7 +228,7 @@ cvs -d &quot;:ext;CVS_SERVER=git cvsserver:user [at] server/path/repo.git&quot; 
 <dt>
 </dt><dd> Name of the user running <i>git-cvsserver</i>. If no name can be determined, the numeric uid is used.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h2>ENVIRONMENT</h2>
 <p> These variables obviate the need for command-line options in some circumstances, allowing easier restricted usage through git-shell. </p>
 <p> GIT_CVSSERVER_BASE_PATH takes the place of the argument to &#8211;base-path. </p>

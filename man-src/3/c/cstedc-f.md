@@ -10,7 +10,7 @@ description: "cstedc.f –"
 <p>cstedc.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cstedc</code> (COMPZ, N, D, E, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>cstedc</code> (COMPZ, N, D, E, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>CSTEDC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cstedc (characterCOMPZ, integerN, real, dimension( * )D, real, dimension( * )E, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerLRWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

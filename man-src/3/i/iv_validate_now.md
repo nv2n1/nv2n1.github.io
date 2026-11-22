@@ -11,8 +11,8 @@ description: "iv_now, iv_validate_now, iv_invalidate_now – ivykis time handlin
 <p> iv_now, iv_validate_now, iv_invalidate_now &#8211; ivykis time handling</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>
-<p> <code>extern struct timespec </code><i>iv_now</i><code>;</code><br />
- <code>void iv_validate_now(void);</code><br />
+<p> <code>extern struct timespec </code><i>iv_now</i><code>;</code><br/>
+ <code>void iv_validate_now(void);</code><br/>
  <code>void iv_invalidate_now(void);</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>iv_now</code> is a global variable that reflects the current time-of-day. Applications written to the ivykis API generally require to know the current time-of-day in many places, and therefore effort is done to cache this quantity. </p>

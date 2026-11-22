@@ -14,8 +14,8 @@ description: "mib2c — generate template code for extending the agent"
 <h2>DESCRIPTION</h2>
 <p> The mib2c tool is designed to take a portion of the MIB tree (as defined by a MIB file) and generate the template C code necessary to implement the relevant management objects within it. </p>
 <p> In order to implement a new MIB module, three files are necessary: </p>
-<p> &#8211; MIB definition file<br />
- &#8211; C header file<br />
+<p> &#8211; MIB definition file<br/>
+ &#8211; C header file<br/>
  &#8211; C implementation file. </p>
 <p> The mib2c tool uses the MIB definition file to produce the two C code files. Thus, mib2c generates a template that you can edit to add logic necessary to obtain information from the operating system or application to complete the module. </p>
 <p> MIBNODE is the top level mib node you want to generate code for. You must give mib2c a mib node (e.g. ifTable) on the command line, not a mib file. This is the single most common mistake. </p>
@@ -42,13 +42,13 @@ description: "mib2c — generate template code for extending the agent"
 <dt>
 </dt><dd> The following values are supported for CONFIGFILE:</dd>
 <dt>
-</dt><dd> mib2c.mfd.conf<br />
- mib2c.scalar.conf<br />
- mib2c.int_watch.conf<br />
- mib2c.iterate.conf<br />
- mib2c.create-dataset.conf<br />
- mib2c.array-user.conf<br />
- mib2c.column_defines.conf<br />
+</dt><dd> mib2c.mfd.conf<br/>
+ mib2c.scalar.conf<br/>
+ mib2c.int_watch.conf<br/>
+ mib2c.iterate.conf<br/>
+ mib2c.create-dataset.conf<br/>
+ mib2c.array-user.conf<br/>
+ mib2c.column_defines.conf<br/>
  mib2c.column_enums.conf</dd>
 <dt>
 </dt><dd> GENERATING CODE FOR SCALAR OBJECTS:</dd>
@@ -91,19 +91,19 @@ description: "mib2c — generate template code for extending the agent"
 <p> The following generates C template code for the header and implementation files to implement UCD-DEMO-MIB::ucdDemoPublic.</p>
 <dl>
 <dt>
-</dt><dd> % mib2c -c mib2c.scalar.conf ucdDemoPublic<br />
- writing to ucdDemoPublic.h<br />
- writing to ucdDemoPublic.c<br />
- running indent on ucdDemoPublic.h<br />
+</dt><dd> % mib2c -c mib2c.scalar.conf ucdDemoPublic<br/>
+ writing to ucdDemoPublic.h<br/>
+ writing to ucdDemoPublic.c<br/>
+ running indent on ucdDemoPublic.h<br/>
  running indent on ucdDemoPublic.c</dd></dl>
 <p> The resulting ucdDemoPublic.c and ucdDemoPublic.h files are generated the current working directory. </p>
 <p> The following generates C template code for the header and implementation files for the module to implement TCP-MIB::tcpConnTable.</p>
 <dl>
 <dt>
-</dt><dd> % mib2c -c mib2c.iterate.conf tcpConnTable<br />
- writing to tcpConnTable.h<br />
- writing to tcpConnTable.c<br />
- running indent on tcpConnTable.h<br />
+</dt><dd> % mib2c -c mib2c.iterate.conf tcpConnTable<br/>
+ writing to tcpConnTable.h<br/>
+ writing to tcpConnTable.c<br/>
+ running indent on tcpConnTable.h<br/>
  running indent on tcpConnTable.c</dd></dl>
 <p> The resulting tcpConnTable.c and tcpConnTable.h files are generated in the current working directory. </p>
 <h2>SEE ALSO</h2>

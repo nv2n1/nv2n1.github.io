@@ -69,6 +69,6 @@ description: "opatmmtool"
 </dl>
 </dl>
 <h2>Examples</h2>
-<p> opatmmtool -h 1 fwversion<br />
- opatmmtool -v -f main.signed.bin update<br />
+<p> opatmmtool -h 1 fwversion<br/>
+ opatmmtool -v -f main.signed.bin update<br/>
  opatmmtool reboot </p>

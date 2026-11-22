@@ -37,7 +37,7 @@ description: "rabbitmqctl – command line tool for managing a RabbitMQ broker"
 <dl>
 <dt>
 </dt><dl>
-<dd>Stops the Erlang node on which RabbitMQ is running. To restart the node follow the instructions for Running the Server in the m[blue]<code>installation guide</code>m[]<font SIZE="-2">[1]</font>. </dd>
+<dd>Stops the Erlang node on which RabbitMQ is running. To restart the node follow the instructions for Running the Server in the m[blue]<code>installation guide</code>m[][1]. </dd>
 <p> If a <code>pid_file</code> is specified, also waits for the process specified there to terminate. See the description of the <code>wait</code> command below for details on this file. </p>
 <p> For example: </p>
 <pre>
@@ -144,7 +144,7 @@ rabbitmqctl hipe_compile /tmp/rabbit-hipe/ebin
 <p> The node will be a disc node by default. If you wish to create a RAM node, provide the <code>&#8211;ram</code> flag. </p>
 <p> After executing the <code>cluster</code> command, whenever the RabbitMQ application is started on the current node it will attempt to connect to the nodes that were in the cluster when the node went down. </p>
 <p> To leave a cluster, <code>reset</code> the node. You can also remove nodes remotely with the <code>forget_cluster_node</code> command. </p>
-<p> For more details see the m[blue]<code>clustering guide</code>m[]<font SIZE="-2">[2]</font>. </p>
+<p> For more details see the m[blue]<code>clustering guide</code>m[][2]. </p>
 <p> For example: </p>
 <pre>
 rabbitmqctl join_cluster hare [at] elena --ram

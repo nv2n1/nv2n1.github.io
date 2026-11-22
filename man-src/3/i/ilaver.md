@@ -11,7 +11,7 @@ description: "ilaver.f –"
 <p> ilaver.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ilaver</code> (VERS_MAJOR, VERS_MINOR, VERS_PATCH)<br />
+<p> subroutine <code>ilaver</code> (VERS_MAJOR, VERS_MINOR, VERS_PATCH)<br/>
  <i></i><code>ILAVER</code> returns the LAPACK version.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ilaver (integerVERS_MAJOR, integerVERS_MINOR, integerVERS_PATCH)</h3>
@@ -26,8 +26,8 @@ description: "ilaver.f –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>VERS_MAJOR</i> return the lapack major version<br />
- <i>VERS_MINOR</i> return the lapack minor version from the major version<br />
+</dt><dd> <i>VERS_MAJOR</i> return the lapack major version<br/>
+ <i>VERS_MINOR</i> return the lapack minor version from the major version<br/>
  <i>VERS_PATCH</i> return the lapack patch version from the minor version</dd></dl>
 <p> <code>Author:</code></p>
 <dl>

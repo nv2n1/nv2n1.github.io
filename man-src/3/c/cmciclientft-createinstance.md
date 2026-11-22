@@ -27,5 +27,5 @@ description: "CMCIClientFT.createInstance() – Create class instance"
 <h2>Errors</h2>
 <h2>Examples</h2>
 <h2>See Also</h2>
-<p>Common Manageability Programming Interface (CMPI) &#8211; OpenGroup,<br />
+<p>Common Manageability Programming Interface (CMPI) &#8211; OpenGroup,<br/>
  <a href="/docs/linux/man/3-cmciclient/">CMCIClient</a>(3), <a href="/docs/linux/man/3-cmpiobjectpath/">CMPIObjectPath</a>(3), <a href="/docs/linux/man/3-cmpiinstance/">CMPIInstance</a>(3), <a href="/docs/linux/man/3-cmpistatus/">CMPIStatus</a>(3)</p>

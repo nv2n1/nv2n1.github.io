@@ -17,17 +17,17 @@ description: "pampaintspill – smoothly spill colors into the background"
 <p> <code>pampaintspill</code> produces a smooth color gradient from all of the non-background-colored pixels in an input image, effectively &lt;q&gt;spilling paint&lt;/q&gt; onto the background. <code>pampaintspill</code> is similar to <code>pamgradient</code> but differs in the following characteristics: </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <code>pampaintspill</code> accepts any number of paint<br />
-sources&nbsp;<wbr>(non-background-colored pixels), which can lie anywhere<br />
-on the canvas.&nbsp;<wbr>&nbsp;<wbr><code>pamgradient</code>&nbsp;<wbr>accepts exactly<br />
+<dd> <code>pampaintspill</code> accepts any number of paint<br/>
+sources&nbsp;<wbr>(non-background-colored pixels), which can lie anywhere<br/>
+on the canvas.&nbsp;<wbr>&nbsp;<wbr><code>pamgradient</code>&nbsp;<wbr>accepts exactly<br/>
 four paint sources, one in each corner of the image. </dd>
 <dt>&bull;</dt>
-<dd> <code>pampaintspill</code> requires an input image while<br />
-<code>pamgradient</code>&nbsp;<wbr>generates a new image from<br />
+<dd> <code>pampaintspill</code> requires an input image while<br/>
+<code>pamgradient</code>&nbsp;<wbr>generates a new image from<br/>
 scratch. </dd>
 <dt>&bull;</dt>
-<dd> <code>pampaintspill</code> can produce tileable output and<br />
-can control how tightly the gradient colors bind to their source<br />
+<dd> <code>pampaintspill</code> can produce tileable output and<br/>
+can control how tightly the gradient colors bind to their source<br/>
 pixels. </dd>
 </dl>
 <p> Results are generally best when the input image contains just a few, crisp spots of color. Use your drawing program&#8217;s pencil tool &amp;mdash; as opposed to a paintbrush or airbrush tool &amp;mdash; with a small nib. </p>
@@ -35,44 +35,44 @@ pixels. </dd>
 <dl>
 <dt><code>&#8211;bgcolor</code>=<i>color</i></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr> Explicitly specify the background color. <i>color</i> can be<br />
-specified using any of the formats accepted by the&nbsp;<wbr> <tt>ppm_parsecolor()</tt> library routine such as <tt>red</tt> or <tt>#ff0000</tt>. If<br />
-<code>&#8211;bgcolor</code>&nbsp;<wbr>is not specified,&nbsp;<wbr><code>pampaintspill</code>&nbsp;<wbr>makes an<br />
-educated guess about the background color based on the colors in the<br />
+&nbsp;<wbr>&nbsp;<wbr> Explicitly specify the background color. <i>color</i> can be<br/>
+specified using any of the formats accepted by the&nbsp;<wbr> <tt>ppm_parsecolor()</tt> library routine such as <tt>red</tt> or <tt>#ff0000</tt>. If<br/>
+<code>&#8211;bgcolor</code>&nbsp;<wbr>is not specified,&nbsp;<wbr><code>pampaintspill</code>&nbsp;<wbr>makes an<br/>
+educated guess about the background color based on the colors in the<br/>
 image&#8217;s corners. </dd>
 <dt><code>&#8211;wrap</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr> Allow gradients to wrap around image borders. That is, colors<br />
-that spill off the right side of the image reappear on the left side of<br />
-the image and likewise for left/right, top/bottom, and<br />
-bottom/top.&nbsp;<wbr><code>&#8211;wrap</code>&nbsp;<wbr>makes images tileable, which is nice for<br />
+&nbsp;<wbr>&nbsp;<wbr> Allow gradients to wrap around image borders. That is, colors<br/>
+that spill off the right side of the image reappear on the left side of<br/>
+the image and likewise for left/right, top/bottom, and<br/>
+bottom/top.&nbsp;<wbr><code>&#8211;wrap</code>&nbsp;<wbr>makes images tileable, which is nice for<br/>
 producing desktop backgrounds. </dd>
 <dt><code>&#8211;all</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr> Recolor all pixels, not just background pixels. Normally,<br />
-non-background-colored pixels in the input image appear unmodified in<br />
-the output image. With&nbsp;<wbr><code>&#8211;all</code>,&nbsp;<wbr><i>all</i>&nbsp;<wbr>pixels are colored<br />
-based on their distance from all of the&nbsp;<wbr>(other)&nbsp;<wbr>non-background-colored<br />
+&nbsp;<wbr>&nbsp;<wbr> Recolor all pixels, not just background pixels. Normally,<br/>
+non-background-colored pixels in the input image appear unmodified in<br/>
+the output image. With&nbsp;<wbr><code>&#8211;all</code>,&nbsp;<wbr><i>all</i>&nbsp;<wbr>pixels are colored<br/>
+based on their distance from all of the&nbsp;<wbr>(other)&nbsp;<wbr>non-background-colored<br/>
 pixels. </dd>
 <dt><code>&#8211;downsample</code>=<i>number</i></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr> Ignore all but <i>number</i> non-background-colored pixels.<br />
-When a large number of pixels in the input image differ in color from<br />
-the background,&nbsp;<wbr><code>pampaintspill</code>&nbsp;<wbr>runs very slowly. The<br />
-<code>&#8211;downsample</code>&nbsp;<wbr>option randomly selects a given number of colored<br />
-pixels to use as paint sources for the gradients and ignores the rest,<br />
+&nbsp;<wbr>&nbsp;<wbr> Ignore all but <i>number</i> non-background-colored pixels.<br/>
+When a large number of pixels in the input image differ in color from<br/>
+the background,&nbsp;<wbr><code>pampaintspill</code>&nbsp;<wbr>runs very slowly. The<br/>
+<code>&#8211;downsample</code>&nbsp;<wbr>option randomly selects a given number of colored<br/>
+pixels to use as paint sources for the gradients and ignores the rest,<br/>
 thereby trading off image quality for speed of execution. </dd>
 <dt><code>&#8211;power</code>=<i>number</i></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr> Control how color intensity changes as a function of the<br />
-distance from a paint source. The default value for&nbsp;<wbr><i>number</i>&nbsp;<wbr>is<br />
--2.0, which means that intensity drops&nbsp;<wbr>(because of the minus sign)&nbsp;<wbr>with<br />
-the square&nbsp;<wbr>(because of the 2.0)&nbsp;<wbr>of the distance from each paint<br />
-source. -2.0 generally works well in practice, but other values can be<br />
-specified for various special effects. With very small numbers of paint<br />
-sources, -1.0 may produce subtler gradients, but these get muddier as<br />
-the number of paint sources increases. Positive numbers&nbsp;<wbr>(e.g., 1.0 and<br />
-2.0)&nbsp;<wbr>make the paint sources stand out in the output image by pushing the<br />
+&nbsp;<wbr>&nbsp;<wbr> Control how color intensity changes as a function of the<br/>
+distance from a paint source. The default value for&nbsp;<wbr><i>number</i>&nbsp;<wbr>is<br/>
+-2.0, which means that intensity drops&nbsp;<wbr>(because of the minus sign)&nbsp;<wbr>with<br/>
+the square&nbsp;<wbr>(because of the 2.0)&nbsp;<wbr>of the distance from each paint<br/>
+source. -2.0 generally works well in practice, but other values can be<br/>
+specified for various special effects. With very small numbers of paint<br/>
+sources, -1.0 may produce subtler gradients, but these get muddier as<br/>
+the number of paint sources increases. Positive numbers&nbsp;<wbr>(e.g., 1.0 and<br/>
+2.0)&nbsp;<wbr>make the paint sources stand out in the output image by pushing the<br/>
 gradients away from them. </dd>
 </dl>
 <h2>SEE ALSO</h2>

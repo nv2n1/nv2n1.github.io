@@ -9,8 +9,8 @@ description: "pmdaDSO – initialize the PMDA to run as a DSO"
 
 <p><code>pmdaDSO</code> &#8211; initialize the PMDA to run as a DSO</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> int pmdaDSO(pmdaInterface *</code><i>dispatch</i>, int <i>interface</i>, char&nbsp;<wbr>*<i>name</i>, char&nbsp;<wbr>*<i>helptext</i>); </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>

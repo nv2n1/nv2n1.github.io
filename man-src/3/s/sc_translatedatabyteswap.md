@@ -14,12 +14,12 @@ description: "sc::TranslateDataByteSwap –"
 #include &lt;translate.h&gt;</code></pre>
 <p> Inherits <code>sc::TranslateData</code>.</p>
 <h3>Public Member Functions</h3>
-<p>virtual char <code>format_code</code> ()<br />
- <i>Returns a code for the type of format for the external data. </i><br />
- virtual void <code>to_native</code> (char *, int n)<br />
- <i>Overridden translation routines exist for all the basic types. </i><br />
- virtual void <code>to_external</code> (char *, int n)<br />
- <i>Overridden translation routines exist for all the basic types. </i><br />
+<p>virtual char <code>format_code</code> ()<br/>
+ <i>Returns a code for the type of format for the external data. </i><br/>
+ virtual void <code>to_native</code> (char *, int n)<br/>
+ <i>Overridden translation routines exist for all the basic types. </i><br/>
+ virtual void <code>to_external</code> (char *, int n)<br/>
+ <i>Overridden translation routines exist for all the basic types. </i><br/>
  virtual void <code>to_native</code> (short *, int n) </p>
 <p> virtual void <code>to_external</code> (short *, int n) </p>
 <p> virtual void <code>to_native</code> (unsigned int *, int n) </p>
@@ -32,10 +32,10 @@ description: "sc::TranslateDataByteSwap –"
 <p> virtual void <code>to_external</code> (float *, int n) </p>
 <p> virtual void <code>to_native</code> (double *, int n) </p>
 <p> virtual void <code>to_external</code> (double *, int n) </p>
-<p> virtual void <code>to_native</code> (char *, const void *, int n)<br />
- <i>Overridden translation routines exist for all the basic types. </i><br />
- virtual void <code>to_external</code> (void *, const char *, int n)<br />
- <i>Overridden translation routines exist for all the basic types. </i><br />
+<p> virtual void <code>to_native</code> (char *, const void *, int n)<br/>
+ <i>Overridden translation routines exist for all the basic types. </i><br/>
+ virtual void <code>to_external</code> (void *, const char *, int n)<br/>
+ <i>Overridden translation routines exist for all the basic types. </i><br/>
  virtual void <code>to_native</code> (short *, const void *, int n) </p>
 <p> virtual void <code>to_external</code> (void *, const short *, int n) </p>
 <p> virtual void <code>to_native</code> (unsigned int *, const void *, int n) </p>

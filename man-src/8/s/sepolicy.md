@@ -9,22 +9,22 @@ description: "sepolicy – SELinux Policy Inspection tool"
 
 <p>sepolicy &#8211; SELinux Policy Inspection tool </p>
 <h2>Synopsis</h2>
-<p><code>sepolicy [-h] [-P policy_path ] {booleans,communicate,generate,interface,manpage,network,transition} OPTIONS</code><br />
- Arguments:<br />
- <code>booleans</code><br />
- Query SELinux policy to see description of booleans <code>sepolicy-boolean(8)</code><br />
- <code>communicate</code><br />
- Query SELinux policy to see if domains can communicate with each other <code><a href="/docs/linux/man/8-sepolicy-communicate/">sepolicy-communicate</a>(8)</code><br />
+<p><code>sepolicy [-h] [-P policy_path ] {booleans,communicate,generate,interface,manpage,network,transition} OPTIONS</code><br/>
+ Arguments:<br/>
+ <code>booleans</code><br/>
+ Query SELinux policy to see description of booleans <code>sepolicy-boolean(8)</code><br/>
+ <code>communicate</code><br/>
+ Query SELinux policy to see if domains can communicate with each other <code><a href="/docs/linux/man/8-sepolicy-communicate/">sepolicy-communicate</a>(8)</code><br/>
  <code>generate</code> </p>
 <p> Generate SELinux Policy module template <code>gui</code> </p>
-<p> Launch Graphical User Interface for SELinux Policy, requires policycoreutils-gui package. <code><a href="/docs/linux/man/8-sepolicy-generate/">sepolicy-generate</a>(8)</code><br />
+<p> Launch Graphical User Interface for SELinux Policy, requires policycoreutils-gui package. <code><a href="/docs/linux/man/8-sepolicy-generate/">sepolicy-generate</a>(8)</code><br/>
  <code>interface</code> </p>
-<p> Print SELinux Policy interface information <code><a href="/docs/linux/man/8-sepolicy-interface/">sepolicy-interface</a>(8)</code><br />
- <code>manpage</code><br />
- Generate SELinux man pages <code><a href="/docs/linux/man/8-sepolicy-manpage/">sepolicy-manpage</a>(8)</code><br />
- <code>network</code><br />
- Query SELinux policy network information <code><a href="/docs/linux/man/8-sepolicy-network/">sepolicy-network</a>(8)</code><br />
- <code>transition </code><br />
+<p> Print SELinux Policy interface information <code><a href="/docs/linux/man/8-sepolicy-interface/">sepolicy-interface</a>(8)</code><br/>
+ <code>manpage</code><br/>
+ Generate SELinux man pages <code><a href="/docs/linux/man/8-sepolicy-manpage/">sepolicy-manpage</a>(8)</code><br/>
+ <code>network</code><br/>
+ Query SELinux policy network information <code><a href="/docs/linux/man/8-sepolicy-network/">sepolicy-network</a>(8)</code><br/>
+ <code>transition </code><br/>
  Query SELinux Policy to see how a source process domain can transition to the target process domain <code><a href="/docs/linux/man/8-sepolicy-transition/">sepolicy-transition</a>(8)</code> </p>
 <h2>Description</h2>
 <p>sepolicy is a tools set that will query the installed SELinux policy and generate useful reports, man pages, or even new policy modules. See the argument specific man pages for options and descriptions. </p>

@@ -43,11 +43,11 @@ const char *gnu_get_libc_release(void);
 <p> $<code> ./a.out</code> GNU libc version: 2.8 GNU libc release: stable</p>
 <h3>Program source</h3>
 <p> #include &lt;gnu/libc-version.h&gt; #include &lt;stdlib.h&gt; #include &lt;stdio.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
+<p> int main(int argc, char *argv[]) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;GNU libc version:&nbsp;%s
-&quot;, gnu_get_libc_version());<br />
+&quot;, gnu_get_libc_version());<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;GNU libc release:&nbsp;%s
-&quot;, gnu_get_libc_release());<br />
+&quot;, gnu_get_libc_release());<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
 <p> <code>confstr</code>(3)</p>

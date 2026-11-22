@@ -10,22 +10,22 @@ description: "xset – user preference utility for X"
 
 <p> xset &#8211; user preference utility for X </p>
 <h2>SYNOPSIS</h2>
-<p> <code>xset</code> [-display <i>display</i>]<br />
- [-b] [b {on|off}] [b [<i>volume</i> [<i>pitch</i> [<i>duration</i>]]]]<br />
- [-bc] [bc]<br />
- [-c] [c {on|off}] [c [<i>volume</i>]]<br />
- [+dpms] [-dpms]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[dpms <i>standby</i> [<i> suspend</i> [<i> off</i>]]]<br />
+<p> <code>xset</code> [-display <i>display</i>]<br/>
+ [-b] [b {on|off}] [b [<i>volume</i> [<i>pitch</i> [<i>duration</i>]]]]<br/>
+ [-bc] [bc]<br/>
+ [-c] [c {on|off}] [c [<i>volume</i>]]<br/>
+ [+dpms] [-dpms]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[dpms <i>standby</i> [<i> suspend</i> [<i> off</i>]]]<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[dpms force {standby|suspend|off|on}]</p>
-<p> [fp=<i>pathlist</i>] [-fp=<i>pathlist</i>] [+fp=<i>pathlist</i>] [fp-<i>pathlist</i>] [fp+<i>pathlist</i>]<br />
- [fp default] [fp rehash]<br />
- [-led [<i>integer</i>|named <i>indicator</i>]] [led [<i>integer</i>|named <i>indicator</i>]]<br />
- [led {on|off}]<br />
- [mouse [<i>accel_mult</i>[/<i>accel_div</i>] [<i>threshold</i>]]] [mouse default]<br />
- [p <i>pixel</i> <i>color</i>]<br />
- [-r [keycode]] [r [keycode]] [r {on|off}] [r rate <i>delay</i> [<i>rate</i>]]<br />
- [s [<i>length</i> [<i>period</i>]]] [s {blank|noblank}] [s {expose|noexpose}] [s {on|off}] [s default] [s activate] [s reset]<br />
- [q]<br />
+<p> [fp=<i>pathlist</i>] [-fp=<i>pathlist</i>] [+fp=<i>pathlist</i>] [fp-<i>pathlist</i>] [fp+<i>pathlist</i>]<br/>
+ [fp default] [fp rehash]<br/>
+ [-led [<i>integer</i>|named <i>indicator</i>]] [led [<i>integer</i>|named <i>indicator</i>]]<br/>
+ [led {on|off}]<br/>
+ [mouse [<i>accel_mult</i>[/<i>accel_div</i>] [<i>threshold</i>]]] [mouse default]<br/>
+ [p <i>pixel</i> <i>color</i>]<br/>
+ [-r [keycode]] [r [keycode]] [r {on|off}] [r rate <i>delay</i> [<i>rate</i>]]<br/>
+ [s [<i>length</i> [<i>period</i>]]] [s {blank|noblank}] [s {expose|noexpose}] [s {on|off}] [s default] [s activate] [s reset]<br/>
+ [q]<br/>
  [-version]</p>
 <h2>DESCRIPTION</h2>
 <p> This program is used to set various user preference options of the display.</p>
@@ -92,7 +92,7 @@ description: "xset – user preference utility for X"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/1-xmodmap/">xmodmap</a>(1), <a href="/docs/linux/man/1-xrdb/">xrdb</a>(1), <a href="/docs/linux/man/1-xsetroot/">xsetroot</a>(1), <a href="/docs/linux/man/1-xinput/">xinput</a>(1)</p>
 <h2>AUTHOR</h2>
-<p> Bob Scheifler, MIT Laboratory for Computer Science<br />
- David Krikorian, MIT Project Athena (X11 version)<br />
- XFree86-Misc support added by David Dawes and Joe Moss<br />
+<p> Bob Scheifler, MIT Laboratory for Computer Science<br/>
+ David Krikorian, MIT Project Athena (X11 version)<br/>
+ XFree86-Misc support added by David Dawes and Joe Moss<br/>
  Manpage updates added by Mike A. Harris &lt;mharris [at] redhat.com&gt; </p>

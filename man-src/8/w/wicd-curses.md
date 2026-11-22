@@ -51,6 +51,6 @@ description: "wicd-curses – curses-based wicd(8) controller"
 <h2>Wicd-Curses Author</h2>
 <p>Andrew Psaltis &lt;ampsaltis [at] gmail.com&gt;</p>
 <h2>Wicd Authors</h2>
-<p>Adam Blackburn &lt;compwiz18 [at] gmail.com&gt;<br />
- Dan O&#8217;Reilly &lt;oreilldf [at] gmail.com&gt;<br />
+<p>Adam Blackburn &lt;compwiz18 [at] gmail.com&gt;<br/>
+ Dan O&#8217;Reilly &lt;oreilldf [at] gmail.com&gt;<br/>
  David Paleino &lt;d.paleino [at] gmail.com&gt;</p>

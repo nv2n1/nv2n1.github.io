@@ -10,7 +10,7 @@ description: "slantr.f –"
 <p>slantr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>slantr</code> (NORM, UPLO, DIAG, M, N, A, LDA, WORK)<br />
+<p>REAL function <code>slantr</code> (NORM, UPLO, DIAG, M, N, A, LDA, WORK)<br/>
  <i></i><code>SLANTR</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a trapezoidal or triangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function slantr (characterNORM, characterUPLO, characterDIAG, integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )WORK)</h3>

@@ -11,7 +11,7 @@ description: "cuncsd.f –"
 <p> cuncsd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> recursive subroutine <code>cuncsd</code> (JOBU1, JOBU2, JOBV1T, JOBV2T, TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, U1, LDU1, U2, LDU2, V1T, LDV1T, V2T, LDV2T, WORK, LWORK, RWORK, LRWORK, IWORK, INFO)<br />
+<p> recursive subroutine <code>cuncsd</code> (JOBU1, JOBU2, JOBV1T, JOBV2T, TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, U1, LDU1, U2, LDU2, V1T, LDV1T, V2T, LDV2T, WORK, LWORK, RWORK, LRWORK, IWORK, INFO)<br/>
  <i></i><code>CUNCSD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>recursive subroutine cuncsd (characterJOBU1, characterJOBU2, characterJOBV1T, characterJOBV2T, characterTRANS, characterSIGNS, integerM, integerP, integerQ, complex, dimension( ldx11, * )X11, integerLDX11, complex, dimension( ldx12, * )X12, integerLDX12, complex, dimension( ldx21, * )X21, integerLDX21, complex, dimension( ldx22, * )X22, integerLDX22, real, dimension( * )THETA, complex, dimension( ldu1, * )U1, integerLDU1, complex, dimension( ldu2, * )U2, integerLDU2, complex, dimension( ldv1t, * )V1T, integerLDV1T, complex, dimension( ldv2t, * )V2T, integerLDV2T, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerLRWORK, integer, dimension( * )IWORK, integerINFO)</h3>

@@ -10,7 +10,7 @@ description: "dpocon.f –"
 <p>dpocon.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dpocon</code> (UPLO, N, A, LDA, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dpocon</code> (UPLO, N, A, LDA, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>DPOCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpocon (characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, double precisionANORM, double precisionRCOND, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

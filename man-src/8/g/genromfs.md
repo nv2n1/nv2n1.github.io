@@ -29,9 +29,9 @@ description: "genromfs – create a romfs image"
 <dt><code>-v</code></dt>
 <dd>Verbose operation, <code>genromfs</code> will print each file which is included in the image, along with its offset.</dd></dl>
 <h2>Examples</h2>
-<p><code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>genromfs -d root -f&nbsp;<wbr>/dev/fd0 -V&nbsp;<wbr>&#8216;Secret labs install disk&#8217;</code> All files in the <i>root</i> directory will be written to <code>/dev/fd0</code> as a new romfs filesystem image. <code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>genromfs -d root -f&nbsp;<wbr>/dev/fd0 -A 2048,/.. -A&nbsp;<wbr>&#8216;4096,*.boot&#8217;&nbsp;<wbr>-a 512 -V&nbsp;<wbr>&#8216;Bootable floppy&#8217;</code> Generate the image and place file data of all regular files on 512 bytes boundaries or on 4K boundaries, if they have the .boot extension. Additionally, align the romfs header of the &#8216;..&#8217; entry in the root directory on a 2K boundary. Effectively, this makes sure that the romfs image uses the least possible space in the first 2048 bytes. You can use the generated image (if you have the romfs module loaded, or compiled into the kernel) via: <code><br />
+<p><code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>genromfs -d root -f&nbsp;<wbr>/dev/fd0 -V&nbsp;<wbr>&#8216;Secret labs install disk&#8217;</code> All files in the <i>root</i> directory will be written to <code>/dev/fd0</code> as a new romfs filesystem image. <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>genromfs -d root -f&nbsp;<wbr>/dev/fd0 -A 2048,/.. -A&nbsp;<wbr>&#8216;4096,*.boot&#8217;&nbsp;<wbr>-a 512 -V&nbsp;<wbr>&#8216;Bootable floppy&#8217;</code> Generate the image and place file data of all regular files on 512 bytes boundaries or on 4K boundaries, if they have the .boot extension. Additionally, align the romfs header of the &#8216;..&#8217; entry in the root directory on a 2K boundary. Effectively, this makes sure that the romfs image uses the least possible space in the first 2048 bytes. You can use the generated image (if you have the romfs module loaded, or compiled into the kernel) via: <code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mount -t romfs&nbsp;<wbr>/dev/fd0&nbsp;<wbr>/mnt</code> </p>
 <h2>Author</h2>
 <p>This manual page was initially written by Christoph Lameter &lt;clameter [at] debian.org&gt;, for the Debian GNU/Linux system.</p>

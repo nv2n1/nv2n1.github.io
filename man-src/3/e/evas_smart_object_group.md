@@ -9,43 +9,43 @@ description: "Evas Smart Object Functions – Functions dealing with evas smart 
 
 <p>Evas Smart Object Functions &#8211; Functions dealing with evas smart objects. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_object_smart_data_set</code> (<code>Evas_Object</code> *obj, void *data)<br />
- <i>Store a pointer to user data for a smart object. </i><br />
- EAPI void * <code>evas_object_smart_data_get</code> (const <code>Evas_Object</code> *obj)<br />
- <i>Retrieve user data stored on a smart object. </i><br />
- EAPI <code>Evas_Smart</code> * <code>evas_object_smart_smart_get</code> (const <code>Evas_Object</code> *obj)<br />
- <i>Get the Evas_Smart from which </i>obj was created.<br />
- EAPI void <code>evas_object_smart_member_add</code> (<code>Evas_Object</code> *obj, <code>Evas_Object</code> *smart_obj)<br />
- <i>Set an evas object as a member of a smart object. </i><br />
- EAPI void <code>evas_object_smart_member_del</code> (<code>Evas_Object</code> *obj)<br />
- <i>Removes a member object from a smart object. </i><br />
- EAPI <code>Evas_Object</code> * <code>evas_object_smart_parent_get</code> (const <code>Evas_Object</code> *obj)<br />
- <i>Gets the smart parent of an Evas_Object. </i><br />
- EAPI <code>Evas_Object</code> * <code>evas_object_smart_add</code> (<code>Evas</code> *e, <code>Evas_Smart</code> *s)<br />
- <i>Instantiates a new smart object described by </i>s.<br />
- EAPI void <code>evas_object_smart_callback_add</code> (<code>Evas_Object</code> *obj, const char *event, void(*func)(void *data, <code>Evas_Object</code> *obj, void *event_info), const void *data)<br />
- <i>Add a callback for the smart event specified by </i>event.<br />
- EAPI void * <code>evas_object_smart_callback_del</code> (<code>Evas_Object</code> *obj, const char *event, void(*func)(void *data, <code>Evas_Object</code> *obj, void *event_info))<br />
- <i>Remove a smart callback. </i><br />
- EAPI void <code>evas_object_smart_callback_call</code> (<code>Evas_Object</code> *obj, const char *event, void *event_info)<br />
- <i>Call any smart callbacks on </i>obj for event.<br />
- EAPI void <code>evas_object_smart_need_recalculate_set</code> (<code>Evas_Object</code> *obj, Evas_Bool value)<br />
- <i>Set the need_recalculate flag of given smart object. </i><br />
- EAPI Evas_Bool <code>evas_object_smart_need_recalculate_get</code> (<code>Evas_Object</code> *obj)<br />
- <i>Get the current value of need_recalculate flag. </i><br />
- EAPI void <code>evas_object_smart_calculate</code> (<code>Evas_Object</code> *obj)<br />
- <i>Call user provided calculate() and unset need_calculate. </i><br />
- EAPI void <code>evas_object_smart_changed</code> (<code>Evas_Object</code> *obj)<br />
- <i>Mark smart object as changed, dirty. </i><br />
- EAPI void <code>evas_object_smart_move_children_relative</code> (<code>Evas_Object</code> *obj, Evas_Coord dx, Evas_Coord dy)<br />
- <i>Moves all children objects relative to given offset. </i><br />
- EAPI <code>Evas_Object</code> * <code>evas_object_smart_clipped_clipper_get</code> (<code>Evas_Object</code> *obj)<br />
- <i>Get the clipper object for the given clipped smart object. </i><br />
- EAPI void <code>evas_object_smart_clipped_member_add</code> (<code>Evas_Object</code> *obj, <code>Evas_Object</code> *member)<br />
- <i>Add the given member to clipped smart object. </i><br />
- EAPI void <code>evas_object_smart_clipped_member_del</code> (<code>Evas_Object</code> *member)<br />
- <i>Remove the given member from clipped smart object. </i><br />
- EAPI void <code>evas_object_smart_clipped_smart_set</code> (<code>Evas_Smart_Class</code> *sc)<br />
+<p>EAPI void <code>evas_object_smart_data_set</code> (<code>Evas_Object</code> *obj, void *data)<br/>
+ <i>Store a pointer to user data for a smart object. </i><br/>
+ EAPI void * <code>evas_object_smart_data_get</code> (const <code>Evas_Object</code> *obj)<br/>
+ <i>Retrieve user data stored on a smart object. </i><br/>
+ EAPI <code>Evas_Smart</code> * <code>evas_object_smart_smart_get</code> (const <code>Evas_Object</code> *obj)<br/>
+ <i>Get the Evas_Smart from which </i>obj was created.<br/>
+ EAPI void <code>evas_object_smart_member_add</code> (<code>Evas_Object</code> *obj, <code>Evas_Object</code> *smart_obj)<br/>
+ <i>Set an evas object as a member of a smart object. </i><br/>
+ EAPI void <code>evas_object_smart_member_del</code> (<code>Evas_Object</code> *obj)<br/>
+ <i>Removes a member object from a smart object. </i><br/>
+ EAPI <code>Evas_Object</code> * <code>evas_object_smart_parent_get</code> (const <code>Evas_Object</code> *obj)<br/>
+ <i>Gets the smart parent of an Evas_Object. </i><br/>
+ EAPI <code>Evas_Object</code> * <code>evas_object_smart_add</code> (<code>Evas</code> *e, <code>Evas_Smart</code> *s)<br/>
+ <i>Instantiates a new smart object described by </i>s.<br/>
+ EAPI void <code>evas_object_smart_callback_add</code> (<code>Evas_Object</code> *obj, const char *event, void(*func)(void *data, <code>Evas_Object</code> *obj, void *event_info), const void *data)<br/>
+ <i>Add a callback for the smart event specified by </i>event.<br/>
+ EAPI void * <code>evas_object_smart_callback_del</code> (<code>Evas_Object</code> *obj, const char *event, void(*func)(void *data, <code>Evas_Object</code> *obj, void *event_info))<br/>
+ <i>Remove a smart callback. </i><br/>
+ EAPI void <code>evas_object_smart_callback_call</code> (<code>Evas_Object</code> *obj, const char *event, void *event_info)<br/>
+ <i>Call any smart callbacks on </i>obj for event.<br/>
+ EAPI void <code>evas_object_smart_need_recalculate_set</code> (<code>Evas_Object</code> *obj, Evas_Bool value)<br/>
+ <i>Set the need_recalculate flag of given smart object. </i><br/>
+ EAPI Evas_Bool <code>evas_object_smart_need_recalculate_get</code> (<code>Evas_Object</code> *obj)<br/>
+ <i>Get the current value of need_recalculate flag. </i><br/>
+ EAPI void <code>evas_object_smart_calculate</code> (<code>Evas_Object</code> *obj)<br/>
+ <i>Call user provided calculate() and unset need_calculate. </i><br/>
+ EAPI void <code>evas_object_smart_changed</code> (<code>Evas_Object</code> *obj)<br/>
+ <i>Mark smart object as changed, dirty. </i><br/>
+ EAPI void <code>evas_object_smart_move_children_relative</code> (<code>Evas_Object</code> *obj, Evas_Coord dx, Evas_Coord dy)<br/>
+ <i>Moves all children objects relative to given offset. </i><br/>
+ EAPI <code>Evas_Object</code> * <code>evas_object_smart_clipped_clipper_get</code> (<code>Evas_Object</code> *obj)<br/>
+ <i>Get the clipper object for the given clipped smart object. </i><br/>
+ EAPI void <code>evas_object_smart_clipped_member_add</code> (<code>Evas_Object</code> *obj, <code>Evas_Object</code> *member)<br/>
+ <i>Add the given member to clipped smart object. </i><br/>
+ EAPI void <code>evas_object_smart_clipped_member_del</code> (<code>Evas_Object</code> *member)<br/>
+ <i>Remove the given member from clipped smart object. </i><br/>
+ EAPI void <code>evas_object_smart_clipped_smart_set</code> (<code>Evas_Smart_Class</code> *sc)<br/>
  <i>Set smart class callbacks so it implements the &#8216;Clipped Smart Object&#8217;. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions dealing with evas smart objects. </p>
@@ -55,7 +55,7 @@ description: "Evas Smart Object Functions – Functions dealing with evas smart 
 <p>Instantiates a new smart object described by s. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> the evas on which to add the object<br />
+<dd><i>e</i> the evas on which to add the object<br/>
  <i>s</i> the Evas_Smart describing the smart object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -72,17 +72,17 @@ description: "Evas Smart Object Functions – Functions dealing with evas smart 
 <p>Add a callback for the smart event specified by event. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> a smart object<br />
- <i>event</i> the event name<br />
- <i>func</i> the callback function<br />
+<dd><i>obj</i> a smart object<br/>
+ <i>event</i> the event name<br/>
+ <i>func</i> the callback function<br/>
  <i>data</i> user data to be passed to the callback function</dd></dl>
 <p> References evas_list_prepend().</p>
 <h3>EAPI void evas_object_smart_callback_call (<code>Evas_Object</code> * obj, const char * event, void * event_info)</h3>
 <p>Call any smart callbacks on obj for event. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> the smart object<br />
- <i>event</i> the event name<br />
+<dd><i>obj</i> the smart object<br/>
+ <i>event</i> the event name<br/>
  <i>event_info</i> an event specific struct of info to pass to the callback</dd></dl>
 <p> This should be called internally in the smart object when some specific event has occured. The documentation for the smart object should include a list of possible events and what type of event_info to expect. </p>
 <p> References _Evas_List::data, and _Evas_List::next.</p>
@@ -91,8 +91,8 @@ description: "Evas Smart Object Functions – Functions dealing with evas smart 
 <p> Removes a callback that was added by <code>evas_object_smart_callback_add()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> a smart object<br />
- <i>event</i> the event name<br />
+<dd><i>obj</i> a smart object<br/>
+ <i>event</i> the event name<br/>
  <i>func</i> the callback function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -125,7 +125,7 @@ description: "Evas Smart Object Functions – Functions dealing with evas smart 
 <dd>the parameter order is different from <code>evas_object_smart_member_add()</code></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> the smart object to use.<br />
+<dd><i>obj</i> the smart object to use.<br/>
  <i>member</i> the child/member to add to <i>obj</i></dd></dl>
 <p> <code>Todo</code></p>
 <dl COMPACT>
@@ -195,13 +195,13 @@ description: "Evas Smart Object Functions – Functions dealing with evas smart 
 <p>Store a pointer to user data for a smart object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The smart object<br />
+<dd><i>obj</i> The smart object<br/>
  <i>data</i> A pointer to user data</dd></dl>
 <h3>EAPI void evas_object_smart_member_add (<code>Evas_Object</code> * obj, <code>Evas_Object</code> * smart_obj)</h3>
 <p>Set an evas object as a member of a smart object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The member object<br />
+<dd><i>obj</i> The member object<br/>
  <i>smart_obj</i> The smart object</dd></dl>
 <p> Members will automatically be stacked and layered with the smart object. The various stacking function will operate on members relative to the other members instead of the entire canvas. </p>
 <p> Non-member objects can not interleave a smart object&#8217;s members. </p>
@@ -218,8 +218,8 @@ description: "Evas Smart Object Functions – Functions dealing with evas smart 
 <p>Moves all children objects relative to given offset. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> the smart evas object to use.<br />
- <i>dx</i> horizontal offset.<br />
+<dd><i>obj</i> the smart evas object to use.<br/>
+ <i>dx</i> horizontal offset.<br/>
  <i>dy</i> vertical offset.</dd></dl>
 <p> References _Evas_List::data, evas_list_free(), evas_object_geometry_get(), evas_object_move(), and _Evas_List::next.</p>
 <h3>EAPI Evas_Bool evas_object_smart_need_recalculate_get (<code>Evas_Object</code> * obj)</h3>
@@ -242,7 +242,7 @@ description: "Evas Smart Object Functions – Functions dealing with evas smart 
 <dd>just setting this flag will not make scene dirty and <code>evas_render()</code> will have no effect. To do that, use <code>evas_object_smart_changed()</code>, that will automatically call this function with 1 as parameter.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> the smart object<br />
+<dd><i>obj</i> the smart object<br/>
  <i>value</i> if one want to set or unset the need_recalculate flag.</dd></dl>
 <p> Referenced by evas_object_smart_changed().</p>
 <h3>EAPI <code>Evas_Object</code>* evas_object_smart_parent_get (const <code>Evas_Object</code> * obj)</h3>

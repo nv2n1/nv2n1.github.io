@@ -237,7 +237,7 @@ description: "nvidia-xconfig – manipulate X configuration files for the NVIDIA
 <dt><code>nvidia-xconfig &#8211;only-one-x-screen &#8211;sli=Auto</code></dt>
 <dd> Configures the X server to have just one X screen that will use SLI when available.</dd></dl>
 <h2>AUTHOR</h2>
-<p> Aaron Plattner<br />
+<p> Aaron Plattner<br/>
  NVIDIA Corporation</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nvidia-settings/">nvidia-settings</a></code>(1), <i>/usr/share/doc/NVIDIA_GLX-1.0/README.txt</i></p>

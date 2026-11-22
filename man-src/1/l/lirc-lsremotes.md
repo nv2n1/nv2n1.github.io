@@ -10,7 +10,7 @@ description: "lirc-lsremotes – parse lirc configuration files."
 
 <p> lirc-lsremotes &#8211; parse lirc configuration files.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>lirc-lsremotes [options] &lt;directory&gt;</code><br />
+<p> <code>lirc-lsremotes [options] &lt;directory&gt;</code><br/>
  <code>lirc-lsremotes [options] &lt;file&gt;</code> </p>
 <h2>DESCRIPTION</h2>
 <p> lirc-lsremotes can parse lirc remote configuration files (i. e., lircd.conf) and display a condensed index line, the complete data and/or diagnostics. </p>

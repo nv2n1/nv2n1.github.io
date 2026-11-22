@@ -11,124 +11,124 @@ description: "edje.c – Edje Graphical Design Library."
 <p> edje.c &#8211; Edje Graphical Design Library. </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions</h3>
-<p> EAPI int <code>edje_init</code> (void)<br />
- <i>Initialize the EDJE library. </i><br />
- EAPI int <code>edje_shutdown</code> (void)<br />
- <i>Shutdown the EDJE library. </i><br />
- EAPI void <code>edje_frametime_set</code> (double t)<br />
- <i>Set the frametime. </i><br />
- EAPI double <code>edje_frametime_get</code> (void)<br />
- <i>Get the frametime. </i><br />
- EAPI void <code>edje_freeze</code> (void)<br />
- <i>Freeze all Edje objects in the current process. </i><br />
- EAPI void <code>edje_thaw</code> (void)<br />
- <i>Thaw all Edje objects in the current process. </i><br />
- EAPI Evas_List * <code>edje_file_collection_list</code> (const char *file)<br />
- <i>Get a list of groups in an edje file. </i><br />
- EAPI void <code>edje_file_collection_list_free</code> (Evas_List *lst)<br />
- <i>Free file collection list. </i><br />
- EAPI int <code>edje_file_group_exists</code> (const char *file, const char *glob)<br />
- <i>Determine whether a group matching glob exists in an edje file. </i><br />
- EAPI char * <code>edje_file_data_get</code> (const char *file, const char *key)<br />
- <i>Get data from the file level data block of an edje file. </i><br />
- EAPI void <code>edje_color_class_set</code> (const char *color_class, int r, int g, int b, int a, int r2, int g2, int b2, int a2, int r3, int g3, int b3, int a3)<br />
- <i>Set Edje color class. </i><br />
+<p> EAPI int <code>edje_init</code> (void)<br/>
+ <i>Initialize the EDJE library. </i><br/>
+ EAPI int <code>edje_shutdown</code> (void)<br/>
+ <i>Shutdown the EDJE library. </i><br/>
+ EAPI void <code>edje_frametime_set</code> (double t)<br/>
+ <i>Set the frametime. </i><br/>
+ EAPI double <code>edje_frametime_get</code> (void)<br/>
+ <i>Get the frametime. </i><br/>
+ EAPI void <code>edje_freeze</code> (void)<br/>
+ <i>Freeze all Edje objects in the current process. </i><br/>
+ EAPI void <code>edje_thaw</code> (void)<br/>
+ <i>Thaw all Edje objects in the current process. </i><br/>
+ EAPI Evas_List * <code>edje_file_collection_list</code> (const char *file)<br/>
+ <i>Get a list of groups in an edje file. </i><br/>
+ EAPI void <code>edje_file_collection_list_free</code> (Evas_List *lst)<br/>
+ <i>Free file collection list. </i><br/>
+ EAPI int <code>edje_file_group_exists</code> (const char *file, const char *glob)<br/>
+ <i>Determine whether a group matching glob exists in an edje file. </i><br/>
+ EAPI char * <code>edje_file_data_get</code> (const char *file, const char *key)<br/>
+ <i>Get data from the file level data block of an edje file. </i><br/>
+ EAPI void <code>edje_color_class_set</code> (const char *color_class, int r, int g, int b, int a, int r2, int g2, int b2, int a2, int r3, int g3, int b3, int a3)<br/>
+ <i>Set Edje color class. </i><br/>
  EAPI void <code>edje_color_class_del</code> (const char *color_class) </p>
-<p> EAPI Evas_List * <code>edje_color_class_list</code> (void)<br />
- <i>Lists all color classes known about by the current process. </i><br />
- EAPI void <code>edje_text_class_set</code> (const char *text_class, const char *font, Evas_Font_Size size)<br />
- <i>Set the Edje text class. </i><br />
+<p> EAPI Evas_List * <code>edje_color_class_list</code> (void)<br/>
+ <i>Lists all color classes known about by the current process. </i><br/>
+ EAPI void <code>edje_text_class_set</code> (const char *text_class, const char *font, Evas_Font_Size size)<br/>
+ <i>Set the Edje text class. </i><br/>
  EAPI void <code>edje_text_class_del</code> (const char *text_class) </p>
-<p> EAPI Evas_List * <code>edje_text_class_list</code> (void)<br />
- <i>Lists all text classes known about by the current process. </i><br />
- EAPI void <code>edje_extern_object_min_size_set</code> (Evas_Object *obj, Evas_Coord minw, Evas_Coord minh)<br />
- <i>Set the object minimum size. </i><br />
- EAPI void <code>edje_extern_object_max_size_set</code> (Evas_Object *obj, Evas_Coord maxw, Evas_Coord maxh)<br />
- <i>Set the object maximum size. </i><br />
- EAPI void <code>edje_extern_object_aspect_set</code> (Evas_Object *obj, Edje_Aspect_Control aspect, Evas_Coord aw, Evas_Coord ah)<br />
- <i>Set the object aspect size. </i><br />
- EAPI Evas_Object * <code>edje_object_add</code> (Evas *evas)<br />
- <i>Constructs the Edje object. </i><br />
- EAPI const char * <code>edje_object_data_get</code> (const Evas_Object *obj, const char *key)<br />
- <i>Get Edje object data. </i><br />
- EAPI int <code>edje_object_file_set</code> (Evas_Object *obj, const char *file, const char *group)<br />
- <i>Sets the EET file and group to load obj</i> from.<br />
- EAPI void <code>edje_object_file_get</code> (const Evas_Object *obj, const char **file, const char **group)<br />
- <i>Get the file and group name that obj</i> was loaded from.<br />
- EAPI int <code>edje_object_load_error_get</code> (const Evas_Object *obj)<br />
- <i>Gets the Edje load error. </i><br />
- EAPI void <code>edje_object_signal_emit</code> (Evas_Object *obj, const char *emission, const char *source)<br />
- <i>Send a signal to the Edje object. </i><br />
- EAPI void <code>edje_object_play_set</code> (Evas_Object *obj, int play)<br />
- <i>Set the Edje to play or pause. </i><br />
- EAPI int <code>edje_object_play_get</code> (const Evas_Object *obj)<br />
- <i>Get the Edje play/pause state. </i><br />
- EAPI void <code>edje_object_animation_set</code> (Evas_Object *obj, int on)<br />
- <i>Set Animation state. </i><br />
- EAPI int <code>edje_object_animation_get</code> (const Evas_Object *obj)<br />
- <i>Get the animation state. </i><br />
- EAPI int <code>edje_object_freeze</code> (Evas_Object *obj)<br />
- <i>Freeze object. </i><br />
- EAPI int <code>edje_object_thaw</code> (Evas_Object *obj)<br />
- <i>Thaw object. </i><br />
- EAPI void <code>edje_object_color_class_set</code> (Evas_Object *obj, const char *color_class, int r, int g, int b, int a, int r2, int g2, int b2, int a2, int r3, int g3, int b3, int a3)<br />
- <i>Sets the object color class. </i><br />
+<p> EAPI Evas_List * <code>edje_text_class_list</code> (void)<br/>
+ <i>Lists all text classes known about by the current process. </i><br/>
+ EAPI void <code>edje_extern_object_min_size_set</code> (Evas_Object *obj, Evas_Coord minw, Evas_Coord minh)<br/>
+ <i>Set the object minimum size. </i><br/>
+ EAPI void <code>edje_extern_object_max_size_set</code> (Evas_Object *obj, Evas_Coord maxw, Evas_Coord maxh)<br/>
+ <i>Set the object maximum size. </i><br/>
+ EAPI void <code>edje_extern_object_aspect_set</code> (Evas_Object *obj, Edje_Aspect_Control aspect, Evas_Coord aw, Evas_Coord ah)<br/>
+ <i>Set the object aspect size. </i><br/>
+ EAPI Evas_Object * <code>edje_object_add</code> (Evas *evas)<br/>
+ <i>Constructs the Edje object. </i><br/>
+ EAPI const char * <code>edje_object_data_get</code> (const Evas_Object *obj, const char *key)<br/>
+ <i>Get Edje object data. </i><br/>
+ EAPI int <code>edje_object_file_set</code> (Evas_Object *obj, const char *file, const char *group)<br/>
+ <i>Sets the EET file and group to load obj</i> from.<br/>
+ EAPI void <code>edje_object_file_get</code> (const Evas_Object *obj, const char **file, const char **group)<br/>
+ <i>Get the file and group name that obj</i> was loaded from.<br/>
+ EAPI int <code>edje_object_load_error_get</code> (const Evas_Object *obj)<br/>
+ <i>Gets the Edje load error. </i><br/>
+ EAPI void <code>edje_object_signal_emit</code> (Evas_Object *obj, const char *emission, const char *source)<br/>
+ <i>Send a signal to the Edje object. </i><br/>
+ EAPI void <code>edje_object_play_set</code> (Evas_Object *obj, int play)<br/>
+ <i>Set the Edje to play or pause. </i><br/>
+ EAPI int <code>edje_object_play_get</code> (const Evas_Object *obj)<br/>
+ <i>Get the Edje play/pause state. </i><br/>
+ EAPI void <code>edje_object_animation_set</code> (Evas_Object *obj, int on)<br/>
+ <i>Set Animation state. </i><br/>
+ EAPI int <code>edje_object_animation_get</code> (const Evas_Object *obj)<br/>
+ <i>Get the animation state. </i><br/>
+ EAPI int <code>edje_object_freeze</code> (Evas_Object *obj)<br/>
+ <i>Freeze object. </i><br/>
+ EAPI int <code>edje_object_thaw</code> (Evas_Object *obj)<br/>
+ <i>Thaw object. </i><br/>
+ EAPI void <code>edje_object_color_class_set</code> (Evas_Object *obj, const char *color_class, int r, int g, int b, int a, int r2, int g2, int b2, int a2, int r3, int g3, int b3, int a3)<br/>
+ <i>Sets the object color class. </i><br/>
  EAPI void <code>edje_object_color_class_del</code> (Evas_Object *obj, const char *color_class) </p>
-<p> EAPI void <code>edje_object_text_class_set</code> (Evas_Object *obj, const char *text_class, const char *font, Evas_Font_Size size)<br />
- <i>Sets Edje text class. </i><br />
- EAPI void <code>edje_object_size_min_get</code> (const Evas_Object *obj, Evas_Coord *minw, Evas_Coord *minh)<br />
- <i>Get the minimum size for an object. </i><br />
- EAPI void <code>edje_object_size_max_get</code> (const Evas_Object *obj, Evas_Coord *maxw, Evas_Coord *maxh)<br />
- <i>Get the maximum size for an object. </i><br />
- EAPI void <code>edje_object_calc_force</code> (Evas_Object *obj)<br />
- <i>Force a Size/Geometry calculation. </i><br />
- EAPI void <code>edje_object_size_min_calc</code> (Evas_Object *obj, Evas_Coord *minw, Evas_Coord *minh)<br />
- <i>Calculate minimum size. </i><br />
- EAPI void <code>edje_object_size_min_restricted_calc</code> (Evas_Object *obj, Evas_Coord *minw, Evas_Coord *minh, Evas_Coord restrictedw, Evas_Coord restrictedh)<br />
- <i>Calculate minimum size. </i><br />
- EAPI int <code>edje_object_part_exists</code> (const Evas_Object *obj, const char *part)<br />
- <i>Check if Edje part exists. </i><br />
- EAPI const Evas_Object * <code>edje_object_part_object_get</code> (const Evas_Object *obj, const char *part)<br />
- <i>Gets the Evas_Object corresponding to a given part. </i><br />
- EAPI void <code>edje_object_part_geometry_get</code> (const Evas_Object *obj, const char *part, Evas_Coord *x, Evas_Coord *y, Evas_Coord *w, Evas_Coord *h)<br />
- <i>Get the geometry of an Edje part. </i><br />
- EAPI void <code>edje_object_part_text_set</code> (Evas_Object *obj, const char *part, const char *text)<br />
- <i>Sets the text for an object part. </i><br />
- EAPI const char * <code>edje_object_part_text_get</code> (const Evas_Object *obj, const char *part)<br />
- <i>Returns the text of the object part. </i><br />
- EAPI void <code>edje_object_part_swallow</code> (Evas_Object *obj, const char *part, Evas_Object *obj_swallow)<br />
- <i>Swallows an object into the edje. </i><br />
- EAPI void <code>edje_object_part_unswallow</code> (Evas_Object *obj, Evas_Object *obj_swallow)<br />
- <i>Unswallow an object. </i><br />
- EAPI Evas_Object * <code>edje_object_part_swallow_get</code> (const Evas_Object *obj, const char *part)<br />
- <i>Get the object currently swallowed by a part. </i><br />
- EAPI const char * <code>edje_object_part_state_get</code> (const Evas_Object *obj, const char *part, double *val_ret)<br />
- <i>Returns the state of the Edje part. </i><br />
- EAPI int <code>edje_object_part_drag_dir_get</code> (const Evas_Object *obj, const char *part)<br />
- <i>Determine dragable directions. </i><br />
- EAPI void <code>edje_object_part_drag_value_set</code> (Evas_Object *obj, const char *part, double dx, double dy)<br />
- <i>Set the dragable object location. </i><br />
- EAPI void <code>edje_object_part_drag_value_get</code> (const Evas_Object *obj, const char *part, double *dx, double *dy)<br />
- <i>Get the dragable object location. </i><br />
- EAPI void <code>edje_object_part_drag_size_set</code> (Evas_Object *obj, const char *part, double dw, double dh)<br />
- <i>Set the dragable object size. </i><br />
- EAPI void <code>edje_object_part_drag_size_get</code> (const Evas_Object *obj, const char *part, double *dw, double *dh)<br />
- <i>Get the dragable object size. </i><br />
- EAPI void <code>edje_object_part_drag_step_set</code> (Evas_Object *obj, const char *part, double dx, double dy)<br />
- <i>Sets the drag step increment. </i><br />
- EAPI void <code>edje_object_part_drag_step_get</code> (const Evas_Object *obj, const char *part, double *dx, double *dy)<br />
- <i>Gets the drag step increment values. </i><br />
- EAPI void <code>edje_object_part_drag_page_set</code> (Evas_Object *obj, const char *part, double dx, double dy)<br />
- <i>Sets the page step increments. </i><br />
- EAPI void <code>edje_object_part_drag_page_get</code> (const Evas_Object *obj, const char *part, double *dx, double *dy)<br />
- <i>Gets the page step increments. </i><br />
- EAPI void <code>edje_object_part_drag_step</code> (Evas_Object *obj, const char *part, double dx, double dy)<br />
- <i>Steps the dragable x,y steps. </i><br />
- EAPI void <code>edje_object_part_drag_page</code> (Evas_Object *obj, const char *part, double dx, double dy)<br />
- <i>Pages x,y steps. </i><br />
- EAPI void <code>edje_object_signal_callback_add</code> (Evas_Object *obj, const char *emission, const char *source, void(*func)(void *data, Evas_Object *o, const char *emission, const char *source), void *data)<br />
- <i>Add a callback for a signal emitted by obj</i>.<br />
- EAPI void * <code>edje_object_signal_callback_del</code> (Evas_Object *obj, const char *emission, const char *source, void(*func)(void *data, Evas_Object *o, const char *emission, const char *source))<br />
+<p> EAPI void <code>edje_object_text_class_set</code> (Evas_Object *obj, const char *text_class, const char *font, Evas_Font_Size size)<br/>
+ <i>Sets Edje text class. </i><br/>
+ EAPI void <code>edje_object_size_min_get</code> (const Evas_Object *obj, Evas_Coord *minw, Evas_Coord *minh)<br/>
+ <i>Get the minimum size for an object. </i><br/>
+ EAPI void <code>edje_object_size_max_get</code> (const Evas_Object *obj, Evas_Coord *maxw, Evas_Coord *maxh)<br/>
+ <i>Get the maximum size for an object. </i><br/>
+ EAPI void <code>edje_object_calc_force</code> (Evas_Object *obj)<br/>
+ <i>Force a Size/Geometry calculation. </i><br/>
+ EAPI void <code>edje_object_size_min_calc</code> (Evas_Object *obj, Evas_Coord *minw, Evas_Coord *minh)<br/>
+ <i>Calculate minimum size. </i><br/>
+ EAPI void <code>edje_object_size_min_restricted_calc</code> (Evas_Object *obj, Evas_Coord *minw, Evas_Coord *minh, Evas_Coord restrictedw, Evas_Coord restrictedh)<br/>
+ <i>Calculate minimum size. </i><br/>
+ EAPI int <code>edje_object_part_exists</code> (const Evas_Object *obj, const char *part)<br/>
+ <i>Check if Edje part exists. </i><br/>
+ EAPI const Evas_Object * <code>edje_object_part_object_get</code> (const Evas_Object *obj, const char *part)<br/>
+ <i>Gets the Evas_Object corresponding to a given part. </i><br/>
+ EAPI void <code>edje_object_part_geometry_get</code> (const Evas_Object *obj, const char *part, Evas_Coord *x, Evas_Coord *y, Evas_Coord *w, Evas_Coord *h)<br/>
+ <i>Get the geometry of an Edje part. </i><br/>
+ EAPI void <code>edje_object_part_text_set</code> (Evas_Object *obj, const char *part, const char *text)<br/>
+ <i>Sets the text for an object part. </i><br/>
+ EAPI const char * <code>edje_object_part_text_get</code> (const Evas_Object *obj, const char *part)<br/>
+ <i>Returns the text of the object part. </i><br/>
+ EAPI void <code>edje_object_part_swallow</code> (Evas_Object *obj, const char *part, Evas_Object *obj_swallow)<br/>
+ <i>Swallows an object into the edje. </i><br/>
+ EAPI void <code>edje_object_part_unswallow</code> (Evas_Object *obj, Evas_Object *obj_swallow)<br/>
+ <i>Unswallow an object. </i><br/>
+ EAPI Evas_Object * <code>edje_object_part_swallow_get</code> (const Evas_Object *obj, const char *part)<br/>
+ <i>Get the object currently swallowed by a part. </i><br/>
+ EAPI const char * <code>edje_object_part_state_get</code> (const Evas_Object *obj, const char *part, double *val_ret)<br/>
+ <i>Returns the state of the Edje part. </i><br/>
+ EAPI int <code>edje_object_part_drag_dir_get</code> (const Evas_Object *obj, const char *part)<br/>
+ <i>Determine dragable directions. </i><br/>
+ EAPI void <code>edje_object_part_drag_value_set</code> (Evas_Object *obj, const char *part, double dx, double dy)<br/>
+ <i>Set the dragable object location. </i><br/>
+ EAPI void <code>edje_object_part_drag_value_get</code> (const Evas_Object *obj, const char *part, double *dx, double *dy)<br/>
+ <i>Get the dragable object location. </i><br/>
+ EAPI void <code>edje_object_part_drag_size_set</code> (Evas_Object *obj, const char *part, double dw, double dh)<br/>
+ <i>Set the dragable object size. </i><br/>
+ EAPI void <code>edje_object_part_drag_size_get</code> (const Evas_Object *obj, const char *part, double *dw, double *dh)<br/>
+ <i>Get the dragable object size. </i><br/>
+ EAPI void <code>edje_object_part_drag_step_set</code> (Evas_Object *obj, const char *part, double dx, double dy)<br/>
+ <i>Sets the drag step increment. </i><br/>
+ EAPI void <code>edje_object_part_drag_step_get</code> (const Evas_Object *obj, const char *part, double *dx, double *dy)<br/>
+ <i>Gets the drag step increment values. </i><br/>
+ EAPI void <code>edje_object_part_drag_page_set</code> (Evas_Object *obj, const char *part, double dx, double dy)<br/>
+ <i>Sets the page step increments. </i><br/>
+ EAPI void <code>edje_object_part_drag_page_get</code> (const Evas_Object *obj, const char *part, double *dx, double *dy)<br/>
+ <i>Gets the page step increments. </i><br/>
+ EAPI void <code>edje_object_part_drag_step</code> (Evas_Object *obj, const char *part, double dx, double dy)<br/>
+ <i>Steps the dragable x,y steps. </i><br/>
+ EAPI void <code>edje_object_part_drag_page</code> (Evas_Object *obj, const char *part, double dx, double dy)<br/>
+ <i>Pages x,y steps. </i><br/>
+ EAPI void <code>edje_object_signal_callback_add</code> (Evas_Object *obj, const char *emission, const char *source, void(*func)(void *data, Evas_Object *o, const char *emission, const char *source), void *data)<br/>
+ <i>Add a callback for a signal emitted by obj</i>.<br/>
+ EAPI void * <code>edje_object_signal_callback_del</code> (Evas_Object *obj, const char *emission, const char *source, void(*func)(void *data, Evas_Object *o, const char *emission, const char *source))<br/>
  <i>Remove a callback from an object. </i></p>
 <h2>Detailed Description</h2>
 <p> Edje Graphical Design Library. </p>
@@ -150,18 +150,18 @@ description: "edje.c – Edje Graphical Design Library."
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>color_class</i><br />
- <i>r</i> Object Red value<br />
- <i>g</i> Object Green value<br />
- <i>b</i> Object Blue value<br />
- <i>a</i> Object Alpha value<br />
- <i>r2</i> Outline Red value<br />
- <i>g2</i> Outline Green value<br />
- <i>b2</i> Outline Blue value<br />
- <i>a2</i> Outline Alpha value<br />
- <i>r3</i> Shadow Red value<br />
- <i>g3</i> Shadow Green value<br />
- <i>b3</i> Shadow Blue value<br />
+</dt><dd> <i>color_class</i><br/>
+ <i>r</i> Object Red value<br/>
+ <i>g</i> Object Green value<br/>
+ <i>b</i> Object Blue value<br/>
+ <i>a</i> Object Alpha value<br/>
+ <i>r2</i> Outline Red value<br/>
+ <i>g2</i> Outline Green value<br/>
+ <i>b2</i> Outline Blue value<br/>
+ <i>a2</i> Outline Alpha value<br/>
+ <i>r3</i> Shadow Red value<br/>
+ <i>g3</i> Shadow Green value<br/>
+ <i>b3</i> Shadow Blue value<br/>
  <i>a3</i> Shadow Alpha value</dd></dl>
 <p> Sets the color values for a process level color class. This will cause all edje parts in the current process that have the specified color class to have their colors multiplied by these values. (Object level color classes set by <code>edje_object_color_class_set()</code> will override the values set by this function). </p>
 <p> The first color is the object, the second is the text outline, and the third is the text shadow. (Note that the second two only apply to text parts)</p>
@@ -170,9 +170,9 @@ description: "edje.c – Edje Graphical Design Library."
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>aspect</i> The aspect control axes<br />
- <i>aw</i> The aspect radio width<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>aspect</i> The aspect control axes<br/>
+ <i>aw</i> The aspect radio width<br/>
  <i>ah</i> The aspect ratio height</dd></dl>
 <p> This sets the desired aspect ratio to keep an object that will be swallowed by Edje. The width and height define a preferred size ASPECT and the object may be scaled to be larger or smaller, but retaining the relative scale of both aspect width and height.</p>
 <h3>EAPI void edje_extern_object_max_size_set (Evas_Object * obj, Evas_Coord maxw, Evas_Coord maxh)</h3>
@@ -180,8 +180,8 @@ description: "edje.c – Edje Graphical Design Library."
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>maxw</i> The maximum width<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>maxw</i> The maximum width<br/>
  <i>maxh</i> The maximum height</dd></dl>
 <p> This sets the maximum size restriction for the object.</p>
 <h3>EAPI void edje_extern_object_min_size_set (Evas_Object * obj, Evas_Coord minw, Evas_Coord minh)</h3>
@@ -189,8 +189,8 @@ description: "edje.c – Edje Graphical Design Library."
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>minw</i> The minimum width<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>minw</i> The minimum width<br/>
  <i>minh</i> The minimum height</dd></dl>
 <p> This sets the minimum size restriction for the object.</p>
 <h3>EAPI Evas_List * edje_file_collection_list (const char * file)</h3>
@@ -216,7 +216,7 @@ description: "edje.c – Edje Graphical Design Library."
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>file</i> The path to the .edj file<br />
+</dt><dd> <i>file</i> The path to the .edj file<br/>
  <i>key</i> The data key</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -230,7 +230,7 @@ description: "edje.c – Edje Graphical Design Library."
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>file</i> The file path<br />
+</dt><dd> <i>file</i> The file path<br/>
  <i>glob</i> A glob to match on</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -287,7 +287,7 @@ description: "edje.c – Edje Graphical Design Library."
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
  <i>on</i> Animation State</dd></dl>
 <p> Stop or start an Edje animation.</p>
 <h3>EAPI void edje_object_calc_force (Evas_Object * obj)</h3>
@@ -307,19 +307,19 @@ description: "edje.c – Edje Graphical Design Library."
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>color_class</i><br />
- <i>r</i> Object Red value<br />
- <i>g</i> Object Green value<br />
- <i>b</i> Object Blue value<br />
- <i>a</i> Object Alpha value<br />
- <i>r2</i> Outline Red value<br />
- <i>g2</i> Outline Green value<br />
- <i>b2</i> Outline Blue value<br />
- <i>a2</i> Outline Alpha value<br />
- <i>r3</i> Shadow Red value<br />
- <i>g3</i> Shadow Green value<br />
- <i>b3</i> Shadow Blue value<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>color_class</i><br/>
+ <i>r</i> Object Red value<br/>
+ <i>g</i> Object Green value<br/>
+ <i>b</i> Object Blue value<br/>
+ <i>a</i> Object Alpha value<br/>
+ <i>r2</i> Outline Red value<br/>
+ <i>g2</i> Outline Green value<br/>
+ <i>b2</i> Outline Blue value<br/>
+ <i>a2</i> Outline Alpha value<br/>
+ <i>r3</i> Shadow Red value<br/>
+ <i>g3</i> Shadow Green value<br/>
+ <i>b3</i> Shadow Blue value<br/>
  <i>a3</i> Shadow Alpha value</dd></dl>
 <p> Sets the color values for an object level color class. This will cause all edje parts in the specified object that have the specified color class to have their colors multiplied by these values. </p>
 <p> The first color is the object, the second is the text outline, and the third is the text shadow. (Note that the second two only apply to text parts)</p>
@@ -328,7 +328,7 @@ description: "edje.c – Edje Graphical Design Library."
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
  <i>key</i> The data key</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -359,8 +359,8 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>file</i> A pointer to store a pointer to the filename in<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>file</i> A pointer to store a pointer to the filename in<br/>
  <i>group</i> A pointer to store a pointer to the group name in</dd></dl>
 <p> This gets the EET file location and group for the given Evas_Object. If <i>obj</i> is either not an edje file, or has not had its file/group set using <code>edje_object_file_set()</code>, then both <i>file</i> and <i>group</i> will be set to NULL. </p>
 <p> It is valid to pass in NULL for either <i>file</i> or <i>group</i> if you are not interested in one of the values.</p>
@@ -369,8 +369,8 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>file</i> The path to the EET file<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>file</i> The path to the EET file<br/>
  <i>group</i> The group name in the Edje</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -414,7 +414,7 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
  <i>part</i> The part name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -428,9 +428,9 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The part name<br />
- <i>dx</i> The x step<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The part name<br/>
+ <i>dx</i> The x step<br/>
  <i>dy</i> The y step</dd></dl>
 <p> Pages x,y where the increment is defined by edje_object_part_drag_page_set. </p>
 <p>&nbsp;<wbr>WARNING: Paging is bugged!&nbsp;<wbr></p>
@@ -439,9 +439,9 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The part name<br />
- <i>dx</i> The dx page increment pointer<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The part name<br/>
+ <i>dx</i> The dx page increment pointer<br/>
  <i>dy</i> The dy page increment pointer</dd></dl>
 <p> Gets the x,y page step increments for the dragable object.</p>
 <h3>EAPI void edje_object_part_drag_page_set (Evas_Object * obj, const char * part, double dx, double dy)</h3>
@@ -449,9 +449,9 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The part name<br />
- <i>dx</i> The x page step increment<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The part name<br/>
+ <i>dx</i> The x page step increment<br/>
  <i>dy</i> The y page step increment</dd></dl>
 <p> Sets the x,y page step increment values.</p>
 <h3>EAPI void edje_object_part_drag_size_get (const Evas_Object * obj, const char * part, double * dw, double * dh)</h3>
@@ -459,9 +459,9 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The part name<br />
- <i>dw</i> The drag width pointer<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The part name<br/>
+ <i>dw</i> The drag width pointer<br/>
  <i>dh</i> The drag height pointer</dd></dl>
 <p> Gets the dragable object size.</p>
 <h3>EAPI void edje_object_part_drag_size_set (Evas_Object * obj, const char * part, double dw, double dh)</h3>
@@ -469,9 +469,9 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The part name<br />
- <i>dw</i> The drag width<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The part name<br/>
+ <i>dw</i> The drag width<br/>
  <i>dh</i> The drag height</dd></dl>
 <p> Sets the size of the dragable object.</p>
 <h3>EAPI void edje_object_part_drag_step (Evas_Object * obj, const char * part, double dx, double dy)</h3>
@@ -479,9 +479,9 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The part name<br />
- <i>dx</i> The x step<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The part name<br/>
+ <i>dx</i> The x step<br/>
  <i>dy</i> The y step</dd></dl>
 <p> Steps x,y where the step increment is the amount set by edje_object_part_drag_step_set.</p>
 <h3>EAPI void edje_object_part_drag_step_get (const Evas_Object * obj, const char * part, double * dx, double * dy)</h3>
@@ -489,9 +489,9 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The part<br />
- <i>dx</i> The x step increment pointer<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The part<br/>
+ <i>dx</i> The x step increment pointer<br/>
  <i>dy</i> The y step increment pointer</dd></dl>
 <p> Gets the x and y step increments for the dragable object.</p>
 <h3>EAPI void edje_object_part_drag_step_set (Evas_Object * obj, const char * part, double dx, double dy)</h3>
@@ -499,9 +499,9 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The part name<br />
- <i>dx</i> The x step ammount<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The part name<br/>
+ <i>dx</i> The x step ammount<br/>
  <i>dy</i> The y step ammount</dd></dl>
 <p> Sets the x,y step increments for a dragable object.</p>
 <h3>EAPI void edje_object_part_drag_value_get (const Evas_Object * obj, const char * part, double * dx, double * dy)</h3>
@@ -509,9 +509,9 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The part name<br />
- <i>dx</i> The X value pointer<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The part name<br/>
+ <i>dx</i> The X value pointer<br/>
  <i>dy</i> The Y value pointer</dd></dl>
 <p> Gets the drag location values.</p>
 <h3>EAPI void edje_object_part_drag_value_set (Evas_Object * obj, const char * part, double dx, double dy)</h3>
@@ -519,9 +519,9 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The part name<br />
- <i>dx</i> The x value<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The part name<br/>
+ <i>dx</i> The x value<br/>
  <i>dy</i> The y value</dd></dl>
 <p> Places the dragable object at the given location.</p>
 <h3>EAPI int edje_object_part_exists (const Evas_Object * obj, const char * part)</h3>
@@ -529,7 +529,7 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
  <i>part</i> The part name to check</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -541,11 +541,11 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The Edje part<br />
- <i>x</i> The x coordinate pointer<br />
- <i>y</i> The y coordinate pointer<br />
- <i>w</i> The width pointer<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The Edje part<br/>
+ <i>x</i> The x coordinate pointer<br/>
+ <i>y</i> The y coordinate pointer<br/>
+ <i>w</i> The width pointer<br/>
  <i>h</i> The height pointer</dd></dl>
 <p> Gets the geometry of an Edje part </p>
 <p> It is valid to pass NULL as any of <i>x</i>, <i>y</i>, <i>w</i> or <i>h</i>, whose values you are uninterested in.</p>
@@ -555,7 +555,7 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
  <i>part</i> The Edje part</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -566,8 +566,8 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The part name<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The part name<br/>
  <i>val_ret</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -580,8 +580,8 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>part</i> The part name<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>part</i> The part name<br/>
  <i>obj_swallow</i> The object to swallow</dd></dl>
 <p> Swallows the object into the edje part so that all geometry changes for the part affect the swallowed object. (e.g. resize, move, show, raise/lower, etc.). </p>
 <p> If an object has already been swallowed into this part, then it will first be unswallowed before the new object is swallowed.</p>
@@ -590,7 +590,7 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
  <i>part</i> The part name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -601,7 +601,7 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
  <i>part</i> The part name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -612,15 +612,15 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas Object handle<br />
- <i>part</i> The part name<br />
+</dt><dd> <i>obj</i> A valid Evas Object handle<br/>
+ <i>part</i> The part name<br/>
  <i>text</i> The text string</dd></dl>
 <h3>EAPI void edje_object_part_unswallow (Evas_Object * obj, Evas_Object * obj_swallow)</h3>
 <p> Unswallow an object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
  <i>obj_swallow</i> The swallowed object</dd></dl>
 <p> Causes the edje to regurgitate a previously swallowed object. :)</p>
 <h3>EAPI int edje_object_play_get (const Evas_Object * obj)</h3>
@@ -639,7 +639,7 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
  <i>play</i> Play instruction (1 to play, 0 to pause)</dd></dl>
 <p> This sets the Edje to play or pause depending on the parameter. This has no effect if the Edje is already in that state.</p>
 <h3>EAPI void edje_object_signal_callback_add (Evas_Object * obj, const char * emission, const char * source, void(*)(void *data, Evas_Object *o, const char *emission, const char *source) func, void * data)</h3>
@@ -647,18 +647,18 @@ collections
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>emission</i> The signal name<br />
- <i>source</i> The signal source<br />
- <i>func</i> The callback function to be executed when the signal is emitted<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>emission</i> The signal name<br/>
+ <i>source</i> The signal source<br/>
+ <i>func</i> The callback function to be executed when the signal is emitted<br/>
  <i>data</i> A pointer to data to pass in to the callback function</dd></dl>
 <p> Connects a callback function to a signal emitted by <i>obj</i>. In EDC, a program can emit a signal as follows: </p>
-<p>program<br />
-{<br />
-name:<br />
-    &#8217;emit_example&#8217;;<br />
-action:<br />
-    SIGNAL_EMIT &#8216;a_signal&#8217; &#8216;a_source&#8217;;<br />
+<p>program<br/>
+{<br/>
+name:<br/>
+    &#8217;emit_example&#8217;;<br/>
+action:<br/>
+    SIGNAL_EMIT &#8216;a_signal&#8217; &#8216;a_source&#8217;;<br/>
 }</p>
 <p> Assuming a function with the following declaration is definded: </p>
 <p>void cb_signal(void *data, Evas_Object *o, const char *emission, const char *source);</p>
@@ -675,9 +675,9 @@ action:<br />
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>emission</i> the emission string<br />
- <i>source</i> the source string<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>emission</i> the emission string<br/>
+ <i>source</i> the source string<br/>
  <i>func</i> the callback function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -689,8 +689,8 @@ action:<br />
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A vaild Evas_Object handle<br />
- <i>emission</i> The signal<br />
+</dt><dd> <i>obj</i> A vaild Evas_Object handle<br/>
+ <i>emission</i> The signal<br/>
  <i>source</i> The signal source</dd></dl>
 <p> This sends a signal to the edje object. </p>
 <p> An edje program can respond to a signal by specifying matching &#8216;signal&#8217; and &#8216;source&#8217; fields. </p>
@@ -718,8 +718,8 @@ action:
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>maxw</i> Maximum width pointer<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>maxw</i> Maximum width pointer<br/>
  <i>maxh</i> Maximum height pointer</dd></dl>
 <p> Gets the object&#8217;s maximum size values from the Edje. These are set to zero if no Edje is connected to the Evas Object.</p>
 <h3>EAPI void edje_object_size_min_calc (Evas_Object * obj, Evas_Coord * minw, Evas_Coord * minh)</h3>
@@ -727,8 +727,8 @@ action:
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>minw</i> Minimum width pointer<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>minw</i> Minimum width pointer<br/>
  <i>minh</i> Minimum height pointer</dd></dl>
 <p> Calculates the object&#8217;s minimum size ?! </p>
 <p> References edje_object_size_min_restricted_calc().</p>
@@ -737,8 +737,8 @@ action:
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>minw</i> Minimum width pointer<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>minw</i> Minimum width pointer<br/>
  <i>minh</i> Minimum height pointer</dd></dl>
 <p> Gets the object&#8217;s minimum size values from the Edje. These are set to zero if no Edje is connected to the Evas Object.</p>
 <h3>EAPI void edje_object_size_min_restricted_calc (Evas_Object * obj, Evas_Coord * minw, Evas_Coord * minh, Evas_Coord restrictedw, Evas_Coord restrictedh)</h3>
@@ -746,10 +746,10 @@ action:
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>minw</i> Minimum width pointer<br />
- <i>minh</i> Minimum height pointer<br />
- <i>restrictedw</i> Do not allow object min width calc to be less than this<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>minw</i> Minimum width pointer<br/>
+ <i>minh</i> Minimum height pointer<br/>
+ <i>restrictedw</i> Do not allow object min width calc to be less than this<br/>
  <i>restrictedh</i> Do not allow object min height calc to be less than this</dd></dl>
 <p> Calculates the object&#8217;s minimum size ?! </p>
 <p> Referenced by edje_object_size_min_calc().</p>
@@ -758,9 +758,9 @@ action:
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i> A valid Evas_Object handle<br />
- <i>text_class</i> The text class name<br />
- <i>font</i> Font name<br />
+</dt><dd> <i>obj</i> A valid Evas_Object handle<br/>
+ <i>text_class</i> The text class name<br/>
+ <i>font</i> Font name<br/>
  <i>size</i> Font Size</dd></dl>
 <p> Sets the text class for the Edje.</p>
 <h3>EAPI int edje_object_thaw (Evas_Object * obj)</h3>
@@ -798,8 +798,8 @@ action:
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>text_class</i> The text class name ?!<br />
- <i>font</i> The font name<br />
+</dt><dd> <i>text_class</i> The text class name ?!<br/>
+ <i>font</i> The font name<br/>
  <i>size</i> The font size</dd></dl>
 <p> This sets updates all edje members which belong to this text class with the new font attributes.</p>
 <h3>EAPI void edje_thaw (void)</h3>

@@ -51,7 +51,7 @@ If set, a socket shall keep only one message in its inbound/outbound queue, this
 <h3>ZMQ_CURVE_PUBLICKEY: Set CURVE public key</h3>
 
 Sets the socket's long term public key. You must set this on CURVE client sockets, see <b><a HREF="/docs/linux/man/7-zmq_curve/">zmq_curve</a></b>(7). You can provide the key as 32 binary bytes, or as a 40-character string encoded in the Z85 encoding format and terminated in a null byte. The public key must always be used with the matching secret key. To generate a public/secret key pair, use <b><a HREF="/docs/linux/man/3-zmq_curve_keypair/">zmq_curve_keypair</a></b>(3).
-<dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+<dl><dd> <b>Note</b>  
  an option value size of 40 is supported for backwards compatibility, though is deprecated.  Option value type </td><td> binary data or Z85 text string 
 </td></tr><tr VALIGN=top><td> Option value size </td><td> 32 or 41 
 </td></tr><tr VALIGN=top><td> Default value </td><td> NULL 
@@ -59,7 +59,7 @@ Sets the socket's long term public key. You must set this on CURVE client socket
 </td></tr> </table>
 <h3>ZMQ_CURVE_SECRETKEY: Set CURVE secret key</h3>
 Sets the socket's long term secret key. You must set this on both CURVE client and server sockets, see <b><a HREF="/docs/linux/man/7-zmq_curve/">zmq_curve</a></b>(7). You can provide the key as 32 binary bytes, or as a 40-character string encoded in the Z85 encoding format and terminated in a null byte. To generate a public/secret key pair, use <b><a HREF="/docs/linux/man/3-zmq_curve_keypair/">zmq_curve_keypair</a></b>(3).
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  an option value size of 40 is supported for backwards compatibility, though is deprecated.  Option value type </td><td> binary data or Z85 text string 
 </td></tr><tr VALIGN=top><td> Option value size </td><td> 32 or 41 
 </td></tr><tr VALIGN=top><td> Default value </td><td> NULL 
@@ -73,7 +73,7 @@ Defines whether the socket will act as server for CURVE security, see <b><a HREF
 </td></tr> </table>
 <h3>ZMQ_CURVE_SERVERKEY: Set CURVE server key</h3>
 Sets the socket's long term server key. You must set this on CURVE client sockets, see <b><a HREF="/docs/linux/man/7-zmq_curve/">zmq_curve</a></b>(7). You can provide the key as 32 binary bytes, or as a 40-character string encoded in the Z85 encoding format and terminated in a null byte. This key must have been generated together with the server's secret key. To generate a public/secret key pair, use <b><a HREF="/docs/linux/man/3-zmq_curve_keypair/">zmq_curve_keypair</a></b>(3).
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  an option value size of 40 is supported for backwards compatibility, though is deprecated.  Option value type </td><td> binary data or Z85 text string 
 </td></tr><tr VALIGN=top><td> Option value size </td><td> 32 or 41 
 </td></tr><tr VALIGN=top><td> Default value </td><td> NULL 
@@ -178,7 +178,7 @@ Sets the username for outgoing connections over TCP or IPC. If you set this to a
 <h3>ZMQ_PROBE_ROUTER: bootstrap connections to ROUTER sockets</h3>
 
 When set to 1, the socket will automatically send an empty message when a new connection is made or accepted. You may set this on REQ, DEALER, or ROUTER sockets connected to a ROUTER socket. The application must filter such empty messages. The ZMQ_PROBE_ROUTER option in effect provides the ROUTER application with an event signaling the arrival of a new peer.
-<dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+<dl><dd> <b>Note</b>  
  do not set this option on a socket that talks to any other socket types: the results are undefined.  Option value type </td><td> int 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> 0, 1 
 </td></tr><tr VALIGN=top><td> Default value </td><td> 0 
@@ -210,7 +210,7 @@ Sets the timeout for receive operation on the socket. If the value is 0, <i><a H
 </td></tr> </table>
 <h3>ZMQ_RECONNECT_IVL: Set reconnection interval</h3>
 The <i>ZMQ_RECONNECT_IVL</i> option shall set the initial reconnection interval for the specified <i>socket</i>. The reconnection interval is the period 0MQ shall wait between attempts to reconnect disconnected peers when using connection-oriented transports. The value -1 means no reconnection.
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  The reconnection interval may be randomized by 0MQ to prevent reconnection storms in topologies with a large number of peers per socket.  Option value type </td><td> int 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> milliseconds 
 </td></tr><tr VALIGN=top><td> Default value </td><td> 100 
@@ -218,7 +218,7 @@ The <i>ZMQ_RECONNECT_IVL</i> option shall set the initial reconnection interval 
 </td></tr> </table>
 <h3>ZMQ_RECONNECT_IVL_MAX: Set maximum reconnection interval</h3>
 The <i>ZMQ_RECONNECT_IVL_MAX</i> option shall set the maximum reconnection interval for the specified <i>socket</i>. This is the maximum period 0MQ shall wait between attempts to reconnect. On each reconnect attempt, the previous interval shall be doubled untill ZMQ_RECONNECT_IVL_MAX is reached. This allows for exponential backoff strategy. Default value means no exponential backoff is performed and reconnect interval calculations are only based on ZMQ_RECONNECT_IVL.
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  Values less than ZMQ_RECONNECT_IVL will be ignored.  Option value type </td><td> int 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> milliseconds 
 </td></tr><tr VALIGN=top><td> Default value </td><td> 0 (only use ZMQ_RECONNECT_IVL) 
@@ -226,7 +226,7 @@ The <i>ZMQ_RECONNECT_IVL_MAX</i> option shall set the maximum reconnection inter
 </td></tr> </table>
 <h3>ZMQ_RECOVERY_IVL: Set multicast recovery interval</h3>
 The <i>ZMQ_RECOVERY_IVL</i> option shall set the recovery interval for multicast transports using the specified <i>socket</i>. The recovery interval determines the maximum time in milliseconds that a receiver can be absent from a multicast group before unrecoverable data loss will occur.
-</dd><dl><dd><font SIZE="+1"> <b>Caution</b> </font> 
+</dd><dl><dd> <b>Caution</b>  
  Exercise care when setting large recovery intervals as the data needed for recovery will be held in memory. For example, a 1 minute recovery interval at a data rate of 1Gbps requires a 7GB in-memory buffer.  Option value type </td><td> int 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> milliseconds 
 </td></tr><tr VALIGN=top><td> Default value </td><td> 10000 
@@ -258,7 +258,7 @@ Sets the ROUTER socket behavior when an unroutable message is encountered. A val
 </td></tr> </table>
 <h3>ZMQ_ROUTER_RAW: switch ROUTER socket to raw mode</h3>
 Sets the raw mode on the ROUTER, when set to 1. When the ROUTER socket is in raw mode, and when using the tcp:// transport, it will read and write TCP data without 0MQ framing. This lets 0MQ applications talk to non-0MQ applications. When using raw mode, you cannot set explicit identities, and the ZMQ_SNDMORE flag is ignored when sending data messages. In raw mode you can close a specific connection by sending it a zero-length message (following the identity frame).
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  This option is deprecated, please use ZMQ_STREAM sockets instead.  Option value type </td><td> int 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> 0, 1 
 </td></tr><tr VALIGN=top><td> Default value </td><td> 0 
@@ -272,7 +272,7 @@ The <i>ZMQ_SNDBUF</i> option shall set the underlying kernel transmit buffer siz
 </td></tr> </table>
 <h3>ZMQ_SNDHWM: Set high water mark for outbound messages</h3>
 The <i>ZMQ_SNDHWM</i> option shall set the high water mark for outbound messages on the specified <i>socket</i>. The high water mark is a hard limit on the maximum number of outstanding messages 0MQ shall queue in memory for any single peer that the specified <i>socket</i> is communicating with. A value of zero means no limit. If this limit has been reached the socket shall enter an exceptional state and depending on the socket type, 0MQ shall take appropriate action such as blocking or dropping sent messages. Refer to the individual socket descriptions in <b><a HREF="/docs/linux/man/3-zmq_socket/">zmq_socket</a></b>(3) for details on the exact action taken for each socket type.
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  0MQ does not guarantee that the socket will accept as many as ZMQ_SNDHWM messages, and the actual limit may be as much as 60-70% lower depending on the flow of messages on the socket.  Option value type </td><td> int 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> messages 
 </td></tr><tr VALIGN=top><td> Default value </td><td> 1000 
@@ -340,7 +340,7 @@ Sets the domain for ZAP (ZMQ RFC 27) authentication. For NULL security (the defa
 </td></tr> </table>
 <h3>ZMQ_TCP_ACCEPT_FILTER: Assign filters to allow new TCP connections</h3>
 Assign an arbitrary number of filters that will be applied for each new TCP transport connection on a listening socket. If no filters are applied, then the TCP transport allows connections from any IP address. If at least one filter is applied then new connection source ip should be matched. To clear all filters call zmq_setsockopt(socket, ZMQ_TCP_ACCEPT_FILTER, NULL, 0). Filter is a null-terminated string with ipv6 or ipv4 CIDR.
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  This option is deprecated, please use authentication via the ZAP API and IP address whitelisting / blacklisting.  Option value type </td><td> binary data 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> N/A 
 </td></tr><tr VALIGN=top><td> Default value </td><td> no filters (allow from all) 
@@ -348,9 +348,9 @@ Assign an arbitrary number of filters that will be applied for each new TCP tran
 </td></tr> </table>
 <h3>ZMQ_IPC_FILTER_GID: Assign group ID filters to allow new IPC connections</h3>
 Assign an arbitrary number of filters that will be applied for each new IPC transport connection on a listening socket. If no IPC filters are applied, then the IPC transport allows connections from any process. If at least one UID, GID, or PID filter is applied then new connection credentials should be matched. To clear all GID filters call zmq_setsockopt(socket, ZMQ_IPC_FILTER_GID, NULL, 0).
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  GID filters are only available on platforms supporting SO_PEERCRED or LOCAL_PEERCRED socket options (currently only Linux and later versions of OS X). 
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  This option is deprecated, please use authentication via the ZAP API and IPC whitelisting / blacklisting.  Option value type </td><td> gid_t 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> N/A 
 </td></tr><tr VALIGN=top><td> Default value </td><td> no filters (allow from all) 
@@ -358,9 +358,9 @@ Assign an arbitrary number of filters that will be applied for each new IPC tran
 </td></tr> </table>
 <h3>ZMQ_IPC_FILTER_PID: Assign process ID filters to allow new IPC connections</h3>
 Assign an arbitrary number of filters that will be applied for each new IPC transport connection on a listening socket. If no IPC filters are applied, then the IPC transport allows connections from any process. If at least one UID, GID, or PID filter is applied then new connection credentials should be matched. To clear all PID filters call zmq_setsockopt(socket, ZMQ_IPC_FILTER_PID, NULL, 0).
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  PID filters are only available on platforms supporting the SO_PEERCRED socket option (currently only Linux). 
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  This option is deprecated, please use authentication via the ZAP API and IPC whitelisting / blacklisting.  Option value type </td><td> pid_t 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> N/A 
 </td></tr><tr VALIGN=top><td> Default value </td><td> no filters (allow from all) 
@@ -368,9 +368,9 @@ Assign an arbitrary number of filters that will be applied for each new IPC tran
 </td></tr> </table>
 <h3>ZMQ_IPC_FILTER_UID: Assign user ID filters to allow new IPC connections</h3>
 Assign an arbitrary number of filters that will be applied for each new IPC transport connection on a listening socket. If no IPC filters are applied, then the IPC transport allows connections from any process. If at least one UID, GID, or PID filter is applied then new connection credentials should be matched. To clear all UID filters call zmq_setsockopt(socket, ZMQ_IPC_FILTER_UID, NULL, 0).
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  UID filters are only available on platforms supporting SO_PEERCRED or LOCAL_PEERCRED socket options (currently only Linux and later versions of OS X). 
-</dd><dl><dd><font SIZE="+1"> <b>Note</b> </font> 
+</dd><dl><dd> <b>Note</b>  
  This option is deprecated, please use authentication via the ZAP API and IPC whitelisting / blacklisting.  Option value type </td><td> uid_t 
 </td></tr><tr VALIGN=top><td> Option value unit </td><td> N/A 
 </td></tr><tr VALIGN=top><td> Default value </td><td> no filters (allow from all) 

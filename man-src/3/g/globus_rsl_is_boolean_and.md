@@ -10,29 +10,29 @@ description: "RSL Predicates –"
 
 <p> RSL Predicates &#8211; </p>
 <h3>Functions</h3>
-<p> int <code>globus_rsl_is_relation</code> (globus_rsl_t *ast)<br />
- <i>RSL relation test. </i><br />
- int <code>globus_rsl_is_boolean</code> (globus_rsl_t *ast)<br />
- <i>RSL boolean test. </i><br />
- int <code>globus_rsl_is_relation_eq</code> (globus_rsl_t *ast)<br />
- <i>RSL equality operation test. </i><br />
- int <code>globus_rsl_is_relation_lessthan</code> (globus_rsl_t *ast)<br />
- <i>RSL less than operation test. </i><br />
- int <code>globus_rsl_is_relation_attribute_equal</code> (globus_rsl_t *ast, char *attribute)<br />
- <i>RSL attribute name test. </i><br />
- int <code>globus_rsl_is_boolean_and</code> (globus_rsl_t *ast)<br />
- <i>RSL boolean and test. </i><br />
- int <code>globus_rsl_is_boolean_or</code> (globus_rsl_t *ast)<br />
- <i>RSL boolean or test. </i><br />
- int <code>globus_rsl_is_boolean_multi</code> (globus_rsl_t *ast)<br />
- <i>RSL boolean multi test. </i><br />
- int <code>globus_rsl_value_is_literal</code> (globus_rsl_value_t *ast)<br />
- <i>RSL literal string test. </i><br />
- int <code>globus_rsl_value_is_sequence</code> (globus_rsl_value_t *ast)<br />
- <i>RSL value sequence test. </i><br />
- int <code>globus_rsl_value_is_variable</code> (globus_rsl_value_t *ast)<br />
- <i>RSL value variable test. </i><br />
- int <code>globus_rsl_value_is_concatenation</code> (globus_rsl_value_t *ast)<br />
+<p> int <code>globus_rsl_is_relation</code> (globus_rsl_t *ast)<br/>
+ <i>RSL relation test. </i><br/>
+ int <code>globus_rsl_is_boolean</code> (globus_rsl_t *ast)<br/>
+ <i>RSL boolean test. </i><br/>
+ int <code>globus_rsl_is_relation_eq</code> (globus_rsl_t *ast)<br/>
+ <i>RSL equality operation test. </i><br/>
+ int <code>globus_rsl_is_relation_lessthan</code> (globus_rsl_t *ast)<br/>
+ <i>RSL less than operation test. </i><br/>
+ int <code>globus_rsl_is_relation_attribute_equal</code> (globus_rsl_t *ast, char *attribute)<br/>
+ <i>RSL attribute name test. </i><br/>
+ int <code>globus_rsl_is_boolean_and</code> (globus_rsl_t *ast)<br/>
+ <i>RSL boolean and test. </i><br/>
+ int <code>globus_rsl_is_boolean_or</code> (globus_rsl_t *ast)<br/>
+ <i>RSL boolean or test. </i><br/>
+ int <code>globus_rsl_is_boolean_multi</code> (globus_rsl_t *ast)<br/>
+ <i>RSL boolean multi test. </i><br/>
+ int <code>globus_rsl_value_is_literal</code> (globus_rsl_value_t *ast)<br/>
+ <i>RSL literal string test. </i><br/>
+ int <code>globus_rsl_value_is_sequence</code> (globus_rsl_value_t *ast)<br/>
+ <i>RSL value sequence test. </i><br/>
+ int <code>globus_rsl_value_is_variable</code> (globus_rsl_value_t *ast)<br/>
+ <i>RSL value variable test. </i><br/>
+ int <code>globus_rsl_value_is_concatenation</code> (globus_rsl_value_t *ast)<br/>
  <i>RSL value concatenation test. </i></p>
 <h2>Detailed Description</h2>
 <p> The functions in this group return boolean values indicating whether an RSL syntax tree is of a particular type.</p>
@@ -138,7 +138,7 @@ description: "RSL Predicates –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ast</i> Pointer to an RSL parse tree structure.<br />
+</dt><dd> <i>ast</i> Pointer to an RSL parse tree structure.<br/>
  <i>attribute</i> Name of the attribute to test</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

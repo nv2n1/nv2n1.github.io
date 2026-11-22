@@ -27,6 +27,6 @@ description: "XtCreateApplicationContext, XtDestroyApplicationContext, XtWidgetT
 <p> The <code>XtWidgetToApplicationContext</code> function returns the application context for the specified widget. </p>
 <p> The <code>XtToolkitInitialize</code> function initializes the Intrinsics internals. If <code>XtToolkitInitialize</code> was previously called it returns immediately. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtdisplayinitialize/">XtDisplayInitialize</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtdisplayinitialize/">XtDisplayInitialize</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

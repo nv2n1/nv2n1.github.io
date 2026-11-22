@@ -21,9 +21,9 @@ description: "lzop – compress or expand files"
 <p> <code>lzop</code> stores the original file name, mode and time stamp in the compressed file. These can be used when decompressing the file with the <code>-d</code> option. This is useful when the compressed file name was truncated or when the time stamp was not preserved after a file transfer. </p>
 <p> <code>lzop</code> preserves the ownership, mode and time stamp of files when compressing. When decompressing lzop restores the mode and time stamp if present in the compressed files. See the options <code>-n</code>, <code>-N</code>, <code>&#8211;no-mode</code> and <code>&#8211;no-time</code> for more information. </p>
 <p> <code>lzop</code> always keeps original files unchanged unless you use the option <code>-U</code>. </p>
-<p> <code>lzop</code> uses the <i></i><font SIZE="-1"><i>LZO</i></font><i> data compression library</i> for compression services. The amount of compression obtained depends on the size of the input and the distribution of common substrings. Typically, text such as source code or English is compressed into 40-50% of the original size, and large files usually compress much better than small ones. Compression and decompression speed is generally much faster than that achieved by <code>gzip</code>, but compression ratio is worse.</p>
-<h3><font SIZE="-1">COMPRESSION LEVELS</font></h3>
-<p> lzop offers the following compression levels of the <font SIZE="-1">LZO1X</font> algorithm:</p>
+<p> <code>lzop</code> uses the <i></i><i>LZO</i><i> data compression library</i> for compression services. The amount of compression obtained depends on the size of the input and the distribution of common substrings. Typically, text such as source code or English is compressed into 40-50% of the original size, and large files usually compress much better than small ones. Compression and decompression speed is generally much faster than that achieved by <code>gzip</code>, but compression ratio is worse.</p>
+<h3>COMPRESSION LEVELS</h3>
+<p> lzop offers the following compression levels of the LZO1X algorithm:</p>
 <dl>
 <dt>-3</dt>
 <dd> the default level offers pretty fast compression. -2, -3, -4, -5 and -6 are currently all equivalent &#8211; this may change in a future release.</dd>
@@ -59,11 +59,11 @@ description: "lzop – compress or expand files"
 <p> With &#8211;name, the uncompressed name, date and time are those stored within the compress file if present. </p>
 <p> With &#8211;verbose, the size totals and compression ratio for all files is also displayed. With &#8211;quiet, the title and totals lines are not displayed. </p>
 <p> Note that lzop defines compression ratio as compressed_size / uncompressed_size.</p>
-<dt>&#8211;ls, &#8211;ls=<i></i><font SIZE="-1"><i>FLAGS</i></font><i></i></dt>
+<dt>&#8211;ls, &#8211;ls=<i></i><i>FLAGS</i><i></i></dt>
 <dd> List each compressed file in a format similar to <code>ls -ln</code>. </dd>
-<p> The following flags are currently honoured:<br />
-&nbsp;<wbr>&nbsp;F&nbsp;<wbr>&nbsp;Append a&nbsp;&#8216;*&#8217;&nbsp;for executable files.<br />
-&nbsp;<wbr>&nbsp;G&nbsp;<wbr>&nbsp;Inhibit display of group information.<br />
+<p> The following flags are currently honoured:<br/>
+&nbsp;<wbr>&nbsp;F&nbsp;<wbr>&nbsp;Append a&nbsp;&#8216;*&#8217;&nbsp;for executable files.<br/>
+&nbsp;<wbr>&nbsp;G&nbsp;<wbr>&nbsp;Inhibit display of group information.<br/>
 &nbsp;<wbr>&nbsp;Q&nbsp;<wbr>&nbsp;Enclose file names in double quotes.</p>
 <dt>&#8211;info</dt>
 <dd> For each compressed file, list the internal header fields.</dd>
@@ -81,10 +81,10 @@ description: "lzop – compress or expand files"
 <dl>
 <dt>-c, &#8211;stdout, &#8211;to-stdout</dt>
 <dd> Write output on standard output. If there are several input files, the output consists of a sequence of independently (de)compressed members. To obtain better compression, concatenate all input files before compressing them.</dd>
-<dt>-o <i></i><font SIZE="-1"><i>FILE</i></font><i></i>, &#8211;output=<i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
-<dd> Write output to the file <i></i><font SIZE="-1"><i>FILE</i></font><i></i>. If there are several input files, the output consists of a sequence of independently (de)compressed members.</dd>
-<dt>-p, -p<i></i><font SIZE="-1"><i>DIR</i></font><i></i>, &#8211;path=<i></i><font SIZE="-1"><i>DIR</i></font><i></i></dt>
-<dd> Write output files into the directory <i></i><font SIZE="-1"><i>DIR</i></font><i></i> instead of the directory determined by the input file. If <i></i><font SIZE="-1"><i>DIR</i></font><i></i> is omitted, then write to the current working directory.</dd>
+<dt>-o <i></i><i>FILE</i><i></i>, &#8211;output=<i></i><i>FILE</i><i></i></dt>
+<dd> Write output to the file <i></i><i>FILE</i><i></i>. If there are several input files, the output consists of a sequence of independently (de)compressed members.</dd>
+<dt>-p, -p<i></i><i>DIR</i><i></i>, &#8211;path=<i></i><i>DIR</i><i></i></dt>
+<dd> Write output files into the directory <i></i><i>DIR</i><i></i> instead of the directory determined by the input file. If <i></i><i>DIR</i><i></i> is omitted, then write to the current working directory.</dd>
 <dt>-f, &#8211;force</dt>
 <dd> Force lzop to </dd>
 <pre>
@@ -103,9 +103,9 @@ description: "lzop – compress or expand files"
 <dt>-F, &#8211;no-checksum</dt>
 <dd> Do not store or verify a checksum of the uncompressed file when compressing or decompressing. This speeds up the operation of lzop a little bit (especially when decompressing), but as unnoticed data corruption can happen in case of damaged compressed files the usage of this option is not generally recommended. Also, a checksum is always stored when compressing with one of the slow compression levels (-7, -8 or -9), regardless of this option.</dd>
 <dt>-n, &#8211;no-name</dt>
-<dd> When decompressing, do not restore the original file name if present (remove only the lzop suffix from the compressed file name). This option is the default under <font SIZE="-1">UNIX.</font></dd>
+<dd> When decompressing, do not restore the original file name if present (remove only the lzop suffix from the compressed file name). This option is the default under UNIX.</dd>
 <dt>-N, &#8211;name</dt>
-<dd> When decompressing, restore the original file name if present. This option is useful on systems which have a limit on file name length. If the original name saved in the compressed file is not suitable for its file system, a new name is constructed from the original one to make it legal. This option is the default under <font SIZE="-1">DOS,</font> Windows and <font SIZE="-1">OS/2.</font></dd>
+<dd> When decompressing, restore the original file name if present. This option is useful on systems which have a limit on file name length. If the original name saved in the compressed file is not suitable for its file system, a new name is constructed from the original one to make it legal. This option is the default under DOS, Windows and OS/2.</dd>
 <dt>-P</dt>
 <dd> When decompressing, restore the original path and file name if present. When compressing, store the relative (and cleaned) path name. This option is mainly useful when using <code>archive mode</code> &#8211; see usage examples below.</dd>
 <dt>&#8211;no-mode</dt>
@@ -134,8 +134,8 @@ description: "lzop – compress or expand files"
 <dl>
 <dt>&#8211;no-stdin</dt>
 <dd> Do not try to read standard input (but a file name &#8220;-&#8221; will still override this option). In old versions of <code>lzop</code>, this option was necessary when used in cron jobs (which do not have a controlling terminal).</dd>
-<dt>&#8211;filter=<i></i><font SIZE="-1"><i>NUMBER</i></font><i></i></dt>
-<dd> Rarely useful. Preprocess data with a special &#8220;multimedia&#8221; filter before compressing in order to improve compression ratio. <i></i><font SIZE="-1"><i>NUMBER</i></font><i></i> must be a decimal number from 1 to 16, inclusive. Using a filter slows down both compression and decompression quite a bit, and the compression ratio usually doesn&#8217;t improve much either&#8230; More effective filters may be added in the future, though. </dd>
+<dt>&#8211;filter=<i></i><i>NUMBER</i><i></i></dt>
+<dd> Rarely useful. Preprocess data with a special &#8220;multimedia&#8221; filter before compressing in order to improve compression ratio. <i></i><i>NUMBER</i><i></i> must be a decimal number from 1 to 16, inclusive. Using a filter slows down both compression and decompression quite a bit, and the compression ratio usually doesn&#8217;t improve much either&#8230; More effective filters may be added in the future, though. </dd>
 <p> You can try &#8211;filter=1 with data like 8-bit sound samples, &#8211;filter=2 with 16-bit samples or depth-16 images, etc. </p>
 <p> Un-filtering during decompression is handled automatically.</p>
 <dt>-C, &#8211;checksum</dt>
@@ -143,9 +143,9 @@ description: "lzop – compress or expand files"
 <dt>&#8211;no-color</dt>
 <dd> Do not use any color escape sequences.</dd>
 <dt>&#8211;mono</dt>
-<dd> Assume a mono <font SIZE="-1">ANSI</font> terminal. This is the default under <font SIZE="-1">UNIX</font> (if console support is compiled in).</dd>
+<dd> Assume a mono ANSI terminal. This is the default under UNIX (if console support is compiled in).</dd>
 <dt>&#8211;color</dt>
-<dd> Assume a color <font SIZE="-1">ANSI</font> terminal or try full-screen access. This is the default under <font SIZE="-1">DOS</font> and in a Linux virtual console (if console support is compiled in).</dd></dl>
+<dd> Assume a color ANSI terminal or try full-screen access. This is the default under DOS and in a Linux virtual console (if console support is compiled in).</dd></dl>
 <h2>ADVANCED USAGE</h2>
 <p> lzop allows you to deal with your files in many flexible ways. Here are some usage examples:</p>
 <dl>
@@ -218,33 +218,33 @@ create
 </pre>
 </dd><dt><code>archive mode:</code> compress/extract multiple files into a single archive file</dt>
 <dd>
-create<br />
-        lzop a.c b.c &#8211;<br />
-    o sources.lzo-&gt;create an archive<br />
-        lzop &#8211;<br />
-    P src/*.c -o sources.lzo       -&gt; create an archive, store path name<br />
-   lzop -c *.c &gt; sources.lzo            -&gt; another way to create an archive<br />
-   lzop -c *.h &gt;&gt; sources.lzo           -&gt; add files to archive<br />
- extract<br />
-   lzop -dN sources.lzo<br />
-   lzop -x ../src/sources.lzo           -&gt; extract to current directory<br />
-   lzop -x -p/tmp &lt; ../src/sources.lzo  -&gt; extract to /tmp directory<br />
- list<br />
-   lzop -lNv sources.lzo<br />
- test<br />
-   lzop -t sources.lzo<br />
+create<br/>
+        lzop a.c b.c &#8211;<br/>
+    o sources.lzo-&gt;create an archive<br/>
+        lzop &#8211;<br/>
+    P src/*.c -o sources.lzo       -&gt; create an archive, store path name<br/>
+   lzop -c *.c &gt; sources.lzo            -&gt; another way to create an archive<br/>
+   lzop -c *.h &gt;&gt; sources.lzo           -&gt; add files to archive<br/>
+ extract<br/>
+   lzop -dN sources.lzo<br/>
+   lzop -x ../src/sources.lzo           -&gt; extract to current directory<br/>
+   lzop -x -p/tmp &lt; ../src/sources.lzo  -&gt; extract to /tmp directory<br/>
+ list<br/>
+   lzop -lNv sources.lzo<br/>
+ test<br/>
+   lzop -t sources.lzo<br/>
    lzop -tvv sources.lzo                -&gt; be very verbose
 </dd></dl>
-<p> If you wish to create a single archive file with multiple members so that members can later be extracted independently, you should prefer a full-featured archiver such as tar. The latest version of <font SIZE="-1">GNU</font> tar supports the <code>&#8211;use-compress-program=lzop</code> option to invoke lzop transparently. lzop is designed as a complement to tar, not as a replacement.</p>
+<p> If you wish to create a single archive file with multiple members so that members can later be extracted independently, you should prefer a full-featured archiver such as tar. The latest version of GNU tar supports the <code>&#8211;use-compress-program=lzop</code> option to invoke lzop transparently. lzop is designed as a complement to tar, not as a replacement.</p>
 <h2>ENVIRONMENT</h2>
-<p> The environment variable <font SIZE="-1"><code>LZOP</code></font> can hold a set of default options for lzop. These options are interpreted first and can be overwritten by explicit command line parameters. For example: </p>
+<p> The environment variable <code>LZOP</code> can hold a set of default options for lzop. These options are interpreted first and can be overwritten by explicit command line parameters. For example: </p>
 <pre><code>
     for
         sh / ksh / zsh : LZOP = "-1v --name"; export LZOP
     for csh/tcsh:      setenv LZOP "-1v --name"
     for DOS/Windows:   set LZOP=-1v --name
 </code></pre>
-<p> On Vax/VMS, the name of the environment variable is <font SIZE="-1">LZOP_OPT,</font> to avoid a conflict with the symbol set for invocation of the program. </p>
+<p> On Vax/VMS, the name of the environment variable is LZOP_OPT, to avoid a conflict with the symbol set for invocation of the program. </p>
 <p> Not all of the options are valid in the environment variable &#8211; lzop will tell you.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1), <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) </p>
@@ -252,7 +252,7 @@ create<br />
 <pre>
     see <a rel="nofollow" href="http://www.oberhumer.com/opensource/lzop/">http://www.oberhumer.com/opensource/lzop/</a>
 </pre>
-<p> lzop uses the <font SIZE="-1">LZO</font> data compression library for compression services. </p>
+<p> lzop uses the LZO data compression library for compression services. </p>
 <pre>
     see <a rel="nofollow" href="http://www.oberhumer.com/opensource/lzo/">http://www.oberhumer.com/opensource/lzo/</a>
 </pre>
@@ -264,6 +264,6 @@ create<br />
 <h2>AUTHOR</h2>
 <p> Markus Franz Xaver Johannes Oberhumer &lt;markus [at] oberhumer.com&gt; <a rel="nofollow" href="http://www.oberhumer.com/opensource/lzop/">http://www.oberhumer.com/opensource/lzop/</a></p>
 <h2>COPYRIGHT</h2>
-<p> lzop and the <font SIZE="-1">LZO</font> library are Copyright (C) 1996-2017 Markus Franz Xaver Oberhumer &lt;markus [at] oberhumer.com&gt;. All Rights Reserved. </p>
-<p> lzop and the <font SIZE="-1">LZO</font> library are distributed under the terms of the <font SIZE="-1">GNU</font> General Public License (<font SIZE="-1">GPL</font>). </p>
-<p> Legal info: If want to integrate lzop into your commercial (backup-)system please carefully read the <font SIZE="-1">GNU GPL FAQ</font> at <a rel="nofollow" href="http://www.gnu.org/licenses/gpl-faq.html">http://www.gnu.org/licenses/gpl-faq.html</a> about possible implications. </p>
+<p> lzop and the LZO library are Copyright (C) 1996-2017 Markus Franz Xaver Oberhumer &lt;markus [at] oberhumer.com&gt;. All Rights Reserved. </p>
+<p> lzop and the LZO library are distributed under the terms of the GNU General Public License (GPL). </p>
+<p> Legal info: If want to integrate lzop into your commercial (backup-)system please carefully read the GNU GPL FAQ at <a rel="nofollow" href="http://www.gnu.org/licenses/gpl-faq.html">http://www.gnu.org/licenses/gpl-faq.html</a> about possible implications. </p>

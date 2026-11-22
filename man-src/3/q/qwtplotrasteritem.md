@@ -14,36 +14,36 @@ description: "QwtPlotRasterItem –"
 <p> Inherits <code>QwtPlotItem</code>. </p>
 <p> Inherited by <code>QwtPlotSpectrogram</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>CachePolicy</code> { <code>NoCache</code>, <code>PaintCache</code> }<br />
- <i>Cache policy The default policy is NoCache. </i><br />
+<p>enum <code>CachePolicy</code> { <code>NoCache</code>, <code>PaintCache</code> }<br/>
+ <i>Cache policy The default policy is NoCache. </i><br/>
  enum <code>PaintAttribute</code> { <code>PaintInDeviceResolution</code> = 1 } </p>
-<p> typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br />
+<p> typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br/>
  <i>Paint attributes. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotRasterItem</code> (const QString &amp;<code>title</code>=QString::null)<br />
- <i>Constructor. </i><br />
- <code>QwtPlotRasterItem</code> (const <code>QwtText</code> &amp;<code>title</code>)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPlotRasterItem</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotRasterItem</code> (const QString &amp;<code>title</code>=QString::null)<br/>
+ <i>Constructor. </i><br/>
+ <code>QwtPlotRasterItem</code> (const <code>QwtText</code> &amp;<code>title</code>)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPlotRasterItem</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setPaintAttribute</code> (<code>PaintAttribute</code>, bool on=true) </p>
 <p> bool <code>testPaintAttribute</code> (<code>PaintAttribute</code>) const </p>
-<p> void <code>setAlpha</code> (int <code>alpha</code>)<br />
- <i>Set an alpha value for the raster data. </i><br />
+<p> void <code>setAlpha</code> (int <code>alpha</code>)<br/>
+ <i>Set an alpha value for the raster data. </i><br/>
  int <code>alpha</code> () const </p>
 <p> void <code>setCachePolicy</code> (<code>CachePolicy</code>) </p>
 <p> <code>CachePolicy</code> <code>cachePolicy</code> () const </p>
 <p> void <code>invalidateCache</code> () </p>
-<p> virtual void <code>draw</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;rect) const<br />
- <i>Draw the raster data. </i><br />
- virtual QRectF <code>pixelHint</code> (const QRectF &amp;) const<br />
- <i>Pixel hint. </i><br />
+<p> virtual void <code>draw</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;rect) const<br/>
+ <i>Draw the raster data. </i><br/>
+ virtual QRectF <code>pixelHint</code> (const QRectF &amp;) const<br/>
+ <i>Pixel hint. </i><br/>
  virtual <code>QwtInterval</code> <code>interval</code> (Qt::Axis) const </p>
 <p> virtual QRectF <code>boundingRect</code> () const </p>
 <h3>Protected Member Functions</h3>
-<p>virtual QImage <code>renderImage</code> (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;area, const QSize &amp;imageSize) const =0<br />
- <i>Render an image. </i><br />
- virtual <code>QwtScaleMap</code> <code>imageMap</code> (Qt::Orientation, const <code>QwtScaleMap</code> &amp;map, const QRectF &amp;area, const QSize &amp;imageSize, double pixelSize) const<br />
+<p>virtual QImage <code>renderImage</code> (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;area, const QSize &amp;imageSize) const =0<br/>
+ <i>Render an image. </i><br/>
+ virtual <code>QwtScaleMap</code> <code>imageMap</code> (Qt::Orientation, const <code>QwtScaleMap</code> &amp;map, const QRectF &amp;area, const QSize &amp;imageSize, double pixelSize) const<br/>
  <i>Calculate a scale map for painting to an image. </i></p>
 <h2>Detailed Description</h2>
 <p>A class, which displays raster data. </p>
@@ -99,9 +99,9 @@ description: "QwtPlotRasterItem –"
 <p>Draw the raster data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> X-Scale Map<br />
- <i>yMap</i> Y-Scale Map<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> X-Scale Map<br/>
+ <i>yMap</i> Y-Scale Map<br/>
  <i>canvasRect</i> Contents rectangle of the plot canvas</dd></dl>
 <p> Implements <code>QwtPlotItem</code>. </p>
 <p> Reimplemented in <code>QwtPlotSpectrogram</code>.</p>
@@ -109,10 +109,10 @@ description: "QwtPlotRasterItem –"
 <p>Calculate a scale map for painting to an image. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>orientation</i> Orientation, Qt::Horizontal means a X axis<br />
- <i>map</i> Scale map for rendering the plot item<br />
- <i>area</i> Area to be painted on the image<br />
- <i>imageSize</i> Image size<br />
+<dd><i>orientation</i> Orientation, Qt::Horizontal means a X axis<br/>
+ <i>map</i> Scale map for rendering the plot item<br/>
+ <i>area</i> Area to be painted on the image<br/>
+ <i>imageSize</i> Image size<br/>
  <i>pixelSize</i> Width/Height of a data pixel</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -150,9 +150,9 @@ description: "QwtPlotRasterItem –"
 <p>Render an image. An implementation of render() might iterate over all pixels of imageRect. Each pixel has to be translated into the corresponding position in scale coordinates using the maps. This position can be used to look up a value in a implementation specific way and to map it into a color. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xMap</i> X-Scale Map<br />
- <i>yMap</i> Y-Scale Map<br />
- <i>area</i> Requested area for the image in scale coordinates<br />
+<dd><i>xMap</i> X-Scale Map<br/>
+ <i>yMap</i> Y-Scale Map<br/>
+ <i>area</i> Requested area for the image in scale coordinates<br/>
  <i>imageSize</i> Requested size of the image</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -187,7 +187,7 @@ description: "QwtPlotRasterItem –"
 <p>Specify an attribute how to draw the raster item </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Paint attribute<br />
+<dd><i>attribute</i> Paint attribute<br/>
  <i>on</i> On/Off /sa PaintAttribute, <code>testPaintAttribute()</code></dd></dl>
 <h3>bool QwtPlotRasterItem::testPaintAttribute (<code>PaintAttribute</code>attribute) const</h3>
 <p><code>Returns:</code></p>

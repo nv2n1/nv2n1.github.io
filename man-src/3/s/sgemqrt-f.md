@@ -10,7 +10,7 @@ description: "sgemqrt.f –"
 <p>sgemqrt.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgemqrt</code> (SIDE, TRANS, M, N, K, NB, V, LDV, T, LDT, C, LDC, WORK, INFO)<br />
+<p>subroutine <code>sgemqrt</code> (SIDE, TRANS, M, N, K, NB, V, LDV, T, LDT, C, LDC, WORK, INFO)<br/>
  <i></i><code>SGEMQRT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgemqrt (characterSIDE, characterTRANS, integerM, integerN, integerK, integerNB, real, dimension( ldv, * )V, integerLDV, real, dimension( ldt, * )T, integerLDT, real, dimension( ldc, * )C, integerLDC, real, dimension( * )WORK, integerINFO)</h3>

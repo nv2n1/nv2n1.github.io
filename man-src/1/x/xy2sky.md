@@ -10,8 +10,8 @@ description: "xy2sky – Compute RA Dec from X Y using WCS in FITS and IRAF imag
 
 <p> xy2sky &#8211; Compute RA Dec from X Y using WCS in FITS and IRAF image files</p>
 <h2>Synopsis</h2>
-<p> xy2sky [-vbjg] [-n ndec] file.fts x1 y1 &#8230; xn yn<br />
- or<br />
+<p> xy2sky [-vbjg] [-n ndec] file.fts x1 y1 &#8230; xn yn<br/>
+ or<br/>
  xy2sky [-bdjgv] [-n ndec] file.fts @listfile</p>
 <h2>Description</h2>
 <p> <i>xy2sky</i> (pronounced X-Y-to-sky) is a utility for getting the world coordinates of a set of image coordinates in a FITS or IRAF image. World coordinate system (WCS) information in the image header describes, in a standard way, the relationship between sky coordinates and image pixels. This information is used by the program to transform image coordinate (X,Y) pairs to right ascension and declination sky coordinate pairs. The current version of the program prints the coordinates at the same equinox as is given in the image header, but future versions will allow transformations to B1950/FK4, J2000/FK5, or galactic coordinates. Input and output files in the Starbase format will eventually be allowed.</p>

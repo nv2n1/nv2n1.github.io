@@ -16,7 +16,7 @@ typedef struct {
     const char *reason_phrase;
 } ne_status;</code></pre>
 <h2>Description</h2>
-<p>An <code>ne_status</code> type represents an HTTP response status; used in response messages giving a result of request. The <i>major_version</i> and <i>minor_version</i> fields give the HTTP version supported by the server issuing the response. The <i>code</i> field gives the status code of the result (lying between 100 and 999 inclusive), and the <i>klass</i> field gives the class<font SIZE="-2">[1]</font>, which is equal to the most significant digit of the status. </p>
+<p>An <code>ne_status</code> type represents an HTTP response status; used in response messages giving a result of request. The <i>major_version</i> and <i>minor_version</i> fields give the HTTP version supported by the server issuing the response. The <i>code</i> field gives the status code of the result (lying between 100 and 999 inclusive), and the <i>klass</i> field gives the class[1], which is equal to the most significant digit of the status. </p>
 <p> There are five classes of HTTP status code defined by RFC2616: </p>
 <p> 1xx</p>
 <dl>

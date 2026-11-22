@@ -162,11 +162,11 @@ description: "cmakemodules – Reference of available CMake modules."
 <dd> Determine the Visual Studio service pack of the &#8216;cl&#8217; in use. </dd>
 <p> The functionality of this module has been superseded by the platform variable CMAKE_&lt;LANG&gt;_COMPILER_VERSION that contains the compiler version number. </p>
 <p> Usage: </p>
-<p>if (MSVC)<br />
-include(CMakeDetermineVSServicePack)<br />
-    DetermineVSServicePack(my_service_pack) if (my_service_pack)<br />
-        message(STATUS &#8220;Detected: ${my_service_pack}&#8221;)<br />
-            endif()<br />
+<p>if (MSVC)<br/>
+include(CMakeDetermineVSServicePack)<br/>
+    DetermineVSServicePack(my_service_pack) if (my_service_pack)<br/>
+        message(STATUS &#8220;Detected: ${my_service_pack}&#8221;)<br/>
+            endif()<br/>
                 endif()</p>
 <p> Function DetermineVSServicePack sets the given variable to one of the following values or an empty string if unknown: </p>
 <pre>
@@ -188,12 +188,12 @@ include(CMakeDetermineVSServicePack)<br />
 <dt><code>CMakeFindPackageMode</code></dt>
 <dd>
 <p> This file is executed by cmake when invoked with &#8211;find-package. It expects that the following variables are set using -D: </p>
-<p>   NAME = name of the package<br />
-   COMPILER_ID = the CMake compiler ID for which the result is, i.e. GNU/Intel/Clang/MSVC, etc.<br />
-   LANGUAGE = language for which the result will be used, i.e. C/CXX/Fortan/ASM<br />
-   MODE = EXIST : only check for existence of the given package<br />
-          COMPILE : print the flags needed for compiling an object file which uses the given package<br />
-          LINK : print the flags needed for linking when using the given package<br />
+<p>   NAME = name of the package<br/>
+   COMPILER_ID = the CMake compiler ID for which the result is, i.e. GNU/Intel/Clang/MSVC, etc.<br/>
+   LANGUAGE = language for which the result will be used, i.e. C/CXX/Fortan/ASM<br/>
+   MODE = EXIST : only check for existence of the given package<br/>
+          COMPILE : print the flags needed for compiling an object file which uses the given package<br/>
+          LINK : print the flags needed for linking when using the given package<br/>
    QUIET = if TRUE, don&#8217;t print anything</p>
 </dd><dt><code>CMakeForceCompiler</code></dt>
 <dd>
@@ -229,40 +229,40 @@ include(CMakeDetermineVSServicePack)<br />
     * a foo.dot.&lt;target&gt;.dependers file, showing which other targets depend on the respective target
 </pre>
 <p> This can result in huge graphs. Using the file CMakeGraphVizOptions.cmake the look and content of the generated graphs can be influenced. This file is searched first in ${CMAKE_BINARY_DIR} and then in ${CMAKE_SOURCE_DIR}. If found, it is read and the variables set in it are used to adjust options for the generated graphviz files. </p>
-<p>  GRAPHVIZ_GRAPH_TYPE &#8211; The graph type<br />
-     Mandatory : NO<br />
-     Default   : &#8220;digraph&#8221;<br />
-  GRAPHVIZ_GRAPH_NAME &#8211; The graph name.<br />
-     Mandatory : NO<br />
-     Default   : &#8220;GG&#8221;<br />
-  GRAPHVIZ_GRAPH_HEADER &#8211; The header written at the top of the graphviz file.<br />
-     Mandatory : NO<br />
-     Default   : &#8220;node [n  fontsize = &#8220;12&#8221;];&#8221;<br />
-  GRAPHVIZ_NODE_PREFIX &#8211; The prefix for each node in the graphviz file.<br />
-     Mandatory : NO<br />
-     Default   : &#8220;node&#8221;<br />
-  GRAPHVIZ_EXECUTABLES &#8211; Set this to FALSE to exclude executables from the generated graphs.<br />
-     Mandatory : NO<br />
-     Default   : TRUE<br />
-  GRAPHVIZ_STATIC_LIBS &#8211; Set this to FALSE to exclude static libraries from the generated graphs.<br />
-     Mandatory : NO<br />
-     Default   : TRUE<br />
-  GRAPHVIZ_SHARED_LIBS &#8211; Set this to FALSE to exclude shared libraries from the generated graphs.<br />
-     Mandatory : NO<br />
-     Default   : TRUE<br />
-  GRAPHVIZ_MODULE_LIBS &#8211; Set this to FALSE to exclude static libraries from the generated graphs.<br />
-     Mandatory : NO<br />
-     Default   : TRUE<br />
-  GRAPHVIZ_EXTERNAL_LIBS &#8211; Set this to FALSE to exclude external libraries from the generated graphs.<br />
-     Mandatory : NO<br />
-     Default   : TRUE<br />
-  GRAPHVIZ_IGNORE_TARGETS &#8211; A list of regular expressions for ignoring targets.<br />
-     Mandatory : NO<br />
+<p>  GRAPHVIZ_GRAPH_TYPE &#8211; The graph type<br/>
+     Mandatory : NO<br/>
+     Default   : &#8220;digraph&#8221;<br/>
+  GRAPHVIZ_GRAPH_NAME &#8211; The graph name.<br/>
+     Mandatory : NO<br/>
+     Default   : &#8220;GG&#8221;<br/>
+  GRAPHVIZ_GRAPH_HEADER &#8211; The header written at the top of the graphviz file.<br/>
+     Mandatory : NO<br/>
+     Default   : &#8220;node [n  fontsize = &#8220;12&#8221;];&#8221;<br/>
+  GRAPHVIZ_NODE_PREFIX &#8211; The prefix for each node in the graphviz file.<br/>
+     Mandatory : NO<br/>
+     Default   : &#8220;node&#8221;<br/>
+  GRAPHVIZ_EXECUTABLES &#8211; Set this to FALSE to exclude executables from the generated graphs.<br/>
+     Mandatory : NO<br/>
+     Default   : TRUE<br/>
+  GRAPHVIZ_STATIC_LIBS &#8211; Set this to FALSE to exclude static libraries from the generated graphs.<br/>
+     Mandatory : NO<br/>
+     Default   : TRUE<br/>
+  GRAPHVIZ_SHARED_LIBS &#8211; Set this to FALSE to exclude shared libraries from the generated graphs.<br/>
+     Mandatory : NO<br/>
+     Default   : TRUE<br/>
+  GRAPHVIZ_MODULE_LIBS &#8211; Set this to FALSE to exclude static libraries from the generated graphs.<br/>
+     Mandatory : NO<br/>
+     Default   : TRUE<br/>
+  GRAPHVIZ_EXTERNAL_LIBS &#8211; Set this to FALSE to exclude external libraries from the generated graphs.<br/>
+     Mandatory : NO<br/>
+     Default   : TRUE<br/>
+  GRAPHVIZ_IGNORE_TARGETS &#8211; A list of regular expressions for ignoring targets.<br/>
+     Mandatory : NO<br/>
      Default   : empty</p>
 <dt><code>CMakePackageConfigHelpers</code></dt>
 <dd> CONFIGURE_PACKAGE_CONFIG_FILE(), WRITE_BASIC_PACKAGE_VERSION_FILE() </dd>
-<p>CONFIGURE_PACKAGE_CONFIG_FILE(&lt;input&gt;&lt;output&gt; INSTALL_DESTINATION&lt;path&gt;[PATH_VARS&lt;var1&gt;&lt;var2&gt;&#8230;&lt;varN&gt;]<br />
-                                                                       [NO_SET_AND_CHECK_MACRO]<br />
+<p>CONFIGURE_PACKAGE_CONFIG_FILE(&lt;input&gt;&lt;output&gt; INSTALL_DESTINATION&lt;path&gt;[PATH_VARS&lt;var1&gt;&lt;var2&gt;&#8230;&lt;varN&gt;]<br/>
+                                                                       [NO_SET_AND_CHECK_MACRO]<br/>
                                                                        [NO_CHECK_REQUIRED_COMPONENTS_MACRO])</p>
 <p> CONFIGURE_PACKAGE_CONFIG_FILE() should be used instead of the plain configure_file() command when creating the &lt;Name&gt;Config.cmake or &lt;Name&gt;-config.cmake file for installing a project or library. It helps making the resulting package relocatable by avoiding hardcoded paths in the installed Config.cmake file. </p>
 <p> In a FooConfig.cmake file there may be code like this to make the install destinations know to the using project: </p>
@@ -300,12 +300,12 @@ include(CMakeDetermineVSServicePack)<br />
 <p> The COMPATIBILITY mode AnyNewerVersion means that the installed package version will be considered compatible if it is newer or exactly the same as the requested version. This mode should be used for packages which are fully backward compatible, also across major versions. If SameMajorVersion is used instead, then the behaviour differs from AnyNewerVersion in that the major version number must be the same as requested, e.g. version 2.0 will not be considered compatible if 1.0 is requested. This mode should be used for packages which guarantee backward compatibility within the same major version. If ExactVersion is used, then the package is only considered compatible if the requested version matches exactly its own version number (not considering the tweak version). For example, version 1.2.3 of a package is only considered compatible to requested version 1.2.3. This mode is for packages without compatibility guarantees. If your project has more elaborated version matching rules, you will need to write your own custom ConfigVersion.cmake file instead of using this macro. </p>
 <p> Internally, this macro executes configure_file() to create the resulting version file. Depending on the COMPATIBLITY, either the file BasicConfigVersion-SameMajorVersion.cmake.in or BasicConfigVersion-AnyNewerVersion.cmake.in is used. Please note that these two files are internal to CMake and you should not call configure_file() on them yourself, but they can be used as starting point to create more sophisticted custom ConfigVersion.cmake files. </p>
 <p> Example using both configure_package_config_file() and write_basic_package_version_file(): CMakeLists.txt: </p>
-<p>set(INCLUDE_INSTALL_DIR include / &#8230; CACHE)<br />
-    set(LIB_INSTALL_DIR lib / &#8230; CACHE)<br />
-        set(SYSCONFIG_INSTALL_DIR etc / foo / &#8230; CACHE)&#8230; include(CMakePackageConfigHelpers)<br />
-            configure_package_config_file(FooConfig.cmake.in ${CMAKE_CURRENT_BINARY_DIR} / FooConfig.cmake INSTALL_DESTINATION ${LIB_INSTALL_DIR} / Foo / cmake PATH_VARS INCLUDE_INSTALL_DIR SYSCONFIG_INSTALL_DIR)<br />
-                write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR} / FooConfigVersion.cmake<br />
-                                                                                   VERSION 1.2.3 COMPATIBILITY SameMajorVersion)<br />
+<p>set(INCLUDE_INSTALL_DIR include / &#8230; CACHE)<br/>
+    set(LIB_INSTALL_DIR lib / &#8230; CACHE)<br/>
+        set(SYSCONFIG_INSTALL_DIR etc / foo / &#8230; CACHE)&#8230; include(CMakePackageConfigHelpers)<br/>
+            configure_package_config_file(FooConfig.cmake.in ${CMAKE_CURRENT_BINARY_DIR} / FooConfig.cmake INSTALL_DESTINATION ${LIB_INSTALL_DIR} / Foo / cmake PATH_VARS INCLUDE_INSTALL_DIR SYSCONFIG_INSTALL_DIR)<br/>
+                write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR} / FooConfigVersion.cmake<br/>
+                                                                                   VERSION 1.2.3 COMPATIBILITY SameMajorVersion)<br/>
                     install(FILES ${CMAKE_CURRENT_BINARY_DIR} / FooConfig.cmake ${CMAKE_CURRENT_BINARY_DIR} / FooConfigVersion.cmake DESTINATION ${LIB_INSTALL_DIR} / Foo / cmake)</p>
 <p> With a FooConfig.cmake.in: </p>
 <pre>
@@ -329,12 +329,12 @@ include(CMakeDetermineVSServicePack)<br />
 <p> When done, CMAKE_PARSE_ARGUMENTS() will have defined for each of the keywords listed in &lt;options&gt;, &lt;one_value_keywords&gt; and &lt;multi_value_keywords&gt; a variable composed of the given &lt;prefix&gt; followed by &quot;_&quot; and the name of the respective keyword. These variables will then hold the respective value from the argument list. For the &lt;options&gt; keywords this will be TRUE or FALSE. </p>
 <p> All remaining arguments are collected in a variable &lt;prefix&gt;_UNPARSED_ARGUMENTS, this can be checked afterwards to see whether your macro was called with unrecognized parameters. </p>
 <p> As an example here a my_install() macro, which takes similar arguments as the real install() command: </p>
-<p>function(MY_INSTALL)<br />
-    set(options OPTIONAL FAST)<br />
-        set(oneValueArgs DESTINATION RENAME)<br />
-            set(multiValueArgs TARGETS CONFIGURATIONS)<br />
-                cmake_parse_arguments(MY_INSTALL &#8220;${options}&#8221;<br />
-                                                 &#8220;${oneValueArgs}&#8221;<br />
+<p>function(MY_INSTALL)<br/>
+    set(options OPTIONAL FAST)<br/>
+        set(oneValueArgs DESTINATION RENAME)<br/>
+            set(multiValueArgs TARGETS CONFIGURATIONS)<br/>
+                cmake_parse_arguments(MY_INSTALL &#8220;${options}&#8221;<br/>
+                                                 &#8220;${oneValueArgs}&#8221;<br/>
                                                  &#8220;${multiValueArgs}&#8221; ${ARGN})&#8230;</p>
 <p> Assume my_install() has been called like this: </p>
 <pre>
@@ -355,10 +355,10 @@ include(CMakeDetermineVSServicePack)<br />
 </dd><dt><code>CMakePrintHelpers</code></dt>
 <dd> Convenience macros for printing properties and variables, useful e.g. for debugging. </dd>
 <p> CMAKE_PRINT_PROPERTIES([TARGETS target1 .. targetN] </p>
-<p>                        [SOURCES source1 .. sourceN]<br />
-                        [DIRECTORIES dir1 .. dirN]<br />
-                        [TESTS test1 .. testN]<br />
-                        [CACHE_ENTRIES entry1 .. entryN]<br />
+<p>                        [SOURCES source1 .. sourceN]<br/>
+                        [DIRECTORIES dir1 .. dirN]<br/>
+                        [TESTS test1 .. testN]<br/>
+                        [CACHE_ENTRIES entry1 .. entryN]<br/>
                         PROPERTIES prop1 .. propN )</p>
 <p> This macro prints the values of the properties of the given targets, source files, directories, tests or cache entries. Exactly one of the scope keywords must be used. Example: </p>
 <pre>
@@ -655,14 +655,14 @@ include(CMakeDetermineVSServicePack)<br />
   CPACK_COMPONENT_&lt;compName&gt;_REQUIRED - True is this component is required.
 </pre>
 <p> cpack_add_component &#8211; Describes a CPack installation component named by the COMPONENT argument to a CMake INSTALL command. </p>
-<p>cpack_add_component(compname<br />
-                        [DISPLAY_NAME name]<br />
-                        [DESCRIPTION description]<br />
-                        [HIDDEN | REQUIRED | DISABLED]<br />
-                        [GROUP group]<br />
-                        [DEPENDS comp1 comp2&#8230;]<br />
-                        [INSTALL_TYPES type1 type2&#8230;]<br />
-                        [DOWNLOADED]<br />
+<p>cpack_add_component(compname<br/>
+                        [DISPLAY_NAME name]<br/>
+                        [DESCRIPTION description]<br/>
+                        [HIDDEN | REQUIRED | DISABLED]<br/>
+                        [GROUP group]<br/>
+                        [DEPENDS comp1 comp2&#8230;]<br/>
+                        [INSTALL_TYPES type1 type2&#8230;]<br/>
+                        [DOWNLOADED]<br/>
                         [ARCHIVE_FILE filename])</p>
 <p> The cmake_add_component command describes an installation component, which the user can opt to install or remove as part of the graphical installation process. compname is the name of the component, as provided to the COMPONENT argument of one or more CMake INSTALL commands. </p>
 <p> DISPLAY_NAME is the displayed name of the component, used in graphical installers to display the component name. This value can be any string. </p>
@@ -677,11 +677,11 @@ include(CMakeDetermineVSServicePack)<br />
 <p> DOWNLOADED indicates that this component should be downloaded on-the-fly by the installer, rather than packaged in with the installer itself. For more information, see the cpack_configure_downloads command. </p>
 <p> ARCHIVE_FILE provides a name for the archive file created by CPack to be used for downloaded components. If not supplied, CPack will create a file with some name based on CPACK_PACKAGE_FILE_NAME and the name of the component. See cpack_configure_downloads for more information. </p>
 <p> cpack_add_component_group &#8211; Describes a group of related CPack installation components. </p>
-<p>cpack_add_component_group(groupname<br />
-                              [DISPLAY_NAME name]<br />
-                              [DESCRIPTION description]<br />
-                              [PARENT_GROUP parent]<br />
-                              [EXPANDED]<br />
+<p>cpack_add_component_group(groupname<br/>
+                              [DISPLAY_NAME name]<br/>
+                              [DESCRIPTION description]<br/>
+                              [PARENT_GROUP parent]<br/>
+                              [EXPANDED]<br/>
                               [BOLD_TITLE])</p>
 <p> The cpack_add_component_group describes a group of installation components, which will be placed together within the listing of options. Typically, component groups allow the user to select/deselect all of the components within a single group via a single group-level option. Use component groups to reduce the complexity of installers with many options. groupname is an arbitrary name used to identify the group in the GROUP argument of the cpack_add_component command, which is used to place a component in a group. The name of the group must not conflict with the name of any component. </p>
 <p> DISPLAY_NAME is the displayed name of the component group, used in graphical installers to display the component group name. This value can be any string. </p>
@@ -698,9 +698,9 @@ include(CMakeDetermineVSServicePack)<br />
 <p> The cpack_add_install_type command identifies a set of preselected components that represents a common use case for an application. For example, a &quot;Developer&quot; install type might include an application along with its header and library files, while an &quot;End user&quot; install type might just include the application&#8217;s executable. Each component identifies itself with one or more install types via the INSTALL_TYPES argument to cpack_add_component. </p>
 <p> DISPLAY_NAME is the displayed name of the install type, which will typically show up in a drop-down box within a graphical installer. This value can be any string. </p>
 <p> cpack_configure_downloads &#8211; Configure CPack to download selected components on-the-fly as part of the installation process. </p>
-<p>cpack_configure_downloads(site<br />
-                              [UPLOAD_DIRECTORY dirname]<br />
-                              [ALL]<br />
+<p>cpack_configure_downloads(site<br/>
+                              [UPLOAD_DIRECTORY dirname]<br/>
+                              [ALL]<br/>
                               [ADD_REMOVE | NO_ADD_REMOVE])</p>
 <p> The cpack_configure_downloads command configures installation-time downloads of selected components. For each downloadable component, CPack will create an archive containing the contents of that component, which should be uploaded to the given site. When the user selects that component for installation, the installer will download and extract the component in place. This feature is useful for creating small installers that only download the requested components, saving bandwidth. Additionally, the installers are small enough that they will be installed as part of the normal installation process, and the &quot;Change&quot; button in Windows Add/Remove Programs control panel will allow one to add or remove parts of the application after the original installation. On Windows, the downloaded-components functionality requires the ZipDLL plug-in for NSIS, available at: </p>
 <pre>
@@ -916,21 +916,21 @@ include(CMakeDetermineVSServicePack)<br />
      Allows packages to declare a suggested package install grouping.
 </pre>
 <p> CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA </p>
-<p>     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     This variable allow advanced user to add custom script to the control.tar.gz<br />
-     Typical usage is for conffiles, postinst, postrm, prerm.<br />
-     Usage: set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA<br />
+<p>     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     This variable allow advanced user to add custom script to the control.tar.gz<br/>
+     Typical usage is for conffiles, postinst, postrm, prerm.<br/>
+     Usage: set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA<br/>
             &#8220;${CMAKE_CURRENT_SOURCE_DIR/prerm;${CMAKE_CURRENT_SOURCE_DIR}/postrm&#8221;)</p>
 <dt><code>CPackNSIS</code></dt>
 <dd> CPack NSIS generator specific options </dd>
 <p> The following variables are specific to the graphical installers built on Windows using the Nullsoft Installation System. </p>
-<p>CPACK_NSIS_INSTALL_ROOT &#8211; The default installation directory presented<br />
-                                  to the end user by the NSIS installer is under this root dir.The full<br />
-                                      directory presented to the end user is : ${CPACK_NSIS_INSTALL_ROOT} /<br />
-                              $<br />
-{<br />
-    CPACK_PACKAGE_INSTALL_DIRECTORY<br />
+<p>CPACK_NSIS_INSTALL_ROOT &#8211; The default installation directory presented<br/>
+                                  to the end user by the NSIS installer is under this root dir.The full<br/>
+                                      directory presented to the end user is : ${CPACK_NSIS_INSTALL_ROOT} /<br/>
+                              $<br/>
+{<br/>
+    CPACK_PACKAGE_INSTALL_DIRECTORY<br/>
 }</p>
 <pre>
    CPACK_NSIS_MUI_ICON - An icon filename.
@@ -1016,12 +1016,12 @@ include(CMakeDetermineVSServicePack)<br />
    For example, you would set this to 'exec' if your executables are
    in an exec directory.
 </pre>
-<p>CPACK_NSIS_MUI_FINISHPAGE_RUN &#8211; Specify an executable to add an option to run on the finish page of the NSIS installer.CPACK_NSIS_MENU_LINKS &#8211; Specify links in[application] menu.This should contain a list of pair &#8220;link&#8221;<br />
-                                                                                                                                                                                                                     &#8220;link name&#8221;.The link may be an URL or<br />
-    a path relative to installation prefix.Like : set(CPACK_NSIS_MENU_LINKS<br />
-                                                      &#8220;doc/cmake- [at] CMake_VERSION_MAJOR@.@CMake_VERSION_MINOR@/cmake.html&#8221;<br />
-                                                      &#8220;CMake Help&#8221;<br />
-                                                      &#8220;http://www.cmake.org&#8221;<br />
+<p>CPACK_NSIS_MUI_FINISHPAGE_RUN &#8211; Specify an executable to add an option to run on the finish page of the NSIS installer.CPACK_NSIS_MENU_LINKS &#8211; Specify links in[application] menu.This should contain a list of pair &#8220;link&#8221;<br/>
+                                                                                                                                                                                                                     &#8220;link name&#8221;.The link may be an URL or<br/>
+    a path relative to installation prefix.Like : set(CPACK_NSIS_MENU_LINKS<br/>
+                                                      &#8220;doc/cmake- [at] CMake_VERSION_MAJOR@.@CMake_VERSION_MINOR@/cmake.html&#8221;<br/>
+                                                      &#8220;CMake Help&#8221;<br/>
+                                                      &#8220;http://www.cmake.org&#8221;<br/>
                                                       &#8220;CMake Web Site&#8221;)</p>
 <dt><code>CPackPackageMaker</code></dt>
 <dd> PackageMaker CPack generator (Mac OS X). </dd>
@@ -1048,133 +1048,133 @@ include(CMakeDetermineVSServicePack)<br />
   <a rel="nofollow" href="http://www.cmake.org/Wiki/CMake:CPackPackageGenerators#RPM_.28Unix_Only.29">http://www.cmake.org/Wiki/CMake:CPackPackageGenerators#RPM_.28Unix_Only.29</a>
 </pre>
 <p> However as a handy reminder here comes the list of specific variables: </p>
-<p>CPACK_RPM_PACKAGE_SUMMARY &#8211; The RPM package summary.Mandatory : YES Default : CPACK_PACKAGE_DESCRIPTION_SUMMARY CPACK_RPM_PACKAGE_NAME &#8211; The RPM package name.Mandatory : YES Default : CPACK_PACKAGE_NAME CPACK_RPM_PACKAGE_VERSION &#8211; The RPM package version.Mandatory : YES Default : CPACK_PACKAGE_VERSION CPACK_RPM_PACKAGE_ARCHITECTURE &#8211; The RPM package architecture.Mandatory : NO Default : -This may be set to &#8220;noarch&#8221; if you know you are building a noarch package.CPACK_RPM_PACKAGE_RELEASE &#8211; The RPM package release.Mandatory : YES Default : 1 This is the numbering of the RPM package itself, i.e.the version of the packaging and not the version of the content(see CPACK_RPM_PACKAGE_VERSION).One may change the default value if the previous packaging was buggy and / or you want to put here a fancy Linux distro specific numbering.CPACK_RPM_PACKAGE_LICENSE &#8211; The RPM package license policy.Mandatory : YES Default : &#8220;unknown&#8221; CPACK_RPM_PACKAGE_GROUP &#8211; The RPM package group.Mandatory : YES Default : &#8220;unknown&#8221; CPACK_RPM_PACKAGE_VENDOR &#8211; The RPM package vendor.Mandatory : YES Default : CPACK_PACKAGE_VENDOR if set or &#8220;unknown&#8221; CPACK_RPM_PACKAGE_URL &#8211; The projects URL.Mandatory : NO Default : -CPACK_RPM_PACKAGE_DESCRIPTION &#8211; RPM package description.Mandatory : YES Default : CPACK_PACKAGE_DESCRIPTION_FILE if set or &#8220;no package description available&#8221; CPACK_RPM_COMPRESSION_TYPE &#8211; RPM compression type.Mandatory : NO Default : -May be used to override RPM compression type to be used to build the RPM.For example some Linux distribution now default to lzma or xz compression whereas older cannot use such RPM.Using this one can enforce compression type to be used.Possible value are : lzma, xz, bzip2 and gzip.CPACK_RPM_PACKAGE_REQUIRES &#8211; RPM spec requires field.Mandatory : NO Default : -May be used to set RPM dependencies(requires).Note that you must enclose the complete requires string between quotes,<br />
-     for example:<br />
-     set(CPACK_RPM_PACKAGE_REQUIRES &#8220;python &gt;= 2.5.0, cmake &gt;= 2.8&#8221;)<br />
-     The required package list of an RPM file could be printed with<br />
-     rpm -qp &#8211;requires file.rpm<br />
-  CPACK_RPM_PACKAGE_SUGGESTS &#8211; RPM spec suggest field.<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     May be used to set weak RPM dependencies (suggests).<br />
-     Note that you must enclose the complete requires string between quotes.<br />
-  CPACK_RPM_PACKAGE_PROVIDES &#8211; RPM spec provides field.<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     May be used to set RPM dependencies (provides).<br />
-     The provided package list of an RPM file could be printed with<br />
-     rpm -qp &#8211;provides file.rpm<br />
-  CPACK_RPM_PACKAGE_OBSOLETES &#8211; RPM spec obsoletes field.<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     May be used to set RPM packages that are obsoleted by this one.<br />
-  CPACK_RPM_PACKAGE_RELOCATABLE &#8211; build a relocatable RPM.<br />
-     Mandatory : NO<br />
-     Default   : CPACK_PACKAGE_RELOCATABLE<br />
-     If this variable is set to TRUE or ON CPackRPM will try<br />
-     to build a relocatable RPM package. A relocatable RPM may<br />
-     be installed using rpm &#8211;prefix or &#8211;relocate in order to<br />
-     install it at an alternate place see rpm(8).<br />
-     Note that currently this may fail if CPACK_SET_DESTDIR is set to ON.<br />
-     If CPACK_SET_DESTDIR is set then you will get a warning message<br />
-     but if there is file installed with absolute path you&#8217;ll get<br />
-     unexpected behavior.<br />
-  CPACK_RPM_SPEC_INSTALL_POST &#8211; [deprecated].<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     This way of specifying post-install script is deprecated use<br />
-     CPACK_RPM_POST_INSTALL_SCRIPT_FILE<br />
-     May be used to set an RPM post-install command inside the spec file.<br />
-     For example setting it to &#8220;/bin/true&#8221; may be used to prevent<br />
-     rpmbuild to strip binaries.<br />
-  CPACK_RPM_SPEC_MORE_DEFINE &#8211; RPM extended spec definitions lines.<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     May be used to add any %define lines to the generated spec file.<br />
-  CPACK_RPM_PACKAGE_DEBUG &#8211; Toggle CPackRPM debug output.<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     May be set when invoking cpack in order to trace debug information<br />
-     during CPack RPM run. For example you may launch CPack like this<br />
-     cpack -D CPACK_RPM_PACKAGE_DEBUG=1 -G RPM<br />
-  CPACK_RPM_USER_BINARY_SPECFILE &#8211; A user provided spec file.<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     May be set by the user in order to specify a USER binary spec file<br />
-     to be used by CPackRPM instead of generating the file.<br />
-     The specified file will be processed by configure_file( @ONLY).<br />
-     One can provide a component specific file by setting<br />
-     CPACK_RPM_&lt;componentName&gt;_USER_BINARY_SPECFILE.<br />
-  CPACK_RPM_GENERATE_USER_BINARY_SPECFILE_TEMPLATE &#8211; Spec file template.<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     If set CPack will generate a template for USER specified binary<br />
-     spec file and stop with an error. For example launch CPack like this<br />
-     cpack -D CPACK_RPM_GENERATE_USER_BINARY_SPECFILE_TEMPLATE=1 -G RPM<br />
-     The user may then use this file in order to hand-craft is own<br />
-     binary spec file which may be used with CPACK_RPM_USER_BINARY_SPECFILE.<br />
-  CPACK_RPM_PRE_INSTALL_SCRIPT_FILE<br />
-  CPACK_RPM_PRE_UNINSTALL_SCRIPT_FILE<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     May be used to embed a pre (un)<br />
-     installation script in the spec file.The refered script file(s)<br />
-     will be read and directly<br />
-                 put after the %<br />
-             pre or<br />
-         % preun section<br />
-                 If CPACK_RPM_COMPONENT_INSTALL is set to ON<br />
-                 the(un)install script for<br />
-     each component can be overridden with<br />
-     CPACK_RPM_&lt;COMPONENT&gt;_PRE_INSTALL_SCRIPT_FILE and<br />
-     CPACK_RPM_&lt;COMPONENT&gt;_PRE_UNINSTALL_SCRIPT_FILE<br />
-     One may verify which scriptlet has been included with<br />
-      rpm -qp &#8211;scripts  package.rpm<br />
-  CPACK_RPM_POST_INSTALL_SCRIPT_FILE<br />
-  CPACK_RPM_POST_UNINSTALL_SCRIPT_FILE<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     May be used to embed a post (un)<br />
-     installation script in the spec file.The refered script file(s)<br />
-     will be read and directly<br />
-                 put after the %<br />
-             post or<br />
-         % postun section<br />
-                 If CPACK_RPM_COMPONENT_INSTALL is set to ON<br />
-                 the(un)install script for<br />
-     each component can be overridden with<br />
-     CPACK_RPM_&lt;COMPONENT&gt;_POST_INSTALL_SCRIPT_FILE and<br />
-     CPACK_RPM_&lt;COMPONENT&gt;_POST_UNINSTALL_SCRIPT_FILE<br />
-     One may verify which scriptlet has been included with<br />
-      rpm -qp &#8211;scripts  package.rpm<br />
-  CPACK_RPM_USER_FILELIST<br />
-  CPACK_RPM_&lt;COMPONENT&gt;_USER_FILELIST<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     May be used to explicitly specify %(&lt;directive&gt;) file line<br />
-     in the spec file. Like %config(noreplace) or any other directive<br />
-     that be found in the %files section. Since CPackRPM is generating<br />
-     the list of files (and directories) the user specified files of<br />
-     the CPACK_RPM_&lt;COMPONENT&gt;_USER_FILELIST list will be removed from the generated list.<br />
-  CPACK_RPM_CHANGELOG_FILE &#8211; RPM changelog file.<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     May be used to embed a changelog in the spec file.<br />
-     The refered file will be read and directly put after the %changelog<br />
-     section.<br />
-  CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST &#8211; list of path to be excluded.<br />
-     Mandatory : NO<br />
-     Default   : /etc /etc/init.d /usr /usr/share /usr/share/doc /usr/bin /usr/lib /usr/lib64 /usr/include<br />
-     May be used to exclude path (directories or files) from the auto-generated<br />
-     list of paths discovered by CPack RPM. The defaut value contains a reasonable<br />
-     set of values if the variable is not defined by the user. If the variable<br />
-     is defined by the user then CPackRPM will NOT any of the default path.<br />
-     If you want to add some path to the default list then you can use<br />
-     CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST_ADDITION variable.<br />
-  CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST_ADDITION &#8211; additional list of path to be excluded.<br />
-     Mandatory : NO<br />
-     Default   : &#8211;<br />
-     May be used to add more exclude path (directories or files) from the initial<br />
+<p>CPACK_RPM_PACKAGE_SUMMARY &#8211; The RPM package summary.Mandatory : YES Default : CPACK_PACKAGE_DESCRIPTION_SUMMARY CPACK_RPM_PACKAGE_NAME &#8211; The RPM package name.Mandatory : YES Default : CPACK_PACKAGE_NAME CPACK_RPM_PACKAGE_VERSION &#8211; The RPM package version.Mandatory : YES Default : CPACK_PACKAGE_VERSION CPACK_RPM_PACKAGE_ARCHITECTURE &#8211; The RPM package architecture.Mandatory : NO Default : -This may be set to &#8220;noarch&#8221; if you know you are building a noarch package.CPACK_RPM_PACKAGE_RELEASE &#8211; The RPM package release.Mandatory : YES Default : 1 This is the numbering of the RPM package itself, i.e.the version of the packaging and not the version of the content(see CPACK_RPM_PACKAGE_VERSION).One may change the default value if the previous packaging was buggy and / or you want to put here a fancy Linux distro specific numbering.CPACK_RPM_PACKAGE_LICENSE &#8211; The RPM package license policy.Mandatory : YES Default : &#8220;unknown&#8221; CPACK_RPM_PACKAGE_GROUP &#8211; The RPM package group.Mandatory : YES Default : &#8220;unknown&#8221; CPACK_RPM_PACKAGE_VENDOR &#8211; The RPM package vendor.Mandatory : YES Default : CPACK_PACKAGE_VENDOR if set or &#8220;unknown&#8221; CPACK_RPM_PACKAGE_URL &#8211; The projects URL.Mandatory : NO Default : -CPACK_RPM_PACKAGE_DESCRIPTION &#8211; RPM package description.Mandatory : YES Default : CPACK_PACKAGE_DESCRIPTION_FILE if set or &#8220;no package description available&#8221; CPACK_RPM_COMPRESSION_TYPE &#8211; RPM compression type.Mandatory : NO Default : -May be used to override RPM compression type to be used to build the RPM.For example some Linux distribution now default to lzma or xz compression whereas older cannot use such RPM.Using this one can enforce compression type to be used.Possible value are : lzma, xz, bzip2 and gzip.CPACK_RPM_PACKAGE_REQUIRES &#8211; RPM spec requires field.Mandatory : NO Default : -May be used to set RPM dependencies(requires).Note that you must enclose the complete requires string between quotes,<br/>
+     for example:<br/>
+     set(CPACK_RPM_PACKAGE_REQUIRES &#8220;python &gt;= 2.5.0, cmake &gt;= 2.8&#8221;)<br/>
+     The required package list of an RPM file could be printed with<br/>
+     rpm -qp &#8211;requires file.rpm<br/>
+  CPACK_RPM_PACKAGE_SUGGESTS &#8211; RPM spec suggest field.<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     May be used to set weak RPM dependencies (suggests).<br/>
+     Note that you must enclose the complete requires string between quotes.<br/>
+  CPACK_RPM_PACKAGE_PROVIDES &#8211; RPM spec provides field.<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     May be used to set RPM dependencies (provides).<br/>
+     The provided package list of an RPM file could be printed with<br/>
+     rpm -qp &#8211;provides file.rpm<br/>
+  CPACK_RPM_PACKAGE_OBSOLETES &#8211; RPM spec obsoletes field.<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     May be used to set RPM packages that are obsoleted by this one.<br/>
+  CPACK_RPM_PACKAGE_RELOCATABLE &#8211; build a relocatable RPM.<br/>
+     Mandatory : NO<br/>
+     Default   : CPACK_PACKAGE_RELOCATABLE<br/>
+     If this variable is set to TRUE or ON CPackRPM will try<br/>
+     to build a relocatable RPM package. A relocatable RPM may<br/>
+     be installed using rpm &#8211;prefix or &#8211;relocate in order to<br/>
+     install it at an alternate place see rpm(8).<br/>
+     Note that currently this may fail if CPACK_SET_DESTDIR is set to ON.<br/>
+     If CPACK_SET_DESTDIR is set then you will get a warning message<br/>
+     but if there is file installed with absolute path you&#8217;ll get<br/>
+     unexpected behavior.<br/>
+  CPACK_RPM_SPEC_INSTALL_POST &#8211; [deprecated].<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     This way of specifying post-install script is deprecated use<br/>
+     CPACK_RPM_POST_INSTALL_SCRIPT_FILE<br/>
+     May be used to set an RPM post-install command inside the spec file.<br/>
+     For example setting it to &#8220;/bin/true&#8221; may be used to prevent<br/>
+     rpmbuild to strip binaries.<br/>
+  CPACK_RPM_SPEC_MORE_DEFINE &#8211; RPM extended spec definitions lines.<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     May be used to add any %define lines to the generated spec file.<br/>
+  CPACK_RPM_PACKAGE_DEBUG &#8211; Toggle CPackRPM debug output.<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     May be set when invoking cpack in order to trace debug information<br/>
+     during CPack RPM run. For example you may launch CPack like this<br/>
+     cpack -D CPACK_RPM_PACKAGE_DEBUG=1 -G RPM<br/>
+  CPACK_RPM_USER_BINARY_SPECFILE &#8211; A user provided spec file.<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     May be set by the user in order to specify a USER binary spec file<br/>
+     to be used by CPackRPM instead of generating the file.<br/>
+     The specified file will be processed by configure_file( @ONLY).<br/>
+     One can provide a component specific file by setting<br/>
+     CPACK_RPM_&lt;componentName&gt;_USER_BINARY_SPECFILE.<br/>
+  CPACK_RPM_GENERATE_USER_BINARY_SPECFILE_TEMPLATE &#8211; Spec file template.<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     If set CPack will generate a template for USER specified binary<br/>
+     spec file and stop with an error. For example launch CPack like this<br/>
+     cpack -D CPACK_RPM_GENERATE_USER_BINARY_SPECFILE_TEMPLATE=1 -G RPM<br/>
+     The user may then use this file in order to hand-craft is own<br/>
+     binary spec file which may be used with CPACK_RPM_USER_BINARY_SPECFILE.<br/>
+  CPACK_RPM_PRE_INSTALL_SCRIPT_FILE<br/>
+  CPACK_RPM_PRE_UNINSTALL_SCRIPT_FILE<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     May be used to embed a pre (un)<br/>
+     installation script in the spec file.The refered script file(s)<br/>
+     will be read and directly<br/>
+                 put after the %<br/>
+             pre or<br/>
+         % preun section<br/>
+                 If CPACK_RPM_COMPONENT_INSTALL is set to ON<br/>
+                 the(un)install script for<br/>
+     each component can be overridden with<br/>
+     CPACK_RPM_&lt;COMPONENT&gt;_PRE_INSTALL_SCRIPT_FILE and<br/>
+     CPACK_RPM_&lt;COMPONENT&gt;_PRE_UNINSTALL_SCRIPT_FILE<br/>
+     One may verify which scriptlet has been included with<br/>
+      rpm -qp &#8211;scripts  package.rpm<br/>
+  CPACK_RPM_POST_INSTALL_SCRIPT_FILE<br/>
+  CPACK_RPM_POST_UNINSTALL_SCRIPT_FILE<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     May be used to embed a post (un)<br/>
+     installation script in the spec file.The refered script file(s)<br/>
+     will be read and directly<br/>
+                 put after the %<br/>
+             post or<br/>
+         % postun section<br/>
+                 If CPACK_RPM_COMPONENT_INSTALL is set to ON<br/>
+                 the(un)install script for<br/>
+     each component can be overridden with<br/>
+     CPACK_RPM_&lt;COMPONENT&gt;_POST_INSTALL_SCRIPT_FILE and<br/>
+     CPACK_RPM_&lt;COMPONENT&gt;_POST_UNINSTALL_SCRIPT_FILE<br/>
+     One may verify which scriptlet has been included with<br/>
+      rpm -qp &#8211;scripts  package.rpm<br/>
+  CPACK_RPM_USER_FILELIST<br/>
+  CPACK_RPM_&lt;COMPONENT&gt;_USER_FILELIST<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     May be used to explicitly specify %(&lt;directive&gt;) file line<br/>
+     in the spec file. Like %config(noreplace) or any other directive<br/>
+     that be found in the %files section. Since CPackRPM is generating<br/>
+     the list of files (and directories) the user specified files of<br/>
+     the CPACK_RPM_&lt;COMPONENT&gt;_USER_FILELIST list will be removed from the generated list.<br/>
+  CPACK_RPM_CHANGELOG_FILE &#8211; RPM changelog file.<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     May be used to embed a changelog in the spec file.<br/>
+     The refered file will be read and directly put after the %changelog<br/>
+     section.<br/>
+  CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST &#8211; list of path to be excluded.<br/>
+     Mandatory : NO<br/>
+     Default   : /etc /etc/init.d /usr /usr/share /usr/share/doc /usr/bin /usr/lib /usr/lib64 /usr/include<br/>
+     May be used to exclude path (directories or files) from the auto-generated<br/>
+     list of paths discovered by CPack RPM. The defaut value contains a reasonable<br/>
+     set of values if the variable is not defined by the user. If the variable<br/>
+     is defined by the user then CPackRPM will NOT any of the default path.<br/>
+     If you want to add some path to the default list then you can use<br/>
+     CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST_ADDITION variable.<br/>
+  CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST_ADDITION &#8211; additional list of path to be excluded.<br/>
+     Mandatory : NO<br/>
+     Default   : &#8211;<br/>
+     May be used to add more exclude path (directories or files) from the initial<br/>
      default list of excluded paths. See CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST.</p>
 <dt><code>CPackWIX</code></dt>
 <dd> CPack WiX generator specific options </dd>
@@ -1448,9 +1448,9 @@ include(CMakeDetermineVSServicePack)<br />
   VARIABLE - The variable to store the result.
 </pre>
 <p> Example: </p>
-<p>check_prototype_definition(getpwent_r<br />
-                           &#8220;struct passwd *getpwent_r(struct passwd *src, char *buf, int buflen)&#8221;<br />
-                           &#8220;NULL&#8221;<br />
+<p>check_prototype_definition(getpwent_r<br/>
+                           &#8220;struct passwd *getpwent_r(struct passwd *src, char *buf, int buflen)&#8221;<br/>
+                           &#8220;NULL&#8221;<br/>
                            &#8220;unistd.h;pwd.h&#8221; SOLARIS_GETPWENT_R)</p>
 <p> The following variables may be set before calling this macro to modify the way the check is run: </p>
 <pre>
@@ -1592,9 +1592,9 @@ include(CMakeDetermineVSServicePack)<br />
 <p> Use this module to unambiguously reference data files stored outside the source tree and fetch them at build time from arbitrary local and remote content-addressed locations. Functions provided by this module recognize arguments with the syntax &quot;DATA{&lt;name&gt;}&quot; as references to external data, replace them with full paths to local copies of those data, and create build rules to fetch and update the local copies. </p>
 <p> The DATA{} syntax is literal and the &lt;name&gt; is a full or relative path within the source tree. The source tree must contain either a real data file at &lt;name&gt; or a &quot;content link&quot; at &lt;name&gt;&lt;ext&gt; containing a hash of the real file using a hash algorithm corresponding to &lt;ext&gt;. For example, the argument &quot;DATA{img.png}&quot; may be satisfied by either a real &quot;img.png&quot; file in the current source directory or a &quot;img.png.md5&quot; file containing its MD5 sum. </p>
 <p> The &#8216;ExternalData_Expand_Arguments&#8217; function evaluates DATA{} references in its arguments and constructs a new list of arguments: </p>
-<p>ExternalData_Expand_Arguments(<br />
-    &lt;target&gt; #Name of data management target&lt;outVar&gt; #Output variable<br />
-        [args&#8230;] #Input arguments,<br />
+<p>ExternalData_Expand_Arguments(<br/>
+    &lt;target&gt; #Name of data management target&lt;outVar&gt; #Output variable<br/>
+        [args&#8230;] #Input arguments,<br/>
     DATA {} allowed)</p>
 <p> It replaces each DATA{} reference in an argument with the full path of a real data file on disk that will exist after the &lt;target&gt; builds. </p>
 <p> The &#8216;ExternalData_Add_Test&#8217; function wraps around the CMake add_test() command but supports DATA{} references in its arguments: </p>
@@ -1613,9 +1613,9 @@ include(CMakeDetermineVSServicePack)<br />
 </pre>
 <p> It creates custom commands in the target as necessary to make data files available for each DATA{} reference previously evaluated by other functions provided by this module. A list of URL templates must be provided in the variable ExternalData_URL_TEMPLATES using the placeholders &quot;%(algo)&quot; and &quot;%(hash)&quot; in each template. Data fetch rules try each URL template in order by substituting the hash algorithm name for &quot;%(algo)&quot; and the hash value for &quot;%(hash)&quot;. </p>
 <p> The following hash algorithms are supported: </p>
-<p>% (algo)&lt;ext&gt; Description<br />
-        &#8212; &#8212; &#8212; &#8211; &#8212; &#8212; &#8211; &#8212; &#8212; &#8212; &#8212; &#8212; -MD5.md5 Message<br />
-    &#8211; Digest Algorithm 5,<br />
+<p>% (algo)&lt;ext&gt; Description<br/>
+        &#8212; &#8212; &#8212; &#8211; &#8212; &#8212; &#8211; &#8212; &#8212; &#8212; &#8212; &#8212; -MD5.md5 Message<br/>
+    &#8211; Digest Algorithm 5,<br/>
     RFC 1321 SHA1.sha1 US Secure Hash Algorithm 1, RFC 3174 SHA224.sha224 US Secure Hash Algorithms, RFC 4634 SHA256.sha256 US Secure Hash Algorithms, RFC 4634 SHA384.sha384 US Secure Hash Algorithms, RFC 4634 SHA512.sha512 US Secure Hash Algorithms, RFC 4634</p>
 <p> Note that the hashes are used only for unique data identification and download verification. This is not security software. </p>
 <p> Example usage: </p>
@@ -1647,11 +1647,11 @@ include(CMakeDetermineVSServicePack)<br />
 </pre>
 <p> Note that the &lt;suffix&gt; of a series does not include a hash-algorithm extension. </p>
 <p> The DATA{} syntax can alternatively match files associated with the named file and contained in the same directory. Associated files may be specified by options using the syntax DATA{&lt;name&gt;,&lt;opt1&gt;,&lt;opt2&gt;,&#8230;}. Each option may specify one file by name or specify a regular expression to match file names using the syntax REGEX:&lt;regex&gt;. For example, the arguments </p>
-<p>DATA{MyData / MyInput.mhd, MyInput.img} #File pair<br />
-    DATA<br />
-{<br />
-    MyData / MyFrames00.png, REGEX : MyFrames[0 &#8211; 9] +\.png<br />
-}<br />
+<p>DATA{MyData / MyInput.mhd, MyInput.img} #File pair<br/>
+    DATA<br/>
+{<br/>
+    MyData / MyFrames00.png, REGEX : MyFrames[0 &#8211; 9] +\.png<br/>
+}<br/>
 #Series</p>
 <p> will pass MyInput.mha and MyFrames00.png on the command line but ensure that the associated files are present next to them. </p>
 <p> The DATA{} syntax may reference a directory using a trailing slash and a list of associated files. The form DATA{&lt;name&gt;/,&lt;opt1&gt;,&lt;opt2&gt;,&#8230;} adds rules to fetch any files in the directory that match one of the associated file options. For example, the argument DATA{MyDataDir/,REGEX:.*} will pass the full path to a MyDataDir directory on the command line and ensure that the directory contains files corresponding to every file or content link in the MyDataDir source directory. </p>
@@ -1663,65 +1663,65 @@ include(CMakeDetermineVSServicePack)<br />
 <dt><code>ExternalProject</code></dt>
 <dd> Create custom targets to build projects in external trees </dd>
 <p> The &#8216;ExternalProject_Add&#8217; function creates a custom target to drive download, update/patch, configure, build, install and test steps of an external project: </p>
-<p>  ExternalProject_Add(&lt;name&gt;    # Name for custom target<br />
-    [DEPENDS projects&#8230;]       # Targets on which the project depends<br />
-    [PREFIX dir]                # Root dir for entire project<br />
-    [LIST_SEPARATOR sep]        # Sep to be replaced by ; in cmd lines<br />
-    [TMP_DIR dir]               # Directory to store temporary files<br />
-    [STAMP_DIR dir]             # Directory to store step timestamps<br />
-#&#8211; Download step &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;<br />
-    [DOWNLOAD_NAME fname]       # File name to store (if not end of URL)<br />
-    [DOWNLOAD_DIR dir]          # Directory to store downloaded files<br />
-    [DOWNLOAD_COMMAND cmd&#8230;]   # Command to download source tree<br />
-    [CVS_REPOSITORY cvsroot]    # CVSROOT of CVS repository<br />
-    [CVS_MODULE mod]            # Module to checkout from CVS repo<br />
-    [CVS_TAG tag]               # Tag to checkout from CVS repo<br />
-    [SVN_REPOSITORY url]        # URL of Subversion repo<br />
-    [SVN_REVISION rev]          # Revision to checkout from Subversion repo<br />
-    [SVN_USERNAME john ]        # Username for Subversion checkout and update<br />
-    [SVN_PASSWORD doe ]         # Password for Subversion checkout and update<br />
-    [SVN_TRUST_CERT 1 ]         # Trust the Subversion server site certificate<br />
-    [GIT_REPOSITORY url]        # URL of git repo<br />
-    [GIT_TAG tag]               # Git branch name, commit id or tag<br />
-    [HG_REPOSITORY url]         # URL of mercurial repo<br />
-    [HG_TAG tag]                # Mercurial branch name, commit id or tag<br />
-    [URL /&#8230;/src.tgz]          # Full path or URL of source<br />
-    [URL_HASH ALGO=value]       # Hash of file at URL<br />
-    [URL_MD5 md5]               # Equivalent to URL_HASH MD5=md5<br />
-    [TLS_VERIFY bool]           # Should certificate for https be checked<br />
-    [TLS_CAINFO file]           # Path to a certificate authority file<br />
-    [TIMEOUT seconds]           # Time allowed for file download operations<br />
-#&#8211; Update / Patch step &#8212; &#8212; &#8212; &#8212; &#8212;<br />
-    [UPDATE_COMMAND cmd&#8230;]     # Source work-tree update command<br />
-    [PATCH_COMMAND cmd&#8230;]      # Command to patch downloaded source<br />
-#&#8211; Configure step &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br />
-    [SOURCE_DIR dir]            # Source dir to be used for build<br />
-    [CONFIGURE_COMMAND cmd&#8230;]  # Build tree configuration command<br />
-    [CMAKE_COMMAND /&#8230;/cmake]  # Specify alternative cmake executable<br />
-    [CMAKE_GENERATOR gen]       # Specify generator for native build<br />
-    [CMAKE_GENERATOR_TOOLSET t] # Generator-specific toolset name<br />
-    [CMAKE_ARGS args&#8230;]        # Arguments to CMake command line<br />
-    [CMAKE_CACHE_ARGS args&#8230;]  # Initial cache arguments, of the form -Dvar:string=on<br />
-#&#8211; Build step &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br />
-    [BINARY_DIR dir]            # Specify build dir location<br />
-    [BUILD_COMMAND cmd&#8230;]      # Command to drive the native build<br />
-    [BUILD_IN_SOURCE 1]         # Use source dir for build dir<br />
-#&#8211; Install step &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br />
-    [INSTALL_DIR dir]           # Installation prefix<br />
-    [INSTALL_COMMAND cmd&#8230;]    # Command to drive install after build<br />
-#&#8211; Test step &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;<br />
-    [TEST_BEFORE_INSTALL 1]     # Add test step executed before install step<br />
-    [TEST_AFTER_INSTALL 1]      # Add test step executed after install step<br />
-    [TEST_COMMAND cmd&#8230;]       # Command to drive test<br />
-#&#8211; Output logging &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br />
-    [LOG_DOWNLOAD 1]            # Wrap download in script to log output<br />
-    [LOG_UPDATE 1]              # Wrap update in script to log output<br />
-    [LOG_CONFIGURE 1]           # Wrap configure in script to log output<br />
-    [LOG_BUILD 1]               # Wrap build in script to log output<br />
-    [LOG_TEST 1]                # Wrap test in script to log output<br />
-    [LOG_INSTALL 1]             # Wrap install in script to log output<br />
-#&#8211; Custom targets &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br />
-    [STEP_TARGETS st1 st2 &#8230;]  # Generate custom targets for these steps<br />
+<p>  ExternalProject_Add(&lt;name&gt;    # Name for custom target<br/>
+    [DEPENDS projects&#8230;]       # Targets on which the project depends<br/>
+    [PREFIX dir]                # Root dir for entire project<br/>
+    [LIST_SEPARATOR sep]        # Sep to be replaced by ; in cmd lines<br/>
+    [TMP_DIR dir]               # Directory to store temporary files<br/>
+    [STAMP_DIR dir]             # Directory to store step timestamps<br/>
+#&#8211; Download step &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;<br/>
+    [DOWNLOAD_NAME fname]       # File name to store (if not end of URL)<br/>
+    [DOWNLOAD_DIR dir]          # Directory to store downloaded files<br/>
+    [DOWNLOAD_COMMAND cmd&#8230;]   # Command to download source tree<br/>
+    [CVS_REPOSITORY cvsroot]    # CVSROOT of CVS repository<br/>
+    [CVS_MODULE mod]            # Module to checkout from CVS repo<br/>
+    [CVS_TAG tag]               # Tag to checkout from CVS repo<br/>
+    [SVN_REPOSITORY url]        # URL of Subversion repo<br/>
+    [SVN_REVISION rev]          # Revision to checkout from Subversion repo<br/>
+    [SVN_USERNAME john ]        # Username for Subversion checkout and update<br/>
+    [SVN_PASSWORD doe ]         # Password for Subversion checkout and update<br/>
+    [SVN_TRUST_CERT 1 ]         # Trust the Subversion server site certificate<br/>
+    [GIT_REPOSITORY url]        # URL of git repo<br/>
+    [GIT_TAG tag]               # Git branch name, commit id or tag<br/>
+    [HG_REPOSITORY url]         # URL of mercurial repo<br/>
+    [HG_TAG tag]                # Mercurial branch name, commit id or tag<br/>
+    [URL /&#8230;/src.tgz]          # Full path or URL of source<br/>
+    [URL_HASH ALGO=value]       # Hash of file at URL<br/>
+    [URL_MD5 md5]               # Equivalent to URL_HASH MD5=md5<br/>
+    [TLS_VERIFY bool]           # Should certificate for https be checked<br/>
+    [TLS_CAINFO file]           # Path to a certificate authority file<br/>
+    [TIMEOUT seconds]           # Time allowed for file download operations<br/>
+#&#8211; Update / Patch step &#8212; &#8212; &#8212; &#8212; &#8212;<br/>
+    [UPDATE_COMMAND cmd&#8230;]     # Source work-tree update command<br/>
+    [PATCH_COMMAND cmd&#8230;]      # Command to patch downloaded source<br/>
+#&#8211; Configure step &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br/>
+    [SOURCE_DIR dir]            # Source dir to be used for build<br/>
+    [CONFIGURE_COMMAND cmd&#8230;]  # Build tree configuration command<br/>
+    [CMAKE_COMMAND /&#8230;/cmake]  # Specify alternative cmake executable<br/>
+    [CMAKE_GENERATOR gen]       # Specify generator for native build<br/>
+    [CMAKE_GENERATOR_TOOLSET t] # Generator-specific toolset name<br/>
+    [CMAKE_ARGS args&#8230;]        # Arguments to CMake command line<br/>
+    [CMAKE_CACHE_ARGS args&#8230;]  # Initial cache arguments, of the form -Dvar:string=on<br/>
+#&#8211; Build step &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br/>
+    [BINARY_DIR dir]            # Specify build dir location<br/>
+    [BUILD_COMMAND cmd&#8230;]      # Command to drive the native build<br/>
+    [BUILD_IN_SOURCE 1]         # Use source dir for build dir<br/>
+#&#8211; Install step &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br/>
+    [INSTALL_DIR dir]           # Installation prefix<br/>
+    [INSTALL_COMMAND cmd&#8230;]    # Command to drive install after build<br/>
+#&#8211; Test step &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;<br/>
+    [TEST_BEFORE_INSTALL 1]     # Add test step executed before install step<br/>
+    [TEST_AFTER_INSTALL 1]      # Add test step executed after install step<br/>
+    [TEST_COMMAND cmd&#8230;]       # Command to drive test<br/>
+#&#8211; Output logging &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br/>
+    [LOG_DOWNLOAD 1]            # Wrap download in script to log output<br/>
+    [LOG_UPDATE 1]              # Wrap update in script to log output<br/>
+    [LOG_CONFIGURE 1]           # Wrap configure in script to log output<br/>
+    [LOG_BUILD 1]               # Wrap build in script to log output<br/>
+    [LOG_TEST 1]                # Wrap test in script to log output<br/>
+    [LOG_INSTALL 1]             # Wrap install in script to log output<br/>
+#&#8211; Custom targets &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br/>
+    [STEP_TARGETS st1 st2 &#8230;]  # Generate custom targets for these steps<br/>
     )</p>
 <p> The *_DIR options specify directories for the project, with default directories computed as follows. If the PREFIX option is given to ExternalProject_Add() or the EP_PREFIX directory property is set, then an external project is built and installed under the specified prefix: </p>
 <pre>
@@ -1744,15 +1744,15 @@ include(CMakeDetermineVSServicePack)<br />
 <p> If no PREFIX, EP_PREFIX, or EP_BASE is specified then the default is to set PREFIX to &quot;&lt;name&gt;-prefix&quot;. Relative paths are interpreted with respect to the build directory corresponding to the source directory in which ExternalProject_Add is invoked. </p>
 <p> If SOURCE_DIR is explicitly set to an existing directory the project will be built from it. Otherwise a download step must be specified using one of the DOWNLOAD_COMMAND, CVS_*, SVN_*, or URL options. The URL option may refer locally to a directory or source tarball, or refer to a remote tarball (e.g. <a rel="nofollow" href="http://.../src.tgz">http://&#8230;/src.tgz</a>). </p>
 <p> The &#8216;ExternalProject_Add_Step&#8217; function adds a custom step to an external project: </p>
-<p>  ExternalProject_Add_Step(&lt;name&gt; &lt;step&gt; # Names of project and custom step<br />
-    [COMMAND cmd&#8230;]        # Command line invoked by this step<br />
-    [COMMENT &#8220;text&#8230;&#8221;]     # Text printed when step executes<br />
-    [DEPENDEES steps&#8230;]    # Steps on which this step depends<br />
-    [DEPENDERS steps&#8230;]    # Steps that depend on this step<br />
-    [DEPENDS files&#8230;]      # Files on which this step depends<br />
-    [ALWAYS 1]              # No stamp file, step always runs<br />
-    [WORKING_DIRECTORY dir] # Working directory for command<br />
-    [LOG 1]                 # Wrap step in script to log output<br />
+<p>  ExternalProject_Add_Step(&lt;name&gt; &lt;step&gt; # Names of project and custom step<br/>
+    [COMMAND cmd&#8230;]        # Command line invoked by this step<br/>
+    [COMMENT &#8220;text&#8230;&#8221;]     # Text printed when step executes<br/>
+    [DEPENDEES steps&#8230;]    # Steps on which this step depends<br/>
+    [DEPENDERS steps&#8230;]    # Steps that depend on this step<br/>
+    [DEPENDS files&#8230;]      # Files on which this step depends<br/>
+    [ALWAYS 1]              # No stamp file, step always runs<br/>
+    [WORKING_DIRECTORY dir] # Working directory for command<br/>
+    [LOG 1]                 # Wrap step in script to log output<br/>
     )</p>
 <p> The command line, comment, and working directory of every standard and custom step is processed to replace tokens &lt;SOURCE_DIR&gt;, &lt;BINARY_DIR&gt;, &lt;INSTALL_DIR&gt;, and &lt;TMP_DIR&gt; with corresponding property values. </p>
 <p> Any builtin step that specifies a &quot;&lt;step&gt;_COMMAND cmd&#8230;&quot; or custom step that specifies a &quot;COMMAND cmd&#8230;&quot; may specify additional command lines using the form &quot;COMMAND cmd&#8230;&quot;. At build time the commands will be executed in order and aborted if any one fails. For example: </p>
@@ -1788,14 +1788,14 @@ include(CMakeDetermineVSServicePack)<br />
        * Enables macros in MyWordProcessor
     Foo , Foo provides cool stuff.
 </pre>
-<p>    FEATURE_SUMMARY( [FILENAME &lt;file&gt;]<br />
-                     [APPEND]<br />
-                     [VAR &lt;variable_name&gt;]<br />
-                     [INCLUDE_QUIET_PACKAGES]<br />
-                     [FATAL_ON_MISSING_REQUIRED_PACKAGES]<br />
-                     [DESCRIPTION &#8220;Found packages:&#8221;]<br />
-                     WHAT (ALL | PACKAGES_FOUND | PACKAGES_NOT_FOUND<br />
-                          | ENABLED_FEATURES | DISABLED_FEATURES]<br />
+<p>    FEATURE_SUMMARY( [FILENAME &lt;file&gt;]<br/>
+                     [APPEND]<br/>
+                     [VAR &lt;variable_name&gt;]<br/>
+                     [INCLUDE_QUIET_PACKAGES]<br/>
+                     [FATAL_ON_MISSING_REQUIRED_PACKAGES]<br/>
+                     [DESCRIPTION &#8220;Found packages:&#8221;]<br/>
+                     WHAT (ALL | PACKAGES_FOUND | PACKAGES_NOT_FOUND<br/>
+                          | ENABLED_FEATURES | DISABLED_FEATURES]<br/>
                    )</p>
 <p> The FEATURE_SUMMARY() macro can be used to print information about enabled or disabled packages or features of a project. By default, only the names of the features/packages will be printed and their required version when one was specified. Use SET_PACKAGE_PROPERTIES() to add more useful information, like e.g. a download URL for the respective package or their purpose in the project. </p>
 <p> The WHAT option is the only mandatory option. Here you specify what information will be printed: </p>
@@ -1828,9 +1828,9 @@ include(CMakeDetermineVSServicePack)<br />
                    VAR enabledFeaturesText)
    message(STATUS &quot;${enabledFeaturesText}&quot;)
 </pre>
-<p>SET_PACKAGE_PROPERTIES(&lt;name&gt; PROPERTIES[URL&lt;url&gt;]<br />
-                                        [DESCRIPTION&lt;description&gt;]<br />
-                                        [TYPE(RUNTIME | OPTIONAL | RECOMMENDED | REQUIRED)]<br />
+<p>SET_PACKAGE_PROPERTIES(&lt;name&gt; PROPERTIES[URL&lt;url&gt;]<br/>
+                                        [DESCRIPTION&lt;description&gt;]<br/>
+                                        [TYPE(RUNTIME | OPTIONAL | RECOMMENDED | REQUIRED)]<br/>
                                         [PURPOSE&lt;purpose&gt;])</p>
 <p> Use this macro to set up information about the named package, which can then be displayed via FEATURE_SUMMARY(). This can be done either directly in the Find-module or in the project which uses the module after the find_package() call. The features for which information can be set are added automatically by the find_package() command. </p>
 <p> URL: this should be the homepage of the package, or something similar. Ideally this is set already directly in the Find-module. </p>
@@ -1916,9 +1916,9 @@ include(CMakeDetermineVSServicePack)<br />
 <dd> Find Armadillo </dd>
 <p> Find the Armadillo C++ library </p>
 <p> Using Armadillo: </p>
-<p>find_package(Armadillo REQUIRED)<br />
-    include_directories(${ARMADILLO_INCLUDE_DIRS})<br />
-        add_executable(foo foo.cc)<br />
+<p>find_package(Armadillo REQUIRED)<br/>
+    include_directories(${ARMADILLO_INCLUDE_DIRS})<br/>
+        add_executable(foo foo.cc)<br/>
             target_link_libraries(foo ${ARMADILLO_LIBRARIES})</p>
 <p> This module sets the following variables: </p>
 <pre>
@@ -1941,38 +1941,38 @@ include(CMakeDetermineVSServicePack)<br />
 </pre>
 <p> The minimum required version of bison can be specified using the standard CMake syntax, e.g. find_package(BISON 2.1.3) </p>
 <p> If bison is found, the module defines the macros: </p>
-<p>BISON_TARGET(&lt;Name&gt;&lt;YaccInput&gt;&lt;CodeOutput&gt;[VERBOSE&lt;file&gt;]<br />
+<p>BISON_TARGET(&lt;Name&gt;&lt;YaccInput&gt;&lt;CodeOutput&gt;[VERBOSE&lt;file&gt;]<br/>
                                           [COMPILE_FLAGS&lt;string&gt;])</p>
 <p> which will create a custom rule to generate a parser. &lt;YaccInput&gt; is the path to a yacc file. &lt;CodeOutput&gt; is the name of the source file generated by bison. A header file is also be generated, and contains the token list. If COMPILE_FLAGS option is specified, the next parameter is added in the bison command line. if VERBOSE option is specified, &lt;file&gt; is created and contains verbose descriptions of the grammar and parser. The macro defines a set of variables: </p>
-<p>  BISON_${Name}_DEFINED &#8211; true is the macro ran successfully<br />
-  BISON_${Name}_INPUT &#8211; The input source file, an alias for &lt;YaccInput&gt;<br />
-  BISON_${Name}_OUTPUT_SOURCE &#8211; The source file generated by bison<br />
-  BISON_${Name}_OUTPUT_HEADER &#8211; The header file generated by bison<br />
-  BISON_${Name}_OUTPUTS &#8211; The sources files generated by bison<br />
+<p>  BISON_${Name}_DEFINED &#8211; true is the macro ran successfully<br/>
+  BISON_${Name}_INPUT &#8211; The input source file, an alias for &lt;YaccInput&gt;<br/>
+  BISON_${Name}_OUTPUT_SOURCE &#8211; The source file generated by bison<br/>
+  BISON_${Name}_OUTPUT_HEADER &#8211; The header file generated by bison<br/>
+  BISON_${Name}_OUTPUTS &#8211; The sources files generated by bison<br/>
   BISON_${Name}_COMPILE_FLAGS &#8211; Options used in the bison command line</p>
-<p>== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==<br />
+<p>== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==<br/>
     Example:</p>
-<p>find_package(BISON)<br />
-        BISON_TARGET(MyParser parser.y ${CMAKE_CURRENT_BINARY_DIR} / parser.cpp)<br />
-            add_executable(Foo main.cpp ${BISON_MyParser_OUTPUTS}) == ==<br />
+<p>find_package(BISON)<br/>
+        BISON_TARGET(MyParser parser.y ${CMAKE_CURRENT_BINARY_DIR} / parser.cpp)<br/>
+            add_executable(Foo main.cpp ${BISON_MyParser_OUTPUTS}) == ==<br/>
     == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==</p>
 <dt><code>FindBLAS</code></dt>
 <dd> Find BLAS library </dd>
 <p> This module finds an installed fortran library that implements the BLAS linear-algebra interface (see <a rel="nofollow" href="http://www.netlib.org/blas/">http://www.netlib.org/blas/</a>). The list of libraries searched for is taken from the autoconf macro file, acx_blas.m4 (distributed at <a href="http://ac-archive.sourceforge.net/ac-archive/acx_blas.html">http://ac-archive.sourceforge.net/ac-archive/acx_blas.html</a>). </p>
 <p> This module sets the following variables: </p>
-<p>  BLAS_FOUND &#8211; set to true if a library implementing the BLAS interface<br />
-    is found<br />
-  BLAS_LINKER_FLAGS &#8211; uncached list of required linker flags (excluding -l<br />
-    and -L).<br />
-  BLAS_LIBRARIES &#8211; uncached list of libraries (using full path name) to<br />
-    link against to use BLAS<br />
-  BLAS95_LIBRARIES &#8211; uncached list of libraries (using full path name)<br />
-    to link against to use BLAS95 interface<br />
-  BLAS95_FOUND &#8211; set to true if a library implementing the BLAS f95 interface<br />
-    is found<br />
-  BLA_STATIC  if set on this determines what kind of linkage we do (static)<br />
-  BLA_VENDOR  if set checks only the specified vendor, if not set checks<br />
-     all the possibilities<br />
+<p>  BLAS_FOUND &#8211; set to true if a library implementing the BLAS interface<br/>
+    is found<br/>
+  BLAS_LINKER_FLAGS &#8211; uncached list of required linker flags (excluding -l<br/>
+    and -L).<br/>
+  BLAS_LIBRARIES &#8211; uncached list of libraries (using full path name) to<br/>
+    link against to use BLAS<br/>
+  BLAS95_LIBRARIES &#8211; uncached list of libraries (using full path name)<br/>
+    to link against to use BLAS95 interface<br/>
+  BLAS95_FOUND &#8211; set to true if a library implementing the BLAS f95 interface<br/>
+    is found<br/>
+  BLA_STATIC  if set on this determines what kind of linkage we do (static)<br/>
+  BLA_VENDOR  if set checks only the specified vendor, if not set checks<br/>
+     all the possibilities<br/>
   BLA_F95     if set on tries to find the f95 interfaces for BLAS/LAPACK</p>
 <p> C/CXX should be enabled to use Intel mkl </p>
 <dt><code>FindBZip2</code></dt>
@@ -1988,27 +1988,27 @@ include(CMakeDetermineVSServicePack)<br />
 <dt><code>FindBoost</code></dt>
 <dd> Find Boost include dirs and libraries </dd>
 <p> Use this module by invoking find_package with the form: </p>
-<p>  find_package(Boost<br />
-    [version] [EXACT]      # Minimum or EXACT version e.g. 1.36.0<br />
-    [REQUIRED]             # Fail with error if Boost is not found<br />
-    [COMPONENTS &lt;libs&gt;&#8230;] # Boost libraries by their canonical name<br />
+<p>  find_package(Boost<br/>
+    [version] [EXACT]      # Minimum or EXACT version e.g. 1.36.0<br/>
+    [REQUIRED]             # Fail with error if Boost is not found<br/>
+    [COMPONENTS &lt;libs&gt;&#8230;] # Boost libraries by their canonical name<br/>
     )                      # e.g. &#8220;date_time&#8221; for &#8220;libboost_date_time&#8221;</p>
 <p> This module finds headers and requested component libraries OR a CMake package configuration file provided by a &quot;Boost CMake&quot; build. For the latter case skip to the &quot;Boost CMake&quot; section below. For the former case results are reported in variables: </p>
-<p>  Boost_FOUND            &#8211; True if headers and requested libraries were found<br />
-  Boost_INCLUDE_DIRS     &#8211; Boost include directories<br />
-  Boost_LIBRARY_DIRS     &#8211; Link directories for Boost libraries<br />
-  Boost_LIBRARIES        &#8211; Boost component libraries to be linked<br />
-  Boost_&lt;C&gt;_FOUND        &#8211; True if component &lt;C&gt; was found (&lt;C&gt; is upper-case)<br />
-  Boost_&lt;C&gt;_LIBRARY      &#8211; Libraries to link for component &lt;C&gt; (may include<br />
-                           target_link_libraries debug/optimized keywords)<br />
-  Boost_VERSION          &#8211; BOOST_VERSION value from boost/version.hpp<br />
-  Boost_LIB_VERSION      &#8211; Version string appended to library filenames<br />
-  Boost_MAJOR_VERSION    &#8211; Boost major version number (X in X.y.z)<br />
-  Boost_MINOR_VERSION    &#8211; Boost minor version number (Y in x.Y.z)<br />
-  Boost_SUBMINOR_VERSION &#8211; Boost subminor version number (Z in x.y.Z)<br />
-  Boost_LIB_DIAGNOSTIC_DEFINITIONS (Windows)<br />
-                         &#8211; Pass to add_definitions() to have diagnostic<br />
-                           information about Boost&#8217;s automatic linking<br />
+<p>  Boost_FOUND            &#8211; True if headers and requested libraries were found<br/>
+  Boost_INCLUDE_DIRS     &#8211; Boost include directories<br/>
+  Boost_LIBRARY_DIRS     &#8211; Link directories for Boost libraries<br/>
+  Boost_LIBRARIES        &#8211; Boost component libraries to be linked<br/>
+  Boost_&lt;C&gt;_FOUND        &#8211; True if component &lt;C&gt; was found (&lt;C&gt; is upper-case)<br/>
+  Boost_&lt;C&gt;_LIBRARY      &#8211; Libraries to link for component &lt;C&gt; (may include<br/>
+                           target_link_libraries debug/optimized keywords)<br/>
+  Boost_VERSION          &#8211; BOOST_VERSION value from boost/version.hpp<br/>
+  Boost_LIB_VERSION      &#8211; Version string appended to library filenames<br/>
+  Boost_MAJOR_VERSION    &#8211; Boost major version number (X in X.y.z)<br/>
+  Boost_MINOR_VERSION    &#8211; Boost minor version number (Y in x.Y.z)<br/>
+  Boost_SUBMINOR_VERSION &#8211; Boost subminor version number (Z in x.y.Z)<br/>
+  Boost_LIB_DIAGNOSTIC_DEFINITIONS (Windows)<br/>
+                         &#8211; Pass to add_definitions() to have diagnostic<br/>
+                           information about Boost&#8217;s automatic linking<br/>
                            displayed during compilation</p>
 <p> This module reads hints about search locations from variables: </p>
 <pre>
@@ -2032,26 +2032,26 @@ include(CMakeDetermineVSServicePack)<br />
 <p> Users may set these hints or results as cache entries. Projects should not read these entries directly but instead use the above result variables. Note that some hint names start in upper-case &quot;BOOST&quot;. One may specify these as environment variables if they are not specified as CMake variables or cache entries. </p>
 <p> This module first searches for the Boost header files using the above hint variables (excluding BOOST_LIBRARYDIR) and saves the result in Boost_INCLUDE_DIR. Then it searches for requested component libraries using the above hints (excluding BOOST_INCLUDEDIR and Boost_ADDITIONAL_VERSIONS), &quot;lib&quot; directories near Boost_INCLUDE_DIR, and the library name configuration settings below. It saves the library directory in Boost_LIBRARY_DIR and individual library locations in Boost_&lt;C&gt;_LIBRARY_DEBUG and Boost_&lt;C&gt;_LIBRARY_RELEASE. When one changes settings used by previous searches in the same build tree (excluding environment variables) this module discards previous search results affected by the changes and searches again. </p>
 <p> Boost libraries come in many variants encoded in their file name. Users or projects may tell this module which variant to find by setting variables: </p>
-<p>  Boost_USE_MULTITHREADED  &#8211; Set to OFF to use the non-multithreaded<br />
-                             libraries (&#8216;mt&#8217; tag).  Default is ON.<br />
-  Boost_USE_STATIC_LIBS    &#8211; Set to ON to force the use of the static<br />
-                             libraries.  Default is OFF.<br />
-  Boost_USE_STATIC_RUNTIME &#8211; Set to ON or OFF to specify whether to use<br />
-                             libraries linked statically to the C++ runtime<br />
-                             (&#8216;s&#8217; tag).  Default is platform dependent.<br />
-  Boost_USE_DEBUG_PYTHON   &#8211; Set to ON to use libraries compiled with a<br />
-                             debug Python build (&#8216;y&#8217; tag). Default is OFF.<br />
-  Boost_USE_STLPORT        &#8211; Set to ON to use libraries compiled with<br />
-                             STLPort (&#8216;p&#8217; tag).  Default is OFF.<br />
-  Boost_USE_STLPORT_DEPRECATED_NATIVE_IOSTREAMS<br />
-                           &#8211; Set to ON to use libraries compiled with<br />
-                             STLPort deprecated &#8220;native iostreams&#8221;<br />
-                             (&#8216;n&#8217; tag).  Default is OFF.<br />
-  Boost_COMPILER           &#8211; Set to the compiler-specific library suffix<br />
-                             (e.g. &#8220;-gcc43&#8221;).  Default is auto-computed<br />
-                             for the C++ compiler in use.<br />
-  Boost_THREADAPI          &#8211; Suffix for &#8220;thread&#8221; component library name,<br />
-                             such as &#8220;pthread&#8221; or &#8220;win32&#8221;.  Names with<br />
+<p>  Boost_USE_MULTITHREADED  &#8211; Set to OFF to use the non-multithreaded<br/>
+                             libraries (&#8216;mt&#8217; tag).  Default is ON.<br/>
+  Boost_USE_STATIC_LIBS    &#8211; Set to ON to force the use of the static<br/>
+                             libraries.  Default is OFF.<br/>
+  Boost_USE_STATIC_RUNTIME &#8211; Set to ON or OFF to specify whether to use<br/>
+                             libraries linked statically to the C++ runtime<br/>
+                             (&#8216;s&#8217; tag).  Default is platform dependent.<br/>
+  Boost_USE_DEBUG_PYTHON   &#8211; Set to ON to use libraries compiled with a<br/>
+                             debug Python build (&#8216;y&#8217; tag). Default is OFF.<br/>
+  Boost_USE_STLPORT        &#8211; Set to ON to use libraries compiled with<br/>
+                             STLPort (&#8216;p&#8217; tag).  Default is OFF.<br/>
+  Boost_USE_STLPORT_DEPRECATED_NATIVE_IOSTREAMS<br/>
+                           &#8211; Set to ON to use libraries compiled with<br/>
+                             STLPort deprecated &#8220;native iostreams&#8221;<br/>
+                             (&#8216;n&#8217; tag).  Default is OFF.<br/>
+  Boost_COMPILER           &#8211; Set to the compiler-specific library suffix<br/>
+                             (e.g. &#8220;-gcc43&#8221;).  Default is auto-computed<br/>
+                             for the C++ compiler in use.<br/>
+  Boost_THREADAPI          &#8211; Suffix for &#8220;thread&#8221; component library name,<br/>
+                             such as &#8220;pthread&#8221; or &#8220;win32&#8221;.  Names with<br/>
                              and without this suffix will both be tried.</p>
 <p> Other variables one may set to control this module are: </p>
 <pre>
@@ -2075,18 +2075,18 @@ include(CMakeDetermineVSServicePack)<br />
 </pre>
 <p> to ask Boost to report information about automatic linking requests. </p>
 <p> Example to find Boost headers only: </p>
-<p>find_package(Boost 1.36.0) if (Boost_FOUND)<br />
-    include_directories(${Boost_INCLUDE_DIRS})<br />
-        add_executable(foo foo.cc)<br />
+<p>find_package(Boost 1.36.0) if (Boost_FOUND)<br/>
+    include_directories(${Boost_INCLUDE_DIRS})<br/>
+        add_executable(foo foo.cc)<br/>
             endif()</p>
 <p> Example to find Boost headers and some libraries: </p>
-<p>set(Boost_USE_STATIC_LIBS ON)<br />
-    set(Boost_USE_MULTITHREADED ON)<br />
-        set(Boost_USE_STATIC_RUNTIME OFF)<br />
-            find_package(Boost 1.36.0 COMPONENTS date_time filesystem system&#8230;) if (Boost_FOUND)<br />
-                include_directories(${Boost_INCLUDE_DIRS})<br />
-                    add_executable(foo foo.cc)<br />
-                        target_link_libraries(foo ${Boost_LIBRARIES})<br />
+<p>set(Boost_USE_STATIC_LIBS ON)<br/>
+    set(Boost_USE_MULTITHREADED ON)<br/>
+        set(Boost_USE_STATIC_RUNTIME OFF)<br/>
+            find_package(Boost 1.36.0 COMPONENTS date_time filesystem system&#8230;) if (Boost_FOUND)<br/>
+                include_directories(${Boost_INCLUDE_DIRS})<br/>
+                    add_executable(foo foo.cc)<br/>
+                        target_link_libraries(foo ${Boost_LIBRARIES})<br/>
                             endif()</p>
 <p> Boost CMake &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;- </p>
 <p> If Boost was built using the boost-cmake project it provides a package configuration file for use with find_package&#8217;s Config mode. This module looks for the package configuration file called BoostConfig.cmake or boost-config.cmake and stores the result in cache entry &quot;Boost_DIR&quot;. If found, the package configuration file is loaded and this module returns with no further action. See documentation of the Boost CMake package configuration for details on what it provides. </p>
@@ -2139,16 +2139,16 @@ include(CMakeDetermineVSServicePack)<br />
      file in Visual Studio.  Turn OFF if you add the same cuda file to multiple
      targets.
 </pre>
-<p>This allows the user to build the target from the CUDA file; however, bad<br />
-     things can happen if the CUDA source file is added to multiple targets.<br />
-     When performing parallel builds it is possible for the custom build<br />
-     command to be run more than once and in parallel causing cryptic build<br />
-     errors.  VS runs the rules for every source file in the target, and a<br />
-     source can have only one rule no matter how many projects it is added to.<br />
-     When the rule is run from multiple targets race conditions can occur on<br />
-     the generated file.  Eventually everything will get built, but if the user<br />
-     is unaware of this behavior, there may be confusion.  It would be nice if<br />
-     this script could detect the reuse of source files across multiple targets<br />
+<p>This allows the user to build the target from the CUDA file; however, bad<br/>
+     things can happen if the CUDA source file is added to multiple targets.<br/>
+     When performing parallel builds it is possible for the custom build<br/>
+     command to be run more than once and in parallel causing cryptic build<br/>
+     errors.  VS runs the rules for every source file in the target, and a<br/>
+     source can have only one rule no matter how many projects it is added to.<br/>
+     When the rule is run from multiple targets race conditions can occur on<br/>
+     the generated file.  Eventually everything will get built, but if the user<br/>
+     is unaware of this behavior, there may be confusion.  It would be nice if<br/>
+     this script could detect the reuse of source files across multiple targets<br/>
      and turn the option off for the user, but no good solution could be found.</p>
 <pre>
   CUDA_BUILD_CUBIN (Default OFF)
@@ -2156,8 +2156,8 @@ include(CMakeDetermineVSServicePack)<br />
      Device mode. The output is parsed and register, shared memory usage is
      printed during build.
 </pre>
-<p>  CUDA_BUILD_EMULATION (Default OFF for device mode)<br />
-  &#8212; Set to ON for Emulation mode. -D_DEVICEEMU is defined for CUDA C files<br />
+<p>  CUDA_BUILD_EMULATION (Default OFF for device mode)<br/>
+  &#8212; Set to ON for Emulation mode. -D_DEVICEEMU is defined for CUDA C files<br/>
      when CUDA_BUILD_EMULATION is TRUE.</p>
 <pre>
   CUDA_GENERATED_OUTPUT_DIR (Default CMAKE_CURRENT_BINARY_DIR)
@@ -2170,12 +2170,12 @@ include(CMakeDetermineVSServicePack)<br />
   CUDA_HOST_COMPILATION_CPP (Default ON)
   -- Set to OFF for C compilation of host code.
 </pre>
-<p>  CUDA_HOST_COMPILER (Default CMAKE_C_COMPILER, $(VCInstallDir)/bin for VS)<br />
-  &#8211;Set the host compiler to be used by nvcc.Ignored if &#8211; ccbin or<br />
-      &#8211;compiler &#8211; bindir is already present in the CUDA_NVCC_FLAGS or<br />
-      CUDA_NVCC_FLAGS_&lt;CONFIG&gt; variables.For Visual Studio targets<br />
-          $(VCInstallDir) /<br />
-          bin is a special value that expands out to the path when<br />
+<p>  CUDA_HOST_COMPILER (Default CMAKE_C_COMPILER, $(VCInstallDir)/bin for VS)<br/>
+  &#8211;Set the host compiler to be used by nvcc.Ignored if &#8211; ccbin or<br/>
+      &#8211;compiler &#8211; bindir is already present in the CUDA_NVCC_FLAGS or<br/>
+      CUDA_NVCC_FLAGS_&lt;CONFIG&gt; variables.For Visual Studio targets<br/>
+          $(VCInstallDir) /<br/>
+          bin is a special value that expands out to the path when<br/>
           the command is run from withing VS.</p>
 <pre>
   CUDA_NVCC_FLAGS
@@ -2183,15 +2183,15 @@ include(CMakeDetermineVSServicePack)<br />
   -- Additional NVCC command line arguments.  NOTE: multiple arguments must be
      semi-colon delimited (e.g. --compiler-options;-Wall)
 </pre>
-<p>CUDA_PROPAGATE_HOST_FLAGS(Default ON)<br />
-  &#8212; Set to ON to propagate CMAKE_{C,CXX}_FLAGS and their configuration<br />
-     dependent counterparts (e.g. CMAKE_C_FLAGS_DEBUG) automatically to the<br />
-     host compiler through nvcc&#8217;s -Xcompiler flag.  This helps make the<br />
-     generated host code match the rest of the system better.  Sometimes<br />
-     certain flags give nvcc problems, and this will help you turn the flag<br />
-     propagation off.  This does not affect the flags supplied directly to nvcc<br />
-     via CUDA_NVCC_FLAGS or through the OPTION flags specified through<br />
-     CUDA_ADD_LIBRARY, CUDA_ADD_EXECUTABLE, or CUDA_WRAP_SRCS.  Flags used for<br />
+<p>CUDA_PROPAGATE_HOST_FLAGS(Default ON)<br/>
+  &#8212; Set to ON to propagate CMAKE_{C,CXX}_FLAGS and their configuration<br/>
+     dependent counterparts (e.g. CMAKE_C_FLAGS_DEBUG) automatically to the<br/>
+     host compiler through nvcc&#8217;s -Xcompiler flag.  This helps make the<br/>
+     generated host code match the rest of the system better.  Sometimes<br/>
+     certain flags give nvcc problems, and this will help you turn the flag<br/>
+     propagation off.  This does not affect the flags supplied directly to nvcc<br/>
+     via CUDA_NVCC_FLAGS or through the OPTION flags specified through<br/>
+     CUDA_ADD_LIBRARY, CUDA_ADD_EXECUTABLE, or CUDA_WRAP_SRCS.  Flags used for<br/>
      shared library compilation are not affected by this flag.</p>
 <pre>
   CUDA_SEPARABLE_COMPILATION (Default OFF)
@@ -2219,22 +2219,22 @@ include(CMakeDetermineVSServicePack)<br />
   -- Adds the cublas library to the target (can be any target).  Handles
      whether you are in emulation mode or not.
 </pre>
-<p>CUDA_ADD_EXECUTABLE(cuda_target file0 file1&#8230;<br />
-                        [WIN32][MACOSX_BUNDLE][EXCLUDE_FROM_ALL][OPTIONS&#8230;])<br />
-&#8211;Creates an executable &#8220;cuda_target&#8221; which is made up of the files<br />
-      specified.All of the non CUDA C files are compiled using the standard<br />
-          build rules specified by CMAKE and the cuda files are compiled to object<br />
-              files using nvcc and the host compiler.In addition CUDA_INCLUDE_DIRS is<br />
-                  added automatically to<br />
-                  include_directories()<br />
-                      .Some standard CMake target<br />
-  calls can be used on the target after calling this macro(e.g.set_target_properties and target_link_libraries),<br />
-    but setting<br />
-    properties that adjust compilation flags will not affect code compiled by<br />
-    nvcc.Such flags should be modified before calling CUDA_ADD_EXECUTABLE,<br />
+<p>CUDA_ADD_EXECUTABLE(cuda_target file0 file1&#8230;<br/>
+                        [WIN32][MACOSX_BUNDLE][EXCLUDE_FROM_ALL][OPTIONS&#8230;])<br/>
+&#8211;Creates an executable &#8220;cuda_target&#8221; which is made up of the files<br/>
+      specified.All of the non CUDA C files are compiled using the standard<br/>
+          build rules specified by CMAKE and the cuda files are compiled to object<br/>
+              files using nvcc and the host compiler.In addition CUDA_INCLUDE_DIRS is<br/>
+                  added automatically to<br/>
+                  include_directories()<br/>
+                      .Some standard CMake target<br/>
+  calls can be used on the target after calling this macro(e.g.set_target_properties and target_link_libraries),<br/>
+    but setting<br/>
+    properties that adjust compilation flags will not affect code compiled by<br/>
+    nvcc.Such flags should be modified before calling CUDA_ADD_EXECUTABLE,<br/>
     CUDA_ADD_LIBRARY or CUDA_WRAP_SRCS.</p>
-<p>CUDA_ADD_LIBRARY(cuda_target file0 file1&#8230;<br />
-                     [STATIC | SHARED | MODULE][EXCLUDE_FROM_ALL][OPTIONS&#8230;])<br />
+<p>CUDA_ADD_LIBRARY(cuda_target file0 file1&#8230;<br/>
+                     [STATIC | SHARED | MODULE][EXCLUDE_FROM_ALL][OPTIONS&#8230;])<br/>
 &#8211;Same as CUDA_ADD_EXECUTABLE except that a library is created.</p>
 <pre>
   CUDA_BUILD_CLEAN_TARGET()
@@ -2242,10 +2242,10 @@ include(CMakeDetermineVSServicePack)<br />
      generated.  You should make clean after running this target to ensure the
      dependency files get regenerated.
 </pre>
-<p>CUDA_COMPILE(generated_files file0 file1&#8230;[STATIC | SHARED | MODULE]<br />
-                                           [OPTIONS&#8230;])<br />
-&#8211;Returns a list of generated files from the input source files to be used<br />
-        with ADD_LIBRARY or<br />
+<p>CUDA_COMPILE(generated_files file0 file1&#8230;[STATIC | SHARED | MODULE]<br/>
+                                           [OPTIONS&#8230;])<br/>
+&#8211;Returns a list of generated files from the input source files to be used<br/>
+        with ADD_LIBRARY or<br/>
     ADD_EXECUTABLE.</p>
 <pre>
   CUDA_COMPILE_PTX( generated_files file0 file1 ... [OPTIONS ...] )
@@ -2284,9 +2284,9 @@ include(CMakeDetermineVSServicePack)<br />
      specified by CUDA_64_BIT_DEVICE_CODE.  Note that this is a function
      instead of a macro.
 </pre>
-<p>CUDA_WRAP_SRCS(cuda_target format generated_files file0 file1&#8230;<br />
-                   [STATIC | SHARED | MODULE][OPTIONS&#8230;])<br />
-&#8211;This is where all the magic happens.CUDA_ADD_EXECUTABLE,<br />
+<p>CUDA_WRAP_SRCS(cuda_target format generated_files file0 file1&#8230;<br/>
+                   [STATIC | SHARED | MODULE][OPTIONS&#8230;])<br/>
+&#8211;This is where all the magic happens.CUDA_ADD_EXECUTABLE,<br/>
     CUDA_ADD_LIBRARY, CUDA_COMPILE, and CUDA_COMPILE_PTX all call this function under the hood.</p>
 <pre>
      Given the list of files (file0 file1 ... fileN) this macro generates
@@ -2301,10 +2301,10 @@ include(CMakeDetermineVSServicePack)<br />
      options must preceed configuration specific options.  Not all
      configurations need to be specified, only the ones provided will be used.
 </pre>
-<p>OPTIONS &#8211; DFLAG = 2 &#8220;-DFLAG_OTHER=space in flag&#8221; DEBUG &#8211; g<br />
-                                                             RELEASE&#8211; use_fast_math<br />
-                                                                 RELWITHDEBINFO&#8211; use_fast_math;<br />
-&#8211; g<br />
+<p>OPTIONS &#8211; DFLAG = 2 &#8220;-DFLAG_OTHER=space in flag&#8221; DEBUG &#8211; g<br/>
+                                                             RELEASE&#8211; use_fast_math<br/>
+                                                                 RELWITHDEBINFO&#8211; use_fast_math;<br/>
+&#8211; g<br/>
     MINSIZEREL&#8211; use_fast_math</p>
 <pre>
      For certain configurations (namely VS generating object files with
@@ -2352,44 +2352,44 @@ include(CMakeDetermineVSServicePack)<br />
   CUDA_VERSION
   CUDA_VERSION_STRING   -- CUDA_VERSION_MAJOR.CUDA_VERSION_MINOR
 </pre>
-<p>  CUDA_TOOLKIT_ROOT_DIR &#8212; Path to the CUDA Toolkit (defined if not set).<br />
-  CUDA_SDK_ROOT_DIR     &#8212; Path to the CUDA SDK.  Use this to find files in the<br />
-                           SDK.  This script will not directly support finding<br />
-                           specific libraries or headers, as that isn&#8217;t<br />
-                           supported by NVIDIA.  If you want to change<br />
-                           libraries when the path changes see the<br />
-                           FindCUDA.cmake script for an example of how to clear<br />
-                           these variables.  There are also examples of how to<br />
-                           use the CUDA_SDK_ROOT_DIR to locate headers or<br />
-                           libraries, if you so choose (at your own risk).<br />
-  CUDA_INCLUDE_DIRS     &#8212; Include directory for cuda headers.  Added automatically<br />
-                           for CUDA_ADD_EXECUTABLE and CUDA_ADD_LIBRARY.<br />
-  CUDA_LIBRARIES        &#8212; Cuda RT library.<br />
-  CUDA_CUFFT_LIBRARIES  &#8212; Device or emulation library for the Cuda FFT<br />
-                           implementation (alternative to:<br />
-                           CUDA_ADD_CUFFT_TO_TARGET macro)<br />
-  CUDA_CUBLAS_LIBRARIES &#8212; Device or emulation library for the Cuda BLAS<br />
-                           implementation (alterative to:<br />
-                           CUDA_ADD_CUBLAS_TO_TARGET macro).<br />
-  CUDA_cupti_LIBRARY    &#8212; CUDA Profiling Tools Interface library.<br />
-                           Only available for CUDA version 4.0+.<br />
-  CUDA_curand_LIBRARY   &#8212; CUDA Random Number Generation library.<br />
-                           Only available for CUDA version 3.2+.<br />
-  CUDA_cusparse_LIBRARY &#8212; CUDA Sparse Matrix library.<br />
-                           Only available for CUDA version 3.2+.<br />
-  CUDA_npp_LIBRARY      &#8212; NVIDIA Performance Primitives library.<br />
-                           Only available for CUDA version 4.0+.<br />
-  CUDA_nppc_LIBRARY      &#8212; NVIDIA Performance Primitives library (core).<br />
-                           Only available for CUDA version 5.5+.<br />
-  CUDA_nppi_LIBRARY      &#8212; NVIDIA Performance Primitives library (image processing).<br />
-                           Only available for CUDA version 5.5+.<br />
-  CUDA_npps_LIBRARY      &#8212; NVIDIA Performance Primitives library (signal processing).<br />
-                           Only available for CUDA version 5.5+.<br />
-  CUDA_nvcuvenc_LIBRARY &#8212; CUDA Video Encoder library.<br />
-                           Only available for CUDA version 3.2+.<br />
-                           Windows only.<br />
-  CUDA_nvcuvid_LIBRARY  &#8212; CUDA Video Decoder library.<br />
-                           Only available for CUDA version 3.2+.<br />
+<p>  CUDA_TOOLKIT_ROOT_DIR &#8212; Path to the CUDA Toolkit (defined if not set).<br/>
+  CUDA_SDK_ROOT_DIR     &#8212; Path to the CUDA SDK.  Use this to find files in the<br/>
+                           SDK.  This script will not directly support finding<br/>
+                           specific libraries or headers, as that isn&#8217;t<br/>
+                           supported by NVIDIA.  If you want to change<br/>
+                           libraries when the path changes see the<br/>
+                           FindCUDA.cmake script for an example of how to clear<br/>
+                           these variables.  There are also examples of how to<br/>
+                           use the CUDA_SDK_ROOT_DIR to locate headers or<br/>
+                           libraries, if you so choose (at your own risk).<br/>
+  CUDA_INCLUDE_DIRS     &#8212; Include directory for cuda headers.  Added automatically<br/>
+                           for CUDA_ADD_EXECUTABLE and CUDA_ADD_LIBRARY.<br/>
+  CUDA_LIBRARIES        &#8212; Cuda RT library.<br/>
+  CUDA_CUFFT_LIBRARIES  &#8212; Device or emulation library for the Cuda FFT<br/>
+                           implementation (alternative to:<br/>
+                           CUDA_ADD_CUFFT_TO_TARGET macro)<br/>
+  CUDA_CUBLAS_LIBRARIES &#8212; Device or emulation library for the Cuda BLAS<br/>
+                           implementation (alterative to:<br/>
+                           CUDA_ADD_CUBLAS_TO_TARGET macro).<br/>
+  CUDA_cupti_LIBRARY    &#8212; CUDA Profiling Tools Interface library.<br/>
+                           Only available for CUDA version 4.0+.<br/>
+  CUDA_curand_LIBRARY   &#8212; CUDA Random Number Generation library.<br/>
+                           Only available for CUDA version 3.2+.<br/>
+  CUDA_cusparse_LIBRARY &#8212; CUDA Sparse Matrix library.<br/>
+                           Only available for CUDA version 3.2+.<br/>
+  CUDA_npp_LIBRARY      &#8212; NVIDIA Performance Primitives library.<br/>
+                           Only available for CUDA version 4.0+.<br/>
+  CUDA_nppc_LIBRARY      &#8212; NVIDIA Performance Primitives library (core).<br/>
+                           Only available for CUDA version 5.5+.<br/>
+  CUDA_nppi_LIBRARY      &#8212; NVIDIA Performance Primitives library (image processing).<br/>
+                           Only available for CUDA version 5.5+.<br/>
+  CUDA_npps_LIBRARY      &#8212; NVIDIA Performance Primitives library (signal processing).<br/>
+                           Only available for CUDA version 5.5+.<br/>
+  CUDA_nvcuvenc_LIBRARY &#8212; CUDA Video Encoder library.<br/>
+                           Only available for CUDA version 3.2+.<br/>
+                           Windows only.<br/>
+  CUDA_nvcuvid_LIBRARY  &#8212; CUDA Video Decoder library.<br/>
+                           Only available for CUDA version 3.2+.<br/>
                            Windows only.</p>
 <pre>
   James Bigler, NVIDIA Corp (nvidia.com - jbigler)
@@ -2423,8 +2423,8 @@ include(CMakeDetermineVSServicePack)<br />
    CVS_FOUND - true if the command line client was found
 </pre>
 <p> Example usage: </p>
-<p>find_package(CVS) if (CVS_FOUND)<br />
-    message(&#8220;CVS found: ${CVS_EXECUTABLE}&#8221;)<br />
+<p>find_package(CVS) if (CVS_FOUND)<br/>
+    message(&#8220;CVS found: ${CVS_EXECUTABLE}&#8221;)<br/>
         endif()</p>
 </dd><dt><code>FindCoin3D</code></dt>
 <dd> Find Coin3D (Open Inventor) </dd>
@@ -2448,23 +2448,23 @@ include(CMakeDetermineVSServicePack)<br />
 </pre>
 <dt><code>FindCurses</code></dt>
 <dd> Find the curses include file and library </dd>
-<p>  CURSES_FOUND &#8211; system has Curses<br />
-  CURSES_INCLUDE_DIR &#8211; the Curses include directory<br />
-  CURSES_LIBRARIES &#8211; The libraries needed to use Curses<br />
-  CURSES_HAVE_CURSES_H &#8211; true if curses.h is available<br />
-  CURSES_HAVE_NCURSES_H &#8211; true if ncurses.h is available<br />
-  CURSES_HAVE_NCURSES_NCURSES_H &#8211; true if ncurses/ncurses.h is available<br />
-  CURSES_HAVE_NCURSES_CURSES_H &#8211; true if ncurses/curses.h is available<br />
+<p>  CURSES_FOUND &#8211; system has Curses<br/>
+  CURSES_INCLUDE_DIR &#8211; the Curses include directory<br/>
+  CURSES_LIBRARIES &#8211; The libraries needed to use Curses<br/>
+  CURSES_HAVE_CURSES_H &#8211; true if curses.h is available<br/>
+  CURSES_HAVE_NCURSES_H &#8211; true if ncurses.h is available<br/>
+  CURSES_HAVE_NCURSES_NCURSES_H &#8211; true if ncurses/ncurses.h is available<br/>
+  CURSES_HAVE_NCURSES_CURSES_H &#8211; true if ncurses/curses.h is available<br/>
   CURSES_LIBRARY &#8211; set for backwards compatibility with 2.4 CMake</p>
 <p> Set CURSES_NEED_NCURSES to TRUE before the find_package() command if NCurses functionality is required. </p>
 <dt><code>FindCxxTest</code></dt>
 <dd> Find CxxTest </dd>
 <p> Find the CxxTest suite and declare a helper macro for creating unit tests and integrating them with CTest. For more details on CxxTest see <a rel="nofollow" href="http://cxxtest.tigris.org">http://cxxtest.tigris.org</a> </p>
 <p> INPUT Variables </p>
-<p>   CXXTEST_USE_PYTHON [deprecated since 1.3]<br />
-       Only used in the case both Python &amp; Perl<br />
-       are detected on the system to control<br />
-       which CxxTest code generator is used.<br />
+<p>   CXXTEST_USE_PYTHON [deprecated since 1.3]<br/>
+       Only used in the case both Python &amp; Perl<br/>
+       are detected on the system to control<br/>
+       which CxxTest code generator is used.<br/>
        Valid only for CxxTest version 3.</p>
 <pre>
        NOTE: In older versions of this Find Module,
@@ -2507,7 +2507,7 @@ include(CMakeDetermineVSServicePack)<br />
                                    CxxTest::TestSuite's to be included in
                                    this runner
 </pre>
-<p>#== == == == == == ==<br />
+<p>#== == == == == == ==<br/>
 Example Usage:</p>
 <pre>
            find_package(CxxTest)
@@ -2527,17 +2527,17 @@ Example Usage:</p>
                  binary tree from &quot;foo_test.h&quot; in the current source directory.
               2. Create an executable and test called unittest_foo.
 </pre>
-<p>#== == == == == == =<br />
+<p>#== == == == == == =<br/>
 Example foo_test.h:</p>
 <p>#include &lt;cxxtest/TestSuite.h&gt;</p>
-<p>class MyTestSuite : public CxxTest::TestSuite<br />
-{<br />
-  public:<br />
-    void testAddition(void)<br />
-    {<br />
-        TS_ASSERT(1 + 1 &gt; 1);<br />
-        TS_ASSERT_EQUALS(1 + 1, 2);<br />
-    }<br />
+<p>class MyTestSuite : public CxxTest::TestSuite<br/>
+{<br/>
+  public:<br/>
+    void testAddition(void)<br/>
+    {<br/>
+        TS_ASSERT(1 + 1 &gt; 1);<br/>
+        TS_ASSERT_EQUALS(1 + 1, 2);<br/>
+    }<br/>
 };</p>
 <dt><code>FindCygwin</code></dt>
 <dd> this module looks for Cygwin </dd>
@@ -2550,21 +2550,21 @@ Example foo_test.h:</p>
 <dd>
 <p> This module locates the developer&#8217;s image library. <a rel="nofollow" href="http://openil.sourceforge.net/">http://openil.sourceforge.net/</a> </p>
 <p> This module sets: </p>
-<p>   IL_LIBRARIES &#8211;   the name of the IL library. These include the full path to<br />
-                    the core DevIL library. This one has to be linked into the<br />
-                    application.<br />
-   ILU_LIBRARIES &#8211;  the name of the ILU library. Again, the full path. This<br />
-                    library is for filters and effects, not actual loading. It<br />
-                    doesn&#8217;t have to be linked if the functionality it provides<br />
-                    is not used.<br />
-   ILUT_LIBRARIES &#8211; the name of the ILUT library. Full path. This part of the<br />
-                    library interfaces with OpenGL. It is not strictly needed<br />
-                    in applications.<br />
-   IL_INCLUDE_DIR &#8211; where to find the il.h, ilu.h and ilut.h files.<br />
-   IL_FOUND &#8211;       this is set to TRUE if all the above variables were set.<br />
-                    This will be set to false if ILU or ILUT are not found,<br />
-                    even if they are not needed. In most systems, if one<br />
-                    library is found all the others are as well. That&#8217;s the<br />
+<p>   IL_LIBRARIES &#8211;   the name of the IL library. These include the full path to<br/>
+                    the core DevIL library. This one has to be linked into the<br/>
+                    application.<br/>
+   ILU_LIBRARIES &#8211;  the name of the ILU library. Again, the full path. This<br/>
+                    library is for filters and effects, not actual loading. It<br/>
+                    doesn&#8217;t have to be linked if the functionality it provides<br/>
+                    is not used.<br/>
+   ILUT_LIBRARIES &#8211; the name of the ILUT library. Full path. This part of the<br/>
+                    library interfaces with OpenGL. It is not strictly needed<br/>
+                    in applications.<br/>
+   IL_INCLUDE_DIR &#8211; where to find the il.h, ilu.h and ilut.h files.<br/>
+   IL_FOUND &#8211;       this is set to TRUE if all the above variables were set.<br/>
+                    This will be set to false if ILU or ILUT are not found,<br/>
+                    even if they are not needed. In most systems, if one<br/>
+                    library is found all the others are as well. That&#8217;s the<br/>
                     way the DevIL developers release it.</p>
 </dd><dt><code>FindDoxygen</code></dt>
 <dd> This module looks for Doxygen and the path to Graphviz&#8217;s dot </dd>
@@ -2609,31 +2609,31 @@ Example foo_test.h:</p>
   FLEX_TARGET(Name FlexInput FlexOutput [COMPILE_FLAGS &lt;string&gt;])
 </pre>
 <p> which creates a custom command to generate the &lt;FlexOutput&gt; file from the &lt;FlexInput&gt; file. If COMPILE_FLAGS option is specified, the next parameter is added to the flex command line. Name is an alias used to get details of this custom command. Indeed the macro defines the following variables: </p>
-<p>  FLEX_${Name}_DEFINED &#8211; true is the macro ran successfully<br />
-  FLEX_${Name}_OUTPUTS &#8211; the source file generated by the custom rule, an<br />
-  alias for FlexOutput<br />
-  FLEX_${Name}_INPUT &#8211; the flex source file, an alias for $<br />
-  {<br />
-      FlexInput<br />
+<p>  FLEX_${Name}_DEFINED &#8211; true is the macro ran successfully<br/>
+  FLEX_${Name}_OUTPUTS &#8211; the source file generated by the custom rule, an<br/>
+  alias for FlexOutput<br/>
+  FLEX_${Name}_INPUT &#8211; the flex source file, an alias for $<br/>
+  {<br/>
+      FlexInput<br/>
   }</p>
 <p> Flex scanners oftenly use tokens defined by Bison: the code generated by Flex depends of the header generated by Bison. This module also defines a macro: </p>
 <pre>
   ADD_FLEX_BISON_DEPENDENCY(FlexTarget BisonTarget)
 </pre>
 <p> which adds the required dependency between a scanner and a parser where &lt;FlexTarget&gt; and &lt;BisonTarget&gt; are the first parameters of respectively FLEX_TARGET and BISON_TARGET macros. </p>
-<p>== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==<br />
+<p>== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==<br/>
     Example:</p>
 <pre>
    find_package(BISON)
    find_package(FLEX)
 </pre>
-<p>BISON_TARGET(MyParser parser.y ${CMAKE_CURRENT_BINARY_DIR} / parser.cpp)<br />
-FLEX_TARGET(MyScanner lexer.l ${CMAKE_CURRENT_BINARY_DIR} / lexer.cpp)<br />
+<p>BISON_TARGET(MyParser parser.y ${CMAKE_CURRENT_BINARY_DIR} / parser.cpp)<br/>
+FLEX_TARGET(MyScanner lexer.l ${CMAKE_CURRENT_BINARY_DIR} / lexer.cpp)<br/>
 ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)</p>
-<p>include_directories(${CMAKE_CURRENT_BINARY_DIR})<br />
-        add_executable(Foo<br />
-                           Foo.cc<br />
-                               ${BISON_MyParser_OUTPUTS} ${FLEX_MyScanner_OUTPUTS}) == ==<br />
+<p>include_directories(${CMAKE_CURRENT_BINARY_DIR})<br/>
+        add_executable(Foo<br/>
+                           Foo.cc<br/>
+                               ${BISON_MyParser_OUTPUTS} ${FLEX_MyScanner_OUTPUTS}) == ==<br/>
     == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==</p>
 <dt><code>FindFLTK</code></dt>
 <dd> Find the native FLTK includes and library </dd>
@@ -2798,10 +2798,10 @@ ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)</p>
    Search for GTK/GTKMM 2.8 or later
        find_package(GTK2 2.8 COMPONENTS gtk gtkmm)
 </pre>
-<p>if (GTK2_FOUND)<br />
-include_directories(${GTK2_INCLUDE_DIRS})<br />
-    add_executable(mygui mygui.cc)<br />
-        target_link_libraries(mygui ${GTK2_LIBRARIES})<br />
+<p>if (GTK2_FOUND)<br/>
+include_directories(${GTK2_INCLUDE_DIRS})<br/>
+    add_executable(mygui mygui.cc)<br/>
+        target_link_libraries(mygui ${GTK2_LIBRARIES})<br/>
             endif()</p>
 <dt><code>FindGTest</code></dt>
 <dd> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; </dd>
@@ -2849,8 +2849,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
     ARGN =       A list of source files to search for tests &amp; test
                  fixtures.
 </pre>
-<p>Example : set(FooTestArgs&#8211; foo 1 &#8211;bar 2)<br />
-              add_executable(FooTest FooUnitTest.cc)<br />
+<p>Example : set(FooTestArgs&#8211; foo 1 &#8211;bar 2)<br/>
+              add_executable(FooTest FooUnitTest.cc)<br/>
                   GTEST_ADD_TESTS(FooTest &#8220;${FooTestArgs}&#8221; FooUnitTest.cc)</p>
 <dt><code>FindGettext</code></dt>
 <dd> Find GNU gettext tools </dd>
@@ -2893,8 +2893,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
    GIT_VERSION_STRING - the version of git found (since CMake 2.8.8)
 </pre>
 <p> Example usage: </p>
-<p>find_package(Git) if (GIT_FOUND)<br />
-    message(&#8220;git found: ${GIT_EXECUTABLE}&#8221;)<br />
+<p>find_package(Git) if (GIT_FOUND)<br/>
+    message(&#8220;git found: ${GIT_EXECUTABLE}&#8221;)<br/>
         endif()</p>
 </dd><dt><code>FindGnuTLS</code></dt>
 <dd> Try to find the GNU Transport Layer Security library (gnutls) </dd>
@@ -2922,22 +2922,22 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <p> To provide the module with a hint about where to find your HDF5 installation, you can set the environment variable HDF5_ROOT. The Find module will then look in this path when searching for HDF5 executables, paths, and libraries. </p>
 <p> In addition to finding the includes and libraries required to compile an HDF5 client application, this module also makes an effort to find tools that come with the HDF5 distribution that may be useful for regression testing. </p>
 <p> This module will define the following variables: </p>
-<p>  HDF5_INCLUDE_DIRS &#8211; Location of the hdf5 includes<br />
-  HDF5_INCLUDE_DIR &#8211; Location of the hdf5 includes (deprecated)<br />
-  HDF5_DEFINITIONS &#8211; Required compiler definitions for HDF5<br />
-  HDF5_C_LIBRARIES &#8211; Required libraries for the HDF5 C bindings.<br />
-  HDF5_CXX_LIBRARIES &#8211; Required libraries for the HDF5 C++ bindings<br />
-  HDF5_Fortran_LIBRARIES &#8211; Required libraries for the HDF5 Fortran bindings<br />
-  HDF5_HL_LIBRARIES &#8211; Required libraries for the HDF5 high level API<br />
-  HDF5_Fortran_HL_LIBRARIES &#8211; Required libraries for the high level Fortran<br />
-                              bindings.<br />
-  HDF5_LIBRARIES &#8211; Required libraries for all requested bindings<br />
-  HDF5_FOUND &#8211; true if HDF5 was found on the system<br />
-  HDF5_LIBRARY_DIRS &#8211; the full set of library directories<br />
-  HDF5_IS_PARALLEL &#8211; Whether or not HDF5 was found with parallel IO support<br />
-  HDF5_C_COMPILER_EXECUTABLE &#8211; the path to the HDF5 C wrapper compiler<br />
-  HDF5_CXX_COMPILER_EXECUTABLE &#8211; the path to the HDF5 C++ wrapper compiler<br />
-  HDF5_Fortran_COMPILER_EXECUTABLE &#8211; the path to the HDF5 Fortran wrapper compiler<br />
+<p>  HDF5_INCLUDE_DIRS &#8211; Location of the hdf5 includes<br/>
+  HDF5_INCLUDE_DIR &#8211; Location of the hdf5 includes (deprecated)<br/>
+  HDF5_DEFINITIONS &#8211; Required compiler definitions for HDF5<br/>
+  HDF5_C_LIBRARIES &#8211; Required libraries for the HDF5 C bindings.<br/>
+  HDF5_CXX_LIBRARIES &#8211; Required libraries for the HDF5 C++ bindings<br/>
+  HDF5_Fortran_LIBRARIES &#8211; Required libraries for the HDF5 Fortran bindings<br/>
+  HDF5_HL_LIBRARIES &#8211; Required libraries for the HDF5 high level API<br/>
+  HDF5_Fortran_HL_LIBRARIES &#8211; Required libraries for the high level Fortran<br/>
+                              bindings.<br/>
+  HDF5_LIBRARIES &#8211; Required libraries for all requested bindings<br/>
+  HDF5_FOUND &#8211; true if HDF5 was found on the system<br/>
+  HDF5_LIBRARY_DIRS &#8211; the full set of library directories<br/>
+  HDF5_IS_PARALLEL &#8211; Whether or not HDF5 was found with parallel IO support<br/>
+  HDF5_C_COMPILER_EXECUTABLE &#8211; the path to the HDF5 C wrapper compiler<br/>
+  HDF5_CXX_COMPILER_EXECUTABLE &#8211; the path to the HDF5 C++ wrapper compiler<br/>
+  HDF5_Fortran_COMPILER_EXECUTABLE &#8211; the path to the HDF5 Fortran wrapper compiler<br/>
   HDF5_DIFF_EXECUTABLE &#8211; the path to the HDF5 dataset comparison tool</p>
 <dt><code>FindHSPELL</code></dt>
 <dd> Try to find Hspell </dd>
@@ -2970,8 +2970,8 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
    HG_VERSION_STRING - the version of mercurial found
 </pre>
 <p> Example usage: </p>
-<p>find_package(Hg) if (HG_FOUND)<br />
-    message(&#8220;hg found: ${HG_EXECUTABLE}&#8221;)<br />
+<p>find_package(Hg) if (HG_FOUND)<br/>
+    message(&#8220;hg found: ${HG_EXECUTABLE}&#8221;)<br/>
         endif()</p>
 </dd><dt><code>FindITK</code></dt>
 <dd> Find an ITK installation or build tree. </dd>
@@ -3029,12 +3029,12 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <dt><code>FindJNI</code></dt>
 <dd> Find JNI java libraries. </dd>
 <p> This module finds if Java is installed and determines where the include files and libraries are. It also determines what the name of the library is. This code sets the following variables: </p>
-<p>JNI_INCLUDE_DIRS = the include dirs to use<br />
-    JNI_LIBRARIES = the libraries to use<br />
-        JNI_FOUND = TRUE if JNI headers and libraries were found.JAVA_AWT_LIBRARY = the path to the jawt library<br />
-            JAVA_JVM_LIBRARY = the path to the jvm library<br />
-                JAVA_INCLUDE_PATH = the include path to jni.h<br />
-                                        JAVA_INCLUDE_PATH2 = the include path to jni_md.h<br />
+<p>JNI_INCLUDE_DIRS = the include dirs to use<br/>
+    JNI_LIBRARIES = the libraries to use<br/>
+        JNI_FOUND = TRUE if JNI headers and libraries were found.JAVA_AWT_LIBRARY = the path to the jawt library<br/>
+            JAVA_JVM_LIBRARY = the path to the jvm library<br/>
+                JAVA_INCLUDE_PATH = the include path to jni.h<br/>
+                                        JAVA_INCLUDE_PATH2 = the include path to jni_md.h<br/>
                                                                  JAVA_AWT_INCLUDE_PATH = the include path to jawt.h</p>
 <dt><code>FindJPEG</code></dt>
 <dd> Find JPEG </dd>
@@ -3092,14 +3092,14 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <dt><code>FindKDE3</code></dt>
 <dd> Find the KDE3 include and library dirs, KDE preprocessors and define a some macros </dd>
 <p> This module defines the following variables: </p>
-<p>  KDE3_DEFINITIONS         &#8211; compiler definitions required for compiling KDE software<br />
-  KDE3_INCLUDE_DIR         &#8211; the KDE include directory<br />
-  KDE3_INCLUDE_DIRS        &#8211; the KDE and the Qt include directory, for use with include_directories()<br />
-  KDE3_LIB_DIR             &#8211; the directory where the KDE libraries are installed, for use with link_directories()<br />
-  QT_AND_KDECORE_LIBS      &#8211; this contains both the Qt and the kdecore library<br />
-  KDE3_DCOPIDL_EXECUTABLE  &#8211; the dcopidl executable<br />
-  KDE3_DCOPIDL2CPP_EXECUTABLE &#8211; the dcopidl2cpp executable<br />
-  KDE3_KCFGC_EXECUTABLE    &#8211; the kconfig_compiler executable<br />
+<p>  KDE3_DEFINITIONS         &#8211; compiler definitions required for compiling KDE software<br/>
+  KDE3_INCLUDE_DIR         &#8211; the KDE include directory<br/>
+  KDE3_INCLUDE_DIRS        &#8211; the KDE and the Qt include directory, for use with include_directories()<br/>
+  KDE3_LIB_DIR             &#8211; the directory where the KDE libraries are installed, for use with link_directories()<br/>
+  QT_AND_KDECORE_LIBS      &#8211; this contains both the Qt and the kdecore library<br/>
+  KDE3_DCOPIDL_EXECUTABLE  &#8211; the dcopidl executable<br/>
+  KDE3_DCOPIDL2CPP_EXECUTABLE &#8211; the dcopidl2cpp executable<br/>
+  KDE3_KCFGC_EXECUTABLE    &#8211; the kconfig_compiler executable<br/>
   KDE3_FOUND               &#8211; set to TRUE if all of the above has been found</p>
 <p> The following user adjustable options are provided: </p>
 <pre>
@@ -3171,19 +3171,19 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <p> This module finds an installed fortran library that implements the LAPACK linear-algebra interface (see <a rel="nofollow" href="http://www.netlib.org/lapack/">http://www.netlib.org/lapack/</a>). </p>
 <p> The approach follows that taken for the autoconf macro file, acx_lapack.m4 (distributed at <a rel="nofollow" href="http://ac-archive.sourceforge.net/ac-archive/acx_lapack.html">http://ac-archive.sourceforge.net/ac-archive/acx_lapack.html</a>). </p>
 <p> This module sets the following variables: </p>
-<p>  LAPACK_FOUND &#8211; set to true if a library implementing the LAPACK interface<br />
-    is found<br />
-  LAPACK_LINKER_FLAGS &#8211; uncached list of required linker flags (excluding -l<br />
-    and -L).<br />
-  LAPACK_LIBRARIES &#8211; uncached list of libraries (using full path name) to<br />
-    link against to use LAPACK<br />
-  LAPACK95_LIBRARIES &#8211; uncached list of libraries (using full path name) to<br />
-    link against to use LAPACK95<br />
-  LAPACK95_FOUND &#8211; set to true if a library implementing the LAPACK f95<br />
-    interface is found<br />
-  BLA_STATIC  if set on this determines what kind of linkage we do (static)<br />
-  BLA_VENDOR  if set checks only the specified vendor, if not set checks<br />
-     all the possibilities<br />
+<p>  LAPACK_FOUND &#8211; set to true if a library implementing the LAPACK interface<br/>
+    is found<br/>
+  LAPACK_LINKER_FLAGS &#8211; uncached list of required linker flags (excluding -l<br/>
+    and -L).<br/>
+  LAPACK_LIBRARIES &#8211; uncached list of libraries (using full path name) to<br/>
+    link against to use LAPACK<br/>
+  LAPACK95_LIBRARIES &#8211; uncached list of libraries (using full path name) to<br/>
+    link against to use LAPACK95<br/>
+  LAPACK95_FOUND &#8211; set to true if a library implementing the LAPACK f95<br/>
+    interface is found<br/>
+  BLA_STATIC  if set on this determines what kind of linkage we do (static)<br/>
+  BLA_VENDOR  if set checks only the specified vendor, if not set checks<br/>
+     all the possibilities<br/>
   BLA_F95     if set on tries to find the f95 interfaces for BLAS/LAPACK</p>
 <dt><code>FindLATEX</code></dt>
 <dd> Find Latex </dd>
@@ -3209,7 +3209,7 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <dt><code>FindLibLZMA</code></dt>
 <dd> Find LibLZMA </dd>
 <p> Find LibLZMA headers and library </p>
-<p>LIBLZMA_FOUND &#8211; True if liblzma is found.LIBLZMA_INCLUDE_DIRS &#8211; Directory where liblzma headers are located.LIBLZMA_LIBRARIES &#8211; Lzma libraries to link against.LIBLZMA_HAS_AUTO_DECODER &#8211; True if lzma_auto_decoder () is found(required).LIBLZMA_HAS_EASY_ENCODER &#8211; True if lzma_easy_encoder () is found(required).LIBLZMA_HAS_LZMA_PRESET &#8211; True if lzma_lzma_preset () is found(required).LIBLZMA_VERSION_MAJOR &#8211; The major version of lzma LIBLZMA_VERSION_MINOR &#8211; The minor version of lzma LIBLZMA_VERSION_PATCH &#8211; The patch version of lzma LIBLZMA_VERSION_STRING &#8211; version number as a string(ex<br />
+<p>LIBLZMA_FOUND &#8211; True if liblzma is found.LIBLZMA_INCLUDE_DIRS &#8211; Directory where liblzma headers are located.LIBLZMA_LIBRARIES &#8211; Lzma libraries to link against.LIBLZMA_HAS_AUTO_DECODER &#8211; True if lzma_auto_decoder () is found(required).LIBLZMA_HAS_EASY_ENCODER &#8211; True if lzma_easy_encoder () is found(required).LIBLZMA_HAS_LZMA_PRESET &#8211; True if lzma_lzma_preset () is found(required).LIBLZMA_VERSION_MAJOR &#8211; The major version of lzma LIBLZMA_VERSION_MINOR &#8211; The minor version of lzma LIBLZMA_VERSION_PATCH &#8211; The patch version of lzma LIBLZMA_VERSION_STRING &#8211; version number as a string(ex<br/>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         : &#8220;5.0.3&#8221;)</p>
 <dt><code>FindLibXml2</code></dt>
 <dd> Try to find the LibXml2 xml processing library </dd>
@@ -3302,11 +3302,11 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <p> The Message Passing Interface (MPI) is a library used to write high-performance distributed-memory parallel applications, and is typically deployed on a cluster. MPI is a standard interface (defined by the MPI forum) for which many implementations are available. All of them have somewhat different include paths, libraries to link against, etc., and this module tries to smooth out those differences. </p>
 <p> === Variables === </p>
 <p> This module will set the following variables per language in your project, where &lt;lang&gt; is one of C, CXX, or Fortran: </p>
-<p>   MPI_&lt;lang&gt;_FOUND           TRUE if FindMPI found MPI flags for &lt;lang&gt;<br />
-   MPI_&lt;lang&gt;_COMPILER        MPI Compiler wrapper for &lt;lang&gt;<br />
-   MPI_&lt;lang&gt;_COMPILE_FLAGS   Compilation flags for MPI programs<br />
-   MPI_&lt;lang&gt;_INCLUDE_PATH    Include path(s) for MPI header<br />
-   MPI_&lt;lang&gt;_LINK_FLAGS      Linking flags for MPI programs<br />
+<p>   MPI_&lt;lang&gt;_FOUND           TRUE if FindMPI found MPI flags for &lt;lang&gt;<br/>
+   MPI_&lt;lang&gt;_COMPILER        MPI Compiler wrapper for &lt;lang&gt;<br/>
+   MPI_&lt;lang&gt;_COMPILE_FLAGS   Compilation flags for MPI programs<br/>
+   MPI_&lt;lang&gt;_INCLUDE_PATH    Include path(s) for MPI header<br/>
+   MPI_&lt;lang&gt;_LINK_FLAGS      Linking flags for MPI programs<br/>
    MPI_&lt;lang&gt;_LIBRARIES       All libraries to link MPI programs against</p>
 <p> Additionally, FindMPI sets the following variables for running MPI programs from the command line: </p>
 <pre>
@@ -3331,7 +3331,7 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 </pre>
 <p> When configuration is successful, MPI_&lt;lang&gt;_COMPILER will be set to the compiler wrapper for &lt;lang&gt;, if it was found. MPI_&lt;lang&gt;_FOUND and other variables above will be set if any MPI implementation was found for &lt;lang&gt;, regardless of whether a compiler was found. </p>
 <p> When using MPIEXEC to execute MPI applications, you should typically use all of the MPIEXEC flags as follows: </p>
-<p>${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} PROCS<br />
+<p>${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} PROCS<br/>
     ${MPIEXEC_PREFLAGS} EXECUTABLE ${MPIEXEC_POSTFLAGS} ARGS</p>
 <p> where PROCS is the number of processors on which to execute the program, EXECUTABLE is the MPI program, and ARGS are the arguments to pass to the MPI program. </p>
 <p> === Backward Compatibility === </p>
@@ -3493,11 +3493,11 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 </pre>
 <p> If the variables &lt;var1&gt; to &lt;varN&gt; are all valid, then &lt;UPPERCASED_NAME&gt;_FOUND will be set to TRUE. If DEFAULT_MSG is given as second argument, then the function will generate itself useful success and error messages. You can also supply a custom error message for the failure case. This is not recommended. </p>
 <p> The second mode is more powerful and also supports version checking: </p>
-<p>FIND_PACKAGE_HANDLE_STANDARD_ARGS(NAME[FOUND_VAR&lt;resultVar&gt;]<br />
-                                      [REQUIRED_VARS&lt;var1&gt;&#8230;&lt;varN&gt;]<br />
-                                      [VERSION_VAR&lt;versionvar&gt;]<br />
-                                      [HANDLE_COMPONENTS]<br />
-                                      [CONFIG_MODE]<br />
+<p>FIND_PACKAGE_HANDLE_STANDARD_ARGS(NAME[FOUND_VAR&lt;resultVar&gt;]<br/>
+                                      [REQUIRED_VARS&lt;var1&gt;&#8230;&lt;varN&gt;]<br/>
+                                      [VERSION_VAR&lt;versionvar&gt;]<br/>
+                                      [HANDLE_COMPONENTS]<br/>
+                                      [CONFIG_MODE]<br/>
                                       [FAIL_MESSAGE &#8220;Custom failure message&#8221;])</p>
 <p> In this mode, the name of the result-variable can be set either to either &lt;UPPERCASED_NAME&gt;_FOUND or &lt;OriginalCase_Name&gt;_FOUND using the FOUND_VAR option. Other names for the result-variable are not allowed. So for a Find-module named FindFooBar.cmake, the two possible names are FooBar_FOUND and FOOBAR_FOUND. It is recommended to use the original case version. If the FOUND_VAR option is not used, the default is &lt;UPPERCASED_NAME&gt;_FOUND. </p>
 <p> As in the simple mode, if &lt;var1&gt; through &lt;varN&gt; are all valid, &lt;packagename&gt;_FOUND will be set to TRUE. After REQUIRED_VARS the variables which are required for this package are listed. Following VERSION_VAR the name of the variable can be specified which holds the version of the package which has been found. If this is done, this version will be checked against the (potentially) specified required version used in the find_package() call. The EXACT keyword is also handled. The default messages include information about the required version and the version which has been actually found, both if the version is ok or not. If the package supports components, use the HANDLE_COMPONENTS option to enable handling them. In this case, find_package_handle_standard_args() will report which components have been found and which are missing, and the &lt;packagename&gt;_FOUND variable will be set to FALSE if any of the required components (i.e. not the ones listed after OPTIONAL_COMPONENTS) are missing. Use the option CONFIG_MODE if your FindXXX.cmake module is a wrapper for a find_package(&#8230; NO_MODULE) call. In this case VERSION_VAR will be set to &lt;NAME&gt;_VERSION and the macro will automatically check whether the Config module was found. Via FAIL_MESSAGE a custom failure message can be specified, if this is not used, the default message will be displayed. </p>
@@ -3524,10 +3524,10 @@ include_directories(${GTK2_INCLUDE_DIRS})<br />
 <p> FIND_PACKAGE_MESSAGE(&lt;name&gt; &quot;message for user&quot; &quot;find result details&quot;) </p>
 <p> This macro is intended to be used in FindXXX.cmake modules files. It will print a message once for each unique find result. This is useful for telling the user where a package was found. The first argument specifies the name (XXX) of the package. The second argument specifies the message to display. The third argument lists details about the find result so that if they change the message will be displayed again. The macro also obeys the QUIET argument to the find_package command. </p>
 <p> Example: </p>
-<p>if (X11_FOUND)<br />
-    FIND_PACKAGE_MESSAGE(X11 &#8220;Found X11: ${X11_X11_LIB}&#8221;<br />
-                             &#8220;[${X11_X11_LIB}][${X11_INCLUDE_DIR}]&#8221;)<br />
-else<br />
+<p>if (X11_FOUND)<br/>
+    FIND_PACKAGE_MESSAGE(X11 &#8220;Found X11: ${X11_X11_LIB}&#8221;<br/>
+                             &#8220;[${X11_X11_LIB}][${X11_INCLUDE_DIR}]&#8221;)<br/>
+else<br/>
     ()&#8230; endif()</p>
 </dd><dt><code>FindPerl</code></dt>
 <dd> Find perl </dd>
@@ -3575,9 +3575,9 @@ else<br />
 <dt><code>FindPkgConfig</code></dt>
 <dd> a pkg-config module for CMake </dd>
 <p> Usage: </p>
-<p>   pkg_check_modules(&lt;PREFIX&gt; [REQUIRED] [QUIET] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br />
+<p>   pkg_check_modules(&lt;PREFIX&gt; [REQUIRED] [QUIET] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br/>
      checks for all the given modules</p>
-<p>   pkg_search_module(&lt;PREFIX&gt; [REQUIRED] [QUIET] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br />
+<p>   pkg_search_module(&lt;PREFIX&gt; [REQUIRED] [QUIET] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br/>
      checks for given modules and uses the first working one</p>
 <p> When the &#8216;REQUIRED&#8217; argument was set, macros will fail with an error when module(s) could not be found </p>
 <p> When the &#8216;QUIET&#8217; argument is set, no status messages will be printed. </p>
@@ -3599,7 +3599,7 @@ else<br />
    &lt;XPREFIX&gt;_CFLAGS         ... all required cflags
    &lt;XPREFIX&gt;_CFLAGS_OTHER   ... the other compiler flags
 </pre>
-<p>   &lt;XPREFIX&gt; = &lt;PREFIX&gt;        for common case<br />
+<p>   &lt;XPREFIX&gt; = &lt;PREFIX&gt;        for common case<br/>
    &lt;XPREFIX&gt; = &lt;PREFIX&gt;_STATIC for static linking</p>
 <p> There are some special variables whose prefix depends on the count of given modules. When there is only one module, &lt;PREFIX&gt; stays unchanged. When there are multiple modules, the prefix will be changed to &lt;PREFIX&gt;_&lt;MODNAME&gt;: </p>
 <pre>
@@ -3629,13 +3629,13 @@ else<br />
        FOO_glib-2.0_VERSION=2.10.3
        FOO_gtk+-2.0_VERSION=2.8.20
 </pre>
-<p>pkg_check_modules(XRENDER REQUIRED xrender)<br />
-    defines e.g. : XRENDER_LIBRARIES = Xrender;<br />
-X11<br />
-    XRENDER_STATIC_LIBRARIES = Xrender;<br />
-X11;<br />
-pthread;<br />
-Xau;<br />
+<p>pkg_check_modules(XRENDER REQUIRED xrender)<br/>
+    defines e.g. : XRENDER_LIBRARIES = Xrender;<br/>
+X11<br/>
+    XRENDER_STATIC_LIBRARIES = Xrender;<br/>
+X11;<br/>
+pthread;<br/>
+Xau;<br/>
 Xdmcp</p>
 <pre>
    pkg_search_module (BAR     libxml-2.0 libxml2 libxml&gt;=2)
@@ -3695,15 +3695,15 @@ Xdmcp</p>
    PROTOBUF_LITE_LIBRARY - The protobuf lite library
    PROTOBUF_LITE_LIBRARY_DEBUG - The protobuf lite library (debug)
 </pre>
-<p>== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==<br />
+<p>== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==<br/>
     Example:</p>
 <pre>
    find_package(Protobuf REQUIRED)
    include_directories(${PROTOBUF_INCLUDE_DIRS})
 </pre>
-<p>include_directories(${CMAKE_CURRENT_BINARY_DIR})<br />
-    PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS foo.proto)<br />
-        add_executable(bar bar.cc ${PROTO_SRCS} ${PROTO_HDRS})<br />
+<p>include_directories(${CMAKE_CURRENT_BINARY_DIR})<br/>
+    PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS foo.proto)<br/>
+        add_executable(bar bar.cc ${PROTO_SRCS} ${PROTO_HDRS})<br/>
             target_link_libraries(bar ${PROTOBUF_LIBRARIES})</p>
 <p> NOTE: You may need to link against pthreads, depending </p>
 <pre>
@@ -3791,9 +3791,9 @@ Xdmcp</p>
 <dd> Find Qt 4 </dd>
 <p> This module can be used to find Qt4. The most important issue is that the Qt4 qmake is available via the system path. This qmake is then used to detect basically everything else. This module defines a number of key variables and macros. The variable QT_USE_FILE is set which is the path to a CMake file that can be included to compile Qt 4 applications and libraries. It sets up the compilation environment for include directories, preprocessor defines and populates a QT_LIBRARIES variable. </p>
 <p> Typical usage could be something like: </p>
-<p>find_package(Qt4 4.4.3 REQUIRED QtCore QtGui QtXml)<br />
-    include(${QT_USE_FILE})<br />
-        add_executable(myexe main.cpp)<br />
+<p>find_package(Qt4 4.4.3 REQUIRED QtCore QtGui QtXml)<br/>
+    include(${QT_USE_FILE})<br/>
+        add_executable(myexe main.cpp)<br/>
             target_link_libraries(myexe ${QT_LIBRARIES})</p>
 <p> The minimum required version can be specified using the standard find_package()-syntax (see example above). For compatibility with older versions of FindQt4.cmake it is also possible to set the variable QT_MIN_VERSION to the minimum required version of Qt4 before the find_package(Qt4) command. If both are used, the version used in the find_package() command overrides the one from QT_MIN_VERSION. </p>
 <p> When using the components argument, QT_USE_QT* variables are automatically set for the QT_USE_FILE to pick up. If one wishes to manually set them, the available ones to set include: </p>
@@ -3877,18 +3877,18 @@ Xdmcp</p>
         Use this if for some reason QT4_WRAP_CPP() isn't appropriate, e.g.
         because you need a custom filename for the moc file or something similar.
 </pre>
-<p>  macro QT4_AUTOMOC(sourcefile1 sourcefile2 &#8230; )<br />
-        The qt4_automoc macro is obsolete.  Use the CMAKE_AUTOMOC feature instead.<br />
-        This macro is still experimental.<br />
-        It can be used to have moc automatically handled.<br />
-        So if you have the files foo.h and foo.cpp, and in foo.h a<br />
-        a class uses the Q_OBJECT macro, moc has to run on it. If you don&#8217;t<br />
-        want to use QT4_WRAP_CPP() (which is reliable and mature), you can insert<br />
-#include &#8220;foo.moc&#8221;<br />
-        in foo.cpp and then give foo.cpp as argument to QT4_AUTOMOC(). This will the<br />
-        scan all listed files at cmake-time for such included moc files and if it finds<br />
-        them cause a rule to be generated to run moc at build time on the<br />
-        accompanying header file foo.h.<br />
+<p>  macro QT4_AUTOMOC(sourcefile1 sourcefile2 &#8230; )<br/>
+        The qt4_automoc macro is obsolete.  Use the CMAKE_AUTOMOC feature instead.<br/>
+        This macro is still experimental.<br/>
+        It can be used to have moc automatically handled.<br/>
+        So if you have the files foo.h and foo.cpp, and in foo.h a<br/>
+        a class uses the Q_OBJECT macro, moc has to run on it. If you don&#8217;t<br/>
+        want to use QT4_WRAP_CPP() (which is reliable and mature), you can insert<br/>
+#include &#8220;foo.moc&#8221;<br/>
+        in foo.cpp and then give foo.cpp as argument to QT4_AUTOMOC(). This will the<br/>
+        scan all listed files at cmake-time for such included moc files and if it finds<br/>
+        them cause a rule to be generated to run moc at build time on the<br/>
+        accompanying header file foo.h.<br/>
         If a source file has the SKIP_AUTOMOC property set it will be ignored by this macro.</p>
 <pre>
         You should have a look on the AUTOMOC property for targets to achieve the same results.
@@ -3921,14 +3921,14 @@ Xdmcp</p>
 <pre>
         The source file properties described for QT4_ADD_DBUS_INTERFACE also apply here.
 </pre>
-<p>macro QT4_ADD_DBUS_ADAPTOR(outfiles xmlfile parentheader parentclassname[basename][classname])<br />
-    create a dbus adaptor(header and implementation file) from the xml file<br />
-    describing the interface,<br />
-    and add it to the list of sources.The adaptor<br />
-        forwards the calls to a parent class,<br />
-    defined in parentheader and named<br />
-    parentclassname.The name of the generated files will be&lt;basename&gt; adaptor.{cpp, h} where basename defaults to the basename of the xml file.If&lt;classname&gt; is provided,<br />
-    then it will be used as the classname of the<br />
+<p>macro QT4_ADD_DBUS_ADAPTOR(outfiles xmlfile parentheader parentclassname[basename][classname])<br/>
+    create a dbus adaptor(header and implementation file) from the xml file<br/>
+    describing the interface,<br/>
+    and add it to the list of sources.The adaptor<br/>
+        forwards the calls to a parent class,<br/>
+    defined in parentheader and named<br/>
+    parentclassname.The name of the generated files will be&lt;basename&gt; adaptor.{cpp, h} where basename defaults to the basename of the xml file.If&lt;classname&gt; is provided,<br/>
+    then it will be used as the classname of the<br/>
     adaptor itself.</p>
 <pre>
   macro QT4_GENERATE_DBUS_INTERFACE( header [interfacename] OPTIONS ...)
@@ -3986,12 +3986,12 @@ Xdmcp</p>
   QT_VERSION_MINOR The minor version of Qt found.
   QT_VERSION_PATCH The patch version of Qt found.
 </pre>
-<p>QT_EDITION Set to the edition of Qt(i.e.DesktopLight)<br />
-        QT_EDITION_DESKTOPLIGHT True if QT_EDITION<br />
-    == DesktopLight<br />
-       QT_QTCORE_FOUND True if QtCore was found.QT_QTGUI_FOUND True if QtGui was found.QT_QT3SUPPORT_FOUND True if Qt3Support was found.QT_QTASSISTANT_FOUND True if QtAssistant was found.QT_QTASSISTANTCLIENT_FOUND True if QtAssistantClient was found.QT_QAXCONTAINER_FOUND True if QAxContainer was found(Windows only)<br />
-           .QT_QAXSERVER_FOUND True if QAxServer was found(Windows only)<br />
-           .QT_QTDBUS_FOUND True if QtDBus was found.QT_QTDESIGNER_FOUND True if QtDesigner was found.QT_QTDESIGNERCOMPONENTS True if QtDesignerComponents was found.QT_QTHELP_FOUND True if QtHelp was found.QT_QTMOTIF_FOUND True if QtMotif was found.QT_QTMULTIMEDIA_FOUND True if QtMultimedia was found(since Qt 4.6.0)<br />
+<p>QT_EDITION Set to the edition of Qt(i.e.DesktopLight)<br/>
+        QT_EDITION_DESKTOPLIGHT True if QT_EDITION<br/>
+    == DesktopLight<br/>
+       QT_QTCORE_FOUND True if QtCore was found.QT_QTGUI_FOUND True if QtGui was found.QT_QT3SUPPORT_FOUND True if Qt3Support was found.QT_QTASSISTANT_FOUND True if QtAssistant was found.QT_QTASSISTANTCLIENT_FOUND True if QtAssistantClient was found.QT_QAXCONTAINER_FOUND True if QAxContainer was found(Windows only)<br/>
+           .QT_QAXSERVER_FOUND True if QAxServer was found(Windows only)<br/>
+           .QT_QTDBUS_FOUND True if QtDBus was found.QT_QTDESIGNER_FOUND True if QtDesigner was found.QT_QTDESIGNERCOMPONENTS True if QtDesignerComponents was found.QT_QTHELP_FOUND True if QtHelp was found.QT_QTMOTIF_FOUND True if QtMotif was found.QT_QTMULTIMEDIA_FOUND True if QtMultimedia was found(since Qt 4.6.0)<br/>
            .QT_QTNETWORK_FOUND True if QtNetwork was found.QT_QTNSPLUGIN_FOUND True if QtNsPlugin was found.QT_QTOPENGL_FOUND True if QtOpenGL was found.QT_QTSQL_FOUND True if QtSql was found.QT_QTSVG_FOUND True if QtSvg was found.QT_QTSCRIPT_FOUND True if QtScript was found.QT_QTSCRIPTTOOLS_FOUND True if QtScriptTools was found.QT_QTTEST_FOUND True if QtTest was found.QT_QTUITOOLS_FOUND True if QtUiTools was found.QT_QTWEBKIT_FOUND True if QtWebKit was found.QT_QTXML_FOUND True if QtXml was found.QT_QTXMLPATTERNS_FOUND True if QtXmlPatterns was found.QT_PHONON_FOUND True if phonon was found.QT_QTDECLARATIVE_FOUND True if QtDeclarative was found.</p>
 <pre>
   QT_MAC_USE_COCOA    For Mac OS X, its whether Cocoa or Carbon is used.
@@ -4017,9 +4017,9 @@ Xdmcp</p>
   Include directories for the Qt modules are listed here.
   You do not need to use these variables if you include QT_USE_FILE.
 </pre>
-<p>QT_INCLUDE_DIR Path to &#8220;include&#8221; of Qt4<br />
-    QT_QT3SUPPORT_INCLUDE_DIR Path to &#8220;include/Qt3Support&#8221; QT_QTASSISTANT_INCLUDE_DIR Path to &#8220;include/QtAssistant&#8221; QT_QTASSISTANTCLIENT_INCLUDE_DIR Path to &#8220;include/QtAssistant&#8221; QT_QAXCONTAINER_INCLUDE_DIR Path to &#8220;include/ActiveQt&#8221;(Windows only)<br />
-        QT_QAXSERVER_INCLUDE_DIR Path to &#8220;include/ActiveQt&#8221;(Windows only)<br />
+<p>QT_INCLUDE_DIR Path to &#8220;include&#8221; of Qt4<br/>
+    QT_QT3SUPPORT_INCLUDE_DIR Path to &#8220;include/Qt3Support&#8221; QT_QTASSISTANT_INCLUDE_DIR Path to &#8220;include/QtAssistant&#8221; QT_QTASSISTANTCLIENT_INCLUDE_DIR Path to &#8220;include/QtAssistant&#8221; QT_QAXCONTAINER_INCLUDE_DIR Path to &#8220;include/ActiveQt&#8221;(Windows only)<br/>
+        QT_QAXSERVER_INCLUDE_DIR Path to &#8220;include/ActiveQt&#8221;(Windows only)<br/>
             QT_QTCORE_INCLUDE_DIR Path to &#8220;include/QtCore&#8221; QT_QTDBUS_INCLUDE_DIR Path to &#8220;include/QtDBus&#8221; QT_QTDESIGNER_INCLUDE_DIR Path to &#8220;include/QtDesigner&#8221; QT_QTDESIGNERCOMPONENTS_INCLUDE_DIR Path to &#8220;include/QtDesigner&#8221; QT_QTGUI_INCLUDE_DIR Path to &#8220;include/QtGui&#8221; QT_QTHELP_INCLUDE_DIR Path to &#8220;include/QtHelp&#8221; QT_QTMOTIF_INCLUDE_DIR Path to &#8220;include/QtMotif&#8221; QT_QTMULTIMEDIA_INCLUDE_DIR Path to &#8220;include/QtMultimedia&#8221; QT_QTNETWORK_INCLUDE_DIR Path to &#8220;include/QtNetwork&#8221; QT_QTNSPLUGIN_INCLUDE_DIR Path to &#8220;include/QtNsPlugin&#8221; QT_QTOPENGL_INCLUDE_DIR Path to &#8220;include/QtOpenGL&#8221; QT_QTSCRIPT_INCLUDE_DIR Path to &#8220;include/QtScript&#8221; QT_QTSQL_INCLUDE_DIR Path to &#8220;include/QtSql&#8221; QT_QTSVG_INCLUDE_DIR Path to &#8220;include/QtSvg&#8221; QT_QTTEST_INCLUDE_DIR Path to &#8220;include/QtTest&#8221; QT_QTWEBKIT_INCLUDE_DIR Path to &#8220;include/QtWebKit&#8221; QT_QTXML_INCLUDE_DIR Path to &#8220;include/QtXml&#8221; QT_QTXMLPATTERNS_INCLUDE_DIR Path to &#8220;include/QtXmlPatterns&#8221; QT_PHONON_INCLUDE_DIR Path to &#8220;include/phonon&#8221; QT_QTSCRIPTTOOLS_INCLUDE_DIR Path to &#8220;include/QtScriptTools&#8221; QT_QTDECLARATIVE_INCLUDE_DIR Path to &#8220;include/QtDeclarative&#8221;</p>
 <pre>
   QT_BINARY_DIR               Path to &quot;bin&quot; of Qt4
@@ -4287,7 +4287,7 @@ Xdmcp</p>
   SQUISH_CLIENT_EXECUTABLE_FOUND  Was the client executable found?
 </pre>
 <p> It provides the function squish_v4_add_test() for adding a squish test to cmake using Squish 4.x: </p>
-<p>squish_v4_add_test(cmakeTestName AUT targetName SUITE suiteName TEST squishTestName<br />
+<p>squish_v4_add_test(cmakeTestName AUT targetName SUITE suiteName TEST squishTestName<br/>
                        [SETTINGSGROUP group][PRE_COMMAND command][POST_COMMAND command])</p>
 <p> The arguments have the following meaning: </p>
 <pre>
@@ -4305,9 +4305,9 @@ Xdmcp</p>
    PRE_COMMAND command:  if specified, the given command will be executed before starting the squish test.
    POST_COMMAND command: same as PRE_COMMAND, but after the squish test has been executed.
 </pre>
-<p>enable_testing()<br />
-    find_package(Squish 4.0) if (SQUISH_FOUND)<br />
-        squish_v4_add_test(myTestName AUT myApp SUITE ${CMAKE_SOURCE_DIR} / tests / mySuite TEST someSquishTest SETTINGSGROUP myGroup)<br />
+<p>enable_testing()<br/>
+    find_package(Squish 4.0) if (SQUISH_FOUND)<br/>
+        squish_v4_add_test(myTestName AUT myApp SUITE ${CMAKE_SOURCE_DIR} / tests / mySuite TEST someSquishTest SETTINGSGROUP myGroup)<br/>
             endif()</p>
 <p> For users of Squish version 3.x the macro squish_v3_add_test() is provided: </p>
 <pre>
@@ -4355,11 +4355,11 @@ Xdmcp</p>
   &lt;var-prefix&gt;_LAST_CHANGED_LOG - last log of base revision
 </pre>
 <p> Example usage: </p>
-<p>find_package(Subversion) if (SUBVERSION_FOUND)<br />
-    Subversion_WC_INFO(${PROJECT_SOURCE_DIR} Project)<br />
-        message(&#8220;Current revision is ${Project_WC_REVISION}&#8221;)<br />
-            Subversion_WC_LOG(${PROJECT_SOURCE_DIR} Project)<br />
-                message(&#8220;Last changed log is ${Project_LAST_CHANGED_LOG}&#8221;)<br />
+<p>find_package(Subversion) if (SUBVERSION_FOUND)<br/>
+    Subversion_WC_INFO(${PROJECT_SOURCE_DIR} Project)<br/>
+        message(&#8220;Current revision is ${Project_WC_REVISION}&#8221;)<br/>
+            Subversion_WC_LOG(${PROJECT_SOURCE_DIR} Project)<br/>
+                message(&#8220;Last changed log is ${Project_LAST_CHANGED_LOG}&#8221;)<br/>
                     endif()</p>
 <dt><code>FindTCL</code></dt>
 <dd> TK_INTERNAL_PATH was removed. </dd>
@@ -4768,48 +4768,48 @@ Xdmcp</p>
   set(wxWidgets_CONFIG_OPTIONS --toolkit=base --prefix=/usr)
 </pre>
 <p> The following are set after the configuration is done for both windows and unix style: </p>
-<p>  wxWidgets_FOUND            &#8211; Set to TRUE if wxWidgets was found.<br />
-  wxWidgets_INCLUDE_DIRS     &#8211; Include directories for WIN32<br />
-                               i.e., where to find &#8220;wx/wx.h&#8221; and<br />
-                               &#8220;wx/setup.h&#8221;; possibly empty for unices.<br />
-  wxWidgets_LIBRARIES        &#8211; Path to the wxWidgets libraries.<br />
-  wxWidgets_LIBRARY_DIRS     &#8211; compile time link dirs, useful for<br />
-                               rpath on UNIX. Typically an empty string<br />
-                               in WIN32 environment.<br />
-  wxWidgets_DEFINITIONS      &#8211; Contains defines required to compile/link<br />
-                               against WX, e.g. WXUSINGDLL<br />
-  wxWidgets_DEFINITIONS_DEBUG- Contains defines required to compile/link<br />
-                               against WX debug builds, e.g. __WXDEBUG__<br />
-  wxWidgets_CXX_FLAGS        &#8211; Include dirs and compiler flags for<br />
-                               unices, empty on WIN32. Essentially<br />
-                               &#8220;`wx-config &#8211;cxxflags`&#8221;.<br />
+<p>  wxWidgets_FOUND            &#8211; Set to TRUE if wxWidgets was found.<br/>
+  wxWidgets_INCLUDE_DIRS     &#8211; Include directories for WIN32<br/>
+                               i.e., where to find &#8220;wx/wx.h&#8221; and<br/>
+                               &#8220;wx/setup.h&#8221;; possibly empty for unices.<br/>
+  wxWidgets_LIBRARIES        &#8211; Path to the wxWidgets libraries.<br/>
+  wxWidgets_LIBRARY_DIRS     &#8211; compile time link dirs, useful for<br/>
+                               rpath on UNIX. Typically an empty string<br/>
+                               in WIN32 environment.<br/>
+  wxWidgets_DEFINITIONS      &#8211; Contains defines required to compile/link<br/>
+                               against WX, e.g. WXUSINGDLL<br/>
+  wxWidgets_DEFINITIONS_DEBUG- Contains defines required to compile/link<br/>
+                               against WX debug builds, e.g. __WXDEBUG__<br/>
+  wxWidgets_CXX_FLAGS        &#8211; Include dirs and compiler flags for<br/>
+                               unices, empty on WIN32. Essentially<br/>
+                               &#8220;`wx-config &#8211;cxxflags`&#8221;.<br/>
   wxWidgets_USE_FILE         &#8211; Convenience include file.</p>
 <p> Sample usage: </p>
-<p>#Note that for MinGW users the order of libs is important !<br />
-find_package(wxWidgets COMPONENTS net gl core base) if (wxWidgets_FOUND)<br />
-    include(${wxWidgets_USE_FILE})<br />
-#and for each of your dependent executable / library targets:<br />
-        target_link_libraries(&lt;YourTarget&gt; ${wxWidgets_LIBRARIES})<br />
+<p>#Note that for MinGW users the order of libs is important !<br/>
+find_package(wxWidgets COMPONENTS net gl core base) if (wxWidgets_FOUND)<br/>
+    include(${wxWidgets_USE_FILE})<br/>
+#and for each of your dependent executable / library targets:<br/>
+        target_link_libraries(&lt;YourTarget&gt; ${wxWidgets_LIBRARIES})<br/>
             endif()</p>
 <p> If wxWidgets is required (i.e., not an optional part): </p>
-<p>find_package(wxWidgets REQUIRED net gl core base)<br />
-    include(${wxWidgets_USE_FILE})<br />
-#and for each of your dependent executable / library targets:<br />
+<p>find_package(wxWidgets REQUIRED net gl core base)<br/>
+    include(${wxWidgets_USE_FILE})<br/>
+#and for each of your dependent executable / library targets:<br/>
         target_link_libraries(&lt;YourTarget&gt; ${wxWidgets_LIBRARIES})</p>
 <dt><code>FindwxWindows</code></dt>
 <dd> Find wxWindows (wxWidgets) installation </dd>
 <p> This module finds if wxWindows/wxWidgets is installed and determines where the include files and libraries are. It also determines what the name of the library is. Please note this file is DEPRECATED and replaced by FindwxWidgets.cmake. This code sets the following variables: </p>
-<p>  WXWINDOWS_FOUND     = system has WxWindows<br />
-  WXWINDOWS_LIBRARIES = path to the wxWindows libraries<br />
-                        on Unix/Linux with additional<br />
-                        linker flags from<br />
-                        &#8220;wx-config &#8211;libs&#8221;<br />
-  CMAKE_WXWINDOWS_CXX_FLAGS  = Compiler flags for wxWindows,<br />
-                               essentially &#8220;`wx-config &#8211;cxxflags`&#8221;<br />
-                               on Linux<br />
-  WXWINDOWS_INCLUDE_DIR      = where to find &#8220;wx/wx.h&#8221; and &#8220;wx/setup.h&#8221;<br />
-  WXWINDOWS_LINK_DIRECTORIES = link directories, useful for rpath on<br />
-                                Unix<br />
+<p>  WXWINDOWS_FOUND     = system has WxWindows<br/>
+  WXWINDOWS_LIBRARIES = path to the wxWindows libraries<br/>
+                        on Unix/Linux with additional<br/>
+                        linker flags from<br/>
+                        &#8220;wx-config &#8211;libs&#8221;<br/>
+  CMAKE_WXWINDOWS_CXX_FLAGS  = Compiler flags for wxWindows,<br/>
+                               essentially &#8220;`wx-config &#8211;cxxflags`&#8221;<br/>
+                               on Linux<br/>
+  WXWINDOWS_INCLUDE_DIR      = where to find &#8220;wx/wx.h&#8221; and &#8220;wx/setup.h&#8221;<br/>
+  WXWINDOWS_LINK_DIRECTORIES = link directories, useful for rpath on<br/>
+                                Unix<br/>
   WXWINDOWS_DEFINITIONS      = extra defines</p>
 <p> OPTIONS If you need OpenGL support please </p>
 <pre>
@@ -4846,13 +4846,13 @@ find_package(wxWidgets COMPONENTS net gl core base) if (wxWidgets_FOUND)<br />
                                     (declared by &quot;MODULE PROCEDURE&quot;)
 </pre>
 <p> A function is provided to generate a C header file containing macros to mangle symbol names: </p>
-<p>FortranCInterface_HEADER(&lt;file&gt;[MACRO_NAMESPACE&lt;macro &#8211; ns&gt;]<br />
-                               [SYMBOL_NAMESPACE&lt;ns&gt;]<br />
+<p>FortranCInterface_HEADER(&lt;file&gt;[MACRO_NAMESPACE&lt;macro &#8211; ns&gt;]<br/>
+                               [SYMBOL_NAMESPACE&lt;ns&gt;]<br/>
                                [SYMBOLS [&lt;module&gt;:]&lt;function&gt;&#8230;])</p>
 <p> It generates in &lt;file&gt; definitions of the following macros: </p>
-<p>#define FortranCInterface_GLOBAL (name, NAME)&#8230;<br />
-#define FortranCInterface_GLOBAL_(name, NAME) &#8230;<br />
-#define FortranCInterface_MODULE (mod, name, MOD, NAME)&#8230;<br />
+<p>#define FortranCInterface_GLOBAL (name, NAME)&#8230;<br/>
+#define FortranCInterface_GLOBAL_(name, NAME) &#8230;<br/>
+#define FortranCInterface_MODULE (mod, name, MOD, NAME)&#8230;<br/>
 #define FortranCInterface_MODULE_(mod, name, MOD, NAME) &#8230;</p>
 <p> These macros mangle four categories of Fortran symbols, respectively: </p>
 <pre>
@@ -4863,7 +4863,7 @@ find_package(wxWidgets COMPONENTS net gl core base) if (wxWidgets_FOUND)<br />
 </pre>
 <p> If mangling for a category is not known, its macro is left undefined. All macros require raw names in both lower case and upper case. The MACRO_NAMESPACE option replaces the default &quot;FortranCInterface_&quot; prefix with a given namespace &quot;&lt;macro-ns&gt;&quot;. </p>
 <p> The SYMBOLS option lists symbols to mangle automatically with C preprocessor definitions: </p>
-<p>   &lt;function&gt;          ==&gt; #define &lt;ns&gt;&lt;function&gt; &#8230;<br />
+<p>   &lt;function&gt;          ==&gt; #define &lt;ns&gt;&lt;function&gt; &#8230;<br/>
    &lt;module&gt;:&lt;function&gt; ==&gt; #define &lt;ns&gt;&lt;module&gt;_&lt;function&gt; &#8230;</p>
 <p> If the mangling for some symbol is not known then no preprocessor definition is created, and a warning is displayed. The SYMBOL_NAMESPACE option prefixes all preprocessor definitions generated by the SYMBOLS option with a given namespace &quot;&lt;ns&gt;&quot;. </p>
 <p> Example usage: </p>
@@ -4934,32 +4934,32 @@ find_package(wxWidgets COMPONENTS net gl core base) if (wxWidgets_FOUND)<br />
 <p> This module provides the function GENERATE_EXPORT_HEADER() and the accompanying ADD_COMPILER_EXPORT_FLAGS() function. </p>
 <p> The GENERATE_EXPORT_HEADER function can be used to generate a file suitable for preprocessor inclusion which contains EXPORT macros to be used in library classes. </p>
 <p> GENERATE_EXPORT_HEADER( LIBRARY_TARGET </p>
-<p>[BASE_NAME&lt;base_name&gt;]<br />
-    [EXPORT_MACRO_NAME&lt;export_macro_name&gt;]<br />
-    [EXPORT_FILE_NAME&lt;export_file_name&gt;]<br />
-    [DEPRECATED_MACRO_NAME&lt;deprecated_macro_name&gt;]<br />
-    [NO_EXPORT_MACRO_NAME&lt;no_export_macro_name&gt;]<br />
-    [STATIC_DEFINE&lt;static_define&gt;]<br />
-    [NO_DEPRECATED_MACRO_NAME&lt;no_deprecated_macro_name&gt;]<br />
-    [DEFINE_NO_DEPRECATED]<br />
+<p>[BASE_NAME&lt;base_name&gt;]<br/>
+    [EXPORT_MACRO_NAME&lt;export_macro_name&gt;]<br/>
+    [EXPORT_FILE_NAME&lt;export_file_name&gt;]<br/>
+    [DEPRECATED_MACRO_NAME&lt;deprecated_macro_name&gt;]<br/>
+    [NO_EXPORT_MACRO_NAME&lt;no_export_macro_name&gt;]<br/>
+    [STATIC_DEFINE&lt;static_define&gt;]<br/>
+    [NO_DEPRECATED_MACRO_NAME&lt;no_deprecated_macro_name&gt;]<br/>
+    [DEFINE_NO_DEPRECATED]<br/>
     [PREFIX_NAME&lt;prefix_name&gt;]</p>
 <p> ) </p>
 <p> ADD_COMPILER_EXPORT_FLAGS( [&lt;output_variable&gt;] ) </p>
 <p> By default GENERATE_EXPORT_HEADER() generates macro names in a file name determined by the name of the library. The ADD_COMPILER_EXPORT_FLAGS function adds -fvisibility=hidden to CMAKE_CXX_FLAGS if supported, and is a no-op on Windows which does not need extra compiler flags for exporting support. You may optionally pass a single argument to ADD_COMPILER_EXPORT_FLAGS that will be populated with the required CXX_FLAGS required to enable visibility support for the compiler/architecture in use. </p>
 <p> This means that in the simplest case, users of these functions will be equivalent to: </p>
-<p>add_compiler_export_flags()<br />
-    add_library(somelib someclass.cpp)<br />
-        generate_export_header(somelib)<br />
-            install(TARGETS somelib DESTINATION ${LIBRARY_INSTALL_DIR})<br />
-                install(FILES<br />
-                            someclass.h<br />
-                                ${PROJECT_BINARY_DIR} /<br />
+<p>add_compiler_export_flags()<br/>
+    add_library(somelib someclass.cpp)<br/>
+        generate_export_header(somelib)<br/>
+            install(TARGETS somelib DESTINATION ${LIBRARY_INSTALL_DIR})<br/>
+                install(FILES<br/>
+                            someclass.h<br/>
+                                ${PROJECT_BINARY_DIR} /<br/>
                         somelib_export.h DESTINATION ${INCLUDE_INSTALL_DIR})</p>
 <p> And in the ABI header files: </p>
-<p>#include &#8220;somelib_export.h&#8221;<br />
-class SOMELIB_EXPORT SomeClass<br />
-{<br />
-    &#8230;<br />
+<p>#include &#8220;somelib_export.h&#8221;<br/>
+class SOMELIB_EXPORT SomeClass<br/>
+{<br/>
+    &#8230;<br/>
 };</p>
 <p> The CMake fragment will generate a file in the ${CMAKE_CURRENT_BINARY_DIR} called somelib_export.h containing the macros SOMELIB_EXPORT, SOMELIB_NO_EXPORT, SOMELIB_DEPRECATED, SOMELIB_DEPRECATED_EXPORT and SOMELIB_DEPRECATED_NO_EXPORT. The resulting file should be installed with other headers in the library. </p>
 <p> The BASE_NAME argument can be used to override the file name and the names used for the macros </p>
@@ -4987,30 +4987,30 @@ class SOMELIB_EXPORT SomeClass<br />
 <p> creates the macro KDE_DEPRECATED instead of SOMELIB_DEPRECATED. </p>
 <p> If LIBRARY_TARGET is a static library, macros are defined without values. </p>
 <p> If the same sources are used to create both a shared and a static library, the uppercased symbol ${BASE_NAME}_STATIC_DEFINE should be used when building the static library </p>
-<p>add_library(shared_variant SHARED ${lib_SRCS})<br />
-    add_library(static_variant ${lib_SRCS})<br />
-        generate_export_header(shared_variant BASE_NAME libshared_and_static)<br />
-            set_target_properties(static_variant PROPERTIES<br />
-                                      COMPILE_FLAGS &#8211;<br />
+<p>add_library(shared_variant SHARED ${lib_SRCS})<br/>
+    add_library(static_variant ${lib_SRCS})<br/>
+        generate_export_header(shared_variant BASE_NAME libshared_and_static)<br/>
+            set_target_properties(static_variant PROPERTIES<br/>
+                                      COMPILE_FLAGS &#8211;<br/>
                                   DLIBSHARED_AND_STATIC_STATIC_DEFINE)</p>
 <p> This will cause the export macros to expand to nothing when building the static library. </p>
 <p> If DEFINE_NO_DEPRECATED is specified, then a macro ${BASE_NAME}_NO_DEPRECATED will be defined This macro can be used to remove deprecated code from preprocessor output. </p>
-<p>option(EXCLUDE_DEPRECATED &#8220;Exclude deprecated parts of the library&#8221; FALSE) if (EXCLUDE_DEPRECATED)<br />
-    set(NO_BUILD_DEPRECATED DEFINE_NO_DEPRECATED)<br />
-        endif()<br />
+<p>option(EXCLUDE_DEPRECATED &#8220;Exclude deprecated parts of the library&#8221; FALSE) if (EXCLUDE_DEPRECATED)<br/>
+    set(NO_BUILD_DEPRECATED DEFINE_NO_DEPRECATED)<br/>
+        endif()<br/>
             generate_export_header(somelib ${NO_BUILD_DEPRECATED})</p>
 <p> And then in somelib: </p>
-<p>class SOMELIB_EXPORT SomeClass<br />
-{<br />
-  public:<br />
-#ifndef SOMELIB_NO_DEPRECATED<br />
-    SOMELIB_DEPRECATED void oldMethod();<br />
-#endif<br />
+<p>class SOMELIB_EXPORT SomeClass<br/>
+{<br/>
+  public:<br/>
+#ifndef SOMELIB_NO_DEPRECATED<br/>
+    SOMELIB_DEPRECATED void oldMethod();<br/>
+#endif<br/>
 };</p>
-<p>#ifndef SOMELIB_NO_DEPRECATED<br />
-void SomeClass::oldMethod()<br />
-{<br />
-}<br />
+<p>#ifndef SOMELIB_NO_DEPRECATED<br/>
+void SomeClass::oldMethod()<br/>
+{<br/>
+}<br/>
 #endif</p>
 <p> If PREFIX_NAME is specified, the argument will be used as a prefix to all generated macros. </p>
 <p> For example: </p>
@@ -5113,10 +5113,10 @@ void SomeClass::oldMethod()<br />
 <p> Sets the variable named ${var} to the number of physical cores available on the machine if the information can be determined. Otherwise it is set to 0. Currently this functionality is implemented for AIX, cygwin, FreeBSD, HPUX, IRIX, Linux, Mac OS X, QNX, Sun and Windows. </p>
 <p> This function is guaranteed to return a positive integer (&gt;=1) if it succeeds. It returns 0 if there&#8217;s a problem determining the processor count. </p>
 <p> Example use, in a ctest -S dashboard script: </p>
-<p>include(ProcessorCount)<br />
-    ProcessorCount(N) if (NOT N EQUAL 0)<br />
-        set(CTEST_BUILD_FLAGS &#8211; j${N})<br />
-            set(ctest_test_args ${ctest_test_args} PARALLEL_LEVEL ${N})<br />
+<p>include(ProcessorCount)<br/>
+    ProcessorCount(N) if (NOT N EQUAL 0)<br/>
+        set(CTEST_BUILD_FLAGS &#8211; j${N})<br/>
+            set(ctest_test_args ${ctest_test_args} PARALLEL_LEVEL ${N})<br/>
                 endif()</p>
 <p> This function is intended to offer an approximation of the value of the number of compute cores available on the current machine, such that you may use that value for parallel building and parallel testing. It is meant to help utilize as much of the machine as seems reasonable. Of course, knowledge of what else might be running on the machine simultaneously should be used when deciding whether to request a machine&#8217;s full capacity all for yourself. </p>
 <dt><code>Qt4ConfigDependentSettings</code></dt>
@@ -5186,12 +5186,12 @@ void SomeClass::oldMethod()<br />
 <dd> Use Module for Java </dd>
 <p> This file provides functions for Java. It is assumed that FindJava.cmake has already been loaded. See FindJava.cmake for information on how to load Java into your CMake project. </p>
 <p> add_jar(target_name </p>
-<p>         [SOURCES] source1 [source2 &#8230;] [resource1 &#8230;]<br />
-         [INCLUDE_JARS jar1 [jar2 &#8230;]]<br />
-         [ENTRY_POINT entry]<br />
-         [VERSION version]<br />
-         [OUTPUT_NAME name]<br />
-         [OUTPUT_DIR dir]<br />
+<p>         [SOURCES] source1 [source2 &#8230;] [resource1 &#8230;]<br/>
+         [INCLUDE_JARS jar1 [jar2 &#8230;]]<br/>
+         [ENTRY_POINT entry]<br/>
+         [VERSION version]<br/>
+         [OUTPUT_NAME name]<br/>
+         [OUTPUT_DIR dir]<br/>
         )</p>
 <p> This command creates a &lt;target_name&gt;.jar. It compiles the given source files (source) and adds the given resource files (resource) to the jar file. If only resource files are given then just a jar file is created. The list of include jars are added to the classpath when compiling the java sources and also to the dependencies of the target. INCLUDE_JARS also accepts other target names created by add_jar. For backwards compatibility, jar files listed as sources are ignored (as they have been since the first version of this module). </p>
 <p> The default OUTPUT_DIR can also be changed by setting the variable CMAKE_JAVA_TARGET_OUTPUT_DIR. </p>
@@ -5243,9 +5243,9 @@ void SomeClass::oldMethod()<br />
     If the target is a JNI library, utilize the following commands to
     create a JNI symbolic link:
 </pre>
-<p>set(CMAKE_JNI_TARGET TRUE)<br />
-    add_jar(shibboleet shibbotleet.java VERSION 1.2.0)<br />
-        install_jar(shibboleet ${LIB_INSTALL_DIR} / shibboleet)<br />
+<p>set(CMAKE_JNI_TARGET TRUE)<br/>
+    add_jar(shibboleet shibbotleet.java VERSION 1.2.0)<br/>
+        install_jar(shibboleet ${LIB_INSTALL_DIR} / shibboleet)<br/>
             install_jni_symlink(shibboleet ${JAVA_LIB_INSTALL_DIR})</p>
 <pre>
     If a single target needs to produce more than one jar from its
@@ -5279,10 +5279,10 @@ void SomeClass::oldMethod()<br />
                       example to use them with javah.
 </pre>
 <p> find_jar(&lt;VAR&gt; </p>
-<p>          name | NAMES name1 [name2 &#8230;]<br />
-          [PATHS path1 [path2 &#8230; ENV var]]<br />
-          [VERSIONS version1 [version2]]<br />
-          [DOC &#8220;cache documentation string&#8221;]<br />
+<p>          name | NAMES name1 [name2 &#8230;]<br/>
+          [PATHS path1 [path2 &#8230; ENV var]]<br/>
+          [VERSIONS version1 [version2]]<br/>
+          [DOC &#8220;cache documentation string&#8221;]<br/>
          )</p>
 <p> This command is used to find a full path to the named jar. A cache entry named by &lt;VAR&gt; is created to stor the result of this command. If the full path to a jar is found the result is stored in the variable and the search will not repeated unless the variable is cleared. If nothing is found, the result will be &lt;VAR&gt;-NOTFOUND, and the search will be attempted again next time find_jar is invoked with the same variable. The name of the full path to a file that is searched for is specified by the names listed after NAMES argument. Additional search locations can be specified after the PATHS argument. If you require special a version of a jar file you can specify it with the VERSIONS argument. The argument after DOC will be used for the documentation string in the cache. </p>
 <p> install_jar(TARGET_NAME DESTINATION) </p>
@@ -5290,37 +5290,37 @@ void SomeClass::oldMethod()<br />
 <p> install_jni_symlink(TARGET_NAME DESTINATION) </p>
 <p> This command installs the TARGET_NAME JNI symlinks to the given DESTINATION. It should be called in the same scope as add_jar() or it will fail. </p>
 <p> create_javadoc(&lt;VAR&gt; </p>
-<p>                PACKAGES pkg1 [pkg2 &#8230;]<br />
-                [SOURCEPATH &lt;sourcepath&gt;]<br />
-                [CLASSPATH &lt;classpath&gt;]<br />
-                [INSTALLPATH &lt;install path&gt;]<br />
-                [DOCTITLE &#8220;the documentation title&#8221;]<br />
-                [WINDOWTITLE &#8220;the title of the document&#8221;]<br />
-                [AUTHOR TRUE|FALSE]<br />
-                [USE TRUE|FALSE]<br />
-                [VERSION TRUE|FALSE]<br />
+<p>                PACKAGES pkg1 [pkg2 &#8230;]<br/>
+                [SOURCEPATH &lt;sourcepath&gt;]<br/>
+                [CLASSPATH &lt;classpath&gt;]<br/>
+                [INSTALLPATH &lt;install path&gt;]<br/>
+                [DOCTITLE &#8220;the documentation title&#8221;]<br/>
+                [WINDOWTITLE &#8220;the title of the document&#8221;]<br/>
+                [AUTHOR TRUE|FALSE]<br/>
+                [USE TRUE|FALSE]<br/>
+                [VERSION TRUE|FALSE]<br/>
                )</p>
 <p> Create java documentation based on files or packages. For more details please read the javadoc manpage. </p>
 <p> There are two main signatures for create_javadoc. The first signature works with package names on a path with source files: </p>
-<p>Example : create_javadoc(my_example_doc<br />
-                             PACKAGES com.exmaple.foo com.example.bar<br />
-                                 SOURCEPATH &#8220;${CMAKE_CURRENT_SOURCE_DIR}&#8221; CLASSPATH ${CMAKE_JAVA_INCLUDE_PATH} WINDOWTITLE &#8220;My example&#8221; DOCTITLE &#8220;&lt;h1&gt;My example&lt;/h1&gt;&#8221; AUTHOR TRUE<br />
-                                     USE TRUE<br />
+<p>Example : create_javadoc(my_example_doc<br/>
+                             PACKAGES com.exmaple.foo com.example.bar<br/>
+                                 SOURCEPATH &#8220;${CMAKE_CURRENT_SOURCE_DIR}&#8221; CLASSPATH ${CMAKE_JAVA_INCLUDE_PATH} WINDOWTITLE &#8220;My example&#8221; DOCTITLE &#8220;&lt;h1&gt;My example&lt;/h1&gt;&#8221; AUTHOR TRUE<br/>
+                                     USE TRUE<br/>
                                          VERSION TRUE)</p>
 <p> The second signature for create_javadoc works on a given list of files. </p>
-<p>create_javadoc(&lt;VAR&gt;<br />
-                   FILES file1[file2&#8230;]<br />
-                              [CLASSPATH&lt;classpath&gt;]<br />
-                              [INSTALLPATH&lt;install path&gt;]<br />
-                              [DOCTITLE &#8220;the documentation title&#8221;]<br />
-                              [WINDOWTITLE &#8220;the title of the document&#8221;]<br />
-                              [AUTHOR TRUE | FALSE]<br />
-                              [USE TRUE | FALSE]<br />
+<p>create_javadoc(&lt;VAR&gt;<br/>
+                   FILES file1[file2&#8230;]<br/>
+                              [CLASSPATH&lt;classpath&gt;]<br/>
+                              [INSTALLPATH&lt;install path&gt;]<br/>
+                              [DOCTITLE &#8220;the documentation title&#8221;]<br/>
+                              [WINDOWTITLE &#8220;the title of the document&#8221;]<br/>
+                              [AUTHOR TRUE | FALSE]<br/>
+                              [USE TRUE | FALSE]<br/>
                               [VERSION TRUE | FALSE])</p>
 <p> Example: </p>
-<p>create_javadoc(my_example_doc<br />
-                   FILES ${example_SRCS} CLASSPATH ${CMAKE_JAVA_INCLUDE_PATH} WINDOWTITLE &#8220;My example&#8221; DOCTITLE &#8220;&lt;h1&gt;My example&lt;/h1&gt;&#8221; AUTHOR TRUE<br />
-                       USE TRUE<br />
+<p>create_javadoc(my_example_doc<br/>
+                   FILES ${example_SRCS} CLASSPATH ${CMAKE_JAVA_INCLUDE_PATH} WINDOWTITLE &#8220;My example&#8221; DOCTITLE &#8220;&lt;h1&gt;My example&lt;/h1&gt;&#8221; AUTHOR TRUE<br/>
+                       USE TRUE<br/>
                            VERSION TRUE)</p>
 <p> Both signatures share most of the options. These options are the same as what you can find in the javadoc manpage. Please look at the manpage for CLASSPATH, DOCTITLE, WINDOWTITLE, AUTHOR, USE and VERSION. </p>
 <p> The documentation will be by default installed to </p>
@@ -5345,9 +5345,9 @@ void SomeClass::oldMethod()<br />
 <dt><code>UseSWIG</code></dt>
 <dd> SWIG module for CMake </dd>
 <p> Defines the following macros: </p>
-<p>SWIG_ADD_MODULE(name language[files])<br />
-&#8211; Define swig module with given name and specified language<br />
-    SWIG_LINK_LIBRARIES(name[libraries]) &#8211;<br />
+<p>SWIG_ADD_MODULE(name language[files])<br/>
+&#8211; Define swig module with given name and specified language<br/>
+    SWIG_LINK_LIBRARIES(name[libraries]) &#8211;<br/>
     Link libraries to swig module</p>
 <p> All other macros are for internal use only. To get the actual name of the swig module, use: ${SWIG_MODULE_${name}_REAL_NAME}. Set Source files properties such as CPLUSPLUS and SWIG_FLAGS to specify special behavior of SWIG. Also global CMAKE_SWIG_FLAGS can be used to add special flags to all swig calls. Another special variable is CMAKE_SWIG_OUTDIR, it allows one to specify where to write all the swig generated module (swig -outdir option) The name-specific variable SWIG_MODULE_&lt;name&gt;_EXTRA_DEPS may be used to specify extra dependencies for the generated modules. If the source file generated by swig need some special flag you can use set_source_files_properties( ${swig_generated_file_fullname} </p>
 <pre>

@@ -104,7 +104,7 @@ description: "mysqlmetagrep – Search Database Object Definitions"
 <dt>
 </dt><dd> &bull; <code>(abc)+</code> </dd>
 <p> Match one or more repetitions of <code>abc</code>.</dl>
-<p> This is but a brief set of examples of regular expressions. The full syntax is described in the m[blue]<code>MySQL manual</code>m[]<font SIZE="-2">[1]</font>, but can often be found in <i><a href="/docs/linux/man/7-regex/">regex</a>(7)</i>.<br />
+<p> This is but a brief set of examples of regular expressions. The full syntax is described in the m[blue]<code>MySQL manual</code>m[][1], but can often be found in <i><a href="/docs/linux/man/7-regex/">regex</a>(7)</i>.<br/>
 OPTIONS </p>
 <p> <code>mysqlmetagrep</code> accepts the following command-line options: </p>
 <dl>
@@ -151,7 +151,7 @@ OPTIONS </p>
 <p> Display version information and exit.</dl>
 <p>NOTES </p>
 <p> For the <code>&#8211;format</code> option, the permitted values are not case sensitive. In addition, values may be specified as any unambiguous prefix of a valid value. For example, <code>&#8211;format=g</code> specifies the grid format. An error occurs if a prefix matches more than one valid value. </p>
-<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br />
+<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br/>
 EXAMPLES </p>
 <p> Find all objects with a name that matches the pattern &#8216;t_&#8217; (the letter t followed by any single character): </p>
 <dl>
@@ -169,9 +169,9 @@ $ mysqlmetagrep-- pattern = "t_" --server = mats[at] localhost + -- -- -- -- -- 
 <dl>
 <dt>
 </dt><dd>
-$ mysqlmetagrep &#8211; b&#8211; pattern = &#8220;%t2%&#8221; &#8211;server = mats[at] localhost : 3306 + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; -+ | Connection | Object Type | Object Name | Database |<br />
-                                                  +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; -+ | root : *@localhost : 3306 | TRIGGER | tr_foo | test |<br />
-                                                                                                                                                            | root : *@localhost : 3306 | TABLE | t2 | test |<br />
+$ mysqlmetagrep &#8211; b&#8211; pattern = &#8220;%t2%&#8221; &#8211;server = mats[at] localhost : 3306 + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; -+ | Connection | Object Type | Object Name | Database |<br/>
+                                                  +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; -+ | root : *@localhost : 3306 | TRIGGER | tr_foo | test |<br/>
+                                                                                                                                                            | root : *@localhost : 3306 | TABLE | t2 | test |<br/>
                                                                                                                                                                      +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; -+
 </dd></dl>
 <p> In the preceding output, the trigger name does not match the pattern, but is displayed because its body does. </p>

@@ -16,21 +16,21 @@ description: "QuantLib::BlackVarianceSurface – Black volatility surface modell
 <h3>Public Member Functions</h3>
 <p><code>BlackVarianceSurface</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal, const std::vector&lt; <code>Date</code> &gt; &amp;dates, const std::vector&lt; Real &gt; &amp;strikes, const <code>Matrix</code> &amp;blackVolMatrix, const <code>DayCounter</code> &amp;dayCounter, Extrapolation lowerExtrapolation=InterpolatorDefaultExtrapolation, Extrapolation upperExtrapolation=InterpolatorDefaultExtrapolation) </p>
 <p> <code>TermStructure interface</code> </p>
-<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>the day counter used for date/time conversion </i><br />
- <code>Date</code> <code>maxDate</code> () const<br />
+<p> <code>DayCounter</code> <code>dayCounter</code> () const<br/>
+ <i>the day counter used for date/time conversion </i><br/>
+ <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i> </p>
 <p> <code>VolatilityTermStructure interface</code> </p>
-<p> Real <code>minStrike</code> () const<br />
- <i>the minimum strike for which the term structure can return vols </i><br />
- Real <code>maxStrike</code> () const<br />
+<p> Real <code>minStrike</code> () const<br/>
+ <i>the minimum strike for which the term structure can return vols </i><br/>
+ Real <code>maxStrike</code> () const<br/>
  <i>the maximum strike for which the term structure can return vols </i> </p>
 <p> <code>Modifiers</code> </p>
 <p> template&lt;class Interpolator &gt; void <code>setInterpolation</code> (const Interpolator &amp;i=Interpolator()) </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>
 <h3>Protected Member Functions</h3>
-<p>virtual Real <code>blackVarianceImpl</code> (Time t, Real strike) const<br />
+<p>virtual Real <code>blackVarianceImpl</code> (Time t, Real strike) const<br/>
  <i>Black variance calculation. </i></p>
 <h2>Detailed Description</h2>
 <p>Black volatility surface modelled as variance surface. </p>

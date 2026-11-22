@@ -14,7 +14,7 @@ description: "hadd – Merge ROOT histogram files into one file"
 <h2>DESCRIPTION</h2>
 <p> This program will add histograms from a list of <code>ROOT</code> files and write them to a target <code>ROOT</code> file. The target file is newly created and must not be identical to one of the source files.</p>
 <h2>SEE ALSO</h2>
-<p> <font SIZE="-1"></font> <i><a href="/docs/linux/man/1-root/">root</a></i>(1) </p>
+<p>  <i><a href="/docs/linux/man/1-root/">root</a></i>(1) </p>
 <p> For extensive documentation on the <code>ROOT</code> system, see <i><a rel="nofollow" href="http://root.cern.ch">http://root.cern.ch</a></i> </p>
 <p> A <code>Users Guide</code> is available from here. </p>
 <p> The classes of ROOT are all documented by the automatic documentation system, and is available online.</p>

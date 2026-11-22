@@ -16,9 +16,9 @@ static std::chrono::gps_time&lt;std::common_type_t&lt;Duration, std::chrono::sec
 <h2>Return value</h2>
 <p>A std::chrono::gps_time representing the same point in time as t, computed as if by constructing a value of the return type from t.time_since_epoch() and subtracting 315964809s. (315964809 is the number of seconds between the epochs of the two clocks: 1980-01-06 00:00:00 UTC for gps_clock and 1970-01-01 00:00:00 UTC for utc_clock.) </p>
 <h2>See also</h2>
-<p>to_utc converts a gps_time to utc_time<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
-<code>[static]</code><br />
-clock_cast convert time points of one clock to another<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />
+<p>to_utc converts a gps_time to utc_time<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
+<code>[static]</code><br/>
+clock_cast convert time points of one clock to another<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br/>
 (C++20) </p>

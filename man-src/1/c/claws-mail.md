@@ -15,70 +15,70 @@ description: "Claws Mail – a GTK+ based fast email and news client"
 <dl>
 <dt>Claws Mail is an email client (and news reader) based on GTK+, running on the X Window System, and aiming for:</dt>
 <dd>
- &bull; Quick response<br />
- &bull; Graceful, and sophisticated interface<br />
- &bull; Easy configuration, intuitive operation<br />
+ &bull; Quick response<br/>
+ &bull; Graceful, and sophisticated interface<br/>
+ &bull; Easy configuration, intuitive operation<br/>
  &bull; Abundant features</dd>
 <dt>Currently implemented features include:</dt>
-<dd> &bull; POP3 support<br />
- &bull; IMAP4rev1 support<br />
- &bull; integrated NetNews client<br />
- &bull; unlimited multiple account handling<br />
- &bull; thread display<br />
- &bull; filtering<br />
- &bull; MIME (attachments)<br />
- &bull; built-in image view<br />
- &bull; X-Face and (colour) Face support<br />
- &bull; multiple MH folder support<br />
- &bull; mbox importing / exporting<br />
- &bull; external editor support<br />
- &bull; message queueing<br />
- &bull; automatic mail checking<br />
- &bull; draft message function<br />
- &bull; template function<br />
- &bull; line-wrapping<br />
- &bull; clickable URI<br />
- &bull; XML-based address book<br />
- &bull; LDAP, vCard, and JPilot support<br />
- &bull; newly arrived and unread message management<br />
- &bull; Mew/Wanderlust-like key bind<br />
- &bull; printing<br />
- &bull; APOP authentication support<br />
- &bull; SMTP AUTH support<br />
- &bull; SSL support (POP3, SMTP, IMAP4rev1)<br />
- &bull; IPv6 support<br />
- &bull; drag &amp; drop (partially implemented)<br />
- &bull; GnuPG support<br />
- &bull; automake + autoconf support<br />
- &bull; internationalization of UI messages by gettext<br />
- &bull; support of many code sets, including UTF-8 (Unicode) (when using libjconv)<br />
+<dd> &bull; POP3 support<br/>
+ &bull; IMAP4rev1 support<br/>
+ &bull; integrated NetNews client<br/>
+ &bull; unlimited multiple account handling<br/>
+ &bull; thread display<br/>
+ &bull; filtering<br/>
+ &bull; MIME (attachments)<br/>
+ &bull; built-in image view<br/>
+ &bull; X-Face and (colour) Face support<br/>
+ &bull; multiple MH folder support<br/>
+ &bull; mbox importing / exporting<br/>
+ &bull; external editor support<br/>
+ &bull; message queueing<br/>
+ &bull; automatic mail checking<br/>
+ &bull; draft message function<br/>
+ &bull; template function<br/>
+ &bull; line-wrapping<br/>
+ &bull; clickable URI<br/>
+ &bull; XML-based address book<br/>
+ &bull; LDAP, vCard, and JPilot support<br/>
+ &bull; newly arrived and unread message management<br/>
+ &bull; Mew/Wanderlust-like key bind<br/>
+ &bull; printing<br/>
+ &bull; APOP authentication support<br/>
+ &bull; SMTP AUTH support<br/>
+ &bull; SSL support (POP3, SMTP, IMAP4rev1)<br/>
+ &bull; IPv6 support<br/>
+ &bull; drag &amp; drop (partially implemented)<br/>
+ &bull; GnuPG support<br/>
+ &bull; automake + autoconf support<br/>
+ &bull; internationalization of UI messages by gettext<br/>
+ &bull; support of many code sets, including UTF-8 (Unicode) (when using libjconv)<br/>
  &bull; support for plugins</dd></dl>
 <p> This list is not complete. </p>
 <h2>OPTIONS</h2>
-<p> <code> &#8211;compose</code> [address]<br />
- <code> &#8211;compose-from-file</code> file<br />
- <code> &#8211;subscribe</code> [uri]<br />
- <code> &#8211;attach file1 [file2]&#8230;</code><br />
- <code> &#8211;receive</code><br />
- <code> &#8211;receive-all</code><br />
- <code> &#8211;cancel-receiving</code><br />
- <code> &#8211;cancel-sending</code><br />
- <code> &#8211;send</code><br />
- <code> &#8211;status</code><br />
- <code> &#8211;status folder[/subfolder]</code><br />
- <code> &#8211;status-full</code><br />
- <code> &#8211;statistics</code><br />
- <code> &#8211;reset-statistics</code><br />
- <code> &#8211;select [#mh/mailbox/]folder[/msg|/msgid]</code><br />
- <code> &#8211;online</code><br />
- <code> &#8211;offline</code><br />
- <code> &#8211;exit</code><br />
- <code> &#8211;debug</code><br />
- <code> &#8211;toggle-debug</code><br />
- <code> &#8211;help</code><br />
- <code> &#8211;version</code><br />
- <code> &#8211;version-full</code><br />
- <code> &#8211;config-dir</code><br />
+<p> <code> &#8211;compose</code> [address]<br/>
+ <code> &#8211;compose-from-file</code> file<br/>
+ <code> &#8211;subscribe</code> [uri]<br/>
+ <code> &#8211;attach file1 [file2]&#8230;</code><br/>
+ <code> &#8211;receive</code><br/>
+ <code> &#8211;receive-all</code><br/>
+ <code> &#8211;cancel-receiving</code><br/>
+ <code> &#8211;cancel-sending</code><br/>
+ <code> &#8211;send</code><br/>
+ <code> &#8211;status</code><br/>
+ <code> &#8211;status folder[/subfolder]</code><br/>
+ <code> &#8211;status-full</code><br/>
+ <code> &#8211;statistics</code><br/>
+ <code> &#8211;reset-statistics</code><br/>
+ <code> &#8211;select [#mh/mailbox/]folder[/msg|/msgid]</code><br/>
+ <code> &#8211;online</code><br/>
+ <code> &#8211;offline</code><br/>
+ <code> &#8211;exit</code><br/>
+ <code> &#8211;debug</code><br/>
+ <code> &#8211;toggle-debug</code><br/>
+ <code> &#8211;help</code><br/>
+ <code> &#8211;version</code><br/>
+ <code> &#8211;version-full</code><br/>
+ <code> &#8211;config-dir</code><br/>
  <code> &#8211;alternate-config-dir [dir]</code> </p>
 <h2>FILES</h2>
 <dl>
@@ -174,13 +174,13 @@ description: "Claws Mail – a GTK+ based fast email and news client"
 <dd>
  send all queued messages</dd>
 <dt><code>&#8211;status</code></dt>
-<dd> show the total number of messages<br />
+<dd> show the total number of messages<br/>
  [new][unread][unread answers to marked][total]</dd>
 <dt><code>&#8211;status folder[/subfolder]</code></dt>
-<dd> show the total number of messages in specified folder<br />
+<dd> show the total number of messages in specified folder<br/>
  [new][unread][unread answers to marked][total]</dd>
 <dt><code>&#8211;status-full</code></dt>
-<dd> show the total number of messages per folder<br />
+<dd> show the total number of messages per folder<br/>
  [new][unread][unread answers to marked][total]</dd>
 <dt><code>&#8211;statistics</code></dt>
 <dd>
@@ -250,37 +250,37 @@ description: "Claws Mail – a GTK+ based fast email and news client"
 <dl>
 <dt>1999-2014 Hiroyuki Yamamoto and the Claws Mail team</dt>
 <dd></dd></dl>
-<p> Portions are also Copyright:<br />
- (C) 2007-2009 g10 Code GmbH<br />
- (C) 1999-2005 Nullsoft, Inc.<br />
- (C) 1991-1993, 1996-2000, 2001 Free Software Foundation, Inc.<br />
- (C) 2001 Thomas Link, Hiroyuki Yamamoto<br />
- (C) 1995-1997 Peter Mattis and Spencer Kimball<br />
- (C) 1995-1997 Peter Mattis, Spencer Kimball, Josh MacDonald<br />
- (C) 1997-1998 Jay Painter &lt;jpaint [at] serv.net&gt;&lt;jpaint [at] gimp.org&gt;<br />
- (C) 1999-2003 Michael Natterer &lt;mitch [at] gimp.org&gt;<br />
- (C) 2000 Evan Martin<br />
- (C) 1998 Lars Hamann and Stefan Jeske<br />
- (C) 2005, 2006, 2007, 2009 GNOME Foundation<br />
- (C) 2004-2006 Christian Hammond<br />
- (C) 2003-2004 Pawel Salek<br />
- (C) 2001, 2002 &#8211; DINH Viet Hoa<br />
- (C) 1999-2000, Gael Roualland &lt;gael.roualland [at] iname.com&gt;<br />
- (C) 1998-2002 Sendmail, Inc.<br />
- (C) 2007-2008 Juha Kautto (juha at xfce.org)<br />
- (C) 1994-2002 World Wide Web Consortium<br />
- (C) 1999 Graham Davison<br />
- (C) 1999 Eric Busboom<br />
- (C) 2000, Eric Busboom, <a rel="nofollow" href="http://www.softwarestudio.org">http://www.softwarestudio.org</a><br />
- (C) 2002-2007 Randall Hand &lt;yerase [at] yerot.com&gt;<br />
- (C) 2001 by Werner Koch &lt;dd9jn [at] gnu.org&gt;<br />
- (C) 2004 Apache Software Foundation<br />
- (C) 2008 Mikkel Kamstrup Erlandsen<br />
- (C) 2002 Red Hat, Inc.; Copyright 1998, 2001 Tim Janik<br />
- (C) 2008-2009 Christian Hammond, David Trowbridge<br />
- (C) 2003-2005 Lars Lindner &lt;lars.lindner [at] gmx.net&gt;<br />
- (C) 2004,2005 Nathan J. Conrad &lt;t98502 [at] users.sourceforge.net&gt;<br />
- (C) 2004 Karl Soderstrom &lt;ks [at] xanadunet.net&gt;<br />
+<p> Portions are also Copyright:<br/>
+ (C) 2007-2009 g10 Code GmbH<br/>
+ (C) 1999-2005 Nullsoft, Inc.<br/>
+ (C) 1991-1993, 1996-2000, 2001 Free Software Foundation, Inc.<br/>
+ (C) 2001 Thomas Link, Hiroyuki Yamamoto<br/>
+ (C) 1995-1997 Peter Mattis and Spencer Kimball<br/>
+ (C) 1995-1997 Peter Mattis, Spencer Kimball, Josh MacDonald<br/>
+ (C) 1997-1998 Jay Painter &lt;jpaint [at] serv.net&gt;&lt;jpaint [at] gimp.org&gt;<br/>
+ (C) 1999-2003 Michael Natterer &lt;mitch [at] gimp.org&gt;<br/>
+ (C) 2000 Evan Martin<br/>
+ (C) 1998 Lars Hamann and Stefan Jeske<br/>
+ (C) 2005, 2006, 2007, 2009 GNOME Foundation<br/>
+ (C) 2004-2006 Christian Hammond<br/>
+ (C) 2003-2004 Pawel Salek<br/>
+ (C) 2001, 2002 &#8211; DINH Viet Hoa<br/>
+ (C) 1999-2000, Gael Roualland &lt;gael.roualland [at] iname.com&gt;<br/>
+ (C) 1998-2002 Sendmail, Inc.<br/>
+ (C) 2007-2008 Juha Kautto (juha at xfce.org)<br/>
+ (C) 1994-2002 World Wide Web Consortium<br/>
+ (C) 1999 Graham Davison<br/>
+ (C) 1999 Eric Busboom<br/>
+ (C) 2000, Eric Busboom, <a rel="nofollow" href="http://www.softwarestudio.org">http://www.softwarestudio.org</a><br/>
+ (C) 2002-2007 Randall Hand &lt;yerase [at] yerot.com&gt;<br/>
+ (C) 2001 by Werner Koch &lt;dd9jn [at] gnu.org&gt;<br/>
+ (C) 2004 Apache Software Foundation<br/>
+ (C) 2008 Mikkel Kamstrup Erlandsen<br/>
+ (C) 2002 Red Hat, Inc.; Copyright 1998, 2001 Tim Janik<br/>
+ (C) 2008-2009 Christian Hammond, David Trowbridge<br/>
+ (C) 2003-2005 Lars Lindner &lt;lars.lindner [at] gmx.net&gt;<br/>
+ (C) 2004,2005 Nathan J. Conrad &lt;t98502 [at] users.sourceforge.net&gt;<br/>
+ (C) 2004 Karl Soderstrom &lt;ks [at] xanadunet.net&gt;<br/>
  (C) 2000 Helix Code, Inc. (<a rel="nofollow" href="http://www.helixcode.com">www.helixcode.com</a>) </p>
 <h2>LICENSE</h2>
 <dl>

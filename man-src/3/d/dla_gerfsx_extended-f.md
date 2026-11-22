@@ -10,7 +10,7 @@ description: "dla_gerfsx_extended.f –"
 <p>dla_gerfsx_extended.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dla_gerfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERRS_N, ERRS_C, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br />
+<p>subroutine <code>dla_gerfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERRS_N, ERRS_C, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br/>
  <i></i><code>DLA_GERFSX_EXTENDED</code> improves the computed solution to a system of linear equations for general matrices by performing extra-precise iterative refinement and provides error bounds and backward error estimates for the solution.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dla_gerfsx_extended (integerPREC_TYPE, integerTRANS_TYPE, integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, logicalCOLEQU, double precision, dimension( * )C, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldy, * )Y, integerLDY, double precision, dimension( * )BERR_OUT, integerN_NORMS, double precision, dimension( nrhs, * )ERRS_N, double precision, dimension( nrhs, * )ERRS_C, double precision, dimension( * )RES, double precision, dimension( * )AYB, double precision, dimension( * )DY, double precision, dimension( * )Y_TAIL, double precisionRCOND, integerITHRESH, double precisionRTHRESH, double precisionDZ_UB, logicalIGNORE_CWISE, integerINFO)</h3>

@@ -63,18 +63,18 @@ description: "powerman – power on/off nodes"
 <p> <code>powerman</code> target hostnames may be specified as comma separated or space separated hostnames or host ranges. Host ranges are of the general form: prefix[n-m,l-k,&#8230;], where n &lt; m and l &lt; k, etc., This form should not be confused with regular expression character classes (also denoted by &#8220;[]&#8221;). For example, foo[19] does not represent foo1 or foo9, but rather represents a degenerate range: foo19. </p>
 <p> This range syntax is meant only as a convenience on clusters with a prefixNN naming convention and specification of ranges should not be considered necessary &#8212; the list foo1,foo9 could be specified as such, or by the range foo[1,9]. </p>
 <p> Some examples of powerman targets follows: </p>
-<p> Power on hosts bar,baz,foo01,foo02,&#8230;,foo05<br />
+<p> Power on hosts bar,baz,foo01,foo02,&#8230;,foo05<br/>
 &nbsp;<wbr>powerman &#8211;on bar baz foo[01-05] </p>
-<p> Power on hosts bar,foo7,foo9,foo10<br />
+<p> Power on hosts bar,foo7,foo9,foo10<br/>
 &nbsp;<wbr>powerman &#8211;on bar,foo[7,9-10] </p>
-<p> Power on foo0,foo4,foo5<br />
+<p> Power on foo0,foo4,foo5<br/>
 &nbsp;<wbr>powerman &#8211;on foo[0,4-5] </p>
 <p> As a reminder to the reader, some shells will interpret brackets ([ and ]) for pattern matching. Depending on your shell, it may be necessary to enclose ranged lists within quotes. For example, in tcsh, the last example above should be executed as: </p>
 <pre>
     powerman --on &quot;foo[0,4-5]&quot;
 </pre>
 <h2>FILES</h2>
-<p> /usr/bin/powerman<br />
+<p> /usr/bin/powerman<br/>
  /usr/bin/pm </p>
 <h2>ORIGIN</h2>
 <p> PowerMan was originally developed by Andrew Uselton on LLNL&#8217;s Linux clusters. This software is open source and distributed under the terms of the GNU GPL. </p>

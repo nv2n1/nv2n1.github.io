@@ -13,9 +13,9 @@ description: "byobu-export – DEPRECATED"
 <p> <code>byobu-export</code> </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>byobu-export</code> utility is now deprecated. </p>
-<p> To install byobu on a system for which byobu is not packaged, or where you are not the root user, simply:<br />
-&nbsp;<wbr>*&nbsp;<wbr>Download the latest release&nbsp;<wbr>(&gt;=&nbsp;<wbr>3.0)&nbsp;<wbr>from:<br />
-&nbsp;<wbr><a rel="nofollow" href="https://launchpad.net/byobu/+download">https://launchpad.net/byobu/+download</a><br />
+<p> To install byobu on a system for which byobu is not packaged, or where you are not the root user, simply:<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Download the latest release&nbsp;<wbr>(&gt;=&nbsp;<wbr>3.0)&nbsp;<wbr>from:<br/>
+&nbsp;<wbr><a rel="nofollow" href="https://launchpad.net/byobu/+download">https://launchpad.net/byobu/+download</a><br/>
 &nbsp;<wbr>*&nbsp;<wbr>And follow the instructions in the README </p>
 <h2>AUTHOR</h2>
 <p> This manpage and the utility were written by Dustin Kirkland &lt;kirkland [at] byobu.co&gt; for Ubuntu systems (but may be used by others). Permission is granted to copy, distribute and/or modify this document and the utility under the terms of the GNU General Public License, Version 3 published by the Free Software Foundation. </p>

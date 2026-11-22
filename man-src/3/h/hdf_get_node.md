@@ -17,7 +17,7 @@ description: "hdf_get_node – Similar to hdf_get_obj except all the nodes are c
 NEOERR *hdf_get_node(HDF *hdf, const char *name, HDF **ret);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf -&gt; the dataset node to start from<br />
+<p> hdf -&gt; the dataset node to start from<br/>
  name -&gt; the name to walk to </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_get_node is similar to hdf_get_obj, except instead of stopping if it can&#8217;t find a node in the tree, it will create all of the nodes necessary to hand you back the node you ask for. Nodes are created with no value. </p>

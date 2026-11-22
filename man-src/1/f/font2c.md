@@ -13,7 +13,7 @@ description: "font2c – Write PostScript Type 0 or Type 1 font as C code"
 <p> <code>font2c</code> <i>fontnames</i></p>
 <h2>DESCRIPTION</h2>
 <p> This script invokes <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) with the following options: </p>
-<p> <center> <code>-q -dNODISPLAY -dWRITESYSTEMDICT</code><br />
+<p> <center> <code>-q -dNODISPLAY -dWRITESYSTEMDICT</code><br/>
  </center> </p>
 <p> followed by the arguments from the command line. This will write out a PostScript Type 0 or Type 1 font as C code that can be linked with the interpreter.</p>
 <h2>SEE ALSO</h2>

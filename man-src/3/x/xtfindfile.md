@@ -27,5 +27,5 @@ description: "XtFindFile – search for a file using substitutions in the path l
 <p> If the <i>predicate</i> parameter is NULL, an internal procedure that checks if the file exists, is readable, and is not a directory will be used. </p>
 <p> It is the responsibility of the caller to free the returned string using <code>XtFree</code> when it is no longer needed.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

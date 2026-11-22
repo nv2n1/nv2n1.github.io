@@ -10,7 +10,7 @@ description: "expire.ctl – Configuration file for article expiration"
 <p>expire.ctl &#8211; Configuration file for article expiration</p>
 <h2>Description</h2>
 <p>The file <i>pathetc</i>/expire.ctl is the default configuration file for <code>expire</code> and <code>expireover</code>, which read it at start-up. It serves two purposes: it defines how long history entries for expired or rejected articles are remembered, and it determines how long articles stored on the server are retained. </p>
-<p> Normally, if all of the storage methods used by the server are self-expiring (such as <font SIZE="-1">CNFS</font>), all lines except the <tt>&quot;/remember/&quot;</tt> setting (described below) are ignored. This can be changed with the <code>-N</code> option to <code>expire</code> or <code>expireover</code>. </p>
+<p> Normally, if all of the storage methods used by the server are self-expiring (such as CNFS), all lines except the <tt>&quot;/remember/&quot;</tt> setting (described below) are ignored. This can be changed with the <code>-N</code> option to <code>expire</code> or <code>expireover</code>. </p>
 <p> Blank lines and lines beginning with a number sign (<tt>&quot;#&quot;</tt>) are ignored. All other lines should be in one of two formats. The order of the file is significant, and the last matching entry will be used. </p>
 <p> The first format specifies how long to keep history entries for articles that aren&#8217;t present in the news spool. These are articles that have either already expired, or articles which the server rejected (when <i>remembertrash</i> is set to true in <i>inn.conf</i>). There should be one and only one line in this format, which looks like: </p>
 <pre> /remember/:&lt;days&gt;</pre>
@@ -59,7 +59,7 @@ description: "expire.ctl – Configuration file for article expiration"
  # within reasonable limits.
  0:1:14:65</pre>
 <h2>History</h2>
-<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
+<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to POD by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
 <p> <tt>$Id:</tt> expire.ctl.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-expire/">expire</a></i>(8), <i><a href="/docs/linux/man/8-expireover/">expireover</a></i>(8), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/8-news-daily/">news.daily</a></i>(8), <i><a href="/docs/linux/man/5-storage-conf/">storage.conf</a></i>(5), <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3). </p>

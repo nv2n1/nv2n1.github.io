@@ -21,7 +21,7 @@ description: "Razor-Agents – Collection of files for checking, reporting, and 
  &lt;home&gt;/.razor/razor-agent.conf used if readable, else
  /etc/razor/razor-agent.conf used if readable, else
  all defaults are used.</pre>
-<p>To see configuration defaults, do<br />
+<p>To see configuration defaults, do<br/>
 &nbsp;<wbr>&nbsp;<wbr>razor-admin -create -conf=/tmp/razor2-defaults.conf</p>
 <h2>Razorhome</h2>
 <p>All Razor-Agents also share a razorhome directory, where identity, logging, and cached information about servers is stored. Razorhome is computed after configuration file, in the following order. </p>

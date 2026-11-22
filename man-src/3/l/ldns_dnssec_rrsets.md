@@ -10,7 +10,7 @@ description: "ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_r
 
 <p> ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_rrsets </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p>&nbsp;<wbr>ldns_dnssec_zone(); </p>
@@ -20,10 +20,10 @@ description: "ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_r
 <dl>
 <dt> <i>ldns_dnssec_name</i></dt>
 <dd>
-</dd><dd>Structure containing all resource records for a domain name<br />
- Including the derived NSEC3, if present<br />
- struct ldns_struct_dnssec_name<br />
- {<br />
+</dd><dd>Structure containing all resource records for a domain name<br/>
+ Including the derived NSEC3, if present<br/>
+ struct ldns_struct_dnssec_name<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/**</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> * pointer to a dname containing the name.</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> * Usually points to the owner name of the first RR of the first RRset</p>
@@ -68,9 +68,9 @@ description: "ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_r
 <dl>
 <dt> <i>ldns_dnssec_rrs</i></dt>
 <dd>
-</dd><dd>Singly linked list of rrs<br />
- struct ldns_struct_dnssec_rrs<br />
- {<br />
+</dd><dd>Singly linked list of rrs<br/>
+ struct ldns_struct_dnssec_rrs<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr *rr;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_dnssec_rrs *next;</p>
 <p> }; </p>
@@ -78,9 +78,9 @@ description: "ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_r
 <dl>
 <dt> <i>ldns_dnssec_rrsets</i></dt>
 <dd>
-</dd><dd>Singly linked list of RRsets<br />
- struct ldns_struct_dnssec_rrsets<br />
- {<br />
+</dd><dd>Singly linked list of RRsets<br/>
+ struct ldns_struct_dnssec_rrsets<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_dnssec_rrs *rrs;</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_type type;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_dnssec_rrs *signatures;</p>

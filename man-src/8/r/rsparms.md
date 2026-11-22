@@ -29,7 +29,7 @@ description: "rsparms – Configure the Rose interface."
 <dt><code>-version</code></dt>
 <dd>Display the version information.</dd></dl>
 <h2>Files</h2>
-<p>/etc/ax25/axports<br />
+<p>/etc/ax25/axports<br/>
  /etc/ax25/rsports</p>
 <h2>See Also</h2>
 <p><code>call</code>(1), <code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5), <code><a href="/docs/linux/man/5-rsports/">rsports</a></code>(5), <code>rsctl</code>(8), <code><a href="/docs/linux/man/8-rsparms/">rsparms</a></code>(8).</p>

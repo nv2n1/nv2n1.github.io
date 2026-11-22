@@ -227,7 +227,7 @@ description: "safekeep.backup – Configuration file for a ‘"
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-safekeep/">safekeep</a>(1), <a href="/docs/linux/man/5-safekeep-conf/">safekeep.conf</a>(5), <a href="/docs/linux/man/1-rdiff-backup/">rdiff-backup</a>(1), <a href="/docs/linux/man/8-lvcreate/">lvcreate</a>(8)</p>
 <h2>Author</h2>
-<p>This man page was originally written by Dimi Paun &lt;m[blue]<code>dimi [at] lattica.com</code>m[]<font SIZE="-2">[1]</font>&gt;.</p>
+<p>This man page was originally written by Dimi Paun &lt;m[blue]<code>dimi [at] lattica.com</code>m[][1]&gt;.</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

@@ -17,7 +17,7 @@ description: "ragraph – graph argus(8) data."
 <p> By default <code>ragraph</code> writes its output to ragraph.png, in the current directory. Use the &#8216;-w&#8217; raoption to specify an alternate output filename. </p>
 <p> <code>Ragraph</code> is implemented as a perl script front-end to the routine <code>rabins</code> and rrd-tool, which is used to generate PNG formatted graphs. As a result <code>ragraph</code> supports all the raoption and most of the options to the rrd-tool graphing functions. </p>
 <h2>RA OPTIONS</h2>
-<p> Ragraph, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression, and specifying an output filename using the -w option.<br />
+<p> Ragraph, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression, and specifying an output filename using the -w option.<br/>
 &nbsp;<wbr> See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. </p>
 <h2>RRDTOOL GRAPH OPTIONS</h2>
 <p> Ragraph, when using rrdtool as the graphing backend, will pass rrdgraph specific options to the appropriate rrdtool module. These are the specific rrdtool options that are supported.</p>

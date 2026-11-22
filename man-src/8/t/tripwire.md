@@ -9,12 +9,12 @@ description: "tripwire – a file integrity checker for UNIX systems"
 
 <p>tripwire &#8211; a file integrity checker for UNIX systems</p>
 <h2>Synopsis</h2>
-<p><code>tripwire</code> { <code>-m i</code> | <code>&#8211;init</code> } [ <i>options&#8230;</i> ]<br />
+<p><code>tripwire</code> { <code>-m i</code> | <code>&#8211;init</code> } [ <i>options&#8230;</i> ]<br/>
  <code>tripwire</code> { <code>-m c</code> | <code>&#8211;check</code> } [ <i>options&#8230;</i> ] </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <i>object1</i> [ <i>object2&#8230;</i> ]]<br />
- <code>tripwire</code> { <code>-m u</code> | <code>&#8211;update</code> } [ <i>options&#8230;</i> ]<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <i>object1</i> [ <i>object2&#8230;</i> ]]<br/>
+ <code>tripwire</code> { <code>-m u</code> | <code>&#8211;update</code> } [ <i>options&#8230;</i> ]<br/>
  <code>tripwire</code> { <code>-m p</code> | <code>&#8211;update-policy</code> } [ <i>options&#8230;</i> ] </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>policyfile.txt</i><br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>policyfile.txt</i><br/>
  <code>tripwire</code> { <code>-m t</code> | <code>&#8211;test</code> } [ <i>options&#8230;</i> ]</p>
 <h2>Description</h2>
 <h3>Database Initialization Mode</h3>

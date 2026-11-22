@@ -10,7 +10,7 @@ description: "dumpreg – dump the state of the card as the svgalib chipset driv
 
 <p> dumpreg &#8211; dump the state of the card as the svgalib chipset driver sees it.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>dumpreg</code><br />
+<p> <code>dumpreg</code><br/>
  <code>dumpreg &lt; /dev/tty</code><i>N</i> </p>
 <h2>DESCRIPTION</h2>
 <p> The chipset drivers of svgalib inquire the mode of the graphic card when the application is started and restore it when the svgalib application quits. <code>dumpreg</code> prints this information to stdout. </p>

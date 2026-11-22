@@ -23,15 +23,15 @@ description: "arcperftest – ARC service performance tester"
 <dd> If specified close connection and reconnect after every request. </dd>
 </dl>
 <h2>EXAMPLES</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>Axis2C:<br />
-&nbsp;<wbr>with TLS:<br />
-arcperftest&nbsp;<wbr><a rel="nofollow" href="https://glueball.uio.no:50443/axis2/services/echo">https://glueball.uio.no:50443/axis2/services/echo</a>&nbsp;<wbr>&nbsp;<wbr>10 30<br />
-&nbsp;<wbr>without TLS:<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Axis2C:<br/>
+&nbsp;<wbr>with TLS:<br/>
+arcperftest&nbsp;<wbr><a rel="nofollow" href="https://glueball.uio.no:50443/axis2/services/echo">https://glueball.uio.no:50443/axis2/services/echo</a>&nbsp;<wbr>&nbsp;<wbr>10 30<br/>
+&nbsp;<wbr>without TLS:<br/>
 arcperftest&nbsp;<wbr><a rel="nofollow" href="http://glueball.uio.no:50000/axis2/services/echo">http://glueball.uio.no:50000/axis2/services/echo</a>&nbsp;<wbr>&nbsp;<wbr>10 30 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>HED:<br />
-&nbsp;<wbr>with TLS:<br />
-arcperftest&nbsp;<wbr><a rel="nofollow" href="https://glueball.uio.no:60000/echo">https://glueball.uio.no:60000/echo</a>&nbsp;<wbr>10 30<br />
-&nbsp;<wbr>without TLS:<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>HED:<br/>
+&nbsp;<wbr>with TLS:<br/>
+arcperftest&nbsp;<wbr><a rel="nofollow" href="https://glueball.uio.no:60000/echo">https://glueball.uio.no:60000/echo</a>&nbsp;<wbr>10 30<br/>
+&nbsp;<wbr>without TLS:<br/>
 arcperftest&nbsp;<wbr><a rel="nofollow" href="http://glueball.uio.no:60010/echo">http://glueball.uio.no:60010/echo</a>&nbsp;<wbr>10 30 </p>
 <h2>COPYRIGHT</h2>
 <p> APACHE LICENSE Version 2.0 </p>

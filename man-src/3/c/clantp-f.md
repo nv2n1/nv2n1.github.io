@@ -10,7 +10,7 @@ description: "clantp.f –"
 <p>clantp.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>clantp</code> (NORM, UPLO, DIAG, N, AP, WORK)<br />
+<p>REAL function <code>clantp</code> (NORM, UPLO, DIAG, N, AP, WORK)<br/>
  <i></i><code>CLANTP</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a triangular matrix supplied in packed form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function clantp (characterNORM, characterUPLO, characterDIAG, integerN, complex, dimension( * )AP, real, dimension( * )WORK)</h3>

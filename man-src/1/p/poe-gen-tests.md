@@ -17,7 +17,7 @@ poe - gen - tests-- dirbase t / loops-- loop Glib-- loop Kqueue-- loop Event::Li
 
 <h2>DESCRIPTION</h2>
 
- This program and the accompanying POE::Test::Loop::* modules make up <font SIZE="-1">POE</font>'s tests for POE::Loop subclasses. These tests are designed to run identically regardless of the current event loop. <font SIZE="-1">POE</font> uses them to test the event loops it bundles: 
+ This program and the accompanying POE::Test::Loop::* modules make up POE's tests for POE::Loop subclasses. These tests are designed to run identically regardless of the current event loop. POE uses them to test the event loops it bundles: 
 
  <pre>
   POE::Loop::Gtk
@@ -74,7 +74,7 @@ poe - gen - tests-- dirbase t / loops-- loop Event::Lib poe - gen - tests-- dirb
 
  poe-gen-tests looks for a ``=for poe_tests'' or ``=begin poe_tests'' section within the POE::Loop class being tested. If defined, this section should include a single function, <i>skip_tests()</i>, that determines whether any given test should be skipped. 
 
- Please see perlpod for syntax for ``=for'' and ``=begin''. Also see <font SIZE="-1">PODDITIES</font> for notable differences between POE::Test::Loop's <font SIZE="-1">POD</font> support and the standard. 
+ Please see perlpod for syntax for ``=for'' and ``=begin''. Also see PODDITIES for notable differences between POE::Test::Loop's POD support and the standard. 
 
  <i>skip_tests()</i> is called with one parameter, the base name of the test about to be executed. It returns false if the test should run, or a message that will be displayed to the user explaining why the test will be skipped. This message is passed directly to Test::More's <i>plan()</i> along with ``skip_all''. The logic is essentially: 
 
@@ -106,7 +106,7 @@ if (my $why = skip_tests("k_signals_rerun")) {
   }
  
 
- POE::Loop::Gtk checks whether <font SIZE="-1">DISPLAY</font> is set, which implies that X is running. It then checks whether Gtk is available, loadable, and safely initializable before skipping specific tests. 
+ POE::Loop::Gtk checks whether DISPLAY is set, which implies that X is running. It then checks whether Gtk is available, loadable, and safely initializable before skipping specific tests. 
 
  
   =for poe_tests
@@ -179,11 +179,11 @@ if (my $why = skip_tests("k_signals_rerun")) {
 
 <h2>INSTALL SCRIPT INTEGRATION</h2>
 
- The POE::Loop tests started out as part of the <font SIZE="-1">POE</font> distribution. All the recommendations and examples that follow are written and tested against ExtUtils::MakeMaker because that's what <font SIZE="-1">POE</font> uses. Please adjust these recipes according to your taste and preference.
+ The POE::Loop tests started out as part of the POE distribution. All the recommendations and examples that follow are written and tested against ExtUtils::MakeMaker because that's what POE uses. Please adjust these recipes according to your taste and preference.
 
 <h3>Calling the Test Generator</h3>
 
- Tests need to be generated prior to the user or <font SIZE="-1">CPAN</font> shell running ``make test''. A tidy way to do this might be to create a new Makefile target and include that as a dependency for ``make test''. <font SIZE="-1">POE</font> takes a simpler approach, calling the script from its Makefile.PL: 
+ Tests need to be generated prior to the user or CPAN shell running ``make test''. A tidy way to do this might be to create a new Makefile target and include that as a dependency for ``make test''. POE takes a simpler approach, calling the script from its Makefile.PL: 
 
  
 system(
@@ -193,9 +193,9 @@ system(
     die $ !;
  
 
- The previous approach generates tests at install time, so it's not necessary to include the generated files in the <font SIZE="-1">MANIFEST. </font> Test directories should also be excluded from the <font SIZE="-1">MANIFEST. </font> poe-gen-tests will create the necessary paths. 
+ The previous approach generates tests at install time, so it's not necessary to include the generated files in the MANIFEST.  Test directories should also be excluded from the MANIFEST.  poe-gen-tests will create the necessary paths. 
 
- It's also possible to generate the tests prior to ``make dist''. The distribution's <font SIZE="-1">MANIFEST</font> must include the generated files in this case. 
+ It's also possible to generate the tests prior to ``make dist''. The distribution's MANIFEST must include the generated files in this case. 
 
  Most people will not need to add the generated tests to their repositories.
 
@@ -211,7 +211,7 @@ system(
 
 <h2>CLEANING UP</h2>
 
- Makefiles will not clean up files that aren't present in the <font SIZE="-1">MANIFEST.</font> This includes tests generated at install time. If this bothers you, you'll need to add directives to include the generated tests in the ``clean'' and ``distclean'' targets. 
+ Makefiles will not clean up files that aren't present in the MANIFEST. This includes tests generated at install time. If this bothers you, you'll need to add directives to include the generated tests in the ``clean'' and ``distclean'' targets. 
 
  <pre>
   clean =&gt; {
@@ -225,7 +225,7 @@ system(
 
 <h2>Skipping Network Tests</h2>
 
- Some generated tests require a network to be present and accessible. Those tests will be skipped unless the file ``run_network_tests'' is present in the main distribution directory. You can include that file in your distribution's tarball, but it's better create it at install time after asking the user. Here's how <font SIZE="-1">POE</font> does it. Naturally you're free to do it some other way. 
+ Some generated tests require a network to be present and accessible. Those tests will be skipped unless the file ``run_network_tests'' is present in the main distribution directory. You can include that file in your distribution's tarball, but it's better create it at install time after asking the user. Here's how POE does it. Naturally you're free to do it some other way. 
 
  <pre><code>
 #Switch to default behavior if STDIN isn't a tty.
@@ -266,15 +266,15 @@ print "\n";
 
 <h2>Skipping Other Tests</h2>
 
- <font SIZE="-1">POE</font>'s loop tests will enable or disable tests based on the event loop's capabilities. Distributions and event loops may set these variables to signal which tests are okay to run.
+ POE's loop tests will enable or disable tests based on the event loop's capabilities. Distributions and event loops may set these variables to signal which tests are okay to run.
 
-<h3><font SIZE="-1">POE_LOOP_USES_POLL</font></h3>
+<h3>POE_LOOP_USES_POLL</h3>
 
  Some platforms do not support <i>poll()</i> on certain kinds of filehandles. Event loops that use <i>poll()</i> should set this environment variable to a true value. It will cause the tests to skip this troublesome combination.
 
-<h3><font SIZE="-1">PODDITIES</font></h3>
+<h3>PODDITIES</h3>
 
- Previous versions of POE::Test::Loops documented ``=for poe_tests'' sections terminated by =cut and containing blank lines. This is incorrect <font SIZE="-1">POD</font> syntax, and it's the reason the <i>skip_tests()</i> functions showed up in perldoc and on search.cpan.org. The following syntax is wrong and should not have been used. I'm so sorry. 
+ Previous versions of POE::Test::Loops documented ``=for poe_tests'' sections terminated by =cut and containing blank lines. This is incorrect POD syntax, and it's the reason the <i>skip_tests()</i> functions showed up in perldoc and on search.cpan.org. The following syntax is wrong and should not have been used. I'm so sorry. 
 
  <pre>
   =for poe_tests
@@ -291,7 +291,7 @@ print "\n";
   }
 </pre> 
 
- Multi-line tests containing blank lines can be specified using <font SIZE="-1">POD</font>'s ``=begin poe_tests'' terminated by ``=end poe_tests''. 
+ Multi-line tests containing blank lines can be specified using POD's ``=begin poe_tests'' terminated by ``=end poe_tests''. 
 
  <pre>
   =begin poe_tests
@@ -307,15 +307,15 @@ print "\n";
 
  POE::Test::Loops, POE::Loop, perlpod.
 
-<h3><font SIZE="-1">BUG TRACKER</font></h3>
+<h3>BUG TRACKER</h3>
 
  <a rel="nofollow" HREF="https://rt.cpan.org/Dist/Display.html?Status=Active">https://rt.cpan.org/Dist/Display.html?Status=Active</a>&amp;Queue=POE-Test-Loops
 
-<h3><font SIZE="-1">REPOSITORY</font></h3>
+<h3>REPOSITORY</h3>
 
  <a rel="nofollow" HREF="https://poe.svn.sourceforge.net/svnroot/poe/trunk/poe-test-loops">https://poe.svn.sourceforge.net/svnroot/poe/trunk/poe-test-loops</a>
 
-<h3><font SIZE="-1">OTHER RESOURCES</font></h3>
+<h3>OTHER RESOURCES</h3>
 
  <a rel="nofollow" HREF="http://search.cpan.org/dist/POE-Test-Loops/">http://search.cpan.org/dist/POE-Test-Loops/</a>
 

@@ -21,7 +21,7 @@ description: "pktogf – convert packed font files to generic font files"
 <p> <code>pktogf</code> looks for <i>pk_file_name</i> using the environment variable PKFONTS. If that is not set, it uses the variable TEXPKS. If that is not set, it uses TEXFONTS. If that is not set, it uses the system default. </p>
 <p> See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gftopk/">gftopk</a></code>(1), <code><a href="/docs/linux/man/1-gftype/">gftype</a></code>(1), <code><a href="/docs/linux/man/1-pktype/">pktype</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-gftopk/">gftopk</a></code>(1), <code><a href="/docs/linux/man/1-gftype/">gftype</a></code>(1), <code><a href="/docs/linux/man/1-pktype/">pktype</a></code>(1).<br/>
  Donald E. Knuth et al., <i>Metafontware</i>.</p>
 <h2>AUTHORS</h2>
 <p> Tomas Rokicki wrote the program. Pierre MacKay adapted it for compilation with <code>web2c</code>. </p>

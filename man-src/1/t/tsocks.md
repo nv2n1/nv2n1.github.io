@@ -11,8 +11,8 @@ description: "tsocks – Shell wrapper to simplify the use of the"
 <p> <code>tsocks</code> &#8211; Shell wrapper to simplify the use of the </p>
 <p><a href="/docs/linux/man/8-tsocks/">tsocks</a>(8) library to transparently allow an application to use a SOCKS proxy</p>
 <h2>SYNOPSIS</h2>
-<p> <code>tsocks</code> [application&nbsp;<wbr>[application&#8217;s arguments]]<br />
- or <code>tsocks</code> [on|off]<br />
+<p> <code>tsocks</code> [application&nbsp;<wbr>[application&#8217;s arguments]]<br/>
+ or <code>tsocks</code> [on|off]<br/>
  or <code>tsocks</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>tsocks</code> is a wrapper between the tsocks library and the application what you would like to run socksified.</p>
@@ -21,9 +21,9 @@ description: "tsocks – Shell wrapper to simplify the use of the"
 <dt><code>[application&nbsp;<wbr>[application&#8217;s arguments]]</dt>
 <dd> run the application as specified with the environment (LD_PRELOAD) set such that <a href="/docs/linux/man/8-tsocks/">tsocks</a>(8) will transparently proxy SOCKS connections in that program</dd>
 <dt>[on|off]</dt>
-<dd> this option adds or removes <a href="/docs/linux/man/8-tsocks/">tsocks</a>(8) from the LD_PRELOAD environment variable. When <a href="/docs/linux/man/8-tsocks/">tsocks</a>(8) is in this variable all executed applications are automatically socksified. If you want to use this function, you HAVE to source the shell script from yours, like this: &quot;source /usr/bin/tsocks&quot; or &quot;. /usr/bin/tsocks&quot;<br />
- Example:<br />
- &quot;. tsocks on&quot; &#8212; add the tsocks lib to LD_PRELOAD<br />
+<dd> this option adds or removes <a href="/docs/linux/man/8-tsocks/">tsocks</a>(8) from the LD_PRELOAD environment variable. When <a href="/docs/linux/man/8-tsocks/">tsocks</a>(8) is in this variable all executed applications are automatically socksified. If you want to use this function, you HAVE to source the shell script from yours, like this: &quot;source /usr/bin/tsocks&quot; or &quot;. /usr/bin/tsocks&quot;<br/>
+ Example:<br/>
+ &quot;. tsocks on&quot; &#8212; add the tsocks lib to LD_PRELOAD<br/>
  &quot;. tsocks off&quot; &#8212; remove the tsocks lib from LD_PRELOAD</dd>
 <dt>[show|sh]</dt>
 <dd> show the current value of the LD_PRELOAD variable</dd>

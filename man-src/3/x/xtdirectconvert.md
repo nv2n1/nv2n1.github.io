@@ -36,6 +36,6 @@ description: "XtConvert, XtDirectConvert – invoke resource converters"
 <p> The <code>XtDirectConvert</code> function looks in the converter cache to see if this conversion procedure has been called with the specified arguments. If so, it returns a descriptor for information stored in the cache; otherwise, it calls the converter and enters the result in the cache. </p>
 <p> Before calling the specified converter, <code>XtDirectConvert</code> sets the return value size to zero and the return value address to NULL. To determine if the conversion was successful, the client should check to_return.address for non-NULL. <code>XtDirectConvert</code> has been replaced by <code>XtCallConverter</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappaddconverter/">XtAppAddConverter</a>(3), <a href="/docs/linux/man/3-xtstringconversionwarning/">XtStringConversionWarning</a>(3), <a href="/docs/linux/man/3-xtconvertandstore/">XtConvertAndStore</a>(3), <a href="/docs/linux/man/3-xtcallconverter/">XtCallConverter</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappaddconverter/">XtAppAddConverter</a>(3), <a href="/docs/linux/man/3-xtstringconversionwarning/">XtStringConversionWarning</a>(3), <a href="/docs/linux/man/3-xtconvertandstore/">XtConvertAndStore</a>(3), <a href="/docs/linux/man/3-xtcallconverter/">XtCallConverter</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

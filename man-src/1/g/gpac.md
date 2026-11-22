@@ -44,22 +44,22 @@ description: "GPAC – MPEG-4 Systems Framework and Software Development Kit"
 <dt><code>LogLevel (value: none, error, warning, info, debug)</code></dt>
 <dd> specifies the level of the log. By default, no log is performed.</dd>
 <dt><code>LogTools (value: a &#8216;:&#8217;-separated list of the following values)</code></dt>
-<dd> specifies which set of tools from GPAC should be logged. Available tools are:<br />
- core: libgpac core events.<br />
- coding: bitstream formats (audio, video, scene).<br />
- container: container formats (ISO File, MPEG-2 TS, AVI, &#8230;).<br />
- network: network data exept RTP trafic.<br />
- rtp: rtp, rtcp and rtsp trafic.<br />
- author : authoring tools (hint, import, export).<br />
- sync: terminal sync layer.<br />
- codec: terminal codec messages.<br />
- parser: scene parsers (svg, xmt, bt) and other.<br />
- media: terminal media object management.<br />
- scene: scene graph and scene manager.<br />
- script: scripting engine messages.<br />
- compose: composition engine (events, etc).<br />
- render: renderng engine (2D, 3D, etc).<br />
- service: network service management.<br />
+<dd> specifies which set of tools from GPAC should be logged. Available tools are:<br/>
+ core: libgpac core events.<br/>
+ coding: bitstream formats (audio, video, scene).<br/>
+ container: container formats (ISO File, MPEG-2 TS, AVI, &#8230;).<br/>
+ network: network data exept RTP trafic.<br/>
+ rtp: rtp, rtcp and rtsp trafic.<br/>
+ author : authoring tools (hint, import, export).<br/>
+ sync: terminal sync layer.<br/>
+ codec: terminal codec messages.<br/>
+ parser: scene parsers (svg, xmt, bt) and other.<br/>
+ media: terminal media object management.<br/>
+ scene: scene graph and scene manager.<br/>
+ script: scripting engine messages.<br/>
+ compose: composition engine (events, etc).<br/>
+ render: renderng engine (2D, 3D, etc).<br/>
+ service: network service management.<br/>
  mmio: Audio/Video HW I/O management.</dd></dl>
 <h2>SECTION RecentFiles</h2>
 <p> The &quot;RecentFiles&quot; section of the config file holds last accessed files (hardcoded to no more than 20) in the last access order. The keys are the file names and no value is used. This section is only used by GUI clients.</p>
@@ -71,13 +71,13 @@ description: "GPAC – MPEG-4 Systems Framework and Software Development Kit"
 <dt><code>AlwaysDrawBIFS (value: yes, no)</code></dt>
 <dd> if set, late BIFS frame will still be drawn. If not set, the scene won&#8217;t be redrawn until BIFS streams are back in sync. This is by default off to keep better sync, but may be changed when testing heavy content or slow renderers.</dd>
 <dt><code>ForceSingleClock (value: yes, no)</code></dt>
-<dd> One big problem with MP4 files is that the notion of &quot;duration&quot; has been unclear for a long time, and most content available (audio-video files) specifiy a wrong BIFS duration. In such a case the movie cannot be controled/seek into.<br />
- Another problem with ISMA streaming is that BIFS/OD don&#8217;t use the same clock as audio/video, thus seeking the main timeline does not seek AV media.<br />
+<dd> One big problem with MP4 files is that the notion of &quot;duration&quot; has been unclear for a long time, and most content available (audio-video files) specifiy a wrong BIFS duration. In such a case the movie cannot be controled/seek into.<br/>
+ Another problem with ISMA streaming is that BIFS/OD don&#8217;t use the same clock as audio/video, thus seeking the main timeline does not seek AV media.<br/>
  Setting the ForceSingleClock will handle both cases by using a single timeline for all media streams and setting the duration to the one of the longest stream.</dd>
 <dt><code>ThreadingPolicy (value: Free, Single, Multi)</code></dt>
-<dd> specifies how media decoders are to be threaded.<br />
- Free: lets decoders decide of their threading.<br />
- Single: means that all decoders are managed in a single thread performing scheduling and priority handling.<br />
+<dd> specifies how media decoders are to be threaded.<br/>
+ Free: lets decoders decide of their threading.<br/>
+ Single: means that all decoders are managed in a single thread performing scheduling and priority handling.<br/>
  Multi: means that each decoder runs in its own thread.</dd>
 <dt><code>Priority (value: low, normal, high, real-time)</code></dt>
 <dd> specifies the priority of the decoders (priority is applied to decoder thread(s) regardless of threading mode).</dd>
@@ -99,9 +99,9 @@ description: "GPAC – MPEG-4 Systems Framework and Software Development Kit"
 <dt><code>FrameRate (value: float)</code></dt>
 <dd> specifies the simulation frame-rate of the presentation &#8211; this value is also used by the MPEG-4 Systems engine to determine when a BIFS frame is mature for decoding.</dd>
 <dt><code>AntiAlias (value: None, All, Text)</code></dt>
-<dd> specifies antialiasing settings &#8211; whether the setting is applied or not depends on the graphics plugin/graphic card.<br />
- None: no anti-aliasing<br />
- Text: anti-aliasing for text only<br />
+<dd> specifies antialiasing settings &#8211; whether the setting is applied or not depends on the graphics plugin/graphic card.<br/>
+ None: no anti-aliasing<br/>
+ Text: anti-aliasing for text only<br/>
  All: complete anti-aliasing</dd>
 <dt><code>FastRender (value: yes, no)</code></dt>
 <dd> specifies whether rendering should target speed or quality &#8211; whether the setting is applied or not depends on the graphics plugin/graphic card.</dd>
@@ -126,17 +126,17 @@ description: "GPAC – MPEG-4 Systems Framework and Software Development Kit"
 <dt><code>PolygonAA (value: yes, no)</code></dt>
 <dd> specifies whether polygon antialiasing should be used in full antialiasing mode. If not set, only lines and points antialiasing are used.</dd>
 <dt><code>Wireframe (value: WireNone, WireOnly, WireOnSolid)</code></dt>
-<dd> specifies wireframe drawing options:<br />
- WireNone: objects are drawn as solid<br />
- WireOnly: objects are drawn as wireframe only<br />
+<dd> specifies wireframe drawing options:<br/>
+ WireNone: objects are drawn as solid<br/>
+ WireOnly: objects are drawn as wireframe only<br/>
  WireOnSolid: objects are drawn as solid and wireframe is then drawn</dd>
 <dt><code>DisableRectExt (value: yes, no)</code></dt>
-<dd> specifies whether openGL rectangular texture extension (GL_EXT_texture_rectangle or GL_NV_texture_rectangle) shall be used or not.<br />
- If &quot;yes&quot;, textures whose dimensions are not power of two are rescaled except if hardware support non-power-of-two textures (GL_ARB_texture_non_power_of_two) natively<br />
+<dd> specifies whether openGL rectangular texture extension (GL_EXT_texture_rectangle or GL_NV_texture_rectangle) shall be used or not.<br/>
+ If &quot;yes&quot;, textures whose dimensions are not power of two are rescaled except if hardware support non-power-of-two textures (GL_ARB_texture_non_power_of_two) natively<br/>
  If &quot;no&quot; and extension is available, textures are used without rescaling. Note that in this case texture transformation are disabled.</dd>
 <dt><code>EmulatePOW2 (value: yes, no)</code></dt>
-<dd> enables power of 2 emulation. Ignored if openGL rectangular texture extension is enabled.<br />
- if set, video texture is not resized but emulated with padding. This usually speeds up video mapping on shapes but disables texture transformations.<br />
+<dd> enables power of 2 emulation. Ignored if openGL rectangular texture extension is enabled.<br/>
+ if set, video texture is not resized but emulated with padding. This usually speeds up video mapping on shapes but disables texture transformations.<br/>
  if not set, video is resized to a power of 2 texture when mapping to a shape.</dd>
 <dt><code>BitmapCopyPixels (value: yes, no)</code></dt>
 <dd> specifies whether the bitmap node should be drawn with regular openGL texturing (&quot;no&quot;) or through pixel copy routines (&quot;yes&quot;). This greatly impacts video rendering through bitmap depending on the graphics card. Some cards will have faster pixel copy routines that texture transfer ones, some won&#8217;t.</dd></dl>
@@ -148,7 +148,7 @@ description: "GPAC – MPEG-4 Systems Framework and Software Development Kit"
 <dt><code>NumBuffers (value: integer, 0 forbidden)</code></dt>
 <dd> When config is forced, specifies the number of audio buffers to allocate (audio buffers are played in ring if possible, otherwise a single audio buffer is allocated).</dd>
 <dt><code>TotalDuration (value: integer, 0 forbidden)</code></dt>
-<dd> When config is forced, specifies the total audio buffer size in milliseconds. Be aware that the longer the audio buffer is, the longer the audio latency will be when pausing an audio object. The quality of fast forward audio playback will also be degradated when using large audio buffers.<br />
+<dd> When config is forced, specifies the total audio buffer size in milliseconds. Be aware that the longer the audio buffer is, the longer the audio latency will be when pausing an audio object. The quality of fast forward audio playback will also be degradated when using large audio buffers.<br/>
  <code>Note:</code> The SDL audio plugin does not use the TotalDuration and num buffers in the same way, it just computes the desired audio buffer size with this settings and picks the next power of 2 size for audio buffer size. It does not use ring buffers either.</dd>
 <dt><code>NoResync (value: yes, no)</code></dt>
 <dd> Disables audio resynchronization: audio clock is never adjusted and A/V sync may get broken</dd>
@@ -238,10 +238,10 @@ description: "GPAC – MPEG-4 Systems Framework and Software Development Kit"
 <dt><code>PacketDropFrequency (value: unsigned int)</code></dt>
 <dd> specifies the frequency at which SL packets are droped. If value is 20, one packet every 20 recieved packets will be droped. Used for packet drop simulation tests.</dd></dl>
 <h2>SECTION MimeTypes</h2>
-<p> This section is used to keep MIME types and file associations for GPAC plugins. The format of the key is:<br />
+<p> This section is used to keep MIME types and file associations for GPAC plugins. The format of the key is:<br/>
  The description is used for GUI purposes (open file dialogs). You may modify the file extension list to support your own extensions. MIME Type is always checked when processing a remote ressource (eg http file) in order to load the appropriated plugins. If MIME type is not available, provided extensions are first checked, then all input plugins are queried.</p>
 <h2>SECTION MimeTypes</h2>
-<p> The &quot;StreamingCache&quot; section of the config file holds all configuration options for the streaming cache. Streaming cache allows for recording of live sources such as RTP/RTSP sessions and internet radios. This is currently just an experimental feature in GPAC.<br />
+<p> The &quot;StreamingCache&quot; section of the config file holds all configuration options for the streaming cache. Streaming cache allows for recording of live sources such as RTP/RTSP sessions and internet radios. This is currently just an experimental feature in GPAC.<br/>
  <code>RecordDirectory (value: path)</code> specifies path for recorded files. Cached data is written directly to disk (no re-interleaving or similar processes). If not specified, the default cache directory is used.</p>
 <dl>
 <dt><code>BaseFileName (value: string)</code></dt>
@@ -254,9 +254,9 @@ description: "GPAC – MPEG-4 Systems Framework and Software Development Kit"
 <dl>
 <dt></dt></dl>
 <h2>Progressive (value: string)</h2>
-<dd> specifies XML parsing mode used by the loader. Supported modes are:<br />
- yes: SAX parsing is used with progressive loading of the document.<br />
- no: SAX parsing is used, document will first be completely downloaded.<br />
+<dd> specifies XML parsing mode used by the loader. Supported modes are:<br/>
+ yes: SAX parsing is used with progressive loading of the document.<br/>
+ no: SAX parsing is used, document will first be completely downloaded.<br/>
  DOM: DOM parsing is used, document will first be completely downloaded. Only supported by libXML2 plugin, otherwise handled as &quot;no&quot;.</dd>
 <dl>
 <dt><code>MaxDuration (value positive integer)</code></dt>
@@ -266,9 +266,9 @@ description: "GPAC – MPEG-4 Systems Framework and Software Development Kit"
 <dl>
 <dt></dt></dl>
 <h2>PostProc (value: string)</h2>
-<dd> specifies filters to apply when decoding video. The string is a list of filters separated with a space character. Filters supported are:<br />
- FilmEffect: xvid 1.0.0 filmEffect.<br />
- Deblock_Y: Y plane deblocking filter.<br />
+<dd> specifies filters to apply when decoding video. The string is a list of filters separated with a space character. Filters supported are:<br/>
+ FilmEffect: xvid 1.0.0 filmEffect.<br/>
+ Deblock_Y: Y plane deblocking filter.<br/>
  Deblock_UV: UV plane deblocking filter.</dd>
 <dl>
 <dt><code>Threaded (value yes, no)</code></dt>

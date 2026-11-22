@@ -11,7 +11,7 @@ description: "sgerq2.f –"
 <p> sgerq2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgerq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
+<p> subroutine <code>sgerq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>SGERQ2</code> computes the RQ factorization of a general rectangular matrix using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgerq2 (integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK, integerINFO)</h3>

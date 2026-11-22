@@ -78,7 +78,7 @@ description: "nova_direct_selinux – Security Enhanced Linux Policy for the nov
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux nova_direct policy is very flexible allowing users to setup their nova_direct processes in as secure a method as possible. </p>
 <p> STANDARD FILE CONTEXT</code> </p>
 <p> SELinux defines the file context types for the nova_direct, if you wanted to store files with these types in a diffent paths, you need to execute the semanage command to sepecify alternate labeling and then use restorecon to put the labels on disk. </p>
-<p> <code>semanage fcontext -a -t nova_direct_unit_file_t &#8216;/srv/mynova_direct_content(/.*)?&#8217;</code><br />
+<p> <code>semanage fcontext -a -t nova_direct_unit_file_t &#8216;/srv/mynova_direct_content(/.*)?&#8217;</code><br/>
  <code>restorecon -R -v /srv/mynova_direct_content</code> </p>
 <p> Note: SELinux often uses regular expressions to specify labels that match multiple files. </p>
 <p> <i>The following file types are defined for nova_direct:</i> </p>

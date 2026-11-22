@@ -11,7 +11,7 @@ description: "strsna.f –"
 <p> strsna.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>strsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, IWORK, INFO)<br />
+<p> subroutine <code>strsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, IWORK, INFO)<br/>
  <i></i><code>STRSNA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine strsna (characterJOB, characterHOWMNY, logical, dimension( * )SELECT, integerN, real, dimension( ldt, * )T, integerLDT, real, dimension( ldvl, * )VL, integerLDVL, real, dimension( ldvr, * )VR, integerLDVR, real, dimension( * )S, real, dimension( * )SEP, integerMM, integerM, real, dimension( ldwork, * )WORK, integerLDWORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -88,8 +88,8 @@ description: "strsna.f –"
           If JOB = 'V', VL is not referenced.
 </pre>
 <p> <i>LDVL</i> </p>
-<p>LDVL is INTEGER<br />
-        The leading dimension of the array VL.LDVL &gt;= 1;<br />
+<p>LDVL is INTEGER<br/>
+        The leading dimension of the array VL.LDVL &gt;= 1;<br/>
 and if JOB = &#8216;E&#8217; or &#8216;B&#8217;, LDVL &gt;= N.</p>
 <p> <i>VR</i> </p>
 <pre>
@@ -102,8 +102,8 @@ and if JOB = &#8216;E&#8217; or &#8216;B&#8217;, LDVL &gt;= N.</p>
           If JOB = 'V', VR is not referenced.
 </pre>
 <p> <i>LDVR</i> </p>
-<p>LDVR is INTEGER<br />
-        The leading dimension of the array VR.LDVR &gt;= 1;<br />
+<p>LDVR is INTEGER<br/>
+        The leading dimension of the array VR.LDVR &gt;= 1;<br/>
 and if JOB = &#8216;E&#8217; or &#8216;B&#8217;, LDVR &gt;= N.</p>
 <p> <i>S</i> </p>
 <pre>

@@ -33,126 +33,126 @@ description: "libmng – Multiple-image Network Graphics (MNG) Reference Library
 <p> Let&#8217;s step through each of the possible callbacks. The sections on reading, displaying and writing will also explain which callbacks are needed when and where. </p>
 <p> &#8211; mng_ptr mng_memalloc (mng_size_t iLen) </p>
 <p> A very basic function which the library uses to allocate a memory-block with the given size. A typical implementation would be: </p>
-<p>&nbsp;<wbr>mng_ptr my_alloc&nbsp;<wbr>(mng_size_t iLen)&nbsp;<wbr>{<br />
-return calloc&nbsp;<wbr>(1, iLen);<br />
+<p>&nbsp;<wbr>mng_ptr my_alloc&nbsp;<wbr>(mng_size_t iLen)&nbsp;<wbr>{<br/>
+return calloc&nbsp;<wbr>(1, iLen);<br/>
 &nbsp;<wbr>} </p>
 <p> Note that the library requires you to zero-out the memory-block!!! </p>
-<p> &#8211; void mng_memfree (mng_ptr pPtr,<br />
+<p> &#8211; void mng_memfree (mng_ptr pPtr,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_size_t iLen) </p>
 <p> Counterpart of the previous function. Typically: </p>
-<p>&nbsp;<wbr>void my_free&nbsp;<wbr>(mng_ptr pPtr, mng_size_t iLen)&nbsp;<wbr>{<br />
-free&nbsp;<wbr>(pPtr);<br />
+<p>&nbsp;<wbr>void my_free&nbsp;<wbr>(mng_ptr pPtr, mng_size_t iLen)&nbsp;<wbr>{<br/>
+free&nbsp;<wbr>(pPtr);<br/>
 &nbsp;<wbr>} </p>
 <p> &#8211; mng_bool mng_openstream (mng_handle hHandle) </p>
 <p> &#8211; mng_bool mng_closestream (mng_handle hHandle) </p>
 <p> These are called by the library just before it starts to process (either read or write) a file and just after the processing stops. This is the recommended place to do I/O initialization &amp; finalization. Whether you do or not, is up to you. The library does not put any meaning into the calls. They are simply provided for your convenience. </p>
-<p> &#8211; mng_bool mng_readdata (mng_handle hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_ptr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pBuf,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iBuflen,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32p pRead)<br />
+<p> &#8211; mng_bool mng_readdata (mng_handle hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_ptr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pBuf,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iBuflen,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32p pRead)<br/>
 &nbsp;<wbr> This function is called when the library needs some more input while reading an image. The reading process supports two modes: Suspension-mode (SMOD) and non-suspension-mode (NSMOD). See mng_set_suspensionmode() for a more detailed description. </p>
 <p> In NSMOD, the library requires you to return exactly the amount of bytes requested (= iBuflen). Any lesser amount indicates the input file is exhausted and the library will return a MNG_UNEXPECTEDEOF errorcode. </p>
 <p> In SMOD, you may return a smaller amount of bytes than requested. This tells the library it should temporarily wait for more input to arrive. The lib will return with MNG_NEEDMOREDATA, and will expect a call to mng_read_resume() or mng_display_resume() next, as soon as more input-data has arrived. </p>
 <p> For NSMOD this function could be as simple as: </p>
-<p>&nbsp;<wbr>mng_bool my_read&nbsp;<wbr>(mng_handle&nbsp;<wbr>&nbsp;<wbr>hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_ptr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pBuf,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iBuflen,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32p pRead)&nbsp;<wbr>{<br />
-*pRead&nbsp;<wbr>=&nbsp;<wbr>fread&nbsp;<wbr>(pBuf, 1, iBuflen, myfile);<br />
-return MNG_TRUE;<br />
+<p>&nbsp;<wbr>mng_bool my_read&nbsp;<wbr>(mng_handle&nbsp;<wbr>&nbsp;<wbr>hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_ptr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pBuf,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iBuflen,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32p pRead)&nbsp;<wbr>{<br/>
+*pRead&nbsp;<wbr>=&nbsp;<wbr>fread&nbsp;<wbr>(pBuf, 1, iBuflen, myfile);<br/>
+return MNG_TRUE;<br/>
 &nbsp;<wbr>} </p>
-<p> &#8211; mng_bool mng_writedata (mng_handle hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_ptr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pBuf,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iBuflen,&nbsp;<wbr><br />
+<p> &#8211; mng_bool mng_writedata (mng_handle hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_ptr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pBuf,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iBuflen,&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32p pWritten) </p>
 <p> This function is called during the mng_write() function to actually output data to the file. There is no suspension-mode during write, so the application must return the exact number of bytes the library requests to be written. </p>
 <p> A typical implementation could be: </p>
-<p>&nbsp;<wbr>mng_bool my_write&nbsp;<wbr>(mng_handle&nbsp;<wbr>&nbsp;<wbr>hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_ptr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pBuf,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iBuflen,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32p pWritten)&nbsp;<wbr>{<br />
-*pWritten&nbsp;<wbr>=&nbsp;<wbr>fwrite&nbsp;<wbr>(pBuf, 1, iBuflen, myfile);<br />
-return MNG_TRUE;<br />
+<p>&nbsp;<wbr>mng_bool my_write&nbsp;<wbr>(mng_handle&nbsp;<wbr>&nbsp;<wbr>hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_ptr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pBuf,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iBuflen,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32p pWritten)&nbsp;<wbr>{<br/>
+*pWritten&nbsp;<wbr>=&nbsp;<wbr>fwrite&nbsp;<wbr>(pBuf, 1, iBuflen, myfile);<br/>
+return MNG_TRUE;<br/>
 &nbsp;<wbr>} </p>
-<p> &#8211; mng_bool mng_errorproc (mng_handle hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_int32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>iErrorcode,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_int8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>iSeverity,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_chunkid iChunkname,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iChunkseq,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_int32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>iExtra1,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_int32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>iExtra2,<br />
+<p> &#8211; mng_bool mng_errorproc (mng_handle hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_int32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>iErrorcode,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_int8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>iSeverity,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_chunkid iChunkname,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iChunkseq,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_int32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>iExtra1,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_int32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>iExtra2,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_pchar&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>zErrortext) </p>
 <p> This function is called whenever an error is detected inside the library. This may be caused by invalid input, callbacks indicating failure, or wrongfully calling functions out of place. </p>
 <p> If you do not provide this callback the library will still return an errorcode from the called function, and the mng_getlasterror() function can be used to retrieve the other parameters. </p>
 <p> This function is currently only provided for convenience, but may at some point be used to indicate certain errors may be acceptable, and processing should continue. </p>
-<p> &#8211; mng_bool mng_traceproc (mng_handle hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_int32&nbsp;<wbr>&nbsp;<wbr>iFuncnr,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_int32&nbsp;<wbr>&nbsp;<wbr>iFuncseq,<br />
+<p> &#8211; mng_bool mng_traceproc (mng_handle hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_int32&nbsp;<wbr>&nbsp;<wbr>iFuncnr,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_int32&nbsp;<wbr>&nbsp;<wbr>iFuncseq,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_pchar&nbsp;<wbr>&nbsp;<wbr>zFuncname) </p>
 <p> This function is provided to allow a functional analysis of the library. This may be useful if you encounter certain errors and cannot determine what the problem is. </p>
 <p> Almost all functions inside the library will activate this callback with an appropriate function-name at the start and end of the function. Please note that large images may generate an enormous amount of calls. </p>
-<p> &#8211; mng_bool mng_processheader (mng_handle hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iWidth,<br />
+<p> &#8211; mng_bool mng_processheader (mng_handle hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iWidth,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iHeight) </p>
 <p> This function is called once the header information of an input- image has been processed. At this point the image dimensions are available and also some other properties depending on the type of the image. Eg. for a MNG the frame-/layercount, playtime &amp; simplicity fields are known. </p>
 <p> The primary purpose of this callback is to inform the application of the size of the image, and for the application to initialize the drawing canvas to be used by the library. This is also a good point to set the canvas-style. Eg. mng_set_canvasstyle(). </p>
-<p> &#8211; mng_bool mng_processtext (mng_handle hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint8&nbsp;<wbr>&nbsp;<wbr>iType,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_pchar&nbsp;<wbr>&nbsp;<wbr>zKeyword,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_pchar&nbsp;<wbr>&nbsp;<wbr>zText,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_pchar&nbsp;<wbr>&nbsp;<wbr>zLanguage,<br />
+<p> &#8211; mng_bool mng_processtext (mng_handle hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint8&nbsp;<wbr>&nbsp;<wbr>iType,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_pchar&nbsp;<wbr>&nbsp;<wbr>zKeyword,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_pchar&nbsp;<wbr>&nbsp;<wbr>zText,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_pchar&nbsp;<wbr>&nbsp;<wbr>zLanguage,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_pchar&nbsp;<wbr>&nbsp;<wbr>zTranslation) </p>
 <p> This callback is activated for each textual chunk in the input- image. These are tEXt, zTXt &amp; iTXt. It may be used to retain specific comments for presentation to the user. </p>
 <p> &#8211; mng_bool mng_processsave (mng_handle hHandle) </p>
-<p> &#8211; mng_bool mng_processseek (mng_handle hHandle,<br />
+<p> &#8211; mng_bool mng_processseek (mng_handle hHandle,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_pchar&nbsp;<wbr>&nbsp;<wbr>zName) </p>
 <p> The purpose of these callbacks is to signal the processing of the SAVE &amp; SEEK chunks in a MNG input-file. This may be used in the future to specify some special processing. At the moment these functions are only provided as a signal. </p>
-<p> &#8211; mng_ptr mng_getcanvasline (mng_handle hHandle,<br />
+<p> &#8211; mng_ptr mng_getcanvasline (mng_handle hHandle,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iLinenr) </p>
-<p> &#8211; mng_ptr mng_getbkgdline (mng_handle hHandle,<br />
+<p> &#8211; mng_ptr mng_getbkgdline (mng_handle hHandle,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iLinenr) </p>
-<p> &#8211; mng_ptr mng_getalphaline (mng_handle hHandle,<br />
+<p> &#8211; mng_ptr mng_getalphaline (mng_handle hHandle,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iLinenr) </p>
 <p> These callbacks are used to access the drawing canvas, background canvas and an optional separate alpha-channel canvas. The latter is used only with the MNG_CANVAS_RGB8_A8 canvas-style. </p>
 <p> If the getbkgdline() callback is not supplied the library will composite fully or partially transparent pixels in the image against a specified background color. See mng_set_bgcolor() for more details. If a chosen canvas-style includes an alpha-channel, this callback is very likely not needed. </p>
 <p> The application is responsible for returning a pointer to a line of pixels, which should be in the exact format as defined by the call to mng_set_canvasstyle() and mng_set_bkgdstyle(), without gaps between the representation of each pixel, unless specified by the canvas-style. </p>
-<p> &#8211; mng_bool mng_refresh (mng_handle hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iX,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iY,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iWidth,<br />
+<p> &#8211; mng_bool mng_refresh (mng_handle hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iX,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iY,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iWidth,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iHeight) </p>
 <p> This callback is called when the library has drawn a complete frame onto the drawing canvas, and it is ready to be displayed. The application is responsible for transferring the drawing canvas from memory onto the actual output device. </p>
 <p> &#8211; mng_uint32 mng_gettickcount (mng_handle hHandle) </p>
 <p> This function should return the number of milliseconds on some internal clock. The entire animation timing depends heavily on this function, and the number returned should be as accurate as possible. </p>
-<p> &#8211; mng_bool mng_settimer (mng_handle hHandle,<br />
+<p> &#8211; mng_bool mng_settimer (mng_handle hHandle,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iMsecs) </p>
 <p> This callback is activated every time the library requires a &quot;pause&quot;. Note that the function itself should NOT execute the wait. It should simply store the time-field and allow the library to return. Libmng will return with the MNG_NEEDTIMERWAIT code, indicating the callback was called and it is now time to execute the pause. </p>
 <p> After the indicated number of milliseconds have elapsed, the application should call mng_display_resume(), to resume the animation as planned. </p>
 <p> This method allows for both a real timer or a simple wait command in the application. Whichever method you select, both the gettickcount() and settimer() callbacks are crucial for proper animation timing. </p>
-<p> &#8211; mng_bool mng_processgamma (mng_handle hHandle,<br />
+<p> &#8211; mng_bool mng_processgamma (mng_handle hHandle,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iGamma) </p>
-<p> &#8211; mng_bool mng_processchroma (mng_handle hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iWhitepointx,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iWhitepointy,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iRedx,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iRedy,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iGreenx,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iGreeny,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iBluex,<br />
+<p> &#8211; mng_bool mng_processchroma (mng_handle hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iWhitepointx,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iWhitepointy,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iRedx,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iRedy,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iGreenx,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iGreeny,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iBluex,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iBluey) </p>
-<p> &#8211; mng_bool mng_processsrgb (mng_handle hHandle,<br />
+<p> &#8211; mng_bool mng_processsrgb (mng_handle hHandle,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint8&nbsp;<wbr>&nbsp;<wbr>iRenderingintent) </p>
-<p> &#8211; mng_bool mng_processiccp (mng_handle hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iProfilesize,<br />
+<p> &#8211; mng_bool mng_processiccp (mng_handle hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iProfilesize,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_ptr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pProfile) </p>
-<p> &#8211; mng_bool mng_processarow (mng_handle hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iRowsamples,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_bool&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>bIsRGBA16,<br />
+<p> &#8211; mng_bool mng_processarow (mng_handle hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iRowsamples,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_bool&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>bIsRGBA16,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_ptr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pRow) </p>
 <p> These callbacks are only required when you selected the MNG_APP_CMS directive during compilation of the library. See the configuration section for more details. </p>
-<p> &#8211; mng_bool mng_iteratechunk (mng_handle hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_handle&nbsp;<wbr>&nbsp;<wbr>hChunk,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_chunkid iChunkid,<br />
+<p> &#8211; mng_bool mng_iteratechunk (mng_handle hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_handle&nbsp;<wbr>&nbsp;<wbr>hChunk,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_chunkid iChunkid,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iChunkseq) </p>
 <p> This callback is only used for the mng_iterate_chunks() function. It is called exactly once for each chunk stored. </p>
 <h2>III. Housekeeping</h2>
@@ -164,9 +164,9 @@ return MNG_TRUE;<br />
 <p> If your compiler does not support these functions, or you wish to monitor the library&#8217;s use of memory for certain reasons, you can choose to compile the library with external memory management. In this case the memory callback functions MUST be supplied, and should function as if the above code was used. </p>
 <h3>Initialization</h3>
 <p> The basic initialization of the library is short and swift: </p>
-<p>&nbsp;<wbr>myhandle&nbsp;<wbr>=&nbsp;<wbr>mng_initialize&nbsp;<wbr>(myuserdata, my_alloc,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>my_free, MNG_NULL);<br />
-&nbsp;<wbr>if&nbsp;<wbr>(myhandle&nbsp;<wbr>==&nbsp;<wbr>MNG_NULL)<br />
+<p>&nbsp;<wbr>myhandle&nbsp;<wbr>=&nbsp;<wbr>mng_initialize&nbsp;<wbr>(myuserdata, my_alloc,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>my_free, MNG_NULL);<br/>
+&nbsp;<wbr>if&nbsp;<wbr>(myhandle&nbsp;<wbr>==&nbsp;<wbr>MNG_NULL)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p> The first field is an application-only parameter. It is saved in libmng&#8217;s internal structures and available at all times through the mng_get_userdata() function. This is especially handy in callback functions if your program may be handling multiple files at the same time. </p>
 <p> The second and third field supply the library with the memory callback function entry-points. These are described in more detail in the callback section and the previous paragraph. </p>
@@ -174,8 +174,8 @@ return MNG_TRUE;<br />
 <p> The function returns a handle which will be your ticket to MNG-heaven. All other functions rely on this handle. It is the single fixed unique reference-point between your application and the library. </p>
 <p> You should call the initialization function for each image you wish to process simultaneously. If you are processing images consecutively, you can reset the internal status of the library with the mng_reset() function. This function will clear all internal state variables, free any stored chunks and/or objects, etc, etc. Your callbacks and other external parameters will be retained. </p>
 <p> After you successfully received the handle it is time to set the required callbacks. The sections on reading, displaying &amp; writing indicate which callbacks are required and which are optional. To set the callbacks simply do: </p>
-<p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_setcb_xxxxxx&nbsp;<wbr>(myhandle, my_xxxxxx);<br />
-&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_setcb_xxxxxx&nbsp;<wbr>(myhandle, my_xxxxxx);<br/>
+&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p> Naturally you&#8217;d replace the x&#8217;s with the name of the callback. </p>
 <h3>Cleanup</h3>
@@ -183,8 +183,8 @@ return MNG_TRUE;<br />
 <p>&nbsp;<wbr>mng_cleanup&nbsp;<wbr>(myhandle); </p>
 <p> And you&#8217;re done. There shouldn&#8217;t be an ounce of memory spilled after that call. </p>
 <p> Note that if you would like to process multiple files consecutively you do not need to do mng_cleanup() / mng_initialize() between each file but simply </p>
-<p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_reset&nbsp;<wbr>(myhandle);<br />
-&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_reset&nbsp;<wbr>(myhandle);<br/>
+&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p> will suffice. Saves some time and effort, that. </p>
 <h3>Error handling</h3>
@@ -198,33 +198,33 @@ return MNG_TRUE;<br />
 <p> Naturally you must have initialized the library and be the owner of a mng_handle. The following callbacks are essential: </p>
 <p>&nbsp;<wbr>mng_openstream, mng_readdata, mng_closestream </p>
 <p> You may optionally define: </p>
-<p>&nbsp;<wbr>mng_errorproc, mng_traceproc<br />
-&nbsp;<wbr>mng_processheader, mng_processtext<br />
+<p>&nbsp;<wbr>mng_errorproc, mng_traceproc<br/>
+&nbsp;<wbr>mng_processheader, mng_processtext<br/>
 &nbsp;<wbr>mng_processsave, mng_processseek </p>
 <p> The reading bit will also fail if you are already creating or displaying a file. Seems a bit obvious, but I thought I&#8217;d mention it, just in case. </p>
 <h3>To suspend or not to suspend</h3>
 <p> There is one choice you need to make before calling the read function. Are you in need of suspension-mode or not? </p>
 <p> If you&#8217;re reading from a disk you most certainly do not need suspension-mode. Even the oldest and slowest of disks will be fast enough for straight reading. </p>
 <p> However, if your input comes from a really slow device, such as a dialup-line or the likes, you may opt for suspension-mode. This is done by calling </p>
-<p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_set_suspensionmode&nbsp;<wbr>(myhandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>MNG_TRUE);<br />
-&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_set_suspensionmode&nbsp;<wbr>(myhandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>MNG_TRUE);<br/>
+&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p> Suspension-mode will force the library to use special buffering on the input. This allows your application to receive data of arbitrarily length and return this in the mng_readdata() callback, without disturbing the chunk processing routines of the library. </p>
 <p> Suspension-mode does require a little extra care in the main logic of the application. The read function may return with MNG_NEEDMOREDATA when the mng_readdata() callback returns less data then it needs to process the next chunk. This indicates the application to wait for more data to arrive and then resume processing by calling mng_read_resume(). </p>
 <h3>The read HLAPI</h3>
 <p> The actual reading is just plain simple. Since all I/O is done outside the library through the callbacks, the library can focus on its real task. Understanding, checking and labelling the input data! </p>
 <p> All you really need to do is this: </p>
-<p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_read&nbsp;<wbr>(myhandle);<br />
-&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_read&nbsp;<wbr>(myhandle);<br/>
+&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p> Of course, if you&#8217;re on suspension-mode the code is a little more complicated: </p>
 <p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_read&nbsp;<wbr>(myhandle); </p>
-<p>&nbsp;<wbr>while&nbsp;<wbr>(myretcode&nbsp;<wbr>==&nbsp;<wbr>MNG_NEEDMOREDATA)&nbsp;<wbr>{<br />
-/*&nbsp;<wbr>wait for input-data to arrive&nbsp;<wbr>*/<br />
-myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_read_resume&nbsp;<wbr>(myhandle);<br />
+<p>&nbsp;<wbr>while&nbsp;<wbr>(myretcode&nbsp;<wbr>==&nbsp;<wbr>MNG_NEEDMOREDATA)&nbsp;<wbr>{<br/>
+/*&nbsp;<wbr>wait for input-data to arrive&nbsp;<wbr>*/<br/>
+myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_read_resume&nbsp;<wbr>(myhandle);<br/>
 &nbsp;<wbr>}&nbsp;<wbr> </p>
-<p>&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p> This is rather crude and more sophisticated programming methods may dictate another approach. Whatever method you decide on, it should act as if the above code was in its place. </p>
 <p> There is also the mng_readdisplay() function, but this is discussed in the displaying section. It functions pretty much as the mng_read() function, but also immediately starts displaying the image. mng_read_resume() should be replaced by mng_display_resume() in that case! </p>
@@ -241,43 +241,43 @@ myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_read_resume&nbsp;<wbr>(myhandle);<br />
 <p> The actual storage facility can be turned on or off with the mng_set_storechunks() function. If set to MNG_TRUE, chunks will be stored as they are read. </p>
 <p> At any point you can then call the mng_iterate_chunks() function to iterate through the current list of chunks. This function requires a callback which is called for each chunk and receives a specific chunk-handle. This chunk-handle can be used to call the appropriate mng_getchunk_xxxx() function, to access the chunks properties. </p>
 <p> A typical implementation may look like this: </p>
-<p>&nbsp;<wbr>mng_bool my_iteratechunk&nbsp;<wbr>(mng_handle&nbsp;<wbr>&nbsp;<wbr>hHandle,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_handle&nbsp;<wbr>&nbsp;<wbr>hChunk,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_chunkid iChunkid,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iChunkseq)&nbsp;<wbr>{<br />
-switch&nbsp;<wbr>(iChunkid)&nbsp;<wbr>{<br />
-&nbsp;<wbr>&nbsp;<wbr>case MNG_UINT_MHDR :&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>process MHDR&nbsp;<wbr>*/;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>break;&nbsp;<wbr>}<br />
-&nbsp;<wbr>&nbsp;<wbr>case MNG_UINT_FRAM :&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>process FRAM&nbsp;<wbr>*/;<br />
+<p>&nbsp;<wbr>mng_bool my_iteratechunk&nbsp;<wbr>(mng_handle&nbsp;<wbr>&nbsp;<wbr>hHandle,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_handle&nbsp;<wbr>&nbsp;<wbr>hChunk,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_chunkid iChunkid,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32&nbsp;<wbr>&nbsp;<wbr>iChunkseq)&nbsp;<wbr>{<br/>
+switch&nbsp;<wbr>(iChunkid)&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>case MNG_UINT_MHDR :&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>process MHDR&nbsp;<wbr>*/;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>break;&nbsp;<wbr>}<br/>
+&nbsp;<wbr>&nbsp;<wbr>case MNG_UINT_FRAM :&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>process FRAM&nbsp;<wbr>*/;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>break;&nbsp;<wbr>} </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8230;etc&#8230; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>case MNG_UINT_HUH&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>unknown chunk&nbsp;<wbr>*/;&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>break;&nbsp;<wbr>}<br />
-&nbsp;<wbr>&nbsp;<wbr>default :&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>duh;&nbsp;<wbr>forgot one&nbsp;<wbr>*/;&nbsp;<wbr>}<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>case MNG_UINT_HUH&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>unknown chunk&nbsp;<wbr>*/;&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>break;&nbsp;<wbr>}<br/>
+&nbsp;<wbr>&nbsp;<wbr>default :&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>duh;&nbsp;<wbr>forgot one&nbsp;<wbr>*/;&nbsp;<wbr>}<br/>
 } </p>
-<p>return MNG_TRUE;&nbsp;<wbr>/*&nbsp;<wbr>keep&#8217;m coming&nbsp;<wbr>*/<br />
+<p>return MNG_TRUE;&nbsp;<wbr>/*&nbsp;<wbr>keep&#8217;m coming&nbsp;<wbr>*/<br/>
 &nbsp;<wbr>} </p>
 <p> To get to the actual chunk fields of lets say a SHOW chunk you would do: </p>
-<p>&nbsp;<wbr>mng_bool isempty;<br />
-&nbsp;<wbr>mng_uint16 firstid, lastid;<br />
+<p>&nbsp;<wbr>mng_bool isempty;<br/>
+&nbsp;<wbr>mng_uint16 firstid, lastid;<br/>
 &nbsp;<wbr>mng_uint8 showmode; </p>
-<p>&nbsp;<wbr>myretcode mng_getchunk_show&nbsp;<wbr>(hHandle, hChunk,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>isempty, firstid,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>lastid, showmode);<br />
-&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>myretcode mng_getchunk_show&nbsp;<wbr>(hHandle, hChunk,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>isempty, firstid,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>lastid, showmode);<br/>
+&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <h2>V. Displaying</h2>
 <h3>Setup</h3>
 <p> Assuming you have initialized the library and are the owner of a mng_handle. The following callbacks are essential: </p>
-<p>&nbsp;<wbr>mng_getcanvasline, mng_refresh<br />
+<p>&nbsp;<wbr>mng_getcanvasline, mng_refresh<br/>
 &nbsp;<wbr>mng_gettickcount, mng_settimer </p>
 <p> If you wish to use an application supplied background you must supply: </p>
 <p>&nbsp;<wbr>mng_getbkgdline </p>
 <p> If you wish to use the MNG_CANVAS_RGB8_A8 canvas style you must supply: </p>
 <p>&nbsp;<wbr>mng_getalphaline </p>
 <p> You may optionally define: </p>
-<p>&nbsp;<wbr>mng_errorproc, mng_traceproc<br />
-&nbsp;<wbr>mng_processheader, mng_processtext<br />
+<p>&nbsp;<wbr>mng_errorproc, mng_traceproc<br/>
+&nbsp;<wbr>mng_processheader, mng_processtext<br/>
 &nbsp;<wbr>mng_processsave, mng_processseek </p>
 <p> Note that the mng_processheader() callback is optional but will be quite significant for proper operation! </p>
 <p> Displaying an image will fail if you are creating a file or already displaying one. Yes, you can&#8217;t display it twice! </p>
@@ -309,8 +309,8 @@ switch&nbsp;<wbr>(iChunkid)&nbsp;<wbr>{<br />
 <h3>Using an OS- or application-supplied CMS</h3>
 <p> If you are so lucky to have access to CMS functionality from within your application, you may instruct the library to leave color-correction to you. </p>
 <p> Select the MNG_APP_CMS directive during compilation of the library. You MUST also set the following callbacks: </p>
-<p>&nbsp;<wbr>mng_processgamma, mng_processchroma,<br />
-&nbsp;<wbr>mng_processsrgb, mng_processiccp and<br />
+<p>&nbsp;<wbr>mng_processgamma, mng_processchroma,<br/>
+&nbsp;<wbr>mng_processsrgb, mng_processiccp and<br/>
 &nbsp;<wbr>mng_processarow </p>
 <p> The last callback is called when the library needs you to correct an arbitrary line of pixels. The other callbacks are called when the corresponding color-information is encountered in the file. You must store this information somewhere for use in the mng_processarow() callback. </p>
 <h3>Using gamma-only correction</h3>
@@ -331,32 +331,32 @@ switch&nbsp;<wbr>(iChunkid)&nbsp;<wbr>{<br />
 <p> This method is preferred if you are reading from a slow input device (such as a dialup-line) and you wish to start displaying something as quickly as possible. This functionality is provided mainly for browser-type applications but may be appropriate for other applications as well. </p>
 <p> The method is usually used in unison with the suspension-mode of the read module. A typical implementation would look like this: </p>
 <p>&nbsp;<wbr>/*&nbsp;<wbr>initiale library and set required callbacks&nbsp;<wbr>*/ </p>
-<p>&nbsp;<wbr>/*&nbsp;<wbr>activate suspension-mode&nbsp;<wbr>*/<br />
-&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_set_suspensionmode&nbsp;<wbr>(myhandle,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>MNG_TRUE);<br />
-&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>/*&nbsp;<wbr>activate suspension-mode&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_set_suspensionmode&nbsp;<wbr>(myhandle,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>MNG_TRUE);<br/>
+&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_readdisplay&nbsp;<wbr>(myhandle); </p>
-<p>&nbsp;<wbr>while&nbsp;<wbr>((myretcode&nbsp;<wbr>==&nbsp;<wbr>MNG_NEEDMOREDATA)&nbsp;<wbr>||<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(myretcode&nbsp;<wbr>==&nbsp;<wbr>MNG_NEEDTIMERWAIT))&nbsp;<wbr>{<br />
-if&nbsp;<wbr>(myretcode&nbsp;<wbr>==&nbsp;<wbr>MNG_NEEDMOREDATA)<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>wait for more input-data&nbsp;<wbr>*/;<br />
-else<br />
+<p>&nbsp;<wbr>while&nbsp;<wbr>((myretcode&nbsp;<wbr>==&nbsp;<wbr>MNG_NEEDMOREDATA)&nbsp;<wbr>||<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(myretcode&nbsp;<wbr>==&nbsp;<wbr>MNG_NEEDTIMERWAIT))&nbsp;<wbr>{<br/>
+if&nbsp;<wbr>(myretcode&nbsp;<wbr>==&nbsp;<wbr>MNG_NEEDMOREDATA)<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>wait for more input-data&nbsp;<wbr>*/;<br/>
+else<br/>
 &nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>wait for timer interval&nbsp;<wbr>*/; </p>
-<p>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_display_resume&nbsp;<wbr>(myhandle);<br />
+<p>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_display_resume&nbsp;<wbr>(myhandle);<br/>
 &nbsp;<wbr>} </p>
-<p>&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p> More advanced programming methods may require a different approach, but the final result should function as in the code above. </p>
 <h3>Displaying after reading</h3>
 <p> This method is used to display a file that was previously read. It is primarily meant for viewers with direct file access, such as 1a local harddisk. </p>
 <p> Once you have successfully read the file, all you need to do is: </p>
 <p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_display&nbsp;<wbr>(myhandle); </p>
-<p>&nbsp;<wbr>while&nbsp;<wbr>(myretcode&nbsp;<wbr>==&nbsp;<wbr>MNG_NEEDTIMERWAIT)&nbsp;<wbr>{<br />
-/*&nbsp;<wbr>wait for timer interval&nbsp;<wbr>*/;<br />
-myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_display_resume&nbsp;<wbr>(myhandle);<br />
+<p>&nbsp;<wbr>while&nbsp;<wbr>(myretcode&nbsp;<wbr>==&nbsp;<wbr>MNG_NEEDTIMERWAIT)&nbsp;<wbr>{<br/>
+/*&nbsp;<wbr>wait for timer interval&nbsp;<wbr>*/;<br/>
+myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_display_resume&nbsp;<wbr>(myhandle);<br/>
 &nbsp;<wbr>} </p>
-<p>&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p> Again, more advanced programming methods may require a different approach, but the final result should function as in the code above. </p>
 <h3>Display manipulation</h3>
@@ -367,11 +367,11 @@ myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_display_resume&nbsp;<wbr>(myhandle);<br />
 <p> This function can be used to resume a frozen animation, or to force the library to advance the animation to the next frame. </p>
 <p> &#8211; mng_display_reset (mng_handle hHandle) </p>
 <p> This function will &quot;reset&quot; the animation into its pristine state. Calling mng_display() afterwards will re-display the animation from the first frame. </p>
-<p> &#8211; mng_display_golayer (mng_handle hHandle,<br />
+<p> &#8211; mng_display_golayer (mng_handle hHandle,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iLayer) </p>
-<p> &#8211; mng_display_goframe (mng_handle hHandle,<br />
+<p> &#8211; mng_display_goframe (mng_handle hHandle,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iFrame) </p>
-<p> &#8211; mng_display_gotime (mng_handle hHandle,<br />
+<p> &#8211; mng_display_gotime (mng_handle hHandle,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mng_uint32 iPlaytime) </p>
 <p> These three functions can be used to &quot;jump&quot; to a specific layer, frame or timeslot in the animation. You must &quot;freeze&quot; the animation before using any of these functions. </p>
 <p> All above functions may only be called during a timer interval! It is the applications responsibility to cleanup any resources with respect to the timer wait. </p>
@@ -386,31 +386,31 @@ myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_display_resume&nbsp;<wbr>(myhandle);<br />
 <p> The creation and writing functions will fail if you are in the middle of reading, creating or writing a file. </p>
 <h3>Creating a new file</h3>
 <p> To start a new file the library must be in its initial state. First you need to tell the library your intentions: </p>
-<p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_create&nbsp;<wbr>(myhandle);<br />
-&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_create&nbsp;<wbr>(myhandle);<br/>
+&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p> After that you start adding the appropriate chunks: </p>
-<p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_put1chunk_mhdr&nbsp;<wbr>(myhandle, &#8230;);<br />
-&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_put1chunk_mhdr&nbsp;<wbr>(myhandle, &#8230;);<br/>
+&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p> And so on, and so forth. Note that the library will automatically signal the logical end of the file by the ending chunk. Also the first chunk will indicate the library the filetype (eg. PNG, JNG or MNG) and force the proper signature when writing the file. </p>
 <p> The code above can be simplified, as you can always get the last errorcode by using the mng_getlasterror() function: </p>
-<p>&nbsp;<wbr>if&nbsp;<wbr>(&nbsp;<wbr>(mng_putchunk_xxxx&nbsp;<wbr>(myhandle, &#8230;))&nbsp;<wbr>or<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(mng_putchunk_xxxx&nbsp;<wbr>(myhandle, &#8230;))&nbsp;<wbr>or<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8230;etc&#8230;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>)<br />
+<p>&nbsp;<wbr>if&nbsp;<wbr>(&nbsp;<wbr>(mng_putchunk_xxxx&nbsp;<wbr>(myhandle, &#8230;))&nbsp;<wbr>or<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(mng_putchunk_xxxx&nbsp;<wbr>(myhandle, &#8230;))&nbsp;<wbr>or<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8230;etc&#8230;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p> Please note that you must have a pretty good understanding of the chunk specification. Unlike the read functions, there are virtually no checks, so it is quite possible to write completely wrong files. It is a good practice to read back your file into the library to verify its integrity. </p>
 <p> Once you&#8217;ve got all the chunks added, all you do is: </p>
-<p>&nbsp;<wbr>myretcode mng_write&nbsp;<wbr>(myhandle);<br />
-&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>myretcode mng_write&nbsp;<wbr>(myhandle);<br/>
+&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <p> And presto. You&#8217;re done. The real work is of course carried out in your callbacks. Note that this is a single operation as opposed to the read &amp; display functions that may return with MNG_NEEDMOREDATA and/or MNG_NEEDTIMERWAIT. The write function just does the job, and only returns after it&#8217;s finished or if it encounters some unrecoverable error. </p>
 <h3>Writing a previously read file</h3>
 <p> If you have already successfully read a file, you can use the library to write it out as a copy or something. You MUST have compiled the library with the MNG_STORE_CHUNKS directive, and you must have done mng_set_storechunks (myhandle, MNG_TRUE). </p>
 <p> This doesn&#8217;t require the MNG_ACCESS_CHUNKS directive, unless you want to fiddle with the chunks as well. </p>
 <p> Again all you need to do is: </p>
-<p>&nbsp;<wbr>myretcode mng_write&nbsp;<wbr>(myhandle);<br />
-&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br />
+<p>&nbsp;<wbr>myretcode mng_write&nbsp;<wbr>(myhandle);<br/>
+&nbsp;<wbr>if&nbsp;<wbr>(myretcode&nbsp;<wbr>!=&nbsp;<wbr>MNG_NOERROR)<br/>
 /*&nbsp;<wbr>process error&nbsp;<wbr>*/; </p>
 <h2>VII. Modifying/Customizing libmng:</h2>
 <p> not finished yet </p>

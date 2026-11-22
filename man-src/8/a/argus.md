@@ -60,8 +60,8 @@ description: "argus – audit record generation and utilization system"
 <dt><code>-m</code></dt>
 <dd>Provide MAC addresses information in <code>argus</code> records.</dd>
 <dt><code>-N &lt;packet count&gt;|&lt;packet range&gt;</code></dt>
-<dd>Specify the number of packets to process. You can give an absolute number, or a range with the syntax &quot;start-stop&quot;. Examples are:<br />
--N 27&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; read the first 27 packets.<br />
+<dd>Specify the number of packets to process. You can give an absolute number, or a range with the syntax &quot;start-stop&quot;. Examples are:<br/>
+-N 27&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; read the first 27 packets.<br/>
 -N 1034-1434&nbsp;<wbr>&nbsp;<wbr>&#8211; read 100 packets starting with 1034.</dd>
 <dt><code>-O</code></dt>
 <dd>Turn off Berkeley Packet Filter optimizer. No reason to do this unless you think the optimizer generates bad code.</dd>

@@ -10,7 +10,7 @@ description: "sptsv.f –"
 <p>sptsv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sptsv</code> (N, NRHS, D, E, B, LDB, INFO)<br />
+<p> subroutine <code>sptsv</code> (N, NRHS, D, E, B, LDB, INFO)<br/>
  <i></i><code> SPTSV computes the solution to system of linear equations A * X = B for PT matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sptsv (integerN, integerNRHS, real, dimension( * )D, real, dimension( * )E, real, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

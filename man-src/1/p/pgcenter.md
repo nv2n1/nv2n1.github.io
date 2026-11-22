@@ -464,18 +464,18 @@ Used query: SELECT
 </dt><dd> Estimated number of dead rows (per second).</dd></dl>
 </dl>
 <dt><code>pg_statio_tables context</code></dt>
-<dd> Show statistics from <i>pg_statio_user_tables</i> or <i>pg_statio_all_tables </i> views which showing statistics about I/O on that specific table in the current database. <i>pg_statio_user_tables</i> used by default, and <i>pgcenter</i> can be switched to <i>pg_statio_all_tables</i> using <code>, </code> hotkey.<br />
-Used query : SELECT<br />
-                 schemaname ||<br />
-             &#8216;.&#8217; || relname AS relation,<br />
-    heap_blks_read *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS heap_read,<br />
-    heap_blks_hit *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS heap_hit,<br />
-    idx_blks_read *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS idx_read,<br />
-    idx_blks_hit *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS idx_hit,<br />
-    toast_blks_read *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS toast_read,<br />
-    toast_blks_hit *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS toast_hit,<br />
-    tidx_blks_read *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS tidx_read,<br />
-    tidx_blks_hit *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS tidx_hit<br />
+<dd> Show statistics from <i>pg_statio_user_tables</i> or <i>pg_statio_all_tables </i> views which showing statistics about I/O on that specific table in the current database. <i>pg_statio_user_tables</i> used by default, and <i>pgcenter</i> can be switched to <i>pg_statio_all_tables</i> using <code>, </code> hotkey.<br/>
+Used query : SELECT<br/>
+                 schemaname ||<br/>
+             &#8216;.&#8217; || relname AS relation,<br/>
+    heap_blks_read *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS heap_read,<br/>
+    heap_blks_hit *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS heap_hit,<br/>
+    idx_blks_read *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS idx_read,<br/>
+    idx_blks_hit *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS idx_hit,<br/>
+    toast_blks_read *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS toast_read,<br/>
+    toast_blks_hit *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS toast_hit,<br/>
+    tidx_blks_read *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS tidx_read,<br/>
+    tidx_blks_hit *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS tidx_hit<br/>
     FROM pg_statio_user_tables ORDER BY 1;</dd>
 <p> <code>relation</code></p>
 <dl>
@@ -517,17 +517,17 @@ Used query : SELECT<br />
 </dl>
 <dt><code>pg_stat_indexes context</code></dt>
 <dd> Show statistics from <i>pg_stat_user_indexes</i> and <i>pg_statio_user_indexes</i> (or <i>pg_stat_all_indexes</i> and <i>pg_statio_all_indexes</i>). The <i>pg_stat_user_indexes</i> view will contain one row for each index in the current database, showing statistics about accesses to that specific index. <i>pg_statio_user_indexes</i> view will contain one row for each index in the current database, showing statistics about I/O on that specific index. </dd>
-<p> Note: Indexes can be used via either simple index scans or &quot;bitmap&quot; index scans. In a bitmap scan the output of several indexes can be combined via AND or OR rules, so it is difficult to associate individual heap row fetches with specific indexes when a bitmap scan is used. Therefore, a bitmap scan increments the <i>pg_stat_all_indexes.idx_tup_read </i> count(s) for the index(es) it uses, and it increments the <i>pg_stat_all_tables.idx_tup_fetch </i> count for the table, but it does not affect <i>pg_stat_all_indexes.idx_tup_fetch</i>. The <i>idx_tup_read </i> and <i>idx_tup_fetch </i> counts can be different even without any use of bitmap scans, because <i>idx_tup_read </i> counts index entries retrieved from the index while <i>idx_tup_fetch </i> counts live rows fetched from the table. The latter will be less if any dead or not-yet-committed rows are fetched using the index, or if any heap fetches are avoided by means of an index-only scan.<br />
-Used query : SELECT<br />
-                 s.schemaname ||<br />
-    &#8216;.&#8217; || s.relname as relation,<br />
-    s.indexrelname AS index,<br />
-    s.idx_scan, s.idx_tup_read, s.idx_tup_fetch,<br />
-    i.idx_blks_read *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS idx_read,<br />
-    i.idx_blks_hit *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS idx_hit<br />
-    FROM<br />
-    pg_stat_user_indexes s,<br />
-    pg_statio_user_indexes i<br />
+<p> Note: Indexes can be used via either simple index scans or &quot;bitmap&quot; index scans. In a bitmap scan the output of several indexes can be combined via AND or OR rules, so it is difficult to associate individual heap row fetches with specific indexes when a bitmap scan is used. Therefore, a bitmap scan increments the <i>pg_stat_all_indexes.idx_tup_read </i> count(s) for the index(es) it uses, and it increments the <i>pg_stat_all_tables.idx_tup_fetch </i> count for the table, but it does not affect <i>pg_stat_all_indexes.idx_tup_fetch</i>. The <i>idx_tup_read </i> and <i>idx_tup_fetch </i> counts can be different even without any use of bitmap scans, because <i>idx_tup_read </i> counts index entries retrieved from the index while <i>idx_tup_fetch </i> counts live rows fetched from the table. The latter will be less if any dead or not-yet-committed rows are fetched using the index, or if any heap fetches are avoided by means of an index-only scan.<br/>
+Used query : SELECT<br/>
+                 s.schemaname ||<br/>
+    &#8216;.&#8217; || s.relname as relation,<br/>
+    s.indexrelname AS index,<br/>
+    s.idx_scan, s.idx_tup_read, s.idx_tup_fetch,<br/>
+    i.idx_blks_read *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS idx_read,<br/>
+    i.idx_blks_hit *(SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) AS idx_hit<br/>
+    FROM<br/>
+    pg_stat_user_indexes s,<br/>
+    pg_statio_user_indexes i<br/>
     WHERE s.indexrelid = i.indexrelid ORDER BY 1;</p>
 <p> <code>relation</code></p>
 <dl>
@@ -560,19 +560,19 @@ Used query : SELECT<br />
 </dt><dd> Number of buffer hits per second in this index.</dd></dl>
 </dl>
 <dt><code>pg_tables_size context</code></dt>
-<dd> Show statistics about tables sizes. For taking information about size of relations use <i>pg_stat_user_tables</i> (or <i>pg_stat_all_tables</i>) view, <i>pg_class</i> system catalog and <i>pg_relation_size()</i>, <i>pg_total_relation_size()</i> functions.<br />
-Used query : SELECT<br />
-                 s.schemaname ||<br />
-    &#8216;.&#8217; || s.relname AS relation,<br />
-    pg_total_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024 AS total_size,<br />
-    pg_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024 AS rel_size,<br />
-    (pg_total_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024) &#8211;<br />
-        (pg_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024) AS idx_size,<br />
-    pg_total_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024 AS total_change,<br />
-    pg_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024 AS rel_change,<br />
-    (pg_total_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024) &#8211;<br />
-        (pg_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024) AS idx_change<br />
-        FROM pg_stat_user_tables s,<br />
+<dd> Show statistics about tables sizes. For taking information about size of relations use <i>pg_stat_user_tables</i> (or <i>pg_stat_all_tables</i>) view, <i>pg_class</i> system catalog and <i>pg_relation_size()</i>, <i>pg_total_relation_size()</i> functions.<br/>
+Used query : SELECT<br/>
+                 s.schemaname ||<br/>
+    &#8216;.&#8217; || s.relname AS relation,<br/>
+    pg_total_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024 AS total_size,<br/>
+    pg_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024 AS rel_size,<br/>
+    (pg_total_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024) &#8211;<br/>
+        (pg_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024) AS idx_size,<br/>
+    pg_total_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024 AS total_change,<br/>
+    pg_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024 AS rel_change,<br/>
+    (pg_total_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024) &#8211;<br/>
+        (pg_relation_size((s.schemaname || &#8216;.&#8217; || s.relname)::regclass) / 1024) AS idx_change<br/>
+        FROM pg_stat_user_tables s,<br/>
     pg_class c WHERE s.relid = c.oid ORDER BY 1;</dd>
 <p> <code>relation</code></p>
 <dl>
@@ -740,35 +740,35 @@ Used query: SELECT
 </dt><dd> Average time spent in this function itself, not including other functions called by it, in milliseconds.</dd></dl>
 </dl>
 <dt><code>pg_stat_statements_timing context</code></dt>
-<dd> Show timing statistics from pg_stat_statements module which tracking execution statistics of all SQL statements executed by a server. The module must be loaded by adding <i>pg_stat_statements</i> to <i>shared_preload_libraries </i> in <i>postgresql.conf</i>. This means that a server restart is needed to add or remove the module. When module loaded, <i>pg_stat_statement</i> extension must be installed in target database. For more information see <a rel="nofollow" href="http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.">http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.</a> Additionally used <i>pg_authid</i> and <i>pg_database</i> views. Different versions of the PostgreSQL may have different number of fields.<br />
-Used query : SELECT<br />
-                 a.rolname AS user,<br />
-    d.datname AS database,<br />
-    date_trunc(&#8216;seconds&#8217;, round(sum(p.total_time)) / 1000 * &#8216;1 second&#8217; ::interval) AS t_all_t,<br />
-    date_trunc(&#8216;seconds&#8217;, round(sum(p.blk_read_time)) / 1000 * &#8216;1 second&#8217; ::interval) AS t_read_t,<br />
-    date_trunc(&#8216;seconds&#8217;, round(sum(p.blk_write_time)) / 1000 * &#8216;1 second&#8217; ::interval) AS t_write_t,<br />
-    date_trunc(&#8216;seconds&#8217;, round((sum(p.total_time) &#8211; (sum(p.blk_read_time) + sum(p.blk_write_time)))) / 1000 * &#8216;1 second&#8217; ::interval) AS tot_cpu_t,<br />
-    round(sum(p.total_time)) AS all_t,<br />
-    round(sum(p.blk_read_time)) AS read_t,<br />
-    round(sum(p.blk_write_time)) AS write_t,<br />
-    round((sum(p.total_time) &#8211; (sum(p.blk_read_time) + sum(p.blk_write_time)))) AS cpu_t,<br />
-    sum(p.calls) AS calls,<br />
-    left(md5(d.datname || a.rolname || p.query), 10) AS queryid,<br />
-    regexp_replace(<br />
-        regexp_replace(<br />
-            regexp_replace(<br />
-                regexp_replace(<br />
-                    regexp_replace(p.query,<br />
-                                   E &#8216;\?(::[a-zA-Z_]+)?( *, *\?(::[a-zA-Z_]+)?)+&#8217;, &#8216;?&#8217;, &#8216;g&#8217;),<br />
-                    E &#8216;\$[0-9]+(::[a-zA-Z_]+)?( *, *\$[0-9]+(::[a-zA-Z_]+)?)*&#8217;, &#8216;$N&#8217;, &#8216;g&#8217;),<br />
-                E &#8216;&#8211;.*$&#8217;, &#8221;, &#8216;ng&#8217;),<br />
-            E &#8216;/\*.*?\*\/&#8217;, &#8221;, &#8216;g&#8217;),<br />
-        E &#8216;\s+&#8217;, &#8216; &#8216;, &#8216;g&#8217;) AS query<br />
-    FROM pg_stat_statements p<br />
-    JOIN pg_authid a ON a.oid = p.userid<br />
-                                JOIN pg_database d ON d.oid = p.dbid<br />
-                                                              WHERE d.datname<br />
-                                                              != &#8216;postgres&#8217; AND calls &gt; 50 GROUP BY a.rolname,<br />
+<dd> Show timing statistics from pg_stat_statements module which tracking execution statistics of all SQL statements executed by a server. The module must be loaded by adding <i>pg_stat_statements</i> to <i>shared_preload_libraries </i> in <i>postgresql.conf</i>. This means that a server restart is needed to add or remove the module. When module loaded, <i>pg_stat_statement</i> extension must be installed in target database. For more information see <a rel="nofollow" href="http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.">http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.</a> Additionally used <i>pg_authid</i> and <i>pg_database</i> views. Different versions of the PostgreSQL may have different number of fields.<br/>
+Used query : SELECT<br/>
+                 a.rolname AS user,<br/>
+    d.datname AS database,<br/>
+    date_trunc(&#8216;seconds&#8217;, round(sum(p.total_time)) / 1000 * &#8216;1 second&#8217; ::interval) AS t_all_t,<br/>
+    date_trunc(&#8216;seconds&#8217;, round(sum(p.blk_read_time)) / 1000 * &#8216;1 second&#8217; ::interval) AS t_read_t,<br/>
+    date_trunc(&#8216;seconds&#8217;, round(sum(p.blk_write_time)) / 1000 * &#8216;1 second&#8217; ::interval) AS t_write_t,<br/>
+    date_trunc(&#8216;seconds&#8217;, round((sum(p.total_time) &#8211; (sum(p.blk_read_time) + sum(p.blk_write_time)))) / 1000 * &#8216;1 second&#8217; ::interval) AS tot_cpu_t,<br/>
+    round(sum(p.total_time)) AS all_t,<br/>
+    round(sum(p.blk_read_time)) AS read_t,<br/>
+    round(sum(p.blk_write_time)) AS write_t,<br/>
+    round((sum(p.total_time) &#8211; (sum(p.blk_read_time) + sum(p.blk_write_time)))) AS cpu_t,<br/>
+    sum(p.calls) AS calls,<br/>
+    left(md5(d.datname || a.rolname || p.query), 10) AS queryid,<br/>
+    regexp_replace(<br/>
+        regexp_replace(<br/>
+            regexp_replace(<br/>
+                regexp_replace(<br/>
+                    regexp_replace(p.query,<br/>
+                                   E &#8216;\?(::[a-zA-Z_]+)?( *, *\?(::[a-zA-Z_]+)?)+&#8217;, &#8216;?&#8217;, &#8216;g&#8217;),<br/>
+                    E &#8216;\$[0-9]+(::[a-zA-Z_]+)?( *, *\$[0-9]+(::[a-zA-Z_]+)?)*&#8217;, &#8216;$N&#8217;, &#8216;g&#8217;),<br/>
+                E &#8216;&#8211;.*$&#8217;, &#8221;, &#8216;ng&#8217;),<br/>
+            E &#8216;/\*.*?\*\/&#8217;, &#8221;, &#8216;g&#8217;),<br/>
+        E &#8216;\s+&#8217;, &#8216; &#8216;, &#8216;g&#8217;) AS query<br/>
+    FROM pg_stat_statements p<br/>
+    JOIN pg_authid a ON a.oid = p.userid<br/>
+                                JOIN pg_database d ON d.oid = p.dbid<br/>
+                                                              WHERE d.datname<br/>
+                                                              != &#8216;postgres&#8217; AND calls &gt; 50 GROUP BY a.rolname,<br/>
                         d.datname, query;</dd>
 <p> <code>user</code></p>
 <dl>
@@ -825,28 +825,28 @@ Used query : SELECT<br />
 </dt><dd> Text of a representative statement.</dd></dl>
 </dl>
 <dt><code>pg_stat_statements_general context</code></dt>
-<dd> Show general statistics about rows and calls from pg_stat_statements module which tracking execution statistics of all SQL statements executed by a server. The module must be loaded by adding <i>pg_stat_statements</i> to <i>shared_preload_libraries </i> in <i>postgresql.conf</i>. This means that a server restart is needed to add or remove the module. When module loaded, <i>pg_stat_statement</i> extension must be installed in target database. For more information see <a rel="nofollow" href="http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.">http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.</a> Additionally used <i>pg_authid</i> and <i>pg_database</i> views.<br />
-Used query : SELECT<br />
-                 a.rolname AS user,<br />
-    d.datname AS database,<br />
-    sum(p.calls) AS t_calls, sum(p.rows) as t_rows,<br />
-    sum(p.calls) AS calls, sum(p.rows) as rows,<br />
-    left(md5(d.datname || a.rolname || p.query), 10) AS queryid,<br />
-    regexp_replace(<br />
-        regexp_replace(<br />
-            regexp_replace(<br />
-                regexp_replace(<br />
-                    regexp_replace(p.query,<br />
-                                   E &#8216;\?(::[a-zA-Z_]+)?( *, *\?(::[a-zA-Z_]+)?)+&#8217;, &#8216;?&#8217;, &#8216;g&#8217;),<br />
-                    E &#8216;\$[0-9]+(::[a-zA-Z_]+)?( *, *\$[0-9]+(::[a-zA-Z_]+)?)*&#8217;, &#8216;$N&#8217;, &#8216;g&#8217;),<br />
-                E &#8216;&#8211;.*$&#8217;, &#8221;, &#8216;ng&#8217;),<br />
-            E &#8216;/\*.*?\*\/&#8217;, &#8221;, &#8216;g&#8217;),<br />
-        E &#8216;\s+&#8217;, &#8216; &#8216;, &#8216;g&#8217;) AS query<br />
-    FROM pg_stat_statements p<br />
-    JOIN pg_authid a ON a.oid = p.userid<br />
-                                JOIN pg_database d ON d.oid = p.dbid<br />
-                                                              WHERE d.datname<br />
-                                                              != &#8216;postgres&#8217; AND calls &gt; 50 GROUP BY a.rolname,<br />
+<dd> Show general statistics about rows and calls from pg_stat_statements module which tracking execution statistics of all SQL statements executed by a server. The module must be loaded by adding <i>pg_stat_statements</i> to <i>shared_preload_libraries </i> in <i>postgresql.conf</i>. This means that a server restart is needed to add or remove the module. When module loaded, <i>pg_stat_statement</i> extension must be installed in target database. For more information see <a rel="nofollow" href="http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.">http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.</a> Additionally used <i>pg_authid</i> and <i>pg_database</i> views.<br/>
+Used query : SELECT<br/>
+                 a.rolname AS user,<br/>
+    d.datname AS database,<br/>
+    sum(p.calls) AS t_calls, sum(p.rows) as t_rows,<br/>
+    sum(p.calls) AS calls, sum(p.rows) as rows,<br/>
+    left(md5(d.datname || a.rolname || p.query), 10) AS queryid,<br/>
+    regexp_replace(<br/>
+        regexp_replace(<br/>
+            regexp_replace(<br/>
+                regexp_replace(<br/>
+                    regexp_replace(p.query,<br/>
+                                   E &#8216;\?(::[a-zA-Z_]+)?( *, *\?(::[a-zA-Z_]+)?)+&#8217;, &#8216;?&#8217;, &#8216;g&#8217;),<br/>
+                    E &#8216;\$[0-9]+(::[a-zA-Z_]+)?( *, *\$[0-9]+(::[a-zA-Z_]+)?)*&#8217;, &#8216;$N&#8217;, &#8216;g&#8217;),<br/>
+                E &#8216;&#8211;.*$&#8217;, &#8221;, &#8216;ng&#8217;),<br/>
+            E &#8216;/\*.*?\*\/&#8217;, &#8221;, &#8216;g&#8217;),<br/>
+        E &#8216;\s+&#8217;, &#8216; &#8216;, &#8216;g&#8217;) AS query<br/>
+    FROM pg_stat_statements p<br/>
+    JOIN pg_authid a ON a.oid = p.userid<br/>
+                                JOIN pg_database d ON d.oid = p.dbid<br/>
+                                                              WHERE d.datname<br/>
+                                                              != &#8216;postgres&#8217; AND calls &gt; 50 GROUP BY a.rolname,<br/>
                         d.datname, query;</dd>
 <p> <code>user</code></p>
 <dl>
@@ -883,35 +883,35 @@ Used query : SELECT<br />
 </dt><dd> Text of a representative statement</dd></dl>
 </dl>
 <dt><code>pg_stat_statements_io context</code></dt>
-<dd> Show statistics about buffer input/output from pg_stat_statements module which tracking execution statistics of all SQL statements executed by a server. The module must be loaded by adding <i>pg_stat_statements</i> to <i>shared_preload_libraries </i> in <i>postgresql.conf</i>. This means that a server restart is needed to add or remove the module. When module loaded, <i>pg_stat_statement</i> extension must be installed in target database. For more information see <a rel="nofollow" href="http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.">http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.</a> Additionally used <i>pg_authid</i> and <i>pg_database</i> views.<br />
-Used query : SELECT<br />
-                 a.rolname AS user,<br />
-    d.datname AS database,<br />
-    (sum(p.shared_blks_hit) + sum(p.local_blks_hit)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as t_hits,<br />
-    (sum(p.shared_blks_read) + sum(p.local_blks_read)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as t_reads,<br />
-    (sum(p.shared_blks_dirtied) + sum(p.local_blks_dirtied)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as t_dirtied,<br />
-    (sum(p.shared_blks_written) + sum(p.local_blks_written)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as t_written,<br />
-    (sum(p.shared_blks_hit) + sum(p.local_blks_hit)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as hits,<br />
-    (sum(p.shared_blks_read) + sum(p.local_blks_read)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as reads,<br />
-    (sum(p.shared_blks_dirtied) + sum(p.local_blks_dirtied)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as dirtied,<br />
-    (sum(p.shared_blks_written) + sum(p.local_blks_written)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as written,<br />
-    sum(p.calls) AS calls,<br />
-    left(md5(d.datname || a.rolname || p.query), 10) AS queryid,<br />
-    regexp_replace(<br />
-        regexp_replace(<br />
-            regexp_replace(<br />
-                regexp_replace(<br />
-                    regexp_replace(p.query,<br />
-                                   E &#8216;\?(::[a-zA-Z_]+)?( *, *\?(::[a-zA-Z_]+)?)+&#8217;, &#8216;?&#8217;, &#8216;g&#8217;),<br />
-                    E &#8216;\$[0-9]+(::[a-zA-Z_]+)?( *, *\$[0-9]+(::[a-zA-Z_]+)?)*&#8217;, &#8216;$N&#8217;, &#8216;g&#8217;),<br />
-                E &#8216;&#8211;.*$&#8217;, &#8221;, &#8216;ng&#8217;),<br />
-            E &#8216;/\*.*?\*\/&#8217;, &#8221;, &#8216;g&#8217;),<br />
-        E &#8216;\s+&#8217;, &#8216; &#8216;, &#8216;g&#8217;) AS query<br />
-    FROM pg_stat_statements p<br />
-    JOIN pg_authid a ON a.oid = p.userid<br />
-                                JOIN pg_database d ON d.oid = p.dbid<br />
-                                                              WHERE d.datname<br />
-                                                              != &#8216;postgres&#8217; AND calls &gt; 50 GROUP BY a.rolname,<br />
+<dd> Show statistics about buffer input/output from pg_stat_statements module which tracking execution statistics of all SQL statements executed by a server. The module must be loaded by adding <i>pg_stat_statements</i> to <i>shared_preload_libraries </i> in <i>postgresql.conf</i>. This means that a server restart is needed to add or remove the module. When module loaded, <i>pg_stat_statement</i> extension must be installed in target database. For more information see <a rel="nofollow" href="http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.">http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.</a> Additionally used <i>pg_authid</i> and <i>pg_database</i> views.<br/>
+Used query : SELECT<br/>
+                 a.rolname AS user,<br/>
+    d.datname AS database,<br/>
+    (sum(p.shared_blks_hit) + sum(p.local_blks_hit)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as t_hits,<br/>
+    (sum(p.shared_blks_read) + sum(p.local_blks_read)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as t_reads,<br/>
+    (sum(p.shared_blks_dirtied) + sum(p.local_blks_dirtied)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as t_dirtied,<br/>
+    (sum(p.shared_blks_written) + sum(p.local_blks_written)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as t_written,<br/>
+    (sum(p.shared_blks_hit) + sum(p.local_blks_hit)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as hits,<br/>
+    (sum(p.shared_blks_read) + sum(p.local_blks_read)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as reads,<br/>
+    (sum(p.shared_blks_dirtied) + sum(p.local_blks_dirtied)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as dirtied,<br/>
+    (sum(p.shared_blks_written) + sum(p.local_blks_written)) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as written,<br/>
+    sum(p.calls) AS calls,<br/>
+    left(md5(d.datname || a.rolname || p.query), 10) AS queryid,<br/>
+    regexp_replace(<br/>
+        regexp_replace(<br/>
+            regexp_replace(<br/>
+                regexp_replace(<br/>
+                    regexp_replace(p.query,<br/>
+                                   E &#8216;\?(::[a-zA-Z_]+)?( *, *\?(::[a-zA-Z_]+)?)+&#8217;, &#8216;?&#8217;, &#8216;g&#8217;),<br/>
+                    E &#8216;\$[0-9]+(::[a-zA-Z_]+)?( *, *\$[0-9]+(::[a-zA-Z_]+)?)*&#8217;, &#8216;$N&#8217;, &#8216;g&#8217;),<br/>
+                E &#8216;&#8211;.*$&#8217;, &#8221;, &#8216;ng&#8217;),<br/>
+            E &#8216;/\*.*?\*\/&#8217;, &#8221;, &#8216;g&#8217;),<br/>
+        E &#8216;\s+&#8217;, &#8216; &#8216;, &#8216;g&#8217;) AS query<br/>
+    FROM pg_stat_statements p<br/>
+    JOIN pg_authid a ON a.oid = p.userid<br/>
+                                JOIN pg_database d ON d.oid = p.dbid<br/>
+                                                              WHERE d.datname<br/>
+                                                              != &#8216;postgres&#8217; AND calls &gt; 50 GROUP BY a.rolname,<br/>
                         d.datname, query;</dd>
 <p> <code>user</code></p>
 <dl>
@@ -968,31 +968,31 @@ Used query : SELECT<br />
 </dt><dd> Text of a representative statement</dd></dl>
 </dl>
 <dt><code>pg_stat_statements_temp context</code></dt>
-<dd> Show statistics about buffers input/output related with temporary buffers. Stats read from pg_stat_statements module which tracking execution statistics of all SQL statements executed by a server. The module must be loaded by adding <i>pg_stat_statements</i> to <i>shared_preload_libraries </i> in <i>postgresql.conf</i>. This means that a server restart is needed to add or remove the module. When module loaded, <i>pg_stat_statement</i> extension must be installed in target database. For more information see <a rel="nofollow" href="http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.">http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.</a> Additionally used <i>pg_authid</i> and <i>pg_database</i> views.<br />
-Used query : SELECT<br />
-                 a.rolname AS user,<br />
-    d.datname AS database,<br />
-    sum(p.temp_blks_read) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as t_tmp_read,<br />
-    sum(p.temp_blks_written) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as t_tmp_write,<br />
-    sum(p.temp_blks_read) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as tmp_read,<br />
-    sum(p.temp_blks_written) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as tmp_write,<br />
-    sum(p.calls) AS calls,<br />
-    left(md5(d.datname || a.rolname || p.query), 10) AS queryid,<br />
-    regexp_replace(<br />
-        regexp_replace(<br />
-            regexp_replace(<br />
-                regexp_replace(<br />
-                    regexp_replace(p.query,<br />
-                                   E &#8216;\?(::[a-zA-Z_]+)?( *, *\?(::[a-zA-Z_]+)?)+&#8217;, &#8216;?&#8217;, &#8216;g&#8217;),<br />
-                    E &#8216;\$[0-9]+(::[a-zA-Z_]+)?( *, *\$[0-9]+(::[a-zA-Z_]+)?)*&#8217;, &#8216;$N&#8217;, &#8216;g&#8217;),<br />
-                E &#8216;&#8211;.*$&#8217;, &#8221;, &#8216;ng&#8217;),<br />
-            E &#8216;/\*.*?\*\/&#8217;, &#8221;, &#8216;g&#8217;),<br />
-        E &#8216;\s+&#8217;, &#8216; &#8216;, &#8216;g&#8217;) AS query<br />
-    FROM pg_stat_statements p<br />
-    JOIN pg_authid a ON a.oid = p.userid<br />
-                                JOIN pg_database d ON d.oid = p.dbid<br />
-                                                              WHERE d.datname<br />
-                                                              != &#8216;postgres&#8217; AND calls &gt; 50 GROUP BY a.rolname,<br />
+<dd> Show statistics about buffers input/output related with temporary buffers. Stats read from pg_stat_statements module which tracking execution statistics of all SQL statements executed by a server. The module must be loaded by adding <i>pg_stat_statements</i> to <i>shared_preload_libraries </i> in <i>postgresql.conf</i>. This means that a server restart is needed to add or remove the module. When module loaded, <i>pg_stat_statement</i> extension must be installed in target database. For more information see <a rel="nofollow" href="http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.">http://www.postgresql.org/docs/9.4/static/pgstatstatements.html.</a> Additionally used <i>pg_authid</i> and <i>pg_database</i> views.<br/>
+Used query : SELECT<br/>
+                 a.rolname AS user,<br/>
+    d.datname AS database,<br/>
+    sum(p.temp_blks_read) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as t_tmp_read,<br/>
+    sum(p.temp_blks_written) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as t_tmp_write,<br/>
+    sum(p.temp_blks_read) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as tmp_read,<br/>
+    sum(p.temp_blks_written) * (SELECT current_setting(&#8216;block_size&#8217;)::int / 1024) as tmp_write,<br/>
+    sum(p.calls) AS calls,<br/>
+    left(md5(d.datname || a.rolname || p.query), 10) AS queryid,<br/>
+    regexp_replace(<br/>
+        regexp_replace(<br/>
+            regexp_replace(<br/>
+                regexp_replace(<br/>
+                    regexp_replace(p.query,<br/>
+                                   E &#8216;\?(::[a-zA-Z_]+)?( *, *\?(::[a-zA-Z_]+)?)+&#8217;, &#8216;?&#8217;, &#8216;g&#8217;),<br/>
+                    E &#8216;\$[0-9]+(::[a-zA-Z_]+)?( *, *\$[0-9]+(::[a-zA-Z_]+)?)*&#8217;, &#8216;$N&#8217;, &#8216;g&#8217;),<br/>
+                E &#8216;&#8211;.*$&#8217;, &#8221;, &#8216;ng&#8217;),<br/>
+            E &#8216;/\*.*?\*\/&#8217;, &#8221;, &#8216;g&#8217;),<br/>
+        E &#8216;\s+&#8217;, &#8216; &#8216;, &#8216;g&#8217;) AS query<br/>
+    FROM pg_stat_statements p<br/>
+    JOIN pg_authid a ON a.oid = p.userid<br/>
+                                JOIN pg_database d ON d.oid = p.dbid<br/>
+                                                              WHERE d.datname<br/>
+                                                              != &#8216;postgres&#8217; AND calls &gt; 50 GROUP BY a.rolname,<br/>
                         d.datname, query;</dd>
 <p> <code>user</code></p>
 <dl>

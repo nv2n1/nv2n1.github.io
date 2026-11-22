@@ -49,6 +49,6 @@ description: "ppmfade – generate a transition between two image files using sp
 <h2>SEE ALSO</h2>
 <p> <code>tontsc</code>(1), <code>sgifade</code>(1), <code>smart_vfr</code>(1), <code>xmorph</code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), </p>
 <h2>AUTHOR</h2>
-<p> Wesley C. Barris (wesb [at] msc.edu)<br />
- Army High Performance Computing Research Center (AHPCRC)<br />
+<p> Wesley C. Barris (wesb [at] msc.edu)<br/>
+ Army High Performance Computing Research Center (AHPCRC)<br/>
  Minnesota Supercomputer Center, Inc. </p>

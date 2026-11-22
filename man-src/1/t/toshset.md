@@ -104,8 +104,8 @@ description: "toshset – manipulate bios and hardware settings of Toshiba lapto
 <p> Many features are locked and can not be changed when the battery save mode is not &#8220;user.&#8221; Since I only have one laptop, I can&#8217;t test this utility on other hardware. User feedback in this regard is helpful. Some features do not work on my laptop and they may work on your&#8217;s, and visa-versa. </p>
 <p> Toshset requires an experimental version of the toshiba_acpi kernel module with an ACPI-enabled kernel. </p>
 <h2>AUTHOR</h2>
-<p> Written by &lt;Charles [at] Schwieters.org&gt;<br />
+<p> Written by &lt;Charles [at] Schwieters.org&gt;<br/>
  News, updates and documentation: visit <a rel="nofollow" href="http://schwieters.org/toshset.html">http://schwieters.org/toshset.html</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2002-8 Charles D. Schwieters<br />
+<p> Copyright &#169; 2002-8 Charles D. Schwieters<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

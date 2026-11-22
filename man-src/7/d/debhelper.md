@@ -37,7 +37,7 @@ description: "debhelper – the debhelper tool suite"
 <dt><i><a href="/docs/linux/man/1-dh_compress/">dh_compress</a></i>(1)</dt>
 <dd>compress files and fix symlinks in package build directories</dd>
 <dt><i><a href="/docs/linux/man/1-dh_dwz/">dh_dwz</a></i>(1)</dt>
-<dd>optimize <font SIZE="-1">DWARF</font> debug information in <font SIZE="-1">ELF</font> binaries via dwz</dd>
+<dd>optimize DWARF debug information in ELF binaries via dwz</dd>
 <dt><i><a href="/docs/linux/man/1-dh_fixperms/">dh_fixperms</a></i>(1)</dt>
 <dd>fix permissions of files in package build directories</dd>
 <dt><i><a href="/docs/linux/man/1-dh_gconf/">dh_gconf</a></i>(1)</dt>
@@ -49,13 +49,13 @@ description: "debhelper – the debhelper tool suite"
 <dt><i><a href="/docs/linux/man/1-dh_install/">dh_install</a></i>(1)</dt>
 <dd>install files into package build directories</dd>
 <dt><i><a href="/docs/linux/man/1-dh_installcatalogs/">dh_installcatalogs</a></i>(1)</dt>
-<dd>install and register <font SIZE="-1">SGML</font> Catalogs</dd>
+<dd>install and register SGML Catalogs</dd>
 <dt><i><a href="/docs/linux/man/1-dh_installchangelogs/">dh_installchangelogs</a></i>(1)</dt>
 <dd>install changelogs into package build directories</dd>
 <dt><i><a href="/docs/linux/man/1-dh_installcron/">dh_installcron</a></i>(1)</dt>
 <dd>install cron scripts into etc/cron.*</dd>
 <dt><i><a href="/docs/linux/man/1-dh_installdeb/">dh_installdeb</a></i>(1)</dt>
-<dd>install files into the <font SIZE="-1">DEBIAN</font> directory</dd>
+<dd>install files into the DEBIAN directory</dd>
 <dt><i><a href="/docs/linux/man/1-dh_installdebconf/">dh_installdebconf</a></i>(1)</dt>
 <dd>install files used by debconf in package build directories</dd>
 <dt><i><a href="/docs/linux/man/1-dh_installdirs/">dh_installdirs</a></i>(1)</dt>
@@ -145,7 +145,7 @@ description: "debhelper – the debhelper tool suite"
 <p>Many debhelper commands make use of files in <i>debian/</i> to control what they do. Besides the common <i>debian/changelog</i> and <i>debian/control</i>, which are in all packages, not just those using debhelper, some additional files can be used to configure the behavior of specific debhelper commands. These files are typically named debian/<i>package</i>.foo (where <i>package</i> of course, is replaced with the package that is being acted on). </p>
 <p> For example, <code>dh_installdocs</code> uses files named <i>debian/package.docs</i> to list the documentation files it will install. See the man pages of individual commands for details about the names and formats of the files they use. Generally, these files will list files to act on, one file per line. Some programs in debhelper use pairs of files and destinations or slightly more complicated formats. </p>
 <p> Note for the first (or only) binary package listed in <i>debian/control</i>, debhelper will use <i>debian/foo</i> when there&#8217;s no <i>debian/package.foo</i> file. </p>
-<p> In some rare cases, you may want to have different versions of these files for different architectures or OSes. If files named debian/<i>package</i>.foo.<i></i><font SIZE="-1"><i>ARCH</i></font><i></i> or debian/<i>package</i>.foo.<i></i><font SIZE="-1"><i>OS</i></font><i></i> exist, where <i></i><font SIZE="-1"><i>ARCH</i></font><i></i> and <i></i><font SIZE="-1"><i>OS</i></font><i></i> are the same as the output of &quot;<code>dpkg-architecture -qDEB_HOST_ARCH</code>&#8220; / &#8221;<code>dpkg-architecture -qDEB_HOST_ARCH_OS</code>&quot;, then they will be used in preference to other, more general files. </p>
+<p> In some rare cases, you may want to have different versions of these files for different architectures or OSes. If files named debian/<i>package</i>.foo.<i></i><i>ARCH</i><i></i> or debian/<i>package</i>.foo.<i></i><i>OS</i><i></i> exist, where <i></i><i>ARCH</i><i></i> and <i></i><i>OS</i><i></i> are the same as the output of &quot;<code>dpkg-architecture -qDEB_HOST_ARCH</code>&#8220; / &#8221;<code>dpkg-architecture -qDEB_HOST_ARCH_OS</code>&quot;, then they will be used in preference to other, more general files. </p>
 <p> Mostly, these config files are used to specify lists of various types of files. Documentation or example files to install, files to move, and so on. When appropriate, in cases like these, you can use standard shell wildcard characters (<code>?</code> and <code>*</code> and <code>[</code><i>..</i><code>]</code> character classes) in the files. You can also put comments in these files; lines beginning with <code>#</code> are ignored. </p>
 <p> The syntax of these files is intentionally kept very simple to make them easy to read, understand, and modify. If you prefer power and complexity, you can make the file executable, and write a program that outputs whatever content is appropriate for a given situation. When you do so, the output is not further processed to expand wildcards or strip comments.</p>
 <h2>Shared Debhelper Options</h2>
@@ -156,7 +156,7 @@ description: "debhelper – the debhelper tool suite"
 <dt><code>&#8211;no-act</code></dt>
 <dd>Do not really do anything. If used with -v, the result is that the command will output what it would have done.</dd>
 <dt><code>-a</code>, <code>&#8211;arch</code></dt>
-<dd>Act on architecture dependent packages that should be built for the <font SIZE="-1"><code>DEB_HOST_ARCH</code></font> architecture.</dd>
+<dd>Act on architecture dependent packages that should be built for the <code>DEB_HOST_ARCH</code> architecture.</dd>
 <dt><code>-i</code>, <code>&#8211;indep</code></dt>
 <dd>Act on all architecture independent packages.</dd>
 <dt><code>-p</code><i>package</i>, <code>&#8211;package=</code><i>package</i></dt>
@@ -185,7 +185,7 @@ description: "debhelper – the debhelper tool suite"
 <dt><code>-X</code><i>item</i>, <code>&#8211;exclude=</code><i>item</i></dt>
 <dd>Exclude an item from processing. This option may be used multiple times, to exclude more than one thing. The IitemR is typically part of a filename, and any file containing the specified text will be excluded.</dd>
 <dt><code>-A</code>, <code>&#8211;all</code></dt>
-<dd>Makes files or other items that are specified on the command line take effect in <font SIZE="-1">ALL</font> packages acted on, not just the first.</dd></dl>
+<dd>Makes files or other items that are specified on the command line take effect in ALL packages acted on, not just the first.</dd></dl>
 <h2>Build System Options</h2>
 <p>The following command line options are supported by all of the <code>dh_auto_</code><i>*</i> debhelper programs. These programs support a variety of build systems, and normally heuristically determine which to use, and how to use them. You can use these command line options to override the default behavior. Typically these are passed to <i><a href="/docs/linux/man/1-dh/">dh</a></i>(1), which then passes them to all the <code>dh_auto_</code><i>*</i> programs.</p>
 <dl>
@@ -198,9 +198,9 @@ description: "debhelper – the debhelper tool suite"
 <p> If this option is not specified, building will be done in source by default unless the build system requires or prefers out of source tree building. In such a case, the default build directory will be used even if <code>&#8211;builddirectory</code> is not specified. </p>
 <p> If the build system prefers out of source tree building but still allows in source building, the latter can be re-enabled by passing a build directory path that is the same as the source directory path.</p>
 <dt><code>&#8211;parallel</code>, <code>&#8211;no-parallel</code></dt>
-<dd>Control whether parallel builds should be used if underlying build system supports them. The number of parallel jobs is controlled by the <font SIZE="-1"><code>DEB_BUILD_OPTIONS</code></font> environment variable (&#8220;Debian Policy, section 4.9.1&#8221;) at build time. It might also be subject to a build system specific limit. </dd>
+<dd>Control whether parallel builds should be used if underlying build system supports them. The number of parallel jobs is controlled by the <code>DEB_BUILD_OPTIONS</code> environment variable (&#8220;Debian Policy, section 4.9.1&#8221;) at build time. It might also be subject to a build system specific limit. </dd>
 <p> If neither option is specified, debhelper currently defaults to <code>&#8211;parallel</code> in compat 10 (or later) and <code>&#8211;no-parallel</code> otherwise. </p>
-<p> As an optimization, <code>dh</code> will try to avoid passing these options to subprocesses, if they are unnecessary and the only options passed. Notably this happens when <font SIZE="-1"><code>DEB_BUILD_OPTIONS</code></font> does not have a <i>parallel</i> parameter (or its value is 1).</p>
+<p> As an optimization, <code>dh</code> will try to avoid passing these options to subprocesses, if they are unnecessary and the only options passed. Notably this happens when <code>DEB_BUILD_OPTIONS</code> does not have a <i>parallel</i> parameter (or its value is 1).</p>
 <dt><code>&#8211;max-parallel=</code><i>maximum</i></dt>
 <dd>This option implies <code>&#8211;parallel</code> and allows further limiting the number of jobs that can be used in a parallel build. If the package build is known to only work with certain levels of concurrency, you can set this to the maximum level that is known to work, or that you wish to support. </dd>
 <p> Notably, setting the maximum to 1 is effectively the same as using <code>&#8211;no-parallel</code>.</p>
@@ -230,7 +230,7 @@ description: "debhelper – the debhelper tool suite"
 <dt>&#8211;</dt>
 <dd><code>dh_installwm</code> will install a slave manpage link for <i>x-window-manager.1.gz</i>, if it sees the man page in <i>usr/share/man/man1</i> in the package build directory.</dd>
 <dt>&#8211;</dt>
-<dd><code>dh_builddeb</code> did not previously delete everything matching <font SIZE="-1"><code>DH_ALWAYS_EXCLUDE</code></font>, if it was set to a list of things to exclude, such as <font SIZE="-1"><code>CVS:</code></font><code>.svn:.git</code>. Now it does.</dd>
+<dd><code>dh_builddeb</code> did not previously delete everything matching <code>DH_ALWAYS_EXCLUDE</code>, if it was set to a list of things to exclude, such as <code>CVS:</code><code>.svn:.git</code>. Now it does.</dd>
 <dt>&#8211;</dt>
 <dd><code>dh_installman</code> allows overwriting existing man pages in the package build directory. In previous compatibility levels it silently refuses to do this.</dd></dl>
 </dl>
@@ -287,7 +287,7 @@ description: "debhelper – the debhelper tool suite"
 <dt>&#8211;</dt>
 <dd>All of the <code>dh_auto_</code><i>*</i> debhelper programs and <code>dh</code> set environment variables listed by <code>dpkg-buildflags</code>, unless they are already set.</dd>
 <dt>&#8211;</dt>
-<dd><code>dh_auto_configure</code> passes <code>dpkg-buildflags</code> <font SIZE="-1">CFLAGS, CPPFLAGS,</font> and <font SIZE="-1">LDFLAGS</font> to perl <i>Makefile.PL</i> and <i>Build.PL</i></dd>
+<dd><code>dh_auto_configure</code> passes <code>dpkg-buildflags</code> CFLAGS, CPPFLAGS, and LDFLAGS to perl <i>Makefile.PL</i> and <i>Build.PL</i></dd>
 <dt>&#8211;</dt>
 <dd><code>dh_strip</code> puts separated debug symbols in a location based on their build-id.</dd>
 <dt>&#8211;</dt>
@@ -376,17 +376,17 @@ description: "debhelper – the debhelper tool suite"
 <dd>The helpers <code>dh_installdocs</code>, <code>dh_installexamples</code>, <code>dh_installinfo</code>, and <code>dh_installman</code> now accept the parameter <code>&#8211;sourcedir</code> with same meaning as <code>dh_install</code>. Furthermore, they now also fall back to <i>debian/tmp</i> like <code>dh_install</code>. </dd>
 <p> Migration note: A bug in debhelper 11 up to 11.1.5 made <code>dh_installinfo</code> incorrectly ignore <code>&#8211;sourcedir</code>.</p>
 <dt>&#8211;</dt>
-<dd>The <code>perl-makemaker</code> and <code>perl-build</code> build systems no longer pass <code>-I.</code> to perl. Packages that still need this behaviour can emulate it by using the <font SIZE="-1"><code>PERL5LIB</code></font> environment variable. E.g. by adding <code>export PERL5LIB=.</code> in their debian/rules file (or similar).</dd>
+<dd>The <code>perl-makemaker</code> and <code>perl-build</code> build systems no longer pass <code>-I.</code> to perl. Packages that still need this behaviour can emulate it by using the <code>PERL5LIB</code> environment variable. E.g. by adding <code>export PERL5LIB=.</code> in their debian/rules file (or similar).</dd>
 <dt>&#8211;</dt>
-<dd>The <font SIZE="-1"><code>PERL_USE_UNSAFE_INC</code></font> environment variable is no longer set by <code>dh</code> or any of the <code>dh_auto_*</code> tools. It was added as a temporary work around to avoid a lot of packages failing to build at the same time. </dd>
-<p> Note this item will eventually become obsolete as upstream intends to drop support for the <font SIZE="-1"><code>PERL_USE_UNSAFE_INC</code></font> environment variable. When perl drops support for it, then this variable will be removed retroactively from existing compat levels as well.</p>
+<dd>The <code>PERL_USE_UNSAFE_INC</code> environment variable is no longer set by <code>dh</code> or any of the <code>dh_auto_*</code> tools. It was added as a temporary work around to avoid a lot of packages failing to build at the same time. </dd>
+<p> Note this item will eventually become obsolete as upstream intends to drop support for the <code>PERL_USE_UNSAFE_INC</code> environment variable. When perl drops support for it, then this variable will be removed retroactively from existing compat levels as well.</p>
 <dt>&#8211;</dt>
 <dd>The <code>dh_makeshlibs</code> helper will now exit with an error if objdump returns a non-zero exit from analysing a given file.</dd>
 <dt>&#8211;</dt>
 <dd>The <code>dh_installdocs</code> and <code>dh_installexamples</code> tools will now attempt to guess the &#8220;main package&#8221; for a given documentation package (e.g. <i>pkg-doc</i> will have <i>pkg</i> as main package if the latter exists). If a main package is found, <i>most</i> of the documentation will be installed into <i>/usr/share/doc/main-pkg</i> by default as recommended by Debian policy §12.3 since version 3.9.7. Notable exceptions include the copyright file and changelog files. </dd>
 <p> The <code>&#8211;doc-main-package</code> option can be used when the auto-detection is insufficient.</p>
 <dt>&#8211;</dt>
-<dd>The <code>dh_strip</code> and <code>dh_shlibdeps</code> tools no longer uses filename patterns to determine which files to process. Instead, they open the file and look for an <font SIZE="-1">ELF</font> header to determine if a given file is an shared object or an <font SIZE="-1">ELF</font> executable. </dd>
+<dd>The <code>dh_strip</code> and <code>dh_shlibdeps</code> tools no longer uses filename patterns to determine which files to process. Instead, they open the file and look for an ELF header to determine if a given file is an shared object or an ELF executable. </dd>
 <p> This change may cause the tools to process more files than previously.</dl>
 </dl>
 <dl>
@@ -414,7 +414,7 @@ description: "debhelper – the debhelper tool suite"
 <dt>&#8211;</dt>
 <dd>The <code>dh_missing</code> tool will now default to <code>&#8211;list-missing</code>.</dd>
 <dt>&#8211;</dt>
-<dd>The <code>dh_makeshlibs</code> tool will now only pass libraries to <i><a href="/docs/linux/man/1-dpkg-gensymbols/">dpkg-gensymbols</a></i>(1) if the <font SIZE="-1">ELF</font> binary has a <font SIZE="-1">SONAME</font> (containing &#8220;.so&#8221;).</dd>
+<dd>The <code>dh_makeshlibs</code> tool will now only pass libraries to <i><a href="/docs/linux/man/1-dpkg-gensymbols/">dpkg-gensymbols</a></i>(1) if the ELF binary has a SONAME (containing &#8220;.so&#8221;).</dd>
 <dt>&#8211;</dt>
 <dd>The <code>dh_compress</code> tool no longer compresses examples (i.e. anything installed in <i>&lt;/usr/share/doc/package/examples</i>&gt;.)</dd></dl>
 </dl>
@@ -423,9 +423,9 @@ description: "debhelper – the debhelper tool suite"
 </dl>
 <h2>Notes</h2>
 <h3>Multiple binary package support</h3>
-<p>If your source package generates more than one binary package, debhelper programs will default to acting on all binary packages when run. If your source package happens to generate one architecture dependent package, and another architecture independent package, this is not the correct behavior, because you need to generate the architecture dependent packages in the binary-arch <i>debian/rules</i> target, and the architecture independent packages in the binary-indep <i>debian/rules</i> target. To facilitate this, as well as give you more control over which packages are acted on by debhelper programs, all debhelper programs accept the <code>-a</code>, <code>-i</code>, <code>-p</code>, and <code>-s</code> parameters. These parameters are cumulative. If none are given, debhelper programs default to acting on all packages listed in the control file, with the exceptions below. First, any package whose <code>Architecture</code> field in <code>debian/control</code> does not match the <font SIZE="-1"><code>DEB_HOST_ARCH</code></font> architecture will be excluded (&#8220;Debian Policy, section 5.6.8&#8221;). Also, some additional packages may be excluded based on the contents of the <font SIZE="-1"><code>DEB_BUILD_PROFILES</code></font> environment variable and <code>Build-Profiles</code> fields in binary package stanzas in <code>debian/control</code>, according to the draft policy at &lt;<a rel="nofollow" href="https://wiki.debian.org/BuildProfileSpec">https://wiki.debian.org/BuildProfileSpec</a>&gt;. <i>Interaction between package selections and Build-Profiles</i> Build-Profiles affect which packages are included in the package selections mechanisms in debhelper. Generally, the package selections are described from the assumption that all packages are enabled. This section describes how the selections react when a package is disabled due to the active Build-Profiles (or lack of active Build-Profiles).</p>
+<p>If your source package generates more than one binary package, debhelper programs will default to acting on all binary packages when run. If your source package happens to generate one architecture dependent package, and another architecture independent package, this is not the correct behavior, because you need to generate the architecture dependent packages in the binary-arch <i>debian/rules</i> target, and the architecture independent packages in the binary-indep <i>debian/rules</i> target. To facilitate this, as well as give you more control over which packages are acted on by debhelper programs, all debhelper programs accept the <code>-a</code>, <code>-i</code>, <code>-p</code>, and <code>-s</code> parameters. These parameters are cumulative. If none are given, debhelper programs default to acting on all packages listed in the control file, with the exceptions below. First, any package whose <code>Architecture</code> field in <code>debian/control</code> does not match the <code>DEB_HOST_ARCH</code> architecture will be excluded (&#8220;Debian Policy, section 5.6.8&#8221;). Also, some additional packages may be excluded based on the contents of the <code>DEB_BUILD_PROFILES</code> environment variable and <code>Build-Profiles</code> fields in binary package stanzas in <code>debian/control</code>, according to the draft policy at &lt;<a rel="nofollow" href="https://wiki.debian.org/BuildProfileSpec">https://wiki.debian.org/BuildProfileSpec</a>&gt;. <i>Interaction between package selections and Build-Profiles</i> Build-Profiles affect which packages are included in the package selections mechanisms in debhelper. Generally, the package selections are described from the assumption that all packages are enabled. This section describes how the selections react when a package is disabled due to the active Build-Profiles (or lack of active Build-Profiles).</p>
 <dl>
-<dt>-a/&#8211;arch, -i/&#8211;indep <font SIZE="-1">OR</font> no selection options (a raw &quot;dh_X&quot; call)</dt>
+<dt>-a/&#8211;arch, -i/&#8211;indep OR no selection options (a raw &quot;dh_X&quot; call)</dt>
 <dd>The package disabled by Build-Profiles is silently excluded from the selection. Note you will receive a warning if <i>all</i> packages related to these selections are disabled. In that case, it generally does not make sense to do the build in the first place.</dd>
 <dt>-N <i>package</i> / &#8211;no-package <i>package</i></dt>
 <dd>The option is accepted and effectively does nothing.</dd>
@@ -458,24 +458,24 @@ Automatic generation of miscellaneous dependencies.
 <h3>udebs</h3>
 <p>Debhelper includes support for udebs. To create a udeb with debhelper, add &quot;<code>Package-Type: udeb</code>&quot; to the package&#8217;s stanza in <i>debian/control</i>. Debhelper will try to create udebs that comply with debian-installer policy, by making the generated package files end in <i>.udeb</i>, not installing any documentation into a udeb, skipping over <i>preinst</i>, <i>postrm</i>, <i>prerm</i>, and <i>config</i> scripts, etc.</p>
 <h2>Environment</h2>
-<p>The following environment variables can influence the behavior of debhelper. It is important to note that these must be actual environment variables in order to function properly (not simply <i>Makefile</i> variables). To specify them properly in <i>debian/rules</i>, be sure to &quot;<code>export</code>&#8220; them. For example, &#8221;<code>export </code><font SIZE="-1"><code>DH_VERBOSE</code></font>&quot;.</p>
+<p>The following environment variables can influence the behavior of debhelper. It is important to note that these must be actual environment variables in order to function properly (not simply <i>Makefile</i> variables). To specify them properly in <i>debian/rules</i>, be sure to &quot;<code>export</code>&#8220; them. For example, &#8221;<code>export </code><code>DH_VERBOSE</code>&quot;.</p>
 <dl>
-<dt><font SIZE="-1"><code>DH_VERBOSE</code></font></dt>
+<dt><code>DH_VERBOSE</code></dt>
 <dd>Set to <code>1</code> to enable verbose mode. Debhelper will output every command it runs. Also enables verbose build logs for some build systems like autoconf.</dd>
-<dt><font SIZE="-1"><code>DH_QUIET</code></font></dt>
-<dd>Set to <code>1</code> to enable quiet mode. Debhelper will not output commands calling the upstream build system nor will dh print which subcommands are called and depending on the upstream build system might make that more quiet, too. This makes it easier to spot important messages but makes the output quite useless as buildd log. Ignored if <font SIZE="-1">DH_VERBOSE</font> is also set.</dd>
-<dt><font SIZE="-1"><code>DH_COMPAT</code></font></dt>
+<dt><code>DH_QUIET</code></dt>
+<dd>Set to <code>1</code> to enable quiet mode. Debhelper will not output commands calling the upstream build system nor will dh print which subcommands are called and depending on the upstream build system might make that more quiet, too. This makes it easier to spot important messages but makes the output quite useless as buildd log. Ignored if DH_VERBOSE is also set.</dd>
+<dt><code>DH_COMPAT</code></dt>
 <dd>Temporarily specifies what compatibility level debhelper should run at, overriding any value in <i>debian/compat</i>.</dd>
-<dt><font SIZE="-1"><code>DH_NO_ACT</code></font></dt>
+<dt><code>DH_NO_ACT</code></dt>
 <dd>Set to <code>1</code> to enable no-act mode.</dd>
-<dt><font SIZE="-1"><code>DH_OPTIONS</code></font></dt>
+<dt><code>DH_OPTIONS</code></dt>
 <dd>Anything in this variable will be prepended to the command line arguments of all debhelper commands. </dd>
-<p> When using <i><a href="/docs/linux/man/1-dh/">dh</a></i>(1), it can be passed options that will be passed on to each debhelper command, which is generally better than using <font SIZE="-1">DH_OPTIONS.</font></p>
-<dt><font SIZE="-1"><code>DH_ALWAYS_EXCLUDE</code></font></dt>
+<p> When using <i><a href="/docs/linux/man/1-dh/">dh</a></i>(1), it can be passed options that will be passed on to each debhelper command, which is generally better than using DH_OPTIONS.</p>
+<dt><code>DH_ALWAYS_EXCLUDE</code></dt>
 <dd>If set, this adds the value the variable is set to to the <code>-X</code> options of all commands that support the <code>-X</code> option. Moreover, <code>dh_builddeb</code> will <code>rm -rf</code> anything that matches the value in your package build tree. </dd>
-<p> This can be useful if you are doing a build from a <font SIZE="-1">CVS</font> source tree, in which case setting <code>DH_ALWAYS_EXCLUDE=CVS</code> will prevent any <font SIZE="-1">CVS</font> directories from sneaking into the package you build. Or, if a package has a source tarball that (unwisely) includes <font SIZE="-1">CVS</font> directories, you might want to export <code>DH_ALWAYS_EXCLUDE=CVS</code> in <i>debian/rules</i>, to make it take effect wherever your package is built. </p>
+<p> This can be useful if you are doing a build from a CVS source tree, in which case setting <code>DH_ALWAYS_EXCLUDE=CVS</code> will prevent any CVS directories from sneaking into the package you build. Or, if a package has a source tarball that (unwisely) includes CVS directories, you might want to export <code>DH_ALWAYS_EXCLUDE=CVS</code> in <i>debian/rules</i>, to make it take effect wherever your package is built. </p>
 <p> Multiple things to exclude can be separated with colons, as in <code>DH_ALWAYS_EXCLUDE=CVS:.svn</code></p>
-<dt><font SIZE="-1"><code>DH_EXTRA_ADDONS</code></font></dt>
+<dt><code>DH_EXTRA_ADDONS</code></dt>
 <dd>If set, this adds the specified dh addons to be run in the appropriate places in the sequence of commands. This is equivalent to specifying the addon to run with the &#8211;with flag in the debian/rules file. Any &#8211;without calls specifying an addon in this environment variable will not be run. </dd>
 <p> This is intended to be used by downstreams or specific local configurations that require a debhelper addon to be run during multiple builds without having to patch a large number of rules file. If at all possible, this should be avoided in favor of a &#8211;with flag in the rules file.</dl>
 <h2>See Also</h2>

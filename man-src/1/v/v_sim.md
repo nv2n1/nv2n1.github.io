@@ -14,7 +14,7 @@ description: "v_sim – a GTK program for 3D visualisation of atomic systems"
 <p> This manual page documents briefly the <code>v_sim</code> commands. It is a software to visualise atomic structures with OpenGl rendering.</p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). </p>
-<p> A complete list of options is included below.<br />
+<p> A complete list of options is included below.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</p>
 <dl>
 <dt><code>-e, &#8211;export file (from v3.0.0)</code></dt>
@@ -81,10 +81,10 @@ description: "v_sim – a GTK program for 3D visualisation of atomic systems"
 <dd> used with a data file (see -c), it specifies the column id to be used to scale the nodes. </dd>
 </dl>
 <h2>FILES</h2>
-<p> <i>/usr/share/v_sim/v_sim.res</i> specify all rendering informations from position of the camera to colour of the elements.<br />
- <i>/usr/share/v_sim/v_sim.par</i> specify all interface and non-rendering options such as the positions of the panels.<br />
+<p> <i>/usr/share/v_sim/v_sim.res</i> specify all rendering informations from position of the camera to colour of the elements.<br/>
+ <i>/usr/share/v_sim/v_sim.par</i> specify all interface and non-rendering options such as the positions of the panels.<br/>
  <i>~/$XDG_CONFIG_DIR/v_sim</i> a directory where overloading <code>v_sim.res</code> and <code>v_sim.par</code> can be put.</p>
 <h2>AUTHOR</h2>
 <p> V_Sim was written by Luc Billard, Damien Caliste, Olivier D&#8217;Astier Aurélien Lherbier, Jérémy Blanc, Simon Planès, Thomas Jourdan and Yoann Ratao. </p>
-<p> This manual page was written by Damien Caliste &lt;damien.caliste [at] cea.fr&gt;.<br />
+<p> This manual page was written by Damien Caliste &lt;damien.caliste [at] cea.fr&gt;.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; </p>

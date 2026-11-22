@@ -21,7 +21,7 @@ producer | streamzip[opts] | consumer producer | streamzip[opts] - zipfile = out
 
  The zip container written to <tt>&quot;stdout&quot;</tt> is, by necessity, written in streaming format. Most programs that read Zip files can cope with a streamed zip file, but if interoperability is important, and your workflow allows you to write the zip file directly to disk you can create a non-streamed zip file using the <tt>&quot;zipfile&quot;</tt> option.
 
-<h3><font SIZE="-1">OPTIONS</font></h3>
+<h3>OPTIONS</h3>
 
 <dl>
 <dt>-zip64

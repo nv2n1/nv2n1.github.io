@@ -50,17 +50,17 @@ description: "nfsd – special filesystem for controlling Linux NFS server"
  </dd>
 <dt><code>channel</code></dt>
 <dd> <p> This file, if present, acts a channel for request from the kernel-based nfs server to be passed to a user-space program for handling. </p>
-<p> When the kernel needs some information which isn&#8217;t in the cache, it makes a line appear in the <code>channel</code> file giving the key for the information. A user-space program should read this, find the answer, and write a line containing the key, an expiry time, and the content. For example the kernel might make <br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> nfsd 127.0.0.1 <br />
- appear in the <code>auth.unix.ip/content</code> file. The user-space program might then write <br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> nfsd 127.0.0.1 1057206953 localhost <br />
+<p> When the kernel needs some information which isn&#8217;t in the cache, it makes a line appear in the <code>channel</code> file giving the key for the information. A user-space program should read this, find the answer, and write a line containing the key, an expiry time, and the content. For example the kernel might make <br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> nfsd 127.0.0.1 <br/>
+ appear in the <code>auth.unix.ip/content</code> file. The user-space program might then write <br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> nfsd 127.0.0.1 1057206953 localhost <br/>
  to indicate that 127.0.0.1 should map to localhost, at least for now. </p>
 <p> If the program uses <a href="/docs/linux/man/2-select/">select</a>(2) or <a href="/docs/linux/man/2-poll/">poll</a>(2) to discover if it can read from the <code>channel</code> then it will never see and end-of-file but when all requests have been answered, it will block until another request appears. </p>
  </dd></dl>
-<p> In the <code>/proc</code> filesystem there are 4 files that can be used to enabled extra tracing of nfsd and related code. They are: <code>/proc/sys/sunrpc/nfs_debug</code> <br />
- <code>/proc/sys/sunrpc/nfsd_debug</code> <br />
- <code>/proc/sys/sunrpc/nlm_debug</code> <br />
- <code>/proc/sys/sunrpc/rpc_debug</code> <br />
+<p> In the <code>/proc</code> filesystem there are 4 files that can be used to enabled extra tracing of nfsd and related code. They are: <code>/proc/sys/sunrpc/nfs_debug</code> <br/>
+ <code>/proc/sys/sunrpc/nfsd_debug</code> <br/>
+ <code>/proc/sys/sunrpc/nlm_debug</code> <br/>
+ <code>/proc/sys/sunrpc/rpc_debug</code> <br/>
  They control tracing for the NFS client, the NFS server, the Network Lock Manager (lockd) and the underlying RPC layer respectively. Decimal numbers can be read from or written to these files. Each number represents a bit-pattern where bits that are set cause certain classes of tracing to be enabled. Consult the kernel header files to find out what number correspond to what tracing. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-rpc.nfsd/">rpc.nfsd</a></code>(8), <code><a href="/docs/linux/man/5-exports/">exports</a></code>(5), <code><a href="/docs/linux/man/8-nfsstat/">nfsstat</a></code>(8), <code><a href="/docs/linux/man/8-mountd/">mountd</a></code>(8) <code><a href="/docs/linux/man/8-exportfs/">exportfs</a></code>(8). </p>

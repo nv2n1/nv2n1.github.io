@@ -10,12 +10,12 @@ description: "ql/termstructures/inflation/interpolatedzeroinflationcurve.hpp –
 
 <p> ql/termstructures/inflation/interpolatedzeroinflationcurve.hpp &#8211; Inflation term structure based on the interpolation of zero rates. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/inflationtermstructure.hpp&gt;<br />
- #include &lt;ql/math/interpolations/linearinterpolation.hpp&gt;<br />
- #include &lt;ql/math/comparison.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/inflationtermstructure.hpp&gt;<br/>
+ #include &lt;ql/math/interpolations/linearinterpolation.hpp&gt;<br/>
+ #include &lt;ql/math/comparison.hpp&gt;<br/>
  #include &lt;boost/noncopyable.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>InterpolatedZeroInflationCurve&lt; Interpolator &gt;</code><br />
+<p> class <code>InterpolatedZeroInflationCurve&lt; Interpolator &gt;</code><br/>
  <i>Inflation term structure based on the interpolation of zero rates. </i></p>
 <h3>Typedefs</h3>
 <p> typedef InterpolatedZeroInflationCurve&lt; Linear &gt; <code>ZeroInflationCurve</code> </p>

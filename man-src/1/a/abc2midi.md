@@ -12,11 +12,11 @@ description: "abc2midi – converts abc file to MIDI file(s)"
 <h2>SYNOPSIS</h2>
 <p> abc2midi <i>infile</i> [<i>refnum</i>] [-c] [-v] [-ver] [-t] [-n limit] [-RS] [-quiet] [-Q tempo] [-NFNP] [-OCC] [-NCOM] [-o outfile]</p>
 <h2>DESCRIPTION</h2>
-<p>&nbsp;<wbr>The default action is to write a MIDI file for each abc tune<br />
-&nbsp;<wbr>with the filename&nbsp;<wbr>&lt;stem&gt;N.mid, where&nbsp;<wbr>&lt;stem&gt;&nbsp;<wbr>is the filestem<br />
-&nbsp;<wbr>of the abc file and N is the tune reference number. If the -o<br />
-&nbsp;<wbr>option is used, only one file is written. This is the tune<br />
-&nbsp;<wbr>specified by the reference number or, if no reference number<br />
+<p>&nbsp;<wbr>The default action is to write a MIDI file for each abc tune<br/>
+&nbsp;<wbr>with the filename&nbsp;<wbr>&lt;stem&gt;N.mid, where&nbsp;<wbr>&lt;stem&gt;&nbsp;<wbr>is the filestem<br/>
+&nbsp;<wbr>of the abc file and N is the tune reference number. If the -o<br/>
+&nbsp;<wbr>option is used, only one file is written. This is the tune<br/>
+&nbsp;<wbr>specified by the reference number or, if no reference number<br/>
 &nbsp;<wbr>is given, the first tune in the file.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -70,13 +70,13 @@ description: "abc2midi – converts abc file to MIDI file(s)"
 <p> %%MIDI program [c] n </p>
 <p> selects program n (in the range 1-128) on channel c. If c is not given, the program is selected on the current melody channel. Most modern tone generators follow the General MIDI standard which defines the instrument type for each program number. </p>
 <p> %%MIDI beat a b c n </p>
-<p> controls the way note velocities are selected. The first note in a bar has velocity a. Other &quot;strong&quot; notes have velocity b and all the rest have velocity c. a, b and c must be in the range 0-128. The parameter n determines which notes are &quot;strong&quot;. If the time signature is x/y, then each note is given a position number k = 0, 1, 2 .. x-1 within each bar. Note that the units for n are not the unit note length. If k is a multiple of n, then the note is &quot;strong&quot;. The volume specifiers !ppp! to !fff! are equivalent to the following : !ppp! = %%MIDI beat 30 20 10 1<br />
- !pp! = %%MIDI beat 45 35 20 1<br />
- !p! = %%MIDI beat 60 50 35 1<br />
- !mp! = %%MIDI beat 75 65 50 1<br />
- !mf! = %%MIDI beat 90 80 65 1<br />
- !f! = %%MIDI beat 105 95 80 1<br />
- !ff! = %%MIDI beat 120 110 95 1<br />
+<p> controls the way note velocities are selected. The first note in a bar has velocity a. Other &quot;strong&quot; notes have velocity b and all the rest have velocity c. a, b and c must be in the range 0-128. The parameter n determines which notes are &quot;strong&quot;. If the time signature is x/y, then each note is given a position number k = 0, 1, 2 .. x-1 within each bar. Note that the units for n are not the unit note length. If k is a multiple of n, then the note is &quot;strong&quot;. The volume specifiers !ppp! to !fff! are equivalent to the following : !ppp! = %%MIDI beat 30 20 10 1<br/>
+ !pp! = %%MIDI beat 45 35 20 1<br/>
+ !p! = %%MIDI beat 60 50 35 1<br/>
+ !mp! = %%MIDI beat 75 65 50 1<br/>
+ !mf! = %%MIDI beat 90 80 65 1<br/>
+ !f! = %%MIDI beat 105 95 80 1<br/>
+ !ff! = %%MIDI beat 120 110 95 1<br/>
  !fff! = %%MIDI beat 127 125 110 1 </p>
 <p> %%MIDI beatmod n </p>
 <p> Increments by n (or decrements if n is negative) the velocities a, b and c described above. The instructions !crescendo(! and !crescendo)! are equivalent to inserting a %%MIDI beatmod 15 whereever they occur. (Alternatively you can use !&lt;(! and !&lt;)!.) Similarly the instructions !diminuendo(! and !diminuendo)! are equivalent to %%MIDI beatmod -15. </p>
@@ -99,9 +99,9 @@ description: "abc2midi – converts abc file to MIDI file(s)"
 <p> sets the fraction of the next note that grace notes will take up. a must be between 1 and b-1. The grace notes may not sound natural in this approach, since the length of the individual grace notes vary with the complexity of the grace and the length of the following note. A different approach (which is now the default) assumes that the grace notes always have a fixed duration. To use the other approach you would specify, %%MIDI gracedivider b where b specifies how many parts to divide the unit length specified by the L: field command. For example if b = 4 and L: = 1/8, then every grace note would be 1/(8*4) or a 32nd note. Time would be stolen from the note to which the grace notes are applied. If that note is not long enough to handle the grace then the grace notes would be assigned 0 duration. </p>
 <p> %%MIDI chordname name n1 n2 n3 n4 n5 n6 </p>
 <p> Defines how to play a guitar chord called &quot;name&quot;. n1 is usually 0 and n2, n3 to n6 give the pitches of the other notes in semitones relative to the root note. There may be fewer than 6 notes in the chord, but not more.If &quot;name&quot; is already defined, this command re-defines it. Unlike most other commands, chordname definitions stay in effect from where they are defined to the end of the abc file. The following illustrates how m, 7, m7 and maj7 could be set up if they were not already defined. </p>
-<p> %%MIDI chordname m 0 3 7<br />
- %%MIDI chordname 7 0 4 7 10<br />
- %%MIDI chordname m7 0 3 7 10<br />
+<p> %%MIDI chordname m 0 3 7<br/>
+ %%MIDI chordname 7 0 4 7 10<br/>
+ %%MIDI chordname m7 0 3 7 10<br/>
  %%MIDI chordname maj7 0 4 7 11 </p>
 <p> %%MIDI gchord string </p>
 <p> sets up how guitar chords are generated. The string is a sequence made of of z&#8217;s, c&#8217;s f&#8217;s and b&#8217;s for rests, chords, fundamental and fundamental plus chord notes respectively. This specifies how each bar is to be played. An optional length is allowed to follow the z&#8217;s, c&#8217;s f&#8217;s and b&#8217;s e.g. czf2zf3. If the abc contains guitar chords, then abc2midi automatically adds chords and fundamentals after encountering the first guitar chord. It keeps using that chord until a new chord is specified in the abc. Whenever the M: field is encountered in the abc, an appropriate default string is set : For 2/4 or 4/4 time default is equivalent to : %%MIDI gchord fzczfzcz For 3/4 time default is equivalent to : %%MIDI gchord fzczcz For 6/8 time default is equivalent to : %%MIDI gchord fzcfzc For 9/8 time default is equivalent to : %%MIDI gchord fzcfzcfzc The gchord command has been extended to allow you to play the individual notes comprising the guitar chord. This allows you to play broken chords or arpeggios. The new codes g,h,i,j, G,H,I,J reference the individual notes starting from the lowest note of the chord (not necessarily the root in the case of inversions). For example for the C major chord, g refers to C, h refers to E and i refers to G. For a gchord command such as, %%MIDI gchord ghih Abc2midi will arpeggiate the C major guitar chord to CEGE. The upper case letters G,H,I, and J refer to the same notes except they are transposed down one octave. Note for the first inversion of the C major chord (indicated by &quot;C/E&quot;), E would be the lowest note so g would reference the note E. Like other gchord codes, you may append a numeral indicating the duration of the note. The same rules apply as before. You can use any combination of the gchord codes, (fcbghijGHIJz). </p>

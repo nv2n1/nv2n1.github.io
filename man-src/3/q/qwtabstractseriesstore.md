@@ -13,10 +13,10 @@ description: "QwtAbstractSeriesStore –"
 <p>#include &lt;qwt_series_store.h&gt; </p>
 <p> Inherited by <code>QwtPlotSeriesItem</code> [virtual], <code>QwtSeriesStore&lt; T &gt;</code> [virtual], <code>QwtSeriesStore&lt; QPointF &gt;</code> [virtual], <code>QwtSeriesStore&lt; QwtIntervalSample &gt;</code> [virtual], <code>QwtSeriesStore&lt; QwtOHLCSample &gt;</code> [virtual], <code>QwtSeriesStore&lt; QwtPoint3D &gt;</code> [virtual], and <code>QwtSeriesStore&lt; QwtSetSample &gt;</code> [virtual].</p>
 <h3>Protected Member Functions</h3>
-<p>virtual <code>~QwtAbstractSeriesStore</code> ()<br />
- <i>Destructor. </i><br />
- virtual void <code>dataChanged</code> ()=0<br />
- <i></i><code>dataChanged()</code> indicates, that the series has been changed.<br />
+<p>virtual <code>~QwtAbstractSeriesStore</code> ()<br/>
+ <i>Destructor. </i><br/>
+ virtual void <code>dataChanged</code> ()=0<br/>
+ <i></i><code>dataChanged()</code> indicates, that the series has been changed.<br/>
  virtual void <code>setRectOfInterest</code> (const QRectF &amp;)=0 </p>
 <p> virtual QRectF <code>dataRect</code> () const =0 </p>
 <p> virtual size_t <code>dataSize</code> () const =0 </p>

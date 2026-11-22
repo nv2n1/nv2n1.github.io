@@ -28,12 +28,12 @@ description: "pki –keyid – Calculate key identifiers of a key or certificate
 <dd>Type of input. One of <i>priv</i> (private key), <i>rsa</i> (RSA private key), <i>ecdsa</i> (ECDSA private key), <i>bliss</i> (BLISS private key), <i>pub</i> (public key), <i>pkcs10</i> (PKCS#10 certificate request), <i>x509</i> (X.509 certificate), defaults to <i>priv</i>.</dd></dl>
 <h2>Examples</h2>
 <p>Calculate key identifiers of an RSA private key: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;keyid &#8211;in key.der<br />
-&nbsp;<wbr>&nbsp;<wbr>subjectKeyIdentifier:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>6a:9c:74:d1:f8:89:79:89:f6:5a:94:e9:89:f1&#8230;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;keyid &#8211;in key.der<br/>
+&nbsp;<wbr>&nbsp;<wbr>subjectKeyIdentifier:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>6a:9c:74:d1:f8:89:79:89:f6:5a:94:e9:89:f1&#8230;<br/>
 &nbsp;<wbr>&nbsp;<wbr>subjectPublicKeyInfo hash: 6e:55:dc:7e:9c:a5:58:d9:5b:e3:c7:13:14:e1&#8230; </p>
 <p> Calculate key identifiers of an X.509 certificate: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;keyid &#8211;in cert.der &#8211;type x509<br />
-&nbsp;<wbr>&nbsp;<wbr>subjectKeyIdentifier:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>6a:9c:74:d1:f8:89:79:89:f6:5a:94:e9:89:f1&#8230;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;keyid &#8211;in cert.der &#8211;type x509<br/>
+&nbsp;<wbr>&nbsp;<wbr>subjectKeyIdentifier:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>6a:9c:74:d1:f8:89:79:89:f6:5a:94:e9:89:f1&#8230;<br/>
 &nbsp;<wbr>&nbsp;<wbr>subjectPublicKeyInfo hash: 6e:55:dc:7e:9c:a5:58:d9:5b:e3:c7:13:14:e1&#8230; </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pki/">pki</a></code>(1)</p>

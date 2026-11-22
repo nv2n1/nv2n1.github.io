@@ -72,7 +72,7 @@ description: "GNU TeXmacs – a WYSIWYG mathematical text editor"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] texmacs.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1999-2005 Joris van der Hoeven<br />
+<p> Copyright &#169; 1999-2005 Joris van der Hoeven<br/>
  This is free software; see the source for copying conditions. GNU TeXmacs comes with NO WARRANTY WHATSOEVER; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for GNU TeXmacs can be accessed through the help menu when starting up the editor. You may also access the online documentation from inside the editor. The TeXmacs website at &lt;<a rel="nofollow" href="http://www.texmacs.org">http://www.texmacs.org</a>&gt; can be consulted for additional information. The TeXmacs web pages are also available at &lt;<a rel="nofollow" href="http://www.gnu.org/software/texmacs">http://www.gnu.org/software/texmacs</a>&gt;. </p>

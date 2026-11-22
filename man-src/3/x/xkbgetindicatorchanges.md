@@ -10,7 +10,7 @@ description: "XkbGetIndicatorChanges – Updates a local copy of the keyboard de
 <p>XkbGetIndicatorChanges &#8211; Updates a local copy of the keyboard description with the actual values of one or more calls to XkbNoteIndicatorChanges </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetIndicatorChanges</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbIndicatorChangesPtr </code><i>changes</i><code>,</code> <code>unsigned int </code><i>state</i><code>);</code><br />
+<dt> <code>Status XkbGetIndicatorChanges</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbIndicatorChangesPtr </code><i>changes</i><code>,</code> <code>unsigned int </code><i>state</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

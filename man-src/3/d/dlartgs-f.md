@@ -10,7 +10,7 @@ description: "dlartgs.f –"
 <p>dlartgs.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlartgs</code> (X, Y, SIGMA, CS, SN)<br />
+<p>subroutine <code>dlartgs</code> (X, Y, SIGMA, CS, SN)<br/>
  <i></i><code>DLARTGS</code> generates a plane rotation designed to introduce a bulge in implicit QR iteration for the bidiagonal SVD problem.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlartgs (double precisionX, double precisionY, double precisionSIGMA, double precisionCS, double precisionSN)</h3>

@@ -149,7 +149,7 @@ description: "kded4 – KDE daemon – triggers Sycoca database updates when nee
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/7-kdeoptions/">kdeoptions</a></i>(7), <i><a href="/docs/linux/man/7-qtoptions/">qtoptions</a></i>(7), <i><a href="/docs/linux/man/8-kbuildsycoca4/">kbuildsycoca4</a></i>(8)</p>
 <h2>Bugs</h2>
-<p>There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[]<font SIZE="-2">[1]</font> to report them.</p>
+<p>There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[][1] to report them.</p>
 <h2>Authors</h2>
 <p><code>David Faure</code> &lt;faure [at] kde.org&gt;</p>
 <dl>

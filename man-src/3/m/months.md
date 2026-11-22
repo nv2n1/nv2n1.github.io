@@ -21,7 +21,7 @@ description: "QuantLib::Period –"
 <p> <code>Period</code> &amp; <code>operator/=</code> (Integer) </p>
 <p> void <code>normalize</code> () </p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  <code>Real</code> <code>years</code> (const <code>Period</code> &amp;) </p>
 <p> <code>Real</code> <code>months</code> (const <code>Period</code> &amp;) </p>
 <p> <code>Real</code> <code>weeks</code> (const <code>Period</code> &amp;) </p>

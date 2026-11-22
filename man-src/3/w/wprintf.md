@@ -25,7 +25,7 @@ description: "wprintf, fwprintf, swprintf, vwprintf, vfwprintf, vswprintf – fo
 <p>Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p>All functions shown above: </p>
 <dl>
-<dd> <p> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _ISOC99_SOURCE || <br />
+<dd> <p> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _ISOC99_SOURCE || <br/>
  _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L </p>
  </dd></dl>
 <h2>DESCRIPTION</h2>

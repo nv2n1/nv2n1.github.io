@@ -11,16 +11,16 @@ description: "std::strxfrm – std::strxfrm"
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cstring&gt;
     std::size_t strxfrm(char *dest, const char *src, std::size_t count);</code></pre>
-<p>Transforms the null-terminated byte string pointed to by src into the implementation-defined form such that comparing two transformed strings with std::strcmp gives the same result as comparing the original strings with std::strcoll, in the current C locale.<br />
-The first count characters of the transformed string are written to destination, including the terminating null character, and the length of the full transformed string is returned, excluding the terminating null character.<br />
-The behavior is undefined if the dest array is not large enough. The behavior is undefined if dest and src overlap.<br />
+<p>Transforms the null-terminated byte string pointed to by src into the implementation-defined form such that comparing two transformed strings with std::strcmp gives the same result as comparing the original strings with std::strcoll, in the current C locale.<br/>
+The first count characters of the transformed string are written to destination, including the terminating null character, and the length of the full transformed string is returned, excluding the terminating null character.<br/>
+The behavior is undefined if the dest array is not large enough. The behavior is undefined if dest and src overlap.<br/>
 If count is 0, then dest is allowed to be a null pointer. </p>
 <h2>Notes</h2>
-<p>The correct length of the buffer that can receive the entire transformed string is 1+std::strxfrm(nullptr, src, 0)<br />
+<p>The correct length of the buffer that can receive the entire transformed string is 1+std::strxfrm(nullptr, src, 0)<br/>
 This function is used when making multiple locale-dependent comparisons using the same string or set of strings, because it is more efficient to use std::strxfrm to transform all the strings just once, and subsequently compare the transformed strings with std::strcmp. </p>
 <h2>Parameters</h2>
-<p>dest &#8211; pointer to the first element of the array where the transformed string will be written<br />
-src &#8211; pointer to the first character of a null-terminated byte string to transform<br />
+<p>dest &#8211; pointer to the first element of the array where the transformed string will be written<br/>
+src &#8211; pointer to the first character of a null-terminated byte string to transform<br/>
 count &#8211; maximum number of characters to be written</p>
 <h2>Return value</h2>
 <p>The length of the transformed string, not including the terminating null-character. </p>
@@ -58,13 +58,13 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;In the Czech locale: hrnec before chrt<br />
+<p>&nbsp;<wbr>&nbsp;In the Czech locale: hrnec before chrt<br/>
 &nbsp;<wbr>&nbsp;In lexicographical comparison: chrt before hrnec</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;transform a wide string so that wcscmp would produce the same result as wcscoll<br />
-wcsxfrm <i>(function)</i><br />
-do_transform transforms a string so that collation can be replaced by comparison<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::collate&lt;CharT&gt;)</i><br />
-<code>[virtual]</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;compares two strings in accordance to the current locale<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;transform a wide string so that wcscmp would produce the same result as wcscoll<br/>
+wcsxfrm <i>(function)</i><br/>
+do_transform transforms a string so that collation can be replaced by comparison<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::collate&lt;CharT&gt;)</i><br/>
+<code>[virtual]</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;compares two strings in accordance to the current locale<br/>
 strcoll <i>(function)</i> </p>

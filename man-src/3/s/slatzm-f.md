@@ -10,7 +10,7 @@ description: "slatzm.f –"
 <p>slatzm.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slatzm</code> (SIDE, M, N, V, INCV, TAU, C1, C2, LDC, WORK)<br />
+<p>subroutine <code>slatzm</code> (SIDE, M, N, V, INCV, TAU, C1, C2, LDC, WORK)<br/>
  <i></i><code>SLATZM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slatzm (characterSIDE, integerM, integerN, real, dimension( * )V, integerINCV, realTAU, real, dimension( ldc, * )C1, real, dimension( ldc, * )C2, integerLDC, real, dimension( * )WORK)</h3>

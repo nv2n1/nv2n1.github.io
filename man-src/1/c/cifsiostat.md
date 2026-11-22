@@ -57,7 +57,7 @@ description: "cifsiostat – Report CIFS statistics."
 <p> The <code>cifsiostat </code>command takes into account the following environment variables:</p>
 <dl>
 <dt><code>S_COLORS</code></dt>
-<dd> By default statistics are displayed in color when the output is connected to a terminal. Use this variable to change the settings. Possible values for this variable are <code>never</code>, <code>always </code>or <code>auto </code>(the latter is equivalent to the default settings).<br />
+<dd> By default statistics are displayed in color when the output is connected to a terminal. Use this variable to change the settings. Possible values for this variable are <code>never</code>, <code>always </code>or <code>auto </code>(the latter is equivalent to the default settings).<br/>
  Please note that the color (being red, yellow, or some other color) used to display a value is not indicative of any kind of issue simply because of the color. It only indicates different ranges of values.</dd>
 <dt><code>S_COLORS_SGR</code></dt>
 <dd> Specify the colors and other attributes used to display statistics on the terminal. Its value is a colon-separated list of capabilities that defaults to <code>I=32;22:N=34;1:Z=34;22</code>. Supported capabilities are:</dd>
@@ -79,9 +79,9 @@ description: "cifsiostat – Report CIFS statistics."
 <h2>FILE</h2>
 <p> <i>/proc/fs/cifs/Stats </i>contains CIFS statistics. </p>
 <h2>AUTHORS</h2>
-<p> Written by Ivana Varekova (varekova &lt;at&gt; redhat.com)<br />
+<p> Written by Ivana Varekova (varekova &lt;at&gt; redhat.com)<br/>
  Maintained by Sebastien Godard (sysstat &lt;at&gt; orange.fr) </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sar/">sar</a></code>(1), <code><a href="/docs/linux/man/1-pidstat/">pidstat</a></code>(1), <code><a href="/docs/linux/man/1-mpstat/">mpstat</a></code>(1), <code><a href="/docs/linux/man/8-vmstat/">vmstat</a></code>(8), <code><a href="/docs/linux/man/1-iostat/">iostat</a></code>(1), <code><a href="/docs/linux/man/1-tapestat/">tapestat</a></code>(1), <code><a href="/docs/linux/man/1-nfsiostat/">nfsiostat</a></code>(1) </p>
-<p> <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br />
+<p> <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br/>
  <i><a rel="nofollow" href="http://pagesperso-orange.fr/sebastien.godard/">http://pagesperso-orange.fr/sebastien.godard/</a></i> </p>

@@ -13,7 +13,7 @@ description: "ql/math/beta.hpp – Beta and beta incomplete functions."
 <h3>Functions</h3>
 <p>Real <code>betaFunction</code> (Real z, Real w) </p>
 <p> Real <code>betaContinuedFraction</code> (Real a, Real b, Real x, Real accuracy=1e-16, Integer maxIteration=100) </p>
-<p> Real <code>incompleteBetaFunction</code> (Real a, Real b, Real x, Real accuracy=1e-16, Integer maxIteration=100)<br />
+<p> Real <code>incompleteBetaFunction</code> (Real a, Real b, Real x, Real accuracy=1e-16, Integer maxIteration=100)<br/>
  <i>Incomplete Beta function. </i></p>
 <h2>Detailed Description</h2>
 <p>Beta and beta incomplete functions. </p>

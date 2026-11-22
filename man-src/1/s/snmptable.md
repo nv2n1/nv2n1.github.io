@@ -43,7 +43,7 @@ description: "snmptable – retrieve an SNMP table and display it in tabular for
 <h2>EXAMPLES</h2>
 <p> $ snmptable -v 2c -c public localhost at.atTable </p>
 <p> SNMP table: at.atTable RFC1213-MIB::atTable </p>
-<p> atIfIndex atPhysAddress atNetAddress<br />
+<p> atIfIndex atPhysAddress atNetAddress<br/>
 &nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>8:0:20:20:0:ab 130.225.243.33 </p>
 <p> $ snmptable -v 2c -c public -Cf + localhost at.atTable </p>
 <p> SNMP table: at.atTable </p>

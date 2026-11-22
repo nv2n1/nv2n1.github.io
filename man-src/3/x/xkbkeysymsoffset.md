@@ -10,7 +10,7 @@ description: "XkbKeySymsOffset – Returns the offset of the two-dimensional arr
 <p>XkbKeySymsOffset &#8211; Returns the offset of the two-dimensional array of keysyms for the key corresponding to <i>keycode</i> </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>int XkbKeySymsOffset</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br />
+<dt> <code>int XkbKeySymsOffset</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

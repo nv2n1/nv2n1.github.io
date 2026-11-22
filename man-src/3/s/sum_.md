@@ -22,10 +22,10 @@ Protected Attributes</code></pre>
 <p>typedef <code>Real</code> <code>value_type</code></p>
 <h3>Public Member Functions</h3>
 <p><code>Inspectors</code> </p>
-<p> Size <code>samples</code> () const<br />
- <i>number of samples collected </i><br />
- <code>Real</code> <code>weightSum</code> () const<br />
- <i>sum of data weights </i><br />
+<p> Size <code>samples</code> () const<br/>
+ <i>number of samples collected </i><br/>
+ <code>Real</code> <code>weightSum</code> () const<br/>
+ <i>sum of data weights </i><br/>
  <code>Real</code> <code>mean</code> () const </p>
 <p> <code>Real</code> <code>variance</code> () const </p>
 <p> <code>Real</code> <code>standardDeviation</code> () const </p>
@@ -35,7 +35,7 @@ Protected Attributes</code></pre>
 <p> <code>Real</code> <code>min</code> () const </p>
 <p> <code>Real</code> <code>max</code> () const </p>
 <p> <code>Real</code> <code>downsideVariance</code> () const </p>
-<p> <code>Real</code> <code>downsideDeviation</code> () const<br />
+<p> <code>Real</code> <code>downsideDeviation</code> () const<br/>
  <code>Modifiers</code> </p>
 <pre><code>void add (Real value, Real weight=1.0)
 adds a datum to the set, possibly with a weight

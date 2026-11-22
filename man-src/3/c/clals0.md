@@ -11,7 +11,7 @@ description: "clals0.f –"
 <p> clals0.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clals0</code> (ICOMPQ, NL, NR, SQRE, NRHS, B, LDB, BX, LDBX, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, POLES, DIFL, DIFR, Z, K, C, S, RWORK, INFO)<br />
+<p> subroutine <code>clals0</code> (ICOMPQ, NL, NR, SQRE, NRHS, B, LDB, BX, LDBX, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, POLES, DIFL, DIFR, Z, K, C, S, RWORK, INFO)<br/>
  <i></i><code>CLALS0</code> applies back multiplying factors in solving the least squares problem using divide and conquer SVD approach. Used by sgelsd.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clals0 (integerICOMPQ, integerNL, integerNR, integerSQRE, integerNRHS, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldbx, * )BX, integerLDBX, integer, dimension( * )PERM, integerGIVPTR, integer, dimension( ldgcol, * )GIVCOL, integerLDGCOL, real, dimension( ldgnum, * )GIVNUM, integerLDGNUM, real, dimension( ldgnum, * )POLES, real, dimension( * )DIFL, real, dimension( ldgnum, * )DIFR, real, dimension( * )Z, integerK, realC, realS, real, dimension( * )RWORK, integerINFO)</h3>

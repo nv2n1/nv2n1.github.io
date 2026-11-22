@@ -11,8 +11,8 @@ description: "dsecndtst.f –"
 <p> dsecndtst.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> program <code>__dsecndtst.f__</code><br />
- <i></i><code>DSECNDTST</code><br />
+<p> program <code>__dsecndtst.f__</code><br/>
+ <i></i><code>DSECNDTST</code><br/>
  subroutine <code>mysub</code> (N, X, Y) </p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>program __dsecndtst.f__ ()</h3>

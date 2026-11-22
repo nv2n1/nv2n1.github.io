@@ -25,13 +25,13 @@ description: "PAPI_set_cmp_granularity –"
 @param cidx
  An integer identifier for a component. 
  By convention, component 0 is always the cpu component. </pre>
-<p>&nbsp;<wbr>&nbsp;<wbr><br />
+<p>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr> </p>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i><br />
- <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
- <i>PAPI_ENOCMP</i> The argument cidx is not a valid component.<br />
+<dd><i>PAPI_OK</i><br/>
+ <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br/>
+ <i>PAPI_ENOCMP</i> The argument cidx is not a valid component.<br/>
 &nbsp;<wbr></dd></dl>
 <p> <code>PAPI_set_cmp_granularity</code> sets the default counting granularity for all new event sets, and requires an explicit component argument. Event sets that are already in existence are not affected. </p>
 <p> To change the granularity of an existing event set, please see <code>PAPI_set_opt</code>. The reader should note that the granularity of an event set affects only the mode in which the counter continues to run. </p>

@@ -8,12 +8,12 @@ url: "/docs/linux/man/1-updmap/"
 description: "updmap – manage TeX font maps updmap-sys – manage TeX font maps, system-wide updmap-user – manage TeX font maps, per-user"
 ---
 
-<p> updmap &#8211; manage TeX font maps<br />
- updmap-sys &#8211; manage TeX font maps, system-wide<br />
+<p> updmap &#8211; manage TeX font maps<br/>
+ updmap-sys &#8211; manage TeX font maps, system-wide<br/>
  updmap-user &#8211; manage TeX font maps, per-user </p>
 <h2>SYNOPSIS</h2>
-<p> <code>updmap</code> [<i>,-user|-sys/</i>] [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]<br />
- <code>updmap-user</code> [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]<br />
+<p> <code>updmap</code> [<i>,-user|-sys/</i>] [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]<br/>
+ <code>updmap-user</code> [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]<br/>
  <code>updmap-sys</code> [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> updmap version r59152 (2021-05-09 23:49:52 +0200) </p>
@@ -291,5 +291,5 @@ TEXMFDIST      <i>,/usr/share/texlive/texmf/web2c/updmap.cfg/</i>
 <dt><i>config.gstopk</i></dt>
 <dd> Loads <i>psfonts_t1.map</i> instead of <i>psfonts.map</i>.</dd></dl>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to: tex-live [at] tug.org<br />
+<p> Report bugs to: tex-live [at] tug.org<br/>
  TeX Live home page: &lt;<a rel="nofollow" href="https://tug.org/texlive/">https://tug.org/texlive/</a>&gt; </p>

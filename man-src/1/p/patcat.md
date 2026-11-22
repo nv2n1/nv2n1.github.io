@@ -17,5 +17,5 @@ description: "patcat – combine two GUS patches into one stereo extended GUS pa
 <h2>OPTIONS</h2>
 <p> There are no options. </p>
 <h2>AUTHORS</h2>
-<p> Greg Lee &lt;greg [at] ling.lll.hawaii.edu&gt;<br />
+<p> Greg Lee &lt;greg [at] ling.lll.hawaii.edu&gt;<br/>
  Based on code from Hannu Savolainen </p>

@@ -55,7 +55,7 @@ $ git add . <code>(1)</code>
 $ git commit -m &quot;import of frotz source tree.&quot;
 $ git tag v2.43 <code>(2)</code></pre>
 </dd></dl>
-<p> <code>1. </code>add everything under the current directory.<br />
+<p> <code>1. </code>add everything under the current directory.<br/>
  <code>2. </code>make a lightweight, unannotated tag.
 </dl>
 <p> Create a topic branch and develop.</p>
@@ -78,16 +78,16 @@ $ git merge alsa-audio <code>(9)</code>
 $ git log --since='3 days ago' <code>(10)</code>
 $ git log v2.43.. curses/ <code>(11)</code></pre>
 </dd></dl>
-<p> <code>1. </code>create a new topic branch.<br />
- <code>2. </code>revert your botched changes in <code>curses/ux_audio_oss.c</code>.<br />
- <code>3. </code>you need to tell Git if you added a new file; removal and modification will be caught if you do <code>git commit -a</code> later.<br />
- <code>4. </code>to see what changes you are committing.<br />
- <code>5. </code>commit everything, as you have tested, with your sign-off.<br />
- <code>6. </code>look at all your changes including the previous commit.<br />
- <code>7. </code>amend the previous commit, adding all your new changes, using your original message.<br />
- <code>8. </code>switch to the master branch.<br />
- <code>9. </code>merge a topic branch into your master branch.<br />
- <code>10. </code>review commit logs; other forms to limit output can be combined and include <code>-10</code> (to show up to 10 commits), <code>&#8211;until=2005-12-10</code>, etc.<br />
+<p> <code>1. </code>create a new topic branch.<br/>
+ <code>2. </code>revert your botched changes in <code>curses/ux_audio_oss.c</code>.<br/>
+ <code>3. </code>you need to tell Git if you added a new file; removal and modification will be caught if you do <code>git commit -a</code> later.<br/>
+ <code>4. </code>to see what changes you are committing.<br/>
+ <code>5. </code>commit everything, as you have tested, with your sign-off.<br/>
+ <code>6. </code>look at all your changes including the previous commit.<br/>
+ <code>7. </code>amend the previous commit, adding all your new changes, using your original message.<br/>
+ <code>8. </code>switch to the master branch.<br/>
+ <code>9. </code>merge a topic branch into your master branch.<br/>
+ <code>10. </code>review commit logs; other forms to limit output can be combined and include <code>-10</code> (to show up to 10 commits), <code>&#8211;until=2005-12-10</code>, etc.<br/>
  <code>11. </code>view only the changes that touch what&#8217;s in <code>curses/</code> directory, since <code>v2.43</code> tag.
 </dl>
 <h2>Individual Developer (Participant)</h2>
@@ -124,16 +124,16 @@ $ git pull <a href="git://git.kernel.org/pub/.../jgarzik/libata-dev.git">git://g
 $ git reset --hard ORIG_HEAD <code>(10)</code>
 $ git gc <code>(11)</code></pre>
 </dd></dl>
-<p> <code>1. </code>checkout a new branch <code>mine</code> from master.<br />
- <code>2. </code>repeat as needed.<br />
- <code>3. </code>extract patches from your branch, relative to master,<br />
- <code>4. </code>and email them.<br />
- <code>5. </code>return to <code>master</code>, ready to see what&#8217;s new<br />
- <code>6. </code><code>git pull</code> fetches from <code>origin</code> by default and merges into the current branch.<br />
- <code>7. </code>immediately after pulling, look at the changes done upstream since last time we checked, only in the area we are interested in.<br />
- <code>8. </code>check the branch names in an external repository (if not known).<br />
- <code>9. </code>fetch from a specific branch <code>ALL</code> from a specific repository and merge it.<br />
- <code>10. </code>revert the pull.<br />
+<p> <code>1. </code>checkout a new branch <code>mine</code> from master.<br/>
+ <code>2. </code>repeat as needed.<br/>
+ <code>3. </code>extract patches from your branch, relative to master,<br/>
+ <code>4. </code>and email them.<br/>
+ <code>5. </code>return to <code>master</code>, ready to see what&#8217;s new<br/>
+ <code>6. </code><code>git pull</code> fetches from <code>origin</code> by default and merges into the current branch.<br/>
+ <code>7. </code>immediately after pulling, look at the changes done upstream since last time we checked, only in the area we are interested in.<br/>
+ <code>8. </code>check the branch names in an external repository (if not known).<br/>
+ <code>9. </code>fetch from a specific branch <code>ALL</code> from a specific repository and merge it.<br/>
+ <code>10. </code>revert the pull.<br/>
  <code>11. </code>garbage collect leftover objects from reverted pull.
 </dl>
 <p> Push into another repository.</p>
@@ -156,10 +156,10 @@ mothership$ cd frotz
 mothership$ git switch master
 mothership$ git merge satellite/master <code>(5)</code></pre>
 </dd></dl>
-<p> <code>1. </code>mothership machine has a frotz repository under your home directory; clone from it to start a repository on the satellite machine.<br />
- <code>2. </code>clone sets these configuration variables by default. It arranges <code>git pull</code> to fetch and store the branches of mothership machine to local <code>remotes/origin/*</code> remote-tracking branches.<br />
- <code>3. </code>arrange <code>git push</code> to push all local branches to their corresponding branch of the mothership machine.<br />
- <code>4. </code>push will stash all our work away on <code>remotes/satellite/*</code> remote-tracking branches on the mothership machine. You could use this as a back-up method. Likewise, you can pretend that mothership &quot;fetched&quot; from you (useful when access is one sided).<br />
+<p> <code>1. </code>mothership machine has a frotz repository under your home directory; clone from it to start a repository on the satellite machine.<br/>
+ <code>2. </code>clone sets these configuration variables by default. It arranges <code>git pull</code> to fetch and store the branches of mothership machine to local <code>remotes/origin/*</code> remote-tracking branches.<br/>
+ <code>3. </code>arrange <code>git push</code> to push all local branches to their corresponding branch of the mothership machine.<br/>
+ <code>4. </code>push will stash all our work away on <code>remotes/satellite/*</code> remote-tracking branches on the mothership machine. You could use this as a back-up method. Likewise, you can pretend that mothership &quot;fetched&quot; from you (useful when access is one sided).<br/>
  <code>5. </code>on mothership machine, merge the work done on the satellite machine into the master branch.
 </dl>
 <p> Branch off of a specific tag.</p>
@@ -172,7 +172,7 @@ $ edit/compile/test; git commit -a
 $ git checkout master
 $ git cherry-pick v2.6.14..private2.6.14 <code>(2)</code></pre>
 </dd></dl>
-<p> <code>1. </code>create a private branch based on a well known (but somewhat behind) tag.<br />
+<p> <code>1. </code>create a private branch based on a well known (but somewhat behind) tag.<br/>
  <code>2. </code>forward port all changes in <code>private2.6.14</code> branch to <code>master</code> branch without a formal &quot;merging&quot;. Or longhand </p>
 <p> <code>git format-patch -k -m &#8211;stdout v2.6.14..private2.6.14 | git am -3 -k</code>
 </dl>
@@ -219,18 +219,18 @@ $ git fetch ko &amp;&amp; for branch in master maint next seen <code>(11)</code>
  done
 $ git push --follow-tags ko <code>(13)</code></pre>
 </dd></dl>
-<p> <code>1. </code>see what you were in the middle of doing, if anything.<br />
- <code>2. </code>see which branches haven&#8217;t been merged into <code>master</code> yet. Likewise for any other integration branches e.g. <code>maint</code>, <code>next</code> and <code>seen</code>.<br />
- <code>3. </code>read mails, save ones that are applicable, and save others that are not quite ready (other mail readers are available).<br />
- <code>4. </code>apply them, interactively, with your sign-offs.<br />
- <code>5. </code>create topic branch as needed and apply, again with sign-offs.<br />
- <code>6. </code>rebase internal topic branch that has not been merged to the master or exposed as a part of a stable branch.<br />
- <code>7. </code>restart <code>seen</code> every time from the next.<br />
- <code>8. </code>and bundle topic branches still cooking.<br />
- <code>9. </code>backport a critical fix.<br />
- <code>10. </code>create a signed tag.<br />
- <code>11. </code>make sure master was not accidentally rewound beyond that already pushed out.<br />
- <code>12. </code>In the output from <code>git show-branch</code>, <code>master</code> should have everything <code>ko/master</code> has, and <code>next</code> should have everything <code>ko/next</code> has, etc.<br />
+<p> <code>1. </code>see what you were in the middle of doing, if anything.<br/>
+ <code>2. </code>see which branches haven&#8217;t been merged into <code>master</code> yet. Likewise for any other integration branches e.g. <code>maint</code>, <code>next</code> and <code>seen</code>.<br/>
+ <code>3. </code>read mails, save ones that are applicable, and save others that are not quite ready (other mail readers are available).<br/>
+ <code>4. </code>apply them, interactively, with your sign-offs.<br/>
+ <code>5. </code>create topic branch as needed and apply, again with sign-offs.<br/>
+ <code>6. </code>rebase internal topic branch that has not been merged to the master or exposed as a part of a stable branch.<br/>
+ <code>7. </code>restart <code>seen</code> every time from the next.<br/>
+ <code>8. </code>and bundle topic branches still cooking.<br/>
+ <code>9. </code>backport a critical fix.<br/>
+ <code>10. </code>create a signed tag.<br/>
+ <code>11. </code>make sure master was not accidentally rewound beyond that already pushed out.<br/>
+ <code>12. </code>In the output from <code>git show-branch</code>, <code>master</code> should have everything <code>ko/master</code> has, and <code>next</code> should have everything <code>ko/next</code> has, etc.<br/>
  <code>13. </code>push out the bleeding edge, together with new tags that point into the pushed history.
 </dl>
 <p> In this example, the <code>ko</code> shorthand points at the Git maintainer&#8217;s repository at kernel.org, and looks like this: </p>
@@ -255,7 +255,7 @@ $ git push --follow-tags ko <code>(13)</code></pre>
 <dd>&bull; <code><a href="/docs/linux/man/1-git-http-backend/">git-http-backend</a></code>(1) provides a server side implementation of Git-over-HTTP (&quot;Smart http&quot;) allowing both fetch and push services.</dd></dl>
 <dl>
 <dd>&bull; <code><a href="/docs/linux/man/1-gitweb/">gitweb</a></code>(1) provides a web front-end to Git repositories, which can be set-up using the <code><a href="/docs/linux/man/1-git-instaweb/">git-instaweb</a></code>(1) script.</dd></dl>
-<p> m[blue]<code>update hook howto</code>m[]<font SIZE="-2">[1]</font> has a good example of managing a shared central repository. </p>
+<p> m[blue]<code>update hook howto</code>m[][1] has a good example of managing a shared central repository. </p>
 <p> In addition there are a number of other widely deployed hosting, browsing and reviewing solutions such as: </p>
 <dl>
 <dd>&bull; gitolite, gerrit code review, cgit and others.</dd></dl>
@@ -314,7 +314,7 @@ david:x:1003:1003::/home/david:/usr/bin/git-shell
 $ grep git /etc/shells <code>(2)</code>
 /usr/bin/git-shell</pre>
 </dd></dl>
-<p> <code>1. </code>log-in shell is set to /usr/bin/git-shell, which does not allow anything but <code>git push</code> and <code>git pull</code>. The users require ssh access to the machine.<br />
+<p> <code>1. </code>log-in shell is set to /usr/bin/git-shell, which does not allow anything but <code>git push</code> and <code>git pull</code>. The users require ssh access to the machine.<br/>
  <code>2. </code>in many distributions /etc/shells needs to list what is used as the login shell.
 </dl>
 <p> CVS-style shared repository.</p>
@@ -343,9 +343,9 @@ refs/heads/master alice\|cindy
 refs/heads/doc-update bob
 refs/tags/v[0-9]* david</pre>
 </dd></dl>
-<p> <code>1. </code>place the developers into the same git group.<br />
- <code>2. </code>and make the shared repository writable by the group.<br />
- <code>3. </code>use update-hook example by Carl from Documentation/howto/ for branch policy control.<br />
+<p> <code>1. </code>place the developers into the same git group.<br/>
+ <code>2. </code>and make the shared repository writable by the group.<br/>
+ <code>3. </code>use update-hook example by Carl from Documentation/howto/ for branch policy control.<br/>
  <code>4. </code>alice and cindy can push into master, only bob can push into doc-update. david is the release manager and is the only person who can create and push version tags.
 </dl>
 <h2>Git</h2>

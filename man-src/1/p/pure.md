@@ -10,7 +10,7 @@ description: "pure – the Pure interpreter"
 
 <p> pure &#8211; the Pure interpreter</p>
 <h2>SYNOPSIS</h2>
-<p> <code>pure</code> [<i>options</i> &#8230;] [<i>script</i> &#8230;] [&#8211; <i>args</i> &#8230;]<br />
+<p> <code>pure</code> [<i>options</i> &#8230;] [<i>script</i> &#8230;] [&#8211; <i>args</i> &#8230;]<br/>
  <code>pure</code> [<i>options</i> &#8230;] -x <i>script</i> [<i>args</i> &#8230;]</p>
 <h2>OPTIONS</h2>
 <dl>

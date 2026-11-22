@@ -9,8 +9,8 @@ description: "pmdaName – translate a PMID to a set of dynamic performance metr
 
 <p><code>pmdaName</code> &#8211; translate a PMID to a set of dynamic performance metric names</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> int pmdaName(pmID </code><i>pmid</i>, char ***<i>nameset</i>, pmdaExt *<i>pmda</i>); </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>

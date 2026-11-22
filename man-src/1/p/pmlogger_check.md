@@ -10,8 +10,8 @@ description: "pmlogger_check, pmlogger_daily, pmlogger_merge – administration 
 
 <p> <code>pmlogger_check</code>, <code>pmlogger_daily</code>, <code>pmlogger_merge</code> &#8211; administration of Performance Co-Pilot archive log files</p>
 <h2>SYNOPSIS</h2>
-<p> <code>$PCP_BINADM_DIR/pmlogger_check</code> [<code>-CNsTV</code>] [<code>-c</code> <i>control</i>] [<code>-l</code> <i>logfile</i>]<br />
- <code>$PCP_BINADM_DIR/pmlogger_daily</code> [<code>-NorV</code>] [<code>-c</code> <i>control</i>] [<code>-k</code> <i>discard</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>addresses</i>] [<code>-s</code> <i>size</i>] [<code>-t</code> <i>want</i>] [<code>-x</code> <i>compress</i>] [<code>-X</code> <i>program</i>] [<code>-Y</code> <i>regex</i>]<br />
+<p> <code>$PCP_BINADM_DIR/pmlogger_check</code> [<code>-CNsTV</code>] [<code>-c</code> <i>control</i>] [<code>-l</code> <i>logfile</i>]<br/>
+ <code>$PCP_BINADM_DIR/pmlogger_daily</code> [<code>-NorV</code>] [<code>-c</code> <i>control</i>] [<code>-k</code> <i>discard</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>addresses</i>] [<code>-s</code> <i>size</i>] [<code>-t</code> <i>want</i>] [<code>-x</code> <i>compress</i>] [<code>-X</code> <i>program</i>] [<code>-Y</code> <i>regex</i>]<br/>
  <code>$PCP_BINADM_DIR/pmlogger_merge</code> [<code>-fNV</code>] [<i>input-basename</i> &#8230; <i>output-name</i>] </p>
 <h2>DESCRIPTION</h2>
 <p> This series of shell scripts and associated control files may be used to create a customized regime of administration and management for Performance Co-Pilot (see <code><a href="/docs/linux/man/1-pcpintro/">PCPintro</a></code>(1)) archive log files. </p>
@@ -92,10 +92,10 @@ boing  n  n  $PCP_LOG_DIR/pmlogger/boing  -c ./pmlogger.config
 <h2>FILES</h2>
 <dl>
 <dt><code>$PCP_PMLOGGERCONTROL_PATH</code></dt>
-<dd> the PCP logger control file<br />
+<dd> the PCP logger control file<br/>
  <code>Warning</code>: this file must not be writable by any user other than root.</dd>
 <dt><code>$PCP_PMLOGGERCONTROL_PATH</code>.d</dt>
-<dd> optional directory containing additional PCP logger control files, typically one per host<br />
+<dd> optional directory containing additional PCP logger control files, typically one per host<br/>
  <code>Warning</code>: the files herein must not be writable by any user other than root.</dd>
 <dt><code>$PCP_SYSCONF_DIR/pmlogger/crontab</code></dt>
 <dd> sample crontab for automated script execution by $PCP_USER (or root). Exists only if the platform does not support the /etc/cron.d mechanism.</dd>

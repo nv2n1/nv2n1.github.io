@@ -17,7 +17,7 @@ description: "perlamiga – Perl under AmigaOS 4.1"
 <pre>
         sh -c &quot;perldoc perlamiga&quot;
 </pre>
-<p> or you may read <i>as is</i>: either as <i></i><font SIZE="-1"><i>README</i></font><i>.amiga</i>, or <i>pod/perlamiga.pod</i>.</p>
+<p> or you may read <i>as is</i>: either as <i></i><i>README</i><i>.amiga</i>, or <i>pod/perlamiga.pod</i>.</p>
 <h2>DESCRIPTION</h2>
 <h3>Prerequisites for running Perl 5.22.1 under AmigaOS 4.1</h3>
 <dl>
@@ -25,10 +25,10 @@ description: "perlamiga – Perl under AmigaOS 4.1"
 <dd> The most important of which is:</dd>
 <dt><code>newlib.library version 53.28 or greater</code></dt>
 <dd>
-</dd><dt><code>AmigaOS </code><font SIZE="-1"><code>SDK</code></font></dt>
-<dd> Perl installs into the <font SIZE="-1">SDK</font> directory structure and expects many of the build tools present in the <font SIZE="-1">SDK</font> to be available. So for the best results install the <font SIZE="-1">SDK</font> first.</dd>
+</dd><dt><code>AmigaOS </code><code>SDK</code></dt>
+<dd> Perl installs into the SDK directory structure and expects many of the build tools present in the SDK to be available. So for the best results install the SDK first.</dd>
 <dt><code>abc-shell</code></dt>
-<dd> If you do not have the <font SIZE="-1">SDK</font> installed you must at least have abc-shell installed or some other suitable sh port. This is required to run external commands and should be available as &#8216;sh&#8217; in your path.</dd></dl>
+<dd> If you do not have the SDK installed you must at least have abc-shell installed or some other suitable sh port. This is required to run external commands and should be available as &#8216;sh&#8217; in your path.</dd></dl>
 <h3>Starting Perl programs under AmigaOS 4.1</h3>
 <p> Perl may be run from the AmigaOS shell but for best results should be run under abc-shell. (abc-shell handles file globbing, pattern expansion, and sets up environment variables in the UN*Xy way that Perl expects.) </p>
 <p> For example: </p>
@@ -59,7 +59,7 @@ description: "perlamiga – Perl under AmigaOS 4.1"
 <dd> Please report bugs in this version of perl to andy [at] broad.ology.org.uk in the first instance.</dd></dl>
 <h2>INSTALLATION</h2>
 <p> This guide assumes you have obtained a prebuilt archive from os4depot.net. </p>
-<p> Unpack the main archive to a temporary location (<font SIZE="-1">RAM:</font> is fine). </p>
+<p> Unpack the main archive to a temporary location (RAM: is fine). </p>
 <p> Execute the provided install script from shell or via its icon. </p>
 <p> You <code>must not</code> attempt to install by hand. </p>
 <p> Once installed you may delete the temporary archive. </p>
@@ -73,7 +73,7 @@ description: "perlamiga – Perl under AmigaOS 4.1"
 <p> The Amiga::Exec module introduces support for <code>Wait()</code>. </p>
 <p> Try <tt>&quot;perldoc Amiga::Exec&quot;</tt> for more info.</p>
 <h2>BUILDING</h2>
-<p> To build perl under AmigaOS from the patched sources you will need to have a recent version of the <font SIZE="-1">SDK.</font> Version 53.29 is recommended, earlier versions will probably work too. </p>
+<p> To build perl under AmigaOS from the patched sources you will need to have a recent version of the SDK. Version 53.29 is recommended, earlier versions will probably work too. </p>
 <p> With the help of Jarkko Hietaniemi the Configure system has been tweaked to run under abc-shell so the recommend build process is as follows. </p>
 <pre>
         stack 2000000
@@ -89,7 +89,7 @@ description: "perlamiga – Perl under AmigaOS 4.1"
 <dl>
 <dt>Port to Perl 5.22</dt>
 <dd>
-</dd><dt>Add handling of <font SIZE="-1">NIL:</font> to <code>afstat()</code></dt>
+</dd><dt>Add handling of NIL: to <code>afstat()</code></dt>
 <dd>
 </dd><dt>Fix inheritance of environment variables by subprocesses.</dt>
 <dd>
@@ -97,9 +97,9 @@ description: "perlamiga – Perl under AmigaOS 4.1"
 <dd>
 </dd><dt>Fix issue with newlib&#8217;s unlink, which could cause infinite loops.</dt>
 <dd>
-</dd><dt>Add <code>flock()</code> emulation using <font SIZE="-1">IDOS-</font>&gt;LockRecord thanks to Tony Cook for the suggestion.</dt>
+</dd><dt>Add <code>flock()</code> emulation using IDOS-&gt;LockRecord thanks to Tony Cook for the suggestion.</dt>
 <dd>
-</dd><dt>Fix issue where kill was using the wrong kind of process <font SIZE="-1">ID</font></dt>
+</dd><dt>Fix issue where kill was using the wrong kind of process ID</dt>
 <dd></dd></dl>
 </dl>
 <dl>

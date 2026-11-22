@@ -12,8 +12,8 @@ description: "nesting – Shorewall Nested Zones"
 <dl>
 <dt> <i>child-zone</i>[:<i>parent-zone</i>[,<i>parent-zone</i>]&#8230;]</dt></dl>
 <h2>Description</h2>
-<dd>In m[blue]<code>shorewall-zones</code>m[]<font SIZE="-2">[1]</font>(5), a zone may be declared to be a sub-zone of one or more other zones using the above syntax. The <i>child-zone</i> may be neither the firewall zone nor a vserver zone. The firewall zone may not appear as a parent zone, although all vserver zones are handled as sub-zones of the firewall zone. </dd>
-<p> Where zones are nested, the CONTINUE policy in m[blue]<code>shorewall-policy</code>m[]<font SIZE="-2">[2]</font>(5) allows hosts that are within multiple zones to be managed under the rules of all of these zones.</p>
+<dd>In m[blue]<code>shorewall-zones</code>m[][1](5), a zone may be declared to be a sub-zone of one or more other zones using the above syntax. The <i>child-zone</i> may be neither the firewall zone nor a vserver zone. The firewall zone may not appear as a parent zone, although all vserver zones are handled as sub-zones of the firewall zone. </dd>
+<p> Where zones are nested, the CONTINUE policy in m[blue]<code>shorewall-policy</code>m[][2](5) allows hosts that are within multiple zones to be managed under the rules of all of these zones.</p>
 <h2>Example</h2>
 <p>/etc/shorewall/zones: </p>
 <dl>
@@ -47,7 +47,7 @@ description: "nesting – Shorewall Nested Zones"
  net all DROP info
  all all REJECT info</pre>
 </dd></dl>
-<p> The second entry above says that when Sam is the client, connection requests should first be processed under rules where the source zone is sam and if there is no match then the connection request should be treated under rules where the source zone is net. It is important that this policy be listed BEFORE the next policy (net to all). You can have this policy generated for you automatically by using the IMPLICIT_CONTINUE option in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[3]</font>(5). </p>
+<p> The second entry above says that when Sam is the client, connection requests should first be processed under rules where the source zone is sam and if there is no match then the connection request should be treated under rules where the source zone is net. It is important that this policy be listed BEFORE the next policy (net to all). You can have this policy generated for you automatically by using the IMPLICIT_CONTINUE option in m[blue]<code>shorewall.conf</code>m[][3](5). </p>
 <p> Partial /etc/shorewall/rules: </p>
 <dl>
 <dd>

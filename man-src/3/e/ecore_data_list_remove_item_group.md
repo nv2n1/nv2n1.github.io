@@ -9,13 +9,13 @@ description: "List Item Removing Functions – Functions that remove nodes from 
 
 <p>List Item Removing Functions &#8211; Functions that remove nodes from an Ecore_List. </p>
 <h3>Functions</h3>
-<p>EAPI void * <code>ecore_list_remove</code> (Ecore_List *list)<br />
- <i>Remove the current item from the list. </i><br />
- EAPI int <code>ecore_list_remove_destroy</code> (Ecore_List *list)<br />
- <i>Remove and free the data in lists current position. </i><br />
- EAPI void * <code>ecore_list_first_remove</code> (Ecore_List *list)<br />
- <i>Remove the first item from the list. </i><br />
- EAPI void * <code>ecore_list_last_remove</code> (Ecore_List *list)<br />
+<p>EAPI void * <code>ecore_list_remove</code> (Ecore_List *list)<br/>
+ <i>Remove the current item from the list. </i><br/>
+ EAPI int <code>ecore_list_remove_destroy</code> (Ecore_List *list)<br/>
+ <i>Remove and free the data in lists current position. </i><br/>
+ EAPI void * <code>ecore_list_first_remove</code> (Ecore_List *list)<br/>
+ <i>Remove the first item from the list. </i><br/>
+ EAPI void * <code>ecore_list_last_remove</code> (Ecore_List *list)<br/>
  <i>Remove the last item from the list. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that remove nodes from an Ecore_List.</p>

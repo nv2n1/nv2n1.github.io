@@ -10,7 +10,7 @@ description: "zlar1v.f –"
 <p>zlar1v.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlar1v</code> (N, B1, BN, LAMBDA, D, L, LD, LLD, PIVMIN, GAPTOL, Z, WANTNC, NEGCNT, ZTZ, MINGMA, R, ISUPPZ, NRMINV, RESID, RQCORR, WORK)<br />
+<p>subroutine <code>zlar1v</code> (N, B1, BN, LAMBDA, D, L, LD, LLD, PIVMIN, GAPTOL, Z, WANTNC, NEGCNT, ZTZ, MINGMA, R, ISUPPZ, NRMINV, RESID, RQCORR, WORK)<br/>
  <i></i><code>ZLAR1V</code> computes the (scaled) r-th column of the inverse of the submatrix in rows b1 through bn of the tridiagonal matrix LDLT &#8211; λI.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlar1v (integerN, integerB1, integerBN, double precisionLAMBDA, double precision, dimension( * )D, double precision, dimension( * )L, double precision, dimension( * )LD, double precision, dimension( * )LLD, double precisionPIVMIN, double precisionGAPTOL, complex*16, dimension( * )Z, logicalWANTNC, integerNEGCNT, double precisionZTZ, double precisionMINGMA, integerR, integer, dimension( * )ISUPPZ, double precisionNRMINV, double precisionRESID, double precisionRQCORR, double precision, dimension( * )WORK)</h3>

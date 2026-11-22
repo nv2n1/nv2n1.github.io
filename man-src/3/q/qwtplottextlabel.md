@@ -13,20 +13,20 @@ description: "QwtPlotTextLabel –"
 <p>#include &lt;qwt_plot_textlabel.h&gt; </p>
 <p> Inherits <code>QwtPlotItem</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotTextLabel</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPlotTextLabel</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotTextLabel</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPlotTextLabel</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
 <p> void <code>setText</code> (const <code>QwtText</code> &amp;) </p>
 <p> <code>QwtText</code> <code>text</code> () const </p>
 <p> void <code>setMargin</code> (int <code>margin</code>) </p>
 <p> int <code>margin</code> () const </p>
-<p> virtual QRectF <code>textRect</code> (const QRectF &amp;, const QSizeF &amp;) const<br />
+<p> virtual QRectF <code>textRect</code> (const QRectF &amp;, const QSizeF &amp;) const<br/>
  <i>Align the text label. </i></p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>draw</code> (QPainter *, const <code>QwtScaleMap</code> &amp;, const <code>QwtScaleMap</code> &amp;, const QRectF &amp;) const </p>
-<p> void <code>invalidateCache</code> ()<br />
+<p> void <code>invalidateCache</code> ()<br/>
  <i>Invalidate all internal cache. </i></p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>
@@ -66,9 +66,9 @@ description: "QwtPlotTextLabel –"
 <p>Draw the text label </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x Scale Map<br />
- <i>yMap</i> y Scale Map<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x Scale Map<br/>
+ <i>yMap</i> y Scale Map<br/>
  <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -115,7 +115,7 @@ description: "QwtPlotTextLabel –"
 <p>Align the text label. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Canvas rectangle with margins subtracted<br />
+<dd><i>rect</i> Canvas rectangle with margins subtracted<br/>
  <i>textSize</i> Size required to draw the text</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

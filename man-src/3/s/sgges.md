@@ -11,7 +11,7 @@ description: "sgges.f –"
 <p> sgges.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgges</code> (JOBVSL, JOBVSR, SORT, SELCTG, N, A, LDA, B, LDB, SDIM, ALPHAR, ALPHAI, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, BWORK, INFO)<br />
+<p> subroutine <code>sgges</code> (JOBVSL, JOBVSR, SORT, SELCTG, N, A, LDA, B, LDB, SDIM, ALPHAR, ALPHAI, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, BWORK, INFO)<br/>
  <i></i><code> SGGES computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgges (characterJOBVSL, characterJOBVSR, characterSORT, logical, externalSELCTG, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, integerSDIM, real, dimension( * )ALPHAR, real, dimension( * )ALPHAI, real, dimension( * )BETA, real, dimension( ldvsl, * )VSL, integerLDVSL, real, dimension( ldvsr, * )VSR, integerLDVSR, real, dimension( * )WORK, integerLWORK, logical, dimension( * )BWORK, integerINFO)</h3>
@@ -71,11 +71,11 @@ description: "sgges.f –"
           = 'S':  Eigenvalues are ordered (see SELCTG);
 </pre>
 <p> <i>SELCTG</i> </p>
-<p>SELCTG is a LOGICAL FUNCTION of three REAL arguments<br />
-    SELCTG must be declared EXTERNAL in the calling subroutine.If SORT = &#8216;N&#8217;,<br />
-                                                                  SELCTG is not referenced.If SORT = &#8216;S&#8217;, SELCTG is used to select eigenvalues to sort to the top left of the Schur form.An eigenvalue(ALPHAR(j) + ALPHAI(j)) / BETA(j) is selected if SELCTG (ALPHAR(j), ALPHAI(j), BETA(j)) is true;<br />
-i.e.if either<br />
-    one of a complex conjugate pair of eigenvalues is selected,<br />
+<p>SELCTG is a LOGICAL FUNCTION of three REAL arguments<br/>
+    SELCTG must be declared EXTERNAL in the calling subroutine.If SORT = &#8216;N&#8217;,<br/>
+                                                                  SELCTG is not referenced.If SORT = &#8216;S&#8217;, SELCTG is used to select eigenvalues to sort to the top left of the Schur form.An eigenvalue(ALPHAR(j) + ALPHAI(j)) / BETA(j) is selected if SELCTG (ALPHAR(j), ALPHAI(j), BETA(j)) is true;<br/>
+i.e.if either<br/>
+    one of a complex conjugate pair of eigenvalues is selected,<br/>
     then both complex eigenvalues are selected.Note that in the ill &#8211; conditioned case, a selected complex eigenvalue may no longer satisfy SELCTG(ALPHAR(j), ALPHAI(j), BETA(j)) =.TRUE.after ordering.INFO is to be set to N + 2 in this case.</p>
 <p> <i>N</i> </p>
 <pre>
@@ -123,14 +123,14 @@ i.e.if either<br />
           ALPHAI is REAL array, dimension (N)
 </pre>
 <p> <i>BETA</i> </p>
-<p>BETA is REAL array, dimension(N) On exit, (ALPHAR(j) + ALPHAI(j) * i) / BETA(j), j = 1, &#8230;, N, will be the generalized eigenvalues.ALPHAR(j) + ALPHAI(j) * i,<br />
-                                                                                 and BETA(j), j = 1, &#8230;, N are the diagonals of the complex Schur form(S, T)<br />
-that would result if the 2 &#8211; by &#8211; 2 diagonal blocks of the real Schur form of(A, B)<br />
-were further reduced to<br />
-        triangular form using 2 &#8211;<br />
-    by &#8211; 2 complex unitary transformations.If ALPHAI(j)<br />
-is zero, then the j &#8211; th eigenvalue is real;<br />
-if positive<br />
+<p>BETA is REAL array, dimension(N) On exit, (ALPHAR(j) + ALPHAI(j) * i) / BETA(j), j = 1, &#8230;, N, will be the generalized eigenvalues.ALPHAR(j) + ALPHAI(j) * i,<br/>
+                                                                                 and BETA(j), j = 1, &#8230;, N are the diagonals of the complex Schur form(S, T)<br/>
+that would result if the 2 &#8211; by &#8211; 2 diagonal blocks of the real Schur form of(A, B)<br/>
+were further reduced to<br/>
+        triangular form using 2 &#8211;<br/>
+    by &#8211; 2 complex unitary transformations.If ALPHAI(j)<br/>
+is zero, then the j &#8211; th eigenvalue is real;<br/>
+if positive<br/>
 , then the j &#8211; th and (j + 1) &#8211; st eigenvalues are a complex conjugate pair, with ALPHAI(j + 1) negative.Note : the quotients ALPHAR(j) / BETA(j) and ALPHAI(j) / BETA(j) may easily over &#8211; or underflow, and BETA(j) may even be zero.Thus, the user should avoid naively computing the ratio.However, ALPHAR and ALPHAI will be always less than and usually comparable with norm(A) in magnitude, and BETA always less than and usually comparable with norm(B).</p>
 <p> <i>VSL</i> </p>
 <pre>

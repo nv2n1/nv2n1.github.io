@@ -10,7 +10,7 @@ description: "ldns_rr_compare, ldns_rr_compare_ds"
 
 <p> ldns_rr_compare, ldns_rr_compare_ds </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> int ldns_rr_compare(const ldns_rr *rr1, const ldns_rr *rr2); </p>

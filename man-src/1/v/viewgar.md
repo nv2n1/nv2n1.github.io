@@ -21,9 +21,9 @@ description: "viewgar – GiNaC archive file viewer"
 <dl>
 <dt>The GiNaC Group:</dt>
 <dd>
- Christian Bauer &lt;Christian.Bauer [at] uni-mainz.de&gt;<br />
- Alexander Frink &lt;Alexander.Frink [at] uni-mainz.de&gt;<br />
- Richard Kreckel &lt;Richard.Kreckel [at] uni-mainz.de&gt;<br />
+ Christian Bauer &lt;Christian.Bauer [at] uni-mainz.de&gt;<br/>
+ Alexander Frink &lt;Alexander.Frink [at] uni-mainz.de&gt;<br/>
+ Richard Kreckel &lt;Richard.Kreckel [at] uni-mainz.de&gt;<br/>
  Jens Vollinga &lt;vollinga [at] thep.physik.uni-mainz.de&gt;</dd></dl>
 <h2>SEE ALSO</h2>
 <p> GiNaC Tutorial &#8211; An open framework for symbolic computation within the C++ programming language</p>

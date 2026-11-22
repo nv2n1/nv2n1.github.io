@@ -13,13 +13,13 @@ description: "ttyslot – find the slot of the current user’s terminal in some
 int ttyslot(void);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>ttyslot</code>():</p>
 <dl>
-<dd>Since glibc 2.24:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
- From glibc 2.20 to 2.23:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE ||<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE&nbsp;&lt;&nbsp;500<br />
- Glibc 2.19 and earlier:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||<br />
+<dd>Since glibc 2.24:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+ From glibc 2.20 to 2.23:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE ||<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE&nbsp;&lt;&nbsp;500<br/>
+ Glibc 2.19 and earlier:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE&nbsp;&lt;&nbsp;500</dd></dl>
 <h2>Description</h2>
 <p>The legacy function <code>ttyslot</code>() returns the index of the current user&#8217;s entry in some file. </p>
@@ -56,8 +56,8 @@ int ttyslot(void);</code></pre>
 <p>The utmp file is found in various places on various systems, such as <i>/etc/utmp</i>, <i>/var/adm/utmp</i>, <i>/var/run/utmp</i>. </p>
 <p> The glibc2 implementation of this function reads the file <code>_PATH_TTYS</code>, defined in <i>&lt;ttyent.h&gt;</i> as &quot;/etc/ttys&quot;. It returns 0 on error. Since Linux systems do not usually have &quot;/etc/ttys&quot;, it will always return 0. </p>
 <p> On BSD-like systems and Linux, the declaration of <code>ttyslot</code>() is provided by <i>&lt;unistd.h&gt;</i>. On System V-like systems, the declaration is provided by <i>&lt;stdlib.h&gt;</i>. Since glibc 2.24, <i>&lt;stdlib.h&gt;</i> also provides the declaration with the following feature test macro definitions: </p>
-<p> (_XOPEN_SOURCE &gt;= 500 ||<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE_EXTENDED))<br />
+<p> (_XOPEN_SOURCE &gt;= 500 ||<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE_EXTENDED))<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&amp;&amp;&nbsp;!&nbsp;(_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L ||&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;600) </p>
 <p> Minix also has <i>fttyslot</i>(<i>fd</i>).</p>
 <h2>See Also</h2>

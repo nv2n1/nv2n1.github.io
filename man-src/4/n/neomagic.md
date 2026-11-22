@@ -56,7 +56,7 @@ description: "neomagic – Neomagic video driver"
 <dd>Enable or disable use of the shadow framebuffer layer. Default: off.</dd>
 <dt><code>Option &#34;OverlayMem&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
 <dd>Reserve the given amount of memory (in bytes) for the XVideo overlay. On boards with limited memory, display of large XVideo buffers might fail due to insufficient available memory. Using this option solves the problem at the expense of reducing the memory available for other operations. For full-resolution DVDs, 829440 bytes (720x576x2) are necessary.</dd></dl>
-<p> <code>Note</code><br />
+<p> <code>Note</code><br/>
  On some laptops using the 2160 chipset (MagicGraph 128XD) the following options are needed to avoid a lock-up of the graphic engine: </p>
 <pre> Option &quot;XaaNoScanlineImageWriteRect&quot;
  Option &quot;XaaNoScanlineCPUToScreenColorExpandFill&quot;</pre>

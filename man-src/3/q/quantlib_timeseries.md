@@ -18,23 +18,23 @@ description: "QuantLib::TimeSeries – Container for historical data."
 <p> template&lt;class DateIterator , class ValueIterator &gt; <code>TimeSeries</code> (DateIterator dBegin, DateIterator dEnd, ValueIterator vBegin) </p>
 <p> template&lt;class ValueIterator &gt; <code>TimeSeries</code> (const <code>Date</code> &amp;firstDate, ValueIterator begin, ValueIterator end) </p>
 <p> <code>Inspectors</code> </p>
-<p> <code>Date</code> <code>firstDate</code> () const<br />
- <i>returns the first date for which a historical datum exists </i><br />
- <code>Date</code> <code>lastDate</code> () const<br />
- <i>returns the last date for which a historical datum exists </i><br />
- Size <code>size</code> () const<br />
- <i>returns the number of historical data including null ones </i><br />
- bool <code>empty</code> () const<br />
+<p> <code>Date</code> <code>firstDate</code> () const<br/>
+ <i>returns the first date for which a historical datum exists </i><br/>
+ <code>Date</code> <code>lastDate</code> () const<br/>
+ <i>returns the last date for which a historical datum exists </i><br/>
+ Size <code>size</code> () const<br/>
+ <i>returns the number of historical data including null ones </i><br/>
+ bool <code>empty</code> () const<br/>
  <i>returns whether the series contains any data </i> </p>
 <p> <code>Historical data access</code> </p>
-<p> T <code>operator[]</code> (const <code>Date</code> &amp;d) const<br />
- <i>returns the (possibly null) datum corresponding to the given date </i><br />
+<p> T <code>operator[]</code> (const <code>Date</code> &amp;d) const<br/>
+ <i>returns the (possibly null) datum corresponding to the given date </i><br/>
  T &amp; <code>operator[]</code> (const <code>Date</code> &amp;d) </p>
 <p> <code>Utilities</code> </p>
 <p> const_iterator <code>find</code> (const <code>Date</code> &amp;) </p>
-<p> std::vector&lt; <code>Date</code> &gt; <code>dates</code> () const<br />
- <i>returns the dates for which historical data exist </i><br />
- std::vector&lt; T &gt; <code>values</code> () const<br />
+<p> std::vector&lt; <code>Date</code> &gt; <code>dates</code> () const<br/>
+ <i>returns the dates for which historical data exist </i><br/>
+ std::vector&lt; T &gt; <code>values</code> () const<br/>
  <i>returns the historical data </i></p>
 <h3>Iterators</h3>
 <p>typedef Container::const_iterator <code>const_iterator</code> </p>

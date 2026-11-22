@@ -9,8 +9,8 @@ description: "genrunlevel – create initng’s runlevels"
 
 <p>genrunlevel &#8211; create initng&#8217;s runlevels</p>
 <h2>Synopsis</h2>
-<p><code>genrunlevel</code> [<code>&#8211;overwrite</code>] [<code>&#8211;path </code><i>PATH</i>] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[<code>&#8211;destdir </code><i>PATH</i>] [<code>&#8211;confdir </code><i>PATH</i>]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[<code>&#8211;all</code> | <i>file1 file2 &#8230;</i>]<br />
+<p><code>genrunlevel</code> [<code>&#8211;overwrite</code>] [<code>&#8211;path </code><i>PATH</i>] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[<code>&#8211;destdir </code><i>PATH</i>] [<code>&#8211;confdir </code><i>PATH</i>]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[<code>&#8211;all</code> | <i>file1 file2 &#8230;</i>]<br/>
  <code>genrunlevel &#8211;migrate</code> </p>
 <h2>Description</h2>
 <p><code>genrunlevel</code> creates the runlevels and virtuals used by initng. Generally these are <i>default.runlevel</i> and <i>system.virtual</i>. <code>genrunlevel &#8211;migrate</code> fixes your runlevels when there&#8217;s a change in initng-ifiles. </p>

@@ -231,17 +231,17 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <p> These options can appear for all commands operating on a keystore: </p>
 <dl>
 <dt>-storetype <i>storetype</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  This qualifier specifies the type of keystore to be instantiated. </p>
  </dd>
 <dt>-keystore <i>keystore</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  The keystore location. </p>
 <p> If the JKS <code>storetype</code> is used and a keystore file does not yet exist, then certain <code>keytool</code> commands can result in a new keystore file being created. For example, if <code>keytool -genkeypair</code> is called and the <code>-keystore</code> option is not specified, the default keystore file named <code>.keystore</code> in the user&#8217;s home directory is created when it does not already exist. Similarly, if the <code>-keystore ks_file</code> option is specified but ks_file does not exist, then it is created. For more information on the JKS <code>storetype</code>, see the <i>KeyStore Implementation</i> section in KeyStore aliases. </p>
 <p> Note that the input stream from the <code>-keystore</code> option is passed to the <code>KeyStore.load</code> method. If <code>NONE</code> is specified as the URL, then a null stream is passed to the <code>KeyStore.load</code> method. <code>NONE</code> should be specified if the keystore is not file-based. For example, when it resides on a hardware token device. </p>
  </dd>
 <dt>-storepass[:<i>env</i>| :<i>file</i>] argument</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  The password that is used to protect the integrity of the keystore. </p>
 <p> If the modifier <code>env</code> or <code>file</code> is not specified, then the password has the <code>value</code> argument, which must be at least 6 characters long. Otherwise, the password is retrieved as follows: </p>
  </dd>
@@ -259,23 +259,23 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <p> The password must be provided to all commands that access the keystore contents. For such commands, when the <code>-storepass</code> option is not provided at the command line, the user is prompted for it. </p>
 <p> When retrieving information from the keystore, the password is optional. If no password is specified, then the integrity of the retrieved information cannot be verified and a warning is displayed. </p>
 <dt>-providerName <i>provider_name</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Used to identify a cryptographic service provider&#8217;s name when listed in the security properties file. </p>
  </dd>
 <dt>-providerClass <i>provider_class_name</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Used to specify the name of a cryptographic service provider&#8217;s master class file when the service provider is not listed in the security properties file. </p>
  </dd>
 <dt>-providerArg <i>provider_arg</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Used with the <code>-providerClass</code> option to represent an optional string input argument for the constructor of <code>provider_class_name</code>. </p>
  </dd>
 <dt>-protected</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Either <code>true</code> or <code>false</code>. This value should be specified as <code>true</code> when a password must be specified by way of a protected authentication path such as a dedicated PIN reader.Because there are two keystores involved in the <code>-importkeystore</code> command, the following two options <code>-srcprotected</code> and -<code>destprotected</code> are provided for the source keystore and the destination keystore respectively. </p>
  </dd>
 <dt>-ext <i>{name{:critical} {=value}}</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Denotes an X.509 certificate extension. The option can be used in <code>-genkeypair</code> and <code>-gencert</code> to embed extensions into the certificate generated, or in <code>-certreq</code> to show what extensions are requested in the certificate request. The option can appear multiple times. The <code>name</code> argument can be a supported extension name (see Named Extensions) or an arbitrary OID number. The <code>value</code> argument, when provided, denotes the argument for the extension. When <i>value</i> is omitted, that means that the default value of the extension or the extension requires no argument. The <code>:critical</code> modifier, when provided, means the extension&#8217;s <code>isCritical</code> attribute is <code>true</code>; otherwise, it is <code>false</code>. You can use <code>:c</code> in place of <code>:critical</code>. </p>
  </dd></dl>
 <h2>NAMED EXTENSIONS</h2>
@@ -310,7 +310,7 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <h2>COMMANDS</h2>
 <dl>
 <dt>-gencert</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>{-rfc} {-infile infile} {-outfile outfile} {-alias alias} {-sigalg sigalg} {-dname dname} {-startdate startdate {-ext ext}* {-validity valDays} [-keypass keypass] {-keystore keystore} [-storepass storepass] {-storetype storetype} {-providername provider_name} {-providerClass provider_class_name {-providerArg provider_arg}} {-v} {-protected} {-Jjavaoption}</code> </p>
 <p> Generates a certificate as a response to a certificate request file (which can be created by the <code>keytool</code><code>-certreq</code> command). The command reads the request from <i>infile</i> (if omitted, from the standard input), signs it using alias&#8217;s private key, and outputs the X.509 certificate into <i>outfile</i> (if omitted, to the standard output). When <code>-rfc</code> is specified, the output format is Base64-encoded PEM; otherwise, a binary DER is created. </p>
 <p> The <code>sigalg</code> value specifies the algorithm that should be used to sign the certificate. The <code>startdate</code> argument is the start time and date that the certificate is valid. The <code>valDays</code> argument tells the number of days for which the certificate should be considered valid. </p>
@@ -355,7 +355,7 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 </code></pre>
  </dd>
 <dt>-genkeypair</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>{-alias alias} {-keyalg keyalg} {-keysize keysize} {-sigalg sigalg} [-dname dname] [-keypass keypass] {-startdate value} {-ext ext}* {-validity valDays} {-storetype storetype} {-keystore keystore} [-storepass storepass] {-providerClass provider_class_name {-providerArg provider_arg}} {-v} {-protected} {-Jjavaoption}</code> </p>
 <p> Generates a key pair (a public key and associated private key). Wraps the public key into an X.509 v3 self-signed certificate, which is stored as a single-element certificate chain. This certificate chain and the private key are stored in a new keystore entry identified by alias. </p>
 <p> The <code>keyalg</code> value specifies the algorithm to be used to generate the key pair, and the <code>keysize</code> value specifies the size of each key to be generated. The <code>sigalg</code> value specifies the algorithm that should be used to sign the self-signed certificate. This algorithm must be compatible with the <code>keyalg</code> value. </p>
@@ -387,13 +387,13 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <p> This command was named <code>-genkey</code> in earlier releases. The old name is still supported in this release. The new name, <code>-genkeypair</code>, is preferred going forward. </p>
  </dd>
 <dt>-genseckey</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>-genseckey {-alias alias} {-keyalg keyalg} {-keysize keysize} [-keypass keypass] {-storetype storetype} {-keystore keystore} [-storepass storepass] {-providerClass provider_class_name {-providerArg provider_arg}} {-v} {-protected} {-Jjavaoption}</code> </p>
 <p> Generates a secret key and stores it in a new <code>KeyStore.SecretKeyEntry</code> identified by <code>alias</code>. </p>
 <p> The value of <code>keyalg</code> specifies the algorithm to be used to generate the secret key, and the value of <code>keysize</code> specifies the size of the key to be generated. The <code>keypass</code> value is a password that protects the secret key. If no password is provided, then the user is prompted for it. If you press the Return key at the prompt, then the key password is set to the same password that is used for the <code>keystore</code>. The <code>keypass</code> value must be at least 6 characters. </p>
  </dd>
 <dt>-importcert</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>-importcert {-alias alias} {-file cert_file} [-keypass keypass] {-noprompt} {-trustcacerts} {-storetype storetype} {-keystore keystore} [-storepass storepass] {-providerName provider_name} {-providerClass provider_class_name {-providerArg provider_arg}} {-v} {-protected} {-Jjavaoption}</code> </p>
 <p> Reads the certificate or certificate chain (where the latter is supplied in a PKCS#7 formatted reply or a sequence of X.509 certificates) from the file <code>cert_file</code>, and stores it in the <code>keystore</code> entry identified by <code>alias</code>. If no file is specified, then the certificate or certificate chain is read from <code>stdin</code>. </p>
 <p> The <code>keytool</code> command can import X.509 v1, v2, and v3 certificates, and PKCS#7 formatted certificate chains consisting of certificates of that type. The data to be imported must be provided either in binary encoding format or in printable encoding format (also known as Base64 encoding) as defined by the Internet RFC 1421 standard. In the latter case, the encoding must be bounded at the beginning by a string that starts with <code>-</code><code>----BEGIN</code>, and bounded at the end by a string that starts with <code>-----END</code>. </p>
@@ -401,12 +401,12 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <p> Which type of import is intended is indicated by the value of the <code>-alias</code> option. If the alias does not point to a key entry, then the <code>keytool</code> command assumes you are adding a trusted certificate entry. In this case, the alias should not already exist in the keystore. If the alias does already exist, then the <code>keytool</code> command outputs an error because there is already a trusted certificate for that alias, and does not import the certificate. If the alias points to a key entry, then the <code>keytool</code> command assumes you are importing a certificate reply. </p>
  </dd>
 <dt>-importpassword</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>{-alias alias} [-keypass keypass] {-storetype storetype} {-keystore keystore} [-storepass storepass] {-providerClass provider_class_name {-providerArg provider_arg}} {-v} {-protected} {-Jjavaoption}</code> </p>
 <p> Imports a passphrase and stores it in a new <code>KeyStore.SecretKeyEntry</code> identified by <code>alias</code>. The passphrase may be supplied via the standard input stream; otherwise the user is prompted for it. <code>keypass</code> is a password used to protect the imported passphrase. If no password is provided, the user is prompted for it. If you press the Return key at the prompt, the key password is set to the same password as that used for the <code>keystore</code>. <code>keypass</code> must be at least 6 characters long. </p>
  </dd>
 <dt>-importkeystore</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>{-srcstoretype srcstoretype} {-deststoretype deststoretype} [-srcstorepass srcstorepass] [-deststorepass deststorepass] {-srcprotected} {-destprotected} {-srcalias srcalias {-destalias destalias} [-srckeypass srckeypass] } [-destkeypass destkeypass] {-noprompt} {-srcProviderName src_provider_name} {-destProviderName dest_provider_name} {-providerClass provider_class_name {-providerArg provider_arg}} {-v} {-protected} {-Jjavaoption}</code> </p>
 <p> Imports a single entry or all entries from a source keystore to a destination keystore. </p>
 <p> When the <code>-srcalias</code> option is provided, the command imports the single entry identified by the alias to the destination keystore. If a destination alias is not provided with <code>destalias</code>, then <code>srcalias</code> is used as the destination alias. If the source entry is protected by a password, then <code>srckeypass</code> is used to recover the entry. If <i>srckeypass</i> is not provided, then the <code>keytool</code> command attempts to use <code>srcstorepass</code> to recover the entry. If <code>srcstorepass</code> is either not provided or is incorrect, then the user is prompted for a password. The destination entry is protected with <code>destkeypass</code>. If <code>destkeypass</code> is not provided, then the destination entry is protected with the source entry password. For example, most third-party tools require <code>storepass</code> and <code>keypass</code> in a PKCS #12 keystore to be the same. In order to create a PKCS #12 keystore for these tools, always specify a <code>-destkeypass</code> to be the same as <code>-deststorepass</code>. </p>
@@ -415,12 +415,12 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <p> If the <code>-noprompt</code> option is provided, then the user is not prompted for a new destination alias. Existing entries are overwritten with the destination alias name. Entries that cannot be imported are skipped and a warning is displayed. </p>
  </dd>
 <dt>-printcertreq</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>{-file file}</code> </p>
 <p> Prints the content of a PKCS #10 format certificate request, which can be generated by the <code>keytool</code><code>-certreq</code> command. The command reads the request from file. If there is no file, then the request is read from the standard input. </p>
  </dd>
 <dt>-certreq</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>{-alias alias} {-dname dname} {-sigalg sigalg} {-file certreq_file} [-keypass keypass] {-storetype storetype} {-keystore keystore} [-storepass storepass] {-providerName provider_name} {-providerClass provider_class_name {-providerArg provider_arg}} {-v} {-protected} {-Jjavaoption}</code> </p>
 <p> Generates a Certificate Signing Request (CSR) using the PKCS #10 format. </p>
 <p> A CSR is intended to be sent to a certificate authority (CA). The CA authenticates the certificate requestor (usually off-line) and will return a certificate or certificate chain, used to replace the existing certificate chain (which initially consists of a self-signed certificate) in the keystore. </p>
@@ -430,7 +430,7 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <p> Use the <code>importcert</code> command to import the response from the CA. </p>
  </dd>
 <dt>-exportcert</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>{-alias alias} {-file cert_file} {-storetype storetype} {-keystore keystore} [-storepass storepass] {-providerName provider_name} {-providerClass provider_class_name {-providerArg provider_arg}} {-rfc} {-v} {-protected} {-Jjavaoption}</code> </p>
 <p> Reads from the keystore the certificate associated with <i>alias</i> and stores it in the cert_file file. When no file is specified, the certificate is output to <code>stdout</code>. </p>
 <p> The certificate is by default output in binary encoding. If the <code>-rfc</code> option is specified, then the output in the printable encoding format defined by the Internet RFC 1421 Certificate Encoding Standard. </p>
@@ -438,14 +438,14 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <p> This command was named <code>-export</code> in earlier releases. The old name is still supported in this release. The new name, <code>-exportcert</code>, is preferred going forward. </p>
  </dd>
 <dt>-list</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>{-alias alias} {-storetype storetype} {-keystore keystore} [-storepass storepass] {-providerName provider_name} {-providerClass provider_class_name {-providerArg provider_arg}} {-v | -rfc} {-protected} {-Jjavaoption}</code> </p>
 <p> Prints to <code>stdout</code> the contents of the keystore entry identified by <code>alias</code>. If no <code>alias</code> is specified, then the contents of the entire keystore are printed. </p>
 <p> This command by default prints the SHA1 fingerprint of a certificate. If the <code>-v</code> option is specified, then the certificate is printed in human-readable format, with additional information such as the owner, issuer, serial number, and any extensions. If the <code>-rfc</code> option is specified, then the certificate contents are printed using the printable encoding format, as defined by the Internet RFC 1421 Certificate Encoding Standard. </p>
 <p> You cannot specify both <code>-v</code> and <code>-rfc</code>. </p>
  </dd>
 <dt>-printcert</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>{-file cert_file | -sslserver host[:port]} {-jarfile JAR_file {-rfc} {-v} {-Jjavaoption}</code> </p>
 <p> Reads the certificate from the file cert_file, the SSL server located at host:port, or the signed JAR file <code>JAR_file</code> (with the <code>-jarfile</code> option and prints its contents in a human-readable format. When no port is specified, the standard HTTPS port 443 is assumed. Note that <code>-sslserver</code> and -file options cannot be provided at the same time. Otherwise, an error is reported. If neither option is specified, then the certificate is read from <code>stdin</code>. </p>
 <p> When <code>-rfc</code> is specified, the <code>keytool</code> command prints the certificate in PEM mode as defined by the Internet RFC 1421 Certificate Encoding standard. See Internet RFC 1421 Certificate Encoding Standard. </p>
@@ -454,35 +454,35 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <p> <i>Note:</i> This option can be used independently of a keystore. </p>
  </dd>
 <dt>-printcrl</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>-file crl_ {-v}</code> </p>
 <p> Reads the Certificate Revocation List (CRL) from the file <code>crl_</code>. A CRL is a list of digital certificates that were revoked by the CA that issued them. The CA generates the <code>crl_</code> file. </p>
 <p> <i>Note:</i> This option can be used independently of a keystore. </p>
  </dd>
 <dt>-storepasswd</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>[-new new_storepass] {-storetype storetype} {-keystore keystore} [-storepass storepass] {-providerName provider_name} {-providerClass provider_class_name {-providerArg provider_arg}} {-v} {-Jjavaoption}</code> </p>
 <p> Changes the password used to protect the integrity of the keystore contents. The new password is <code>new_storepass</code>, which must be at least 6 characters. </p>
  </dd>
 <dt>-keypasswd</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>{-alias alias} [-keypass old_keypass] [-new new_keypass] {-storetype storetype} {-keystore keystore} [-storepass storepass] {-providerName provider_name} {-providerClass provider_class_name {-providerArg provider_arg}} {-v} {-Jjavaoption}</code> </p>
 <p> Changes the password under which the private/secret key identified by <code>alias</code> is protected, from <code>old_keypass</code> to <code>new_keypass</code>, which must be at least 6 characters. </p>
 <p> If the <code>-keypass</code> option is not provided at the command line, and the key password is different from the keystore password, then the user is prompted for it. </p>
 <p> If the <code>-new</code> option is not provided at the command line, then the user is prompted for it </p>
  </dd>
 <dt>-delete</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>[-alias alias] {-storetype storetype} {-keystore keystore} [-storepass storepass] {-providerName provider_name} {-providerClass provider_class_name {-providerArg provider_arg}} {-v} {-protected} {-Jjavaoption}</code> </p>
 <p> Deletes from the keystore the entry identified by <code>alias</code>. The user is prompted for the alias, when no alias is provided at the command line. </p>
  </dd>
 <dt>-changealias</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <code>{-alias alias} [-destalias destalias] [-keypass keypass] {-storetype storetype} {-keystore keystore} [-storepass storepass] {-providerName provider_name} {-providerClass provider_class_name {-providerArg provider_arg}} {-v} {-protected} {-Jjavaoption}</code> </p>
 <p> Move an existing keystore entry from the specified <code>alias</code> to a new alias, <code>destalias</code>. If no destination alias is provided, then the command prompts for one. If the original entry is protected with an entry password, then the password can be supplied with the <code>-keypass</code> option. If no key password is provided, then the <code>storepass</code> (if provided) is attempted first. If the attempt fails, then the user is prompted for a password. </p>
  </dd>
 <dt>-help</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Lists the basic commands and their options. </p>
 <p> For more information about a specific command, enter the following, where <code>command_name</code> is the name of the command: <code>keytool -command_name -help</code>. </p>
  </dd></dl>
@@ -895,6 +895,6 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <dd> <p> <a href="/docs/linux/man/1-jarsigner/">jarsigner</a>(1) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Trail: Security Features in Java SE at <a rel="nofollow" href="http://docs.oracle.com/javase/tutorial/security/index.html">http://docs.oracle.com/javase/tutorial/security/index.html</a> <br />
+<dd> <p> Trail: Security Features in Java SE at <a rel="nofollow" href="http://docs.oracle.com/javase/tutorial/security/index.html">http://docs.oracle.com/javase/tutorial/security/index.html</a> <br/>
  </p>
  </dd></dl>

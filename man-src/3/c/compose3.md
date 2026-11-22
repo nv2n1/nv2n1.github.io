@@ -10,8 +10,8 @@ description: "ql/math/functional.hpp – functionals and combinators not include
 
 <p> ql/math/functional.hpp &#8211; functionals and combinators not included in the STL </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/types.hpp&gt;<br />
- #include &lt;cmath&gt;<br />
+<p> #include &lt;ql/types.hpp&gt;<br/>
+ #include &lt;cmath&gt;<br/>
  #include &lt;functional&gt; </p>
 <h3>Functions</h3>
 <p> template&lt;class F , class R &gt; clipped_function&lt; F, R &gt; <code>clip</code> (const F &amp;f, const R &amp;r) </p>

@@ -821,12 +821,12 @@ zsh-4.2.3/Doc/zsh_us.ps
  </dd></dl>
 <h3>Module-Examples</h3>
 <p> Please read <a href="/docs/linux/man/1-zshmodules/">zshmodules</a>(1) first! </p>
-<p> <br />
- <font SIZE="+1"> <code>zsh/pcre (require zmodload zsh/pcre)</code> </p>
+<p> <br/>
+  <code>zsh/pcre (require zmodload zsh/pcre)</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code># Copy files of a certain period (date indicated in the filenames)
   $ zmodload zsh/pcre
   $ ls -d -- *(e:'[[ $REPLY -pcre-match pcre-regexp ]]':)
@@ -836,12 +836,12 @@ zsh-4.2.3/Doc/zsh_us.ps
 </code></pre>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>zsh/clone (require zmodload zsh/clone)</code> </p>
+<p> <br/>
+  <code>zsh/clone (require zmodload zsh/clone)</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code># Creates a forked instance of the current shell ($! is set to zero) and
 # execute ``command'' on /dev/tty8 (for this example).
   $ zmodload zsh/clone
@@ -849,12 +849,12 @@ zsh-4.2.3/Doc/zsh_us.ps
 </code></pre>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>zsh/datetime (require zmodload zsh/datetime)</code> </p>
+<p> <br/>
+  <code>zsh/datetime (require zmodload zsh/datetime)</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>  $ zmodload zsh/datetime
   $ alias datereplacement='strftime &quot;%Y-%m-%d&quot; $EPOCHSECONDS'
   $ export DATE=`datereplacement`
@@ -879,12 +879,12 @@ zsh-4.2.3/Doc/zsh_us.ps
 </code></pre>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>zsh/stat (require zmodload zsh/stat)</code> </p>
+<p> <br/>
+  <code>zsh/stat (require zmodload zsh/stat)</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code># test if a symbolic link links to a certain file
   $ zmodload -i zsh/stat
   $ ! stat -LH s foo.ln || [[ $s[link] != &quot;foo.exe&quot; ]] || ln -sf foo.exe foo.ln
@@ -951,12 +951,12 @@ zsh-4.2.3/Doc/zsh_us.ps
 </code></pre>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>zsh/files (require zmodload zsh/files)</code> </p>
+<p> <br/>
+  <code>zsh/files (require zmodload zsh/files)</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code># search a directory for files containing a certain string then copy those
 # files to another directory.
   $ zmodload zsh/files
@@ -965,12 +965,12 @@ zsh-4.2.3/Doc/zsh_us.ps
 </code></pre>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>zsh/mapfile (require zmodload zsh/mapfile)</code> </p>
+<p> <br/>
+  <code>zsh/mapfile (require zmodload zsh/mapfile)</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code># grepping for two patterns
   $ zmodload zsh/mapfile
   $ pattern1=&quot;foo&quot;
@@ -1011,12 +1011,12 @@ zsh-4.2.3/Doc/zsh_us.ps
 </code></pre>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>zsh/mathfunc (require zmodload zsh/mathfunc)</code> </p>
+<p> <br/>
+  <code>zsh/mathfunc (require zmodload zsh/mathfunc)</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>$ zmodload zsh/mathfunc
 $ echo $(( sin(1/4.0)**2 + cos(1/4.0)**2 - 1 ))
   -1.1102230246251565e-16
@@ -1031,12 +1031,12 @@ $ print $(( rand48(seed) ))
 </code></pre>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>zsh/termcap (require zmodload zsh/termcap)</code> </p>
+<p> <br/>
+  <code>zsh/termcap (require zmodload zsh/termcap)</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code> $ zmodload -ab zsh/termcap echotc
  $ GREEN=`echotc AF 2`
  $ YELLOW=`echotc AF 3`
@@ -1046,12 +1046,12 @@ $ print $(( rand48(seed) ))
 </code></pre>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>zsh/zpty (require zmodload zsh/zpty)</code> </p>
+<p> <br/>
+  <code>zsh/zpty (require zmodload zsh/zpty)</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>  $ zmodload zsh/zpty
   $ zpty PW passwd $1
   $ zpty PW passwd $1
@@ -1070,12 +1070,12 @@ $ print $(( rand48(seed) ))
 </code></pre>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>zsh/net/socket (require zmodload zsh/net/socket)</code> </p>
+<p> <br/>
+  <code>zsh/net/socket (require zmodload zsh/net/socket)</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code># ``-l'': open a socket listening on filename
 # ``-d'': argument will be taken as the target file descriptor for the
 # connection
@@ -1092,12 +1092,12 @@ $ print $(( rand48(seed) ))
 </code></pre>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>zsh/zftp (require zmodload zsh/zftp)</code> </p>
+<p> <br/>
+  <code>zsh/zftp (require zmodload zsh/zftp)</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code> $ autoload -U zfinit
  $ zfinit
  $ zfparamswww.example.invalid myuserid mypassword
@@ -1143,12 +1143,12 @@ $ print $(( rand48(seed) ))
 </code></pre>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>zsh/zselect (require zmodload zsh/zselect)</code> </p>
+<p> <br/>
+  <code>zsh/zselect (require zmodload zsh/zselect)</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code># It's similar to
  ,----
  | $ sg=$(stty -g)
@@ -1174,22 +1174,22 @@ $ if zselect -t 500 -r 0 &amp;&amp; read yesno &amp;&amp; [ yes = &quot;$yesno&q
 <p> <code>auto_cd</code> (allow one to change to a directory by entering it as a command). <code>auto_pushd</code> (automatically append dirs to the push/pop list) pushd_ignore_dups (and don&#8217;t duplicate them).  </p>
 <h3>Misc</h3>
 <p> <code>no_hup</code> (don&#8217;t send HUP signal to background jobs when exiting ZSH). <code>print_exit_value</code> (show a message with the exit code when a command returns with a non-zero exit code) </p>
-<p> <br />
- <font SIZE="+1"> <code>History options</code> </p>
+<p> <br/>
+  <code>History options</code> </p>
 <dl>
 <dd> <p> <code>hist_verify</code> (let the user edit the command line after history expansion (e.g. !ls) instead of immediately running it) Use the same history file for all sessions : <code>setopt SHARE_HISTORY</code> </p>
  </dd></dl>
-<p> <br />
- </font><font SIZE="+2"> <code>Privacy / Security</code> </p>
+<p> <br/>
+  <code>Privacy / Security</code> </p>
 <dl>
 <dd> <p> <code>no_clobber</code> (or set -C; prevent <i>&gt;</i> redirection from truncating the given file if it already exists) </p>
  </dd></dl>
-<p> <br />
- </font><font SIZE="+3"> <code>Spelling correction</code> </p>
+<p> <br/>
+  <code>Spelling correction</code> </p>
 <dl>
 <dd> <p> <code>correct</code> (automatically correct the spelling of commands). <code>correct_all</code> (automatically correct the spelling of each word on the command line) <code>dvorak</code> (dvorak layout) </p>
  </dd></dl>
-<p> </font> </p>
+<p>  </p>
 <h2>UNSORTED/MISC</h2>
 <p> Mailpath: simple multiple mailpath: </p>
 <dl>

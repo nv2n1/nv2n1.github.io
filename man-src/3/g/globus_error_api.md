@@ -31,7 +31,7 @@ description: "Globus Error API –"
 <dt>&bull;</dt>
 <dd> You may wish to generate a mapping from error types to format strings for use in short descriptions.</dd>
 <dt>&bull;</dt>
-<dd> You may also wish to generate a common prefix for all of the above fromat strings. The suggested prefix is &#8216;Function: %s Line:<br />
+<dd> You may also wish to generate a common prefix for all of the above fromat strings. The suggested prefix is &#8216;Function: %s Line:<br/>
 &nbsp;<wbr>&nbsp;<wbr>%s&nbsp;<wbr>&#8216;.&nbsp;<wbr></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>

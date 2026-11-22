@@ -42,7 +42,7 @@ description: "eggdrop – an IRC bot"
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
 <dt><code>EGG_LANG</code></dt>
-<dd> This variable can be set to the language in which you want Eggdrop to speak<br />
+<dd> This variable can be set to the language in which you want Eggdrop to speak<br/>
 &nbsp;<wbr>to you. It defaults to English, but German, French, Finnish, and Danish are supported, too.</dd>
 <dt><code>EGG_LANGDIR</code></dt>
 <dd> Specifies the directory where all your language files are stored. The default is ./language.</dd></dl>
@@ -56,7 +56,7 @@ description: "eggdrop – an IRC bot"
 <p> See <code>doc/BUG-REPORT</code>. </p>
 <p> Bugs can either be reported directly to BugZilla, at <code><a rel="nofollow" href="http://bugzilla.eggheads.org">http://bugzilla.eggheads.org</a></code>, or via e-mail to &lt;<code>bugs [at] eggheads.org</code>&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1997 Robey Pointer<br />
+<p> Copyright (C) 1997 Robey Pointer<br/>
  Copyright (C) 1999 &#8211; 2011 Eggheads Development Team </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>

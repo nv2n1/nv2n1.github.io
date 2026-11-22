@@ -30,7 +30,7 @@ description: "opusinfo – gives information about Opus files and does extensive
 <h2>NOTES</h2>
 <p> There are many kinds of errored, invalid, non-normative, or otherwise unwise stream constructions which opusinfo will not produce warnings on. Passing opusinfo with flying colors is not certification of the correctness of a stream. Future versions may detect more error conditions. </p>
 <h2>AUTHORS</h2>
-<p> Michael Smith &lt;msmith [at] xiph.org&gt;<br />
+<p> Michael Smith &lt;msmith [at] xiph.org&gt;<br/>
  Gregory Maxwell &lt;greg [at] xiph.org&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-opusdec/">opusdec</a></code>(1), <code><a href="/docs/linux/man/1-opusenc/">opusenc</a></code>(1) </p>

@@ -37,4 +37,4 @@ guards - select from a list of files guarded by conditions
 
 <h2>AUTHOR</h2>
 
- Andreas Gruenbacher &lt;agruen [at] suse.de&gt;, <font SIZE="-1">SUSE</font> Labs
+ Andreas Gruenbacher &lt;agruen [at] suse.de&gt;, SUSE Labs

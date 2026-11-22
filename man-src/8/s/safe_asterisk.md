@@ -11,7 +11,7 @@ description: "safe_asterisk — A wrapper to run the asterisk executable in a lo
 <h2>Synopsis</h2>
 <p><code>safe_asterisk</code> <i>[ asterisk_params ]</i> </p>
 <h2>Description</h2>
-<p><code>safe_asterisk </code> is a script that runs asterisk in a loop, which can be useful if you fear asterisk may crash. The script does not run in the background like a standard service. Rather, it runs in its own linux virtual console (9, by default). It also uses the option &#8216;-c&#8217; of <a href="/docs/linux/man/8-asterisk/">asterisk</a>(8) to avoid detaching asterisk from that terminal. safe_asterisk also runs asterisk with unlimited core file size, and thus asterisk will dump core in case of a crash. To get a &quot;picture&quot; of console 9, from another terminal (e.g: from a remote shell session) you can use:<br />
+<p><code>safe_asterisk </code> is a script that runs asterisk in a loop, which can be useful if you fear asterisk may crash. The script does not run in the background like a standard service. Rather, it runs in its own linux virtual console (9, by default). It also uses the option &#8216;-c&#8217; of <a href="/docs/linux/man/8-asterisk/">asterisk</a>(8) to avoid detaching asterisk from that terminal. safe_asterisk also runs asterisk with unlimited core file size, and thus asterisk will dump core in case of a crash. To get a &quot;picture&quot; of console 9, from another terminal (e.g: from a remote shell session) you can use:<br/>
 &nbsp;<wbr>&nbsp;<wbr>screendump 9 The init script of the Debian package should be able to run safe_asterisk as the asterisk service, if so configured. See coments in /etc/default/asterisk </p>
 <h2>Files</h2>
 <p><code>/tmp</code></p>

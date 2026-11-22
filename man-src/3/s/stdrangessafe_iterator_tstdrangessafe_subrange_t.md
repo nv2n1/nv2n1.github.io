@@ -16,9 +16,9 @@ ranges::iterator_t&lt;R&gt;, ranges::dangling&gt;;
 template&lt;Range R&gt;
 using safe_subrange_t = std::conditional_t&lt;__ForwardingRange&lt;R&gt;, (2) (since C++20)
 ranges::subrange&lt;ranges::iterator_t&lt;R&gt;&gt;, ranges::dangling&gt;;</code></pre>
-<p>1) Same as ranges::iterator_t when R models exposition-only concept __ForwardingRange, otherwise yields ranges::dangling instead.<br />
-2) Similar to <code>(1)</code>, but it yields a specialization of ranges::subrange when the the same condition is met.<br />
+<p>1) Same as ranges::iterator_t when R models exposition-only concept __ForwardingRange, otherwise yields ranges::dangling instead.<br/>
+2) Similar to <code>(1)</code>, but it yields a specialization of ranges::subrange when the the same condition is met.<br/>
 These two alias templates are used by some constrained_algorithms to avoid returning potentially dangling iterators or views. </p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a placeholder type indicating that an iterator or a subrange should not be returned since it would be dangling<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a placeholder type indicating that an iterator or a subrange should not be returned since it would be dangling<br/>
 dangling <i>(class)</i> </p>

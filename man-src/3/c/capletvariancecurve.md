@@ -10,8 +10,8 @@ description: "ql/termstructures/volatility/optionlet/capletvariancecurve.hpp –
 
 <p> ql/termstructures/volatility/optionlet/capletvariancecurve.hpp &#8211; caplet variance curve </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/volatility/optionlet/optionletvolatilitystructure.hpp&gt;<br />
- #include &lt;ql/termstructures/volatility/equityfx/blackvariancecurve.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/volatility/optionlet/optionletvolatilitystructure.hpp&gt;<br/>
+ #include &lt;ql/termstructures/volatility/equityfx/blackvariancecurve.hpp&gt;<br/>
  #include &lt;ql/termstructures/volatility/flatsmilesection.hpp&gt; </p>
 <h3>Classes</h3>
 <p> class <code>CapletVarianceCurve</code> </p>

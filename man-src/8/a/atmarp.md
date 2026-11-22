@@ -9,12 +9,12 @@ description: "atmarp – administer classical IP over ATM connections"
 
 <p>atmarp &#8211; administer classical IP over ATM connections</p>
 <h2>Synopsis</h2>
-<p><code>atmarp</code> <code>-a</code><br />
- <code>atmarp</code> <code>-c</code> [[atm]<i>number</i>]<br />
- <code>atmarp</code> <code>-q</code> <i>ip_addr</i> [<code>qos&nbsp;<wbr></code><i>qos</i>] [<code>sndbuf&nbsp;<wbr></code><i>bytes</i>]<br />
- <code>atmarp</code> <code>-s</code> <i>ip_addr</i> [<i>itf</i>.]<i>vpi</i>.<i>vci</i> [<code>qos&nbsp;<wbr></code><i>qos</i>] [<code>sndbuf&nbsp;<wbr></code><i>bytes</i>] [<code>temp</code>] [<code>pub</code>] [<code>null</code>]<br />
- <code>atmarp</code> <code>-s</code> <i>ip_addr</i> <i>atm_addr</i> [<code>qos&nbsp;<wbr></code><i>qos</i>] [<code>sndbuf&nbsp;<wbr></code><i>bytes</i>] [<code>temp</code>] [<code>pub</code>] [<code>arpsrv</code>]<br />
- <code>atmarp</code> <code>-d</code> <i>ip_addr</i> [<code>arpsrv</code>]<br />
+<p><code>atmarp</code> <code>-a</code><br/>
+ <code>atmarp</code> <code>-c</code> [[atm]<i>number</i>]<br/>
+ <code>atmarp</code> <code>-q</code> <i>ip_addr</i> [<code>qos&nbsp;<wbr></code><i>qos</i>] [<code>sndbuf&nbsp;<wbr></code><i>bytes</i>]<br/>
+ <code>atmarp</code> <code>-s</code> <i>ip_addr</i> [<i>itf</i>.]<i>vpi</i>.<i>vci</i> [<code>qos&nbsp;<wbr></code><i>qos</i>] [<code>sndbuf&nbsp;<wbr></code><i>bytes</i>] [<code>temp</code>] [<code>pub</code>] [<code>null</code>]<br/>
+ <code>atmarp</code> <code>-s</code> <i>ip_addr</i> <i>atm_addr</i> [<code>qos&nbsp;<wbr></code><i>qos</i>] [<code>sndbuf&nbsp;<wbr></code><i>bytes</i>] [<code>temp</code>] [<code>pub</code>] [<code>arpsrv</code>]<br/>
+ <code>atmarp</code> <code>-d</code> <i>ip_addr</i> [<code>arpsrv</code>]<br/>
  <code>atmarp</code> <code>-V</code></p>
 <h2>Description</h2>
 <p><code>atmarp</code> is used to maintain the ATMARP table of the ATMARP demon. The table can be listed, new PVC and SVC entries can be added, and existing entries can be deleted. In addition to that, <code>atmarp</code> is also used to create new IP over ATM interfaces. </p>

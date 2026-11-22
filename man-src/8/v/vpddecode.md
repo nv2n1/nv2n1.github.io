@@ -7,14 +7,14 @@ url: "/docs/linux/man/8-vpddecode/"
 description: "vpddecode – VPD structure decoder"
 ---
 
-<p>vpddecode &#8211; <font SIZE="-1">VPD</font> structure decoder</p>
+<p>vpddecode &#8211; VPD structure decoder</p>
 <h2>Synopsis</h2>
 <p><code>vpddecode</code> [<code>OPTIONS</code>]</p>
 <h2>Description</h2>
 <p><code>vpddecode</code> prints the &quot;vital product data&quot; information that can be found in almost all IBM and Lenovo computers. Available items are:</p>
 <dl>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">BIOS</font> Build <font SIZE="-1">ID</font></dd>
+<dd>BIOS Build ID</dd>
 <dt>&bull;</dt>
 <dd>Box Serial Number</dd>
 <dt>&bull;</dt>
@@ -33,7 +33,7 @@ description: "vpddecode – VPD structure decoder"
 <dt><code>-d</code>, <code>&#8211;dev-mem FILE</code></dt>
 <dd>Read memory from device <code>FILE</code> (default: <code>/dev/mem</code>)</dd>
 <dt><code>-s</code>, <code>&#8211;string KEYWORD</code></dt>
-<dd>Only display the value of the <font SIZE="-1">VPD</font> string identified by <code>KEYWORD</code>. <code>KEYWORD</code> must be a keyword from the following list: <code>bios-build-id</code>, <code>box-serial-number</code>, <code>motherboard-serial-number</code>, <code>machine-type-model</code>, <code>bios-release-date</code>. Each keyword corresponds to an offset and a length within the <font SIZE="-1">VPD</font> record. Not all strings may be defined on all <font SIZE="-1">VPD</font>-enabled systems. If <code>KEYWORD</code> is not provided or not valid, a list of all valid keywords is printed and <code>vpddecode</code> exits with an error. This option cannot be used more than once. Mutually exclusive with <code>&#8211;dump</code>.</dd>
+<dd>Only display the value of the VPD string identified by <code>KEYWORD</code>. <code>KEYWORD</code> must be a keyword from the following list: <code>bios-build-id</code>, <code>box-serial-number</code>, <code>motherboard-serial-number</code>, <code>machine-type-model</code>, <code>bios-release-date</code>. Each keyword corresponds to an offset and a length within the VPD record. Not all strings may be defined on all VPD-enabled systems. If <code>KEYWORD</code> is not provided or not valid, a list of all valid keywords is printed and <code>vpddecode</code> exits with an error. This option cannot be used more than once. Mutually exclusive with <code>&#8211;dump</code>.</dd>
 <dt><code>-u</code>, <code>&#8211;dump</code></dt>
 <dd>Do not decode the VPD records, dump their contents as hexadecimal instead. Note that this is still a text output, no binary data will be thrown upon you. ASCII equivalent is displayed when possible. This option is mainly useful for debugging. Mutually exclusive with <code>&#8211;string</code>.</dd>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

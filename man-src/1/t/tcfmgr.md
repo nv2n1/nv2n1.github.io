@@ -54,19 +54,19 @@ description: "tcfmgr – the command line utility of the fixed-length database A
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-nl</code> : enable the option `FDBNOLCK&#8217;.<br />
- <code>-nb</code> : enable the option `FDBLCKNB&#8217;.<br />
- <code>-sx</code> : the input data is evaluated as a hexadecimal data string.<br />
- <code>-dk</code> : use the function `tcfdbputkeep&#8217; instead of `tcfdbput&#8217;.<br />
- <code>-dc</code> : use the function `tcfdbputcat&#8217; instead of `tcfdbput&#8217;.<br />
- <code>-dai</code> : use the function `tcfdbaddint&#8217; instead of `tcfdbput&#8217;.<br />
- <code>-dad</code> : use the function `tcfdbadddouble&#8217; instead of `tcfdbput&#8217;.<br />
- <code>-px</code> : the output data is converted into a hexadecimal data string.<br />
- <code>-pz</code> : do not append line feed at the end of the output.<br />
- <code>-m </code><i>num</i> : specify the maximum number of the output.<br />
- <code>-pv</code> : print values of records also.<br />
- <code>-rb </code><i>lkey</i> <i>ukey</i> : specify the range of keys.<br />
- <code>-ri </code><i>str</i> : specify the interval notation of keys.<br />
+</dt><dd> <code>-nl</code> : enable the option `FDBNOLCK&#8217;.<br/>
+ <code>-nb</code> : enable the option `FDBLCKNB&#8217;.<br/>
+ <code>-sx</code> : the input data is evaluated as a hexadecimal data string.<br/>
+ <code>-dk</code> : use the function `tcfdbputkeep&#8217; instead of `tcfdbput&#8217;.<br/>
+ <code>-dc</code> : use the function `tcfdbputcat&#8217; instead of `tcfdbput&#8217;.<br/>
+ <code>-dai</code> : use the function `tcfdbaddint&#8217; instead of `tcfdbput&#8217;.<br/>
+ <code>-dad</code> : use the function `tcfdbadddouble&#8217; instead of `tcfdbput&#8217;.<br/>
+ <code>-px</code> : the output data is converted into a hexadecimal data string.<br/>
+ <code>-pz</code> : do not append line feed at the end of the output.<br/>
+ <code>-m </code><i>num</i> : specify the maximum number of the output.<br/>
+ <code>-pv</code> : print values of records also.<br/>
+ <code>-rb </code><i>lkey</i> <i>ukey</i> : specify the range of keys.<br/>
+ <code>-ri </code><i>str</i> : specify the interval notation of keys.<br/>
  <code>-sc</code> : normalize keys as lower cases.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

@@ -9,15 +9,15 @@ description: "ovs-ctl – OVS startup helper script"
 
 <p>ovs-ctl &#8211; OVS startup helper script</p>
 <h2>Synopsis</h2>
-<p><code>ovs-ctl</code> <code>&#8211;system-id=random</code>|<i>uuid</i> [<i>options</i>] <code>start<br />
- ovs-ctl stop<br />
- ovs-ctl</code> <code>&#8211;system-id=random</code>|<i>uuid</i> [<i>options</i>] <code>restart<br />
- ovs-ctl status<br />
- ovs-ctl version<br />
- ovs-ctl [</code><i>options</i>] <code>load-kmod</code><br />
- <code>ovs-ctl &#8211;system-id=random</code>|<i>uuid</i> [<i>options</i>] <code>force-reload-kmod</code><br />
- <code>ovs-ctl </code>[<code>&#8211;protocol=</code><i>protocol</i>] [<code>&#8211;sport=</code><i>sport</i>] [<code>&#8211;dport=</code><i>dport</i>] <code>enable-protocol</code><br />
- <code>ovs-ctl help </code>| <code>-h </code>| <code>&#8211;help<br />
+<p><code>ovs-ctl</code> <code>&#8211;system-id=random</code>|<i>uuid</i> [<i>options</i>] <code>start<br/>
+ ovs-ctl stop<br/>
+ ovs-ctl</code> <code>&#8211;system-id=random</code>|<i>uuid</i> [<i>options</i>] <code>restart<br/>
+ ovs-ctl status<br/>
+ ovs-ctl version<br/>
+ ovs-ctl [</code><i>options</i>] <code>load-kmod</code><br/>
+ <code>ovs-ctl &#8211;system-id=random</code>|<i>uuid</i> [<i>options</i>] <code>force-reload-kmod</code><br/>
+ <code>ovs-ctl </code>[<code>&#8211;protocol=</code><i>protocol</i>] [<code>&#8211;sport=</code><i>sport</i>] [<code>&#8211;dport=</code><i>dport</i>] <code>enable-protocol</code><br/>
+ <code>ovs-ctl help </code>| <code>-h </code>| <code>&#8211;help<br/>
  ovs-ctl &#8211;version </code></p>
 <h2>Description</h2>
 <p>The <code>ovs-ctl</code> program starts, stops, and checks the status of Open vSwitch daemons. It is not meant to be invoked directly by system administrators but to be called internally by system startup scripts. </p>

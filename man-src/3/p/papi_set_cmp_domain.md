@@ -27,13 +27,13 @@ low order bits for more meaning
 @param cidx
  An integer identifier for a component. 
  By convention, component 0 is always the cpu component. </pre>
-<p>&nbsp;<wbr>&nbsp;<wbr><br />
+<p>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr> </p>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i><br />
- <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
- <i>PAPI_ENOCMP</i> The argument cidx is not a valid component.<br />
+<dd><i>PAPI_OK</i><br/>
+ <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br/>
+ <i>PAPI_ENOCMP</i> The argument cidx is not a valid component.<br/>
 &nbsp;<wbr></dd></dl>
 <p> <code>PAPI_set_cmp_domain</code> sets the default counting domain for all new event sets in all threads, and requires an explicit component argument. Event sets that are already in existence are not affected. To change the domain of an existing event set, please see <code>PAPI_set_opt</code>. The reader should note that the domain of an event set affects only the mode in which the counter continues to run. Counts are still aggregated for the current process, and not for any other processes in the system. Thus when requesting PAPI_DOM_KERNEL , the user is asking for events that occur on behalf of the process, inside the kernel. </p>
 <p> <code>Example:</code></p>

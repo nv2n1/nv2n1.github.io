@@ -100,7 +100,7 @@ vgdb v.set log_output -c leak_check any
 <dt>
 </dt><dd> Instructs vgdb to produce debugging output. Give multiple <code>-d</code> args to increase the verbosity. When giving <code>-d</code> to a relay vgdb, you better redirect the standard error (stderr) of vgdb to a file to avoid interaction between GDB and vgdb debugging output.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-valgrind/">valgrind</a>(1), $INSTALL/share/doc/valgrind/html/index.html or <a rel="nofollow" href="http://www.valgrind.org/docs/manual/index.html,">http://www.valgrind.org/docs/manual/index.html,</a> m[blue]<code>Debugging your program using Valgrind&#8217;s gdbserver and GDB</code>m[]<font SIZE="-2">[1]</font> m[blue]<code>vgdb</code>m[]<font SIZE="-2">[2]</font>, m[blue]<code>Valgrind monitor commands</code>m[]<font SIZE="-2">[3]</font>.</p>
+<p> <a href="/docs/linux/man/1-valgrind/">valgrind</a>(1), $INSTALL/share/doc/valgrind/html/index.html or <a rel="nofollow" href="http://www.valgrind.org/docs/manual/index.html,">http://www.valgrind.org/docs/manual/index.html,</a> m[blue]<code>Debugging your program using Valgrind&#8217;s gdbserver and GDB</code>m[][1] m[blue]<code>vgdb</code>m[][2], m[blue]<code>Valgrind monitor commands</code>m[][3].</p>
 <h2>AUTHOR</h2>
 <p> Philippe Waroquiers.</p>
 <h2>NOTES</h2>

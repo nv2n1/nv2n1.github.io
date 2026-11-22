@@ -29,5 +29,5 @@ description: "XtNameToWidget, XtWindowToWidget – translating strings to widget
 <p> If more than one child of the reference widget matches the name, <code>XtNameToWidget</code> can return any of the children. The Intrinsics do not require that all children of a widget have unique names. If the specified names contain more than one component and if more than one child matches the first component, <code>XtNameToWidget</code> can return NULL if the single branch that it follows does not contain the named widget. That is, <code>XtNameToWidget</code> does not back up and follow other matching branches of the widget tree. </p>
 <p> The <code>XtWindowToWidget</code> function translates the specified window and display pointer into the appropriate widget instance.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

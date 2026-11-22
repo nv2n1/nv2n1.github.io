@@ -29,9 +29,9 @@ description: "cockpit-bridge – Cockpit Host Bridge"
 <dt>
 </dt><dd> List all available Cockpit packages and exit. Note this includes packages available to the user running this command.</dd></dl>
 <h2>BUGS</h2>
-<p> Please send bug reports to either the distribution bug tracker or the m[blue]<code>upstream bug tracker</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> Please send bug reports to either the distribution bug tracker or the m[blue]<code>upstream bug tracker</code>m[][1].</p>
 <h2>AUTHOR</h2>
-<p> Cockpit has been written by many m[blue]<code>contributors</code>m[]<font SIZE="-2">[2]</font>.</p>
+<p> Cockpit has been written by many m[blue]<code>contributors</code>m[][2].</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-cockpit-ws/">cockpit-ws</a></code>(8)</p>
 <h2>NOTES</h2>

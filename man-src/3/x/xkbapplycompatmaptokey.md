@@ -10,7 +10,7 @@ description: "XkbApplyCompatMapToKey – Apply the new compatibility mapping to 
 <p>XkbApplyCompatMapToKey &#8211; Apply the new compatibility mapping to an individual key to get its semantics updated </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbApplyCompatMapToKey</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>key</i><code>,</code> <code>XkbChangesPtr </code><i>changes</i><code>);</code><br />
+<dt> <code>Bool XkbApplyCompatMapToKey</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>key</i><code>,</code> <code>XkbChangesPtr </code><i>changes</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

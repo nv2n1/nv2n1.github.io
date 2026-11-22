@@ -15,11 +15,11 @@ description: "pbs_selstat – obtain status of selected pbs batch jobs"
 char&nbsp;<wbr>*extend)
 void pbs_statfree(struct batch_status *psj)</pre>
 <h2>Description</h2>
-<p>Issue a batch request to examine the status of jobs which meet certain criteria. <code>pbs_selstat</code>() returns a list of batch_status structures for those jobs which met the selection criteria. This function is a combination of <code>pbs_selectjobs</code>() and <code>pbs_statjob</code>(). It is an extension to the POSIX Batch standard. Initially all batch jobs are selected for which the user is authorized to query status. This set may be reduced or filtered by specifying certain attributes of the jobs. A <i>Select Status</i> batch request is generated and sent to the server over the connection specified by <i> which is the return value of </i><code>pbs_connect</code>(). The parameter, <i> is a pointer to an attropl </i> structure which is defined in pbs_ifl.h as: struct attrl {<br />
-    struct attrl *next;<br />
-    char *name;<br />
-    char *resource;<br />
-    char *value;<br />
+<p>Issue a batch request to examine the status of jobs which meet certain criteria. <code>pbs_selstat</code>() returns a list of batch_status structures for those jobs which met the selection criteria. This function is a combination of <code>pbs_selectjobs</code>() and <code>pbs_statjob</code>(). It is an extension to the POSIX Batch standard. Initially all batch jobs are selected for which the user is authorized to query status. This set may be reduced or filtered by specifying certain attributes of the jobs. A <i>Select Status</i> batch request is generated and sent to the server over the connection specified by <i> which is the return value of </i><code>pbs_connect</code>(). The parameter, <i> is a pointer to an attropl </i> structure which is defined in pbs_ifl.h as: struct attrl {<br/>
+    struct attrl *next;<br/>
+    char *name;<br/>
+    char *resource;<br/>
+    char *value;<br/>
 }; The <i> </i> list is terminated by the first entry where <code> is a null pointer. The member points to a string which is the name of the attribute. Not all of the job attributes may be used as a selection criteria. The member points to a string which is the name of a resource. This member is only used when is set to ATTR_l, otherwise it should be a pointer to a null string. The member points to a string which is the value of the attribute or resource. The attribute names are defined in pbs_ifl.h: </p>
 <dl>
 <dd>
@@ -82,11 +82,11 @@ void pbs_statfree(struct batch_status *psj)</pre>
 <dd>Select based upon the state of the jobs. State is not a job attribute, but is included here to allow selection.</dd></dl>
 </dl>
 <p> The member defines the operator in the logical expression: </p>
-<p> The logical expression must evaluate as true for the job to be selected. The permissible values of are defined in pbs_ifl.h as: The attributes marked with (E) in the description above may only be selected with the equal, EQ, or not equal, NE, operators. If </code><i> itself is a null pointer, then no selection is done on the basis of attributes. The return value is a pointer to a list of batch_status</i> structures or the null pointer if no jobs can be queried for status. The batch_status structure is defined in pbs_ifl.h as struct attrl {<br />
-    struct attrl *next;<br />
-    char *name;<br />
-    char *resource;<br />
-    char *value;<br />
+<p> The logical expression must evaluate as true for the job to be selected. The permissible values of are defined in pbs_ifl.h as: The attributes marked with (E) in the description above may only be selected with the equal, EQ, or not equal, NE, operators. If </code><i> itself is a null pointer, then no selection is done on the basis of attributes. The return value is a pointer to a list of batch_status</i> structures or the null pointer if no jobs can be queried for status. The batch_status structure is defined in pbs_ifl.h as struct attrl {<br/>
+    struct attrl *next;<br/>
+    char *name;<br/>
+    char *resource;<br/>
+    char *value;<br/>
 }; The entry, <code> is a pointer to a list of attrl structures defined in pbs_ifl.h as: </p>
 <pre><code>struct attrl {
     struct attrl *next;

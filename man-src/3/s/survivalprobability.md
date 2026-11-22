@@ -22,45 +22,45 @@ virtual Real hazardRateImpl (Time) const =0
 instantaneous hazard rate at a given time</code></pre>
 <p> Inherits <code>QuantLib::TermStructure</code>. Inherited by <code>DefaultDensityStructure</code>, and <code>HazardRateStructure</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors</code><br />
+<p><code>Constructors</code><br/>
  See the <code>TermStructure</code> documentation for issues regarding constructors. Real hazardRate (const Date &amp;, bool extrapolate=false) const</p>
 <p>hazard rate at a given date</p>
 <p>Real hazardRate (Time, bool extrapolate=false) const</p>
 <p>hazard rate at a given time</p>
-<p>Protected Member Functions<br />
+<p>Protected Member Functions<br/>
 virtual Probability survivalProbabilityImpl (Time) const =0</p>
 <p>probability of survival between today (t = 0) and a given time</p>
 <p>virtual Real defaultDensityImpl (Time) const =0</p>
 <p>instantaneous default density at a given time</p>
 <p>virtual Real hazardRateImpl (Time) const =0</p>
-<p>instantaneous hazard rate at a given time <code>Default probability</code><br />
+<p>instantaneous hazard rate at a given time <code>Default probability</code><br/>
  Real hazardRate (const Date &amp;, bool extrapolate=false) const</p>
 <p>hazard rate at a given date</p>
 <p>Real hazardRate (Time, bool extrapolate=false) const</p>
 <p>hazard rate at a given time</p>
-<p>Protected Member Functions<br />
+<p>Protected Member Functions<br/>
 virtual Probability survivalProbabilityImpl (Time) const =0</p>
 <p>probability of survival between today (t = 0) and a given time</p>
 <p>virtual Real defaultDensityImpl (Time) const =0</p>
 <p>instantaneous default density at a given time</p>
 <p>virtual Real hazardRateImpl (Time) const =0</p>
-<p>instantaneous hazard rate at a given time <code>Survival probability</code><br />
+<p>instantaneous hazard rate at a given time <code>Survival probability</code><br/>
  Real hazardRate (const Date &amp;, bool extrapolate=false) const</p>
 <p>hazard rate at a given date</p>
 <p>Real hazardRate (Time, bool extrapolate=false) const</p>
 <p>hazard rate at a given time</p>
-<p>Protected Member Functions<br />
+<p>Protected Member Functions<br/>
 virtual Probability survivalProbabilityImpl (Time) const =0</p>
 <p>probability of survival between today (t = 0) and a given time</p>
 <p>virtual Real defaultDensityImpl (Time) const =0</p>
 <p>instantaneous default density at a given time</p>
 <p>virtual Real hazardRateImpl (Time) const =0</p>
-<p>instantaneous hazard rate at a given time <code>Default density</code><br />
+<p>instantaneous hazard rate at a given time <code>Default density</code><br/>
  Real hazardRate (const Date &amp;, bool extrapolate=false) const</p>
 <p>hazard rate at a given date</p>
 <p>Real hazardRate (Time, bool extrapolate=false) const</p>
 <p>hazard rate at a given time</p>
-<p>Protected Member Functions<br />
+<p>Protected Member Functions<br/>
 virtual Probability survivalProbabilityImpl (Time) const =0</p>
 <p>probability of survival between today (t = 0) and a given time</p>
 <p>virtual Real defaultDensityImpl (Time) const =0</p>

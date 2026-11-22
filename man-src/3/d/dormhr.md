@@ -11,7 +11,7 @@ description: "dormhr.f –"
 <p> dormhr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dormhr</code> (SIDE, TRANS, M, N, ILO, IHI, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dormhr</code> (SIDE, TRANS, M, N, ILO, IHI, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br/>
  <i></i><code>DORMHR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dormhr (characterSIDE, characterTRANS, integerM, integerN, integerILO, integerIHI, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAU, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -82,8 +82,8 @@ if SIDE
           returned by DGEHRD.
 </pre>
 <p> <i>LDA</i> </p>
-<p>LDA is INTEGER<br />
-        The leading dimension of the array A.LDA &gt;= max(1, M) if SIDE = &#8216;L&#8217;;<br />
+<p>LDA is INTEGER<br/>
+        The leading dimension of the array A.LDA &gt;= max(1, M) if SIDE = &#8216;L&#8217;;<br/>
 LDA &gt;= max(1, N) if SIDE = &#8216;R&#8217;.</p>
 <p> <i>TAU</i> </p>
 <pre>

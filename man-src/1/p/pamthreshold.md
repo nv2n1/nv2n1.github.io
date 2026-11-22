@@ -22,7 +22,7 @@ description: "pamthreshold – threshold grayscale image to black and white"
 <p> The alpha function was new in Netpbm 10.43 (June 2008). Before that, <code>pamthreshold</code> ignores any alpha channel in the input. </p>
 <p> Another way to convert a grayscale image to black and white is to dither. Dithering is using clustered black and white pixels such that if you step back and look at the picture, you see varying levels of gray. <code>pamditherbw</code> does dithering. </p>
 <h2>OPTIONS</h2>
-<p> Without any options, <code>pamthreshold</code> uses a method based on the iterative algorithm found in the wikipedia article<br />
+<p> Without any options, <code>pamthreshold</code> uses a method based on the iterative algorithm found in the wikipedia article<br/>
 &nbsp;<wbr><i>Thresholding&nbsp;<wbr>(image processing)</i> to compute the thresholding value. ( this version of the Wikipedia article was current at the time of this writing). It uses this threshold to globally threshold the image. This should work well for most images. The program issues a message telling you what threshold it used. (Netpbm messages go to Standard Error, and you can turn them off with the Netpbm common option <code>-quiet</code>). </p>
 <p> Options <code>-simple</code>, <code>-local</code>, and <code>-dual</code> select other methods. </p>
 <dl>

@@ -29,7 +29,7 @@ description: "daemonize – run a program as a Unix daemon"
 <dt>o</dt>
 <dd> Disassociate from the control terminal (and take steps not to reacquire one)</dd>
 <dt>o</dt>
-<dd> Handle any <font SIZE="-1">SIGCLD</font> signals</dd></dl>
+<dd> Handle any SIGCLD signals</dd></dl>
 <p> Most programs that are designed to be run as daemons do that work for themselves. However, you&#8217;ll occasionally run across one that does not. When you must run a daemon program that does not properly make itself into a true Unix daemon, you can use <code>daemonize</code> to force it to run as a true daemon.</p>
 <h2>OPTIONS</h2>
 <dl>

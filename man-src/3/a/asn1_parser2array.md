@@ -27,7 +27,7 @@ description: "asn1_parser2array – API function"
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if the file has a correct syntax and every identifier is known, <code>ASN1_FILE_NOT_FOUND</code> if an error occured while opening <i>inputFileName</i> , <code>ASN1_SYNTAX_ERROR</code> if the syntax is not correct, <code>ASN1_IDENTIFIER_NOT_FOUND</code> if in the file there is an identifier that is not defined, <code>ASN1_NAME_TOO_LONG</code> if in the file there is an identifier whith more than <code>ASN1_MAX_NAME_SIZE</code> characters.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>

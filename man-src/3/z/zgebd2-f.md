@@ -10,7 +10,7 @@ description: "zgebd2.f –"
 <p>zgebd2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgebd2</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, INFO)<br />
+<p>subroutine <code>zgebd2</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, INFO)<br/>
  <i></i><code>ZGEBD2</code> reduces a general matrix to bidiagonal form using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgebd2 (integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, double precision, dimension( * )D, double precision, dimension( * )E, complex*16, dimension( * )TAUQ, complex*16, dimension( * )TAUP, complex*16, dimension( * )WORK, integerINFO)</h3>

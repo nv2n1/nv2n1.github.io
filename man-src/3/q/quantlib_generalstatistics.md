@@ -14,12 +14,12 @@ description: "QuantLib::GeneralStatistics – Statistics tool."
 <p>typedef Real <code>value_type</code> </p>
 <h3>Public Member Functions</h3>
 <p><code>Inspectors</code> </p>
-<p> Size <code>samples</code> () const<br />
- <i>number of samples collected </i><br />
- const std::vector&lt; std::pair&lt; Real, Real &gt; &gt; &amp; <code>data</code> () const<br />
- <i>collected data </i><br />
- Real <code>weightSum</code> () const<br />
- <i>sum of data weights </i><br />
+<p> Size <code>samples</code> () const<br/>
+ <i>number of samples collected </i><br/>
+ const std::vector&lt; std::pair&lt; Real, Real &gt; &gt; &amp; <code>data</code> () const<br/>
+ <i>collected data </i><br/>
+ Real <code>weightSum</code> () const<br/>
+ <i>sum of data weights </i><br/>
  Real <code>mean</code> () const </p>
 <p> Real <code>variance</code> () const </p>
 <p> Real <code>standardDeviation</code> () const </p>
@@ -32,15 +32,15 @@ description: "QuantLib::GeneralStatistics – Statistics tool."
 <p> Real <code>percentile</code> (Real y) const </p>
 <p> Real <code>topPercentile</code> (Real y) const </p>
 <p> <code>Modifiers</code> </p>
-<p> void <code>add</code> (Real value, Real weight=1.0)<br />
- <i>adds a datum to the set, possibly with a weight </i><br />
- template&lt;class DataIterator &gt; void <code>addSequence</code> (DataIterator begin, DataIterator end)<br />
- <i>adds a sequence of data to the set, with default weight </i><br />
- template&lt;class DataIterator , class WeightIterator &gt; void <code>addSequence</code> (DataIterator begin, DataIterator end, WeightIterator wbegin)<br />
- <i>adds a sequence of data to the set, each with its weight </i><br />
- void <code>reset</code> ()<br />
- <i>resets the data to a null set </i><br />
- void <code>sort</code> () const<br />
+<p> void <code>add</code> (Real value, Real weight=1.0)<br/>
+ <i>adds a datum to the set, possibly with a weight </i><br/>
+ template&lt;class DataIterator &gt; void <code>addSequence</code> (DataIterator begin, DataIterator end)<br/>
+ <i>adds a sequence of data to the set, with default weight </i><br/>
+ template&lt;class DataIterator , class WeightIterator &gt; void <code>addSequence</code> (DataIterator begin, DataIterator end, WeightIterator wbegin)<br/>
+ <i>adds a sequence of data to the set, each with its weight </i><br/>
+ void <code>reset</code> ()<br/>
+ <i>resets the data to a null set </i><br/>
+ void <code>sort</code> () const<br/>
  <i>sort the data set in increasing order </i></p>
 <h2>Detailed Description</h2>
 <p>Statistics tool. </p>

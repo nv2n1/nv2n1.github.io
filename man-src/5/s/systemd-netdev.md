@@ -27,7 +27,7 @@ description: "systemd.netdev – Virtual Network Device configuration"
 </tr>
 <tr VALIGN=top>
 <td> <i>bond</i> </td>
-<td> A bond device is an aggregation of all its slave devices. See m[blue]<code>Linux Ethernet Bonding Driver HOWTO</code>m[]<font SIZE="-2">[1]</font> for details.
+<td> A bond device is an aggregation of all its slave devices. See m[blue]<code>Linux Ethernet Bonding Driver HOWTO</code>m[][1] for details.
 </td>
 </tr>
 <tr VALIGN=top>
@@ -42,7 +42,7 @@ description: "systemd.netdev – Virtual Network Device configuration"
 </tr>
 <tr VALIGN=top>
 <td> <i>gre</i> </td>
-<td> A Level 3 GRE tunnel over IPv4. See m[blue]<code>RFC 2784</code>m[]<font SIZE="-2">[2]</font> for details.
+<td> A Level 3 GRE tunnel over IPv4. See m[blue]<code>RFC 2784</code>m[][2] for details.
 </td>
 </tr>
 <tr VALIGN=top>
@@ -117,7 +117,7 @@ description: "systemd.netdev – Virtual Network Device configuration"
 </tr>
 <tr VALIGN=top>
 <td> <i>vlan</i> </td>
-<td> A VLAN is a stacked device which receives packets from its underlying device based on VLAN tagging. See m[blue]<code>IEEE 802.1Q</code>m[]<font SIZE="-2">[3]</font> for details.
+<td> A VLAN is a stacked device which receives packets from its underlying device based on VLAN tagging. See m[blue]<code>IEEE 802.1Q</code>m[][3] for details.
 </td>
 </tr>
 <tr VALIGN=top>
@@ -152,7 +152,7 @@ description: "systemd.netdev – Virtual Network Device configuration"
 </tr>
 <tr VALIGN=top>
 <td> <i>vrf</i> </td>
-<td> A Virtual Routing and Forwarding (m[blue]<code>VRF</code>m[]<font SIZE="-2">[4]</font>) interface to create separate routing and forwarding domains.
+<td> A Virtual Routing and Forwarding (m[blue]<code>VRF</code>m[][4]) interface to create separate routing and forwarding domains.
 </td>
 </tr>
 <tr VALIGN=top>
@@ -197,7 +197,7 @@ description: "systemd.netdev – Virtual Network Device configuration"
 </tr>
 <tr VALIGN=top>
 <td> <i>batadv</i> </td>
-<td> m[blue]<code>B.A.T.M.A.N. Advanced</code>m[]<font SIZE="-2">[5]</font> is a routing protocol for multi-hop mobile ad-hoc networks which operates on layer 2.
+<td> m[blue]<code>B.A.T.M.A.N. Advanced</code>m[][5] is a routing protocol for multi-hop mobile ad-hoc networks which operates on layer 2.
 </td>
 </tr>
 </table>
@@ -359,7 +359,7 @@ description: "systemd.netdev – Virtual Network Device configuration"
 <dd>Configures maximum number of FDB entries.</dd></dl>
 <p> <i>ReduceARPProxy=</i></p>
 <dl>
-<dd>Takes a boolean. When true, bridge-connected VXLAN tunnel endpoint answers ARP requests from the local bridge on behalf of remote Distributed Overlay Virtual Ethernet m[blue]<code>(DVOE)</code>m[]<font SIZE="-2">[6]</font> clients. Defaults to false.</dd></dl>
+<dd>Takes a boolean. When true, bridge-connected VXLAN tunnel endpoint answers ARP requests from the local bridge on behalf of remote Distributed Overlay Virtual Ethernet m[blue]<code>(DVOE)</code>m[][6] clients. Defaults to false.</dd></dl>
 <p> <i>L2MissNotification=</i></p>
 <dl>
 <dd>Takes a boolean. When true, enables netlink LLADDR miss notifications.</dd></dl>
@@ -386,10 +386,10 @@ description: "systemd.netdev – Virtual Network Device configuration"
 <dd>Takes a boolean. When true, remote receive checksum offload in VXLAN is turned on.</dd></dl>
 <p> <i>GroupPolicyExtension=</i></p>
 <dl>
-<dd>Takes a boolean. When true, it enables Group Policy VXLAN extension security label mechanism across network peers based on VXLAN. For details about the Group Policy VXLAN, see the m[blue]<code>VXLAN Group Policy</code>m[]<font SIZE="-2">[7]</font> document. Defaults to false.</dd></dl>
+<dd>Takes a boolean. When true, it enables Group Policy VXLAN extension security label mechanism across network peers based on VXLAN. For details about the Group Policy VXLAN, see the m[blue]<code>VXLAN Group Policy</code>m[][7] document. Defaults to false.</dd></dl>
 <p> <i>GenericProtocolExtension=</i></p>
 <dl>
-<dd>Takes a boolean. When true, Generic Protocol Extension extends the existing VXLAN protocol to provide protocol typing, OAM, and versioning capabilities. For details about the VXLAN GPE Header, see the m[blue]<code>Generic Protocol Extension for VXLAN</code>m[]<font SIZE="-2">[8]</font> document. If destination port is not specified and Generic Protocol Extension is set then default port of 4790 is used. Defaults to false.</dd></dl>
+<dd>Takes a boolean. When true, Generic Protocol Extension extends the existing VXLAN protocol to provide protocol typing, OAM, and versioning capabilities. For details about the VXLAN GPE Header, see the m[blue]<code>Generic Protocol Extension for VXLAN</code>m[][8] document. If destination port is not specified and Generic Protocol Extension is set then default port of 4790 is used. Defaults to false.</dd></dl>
 <p> <i>DestinationPort=</i></p>
 <dl>
 <dd>Configures the default destination UDP port. If the destination port is not specified then Linux kernel default will be used. Set to 4789 to get the IANA assigned value.</dd></dl>
@@ -560,7 +560,7 @@ description: "systemd.netdev – Virtual Network Device configuration"
 <dd>The remote endpoint of the tunnel. Takes an IP address or the special value &quot;any&quot;.</dd></dl>
 <p> <i>TOS=</i></p>
 <dl>
-<dd>The Type Of Service byte value for a tunnel interface. For details about the TOS, see the m[blue]<code>Type of Service in the Internet Protocol Suite</code>m[]<font SIZE="-2">[9]</font> document.</dd></dl>
+<dd>The Type Of Service byte value for a tunnel interface. For details about the TOS, see the m[blue]<code>Type of Service in the Internet Protocol Suite</code>m[][9] document.</dd></dl>
 <p> <i>TTL=</i></p>
 <dl>
 <dd>A fixed Time To Live N on tunneled packets. N is a number in the range 1&#8230;255. 0 is a special value meaning that packets inherit the TTL value. The default value for IPv4 tunnels is 0 (inherit). The default value for IPv6 tunnels is 64.</dd></dl>
@@ -569,16 +569,16 @@ description: "systemd.netdev – Virtual Network Device configuration"
 <dd>Takes a boolean. When true, enables Path MTU Discovery on the tunnel.</dd></dl>
 <p> <i>IPv6FlowLabel=</i></p>
 <dl>
-<dd>Configures the 20-bit flow label (see m[blue]<code>RFC 6437</code>m[]<font SIZE="-2">[10]</font>) field in the IPv6 header (see m[blue]<code>RFC 2460</code>m[]<font SIZE="-2">[11]</font>), which is used by a node to label packets of a flow. It is only used for IPv6 tunnels. A flow label of zero is used to indicate packets that have not been labeled. It can be configured to a value in the range 0&#8230;0xFFFFF, or be set to &quot;inherit&quot;, in which case the original flowlabel is used.</dd></dl>
+<dd>Configures the 20-bit flow label (see m[blue]<code>RFC 6437</code>m[][10]) field in the IPv6 header (see m[blue]<code>RFC 2460</code>m[][11]), which is used by a node to label packets of a flow. It is only used for IPv6 tunnels. A flow label of zero is used to indicate packets that have not been labeled. It can be configured to a value in the range 0&#8230;0xFFFFF, or be set to &quot;inherit&quot;, in which case the original flowlabel is used.</dd></dl>
 <p> <i>CopyDSCP=</i></p>
 <dl>
 <dd>Takes a boolean. When true, the Differentiated Service Code Point (DSCP) field will be copied to the inner header from outer header during the decapsulation of an IPv6 tunnel packet. DSCP is a field in an IP packet that enables different levels of service to be assigned to network traffic. Defaults to &quot;no&quot;.</dd></dl>
 <p> <i>EncapsulationLimit=</i></p>
 <dl>
-<dd>The Tunnel Encapsulation Limit option specifies how many additional levels of encapsulation are permitted to be prepended to the packet. For example, a Tunnel Encapsulation Limit option containing a limit value of zero means that a packet carrying that option may not enter another tunnel before exiting the current tunnel. (see m[blue]<code>RFC 2473</code>m[]<font SIZE="-2">[12]</font>). The valid range is 0-255 and &quot;none&quot;. Defaults to 4.</dd></dl>
+<dd>The Tunnel Encapsulation Limit option specifies how many additional levels of encapsulation are permitted to be prepended to the packet. For example, a Tunnel Encapsulation Limit option containing a limit value of zero means that a packet carrying that option may not enter another tunnel before exiting the current tunnel. (see m[blue]<code>RFC 2473</code>m[][12]). The valid range is 0-255 and &quot;none&quot;. Defaults to 4.</dd></dl>
 <p> <i>Key=</i></p>
 <dl>
-<dd>The <i>Key=</i> parameter specifies the same key to use in both directions (<i>InputKey=</i> and <i>OutputKey=</i>). The <i>Key=</i> is either a number or an IPv4 address-like dotted quad. It is used as mark-configured SAD/SPD entry as part of the lookup key (both in data and control path) in IP XFRM (framework used to implement IPsec protocol). See m[blue]<code>ip-xfrm &#8212; transform configuration</code>m[]<font SIZE="-2">[13]</font> for details. It is only used for VTI/VTI6, GRE, GRETAP, and ERSPAN tunnels.</dd></dl>
+<dd>The <i>Key=</i> parameter specifies the same key to use in both directions (<i>InputKey=</i> and <i>OutputKey=</i>). The <i>Key=</i> is either a number or an IPv4 address-like dotted quad. It is used as mark-configured SAD/SPD entry as part of the lookup key (both in data and control path) in IP XFRM (framework used to implement IPsec protocol). See m[blue]<code>ip-xfrm &#8212; transform configuration</code>m[][13] for details. It is only used for VTI/VTI6, GRE, GRETAP, and ERSPAN tunnels.</dd></dl>
 <p> <i>InputKey=</i></p>
 <dl>
 <dd>The <i>InputKey=</i> parameter specifies the key to use for input. The format is same as <i>Key=</i>. It is only used for VTI/VTI6, GRE, GRETAP, and ERSPAN tunnels.</dd></dl>
@@ -599,7 +599,7 @@ description: "systemd.netdev – Virtual Network Device configuration"
 <dd>Takes a boolean. When true allows tunnel traffic on <i>ip6tnl</i> devices where the remote endpoint is a local host address. When unset, the kernel&#8217;s default will be used.</dd></dl>
 <p> <i>FooOverUDP=</i></p>
 <dl>
-<dd>Takes a boolean. Specifies whether <i>FooOverUDP=</i> tunnel is to be configured. Defaults to false. This takes effects only for IPIP, SIT, GRE, and GRETAP tunnels. For more detail information see m[blue]<code>Foo over UDP</code>m[]<font SIZE="-2">[14]</font></dd></dl>
+<dd>Takes a boolean. Specifies whether <i>FooOverUDP=</i> tunnel is to be configured. Defaults to false. This takes effects only for IPIP, SIT, GRE, and GRETAP tunnels. For more detail information see m[blue]<code>Foo over UDP</code>m[][14]</dd></dl>
 <p> <i>FOUDestinationPort=</i></p>
 <dl>
 <dd>This setting specifies the UDP destination port for encapsulation. This field is mandatory when <i>FooOverUDP=yes</i>, and is not set by default.</dd></dl>
@@ -611,7 +611,7 @@ description: "systemd.netdev – Virtual Network Device configuration"
 <dd>Accepts the same key as in the [FooOverUDP] section.</dd></dl>
 <p> <i>IPv6RapidDeploymentPrefix=</i></p>
 <dl>
-<dd>Reconfigure the tunnel for m[blue]<code>IPv6 Rapid Deployment</code>m[]<font SIZE="-2">[15]</font>, also known as 6rd. The value is an ISP-specific IPv6 prefix with a non-zero length. Only applicable to SIT tunnels.</dd></dl>
+<dd>Reconfigure the tunnel for m[blue]<code>IPv6 Rapid Deployment</code>m[][15], also known as 6rd. The value is an ISP-specific IPv6 prefix with a non-zero length. Only applicable to SIT tunnels.</dd></dl>
 <p> <i>ISATAP=</i></p>
 <dl>
 <dd>Takes a boolean. If set, configures the tunnel as Intra-Site Automatic Tunnel Addressing Protocol (ISATAP) tunnel. Only applicable to SIT tunnels. When unset, the kernel&#8217;s default will be used.</dd></dl>
@@ -625,7 +625,7 @@ description: "systemd.netdev – Virtual Network Device configuration"
 <p>The [FooOverUDP] section only applies for netdevs of kind &quot;fou&quot; and accepts the following keys: </p>
 <p> <i>Encapsulation=</i></p>
 <dl>
-<dd>Specifies the encapsulation mechanism used to store networking packets of various protocols inside the UDP packets. Supports the following values: &quot;FooOverUDP&quot; provides the simplest no-frills model of UDP encapsulation, it simply encapsulates packets directly in the UDP payload. &quot;GenericUDPEncapsulation&quot; is a generic and extensible encapsulation, it allows encapsulation of packets for any IP protocol and optional data as part of the encapsulation. For more detailed information see m[blue]<code>Generic UDP Encapsulation</code>m[]<font SIZE="-2">[16]</font>. Defaults to &quot;FooOverUDP&quot;.</dd></dl>
+<dd>Specifies the encapsulation mechanism used to store networking packets of various protocols inside the UDP packets. Supports the following values: &quot;FooOverUDP&quot; provides the simplest no-frills model of UDP encapsulation, it simply encapsulates packets directly in the UDP payload. &quot;GenericUDPEncapsulation&quot; is a generic and extensible encapsulation, it allows encapsulation of packets for any IP protocol and optional data as part of the encapsulation. For more detailed information see m[blue]<code>Generic UDP Encapsulation</code>m[][16]. Defaults to &quot;FooOverUDP&quot;.</dd></dl>
 <p> <i>Port=</i></p>
 <dl>
 <dd>Specifies the port number where the encapsulated packets will arrive. Those packets will be removed and manually fed back into the network stack with the encapsulation removed to be sent to the real destination. This option is mandatory.</dd></dl>
@@ -780,7 +780,7 @@ description: "systemd.netdev – Virtual Network Device configuration"
 <p> <i>MinLinks=</i></p>
 <dl>
 <dd>Specifies the minimum number of links that must be active before asserting carrier. The default value is 0.</dd></dl>
-<p> For more detail information see m[blue]<code>Linux Ethernet Bonding Driver HOWTO</code>m[]<font SIZE="-2">[1]</font></p>
+<p> For more detail information see m[blue]<code>Linux Ethernet Bonding Driver HOWTO</code>m[][1]</p>
 <h2>[Xfrm] Section Options</h2>
 <p>The [Xfrm] section accepts the following keys: </p>
 <p> <i>InterfaceId=</i></p>
@@ -789,7 +789,7 @@ description: "systemd.netdev – Virtual Network Device configuration"
 <p> <i>Independent=</i></p>
 <dl>
 <dd>Takes a boolean. If false (the default), the xfrm interface must have an underlying device which can be used for hardware offloading.</dd></dl>
-<p> For more detail information see m[blue]<code>Virtual XFRM Interfaces</code>m[]<font SIZE="-2">[17]</font>.</p>
+<p> For more detail information see m[blue]<code>Virtual XFRM Interfaces</code>m[][17].</p>
 <h2>[Vrf] Section Options</h2>
 <p>The [VRF] section only applies for netdevs of kind &quot;vrf&quot; and accepts the following key: </p>
 <p> <i>Table=</i></p>

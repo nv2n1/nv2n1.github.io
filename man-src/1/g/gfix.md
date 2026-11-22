@@ -31,10 +31,10 @@ description: "gfix — miscelenous Firebird database maintenance"
 <dd>
 </dd><dt><code>-housekeeping</code> <i>number</i></dt>
 <dd> Set the housekeeping interval. When the difference between the oldest interesting transaction and the current transaction exceeds <i>number</i>, an automatic garbage collection (sweep) process is started to make possible increasing of the oldest interesting transaction number. </dd>
-<p> When <i>number</i> is <tt>0</tt>, there is no automatic sweep and <font SIZE="-1">OIT</font> advancement should be arranged by other means, e.g. <code>gfix -sweep</code> via <code>cron</code>(1).</p>
+<p> When <i>number</i> is <tt>0</tt>, there is no automatic sweep and OIT advancement should be arranged by other means, e.g. <code>gfix -sweep</code> via <code>cron</code>(1).</p>
 <dt><code>-icu</code></dt>
-<dd> Fix the database to be usable with the available <font SIZE="-1">ICU</font> version. </dd>
-<p> Some collations in Firebird are bound the the version of the <font SIZE="-1">ICU</font> library. When such a collation needs to be used in an environment with a different version of <font SIZE="-1">ICU,</font> an error occurs. <code>gfix -icu</code> is the remedy.</p>
+<dd> Fix the database to be usable with the available ICU version. </dd>
+<p> Some collations in Firebird are bound the the version of the ICU library. When such a collation needs to be used in an environment with a different version of ICU, an error occurs. <code>gfix -icu</code> is the remedy.</p>
 <dt><code>-k</code></dt>
 <dd>
 </dd><dt><code>-kill_shadow</code></dt>
@@ -64,7 +64,7 @@ description: "gfix — miscelenous Firebird database maintenance"
 <dd>
 </dd><dt><code>-nolinger</code></dt>
 <dd> Temporary remove linger setting of the database. </dd>
-<p> Similar to the following <font SIZE="-1">SQL</font> statement: </p>
+<p> Similar to the following SQL statement: </p>
 <pre>
  alter database drop linger;
 </pre>
@@ -80,9 +80,9 @@ description: "gfix — miscelenous Firebird database maintenance"
 <dt><code>normal</code></dt>
 <dd> This is the default. Brings the database fully online, all normal connections are permitted.</dd>
 <dt><code>multi</code></dt>
-<dd> Permits multiple connections from <font SIZE="-1">SYSDBA</font> and the database owner.</dd>
+<dd> Permits multiple connections from SYSDBA and the database owner.</dd>
 <dt><code>single</code></dt>
-<dd> Permins only one connection from <font SIZE="-1">SYSDBA</font> or the database owner.</dd></dl>
+<dd> Permins only one connection from SYSDBA or the database owner.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -115,7 +115,7 @@ description: "gfix — miscelenous Firebird database maintenance"
 <dt><code>-sq</code> <i>number</i></dt>
 <dd>
 </dd><dt><code>-sql_dialect</code> <i>number</i></dt>
-<dd> Change the <font SIZE="-1">SQL</font> dialect of the database.</dd>
+<dd> Change the SQL dialect of the database.</dd>
 <dt><code>-sw</code></dt>
 <dd>
 </dd><dt><code>-sweep</code></dt>
@@ -127,9 +127,9 @@ description: "gfix — miscelenous Firebird database maintenance"
 <dl>
 <dl>
 <dt><code>multi</code></dt>
-<dd> Multiple connections from <font SIZE="-1">SYSDBA</font> and the database owner are allowed. Ordinary osers are denied any requests to the database. This is the default <i>mode</i>.</dd>
+<dd> Multiple connections from SYSDBA and the database owner are allowed. Ordinary osers are denied any requests to the database. This is the default <i>mode</i>.</dd>
 <dt><code>single</code></dt>
-<dd> Only a single connection from <font SIZE="-1">SYSDBA</font> or the database owner is allowed.</dd>
+<dd> Only a single connection from SYSDBA or the database owner is allowed.</dd>
 <dt><code>full</code></dt>
 <dd> No connections to the database are allowed.</dd>
 <dt><code>-ca</code></dt>
@@ -184,18 +184,18 @@ description: "gfix — miscelenous Firebird database maintenance"
 <dt><code>-ro</code> <i>string</i></dt>
 <dd>
 </dd><dt><code>-role</code> <i>string</i></dt>
-<dd> Use supplied <font SIZE="-1">SQL</font> role for the connection.</dd>
+<dd> Use supplied SQL role for the connection.</dd>
 <dt><code>-user</code> <i>string</i></dt>
 <dd> Use supplied user name for the connection.</dd>
 <dt><code>-z</code></dt>
 <dd> Prints the <code>gfix</code> version number before anything else.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>ISC_USER</code></font></dt>
+<dt><code>ISC_USER</code></dt>
 <dd> Default value for the -user option.</dd>
-<dt><font SIZE="-1"><code>ISC_ROLE</code></font></dt>
+<dt><code>ISC_ROLE</code></dt>
 <dd> Default value for the -role option.</dd>
-<dt><font SIZE="-1"><code>ISC_PASSWORD</code></font></dt>
+<dt><code>ISC_PASSWORD</code></dt>
 <dd> Default value for the -password option.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fbstat/">fbstat</a></code>(1). </p>

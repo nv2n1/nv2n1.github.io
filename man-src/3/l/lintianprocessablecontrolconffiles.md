@@ -20,9 +20,9 @@ description: "Lintian::Processable::Control::Conffiles – access to collected c
 <dt>conffiles</dt>
 <dd> Returns a list of absolute filenames found for conffiles. </dd>
 <p> Needs-Info requirements for using <i>conffiles</i>: Same as control_index_resolved_path</p>
-<dt>is_conffile (<font SIZE="-1">FILE</font>)</dt>
-<dd> Returns a truth value if <font SIZE="-1">FILE</font> is listed in the conffiles control file. If the control file is not present or <font SIZE="-1">FILE</font> is not listed in it, it returns <tt>&quot;undef&quot;</tt>. </dd>
-<p> Note that <font SIZE="-1">FILE</font> should be the filename relative to the package root (even though the control file uses absolute paths). If the control file does relative paths, they are assumed to be relative to the package root as well (and used without warning). </p>
+<dt>is_conffile (FILE)</dt>
+<dd> Returns a truth value if FILE is listed in the conffiles control file. If the control file is not present or FILE is not listed in it, it returns <tt>&quot;undef&quot;</tt>. </dd>
+<p> Note that FILE should be the filename relative to the package root (even though the control file uses absolute paths). If the control file does relative paths, they are assumed to be relative to the package root as well (and used without warning). </p>
 <p> Needs-Info requirements for using <i>is_conffile</i>: Same as control_index_resolved_path</dl>
 <h2>Author</h2>
 <p> Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>

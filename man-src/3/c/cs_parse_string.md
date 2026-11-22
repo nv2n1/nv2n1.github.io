@@ -17,9 +17,9 @@ description: "cs_parse_string – parse a CS template string"
 NEOERR *cs_parse_string(CSPARSE *parse, char *buf, size_t blen);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> parse &#8211; a CSPARSE structure created with cs_init<br />
- buf &#8211; the string to parse. Embedded NULLs are not currently<br />
- supported<br />
+<p> parse &#8211; a CSPARSE structure created with cs_init<br/>
+ buf &#8211; the string to parse. Embedded NULLs are not currently<br/>
+ supported<br/>
  blen &#8211; the length of the string </p>
 <h2>DESCRIPTION</h2>
 <p> cs_parse_string parses a string. The string is modified, and internal references are kept by the parse tree. For this reason, ownership of the string is transfered to the CS system, and the string will be free&#8217;d when cs_destroy() is called. The parse information will be appended to the current parse tree. During parse, the only HDF variables which are evaluated are those used in evar or include statements. </p>

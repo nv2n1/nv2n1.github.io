@@ -15,7 +15,7 @@ description: "ql/methods/finitedifferences/parallelevolver.hpp – Parallel evol
 #include &lt;ql/numericalmethod.hpp&gt;
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>StepConditionSet&lt; array_type &gt;</code><br />
+<p>class <code>StepConditionSet&lt; array_type &gt;</code><br/>
  <i>Parallel evolver for multiple arrays. </i></p>
 <h2>Detailed Description</h2>
 <p>Parallel evolver for multiple arrays. </p>

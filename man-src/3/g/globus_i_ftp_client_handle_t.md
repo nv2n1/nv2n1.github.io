@@ -15,10 +15,10 @@ description: "globus_i_ftp_client_handle_t –"
 <h3>Data Fields</h3>
 <p> char <code>magic</code> [24] </p>
 <p> <code>globus_ftp_client_handle_t</code> * <code>handle</code> </p>
-<p> struct<br />
+<p> struct<br/>
  <code>globus_i_ftp_client_target_s</code> * <code>source</code>&quot; </p>
 <p> char * <code>source_url</code> </p>
-<p> struct<br />
+<p> struct<br/>
  <code>globus_i_ftp_client_target_s</code> * <code>dest</code>&quot; </p>
 <p> char * <code>dest_url</code> </p>
 <p> globus_i_ftp_client_operation_t <code>op</code> </p>
@@ -31,7 +31,7 @@ description: "globus_i_ftp_client_handle_t –"
 <p> globus_ftp_control_host_port_t * <code>pasv_address</code> </p>
 <p> int <code>num_pasv_addresses</code> </p>
 <p> globus_object_t * <code>err</code> </p>
-<p> struct<br />
+<p> struct<br/>
  <code>globus_i_ftp_client_restart_s</code> * <code>restart_info</code>&quot; </p>
 <p> int <code>notify_in_progress</code> </p>
 <p> globus_off_t <code>source_size</code> </p>

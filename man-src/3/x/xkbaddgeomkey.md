@@ -10,7 +10,7 @@ description: "XkbAddGeomKey – Add one key at the end of an existing row of key
 <p>XkbAddGeomKey &#8211; Add one key at the end of an existing row of keys </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbKeyPtr XkbAddGeomKey</code> <code>(XkbRowPtr </code><i>row</i><code>);</code><br />
+<dt> <code>XkbKeyPtr XkbAddGeomKey</code> <code>(XkbRowPtr </code><i>row</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

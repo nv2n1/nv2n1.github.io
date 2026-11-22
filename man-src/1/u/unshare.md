@@ -205,16 +205,16 @@ FOO
 <dl>
 <dt>
 </dt><dd>
-#set + m #Don&#8217;t print job status messages<br />
-#unshare&#8211; pid&#8211; fork&#8211; mount &#8211; proc&#8211; kill &#8211; child&#8211; bash&#8211; norc &#8211; c &#8221;(sleep 555 &amp;)&amp;&amp;(ps a &amp;)&amp;&amp;sleep 999&#8221; &amp;<br />
-[1] 53456<br />
-#PID TTY STAT TIME COMMAND<br />
-        1 pts /<br />
-        3 S +<br />
-    0 : 00 sleep 999 3 pts / 3 S + 0 : 00 sleep 555 5 pts / 3 R + 0 : 00 ps a<br />
-#ps h &#8211; o &#8216;comm&#8217; $ !#Show that background job is unshare(1)<br />
-                                                                      unshare<br />
-#kill $ !#Kill unshare(1)<br />
+#set + m #Don&#8217;t print job status messages<br/>
+#unshare&#8211; pid&#8211; fork&#8211; mount &#8211; proc&#8211; kill &#8211; child&#8211; bash&#8211; norc &#8211; c &#8221;(sleep 555 &amp;)&amp;&amp;(ps a &amp;)&amp;&amp;sleep 999&#8221; &amp;<br/>
+[1] 53456<br/>
+#PID TTY STAT TIME COMMAND<br/>
+        1 pts /<br/>
+        3 S +<br/>
+    0 : 00 sleep 999 3 pts / 3 S + 0 : 00 sleep 555 5 pts / 3 R + 0 : 00 ps a<br/>
+#ps h &#8211; o &#8216;comm&#8217; $ !#Show that background job is unshare(1)<br/>
+                                                                      unshare<br/>
+#kill $ !#Kill unshare(1)<br/>
 #pidof sleep
 </dd></dl>
 <p> The <code><a href="/docs/linux/man/1-pidof/">pidof</a></code>(1) command prints no output, because the <code>sleep</code> processes have been killed. More precisely, when the <code>sleep</code> process that has PID 1 in the namespace (i.e., the namespace&#8217;s init process) was killed, this caused all other processes in the namespace to be killed. By contrast, a similar series of commands where the <code>&#8211;kill-child</code> option is not used shows that when <code>unshare</code> terminates, the processes in the PID namespace are not killed: </p>

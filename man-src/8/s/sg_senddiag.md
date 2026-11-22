@@ -43,7 +43,7 @@ description: "sg_senddiag – performs a SCSI SEND DIAGNOSTIC command"
 <p>&nbsp;<wbr>&nbsp;<wbr><code>2</code>&nbsp;<wbr>: background extended self-test </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>4</code>&nbsp;<wbr>: aborts a&nbsp;<wbr>(background)&nbsp;<wbr>self-test that is in progress </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>5</code>&nbsp;<wbr>: foreground short self-test </p>
-<p>&nbsp;<wbr>&nbsp;<wbr><code>6</code>&nbsp;<wbr>: foreground extended self-test<br />
+<p>&nbsp;<wbr>&nbsp;<wbr><code>6</code>&nbsp;<wbr>: foreground extended self-test<br/>
  This option is mutually exclusive with default self-test (i.e. can&#8217;t have (<i>ST</i> &gt; 0) and <i>&#8211;test</i>).</p>
 <dt><code>-t</code>, <code>&#8211;test</code></dt>
 <dd>sets the _default_ Self Test (SelfTest) bit. By default this is clear (0). The <i>&#8211;selftest=ST</i> option should not be active together with this option. Both the <i>&#8211;doff</i> and/or <i>&#8211;uoff</i> options can be used with this option.</dd>
@@ -106,7 +106,7 @@ description: "sg_senddiag – performs a SCSI SEND DIAGNOSTIC command"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2003-2011 Douglas Gilbert<br />
+<p>Copyright &#169; 2003-2011 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sg_ses/">sg_ses</a>(8), <a href="/docs/linux/man/8-sg_logs/">sg_logs</a>(8), smartmontools(see net)</code> </p>

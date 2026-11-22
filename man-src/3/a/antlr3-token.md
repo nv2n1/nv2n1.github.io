@@ -13,21 +13,21 @@ description: "ANTLR3_COMMON_TREE_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontree.h">antlr3commontree.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> <code>ANTLR3_BASE_TREE</code> <code>baseTree</code><br />
- <i>An encapsulated BASE TREE structure (NOT a pointer) that performs a lot of the dirty work of node management To this we add just a few functions that are specific to the payload. </i><br />
- <code>ANTLR3_INT32</code> <code>childIndex</code><br />
- <i>What index is this particular node in the child list it belongs to? </i><br />
- <code>pANTLR3_ARBORETUM</code> <code>factory</code><br />
- <i>Pointer to the tree factory that manufactured this token. </i><br />
- <code>pANTLR3_COMMON_TREE</code> <code>parent</code><br />
- <i>Points to the node that has this node as a child. </i><br />
- <code>ANTLR3_MARKER</code> <code>startIndex</code><br />
- <i>Start token index that encases this tree. </i><br />
- <code>ANTLR3_MARKER</code> <code>stopIndex</code><br />
- <i>End token that encases this tree. </i><br />
- void * <code>super</code><br />
- <i>Not used by ANTLR, but if a super structure is created above this structure, it can be used to point to the start of the super structure, where additional data and function pointers can be stored. </i><br />
- <code>pANTLR3_COMMON_TOKEN</code> <code>token</code><br />
+<p> <code>ANTLR3_BASE_TREE</code> <code>baseTree</code><br/>
+ <i>An encapsulated BASE TREE structure (NOT a pointer) that performs a lot of the dirty work of node management To this we add just a few functions that are specific to the payload. </i><br/>
+ <code>ANTLR3_INT32</code> <code>childIndex</code><br/>
+ <i>What index is this particular node in the child list it belongs to? </i><br/>
+ <code>pANTLR3_ARBORETUM</code> <code>factory</code><br/>
+ <i>Pointer to the tree factory that manufactured this token. </i><br/>
+ <code>pANTLR3_COMMON_TREE</code> <code>parent</code><br/>
+ <i>Points to the node that has this node as a child. </i><br/>
+ <code>ANTLR3_MARKER</code> <code>startIndex</code><br/>
+ <i>Start token index that encases this tree. </i><br/>
+ <code>ANTLR3_MARKER</code> <code>stopIndex</code><br/>
+ <i>End token that encases this tree. </i><br/>
+ void * <code>super</code><br/>
+ <i>Not used by ANTLR, but if a super structure is created above this structure, it can be used to point to the start of the super structure, where additional data and function pointers can be stored. </i><br/>
+ <code>pANTLR3_COMMON_TOKEN</code> <code>token</code><br/>
  <i>A single token, this is the payload for the tree. </i></p>
 <h2>Detailed Description</h2>
 <p> Interface for an ANTLR3 common tree which is what gets passed around by the AST producing parser.</p>

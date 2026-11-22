@@ -14,38 +14,38 @@ description: "genpng – Generate an overview image from a source file"
 <dl>
 <dt>
 </dt><dd>
- [<code>-t</code>|<code>&#8211;tab-size</code> <i>tabsize</i>] [<code>-w</code>|<code>&#8211;width</code> <i>width</i>]<br />
- [<code>-o</code>|<code>&#8211;output-filename</code> <i>output-filename</i>]<br />
+ [<code>-t</code>|<code>&#8211;tab-size</code> <i>tabsize</i>] [<code>-w</code>|<code>&#8211;width</code> <i>width</i>]<br/>
+ [<code>-o</code>|<code>&#8211;output-filename</code> <i>output-filename</i>]<br/>
  <i>source-file</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>genpng</code> creates an overview image for a given source code file of either plain text or .gcov file format. </p>
 <p> Note that the <i>GD.pm</i> Perl module has to be installed for this script to work (it may be obtained from <i><a rel="nofollow" href="http://www.cpan.org">http://www.cpan.org</a></i>). </p>
 <p> Note also that <code>genpng</code> is called from within <code>genhtml</code> so that there is usually no need to call it directly. </p>
 <h2>OPTIONS</h2>
-<p> <code>-h</code><br />
+<p> <code>-h</code><br/>
  <code>&#8211;help</code></p>
 <dl>
 <dt>
 </dt><dd> Print a short help text, then exit.</dd></dl>
-<p> <code>-v</code><br />
+<p> <code>-v</code><br/>
  <code>&#8211;version</code></p>
 <dl>
 <dt>
 </dt><dd> Print version number, then exit.</dd></dl>
-<p> <code>-t </code><i>tab-size</i><br />
+<p> <code>-t </code><i>tab-size</i><br/>
  <code>&#8211;tab-size </code><i>tab-size</i></p>
 <dl>
 <dt>
 </dt><dd> Use <i>tab-size</i> spaces in place of tab. </dd>
 <p> All occurrences of tabulator signs in the source code file will be replaced by the number of spaces defined by <i>tab-size</i> (default is 4).</dl>
-<p> <code>-w </code><i>width</i><br />
+<p> <code>-w </code><i>width</i><br/>
  <code>&#8211;width </code><i>width</i></p>
 <dl>
 <dt>
 </dt><dd> Set width of output image to <i>width</i> pixel. </dd>
 <p> The resulting image will be exactly <i>width</i> pixel wide (default is 80). </p>
 <p> Note that source code lines which are longer than <i>width</i> will be truncated.</dl>
-<p> <code>-o </code><i>filename</i><br />
+<p> <code>-o </code><i>filename</i><br/>
  <code>&#8211;output-filename </code><i>filename</i></p>
 <dl>
 <dt>

@@ -14,28 +14,28 @@ url: "/docs/linux/man/5-shorewall6-hosts/"
 </dl>
 <h2>DESCRIPTION</h2>
 <dd> <p> This file is used to define zones in terms of subnets and/or individual IP addresses. Most simple setups don&#8217;t need to (should not) place anything in this file. </p>
-<p> The order of entries in this file is not significant in determining zone composition. Rather, the order that the zones are declared in m[blue]<code>shorewall6-zones</code>m[]<font SIZE="-2">[1]</font>(5) determines the order in which the records in this file are interpreted. </p>
+<p> The order of entries in this file is not significant in determining zone composition. Rather, the order that the zones are declared in m[blue]<code>shorewall6-zones</code>m[][1](5) determines the order in which the records in this file are interpreted. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Warning</code> </font> <br />
+<dd> <p> <br/>
+  <code>Warning</code>  <br/>
  </p>
 <p> The only time that you need this file is when you have more than one zone connected through a single interface. </p>
  </dd></dl>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Warning</code> </font> <br />
+<dd> <p> <br/>
+  <code>Warning</code>  <br/>
  </p>
-<p> If you have an entry for a zone and interface in m[blue]<code>shorewall6-interfaces</code>m[]<font SIZE="-2">[2]</font>(5) then do not include any entries in this file for that same (zone, interface) pair. </p>
+<p> If you have an entry for a zone and interface in m[blue]<code>shorewall6-interfaces</code>m[][2](5) then do not include any entries in this file for that same (zone, interface) pair. </p>
  </dd></dl>
 <p> The columns in the file are as follows (where the column name is followed by a different name in parentheses, the different name is used in the alternate specification syntax). </p>
 <p> <code>ZONE</code> &#8211; <i>zone-name</i> </p>
 <dl>
-<dd> <p> The name of a zone declared in m[blue]<code>shorewall6-zones</code>m[]<font SIZE="-2">[1]</font>(5). You may not list the firewall zone in this column. </p>
+<dd> <p> The name of a zone declared in m[blue]<code>shorewall6-zones</code>m[][1](5). You may not list the firewall zone in this column. </p>
  </dd></dl>
 <p> <code>HOST(S)</code> (hosts)- <i>interface</i>:{<i>address-or-range</i>[,<i>address-or-range</i>]...|+<i>ipset</i>|<code>dynamic</code>}[<i>exclusion</i>] </p>
 <dl>
-<dd> <p> The name of an interface defined in the m[blue]<code>shorewall6-interfaces</code>m[]<font SIZE="-2">[2]</font>(5) file followed by a colon (&quot;:&quot;) and a comma-separated list whose elements are either: </p>
+<dd> <p> The name of an interface defined in the m[blue]<code>shorewall6-interfaces</code>m[][2](5) file followed by a colon (&quot;:&quot;) and a comma-separated list whose elements are either: </p>
  </dd>
 <dl>
 <dd> <p> 1. The IPv6 <i>address</i> of a host. </p>
@@ -52,7 +52,7 @@ url: "/docs/linux/man/5-shorewall6-hosts/"
 <dl>
 <dd> <p> 5. The word <code>dynamic</code> which makes the zone dynamic in that you can use the <code>shorewall add</code> and <code>shorewall delete</code> commands to change to composition of the zone. This capability was added in Shorewall 4.4.21. </p>
  </dd></dl>
-<p> You may also exclude certain hosts through use of an <i>exclusion</i> (see m[blue]<code>shorewall6-exclusion</code>m[]<font SIZE="-2">[3]</font>(5). </dl>
+<p> You may also exclude certain hosts through use of an <i>exclusion</i> (see m[blue]<code>shorewall6-exclusion</code>m[][3](5). </dl>
  </p>
 <p> OPTIONS &#8211; [<i>option</i>[<code>,</code><i>option</i>]...] </p>
 <dl>
@@ -60,11 +60,11 @@ url: "/docs/linux/man/5-shorewall6-hosts/"
 <p> <code>blacklist</code> </p>
  </dd>
 <dl>
-<dd> <p> Check packets arriving on this port against the m[blue]<code>shorewall6-blacklist</code>m[]<font SIZE="-2">[4]</font>(5) file. </p>
+<dd> <p> Check packets arriving on this port against the m[blue]<code>shorewall6-blacklist</code>m[][4](5) file. </p>
  </dd></dl>
 <p> <code>ipsec</code> </p>
 <dl>
-<dd> <p> The zone is accessed via a kernel 2.6 ipsec SA. Note that if the zone named in the ZONE column is specified as an IPSEC zone in the m[blue]<code>shorewall6-zones</code>m[]<font SIZE="-2">[1]</font>(5) file then you do NOT need to specify the &#8216;ipsec&#8217; option here. </p>
+<dd> <p> The zone is accessed via a kernel 2.6 ipsec SA. Note that if the zone named in the ZONE column is specified as an IPSEC zone in the m[blue]<code>shorewall6-zones</code>m[][1](5) file then you do NOT need to specify the &#8216;ipsec&#8217; option here. </p>
  </dd></dl>
 <p> <code>mss</code>=<i>mss</i> </p>
 <dl>
@@ -82,7 +82,7 @@ url: "/docs/linux/man/5-shorewall6-hosts/"
 <h2>FILES</h2>
 <p> /etc/shorewall6/hosts  </p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[5]</font> </p>
+<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][5] </p>
 <p> <a href="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a href="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), <a href="/docs/linux/man/5-shorewall6-blacklist/">shorewall6-blacklist</a>(5), <a href="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5), <a href="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5),<a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), <a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), <a href="/docs/linux/man/5-shorewall6-routestopped/">shorewall6-routestopped</a>(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6.conf/">shorewall6.conf</a>(5), <a href="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall6-mangle/">shorewall6-mangle</a>(5), <a href="/docs/linux/man/5-shorewall6-tos/">shorewall6-tos</a>(5), <a href="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall-zones/">shorewall-zones</a>(5)  </p>
 <h2>NOTES</h2>
 <dl>

@@ -11,7 +11,7 @@ description: "lsametst.f –"
 <p> lsametst.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> program <code>__lsametst.f__</code><br />
+<p> program <code>__lsametst.f__</code><br/>
  <i></i><code>LSAMETST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>program __lsametst.f__ ()</h3>

@@ -9,12 +9,12 @@ description: "redland – Resource Description Framework (RDF) Library"
 
 <p>redland &#8211; Resource Description Framework (RDF) Library</p>
 <h2>Version</h2>
-<p><font SIZE="-1">1.0.16</font></p>
+<p>1.0.16</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;redland.h&gt;</code></pre>
 <h2>Description</h2>
-<p><code>redland</code> is a library providing support for the Resource Description Framework (<font SIZE="-1">RDF</font>) written in <font SIZE="-1">ANSI</font> C with APIs in several other languages. </p>
-<p> This manual page lists most of the redland public <font SIZE="-1">API</font> functions but does not claim to be a complete summary of the entire <font SIZE="-1">API</font>. For the complete <font SIZE="-1">API</font> with full details of the function interface, see the <font SIZE="-1">HTML</font> <font SIZE="-1">API</font> documentation either on the Redland web site at &lt;<a rel="nofollow" href="http://librdf.org/">http://librdf.org/</a>&gt; or with the software release in the docs/api directory.</p>
+<p><code>redland</code> is a library providing support for the Resource Description Framework (RDF) written in ANSI C with APIs in several other languages. </p>
+<p> This manual page lists most of the redland public API functions but does not claim to be a complete summary of the entire API. For the complete API with full details of the function interface, see the HTML API documentation either on the Redland web site at &lt;<a rel="nofollow" href="http://librdf.org/">http://librdf.org/</a>&gt; or with the software release in the docs/api directory.</p>
 <h2>Functions</h2>
 <p>The functions defined by <code>redland</code> are all defined with the <tt>&quot;librdf_&quot;</tt> prefix</p>
 <h3>class world</h3>
@@ -184,8 +184,8 @@ description: "redland – Resource Description Framework (RDF) Library"
 </dd><dt>int <code>librdf_node_equals</code>(librdf_node* <i>first_node</i>, librdf_node* <i>second_node</i>)</dt>
 <dd></dd></dl>
 <h3>class concepts</h3>
-<p>The library provides macros for all of the <font SIZE="-1">RDF</font> and <font SIZE="-1">RDFS</font> concepts &#8211; nodes and URIs. For example, <tt>&quot;LIBRDF_MS_Alt&quot;</tt> for the librdf_node for the rdf:Alt concept and <tt>&quot;LIBRDF_MS_Alt_URI&quot;</tt> for the librdf_uri for the <font SIZE="-1">URI</font> reference of rdf:Alt. </p>
-<p> <tt>&quot;LIBRDF_URI_RDF_MS&quot;</tt> and <tt>&quot;LIBRDF_URI_RDF_SCHEMA&quot;</tt> provide the librdf_uri objects for the <font SIZE="-1">RDF</font> and <font SIZE="-1">RDFS</font> namespace URIs. They must be copied using <code>librdf_new_uri_from_uri</code> to be shared correctly.</p>
+<p>The library provides macros for all of the RDF and RDFS concepts &#8211; nodes and URIs. For example, <tt>&quot;LIBRDF_MS_Alt&quot;</tt> for the librdf_node for the rdf:Alt concept and <tt>&quot;LIBRDF_MS_Alt_URI&quot;</tt> for the librdf_uri for the URI reference of rdf:Alt. </p>
+<p> <tt>&quot;LIBRDF_URI_RDF_MS&quot;</tt> and <tt>&quot;LIBRDF_URI_RDF_SCHEMA&quot;</tt> provide the librdf_uri objects for the RDF and RDFS namespace URIs. They must be copied using <code>librdf_new_uri_from_uri</code> to be shared correctly.</p>
 <dl>
 <dt>void <code>librdf_get_concept_by_name</code>(librdf_world* <i>world</i>, int <i>is_ms</i>, const char* <i>name</i>, librdf_uri **<i>uri_p</i>, librdf_node **<i>node_p</i>)</dt>
 <dd></dd></dl>
@@ -467,6 +467,6 @@ librdf_free_world(world);</code></pre>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/3-libraptor/">libraptor</a></i>(3), <i>libxml</i>(4).</p>
 <h2>History</h2>
-<p>The <code>redland</code> <font SIZE="-1">RDF</font> library was created by Dave Beckett in June 2000.</p>
+<p>The <code>redland</code> RDF library was created by Dave Beckett in June 2000.</p>
 <h2>Author</h2>
 <p>Dave Beckett &lt;<a rel="nofollow" href="http://purl.org/net/dajobe/">http://purl.org/net/dajobe/</a>&gt;,</p>

@@ -11,7 +11,7 @@ description: "dppequ.f –"
 <p> dppequ.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dppequ</code> (UPLO, N, AP, S, SCOND, AMAX, INFO)<br />
+<p> subroutine <code>dppequ</code> (UPLO, N, AP, S, SCOND, AMAX, INFO)<br/>
  <i></i><code>DPPEQU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dppequ (characterUPLO, integerN, double precision, dimension( * )AP, double precision, dimension( * )S, double precisionSCOND, double precisionAMAX, integerINFO)</h3>

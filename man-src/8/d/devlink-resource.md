@@ -16,8 +16,8 @@ resource
     help }
 OPTIONS := {
     -v[erbose] }</code></pre>
-<p> <code>devlink resource show</code> <i>DEV</i><br />
- <code>devlink resource help</code><br />
+<p> <code>devlink resource show</code> <i>DEV</i><br/>
+ <code>devlink resource help</code><br/>
  <code>devlink resource set</code> <i>DEV</i> <code>path</code><i> RESOURCE_PATH</i> <code>size</code><i> RESOURCE_SIZE</i> </p>
 <h2>Description</h2>
 <h3>devlink resource show &#8211; display devlink device&#8217;s resosources</h3>

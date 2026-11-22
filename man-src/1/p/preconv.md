@@ -74,5 +74,5 @@ description: "preconv – convert encoding of input files to something GNU troff
 <h2>BUGS</h2>
 <p> <code>preconv</code> doesn&#8217;t support <i>local variable lists</i> yet. This is a different syntax form to specify local variables at the end of a file.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1)<br/>
  the <code>GNU Emacs</code> and <code>XEmacs</code> info pages </p>

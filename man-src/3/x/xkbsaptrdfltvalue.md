@@ -10,7 +10,7 @@ description: "XkbSAPtrDfltValue – Returns the valueXXX field of act converted 
 <p>XkbSAPtrDfltValue &#8211; Returns the valueXXX field of act converted to a signed int </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>int XkbSAPtrDfltValue</code> <code>(XkbAction </code><i>act</i><code>);</code><br />
+<dt> <code>int XkbSAPtrDfltValue</code> <code>(XkbAction </code><i>act</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -9,11 +9,11 @@ description: "siliconmotion – Silicon Motion video driver"
 
 <p>siliconmotion &#8211; Silicon Motion video driver</p>
 <h2>Synopsis</h2>
-<p><code>Section &#34;Device&#34;</code><br />
- <code> Identifier &#34;</code><i>devname</i><code>&#34;</code><br />
- <code> Driver &#34;siliconmotion&#34;</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&#8230;<br />
- &nbsp;<wbr>&nbsp;<wbr>[ <code>Option</code> &quot;optionname&quot; [&quot;optionvalue&quot;]]<br />
+<p><code>Section &#34;Device&#34;</code><br/>
+ <code> Identifier &#34;</code><i>devname</i><code>&#34;</code><br/>
+ <code> Driver &#34;siliconmotion&#34;</code><br/>
+ &nbsp;<wbr>&nbsp;<wbr>&#8230;<br/>
+ &nbsp;<wbr>&nbsp;<wbr>[ <code>Option</code> &quot;optionname&quot; [&quot;optionvalue&quot;]]<br/>
  <code>EndSection</code></p>
 <h2>Description</h2>
 <p><code>siliconmotion </code> is an Xorg driver for Silicon Motion based video cards. The driver is fully accelerated, and provides support for the following framebuffer depths: 8, 16, and 24. All visual types are supported for depth 8, and TrueColor visuals are supported for the other depths.</p>

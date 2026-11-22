@@ -10,7 +10,7 @@ description: "zsteqr.f –"
 <p>zsteqr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zsteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br />
+<p>subroutine <code>zsteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br/>
  <i></i><code>ZSTEQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zsteqr (characterCOMPZ, integerN, double precision, dimension( * )D, double precision, dimension( * )E, complex*16, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integerINFO)</h3>

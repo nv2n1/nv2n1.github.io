@@ -142,12 +142,12 @@ description: "htop – interactive process viewer"
 <dt><code>PID</code></dt>
 <dd> The process ID.</dd>
 <dt><code>STATE (S)</code></dt>
-<dd> The state of the process:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>S</code>&nbsp;for sleeping&nbsp;(idle)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>R</code>&nbsp;for running<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>D</code>&nbsp;for disk sleep&nbsp;(uninterruptible)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>Z</code>&nbsp;for zombie&nbsp;(waiting for parent to read its exit status)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>T</code>&nbsp;for traced or suspended&nbsp;(e.g by SIGTSTP)<br />
+<dd> The state of the process:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>S</code>&nbsp;for sleeping&nbsp;(idle)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>R</code>&nbsp;for running<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>D</code>&nbsp;for disk sleep&nbsp;(uninterruptible)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>Z</code>&nbsp;for zombie&nbsp;(waiting for parent to read its exit status)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>T</code>&nbsp;for traced or suspended&nbsp;(e.g by SIGTSTP)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>W</code>&nbsp;for paging</dd>
 <dt><code>PPID</code></dt>
 <dd> The parent process ID.</dd>
@@ -250,9 +250,9 @@ description: "htop – interactive process viewer"
 <dt><code>CTXT</code></dt>
 <dd> Incremental sum of voluntary and nonvoluntary context switches.</dd>
 <dt><code>IO_PRIORITY (IO)</code></dt>
-<dd> The I/O scheduling class followed by the priority if the class supports it:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>R</code>&nbsp;for Realtime<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>B</code>&nbsp;for Best-effort<br />
+<dd> The I/O scheduling class followed by the priority if the class supports it:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>R</code>&nbsp;for Realtime<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>B</code>&nbsp;for Best-effort<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>id</code>&nbsp;for Idle</dd>
 <dt><code>PERCENT_CPU_DELAY (CPUD%)</code></dt>
 <dd> The percentage of time spent waiting for a CPU (while runnable). Requires CAP_NET_ADMIN.</dd>

@@ -24,7 +24,7 @@ description: "omnicpp – OmniORB cpp preprocessor for IDL compiler"
 <dt><code>-I</code><i>&nbsp;<wbr>dir</i></dt>
 <dd> Include <i>dir</i> in the preprocessor search path. Note that the current directory is not on the include search path by default. Use <i>-I.</i> for that.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-omniidl/">omniidl</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-omniidl/">omniidl</a></code>(1).<br/>
  The programs are documented fully by the HTML documentation in the omniorb4-doc package.</p>
 <h2>AUTHOR</h2>
 <p> omnicpp was written by Duncan Grisby &lt;duncan [at] grisby.org&gt; </p>

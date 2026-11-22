@@ -91,7 +91,7 @@ description: "gifview – displays GIF images and animations on the X window sys
 <h2>BUGS</h2>
 <p> Please email suggestions, additions, patches and bugs to ekohler [at] gmail.com.</p>
 <h2>AUTHORS</h2>
-<p> Eddie Kohler, ekohler [at] gmail.com<br />
+<p> Eddie Kohler, ekohler [at] gmail.com<br/>
  <a rel="nofollow" href="http://www.read.seas.harvard.edu/~kohler/">http://www.read.seas.harvard.edu/~kohler/</a> </p>
-<p> <a rel="nofollow" href="http://www.lcdf.org/gifsicle/">http://www.lcdf.org/gifsicle/</a><br />
+<p> <a rel="nofollow" href="http://www.lcdf.org/gifsicle/">http://www.lcdf.org/gifsicle/</a><br/>
  The <code>gifsicle</code> home page. </p>

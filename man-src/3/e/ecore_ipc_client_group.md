@@ -9,15 +9,15 @@ description: "IPC Client Functions – Functions that deal with IPC client objec
 
 <p>IPC Client Functions &#8211; Functions that deal with IPC client objects. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_ipc_client_send</code> (<code>Ecore_Ipc_Client</code> *cl, int major, int minor, int ref, int ref_to, int response, const void *data, int size)<br />
- <i>Sends a message to the given IPC client. </i><br />
- EAPI <code>Ecore_Ipc_Server</code> * <code>ecore_ipc_client_server_get</code> (<code>Ecore_Ipc_Client</code> *cl)<br />
- <i>Retrieves the IPC server that the given IPC client is connected to. </i><br />
- EAPI void * <code>ecore_ipc_client_del</code> (<code>Ecore_Ipc_Client</code> *cl)<br />
- <i>Closes the connection and frees memory allocated to the given IPC client. </i><br />
- EAPI void <code>ecore_ipc_client_data_set</code> (<code>Ecore_Ipc_Client</code> *cl, const void *data)<br />
- <i>Sets the IPC data associated with the given IPC client to </i>data.<br />
- EAPI void * <code>ecore_ipc_client_data_get</code> (<code>Ecore_Ipc_Client</code> *cl)<br />
+<p>EAPI int <code>ecore_ipc_client_send</code> (<code>Ecore_Ipc_Client</code> *cl, int major, int minor, int ref, int ref_to, int response, const void *data, int size)<br/>
+ <i>Sends a message to the given IPC client. </i><br/>
+ EAPI <code>Ecore_Ipc_Server</code> * <code>ecore_ipc_client_server_get</code> (<code>Ecore_Ipc_Client</code> *cl)<br/>
+ <i>Retrieves the IPC server that the given IPC client is connected to. </i><br/>
+ EAPI void * <code>ecore_ipc_client_del</code> (<code>Ecore_Ipc_Client</code> *cl)<br/>
+ <i>Closes the connection and frees memory allocated to the given IPC client. </i><br/>
+ EAPI void <code>ecore_ipc_client_data_set</code> (<code>Ecore_Ipc_Client</code> *cl, const void *data)<br/>
+ <i>Sets the IPC data associated with the given IPC client to </i>data.<br/>
+ EAPI void * <code>ecore_ipc_client_data_get</code> (<code>Ecore_Ipc_Client</code> *cl)<br/>
  <i>Retrieves the data that has been associated with the given IPC client. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that deal with IPC client objects.</p>
@@ -34,7 +34,7 @@ description: "IPC Client Functions – Functions that deal with IPC client objec
 <p>Sets the IPC data associated with the given IPC client to data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given IPC client.<br />
+<dd><i>cl</i> The given IPC client.<br/>
  <i>data</i> The data to associate with the IPC client.</dd></dl>
 <h3>EAPI void* ecore_ipc_client_del (<code>Ecore_Ipc_Client</code> * cl)</h3>
 <p>Closes the connection and frees memory allocated to the given IPC client. </p>
@@ -50,13 +50,13 @@ description: "IPC Client Functions – Functions that deal with IPC client objec
 <p>Sends a message to the given IPC client. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given IPC client.<br />
- <i>major</i> Major opcode of the message.<br />
- <i>minor</i> Minor opcode of the message.<br />
- <i>ref</i> Reference number of the message.<br />
- <i>ref_to</i> Reference number of the message this message refers to.<br />
- <i>response</i> Requires response.<br />
- <i>data</i> The data to send as part of the message.<br />
+<dd><i>cl</i> The given IPC client.<br/>
+ <i>major</i> Major opcode of the message.<br/>
+ <i>minor</i> Minor opcode of the message.<br/>
+ <i>ref</i> Reference number of the message.<br/>
+ <i>ref_to</i> Reference number of the message this message refers to.<br/>
+ <i>response</i> Requires response.<br/>
+ <i>data</i> The data to send as part of the message.<br/>
  <i>size</i> Length of the data, in bytes, to send.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

@@ -11,7 +11,7 @@ description: "csscal.f –"
 <p> csscal.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>csscal</code> (N, SA, CX, INCX)<br />
+<p> subroutine <code>csscal</code> (N, SA, CX, INCX)<br/>
  <i></i><code>CSSCAL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine csscal (integerN, realSA, complex, dimension(*)CX, integerINCX)</h3>

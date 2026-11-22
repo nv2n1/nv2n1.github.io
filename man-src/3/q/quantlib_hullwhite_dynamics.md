@@ -13,9 +13,9 @@ description: "QuantLib::HullWhite::Dynamics – Short-rate dynamics in the Hull-
 <p> Inherits <code>QuantLib::OneFactorModel::ShortRateDynamics</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>Dynamics</code> (const <code>Parameter</code> &amp;fitting, Real a, Real sigma) </p>
-<p> Real <code>variable</code> (Time t, Rate r) const<br />
- <i>Compute state variable from short rate. </i><br />
- Real <code>shortRate</code> (Time t, Real x) const<br />
+<p> Real <code>variable</code> (Time t, Rate r) const<br/>
+ <i>Compute state variable from short rate. </i><br/>
+ Real <code>shortRate</code> (Time t, Real x) const<br/>
  <i>Compute short rate from state variable. </i></p>
 <h2>Detailed Description</h2>
 <p>Short-rate dynamics in the Hull-White model. </p>

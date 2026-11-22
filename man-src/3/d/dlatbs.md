@@ -11,7 +11,7 @@ description: "dlatbs.f –"
 <p> dlatbs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlatbs</code> (UPLO, TRANS, DIAG, NORMIN, N, KD, AB, LDAB, X, SCALE, CNORM, INFO)<br />
+<p> subroutine <code>dlatbs</code> (UPLO, TRANS, DIAG, NORMIN, N, KD, AB, LDAB, X, SCALE, CNORM, INFO)<br/>
  <i></i><code>DLATBS</code> solves a triangular banded system of equations.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlatbs (characterUPLO, characterTRANS, characterDIAG, characterNORMIN, integerN, integerKD, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )X, double precisionSCALE, double precision, dimension( * )CNORM, integerINFO)</h3>

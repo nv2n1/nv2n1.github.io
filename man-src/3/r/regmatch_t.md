@@ -39,8 +39,8 @@ description: "system_data_types – overview of system data types"
 <dt><i>div_t</i></dt>
 <dd>
 </dd><dl>
-<dd><i>Include</i>: <i>&lt;stdlib.h&gt;</i>. typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int quot;&nbsp;/*&nbsp;Quotient&nbsp;*/<br />
+<dd><i>Include</i>: <i>&lt;stdlib.h&gt;</i>. typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int quot;&nbsp;/*&nbsp;Quotient&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int rem;&nbsp;<wbr>&nbsp;/*&nbsp;Remainder&nbsp;*/ } div_t; It is the type of the value returned by the <code><a href="/docs/linux/man/3-div/">div</a></code>(3) function. <i>Conforming to</i>: C99 and later; POSIX.1-2001 and later. <i>See also</i>: <code><a href="/docs/linux/man/3-div/">div</a></code>(3)</dd></dl>
 <dt><i>double_t</i></dt>
 <dd>
@@ -93,8 +93,8 @@ description: "system_data_types – overview of system data types"
 <dt><i>imaxdiv_t</i></dt>
 <dd>
 </dd><dl>
-<dd><i>Include</i>: <i>&lt;inttypes.h&gt;</i>. typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;intmax_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;quot;&nbsp;/*&nbsp;Quotient&nbsp;*/<br />
+<dd><i>Include</i>: <i>&lt;inttypes.h&gt;</i>. typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;intmax_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;quot;&nbsp;/*&nbsp;Quotient&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;intmax_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rem;&nbsp;<wbr>&nbsp;/*&nbsp;Remainder&nbsp;*/ } imaxdiv_t; It is the type of the value returned by the <code>imaxdiv</code>(3) function. <i>Conforming to</i>: C99 and later; POSIX.1-2001 and later. <i>See also</i>: <code>imaxdiv</code>(3)</dd></dl>
 <dt><i>intmax_t</i></dt>
 <dd>
@@ -111,43 +111,43 @@ description: "system_data_types – overview of system data types"
 <dt><i>lconv</i></dt>
 <dd>
 </dd><dl>
-<dd><i>Include</i>: <i>&lt;locale.h&gt;</i>. struct lconv {               /* Values in the &quot;C&quot; locale: */<br />
-    char *decimal_point;     /* &quot;.&quot; */<br />
-    char *thousands_sep;     /* &quot;&quot; */<br />
-    char *grouping;          /* &quot;&quot; */<br />
-    char *mon_decimal_point; /* &quot;&quot; */<br />
-    char *mon_thousands_sep; /* &quot;&quot; */<br />
-    char *mon_grouping;      /* &quot;&quot; */<br />
-    char *positive_sign;     /* &quot;&quot; */<br />
-    char *negative_sign;     /* &quot;&quot; */<br />
-    char *currency_symbol;   /* &quot;&quot; */<br />
-    char frac_digits;        /* CHAR_MAX */<br />
-    char p_cs_precedes;      /* CHAR_MAX */<br />
-    char n_cs_precedes;      /* CHAR_MAX */<br />
-    char p_sep_by_space;     /* CHAR_MAX */<br />
-    char n_sep_by_space;     /* CHAR_MAX */<br />
-    char p_sign_posn;        /* CHAR_MAX */<br />
-    char n_sign_posn;        /* CHAR_MAX */<br />
-    char *int_curr_symbol;   /* &quot;&quot; */<br />
-    char int_frac_digits;    /* CHAR_MAX */<br />
-    char int_p_cs_precedes;  /* CHAR_MAX */<br />
-    char int_n_cs_precedes;  /* CHAR_MAX */<br />
-    char int_p_sep_by_space; /* CHAR_MAX */<br />
-    char int_n_sep_by_space; /* CHAR_MAX */<br />
-    char int_p_sign_posn;    /* CHAR_MAX */<br />
-    char int_n_sign_posn;    /* CHAR_MAX */<br />
+<dd><i>Include</i>: <i>&lt;locale.h&gt;</i>. struct lconv {               /* Values in the &quot;C&quot; locale: */<br/>
+    char *decimal_point;     /* &quot;.&quot; */<br/>
+    char *thousands_sep;     /* &quot;&quot; */<br/>
+    char *grouping;          /* &quot;&quot; */<br/>
+    char *mon_decimal_point; /* &quot;&quot; */<br/>
+    char *mon_thousands_sep; /* &quot;&quot; */<br/>
+    char *mon_grouping;      /* &quot;&quot; */<br/>
+    char *positive_sign;     /* &quot;&quot; */<br/>
+    char *negative_sign;     /* &quot;&quot; */<br/>
+    char *currency_symbol;   /* &quot;&quot; */<br/>
+    char frac_digits;        /* CHAR_MAX */<br/>
+    char p_cs_precedes;      /* CHAR_MAX */<br/>
+    char n_cs_precedes;      /* CHAR_MAX */<br/>
+    char p_sep_by_space;     /* CHAR_MAX */<br/>
+    char n_sep_by_space;     /* CHAR_MAX */<br/>
+    char p_sign_posn;        /* CHAR_MAX */<br/>
+    char n_sign_posn;        /* CHAR_MAX */<br/>
+    char *int_curr_symbol;   /* &quot;&quot; */<br/>
+    char int_frac_digits;    /* CHAR_MAX */<br/>
+    char int_p_cs_precedes;  /* CHAR_MAX */<br/>
+    char int_n_cs_precedes;  /* CHAR_MAX */<br/>
+    char int_p_sep_by_space; /* CHAR_MAX */<br/>
+    char int_n_sep_by_space; /* CHAR_MAX */<br/>
+    char int_p_sign_posn;    /* CHAR_MAX */<br/>
+    char int_n_sign_posn;    /* CHAR_MAX */<br/>
 }; Contains members related to the formatting of numeric values. In the &quot;C&quot; locale, its members have the values shown in the comments above. <i>Conforming to</i>: C11 and later; POSIX.1-2001 and later. <i>See also</i>: <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3), <code><a href="/docs/linux/man/3-localeconv/">localeconv</a></code>(3), <code>charsets</code>(5), <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7)</dd></dl>
 <dt><i>ldiv_t</i></dt>
 <dd>
 </dd><dl>
-<dd><i>Include</i>: <i>&lt;stdlib.h&gt;</i>. typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;quot;&nbsp;/*&nbsp;Quotient&nbsp;*/<br />
+<dd><i>Include</i>: <i>&lt;stdlib.h&gt;</i>. typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;quot;&nbsp;/*&nbsp;Quotient&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rem;&nbsp;<wbr>&nbsp;/*&nbsp;Remainder&nbsp;*/ } ldiv_t; It is the type of the value returned by the <code><a href="/docs/linux/man/3-ldiv/">ldiv</a></code>(3) function. <i>Conforming to</i>: C99 and later; POSIX.1-2001 and later. <i>See also</i>: <code><a href="/docs/linux/man/3-ldiv/">ldiv</a></code>(3)</dd></dl>
 <dt><i>lldiv_t</i></dt>
 <dd>
 </dd><dl>
-<dd><i>Include</i>: <i>&lt;stdlib.h&gt;</i>. typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long long&nbsp;<wbr>&nbsp;<wbr>&nbsp;quot;&nbsp;/*&nbsp;Quotient&nbsp;*/<br />
+<dd><i>Include</i>: <i>&lt;stdlib.h&gt;</i>. typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long long&nbsp;<wbr>&nbsp;<wbr>&nbsp;quot;&nbsp;/*&nbsp;Quotient&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long long&nbsp;<wbr>&nbsp;<wbr>&nbsp;rem;&nbsp;<wbr>&nbsp;/*&nbsp;Remainder&nbsp;*/ } lldiv_t; It is the type of the value returned by the <code><a href="/docs/linux/man/3-lldiv/">lldiv</a></code>(3) function. <i>Conforming to</i>: C99 and later; POSIX.1-2001 and later. <i>See also</i>: <code><a href="/docs/linux/man/3-lldiv/">lldiv</a></code>(3)</dd></dl>
 <dt><i>off_t</i></dt>
 <dd>
@@ -164,16 +164,16 @@ description: "system_data_types – overview of system data types"
 <dt><i>regex_t</i></dt>
 <dd>
 </dd><dl>
-<dd><i>Include</i>: <i>&lt;regex.h&gt;</i>. typedef struct {<br />
+<dd><i>Include</i>: <i>&lt;regex.h&gt;</i>. typedef struct {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t&nbsp;<wbr>&nbsp;re_nsub;&nbsp;/*&nbsp;Number of parenthesized subexpressions.&nbsp;*/ } regex_t; This is a structure type used in regular expression matching. It holds a compiled regular expression, compiled with <code><a href="/docs/linux/man/3-regcomp/">regcomp</a></code>(3). <i>Conforming to</i>: POSIX.1-2001 and later. <i>See also</i>: <code><a href="/docs/linux/man/3-regex/">regex</a></code>(3)</dd></dl>
 <dt><i>regmatch_t</i></dt>
 <dd>
 </dd><dl>
-<dd><i>Include</i>: <i>&lt;regex.h&gt;</i>. typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;regoff_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rm_so;&nbsp;/*&nbsp;Byte offset from start of string<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;to start of substring&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;regoff_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rm_eo;&nbsp;/*&nbsp;Byte offset from start of string of<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the first character after the end of<br />
+<dd><i>Include</i>: <i>&lt;regex.h&gt;</i>. typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;regoff_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rm_so;&nbsp;/*&nbsp;Byte offset from start of string<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;to start of substring&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;regoff_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rm_eo;&nbsp;/*&nbsp;Byte offset from start of string of<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the first character after the end of<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;substring&nbsp;*/ } regmatch_t; This is a structure type used in regular expression matching. <i>Conforming to</i>: POSIX.1-2001 and later. <i>See also</i>: <code><a href="/docs/linux/man/3-regexec/">regexec</a></code>(3)</dd></dl>
 <dt><i>regoff_t</i></dt>
 <dd>
@@ -182,25 +182,25 @@ description: "system_data_types – overview of system data types"
 <dt><i>sigevent</i></dt>
 <dd>
 </dd><dl>
-<dd><i>Include</i>: <i>&lt;signal.h&gt;</i>. Alternatively, <i>&lt;aio.h&gt;</i>, <i>&lt;mqueue.h&gt;</i>, or <i>&lt;time.h&gt;</i>. struct sigevent {<br />
-    int sigev_notify;         /* Notification type */<br />
-    int sigev_signo;          /* Signal number */<br />
-    union sigval sigev_value; /* Signal value */<br />
-    void (*sigev_notify_function)(union sigval);<br />
-    /* Notification function */<br />
-    pthread_attr_t *sigev_notify_attributes;<br />
-    /* Notification attributes */<br />
+<dd><i>Include</i>: <i>&lt;signal.h&gt;</i>. Alternatively, <i>&lt;aio.h&gt;</i>, <i>&lt;mqueue.h&gt;</i>, or <i>&lt;time.h&gt;</i>. struct sigevent {<br/>
+    int sigev_notify;         /* Notification type */<br/>
+    int sigev_signo;          /* Signal number */<br/>
+    union sigval sigev_value; /* Signal value */<br/>
+    void (*sigev_notify_function)(union sigval);<br/>
+    /* Notification function */<br/>
+    pthread_attr_t *sigev_notify_attributes;<br/>
+    /* Notification attributes */<br/>
 }; For further details about this type, see <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7). <i>Versions</i>: <i>&lt;aio.h&gt;</i> and <i>&lt;time.h&gt;</i> define <i>sigevent</i> since POSIX.1-2008. <i>Conforming to</i>: POSIX.1-2001 and later. <i>See also</i>: <code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2), <code><a href="/docs/linux/man/3-getaddrinfo_a/">getaddrinfo_a</a></code>(3), <code><a href="/docs/linux/man/3-lio_listio/">lio_listio</a></code>(3), <code><a href="/docs/linux/man/3-mq_notify/">mq_notify</a></code>(3) See also the <i>aiocb</i> structure in this page.</dd></dl>
 <dt><i>siginfo_t</i></dt>
 <dd>
 </dd><dl>
-<dd><i>Include</i>: <i>&lt;signal.h&gt;</i>. Alternatively, <i>&lt;sys/wait.h&gt;</i>. typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;si_signo;&nbsp;<wbr>&nbsp;/*&nbsp;Signal number&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;si_code;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Signal code&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pid_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;si_pid;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Sending process ID&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uid_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;si_uid;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Real user ID of sending process&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*si_addr;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Address of faulting instruction&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;si_status;&nbsp;/*&nbsp;Exit value or signal&nbsp;*/<br />
+<dd><i>Include</i>: <i>&lt;signal.h&gt;</i>. Alternatively, <i>&lt;sys/wait.h&gt;</i>. typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;si_signo;&nbsp;<wbr>&nbsp;/*&nbsp;Signal number&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;si_code;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Signal code&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pid_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;si_pid;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Sending process ID&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uid_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;si_uid;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Real user ID of sending process&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*si_addr;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Address of faulting instruction&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;si_status;&nbsp;/*&nbsp;Exit value or signal&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;union sigval si_value;&nbsp;<wbr>&nbsp;/*&nbsp;Signal value&nbsp;*/ } siginfo_t; Information associated with a signal. For further details on this structure (including additional, Linux-specific fields), see <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2). <i>Conforming to</i>: POSIX.1-2001 and later. <i>See also</i>: <code><a href="/docs/linux/man/2-pidfd_send_signal/">pidfd_send_signal</a></code>(2), <code><a href="/docs/linux/man/2-rt_sigqueueinfo/">rt_sigqueueinfo</a></code>(2), <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), <code><a href="/docs/linux/man/2-sigwaitinfo/">sigwaitinfo</a></code>(2), <code><a href="/docs/linux/man/3-psiginfo/">psiginfo</a></code>(3)</dd></dl>
 <dt><i>sigset_t</i></dt>
 <dd>
@@ -209,8 +209,8 @@ description: "system_data_types – overview of system data types"
 <dt><i>sigval</i></dt>
 <dd>
 </dd><dl>
-<dd><i>Include</i>: <i>&lt;signal.h&gt;</i>. union sigval {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sigval_int;&nbsp;/*&nbsp;Integer value&nbsp;*/<br />
+<dd><i>Include</i>: <i>&lt;signal.h&gt;</i>. union sigval {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sigval_int;&nbsp;/*&nbsp;Integer value&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;*sigval_ptr;&nbsp;/*&nbsp;Pointer value&nbsp;*/ }; Data passed with a signal. <i>Conforming to</i>: POSIX.1-2001 and later. <i>See also</i>: <code><a href="/docs/linux/man/3-pthread_sigqueue/">pthread_sigqueue</a></code>(3), <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3), <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7) See also the <i>sigevent</i> structure and the <i>siginfo_t</i> type in this page.</dd></dl>
 <dt><i>size_t</i></dt>
 <dd>
@@ -235,16 +235,16 @@ description: "system_data_types – overview of system data types"
 <dt><i>timespec</i></dt>
 <dd>
 </dd><dl>
-<dd><i>Include</i>: <i>&lt;time.h&gt;</i>. Alternatively, <i>&lt;aio.h&gt;</i>, <i>&lt;mqueue.h&gt;</i>, <i>&lt;sched.h&gt;</i>, <i>&lt;signal.h&gt;</i>, <i>&lt;sys/select.h&gt;</i>, or <i>&lt;sys/stat.h&gt;</i>. struct timespec {<br />
-    time_t tv_sec; /* Seconds */<br />
-    long tv_nsec;  /* Nanoseconds */<br />
+<dd><i>Include</i>: <i>&lt;time.h&gt;</i>. Alternatively, <i>&lt;aio.h&gt;</i>, <i>&lt;mqueue.h&gt;</i>, <i>&lt;sched.h&gt;</i>, <i>&lt;signal.h&gt;</i>, <i>&lt;sys/select.h&gt;</i>, or <i>&lt;sys/stat.h&gt;</i>. struct timespec {<br/>
+    time_t tv_sec; /* Seconds */<br/>
+    long tv_nsec;  /* Nanoseconds */<br/>
 }; Describes times in seconds and nanoseconds. <i>Conforming to</i>: C11 and later; POSIX.1-2001 and later. <i>See also</i>: <code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2), <code><a href="/docs/linux/man/2-clock_nanosleep/">clock_nanosleep</a></code>(2), <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2), <code><a href="/docs/linux/man/2-timerfd_gettime/">timerfd_gettime</a></code>(2), <code><a href="/docs/linux/man/2-timer_gettime/">timer_gettime</a></code>(2)</dd></dl>
 <dt><i>timeval</i></dt>
 <dd>
 </dd><dl>
-<dd><i>Include</i>: <i>&lt;sys/time.h&gt;</i>. Alternatively, <i>&lt;sys/resource.h&gt;</i>, <i>&lt;sys/select.h&gt;</i>, or <i>&lt;utmpx.h&gt;</i>. struct timeval {<br />
-    time_t tv_sec;       /* Seconds */<br />
-    suseconds_t tv_usec; /* Microseconds */<br />
+<dd><i>Include</i>: <i>&lt;sys/time.h&gt;</i>. Alternatively, <i>&lt;sys/resource.h&gt;</i>, <i>&lt;sys/select.h&gt;</i>, or <i>&lt;utmpx.h&gt;</i>. struct timeval {<br/>
+    time_t tv_sec;       /* Seconds */<br/>
+    suseconds_t tv_usec; /* Microseconds */<br/>
 }; Describes times in seconds and microseconds. <i>Conforming to</i>: POSIX.1-2001 and later. <i>See also</i>: <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/2-utimes/">utimes</a></code>(2), <code><a href="/docs/linux/man/3-adjtime/">adjtime</a></code>(3), <code><a href="/docs/linux/man/3-futimes/">futimes</a></code>(3), <code><a href="/docs/linux/man/3-timeradd/">timeradd</a></code>(3)</dd></dl>
 <dt><i>uid_t</i></dt>
 <dd>

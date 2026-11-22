@@ -17,7 +17,7 @@ description: "winemaker – generate a build infrastructure for compiling Window
 <p>&nbsp;<wbr>&nbsp;<wbr>[ <code>-D</code><i>macro</i>[=<i>defn</i>] ] [<i>&nbsp;<wbr></i><code>-I</code><i>dir</i> ]&nbsp;<wbr>[ <code>-P</code><i>dir</i> ] [ <code>-i</code><i>dll</i> ] [ <code>-L</code><i>dir</i> ] [ <code>-l</code><i>library </i> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>[ <code>&#8211;nodlls </code>] [ <code>&#8211;nomsvcrt </code>] [ <code>&#8211;interactive </code>] [ <code>&#8211;single-target </code><i>name</i> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>[ <code>&#8211;generated-files </code>] [ <code>&#8211;nogenerated-files </code>] </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>[ <code>&#8211;wine32 </code>]<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>[ <code>&#8211;wine32 </code>]<br/>
  <i> work_directory</i> | <i>project_file</i> | <i>workspace_file</i> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>winemaker</code> is a perl script designed to help you bootstrap the process of converting your Windows sources to Winelib programs. </p>
@@ -98,10 +98,10 @@ description: "winemaker – generate a build infrastructure for compiling Window
 <p> $ make </p>
 <p> If at this point you get compilation errors (which is quite likely for a reasonably sized project) then you should consult the Winelib User Guide to find tips on how to resolve them. </p>
 <p> For an MFC-based project you would have to run the following commands instead: </p>
-<p> $ winemaker &#8211;lower-uppercase &#8211;mfc .<br />
+<p> $ winemaker &#8211;lower-uppercase &#8211;mfc .<br/>
  $ make </p>
 <p> For an existing project-file you would have to run the following commands: </p>
-<p> $ winemaker myproject.dsp<br />
+<p> $ winemaker myproject.dsp<br/>
  $ make </p>
 <h2>TODO / BUGS</h2>
 <p> In some cases you will have to edit the <i>Makefile</i> or source files manually. </p>
@@ -110,11 +110,11 @@ description: "winemaker – generate a build infrastructure for compiling Window
 <p> <code>winemaker</code> does not support message files and the message compiler yet. </p>
 <p> Bugs can be reported on the <code>Wine bug tracker</code></p>
 <h2>AUTHORS</h2>
-<p> François Gouget for CodeWeavers<br />
- Dimitrie O. Paun<br />
+<p> François Gouget for CodeWeavers<br/>
+ Dimitrie O. Paun<br/>
  André Hentschel</p>
 <h2>AVAILABILITY</h2>
 <p> <code>winemaker</code> is part of the Wine distribution, which is available through WineHQ, the <code>Wine development headquarters</code></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1),<br />
+<p> <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1),<br/>
  <code>Wine documentation and support</code> </p>

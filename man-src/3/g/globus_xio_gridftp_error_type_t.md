@@ -10,7 +10,7 @@ description: "Globus XIO GRIDFTP Client Driver –"
 
 <p> Globus XIO GRIDFTP Client Driver &#8211; </p>
 <h3>Typedefs</h3>
-<p> typedef enum<br />
+<p> typedef enum<br/>
  <code>globus_l_xio_gridftp_mode_e</code> <code>globus_l_xio_gridftp_mode_t</code>&quot; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_gridftp_error_type_t</code> { <code>GLOBUS_XIO_GRIDFTP_ERROR_ATTR</code>, <code>GLOBUS_XIO_GRIDFTP_ERROR_SEEK</code>, <code>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_READ</code>, <code>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_WRITE</code>, <code>GLOBUS_XIO_GRIDFTP_ERROR_PENDING_READ</code>, <code>GLOBUS_XIO_GRIDFTP_ERROR_PENDING_WRITE</code>, <code>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_PARTIAL_XFER</code> } </p>

@@ -11,7 +11,7 @@ description: "cgeqpf.f –"
 <p> cgeqpf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgeqpf</code> (M, N, A, LDA, JPVT, TAU, WORK, RWORK, INFO)<br />
+<p> subroutine <code>cgeqpf</code> (M, N, A, LDA, JPVT, TAU, WORK, RWORK, INFO)<br/>
  <i></i><code>CGEQPF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgeqpf (integerM, integerN, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )JPVT, complex, dimension( * )TAU, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

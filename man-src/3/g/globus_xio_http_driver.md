@@ -16,7 +16,7 @@ description: "Globus XIO HTTP Driver –"
 <p> <code>Attributes and Cntls</code> </p>
 <p> <code>Error Types</code> </p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_xio_http_header_t</code><br />
+<p> struct <code>globus_xio_http_header_t</code><br/>
  <i>HTTP Header. </i></p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_http_version_t</code> { , <code>GLOBUS_XIO_HTTP_VERSION_1_0</code>, <code>GLOBUS_XIO_HTTP_VERSION_1_1</code> } </p>

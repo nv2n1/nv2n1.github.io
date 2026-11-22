@@ -24,7 +24,7 @@ description: "reposurgeon – surgical operations on repositories"
 <p> CVS is supported for read only, not write. For CVS, <code>reposurgeon</code> must be run from within a repository directory (one with a CVSROOT subdirectory). Each module becomes a subdirectory in the the <code>reposurgeon</code> representation of the change history. </p>
 <p> In order to deal with version-control systems that do not have fast-export equivalents, <code>reposurgeon</code> can also host extractor code that reads repositories directly. For each version-control system supported through an extractor, <code>reposurgeon</code> uses a small amount of knowledge about the system&#8217;s command-line tools to (in effect) replay repository history into an input stream internally. Repositories under systems supported through extractors can be read by <code>reposurgeon</code>, but not modified by it. In particular, <code>reposurgeon</code> can be used to move a repository history from any VCS supported by an extractor to any VCS supported by a normal importer/exporter pair. </p>
 <p> Mercurial repository reading is implemented with an extractor class; writing is handled with the stock &quot;hg fastimport&quot; command. A test extractor exists for git, but is normally disabled in favor of the regular exporter. </p>
-<p> For guidance on the pragmatics of repository conversion, see the m[blue]<code>DVCS Migration HOWTO</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> For guidance on the pragmatics of repository conversion, see the m[blue]<code>DVCS Migration HOWTO</code>m[][1].</p>
 <h2>SAFETY WARNINGS</h2>
 <p> <code>reposurgeon</code> is a sharp enough tool to cut you. It takes care not to ever write a repository in an actually inconsistent state, and will terminate with an error message rather than proceed when its internal data structures are confused. However, there are lots of things you can do with it &#8211; like altering stored commit timestamps so they no longer match the commit sequence &#8211; that are likely to cause havoc after you&#8217;re done. Proceed with caution and check your work. </p>
 <p> Also note that, if your DVCS does the usual thing of making commit IDs a cryptographic hash of content and parent links, editing a publicly-accessible repository with this tool would be a bad idea. All of the surgical operations in <code>reposurgeon</code> will modify the hash chains. </p>
@@ -544,7 +544,7 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font><br />
+  <code>Warning</code> <br/>
  It is easy to get the bounds of a squash command wrong, with confusing and destructive results. Beware thinking you can squash on a selection set to merge all commits except the last one into the last one; what you will actually do is to merge all of them to the first commit <i>after</i> the selected set. </dd>
 </dl>
 <p> Normally, any tag pointing to a combined commit will also be pushed forward. But see the list of policy modifiers below for how to change this. </p>
@@ -839,21 +839,21 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 <dl>
 <dt>
 </dt><dd>
-[alias]<br />
-#git stamp &lt; commit &#8211; ish&gt; &#8211; print a reposurgeon &#8211; style action stamp<br />
-    stamp = show &#8211; s&#8211; format = &#8216;%cI!%ce&#8217;<br />
-#git scommit &lt; stamp&gt; &lt; rev &#8211; list &#8211; args&gt; &#8211; list most recent commit that matches &lt; stamp&gt;.<br />
-#Must also specify a branch to search or &#8211;all, after these arguments.<br />
-    scommit = &#8220;!f(){ d=${1%%!*}; a=${1##*!}; arg=\&#8221;&#8211;until=$d -1\&#8221;; if [ $a != $1 ]; then arg=\&#8221;$arg &#8211;committer=$a\&#8221;; fi; shift; git rev-list $arg ${1:+\&#8221;$@\&#8221;}; }; f&#8221;<br />
-#git scommits &lt; stamp&gt; &lt; rev &#8211; list &#8211; args&gt; &#8211; as above, but list all matching commits.<br />
-    scommits = &#8220;!f(){ d=${1%%!*}; a=${1##*!}; arg=\&#8221;&#8211;until=$d &#8211;after $d\&#8221;; if [ $a != $1 ]; then arg=\&#8221;$arg &#8211;committer=$a\&#8221;; fi; shift; git rev-list $arg ${1:+\&#8221;$@\&#8221;}; }; f&#8221;<br />
-#git smaster &lt; stamp&gt; &#8211; list most recent commit on master that matches &lt; stamp&gt;.<br />
-    smaster = &#8220;!f(){ git scommit \&#8221;$1\&#8221; master &#8211;first-parent; }; f&#8221; smasters = &#8220;!f(){ git scommits \&#8221;$1\&#8221; master &#8211;first-parent; }; f&#8221;<br />
-#git shs &lt; stamp&gt; &#8211; show the commits on master that match &lt; stamp&gt;.<br />
-    shs = &#8220;!f(){ stamp=$(git smasters $1); shift; git show ${stamp:?not found} $*; }; f&#8221;<br />
-#git slog &lt; stamp&gt; &lt; log &#8211; args&gt; &#8211; start git log at &lt; stamp&gt; on master<br />
-    slog = &#8220;!f(){ stamp=$(git smaster $1); shift; git log ${stamp:?not found} $*; }; f&#8221;<br />
-#git sco &lt; stamp&gt; &#8211; check out most recent commit on master that matches &lt; stamp&gt;.<br />
+[alias]<br/>
+#git stamp &lt; commit &#8211; ish&gt; &#8211; print a reposurgeon &#8211; style action stamp<br/>
+    stamp = show &#8211; s&#8211; format = &#8216;%cI!%ce&#8217;<br/>
+#git scommit &lt; stamp&gt; &lt; rev &#8211; list &#8211; args&gt; &#8211; list most recent commit that matches &lt; stamp&gt;.<br/>
+#Must also specify a branch to search or &#8211;all, after these arguments.<br/>
+    scommit = &#8220;!f(){ d=${1%%!*}; a=${1##*!}; arg=\&#8221;&#8211;until=$d -1\&#8221;; if [ $a != $1 ]; then arg=\&#8221;$arg &#8211;committer=$a\&#8221;; fi; shift; git rev-list $arg ${1:+\&#8221;$@\&#8221;}; }; f&#8221;<br/>
+#git scommits &lt; stamp&gt; &lt; rev &#8211; list &#8211; args&gt; &#8211; as above, but list all matching commits.<br/>
+    scommits = &#8220;!f(){ d=${1%%!*}; a=${1##*!}; arg=\&#8221;&#8211;until=$d &#8211;after $d\&#8221;; if [ $a != $1 ]; then arg=\&#8221;$arg &#8211;committer=$a\&#8221;; fi; shift; git rev-list $arg ${1:+\&#8221;$@\&#8221;}; }; f&#8221;<br/>
+#git smaster &lt; stamp&gt; &#8211; list most recent commit on master that matches &lt; stamp&gt;.<br/>
+    smaster = &#8220;!f(){ git scommit \&#8221;$1\&#8221; master &#8211;first-parent; }; f&#8221; smasters = &#8220;!f(){ git scommits \&#8221;$1\&#8221; master &#8211;first-parent; }; f&#8221;<br/>
+#git shs &lt; stamp&gt; &#8211; show the commits on master that match &lt; stamp&gt;.<br/>
+    shs = &#8220;!f(){ stamp=$(git smasters $1); shift; git show ${stamp:?not found} $*; }; f&#8221;<br/>
+#git slog &lt; stamp&gt; &lt; log &#8211; args&gt; &#8211; start git log at &lt; stamp&gt; on master<br/>
+    slog = &#8220;!f(){ stamp=$(git smaster $1); shift; git log ${stamp:?not found} $*; }; f&#8221;<br/>
+#git sco &lt; stamp&gt; &#8211; check out most recent commit on master that matches &lt; stamp&gt;.<br/>
     sco = &#8220;!f(){ stamp=$(git smaster $1); shift; git checkout ${stamp:?not found} $*; }; f&#8221;
 </dd></dl>
 <p> There is a rare case in which an action stamp will not refer uniquely to one commit. It is theoretically possible that the same author might check in revisions on different branches within the one-second resolution of the timestamps in a fast-import stream. There is nothing to be done about this; tools using action stamps need to be aware of the possibility and throw a warning when it occurs. </p>
@@ -907,10 +907,10 @@ define changelog&lt;{0}&gt; &amp; / empty log message / squash&#8211; pushback d
 <dl>
 <dt>
 </dt><dd>
-&lt;2012-08-14T21:51:35Z&gt; &amp; /empty log message/ squash &#8211;pushback<br />
-&lt;2012-08-08T22:52:14Z&gt; &amp; /empty log message/ squash &#8211;pushback<br />
-&lt;2012-08-07T04:48:26Z&gt; &amp; /empty log message/ squash &#8211;pushback<br />
-&lt;2012-08-08T07:19:09Z&gt; &amp; /empty log message/ squash &#8211;pushback<br />
+&lt;2012-08-14T21:51:35Z&gt; &amp; /empty log message/ squash &#8211;pushback<br/>
+&lt;2012-08-08T22:52:14Z&gt; &amp; /empty log message/ squash &#8211;pushback<br/>
+&lt;2012-08-07T04:48:26Z&gt; &amp; /empty log message/ squash &#8211;pushback<br/>
+&lt;2012-08-08T07:19:09Z&gt; &amp; /empty log message/ squash &#8211;pushback<br/>
 &lt;2012-07-28T18:40:10Z&gt; &amp; /empty log message/ squash &#8211;pushback
 </dd></dl>
 <p> but you are less likely to make difficult-to-notice errors typing the first version. </p>
@@ -962,7 +962,7 @@ ferd = Ferd J. Foonly &lt;foonly [at] foo.com&gt; -0500
 <dt>
 </dt><dd> Specify the list of regular expressions used for mapping the svn branches that are detected by branchify. If none of the expressions match the default behaviour applies. This maps a branch to the name of the last directory, except for trunk and &#8220;*&#8221; which are mapped to master and root. </dd>
 <p> With no arguments the current regex replacement pairs are shown. Passing &#8216;reset&#8217; will clear the mapping. </p>
-<p> The branchify command will match each branch name against regex1 and if it matches rewrite its branch name to branch1. If not it will try regex2 and so forth until it either found a matching regex or there are no regexs left. The regular expressions should be in m[blue]<code>Python&#8217;s</code>m[]<font SIZE="-2">[2]</font>. format. The branch name can use backreferences (see the re.sub function in the Python documentation). </p>
+<p> The branchify command will match each branch name against regex1 and if it matches rewrite its branch name to branch1. If not it will try regex2 and so forth until it either found a matching regex or there are no regexs left. The regular expressions should be in m[blue]<code>Python&#8217;s</code>m[][2]. format. The branch name can use backreferences (see the re.sub function in the Python documentation). </p>
 <p> Note that the regular expressions are appended to &#8216;refs/&#8217; without either the needed &#8216;heads/&#8217; or &#8216;tags/&#8217;. This allows for choosing the right kind of branch type. </p>
 <p> While the syntax template above uses slashes, any first character will be used as a delimeter (and you will need to use a different one in the common case that the paths contain slashes). </p>
 <p> Note that the branchify_map set is a property of the reposurgeon interpreter, not of any individual repository, and will persist across Subversion dumpfile reads. This may lead to unexpected results if you forget to re-set it.</dl>

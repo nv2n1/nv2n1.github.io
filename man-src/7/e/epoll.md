@@ -53,44 +53,44 @@ description: "epoll – I/O event notification facility"
 <dt><i>/proc/sys/fs/epoll/max_user_watches</i> (since Linux 2.6.28)</dt>
 <dd>This specifies a limit on the total number of file descriptors that a user can register across all epoll instances on the system. The limit is per real user ID. Each registered file descriptor costs roughly 90 bytes on a 32-bit kernel, and roughly 160 bytes on a 64-bit kernel. Currently, the default value for <i>max_user_watches</i> is 1/25 (4%) of the available low memory, divided by the registration cost in bytes.</dd></dl>
 <h3>Example for suggested usage</h3>
-<p>While the usage of <code>epoll</code> when employed as a level-triggered interface does have the same semantics as <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), the edge-triggered usage requires more clarification to avoid stalls in the application event loop. In this example, listener is a nonblocking socket on which <code><a href="/docs/linux/man/2-listen/">listen</a></code>(2) has been called. The function <i>do_use_fd()</i> uses the new ready file descriptor until <code>EAGAIN</code> is returned by either <code><a href="/docs/linux/man/2-read/">read</a></code>(2) or <code><a href="/docs/linux/man/2-write/">write</a></code>(2). An event-driven state machine application should, after having received <code>EAGAIN</code>, record its current state so that at the next call to <i>do_use_fd()</i> it will continue to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) or <code><a href="/docs/linux/man/2-write/">write</a></code>(2) from where it stopped before. epollfd = epoll_create1(0);<br />
-if (epollfd == -1) {<br />
-    perror(&quot;epoll_create1&quot;);<br />
-    exit(EXIT_FAILURE);<br />
-}<br />
-ev.events = EPOLLIN;<br />
-ev.data.fd = listen_sock;<br />
-if (epoll_ctl(epollfd, EPOLL_CTL_ADD, listen_sock, &amp;ev) == -1) {<br />
-    perror(&quot;epoll_ctl: listen_sock&quot;);<br />
-    exit(EXIT_FAILURE);<br />
-}<br />
-for (;;) {<br />
-    nfds = epoll_wait(epollfd, events, MAX_EVENTS, -1);<br />
-    if (nfds == -1) {<br />
-        perror(&quot;epoll_wait&quot;);<br />
-        exit(EXIT_FAILURE);<br />
-    }<br />
-    for (n = 0; n &lt; nfds; ++n) {<br />
-        if (events[n].data.fd == listen_sock) {<br />
-            conn_sock = accept(listen_sock,<br />
-                               (struct sockaddr *)&amp;addr, &amp;addrlen);<br />
-            if (conn_sock == -1) {<br />
-                perror(&quot;accept&quot;);<br />
-                exit(EXIT_FAILURE);<br />
-            }<br />
-            setnonblocking(conn_sock);<br />
-            ev.events = EPOLLIN | EPOLLET;<br />
-            ev.data.fd = conn_sock;<br />
-            if (epoll_ctl(epollfd, EPOLL_CTL_ADD, conn_sock,<br />
-                          &amp;ev) == -1) {<br />
-                perror(&quot;epoll_ctl: conn_sock&quot;);<br />
-                exit(EXIT_FAILURE);<br />
-            }<br />
-        } else {<br />
-            do_use_fd(events[n].data.fd);<br />
-        }<br />
-    }<br />
-} /* Code to set up listening socket, &#8216;listen_sock&#8217;,<br />
+<p>While the usage of <code>epoll</code> when employed as a level-triggered interface does have the same semantics as <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), the edge-triggered usage requires more clarification to avoid stalls in the application event loop. In this example, listener is a nonblocking socket on which <code><a href="/docs/linux/man/2-listen/">listen</a></code>(2) has been called. The function <i>do_use_fd()</i> uses the new ready file descriptor until <code>EAGAIN</code> is returned by either <code><a href="/docs/linux/man/2-read/">read</a></code>(2) or <code><a href="/docs/linux/man/2-write/">write</a></code>(2). An event-driven state machine application should, after having received <code>EAGAIN</code>, record its current state so that at the next call to <i>do_use_fd()</i> it will continue to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) or <code><a href="/docs/linux/man/2-write/">write</a></code>(2) from where it stopped before. epollfd = epoll_create1(0);<br/>
+if (epollfd == -1) {<br/>
+    perror(&quot;epoll_create1&quot;);<br/>
+    exit(EXIT_FAILURE);<br/>
+}<br/>
+ev.events = EPOLLIN;<br/>
+ev.data.fd = listen_sock;<br/>
+if (epoll_ctl(epollfd, EPOLL_CTL_ADD, listen_sock, &amp;ev) == -1) {<br/>
+    perror(&quot;epoll_ctl: listen_sock&quot;);<br/>
+    exit(EXIT_FAILURE);<br/>
+}<br/>
+for (;;) {<br/>
+    nfds = epoll_wait(epollfd, events, MAX_EVENTS, -1);<br/>
+    if (nfds == -1) {<br/>
+        perror(&quot;epoll_wait&quot;);<br/>
+        exit(EXIT_FAILURE);<br/>
+    }<br/>
+    for (n = 0; n &lt; nfds; ++n) {<br/>
+        if (events[n].data.fd == listen_sock) {<br/>
+            conn_sock = accept(listen_sock,<br/>
+                               (struct sockaddr *)&amp;addr, &amp;addrlen);<br/>
+            if (conn_sock == -1) {<br/>
+                perror(&quot;accept&quot;);<br/>
+                exit(EXIT_FAILURE);<br/>
+            }<br/>
+            setnonblocking(conn_sock);<br/>
+            ev.events = EPOLLIN | EPOLLET;<br/>
+            ev.data.fd = conn_sock;<br/>
+            if (epoll_ctl(epollfd, EPOLL_CTL_ADD, conn_sock,<br/>
+                          &amp;ev) == -1) {<br/>
+                perror(&quot;epoll_ctl: conn_sock&quot;);<br/>
+                exit(EXIT_FAILURE);<br/>
+            }<br/>
+        } else {<br/>
+            do_use_fd(events[n].data.fd);<br/>
+        }<br/>
+    }<br/>
+} /* Code to set up listening socket, &#8216;listen_sock&#8217;,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;(socket(), bind(), listen())&nbsp;omitted&nbsp;*/ </p>
 <pre><code>epollfd = epoll_create1(0);
 if (epollfd == -1) {

@@ -70,6 +70,6 @@ debug()
 <dt><code>&#8211;version</code></dt>
 <dd> Show the version number and exit.</dd></dl>
 <h2>AVAILABILITY</h2>
-<p> The code is licensed under the <font SIZE="-1">GNU GPL. </font> Check <a rel="nofollow" href="http://www.argon.org/~roderick/">http://www.argon.org/~roderick/</a> or <font SIZE="-1">CPAN</font> for updated versions.</p>
+<p> The code is licensed under the GNU GPL.  Check <a rel="nofollow" href="http://www.argon.org/~roderick/">http://www.argon.org/~roderick/</a> or CPAN for updated versions.</p>
 <h2>AUTHOR</h2>
 <p> Roderick Schertler &lt;roderick [at] argon.org&gt; </p>

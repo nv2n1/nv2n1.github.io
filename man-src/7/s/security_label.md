@@ -30,7 +30,7 @@ description: "SECURITY_LABEL – define or change a security label applied to an
 <h2>Description</h2>
 <p><code>SECURITY LABEL</code> applies a security label to a database object. An arbitrary number of security labels, one per label provider, can be associated with a given database object. Label providers are loadable modules which register themselves by using the function <code>register_label_provider</code>.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  <code>register_label_provider</code> is not an SQL function; it can only be called from C code loaded into the backend.  The label provider determines whether a given label is valid and whether it is permissible to assign that label to a given object. The meaning of a given label is likewise at the discretion of the label provider. PostgreSQL places no restrictions on whether or how a label provider must interpret security labels; it merely provides a mechanism for storing them. In practice, this facility is intended to allow integration with label-based mandatory access control (MAC) systems such as SE-Linux. Such systems make all access control decisions based on object labels, rather than traditional discretionary access control (DAC) concepts such as users and groups.</dd>
 <h2>Parameters</h2>
 <p><i>object_name</i>, <i>table_name.column_name</i>, <i>agg_name</i>, <i>function_name</i></p>

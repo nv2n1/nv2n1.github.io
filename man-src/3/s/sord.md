@@ -172,8 +172,8 @@ description: "Sord –"
 <p>Create a new model. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>world</i> The world in which to make this model.<br />
- <i>indices</i> SordIndexOption flags (e.g. SORD_SPO|SORD_OPS). Be sure to enable an index where the most significant node(s) are not variables in your queries (e.g. to make (? P O) queries, enable either SORD_OPS or SORD_POS).<br />
+<dd><i>world</i> The world in which to make this model.<br/>
+ <i>indices</i> SordIndexOption flags (e.g. SORD_SPO|SORD_OPS). Be sure to enable an index where the most significant node(s) are not variables in your queries (e.g. to make (? P O) queries, enable either SORD_OPS or SORD_POS).<br/>
  <i>graphs</i> If true, store (and index) graph contexts.</dd></dl>
 <h3>void sord_free (<code>SordModel</code> *model)</h3>
 <p>Close and free model.</p>

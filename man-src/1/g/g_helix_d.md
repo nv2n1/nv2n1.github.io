@@ -25,46 +25,46 @@ description: "g_helix – calculates basic properties of alpha helices"
 <p> <code> 9.</code> Average Phi and Psi angles (file phipsi.xvg). </p>
 <p> <code> 10.</code> Ellipticity at 222 nm according to <i> Hirst and Brooks</i> </p>
 <h2>FILES</h2>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br/>
 &nbsp;<wbr>Run input file: tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-to</code><i> gtraj.g87</i> <code>Output, Opt.</code><br />
+<p> <code>-to</code><i> gtraj.g87</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Gromos-87 ASCII trajectory format&nbsp;<wbr> </p>
-<p> <code>-cz</code><i> zconf.gro</i> <code>Output</code><br />
+<p> <code>-cz</code><i> zconf.gro</i> <code>Output</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-co</code><i> waver.gro</i> <code>Output</code><br />
+<p> <code>-co</code><i> waver.gro</i> <code>Output</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-r0</code><i> int</i><code> 1</code><br />
+<p> <code>-r0</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>The first residue number in the sequence </p>
-<p> <code>-[no]q</code><i>no </i><br />
+<p> <code>-[no]q</code><i>no </i><br/>
 &nbsp;<wbr>Check at every step which part of the sequence is helical </p>
-<p> <code>-[no]F</code><i>yes </i><br />
+<p> <code>-[no]F</code><i>yes </i><br/>
 &nbsp;<wbr>Toggle fit to a perfect helix </p>
-<p> <code>-[no]db</code><i>no </i><br />
+<p> <code>-[no]db</code><i>no </i><br/>
 &nbsp;<wbr>Print debug info </p>
-<p> <code>-prop</code><i> enum</i><code> RAD</code><br />
+<p> <code>-prop</code><i> enum</i><code> RAD</code><br/>
 &nbsp;<wbr>Select property to weight eigenvectors with. WARNING experimental stuff:&nbsp;<wbr><code>&nbsp;<wbr>RAD</code>,&nbsp;<wbr><code>&nbsp;<wbr>TWIST</code>,&nbsp;<wbr><code>&nbsp;<wbr>RISE</code>,&nbsp;<wbr><code>&nbsp;<wbr>LEN</code>,&nbsp;<wbr><code>&nbsp;<wbr>NHX</code>,&nbsp;<wbr><code>&nbsp;<wbr>DIP</code>,&nbsp;<wbr><code>&nbsp;<wbr>RMS</code>,&nbsp;<wbr><code>&nbsp;<wbr>CPHI</code>,&nbsp;<wbr><code>&nbsp;<wbr>RMSA</code>,&nbsp;<wbr><code>&nbsp;<wbr>PHI</code>,&nbsp;<wbr><code>&nbsp;<wbr>PSI</code>,&nbsp;<wbr><code>&nbsp;<wbr>HB3</code>,&nbsp;<wbr><code>&nbsp;<wbr>HB4</code>,&nbsp;<wbr><code>&nbsp;<wbr>HB5</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>CD222</code> </p>
-<p> <code>-[no]ev</code><i>no </i><br />
+<p> <code>-[no]ev</code><i>no </i><br/>
 &nbsp;<wbr>Write a new&nbsp;<wbr>&#8216;trajectory&#8217;&nbsp;<wbr>file for ED </p>
-<p> <code>-ahxstart</code><i> int</i><code> 0</code><br />
+<p> <code>-ahxstart</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>First residue in helix </p>
-<p> <code>-ahxend</code><i> int</i><code> 0</code><br />
+<p> <code>-ahxend</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Last residue in helix </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

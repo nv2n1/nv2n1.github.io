@@ -10,7 +10,7 @@ description: "zgelq2.f –"
 <p>zgelq2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgelq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>zgelq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>ZGELQ2</code> computes the LQ factorization of a general rectangular matrix using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgelq2 (integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )TAU, complex*16, dimension( * )WORK, integerINFO)</h3>

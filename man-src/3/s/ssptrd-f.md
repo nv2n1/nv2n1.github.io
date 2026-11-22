@@ -10,7 +10,7 @@ description: "ssptrd.f –"
 <p>ssptrd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssptrd</code> (UPLO, N, AP, D, E, TAU, INFO)<br />
+<p>subroutine <code>ssptrd</code> (UPLO, N, AP, D, E, TAU, INFO)<br/>
  <i></i><code>SSPTRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssptrd (characterUPLO, integerN, real, dimension( * )AP, real, dimension( * )D, real, dimension( * )E, real, dimension( * )TAU, integerINFO)</h3>

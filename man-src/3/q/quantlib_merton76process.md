@@ -15,12 +15,12 @@ description: "QuantLib::Merton76Process – Merton-76 jump-diffusion process."
 <p><code>Merton76Process</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;stateVariable, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;dividendTS, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;riskFreeTS, const <code>Handle</code>&lt; <code>BlackVolTermStructure</code> &gt; &amp;blackVolTS, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;jumpInt, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;logJMean, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;logJVol, const boost::shared_ptr&lt; <code>discretization</code> &gt; &amp;d=boost::shared_ptr&lt; <code>discretization</code> &gt;(new <code>EulerDiscretization</code>)) </p>
 <p> Time <code>time</code> (const <code>Date</code> &amp;) const </p>
 <p> <code>StochasticProcess1D interface</code> </p>
-<p> Real <code>x0</code> () const<br />
- <i>returns the initial value of the state variable </i><br />
- Real <code>drift</code> (Time, Real) const<br />
- <i>returns the drift part of the equation, i.e. $ mu(t, x_t) $ </i><br />
- Real <code>diffusion</code> (Time, Real) const<br />
- <i>returns the diffusion part of the equation, i.e. $ igma(t, x_t) $ </i><br />
+<p> Real <code>x0</code> () const<br/>
+ <i>returns the initial value of the state variable </i><br/>
+ Real <code>drift</code> (Time, Real) const<br/>
+ <i>returns the drift part of the equation, i.e. $ mu(t, x_t) $ </i><br/>
+ Real <code>diffusion</code> (Time, Real) const<br/>
+ <i>returns the diffusion part of the equation, i.e. $ igma(t, x_t) $ </i><br/>
  Real <code>apply</code> (Real, Real) const </p>
 <p> <code>Inspectors</code> </p>
 <p> const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp; <code>stateVariable</code> () const </p>

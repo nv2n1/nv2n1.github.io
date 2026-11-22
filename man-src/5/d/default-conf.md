@@ -25,10 +25,10 @@ description: "default.conf – IPA configuration file"
 <p> Blank lines are ignored. Lines beginning with # are comments and are ignored. </p>
 <p> Valid lines consist of an option name, an equals sign and a value. Spaces surrounding equals sign are ignored. An option terminates at the end of a line. </p>
 <p> Values should not be quoted, the quotes will not be stripped. </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>Wrong &#8211; don&#8217;t include quotes<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>Wrong &#8211; don&#8217;t include quotes<br/>
 &nbsp;<wbr>verbose&nbsp;<wbr>=&nbsp;<wbr>&quot;True&quot; </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>Right &#8211; Properly formatted options<br />
-&nbsp;<wbr>verbose&nbsp;<wbr>=&nbsp;<wbr>True<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>Right &#8211; Properly formatted options<br/>
+&nbsp;<wbr>verbose&nbsp;<wbr>=&nbsp;<wbr>True<br/>
 &nbsp;<wbr>verbose=True </p>
 <p> Options must appear in the section named [global]. There are no other sections defined or used currently. </p>
 <p> Options may be defined that are not used by IPA. Be careful of misspellings, they will not be rejected.</p>
@@ -114,31 +114,31 @@ description: "default.conf – IPA configuration file"
 <dt><code>rpc_protocol &lt;URI&gt;</code></dt>
 <dd>Specifies the type of RPC calls IPA makes: &#8216;jsonrpc&#8217; or &#8216;xmlrpc&#8217;. Defaults to &#8216;jsonrpc&#8217;.</dd>
 <dt>The following define the containers for the IPA server. Containers define where in the DIT that objects can be found. The full location is the value of container + basedn.</dt>
-<dd>&nbsp;<wbr>&nbsp;<wbr>container_accounts: cn=accounts<br />
-&nbsp;<wbr>&nbsp;<wbr>container_applications: cn=applications,cn=configs,cn=policies<br />
-&nbsp;<wbr>&nbsp;<wbr>container_automount: cn=automount<br />
-&nbsp;<wbr>&nbsp;<wbr>container_configs: cn=configs,cn=policies<br />
-&nbsp;<wbr>&nbsp;<wbr>container_dns: cn=dns<br />
-&nbsp;<wbr>&nbsp;<wbr>container_group: cn=groups,cn=accounts<br />
-&nbsp;<wbr>&nbsp;<wbr>container_hbac: cn=hbac<br />
-&nbsp;<wbr>&nbsp;<wbr>container_hbacservice: cn=hbacservices,cn=hbac<br />
-&nbsp;<wbr>&nbsp;<wbr>container_hbacservicegroup: cn=hbacservicegroups,cn=hbac<br />
-&nbsp;<wbr>&nbsp;<wbr>container_host: cn=computers,cn=accounts<br />
-&nbsp;<wbr>&nbsp;<wbr>container_hostgroup: cn=hostgroups,cn=accounts<br />
-&nbsp;<wbr>&nbsp;<wbr>container_netgroup: cn=ng,cn=alt<br />
-&nbsp;<wbr>&nbsp;<wbr>container_permission: cn=permissions,cn=pbac<br />
-&nbsp;<wbr>&nbsp;<wbr>container_policies: cn=policies<br />
-&nbsp;<wbr>&nbsp;<wbr>container_policygroups: cn=policygroups,cn=configs,cn=policies<br />
-&nbsp;<wbr>&nbsp;<wbr>container_policylinks: cn=policylinks,cn=configs,cn=policies<br />
-&nbsp;<wbr>&nbsp;<wbr>container_privilege: cn=privileges,cn=pbac<br />
-&nbsp;<wbr>&nbsp;<wbr>container_rolegroup: cn=roles,cn=accounts<br />
-&nbsp;<wbr>&nbsp;<wbr>container_roles: cn=roles,cn=policies<br />
-&nbsp;<wbr>&nbsp;<wbr>container_service: cn=services,cn=accounts<br />
-&nbsp;<wbr>&nbsp;<wbr>container_sudocmd: cn=sudocmds,cn=sudo<br />
-&nbsp;<wbr>&nbsp;<wbr>container_sudocmdgroup: cn=sudocmdgroups,cn=sudo<br />
-&nbsp;<wbr>&nbsp;<wbr>container_sudorule: cn=sudorules,cn=sudo<br />
-&nbsp;<wbr>&nbsp;<wbr>container_user: cn=users,cn=accounts<br />
-&nbsp;<wbr>&nbsp;<wbr>container_vault: cn=vaults,cn=kra<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>container_accounts: cn=accounts<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_applications: cn=applications,cn=configs,cn=policies<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_automount: cn=automount<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_configs: cn=configs,cn=policies<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_dns: cn=dns<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_group: cn=groups,cn=accounts<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_hbac: cn=hbac<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_hbacservice: cn=hbacservices,cn=hbac<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_hbacservicegroup: cn=hbacservicegroups,cn=hbac<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_host: cn=computers,cn=accounts<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_hostgroup: cn=hostgroups,cn=accounts<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_netgroup: cn=ng,cn=alt<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_permission: cn=permissions,cn=pbac<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_policies: cn=policies<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_policygroups: cn=policygroups,cn=configs,cn=policies<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_policylinks: cn=policylinks,cn=configs,cn=policies<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_privilege: cn=privileges,cn=pbac<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_rolegroup: cn=roles,cn=accounts<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_roles: cn=roles,cn=policies<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_service: cn=services,cn=accounts<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_sudocmd: cn=sudocmds,cn=sudo<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_sudocmdgroup: cn=sudocmdgroups,cn=sudo<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_sudorule: cn=sudorules,cn=sudo<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_user: cn=users,cn=accounts<br/>
+&nbsp;<wbr>&nbsp;<wbr>container_vault: cn=vaults,cn=kra<br/>
 &nbsp;<wbr>&nbsp;<wbr>container_virtual: cn=virtual operations,cn=etc </dd>
 </dl>
 <h2>Files</h2>

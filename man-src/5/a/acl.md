@@ -53,13 +53,13 @@ description: "acl – Access Control Lists"
 <h2>Access Check Algorithm</h2>
 <p>A process may request read, write, or execute/search access to a file object protected by an ACL. The access check algorithm determines whether access to the object will be granted. </p>
 <ol>
-<li> <code>If </code>the effective user ID of the process matches the user ID of the file object owner, <code>then</code><br />
+<li> <code>If </code>the effective user ID of the process matches the user ID of the file object owner, <code>then</code><br/>
 <blockquote><p> <code>if</code> the ACL_USER_OBJ entry contains the requested permissions, access is granted, </p>
 <p> <code>else</code> access is denied. </p></blockquote>
-<li> <code>else if</code> the effective user ID of the process matches the qualifier of any entry of type ACL_USER, <code>then</code><br />
+<li> <code>else if</code> the effective user ID of the process matches the qualifier of any entry of type ACL_USER, <code>then</code><br/>
 <blockquote><p> <code>if</code> the matching ACL_USER entry and the ACL_MASK entry contain the requested permissions, access is granted, </p>
 <p> <code>else</code> access is denied. </p></blockquote>
-<li> <code>else if</code> the effective group ID or any of the supplementary group IDs of the process match the file group or the qualifier of any entry of type ACL_GROUP, <code>then</code><br />
+<li> <code>else if</code> the effective group ID or any of the supplementary group IDs of the process match the file group or the qualifier of any entry of type ACL_GROUP, <code>then</code><br/>
 <blockquote><p> <code>if</code> the ACL contains an ACL_MASK entry, <code>then</code> </p>
 <blockquote><p> <code>if</code> the ACL_MASK entry and any of the matching ACL_GROUP_OBJ or ACL_GROUP entries contain the requested permissions, access is granted, </p>
 <p> <code>else</code> access is denied. </p>

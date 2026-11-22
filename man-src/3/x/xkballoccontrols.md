@@ -10,7 +10,7 @@ description: "XkbAllocControls – Allocates an XkbControlsRec structure in the 
 <p>XkbAllocControls &#8211; Allocates an XkbControlsRec structure in the XkbDescRec </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbAllocControls</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>);</code><br />
+<dt> <code>Status XkbAllocControls</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

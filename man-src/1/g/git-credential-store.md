@@ -17,7 +17,7 @@ git config credential.helper 'store [&lt;options&gt;]'
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Using this helper will store your passwords unencrypted on disk, protected only by filesystem permissions. If this is not an acceptable security tradeoff, try <code><a href="/docs/linux/man/1-git-credential-cache/">git-credential-cache</a></code>(1), or find a helper that integrates with secure storage provided by your operating system. </p>
 </dl>
 <p> This command stores credentials indefinitely on disk for use by future Git programs. </p>

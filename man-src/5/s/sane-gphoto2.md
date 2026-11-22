@@ -20,12 +20,12 @@ description: "sane-gphoto2 – SANE backend for gphoto2 supported cameras"
 <p> The <code>topfolder</code> line specifies the &quot;fixed&quot; part of the file path. For example, on the Kodak DC-240, files are stored in the directory <i>/DCIM/100DC240.</i> The <i>/DCIM</i> portion is constant, but 100DC240 will change and must be read from the camera. In this case, the line would read &quot;topfolder=/DCIM&quot; </p>
 <p> Some cameras don&#8217;t implement a file structure and store all pictures in the <i>/</i> directory. This is indicated by setting &quot;subdirs=0&quot; with &quot;topfolder=/&quot; </p>
 <dl>
-<dd>port=usb:<br />
- camera=Kodak DC240<br />
- # this is a comment<br />
- high_resolution=1280&#215;960<br />
- low_resolution=640&#215;480<br />
- thumb_resolution=160&#215;120<br />
+<dd>port=usb:<br/>
+ camera=Kodak DC240<br/>
+ # this is a comment<br/>
+ high_resolution=1280&#215;960<br/>
+ low_resolution=640&#215;480<br/>
+ thumb_resolution=160&#215;120<br/>
  dumpinquiry</dd></dl>
 <h2>Files</h2>
 <dl>

@@ -24,7 +24,7 @@ description: "fig2dev – translates Fig code to various graphics languages"
 <dl>
 <dt><code>-L language</code></dt>
 <dd> <p> Set the output graphics language. Valid languages are <code>box, cgm, dxf, epic, eepic, eepicemu, emf, eps, gbx (Gerber beta driver), gif, ibmgl, jpeg, latex, map (HTML image map), mf (MetaFont), mp (MetaPost), pcx, pdf, pdftex, pdftex_t, pic, pict2e, pictex, png, ppm, ps, pstex, pstex_t, pstricks, ptk (Perl/tk), shape (LaTeX shaped paragraphs), sld (AutoCad slide format), svg, textyl, tiff, tikz, tk (tcl/tk), tpic, xbm and xpm</code>. </p>
-<p> Notes: <br />
+<p> Notes: <br/>
  You must have ghostscript installed to get the pdf output, and ghostscript and one from the netpbm, the ImageMagick or the GraphicsMagick packages to get the bitmap formats (png, jpeg, etc.). </p>
  </dd>
 <dt><code>-h</code></dt>
@@ -40,8 +40,8 @@ description: "fig2dev – translates Fig code to various graphics languages"
 <dd> <p> The selection of the depths with the <code>-D</code><i> +/-rangelist</i> option does normally not affect the calculation of the bounding box. Thus the generated document might have a much larger bounding box than necessary. If <code>-K</code> is given then the bounding box is adjusted to include only those objects in the selected depths. </p>
  </dd>
 <dt><code>-G minor[:major][:unit]</code></dt>
-<dd> <p> Draws a grid on the page. Specify thin, or thin and thick line spacing in one of several units. For example, <code>-G .25:1cm</code> draws a thin, gray line every .25 cm and a thicker gray line every 1 cm. Specifying <code>-G 1in</code> draws a thin line every 1 inch. Fractions may be used, e.g. <code>-G :1/2in</code> will draw a thick line every 1/2 inch. <br />
- Allowable units are: i, in, inch, f, ft, feet, c, cm, mm, and m. <br />
+<dd> <p> Draws a grid on the page. Specify thin, or thin and thick line spacing in one of several units. For example, <code>-G .25:1cm</code> draws a thin, gray line every .25 cm and a thicker gray line every 1 cm. Specifying <code>-G 1in</code> draws a thin line every 1 inch. Fractions may be used, e.g. <code>-G :1/2in</code> will draw a thick line every 1/2 inch. <br/>
+ Allowable units are: i, in, inch, f, ft, feet, c, cm, mm, and m. <br/>
  <code>Only allowed for PostScript, EPS, PDF, pstricks, tikz and</code> <code>bitmap (GIF, JPEG, etc) drivers.</code> </p>
  </dd>
 <dt><code>-j</code></dt>
@@ -179,30 +179,30 @@ description: "fig2dev – translates Fig code to various graphics languages"
 <dd> <p> Restrict plotting to a rectangular area of the plotter paper which has a lower left hand corner at <i>(xll,yll)</i> and a upper right hand corner at <i>(xur,yur).</i> All four numbers are in inches and follow <code>-d</code> in a comma-separated list - <i>xll,yll,xur,yur</i> - with no spaces between them. </p>
  </dd>
 <dt><code>-f fontfile</code></dt>
-<dd> <p> Load text character specifications from the table in the file <i>fontfile</i>. The table must have 36 entries - one for each font plus a default. Each entry consists of 5 numbers which specify the <br />
- 1.) standard character set (0 - 4, 6 - 9, 30 - 39), <br />
- 2.) alternate character set (0 - 4, 6 - 9, 30 - 39), <br />
- 3.) character slant angle (degrees), <br />
- 4.) character width scale factor and <br />
+<dd> <p> Load text character specifications from the table in the file <i>fontfile</i>. The table must have 36 entries - one for each font plus a default. Each entry consists of 5 numbers which specify the <br/>
+ 1.) standard character set (0 - 4, 6 - 9, 30 - 39), <br/>
+ 2.) alternate character set (0 - 4, 6 - 9, 30 - 39), <br/>
+ 3.) character slant angle (degrees), <br/>
+ 4.) character width scale factor and <br/>
  5.) character height scale factor. </p>
  </dd>
 <dt><code>-k</code></dt>
 <dd> <p> Precede output with PCL command to use HP/GL. </p>
  </dd>
 <dt><code>-l pattfile</code></dt>
-<dd> <p> Load area fill line patterns from the table in the <i>pattfile</i> file. The table must have 21 entries - one for each of the area fill patterns. Each entry consists of 5 numbers which specify the <br />
- 1.) pattern number (-1 - 6), <br />
- 2.) pattern length (inches), <br />
- 3.) fill type (1 - 5), <br />
- 4.) fill spacing (inches) and <br />
+<dd> <p> Load area fill line patterns from the table in the <i>pattfile</i> file. The table must have 21 entries - one for each of the area fill patterns. Each entry consists of 5 numbers which specify the <br/>
+ 1.) pattern number (-1 - 6), <br/>
+ 2.) pattern length (inches), <br/>
+ 3.) fill type (1 - 5), <br/>
+ 4.) fill spacing (inches) and <br/>
  5.) fill angle (degrees). </p>
  </dd>
 <dt><code>-P</code></dt>
 <dd> <p> Rotate the figure to portrait mode. The default is landscape mode. </p>
  </dd>
 <dt><code>-p penfile</code></dt>
-<dd> <p> Load plotter pen specifications from the table in the <i>penfile</i> file. The table must have 9 entries - one for each color plus a default. Each entry consists of 2 numbers which specify the <br />
- 1.) pen number (1 - 8) and <br />
+<dd> <p> Load plotter pen specifications from the table in the <i>penfile</i> file. The table must have 9 entries - one for each color plus a default. Each entry consists of 2 numbers which specify the <br/>
+ 1.) pen number (1 - 8) and <br/>
  2.) pen thickness (millimeters). </p>
  </dd>
 <dt><code>-S speed</code></dt>
@@ -417,12 +417,12 @@ description: "fig2dev – translates Fig code to various graphics languages"
  </dd></dl>
 <h2>POSTSCRIPT, ENCAPSULATED POSTSCRIPT (EPS), and PDF OPTIONS</h2>
 <p> With PostScript, xfig can be used to create multiple page figures. Specify the <code>-M</code> option to produce a multi-page output. For posters, add <code>-O</code> to overlap the pages slightly to get around the problem of the unprintable area in most printers, then cut and paste the pages together. Great for text with very big letters. </p>
-<p> The EPS driver has the following differences from PostScript: <br />
- o No showpage is generated because the output is meant to be imported into another program or document and not printed <br />
- o The landscape/portrait options are ignored <br />
- o The centering option is ignored <br />
- o The multiple-page option is ignored <br />
- o The paper size option is ignored <br />
+<p> The EPS driver has the following differences from PostScript: <br/>
+ o No showpage is generated because the output is meant to be imported into another program or document and not printed <br/>
+ o The landscape/portrait options are ignored <br/>
+ o The centering option is ignored <br/>
+ o The multiple-page option is ignored <br/>
+ o The paper size option is ignored <br/>
  o The x/y offset options are ignored </p>
 <p> The EPS driver has the following two special options: </p>
 <dl>
@@ -491,8 +491,8 @@ description: "fig2dev – translates Fig code to various graphics languages"
 <dd> <p> Shift the figure in the Y direction by <i>offset</i> points (1/72 inch). A negative value shifts the figure up and a positive value down. Not available in EPS. </p>
  </dd>
 <dt><code>-z papersize</code></dt>
-<dd> <p> Set the papersize. Not available in EPS. <br />
- Available paper sizes are: <br />
+<dd> <p> Set the papersize. Not available in EPS. <br/>
+ Available paper sizes are: <br/>
  </p>
 <table>
 <tr VALIGN=top>
@@ -646,7 +646,7 @@ description: "fig2dev – translates Fig code to various graphics languages"
 </td>
 </tr>
 </table>
-<p> <br />
+<p> <br/>
  </p>
  </dd></dl>
 <h2>PSTEX and PDFTEX OPTIONS</h2>
@@ -765,8 +765,8 @@ description: "fig2dev – translates Fig code to various graphics languages"
 <dd> <p> Remove the suffix from included graphics-files. With this option on, <i>fig2dev</i> generates code that contains, e.g., &quot;<code>\pgfimage{fig1}</code>&quot; instead of &quot;<code>\pgfimage{fig1.pdf}</code>&quot;. </p>
  </dd></dl>
 <h2>TK and PTK OPTIONS (tcl/tk and Perl/tk)</h2>
-<p> Arc-boxes are not supported for the tk output language, and only X bitmap pictures are supported because of the canvas limitation in tk. <br />
- Picture objects are not scaled with the magnification factor for tk output. <br />
+<p> Arc-boxes are not supported for the tk output language, and only X bitmap pictures are supported because of the canvas limitation in tk. <br/>
+ Picture objects are not scaled with the magnification factor for tk output. <br/>
  Because tk scales canvas items according to the X display resolution, polygons, lines, etc. may be scaled differently than imported pictures (bitmaps) which aren&#8217;t scaled at all. </p>
 <dl>
 <dt><code>-g color</code></dt>
@@ -795,41 +795,41 @@ description: "fig2dev – translates Fig code to various graphics languages"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xfig/">xfig</a></code>(1), <code><a href="/docs/linux/man/1-pic/">pic</a></code>(1), <code>pic2fig</code>(1), <code><a href="/docs/linux/man/1-transfig/">transfig</a></code>(1) </p>
 <h2>BUGS and RESTRICTIONS</h2>
-<p> Please send bug reports, fixes, new features etc. to: <br />
+<p> Please send bug reports, fixes, new features etc. to: <br/>
  thomas.loimer [at] tuwien.ac.at </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (c) 1991 Micah Beck <br />
- Parts Copyright (c) 1985-1988 Supoj Sutantavibul <br />
- Parts Copyright (c) 1989-2015 Brian V. Smith <br />
+<p> Copyright (c) 1991 Micah Beck <br/>
+ Parts Copyright (c) 1985-1988 Supoj Sutantavibul <br/>
+ Parts Copyright (c) 1989-2015 Brian V. Smith <br/>
  Parts Copyright (c) 2015-2018 by Thomas Loimer </p>
 <p> Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. The authors make no representations about the suitability of this software for any purpose. It is provided &quot;as is&quot; without express or implied warranty. </p>
 <p> THE AUTHORS DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. </p>
 <h2>AUTHORS</h2>
-<p> Micah Beck <br />
- Cornell University <br />
+<p> Micah Beck <br/>
+ Cornell University <br/>
  Sept 28 1990 </p>
-<p> and Frank Schmuck (then of Cornell University) <br />
+<p> and Frank Schmuck (then of Cornell University) <br/>
  and Conrad Kwok (then of U.C. Davis). </p>
-<p> Drivers contributed by <br />
- Jose Alberto Fernandez R. (U. of Maryland) <br />
+<p> Drivers contributed by <br/>
+ Jose Alberto Fernandez R. (U. of Maryland) <br/>
  and Gary Beihl (MCC) </p>
-<p> Color support, ISO-character encoding and poster support by <br />
+<p> Color support, ISO-character encoding and poster support by <br/>
  Herbert Bauer (heb [at] regent.e-technik.tu-muenchen.de) </p>
-<p> Modified from f2p (fig to PIC), by the author of Fig <br />
- Supoj Sutanthavibul (supoj [at] sally.utexas.edu) <br />
+<p> Modified from f2p (fig to PIC), by the author of Fig <br/>
+ Supoj Sutanthavibul (supoj [at] sally.utexas.edu) <br/>
  University of Texas at Austin. </p>
-<p> MetaFont driver by <br />
+<p> MetaFont driver by <br/>
  Anthony Starks (ajs [at] merck.com) </p>
-<p> X-splines code by <br />
- Carole Blanc (blanc [at] labri.u-bordeaux.fr) <br />
- Christophe Schlick (schlick [at] labri.u-bordeaux.fr) <br />
+<p> X-splines code by <br/>
+ Carole Blanc (blanc [at] labri.u-bordeaux.fr) <br/>
+ Christophe Schlick (schlick [at] labri.u-bordeaux.fr) <br/>
  The initial implementation was done by C. Feuille, S. Grobois, L. Maziere and L. Minihot as a student practice (Universite Bordeaux, France). </p>
 <p> Japanese text support for LaTeX output written by T. Sato (VEF00200 [at] niftyserve.or.jp) </p>
-<p> The tk driver was written by <br />
+<p> The tk driver was written by <br/>
  Mike Markowski (mm [at] udel.edu) with a little touch-up by Brian Smith </p>
-<p> The CGM driver (Computer Graphics Metafile) was written by <br />
+<p> The CGM driver (Computer Graphics Metafile) was written by <br/>
  Philippe Bekaert (Philippe.Bekaert [at] cs.kuleuven.ac.be) </p>
-<p> The EMF driver (Enhanced Metafile) was written by <br />
+<p> The EMF driver (Enhanced Metafile) was written by <br/>
  Michael Schrick (m_schrick [at] hotmail.com) </p>
-<p> The GBX (Gerber) driver was written by <br />
+<p> The GBX (Gerber) driver was written by <br/>
  Edward Grace (ej.grace [at] imperial.ac.uk). </p>

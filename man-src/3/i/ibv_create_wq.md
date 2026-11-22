@@ -37,7 +37,7 @@ enum ibv_wq_flags {
     IBV_WQ_FLAGS_RESERVED = 1 &lt;&lt; 4,
 };
 </code></pre>
-<p> The function <code>ibv_create_wq()</code> will update the <i>wq_init_attr</i>-&gt;max_wr and <i>wq_init_attr</i>-&gt;max_sge fields with the actual <font SIZE="-1">WQ</font> values of the WQ that was created; the values will be greater than or equal to the values requested. </p>
+<p> The function <code>ibv_create_wq()</code> will update the <i>wq_init_attr</i>-&gt;max_wr and <i>wq_init_attr</i>-&gt;max_sge fields with the actual WQ values of the WQ that was created; the values will be greater than or equal to the values requested. </p>
 <p> <code>ibv_destroy_wq()</code> destroys the WQ <i>wq</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>ibv_create_wq()</code> returns a pointer to the created WQ, or NULL if the request fails. </p>

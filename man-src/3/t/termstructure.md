@@ -17,7 +17,7 @@ description: "ql/termstructure.hpp – base class for term structures"
 #include &lt;ql/math/interpolations/extrapolation.hpp&gt;
 #include &lt;ql/utilities/null.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>TermStructure</code><br />
+<p>class <code>TermStructure</code><br/>
  <i>Basic term-structure functionality. </i></p>
 <h2>Detailed Description</h2>
 <p>base class for term structures</p>

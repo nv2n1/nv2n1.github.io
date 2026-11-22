@@ -34,7 +34,7 @@ description: "libgphoto2 – cross-platform digital camera library"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gphoto2/">gphoto2</a>(1), <a href="/docs/linux/man/3-libgphoto2_port/">libgphoto2_port</a>(3), The gPhoto2 Manual, automatically generated API docs, [1]<i>gphoto website</i></p>
 <h2>AUTHOR</h2>
-<p> The gPhoto2 Team.<br />
+<p> The gPhoto2 Team.<br/>
  Hans Ulrich Niedermann &lt;gp [at] n-dimensional.de&gt;. (man page)</p>
 <h2>REFERENCES</h2>
 <dl>

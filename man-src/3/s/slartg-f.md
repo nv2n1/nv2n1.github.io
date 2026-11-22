@@ -10,7 +10,7 @@ description: "slartg.f –"
 <p>slartg.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slartg</code> (F, G, CS, SN, R)<br />
+<p>subroutine <code>slartg</code> (F, G, CS, SN, R)<br/>
  <i></i><code>SLARTG</code> generates a plane rotation with real cosine and real sine.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slartg (realF, realG, realCS, realSN, realR)</h3>

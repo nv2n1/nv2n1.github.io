@@ -17,10 +17,10 @@ description: "ipsilon.conf – Ipsilon IdP configuration file"
 <p> Blank lines are ignored. Lines beginning with # are comments and are ignored. </p>
 <p> Valid lines consist of an option name, an equals sign and a value. Spaces surrounding equals sign are ignored. An option terminates at the end of a line. </p>
 <p> Non-string values should not be quoted, the quotes will not be stripped. </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>Wrong &#8211; don&#8217;t include quotes with boolean options<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>Wrong &#8211; don&#8217;t include quotes with boolean options<br/>
 &nbsp;<wbr>verbose&nbsp;<wbr>=&nbsp;<wbr>&quot;True&quot; </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>Right &#8211; Properly formatted options<br />
-&nbsp;<wbr>verbose&nbsp;<wbr>=&nbsp;<wbr>True<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>Right &#8211; Properly formatted options<br/>
+&nbsp;<wbr>verbose&nbsp;<wbr>=&nbsp;<wbr>True<br/>
 &nbsp;<wbr>verbose=True </p>
 <p> Options must appear in the section named [global]. There are no other sections defined or used currently.</p>
 <h2>Options</h2>

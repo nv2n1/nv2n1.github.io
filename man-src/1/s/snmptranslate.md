@@ -55,17 +55,17 @@ description: "snmptranslate – translate MIB OID names between numeric and text
 <h2>EXAMPLES</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> snmptranslate -On -IR sysDescr<br />
+<dd> snmptranslate -On -IR sysDescr<br/>
  will translate &quot;sysDescr&quot; to a more qualified form:</dd>
 <dt>
 </dt><dd> system.sysDescr</dd>
 <dt>&bull;</dt>
-<dd> snmptranslate -Onf -IR sysDescr<br />
+<dd> snmptranslate -Onf -IR sysDescr<br/>
  will translate &quot;sysDecr&quot; to:</dd>
 <dt>
 </dt><dd> .iso.org.dod.internet.mgmt.mib-2.system.sysDescr</dd>
 <dt>&bull;</dt>
-<dd> snmptranslate -Td -OS system.sysDescr<br />
+<dd> snmptranslate -Td -OS system.sysDescr<br/>
  will translate &quot;sysDecr&quot; into:</dd>
 <dt>
 </dt><dd>
@@ -78,33 +78,33 @@ SNMPv2 - MIB::sysDescr sysDescr OBJECT - TYPE-- FROM SNMPv2 - MIB-- TEXTUAL CONV
         = {iso(1) org(3) dod(6) internet(1) mgmt(2) mib - 2(1)system(1) 1}
 </code></pre>
 </dd><dt>&bull;</dt>
-<dd> snmptranslate -Tp -OS system<br />
+<dd> snmptranslate -Tp -OS system<br/>
  will print the following tree:</dd>
 <dt>
 </dt><dd>
-+ &#8211;system(1) |<br />
-    +&#8211; -R&#8211; String sysDescr(1) | Textual Convention:DisplayString<br />
-                                                     |<br />
-                                                Size:0..255 + &#8212; -R&#8211; ObjID sysObjectID(2) + &#8212; -R&#8211; TimeTicks sysUpTime(3) + &#8212; -RW &#8211; String sysContact(4) | Textual Convention:DisplayString<br />
-                                                                                                                                                                                 |<br />
-                                                Size:0..255 + &#8212; -RW &#8211; String sysName(5) | Textual Convention:DisplayString<br />
-                                                                                                              |<br />
-                                                Size:0..255 + &#8212; -RW &#8211; String sysLocation(6) | Textual Convention:DisplayString<br />
-                                                                                                                  |<br />
-                                                Size:0..255 + &#8212; -R&#8211; Integer sysServices(7) + &#8212; -R&#8211; TimeTicks sysORLastChange(8) | Textual Convention:TimeStamp<br />
-                                                                                                                                                         |<br />
-                                                                                                                                                         +&#8211;sysORTable(9) |<br />
-                                                                                                                                                         +&#8211;sysOREntry(1) |<br />
-                                                                                                                                                         +&#8211; &#8212; &#8211;Integer sysORIndex(1) + &#8212; -R&#8211; ObjID sysORID(2) + &#8212; -R&#8211; String sysORDescr(3) | Textual<br />
-                                          Convention:DisplayString<br />
-                                                     |<br />
-                                                Size:0..255 + &#8212; -R&#8211; TimeTicks sysORUpTime(4)<br />
-                                                                     Textual<br />
++ &#8211;system(1) |<br/>
+    +&#8211; -R&#8211; String sysDescr(1) | Textual Convention:DisplayString<br/>
+                                                     |<br/>
+                                                Size:0..255 + &#8212; -R&#8211; ObjID sysObjectID(2) + &#8212; -R&#8211; TimeTicks sysUpTime(3) + &#8212; -RW &#8211; String sysContact(4) | Textual Convention:DisplayString<br/>
+                                                                                                                                                                                 |<br/>
+                                                Size:0..255 + &#8212; -RW &#8211; String sysName(5) | Textual Convention:DisplayString<br/>
+                                                                                                              |<br/>
+                                                Size:0..255 + &#8212; -RW &#8211; String sysLocation(6) | Textual Convention:DisplayString<br/>
+                                                                                                                  |<br/>
+                                                Size:0..255 + &#8212; -R&#8211; Integer sysServices(7) + &#8212; -R&#8211; TimeTicks sysORLastChange(8) | Textual Convention:TimeStamp<br/>
+                                                                                                                                                         |<br/>
+                                                                                                                                                         +&#8211;sysORTable(9) |<br/>
+                                                                                                                                                         +&#8211;sysOREntry(1) |<br/>
+                                                                                                                                                         +&#8211; &#8212; &#8211;Integer sysORIndex(1) + &#8212; -R&#8211; ObjID sysORID(2) + &#8212; -R&#8211; String sysORDescr(3) | Textual<br/>
+                                          Convention:DisplayString<br/>
+                                                     |<br/>
+                                                Size:0..255 + &#8212; -R&#8211; TimeTicks sysORUpTime(4)<br/>
+                                                                     Textual<br/>
                                           Convention:TimeStamp
 </dd></dl>
 <dl>
 <dt>&bull;</dt>
-<dd> snmptranslate -Ta | head<br />
+<dd> snmptranslate -Ta | head<br/>
  will produce the following dump:</dd>
 <dt>
 </dt><dd>
@@ -116,7 +116,7 @@ dump DEFINITIONS :: = BEGIN
 </dd></dl>
 <dl>
 <dt>&bull;</dt>
-<dd> snmptranslate -Tl | head<br />
+<dd> snmptranslate -Tl | head<br/>
  will produce the following dump:</dd>
 <dt>
 </dt><dd>
@@ -135,7 +135,7 @@ dump DEFINITIONS :: = BEGIN
 </dd></dl>
 <dl>
 <dt>&bull;</dt>
-<dd> snmptranslate -To | head<br />
+<dd> snmptranslate -To | head<br/>
  will produce the following dump</dd>
 <dt>
 </dt><dd>
@@ -154,7 +154,7 @@ dump DEFINITIONS :: = BEGIN
 </dd></dl>
 <dl>
 <dt>&bull;</dt>
-<dd> snmptranslate -Ts | head<br />
+<dd> snmptranslate -Ts | head<br/>
  will produce the following dump</dd>
 <dt>
 </dt><dd>
@@ -173,7 +173,7 @@ dump DEFINITIONS :: = BEGIN
 </dd></dl>
 <dl>
 <dt>&bull;</dt>
-<dd> snmptranslate -Tt | head<br />
+<dd> snmptranslate -Tt | head<br/>
  will produce the following dump</dd>
 <dt>
 </dt><dd>

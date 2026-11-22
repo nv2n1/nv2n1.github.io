@@ -20,7 +20,7 @@ description: "murmurd – VoIP server."
 <dt><code>-ini</code><i>&nbsp;<wbr>inifile</i></dt>
 <dd> Specify which inifile to use. Without this option, murmur will search for a murmur.ini file and will fall back to builtin defaults if one isn&#8217;t found.</dd>
 <dt><code>-fg</code></dt>
-<dd> Run in the foreground (do not fork).<br />
+<dd> Run in the foreground (do not fork).<br/>
  This is very useful for debugging.</dd>
 <dt><code>-v</code></dt>
 <dd> Verbose mode, slightly more information is logged.</dd>

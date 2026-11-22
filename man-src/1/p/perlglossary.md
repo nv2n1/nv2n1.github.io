@@ -38,7 +38,7 @@ description: "perlglossary – Perl Glossary"
 <dd> The kind of computer you’re working on, where one “kind of computer” means all those computers sharing a compatible machine language. Since Perl programs are (typically) simple text files, not executable images, a Perl program is much less sensitive to the architecture it’s running on than programs in other languages, such as C, that are <code>compiled</code> into machine code. See also <code>platform</code> and <code>operating system</code>.</dd>
 <dt>argument</dt>
 <dd> A piece of data supplied to a <code>program</code>, <code>subroutine</code>, <code>function</code>, or <code>method</code> to tell it what it’s supposed to do. Also called a “parameter”.</dd>
-<dt><font SIZE="-1">ARGV</font></dt>
+<dt>ARGV</dt>
 <dd> The name of the array containing the <code>argument</code> <code>vector</code> from the command line. If you use the empty <tt>&quot;&lt;&gt;&quot;</tt> operator, <tt>&quot;ARGV&quot;</tt> is the name of both the <code>filehandle</code> used to traverse the arguments and the <code>scalar</code> containing the name of the current input file.</dd>
 <dt>arithmetical operator</dt>
 <dd> A <code>symbol</code> such as <tt>&quot;+&quot;</tt> or <tt>&quot;/&quot;</tt> that tells Perl to do the arithmetic you were supposed to learn in grade school.</dd>
@@ -48,8 +48,8 @@ description: "perlglossary – Perl Glossary"
 <dd> An archaic expression for what is more correctly referred to as <code>list context</code>.</dd>
 <dt>Artistic License</dt>
 <dd> The open source license that Larry Wall created for Perl, maximizing Perl’s usefulness, availability, and modifiability. The current version is 2. (&lt;<a rel="nofollow" href="http://www.opensource.org/licenses/artistic-license.php">http://www.opensource.org/licenses/artistic-license.php</a>&gt;).</dd>
-<dt><font SIZE="-1">ASCII</font></dt>
-<dd> The American Standard Code for Information Interchange (a 7-bit character set adequate only for poorly representing English text). Often used loosely to describe the lowest 128 values of the various <font SIZE="-1">ISO-8859-X</font> character sets, a bunch of mutually incompatible 8-bit codes best described as half <font SIZE="-1">ASCII.</font> See also <code>Unicode</code>.</dd>
+<dt>ASCII</dt>
+<dd> The American Standard Code for Information Interchange (a 7-bit character set adequate only for poorly representing English text). Often used loosely to describe the lowest 128 values of the various ISO-8859-X character sets, a bunch of mutually incompatible 8-bit codes best described as half ASCII. See also <code>Unicode</code>.</dd>
 <dt>assertion</dt>
 <dd> A component of a <code>regular expression</code> that must be true for the pattern to match but does not necessarily match any characters itself. Often used specifically to mean a <code>zero-width</code> assertion.</dd>
 <dt>assignment</dt>
@@ -78,8 +78,8 @@ description: "perlglossary – Perl Glossary"
 <dd> To split a string automatically, as the <i>–a</i> <code>switch</code> does when running under <i>–p</i> or <i>–n</i> in order to emulate <code>awk</code>. (See also the <tt>&quot;AutoSplit&quot;</tt> module, which has nothing to do with the <tt>&quot;–a&quot;</tt> switch but a lot to do with autoloading.)</dd>
 <dt>autovivification</dt>
 <dd> A Graeco-Roman word meaning “to bring oneself to life”. In Perl, storage locations (<code>lvalues</code>) spontaneously generate themselves as needed, including the creation of any <code>hard reference</code> values to point to the next level of storage. The assignment <tt>&quot;$a[5][5][5][5][5] = &quot;quintet&quot;&quot;</tt> potentially creates five scalar storage locations, plus four references (in the first four scalar locations) pointing to four new anonymous arrays (to hold the last four scalar locations). But the point of autovivification is that you don’t have to worry about it.</dd>
-<dt><font SIZE="-1">AV</font></dt>
-<dd> Short for “array value”, which refers to one of Perl’s internal data types that holds an <code>array</code>. The <tt>&quot;AV&quot;</tt> type is a subclass of <font SIZE="-1"><code>SV</code></font>.</dd>
+<dt>AV</dt>
+<dd> Short for “array value”, which refers to one of Perl’s internal data types that holds an <code>array</code>. The <tt>&quot;AV&quot;</tt> type is a subclass of <code>SV</code>.</dd>
 <dt>awk</dt>
 <dd> Descriptive editing term—short for “awkward”. Also coincidentally refers to a venerable text-processing language from which Perl derived some of its high-level ideas.</dd></dl>
 <h3>B</h3>
@@ -109,10 +109,10 @@ description: "perlglossary – Perl Glossary"
 <dt>bit string</dt>
 <dd> A sequence of <code>bits</code> that is actually being thought of as a sequence of bits, for once.</dd>
 <dt>bless</dt>
-<dd> In corporate life, to grant official approval to a thing, as in, “The <font SIZE="-1">VP</font> of Engineering has blessed our WebCruncher project.” Similarly, in Perl, to grant official approval to a <code>referent</code> so that it can function as an <code>object</code>, such as a WebCruncher object. See the <tt>&quot;bless&quot;</tt> function in Camel chapter 27, “Functions”.</dd>
+<dd> In corporate life, to grant official approval to a thing, as in, “The VP of Engineering has blessed our WebCruncher project.” Similarly, in Perl, to grant official approval to a <code>referent</code> so that it can function as an <code>object</code>, such as a WebCruncher object. See the <tt>&quot;bless&quot;</tt> function in Camel chapter 27, “Functions”.</dd>
 <dt>block</dt>
 <dd> What a <code>process</code> does when it has to wait for something: “My process blocked waiting for the disk.” As an unrelated noun, it refers to a large chunk of data, of a size that the <code>operating system</code> likes to deal with (normally a power of 2 such as 512 or 8192). Typically refers to a chunk of data that’s coming from or going to a disk file.</dd>
-<dt><font SIZE="-1">BLOCK</font></dt>
+<dt>BLOCK</dt>
 <dd> A syntactic construct consisting of a sequence of Perl <code>statements</code> that is delimited by braces. The <tt>&quot;if&quot;</tt> and <tt>&quot;while&quot;</tt> statements are defined in terms of <i></i>&quot;BLOCK&quot;<i></i>s, for instance. Sometimes we also say “block” to mean a lexical scope; that is, a sequence of statements that acts like a <i></i>&quot;BLOCK&quot;<i></i>, such as within an <tt>&quot;eval&quot;</tt> or a file, even though the statements aren’t delimited by braces.</dd>
 <dt>block buffering</dt>
 <dd> A method of making input and output efficient by passing one <code>block</code> at a time. By default, Perl does block buffering to disk files. See <code>buffer</code> and <code>command buffering</code>.</dd>
@@ -124,8 +124,8 @@ description: "perlglossary – Perl Glossary"
 <dd> A spot in your program where you’ve told the debugger to stop <code>execution</code> so you can poke around and see whether anything is wrong yet.</dd>
 <dt>broadcast</dt>
 <dd> To send a <code>datagram</code> to multiple destinations simultaneously.</dd>
-<dt><font SIZE="-1">BSD</font></dt>
-<dd> A psychoactive drug, popular in the ’80s, probably developed at <font SIZE="-1">UC</font> Berkeley or thereabouts. Similar in many ways to the prescription-only medication called “System V”, but infinitely more useful. (Or, at least, more fun.) The full chemical name is “Berkeley Standard Distribution”.</dd>
+<dt>BSD</dt>
+<dd> A psychoactive drug, popular in the ’80s, probably developed at UC Berkeley or thereabouts. Similar in many ways to the prescription-only medication called “System V”, but infinitely more useful. (Or, at least, more fun.) The full chemical name is “Berkeley Standard Distribution”.</dd>
 <dt>bucket</dt>
 <dd> A location in a <code>hash table</code> containing (potentially) multiple entries whose keys “hash” to the same hash value according to its hash function. (As internal policy, you don’t have to worry about it unless you’re into internals, or policy.)</dd>
 <dt>buffer</dt>
@@ -133,7 +133,7 @@ description: "perlglossary – Perl Glossary"
 <dt>built-in</dt>
 <dd> A <code>function</code> that is predefined in the language. Even when hidden by <code>overriding</code>, you can always get at a built- in function by <code>qualifying</code> its name with the <tt>&quot;CORE::&quot;</tt> pseudopackage.</dd>
 <dt>bundle</dt>
-<dd> A group of related modules on <font SIZE="-1"><code>CPAN</code></font>. (Also sometimes refers to a group of command-line switches grouped into one <code>switch cluster</code>.)</dd>
+<dd> A group of related modules on <code>CPAN</code>. (Also sometimes refers to a group of command-line switches grouped into one <code>switch cluster</code>.)</dd>
 <dt>byte</dt>
 <dd> A piece of data worth eight <code>bits</code> in most places.</dd>
 <dt>bytecode</dt>
@@ -182,18 +182,18 @@ description: "perlglossary – Perl Glossary"
 <dd> An <code>anonymous</code> subroutine that, when a reference to it is generated at runtime, keeps track of the identities of externally visible <code>lexical variables</code>, even after those lexical variables have supposedly gone out of <code>scope</code>. They’re called “closures” because this sort of behavior gives mathematicians a sense of closure.</dd>
 <dt>cluster</dt>
 <dd> A parenthesized <code>subpattern</code> used to group parts of a <code>regular expression</code> into a single <code>atom</code>.</dd>
-<dt><font SIZE="-1">CODE</font></dt>
-<dd> The word returned by the <tt>&quot;ref&quot;</tt> function when you apply it to a reference to a subroutine. See also <font SIZE="-1"><code>CV</code></font>.</dd>
+<dt>CODE</dt>
+<dd> The word returned by the <tt>&quot;ref&quot;</tt> function when you apply it to a reference to a subroutine. See also <code>CV</code>.</dd>
 <dt>code generator</dt>
 <dd> A system that writes code for you in a low-level language, such as code to implement the backend of a compiler. See <code>program generator</code>.</dd>
 <dt>codepoint</dt>
-<dd> The integer a computer uses to represent a given character. <font SIZE="-1">ASCII</font> codepoints are in the range 0 to 127; Unicode codepoints are in the range 0 to 0x1F_FFFF; and Perl codepoints are in the range 0 to 2³²−1 or 0 to 2⁶⁴−1, depending on your native integer size. In Perl Culture, sometimes called <code>ordinals</code>.</dd>
+<dd> The integer a computer uses to represent a given character. ASCII codepoints are in the range 0 to 127; Unicode codepoints are in the range 0 to 0x1F_FFFF; and Perl codepoints are in the range 0 to 2³²−1 or 0 to 2⁶⁴−1, depending on your native integer size. In Perl Culture, sometimes called <code>ordinals</code>.</dd>
 <dt>code subpattern</dt>
 <dd> A <code>regular expression</code> subpattern whose real purpose is to execute some Perl code—for example, the <tt>&quot;(?{...})&quot;</tt> and <tt>&quot;(??{...})&quot;</tt> subpatterns.</dd>
 <dt>collating sequence</dt>
 <dd> The order into which <code>characters</code> sort. This is used by <code>string</code> comparison routines to decide, for example, where in this glossary to put “collating sequence”.</dd>
 <dt>co-maintainer</dt>
-<dd> A person with permissions to index a <code>namespace</code> in <font SIZE="-1"><code>PAUSE</code></font>. Anyone can upload any namespace, but only primary and co-maintainers get their contributions indexed.</dd>
+<dd> A person with permissions to index a <code>namespace</code> in <code>PAUSE</code>. Anyone can upload any namespace, but only primary and co-maintainers get their contributions indexed.</dd>
 <dt>combining character</dt>
 <dd> Any character with the General Category of Combining Mark (<tt>&quot;\p{GC=M}&quot;</tt>), which may be spacing or nonspacing. Some are even invisible. A sequence of combining characters following a grapheme base character together make up a single user-visible character called a <code>grapheme</code>. Most but not all diacritics are combining characters, and vice versa.</dd>
 <dt>command</dt>
@@ -231,10 +231,10 @@ description: "perlglossary – Perl Glossary"
 <dt>context</dt>
 <dd> The surroundings or environment. The context given by the surrounding code determines what kind of data a particular <code>expression</code> is expected to return. The three primary contexts are <code>list context</code>, <code>scalar</code>, and <code>void context</code>. Scalar context is sometimes subdivided into <code>Boolean context</code>, <code>numeric context</code>, <code>string context</code>, and <code>void context</code>. There’s also a “don’t care” context (which is dealt with in Camel chapter 2, “Bits and Pieces”, if you care).</dd>
 <dt>continuation</dt>
-<dd> The treatment of more than one physical <code>line</code> as a single logical line. <code>Makefile</code> lines are continued by putting a backslash before the <code>newline</code>. Mail headers, as defined by <font SIZE="-1">RFC 822,</font> are continued by putting a space or tab <i>after</i> the newline. In general, lines in Perl do not need any form of continuation mark, because <code>whitespace</code> (including newlines) is gleefully ignored. Usually.</dd>
+<dd> The treatment of more than one physical <code>line</code> as a single logical line. <code>Makefile</code> lines are continued by putting a backslash before the <code>newline</code>. Mail headers, as defined by RFC 822, are continued by putting a space or tab <i>after</i> the newline. In general, lines in Perl do not need any form of continuation mark, because <code>whitespace</code> (including newlines) is gleefully ignored. Usually.</dd>
 <dt>core dump</dt>
 <dd> The corpse of a <code>process</code>, in the form of a file left in the <code>working directory</code> of the process, usually as a result of certain kinds of fatal errors.</dd>
-<dt><font SIZE="-1">CPAN</font></dt>
+<dt>CPAN</dt>
 <dd> The Comprehensive Perl Archive Network. (See the Camel Preface and Camel chapter 19, “CPAN” for details.)</dd>
 <dt>C preprocessor</dt>
 <dd> The typical C compiler’s first pass, which processes lines beginning with <tt>&quot;#&quot;</tt> for conditional compilation and macro definition, and does various manipulations of the program text based on the current definitions. Also known as <i><a href="/docs/linux/man/1-cpp/">cpp</a></i>(1).</dd>
@@ -246,20 +246,20 @@ description: "perlglossary – Perl Glossary"
 <dd> The <code>package</code> in which the current statement is <code>compiled</code>. Scan backward in the text of your program through the current <code>lexical scope</code> or any enclosing lexical scopes until you find a package declaration. That’s your current package name.</dd>
 <dt>current working directory</dt>
 <dd> See <code>working directory</code>.</dd>
-<dt><font SIZE="-1">CV</font></dt>
-<dd> In academia, a curriculum vitæ, a fancy kind of résumé. In Perl, an internal “code value” typedef holding a <code>subroutine</code>. The <tt>&quot;CV&quot;</tt> type is a subclass of <font SIZE="-1"><code>SV</code></font>.</dd></dl>
+<dt>CV</dt>
+<dd> In academia, a curriculum vitæ, a fancy kind of résumé. In Perl, an internal “code value” typedef holding a <code>subroutine</code>. The <tt>&quot;CV&quot;</tt> type is a subclass of <code>SV</code>.</dd></dl>
 <h3>D</h3>
 <dl>
 <dt>dangling statement</dt>
 <dd> A bare, single <code>statement</code>, without any braces, hanging off an <tt>&quot;if&quot;</tt> or <tt>&quot;while&quot;</tt> conditional. C allows them. Perl doesn’t.</dd>
 <dt>datagram</dt>
-<dd> A packet of data, such as a <font SIZE="-1"><code>UDP</code></font> message, that (from the viewpoint of the programs involved) can be sent independently over the network. (In fact, all packets are sent independently at the <font SIZE="-1"><code>IP</code></font> level, but <code>stream</code> protocols such as <font SIZE="-1"><code>TCP</code></font> hide this from your program.)</dd>
+<dd> A packet of data, such as a <code>UDP</code> message, that (from the viewpoint of the programs involved) can be sent independently over the network. (In fact, all packets are sent independently at the <code>IP</code> level, but <code>stream</code> protocols such as <code>TCP</code> hide this from your program.)</dd>
 <dt>data structure</dt>
 <dd> How your various pieces of data relate to each other and what shape they make when you put them all together, as in a rectangular table or a triangular tree.</dd>
 <dt>data type</dt>
 <dd> A set of possible values, together with all the operations that know how to deal with those values. For example, a numeric data type has a certain set of numbers that you can work with, as well as various mathematical operations that you can do on the numbers, but would make little sense on, say, a string such as <tt>&quot;Kilroy&quot;</tt>. Strings have their own operations, such as <code>concatenation</code>. Compound types made of a number of smaller pieces generally have operations to compose and decompose them, and perhaps to rearrange them. <code>Objects</code> that model things in the real world often have operations that correspond to real activities. For instance, if you model an elevator, your elevator object might have an <tt>&quot;open_door&quot;</tt> <code>method</code>.</dd>
-<dt><font SIZE="-1">DBM</font></dt>
-<dd> Stands for “Database Management” routines, a set of routines that emulate an <code>associative array</code> using disk files. The routines use a dynamic hashing scheme to locate any entry with only two disk accesses. <font SIZE="-1">DBM</font> files allow a Perl program to keep a persistent <code>hash</code> across multiple invocations. You can <tt>&quot;tie&quot;</tt> your hash variables to various <font SIZE="-1">DBM</font> implementations.</dd>
+<dt>DBM</dt>
+<dd> Stands for “Database Management” routines, a set of routines that emulate an <code>associative array</code> using disk files. The routines use a dynamic hashing scheme to locate any entry with only two disk accesses. DBM files allow a Perl program to keep a persistent <code>hash</code> across multiple invocations. You can <tt>&quot;tie&quot;</tt> your hash variables to various DBM implementations.</dd>
 <dt>declaration</dt>
 <dd> An <code>assertion</code> that states something exists and perhaps describes what it’s like, without giving any commitment as to how or where you’ll use it. A declaration is like the part of your recipe that says, “two cups flour, one large egg, four or five tadpoles…” See <code>statement</code> for its opposite. Note that some declarations also function as statements. Subroutine declarations also act as definitions if a body is supplied.</dd>
 <dt>declarator</dt>
@@ -297,11 +297,11 @@ description: "perlglossary – Perl Glossary"
 <dt>distribution</dt>
 <dd> A standard, bundled release of a system of software. The default usage implies source code is included. If that is not the case, it will be called a “binary-only” distribution.</dd>
 <dt>dual-lived</dt>
-<dd> Some modules live both in the <code>Standard Library</code> and on <font SIZE="-1"><code>CPAN</code></font>. These modules might be developed on two tracks as people modify either version. The trend currently is to untangle these situations.</dd>
+<dd> Some modules live both in the <code>Standard Library</code> and on <code>CPAN</code>. These modules might be developed on two tracks as people modify either version. The trend currently is to untangle these situations.</dd>
 <dt>dweomer</dt>
 <dd> An enchantment, illusion, phantasm, or jugglery. Said when Perl’s magical <code>dwimmer</code> effects don’t do what you expect, but rather seem to be the product of arcane <i>dweomercraft</i>, sorcery, or wonder working. [From Middle English.]</dd>
 <dt>dwimmer</dt>
-<dd> <font SIZE="-1">DWIM</font> is an acronym for “Do What I Mean”, the principle that something should just do what you want it to do without an undue amount of fuss. A bit of code that does “dwimming” is a “dwimmer”. Dwimming can require a great deal of behind-the-scenes magic, which (if it doesn’t stay properly behind the scenes) is called a <code>dweomer</code> instead.</dd>
+<dd> DWIM is an acronym for “Do What I Mean”, the principle that something should just do what you want it to do without an undue amount of fuss. A bit of code that does “dwimming” is a “dwimmer”. Dwimming can require a great deal of behind-the-scenes magic, which (if it doesn’t stay properly behind the scenes) is called a <code>dweomer</code> instead.</dd>
 <dt>dynamic scoping</dt>
 <dd> Dynamic scoping works over a <code>dynamic scope</code>, making variables visible throughout the rest of the <code>block</code> in which they are first used and in any <code>subroutines</code> that are called by the rest of the block. Dynamically scoped variables can have their values temporarily changed (and implicitly restored later) by a <tt>&quot;local&quot;</tt> operator. (Compare <code>lexical scoping</code>.) Used more loosely to mean how a subroutine that is in the middle of calling another subroutine “contains” that subroutine at <code>runtime</code>.</dd></dl>
 <h3>E</h3>
@@ -324,7 +324,7 @@ description: "perlglossary – Perl Glossary"
 <dd> The collective set of <code>environment variables</code> your <code>process</code> inherits from its parent. Accessed via <tt>%ENV</tt>.</dd>
 <dt>environment variable</dt>
 <dd> A mechanism by which some high-level agent such as a user can pass its preferences down to its future offspring (child <code>processes</code>, grandchild processes, great-grandchild processes, and so on). Each environment variable is a <code>key</code>/<code>value</code> pair, like one entry in a <code>hash</code>.</dd>
-<dt><font SIZE="-1">EOF</font></dt>
+<dt>EOF</dt>
 <dd> End of File. Sometimes used metaphorically as the terminating string of a <code>here document</code>.</dd>
 <dt>errno</dt>
 <dd> The error number returned by a <code>syscall</code> when it fails. Perl refers to the error by the name <tt>$!</tt> (or <tt>$OS_ERROR</tt> if you use the English module).</dd>
@@ -353,21 +353,21 @@ description: "perlglossary – Perl Glossary"
 <dt>expression</dt>
 <dd> Anything you can legally say in a spot where a <code>value</code> is required. Typically composed of <code>literals</code>, <code>variables</code>, <code>operators</code>, <code>functions</code>, and <code>subroutine</code> calls, not necessarily in that order.</dd>
 <dt>extension</dt>
-<dd> A Perl module that also pulls in <code>compiled</code> C or C<font SIZE="-2">++</font> code. More generally, any experimental option that can be <code>compiled</code> into Perl, such as multithreading.</dd></dl>
+<dd> A Perl module that also pulls in <code>compiled</code> C or C++ code. More generally, any experimental option that can be <code>compiled</code> into Perl, such as multithreading.</dd></dl>
 <h3>F</h3>
 <dl>
 <dt>false</dt>
 <dd> In Perl, any value that would look like <tt>&quot;&quot;</tt> or <tt>&quot;0&quot;</tt> if evaluated in a string context. Since undefined values evaluate to <tt>&quot;&quot;</tt>, all undefined values are false, but not all false values are undefined.</dd>
-<dt><font SIZE="-1">FAQ</font></dt>
-<dd> Frequently Asked Question (although not necessarily frequently answered, especially if the answer appears in the Perl <font SIZE="-1">FAQ</font> shipped standard with Perl).</dd>
+<dt>FAQ</dt>
+<dd> Frequently Asked Question (although not necessarily frequently answered, especially if the answer appears in the Perl FAQ shipped standard with Perl).</dd>
 <dt>fatal error</dt>
 <dd> An uncaught <code>exception</code>, which causes termination of the <code>process</code> after printing a message on your <code>standard error</code> stream. Errors that happen inside an <tt>&quot;eval&quot;</tt> are not fatal. Instead, the <tt>&quot;eval&quot;</tt> terminates after placing the exception message in the <tt>$@</tt> (<tt>$EVAL_ERROR</tt>) variable. You can try to provoke a fatal error with the <tt>&quot;die&quot;</tt> operator (known as throwing or raising an exception), but this may be caught by a dynamically enclosing <tt>&quot;eval&quot;</tt>. If not caught, the <tt>&quot;die&quot;</tt> becomes a fatal error.</dd>
 <dt>feeping creaturism</dt>
 <dd> A spoonerism of “creeping featurism”, noting the biological urge to add just one more feature to a program.</dd>
 <dt>field</dt>
 <dd> A single piece of numeric or string data that is part of a longer <code>string</code>, <code>record</code>, or <code>line</code>. Variable-width fields are usually split up by <code>separators</code> (so use <tt>&quot;split&quot;</tt> to extract the fields), while fixed-width fields are usually at fixed positions (so use <tt>&quot;unpack&quot;</tt>). <code>Instance variables</code> are also known as “fields”.</dd>
-<dt><font SIZE="-1">FIFO</font></dt>
-<dd> First In, First Out. See also <font SIZE="-1"><code>LIFO</code></font>. Also a nickname for a <code>named pipe</code>.</dd>
+<dt>FIFO</dt>
+<dd> First In, First Out. See also <code>LIFO</code>. Also a nickname for a <code>named pipe</code>.</dd>
 <dt>file</dt>
 <dd> A named collection of data, usually stored on disk in a <code>directory</code> in a <code>filesystem</code>. Roughly like a document, if you’re into office metaphors. In modern filesystems, you can actually give a file more than one name. Some files have special properties, like directories and devices.</dd>
 <dt>file descriptor</dt>
@@ -385,15 +385,15 @@ description: "perlglossary – Perl Glossary"
 <dt>filter</dt>
 <dd> A program designed to take a <code>stream</code> of input and transform it into a stream of output.</dd>
 <dt>first-come</dt>
-<dd> The first <font SIZE="-1"><code>PAUSE</code></font> author to upload a <code>namespace</code> automatically becomes the <code>primary maintainer</code> for that namespace. The “first come” permissions distinguish a <code>primary maintainer</code> who was assigned that role from one who received it automatically.</dd>
+<dd> The first <code>PAUSE</code> author to upload a <code>namespace</code> automatically becomes the <code>primary maintainer</code> for that namespace. The “first come” permissions distinguish a <code>primary maintainer</code> who was assigned that role from one who received it automatically.</dd>
 <dt>flag</dt>
 <dd> We tend to avoid this term because it means so many things. It may mean a command-line <code>switch</code> that takes no argument itself (such as Perl’s <tt>&quot;–n&quot;</tt> and <tt>&quot;–p&quot;</tt> flags) or, less frequently, a single-bit indicator (such as the <tt>&quot;O_CREAT&quot;</tt> and <tt>&quot;O_EXCL&quot;</tt> flags used in <tt>&quot;sysopen&quot;</tt>). Sometimes informally used to refer to certain regex modifiers.</dd>
 <dt>floating point</dt>
 <dd> A method of storing numbers in “scientific notation”, such that the precision of the number is independent of its magnitude (the decimal point “floats”). Perl does its numeric work with floating-point numbers (sometimes called “floats”) when it can’t get away with using <code>integers</code>. Floating-point numbers are mere approximations of real numbers.</dd>
 <dt>flush</dt>
 <dd> The act of emptying a <code>buffer</code>, often before it’s full.</dd>
-<dt><font SIZE="-1">FMTEYEWTK</font></dt>
-<dd> Far More Than Everything You Ever Wanted To Know. An exhaustive treatise on one narrow topic, something of a super-<font SIZE="-1"><code>FAQ</code></font>. See Tom for far more.</dd>
+<dt>FMTEYEWTK</dt>
+<dd> Far More Than Everything You Ever Wanted To Know. An exhaustive treatise on one narrow topic, something of a super-<code>FAQ</code>. See Tom for far more.</dd>
 <dt>foldcase</dt>
 <dd> The casemap used in Unicode when comparing or matching without regard to case. Comparing lower-, title-, or uppercase are all unreliable due to Unicode’s complex, one-to-many case mappings. Foldcase is a <code>lowercase</code> variant (using a partially decomposed <code>normalization</code> form for certain codepoints) created specifically to resolve this.</dd>
 <dt>fork</dt>
@@ -407,7 +407,7 @@ description: "perlglossary – Perl Glossary"
 <dt>freely redistributable</dt>
 <dd> Means you’re not in legal trouble if you give a bootleg copy of it to your friends and we find out about it. In fact, we’d rather you gave a copy to all your friends.</dd>
 <dt>freeware</dt>
-<dd> Historically, any software that you give away, particularly if you make the source code available as well. Now often called <code>open source software</code>. Recently there has been a trend to use the term in contradistinction to <code>open source software</code>, to refer only to free software released under the Free Software Foundation’s <font SIZE="-1">GPL</font> (General Public License), but this is difficult to justify etymologically.</dd>
+<dd> Historically, any software that you give away, particularly if you make the source code available as well. Now often called <code>open source software</code>. Recently there has been a trend to use the term in contradistinction to <code>open source software</code>, to refer only to free software released under the Free Software Foundation’s GPL (General Public License), but this is difficult to justify etymologically.</dd>
 <dt>function</dt>
 <dd> Mathematically, a mapping of each of a set of input values to a particular output value. In computers, refers to a <code>subroutine</code> or <code>operator</code> that returns a <code>value</code>. It may or may not have input values (called <code>arguments</code>).</dd>
 <dt>funny character</dt>
@@ -416,8 +416,8 @@ description: "perlglossary – Perl Glossary"
 <dl>
 <dt>garbage collection</dt>
 <dd> A misnamed feature—it should be called, “expecting your mother to pick up after you”. Strictly speaking, Perl doesn’t do this, but it relies on a reference-counting mechanism to keep things tidy. However, we rarely speak strictly and will often refer to the reference-counting scheme as a form of garbage collection. (If it’s any comfort, when your interpreter exits, a “real” garbage collector runs to make sure everything is cleaned up if you’ve been messy with circular references and such.)</dd>
-<dt><font SIZE="-1">GID</font></dt>
-<dd> Group ID—in Unix, the numeric group <font SIZE="-1">ID</font> that the <code>operating system</code> uses to identify you and members of your <code>group</code>.</dd>
+<dt>GID</dt>
+<dd> Group ID—in Unix, the numeric group ID that the <code>operating system</code> uses to identify you and members of your <code>group</code>.</dd>
 <dt>glob</dt>
 <dd> Strictly, the shell’s <tt>&quot;*&quot;</tt> character, which will match a “glob” of characters when you’re trying to generate a list of filenames. Loosely, the act of using globs and similar symbols to do pattern matching. See also <code>fileglob</code> and <code>typeglob</code>.</dd>
 <dt>global</dt>
@@ -436,8 +436,8 @@ description: "perlglossary – Perl Glossary"
 <dd> Originally from the old Unix editor command for “Globally search for a Regular Expression and Print it”, now used in the general sense of any kind of search, especially text searches. Perl has a built-in <tt>&quot;grep&quot;</tt> function that searches a list for elements matching any given criterion, whereas the <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1) program searches for lines matching a <code>regular expression</code> in one or more files.</dd>
 <dt>group</dt>
 <dd> A set of users of which you are a member. In some operating systems (like Unix), you can give certain file access permissions to other members of your group.</dd>
-<dt><font SIZE="-1">GV</font></dt>
-<dd> An internal “glob value” typedef, holding a <code>typeglob</code>. The <tt>&quot;GV&quot;</tt> type is a subclass of <font SIZE="-1"><code>SV</code></font>.</dd></dl>
+<dt>GV</dt>
+<dd> An internal “glob value” typedef, holding a <code>typeglob</code>. The <tt>&quot;GV&quot;</tt> type is a subclass of <code>SV</code>.</dd></dl>
 <h3>H</h3>
 <dl>
 <dt>hacker</dt>
@@ -462,8 +462,8 @@ description: "perlglossary – Perl Glossary"
 <dd> The computer on which a program or other data resides.</dd>
 <dt>hubris</dt>
 <dd> Excessive pride, the sort of thing for which Zeus zaps you. Also the quality that makes you write (and maintain) programs that other people won’t want to say bad things about. Hence, the third great virtue of a programmer. See also <code>laziness</code> and <code>impatience</code>.</dd>
-<dt><font SIZE="-1">HV</font></dt>
-<dd> Short for a “hash value” typedef, which holds Perl’s internal representation of a hash. The <tt>&quot;HV&quot;</tt> type is a subclass of <font SIZE="-1"><code>SV</code></font>.</dd></dl>
+<dt>HV</dt>
+<dd> Short for a “hash value” typedef, which holds Perl’s internal representation of a hash. The <tt>&quot;HV&quot;</tt> type is a subclass of <code>SV</code>.</dd></dl>
 <h3>I</h3>
 <dl>
 <dt>identifier</dt>
@@ -479,7 +479,7 @@ description: "perlglossary – Perl Glossary"
 <dt>indexing</dt>
 <dd> In olden days, the act of looking up a <code>key</code> in an actual index (such as a phone book). But now it&#8217;s merely the act of using any kind of key or position to find the corresponding <code>value</code>, even if no index is involved. Things have degenerated to the point that Perl’s <tt>&quot;index&quot;</tt> function merely locates the position (index) of one string in another.</dd>
 <dt>indirect filehandle</dt>
-<dd> An <code>expression</code> that evaluates to something that can be used as a <code>filehandle</code>: a <code>string</code> (filehandle name), a <code>typeglob</code>, a typeglob <code>reference</code>, or a low-level <font SIZE="-1"><code>IO</code></font> object.</dd>
+<dd> An <code>expression</code> that evaluates to something that can be used as a <code>filehandle</code>: a <code>string</code> (filehandle name), a <code>typeglob</code>, a typeglob <code>reference</code>, or a low-level <code>IO</code> object.</dd>
 <dt>indirection</dt>
 <dd> If something in a program isn’t the value you’re looking for but indicates where the value is, that’s indirection. This can be done with either <code>symbolic references</code> or <code>hard</code>.</dd>
 <dt>indirect object</dt>
@@ -523,15 +523,15 @@ description: "perlglossary – Perl Glossary"
 <dd> The act of calling up a deity, daemon, program, method, subroutine, or function to get it to do what you think it’s supposed to do. We usually “call” subroutines but “invoke” methods, since it sounds cooler.</dd>
 <dt>I/O</dt>
 <dd> Input from, or output to, a <code>file</code> or <code>device</code>.</dd>
-<dt><font SIZE="-1">IO</font></dt>
+<dt>IO</dt>
 <dd> An internal I/O object. Can also mean <code>indirect object</code>.</dd>
 <dt>I/O layer</dt>
 <dd> One of the filters between the data and what you get as input or what you end up with as output.</dd>
-<dt><font SIZE="-1">IPA</font></dt>
+<dt>IPA</dt>
 <dd> India Pale Ale. Also the International Phonetic Alphabet, the standard alphabet used for phonetic notation worldwide. Draws heavily on Unicode, including many combining characters.</dd>
-<dt><font SIZE="-1">IP</font></dt>
+<dt>IP</dt>
 <dd> Internet Protocol, or Intellectual Property.</dd>
-<dt><font SIZE="-1">IPC</font></dt>
+<dt>IPC</dt>
 <dd> Interprocess Communication.</dd>
 <dt>is-a</dt>
 <dd> A relationship between two <code>objects</code> in which one object is considered to be a more specific version of the other, generic object: “A camel is a mammal.” Since the generic object really only exists in a Platonic sense, we usually add a little abstraction to the notion of objects and think of the relationship as being between a generic <code>base class</code> and a specific <code>derived class</code>. Oddly enough, Platonic classes don’t always have Platonic relationships—see <code>inheritance</code>.</dd>
@@ -539,12 +539,12 @@ description: "perlglossary – Perl Glossary"
 <dd> Doing something repeatedly.</dd>
 <dt>iterator</dt>
 <dd> A special programming gizmo that keeps track of where you are in something that you’re trying to iterate over. The <tt>&quot;foreach&quot;</tt> loop in Perl contains an iterator; so does a hash, allowing you to <tt>&quot;each&quot;</tt> through it.</dd>
-<dt><font SIZE="-1">IV</font></dt>
-<dd> The integer four, not to be confused with six, Tom’s favorite editor. <font SIZE="-1">IV</font> also means an internal Integer Value of the type a <code>scalar</code> can hold, not to be confused with an <font SIZE="-1"><code>NV</code></font>.</dd></dl>
+<dt>IV</dt>
+<dd> The integer four, not to be confused with six, Tom’s favorite editor. IV also means an internal Integer Value of the type a <code>scalar</code> can hold, not to be confused with an <code>NV</code>.</dd></dl>
 <h3>J</h3>
 <dl>
-<dt><font SIZE="-1">JAPH</font></dt>
-<dd> “Just Another Perl Hacker”, a clever but cryptic bit of Perl code that, when executed, evaluates to that string. Often used to illustrate a particular Perl feature, and something of an ongoing Obfuscated Perl Contest seen in <font SIZE="-1">USENET</font> signatures.</dd></dl>
+<dt>JAPH</dt>
+<dd> “Just Another Perl Hacker”, a clever but cryptic bit of Perl code that, when executed, evaluates to that string. Often used to illustrate a particular Perl feature, and something of an ongoing Obfuscated Perl Contest seen in USENET signatures.</dd></dl>
 <h3>K</h3>
 <dl>
 <dt>key</dt>
@@ -573,8 +573,8 @@ description: "perlglossary – Perl Glossary"
 <dd> A <code>variable</code> subject to <code>lexical scoping</code>, declared by <tt>&quot;my&quot;</tt>. Often just called a “lexical”. (The <tt>&quot;our&quot;</tt> declaration declares a lexically scoped name for a global variable, which is not itself a lexical variable.)</dd>
 <dt>library</dt>
 <dd> Generally, a collection of procedures. In ancient days, referred to a collection of subroutines in a <i>.pl</i> file. In modern times, refers more often to the entire collection of Perl <code>modules</code> on your system.</dd>
-<dt><font SIZE="-1">LIFO</font></dt>
-<dd> Last In, First Out. See also <font SIZE="-1"><code>FIFO</code></font>. A <font SIZE="-1">LIFO</font> is usually called a <code>stack</code>.</dd>
+<dt>LIFO</dt>
+<dd> Last In, First Out. See also <code>FIFO</code>. A LIFO is usually called a <code>stack</code>.</dd>
 <dt>line</dt>
 <dd> In Unix, a sequence of zero or more nonnewline characters terminated with a <code>newline</code> character. On non-Unix machines, this is emulated by the C library even if the underlying <code>operating system</code> has different ideas.</dd>
 <dt>linebreak</dt>
@@ -585,7 +585,7 @@ description: "perlglossary – Perl Glossary"
 <dd> The number of lines read previous to this one, plus 1. Perl keeps a separate line number for each source or input file it opens. The current source file’s line number is represented by <tt>&quot;__LINE__&quot;</tt>. The current input line number (for the file that was most recently read via <tt>&quot;&lt;FH&gt;&quot;</tt>) is represented by the <tt>$.</tt> (<tt>$INPUT_LINE_NUMBER</tt>) variable. Many error messages report both values, if available.</dd>
 <dt>link</dt>
 <dd> Used as a noun, a name in a <code>directory</code> that represents a <code>file</code>. A given file can have multiple links to it. It’s like having the same phone number listed in the phone directory under different names. As a verb, to resolve a partially <code>compiled</code> file’s unresolved symbols into a (nearly) executable image. Linking can generally be static or dynamic, which has nothing to do with static or dynamic scoping.</dd>
-<dt><font SIZE="-1">LIST</font></dt>
+<dt>LIST</dt>
 <dd> A syntactic construct representing a comma- separated list of expressions, evaluated to produce a <code>list value</code>. Each <code>expression</code> in a <i></i>&quot;LIST&quot;<i></i> is evaluated in <code>list context</code> and interpolated into the list value.</dd>
 <dt>list</dt>
 <dd> An ordered set of scalar values.</dd>
@@ -626,7 +626,7 @@ description: "perlglossary – Perl Glossary"
 <dt>magic</dt>
 <dd> Technically speaking, any extra semantics attached to a variable such as <tt>$!</tt>, <tt>$0</tt>, <tt>%ENV</tt>, or <tt>%SIG</tt>, or to any tied variable. Magical things happen when you diddle those variables.</dd>
 <dt>magical increment</dt>
-<dd> An <code>increment</code> operator that knows how to bump up <font SIZE="-1">ASCII</font> alphabetics as well as numbers.</dd>
+<dd> An <code>increment</code> operator that knows how to bump up ASCII alphabetics as well as numbers.</dd>
 <dt>magical variables</dt>
 <dd> Special variables that have side effects when you access them or assign to them. For example, in Perl, changing elements of the <tt>%ENV</tt> array also changes the corresponding environment variables that subprocesses will use. Reading the <tt>$!</tt> variable gives you the current system error number or message.</dd>
 <dt>Makefile</dt>
@@ -634,7 +634,7 @@ description: "perlglossary – Perl Glossary"
 <dt>man</dt>
 <dd> The Unix program that displays online documentation (manual pages) for you.</dd>
 <dt>manpage</dt>
-<dd> A “page” from the manuals, typically accessed via the <i><a href="/docs/linux/man/1-man/">man</a></i>(1) command. A manpage contains a <font SIZE="-1">SYNOPSIS,</font> a <font SIZE="-1">DESCRIPTION,</font> a list of <font SIZE="-1">BUGS,</font> and so on, and is typically longer than a page. There are manpages documenting <code>commands</code>, <code>syscalls</code>, <code>library</code> <code>functions</code>, <code>devices</code>, <code>protocols</code>, <code>files</code>, and such. In this book, we call any piece of standard Perl documentation (like perlop or perldelta) a manpage, no matter what format it’s installed in on your system.</dd>
+<dd> A “page” from the manuals, typically accessed via the <i><a href="/docs/linux/man/1-man/">man</a></i>(1) command. A manpage contains a SYNOPSIS, a DESCRIPTION, a list of BUGS, and so on, and is typically longer than a page. There are manpages documenting <code>commands</code>, <code>syscalls</code>, <code>library</code> <code>functions</code>, <code>devices</code>, <code>protocols</code>, <code>files</code>, and such. In this book, we call any piece of standard Perl documentation (like perlop or perldelta) a manpage, no matter what format it’s installed in on your system.</dd>
 <dt>matching</dt>
 <dd> See <code>pattern matching</code>.</dd>
 <dt>member data</dt>
@@ -650,7 +650,7 @@ description: "perlglossary – Perl Glossary"
 <dt>method resolution order</dt>
 <dd> The path Perl takes through <tt>@INC</tt>. By default, this is a double depth first search, once looking for defined methods and once for <tt>&quot;AUTOLOAD&quot;</tt>. However, Perl lets you configure this with <tt>&quot;mro&quot;</tt>.</dd>
 <dt>minicpan</dt>
-<dd> A <font SIZE="-1">CPAN</font> mirror that includes just the latest versions for each distribution, probably created with <tt>&quot;CPAN::Mini&quot;</tt>. See Camel chapter 19, “CPAN”.</dd>
+<dd> A CPAN mirror that includes just the latest versions for each distribution, probably created with <tt>&quot;CPAN::Mini&quot;</tt>. See Camel chapter 19, “CPAN”.</dd>
 <dt>minimalism</dt>
 <dd> The belief that “small is beautiful”. Paradoxically, if you say something in a small language, it turns out big, and if you say it in a big language, it turns out small. Go figure.</dd>
 <dt>mode</dt>
@@ -662,7 +662,7 @@ description: "perlglossary – Perl Glossary"
 <dt>modulus</dt>
 <dd> An integer divisor when you’re interested in the remainder instead of the quotient.</dd>
 <dt>mojibake</dt>
-<dd> When you speak one language and the computer thinks you’re speaking another. You’ll see odd translations when you send UTF‑8, for instance, but the computer thinks you sent Latin-1, showing all sorts of weird characters instead. The term is written 「文字化け」in Japanese and means “character rot”, an apt description. Pronounced [<tt>&quot;modʑibake&quot;</tt>] in standard <font SIZE="-1"><code>IPA</code></font> phonetics, or approximately “moh-jee-bah-keh”.</dd>
+<dd> When you speak one language and the computer thinks you’re speaking another. You’ll see odd translations when you send UTF‑8, for instance, but the computer thinks you sent Latin-1, showing all sorts of weird characters instead. The term is written 「文字化け」in Japanese and means “character rot”, an apt description. Pronounced [<tt>&quot;modʑibake&quot;</tt>] in standard <code>IPA</code> phonetics, or approximately “moh-jee-bah-keh”.</dd>
 <dt>monger</dt>
 <dd> Short for one member of <code>Perl mongers</code>, a purveyor of Perl.</dd>
 <dt>mortal</dt>
@@ -682,14 +682,14 @@ description: "perlglossary – Perl Glossary"
 <dt>NaN</dt>
 <dd> Not a number. The value Perl uses for certain invalid or inexpressible floating-point operations.</dd>
 <dt>network address</dt>
-<dd> The most important attribute of a socket, like your telephone’s telephone number. Typically an <font SIZE="-1">IP</font> address. See also <code>port</code>.</dd>
+<dd> The most important attribute of a socket, like your telephone’s telephone number. Typically an IP address. See also <code>port</code>.</dd>
 <dt>newline</dt>
-<dd> A single character that represents the end of a line, with the <font SIZE="-1">ASCII</font> value of 012 octal under Unix (but 015 on a Mac), and represented by <tt>&quot;
+<dd> A single character that represents the end of a line, with the ASCII value of 012 octal under Unix (but 015 on a Mac), and represented by <tt>&quot;
 &quot;</tt> in Perl strings. For Windows machines writing text files, and for certain physical devices like terminals, the single newline gets automatically translated by your C library into a line feed and a carriage return, but normally, no translation is done.</dd>
-<dt><font SIZE="-1">NFS</font></dt>
+<dt>NFS</dt>
 <dd> Network File System, which allows you to mount a remote filesystem as if it were local.</dd>
 <dt>normalization</dt>
-<dd> Converting a text string into an alternate but equivalent <code>canonical</code> (or compatible) representation that can then be compared for equivalence. Unicode recognizes four different normalization forms: <font SIZE="-1">NFD, NFC, NFKD,</font> and <font SIZE="-1">NFKC.</font></dd>
+<dd> Converting a text string into an alternate but equivalent <code>canonical</code> (or compatible) representation that can then be compared for equivalence. Unicode recognizes four different normalization forms: NFD, NFC, NFKD, and NFKC.</dd>
 <dt>null character</dt>
 <dd> A character with the numeric value of zero. It’s used by C to terminate strings, but Perl allows strings to contain a null.</dd>
 <dt>null list</dt>
@@ -700,8 +700,8 @@ description: "perlglossary – Perl Glossary"
 <dd> The situation in which an expression is expected by its surroundings (the code calling it) to return a number. See also <code>context</code> and <code>string context</code>.</dd>
 <dt>numification</dt>
 <dd> (Sometimes spelled <i>nummification</i> and <i>nummify</i>.) Perl lingo for implicit conversion into a number; the related verb is <i>numify</i>. <i>Numification</i> is intended to rhyme with <i>mummification</i>, and <i>numify</i> with <i>mummify</i>. It is unrelated to English <i>numen</i>, <i>numina</i>, <i>numinous</i>. We originally forgot the extra <i>m</i> a long time ago, and some people got used to our funny spelling, and so just as with <tt>&quot;HTTP_REFERER&quot;</tt>’s own missing letter, our weird spelling has stuck around.</dd>
-<dt><font SIZE="-1">NV</font></dt>
-<dd> Short for Nevada, no part of which will ever be confused with civilization. <font SIZE="-1">NV</font> also means an internal floating- point Numeric Value of the type a <code>scalar</code> can hold, not to be confused with an <font SIZE="-1"><code>IV</code></font>.</dd>
+<dt>NV</dt>
+<dd> Short for Nevada, no part of which will ever be confused with civilization. NV also means an internal floating- point Numeric Value of the type a <code>scalar</code> can hold, not to be confused with an <code>IV</code>.</dd>
 <dt>nybble</dt>
 <dd> Half a <code>byte</code>, equivalent to one <code>hexadecimal</code> digit, and worth four <code>bits</code>.</dd></dl>
 <h3>O</h3>
@@ -750,7 +750,7 @@ description: "perlglossary – Perl Glossary"
 <dd> The subtle but sometimes brutal art of attempting to turn your possibly malformed program into a valid <code>syntax tree</code>.</dd>
 <dt>patch</dt>
 <dd> To fix by applying one, as it were. In the realm of hackerdom, a listing of the differences between two versions of a program as might be applied by the <code><a href="/docs/linux/man/1-patch/">patch</a></code>(1) program when you want to fix a bug or upgrade your old version.</dd>
-<dt><font SIZE="-1">PATH</font></dt>
+<dt>PATH</dt>
 <dd> The list of <code>directories</code> the system searches to find a program you want to <code>execute</code>. The list is stored as one of your <code>environment variables</code>, accessible in Perl as <tt>$ENV{PATH}</tt>.</dd>
 <dt>pathname</dt>
 <dd> A fully qualified filename such as <i>/usr/bin/perl</i>. Sometimes confused with <tt>&quot;PATH&quot;</tt>.</dd>
@@ -758,8 +758,8 @@ description: "perlglossary – Perl Glossary"
 <dd> A template used in <code>pattern matching</code>.</dd>
 <dt>pattern matching</dt>
 <dd> Taking a pattern, usually a <code>regular expression</code>, and trying the pattern various ways on a string to see whether there’s any way to make it fit. Often used to pick interesting tidbits out of a file.</dd>
-<dt><font SIZE="-1">PAUSE</font></dt>
-<dd> The Perl Authors Upload SErver (&lt;<a rel="nofollow" href="http://pause.perl.org">http://pause.perl.org</a>&gt;), the gateway for <code>modules</code> on their way to <font SIZE="-1"><code>CPAN</code></font>.</dd>
+<dt>PAUSE</dt>
+<dd> The Perl Authors Upload SErver (&lt;<a rel="nofollow" href="http://pause.perl.org">http://pause.perl.org</a>&gt;), the gateway for <code>modules</code> on their way to <code>CPAN</code>.</dd>
 <dt>Perl mongers</dt>
 <dd> A Perl user group, taking the form of its name from the New York Perl mongers, the first Perl user group. Find one near you at &lt;<a rel="nofollow" href="http://www.pm.org">http://www.pm.org</a>&gt;.</dd>
 <dt>permission bits</dt>
@@ -781,14 +781,14 @@ description: "perlglossary – Perl Glossary"
 <dt>polymorphism</dt>
 <dd> The notion that you can tell an <code>object</code> to do something generic, and the object will interpret the command in different ways depending on its type. [&lt; Greek πολυ- + μορϕή, many forms.]</dd>
 <dt>port</dt>
-<dd> The part of the address of a <font SIZE="-1">TCP</font> or <font SIZE="-1">UDP</font> socket that directs packets to the correct process after finding the right machine, something like the phone extension you give when you reach the company operator. Also the result of converting code to run on a different platform than originally intended, or the verb denoting this conversion.</dd>
+<dd> The part of the address of a TCP or UDP socket that directs packets to the correct process after finding the right machine, something like the phone extension you give when you reach the company operator. Also the result of converting code to run on a different platform than originally intended, or the verb denoting this conversion.</dd>
 <dt>portable</dt>
-<dd> Once upon a time, C code compilable under both <font SIZE="-1">BSD</font> and SysV. In general, code that can be easily converted to run on another <code>platform</code>, where “easily” can be defined however you like, and usually is. Anything may be considered portable if you try hard enough, such as a mobile home or London Bridge.</dd>
+<dd> Once upon a time, C code compilable under both BSD and SysV. In general, code that can be easily converted to run on another <code>platform</code>, where “easily” can be defined however you like, and usually is. Anything may be considered portable if you try hard enough, such as a mobile home or London Bridge.</dd>
 <dt>porter</dt>
 <dd> Someone who “carries” software from one <code>platform</code> to another. Porting programs written in platform-dependent languages such as C can be difficult work, but porting programs like Perl is very much worth the agony.</dd>
 <dt>possessive</dt>
 <dd> Said of quantifiers and groups in patterns that refuse to give up anything once they’ve gotten their mitts on it. Catchier and easier to say than the even more formal <i>nonbacktrackable</i>.</dd>
-<dt><font SIZE="-1">POSIX</font></dt>
+<dt>POSIX</dt>
 <dd> The Portable Operating System Interface specification.</dd>
 <dt>postfix</dt>
 <dd> An <code>operator</code> that follows its <code>operand</code>, as in <tt>&quot;$x++&quot;</tt>.</dd>
@@ -803,7 +803,7 @@ description: "perlglossary – Perl Glossary"
 <dt>preprocessing</dt>
 <dd> What some helper <code>process</code> did to transform the incoming data into a form more suitable for the current process. Often done with an incoming <code>pipe</code>. See also <code>C preprocessor</code>.</dd>
 <dt>primary maintainer</dt>
-<dd> The author that <font SIZE="-1">PAUSE</font> allows to assign <code>co-maintainer</code> permissions to a <code>namespace</code>. A primary maintainer can give up this distinction by assigning it to another <font SIZE="-1">PAUSE</font> author. See Camel chapter 19, “CPAN”.</dd>
+<dd> The author that PAUSE allows to assign <code>co-maintainer</code> permissions to a <code>namespace</code>. A primary maintainer can give up this distinction by assigning it to another PAUSE author. See Camel chapter 19, “CPAN”.</dd>
 <dt>procedure</dt>
 <dd> A <code>subroutine</code>.</dd>
 <dt>process</dt>
@@ -832,7 +832,7 @@ description: "perlglossary – Perl Glossary"
 <dd> A notional “baton” handed around the Perl community indicating who is the lead integrator in some arena of development.</dd>
 <dt>pumpking</dt>
 <dd> A <code>pumpkin</code> holder, the person in charge of pumping the pump, or at least priming it. Must be willing to play the part of the Great Pumpkin now and then.</dd>
-<dt><font SIZE="-1">PV</font></dt>
+<dt>PV</dt>
 <dd> A “pointer value”, which is Perl Internals Talk for a <tt>&quot;char*&quot;</tt>.</dd></dl>
 <h3>Q</h3>
 <dl>
@@ -870,7 +870,7 @@ description: "perlglossary – Perl Glossary"
 <dd> A word with a specific, built-in meaning to a <code>compiler</code>, such as <tt>&quot;if&quot;</tt> or <tt>&quot;delete&quot;</tt>. In many languages (not Perl), it’s illegal to use reserved words to name anything else. (Which is why they’re reserved, after all.) In Perl, you just can’t use them to name <code>labels</code> or <code>filehandles</code>. Also called “keywords”.</dd>
 <dt>return value</dt>
 <dd> The <code>value</code> produced by a <code>subroutine</code> or <code>expression</code> when evaluated. In Perl, a return value may be either a <code>list</code> or a <code>scalar</code>.</dd>
-<dt><font SIZE="-1">RFC</font></dt>
+<dt>RFC</dt>
 <dd> Request For Comment, which despite the timid connotations is the name of a series of important standards documents.</dd>
 <dt>right shift</dt>
 <dd> A <code>bit shift</code> that divides a number by some power of 2.</dd>
@@ -878,7 +878,7 @@ description: "perlglossary – Perl Glossary"
 <dd> A name for a concrete set of behaviors. A role is a way to add behavior to a class without inheritance.</dd>
 <dt>root</dt>
 <dd> The superuser (<tt>&quot;UID&quot;</tt> == 0). Also the top-level directory of the filesystem.</dd>
-<dt><font SIZE="-1">RTFM</font></dt>
+<dt>RTFM</dt>
 <dd> What you are told when someone thinks you should Read The Fine Manual.</dd>
 <dt>run phase</dt>
 <dd> Any time after Perl starts running your main program. See also <code>compile phase</code>. Run phase is mostly spent in <code>runtime</code> but may also be spent in <code>compile time</code> when <tt>&quot;require&quot;</tt>, <tt>&quot;do&quot;</tt> <i></i>&quot;FILE&quot;<i></i>, or <tt>&quot;eval&quot;</tt> <i></i>&quot;STRING&quot;<i></i> operators are executed, or when a substitution uses the <tt>&quot;/ee&quot;</tt> modifier.</dd>
@@ -886,8 +886,8 @@ description: "perlglossary – Perl Glossary"
 <dd> The time when Perl is actually doing what your code says to do, as opposed to the earlier period of time when it was trying to figure out whether what you said made any sense whatsoever, which is <code>compile time</code>.</dd>
 <dt>runtime pattern</dt>
 <dd> A pattern that contains one or more variables to be interpolated before parsing the pattern as a <code>regular expression</code>, and that therefore cannot be analyzed at compile time, but must be reanalyzed each time the pattern match operator is evaluated. Runtime patterns are useful but expensive.</dd>
-<dt><font SIZE="-1">RV</font></dt>
-<dd> A recreational vehicle, not to be confused with vehicular recreation. <font SIZE="-1">RV</font> also means an internal Reference Value of the type a <code>scalar</code> can hold. See also <font SIZE="-1"><code>IV</code></font> and <font SIZE="-1"><code>NV</code></font> if you’re not confused yet.</dd>
+<dt>RV</dt>
+<dd> A recreational vehicle, not to be confused with vehicular recreation. RV also means an internal Reference Value of the type a <code>scalar</code> can hold. See also <code>IV</code> and <code>NV</code> if you’re not confused yet.</dd>
 <dt>rvalue</dt>
 <dd> A <code>value</code> that you might find on the right side of an <code>assignment</code>. See also <code>lvalue</code>.</dd></dl>
 <h3>S</h3>
@@ -956,7 +956,7 @@ description: "perlglossary – Perl Glossary"
 <dt>source filter</dt>
 <dd> A special kind of <code>module</code> that does <code>preprocessing</code> on your script just before it gets to the <code>tokener</code>.</dd>
 <dt>stack</dt>
-<dd> A device you can put things on the top of, and later take them back off in the opposite order in which you put them on. See <font SIZE="-1"><code>LIFO</code></font>.</dd>
+<dd> A device you can put things on the top of, and later take them back off in the opposite order in which you put them on. See <code>LIFO</code>.</dd>
 <dt>standard</dt>
 <dd> Included in the official Perl distribution, as in a standard module, a standard tool, or a standard Perl <code>manpage</code>.</dd>
 <dt>standard error</dt>
@@ -975,7 +975,7 @@ description: "perlglossary – Perl Glossary"
 <dd> A <code>conditional</code> or <code>loop</code> that you put after the <code>statement</code> instead of before, if you know what we mean.</dd>
 <dt>static</dt>
 <dd> Varying slowly compared to something else. (Unfortunately, everything is relatively stable compared to something else, except for certain elementary particles, and we’re not so sure about them.) In computers, where things are supposed to vary rapidly, “static” has a derogatory connotation, indicating a slightly dysfunctional <code>variable</code>, <code>subroutine</code>, or <code>method</code>. In Perl culture, the word is politely avoided. </dd>
-<p> If you’re a C or C<font SIZE="-2">++</font> programmer, you might be looking for Perl’s <tt>&quot;state&quot;</tt> keyword.</p>
+<p> If you’re a C or C++ programmer, you might be looking for Perl’s <tt>&quot;state&quot;</tt> keyword.</p>
 <dt>static method</dt>
 <dd> No such thing. See <code>class method</code>.</dd>
 <dt>static scoping</dt>
@@ -986,13 +986,13 @@ description: "perlglossary – Perl Glossary"
 <dd> A special internal spot in which Perl keeps the information about the last <code>file</code> on which you requested information.</dd>
 <dt>status</dt>
 <dd> The <code>value</code> returned to the parent <code>process</code> when one of its child processes dies. This value is placed in the special variable <tt>$?</tt>. Its upper eight <code>bits</code> are the exit status of the defunct process, and its lower eight bits identify the signal (if any) that the process died from. On Unix systems, this status value is the same as the status word returned by <i><a href="/docs/linux/man/2-wait/">wait</a></i>(2). See <tt>&quot;system&quot;</tt> in Camel chapter 27, “Functions”.</dd>
-<dt><font SIZE="-1">STDERR</font></dt>
+<dt>STDERR</dt>
 <dd> See <code>standard error</code>.</dd>
-<dt><font SIZE="-1">STDIN</font></dt>
+<dt>STDIN</dt>
 <dd> See <code>standard input</code>.</dd>
-<dt><font SIZE="-1">STDIO</font></dt>
+<dt>STDIO</dt>
 <dd> See <code>standard I/O</code>.</dd>
-<dt><font SIZE="-1">STDOUT</font></dt>
+<dt>STDOUT</dt>
 <dd> See <code>standard output</code>.</dd>
 <dt>stream</dt>
 <dd> A flow of data into or out of a process as a steady sequence of bytes or characters, without the appearance of being broken up into packets. This is a kind of <code>interface</code>—the underlying <code>implementation</code> may well break your data up into separate packets for delivery, but this is hidden from you.</dd>
@@ -1022,8 +1022,8 @@ description: "perlglossary – Perl Glossary"
 <dd> See <code>base class</code>.</dd>
 <dt>superuser</dt>
 <dd> The person whom the <code>operating system</code> will let do almost anything. Typically your system administrator or someone pretending to be your system administrator. On Unix systems, the <code>root</code> user. On Windows systems, usually the Administrator user.</dd>
-<dt><font SIZE="-1">SV</font></dt>
-<dd> Short for “scalar value”. But within the Perl interpreter, every <code>referent</code> is treated as a member of a class derived from <font SIZE="-1">SV,</font> in an object-oriented sort of way. Every <code>value</code> inside Perl is passed around as a C language <tt>&quot;SV*&quot;</tt> pointer. The <font SIZE="-1">SV</font> <code>struct</code> knows its own “referent type”, and the code is smart enough (we hope) not to try to call a <code>hash</code> function on a <code>subroutine</code>.</dd>
+<dt>SV</dt>
+<dd> Short for “scalar value”. But within the Perl interpreter, every <code>referent</code> is treated as a member of a class derived from SV, in an object-oriented sort of way. Every <code>value</code> inside Perl is passed around as a C language <tt>&quot;SV*&quot;</tt> pointer. The SV <code>struct</code> knows its own “referent type”, and the code is smart enough (we hope) not to try to call a <code>hash</code> function on a <code>subroutine</code>.</dd>
 <dt>switch</dt>
 <dd> An option you give on a command line to influence the way your program works, usually introduced with a minus sign. The word is also used as a nickname for a <code>switch statement</code>.</dd>
 <dt>switch cluster</dt>
@@ -1058,7 +1058,7 @@ description: "perlglossary – Perl Glossary"
 <dd> Said of data derived from the grubby hands of a user, and thus unsafe for a secure program to rely on. Perl does taint checks if you run a <code>setuid</code> (or <code>setgid</code>) program, or if you use the <tt>&quot;–T&quot;</tt> switch.</dd>
 <dt>taint mode</dt>
 <dd> Running under the <tt>&quot;–T&quot;</tt> switch, marking all external data as suspect and refusing to use it with system commands. See Camel chapter 20, “Security”.</dd>
-<dt><font SIZE="-1">TCP</font></dt>
+<dt>TCP</dt>
 <dd> Short for Transmission Control Protocol. A protocol wrapped around the Internet Protocol to make an unreliable packet transmission mechanism appear to the application program to be a reliable <code>stream</code> of bytes. (Usually.)</dd>
 <dt>term</dt>
 <dd> Short for a “terminal”—that is, a leaf node of a <code>syntax tree</code>. A thing that functions grammatically as an <code>operand</code> for the operators in an expression.</dd>
@@ -1074,7 +1074,7 @@ description: "perlglossary – Perl Glossary"
 <dd> The bond between a magical variable and its implementation class. See the <tt>&quot;tie&quot;</tt> function in Camel chapter 27, “Functions” and Camel chapter 14, “Tied Variables”.</dd>
 <dt>titlecase</dt>
 <dd> The case used for capitals that are followed by lowercase characters instead of by more capitals. Sometimes called sentence case or headline case. English doesn’t use Unicode titlecase, but casing rules for English titles are more complicated than simply capitalizing each word’s first character.</dd>
-<dt><font SIZE="-1">TMTOWTDI</font></dt>
+<dt>TMTOWTDI</dt>
 <dd> There’s More Than One Way To Do It, the Perl Motto. The notion that there can be more than one valid path to solving a programming problem in context. (This doesn’t mean that more ways are always better or that all possible paths are equally desirable—just that there need not be One True Way.)</dd>
 <dt>token</dt>
 <dd> A morpheme in a programming language, the smallest unit of text with semantic significance.</dd>
@@ -1103,19 +1103,19 @@ description: "perlglossary – Perl Glossary"
 <dt>type casting</dt>
 <dd> Converting data from one type to another. C permits this. Perl does not need it. Nor want it.</dd>
 <dt>typedef</dt>
-<dd> A type definition in the C and C<font SIZE="-2">++</font> languages.</dd>
+<dd> A type definition in the C and C++ languages.</dd>
 <dt>typed lexical</dt>
 <dd> A <code>lexical variable</code> lexical&gt;that is declared with a <code>class</code> type: <tt>&quot;my Pony $bill&quot;</tt>.</dd>
 <dt>typeglob</dt>
 <dd> Use of a single identifier, prefixed with <tt>&quot;*&quot;</tt>. For example, <tt>*name</tt> stands for any or all of <tt>$name</tt>, <tt>@name</tt>, <tt>%name</tt>, <tt>&amp;name</tt>, or just <tt>&quot;name&quot;</tt>. How you use it determines whether it is interpreted as all or only one of them. See “Typeglobs and Filehandles” in Camel chapter 2, “Bits and Pieces”.</dd>
 <dt>typemap</dt>
-<dd> A description of how C types may be transformed to and from Perl types within an <code>extension</code> module written in <font SIZE="-1"><code>XS</code></font>.</dd></dl>
+<dd> A description of how C types may be transformed to and from Perl types within an <code>extension</code> module written in <code>XS</code>.</dd></dl>
 <h3>U</h3>
 <dl>
-<dt><font SIZE="-1">UDP</font></dt>
+<dt>UDP</dt>
 <dd> User Datagram Protocol, the typical way to send <code>datagrams</code> over the Internet.</dd>
-<dt><font SIZE="-1">UID</font></dt>
-<dd> A user <font SIZE="-1">ID.</font> Often used in the context of <code>file</code> or <code>process</code> ownership.</dd>
+<dt>UID</dt>
+<dd> A user ID. Often used in the context of <code>file</code> or <code>process</code> ownership.</dd>
 <dt>umask</dt>
 <dd> A mask of those <code>permission bits</code> that should be forced off when creating files or directories, in order to establish a policy of whom you’ll ordinarily deny access to. See the <tt>&quot;umask&quot;</tt> function.</dd>
 <dt>unary operator</dt>
@@ -1124,7 +1124,7 @@ description: "perlglossary – Perl Glossary"
 <dd> A character set comprising all the major character sets of the world, more or less. See &lt;<a rel="nofollow" href="http://www.unicode.org">http://www.unicode.org</a>&gt;.</dd>
 <dt>Unix</dt>
 <dd> A very large and constantly evolving language with several alternative and largely incompatible syntaxes, in which anyone can define anything any way they choose, and usually do. Speakers of this language think it’s easy to learn because it’s so easily twisted to one’s own ends, but dialectical differences make tribal intercommunication nearly impossible, and travelers are often reduced to a pidgin-like subset of the language. To be universally understood, a Unix shell programmer must spend years of study in the art. Many have abandoned this discipline and now communicate via an Esperanto-like language called Perl. </dd>
-<p> In ancient times, Unix was also used to refer to some code that a couple of people at Bell Labs wrote to make use of a <font SIZE="-1">PDP-7</font> computer that wasn’t doing much of anything else at the time.</p>
+<p> In ancient times, Unix was also used to refer to some code that a couple of people at Bell Labs wrote to make use of a PDP-7 computer that wasn’t doing much of anything else at the time.</p>
 <dt>uppercase</dt>
 <dd> In Unicode, not just characters with the General Category of Uppercase Letter, but any character with the Uppercase property, including some Letter Numbers and Symbols. Not to be confused with <code>titlecase</code>.</dd></dl>
 <h3>V</h3>
@@ -1161,14 +1161,14 @@ description: "perlglossary – Perl Glossary"
 <dd> Your current <code>directory</code>, from which relative pathnames are interpreted by the <code>operating system</code>. The operating system knows your current directory because you told it with a <tt>&quot;chdir&quot;</tt>, or because you started out in the place where your parent <code>process</code> was when you were born.</dd>
 <dt>wrapper</dt>
 <dd> A program or subroutine that runs some other program or subroutine for you, modifying some of its input or output to better suit your purposes.</dd>
-<dt><font SIZE="-1">WYSIWYG</font></dt>
+<dt>WYSIWYG</dt>
 <dd> What You See Is What You Get. Usually used when something that appears on the screen matches how it will eventually look, like Perl’s <tt>&quot;format&quot;</tt> declarations. Also used to mean the opposite of magic because everything works exactly as it appears, as in the three- argument form of <tt>&quot;open&quot;</tt>.</dd></dl>
 <h3>X</h3>
 <dl>
-<dt><font SIZE="-1">XS</font></dt>
-<dd> An extraordinarily exported, expeditiously excellent, expressly eXternal Subroutine, executed in existing C or C<font SIZE="-2">++</font> or in an exciting extension language called (exasperatingly) <font SIZE="-1">XS.</font></dd>
-<dt><font SIZE="-1">XSUB</font></dt>
-<dd> An external <code>subroutine</code> defined in <font SIZE="-1"><code>XS</code></font>.</dd></dl>
+<dt>XS</dt>
+<dd> An extraordinarily exported, expeditiously excellent, expressly eXternal Subroutine, executed in existing C or C++ or in an exciting extension language called (exasperatingly) XS.</dd>
+<dt>XSUB</dt>
+<dd> An external <code>subroutine</code> defined in <code>XS</code>.</dd></dl>
 <h3>Y</h3>
 <dl>
 <dt>yacc</dt>

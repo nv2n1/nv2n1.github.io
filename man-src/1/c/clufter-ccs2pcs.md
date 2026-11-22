@@ -10,7 +10,7 @@ description: "clufter – ccs2pcs"
 
 <p> clufter &#8211; ccs2pcs</p>
 <h2>SYNOPSIS</h2>
-<p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs2pcs </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]<br />
+<p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs2pcs </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]<br/>
  <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs2pcs-needle </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> (CMAN,rgmanager)-&gt;(Corosync v2,Pacemaker) cluster cfg. </p>

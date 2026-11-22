@@ -101,7 +101,7 @@ description: "Galeon – gecko-based GNOME web browser"
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://bugzilla.gnome.org.">http://bugzilla.gnome.org.</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2000-2001 Marco Pesenti Gritti<br />
+<p> Copyright &#169; 2000-2001 Marco Pesenti Gritti<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>OTHER INFO</h2>
 <p> The webpage for Galeon is at <a rel="nofollow" href="http://galeon.sourceforge.net.">http://galeon.sourceforge.net.</a> Here you can find info about Galeon and download the latest version.</p>

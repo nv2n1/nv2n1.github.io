@@ -25,21 +25,21 @@ description: "yasm_arch – Yasm Supported Target Architectures"
 <p> Recently, Intel has introduced an essentially identical version of AMD64 called EM64T. </p>
 <p> When an AMD64-supporting processor is executing in 64-bit mode, a number of additional extensions are available, including extra general purpose registers, extra SSE2 registers, and RIP-relative addressing. </p>
 <p> Yasm extends the base NASM syntax to support AMD64 as follows. To enable assembly of instructions for the 64-bit mode of AMD64 processors, use the directive <code>BITS 64</code>. As with NASM&#8217;s BITS directive, this does not change the format of the output object file to 64 bits; it only changes the assembler mode to assume that the instructions being assembled will be run in 64-bit mode. To specify an AMD64 object file, use <code>-m amd64</code> on the Yasm command line, or explicitly target a 64-bit object format such as <code>-f win64</code> or <code>-f elf64</code>. </p>
-<p> <font SIZE="+1"> <code>Register Changes</code></p>
+<p>  <code>Register Changes</code></p>
 <dl>
 <dd>The additional 64-bit general purpose registers are named r8-r15. There are also 8-bit (rXb), 16-bit (rXw), and 32-bit (rXd) subregisters that map to the least significant 8, 16, or 32 bits of the 64-bit register. The original 8 general purpose registers have also been extended to 64-bits: eax, edx, ecx, ebx, esi, edi, esp, and ebp have new 64-bit versions called rax, rdx, rcx, rbx, rsi, rdi, rsp, and rbp respectively. The old 32-bit registers map to the least significant bits of the new 64-bit registers. </dd>
 <p> New 8-bit registers are also available that map to the 8 least significant bits of rsi, rdi, rsp, and rbp. These are called sil, dil, spl, and bpl respectively. Unfortunately, due to the way instructions are encoded, these new 8-bit registers are encoded the same as the old 8-bit registers ah, dh, ch, and bh. The processor tells which is being used by the presence of the new REX prefix that is used to specify the other extended registers. This means it is illegal to mix the use of ah, dh, ch, and bh with an instruction that requires the REX prefix for other reasons. For instance: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>add ah, [r10]</pre>
 </dl>
 <p> (NASM syntax) is not a legal instruction because the use of r10 requires a REX prefix, making it impossible to use ah. </p>
 <p> In 64-bit mode, an additional 8 SSE2 registers are also available. These are named xmm8-xmm15.</dl>
-<p> <font SIZE="+1"> <code>64 Bit Instructions</code></p>
+<p>  <code>64 Bit Instructions</code></p>
 <dl>
 <dd>By default, most operations in 64-bit mode remain 32-bit; operations that are 64-bit usually require a REX prefix (one bit in the REX prefix determines whether an operation is 64-bit or 32-bit). Thus, essentially all 32-bit instructions have a 64-bit version, and the 64-bit versions of instructions can use extended registers &#8220;for free&#8221; (as the REX prefix is already present). Examples in NASM syntax: </dd>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>mov eax, 1 ; 32-bit instruction</pre>
 </dl>
 <dl>
@@ -60,11 +60,11 @@ description: "yasm_arch – Yasm Supported Target Architectures"
 <pre>push r11 ; 2-byte instruction with REX prefix</pre>
 </dd></dl>
 </dl>
-<p> <font SIZE="+1"> <code>Implicit Zero Extension</code></p>
+<p>  <code>Implicit Zero Extension</code></p>
 <dl>
 <dd>Results of 32-bit operations are implicitly zero-extended to the upper 32 bits of the corresponding 64-bit register. 16 and 8 bit operations, on the other hand, do not affect upper bits of the register (just as in 32-bit and 16-bit modes). This can be used to generate smaller code in some instances. Examples in NASM syntax: </dd>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>mov ecx, 1 ; 1 byte shorter than mov rcx, 1</pre>
 </dl>
 <dl>
@@ -72,11 +72,11 @@ description: "yasm_arch – Yasm Supported Target Architectures"
 <pre>and edx, 3 ; equivalent to and rdx, 3</pre>
 </dd></dl>
 </dl>
-<p> <font SIZE="+1"> <code>Immediates</code></p>
+<p>  <code>Immediates</code></p>
 <dl>
 <dd>For most instructions in 64-bit mode, immediate values remain 32 bits; their value is sign-extended into the upper 32 bits of the target register prior to being used. The exception is the mov instruction, which can take a 64-bit immediate when the destination is a 64-bit register. Examples in NASM syntax: </dd>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>add rax, 1 ; optimized down to signed 8-bit</pre>
 </dl>
 <dl>
@@ -177,11 +177,11 @@ description: "yasm_arch – Yasm Supported Target Architectures"
 <pre>mov rcx, qword sym ; 10 byte (64-bit immediate)</pre>
 </dd></dl>
 </dl>
-<p> <font SIZE="+1"> <code>Displacements</code></p>
+<p>  <code>Displacements</code></p>
 <dl>
 <dd>Just like immediates, displacements, for the most part, remain 32 bits and are sign extended prior to use. Again, the exception is one restricted form of the mov instruction: between the al/ax/eax/rax register and a 64-bit absolute address (no registers allowed in the effective address). In NASM syntax, use of the 64-bit absolute form requires <code>[qword]</code>. Examples in NASM syntax: </dd>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>mov eax, [1] ; 32 bit, with sign extension</pre>
 </dl>
 <dl>
@@ -197,12 +197,12 @@ description: "yasm_arch – Yasm Supported Target Architectures"
 <pre>mov al, [0x1122334455667788] ; truncated to 32-bit (warning)</pre>
 </dd></dl>
 </dl>
-<p> <font SIZE="+1"> <code>RIP Relative Addressing</code></p>
+<p>  <code>RIP Relative Addressing</code></p>
 <dl>
 <dd>In 64-bit mode, a new form of effective addressing is available to make it easier to write position-independent code. Any memory reference may be made RIP relative (RIP is the instruction pointer register, which contains the address of the location immediately following the current instruction). </dd>
 <p> In NASM syntax, there are two ways to specify RIP-relative addressing: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>mov dword [rip+10], 1</pre>
 </dl>
 <p> stores the value 1 ten bytes after the end of the instruction. <code>10</code> can also be a symbolic constant, and will be treated the same way. On the other hand, </p>
@@ -288,12 +288,12 @@ description: "yasm_arch – Yasm Supported Target Architectures"
 <pre>mov [rel sym], rbx ; RIP-relative (explicit override)</pre>
 </dd></dl>
 </dl>
-<p> <font SIZE="+1"> <code>Memory references</code></p>
+<p>  <code>Memory references</code></p>
 <dl>
 <dd>Usually the size of a memory reference can be deduced by which registers you&#8217;re moving&#8211;for example, &quot;mov [rax],ecx&quot; is a 32-bit move, because ecx is 32 bits. YASM currently gives the non-obvious &quot;invalid combination of opcode and operands&quot; error if it can&#8217;t figure out how much memory you&#8217;re moving. The fix in this case is to add a memory size specifier: qword, dword, word, or byte. </dd>
 <p> Here&#8217;s a 64-bit memory move, which sets 8 bytes starting at rax: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>mov qword [rax], 1</pre>
 </dl>
 <p> Here&#8217;s a 32-bit memory move, which sets 4 bytes: </p>

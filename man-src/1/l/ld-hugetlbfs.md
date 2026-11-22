@@ -15,9 +15,9 @@ description: "ld.hugetlbfs – link a program for huge pages"
 <dl>
 <dt><code>-Wl,&#8211;hugetlbfs-align</code></dt>
 <dd>This method of linking an application permits greater flexibility at runtime. Using HUGETLB_ELFMAP, it is possible to control which program segments are placed in hugepages. The following four settings will cause the indicated segments to be placed in hugepages: </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>HUGETLB_ELFMAP=R&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Read-only segments&nbsp;<wbr>(text)<br />
-&nbsp;<wbr>&nbsp;<wbr>HUGETLB_ELFMAP=W&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Writable segments&nbsp;<wbr>(data/BSS)<br />
-&nbsp;<wbr>&nbsp;<wbr>HUGETLB_ELFMAP=RW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>All segments&nbsp;<wbr>(text/data/BSS)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>HUGETLB_ELFMAP=R&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Read-only segments&nbsp;<wbr>(text)<br/>
+&nbsp;<wbr>&nbsp;<wbr>HUGETLB_ELFMAP=W&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Writable segments&nbsp;<wbr>(data/BSS)<br/>
+&nbsp;<wbr>&nbsp;<wbr>HUGETLB_ELFMAP=RW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>All segments&nbsp;<wbr>(text/data/BSS)<br/>
 &nbsp;<wbr>&nbsp;<wbr>HUGETLB_ELFMAP=no&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>No segments </p>
 <p> It is possible to select specific huge page sizes for read-only and writable segments by using the following advanced syntax: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>HUGETLB_ELFMAP=[R[=&lt;pagesize&gt;]:[W[=&lt;pagesize&gt;]] </p>

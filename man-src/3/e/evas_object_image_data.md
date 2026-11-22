@@ -9,17 +9,17 @@ description: "Image Object Image Data Functions – Functions that allow you to 
 
 <p>Image Object Image Data Functions &#8211; Functions that allow you to access or modify the image pixel data of an image object. </p>
 <h3>Functions</h3>
-<p>EAPI void * <code>evas_object_image_data_convert</code> (<code>Evas_Object</code> *obj, <code>Evas_Colorspace</code> to_cspace)<br />
- <i>Converts the raw image data of the given image object to the specified colorspace. </i><br />
- EAPI void <code>evas_object_image_data_set</code> (<code>Evas_Object</code> *obj, void *data)<br />
- <i>Sets the raw image data of the given image object. </i><br />
- EAPI void * <code>evas_object_image_data_get</code> (const <code>Evas_Object</code> *obj, Evas_Bool for_writing)<br />
- <i>Get a pointer to the raw image data of the given image object. </i><br />
- EAPI void <code>evas_object_image_preload</code> (const <code>Evas_Object</code> *obj, Evas_Bool cancel)<br />
- <i>Preload image in the background. </i><br />
- EAPI void <code>evas_object_image_data_copy_set</code> (<code>Evas_Object</code> *obj, void *data)<br />
- <i>Replaces the raw image data of the given image object. </i><br />
- EAPI void <code>evas_object_image_data_update_add</code> (<code>Evas_Object</code> *obj, int x, int y, int w, int h)<br />
+<p>EAPI void * <code>evas_object_image_data_convert</code> (<code>Evas_Object</code> *obj, <code>Evas_Colorspace</code> to_cspace)<br/>
+ <i>Converts the raw image data of the given image object to the specified colorspace. </i><br/>
+ EAPI void <code>evas_object_image_data_set</code> (<code>Evas_Object</code> *obj, void *data)<br/>
+ <i>Sets the raw image data of the given image object. </i><br/>
+ EAPI void * <code>evas_object_image_data_get</code> (const <code>Evas_Object</code> *obj, Evas_Bool for_writing)<br/>
+ <i>Get a pointer to the raw image data of the given image object. </i><br/>
+ EAPI void <code>evas_object_image_preload</code> (const <code>Evas_Object</code> *obj, Evas_Bool cancel)<br/>
+ <i>Preload image in the background. </i><br/>
+ EAPI void <code>evas_object_image_data_copy_set</code> (<code>Evas_Object</code> *obj, void *data)<br/>
+ <i>Replaces the raw image data of the given image object. </i><br/>
+ EAPI void <code>evas_object_image_data_update_add</code> (<code>Evas_Object</code> *obj, int x, int y, int w, int h)<br/>
  <i>Mark a sub-region of the given image object to be redrawn. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that allow you to access or modify the image pixel data of an image object.</p>
@@ -30,7 +30,7 @@ description: "Image Object Image Data Functions – Functions that allow you to 
 <p> See <code>evas_object_image_colorspace_get</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.<br />
+<dd><i>obj</i> The given image object.<br/>
  <i>to_cspace</i> The colorspace to which the image raw data will be converted.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -43,7 +43,7 @@ description: "Image Object Image Data Functions – Functions that allow you to 
 <p> See <code>evas_object_image_data_get</code> for more details. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.<br />
+<dd><i>obj</i> The given image object.<br/>
  <i>data</i> The raw data.</dd></dl>
 <h3>EAPI void* evas_object_image_data_get (const <code>Evas_Object</code> * obj, Evas_Bool for_writing)</h3>
 <p>Get a pointer to the raw image data of the given image object. </p>
@@ -51,7 +51,7 @@ description: "Image Object Image Data Functions – Functions that allow you to 
 <p> This is best suited when you want to modify an existing image, without changing its dimensions. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.<br />
+<dd><i>obj</i> The given image object.<br/>
  <i>for_writing</i> Whether the data being retrieved will be modified.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -61,7 +61,7 @@ description: "Image Object Image Data Functions – Functions that allow you to 
 <p> Note that the raw data must be of the same size and colorspace of the image. If data is NULL the current image data will be freed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.<br />
+<dd><i>obj</i> The given image object.<br/>
  <i>data</i> The raw data, or NULL.</dd></dl>
 <p> References EVAS_LOAD_ERROR_NONE.</p>
 <h3>EAPI void evas_object_image_data_update_add (<code>Evas_Object</code> * obj, int x, int y, int w, int h)</h3>
@@ -69,10 +69,10 @@ description: "Image Object Image Data Functions – Functions that allow you to 
 <p> This function schedules a particular rectangular region of an image object to be updated (redrawn) at the next render. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.<br />
- <i>x</i> X-offset of the region to be updated.<br />
- <i>y</i> Y-offset of the region to be updated.<br />
- <i>w</i> Width of the region to be updated.<br />
+<dd><i>obj</i> The given image object.<br/>
+ <i>x</i> X-offset of the region to be updated.<br/>
+ <i>y</i> Y-offset of the region to be updated.<br/>
+ <i>w</i> Width of the region to be updated.<br/>
  <i>h</i> Height of the region to be updated.</dd></dl>
 <p> References evas_list_append(). </p>
 <p> Referenced by evas_object_image_alpha_set().</p>
@@ -82,7 +82,7 @@ description: "Image Object Image Data Functions – Functions that allow you to 
 <p> If cancel is set, it will remove the image from the workqueue. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.<br />
+<dd><i>obj</i> The given image object.<br/>
  <i>cancel</i> 0 means add to the workqueue, 1 remove it.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

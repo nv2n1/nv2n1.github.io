@@ -18,7 +18,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>Dec</td>
 <td>Hex</td>
 <td ALIGN=center>Char</td>
-<td><font SIZE="-1">Description</font>
+<td>Description
 </td>
 </tr>
 <tr VALIGN=top>
@@ -31,7 +31,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>128</td>
 <td>80</td>
 <td ALIGN=center>─</td>
-<td><font SIZE="-1">BOX DRAWINGS LIGHT HORIZONTAL</font>
+<td>BOX DRAWINGS LIGHT HORIZONTAL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -39,7 +39,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>129</td>
 <td>81</td>
 <td ALIGN=center>│</td>
-<td><font SIZE="-1">BOX DRAWINGS LIGHT VERTICAL</font>
+<td>BOX DRAWINGS LIGHT VERTICAL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -47,7 +47,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>130</td>
 <td>82</td>
 <td ALIGN=center>┌</td>
-<td><font SIZE="-1">BOX DRAWINGS LIGHT DOWN AND RIGHT</font>
+<td>BOX DRAWINGS LIGHT DOWN AND RIGHT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -55,7 +55,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>131</td>
 <td>83</td>
 <td ALIGN=center>┐</td>
-<td><font SIZE="-1">BOX DRAWINGS LIGHT DOWN AND LEFT</font>
+<td>BOX DRAWINGS LIGHT DOWN AND LEFT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -63,7 +63,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>132</td>
 <td>84</td>
 <td ALIGN=center>└</td>
-<td><font SIZE="-1">BOX DRAWINGS LIGHT UP AND RIGHT</font>
+<td>BOX DRAWINGS LIGHT UP AND RIGHT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -71,7 +71,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>133</td>
 <td>85</td>
 <td ALIGN=center>┘</td>
-<td><font SIZE="-1">BOX DRAWINGS LIGHT UP AND LEFT</font>
+<td>BOX DRAWINGS LIGHT UP AND LEFT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -79,7 +79,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>134</td>
 <td>86</td>
 <td ALIGN=center>├</td>
-<td><font SIZE="-1">BOX DRAWINGS LIGHT VERTICAL AND RIGHT</font>
+<td>BOX DRAWINGS LIGHT VERTICAL AND RIGHT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -87,7 +87,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>135</td>
 <td>87</td>
 <td ALIGN=center>┤</td>
-<td><font SIZE="-1">BOX DRAWINGS LIGHT VERTICAL AND LEFT</font>
+<td>BOX DRAWINGS LIGHT VERTICAL AND LEFT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -95,7 +95,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>136</td>
 <td>88</td>
 <td ALIGN=center>┬</td>
-<td><font SIZE="-1">BOX DRAWINGS LIGHT DOWN AND HORIZONTAL</font>
+<td>BOX DRAWINGS LIGHT DOWN AND HORIZONTAL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -103,7 +103,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>137</td>
 <td>89</td>
 <td ALIGN=center>┴</td>
-<td><font SIZE="-1">BOX DRAWINGS LIGHT UP AND HORIZONTAL</font>
+<td>BOX DRAWINGS LIGHT UP AND HORIZONTAL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -111,7 +111,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>138</td>
 <td>8A</td>
 <td ALIGN=center>┼</td>
-<td><font SIZE="-1">BOX DRAWINGS LIGHT VERTICAL AND HORIZONTAL</font>
+<td>BOX DRAWINGS LIGHT VERTICAL AND HORIZONTAL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -119,7 +119,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>139</td>
 <td>8B</td>
 <td ALIGN=center>▀</td>
-<td><font SIZE="-1">UPPER HALF BLOCK</font>
+<td>UPPER HALF BLOCK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -127,7 +127,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>140</td>
 <td>8C</td>
 <td ALIGN=center>▄</td>
-<td><font SIZE="-1">LOWER HALF BLOCK</font>
+<td>LOWER HALF BLOCK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -135,7 +135,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>141</td>
 <td>8D</td>
 <td ALIGN=center>█</td>
-<td><font SIZE="-1">FULL BLOCK</font>
+<td>FULL BLOCK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -143,7 +143,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>142</td>
 <td>8E</td>
 <td ALIGN=center>▌</td>
-<td><font SIZE="-1">LEFT HALF BLOCK</font>
+<td>LEFT HALF BLOCK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -151,7 +151,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>143</td>
 <td>8F</td>
 <td ALIGN=center>▐</td>
-<td><font SIZE="-1">RIGHT HALF BLOCK</font>
+<td>RIGHT HALF BLOCK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -159,7 +159,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>144</td>
 <td>90</td>
 <td ALIGN=center>░</td>
-<td><font SIZE="-1">LIGHT SHADE</font>
+<td>LIGHT SHADE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -167,7 +167,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>145</td>
 <td>91</td>
 <td ALIGN=center>▒</td>
-<td><font SIZE="-1">MEDIUM SHADE</font>
+<td>MEDIUM SHADE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -175,7 +175,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>146</td>
 <td>92</td>
 <td ALIGN=center>▓</td>
-<td><font SIZE="-1">DARK SHADE</font>
+<td>DARK SHADE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -183,7 +183,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>147</td>
 <td>93</td>
 <td ALIGN=center>⌠</td>
-<td><font SIZE="-1">TOP HALF INTEGRAL</font>
+<td>TOP HALF INTEGRAL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -191,7 +191,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>148</td>
 <td>94</td>
 <td ALIGN=center>■</td>
-<td><font SIZE="-1">BLACK SQUARE</font>
+<td>BLACK SQUARE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -199,7 +199,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>149</td>
 <td>95</td>
 <td ALIGN=center>∙</td>
-<td><font SIZE="-1">BULLET OPERATOR</font>
+<td>BULLET OPERATOR
 </td>
 </tr>
 <tr VALIGN=top>
@@ -207,7 +207,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>150</td>
 <td>96</td>
 <td ALIGN=center>√</td>
-<td><font SIZE="-1">SQUARE ROOT</font>
+<td>SQUARE ROOT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -215,7 +215,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>151</td>
 <td>97</td>
 <td ALIGN=center>≈</td>
-<td><font SIZE="-1">ALMOST EQUAL TO</font>
+<td>ALMOST EQUAL TO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -223,7 +223,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>152</td>
 <td>98</td>
 <td ALIGN=center>≤</td>
-<td><font SIZE="-1">LESS-THAN OR EQUAL TO</font>
+<td>LESS-THAN OR EQUAL TO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -231,7 +231,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>153</td>
 <td>99</td>
 <td ALIGN=center>≥</td>
-<td><font SIZE="-1">GREATER-THAN OR EQUAL TO</font>
+<td>GREATER-THAN OR EQUAL TO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -239,7 +239,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>154</td>
 <td>9A</td>
 <td ALIGN=center> </td>
-<td><font SIZE="-1">NO-BREAK SPACE</font>
+<td>NO-BREAK SPACE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -247,7 +247,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>155</td>
 <td>9B</td>
 <td ALIGN=center>⌡</td>
-<td><font SIZE="-1">BOTTOM HALF INTEGRAL</font>
+<td>BOTTOM HALF INTEGRAL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -255,7 +255,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>156</td>
 <td>9C</td>
 <td ALIGN=center>°</td>
-<td><font SIZE="-1">DEGREE SIGN</font>
+<td>DEGREE SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -263,7 +263,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>157</td>
 <td>9D</td>
 <td ALIGN=center>²</td>
-<td><font SIZE="-1">SUPERSCRIPT TWO</font>
+<td>SUPERSCRIPT TWO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -271,7 +271,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>158</td>
 <td>9E</td>
 <td ALIGN=center>·</td>
-<td><font SIZE="-1">MIDDLE DOT</font>
+<td>MIDDLE DOT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -279,7 +279,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>159</td>
 <td>9F</td>
 <td ALIGN=center>÷</td>
-<td><font SIZE="-1">DIVISION SIGN</font>
+<td>DIVISION SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -287,7 +287,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>160</td>
 <td>A0</td>
 <td ALIGN=center>═</td>
-<td><font SIZE="-1">BOX DRAWINGS DOUBLE HORIZONTAL</font>
+<td>BOX DRAWINGS DOUBLE HORIZONTAL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -295,7 +295,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>161</td>
 <td>A1</td>
 <td ALIGN=center>║</td>
-<td><font SIZE="-1">BOX DRAWINGS DOUBLE VERTICAL</font>
+<td>BOX DRAWINGS DOUBLE VERTICAL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -303,7 +303,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>162</td>
 <td>A2</td>
 <td ALIGN=center>╒</td>
-<td><font SIZE="-1">BOX DRAWINGS DOWN SINGLE AND RIGHT DOUBLE</font>
+<td>BOX DRAWINGS DOWN SINGLE AND RIGHT DOUBLE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -311,7 +311,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>163</td>
 <td>A3</td>
 <td ALIGN=center>ё</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER IO</font>
+<td>CYRILLIC SMALL LETTER IO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -319,7 +319,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>164</td>
 <td>A4</td>
 <td ALIGN=center>є</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER UKRAINIAN IE</font>
+<td>CYRILLIC SMALL LETTER UKRAINIAN IE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -327,7 +327,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>165</td>
 <td>A5</td>
 <td ALIGN=center>╔</td>
-<td><font SIZE="-1">BOX DRAWINGS DOUBLE DOWN AND RIGHT</font>
+<td>BOX DRAWINGS DOUBLE DOWN AND RIGHT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -335,8 +335,8 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>166</td>
 <td>A6</td>
 <td ALIGN=center>і</td>
-<td><font SIZE="-1"> CYRILLIC SMALL LETTER<br />
- BYELORUSSIAN-UKRAINIAN I </font>
+<td> CYRILLIC SMALL LETTER<br/>
+ BYELORUSSIAN-UKRAINIAN I 
 </td>
 </tr>
 <tr VALIGN=top>
@@ -344,7 +344,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>167</td>
 <td>A7</td>
 <td ALIGN=center>ї</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER YI (Ukrainian)</font>
+<td>CYRILLIC SMALL LETTER YI (Ukrainian)
 </td>
 </tr>
 <tr VALIGN=top>
@@ -352,7 +352,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>168</td>
 <td>A8</td>
 <td ALIGN=center>╗</td>
-<td><font SIZE="-1">BOX DRAWINGS DOUBLE DOWN AND LEFT</font>
+<td>BOX DRAWINGS DOUBLE DOWN AND LEFT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -360,7 +360,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>169</td>
 <td>A9</td>
 <td ALIGN=center>╘</td>
-<td><font SIZE="-1">BOX DRAWINGS UP SINGLE AND RIGHT DOUBLE</font>
+<td>BOX DRAWINGS UP SINGLE AND RIGHT DOUBLE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -368,7 +368,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>170</td>
 <td>AA</td>
 <td ALIGN=center>╙</td>
-<td><font SIZE="-1">BOX DRAWINGS UP DOUBLE AND RIGHT SINGLE</font>
+<td>BOX DRAWINGS UP DOUBLE AND RIGHT SINGLE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -376,7 +376,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>171</td>
 <td>AB</td>
 <td ALIGN=center>╚</td>
-<td><font SIZE="-1">BOX DRAWINGS DOUBLE UP AND RIGHT</font>
+<td>BOX DRAWINGS DOUBLE UP AND RIGHT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -384,7 +384,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>172</td>
 <td>AC</td>
 <td ALIGN=center>╛</td>
-<td><font SIZE="-1">BOX DRAWINGS UP SINGLE AND LEFT DOUBLE</font>
+<td>BOX DRAWINGS UP SINGLE AND LEFT DOUBLE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -392,7 +392,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>173</td>
 <td>AD</td>
 <td ALIGN=center>ґ</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER GHE WITH UPTURN</font>
+<td>CYRILLIC SMALL LETTER GHE WITH UPTURN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -400,7 +400,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>174</td>
 <td>AE</td>
 <td ALIGN=center>╝</td>
-<td><font SIZE="-1">BOX DRAWINGS DOUBLE UP AND LEFT</font>
+<td>BOX DRAWINGS DOUBLE UP AND LEFT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -408,7 +408,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>175</td>
 <td>AF</td>
 <td ALIGN=center>╞</td>
-<td><font SIZE="-1">BOX DRAWINGS VERTICAL SINGLE AND RIGHT DOUBLE</font>
+<td>BOX DRAWINGS VERTICAL SINGLE AND RIGHT DOUBLE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -416,7 +416,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>176</td>
 <td>B0</td>
 <td ALIGN=center>╟</td>
-<td><font SIZE="-1">BOX DRAWINGS VERTICAL DOUBLE AND RIGHT SINGLE</font>
+<td>BOX DRAWINGS VERTICAL DOUBLE AND RIGHT SINGLE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -424,7 +424,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>177</td>
 <td>B1</td>
 <td ALIGN=center>╠</td>
-<td><font SIZE="-1">BOX DRAWINGS DOUBLE VERTICAL AND RIGHT</font>
+<td>BOX DRAWINGS DOUBLE VERTICAL AND RIGHT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -432,7 +432,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>178</td>
 <td>B2</td>
 <td ALIGN=center>╡</td>
-<td><font SIZE="-1">BOX DRAWINGS VERTICAL SINGLE AND LEFT DOUBLE</font>
+<td>BOX DRAWINGS VERTICAL SINGLE AND LEFT DOUBLE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -440,7 +440,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>179</td>
 <td>B3</td>
 <td ALIGN=center>Ё</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER IO</font>
+<td>CYRILLIC CAPITAL LETTER IO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -448,7 +448,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>180</td>
 <td>B4</td>
 <td ALIGN=center>Є</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER UKRAINIAN IE</font>
+<td>CYRILLIC CAPITAL LETTER UKRAINIAN IE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -456,7 +456,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>181</td>
 <td>B5</td>
 <td ALIGN=center>╣</td>
-<td><font SIZE="-1">BOX DRAWINGS DOUBLE VERTICAL AND LEFT</font>
+<td>BOX DRAWINGS DOUBLE VERTICAL AND LEFT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -464,8 +464,8 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>182</td>
 <td>B6</td>
 <td ALIGN=center>І</td>
-<td><font SIZE="-1"> CYRILLIC CAPITAL LETTER<br />
- BYELORUSSIAN-UKRAINIAN I </font>
+<td> CYRILLIC CAPITAL LETTER<br/>
+ BYELORUSSIAN-UKRAINIAN I 
 </td>
 </tr>
 <tr VALIGN=top>
@@ -473,7 +473,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>183</td>
 <td>B7</td>
 <td ALIGN=center>Ї</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER YI (Ukrainian)</font>
+<td>CYRILLIC CAPITAL LETTER YI (Ukrainian)
 </td>
 </tr>
 <tr VALIGN=top>
@@ -481,7 +481,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>184</td>
 <td>B8</td>
 <td ALIGN=center>╦</td>
-<td><font SIZE="-1">BOX DRAWINGS DOUBLE DOWN AND HORIZONTAL</font>
+<td>BOX DRAWINGS DOUBLE DOWN AND HORIZONTAL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -489,7 +489,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>185</td>
 <td>B9</td>
 <td ALIGN=center>╧</td>
-<td><font SIZE="-1">BOX DRAWINGS UP SINGLE AND HORIZONTAL DOUBLE</font>
+<td>BOX DRAWINGS UP SINGLE AND HORIZONTAL DOUBLE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -497,7 +497,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>186</td>
 <td>BA</td>
 <td ALIGN=center>╨</td>
-<td><font SIZE="-1">BOX DRAWINGS UP DOUBLE AND HORIZONTAL SINGLE</font>
+<td>BOX DRAWINGS UP DOUBLE AND HORIZONTAL SINGLE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -505,7 +505,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>187</td>
 <td>BB</td>
 <td ALIGN=center>╩</td>
-<td><font SIZE="-1">BOX DRAWINGS DOUBLE UP AND HORIZONTAL</font>
+<td>BOX DRAWINGS DOUBLE UP AND HORIZONTAL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -513,8 +513,8 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>188</td>
 <td>BC</td>
 <td ALIGN=center>╪</td>
-<td><font SIZE="-1"> BOX DRAWINGS VERTICAL SINGLE<br />
- AND HORIZONTAL DOUBLE </font>
+<td> BOX DRAWINGS VERTICAL SINGLE<br/>
+ AND HORIZONTAL DOUBLE 
 </td>
 </tr>
 <tr VALIGN=top>
@@ -522,7 +522,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>189</td>
 <td>BD</td>
 <td ALIGN=center>Ґ</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER GHE WITH UPTURN</font>
+<td>CYRILLIC CAPITAL LETTER GHE WITH UPTURN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -530,7 +530,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>190</td>
 <td>BE</td>
 <td ALIGN=center>╬</td>
-<td><font SIZE="-1">BOX DRAWINGS DOUBLE VERTICAL AND HORIZONTAL</font>
+<td>BOX DRAWINGS DOUBLE VERTICAL AND HORIZONTAL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -538,7 +538,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>191</td>
 <td>BF</td>
 <td ALIGN=center>©</td>
-<td><font SIZE="-1">COPYRIGHT SIGN</font>
+<td>COPYRIGHT SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -546,7 +546,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>192</td>
 <td>C0</td>
 <td ALIGN=center>ю</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER YU</font>
+<td>CYRILLIC SMALL LETTER YU
 </td>
 </tr>
 <tr VALIGN=top>
@@ -554,7 +554,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>193</td>
 <td>C1</td>
 <td ALIGN=center>а</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER A</font>
+<td>CYRILLIC SMALL LETTER A
 </td>
 </tr>
 <tr VALIGN=top>
@@ -562,7 +562,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>194</td>
 <td>C2</td>
 <td ALIGN=center>б</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER BE</font>
+<td>CYRILLIC SMALL LETTER BE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -570,7 +570,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>195</td>
 <td>C3</td>
 <td ALIGN=center>ц</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER TSE</font>
+<td>CYRILLIC SMALL LETTER TSE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -578,7 +578,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>196</td>
 <td>C4</td>
 <td ALIGN=center>д</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER DE</font>
+<td>CYRILLIC SMALL LETTER DE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -586,7 +586,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>197</td>
 <td>C5</td>
 <td ALIGN=center>е</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER IE</font>
+<td>CYRILLIC SMALL LETTER IE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -594,7 +594,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>198</td>
 <td>C6</td>
 <td ALIGN=center>ф</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER EF</font>
+<td>CYRILLIC SMALL LETTER EF
 </td>
 </tr>
 <tr VALIGN=top>
@@ -602,7 +602,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>199</td>
 <td>C7</td>
 <td ALIGN=center>г</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER GHE</font>
+<td>CYRILLIC SMALL LETTER GHE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -610,7 +610,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>200</td>
 <td>C8</td>
 <td ALIGN=center>х</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER HA</font>
+<td>CYRILLIC SMALL LETTER HA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -618,7 +618,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>201</td>
 <td>C9</td>
 <td ALIGN=center>и</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER I</font>
+<td>CYRILLIC SMALL LETTER I
 </td>
 </tr>
 <tr VALIGN=top>
@@ -626,7 +626,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>202</td>
 <td>CA</td>
 <td ALIGN=center>й</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER SHORT I</font>
+<td>CYRILLIC SMALL LETTER SHORT I
 </td>
 </tr>
 <tr VALIGN=top>
@@ -634,7 +634,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>203</td>
 <td>CB</td>
 <td ALIGN=center>к</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER KA</font>
+<td>CYRILLIC SMALL LETTER KA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -642,7 +642,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>204</td>
 <td>CC</td>
 <td ALIGN=center>л</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER EL</font>
+<td>CYRILLIC SMALL LETTER EL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -650,7 +650,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>205</td>
 <td>CD</td>
 <td ALIGN=center>м</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER EM</font>
+<td>CYRILLIC SMALL LETTER EM
 </td>
 </tr>
 <tr VALIGN=top>
@@ -658,7 +658,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>206</td>
 <td>CE</td>
 <td ALIGN=center>н</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER EN</font>
+<td>CYRILLIC SMALL LETTER EN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -666,7 +666,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>207</td>
 <td>CF</td>
 <td ALIGN=center>о</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER O</font>
+<td>CYRILLIC SMALL LETTER O
 </td>
 </tr>
 <tr VALIGN=top>
@@ -674,7 +674,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>208</td>
 <td>D0</td>
 <td ALIGN=center>п</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER PE</font>
+<td>CYRILLIC SMALL LETTER PE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -682,7 +682,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>209</td>
 <td>D1</td>
 <td ALIGN=center>я</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER YA</font>
+<td>CYRILLIC SMALL LETTER YA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -690,7 +690,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>210</td>
 <td>D2</td>
 <td ALIGN=center>р</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER ER</font>
+<td>CYRILLIC SMALL LETTER ER
 </td>
 </tr>
 <tr VALIGN=top>
@@ -698,7 +698,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>211</td>
 <td>D3</td>
 <td ALIGN=center>с</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER ES</font>
+<td>CYRILLIC SMALL LETTER ES
 </td>
 </tr>
 <tr VALIGN=top>
@@ -706,7 +706,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>212</td>
 <td>D4</td>
 <td ALIGN=center>т</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER TE</font>
+<td>CYRILLIC SMALL LETTER TE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -714,7 +714,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>213</td>
 <td>D5</td>
 <td ALIGN=center>у</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER U</font>
+<td>CYRILLIC SMALL LETTER U
 </td>
 </tr>
 <tr VALIGN=top>
@@ -722,7 +722,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>214</td>
 <td>D6</td>
 <td ALIGN=center>ж</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER ZHE</font>
+<td>CYRILLIC SMALL LETTER ZHE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -730,7 +730,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>215</td>
 <td>D7</td>
 <td ALIGN=center>в</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER VE</font>
+<td>CYRILLIC SMALL LETTER VE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -738,7 +738,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>216</td>
 <td>D8</td>
 <td ALIGN=center>ь</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER SOFT SIGN</font>
+<td>CYRILLIC SMALL LETTER SOFT SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -746,7 +746,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>217</td>
 <td>D9</td>
 <td ALIGN=center>ы</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER YERU</font>
+<td>CYRILLIC SMALL LETTER YERU
 </td>
 </tr>
 <tr VALIGN=top>
@@ -754,7 +754,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>218</td>
 <td>DA</td>
 <td ALIGN=center>з</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER ZE</font>
+<td>CYRILLIC SMALL LETTER ZE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -762,7 +762,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>219</td>
 <td>DB</td>
 <td ALIGN=center>ш</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER SHA</font>
+<td>CYRILLIC SMALL LETTER SHA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -770,7 +770,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>220</td>
 <td>DC</td>
 <td ALIGN=center>э</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER E</font>
+<td>CYRILLIC SMALL LETTER E
 </td>
 </tr>
 <tr VALIGN=top>
@@ -778,7 +778,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>221</td>
 <td>DD</td>
 <td ALIGN=center>щ</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER SHCHA</font>
+<td>CYRILLIC SMALL LETTER SHCHA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -786,7 +786,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>222</td>
 <td>DE</td>
 <td ALIGN=center>ч</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER CHE</font>
+<td>CYRILLIC SMALL LETTER CHE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -794,7 +794,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>223</td>
 <td>DF</td>
 <td ALIGN=center>ъ</td>
-<td><font SIZE="-1">CYRILLIC SMALL LETTER HARD SIGN</font>
+<td>CYRILLIC SMALL LETTER HARD SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -802,7 +802,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>224</td>
 <td>E0</td>
 <td ALIGN=center>Ю</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER YU</font>
+<td>CYRILLIC CAPITAL LETTER YU
 </td>
 </tr>
 <tr VALIGN=top>
@@ -810,7 +810,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>225</td>
 <td>E1</td>
 <td ALIGN=center>А</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER A</font>
+<td>CYRILLIC CAPITAL LETTER A
 </td>
 </tr>
 <tr VALIGN=top>
@@ -818,7 +818,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>226</td>
 <td>E2</td>
 <td ALIGN=center>Б</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER BE</font>
+<td>CYRILLIC CAPITAL LETTER BE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -826,7 +826,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>227</td>
 <td>E3</td>
 <td ALIGN=center>Ц</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER TSE</font>
+<td>CYRILLIC CAPITAL LETTER TSE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -834,7 +834,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>228</td>
 <td>E4</td>
 <td ALIGN=center>Д</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER DE</font>
+<td>CYRILLIC CAPITAL LETTER DE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -842,7 +842,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>229</td>
 <td>E5</td>
 <td ALIGN=center>Е</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER IE</font>
+<td>CYRILLIC CAPITAL LETTER IE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -850,7 +850,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>230</td>
 <td>E6</td>
 <td ALIGN=center>Ф</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER EF</font>
+<td>CYRILLIC CAPITAL LETTER EF
 </td>
 </tr>
 <tr VALIGN=top>
@@ -858,7 +858,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>231</td>
 <td>E7</td>
 <td ALIGN=center>Г</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER GHE</font>
+<td>CYRILLIC CAPITAL LETTER GHE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -866,7 +866,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>232</td>
 <td>E8</td>
 <td ALIGN=center>Х</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER HA</font>
+<td>CYRILLIC CAPITAL LETTER HA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -874,7 +874,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>233</td>
 <td>E9</td>
 <td ALIGN=center>И</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER I</font>
+<td>CYRILLIC CAPITAL LETTER I
 </td>
 </tr>
 <tr VALIGN=top>
@@ -882,7 +882,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>234</td>
 <td>EA</td>
 <td ALIGN=center>Й</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER SHORT I</font>
+<td>CYRILLIC CAPITAL LETTER SHORT I
 </td>
 </tr>
 <tr VALIGN=top>
@@ -890,7 +890,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>235</td>
 <td>EB</td>
 <td ALIGN=center>К</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER KA</font>
+<td>CYRILLIC CAPITAL LETTER KA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -898,7 +898,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>236</td>
 <td>EC</td>
 <td ALIGN=center>Л</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER EL</font>
+<td>CYRILLIC CAPITAL LETTER EL
 </td>
 </tr>
 <tr VALIGN=top>
@@ -906,7 +906,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>237</td>
 <td>ED</td>
 <td ALIGN=center>М</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER EM</font>
+<td>CYRILLIC CAPITAL LETTER EM
 </td>
 </tr>
 <tr VALIGN=top>
@@ -914,7 +914,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>238</td>
 <td>EE</td>
 <td ALIGN=center>Н</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER EN</font>
+<td>CYRILLIC CAPITAL LETTER EN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -922,7 +922,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>239</td>
 <td>EF</td>
 <td ALIGN=center>О</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER O</font>
+<td>CYRILLIC CAPITAL LETTER O
 </td>
 </tr>
 <tr VALIGN=top>
@@ -930,7 +930,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>240</td>
 <td>F0</td>
 <td ALIGN=center>П</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER PE</font>
+<td>CYRILLIC CAPITAL LETTER PE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -938,7 +938,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>241</td>
 <td>F1</td>
 <td ALIGN=center>Я</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER YA</font>
+<td>CYRILLIC CAPITAL LETTER YA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -946,7 +946,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>242</td>
 <td>F2</td>
 <td ALIGN=center>Р</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER ER</font>
+<td>CYRILLIC CAPITAL LETTER ER
 </td>
 </tr>
 <tr VALIGN=top>
@@ -954,7 +954,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>243</td>
 <td>F3</td>
 <td ALIGN=center>С</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER ES</font>
+<td>CYRILLIC CAPITAL LETTER ES
 </td>
 </tr>
 <tr VALIGN=top>
@@ -962,7 +962,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>244</td>
 <td>F4</td>
 <td ALIGN=center>Т</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER TE</font>
+<td>CYRILLIC CAPITAL LETTER TE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -970,7 +970,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>245</td>
 <td>F5</td>
 <td ALIGN=center>У</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER U</font>
+<td>CYRILLIC CAPITAL LETTER U
 </td>
 </tr>
 <tr VALIGN=top>
@@ -978,7 +978,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>246</td>
 <td>F6</td>
 <td ALIGN=center>Ж</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER ZHE</font>
+<td>CYRILLIC CAPITAL LETTER ZHE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -986,7 +986,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>247</td>
 <td>F7</td>
 <td ALIGN=center>В</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER VE</font>
+<td>CYRILLIC CAPITAL LETTER VE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -994,7 +994,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>248</td>
 <td>F8</td>
 <td ALIGN=center>Ь</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER SOFT SIGN</font>
+<td>CYRILLIC CAPITAL LETTER SOFT SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1002,7 +1002,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>249</td>
 <td>F9</td>
 <td ALIGN=center>Ы</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER YERU</font>
+<td>CYRILLIC CAPITAL LETTER YERU
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1010,7 +1010,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>250</td>
 <td>FA</td>
 <td ALIGN=center>З</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER ZE</font>
+<td>CYRILLIC CAPITAL LETTER ZE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1018,7 +1018,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>251</td>
 <td>FB</td>
 <td ALIGN=center>Ш</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER SHA</font>
+<td>CYRILLIC CAPITAL LETTER SHA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1026,7 +1026,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>252</td>
 <td>FC</td>
 <td ALIGN=center>Э</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER E</font>
+<td>CYRILLIC CAPITAL LETTER E
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1034,7 +1034,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>253</td>
 <td>FD</td>
 <td ALIGN=center>Щ</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER SHCHA</font>
+<td>CYRILLIC CAPITAL LETTER SHCHA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1042,7 +1042,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>254</td>
 <td>FE</td>
 <td ALIGN=center>Ч</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER CHE</font>
+<td>CYRILLIC CAPITAL LETTER CHE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1050,7 +1050,7 @@ description: "koi8-u – Ukrainian character set encoded in octal, decimal, and 
 <td>255</td>
 <td>FF</td>
 <td ALIGN=center>Ъ</td>
-<td><font SIZE="-1">CYRILLIC CAPITAL LETTER HARD SIGN</font>
+<td>CYRILLIC CAPITAL LETTER HARD SIGN
 </td>
 </tr>
 </table>

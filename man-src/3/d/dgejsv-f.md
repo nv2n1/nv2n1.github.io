@@ -10,7 +10,7 @@ description: "dgejsv.f –"
 <p>dgejsv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgejsv</code> (JOBA, JOBU, JOBV, JOBR, JOBT, JOBP, M, N, A, LDA, SVA, U, LDU, V, LDV, WORK, LWORK, IWORK, INFO)<br />
+<p>subroutine <code>dgejsv</code> (JOBA, JOBU, JOBV, JOBR, JOBT, JOBP, M, N, A, LDA, SVA, U, LDU, V, LDV, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>DGEJSV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgejsv (character*1JOBA, character*1JOBU, character*1JOBV, character*1JOBR, character*1JOBT, character*1JOBP, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( n )SVA, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldv, * )V, integerLDV, double precision, dimension( lwork )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>

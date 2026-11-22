@@ -13,7 +13,7 @@ description: "PAPIF_get_multiplex –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217;<br />
+<dd>#include &#8216;fpapi.h&#8217;<br/>
  <code>PAPIF_get_multiplex( C_INT EventSet, C_INT check )</code></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

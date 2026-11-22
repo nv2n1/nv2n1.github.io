@@ -29,6 +29,6 @@ description: "XtAddInput, XtAddTimeOut, XtAddWorkProc – register input, timeou
 <p> <code>XtAddTimeOut</code> has been replaced by <code>XtAppAddTimeOut.</code> </p>
 <p> <code>XtAddWorkProc</code> has been replaced by <code>XtAppAddWorkProc</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappaddinput/">XtAppAddInput</a>(3), <a href="/docs/linux/man/3-xtappaddtimeout/">XtAppAddTimeOut</a>(3), <a href="/docs/linux/man/3-xtappaddworkproc/">XtAppAddWorkProc</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappaddinput/">XtAppAddInput</a>(3), <a href="/docs/linux/man/3-xtappaddtimeout/">XtAppAddTimeOut</a>(3), <a href="/docs/linux/man/3-xtappaddworkproc/">XtAppAddWorkProc</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

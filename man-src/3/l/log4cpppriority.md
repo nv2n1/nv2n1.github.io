@@ -12,14 +12,14 @@ description: "log4cpp::Priority –"
 <h2>Synopsis</h2>
 <p>#include &lt;Priority.hh&gt;</p>
 <h3>Public Types</h3>
-<p>enum <code>PriorityLevel</code> { <code>EMERG</code> = 0, <code>FATAL</code> = 0, <code>ALERT</code> = 100, <code>CRIT</code> = 200, <code>ERROR</code> = 300, <code>WARN</code> = 400, <code>NOTICE</code> = 500, <code>INFO</code> = 600, <code>DEBUG</code> = 700, <code>NOTSET</code> = 800 }<br />
- <i>Predefined Levels of Priorities. </i><br />
- typedef int <code>Value</code><br />
+<p>enum <code>PriorityLevel</code> { <code>EMERG</code> = 0, <code>FATAL</code> = 0, <code>ALERT</code> = 100, <code>CRIT</code> = 200, <code>ERROR</code> = 300, <code>WARN</code> = 400, <code>NOTICE</code> = 500, <code>INFO</code> = 600, <code>DEBUG</code> = 700, <code>NOTSET</code> = 800 }<br/>
+ <i>Predefined Levels of Priorities. </i><br/>
+ typedef int <code>Value</code><br/>
  <i>The type of </i><code>Priority</code> Values.</p>
 <h3>Static Public Member Functions</h3>
-<p>static const std::string &amp; <code>getPriorityName</code> (int priority) throw ()<br />
- <i>Returns the name of the given priority value. </i><br />
- static <code>Value</code> <code>getPriorityValue</code> (const std::string &amp;priorityName) throw (std::invalid_argument)<br />
+<p>static const std::string &amp; <code>getPriorityName</code> (int priority) throw ()<br/>
+ <i>Returns the name of the given priority value. </i><br/>
+ static <code>Value</code> <code>getPriorityValue</code> (const std::string &amp;priorityName) throw (std::invalid_argument)<br/>
  <i>Returns the value of the given priority name. </i></p>
 <h3>Static Public Attributes</h3>
 <p>static const int <code>MESSAGE_SIZE</code> = 8 </p>

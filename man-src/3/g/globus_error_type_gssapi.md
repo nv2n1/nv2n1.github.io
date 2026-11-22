@@ -11,9 +11,9 @@ description: "Error Construction –"
 <h3>Macros</h3>
 <p>#define <code>GLOBUS_ERROR_TYPE_GSSAPI</code> </p>
 <h3>Functions</h3>
-<p>globus_object_t * <code>globus_error_construct_gssapi_error</code> (globus_module_descriptor_t *base_source, globus_object_t *base_cause, const OM_uint32 major_status, const OM_uint32 minor_status)<br />
- <i>Construct Error. </i><br />
- globus_object_t * <code>globus_error_initialize_gssapi_error</code> (globus_object_t *error, globus_module_descriptor_t *base_source, globus_object_t *base_cause, const OM_uint32 major_status, const OM_uint32 minor_status)<br />
+<p>globus_object_t * <code>globus_error_construct_gssapi_error</code> (globus_module_descriptor_t *base_source, globus_object_t *base_cause, const OM_uint32 major_status, const OM_uint32 minor_status)<br/>
+ <i>Construct Error. </i><br/>
+ globus_object_t * <code>globus_error_initialize_gssapi_error</code> (globus_object_t *error, globus_module_descriptor_t *base_source, globus_object_t *base_cause, const OM_uint32 major_status, const OM_uint32 minor_status)<br/>
  <i>Initialize Error. </i></p>
 <h2>Detailed Description</h2>
 <p>Create and initialize a Globus GSSAPI Error object. </p>
@@ -26,9 +26,9 @@ description: "Error Construction –"
 <p>Construct Error. Allocate and initialize an error of type GLOBUS_ERROR_TYPE_GSSAPI </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>base_source</i> Pointer to the originating module.<br />
- <i>base_cause</i> The error object causing the error. If this is the original error, this parameter may be NULL.<br />
- <i>major_status</i> The GSSAPI major status<br />
+<dd><i>base_source</i> Pointer to the originating module.<br/>
+ <i>base_cause</i> The error object causing the error. If this is the original error, this parameter may be NULL.<br/>
+ <i>major_status</i> The GSSAPI major status<br/>
  <i>minor_status</i> The GSSAPI minor status</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -37,10 +37,10 @@ description: "Error Construction –"
 <p>Initialize Error. Initialize a previously allocated error of type GLOBUS_ERROR_TYPE_GSSAPI </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>error</i> The previously allocated error object.<br />
- <i>base_source</i> Pointer to the originating module.<br />
- <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br />
- <i>major_status</i> The GSSAPI major status<br />
+<dd><i>error</i> The previously allocated error object.<br/>
+ <i>base_source</i> Pointer to the originating module.<br/>
+ <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br/>
+ <i>major_status</i> The GSSAPI major status<br/>
  <i>minor_status</i> The GSSAPI minor status</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

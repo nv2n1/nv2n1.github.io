@@ -67,5 +67,5 @@ description: "xwd – dump an image of an X window"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xwud/">xwud</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7)</p>
 <h2>AUTHORS</h2>
-<p> Tony Della Fera, Digital Equipment Corp., MIT Project Athena<br />
+<p> Tony Della Fera, Digital Equipment Corp., MIT Project Athena<br/>
  William F. Wyatt, Smithsonian Astrophysical Observatory </p>

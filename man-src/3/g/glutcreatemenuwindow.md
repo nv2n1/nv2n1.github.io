@@ -13,20 +13,20 @@ description: "glutCreateMenuWindow – Create a client-controlled menu window."
 <h2>Synopsis</h2>
 <p>In openglut.h Ft int Fn glutCreateMenuWindow int parentID int x int y int w int h</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>parentID Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>parentID Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Parent window identifier. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>x Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>x Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Horizontal coordinate on the screen. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>y Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>y Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Vertical coordinate on the screen. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>w Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>w Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Width of the new window. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>h Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>h Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Height of the new window.</p>
 <h2>Description</h2>
 <p>This is a highly experimental function. It creates a menu-like window, of requested dimensions, and at a position relative to your current window. </p>

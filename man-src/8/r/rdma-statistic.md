@@ -15,8 +15,8 @@ statistic
 { COMMAND |
     help }
 </code></pre>
-<p> <code>rdma statistic</code> { <i>OBJECT</i> } <code>show</code><br />
- <code>rdma statistic</code> [ <i>OBJECT</i> ] <code>show link</code> [ <i>DEV/PORT_INDX</i> ] [ <i>FILTER_NAME</i> <i>FILTER_VALUE</i> ]<br />
+<p> <code>rdma statistic</code> { <i>OBJECT</i> } <code>show</code><br/>
+ <code>rdma statistic</code> [ <i>OBJECT</i> ] <code>show link</code> [ <i>DEV/PORT_INDX</i> ] [ <i>FILTER_NAME</i> <i>FILTER_VALUE</i> ]<br/>
  <code>rdma statistic</code> <i>OBJECT</i> <code>mode</code> rdma statistic</p>
 <p>OBJECT</p>
 <p>set</p>
@@ -24,8 +24,8 @@ statistic
 <p>[ DEV/PORT_INDEX ]</p>
 <p>auto</p>
 <p>{ CRITERIA |</p>
-<p>    off }<br />
- <code>rdma statistic</code> <i>OBJECT</i> <code>bind</code> <i>COUNTER_SCOPE</i> [ <i>DEV/PORT_INDEX</i> ] [ <i>OBJECT-ID</i> ] [ <i>COUNTER-ID</i> ]<br />
+<p>    off }<br/>
+ <code>rdma statistic</code> <i>OBJECT</i> <code>bind</code> <i>COUNTER_SCOPE</i> [ <i>DEV/PORT_INDEX</i> ] [ <i>OBJECT-ID</i> ] [ <i>COUNTER-ID</i> ]<br/>
  <code>rdma statistic</code> <i>OBJECT</i> <code>unbind</code> <i>COUNTER_SCOPE</i> [ <i>DEV/PORT_INDEX</i> ] [ <i>COUNTER-ID</i> ] [ <i>OBJECT-ID</i> ] </p>
 <pre><code>COUNTER_SCOPE :=
 { link | dev }
@@ -100,5 +100,5 @@ FILTER_NAME :=
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-rdma/">rdma</a></code>(8), <code><a href="/docs/linux/man/8-rdma-dev/">rdma-dev</a></code>(8), <code><a href="/docs/linux/man/8-rdma-link/">rdma-link</a></code>(8), <code><a href="/docs/linux/man/8-rdma-resource/">rdma-resource</a></code>(8), </p>
 <h2>Authors</h2>
-<p>Mark Zhang &lt;markz [at] mellanox.com&gt;<br />
+<p>Mark Zhang &lt;markz [at] mellanox.com&gt;<br/>
  Erez Alfasi &lt;ereza [at] mellanox.com&gt;</p>

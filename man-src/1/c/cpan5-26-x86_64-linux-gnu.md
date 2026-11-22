@@ -22,9 +22,9 @@ cpan - easily interact with CPAN from the command line
  # without arguments, starts CPAN.pm shell
  cpan
  # without arguments, but some switches
- cpan [-ahpruvACDLOPX]</pre><h2>Description</h2>This script provides a command interface (not a shell) to <font SIZE="-1">CPAN.</font> At the moment it uses <font SIZE="-1">CPAN</font>.pm to do the work, but it is not a one-shot command runner for <font SIZE="-1">CPAN</font>.pm.
+ cpan [-ahpruvACDLOPX]</pre><h2>Description</h2>This script provides a command interface (not a shell) to CPAN. At the moment it uses CPAN.pm to do the work, but it is not a one-shot command runner for CPAN.pm.
 <h3>Options</h3><dl><dt>-a
-</dt><dd>Creates a <font SIZE="-1">CPAN</font>.pm autobundle with CPAN::Shell-&gt;autobundle.
+</dt><dd>Creates a CPAN.pm autobundle with CPAN::Shell-&gt;autobundle.
 </dd><dt>-A module [ module ... ]
 </dt><dd>Shows the primary maintainers for the specified modules.
 </dd><dt>-c module
@@ -32,15 +32,15 @@ cpan - easily interact with CPAN from the command line
 </dd><dt>-C module [ module ... ]
 </dt><dd>Show the <i>Changes</i> files for the specified modules
 </dd><dt>-D module [ module ... ]
-</dt><dd>Show the module details. This prints one line for each out-of-date module (meaning, modules locally installed but have newer versions on <font SIZE="-1">CPAN</font>). Each line has three columns: module name, local version, and <font SIZE="-1">CPAN</font> version.
+</dt><dd>Show the module details. This prints one line for each out-of-date module (meaning, modules locally installed but have newer versions on CPAN). Each line has three columns: module name, local version, and CPAN version.
 </dd><dt>-f
 </dt><dd>Force the specified action, when it normally would have failed. Use this to install a module even if its tests fail. When you use this option, -i is not optional for installing a module when you need to force it: 
  <pre> % cpan -f -i Module::Foo</pre></dd><dt>-F
-</dt><dd>Turn off <font SIZE="-1">CPAN</font>.pm's attempts to lock anything. You should be careful with this since you might end up with multiple scripts trying to muck in the same directory. This isn't so much of a concern if you're loading a special config with <tt>&quot;-j&quot;</tt>, and that config sets up its own work directories.
+</dt><dd>Turn off CPAN.pm's attempts to lock anything. You should be careful with this since you might end up with multiple scripts trying to muck in the same directory. This isn't so much of a concern if you're loading a special config with <tt>&quot;-j&quot;</tt>, and that config sets up its own work directories.
 </dd><dt>-g module [ module ... ]
 </dt><dd>Downloads to the current directory the latest distribution of the module.
 </dd><dt>-G module [ module ... ]
-</dt><dd><font SIZE="-1">UNIMPLEMENTED</font> 
+</dt><dd>UNIMPLEMENTED 
  Download to the current directory the latest distribution of the modules, unpack each distribution, and create a git repository for each distribution. 
  If you want this feature, check out Yanick Champoux's <tt>&quot;Git::CPAN::Patch&quot;</tt> distribution.
 </dd><dt>-h
@@ -50,9 +50,9 @@ cpan - easily interact with CPAN from the command line
 </dd><dt>-I
 </dt><dd>Load <tt>&quot;local::lib&quot;</tt> (think like <tt>&quot;-I&quot;</tt> for loading lib paths). Too bad <tt>&quot;-l&quot;</tt> was already taken.
 </dd><dt>-j Config.pm
-</dt><dd>Load the file that has the <font SIZE="-1">CPAN</font> configuration data. This should have the same format as the standard <i>CPAN/Config.pm</i> file, which defines <tt>$CPAN::Config</tt> as an anonymous hash.
+</dt><dd>Load the file that has the CPAN configuration data. This should have the same format as the standard <i>CPAN/Config.pm</i> file, which defines <tt>$CPAN::Config</tt> as an anonymous hash.
 </dd><dt>-J
-</dt><dd>Dump the configuration in the same format that <font SIZE="-1">CPAN</font>.pm uses. This is useful for checking the configuration as well as using the dump as a starting point for a new, custom configuration.
+</dt><dd>Dump the configuration in the same format that CPAN.pm uses. This is useful for checking the configuration as well as using the dump as a starting point for a new, custom configuration.
 </dd><dt>-l
 </dt><dd>List all installed modules with their versions
 </dd><dt>-L author [ author ... ]
@@ -72,7 +72,7 @@ cpan - easily interact with CPAN from the command line
 </dd><dt>-r
 </dt><dd>Recompiles dynamically loaded modules with CPAN::Shell-&gt;recompile.
 </dd><dt>-s
-</dt><dd>Drop in the <font SIZE="-1">CPAN</font>.pm shell. This command does this automatically if you don't specify any arguments.
+</dt><dd>Drop in the CPAN.pm shell. This command does this automatically if you don't specify any arguments.
 </dd><dt>-t module [ module ... ]
 </dt><dd>Run a `make test` on the specified modules.
 </dd><dt>-T
@@ -80,11 +80,11 @@ cpan - easily interact with CPAN from the command line
 </dd><dt>-u
 </dt><dd>Upgrade all installed modules. Blindly doing this can really break things, so keep a backup.
 </dd><dt>-v
-</dt><dd>Print the script version and <font SIZE="-1">CPAN</font>.pm version then exit.
+</dt><dd>Print the script version and CPAN.pm version then exit.
 </dd><dt>-V
 </dt><dd>Print detailed information about the cpan client.
 </dd><dt>-w
-</dt><dd><font SIZE="-1">UNIMPLEMENTED</font> 
+</dt><dd>UNIMPLEMENTED 
  Turn on cpan warnings. This checks various things, like directory permissions, and tells you about problems you might have.
 </dd><dt>-x module [ module ... ]
 </dt><dd>Find close matches to the named modules that you think you might have mistyped. This requires the optional installation of Text::Levenshtein or Text::Levenshtein::Damerau.
@@ -104,20 +104,20 @@ cpan - easily interact with CPAN from the command line
  # force install modules ( must use -i )
  cpan -fi CGI::Minimal URI
  # install modules but without testing them
- cpan -Ti CGI::Minimal URI</pre><h3>Environment variables</h3>There are several components in <font SIZE="-1">CPAN</font>.pm that use environment variables. The build tools, ExtUtils::MakeMaker and Module::Build use some, while others matter to the levels above them. Some of these are specified by the Perl Toolchain Gang: 
+ cpan -Ti CGI::Minimal URI</pre><h3>Environment variables</h3>There are several components in CPAN.pm that use environment variables. The build tools, ExtUtils::MakeMaker and Module::Build use some, while others matter to the levels above them. Some of these are specified by the Perl Toolchain Gang: 
 
  Lancaster Concensus: &lt;<a rel="nofollow" HREF="https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/lancaster-consensus.md">https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/lancaster-consensus.md</a>&gt; 
 
  Oslo Concensus: &lt;<a rel="nofollow" HREF="https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/oslo-consensus.md">https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/oslo-consensus.md</a>&gt;
-<dl><dt><font SIZE="-1">NONINTERACTIVE_TESTING</font>
+<dl><dt>NONINTERACTIVE_TESTING
 </dt><dd>Assume no one is paying attention and skips prompts for distributions that do that correctly. <tt><a HREF="/docs/linux/man/1-cpan/">cpan</a>(1)</tt> sets this to <tt>1</tt> unless it already has a value (even if that value is false).
-</dd><dt><font SIZE="-1">PERL_MM_USE_DEFAULT</font>
+</dd><dt>PERL_MM_USE_DEFAULT
 </dt><dd>Use the default answer for a prompted questions. <tt><a HREF="/docs/linux/man/1-cpan/">cpan</a>(1)</tt> sets this to <tt>1</tt> unless it already has a value (even if that value is false).
-</dd><dt><font SIZE="-1">CPAN_OPTS</font>
+</dd><dt>CPAN_OPTS
 </dt><dd>As with <tt>&quot;PERL5OPTS&quot;</tt>, a string of additional <tt><a HREF="/docs/linux/man/1-cpan/">cpan</a>(1)</tt> options to add to those you specify on the command line.
-</dd><dt><font SIZE="-1">CPANSCRIPT_LOGLEVEL</font>
+</dd><dt>CPANSCRIPT_LOGLEVEL
 </dt><dd>The log level to use, with either the embedded, minimal logger or Log::Log4perl if it is installed. Possible values are the same as the <tt>&quot;Log::Log4perl&quot;</tt> levels: <tt>&quot;TRACE&quot;</tt>, <tt>&quot;DEBUG&quot;</tt>, <tt>&quot;INFO&quot;</tt>, <tt>&quot;WARN&quot;</tt>, <tt>&quot;ERROR&quot;</tt>, and <tt>&quot;FATAL&quot;</tt>. The default is <tt>&quot;INFO&quot;</tt>.
-</dd><dt><font SIZE="-1">GIT_COMMAND</font>
+</dd><dt>GIT_COMMAND
 </dt><dd>The path to the <tt>&quot;git&quot;</tt> binary to use for the Git features. The default is <tt>&quot;/usr/local/bin/git&quot;</tt>.</dd></dl><h2>Exit Values</h2>The script exits with zero if it thinks that everything worked, or a positive number if it thinks that something failed. Note, however, that in some cases it has to divine a failure by the output of things it does not control. For now, the exit codes are vague: 
 
  <pre> 1 An unknown error
@@ -125,8 +125,8 @@ cpan - easily interact with CPAN from the command line
  4 There was an internal problem with the script
  8 A module failed to install</pre><h2>To Do</h2>* one shot configuration values from the command line
 <h2>Bugs</h2>* none noted
-<h2>See Also</h2>Most behaviour, including environment variables and configuration, comes directly from <font SIZE="-1">CPAN</font>.pm.
-<h2>Source Availability</h2>This code is in Github in the <font SIZE="-1">CPAN</font>.pm repository: 
+<h2>See Also</h2>Most behaviour, including environment variables and configuration, comes directly from CPAN.pm.
+<h2>Source Availability</h2>This code is in Github in the CPAN.pm repository: 
 
  <pre> <a rel="nofollow" HREF="https://github.com/andk/cpanpm">https://github.com/andk/cpanpm</a></pre>The source used to be tracked separately in another GitHub repo, but the canonical source is now in the above repo.
 <h2>Credits</h2>Japheth Cleaver added the bits to allow a forced install (-f). 

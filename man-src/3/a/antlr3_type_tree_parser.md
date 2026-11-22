@@ -10,19 +10,19 @@ description: "ANTLR3_BASE_RECOGNIZER – Base Recognizer Class Definition –"
 <p>ANTLR3_BASE_RECOGNIZER &#8211; Base Recognizer Class Definition &#8211; </p>
 <p> This is the definition of the base recognizer interface, instantiations of which are referred to via <code>pANTLR3_BASE_RECOGNIZER</code>.</p>
 <h3>Data Structures</h3>
-<p>struct <code>ANTLR3_BASE_RECOGNIZER_struct</code><br />
+<p>struct <code>ANTLR3_BASE_RECOGNIZER_struct</code><br/>
  <i>Base tracking context structure for all types of recognizers. </i></p>
 <h3>Defines</h3>
-<p>#define <code>ANTLR3_TYPE_LEXER</code> 0x0001<br />
- <i>Type indicator for a lexer recognizer. </i><br />
- #define <code>ANTLR3_TYPE_PARSER</code> 0x0002<br />
- <i>Type indicator for a parser recognizer. </i><br />
- #define <code>ANTLR3_TYPE_TREE_PARSER</code> 0x0004<br />
+<p>#define <code>ANTLR3_TYPE_LEXER</code> 0x0001<br/>
+ <i>Type indicator for a lexer recognizer. </i><br/>
+ #define <code>ANTLR3_TYPE_PARSER</code> 0x0002<br/>
+ <i>Type indicator for a parser recognizer. </i><br/>
+ #define <code>ANTLR3_TYPE_TREE_PARSER</code> 0x0004<br/>
  <i>Type indicator for a tree parser recognizer. </i></p>
 <h3>Typedefs</h3>
-<p>typedef struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> <code>ANTLR3_BASE_RECOGNIZER</code><br />
- <i>Base tracking context structure for all types of recognizers. </i><br />
- typedef struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> * <code>pANTLR3_BASE_RECOGNIZER</code><br />
+<p>typedef struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> <code>ANTLR3_BASE_RECOGNIZER</code><br/>
+ <i>Base tracking context structure for all types of recognizers. </i><br/>
+ typedef struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> * <code>pANTLR3_BASE_RECOGNIZER</code><br/>
  <i>Pointer to an instantiation of the &#8216;class&#8217; </i><code>ANTLR3_BASE_RECOGNIZER</code>.</p>
 <h2>Detailed Description</h2>
 <p>This is the definition of the base recognizer interface, instantiations of which are referred to via <code>pANTLR3_BASE_RECOGNIZER</code>. </p>

@@ -10,7 +10,7 @@ description: "chetrs.f –"
 <p>chetrs.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>chetrs</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
+<p>subroutine <code>chetrs</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br/>
  <i></i><code>CHETRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chetrs (characterUPLO, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

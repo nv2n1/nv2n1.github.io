@@ -40,7 +40,7 @@ description: "gnue-schema – gnue-schema"
 <dt><code>&#8211;help-dev</code></dt>
 <dd> Display all options of interest to core developers.</dd>
 <dt><code>&#8211;mode &lt;both|schema|data&gt;, -m</code></dt>
-<dd> Mode of operation. If mode is &#8216;schema&#8217;, only schema creation is done.<br />
+<dd> Mode of operation. If mode is &#8216;schema&#8217;, only schema creation is done.<br/>
 &nbsp;<wbr>If mode is&nbsp;<wbr>&#8216;data&#8217;&nbsp;<wbr>only data integration is done.</dd>
 <dt><code>&#8211;output &lt;filename&gt;, -o</code></dt>
 <dd> Also send the code for creating the schema to this file.</dd>
@@ -73,7 +73,7 @@ description: "gnue-schema – gnue-schema"
 <dt><code>&#8211;selfdoc &lt;type[,subtype]&gt;</code></dt>
 <dd> Generates self-documentation.</dd>
 <dt><code>&#8211;selfdoc-file &lt;filename&gt;</code></dt>
-<dd> Specifies the filename that selfdoc should write to. If not provided,<br />
+<dd> Specifies the filename that selfdoc should write to. If not provided,<br/>
 &nbsp;<wbr>output is sent to stdout.</dd>
 <dt><code>&#8211;selfdoc-format &lt;format&gt;</code></dt>
 <dd> Format to output the self-documentation in. Supported formats are dependent on the type of selfdoc being created.</dd>

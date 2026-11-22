@@ -11,7 +11,7 @@ description: "claqr1.f –"
 <p> claqr1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>claqr1</code> (N, H, LDH, S1, S2, V)<br />
+<p> subroutine <code>claqr1</code> (N, H, LDH, S1, S2, V)<br/>
  <i></i><code>CLAQR1</code> sets a scalar multiple of the first column of the product of 2-by-2 or 3-by-3 matrix H and specified shifts.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claqr1 (integerN, complex, dimension( ldh, * )H, integerLDH, complexS1, complexS2, complex, dimension( * )V)</h3>

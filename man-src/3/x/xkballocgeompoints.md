@@ -10,7 +10,7 @@ description: "XkbAllocGeomPoints – Allocate points in an outline"
 <p>XkbAllocGeomPoints &#8211; Allocate points in an outline </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbAllocGeomPoints</code> <code>(XkbOutlinePtr </code><i>outline</i><code>,</code> <code>int </code><i>num_needed</i><code>);</code><br />
+<dt> <code>Status XkbAllocGeomPoints</code> <code>(XkbOutlinePtr </code><i>outline</i><code>,</code> <code>int </code><i>num_needed</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -19,14 +19,14 @@ description: "guestfs-lua – How to use libguestfs from Lua"
  g:close ()
 </pre>
 <h2>DESCRIPTION</h2>
-<p> This manual page documents how to call libguestfs from the Lua programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3).</p>
-<h3><font SIZE="-1">REQUIRING THE MODULE</font></h3>
+<p> This manual page documents how to call libguestfs from the Lua programming language. This page just documents the differences from the C API and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3).</p>
+<h3>REQUIRING THE MODULE</h3>
 <p> <tt>&quot;require &quot;guestfs&quot;&quot;</tt> returns the module, so you have to assign it to a local variable. Typical usage is: </p>
 <pre>
  local G = require &quot;guestfs&quot;
 </pre>
 <p> (you can use any name you want instead of <tt>&quot;G&quot;</tt>, but in the examples in this man page we always use <tt>&quot;G&quot;</tt>).</p>
-<h3><font SIZE="-1">OPENING AND CLOSING THE HANDLE</font></h3>
+<h3>OPENING AND CLOSING THE HANDLE</h3>
 <p> To create a new handle, call: </p>
 <pre>
  g = G.create ()
@@ -40,12 +40,12 @@ description: "guestfs-lua – How to use libguestfs from Lua"
 <pre>
  g:close ()
 </pre>
-<h3><font SIZE="-1">CALLING METHODS</font></h3>
+<h3>CALLING METHODS</h3>
 <p> Use the ordinary Lua convention for calling methods on the handle. For example: </p>
 <pre>
  g:set_verbose (true)
 </pre>
-<h3><font SIZE="-1">FUNCTIONS WITH OPTIONAL ARGUMENTS</font></h3>
+<h3>FUNCTIONS WITH OPTIONAL ARGUMENTS</h3>
 <p> For functions that take optional arguments, the first arguments are the non-optional ones. The optional final argument is a table supplying the optional arguments. </p>
 <pre>
  g:add_drive (&quot;test.img&quot;)
@@ -54,9 +54,9 @@ description: "guestfs-lua – How to use libguestfs from Lua"
 <pre>
  g:add_drive (&quot;test.img&quot;, { format = &quot;raw&quot;, readonly = true })
 </pre>
-<h3>64 <font SIZE="-1">BIT VALUES</font></h3>
+<h3>64 BIT VALUES</h3>
 <p> Currently 64 bit values must be passed as strings, and are returned as strings. This is because 32 bit Lua cannot handle 64 bit integers properly. We hope to come up with a better solution later.</p>
-<h3><font SIZE="-1">ERRORS</font></h3>
+<h3>ERRORS</h3>
 <p> Most (but not all) errors are converted into objects (ie. tables) containing the following fields:</p>
 <dl>
 <dt>msg</dt>
@@ -65,7 +65,7 @@ description: "guestfs-lua – How to use libguestfs from Lua"
 <dd> The <tt>&quot;errno&quot;</tt> (corresponding to &#8220;guestfs_last_errno&#8221; in <i>guestfs</i>(3)).</dd></dl>
 <p> These objects also have <tt>&quot;__tostring&quot;</tt> functions attached to them so you can use <tt>&quot;tostring&quot;</tt> (or implicit conversion) to convert them into printable strings. </p>
 <p> Note that the library also throws some errors as plain strings. You may need to check the type.</p>
-<h3><font SIZE="-1">EVENTS</font></h3>
+<h3>EVENTS</h3>
 <p> Events can be registered by calling <tt>&quot;set_event_callback&quot;</tt>: </p>
 <pre>
  eh = g:set_event_callback (cb, &quot;close&quot;)
@@ -91,37 +91,37 @@ function cb(g, event, eh, flags, buf, array)-- g is the guestfs handle
 <p>  local G = require &#8220;guestfs&#8221;</p>
 <p>    local output = &#8220;disk.img&#8221;</p>
 <p>    local g = G.create()</p>
-<p>                  &#8212; Create a raw &#8211;<br />
-              format sparse disk image,<br />
-        512 MB in size.file = io.open(output, &#8220;w&#8221;)<br />
-                                  file : seek(&#8220;set&#8221;, 512 * 1024 * 1024)<br />
-                                             file : write(&#8216; &#8216;)<br />
+<p>                  &#8212; Create a raw &#8211;<br/>
+              format sparse disk image,<br/>
+        512 MB in size.file = io.open(output, &#8220;w&#8221;)<br/>
+                                  file : seek(&#8220;set&#8221;, 512 * 1024 * 1024)<br/>
+                                             file : write(&#8216; &#8216;)<br/>
                                                         file : close()</p>
 <p>                                                                   &#8212; Set the trace flag so that we can see each libguestfs call.g : set_trace(true)</p>
 <p>                                                                                                                                         &#8212; Attach the disk image to libguestfs.g : add_drive(output, {format = &#8220;raw&#8221;, readonly = false})</p>
-<p>                                                                                                                                                                                        &#8212; Run the libguestfs back &#8211;<br />
+<p>                                                                                                                                                                                        &#8212; Run the libguestfs back &#8211;<br/>
                               end.g : launch()</p>
-<p>                                          &#8212; Get the list of devices.Because we only added one drive&#8211; above,<br />
-        we expect that this list should contain a single&#8211; element.devices = g : list_devices() if table.getn(devices) ~ = 1 then<br />
+<p>                                          &#8212; Get the list of devices.Because we only added one drive&#8211; above,<br/>
+        we expect that this list should contain a single&#8211; element.devices = g : list_devices() if table.getn(devices) ~ = 1 then<br/>
                                                                                                                                error &#8220;expected a single device from list-devices&#8221; end</p>
 <p>                                                                                                                           &#8212; Partition the disk as one single MBR partition.g : part_disk(devices[1], &#8220;mbr&#8221;)</p>
-<p>                                                                                                                                                                                     &#8212; Get the list of partitions.We expect a single element,<br />
-        which&#8211; is the partition we have just created.partitions = g : list_partitions() if table.getn(partitions) ~ = 1 then<br />
+<p>                                                                                                                                                                                     &#8212; Get the list of partitions.We expect a single element,<br/>
+        which&#8211; is the partition we have just created.partitions = g : list_partitions() if table.getn(partitions) ~ = 1 then<br/>
                                                                                                                            error &#8220;expected a single partition from list-partitions&#8221; end</p>
 <p>                                                                                                                       &#8212; Create a filesystem on the partition.g : mkfs(&#8220;ext4&#8221;, partitions[1])</p>
 <p>                                                                                                                                                                       &#8212; Now mount the filesystem so that we can add files.g : mount(partitions[1], &#8220;/&#8221;)</p>
-<p>                                                                                                                                                                                                                                    &#8212; Create some files and<br />
-                                                                                                                       directories.g : touch(&#8220;/empty&#8221;)<br />
+<p>                                                                                                                                                                                                                                    &#8212; Create some files and<br/>
+                                                                                                                       directories.g : touch(&#8220;/empty&#8221;)<br/>
                                                                                                                                            message = &#8220;Hello, world
-&#8221; g : write(&#8220;/hello&#8221;, message)<br />
+&#8221; g : write(&#8220;/hello&#8221;, message)<br/>
                                                                                                                                                                               g : mkdir(&#8220;/foo&#8221;)</p>
-<p>                                                                                                                                                                                      &#8212; This one uploads the local file /<br />
+<p>                                                                                                                                                                                      &#8212; This one uploads the local file /<br/>
                                                                                                                                                                                   etc / resolv.conf into&#8211; the disk image.g : upload(&#8220;/etc/resolv.conf&#8221;, &#8220;/foo/resolv.conf&#8221;)</p>
-<p>                                                                                                                                                                                                                                  &#8212; Because we wrote to the disk and<br />
-                                                                                                                                                     we want to detect write&#8211; errors,<br />
+<p>                                                                                                                                                                                                                                  &#8212; Because we wrote to the disk and<br/>
+                                                                                                                                                     we want to detect write&#8211; errors,<br/>
         call g : shutdown.You don&#8217;t need to do this: &#8211;g : close will do it implicitly.g : shutdown()</p>
-<p>                                                                                               &#8212; Note also that handles are automatically closed if they are<br />
-                                                                                           &#8212; reaped by the garbage collector.You only need to call close<br />
+<p>                                                                                               &#8212; Note also that handles are automatically closed if they are<br/>
+                                                                                           &#8212; reaped by the garbage collector.You only need to call close<br/>
                                                                                            &#8212; if you want to close the handle right away.g : close()</p>
 <h2>EXAMPLE 2: INSPECT A VIRTUAL MACHINE DISK IMAGE</h2>
 <pre><code>

@@ -50,15 +50,15 @@ void __fpurge(FILE *stream);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>__fbufsize</code>(), <code>__fpending</code>(),<br />
+<td> <code>__fbufsize</code>(), <code>__fpending</code>(),<br/>
  <code>__fpurge</code>(), <code>__fsetlocking</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe race:stream
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>__flbf</code>(), <code>__freadable</code>(),<br />
- <code>__freading</code>(), <code>__fwritable</code>(),<br />
+<td> <code>__flbf</code>(), <code>__freadable</code>(),<br/>
+ <code>__freading</code>(), <code>__fwritable</code>(),<br/>
  <code>__fwriting</code>(), <code>_flushlbf</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

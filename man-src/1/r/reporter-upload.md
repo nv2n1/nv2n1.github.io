@@ -57,7 +57,7 @@ EVENT=post-create reporter-upload
 <p> -u URL</p>
 <dl>
 <dt>
-</dt><dd> The URL where tarball should be uploaded. URL should have form protocol://[user[:pass]@]host/dir/[file.tar.gz] where protocol can be http(s), ftp, scp, or file. File protocol can&#8217;t have user and host parts: m[blue]<code>file.tar.gz</code>m[]<font SIZE="-2">[1]</font>. If URL ends with a slash, the archive name will be generated and appended to URL; otherwise, URL will be used as full file name.</dd></dl>
+</dt><dd> The URL where tarball should be uploaded. URL should have form protocol://[user[:pass]@]host/dir/[file.tar.gz] where protocol can be http(s), ftp, scp, or file. File protocol can&#8217;t have user and host parts: m[blue]<code>file.tar.gz</code>m[][1]. If URL ends with a slash, the archive name will be generated and appended to URL; otherwise, URL will be used as full file name.</dd></dl>
 <p> -b, &#8211;pubkey FILE</p>
 <dl>
 <dt>

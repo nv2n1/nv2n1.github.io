@@ -29,18 +29,18 @@ ACTION := {
 <h2>Examples</h2>
 <p>Limit ingress bandwidth on eth0 to 1mbit/s, redirect exceeding traffic to lo for debugging purposes:</p>
 <dl>
-<dd># tc qdisc add dev eth0 handle ffff: ingress # tc filter add dev eth0 parent ffff: u32 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>match u32 0 0 \<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action police rate 1mbit burst 100k conform-exceed pipe \<br />
+<dd># tc qdisc add dev eth0 handle ffff: ingress # tc filter add dev eth0 parent ffff: u32 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>match u32 0 0 \<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action police rate 1mbit burst 100k conform-exceed pipe \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mirred egress redirect dev lo
 </dd></dl>
 <p> Mirror all incoming ICMP packets on eth0 to a dummy interface for examination with e.g. tcpdump:</p>
 <dl>
-<dd># ip link add dummy0 type dummy # ip link set dummy0 up # tc qdisc add dev eth0 handle ffff: ingress # tc filter add dev eth0 parent ffff: protocol ip \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>u32 match ip protocol 1 0xff \<br />
+<dd># ip link add dummy0 type dummy # ip link set dummy0 up # tc qdisc add dev eth0 handle ffff: ingress # tc filter add dev eth0 parent ffff: protocol ip \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>u32 match ip protocol 1 0xff \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mirred egress mirror dev dummy0
 </dd></dl>
 <p> Using an <code>ifb</code> interface, it is possible to send ingress traffic through an instance of <code>sfq</code>:</p>
 <dl>
-<dd># modprobe ifb # ip link set ifb0 up # tc qdisc add dev ifb0 root sfq # tc qdisc add dev eth0 handle ffff: ingress # tc filter add dev eth0 parent ffff: u32 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>match u32 0 0 \<br />
+<dd># modprobe ifb # ip link set ifb0 up # tc qdisc add dev ifb0 root sfq # tc qdisc add dev eth0 handle ffff: ingress # tc filter add dev eth0 parent ffff: u32 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>match u32 0 0 \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action mirred egress redirect dev ifb0
 </dd></dl>
 <h2>See Also</h2>

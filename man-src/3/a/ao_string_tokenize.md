@@ -10,7 +10,7 @@ description: "ao_string_tokenize – tokenize an input string"
 
 <p> ao_string_tokenize &#8211; tokenize an input string</p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;<i>your-opts.h</i>&gt;<br />
+<p> #include &lt;<i>your-opts.h</i>&gt;<br/>
  cc [&#8230;] -o outfile infile.c -l<code>opts</code> [&#8230;] </p>
 <p> token_list_t* <code>ao_string_tokenize</code>(char const* <i>string</i>); </p>
 <h2>DESCRIPTION</h2>
@@ -47,5 +47,5 @@ free(ptl);
 </code></pre>
 <p> Note that everything is freed with the one call to <code>free(3C)</code>.</p>
 <h2>SEE ALSO</h2>
-<p> The <i>info</i> documentation for the -l<i>opts</i> library.<br />
+<p> The <i>info</i> documentation for the -l<i>opts</i> library.<br/>
  configFileLoad(3), <a href="/docs/linux/man/3-optionfileload/">optionFileLoad</a>(3), <a href="/docs/linux/man/3-optionfindnextvalue/">optionFindNextValue</a>(3), <a href="/docs/linux/man/3-optionfindvalue/">optionFindValue</a>(3), <a href="/docs/linux/man/3-optionfree/">optionFree</a>(3), <a href="/docs/linux/man/3-optiongetvalue/">optionGetValue</a>(3), <a href="/docs/linux/man/3-optionloadline/">optionLoadLine</a>(3), <a href="/docs/linux/man/3-optionmemberlist/">optionMemberList</a>(3), <a href="/docs/linux/man/3-optionnextvalue/">optionNextValue</a>(3), <a href="/docs/linux/man/3-optiononlyusage/">optionOnlyUsage</a>(3), <a href="/docs/linux/man/3-optionprocess/">optionProcess</a>(3), <a href="/docs/linux/man/3-optionrestore/">optionRestore</a>(3), <a href="/docs/linux/man/3-optionsavefile/">optionSaveFile</a>(3), <a href="/docs/linux/man/3-optionsavestate/">optionSaveState</a>(3), <a href="/docs/linux/man/3-optionunloadnested/">optionUnloadNested</a>(3), <a href="/docs/linux/man/3-optionversion/">optionVersion</a>(3), <a href="/docs/linux/man/3-strequate/">strequate</a>(3), <a href="/docs/linux/man/3-streqvcmp/">streqvcmp</a>(3), <a href="/docs/linux/man/3-streqvmap/">streqvmap</a>(3), <a href="/docs/linux/man/3-strneqvcmp/">strneqvcmp</a>(3), <a href="/docs/linux/man/3-strtransform/">strtransform</a>(3), </p>

@@ -10,31 +10,31 @@ description: "ssh-keygen – OpenSSH authentication key utility"
 
 <p> <code>ssh-keygen</code> &#8211; OpenSSH authentication key utility </p>
 <h2>SYNOPSIS</h2>
-<p> <code>ssh-keygen</code> [-<code>q</code> ] [-<code>a </code><i>rounds</i> ] [-<code>b </code><i>bits</i> ] [-<code>C </code><i>comment</i> ] [-<code>f </code><i>output_keyfile</i> ] [-<code>m </code><i>format</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>O </code><i>option</i> ] [-<code>t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa</code> ] [-<code>w </code><i>provider</i> ] [-<code>Z </code><i>cipher</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>p</code> [-<code>a </code><i>rounds</i> ] [-<code>f </code><i>keyfile</i> ] [-<code>m </code><i>format</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>P </code><i>old_passphrase</i> ] [-<code>Z </code><i>cipher</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>i</code> [-<code>f </code><i>input_keyfile</i> ] [-<code>m </code><i>key_format</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>e</code> [-<code>f </code><i>input_keyfile</i> ] [-<code>m </code><i>key_format</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>y</code> [-<code>f </code><i>input_keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>c</code> [-<code>a </code><i>rounds</i> ] [-<code>C </code><i>comment</i> ] [-<code>f </code><i>keyfile</i> ] [-<code>P </code><i>passphrase</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>l</code> [-<code>v</code> ] [-<code>E </code><i>fingerprint_hash</i> ] [-<code>f </code><i>input_keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>B</code> [-<code>f </code><i>input_keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>D </code><i>pkcs11</i><br />
-<code>ssh-keygen</code> &#8211;<code>F </code><i>hostname</i> [-<code>lv</code> ] [-<code>f </code><i>known_hosts_file</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>H</code> [-<code>f </code><i>known_hosts_file</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>K</code> [-<code>a </code><i>rounds</i> ] [-<code>w </code><i>provider</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>R </code><i>hostname</i> [-<code>f </code><i>known_hosts_file</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>r </code><i>hostname</i> [-<code>g</code> ] [-<code>f </code><i>input_keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>M generate</code> [-<code>O </code><i>option</i> ] <i>output_file</i><br />
-<code>ssh-keygen</code> &#8211;<code>M screen</code> [-<code>f </code><i>input_file</i> ] [-<code>O </code><i>option</i> ] <i>output_file</i><br />
-<code>ssh-keygen</code> &#8211;<code>I </code><i>certificate_identity</i> &#8211;<code>s </code><i>ca_key</i> [-<code>hU</code> ] [-<code>D </code><i>pkcs11_provider</i> ] [-<code>n </code><i>principals</i> ] [-<code>O </code><i>option</i> ] [-<code>V </code><i>validity_interval</i> ] [-<code>z </code><i>serial_number</i> ] <i>file &#8230;</i><br />
-<code>ssh-keygen</code> &#8211;<code>L</code> [-<code>f </code><i>input_keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>A</code> [-<code>a </code><i>rounds</i> ] [-<code>f </code><i>prefix_path</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>k</code> &#8211;<code>f </code><i>krl_file</i> [-<code>u</code> ] [-<code>s </code><i>ca_public</i> ] [-<code>z </code><i>version_number</i> ] <i>file &#8230;</i><br />
-<code>ssh-keygen</code> &#8211;<code>Q</code> [-<code>l</code> ] &#8211;<code>f </code><i>krl_file</i> <i>file &#8230;</i><br />
-<code>ssh-keygen</code> &#8211;<code>Y find-principals</code> [-<code>O </code><i>option</i> ] &#8211;<code>s </code><i>signature_file</i> &#8211;<code>f </code><i>allowed_signers_file</i><br />
-<code>ssh-keygen</code> &#8211;<code>Y match-principals</code> &#8211;<code>I </code><i>signer_identity</i> &#8211;<code>f </code><i>allowed_signers_file</i><br />
-<code>ssh-keygen</code> &#8211;<code>Y check-novalidate</code> [-<code>O </code><i>option</i> ] &#8211;<code>n </code><i>namespace</i> &#8211;<code>s </code><i>signature_file</i><br />
-<code>ssh-keygen</code> &#8211;<code>Y sign</code> [-<code>O </code><i>option</i> ] &#8211;<code>f </code><i>key_file</i> &#8211;<code>n </code><i>namespace</i> <i>file &#8230;</i><br />
+<p> <code>ssh-keygen</code> [-<code>q</code> ] [-<code>a </code><i>rounds</i> ] [-<code>b </code><i>bits</i> ] [-<code>C </code><i>comment</i> ] [-<code>f </code><i>output_keyfile</i> ] [-<code>m </code><i>format</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>O </code><i>option</i> ] [-<code>t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa</code> ] [-<code>w </code><i>provider</i> ] [-<code>Z </code><i>cipher</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>p</code> [-<code>a </code><i>rounds</i> ] [-<code>f </code><i>keyfile</i> ] [-<code>m </code><i>format</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>P </code><i>old_passphrase</i> ] [-<code>Z </code><i>cipher</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>i</code> [-<code>f </code><i>input_keyfile</i> ] [-<code>m </code><i>key_format</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>e</code> [-<code>f </code><i>input_keyfile</i> ] [-<code>m </code><i>key_format</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>y</code> [-<code>f </code><i>input_keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>c</code> [-<code>a </code><i>rounds</i> ] [-<code>C </code><i>comment</i> ] [-<code>f </code><i>keyfile</i> ] [-<code>P </code><i>passphrase</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>l</code> [-<code>v</code> ] [-<code>E </code><i>fingerprint_hash</i> ] [-<code>f </code><i>input_keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>B</code> [-<code>f </code><i>input_keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>D </code><i>pkcs11</i><br/>
+<code>ssh-keygen</code> &#8211;<code>F </code><i>hostname</i> [-<code>lv</code> ] [-<code>f </code><i>known_hosts_file</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>H</code> [-<code>f </code><i>known_hosts_file</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>K</code> [-<code>a </code><i>rounds</i> ] [-<code>w </code><i>provider</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>R </code><i>hostname</i> [-<code>f </code><i>known_hosts_file</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>r </code><i>hostname</i> [-<code>g</code> ] [-<code>f </code><i>input_keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>M generate</code> [-<code>O </code><i>option</i> ] <i>output_file</i><br/>
+<code>ssh-keygen</code> &#8211;<code>M screen</code> [-<code>f </code><i>input_file</i> ] [-<code>O </code><i>option</i> ] <i>output_file</i><br/>
+<code>ssh-keygen</code> &#8211;<code>I </code><i>certificate_identity</i> &#8211;<code>s </code><i>ca_key</i> [-<code>hU</code> ] [-<code>D </code><i>pkcs11_provider</i> ] [-<code>n </code><i>principals</i> ] [-<code>O </code><i>option</i> ] [-<code>V </code><i>validity_interval</i> ] [-<code>z </code><i>serial_number</i> ] <i>file &#8230;</i><br/>
+<code>ssh-keygen</code> &#8211;<code>L</code> [-<code>f </code><i>input_keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>A</code> [-<code>a </code><i>rounds</i> ] [-<code>f </code><i>prefix_path</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>k</code> &#8211;<code>f </code><i>krl_file</i> [-<code>u</code> ] [-<code>s </code><i>ca_public</i> ] [-<code>z </code><i>version_number</i> ] <i>file &#8230;</i><br/>
+<code>ssh-keygen</code> &#8211;<code>Q</code> [-<code>l</code> ] &#8211;<code>f </code><i>krl_file</i> <i>file &#8230;</i><br/>
+<code>ssh-keygen</code> &#8211;<code>Y find-principals</code> [-<code>O </code><i>option</i> ] &#8211;<code>s </code><i>signature_file</i> &#8211;<code>f </code><i>allowed_signers_file</i><br/>
+<code>ssh-keygen</code> &#8211;<code>Y match-principals</code> &#8211;<code>I </code><i>signer_identity</i> &#8211;<code>f </code><i>allowed_signers_file</i><br/>
+<code>ssh-keygen</code> &#8211;<code>Y check-novalidate</code> [-<code>O </code><i>option</i> ] &#8211;<code>n </code><i>namespace</i> &#8211;<code>s </code><i>signature_file</i><br/>
+<code>ssh-keygen</code> &#8211;<code>Y sign</code> [-<code>O </code><i>option</i> ] &#8211;<code>f </code><i>key_file</i> &#8211;<code>n </code><i>namespace</i> <i>file &#8230;</i><br/>
 <code>ssh-keygen</code> &#8211;<code>Y verify</code> [-<code>O </code><i>option</i> ] &#8211;<code>f </code><i>allowed_signers_file</i> &#8211;<code>I </code><i>signer_identity</i> &#8211;<code>n </code><i>namespace</i> &#8211;<code>s </code><i>signature_file</i> [-<code>r </code><i>revocation_file</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>ssh-keygen</code> generates, manages and converts authentication keys for <a href="/docs/linux/man/1-ssh/">ssh</a>(1). <code>ssh-keygen</code> can create keys for use by SSH protocol version 2. </p>

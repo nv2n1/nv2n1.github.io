@@ -22,18 +22,18 @@ native2ascii[options][inputfile[outputfile]]
 <dd>  </dd>
 <dl>
 <dt>-reverse </dt>
-<dd> <p> Perform the reverse operation: Convert a file encoded in ISO-8859-1 with Unicode escapes to a file in any character encoding supported by the Java runtime environment. <br />
- <br />
+<dd> <p> Perform the reverse operation: Convert a file encoded in ISO-8859-1 with Unicode escapes to a file in any character encoding supported by the Java runtime environment. <br/>
+ <br/>
  </p>
  </dd>
 <dt>-encoding encoding_name </dt>
-<dd> <p> Specifies the name of the character encoding to be used by the conversion procedure. If this option is not present, the default character encoding (as determined by the <i>java.nio.charset.Charset.defaultCharset</i> method) is used. The <i>encoding_name</i> string must be the name of a character encoding that is supported by the Java runtime environment &#8211; see the <code>Supported Encodings</code> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/intl/encoding.doc.html">http://docs.oracle.com/javase/7/docs/technotes/guides/intl/encoding.doc.html</a> document. <br />
- <br />
+<dd> <p> Specifies the name of the character encoding to be used by the conversion procedure. If this option is not present, the default character encoding (as determined by the <i>java.nio.charset.Charset.defaultCharset</i> method) is used. The <i>encoding_name</i> string must be the name of a character encoding that is supported by the Java runtime environment &#8211; see the <code>Supported Encodings</code> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/intl/encoding.doc.html">http://docs.oracle.com/javase/7/docs/technotes/guides/intl/encoding.doc.html</a> document. <br/>
+ <br/>
  </p>
  </dd>
 <dt>-Joption </dt>
 <dd> <p> Pass <i>option</i> to the Java virtual machine, where <i>option</i> is one of the options described on the reference page for the <a href="/docs/linux/man/1-java/">java</a>(1). For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. </p>
  </dd></dl>
 </dl>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr> </p>

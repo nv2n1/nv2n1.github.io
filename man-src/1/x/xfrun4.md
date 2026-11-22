@@ -38,5 +38,5 @@ description: "xfce4-appfinder – Xfce 4 Appfinder"
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs to &lt;<a rel="nofollow" href="http://bugzilla.xfce.org/">http://bugzilla.xfce.org/</a>&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004-2011 The Xfce development team.<br />
+<p> Copyright &#169; 2004-2011 The Xfce development team.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

@@ -12,7 +12,7 @@ description: "ql/math/sampledcurve.hpp – a class that contains a sampled curve
 <pre><code>void swap (SampledCurve &amp;, SampledCurve &amp;)
 std::ostream &amp; operator&lt;&lt; (std::ostream &amp;out, const SampledCurve &amp;a)</code></pre>
 <h3>Classes</h3>
-<p>class <code>SampledCurve</code><br />
+<p>class <code>SampledCurve</code><br/>
  <i>This class contains a sampled curve. </i></p>
 <h3>Typedefs</h3>
 <p>typedef SampledCurve <code>SampledCurveSet</code></p>

@@ -13,8 +13,8 @@ description: "kacpimon – Kernel ACPI Event Monitor"
 <h2>Description</h2>
 <p><code>kacpimon</code> is a monitor program that connects to three sources of ACPI events:</p>
 <dl>
-<dd>1. /proc/acpi/event<br />
- 2. netlink<br />
+<dd>1. /proc/acpi/event<br/>
+ 2. netlink<br/>
  3. the input layer (/dev/input/event*)</dd></dl>
 <p> <code>kacpimon</code> then reports on what it sees while it is connected. </p>
 <p> Use <code>kacpimon</code> to make sure your kernel is sending acpi-related events via the three sources mentioned above. </p>
@@ -36,7 +36,7 @@ description: "kacpimon – Kernel ACPI Event Monitor"
 <h2>Todo</h2>
 <p>&#8211; Make kacpimon something that actually gets installed?</p>
 <h2>License</h2>
-<p>kacpimon &#8211; Kernel ACPI Event Monitor<br />
+<p>kacpimon &#8211; Kernel ACPI Event Monitor<br/>
  Copyright (C) 2009-2013 Ted Felix (<a rel="nofollow" href="http://www.tedfelix.com">www.tedfelix.com</a>) </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>

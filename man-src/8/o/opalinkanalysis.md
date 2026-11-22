@@ -156,8 +156,8 @@ description: "opalinkanalysis"
 </dl>
 <p> A punchlist of bad links is also appended to the file: FF_RESULT_DIR/punchlist.csv</p>
 <h2>Examples</h2>
-<p>opalinkanalysis errors<br />
- opalinkanalysis errors clearerrors<br />
+<p>opalinkanalysis errors<br/>
+ opalinkanalysis errors clearerrors<br/>
  opalinkanalysis -p &#8216;1:1 1:2 2:1 2:2&#8217;</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

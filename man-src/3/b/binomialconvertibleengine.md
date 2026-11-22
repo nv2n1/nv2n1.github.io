@@ -10,15 +10,15 @@ description: "ql/pricingengines/hybrid/binomialconvertibleengine.hpp – binomia
 
 <p> ql/pricingengines/hybrid/binomialconvertibleengine.hpp &#8211; binomial engine for convertible bonds </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/methods/lattices/tflattice.hpp&gt;<br />
- #include &lt;ql/pricingengines/hybrid/discretizedconvertible.hpp&gt;<br />
- #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />
- #include &lt;ql/termstructures/yield/flatforward.hpp&gt;<br />
- #include &lt;ql/termstructures/volatility/equityfx/blackconstantvol.hpp&gt;<br />
- #include &lt;ql/instruments/bonds/convertiblebond.hpp&gt;<br />
+<p> #include &lt;ql/methods/lattices/tflattice.hpp&gt;<br/>
+ #include &lt;ql/pricingengines/hybrid/discretizedconvertible.hpp&gt;<br/>
+ #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br/>
+ #include &lt;ql/termstructures/yield/flatforward.hpp&gt;<br/>
+ #include &lt;ql/termstructures/volatility/equityfx/blackconstantvol.hpp&gt;<br/>
+ #include &lt;ql/instruments/bonds/convertiblebond.hpp&gt;<br/>
  #include &lt;ql/instruments/payoffs.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>BinomialConvertibleEngine&lt; T &gt;</code><br />
+<p> class <code>BinomialConvertibleEngine&lt; T &gt;</code><br/>
  <i>Binomial Tsiveriotis-Fernandes engine for convertible bonds. </i></p>
 <h2>Detailed Description</h2>
 <p> binomial engine for convertible bonds </p>

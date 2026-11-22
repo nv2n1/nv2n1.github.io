@@ -15,9 +15,9 @@ Lintian::ProcessableGroup -- A group of objects that Lintian can process
  $proc-&gt;pkg_version, $proc-&gt;pkg_type;
  }
  # etc.</pre><h2>Description</h2>Instances of this perl class are sets of processables. It allows at most one source and one changes or buildinfo package per set, but multiple binary packages (provided that the binary is not already in the set).
-<h2>Methods</h2><dl COMPACT><dt>Lintian::ProcessableGroup-&gt;new ([LAB[, <font SIZE="-1">FILE</font>]])
-</dt><dd>Creates a group and optionally add all processables from .changes or .buildinfo file <font SIZE="-1">FILE.</font> 
- If the <font SIZE="-1">LAB</font> parameter is given, all processables added to this group will be stored as a lab entry from <font SIZE="-1">LAB.</font>
+<h2>Methods</h2><dl COMPACT><dt>Lintian::ProcessableGroup-&gt;new ([LAB[, FILE]])
+</dt><dd>Creates a group and optionally add all processables from .changes or .buildinfo file FILE. 
+ If the LAB parameter is given, all processables added to this group will be stored as a lab entry from LAB.
 </dd><dt>$group-&gt;add_new_processable ($pkg_path[, $pkg_type])
 </dt><dd>Adds a new processable of type <tt>$pkg_type</tt> from <tt>$pkg_path</tt>. If <tt>$pkg_type</tt> is not given, it will be determined by the file extension. 
  This is short hand for: 

@@ -10,7 +10,7 @@ description: "setuid – set user identity"
 
 <p> setuid &#8211; set user identity </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int setuid(uid_t </code><i>uid</i><code>);</code></p>
 <h2>DESCRIPTION</h2>

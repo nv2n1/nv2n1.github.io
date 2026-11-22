@@ -13,14 +13,14 @@ description: "QwtTransform –"
 <p>#include &lt;qwt_transform.h&gt; </p>
 <p> Inherited by <code>QwtLogTransform</code>, <code>QwtNullTransform</code>, and <code>QwtPowerTransform</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtTransform</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtTransform</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtTransform</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtTransform</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual double <code>bounded</code> (double value) const </p>
 <p> virtual double <code>transform</code> (double value) const =0 </p>
 <p> virtual double <code>invTransform</code> (double value) const =0 </p>
-<p> virtual <code>QwtTransform</code> * <code>copy</code> () const =0<br />
+<p> virtual <code>QwtTransform</code> * <code>copy</code> () const =0<br/>
  <i>Virtualized copy operation. </i></p>
 <h2>Detailed Description</h2>
 <p>A transformation between coordinate systems. </p>

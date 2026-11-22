@@ -13,7 +13,7 @@ description: "nerr_handle"
 int nerr_handle(NEOERR **err, NERR_TYPE type);
 </code></pre>
 <h2>Arguments</h2>
-<p>err &#8211; pointer to a pointer NEOERR<br />
+<p>err &#8211; pointer to a pointer NEOERR<br/>
  type &#8211; the NEOERR type, as registered with nerr_register</p>
 <h2>Description</h2>
 <p>nerr_handle is a convenience function. It is the equivalent of nerr_match, but it will also deallocate the error chain on a match. </p>

@@ -17,7 +17,7 @@ description: "QuantLib::MarketModelComposite – Composition of two or more mark
 <p> const <code>EvolutionDescription</code> &amp; <code>evolution</code> () const </p>
 <p> std::vector&lt; Size &gt; <code>suggestedNumeraires</code> () const </p>
 <p> std::vector&lt; <code>Time</code> &gt; <code>possibleCashFlowTimes</code> () const </p>
-<p> void <code>reset</code> ()<br />
+<p> void <code>reset</code> ()<br/>
  <i>during simulation put product at start of path </i> </p>
 <p> <code>Composite facilities</code> </p>
 <p> void <code>add</code> (const <code>Clone</code>&lt; <code>MarketModelMultiProduct</code> &gt; &amp;, <code>Real</code> multiplier=1.0) </p>

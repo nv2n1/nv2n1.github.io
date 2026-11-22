@@ -10,7 +10,7 @@ description: "XkbTranslateKeySym – Find the string and symbol associated with 
 <p>XkbTranslateKeySym &#8211; Find the string and symbol associated with a keysym for a given keyboard state </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>int XkbTranslateKeySym</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>KeySym *</code><i>sym_inout</i><code>,</code> <code>unsigned int </code><i>mods</i><code>,</code> <code>char *</code><i>buf</i><code>,</code> <code>int </code><i>nbytes</i><code>,</code> <code>int *</code><i>extra_rtrn</i><code>);</code><br />
+<dt> <code>int XkbTranslateKeySym</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>KeySym *</code><i>sym_inout</i><code>,</code> <code>unsigned int </code><i>mods</i><code>,</code> <code>char *</code><i>buf</i><code>,</code> <code>int </code><i>nbytes</i><code>,</code> <code>int *</code><i>extra_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

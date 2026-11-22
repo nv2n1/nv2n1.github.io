@@ -16,6 +16,6 @@ description: "std::pmr::polymorphic_allocator<T>::destroy – std::pmr::polymorp
 <h2>Parameters</h2>
 <p>p &#8211; pointer to the object being destroyed</p>
 <h2>See also</h2>
-<p>destroy destructs an object stored in the allocated storage<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />
+<p>destroy destructs an object stored in the allocated storage<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br/>
 <code>[static]</code> </p>

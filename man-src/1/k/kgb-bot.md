@@ -18,9 +18,9 @@ description: "kgb-bot – an IRC bot helping collaborative work"
 <dt>&#8211;config-dir <i>directory</i></dt>
 <dd> Specify directory with configuration files to load. All files like <i>*.conf</i> are loaded, in alphabetical order. Default is <i>/etc/kgb-bot/kgb.conf.d</i>.</dd>
 <dt>&#8211;foreground</dt>
-<dd> Do not detach from console, print log messages to <font SIZE="-1">STDERR</font> and do not become a daemon, useful for debugging.</dd>
+<dd> Do not detach from console, print log messages to STDERR and do not become a daemon, useful for debugging.</dd>
 <dt>&#8211;simulate <i>file</i></dt>
-<dd> Do not connect to <font SIZE="-1">IRC.</font> Instead, output each notification line to the given <i>file</i>, like: </dd>
+<dd> Do not connect to IRC. Instead, output each notification line to the given <i>file</i>, like: </dd>
 <pre>
     #chan repo user branch revision module changed-paths
     #chan repo commit message line 1

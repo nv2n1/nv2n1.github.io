@@ -27,11 +27,11 @@ token = value</pre>
  kernel.modprobe = /sbin/mod probe</pre>
 </dl>
 <h2>Files</h2>
-<p><i>/etc/sysctl.d/*.conf</i><br />
- <i>/run/sysctl.d/*.conf</i><br />
- <i>/usr/local/lib/sysctl.d/*.conf</i><br />
- <i>/usr/lib/sysctl.d/*.conf</i><br />
- <i>/lib/sysctl.d/*.conf</i><br />
+<p><i>/etc/sysctl.d/*.conf</i><br/>
+ <i>/run/sysctl.d/*.conf</i><br/>
+ <i>/usr/local/lib/sysctl.d/*.conf</i><br/>
+ <i>/usr/lib/sysctl.d/*.conf</i><br/>
+ <i>/lib/sysctl.d/*.conf</i><br/>
  <i>/etc/sysctl.conf</i> </p>
 <p> The paths where <code>sysctl</code> preload files usually exist. See also <code>sysctl</code> option <i>&#8211;system</i>.</p>
 <h2>See Also</h2>

@@ -9,11 +9,11 @@ description: "Polygon Functions – Functions that operate on evas polygon objec
 
 <p>Polygon Functions &#8211; Functions that operate on evas polygon objects. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Evas_Object</code> * <code>evas_object_polygon_add</code> (<code>Evas</code> *e)<br />
- <i>Adds a new evas polygon object to the given evas. </i><br />
- EAPI void <code>evas_object_polygon_point_add</code> (<code>Evas_Object</code> *obj, Evas_Coord x, Evas_Coord y)<br />
- <i>Adds the given point to the given evas polygon object. </i><br />
- EAPI void <code>evas_object_polygon_points_clear</code> (<code>Evas_Object</code> *obj)<br />
+<p>EAPI <code>Evas_Object</code> * <code>evas_object_polygon_add</code> (<code>Evas</code> *e)<br/>
+ <i>Adds a new evas polygon object to the given evas. </i><br/>
+ EAPI void <code>evas_object_polygon_point_add</code> (<code>Evas_Object</code> *obj, Evas_Coord x, Evas_Coord y)<br/>
+ <i>Adds the given point to the given evas polygon object. </i><br/>
+ EAPI void <code>evas_object_polygon_points_clear</code> (<code>Evas_Object</code> *obj)<br/>
  <i>Removes all of the points from the given evas polygon object. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that operate on evas polygon objects.</p>
@@ -30,8 +30,8 @@ description: "Polygon Functions – Functions that operate on evas polygon objec
 <p>Adds the given point to the given evas polygon object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given evas polygon object.<br />
- <i>x</i> The X coordinate of the given point.<br />
+<dd><i>obj</i> The given evas polygon object.<br/>
+ <i>x</i> The X coordinate of the given point.<br/>
  <i>y</i> The Y coordinate of the given point.</dd></dl>
 <p> References evas_list_append().</p>
 <h3>EAPI void evas_object_polygon_points_clear (<code>Evas_Object</code> * obj)</h3>

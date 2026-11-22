@@ -30,5 +30,5 @@ description: "kbdrate – reset the keyboard repeat rate and delay time"
 <p> Setting the repeat rate on the Gateway AnyKey keyboard does not work. If someone with a Gateway figures out how to program the keyboard, please send mail to util-linux [at] math.uio.no. </p>
 <p> All this is very architecture dependent. Nowadays <code>kbdrate</code> first tries the KDKBDREP and KIOCSRATE ioctls. (The former usually works on an m68k/i386 machine, the latter for SPARC.) When these ioctls fail an ioport interface.</p>
 <h2>Files</h2>
-<p><i>/etc/rc.local</i><br />
+<p><i>/etc/rc.local</i><br/>
  <i>/dev/port</i></p>

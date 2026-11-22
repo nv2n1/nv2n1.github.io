@@ -16,89 +16,89 @@ Typedefs</code></pre>
 <p> typedef <code>_PrefixList</code> <code>PrefixList</code></p>
 <h3>Enumerations</h3>
 <p>enum inet_address_type { IPV4 =  1, IPV6 =  2, IPV4Z =  3, IPV6Z =  4, DNS =  16 }</p>
-<p>Functions<br />
- int <code>_sprint_hexstring_line</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const u_char *cp, size_t line_len)<br />
- <i>Prints a hexadecimal string into a buffer. </i><br />
+<p>Functions<br/>
+ int <code>_sprint_hexstring_line</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const u_char *cp, size_t line_len)<br/>
+ <i>Prints a hexadecimal string into a buffer. </i><br/>
  int <code>sprint_realloc_hexstring</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const u_char *cp, size_t len) </p>
-<p> int <code>sprint_realloc_asciistring</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const u_char *cp, size_t len)<br />
- <i>Prints an ascii string into a buffer. </i><br />
- int <code>sprint_realloc_octet_string</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints an octet string into a buffer. </i><br />
- int <code>sprint_realloc_counter64</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints a counter into a buffer. </i><br />
- int <code>sprint_realloc_opaque</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints an object identifier into a buffer. </i><br />
- int <code>sprint_realloc_object_identifier</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints an object identifier into a buffer. </i><br />
- int <code>sprint_realloc_timeticks</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints a timetick variable into a buffer. </i><br />
- int <code>sprint_realloc_hinted_integer</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, long val, const char decimaltype, const char *hint, const char *units)<br />
- <i>Prints an integer according to the hint into a buffer. </i><br />
- int <code>sprint_realloc_integer</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints an integer into a buffer. </i><br />
- int <code>sprint_realloc_uinteger</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints an unsigned integer into a buffer. </i><br />
- int <code>sprint_realloc_gauge</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints a gauge value into a buffer. </i><br />
- int <code>sprint_realloc_counter</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints a counter value into a buffer. </i><br />
- int <code>sprint_realloc_networkaddress</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints a network address into a buffer. </i><br />
- int <code>sprint_realloc_ipaddress</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints an ip-address into a buffer. </i><br />
- int <code>sprint_realloc_null</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints a null value into a buffer. </i><br />
- int <code>sprint_realloc_bitstring</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Prints a bit string into a buffer. </i><br />
+<p> int <code>sprint_realloc_asciistring</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const u_char *cp, size_t len)<br/>
+ <i>Prints an ascii string into a buffer. </i><br/>
+ int <code>sprint_realloc_octet_string</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints an octet string into a buffer. </i><br/>
+ int <code>sprint_realloc_counter64</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints a counter into a buffer. </i><br/>
+ int <code>sprint_realloc_opaque</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints an object identifier into a buffer. </i><br/>
+ int <code>sprint_realloc_object_identifier</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints an object identifier into a buffer. </i><br/>
+ int <code>sprint_realloc_timeticks</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints a timetick variable into a buffer. </i><br/>
+ int <code>sprint_realloc_hinted_integer</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, long val, const char decimaltype, const char *hint, const char *units)<br/>
+ <i>Prints an integer according to the hint into a buffer. </i><br/>
+ int <code>sprint_realloc_integer</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints an integer into a buffer. </i><br/>
+ int <code>sprint_realloc_uinteger</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints an unsigned integer into a buffer. </i><br/>
+ int <code>sprint_realloc_gauge</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints a gauge value into a buffer. </i><br/>
+ int <code>sprint_realloc_counter</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints a counter value into a buffer. </i><br/>
+ int <code>sprint_realloc_networkaddress</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints a network address into a buffer. </i><br/>
+ int <code>sprint_realloc_ipaddress</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints an ip-address into a buffer. </i><br/>
+ int <code>sprint_realloc_null</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints a null value into a buffer. </i><br/>
+ int <code>sprint_realloc_bitstring</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Prints a bit string into a buffer. </i><br/>
  int <code>sprint_realloc_nsapaddress</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units) </p>
-<p> int <code>sprint_realloc_badtype</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Fallback routine for a bad type, prints &#8216;Variable has bad type&#8217; into a buffer. </i><br />
- int <code>sprint_realloc_by_type</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br />
- <i>Universal print routine, prints a variable into a buffer according to the variable type. </i><br />
- <code>tree</code> * <code>get_tree_head</code> (void)<br />
- <i>Retrieves the tree head. </i><br />
+<p> int <code>sprint_realloc_badtype</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Fallback routine for a bad type, prints &#8216;Variable has bad type&#8217; into a buffer. </i><br/>
+ int <code>sprint_realloc_by_type</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units)<br/>
+ <i>Universal print routine, prints a variable into a buffer according to the variable type. </i><br/>
+ <code>tree</code> * <code>get_tree_head</code> (void)<br/>
+ <i>Retrieves the tree head. </i><br/>
  char * <code>snmp_out_toggle_options</code> (char *options) </p>
 <p> void <code>snmp_out_toggle_options_usage</code> (const char *lead, FILE *outf) </p>
 <p> char * <code>snmp_in_options</code> (char *optarg, int argc, char *const *argv) </p>
 <p> char * <code>snmp_in_toggle_options</code> (char *options) </p>
-<p> void <code>snmp_in_toggle_options_usage</code> (const char *lead, FILE *outf)<br />
- <i>Prints out a help usage for the in* toggle options. </i><br />
+<p> void <code>snmp_in_toggle_options_usage</code> (const char *lead, FILE *outf)<br/>
+ <i>Prints out a help usage for the in* toggle options. </i><br/>
  void <code>register_mib_handlers</code> (void) </p>
 <p> void <code>netsnmp_set_mib_directory</code> (const char *dir) </p>
 <p> char * <code>netsnmp_get_mib_directory</code> (void) </p>
 <p> void <code>netsnmp_fixup_mib_directory</code> (void) </p>
-<p> void <code>netsnmp_init_mib</code> (void)<br />
- <i>Initialises the mib reader. </i><br />
+<p> void <code>netsnmp_init_mib</code> (void)<br/>
+ <i>Initialises the mib reader. </i><br/>
  void <code>init_mib</code> (void) </p>
-<p> void <code>shutdown_mib</code> (void)<br />
- <i>Unloads all mibs. </i><br />
- void <code>print_mib</code> (FILE *fp)<br />
- <i>Prints the MIBs to the file fp. </i><br />
+<p> void <code>shutdown_mib</code> (void)<br/>
+ <i>Unloads all mibs. </i><br/>
+ void <code>print_mib</code> (FILE *fp)<br/>
+ <i>Prints the MIBs to the file fp. </i><br/>
  void <code>print_ascii_dump</code> (FILE *fp) </p>
-<p> void <code>set_function</code> (struct <code>tree</code> *subtree)<br />
- <i>Set&#8217;s the printing function printomat in a subtree according it&#8217;s type. </i><br />
- int <code>read_objid</code> (const char *input, oid *output, size_t *out_len)<br />
- <i>Reads an object identifier from an input string into internal OID form. </i><br />
+<p> void <code>set_function</code> (struct <code>tree</code> *subtree)<br/>
+ <i>Set&#8217;s the printing function printomat in a subtree according it&#8217;s type. </i><br/>
+ int <code>read_objid</code> (const char *input, oid *output, size_t *out_len)<br/>
+ <i>Reads an object identifier from an input string into internal OID form. </i><br/>
  void <code>netsnmp_sprint_realloc_objid</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, int *buf_overflow, const oid *objid, size_t objidlen) </p>
 <p> <code>tree</code> * <code>netsnmp_sprint_realloc_objid_tree</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, int *buf_overflow, const oid *objid, size_t objidlen) </p>
 <p> int <code>sprint_realloc_objid</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const oid *objid, size_t objidlen) </p>
 <p> int <code>snprint_objid</code> (char *buf, size_t buf_len, const oid *objid, size_t objidlen) </p>
-<p> void <code>print_objid</code> (const oid *objid, size_t objidlen)<br />
- <i>Prints an oid to stdout. </i><br />
- void <code>fprint_objid</code> (FILE *f, const oid *objid, size_t objidlen)<br />
- <i>Prints an oid to a file descriptor. </i><br />
+<p> void <code>print_objid</code> (const oid *objid, size_t objidlen)<br/>
+ <i>Prints an oid to stdout. </i><br/>
+ void <code>fprint_objid</code> (FILE *f, const oid *objid, size_t objidlen)<br/>
+ <i>Prints an oid to a file descriptor. </i><br/>
  int <code>sprint_realloc_variable</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const oid *objid, size_t objidlen, const <code>netsnmp_variable_list</code> *<code>variable</code>) </p>
 <p> int <code>snprint_variable</code> (char *buf, size_t buf_len, const oid *objid, size_t objidlen, const <code>netsnmp_variable_list</code> *<code>variable</code>) </p>
-<p> void <code>print_variable</code> (const oid *objid, size_t objidlen, const <code>netsnmp_variable_list</code> *<code>variable</code>)<br />
- <i>Prints a variable to stdout. </i><br />
- void <code>fprint_variable</code> (FILE *f, const oid *objid, size_t objidlen, const <code>netsnmp_variable_list</code> *<code>variable</code>)<br />
- <i>Prints a variable to a file descriptor. </i><br />
+<p> void <code>print_variable</code> (const oid *objid, size_t objidlen, const <code>netsnmp_variable_list</code> *<code>variable</code>)<br/>
+ <i>Prints a variable to stdout. </i><br/>
+ void <code>fprint_variable</code> (FILE *f, const oid *objid, size_t objidlen, const <code>netsnmp_variable_list</code> *<code>variable</code>)<br/>
+ <i>Prints a variable to a file descriptor. </i><br/>
  int <code>sprint_realloc_value</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, const oid *objid, size_t objidlen, const <code>netsnmp_variable_list</code> *<code>variable</code>) </p>
 <p> int <code>snprint_value</code> (char *buf, size_t buf_len, const oid *objid, size_t objidlen, const <code>netsnmp_variable_list</code> *<code>variable</code>) </p>
 <p> void <code>print_value</code> (const oid *objid, size_t objidlen, const <code>netsnmp_variable_list</code> *<code>variable</code>) </p>
 <p> void <code>fprint_value</code> (FILE *f, const oid *objid, size_t objidlen, const <code>netsnmp_variable_list</code> *<code>variable</code>) </p>
-<p> int <code>build_oid_segment</code> (<code>netsnmp_variable_list</code> *var)<br />
- <i>Takes the value in VAR and turns it into an OID segment in var-&gt;name. </i><br />
+<p> int <code>build_oid_segment</code> (<code>netsnmp_variable_list</code> *var)<br/>
+ <i>Takes the value in VAR and turns it into an OID segment in var-&gt;name. </i><br/>
  int <code>build_oid_noalloc</code> (oid *in, size_t in_len, size_t *out_len, oid *prefix, size_t prefix_len, <code>netsnmp_variable_list</code> *indexes) </p>
 <p> int <code>build_oid</code> (oid **out, size_t *out_len, oid *prefix, size_t prefix_len, <code>netsnmp_variable_list</code> *indexes) </p>
 <p> int <code>parse_oid_indexes</code> (oid *oidIndex, size_t oidLen, <code>netsnmp_variable_list</code> *data) </p>
@@ -106,18 +106,18 @@ Typedefs</code></pre>
 <p> int <code>dump_realloc_oid_to_inetaddress</code> (const int addr_type, const oid *objid, size_t objidlen, u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, char quotechar) </p>
 <p> int <code>dump_realloc_oid_to_string</code> (const oid *objid, size_t objidlen, u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, char quotechar) </p>
 <p> <code>tree</code> * <code>get_tree</code> (const oid *objid, size_t objidlen, struct <code>tree</code> *subtree) </p>
-<p> void <code>print_description</code> (oid *objid, size_t objidlen, int width)<br />
- <i>Prints on oid description on stdout. </i><br />
- void <code>fprint_description</code> (FILE *f, oid *objid, size_t objidlen, int width)<br />
- <i>Prints on oid description into a file descriptor. </i><br />
+<p> void <code>print_description</code> (oid *objid, size_t objidlen, int width)<br/>
+ <i>Prints on oid description on stdout. </i><br/>
+ void <code>fprint_description</code> (FILE *f, oid *objid, size_t objidlen, int width)<br/>
+ <i>Prints on oid description into a file descriptor. </i><br/>
  int <code>snprint_description</code> (char *buf, size_t buf_len, oid *objid, size_t objidlen, int width) </p>
 <p> int <code>sprint_realloc_description</code> (u_char **buf, size_t *buf_len, size_t *out_len, int allow_realloc, oid *objid, size_t objidlen, int width) </p>
 <p> int <code>get_module_node</code> (const char *fname, const char *<code>module</code>, oid *objid, size_t *objidlen) </p>
-<p> int <code>get_wild_node</code> (const char *name, oid *objid, size_t *objidlen)<br />
+<p> int <code>get_wild_node</code> (const char *name, oid *objid, size_t *objidlen)<br/>
  <i></i><code>See also:</code></p>
 <dl>
 <dd>comments on find_best_tree_node for usage after first time.</dd></dl>
-<p> &quot;<br />
+<p> &quot;<br/>
  int <code>get_node</code> (const char *name, oid *objid, size_t *objidlen) </p>
 <p> void <code>clear_tree_flags</code> (register struct <code>tree</code> *tp) </p>
 <p> void <code>print_oid_report</code> (FILE *fp) </p>
@@ -126,19 +126,19 @@ Typedefs</code></pre>
 <p> void <code>print_oid_report_enable_suffix</code> (void) </p>
 <p> void <code>print_oid_report_enable_symbolic</code> (void) </p>
 <p> void <code>print_oid_report_enable_mibchildoid</code> (void) </p>
-<p> char * <code>uptime_string</code> (u_long timeticks, char *buf)<br />
- <i>Converts timeticks to hours, minutes, seconds string. </i><br />
+<p> char * <code>uptime_string</code> (u_long timeticks, char *buf)<br/>
+ <i>Converts timeticks to hours, minutes, seconds string. </i><br/>
  char * <code>uptime_string_n</code> (u_long timeticks, char *buf, size_t buflen) </p>
-<p> oid * <code>snmp_parse_oid</code> (const char *argv, oid *root, size_t *rootlen)<br />
- <i>Given a string, parses an oid out of it (if possible). </i><br />
+<p> oid * <code>snmp_parse_oid</code> (const char *argv, oid *root, size_t *rootlen)<br/>
+ <i>Given a string, parses an oid out of it (if possible). </i><br/>
  const char * <code>parse_octet_hint</code> (const char *hint, const char *value, unsigned char **new_val, int *new_val_len) </p>
 <p> u_char <code>mib_to_asn_type</code> (int mib_type) </p>
-<p> int <code>netsnmp_str2oid</code> (const char *S, oid *O, int L)<br />
- <i>Converts a string to its OID form. </i><br />
- int <code>netsnmp_oid2chars</code> (char *C, int L, const oid *O)<br />
- <i>Converts an OID to its character form. </i><br />
- int <code>netsnmp_oid2str</code> (char *S, int L, oid *O)<br />
- <i>Converts an OID to its string form. </i><br />
+<p> int <code>netsnmp_str2oid</code> (const char *S, oid *O, int L)<br/>
+ <i>Converts a string to its OID form. </i><br/>
+ int <code>netsnmp_oid2chars</code> (char *C, int L, const oid *O)<br/>
+ <i>Converts an OID to its character form. </i><br/>
+ int <code>netsnmp_oid2str</code> (char *S, int L, oid *O)<br/>
+ <i>Converts an OID to its string form. </i><br/>
  int <code>snprint_by_type</code> (char *buf, size_t buf_len, <code>netsnmp_variable_list</code> *var, const struct <code>enum_list</code> *enums, const char *hint, const char *units) </p>
 <p> int <code>snprint_hexstring</code> (char *buf, size_t buf_len, const u_char *cp, size_t len) </p>
 <p> int <code>snprint_asciistring</code> (char *buf, size_t buf_len, const u_char *cp, size_t len) </p>
@@ -170,11 +170,11 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>buf</i> address of the buffer to print to.<br />
- <i>buf_len</i> address to an integer containing the size of buf.<br />
- <i>out_len</i> incremented by the number of characters printed.<br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size.<br />
- <i>cp</i> the array of characters to encode.<br />
+<dd><i>buf</i> address of the buffer to print to.<br/>
+ <i>buf_len</i> address to an integer containing the size of buf.<br/>
+ <i>out_len</i> incremented by the number of characters printed.<br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size.<br/>
+ <i>cp</i> the array of characters to encode.<br/>
  <i>line_len</i> the array length of cp.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -201,9 +201,9 @@ PrefixList mib_prefixes []</code></pre>
 <p>Prints on oid description into a file descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>f</i> The file descriptor to print to.<br />
- <i>objid</i> The object identifier.<br />
- <i>objidlen</i> The object id length.<br />
+<dd><i>f</i> The file descriptor to print to.<br/>
+ <i>objid</i> The object identifier.<br/>
+ <i>objidlen</i> The object id length.<br/>
  <i>width</i> Number of subidentifiers.</dd></dl>
 <p> Definition at line 4437 of file mib.c. </p>
 <p> References NULL, SNMP_FREE, and sprint_realloc_description(). </p>
@@ -212,8 +212,8 @@ PrefixList mib_prefixes []</code></pre>
 <p>Prints an oid to a file descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>f</i> The file descriptor to print to.<br />
- <i>objid</i> The oid to print<br />
+<dd><i>f</i> The file descriptor to print to.<br/>
+ <i>objid</i> The oid to print<br/>
  <i>objidlen</i> The length of oidid.</dd></dl>
 <p> Definition at line 3163 of file mib.c. </p>
 <p> References netsnmp_sprint_realloc_objid_tree(), NULL, and SNMP_FREE. </p>
@@ -222,9 +222,9 @@ PrefixList mib_prefixes []</code></pre>
 <p>Prints a variable to a file descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>f</i> The file descriptor to print to.<br />
- <i>objid</i> The object id.<br />
- <i>objidlen</i> The length of teh object id.<br />
+<dd><i>f</i> The file descriptor to print to.<br/>
+ <i>objid</i> The object id.<br/>
+ <i>objidlen</i> The length of teh object id.<br/>
  <i>variable</i> The variable to print.</dd></dl>
 <p> Definition at line 3317 of file mib.c. </p>
 <p> References NULL, SNMP_FREE, and sprint_realloc_variable(). </p>
@@ -263,8 +263,8 @@ PrefixList mib_prefixes []</code></pre>
 <p> in example 5 . 1 . 2 . 3 . 4 . 5 = 12345 </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>C</i> The character buffer.<br />
- <i>L</i> The length of the buffer.<br />
+<dd><i>C</i> The character buffer.<br/>
+ <i>L</i> The length of the buffer.<br/>
  <i>O</i> The oid.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -277,8 +277,8 @@ PrefixList mib_prefixes []</code></pre>
 <p> in example 5 . &#8216;h&#8217; . &#8216;e&#8217; . &#8216;l&#8217; . &#8216;l&#8217; . &#8216;o&#8217; = &#8216;hello\0&#8217; (null terminated) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>S</i> The character string buffer. <br />
- <i>L</i> The length of the string buffer. <br />
+<dd> <p> <i>S</i> The character string buffer. <br/>
+ <i>L</i> The length of the string buffer. <br/>
  <i>O</i> The oid. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -296,8 +296,8 @@ PrefixList mib_prefixes []</code></pre>
 <p> in example &#8216;hello&#8217; = 5 . &#8216;h&#8217; . &#8216;e&#8217; . &#8216;l&#8217; . &#8216;l&#8217; . &#8216;o&#8217; </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>S</i> The string. <br />
- <i>O</i> The oid. <br />
+<dd> <p> <i>S</i> The string. <br/>
+ <i>O</i> The oid. <br/>
  <i>L</i> The length of the oid. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -325,7 +325,7 @@ PrefixList mib_prefixes []</code></pre>
 <p> Prints an oid to stdout. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>objid</i> The oid to print <br />
+<dd> <p> <i>objid</i> The oid to print <br/>
  <i>objidlen</i> The length of oidid. </p>
  </dd></dl>
 <p> Definition at line 3149 of file mib.c. </p>
@@ -334,8 +334,8 @@ PrefixList mib_prefixes []</code></pre>
 <p> Prints a variable to stdout. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>objid</i> The object id. <br />
- <i>objidlen</i> The length of teh object id. <br />
+<dd> <p> <i>objid</i> The object id. <br/>
+ <i>objidlen</i> The length of teh object id. <br/>
  <i>variable</i> The variable to print. </p>
  </dd></dl>
 <p> Definition at line 3301 of file mib.c. </p>
@@ -345,8 +345,8 @@ PrefixList mib_prefixes []</code></pre>
 <p> When called, out_len must hold the maximum length of the output array. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>input</i> the input string. <br />
- <i>output</i> the oid wirte. <br />
+<dd> <p> <i>input</i> the input string. <br/>
+ <i>output</i> the oid wirte. <br/>
  <i>out_len</i> number of subid&#8217;s in output. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -374,7 +374,7 @@ PrefixList mib_prefixes []</code></pre>
 <p> Prints out a help usage for the in* toggle options. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>lead</i> The lead to print for every line. <br />
+<dd> <p> <i>lead</i> The lead to print for every line. <br/>
  <i>outf</i> The file descriptor to write to. </p>
  </dd></dl>
 <p> Definition at line 2289 of file mib.c.  </p>
@@ -383,8 +383,8 @@ PrefixList mib_prefixes []</code></pre>
 <p> It will try to parse it based on predetermined configuration if present or by every method possible otherwise. If a suffix has been registered using NETSNMP_DS_LIB_OIDSUFFIX, it will be appended to the input string before processing. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>argv</i> The OID to string parse <br />
- <i>root</i> An OID array where the results are stored. <br />
+<dd> <p> <i>argv</i> The OID to string parse <br/>
+ <i>root</i> An OID array where the results are stored. <br/>
  <i>rootlen</i> The max length of the array going in and the data length coming out. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -400,11 +400,11 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> address of the buffer to print to. <br />
- <i>buf_len</i> address to an integer containing the size of buf. <br />
- <i>out_len</i> incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>cp</i> the array of characters to encode. <br />
+<dd> <p> <i>buf</i> address of the buffer to print to. <br/>
+ <i>buf_len</i> address to an integer containing the size of buf. <br/>
+ <i>out_len</i> incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>cp</i> the array of characters to encode. <br/>
  <i>len</i> the array length of cp. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -419,13 +419,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -440,13 +440,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -461,13 +461,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -482,13 +482,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -504,13 +504,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -525,13 +525,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -546,13 +546,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>val</i> The variable to encode. <br />
- <i>decimaltype</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may _NOT_ be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>val</i> The variable to encode. <br/>
+ <i>decimaltype</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may _NOT_ be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -567,13 +567,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -588,13 +588,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -609,13 +609,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -630,13 +630,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -651,13 +651,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -673,13 +673,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -694,13 +694,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -715,13 +715,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -736,13 +736,13 @@ PrefixList mib_prefixes []</code></pre>
 <p> If allow_realloc is true the buffer will be (re)allocated to fit in the needed size. (Note: *buf may change due to this.) </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buf</i> Address of the buffer to print to. <br />
- <i>buf_len</i> Address to an integer containing the size of buf. <br />
- <i>out_len</i> Incremented by the number of characters printed. <br />
- <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br />
- <i>var</i> The variable to encode. <br />
- <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br />
- <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br />
+<dd> <p> <i>buf</i> Address of the buffer to print to. <br/>
+ <i>buf_len</i> Address to an integer containing the size of buf. <br/>
+ <i>out_len</i> Incremented by the number of characters printed. <br/>
+ <i>allow_realloc</i> if not zero reallocate the buffer to fit the needed size. <br/>
+ <i>var</i> The variable to encode. <br/>
+ <i>enums</i> The enumeration ff this variable is enumerated. may be NULL. <br/>
+ <i>hint</i> Contents of the DISPLAY-HINT clause of the MIB. See RFC 1903 Section 3.1 for details. may be NULL. <br/>
  <i>units</i> Contents of the UNITS clause of the MIB. may be NULL. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -757,7 +757,7 @@ PrefixList mib_prefixes []</code></pre>
 <p> CMU compatible does not show centiseconds. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>timeticks</i> The timeticks to convert. <br />
+<dd> <p> <i>timeticks</i> The timeticks to convert. <br/>
  <i>buf</i> Buffer to write to, has to be at least 40 Bytes large. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>

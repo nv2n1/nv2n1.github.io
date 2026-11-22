@@ -25,5 +25,5 @@ description: "XtSetSensitive, XtIsSensitive – set and check a widget’s sensi
 <p> <code>XtSetSensitive</code> maintains the invariant that if parent has either sensitive or ancestor_sensitive <code>False</code>, then all children have ancestor_sensitive <code>False</code>. </p>
 <p> The <code>XtIsSensitive</code> function returns <code>True</code> or <code>False</code> to indicate whether or not user input events are being dispatched. If both core.sensitive and core.ancestor_sensitive are <code>True</code>, <code>XtIsSensitive</code> returns <code>True</code>; otherwise, it returns <code>False</code>.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

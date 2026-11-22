@@ -10,13 +10,13 @@ description: "tput, reset – initialize a terminal or query terminfo database"
 
 <p> <code>tput</code>, <code>reset</code> - initialize a terminal or query terminfo database </p>
 <h2>SYNOPSIS</h2>
-<p> <code>tput</code> [<code>-T</code><i>type</i>] <i>capname</i> [<i>parameters</i>] <br />
- <code>tput</code> [<code>-T</code><i>type</i>] [<code>-x</code>] <code>clear</code> <br />
- <code>tput</code> [<code>-T</code><i>type</i>] <code>init</code> <br />
- <code>tput</code> [<code>-T</code><i>type</i>] <code>reset</code> <br />
- <code>tput</code> [<code>-T</code><i>type</i>] <code>longname</code> <br />
- <code>tput -S</code> <code>&lt;&lt;</code> <br />
- <code>tput -V</code> <br />
+<p> <code>tput</code> [<code>-T</code><i>type</i>] <i>capname</i> [<i>parameters</i>] <br/>
+ <code>tput</code> [<code>-T</code><i>type</i>] [<code>-x</code>] <code>clear</code> <br/>
+ <code>tput</code> [<code>-T</code><i>type</i>] <code>init</code> <br/>
+ <code>tput</code> [<code>-T</code><i>type</i>] <code>reset</code> <br/>
+ <code>tput</code> [<code>-T</code><i>type</i>] <code>longname</code> <br/>
+ <code>tput -S</code> <code>&lt;&lt;</code> <br/>
+ <code>tput -V</code> <br/>
   </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>tput</code> utility uses the <code>terminfo</code> database to make the values of terminal-dependent capabilities and information available to the shell (see <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1)), to initialize or reset the terminal, or return the long name of the requested terminal type. The result depends upon the capability&#8217;s type: </p>
@@ -70,10 +70,10 @@ description: "tput, reset – initialize a terminal or query terminfo database"
 <dd> <p> first, <code>tput</code> retrieves the current terminal mode settings for your terminal. It does this by successively testing </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 the standard error, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 standard output, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 standard input and <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 the standard error, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 standard output, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 standard input and <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 ultimately ``/dev/tty&#8217;&#8216; </p>
  </dd></dl>
 <dd> <p> to obtain terminal settings. Having retrieved these settings, <code>tput</code> remembers which file descriptor to use when updating settings. </p>
@@ -85,9 +85,9 @@ description: "tput, reset – initialize a terminal or query terminfo database"
 <dd> <p> the terminal modes will be updated: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 any delays (e.g., newline) specified in the entry will be set in the tty driver, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 tabs expansion will be turned on or off according to the specification in the entry, and <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 any delays (e.g., newline) specified in the entry will be set in the tty driver, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 tabs expansion will be turned on or off according to the specification in the entry, and <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 if tabs are not expanded, standard tabs will be set (every 8 spaces). </p>
  </dd></dl>
 <dt>(4)</dt>
@@ -109,10 +109,10 @@ description: "tput, reset – initialize a terminal or query terminfo database"
 <dd> <p> before any other initialization, the terminal modes will be reset to a ``sane&#8217;&#8216; state: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 set cooked and echo modes, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 turn off cbreak and raw modes, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 turn on newline translation and <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 set cooked and echo modes, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 turn off cbreak and raw modes, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 turn on newline translation and <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 reset any unset special characters to their default values </p>
  </dd></dl>
 <dt>(2)</dt>
@@ -127,21 +127,21 @@ description: "tput, reset – initialize a terminal or query terminfo database"
 <h3>Aliases</h3>
 <p> <code>tput</code> handles the <code>clear</code>, <code>init</code> and <code>reset</code> commands specially: it allows for the possibility that it is invoked by a link with those names. </p>
 <p> If <code>tput</code> is invoked by a link named <code>reset</code>, this has the same effect as <code>tput reset</code>. The <code><a href="/docs/linux/man/1-tset/">tset</a></code>(1) utility also treats a link named <code>reset</code> specially. </p>
-<p> Before ncurses 6.1, the two utilities were different from each other: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>tset</code> utility reset the terminal modes and special characters (not done with <code>tput</code>). <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 On the other hand, <code>tset</code>&#8216;s repertoire of terminal capabilities for resetting the terminal was more limited, i.e., only <code>reset_1string</code>, <code>reset_2string</code> and <code>reset_file</code> in contrast to the tab-stops and margins which are set by this utility. <br />
+<p> Before ncurses 6.1, the two utilities were different from each other: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>tset</code> utility reset the terminal modes and special characters (not done with <code>tput</code>). <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 On the other hand, <code>tset</code>&#8216;s repertoire of terminal capabilities for resetting the terminal was more limited, i.e., only <code>reset_1string</code>, <code>reset_2string</code> and <code>reset_file</code> in contrast to the tab-stops and margins which are set by this utility. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The <code>reset</code> program is usually an alias for <code>tset</code>, because of this difference with resetting terminal modes and special characters. </p>
-<p> With the changes made for ncurses 6.1, the <i>reset</i> feature of the two programs is (mostly) the same. A few differences remain: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The <code>tset</code> program waits one second when resetting, in case it happens to be a hardware terminal. <br />
+<p> With the changes made for ncurses 6.1, the <i>reset</i> feature of the two programs is (mostly) the same. A few differences remain: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The <code>tset</code> program waits one second when resetting, in case it happens to be a hardware terminal. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The two programs write the terminal initialization strings to different streams (i.e., the standard error for <code>tset</code> and the standard output for <code>tput</code>). </p>
 <dl>
 <dd> <p> <code>Note:</code> although these programs write to different streams, redirecting their output to a file will capture only part of their actions. The changes to the terminal modes are not affected by redirecting the output. </p>
  </dd></dl>
 <p> If <code>tput</code> is invoked by a link named <code>init</code>, this has the same effect as <code>tput init</code>. Again, you are less likely to use that link because another program named <code>init</code> has a more well-established use.  </p>
 <h3>Terminal Size</h3>
-<p> Besides the special commands (e.g., <code>clear</code>), tput treats certain terminfo capabilities specially: <code>lines</code> and <code>cols</code>. tput calls <code>setupterm</code>(3X) to obtain the terminal size: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 first, it gets the size from the terminal database (which generally is not provided for terminal emulators which do not have a fixed window size) <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 then it asks the operating system for the terminal&#8217;s size (which generally works, unless connecting via a serial line which does not support <i>NAWS</i>: negotiations about window size). <br />
+<p> Besides the special commands (e.g., <code>clear</code>), tput treats certain terminfo capabilities specially: <code>lines</code> and <code>cols</code>. tput calls <code>setupterm</code>(3X) to obtain the terminal size: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 first, it gets the size from the terminal database (which generally is not provided for terminal emulators which do not have a fixed window size) <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 then it asks the operating system for the terminal&#8217;s size (which generally works, unless connecting via a serial line which does not support <i>NAWS</i>: negotiations about window size). <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 finally, it inspects the environment variables <code>LINES</code> and <code>COLUMNS</code> which may override the terminal size. </p>
 <p> If the <code>-T</code> option is given tput ignores the environment variables by calling <code>use_tioctl(TRUE)</code>, relying upon the operating system (or finally, the terminal database).  </p>
 <h2>EXAMPLES</h2>
@@ -180,10 +180,10 @@ description: "tput, reset – initialize a terminal or query terminfo database"
 <dd> <p> Print the long name from the <code>terminfo</code> database for the type of terminal specified in the environmental variable <code>TERM</code>. </p>
  </dd></dl>
 <dl>
-<dd> <p> <code>tput -S &lt;&lt;!</code> <br />
- <code>&gt; clear</code> <br />
- <code>&gt; cup 10 10</code> <br />
- <code>&gt; bold</code> <br />
+<dd> <p> <code>tput -S &lt;&lt;!</code> <br/>
+ <code>&gt; clear</code> <br/>
+ <code>&gt; cup 10 10</code> <br/>
+ <code>&gt; bold</code> <br/>
  <code>&gt; !</code> </p>
  </dd></dl>
 <dl>
@@ -267,21 +267,21 @@ description: "tput, reset – initialize a terminal or query terminfo database"
 </table>
 <h2>HISTORY</h2>
 <p> The <code>tput</code> command was begun by Bill Joy in 1980. The initial version only cleared the screen. </p>
-<p> AT&amp;T System V provided a different <code>tput</code> command: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 SVr2 provided a rudimentary <code>tput</code> which checked the parameter against each predefined capability and returned the corresponding value. This version of <code>tput</code> did not use <code>tparm</code>(3X) for the capabilities which are parameterized. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 SVr3 replaced that, a year later, by a more extensive program whose <code>init</code> and <code>reset</code> subcommands (more than half the program) were incorporated from the <code>reset</code> feature of BSD <code>tset</code> written by Eric Allman. <br />
+<p> AT&amp;T System V provided a different <code>tput</code> command: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 SVr2 provided a rudimentary <code>tput</code> which checked the parameter against each predefined capability and returned the corresponding value. This version of <code>tput</code> did not use <code>tparm</code>(3X) for the capabilities which are parameterized. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 SVr3 replaced that, a year later, by a more extensive program whose <code>init</code> and <code>reset</code> subcommands (more than half the program) were incorporated from the <code>reset</code> feature of BSD <code>tset</code> written by Eric Allman. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 SVr4 added color initialization using the <i>orig_colors</i> and <i>orig_pairs</i> capabilities in the <code>init</code> subcommand. </p>
 <p> Keith Bostic replaced the BSD <code>tput</code> command in 1989 with a new implementation based on the AT&amp;T System V program <code>tput</code>. Like the AT&amp;T program, Bostic&#8217;s version accepted some parameters named for <i>terminfo capabilities</i> (<code>clear</code>, <code>init</code>, <code>longname</code> and <code>reset</code>). However (because he had only termcap available), it accepted <i>termcap names</i> for other capabilities. Also, Bostic&#8217;s BSD <code>tput</code> did not modify the terminal I/O modes as the earlier BSD <code>tset</code> had done. </p>
 <p> At the same time, Bostic added a shell script named ``clear&#8217;&#8216;, which used <code>tput</code> to clear the screen. </p>
 <p> Both of these appeared in 4.4BSD, becoming the ``modern&#8217;&#8216; BSD implementation of <code>tput</code>. </p>
 <p> This implementation of <code>tput</code> began from a different source than AT&amp;T or BSD: Ross Ridge&#8217;s <i>mytinfo</i> package, published on <i>comp.sources.unix</i> in December 1992. Ridge&#8217;s program made more sophisticated use of the terminal capabilities than the BSD program. Eric Raymond used that <code>tput</code> program (and other parts of <i>mytinfo</i>) in ncurses in June 1995. Using the portions dealing with terminal capabilities almost without change, Raymond made improvements to the way the command-line parameters were handled.  </p>
 <h2>PORTABILITY</h2>
-<p> This implementation of <code>tput</code> differs from AT&amp;T <code>tput</code> in two important areas: <br />
+<p> This implementation of <code>tput</code> differs from AT&amp;T <code>tput</code> in two important areas: <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <code>tput</code> <i>capname</i> writes to the standard output. That need not be a regular terminal. However, the subcommands which manipulate terminal modes may not use the standard output. </p>
 <dl>
 <dd> <p> The AT&amp;T implementation&#8217;s <code>init</code> and <code>reset</code> commands use the BSD (4.1c) <code>tset</code> source, which manipulates terminal modes. It successively tries standard output, standard error, standard input before falling back to ``/dev/tty&#8217;&#8216; and finally just assumes a 1200Bd terminal. When updating terminal modes, it ignores errors. </p>
  </dd>
-<dd> <p> Until changes made after ncurses 6.0, <code>tput</code> did not modify terminal modes. <code>tput</code> now uses a similar scheme, using functions shared with <code>tset</code> (and ultimately based on the 4.4BSD <code>tset</code>). If it is not able to open a terminal, e.g., when running in <code>cron</code>, <code>tput</code> will return an error. <br />
+<dd> <p> Until changes made after ncurses 6.0, <code>tput</code> did not modify terminal modes. <code>tput</code> now uses a similar scheme, using functions shared with <code>tset</code> (and ultimately based on the 4.4BSD <code>tset</code>). If it is not able to open a terminal, e.g., when running in <code>cron</code>, <code>tput</code> will return an error. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 AT&amp;T <code>tput</code> guesses the type of its <i>capname</i> operands by seeing if all of the characters are numeric, or not. </p>
  </dd>
 <dd> <p> Most implementations which provide support for <i>capname</i> operands use the <i>tparm</i> function to expand parameters in it. That function expects a mixture of numeric and string parameters, requiring <code>tput</code> to know which type to use. </p>
@@ -290,25 +290,25 @@ description: "tput, reset – initialize a terminal or query terminfo database"
  </dd>
 <dd> <p> Besides providing more reliable operation than AT&amp;T&#8217;s utility, a portability problem is introduced by this analysis: An OpenBSD developer adapted the internal library function from ncurses to port NetBSD&#8217;s termcap-based <code>tput</code> to terminfo. That had been modified to interpret multiple commands on a line. Portable applications should not rely upon this feature; ncurses provides it to support applications written specifically for OpenBSD. </p>
  </dd></dl>
-<p> This implementation (unlike others) can accept both <i>termcap</i> and <i>terminfo</i> names for the <i>capname</i> feature, if <i>termcap</i> support is compiled in. However, the predefined <i>termcap</i> and <i>terminfo</i> names have two ambiguities in this case (and the <i>terminfo</i> name is assumed): <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The <i>termcap</i> name <code>dl</code> corresponds to the <i>terminfo</i> name <code>dl1</code> (delete one line). <br />
- The <i>terminfo</i> name <code>dl</code> corresponds to the <i>termcap</i> name <code>DL</code> (delete a given number of lines). <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The <i>termcap</i> name <code>ed</code> corresponds to the <i>terminfo</i> name <code>rmdc</code> (end delete mode). <br />
+<p> This implementation (unlike others) can accept both <i>termcap</i> and <i>terminfo</i> names for the <i>capname</i> feature, if <i>termcap</i> support is compiled in. However, the predefined <i>termcap</i> and <i>terminfo</i> names have two ambiguities in this case (and the <i>terminfo</i> name is assumed): <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The <i>termcap</i> name <code>dl</code> corresponds to the <i>terminfo</i> name <code>dl1</code> (delete one line). <br/>
+ The <i>terminfo</i> name <code>dl</code> corresponds to the <i>termcap</i> name <code>DL</code> (delete a given number of lines). <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The <i>termcap</i> name <code>ed</code> corresponds to the <i>terminfo</i> name <code>rmdc</code> (end delete mode). <br/>
  The <i>terminfo</i> name <code>ed</code> corresponds to the <i>termcap</i> name <code>cd</code> (clear to end of screen). </p>
 <p> The <code>longname</code> and <code>-S</code> options, and the parameter-substitution features used in the <code>cup</code> example, were not supported in BSD curses before 4.3reno (1989) or in AT&amp;T/USL curses before SVr4 (1988). </p>
-<p> IEEE Std 1003.1/The Open Group Base Specifications Issue 7 (POSIX.1-2008) documents only the operands for <code>clear</code>, <code>init</code> and <code>reset</code>. There are a few interesting observations to make regarding that: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 In this implementation, <code>clear</code> is part of the <i>capname</i> support. The others (<code>init</code> and <code>longname</code>) do not correspond to terminal capabilities. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Other implementations of <code>tput</code> on SVr4-based systems such as Solaris, IRIX64 and HPUX as well as others such as AIX and Tru64 provide support for <i>capname</i> operands. <br />
+<p> IEEE Std 1003.1/The Open Group Base Specifications Issue 7 (POSIX.1-2008) documents only the operands for <code>clear</code>, <code>init</code> and <code>reset</code>. There are a few interesting observations to make regarding that: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 In this implementation, <code>clear</code> is part of the <i>capname</i> support. The others (<code>init</code> and <code>longname</code>) do not correspond to terminal capabilities. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Other implementations of <code>tput</code> on SVr4-based systems such as Solaris, IRIX64 and HPUX as well as others such as AIX and Tru64 provide support for <i>capname</i> operands. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 A few platforms such as FreeBSD recognize termcap names rather than terminfo capability names in their respective <code>tput</code> commands. Since 2010, NetBSD&#8217;s <code>tput</code> uses terminfo names. Before that, it (like FreeBSD) recognized termcap names. </p>
 <dl>
 <dd> <p> Beginning in 2021, FreeBSD uses the ncurses <code>tput</code>, configured for both terminfo (tested first) and termcap (as a fallback). </p>
  </dd></dl>
-<p> Because (apparently) <i>all</i> of the certified Unix systems support the full set of capability names, the reasoning for documenting only a few may not be apparent. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 X/Open Curses Issue 7 documents <code>tput</code> differently, with <i>capname</i> and the other features used in this implementation. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 That is, there are two standards for <code>tput</code>: POSIX (a subset) and X/Open Curses (the full implementation). POSIX documents a subset to avoid the complication of including X/Open Curses and the terminal capabilities database. <br />
+<p> Because (apparently) <i>all</i> of the certified Unix systems support the full set of capability names, the reasoning for documenting only a few may not be apparent. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 X/Open Curses Issue 7 documents <code>tput</code> differently, with <i>capname</i> and the other features used in this implementation. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 That is, there are two standards for <code>tput</code>: POSIX (a subset) and X/Open Curses (the full implementation). POSIX documents a subset to avoid the complication of including X/Open Curses and the terminal capabilities database. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 While it is certainly possible to write a <code>tput</code> program without using curses, none of the systems which have a curses implementation provide a <code>tput</code> utility which does not provide the <i>capname</i> feature. </p>
-<p> X/Open Curses Issue 7 (2009) is the first version to document utilities. However that part of X/Open Curses does not follow existing practice (i.e., Unix features documented in SVID 3): <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 It assigns exit code 4 to ``invalid operand&#8217;&#8216;, which may be the same as <i>unknown capability</i>. For instance, the source code for Solaris&#8217; xcurses uses the term ``invalid&#8217;&#8216; in this case. <br />
+<p> X/Open Curses Issue 7 (2009) is the first version to document utilities. However that part of X/Open Curses does not follow existing practice (i.e., Unix features documented in SVID 3): <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 It assigns exit code 4 to ``invalid operand&#8217;&#8216;, which may be the same as <i>unknown capability</i>. For instance, the source code for Solaris&#8217; xcurses uses the term ``invalid&#8217;&#8216; in this case. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 It assigns exit code 255 to a numeric variable that is not specified in the terminfo database. That likely is a documentation error, confusing the <code>-1</code> written to the standard output for an absent or cancelled numeric value versus an (unsigned) exit code. </p>
 <p> The various Unix systems (AIX, HPUX, Solaris) use the same exit-codes as ncurses. </p>
 <p> NetBSD curses documents different exit codes which do not correspond to either ncurses or X/Open.  </p>

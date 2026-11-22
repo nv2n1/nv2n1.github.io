@@ -185,11 +185,11 @@ fe80*
 <p> Access for users, groups or hosts are allowed or disallowed by specifying statements of the form:</p>
 <dl>
 <dt>
-</dt><dd> <code>allow users</code> <i>userlist</i> <code>:</code> <i>operations</i> <code>;</code><br />
- <code>disallow users</code> <i>userlist</i> <code>:</code> <i>operations</i> <code>;</code><br />
- <code>allow groups</code> <i>grouplist</i> <code>:</code> <i>operations</i> <code>;</code><br />
- <code>disallow groups</code> <i>grouplist</i> <code>:</code> <i>operations</i> <code>;</code><br />
- <code>allow hosts</code> <i>hostlist</i> <code>:</code> <i>operations</i> <code>;</code><br />
+</dt><dd> <code>allow users</code> <i>userlist</i> <code>:</code> <i>operations</i> <code>;</code><br/>
+ <code>disallow users</code> <i>userlist</i> <code>:</code> <i>operations</i> <code>;</code><br/>
+ <code>allow groups</code> <i>grouplist</i> <code>:</code> <i>operations</i> <code>;</code><br/>
+ <code>disallow groups</code> <i>grouplist</i> <code>:</code> <i>operations</i> <code>;</code><br/>
+ <code>allow hosts</code> <i>hostlist</i> <code>:</code> <i>operations</i> <code>;</code><br/>
  <code>disallow hosts</code> <i>hostlist</i> <code>:</code> <i>operations</i> <code>;</code></dd></dl>
 <dl>
 <dt><i>list</i></dt>
@@ -229,7 +229,7 @@ disallow host * : all;
 <p> Note also that because most specific match semantics are used when checking the connection limit, for the host-based access control case, priority is given to clients with more specific host identifiers. It is also possible to exceed connection limits in some situations. Consider the following:</p>
 <dl>
 <dt>
-</dt><dd> allow host clank : all, maximum 5 connections;<br />
+</dt><dd> allow host clank : all, maximum 5 connections;<br/>
  allow host * : all except store, maximum 2 connections;</dd></dl>
 <p> This says that only 2 client connections at a time are permitted for all hosts other than &quot;clank&quot;, which is permitted 5. If a client from host &quot;boing&quot; is the first to connect to <code>pmcd</code>, its connection is checked against the second statement (that is the most specific match with a connection limit). As there are no other clients, the connection is accepted and contributes towards the limit for only the second statement above. If the next client connects from &quot;clank&quot;, its connection is checked against the limit for the first statement. There are no other connections from &quot;clank&quot;, so the connection is accepted. Once this connection is accepted, it counts towards <code>both</code> statements&#8217; limits because &quot;clank&quot; matches the host identifier in both statements. Remember that the decision to accept a new connection is made using only the most specific matching access control statement with a connection limit. Now, the connection limit for the second statement has been reached. Any connections from hosts other than &quot;clank&quot; will be refused. </p>
 <p> If instead, <code>pmcd</code> with no clients saw three successive connections arrived from &quot;boing&quot;, the first two would be accepted and the third refused. After that, if a connection was requested from &quot;clank&quot; it would be accepted. It matches the first statement, which is more specific than the second, so the connection limit in the first is used to determine that the client has the right to connect. Now there are 3 connections contributing to the second statement&#8217;s connection limit. Even though the connection limit for the second statement has been exceeded, the earlier connections from &quot;boing&quot; are maintained. The connection limit is only checked at the time a client attempts a connection rather than being re-evaluated every time a new client connects to <code>pmcd</code>. </p>
@@ -267,7 +267,7 @@ disallow host * : all;
 <dt><code>./pmcd.log</code></dt>
 <dd> (or <code>$PCP_LOG_DIR/pmcd/pmcd.log</code> when started automatically)</dd>
 <dt><code>$PCP_RUN_DIR/pmcd.pid</code></dt>
-<dd> contains an ascii decimal representation of the process ID of <code>pmcd</code> , when it&#8217;s running.<br />
+<dd> contains an ascii decimal representation of the process ID of <code>pmcd</code> , when it&#8217;s running.<br/>
  All messages and diagnostics are directed here</dd>
 <dt><code>/etc/pki/nssdb</code></dt>
 <dd> default Network Security Services (NSS) certificate database directory, used for optional Secure Socket Layer connections. This database can be created and queried using the NSS <code>certutil</code> tool, amongst others.</dd>

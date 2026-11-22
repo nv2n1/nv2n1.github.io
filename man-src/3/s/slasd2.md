@@ -11,7 +11,7 @@ description: "slasd2.f –"
 <p> slasd2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slasd2</code> (NL, NR, SQRE, K, D, Z, ALPHA, BETA, U, LDU, VT, LDVT, DSIGMA, U2, LDU2, VT2, LDVT2, IDXP, IDX, IDXC, IDXQ, COLTYP, INFO)<br />
+<p> subroutine <code>slasd2</code> (NL, NR, SQRE, K, D, Z, ALPHA, BETA, U, LDU, VT, LDVT, DSIGMA, U2, LDU2, VT2, LDVT2, IDXP, IDX, IDXC, IDXQ, COLTYP, INFO)<br/>
  <i></i><code>SLASD2</code> merges the two sets of singular values together into a single sorted set. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasd2 (integerNL, integerNR, integerSQRE, integerK, real, dimension( * )D, real, dimension( * )Z, realALPHA, realBETA, real, dimension( ldu, * )U, integerLDU, real, dimension( ldvt, * )VT, integerLDVT, real, dimension( * )DSIGMA, real, dimension( ldu2, * )U2, integerLDU2, real, dimension( ldvt2, * )VT2, integerLDVT2, integer, dimension( * )IDXP, integer, dimension( * )IDX, integer, dimension( * )IDXC, integer, dimension( * )IDXQ, integer, dimension( * )COLTYP, integerINFO)</h3>

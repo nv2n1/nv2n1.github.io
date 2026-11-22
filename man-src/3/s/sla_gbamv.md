@@ -11,7 +11,7 @@ description: "sla_gbamv.f –"
 <p> sla_gbamv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sla_gbamv</code> (TRANS, M, N, KL, KU, ALPHA, AB, LDAB, X, INCX, BETA, Y, INCY)<br />
+<p> subroutine <code>sla_gbamv</code> (TRANS, M, N, KL, KU, ALPHA, AB, LDAB, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>SLA_GBAMV</code> performs a matrix-vector operation to calculate error bounds.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sla_gbamv (integerTRANS, integerM, integerN, integerKL, integerKU, realALPHA, real, dimension( ldab, * )AB, integerLDAB, real, dimension( * )X, integerINCX, realBETA, real, dimension( * )Y, integerINCY)</h3>

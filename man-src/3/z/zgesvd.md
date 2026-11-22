@@ -10,7 +10,7 @@ description: "zgesvd.f –"
 <p>zgesvd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgesvd</code> (JOBU, JOBVT, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, RWORK, INFO)<br />
+<p>subroutine <code>zgesvd</code> (JOBU, JOBVT, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code> ZGESVD computes the singular value decomposition (SVD) for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgesvd (characterJOBU, characterJOBVT, integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, double precision, dimension( * )S, complex*16, dimension( ldu, * )U, integerLDU, complex*16, dimension( ldvt, * )VT, integerLDVT, complex*16, dimension( * )WORK, integerLWORK, double precision, dimension( * )RWORK, integerINFO)</h3>

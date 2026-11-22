@@ -37,12 +37,12 @@ description: "bigloo v2.3 – `a practical Scheme compiler’"
 <dd> Java Virtual Machine options when running Bigloo a application. </dd>
 </dl>
 <h2>FILES</h2>
-<p> /&#8230;/lib/bigloo/2.3a/bigloo.heap &#8212; saved heap image for the compiler.<br />
- /&#8230;/lib/bigloo/2.3a/bigloo.jheap &#8212; saved heap image for the compiler for <i>-jvm</i> compiations.<br />
- /&#8230;/lib/bigloo/2.3a/bigloo.h &#8212; definitions which are #include&#8217;d in the C code.<br />
- /&#8230;/lib/bigloo/2.3a/libbigloo.a &#8212; library.<br />
- /&#8230;/lib/bigloo/2.3a/libbigloo_u.a &#8212; library.<br />
- ~/.bigloorc &#8212; user `runtime-command&#8217; configuration file.<br />
+<p> /&#8230;/lib/bigloo/2.3a/bigloo.heap &#8212; saved heap image for the compiler.<br/>
+ /&#8230;/lib/bigloo/2.3a/bigloo.jheap &#8212; saved heap image for the compiler for <i>-jvm</i> compiations.<br/>
+ /&#8230;/lib/bigloo/2.3a/bigloo.h &#8212; definitions which are #include&#8217;d in the C code.<br/>
+ /&#8230;/lib/bigloo/2.3a/libbigloo.a &#8212; library.<br/>
+ /&#8230;/lib/bigloo/2.3a/libbigloo_u.a &#8212; library.<br/>
+ ~/.bigloorc &#8212; user `runtime-command&#8217; configuration file.<br/>
  /&#8230;/.bigloorc &#8212; idem. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-bglafile/">bglafile</a>(1), <a href="/docs/linux/man/1-bgljfile/">bgljfile</a>(1), <a href="/docs/linux/man/1-bgldepend/">bgldepend</a>(1), <a href="/docs/linux/man/1-bglmake/">bglmake</a>(1), <a href="/docs/linux/man/1-bglpp/">bglpp</a>(1), <a href="/docs/linux/man/1-bglprof/">bglprof</a>(1), <a href="/docs/linux/man/1-bgltags/">bgltags</a>(1), <a href="/docs/linux/man/1-bglmco/">bglmco</a>(1), <a href="/docs/linux/man/1-gcc/">gcc</a>(1), camloo(1), cigloo(1), jigloo(1). </p>

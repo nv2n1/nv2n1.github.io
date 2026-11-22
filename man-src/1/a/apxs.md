@@ -11,27 +11,27 @@ description: "apxs – APache eXtenSion tool"
 <p> apxs &#8211; APache eXtenSion tool</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr> </p>
-<p> <code>apxs</code> &#8211;<code>g</code> [ &#8211;<code>S</code> <i>name</i>=<i>value</i> ] &#8211;<code>n</code> <i>modname</i><br />
+<p> <code>apxs</code> &#8211;<code>g</code> [ &#8211;<code>S</code> <i>name</i>=<i>value</i> ] &#8211;<code>n</code> <i>modname</i><br/>
 &nbsp;<wbr> </p>
-<p> <code>apxs</code> &#8211;<code>q</code> [ &#8211;<code>v</code> ] [ &#8211;<code>S</code> <i>name</i>=<i>value</i> ] <i>query</i> &#8230;<br />
+<p> <code>apxs</code> &#8211;<code>q</code> [ &#8211;<code>v</code> ] [ &#8211;<code>S</code> <i>name</i>=<i>value</i> ] <i>query</i> &#8230;<br/>
 &nbsp;<wbr> </p>
-<p> <code>apxs</code> &#8211;<code>c</code> [ &#8211;<code>S</code> <i>name</i>=<i>value</i> ] [ &#8211;<code>o</code> <i>dsofile</i> ] [ &#8211;<code>I</code> <i>incdir</i> ] [ &#8211;<code>D</code> <i>name</i>=<i>value</i> ] [ &#8211;<code>L</code> <i>libdir</i> ] [ &#8211;<code>l</code> <i>libname</i> ] [ &#8211;<code>Wc,</code><i>compiler-flags</i> ] [ &#8211;<code>Wl,</code><i>linker-flags</i> ] <i>files</i> &#8230;<br />
+<p> <code>apxs</code> &#8211;<code>c</code> [ &#8211;<code>S</code> <i>name</i>=<i>value</i> ] [ &#8211;<code>o</code> <i>dsofile</i> ] [ &#8211;<code>I</code> <i>incdir</i> ] [ &#8211;<code>D</code> <i>name</i>=<i>value</i> ] [ &#8211;<code>L</code> <i>libdir</i> ] [ &#8211;<code>l</code> <i>libname</i> ] [ &#8211;<code>Wc,</code><i>compiler-flags</i> ] [ &#8211;<code>Wl,</code><i>linker-flags</i> ] <i>files</i> &#8230;<br/>
 &nbsp;<wbr> </p>
-<p> <code>apxs</code> &#8211;<code>i</code> [ &#8211;<code>S</code> <i>name</i>=<i>value</i> ] [ &#8211;<code>n</code> <i>modname</i> ] [ &#8211;<code>a</code> ] [ &#8211;<code>A</code> ] <i>dso-file</i> &#8230;<br />
+<p> <code>apxs</code> &#8211;<code>i</code> [ &#8211;<code>S</code> <i>name</i>=<i>value</i> ] [ &#8211;<code>n</code> <i>modname</i> ] [ &#8211;<code>a</code> ] [ &#8211;<code>A</code> ] <i>dso-file</i> &#8230;<br/>
 &nbsp;<wbr> </p>
-<p> <code>apxs</code> &#8211;<code>e</code> [ &#8211;<code>S</code> <i>name</i>=<i>value</i> ] [ &#8211;<code>n</code> <i>modname</i> ] [ &#8211;<code>a</code> ] [ &#8211;<code>A</code> ] <i>dso-file</i> &#8230;<br />
+<p> <code>apxs</code> &#8211;<code>e</code> [ &#8211;<code>S</code> <i>name</i>=<i>value</i> ] [ &#8211;<code>n</code> <i>modname</i> ] [ &#8211;<code>a</code> ] [ &#8211;<code>A</code> ] <i>dso-file</i> &#8230;<br/>
 &nbsp;<wbr> </p>
 <h2>SUMMARY</h2>
 <p>&nbsp;<wbr> </p>
-<p> apxs is a tool for building and installing extension modules for the Apache HyperText Transfer Protocol (HTTP) server. This is achieved by building a dynamic shared object (DSO) from one or more source or object <i>files</i> which then can be loaded into the Apache server under runtime via the LoadModule directive from mod_so.<br />
+<p> apxs is a tool for building and installing extension modules for the Apache HyperText Transfer Protocol (HTTP) server. This is achieved by building a dynamic shared object (DSO) from one or more source or object <i>files</i> which then can be loaded into the Apache server under runtime via the LoadModule directive from mod_so.<br/>
 &nbsp;<wbr> </p>
-<p> So to use this extension mechanism your platform has to support the DSO feature and your Apache httpd binary has to be built with the mod_so module. The apxs tool automatically complains if this is not the case. You can check this yourself by manually running the command<br />
+<p> So to use this extension mechanism your platform has to support the DSO feature and your Apache httpd binary has to be built with the mod_so module. The apxs tool automatically complains if this is not the case. You can check this yourself by manually running the command<br/>
 &nbsp;<wbr> </p>
 <pre>
       $ httpd -l
 </pre>
 <p>&nbsp;<wbr> </p>
-<p> The module mod_so should be part of the displayed list. If these requirements are fulfilled you can easily extend your Apache server&#8217;s functionality by installing your own modules with the DSO mechanism by the help of this apxs tool:<br />
+<p> The module mod_so should be part of the displayed list. If these requirements are fulfilled you can easily extend your Apache server&#8217;s functionality by installing your own modules with the DSO mechanism by the help of this apxs tool:<br/>
 &nbsp;<wbr> </p>
 <pre><code>
       $ apxs -i -a -c mod_foo.c
@@ -47,42 +47,42 @@ description: "apxs – APache eXtenSion tool"
       $ _
 </code></pre>
 <p>&nbsp;<wbr> </p>
-<p> The arguments <i>files</i> can be any C source file (.c), a object file (.o) or even a library archive (.a). The apxs tool automatically recognizes these extensions and automatically used the C source files for compilation while just using the object and archive files for the linking phase. But when using such pre-compiled objects make sure they are compiled for position independent code (PIC) to be able to use them for a dynamically loaded shared object. For instance with GCC you always just have to use -fpic. For other C compilers consult its manual page or at watch for the flags apxs uses to compile the object files.<br />
+<p> The arguments <i>files</i> can be any C source file (.c), a object file (.o) or even a library archive (.a). The apxs tool automatically recognizes these extensions and automatically used the C source files for compilation while just using the object and archive files for the linking phase. But when using such pre-compiled objects make sure they are compiled for position independent code (PIC) to be able to use them for a dynamically loaded shared object. For instance with GCC you always just have to use -fpic. For other C compilers consult its manual page or at watch for the flags apxs uses to compile the object files.<br/>
 &nbsp;<wbr> </p>
-<p> For more details about DSO support in Apache read the documentation of mod_so or perhaps even read the src/modules/standard/mod_so.c source file.<br />
+<p> For more details about DSO support in Apache read the documentation of mod_so or perhaps even read the src/modules/standard/mod_so.c source file.<br/>
 &nbsp;<wbr> </p>
 <h2>OPTIONS</h2>
 <p>&nbsp;<wbr></p>
 <h3>Common Options</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
 &nbsp;<wbr></p>
 <dl>
 <dt>-n <i>modname</i></dt>
-<dd> This explicitly sets the module name for the -i (install) and -g (template generation) option. Use this to explicitly specify the module name. For option -g this is required, for option -i the apxs tool tries to determine the name from the source or (as a fallback) at least by guessing it from the filename.<br />
+<dd> This explicitly sets the module name for the -i (install) and -g (template generation) option. Use this to explicitly specify the module name. For option -g this is required, for option -i the apxs tool tries to determine the name from the source or (as a fallback) at least by guessing it from the filename.<br/>
 &nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h3>Query Options</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
 &nbsp;<wbr></p>
 <dl>
 <dt>-q</dt>
-<dd> Performs a query for variables and environment settings used to build httpd. When invoked without <i>query</i> parameters, it prints all known variables and their values. The optional -v parameter formats the list output. .PP Use this to manually determine settings used to build the httpd that will load your module. For instance use INC=-I`apxs -q INCLUDEDIR` .PP inside your own Makefiles if you need manual access to Apache&#8217;s C header files.<br />
+<dd> Performs a query for variables and environment settings used to build httpd. When invoked without <i>query</i> parameters, it prints all known variables and their values. The optional -v parameter formats the list output. .PP Use this to manually determine settings used to build the httpd that will load your module. For instance use INC=-I`apxs -q INCLUDEDIR` .PP inside your own Makefiles if you need manual access to Apache&#8217;s C header files.<br/>
 &nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h3>Configuration Options</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
 &nbsp;<wbr></p>
 <dl>
 <dt>-S <i>name</i>=<i>value</i></dt>
-<dd> This option changes the apxs settings described above.<br />
+<dd> This option changes the apxs settings described above.<br/>
 &nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h3>Template Generation Options</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
 &nbsp;<wbr></p>
 <dl>
 <dt>-g</dt>
-<dd> This generates a subdirectory <i>name</i> (see option -n) and there two files: A sample module source file named mod_<i>name</i>.c which can be used as a template for creating your own modules or as a quick start for playing with the apxs mechanism. And a corresponding Makefile for even easier build and installing of this module.<br />
+<dd> This generates a subdirectory <i>name</i> (see option -n) and there two files: A sample module source file named mod_<i>name</i>.c which can be used as a template for creating your own modules or as a quick start for playing with the apxs mechanism. And a corresponding Makefile for even easier build and installing of this module.<br/>
 &nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h3>DSO Compilation Options</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
 &nbsp;<wbr></p>
 <dl>
 <dt>-c</dt>
@@ -102,10 +102,10 @@ description: "apxs – APache eXtenSion tool"
 <dt>-Wl,<i>linker-flags</i></dt>
 <dd> This option passes <i>linker-flags</i> as additional flags to the libtool &#8211;mode=link command. Use this to add local linker-specific options.</dd>
 <dt>-p</dt>
-<dd> This option causes apxs to link against the apr/apr-util libraries. This is useful when compiling helper programs that use the apr/apr-util libraries.<br />
+<dd> This option causes apxs to link against the apr/apr-util libraries. This is useful when compiling helper programs that use the apr/apr-util libraries.<br/>
 &nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h3>DSO Installation and Configuration Options</h3>
-<p>&nbsp;<wbr>&nbsp;<wbr><br />
+<p>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr></p>
 <dl>
 <dt>-i</dt>
@@ -115,11 +115,11 @@ description: "apxs – APache eXtenSion tool"
 <dt>-A</dt>
 <dd> Same as option -a but the created LoadModule directive is prefixed with a hash sign (#), <i>i.e.</i>, the module is just prepared for later activation but initially disabled.</dd>
 <dt>-e</dt>
-<dd> This indicates the editing operation, which can be used with the -a and -A options similarly to the -i operation to edit Apache&#8217;s httpd.conf configuration file without attempting to install the module.<br />
+<dd> This indicates the editing operation, which can be used with the -a and -A options similarly to the -i operation to edit Apache&#8217;s httpd.conf configuration file without attempting to install the module.<br/>
 &nbsp;<wbr>&nbsp;<wbr></dd></dl>
 <h2>EXAMPLES</h2>
 <p>&nbsp;<wbr> </p>
-<p> Assume you have an Apache module named mod_foo.c available which should extend Apache&#8217;s server functionality. To accomplish this you first have to compile the C source into a shared object suitable for loading into the Apache server under runtime via the following command:<br />
+<p> Assume you have an Apache module named mod_foo.c available which should extend Apache&#8217;s server functionality. To accomplish this you first have to compile the C source into a shared object suitable for loading into the Apache server under runtime via the following command:<br/>
 &nbsp;<wbr> </p>
 <pre>
       $ apxs -c mod_foo.c
@@ -128,7 +128,7 @@ description: "apxs – APache eXtenSion tool"
       $ _
 </pre>
 <p>&nbsp;<wbr> </p>
-<p> Then you have to update the Apache configuration by making sure a LoadModule directive is present to load this shared object. To simplify this step apxs provides an automatic way to install the shared object in its &quot;modules&quot; directory and updating the httpd.conf file accordingly. This can be achieved by running:<br />
+<p> Then you have to update the Apache configuration by making sure a LoadModule directive is present to load this shared object. To simplify this step apxs provides an automatic way to install the shared object in its &quot;modules&quot; directory and updating the httpd.conf file accordingly. This can be achieved by running:<br/>
 &nbsp;<wbr> </p>
 <pre>
       $ apxs -i -a mod_foo.la
@@ -140,23 +140,23 @@ description: "apxs – APache eXtenSion tool"
       $ _
 </pre>
 <p>&nbsp;<wbr> </p>
-<p> This way a line named<br />
+<p> This way a line named<br/>
 &nbsp;<wbr> </p>
 <pre>
       LoadModule foo_module modules/mod_foo.so
 </pre>
 <p>&nbsp;<wbr> </p>
-<p> is added to the configuration file if still not present. If you want to have this disabled per default use the -A option, <i>i.e.</i><br />
+<p> is added to the configuration file if still not present. If you want to have this disabled per default use the -A option, <i>i.e.</i><br/>
 &nbsp;<wbr> </p>
 <pre>
       $ apxs -i -A mod_foo.c
 </pre>
 <p>&nbsp;<wbr> </p>
-<p> For a quick test of the apxs mechanism you can create a sample Apache module template plus a corresponding Makefile via:<br />
-&nbsp;<wbr><br />
+<p> For a quick test of the apxs mechanism you can create a sample Apache module template plus a corresponding Makefile via:<br/>
+&nbsp;<wbr><br/>
 $ apxs &#8211; g &#8211; n foo Creating[DIR] foo Creating[FILE] foo / Makefile Creating[FILE] foo / modules.mk Creating[FILE] foo / mod_foo.c Creating[FILE] foo /.deps $ _</p>
 <p>&nbsp;<wbr> </p>
-<p> Then you can immediately compile this sample module into a shared object and load it into the Apache server:<br />
+<p> Then you can immediately compile this sample module into a shared object and load it into the Apache server:<br/>
 &nbsp;<wbr> </p>
 <pre><code>
       $ cd foo

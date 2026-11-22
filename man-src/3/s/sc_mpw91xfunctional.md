@@ -16,15 +16,15 @@ description: "sc::mPW91XFunctional –"
 <h3>Public Types</h3>
 <p>enum <code>Func</code> { <code>B88</code>, <code>PW91</code>, <code>mPW91</code> }</p>
 <h3>Public Member Functions</h3>
-<p><code>mPW91XFunctional</code> ()<br />
- <i>Construct an mPW exchange functional. </i><br />
- <code>mPW91XFunctional</code> (Func variant)<br />
- <i>Construct an mPW form exchange functional using the given functional variant. </i><br />
- <code>mPW91XFunctional</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>Construct an mPW form exchange functional. </i><br />
+<p><code>mPW91XFunctional</code> ()<br/>
+ <i>Construct an mPW exchange functional. </i><br/>
+ <code>mPW91XFunctional</code> (Func variant)<br/>
+ <i>Construct an mPW form exchange functional using the given functional variant. </i><br/>
+ <code>mPW91XFunctional</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>Construct an mPW form exchange functional. </i><br/>
  <code>mPW91XFunctional</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  int <code>need_density_gradient</code> () </p>
 <p> void <code>point</code> (const <code>PointInputData</code> &amp;, <code>PointOutputData</code> &amp;) </p>
 <p> void <code>init_constants</code> (Func)</p>

@@ -22,7 +22,7 @@ mimeencode - encode a file
 
  Encode (or, with -d, decode) stdin with the given encoding, writing results to stdout. 
 
- This does not do <font SIZE="-1">MIME</font> parsing; it merely exercises the decoder modules.
+ This does not do MIME parsing; it merely exercises the decoder modules.
 
 <h2>AUTHOR</h2>
 

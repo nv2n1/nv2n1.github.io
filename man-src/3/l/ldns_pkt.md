@@ -10,7 +10,7 @@ description: "ldns_pkt, ldns_pkt_section, ldns_pkt_type"
 
 <p> ldns_pkt, ldns_pkt_section, ldns_pkt_type </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p>&nbsp;<wbr>ldns_pkt_section(); </p>
@@ -21,16 +21,16 @@ description: "ldns_pkt, ldns_pkt_section, ldns_pkt_type"
 <dd>
 </dd><dd>DNS packet </dd>
 <p> This structure contains a complete DNS packet (either a query or an answer) </p>
-<p> It is the complete representation of what you actually send to a<br />
- nameserver, and what it sends back (assuming you are the client here).<br />
- struct ldns_struct_pkt<br />
- {<br />
+<p> It is the complete representation of what you actually send to a<br/>
+ nameserver, and what it sends back (assuming you are the client here).<br/>
+ struct ldns_struct_pkt<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>Header section:</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_hdr *_header;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/* extra items needed in a packet */</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>The size of the wire format of the packet in octets:</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rdf *_answerfrom;</p>
-<p>&nbsp;<wbr>&nbsp;<wbr><code>Timestamp of the time the packet was sent or created:</code><br />
+<p>&nbsp;<wbr>&nbsp;<wbr><code>Timestamp of the time the packet was sent or created:</code><br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>struct timeval timestamp;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>The duration of the query this packet is an answer to:</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>uint32_t _querytime;</p>
@@ -56,7 +56,7 @@ description: "ldns_pkt, ldns_pkt_section, ldns_pkt_type"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_list<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>*_authority;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>Additional section:</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_list<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>*_additional;</p>
-<p> };<br />
+<p> };<br/>
  typedef struct ldns_struct_pkt ldns_pkt;</dl>
 <dl>
 <dt> <i>ldns_pkt_section</i>()</dt></dl>

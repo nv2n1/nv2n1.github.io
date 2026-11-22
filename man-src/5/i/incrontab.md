@@ -28,7 +28,7 @@ description: "incrontab – tables for driving inotify cron (incron)"
 <p> <code>IN_OPEN</code> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>File was opened (*)</p>
 <p> When monitoring a directory, the events marked with an asterisk (*) above can occur for files in the directory, in which case the name field in the returned event data identifies the name of the file within the directory. </p>
 <p> The <code>IN_ALL_EVENTS</code> symbol is defined as a bit mask of all of the above events. Two additional convenience symbols are <code>IN_MOVE</code>, which is a combination of <code>IN_MOVED_FROM</code> and <code>IN_MOVED_TO</code>, and <code>IN_CLOSE</code> which combines <code>IN_CLOSE_WRITE</code> and <code>IN_CLOSE_NOWRITE</code>. </p>
-<p> The following further symbols can be specified in the mask:<br />
+<p> The following further symbols can be specified in the mask:<br/>
 &nbsp;<wbr> <code>IN_DONT_FOLLOW</code> <tt>&nbsp;<wbr></tt>Don&#8217;t dereference pathname if it is a symbolic link</p>
 <p> <code>IN_ONESHOT</code> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Monitor pathname for only one event</p>
 <p> <code>IN_ONLYDIR</code> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Only watch pathname if it is a directory</p>

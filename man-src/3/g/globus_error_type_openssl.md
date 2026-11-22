@@ -32,7 +32,7 @@ description: "Globus OpenSSL Error Object –"
 <p> NOTE: the static stack OpenSSL implements for its errors currently only supports at most 16 errors, so if more are added, the errors that were added first will be wiped out. If 16 errors are counted in the chain of OpenSSL errors, its possible that some errors (including the original error) are missing. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>base_source</i> Pointer to the originating globus module.<br />
+<dd><i>base_source</i> Pointer to the originating globus module.<br/>
  <i>base_cause</i> The error object causing the error. This parameter should be NULL in nearly all cases, as the root cause of an error will most likely be in the OpenSSL code itself. The actual cause of the error is determined from the static stack of OpenSSL errors.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -41,9 +41,9 @@ description: "Globus OpenSSL Error Object –"
 <p>Initialize a previously allocated error of type GLOBUS_ERROR_TYPE_OPENSSL </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>error</i> The previously allocated error object.<br />
- <i>base_source</i> Pointer to the originating module.<br />
- <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br />
+<dd><i>error</i> The previously allocated error object.<br/>
+ <i>base_source</i> Pointer to the originating module.<br/>
+ <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br/>
  <i>openssl_error_handle</i> The OpenSSL error handle associated with this error, this parameter should already be initialized to contain the OpenSSL error code associated with the error.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

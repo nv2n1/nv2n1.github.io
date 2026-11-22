@@ -20,7 +20,7 @@ description: "logconv.pl – analyzes Directory Server access log files"
 <dt><code>-d, &#8211;rootDN</code> &lt;Directory Managers DN&gt;</dt>
 <dd>DEFAULT -&gt; cn=directory manager</dd>
 <dt><code>-D, &#8211;data</code> &lt;Location for temporary data files&gt;</dt>
-<dd>DEFAULT -&gt; /tmp<br />
+<dd>DEFAULT -&gt; /tmp<br/>
  TIP -&gt; If there is not enough RAM, a RAM disk can be used instead: </dd>
 <p>&nbsp;<wbr>mkdir&nbsp;<wbr>/dev/shm/logconv, and use this directory for the&nbsp;<wbr>&quot;-D&quot;&nbsp;<wbr>value.</p>
 <dt><code>-s, &#8211;sizeLimit</code> &lt;Number of results to return per category&gt;</dt>
@@ -44,22 +44,22 @@ description: "logconv.pl – analyzes Directory Server access log files"
 <dt><code>-V, &#8211;verbose</code> &lt;enable verbose output &#8211; includes all stats listed below except U&gt;</dt>
 <dd>Verbose output</dd>
 <dt><code>-[efcibaltnxgjuU]</code></dt>
-<dd><code>e</code> Error Code stats<br />
- <code>f</code> Failed Login Stats<br />
- <code>c</code> Connection Code Stats<br />
- <code>i</code> Client Stats<br />
- <code>b</code> Bind Stats<br />
- <code>a</code> Search Base Stats<br />
- <code>l</code> Search Filter Stats<br />
- <code>t</code> Etime Stats<br />
- <code>n</code> Nentries Stats<br />
- <code>x</code> Extended Operations<br />
- <code>r</code> Most Requested Attribute Stats<br />
- <code>g</code> Abandoned Operation Stats<br />
- <code>j</code> Recommendations<br />
- <code>u</code> Unindexed Search Stats (very detailed)<br />
- <code>y</code> Connection Latency Stats<br />
- <code>p</code> Open Connection ID Stats<br />
+<dd><code>e</code> Error Code stats<br/>
+ <code>f</code> Failed Login Stats<br/>
+ <code>c</code> Connection Code Stats<br/>
+ <code>i</code> Client Stats<br/>
+ <code>b</code> Bind Stats<br/>
+ <code>a</code> Search Base Stats<br/>
+ <code>l</code> Search Filter Stats<br/>
+ <code>t</code> Etime Stats<br/>
+ <code>n</code> Nentries Stats<br/>
+ <code>x</code> Extended Operations<br/>
+ <code>r</code> Most Requested Attribute Stats<br/>
+ <code>g</code> Abandoned Operation Stats<br/>
+ <code>j</code> Recommendations<br/>
+ <code>u</code> Unindexed Search Stats (very detailed)<br/>
+ <code>y</code> Connection Latency Stats<br/>
+ <code>p</code> Open Connection ID Stats<br/>
  <code>U</code> Unindexed Search Summary</dd></dl>
 <h2>Usage</h2>
 <p>Examples:</p>
@@ -74,7 +74,7 @@ description: "logconv.pl – analyzes Directory Server access log files"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="https://fedorahosted.org/389/newticket.">https://fedorahosted.org/389/newticket.</a></p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2001 Sun Microsystems, Inc. Used by permission.<br />
- Copyright &#169; 2008 Red Hat, Inc.<br />
- This manual page was written by Michele Baldessari &lt;michele [at] pupazzo.org&gt;, for the Debian project (but may be used by others).<br />
+<p>Copyright &#169; 2001 Sun Microsystems, Inc. Used by permission.<br/>
+ Copyright &#169; 2008 Red Hat, Inc.<br/>
+ This manual page was written by Michele Baldessari &lt;michele [at] pupazzo.org&gt;, for the Debian project (but may be used by others).<br/>
  This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. This license is essentially the GNU General Public License version 2 with an exception for plug-in distribution.</p>

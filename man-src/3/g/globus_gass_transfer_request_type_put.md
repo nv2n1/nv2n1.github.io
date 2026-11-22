@@ -10,7 +10,7 @@ description: "Request Handles –"
 <p>Request Handles &#8211; </p>
 <p> Request Handles.</p>
 <h3>Data Structures</h3>
-<p>struct <code>globus_gass_transfer_request_t</code><br />
+<p>struct <code>globus_gass_transfer_request_t</code><br/>
  <i>Request handle. </i></p>
 <h3>Enumerations</h3>
 <p>enum <code>globus_gass_transfer_request_type_t</code> { <code>GLOBUS_GASS_TRANSFER_REQUEST_TYPE_INVALID</code>, <code>GLOBUS_GASS_TRANSFER_REQUEST_TYPE_GET</code>, <code>GLOBUS_GASS_TRANSFER_REQUEST_TYPE_PUT</code>, <code>GLOBUS_GASS_TRANSFER_REQUEST_TYPE_APPEND</code> } </p>
@@ -76,7 +76,7 @@ description: "Request Handles –"
 <dd><i>request</i> The request to destroy.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>GLOBUS_SUCCESS</i> The request handle reference was successfully destroyed.<br />
+<dd><i>GLOBUS_SUCCESS</i> The request handle reference was successfully destroyed.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USE</i> Either an invalid request handle or one which is actively being used was passed to this function as the <i>request</i> parameter.</dd></dl>
 <h3>char* globus_gass_transfer_request_get_denial_message (<code>globus_gass_transfer_request_t</code>request)</h3>
 <p>Get an string describing why a request was denied. </p>
@@ -116,11 +116,11 @@ description: "Request Handles –"
 <p> This function queries the request handle to determine any referral information that it contains. This function should only be called on request handles in the GLOBUS_GASS_TRANSFER_REQUEST_REFERRED state. If no referral information is stored in the request handle, then the referral will be initialized to an empty referral. The referral must be destroyed by calling <code>globus_gass_transfer_referral_destroy()</code> by the caller. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>request</i> The request handle to query.<br />
+<dd><i>request</i> The request handle to query.<br/>
  <i>referral</i> A pointer to an uninitialized referral structure. It will be populated by calling this function.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>GLOBUS_SUCCESS</i> The referral was successfully extracted from the request handle.<br />
+<dd><i>GLOBUS_SUCCESS</i> The referral was successfully extracted from the request handle.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The referral pointer was GLOBUS_NULL;</dd></dl>
 <h3><code>globus_gass_transfer_request_status_t</code> globus_gass_transfer_request_get_status (<code>globus_gass_transfer_request_t</code>request)</h3>
 <p>Check the status of a request. </p>
@@ -173,22 +173,22 @@ description: "Request Handles –"
 <p> This function must only be called by protocol modules when constructing a request handle when receiving the response to a get request. This function can only be called once per request handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>request</i> A handle to the request to modify.<br />
+<dd><i>request</i> A handle to the request to modify.<br/>
  <i>length</i> The length of the file request.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>GLOBUS_SUCCESS</i> The URL was set for the request handle.<br />
+<dd><i>GLOBUS_SUCCESS</i> The URL was set for the request handle.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USE</i> The request handle was invalid, or the URL had already been set.</dd></dl>
 <h3>int globus_gass_transfer_request_set_type (<code>globus_gass_transfer_request_t</code>request, <code>globus_gass_transfer_request_type_t</code>type)</h3>
 <p>Set the type of a request. </p>
 <p> This function modifies a request handle by setting the type of operation that it is being used for. This function may only be called once per handle, and only from a GASS protocol module implementation. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>request</i> The request handle to modify.<br />
+<dd><i>request</i> The request handle to modify.<br/>
  <i>type</i> The type of operation that this request handle will be used for.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>GLOBUS_SUCCESS</i> The request handle&#8217;s type has been set.<br />
+<dd><i>GLOBUS_SUCCESS</i> The request handle&#8217;s type has been set.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USE</i> The request handle was invalid or it&#8217;s type was already set. The request handle was not modified.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -200,22 +200,22 @@ description: "Request Handles –"
 <p> This function must only be called by protocol modules when constructing a request handle when accepting a new request. This function can only be called once per request handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>request</i> A handle to the request to modify.<br />
+<dd><i>request</i> A handle to the request to modify.<br/>
  <i>url</i> A string containing the URL that this request will be associated with.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>GLOBUS_SUCCESS</i> The URL was set for the request handle.<br />
+<dd><i>GLOBUS_SUCCESS</i> The URL was set for the request handle.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USE</i> The request handle was invalid, or the URL had already been set.</dd></dl>
 <h3>int globus_gass_transfer_request_set_user_pointer (<code>globus_gass_transfer_request_t</code>request, void *user_pointer)</h3>
 <p>Set the user pointer associated with a request handle. </p>
 <p> This function sets the user pointer from a request handle. The user-pointer may be used by the application which is generating or servicing the request to store a pointer to any application-specific piece of data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>request</i> The request to modify.<br />
+<dd><i>request</i> The request to modify.<br/>
  <i>user_pointer</i> The new value of the user pointer for the request.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>GLOBUS_SUCCES</i> The user pointer&#8217;s value was set.<br />
+<dd><i>GLOBUS_SUCCES</i> The user pointer&#8217;s value was set.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USE</i> An invalid request handle was passed to this function</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gass_transfer from the source code.</p>

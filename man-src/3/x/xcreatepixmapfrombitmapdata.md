@@ -78,5 +78,5 @@ description: "XReadBitmapFile, XReadBitmapFileData, XWriteBitmapFile, XCreatePix
 <dt><code>BadMatch</code></dt>
 <dd>An <code>InputOnly</code> window is used as a Drawable.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcreatepixmap/">XCreatePixmap</a>(3), <a href="/docs/linux/man/3-xputimage/">XPutImage</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcreatepixmap/">XCreatePixmap</a>(3), <a href="/docs/linux/man/3-xputimage/">XPutImage</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

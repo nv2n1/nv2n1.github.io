@@ -17,7 +17,7 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
                        char **context,
                        const char *object_name, int object_type);</code></pre>
 <h2>Description</h2>
-<p>The X contexts backend maps from X Window System object names into security contexts. It is used to find the appropriate context for X Window System objects whose significance and/or usage semantics are determined primarily by name. The returned <i>context</i> must be freed using <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3).<br />
+<p>The X contexts backend maps from X Window System object names into security contexts. It is used to find the appropriate context for X Window System objects whose significance and/or usage semantics are determined primarily by name. The returned <i>context</i> must be freed using <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3).<br/>
  <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3) describes the function with its return and error codes. </p>
 <p> This backend is also used to determine the default context for labeling remotely connected X clients. </p>
 <p> The <i>object_type</i> argument should be set to one of the following values:</p>

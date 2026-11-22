@@ -18,7 +18,7 @@ description: "pam_keyinit – Kernel session keyring initialiser module"
 <p> This module is intended primarily for use by login processes. Be aware that after the session keyring has been replaced, the old session keyring and the keys it contains will no longer be accessible. </p>
 <p> This module should not, generally, be invoked by programs like <code>su</code>, since it is usually desirable for the key set to percolate through to the alternate context. The keys have their own permissions system to manage this. </p>
 <p> The keyutils package is used to manipulate keys more directly. This can be obtained from: </p>
-<p> m[blue]<code>Keyutils</code>m[]<font SIZE="-2">[1]</font></p>
+<p> m[blue]<code>Keyutils</code>m[][1]</p>
 <h2>Options</h2>
 <p><code>debug</code></p>
 <dl>

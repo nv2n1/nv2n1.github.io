@@ -240,15 +240,15 @@ description: "snap – Tool to interact with snaps"
 <h3>get</h3>
 <p>Print configuration options </p>
 <p> The <i>get</i> command prints configuration options for the provided snap. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;snap get snap-name username<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;snap get snap-name username<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;frank </p>
 <p> If multiple option names are provided, the corresponding values are returned: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;snap get snap-name username password<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Key&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Value<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;username&nbsp;<wbr>&nbsp;frank<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;snap get snap-name username password<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Key&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Value<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;username&nbsp;<wbr>&nbsp;frank<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;password&nbsp;<wbr>&nbsp;&#8230; </p>
 <p> Nested values may be retrieved via a dotted path: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;snap get snap-name author.name<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;snap get snap-name author.name<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;frank </p>
 <p> <code>Usage</code>: snap [OPTIONS] get [get-OPTIONS]</p>
 <dl>
@@ -630,7 +630,7 @@ description: "snap – Tool to interact with snaps"
 <p> All configuration changes are persisted at once, and only after the snap&#8217;s configuration hook returns successfully. </p>
 <p> Nested values may be modified via a dotted path: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;snap set snap-name author.name=frank </p>
-<p> Configuration option may be unset with exclamation mark:<br />
+<p> Configuration option may be unset with exclamation mark:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;snap set snap-name author! </p>
 <p> <code>Usage</code>: snap [OPTIONS] set [set-OPTIONS]</p>
 <dl>

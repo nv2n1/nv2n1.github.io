@@ -14,7 +14,7 @@ description: "hpxml – An openhpi sample application that displays system view 
 hpixml[-D nn][-s][-i - t][-N host[:port]][-C = file][-h] hpixml[--domain = nn][--xsd][--indent-- text][--host = host[:port]][--cfgfile = file][--help]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> hpixml displays system view in <font SIZE="-1">XML.</font> </p>
+<p> hpixml displays system view in XML. </p>
 <p> If no domain or host is selected, hpixml uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>
@@ -28,11 +28,11 @@ hpixml[-D nn][-s][-i - t][-N host[:port]][-C = file][-h] hpixml[--domain = nn][-
 <dt><code>-t</code>, <code>&#8211;text</code></dt>
 <dd> Use enum and flag text names instead of raw values</dd>
 <dt><code>-s</code>, <code>&#8211;xsd</code></dt>
-<dd> Show <font SIZE="-1">XML</font> schema</dd>
+<dd> Show XML schema</dd>
 <dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></dt>
 <dd> Select domain id <i>nn</i></dd>
 <dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dd> Open session to the domain served by the daemon at the specified URL (host:port). This option overrides the OPENHPI_DAEMON_HOST and OPENHPI_DAEMON_PORT environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
 <dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
 <dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SEE ALSO</h2>

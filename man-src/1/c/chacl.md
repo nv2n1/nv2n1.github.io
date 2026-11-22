@@ -10,13 +10,13 @@ description: "chacl – change the access control list of a file or directory"
 
 <p> chacl &#8211; change the access control list of a file or directory </p>
 <h2>SYNOPSIS</h2>
-<p> <code>chacl acl pathname&#8230;</code><br />
- <code>chacl -b acl dacl pathname&#8230;</code><br />
- <code>chacl -d dacl pathname&#8230;</code><br />
- <code>chacl -R pathname&#8230;</code><br />
- <code>chacl -D pathname&#8230;</code><br />
- <code>chacl -B pathname&#8230;</code><br />
- <code>chacl -l pathname&#8230;</code><br />
+<p> <code>chacl acl pathname&#8230;</code><br/>
+ <code>chacl -b acl dacl pathname&#8230;</code><br/>
+ <code>chacl -d dacl pathname&#8230;</code><br/>
+ <code>chacl -R pathname&#8230;</code><br/>
+ <code>chacl -D pathname&#8230;</code><br/>
+ <code>chacl -B pathname&#8230;</code><br/>
+ <code>chacl -l pathname&#8230;</code><br/>
  <code>chacl -r pathname&#8230;</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <i>chacl</i> is an IRIX-compatibility command, and is maintained for those users who are familiar with its use from either XFS or IRIX. Refer to the <code>SEE ALSO</code> section below for a description of tools which conform more closely to the (withdrawn draft) POSIX 1003.1e standard which describes Access Control Lists (ACLs). </p>

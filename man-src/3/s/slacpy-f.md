@@ -10,7 +10,7 @@ description: "slacpy.f –"
 <p>slacpy.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slacpy</code> (UPLO, M, N, A, LDA, B, LDB)<br />
+<p>subroutine <code>slacpy</code> (UPLO, M, N, A, LDA, B, LDB)<br/>
  <i></i><code>SLACPY</code> copies all or part of one two-dimensional array to another.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slacpy (characterUPLO, integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB)</h3>

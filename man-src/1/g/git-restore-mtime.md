@@ -12,9 +12,9 @@ description: "git-restore-mtime – Restore original modification time of files 
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>git-restore-mtime</code></dt>
-<dd> [<code>-h</code>] [<code>&#8211;quiet</code>] [<code>&#8211;verbose</code>] [<code>&#8211;force</code>] [<code>&#8211;merge</code>] [<code>&#8211;first-parent</code>]<br />
- [<code>&#8211;skip-missing</code>] [<code>&#8211;no-directories</code>] [<code>&#8211;test</code>] [<code>&#8211;commit-time</code>]<br />
- [<code>&#8211;work-tree</code> <i>WORKDIR</i>] [<code>&#8211;git-dir</code> <i>GITDIR</i>]<br />
+<dd> [<code>-h</code>] [<code>&#8211;quiet</code>] [<code>&#8211;verbose</code>] [<code>&#8211;force</code>] [<code>&#8211;merge</code>] [<code>&#8211;first-parent</code>]<br/>
+ [<code>&#8211;skip-missing</code>] [<code>&#8211;no-directories</code>] [<code>&#8211;test</code>] [<code>&#8211;commit-time</code>]<br/>
+ [<code>&#8211;work-tree</code> <i>WORKDIR</i>] [<code>&#8211;git-dir</code> <i>GITDIR</i>]<br/>
  [<i>pathspec</i> [<i>pathspec</i>&#8230;]]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Restore original modification time of files based on the date of the most recent commit that modified them. Useful when generating release tarballs.</p>

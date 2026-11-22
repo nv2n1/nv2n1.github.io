@@ -10,15 +10,15 @@ description: "ql/experimental/credit/onefactorstudentcopula.hpp – One-factor S
 
 <p> ql/experimental/credit/onefactorstudentcopula.hpp &#8211; One-factor Student-t copula. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/experimental/credit/onefactorcopula.hpp&gt;<br />
- #include &lt;ql/math/distributions/studenttdistribution.hpp&gt;<br />
+<p> #include &lt;ql/experimental/credit/onefactorcopula.hpp&gt;<br/>
+ #include &lt;ql/math/distributions/studenttdistribution.hpp&gt;<br/>
  #include &lt;ql/math/distributions/normaldistribution.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>OneFactorStudentCopula</code><br />
- <i>One-factor Double Student t-Copula. </i><br />
- class <code>OneFactorGaussianStudentCopula</code><br />
- <i>One-factor Gaussian-Student t-Copula. </i><br />
- class <code>OneFactorStudentGaussianCopula</code><br />
+<p> class <code>OneFactorStudentCopula</code><br/>
+ <i>One-factor Double Student t-Copula. </i><br/>
+ class <code>OneFactorGaussianStudentCopula</code><br/>
+ <i>One-factor Gaussian-Student t-Copula. </i><br/>
+ class <code>OneFactorStudentGaussianCopula</code><br/>
  <i>One-factor Student t &#8211; Gaussian Copula. </i></p>
 <h2>Detailed Description</h2>
 <p> One-factor Student-t copula. </p>

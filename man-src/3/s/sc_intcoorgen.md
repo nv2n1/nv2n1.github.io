@@ -13,16 +13,16 @@ description: "sc::IntCoorGen –"
 <p> #include &lt;<a href="file:/usr/include/coor.h">coor.h</a>&gt; </p>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Member Functions</h3>
-<p> <code>IntCoorGen</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, int nextra=0, int *extra=0)<br />
- <i>Create an </i><code>IntCoorGen</code> given a <code>Molecule</code> and, optionally, extra bonds.<br />
- <code>IntCoorGen</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor.<br />
+<p> <code>IntCoorGen</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, int nextra=0, int *extra=0)<br/>
+ <i>Create an </i><code>IntCoorGen</code> given a <code>Molecule</code> and, optionally, extra bonds.<br/>
+ <code>IntCoorGen</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor.<br/>
  <code>IntCoorGen</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Standard member. </i><br />
- virtual void <code>generate</code> (const <code>Ref</code>&lt; <code>SetIntCoor</code> &gt; &amp;)<br />
- <i>This generates a set of internal coordinates. </i><br />
- virtual void <code>print</code> (std::ostream &amp;out=ExEnv::out0()) const<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Standard member. </i><br/>
+ virtual void <code>generate</code> (const <code>Ref</code>&lt; <code>SetIntCoor</code> &gt; &amp;)<br/>
+ <i>This generates a set of internal coordinates. </i><br/>
+ virtual void <code>print</code> (std::ostream &amp;out=ExEnv::out0()) const<br/>
  <i>Print out information about this. </i></p>
 <h3>Protected Member Functions</h3>
 <p> void <code>init_constants</code> () </p>

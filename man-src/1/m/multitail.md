@@ -213,7 +213,7 @@ description: "MultiTail – browse through several files at once"
 <dt><code>multitail /var/log/apache/access_log -I /var/log/apache/error_log</code></dt>
 <dd> This creates <code>one</code> window with the contents of /var/log/apache/access_log <code>merged</code> with the contents of /var/log/apache/error_log.</dd>
 <dt><code>multitail -M 0 /var/log/apache/access_log -I /var/log/apache/error_log</code></dt>
-<dd> Same as previous example. This example will store all logged entries in a buffer so that you can later on browse through them (by pressing &#8216; <code>b</code><br />
+<dd> Same as previous example. This example will store all logged entries in a buffer so that you can later on browse through them (by pressing &#8216; <code>b</code><br/>
 &nbsp;<wbr>&#8216;). </dd>
 </dl>
 <h2>BUGS</h2>

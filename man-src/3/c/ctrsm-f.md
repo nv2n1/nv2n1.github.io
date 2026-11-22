@@ -10,7 +10,7 @@ description: "ctrsm.f –"
 <p>ctrsm.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ctrsm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br />
+<p>subroutine <code>ctrsm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br/>
  <i></i><code>CTRSM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctrsm (characterSIDE, characterUPLO, characterTRANSA, characterDIAG, integerM, integerN, complexALPHA, complex, dimension(lda,*)A, integerLDA, complex, dimension(ldb,*)B, integerLDB)</h3>

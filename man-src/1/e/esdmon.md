@@ -15,13 +15,13 @@ esdmon - The Enlightened Sound Daemon
 
 <h2>USAGE</h2>
 
- esdmon [<font SIZE="-1">OPTIONS</font>] [<font SIZE="-1">FILE</font>] 
+ esdmon [OPTIONS] [FILE] 
 
  Options: 
 
- <tt>&quot;-s&quot;</tt>, --server=HOSTNAME set EsounD server <tt>&quot;-b&quot;</tt>, output file should be 8-bit <tt>&quot;-m&quot;</tt>, output file should be mono <tt>&quot;-r&quot;</tt> <font SIZE="-1">RATE</font>, set output rate to <font SIZE="-1">RATE</font> 
+ <tt>&quot;-s&quot;</tt>, --server=HOSTNAME set EsounD server <tt>&quot;-b&quot;</tt>, output file should be 8-bit <tt>&quot;-m&quot;</tt>, output file should be mono <tt>&quot;-r&quot;</tt> RATE, set output rate to RATE 
 
- <font SIZE="-1">FILE</font> is the file to write the output stream to. Default is stdout.
+ FILE is the file to write the output stream to. Default is stdout.
 
 <h2>SEE ALSO</h2>
 

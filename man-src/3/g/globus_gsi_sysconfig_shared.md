@@ -10,7 +10,7 @@ description: "Functions for all platforms –"
 
 <p> Functions for all platforms &#8211; </p>
 <h3>Functions</h3>
-<p> globus_result_t <code>globus_gsi_sysconfig_get_unique_proxy_filename</code> (char **unique_filename)<br />
+<p> globus_result_t <code>globus_gsi_sysconfig_get_unique_proxy_filename</code> (char **unique_filename)<br/>
  <i>Get Unique Proxy Filename. </i></p>
 <h2>Detailed Description</h2>
 <p> These functions are platform independent members of the Globus GSI System Configuration API.</p>

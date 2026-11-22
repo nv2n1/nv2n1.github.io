@@ -53,7 +53,7 @@ description: "pack200 – JAR Packing tool"
 </dl>
 <p> <tt>-Svalue --segment-limit=</tt><i>value</i> </p>
 <dl COMPACT>
-<dd>The value is the estimated target size N (in bytes) of each archive segment. If a single input file requires<br />
+<dd>The value is the estimated target size N (in bytes) of each archive segment. If a single input file requires<br/>
  more than N bytes, it will be given its own archive segment. As a special case, a value of <i>-1</i> will produce a single large segment with all input files, while a value of <i>0</i> will produce one segment for each class. Larger archive segments result in less fragmentation and better compression, but processing them requires more memory. </dd>
 <p> The size of each segment is estimated by counting the size of each input file to be transmitted in the segment, along with the size of its name and other transmitted properties. </p>
 <p> The default is <i>1000000</i> (a million bytes). This allows input JAR files of moderate size to be transmitted in one segment. It also puts a limit on memory requirements for packers and unpackers. </p>
@@ -121,16 +121,16 @@ description: "pack200 – JAR Packing tool"
 <dl COMPACT>
 <dd>A configuration file, containing Java properties to initialize the packer, may be specified on the command line. </dd>
 <dl COMPACT>
-<dd><i>% pack200 -f pack.properties myarchive.pack.gz myarchive.jar</i><br />
- <i>% more pack.properties</i><br />
- <i># Generic properties for the packer.</i><br />
- <i>modification.time=latest</i><br />
- <i>deflate.hint=false</i><br />
- <i>keep.file.order=false</i><br />
- <i># This option will cause the files bearing new attributes to</i><br />
- <i># be reported as an error rather than passed uncompressed.</i><br />
- <i>unknown.attribute=error</i><br />
- <i># Change the segment limit to be unlimited.</i><br />
+<dd><i>% pack200 -f pack.properties myarchive.pack.gz myarchive.jar</i><br/>
+ <i>% more pack.properties</i><br/>
+ <i># Generic properties for the packer.</i><br/>
+ <i>modification.time=latest</i><br/>
+ <i>deflate.hint=false</i><br/>
+ <i>keep.file.order=false</i><br/>
+ <i># This option will cause the files bearing new attributes to</i><br/>
+ <i># be reported as an error rather than passed uncompressed.</i><br/>
+ <i>unknown.attribute=error</i><br/>
+ <i># Change the segment limit to be unlimited.</i><br/>
  <i>segment.limit=-1</i> </dd>
 </dl>
 </dl>

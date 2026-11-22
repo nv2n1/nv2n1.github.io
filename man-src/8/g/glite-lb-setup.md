@@ -20,7 +20,7 @@ description: "glite-lb-setup – script for setting up L&B services"
 <dd>Check database availability (check if setup has been already performed). In case there are no other <code>ACTIONS</code> listed, no default actions are performed and <code>glite-lb-setup</code> will exit immediately with return code 0 (if database exists) or 1 (in other cases). </dd>
 <dt><code>-l</code>, &#8211;list</dt>
 <dd>List <code>ACTIONS</code> to be executed and exit. This option can be used to view and/or select actions to be performed during setup. For example, the following pair of commands lists available actions and runs the setup omitting BDII: </dd>
-<p>&nbsp;<wbr>glite-lb-setup &#8211;list<br />
+<p>&nbsp;<wbr>glite-lb-setup &#8211;list<br/>
 &nbsp;<wbr>glite-lb-setup&nbsp;<wbr>`glite-lb-setup &#8211;list | sed&nbsp;<wbr>&#8216;s/bdii//&#8217;` </p>
 <dt><code>-h</code>, &#8211;help</dt>
 <dd>Display help. </dd>

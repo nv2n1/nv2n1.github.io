@@ -11,7 +11,7 @@ description: "cgbtf2.f –"
 <p> cgbtf2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgbtf2</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br />
+<p> subroutine <code>cgbtf2</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br/>
  <i></i><code>CGBTF2</code> computes the LU factorization of a general band matrix using the unblocked version of the algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgbtf2 (integerM, integerN, integerKL, integerKU, complex, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, integerINFO)</h3>

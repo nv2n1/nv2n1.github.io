@@ -13,27 +13,27 @@ description: "glutGetColor – Gets an indexed color-mode entry’s Red, Green, 
 <h2>Synopsis</h2>
 <p>In openglut.h Ft GLfloat Fn glutGetColor int color int component</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>color Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>color Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The palette entry to fetch. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>component Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>component Ef<br/>
 &nbsp;<wbr>Whether to fetch Red, Green, or Blue.</p>
 <h2>Description</h2>
-<p>Allows you to get individual color-map entries in a Bf Sy<br />
-&nbsp;<wbr>GLUT_INDEX Ef<br />
+<p>Allows you to get individual color-map entries in a Bf Sy<br/>
+&nbsp;<wbr>GLUT_INDEX Ef<br/>
 &nbsp;<wbr>type of display.&nbsp;<wbr>&nbsp;<wbr>Respects the current layer setting. </p>
-<p> Bf Sy<br />
-&nbsp;<wbr>component Ef<br />
+<p> Bf Sy<br/>
+&nbsp;<wbr>component Ef<br/>
 &nbsp;<wbr>may be any of: </p>
-<p>&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
-&nbsp;<wbr>GLUT_RED Ef<br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
-&nbsp;<wbr>GLUT_GREEN Ef<br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
-&nbsp;<wbr>GLUT_BLUE Ef<br />
+<p>&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br/>
+&nbsp;<wbr>GLUT_RED Ef<br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br/>
+&nbsp;<wbr>GLUT_GREEN Ef<br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br/>
+&nbsp;<wbr>GLUT_BLUE Ef<br/>
 &nbsp;<wbr> </p>
 <h2>Bugs</h2>
 <p>Unimplemented. </p>

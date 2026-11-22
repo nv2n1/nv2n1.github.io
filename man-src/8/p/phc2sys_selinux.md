@@ -79,7 +79,7 @@ description: "phc2sys_selinux – Security Enhanced Linux Policy for the phc2sys
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux phc2sys policy is very flexible allowing users to setup their phc2sys processes in as secure a method as possible. </p>
 <p> STANDARD FILE CONTEXT</code> </p>
 <p> SELinux defines the file context types for the phc2sys, if you wanted to store files with these types in a diffent paths, you need to execute the semanage command to sepecify alternate labeling and then use restorecon to put the labels on disk. </p>
-<p> <code>semanage fcontext -a -t phc2sys_unit_file_t &#8216;/srv/myphc2sys_content(/.*)?&#8217;</code><br />
+<p> <code>semanage fcontext -a -t phc2sys_unit_file_t &#8216;/srv/myphc2sys_content(/.*)?&#8217;</code><br/>
  <code>restorecon -R -v /srv/myphc2sys_content</code> </p>
 <p> Note: SELinux often uses regular expressions to specify labels that match multiple files. </p>
 <p> <i>The following file types are defined for phc2sys:</i> </p>

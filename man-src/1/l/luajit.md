@@ -49,15 +49,15 @@ description: "luajit – Just-In-Time Compiler for the Lua Language"
 <p>&nbsp;<wbr>&nbsp;<wbr>print(&quot;Hello&quot;, arg[1])</p>
 </dd><dt>luajit -e &quot;local x=0; for i=1,1e9 do x=x+i end; print(x)&quot;</dt>
 <dd>
-<p> Calculates the sum of the numbers from 1 to 1000000000.<br />
+<p> Calculates the sum of the numbers from 1 to 1000000000.<br/>
  And finishes in a reasonable amount of time, too.</p>
 </dd><dt>luajit -jv -e &quot;for i=1,10 do for j=1,10 do for k=1,100 do end end end&quot;</dt>
 <dd>
 <p> Runs some nested loops and shows the resulting traces.</dd></dl>
 <h2>COPYRIGHT</h2>
-<p> <code>LuaJIT</code> is Copyright &#169; 2005-2015 Mike Pall.<br />
+<p> <code>LuaJIT</code> is Copyright &#169; 2005-2015 Mike Pall.<br/>
  <code>LuaJIT</code> is open source software, released under the MIT license.</p>
 <h2>SEE ALSO</h2>
-<p> More details in the provided HTML docs or at: <i><a rel="nofollow" href="http://luajit.org">http://luajit.org</a></i><br />
+<p> More details in the provided HTML docs or at: <i><a rel="nofollow" href="http://luajit.org">http://luajit.org</a></i><br/>
  More about the Lua language can be found at: <i><a rel="nofollow" href="http://lua.org/docs.html">http://lua.org/docs.html</a></i> </p>
 <p> <a href="/docs/linux/man/1-lua/">lua</a>(1) </p>

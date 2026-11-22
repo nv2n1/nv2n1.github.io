@@ -10,7 +10,7 @@ description: "dgsvj1.f –"
 <p>dgsvj1.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgsvj1</code> (JOBV, M, N, N1, A, LDA, D, SVA, MV, V, LDV, EPS, SFMIN, TOL, NSWEEP, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dgsvj1</code> (JOBV, M, N, N1, A, LDA, D, SVA, MV, V, LDV, EPS, SFMIN, TOL, NSWEEP, WORK, LWORK, INFO)<br/>
  <i></i><code>DGSVJ1</code> pre-processor for the routine sgesvj, applies Jacobi rotations targeting only particular pivots.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgsvj1 (character*1JOBV, integerM, integerN, integerN1, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( n )D, double precision, dimension( n )SVA, integerMV, double precision, dimension( ldv, * )V, integerLDV, double precisionEPS, double precisionSFMIN, double precisionTOL, integerNSWEEP, double precision, dimension( lwork )WORK, integerLWORK, integerINFO)</h3>

@@ -57,7 +57,7 @@ description: "xxqs_name_sxx_execd, xxqs_name_sxx_loadsensor – xxQS_NAMExx job 
 <dt><code>SGE_ND</code></dt>
 <dd>If set, don&#8217;t daemonize the program (for debugging).</dd>
 <dt><code>SGE_ENABLE_COREDUMP</code></dt>
-<dd>If set, enable core dumps on Linux when the admin_user is not root. Linux normally disables core dumps when the daemon has changed uid or gid. Setting SGE_ENABLE_COREDUMP in xxqs_name_sxx_execd&#8217;s environment defeats that to enable core dumps for debugging if they are otherwise allowed. This is typically not a big hazard with xxQS_NAME_Sxx, since most information is exposed in the spool area anyhow. Dumps will appear in the qmaster spool directory, which need not be world-readable.<br />
+<dd>If set, enable core dumps on Linux when the admin_user is not root. Linux normally disables core dumps when the daemon has changed uid or gid. Setting SGE_ENABLE_COREDUMP in xxqs_name_sxx_execd&#8217;s environment defeats that to enable core dumps for debugging if they are otherwise allowed. This is typically not a big hazard with xxQS_NAME_Sxx, since most information is exposed in the spool area anyhow. Dumps will appear in the qmaster spool directory, which need not be world-readable.<br/>
  On Solaris, may be used to enable such dumps.</dd>
 <dt><code>SGE_EXECD_PIDFILE</code></dt>
 <dd>Path name of file to which to write the daemon process id at startup (default &quot;execd.pid&quot;). Note that this must be writable by the admin user (see</dd></dl>

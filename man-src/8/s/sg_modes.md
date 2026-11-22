@@ -26,7 +26,7 @@ description: "sg_modes – reads mode pages with SCSI MODE SENSE command"
 <p>&nbsp;<wbr>&nbsp;<wbr><code>0</code>&nbsp;<wbr>: current values&nbsp;<wbr>(i.e. those active at present) </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>1</code>&nbsp;<wbr>: changeable values </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>2</code>&nbsp;<wbr>: default values&nbsp;<wbr>(i.e. the manufacturer&#8217;s settings) </p>
-<p>&nbsp;<wbr>&nbsp;<wbr><code>3</code>&nbsp;<wbr>: saved values<br />
+<p>&nbsp;<wbr>&nbsp;<wbr><code>3</code>&nbsp;<wbr>: saved values<br/>
  The changeable values are bit masks showing which fields could be changed with a MODE SELECT. The saved values will be re-instated the next time the device is power cycled or reset. If this option is not given then current values [0] are assumed.</p>
 <dt><code>-d</code>, <code>&#8211;dbd</code></dt>
 <dd>disable block descriptors. By default, block descriptors (usually one (for disks) or none) are returned in a MODE SENSE response. This option sets the &quot;disable block descriptors&quot; (DBD) bit in the cdb which instructs the device not to return any block descriptors in its response. Older devices may not support this setting and may return an &quot;illegal request&quot; sense key; alternatively they may ignore it. Oddly the Reduced Block Command set (RBC) requires this bit set.</dd>
@@ -118,7 +118,7 @@ description: "sg_modes – reads mode pages with SCSI MODE SENSE command"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2000-2012 Douglas Gilbert<br />
+<p>Copyright &#169; 2000-2012 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sdparm/">sdparm</a>(8), <a href="/docs/linux/man/8-sg_wr_mode/">sg_wr_mode</a>(8), <a href="/docs/linux/man/8-sginfo/">sginfo</a>(8),</code> <code>sgmode(scsirastools), scsiinfo(net), scu(net),</code> <code>seatools(seagate)</code> All these utilities offer some facility to change mode page (or block descriptor) parameters. </p>

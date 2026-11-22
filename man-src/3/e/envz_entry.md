@@ -43,8 +43,8 @@ void envz_strip(char **envz, size_t *envz_len);
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>envz_add</code>(), <code>envz_entry</code>(),<br />
- <code>envz_get</code>(), <code>envz_merge</code>(),<br />
+<td> <code>envz_add</code>(), <code>envz_entry</code>(),<br/>
+ <code>envz_get</code>(), <code>envz_merge</code>(),<br/>
  <code>envz_remove</code>(), <code>envz_strip</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe
@@ -55,17 +55,17 @@ void envz_strip(char **envz, size_t *envz_len);
 <p> These functions are a GNU extension.</p>
 <h2>EXAMPLES</h2>
 <p> #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;envz.h&gt; </p>
-<p> int main(int argc, char *argv[], char *envp[]) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int e_len&nbsp;=&nbsp;0;<br />
+<p> int main(int argc, char *argv[], char *envp[]) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int e_len&nbsp;=&nbsp;0;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*str; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int i&nbsp;=&nbsp;0;&nbsp;envp[i]&nbsp;!=&nbsp;NULL;&nbsp;i++)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int i&nbsp;=&nbsp;0;&nbsp;envp[i]&nbsp;!=&nbsp;NULL;&nbsp;i++)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;e_len&nbsp;+=&nbsp;strlen(envp[i])&nbsp;+&nbsp;1; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;str&nbsp;=&nbsp;envz_entry(*envp, e_len,&nbsp;&quot;HOME&quot;);<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;str&nbsp;=&nbsp;envz_entry(*envp, e_len,&nbsp;&quot;HOME&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;%s
-&quot;, str);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;str&nbsp;=&nbsp;envz_get(*envp, e_len,&nbsp;&quot;HOME&quot;);<br />
+&quot;, str);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;str&nbsp;=&nbsp;envz_get(*envp, e_len,&nbsp;&quot;HOME&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;%s
-&quot;, str);<br />
+&quot;, str);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-argz_add/">argz_add</a></code>(3)</p>

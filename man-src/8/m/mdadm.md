@@ -68,8 +68,8 @@ description: "mdadm – manage MD devices aka Linux Software RAID"
 <dt><code>-f</code>, <code>&#8211;force</code></dt>
 <dd>Be more forceful about certain operations. See the various modes for the exact meaning of this option in different contexts. </dd>
 <dt><code>-c</code>, <code>&#8211;config=</code></dt>
-<dd>Specify the config file or directory. Default is to use <code>/etc/mdadm/mdadm.conf</code> and <code>/etc/mdadm/mdadm.conf.d</code>, or if those are missing then <code>/etc/mdadm.conf</code> and <code>/etc/mdadm.conf.d</code>. If the config file given is <code>partitions</code> then nothing will be read, but <i>mdadm</i> will act as though the config file contained exactly<br />
- <code> DEVICE partitions containers</code><br />
+<dd>Specify the config file or directory. Default is to use <code>/etc/mdadm/mdadm.conf</code> and <code>/etc/mdadm/mdadm.conf.d</code>, or if those are missing then <code>/etc/mdadm.conf</code> and <code>/etc/mdadm.conf.d</code>. If the config file given is <code>partitions</code> then nothing will be read, but <i>mdadm</i> will act as though the config file contained exactly<br/>
+ <code> DEVICE partitions containers</code><br/>
  and will read <code>/proc/partitions</code> to find a list of devices to scan, and <code>/proc/mdstat</code> to find a list of containers to examine. If the word <code>none</code> is given for the config file, then <i>mdadm</i> will act as though the config file were empty. </dd>
 <p> If the name given is of a directory, then <i>mdadm</i> will collect all the files contained in the directory with a name ending in <code>.conf</code>, sort them lexically, and process all of those files as config files. </p>
 <dt><code>-s</code>, <code>&#8211;scan</code></dt>
@@ -87,7 +87,7 @@ description: "mdadm – manage MD devices aka Linux Software RAID"
 <dt>1, 1.0, 1.1, 1.2</dt>
 <dd>
 </dd><dt>1, 1.0, 1.1, 1.2 default</dt>
-<dd>Use the new version-1 format superblock. This has fewer restrictions. It can easily be moved between hosts with different endian-ness, and a recovery operation can be checkpointed and restarted. The different sub-versions store the superblock at different locations on the device, either at the end (for 1.0), at the start (for 1.1) or 4K from the start (for 1.2). &quot;1&quot; is equivalent to &quot;1.2&quot; (the commonly preferred 1.x format).<br />
+<dd>Use the new version-1 format superblock. This has fewer restrictions. It can easily be moved between hosts with different endian-ness, and a recovery operation can be checkpointed and restarted. The different sub-versions store the superblock at different locations on the device, either at the end (for 1.0), at the start (for 1.1) or 4K from the start (for 1.2). &quot;1&quot; is equivalent to &quot;1.2&quot; (the commonly preferred 1.x format).<br/>
 &nbsp;&quot;default&quot;&nbsp;is equivalent to&nbsp;&quot;1.2&quot;.</dd>
 <dt>ddf</dt>
 <dd>Use the &quot;Industry Standard&quot; DDF (Disk Data Format) format defined by SNIA. When creating a DDF array a <code>CONTAINER</code> will be created, and normal arrays can be created in that container.</dd>
@@ -110,7 +110,7 @@ description: "mdadm – manage MD devices aka Linux Software RAID"
 <h2>For create, build, or grow:</h2>
 <dl>
 <dt><code>-n</code>, <code>&#8211;raid-devices=</code></dt>
-<dd>Specify the number of active devices in the array. This, plus the number of spare devices (see below) must equal the number of <i>component-devices</i> (including &quot;<code>missing</code>&quot; devices) that are listed on the command line for <code>&#8211;create</code>. Setting a value of 1 is probably a mistake and so requires that <code>&#8211;force</code> be specified first. A value of 1 will then be allowed for linear, multipath, RAID0 and RAID1. It is never allowed for RAID4, RAID5 or RAID6.<br />
+<dd>Specify the number of active devices in the array. This, plus the number of spare devices (see below) must equal the number of <i>component-devices</i> (including &quot;<code>missing</code>&quot; devices) that are listed on the command line for <code>&#8211;create</code>. Setting a value of 1 is probably a mistake and so requires that <code>&#8211;force</code> be specified first. A value of 1 will then be allowed for linear, multipath, RAID0 and RAID1. It is never allowed for RAID4, RAID5 or RAID6.<br/>
  This number can only be changed using <code>&#8211;grow</code> for RAID1, RAID4, RAID5 and RAID6 arrays, and only on kernels which provide the necessary support. </dd>
 <dt><code>-x</code>, <code>&#8211;spare-devices=</code></dt>
 <dd>Specify the number of spare (eXtra) devices in the initial array. Spares can also be added and removed later. The number of component devices listed on the command line must equal the number of RAID devices plus the number of spare devices. </dd>
@@ -443,7 +443,7 @@ description: "mdadm – manage MD devices aka Linux Software RAID"
 <p> The level may raid0, linear, raid1, raid10, multipath, or faulty, or one of their synonyms. All devices must be listed and the array will be started once complete. It will often be appropriate to use <code>&#8211;assume-clean</code> with levels raid1 or raid10.</p>
 <h2>Create Mode</h2>
 <dl>
-<dd>Usage: <code>mdadm &#8211;create</code> <i>md-device</i> <code>&#8211;chunk=</code><i>X</i> <code>&#8211;level=</code><i>Y</i><br />
+<dd>Usage: <code>mdadm &#8211;create</code> <i>md-device</i> <code>&#8211;chunk=</code><i>X</i> <code>&#8211;level=</code><i>Y</i><br/>
  <code>&#8211;raid-devices=</code><i>Z</i> <i>devices</i> </dd>
 </dl>
 <p> This usage will initialise a new md array, associate some devices with it, and activate the array. </p>
@@ -468,8 +468,8 @@ description: "mdadm – manage MD devices aka Linux Software RAID"
 <h2>Manage Mode</h2>
 <dl>
 <dd>Usage: <code>mdadm</code> <i>device</i> <i>options&#8230; devices&#8230;</i></dd></dl>
-<p> This usage will allow individual devices in an array to be failed, removed or added. It is possible to perform multiple operations with on command. For example:<br />
- <code> mdadm /dev/md0 -f /dev/hda1 -r /dev/hda1 -a /dev/hda1</code><br />
+<p> This usage will allow individual devices in an array to be failed, removed or added. It is possible to perform multiple operations with on command. For example:<br/>
+ <code> mdadm /dev/md0 -f /dev/hda1 -r /dev/hda1 -a /dev/hda1</code><br/>
  will firstly mark <code>/dev/hda1</code> as faulty in <code>/dev/md0</code> and will then remove it from the array and finally add it back in as a spare. However only one md array can be affected by a single command. </p>
 <p> When a device is added to an active array, mdadm checks to see if it has metadata on it which suggests that it was recently a member of the array. If it does, it tries to &quot;re-add&quot; the device. If there have been no changes since the device was removed, or if the array has a write-intent bitmap which has recorded whatever changes there were, then the device will immediately become a full member of the array and those differences recorded in the bitmap will be resolved.</p>
 <h2>Misc Mode</h2>
@@ -647,8 +647,8 @@ description: "mdadm – manage MD devices aka Linux Software RAID"
 <p> If the array is not found in the config file and its metadata does not identify it as belonging to the &quot;homehost&quot;, then <i>mdadm</i> will choose a name for the array which is certain not to conflict with any array which does belong to this host. It does this be adding an underscore and a small number to the name preferred by the metadata. </p>
 <p> Once an appropriate array is found or created and the device is added, <i>mdadm</i> must decide if the array is ready to be started. It will normally compare the number of available (non-spare) devices to the number of devices that the metadata suggests need to be active. If there are at least that many, the array will be started. This means that if any devices are missing the array will not be restarted. </p>
 <p> As an alternative, <code>&#8211;run</code> may be passed to <i>mdadm</i> in which case the array will be run as soon as there are enough devices present for the data to be accessible. For a RAID1, that means one device will start the array. For a clean RAID5, the array will be started as soon as all but one drive is present. </p>
-<p> Note that neither of these approaches is really ideal. If it can be known that all device discovery has completed, then<br />
- <code> mdadm -IRs</code><br />
+<p> Note that neither of these approaches is really ideal. If it can be known that all device discovery has completed, then<br/>
+ <code> mdadm -IRs</code><br/>
  can be run which will try to start all arrays that are being incrementally assembled. They are started in &quot;read-auto&quot; mode in which they are read-only until the first write request. This means that no metadata updates are made and no attempt at resync or recovery happens. Further devices that are found before the first write can still be added safely.</p>
 <h2>Environment</h2>
 <p>This section describes environment variables that affect how mdadm operates. </p>
@@ -665,36 +665,36 @@ description: "mdadm – manage MD devices aka Linux Software RAID"
 <dt><code>MDADM_GROW_ALLOW_OLD</code></dt>
 <dd>If an array is stopped while it is performing a reshape and that reshape was making use of a backup file, then when the array is re-assembled <i>mdadm</i> will sometimes complain that the backup file is too old. If this happens and you are certain it is the right backup file, you can over-ride this check by setting <code>MDADM_GROW_ALLOW_OLD=1</code> in the environment. </dd>
 <dt><code>MDADM_CONF_AUTO</code></dt>
-<dd>Any string given in this variable is added to the start of the <code>AUTO</code> line in the config file, or treated as the whole <code>AUTO</code> line if none is given. It can be used to disable certain metadata types when <i>mdadm</i> is called from a boot script. For example<br />
- <code> export MDADM_CONF_AUTO=&#8217;-ddf -imsm&#8217;</code><br />
+<dd>Any string given in this variable is added to the start of the <code>AUTO</code> line in the config file, or treated as the whole <code>AUTO</code> line if none is given. It can be used to disable certain metadata types when <i>mdadm</i> is called from a boot script. For example<br/>
+ <code> export MDADM_CONF_AUTO=&#8217;-ddf -imsm&#8217;</code><br/>
  will make sure that <i>mdadm</i> does not automatically assemble any DDF or IMSM arrays that are found. This can be useful on systems configured to manage such arrays with <code>dmraid</code>. </dd>
 </dl>
 <h2>Examples</h2>
-<p><code> mdadm &#8211;query /dev/name-of-device</code><br />
- This will find out if a given device is a RAID array, or is part of one, and will provide brief information about the device. <code> mdadm &#8211;assemble &#8211;scan</code><br />
- This will assemble and start all arrays listed in the standard config file. This command will typically go in a system startup file. <code> mdadm &#8211;stop &#8211;scan</code><br />
- This will shut down all arrays that can be shut down (i.e. are not currently in use). This will typically go in a system shutdown script. <code> mdadm &#8211;follow &#8211;scan &#8211;delay=120</code><br />
- If (and only if) there is an Email address or program given in the standard config file, then monitor the status of all arrays listed in that file by polling them ever 2 minutes. <code> mdadm &#8211;create /dev/md0 &#8211;level=1 &#8211;raid-devices=2 /dev/hd[ac]1</code><br />
- Create /dev/md0 as a RAID1 array consisting of /dev/hda1 and /dev/hdc1.<br />
- <code> echo &#8216;DEVICE /dev/hd*[0-9] /dev/sd*[0-9]&#8217; &gt; mdadm.conf</code><br />
- <code> mdadm &#8211;detail &#8211;scan &gt;&gt; mdadm.conf</code><br />
- This will create a prototype config file that describes currently active arrays that are known to be made from partitions of IDE or SCSI drives. This file should be reviewed before being used as it may contain unwanted detail. <code> echo &#8216;DEVICE /dev/hd[a-z] /dev/sd*[a-z]&#8217; &gt; mdadm.conf</code><br />
- <code> mdadm &#8211;examine &#8211;scan &#8211;config=mdadm.conf &gt;&gt; mdadm.conf</code><br />
- This will find arrays which could be assembled from existing IDE and SCSI whole drives (not partitions), and store the information in the format of a config file. This file is very likely to contain unwanted detail, particularly the <code>devices=</code> entries. It should be reviewed and edited before being used as an actual config file. <code> mdadm &#8211;examine &#8211;brief &#8211;scan &#8211;config=partitions</code><br />
- <code> mdadm -Ebsc partitions</code><br />
- Create a list of devices by reading <code>/proc/partitions</code>, scan these for RAID superblocks, and printout a brief listing of all that were found. <code> mdadm -Ac partitions -m 0 /dev/md0</code><br />
- Scan all partitions and devices listed in <code>/proc/partitions</code> and assemble <code>/dev/md0</code> out of all such devices with a RAID superblock with a minor number of 0. <code> mdadm &#8211;monitor &#8211;scan &#8211;daemonise &gt; /run/mdadm/mon.pid</code><br />
- If config file contains a mail address or alert program, run mdadm in the background in monitor mode monitoring all md devices. Also write pid of mdadm daemon to <code>/run/mdadm/mon.pid</code>. <code> mdadm -Iq /dev/somedevice</code><br />
- Try to incorporate newly discovered device into some array as appropriate. <code> mdadm &#8211;incremental &#8211;rebuild-map &#8211;run &#8211;scan</code><br />
- Rebuild the array map from any current arrays, and then start any that can be started. <code> mdadm /dev/md4 &#8211;fail detached &#8211;remove detached</code><br />
- Any devices which are components of /dev/md4 will be marked as faulty and then remove from the array. <code> mdadm &#8211;grow /dev/md4 &#8211;level=6 &#8211;backup-file=/root/backup-md4</code><br />
- The array <code>/dev/md4</code> which is currently a RAID5 array will be converted to RAID6. There should normally already be a spare drive attached to the array as a RAID6 needs one more drive than a matching RAID5. <code> mdadm &#8211;create /dev/md/ddf &#8211;metadata=ddf &#8211;raid-disks 6 /dev/sd[a-f]</code><br />
- Create a DDF array over 6 devices. <code> mdadm &#8211;create /dev/md/home -n3 -l5 -z 30000000 /dev/md/ddf</code><br />
- Create a RAID5 array over any 3 devices in the given DDF set. Use only 30 gigabytes of each device. <code> mdadm -A /dev/md/ddf1 /dev/sd[a-f]</code><br />
- Assemble a pre-exist ddf array. <code> mdadm -I /dev/md/ddf1</code><br />
- Assemble all arrays contained in the ddf array, assigning names as appropriate. <code> mdadm &#8211;create &#8211;help</code><br />
- Provide help about the Create mode. <code> mdadm &#8211;config &#8211;help</code><br />
- Provide help about the format of the config file. <code> mdadm &#8211;help</code><br />
+<p><code> mdadm &#8211;query /dev/name-of-device</code><br/>
+ This will find out if a given device is a RAID array, or is part of one, and will provide brief information about the device. <code> mdadm &#8211;assemble &#8211;scan</code><br/>
+ This will assemble and start all arrays listed in the standard config file. This command will typically go in a system startup file. <code> mdadm &#8211;stop &#8211;scan</code><br/>
+ This will shut down all arrays that can be shut down (i.e. are not currently in use). This will typically go in a system shutdown script. <code> mdadm &#8211;follow &#8211;scan &#8211;delay=120</code><br/>
+ If (and only if) there is an Email address or program given in the standard config file, then monitor the status of all arrays listed in that file by polling them ever 2 minutes. <code> mdadm &#8211;create /dev/md0 &#8211;level=1 &#8211;raid-devices=2 /dev/hd[ac]1</code><br/>
+ Create /dev/md0 as a RAID1 array consisting of /dev/hda1 and /dev/hdc1.<br/>
+ <code> echo &#8216;DEVICE /dev/hd*[0-9] /dev/sd*[0-9]&#8217; &gt; mdadm.conf</code><br/>
+ <code> mdadm &#8211;detail &#8211;scan &gt;&gt; mdadm.conf</code><br/>
+ This will create a prototype config file that describes currently active arrays that are known to be made from partitions of IDE or SCSI drives. This file should be reviewed before being used as it may contain unwanted detail. <code> echo &#8216;DEVICE /dev/hd[a-z] /dev/sd*[a-z]&#8217; &gt; mdadm.conf</code><br/>
+ <code> mdadm &#8211;examine &#8211;scan &#8211;config=mdadm.conf &gt;&gt; mdadm.conf</code><br/>
+ This will find arrays which could be assembled from existing IDE and SCSI whole drives (not partitions), and store the information in the format of a config file. This file is very likely to contain unwanted detail, particularly the <code>devices=</code> entries. It should be reviewed and edited before being used as an actual config file. <code> mdadm &#8211;examine &#8211;brief &#8211;scan &#8211;config=partitions</code><br/>
+ <code> mdadm -Ebsc partitions</code><br/>
+ Create a list of devices by reading <code>/proc/partitions</code>, scan these for RAID superblocks, and printout a brief listing of all that were found. <code> mdadm -Ac partitions -m 0 /dev/md0</code><br/>
+ Scan all partitions and devices listed in <code>/proc/partitions</code> and assemble <code>/dev/md0</code> out of all such devices with a RAID superblock with a minor number of 0. <code> mdadm &#8211;monitor &#8211;scan &#8211;daemonise &gt; /run/mdadm/mon.pid</code><br/>
+ If config file contains a mail address or alert program, run mdadm in the background in monitor mode monitoring all md devices. Also write pid of mdadm daemon to <code>/run/mdadm/mon.pid</code>. <code> mdadm -Iq /dev/somedevice</code><br/>
+ Try to incorporate newly discovered device into some array as appropriate. <code> mdadm &#8211;incremental &#8211;rebuild-map &#8211;run &#8211;scan</code><br/>
+ Rebuild the array map from any current arrays, and then start any that can be started. <code> mdadm /dev/md4 &#8211;fail detached &#8211;remove detached</code><br/>
+ Any devices which are components of /dev/md4 will be marked as faulty and then remove from the array. <code> mdadm &#8211;grow /dev/md4 &#8211;level=6 &#8211;backup-file=/root/backup-md4</code><br/>
+ The array <code>/dev/md4</code> which is currently a RAID5 array will be converted to RAID6. There should normally already be a spare drive attached to the array as a RAID6 needs one more drive than a matching RAID5. <code> mdadm &#8211;create /dev/md/ddf &#8211;metadata=ddf &#8211;raid-disks 6 /dev/sd[a-f]</code><br/>
+ Create a DDF array over 6 devices. <code> mdadm &#8211;create /dev/md/home -n3 -l5 -z 30000000 /dev/md/ddf</code><br/>
+ Create a RAID5 array over any 3 devices in the given DDF set. Use only 30 gigabytes of each device. <code> mdadm -A /dev/md/ddf1 /dev/sd[a-f]</code><br/>
+ Assemble a pre-exist ddf array. <code> mdadm -I /dev/md/ddf1</code><br/>
+ Assemble all arrays contained in the ddf array, assigning names as appropriate. <code> mdadm &#8211;create &#8211;help</code><br/>
+ Provide help about the Create mode. <code> mdadm &#8211;config &#8211;help</code><br/>
+ Provide help about the format of the config file. <code> mdadm &#8211;help</code><br/>
  Provide general help. </p>
 <h2>Files</h2>
 <h3>/proc/mdstat</h3>

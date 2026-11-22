@@ -17,7 +17,7 @@ hpialarms[-D id][-N host[:port]][-C&lt;cfgfile&gt;]
                                                                                                  [--minor = 1 | 0][--power = 1 | 0][--chassisid = n][--all][--debug][--help]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> hpialarms walks the <font SIZE="-1">RPT </font>(Resource Presence Table) for resources that have &#8220;Alarm Control&#8221; management instruments (<font SIZE="-1">SAHPI_CTRL_LED</font>). </p>
+<p> hpialarms walks the RPT (Resource Presence Table) for resources that have &#8220;Alarm Control&#8221; management instruments (SAHPI_CTRL_LED). </p>
 <p> If no domain or host is selected, hpialarms uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>
 <p> (No Option) Display alarm states</p>
@@ -48,16 +48,16 @@ hpialarms[-D id][-N host[:port]][-C&lt;cfgfile&gt;]
 <dt><code>-X</code>, <code>&#8211;debug</code></dt>
 <dd> Display debug messages</dd>
 <dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dd> Open session to the domain served by the daemon at the specified URL (host:port). This option overrides the OPENHPI_DAEMON_HOST and OPENHPI_DAEMON_PORT environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
 <dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
 <dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SAMPLE OUTPUT</h2>
-<p>hpialarmpanel ver 0.6 RptInfo : UpdateCount = 5, UpdateTime = 8a2dc6c0 rptentry[0] resourceid = 1 tag : Mullins<br />
-                                                                                                            RDR[45] : ctltype = 2 : 1 oem = 0 Chassis Identify Control<br />
-                                                                                                                          RDR[48] : ctltype = 0 : 1 oem = 10 Front Panel Power Alarm LED state = off<br />
-                                                                                                                                        RDR[51] : ctltype = 0 : 1 oem = 13 Front Panel Minor Alarm LED state = ON<br />
-                                                                                                                                                      RDR[46] : ctltype = 0 : 0 oem = 0 Cold Reset Control<br />
-                                                                                                                                                                    RDR[49] : ctltype = 0 : 1 oem = 11 Front Panel Critical Alarm LED state = off<br />
+<p>hpialarmpanel ver 0.6 RptInfo : UpdateCount = 5, UpdateTime = 8a2dc6c0 rptentry[0] resourceid = 1 tag : Mullins<br/>
+                                                                                                            RDR[45] : ctltype = 2 : 1 oem = 0 Chassis Identify Control<br/>
+                                                                                                                          RDR[48] : ctltype = 0 : 1 oem = 10 Front Panel Power Alarm LED state = off<br/>
+                                                                                                                                        RDR[51] : ctltype = 0 : 1 oem = 13 Front Panel Minor Alarm LED state = ON<br/>
+                                                                                                                                                      RDR[46] : ctltype = 0 : 0 oem = 0 Cold Reset Control<br/>
+                                                                                                                                                                    RDR[49] : ctltype = 0 : 1 oem = 11 Front Panel Critical Alarm LED state = off<br/>
                                                                                                                                                                                   RDR[50] : ctltype = 0 : 1 oem = 12 Front Panel Major Alarm LED state = off</p>
 <h2>SEE ALSO</h2>
 <pre>

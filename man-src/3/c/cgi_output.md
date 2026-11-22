@@ -17,7 +17,7 @@ description: "cgi_output – display the CGI output to the user"
 NEOERR *cgi_output (CGI *cgi, STRING *output);
 </pre>
 <h2>ARGUMENTS</h2>
-<p> cgi &#8211; a pointer a CGI struct allocated with cgi_init<br />
+<p> cgi &#8211; a pointer a CGI struct allocated with cgi_init<br/>
  output &#8211; the data to send to output from the CGI </p>
 <h2>DESCRIPTION</h2>
 <p> Normally, this is called by cgi_display, but some people wanted it external so they could call it directly. </p>

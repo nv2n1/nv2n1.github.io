@@ -12,15 +12,15 @@ description: "mangle – Shorewall Packet marking/mangling rules file"
 <dl>
 <dt> <code>/etc/shorewall6/mangle</code></dt></dl>
 <h2>Description</h2>
-<dd>This file was introduced in Shorewall 4.6.0 and is intended to replace m[blue]<code>shorewall6-tcrules(5)</code>m[]<font SIZE="-2">[1]</font>. This file is only processed by the compiler if:</dd>
+<dd>This file was introduced in Shorewall 4.6.0 and is intended to replace m[blue]<code>shorewall6-tcrules(5)</code>m[][1]. This file is only processed by the compiler if:</dd>
 <dl>
-<dd>1. No file named &#8216;tcrules&#8217; exists on the current CONFIG_PATH (see m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[2]</font>); or</dd></dl>
+<dd>1. No file named &#8216;tcrules&#8217; exists on the current CONFIG_PATH (see m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[][2]); or</dd></dl>
 <dl>
 <dd>2. The first file named &#8216;tcrules&#8217; found on the CONFIG_PATH contains no non-commentary entries.</dd></dl>
 <p> Entries in this file cause packets to be marked as a means of classifying them for traffic control or policy routing.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
- Unlike rules in the m[blue]<code>shorewall6-rules</code>m[]<font SIZE="-2">[3]</font>(5) file, evaluation of rules in this file will continue after a match. So the final mark for each packet will be the one assigned by the LAST tcrule that matches. If you use multiple internet providers with the &#8216;track&#8217; option, in /etc/shorewall/providers be sure to read the restrictions at m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MultiISP.html">http://www.shorewall.net/MultiISP.html</a></code>m[]<font SIZE="-2">[4]</font>.  The columns in the file are as follows (where the column name is followed by a different name in parentheses, the different name is used in the alternate specification syntax). <code>ACTION</code> &#8211; <i>command</i>[(<i>parameters</i>)][:<i>chain-designator</i>]</dd>
+<dd> <code>Important</code> <br/>
+ Unlike rules in the m[blue]<code>shorewall6-rules</code>m[][3](5) file, evaluation of rules in this file will continue after a match. So the final mark for each packet will be the one assigned by the LAST tcrule that matches. If you use multiple internet providers with the &#8216;track&#8217; option, in /etc/shorewall/providers be sure to read the restrictions at m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MultiISP.html">http://www.shorewall.net/MultiISP.html</a></code>m[][4].  The columns in the file are as follows (where the column name is followed by a different name in parentheses, the different name is used in the alternate specification syntax). <code>ACTION</code> &#8211; <i>command</i>[(<i>parameters</i>)][:<i>chain-designator</i>]</dd>
 <dl>
 <dd>The <i>chain-designator</i> indicates the Netfilter chain that the entry applies to and may be one of the following: P</dd>
 <dl>
@@ -34,9 +34,9 @@ description: "mangle – Shorewall Packet marking/mangling rules file"
 <p> I</p>
 <dl>
 <dd>INPUT chain.</dd></dl>
-<p> Unless otherwise specified for the particular <i>command</i>, the default chain is PREROUTING when MARK_IN_FORWARD_CHAIN=No in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[2]</font>, and FORWARD when MARK_IN_FORWARD_CHAIN=Yes. A <i>chain-designator</i> may not be specified if the SOURCE or DEST columns begin with &#8216;$FW&#8217;. When the SOURCE is $FW, the generated rule is always placed in the OUTPUT chain. If DEST is &#8216;$FW&#8217;, then the rule is placed in the INPUT chain. Additionally, a <i>chain-designator</i> may not be specified in an action body unless the action is declared as <code>inline</code> in m[blue]<code>shorewall6-actions</code>m[]<font SIZE="-2">[5]</font>(5). Where a command takes parameters, those parameters are enclosed in parentheses (&quot;(&#8230;.)&quot;) and separated by commas. The <i>command</i> may be one of the following. <i>action</i><code>[([</code><i>param</i><code>[,&#8230;])]</code></p>
+<p> Unless otherwise specified for the particular <i>command</i>, the default chain is PREROUTING when MARK_IN_FORWARD_CHAIN=No in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[][2], and FORWARD when MARK_IN_FORWARD_CHAIN=Yes. A <i>chain-designator</i> may not be specified if the SOURCE or DEST columns begin with &#8216;$FW&#8217;. When the SOURCE is $FW, the generated rule is always placed in the OUTPUT chain. If DEST is &#8216;$FW&#8217;, then the rule is placed in the INPUT chain. Additionally, a <i>chain-designator</i> may not be specified in an action body unless the action is declared as <code>inline</code> in m[blue]<code>shorewall6-actions</code>m[][5](5). Where a command takes parameters, those parameters are enclosed in parentheses (&quot;(&#8230;.)&quot;) and separated by commas. The <i>command</i> may be one of the following. <i>action</i><code>[([</code><i>param</i><code>[,&#8230;])]</code></p>
 <dl>
-<dd>Added in Shorewall 5.0.7. <i>action</i> must be an action declared with the <code>mangle</code> option in m[blue]<code><a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5)</code>m[]<font SIZE="-2">[6]</font>. If the action accepts parameters, they are specified as a comma-separated list within parentheses following the <i>action</i> name.</dd></dl>
+<dd>Added in Shorewall 5.0.7. <i>action</i> must be an action declared with the <code>mangle</code> option in m[blue]<code><a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5)</code>m[][6]. If the action accepts parameters, they are specified as a comma-separated list within parentheses following the <i>action</i> name.</dd></dl>
 <p> <code>ADD(</code><i>ipset</i><code>:</code><i>flags</i><code>)</code></p>
 <dl>
 <dd>Added in Shorewall 4.6.7. Causes addresses and/or port numbers to be added to the named <i>ipset</i>. The <i>flags</i> specify the address or tuple to be added to the set and must match the type of ipset involved. For example, for an iphash ipset, either the SOURCE or DESTINATION address can be added using <i>flags</i><code>src</code> or <code>dst</code> respectively (see the -A command in ipset (8)). ADD is non-terminating. Even if a packet matches the rule, it is passed on to the next rule.</dd></dl>
@@ -55,7 +55,7 @@ description: "mangle – Shorewall Packet marking/mangling rules file"
  htb
  prio</pre>
 </dd></dl>
-<p> Classification occurs in the POSTROUTING chain except when the <code>SOURCE</code> is <code>$FW</code>[:<i>address</i>] in which case classification occurs in the OUTPUT chain. When using Shorewall&#8217;s built-in traffic shaping tool, the <i>major</i> class is the device number (the first device in m[blue]<code>shorewall6-tcdevices</code>m[]<font SIZE="-2">[7]</font>(5) is major class 1, the second device is major class 2, and so on) and the <i>minor</i> class is the class&#8217;s MARK value in m[blue]<code>shorewall6-tcclasses</code>m[]<font SIZE="-2">[8]</font>(5) preceded by the number 1 (MARK 1 corresponds to minor class 11, MARK 5 corresponds to minor class 15, MARK 22 corresponds to minor class 122, etc.).</dl>
+<p> Classification occurs in the POSTROUTING chain except when the <code>SOURCE</code> is <code>$FW</code>[:<i>address</i>] in which case classification occurs in the OUTPUT chain. When using Shorewall&#8217;s built-in traffic shaping tool, the <i>major</i> class is the device number (the first device in m[blue]<code>shorewall6-tcdevices</code>m[][7](5) is major class 1, the second device is major class 2, and so on) and the <i>minor</i> class is the class&#8217;s MARK value in m[blue]<code>shorewall6-tcclasses</code>m[][8](5) preceded by the number 1 (MARK 1 corresponds to minor class 11, MARK 5 corresponds to minor class 15, MARK 22 corresponds to minor class 122, etc.).</dl>
 <p> <code>?COMMENT</code></p>
 <dl>
 <dd>The rest of the line will be attached as a comment to the Netfilter rule(s) generated by the following entries. The comment will appear delimited by &quot;/* &#8230; */&quot; in the output of <code>shorewall show mangle</code> To stop the comment from being attached to further rules, simply include ?COMMENT on a line by itself.</dd></dl>
@@ -73,7 +73,7 @@ description: "mangle – Shorewall Packet marking/mangling rules file"
 <dd>Two DIVERT rule should precede the TPROXY rule and should select DEST PORT tcp 80 and SOURCE PORT tcp 80 respectively (assuming that tcp port 80 is being proxied). DIVERT avoids sending packets to the TPROXY target once a socket connection to Squid3 has been established by TPROXY. DIVERT marks the packet with a unique mark and exempts it from any rules that follow.</dd></dl>
 <p> <code>DIVERTHA</code></p>
 <dl>
-<dd>Added in Shorewall 5.0.4. To setup the HAProxy configuration described at m[blue]<code><a rel="nofollow" href="http://www.loadbalancer.org/blog/setting-up-haproxy-with-transparent-mode-on-centos-6-x">http://www.loadbalancer.org/blog/setting-up-haproxy-with-transparent-mode-on-centos-6-x</a></code>m[], place this entry in m[blue]<code><a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5)</code>m[]<font SIZE="-2">[9]</font>:</dd>
+<dd>Added in Shorewall 5.0.4. To setup the HAProxy configuration described at m[blue]<code><a rel="nofollow" href="http://www.loadbalancer.org/blog/setting-up-haproxy-with-transparent-mode-on-centos-6-x">http://www.loadbalancer.org/blog/setting-up-haproxy-with-transparent-mode-on-centos-6-x</a></code>m[], place this entry in m[blue]<code><a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5)</code>m[][9]:</dd>
 <dl>
 <dd>
 <pre>#NAME NUMBER MARK DUPLICATE INTERFACE GATEWAY OPTIONS COPY
@@ -126,7 +126,7 @@ DIVERTHA - - tcp</pre>
 <dd>Specifies that the packet should be passed to the IMQ identified by <i>number</i>. Requires IMQ Target support in your kernel and iptables.</dd></dl>
 <p> <code>INLINE</code>[(<i>action</i>)]</p>
 <dl>
-<dd>Allows you to place your own ip[6]tables matches at the end of the line following a semicolon (&quot;;&quot;). If an <i>action</i> is specified, the compiler proceeds as if that <i>action</i> had been specified in this column. If no action is specified, then you may include your own jump (&quot;-j <i>target</i> [<i>option</i>] &#8230;&quot;) after any matches specified at the end of the rule. If the target is not one known to Shorewall, then it must be defined as a builtin action in m[blue]<code>shorewall-actions</code>m[]<font SIZE="-2">[10]</font> (5). The following rules are equivalent:</dd>
+<dd>Allows you to place your own ip[6]tables matches at the end of the line following a semicolon (&quot;;&quot;). If an <i>action</i> is specified, the compiler proceeds as if that <i>action</i> had been specified in this column. If no action is specified, then you may include your own jump (&quot;-j <i>target</i> [<i>option</i>] &#8230;&quot;) after any matches specified at the end of the rule. If the target is not one known to Shorewall, then it must be defined as a builtin action in m[blue]<code>shorewall-actions</code>m[][10] (5). The following rules are equivalent:</dd>
 <dl>
 <dd>
 <pre>2:P eth0 - tcp 22
@@ -135,7 +135,7 @@ INLINE(MARK(2)):P eth0 - ; -p tcp
 INLINE eth0 - tcp 22 ; -j MARK --set-mark 2
 INLINE eth0 - ; -p tcp -j MARK --set-mark 2</pre>
 </dd></dl>
-<p> If INLINE_MATCHES=Yes in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[11]</font> then the third rule above can be specified as follows:</p>
+<p> If INLINE_MATCHES=Yes in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[][11] then the third rule above can be specified as follows:</p>
 <dl>
 <dd>
 <pre>MARK(2):P eth0 - ; -p tcp</pre>
@@ -168,26 +168,26 @@ INLINE eth0 - ; -p tcp -j MARK --set-mark 2</pre>
 <dd><i>shift</i> = 0</dd></dl>
 <p> <code>src</code> and <code>dst</code> specify whether the mark is to be based on the source or destination address respectively. The selected address is first shifted right by <i>shift</i>, then LANDed with <i>mask1</i> and then LORed with <i>mask2</i>. The <i>shift</i> argument is intended to be used primarily with IPv6 addresses. Example: IPMARK(src,0xff,0x10100)</p>
 <dl>
-<dd>Suppose that the source IP address is 192.168.4.3<br />
+<dd>Suppose that the source IP address is 192.168.4.3<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>0xc0a80403;&nbsp;<wbr>then</dd></dl>
 <dl>
 <dd>0xc0a80403 &gt;&gt; 0 = 0xc0a80403</dd></dl>
 <dl>
 <dd>0xc0a80403 LAND 0xFF = 0x03</dd></dl>
 <dl>
-<dd>0x03 LOR 0x10100 = 0x10103 or class ID<br />
+<dd>0x03 LOR 0x10100 = 0x10103 or class ID<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1:103</dd></dl>
 <p> It is important to realize that, while class IDs are composed of a <i>major</i> and a <i>minor</i> value, the set of values must be unique. That is, the same numeric value cannot be used as both a <i>major</i> and a <i>minor</i> number for the same interface unless class nesting occurs (which is not currently possible with Shorewall). You should keep this in mind when deciding how to map IP addresses to class IDs. For example, suppose that your internal network is 192.168.1.0/29 (host IP addresses 192.168.1.1 &#8211; 192.168.1.6). Your first notion might be to use IPMARK(src,0xFF,0x10000) so as to produce class IDs 1:1 through 1:6. But 1:1 is an invalid class ID since the <i>major</i> and <i>minor</i> classes are equal. So you might choose instead to use IPMARK(src,0xFF,0x10100) as in the example above so that all of your <i>minor</i> classes will have a value &gt; 256.</dl>
 <p> <code>IP6TABLES({</code><i>target</i><code> [</code><i>option</i><code> &#8230;])</code></p>
 <dl>
 <dd>This action allows you to specify an iptables target with options (e.g., &#8216;IP6TABLES(MARK &#8211;set-xmark 0x01/0xff)&#8217;. If the target is not one recognized by Shorewall, the following error message will be issued:</dd>
 <dl>
-<dd>ERROR: Unknown target<br />
+<dd>ERROR: Unknown target<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(<i>target</i>)</dd></dl>
-<p> This error message may be eliminated by adding the <i>target</i> as a builtin action in m[blue]<code>shorewall6-actions</code>m[]<font SIZE="-2">[12]</font>(5).</dl>
+<p> This error message may be eliminated by adding the <i>target</i> as a builtin action in m[blue]<code>shorewall6-actions</code>m[][12](5).</dl>
 <p> <code>MARK({</code><i>mark</i><code>|</code><i>range</i><code>})</code></p>
 <dl>
-<dd>where <i>mark</i> is a packet mark value. Normally will set the mark value. If preceded by a vertical bar (&quot;|&quot;), the mark value will be logically ORed with the current mark value to produce a new mark value. If preceded by an ampersand (&quot;&amp;&quot;), will be logically ANDed with the current mark value to produce a new mark value. Both &quot;|&quot; and &quot;&amp;&quot; require Extended MARK Target support in your kernel and iptables. The mark value may be optionally followed by &quot;/&quot; and a mask value (used to determine those bits of the connection mark to actually be set). When a mask is specified, the result of logically ANDing the mark value with the mask must be the same as the mark value. A mark <i>range</i> is a pair of integers separated by a dash (&quot;-&quot;). May be optionally followed by a slash (&quot;/&quot;) and a mask and requires the Statistics Match capability in iptables and kernel. Marks in the specified range are assigned to packets on a round-robin fashion. When a mask is specified, the result of logically ANDing each mark value with the mask must be the same as the mark value. The least significant bit in the mask is used as an increment. For example, if &#8216;0x200-0x400/0xff00&#8217; is specified, then the assigned mark values are 0x200, 0x300 and 0x400 in equal proportions. If no mask is specified, then ( 2 ** MASK_BITS ) &#8211; 1 is assumed (MASK_BITS is set in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5)).</dd></dl>
+<dd>where <i>mark</i> is a packet mark value. Normally will set the mark value. If preceded by a vertical bar (&quot;|&quot;), the mark value will be logically ORed with the current mark value to produce a new mark value. If preceded by an ampersand (&quot;&amp;&quot;), will be logically ANDed with the current mark value to produce a new mark value. Both &quot;|&quot; and &quot;&amp;&quot; require Extended MARK Target support in your kernel and iptables. The mark value may be optionally followed by &quot;/&quot; and a mask value (used to determine those bits of the connection mark to actually be set). When a mask is specified, the result of logically ANDing the mark value with the mask must be the same as the mark value. A mark <i>range</i> is a pair of integers separated by a dash (&quot;-&quot;). May be optionally followed by a slash (&quot;/&quot;) and a mask and requires the Statistics Match capability in iptables and kernel. Marks in the specified range are assigned to packets on a round-robin fashion. When a mask is specified, the result of logically ANDing each mark value with the mask must be the same as the mark value. The least significant bit in the mask is used as an increment. For example, if &#8216;0x200-0x400/0xff00&#8217; is specified, then the assigned mark values are 0x200, 0x300 and 0x400 in equal proportions. If no mask is specified, then ( 2 ** MASK_BITS ) &#8211; 1 is assumed (MASK_BITS is set in m[blue]<code>shorewall6.conf</code>m[][2](5)).</dd></dl>
 <p> <code>NFLOG</code>[(<i>nflog-parameters</i>)]</p>
 <dl>
 <dd>Added in Shorewall 5.0.9. Logs matching packets using NFLOG. The <i>nflog-parameters</i> are a comma-separated list of up to 3 numbers:</dd>
@@ -233,7 +233,7 @@ Normal-Service =&gt; 0x00</pre>
 <p> To indicate more than one class, add their hex values together and specify the result. When <i>tos</i> is given as a number, it may be optionally followed by &#8216;/&#8217; and a <i>mask</i>. When no <i>mask</i> is given, the value 0xff is assumed. When <i>tos</i> is given as a type name, the <i>mask</i> 0x3f is assumed. The action performed is to zero out the bits specified by the <i>mask</i>, then set the bits specified by <i>tos</i>.</dl>
 <p> <code>TPROXY</code>([<i>port</i>][,<i>address</i>])</p>
 <dl>
-<dd>Transparently redirects a packet without altering the IP header. Requires a tproxy provider to be defined in m[blue]<code>shorewall6-providers</code>m[]<font SIZE="-2">[13]</font>(5). There are three parameters to TPROXY &#8211; neither is required:</dd>
+<dd>Transparently redirects a packet without altering the IP header. Requires a tproxy provider to be defined in m[blue]<code>shorewall6-providers</code>m[][13](5). There are three parameters to TPROXY &#8211; neither is required:</dd>
 <dl>
 <dd>&bull; <i>port</i> &#8211; the port on which the proxy server is listening. If omitted, the original destination port.</dd></dl>
 <dl>
@@ -254,22 +254,22 @@ Normal-Service =&gt; 0x00</pre>
 <dd>3. An interface name followed by a colon (&quot;:&quot;) followed by a comma-separated list of host or network IP addresses or MAC addresses. May not be used in classify rules or in rules using the :T chain qualifier.</dd></dl>
 <dl>
 <dd>4. $FW optionally followed by a colon (&quot;:&quot;) and a comma-separated list of host or network IP addresses. Matches packets originating on the firewall. May not be used with a chain qualifier (:P, :F, etc.) in the ACTION column.</dd></dl>
-<p> MAC addresses must be prefixed with &quot;~&quot; and use &quot;-&quot; as a separator. Example: ~00-A0-C9-15-39-78 You may exclude certain hosts from the set already defined through use of an <i>exclusion</i> (see m[blue]<code>shorewall6-exclusion</code>m[]<font SIZE="-2">[14]</font>(5)). <code>DEST</code> &#8211; {<code>&#8211;</code>|{<i>interface</i>|$FW}|[<i>{interface</i>|$FW}:]<i>address-or-range</i>[<code>,</code><i>address-or-range</i>]&#8230;}[<i>exclusion</i>]</p>
+<p> MAC addresses must be prefixed with &quot;~&quot; and use &quot;-&quot; as a separator. Example: ~00-A0-C9-15-39-78 You may exclude certain hosts from the set already defined through use of an <i>exclusion</i> (see m[blue]<code>shorewall6-exclusion</code>m[][14](5)). <code>DEST</code> &#8211; {<code>&#8211;</code>|{<i>interface</i>|$FW}|[<i>{interface</i>|$FW}:]<i>address-or-range</i>[<code>,</code><i>address-or-range</i>]&#8230;}[<i>exclusion</i>]</p>
 <dl>
 <dd>May be:</dd>
 <dl>
-<dd>1. An interface name. May not be used in the PREROUTING chain (:P in the mark column or no chain qualifier and MARK_IN_FORWARD_CHAIN=No in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font> (5)). The interface name may be optionally followed by a colon (&quot;:&quot;) and an IP address list.</dd></dl>
+<dd>1. An interface name. May not be used in the PREROUTING chain (:P in the mark column or no chain qualifier and MARK_IN_FORWARD_CHAIN=No in m[blue]<code>shorewall6.conf</code>m[][2] (5)). The interface name may be optionally followed by a colon (&quot;:&quot;) and an IP address list.</dd></dl>
 <dl>
 <dd>2. A comma-separated list of host or network IP addresses. The list may include ip address ranges if your kernel and iptables include iprange support.</dd></dl>
 <dl>
 <dd>3. Beginning with Shorewall 4.4.13, $FW may be specified by itself or qualified by an address list. This causes marking to occur in the INPUT chain.</dd></dl>
-<p> You may exclude certain hosts from the set already defined through use of an <i>exclusion</i> (see m[blue]<code>shorewall6-exclusion</code>m[]<font SIZE="-2">[14]</font>(5)).</dl>
+<p> You may exclude certain hosts from the set already defined through use of an <i>exclusion</i> (see m[blue]<code>shorewall6-exclusion</code>m[][14](5)).</dl>
 <p> <code>PROTO</code> &#8211; {<code>&#8211;</code>|<code>{tcp:syn</code>|<code>ipp2p</code>|<code>ipp2p:udp</code>|<code>ipp2p:all</code>|<i>protocol-number</i>|<i>protocol-name</i>|<code>all}[,&#8230;]}</code></p>
 <dl>
 <dd>Protocol &#8211; <code>ipp2p</code> requires ipp2p match support in your kernel and iptables. Beginning with Shorewall 4.5.12, this column can accept a comma-separated list of protocols.</dd></dl>
 <p> <code>DPORT</code> &#8211; [<code>&#8211;</code>|<i>port-name-number-or-range</i>[<code>,</code><i>port-name-number-or-range</i>]&#8230;]</p>
 <dl>
-<dd>Optional destination Ports. A comma-separated list of Port names (from <a href="/docs/linux/man/5-services/">services</a>(5)), <i>port number</i>s or <i>port range</i>s; if the protocol is <code>icmp</code>, this column is interpreted as the destination icmp-type(s). ICMP types may be specified as a numeric type, a numeric type and code separated by a slash (e.g., 3/4), or a typename. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#ICMP">http://www.shorewall.net/configuration_file_basics.htm#ICMP</a></code>m[]<font SIZE="-2">[15]</font>. If the protocol is <code>ipp2p</code>, this column is interpreted as an ipp2p option without the leading &quot;&#8211;&quot; (example <code>bit</code> for bit-torrent). If no PORT is given, <code>ipp2p</code> is assumed. An entry in this field requires that the PROTO column specify icmp (1), tcp (6), udp (17), sctp (132) or udplite (136). Use &#8216;-&#8216; if any of the following field is supplied. This column was formerly labelled DEST PORT(S).</dd></dl>
+<dd>Optional destination Ports. A comma-separated list of Port names (from <a href="/docs/linux/man/5-services/">services</a>(5)), <i>port number</i>s or <i>port range</i>s; if the protocol is <code>icmp</code>, this column is interpreted as the destination icmp-type(s). ICMP types may be specified as a numeric type, a numeric type and code separated by a slash (e.g., 3/4), or a typename. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#ICMP">http://www.shorewall.net/configuration_file_basics.htm#ICMP</a></code>m[][15]. If the protocol is <code>ipp2p</code>, this column is interpreted as an ipp2p option without the leading &quot;&#8211;&quot; (example <code>bit</code> for bit-torrent). If no PORT is given, <code>ipp2p</code> is assumed. An entry in this field requires that the PROTO column specify icmp (1), tcp (6), udp (17), sctp (132) or udplite (136). Use &#8216;-&#8216; if any of the following field is supplied. This column was formerly labelled DEST PORT(S).</dd></dl>
 <p> <code>SPORT </code>&#8211; [<code>&#8211;</code>|<i>port-name-number-or-range</i>[<code>,</code><i>port-name-number-or-range</i>]&#8230;]</p>
 <dl>
 <dd>Optional source port(s). If omitted, any source port is acceptable. Specified as a comma-separated list of port names, port numbers or port ranges. An entry in this field requires that the PROTO column specify tcp (6), udp (17), sctp (132) or udplite (136). Use &#8216;-&#8216; if any of the following fields is supplied. Beginning with Shorewall 4.5.15, you may place &#8216;=&#8217; in this column, provided that the DPORT column is non-empty. This causes the rule to match when either the source port or the destination port in a packet matches one of the ports specified in DPORT. Use of &#8216;=&#8217; requires multi-port match in your iptables and kernel. This column was formerly labelled SOURCE PORT(S).</dd></dl>
@@ -288,7 +288,7 @@ Normal-Service =&gt; 0x00</pre>
 <dl>
 <dd>#program named upnpd</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
+<dd> <code>Important</code> <br/>
  The ability to specify a program name was removed from Netfilter in kernel version 2.6.14.  <code>TEST</code> &#8211; [<code>!</code>]<i>value</i>[/<i>mask</i>][<code>:C</code>]</dd>
 <dl>
 <dd>Optional &#8211; Defines a test on the existing packet or connection mark. The rule will match only if the test returns true. If you don&#8217;t want to define a test but need to specify anything in the following columns, place a &quot;-&quot; in this field. !</dd>
@@ -443,10 +443,10 @@ Normal-Service =&gt; 0x00</pre>
 <h2>Files</h2>
 <p>/etc/shorewall6/mangle</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/traffic_shaping.htm">http://www.shorewall.net/traffic_shaping.htm</a></code>m[]<font SIZE="-2">[16]</font> </p>
-<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MultiISP.html">http://www.shorewall.net/MultiISP.html</a></code>m[]<font SIZE="-2">[4]</font> </p>
-<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/PacketMarking.html">http://www.shorewall.net/PacketMarking.html</a></code>m[]<font SIZE="-2">[17]</font> </p>
-<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[18]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/traffic_shaping.htm">http://www.shorewall.net/traffic_shaping.htm</a></code>m[][16] </p>
+<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MultiISP.html">http://www.shorewall.net/MultiISP.html</a></code>m[][4] </p>
+<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/PacketMarking.html">http://www.shorewall.net/PacketMarking.html</a></code>m[][17] </p>
+<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][18] </p>
 <p> <a href="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a href="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), shorewall6-ecn(5), <a href="/docs/linux/man/5-shorewall6-exclusion/">shorewall6-exclusion</a>(5), <a href="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), shorewall6_interfaces(5), <a href="/docs/linux/man/5-shorewall6-ipsets/">shorewall6-ipsets</a>(5), <a href="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a href="/docs/linux/man/5-shorewall6-masq/">shorewall6-masq</a>(5), <a href="/docs/linux/man/5-shorewall6-nat/">shorewall6-nat</a>(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5), <a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), shorewall6-proxyarp(5), <a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), shorewall6-routestopped(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a href="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), shorewall6-tos(5), <a href="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

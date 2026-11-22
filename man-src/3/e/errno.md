@@ -302,15 +302,15 @@ description: "errno – number of last error"
 <dd> Exchange full.</dd></dl>
 <h2>NOTES</h2>
 <p> A common mistake is to do </p>
-<p> if (somecall() == -1) {<br />
+<p> if (somecall() == -1) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;somecall()&nbsp;failed
-&quot;);<br />
+&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(errno&nbsp;==&nbsp;&#8230;)&nbsp;{&nbsp;&#8230;&nbsp;} } </p>
 <p> where <i>errno</i> no longer needs to have the value it had upon return from <i>somecall</i>() (i.e., it may have been changed by the <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3)). If the value of <i>errno</i> should be preserved across a library call, it must be saved: </p>
-<p> if (somecall() == -1) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int errsv&nbsp;=&nbsp;errno;<br />
+<p> if (somecall() == -1) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int errsv&nbsp;=&nbsp;errno;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;somecall()&nbsp;failed
-&quot;);<br />
+&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(errsv&nbsp;==&nbsp;&#8230;)&nbsp;{&nbsp;&#8230;&nbsp;} } </p>
 <p> Note that the POSIX threads APIs do <i>not</i> set <i>errno</i> on error. Instead, on failure they return an error number as the function result. These error numbers have the same meanings as the error numbers returned in <i>errno</i> by other APIs. </p>
 <p> On some ancient systems, <i>&lt;errno.h&gt;</i> was not present or did not declare <i>errno</i>, so that it was necessary to declare <i>errno</i> manually (i.e., <i>extern int errno</i>). <code>Do not do this</code>. It long ago ceased to be necessary, and it will cause problems with modern versions of the C library.</p>

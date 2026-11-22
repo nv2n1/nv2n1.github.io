@@ -16,15 +16,15 @@ description: "sc::SCVectorSimpleBlock –"
 <h3>Public Member Functions</h3>
 <p><code>SCVectorSimpleBlock</code> (int istart, int iend) </p>
 <p> <code>SCVectorSimpleBlock</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- <code>SCMatrixBlock</code> * <code>deepcopy</code> () const<br />
- <i>Return of copy of this. </i><br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ <code>SCMatrixBlock</code> * <code>deepcopy</code> () const<br/>
+ <i>Return of copy of this. </i><br/>
  void <code>process</code> (<code>SCElementOp</code> *) </p>
 <p> void <code>process</code> (<code>SCElementOp2</code> *, <code>SCMatrixBlock</code> *) </p>
 <p> void <code>process</code> (<code>SCElementOp3</code> *, <code>SCMatrixBlock</code> *, <code>SCMatrixBlock</code> *) </p>
-<p> double * <code>dat</code> ()<br />
- <i>Return a pointer to the block&#8217;s data and the number of elements in the block. </i><br />
+<p> double * <code>dat</code> ()<br/>
+ <i>Return a pointer to the block&#8217;s data and the number of elements in the block. </i><br/>
  int <code>ndat</code> () const</p>
 <h3>Public Attributes</h3>
 <pre><code>int istart

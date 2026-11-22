@@ -44,10 +44,10 @@ description: "whirlpoolsum – compute and check WHIRLPOOL message digest"
 <h2>AUTHOR</h2>
 <p> Written by Denis Fateyev. Based on WHIRLPOOL algorithm implementation by Paulo S.L.M. Barreto and Vincent Rijmen, and various improvements by Avar Arnfjörð Bjarmason.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report whirlpoolsum bugs to &#8216;denis [at] fateyev.com&#8217;<br />
+<p> Report whirlpoolsum bugs to &#8216;denis [at] fateyev.com&#8217;<br/>
  Libwhirlpool home page: &lt;<a rel="nofollow" href="https://github.com/dfateyev/libwhirlpool">https://github.com/dfateyev/libwhirlpool</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> This is free and unencumbered software released into the public domain. Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.<br />
+<p> This is free and unencumbered software released into the public domain. Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.<br/>
  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sha256sum/">sha256sum</a></code>(1), <code><a href="/docs/linux/man/1-sha384sum/">sha384sum</a></code>(1), <code><a href="/docs/linux/man/1-sha512sum/">sha512sum</a></code>(1). </p>

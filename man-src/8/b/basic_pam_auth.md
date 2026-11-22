@@ -27,16 +27,16 @@ description: "basic_pam_auth – PAM Basic authentication helper for Squid"
 <h2>Notes</h2>
 <p>When used for authenticating to local UNIX shadow password databases the program must be running as root or else it won&#8217;t have sufficient permissions to access the user password database. Such use of this program is not recommended, but if you absolutely need to then make the program setuid root</p>
 <dl>
-<dd><code>chown root basic_pam_auth</code><br />
+<dd><code>chown root basic_pam_auth</code><br/>
  <code>chmod u+s basic_pam_auth</code></dd></dl>
 <p> Please note that in such configurations it is also strongly recommended that the program is moved into a directory where normal users cannot access it, as this mode of operation will allow any local user to brute-force other users passwords. Also note the program has not been fully audited and the author cannot be held responsible for any security issues due to such installations.</p>
 <h2>Author</h2>
 <p>This program and documentation was written by <i>Henrik Nordstrom &lt;hno [at] squid-cache.org&gt;</i></p>
 <h2>Copyright</h2>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br />
-&nbsp;<wbr>*<br />
-&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br />
-&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br/>
+&nbsp;<wbr>*<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br/>
+&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br/>
 &nbsp;<wbr>*&nbsp;<wbr>Please see the COPYING and CONTRIBUTORS files for details. </p>
 <p> Squid <code>basic_pam_auth</code> and this manual is Copyright 1999,2002,2003 <i>Henrik Nordstrom &lt;hno [at] squid-cache.org&gt;</i> Distributed under the GNU General Public License (GNU GPL) version 2 or later (GPLv2+).</p>
 <h2>Questions</h2>
@@ -47,7 +47,7 @@ description: "basic_pam_auth – PAM Basic authentication helper for Squid"
 <p> Report serious security bugs to <i>Squid Bugs &lt;squid-bugs [at] squid-cache.org&gt;</i> </p>
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list</i> &lt;squid-dev [at] squid-cache.org&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code><a href="/docs/linux/man/3-pam/">pam</a></code>(3), <code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/1-chown/">chown</a></code>(1), <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1), <code>GPL</code>(7),<br />
- PAM Systems Administrator Guide<br />
- The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br />
+<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code><a href="/docs/linux/man/3-pam/">pam</a></code>(3), <code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/1-chown/">chown</a></code>(1), <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1), <code>GPL</code>(7),<br/>
+ PAM Systems Administrator Guide<br/>
+ The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br/>
  The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>

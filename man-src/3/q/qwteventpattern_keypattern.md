@@ -12,12 +12,12 @@ description: "QwtEventPattern::KeyPattern –"
 <h2>Synopsis</h2>
 <p>#include &lt;qwt_event_pattern.h&gt;</p>
 <h3>Public Member Functions</h3>
-<p><code>KeyPattern</code> (int keyCode=Qt::Key_unknown, Qt::KeyboardModifiers modifierCodes=Qt::NoModifier)<br />
+<p><code>KeyPattern</code> (int keyCode=Qt::Key_unknown, Qt::KeyboardModifiers modifierCodes=Qt::NoModifier)<br/>
  <i>Constructor. </i></p>
 <h3>Public Attributes</h3>
-<p>int <code>key</code><br />
- <i>Key code. </i><br />
- Qt::KeyboardModifiers <code>modifiers</code><br />
+<p>int <code>key</code><br/>
+ <i>Key code. </i><br/>
+ Qt::KeyboardModifiers <code>modifiers</code><br/>
  <i>Modifiers. </i></p>
 <h2>Detailed Description</h2>
 <p>A pattern for key events. </p>

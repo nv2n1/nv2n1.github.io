@@ -10,7 +10,7 @@ description: "ql/pricingengines/blackformula.hpp – Black formula."
 
 <p> ql/pricingengines/blackformula.hpp &#8211; Black formula. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/option.hpp&gt;<br />
+<p> #include &lt;ql/option.hpp&gt;<br/>
  #include &lt;ql/instruments/payoffs.hpp&gt; </p>
 <h3>Functions</h3>
 <p> Real <code>blackFormula</code> (Option::Type optionType, Real strike, Real forward, Real stdDev, Real discount=1.0, Real displacement=0.0) </p>

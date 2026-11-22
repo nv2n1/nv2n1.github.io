@@ -159,14 +159,14 @@ Rcmp &lt; {command} &lt;
 </code></pre>
 <p> compares the output of the two commands in braces. Note: since this form of redirection is implemented with some kind of pipe, and since one cannot <i><a href="/docs/linux/man/2-lseek/">lseek</a></i>(2) on a pipe, commands that use <i><a href="/docs/linux/man/2-lseek/">lseek</a></i>(2) will hang. For example, some versions of <i><a href="/docs/linux/man/1-diff/">diff</a></i>(1) use <i><a href="/docs/linux/man/2-lseek/">lseek</a></i>(2) on their inputs. </p>
 <p> Data can be sent down a pipe to several commands using <i><a href="/docs/linux/man/1-tee/">tee</a></i>(1) and the output version of this notation: </p>
-<p>Recho hi there | tee &gt; {sed &#8216;s/^/p1 /&#8217;} &gt;<br />
-{<br />
-    sed &#8216;s/^/p2 /&#8217;<br />
+<p>Recho hi there | tee &gt; {sed &#8216;s/^/p1 /&#8217;} &gt;<br/>
+{<br/>
+    sed &#8216;s/^/p2 /&#8217;<br/>
 }</p>
 <h2>CONTROL STRUCTURES</h2>
 <p> The following may be used for control flow in <i>rc</i>:</p>
 <h3>If-Else Statements</h3>
-<p> Rif (ItestR) { Rif (Itest Rif (<br />
+<p> Rif (ItestR) { Rif (Itest Rif (<br/>
  <i> cmd</i> </p>
 <dl>
 <dt> R} else Icmd R} else</dt>
@@ -182,9 +182,9 @@ R    command
 <dd> <i>rc</i> executes the <i>test</i> and performs the command as long as the <i>test</i> is true.</dd>
 <dt> Rfor (IvarR in IlistR)I cmd Rfor (IvarR in IlistR) Rfor (IvarR in Ilist Rfor (IvarR in Rfor (Ivar Rfor (</dt>
 <dd> <i>rc</i> sets <i>var</i> to each element of <i>list</i> (which may contain variables and backquote substitutions) and runs <i>cmd</i>. If R&#8220;Rin R&#8220; <i>list</i>&#8221; is omitted, then <i>rc</i> will set <i>var</i> to each element of R$*R. R$* For example: </dd>
-<p>Rfor(i in `{ls &#8211; F | grep &#8216;\*$&#8217; | sed &#8216;s/\*$//&#8217;})<br />
-{<br />
-    commands<br />
+<p>Rfor(i in `{ls &#8211; F | grep &#8216;\*$&#8217; | sed &#8216;s/\*$//&#8217;})<br/>
+{<br/>
+    commands<br/>
 }</p>
 <dt>
 </dt><dd> will set R$i to the name of each file in the current directory that is executable.</dd></dl>
@@ -378,9 +378,9 @@ R$var
 R`{ command }
 </pre>
 <p> returns a list formed from the standard output of the command in braces. R$ifs is used to split the output into list elements. By default, R$ifs has the value space-tab-newline. The braces may be omitted if the command is a single word. Thus R`ls may be used instead of R`{ls}R. R`{ls} This last feature is useful when defining functions that expand to useful argument lists. A frequent use is: </p>
-<p>Rfn src<br />
-{<br />
-    echo *.[chy]<br />
+<p>Rfn src<br/>
+{<br/>
+    echo *.[chy]<br/>
 }</p>
 <p> followed by </p>
 <pre>
@@ -472,11 +472,11 @@ Rfn l { ls -FC } # WRONG
 </pre>
 <h2>INTERRUPTS AND SIGNALS</h2>
 <p> <i>rc</i> recognizes a number of signals, and allows the user to define shell functions which act as signal handlers. <i>rc</i> by default traps RSIGINT when it is in interactive mode. RSIGQUIT and RSIGTERM are ignored, unless <i>rc</i> has been invoked with the R-d flag. However, user-defined signal handlers may be written for these and all other signals. The way to define a signal handler is to write a function by the name of the signal in lower case. Thus: </p>
-<p>Rfn sighup<br />
-{<br />
-    echo hangup;<br />
-    rm / tmp / rc$pid.*;<br />
-    exit<br />
+<p>Rfn sighup<br/>
+{<br/>
+    echo hangup;<br/>
+    rm / tmp / rc$pid.*;<br/>
+    exit<br/>
 }</p>
 <p> In addition to Unix signals, <i>rc</i> recognizes the artificial signal RSIGEXIT which occurs as <i>rc</i> is about to exit. </p>
 <p> In order to remove a signal handler&#8217;s definition, remove it as though it were a regular function. For example: </p>
@@ -565,12 +565,12 @@ Rwhatis -- -p
 </dl>
 <h2>EXAMPLES</h2>
 <p> The <code>shift</code> builtin only shifts R$*R. R$* This function can shift any variable (except R$lshiftR). R$lshift </p>
-<p>Rfn lshift<br />
-{<br />
-    lshift = $ *;<br />
-    *= $$1;<br />
-    shift $lshift(2);<br />
-    $lshift(1) = $ *<br />
+<p>Rfn lshift<br/>
+{<br/>
+    lshift = $ *;<br/>
+    *= $$1;<br/>
+    shift $lshift(2);<br/>
+    $lshift(1) = $ *<br/>
 }</p>
 <p> With this definition in place, </p>
 <pre>
@@ -583,18 +583,18 @@ Rwhatis walrus
 Rwalrus=(cabbages kings)
 </pre>
 <p> The R$^var operator flattens a list by separating each element with a space. This function allows the separator to be an arbitrary string. </p>
-<p>Rfn lflat<br />
-{<br />
-    R lflat = $ *;<br />
-    *= $$1<br />
-        R while ()<br />
-    {<br />
-        R echo &#8211; n $1;<br />
-        shift<br />
-                    R ~$ # *<br />
-                0 &amp;&amp;<br />
-            break R echo &#8211; n $lflat(2)<br />
-                               R<br />
+<p>Rfn lflat<br/>
+{<br/>
+    R lflat = $ *;<br/>
+    *= $$1<br/>
+        R while ()<br/>
+    {<br/>
+        R echo &#8211; n $1;<br/>
+        shift<br/>
+                    R ~$ # *<br/>
+                0 &amp;&amp;<br/>
+            break R echo &#8211; n $lflat(2)<br/>
+                               R<br/>
     }</p>
 <p> With this definition in place, </p>
 <pre>
@@ -611,11 +611,11 @@ Ruunet!mcvax!ukc!tlg
 <h2>GRAMMAR</h2>
 <p> Here is <i>rc</i>&#8216;s grammar, edited to remove semantic actions. </p>
 <p>R % term ANDAND BACKBACK BANG CASE COUNT DUP ELSE END FLAT FN FOR IF IN % term OROR PIPE REDIR SUB SUBSHELL SWITCH TWIDDLE WHILE WORD HUH % left WHILE &#8216;)&#8217; ELSE % left ANDAND OROR &#8216;
-&#8217; % left BANG SUBSHELL % left PIPE % right &#8216;$&#8217; % left SUB % start rc % %<br />
-        rc : line end |<br />
-    error end<br />
-        end : END /* EOF */<br />
-              |<br />
+&#8217; % left BANG SUBSHELL % left PIPE % right &#8216;$&#8217; % left SUB % start rc % %<br/>
+        rc : line end |<br/>
+    error end<br/>
+        end : END /* EOF */<br/>
+              |<br/>
               &#8216;
 &#8217; cmdsa : cmd &#8216;;&#8217; | cmd &#8216;&amp;&#8217; line : cmd | cmdsa line body : cmd | cmdsan body cmdsan : cmdsa | cmd &#8216;
 &#8217; brace : &#8216;{&#8216; body &#8216;}&#8217; paren : &#8216;(&#8216; body &#8216;)&#8217; assign : first &#8216;=&#8217; word epilog : /* empty */ | redir epilog redir : DUP | REDIR word case : CASE words &#8216;;&#8217; | CASE words &#8216;

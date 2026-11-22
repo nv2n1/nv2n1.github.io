@@ -10,15 +10,15 @@ description: "Forward option engines –"
 
 <p> Forward option engines &#8211; </p>
 <h3>Classes</h3>
-<p> class <code>IntegralHestonVarianceOptionEngine</code><br />
- <i>integral Heston-model variance-option engine </i><br />
- class <code>ForwardVanillaEngine&lt; Engine &gt;</code><br />
- <i>Forward engine for vanilla options </i><br />
- class <code>ForwardPerformanceVanillaEngine&lt; Engine &gt;</code><br />
- <i>Forward performance engine for vanilla options </i><br />
- class <code>MCVarianceSwapEngine&lt; RNG, S &gt;</code><br />
- <i>Variance-swap pricing engine using Monte Carlo simulation,. </i><br />
- class <code>ReplicatingVarianceSwapEngine</code><br />
+<p> class <code>IntegralHestonVarianceOptionEngine</code><br/>
+ <i>integral Heston-model variance-option engine </i><br/>
+ class <code>ForwardVanillaEngine&lt; Engine &gt;</code><br/>
+ <i>Forward engine for vanilla options </i><br/>
+ class <code>ForwardPerformanceVanillaEngine&lt; Engine &gt;</code><br/>
+ <i>Forward performance engine for vanilla options </i><br/>
+ class <code>MCVarianceSwapEngine&lt; RNG, S &gt;</code><br/>
+ <i>Variance-swap pricing engine using Monte Carlo simulation,. </i><br/>
+ class <code>ReplicatingVarianceSwapEngine</code><br/>
  <i>Variance-swap pricing engine using replicating cost,. </i></p>
 <h2>Detailed Description</h2>
 <h2>Author</h2>

@@ -35,34 +35,34 @@ description: "qselect – select pbs batch jobs"
 <dt>-a [op]date_time</dt>
 <dd> Restricts selection to a specific time, or a range of times.</dd>
 <dt>
-</dt><dd> The qselect command selects only jobs for which the value of the </i><font SIZE="-1"><i> attribute is related to the argument by the optional operator. The argument is in the form of the date_time operand of the </i><code><a href="/docs/linux/man/1-touch/">touch</a></code>(1) command: <code><br />
+</dt><dd> The qselect command selects only jobs for which the value of the </i><i> attribute is related to the argument by the optional operator. The argument is in the form of the date_time operand of the </i><code><a href="/docs/linux/man/1-touch/">touch</a></code>(1) command: <code><br/>
  where the MM is the two digits for the month, DD is the day of the month, hh is the hour, mm is the minute, and the optional SS is the seconds. CC is the century and YY the year.</dd>
 <dt>
-</dt><dd> If </code><i> is not specified, jobs will be selected for which the </i></font><font SIZE="-2"><i> and values are equal. If is specified, jobs will be selected according to the following definitions:</dd>
+</dt><dd> If </code><i> is not specified, jobs will be selected for which the </i><i> and values are equal. If is specified, jobs will be selected according to the following definitions:</dd>
 <dl>
 <dl>
 <dt>.eq.</dt>
-<dd> </i></font><font SIZE="-3"><i> attribute is equal to the argument.</dd>
+<dd> </i><i> attribute is equal to the argument.</dd>
 <dt>.ne.</dt>
-<dd> </i></font><font SIZE="-4"><i> attribute is not equal to the argument.</dd>
+<dd> </i><i> attribute is not equal to the argument.</dd>
 <dt>.ge.</dt>
-<dd> </i></font><font SIZE="-5"><i> attribute is greater than (after) or equal to the argument.</dd>
+<dd> </i><i> attribute is greater than (after) or equal to the argument.</dd>
 <dt>.gt.</dt>
-<dd> </i></font><font SIZE="-6"><i> attribute is greater than (after) the argument.</dd>
+<dd> </i><i> attribute is greater than (after) the argument.</dd>
 <dt>.le.</dt>
-<dd> </i></font><font SIZE="-7"><i> attribute is less than (before) or equal to the argument.</dd>
+<dd> </i><i> attribute is less than (before) or equal to the argument.</dd>
 <dt>.lt.</dt>
-<dd> </i></font><font SIZE="-8"><i> attribute is less than (before) the argument.</dd></dl>
+<dd> </i><i> attribute is less than (before) the argument.</dd></dl>
 </dl>
 <dt>-e</dt>
 <dd> Restricts selection to jobs in execution queues.</dd>
 <dt>-A account_string</dt>
-<dd> Restricts selection to jobs whose </i></font><font SIZE="-9"><i> attribute matches the specified</dd>
+<dd> Restricts selection to jobs whose </i><i> attribute matches the specified</dd>
 <dt>-c [op]interval</dt>
 <dd> Restricts selection to jobs whose interval attribute matches the specified relationship.</dd>
 <dt>
-</dt><dd> The values of the attribute are defined to have the following ordered relationship:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>n&nbsp;<wbr>&gt;&nbsp;<wbr> s&nbsp;<wbr>&gt;&nbsp;<wbr>c=minutes&nbsp;<wbr>&gt;&nbsp;<wbr>c&nbsp;<wbr>&gt;&nbsp;<wbr>u<br />
+</dt><dd> The values of the attribute are defined to have the following ordered relationship:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>n&nbsp;<wbr>&gt;&nbsp;<wbr> s&nbsp;<wbr>&gt;&nbsp;<wbr>c=minutes&nbsp;<wbr>&gt;&nbsp;<wbr>c&nbsp;<wbr>&gt;&nbsp;<wbr>u<br/>
  If the optional is not specified, jobs will be selected whose attribute is equal to the argument. If is specified, jobs will be selected according to:</dd>
 <dl>
 <dl>
@@ -86,7 +86,7 @@ description: "qselect – select pbs batch jobs"
 <dl>
 <dt>
 </dt><dd>
-<p> The argument is a string consisting of one or more occurrences the single letter </i><code> or one or more of the letters or in any combination. If letters are duplicated, they are treated as if they occurred once. The letters represent the hold types: </code></font></p>
+<p> The argument is a string consisting of one or more occurrences the single letter </i><code> or one or more of the letters or in any combination. If letters are duplicated, they are treated as if they occurred once. The letters represent the hold types: </code></p>
 <pre>
   <code>n</code> - none
   <code>u</code> - user
@@ -99,35 +99,35 @@ description: "qselect – select pbs batch jobs"
 <dl>
 <dt>
 </dt><dd>
-<p> Only those jobs will be selected whose <i> </i><font SIZE="-1"><i> attribute matches the specified relation with each resource and value listed in the argument. The is in the following format:<br />
- resource_name</i><code>op</code>value[,resource_name<code>op</code>val,&#8230;]<br />
+<p> Only those jobs will be selected whose <i> </i><i> attribute matches the specified relation with each resource and value listed in the argument. The is in the following format:<br/>
+ resource_name</i><code>op</code>value[,resource_name<code>op</code>val,&#8230;]<br/>
  The relation operator <i> must be present. </p>
 <p> When comparing the values of resources, the following definitions for the operator apply:</p>
 </dd><dl>
 <dt>.eq.</dt>
-<dd> the resource value in the </i></font><font SIZE="-2"><i> attribute of the job equals the value specified in</dd>
+<dd> the resource value in the </i><i> attribute of the job equals the value specified in</dd>
 <dt>.ne.</dt>
-<dd> the resource value in the </i></font><font SIZE="-3"><i> attribute of the job is not equal to the value specified in</dd>
+<dd> the resource value in the </i><i> attribute of the job is not equal to the value specified in</dd>
 <dt>.ge.</dt>
-<dd> the resource value in the </i></font><font SIZE="-4"><i> attribute of the job is greater than or equal to the value specified in</dd>
+<dd> the resource value in the </i><i> attribute of the job is greater than or equal to the value specified in</dd>
 <dt>.gt.</dt>
-<dd> the resource value in the </i></font><font SIZE="-5"><i> attribute of the job is greater than the value specified in</dd>
+<dd> the resource value in the </i><i> attribute of the job is greater than the value specified in</dd>
 <dt>.le.</dt>
-<dd> the resource value in the </i></font><font SIZE="-6"><i> attribute of the job is less than or equal to the value specified in</dd>
+<dd> the resource value in the </i><i> attribute of the job is less than or equal to the value specified in</dd>
 <dt>.lt.</dt>
-<dd> the resource value in the </i></font><font SIZE="-7"><i> attribute of the job is less than the value specified in</dd></dl>
+<dd> the resource value in the </i><i> attribute of the job is less than the value specified in</dd></dl>
 </dl>
 <dt>-N name</dt>
 <dd> Restricts selection of jobs to those with a specific name.</dd>
 <dt>-p [op]priority</dt>
-<dd> Restricts selection of jobs to those with a priority that matches the specified relationship. If is not specified, jobs are selected for which the job </i></font><font SIZE="-8"><i> attribute is equal to the</dd>
+<dd> Restricts selection of jobs to those with a priority that matches the specified relationship. If is not specified, jobs are selected for which the job </i><i> attribute is equal to the</dd>
 <dl>
 <dt>
 </dt><dd>
 <p> If the is specified, the relationship is defined as:</p>
 </dd><dl>
 <dt>.eq.</dt>
-<dd> </i></font><font SIZE="-9"><i> attribute is equal to the value of the argument.</dd>
+<dd> </i><i> attribute is equal to the value of the argument.</dd>
 <dt>.ne.</dt>
 <dd> attribute is not equal to the value of the argument.</dd>
 <dt>.ge.</dt>
@@ -144,7 +144,7 @@ description: "qselect – select pbs batch jobs"
 <dl>
 <dt>
 </dt><dd>
-<p> The may be of one of the following three forms:<br />
+<p> The may be of one of the following three forms:<br/>
  </i><code> </p>
 <p> If the </code><i> option is not specified, jobs will be selected from the default server. </p>
 <p> If the describes only a queue, only jobs in that queue on the default batch server will be selected. </p>
@@ -179,14 +179,14 @@ description: "qselect – select pbs batch jobs"
 <dt>
 </dt><dd>
 <p> This provides a means of limiting the selection to jobs owned by one or more users. </p>
-<p> The syntax of the <i> is:<br />
- </i><code><br />
+<p> The syntax of the <i> is:<br/>
+ </i><code><br/>
  Host names may be wild carded on the left end, e.g. &quot;*.nasa.gov&quot;. User_name without a &quot;@host&quot; is equivalent to &quot;user_name@*&quot;, that is at any host. Jobs will be selected which are owned by the listed users at the corresponding hosts.</dd></dl>
 </dl>
-<p> </code></font></p>
+<p> </code></p>
 <h2>STANDARD OUTPUT</h2>
-<p> The list of job identifiers of selected jobs is written to standard output. Each job identifier is separated by white space. Each job identifier is of the form:<br />
- <code><br />
+<p> The list of job identifiers of selected jobs is written to standard output. Each job identifier is separated by white space. Each job identifier is of the form:<br/>
+ <code><br/>
  Where is the identifier assigned at submission time, see qsub</code>. <code> identifies the server which currently owns the job. </code></p>
 <h2>STANDARD ERROR</h2>
 <p> The qselect command will write a diagnostic message to standard error for each error occurrence.</p>

@@ -70,7 +70,7 @@ description: "apt-mark – show, set and unset various settings for a package"
 <h2>Diagnostics</h2>
 <p><code>apt-mark</code> returns zero on normal operation, non-zero on error.</p>
 <h2>Bugs</h2>
-<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
+<p>m[blue]<code>APT bug page</code>m[][1]. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>Authors</h2>
 <p><code>Mike O&#8217;Connor</code></p>
 <dl>

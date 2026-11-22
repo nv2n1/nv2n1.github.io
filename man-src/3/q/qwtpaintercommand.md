@@ -11,26 +11,26 @@ description: "QwtPainterCommand –"
 <h2>Synopsis</h2>
 <p>#include &lt;qwt_painter_command.h&gt;</p>
 <h3>Classes</h3>
-<p>struct <code>ImageData</code><br />
- <i>Attributes how to paint a QImage. </i><br />
- struct <code>PixmapData</code><br />
- <i>Attributes how to paint a QPixmap. </i><br />
- struct <code>StateData</code><br />
+<p>struct <code>ImageData</code><br/>
+ <i>Attributes how to paint a QImage. </i><br/>
+ struct <code>PixmapData</code><br/>
+ <i>Attributes how to paint a QPixmap. </i><br/>
+ struct <code>StateData</code><br/>
  <i>Attributes of a state change. </i></p>
 <h3>Public Types</h3>
-<p>enum <code>Type</code> { <code>Invalid</code> = -1, <code>Path</code>, <code>Pixmap</code>, <code>Image</code>, <code>State</code> }<br />
+<p>enum <code>Type</code> { <code>Invalid</code> = -1, <code>Path</code>, <code>Pixmap</code>, <code>Image</code>, <code>State</code> }<br/>
  <i>Type of the paint command. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPainterCommand</code> ()<br />
- <i>Construct an invalid command. </i><br />
+<p><code>QwtPainterCommand</code> ()<br/>
+ <i>Construct an invalid command. </i><br/>
  <code>QwtPainterCommand</code> (const <code>QwtPainterCommand</code> &amp;) </p>
-<p> <code>QwtPainterCommand</code> (const QPainterPath &amp;)<br />
- <i>Copy constructor. </i><br />
+<p> <code>QwtPainterCommand</code> (const QPainterPath &amp;)<br/>
+ <i>Copy constructor. </i><br/>
  <code>QwtPainterCommand</code> (const QRectF &amp;rect, const QPixmap &amp;, const QRectF &amp;subRect) </p>
 <p> <code>QwtPainterCommand</code> (const QRectF &amp;rect, const QImage &amp;, const QRectF &amp;subRect, Qt::ImageConversionFlags) </p>
 <p> <code>QwtPainterCommand</code> (const QPaintEngineState &amp;) </p>
-<p> <code>~QwtPainterCommand</code> ()<br />
- <i>Destructor. </i><br />
+<p> <code>~QwtPainterCommand</code> ()<br/>
+ <i>Destructor. </i><br/>
  <code>QwtPainterCommand</code> &amp; <code>operator=</code> (const <code>QwtPainterCommand</code> &amp;) </p>
 <p> <code>Type</code> <code>type</code> () const </p>
 <p> QPainterPath * <code>path</code> () </p>
@@ -72,8 +72,8 @@ description: "QwtPainterCommand –"
 <p>Constructor for Pixmap paint operation </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Target rectangle<br />
- <i>pixmap</i> Pixmap<br />
+<dd><i>rect</i> Target rectangle<br/>
+ <i>pixmap</i> Pixmap<br/>
  <i>subRect</i> Rectangle inside the pixmap</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -82,9 +82,9 @@ description: "QwtPainterCommand –"
 <p>Constructor for Image paint operation </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Target rectangle<br />
- <i>image</i> Image<br />
- <i>subRect</i> Rectangle inside the image<br />
+<dd><i>rect</i> Target rectangle<br/>
+ <i>image</i> Image<br/>
+ <i>subRect</i> Rectangle inside the image<br/>
  <i>flags</i> Conversion flags</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

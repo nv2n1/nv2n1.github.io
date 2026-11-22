@@ -10,7 +10,7 @@ description: "dsbgv.f –"
 <p>dsbgv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dsbgv</code> (JOBZ, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, W, Z, LDZ, WORK, INFO)<br />
+<p>subroutine <code>dsbgv</code> (JOBZ, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, W, Z, LDZ, WORK, INFO)<br/>
  <i></i><code>DSBGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsbgv (characterJOBZ, characterUPLO, integerN, integerKA, integerKB, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( ldbb, * )BB, integerLDBB, double precision, dimension( * )W, double precision, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integerINFO)</h3>

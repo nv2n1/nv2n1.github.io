@@ -37,6 +37,6 @@ description: "XtErrorMsg, XtSetErrorMsgHandler, XtWarningMsg, XtSetWarningMsgHan
 <p> The <code>XtSetWarningMsgHandler</code> function has been superceded by <code>XtAppSetWarningMsgHandler</code>. </p>
 <p> The <code>XtWarningMsg</code> function has been superceded by <code>XtAppWarningMsg</code></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xtapperrormsg/">XtAppErrorMsg</a></code>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><code><a href="/docs/linux/man/3-xtapperrormsg/">XtAppErrorMsg</a></code>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

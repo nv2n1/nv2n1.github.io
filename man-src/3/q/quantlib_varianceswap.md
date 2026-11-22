@@ -12,18 +12,18 @@ description: "QuantLib::VarianceSwap – Variance swap."
 <p>#include &lt;ql/instruments/varianceswap.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for forward fair-variance calculation </i><br />
- class <code>engine</code><br />
- <i>base class for variance-swap engines </i><br />
- class <code>results</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for forward fair-variance calculation </i><br/>
+ class <code>engine</code><br/>
+ <i>base class for variance-swap engines </i><br/>
+ class <code>results</code><br/>
  <i>Results from variance-swap calculation </i></p>
 <h3>Public Member Functions</h3>
 <p><code>VarianceSwap</code> (Position::Type position, <code>Real</code> strike, <code>Real</code> notional, const <code>Date</code> &amp;startDate, const <code>Date</code> &amp;maturityDate) </p>
 <p> void <code>setupArguments</code> (PricingEngine::arguments *args) const </p>
 <p> void <code>fetchResults</code> (const PricingEngine::results *) const </p>
 <p> <code>Instrument interface</code> </p>
-<p> bool <code>isExpired</code> () const<br />
+<p> bool <code>isExpired</code> () const<br/>
  <i>returns whether the instrument is still tradable. </i> </p>
 <p> <code>Additional interface</code> </p>
 <p> <code>Real</code> <code>strike</code> () const </p>

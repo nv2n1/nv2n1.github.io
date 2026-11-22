@@ -29,28 +29,28 @@ description: "ps – report a snapshot of the current processes."
 <h2>EXAMPLES</h2>
 <dl>
 <dt>To see every process on the system using standard syntax:</dt>
-<dd> <code>ps -e</code><br />
- <code>ps -ef</code><br />
- <code>ps -eF</code><br />
+<dd> <code>ps -e</code><br/>
+ <code>ps -ef</code><br/>
+ <code>ps -eF</code><br/>
  <code>ps -ely</code></dd>
 <dt>To see every process on the system using BSD syntax:</dt>
-<dd> <code>ps ax</code><br />
+<dd> <code>ps ax</code><br/>
  <code>ps axu</code></dd>
 <dt>To print a process tree:</dt>
-<dd> <code>ps -ejH</code><br />
+<dd> <code>ps -ejH</code><br/>
  <code>ps axjf</code></dd>
 <dt>To get info about threads:</dt>
-<dd> <code>ps -eLf</code><br />
+<dd> <code>ps -eLf</code><br/>
  <code>ps axms</code></dd>
 <dt>To get security info:</dt>
-<dd> <code>ps -eo euser,ruser,suser,fuser,f,comm,label</code><br />
- <code>ps axZ</code><br />
+<dd> <code>ps -eo euser,ruser,suser,fuser,f,comm,label</code><br/>
+ <code>ps axZ</code><br/>
  <code>ps -eM</code></dd>
 <dt>To see every process running as root (real&nbsp;&amp;&nbsp;effective ID) in user format:</dt>
 <dd> <code>ps -U root -u root u</code></dd>
 <dt>To see every process with a user-defined format:</dt>
-<dd> <code>ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm</code><br />
- <code>ps axo stat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm</code><br />
+<dd> <code>ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm</code><br/>
+ <code>ps axo stat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm</code><br/>
  <code>ps -Ao pid,tt,user,fname,tmout,f,wchan</code></dd>
 <dt>Print only the process IDs of syslogd:</dt>
 <dd> <code>ps -C syslogd -o pid=</code></dd>
@@ -202,9 +202,9 @@ description: "ps – report a snapshot of the current processes."
 <dl>
 <dl>
 <dt>
-</dt><dd> Examples:<br />
- <code>ps jaxkuid,-ppid,+pid</code><br />
- <code>ps axk comm o comm,args</code><br />
+</dt><dd> Examples:<br/>
+ <code>ps jaxkuid,-ppid,+pid</code><br/>
+ <code>ps axk comm o comm,args</code><br/>
  <code>ps kstart_time -ef</code></dd></dl>
 </dl>
 <dt><code>&#8211;lines</code><i>&nbsp;n</i></dt>
@@ -616,7 +616,7 @@ description: "ps – report a snapshot of the current processes."
 <tr VALIGN=top>
 <td><code>args&nbsp;</code></td>
 <td>COMMAND&nbsp;</td>
-<td> command with all its arguments as a string. Modifications to the arguments may be shown. The output in this column may contain spaces. A process marked &lt;defunct&gt; is partly dead, waiting to be fully destroyed by its parent. Sometimes the process args will be unavailable; when this happens, <code>ps</code> will instead print the executable name in brackets. (alias <code>cmd</code>, <code>command</code>). See also the <code>comm</code> format keyword, the <code>-f</code> option, and the <code>c</code> option.<br />
+<td> command with all its arguments as a string. Modifications to the arguments may be shown. The output in this column may contain spaces. A process marked &lt;defunct&gt; is partly dead, waiting to be fully destroyed by its parent. Sometimes the process args will be unavailable; when this happens, <code>ps</code> will instead print the executable name in brackets. (alias <code>cmd</code>, <code>command</code>). See also the <code>comm</code> format keyword, the <code>-f</code> option, and the <code>c</code> option.<br/>
  When specified last, this column will extend to the edge of the display. If <code>ps</code> can not determine display width, as when output is redirected (piped) into a file or another command, the output width is undefined (it may be 80, unlimited, determined by the <code>TERM</code> variable, and so on). The <code>COLUMNS</code> environment variable or <code>&#8211;cols</code> option may be used to exactly determine the width in this case. The <code>w</code> or <code>-w</code> option may be also be used to adjust width.
 </td>
 </tr>
@@ -767,7 +767,7 @@ description: "ps – report a snapshot of the current processes."
 <tr VALIGN=top>
 <td><code>comm&nbsp;</code></td>
 <td>COMMAND&nbsp;</td>
-<td> command name (only the executable name). Modifications to the command name will not be shown. A process marked &lt;defunct&gt; is partly dead, waiting to be fully destroyed by its parent. The output in this column may contain spaces. (alias <code>ucmd</code>, <code>ucomm</code>). See also the <code>args</code> format keyword, the <code>-f</code> option, and the <code>c</code> option.<br />
+<td> command name (only the executable name). Modifications to the command name will not be shown. A process marked &lt;defunct&gt; is partly dead, waiting to be fully destroyed by its parent. The output in this column may contain spaces. (alias <code>ucmd</code>, <code>ucomm</code>). See also the <code>args</code> format keyword, the <code>-f</code> option, and the <code>c</code> option.<br/>
  When specified last, this column will extend to the edge of the display. If <code>ps</code> can not determine display width, as when output is redirected (piped) into a file or another command, the output width is undefined (it may be 80, unlimited, determined by the <code>TERM</code> variable, and so on). The <code>COLUMNS</code> environment variable or <code>&#8211;cols</code> option may be used to exactly determine the width in this case. The <code>w</code>&nbsp;or<code>&nbsp;-w</code> option may be also be used to adjust width.
 </td>
 </tr>

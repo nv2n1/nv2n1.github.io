@@ -21,7 +21,7 @@ description: "beagle-query – search your personal information space"
 <dt><code>&#8211;verbose </code></dt>
 <dd> Print detailed information about each hit.</dd>
 <dt><code>&#8211;cache</code></dt>
-<dd> Show the entire cached text for each result. Only works with <i>&#8211;verbose</i>.<br />
+<dd> Show the entire cached text for each result. Only works with <i>&#8211;verbose</i>.<br/>
  Note that for large documents this will produce extremely large output, so use this with uri queries or queries returning only a few results Not recommended for live-queries or stats-only queries.</dd>
 <dt><code>&#8211;live-query </code></dt>
 <dd> Enable live queries. This argument keeps beagle-query running, continuously feeding new matching hits as the system gets aware of them.</dd>

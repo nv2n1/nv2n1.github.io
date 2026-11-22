@@ -37,9 +37,9 @@ description: "whichman – show the location of a man page using a fault toleran
 <p> The last argument to whichman is not parsed for options as the program needs at least one man-page-name argument. This means that <i>whichman -x</i> will not complain about a wrong option but search for the man-page named -x.</p>
 <h2>EXAMPLE</h2>
 <p> <i>whichman</i> print </p>
-<p> This will e.g. find the man-pages:<br />
- /usr/share/man/man1/printf.1.gz<br />
- /usr/share/man/man3/printf.3.gz<br />
+<p> This will e.g. find the man-pages:<br/>
+ /usr/share/man/man1/printf.1.gz<br/>
+ /usr/share/man/man3/printf.3.gz<br/>
  /usr/share/man/man3/rint.3.gz</p>
 <h2>BUGS</h2>
 <p> The wildcards <code>&#8216;?&#8217;</code> and <code>&#8216;*&#8217;</code> can not be escaped. These characters function always as wildcards. This is however not a big problem since there is hardly any man-page that has these characters in its name.</p>

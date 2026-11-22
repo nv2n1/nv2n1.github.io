@@ -28,6 +28,6 @@ description: "xpmtoppm – convert an X11 pixmap into a portable pixmap"
 <p> <code><a href="/docs/linux/man/1-ppmtoxpm/">ppmtoxpm</a></code>(1), <code><a href="/docs/linux/man/1-pnmcomp/">pnmcomp</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Jef Poskanzer. </p>
-<p> Upgraded to support XPM version 3 by<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Arnaud Le Hors&nbsp;(lehors [at] mirsa.inria.fr)<br />
+<p> Upgraded to support XPM version 3 by<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Arnaud Le Hors&nbsp;(lehors [at] mirsa.inria.fr)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Tue Apr 9 1991 </p>

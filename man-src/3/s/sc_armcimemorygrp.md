@@ -16,20 +16,20 @@ description: "sc::ARMCIMemoryGrp –"
 <h3>Public Member Functions</h3>
 <p><code>ARMCIMemoryGrp</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;msg) </p>
 <p> <code>ARMCIMemoryGrp</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> void <code>set_localsize</code> (size_t)<br />
- <i>Set the size of locally held memory. </i><br />
+<p> void <code>set_localsize</code> (size_t)<br/>
+ <i>Set the size of locally held memory. </i><br/>
  void <code>retrieve_data</code> (void *, int node, int offset, int size, int lock) </p>
 <p> void <code>replace_data</code> (void *, int node, int offset, int size, int unlock) </p>
 <p> void <code>sum_data</code> (double *data, int node, int doffset, int dsize) </p>
-<p> void <code>sync</code> ()<br />
- <i>Synchronizes all the nodes. </i><br />
- void <code>deactivate</code> ()<br />
- <i>Deactivate is called after the memory has been used. </i><br />
- void * <code>malloc_local</code> (size_t nbyte)<br />
- <i>Allocate data that will be accessed locally only. </i><br />
- void <code>free_local</code> (void *data)<br />
- <i>Free data that was allocated with malloc_local_double. </i><br />
- void <code>print</code> (std::ostream &amp;o=ExEnv::out0()) const<br />
+<p> void <code>sync</code> ()<br/>
+ <i>Synchronizes all the nodes. </i><br/>
+ void <code>deactivate</code> ()<br/>
+ <i>Deactivate is called after the memory has been used. </i><br/>
+ void * <code>malloc_local</code> (size_t nbyte)<br/>
+ <i>Allocate data that will be accessed locally only. </i><br/>
+ void <code>free_local</code> (void *data)<br/>
+ <i>Free data that was allocated with malloc_local_double. </i><br/>
+ void <code>print</code> (std::ostream &amp;o=ExEnv::out0()) const<br/>
  <i>Prints out information about the object. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>ARMCIMemoryGrp</code> concrete class provides an implementation of <code>MsgMemoryGrp</code>. </p>

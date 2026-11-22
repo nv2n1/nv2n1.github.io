@@ -15,21 +15,21 @@ description: "log4cpp::StringQueueAppender –"
 <h3>Public Member Functions</h3>
 <p><code>StringQueueAppender</code> (const std::string &amp;name) </p>
 <p> virtual <code>~StringQueueAppender</code> () </p>
-<p> virtual bool <code>reopen</code> ()<br />
- <i>Reopens the output destination of this </i><code>Appender</code>, e.g.<br />
- virtual void <code>close</code> ()<br />
- <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i><br />
- virtual size_t <code>queueSize</code> () const<br />
- <i>Return the current size of the message queue. </i><br />
- virtual std::queue&lt; std::string &gt; &amp; <code>getQueue</code> ()<br />
- <i>Return the queue to which the Appends adds messages. </i><br />
- virtual const std::queue<br />
- &lt; std::string &gt; &amp; <code>getQueue</code> () const &quot;<br />
- <i>Return the queue to which the Appends adds messages. </i><br />
- virtual std::string <code>popMessage</code> ()<br />
+<p> virtual bool <code>reopen</code> ()<br/>
+ <i>Reopens the output destination of this </i><code>Appender</code>, e.g.<br/>
+ virtual void <code>close</code> ()<br/>
+ <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i><br/>
+ virtual size_t <code>queueSize</code> () const<br/>
+ <i>Return the current size of the message queue. </i><br/>
+ virtual std::queue&lt; std::string &gt; &amp; <code>getQueue</code> ()<br/>
+ <i>Return the queue to which the Appends adds messages. </i><br/>
+ virtual const std::queue<br/>
+ &lt; std::string &gt; &amp; <code>getQueue</code> () const &quot;<br/>
+ <i>Return the queue to which the Appends adds messages. </i><br/>
+ virtual std::string <code>popMessage</code> ()<br/>
  <i>Pop the oldest log message from the front of the queue. </i></p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Appends the </i><code>LoggingEvent</code> to the queue.</p>
 <h3>Protected Attributes</h3>
 <p>std::queue&lt; std::string &gt; <code>_queue</code> </p>

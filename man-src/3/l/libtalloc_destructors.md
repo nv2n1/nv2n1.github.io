@@ -25,20 +25,20 @@ int list_remove(void *ctx)
 }
 </code></pre>
 <p> GCC version 3 and newer can check for the types during the compilation. So if it is our major compiler, we can use a more advanced destructor: </p>
-<p>int list_remove(struct list_el *el)<br />
-{<br />
-    /* remove element from the list */<br />
+<p>int list_remove(struct list_el *el)<br/>
+{<br/>
+    /* remove element from the list */<br/>
 }</p>
 <p> Now we will assign the destructor to the list element. We can do this directly in the function that inserts it. </p>
-<p>struct list_el *list_insert(TALLOC_CTX *mem_ctx,<br />
-                            struct list_el *where,<br />
-                            void *ptr)<br />
-{<br />
-    struct list_el *el = talloc(mem_ctx, struct list_el);<br />
-    el-&gt;data = ptr;<br />
-    /* insert into list */<br />
-    talloc_set_destructor(el, list_remove);<br />
-    return el;<br />
+<p>struct list_el *list_insert(TALLOC_CTX *mem_ctx,<br/>
+                            struct list_el *where,<br/>
+                            void *ptr)<br/>
+{<br/>
+    struct list_el *el = talloc(mem_ctx, struct list_el);<br/>
+    el-&gt;data = ptr;<br/>
+    /* insert into list */<br/>
+    talloc_set_destructor(el, list_remove);<br/>
+    return el;<br/>
 }</p>
 <p> Because talloc is a hierarchical memory allocator, we can go a step further and free the data with the element as well: </p>
 <pre><code>

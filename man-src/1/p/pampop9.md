@@ -22,5 +22,5 @@ description: "pampop9 – simulate a multi-lens camera such as the Pop9"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmtile/">pnmtile</a></code>(1) </p>
 <h2>AUTHOR</h2>
-<p> Copyright (C) 2003 by Robert Tinsley. This software is released under the GPL (<br />
+<p> Copyright (C) 2003 by Robert Tinsley. This software is released under the GPL (<br/>
 &nbsp;<wbr><a rel="nofollow" href="http://www.fsf.org/licenses/gpl.txt">http://www.fsf.org/licenses/gpl.txt</a> ). </p>

@@ -10,7 +10,7 @@ description: "slansy.f –"
 <p>slansy.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>slansy</code> (NORM, UPLO, N, A, LDA, WORK)<br />
+<p>REAL function <code>slansy</code> (NORM, UPLO, N, A, LDA, WORK)<br/>
  <i></i><code>SLANSY</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a real symmetric matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function slansy (characterNORM, characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )WORK)</h3>

@@ -18,12 +18,12 @@ description: "PAPI_num_events –"
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_num_events(int&nbsp;<wbr>&nbsp;<wbr>EventSet&nbsp;<wbr>)</code>;</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>EventSet</i> &#8212; an integer handle for a PAPI event set created by <code>PAPI_create_eventset</code>.<br />
+<dd><i>EventSet</i> &#8212; an integer handle for a PAPI event set created by <code>PAPI_create_eventset</code>.<br/>
  <i>*count</i> &#8212; (Fortran only) On output the variable contains the number of events in the event set</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>On</i> success, this function returns the positive number of events in the event set.<br />
- <i>PAPI_EINVAL</i> The event count is zero; only if code is compiled with debug enabled.<br />
+<dd><i>On</i> success, this function returns the positive number of events in the event set.<br/>
+ <i>PAPI_EINVAL</i> The event count is zero; only if code is compiled with debug enabled.<br/>
  <i>PAPI_ENOEVST</i> The EventSet specified does not exist.</dd></dl>
 <p> <code>Example</code></p>
 <dl COMPACT>

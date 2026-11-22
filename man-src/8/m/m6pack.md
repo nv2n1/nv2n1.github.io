@@ -27,7 +27,7 @@ description: "m6pack – Attach multiples 6PACK interfaces"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-spattach/">spattach</a></code>(8), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1).</p>
 <h2>Authors</h2>
-<p>I�aki Arenaza EB2EBU &lt;iarenaza [at] escomposlinux.org&gt;, based in the work by:<br />
- Tomi Manninen OH2BNS &lt;oh2bns [at] sral.fi&gt;<br />
- Jonathan Naylor G4KLX &lt;g4klx [at] g4klx.demon.co.uk&gt;<br />
+<p>I�aki Arenaza EB2EBU &lt;iarenaza [at] escomposlinux.org&gt;, based in the work by:<br/>
+ Tomi Manninen OH2BNS &lt;oh2bns [at] sral.fi&gt;<br/>
+ Jonathan Naylor G4KLX &lt;g4klx [at] g4klx.demon.co.uk&gt;<br/>
  Kevin Uhlir N0BEL &lt;kevinu [at] flochart.com&gt;</p>

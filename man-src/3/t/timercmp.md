@@ -17,10 +17,10 @@ void timersub(struct timeval *a, struct timeval *b,
 void timerclear(struct timeval *tvp);
 int timerisset(struct timeval *tvp);
 int timercmp(struct timeval *a, struct timeval *b, CMP);</code></pre>
-<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): All functions shown above:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): All functions shown above:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
 <h2>Description</h2>
 <p>The macros are provided to operate on <i>timeval</i> structures, defined in <i>&lt;sys/time.h&gt;</i> as: </p>
@@ -28,9 +28,9 @@ int timercmp(struct timeval *a, struct timeval *b, CMP);</code></pre>
     time_t tv_sec;       /* seconds */
     suseconds_t tv_usec; /* microseconds */
 };</code></pre>
-<p> <code>timeradd</code>() adds the time values in <i>a</i> and <i>b</i>, and places the sum in the <i>timeval</i> pointed to by <i>res</i>. The result is normalized such that <i>res-&gt;tv_usec</i> has a value in the range 0 to 999,999. <code>timersub</code>() subtracts the time value in <i>b</i> from the time value in <i>a</i>, and places the result in the <i>timeval</i> pointed to by <i>res</i>. The result is normalized such that <i>res-&gt;tv_usec</i> has a value in the range 0 to 999,999. <code>timerclear</code>() zeros out the <i>timeval</i> structure pointed to by <i>tvp</i>, so that it represents the Epoch: 1970-01-01 00:00:00 +0000 (UTC). <code>timerisset</code>() returns true (nonzero) if either field of the <i>timeval</i> structure pointed to by <i>tvp</i> contains a nonzero value. <code>timercmp</code>() compares the timer values in <i>a</i> and <i>b</i> using the comparison operator <i>CMP</i>, and returns true (nonzero) or false (0) depending on the result of the comparison. Some systems (but not Linux/glibc), have a broken <code>timercmp</code>() implementation, in which <i>CMP</i> of <i>&gt;=</i>, <i>&lt;=</i>, and <i>==</i> do not work; portable applications can instead use<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;!timercmp(&#8230;,&nbsp;&lt;)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;!timercmp(&#8230;,&nbsp;&gt;)<br />
+<p> <code>timeradd</code>() adds the time values in <i>a</i> and <i>b</i>, and places the sum in the <i>timeval</i> pointed to by <i>res</i>. The result is normalized such that <i>res-&gt;tv_usec</i> has a value in the range 0 to 999,999. <code>timersub</code>() subtracts the time value in <i>b</i> from the time value in <i>a</i>, and places the result in the <i>timeval</i> pointed to by <i>res</i>. The result is normalized such that <i>res-&gt;tv_usec</i> has a value in the range 0 to 999,999. <code>timerclear</code>() zeros out the <i>timeval</i> structure pointed to by <i>tvp</i>, so that it represents the Epoch: 1970-01-01 00:00:00 +0000 (UTC). <code>timerisset</code>() returns true (nonzero) if either field of the <i>timeval</i> structure pointed to by <i>tvp</i> contains a nonzero value. <code>timercmp</code>() compares the timer values in <i>a</i> and <i>b</i> using the comparison operator <i>CMP</i>, and returns true (nonzero) or false (0) depending on the result of the comparison. Some systems (but not Linux/glibc), have a broken <code>timercmp</code>() implementation, in which <i>CMP</i> of <i>&gt;=</i>, <i>&lt;=</i>, and <i>==</i> do not work; portable applications can instead use<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;!timercmp(&#8230;,&nbsp;&lt;)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;!timercmp(&#8230;,&nbsp;&gt;)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;!timercmp(&#8230;,&nbsp;!=)</p>
 <h2>Return Value</h2>
 <p><code>timerisset</code>() and <code>timercmp</code>() return true (nonzero) or false (0).</p>

@@ -10,7 +10,7 @@ description: "second_INT_CPU_TIME.f –"
 <p>second_INT_CPU_TIME.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>second</code> ()<br />
+<p>REAL function <code>second</code> ()<br/>
  <i></i><code>SECOND</code> Using INTERNAL function CPU_TIME.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function second ()</h3>

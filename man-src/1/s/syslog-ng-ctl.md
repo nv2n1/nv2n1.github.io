@@ -13,8 +13,8 @@ description: "syslog-ng-ctl – Display message statistics and enable verbose, d
 <dl>
 <dt> <code>syslog-ng-ctl</code> [command] [options]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>NOTE: The syslog-ng-ctl application is distributed with the syslog-ng Open Source Edition system logging application, and is usually part of the syslog-ng package. The latest version of the syslog-ng application is available at m[blue]<code>the official syslog-ng website</code>m[]<font SIZE="-2">[1]</font>. </dd>
-<p> This manual page is only an abstract; for the complete documentation of syslog-ng, see m[blue]<code>The syslog-ng Open Source Edition Administrator Guide</code>m[]<font SIZE="-2">[2]</font>. </p>
+<dd>NOTE: The syslog-ng-ctl application is distributed with the syslog-ng Open Source Edition system logging application, and is usually part of the syslog-ng package. The latest version of the syslog-ng application is available at m[blue]<code>the official syslog-ng website</code>m[][1]. </dd>
+<p> This manual page is only an abstract; for the complete documentation of syslog-ng, see m[blue]<code>The syslog-ng Open Source Edition Administrator Guide</code>m[][2]. </p>
 <p> The <code>syslog-ng-ctl</code> application is a utility that can be used to: </p>
 <dl>
 <dt>
@@ -210,12 +210,12 @@ processed;
 <h2>FILES</h2>
 <p> /home/algernon/install/syslog-ng/3.5/sbin/syslog-ng-ctl</p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code>The syslog-ng Administrator Guide</code>m[]<font SIZE="-2">[2]</font> </p>
+<p> m[blue]<code>The syslog-ng Administrator Guide</code>m[][2] </p>
 <p> <code><a href="/docs/linux/man/5-syslog-ng-conf/">syslog-ng.conf</a></code>(5) </p>
 <p> <code><a href="/docs/linux/man/8-syslog-ng/">syslog-ng</a></code>(8) </p>
-<p> m[blue]<code>The syslog-ng OSE 3.3 Administrator Guide</code>m[]<font SIZE="-2">[2]</font> </p>
-<p> If you experience any problems or need help with syslog-ng, visit m[blue]<code>visit the syslog-ng wiki</code>m[]<font SIZE="-2">[3]</font> or the m[blue]<code>syslog-ng mailing list</code>m[]<font SIZE="-2">[4]</font>. </p>
-<p> For news and notifications about of syslog-ng, visit the m[blue]<code>syslog-ng Insider Blog</code>m[]<font SIZE="-2">[5]</font>.</p>
+<p> m[blue]<code>The syslog-ng OSE 3.3 Administrator Guide</code>m[][2] </p>
+<p> If you experience any problems or need help with syslog-ng, visit m[blue]<code>visit the syslog-ng wiki</code>m[][3] or the m[blue]<code>syslog-ng mailing list</code>m[][4]. </p>
+<p> For news and notifications about of syslog-ng, visit the m[blue]<code>syslog-ng Insider Blog</code>m[][5].</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by the BalaBit Documentation Team &lt;documentation [at] balabit.com&gt;.</p>
 <h2>COPYRIGHT</h2>
@@ -230,7 +230,7 @@ processed;
 </dt><dd> <a rel="nofollow" href="http://www.balabit.com/network-security/syslog-ng/">http://www.balabit.com/network-security/syslog-ng/</a></dd></dl>
 <dt> 2.</dt>
 <dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>The syslog-ng Open Source Edition Administrator Guide</code><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>The syslog-ng Open Source Edition Administrator Guide</code><br/>
 &nbsp;<wbr>&nbsp;<wbr></p>
 </dd><dl>
 <dt>

@@ -10,7 +10,7 @@ description: "ragrep – grep argus(8) user captured data."
 
 <p> <code>ragrep</code> &#8211; grep <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> user captured data.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>ragrep</code> [<code>options</code>] <code>-e</code> <i>pattern</i> [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]<br />
+<p> <code>ragrep</code> [<code>options</code>] <code>-e</code> <i>pattern</i> [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]<br/>
  <code>ragrep</code> [<code>options</code>] <code>-f file</code> [<code>raoptions</code>] [<code>&#8211;</code> <i>filter-expression</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>Ragrep</code> reads <code>argus</code> data from an <i>argus-data</i> source, greps the records based on the regexp specified on the command line, and outputs a valid <i>argus-stream</i>. </p>

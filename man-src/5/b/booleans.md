@@ -27,7 +27,7 @@ description: "booleans – The SELinux booleans configuration files"
 <p> <code><a href="/docs/linux/man/8-booleans/">booleans</a></code>(8) has details on booleans and <code><a href="/docs/linux/man/8-setsebool/">setsebool</a></code>(8) describes how booleans can now be set persistent across reboots. </p>
 <p> <code><a href="/docs/linux/man/3-selinux_booleans_path/">selinux_booleans_path</a></code>(3) will return the active policy path to these files. The default boolean files are:</p>
 <dl>
-<dd><i>/etc/selinux/{SELINUXTYPE}/booleans</i><br />
+<dd><i>/etc/selinux/{SELINUXTYPE}/booleans</i><br/>
  <i>/etc/selinux/{SELINUXTYPE}/booleans.local</i></dd></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)).</p>
 <h2>File Format</h2>

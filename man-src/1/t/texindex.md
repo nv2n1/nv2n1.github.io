@@ -22,10 +22,10 @@ description: "texindex – sort Texinfo index files"
 <dt><code>&#8212;</code></dt>
 <dd> end option processing</dd></dl>
 <h2>REPORTING BUGS</h2>
-<p> Email bug reports to bug-texinfo [at] gnu.org, general questions and discussion to help-texinfo [at] gnu.org.<br />
+<p> Email bug reports to bug-texinfo [at] gnu.org, general questions and discussion to help-texinfo [at] gnu.org.<br/>
  Texinfo home page: <a rel="nofollow" href="https://www.gnu.org/software/texinfo/">https://www.gnu.org/software/texinfo/</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2019 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 2019 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>texindex</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>texindex</code> programs are properly installed at your site, the command</p>

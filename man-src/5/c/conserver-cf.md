@@ -9,13 +9,13 @@ description: "conserver.cf – console configuration file for conserver(8)"
 
 <p>conserver.cf &#8211; console configuration file for <code><a href="/docs/linux/man/8-conserver/">conserver</a></code>(8)</p>
 <h2>Description</h2>
-<p>The format of the conserver.cf file is made up of named blocks of keyword/value pairs, comments, and optional whitespace for formatting flexibility. The block types as well as the keywords are pre-defined and explained in the <font SIZE="-1"><code>BLOCKS</code></font> section. A comment is an unquoted pound-sign to a newline. See the <font SIZE="-1"><code>PARSER</code></font> section for full details on whitespace and quoting. </p>
+<p>The format of the conserver.cf file is made up of named blocks of keyword/value pairs, comments, and optional whitespace for formatting flexibility. The block types as well as the keywords are pre-defined and explained in the <code>BLOCKS</code> section. A comment is an unquoted pound-sign to a newline. See the <code>PARSER</code> section for full details on whitespace and quoting. </p>
 <p> Let me first show you a sample block with a couple of keyword/value pairs to make the description a bit simpler to understand.</p>
 <dl>
 <dd>
 <pre>console simple { master localhost; type exec; rw *; }</pre>
 </dd></dl>
-<p> This is actually a fully functional conserver.cf file (if certain conditions are met&#8230;and if you can list those conditions, you can probably can skip to the <font SIZE="-1"><code>BLOCKS</code></font> section). </p>
+<p> This is actually a fully functional conserver.cf file (if certain conditions are met&#8230;and if you can list those conditions, you can probably can skip to the <code>BLOCKS</code> section). </p>
 <p> Our example is made of up of a console-block named &#8220;simple&#8221; with three keyword/value pairs. What this does is define a console named &#8220;simple&#8221;, makes the master of that console the host &#8220;localhost&#8221;, makes the type an exec-style console, and gives every user read/write permission. This is the generic format of the file:</p>
 <dl>
 <dd>

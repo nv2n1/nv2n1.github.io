@@ -55,8 +55,8 @@ description: "xkibitz – allow multiple people to interact in an xterm"
 </pre>
 <p> (this is for the Bourne shell &#8211; use whatever syntax is appropriate for your favorite shell). Any option can be given that is valid for the <code>xterm</code> command, with the exception of <code>-display</code>, <code>-geometry</code> and <code>-S</code> as those are set by <code>xkibitz</code>.</p>
 <h2>SEE ALSO</h2>
-<p> <code>Tcl</code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3) <code><a href="/docs/linux/man/1-kibitz/">kibitz</a></code>(1)<br />
- <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, O&#8217;Reilly and Associates, January 1995.<br />
+<p> <code>Tcl</code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3) <code><a href="/docs/linux/man/1-kibitz/">kibitz</a></code>(1)<br/>
+ <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, O&#8217;Reilly and Associates, January 1995.<br/>
  <i>&quot;kibitz &#8211; Connecting Multiple Interactive Programs Together&quot;, </i>by Don Libes, Software &#8211; Practice &amp; Experience, John Wiley &amp; Sons, West Sussex, England, Vol. 23, No. 5, May, 1993.</p>
 <h2>AUTHOR</h2>
 <p> Don Libes, National Institute of Standards and Technology </p>

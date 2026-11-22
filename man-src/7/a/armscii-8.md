@@ -18,7 +18,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>Dec</td>
 <td>Hex</td>
 <td ALIGN=center>Char</td>
-<td><font SIZE="-1">Description</font>
+<td>Description
 </td>
 </tr>
 <tr VALIGN=top>
@@ -31,7 +31,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>160</td>
 <td>A0</td>
 <td ALIGN=center> </td>
-<td><font SIZE="-1">NO-BREAK SPACE</font>
+<td>NO-BREAK SPACE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -39,7 +39,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>162</td>
 <td>A2</td>
 <td ALIGN=center>և</td>
-<td><font SIZE="-1">ARMENIAN SMALL LIGATURE ECH YIWN</font>
+<td>ARMENIAN SMALL LIGATURE ECH YIWN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -47,7 +47,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>163</td>
 <td>A3</td>
 <td ALIGN=center>։</td>
-<td><font SIZE="-1">ARMENIAN FULL STOP</font>
+<td>ARMENIAN FULL STOP
 </td>
 </tr>
 <tr VALIGN=top>
@@ -55,7 +55,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>164</td>
 <td>A4</td>
 <td ALIGN=center>)</td>
-<td><font SIZE="-1">RIGHT PARENTHESIS</font>
+<td>RIGHT PARENTHESIS
 </td>
 </tr>
 <tr VALIGN=top>
@@ -63,7 +63,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>165</td>
 <td>A5</td>
 <td ALIGN=center>(</td>
-<td><font SIZE="-1">LEFT PARENTHESIS</font>
+<td>LEFT PARENTHESIS
 </td>
 </tr>
 <tr VALIGN=top>
@@ -71,7 +71,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>166</td>
 <td>A6</td>
 <td ALIGN=center>»</td>
-<td><font SIZE="-1">RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</font>
+<td>RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -79,7 +79,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>167</td>
 <td>A7</td>
 <td ALIGN=center>«</td>
-<td><font SIZE="-1">LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</font>
+<td>LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -87,7 +87,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>168</td>
 <td>A8</td>
 <td ALIGN=center>—</td>
-<td><font SIZE="-1">EM DASH</font>
+<td>EM DASH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -95,7 +95,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>169</td>
 <td>A9</td>
 <td ALIGN=center>.</td>
-<td><font SIZE="-1">FULL STOP</font>
+<td>FULL STOP
 </td>
 </tr>
 <tr VALIGN=top>
@@ -103,7 +103,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>170</td>
 <td>AA</td>
 <td ALIGN=center>՝</td>
-<td><font SIZE="-1">ARMENIAN COMMA</font>
+<td>ARMENIAN COMMA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -111,7 +111,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>171</td>
 <td>AB</td>
 <td ALIGN=center>,</td>
-<td><font SIZE="-1">COMMA</font>
+<td>COMMA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -119,7 +119,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>172</td>
 <td>AC</td>
 <td ALIGN=center>&#8211;</td>
-<td><font SIZE="-1">HYPHEN-MINUS</font>
+<td>HYPHEN-MINUS
 </td>
 </tr>
 <tr VALIGN=top>
@@ -127,7 +127,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>173</td>
 <td>AD</td>
 <td ALIGN=center>֊</td>
-<td><font SIZE="-1">ARMENIAN HYPHEN</font>
+<td>ARMENIAN HYPHEN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -135,7 +135,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>174</td>
 <td>AE</td>
 <td ALIGN=center>…</td>
-<td><font SIZE="-1">HORIZONTAL ELLIPSIS</font>
+<td>HORIZONTAL ELLIPSIS
 </td>
 </tr>
 <tr VALIGN=top>
@@ -143,7 +143,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>175</td>
 <td>AF</td>
 <td ALIGN=center>՜</td>
-<td><font SIZE="-1">ARMENIAN EXCLAMATION MARK</font>
+<td>ARMENIAN EXCLAMATION MARK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -151,7 +151,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>176</td>
 <td>B0</td>
 <td ALIGN=center>՛</td>
-<td><font SIZE="-1">ARMENIAN EMPHASIS MARK</font>
+<td>ARMENIAN EMPHASIS MARK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -159,7 +159,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>177</td>
 <td>B1</td>
 <td ALIGN=center>՞</td>
-<td><font SIZE="-1">ARMENIAN QUESTION MARK</font>
+<td>ARMENIAN QUESTION MARK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -167,7 +167,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>178</td>
 <td>B2</td>
 <td ALIGN=center>Ա</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER AYB</font>
+<td>ARMENIAN CAPITAL LETTER AYB
 </td>
 </tr>
 <tr VALIGN=top>
@@ -175,7 +175,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>179</td>
 <td>B3</td>
 <td ALIGN=center>ա</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER AYB</font>
+<td>ARMENIAN SMALL LETTER AYB
 </td>
 </tr>
 <tr VALIGN=top>
@@ -183,7 +183,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>180</td>
 <td>B4</td>
 <td ALIGN=center>Բ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER BEN</font>
+<td>ARMENIAN CAPITAL LETTER BEN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -191,7 +191,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>181</td>
 <td>B5</td>
 <td ALIGN=center>բ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER BEN</font>
+<td>ARMENIAN SMALL LETTER BEN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -199,7 +199,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>182</td>
 <td>B6</td>
 <td ALIGN=center>Գ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER GIM</font>
+<td>ARMENIAN CAPITAL LETTER GIM
 </td>
 </tr>
 <tr VALIGN=top>
@@ -207,7 +207,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>183</td>
 <td>B7</td>
 <td ALIGN=center>գ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER GIM</font>
+<td>ARMENIAN SMALL LETTER GIM
 </td>
 </tr>
 <tr VALIGN=top>
@@ -215,7 +215,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>184</td>
 <td>B8</td>
 <td ALIGN=center>Դ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER DA</font>
+<td>ARMENIAN CAPITAL LETTER DA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -223,7 +223,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>185</td>
 <td>B9</td>
 <td ALIGN=center>դ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER DA</font>
+<td>ARMENIAN SMALL LETTER DA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -231,7 +231,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>186</td>
 <td>BA</td>
 <td ALIGN=center>Ե</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER ECH</font>
+<td>ARMENIAN CAPITAL LETTER ECH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -239,7 +239,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>187</td>
 <td>BB</td>
 <td ALIGN=center>ե</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER ECH</font>
+<td>ARMENIAN SMALL LETTER ECH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -247,7 +247,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>188</td>
 <td>BC</td>
 <td ALIGN=center>Զ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER ZA</font>
+<td>ARMENIAN CAPITAL LETTER ZA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -255,7 +255,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>189</td>
 <td>BD</td>
 <td ALIGN=center>զ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER ZA</font>
+<td>ARMENIAN SMALL LETTER ZA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -263,7 +263,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>190</td>
 <td>BE</td>
 <td ALIGN=center>Է</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER EH</font>
+<td>ARMENIAN CAPITAL LETTER EH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -271,7 +271,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>191</td>
 <td>BF</td>
 <td ALIGN=center>է</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER EH</font>
+<td>ARMENIAN SMALL LETTER EH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -279,7 +279,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>192</td>
 <td>C0</td>
 <td ALIGN=center>Ը</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER ET</font>
+<td>ARMENIAN CAPITAL LETTER ET
 </td>
 </tr>
 <tr VALIGN=top>
@@ -287,7 +287,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>193</td>
 <td>C1</td>
 <td ALIGN=center>ը</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER ET</font>
+<td>ARMENIAN SMALL LETTER ET
 </td>
 </tr>
 <tr VALIGN=top>
@@ -295,7 +295,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>194</td>
 <td>C2</td>
 <td ALIGN=center>Թ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER TO</font>
+<td>ARMENIAN CAPITAL LETTER TO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -303,7 +303,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>195</td>
 <td>C3</td>
 <td ALIGN=center>թ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER TO</font>
+<td>ARMENIAN SMALL LETTER TO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -311,7 +311,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>196</td>
 <td>C4</td>
 <td ALIGN=center>Ժ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER ZHE</font>
+<td>ARMENIAN CAPITAL LETTER ZHE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -319,7 +319,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>197</td>
 <td>C5</td>
 <td ALIGN=center>ժ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER ZHE</font>
+<td>ARMENIAN SMALL LETTER ZHE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -327,7 +327,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>198</td>
 <td>C6</td>
 <td ALIGN=center>Ի</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER INI</font>
+<td>ARMENIAN CAPITAL LETTER INI
 </td>
 </tr>
 <tr VALIGN=top>
@@ -335,7 +335,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>199</td>
 <td>C7</td>
 <td ALIGN=center>ի</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER INI</font>
+<td>ARMENIAN SMALL LETTER INI
 </td>
 </tr>
 <tr VALIGN=top>
@@ -343,7 +343,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>200</td>
 <td>C8</td>
 <td ALIGN=center>Լ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER LIWN</font>
+<td>ARMENIAN CAPITAL LETTER LIWN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -351,7 +351,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>201</td>
 <td>C9</td>
 <td ALIGN=center>լ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER LIWN</font>
+<td>ARMENIAN SMALL LETTER LIWN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -359,7 +359,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>202</td>
 <td>CA</td>
 <td ALIGN=center>Խ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER XEH</font>
+<td>ARMENIAN CAPITAL LETTER XEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -367,7 +367,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>203</td>
 <td>CB</td>
 <td ALIGN=center>խ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER XEH</font>
+<td>ARMENIAN SMALL LETTER XEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -375,7 +375,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>204</td>
 <td>CC</td>
 <td ALIGN=center>Ծ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER CA</font>
+<td>ARMENIAN CAPITAL LETTER CA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -383,7 +383,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>205</td>
 <td>CD</td>
 <td ALIGN=center>ծ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER CA</font>
+<td>ARMENIAN SMALL LETTER CA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -391,7 +391,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>206</td>
 <td>CE</td>
 <td ALIGN=center>Կ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER KEN</font>
+<td>ARMENIAN CAPITAL LETTER KEN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -399,7 +399,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>207</td>
 <td>CF</td>
 <td ALIGN=center>կ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER KEN</font>
+<td>ARMENIAN SMALL LETTER KEN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -407,7 +407,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>208</td>
 <td>D0</td>
 <td ALIGN=center>Հ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER HO</font>
+<td>ARMENIAN CAPITAL LETTER HO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -415,7 +415,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>209</td>
 <td>D1</td>
 <td ALIGN=center>հ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER HO</font>
+<td>ARMENIAN SMALL LETTER HO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -423,7 +423,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>210</td>
 <td>D2</td>
 <td ALIGN=center>Ձ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER JA</font>
+<td>ARMENIAN CAPITAL LETTER JA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -431,7 +431,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>211</td>
 <td>D3</td>
 <td ALIGN=center>ձ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER JA</font>
+<td>ARMENIAN SMALL LETTER JA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -439,7 +439,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>212</td>
 <td>D4</td>
 <td ALIGN=center>Ղ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER GHAD</font>
+<td>ARMENIAN CAPITAL LETTER GHAD
 </td>
 </tr>
 <tr VALIGN=top>
@@ -447,7 +447,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>213</td>
 <td>D5</td>
 <td ALIGN=center>ղ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER GHAD</font>
+<td>ARMENIAN SMALL LETTER GHAD
 </td>
 </tr>
 <tr VALIGN=top>
@@ -455,7 +455,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>214</td>
 <td>D6</td>
 <td ALIGN=center>Ճ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER CHEH</font>
+<td>ARMENIAN CAPITAL LETTER CHEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -463,7 +463,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>215</td>
 <td>D7</td>
 <td ALIGN=center>ճ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER CHEH</font>
+<td>ARMENIAN SMALL LETTER CHEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -471,7 +471,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>216</td>
 <td>D8</td>
 <td ALIGN=center>Մ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER MEN</font>
+<td>ARMENIAN CAPITAL LETTER MEN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -479,7 +479,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>217</td>
 <td>D9</td>
 <td ALIGN=center>մ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER MEN</font>
+<td>ARMENIAN SMALL LETTER MEN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -487,7 +487,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>218</td>
 <td>DA</td>
 <td ALIGN=center>Յ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER YI</font>
+<td>ARMENIAN CAPITAL LETTER YI
 </td>
 </tr>
 <tr VALIGN=top>
@@ -495,7 +495,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>219</td>
 <td>DB</td>
 <td ALIGN=center>յ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER YI</font>
+<td>ARMENIAN SMALL LETTER YI
 </td>
 </tr>
 <tr VALIGN=top>
@@ -503,7 +503,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>220</td>
 <td>DC</td>
 <td ALIGN=center>Ն</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER NOW</font>
+<td>ARMENIAN CAPITAL LETTER NOW
 </td>
 </tr>
 <tr VALIGN=top>
@@ -511,7 +511,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>221</td>
 <td>DD</td>
 <td ALIGN=center>ն</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER NOW</font>
+<td>ARMENIAN SMALL LETTER NOW
 </td>
 </tr>
 <tr VALIGN=top>
@@ -519,7 +519,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>222</td>
 <td>DE</td>
 <td ALIGN=center>Շ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER SHA</font>
+<td>ARMENIAN CAPITAL LETTER SHA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -527,7 +527,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>223</td>
 <td>DF</td>
 <td ALIGN=center>շ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER SHA</font>
+<td>ARMENIAN SMALL LETTER SHA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -535,7 +535,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>224</td>
 <td>E0</td>
 <td ALIGN=center>Ո</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER VO</font>
+<td>ARMENIAN CAPITAL LETTER VO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -543,7 +543,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>225</td>
 <td>E1</td>
 <td ALIGN=center>ո</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER VO</font>
+<td>ARMENIAN SMALL LETTER VO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -551,7 +551,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>226</td>
 <td>E2</td>
 <td ALIGN=center>Չ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER CHA</font>
+<td>ARMENIAN CAPITAL LETTER CHA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -559,7 +559,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>227</td>
 <td>E3</td>
 <td ALIGN=center>չ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER CHA</font>
+<td>ARMENIAN SMALL LETTER CHA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -567,7 +567,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>228</td>
 <td>E4</td>
 <td ALIGN=center>Պ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER PEH</font>
+<td>ARMENIAN CAPITAL LETTER PEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -575,7 +575,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>229</td>
 <td>E5</td>
 <td ALIGN=center>պ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER PEH</font>
+<td>ARMENIAN SMALL LETTER PEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -583,7 +583,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>230</td>
 <td>E6</td>
 <td ALIGN=center>Ջ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER JHEH</font>
+<td>ARMENIAN CAPITAL LETTER JHEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -591,7 +591,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>231</td>
 <td>E7</td>
 <td ALIGN=center>ջ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER JHEH</font>
+<td>ARMENIAN SMALL LETTER JHEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -599,7 +599,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>232</td>
 <td>E8</td>
 <td ALIGN=center>Ռ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER RA</font>
+<td>ARMENIAN CAPITAL LETTER RA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -607,7 +607,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>233</td>
 <td>E9</td>
 <td ALIGN=center>ռ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER RA</font>
+<td>ARMENIAN SMALL LETTER RA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -615,7 +615,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>234</td>
 <td>EA</td>
 <td ALIGN=center>Ս</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER SEH</font>
+<td>ARMENIAN CAPITAL LETTER SEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -623,7 +623,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>235</td>
 <td>EB</td>
 <td ALIGN=center>ս</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER SEH</font>
+<td>ARMENIAN SMALL LETTER SEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -631,7 +631,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>236</td>
 <td>EC</td>
 <td ALIGN=center>Վ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER VEW</font>
+<td>ARMENIAN CAPITAL LETTER VEW
 </td>
 </tr>
 <tr VALIGN=top>
@@ -639,7 +639,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>237</td>
 <td>ED</td>
 <td ALIGN=center>վ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER VEW</font>
+<td>ARMENIAN SMALL LETTER VEW
 </td>
 </tr>
 <tr VALIGN=top>
@@ -647,7 +647,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>238</td>
 <td>EE</td>
 <td ALIGN=center>Տ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER TIWN</font>
+<td>ARMENIAN CAPITAL LETTER TIWN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -655,7 +655,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>239</td>
 <td>EF</td>
 <td ALIGN=center>տ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER TIWN</font>
+<td>ARMENIAN SMALL LETTER TIWN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -663,7 +663,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>240</td>
 <td>F0</td>
 <td ALIGN=center>Ր</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER REH</font>
+<td>ARMENIAN CAPITAL LETTER REH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -671,7 +671,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>241</td>
 <td>F1</td>
 <td ALIGN=center>ր</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER REH</font>
+<td>ARMENIAN SMALL LETTER REH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -679,7 +679,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>242</td>
 <td>F2</td>
 <td ALIGN=center>Ց</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER CO</font>
+<td>ARMENIAN CAPITAL LETTER CO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -687,7 +687,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>243</td>
 <td>F3</td>
 <td ALIGN=center>ց</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER CO</font>
+<td>ARMENIAN SMALL LETTER CO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -695,7 +695,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>244</td>
 <td>F4</td>
 <td ALIGN=center>Ւ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER YIWN</font>
+<td>ARMENIAN CAPITAL LETTER YIWN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -703,7 +703,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>245</td>
 <td>F5</td>
 <td ALIGN=center>ւ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER YIWN</font>
+<td>ARMENIAN SMALL LETTER YIWN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -711,7 +711,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>246</td>
 <td>F6</td>
 <td ALIGN=center>Փ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER PIWR</font>
+<td>ARMENIAN CAPITAL LETTER PIWR
 </td>
 </tr>
 <tr VALIGN=top>
@@ -719,7 +719,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>247</td>
 <td>F7</td>
 <td ALIGN=center>փ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER PIWR</font>
+<td>ARMENIAN SMALL LETTER PIWR
 </td>
 </tr>
 <tr VALIGN=top>
@@ -727,7 +727,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>248</td>
 <td>F8</td>
 <td ALIGN=center>Ք</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER KEH</font>
+<td>ARMENIAN CAPITAL LETTER KEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -735,7 +735,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>249</td>
 <td>F9</td>
 <td ALIGN=center>ք</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER KEH</font>
+<td>ARMENIAN SMALL LETTER KEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -743,7 +743,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>250</td>
 <td>FA</td>
 <td ALIGN=center>Օ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER OH</font>
+<td>ARMENIAN CAPITAL LETTER OH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -751,7 +751,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>251</td>
 <td>FB</td>
 <td ALIGN=center>օ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER OH</font>
+<td>ARMENIAN SMALL LETTER OH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -759,7 +759,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>252</td>
 <td>FC</td>
 <td ALIGN=center>Ֆ</td>
-<td><font SIZE="-1">ARMENIAN CAPITAL LETTER FEH</font>
+<td>ARMENIAN CAPITAL LETTER FEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -767,7 +767,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>253</td>
 <td>FD</td>
 <td ALIGN=center>ֆ</td>
-<td><font SIZE="-1">ARMENIAN SMALL LETTER FEH</font>
+<td>ARMENIAN SMALL LETTER FEH
 </td>
 </tr>
 <tr VALIGN=top>
@@ -775,7 +775,7 @@ description: "armscii-8 – Armenian character set encoded in octal, decimal, an
 <td>254</td>
 <td>FE</td>
 <td ALIGN=center>՚</td>
-<td><font SIZE="-1">ARMENIAN APOSTROPHE</font>
+<td>ARMENIAN APOSTROPHE
 </td>
 </tr>
 </table>

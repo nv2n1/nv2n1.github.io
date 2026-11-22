@@ -18,35 +18,35 @@ description: "missing – missing manual pages"
 <h3>Section 3 &#8211; Library calls</h3>
 <dl>
 <dt>Bug#<i>123999</i></dt>
-<dd><code>obstack_alloc</code>(3) &#8211; allocate memory<br />
- <code>obstack_free</code>(3) &#8211; free formerly allocated memory<br />
- <code>obstack_copy</code>(3) &#8211; allocate block with content<br />
- <code>obstack_copy0</code>(3) &#8211; allocate block with content, zero terminated<br />
- <code>obstack_blank</code>(3) &#8211; increase object size<br />
- <code>obstack_grow</code>(3) &#8211; increase object size with content<br />
- <code>obstack_grow0</code>(3) &#8211; increase object size with content, zero term.<br />
- <code>obstack_1grow</code>(3) &#8211; increase object size by 1 character<br />
- <code>obstack_ptr_grow</code>(3) &#8211; increase object size by value of pointer<br />
- <code>obstack_int_grow</code>(3) &#8211; increase object size by sizeof(int)<br />
- <code>obstack_finish</code>(3) &#8211; finish growing of an obstack object<br />
- <code>obstack_object_size</code>(3) &#8211; return the size of an obstack object<br />
- <code>obstack_room</code>(3) &#8211; available room in current chunk<br />
- <code>obstack_1grow_fast</code>(3) &#8211; fast increase object size by 1 character<br />
- <code>obstack_ptr_grow_fast</code>(3) &#8211; fast increase object by pointer value<br />
- <code>obstack_int_grow_fast</code>(3) &#8211; fast increase object size by sizeof(int)<br />
- <code>obstack_blank_fast</code>(3) &#8211; fast increase object size<br />
- <code>obstack_base</code>(3) &#8211; return tentative address of beginning<br />
- <code>obstack_next_free</code>(3) &#8211; return address of the first free byte<br />
- <code>obstack_object_size</code>(3) &#8211; return size of currently growing object<br />
- <code>obstack_alignment_mask</code>(3) &#8211; alter mask assignment<br />
- <code>obstack_chunk_size</code>(3) &#8211; return chunk size of given obstack<br />
+<dd><code>obstack_alloc</code>(3) &#8211; allocate memory<br/>
+ <code>obstack_free</code>(3) &#8211; free formerly allocated memory<br/>
+ <code>obstack_copy</code>(3) &#8211; allocate block with content<br/>
+ <code>obstack_copy0</code>(3) &#8211; allocate block with content, zero terminated<br/>
+ <code>obstack_blank</code>(3) &#8211; increase object size<br/>
+ <code>obstack_grow</code>(3) &#8211; increase object size with content<br/>
+ <code>obstack_grow0</code>(3) &#8211; increase object size with content, zero term.<br/>
+ <code>obstack_1grow</code>(3) &#8211; increase object size by 1 character<br/>
+ <code>obstack_ptr_grow</code>(3) &#8211; increase object size by value of pointer<br/>
+ <code>obstack_int_grow</code>(3) &#8211; increase object size by sizeof(int)<br/>
+ <code>obstack_finish</code>(3) &#8211; finish growing of an obstack object<br/>
+ <code>obstack_object_size</code>(3) &#8211; return the size of an obstack object<br/>
+ <code>obstack_room</code>(3) &#8211; available room in current chunk<br/>
+ <code>obstack_1grow_fast</code>(3) &#8211; fast increase object size by 1 character<br/>
+ <code>obstack_ptr_grow_fast</code>(3) &#8211; fast increase object by pointer value<br/>
+ <code>obstack_int_grow_fast</code>(3) &#8211; fast increase object size by sizeof(int)<br/>
+ <code>obstack_blank_fast</code>(3) &#8211; fast increase object size<br/>
+ <code>obstack_base</code>(3) &#8211; return tentative address of beginning<br/>
+ <code>obstack_next_free</code>(3) &#8211; return address of the first free byte<br/>
+ <code>obstack_object_size</code>(3) &#8211; return size of currently growing object<br/>
+ <code>obstack_alignment_mask</code>(3) &#8211; alter mask assignment<br/>
+ <code>obstack_chunk_size</code>(3) &#8211; return chunk size of given obstack<br/>
  <code>obstack_init</code>(3) &#8211; initialize use of an obstack</dd>
 <dt>Bug#<i>172139</i></dt>
 <dd><code>wcstol</code>(3) &#8211; convert a wide-character string to a long integer</dd>
 <dt>Bug#<i>202022</i></dt>
 <dd><code>iruserok_sa</code>(3) &#8211; routines for returning a stream to a remote command (see <code><a href="/docs/linux/man/3-rcmd/">rcmd</a></code>(3)).</dd>
 <dt>Bug#<i>208856</i></dt>
-<dd><code><a href="/docs/linux/man/3-cap_set_proc/">cap_set_proc</a></code>(3), <code><a href="/docs/linux/man/3-cap_get_proc/">cap_get_proc</a></code>(3) &#8211; POSIX capability manipulation on processes<br />
+<dd><code><a href="/docs/linux/man/3-cap_set_proc/">cap_set_proc</a></code>(3), <code><a href="/docs/linux/man/3-cap_get_proc/">cap_get_proc</a></code>(3) &#8211; POSIX capability manipulation on processes<br/>
  <code><a href="/docs/linux/man/3-capsetp/">capsetp</a></code>(3), <code><a href="/docs/linux/man/3-capgetp/">capgetp</a></code>(3) &#8211; Linux specific capability manipulation on arbitrary processes</dd>
 <dt>Bug#<i>349388</i></dt>
 <dd><code>argp_parse</code>(3) &#8211; main interface to argp.</dd></dl>
@@ -55,14 +55,14 @@ description: "missing – missing manual pages"
 <dt>Bug#<i>102724</i></dt>
 <dd>Mandrake seems to deliver section 9 manual pages, though their source is obscure and they do seem to be out-dated. Nevertheless, some section 9 manpages would be nice, indeed.</dd>
 <dt>Bug#<i>179475</i></dt>
-<dd><code>kapmd</code>(9) &#8211; kernel APM thread<br />
- <code>keventd</code>(9) &#8211; manage hotplug events<br />
- <code>khubd</code>(9) &#8211; kernel USB hub daemon thread<br />
- <code>kjournald</code>(9) &#8211; maintain the filesystem journal<br />
- <code>ksoftirqd</code>(9) &#8211; software handling of incoming IRQs<br />
- <code>kswapd</code>(9) &#8211; kernel swap daemon thread<br />
- <code>kupdated</code>(9) &#8211; flush the journal<br />
+<dd><code>kapmd</code>(9) &#8211; kernel APM thread<br/>
+ <code>keventd</code>(9) &#8211; manage hotplug events<br/>
+ <code>khubd</code>(9) &#8211; kernel USB hub daemon thread<br/>
+ <code>kjournald</code>(9) &#8211; maintain the filesystem journal<br/>
+ <code>ksoftirqd</code>(9) &#8211; software handling of incoming IRQs<br/>
+ <code>kswapd</code>(9) &#8211; kernel swap daemon thread<br/>
+ <code>kupdated</code>(9) &#8211; flush the journal<br/>
  <code>scsi_eh</code>(9) &#8211; kernel SCSI error handler thread</dd></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-undocumented/">undocumented</a></code>(3), <code><a href="/docs/linux/man/7-undocumented/">undocumented</a></code>(7), <code><a href="/docs/linux/man/7-man/">man</a></code>(7).<br />
+<p><code><a href="/docs/linux/man/3-undocumented/">undocumented</a></code>(3), <code><a href="/docs/linux/man/7-undocumented/">undocumented</a></code>(7), <code><a href="/docs/linux/man/7-man/">man</a></code>(7).<br/>
  Debian Bug Tracking System at &lt;<code><a rel="nofollow" href="http://bugs.debian.org/manpages-dev">http://bugs.debian.org/manpages-dev</a></code>&gt;, the Single UNIX Specification, Version 2, at &lt;<code><a rel="nofollow" href="http://www.opengroup.org/onlinepubs/007908799/toc.htm">http://www.opengroup.org/onlinepubs/007908799/toc.htm</a></code>&gt;, the Single UNIX Specification, Version 3, at &lt;<code><a rel="nofollow" href="http://www.UNIX-systems.org/version3/">http://www.UNIX-systems.org/version3/</a></code>&gt;. </p>

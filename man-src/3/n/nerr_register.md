@@ -13,7 +13,7 @@ description: "nerr_register"
 </code></pre>
 <pre>NEOERR *nerr_register (NERR_TYPE *err, const char *name);</pre>
 <h2>Arguments</h2>
-<p>err &#8211; pointer to a NERR_TYPE<br />
+<p>err &#8211; pointer to a NERR_TYPE<br/>
  name &#8211; pretty name for the error type</p>
 <h2>Description</h2>
 <p>register an error type. This will assign a numeric value to the type, and keep track of the &quot;pretty name&quot; for it. </p>

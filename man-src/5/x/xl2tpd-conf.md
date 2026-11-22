@@ -111,9 +111,9 @@ description: "xl2tpd.conf – L2TPD configuration file"
 <p> Michael Richardson &lt;mcr [at] xelerance.com&gt; Paul Wouters &lt;paul [at] xelerance.com&gt; </p>
 <p> Many thanks to Jacco de Leeuw &lt;jacco2 [at] dds.nl&gt; for maintaining l2tpd. </p>
 <p> Previous development was hosted at sourceforge (<a rel="nofollow" href="http://www.sourceforge.net/projects/l2tpd)">http://www.sourceforge.net/projects/l2tpd)</a> by: </p>
-<p> Scott Balmos &lt;sbalmos [at] iglou.com&gt;<br />
- David Stipp &lt;dstipp [at] one.net&gt;<br />
+<p> Scott Balmos &lt;sbalmos [at] iglou.com&gt;<br/>
+ David Stipp &lt;dstipp [at] one.net&gt;<br/>
  Jeff McAdams &lt;jeffm [at] iglou.com&gt; </p>
-<p> Based off of l2tpd version 0.60<br />
- Copyright (C)1998 Adtran, Inc.<br />
+<p> Based off of l2tpd version 0.60<br/>
+ Copyright (C)1998 Adtran, Inc.<br/>
  Mark Spencer &lt;markster [at] marko.net&gt;</p>

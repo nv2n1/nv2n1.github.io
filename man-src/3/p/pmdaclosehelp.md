@@ -9,12 +9,12 @@ description: "pmdaOpenHelp, pmdaGetHelp, pmdaGetInDomHelp, pmdaCloseHelp – hel
 
 <p><code>pmdaOpenHelp</code>, <code>pmdaGetHelp</code>, <code>pmdaGetInDomHelp</code>, <code>pmdaCloseHelp</code> &#8211; help text support for a PMDA</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
-<p> int pmdaOpenHelp(char *</code><i>fname</i>);<br />
- char *pmdaGetHelp(int <i>handle</i>, pmID <i>pmid</i>, int <i>type</i>);<br />
- char *pmdaGetInDomHelp(int <i>handle</i>, pmInDom <i>indom</i>, int <i>type</i>);<br />
+<p> int pmdaOpenHelp(char *</code><i>fname</i>);<br/>
+ char *pmdaGetHelp(int <i>handle</i>, pmID <i>pmid</i>, int <i>type</i>);<br/>
+ char *pmdaGetInDomHelp(int <i>handle</i>, pmInDom <i>indom</i>, int <i>type</i>);<br/>
  void pmdaCloseHelp(int <i>handle</i>); </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>
 <h2>Description</h2>

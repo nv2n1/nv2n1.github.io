@@ -11,7 +11,7 @@ description: "dlanst.f –"
 <p> dlanst.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dlanst</code> (NORM, N, D, E)<br />
+<p> DOUBLE PRECISION function <code>dlanst</code> (NORM, N, D, E)<br/>
  <i></i><code>DLANST</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a real symmetric tridiagonal matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dlanst (characterNORM, integerN, double precision, dimension( * )D, double precision, dimension( * )E)</h3>

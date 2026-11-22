@@ -10,7 +10,7 @@ description: "ldns_pkt_new, ldns_pkt_free, ldns_pkt_print, ldns_pkt_query_new, l
 
 <p> ldns_pkt_new, ldns_pkt_free, ldns_pkt_print, ldns_pkt_query_new, ldns_pkt_query_new_frm_str, ldns_pkt_reply_type </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_pkt* ldns_pkt_new(); </p>

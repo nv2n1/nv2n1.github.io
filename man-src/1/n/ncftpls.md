@@ -77,7 +77,7 @@ description: "ncftpls – Internet file transfer program for scripts"
 <dl>
 <dt>
 </dt><dd>
-<p> $ ncftpls -u linus <a href="ftp://ftp.kernel.org/%2Fusr/src/">ftp://ftp.kernel.org/%2Fusr/src/</a><br />
+<p> $ ncftpls -u linus <a href="ftp://ftp.kernel.org/%2Fusr/src/">ftp://ftp.kernel.org/%2Fusr/src/</a><br/>
  $ ncftpls <a href="ftp://steve@ftp.apple.com/%2Fetc/">ftp://steve@ftp.apple.com/%2Fetc/</a></dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> <i>ncftpls</i> returns the following exit values:</p>

@@ -48,5 +48,5 @@ description: "rredtool – merge or apply a very restricted subset of ed patches
 <h2>REPORTING BUGS</h2>
 <p> Report bugs or wishlist requests the Debian BTS (e.g. by using <code>reportbug reperepro</code>) or directly to &lt;brlink [at] debian.org&gt;. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2009 Bernhard R. Link<br />
+<p> Copyright &#169; 2009 Bernhard R. Link<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

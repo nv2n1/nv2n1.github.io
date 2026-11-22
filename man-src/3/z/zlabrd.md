@@ -10,7 +10,7 @@ description: "zlabrd.f –"
 <p>zlabrd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlabrd</code> (M, N, NB, A, LDA, D, E, TAUQ, TAUP, X, LDX, Y, LDY)<br />
+<p>subroutine <code>zlabrd</code> (M, N, NB, A, LDA, D, E, TAUQ, TAUP, X, LDX, Y, LDY)<br/>
  <i></i><code>ZLABRD</code> reduces the first nb rows and columns of a general matrix to a bidiagonal form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlabrd (integerM, integerN, integerNB, complex*16, dimension( lda, * )A, integerLDA, double precision, dimension( * )D, double precision, dimension( * )E, complex*16, dimension( * )TAUQ, complex*16, dimension( * )TAUP, complex*16, dimension( ldx, * )X, integerLDX, complex*16, dimension( ldy, * )Y, integerLDY)</h3>

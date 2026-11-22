@@ -13,7 +13,7 @@ description: "QuantLib::Option – base option class"
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <p> Inherited by <code>MultiAssetOption</code>, <code>OneAssetOption</code>, and <code>Swaption</code>. </p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
+<p>class <code>arguments</code><br/>
  <i>basic option arguments </i></p>
 <h3>Public Types</h3>
 <p>enum <code>Type</code> { <code>Put</code> = -1, <code>Call</code> = 1 } </p>
@@ -26,7 +26,7 @@ description: "QuantLib::Option – base option class"
 <p>boost::shared_ptr&lt; <code>Payoff</code> &gt; <code>payoff_</code> </p>
 <p> boost::shared_ptr&lt; <code>Exercise</code> &gt; <code>exercise_</code> </p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, Option::Type) </p>
 <h2>Detailed Description</h2>
 <p>base option class</p>

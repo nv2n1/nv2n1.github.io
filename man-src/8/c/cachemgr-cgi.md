@@ -14,7 +14,7 @@ description: "cachemgr.cgi – Squid HTTP proxy manager CGI web interface"
 <p>The cache manager ( <code>cachemgr.cgi</code> ) is a CGI utility for displaying statistics about the Squid HTTP proxy process as it runs. The cache manager is a convenient way to manage the cache and view statistics without logging into the server.</p>
 <h2>Configuration</h2>
 <p>Configuration examples for many common web servers can be found in the Squid FAQ wiki. <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a> </p>
-<p> <i>./cachemgr.conf</i><br />
+<p> <i>./cachemgr.conf</i><br/>
  <i>/etc/squid/cachemgr.conf</i></p>
 <dl>
 <dd>The access configuration file defining which Squid servers may be managed via this <code>cachemgr.cgi</code> program. Each line specifies a <code>server</code>:<code>port</code> followed by an optional description </dd>
@@ -25,10 +25,10 @@ description: "cachemgr.cgi – Squid HTTP proxy manager CGI web interface"
 <h2>Author</h2>
 <p>Derived from Harvest. Further developed by numerous individuals from the internet community. Development is led by Duane Wessels of the National Laboratory for Applied Network Research and funded by the National Science Foundation.</p>
 <h2>Copyright</h2>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br />
-&nbsp;<wbr>*<br />
-&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br />
-&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br/>
+&nbsp;<wbr>*<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br/>
+&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br/>
 &nbsp;<wbr>*&nbsp;<wbr>Please see the COPYING and CONTRIBUTORS files for details.</p>
 <h2>Questions</h2>
 <p>Questions on the usage of this program can be sent to the <i>Squid Users mailing list</i> &lt;squid-users [at] squid-cache.org&gt;</p>

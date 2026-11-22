@@ -9,8 +9,8 @@ description: "pmiPutValueHandle – add a value for a metric-instance pair via a
 
 <p><code>pmiPutValueHandle</code> &#8211; add a value for a metric-instance pair via a handle</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/import.h&gt; </p>
 <p> int pmiPutValueHandle(int </code><i>handle</i>, const char *<i>value</i>); </p>
 <p> cc &#8230; -lpcp_import -lpcp</p>

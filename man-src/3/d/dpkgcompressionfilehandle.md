@@ -63,7 +63,7 @@ description: "Dpkg::Compression::FileHandle – object dealing transparently wit
 <dt>my $real_fh = $fh-&gt;<i>get_filehandle()</i></dt>
 <dd>Returns the real underlying filehandle. Useful if you want to pass it along in a derived object.</dd></dl>
 <h2>Derived Objects</h2>
-<p>If you want to create an object that inherits from Dpkg::Compression::FileHandle you must be aware that the object is a reference to a <font SIZE="-1">GLOB</font> that is returned by <i>Symbol::gensym()</i> and as such it&#8217;s not a <font SIZE="-1">HASH.</font> </p>
+<p>If you want to create an object that inherits from Dpkg::Compression::FileHandle you must be aware that the object is a reference to a GLOB that is returned by <i>Symbol::gensym()</i> and as such it&#8217;s not a HASH. </p>
 <p> You can store internal data in a hash but you have to use <tt>&quot;*$self-&quot;</tt>{&#8230;}&gt; to access the associated hash like in the example below: </p>
 <pre> sub set_option {
  my ($self, $value) = @_;

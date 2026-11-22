@@ -10,7 +10,7 @@ description: "LAPACK_version.f –"
 <p>LAPACK_version.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>program <code>__lapack_version.f__</code><br />
+<p>program <code>__lapack_version.f__</code><br/>
  <i></i><code>LAPACK_VERSION</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>program __lapack_version.f__ ()</h3>

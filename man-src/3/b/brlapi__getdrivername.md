@@ -32,7 +32,7 @@ description: "Getting Terminal information –"
 <p> This function fills its argument with the whole name of the braille terminal if available, terminated with a &#8216;\0&#8217;. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>buffer</i> is the buffer given by the application; <br />
+<dd> <p> <i>buffer</i> is the buffer given by the application; <br/>
  <i>size</i> is the maximum size for the name buffer. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>

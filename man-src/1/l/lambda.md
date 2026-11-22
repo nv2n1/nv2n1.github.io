@@ -91,7 +91,7 @@ description: "omega, iniomega, viromega – extended unicode TeX"
 <dd> <p> Encoded text of Omega&#8217;s messages. </p>
  </dd>
 <dt><i>*.oft</i></dt>
-<dd> <p> Predigested Omega format (.oft) files. <br />
+<dd> <p> Predigested Omega format (.oft) files. <br/>
  </p>
  </dd></dl>
 <h2>NOTES</h2>

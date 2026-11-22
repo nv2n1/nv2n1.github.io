@@ -9,7 +9,7 @@ url: "/docs/linux/man/1-bombardment/"
 
 bombardment - Run siege with an ever-increasing number of users 
 
-<h3><font SIZE="-1">SYNOPSIS</font></h3>
+<h3>SYNOPSIS</h3>
 
  bombardment [urlfile] [clients] [increment] [trials] [delay] bombardment urls.txt 5 10 20 1
 

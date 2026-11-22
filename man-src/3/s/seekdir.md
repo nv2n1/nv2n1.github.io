@@ -11,9 +11,9 @@ description: "seekdir – set the position of the next readdir() call in the dir
 <h2>Synopsis</h2>
 <pre><code>#include &lt;dirent.h&gt;
 void seekdir(DIR *dirp, long loc);</code></pre>
-<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>seekdir</code>():<br />
-&nbsp;_XOPEN_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>seekdir</code>():<br/>
+&nbsp;_XOPEN_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
 <h2>Description</h2>
 <p>The <code>seekdir</code>() function sets the location in the directory stream from which the next <code><a href="/docs/linux/man/2-readdir/">readdir</a></code>(2) call will start. The <i>loc</i> argument should be a value returned by a previous call to <code><a href="/docs/linux/man/3-telldir/">telldir</a></code>(3).</p>

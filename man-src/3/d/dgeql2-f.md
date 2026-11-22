@@ -10,7 +10,7 @@ description: "dgeql2.f –"
 <p>dgeql2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgeql2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>dgeql2</code> (M, N, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>DGEQL2</code> computes the QL factorization of a general rectangular matrix using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgeql2 (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAU, double precision, dimension( * )WORK, integerINFO)</h3>

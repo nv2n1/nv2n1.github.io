@@ -10,7 +10,7 @@ description: "XkbDeviceBellEvent – Creates a bell event for an X input extensi
 <p>XkbDeviceBellEvent &#8211; Creates a bell event for an X input extension device or for the keyboard, without ringing the corresponding bell </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbDeviceBellEvent</code> <code>(Display *</code><i>display</i><code>,</code> <code>Window </code><i>window</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>bell_class</i><code>,</code> <code>unsigned int </code><i>bell_id</i><code>,</code> <code>int </code><i>percent</i><code>,</code> <code>Atom </code><i>name</i><code>);</code><br />
+<dt> <code>Bool XkbDeviceBellEvent</code> <code>(Display *</code><i>display</i><code>,</code> <code>Window </code><i>window</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>bell_class</i><code>,</code> <code>unsigned int </code><i>bell_id</i><code>,</code> <code>int </code><i>percent</i><code>,</code> <code>Atom </code><i>name</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

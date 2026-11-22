@@ -16,32 +16,32 @@ description: "sc::IntCoor –"
 <h3>Public Member Functions</h3>
 <p> <code>IntCoor</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>IntCoor</code> (const <code>IntCoor</code> &amp;) </p>
-<p> <code>IntCoor</code> (const char *label=0)<br />
- <i>This constructor takes a string containing a label for the internal coordinate. </i><br />
- <code>IntCoor</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor.<br />
- void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- virtual const char * <code>label</code> () const<br />
- <i>Returns the string containing the label for the internal coordinate. </i><br />
- virtual double <code>value</code> () const<br />
- <i>Returns the value of the coordinate in atomic units or radians. </i><br />
- virtual void <code>set_value</code> (double)<br />
- <i>Sets the value of the coordinate in atomic units or radians. </i><br />
- virtual double <code>preferred_value</code> () const<br />
- <i>Returns the value of the coordinate in more familiar units. </i><br />
- virtual const char * <code>ctype</code> () const =0<br />
- <i>Returns a string representation of the type of coordinate this is. </i><br />
- virtual void <code>print</code> (std::ostream &amp;o=ExEnv::out0()) const<br />
- <i>Print information about the coordinate. </i><br />
+<p> <code>IntCoor</code> (const char *label=0)<br/>
+ <i>This constructor takes a string containing a label for the internal coordinate. </i><br/>
+ <code>IntCoor</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor.<br/>
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ virtual const char * <code>label</code> () const<br/>
+ <i>Returns the string containing the label for the internal coordinate. </i><br/>
+ virtual double <code>value</code> () const<br/>
+ <i>Returns the value of the coordinate in atomic units or radians. </i><br/>
+ virtual void <code>set_value</code> (double)<br/>
+ <i>Sets the value of the coordinate in atomic units or radians. </i><br/>
+ virtual double <code>preferred_value</code> () const<br/>
+ <i>Returns the value of the coordinate in more familiar units. </i><br/>
+ virtual const char * <code>ctype</code> () const =0<br/>
+ <i>Returns a string representation of the type of coordinate this is. </i><br/>
+ virtual void <code>print</code> (std::ostream &amp;o=ExEnv::out0()) const<br/>
+ <i>Print information about the coordinate. </i><br/>
  virtual void <code>print_details</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, std::ostream &amp;=ExEnv::out0()) const </p>
-<p> virtual double <code>force_constant</code> (<code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;)=0<br />
- <i>Returns the value of the force constant associated with this coordinate. </i><br />
- virtual void <code>update_value</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;)=0<br />
- <i>Recalculate the value of the coordinate. </i><br />
- virtual void <code>bmat</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSCVector</code> &amp;bmat, double coef=1.0)=0<br />
- <i>Fill in a row the the B matrix. </i><br />
- virtual int <code>equivalent</code> (<code>Ref</code>&lt; <code>IntCoor</code> &gt; &amp;)=0<br />
+<p> virtual double <code>force_constant</code> (<code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;)=0<br/>
+ <i>Returns the value of the force constant associated with this coordinate. </i><br/>
+ virtual void <code>update_value</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;)=0<br/>
+ <i>Recalculate the value of the coordinate. </i><br/>
+ virtual void <code>bmat</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSCVector</code> &amp;bmat, double coef=1.0)=0<br/>
+ <i>Fill in a row the the B matrix. </i><br/>
+ virtual int <code>equivalent</code> (<code>Ref</code>&lt; <code>IntCoor</code> &gt; &amp;)=0<br/>
  <i>Test to see if this internal coordinate is equivalent to that one. </i></p>
 <h3>Protected Attributes</h3>
 <p> char * <code>label_</code> </p>

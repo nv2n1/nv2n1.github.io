@@ -289,53 +289,53 @@ description: "exiv2 – Image metadata manipulation tool"
 <dt><code>-D </code><i>day</i></dt>
 <dd> Time adjustment by a positive or negative number of days, for the &#8216;adjust&#8217; action.</dd>
 <dt><code>-p </code><i>mode</i></dt>
-<dd> Print mode for the &#8216;print&#8217; action. Possible modes are:<br />
- s : print a summary of the Exif metadata (the default)<br />
- a : print Exif, IPTC and XMP metadata (shortcut for -Pkyct)<br />
- t : interpreted (translated) Exif tags (-PEkyct)<br />
- v : plain Exif tag values (-PExgnycv)<br />
- h : hexdump of the Exif data (-PExgnycsh)<br />
- i : IPTC datasets (-PIkyct)<br />
- x : XMP properties (-PXkyct)<br />
- c : JPEG comment<br />
+<dd> Print mode for the &#8216;print&#8217; action. Possible modes are:<br/>
+ s : print a summary of the Exif metadata (the default)<br/>
+ a : print Exif, IPTC and XMP metadata (shortcut for -Pkyct)<br/>
+ t : interpreted (translated) Exif tags (-PEkyct)<br/>
+ v : plain Exif tag values (-PExgnycv)<br/>
+ h : hexdump of the Exif data (-PExgnycsh)<br/>
+ i : IPTC datasets (-PIkyct)<br/>
+ x : XMP properties (-PXkyct)<br/>
+ c : JPEG comment<br/>
  p : list available image previews, sorted by preview image size in pixels</dd>
 <dt><code>-P </code><i>flgs</i></dt>
-<dd> Print flags for fine control of the tag list (&#8216;print&#8217; action). Allows control of the type of metadata as well as data columns included in the print output. Valid flags are:<br />
- E : include Exif tags in the list<br />
- I : IPTC datasets<br />
- X : XMP properties<br />
- x : print a column with the tag number<br />
- g : group name<br />
- k : key<br />
- l : tag label<br />
- n : tag name<br />
- y : type<br />
- c : number of components (count)<br />
- s : size in bytes<br />
- v : plain data value<br />
- t : interpreted (translated) data<br />
+<dd> Print flags for fine control of the tag list (&#8216;print&#8217; action). Allows control of the type of metadata as well as data columns included in the print output. Valid flags are:<br/>
+ E : include Exif tags in the list<br/>
+ I : IPTC datasets<br/>
+ X : XMP properties<br/>
+ x : print a column with the tag number<br/>
+ g : group name<br/>
+ k : key<br/>
+ l : tag label<br/>
+ n : tag name<br/>
+ y : type<br/>
+ c : number of components (count)<br/>
+ s : size in bytes<br/>
+ v : plain data value<br/>
+ t : interpreted (translated) data<br/>
  h : hexdump of the data</dd>
 <dt><code>-d </code><i>tgt</i></dt>
-<dd> Delete target(s) for the &#8216;delete&#8217; action. Possible targets are:<br />
- a : all supported metadata (the default)<br />
- e : Exif section<br />
- t : Exif thumbnail only<br />
- i : IPTC data<br />
- x : XMP packet<br />
+<dd> Delete target(s) for the &#8216;delete&#8217; action. Possible targets are:<br/>
+ a : all supported metadata (the default)<br/>
+ e : Exif section<br/>
+ t : Exif thumbnail only<br/>
+ i : IPTC data<br/>
+ x : XMP packet<br/>
  c : JPEG comment</dd>
 <dt><code>-i </code><i>tgt</i></dt>
-<dd> Insert target(s) for the &#8216;insert&#8217; action. Possible targets are the same as those for the <code>-d</code> option, plus a modifier:<br />
- X : Insert metadata from an XMP sidecar file &lt;file&gt;.xmp. The remaining insert targets determine what metadata to insert from the sidecar file. Possible are Exif, IPTC and XMP and the default is all of these. Note that the inserted XMP properties include those converted to Exif and IPTC.<br />
+<dd> Insert target(s) for the &#8216;insert&#8217; action. Possible targets are the same as those for the <code>-d</code> option, plus a modifier:<br/>
+ X : Insert metadata from an XMP sidecar file &lt;file&gt;.xmp. The remaining insert targets determine what metadata to insert from the sidecar file. Possible are Exif, IPTC and XMP and the default is all of these. Note that the inserted XMP properties include those converted to Exif and IPTC.<br/>
  Only JPEG thumbnails can be inserted (not TIFF thumbnails), they need to be named <i>file</i>-thumb.jpg.</dd>
 <dt><code>-e </code><i>tgt</i></dt>
-<dd> Extract target(s) for the &#8216;extract&#8217; action. Possible targets are the same as those for the <code>-d</code> option, plus a target to extract preview images and a modifier to generate an XMP sidecar file:<br />
- p[&lt;n&gt;[,&lt;m&gt; &#8230;]] : Extract preview images. The optional comma separated list of preview image numbers is used to determine which preview images to extract. The available preview images and their numbers are displayed with the &#8216;print&#8217; option -pp.<br />
+<dd> Extract target(s) for the &#8216;extract&#8217; action. Possible targets are the same as those for the <code>-d</code> option, plus a target to extract preview images and a modifier to generate an XMP sidecar file:<br/>
+ p[&lt;n&gt;[,&lt;m&gt; &#8230;]] : Extract preview images. The optional comma separated list of preview image numbers is used to determine which preview images to extract. The available preview images and their numbers are displayed with the &#8216;print&#8217; option -pp.<br/>
  X : Extract metadata to an XMP sidecar file &lt;file&gt;.xmp. The remaining extract targets determine what metadata to extract to the sidecar file. Possible are Exif, IPTC and XMP and the default is all of these.</dd>
 <dt><code>-r </code><i>fmt</i></dt>
-<dd> Filename format for the &#8216;rename&#8217; action. The format string follows <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) and supports the following keywords:<br />
- :basename: &#8211; original filename without extension<br />
- :dirname: &#8211; name of the directory holding the original file<br />
- :parentname: &#8211; name of parent directory<br />
+<dd> Filename format for the &#8216;rename&#8217; action. The format string follows <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) and supports the following keywords:<br/>
+ :basename: &#8211; original filename without extension<br/>
+ :dirname: &#8211; name of the directory holding the original file<br/>
+ :parentname: &#8211; name of parent directory<br/>
  Default filename format is %Y%m%d_%H%M%S.</dd>
 <dt><code>-c </code><i>txt</i></dt>
 <dd> JPEG comment string to set in the image (&#8216;modify&#8217; action). This option can also be used with the &#8216;extract&#8217; and &#8216;insert&#8217; actions to modify metadata on-the-fly.</dd>
@@ -373,8 +373,8 @@ set | add | del key[[type] value]
 <dt><i>key</i></dt>
 <dd> Exiv2 Exif, IPTC or XMP key.</dd>
 <dt><i>type</i></dt>
-<dd> <code>Byte | Ascii | Short | Long | Rational | Undefined | SShort | SLong | SRational | Comment</code> for Exif keys,<br />
- <code>String | Date | Time | Short | Undefined</code> for IPTC keys, and<br />
+<dd> <code>Byte | Ascii | Short | Long | Rational | Undefined | SShort | SLong | SRational | Comment</code> for Exif keys,<br/>
+ <code>String | Date | Time | Short | Undefined</code> for IPTC keys, and<br/>
  <code>XmpText | XmpAlt | XmpBag | XmpSeq | LangAlt</code> for XMP keys. </dd>
 <p> A default <i>type</i> is used if none is explicitly given. The default is determined based on <i>key</i>.</p>
 <dt><i>value</i></dt>

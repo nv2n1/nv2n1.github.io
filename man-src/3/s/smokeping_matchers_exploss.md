@@ -8,7 +8,7 @@ url: "/docs/linux/man/3-smokeping_matchers_exploss/"
 
 Smokeping::matchers::ExpLoss - exponential weighting matcher for packet loss with RMON-like thresholds 
 
-<h2>Description</h2>Match against exponential weighted average of last samples, thus new values are more valuable as old ones. Two thresholds - rising and falling - produce hysteresis loop like in <font SIZE="-1">RMON</font> alert subsystem. If the average reaches the ``rising'' threshold, matcher go to the ``match'' state and hold It until the average drops under the ``falling'' threshold. 
+<h2>Description</h2>Match against exponential weighted average of last samples, thus new values are more valuable as old ones. Two thresholds - rising and falling - produce hysteresis loop like in RMON alert subsystem. If the average reaches the ``rising'' threshold, matcher go to the ``match'' state and hold It until the average drops under the ``falling'' threshold. 
 
  Call the matcher with the following sequence: 
 
@@ -30,10 +30,10 @@ Smokeping::matchers::ExpLoss - exponential weighting matcher for packet loss wit
 &nbsp;<wbr>as the actual history.
 <h2>Copyright</h2>Copyright (c) 2008 Veniamin Konoplev 
 
- Developed in cooperation with <font SIZE="-1">EU EGEE</font> project
-<h2>License</h2>This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
+ Developed in cooperation with EU EGEE project
+<h2>License</h2>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
 
- This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. 
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. 
 
- You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font>
+ You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 <h2>Author</h2>Veniamin Konoplev &lt;vkonoplev [at] acm.org&gt;

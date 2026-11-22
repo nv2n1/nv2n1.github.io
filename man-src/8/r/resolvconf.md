@@ -23,19 +23,19 @@ description: "resolvconf – manage nameserver information"
 <h3>ifup</h3>
 <p>The <code>ifup</code> program can be used to configure network interfaces according to settings in <i>/etc/network/interfaces</i>. To make <code>ifup</code> push nameserver information to <code>resolvconf</code> when it configures an interface the administrator must add <code>dns-</code> option lines to the relevant <code>iface</code> stanza in <i><a href="/docs/linux/man/5-interfaces/">interfaces</a></i>(5). The following option names are accepted: <code>dns-nameserver</code>, <code>dns-search</code>, and <code>dns-sortlist</code>. </p>
 <p> To add a nameserver IP address, add an option line consisting of <code>dns-nameserver </code> and the address. To add multiple nameserver addresses, include multiple such <code>dns-nameserver </code> lines. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dns-nameserver 192.168.1.254<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dns-nameserver 192.168.1.254<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dns-nameserver 8.8.8.8 </p>
 <p> To add search domain names, add a line beginning with <code>dns-search</code>. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dns-search foo.org bar.com </p>
 <p> The <code>dns-nameservers </code> option is also accepted and, unlike <code>dns-nameserver</code>, can be given multiple arguments, separated by spaces. </p>
 <p> The <code>dns-domain</code> option is deprecated in favor of <code>dns-search</code>. </p>
 <p> The resulting stanza might look like the following example. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;iface eth0 inet static<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;address 192.168.1.3<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;netmask 255.255.255.0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gateway 192.168.1.1<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dns-nameserver 192.168.1.254<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dns-nameserver 8.8.8.8<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;iface eth0 inet static<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;address 192.168.1.3<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;netmask 255.255.255.0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gateway 192.168.1.1<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dns-nameserver 192.168.1.254<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dns-nameserver 8.8.8.8<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dns-search foo.org bar.com </p>
 <p> N.B.: On a machine where resolvconf has just been or is about to be installed and which previously relied on a static <i>/etc/resolv.conf</i> file,</p>
 <dl>
@@ -110,7 +110,7 @@ description: "resolvconf – manage nameserver information"
 <h2>Author</h2>
 <p>Written by Thomas Hood &lt;jdthood [at] gmail.com&gt; with contributions by Nathan Stratton Treadway.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2004-2013 Thomas Hood.<br />
+<p>Copyright &#169; 2004-2013 Thomas Hood.<br/>
  This is free software; see the source for copying conditions.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-interface-order/">interface-order</a></code>(5), <code><a href="/docs/linux/man/5-resolv-conf/">resolv.conf</a></code>(5), <code><a href="/docs/linux/man/3-resolver/">resolver</a></code>(3). Read the resolvconf package <i>README</i> file for more in-depth information. </p>

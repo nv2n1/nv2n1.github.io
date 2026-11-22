@@ -31,6 +31,6 @@ description: "XtGetErrorDatabase, XtGetErrorDatabaseText – obtain error databa
 <p>The <code>XtGetErrorDatabase</code> function has been superceded by <code>XtAppGetErrorDatabase</code>. </p>
 <p> The <code>XtGetErrorDatabaseText</code> function has been superceded by <code>XtAppGetErrorDatabaseText</code>.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xtappgeterrordatabase/">XtAppGetErrorDatabase</a></code>(3) <code><a href="/docs/linux/man/3-xtappgeterrordatabasetext/">XtAppGetErrorDatabaseText</a></code>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><code><a href="/docs/linux/man/3-xtappgeterrordatabase/">XtAppGetErrorDatabase</a></code>(3) <code><a href="/docs/linux/man/3-xtappgeterrordatabasetext/">XtAppGetErrorDatabaseText</a></code>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

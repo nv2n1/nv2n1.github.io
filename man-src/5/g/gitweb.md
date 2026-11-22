@@ -388,7 +388,7 @@ $highlight_ext{'phtml'} = 'php';</pre>
 </dd></dl>
 <p> It is an error to specify a ref that does not pass &quot;git check-ref-format&quot; scrutiny. Duplicated values are filtered.</dl>
 <h2>Examples</h2>
-<p>To enable blame, pickaxe search, and snapshot support (allowing &quot;tar.gz&quot; and &quot;zip&quot; snapshots), while allowing individual projects to turn them off, put the following in your GITWEB_CONFIG file: $known_snapshot_formats{&#8216;zip&#8217;}{&#8216;disabled&#8217;} = 1;<br />
+<p>To enable blame, pickaxe search, and snapshot support (allowing &quot;tar.gz&quot; and &quot;zip&quot; snapshots), while allowing individual projects to turn them off, put the following in your GITWEB_CONFIG file: $known_snapshot_formats{&#8216;zip&#8217;}{&#8216;disabled&#8217;} = 1;<br/>
 $known_snapshot_formats{&#8216;tgz&#8217;}{&#8216;compressor&#8217;} = [&#8216;gzip&#8217;,&#8217;-6&#8242;]; If you allow overriding for the snapshot feature, you can specify which snapshot formats are globally disabled. You can also add any command-line options you want (such as setting the compression level). For instance, you can disable Zip compressed snapshots and set <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) to run at level 6 by adding the following lines to your gitweb configuration file: </p>
 <pre><code>$known_snapshot_formats{'zip'}{'disabled'} = 1;
 $known_snapshot_formats{'tgz'}{'compressor'} = ['gzip','-6'];</code></pre>

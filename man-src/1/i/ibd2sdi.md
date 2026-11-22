@@ -44,14 +44,14 @@ shell&gt; <code>ibd2sdi ibdata1 ibdata2</code>
 <dl>
 <dt>
 </dt><dd>
-shell &gt; ibd2sdi&#8211; help<br />
-                Usage :./<br />
-            ibd2sdi[-v][-c&lt;strict &#8211; check&gt;][-d&lt;dump file name&gt;][-n] filename1[filenames] See http : // dev.mysql.com/doc/refman/8.0/en/ibd2sdi.html for usage hints.<br />
-                                                                                                    -h,<br />
-    &#8211;help Display this help and exit.- v, &#8211;version Display version information and exit.- #, &#8211;debug[= name] Output debug log.See http : // dev.mysql.com/doc/refman/8.0/en/dbug-package.html<br />
-                                                                                                                                           -d,<br />
-    &#8211;dump &#8211; file = name<br />
-                        Dump the tablespace SDI into the file passed by user.Without the filename,<br />
+shell &gt; ibd2sdi&#8211; help<br/>
+                Usage :./<br/>
+            ibd2sdi[-v][-c&lt;strict &#8211; check&gt;][-d&lt;dump file name&gt;][-n] filename1[filenames] See http : // dev.mysql.com/doc/refman/8.0/en/ibd2sdi.html for usage hints.<br/>
+                                                                                                    -h,<br/>
+    &#8211;help Display this help and exit.- v, &#8211;version Display version information and exit.- #, &#8211;debug[= name] Output debug log.See http : // dev.mysql.com/doc/refman/8.0/en/dbug-package.html<br/>
+                                                                                                                                           -d,<br/>
+    &#8211;dump &#8211; file = name<br/>
+                        Dump the tablespace SDI into the file passed by user.Without the filename,<br/>
              it will default to stdout &#8211; s, &#8211;skip &#8211; data Skip retrieving data from SDI records.Retrieve only id and type.- i, &#8211;id = #Retrieve the SDI record matching the id passed by user.- t, &#8211;type = #Retrieve the SDI records matching the type passed by user.- c, &#8211;strict &#8211; check = name Specify the strict checksum algorithm by the user.Allowed values are innodb, crc32, none.- n, &#8211;no &#8211; check Ignore the checksum verification.- p, &#8211;pretty Pretty format the SDI output.If false, SDI would be not human readable but it will be of less size(Defaults to on; use&#8211; skip &#8211; pretty to disable.) Variables(&#8211;variable &#8211; name = value) and boolean options{FALSE | TRUE} Value(after reading options)&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;debug(No default value) dump &#8211; file(No default value) skip &#8211; data FALSE id 0 type 0 strict &#8211; check crc32 no &#8211; check FALSE pretty TRUE
 </dd></dl>
 </dl>
@@ -99,13 +99,13 @@ shell&gt; <code>ibd2sdi --dump-file=</code><i>file_name</i><code> ../data/test/t
 <dl>
 <dt>
 </dt><dd>
-shell &gt; ibd2sdi&#8211; skip &#8211; data../ data / test / t1.ibd[&#8220;ibd2sdi&#8221;, {<br />
-    &#8220;type&#8221; : 1,<br />
-    &#8220;id&#8221; : 330<br />
-},<br />
-                                                      {<br />
-                                                          &#8220;type&#8221; : 2,<br />
-                                                          &#8220;id&#8221; : 7<br />
+shell &gt; ibd2sdi&#8211; skip &#8211; data../ data / test / t1.ibd[&#8220;ibd2sdi&#8221;, {<br/>
+    &#8220;type&#8221; : 1,<br/>
+    &#8220;id&#8221; : 330<br/>
+},<br/>
+                                                      {<br/>
+                                                          &#8220;type&#8221; : 2,<br/>
+                                                          &#8220;id&#8221; : 7<br/>
                                                       }]
 </dd></dl>
 </dl>
@@ -116,30 +116,30 @@ shell &gt; ibd2sdi&#8211; skip &#8211; data../ data / test / t1.ibd[&#8220;ibd2s
 <dl>
 <dt>
 </dt><dd>
-shell &gt; ibd2sdi&#8211; id = 7../ data / test / t1.ibd[&#8220;ibd2sdi&#8221;, {<br />
-    &#8220;type&#8221; : 2,<br />
-    &#8220;id&#8221; : 7,<br />
-    &#8220;object&#8221; :<br />
-        {<br />
-            &#8220;mysqld_version_id&#8221; : 80003,<br />
-            &#8220;dd_version&#8221; : 80003,<br />
-            &#8220;sdi_version&#8221; : 1,<br />
-            &#8220;dd_object_type&#8221; : &#8220;Tablespace&#8221;,<br />
-            &#8220;dd_object&#8221; : {<br />
-                &#8220;name&#8221; : &#8220;test/t1&#8221;,<br />
-                &#8220;comment&#8221; : &#8220;&#8221;,<br />
-                &#8220;options&#8221; : &#8220;&#8221;,<br />
-                &#8220;se_private_data&#8221; : &#8220;flags=16417;id=2;server_version=80003;space_version=1;&#8221;,<br />
-                &#8220;engine&#8221; : &#8220;InnoDB&#8221;,<br />
-                &#8220;files&#8221; : [<br />
-                    {<br />
-                        &#8220;ordinal_position&#8221; : 1,<br />
-                        &#8220;filename&#8221; : &#8220;./test/t1.ibd&#8221;,<br />
-                        &#8220;se_private_data&#8221; : &#8220;id=2;&#8221;<br />
-                    }<br />
-                ]<br />
-            }<br />
-        }<br />
+shell &gt; ibd2sdi&#8211; id = 7../ data / test / t1.ibd[&#8220;ibd2sdi&#8221;, {<br/>
+    &#8220;type&#8221; : 2,<br/>
+    &#8220;id&#8221; : 7,<br/>
+    &#8220;object&#8221; :<br/>
+        {<br/>
+            &#8220;mysqld_version_id&#8221; : 80003,<br/>
+            &#8220;dd_version&#8221; : 80003,<br/>
+            &#8220;sdi_version&#8221; : 1,<br/>
+            &#8220;dd_object_type&#8221; : &#8220;Tablespace&#8221;,<br/>
+            &#8220;dd_object&#8221; : {<br/>
+                &#8220;name&#8221; : &#8220;test/t1&#8221;,<br/>
+                &#8220;comment&#8221; : &#8220;&#8221;,<br/>
+                &#8220;options&#8221; : &#8220;&#8221;,<br/>
+                &#8220;se_private_data&#8221; : &#8220;flags=16417;id=2;server_version=80003;space_version=1;&#8221;,<br/>
+                &#8220;engine&#8221; : &#8220;InnoDB&#8221;,<br/>
+                &#8220;files&#8221; : [<br/>
+                    {<br/>
+                        &#8220;ordinal_position&#8221; : 1,<br/>
+                        &#8220;filename&#8221; : &#8220;./test/t1.ibd&#8221;,<br/>
+                        &#8220;se_private_data&#8221; : &#8220;id=2;&#8221;<br/>
+                    }<br/>
+                ]<br/>
+            }<br/>
+        }<br/>
 }]
 </dd></dl>
 </dl>

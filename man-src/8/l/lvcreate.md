@@ -93,8 +93,8 @@ description: "lvcreate – Create a logical volume"
 <p>Create a linear LV. </p>
 <p> <code>lvcreate</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>&#8211;type</code> <code>linear</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>&#8211;type</code> <code>linear</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -102,8 +102,8 @@ description: "lvcreate – Create a logical volume"
 <p> Create a striped LV (infers &#8211;type striped). </p>
 <p> <code>lvcreate</code> <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -111,11 +111,11 @@ description: "lvcreate – Create a logical volume"
 <p> Create a raid1 or mirror LV (infers &#8211;type raid1|mirror). </p>
 <p> <code>lvcreate</code> <code>-m</code>|<code>&#8211;mirrors</code> <i>Number</i> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;mirrorlog</code> <code>core</code>|<code>disk</code> ]<br />
- [ <code>&#8211;[raid]minrecoveryrate</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;[raid]maxrecoveryrate</code> <i>Size</i>[k|UNIT] ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;mirrorlog</code> <code>core</code>|<code>disk</code> ]<br/>
+ [ <code>&#8211;[raid]minrecoveryrate</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;[raid]maxrecoveryrate</code> <i>Size</i>[k|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -123,13 +123,13 @@ description: "lvcreate – Create a logical volume"
 <p> Create a raid LV (a specific raid level must be used, e.g. raid1). </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>raid</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-m</code>|<code>&#8211;mirrors</code> <i>Number</i> ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;[raid]minrecoveryrate</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;[raid]maxrecoveryrate</code> <i>Size</i>[k|UNIT] ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-m</code>|<code>&#8211;mirrors</code> <i>Number</i> ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;[raid]minrecoveryrate</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;[raid]maxrecoveryrate</code> <i>Size</i>[k|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -139,11 +139,11 @@ description: "lvcreate – Create a logical volume"
 <dl>
 <dd>&nbsp;<code>-L</code>|<code>&#8211;size</code>&nbsp;<i>Size</i>[m|UNIT]&nbsp;<i>VG</i></dd></dl>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;[raid]minrecoveryrate</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;[raid]maxrecoveryrate</code> <i>Size</i>[k|UNIT] ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;[raid]minrecoveryrate</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;[raid]maxrecoveryrate</code> <i>Size</i>[k|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -151,11 +151,11 @@ description: "lvcreate – Create a logical volume"
 <p> Create a COW snapshot LV of an origin LV. </p>
 <p> <code>lvcreate</code> <code>-s</code>|<code>&#8211;snapshot</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>LV</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;type</code> <code>snapshot</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;type</code> <code>snapshot</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -163,15 +163,15 @@ description: "lvcreate – Create a logical volume"
 <p> Create a thin pool. </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>thin-pool</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;thinpool</code> <i>LV</i><i>_new</i> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;thinpool</code> <i>LV</i><i>_new</i> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -179,15 +179,15 @@ description: "lvcreate – Create a logical volume"
 <p> Create a cache pool. </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>cache-pool</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-H</code>|<code>&#8211;cache</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br />
- [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br />
- [ <code>&#8211;cachesettings</code> <i>String</i> ]<br />
- [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-H</code>|<code>&#8211;cache</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br/>
+ [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachesettings</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -195,126 +195,126 @@ description: "lvcreate – Create a logical volume"
 <p> Create a thin LV in a thin pool (infers &#8211;type thin). </p>
 <p> <code>lvcreate</code> <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] <code>&#8211;thinpool</code> <i>LV</i><i>_thinpool</i> <i>VG</i> </p>
 <dl>
-<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br />
- [ <code>&#8211;type</code> <code>thin</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br/>
+ [ <code>&#8211;type</code> <code>thin</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a thin LV that is a snapshot of an existing thin LV<br />
+<p> Create a thin LV that is a snapshot of an existing thin LV<br/>
  (infers &#8211;type thin). </p>
 <p> <code>lvcreate</code> <code>-s</code>|<code>&#8211;snapshot</code> <i>LV</i><i>_thin</i> </p>
 <dl>
-<dd>[ <code>&#8211;type</code> <code>thin</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>&#8211;type</code> <code>thin</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Create a thin LV that is a snapshot of an external origin LV. </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>thin</code> <code>&#8211;thinpool</code> <i>LV</i><i>_thinpool</i> <i>LV</i> </p>
 <dl>
-<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Create a LV that returns VDO when used. </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>vdo</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;vdo</code> ]<br />
- [ <code>&#8211;vdopool</code> <i>LV</i><i>_new</i> ]<br />
- [ <code>&#8211;compression</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;deduplication</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;vdo</code> ]<br/>
+ [ <code>&#8211;vdopool</code> <i>LV</i><i>_new</i> ]<br/>
+ [ <code>&#8211;compression</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;deduplication</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a thin LV, first creating a thin pool for it,<br />
+<p> Create a thin LV, first creating a thin pool for it,<br/>
  where the new thin pool is named by the &#8211;thinpool arg. </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>thin</code> <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT]</p>
 <dl>
 <dd>&nbsp;<code>-L</code>|<code>&#8211;size</code>&nbsp;<i>Size</i>[m|UNIT]&nbsp;<code>&#8211;thinpool</code>&nbsp;<i>LV</i><i>_new</i></dd></dl>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-T</code>|<code>&#8211;thin</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-T</code>|<code>&#8211;thin</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a cache LV, first creating a new origin LV,<br />
- then combining it with the existing cache pool named<br />
+<p> Create a cache LV, first creating a new origin LV,<br/>
+ then combining it with the existing cache pool named<br/>
  by the &#8211;cachepool arg. </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>cache</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT]</p>
 <dl>
 <dd>&nbsp;<code>&#8211;cachepool</code>&nbsp;<i>LV</i><i>_cachepool</i>&nbsp;<i>VG</i></dd></dl>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-H</code>|<code>&#8211;cache</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br />
- [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br />
- [ <code>&#8211;cachesettings</code> <i>String</i> ]<br />
- [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-H</code>|<code>&#8211;cache</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br/>
+ [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachesettings</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
 <p> Common options for command:</p>
 <dl>
-<dd>[ <code>-a</code>|<code>&#8211;activate</code> <code>y</code>|<code>n</code>|<code>ay</code> ]<br />
- [ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-C</code>|<code>&#8211;contiguous</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-K</code>|<code>&#8211;ignoreactivationskip</code> ]<br />
- [ <code>-j</code>|<code>&#8211;major</code> <i>Number</i> ]<br />
- [ <code>-n</code>|<code>&#8211;name</code> <i>String</i> ]<br />
- [ <code>-p</code>|<code>&#8211;permission</code> <code>rw</code>|<code>r</code> ]<br />
- [ <code>-M</code>|<code>&#8211;persistent</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br />
- [ <code>-k</code>|<code>&#8211;setactivationskip</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-W</code>|<code>&#8211;wipesignatures</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;addtag</code> <i>Tag</i> ]<br />
- [ <code>&#8211;alloc</code> <code>contiguous</code>|<code>cling</code>|<code>cling_by_tags</code>|<code>normal</code>|<code>anywhere</code>|<code>inherit</code> ]<br />
- [ <code>&#8211;ignoremonitoring</code> ]<br />
- [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;minor</code> <i>Number</i> ]<br />
- [ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;nosync</code> ]<br />
- [ <code>&#8211;noudevsync</code> ]<br />
+<dd>[ <code>-a</code>|<code>&#8211;activate</code> <code>y</code>|<code>n</code>|<code>ay</code> ]<br/>
+ [ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-C</code>|<code>&#8211;contiguous</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-K</code>|<code>&#8211;ignoreactivationskip</code> ]<br/>
+ [ <code>-j</code>|<code>&#8211;major</code> <i>Number</i> ]<br/>
+ [ <code>-n</code>|<code>&#8211;name</code> <i>String</i> ]<br/>
+ [ <code>-p</code>|<code>&#8211;permission</code> <code>rw</code>|<code>r</code> ]<br/>
+ [ <code>-M</code>|<code>&#8211;persistent</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br/>
+ [ <code>-k</code>|<code>&#8211;setactivationskip</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-W</code>|<code>&#8211;wipesignatures</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;addtag</code> <i>Tag</i> ]<br/>
+ [ <code>&#8211;alloc</code> <code>contiguous</code>|<code>cling</code>|<code>cling_by_tags</code>|<code>normal</code>|<code>anywhere</code>|<code>inherit</code> ]<br/>
+ [ <code>&#8211;ignoremonitoring</code> ]<br/>
+ [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;minor</code> <i>Number</i> ]<br/>
+ [ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;nosync</code> ]<br/>
+ [ <code>&#8211;noudevsync</code> ]<br/>
  [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>
@@ -534,19 +534,19 @@ description: "lvcreate – Create a logical volume"
 <p> Create an LV that returns errors when used. </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>error</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Create an LV that returns zeros when read. </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>zero</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Create a linear LV. </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>linear</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -554,9 +554,9 @@ description: "lvcreate – Create a logical volume"
 <p> Create a striped LV (also see lvcreate &#8211;stripes). </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>striped</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -564,38 +564,38 @@ description: "lvcreate – Create a logical volume"
 <p> Create a mirror LV (also see &#8211;type raid1). </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>mirror</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-m</code>|<code>&#8211;mirrors</code> <i>Number</i> ]<br />
- [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;mirrorlog</code> <code>core</code>|<code>disk</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-m</code>|<code>&#8211;mirrors</code> <i>Number</i> ]<br/>
+ [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;mirrorlog</code> <code>core</code>|<code>disk</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a COW snapshot LV of an origin LV<br />
+<p> Create a COW snapshot LV of an origin LV<br/>
  (also see &#8211;snapshot). </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>snapshot</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>LV</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-s</code>|<code>&#8211;snapshot</code> ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-s</code>|<code>&#8211;snapshot</code> ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a sparse COW snapshot LV of a virtual origin LV<br />
+<p> Create a sparse COW snapshot LV of a virtual origin LV<br/>
  (also see &#8211;snapshot). </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>snapshot</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT]</p>
 <dl>
 <dd>&nbsp;<code>-V</code>|<code>&#8211;virtualsize</code>&nbsp;<i>Size</i>[m|UNIT]&nbsp;<i>VG</i></dd></dl>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-s</code>|<code>&#8211;snapshot</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-s</code>|<code>&#8211;snapshot</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -605,9 +605,9 @@ description: "lvcreate – Create a logical volume"
 <dl>
 <dd>&nbsp;<code>-V</code>|<code>&#8211;virtualsize</code>&nbsp;<i>Size</i>[m|UNIT]&nbsp;<i>VG</i></dd></dl>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;type</code> <code>snapshot</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;type</code> <code>snapshot</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -615,52 +615,52 @@ description: "lvcreate – Create a logical volume"
 <p> Create a thin pool (infers &#8211;type thin-pool). </p>
 <p> <code>lvcreate</code> <code>-T</code>|<code>&#8211;thin</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;type</code> <code>thin-pool</code> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;type</code> <code>thin-pool</code> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a thin pool named by the &#8211;thinpool arg<br />
+<p> Create a thin pool named by the &#8211;thinpool arg<br/>
  (infers &#8211;type thin-pool). </p>
 <p> <code>lvcreate</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <code>&#8211;thinpool</code> <i>LV</i><i>_new</i> <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-T</code>|<code>&#8211;thin</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;type</code> <code>thin-pool</code> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-T</code>|<code>&#8211;thin</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;type</code> <code>thin-pool</code> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a cache pool named by the &#8211;cachepool arg<br />
+<p> Create a cache pool named by the &#8211;cachepool arg<br/>
  (variant, uses &#8211;cachepool in place of &#8211;name). </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>cache-pool</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT]</p>
 <dl>
 <dd>&nbsp;<code>&#8211;cachepool</code>&nbsp;<i>LV</i><i>_new</i>&nbsp;<i>VG</i></dd></dl>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-H</code>|<code>&#8211;cache</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br />
- [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br />
- [ <code>&#8211;cachesettings</code> <i>String</i> ]<br />
- [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-H</code>|<code>&#8211;cache</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br/>
+ [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachesettings</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -670,70 +670,70 @@ description: "lvcreate – Create a logical volume"
 <dl>
 <dd>&nbsp;<code>&#8211;thinpool</code>&nbsp;<i>LV</i><i>_thinpool</i>&nbsp;<i>VG</i></dd></dl>
 <dl>
-<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a thin LV in a thin pool named in the first arg<br />
+<p> Create a thin LV in a thin pool named in the first arg<br/>
  (variant, also see &#8211;thinpool for naming pool). </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>thin</code> <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] <i>LV</i><i>_thinpool</i> </p>
 <dl>
-<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a thin LV in the thin pool named in the first arg<br />
- (variant, infers &#8211;type thin, also see &#8211;thinpool for<br />
+<p> Create a thin LV in the thin pool named in the first arg<br/>
+ (variant, infers &#8211;type thin, also see &#8211;thinpool for<br/>
  naming pool.) </p>
 <p> <code>lvcreate</code> <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] <i>LV</i><i>_thinpool</i> </p>
 <dl>
-<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br />
- [ <code>&#8211;type</code> <code>thin</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br/>
+ [ <code>&#8211;type</code> <code>thin</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Create a thin LV that is a snapshot of an existing thin LV. </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>thin</code> <i>LV</i><i>_thin</i> </p>
 <dl>
-<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a thin LV that is a snapshot of an existing thin LV<br />
+<p> Create a thin LV that is a snapshot of an existing thin LV<br/>
  (infers &#8211;type thin). </p>
 <p> <code>lvcreate</code> <code>-T</code>|<code>&#8211;thin</code> <i>LV</i><i>_thin</i> </p>
 <dl>
-<dd>[ <code>&#8211;type</code> <code>thin</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>&#8211;type</code> <code>thin</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a thin LV that is a snapshot of an external origin LV<br />
+<p> Create a thin LV that is a snapshot of an external origin LV<br/>
  (infers &#8211;type thin). </p>
 <p> <code>lvcreate</code> <code>-s</code>|<code>&#8211;snapshot</code> <code>&#8211;thinpool</code> <i>LV</i><i>_thinpool</i> <i>LV</i> </p>
 <dl>
-<dd>[ <code>&#8211;type</code> <code>thin</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>&#8211;type</code> <code>thin</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Create a VDO LV with VDO pool. </p>
 <p> <code>lvcreate</code> <code>&#8211;vdo</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;vdopool</code> <i>LV</i><i>_new</i> ]<br />
- [ <code>&#8211;compression</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;deduplication</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;vdopool</code> <i>LV</i><i>_new</i> ]<br/>
+ [ <code>&#8211;compression</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;deduplication</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -741,225 +741,225 @@ description: "lvcreate – Create a logical volume"
 <p> Create a VDO LV with VDO pool. </p>
 <p> <code>lvcreate</code> <code>&#8211;vdopool</code> <i>LV</i><i>_new</i> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;vdo</code> ]<br />
- [ <code>&#8211;type</code> <code>vdo</code> ]<br />
- [ <code>&#8211;compression</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;deduplication</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;vdo</code> ]<br/>
+ [ <code>&#8211;type</code> <code>vdo</code> ]<br/>
+ [ <code>&#8211;compression</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;deduplication</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a thin LV, first creating a thin pool for it,<br />
- where the new thin pool is named by the &#8211;thinpool arg<br />
+<p> Create a thin LV, first creating a thin pool for it,<br/>
+ where the new thin pool is named by the &#8211;thinpool arg<br/>
  (variant, infers &#8211;type thin). </p>
 <p> <code>lvcreate</code> <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT]</p>
 <dl>
 <dd>&nbsp;<code>&#8211;thinpool</code>&nbsp;<i>LV</i><i>_new</i></dd></dl>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-T</code>|<code>&#8211;thin</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-T</code>|<code>&#8211;thin</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a thin LV, first creating a thin pool for it,<br />
- where the new thin pool is named by the &#8211;thinpool arg<br />
+<p> Create a thin LV, first creating a thin pool for it,<br/>
+ where the new thin pool is named by the &#8211;thinpool arg<br/>
  (variant, infers &#8211;type thin). </p>
 <p> <code>lvcreate</code> <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT]</p>
 <dl>
 <dd>&nbsp;<code>&#8211;thinpool</code>&nbsp;<i>LV</i><i>_new</i>&nbsp;<i>VG</i></dd></dl>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-T</code>|<code>&#8211;thin</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-T</code>|<code>&#8211;thin</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a thin LV, first creating a thin pool for it,<br />
- where the new thin pool is named in the first arg,<br />
- or the new thin pool name is generated when the first<br />
+<p> Create a thin LV, first creating a thin pool for it,<br/>
+ where the new thin pool is named in the first arg,<br/>
+ or the new thin pool name is generated when the first<br/>
  arg is a VG name. </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>thin</code> <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT]</p>
 <dl>
 <dd>&nbsp;<code>-L</code>|<code>&#8211;size</code>&nbsp;<i>Size</i>[m|UNIT]&nbsp;<i>VG</i>|<i>LV</i><i>_new</i></dd></dl>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-T</code>|<code>&#8211;thin</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-T</code>|<code>&#8211;thin</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a thin LV, first creating a thin pool for it,<br />
- where the new thin pool is named in the first arg,<br />
- or the new thin pool name is generated when the first<br />
+<p> Create a thin LV, first creating a thin pool for it,<br/>
+ where the new thin pool is named in the first arg,<br/>
+ or the new thin pool name is generated when the first<br/>
  arg is a VG name (variant, infers &#8211;type thin). </p>
 <p> <code>lvcreate</code> <code>-T</code>|<code>&#8211;thin</code> <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT]</p>
 <dl>
 <dd>&nbsp;<code>-L</code>|<code>&#8211;size</code>&nbsp;<i>Size</i>[m|UNIT]&nbsp;<i>VG</i>|<i>LV</i><i>_new</i></dd></dl>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a thin LV, first creating a thin pool for it<br />
- (infers &#8211;type thin).<br />
- Create a sparse snapshot of a virtual origin LV<br />
- (infers &#8211;type snapshot).<br />
- Chooses &#8211;type thin or &#8211;type snapshot according to<br />
+<p> Create a thin LV, first creating a thin pool for it<br/>
+ (infers &#8211;type thin).<br/>
+ Create a sparse snapshot of a virtual origin LV<br/>
+ (infers &#8211;type snapshot).<br/>
+ Chooses &#8211;type thin or &#8211;type snapshot according to<br/>
  config setting sparse_segtype_default. </p>
 <p> <code>lvcreate</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-s</code>|<code>&#8211;snapshot</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;type</code> <code>snapshot</code> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-s</code>|<code>&#8211;snapshot</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;type</code> <code>snapshot</code> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;errorwhenfull</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a cache LV, first creating a new origin LV,<br />
- then combining it with the existing cache pool named<br />
+<p> Create a cache LV, first creating a new origin LV,<br/>
+ then combining it with the existing cache pool named<br/>
  by the &#8211;cachepool arg (variant, infers &#8211;type cache). </p>
 <p> <code>lvcreate</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <code>&#8211;cachepool</code> <i>LV</i><i>_cachepool</i> <i>VG</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-H</code>|<code>&#8211;cache</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;type</code> <code>cache</code> ]<br />
- [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br />
- [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br />
- [ <code>&#8211;cachesettings</code> <i>String</i> ]<br />
- [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-H</code>|<code>&#8211;cache</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;type</code> <code>cache</code> ]<br/>
+ [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br/>
+ [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachesettings</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Create a cache LV, first creating a new origin LV,<br />
- then combining it with the existing cache pool named<br />
+<p> Create a cache LV, first creating a new origin LV,<br/>
+ then combining it with the existing cache pool named<br/>
  in the first arg (variant, also use &#8211;cachepool). </p>
 <p> <code>lvcreate</code> <code>&#8211;type</code> <code>cache</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>LV</i><i>_cachepool</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-H</code>|<code>&#8211;cache</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br />
- [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br />
- [ <code>&#8211;cachesettings</code> <i>String</i> ]<br />
- [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-H</code>|<code>&#8211;cache</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br/>
+ [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachesettings</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> When LV is a cache pool, create a cache LV,<br />
- first creating a new origin LV, then combining it with<br />
- the existing cache pool named in the first arg<br />
- (variant, infers &#8211;type cache, also use &#8211;cachepool).<br />
- When LV is not a cache pool, convert the specified LV<br />
- to type cache after creating a new cache pool LV to use<br />
+<p> When LV is a cache pool, create a cache LV,<br/>
+ first creating a new origin LV, then combining it with<br/>
+ the existing cache pool named in the first arg<br/>
+ (variant, infers &#8211;type cache, also use &#8211;cachepool).<br/>
+ When LV is not a cache pool, convert the specified LV<br/>
+ to type cache after creating a new cache pool LV to use<br/>
  (use lvconvert). </p>
 <p> <code>lvcreate</code> <code>-H</code>|<code>&#8211;cache</code> <code>-L</code>|<code>&#8211;size</code> <i>Size</i>[m|UNIT] <i>LV</i> </p>
 <dl>
-<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br />
- [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br />
- [ <code>&#8211;cachesettings</code> <i>String</i> ]<br />
- [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-l</code>|<code>&#8211;extents</code> <i>Number</i>[PERCENT] ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br/>
+ [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachesettings</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211;</p>
 <h2>Examples</h2>
-<p>Create a striped LV with 3 stripes, a stripe size of 8KiB and a size of 100MiB. The LV name is chosen by lvcreate.<br />
+<p>Create a striped LV with 3 stripes, a stripe size of 8KiB and a size of 100MiB. The LV name is chosen by lvcreate.<br/>
  <code>lvcreate -i 3 -I 8 -L 100m vg00</code> </p>
-<p> Create a raid1 LV with two images, and a useable size of 500 MiB. This operation requires two devices, one for each mirror image. RAID metadata (superblock and bitmap) is also included on the two devices.<br />
+<p> Create a raid1 LV with two images, and a useable size of 500 MiB. This operation requires two devices, one for each mirror image. RAID metadata (superblock and bitmap) is also included on the two devices.<br/>
  <code>lvcreate &#8211;type raid1 -m1 -L 500m -n mylv vg00</code> </p>
-<p> Create a mirror LV with two images, and a useable size of 500 MiB. This operation requires three devices: two for mirror images and one for a disk log.<br />
+<p> Create a mirror LV with two images, and a useable size of 500 MiB. This operation requires three devices: two for mirror images and one for a disk log.<br/>
  <code>lvcreate &#8211;type mirror -m1 -L 500m -n mylv vg00</code> </p>
-<p> Create a mirror LV with 2 images, and a useable size of 500 MiB. This operation requires 2 devices because the log is in memory.<br />
+<p> Create a mirror LV with 2 images, and a useable size of 500 MiB. This operation requires 2 devices because the log is in memory.<br/>
  <code>lvcreate &#8211;type mirror -m1 &#8211;mirrorlog core -L 500m -n mylv vg00</code> </p>
-<p> Create a copy-on-write snapshot of an LV:<br />
+<p> Create a copy-on-write snapshot of an LV:<br/>
  <code>lvcreate &#8211;snapshot &#8211;size 100m &#8211;name mysnap vg00/mylv</code> </p>
-<p> Create a copy-on-write snapshot with a size sufficient for overwriting 20% of the size of the original LV.<br />
+<p> Create a copy-on-write snapshot with a size sufficient for overwriting 20% of the size of the original LV.<br/>
  <code>lvcreate -s -l 20%ORIGIN -n mysnap vg00/mylv</code> </p>
-<p> Create a sparse LV with 1TiB of virtual space, and actual space just under 100MiB.<br />
+<p> Create a sparse LV with 1TiB of virtual space, and actual space just under 100MiB.<br/>
  <code>lvcreate &#8211;snapshot &#8211;virtualsize 1t &#8211;size 100m &#8211;name mylv vg00</code> </p>
-<p> Create a linear LV with a usable size of 64MiB on specific physical extents.<br />
+<p> Create a linear LV with a usable size of 64MiB on specific physical extents.<br/>
  <code>lvcreate -L 64m -n mylv vg00 /dev/sda:0-7 /dev/sdb:0-7</code> </p>
-<p> Create a RAID5 LV with a usable size of 5GiB, 3 stripes, a stripe size of 64KiB, using a total of 4 devices (including one for parity).<br />
+<p> Create a RAID5 LV with a usable size of 5GiB, 3 stripes, a stripe size of 64KiB, using a total of 4 devices (including one for parity).<br/>
  <code>lvcreate &#8211;type raid5 -L 5G -i 3 -I 64 -n mylv vg00</code> </p>
-<p> Create a RAID5 LV using all of the free space in the VG and spanning all the PVs in the VG (note that the command will fail if there are more than 8 PVs in the VG, in which case <code>-i 7</code> must be used to get to the current maximum of 8 devices including parity for RaidLVs).<br />
+<p> Create a RAID5 LV using all of the free space in the VG and spanning all the PVs in the VG (note that the command will fail if there are more than 8 PVs in the VG, in which case <code>-i 7</code> must be used to get to the current maximum of 8 devices including parity for RaidLVs).<br/>
  <code>lvcreate &#8211;config allocation/raid_stripe_all_devices=1</code></p>
 <dl>
 <dd><code>&#8211;type raid5 -l 100%FREE -n mylv vg00</code></dd></dl>
-<p> Create RAID10 LV with a usable size of 5GiB, using 2 stripes, each on a two-image mirror. (Note that the <code>-i</code> and <code>-m</code> arguments behave differently: <code>-i</code> specifies the total number of stripes, but <code>-m</code> specifies the number of images in addition to the first image).<br />
+<p> Create RAID10 LV with a usable size of 5GiB, using 2 stripes, each on a two-image mirror. (Note that the <code>-i</code> and <code>-m</code> arguments behave differently: <code>-i</code> specifies the total number of stripes, but <code>-m</code> specifies the number of images in addition to the first image).<br/>
  <code>lvcreate &#8211;type raid10 -L 5G -i 2 -m 1 -n mylv vg00</code> </p>
-<p> Create a 1TiB thin LV mythin, with 256GiB thinpool tpool0 in vg00.<br />
+<p> Create a 1TiB thin LV mythin, with 256GiB thinpool tpool0 in vg00.<br/>
  <code>lvcreate &#8211;T &#8211;size 256G &#8211;name mythin vg00/tpool0</code> </p>
-<p> Create a 1TiB thin LV, first creating a new thin pool for it, where the thin pool has 100MiB of space, uses 2 stripes, has a 64KiB stripe size, and 256KiB chunk size.<br />
+<p> Create a 1TiB thin LV, first creating a new thin pool for it, where the thin pool has 100MiB of space, uses 2 stripes, has a 64KiB stripe size, and 256KiB chunk size.<br/>
  <code>lvcreate &#8211;type thin &#8211;name mylv &#8211;thinpool mypool</code></p>
 <dl>
 <dd><code>-V 1t -L 100m -i 2 -I 64 -c 256 vg00</code></dd></dl>
-<p> Create a thin snapshot of a thin LV (the size option must not be used, otherwise a copy-on-write snapshot would be created).<br />
+<p> Create a thin snapshot of a thin LV (the size option must not be used, otherwise a copy-on-write snapshot would be created).<br/>
  <code>lvcreate &#8211;snapshot &#8211;name mysnap vg00/thinvol</code> </p>
-<p> Create a thin snapshot of the read-only inactive LV named &quot;origin&quot; which becomes an external origin for the thin snapshot LV.<br />
+<p> Create a thin snapshot of the read-only inactive LV named &quot;origin&quot; which becomes an external origin for the thin snapshot LV.<br/>
  <code>lvcreate &#8211;snapshot &#8211;name mysnap &#8211;thinpool mypool vg00/origin</code> </p>
-<p> Create a cache pool from a fast physical device. The cache pool can then be used to cache an LV.<br />
+<p> Create a cache pool from a fast physical device. The cache pool can then be used to cache an LV.<br/>
  <code>lvcreate &#8211;type cache-pool -L 1G -n my_cpool vg00 /dev/fast1</code> </p>
-<p> Create a cache LV, first creating a new origin LV on a slow physical device, then combining the new origin LV with an existing cache pool.<br />
+<p> Create a cache LV, first creating a new origin LV on a slow physical device, then combining the new origin LV with an existing cache pool.<br/>
  <code>lvcreate &#8211;type cache &#8211;cachepool my_cpool</code></p>
 <dl>
 <dd><code>-L 100G -n mylv vg00 /dev/slow1</code></dd></dl>
-<p> Create a VDO LV vdo0 with VDOPoolLV size of 10GiB and name vpool1.<br />
+<p> Create a VDO LV vdo0 with VDOPoolLV size of 10GiB and name vpool1.<br/>
  <code>lvcreate &#8211;vdo &#8211;size 10G &#8211;name vdo0 vg00/vpool1</code></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8) <code><a href="/docs/linux/man/8-pvchange/">pvchange</a></code>(8) <code><a href="/docs/linux/man/8-pvck/">pvck</a></code>(8) <code><a href="/docs/linux/man/8-pvcreate/">pvcreate</a></code>(8) <code><a href="/docs/linux/man/8-pvdisplay/">pvdisplay</a></code>(8) <code><a href="/docs/linux/man/8-pvmove/">pvmove</a></code>(8) <code><a href="/docs/linux/man/8-pvremove/">pvremove</a></code>(8) <code><a href="/docs/linux/man/8-pvresize/">pvresize</a></code>(8) <code><a href="/docs/linux/man/8-pvs/">pvs</a></code>(8) <code><a href="/docs/linux/man/8-pvscan/">pvscan</a></code>(8) <code><a href="/docs/linux/man/8-vgcfgbackup/">vgcfgbackup</a></code>(8) <code><a href="/docs/linux/man/8-vgcfgrestore/">vgcfgrestore</a></code>(8) <code><a href="/docs/linux/man/8-vgchange/">vgchange</a></code>(8) <code><a href="/docs/linux/man/8-vgck/">vgck</a></code>(8) <code><a href="/docs/linux/man/8-vgcreate/">vgcreate</a></code>(8) <code><a href="/docs/linux/man/8-vgconvert/">vgconvert</a></code>(8) <code><a href="/docs/linux/man/8-vgdisplay/">vgdisplay</a></code>(8) <code><a href="/docs/linux/man/8-vgexport/">vgexport</a></code>(8) <code><a href="/docs/linux/man/8-vgextend/">vgextend</a></code>(8) <code><a href="/docs/linux/man/8-vgimport/">vgimport</a></code>(8) <code><a href="/docs/linux/man/8-vgimportclone/">vgimportclone</a></code>(8) <code><a href="/docs/linux/man/8-vgmerge/">vgmerge</a></code>(8) <code><a href="/docs/linux/man/8-vgmknodes/">vgmknodes</a></code>(8) <code><a href="/docs/linux/man/8-vgreduce/">vgreduce</a></code>(8) <code><a href="/docs/linux/man/8-vgremove/">vgremove</a></code>(8) <code><a href="/docs/linux/man/8-vgrename/">vgrename</a></code>(8) <code><a href="/docs/linux/man/8-vgs/">vgs</a></code>(8) <code><a href="/docs/linux/man/8-vgscan/">vgscan</a></code>(8) <code><a href="/docs/linux/man/8-vgsplit/">vgsplit</a></code>(8) <code><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></code>(8) <code><a href="/docs/linux/man/8-lvchange/">lvchange</a></code>(8) <code><a href="/docs/linux/man/8-lvconvert/">lvconvert</a></code>(8) <code><a href="/docs/linux/man/8-lvdisplay/">lvdisplay</a></code>(8) <code><a href="/docs/linux/man/8-lvextend/">lvextend</a></code>(8) <code><a href="/docs/linux/man/8-lvreduce/">lvreduce</a></code>(8) <code><a href="/docs/linux/man/8-lvremove/">lvremove</a></code>(8) <code><a href="/docs/linux/man/8-lvrename/">lvrename</a></code>(8) <code><a href="/docs/linux/man/8-lvresize/">lvresize</a></code>(8) <code><a href="/docs/linux/man/8-lvs/">lvs</a></code>(8) <code><a href="/docs/linux/man/8-lvscan/">lvscan</a></code>(8) <code><a href="/docs/linux/man/8-lvm-fullreport/">lvm-fullreport</a></code>(8) <code><a href="/docs/linux/man/8-lvm-lvpoll/">lvm-lvpoll</a></code>(8) <code><a href="/docs/linux/man/8-lvm2-activation-generator/">lvm2-activation-generator</a></code>(8) <code><a href="/docs/linux/man/8-blkdeactivate/">blkdeactivate</a></code>(8) <code><a href="/docs/linux/man/8-lvmdump/">lvmdump</a></code>(8) <code><a href="/docs/linux/man/8-dmeventd/">dmeventd</a></code>(8) <code><a href="/docs/linux/man/8-lvmpolld/">lvmpolld</a></code>(8) <code><a href="/docs/linux/man/8-lvmlockd/">lvmlockd</a></code>(8) <code><a href="/docs/linux/man/8-lvmlockctl/">lvmlockctl</a></code>(8) <code><a href="/docs/linux/man/8-cmirrord/">cmirrord</a></code>(8) <code>lvmdbusd</code>(8) <code><a href="/docs/linux/man/7-lvmsystemid/">lvmsystemid</a></code>(7) <code><a href="/docs/linux/man/7-lvmreport/">lvmreport</a></code>(7) <code><a href="/docs/linux/man/7-lvmraid/">lvmraid</a></code>(7) <code><a href="/docs/linux/man/7-lvmthin/">lvmthin</a></code>(7) <code><a href="/docs/linux/man/7-lvmcache/">lvmcache</a></code>(7) </p>

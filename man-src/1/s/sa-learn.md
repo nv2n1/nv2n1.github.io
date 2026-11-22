@@ -80,7 +80,7 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 <dt><code>&#8211;sync</code></dt>
 <dd> Synchronize the journal and databases. Upon successfully syncing the database with the entries in the journal, the journal file is removed.</dd>
 <dt><code>&#8211;force-expire</code></dt>
-<dd> Forces an expiry attempt, regardless of whether it may be necessary or not. Note: This doesn&#8217;t mean any tokens will actually expire. Please see the <font SIZE="-1">EXPIRATION</font> section below. </dd>
+<dd> Forces an expiry attempt, regardless of whether it may be necessary or not. Note: This doesn&#8217;t mean any tokens will actually expire. Please see the EXPIRATION section below. </dd>
 <p> Note: <tt>&quot;--force-expire&quot;</tt> also causes the journal data to be synchronized into the Bayes databases.</p>
 <dt><code>&#8211;forget</code></dt>
 <dd> Forget a given message previously learnt.</dd>
@@ -88,21 +88,21 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 <dd> Allows a commandline override of the <i>bayes_path</i> configuration option.</dd>
 <dt><code>&#8211;dump</code> <i>option</i></dt>
 <dd> Display the contents of the Bayes database. Without an option or with the <i>all</i> option, all magic tokens and data tokens will be displayed. <i>magic</i> will only display magic tokens, and <i>data</i> will only display the data tokens. </dd>
-<p> Can also use the <code>&#8211;regexp</code> <i></i><font SIZE="-1"><i>RE</i></font><i></i> option to specify which tokens to display based on a regular expression.</p>
+<p> Can also use the <code>&#8211;regexp</code> <i></i><i>RE</i><i></i> option to specify which tokens to display based on a regular expression.</p>
 <dt><code>&#8211;clear</code></dt>
 <dd> Clear an existing Bayes database by removing all traces of the database. </dd>
-<p> <font SIZE="-1">WARNING:</font> This is destructive and should be used with care.</p>
+<p> WARNING: This is destructive and should be used with care.</p>
 <dt><code>&#8211;backup</code></dt>
 <dd> Performs a dump of the Bayes database in machine/human readable format. </dd>
 <p> The dump will include token and seen data. It is suitable for input back into the &#8211;restore command.</p>
 <dt><code>&#8211;restore</code>=<i>filename</i></dt>
 <dd> Performs a restore of the Bayes database defined by <i>filename</i>. </dd>
-<p> <font SIZE="-1">WARNING:</font> This is a destructive operation, previous Bayes data will be wiped out.</p>
+<p> WARNING: This is a destructive operation, previous Bayes data will be wiped out.</p>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Print help message and exit.</dd>
 <dt><code>-u</code> <i>username</i>, <code>&#8211;username</code>=<i>username</i></dt>
-<dd> If specified this username will override the username taken from the runtime environment. You can use this option to specify users in a virtual user configuration when using <font SIZE="-1">SQL</font> as the Bayes backend. </dd>
-<p> <font SIZE="-1">NOTE:</font> This option will not change to the given <i>username</i>, it will only attempt to act on behalf of that user. Because of this you will need to have proper permissions to be able to change files owned by <i>username</i>. In the case of <font SIZE="-1">SQL</font> this generally is not a problem.</p>
+<dd> If specified this username will override the username taken from the runtime environment. You can use this option to specify users in a virtual user configuration when using SQL as the Bayes backend. </dd>
+<p> NOTE: This option will not change to the given <i>username</i>, it will only attempt to act on behalf of that user. Because of this you will need to have proper permissions to be able to change files owned by <i>username</i>. In the case of SQL this generally is not a problem.</p>
 <dt><code>-C</code> <i>path</i>, <code>&#8211;configpath</code>=<i>path</i>, <code>&#8211;config-file</code>=<i>path</i></dt>
 <dd> Use the specified path for locating the distributed configuration files. Ignore the default directories (usually <tt>&quot;/usr/share/spamassassin&quot;</tt> or similar).</dd>
 <dt><code>&#8211;siteconfigpath</code>=<i>path</i></dt>
@@ -112,7 +112,7 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 <dt><code>-p</code> <i>prefs</i>, <code>&#8211;prefspath</code>=<i>prefs</i>, <code>&#8211;prefs-file</code>=<i>prefs</i></dt>
 <dd> Read user score preferences from <i>prefs</i> (usually <tt>&quot;$HOME/.spamassassin/user_prefs&quot;</tt>).</dd>
 <dt><code>&#8211;progress</code></dt>
-<dd> Prints a progress bar (to <font SIZE="-1">STDERR</font>) showing the current progress. In the case where no valid terminal is found this option will behave very much like the &#8211;showdots option.</dd>
+<dd> Prints a progress bar (to STDERR) showing the current progress. In the case where no valid terminal is found this option will behave very much like the &#8211;showdots option.</dd>
 <dt><code>-D</code> [<i>area,&#8230;</i>], <code>&#8211;debug</code> [<i>area,&#8230;</i>]</dt>
 <dd> Produce debugging output. If no areas are listed, all debugging information is printed. Diagnostic output can also be enabled for each area individually; <i>area</i> is the area of the code to instrument. For example, to produce diagnostic output on bayes, learn, and dns, use: </dd>
 <pre>
@@ -146,15 +146,15 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 <dt>Repeat!</dt>
 <dd> At this point, if you have multiple databases, you should perform the procedure above for each of them. (i.e. each user&#8217;s database needs to be backed up before continuing.)</dd>
 <dt>Switch backends</dt>
-<dd> Once you have backed up all databases you can update your configuration for the new database backend. This will involve at least the bayes_store_module config option and may involve some additional config options depending on what is required by the module. (For example, you may need to configure an <font SIZE="-1">SQL</font> database.)</dd>
+<dd> Once you have backed up all databases you can update your configuration for the new database backend. This will involve at least the bayes_store_module config option and may involve some additional config options depending on what is required by the module. (For example, you may need to configure an SQL database.)</dd>
 <dt>sa-learn &#8211;restore backup.txt</dt>
 <dd> Again, you need to do this for every database.</dd></dl>
-<p> If you are migrating to <font SIZE="-1">SQL</font> you can make use of the -u &lt;username&gt; option in sa-learn to populate each user&#8217;s database. Otherwise, you must run sa-learn as the user who database you are restoring.</p>
+<p> If you are migrating to SQL you can make use of the -u &lt;username&gt; option in sa-learn to populate each user&#8217;s database. Otherwise, you must run sa-learn as the user who database you are restoring.</p>
 <h2>INTRODUCTION TO BAYESIAN FILTERING</h2>
 <p> (Thanks to Michael Bell for this section!) </p>
 <p> For a more lengthy description of how this works, go to <a rel="nofollow" href="http://www.paulgraham.com/">http://www.paulgraham.com/</a> and see &#8220;A Plan for Spam&#8221;. It&#8217;s reasonably readable, even if statistics make me break out in hives. </p>
 <p> The short semi-inaccurate version: Given training, a spam heuristics engine can take the most &#8220;spammy&#8221; and &#8220;hammy&#8221; words and apply probabilistic analysis. Furthermore, once given a basis for the analysis, the engine can continue to learn iteratively by applying both the non-Bayesian and Bayesian rulesets together to create evolving &#8220;intelligence&#8221;. </p>
-<p> SpamAssassin 2.50 and later supports Bayesian spam analysis, in the form of the <font SIZE="-1">BAYES</font> rules. This is a new feature, quite powerful, and is disabled until enough messages have been learnt. </p>
+<p> SpamAssassin 2.50 and later supports Bayesian spam analysis, in the form of the BAYES rules. This is a new feature, quite powerful, and is disabled until enough messages have been learnt. </p>
 <p> The pros of Bayesian spam analysis:</p>
 <dl>
 <dt>Can greatly reduce false positives and false negatives.</dt>
@@ -166,7 +166,7 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 <dt>A decent number of messages are required before results are useful for ham/spam determination.</dt>
 <dd>
 </dd><dt>It&#8217;s hard to explain why a message is or isn&#8217;t marked as spam.</dt>
-<dd> i.e.: a straightforward rule, that matches, say, &#8220;<font SIZE="-1">VIAGRA&#8221;</font> is easy to understand. If it generates a false positive or false negative, it is fairly easy to understand why. </dd>
+<dd> i.e.: a straightforward rule, that matches, say, &#8220;VIAGRA&#8221; is easy to understand. If it generates a false positive or false negative, it is fairly easy to understand why. </dd>
 <p> With Bayesian analysis, it&#8217;s all probabilities &#8211; &#8220;because the past says it is likely as this falls into a probabilistic distribution common to past spam in your systems&#8221;. Tell that to your users! Tell that to the client when he asks &#8220;what can I do to change this&#8221;. (By the way, the answer in this case is &#8220;use whitelisting&#8221;.)</p>
 <dt>It will take disk space and memory.</dt>
 <dd> The databases it maintains take quite a lot of resources to store and use.</dd></dl>
@@ -175,7 +175,7 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 <p> First a high-level overview:</p>
 <dl>
 <dt>Build a significant sample of both ham and spam.</dt>
-<dd> I suggest several thousand of each, placed in <font SIZE="-1">SPAM</font> and <font SIZE="-1">HAM</font> directories or mailboxes. Yes, you <font SIZE="-1">MUST</font> hand-sort this &#8211; otherwise the results won&#8217;t be much better than SpamAssassin on its own. Verify the spamminess/haminess of <font SIZE="-1">EVERY</font> message. You&#8217;re urged to avoid using a publicly available corpus (sample) &#8211; this must be taken from <font SIZE="-1">YOUR</font> mail server, if it is to be statistically useful. Otherwise, the results may be pretty skewed.</dd>
+<dd> I suggest several thousand of each, placed in SPAM and HAM directories or mailboxes. Yes, you MUST hand-sort this &#8211; otherwise the results won&#8217;t be much better than SpamAssassin on its own. Verify the spamminess/haminess of EVERY message. You&#8217;re urged to avoid using a publicly available corpus (sample) &#8211; this must be taken from YOUR mail server, if it is to be statistically useful. Otherwise, the results may be pretty skewed.</dd>
 <dt>Use this tool to teach SpamAssassin about these samples, like so:</dt>
 <dd>
 <pre>
@@ -227,11 +227,11 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 <dd> A map of Message-Id and some data from headers and body to what that message was learnt as. This is used so that SpamAssassin can avoid re-learning a message it has already seen, and so it can reverse the training if you later decide that message was learnt incorrectly. </dd>
 <p> This is a database file, using <tt>&quot;DB_File&quot;</tt>.</p>
 <dt>bayes_journal</dt>
-<dd> While SpamAssassin is scanning mails, it needs to track which tokens it uses in its calculations. To avoid the contention of having each SpamAssassin process attempting to gain write access to the Bayes <font SIZE="-1">DB,</font> the token timestamps are written to a &#8216;journal&#8217; file which will later (either automatically or via <tt>&quot;sa-learn --sync&quot;</tt>) be used to synchronize the Bayes <font SIZE="-1">DB.</font> </dd>
+<dd> While SpamAssassin is scanning mails, it needs to track which tokens it uses in its calculations. To avoid the contention of having each SpamAssassin process attempting to gain write access to the Bayes DB, the token timestamps are written to a &#8216;journal&#8217; file which will later (either automatically or via <tt>&quot;sa-learn --sync&quot;</tt>) be used to synchronize the Bayes DB. </dd>
 <p> Also, through the use of <tt>&quot;bayes_learn_to_journal&quot;</tt>, or when using the <tt>&quot;--no-sync&quot;</tt> option with sa-learn, the actual learning data will take be placed into the journal for later synchronization. This is typically useful for high-traffic sites to avoid the same contention as stated above.</dl>
 <h2>EXPIRATION</h2>
 <p> Since SpamAssassin can auto-learn messages, the Bayes database files could increase perpetually until they fill your disk. To control this, SpamAssassin performs journal synchronization and bayes expiration periodically when certain criteria (listed below) are met. </p>
-<p> SpamAssassin can sync the journal and expire the <font SIZE="-1">DB</font> tokens either manually or opportunistically. A journal sync is due if <i>&#8211;sync</i> is passed to sa-learn (manual), or if the following is true (opportunistic):</p>
+<p> SpamAssassin can sync the journal and expire the DB tokens either manually or opportunistically. A journal sync is due if <i>&#8211;sync</i> is passed to sa-learn (manual), or if the following is true (opportunistic):</p>
 <dl>
 <dt>&#8211; bayes_journal_max_size does not equal 0 (means don&#8217;t sync)</dt>
 <dd>
@@ -251,13 +251,13 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 <dd>
 </dd><dt>&#8211; bayes_auto_expire does not equal 0</dt>
 <dd>
-</dd><dt>&#8211; the number of tokens in the <font SIZE="-1">DB</font> is &gt; 100,000</dt>
+</dd><dt>&#8211; the number of tokens in the DB is &gt; 100,000</dt>
 <dd>
-</dd><dt>&#8211; the number of tokens in the <font SIZE="-1">DB</font> is &gt; bayes_expiry_max_db_size</dt>
+</dd><dt>&#8211; the number of tokens in the DB is &gt; bayes_expiry_max_db_size</dt>
 <dd>
 </dd><dt>&#8211; there is at least a 12 hr difference between the oldest and newest token atimes</dt>
 <dd></dd></dl>
-<h3><font SIZE="-1">EXPIRE LOGIC</font></h3>
+<h3>EXPIRE LOGIC</h3>
 <p> If either the manual or opportunistic method causes an expire run to start, here is the logic that is used:</p>
 <dl>
 <dt>&#8211; figure out how many tokens to keep. take the larger of either bayes_expiry_max_db_size * 75% or 100,000 tokens. therefore, the goal reduction is number of tokens &#8211; number of tokens to keep.</dt>
@@ -284,8 +284,8 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 <dl>
 </dl>
 </dl>
-<h3><font SIZE="-1">ESTIMATION PASS LOGIC</font></h3>
-<p> Go through each of the <font SIZE="-1">DB</font>&#8216;s tokens. Starting at 12hrs, calculate whether or not the token would be expired (based on the difference between the token&#8217;s atime and the db&#8217;s newest token atime) and keep the count. Work out from 12hrs exponentially by powers of 2. ie: 12hrs * 1, 12hrs * 2, 12hrs * 4, 12hrs * 8, and so on, up to 12hrs * 512 (6144hrs, or 256 days). </p>
+<h3>ESTIMATION PASS LOGIC</h3>
+<p> Go through each of the DB&#8216;s tokens. Starting at 12hrs, calculate whether or not the token would be expired (based on the difference between the token&#8217;s atime and the db&#8217;s newest token atime) and keep the count. Work out from 12hrs exponentially by powers of 2. ie: 12hrs * 1, 12hrs * 2, 12hrs * 4, 12hrs * 8, and so on, up to 12hrs * 512 (6144hrs, or 256 days). </p>
 <p> The larger the delta, the smaller the number of tokens that will be expired. Conversely, the number of tokens goes up as the delta gets smaller. So starting at the largest atime delta, figure out which delta will expire the most tokens without going above the goal expiration count. Use this to choose the atime delta to use, unless one of the following occurs:</p>
 <dl>
 <dt>&#8211; the largest atime (smallest reduction count) would expire too many tokens. this means the learned tokens are mostly old and there needs to be new tokens learned before an expire can occur.</dt>
@@ -294,8 +294,8 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 <dd>
 </dd><dt>&#8211; the number of tokens that would be removed is &lt; 1000. the benefit isn&#8217;t worth the effort. more tokens need to be learned.</dt>
 <dd></dd></dl>
-<p> If the expire run gets past this point, it will continue to the end. A new <font SIZE="-1">DB</font> is created since the majority of <font SIZE="-1">DB</font> libraries don&#8217;t shrink the <font SIZE="-1">DB</font> file when tokens are removed. So we do the &#8220;create new, migrate old to new, remove old, rename new&#8221; shuffle.</p>
-<h3><font SIZE="-1">EXPIRY RELATED CONFIGURATION SETTINGS</font></h3>
+<p> If the expire run gets past this point, it will continue to the end. A new DB is created since the majority of DB libraries don&#8217;t shrink the DB file when tokens are removed. So we do the &#8220;create new, migrate old to new, remove old, rename new&#8221; shuffle.</p>
+<h3>EXPIRY RELATED CONFIGURATION SETTINGS</h3>
 <dl>
 <dt>&quot;bayes_auto_expire&quot; is used to specify whether or not SpamAssassin ought to opportunistically attempt to expire the Bayes database. The default is 1 (yes).</dt>
 <dd>

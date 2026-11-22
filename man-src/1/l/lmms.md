@@ -10,9 +10,9 @@ description: "lmms – software for easy music production"
 
 <p> lmms &#8211; software for easy music production </p>
 <h2>SYNOPSIS</h2>
-<p> <code>lmms</code> [ &#8212;<code>render</code> <i>file</i> ] [options]<br />
- <code>lmms</code> [ &#8212;<code>upgrade</code> <i>in</i> <i>out</i> ]<br />
- <code>lmms</code> [ &#8212;<code>dump</code> <i>in</i> ]<br />
+<p> <code>lmms</code> [ &#8212;<code>render</code> <i>file</i> ] [options]<br/>
+ <code>lmms</code> [ &#8212;<code>upgrade</code> <i>in</i> <i>out</i> ]<br/>
+ <code>lmms</code> [ &#8212;<code>dump</code> <i>in</i> ]<br/>
  <code>lmms</code> [ file ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>LMMS</code> LMMS is a free cross-platform alternative to commercial programs like FL Studio®, which allow you to produce music with your computer. This includes the creation of melodies and beats, the synthesis and mixing of sounds, and arranging of samples. You can have fun with your MIDI-keyboard and much more; all in a user-friendly and modern interface. </p>

@@ -10,64 +10,64 @@ description: "Heimdal Kerberos 5 support functions –"
 
 <p> Heimdal Kerberos 5 support functions &#8211; </p>
 <h3>Data Structures</h3>
-<p> struct <code>krb5plugin_an2ln_ftable_desc</code><br />
- <i>Description of the krb5_aname_to_lname(3) plugin facility. </i><br />
- struct <code>krb5plugin_db_ftable_desc</code><br />
- <i>Description of the krb5 DB plugin facility. </i><br />
- struct <code>krb5plugin_kuserok_ftable_desc</code><br />
+<p> struct <code>krb5plugin_an2ln_ftable_desc</code><br/>
+ <i>Description of the krb5_aname_to_lname(3) plugin facility. </i><br/>
+ struct <code>krb5plugin_db_ftable_desc</code><br/>
+ <i>Description of the krb5 DB plugin facility. </i><br/>
+ struct <code>krb5plugin_kuserok_ftable_desc</code><br/>
  <i>Description of the <a href="/docs/linux/man/3-krb5_kuserok/">krb5_kuserok</a>(3) plugin facility. </i></p>
 <h3>Functions</h3>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_acl_match_string</code> (krb5_context context, const char *string, const char *format,&#8230;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_acl_match_file</code> (krb5_context context, const char *file, const char *format,&#8230;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_aname_to_localname</code> (krb5_context context, krb5_const_principal aname, size_t lnsize, char *lname)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_config_parse_file_multi</code> (krb5_context context, const char *fname, krb5_config_section **res)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_config_file_free</code> (krb5_context context, krb5_config_section *s)&quot; </p>
-<p> KRB5_LIB_FUNCTION const<br />
- krb5_config_binding<br />
+<p> KRB5_LIB_FUNCTION const<br/>
+ krb5_config_binding<br/>
  *KRB5_LIB_CALL <code>krb5_config_get_list</code> (krb5_context context, const krb5_config_section *c,&#8230;)&quot; </p>
-<p> KRB5_LIB_FUNCTION const<br />
- krb5_config_binding<br />
+<p> KRB5_LIB_FUNCTION const<br/>
+ krb5_config_binding<br/>
  *KRB5_LIB_CALL <code>krb5_config_vget_list</code> (krb5_context context, const krb5_config_section *c, va_list args)&quot; </p>
-<p> KRB5_LIB_FUNCTION const char<br />
+<p> KRB5_LIB_FUNCTION const char<br/>
  *KRB5_LIB_CALL <code>krb5_config_get_string</code> (krb5_context context, const krb5_config_section *c,&#8230;)&quot; </p>
-<p> KRB5_LIB_FUNCTION const char<br />
+<p> KRB5_LIB_FUNCTION const char<br/>
  *KRB5_LIB_CALL <code>krb5_config_vget_string</code> (krb5_context context, const krb5_config_section *c, va_list args)&quot; </p>
-<p> KRB5_LIB_FUNCTION const char<br />
+<p> KRB5_LIB_FUNCTION const char<br/>
  *KRB5_LIB_CALL <code>krb5_config_vget_string_default</code> (krb5_context context, const krb5_config_section *c, const char *def_value, va_list args)&quot; </p>
-<p> KRB5_LIB_FUNCTION const char<br />
+<p> KRB5_LIB_FUNCTION const char<br/>
  *KRB5_LIB_CALL <code>krb5_config_get_string_default</code> (krb5_context context, const krb5_config_section *c, const char *def_value,&#8230;)&quot; </p>
-<p> KRB5_LIB_FUNCTION char<br />
+<p> KRB5_LIB_FUNCTION char<br/>
  **KRB5_LIB_CALL <code>krb5_config_vget_strings</code> (krb5_context context, const krb5_config_section *c, va_list args)&quot; </p>
-<p> KRB5_LIB_FUNCTION char<br />
+<p> KRB5_LIB_FUNCTION char<br/>
  **KRB5_LIB_CALL <code>krb5_config_get_strings</code> (krb5_context context, const krb5_config_section *c,&#8230;)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_config_free_strings</code> (char **strings)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_config_vget_bool_default</code> (krb5_context context, const krb5_config_section *c, krb5_boolean def_value, va_list args)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_config_vget_bool</code> (krb5_context context, const krb5_config_section *c, va_list args)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_config_get_bool_default</code> (krb5_context context, const krb5_config_section *c, krb5_boolean def_value,&#8230;)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_config_get_bool</code> (krb5_context context, const krb5_config_section *c,&#8230;)&quot; </p>
 <p> KRB5_LIB_FUNCTION int KRB5_LIB_CALL <code>krb5_config_vget_time_default</code> (krb5_context context, const krb5_config_section *c, int def_value, va_list args) </p>
 <p> KRB5_LIB_FUNCTION int KRB5_LIB_CALL <code>krb5_config_vget_time</code> (krb5_context context, const krb5_config_section *c, va_list args) </p>
 <p> KRB5_LIB_FUNCTION int KRB5_LIB_CALL <code>krb5_config_get_time_default</code> (krb5_context context, const krb5_config_section *c, int def_value,&#8230;) </p>
 <p> KRB5_LIB_FUNCTION int KRB5_LIB_CALL <code>krb5_config_get_time</code> (krb5_context context, const krb5_config_section *c,&#8230;) </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_expand_hostname</code> (krb5_context context, const char *orig_hostname, char **new_hostname)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_expand_hostname_realms</code> (krb5_context context, const char *orig_hostname, char **new_hostname, char ***realms)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_free_host_realm</code> (krb5_context context, krb5_realm *realmlist)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_kuserok</code> (krb5_context, krb5_principal, const char *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_plugin_register</code> (krb5_context, enum krb5_plugin_type, const char *, void *)&quot; </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -76,9 +76,9 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context.<br />
- <i>file</i> file with acl listed in the file.<br />
- <i>format</i> format to match.<br />
+</dt><dd> <i>context</i> Kerberos 5 context.<br/>
+ <i>file</i> file with acl listed in the file.<br/>
+ <i>format</i> format to match.<br/>
  <i>&#8230;</i> parameter to format string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -102,9 +102,9 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
- <i>string</i> string to match with<br />
- <i>format</i> format to match<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
+ <i>string</i> string to match with<br/>
+ <i>format</i> format to match<br/>
  <i>&#8230;</i> parameter to format string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -137,16 +137,16 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A krb5_context<br />
- <i>aname</i> A principal name<br />
- <i>lnsize</i> The size of the buffer into which the username will be written<br />
+</dt><dd> <i>context</i> A krb5_context<br/>
+ <i>aname</i> A principal name<br/>
+ <i>lnsize</i> The size of the buffer into which the username will be written<br/>
  <i>lname</i> The buffer into which the username will be written</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_config_file_free (krb5_contextcontext, krb5_config_section *s)</h3>
 <p> Free configuration file section, the result of krb5_config_parse_file() and <code>krb5_config_parse_file_multi()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context<br />
+</dt><dd> <i>context</i> A Kerberos 5 context<br/>
  <i>s</i> the configuration section to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -164,8 +164,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
  <i>&#8230;</i> a list of names, terminated with NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -176,9 +176,9 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
- <i>def_value</i> the default value to return if no configuration found in the database.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
+ <i>def_value</i> the default value to return if no configuration found in the database.<br/>
  <i>&#8230;</i> a list of names, terminated with NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -189,8 +189,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
  <i>&#8230;</i> a list of names, terminated with NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -201,8 +201,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
  <i>&#8230;</i> a list of names, terminated with NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -213,9 +213,9 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
- <i>def_value</i> the default value to return if no configuration found in the database.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
+ <i>def_value</i> the default value to return if no configuration found in the database.<br/>
  <i>&#8230;</i> a list of names, terminated with NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -226,8 +226,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
  <i>&#8230;</i> a list of names, terminated with NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -238,8 +238,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
  <i>&#8230;</i> a list of names, terminated with NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -250,9 +250,9 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
- <i>def_value</i> the default value to return if no configuration found in the database.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
+ <i>def_value</i> the default value to return if no configuration found in the database.<br/>
  <i>&#8230;</i> a list of names, terminated with NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -263,8 +263,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Kerberos 5 context.<br />
- <i>fname</i> a file name to a Kerberos configuration file<br />
+</dt><dd> <i>context</i> a Kerberos 5 context.<br/>
+ <i>fname</i> a file name to a Kerberos configuration file<br/>
  <i>res</i> the returned result, must be free with <code>krb5_free_config_files()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -276,8 +276,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
  <i>args</i> a va_list of arguments</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -289,9 +289,9 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
- <i>def_value</i> the default value to return if no configuration found in the database.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
+ <i>def_value</i> the default value to return if no configuration found in the database.<br/>
  <i>args</i> a va_list of arguments</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -302,8 +302,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
  <i>args</i> a va_list of arguments</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -314,8 +314,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
  <i>args</i> a va_list of arguments</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -326,9 +326,9 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
- <i>def_value</i> the default value to return if no configuration found in the database.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
+ <i>def_value</i> the default value to return if no configuration found in the database.<br/>
  <i>args</i> a va_list of arguments</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -339,8 +339,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
  <i>args</i> a va_list of arguments</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -351,8 +351,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
  <i>args</i> a va_list of arguments</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -364,9 +364,9 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>c</i> a configuration section, or NULL to use the section from context<br />
- <i>def_value</i> the default value to return if no configuration found in the database.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>c</i> a configuration section, or NULL to use the section from context<br/>
+ <i>def_value</i> the default value to return if no configuration found in the database.<br/>
  <i>args</i> a va_list of arguments</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -377,8 +377,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context<br />
- <i>orig_hostname</i> hostname to canonicalise.<br />
+</dt><dd> <i>context</i> a Keberos context<br/>
+ <i>orig_hostname</i> hostname to canonicalise.<br/>
  <i>new_hostname</i> output hostname, caller must free hostname with krb5_xfree().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -389,9 +389,9 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context<br />
- <i>orig_hostname</i> hostname to canonicalise.<br />
- <i>new_hostname</i> output hostname, caller must free hostname with krb5_xfree().<br />
+</dt><dd> <i>context</i> a Keberos context<br/>
+ <i>orig_hostname</i> hostname to canonicalise.<br/>
+ <i>new_hostname</i> output hostname, caller must free hostname with krb5_xfree().<br/>
  <i>realms</i> output possible realms, is an array that is terminated with NULL. Caller must free with <code>krb5_free_host_realm()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -402,7 +402,7 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
  <i>realmlist</i> realmlist to free, NULL is ok</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -418,8 +418,8 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context.<br />
- <i>principal</i> principal to check if allowed to login<br />
+</dt><dd> <i>context</i> Kerberos 5 context.<br/>
+ <i>principal</i> principal to check if allowed to login<br/>
  <i>luser</i> local user id</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -430,9 +430,9 @@ description: "Heimdal Kerberos 5 support functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context<br />
- <i>type</i> type of plugin symbol<br />
- <i>name</i> name of plugin symbol<br />
+</dt><dd> <i>context</i> a Keberos context<br/>
+ <i>type</i> type of plugin symbol<br/>
+ <i>name</i> name of plugin symbol<br/>
  <i>symbol</i> a pointer to the named symbol</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

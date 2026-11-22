@@ -11,7 +11,7 @@ description: "sspr2.f –"
 <p> sspr2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sspr2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, AP)<br />
+<p> subroutine <code>sspr2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, AP)<br/>
  <i></i><code>SSPR2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sspr2 (characterUPLO, integerN, realALPHA, real, dimension(*)X, integerINCX, real, dimension(*)Y, integerINCY, real, dimension(*)AP)</h3>

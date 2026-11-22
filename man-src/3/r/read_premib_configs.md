@@ -30,21 +30,21 @@ register_prenetsnmp_mib_handler(const char *filePrefix,
                                 const char *usageLine);
 void unregister_config_handler(const char *filePrefix,
                                const char *token);</code></pre>
-<p> <code>void register_mib_handlers(void);</code><br />
+<p> <code>void register_mib_handlers(void);</code><br/>
  <code>void unregister_all_config_handlers(void);</code></p>
 <h3>Application Handlers</h3>
 <p>struct config_line *</p>
 <p>register_app_config_handler(const char *token,</p>
 <p>                            void (*parser)(const char *, char *),</p>
 <p>                            void (*releaser)(void),</p>
-<p>                            const char *usageLine);<br />
+<p>                            const char *usageLine);<br/>
 struct config_line *</p>
 <p>register_app_prenetsnmp_mib_handler(const char *token,</p>
 <p>                                    void (*parser)(const char *, char *),</p>
 <p>                                    void (*releaser)(void),</p>
 <p>                                    const char *usageLine); <code>void unregister_app_config_handler(const char *</code><i>token</i><code>);</code></p>
 <h3>Reading Configuration Files</h3>
-<p><code>void read_premib_configs(void);</code><br />
+<p><code>void read_premib_configs(void);</code><br/>
  <code>void read_configs(void);</code></p>
 <h3>Help Strings and Errors</h3>
 <pre><code>void read_config_print_usage(char *lead);
@@ -78,7 +78,7 @@ void config_perror(const char *string);
 <dd>register_config_handler(&quot;snmp&quot;, &quot;exampleToken&quot;, example_handler, NULL, &quot;ARG1 [ARG2]&quot;);</dd></dl>
 </dl>
 <dl>
-<dd>would register the <code>example_handler()</code> function so that it will get called every time the first word of a line in the <i>snmp.conf</i> configuration file(s) matches &quot;exampleToken&quot;.<br />
+<dd>would register the <code>example_handler()</code> function so that it will get called every time the first word of a line in the <i>snmp.conf</i> configuration file(s) matches &quot;exampleToken&quot;.<br/>
  Calling the appropriate handlers to process the configuration file directives is the responsibility of <code>read_configs() </code> (see below).</dd>
 <dt><code>register_const_config_handler()</code></dt>
 <dd>Similar to the <code>register_config_handler()</code> function, but the parser routine is explicitly constrained to not modify the string being parsed.</dd>
@@ -94,12 +94,12 @@ void config_perror(const char *string);
 <h3>Token Handlers</h3>
 <p>Handler functions should have the following signature: </p>
 <dl>
-<dd><code>void handler(const char *</code><i>token</i><code>, char *</code><i>line</i><code>);</code><br />
- or<br />
+<dd><code>void handler(const char *</code><i>token</i><code>, char *</code><i>line</i><code>);</code><br/>
+ or<br/>
  <code>void handler(const char *</code><i>token</i><code>, const char *</code><i>line</i><code>);</code> br (if registered using <i>register_const_config_handler</i>)</dd></dl>
 <p> The function will be called with two arguments, the first being the token that triggered the call to this function (i.e. the token used when registering the handler), and the second being the remainder of the configuration file line (i.e. everything following the white space following the matched token).</p>
 <h3>Freeing Handlers</h3>
-<p>If the token handler function dynamically allocates resources when processing a configuration entry, then these may need to be released before re-reading the configuration files. If the fourth parameter ( <i>releaser</i> ) passed to <code>register_config_handler</code> is non-NULL, then this specifies a function to be called before re-reading the configuration files. This function should free any resources allocated by the token handler function and reset its notion of the configuration to its default. The token handler function can then safely be called again. No arguments are passed to the resource freeing handler.<br />
+<p>If the token handler function dynamically allocates resources when processing a configuration entry, then these may need to be released before re-reading the configuration files. If the fourth parameter ( <i>releaser</i> ) passed to <code>register_config_handler</code> is non-NULL, then this specifies a function to be called before re-reading the configuration files. This function should free any resources allocated by the token handler function and reset its notion of the configuration to its default. The token handler function can then safely be called again. No arguments are passed to the resource freeing handler.<br/>
  Note that this function is not called when the handler is unregistered individually (but <i>is</i> called as part of <code>unregister_all_config_handlers()</code> ).</p>
 <h3>Application Handlers</h3>
 <dl>
@@ -118,8 +118,8 @@ void config_perror(const char *string);
 <p> <code>read_premib_configs()</code> is run before the MIB files are read in, and processes those configuration tokens registered using <code>register_prenetsnmp_mib_handler()</code> (or <code>register_app_prenetsnmp_mib_handler()</code> ). All other entries are ignored. </p>
 <p> <code>read_configs()</code> is run after the MIB files have been read in, and processes those configuration tokens registered using <code>register_config_handler()</code> (or <code>register_app_config_handler()</code> ). If it encounters a configuration token for which no handler has been registered (either pre- or post-mib), then it will display a warning message, and continue processing with the next line of the configuration file.</p>
 <h3>Configuration Search Path</h3>
-<p>The configuration files to be read are found by searching a list of configuration directories for appropriately named files. In each such directory, the library will look for files named snmp.conf, snmp.local.conf, <i> app</i>.conf, <i> app</i>.local.conf,<br />
- (where <i>app</i> is the appication-specific filePrefix used to register configuration handlers). It is not necessary for any or all of these files to be present in each directory. Missing files will be silently skipped.<br />
+<p>The configuration files to be read are found by searching a list of configuration directories for appropriately named files. In each such directory, the library will look for files named snmp.conf, snmp.local.conf, <i> app</i>.conf, <i> app</i>.local.conf,<br/>
+ (where <i>app</i> is the appication-specific filePrefix used to register configuration handlers). It is not necessary for any or all of these files to be present in each directory. Missing files will be silently skipped.<br/>
  The idea behind the two different suffixes is that the first file can be shared (via rdist or an NFS mount) across a large number of machines and the second file can be used to configure local settings for one particular machine. </p>
 <p> The default list of directories to search is /etc/snmp, followed by /usr/share/snmp, followed by /usr/lib(64)/snmp, followed by $HOME/.snmp. This list can be changed by setting the environmental variable <i>SNMPCONFPATH</i> to be a (colon separated) list of directories to search.</p>
 <h3>init_snmp()</h3>

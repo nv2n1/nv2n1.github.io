@@ -9,8 +9,8 @@ description: "pmdaInstance – return instance descriptions for a PMDA"
 
 <p><code>pmdaInstance</code> &#8211; return instance descriptions for a PMDA</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> int pmdaInstance(pmInDom </code><i>indom</i>, int <i>inst</i>, char *<i>name</i>, __pmInResult&nbsp;<wbr>**<i>result</i>, pmdaExt&nbsp;<wbr>*<i>pmda</i>); </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>

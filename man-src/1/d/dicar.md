@@ -10,9 +10,9 @@ description: "dicar – Archive Binary Dictionary"
 
 <p> dicar &#8211; Archive Binary Dictionary</p>
 <h2>SYNOPSYS</h2>
-<p> <code>dicar</code> <code>-t</code> <i>bindic1</i><br />
- <code>dicar</code> <code>-x</code> <i>bindic1</i> [ <code>bindic2</code> ]<br />
- <code>dicar</code> <code>-r</code> <i>bindic1</i> <i>bindic2</i><br />
+<p> <code>dicar</code> <code>-t</code> <i>bindic1</i><br/>
+ <code>dicar</code> <code>-x</code> <i>bindic1</i> [ <code>bindic2</code> ]<br/>
+ <code>dicar</code> <code>-r</code> <i>bindic1</i> <i>bindic2</i><br/>
  <code>dicar</code> <code>-d </code> <i>bindic1</i> <i>bindic2</i> </p>
 <h2>DESCRIPTION</h2>
 <p> <i>dicar</i> archives binary dictionary <i>bindic1.</i> The hyphen of each option may be omitted. [ <code>TIONS</code> ]</p>

@@ -70,7 +70,7 @@ description: "mdmon – monitor MD external metadata arrays"
 <p> After the final root filesystem has be instantiated (usually with <code>pivot_root</code>) <i>mdmon</i> should be run with <i>&#8211;all &#8211;takeover</i> so that the <i>mdmon</i> running from the <code>initramfs</code> can be replaced with one running in the main root, and so the memory used by the initramfs can be released. </p>
 <p> At shutdown time, <i>mdmon</i> should not be killed along with other processes. Also as it holds a file (socket actually) open in <code>/dev</code> (by default) it will not be possible to unmount <code>/dev</code> if it is a separate filesystem.</p>
 <h2>Examples</h2>
-<p><code> mdmon &#8211;all-active-arrays &#8211;takeover</code><br />
+<p><code> mdmon &#8211;all-active-arrays &#8211;takeover</code><br/>
  Any <i>mdmon</i> which is currently running is killed and a new instance is started. This should be run during in the boot sequence if an initramfs was used, so that any mdmon running from the initramfs will not hold the initramfs active.</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-mdadm/">mdadm</a></i>(8), <i><a href="/docs/linux/man/4-md/">md</a></i>(4). </p>

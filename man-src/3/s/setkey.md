@@ -21,17 +21,17 @@ void setkey_r(const char *key, struct crypt_data *data);
 void encrypt_r(char *block, int edflag, struct crypt_data *data);</code></pre>
 <p> Each of these requires linking with <i>-lcrypt</i>.</p>
 <h2>Description</h2>
-<p>These functions encrypt and decrypt 64-bit messages. The <code>setkey</code>() function sets the key used by <code>encrypt</code>(). The <i>key</i> argument used here is an array of 64 bytes, each of which has numerical value 1 or 0. The bytes key[n] where n=8*i-1 are ignored, so that the effective key length is 56 bits. The <code>encrypt</code>() function modifies the passed buffer, encoding if <i>edflag</i> is 0, and decoding if 1 is being passed. Like the <i>key</i> argument, also <i>block</i> is a bit vector representation of the actual value that is encoded. The result is returned in that same vector. These two functions are not reentrant, that is, the key data is kept in static storage. The functions <code>setkey_r</code>() and <code>encrypt_r</code>() are the reentrant versions. They use the following structure to hold the key data: struct crypt_data {<br />
-    char keysched[16 * 8];<br />
-    char sb0[32768];<br />
-    char sb1[32768];<br />
-    char sb2[32768];<br />
-    char sb3[32768];<br />
-    char crypt_3_buf[14];<br />
-    char current_salt[2];<br />
-    long current_saltbits;<br />
-    int direction;<br />
-    int initialized;<br />
+<p>These functions encrypt and decrypt 64-bit messages. The <code>setkey</code>() function sets the key used by <code>encrypt</code>(). The <i>key</i> argument used here is an array of 64 bytes, each of which has numerical value 1 or 0. The bytes key[n] where n=8*i-1 are ignored, so that the effective key length is 56 bits. The <code>encrypt</code>() function modifies the passed buffer, encoding if <i>edflag</i> is 0, and decoding if 1 is being passed. Like the <i>key</i> argument, also <i>block</i> is a bit vector representation of the actual value that is encoded. The result is returned in that same vector. These two functions are not reentrant, that is, the key data is kept in static storage. The functions <code>setkey_r</code>() and <code>encrypt_r</code>() are the reentrant versions. They use the following structure to hold the key data: struct crypt_data {<br/>
+    char keysched[16 * 8];<br/>
+    char sb0[32768];<br/>
+    char sb1[32768];<br/>
+    char sb2[32768];<br/>
+    char sb3[32768];<br/>
+    char crypt_3_buf[14];<br/>
+    char current_salt[2];<br/>
+    long current_saltbits;<br/>
+    int direction;<br/>
+    int initialized;<br/>
 }; Before calling <code>setkey_r</code>() set <i>data-&gt;initialized</i> to zero.</p>
 <h2>Return Value</h2>
 <p>These functions do not return any value.</p>

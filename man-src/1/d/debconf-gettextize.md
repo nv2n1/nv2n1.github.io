@@ -10,10 +10,10 @@ description: "debconf-gettextize – extract translations of debconf templates i
 
 <p> debconf-gettextize &#8211; extract translations of debconf templates into PO files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>debconf-gettextize</code> [<code>-v</code>] [<code>-h</code>] [<code>&#8211;podir=</code><font SIZE="-1">DIR</font>] [<code>&#8211;choices</code>] [<code>&#8211;merge</code>] <i>master</i> [<i>master</i> &#8230;]</p>
+<p> <code>debconf-gettextize</code> [<code>-v</code>] [<code>-h</code>] [<code>&#8211;podir=</code>DIR] [<code>&#8211;choices</code>] [<code>&#8211;merge</code>] <i>master</i> [<i>master</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> The <i>/var/lib/dpkg/info/*.templates</i> files read by debconf contain English text and translations in the same file. But in source packages, translations are managed in separate files to help translators. In the initial implementation, a master <i>templates</i> file contained only English text, and <i>templates.xx</i> files contained both original and translated strings for the language <i>xx</i>. The <code>debconf-mergetemplate</code> program was merging master and translated templates files. </p>
-<p> The new implementation with <tt>&quot;po-debconf&quot;</tt> is based on <tt>&quot;gettext&quot;</tt>. Maintainers mark translatable fields by prepending them with an underscore, English strings are automatically extracted into a <font SIZE="-1">POT</font> file, translators work on normal <font SIZE="-1">PO</font> files, and <code>po2debconf</code> generates a merged templates file with the same structure. </p>
+<p> The new implementation with <tt>&quot;po-debconf&quot;</tt> is based on <tt>&quot;gettext&quot;</tt>. Maintainers mark translatable fields by prepending them with an underscore, English strings are automatically extracted into a POT file, translators work on normal PO files, and <code>po2debconf</code> generates a merged templates file with the same structure. </p>
 <p> The <code>debconf-gettextize</code> program was initially designed to help migrating to the new implementation.</p>
 <dl>
 <dt>&bull;</dt>
@@ -27,22 +27,22 @@ description: "debconf-gettextize – extract translations of debconf templates i
 <dt>1.</dt>
 <dd> <code>po2debconf</code> is run on this template file to generate a translated templates file.</dd>
 <dt>2.</dt>
-<dd> This translated templates file is processed as described above and <font SIZE="-1">PO</font> files are generated.</dd>
+<dd> This translated templates file is processed as described above and PO files are generated.</dd>
 <dt>3.</dt>
-<dd> Newly created <font SIZE="-1">PO</font> files are merged with existing ones.</dd></dl>
-<p> When <font SIZE="-1">PO</font> files are merged, <tt>&quot;_Choices&quot;</tt> fields have to be replaced by <tt>&quot;__Choices&quot;</tt> (or vice-versa) in the original templates file before running <code>debconf-updatepo</code>, otherwise new translations will be fuzzy.</p>
+<dd> Newly created PO files are merged with existing ones.</dd></dl>
+<p> When PO files are merged, <tt>&quot;_Choices&quot;</tt> fields have to be replaced by <tt>&quot;__Choices&quot;</tt> (or vice-versa) in the original templates file before running <code>debconf-updatepo</code>, otherwise new translations will be fuzzy.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Display a usage summary for the program and exit.</dd>
 <dt><code>-v</code>, <code>&#8211;verbose</code></dt>
 <dd> Process in verbose mode.</dd>
-<dt><code>&#8211;podir=</code><font SIZE="-1">DIR</font></dt>
-<dd> Set directory for <font SIZE="-1">PO</font> files. Default is to search for <font SIZE="-1">PO</font> files in the <i>po</i> subdirectory below the location of the first master file.</dd>
+<dt><code>&#8211;podir=</code>DIR</dt>
+<dd> Set directory for PO files. Default is to search for PO files in the <i>po</i> subdirectory below the location of the first master file.</dd>
 <dt><code>&#8211;choices</code></dt>
 <dd> By default, <code>debconf-gettextize</code> replaces <tt>&quot;Choices&quot;</tt> fields by <tt>&quot;_Choices&quot;</tt>. With this flag, <tt>&quot;__Choices&quot;</tt> fields are written instead.</dd>
 <dt><code>&#8211;merge</code></dt>
-<dd> When this flag is set, the strings are merged with existing <font SIZE="-1">PO</font> files. The templates files and <i>po/POTFILES.in</i> are not modified.</dd></dl>
+<dd> When this flag is set, the strings are merged with existing PO files. The templates files and <i>po/POTFILES.in</i> are not modified.</dd></dl>
 <h2>CAVEATS</h2>
 <p> The <tt>&quot;Default&quot;</tt> field is special when template type is <tt>&quot;Select&quot;</tt> or <tt>&quot;Multiselect&quot;</tt>, because a value has to be chosen amongst the <code>English</code> list of choices, even for localized values. Normally this field must not be changed, but in rare circumstances localized values are meaningful (e.g. to choose the default language of an application). In order to let translators know that this localized <tt>&quot;Default&quot;</tt> field is special, you must by convention call it <tt>&quot;_DefaultChoice&quot;</tt> instead of <tt>&quot;_Default&quot;</tt>.</p>
 <h2>SEE ALSO</h2>

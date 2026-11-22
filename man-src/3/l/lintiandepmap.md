@@ -77,8 +77,8 @@ description: "Lintian::DepMap – Dependencies map/tree creator"
  if ($map-&gt;done('A'));</pre>
 <dt>unlink(node)</dt>
 <dd>Removes all references to the given <tt>&quot;node&quot;</tt> except for the entry in the <i>known()</i> table. </dd>
-<p> <font SIZE="-1"><code>IMPORTANT</code></font>: since all references are deleted it is possible that a node that depended on <tt>&quot;node&quot;</tt> may become available even when it was not expected to. </p>
-<p> <font SIZE="-1"><code>IMPORTANT</code></font>: this operation can <code>not</code> be reversed by the means of <i>initialise()</i>. </p>
+<p> <code>IMPORTANT</code>: since all references are deleted it is possible that a node that depended on <tt>&quot;node&quot;</tt> may become available even when it was not expected to. </p>
+<p> <code>IMPORTANT</code>: this operation can <code>not</code> be reversed by the means of <i>initialise()</i>. </p>
 <p> E.g. </p>
 <pre> $map-&gt;add('A');
  # Prints A
@@ -101,10 +101,10 @@ description: "Lintian::DepMap – Dependencies map/tree creator"
  }
  }</pre>
 <dt>selectable([node])</dt>
-<dd>If a <tt>&quot;node&quot;</tt> is specified returns <font SIZE="-1">TRUE</font> if it can be <i>select()</i>ed. </dd>
-<p> <code>Note</code>: already <i>select()</i>ed nodes cannot be re-selected, i.e. if the given <tt>&quot;node&quot;</tt> has already been selected this function will return <font SIZE="-1">FALSE</font>; or any selected item will be omitted from the returned array, in case no <tt>&quot;node&quot;</tt> is specified.</p>
+<dd>If a <tt>&quot;node&quot;</tt> is specified returns TRUE if it can be <i>select()</i>ed. </dd>
+<p> <code>Note</code>: already <i>select()</i>ed nodes cannot be re-selected, i.e. if the given <tt>&quot;node&quot;</tt> has already been selected this function will return FALSE; or any selected item will be omitted from the returned array, in case no <tt>&quot;node&quot;</tt> is specified.</p>
 <dt>selected([node])</dt>
-<dd>If a <tt>&quot;node&quot;</tt> is specified returns <font SIZE="-1">TRUE</font> if it is has been selected, <font SIZE="-1">FALSE</font> otherwise. </dd>
+<dd>If a <tt>&quot;node&quot;</tt> is specified returns TRUE if it is has been selected, FALSE otherwise. </dd>
 <p> If no <tt>&quot;node&quot;</tt> is specified it returns an array with the name of all the nodes that have been <i>select()</i>ed but not yet satisfied. </p>
 <p> E.g. </p>
 <pre> # We are going to work on A
@@ -142,8 +142,8 @@ description: "Lintian::DepMap – Dependencies map/tree creator"
  $map-&gt;add('A');
  # prints 'A' and 'B':
  print $map-&gt;known;</pre>
-<dt>known(<font SIZE="-1">NODE</font>)</dt>
-<dd>Returns a truth value if <font SIZE="-1">NODE</font> is known or <tt>&quot;undef&quot;</tt> otherwise.</dd>
+<dt>known(NODE)</dt>
+<dd>Returns a truth value if NODE is known or <tt>&quot;undef&quot;</tt> otherwise.</dd>
 <dt><i>missing()</i></dt>
 <dd>Return an array containing the names of nodes that were not added but that another node depended on it. E.g. </dd>
 <pre> $map-&gt;add('B', 'A');

@@ -17,7 +17,7 @@ description: "perl5201delta – what is new for perl v5.20.1"
 <h2>Performance Enhancements</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> An optimization to avoid problems with <font SIZE="-1">COW</font> and deliberately overallocated PVs has been disabled because it interfered with another, more important, optimization, causing a slowdown on some platforms. [perl #121975] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=121975">https://rt.perl.org/Ticket/Display.html?id=121975</a>&gt;</dd>
+<dd> An optimization to avoid problems with COW and deliberately overallocated PVs has been disabled because it interfered with another, more important, optimization, causing a slowdown on some platforms. [perl #121975] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=121975">https://rt.perl.org/Ticket/Display.html?id=121975</a>&gt;</dd>
 <dt>&bull;</dt>
 <dd> Returning a string from a lexical variable could be slow in some cases. This has now been fixed. [perl #121977] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=121977">https://rt.perl.org/Ticket/Display.html?id=121977</a>&gt;</dd></dl>
 <h2>Modules and Pragmata</h2>
@@ -28,7 +28,7 @@ description: "perl5201delta – what is new for perl v5.20.1"
 <p> The list of Perl versions covered has been updated and some flaws in the parsing have been fixed.</p>
 <dt>&bull;</dt>
 <dd> Exporter has been upgraded from version 5.70 to 5.71. </dd>
-<p> Illegal <font SIZE="-1">POD</font> syntax in the documentation has been corrected.</p>
+<p> Illegal POD syntax in the documentation has been corrected.</p>
 <dt>&bull;</dt>
 <dd> ExtUtils::CBuilder has been upgraded from version 0.280216 to 0.280217. </dd>
 <p> Android builds now link to both <code>-lperl</code> and <tt>$Config::Config{perllibs}</tt>.</p>
@@ -43,7 +43,7 @@ description: "perl5201delta – what is new for perl v5.20.1"
 <p> Fallbacks are now in place when cross-compiling for Android and <tt>$Config::Config{sh}</tt> is not yet defined. [perl #121963] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=121963">https://rt.perl.org/Ticket/Display.html?id=121963</a>&gt;</p>
 <dt>&bull;</dt>
 <dd> PerlIO::via has been upgraded from version 0.14 to 0.15. </dd>
-<p> A minor portability improvement has been made to the <font SIZE="-1">XS</font> implementation.</p>
+<p> A minor portability improvement has been made to the XS implementation.</p>
 <dt>&bull;</dt>
 <dd> Unicode::UCD has been upgraded from version 0.57 to 0.58. </dd>
 <p> The documentation includes many clarifications and fixes.</p>
@@ -80,11 +80,11 @@ description: "perl5201delta – what is new for perl v5.20.1"
 <p> <i>perlguts</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Explain various ways of modifying an existing <font SIZE="-1">SV</font>&#8216;s buffer. [perl #116925] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=116925">https://rt.perl.org/Ticket/Display.html?id=116925</a>&gt;</dd></dl>
+<dd> Explain various ways of modifying an existing SV&#8216;s buffer. [perl #116925] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=116925">https://rt.perl.org/Ticket/Display.html?id=116925</a>&gt;</dd></dl>
 <p> <i>perlpolicy</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> We now have a code of conduct for the <i>p5p</i> mailing list, as documented in &#8220;<font SIZE="-1">STANDARDS OF CONDUCT&#8221;</font> in perlpolicy.</dd></dl>
+<dd> We now have a code of conduct for the <i>p5p</i> mailing list, as documented in &#8220;STANDARDS OF CONDUCT&#8221; in perlpolicy.</dd></dl>
 <p> <i>perlre</i></p>
 <dl>
 <dt>&bull;</dt>
@@ -96,7 +96,7 @@ description: "perl5201delta – what is new for perl v5.20.1"
 <p> <i>perlxs</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Added a discussion of locale issues in <font SIZE="-1">XS</font> code.</dd></dl>
+<dd> Added a discussion of locale issues in XS code.</dd></dl>
 <h2>Diagnostics</h2>
 <p> The following additions or changes have been made to diagnostic output, including warnings and fatal error messages. For the complete list of diagnostic messages, see perldiag.</p>
 <h3>Changes to Existing Diagnostics</h3>
@@ -117,20 +117,20 @@ description: "perl5201delta – what is new for perl v5.20.1"
 <dd> Corrected architectures and version numbers used in configuration hints when building Perl.</dd>
 <dt>Solaris</dt>
 <dd> <code>c99</code> options have been cleaned up, hints look for <code>solstudio</code> as well as <code>SUNWspro</code>, and support for native <tt>&quot;setenv&quot;</tt> has been added.</dd>
-<dt><font SIZE="-1">VMS</font></dt>
+<dt>VMS</dt>
 <dd> An old bug in feature checking, mainly affecting pre-7.3 systems, has been fixed.</dd>
 <dt>Windows</dt>
 <dd> <tt>%I64d</tt> is now being used instead of <tt>%lld</tt> for MinGW.</dd></dl>
 <h2>Internal Changes</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> Added &#8220;sync_locale&#8221; in perlapi. Changing the program&#8217;s locale should be avoided by <font SIZE="-1">XS</font> code. Nevertheless, certain non-Perl libraries called from <font SIZE="-1">XS,</font> such as <tt>&quot;Gtk&quot;</tt> do so. When this happens, Perl needs to be told that the locale has changed. Use this function to do so, before returning to Perl.</dd></dl>
+<dd> Added &#8220;sync_locale&#8221; in perlapi. Changing the program&#8217;s locale should be avoided by XS code. Nevertheless, certain non-Perl libraries called from XS, such as <tt>&quot;Gtk&quot;</tt> do so. When this happens, Perl needs to be told that the locale has changed. Use this function to do so, before returning to Perl.</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
 <dt>&bull;</dt>
 <dd> A bug has been fixed where zero-length assertions and code blocks inside of a regex could cause <tt>&quot;pos&quot;</tt> to see an incorrect value. [perl #122460] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122460">https://rt.perl.org/Ticket/Display.html?id=122460</a>&gt;</dd>
 <dt>&bull;</dt>
-<dd> Using <tt>&quot;s///e&quot;</tt> on tainted utf8 strings could issue bogus &#8220;Malformed <font SIZE="-1">UTF-8</font> character (unexpected end of string)&#8221; warnings. This has now been fixed. [perl #122148] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122148">https://rt.perl.org/Ticket/Display.html?id=122148</a>&gt;</dd>
+<dd> Using <tt>&quot;s///e&quot;</tt> on tainted utf8 strings could issue bogus &#8220;Malformed UTF-8 character (unexpected end of string)&#8221; warnings. This has now been fixed. [perl #122148] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=122148">https://rt.perl.org/Ticket/Display.html?id=122148</a>&gt;</dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;system&quot;</tt> and friends should now work properly on more Android builds. </dd>
 <p> Due to an oversight, the value specified through <code>-Dtargetsh</code> to <i>Configure</i> would end up being ignored by some of the build process. This caused perls cross-compiled for Android to end up with defective versions of <tt>&quot;system&quot;</tt>, <tt>&quot;exec&quot;</tt> and backticks: the commands would end up looking for <i>/bin/sh</i> instead of <i>/system/bin/sh</i>, and so would fail for the vast majority of devices, leaving <tt>$!</tt> as <tt>&quot;ENOENT&quot;</tt>.</p>
@@ -142,14 +142,14 @@ description: "perl5201delta – what is new for perl v5.20.1"
 <p> Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.20.1: </p>
 <p> Aaron Crane, Abigail, Alberto Simões, Alexandr Ciornii, Alexandre (Midnite) Jousset, Andrew Fresh, Andy Dougherty, Brian Fraser, Chris &#8216;BinGOs&#8217; Williams, Craig A. Berry, Daniel Dragan, David Golden, David Mitchell, H.Merijn Brand, James E Keenan, Jan Dubois, Jarkko Hietaniemi, John Peacock, kafka, Karen Etheridge, Karl Williamson, Lukas Mai, Matthew Horsfall, Michael Bunk, Peter Martini, Rafael Garcia-Suarez, Reini Urban, Ricardo Signes, Shirakata Kentaro, Smylers, Steve Hay, Thomas Sibley, Todd Rinaldo, Tony Cook, Vladimir Marek, Yves Orton. </p>
 <p> The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. </p>
-<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.</p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish. </p>
+<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="https://rt.perl.org/">https://rt.perl.org/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font></p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

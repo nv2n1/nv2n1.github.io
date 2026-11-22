@@ -10,7 +10,7 @@ description: "pmdazimbra – Zimbra Collaboration Suite (ZCS) PMDA"
 
 <p> <code>pmdazimbra</code> &#8211; Zimbra Collaboration Suite (ZCS) PMDA</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdazimbra</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from several subsystems of the Zimbra Suite. Further details on Zimbra can be found at <a rel="nofollow" href="http://www.zimbra.com/.">http://www.zimbra.com/.</a></p>
+<p> <code>pmdazimbra</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values from several subsystems of the Zimbra Suite. Further details on Zimbra can be found at <a rel="nofollow" href="http://www.zimbra.com/.">http://www.zimbra.com/.</a></p>
 <h2>INSTALLATION</h2>
 <p> Install the zimbra PMDA by using the Install script as root: </p>
 <p>#&nbsp;<wbr>cd&nbsp;<wbr>$PCP_PMDAS_DIR/zimbra </p>

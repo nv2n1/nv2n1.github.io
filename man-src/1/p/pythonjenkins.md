@@ -157,9 +157,9 @@ sleep(10) &gt;&gt;&gt; build_info = j.get_build_info('build_name', next_build_nu
 <dd> list of job dictionaries, <code>[dict]</code></dd>
 <dt><code>Example::</code></dt>
 <dd>
-<p>&gt;&gt;&gt; j = Jenkins() &gt;&gt;&gt; queue_info = j.get_queue_info() &gt;&gt;&gt; print(queue_info[0])<br />
-{<br />
-    u&#8217;task&#8217; : {u&#8217;url&#8217; : u&#8217;http://your_url/job/my_job/&#8217;, u&#8217;color&#8217; : u&#8217;aborted_anime&#8217;, u&#8217;name&#8217; : u&#8217;my_job&#8217;}, u&#8217;stuck&#8217; : False, u&#8217;actions&#8217; : [ {u&#8217;causes&#8217; : [ {u&#8217;shortDescription&#8217; : u&#8217;Started by timer&#8217;} ]} ], u&#8217;buildable&#8217; : False, u&#8217;params&#8217; : u&#8221;, u&#8217;buildableStartMilliseconds&#8217; : 1315087293316, u&#8217;why&#8217; : u&#8217;Build #2,532 is already in progress (ETA:10 min)&#8217;, u&#8217;blocked&#8217; : True<br />
+<p>&gt;&gt;&gt; j = Jenkins() &gt;&gt;&gt; queue_info = j.get_queue_info() &gt;&gt;&gt; print(queue_info[0])<br/>
+{<br/>
+    u&#8217;task&#8217; : {u&#8217;url&#8217; : u&#8217;http://your_url/job/my_job/&#8217;, u&#8217;color&#8217; : u&#8217;aborted_anime&#8217;, u&#8217;name&#8217; : u&#8217;my_job&#8217;}, u&#8217;stuck&#8217; : False, u&#8217;actions&#8217; : [ {u&#8217;causes&#8217; : [ {u&#8217;shortDescription&#8217; : u&#8217;Started by timer&#8217;} ]} ], u&#8217;buildable&#8217; : False, u&#8217;params&#8217; : u&#8221;, u&#8217;buildableStartMilliseconds&#8217; : 1315087293316, u&#8217;why&#8217; : u&#8217;Build #2,532 is already in progress (ETA:10 min)&#8217;, u&#8217;blocked&#8217; : True<br/>
 }</p>
 </dd><dt><code>Jenkins.cancel_queue(id)</code></dt>
 <dd> Cancel a queued build.</dd>
@@ -171,9 +171,9 @@ sleep(10) &gt;&gt;&gt; build_info = j.get_build_info('build_name', next_build_nu
 <dt><code>Returns</code></dt>
 <dd> dictionary of information about Master, <code>dict</code> </dd>
 <p> Example: </p>
-<p>&gt;&gt;&gt; j = Jenkins() &gt;&gt;&gt; info = j.get_info() &gt;&gt;&gt; jobs = info[&#8216;jobs&#8217;] &gt;&gt;&gt; print(jobs[0])<br />
-{<br />
-    u&#8217;url&#8217; : u&#8217;http://your_url_here/job/my_job/&#8217;, u&#8217;color&#8217; : u&#8217;blue&#8217;, u&#8217;name&#8217; : u&#8217;my_job&#8217;<br />
+<p>&gt;&gt;&gt; j = Jenkins() &gt;&gt;&gt; info = j.get_info() &gt;&gt;&gt; jobs = info[&#8216;jobs&#8217;] &gt;&gt;&gt; print(jobs[0])<br/>
+{<br/>
+    u&#8217;url&#8217; : u&#8217;http://your_url_here/job/my_job/&#8217;, u&#8217;color&#8217; : u&#8217;blue&#8217;, u&#8217;name&#8217; : u&#8217;my_job&#8217;<br/>
 }</p>
 <dt><code>Jenkins.get_version()</code></dt>
 <dd> Get the version of this Master.</dd>
@@ -194,7 +194,7 @@ sleep(10) &gt;&gt;&gt; build_info = j.get_build_info('build_name', next_build_nu
 <dt><code>Returns</code></dt>
 <dd> info on all plugins <code>[dict]</code> </dd>
 <p> Example: </p>
-<p>&gt;&gt;&gt; j = Jenkins() &gt;&gt;&gt; info = j.get_plugins_info() &gt;&gt;&gt; print(info)<br />
+<p>&gt;&gt;&gt; j = Jenkins() &gt;&gt;&gt; info = j.get_plugins_info() &gt;&gt;&gt; print(info)<br/>
                                                           [{u&#8217;backupVersion&#8217; : None, u&#8217;version&#8217; : u&#8217;0.0.4&#8242;, u&#8217;deleted&#8217; : False, u&#8217;supportsDynamicLoad&#8217; : u&#8217;MAYBE&#8217;, u&#8217;hasUpdate&#8217; : True, u&#8217;enabled&#8217; : True, u&#8217;pinned&#8217; : False, u&#8217;downgradable&#8217; : False, u&#8217;dependencies&#8217; : [], u&#8217;url&#8217; : u&#8217;http://wiki.jenkins-ci.org/display/JENKINS/Gearman+Plugin&#8217;, u&#8217;longName&#8217; : u&#8217;Gearman Plugin&#8217;, u&#8217;active&#8217; : True, u&#8217;shortName&#8217; : u&#8217;gearman-plugin&#8217;, u&#8217;bundled&#8217; : False}, ..]</p>
 <dt><code>Jenkins.get_plugin_info(name, depth=2)</code></dt>
 <dd> Get an installed plugin information on this Master. </dd>
@@ -208,9 +208,9 @@ sleep(10) &gt;&gt;&gt; build_info = j.get_build_info('build_name', next_build_nu
 <dt><code>Returns</code></dt>
 <dd> a specific plugin <code>dict</code> </dd>
 <p> Example: </p>
-<p>&gt;&gt;&gt; j = Jenkins() &gt;&gt;&gt; info = j.get_plugin_info(&#8220;Gearman Plugin&#8221;) &gt;&gt;&gt; print(info)<br />
-{<br />
-    u&#8217;backupVersion&#8217; : None, u&#8217;version&#8217; : u&#8217;0.0.4&#8242;, u&#8217;deleted&#8217; : False, u&#8217;supportsDynamicLoad&#8217; : u&#8217;MAYBE&#8217;, u&#8217;hasUpdate&#8217; : True, u&#8217;enabled&#8217; : True, u&#8217;pinned&#8217; : False, u&#8217;downgradable&#8217; : False, u&#8217;dependencies&#8217; : [], u&#8217;url&#8217; : u&#8217;http://wiki.jenkins-ci.org/display/JENKINS/Gearman+Plugin&#8217;, u&#8217;longName&#8217; : u&#8217;Gearman Plugin&#8217;, u&#8217;active&#8217; : True, u&#8217;shortName&#8217; : u&#8217;gearman-plugin&#8217;, u&#8217;bundled&#8217; : False<br />
+<p>&gt;&gt;&gt; j = Jenkins() &gt;&gt;&gt; info = j.get_plugin_info(&#8220;Gearman Plugin&#8221;) &gt;&gt;&gt; print(info)<br/>
+{<br/>
+    u&#8217;backupVersion&#8217; : None, u&#8217;version&#8217; : u&#8217;0.0.4&#8242;, u&#8217;deleted&#8217; : False, u&#8217;supportsDynamicLoad&#8217; : u&#8217;MAYBE&#8217;, u&#8217;hasUpdate&#8217; : True, u&#8217;enabled&#8217; : True, u&#8217;pinned&#8217; : False, u&#8217;downgradable&#8217; : False, u&#8217;dependencies&#8217; : [], u&#8217;url&#8217; : u&#8217;http://wiki.jenkins-ci.org/display/JENKINS/Gearman+Plugin&#8217;, u&#8217;longName&#8217; : u&#8217;Gearman Plugin&#8217;, u&#8217;active&#8217; : True, u&#8217;shortName&#8217; : u&#8217;gearman-plugin&#8217;, u&#8217;bundled&#8217; : False<br/>
 }</p>
 <dt><code>Jenkins.get_jobs()</code></dt>
 <dd> Get list of jobs running. </dd>

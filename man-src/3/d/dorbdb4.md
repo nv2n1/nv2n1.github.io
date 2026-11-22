@@ -11,7 +11,7 @@ description: "dorbdb4.f –"
 <p> dorbdb4.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dorbdb4</code> (M, P, Q, X11, LDX11, X21, LDX21, THETA, PHI, TAUP1, TAUP2, TAUQ1, PHANTOM, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dorbdb4</code> (M, P, Q, X11, LDX11, X21, LDX21, THETA, PHI, TAUP1, TAUP2, TAUQ1, PHANTOM, WORK, LWORK, INFO)<br/>
  <i></i><code>DORBDB4</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dorbdb4 (integerM, integerP, integerQ, double precision, dimension(ldx11,*)X11, integerLDX11, double precision, dimension(ldx21,*)X21, integerLDX21, double precision, dimension(*)THETA, double precision, dimension(*)PHI, double precision, dimension(*)TAUP1, double precision, dimension(*)TAUP2, double precision, dimension(*)TAUQ1, double precision, dimension(*)PHANTOM, double precision, dimension(*)WORK, integerLWORK, integerINFO)</h3>
@@ -94,10 +94,10 @@ DORBDB4 simultaneously bidiagonalizes the blocks of a tall and skinny
            Q1.
 </pre>
 <p> <i>PHANTOM</i> </p>
-<p>          PHANTOM is DOUBLE PRECISION array, dimension (M)<br />
-           The routine computes an M-by-1 column vector Y that is<br />
-           orthogonal to the columns of [ X11; X21 ]. PHANTOM(1:P) and<br />
-           PHANTOM(P+1:M) contain Householder vectors for Y(1:P) and<br />
+<p>          PHANTOM is DOUBLE PRECISION array, dimension (M)<br/>
+           The routine computes an M-by-1 column vector Y that is<br/>
+           orthogonal to the columns of [ X11; X21 ]. PHANTOM(1:P) and<br/>
+           PHANTOM(P+1:M) contain Householder vectors for Y(1:P) and<br/>
            Y(P+1:M), respectively.</p>
 <p> <i>WORK</i> </p>
 <pre>

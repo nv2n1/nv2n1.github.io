@@ -9,13 +9,13 @@ description: "Hash General Functions – Miscellaneous functions that operate on
 
 <p>Hash General Functions &#8211; Miscellaneous functions that operate on hash objects. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>evas_hash_size</code> (const <code>Evas_Hash</code> *hash)<br />
- <i>Retrieves the number of buckets available in the given hash table. </i><br />
- EAPI void <code>evas_hash_free</code> (<code>Evas_Hash</code> *hash)<br />
- <i>Free an entire hash table. </i><br />
- EAPI void <code>evas_hash_foreach</code> (const <code>Evas_Hash</code> *hash, Evas_Bool(*func)(const <code>Evas_Hash</code> *hash, const char *key, void *data, void *fdata), const void *fdata)<br />
- <i>Call a function on every member stored in the hash table. </i><br />
- EAPI int <code>evas_hash_alloc_error</code> (void)<br />
+<p>EAPI int <code>evas_hash_size</code> (const <code>Evas_Hash</code> *hash)<br/>
+ <i>Retrieves the number of buckets available in the given hash table. </i><br/>
+ EAPI void <code>evas_hash_free</code> (<code>Evas_Hash</code> *hash)<br/>
+ <i>Free an entire hash table. </i><br/>
+ EAPI void <code>evas_hash_foreach</code> (const <code>Evas_Hash</code> *hash, Evas_Bool(*func)(const <code>Evas_Hash</code> *hash, const char *key, void *data, void *fdata), const void *fdata)<br/>
+ <i>Call a function on every member stored in the hash table. </i><br/>
+ EAPI int <code>evas_hash_alloc_error</code> (void)<br/>
  <i>Return memory allocation failure flag after an function requiring allocation. </i></p>
 <h2>Detailed Description</h2>
 <p>Miscellaneous functions that operate on hash objects.</p>
@@ -44,8 +44,8 @@ description: "Hash General Functions – Miscellaneous functions that operate on
 <p>Call a function on every member stored in the hash table. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The hash table whose members will be walked<br />
- <i>func</i> The function to call on each parameter<br />
+<dd><i>hash</i> The hash table whose members will be walked<br/>
+ <i>func</i> The function to call on each parameter<br/>
  <i>fdata</i> The data pointer to pass to the function being called</dd></dl>
 <p> This function goes through every entry in the hash table hash and calls the function func on each member. The function should NOT modify the hash table contents if it returns 1. IF the hash table contents are modified by this function or the function wishes to stop processing it must return 0, otherwise return 1 to keep processing. </p>
 <p> Example: </p>

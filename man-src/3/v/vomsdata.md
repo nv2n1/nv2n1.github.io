@@ -57,7 +57,7 @@ Data Fields</code></pre>
 <h3>vomsdata::vomsdata (std::stringvoms_dir = &#8221;, std::stringcert_dir = &#8221;)</h3>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>voms_dir</i> The directory which contains the certificate of the VOMS server<br />
+<dd><i>voms_dir</i> The directory which contains the certificate of the VOMS server<br/>
  <i>cert_dir</i> The directory which contains the certificate of the CA</dd></dl>
 <p> If voms_dir is empty, the value of the environment variable X509_VOMS_DIR is taken. </p>
 <p> If cert_dir is empty, the value of the environment variable X509_CERT_DIR is taken.</p>
@@ -103,11 +103,11 @@ aram timeout Timeout for server connections in seconds
 <p>Same as Contact, however it does not start the verification process, and the message receviedfrom the server is not parsed. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>hostname</i> FQDN of the VOMS server<br />
- <i>port</i> the port on which the VOMS server is listening<br />
- <i>servsubject</i> the subject of the server&#8217;s certificate<br />
- <i>command</i> the command sent to the server<br />
- <i>raw</i> OUTPUT PARAMETER the answer from the server<br />
+<dd><i>hostname</i> FQDN of the VOMS server<br/>
+ <i>port</i> the port on which the VOMS server is listening<br/>
+ <i>servsubject</i> the subject of the server&#8217;s certificate<br/>
+ <i>command</i> the command sent to the server<br/>
+ <i>raw</i> OUTPUT PARAMETER the answer from the server<br/>
  <i>version</i> OUTPUT PARAMETER the version of the answer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -116,12 +116,12 @@ aram timeout Timeout for server connections in seconds
 <p>Same as Contact, however it does not start the verification process, and the message receviedfrom the server is not parsed. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>hostname</i> FQDN of the VOMS server<br />
- <i>port</i> the port on which the VOMS server is listening<br />
- <i>servsubject</i> the subject of the server&#8217;s certificate<br />
- <i>command</i> the command sent to the server<br />
- <i>raw</i> OUTPUT PARAMETER the answer from the server<br />
- <i>version</i> OUTPUT PARAMETER the version of the answer<br />
+<dd><i>hostname</i> FQDN of the VOMS server<br/>
+ <i>port</i> the port on which the VOMS server is listening<br/>
+ <i>servsubject</i> the subject of the server&#8217;s certificate<br/>
+ <i>command</i> the command sent to the server<br/>
+ <i>raw</i> OUTPUT PARAMETER the answer from the server<br/>
+ <i>version</i> OUTPUT PARAMETER the version of the answer<br/>
  <i>timeout</i> Timeout for server connections in seconds</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -205,8 +205,8 @@ aram att The attribute to be ordered.</pre>
 <p>Extracts the VOMS extension from an X.509 certificate. The function doesn&#8217;t check the validity of the certificates, but it does check the content of the user data. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>cert</i> The certificate with the VOMS extensions<br />
- <i>chain</i> The chain of the validation certificates (only the intermediate ones)<br />
+<dd><i>cert</i> The certificate with the VOMS extensions<br/>
+ <i>chain</i> The chain of the validation certificates (only the intermediate ones)<br/>
  <i>how</i> Recursion type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -224,7 +224,7 @@ aram att The attribute to be ordered.</pre>
 <p>Gets VOMS information from a proxy saved as a file. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>file</i> the file name<br />
+<dd><i>file</i> the file name<br/>
  <i>how</i> Recursion type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -244,7 +244,7 @@ aram att The attribute to be ordered.</pre>
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>credential</i> The credential from which to retrieve the certificate.<br />
+<dd><i>credential</i> The credential from which to retrieve the certificate.<br/>
  <i>how</i> Recursion type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -254,7 +254,7 @@ aram att The attribute to be ordered.</pre>
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The context from which to retrieve the certificate.<br />
+<dd><i>context</i> The context from which to retrieve the certificate.<br/>
  <i>how</i> Recursion type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

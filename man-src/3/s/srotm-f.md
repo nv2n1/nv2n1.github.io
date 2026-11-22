@@ -10,7 +10,7 @@ description: "srotm.f –"
 <p>srotm.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>srotm</code> (N, SX, INCX, SY, INCY, SPARAM)<br />
+<p>subroutine <code>srotm</code> (N, SX, INCX, SY, INCY, SPARAM)<br/>
  <i></i><code>SROTM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine srotm (integerN, real, dimension(*)SX, integerINCX, real, dimension(*)SY, integerINCY, real, dimension(5)SPARAM)</h3>

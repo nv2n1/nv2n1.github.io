@@ -28,12 +28,12 @@ description: "photo.rectify"
 <p> The process may take an hour or more depending on the size of the image, the speed of the computer, the number files, and the size and resolution of the selected window. </p>
 <p> The rectified image will be located in the target LOCATION when the program is completed. The original unrectified files are not modified or removed.</p>
 <h2>SEE ALSO</h2>
-<p> <i> i.ortho.photo<br />
- photo.camera<br />
- photo.2image<br />
- photo.2target<br />
+<p> <i> i.ortho.photo<br/>
+ photo.camera<br/>
+ photo.2image<br/>
+ photo.2target<br/>
  photo.init </i></p>
 <h2>AUTHOR</h2>
-<p> Mike Baba, DBA Systems, Inc.<br />
+<p> Mike Baba, DBA Systems, Inc.<br/>
  Updated rectification and elevation map to FP 1/2002 Markus Neteler </p>
 <p> <i>Last changed: $Date: 2006-12-15 11:10:21 +0100 (Fri, 15 Dec 2006) $</i> </p>

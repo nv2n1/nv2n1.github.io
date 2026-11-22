@@ -10,9 +10,9 @@ description: "lpoptions – display or set printer options and defaults"
 
 <p> lpoptions &#8211; display or set printer options and defaults </p>
 <h2>SYNOPSIS</h2>
-<p> <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] <code>-d </code><i>destination</i>[<code>/</code><i>instance</i>] [ <code>-l</code> ]<br />
- <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-p </code><i>destination</i>[<code>/</code><i>instance</i>] ] <code>-o </code><i>option</i>[<code>=</code><i>value</i>] &#8230;<br />
- <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-p </code><i>destination</i>[<code>/</code><i>instance</i>] ] <code>-r</code> <i>option</i><br />
+<p> <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] <code>-d </code><i>destination</i>[<code>/</code><i>instance</i>] [ <code>-l</code> ]<br/>
+ <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-p </code><i>destination</i>[<code>/</code><i>instance</i>] ] <code>-o </code><i>option</i>[<code>=</code><i>value</i>] &#8230;<br/>
+ <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-p </code><i>destination</i>[<code>/</code><i>instance</i>] ] <code>-r</code> <i>option</i><br/>
  <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] <code>-x </code><i>destination</i>[<code>/</code><i>instance</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>lpoptions</code> displays or sets printer options and defaults. If no printer is specified using the <i>-p</i> option, the default printer is used as described in <code><a href="/docs/linux/man/1-lp/">lp</a></code>(1). </p>
@@ -39,7 +39,7 @@ description: "lpoptions – display or set printer options and defaults"
 <dt><code>-x </code><i>destination</i>[<code>/</code><i>instance</i>]</dt>
 <dd> Removes the options for the named destination and instance, if specified. If the named instance does not exist then this does nothing. Destinations can only be removed using the <code><a href="/docs/linux/man/8-lpadmin/">lpadmin</a></code>(8) command.</dd></dl>
 <h2>FILES</h2>
-<p> <i>~/.cups/lpoptions</i> &#8211; user defaults and instances created by non-root users.<br />
+<p> <i>~/.cups/lpoptions</i> &#8211; user defaults and instances created by non-root users.<br/>
  <i>/etc/cups/lpoptions</i> &#8211; system-wide defaults and instances created by the root user.</p>
 <h2>CONFORMING TO</h2>
 <p> The <code>lpoptions</code> command is unique to CUPS.</p>

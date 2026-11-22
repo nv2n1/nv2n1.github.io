@@ -11,7 +11,7 @@ description: "clabrd.f –"
 <p> clabrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clabrd</code> (M, N, NB, A, LDA, D, E, TAUQ, TAUP, X, LDX, Y, LDY)<br />
+<p> subroutine <code>clabrd</code> (M, N, NB, A, LDA, D, E, TAUQ, TAUP, X, LDX, Y, LDY)<br/>
  <i></i><code>CLABRD</code> reduces the first nb rows and columns of a general matrix to a bidiagonal form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clabrd (integerM, integerN, integerNB, complex, dimension( lda, * )A, integerLDA, real, dimension( * )D, real, dimension( * )E, complex, dimension( * )TAUQ, complex, dimension( * )TAUP, complex, dimension( ldx, * )X, integerLDX, complex, dimension( ldy, * )Y, integerLDY)</h3>

@@ -10,7 +10,7 @@ description: "cggrqf.f –"
 <p>cggrqf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cggrqf</code> (M, P, N, A, LDA, TAUA, B, LDB, TAUB, WORK, LWORK, INFO)<br />
+<p>subroutine <code>cggrqf</code> (M, P, N, A, LDA, TAUA, B, LDB, TAUB, WORK, LWORK, INFO)<br/>
  <i></i><code>CGGRQF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cggrqf (integerM, integerP, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAUA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( * )TAUB, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

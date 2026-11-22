@@ -101,8 +101,8 @@ int semtimedop(int semid, struct sembuf *sops, size_t nsops,
 <p> /* Code to set <i>semid</i> omitted */ </p>
 <p> sops[0].sem_num = 0; /* Operate on semaphore 0 */ sops[0].sem_op = 0; /* Wait for value to equal 0 */ sops[0].sem_flg = 0; </p>
 <p> sops[1].sem_num = 0; /* Operate on semaphore 0 */ sops[1].sem_op = 1; /* Increment value by one */ sops[1].sem_flg = 0; </p>
-<p> if (semop(semid, sops, 2) == -1) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;semop&quot;);<br />
+<p> if (semop(semid, sops, 2) == -1) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;semop&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); } </p>
 <p> A further example of the use of <code>semop</code>() can be found in <code><a href="/docs/linux/man/2-shmop/">shmop</a></code>(2).</p>
 <h2>SEE ALSO</h2>

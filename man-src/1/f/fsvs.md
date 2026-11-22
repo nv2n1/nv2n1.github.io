@@ -347,7 +347,7 @@ fsvs checkout[path] URL[URLs...]
 </pre>
 <p> This command shows general or specific <code>help</code> (for the given command). A similar function is available by using -h or -? after a command. </p>
 <h2>ignore</h2>
-<p>fsvs ignore dump | load<br />
+<p>fsvs ignore dump | load<br/>
                        fsvs ignore[prepend | append | at = n] pattern[pattern&#8230;]</p>
 <p> This command adds patterns to the end of the ignore list, or, with <i>prepend</i> , puts them at the beginning of the list. With at=x the patterns are inserted at the position x , counting from 0. </p>
 <p> fsvs dump prints the patterns to STDOUT . If there are special characters like CR or LF embedded in the pattern <code>without encoding</code> (like 
@@ -541,23 +541,23 @@ fsvs checkout[path] URL[URLs...]
 <dd> <p> &#8216;D&#8217; and &#8216;N&#8217; are used for <i>deleted</i> and <i>new</i> entries. </p>
  </dd>
 <dt>*</dt>
-<dd> <p> &#8216;d&#8217; and &#8216;n&#8217; are used for entries which are to be unversioned or added on the next commit; the characters were chosen as <i>little delete</i> (only in the repository, not removed locally) and <i>little new</i> (although <code>ignored</code>). See <code>add</code> and <code>unversion</code>. <br />
- <br />
+<dd> <p> &#8216;d&#8217; and &#8216;n&#8217; are used for entries which are to be unversioned or added on the next commit; the characters were chosen as <i>little delete</i> (only in the repository, not removed locally) and <i>little new</i> (although <code>ignored</code>). See <code>add</code> and <code>unversion</code>. <br/>
+ <br/>
 &nbsp;<wbr>If such an entry does not exist, it is marked with an&nbsp;<wbr>&#8216;!&#8216;&nbsp;<wbr>-- because it has been manually marked, and for both types removing the entry makes no sense. </p>
  </dd>
 <dt>*</dt>
 <dd> <p> A changed type (character device to symlink, file to directory etc.) is given as &#8216;R&#8217; (replaced), ie. as removed and newly added. </p>
  </dd>
 <dt>*</dt>
-<dd> <p> <br />
-&nbsp;<wbr>If the entry has been modified, the change is shown as&nbsp;<wbr>&#8216;C&#8217;.&nbsp;<wbr> <br />
- <br />
+<dd> <p> <br/>
+&nbsp;<wbr>If the entry has been modified, the change is shown as&nbsp;<wbr>&#8216;C&#8217;.&nbsp;<wbr> <br/>
+ <br/>
 &nbsp;<wbr>If the modification or status change timestamps&nbsp;<wbr>(mtime, ctime)&nbsp;<wbr>are changed, but the size is still the same, the entry is marked as possibly changed&nbsp;<wbr>(a question mark&nbsp;<wbr>&#8216;?&#8216;&nbsp;<wbr>is printed)&nbsp;<wbr>- but see&nbsp;<wbr><code>change detection</code>&nbsp;<wbr>for details. </p>
  </dd>
 <dt>*</dt>
-<dd> <p> <br />
-&nbsp;<wbr>The meta-data flag&nbsp;<wbr>&#8216;m&#8217;&nbsp;<wbr>shows meta-data changes like properties, modification timestamp and/or the rights&nbsp;<wbr>(owner, group, mode);&nbsp;<wbr>depending on the&nbsp;<wbr><code>-v/-q</code>&nbsp;<wbr>command line parameters, it may be splitted into&nbsp;<wbr>&#8216;P&#8217;&nbsp;<wbr>(properties),&nbsp;<wbr>&#8216;t&#8217;&nbsp;<wbr>(time)&nbsp;<wbr>and&nbsp;<wbr>&#8216;p&#8217;&nbsp;<wbr>(permissions).&nbsp;<wbr> <br />
- <br />
+<dd> <p> <br/>
+&nbsp;<wbr>The meta-data flag&nbsp;<wbr>&#8216;m&#8217;&nbsp;<wbr>shows meta-data changes like properties, modification timestamp and/or the rights&nbsp;<wbr>(owner, group, mode);&nbsp;<wbr>depending on the&nbsp;<wbr><code>-v/-q</code>&nbsp;<wbr>command line parameters, it may be splitted into&nbsp;<wbr>&#8216;P&#8217;&nbsp;<wbr>(properties),&nbsp;<wbr>&#8216;t&#8217;&nbsp;<wbr>(time)&nbsp;<wbr>and&nbsp;<wbr>&#8216;p&#8217;&nbsp;<wbr>(permissions).&nbsp;<wbr> <br/>
+ <br/>
 &nbsp;<wbr>If&nbsp;<wbr>&#8216;P&#8217;&nbsp;<wbr>is shown for the non-verbose case, it means&nbsp;<wbr><code>only</code>&nbsp;<wbr>property changes, ie. the entries filesystem meta-data is unchanged. </p>
  </dd>
 <dt>*</dt>

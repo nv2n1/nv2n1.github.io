@@ -12,13 +12,13 @@ description: "qhold – hold pbs batch jobs"
 <h2>SYNOPSIS</h2>
 <p> qhold [-h hold_list] [-t array_range] job_identifier &#8230;</p>
 <h2>DESCRIPTION</h2>
-<p> The <code>qhold </code> command requests that a server place one or more holds on a job. A job that has a hold is not eligible for execution. There are three supported holds: <font SIZE="-1"></font><font SIZE="-2"><code> (also known as operator), and </code></font><font SIZE="-3"><code> </p>
-<p> A user may place a </code></font><font SIZE="-4"><code> hold upon any job the user owns. An &quot;operator&quot;, who is a user with &quot;operator privilege,&quot; may place ether an </code></font><font SIZE="-5"><code> or an </code></font><font SIZE="-6"><code> hold on any job. The batch administrator may place any hold on any job. </p>
+<p> The <code>qhold </code> command requests that a server place one or more holds on a job. A job that has a hold is not eligible for execution. There are three supported holds: <code> (also known as operator), and </code><code> </p>
+<p> A user may place a </code><code> hold upon any job the user owns. An &quot;operator&quot;, who is a user with &quot;operator privilege,&quot; may place ether an </code><code> or an </code><code> hold on any job. The batch administrator may place any hold on any job. </p>
 <p> If no </code><i> option is given, the USER hold will be applied to the jobs described by the operand list. </p>
 <p> If the job identified by is in the </i><code>queued</code>, <code>held</code>, or <code>waiting</code> states, then all that occurs is that the hold type is added to the job. The job is then placed into <code>held</code> state if it resides in an execution queue. </p>
 <p> If the job is in <code>running</code> state, then the following additional action is taken to interrupt the execution of the job. If checkpoint / restart is supported by the host system, requesting a hold on a running job will (1) cause the job to be checkpointed, (2) the resources assigned to the job will be released, and (3) the job is placed in the <code>held</code> state in the execution queue. </p>
 <p> If checkpoint / restart is not supported, qhold will only set the the requested hold attribute. This will have no effect unless the job is rerun with the <code>qrerun </code> command. </p>
-<p> The qhold command sends a <i>Hold Job</i> batch request to the server as described in the general section. </font></p>
+<p> The qhold command sends a <i>Hold Job</i> batch request to the server as described in the general section. </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt>-h hold_list</dt>
@@ -28,17 +28,17 @@ description: "qhold – hold pbs batch jobs"
 <dl>
 <dl>
 <dt>u &#8211;</dt>
-<dd> <font SIZE="-1"><code></dd>
+<dd> <code></dd>
 <dt>o &#8211;</dt>
-<dd> </code></font><font SIZE="-2"><code></dd>
+<dd> </code><code></dd>
 <dt>s &#8211;</dt>
-<dd> </code></font><font SIZE="-3"><code></dd></dl>
+<dd> </code><code></dd></dl>
 </dl>
 <dt>-t array_range</dt>
 <dd> The array_range argument is an integer id or a range of integers. Multiple ids or id ranges can be combined in a comma delimted list. Examples: -t 1-100 or -t 1,10,50-100</dd>
 <dt>
 </dt><dd> If an array range isn&#8217;t specified, the command tries to operate on the entire array. The command acts on the array (or specified range of the array) just as it would on an individual job.</dd></dl>
-<p> </code></font></p>
+<p> </code></p>
 <h2>OPERANDS</h2>
 <p> The qhold command accepts one or more <i> operands of the form: </i><code> </p>
 <p> </code></p>

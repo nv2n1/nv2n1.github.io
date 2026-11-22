@@ -11,7 +11,7 @@ description: "cgbequ.f –"
 <p> cgbequ.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgbequ</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, INFO)<br />
+<p> subroutine <code>cgbequ</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, INFO)<br/>
  <i></i><code>CGBEQU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgbequ (integerM, integerN, integerKL, integerKU, complex, dimension( ldab, * )AB, integerLDAB, real, dimension( * )R, real, dimension( * )C, realROWCND, realCOLCND, realAMAX, integerINFO)</h3>

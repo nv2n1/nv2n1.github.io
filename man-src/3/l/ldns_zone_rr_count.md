@@ -10,7 +10,7 @@ description: "ldns_zone_rr_count"
 
 <p> ldns_zone_rr_count </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> size_t ldns_zone_rr_count(const ldns_zone *z); </p>

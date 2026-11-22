@@ -15,7 +15,7 @@ description: "QuantLib::ForwardTypePayoff – Class for forward type payoffs."
 <h3>Public Member Functions</h3>
 <p><code>ForwardTypePayoff</code> (Position::Type type, Real strike) </p>
 <p> Position::Type <code>forwardType</code> () const </p>
-<p> Real <code>strike</code> () const<br />
+<p> Real <code>strike</code> () const<br/>
  <code>Payoff interface</code> </p>
 <p> std::string <code>name</code> () const </p>
 <p> std::string <code>description</code> () const </p>

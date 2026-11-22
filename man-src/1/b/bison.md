@@ -125,13 +125,13 @@ description: "bison – GNU Project parser generator (yacc replacement)"
 <h2>AUTHOR</h2>
 <p> Written by Robert Corbett and Richard Stallman.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bug-bison [at] gnu.org&gt;.<br />
- GNU Bison home page: &lt;<a rel="nofollow" href="http://www.gnu.org/software/bison/">http://www.gnu.org/software/bison/</a>&gt;.<br />
+<p> Report bugs to &lt;bug-bison [at] gnu.org&gt;.<br/>
+ GNU Bison home page: &lt;<a rel="nofollow" href="http://www.gnu.org/software/bison/">http://www.gnu.org/software/bison/</a>&gt;.<br/>
  General help using GNU software: &lt;<a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a>&gt;. </p>
-<p> Report translation bugs to &lt;<a rel="nofollow" href="http://translationproject.org/team/">http://translationproject.org/team/</a>&gt;.<br />
+<p> Report translation bugs to &lt;<a rel="nofollow" href="http://translationproject.org/team/">http://translationproject.org/team/</a>&gt;.<br/>
  For complete documentation, run: info bison.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2015 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 2015 Free Software Foundation, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code>lex</code>(1), <code><a href="/docs/linux/man/1-flex/">flex</a></code>(1), <code><a href="/docs/linux/man/1-yacc/">yacc</a></code>(1). </p>

@@ -13,10 +13,10 @@ description: "btrfs-qgroup – control the quota group of a btrfs filesystem"
 <h2>Description</h2>
 <p><code>btrfs qgroup</code> is used to control quota group (qgroup) of a btrfs filesystem.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  To use qgroup you need to enable quota first using <code>btrfs quota enable</code> command. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Qgroup is not stable yet and will impact performance in current mainline kernel (v4.14). </dd>
 <h2>Qgroup</h2>
 <p>Quota groups or qgroup in btrfs make a tree hierarchy, the leaf qgroups are attached to subvolumes. The size limits are set per qgroup and apply when any limit is reached in tree that contains a given subvolume. </p>
@@ -24,7 +24,7 @@ description: "btrfs-qgroup – control the quota group of a btrfs filesystem"
 <p> The qgroup identifiers conform to <i>level/id</i> where level 0 is reserved to the qgroups associated with subvolumes. Such qgroups are created automatically. </p>
 <p> The qgroup hierarchy is built by commands <code>create</code> and <code>assign</code>. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If the qgroup of a subvolume is destroyed, quota about the subvolume will not be functional until qgroup <i>0/</i><i>&lt;subvolume id&gt;</i> is created again. </p>
 </dl>
 <h2>Subcommand</h2>

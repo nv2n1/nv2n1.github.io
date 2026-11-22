@@ -14,11 +14,11 @@ description: "QwtAlphaColorMap –"
 <p> Inherits <code>QwtColorMap</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtAlphaColorMap</code> (const QColor &amp;=QColor(Qt::gray)) </p>
-<p> virtual <code>~QwtAlphaColorMap</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtAlphaColorMap</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setColor</code> (const QColor &amp;) </p>
 <p> QColor <code>color</code> () const </p>
-<p> virtual QRgb <code>rgb</code> (const <code>QwtInterval</code> &amp;, double value) const<br />
+<p> virtual QRgb <code>rgb</code> (const <code>QwtInterval</code> &amp;, double value) const<br/>
  <i>Map a value of a given interval into a alpha value. </i></p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>
@@ -41,7 +41,7 @@ description: "QwtAlphaColorMap –"
 <p>Map a value of a given interval into a alpha value. alpha := (value &#8211; interval.minValue()) / interval.width(); </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Range for all values<br />
+<dd><i>interval</i> Range for all values<br/>
  <i>value</i> Value to map into a RGB value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

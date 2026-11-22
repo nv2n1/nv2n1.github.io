@@ -10,7 +10,7 @@ description: "zlarzb.f –"
 <p>zlarzb.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlarzb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br />
+<p>subroutine <code>zlarzb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br/>
  <i></i><code>ZLARZB</code> applies a block reflector or its conjugate-transpose to a general matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlarzb (characterSIDE, characterTRANS, characterDIRECT, characterSTOREV, integerM, integerN, integerK, integerL, complex*16, dimension( ldv, * )V, integerLDV, complex*16, dimension( ldt, * )T, integerLDT, complex*16, dimension( ldc, * )C, integerLDC, complex*16, dimension( ldwork, * )WORK, integerLDWORK)</h3>

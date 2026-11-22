@@ -9,17 +9,17 @@ description: "Net-SNMP Agent handler and extensibility API – The basic theory 
 
 <p>Net-SNMP Agent handler and extensibility API &#8211; The basic theory goes something like this: In the past, with the original mib module api (which derived from the original CMU SNMP code) the underlying mib modules were passed very little information (only the truly most basic information about a request).</p>
 <h3>Modules</h3>
-<p><code>utility_handlers</code><br />
- <i>Simplify request processing A group of handlers intended to simplify certain aspects of processing a request for a MIB object. </i><br />
- <code>leaf_handlers</code><br />
- <i>Process individual leaf objects A group of handlers to implement individual leaf objects and instances (both scalar objects, and individual objects and instances within a table). </i><br />
- <code>baby_steps</code><br />
- <i>Calls your handler in baby_steps for set processing. </i><br />
- <code>old_api</code><br />
- <i>Calls mib module code written in the old style of code. </i><br />
- <code>stash_cache</code><br />
- <i>Automatically caches data for certain handlers. </i><br />
- <code>table</code><br />
+<p><code>utility_handlers</code><br/>
+ <i>Simplify request processing A group of handlers intended to simplify certain aspects of processing a request for a MIB object. </i><br/>
+ <code>leaf_handlers</code><br/>
+ <i>Process individual leaf objects A group of handlers to implement individual leaf objects and instances (both scalar objects, and individual objects and instances within a table). </i><br/>
+ <code>baby_steps</code><br/>
+ <i>Calls your handler in baby_steps for set processing. </i><br/>
+ <code>old_api</code><br/>
+ <i>Calls mib module code written in the old style of code. </i><br/>
+ <code>stash_cache</code><br/>
+ <i>Automatically caches data for certain handlers. </i><br/>
+ <code>table</code><br/>
  <i>Helps you implement a table. </i></p>
 <h3>Data Structures</h3>
 <pre><code>struct netsnmp_mib_handler_s
@@ -53,10 +53,10 @@ Defines
 #define REQUEST_IS_DELEGATED   1
 #define REQUEST_IS_NOT_DELEGATED   0
 Typedefs</code></pre>
-<p> typedef <code>netsnmp_mib_handler_s</code> <code>netsnmp_mib_handler</code><br />
- <i>Typedefs the </i><code>netsnmp_mib_handler_s</code> struct into netsnmp_mib_handler.<br />
- typedef <code>netsnmp_handler_registration_s</code> <code>netsnmp_handler_registration</code><br />
- <i>Typedefs the </i><code>netsnmp_handler_registration_s</code> struct into netsnmp_handler_registration.<br />
+<p> typedef <code>netsnmp_mib_handler_s</code> <code>netsnmp_mib_handler</code><br/>
+ <i>Typedefs the </i><code>netsnmp_mib_handler_s</code> struct into netsnmp_mib_handler.<br/>
+ typedef <code>netsnmp_handler_registration_s</code> <code>netsnmp_handler_registration</code><br/>
+ <i>Typedefs the </i><code>netsnmp_handler_registration_s</code> struct into netsnmp_handler_registration.<br/>
  typedef int( <code>Netsnmp_Node_Handler</code> )(<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests) </p>
 <p> typedef <code>netsnmp_handler_args_s</code> <code>netsnmp_handler_args</code> </p>
 <p> typedef <code>netsnmp_delegated_cache_s</code> <code>netsnmp_delegated_cache</code></p>
@@ -165,7 +165,7 @@ void * netsnmp_handler_get_parent_data (netsnmp_request_info *, const char *)</c
 <p> The returned handler should then be <code>registered.</code> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>name</i> is the handler name and is copied then assigned to netsnmp_mib_handler-&gt;handler_name<br />
+<dd><i>name</i> is the handler name and is copied then assigned to netsnmp_mib_handler-&gt;handler_name<br/>
  <i>handler_access_method</i> is a function pointer used as the access method for this handler registration instance for whatever required needs.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -232,10 +232,10 @@ void * netsnmp_handler_get_parent_data (netsnmp_request_info *, const char *)</c
 <dd>This ends up calling netsnmp_create_handler(name, handler_access_method)</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>name</i> is the handler name and is copied then assigned to netsnmp_handler_registration-&gt;handlerName.<br />
- <i>handler</i> is a function pointer used as the access method for this handler registration instance for whatever required needs.<br />
- <i>reg_oid</i> is the registration location oid.<br />
- <i>reg_oid_len</i> is the length of reg_oid, can use the macro, OID_LENGTH<br />
+<dd><i>name</i> is the handler name and is copied then assigned to netsnmp_handler_registration-&gt;handlerName.<br/>
+ <i>handler</i> is a function pointer used as the access method for this handler registration instance for whatever required needs.<br/>
+ <i>reg_oid</i> is the registration location oid.<br/>
+ <i>reg_oid_len</i> is the length of reg_oid, can use the macro, OID_LENGTH<br/>
  <i>modes</i> is used to configure read/write access. If modes == 0, then modes will automatically be set to the default value of only HANDLER_CAN_DEFAULT, which is by default read-only GET and GETNEXT requests. The other two mode options are read only, HANDLER_CAN_RONLY, and read/write, HANDLER_CAN_RWRITE.</dd></dl>
 <dl>
 <dt>*</dt>
@@ -302,7 +302,7 @@ void * netsnmp_handler_get_parent_data (netsnmp_request_info *, const char *)</c
 <p>add data to a request that can be extracted later by submodules </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>request</i> the netsnmp request info structure<br />
+<dd><i>request</i> the netsnmp request info structure<br/>
  <i>node</i> this is the data to be added to the linked list request-&gt;parent_data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -315,7 +315,7 @@ void * netsnmp_handler_get_parent_data (netsnmp_request_info *, const char *)</c
 <p>extract data from a request that was added previously by a parent module </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>request</i> the netsnmp request info function<br />
+<dd><i>request</i> the netsnmp request info function<br/>
  <i>name</i> used to compare against the request-&gt;parent_data-&gt;name value, if a match is found request-&gt;parent_data-&gt;data is returned</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -328,7 +328,7 @@ void * netsnmp_handler_get_parent_data (netsnmp_request_info *, const char *)</c
 <p>remove data from a request </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>request</i> the netsnmp request info structure<br />
+<dd><i>request</i> the netsnmp request info structure<br/>
  <i>name</i> this is the name of the previously added data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

@@ -10,7 +10,7 @@ description: "dspam_dump – produce a dump of a user’s metadata"
 
 <p> dspam_dump &#8211; produce a dump of a user&#8217;s metadata</p>
 <h2>SYNOPSIS</h2>
-<p> <code>dspam_dump</code> [<code>&#8211;profile</code>=PROFILE] [<code>-d</code><br />
+<p> <code>dspam_dump</code> [<code>&#8211;profile</code>=PROFILE] [<code>-d</code><br/>
 &nbsp;<wbr>sqlite_drv] <code>username</code> [<code>token</code>] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>dspam_dump</code> dumps a user&#8217;s metadata dictionary to stdout. This can be used to view the entire contents of a user&#8217;s dictionary, or used in combination with grep to view a subset of data. The output provides the token&#8217;s stored value (in CRC64 format), the number of spam and nonspam hits, and the token&#8217;s computed probability. </p>
@@ -19,7 +19,7 @@ description: "dspam_dump – produce a dump of a user’s metadata"
 <dt><code>&nbsp;<wbr>&#8211;profile=</code><i>PROFILE</i></dt>
 <dd> Specify a storage profile from dspam.conf. The storage profile selected will be used for all database connectivity. See dspam.conf for more information. </dd>
 <dt><code>&nbsp;<wbr>username</code><i></i></dt>
-<dd> The username of the user to dump. Only trusted users (or root) can use this program for the usernames different from the current one.<br />
+<dd> The username of the user to dump. Only trusted users (or root) can use this program for the usernames different from the current one.<br/>
 &nbsp;<wbr></dd>
 <dt><code>&nbsp;<wbr>token</code><i></i></dt>
 <dd>
@@ -36,7 +36,7 @@ description: "dspam_dump – produce a dump of a user’s metadata"
 <dd> Operation resulted in an error. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2002-2012 DSPAM Project<br />
+<p> Copyright &#169; 2002-2012 DSPAM Project<br/>
  All rights reserved. </p>
 <p> For more information, see <a rel="nofollow" href="http://dspam.sourceforge.net.">http://dspam.sourceforge.net.</a> </p>
 <h2>SEE ALSO</h2>

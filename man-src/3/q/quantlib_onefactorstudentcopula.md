@@ -13,9 +13,9 @@ description: "QuantLib::OneFactorStudentCopula – One-factor Double Student t-C
 <p> Inherits <code>QuantLib::OneFactorCopula</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>OneFactorStudentCopula</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;correlation, int nz, int nm, Real maximum=10, Size integrationSteps=200) </p>
-<p> Real <code>density</code> (Real m) const<br />
- <i>Density function of M. </i><br />
- Real <code>cumulativeZ</code> (Real z) const<br />
+<p> Real <code>density</code> (Real m) const<br/>
+ <i>Density function of M. </i><br/>
+ Real <code>cumulativeZ</code> (Real z) const<br/>
  <i>Cumulative distribution of Z. </i></p>
 <h2>Detailed Description</h2>
 <p>One-factor Double Student t-Copula. </p>

@@ -22,7 +22,7 @@ description: "edb-sqlite – eurephia SQLite3 database driver"
 </dd><dd>user [at] server:~ $ eurephia_init &#8211;database-driver edb-sqlite.so \ &#8211;database-args &quot;&lt;full path to DB file&gt;&quot;</dd>
 <dt><code>eurephiadm</code> &#8211; This is configured in the <code>~/.eurephia/eurephiadm.cfg</code> file</dt>
 <dd>
-</dd><dd>database_driver = edb-sqlite.so<br />
+</dd><dd>database_driver = edb-sqlite.so<br/>
  database_params = &lt;full path to DB file&gt;</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-eurephia-auth/">eurephia-auth</a></code>(7), <code><a href="/docs/linux/man/7-eurephiadm/">eurephiadm</a></code>(7), <code><a href="/docs/linux/man/7-eurephia_init/">eurephia_init</a></code>(7) </p>

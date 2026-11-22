@@ -11,7 +11,7 @@ description: "cla_gerfsx_extended.f –"
 <p> cla_gerfsx_extended.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cla_gerfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERRS_N, ERRS_C, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br />
+<p> subroutine <code>cla_gerfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERRS_N, ERRS_C, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br/>
  <i></i><code>CLA_GERFSX_EXTENDED</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cla_gerfsx_extended (integerPREC_TYPE, integerTRANS_TYPE, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, logicalCOLEQU, real, dimension( * )C, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldy, * )Y, integerLDY, real, dimension( * )BERR_OUT, integerN_NORMS, real, dimension( nrhs, * )ERRS_N, real, dimension( nrhs, * )ERRS_C, complex, dimension( * )RES, real, dimension( * )AYB, complex, dimension( * )DY, complex, dimension( * )Y_TAIL, realRCOND, integerITHRESH, realRTHRESH, realDZ_UB, logicalIGNORE_CWISE, integerINFO)</h3>
@@ -144,78 +144,78 @@ description: "cla_gerfsx_extended.f –"
      or vector Z. This is computed by CLA_LIN_BERR.
 </pre>
 <p> <i>N_NORMS</i> </p>
-<p>N_NORMS is INTEGER<br />
-        Determines which error bounds to return (see ERRS_N and ERRS_C)<br />
+<p>N_NORMS is INTEGER<br/>
+        Determines which error bounds to return (see ERRS_N and ERRS_C)<br/>
             .If N_NORMS &gt;= 1 return normwise error bounds.If N_NORMS &gt;= 2 return componentwise error bounds.</p>
 <p> <i>ERRS_N</i> </p>
-<p>ERRS_N is REAL array, dimension(NRHS, N_ERR_BNDS) For each right &#8211; hand side, this array contains information about various error bounds and condition numbers corresponding to the normwise relative error, which is defined as follows : Normwise relative error in the ith solution vector : max_j(abs(XTRUE(j, i) &#8211; X(j, i)))&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;max_j abs(X(j, i)) The array is indexed by the type of error information as described below.There currently are up to three pieces of information returned.The first index in ERRS_N(i,<br />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  :) corresponds to the ith right<br />
-                                                                                                                                                                                                                 &#8211; hand side.The second index in ERRS_N(<br />
-                                                                                                                                                                                                                       :, err) contains the following<br />
-     three fields:<br />
-     err = 1 &#8220;Trust/don&#8217;t trust&#8221; boolean. Trust the answer if the<br />
-              reciprocal condition number is less than the threshold<br />
-              sqrt(n) * slamch(&#8216;Epsilon&#8217;).<br />
-     err = 2 &#8220;Guaranteed&#8221; error bound: The estimated forward error,<br />
-              almost certainly within a factor of 10 of the true error<br />
-              so long as the next entry is greater than the threshold<br />
-              sqrt(n) * slamch(&#8216;Epsilon&#8217;). This error bound should only<br />
-              be trusted if the previous boolean is true.<br />
-     err = 3  Reciprocal condition number: Estimated normwise<br />
-              reciprocal condition number.  Compared with the threshold<br />
-              sqrt(n) * slamch(&#8216;Epsilon&#8217;) to determine if the error<br />
-              estimate is &#8220;guaranteed&#8221;. These reciprocal condition<br />
-              numbers are 1 / (norm(Z^{-1},inf) * norm(Z,inf)) for some<br />
-              appropriately scaled matrix Z.<br />
-              Let Z = S*A, where S scales each row by a power of the<br />
-              radix so all absolute row sums of Z are approximately 1.<br />
-     This subroutine is only responsible for setting the second field<br />
-     above.<br />
-     See Lapack Working Note 165 for further details and extra<br />
+<p>ERRS_N is REAL array, dimension(NRHS, N_ERR_BNDS) For each right &#8211; hand side, this array contains information about various error bounds and condition numbers corresponding to the normwise relative error, which is defined as follows : Normwise relative error in the ith solution vector : max_j(abs(XTRUE(j, i) &#8211; X(j, i)))&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;max_j abs(X(j, i)) The array is indexed by the type of error information as described below.There currently are up to three pieces of information returned.The first index in ERRS_N(i,<br/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  :) corresponds to the ith right<br/>
+                                                                                                                                                                                                                 &#8211; hand side.The second index in ERRS_N(<br/>
+                                                                                                                                                                                                                       :, err) contains the following<br/>
+     three fields:<br/>
+     err = 1 &#8220;Trust/don&#8217;t trust&#8221; boolean. Trust the answer if the<br/>
+              reciprocal condition number is less than the threshold<br/>
+              sqrt(n) * slamch(&#8216;Epsilon&#8217;).<br/>
+     err = 2 &#8220;Guaranteed&#8221; error bound: The estimated forward error,<br/>
+              almost certainly within a factor of 10 of the true error<br/>
+              so long as the next entry is greater than the threshold<br/>
+              sqrt(n) * slamch(&#8216;Epsilon&#8217;). This error bound should only<br/>
+              be trusted if the previous boolean is true.<br/>
+     err = 3  Reciprocal condition number: Estimated normwise<br/>
+              reciprocal condition number.  Compared with the threshold<br/>
+              sqrt(n) * slamch(&#8216;Epsilon&#8217;) to determine if the error<br/>
+              estimate is &#8220;guaranteed&#8221;. These reciprocal condition<br/>
+              numbers are 1 / (norm(Z^{-1},inf) * norm(Z,inf)) for some<br/>
+              appropriately scaled matrix Z.<br/>
+              Let Z = S*A, where S scales each row by a power of the<br/>
+              radix so all absolute row sums of Z are approximately 1.<br/>
+     This subroutine is only responsible for setting the second field<br/>
+     above.<br/>
+     See Lapack Working Note 165 for further details and extra<br/>
      cautions.</p>
 <p> <i>ERRS_C</i> </p>
-<p>          ERRS_C is REAL array, dimension (NRHS, N_ERR_BNDS)<br />
-     For each right-hand side, this array contains information about<br />
-     various error bounds and condition numbers corresponding to the<br />
-     componentwise relative error, which is defined as follows:<br />
-     Componentwise relative error in the ith solution vector:<br />
-                    abs(XTRUE(j,i) &#8211; X(j,i))<br />
-             max_j &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
-                         abs(X(j,i))<br />
-     The array is indexed by the right-hand side i (on which the<br />
-     componentwise relative error depends), and the type of error<br />
-     information as described below. There currently are up to three<br />
-     pieces of information returned for each right-hand side. If<br />
-     componentwise accuracy is not requested (PARAMS(3) = 0.0), then<br />
-     ERRS_C is not accessed.  If N_ERR_BNDS .LT. 3, then at most<br />
-     the first (:,N_ERR_BNDS)<br />
-          entries are returned.The first index in ERRS_C(i,<br />
-                                                         :) corresponds to the ith<br />
-              right<br />
-              &#8211; hand side.The second index in ERRS_C(<br />
-                    :, err) contains the following<br />
-     three fields:<br />
-     err = 1 &#8220;Trust/don&#8217;t trust&#8221; boolean. Trust the answer if the<br />
-              reciprocal condition number is less than the threshold<br />
-              sqrt(n) * slamch(&#8216;Epsilon&#8217;).<br />
-     err = 2 &#8220;Guaranteed&#8221; error bound: The estimated forward error,<br />
-              almost certainly within a factor of 10 of the true error<br />
-              so long as the next entry is greater than the threshold<br />
-              sqrt(n) * slamch(&#8216;Epsilon&#8217;). This error bound should only<br />
-              be trusted if the previous boolean is true.<br />
-     err = 3  Reciprocal condition number: Estimated componentwise<br />
-              reciprocal condition number.  Compared with the threshold<br />
-              sqrt(n) * slamch(&#8216;Epsilon&#8217;) to determine if the error<br />
-              estimate is &#8220;guaranteed&#8221;. These reciprocal condition<br />
-              numbers are 1 / (norm(Z^{-1},inf) * norm(Z,inf)) for some<br />
-              appropriately scaled matrix Z.<br />
-              Let Z = S*(A*diag(x)), where x is the solution for the<br />
-              current right-hand side and S scales each row of<br />
-              A*diag(x) by a power of the radix so all absolute row<br />
-              sums of Z are approximately 1.<br />
-     This subroutine is only responsible for setting the second field<br />
-     above.<br />
-     See Lapack Working Note 165 for further details and extra<br />
+<p>          ERRS_C is REAL array, dimension (NRHS, N_ERR_BNDS)<br/>
+     For each right-hand side, this array contains information about<br/>
+     various error bounds and condition numbers corresponding to the<br/>
+     componentwise relative error, which is defined as follows:<br/>
+     Componentwise relative error in the ith solution vector:<br/>
+                    abs(XTRUE(j,i) &#8211; X(j,i))<br/>
+             max_j &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br/>
+                         abs(X(j,i))<br/>
+     The array is indexed by the right-hand side i (on which the<br/>
+     componentwise relative error depends), and the type of error<br/>
+     information as described below. There currently are up to three<br/>
+     pieces of information returned for each right-hand side. If<br/>
+     componentwise accuracy is not requested (PARAMS(3) = 0.0), then<br/>
+     ERRS_C is not accessed.  If N_ERR_BNDS .LT. 3, then at most<br/>
+     the first (:,N_ERR_BNDS)<br/>
+          entries are returned.The first index in ERRS_C(i,<br/>
+                                                         :) corresponds to the ith<br/>
+              right<br/>
+              &#8211; hand side.The second index in ERRS_C(<br/>
+                    :, err) contains the following<br/>
+     three fields:<br/>
+     err = 1 &#8220;Trust/don&#8217;t trust&#8221; boolean. Trust the answer if the<br/>
+              reciprocal condition number is less than the threshold<br/>
+              sqrt(n) * slamch(&#8216;Epsilon&#8217;).<br/>
+     err = 2 &#8220;Guaranteed&#8221; error bound: The estimated forward error,<br/>
+              almost certainly within a factor of 10 of the true error<br/>
+              so long as the next entry is greater than the threshold<br/>
+              sqrt(n) * slamch(&#8216;Epsilon&#8217;). This error bound should only<br/>
+              be trusted if the previous boolean is true.<br/>
+     err = 3  Reciprocal condition number: Estimated componentwise<br/>
+              reciprocal condition number.  Compared with the threshold<br/>
+              sqrt(n) * slamch(&#8216;Epsilon&#8217;) to determine if the error<br/>
+              estimate is &#8220;guaranteed&#8221;. These reciprocal condition<br/>
+              numbers are 1 / (norm(Z^{-1},inf) * norm(Z,inf)) for some<br/>
+              appropriately scaled matrix Z.<br/>
+              Let Z = S*(A*diag(x)), where x is the solution for the<br/>
+              current right-hand side and S scales each row of<br/>
+              A*diag(x) by a power of the radix so all absolute row<br/>
+              sums of Z are approximately 1.<br/>
+     This subroutine is only responsible for setting the second field<br/>
+     above.<br/>
+     See Lapack Working Note 165 for further details and extra<br/>
      cautions.</p>
 <p> <i>RES</i> </p>
 <pre>

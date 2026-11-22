@@ -11,7 +11,7 @@ description: "unhide-tcp — forensic tool to find hidden TCP/UDP ports"
 <h2>Synopsis</h2>
 <p><code>unhide-tcp [options]</code></p>
 <h2>Description</h2>
-<p><code>unhide-tcp</code> is a forensic tool that identifies TCP/UDP ports that are listening but are not listed by /sbin/ss (or alternatively by /bin/netstat) through brute forcing of all TCP/UDP ports available.<br />
+<p><code>unhide-tcp</code> is a forensic tool that identifies TCP/UDP ports that are listening but are not listed by /sbin/ss (or alternatively by /bin/netstat) through brute forcing of all TCP/UDP ports available.<br/>
  Note1 : On FreeBSD ans OpenBSD, netstat is allways used as iproute2 doesn&#8217;t exist on these OS. In addition, on FreeBSD, sockstat is used instead of fuser. Note2 : If iproute2 is not available on the system, option -n or -s SHOULD be given on the command line. </p>
 <h2>Options</h2>
 <dl>
@@ -48,5 +48,5 @@ description: "unhide-tcp — forensic tool to find hidden TCP/UDP ports"
 <h2>Author</h2>
 <p>This manual page was written by Francois Marier francois [at] debian.org and Patrick Gouin. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 or any later version published by the Free Software Foundation.</p>
 <h2>License</h2>
-<p>License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p>License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>

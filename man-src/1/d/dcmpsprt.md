@@ -39,14 +39,14 @@ dcmfile-in  DICOM image file(s) to be printed
          use config file f for the logger
 </code></pre>
 <h3>processing options</h3>
-<p>+ p&#8211; pstate[p] state file:string<br />
-                               render the following image with presentation state<br />
-                               p(this option can be specified multiple times) &#8211;<br />
-                           c&#8211; config[f]<br />
-                   ilename:string<br />
-                           process using settings from configuration file f<br />
-                           &#8211; p&#8211; printer[n]<br />
-                       ame:string(default:1st printer in cfg file)<br />
+<p>+ p&#8211; pstate[p] state file:string<br/>
+                               render the following image with presentation state<br/>
+                               p(this option can be specified multiple times) &#8211;<br/>
+                           c&#8211; config[f]<br/>
+                   ilename:string<br/>
+                           process using settings from configuration file f<br/>
+                           &#8211; p&#8211; printer[n]<br/>
+                       ame:string(default:1st printer in cfg file)<br/>
                                select printer with identifier n from cfg file</p>
 <h3>spooling options</h3>
 <pre>
@@ -78,27 +78,27 @@ dcmfile-in  DICOM image file(s) to be printed
 <h3>print presentation LUT options</h3>
 <p>&#8211;default &#8211; plut do not create presentation LUT(default)&#8211; identity set IDENTITY presentation LUT shape&#8211; plut[l] ut identifier : string add LUT l to print job&#8211; inverse &#8211; plut render the inverse presentation LUT into the bitmap of the hardcopy grayscale image&#8211; illumination[v] alue : integer(0..65535) set illumination to v(in cd / m ^ 2)&#8211; reflection[v] alue : integer(0..65535) set reflected ambient light to v(in cd / m ^ 2)</p>
 <h3>basic film session options (only with &#8211;spool)</h3>
-<p>&#8211;copies[v] alue : integer(1..100, default : 1)<br />
-                       set number of copies to v<br />
-                   &#8212; medium<br />
-    &#8211; type[v] alue : string<br />
-                     set medium type to v<br />
-                     &#8212; destination[v] alue : string<br />
-                                              set film destination to v<br />
-                                              &#8212; label[v] alue : string<br />
-                                                                 set film session label to v<br />
-                                                                 &#8212; priority[v] alue : string<br />
-                                                                                       set print priority to v<br />
-                                                                                       &#8212; owner[v] alue : string<br />
+<p>&#8211;copies[v] alue : integer(1..100, default : 1)<br/>
+                       set number of copies to v<br/>
+                   &#8212; medium<br/>
+    &#8211; type[v] alue : string<br/>
+                     set medium type to v<br/>
+                     &#8212; destination[v] alue : string<br/>
+                                              set film destination to v<br/>
+                                              &#8212; label[v] alue : string<br/>
+                                                                 set film session label to v<br/>
+                                                                 &#8212; priority[v] alue : string<br/>
+                                                                                       set print priority to v<br/>
+                                                                                       &#8212; owner[v] alue : string<br/>
                                                                                                           set film session owner ID to v</p>
 <h3>annotation options</h3>
 <p>&#8211;no &#8211; annotation do not create annotation(default) &#8211; a&#8211; annotation[t] ext : string create annotation with text t + pd&#8211; print &#8211; date prepend date / time to annotation(default) &#8211; pd&#8211; print &#8211; no &#8211; date do not prepend date / time to annotation + pn&#8211; print &#8211; name prepend printer name to annotation(default) &#8211; pn&#8211; print &#8211; no &#8211; name do not prepend printer name to annotation + pl&#8211; print &#8211; lighting prepend illumination to annotation(default) &#8211; pl&#8211; print &#8211; no &#8211; lighting do not prepend illumination to annotation</p>
 <h3>overlay options</h3>
-<p>+ O&#8211; overlay[f] ilename:string, [x][y]:integer<br />
-                                            load overlay data from PBM file f and display at<br />
-                                            position(x, y) +<br />
-                                     Og&#8211; ovl &#8211; graylevel[v]<br />
-                    alue:integer(0..4095)<br />
+<p>+ O&#8211; overlay[f] ilename:string, [x][y]:integer<br/>
+                                            load overlay data from PBM file f and display at<br/>
+                                            position(x, y) +<br/>
+                                     Og&#8211; ovl &#8211; graylevel[v]<br/>
+                    alue:integer(0..4095)<br/>
                              use overlay gray level v(default:4095 = white)</p>
 <h3>other_print_options</h3>
 <pre><code>

@@ -12,7 +12,7 @@ description: "ftp – Internet file transfer program"
 
 <p> <code>ftp</code> &#8211; <code>Internet</code> file transfer program </p>
 <h2>SYNOPSIS</h2>
-<p> <code>ftp</code> [-<code>46pinegvd</code> ] [<i>host </i>[<i>port</i> ] ]<br />
+<p> <code>ftp</code> [-<code>46pinegvd</code> ] [<i>host </i>[<i>port</i> ] ]<br/>
 <code>pftp</code> [-<code>46inegvd</code> ] [<i>host </i>[<i>port</i> ] ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>Ftp</code> is the user interface to the <code>Internet</code> standard File Transfer Protocol. The program allows a user to transfer files to and from a remote network site. </p>

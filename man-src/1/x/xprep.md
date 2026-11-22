@@ -29,7 +29,7 @@ xprep[options] target[paths] options : [-d n][-f fn][-p prty][-s][-S][-w] target
 <p> <code>-p </code><i>prty</i></p>
 <dl>
 <dt>
-</dt><dd> schedule the request the the specified priority, <i>prty</i>. The lowest priority is 0.<br />
+</dt><dd> schedule the request the the specified priority, <i>prty</i>. The lowest priority is 0.<br/>
 &nbsp;<wbr>Depending on the system configuration, priorities may or may not be honored. </dd>
 </dl>
 <p> <code>-s</code></p>
@@ -66,5 +66,5 @@ xprep[options] target[paths] options : [-d n][-f fn][-p prty][-s][-S][-w] target
 <h2>LICENSE</h2>
 <p> License terms can be displayed by typing &quot;<code>xrootd -H</code>&quot;.</p>
 <h2>SUPPORT LEVEL</h2>
-<p> The <code>xprep</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
+<p> The <code>xprep</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br/>
  </center> </p>

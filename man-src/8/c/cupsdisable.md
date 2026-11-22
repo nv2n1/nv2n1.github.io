@@ -9,7 +9,7 @@ description: "cupsdisable, cupsenable – stop/start printers and classes"
 
 <p>cupsdisable, cupsenable &#8211; stop/start printers and classes</p>
 <h2>Synopsis</h2>
-<p><code>cupsdisable</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-c</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-r</code> <i>reason</i> ] [ <code>&#8211;hold</code> ] <i>destination(s)</i><br />
+<p><code>cupsdisable</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-c</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-r</code> <i>reason</i> ] [ <code>&#8211;hold</code> ] <i>destination(s)</i><br/>
  <code>cupsenable</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-c</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>&#8211;release</code> ] <i>destination(s)</i></p>
 <h2>Description</h2>
 <p><code>cupsenable</code> starts the named printers or classes while <code>cupsdisable</code> stops the named printers or classes.</p>

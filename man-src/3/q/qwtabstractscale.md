@@ -15,30 +15,30 @@ description: "QwtAbstractScale –"
 <p> Inherited by <code>QwtAbstractSlider</code>, and <code>QwtThermo</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtAbstractScale</code> (QWidget *parent=NULL) </p>
-<p> virtual <code>~QwtAbstractScale</code> ()<br />
- <i>Destructor. </i><br />
- void <code>setScale</code> (double <code>lowerBound</code>, double <code>upperBound</code>)<br />
- <i>Specify a scale. </i><br />
- void <code>setScale</code> (const <code>QwtInterval</code> &amp;)<br />
- <i>Specify a scale. </i><br />
- void <code>setScale</code> (const <code>QwtScaleDiv</code> &amp;)<br />
- <i>Specify a scale. </i><br />
+<p> virtual <code>~QwtAbstractScale</code> ()<br/>
+ <i>Destructor. </i><br/>
+ void <code>setScale</code> (double <code>lowerBound</code>, double <code>upperBound</code>)<br/>
+ <i>Specify a scale. </i><br/>
+ void <code>setScale</code> (const <code>QwtInterval</code> &amp;)<br/>
+ <i>Specify a scale. </i><br/>
+ void <code>setScale</code> (const <code>QwtScaleDiv</code> &amp;)<br/>
+ <i>Specify a scale. </i><br/>
  const <code>QwtScaleDiv</code> &amp; <code>scaleDiv</code> () const </p>
 <p> void <code>setLowerBound</code> (double value) </p>
 <p> double <code>lowerBound</code> () const </p>
 <p> void <code>setUpperBound</code> (double value) </p>
 <p> double <code>upperBound</code> () const </p>
-<p> void <code>setScaleStepSize</code> (double stepSize)<br />
- <i>Set the step size used for calculating a scale division. </i><br />
+<p> void <code>setScaleStepSize</code> (double stepSize)<br/>
+ <i>Set the step size used for calculating a scale division. </i><br/>
  double <code>scaleStepSize</code> () const </p>
-<p> void <code>setScaleMaxMajor</code> (int ticks)<br />
- <i>Set the maximum number of major tick intervals. </i><br />
+<p> void <code>setScaleMaxMajor</code> (int ticks)<br/>
+ <i>Set the maximum number of major tick intervals. </i><br/>
  int <code>scaleMaxMinor</code> () const </p>
-<p> void <code>setScaleMaxMinor</code> (int ticks)<br />
- <i>Set the maximum number of minor tick intervals. </i><br />
+<p> void <code>setScaleMaxMinor</code> (int ticks)<br/>
+ <i>Set the maximum number of minor tick intervals. </i><br/>
  int <code>scaleMaxMajor</code> () const </p>
-<p> void <code>setScaleEngine</code> (<code>QwtScaleEngine</code> *)<br />
- <i>Set a scale engine. </i><br />
+<p> void <code>setScaleEngine</code> (<code>QwtScaleEngine</code> *)<br/>
+ <i>Set a scale engine. </i><br/>
  const <code>QwtScaleEngine</code> * <code>scaleEngine</code> () const </p>
 <p> <code>QwtScaleEngine</code> * <code>scaleEngine</code> () </p>
 <p> int <code>transform</code> (double) const </p>
@@ -49,11 +49,11 @@ description: "QwtAbstractScale –"
 <p> const <code>QwtScaleMap</code> &amp; <code>scaleMap</code> () const </p>
 <h3>Protected Member Functions</h3>
 <p>void <code>rescale</code> (double <code>lowerBound</code>, double <code>upperBound</code>, double stepSize) </p>
-<p> void <code>setAbstractScaleDraw</code> (<code>QwtAbstractScaleDraw</code> *)<br />
- <i>Set a scale draw. </i><br />
+<p> void <code>setAbstractScaleDraw</code> (<code>QwtAbstractScaleDraw</code> *)<br/>
+ <i>Set a scale draw. </i><br/>
  const <code>QwtAbstractScaleDraw</code> * <code>abstractScaleDraw</code> () const </p>
 <p> <code>QwtAbstractScaleDraw</code> * <code>abstractScaleDraw</code> () </p>
-<p> virtual void <code>scaleChange</code> ()<br />
+<p> virtual void <code>scaleChange</code> ()<br/>
  <i>Notify changed scale. </i></p>
 <h2>Detailed Description</h2>
 <p>An abstract base class for widgets having a scale. </p>
@@ -123,8 +123,8 @@ description: "QwtAbstractScale –"
 <p>Recalculate the scale division and update the scale. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lowerBound</i> Lower limit of the scale interval<br />
- <i>upperBound</i> Upper limit of the scale interval<br />
+<dd><i>lowerBound</i> Lower limit of the scale interval<br/>
+ <i>upperBound</i> Upper limit of the scale interval<br/>
  <i>stepSize</i> Major step size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -194,7 +194,7 @@ description: "QwtAbstractScale –"
 <p> The ticks are calculated using <code>scaleMaxMinor()</code>, <code>scaleMaxMajor()</code> and <code>scaleStepSize()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lowerBound</i> lower limit of the scale interval<br />
+<dd><i>lowerBound</i> lower limit of the scale interval<br/>
  <i>upperBound</i> upper limit of the scale interval</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>

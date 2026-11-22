@@ -16,43 +16,43 @@ description: "sc::IntMolecularCoor –"
 <h3>Public Member Functions</h3>
 <p> <code>IntMolecularCoor</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>IntMolecularCoor</code> (<code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;mol) </p>
-<p> <code>IntMolecularCoor</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor.<br />
- void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- virtual void <code>form_coordinates</code> (int keep_variable=0)=0<br />
- <i>Actually form the variable and constant internal coordinates from the simple internal coordinates. </i><br />
- virtual int <code>all_to_cartesian</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSCVector</code> &amp;internal)<br />
- <i>Like to_cartesians(), except all internal coordinates are considered, not just the variable ones. </i><br />
- virtual int <code>all_to_internal</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSCVector</code> &amp;internal)<br />
- <i>Like </i><code>to_internal()</code>, except all internal coordinates are considered, not just the variable ones.<br />
- virtual <code>RefSCDimension</code> <code>dim</code> ()<br />
- <i>These implement the virtual functions inherited from </i><code>MolecularCoor</code>.<br />
+<p> <code>IntMolecularCoor</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor.<br/>
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ virtual void <code>form_coordinates</code> (int keep_variable=0)=0<br/>
+ <i>Actually form the variable and constant internal coordinates from the simple internal coordinates. </i><br/>
+ virtual int <code>all_to_cartesian</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSCVector</code> &amp;internal)<br/>
+ <i>Like to_cartesians(), except all internal coordinates are considered, not just the variable ones. </i><br/>
+ virtual int <code>all_to_internal</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSCVector</code> &amp;internal)<br/>
+ <i>Like </i><code>to_internal()</code>, except all internal coordinates are considered, not just the variable ones.<br/>
+ virtual <code>RefSCDimension</code> <code>dim</code> ()<br/>
+ <i>These implement the virtual functions inherited from </i><code>MolecularCoor</code>.<br/>
  virtual int <code>to_cartesian</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, const <code>RefSCVector</code> &amp;internal) </p>
-<p> virtual int <code>to_internal</code> (<code>RefSCVector</code> &amp;internal)<br />
- <i>Fill in the vector &#8220;internal&#8221; with the current internal coordinates. </i><br />
- virtual int <code>to_cartesian</code> (<code>RefSCVector</code> &amp;cartesian, <code>RefSCVector</code> &amp;internal)<br />
- <i>Convert the internal coordinate gradients in &#8220;internal&#8221; to Cartesian coordinates and copy these Cartesian coordinate gradients to &#8220;cartesian&#8221;. </i><br />
- virtual int <code>to_internal</code> (<code>RefSCVector</code> &amp;internal, <code>RefSCVector</code> &amp;cartesian)<br />
- <i>Convert the Cartesian coordinate gradients in &#8220;cartesian&#8221; to internal coordinates and copy these internal coordinate gradients to &#8220;internal&#8221;. </i><br />
- virtual int <code>to_cartesian</code> (<code>RefSymmSCMatrix</code> &amp;cart, <code>RefSymmSCMatrix</code> &amp;internal)<br />
- <i>Convert the internal coordinate Hessian &#8220;internal&#8221; to Cartesian coordinates and copy the result to &#8220;cartesian&#8221;. </i><br />
- virtual int <code>to_internal</code> (<code>RefSymmSCMatrix</code> &amp;internal, <code>RefSymmSCMatrix</code> &amp;cart)<br />
- <i>Convert the Cartesian coordinate Hessian &#8220;cartesian&#8221; to internal coordinates and copy the result to &#8220;internal&#8221;. </i><br />
- virtual void <code>print</code> (std::ostream &amp;=ExEnv::out0()) const<br />
- <i>Print the coordinate. </i><br />
+<p> virtual int <code>to_internal</code> (<code>RefSCVector</code> &amp;internal)<br/>
+ <i>Fill in the vector &#8220;internal&#8221; with the current internal coordinates. </i><br/>
+ virtual int <code>to_cartesian</code> (<code>RefSCVector</code> &amp;cartesian, <code>RefSCVector</code> &amp;internal)<br/>
+ <i>Convert the internal coordinate gradients in &#8220;internal&#8221; to Cartesian coordinates and copy these Cartesian coordinate gradients to &#8220;cartesian&#8221;. </i><br/>
+ virtual int <code>to_internal</code> (<code>RefSCVector</code> &amp;internal, <code>RefSCVector</code> &amp;cartesian)<br/>
+ <i>Convert the Cartesian coordinate gradients in &#8220;cartesian&#8221; to internal coordinates and copy these internal coordinate gradients to &#8220;internal&#8221;. </i><br/>
+ virtual int <code>to_cartesian</code> (<code>RefSymmSCMatrix</code> &amp;cart, <code>RefSymmSCMatrix</code> &amp;internal)<br/>
+ <i>Convert the internal coordinate Hessian &#8220;internal&#8221; to Cartesian coordinates and copy the result to &#8220;cartesian&#8221;. </i><br/>
+ virtual int <code>to_internal</code> (<code>RefSymmSCMatrix</code> &amp;internal, <code>RefSymmSCMatrix</code> &amp;cart)<br/>
+ <i>Convert the Cartesian coordinate Hessian &#8220;cartesian&#8221; to internal coordinates and copy the result to &#8220;internal&#8221;. </i><br/>
+ virtual void <code>print</code> (std::ostream &amp;=ExEnv::out0()) const<br/>
+ <i>Print the coordinate. </i><br/>
  virtual void <code>print_simples</code> (std::ostream &amp;=ExEnv::out0()) const </p>
 <p> virtual void <code>print_variable</code> (std::ostream &amp;=ExEnv::out0()) const </p>
 <p> virtual void <code>print_constant</code> (std::ostream &amp;=ExEnv::out0()) const </p>
-<p> int <code>nconstrained</code> ()<br />
+<p> int <code>nconstrained</code> ()<br/>
  <i>Returns the number of constrained coordinates. </i></p>
 <h3>Protected Member Functions</h3>
 <p> void <code>form_K_matrix</code> (<code>RefSCDimension</code> &amp;dredundant, <code>RefSCDimension</code> &amp;dfixed, <code>RefSCMatrix</code> &amp;K, int *&amp;is_totally_symmetric) </p>
-<p> virtual void <code>init</code> ()<br />
- <i>This is called by the constructors of classes derived from </i><code>IntMolecularCoor</code>.<br />
- virtual void <code>new_coords</code> ()<br />
- <i>Allocates memory for the SetIntCoor&#8217;s used to store the simple and internal coordinates. </i><br />
- virtual void <code>read_keyval</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
+<p> virtual void <code>init</code> ()<br/>
+ <i>This is called by the constructors of classes derived from </i><code>IntMolecularCoor</code>.<br/>
+ virtual void <code>new_coords</code> ()<br/>
+ <i>Allocates memory for the SetIntCoor&#8217;s used to store the simple and internal coordinates. </i><br/>
+ virtual void <code>read_keyval</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
  <i>Reads the </i><code>KeyVal</code> input.</p>
 <h3>Protected Attributes</h3>
 <p> <code>Ref</code>&lt; <code>IntCoorGen</code> &gt; <code>generator_</code> </p>

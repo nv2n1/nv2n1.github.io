@@ -10,7 +10,7 @@ description: "sla_gerpvgrw.f –"
 <p>sla_gerpvgrw.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>sla_gerpvgrw</code> (N, NCOLS, A, LDA, AF, LDAF)<br />
+<p>REAL function <code>sla_gerpvgrw</code> (N, NCOLS, A, LDA, AF, LDAF)<br/>
  <i></i><code>SLA_GERPVGRW</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function sla_gerpvgrw (integerN, integerNCOLS, real, dimension( lda, * )A, integerLDA, real, dimension( ldaf, * )AF, integerLDAF)</h3>

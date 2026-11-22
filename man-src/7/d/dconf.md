@@ -59,9 +59,9 @@ picture-uri='file:///usr/local/rupert-corp/company-wallpaper.jpeg'</pre>
 <h2>Portability</h2>
 <p>dconf mostly targets Free Software operating systems. It will theoretically run on Mac OS but there isn&#8217;t much point to that (since Mac OS applications want to store preferences in plist files). It is not possible to use dconf on Windows because of the inability to rename over a file that&#8217;s still in use (which is what the dconf-service does on every write).</p>
 <h2>Api Stability</h2>
-<p>The dconf API is not particularly friendly, and is not guaranteed to be stable. Because of this and the lack of portability, you almost certainly want to use some sort of wrapper API around it. The wrapper API used by GTK+ and GNOME applications is m[blue]<code>GSettings</code>m[]<font SIZE="-2">[1]</font>, which is included as part of GLib. GSettings has backends for Windows (using the registry) and Mac OS (using property lists) as well as its dconf backend and is the proper API to use for graphical applications.</p>
+<p>The dconf API is not particularly friendly, and is not guaranteed to be stable. Because of this and the lack of portability, you almost certainly want to use some sort of wrapper API around it. The wrapper API used by GTK+ and GNOME applications is m[blue]<code>GSettings</code>m[][1], which is included as part of GLib. GSettings has backends for Windows (using the registry) and Mac OS (using property lists) as well as its dconf backend and is the proper API to use for graphical applications.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-dconf-service/">dconf-service</a></code>(1), <code><a href="/docs/linux/man/1-dconf-editor/">dconf-editor</a></code>(1), <code><a href="/docs/linux/man/1-dconf/">dconf</a></code>(1), m[blue]<code>GSettings</code>m[]<font SIZE="-2">[1]</font></p>
+<p><code><a href="/docs/linux/man/1-dconf-service/">dconf-service</a></code>(1), <code><a href="/docs/linux/man/1-dconf-editor/">dconf-editor</a></code>(1), <code><a href="/docs/linux/man/1-dconf/">dconf</a></code>(1), m[blue]<code>GSettings</code>m[][1]</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

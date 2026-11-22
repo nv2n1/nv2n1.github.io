@@ -22,7 +22,7 @@ git pull[&lt;options&gt;][&lt;repository&gt;[&lt;refspec&gt;...]]
 <dl>
 <dt>
 </dt><dd>
-A&#8211; &#8211; B&#8211; &#8211; C master on origin / D&#8211; &#8211; E&#8211; &#8211; F&#8211; &#8211; G master ^<br />
+A&#8211; &#8211; B&#8211; &#8211; C master on origin / D&#8211; &#8211; E&#8211; &#8211; F&#8211; &#8211; G master ^<br/>
     origin / master in your repository
 </dd></dl>
 <p> Then &quot;<code>git pull</code>&quot; will fetch and replay the changes from the remote <code>master</code> branch since it diverged from the local <code>master</code> (i.e., <code>E</code>) until its current commit (<code>C</code>) on top of <code>master</code> and record the result in a new commit along with the names of the two parent commits and a log message from the user describing the changes. </p>
@@ -144,7 +144,7 @@ A-- - B-- - C origin / master / D-- - E-- - F-- - G-- - H master
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  This is a potentially <i>dangerous</i> mode of operation. It rewrites history, which does not bode well when you published that history already. Do <code>not</code> use this option unless you have read <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1) carefully. </dd>
 </dl>
 </dl>
@@ -293,13 +293,13 @@ A-- - B-- - C origin / master / D-- - E-- - F-- - G-- - H master
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  When the remote branch you want to fetch is known to be rewound and rebased regularly, it is expected that its new tip will not be descendant of its previous tip (as stored in your remote-tracking branch the last time you fetched). You would want to use the <code>+</code> sign to indicate non-fast-forward updates will be needed for such branches. There is no way to determine or declare that a branch will be made available in a repository with this behavior; the pulling user simply must know this is the expected usage pattern for a branch. </dd>
 </dl>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  There is a difference between listing multiple &lt;refspec&gt; directly on <i>git pull</i> command line and having multiple <code>remote.&lt;repository&gt;.fetch</code> entries in your configuration for a &lt;repository&gt; and running a <i>git pull</i> command without any explicit &lt;refspec&gt; parameters. &lt;refspec&gt;s listed explicitly on the command line are always merged into the current branch after fetching. In other words, if you list more than one remote ref, <i>git pull</i> will create an Octopus merge. On the other hand, if you do not list any explicit &lt;refspec&gt; parameter on the command line, <i>git pull</i> will fetch all the &lt;refspec&gt;s it finds in the <code>remote.&lt;repository&gt;.fetch</code> configuration and merge only the first &lt;refspec&gt; found into the current branch. This is because making an Octopus from remote refs is rarely done, while keeping track of multiple remote heads in one-go by fetching more than one is often useful. </dd>
 </dl>
 </dl>

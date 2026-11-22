@@ -13,8 +13,8 @@ description: "QuantLib::ZeroInflationIndex – Base class for zero inflation ind
 <p> Inherits <code>QuantLib::InflationIndex</code>. </p>
 <p> Inherited by <code>EUHICP</code>, and <code>UKRPI</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>ZeroInflationIndex</code> (const std::string &amp;familyName, const <code>Region</code> &amp;region, bool revised, bool interpolated, <code>Frequency</code> frequency, const <code>Period</code> &amp;availabilityLag, const <code>Currency</code> &amp;currency, const <code>Handle</code>&lt; <code>ZeroInflationTermStructure</code> &gt; &amp;ts=<code>Handle</code>&lt; <code>ZeroInflationTermStructure</code> &gt;())<br />
- <i>Always use the evaluation date as the reference date. </i><br />
+<p><code>ZeroInflationIndex</code> (const std::string &amp;familyName, const <code>Region</code> &amp;region, bool revised, bool interpolated, <code>Frequency</code> frequency, const <code>Period</code> &amp;availabilityLag, const <code>Currency</code> &amp;currency, const <code>Handle</code>&lt; <code>ZeroInflationTermStructure</code> &gt; &amp;ts=<code>Handle</code>&lt; <code>ZeroInflationTermStructure</code> &gt;())<br/>
+ <i>Always use the evaluation date as the reference date. </i><br/>
  <code>Rate</code> <code>fixing</code> (const <code>Date</code> &amp;fixingDate, bool forecastTodaysFixing=false) const </p>
 <p> <code>Handle</code>&lt; <code>ZeroInflationTermStructure</code> &gt; <code>zeroInflationTermStructure</code> () const </p>
 <h2>Detailed Description</h2>

@@ -38,11 +38,11 @@ description: "qdisk – a disk-based quorum daemon for CMAN / Linux-Cluster"
 <h2>2.1. Heartbeating &amp; Liveliness Determination</h2>
 <p>Nodes update individual status blocks on the quorum disk at a user- defined rate. Each write of a status block alters the timestamp, which is what other nodes use to decide whether a node has hung or not. If, after a user-defined number of &#8216;misses&#8217; (that is, failure to update a timestamp), a node is declared offline. After a certain number of &#8216;hits&#8217; (changed timestamp + &quot;i am alive&quot; state), the node is declared online. </p>
 <p> The status block contains additional information, such as a bitmask of the nodes that node believes are online. Some of this information is used by the master &#8211; while some is just for performance recording, and may be used at a later time. The most important pieces of information a node writes to its status block are: </p>
-<p> &#8211; Timestamp<br />
- &#8211; Internal state (available / not available)<br />
- &#8211; Score<br />
- &#8211; Known max score (may be used in the future to detect invalid configurations)<br />
- &#8211; Vote/bid messages<br />
+<p> &#8211; Timestamp<br/>
+ &#8211; Internal state (available / not available)<br/>
+ &#8211; Score<br/>
+ &#8211; Known max score (may be used in the future to detect invalid configurations)<br/>
+ &#8211; Vote/bid messages<br/>
  &#8211; Other nodes it thinks are online</p>
 <h2>2.2. Scoring &amp; Heuristics</h2>
 <p>The administrator can configure up to 10 purely arbitrary heuristics, and must exercise caution in doing so. At least one administrator- defined heuristic is required for operation, but it is generally a good idea to have more than one heuristic. By default, only nodes scoring over 1/2 of the total maximum score will claim they are available via the quorum disk, and a node (master or otherwise) whose score drops too low will remove itself (usually, by rebooting). </p>
@@ -104,19 +104,19 @@ description: "qdisk – a disk-based quorum daemon for CMAN / Linux-Cluster"
 <p> <i>tko</i><code>=&quot;</code>1<code>&quot;</code> After this many failed attempts to run the heuristic, it is considered DOWN, and its score is removed. The default tko for each heuristic is determined by the qdiskd timeout. <code>/&gt;</code></p>
 <h2>3.3. Examples</h2>
 <h2>3.3.1. 3 cluster nodes &amp; 3 routers</h2>
-<p>&lt;cman expected_votes=&quot;6&quot; &#8230;/&gt;<br />
- &lt;clusternodes&gt; &lt;clusternode name=&quot;node1&quot; votes=&quot;1&quot; &#8230; /&gt;<br />
- &lt;clusternode name=&quot;node2&quot; votes=&quot;1&quot; &#8230; /&gt;<br />
- &lt;clusternode name=&quot;node3&quot; votes=&quot;1&quot; &#8230; /&gt; &lt;/clusternodes&gt;<br />
- &lt;quorumd interval=&quot;1&quot; tko=&quot;10&quot; votes=&quot;3&quot; label=&quot;testing&quot;&gt; &lt;heuristic program=&quot;ping A -c1 -t1&quot; score=&quot;1&quot; interval=&quot;2&quot; tko=&quot;3&quot;/&gt;<br />
- &lt;heuristic program=&quot;ping B -c1 -t1&quot; score=&quot;1&quot; interval=&quot;2&quot; tko=&quot;3&quot;/&gt;<br />
- &lt;heuristic program=&quot;ping C -c1 -t1&quot; score=&quot;1&quot; interval=&quot;2&quot; tko=&quot;3&quot;/&gt;<br />
+<p>&lt;cman expected_votes=&quot;6&quot; &#8230;/&gt;<br/>
+ &lt;clusternodes&gt; &lt;clusternode name=&quot;node1&quot; votes=&quot;1&quot; &#8230; /&gt;<br/>
+ &lt;clusternode name=&quot;node2&quot; votes=&quot;1&quot; &#8230; /&gt;<br/>
+ &lt;clusternode name=&quot;node3&quot; votes=&quot;1&quot; &#8230; /&gt; &lt;/clusternodes&gt;<br/>
+ &lt;quorumd interval=&quot;1&quot; tko=&quot;10&quot; votes=&quot;3&quot; label=&quot;testing&quot;&gt; &lt;heuristic program=&quot;ping A -c1 -t1&quot; score=&quot;1&quot; interval=&quot;2&quot; tko=&quot;3&quot;/&gt;<br/>
+ &lt;heuristic program=&quot;ping B -c1 -t1&quot; score=&quot;1&quot; interval=&quot;2&quot; tko=&quot;3&quot;/&gt;<br/>
+ &lt;heuristic program=&quot;ping C -c1 -t1&quot; score=&quot;1&quot; interval=&quot;2&quot; tko=&quot;3&quot;/&gt;<br/>
  &lt;/quorumd&gt;</p>
 <h2>3.3.2. 2 cluster nodes &amp; 1 IP tiebreaker</h2>
-<p>&lt;cman two_node=&quot;0&quot; expected_votes=&quot;3&quot; &#8230;/&gt;<br />
- &lt;clusternodes&gt; &lt;clusternode name=&quot;node1&quot; votes=&quot;1&quot; &#8230; /&gt;<br />
- &lt;clusternode name=&quot;node2&quot; votes=&quot;1&quot; &#8230; /&gt; &lt;/clusternodes&gt;<br />
- &lt;quorumd interval=&quot;1&quot; tko=&quot;10&quot; votes=&quot;1&quot; label=&quot;testing&quot;&gt; &lt;heuristic program=&quot;ping A -c1 -t1&quot; score=&quot;1&quot; interval=&quot;2&quot; tko=&quot;3&quot;/&gt;<br />
+<p>&lt;cman two_node=&quot;0&quot; expected_votes=&quot;3&quot; &#8230;/&gt;<br/>
+ &lt;clusternodes&gt; &lt;clusternode name=&quot;node1&quot; votes=&quot;1&quot; &#8230; /&gt;<br/>
+ &lt;clusternode name=&quot;node2&quot; votes=&quot;1&quot; &#8230; /&gt; &lt;/clusternodes&gt;<br/>
+ &lt;quorumd interval=&quot;1&quot; tko=&quot;10&quot; votes=&quot;1&quot; label=&quot;testing&quot;&gt; &lt;heuristic program=&quot;ping A -c1 -t1&quot; score=&quot;1&quot; interval=&quot;2&quot; tko=&quot;3&quot;/&gt;<br/>
  &lt;/quorumd&gt;</p>
 <h2>3.4. Heuristic score considerations</h2>
 <p>* Heuristic timeouts should be set high enough to allow the previous run of a given heuristic to complete. </p>

@@ -18,18 +18,18 @@ description: "lavplay – Playback and edit MJPEG video"
 <p> <code>lavplay</code> accepts the following options:</p>
 <dl>
 <dt><code>-p/&#8211;playback</code> [<code>S</code>|<code>C</code>|<code>H</code>]</dt>
-<dd> The playback mode to be used. &#8216;S&#8217; means software-playback using SDL.<br />
+<dd> The playback mode to be used. &#8216;S&#8217; means software-playback using SDL.<br/>
 &nbsp;<wbr>&#8216;H&#8217;&nbsp;<wbr>means hardware-playback on the monitor&nbsp;<wbr>(on-screen).&nbsp;<wbr>&#8216;C&#8217;&nbsp;<wbr>means hardware-playback to the video-out of the zoran video-capture device. Obviously, &#8216;C&#8217; and &#8216;H&#8217; only work on computers with zoran video-capture devices.</dd>
 <dt><code>-Z/&#8211;full-screen</code></dt>
 <dd> Full-screen playback. This works if SDL- or onscreen-playback is chosen.</dd>
 <dt><code>&#8211;size</code><i> NxN</i></dt>
 <dd> Size of the video window (default: size of the input video) when using software (SDL) or hardware onscreen playback</dd>
 <dt><code>-a/&#8211;audio</code><i> num</i></dt>
-<dd> When play audio, 0 means never, or sum of<br />
-&nbsp;<wbr>&nbsp;<wbr>1: while playing forward,<br />
-&nbsp;<wbr>&nbsp;<wbr>2: while playing reverse,<br />
-&nbsp;<wbr>&nbsp;<wbr>4: even fast playing,<br />
-&nbsp;<wbr>&nbsp;<wbr>8: while pausing<br />
+<dd> When play audio, 0 means never, or sum of<br/>
+&nbsp;<wbr>&nbsp;<wbr>1: while playing forward,<br/>
+&nbsp;<wbr>&nbsp;<wbr>2: while playing reverse,<br/>
+&nbsp;<wbr>&nbsp;<wbr>4: even fast playing,<br/>
+&nbsp;<wbr>&nbsp;<wbr>8: while pausing<br/>
  (default: 7: forward/reverse/fast). If 8(pausing) was contained, lavplay will be very noisy, but useful when you want to edit by sound.</dd>
 <dt><code>-z/&#8211;zoom</code></dt>
 <dd> Zooms the video to fit the screen as good as possible.</dd>
@@ -107,7 +107,7 @@ description: "lavplay – Playback and edit MJPEG video"
 <p> Editlists record absolute pathnames. This more or less forces manual editting of the pathnames in them if it is desired to move editlists and source video files. </p>
 <p> lavplay really ought to make a decent job of detecting what playback options are feasible (on-screen hardware, video-out port hardware, software) and set the default playback mode appropriately. Alas, it does not. </p>
 <h2>AUTHOR</h2>
-<p> This man page was written by Ronald Bultje.<br />
+<p> This man page was written by Ronald Bultje.<br/>
  If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is: </p>
 <p>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <p> For more info, see our website at </p>

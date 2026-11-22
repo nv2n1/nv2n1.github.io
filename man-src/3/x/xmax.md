@@ -23,9 +23,9 @@ void checkRange (Real x, bool extrapolate) const
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Extrapolator</code>. Inherited by <code>BackwardFlatInterpolation</code>, <code>ConvexMonotoneInterpolation&lt; I1, I2 &gt;</code>, <code>CubicInterpolation</code>, <code>ForwardFlatInterpolation</code>, <code>LinearInterpolation</code>, <code>LogCubicInterpolation</code>, <code>LogLinearInterpolation</code>, and <code>SABRInterpolation</code>.</p>
 <h3>Classes</h3>
-<p>class <code>Impl</code><br />
- <i>abstract base class for interpolation implementations </i><br />
- class <code>templateImpl</code><br />
+<p>class <code>Impl</code><br/>
+ <i>abstract base class for interpolation implementations </i><br/>
+ class <code>templateImpl</code><br/>
  <i>basic template implementation </i></p>
 <h3>Public Types</h3>
 <p>typedef <code>Real</code> <code>argument_type</code> </p>

@@ -20,7 +20,7 @@ description: "systemd.dnssd – DNS-SD configuration"
 <p>The network service file contains a [Service] section, which specifies a discoverable network service announced in a local network with Multicast DNS broadcasts. </p>
 <p> <i>Name=</i></p>
 <dl>
-<dd>An instance name of the network service as defined in the section 4.1.1 of m[blue]<code>RFC 6763</code>m[]<font SIZE="-2">[1]</font>, e.g. &quot;webserver&quot;. </dd>
+<dd>An instance name of the network service as defined in the section 4.1.1 of m[blue]<code>RFC 6763</code>m[][1], e.g. &quot;webserver&quot;. </dd>
 <p> The option supports simple specifier expansion. The following expansions are understood: </p>
 <p> <code>Table 1. Specifiers available</code> </p>
 <table BORDER>
@@ -106,7 +106,7 @@ description: "systemd.dnssd – DNS-SD configuration"
 </dl>
 <p> <i>Type=</i></p>
 <dl>
-<dd>A type of the network service as defined in the section 4.1.2 of m[blue]<code>RFC 6763</code>m[]<font SIZE="-2">[1]</font>, e.g. &quot;_http._tcp&quot;.</dd></dl>
+<dd>A type of the network service as defined in the section 4.1.2 of m[blue]<code>RFC 6763</code>m[][1], e.g. &quot;_http._tcp&quot;.</dd></dl>
 <p> <i>Port=</i></p>
 <dl>
 <dd>An IP port number of the network service.</dd></dl>

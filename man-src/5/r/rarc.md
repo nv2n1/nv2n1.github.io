@@ -56,20 +56,20 @@ where the format of a timeSpecification can be:
 <p> <code>RA_PRINT_NAMES=</code>port </p>
 <p> Other valid options are none to print no names, proto to translate the protocol names, port to translate port names, and all to translate all the fields. An invalid option will default to port, silently.</p>
 <h2>Ra_Cidr_Address_Format</h2>
-<p>Use this variable to specify whether <code>ra()</code> clients, when printing numeric IP addresses, will print them as CIDR addresses, or not. CIDR notation is constructed from the IP address and the prefix size, the latter being the number of leading 1 bits of the routing prefix. The IP address is expressed according to the standards of IPv4 or IPv6. It is followed by a separator character, the forward slash (/) character, and the prefix size expressed as a decimal number.<br />
-&nbsp;<wbr> Argus IPv4 data contains the CIDR mask length, when its less than 32, and ra* programs will by default provides the &quot;/masklen&quot; suffix when the mask is less than 32.<br />
-&nbsp;<wbr> This maybe confusing for some data processors, which would rather not see the &quot;/masklen&quot; never, or all the time. Use this option to specify changes in the default printing stratgy.<br />
-&nbsp;<wbr> Accepatable values for this variable are:<br />
-&nbsp;<wbr>&quot;no&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>do not provide the CIDR mask length&nbsp;<wbr>(legacy mode)&nbsp;<wbr>[default]<br />
-&nbsp;<wbr>&quot;yes&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>print CIDR mask length when less than 32<br />
+<p>Use this variable to specify whether <code>ra()</code> clients, when printing numeric IP addresses, will print them as CIDR addresses, or not. CIDR notation is constructed from the IP address and the prefix size, the latter being the number of leading 1 bits of the routing prefix. The IP address is expressed according to the standards of IPv4 or IPv6. It is followed by a separator character, the forward slash (/) character, and the prefix size expressed as a decimal number.<br/>
+&nbsp;<wbr> Argus IPv4 data contains the CIDR mask length, when its less than 32, and ra* programs will by default provides the &quot;/masklen&quot; suffix when the mask is less than 32.<br/>
+&nbsp;<wbr> This maybe confusing for some data processors, which would rather not see the &quot;/masklen&quot; never, or all the time. Use this option to specify changes in the default printing stratgy.<br/>
+&nbsp;<wbr> Accepatable values for this variable are:<br/>
+&nbsp;<wbr>&quot;no&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>do not provide the CIDR mask length&nbsp;<wbr>(legacy mode)&nbsp;<wbr>[default]<br/>
+&nbsp;<wbr>&quot;yes&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>print CIDR mask length when less than 32<br/>
 &nbsp;<wbr>&quot;strict&quot;&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>always print CIDR mask length </p>
 <p> <code>RA_CIDR_ADDRESS_FORMAT=</code>&quot;no&quot;</p>
 <h2>Ra_Asn_Print_Format</h2>
 <p>All ra() clients can print and process AS Numbers that have been added to the records through metadata labeling, or were a part of the original Netflow to argus conversion process.. </p>
-<p> RFC 5396 specifies 3 formats for representing AS Numbers, and all 3 are acceptable formats. These format are:<br />
-&nbsp;<wbr>&quot;asplain&quot;&nbsp;<wbr>&#8211; 2 and 4-byte ASNs are printed as decimal integers.<br />
-&nbsp;<wbr>&quot;asdot+&quot;&nbsp;<wbr>&nbsp;<wbr>&#8211; 2 and 4-byte ASNs are printed using a dot notation.<br />
-&nbsp;<wbr>&quot;asdot&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; 2 byte ASNs are printed as decimal, and 4-byte ASNs<br />
+<p> RFC 5396 specifies 3 formats for representing AS Numbers, and all 3 are acceptable formats. These format are:<br/>
+&nbsp;<wbr>&quot;asplain&quot;&nbsp;<wbr>&#8211; 2 and 4-byte ASNs are printed as decimal integers.<br/>
+&nbsp;<wbr>&quot;asdot+&quot;&nbsp;<wbr>&nbsp;<wbr>&#8211; 2 and 4-byte ASNs are printed using a dot notation.<br/>
+&nbsp;<wbr>&quot;asdot&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; 2 byte ASNs are printed as decimal, and 4-byte ASNs<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>are printed using a dotted notation.. </p>
 <p> The default is &#8216;asplain&#8217;. </p>
 <p> No Commandline equivalent </p>
@@ -105,7 +105,7 @@ where the format of a timeSpecification can be:
 <p> No Commandline equivalent </p>
 <p> <code>RA_FILTER_TIMEOUT=</code>1.5</p>
 <h2>Sasl Suppport</h2>
-<p>When argus is compiled with SASL support, ra* clients may be required to authenticate to the argus server before the argus will accept the connection. This variable will allow one to set the user and authorization id&#8217;s, if needed. Although not the best practice, you can provide a password through the RA_AUTH_PASS variable. If you do this, you should protect the contents of this file. The format for this variable is:<br />
+<p>When argus is compiled with SASL support, ra* clients may be required to authenticate to the argus server before the argus will accept the connection. This variable will allow one to set the user and authorization id&#8217;s, if needed. Although not the best practice, you can provide a password through the RA_AUTH_PASS variable. If you do this, you should protect the contents of this file. The format for this variable is:<br/>
 &nbsp;<wbr> </p>
 <pre><code>RA_USER_AUTH=</code>&quot;user_id/authorization_id&quot;
 <code>RA_AUTH_PASS=</code>&quot;password&quot;</pre>
@@ -145,37 +145,37 @@ where the format of a timeSpecification can be:
 <h2>Mysql Support</h2>
 <p>Many ra* clients can connect and use a MySQL database, either reading for writing. This may require references to remotes database hosts, databases, tables, and mysql account names and passwords. </p>
 <p> Default values for these variables can be set here. support must be compiled in. </p>
-<p> Commandline equivalents:<br />
-&nbsp;<wbr>&nbsp;<wbr>-r&nbsp;<wbr><a href="mysql://[username[:password]@]hostname[:port]/database/tablename">mysql://[username[:password]@]hostname[:port]/database/tablename</a><br />
-&nbsp;<wbr>&nbsp;<wbr>-w&nbsp;<wbr><a href="mysql://[username[:password]@]hostname[:port]/database/tablename">mysql://[username[:password]@]hostname[:port]/database/tablename</a><br />
+<p> Commandline equivalents:<br/>
+&nbsp;<wbr>&nbsp;<wbr>-r&nbsp;<wbr><a href="mysql://[username[:password]@]hostname[:port]/database/tablename">mysql://[username[:password]@]hostname[:port]/database/tablename</a><br/>
+&nbsp;<wbr>&nbsp;<wbr>-w&nbsp;<wbr><a href="mysql://[username[:password]@]hostname[:port]/database/tablename">mysql://[username[:password]@]hostname[:port]/database/tablename</a><br/>
 &nbsp;<wbr>&nbsp;<wbr>-u username:password </p>
 <pre><code>RA_DATABASE=</code>&quot;argus&quot;
 <code>RA_DB_TABLE=</code>&quot;table&quot;
 <code>RA_DB_USER=</code>&quot;carter&quot;
 <code>RA_DB_PASS=</code>&quot;whatever&quot;</pre>
 <p>Those ra* clients that can create database tables may need to specify a table type or rather, a database engine other than the defaul, MyISAM. </p>
-<p> Commandline equivalents:<br />
-&nbsp;<wbr>&nbsp;<wbr>-M mysql_engine=tableType<br />
-&nbsp;<wbr>&nbsp;<wbr>Current tableTypes are<br />
-&nbsp;<wbr>&nbsp;<wbr>MyISAM<br />
-&nbsp;<wbr>&nbsp;<wbr>InnoDB<br />
-&nbsp;<wbr>&nbsp;<wbr>Merge<br />
-&nbsp;<wbr>&nbsp;<wbr>Memory<br />
-&nbsp;<wbr>&nbsp;<wbr>Archive<br />
-&nbsp;<wbr>&nbsp;<wbr>NDB<br />
-&nbsp;<wbr>&nbsp;<wbr>Federated<br />
+<p> Commandline equivalents:<br/>
+&nbsp;<wbr>&nbsp;<wbr>-M mysql_engine=tableType<br/>
+&nbsp;<wbr>&nbsp;<wbr>Current tableTypes are<br/>
+&nbsp;<wbr>&nbsp;<wbr>MyISAM<br/>
+&nbsp;<wbr>&nbsp;<wbr>InnoDB<br/>
+&nbsp;<wbr>&nbsp;<wbr>Merge<br/>
+&nbsp;<wbr>&nbsp;<wbr>Memory<br/>
+&nbsp;<wbr>&nbsp;<wbr>Archive<br/>
+&nbsp;<wbr>&nbsp;<wbr>NDB<br/>
+&nbsp;<wbr>&nbsp;<wbr>Federated<br/>
 &nbsp;<wbr>&nbsp;<wbr>CSV </p>
 <pre><code>MYSQL_DB_ENGINE=</code>&quot;MyISAM&quot;</pre>
 <h2>Color Support</h2>
-<p>For ra* programs that use curses, these variables defined color schemes and color assignments.<br />
+<p>For ra* programs that use curses, these variables defined color schemes and color assignments.<br/>
 &nbsp;<wbr> Argus uses a sixteen color palette, with 8 monotone and 8 accent colors, plus 16 colors of gray. Currently these color values are hard coded. New versions should allow you to provide color definitions for all internal values using a 256 Xterm color wheel, to assign foreground and background colors. But we&#8217;re not there yet </p>
 <pre><code>RA_COLOR_SUPPORT=</code>&quot;yes&quot;
 <code>RA_COLOR_CONFIG=</code>&quot;/usr/carter/.racolor.conf&quot;</pre>
 <h2>Direction Support</h2>
 <p>Many ra* clients process flow records based on source and destination properties. TCP and UDP ports values can be used to assign direction, and are best used for well-known ports (&lt; 1024), values that are in the /etc/services defintions, and the reserved ports (&gt; 1023, &lt; 49151). </p>
-<p> The syntax is:<br />
-&nbsp;<wbr>RA_PORT_DIRECTION=&quot;services&quot;<br />
-&nbsp;<wbr>RA_PORT_DIRECTION=&quot;services,wellknown&quot;<br />
+<p> The syntax is:<br/>
+&nbsp;<wbr>RA_PORT_DIRECTION=&quot;services&quot;<br/>
+&nbsp;<wbr>RA_PORT_DIRECTION=&quot;services,wellknown&quot;<br/>
 &nbsp;<wbr>RA_PORT_DIRECTION=&quot;services,wellknown,registered&quot; </p>
 <p> We recommend the wellknown and services options, as they are a bit more discriminating. If there are ports that you know are services that are in the registered port range, we suggest that you add them to your /etc/services file rather than include the registered port range; only because the registered range is so large. However, this option is applied only to flow in which the direction is ambiguous, and as such, corrections based on the logic should have minimum effect on analytics. </p>
 <pre><code>RA_PORT_DIRECTION=</code>&quot;services,wellknown&quot;</pre>
@@ -185,8 +185,8 @@ where the format of a timeSpecification can be:
 <p>When locality information is available, programs like ra(), and as the assignement of source when there is ambiguity in the flow record as to who is the actual initiator or receiver of the flow. </p>
 <p> When locality information is available, programs like ra(), and ratop() can use that information to make display decisions, such </p>
 <p> RA_LOCAL_DIRECTION provides the logic for using the locality information to assign flow direction. You can force the local address to be either the source (src) or the destination (dst). </p>
-<p> The syntax is:<br />
-&nbsp;<wbr>RA_LOCAL_DIRECTION=&quot;local:src&quot;<br />
+<p> The syntax is:<br/>
+&nbsp;<wbr>RA_LOCAL_DIRECTION=&quot;local:src&quot;<br/>
 &nbsp;<wbr>RA_LOCAL_DIRECTION=&quot;local:dst&quot; </p>
 <pre><code>RA_LOCAL_DIRECTION=&quot;suggest:src&quot;
 RA_LOCAL_DIRECTION=&quot;force:src

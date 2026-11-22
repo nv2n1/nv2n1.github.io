@@ -39,7 +39,7 @@ del session
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font> </dd>
+  <code>Warning</code>  </dd>
 <p> Take care to conditionalize your code on the major and minor API version symbols in gps.h; ideally, force a compilation failure if GPSD_API_MAJOR_VERSION is not a version you recognize. See the GPSD project website for more information on the protocol and API changes. </p>
 </dl>
 <p> Calling <code>gps_open()</code> initializes a GPS-data structure to hold the data collected by the GPS, and sets up access to <code>gpsd</code>(1) via either the socket or shared-memory export. The shared-memory export is faster, but does not carry information about device activation and deactivation events and will not allow you to monitor device packet traffic. </p>

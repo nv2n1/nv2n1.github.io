@@ -12,7 +12,7 @@ description: "dh_dkms – correctly handle DKMS usage by a kernel module package
 <h2>SYNOPSIS</h2>
 <p> <code>dh_dkms</code> [<i>debhelper options</i>] [<code>-l</code>] [<code>-V</code>[<i>version</i>]] [<code>&#8212;</code>&nbsp;<i>file</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> dh_dkms is a debhelper program that is responsible for correctly setting postinst, postrm and dependencies in kernel module packages using <font SIZE="-1">DKMS</font>. </p>
+<p> dh_dkms is a debhelper program that is responsible for correctly setting postinst, postrm and dependencies in kernel module packages using DKMS. </p>
 <p> If a file named debian/package.dkms exists, then different actions are performed, depending on its contents.</p>
 <h2>FILES</h2>
 <dl>
@@ -25,7 +25,7 @@ description: "dh_dkms – correctly handle DKMS usage by a kernel module package
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-l</code>, <code>&#8211;legacy</code></dt>
-<dd> Add code to also support <font SIZE="-1">DKMS</font> versions &lt; 2.1.0.0.</dd>
+<dd> Add code to also support DKMS versions &lt; 2.1.0.0.</dd>
 <dt><code>-V</code>, <code>-V</code> <i>version</i></dt>
 <dd> If <tt>&quot;PACKAGE_VERSION&quot;</tt> in <i>dkms.conf</i> is set to <tt>&quot;#MODULE_VERSION#&quot;</tt>, set it to the given <i>version</i> or, if none is given, default to the upstream version of the current package. Otherwise, leave the value specified in <i>dkms.conf</i>.</dd>
 <dt><code>&#8212;</code> <i>file</i></dt>
@@ -35,7 +35,7 @@ description: "dh_dkms – correctly handle DKMS usage by a kernel module package
 <p> IMPORTANT: binary packages using dh_dkms must have a name that ends in &#8216;-dkms&#8217;.</p>
 <h2>SEE ALSO</h2>
 <p> <i>debhelper</i>(1) </p>
-<p> This program is part of the Debian <font SIZE="-1">DKMS</font> package. </p>
+<p> This program is part of the Debian DKMS package. </p>
 <p> <i><a href="/docs/linux/man/8-dkms/">dkms</a></i>(8)</p>
 <h2>AUTHOR</h2>
 <p> David Paleino &lt;dapal [at] debian.org&gt; </p>

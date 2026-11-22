@@ -10,8 +10,8 @@ description: "sechecker – SELinux policy checking tool"
 
 <p> sechecker &#8211; SELinux policy checking tool</p>
 <h2>SYNOPSIS</h2>
-<p> <code>sechecker</code> [OPTIONS] -p profile [POLICY &#8230;]<br />
- <code>sechecker</code> [OPTIONS] -m module [POLICY &#8230;]<br />
+<p> <code>sechecker</code> [OPTIONS] -p profile [POLICY &#8230;]<br/>
+ <code>sechecker</code> [OPTIONS] -m module [POLICY &#8230;]<br/>
  <code>sechecker</code> [OPTIONS] -p profile -m module [POLICY &#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>sechecker</code> allows the user to perform predefined modular checks on a SELinux policy. Profiles exist to group modules together and allow modification of module settings (see below).</p>
@@ -63,7 +63,7 @@ description: "sechecker – SELinux policy checking tool"
 <dd> print verbose output</dd></dl>
 <h2>PROFILE OPTIONS</h2>
 <p> Profiles are used to group modules together, to specify the output format for each module in the report, and to provide the ability to override the modules&#8217; default options. Each profile is a well-formed XML document, as specified by the DTD installed with sechecker. An example profile follows: </p>
-<p> &lt;sechecker version=&quot;1.1&quot;&gt;<br />
+<p> &lt;sechecker version=&quot;1.1&quot;&gt;<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;profile&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;module name=&quot;find_domains&quot;&gt;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;output value=&quot;quiet&quot;/&gt;</p>

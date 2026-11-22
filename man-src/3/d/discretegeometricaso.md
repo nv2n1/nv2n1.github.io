@@ -10,11 +10,11 @@ description: "ql/legacy/pricers/discretegeometricaso.hpp – Discrete geometric 
 
 <p> ql/legacy/pricers/discretegeometricaso.hpp &#8211; Discrete geometric average-strike Asian option. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/legacy/pricers/singleassetoption.hpp&gt;<br />
- #include &lt;ql/math/distributions/normaldistribution.hpp&gt;<br />
+<p> #include &lt;ql/legacy/pricers/singleassetoption.hpp&gt;<br/>
+ #include &lt;ql/math/distributions/normaldistribution.hpp&gt;<br/>
  #include &lt;vector&gt; </p>
 <h3>Classes</h3>
-<p> class <code>DiscreteGeometricASO</code><br />
+<p> class <code>DiscreteGeometricASO</code><br/>
  <i>Discrete geometric average-strike Asian option (European style). </i></p>
 <h2>Detailed Description</h2>
 <p> Discrete geometric average-strike Asian option. </p>

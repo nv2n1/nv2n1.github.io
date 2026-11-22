@@ -11,7 +11,7 @@ description: "ssyswapr.f –"
 <p> ssyswapr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssyswapr</code> (UPLO, N, A, LDA, I1, I2)<br />
+<p> subroutine <code>ssyswapr</code> (UPLO, N, A, LDA, I1, I2)<br/>
  <i></i><code>SSYSWAPR</code> applies an elementary permutation on the rows and columns of a symmetric matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssyswapr (characterUPLO, integerN, real, dimension( lda, n )A, integerLDA, integerI1, integerI2)</h3>

@@ -10,7 +10,7 @@ description: "cgeqr2.f –"
 <p>cgeqr2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgeqr2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>cgeqr2</code> (M, N, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>CGEQR2</code> computes the QR factorization of a general rectangular matrix using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgeqr2 (integerM, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( * )WORK, integerINFO)</h3>

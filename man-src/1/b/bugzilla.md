@@ -13,12 +13,12 @@ description: "bugzilla – command-line interface to Bugzilla over XML-RPC"
 <p> <code>bugzilla</code> [<i>options</i>] [<i>command</i>] [<i>command-options</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>bugzilla</code> is a command-line utility that allows access to the XML-RPC interface provided by Bugzilla. </p>
-<p> <i>command</i> is one of:<br />
- <i></i> * login &#8211; log into the given bugzilla instance<br />
- <i></i> * new &#8211; create a new bug<br />
- <i></i> * query &#8211; search for bugs matching given criteria<br />
- <i></i> * modify &#8211; modify existing bugs<br />
- <i></i> * attach &#8211; attach files to existing bugs, or get attachments<br />
+<p> <i>command</i> is one of:<br/>
+ <i></i> * login &#8211; log into the given bugzilla instance<br/>
+ <i></i> * new &#8211; create a new bug<br/>
+ <i></i> * query &#8211; search for bugs matching given criteria<br/>
+ <i></i> * modify &#8211; modify existing bugs<br/>
+ <i></i> * attach &#8211; attach files to existing bugs, or get attachments<br/>
  <i></i> * info &#8211; get info about the given bugzilla instance</p>
 <h2>GLOBAL OPTIONS</h2>
 <dl>
@@ -331,11 +331,11 @@ description: "bugzilla – command-line interface to Bugzilla over XML-RPC"
 <dt>
 </dt><dd> bugzilla query &#8211;bug_id 62037 </dd>
 <p> bugzilla query &#8211;version 15 &#8211;component python-bugzilla </p>
-<p> # All boolean options can be formatted like this<br />
+<p> # All boolean options can be formatted like this<br/>
  bugzilla query &#8211;blocked &quot;123456 | 224466&quot; </p>
 <p> bugzilla login </p>
-<p> bugzilla new -p Fedora -v rawhide -c python-bugzilla \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;summary&nbsp;<wbr>&quot;python-bugzilla causes headaches&quot;&nbsp;<wbr>\<br />
+<p> bugzilla new -p Fedora -v rawhide -c python-bugzilla \<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;summary&nbsp;<wbr>&quot;python-bugzilla causes headaches&quot;&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;comment&nbsp;<wbr>&quot;python-bugzilla made my brain hurt when I used it.&quot; </p>
 <p> bugzilla attach &#8211;file ~/Pictures/cam1.jpg &#8211;desc &quot;me, in pain&quot; $BUGID </p>
 <p> bugzilla attach &#8211;getall $BUGID </p>
@@ -344,9 +344,9 @@ description: "bugzilla – command-line interface to Bugzilla over XML-RPC"
 <h2>EXIT STATUS</h2>
 <p> <code>bugzilla</code> normally returns 0 if the requested command was successful. Otherwise, exit status is 1 if <code>bugzilla</code> is interrupted by the user (or a login attempt fails), 2 if a socket error occurs (e.g. TCP connection timeout), and 3 if the server returns an XML-RPC fault.</p>
 <h2>BUGS</h2>
-<p> Please report any bugs as github issues at<br />
- <a rel="nofollow" href="https://github.com/python-bugzilla/python-bugzilla">https://github.com/python-bugzilla/python-bugzilla</a><br />
- to the mailing list at<br />
+<p> Please report any bugs as github issues at<br/>
+ <a rel="nofollow" href="https://github.com/python-bugzilla/python-bugzilla">https://github.com/python-bugzilla/python-bugzilla</a><br/>
+ to the mailing list at<br/>
  <a rel="nofollow" href="https://fedorahosted.org/mailman/listinfo/python-bugzilla">https://fedorahosted.org/mailman/listinfo/python-bugzilla</a></p>
 <h2>SEE ALSO</h2>
 <pre>

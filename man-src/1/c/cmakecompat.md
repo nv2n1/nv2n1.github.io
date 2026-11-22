@@ -58,7 +58,7 @@ exec_program(Executable[directory in which to run]
 <dt><code>install_programs</code></dt>
 <dd> Deprecated. Use the install(PROGRAMS ) command instead. </dd>
 <p> This command has been superceded by the install command. It is provided for compatibility with older CMake code. The FILES form is directly replaced by the PROGRAMS form of the INSTALL command. The regexp form can be expressed more clearly using the GLOB form of the FILE command. </p>
-<p>install_programs(&lt;dir&gt; file1 file2[file3&#8230;])<br />
+<p>install_programs(&lt;dir&gt; file1 file2[file3&#8230;])<br/>
     install_programs(&lt;dir&gt; FILES file1[file2&#8230;])</p>
 <p> Create rules to install the listed programs into the given directory. Use the FILES argument to guarantee that the file list version of the command will be used even when there is only one argument. </p>
 <pre>

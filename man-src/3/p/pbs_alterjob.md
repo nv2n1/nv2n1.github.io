@@ -17,7 +17,7 @@ int pbs_alterjob_async(int connect, char&nbsp;<wbr>*job_id, struct attrl&nbsp;<w
 char&nbsp;<wbr>*extend)
 </code></pre>
 <h2>Description</h2>
-<p>Issue a batch request to alter a batch job. A <i>Modify Job</i> batch request is generated and sent to the server over the connection specified by <i> which is the return value of </i><code>pbs_connect</code>(). When the asynchronous <code>pbs_alterjob_async</code>() call is used, the server will validate the request and reply before modifying the job. This version of the call can be used to reduce latency in scheduling, especially when the scheduler must modify a large number of jobs. The argument, <i> identifies which job is to be altered, it is specified in the form:<br />
+<p>Issue a batch request to alter a batch job. A <i>Modify Job</i> batch request is generated and sent to the server over the connection specified by <i> which is the return value of </i><code>pbs_connect</code>(). When the asynchronous <code>pbs_alterjob_async</code>() call is used, the server will validate the request and reply before modifying the job. This version of the call can be used to reduce latency in scheduling, especially when the scheduler must modify a large number of jobs. The argument, <i> identifies which job is to be altered, it is specified in the form:<br/>
  </i><code> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>sequence_number.server </code> The parameter, <i> is a pointer to an attrl</i> structure which is defined in pbs_ifl.h as: </p>
 <pre><code>struct attrl {
     char *name;
@@ -71,7 +71,7 @@ char&nbsp;<wbr>*extend)
 <dt>#define ATTR_stageout stageout</dt>
 <dd>Alter the list of files to be staged-out after job execution.</dd></dl>
 </dl>
-<p> If </code><i> itself is a null pointer, then no attributes are altered. Associated with an attribute of type ATTR_l (the letter ell) is a resource name indicated by </i><code> in the </code><i>attrl</i> structure. All other attribute types should have a pointer to a null string (&quot;&quot;) for <code> If the resource of the specified resource name is already present in the job&#8217;s </code><i> </i><font SIZE="-1"><i> attribute, it will be altered to the specified value. If the resource is not present in the attribute, it is added. Certain attributes of a job may or may not be alterable depending on the state of the job; see </i><code>qalter</code>(1B). The parameter, <i> is reserved for implementation defined extensions. </i></font></p>
+<p> If </code><i> itself is a null pointer, then no attributes are altered. Associated with an attribute of type ATTR_l (the letter ell) is a resource name indicated by </i><code> in the </code><i>attrl</i> structure. All other attribute types should have a pointer to a null string (&quot;&quot;) for <code> If the resource of the specified resource name is already present in the job&#8217;s </code><i> </i><i> attribute, it will be altered to the specified value. If the resource is not present in the attribute, it is added. Certain attributes of a job may or may not be alterable depending on the state of the job; see </i><code>qalter</code>(1B). The parameter, <i> is reserved for implementation defined extensions. </i></p>
 <h2>See Also</h2>
 <p>qalter(1B), qhold(1B), qrls(1B), qsub(1B), pbs_connect(3B), pbs_holdjob(3B), and pbs_rlsjob(3B)</p>
 <h2>Diagnostics</h2>

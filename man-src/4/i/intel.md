@@ -131,7 +131,7 @@ description: "intel – Intel integrated graphics chipsets"
 <dd>Default: 0</dd>
 <dt><code>Option &#34;ZaphodHeads&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
 <dd>
-</dd><dd>Specify the randr output(s) to use with zaphod mode for a particular driver instance. If you set this option you must use it with all instances of the driver. By default, each head is assigned only one CRTC (which limits using multiple outputs with that head to cloned mode). CRTC can be manually assigned to individual heads by preceding the output names with a comma delimited list of pipe numbers followed by a colon. Note that different pipes may be limited in their functionality and some outputs may only work with different pipes.<br />
+</dd><dd>Specify the randr output(s) to use with zaphod mode for a particular driver instance. If you set this option you must use it with all instances of the driver. By default, each head is assigned only one CRTC (which limits using multiple outputs with that head to cloned mode). CRTC can be manually assigned to individual heads by preceding the output names with a comma delimited list of pipe numbers followed by a colon. Note that different pipes may be limited in their functionality and some outputs may only work with different pipes.<br/>
  For example: </dd>
 <dl>
 <dd><code>Option &#34;ZaphodHeads&#34; &#34;LVDS1,VGA1&#34;</code> </dd>

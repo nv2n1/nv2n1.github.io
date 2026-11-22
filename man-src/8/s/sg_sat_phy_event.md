@@ -46,7 +46,7 @@ description: "sg_sat_phy_event – use ATA READ LOG EXT via a SAT pass-through t
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2006-2013 Douglas Gilbert<br />
+<p>Copyright &#169; 2006-2013 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_sat_identify(sg3_utils), smp_rep_phy_err_log(smp_utils),</code> <code>sdparm(sdparm), hdparm(hdparm)</code> </p>

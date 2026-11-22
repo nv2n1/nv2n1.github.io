@@ -7,22 +7,22 @@ url: "/docs/linux/man/8-opagentopology/"
 description: "opagentopology Generates sample topology verification XML. Provides an example of using opaxmlgenerate and is a prototype for customization. Uses CSV input files opatopology_links.txt, opatopology_..."
 ---
 
-<p>opagentopology Generates sample topology verification XML. Provides an example of using opaxmlgenerate and is a prototype for customization. Uses CSV input files opatopology_links.txt, opatopology_FIs.txt, and opatopology_SWs.txt to generate LinkSummary, Node FIs, and Node SWs information respectively. These files are samples of what might be produced as part of translating a user custom file format into temporary intermediate CSV files. LinkSummary information includes Link, Cable, and Port information. Note that opagentopology (not opaxmlgenerate) generates the XML version string as well as the #8217lt;Topology&gt; and &lt;LinkSummary&gt; lines. Also note that the indent level is at the default value of zero (0). The portions of the script that call opaxmlgenerate follow:<br />
- opaxmlgenerate -X /usr/lib/opa-ff/samples/opatopology_1.txt -d ; -h Link -g Rate -g<br />
- Rate_Int -g MTU -g LinkDetails -h Cable -g CableLength -g CableLabel -g<br />
- CableDetails -e Cable -h Port -g NodeGUID -g PortNum -g NodeDesc -g PortGUID -g<br />
- NodeType -g NodeType_Int -g PortDetails -e Port -h Port -g NodeGUID -g PortNum -g<br />
+<p>opagentopology Generates sample topology verification XML. Provides an example of using opaxmlgenerate and is a prototype for customization. Uses CSV input files opatopology_links.txt, opatopology_FIs.txt, and opatopology_SWs.txt to generate LinkSummary, Node FIs, and Node SWs information respectively. These files are samples of what might be produced as part of translating a user custom file format into temporary intermediate CSV files. LinkSummary information includes Link, Cable, and Port information. Note that opagentopology (not opaxmlgenerate) generates the XML version string as well as the #8217lt;Topology&gt; and &lt;LinkSummary&gt; lines. Also note that the indent level is at the default value of zero (0). The portions of the script that call opaxmlgenerate follow:<br/>
+ opaxmlgenerate -X /usr/lib/opa-ff/samples/opatopology_1.txt -d ; -h Link -g Rate -g<br/>
+ Rate_Int -g MTU -g LinkDetails -h Cable -g CableLength -g CableLabel -g<br/>
+ CableDetails -e Cable -h Port -g NodeGUID -g PortNum -g NodeDesc -g PortGUID -g<br/>
+ NodeType -g NodeType_Int -g PortDetails -e Port -h Port -g NodeGUID -g PortNum -g<br/>
  NodeDesc -g PortGUID -g NodeType -g NodeType_Int -g PortDetails -e Port -e Link </p>
-<p> opaxmlgenerate -X /usr/lib/opa-ff/samples/opatopology_2.txt -d ; -h Node -g NodeGUID -g<br />
+<p> opaxmlgenerate -X /usr/lib/opa-ff/samples/opatopology_2.txt -d ; -h Node -g NodeGUID -g<br/>
  NodeDesc -g NodeDetails -g HostName -g NodeType -g NodeType_Int -g NumPorts -e Node </p>
 <h2>opatopology_links.txt</h2>
 <p>This file can be found in /usr/lib/opa-ff/samples/ . For brevity, this sample shows only two links. The second link shows an example of omitting some information. In the second line, the MTU, LinkDetails, and other fields are not present, which is indicated by an empty value for the field (no entry between the semicolon delimiters). </p>
 <p> <code>NOTE:</code> The following example exceeds the available width of the page. For readability, a blank line is shown between lines to make it clear where the line ends. In an actual link file, no blank lines are used. </p>
-<p> 25g;2048;0;IO Server Link;11m;S4567;cable model 456;0x0002c9020020e004;1;bender HFI-1;0x0002c9020020e004;FI;Some info about port;0x0011750007000df6;7;Switch 1234 Leaf 4;;SW;<br />
+<p> 25g;2048;0;IO Server Link;11m;S4567;cable model 456;0x0002c9020020e004;1;bender HFI-1;0x0002c9020020e004;FI;Some info about port;0x0011750007000df6;7;Switch 1234 Leaf 4;;SW;<br/>
  25g;;0;;;;;0x0002c9020025a678;1;mindy2 HFI-1;;FI;;0x0011750007000e6d;4;Switch 2345 Leaf 5;;SW;</p>
 <h2>opatopology_FIs.txt</h2>
 <p>This file can be found in /usr/lib/opa-ff/samples/ . For brevity, this sample shows only two nodes. </p>
-<p> 0x0002c9020020e004;bender HFI-1;More details about node<br />
+<p> 0x0002c9020020e004;bender HFI-1;More details about node<br/>
  0x0002c9020025a678;mindy2 HFI-1;Node details</p>
 <h2>opatopology_SWs.txt</h2>
 <p>This file can be found in /usr/lib/opa-ff/samples/ . For brevity, this sample shows only two nodes. </p>

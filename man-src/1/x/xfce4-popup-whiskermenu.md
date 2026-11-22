@@ -10,10 +10,10 @@ description: "xfce4-popup-whiskermenu – shows Whisker Menu"
 
 <p> xfce4-popup-whiskermenu &#8211; shows Whisker Menu</p>
 <h2>SYNOPSIS</h2>
-<p> <code>xfce4-popup-whiskermenu -h</code><br />
- <code>xfce4-popup-whiskermenu &#8211;help</code><br />
- <code>xfce4-popup-whiskermenu -V</code><br />
- <code>xfce4-popup-whiskermenu &#8211;version</code><br />
+<p> <code>xfce4-popup-whiskermenu -h</code><br/>
+ <code>xfce4-popup-whiskermenu &#8211;help</code><br/>
+ <code>xfce4-popup-whiskermenu -V</code><br/>
+ <code>xfce4-popup-whiskermenu &#8211;version</code><br/>
  <code>xfce4-popup-whiskermenu</code> [ &#8211;<code>p</code> ] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>xfce4-popup-whiskermenu</code> shows Whisker Menu if at least one Whisker Menu applet is present on one of your panels. </p>

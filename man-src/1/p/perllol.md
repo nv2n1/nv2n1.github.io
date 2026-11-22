@@ -430,4 +430,4 @@ sub splice_2D
 
  Tom Christiansen &lt;<i>tchrist [at] perl.com</i>&gt; 
 
- Last update: Tue Apr 26 18:30:55 <font SIZE="-1">MDT 2011</font>
+ Last update: Tue Apr 26 18:30:55 MDT 2011

@@ -14,12 +14,12 @@ description: "Template::Tools::tpage – Process templates from command line"
 tpage[--define var = value] file(s)
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> The <code>tpage</code> script is a simple wrapper around the Template Toolkit processor. Files specified by name on the command line are processed in turn by the template processor and the resulting output is sent to <font SIZE="-1">STDOUT</font> and can be redirected accordingly. e.g. </p>
+<p> The <code>tpage</code> script is a simple wrapper around the Template Toolkit processor. Files specified by name on the command line are processed in turn by the template processor and the resulting output is sent to STDOUT and can be redirected accordingly. e.g. </p>
 <pre>
     tpage myfile &gt; myfile.out
     tpage header myfile footer &gt; myfile.html
 </pre>
-<p> If no file names are specified on the command line then <code>tpage</code> will read <font SIZE="-1">STDIN</font> for input. </p>
+<p> If no file names are specified on the command line then <code>tpage</code> will read STDIN for input. </p>
 <p> The <tt>&quot;--define&quot;</tt> option can be used to set the values of template variables. e.g. </p>
 <pre>
     tpage --define author=&quot;Andy Wardley&quot; skeleton.pm &gt; MyModule.pm

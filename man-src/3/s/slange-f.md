@@ -10,7 +10,7 @@ description: "slange.f –"
 <p>slange.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>slange</code> (NORM, M, N, A, LDA, WORK)<br />
+<p>REAL function <code>slange</code> (NORM, M, N, A, LDA, WORK)<br/>
  <i></i><code>SLANGE</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function slange (characterNORM, integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )WORK)</h3>

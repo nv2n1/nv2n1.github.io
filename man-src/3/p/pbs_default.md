@@ -13,7 +13,7 @@ description: "pbs_default – return the pbs default server name"
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre>int pbs_default()</pre>
 <h2>Description</h2>
-<p>A character string is returned containing the name of the default PBS server. The default server is defined by (a) the setting of the environment variable <code>PBS_DEFAULT</code> which contains a destination, or (b) the destination in the batch administrator established file <font SIZE="-1"></font></p>
+<p>A character string is returned containing the name of the default PBS server. The default server is defined by (a) the setting of the environment variable <code>PBS_DEFAULT</code> which contains a destination, or (b) the destination in the batch administrator established file </p>
 <h2>See Also</h2>
 <p>qsub(1B), pbs_connect(3B), pbs_disconnect(3B), and the PBS External Reference Specification</p>
 <h2>Diagnostics</h2>

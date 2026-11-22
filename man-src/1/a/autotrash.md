@@ -63,7 +63,7 @@ description: "autotrash — program to automatically purge old files from the Fr
 <dt>@hourly /usr/bin/autotrash &#8211;max-free 4000 &#8211;min-free 2048 -d 30</dt>
 <dd> Experienced users should consider adding autotrash as a crontab entry, using <code>crontab -e</code> and adding the line above.</dd></dl>
 <h2>AUTHOR</h2>
-<p> This manual page was written by A. Bram Neijt bram [at] neijt.nl for the <code>Debian</code> system (and may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 or any later version published by the Free Software Foundation.<br />
+<p> This manual page was written by A. Bram Neijt bram [at] neijt.nl for the <code>Debian</code> system (and may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 or any later version published by the Free Software Foundation.<br/>
 &nbsp;<wbr> </p>
-<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br />
+<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br/>
 &nbsp;<wbr> </p>

@@ -11,11 +11,11 @@ description: "condor_store_cred securely stash a password"
 <p> <i>condor_store_cred</i> securely stash a password </p>
 <h2>Synopsis</h2>
 <p> <i>condor_store_cred</i> [ <code>-help</code> ] </p>
-<p> <i>condor_store_cred</i> <i>add</i> [ <code>-c</code><br />
+<p> <i>condor_store_cred</i> <i>add</i> [ <code>-c</code><br/>
 &nbsp;<wbr>|&nbsp;<wbr> <code>-u </code> <i>username</i> ] [ <code>-p </code> <i>password</i> ] [ <code>-n </code> <i>machinename</i> ] [ <code>-f </code> <i>filename</i> ] </p>
-<p> <i>condor_store_cred</i> <i>delete</i> [ <code>-c</code><br />
+<p> <i>condor_store_cred</i> <i>delete</i> [ <code>-c</code><br/>
 &nbsp;<wbr>|&nbsp;<wbr> <code>-u </code> <i>username</i> ] [ <code>-n </code> <i>machinename</i> ] </p>
-<p> <i>condor_store_cred</i> <i>query</i> [ <code>-c</code><br />
+<p> <i>condor_store_cred</i> <i>query</i> [ <code>-c</code><br/>
 &nbsp;<wbr>|&nbsp;<wbr> <code>-u </code> <i>username</i> ] [ <code>-n </code> <i>machinename</i> ] </p>
 <h2>Description</h2>
 <p> <i>condor_store_cred</i> stores passwords in a secure manner. There are two separate uses of <i>condor_store_cred</i> :</p>

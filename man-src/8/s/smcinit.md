@@ -63,8 +63,8 @@ description: "smcinit – initialize the SMSC IrDA controler on various laptops"
 <h2>Author</h2>
 <p>This document is made by Claudiu Costin &lt;claudiuc [at] kde.org&gt; The utilities authors are Daniele Peri, Rob Miller and Paul Hampson. Thomas Pinz made improvements to <code>tosh-smcinit</code> (the former <code>tosh5100-smcinit</code>) to expand the number of Toshiba Satellite models supported.</p>
 <h2>See Also</h2>
-<p><code>smcinit</code>(7),<br />
- <code><a href="/docs/linux/man/8-tosh1800-smcinit/">tosh1800-smcinit</a></code>(8),<br />
- <code>irattach</code>(1),<br />
- <code>irdadump</code>(1),<br />
+<p><code>smcinit</code>(7),<br/>
+ <code><a href="/docs/linux/man/8-tosh1800-smcinit/">tosh1800-smcinit</a></code>(8),<br/>
+ <code>irattach</code>(1),<br/>
+ <code>irdadump</code>(1),<br/>
  <code><a rel="nofollow" href="http://irda.sourceforge.net/smcinit/">http://irda.sourceforge.net/smcinit/</a></code> the SMCINIT package home page. </p>

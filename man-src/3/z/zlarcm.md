@@ -10,7 +10,7 @@ description: "zlarcm.f –"
 <p>zlarcm.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlarcm</code> (M, N, A, LDA, B, LDB, C, LDC, RWORK)<br />
+<p>subroutine <code>zlarcm</code> (M, N, A, LDA, B, LDB, C, LDC, RWORK)<br/>
  <i></i><code>ZLARCM</code> copies all or part of a real two-dimensional array to a complex array.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlarcm (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldc, * )C, integerLDC, double precision, dimension( * )RWORK)</h3>

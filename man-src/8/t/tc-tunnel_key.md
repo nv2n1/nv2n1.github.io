@@ -59,17 +59,17 @@ ttl TTL
 <h2>Examples</h2>
 <p>The following example encapsulates incoming ICMP packets on eth0 into a vxlan tunnel, by setting metadata to VNI 11, source IP 11.11.0.1 and destination IP 11.11.0.2, and by redirecting the packet with the metadata to device vxlan0, which will do the actual encapsulation using the metadata:</p>
 <dl>
-<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev eth0 protocol ip parent ffff: \<br />
-&nbsp;<wbr>&nbsp;flower&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ip_proto icmp&nbsp;\<br />
-&nbsp;<wbr>&nbsp;action tunnel_key set&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;src_ip 11.11.0.1&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dst_ip 11.11.0.2&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;id 11&nbsp;\<br />
+<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev eth0 protocol ip parent ffff: \<br/>
+&nbsp;<wbr>&nbsp;flower&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ip_proto icmp&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;action tunnel_key set&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;src_ip 11.11.0.1&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dst_ip 11.11.0.2&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;id 11&nbsp;\<br/>
 &nbsp;<wbr>&nbsp;action mirred egress redirect dev vxlan0</dd></dl>
 <p> Here is an example of the <code>unset</code> function: Incoming VXLAN traffic with outer IP&#8217;s and VNI 11 is decapsulated by vxlan0 and metadata is unset before redirecting to tunl1 device:</p>
 <dl>
-<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev vxlan0 protocol ip parent ffff:<br />
+<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev vxlan0 protocol ip parent ffff:<br/>
 &nbsp;<wbr>&nbsp;flower&nbsp;\ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> enc_src_ip 11.11.0.2 enc_dst_ip 11.11.0.1 enc_key_id 11 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action tunnel_key unset action mirred egress redirect dev tunl1
 </dd></dl>
 <h2>See Also</h2>

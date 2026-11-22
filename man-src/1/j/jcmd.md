@@ -43,7 +43,7 @@ description: "jcmd – Sends diagnostic command requests to a running Java Virtu
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <table BORDER>
 <tr VALIGN=top>
 <td>
@@ -73,7 +73,7 @@ description: "jcmd – Sends diagnostic command requests to a running Java Virtu
 <dl>
 <dt>
 </dt><dd> Reads commands from the specified file. This option can be used only if you specify the process identifier or the main class as the first argument. Each command in the file must be written on a single line. Lines starting with a number sign (<code>#</code>) are ignored. Processing of the file ends when all lines have been read or when a line containing the <code>stop</code> keyword is read.</dd></dl>
-<p> -h<br />
+<p> -h<br/>
  -help</p>
 <dl>
 <dt>

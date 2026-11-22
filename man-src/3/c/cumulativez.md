@@ -14,20 +14,20 @@ description: "QuantLib::OneFactorCopula – Abstract base class for one-factor c
 <p> Inherited by <code>OneFactorGaussianCopula</code>, <code>OneFactorGaussianStudentCopula</code>, <code>OneFactorStudentCopula</code>, and <code>OneFactorStudentGaussianCopula</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>OneFactorCopula</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;correlation, Real maximum=5, Size integrationSteps=50) </p>
-<p> virtual Real <code>density</code> (Real m) const =0<br />
- <i>Density function of M. </i><br />
- virtual Real <code>cumulativeZ</code> (Real z) const =0<br />
- <i>Cumulative distribution of Z. </i><br />
- virtual Real <code>cumulativeY</code> (Real y) const<br />
- <i>Cumulative distribution of Y. </i><br />
- virtual Real <code>inverseCumulativeY</code> (Real p) const<br />
- <i>Inverse cumulative distribution of Y. </i><br />
- Real <code>correlation</code> () const<br />
- <i>Single correlation parameter. </i><br />
- Real <code>conditionalProbability</code> (Real prob, Real m) const<br />
- <i>Conditional probability. </i><br />
- std::vector&lt; Real &gt; <code>conditionalProbability</code> (const std::vector&lt; Real &gt; &amp;prob, Real m) const<br />
- <i>Vector of conditional probabilities. </i><br />
+<p> virtual Real <code>density</code> (Real m) const =0<br/>
+ <i>Density function of M. </i><br/>
+ virtual Real <code>cumulativeZ</code> (Real z) const =0<br/>
+ <i>Cumulative distribution of Z. </i><br/>
+ virtual Real <code>cumulativeY</code> (Real y) const<br/>
+ <i>Cumulative distribution of Y. </i><br/>
+ virtual Real <code>inverseCumulativeY</code> (Real p) const<br/>
+ <i>Inverse cumulative distribution of Y. </i><br/>
+ Real <code>correlation</code> () const<br/>
+ <i>Single correlation parameter. </i><br/>
+ Real <code>conditionalProbability</code> (Real prob, Real m) const<br/>
+ <i>Conditional probability. </i><br/>
+ std::vector&lt; Real &gt; <code>conditionalProbability</code> (const std::vector&lt; Real &gt; &amp;prob, Real m) const<br/>
+ <i>Vector of conditional probabilities. </i><br/>
  Real <code>integral</code> (Real p) const </p>
 <p> template&lt;class F &gt; Real <code>integral</code> (const F &amp;f, std::vector&lt; Real &gt; &amp;probabilities) const </p>
 <p> template&lt;class F &gt; Distribution <code>integral</code> (const F &amp;f, const std::vector&lt; Real &gt; &amp;nominals, const std::vector&lt; Real &gt; &amp;probabilities) const </p>

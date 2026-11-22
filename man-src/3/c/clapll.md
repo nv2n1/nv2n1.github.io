@@ -11,7 +11,7 @@ description: "clapll.f –"
 <p> clapll.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clapll</code> (N, X, INCX, Y, INCY, SSMIN)<br />
+<p> subroutine <code>clapll</code> (N, X, INCX, Y, INCY, SSMIN)<br/>
  <i></i><code>CLAPLL</code> measures the linear dependence of two vectors.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clapll (integerN, complex, dimension( * )X, integerINCX, complex, dimension( * )Y, integerINCY, realSSMIN)</h3>

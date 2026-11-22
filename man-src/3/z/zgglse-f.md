@@ -10,7 +10,7 @@ description: "zgglse.f –"
 <p>zgglse.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br />
+<p>subroutine <code>zgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br/>
  <i></i><code> ZGGLSE solves overdetermined or underdetermined systems for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgglse (integerM, integerN, integerP, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( * )C, complex*16, dimension( * )D, complex*16, dimension( * )X, complex*16, dimension( * )WORK, integerLWORK, integerINFO)</h3>

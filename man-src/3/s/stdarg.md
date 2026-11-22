@@ -23,15 +23,15 @@ void va_copy(va_list dest, va_list src);</code></pre>
 <h3>va_end()</h3>
 <p>Each invocation of <code>va_start</code>() must be matched by a corresponding invocation of <code>va_end</code>() in the same function. After the call <code>va_end(</code><i>ap</i><code>)</code> the variable <i>ap</i> is undefined. Multiple traversals of the list, each bracketed by <code>va_start</code>() and <code>va_end</code>() are possible. <code>va_end</code>() may be a macro or a function.</p>
 <h3>va_copy()</h3>
-<p>The <code>va_copy</code>() macro copies the (previously initialized) variable argument list <i>src</i> to <i>dest</i>. The behavior is as if <code>va_start</code>() were applied to <i>dest</i> with the same <i>last</i> argument, followed by the same number of <code>va_arg</code>() invocations that was used to reach the current state of <i>src</i>. An obvious implementation would have a <i>va_list</i> be a pointer to the stack frame of the variadic function. In such a setup (by far the most common) there seems nothing against an assignment va_list aq;<br />
-va_copy(aq, ap);<br />
-&#8230;<br />
-va_end(aq); Unfortunately, there are also systems that make it an array of pointers (of length 1), and there one needs va_list aq;<br />
-va_copy(aq, ap);<br />
-&#8230;<br />
-va_end(aq); Finally, on systems where arguments are passed in registers, it may be necessary for <code>va_start</code>() to allocate memory, store the arguments there, and also an indication of which argument is next, so that <code>va_arg</code>() can step through the list. Now <code>va_end</code>() can free the allocated memory again. To accommodate this situation, C99 adds a macro <code>va_copy</code>(), so that the above assignment can be replaced by va_list aq;<br />
-va_copy(aq, ap);<br />
-&#8230;<br />
+<p>The <code>va_copy</code>() macro copies the (previously initialized) variable argument list <i>src</i> to <i>dest</i>. The behavior is as if <code>va_start</code>() were applied to <i>dest</i> with the same <i>last</i> argument, followed by the same number of <code>va_arg</code>() invocations that was used to reach the current state of <i>src</i>. An obvious implementation would have a <i>va_list</i> be a pointer to the stack frame of the variadic function. In such a setup (by far the most common) there seems nothing against an assignment va_list aq;<br/>
+va_copy(aq, ap);<br/>
+&#8230;<br/>
+va_end(aq); Unfortunately, there are also systems that make it an array of pointers (of length 1), and there one needs va_list aq;<br/>
+va_copy(aq, ap);<br/>
+&#8230;<br/>
+va_end(aq); Finally, on systems where arguments are passed in registers, it may be necessary for <code>va_start</code>() to allocate memory, store the arguments there, and also an indication of which argument is next, so that <code>va_arg</code>() can step through the list. Now <code>va_end</code>() can free the allocated memory again. To accommodate this situation, C99 adds a macro <code>va_copy</code>(), so that the above assignment can be replaced by va_list aq;<br/>
+va_copy(aq, ap);<br/>
+&#8230;<br/>
 va_end(aq); Each invocation of <code>va_copy</code>() must be matched by a corresponding invocation of <code>va_end</code>() in the same function. Some systems that do not supply <code>va_copy</code>() have <code>__va_copy</code> instead, since that was the name used in the draft proposal.</p>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
@@ -60,7 +60,7 @@ va_end(aq); Each invocation of <code>va_copy</code>() must be matched by a corre
 <h2>Bugs</h2>
 <p>Unlike the historical <code>varargs</code> macros, the <code>stdarg</code> macros do not permit programmers to code a function with no fixed arguments. This problem generates work mainly when converting <code>varargs</code> code to <code>stdarg</code> code, but it also creates difficulties for variadic functions that wish to pass all of their arguments on to a function that takes a <i>va_list</i> argument, such as <code><a href="/docs/linux/man/3-vfprintf/">vfprintf</a></code>(3).</p>
 <h2>Examples</h2>
-<p>The function <i>foo</i> takes a string of format characters and prints out the argument associated with each format character based on the type. #include &lt;stdio.h&gt;<br />
+<p>The function <i>foo</i> takes a string of format characters and prints out the argument associated with each format character based on the type. #include &lt;stdio.h&gt;<br/>
 #include &lt;stdarg.h&gt; void foo(char *fmt, &#8230;) /* &#8216;&#8230;&#8217; is C syntax for a variadic function */ </p>
 <pre><code>{
     va_list ap;

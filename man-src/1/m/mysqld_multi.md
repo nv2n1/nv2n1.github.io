@@ -18,7 +18,7 @@ description: "mysqld_multi – manage multiple MySQL servers"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> For some Linux platforms, MySQL installation from RPM or Debian packages includes systemd support for managing MySQL server startup and shutdown. On these platforms, <code>mysqld_multi</code> is not installed because it is unnecessary. For information about using systemd to handle multiple MySQL instances, see Section 2.5.9, &#8220;Managing MySQL Server with systemd&#8221;. </p>
 </dl>
 <p> <code>mysqld_multi</code> searches for groups named [mysqld<i>N</i>] in my.cnf (or in the file named by the <code>&#8211;defaults-file</code> option). <i>N</i> can be any positive integer. This number is referred to in the following discussion as the option group number, or <i>GNR</i>. Group numbers distinguish option groups from one another and are used as arguments to <code>mysqld_multi</code> to specify which servers you want to start, stop, or obtain a status report for. Options listed in these groups are the same that you would use in the [mysqld] group used for starting <code>mysqld</code>. (See, for example, Section 2.10.5, &#8220;Starting and Stopping MySQL Automatically&#8221;.) However, when using multiple servers, it is necessary that each one use its own value for options such as the Unix socket file and TCP/IP port number. For more information on which options must be unique per server in a multiple-server environment, see Section 5.8, &#8220;Running Multiple MySQL Instances on One Machine&#8221;. </p>
@@ -135,7 +135,7 @@ ledir  = /opt/local/mysql/libexec
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font><br />
+  <code>Important</code> <br/>
  Make sure that the data directory for each server is fully accessible to the Unix account that the specific <code>mysqld</code> process is started as. <i>Do not</i> use the Unix <i>root</i> account for this, unless you <i>know</i> what you are doing. See Section 6.1.5, &#8220;How to Run MySQL as a Normal User&#8221;. </dd>
 </dl>
 </dl>

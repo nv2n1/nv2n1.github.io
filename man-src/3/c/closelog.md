@@ -11,15 +11,15 @@ description: "closelog, openlog, syslog, vsyslog – send messages to the system
 <p> closelog, openlog, syslog, vsyslog &#8211; send messages to the system logger </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;syslog.h&gt;</code> </p>
-<p> <code>void openlog(const char *</code><i>ident</i><code>, int </code><i>option</i><code>, int </code><i>facility</i><code>);</code><br />
- <code>void syslog(int </code><i>priority</i><code>, const char *</code><i>format</i><code>, &#8230;);</code><br />
+<p> <code>void openlog(const char *</code><i>ident</i><code>, int </code><i>option</i><code>, int </code><i>facility</i><code>);</code><br/>
+ <code>void syslog(int </code><i>priority</i><code>, const char *</code><i>format</i><code>, &#8230;);</code><br/>
  <code>void closelog(void);</code> </p>
 <p> <code>void vsyslog(int </code><i>priority</i><code>, const char *</code><i>format</i><code>, va_list </code><i>ap</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>vsyslog</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> <code>vsyslog</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <h3>openlog()</h3>

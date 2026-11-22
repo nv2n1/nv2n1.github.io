@@ -476,7 +476,7 @@ description: "groff_me – “me” macro package for formatting documents with 
 </tr>
 </table>
 <h2>Files</h2>
-<p><i>/usr/:share/:groff/:1.22.4/:tmac/me.tmac</i> (a wrapper file for <i>e.tmac</i>)<br />
+<p><i>/usr/:share/:groff/:1.22.4/:tmac/me.tmac</i> (a wrapper file for <i>e.tmac</i>)<br/>
  <i>/usr/:share/:groff/:1.22.4/:tmac/e.tmac</i></p>
 <h2>Notes</h2>
 <p>Early <i>roff</i> macro packages limited themselves to a single-letter namespace (<i>mm</i>, <i>ms</i>, <i>mv</i>, <i>mn</i>, etc.). The &#8220;e&#8221; in &#8220;me&#8221; stands for &#8220;Eric P. Allman&#8221;, who wrote the macro package and the original technical papers documenting it while an undergraduate at the University of California.</p>

@@ -21,10 +21,10 @@ struct iv_work_item {
  void (*work)(void *cookie);
  void (*completion)(void *cookie);
 };</pre>
-<p><code>void IV_WORK_POOL_INIT(struct iv_work_pool *</code><i>this</i><code>);</code><br />
- <code>int iv_work_pool_create(struct iv_work_pool *</code><i>this</i><code>);</code><br />
- <code>int iv_work_pool_put(struct iv_work_pool *</code><i>this</i><code>);</code><br />
- <code>void IV_WORK_ITEM_INIT(struct iv_work_item *</code><i>work</i><code>);</code><br />
+<p><code>void IV_WORK_POOL_INIT(struct iv_work_pool *</code><i>this</i><code>);</code><br/>
+ <code>int iv_work_pool_create(struct iv_work_pool *</code><i>this</i><code>);</code><br/>
+ <code>int iv_work_pool_put(struct iv_work_pool *</code><i>this</i><code>);</code><br/>
+ <code>void IV_WORK_ITEM_INIT(struct iv_work_item *</code><i>work</i><code>);</code><br/>
  <code>int iv_work_pool_submit_work(struct iv_work_pool *</code><i>this</i><code>, struct iv_work_item *</code><i>work</i><code>);</code> </p>
 <h2>Description</h2>
 <p>Calling <code>iv_work_pool_create</code> on a <code>struct iv_work_pool</code> object previously initialised by <code>IV_WORK_POOL_INIT</code> creates a pool of worker threads that can be used to offload CPU intensive tasks to, so as to prevent negatively influencing event handling latency in the calling thread, and to enable the use of multiple host CPUs for CPU intensive tasks. </p>

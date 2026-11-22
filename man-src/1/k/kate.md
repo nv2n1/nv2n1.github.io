@@ -62,7 +62,7 @@ description: "kate – Advanced text editor for KDE"
 </dt><dd> Use an already running Kate instance; default, only for compatibility</dd></dl>
 <h2>SEE ALSO</h2>
 <p> More detailed user documentation is available from m[blue]<code>help:/kate</code>m[] (either enter this URL into Konqueror, or run <code>khelpcenter</code><i>help:/kate</i>). </p>
-<p> There is also further information available at m[blue]<code>the Kate website</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> There is also further information available at m[blue]<code>the Kate website</code>m[][1].</p>
 <h2>EXAMPLES</h2>
 <p> To open a file named source.cpp at column 15, line 25, in an existing Kate window, you could use: </p>
 <dl>

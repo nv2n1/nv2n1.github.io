@@ -49,23 +49,23 @@ shasum - Print or Check SHA Checksums
 
 <h2>DESCRIPTION</h2>
 
- Running <i>shasum</i> is often the quickest way to compute <font SIZE="-1">SHA</font> message digests. The user simply feeds data to the script through files or standard input, and then collects the results from standard output. 
+ Running <i>shasum</i> is often the quickest way to compute SHA message digests. The user simply feeds data to the script through files or standard input, and then collects the results from standard output. 
 
- The following command shows how to compute digests for typical inputs such as the <font SIZE="-1">NIST</font> test vector ``abc'': 
+ The following command shows how to compute digests for typical inputs such as the NIST test vector ``abc'': 
 
  <pre>
         perl -e &quot;print qq(abc)&quot; | shasum
 </pre> 
 
- Or, if you want to use <font SIZE="-1">SHA-256</font> instead of the default <font SIZE="-1">SHA-1,</font> simply say: 
+ Or, if you want to use SHA-256 instead of the default SHA-1, simply say: 
 
  <pre>
         perl -e &quot;print qq(abc)&quot; | shasum -a 256
 </pre> 
 
- Since <i>shasum</i> mimics the behavior of the combined <font SIZE="-1">GNU</font> <i>sha1sum</i>, <i>sha224sum</i>, <i>sha256sum</i>, <i>sha384sum</i>, and <i>sha512sum</i> programs, you can install this script as a convenient drop-in replacement. 
+ Since <i>shasum</i> mimics the behavior of the combined GNU <i>sha1sum</i>, <i>sha224sum</i>, <i>sha256sum</i>, <i>sha384sum</i>, and <i>sha512sum</i> programs, you can install this script as a convenient drop-in replacement. 
 
- Unlike the <font SIZE="-1">GNU</font> programs, <i>shasum</i> encompasses the full <font SIZE="-1">SHA</font> standard by allowing partial-byte inputs. This is accomplished through the <font SIZE="-1">BITS</font> option (<i>-0</i>). The following example computes the <font SIZE="-1">SHA-224</font> digest of the 7-bit message <i>0001100</i>: 
+ Unlike the GNU programs, <i>shasum</i> encompasses the full SHA standard by allowing partial-byte inputs. This is accomplished through the BITS option (<i>-0</i>). The following example computes the SHA-224 digest of the 7-bit message <i>0001100</i>: 
 
  <pre>
         perl -e &quot;print qq(0001100)&quot; | shasum -0 -a 224

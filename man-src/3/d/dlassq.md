@@ -11,7 +11,7 @@ description: "dlassq.f –"
 <p> dlassq.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlassq</code> (N, X, INCX, SCALE, SUMSQ)<br />
+<p> subroutine <code>dlassq</code> (N, X, INCX, SCALE, SUMSQ)<br/>
  <i></i><code>DLASSQ</code> updates a sum of squares represented in scaled form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlassq (integerN, double precision, dimension( * )X, integerINCX, double precisionSCALE, double precisionSUMSQ)</h3>

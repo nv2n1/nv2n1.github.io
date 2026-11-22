@@ -10,7 +10,7 @@ description: "avc_context_to_sid, avc_sid_to_context, avc_get_initial_sid – ob
 
 <p> avc_context_to_sid, avc_sid_to_context, avc_get_initial_sid &#8211; obtain and manipulate SELinux security ID&#8217;s </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
+<p> <code>#include &lt;selinux/selinux.h&gt;</code><br/>
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>int avc_context_to_sid(char *</code><i>ctx</i><code>, security_id_t *</code><i>sid</i><code>);</code> </p>
 <p> <code>int avc_sid_to_context(security_id_t </code><i>sid</i><code>, char **</code><i>ctx</i><code>);</code> </p>

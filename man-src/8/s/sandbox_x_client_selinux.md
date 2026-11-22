@@ -53,25 +53,25 @@ url: "/docs/linux/man/8-sandbox_x_client_selinux/"
 <p> <code>setsebool -P use_samba_home_dirs 1</code> </p>
 <h2>MANAGED FILES</h2>
 <p>The SELinux process type sandbox_x_client_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
-<p> <br />
+<p> <br/>
  <code>cifs_t</code> </p>
-<p> <br />
+<p> <br/>
  <code>fusefs_t</code> </p>
-<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/run/user/[^/]*/gvfs<br />
- <br />
+<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/run/user/[^/]*/gvfs<br/>
+ <br/>
  </p>
-<p> <br />
+<p> <br/>
  <code>mozilla_plugin_tmpfs_t</code> </p>
-<p> <br />
+<p> <br/>
  <code>nfs_t</code> </p>
-<p> <br />
+<p> <br/>
  <code>sandbox_file_t</code> </p>
-<p> <br />
+<p> <br/>
  <code>sandbox_x_client_tmpfs_t</code> </p>
-<p> <br />
+<p> <br/>
  <code>security_t</code> </p>
-<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/selinux<br />
- <br />
+<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/selinux<br/>
+ <br/>
  </p>
 <h2>COMMANDS</h2>
 <p> <code>semanage fcontext</code> can also be used to manipulate default file context mappings. </p>

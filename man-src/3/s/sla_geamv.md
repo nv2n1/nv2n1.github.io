@@ -11,7 +11,7 @@ description: "sla_geamv.f –"
 <p> sla_geamv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sla_geamv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p> subroutine <code>sla_geamv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>SLA_GEAMV</code> computes a matrix-vector product using a general matrix to calculate error bounds.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sla_geamv (integerTRANS, integerM, integerN, realALPHA, real, dimension( lda, * )A, integerLDA, real, dimension( * )X, integerINCX, realBETA, real, dimension( * )Y, integerINCY)</h3>

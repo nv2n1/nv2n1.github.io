@@ -15,9 +15,9 @@ Volatility impliedVolatility (Real price, const boost::shared_ptr&lt; Generalize
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::OneAssetOption</code>. Inherited by <code>DividendBarrierOption</code>, and <code>QuantoBarrierOption</code>.</p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for barrier option calculation </i><br />
- class <code>engine</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for barrier option calculation </i><br/>
+ class <code>engine</code><br/>
  <i>Barrier-option engine base class </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>BarrierOption (Barrier::Type barrierType, Real barrier, Real rebate, const boost::shared_ptr&lt; StrikedTypePayoff &gt; &amp;payoff, const boost::shared_ptr&lt; Exercise &gt; &amp;exercise)

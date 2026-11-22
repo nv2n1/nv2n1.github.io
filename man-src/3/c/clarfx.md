@@ -11,7 +11,7 @@ description: "clarfx.f –"
 <p> clarfx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clarfx</code> (SIDE, M, N, V, TAU, C, LDC, WORK)<br />
+<p> subroutine <code>clarfx</code> (SIDE, M, N, V, TAU, C, LDC, WORK)<br/>
  <i></i><code>CLARFX</code> applies an elementary reflector to a general rectangular matrix, with loop unrolling when the reflector has order ≤ 10.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clarfx (characterSIDE, integerM, integerN, complex, dimension( * )V, complexTAU, complex, dimension( ldc, * )C, integerLDC, complex, dimension( * )WORK)</h3>

@@ -79,8 +79,8 @@ description: "gfal-copy – Copy files"
 </dt><dd> All configuration files in this directory affect the behavior of the underlying gfal2, in particular, the default choice of transfer protocols. </dd>
 </dl>
 <h2>AUTHORS</h2>
-<p> Duarte Meneses &lt;duarte.meneses [at] cern.ch&gt;<br />
- Adrien Devresse &lt;adrien.devresse [at] cern.ch&gt;<br />
+<p> Duarte Meneses &lt;duarte.meneses [at] cern.ch&gt;<br/>
+ Adrien Devresse &lt;adrien.devresse [at] cern.ch&gt;<br/>
  Alejandro Alvarez Ayllon &lt;alejandro.alvarez.ayllon [at] cern.ch&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gfal-copy/">gfal-copy</a></code>(1), <code><a href="/docs/linux/man/1-gfal-rm/">gfal-rm</a></code>(1), <code><a href="/docs/linux/man/1-gfal-cat/">gfal-cat</a></code>(1), <code><a href="/docs/linux/man/1-gfal-save/">gfal-save</a></code>(1), <code><a href="/docs/linux/man/1-gfal-mkdir/">gfal-mkdir</a></code>(1), <code><a href="/docs/linux/man/1-gfal-ls/">gfal-ls</a></code>(1), <code><a href="/docs/linux/man/1-gfal-xattr/">gfal-xattr</a></code>(1) </p>

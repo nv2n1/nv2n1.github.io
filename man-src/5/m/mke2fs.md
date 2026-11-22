@@ -64,12 +64,12 @@ tag2 = value_e
 <h2>THE [fs_types] STANZA</h2>
 <p>Each tag in the <i>[fs_types] </i> stanza names a filesystem type or usage type which can be specified via the <code>-t</code> or <code>-T</code> options to <code><a href="/docs/linux/man/8-mke2fs/">mke2fs</a></code>(8), respectively. </p>
 <p> The <code>mke2fs</code> program constructs a list of fs_types by concatenating the filesystem type (i.e., ext2, ext3, etc.) with the usage type list. For most configuration options, <code>mke2fs</code> will look for a subsection in the <i>[fs_types]</i> stanza corresponding with each entry in the constructed list, with later entries overriding earlier filesystem or usage types. For example, consider the following <code>mke2fs.conf</code> fragment: </p>
-<p> [defaults]<br />
+<p> [defaults]<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>base_features = sparse_super,filetype,resize_inode,dir_index</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>blocksize = 4096</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>inode_size = 256</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>inode_ratio = 16384</p>
-<p> [fs_types]<br />
+<p> [fs_types]<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ext3 = {</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>features = has_journal</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>}</p>

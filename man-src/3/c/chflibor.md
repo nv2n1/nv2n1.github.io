@@ -10,14 +10,14 @@ description: "ql/indexes/ibor/chflibor.hpp – CHF LIBOR rate"
 
 <p> ql/indexes/ibor/chflibor.hpp &#8211; CHF LIBOR rate </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/indexes/ibor/libor.hpp&gt;<br />
- #include &lt;ql/time/calendars/switzerland.hpp&gt;<br />
- #include &lt;ql/time/daycounters/actual360.hpp&gt;<br />
+<p> #include &lt;ql/indexes/ibor/libor.hpp&gt;<br/>
+ #include &lt;ql/time/calendars/switzerland.hpp&gt;<br/>
+ #include &lt;ql/time/daycounters/actual360.hpp&gt;<br/>
  #include &lt;ql/currencies/europe.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>CHFLibor</code><br />
- <i>CHF LIBOR rate </i><br />
- class <code>DailyTenorCHFLibor</code><br />
+<p> class <code>CHFLibor</code><br/>
+ <i>CHF LIBOR rate </i><br/>
+ class <code>DailyTenorCHFLibor</code><br/>
  <i>base class for the one day deposit BBA CHF LIBOR indexes </i></p>
 <h2>Detailed Description</h2>
 <p> CHF LIBOR rate </p>

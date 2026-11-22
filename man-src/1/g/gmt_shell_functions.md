@@ -10,19 +10,19 @@ description: "gmt_shell_functions.sh – Practical functions to be used in GMT b
 
 <p> gmt_shell_functions.sh &#8211; Practical functions to be used in GMT bourne shell scripts</p>
 <h2>SYNOPSIS</h2>
-<p> <code>gmt_init_tmpdir</code><br />
- <code>gmt_remove_tmpdir</code><br />
- <code>gmt_clean_up</code> [<i>prefix</i>]<br />
- <code>gmt_message</code> <i>message</i><br />
- <code>gmt_abort</code> <i>message</i><br />
- <code>gmt_nrecords</code> <i>file(s)</i><br />
- <code>gmt_nfields</code> <i>string</i><br />
- <code>gmt_get_field</code> <i>string</i><br />
- <code>gmt_get_region</code> <i>file(s)</i> [<i>options</i>]<br />
- <code>gmt_get_gridregion</code> <i>file</i> [<i>options</i>]<br />
- <code>gmt_get_map_width</code> <code>-R</code> <code>-J</code> br <code>gmt_get_map_height</code> <code>-R</code> <code>-J</code><br />
- <code>gmt_set_psfile</code> <i>file</i><br />
- <code>gmt_set_framename</code> <i>prefix framenumber</i><br />
+<p> <code>gmt_init_tmpdir</code><br/>
+ <code>gmt_remove_tmpdir</code><br/>
+ <code>gmt_clean_up</code> [<i>prefix</i>]<br/>
+ <code>gmt_message</code> <i>message</i><br/>
+ <code>gmt_abort</code> <i>message</i><br/>
+ <code>gmt_nrecords</code> <i>file(s)</i><br/>
+ <code>gmt_nfields</code> <i>string</i><br/>
+ <code>gmt_get_field</code> <i>string</i><br/>
+ <code>gmt_get_region</code> <i>file(s)</i> [<i>options</i>]<br/>
+ <code>gmt_get_gridregion</code> <i>file</i> [<i>options</i>]<br/>
+ <code>gmt_get_map_width</code> <code>-R</code> <code>-J</code> br <code>gmt_get_map_height</code> <code>-R</code> <code>-J</code><br/>
+ <code>gmt_set_psfile</code> <i>file</i><br/>
+ <code>gmt_set_framename</code> <i>prefix framenumber</i><br/>
  <code>gmt_set_framenext</code> <i>framenumber</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>gmt_shell_functions.sh</code> provides a set of functions to bourne (again) shell scripts in support of <code>GMT</code>. The calling shell script should include the following line, before the functions can be used: </p>
@@ -60,7 +60,7 @@ description: "gmt_shell_functions.sh – Practical functions to be used in GMT b
 <dt><code>gmt_set_framenext</code></dt>
 <dd> Accepts the current frame integer counter and returns the next integer counter.</dd></dl>
 <h2>NOTES</h2>
-<p> 1. These functions only work in the bourne shell (<code>sh</code>) and their derivatives (like <code>ash</code>, <code>bash</code>, <code>ksh</code> and <code>zsh</code>). These functions do not work in the C shell (<code>csh</code>) or their derivatives (like <code>tcsh</code>), and cannot be used in DOS batch scripts either.<br />
+<p> 1. These functions only work in the bourne shell (<code>sh</code>) and their derivatives (like <code>ash</code>, <code>bash</code>, <code>ksh</code> and <code>zsh</code>). These functions do not work in the C shell (<code>csh</code>) or their derivatives (like <code>tcsh</code>), and cannot be used in DOS batch scripts either.<br/>
  2. <code>gmt_shell_functions.sh</code> were first introduced in <code>GMT</code> version 4.2.2 and have since been regularly expanded with other practical scripting short-cuts. If you want to suggest other functions, please do so by mailing to the GMT mailing list: gmt-help [at] hawaii.edu.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1), <i><a href="/docs/linux/man/1-bash/">bash</a></i>(1), <i><a href="/docs/linux/man/1-minmax/">minmax</a></i>(1), <i><a href="/docs/linux/man/1-grdinfo/">grdinfo</a></i>(1) </p>

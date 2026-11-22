@@ -13,33 +13,33 @@ description: "QuantLib::FittedBondDiscountCurve::FittingMethod – Base fitting 
 <p> #include &lt;ql/termstructures/yield/fittedbonddiscountcurve.hpp&gt; </p>
 <p> Inherited by <code>CubicBSplinesFitting</code>, <code>ExponentialSplinesFitting</code>, <code>NelsonSiegelFitting</code>, and <code>SimplePolynomialFitting</code>. </p>
 <h3>Public Member Functions</h3>
-<p> virtual Size <code>size</code> () const =0<br />
- <i>total number of coefficients to fit/solve for </i><br />
- <code>Array</code> <code>solution</code> () const<br />
- <i>output array of results of optimization problem </i><br />
- <code>Integer</code> <code>numberOfIterations</code> () const<br />
- <i>final number of iterations used in the optimization problem </i><br />
- <code>Real</code> <code>minimumCostValue</code> () const<br />
- <i>final value of cost function after optimization </i><br />
- virtual std::auto_ptr&lt; <code>FittingMethod</code> &gt; <code>clone</code> () const =0<br />
+<p> virtual Size <code>size</code> () const =0<br/>
+ <i>total number of coefficients to fit/solve for </i><br/>
+ <code>Array</code> <code>solution</code> () const<br/>
+ <i>output array of results of optimization problem </i><br/>
+ <code>Integer</code> <code>numberOfIterations</code> () const<br/>
+ <i>final number of iterations used in the optimization problem </i><br/>
+ <code>Real</code> <code>minimumCostValue</code> () const<br/>
+ <i>final value of cost function after optimization </i><br/>
+ virtual std::auto_ptr&lt; <code>FittingMethod</code> &gt; <code>clone</code> () const =0<br/>
  <i>clone of the current object </i></p>
 <h3>Protected Member Functions</h3>
-<p> <code>FittingMethod</code> (bool constrainAtZero=true)<br />
- <i>constructor </i><br />
- void <code>init</code> ()<br />
- <i>rerun every time instruments/referenceDate changes </i><br />
- virtual <code>DiscountFactor</code> <code>discountFunction</code> (const <code>Array</code> &amp;x, Time t) const =0<br />
+<p> <code>FittingMethod</code> (bool constrainAtZero=true)<br/>
+ <i>constructor </i><br/>
+ void <code>init</code> ()<br/>
+ <i>rerun every time instruments/referenceDate changes </i><br/>
+ virtual <code>DiscountFactor</code> <code>discountFunction</code> (const <code>Array</code> &amp;x, Time t) const =0<br/>
  <i>derived classes must set this </i></p>
 <h3>Protected Attributes</h3>
-<p> bool <code>constrainAtZero_</code><br />
- <i>constrains discount function to unity at $ T=0 $, if true </i><br />
- <code>FittedBondDiscountCurve</code> * <code>curve_</code><br />
- <i>internal reference to the </i><code>FittedBondDiscountCurve</code> instance<br />
- <code>Array</code> <code>solution_</code><br />
- <i>solution array found from optimization, set in calculate() </i><br />
- <code>Array</code> <code>guessSolution_</code><br />
- <i>optional guess solution to be passed into constructor. </i><br />
- boost::shared_ptr&lt; FittingCost &gt; <code>costFunction_</code><br />
+<p> bool <code>constrainAtZero_</code><br/>
+ <i>constrains discount function to unity at $ T=0 $, if true </i><br/>
+ <code>FittedBondDiscountCurve</code> * <code>curve_</code><br/>
+ <i>internal reference to the </i><code>FittedBondDiscountCurve</code> instance<br/>
+ <code>Array</code> <code>solution_</code><br/>
+ <i>solution array found from optimization, set in calculate() </i><br/>
+ <code>Array</code> <code>guessSolution_</code><br/>
+ <i>optional guess solution to be passed into constructor. </i><br/>
+ boost::shared_ptr&lt; FittingCost &gt; <code>costFunction_</code><br/>
  <i>base class sets this cost function used in the optimization routine </i></p>
 <h3>Friends</h3>
 <p> class <code>FittedBondDiscountCurve</code> </p>

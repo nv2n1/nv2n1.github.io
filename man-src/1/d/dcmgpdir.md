@@ -28,73 +28,73 @@ dcmfile-in  referenced DICOM file
 </pre>
 <h2>OPTIONS</h2>
 <h3>general options</h3>
-<p>&#8211; h&#8211; help<br />
-        print this help text and exit&#8211; version<br />
-            print version information and exit&#8211; arguments<br />
-                print expanded command line arguments &#8211;<br />
-    q&#8211; quiet<br />
-        quiet mode,<br />
-    print no warnings and errors &#8211; v&#8211; verbose<br />
-                                       verbose mode,<br />
-    print processing details &#8211; d&#8211; debug<br />
-                                   debug mode,<br />
-    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br />
-                                                       constant(fatal, error, warn, info, debug, trace)<br />
-          use level l for the logger<br />
-  -lc   &#8211;log-config  [f]ilename: string<br />
+<p>&#8211; h&#8211; help<br/>
+        print this help text and exit&#8211; version<br/>
+            print version information and exit&#8211; arguments<br/>
+                print expanded command line arguments &#8211;<br/>
+    q&#8211; quiet<br/>
+        quiet mode,<br/>
+    print no warnings and errors &#8211; v&#8211; verbose<br/>
+                                       verbose mode,<br/>
+    print processing details &#8211; d&#8211; debug<br/>
+                                   debug mode,<br/>
+    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br/>
+                                                       constant(fatal, error, warn, info, debug, trace)<br/>
+          use level l for the logger<br/>
+  -lc   &#8211;log-config  [f]ilename: string<br/>
           use config file f for the logger</p>
 <h3>input options</h3>
-<p>DICOMDIR identifiers:<br />
-  +D    &#8211;output-file  [f]ilename: string<br />
-          generate specific DICOMDIR file<br />
-          (default: DICOMDIR in current directory)<br />
-  +F    &#8211;fileset-id  [i]d: string (default: DCMTK_MEDIA_DEMO)<br />
-          use specific file set ID<br />
-  +R    &#8211;descriptor  [f]ilename: string<br />
-          add a file set descriptor file ID<br />
-          (e.g. README, default: no descriptor)<br />
-  +C    &#8211;char-set  [c]harset: string<br />
-          add a specific character set for descriptor<br />
-          (default: &#8220;ISO_IR 100&#8221; if descriptor present)<br />
-reading:<br />
-  +id   &#8211;input-directory  [d]irectory: string<br />
-          read referenced DICOM files from directory d<br />
-          (default for &#8211;recurse: current directory)<br />
-  -m    &#8211;keep-filenames<br />
-          expect filenames to be in DICOM format (default)<br />
-  +m    &#8211;map-filenames<br />
-          map to DICOM filenames (lowercase-&gt;uppercase,<br />
-          and remove trailing period)<br />
-  -r    &#8211;no-recurse<br />
-          do not recurse within directories (default)<br />
-  +r    &#8211;recurse<br />
-          recurse within filesystem directories<br />
-  +p    &#8211;pattern  [p]attern: string (only with &#8211;recurse)<br />
-          pattern for filename matching (wildcards)<br />
+<p>DICOMDIR identifiers:<br/>
+  +D    &#8211;output-file  [f]ilename: string<br/>
+          generate specific DICOMDIR file<br/>
+          (default: DICOMDIR in current directory)<br/>
+  +F    &#8211;fileset-id  [i]d: string (default: DCMTK_MEDIA_DEMO)<br/>
+          use specific file set ID<br/>
+  +R    &#8211;descriptor  [f]ilename: string<br/>
+          add a file set descriptor file ID<br/>
+          (e.g. README, default: no descriptor)<br/>
+  +C    &#8211;char-set  [c]harset: string<br/>
+          add a specific character set for descriptor<br/>
+          (default: &#8220;ISO_IR 100&#8221; if descriptor present)<br/>
+reading:<br/>
+  +id   &#8211;input-directory  [d]irectory: string<br/>
+          read referenced DICOM files from directory d<br/>
+          (default for &#8211;recurse: current directory)<br/>
+  -m    &#8211;keep-filenames<br/>
+          expect filenames to be in DICOM format (default)<br/>
+  +m    &#8211;map-filenames<br/>
+          map to DICOM filenames (lowercase-&gt;uppercase,<br/>
+          and remove trailing period)<br/>
+  -r    &#8211;no-recurse<br/>
+          do not recurse within directories (default)<br/>
+  +r    &#8211;recurse<br/>
+          recurse within filesystem directories<br/>
+  +p    &#8211;pattern  [p]attern: string (only with &#8211;recurse)<br/>
+          pattern for filename matching (wildcards)<br/>
 #possibly not available on all systems</p>
 <h3>processing options</h3>
-<p>consistency check:<br />
-  -W    &#8211;no-consistency-check<br />
-          do not check files for consistency<br />
-  +W    &#8211;warn-inconsist-files<br />
-          warn about inconsistent files (default)<br />
-  -a    &#8211;abort-inconsist-file<br />
-          abort on first inconsistent file<br />
-type 1 attributes:<br />
-  -I    &#8211;strict<br />
-          exit with error if DICOMDIR type 1 attributes<br />
-          are missing in DICOM file (default)<br />
-  +I    &#8211;invent<br />
-          invent DICOMDIR type 1 attributes if missing in DICOM file<br />
-  +Ipi  &#8211;invent-patient-id<br />
-          invent new PatientID in case of inconsistent<br />
-          PatientName attributes<br />
-other checks:<br />
-  +Nrs  &#8211;allow-retired-sop<br />
-          allow retired SOP classes defined in previous editions<br />
-          of the DICOM standard<br />
-  -Nxc  &#8211;no-xfer-check<br />
-          do not reject images with non-standard transfer syntax<br />
+<p>consistency check:<br/>
+  -W    &#8211;no-consistency-check<br/>
+          do not check files for consistency<br/>
+  +W    &#8211;warn-inconsist-files<br/>
+          warn about inconsistent files (default)<br/>
+  -a    &#8211;abort-inconsist-file<br/>
+          abort on first inconsistent file<br/>
+type 1 attributes:<br/>
+  -I    &#8211;strict<br/>
+          exit with error if DICOMDIR type 1 attributes<br/>
+          are missing in DICOM file (default)<br/>
+  +I    &#8211;invent<br/>
+          invent DICOMDIR type 1 attributes if missing in DICOM file<br/>
+  +Ipi  &#8211;invent-patient-id<br/>
+          invent new PatientID in case of inconsistent<br/>
+          PatientName attributes<br/>
+other checks:<br/>
+  +Nrs  &#8211;allow-retired-sop<br/>
+          allow retired SOP classes defined in previous editions<br/>
+          of the DICOM standard<br/>
+  -Nxc  &#8211;no-xfer-check<br/>
+          do not reject images with non-standard transfer syntax<br/>
           (just warn)</p>
 <h3>output options</h3>
 <pre><code>

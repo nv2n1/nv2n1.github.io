@@ -10,7 +10,7 @@ description: "XkbInitCanonicalKeyTypes – Set the definitions of the canonical 
 <p>XkbInitCanonicalKeyTypes &#8211; Set the definitions of the canonical key types in a client map to their default values </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbInitCanonicalKeyTypes</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>int </code><i>keypadVMod</i><code>);</code><br />
+<dt> <code>Status XkbInitCanonicalKeyTypes</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>int </code><i>keypadVMod</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

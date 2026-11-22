@@ -9,7 +9,7 @@ description: "sane-pieusb – SANE backend for USB-connected PIE PowerSlide and 
 
 <p>sane-pieusb &#8211; SANE backend for USB-connected PIE PowerSlide and Reflecta DigitDia/CrystalScan/ProScan slide scanners</p>
 <h2>Description</h2>
-<p>The <code>sane-pieusb</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to USB-connected PIE and Reflecta slide scanners.<br />
+<p>The <code>sane-pieusb</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to USB-connected PIE and Reflecta slide scanners.<br/>
  At present, the following scanners should work with this backend: </p>
 <pre>Model: Status
 ------------------------- ------
@@ -62,7 +62,7 @@ Reflecta DigitDia 6000 Ok</pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) </p>
 <h2>Contact And Bug-Reports</h2>
-<p>Please send any information and bug-reports to:<br />
+<p>Please send any information and bug-reports to:<br/>
  Klaus Kämpf &lt;<i>kkaempf [at] suse.com</i>&gt;</p>
 <h2>Authors</h2>
 <p>The pieusb backend is based on work by Jan Vleeshouwers, Michael Rickmann, and Klaus Kämpf</p>

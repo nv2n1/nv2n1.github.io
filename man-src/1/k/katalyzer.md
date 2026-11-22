@@ -20,15 +20,15 @@ description: "katalyzer – analyzes Kate streams and displays various informati
 <dt><code>-V</code></dt>
 <dd> Show version information.</dd>
 <dt><code>-l</code> types</dt>
-<dd> Select the types of information to log, from the list below. These characters may be concatenated in a single -l option, as, eg, <code>ls</code> does (eg, <code>katalyzer</code> -l Ttv). Refer to the <code>katalyzer</code> command line help for a fully up to date list of types.<br />
-&nbsp;<wbr>e: errors<br />
-&nbsp;<wbr>p: packet<br />
-&nbsp;<wbr>c: container specific information<br />
-&nbsp;<wbr>T: Timing<br />
-&nbsp;<wbr>t: text<br />
-&nbsp;<wbr>v: event<br />
-&nbsp;<wbr>d: dump page and packets<br />
-&nbsp;<wbr>S: statistics<br />
+<dd> Select the types of information to log, from the list below. These characters may be concatenated in a single -l option, as, eg, <code>ls</code> does (eg, <code>katalyzer</code> -l Ttv). Refer to the <code>katalyzer</code> command line help for a fully up to date list of types.<br/>
+&nbsp;<wbr>e: errors<br/>
+&nbsp;<wbr>p: packet<br/>
+&nbsp;<wbr>c: container specific information<br/>
+&nbsp;<wbr>T: Timing<br/>
+&nbsp;<wbr>t: text<br/>
+&nbsp;<wbr>v: event<br/>
+&nbsp;<wbr>d: dump page and packets<br/>
+&nbsp;<wbr>S: statistics<br/>
 &nbsp;<wbr>-: miscellaneous information that doesn&#8217;t belong in any other type </dd>
 <dt><code>-l!</code></dt>
 <dd> Shorthand to select all information to log. </dd>

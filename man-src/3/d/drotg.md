@@ -11,7 +11,7 @@ description: "drotg.f –"
 <p> drotg.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>drotg</code> (DA, DB, C, S)<br />
+<p> subroutine <code>drotg</code> (DA, DB, C, S)<br/>
  <i></i><code>DROTG</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine drotg (double precisionDA, double precisionDB, double precisionC, double precisionS)</h3>

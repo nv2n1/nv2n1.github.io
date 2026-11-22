@@ -16,8 +16,8 @@ description: "QuantLib::CommodityIndex – base class for commodity indexes"
 <p> void <code>addQuote</code> (const <code>Date</code> &amp;quoteDate, Real quote) </p>
 <p> void <code>addQuotes</code> (const std::map&lt; <code>Date</code>, Real &gt; &amp;quotes) </p>
 <p> void <code>clearQuotes</code> () </p>
-<p> bool <code>isValidQuoteDate</code> (const <code>Date</code> &amp;quoteDate) const<br />
- <i>returns TRUE if the quote date is valid </i><br />
+<p> bool <code>isValidQuoteDate</code> (const <code>Date</code> &amp;quoteDate) const<br/>
+ <i>returns TRUE if the quote date is valid </i><br/>
  bool <code>empty</code> () const </p>
 <p> bool <code>forwardCurveEmpty</code> () const </p>
 <p> const <code>TimeSeries</code>&lt; Real &gt; &amp; <code>quotes</code> () const </p>

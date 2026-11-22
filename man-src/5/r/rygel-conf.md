@@ -61,8 +61,8 @@ description: "rygel.conf – Rygel configuration file"
 <dl>
 <dd>Semicolon-separated list of device user-agents (or parts thereof) which need a forced downgrade to <code>MediaServer:1</code> and/or <code>ContentDirectory:1</code>. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
- Only use this parameter if you know what your&#8217;re doing or are being told to do so; overriding the default value might cause incompatibilites. If you find that adding your device here enables its usage with Rygel, please m[blue]<code>file an IOP bug</code>m[]<font SIZE="-2">[1]</font> so we can include it into the default configuration. </dd>
+<dd> <code>Warning</code> <br/>
+ Only use this parameter if you know what your&#8217;re doing or are being told to do so; overriding the default value might cause incompatibilites. If you find that adding your device here enables its usage with Rygel, please m[blue]<code>file an IOP bug</code>m[][1] so we can include it into the default configuration. </dd>
 </dl>
 </dl>
 <p> <code>acl-fallback-policy</code></p>
@@ -74,7 +74,7 @@ description: "rygel.conf – Rygel configuration file"
 <dl>
 <dd>Set to <code>true</code> to show the SQL statements used.</dd></dl>
 <h2>Gstreamer Media Engine Settings</h2>
-<p>The settings in the [GstMediaEngine] section are specific to the GStreamer media engine, which is the default media engine. See the media-engine setting. These following options are available for the m[blue]<code>GStreamer</code>m[]<font SIZE="-2">[2]</font> media engine. </p>
+<p>The settings in the [GstMediaEngine] section are specific to the GStreamer media engine, which is the default media engine. See the media-engine setting. These following options are available for the m[blue]<code>GStreamer</code>m[][2] media engine. </p>
 <p> <code>transcoders</code></p>
 <dl>
 <dd>A semicolon-separated list of the active transcoders. This setting has no effect if <code>enable-transcoding</code> is set to false. Possible values are: lpcm,mp3,mp2ts,aac,avc or wmv. Its default value is lpcm;mp3;mp2ts;aac;wmv.</dd></dl>
@@ -107,7 +107,7 @@ description: "rygel.conf – Rygel configuration file"
 <dl>
 <dd>Optional hexadecimal password that will be used to build the WakeOnPattern.</dd></dl>
 <h2>Tracker Plugin</h2>
-<p>The tracker plugin uses the centralized database of meta information from the tracker project. See the m[blue]<code>tracker project website</code>m[]<font SIZE="-2">[3]</font> for more information about tracker. </p>
+<p>The tracker plugin uses the centralized database of meta information from the tracker project. See the m[blue]<code>tracker project website</code>m[][3] for more information about tracker. </p>
 <p> <code>share-pictures</code></p>
 <dl>
 <dd>Enable or disable sharing of all pictures in the Tracker database.</dd></dl>
@@ -118,9 +118,9 @@ description: "rygel.conf – Rygel configuration file"
 <dl>
 <dd>Enable or disable sharing of all music in the Tracker database.</dd></dl>
 <h2>Mediaexport Plugin</h2>
-<p>The MediaExport plugin is an alternative to the tracker-backed media export. It extracts meta-data by itself and stores it in a m[blue]<code>SQLite</code>m[]<font SIZE="-2">[4]</font> database in $XDG_CACHE_DIR/rygel/media-export.db on UNIX platforms. </p>
+<p>The MediaExport plugin is an alternative to the tracker-backed media export. It extracts meta-data by itself and stores it in a m[blue]<code>SQLite</code>m[][4] database in $XDG_CACHE_DIR/rygel/media-export.db on UNIX platforms. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If both plugins, Tracker as well as MediaExport are enabled, MediaExport will disable itself in favour of the Tracker plugin. </p>
 </dl>
 <p> There are several options supported by this plugin: </p>
@@ -128,11 +128,11 @@ description: "rygel.conf – Rygel configuration file"
 <dl>
 <dd>A list of URIS to expose via UPnP. May be files, folders or anything supported by GVFS. If left emtpy it defaults to export the user&#8217;s music, video and picture folders as defined per XDG special user directories spec. These default folders can be referenced by <code>@MUSIC@</code>, <code>@PICTURES@</code> and <code>@VIDEOS@</code>. Locations can be entered as either fully escaped URIS or normal paths. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If you enter a normal path that contains whitespace there is no need to escape them with either a backslash or putting the string in quotes. </dd>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  It is strongly advised against using an exported folder as a target for downloads when <code>extract-metadata</code> is enabled. Rygel will most likely ignore the files then because they will fail to extract. </dd>
 </dl>
 <p> <code>Example 1. Possible values for uris</code> </p>
@@ -159,7 +159,7 @@ description: "rygel.conf – Rygel configuration file"
 <dl>
 <dd>Definition of the video sink to use. Can be a single element or a partial pipeline definition in gst-launch&#8217;s syntax</dd></dl>
 <h2>Lightmediascanner Plugin</h2>
-<p>The LightMediaScanner plugin exports the contents of the m[blue]<code>lightmediascanner daemon</code>m[]<font SIZE="-2">[5]</font> </p>
+<p>The LightMediaScanner plugin exports the contents of the m[blue]<code>lightmediascanner daemon</code>m[][5] </p>
 <p> This plugin does not have any special options.</p>
 <h2>Gstlaunch Plugin</h2>
 <p>The GstLaunch plugin allows to expose GStreamer pipelines using the same syntax as the gst-launch utilty. You can configure several items in this plugins. </p>
@@ -180,7 +180,7 @@ description: "rygel.conf – Rygel configuration file"
 <dd>DLNA profile for the stream.</dd></dl>
 <p> An example configuration is available in the distributed configuration file /etc/rygel.conf.</p>
 <h2>External</h2>
-<p>The External plugin is an consumer of the m[blue]<code>MediaServer2 DBus interface specification</code>m[]<font SIZE="-2">[6]</font>. This allows external programs to share their data via UPnP by implementing this DBus specification. The plugin picks up any implementation of this interface on the session bus and exposes the presented media via UPnP. Known implementors of this spec are m[blue]<code>gnome-dvb-daemon</code>m[]<font SIZE="-2">[7]</font>, m[blue]<code>Rhythmbox</code>m[]<font SIZE="-2">[8]</font> and m[blue]<code>Grilo</code>m[]<font SIZE="-2">[9]</font> via the grilo-ms2 project. </p>
+<p>The External plugin is an consumer of the m[blue]<code>MediaServer2 DBus interface specification</code>m[][6]. This allows external programs to share their data via UPnP by implementing this DBus specification. The plugin picks up any implementation of this interface on the session bus and exposes the presented media via UPnP. Known implementors of this spec are m[blue]<code>gnome-dvb-daemon</code>m[][7], m[blue]<code>Rhythmbox</code>m[][8] and m[blue]<code>Grilo</code>m[][9] via the grilo-ms2 project. </p>
 <p> You can disable the whole functionality by setting <code>enabled=false</code> in the <code>[External]</code> section of the configuration file. </p>
 <p> Individual peers may be enabled or disabled by creating sections corresponding to the D-Bus names of the peer: </p>
 <dl>
@@ -190,9 +190,9 @@ enabled=false</pre>
 </dd></dl>
 <p> This plugin has no additional options.</p>
 <h2>Mpris</h2>
-<p>The MPRIS plugin is a consumer of the m[blue]<code>MPRIS2 DBus interface specification</code>m[]<font SIZE="-2">[10]</font>. The implementation conforms to version 2.0 of the standard. </p>
+<p>The MPRIS plugin is a consumer of the m[blue]<code>MPRIS2 DBus interface specification</code>m[][10]. The implementation conforms to version 2.0 of the standard. </p>
 <p> rygel exposes media players that implement the provider side of this DBus specification as DLNA Digital Media Renderers (DMR) similar to the Playbin plugin. This means that you can easily turn your media player into a DMR by implementing this DBus specification. </p>
-<p> Players that implement this spec and are known to work with rygel are m[blue]<code>Banshee</code>m[]<font SIZE="-2">[11]</font>, m[blue]<code>Rhythmbox</code>m[]<font SIZE="-2">[8]</font> and m[blue]<code>GNOME Videos (previously known as Totem)</code>m[]<font SIZE="-2">[12]</font> </p>
+<p> Players that implement this spec and are known to work with rygel are m[blue]<code>Banshee</code>m[][11], m[blue]<code>Rhythmbox</code>m[][8] and m[blue]<code>GNOME Videos (previously known as Totem)</code>m[][12] </p>
 <p> You can disable the whole functionality by setting <code>enabled=false</code> in the <code>[MRPIS]</code> section of the configuration file. </p>
 <p> The configuration of this plugin is special. Plugin configuration is not done on the plugin but rather per peer that is found providing the MPRIS2 interface. See the following example to set the title for Banshee on MPRIS: </p>
 <dl>

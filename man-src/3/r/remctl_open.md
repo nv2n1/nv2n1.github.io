@@ -25,19 +25,19 @@ int remctl_open_fd(struct remctl *r, const char *host,
 
 <h2>Description</h2>
 
-<i>remctl_open()</i> opens a <font SIZE="-1">TCP</font> connection to the given <i>host</i> on the given <i>port</i> and then authenticates using the remctl protocol and the service principal <i>principal</i>. <i>r</i> is a remctl struct created via <i>remctl_new()</i>. <i>host</i> must not be <font SIZE="-1">NULL. </font> If <i>port</i> is 0, the library first attempts to connect to the registered port of 4373 and then tries the legacy port of 4444 if that fails. Future versions of the library will drop this fallback to 4444. If <i>principal</i> is <font SIZE="-1">NULL,</font> a service principal of <tt>&quot;host/</tt>host<tt>&quot;</tt> is used, with the realm determined by domain-realm mapping. 
+<i>remctl_open()</i> opens a TCP connection to the given <i>host</i> on the given <i>port</i> and then authenticates using the remctl protocol and the service principal <i>principal</i>. <i>r</i> is a remctl struct created via <i>remctl_new()</i>. <i>host</i> must not be NULL.  If <i>port</i> is 0, the library first attempts to connect to the registered port of 4373 and then tries the legacy port of 4444 if that fails. Future versions of the library will drop this fallback to 4444. If <i>principal</i> is NULL, a service principal of <tt>&quot;host/</tt>host<tt>&quot;</tt> is used, with the realm determined by domain-realm mapping. 
 
- <i>remctl_open_addrinfo()</i> operates in the same manner as <i>remctl_open()</i>, but connects to the first usable address in <i>ai</i>, which must be a list of results as returned by <i><a HREF="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></i>(3). The <i>host</i> is used only to form the default service principal, and may be <font SIZE="-1">NULL</font> if <i>principal</i> is not <font SIZE="-1">NULL.</font> 
+ <i>remctl_open_addrinfo()</i> operates in the same manner as <i>remctl_open()</i>, but connects to the first usable address in <i>ai</i>, which must be a list of results as returned by <i><a HREF="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></i>(3). The <i>host</i> is used only to form the default service principal, and may be NULL if <i>principal</i> is not NULL. 
 
- <i>remctl_open_sockaddr()</i> is equivalent to <i>remctl_open_addrinfo()</i> with a single addrinfo structure specifying the use of <font SIZE="-1">TCP</font> with socket address <i>addr</i> and length <i>addrlen</i>. 
+ <i>remctl_open_sockaddr()</i> is equivalent to <i>remctl_open_addrinfo()</i> with a single addrinfo structure specifying the use of TCP with socket address <i>addr</i> and length <i>addrlen</i>. 
 
- <i>remctl_open_fd()</i> operates in the same manner as <i>remctl_open_addrinfo()</i>, but uses an already-established <font SIZE="-1">TCP</font> connection identified by the file descriptor <i>fd</i>. On Windows, <i>fd</i> is of type <tt>&quot;SOCKET&quot;</tt> and must be a valid socket descriptor. 
+ <i>remctl_open_fd()</i> operates in the same manner as <i>remctl_open_addrinfo()</i>, but uses an already-established TCP connection identified by the file descriptor <i>fd</i>. On Windows, <i>fd</i> is of type <tt>&quot;SOCKET&quot;</tt> and must be a valid socket descriptor. 
 
- If no principal is specified and the default is used, the underlying GSS-API library may canonicalize <i>host</i> via <font SIZE="-1">DNS</font> before determining the service principal, depending on your library configuration. Specifying a principal disables this behavior. 
+ If no principal is specified and the default is used, the underlying GSS-API library may canonicalize <i>host</i> via DNS before determining the service principal, depending on your library configuration. Specifying a principal disables this behavior. 
 
- The remctl protocol uses Kerberos via GSS-API for authentication. The underlying GSS-API library will use the default ticket cache for authentication, so to successfully use <i>remctl_open()</i>, the caller should already have Kerberos tickets for an appropriate realm stored in its default ticket cache. The environment variable <font SIZE="-1">KRB5CCNAME</font> or the <i><a HREF="/docs/linux/man/3-remctl_set_ccache/">remctl_set_ccache</a></i>(3) function can be used to control which ticket cache is used. 
+ The remctl protocol uses Kerberos via GSS-API for authentication. The underlying GSS-API library will use the default ticket cache for authentication, so to successfully use <i>remctl_open()</i>, the caller should already have Kerberos tickets for an appropriate realm stored in its default ticket cache. The environment variable KRB5CCNAME or the <i><a HREF="/docs/linux/man/3-remctl_set_ccache/">remctl_set_ccache</a></i>(3) function can be used to control which ticket cache is used. 
 
- To control the timeout for the connect and for subsequent calls, see the <i><a HREF="/docs/linux/man/3-remctl_set_timeout/">remctl_set_timeout</a></i>(3) function. To control the source <font SIZE="-1">IP</font> used by <i>remctl_open()</i>, <i>remctl_open_addrinfo()</i>, and <i>remctl_open_sockaddr()</i>, see the <i><a HREF="/docs/linux/man/3-remctl_set_source_ip/">remctl_set_source_ip</a></i>(3) function.
+ To control the timeout for the connect and for subsequent calls, see the <i><a HREF="/docs/linux/man/3-remctl_set_timeout/">remctl_set_timeout</a></i>(3) function. To control the source IP used by <i>remctl_open()</i>, <i>remctl_open_addrinfo()</i>, and <i>remctl_open_sockaddr()</i>, see the <i><a HREF="/docs/linux/man/3-remctl_set_source_ip/">remctl_set_source_ip</a></i>(3) function.
 
 <h2>Return Value</h2>
 
@@ -53,9 +53,9 @@ The <i>remctl_open()</i> interface has been provided by the remctl client librar
 
 <h2>Caveats</h2>
 
-If the <i>principal</i> argument to <i>remctl_open()</i> is <font SIZE="-1">NULL,</font> most GSS-API libraries will canonicalize the <i>host</i> using <font SIZE="-1">DNS</font> before deriving the principal name from it. This means that when connecting to a remctl server via a <font SIZE="-1">CNAME,</font> <i>remctl_open()</i> will normally authenticate using a principal based on the canonical name of the host instead of the specified <i>host</i> parameter. This behavior may cause problems if two consecutive <font SIZE="-1">DNS</font> lookups of <i>host</i> may return two different results, such as with some DNS-based load-balancing systems. 
+If the <i>principal</i> argument to <i>remctl_open()</i> is NULL, most GSS-API libraries will canonicalize the <i>host</i> using DNS before deriving the principal name from it. This means that when connecting to a remctl server via a CNAME, <i>remctl_open()</i> will normally authenticate using a principal based on the canonical name of the host instead of the specified <i>host</i> parameter. This behavior may cause problems if two consecutive DNS lookups of <i>host</i> may return two different results, such as with some DNS-based load-balancing systems. 
 
- The canonicalization behavior is controlled by the GSS-API library; with the <font SIZE="-1">MIT</font> Kerberos GSS-API library, canonicalization can be disabled by setting <tt>&quot;rdns&quot;</tt> to false in the [libdefaults] section of <i>krb5.conf</i>. It can also be disabled by passing an explicit Kerberos principal name via the <i>principal</i> argument, which will then be used without changes. If canonicalization is desired, the caller may wish to canonicalize <i>host</i> before calling <i>remctl_open()</i> to avoid problems with multiple <font SIZE="-1">DNS</font> calls returning different results. 
+ The canonicalization behavior is controlled by the GSS-API library; with the MIT Kerberos GSS-API library, canonicalization can be disabled by setting <tt>&quot;rdns&quot;</tt> to false in the [libdefaults] section of <i>krb5.conf</i>. It can also be disabled by passing an explicit Kerberos principal name via the <i>principal</i> argument, which will then be used without changes. If canonicalization is desired, the caller may wish to canonicalize <i>host</i> before calling <i>remctl_open()</i> to avoid problems with multiple DNS calls returning different results. 
 
  The default behavior, when a port of 0 is given, of trying 4373 and falling back to 4444 will be removed in a future version of this library in favor of using the <tt>&quot;remctl&quot;</tt> service in <i>/etc/services</i> if set and then falling back on only 4373. 4444 was the poorly-chosen original remctl port and should be phased out. 
 
@@ -63,7 +63,7 @@ If the <i>principal</i> argument to <i>remctl_open()</i> is <font SIZE="-1">NULL
 
 <h2>Notes</h2>
 
-The remctl port number, 4373, was derived by tracing the diagonals of a <font SIZE="-1">QWERTY</font> keyboard up from the letters <tt>&quot;remc&quot;</tt> to the number row.
+The remctl port number, 4373, was derived by tracing the diagonals of a QWERTY keyboard up from the letters <tt>&quot;remc&quot;</tt> to the number row.
 
 <h2>Author</h2>
 

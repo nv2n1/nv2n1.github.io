@@ -52,9 +52,9 @@ description: "hx509 CA functions –"
 <p> When creating self-signed certificate use <code>hx509_ca_sign_self()</code> instead. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
- <i>signer</i> the CA certificate object to sign with (need private key).<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
+ <i>signer</i> the CA certificate object to sign with (need private key).<br/>
  <i>certificate</i> return cerificate, free with <code>hx509_cert_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -63,9 +63,9 @@ description: "hx509 CA functions –"
 <p>Work just like <code>hx509_ca_sign()</code> but signs it-self. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
- <i>signer</i> private key to sign with.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
+ <i>signer</i> private key to sign with.<br/>
  <i>certificate</i> return cerificate, free with <code>hx509_cert_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -74,9 +74,9 @@ description: "hx509 CA functions –"
 <p>Add CRL distribution point URI to the to-be-signed certificate object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
- <i>uri</i> uri to the CRL.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
+ <i>uri</i> uri to the CRL.<br/>
  <i>issuername</i> name of the issuer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -86,8 +86,8 @@ description: "hx509 CA functions –"
 <p>An an extended key usage to the to-be-signed certificate object. Duplicates will detected and not added. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>oid</i> extended key usage to add.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -97,8 +97,8 @@ description: "hx509 CA functions –"
 <p> Example of a an domain match: .domain.se matches the hostname host.domain.se. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>dnsname</i> a hostame.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -107,8 +107,8 @@ description: "hx509 CA functions –"
 <p>Add a Jabber/XMPP jid Subject Alternative Name to the to-be-signed certificate object. The jid is an UTF8 string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>jid</i> string of an a jabber id in UTF8.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -117,8 +117,8 @@ description: "hx509 CA functions –"
 <p>Add Microsoft UPN Subject Alternative Name to the to-be-signed certificate object. The principal string is a UTF8 string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>principal</i> Microsoft UPN string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -127,9 +127,9 @@ description: "hx509 CA functions –"
 <p>Add Subject Alternative Name otherName to the to-be-signed certificate object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
- <i>oid</i> the oid of the OtherName.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
+ <i>oid</i> the oid of the OtherName.<br/>
  <i>os</i> data in the other name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -138,8 +138,8 @@ description: "hx509 CA functions –"
 <p>Add Kerberos Subject Alternative Name to the to-be-signed certificate object. The principal string is a UTF8 string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>principal</i> Kerberos principal to add to the certificate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -148,8 +148,8 @@ description: "hx509 CA functions –"
 <p>Add a Subject Alternative Name rfc822 (email address) to to-be-signed certificate object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>rfc822Name</i> a string to a email address.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -163,7 +163,7 @@ description: "hx509 CA functions –"
 <p>Allocate an to-be-signed certificate object that will be converted into an certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
+<dd><i>context</i> A hx509 context.<br/>
  <i>tbs</i> returned to-be-signed certicate object, free with <code>hx509_ca_tbs_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -172,8 +172,8 @@ description: "hx509 CA functions –"
 <p>Make the to-be-signed certificate object a CA certificate. If the pathLenConstraint is negative path length constraint is used. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>pathLenConstraint</i> path length constraint, negative, no constraint.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -182,7 +182,7 @@ description: "hx509 CA functions –"
 <p>Make the to-be-signed certificate object a windows domain controller certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
+<dd><i>context</i> A hx509 context.<br/>
  <i>tbs</i> object to be signed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -191,8 +191,8 @@ description: "hx509 CA functions –"
 <p>Set the absolute time when the certificate is valid to. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>t</i> time when the certificate will expire</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -201,8 +201,8 @@ description: "hx509 CA functions –"
 <p>Set the relative time when the certificiate is going to expire. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>delta</i> seconds to the certificate is going to expire.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -211,8 +211,8 @@ description: "hx509 CA functions –"
 <p>Set the absolute time when the certificate is valid from. If not set the current time will be used. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>t</i> time the certificated will start to be valid</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -221,8 +221,8 @@ description: "hx509 CA functions –"
 <p>Make the to-be-signed certificate object a proxy certificate. If the pathLenConstraint is negative path length constraint is used. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>pathLenConstraint</i> path length constraint, negative, no constraint.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -231,8 +231,8 @@ description: "hx509 CA functions –"
 <p>Set the serial number to use for to-be-signed certificate object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>serialNumber</i> serial number to use for the to-be-signed certificate object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -241,8 +241,8 @@ description: "hx509 CA functions –"
 <p>Set signature algorithm on the to be signed certificate </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>sigalg</i> signature algorithm to use</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -251,8 +251,8 @@ description: "hx509 CA functions –"
 <p>Set the subject public key info (SPKI) in the to-be-signed certificate object. SPKI is the public key and key related parameters in the certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>spki</i> subject public key info to use for the to-be-signed certificate object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -261,8 +261,8 @@ description: "hx509 CA functions –"
 <p>Set the subject name of a to-be-signed certificate object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>subject</i> the name to set a subject.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -271,9 +271,9 @@ description: "hx509 CA functions –"
 <p>Initialize the to-be-signed certificate object from a template certifiate. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
- <i>flags</i> bit field selecting what to copy from the template certifiate.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
+ <i>flags</i> bit field selecting what to copy from the template certifiate.<br/>
  <i>cert</i> template certificate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -283,9 +283,9 @@ description: "hx509 CA functions –"
 <p> These are only supposed to be used considered with version 2 certificates, replaced by the two extensions SubjectKeyIdentifier and IssuerKeyIdentifier. This function is to allow application using legacy protocol to issue them. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
- <i>issuerUniqueID</i> to be set<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
+ <i>issuerUniqueID</i> to be set<br/>
  <i>subjectUniqueID</i> to be set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -294,8 +294,8 @@ description: "hx509 CA functions –"
 <p>Expand the the subject name in the to-be-signed certificate object using <code>hx509_name_expand()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>env</i> enviroment variable to expand variables in the subject name, see hx509_env_init().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

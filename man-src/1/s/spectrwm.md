@@ -541,11 +541,11 @@ bind[reset] = Mod4 + q #bind Windows &#8211; key + q to reset bind[] = Mod1 + q 
 <p> Multiple key combinations may be bound to the same action. </p>
 <p> To bind non-latin characters such as &aring; or &pi; you must enter the xkb character name instead of the character itself. Run <a href="/docs/linux/man/1-xev/">xev</a>(1), focus the window and press the specific key and in the terminal output read the symbol name. In the following example for &aring;: </p>
 <blockquote><p>
-KeyPress event, serial 41, synthetic NO, window 0x2600001,<br />
-    root 0x15a, subw 0x0, time 106213808, (11, 5), root : (359, 823),<br />
-                                                          state 0x0,<br />
-                                                          keycode 24(keysym 0xe5, aring),<br />
-                                                          same_screen YES,<br />
+KeyPress event, serial 41, synthetic NO, window 0x2600001,<br/>
+    root 0x15a, subw 0x0, time 106213808, (11, 5), root : (359, 823),<br/>
+                                                          state 0x0,<br/>
+                                                          keycode 24(keysym 0xe5, aring),<br/>
+                                                          same_screen YES,<br/>
                                                           XLookupString gives 2 bytes : (c3 a5) &#8220;&amp;aring;&#8221; XmbLookupString gives 2 bytes : (c3 a5) &#8220;&amp;aring;&#8221; XFilterEvent returns : False
  </p></blockquote>
 <p> The xkb name is aring. In other words, in spectrwm.conf add: </p>

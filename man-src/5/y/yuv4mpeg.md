@@ -90,20 +90,20 @@ description: "YUV4MPEG2 – video stream format used by pipe-based MJPEGtools"
 <dd>H[integer]&nbsp;<wbr>&#8211; frame height in pixels, must be &gt; 0 (<code>required</code>)</dd>
 <dd>C[string]&nbsp;<wbr>&#8211; chroma subsampling, image data format (<code>has default</code>)</dd>
 <dl>
-<dd>&nbsp;<wbr>420jpeg&nbsp;<wbr>&nbsp;<wbr>&#8211; 4:2:0 with JPEG/MPEG-1 siting&nbsp;<wbr>(default)<br />
-&nbsp;<wbr>420mpeg2 &#8211; 4:2:0 with MPEG-2 siting<br />
-&nbsp;<wbr>420paldv &#8211; 4:2:0 with PAL-DV siting<br />
-&nbsp;<wbr>411&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; 4:1:1, cosited<br />
-&nbsp;<wbr>422&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; 4:2:2, cosited<br />
-&nbsp;<wbr>444&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; 4:4:4&nbsp;<wbr>(no subsampling)<br />
-&nbsp;<wbr>444alpha &#8211; 4:4:4 with an alpha channel<br />
+<dd>&nbsp;<wbr>420jpeg&nbsp;<wbr>&nbsp;<wbr>&#8211; 4:2:0 with JPEG/MPEG-1 siting&nbsp;<wbr>(default)<br/>
+&nbsp;<wbr>420mpeg2 &#8211; 4:2:0 with MPEG-2 siting<br/>
+&nbsp;<wbr>420paldv &#8211; 4:2:0 with PAL-DV siting<br/>
+&nbsp;<wbr>411&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; 4:1:1, cosited<br/>
+&nbsp;<wbr>422&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; 4:2:2, cosited<br/>
+&nbsp;<wbr>444&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; 4:4:4&nbsp;<wbr>(no subsampling)<br/>
+&nbsp;<wbr>444alpha &#8211; 4:4:4 with an alpha channel<br/>
 &nbsp;<wbr>mono&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; luma&nbsp;<wbr>(Y&#8217;)&nbsp;<wbr>plane only</dd></dl>
 <dd>I[char]&nbsp;<wbr>&#8211; interlacing specification: (<code>has default</code>)</dd>
 <dl>
-<dd>&nbsp;<wbr>?&nbsp;<wbr>&#8211; unknown&nbsp;<wbr>(default)<br />
-&nbsp;<wbr>p &#8211; progressive/none<br />
-&nbsp;<wbr>t &#8211; top-field-first<br />
-&nbsp;<wbr>b &#8211; bottom-field-first<br />
+<dd>&nbsp;<wbr>?&nbsp;<wbr>&#8211; unknown&nbsp;<wbr>(default)<br/>
+&nbsp;<wbr>p &#8211; progressive/none<br/>
+&nbsp;<wbr>t &#8211; top-field-first<br/>
+&nbsp;<wbr>b &#8211; bottom-field-first<br/>
 &nbsp;<wbr>m &#8211; mixed-mode: refer to&nbsp;<wbr>&#8216;I&#8217;&nbsp;<wbr>tag in frame header</dd></dl>
 <dd>F[ratio]&nbsp;<wbr>&#8211; frame-rate (<code>has default</code> of 0:0 == unknown)</dd>
 <dd>A[ratio]&nbsp;<wbr>&#8211; sample aspect ratio (<code>has default</code> of 0:0 == unknown)</dd>
@@ -115,20 +115,20 @@ description: "YUV4MPEG2 – video stream format used by pipe-based MJPEGtools"
 </dd><dl>
 <dd>I[string]&nbsp;<wbr>&#8211; framing and sampling (<code>required if-and-only-if</code> Im is present in stream header). Value is a string of three characters &quot;xyz&quot; which have the following meanings:</dd>
 <dl>
-<dd>&nbsp;<wbr>x: frame presentation<br />
-&nbsp;<wbr>t &#8211; top-field-first<br />
-&nbsp;<wbr>T &#8211; top-field-first and repeat<br />
-&nbsp;<wbr>b &#8211; bottom-field-first<br />
-&nbsp;<wbr>B &#8211; bottom-field-first and repeat<br />
-&nbsp;<wbr>1 &#8211; single progressive frame<br />
-&nbsp;<wbr>2 &#8211; double progressive frame&nbsp;<wbr>(repeat)<br />
-&nbsp;<wbr>3 &#8211; triple progressive frame&nbsp;<wbr>(repeat)<br />
-&nbsp;<wbr>y: frame temporal sampling<br />
-&nbsp;<wbr>p &#8211; progressive&nbsp;<wbr>(fields sampled at same time)<br />
-&nbsp;<wbr>i &#8211; interlaced&nbsp;<wbr>(fields sampled at different times)<br />
-&nbsp;<wbr>z: frame chroma-subsampling<br />
-&nbsp;<wbr>p &#8211; progressive&nbsp;<wbr>(subsampling over whole frame)<br />
-&nbsp;<wbr>i &#8211; interlaced&nbsp;<wbr>(each field subsampled independently)<br />
+<dd>&nbsp;<wbr>x: frame presentation<br/>
+&nbsp;<wbr>t &#8211; top-field-first<br/>
+&nbsp;<wbr>T &#8211; top-field-first and repeat<br/>
+&nbsp;<wbr>b &#8211; bottom-field-first<br/>
+&nbsp;<wbr>B &#8211; bottom-field-first and repeat<br/>
+&nbsp;<wbr>1 &#8211; single progressive frame<br/>
+&nbsp;<wbr>2 &#8211; double progressive frame&nbsp;<wbr>(repeat)<br/>
+&nbsp;<wbr>3 &#8211; triple progressive frame&nbsp;<wbr>(repeat)<br/>
+&nbsp;<wbr>y: frame temporal sampling<br/>
+&nbsp;<wbr>p &#8211; progressive&nbsp;<wbr>(fields sampled at same time)<br/>
+&nbsp;<wbr>i &#8211; interlaced&nbsp;<wbr>(fields sampled at different times)<br/>
+&nbsp;<wbr>z: frame chroma-subsampling<br/>
+&nbsp;<wbr>p &#8211; progressive&nbsp;<wbr>(subsampling over whole frame)<br/>
+&nbsp;<wbr>i &#8211; interlaced&nbsp;<wbr>(each field subsampled independently)<br/>
 &nbsp;<wbr>?&nbsp;<wbr>&#8211; unknown&nbsp;<wbr>(allowed only for non-4:2:0 subsampling)</dd></dl>
 <dd>X[string]&nbsp;<wbr>&#8211;&nbsp;<wbr>&#8216;metadata&#8217; (<code>optional</code>; unparsed, but passed around)</dd></dl>
 </dl>

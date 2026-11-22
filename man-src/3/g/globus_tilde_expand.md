@@ -11,55 +11,55 @@ description: "Globus Common API –"
 <p> Globus Common API &#8211; </p>
 <p> Common Data Structures and Functions.</p>
 <h3>Modules</h3>
-<p> <code>Globus Callback</code><br />
- <i>Globus Callback Function Interface. </i><br />
+<p> <code>Globus Callback</code><br/>
+ <i>Globus Callback Function Interface. </i><br/>
  <code>Globus Error API</code> </p>
-<p> <code>FIFO Queue</code><br />
- <i>FIFO Queue Implementation. </i><br />
+<p> <code>FIFO Queue</code><br/>
+ <i>FIFO Queue Implementation. </i><br/>
  <code>Handle Table for Reference Counting Data</code> </p>
 <p> <code>Hash Table</code> </p>
 <p> <code>Linked List</code> </p>
 <p> <code>Memory Pool</code> </p>
 <p> <code>Module Activation Management</code> </p>
 <p> <code>Priority Queue</code> </p>
-<p> <code>Threading</code><br />
- <i>Portable Thread Abstraction. </i><br />
+<p> <code>Threading</code><br/>
+ <i>Portable Thread Abstraction. </i><br/>
  <code>Thread Pooling</code> </p>
 <p> <code>URL String Parser</code> </p>
-<p> <code>Globus UUID Generator</code><br />
+<p> <code>Globus UUID Generator</code><br/>
  <i>UUIDs. </i></p>
 <h3>Macros</h3>
-<p> #define <code>GLOBUS_COMMON_MODULE</code> (&amp;globus_i_common_module)<br />
- <i>Globus Common Module Descriptor. </i><br />
- #define <code>GLOBUS_TILDE_EXPAND</code><br />
- <i>Expand ~. </i><br />
- #define <code>GLOBUS_TILDE_USER_EXPAND</code><br />
- <i>Expand ~user. </i><br />
- #define <code>GLOBUS_TRUE</code> 1<br />
- <i>True value for globus_bool_t. </i><br />
- #define <code>GLOBUS_FALSE</code> 0<br />
- <i>False value for globus_bool_t. </i><br />
- #define <code>GLOBUS_SUCCESS</code> 0<br />
+<p> #define <code>GLOBUS_COMMON_MODULE</code> (&amp;globus_i_common_module)<br/>
+ <i>Globus Common Module Descriptor. </i><br/>
+ #define <code>GLOBUS_TILDE_EXPAND</code><br/>
+ <i>Expand ~. </i><br/>
+ #define <code>GLOBUS_TILDE_USER_EXPAND</code><br/>
+ <i>Expand ~user. </i><br/>
+ #define <code>GLOBUS_TRUE</code> 1<br/>
+ <i>True value for globus_bool_t. </i><br/>
+ #define <code>GLOBUS_FALSE</code> 0<br/>
+ <i>False value for globus_bool_t. </i><br/>
+ #define <code>GLOBUS_SUCCESS</code> 0<br/>
  <i>Generic success result</i> </p>
-<p> Most Globus API functions return this value to indicate success, or some error constant or globus_result_t to indicate an error. &quot;<br />
- #define <code>GLOBUS_FAILURE</code> -1<br />
+<p> Most Globus API functions return this value to indicate success, or some error constant or globus_result_t to indicate an error. &quot;<br/>
+ #define <code>GLOBUS_FAILURE</code> -1<br/>
  <i>Generic failure result</i> </p>
 <p> Some Globus API functions without good error handling return this value to indicate some undetermined error occurred. &quot;</p>
 <h3>Typedefs</h3>
-<p> typedef size_t <code>globus_size_t</code><br />
+<p> typedef size_t <code>globus_size_t</code><br/>
  <i>Standard size of memory object</i> </p>
-<p> The globus_size_t is the size of a memory object. It is identical to size_t in all cases and doesn&#8217;t need to be used ever. &quot;<br />
- typedef socklen_t <code>globus_socklen_t</code><br />
- <i>Size of a socket length parameter. </i><br />
- typedef unsigned char <code>globus_byte_t</code><br />
+<p> The globus_size_t is the size of a memory object. It is identical to size_t in all cases and doesn&#8217;t need to be used ever. &quot;<br/>
+ typedef socklen_t <code>globus_socklen_t</code><br/>
+ <i>Size of a socket length parameter. </i><br/>
+ typedef unsigned char <code>globus_byte_t</code><br/>
  <i>Unsigned byte datatype</i> </p>
-<p> This is used for byte-addressable arrays of arbitrary data which is not subject to sign extension. &quot;<br />
- typedef int <code>globus_bool_t</code><br />
- <i>Boolean type. </i><br />
+<p> This is used for byte-addressable arrays of arbitrary data which is not subject to sign extension. &quot;<br/>
+ typedef int <code>globus_bool_t</code><br/>
+ <i>Boolean type. </i><br/>
  typedef uint32_t <code>globus_result_t</code> </p>
 <h3>Functions</h3>
 <p> <code>globus_result_t</code> <code>globus_eval_path</code> (const char *pathstring, char **bufp) </p>
-<p> int <code>globus_tilde_expand</code> (unsigned long options, <code>globus_bool_t</code> url_form, char *inpath, char **outpath)<br />
+<p> int <code>globus_tilde_expand</code> (unsigned long options, <code>globus_bool_t</code> url_form, char *inpath, char **outpath)<br/>
  <i>Expand ~ and/or ~user in path strings. </i></p>
 <h2>Detailed Description</h2>
 <p> Common Data Structures and Functions. </p>
@@ -149,8 +149,8 @@ description: "Globus Common API –"
 <dd> GLOBUS_TILDE_EXPAND: expand ~</dd>
 <dt>&bull;</dt>
 <dd> GLOBUS_TILDE_USER_EXPAND: expand ~user Otherwise, the corresponding form is not expanded (just copied int the output path)</dd></dl>
-<p> <i>url_form</i> True if the inpath follows an URL format (/~) Used when expanding an url (for : &lt;scheme&gt;://host[:port][/path] were /path can be of the form /~[user][/&#8230;]. Otherwise, the form ~[user][/&#8230;] is expected.<br />
- <i>inpath</i> Input string to expand.<br />
+<p> <i>url_form</i> True if the inpath follows an URL format (/~) Used when expanding an url (for : &lt;scheme&gt;://host[:port][/path] were /path can be of the form /~[user][/&#8230;]. Otherwise, the form ~[user][/&#8230;] is expected.<br/>
+ <i>inpath</i> Input string to expand.<br/>
  <i>outpath</i> Output string; Need to be freed when not used anymore.</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>

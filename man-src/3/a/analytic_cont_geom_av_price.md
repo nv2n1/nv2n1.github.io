@@ -10,10 +10,10 @@ description: "ql/pricingengines/asian/analytic_cont_geom_av_price.hpp – Analyt
 
 <p> ql/pricingengines/asian/analytic_cont_geom_av_price.hpp &#8211; Analytic engine for continuous geometric average price Asian. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instruments/asianoption.hpp&gt;<br />
+<p> #include &lt;ql/instruments/asianoption.hpp&gt;<br/>
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>AnalyticContinuousGeometricAveragePriceAsianEngine</code><br />
+<p> class <code>AnalyticContinuousGeometricAveragePriceAsianEngine</code><br/>
  <i>Pricing engine for European continuous geometric average price Asian. </i></p>
 <h2>Detailed Description</h2>
 <p> Analytic engine for continuous geometric average price Asian. </p>

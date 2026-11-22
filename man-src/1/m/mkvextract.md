@@ -177,7 +177,7 @@ $ mkvextract tags source.mkv --redirect-output tags.xml
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> On Windows you should probably use the <code>&#8211;redirect-output</code> option because <code>cmd.exe</code> sometimes interpretes special characters before they&#8217;re written into the output file resulting in broken output. </p>
 </dl>
 <h2>TEXT FILES AND CHARACTER SET CONVERSIONS</h2>
@@ -319,7 +319,7 @@ $ mkvextract tags source.mkv --redirect-output tags.xml
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1), <code><a href="/docs/linux/man/1-mkvinfo/">mkvinfo</a></code>(1), <code><a href="/docs/linux/man/1-mkvpropedit/">mkvpropedit</a></code>(1), <code><a href="/docs/linux/man/1-mmg/">mmg</a></code>(1)  </p>
 <h2>WWW</h2>
-<p> The latest version can always be found at m[blue]<code>the MKVToolNix homepage</code>m[]<font SIZE="-2">[1]</font>.  </p>
+<p> The latest version can always be found at m[blue]<code>the MKVToolNix homepage</code>m[][1].  </p>
 <h2>AUTHOR</h2>
 <p> <code>Moritz Bunkus</code> &lt;moritz [at] bunkus.org&gt; </p>
 <dl>

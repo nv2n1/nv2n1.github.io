@@ -25,17 +25,17 @@ template &lt;RandomAccessRange R,
 Notwithstanding the declarations depicted above, the actual number and order of template parameters for algorithm declarations is unspecified. Thus, if explicit template arguments are used when calling an algorithm, the program is probably non-portable.
 </code></pre>
 <h2>Parameters</h2>
-<p>first, last &#8211; the range of elements to sort<br />
-r &#8211; the range of elements to sort<br />
-comp &#8211; the comparator to use<br />
+<p>first, last &#8211; the range of elements to sort<br/>
+r &#8211; the range of elements to sort<br/>
+comp &#8211; the comparator to use<br/>
 proj &#8211; the projection to apply to elements in the range</p>
 <h2>Return value</h2>
 <p>An iterator pointing past the end of the range (i.e., it compares equal to last for overload <code>(1)</code>, and ranges::end(r) for overload <code>(2)</code>). </p>
 <h2>Complexity</h2>
 <p>O(N·log(N)) comparisons, where N is equal to the number of elements in the range.</p>
 <h2>Example</h2>
-<p>&nbsp;This section is incomplete<br />
+<p>&nbsp;This section is incomplete<br/>
 &nbsp;Reason: no example </p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sorts a range into ascending order<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sorts a range into ascending order<br/>
 sort <i>(function template)</i> </p>

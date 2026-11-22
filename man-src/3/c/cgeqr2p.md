@@ -11,7 +11,7 @@ description: "cgeqr2p.f –"
 <p> cgeqr2p.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgeqr2p</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
+<p> subroutine <code>cgeqr2p</code> (M, N, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>CGEQR2P</code> computes the QR factorization of a general rectangular matrix with non-negative diagonal elements using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgeqr2p (integerM, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( * )WORK, integerINFO)</h3>

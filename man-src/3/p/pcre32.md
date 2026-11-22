@@ -106,8 +106,8 @@ pcre.h&gt;</code></pre>
 <h2>Error Names</h2>
 <p>The error PCRE_ERROR_BADUTF32 corresponds to its 8-bit counterpart. The error PCRE_ERROR_BADMODE is given when a compiled pattern is passed to a function that processes patterns in the other mode, for example, if a pattern compiled with <code>pcre_compile()</code> is passed to <code>pcre32_exec()</code>. </p>
 <p> There are new error codes whose names begin with PCRE_UTF32_ERR for invalid UTF-32 strings, corresponding to the PCRE_UTF8_ERR codes for UTF-8 strings that are described in the section entitled &quot;Reason codes for invalid UTF-8 strings&quot; in the main <code>pcreapi</code> page. The UTF-32 errors are: </p>
-<p>&nbsp;<wbr>&nbsp;PCRE_UTF32_ERR1&nbsp;<wbr>&nbsp;Surrogate character&nbsp;(range from 0xd800 to 0xdfff)<br />
-&nbsp;<wbr>&nbsp;PCRE_UTF32_ERR2&nbsp;<wbr>&nbsp;Non-character<br />
+<p>&nbsp;<wbr>&nbsp;PCRE_UTF32_ERR1&nbsp;<wbr>&nbsp;Surrogate character&nbsp;(range from 0xd800 to 0xdfff)<br/>
+&nbsp;<wbr>&nbsp;PCRE_UTF32_ERR2&nbsp;<wbr>&nbsp;Non-character<br/>
 &nbsp;<wbr>&nbsp;PCRE_UTF32_ERR3&nbsp;<wbr>&nbsp;Character&nbsp;&gt;&nbsp;0x10ffff</p>
 <h2>Error Texts</h2>
 <p>If there is an error while compiling a pattern, the error text that is passed back by <code>pcre32_compile()</code> or <code>pcre32_compile2()</code> is still an 8-bit character string, zero-terminated.</p>

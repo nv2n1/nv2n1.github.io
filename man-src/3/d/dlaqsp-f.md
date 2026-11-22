@@ -10,7 +10,7 @@ description: "dlaqsp.f –"
 <p>dlaqsp.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlaqsp</code> (UPLO, N, AP, S, SCOND, AMAX, EQUED)<br />
+<p>subroutine <code>dlaqsp</code> (UPLO, N, AP, S, SCOND, AMAX, EQUED)<br/>
  <i></i><code>DLAQSP</code> scales a symmetric/Hermitian matrix in packed storage, using scaling factors computed by sppequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaqsp (characterUPLO, integerN, double precision, dimension( * )AP, double precision, dimension( * )S, double precisionSCOND, double precisionAMAX, characterEQUED)</h3>

@@ -10,16 +10,16 @@ description: "cbcodec – popular encoders and decoders"
 
 <p> cbcodec &#8211; popular encoders and decoders </p>
 <h2>SYNOPSIS</h2>
-<p> <code>cbcodec url</code> [-d] [-br] [-rs <i>base</i> <i>target</i>] [-l] [-e <i>expr</i>] [<i>file</i>]<br />
- <code>cbcodec base</code> [-d] [-l] [-c <i>num</i>] [-e <i>expr</i>] [<i>file</i>]<br />
- <code>cbcodec quote</code> [-d] [-l] [-c <i>num</i>] [-e <i>expr</i>] [<i>file</i>]<br />
- <code>cbcodec mime</code> [-d] [-hd] [-bd] [-part <i>num</i>] [-l] [-ec <i>code</i>] [-qp] [-dc] [-e <i>expr</i>] [<i>file</i>]<br />
- <code>cbcodec csv</code> [-d] [-t] [-l] [-e <i>expr</i>] [-html] [<i>file</i>]<br />
- <code>cbcodec xml</code> [-d] [-p] [-l] [-e <i>expr</i>] [-tsv] [<i>file</i>]<br />
- <code>cbcodec zlib</code> [-d] [-gz] [-crc] [<i>file</i>]<br />
- <code>cbcodec lzo</code> [-d] [<i>file</i>]<br />
- <code>cbcodec bzip</code> [-d] [<i>file</i>]<br />
- <code>cbcodec iconv</code> [-ic <i>code</i>] [-oc <i>code</i>] [-ol <i>ltype</i>] [-cn] [-wc] [-um] [<i>file</i>]<br />
+<p> <code>cbcodec url</code> [-d] [-br] [-rs <i>base</i> <i>target</i>] [-l] [-e <i>expr</i>] [<i>file</i>]<br/>
+ <code>cbcodec base</code> [-d] [-l] [-c <i>num</i>] [-e <i>expr</i>] [<i>file</i>]<br/>
+ <code>cbcodec quote</code> [-d] [-l] [-c <i>num</i>] [-e <i>expr</i>] [<i>file</i>]<br/>
+ <code>cbcodec mime</code> [-d] [-hd] [-bd] [-part <i>num</i>] [-l] [-ec <i>code</i>] [-qp] [-dc] [-e <i>expr</i>] [<i>file</i>]<br/>
+ <code>cbcodec csv</code> [-d] [-t] [-l] [-e <i>expr</i>] [-html] [<i>file</i>]<br/>
+ <code>cbcodec xml</code> [-d] [-p] [-l] [-e <i>expr</i>] [-tsv] [<i>file</i>]<br/>
+ <code>cbcodec zlib</code> [-d] [-gz] [-crc] [<i>file</i>]<br/>
+ <code>cbcodec lzo</code> [-d] [<i>file</i>]<br/>
+ <code>cbcodec bzip</code> [-d] [<i>file</i>]<br/>
+ <code>cbcodec iconv</code> [-ic <i>code</i>] [-oc <i>code</i>] [-ol <i>ltype</i>] [-cn] [-wc] [-um] [<i>file</i>]<br/>
  <code>cbcodec date</code> [-wf] [-rf] [-utc] [<i>str</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>cbcodec</code> commands. </p>

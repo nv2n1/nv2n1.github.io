@@ -103,8 +103,8 @@ $ git add .     <code>(2)</code>
 $ git commit    <code>(3)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>Create a /path/to/my/codebase/.git directory.<br />
- <code>2. </code>Add all existing files to the index.<br />
+<p> <code>1. </code>Create a /path/to/my/codebase/.git directory.<br/>
+ <code>2. </code>Add all existing files to the index.<br/>
  <code>3. </code>Record the pristine state as the first commit in the history.
 </dl>
 <h2>GIT</h2>

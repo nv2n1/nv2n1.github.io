@@ -17,9 +17,9 @@ description: "cgi_vredirect – send an HTTP 302 redirect response"
 void cgi_vredirect(CGI *cgi, int uri, const char *fmt, va_list ap);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> cgi &#8211; cgi struct<br />
- uri &#8211; whether the URL is full (1) or path only (0)<br />
- fmt &#8211; printf format string<br />
+<p> cgi &#8211; cgi struct<br/>
+ uri &#8211; whether the URL is full (1) or path only (0)<br/>
+ fmt &#8211; printf format string<br/>
  ap &#8211; stdarg va_list </p>
 <h2>DESCRIPTION</h2>
 <p> cgi_vredirect is mostly used internally, but can be used if you need a varargs version of the function. </p>

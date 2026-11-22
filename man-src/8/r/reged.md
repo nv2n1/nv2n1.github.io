@@ -41,7 +41,7 @@ description: "reged – utility to export/import and edit a Windows registry hiv
 <h2>Known Bugs</h2>
 <p>There are many <code>unknown</code> bugs. If you find bugs please report them to the author.</p>
 <h2>See Also</h2>
-<p><code>chntpwd, samusrgrp, sampasswd</code><br />
+<p><code>chntpwd, samusrgrp, sampasswd</code><br/>
  You will find more information available on how this program works, in the text files <i>/usr/share/doc/chntpw/README.txt</i> and <i>/usr/share/doc/chntpw/MANUAL.txt</i> </p>
 <h2>Author</h2>
 <p>This program was written by Petter N Hagen. </p>

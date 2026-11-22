@@ -23,8 +23,8 @@ int sigtimedwait(const sigset_t *set, siginfo_t *info,
 <p> <code>sigwaitinfo</code>() removes the signal from the set of pending signals and returns the signal number as its function result. If the <i>info</i> argument is not NULL, then the buffer that it points to is used to return a structure of type <i>siginfo_t</i> (see <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)) containing information about the signal. </p>
 <p> If multiple signals in <i>set</i> are pending for the caller, the signal that is retrieved by <code>sigwaitinfo</code>() is determined according to the usual ordering rules; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for further details. </p>
 <p> <code>sigtimedwait</code>() operates in exactly the same way as <code>sigwaitinfo</code>() except that it has an additional argument, <i>timeout</i>, which specifies the interval for which the thread is suspended waiting for a signal. (This interval will be rounded up to the system clock granularity, and kernel scheduling delays mean that the interval may overrun by a small amount.) This argument is of the following type: </p>
-<p> struct timespec {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br />
+<p> struct timespec {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_nsec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;nanoseconds&nbsp;*/ } </p>
 <p> If both fields of this structure are specified as 0, a poll is performed: <code>sigtimedwait</code>() returns immediately, either with information about a signal that was pending for the caller, or with an error if none of the signals in <i>set</i> was pending.</p>
 <h2>RETURN VALUE</h2>

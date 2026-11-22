@@ -11,7 +11,7 @@ description: "ctrcon.f –"
 <p> ctrcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctrcon</code> (NORM, UPLO, DIAG, N, A, LDA, RCOND, WORK, RWORK, INFO)<br />
+<p> subroutine <code>ctrcon</code> (NORM, UPLO, DIAG, N, A, LDA, RCOND, WORK, RWORK, INFO)<br/>
  <i></i><code>CTRCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctrcon (characterNORM, characterUPLO, characterDIAG, integerN, complex, dimension( lda, * )A, integerLDA, realRCOND, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

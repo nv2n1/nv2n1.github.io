@@ -10,21 +10,21 @@ description: "Atlas::Objects – The Atlas high level Objects namespace."
 <p>Atlas::Objects &#8211; The <code>Atlas</code> high level <code>Objects</code> namespace. </p>
 <h2>Synopsis</h2>
 <h3>Classes</h3>
-<p>class <code>NoSuchAttrException</code><br />
- <i>An exception indicating the requested attribute does not exist. </i><br />
- class <code>BaseObjectData</code><br />
- <i></i><code>Atlas</code> base object class.<br />
- class <code>ObjectsDecoder</code><br />
- <i></i><code>Objects</code> hierarchy decoder.<br />
- class <code>Dispatcher</code><br />
- <i></i><code>Objects</code> hierarchy dispatcher.<br />
- class <code>ObjectsEncoder</code><br />
- <i></i><code>Objects</code> hierarchy encoder.<br />
+<p>class <code>NoSuchAttrException</code><br/>
+ <i>An exception indicating the requested attribute does not exist. </i><br/>
+ class <code>BaseObjectData</code><br/>
+ <i></i><code>Atlas</code> base object class.<br/>
+ class <code>ObjectsDecoder</code><br/>
+ <i></i><code>Objects</code> hierarchy decoder.<br/>
+ class <code>Dispatcher</code><br/>
+ <i></i><code>Objects</code> hierarchy dispatcher.<br/>
+ class <code>ObjectsEncoder</code><br/>
+ <i></i><code>Objects</code> hierarchy encoder.<br/>
  class <code>DefaultLoadingException</code> </p>
 <p> class <code>NoSuchFactoryException</code> </p>
 <p> class <code>Factories</code> </p>
-<p> class <code>RootData</code><br />
- <i>All objects inherit from this. </i><br />
+<p> class <code>RootData</code><br/>
+ <i>All objects inherit from this. </i><br/>
  class <code>NullSmartPtrDereference</code> </p>
 <p> class <code>SmartPtr</code> </p>
 <h3>Typedefs</h3>

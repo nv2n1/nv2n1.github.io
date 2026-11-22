@@ -61,7 +61,7 @@ description: "Moe – manual page for Moe 1.3"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to bug-moe [at] gnu.org Moe home page: <a rel="nofollow" href="http://www.gnu.org/software/moe/moe.html">http://www.gnu.org/software/moe/moe.html</a> General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp">http://www.gnu.org/gethelp</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2009 Antonio Diaz Diaz. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 2009 Antonio Diaz Diaz. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>Moe</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>Moe</code> programs are properly installed at your site, the command</p>

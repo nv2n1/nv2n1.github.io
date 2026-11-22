@@ -57,13 +57,13 @@ description: "ngircd.conf – configuration file of ngIRCd"
 <dt><code>ServerGID</code> (string or number)</dt>
 <dd>Group ID under which the ngIRCd daemon should run; you can use the name of the group or the numerical ID.</dd></dl>
 <dl>
-<dd><code>Attention:</code><br />
+<dd><code>Attention:</code><br/>
  For this to work the server must have been started with root privileges!</dd></dl>
 <dl>
 <dt><code>ServerUID</code> (string or number)</dt>
 <dd>User ID under which the ngIRCd daemon should run; you can use the name of the user or the numerical ID.</dd></dl>
 <dl>
-<dd><code>Attention:</code><br />
+<dd><code>Attention:</code><br/>
  For this to work the server must have been started with root privileges! In addition, the configuration and MOTD files must be readable by this user, otherwise RESTART and REHASH won&#8217;t work!</dd></dl>
 <h2>[Limits]</h2>
 <p>This section is used to define some limits and timeouts for this ngIRCd instance. Default values should be safe, but it is wise to double-check :-)</p>
@@ -96,7 +96,7 @@ description: "ngircd.conf – configuration file of ngIRCd"
 <dt><code>ChrootDir</code> (string)</dt>
 <dd>A directory to chroot in when everything is initialized. It doesn&#8217;t need to be populated if ngIRCd is compiled as a static binary. By default ngIRCd won&#8217;t use the chroot() feature.</dd></dl>
 <dl>
-<dd><code>Attention:</code><br />
+<dd><code>Attention:</code><br/>
  For this to work the server must have been started with root privileges!</dd></dl>
 <dl>
 <dt><code>CloakHost</code> (string)</dt>
@@ -211,15 +211,15 @@ description: "ngircd.conf – configuration file of ngIRCd"
 <dd>
 </dd><dl>
 <dd><i>user</i> : <i>nick</i> : <i>key</i></dd></dl>
-<p> <i>user</i> and <i>nick</i> can contain the wildcard character &quot;*&quot;.<br />
+<p> <i>user</i> and <i>nick</i> can contain the wildcard character &quot;*&quot;.<br/>
  <i>key</i> is an arbitrary password. </p>
 <p> Valid examples are: </p>
 <dl>
-<dd>*:*:KeY<br />
- *:nick:123<br />
+<dd>*:*:KeY<br/>
+ *:nick:123<br/>
  ~user:*:xyz</dd></dl>
 <p> The key file is read on each JOIN command when this channel has a key (channel mode +k). Access is granted, if a) the channel key set using the MODE +k command or b) one of the lines in the key file match. </p>
-<p> <code>Please note:</code><br />
+<p> <code>Please note:</code><br/>
  The file is not reopened on each access, so you can modify and overwrite it without problems, but moving or deleting the file will have not effect until the daemon re-reads its configuration!</dl>
 <dl>
 <dt><code>MaxUsers</code> (number)</dt>
@@ -227,7 +227,7 @@ description: "ngircd.conf – configuration file of ngIRCd"
 <h2>Hints</h2>
 <p>It&#8217;s wise to use &quot;ngircd &#8211;configtest&quot; to validate the configuration file after changing it. See <code><a href="/docs/linux/man/8-ngircd/">ngircd</a></code>(8) for details.</p>
 <h2>Author</h2>
-<p>Alexander Barton, &lt;alex [at] barton.de&gt;<br />
+<p>Alexander Barton, &lt;alex [at] barton.de&gt;<br/>
  Florian Westphal, &lt;fw [at] strlen.de&gt; </p>
 <p> Homepage: <a rel="nofollow" href="http://ngircd.barton.de/">http://ngircd.barton.de/</a></p>
 <h2>See Also</h2>

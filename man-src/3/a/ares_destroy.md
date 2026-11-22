@@ -19,5 +19,5 @@ void ares_destroy(ares_channel channel)
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_init/">ares_init</a></code>(3), <code><a href="/docs/linux/man/3-ares_cancel/">ares_cancel</a></code>(3)</p>
 <h2>AUTHOR</h2>
-<p> Greg Hudson, MIT Information Systems<br />
+<p> Greg Hudson, MIT Information Systems<br/>
  Copyright 1998 by the Massachusetts Institute of Technology. </p>

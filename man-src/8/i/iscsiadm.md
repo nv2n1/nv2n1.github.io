@@ -226,6 +226,6 @@ Display all data for a given node record:
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-iscsid/">iscsid</a></code>(8) </p>
 <h2>Authors</h2>
-<p>Open-iSCSI project &lt;<a rel="nofollow" href="http://www.open-iscsi.com/">http://www.open-iscsi.com/</a>&gt;<br />
- Alex Aizman &lt;itn780 [at] yahoo.com&gt;<br />
+<p>Open-iSCSI project &lt;<a rel="nofollow" href="http://www.open-iscsi.com/">http://www.open-iscsi.com/</a>&gt;<br/>
+ Alex Aizman &lt;itn780 [at] yahoo.com&gt;<br/>
  Dmitry Yusupov &lt;dmitry_yus [at] yahoo.com&gt;</p>

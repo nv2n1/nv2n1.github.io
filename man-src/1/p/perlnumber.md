@@ -81,7 +81,7 @@ native integer-- &gt; native floating point(*)
 </dt><dd> If the <tt>&quot;decimal string --&gt; native integer&quot;</tt> conversion cannot be done without loss of information, the result is compatible with the conversion sequence <tt>&quot;decimal_string --&gt; native_floating_point --&gt; native_integer&quot;</tt>. In particular, rounding is strongly biased to 0, though a number like <tt>&quot;0.99999999999999999999&quot;</tt> has a chance of being rounded to 1.</dd></dl>
  
 
- <font SIZE="-1"><b>RESTRICTION</b></font>: The conversions marked with <tt>&quot;(*)&quot;</tt> above involve steps performed by the C compiler. In particular, bugs/features of the compiler used may lead to breakage of some of the above rules.
+ <b>RESTRICTION</b>: The conversions marked with <tt>&quot;(*)&quot;</tt> above involve steps performed by the C compiler. In particular, bugs/features of the compiler used may lead to breakage of some of the above rules.
 
 <h2>Flavors of Perl numeric operations</h2>
 

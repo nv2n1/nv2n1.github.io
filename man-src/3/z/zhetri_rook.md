@@ -10,7 +10,7 @@ description: "zhetri_rook.f –"
 <p>zhetri_rook.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhetri_rook</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br />
+<p>subroutine <code>zhetri_rook</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br/>
  <i></i><code>ZHETRI_ROOK</code> computes the inverse of HE matrix using the factorization obtained with the bounded Bunch-Kaufman (&#8216;rook&#8217;) diagonal pivoting method.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhetri_rook (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( * )WORK, integerINFO)</h3>

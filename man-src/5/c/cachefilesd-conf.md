@@ -60,12 +60,12 @@ description: "/etc/cachefilesd.conf – Local file caching configuration file"
 <h2>Examples</h2>
 <p>As an example, consider the following: </p>
 <dl>
-<dd>dir /var/cache/fscache<br />
- secctx cachefiles_kernel_t<br />
- tag mycache<br />
- brun 10%<br />
- bcull 7%<br />
- bstop 3%<br />
+<dd>dir /var/cache/fscache<br/>
+ secctx cachefiles_kernel_t<br/>
+ tag mycache<br/>
+ brun 10%<br/>
+ bcull 7%<br/>
+ bstop 3%<br/>
  secctx system_u:system_r:cachefiles_kernel_t:s0</dd></dl>
 <p> This places the cache storage objects in a directory called &quot;/var/cache/fscache&quot;, names the cache &quot;mycache&quot;, permits the cache to run freely as long as there&#8217;s at least 10% free space on /var/cache/fscache/, starts culling the cache when the free space drops below 7% and stops writing new stuff into the cache if the amount of free space drops below 3%. If the cache is suspended, it won&#8217;t reactivate until the amount of free space rises again to 10% or better. </p>
 <p> Furthermore, this will tell the kernel module the security context it should use when accessing the cache (SELinux is assumed to be the LSM in this example). In this case, SELinux would use cachefiles_kernel_t as the key into the policy.</p>
@@ -87,7 +87,7 @@ description: "/etc/cachefilesd.conf – Local file caching configuration file"
 <dd>If the amount of available space or the number of available files in the cache falls below either of these limits, then no further allocation of disk space or files is permitted until culling has raised things above these limits again.</dd></dl>
 <p> These must be configured thusly:</p>
 <dl>
-<dd>0 &lt;= bstop &lt; bcull &lt; brun &lt; 100<br />
+<dd>0 &lt;= bstop &lt; bcull &lt; brun &lt; 100<br/>
  0 &lt;= fstop &lt; fcull &lt; frun &lt; 100</dd></dl>
 <p> Note that these are percentages of available space and available files, and do <i>not</i> appear as 100 minus the percentage displayed by the <code>df</code> program. </p>
 <p> The userspace daemon scans the cache to build up a table of cullable objects. These are then culled in least recently used order. A new scan of the cache is started as soon as space is made in the table. Objects will be skipped if their atimes have changed or if the kernel module says it is still using them. </p>

@@ -11,7 +11,7 @@ description: "chptri.f –"
 <p> chptri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chptri</code> (UPLO, N, AP, IPIV, WORK, INFO)<br />
+<p> subroutine <code>chptri</code> (UPLO, N, AP, IPIV, WORK, INFO)<br/>
  <i></i><code>CHPTRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chptri (characterUPLO, integerN, complex, dimension( * )AP, integer, dimension( * )IPIV, complex, dimension( * )WORK, integerINFO)</h3>

@@ -17,12 +17,12 @@ description: "cs_render – render a CS parse tree"
 NEOERR *cs_render(CSPARSE *parse, void *ctx, CSOUTFUNC cb);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> parse &#8211; the CSPARSE structure containing the CS parse tree<br />
- that will be evaluated<br />
- ctx &#8211; user data that will be passed as the first variable to<br />
- the CSOUTFUNC.<br />
- cb &#8211; a CSOUTFUNC called to render the output. A CSOUTFUNC is<br />
- defined as:<br />
+<p> parse &#8211; the CSPARSE structure containing the CS parse tree<br/>
+ that will be evaluated<br/>
+ ctx &#8211; user data that will be passed as the first variable to<br/>
+ the CSOUTFUNC.<br/>
+ cb &#8211; a CSOUTFUNC called to render the output. A CSOUTFUNC is<br/>
+ defined as:<br/>
  typedef NEOERR* (*CSOUTFUNC)(void *, char *); </p>
 <h2>DESCRIPTION</h2>
 <p> cs_render will evaluate a CS parse tree, calling the CSOUTFUNC passed to it for output. Note that calling cs_render multiple times on the same parse tree may or may not render the same output as the set statement has side-effects, it updates the HDF data used by the render. Typically, you will call one of the cs_parse functions before calling this function. </p>

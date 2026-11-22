@@ -18,20 +18,20 @@ description: "urxvtperl – rxvt-unicode’s embedded perl interpreter"
  urxvt --perl-lib $HOME -pe grab_test</pre>
 <h2>Description</h2>
 <p>Every time a terminal object gets created, extension scripts specified via the <tt>&quot;perl&quot;</tt> resource are loaded and associated with it. </p>
-<p> Scripts are compiled in a &#8216;use strict &#8220;vars&#8221;&#8217; and &#8216;use utf8&#8217; environment, and thus must be encoded as <font SIZE="-1">UTF-8.</font> </p>
+<p> Scripts are compiled in a &#8216;use strict &#8220;vars&#8221;&#8217; and &#8216;use utf8&#8217; environment, and thus must be encoded as UTF-8. </p>
 <p> Each script will only ever be loaded once, even in urxvtd, where scripts will be shared (but not enabled) for all terminals. </p>
 <p> You can disable the embedded perl interpreter by setting both &#8220;perl-ext&#8221; and &#8220;perl-ext-common&#8221; resources to the empty string.</p>
 <h2>Prepackaged Extensions</h2>
-<p>A number of extensions are delivered with this release. You can find them in <i>&lt;libdir&gt;/urxvt/perl/</i>, and the documentation can be viewed using <i>man urxvt-&lt;</i><font SIZE="-1"><i>EXTENSIONNAME</i></font><i>&gt;</i>. </p>
+<p>A number of extensions are delivered with this release. You can find them in <i>&lt;libdir&gt;/urxvt/perl/</i>, and the documentation can be viewed using <i>man urxvt-&lt;</i><i>EXTENSIONNAME</i><i>&gt;</i>. </p>
 <p> You can activate them like this: </p>
 <pre> urxvt -pe &lt;extensionname&gt;</pre>
 <p>Or by adding them to the resource for extensions loaded by default: </p>
 <pre> URxvt.perl-ext-common: default,selection-autotransform</pre>
-<p>Extensions may add additional resources and <tt>&quot;actions&quot;</tt>, i.e., methods which can be bound to a key and invoked by the user. An extension can define the resources it support using so called <font SIZE="-1">META</font> comments, described below. Similarly to builtin resources, extension resources can also be specified on the command line as long options (with <tt>&quot;.&quot;</tt> replaced by <tt>&quot;-&quot;</tt>), in which case the corresponding extension is loaded automatically. For this to work the extension <code>must</code> define <font SIZE="-1">META</font> comments for its resources.</p>
+<p>Extensions may add additional resources and <tt>&quot;actions&quot;</tt>, i.e., methods which can be bound to a key and invoked by the user. An extension can define the resources it support using so called META comments, described below. Similarly to builtin resources, extension resources can also be specified on the command line as long options (with <tt>&quot;.&quot;</tt> replaced by <tt>&quot;-&quot;</tt>), in which case the corresponding extension is loaded automatically. For this to work the extension <code>must</code> define META comments for its resources.</p>
 <h2>Api Documentation</h2>
-<h3>General <font SIZE="-1">API</font> Considerations</h3>
-<p>All objects (such as terminals, time watchers etc.) are typical reference-to-hash objects. The hash can be used to store anything you like. All members starting with an underscore (such as <tt>&quot;_ptr&quot;</tt> or <tt>&quot;_hook&quot;</tt>) are reserved for internal uses and <font SIZE="-1"><code>MUST NOT</code></font> be accessed or modified). </p>
-<p> When objects are destroyed on the C<font SIZE="-2">++</font> side, the perl object hashes are emptied, so its best to store related objects such as time watchers and the like inside the terminal object so they get destroyed as soon as the terminal is destroyed. </p>
+<h3>General API Considerations</h3>
+<p>All objects (such as terminals, time watchers etc.) are typical reference-to-hash objects. The hash can be used to store anything you like. All members starting with an underscore (such as <tt>&quot;_ptr&quot;</tt> or <tt>&quot;_hook&quot;</tt>) are reserved for internal uses and <code>MUST NOT</code> be accessed or modified). </p>
+<p> When objects are destroyed on the C++ side, the perl object hashes are emptied, so its best to store related objects such as time watchers and the like inside the terminal object so they get destroyed as soon as the terminal is destroyed. </p>
 <p> Argument names also often indicate the type of a parameter. Here are some hints on what they mean:</p>
 <dl>
 <dt>$text</dt>
@@ -46,16 +46,16 @@ description: "urxvtperl – rxvt-unicode’s embedded perl interpreter"
 <p>Every perl extension is a perl class. A separate perl object is created for each terminal, and each terminal has its own set of extension objects, which are passed as the first parameter to hooks. So extensions can use their <tt>$self</tt> object without having to think about clashes with other extensions or other terminals, with the exception of methods and members that begin with an underscore character <tt>&quot;_&quot;</tt>: these are reserved for internal use. </p>
 <p> Although it isn&#8217;t a <tt>&quot;urxvt::term&quot;</tt> object, you can call all methods of the <tt>&quot;urxvt::term&quot;</tt> class on this object. </p>
 <p> Additional methods only supported for extension objects are described in the <tt>&quot;urxvt::extension&quot;</tt> section below.</p>
-<h3><font SIZE="-1">META</font> comments</h3>
+<h3>META comments</h3>
 <p>Rxvt-unicode recognizes special meta comments in extensions that define different types of metadata. </p>
 <p> Currently, it recognises only one such comment:</p>
 <dl>
 <dt>#:META:RESOURCE:name:type:desc</dt>
-<dd>The <font SIZE="-1">RESOURCE</font> comment defines a resource used by the extension, where <tt>&quot;name&quot;</tt> is the resource name, <tt>&quot;type&quot;</tt> is the resource type, <tt>&quot;boolean&quot;</tt> or <tt>&quot;string&quot;</tt>, and <tt>&quot;desc&quot;</tt> is the resource description.</dd></dl>
+<dd>The RESOURCE comment defines a resource used by the extension, where <tt>&quot;name&quot;</tt> is the resource name, <tt>&quot;type&quot;</tt> is the resource type, <tt>&quot;boolean&quot;</tt> or <tt>&quot;string&quot;</tt>, and <tt>&quot;desc&quot;</tt> is the resource description.</dd></dl>
 <h3>Hooks</h3>
 <p>The following subroutines can be declared in extension files, and will be called whenever the relevant event happens. </p>
 <p> The first argument passed to them is an extension object as described in the in the <tt>&quot;Extension Objects&quot;</tt> section. </p>
-<p> <code>All</code> of these hooks must return a boolean value. If any of the called hooks returns true, then the event counts as being <i>consumed</i>, and the relevant action might not be carried out by the C<font SIZE="-2">++</font> code. </p>
+<p> <code>All</code> of these hooks must return a boolean value. If any of the called hooks returns true, then the event counts as being <i>consumed</i>, and the relevant action might not be carried out by the C++ code. </p>
 <p> <i>When in doubt, return a false value (preferably </i>&quot;()&quot;<i>).</i></p>
 <dl>
 <dt>on_init $term</dt>
@@ -85,10 +85,10 @@ description: "urxvtperl – rxvt-unicode’s embedded perl interpreter"
 <dd>Called whenever lines scroll out of the terminal area into the scrollback buffer. <tt>$lines</tt> is the number of lines scrolled out and may be larger than the scroll back buffer or the terminal. </dd>
 <p> It is called before lines are scrolled out (so rows 0 .. min ($lines &#8211; 1, <tt>$nrow</tt> &#8211; 1) represent the lines to be scrolled out). <tt>$saved</tt> is the total number of lines that will be in the scrollback buffer.</p>
 <dt>on_osc_seq $term, $op, $args, $resp</dt>
-<dd>Called on every <font SIZE="-1">OSC</font> sequence and can be used to suppress it or modify its behaviour. The default should be to return an empty list. A true value suppresses execution of the request completely. Make sure you don&#8217;t get confused by recursive invocations when you output an <font SIZE="-1">OSC</font> sequence within this callback. </dd>
+<dd>Called on every OSC sequence and can be used to suppress it or modify its behaviour. The default should be to return an empty list. A true value suppresses execution of the request completely. Make sure you don&#8217;t get confused by recursive invocations when you output an OSC sequence within this callback. </dd>
 <p> <tt>&quot;on_osc_seq_perl&quot;</tt> should be used for new behaviour.</p>
 <dt>on_osc_seq_perl $term, $args, $resp</dt>
-<dd>Called whenever the <font SIZE="-1"><code>ESC </code></font><code>] 777 ; string </code><font SIZE="-1"><code>ST</code></font> command sequence (<font SIZE="-1">OSC</font> = operating system command) is processed. Cursor position and other state information is up-to-date when this happens. For interoperability, the string should start with the extension name (sans -osc) and a semicolon, to distinguish it from commands for other extensions, and this might be enforced in the future. </dd>
+<dd>Called whenever the <code>ESC </code><code>] 777 ; string </code><code>ST</code> command sequence (OSC = operating system command) is processed. Cursor position and other state information is up-to-date when this happens. For interoperability, the string should start with the extension name (sans -osc) and a semicolon, to distinguish it from commands for other extensions, and this might be enforced in the future. </dd>
 <p> For example, <tt>&quot;overlay-osc&quot;</tt> uses this: </p>
 <pre> sub on_osc_seq_perl {
  my ($self, $osc, $resp) = @_;
@@ -151,7 +151,7 @@ description: "urxvtperl – rxvt-unicode’s embedded perl interpreter"
 </dd><dt>on_wm_protocols $term, $event</dt>
 <dd>
 </dd><dt>on_wm_delete_window $term, $event</dt>
-<dd>Called when various types of ClientMessage events are received (all with format=32, <font SIZE="-1">WM_PROTOCOLS</font> or <font SIZE="-1">WM_PROTOCOLS:WM_DELETE_WINDOW</font>).</dd>
+<dd>Called when various types of ClientMessage events are received (all with format=32, WM_PROTOCOLS or WM_PROTOCOLS:WM_DELETE_WINDOW).</dd>
 <dt>on_bell $term</dt>
 <dd>Called on receipt of a bell character.</dd></dl>
 <h3>Variables in the urxvt Package</h3>
@@ -189,7 +189,7 @@ description: "urxvtperl – rxvt-unicode’s embedded perl interpreter"
 <dd>
 </dd><dt>urxvt::KeyPress, KeyRelease, ButtonPress, ButtonRelease, MotionNotify, EnterNotify, LeaveNotify, FocusIn, FocusOut, KeymapNotify, Expose, GraphicsExpose, NoExpose, VisibilityNotify, CreateNotify, DestroyNotify, UnmapNotify, MapNotify, MapRequest, ReparentNotify, ConfigureNotify, ConfigureRequest, GravityNotify, ResizeRequest, CirculateNotify, CirculateRequest, PropertyNotify, SelectionClear, SelectionRequest, SelectionNotify, ColormapNotify, ClientMessage, MappingNotify</dt>
 <dd>Various constants for use in X calls and event processing.</dd></dl>
-<h3><font SIZE="-1">RENDITION</font></h3>
+<h3>RENDITION</h3>
 <p>Rendition bitsets contain information about colour, font, font styles and similar information for each screen cell. </p>
 <p> The following &#8220;macros&#8221; deal with changes in rendition sets. You should never just create a bitset, you should always modify an existing one, as they contain important information required for correct operation of rxvt-unicode.</p>
 <dl>
@@ -198,7 +198,7 @@ description: "urxvtperl – rxvt-unicode’s embedded perl interpreter"
 <dt>$rend = urxvt::OVERLAY_RSTYLE</dt>
 <dd>Return the rendition mask used for overlays by default.</dd>
 <dt>$rendbit = urxvt::RS_Bold, urxvt::RS_Italic, urxvt::RS_Blink, urxvt::RS_RVid, urxvt::RS_Uline</dt>
-<dd>Return the bit that enabled bold, italic, blink, reverse-video and underline, respectively. To enable such a style, just logically <font SIZE="-1">OR</font> it into the bitset.</dd>
+<dd>Return the bit that enabled bold, italic, blink, reverse-video and underline, respectively. To enable such a style, just logically OR it into the bitset.</dd>
 <dt>$foreground = urxvt::GET_BASEFG $rend</dt>
 <dd>
 </dd><dt>$background = urxvt::GET_BASEBG $rend</dt>
@@ -344,9 +344,9 @@ description: "urxvtperl – rxvt-unicode’s embedded perl interpreter"
 <dt>$string = $term-&gt;locale_decode ($octets)</dt>
 <dd>Convert the given locale-encoded octets into a perl string.</dd>
 <dt>$term-&gt;scr_xor_span ($beg_row, $beg_col, $end_row, $end_col[, $rstyle])</dt>
-<dd>XORs the rendition values in the given span with the provided value (default: <tt>&quot;RS_RVid&quot;</tt>), which <i></i><font SIZE="-1"><i>MUST NOT</i></font><i></i> contain font styles. Useful in refresh hooks to provide effects similar to the selection.</dd>
+<dd>XORs the rendition values in the given span with the provided value (default: <tt>&quot;RS_RVid&quot;</tt>), which <i></i><i>MUST NOT</i><i></i> contain font styles. Useful in refresh hooks to provide effects similar to the selection.</dd>
 <dt>$term-&gt;scr_xor_rect ($beg_row, $beg_col, $end_row, $end_col[, $rstyle1[, $rstyle2]])</dt>
-<dd>Similar to <tt>&quot;scr_xor_span&quot;</tt>, but xors a rectangle instead. Trailing whitespace will additionally be xored with the <tt>$rstyle2</tt>, which defaults to <tt>&quot;RS_RVid | RS_Uline&quot;</tt>, which removes reverse video again and underlines it instead. Both styles <i></i><font SIZE="-1"><i>MUST NOT</i></font><i></i> contain font styles.</dd>
+<dd>Similar to <tt>&quot;scr_xor_span&quot;</tt>, but xors a rectangle instead. Trailing whitespace will additionally be xored with the <tt>$rstyle2</tt>, which defaults to <tt>&quot;RS_RVid | RS_Uline&quot;</tt>, which removes reverse video again and underlines it instead. Both styles <i></i><i>MUST NOT</i><i></i> contain font styles.</dd>
 <dt>$term-&gt;scr_bell</dt>
 <dd>Ring the bell!</dd>
 <dt>$term-&gt;scr_add_lines ($string)</dt>
@@ -362,7 +362,7 @@ description: "urxvtperl – rxvt-unicode’s embedded perl interpreter"
 <dd>Like <tt>&quot;tt_write&quot;</tt>, but should be used when writing strings in response to the user pressing a key, to invoke the additional actions requested by the user for that case (<tt>&quot;tt_write&quot;</tt> doesn&#8217;t do that). </dd>
 <p> The typical use case would be inside <tt>&quot;on_action&quot;</tt> hooks.</p>
 <dt>$term-&gt;tt_paste ($octets)</dt>
-<dd>Write the octets given in <tt>$octets</tt> to the tty as a paste, converting <font SIZE="-1">NL</font> to <font SIZE="-1">CR</font> and bracketing the data with control sequences if bracketed paste mode is set.</dd>
+<dd>Write the octets given in <tt>$octets</tt> to the tty as a paste, converting NL to CR and bracketing the data with control sequences if bracketed paste mode is set.</dd>
 <dt>$old_events = $term-&gt;pty_ev_events ([$new_events])</dt>
 <dd>Replaces the event mask of the pty watcher by the given event mask. Can be used to suppress input and output handling to the pty/tty. See the description of <tt>&quot;urxvt::timer-&gt;events&quot;</tt>. Make sure to always restore the previous value.</dd>
 <dt>$fd = $term-&gt;pty_fd</dt>
@@ -409,9 +409,9 @@ description: "urxvtperl – rxvt-unicode’s embedded perl interpreter"
 </dd><dt>$topmost_scrollback_row = $term-&gt;top_row</dt>
 <dd>Return various integers describing terminal characteristics.</dd>
 <dt>$x_display = $term-&gt;display_id</dt>
-<dd>Return the <font SIZE="-1">DISPLAY</font> used by rxvt-unicode.</dd>
+<dd>Return the DISPLAY used by rxvt-unicode.</dd>
 <dt>$lc_ctype = $term-&gt;locale</dt>
-<dd>Returns the <font SIZE="-1">LC_CTYPE</font> category string used by this rxvt-unicode.</dd>
+<dd>Returns the LC_CTYPE category string used by this rxvt-unicode.</dd>
 <dt>$env = $term-&gt;env</dt>
 <dd>Returns a copy of the environment in effect for the terminal as a hashref similar to <tt>&quot;\%ENV&quot;</tt>.</dd>
 <dt>@envv = $term-&gt;envv</dt>
@@ -423,7 +423,7 @@ description: "urxvtperl – rxvt-unicode’s embedded perl interpreter"
 </dd><dt>$modifiermask = $term-&gt;ModMetaMask</dt>
 <dd>
 </dd><dt>$modifiermask = $term-&gt;ModNumLockMask</dt>
-<dd>Return the modifier masks corresponding to the &#8220;<font SIZE="-1">ISO</font> Level 3 Shift&#8221; (often AltGr), the meta key (often Alt) and the num lock key, if applicable.</dd>
+<dd>Return the modifier masks corresponding to the &#8220;ISO Level 3 Shift&#8221; (often AltGr), the meta key (often Alt) and the num lock key, if applicable.</dd>
 <dt>$screen = $term-&gt;current_screen</dt>
 <dd>Returns the currently displayed screen (0 primary, 1 secondary).</dd>
 <dt>$cursor_is_hidden = $term-&gt;hidden_cursor</dt>
@@ -442,7 +442,7 @@ description: "urxvtperl – rxvt-unicode’s embedded perl interpreter"
 <dt>$rend = $term-&gt;ROW_r ($row_number[, $new_rend[, $start_col]])</dt>
 <dd>Like <tt>&quot;$term-&gt;ROW_t&quot;</tt>, but returns an arrayref with rendition bitsets. Rendition bitsets contain information about colour, font, font styles and similar information. See also <tt>&quot;$term-&gt;ROW_t&quot;</tt>. </dd>
 <p> When setting rendition, the font mask will be ignored. </p>
-<p> See the section on <font SIZE="-1">RENDITION,</font> above.</p>
+<p> See the section on RENDITION, above.</p>
 <dt>$length = $term-&gt;ROW_l ($row_number[, $new_length])</dt>
 <dd>Returns the number of screen cells that are in use (&#8220;the line length&#8221;). Unlike the urxvt core, this returns <tt>&quot;$term-&gt;ncol&quot;</tt> if the line is joined with the following one.</dd>
 <dt>$bool = $term-&gt;is_longer ($row_number)</dt>
@@ -615,7 +615,7 @@ description: "urxvtperl – rxvt-unicode’s embedded perl interpreter"
 <dt>$pw = $pw-&gt;stop</dt>
 <dd>Stop the watcher.</dd></dl>
 <h2>Environment</h2>
-<h3><font SIZE="-1">URXVT_PERL_VERBOSITY</font></h3>
+<h3>URXVT_PERL_VERBOSITY</h3>
 <p>This variable controls the verbosity level of the perl extension. Higher numbers indicate more verbose output.</p>
 <dl>
 <dt>== 0 &#8211; fatal messages</dt>

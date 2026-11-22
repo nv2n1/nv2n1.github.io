@@ -167,11 +167,11 @@ description: "diff – compare files line by line"
 <h2>AUTHOR</h2>
 <p> Written by Paul Eggert, Mike Haertel, David Hayes, Richard Stallman, and Len Tower.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to: bug-diffutils [at] gnu.org<br />
- GNU diffutils home page: &lt;<a rel="nofollow" href="https://www.gnu.org/software/diffutils/">https://www.gnu.org/software/diffutils/</a>&gt;<br />
+<p> Report bugs to: bug-diffutils [at] gnu.org<br/>
+ GNU diffutils home page: &lt;<a rel="nofollow" href="https://www.gnu.org/software/diffutils/">https://www.gnu.org/software/diffutils/</a>&gt;<br/>
  General help using GNU software: &lt;<a rel="nofollow" href="https://www.gnu.org/gethelp/">https://www.gnu.org/gethelp/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2021 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright &#169; 2021 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-wdiff/">wdiff</a>(1), <a href="/docs/linux/man/1-cmp/">cmp</a>(1), <a href="/docs/linux/man/1-diff3/">diff3</a>(1), <a href="/docs/linux/man/1-sdiff/">sdiff</a>(1), <a href="/docs/linux/man/1-patch/">patch</a>(1) </p>

@@ -40,7 +40,7 @@ description: "Lintian::Pool — Pool of processables"
 <dd>Returns the group called <tt>$name</tt> or <tt>&quot;undef&quot;</tt> if there is no group called <tt>$name</tt>.</dd>
 <dt>$pool-&gt;empty</dt>
 <dd>Returns true if the pool is empty.</dd>
-<dt><font SIZE="-1">DEMOLISH</font></dt>
+<dt>DEMOLISH</dt>
 <dd>Removes the lab and everything in it. Any reference to an entry returned from this lab will immediately become invalid.</dd></dl>
 <h2>Author</h2>
 <p>Originally written by Niels Thykier &lt;niels [at] thykier.net&gt; for Lintian.</p>

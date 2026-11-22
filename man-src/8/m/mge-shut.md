@@ -11,7 +11,7 @@ description: "mge-shut – Driver for SHUT Protocol UPS equipment"
 <h2>Synopsis</h2>
 <p><code>mge-shut</code> -h <code>mge-shut</code> -a <i>UPS_NAME</i> [<i>OPTIONS</i>]</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  This man page only documents the hardware-specific features of the mge-shut driver. For information about the core driver, see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8). </dd>
 <h2>Supported Hardware</h2>
 <p>mge-shut supports all recent Eaton, MGE and Dell UPS models which use the SHUT (Serial HID UPS Transfer) protocol. </p>
@@ -31,7 +31,7 @@ description: "mge-shut – Driver for SHUT Protocol UPS equipment"
 <dd>Set the timer for the UPS to switch on in case the power returns after the kill power command had been sent but before the actual switch off. This ensures the machines connected to the UPS are, in all cases, rebooted after a power failure. </dd>
 <p> The default value is 30 (in seconds). Usually this <code>must be greater</code> than offdelay, but the driver will <code>not</code> warn you upon startup if it isn&#8217;t. Some UPS&#8217;es will restart no matter what, even if the power is (still) out at the moment this timer elapses. In that case, you could try if setting <i>ondelay = -1</i> in <code>ups.conf</code> helps. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  ondelay parameter was set in ten seconds unit in the legacy mge-shut driver ( 3 for 30 seconds) . It is now set in seconds ( 30 for 30 seconds). Make sure you use the correct unit in your configuration. </dd>
 </dl>
 </dl>

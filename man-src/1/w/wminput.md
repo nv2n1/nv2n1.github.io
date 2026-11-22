@@ -20,10 +20,10 @@ description: "wminput – an event driver for the wiimote"
 <p> KERNEL==&quot;uinput&quot;, GROUP=&quot;&lt;group&gt;&quot; </p>
 <p> A uinput group can be created specifically for this purpose, or another existing group such as wheel can be used. </p>
 <p> See usr/share/doc/wminput/wminput.conf.sample for an example wminput configuration file. Copy this file to ~/.CWiid/wminput.conf and change as desired. </p>
-<p> Getting X to recognize non-standard key symbols, and mapping actions to those symbols, is not automatic. An excellent tutorial at <a rel="nofollow" href="http://gentoo-wiki.com/HOWTO_Use_Multimedia_Keys">http://gentoo-wiki.com/HOWTO_Use_Multimedia_Keys</a> can help you set this up. An overview of the process (see the HOWTO for more information):<br />
- 1.Edit ~/.CWiid/wminput.conf<br />
- 2.Use xev, wminput, and your wiimote to find out if the key symbols are already mapped, and find the key codes if they are not.<br />
- 3.If the codes are not mapped to the appropriate symbols, edit ~/.Xmodmap, and use xmodmap to map them. (A copy of my ~/.Xmodmap is included in CWiid/doc)<br />
+<p> Getting X to recognize non-standard key symbols, and mapping actions to those symbols, is not automatic. An excellent tutorial at <a rel="nofollow" href="http://gentoo-wiki.com/HOWTO_Use_Multimedia_Keys">http://gentoo-wiki.com/HOWTO_Use_Multimedia_Keys</a> can help you set this up. An overview of the process (see the HOWTO for more information):<br/>
+ 1.Edit ~/.CWiid/wminput.conf<br/>
+ 2.Use xev, wminput, and your wiimote to find out if the key symbols are already mapped, and find the key codes if they are not.<br/>
+ 3.If the codes are not mapped to the appropriate symbols, edit ~/.Xmodmap, and use xmodmap to map them. (A copy of my ~/.Xmodmap is included in CWiid/doc)<br/>
  4.Use xbindkeys or a window manager-specific utility to map the key symbols to specific actions. </p>
 <p> wminput tracking plugins are, by default, installed to /usr/lib/CWiid/plugins. Plugins may also be placed in ~/.CWiid/plugins, and plugins placed here will take precedence. </p>
 <h2>OPTIONS</h2>

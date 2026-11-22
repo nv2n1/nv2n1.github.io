@@ -13,10 +13,10 @@ description: "QwtDateScaleEngine –"
 <p>#include &lt;qwt_date_scale_engine.h&gt; </p>
 <p> Inherits <code>QwtLinearScaleEngine</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtDateScaleEngine</code> (Qt::TimeSpec=Qt::LocalTime)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtDateScaleEngine</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtDateScaleEngine</code> (Qt::TimeSpec=Qt::LocalTime)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtDateScaleEngine</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setTimeSpec</code> (Qt::TimeSpec) </p>
 <p> Qt::TimeSpec <code>timeSpec</code> () const </p>
 <p> void <code>setUtcOffset</code> (int seconds) </p>
@@ -26,8 +26,8 @@ description: "QwtDateScaleEngine –"
 <p> void <code>setMaxWeeks</code> (int) </p>
 <p> int <code>maxWeeks</code> () const </p>
 <p> virtual void <code>autoScale</code> (int maxNumSteps, double &amp;x1, double &amp;x2, double &amp;stepSize) const </p>
-<p> virtual <code>QwtScaleDiv</code> <code>divideScale</code> (double x1, double x2, int maxMajorSteps, int maxMinorSteps, double stepSize=0.0) const<br />
- <i>Calculate a scale division for a date/time interval. </i><br />
+<p> virtual <code>QwtScaleDiv</code> <code>divideScale</code> (double x1, double x2, int maxMajorSteps, int maxMinorSteps, double stepSize=0.0) const<br/>
+ <i>Calculate a scale division for a date/time interval. </i><br/>
  virtual <code>QwtDate::IntervalType</code> <code>intervalType</code> (const QDateTime &amp;, const QDateTime &amp;, int maxSteps) const </p>
 <p> QDateTime <code>toDateTime</code> (double) const </p>
 <h3>Protected Member Functions</h3>
@@ -57,9 +57,9 @@ description: "QwtDateScaleEngine –"
 <p> For Qt::Day alignments there is no &#8216;natural day 0&#8217; &#8211; instead the first day of the year is used to avoid jumping major ticks positions when panning a scale. For other alignments ( f.e according to the first day of the month ) <code>alignDate()</code> has to be overloaded. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dateTime</i> Date/time value<br />
- <i>stepSize</i> Step size<br />
- <i>intervalType</i> Interval type<br />
+<dd><i>dateTime</i> Date/time value<br/>
+ <i>stepSize</i> Step size<br/>
+ <i>intervalType</i> Interval type<br/>
  <i>up</i> When true dateTime is ceiled &#8211; otherwise it is floored</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -70,9 +70,9 @@ description: "QwtDateScaleEngine –"
 <p> Datetime interval divisions are usually not equidistant and the calculated stepSize can only be used as an approximation for the steps calculated by <code>divideScale()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>maxNumSteps</i> Max. number of steps<br />
- <i>x1</i> First limit of the interval (In/Out)<br />
- <i>x2</i> Second limit of the interval (In/Out)<br />
+<dd><i>maxNumSteps</i> Max. number of steps<br/>
+ <i>x1</i> First limit of the interval (In/Out)<br/>
+ <i>x2</i> Second limit of the interval (In/Out)<br/>
  <i>stepSize</i> Step size (Out)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -82,10 +82,10 @@ description: "QwtDateScaleEngine –"
 <p>Calculate a scale division for a date/time interval. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x1</i> First interval limit<br />
- <i>x2</i> Second interval limit<br />
- <i>maxMajorSteps</i> Maximum for the number of major steps<br />
- <i>maxMinorSteps</i> Maximum number of minor steps<br />
+<dd><i>x1</i> First interval limit<br/>
+ <i>x2</i> Second interval limit<br/>
+ <i>maxMajorSteps</i> Maximum for the number of major steps<br/>
+ <i>maxMinorSteps</i> Maximum number of minor steps<br/>
  <i>stepSize</i> Step size. If stepSize == 0, the scaleEngine calculates one.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -95,8 +95,8 @@ description: "QwtDateScaleEngine –"
 <p>Classification of a date/time interval division </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>minDate</i> Minimum ( = earlier ) of the interval<br />
- <i>maxDate</i> Maximum ( = later ) of the interval<br />
+<dd><i>minDate</i> Minimum ( = earlier ) of the interval<br/>
+ <i>maxDate</i> Maximum ( = later ) of the interval<br/>
  <i>maxSteps</i> Maximum for the number of steps</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

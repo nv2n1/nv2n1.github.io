@@ -11,7 +11,7 @@ description: "dlahqr.f –"
 <p> dlahqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlahqr</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, WR, WI, ILOZ, IHIZ, Z, LDZ, INFO)<br />
+<p> subroutine <code>dlahqr</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, WR, WI, ILOZ, IHIZ, Z, LDZ, INFO)<br/>
  <i></i><code>DLAHQR</code> computes the eigenvalues and Schur factorization of an upper Hessenberg matrix, using the double-shift/single-shift QR algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlahqr (logicalWANTT, logicalWANTZ, integerN, integerILO, integerIHI, double precision, dimension( ldh, * )H, integerLDH, double precision, dimension( * )WR, double precision, dimension( * )WI, integerILOZ, integerIHIZ, double precision, dimension( ldz, * )Z, integerLDZ, integerINFO)</h3>

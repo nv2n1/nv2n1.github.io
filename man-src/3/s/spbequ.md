@@ -11,7 +11,7 @@ description: "spbequ.f –"
 <p> spbequ.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>spbequ</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, INFO)<br />
+<p> subroutine <code>spbequ</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, INFO)<br/>
  <i></i><code>SPBEQU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spbequ (characterUPLO, integerN, integerKD, real, dimension( ldab, * )AB, integerLDAB, real, dimension( * )S, realSCOND, realAMAX, integerINFO)</h3>

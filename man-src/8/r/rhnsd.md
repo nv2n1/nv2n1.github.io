@@ -27,9 +27,9 @@ description: "rhnsd – A program for querying the Spacewalk server for updates 
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-rhn_check/">rhn_check</a></code>(8), <code><a href="/docs/linux/man/8-rhn_register/">rhn_register</a></code>(8), <code><a href="/docs/linux/man/8-rhnsd/">rhnsd</a></code>(8), <code><a href="/docs/linux/man/8-rhn-profile-sync/">rhn-profile-sync</a></code>(8), <code><a href="/docs/linux/man/8-rhnplugin/">rhnplugin</a></code>(8), <code><a href="/docs/linux/man/5-up2date/">up2date</a></code>(5). </p>
 <h2>Authors</h2>
-<p>Preston Brown &lt;pbrown [at] redhat.com&gt;<br />
- Cristian Gafton &lt;gafton [at] redhat.com&gt;<br />
- Adrian Likins &lt;alikins [at] redhat.com&gt;<br />
+<p>Preston Brown &lt;pbrown [at] redhat.com&gt;<br/>
+ Cristian Gafton &lt;gafton [at] redhat.com&gt;<br/>
+ Adrian Likins &lt;alikins [at] redhat.com&gt;<br/>
  James Bowes &lt;jbowes [at] redhat.com&gt;</p>
 <h2>Bugs</h2>
 <p>Report bugs to &lt;<a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a>&gt;. </p>

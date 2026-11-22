@@ -10,11 +10,11 @@ description: "ql/pricingengines/lookback/analyticcontinuousfloatinglookback.hpp 
 
 <p> ql/pricingengines/lookback/analyticcontinuousfloatinglookback.hpp &#8211; Analytic engine for continuous floating-strike lookback. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instruments/lookbackoption.hpp&gt;<br />
- #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />
+<p> #include &lt;ql/instruments/lookbackoption.hpp&gt;<br/>
+ #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br/>
  #include &lt;ql/math/distributions/normaldistribution.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>AnalyticContinuousFloatingLookbackEngine</code><br />
+<p> class <code>AnalyticContinuousFloatingLookbackEngine</code><br/>
  <i>Pricing engine for European continuous floating-strike lookback. </i></p>
 <h2>Detailed Description</h2>
 <p> Analytic engine for continuous floating-strike lookback. </p>

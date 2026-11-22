@@ -23,7 +23,7 @@ description: "perlartistic – the Perl Artistic License"
         b) the &quot;Artistic License&quot; which comes with this Kit.
 </pre>
 <p> This is <code>&#8220;The Artistic License&#8221;</code>. It&#8217;s here so that modules, programs, etc., that want to declare this as their distribution license can link to it. </p>
-<p> For the <font SIZE="-1">GNU</font> General Public License, see perlgpl.</p>
+<p> For the GNU General Public License, see perlgpl.</p>
 <h2>The Artistic License</h2>
 <h3>Preamble</h3>
 <p> The intent of this document is to state the conditions under which a Package may be copied, such that the Copyright Holder maintains some semblance of artistic control over the development of the package, while giving the users of the package the right to use and distribute the Package in a more-or-less customary fashion, plus the right to make reasonable modifications.</p>
@@ -48,7 +48,7 @@ description: "perlartistic – the Perl Artistic License"
 <dt>2.</dt>
 <dd> You may apply bug fixes, portability fixes and other modifications derived from the Public Domain or from the Copyright Holder. A Package modified in such a way shall still be considered the Standard Version.</dd>
 <dt>3.</dt>
-<dd> You may otherwise modify your copy of this Package in any way, provided that you insert a prominent notice in each changed file stating how and when you changed that file, and provided that you do at least <font SIZE="-1">ONE</font> of the following:</dd>
+<dd> You may otherwise modify your copy of this Package in any way, provided that you insert a prominent notice in each changed file stating how and when you changed that file, and provided that you do at least ONE of the following:</dd>
 <dl>
 <dl>
 <dt>a)</dt>
@@ -63,7 +63,7 @@ description: "perlartistic – the Perl Artistic License"
 <dl>
 </dl>
 <dt>4.</dt>
-<dd> You may distribute the programs of this Package in object code or executable form, provided that you do at least <font SIZE="-1">ONE</font> of the following:</dd>
+<dd> You may distribute the programs of this Package in object code or executable form, provided that you do at least ONE of the following:</dd>
 <dl>
 <dl>
 <dt>a)</dt>
@@ -88,5 +88,5 @@ description: "perlartistic – the Perl Artistic License"
 <dt>9.</dt>
 <dd> The name of the Copyright Holder may not be used to endorse or promote products derived from this software without specific prior written permission.</dd>
 <dt>10.</dt>
-<dd> <font SIZE="-1">THIS PACKAGE IS PROVIDED &#8220;AS IS&#8221; AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</font></dd></dl>
+<dd> THIS PACKAGE IS PROVIDED &#8220;AS IS&#8221; AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</dd></dl>
 <p> The End </p>

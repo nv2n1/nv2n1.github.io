@@ -11,7 +11,7 @@ description: "slaed8.f –"
 <p> slaed8.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slaed8</code> (ICOMPQ, K, N, QSIZ, D, Q, LDQ, INDXQ, RHO, CUTPNT, Z, DLAMDA, Q2, LDQ2, W, PERM, GIVPTR, GIVCOL, GIVNUM, INDXP, INDX, INFO)<br />
+<p> subroutine <code>slaed8</code> (ICOMPQ, K, N, QSIZ, D, Q, LDQ, INDXQ, RHO, CUTPNT, Z, DLAMDA, Q2, LDQ2, W, PERM, GIVPTR, GIVCOL, GIVNUM, INDXP, INDX, INFO)<br/>
  <i></i><code>SLAED8</code> used by sstedc. Merges eigenvalues and deflates secular equation. Used when the original matrix is dense.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaed8 (integerICOMPQ, integerK, integerN, integerQSIZ, real, dimension( * )D, real, dimension( ldq, * )Q, integerLDQ, integer, dimension( * )INDXQ, realRHO, integerCUTPNT, real, dimension( * )Z, real, dimension( * )DLAMDA, real, dimension( ldq2, * )Q2, integerLDQ2, real, dimension( * )W, integer, dimension( * )PERM, integerGIVPTR, integer, dimension( 2, * )GIVCOL, real, dimension( 2, * )GIVNUM, integer, dimension( * )INDXP, integer, dimension( * )INDX, integerINFO)</h3>

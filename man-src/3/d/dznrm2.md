@@ -11,7 +11,7 @@ description: "dznrm2.f –"
 <p> dznrm2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dznrm2</code> (N, X, INCX)<br />
+<p> DOUBLE PRECISION function <code>dznrm2</code> (N, X, INCX)<br/>
  <i></i><code>DZNRM2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dznrm2 (integerN, complex*16, dimension(*)X, integerINCX)</h3>

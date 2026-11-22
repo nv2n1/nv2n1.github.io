@@ -11,7 +11,7 @@ description: "dgtcon.f –"
 <p> dgtcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgtcon</code> (NORM, N, DL, D, DU, DU2, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dgtcon</code> (NORM, N, DL, D, DU, DU2, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>DGTCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgtcon (characterNORM, integerN, double precision, dimension( * )DL, double precision, dimension( * )D, double precision, dimension( * )DU, double precision, dimension( * )DU2, integer, dimension( * )IPIV, double precisionANORM, double precisionRCOND, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

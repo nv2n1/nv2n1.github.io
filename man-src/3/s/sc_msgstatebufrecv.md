@@ -14,15 +14,15 @@ description: "sc::MsgStateBufRecv –"
 <p> Inherits <code>sc::StateIn</code>. </p>
 <p> Inherited by <code>sc::BcastStateInBin</code>, and <code>sc::MsgStateRecv</code>.</p>
 <h3>Public Member Functions</h3>
-<p> <code>MsgStateBufRecv</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;)<br />
- <i></i><code>MsgStateBufRecv</code> can be initialized with a <code>MessageGrp</code>.<br />
- <code>MsgStateBufRecv</code> ()<br />
- <i>Use the default </i><code>MessageGrp</code>.<br />
- void <code>set_buffer_size</code> (int)<br />
+<p> <code>MsgStateBufRecv</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;)<br/>
+ <i></i><code>MsgStateBufRecv</code> can be initialized with a <code>MessageGrp</code>.<br/>
+ <code>MsgStateBufRecv</code> ()<br/>
+ <i>Use the default </i><code>MessageGrp</code>.<br/>
+ void <code>set_buffer_size</code> (int)<br/>
  <i>The buffer size of statein and stateout objects that communicate with each other must match. </i></p>
 <h3>Protected Member Functions</h3>
 <p> int <code>get_array_void</code> (void *, int) </p>
-<p> virtual void <code>next_buffer</code> ()=0<br />
+<p> virtual void <code>next_buffer</code> ()=0<br/>
  <i>Specializations must implement </i><code>next_buffer()</code>.</p>
 <h3>Protected Attributes</h3>
 <p> <code>Ref</code>&lt; <code>MessageGrp</code> &gt; <code>grp</code> </p>

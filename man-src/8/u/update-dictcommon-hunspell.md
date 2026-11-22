@@ -14,7 +14,7 @@ update-dictcommon-hunspell - rebuild hunspell database and emacsen stuff
 
 <h2>Description</h2>
 
-<font SIZE="-1">WARNING:</font> Not to be used from the command line unless you know very well what you are doing. 
+WARNING: Not to be used from the command line unless you know very well what you are doing. 
 
  This script, when called from hunspell dict package postinst or postrm will rebuild hunspell database as well as squirrelmail and emacsen stuff.
 

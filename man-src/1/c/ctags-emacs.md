@@ -9,11 +9,11 @@ description: "etags, ctags – generate tag file for Emacs, vi"
 
 <p>etags, ctags &#8211; generate tag file for Emacs, vi </p>
 <h2>Synopsis</h2>
-<p><code>etags</code> [-aCDGIQRVh] [-i <i>file</i>] [-l <i>language</i>]<br />
- [-o <i>tagfile</i>] [-r <i>regexp</i>] [&#8211;parse-stdin=<i>file</i>]<br />
+<p><code>etags</code> [-aCDGIQRVh] [-i <i>file</i>] [-l <i>language</i>]<br/>
+ [-o <i>tagfile</i>] [-r <i>regexp</i>] [&#8211;parse-stdin=<i>file</i>]<br/>
  [&#8211;append] [&#8211;no-defines] [&#8211;globals] [&#8211;no-globals] [&#8211;no-line-directive] [&#8211;include=<i>file</i>] [&#8211;ignore-indentation] [&#8211;language=<i>language</i>] [&#8211;members] [&#8211;no-members] [&#8211;output=<i>tagfile</i>] [&#8211;class-qualify] [&#8211;regex=<i>regexp</i>] [&#8211;no-regex] [&#8211;help] [&#8211;version] <i>file</i> &#8230; </p>
-<p> <code>ctags</code> [-aCdgIQRVh] [-BtTuvwx] [-l <i>language</i>]<br />
- [-o <i>tagfile</i>] [-r <i>regexp</i>] [&#8211;parse-stdin=<i>file</i>]<br />
+<p> <code>ctags</code> [-aCdgIQRVh] [-BtTuvwx] [-l <i>language</i>]<br/>
+ [-o <i>tagfile</i>] [-r <i>regexp</i>] [&#8211;parse-stdin=<i>file</i>]<br/>
  [&#8211;append] [&#8211;backward-search] [&#8211;cxref] [&#8211;no-defines] [&#8211;globals] [&#8211;no-globals] [&#8211;no-line-directive] [&#8211;ignore-indentation] [&#8211;language=<i>language</i>] [&#8211;members] [&#8211;no-members] [&#8211;class-qualify] [&#8211;output=<i>tagfile</i>] [&#8211;regex=<i>regexp</i>] [&#8211;update] [&#8211;help] [&#8211;version] <i>file</i> &#8230;</p>
 <h2>Description</h2>
 <p>The <code>etags</code> program is used to create a tag table file, in a format understood by <code>emacs</code>(<code>1</code>); the <code>ctags</code> program is used to create a similar table in a format understood by <code>vi</code>(<code>1</code>). Both forms of the program understand the syntax of C, Objective C, C++, Java, Fortran, Ada, Cobol, Erlang, Forth, Go, HTML, LaTeX, Emacs Lisp/Common Lisp, Lua, Makefile, Pascal, Perl, Ruby, PHP, PostScript, Python, Prolog, Scheme and most assembler-like syntaxes. Both forms read the files specified on the command line, and write a tag table (defaults: <code>TAGS</code> for <code>etags</code>, <code>tags</code> for <code>ctags</code>) in the current working directory. Files specified with relative file names will be recorded in the tag table with file names relative to the directory where the tag table resides. If the tag table is in /dev or is the standard output, however, the file names are made relative to the working directory. Files specified with absolute file names will be recorded with absolute file names. Files generated from a source file&#8211;like a C file generated from a source Cweb file&#8211;will be recorded with the name of the source file. Compressed files are supported using gzip, bzip2, and xz. The programs recognize the language used in an input file based on its file name and contents. The <code>&#8211;language</code> switch can be used to force parsing of the file names following the switch according to the given language, overriding guesses based on filename extensions.</p>
@@ -53,26 +53,26 @@ description: "etags, ctags – generate tag file for Emacs, vi"
 <dt><code>-o</code> <i>tagfile</i>, <code>&#8211;output=</code><i>tagfile</i></dt>
 <dd>Explicit name of file for tag table; for <code>etags</code> only, a file name of &#8211; means standard output; overrides default <code>TAGS</code> or <code>tags</code>. (But ignored with <code>-v</code> or <code>-x</code>.)</dd>
 <dt><code>-r</code> <i>regexp</i>, <code>&#8211;regex=</code><i>regexp</i></dt>
-<dd>Make tags based on regexp matching for the files following this option, in addition to the tags made with the standard parsing based on language. May be freely intermixed with filenames and the <code>-R</code> option. The regexps are cumulative, i.e., each such option will add to the previous ones. The regexps are of one of the forms:<br />
+<dd>Make tags based on regexp matching for the files following this option, in addition to the tags made with the standard parsing based on language. May be freely intermixed with filenames and the <code>-R</code> option. The regexps are cumulative, i.e., each such option will add to the previous ones. The regexps are of one of the forms:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[<code>{</code><i>language</i><code>}</code>]<code>/</code><i>tagregexp/</i>[<i>nameregexp</i><code>/</code>]<i>modifiers</i></dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><code>@</code><i>regexfile</i></p>
 <p> where <i>tagregexp</i> is used to match the tag. It should not match useless characters. If the match is such that more characters than needed are unavoidably matched by <i>tagregexp</i>, it may be useful to add a <i>nameregexp</i>, to narrow down the tag scope. <code>ctags</code> ignores regexps without a <i>nameregexp</i>. The syntax of regexps is the same as in emacs. The following character escape sequences are supported: , , \d, , , 
 , 
-, 	, , which respectively stand for the ASCII characters BEL, BS, DEL, ESC, FF, NL, CR, TAB, VT.<br />
- The <i>modifiers</i> are a sequence of 0 or more characters among <i>i</i>, which means to ignore case when matching; <i>m</i>, which means that the <i>tagregexp</i> will be matched against the whole file contents at once, rather than line by line, and the matching sequence can match multiple lines; and <i>s</i>, which implies <i>m</i> and means that the dot character in <i>tagregexp</i> matches the newline char as well.<br />
- The separator, which is <code>/</code> in the examples, can be any character different from space, tab, braces and <code>@</code>. If the separator character is needed inside the regular expression, it must be quoted by preceding it with <code>\</code>.<br />
- The optional <code>{</code><i>language</i><code>}</code> prefix means that the tag should be created only for files of language <i>language</i>, and ignored otherwise. This is particularly useful when storing many predefined regexps in a file.<br />
+, 	, , which respectively stand for the ASCII characters BEL, BS, DEL, ESC, FF, NL, CR, TAB, VT.<br/>
+ The <i>modifiers</i> are a sequence of 0 or more characters among <i>i</i>, which means to ignore case when matching; <i>m</i>, which means that the <i>tagregexp</i> will be matched against the whole file contents at once, rather than line by line, and the matching sequence can match multiple lines; and <i>s</i>, which implies <i>m</i> and means that the dot character in <i>tagregexp</i> matches the newline char as well.<br/>
+ The separator, which is <code>/</code> in the examples, can be any character different from space, tab, braces and <code>@</code>. If the separator character is needed inside the regular expression, it must be quoted by preceding it with <code>\</code>.<br/>
+ The optional <code>{</code><i>language</i><code>}</code> prefix means that the tag should be created only for files of language <i>language</i>, and ignored otherwise. This is particularly useful when storing many predefined regexps in a file.<br/>
  In its second form, <i>regexfile</i> is the name of a file that contains a number of arguments to the <i>&#8211;regex=</i> option, one per line. Lines beginning with a space or tab are assumed to be comments, and ignored. </p>
 <p> Here are some examples. All the regexps are quoted to protect them from shell interpretation. </p>
-<p> Tag the DEFVAR macros in the emacs source files:<br />
+<p> Tag the DEFVAR macros in the emacs source files:<br/>
  <i>&#8211;regex=&#8217;/[ 	]*DEFVAR_[A-Z_ 	(]+&quot;\([^&quot;]+\)&quot;/&#8217;</i> </p>
-<p> Tag VHDL files (this example is a single long line, broken here for formatting reasons):<br />
+<p> Tag VHDL files (this example is a single long line, broken here for formatting reasons):<br/>
  <i>&#8211;language=none &#8211;regex=&#8217;/[&nbsp;	]*\(ARCHITECTURE\|\ CONFIGURATION\)&nbsp;+[^&nbsp;]*&nbsp;+OF/&#8217;&nbsp;&#8211;regex=&#8217;/[&nbsp;	]*\ \(ATTRIBUTE\|ENTITY\|FUNCTION\|PACKAGE\(&nbsp;BODY\)?\ \|PROCEDURE\|PROCESS\|TYPE\)[&nbsp;	]+\([^&nbsp;	(]+\)/\3/&#8217;</i> </p>
-<p> Tag TCL files (this last example shows the usage of a <i>tagregexp</i>):<br />
+<p> Tag TCL files (this last example shows the usage of a <i>tagregexp</i>):<br/>
  <i>&#8211;lang=none &#8211;regex=&#8217;/proc[&nbsp;	]+\([^&nbsp;	]+\)/\1/&#8217;</i> </p>
-<p> A regexp can be preceded by {<i>lang</i>}, thus restricting it to match lines of files of the specified language. Use <code>etags &#8211;help</code> to obtain a list of the recognized languages. This feature is particularly useful inside <code>regex files</code>. A regex file contains one regex per line. Empty lines, and those lines beginning with space or tab are ignored. Lines beginning with @ are references to regex files whose name follows the @ sign. Other lines are considered regular expressions like those following <code>&#8211;regex</code>.<br />
- For example, the command<br />
- <i>etags &#8211;regex=@regex.file *.c</i><br />
+<p> A regexp can be preceded by {<i>lang</i>}, thus restricting it to match lines of files of the specified language. Use <code>etags &#8211;help</code> to obtain a list of the recognized languages. This feature is particularly useful inside <code>regex files</code>. A regex file contains one regex per line. Empty lines, and those lines beginning with space or tab are ignored. Lines beginning with @ are references to regex files whose name follows the @ sign. Other lines are considered regular expressions like those following <code>&#8211;regex</code>.<br/>
+ For example, the command<br/>
+ <i>etags &#8211;regex=@regex.file *.c</i><br/>
  reads the regexes contained in the file regex.file.</p>
 <dt><code>-R, &#8211;no-regex</code></dt>
 <dd>Don&#8217;t do any more regexp matching on the following files. May be freely intermixed with filenames and the <code>&#8211;regex</code> option.</dd>
@@ -88,7 +88,7 @@ description: "etags, ctags – generate tag file for Emacs, vi"
 <dd>Print the current version of the program (same as the version of the emacs <code>etags</code> is shipped with). </dd>
 </dl>
 <h2>See Also</h2>
-<p>&quot;<code>emacs</code>&quot; entry in <code>info</code>; <i>GNU Emacs Manual</i>, Richard Stallman.<br />
+<p>&quot;<code>emacs</code>&quot; entry in <code>info</code>; <i>GNU Emacs Manual</i>, Richard Stallman.<br/>
  <code>cxref</code>(<code>1</code>), <code>emacs</code>(<code>1</code>), <code>vgrind</code>(<code>1</code>), <code>vi</code>(<code>1</code>). </p>
 <h2>Copying</h2>
 <p>Copyright 1992, 1999, 2001-2019 Free Software Foundation, Inc. </p>

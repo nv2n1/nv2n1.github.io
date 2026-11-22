@@ -153,14 +153,14 @@ pki[CLI options]&lt;subsystem&gt; - key pki[CLI options]&lt;subsystem&gt; - key 
 <p> <code>pki key-template-show archiveKey &#8211;output &lt;output file&gt;</code> </p>
 <p> This command gets the template for a key archival request and stores it in an output file. </p>
 <p> Following is the description of the various parameters in the key archival template: </p>
-<p>&nbsp;<wbr>&#8212; clientKeyID &#8211; Unique identifier for the secret.<br />
-&nbsp;<wbr>&#8212; dataType &#8211; Type of the data to be stored which can be passphrase/symmetricKey/asymmetricKey.<br />
-&nbsp;<wbr>&#8212; keyAlgorithm &#8211; Algorithm used to create a symmetric key.&nbsp;<wbr>(Not required if the dataType is passphrase)<br />
-&nbsp;<wbr>&#8212; keySize &#8211; Size used to generate the symmetric key.&nbsp;<wbr>(Not required if the dataType is passphrase)<br />
-&nbsp;<wbr>&#8212; algorithmOID &#8211; Key Algorithm object identifier<br />
-&nbsp;<wbr>&#8212; symmetricAlgorithmParams &#8211; Base64 encoded nonce data. Nonce used while encrypting the secret.<br />
-&nbsp;<wbr>&#8212; wrappedPrivateData &#8211; Secret encrypted using a session key(A symmetric key)&nbsp;<wbr>encoded using Base64. This entity contains the secret which is encrypted using a session key.<br />
-&nbsp;<wbr>&#8212; transWrappedSessionKey &#8211; The session key used to encrypt the secret, wrapped using the DRM transport key, and encoded in Base64 format.<br />
+<p>&nbsp;<wbr>&#8212; clientKeyID &#8211; Unique identifier for the secret.<br/>
+&nbsp;<wbr>&#8212; dataType &#8211; Type of the data to be stored which can be passphrase/symmetricKey/asymmetricKey.<br/>
+&nbsp;<wbr>&#8212; keyAlgorithm &#8211; Algorithm used to create a symmetric key.&nbsp;<wbr>(Not required if the dataType is passphrase)<br/>
+&nbsp;<wbr>&#8212; keySize &#8211; Size used to generate the symmetric key.&nbsp;<wbr>(Not required if the dataType is passphrase)<br/>
+&nbsp;<wbr>&#8212; algorithmOID &#8211; Key Algorithm object identifier<br/>
+&nbsp;<wbr>&#8212; symmetricAlgorithmParams &#8211; Base64 encoded nonce data. Nonce used while encrypting the secret.<br/>
+&nbsp;<wbr>&#8212; wrappedPrivateData &#8211; Secret encrypted using a session key(A symmetric key)&nbsp;<wbr>encoded using Base64. This entity contains the secret which is encrypted using a session key.<br/>
+&nbsp;<wbr>&#8212; transWrappedSessionKey &#8211; The session key used to encrypt the secret, wrapped using the DRM transport key, and encoded in Base64 format.<br/>
 &nbsp;<wbr>&#8212; pkiArchiveOptions &#8211; An object of type PKIArchiveOptions provided by the NSS/JSS library to securely transport a secret encoded in Base64 format. </p>
 <p> To create an archival request using the template file: </p>
 <p> <code>pki -d &lt;CERT_DB_DIR_PATH&gt; -c &lt;CERT_DB_PWD&gt; -n &lt;Certificate_Nickname&gt; key-archive &#8211;input &lt;Path_to_template_file&gt;</code> </p>
@@ -169,12 +169,12 @@ pki[CLI options]&lt;subsystem&gt; - key pki[CLI options]&lt;subsystem&gt; - key 
 <p> <code>pki key-template-show retrieveKey &#8211;output &lt;output file&gt;</code> </p>
 <p> This command gets the template for a key retrieval request and stores it in an output file. </p>
 <p> Following is the description of the various parameters in the key retrieval template: </p>
-<p>&nbsp;<wbr>&#8212; keyID &#8211; Key identifier<br />
-&nbsp;<wbr>&#8212; requestID &#8211; Key request identifier<br />
-&nbsp;<wbr>&#8212; nonceData &#8211; Base64 encoded string of nonce used during encryption<br />
-&nbsp;<wbr>&#8212; passphrase &#8211; passphrase to encrypt the secret with/&nbsp;<wbr>passphrase for the PKCS12 file returned<br />
-&nbsp;<wbr>&#8212; sessionWrappedpassphrase &#8211; Base64 encoded string of &#8211; Passphrase encrypted with a session key.<br />
-&nbsp;<wbr>&#8212; transWrapedSessionKey &#8211; Base64 encoded string of &#8211; session key encrypted with KRA&#8217;s transport key.<br />
+<p>&nbsp;<wbr>&#8212; keyID &#8211; Key identifier<br/>
+&nbsp;<wbr>&#8212; requestID &#8211; Key request identifier<br/>
+&nbsp;<wbr>&#8212; nonceData &#8211; Base64 encoded string of nonce used during encryption<br/>
+&nbsp;<wbr>&#8212; passphrase &#8211; passphrase to encrypt the secret with/&nbsp;<wbr>passphrase for the PKCS12 file returned<br/>
+&nbsp;<wbr>&#8212; sessionWrappedpassphrase &#8211; Base64 encoded string of &#8211; Passphrase encrypted with a session key.<br/>
+&nbsp;<wbr>&#8212; transWrapedSessionKey &#8211; Base64 encoded string of &#8211; session key encrypted with KRA&#8217;s transport key.<br/>
 &nbsp;<wbr>&#8212; certificate &#8211; Base64 encoded certificate for recovering the key. </p>
 <p> To create a retrieval request using the template file: </p>
 <p> <code>pki -d &lt;CERT_DB_DIR_PATH&gt; -c &lt;CERT_DB_PWD&gt; -n &lt;Certificate_Nickname&gt; key-retrieve &#8211;input &lt;Path_to_template_file&gt;</code> </p>
@@ -183,11 +183,11 @@ pki[CLI options]&lt;subsystem&gt; - key pki[CLI options]&lt;subsystem&gt; - key 
 <p> <code>pki key-template-show generateKey &#8211;output &lt;output file&gt;</code> </p>
 <p> This command gets the template for a symmetric key generation request and stores it in an output file. </p>
 <p> Following is the description of the various parameters in the key retrieval template: </p>
-<p>&nbsp;<wbr>&#8212; clientKeyID &#8211; Client specified unique key identifier<br />
-&nbsp;<wbr>&#8212; keyAlgorithm &#8211; Algorithm to be used to generate key&nbsp;<wbr>(AES/DES/DES3/DESede/RC2/RC4)<br />
-&nbsp;<wbr>&#8212; keySize &#8211; Value for the size of the key to be generated.<br />
-&nbsp;<wbr>&#8212; keyUsage &#8211; usages of the generated key<br />
-&nbsp;<wbr>&nbsp;<wbr>useful for Symmetric Keys&nbsp;<wbr>(DES3,AES,etc)&nbsp;<wbr>(wrap,unwrap,encrypt,decrypt)<br />
+<p>&nbsp;<wbr>&#8212; clientKeyID &#8211; Client specified unique key identifier<br/>
+&nbsp;<wbr>&#8212; keyAlgorithm &#8211; Algorithm to be used to generate key&nbsp;<wbr>(AES/DES/DES3/DESede/RC2/RC4)<br/>
+&nbsp;<wbr>&#8212; keySize &#8211; Value for the size of the key to be generated.<br/>
+&nbsp;<wbr>&#8212; keyUsage &#8211; usages of the generated key<br/>
+&nbsp;<wbr>&nbsp;<wbr>useful for Symmetric Keys&nbsp;<wbr>(DES3,AES,etc)&nbsp;<wbr>(wrap,unwrap,encrypt,decrypt)<br/>
 &nbsp;<wbr>&nbsp;<wbr>useful for Asymmetric Keys&nbsp;<wbr>(RSA, EC,etc)&nbsp;<wbr>(wrap,unwrap,encrypt,decrypt,sign,verify,sign_recover,verify_recover) </p>
 <p> To create a key generation request using the template file: </p>
 <p> <code>pki -d &lt;CERT_DB_DIR_PATH&gt; -c &lt;CERT_DB_PWD&gt; -n &lt;Certificate_Nickname&gt; key-generate &#8211;input &lt;Path_to_template_file&gt;</code> </p>

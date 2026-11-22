@@ -10,15 +10,15 @@ description: "perl – The Perl 5 language interpreter"
 
 <p> perl &#8211; The Perl 5 language interpreter </p>
 <h2>SYNOPSIS</h2>
-<p> <code>perl</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-sTtuUWX</code>&nbsp;<wbr>]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-hv</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-V</code>[:<i>configvar</i>]&nbsp;<wbr>]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-cw</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-d</code>[<code>t</code>][:<i>debugger</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-D</code>[<i>number/list</i>]&nbsp;<wbr>]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-pna</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-F</code><i>pattern</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-l</code>[<i>octal</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-0</code>[<i>octal/hexadecimal</i>]&nbsp;<wbr>]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-I</code><i>dir</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-m</code>[<code>&#8211;</code>]<i>module</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-M</code>[<code>&#8211;</code>]<i>&#8216;module&#8230;&#8217;</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-f</code>&nbsp;<wbr>]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-C&nbsp;<wbr>[</code>number/list<code>]&nbsp;<wbr></code>]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-S</code>&nbsp;<wbr>]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-x</code>[<i>dir</i>]&nbsp;<wbr>]<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-i</code>[<i>extension</i>]&nbsp;<wbr>]<br />
+<p> <code>perl</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-sTtuUWX</code>&nbsp;<wbr>]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-hv</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-V</code>[:<i>configvar</i>]&nbsp;<wbr>]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-cw</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-d</code>[<code>t</code>][:<i>debugger</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-D</code>[<i>number/list</i>]&nbsp;<wbr>]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-pna</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-F</code><i>pattern</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-l</code>[<i>octal</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-0</code>[<i>octal/hexadecimal</i>]&nbsp;<wbr>]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-I</code><i>dir</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-m</code>[<code>&#8211;</code>]<i>module</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-M</code>[<code>&#8211;</code>]<i>&#8216;module&#8230;&#8217;</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-f</code>&nbsp;<wbr>]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-C&nbsp;<wbr>[</code>number/list<code>]&nbsp;<wbr></code>]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-S</code>&nbsp;<wbr>]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-x</code>[<i>dir</i>]&nbsp;<wbr>]<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-i</code>[<i>extension</i>]&nbsp;<wbr>]<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr>[<code>-e</code>|<code>-E</code>]&nbsp;<wbr><i>&#8216;command&#8217;</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8212;</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><i>programfile</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><i>argument</i>&nbsp;<wbr>]&#8230;</p>
 <p> For more information on these options, you can run <tt>&quot;perldoc perlrun&quot;</tt>.</p>
 <h2>GETTING HELP</h2>
@@ -181,9 +181,9 @@ description: "perl – The Perl 5 language interpreter"
     perlgpl             GNU General Public License
 </pre>
 <h3>Language-Specific</h3>
-<p>    perlcn              Perl for Simplified Chinese (in EUC-CN)<br />
-    perljp              Perl for Japanese (in EUC-JP)<br />
-    perlko              Perl for Korean (in EUC-KR)<br />
+<p>    perlcn              Perl for Simplified Chinese (in EUC-CN)<br/>
+    perljp              Perl for Japanese (in EUC-JP)<br/>
+    perlko              Perl for Korean (in EUC-KR)<br/>
     perltw              Perl for Traditional Chinese (in Big5)</p>
 <h3>Platform-Specific</h3>
 <pre><code>
@@ -234,7 +234,7 @@ description: "perl – The Perl 5 language interpreter"
 <p> Perl officially stands for Practical Extraction and Report Language, except when it doesn&#8217;t. </p>
 <p> Perl was originally a language optimized for scanning arbitrary text files, extracting information from those text files, and printing reports based on that information. It quickly became a good language for many system management tasks. Over the years, Perl has grown into a general-purpose programming language. It&#8217;s widely used for everything from quick &#8220;one-liners&#8221; to full-scale application development. </p>
 <p> The language is intended to be practical (easy to use, efficient, complete) rather than beautiful (tiny, elegant, minimal). It combines (in the author&#8217;s opinion, anyway) some of the best features of <code>sed</code>, <code>awk</code>, and <code>sh</code>, making it familiar and easy to use for Unix users to whip up quick solutions to annoying problems. Its general-purpose programming facilities support procedural, functional, and object-oriented programming paradigms, making Perl a comfortable language for the long haul on major projects, whatever your bent. </p>
-<p> Perl&#8217;s roots in text processing haven&#8217;t been forgotten over the years. It still boasts some of the most powerful regular expressions to be found anywhere, and its support for Unicode text is world-class. It handles all kinds of structured text, too, through an extensive collection of extensions. Those libraries, collected in the <font SIZE="-1">CPAN,</font> provide ready-made solutions to an astounding array of problems. When they haven&#8217;t set the standard themselves, they steal from the best &#8212; just like Perl itself.</p>
+<p> Perl&#8217;s roots in text processing haven&#8217;t been forgotten over the years. It still boasts some of the most powerful regular expressions to be found anywhere, and its support for Unicode text is world-class. It handles all kinds of structured text, too, through an extensive collection of extensions. Those libraries, collected in the CPAN, provide ready-made solutions to an astounding array of problems. When they haven&#8217;t set the standard themselves, they steal from the best &#8212; just like Perl itself.</p>
 <h2>AVAILABILITY</h2>
 <p> Perl is available for most operating systems, including virtually all Unix-like platforms. See &#8220;Supported Platforms&#8221; in perlport for a listing.</p>
 <h2>ENVIRONMENT</h2>

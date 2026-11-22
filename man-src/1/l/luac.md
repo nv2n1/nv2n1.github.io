@@ -39,7 +39,7 @@ description: "luac – Lua compiler"
 <dt><code>luac.out</code></dt>
 <dd> default output file</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-lua/">lua</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-lua/">lua</a></code>(1)<br/>
  <a rel="nofollow" href="http://www.lua.org/">http://www.lua.org/</a></p>
 <h2>DIAGNOSTICS</h2>
 <p> Error messages should be self explanatory.</p>

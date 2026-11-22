@@ -29,7 +29,7 @@ description: "Referrals –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The referral was successfully destroyed.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The referral was successfully destroyed.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The referral parameter was GLOBUS_NULL. It could not be destroyed.</dd></dl>
 <h3>globus_size_t globus_gass_transfer_referral_get_count (globus_gass_transfer_referral_t *referral)</h3>
 <p> Get the number of URLs in this referral. </p>
@@ -49,7 +49,7 @@ description: "Referrals –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>referral</i> The referral structure to query.<br />
+</dt><dd> <i>referral</i> The referral structure to query.<br/>
  <i>index</i> The URL to extract from the referral.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

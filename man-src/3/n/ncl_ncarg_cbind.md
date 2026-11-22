@@ -46,6 +46,6 @@ NCAR Graphics utilities (AREAS, CONPACK, etc.).</code></pre>
          UNIX Version;
 User's Guide for NCAR GKS - 0A Graphics</code></pre>
 <h2>Copyright</h2>
-<p>Copyright (C) 1987-2002<br />
+<p>Copyright (C) 1987-2002<br/>
  University Corporation for Atmospheric Research </p>
 <p> The use of this Software is governed by a License Agreement.</p>

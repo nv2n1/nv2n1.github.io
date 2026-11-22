@@ -18,7 +18,7 @@ void cgi_error(CGI *cgi, const char *fmt, ...)
     ATTRIBUTE_PRINTF(2, 3);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> cgi &#8211; a pointer to a CGI struct<br />
+<p> cgi &#8211; a pointer to a CGI struct<br/>
  fmt &#8211; printf style format string and arguments </p>
 <h2>DESCRIPTION</h2>
 <p> cgi_error will output a 500 error containing the specified error message. This function is likely to be removed from future versions in favor of a user error mechanism. </p>

@@ -107,7 +107,7 @@ description: "xargs – build and execute command lines from standard input"
 <p> <code>somecommand | xargs -s 50000 echo | xargs -I &#8216;{}&#8217; -s 100000 rm &#8216;{}&#8217;</code> </p>
 <p> Here, the first invocation of <code>xargs</code> has no input line length limit because it doesn&#8217;t use the <code>-i</code> option. The second invocation of <code>xargs</code> does have such a limit, but we have ensured that it never encounters a line which is longer than it can handle. This is not an ideal solution. Instead, the <code>-i</code> option should not impose a line length limit, which is why this discussion appears in the BUGS section. The problem doesn&#8217;t occur with the output of <code><a href="/docs/linux/man/1-find/">find</a></code>(1) because it emits just one filename per line.</p>
 <h2>REPORTING BUGS</h2>
-<p> GNU findutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/findutils/#get-help">https://www.gnu.org/software/findutils/#get-help</a>&gt;<br />
+<p> GNU findutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/findutils/#get-help">https://www.gnu.org/software/findutils/#get-help</a>&gt;<br/>
  Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt; </p>
 <p> Report any other issue via the form at the GNU Savannah bug tracker:</p>
 <dl>
@@ -118,9 +118,9 @@ description: "xargs – build and execute command lines from standard input"
 <dt>
 </dt><dd> &lt;<a rel="nofollow" href="https://lists.gnu.org/mailman/listinfo/bug-findutils">https://lists.gnu.org/mailman/listinfo/bug-findutils</a>&gt;</dd></dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1990-2021 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright &#169; 1990-2021 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-locate/">locate</a></code>(1), <code>updatedb</code>(1), <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), <code><a href="/docs/linux/man/3-execvp/">execvp</a></code>(3), <code>locatedb</code>(5), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) </p>
-<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/findutils/xargs">https://www.gnu.org/software/findutils/xargs</a>&gt;<br />
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/findutils/xargs">https://www.gnu.org/software/findutils/xargs</a>&gt;<br/>
  or available locally via: <code>info xargs</code> </p>

@@ -50,7 +50,7 @@ long long llrintl(long double x);
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>lrint</code>(), <code>lrintf</code>(), <code>lrintl</code>(),<br />
+<td> <code>lrint</code>(), <code>lrintf</code>(), <code>lrintl</code>(),<br/>
  <code>llrint</code>(), <code>llrintf</code>(), <code>llrintl</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

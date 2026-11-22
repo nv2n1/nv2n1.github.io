@@ -10,7 +10,7 @@ description: "zlasr.f –"
 <p>zlasr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlasr</code> (SIDE, PIVOT, DIRECT, M, N, C, S, A, LDA)<br />
+<p>subroutine <code>zlasr</code> (SIDE, PIVOT, DIRECT, M, N, C, S, A, LDA)<br/>
  <i></i><code>ZLASR</code> applies a sequence of plane rotations to a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlasr (characterSIDE, characterPIVOT, characterDIRECT, integerM, integerN, double precision, dimension( * )C, double precision, dimension( * )S, complex*16, dimension( lda, * )A, integerLDA)</h3>

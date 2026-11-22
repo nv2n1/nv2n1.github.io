@@ -14,11 +14,11 @@ description: "arcwsrf – run WSRF query against service"
 <h2>SYNOPSIS</h2>
 <p> <code>arcwsrf [options] service_url [query]</code> </p>
 <h2>OPTIONS</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>-h, &#8211;help&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Show help options<br />
-&nbsp;<wbr>&nbsp;<wbr>-p, &#8211;property=[-]name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Request for specific Resource Property<br />
-&nbsp;<wbr>&nbsp;<wbr>-t, &#8211;timeout=seconds&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>timeout in seconds&nbsp;<wbr>(default 20)<br />
-&nbsp;<wbr>&nbsp;<wbr>-z, &#8211;conffile=filename&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>configuration file&nbsp;<wbr>(default&nbsp;<wbr>~/.arc/client.conf)<br />
-&nbsp;<wbr>&nbsp;<wbr>-d, &#8211;debug=debuglevel&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>-h, &#8211;help&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Show help options<br/>
+&nbsp;<wbr>&nbsp;<wbr>-p, &#8211;property=[-]name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Request for specific Resource Property<br/>
+&nbsp;<wbr>&nbsp;<wbr>-t, &#8211;timeout=seconds&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>timeout in seconds&nbsp;<wbr>(default 20)<br/>
+&nbsp;<wbr>&nbsp;<wbr>-z, &#8211;conffile=filename&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>configuration file&nbsp;<wbr>(default&nbsp;<wbr>~/.arc/client.conf)<br/>
+&nbsp;<wbr>&nbsp;<wbr>-d, &#8211;debug=debuglevel&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG<br/>
 &nbsp;<wbr>&nbsp;<wbr>-v, &#8211;version&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>print version information </p>
 <dl>
 <dt><code>-p</code>, <code>&#8211;property</code></dt>

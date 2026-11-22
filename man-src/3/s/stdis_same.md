@@ -13,29 +13,29 @@ description: "std::is_same – std::is_same"
     template &lt;class T, class U&gt;
     (since C++ 11)
         struct is_same;</code></pre>
-<p>If T and U name the same type (including const/volatile qualifications), provides the member constant value equal to true. Otherwise value is false.<br />
-Commutativity is satisfied, i.e. for any two types T and U, is_same&lt;T, U&gt;::value == true if and only if is_same&lt;U, T&gt;::value == true.<br />
+<p>If T and U name the same type (including const/volatile qualifications), provides the member constant value equal to true. Otherwise value is false.<br/>
+Commutativity is satisfied, i.e. for any two types T and U, is_same&lt;T, U&gt;::value == true if and only if is_same&lt;U, T&gt;::value == true.<br/>
 Helper variable template template&lt; class T, class U &gt;                             (since C++17)</p>
 <p>inline constexpr bool is_same_v = is_same&lt;T, U&gt;::value;</p>
 <p>Inherited from std::integral_constant </p>
 <h2>Member constants</h2>
-<p>value true if T and U is the same type , false otherwise<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br />
+<p>value true if T and U is the same type , false otherwise<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br/>
 <code>[static]</code></p>
 <h2>Member functions</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts the object to bool, returns value<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts the object to bool, returns value<br/>
 operator bool <i>(public member function)</i> </p>
-<p>operator() returns value<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br />
+<p>operator() returns value<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br/>
 <i>(C++14)</i></p>
 <h2>Member types</h2>
-<p>Type Definition<br />
-value_type bool<br />
+<p>Type Definition<br/>
+value_type bool<br/>
 type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Possible implementation</h2>
-<p>&nbsp;<wbr>&nbsp;template&lt;class T, class U&gt;<br />
+<p>&nbsp;<wbr>&nbsp;template&lt;class T, class U&gt;<br/>
 &nbsp;<wbr>&nbsp;struct is_same : std::false_type {}; </p>
-<p>&nbsp;<wbr>&nbsp;template&lt;class T&gt;<br />
+<p>&nbsp;<wbr>&nbsp;template&lt;class T&gt;<br/>
 &nbsp;<wbr>&nbsp;struct is_same&lt;T, T&gt; : std::true_type {};</p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -80,25 +80,25 @@ int main()
 }
 </code></pre>
 <h2>Possible output:</h2>
-<p>&nbsp;<wbr>&nbsp;true<br />
-&nbsp;<wbr>&nbsp;false<br />
-&nbsp;<wbr>&nbsp;&#8212;&#8211;<br />
-&nbsp;<wbr>&nbsp;false<br />
-&nbsp;<wbr>&nbsp;&#8212;&#8211;<br />
-&nbsp;<wbr>&nbsp;true<br />
-&nbsp;<wbr>&nbsp;false<br />
-&nbsp;<wbr>&nbsp;true<br />
-&nbsp;<wbr>&nbsp;&#8212;&#8211;<br />
-&nbsp;<wbr>&nbsp;true<br />
-&nbsp;<wbr>&nbsp;false<br />
+<p>&nbsp;<wbr>&nbsp;true<br/>
+&nbsp;<wbr>&nbsp;false<br/>
+&nbsp;<wbr>&nbsp;&#8212;&#8211;<br/>
+&nbsp;<wbr>&nbsp;false<br/>
+&nbsp;<wbr>&nbsp;&#8212;&#8211;<br/>
+&nbsp;<wbr>&nbsp;true<br/>
+&nbsp;<wbr>&nbsp;false<br/>
+&nbsp;<wbr>&nbsp;true<br/>
+&nbsp;<wbr>&nbsp;&#8212;&#8211;<br/>
+&nbsp;<wbr>&nbsp;true<br/>
+&nbsp;<wbr>&nbsp;false<br/>
 &nbsp;<wbr>&nbsp;false</p>
 <h2>See also</h2>
-<p>is_integral checks if a type is an integral type<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
-<i>(C++11)</i><br />
-make_signed makes the given integral type signed<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
-<i>(C++11)</i><br />
-make_unsigned makes the given integral type unsigned<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
+<p>is_integral checks if a type is an integral type<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br/>
+<i>(C++11)</i><br/>
+make_signed makes the given integral type signed<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br/>
+<i>(C++11)</i><br/>
+make_unsigned makes the given integral type unsigned<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br/>
 <i>(C++11)</i> </p>

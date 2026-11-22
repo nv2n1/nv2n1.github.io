@@ -55,22 +55,22 @@ void pcre2_regfree(regex_t *preg);</code></pre>
 <h2>Matching Newline Characters</h2>
 <p>This area is not simple, because POSIX and Perl take different views of things. It is not possible to get PCRE2 to obey POSIX semantics, but then PCRE2 was never intended to be a POSIX engine. The following table lists the different possibilities for matching newline characters in Perl and PCRE2: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Default&nbsp;<wbr>&nbsp;<wbr>&nbsp;Change with </p>
-<p>&nbsp;<wbr>&nbsp;. matches newline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PCRE2_DOTALL<br />
-&nbsp;<wbr>&nbsp;newline matches&nbsp;[^a]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;yes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;not changeable<br />
+<p>&nbsp;<wbr>&nbsp;. matches newline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PCRE2_DOTALL<br/>
+&nbsp;<wbr>&nbsp;newline matches&nbsp;[^a]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;yes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;not changeable<br/>
 &nbsp;<wbr>&nbsp;$&nbsp;matches&nbsp;
- at end&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;yes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PCRE2_DOLLAR_ENDONLY<br />
+ at end&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;yes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PCRE2_DOLLAR_ENDONLY<br/>
 &nbsp;<wbr>&nbsp;$&nbsp;matches&nbsp;
- in middle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PCRE2_MULTILINE<br />
+ in middle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PCRE2_MULTILINE<br/>
 &nbsp;<wbr>&nbsp;^&nbsp;matches&nbsp;
  in middle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PCRE2_MULTILINE </p>
 <p> This is the equivalent table for a POSIX-compatible pattern matcher: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Default&nbsp;<wbr>&nbsp;<wbr>&nbsp;Change with </p>
-<p>&nbsp;<wbr>&nbsp;. matches newline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;yes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;REG_NEWLINE<br />
-&nbsp;<wbr>&nbsp;newline matches&nbsp;[^a]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;yes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;REG_NEWLINE<br />
+<p>&nbsp;<wbr>&nbsp;. matches newline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;yes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;REG_NEWLINE<br/>
+&nbsp;<wbr>&nbsp;newline matches&nbsp;[^a]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;yes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;REG_NEWLINE<br/>
 &nbsp;<wbr>&nbsp;$&nbsp;matches&nbsp;
- at end&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;REG_NEWLINE<br />
+ at end&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;REG_NEWLINE<br/>
 &nbsp;<wbr>&nbsp;$&nbsp;matches&nbsp;
- in middle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;REG_NEWLINE<br />
+ in middle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;REG_NEWLINE<br/>
 &nbsp;<wbr>&nbsp;^&nbsp;matches&nbsp;
  in middle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;REG_NEWLINE </p>
 <p> This behaviour is not what happens when PCRE2 is called via its POSIX API. By default, PCRE2&#8217;s behaviour is the same as Perl&#8217;s, except that there is no equivalent for PCRE2_DOLLAR_ENDONLY in Perl. In both PCRE2 and Perl, there is no way to stop newline from matching [^a]. </p>

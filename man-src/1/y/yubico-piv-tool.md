@@ -71,26 +71,26 @@ description: "yubico-piv-tool – Yubico PIV tool"
 <p> Generate a new ECC-P256 key on device in slot 9a, will print the public key on stdout: </p>
 <p>yubico-piv-tool -s 9a -A ECCP256 -a generate </p>
 <p> Generate a certificate request with public key from stdin, will print the resulting request on stdout: </p>
-<p>yubico-piv-tool -s 9a -S&nbsp;<wbr>&#8216;/CN=foo/OU=test/O=example.com/&#8217;&nbsp;<wbr>-P 123456&nbsp;<wbr>\<br />
+<p>yubico-piv-tool -s 9a -S&nbsp;<wbr>&#8216;/CN=foo/OU=test/O=example.com/&#8217;&nbsp;<wbr>-P 123456&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>-a verify -a request </p>
 <p> Generate a self-signed certificate with public key from stdin, will print the certificate, for later import, on stdout: </p>
-<p>yubico-piv-tool -s 9a -S&nbsp;<wbr>&#8216;/CN=bar/OU=test/O=example.com/&#8217;&nbsp;<wbr>-P 123456&nbsp;<wbr>\<br />
+<p>yubico-piv-tool -s 9a -S&nbsp;<wbr>&#8216;/CN=bar/OU=test/O=example.com/&#8217;&nbsp;<wbr>-P 123456&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>-a verify -a selfsign </p>
 <p> Import a certificate from stdin: </p>
 <p>yubico-piv-tool -s 9a -a import-certificate </p>
 <p> Set a random chuid, import a key and import a certificate from a PKCS12 file with password test, into slot 9c: </p>
-<p>yubico-piv-tool -s 9c -i test.pfx -K PKCS12 -p test -a set-chuid&nbsp;<wbr>\<br />
+<p>yubico-piv-tool -s 9c -i test.pfx -K PKCS12 -p test -a set-chuid&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>-a import-key -a import-cert </p>
 <p> Import a certificate which is larger than 2048 bytes and thus requires compression in order to fit: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>openssl x509 -in cert.pem -outform DER | gzip -9&nbsp;<wbr>&gt;&nbsp;<wbr>der.gz<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>openssl x509 -in cert.pem -outform DER | gzip -9&nbsp;<wbr>&gt;&nbsp;<wbr>der.gz<br/>
 &nbsp;<wbr>&nbsp;<wbr>yubico-piv-tool -s 9c -i der.gz -K GZIP -a import-cert </p>
 <p> Change the management key used for administrative authentication: </p>
-<p>yubico-piv-tool -n 0807605403020108070605040302010807060504030201&nbsp;<wbr>\<br />
+<p>yubico-piv-tool -n 0807605403020108070605040302010807060504030201&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>-a set-mgm-key </p>
 <p> Delete a certificate in slot 9a: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>yubico-piv-tool -a delete-certificate -s 9a </p>
 <p> Show some information on certificates and other data: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>yubico-piv-tool -a status </p>
 <p> Read out the certificate from a slot and then run a signature test: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>yubico-piv-tool -a read-cert -s 9a<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>yubico-piv-tool -a read-cert -s 9a<br/>
 &nbsp;<wbr>&nbsp;<wbr>yubico-piv-tool -a verify-pin -P 123456 -a test-signature -s 9a </p>

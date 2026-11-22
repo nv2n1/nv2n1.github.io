@@ -70,33 +70,33 @@ description: "nsdb-jumpstart – Administer a basic FedFS NSDB using OpenLDAP"
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain. After you have chosen a reliable server in the <i>example.net</i> domain to act as your NSDB, log in on that server as root, ensure that OpenLDAP is installed, and that any configuration can be discarded. To create a new NSDB with a self-signed certificate for the <i>example.net</i> domain, use:</p>
 <dl>
-<dd># ./nsdb-jumpstart install &#8211;security=tls<br />
- This command is about to replace the OpenLDAP configuration on this system.<br />
- Do you want to continue? [y/N] y<br />
- Enter the name of the Fedfs domain this NSDB will server<br />
- FedFS domain [ example.net ]:<br />
- Enter the LDAP administrator DN for this NSDB<br />
- Admin DN [ cn=admin,cn=config ]:<br />
- Enter the LDAP administrator password for this DN<br />
- New password:<br />
- Re-enter new password:<br />
- Enter the NSDB administrator password for this DN<br />
- New password:<br />
- Re-enter new password:<br />
- Last chance: about to replace the OpenLDAP configuration on this system.<br />
- Continue? [y/N] y<br />
+<dd># ./nsdb-jumpstart install &#8211;security=tls<br/>
+ This command is about to replace the OpenLDAP configuration on this system.<br/>
+ Do you want to continue? [y/N] y<br/>
+ Enter the name of the Fedfs domain this NSDB will server<br/>
+ FedFS domain [ example.net ]:<br/>
+ Enter the LDAP administrator DN for this NSDB<br/>
+ Admin DN [ cn=admin,cn=config ]:<br/>
+ Enter the LDAP administrator password for this DN<br/>
+ New password:<br/>
+ Re-enter new password:<br/>
+ Enter the NSDB administrator password for this DN<br/>
+ New password:<br/>
+ Re-enter new password:<br/>
+ Last chance: about to replace the OpenLDAP configuration on this system.<br/>
+ Continue? [y/N] y<br/>
  Setting up a self-signed x.509 certificate. Please answer the following questions: </dd>
-<p> Country (C)? US<br />
- State or province (ST)? Massachusetts<br />
- City (L)? Boston<br />
- Organization (O)? Red Sox<br />
+<p> Country (C)? US<br/>
+ State or province (ST)? Massachusetts<br/>
+ City (L)? Boston<br/>
+ Organization (O)? Red Sox<br/>
  Organizational unit (OU)? Fans </p>
 <p> NSDB configuration was successful. </p>
 <pre><code>Slapd is enabled and running
 The LDAP administrator DN is: cn=admin,cn=config
 The NSDB administrator DN is: cn=NSDB Manager,dc=example,dc=net
 The NCE is: ou=fedfs,dc=example,dc=net</code></pre>
-<p> Distribute the NSDB&#8217;s certificate in /etc/openldap/nsdb-cert.pem<br />
+<p> Distribute the NSDB&#8217;s certificate in /etc/openldap/nsdb-cert.pem<br/>
  #</dl>
 <h2>Security</h2>
 <p>The NSDB created by the <code><a href="/docs/linux/man/8-nsdb-jumpstart/">nsdb-jumpstart</a></code>(8) command allows anonymous read access to the NCE and all entries under it. The LDAP server&#8217;s rootDSE is also readable by anyone. An NSDB client must bind with administrator privileges to update NSDB records for a FedFS domain. ACLs may be adjusted after the NSDB is set up with <code><a href="/docs/linux/man/8-nsdb-jumpstart/">nsdb-jumpstart</a></code>(8). </p>

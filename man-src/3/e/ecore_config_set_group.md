@@ -9,27 +9,27 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 
 <p>Ecore Config Setters &#8211; Functions that set the value of a property. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_config_set</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to the value indicated by val</i>.<br />
- EAPI int <code>ecore_config_as_string_set</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to the value given in the string. </i><br />
- EAPI int <code>ecore_config_boolean_set</code> (const char *key, int val)<br />
- <i>Sets the indicated property to the given boolean. </i><br />
- EAPI int <code>ecore_config_int_set</code> (const char *key, int val)<br />
- <i>Sets the indicated property to the given integer. </i><br />
- EAPI int <code>ecore_config_string_set</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to the given string. </i><br />
- EAPI int <code>ecore_config_float_set</code> (const char *key, float val)<br />
- <i>Sets the indicated property to the given float value. </i><br />
- EAPI int <code>ecore_config_argb_set</code> (const char *key, int a, int r, int g, int b)<br />
- <i>Sets the indicated property to a color value. </i><br />
- EAPI int <code>ecore_config_argbint_set</code> (const char *key, long argb)<br />
- <i>Sets the indicated property to a color value. </i><br />
- EAPI int <code>ecore_config_argbstr_set</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to a color value. </i><br />
- EAPI int <code>ecore_config_theme_set</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to a theme name. </i><br />
- EAPI int <code>ecore_config_theme_preview_group_set</code> (const char *key, const char *group)<br />
+<p>EAPI int <code>ecore_config_set</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to the value indicated by val</i>.<br/>
+ EAPI int <code>ecore_config_as_string_set</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to the value given in the string. </i><br/>
+ EAPI int <code>ecore_config_boolean_set</code> (const char *key, int val)<br/>
+ <i>Sets the indicated property to the given boolean. </i><br/>
+ EAPI int <code>ecore_config_int_set</code> (const char *key, int val)<br/>
+ <i>Sets the indicated property to the given integer. </i><br/>
+ EAPI int <code>ecore_config_string_set</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to the given string. </i><br/>
+ EAPI int <code>ecore_config_float_set</code> (const char *key, float val)<br/>
+ <i>Sets the indicated property to the given float value. </i><br/>
+ EAPI int <code>ecore_config_argb_set</code> (const char *key, int a, int r, int g, int b)<br/>
+ <i>Sets the indicated property to a color value. </i><br/>
+ EAPI int <code>ecore_config_argbint_set</code> (const char *key, long argb)<br/>
+ <i>Sets the indicated property to a color value. </i><br/>
+ EAPI int <code>ecore_config_argbstr_set</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to a color value. </i><br/>
+ EAPI int <code>ecore_config_theme_set</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to a theme name. </i><br/>
+ EAPI int <code>ecore_config_theme_preview_group_set</code> (const char *key, const char *group)<br/>
  <i>Sets the theme preview group of an indicated property. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that set the value of a property.</p>
@@ -38,10 +38,10 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p>Sets the indicated property to a color value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key<br />
- <i>a</i> integer 0..255<br />
- <i>r</i> integer 0..255<br />
- <i>g</i> integer 0..255<br />
+<dd><i>key</i> The property key<br/>
+ <i>a</i> integer 0..255<br/>
+ <i>r</i> integer 0..255<br/>
+ <i>g</i> integer 0..255<br/>
  <i>b</i> integer 0..255</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -51,7 +51,7 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p>Sets the indicated property to a color value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key<br />
+<dd><i>key</i> The property key<br/>
  <i>argb</i> ARGB data as long</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -61,7 +61,7 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p>Sets the indicated property to a color value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key<br />
+<dd><i>key</i> The property key<br/>
  <i>val</i> Color value in ARGB format.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -71,7 +71,7 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p>Sets the indicated property to the value given in the string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> String representation of the value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -81,7 +81,7 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p>Sets the indicated property to the given boolean. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> Boolean integer to set the property to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -91,7 +91,7 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p>Sets the indicated property to the given float value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> Float to set the property to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -101,7 +101,7 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p>Sets the indicated property to the given integer. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> Integer to set the property to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -111,7 +111,7 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p>Sets the indicated property to the value indicated by <i>val</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> String representation of value to set.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -122,7 +122,7 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p>Sets the indicated property to the given string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> String to set the property to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -133,7 +133,7 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p>Sets the theme preview group of an indicated property. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>group</i> The group name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -143,7 +143,7 @@ description: "Ecore Config Setters – Functions that set the value of a propert
 <p>Sets the indicated property to a theme name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> String giving the name of the theme.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

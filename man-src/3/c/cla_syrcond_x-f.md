@@ -10,7 +10,7 @@ description: "cla_syrcond_x.f –"
 <p>cla_syrcond_x.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>cla_syrcond_x</code> (UPLO, N, A, LDA, AF, LDAF, IPIV, X, INFO, WORK, RWORK)<br />
+<p>REAL function <code>cla_syrcond_x</code> (UPLO, N, A, LDA, AF, LDAF, IPIV, X, INFO, WORK, RWORK)<br/>
  <i></i><code>CLA_SYRCOND_X</code> computes the infinity norm condition number of op(A)*diag(x) for symmetric indefinite matrices.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function cla_syrcond_x (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, complex, dimension( * )X, integerINFO, complex, dimension( * )WORK, real, dimension( * )RWORK)</h3>

@@ -57,5 +57,5 @@ description: "xentop – displays real-time information about a Xen system and d
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;xen-tools [at] lists.xensource.com&gt;. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2005 International Business Machines Corp<br />
+<p> Copyright &#169; 2005 International Business Machines Corp<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

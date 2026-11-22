@@ -10,7 +10,7 @@ description: "zggbak.f –"
 <p>zggbak.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zggbak</code> (JOB, SIDE, N, ILO, IHI, LSCALE, RSCALE, M, V, LDV, INFO)<br />
+<p>subroutine <code>zggbak</code> (JOB, SIDE, N, ILO, IHI, LSCALE, RSCALE, M, V, LDV, INFO)<br/>
  <i></i><code>ZGGBAK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zggbak (characterJOB, characterSIDE, integerN, integerILO, integerIHI, double precision, dimension( * )LSCALE, double precision, dimension( * )RSCALE, integerM, complex*16, dimension( ldv, * )V, integerLDV, integerINFO)</h3>

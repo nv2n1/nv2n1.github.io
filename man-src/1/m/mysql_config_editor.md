@@ -99,9 +99,9 @@ shell&gt; <code>mysql_config_editor set --help</code>
 <dl>
 <dt>
 </dt><dd>
-shell &gt; mysql_config_editor set&#8211; login &#8211; path = client&#8211; host = localhost&#8211; user = localuser&#8211; password<br />
-                                                                                        Enter password : enter password &#8220;localpass&#8221; here<br />
-                                                                                                             shell &gt; mysql_config_editor set&#8211; login &#8211; path = remote&#8211; host = remote.example.com&#8211; user = remoteuser&#8211; password<br />
+shell &gt; mysql_config_editor set&#8211; login &#8211; path = client&#8211; host = localhost&#8211; user = localuser&#8211; password<br/>
+                                                                                        Enter password : enter password &#8220;localpass&#8221; here<br/>
+                                                                                                             shell &gt; mysql_config_editor set&#8211; login &#8211; path = remote&#8211; host = remote.example.com&#8211; user = remoteuser&#8211; password<br/>
                                                                                         Enter password : enter password &#8220;remotepass&#8221; here
 </dd></dl>
 <p> <code>mysql_config_editor</code> uses the client login path by default, so the <code>&#8211;login-path=client</code> option can be omitted from the first command without changing its effect. </p>

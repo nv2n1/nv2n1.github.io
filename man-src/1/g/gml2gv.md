@@ -10,7 +10,7 @@ description: "gml2gv,gv2gml – GML-DOT converters"
 
 <p> gml2gv,gv2gml &#8211; GML-DOT converters </p>
 <h2>SYNOPSIS</h2>
-<p> <code>gml2gv</code> [ <code>-?v</code> ] [ <code>-g</code><i>gname</i> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]<br />
+<p> <code>gml2gv</code> [ <code>-?v</code> ] [ <code>-g</code><i>gname</i> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]<br/>
  <code>gv2gml</code> [ <code>-?</code> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gml2gv</code> converts a graph specified in the GML format to a graph in the GV (formerly DOT) format. <code>gv2gml</code> converts a graph specified in the GV format to a graph in the GML format.</p>

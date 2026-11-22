@@ -10,7 +10,7 @@ description: "XkbSelectEvents – Selects and / or deselects for delivery of one
 <p>XkbSelectEvents &#8211; Selects and / or deselects for delivery of one or more Xkb events and has them delivered under all conditions </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbSelectEvents</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned long int </code><i>bits_to_change</i><code>,</code> <code>unsigned long int </code><i>values_for_bits</i><code>);</code><br />
+<dt> <code>Bool XkbSelectEvents</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned long int </code><i>bits_to_change</i><code>,</code> <code>unsigned long int </code><i>values_for_bits</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

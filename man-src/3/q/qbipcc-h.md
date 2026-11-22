@@ -20,33 +20,33 @@ description: "qbipcc.h –"
 <h3>Typedefs</h3>
 <p>typedef struct qb_ipcc_connection <code>qb_ipcc_connection_t</code></p>
 <h3>Functions</h3>
-<p><code>qb_ipcc_connection_t</code> * <code>qb_ipcc_connect</code> (const char *name, size_t max_msg_size)<br />
- <i>Create a connection to an IPC service. </i><br />
- int32_t <code>qb_ipcc_verify_dgram_max_msg_size</code> (size_t max_msg_size)<br />
- <i>Test kernel dgram socket buffers to verify the largest size up to the max_msg_size value a single msg can be. </i><br />
- void <code>qb_ipcc_disconnect</code> (<code>qb_ipcc_connection_t</code> *c)<br />
- <i>Disconnect an IPC connection. </i><br />
- int32_t <code>qb_ipcc_fd_get</code> (<code>qb_ipcc_connection_t</code> *c, int32_t *fd)<br />
- <i>Get the file descriptor to poll. </i><br />
- int32_t <code>qb_ipcc_fc_enable_max_set</code> (<code>qb_ipcc_connection_t</code> *c, uint32_t max)<br />
- <i>Set the maximum allowable flowcontrol value. </i><br />
- ssize_t <code>qb_ipcc_send</code> (<code>qb_ipcc_connection_t</code> *c, const void *msg_ptr, size_t msg_len)<br />
- <i>Send a message. </i><br />
- ssize_t <code>qb_ipcc_sendv</code> (<code>qb_ipcc_connection_t</code> *c, const struct iovec *iov, size_t iov_len)<br />
- <i>Send a message (iovec). </i><br />
- ssize_t <code>qb_ipcc_recv</code> (<code>qb_ipcc_connection_t</code> *c, void *msg_ptr, size_t msg_len, int32_t ms_timeout)<br />
- <i>Receive a response. </i><br />
- ssize_t <code>qb_ipcc_sendv_recv</code> (<code>qb_ipcc_connection_t</code> *c, const struct iovec *iov, uint32_t iov_len, void *msg_ptr, size_t msg_len, int32_t ms_timeout)<br />
- <i>This is a convenience function that simply sends and then recvs. </i><br />
- ssize_t <code>qb_ipcc_event_recv</code> (<code>qb_ipcc_connection_t</code> *c, void *msg_ptr, size_t msg_len, int32_t ms_timeout)<br />
- <i>Receive an event. </i><br />
- void <code>qb_ipcc_context_set</code> (<code>qb_ipcc_connection_t</code> *c, void *context)<br />
- <i>Associate a &#8216;user&#8217; pointer with this connection. </i><br />
- void * <code>qb_ipcc_context_get</code> (<code>qb_ipcc_connection_t</code> *c)<br />
- <i>Get the context (set previously) </i><br />
- int32_t <code>qb_ipcc_is_connected</code> (<code>qb_ipcc_connection_t</code> *c)<br />
- <i>Is the connection connected? </i><br />
- int32_t <code>qb_ipcc_get_buffer_size</code> (<code>qb_ipcc_connection_t</code> *c)<br />
+<p><code>qb_ipcc_connection_t</code> * <code>qb_ipcc_connect</code> (const char *name, size_t max_msg_size)<br/>
+ <i>Create a connection to an IPC service. </i><br/>
+ int32_t <code>qb_ipcc_verify_dgram_max_msg_size</code> (size_t max_msg_size)<br/>
+ <i>Test kernel dgram socket buffers to verify the largest size up to the max_msg_size value a single msg can be. </i><br/>
+ void <code>qb_ipcc_disconnect</code> (<code>qb_ipcc_connection_t</code> *c)<br/>
+ <i>Disconnect an IPC connection. </i><br/>
+ int32_t <code>qb_ipcc_fd_get</code> (<code>qb_ipcc_connection_t</code> *c, int32_t *fd)<br/>
+ <i>Get the file descriptor to poll. </i><br/>
+ int32_t <code>qb_ipcc_fc_enable_max_set</code> (<code>qb_ipcc_connection_t</code> *c, uint32_t max)<br/>
+ <i>Set the maximum allowable flowcontrol value. </i><br/>
+ ssize_t <code>qb_ipcc_send</code> (<code>qb_ipcc_connection_t</code> *c, const void *msg_ptr, size_t msg_len)<br/>
+ <i>Send a message. </i><br/>
+ ssize_t <code>qb_ipcc_sendv</code> (<code>qb_ipcc_connection_t</code> *c, const struct iovec *iov, size_t iov_len)<br/>
+ <i>Send a message (iovec). </i><br/>
+ ssize_t <code>qb_ipcc_recv</code> (<code>qb_ipcc_connection_t</code> *c, void *msg_ptr, size_t msg_len, int32_t ms_timeout)<br/>
+ <i>Receive a response. </i><br/>
+ ssize_t <code>qb_ipcc_sendv_recv</code> (<code>qb_ipcc_connection_t</code> *c, const struct iovec *iov, uint32_t iov_len, void *msg_ptr, size_t msg_len, int32_t ms_timeout)<br/>
+ <i>This is a convenience function that simply sends and then recvs. </i><br/>
+ ssize_t <code>qb_ipcc_event_recv</code> (<code>qb_ipcc_connection_t</code> *c, void *msg_ptr, size_t msg_len, int32_t ms_timeout)<br/>
+ <i>Receive an event. </i><br/>
+ void <code>qb_ipcc_context_set</code> (<code>qb_ipcc_connection_t</code> *c, void *context)<br/>
+ <i>Associate a &#8216;user&#8217; pointer with this connection. </i><br/>
+ void * <code>qb_ipcc_context_get</code> (<code>qb_ipcc_connection_t</code> *c)<br/>
+ <i>Get the context (set previously) </i><br/>
+ int32_t <code>qb_ipcc_is_connected</code> (<code>qb_ipcc_connection_t</code> *c)<br/>
+ <i>Is the connection connected? </i><br/>
+ int32_t <code>qb_ipcc_get_buffer_size</code> (<code>qb_ipcc_connection_t</code> *c)<br/>
  <i>What is the actual buffer size used after the connection. </i></p>
 <h2>Detailed Description</h2>
 <p>Client IPC API. </p>
@@ -69,7 +69,7 @@ description: "qbipcc.h –"
 <p>Create a connection to an IPC service. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>name</i> name of the service.<br />
+<dd><i>name</i> name of the service.<br/>
  <i>max_msg_size</i> biggest msg size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -92,7 +92,7 @@ description: "qbipcc.h –"
 <p>Associate a &#8216;user&#8217; pointer with this connection. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> the point to associate with this connection.<br />
+<dd><i>context</i> the point to associate with this connection.<br/>
  <i>c</i> connection instance</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -106,10 +106,10 @@ description: "qbipcc.h –"
 <p>Receive an event. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>c</i> connection instance<br />
- <i>msg_ptr</i> pointer to a message buffer to receive into<br />
- <i>msg_len</i> the size of the buffer<br />
- <i>ms_timeout</i> time in milli seconds to wait for a message 0 == no wait, negative == block, positive == wait X ms.<br />
+<dd><i>c</i> connection instance<br/>
+ <i>msg_ptr</i> pointer to a message buffer to receive into<br/>
+ <i>msg_len</i> the size of the buffer<br/>
+ <i>ms_timeout</i> time in milli seconds to wait for a message 0 == no wait, negative == block, positive == wait X ms.<br/>
  <i>ms_timeout</i> max time to wait for a response</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -124,13 +124,13 @@ description: "qbipcc.h –"
 <dd>the default is 1</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>c</i> connection instance<br />
+<dd><i>c</i> connection instance<br/>
  <i>max</i> the max allowable flowcontrol value (1 or 2)</dd></dl>
 <h3>int32_t qb_ipcc_fd_get (<code>qb_ipcc_connection_t</code> *c, int32_t *fd)</h3>
 <p>Get the file descriptor to poll. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>c</i> connection instance<br />
+<dd><i>c</i> connection instance<br/>
  <i>fd</i> (out) file descriptor to poll</dd></dl>
 <h3>int32_t qb_ipcc_get_buffer_size (<code>qb_ipcc_connection_t</code> *c)</h3>
 <p>What is the actual buffer size used after the connection. </p>
@@ -150,15 +150,15 @@ description: "qbipcc.h –"
 <dd><i>c</i> connection instance</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
-<dd><i>QB_TRUE</i> when connected<br />
+<dd><i>QB_TRUE</i> when connected<br/>
  <i>QB_FALSE</i> when not connected</dd></dl>
 <h3>ssize_t qb_ipcc_recv (<code>qb_ipcc_connection_t</code> *c, void *msg_ptr, size_tmsg_len, int32_tms_timeout)</h3>
 <p>Receive a response. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>c</i> connection instance<br />
- <i>msg_ptr</i> pointer to a message buffer to receive into<br />
- <i>msg_len</i> the size of the buffer<br />
+<dd><i>c</i> connection instance<br/>
+ <i>msg_ptr</i> pointer to a message buffer to receive into<br/>
+ <i>msg_len</i> the size of the buffer<br/>
  <i>ms_timeout</i> max time to wait for a response</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -170,8 +170,8 @@ description: "qbipcc.h –"
 <p>Send a message. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>c</i> connection instance<br />
- <i>msg_ptr</i> pointer to a message to send<br />
+<dd><i>c</i> connection instance<br/>
+ <i>msg_ptr</i> pointer to a message to send<br/>
  <i>msg_len</i> the size of the message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -183,8 +183,8 @@ description: "qbipcc.h –"
 <p>Send a message (iovec). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>c</i> connection instance<br />
- <i>iov</i> pointer to an iovec struct to send<br />
+<dd><i>c</i> connection instance<br/>
+ <i>iov</i> pointer to an iovec struct to send<br/>
  <i>iov_len</i> the number of iovecs used</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -196,11 +196,11 @@ description: "qbipcc.h –"
 <p>This is a convenience function that simply sends and then recvs. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>c</i> connection instance<br />
- <i>iov</i> pointer to an iovec struct to send<br />
- <i>iov_len</i> the number of iovecs used<br />
- <i>msg_ptr</i> pointer to a message buffer to receive into<br />
- <i>msg_len</i> the size of the buffer<br />
+<dd><i>c</i> connection instance<br/>
+ <i>iov</i> pointer to an iovec struct to send<br/>
+ <i>iov_len</i> the number of iovecs used<br/>
+ <i>msg_ptr</i> pointer to a message buffer to receive into<br/>
+ <i>msg_len</i> the size of the buffer<br/>
  <i>ms_timeout</i> max time to wait for a response</dd></dl>
 <p> <code>Note:</code></p>
 <dl>

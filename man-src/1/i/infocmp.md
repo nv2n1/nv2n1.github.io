@@ -19,8 +19,8 @@ description: "infocmp – compare or print out terminfo descriptions"
 <h3>Default Options</h3>
 <p> If no options are specified and zero or one <i>termnames</i> are specified, the <code>-I</code> option will be assumed. If more than one <i>termname</i> is specified, the <code>-d</code> option will be assumed.</p>
 <h3>Comparison Options [-d] [-c] [-n]</h3>
-<p> <code>infocmp</code> compares the <code>terminfo</code> description of the first terminal <i>termname</i> with each of the descriptions given by the entries for the other terminal&#8217;s <i>termnames</i>. If a capability is defined for only one of the terminals, the value returned depends on the type of the capability:<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>F</code> for missing boolean variables<br />
+<p> <code>infocmp</code> compares the <code>terminfo</code> description of the first terminal <i>termname</i> with each of the descriptions given by the entries for the other terminal&#8217;s <i>termnames</i>. If a capability is defined for only one of the terminals, the value returned depends on the type of the capability:<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>F</code> for missing boolean variables<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <code>NULL</code> for missing integer or string variables </p>
 <p> Use the <code>-q</code> option to show the distinction between <i>absent</i> and <i>cancelled</i> capabilities. </p>
 <p> These options produce a list which you can use to compare two or more terminal descriptions:</p>
@@ -133,8 +133,8 @@ description: "infocmp – compare or print out terminfo descriptions"
 <p> Another error that does not cause incorrect compiled files, but will slow down the compilation time, is specifying extra <code>use=</code> fields that are superfluous. <code>infocmp</code> will flag any other <i>termname use=</i> fields that were not needed.</p>
 <h3>Changing Databases [-A <i>directory</i>] [-B <i>directory</i>]</h3>
 <p> Like other <code>ncurses</code> utilities, <code>infocmp</code> looks for the terminal descriptions in several places. You can use the <code>TERMINFO</code> and <code>TERMINFO_DIRS</code> environment variables to override the compiled-in default list of places to search (see <code>curses</code>(3X) for details). </p>
-<p> You can also use the options <code>-A</code> and <code>-B</code> to override the list of places to search when comparing terminal descriptions:<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The <code>-A</code> option sets the location for the first <i>termname</i><br />
+<p> You can also use the options <code>-A</code> and <code>-B</code> to override the list of places to search when comparing terminal descriptions:<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The <code>-A</code> option sets the location for the first <i>termname</i><br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The <code>-B</code> option sets the location for the other <i>termnames</i>. </p>
 <p> Using these options, it is possible to compare descriptions for a terminal with the same name located in two different databases. For instance, you can use this feature for comparing descriptions for the same terminal created by different people.</p>
 <h3>Other Options</h3>
@@ -354,7 +354,7 @@ description: "infocmp – compare or print out terminfo descriptions"
 <dl>
 <dt>
 </dt><dd>
-&nbsp;.IP&nbsp;&bull;&nbsp;4 &#8220;+&#8221; (turn on) or<br />
+&nbsp;.IP&nbsp;&bull;&nbsp;4 &#8220;+&#8221; (turn on) or<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 &#8220;-&#8221; (turn off).</dd></dl>
 <dt>
 </dt><dd> An SGR0 designates an empty highlight sequence (equivalent to {SGR:NORMAL}).</dd>
@@ -374,8 +374,8 @@ description: "infocmp – compare or print out terminfo descriptions"
 <dd> hexadecimal and base64</dd></dl>
 </dl>
 <dt>
-</dt><dd> For example, this prints the compiled terminfo value as a string which could be assigned to the <code>TERMINFO</code> environment variable:<br />
-&nbsp;.sp<br />
+</dt><dd> For example, this prints the compiled terminfo value as a string which could be assigned to the <code>TERMINFO</code> environment variable:<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </dd>
 <pre>
 infocmp -0 -q -Q2
@@ -386,16 +386,16 @@ infocmp -0 -q -Q2
 <dl>
 <dt>
 </dt><dd>
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Make the comparison listing shorter by omitting subheadings, and using &#8220;-&#8221; for absent capabilities, &#8220;@&#8221; for canceled rather than &#8220;NULL&#8221;.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 However, show differences between absent and cancelled capabilities.<br />
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Make the comparison listing shorter by omitting subheadings, and using &#8220;-&#8221; for absent capabilities, &#8220;@&#8221; for canceled rather than &#8220;NULL&#8221;.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 However, show differences between absent and cancelled capabilities.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Omit the &#8220;Reconstructed from&#8221; comment for source listings.</dd></dl>
 <dt><code>-R</code><i>subset</i></dt>
 <dd> Restrict output to a given subset. This option is for use with archaic versions of terminfo like those on SVr1, Ultrix, or HP-UX that do not support the full set of SVR4/XSI Curses terminfo; and variants such as AIX that have their own extensions incompatible with SVr4/XSI.</dd>
 <dl>
 <dt>
 </dt><dd>
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Available terminfo subsets are &#8220;SVr1&#8221;, &#8220;Ultrix&#8221;, &#8220;HP&#8221;, and &#8220;AIX&#8221;; see <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5) for details.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 You can also choose the subset &#8220;BSD&#8221; which selects only capabilities with termcap equivalents recognized by 4.4BSD. The <code>-C</code> option sets the &#8220;BSD&#8221; subset as a side-effect.<br />
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Available terminfo subsets are &#8220;SVr1&#8221;, &#8220;Ultrix&#8221;, &#8220;HP&#8221;, and &#8220;AIX&#8221;; see <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5) for details.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 You can also choose the subset &#8220;BSD&#8221; which selects only capabilities with termcap equivalents recognized by 4.4BSD. The <code>-C</code> option sets the &#8220;BSD&#8221; subset as a side-effect.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If you select any other value for <code>-R</code>, it is the same as no subset, i.e., all capabilities are used. The <code>-I</code> option likewise selects no subset as a side-effect.</dd></dl>
 <dt><code>-s </code><i>[d|i|l|c]</i></dt>
 <dd> The <code>-s</code> option sorts the fields within each type according to the argument below: </dd>
@@ -436,8 +436,8 @@ infocmp -0 -q -Q2
 <dd> Compiled terminal description database.</dd></dl>
 <h2>HISTORY</h2>
 <p> Although System V Release 2 provided a terminfo library, it had no documented tool for decompiling the terminal descriptions. Tony Hansen (AT&amp;T) wrote the first <code>infocmp</code> in early 1984, for System V Release 3. </p>
-<p> Eric Raymond used the AT&amp;T documentation in 1995 to provide an equivalent <code>infocmp</code> for ncurses. In addition, he added a few new features such as:<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 the <code>-e</code> option, to support <i>fallback</i> (compiled-in) terminal descriptions<br />
+<p> Eric Raymond used the AT&amp;T documentation in 1995 to provide an equivalent <code>infocmp</code> for ncurses. In addition, he added a few new features such as:<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 the <code>-e</code> option, to support <i>fallback</i> (compiled-in) terminal descriptions<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 the <code>-i</code> option, to help with analysis </p>
 <p> Later, Thomas Dickey added the <code>-x</code> (user-defined capabilities) option, and the <code>-E</code> option to support fallback entries with user-defined capabilities. </p>
 <p> For a complete list, see the <i>EXTENSIONS</i> section. </p>
@@ -455,5 +455,5 @@ infocmp -0 -q -Q2
 <p> <a rel="nofollow" href="https://invisible-island.net/ncurses/tctest.html">https://invisible-island.net/ncurses/tctest.html</a> </p>
 <p> This describes <code>ncurses</code> version 6.3 (patch 20211021).</p>
 <h2>AUTHOR</h2>
-<p> Eric S. Raymond &lt;esr [at] snark.thyrsus.com&gt; and<br />
+<p> Eric S. Raymond &lt;esr [at] snark.thyrsus.com&gt; and<br/>
  Thomas E. Dickey &lt;dickey [at] invisible-island.net&gt; </p>

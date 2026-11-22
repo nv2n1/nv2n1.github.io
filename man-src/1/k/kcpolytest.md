@@ -46,31 +46,31 @@ description: "kcpolytest – command line interface to test the polymorphic data
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br />
- <code>-rnd</code> : performs random test.<br />
- <code>-set</code> : performs setting operation only.<br />
- <code>-get</code> : performs getting operation only.<br />
- <code>-getw</code> : performs getting with a buffer operation only.<br />
- <code>-rem</code> : performs removing operation only.<br />
- <code>-etc</code> : performs miscellaneous operations.<br />
- <code>-tran</code> : performs transaction.<br />
- <code>-oat</code> : opens the database with the auto transaction option.<br />
- <code>-oas</code> : opens the database with the auto synchronization option.<br />
- <code>-onl</code> : opens the database with the no locking option.<br />
- <code>-otl</code> : opens the database with the try locking option.<br />
- <code>-onr</code> : opens the database with the no auto repair option.<br />
- <code>-lv</code> : reports all errors.<br />
- <code>-it </code><i>num</i> : specifies the number of repetition.<br />
- <code>-hard</code> : performs physical synchronization.<br />
- <code>-ru</code> : reuses the existing database.<br />
- <code>-tmp </code><i>str</i> : specifies the path of a directory for temporary storage.<br />
- <code>-dbnum </code><i>num</i> : specifies the number of temporary databases.<br />
- <code>-clim </code><i>num</i> : specifies the limit size of cache memory.<br />
- <code>-cbnum </code><i>num</i> : specifies the bucket number of cache memory.<br />
- <code>-xnl</code> : executes with the no locking option.<br />
- <code>-xpm</code> : executes with the parallel mapper option.<br />
- <code>-xpr</code> : executes with the parallel reducer option.<br />
- <code>-xpf</code> : executes with the parallel flusher option.<br />
+</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br/>
+ <code>-rnd</code> : performs random test.<br/>
+ <code>-set</code> : performs setting operation only.<br/>
+ <code>-get</code> : performs getting operation only.<br/>
+ <code>-getw</code> : performs getting with a buffer operation only.<br/>
+ <code>-rem</code> : performs removing operation only.<br/>
+ <code>-etc</code> : performs miscellaneous operations.<br/>
+ <code>-tran</code> : performs transaction.<br/>
+ <code>-oat</code> : opens the database with the auto transaction option.<br/>
+ <code>-oas</code> : opens the database with the auto synchronization option.<br/>
+ <code>-onl</code> : opens the database with the no locking option.<br/>
+ <code>-otl</code> : opens the database with the try locking option.<br/>
+ <code>-onr</code> : opens the database with the no auto repair option.<br/>
+ <code>-lv</code> : reports all errors.<br/>
+ <code>-it </code><i>num</i> : specifies the number of repetition.<br/>
+ <code>-hard</code> : performs physical synchronization.<br/>
+ <code>-ru</code> : reuses the existing database.<br/>
+ <code>-tmp </code><i>str</i> : specifies the path of a directory for temporary storage.<br/>
+ <code>-dbnum </code><i>num</i> : specifies the number of temporary databases.<br/>
+ <code>-clim </code><i>num</i> : specifies the limit size of cache memory.<br/>
+ <code>-cbnum </code><i>num</i> : specifies the bucket number of cache memory.<br/>
+ <code>-xnl</code> : executes with the no locking option.<br/>
+ <code>-xpm</code> : executes with the parallel mapper option.<br/>
+ <code>-xpr</code> : executes with the parallel reducer option.<br/>
+ <code>-xpf</code> : executes with the parallel flusher option.<br/>
  <code>-xnc</code> : executes with the no compression option.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

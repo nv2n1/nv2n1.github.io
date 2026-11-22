@@ -10,10 +10,10 @@ description: "FileZilla – FTP client"
 
 <p> FileZilla &#8211; FTP client</p>
 <h2>SYNOPSIS</h2>
-<p> <code>filezilla</code><br />
- <code>filezilla [-l &lt;logontype&gt;] &lt;FTP URL&gt;</code><br />
- <code>filezilla -h|-s|-v</code><br />
- <code>filezilla -c &lt;site&gt;</code><br />
+<p> <code>filezilla</code><br/>
+ <code>filezilla [-l &lt;logontype&gt;] &lt;FTP URL&gt;</code><br/>
+ <code>filezilla -h|-s|-v</code><br/>
+ <code>filezilla -c &lt;site&gt;</code><br/>
  <code>filezilla -a &lt;path&gt;</code></p>
 <h2>DESCRIPTION</h2>
 <p> FileZilla is a powerful client for plain FTP, FTP over SSL/TLS (FTPS) and the SSH File Transfer Protocol (SFTP).</p>

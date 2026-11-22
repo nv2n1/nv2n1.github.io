@@ -12,8 +12,8 @@ description: "antiword – show the text and images of MS Word documents"
 <h2>SYNOPSIS</h2>
 <p> <code>antiword</code> [ <i>options</i> ] <i>wordfiles</i></p>
 <h2>DESCRIPTION</h2>
-<p> <i>Antiword</i> is an application that displays the text and the images of Microsoft Word documents.<br />
- A wordfile named &#8211; stands for a Word document read from the standard input.<br />
+<p> <i>Antiword</i> is an application that displays the text and the images of Microsoft Word documents.<br/>
+ A wordfile named &#8211; stands for a Word document read from the standard input.<br/>
  Only documents made by MS Word version 2 and version 6 or later are supported.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -56,13 +56,13 @@ description: "antiword – show the text and images of MS Word documents"
 <dl>
 <dt>Mapping files like 8859-1.txt</dt>
 <dd>
- Antiword looks for its mapping files in three directories, in the order given:<br />
- (1) The directory specified by $ANTIWORDHOME<br />
- (2) The directory specified by $HOME/.antiword<br />
+ Antiword looks for its mapping files in three directories, in the order given:<br/>
+ (1) The directory specified by $ANTIWORDHOME<br/>
+ (2) The directory specified by $HOME/.antiword<br/>
  (3) Directory /usr/share/antiword</dd>
 <dt>The fontnames file</dt>
 <dd>
- Antiword will look for its fontname file in the same directories as used for the mapping files.<br />
+ Antiword will look for its fontname file in the same directories as used for the mapping files.<br/>
  The fontnames file contains the translation table from font names used by MS Word to font names used by PostScript.</dd>
 <dt>NOTE:</dt>
 <dd>
@@ -73,21 +73,21 @@ description: "antiword – show the text and images of MS Word documents"
 <h2>BUGS</h2>
 <p> Antiword is far from complete. Many features are still missing. Many images are not shown yet. Some of the images that are shown, are shown in the wrong place. PostScript output is only available in ISO 8859-1 and ISO 8859-2.</p>
 <h2>WEB SITES</h2>
-<p> The most recent released version of Antiword is always available from:<br />
- <a rel="nofollow" href="http://www.winfield.demon.nl/index.html">http://www.winfield.demon.nl/index.html</a><br />
- or try<br />
+<p> The most recent released version of Antiword is always available from:<br/>
+ <a rel="nofollow" href="http://www.winfield.demon.nl/index.html">http://www.winfield.demon.nl/index.html</a><br/>
+ or try<br/>
  <a rel="nofollow" href="http://antiword.cjb.net/">http://antiword.cjb.net/</a></p>
 <h2>AUTHOR</h2>
-<p> Adri van Os &lt;antiword [at] winfield.demon.nl&gt;<br />
+<p> Adri van Os &lt;antiword [at] winfield.demon.nl&gt;<br/>
  or try &lt;comments [at] antiword.cjb.net&gt; </p>
-<p> R.F. Smith &lt;rsmith [at] xs4all.nl&gt; and<br />
- Sindi Keesan &lt;keesan [at] cyberspace.org&gt;<br />
+<p> R.F. Smith &lt;rsmith [at] xs4all.nl&gt; and<br/>
+ Sindi Keesan &lt;keesan [at] cyberspace.org&gt;<br/>
  contributed to this manual page.</p>
 <h2>LICENSE</h2>
 <p> Antiword is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
 <p> This program is distributed in the hope that it will be useful but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
 <p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA</p>
 <h2>ACKNOWLEDGEMENTS</h2>
-<p> Linux is a registered trademark of Linus Torvalds.<br />
- Adobe, PDF and PostScript are trademarks of Adobe Systems Incorporated.<br />
+<p> Linux is a registered trademark of Linus Torvalds.<br/>
+ Adobe, PDF and PostScript are trademarks of Adobe Systems Incorporated.<br/>
  Microsoft is a registered trademark and Windows is a trademark of Microsoft Corporation. </p>

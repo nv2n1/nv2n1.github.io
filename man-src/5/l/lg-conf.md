@@ -54,7 +54,7 @@ description: "lg.conf – looking glass configuration file"
 <h2>Environment</h2>
 <dl>
 <dt><code>LG_CONF</code></dt>
-<dd>Location of<br />
+<dd>Location of<br/>
  <code>lg.conf</code> file. See the <i>FILES</i> section for more information.</dd></dl>
 <h2>Errors</h2>
 <p><code>lg.conf</code> is interpreted directly by <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), so its syntax follows that of perl. Syntax errors may produce quite unexpected results.</p>

@@ -47,7 +47,7 @@ mcopy[-bspanvmQT][-D clash_option] sourcefile targetfile
 <dt><tt>v</tt>&nbsp;</dt>
 <dd> Verbose. Displays the name of each file as it is copied.</dd></dl>
 <h2>Bugs</h2>
-<p> Unlike MS-DOS, the &#8216;+&#8217; operator (append) from MS-DOS is not supported. However, you may use <tt>mtype</tt> to produce the same effect:<br />
+<p> Unlike MS-DOS, the &#8216;+&#8217; operator (append) from MS-DOS is not supported. However, you may use <tt>mtype</tt> to produce the same effect:<br/>
 &nbsp; </p>
 <pre>
 <code>mtype a:file1 a:file2 a:file3 &gt;unixfile
@@ -60,7 +60,7 @@ mtype a:file1 a:file2 a:file3 | mcopy - a:msdosfile
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation. However, this process is only approximative, and some items, such as crossreferences, footnotes and indices are lost in this translation process. Indeed, these items have no appropriate representation in the manpage format. Moreover, not all information has been translated into the manpage version. Thus I strongly advise you to use the original texinfo doc. See the end of this manpage for instructions how to view the texinfo doc.</p>
 <dl>
 <dt>* &nbsp;<wbr>&nbsp;</dt>
-<dd> To generate a printable copy from the texinfo doc, run the following commands:<br />
+<dd> To generate a printable copy from the texinfo doc, run the following commands:<br/>
 &nbsp; </dd>
 <pre>
 <code>    ./configure; make dvi; dvips mtools.dvi
@@ -69,7 +69,7 @@ mtype a:file1 a:file2 a:file3 | mcopy - a:msdosfile
 <p>&nbsp;</p>
 <dl>
 <dt>* &nbsp;<wbr>&nbsp;</dt>
-<dd> To generate a html copy, run:<br />
+<dd> To generate a html copy, run:<br/>
 &nbsp; </dd>
 <pre>
 <code>    ./configure; make html
@@ -78,7 +78,7 @@ mtype a:file1 a:file2 a:file3 | mcopy - a:msdosfile
 <p>&nbsp; A premade html can be found at <tt>&infin;<a rel="nofollow" href="http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral">http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral</a></tt></p>
 <dl>
 <dt>* &nbsp;<wbr>&nbsp;</dt>
-<dd> To generate an info copy (browsable using emacs&#8217; info mode), run:<br />
+<dd> To generate an info copy (browsable using emacs&#8217; info mode), run:<br/>
 &nbsp; </dd>
 <pre>
 <code>    ./configure; make info

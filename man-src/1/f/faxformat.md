@@ -27,7 +27,7 @@ url: "/docs/linux/man/1-faxformat/"
 <dt>MMR</dt>
 <dd> This is a more advanced format than the others. It is even more two-dimensional than MR. It is optional in the Group 3 standard, and didn&#8217;t even exist in earlier versions of it. It was developed specifically for the Group 4 standard, but then added to an extended Group 3 standard as well. </dd>
 <p> MMR is sometimes called Group 4, but that is a poor name because of the fact that it is also part of the current Group 3 standard. </p>
-<p> MMR is sometimes called &#8216;T6&#8217; based on the name of the document<br />
+<p> MMR is sometimes called &#8216;T6&#8217; based on the name of the document<br/>
 &nbsp;<wbr>that specifies it, ITU T.6. </p>
 </dl>
 <p> <code>g3topbm</code> converts the MH format to PBM. <code>pbmtog3</code> converts PBM to MH. </p>

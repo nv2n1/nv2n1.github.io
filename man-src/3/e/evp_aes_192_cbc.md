@@ -128,13 +128,13 @@ description: "EVP generic crypto functions –"
 <p> New protocols should use new string to key functions like NIST SP56-800A or PKCS#5 v2.0 (see <code>PKCS5_PBKDF2_HMAC_SHA1()</code>). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>type</i> type of cipher to use<br />
- <i>md</i> message digest to use<br />
- <i>salt</i> salt salt string, should be an binary 8 byte buffer.<br />
- <i>data</i> the password/input key string.<br />
- <i>datalen</i> length of data parameter.<br />
- <i>count</i> iteration counter.<br />
- <i>keydata</i> output keydata, needs to of the size <code>EVP_CIPHER_key_length()</code>.<br />
+<dd><i>type</i> type of cipher to use<br/>
+ <i>md</i> message digest to use<br/>
+ <i>salt</i> salt salt string, should be an binary 8 byte buffer.<br/>
+ <i>data</i> the password/input key string.<br/>
+ <i>datalen</i> length of data parameter.<br/>
+ <i>count</i> iteration counter.<br/>
+ <i>keydata</i> output keydata, needs to of the size <code>EVP_CIPHER_key_length()</code>.<br/>
  <i>ivdata</i> output ivdata, needs to of the size <code>EVP_CIPHER_block_size()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -238,13 +238,13 @@ description: "EVP generic crypto functions –"
 <p>Set the app data for an EVP_CIPHER_CTX context. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> the EVP_CIPHER_CTX to set the app data for<br />
+<dd><i>ctx</i> the EVP_CIPHER_CTX to set the app data for<br/>
  <i>data</i> the app data to set for an EVP_CIPHER_CTX.</dd></dl>
 <h3>int EVP_CIPHER_CTX_set_key_length (EVP_CIPHER_CTX *c, intlength)</h3>
 <p>If the cipher type supports it, change the key length </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>c</i> the cipher context to change the key length for<br />
+<dd><i>c</i> the cipher context to change the key length for<br/>
  <i>length</i> new key length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -271,8 +271,8 @@ description: "EVP generic crypto functions –"
 <p>Encipher/decipher final data </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> the cipher context.<br />
- <i>out</i> output data from the operation.<br />
+<dd><i>ctx</i> the cipher context.<br/>
+ <i>out</i> output data from the operation.<br/>
  <i>outlen</i> output length</dd></dl>
 <p> The input length needs to be at least <code>EVP_CIPHER_block_size()</code> bytes long. </p>
 <p> See <code>EVP Cipher</code> for an example how to use this function. </p>
@@ -284,11 +284,11 @@ description: "EVP generic crypto functions –"
 <p>Initiate the EVP_CIPHER_CTX context to encrypt or decrypt data. Clean up with <code>EVP_CIPHER_CTX_cleanup()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> context to initiate<br />
- <i>c</i> cipher to use.<br />
- <i>engine</i> crypto engine to use, NULL to select default.<br />
- <i>key</i> the crypto key to use, NULL will use the previous value.<br />
- <i>iv</i> the IV to use, NULL will use the previous value.<br />
+<dd><i>ctx</i> context to initiate<br/>
+ <i>c</i> cipher to use.<br/>
+ <i>engine</i> crypto engine to use, NULL to select default.<br/>
+ <i>key</i> the crypto key to use, NULL will use the previous value.<br/>
+ <i>iv</i> the IV to use, NULL will use the previous value.<br/>
  <i>encp</i> non zero will encrypt, -1 use the previous value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -298,10 +298,10 @@ description: "EVP generic crypto functions –"
 <p>Encipher/decipher partial data </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> the cipher context.<br />
- <i>out</i> output data from the operation.<br />
- <i>outlen</i> output length<br />
- <i>in</i> input data to the operation.<br />
+<dd><i>ctx</i> the cipher context.<br/>
+ <i>out</i> output data from the operation.<br/>
+ <i>outlen</i> output length<br/>
+ <i>in</i> input data to the operation.<br/>
  <i>inlen</i> length of data.</dd></dl>
 <p> The output buffer length should at least be <code>EVP_CIPHER_block_size()</code> byte longer then the input length. </p>
 <p> See <code>EVP Cipher</code> for an example how to use this function. </p>
@@ -324,11 +324,11 @@ description: "EVP generic crypto functions –"
 <p>Do the whole <code>EVP_MD_CTX_create()</code>, <code>EVP_DigestInit_ex()</code>, <code>EVP_DigestUpdate()</code>, <code>EVP_DigestFinal_ex()</code>, <code>EVP_MD_CTX_destroy()</code> dance in one call. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> the data to update the context with<br />
- <i>dsize</i> length of data<br />
- <i>hash</i> output data of at least <code>EVP_MD_size()</code> length.<br />
- <i>hsize</i> output length of hash.<br />
- <i>md</i> message digest to use<br />
+<dd><i>data</i> the data to update the context with<br/>
+ <i>dsize</i> length of data<br/>
+ <i>hash</i> output data of at least <code>EVP_MD_size()</code> length.<br/>
+ <i>hsize</i> output length of hash.<br/>
+ <i>md</i> message digest to use<br/>
  <i>engine</i> engine to use, NULL for default engine.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -337,8 +337,8 @@ description: "EVP generic crypto functions –"
 <p>Complete the message digest. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> the context to complete.<br />
- <i>hash</i> the output of the message digest function. At least <code>EVP_MD_size()</code>.<br />
+<dd><i>ctx</i> the context to complete.<br/>
+ <i>hash</i> the output of the message digest function. At least <code>EVP_MD_size()</code>.<br/>
  <i>size</i> the output size of hash.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -347,8 +347,8 @@ description: "EVP generic crypto functions –"
 <p>Init a EVP_MD_CTX for use a specific message digest and engine. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> the message digest context to init.<br />
- <i>md</i> the message digest to use.<br />
+<dd><i>ctx</i> the message digest context to init.<br/>
+ <i>md</i> the message digest to use.<br/>
  <i>engine</i> the engine to use, NULL to use the default engine.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -357,8 +357,8 @@ description: "EVP generic crypto functions –"
 <p>Update the digest with some data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> the context to update<br />
- <i>data</i> the data to update the context with<br />
+<dd><i>ctx</i> the context to update<br/>
+ <i>data</i> the data to update the context with<br/>
  <i>size</i> length of data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

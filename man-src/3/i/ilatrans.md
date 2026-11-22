@@ -11,7 +11,7 @@ description: "ilatrans.f –"
 <p> ilatrans.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> INTEGER function <code>ilatrans</code> (TRANS)<br />
+<p> INTEGER function <code>ilatrans</code> (TRANS)<br/>
  <i></i><code>ILATRANS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function ilatrans (characterTRANS)</h3>

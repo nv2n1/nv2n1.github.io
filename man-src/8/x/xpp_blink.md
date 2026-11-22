@@ -14,7 +14,7 @@ xpp_blink {on|off|bzzt} {span &lt;number&gt; | chan &lt;number&gt; | xpd &lt;bus
 
 <h2>Description</h2>
 
-Blink all the leds of an <font SIZE="-1">XPD</font>.
+Blink all the leds of an XPD.
 
 <h2>Blink mode:</h2>
 
@@ -28,10 +28,10 @@ Blink all the leds of an <font SIZE="-1">XPD</font>.
 <h2>Selector:</h2>
 
 <dl><dt>span
-</dt><dd>Select by span number. This only work for <font SIZE="-1">XPD</font> registered to dahdi. 
+</dt><dd>Select by span number. This only work for XPD registered to dahdi. 
  will also print the dahdi channels of the span and the xbus/xpd this span represents.
 </dd><dt>chan
-</dt><dd>Select by channel number. This only work for <font SIZE="-1">XPD</font> registered to dahdi.
+</dt><dd>Select by channel number. This only work for XPD registered to dahdi.
 </dd><dt>xpd
 </dt><dd>Select by xbus + xpd numbers. If only xbus number is given, all the XPDs of the selected xbus (Astribank) are blinked.
 </dd><dt>label

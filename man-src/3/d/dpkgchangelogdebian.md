@@ -8,10 +8,10 @@ url: "/docs/linux/man/3-dpkgchangelogdebian/"
 
 Dpkg::Changelog::Debian - parse Debian changelogs 
 
-<h2>Description</h2>Dpkg::Changelog::Debian parses Debian changelogs as described in the Debian policy (version 3.6.2.1 at the time of this writing). See section ``<font SIZE="-1">SEE ALSO''</font> for locations where to find this definition. 
+<h2>Description</h2>Dpkg::Changelog::Debian parses Debian changelogs as described in the Debian policy (version 3.6.2.1 at the time of this writing). See section ``SEE ALSO'' for locations where to find this definition. 
 
- The parser tries to ignore most cruft like # or /* */ style comments, <font SIZE="-1">CVS</font> comments, vim variables, emacs local variables and stuff from older changelogs with other formats at the end of the file. <font SIZE="-1">NOTE:</font> most of these are ignored silently currently, there is no parser error issued for them. This should become configurable in the future.
-<h3><font SIZE="-1">METHODS</font></h3><dl COMPACT><dt>$c-&gt;parse($fh, $description)
+ The parser tries to ignore most cruft like # or /* */ style comments, CVS comments, vim variables, emacs local variables and stuff from older changelogs with other formats at the end of the file. NOTE: most of these are ignored silently currently, there is no parser error issued for them. This should become configurable in the future.
+<h3>METHODS</h3><dl COMPACT><dt>$c-&gt;parse($fh, $description)
 </dt><dd>Read the filehandle and parse a Debian changelog in it. Returns the number of changelog entries that have been parsed with success.</dd></dl><h2>See Also</h2>Dpkg::Changelog 
 
  Description of the Debian changelog format in the Debian policy: &lt;<a rel="nofollow" HREF="https://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog">https://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog</a>&gt;.

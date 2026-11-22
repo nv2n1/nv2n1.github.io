@@ -45,6 +45,6 @@ description: "XtDisplayInitialize, XtOpenDisplay, XtDatabase, XtScreenDatabase, 
 <p> The <code>XtDatabase</code> function returns the fully merged resource database that was built by <code>XtDisplayInitialize</code> associated with the display that was passed in. If this display has not been initialized by <code>XtDisplayInitialize</code>, the results are not defined. </p>
 <p> The <code>XtScreenDatabase</code> function returns the fully merged resource database associated with the specified screen. If the <i>screen</i> does not belong to a <code>Display</code> initialized by <code>XtDisplayInitialize</code>, the results are undefined.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappcreateshell/">XtAppCreateShell</a>(3), <a href="/docs/linux/man/3-xtcreateapplicationcontext/">XtCreateApplicationContext</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappcreateshell/">XtAppCreateShell</a>(3), <a href="/docs/linux/man/3-xtcreateapplicationcontext/">XtCreateApplicationContext</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

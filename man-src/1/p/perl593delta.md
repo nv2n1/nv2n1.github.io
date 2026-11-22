@@ -62,8 +62,8 @@ description: "perl593delta – what is new for perl v5.9.3"
 <p> <code>-E</code> is equivalent to <code>-e</code>, but it implicitly enables all optional features (like <code>&quot;use feature &quot;:5.10&quot;&quot;</code>).  </p>
 <h3>chdir, chmod and chown on filehandles</h3>
 <p> <code>&quot;chdir&quot;</code>, <code>&quot;chmod&quot;</code> and <code>&quot;chown&quot;</code> can now work on filehandles as well as filenames, if the system supports respectively <code>&quot;fchdir&quot;</code>, <code>&quot;fchmod&quot;</code> and <code>&quot;fchown&quot;</code>, thanks to a patch provided by Gisle Aas.  </p>
-<font SIZE="-1"></font><h3>OS groups</h3>
-<p> <code>$(</code> and <code>$)</code> now return groups in the order where the <font SIZE="-1">OS</font> returns them, thanks to Gisle Aas. This wasn&#8217;t previously the case.  </p>
+<h3>OS groups</h3>
+<p> <code>$(</code> and <code>$)</code> now return groups in the order where the OS returns them, thanks to Gisle Aas. This wasn&#8217;t previously the case.  </p>
 <h2>Modules and Pragmata</h2>
 <h3>New Core Modules</h3>
 <dl>
@@ -71,7 +71,7 @@ description: "perl593delta – what is new for perl v5.9.3"
 <dd> <p> A new pragma, <code>&quot;feature&quot;</code>, has been added; see above in ``Core Enhancements&#8217;&#8216;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;assertions::compat&quot;</code>, also available on <font SIZE="-1">CPAN</font>, allows the use of assertions on perl versions prior to 5.9.0 (that is the first one to natively support them). </p>
+<dd> <p> <code>&quot;assertions::compat&quot;</code>, also available on CPAN, allows the use of assertions on perl versions prior to 5.9.0 (that is the first one to natively support them). </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;Math::BigInt::FastCalc&quot;</code> is an XS-enabled, and thus faster, version of <code>&quot;Math::BigInt::Calc&quot;</code>. </p>
@@ -86,7 +86,7 @@ description: "perl593delta – what is new for perl v5.9.3"
 <dd> <p> <code>&quot;Archive::Tar&quot;</code> is a module to manipulate <code>&quot;tar&quot;</code> archives. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;Digest::SHA&quot;</code> is a module used to calculate many types of <font SIZE="-1">SHA</font> digests, has been included for <font SIZE="-1">SHA</font> support in the <font SIZE="-1">CPAN</font> module. </p>
+<dd> <p> <code>&quot;Digest::SHA&quot;</code> is a module used to calculate many types of SHA digests, has been included for SHA support in the CPAN module. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;ExtUtils::CBuilder&quot;</code> and <code>&quot;ExtUtils::ParseXS&quot;</code> have been added. </p>
@@ -97,7 +97,7 @@ description: "perl593delta – what is new for perl v5.9.3"
 <h3>ptardiff</h3>
 <p> <code>&quot;ptardiff&quot;</code> is a small script used to generate a diff between the contents of a tar archive and a directory tree. Like <code>&quot;ptar&quot;</code>, it comes with <code>&quot;Archive::Tar&quot;</code>.  </p>
 <h3>shasum</h3>
-<p> This command-line utility, used to print or to check <font SIZE="-1">SHA</font> digests, comes with the new <code>&quot;Digest::SHA&quot;</code> module.  </p>
+<p> This command-line utility, used to print or to check SHA digests, comes with the new <code>&quot;Digest::SHA&quot;</code> module.  </p>
 <h3>h2xs enhancements</h3>
 <p> <code>&quot;h2xs&quot;</code> implements a new option <code>&quot;--use-xsloader&quot;</code> to force use of <code>&quot;XSLoader&quot;</code> even in backwards compatible modules. </p>
 <p> The handling of authors&#8217; names that had apostrophes has been fixed. </p>
@@ -109,8 +109,8 @@ description: "perl593delta – what is new for perl v5.9.3"
 <p> The perlglossary manpage is a glossary of terms used in the Perl documentation, technical and otherwise, kindly provided by O&#8217;Reilly Media, Inc. </p>
 <p> perltodo now lists a rough roadmap to Perl 5.10.  </p>
 <h2>Performance Enhancements</h2>
-<font SIZE="-1"></font><h3>XS-assisted SWASHGET</h3>
-<p> Some pure-perl code that perl was using to retrieve Unicode properties and transliteration mappings has been reimplemented in <font SIZE="-1">XS</font>.  </p>
+<h3>XS-assisted SWASHGET</h3>
+<p> Some pure-perl code that perl was using to retrieve Unicode properties and transliteration mappings has been reimplemented in XS.  </p>
 <h3>Constant subroutines</h3>
 <p> The interpreter internals now support a far more memory efficient form of inlineable constants. Storing a reference to a constant value in a symbol table is equivalent to a full typeglob referencing a constant subroutine, but using about 400 bytes less memory. This proxy constant subroutine is automatically upgraded to a real typeglob with subroutine if necessary. The approach taken is analogous to the existing space optimisation for subroutine stub declarations, which are stored as plain scalars in place of the full typeglob. </p>
 <p> Several of the core modules have been converted to use this feature for their system dependent constants - as a result <code>&quot;use POSIX;&quot;</code> now takes about 200K less memory.  </p>
@@ -124,16 +124,16 @@ description: "perl593delta – what is new for perl v5.9.3"
 <h3>Compilation improvements</h3>
 <p> Parallel makes should work properly now, although there may still be problems if <code>&quot;make test&quot;</code> is instructed to run in parallel. </p>
 <p> Building with Borland&#8217;s compilers on Win32 should work more smoothly. In particular Steve Hay has worked to side step many warnings emitted by their compilers and at least one C compiler internal error. </p>
-<p> Perl extensions on Windows now can be statically built into the Perl <font SIZE="-1">DLL</font>, thanks to a work by Vadim Konovalov.  </p>
+<p> Perl extensions on Windows now can be statically built into the Perl DLL, thanks to a work by Vadim Konovalov.  </p>
 <h3>New Or Improved Platforms</h3>
-<p> Perl is being ported to Symbian <font SIZE="-1">OS</font>. See perlsymbian for more information. </p>
-<p> The <font SIZE="-1">VMS</font> port has been improved. See perlvms. </p>
+<p> Perl is being ported to Symbian OS. See perlsymbian for more information. </p>
+<p> The VMS port has been improved. See perlvms. </p>
 <p> <i>DynaLoader::dl_unload_file()</i> now works on Windows. </p>
-<p> Portability of Perl on various recent compilers on Windows has been improved (Borland C<font SIZE="-2">++</font>, Visual C<font SIZE="-2">++</font> 7.0).  </p>
+<p> Portability of Perl on various recent compilers on Windows has been improved (Borland C++, Visual C++ 7.0).  </p>
 <h3>New probes</h3>
 <p> <code>&quot;Configure&quot;</code> will now detect <code>&quot;clearenv&quot;</code> and <code>&quot;unsetenv&quot;</code>, thanks to a patch from Alan Burlison. It will also probe for <code>&quot;futimes&quot;</code> (and use it internally if available), and whether <code>&quot;sprintf&quot;</code> correctly returns the length of the formatted string.  </p>
 <h3>Module auxiliary files</h3>
-<p> <font SIZE="-1">README</font> files and changelogs for <font SIZE="-1">CPAN</font> modules bundled with perl are no longer installed.  </p>
+<p> README files and changelogs for CPAN modules bundled with perl are no longer installed.  </p>
 <h2>Selected Bug Fixes</h2>
 <h3>defined $$x</h3>
 <p> <code>&quot;use strict &quot;refs&quot;&quot;</code> was ignoring taking a hard reference in an argument to <i>defined()</i>, as in : </p>
@@ -191,10 +191,10 @@ description: "perl593delta – what is new for perl v5.9.3"
 <dd> <p> <i>chr()</i> on a negative value now gives <code>&quot;\x{FFFD}&quot;</code>, the Unicode replacement character, unless when the <code>&quot;bytes&quot;</code> pragma is in effect, where the low eight bytes of the value are used. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Some case insensitive matches between <font SIZE="-1">UTF-8</font> encoded data and 8 bit regexps, and vice versa, could give malformed character warnings. These have been fixed by Dave Mitchell and Yves Orton. </p>
+<dd> <p> Some case insensitive matches between UTF-8 encoded data and 8 bit regexps, and vice versa, could give malformed character warnings. These have been fixed by Dave Mitchell and Yves Orton. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;lcfirst&quot;</code> and <code>&quot;ucfirst&quot;</code> could corrupt the string for certain cases where the length <font SIZE="-1">UTF-8</font> encoding of the string in lower case, upper case or title case differed. This was fixed by Nicholas Clark. </p>
+<dd> <p> <code>&quot;lcfirst&quot;</code> and <code>&quot;ucfirst&quot;</code> could corrupt the string for certain cases where the length UTF-8 encoding of the string in lower case, upper case or title case differed. This was fixed by Nicholas Clark. </p>
  </dd></dl>
 <h2>New or Changed Diagnostics</h2>
 <h3>Attempt to set length of freed array</h3>
@@ -228,7 +228,7 @@ description: "perl593delta – what is new for perl v5.9.3"
 <p> These new warnings are now emitted when a dirhandle is used but is either closed or not really a dirhandle.  </p>
 <h2>Changed Internals</h2>
 <p> In general, the source code of perl has been refactored, tied up, and optimized in many places. Also, memory management and allocation has been improved in a couple of points. </p>
-<p> Andy Lester supplied many improvements to determine which function parameters and local variables could actually be declared <code>&quot;const&quot;</code> to the C compiler. Steve Peters provided new <code>*_set</code> macros and reworked the core to use these rather than assigning to macros in <font SIZE="-1">LVALUE</font> context. </p>
+<p> Andy Lester supplied many improvements to determine which function parameters and local variables could actually be declared <code>&quot;const&quot;</code> to the C compiler. Steve Peters provided new <code>*_set</code> macros and reworked the core to use these rather than assigning to macros in LVALUE context. </p>
 <p> Dave Mitchell improved the lexer debugging output under <code>&quot;-DT&quot;</code>. </p>
 <p> A new file, <i>mathoms.c</i>, has been added. It contains functions that are no longer used in the perl core, but that remain available for binary or source compatibility reasons. However, those functions will not be compiled in if you add <code>&quot;-DNO_MATHOMS&quot;</code> in the compiler flags. </p>
 <p> The <code>&quot;AvFLAGS&quot;</code> macro has been removed. </p>
@@ -240,6 +240,6 @@ description: "perl593delta – what is new for perl v5.9.3"
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

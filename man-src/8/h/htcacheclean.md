@@ -9,17 +9,17 @@ description: "htcacheclean – Clean up the disk cache"
 
 <p>htcacheclean &#8211; Clean up the disk cache</p>
 <h2>Synopsis</h2>
-<p> <code>htcacheclean</code> [ &#8211;<code>D</code> ] [ &#8211;<code>v</code> ] [ &#8211;<code>t</code> ] [ &#8211;<code>r</code> ] [ &#8211;<code>n</code> ] [ &#8211;<code>R</code><i>round</i> ] &#8211;<code>p</code><i>path</i> [ &#8211;<code>l</code><i>limit</i> ] [ &#8211;<code>L</code><i>limit</i> ]<br />
-&nbsp; <code>htcacheclean</code> [ &#8211;<code>n</code> ] [ &#8211;<code>t</code> ] [ &#8211;<code>i</code> ] [ &#8211;<code>P</code><i>pidfile</i> ] [ &#8211;<code>R</code><i>round</i> ] &#8211;<code>d</code><i>interval</i> &#8211;<code>p</code><i>path</i> [ &#8211;<code>l</code><i>limit</i> ] [ &#8211;<code>L</code><i>limit</i> ]<br />
-&nbsp; <code>htcacheclean</code> [ &#8211;<code>v</code> ] [ &#8211;<code>R</code><i>round</i> ] &#8211;<code>p</code><i>path</i> [ &#8211;<code>a</code> ] [ &#8211;<code>A</code> ]<br />
-&nbsp; <code>htcacheclean</code> [ &#8211;<code>D</code> ] [ &#8211;<code>v</code> ] [ &#8211;<code>t</code> ] [ &#8211;<code>R</code><i>round</i> ] &#8211;<code>p</code><i>path</i> <i>url</i><br />
+<p> <code>htcacheclean</code> [ &#8211;<code>D</code> ] [ &#8211;<code>v</code> ] [ &#8211;<code>t</code> ] [ &#8211;<code>r</code> ] [ &#8211;<code>n</code> ] [ &#8211;<code>R</code><i>round</i> ] &#8211;<code>p</code><i>path</i> [ &#8211;<code>l</code><i>limit</i> ] [ &#8211;<code>L</code><i>limit</i> ]<br/>
+&nbsp; <code>htcacheclean</code> [ &#8211;<code>n</code> ] [ &#8211;<code>t</code> ] [ &#8211;<code>i</code> ] [ &#8211;<code>P</code><i>pidfile</i> ] [ &#8211;<code>R</code><i>round</i> ] &#8211;<code>d</code><i>interval</i> &#8211;<code>p</code><i>path</i> [ &#8211;<code>l</code><i>limit</i> ] [ &#8211;<code>L</code><i>limit</i> ]<br/>
+&nbsp; <code>htcacheclean</code> [ &#8211;<code>v</code> ] [ &#8211;<code>R</code><i>round</i> ] &#8211;<code>p</code><i>path</i> [ &#8211;<code>a</code> ] [ &#8211;<code>A</code> ]<br/>
+&nbsp; <code>htcacheclean</code> [ &#8211;<code>D</code> ] [ &#8211;<code>v</code> ] [ &#8211;<code>t</code> ] [ &#8211;<code>R</code><i>round</i> ] &#8211;<code>p</code><i>path</i> <i>url</i><br/>
 &nbsp; </p>
 <h2>Summary</h2>
 <p>&nbsp; </p>
-<p> <code>htcacheclean</code> is used to keep the size of mod_cache_disk&#8217;s storage within a given size limit, or limit on inodes in use. This tool can run either manually or in daemon mode. When running in daemon mode, it sleeps in the background and checks the cache directory at regular intervals for cached content to be removed. You can stop the daemon cleanly by sending it a TERM or INT signal. When run manually, a once off check of the cache directory is made for cached content to be removed. If one or more URLs are specified, each URL will be deleted from the cache, if present.<br />
+<p> <code>htcacheclean</code> is used to keep the size of mod_cache_disk&#8217;s storage within a given size limit, or limit on inodes in use. This tool can run either manually or in daemon mode. When running in daemon mode, it sleeps in the background and checks the cache directory at regular intervals for cached content to be removed. You can stop the daemon cleanly by sending it a TERM or INT signal. When run manually, a once off check of the cache directory is made for cached content to be removed. If one or more URLs are specified, each URL will be deleted from the cache, if present.<br/>
 &nbsp;</p>
 <h2>Options</h2>
-<p>&nbsp;<br />
+<p>&nbsp;<br/>
 &nbsp;</p>
 <dl>
 <dt><code>-d</code><i>interval</i></dt>
@@ -49,18 +49,18 @@ description: "htcacheclean – Clean up the disk cache"
 <dt><code>-a</code></dt>
 <dd>List the URLs currently stored in the cache. Variants of the same URL will be listed once for each variant.</dd>
 <dt><code>-A</code></dt>
-<dd>List the URLs currently stored in the cache, along with their attributes in the following order: url, header size, body size, status, entity version, date, expiry, request time, response time, body present, head request.<br />
+<dd>List the URLs currently stored in the cache, along with their attributes in the following order: url, header size, body size, status, entity version, date, expiry, request time, response time, body present, head request.<br/>
 &nbsp;</dd></dl>
 <h2>Deleting A Specific Url</h2>
 <p>&nbsp; </p>
-<p> If <code>htcacheclean</code> is passed one or more URLs, each URL will be deleted from the cache. If multiple variants of an URL exists, all variants would be deleted.<br />
+<p> If <code>htcacheclean</code> is passed one or more URLs, each URL will be deleted from the cache. If multiple variants of an URL exists, all variants would be deleted.<br/>
 &nbsp; </p>
-<p> When a reverse proxied URL is to be deleted, the effective URL is constructed from the <code>Host</code> header, the <code>port</code>, the <code>path</code> and the <code>query</code>. Note the &#8216;?&#8217; in the URL must always be specified explicitly, whether a query string is present or not. For example, an attempt to delete the path <code>/</code> from the server <code>localhost</code>, the URL to delete would be <code><a rel="nofollow" href="http://localhost:80/?">http://localhost:80/?</a></code>.<br />
+<p> When a reverse proxied URL is to be deleted, the effective URL is constructed from the <code>Host</code> header, the <code>port</code>, the <code>path</code> and the <code>query</code>. Note the &#8216;?&#8217; in the URL must always be specified explicitly, whether a query string is present or not. For example, an attempt to delete the path <code>/</code> from the server <code>localhost</code>, the URL to delete would be <code><a rel="nofollow" href="http://localhost:80/?">http://localhost:80/?</a></code>.<br/>
 &nbsp;</p>
 <h2>Listing Urls In The Cache</h2>
 <p>&nbsp; </p>
-<p> By passing the <code>-a</code> or <code>-A</code> options to <code>htcacheclean</code>, the URLs within the cache will be listed as they are found, one URL per line. The <code>-A</code> option dumps the full cache entry after the URL, with fields in the following order:<br />
-&nbsp;<br />
+<p> By passing the <code>-a</code> or <code>-A</code> options to <code>htcacheclean</code>, the URLs within the cache will be listed as they are found, one URL per line. The <code>-A</code> option dumps the full cache entry after the URL, with fields in the following order:<br/>
+&nbsp;<br/>
 &nbsp;</p>
 <dl>
 <dt>url</dt>
@@ -84,9 +84,9 @@ description: "htcacheclean – Clean up the disk cache"
 <dt>body present</dt>
 <dd>If 0, no body is stored with this request, 1 otherwise.</dd>
 <dt>head request</dt>
-<dd>If 1, the entry contains a cached HEAD request with no body, 0 otherwise.<br />
+<dd>If 1, the entry contains a cached HEAD request with no body, 0 otherwise.<br/>
 &nbsp;</dd></dl>
 <h2>Exit Status</h2>
 <p>&nbsp; </p>
-<p> <code>htcacheclean</code> returns a zero status (&quot;true&quot;) if all operations were successful, <code>1</code> otherwise. If an URL is specified, and the URL was cached and successfully removed, <code>0</code> is returned, <code>2</code> otherwise. If an error occurred during URL removal, <code>1</code> is returned.<br />
+<p> <code>htcacheclean</code> returns a zero status (&quot;true&quot;) if all operations were successful, <code>1</code> otherwise. If an URL is specified, and the URL was cached and successfully removed, <code>0</code> is returned, <code>2</code> otherwise. If an error occurred during URL removal, <code>1</code> is returned.<br/>
 &nbsp;</p>

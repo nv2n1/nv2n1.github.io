@@ -156,33 +156,33 @@ XY ORIG_PATH -&gt; PATH
 <dl>
 <dt>
 </dt><dd>
-X Y Meaning&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -[AMD] not updated<br />
-        M[MTD] updated in index<br />
-            T[MTD] type changed in index<br />
-                A[MTD] added to index<br />
-                    D deleted from index<br />
-                        R[MTD] renamed in index<br />
-                            C[MTD] copied in index<br />
-                                [MTARC] index and<br />
-    work tree matches<br />
-        [MTARC] M work tree changed since index<br />
-            [MTARC] T type changed in work tree since index<br />
-                [MTARC] D deleted in work tree<br />
-                    R renamed in work tree<br />
-                        C copied in work tree&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -D D unmerged,<br />
-    both deleted<br />
-        A U unmerged,<br />
-    added by us<br />
-        U D unmerged,<br />
-    deleted by them<br />
-        U A unmerged,<br />
-    added by them<br />
-        D U unmerged,<br />
-    deleted by us<br />
-        A A unmerged,<br />
-    both added<br />
-        U U unmerged,<br />
-    both modified&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br />
+X Y Meaning&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -[AMD] not updated<br/>
+        M[MTD] updated in index<br/>
+            T[MTD] type changed in index<br/>
+                A[MTD] added to index<br/>
+                    D deleted from index<br/>
+                        R[MTD] renamed in index<br/>
+                            C[MTD] copied in index<br/>
+                                [MTARC] index and<br/>
+    work tree matches<br/>
+        [MTARC] M work tree changed since index<br/>
+            [MTARC] T type changed in work tree since index<br/>
+                [MTARC] D deleted in work tree<br/>
+                    R renamed in work tree<br/>
+                        C copied in work tree&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -D D unmerged,<br/>
+    both deleted<br/>
+        A U unmerged,<br/>
+    added by us<br/>
+        U D unmerged,<br/>
+    deleted by them<br/>
+        U A unmerged,<br/>
+    added by them<br/>
+        D U unmerged,<br/>
+    deleted by us<br/>
+        A A unmerged,<br/>
+    both added<br/>
+        U U unmerged,<br/>
+    both modified&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br/>
     ? ? untracked !!ignored&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;
 </dd></dl>
 <p> Submodules have more state and instead report M the submodule has a different HEAD than recorded in the index m the submodule has modified content ? the submodule has untracked files since modified content or untracked files in a submodule cannot be added via <code>git add</code> in the superproject to prepare a commit. </p>
@@ -208,23 +208,23 @@ X Y Meaning&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#821
 <h3>Porcelain Format Version 2</h3>
 <p> Version 2 format adds more detailed information about the state of the worktree and changed items. Version 2 also defines an extensible set of easy to parse optional headers. </p>
 <p> Header lines start with &quot;#&quot; and are added in response to specific command line arguments. Parsers should ignore headers they don&#8217;t recognize. </p>
-<p> <font SIZE="+1"> <code>Branch Headers</code></p>
+<p>  <code>Branch Headers</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> If <code>&#8211;branch</code> is given, a series of header lines are printed with information about the current branch. </p>
 </dd><dl>
 <dt>
-</dt><dd> </font><br />
-Line Notes&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;<br />
-#branch.oid &lt; commit&gt; | (initial)Current commit.<br />
-#branch.head &lt; branch&gt; | (detached)Current branch.<br />
-#branch.upstream &lt; upstream_branch&gt; If upstream is set.<br />
-#branch.ab + &lt; ahead&gt; &#8211; &lt; behind&gt; If upstream is set and<br />
+</dt><dd> <br/>
+Line Notes&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;<br/>
+#branch.oid &lt; commit&gt; | (initial)Current commit.<br/>
+#branch.head &lt; branch&gt; | (detached)Current branch.<br/>
+#branch.upstream &lt; upstream_branch&gt; If upstream is set.<br/>
+#branch.ab + &lt; ahead&gt; &#8211; &lt; behind&gt; If upstream is set and<br/>
     the commit is present.&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;
 </dd></dl>
 </dl>
-<p> <font SIZE="+1"> <code>Changed Tracked Entries</code></p>
+<p>  <code>Changed Tracked Entries</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -232,7 +232,7 @@ Line Notes&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212
 <p> Ordinary changed entries have the following format: </p>
 </dd><dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 1 &lt;XY&gt; &lt;sub&gt; &lt;mH&gt; &lt;mI&gt; &lt;mW&gt; &lt;hH&gt; &lt;hI&gt; &lt;path&gt;
 </pre>
@@ -248,13 +248,13 @@ Line Notes&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212
 <dl>
 <dt>
 </dt><dd>
-Field Meaning&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;&lt;XY&gt; A 2 character field containing the staged and<br />
-    unstaged XY values described in the short format,<br />
-    with unchanged indicated by a &#8220;.&#8221; rather than<br />
-        a space.&lt;sub&gt;A 4 character field describing the submodule state.&#8221;N&#8230;&#8221; when the entry is not a submodule.&#8221;S&lt;c&gt;&lt;m&gt;&lt;u&gt;&#8221; when the entry is a submodule.&lt;c&gt;is &#8220;C&#8221; if the commit changed;<br />
-otherwise &#8220;.&#8221;.&lt;m&gt;is &#8220;M&#8221; if it has tracked changes;<br />
-otherwise &#8220;.&#8221;.&lt;u&gt;is &#8220;U&#8221; if there are untracked changes;<br />
-otherwise &#8220;.&#8221;.&lt;mH&gt;The octal file mode in HEAD.&lt;mI&gt;The octal file mode in the index.&lt;mW&gt;The octal file mode in the worktree.&lt;hH&gt;The object name in HEAD.&lt;hI&gt;The object name in the index.&lt;X&gt;&lt;score&gt; The rename or copy score(denoting the percentage of similarity between the source and target of the move or copy).For example &#8220;R100&#8221; or &#8220;C75&#8221;.&lt;path&gt;The pathname.In a renamed / copied entry, this is the target path.&lt;sep&gt;When the `- z` option is used, the 2 pathnames are separated with a NUL(ASCII 0x00) byte;<br />
+Field Meaning&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;&lt;XY&gt; A 2 character field containing the staged and<br/>
+    unstaged XY values described in the short format,<br/>
+    with unchanged indicated by a &#8220;.&#8221; rather than<br/>
+        a space.&lt;sub&gt;A 4 character field describing the submodule state.&#8221;N&#8230;&#8221; when the entry is not a submodule.&#8221;S&lt;c&gt;&lt;m&gt;&lt;u&gt;&#8221; when the entry is a submodule.&lt;c&gt;is &#8220;C&#8221; if the commit changed;<br/>
+otherwise &#8220;.&#8221;.&lt;m&gt;is &#8220;M&#8221; if it has tracked changes;<br/>
+otherwise &#8220;.&#8221;.&lt;u&gt;is &#8220;U&#8221; if there are untracked changes;<br/>
+otherwise &#8220;.&#8221;.&lt;mH&gt;The octal file mode in HEAD.&lt;mI&gt;The octal file mode in the index.&lt;mW&gt;The octal file mode in the worktree.&lt;hH&gt;The object name in HEAD.&lt;hI&gt;The object name in the index.&lt;X&gt;&lt;score&gt; The rename or copy score(denoting the percentage of similarity between the source and target of the move or copy).For example &#8220;R100&#8221; or &#8220;C75&#8221;.&lt;path&gt;The pathname.In a renamed / copied entry, this is the target path.&lt;sep&gt;When the `- z` option is used, the 2 pathnames are separated with a NUL(ASCII 0x00) byte;<br/>
 otherwise, a tab(ASCII 0x09) byte separates them.&lt;origPath&gt;The pathname in the commit at HEAD or in the index.This is only present in a renamed / copied entry, and tells where the renamed / copied contents came from.&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;
 </dd></dl>
 <p> Unmerged entries have the following format; the first character is a &quot;u&quot; to distinguish from ordinary changed entries. </p>
@@ -275,7 +275,7 @@ Field Meaning-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 </code></pre>
 </dd></dl>
 </dl>
-<p> <font SIZE="+1"> <code>Other Items</code></p>
+<p>  <code>Other Items</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -283,7 +283,7 @@ Field Meaning-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 <p> Untracked items have the following format: </p>
 </dd><dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 ? &lt;path&gt;
 </pre>
@@ -297,13 +297,13 @@ Field Meaning-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 </pre>
 </dd></dl>
 </dl>
-<p> <font SIZE="+1"> <code>Pathname Format Notes and -z</code></p>
+<p>  <code>Pathname Format Notes and -z</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> When the <code>-z</code> option is given, pathnames are printed as is and without any quoting and lines are terminated with a NUL (ASCII 0x00) byte. </p>
 <p> Without the <code>-z</code> option, pathnames with &quot;unusual&quot; characters are quoted as explained for the configuration variable <code>core.quotePath</code> (see <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1)).</dd></dl>
-<p> </font></p>
+<p> </p>
 <h2>CONFIGURATION</h2>
 <p> The command honors <code>color.status</code> (or <code>status.color</code> &#8212; they mean the same thing and the latter is kept for backward compatibility) and <code>color.status.&lt;slot&gt;</code> configuration variables to colorize its output. </p>
 <p> If the config variable <code>status.relativePaths</code> is set to false, then all paths shown are relative to the repository root, not to the current directory. </p>

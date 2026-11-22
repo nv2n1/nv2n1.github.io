@@ -99,11 +99,11 @@ SAME $FW 0.0.0.0/0 tcp 80,443</pre>
 <dd><i>mask2</i> = 0x00</dd>
 <dd><i>shift</i> = 0 <code>src</code> and <code>dst</code> specify whether the mark is to be based on the source or destination address respectively. The selected address is first shifted right by <i>shift</i>, then LANDed with <i>mask1</i> and then LORed with <i>mask2</i>. The <i>shift</i> argument is intended to be used primarily with IPv6 addresses. </dd>
 <p> Example: IPMARK(src,0xff,0x10100)</p>
-<dd>Suppose that the source IP address is 192.168.4.3 =<br />
+<dd>Suppose that the source IP address is 192.168.4.3 =<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0xc0a80403;&nbsp;<wbr>then</dd>
 <dd>0xc0a80403 &gt;&gt; 0 = 0xc0a80403</dd>
 <dd>0xc0a80403 LAND 0xFF = 0x03</dd>
-<dd>0x03 LOR 0x0x10100 = 0x10103 or class ID<br />
+<dd>0x03 LOR 0x0x10100 = 0x10103 or class ID<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1:103 It is important to realize that, while class IDs are composed of a <i>major</i> and a <i>minor</i> value, the set of values must be unique. That is, the same numeric value cannot be used as both a <i>major</i> and a <i>minor</i> number for the same interface unless class nesting occurs (which is not currently possible with Shorewall). You should keep this in mind when deciding how to map IP addresses to class IDs. </dd>
 <p> For example, suppose that your internal network is 192.168.1.0/29 (host IP addresses 192.168.1.1 &#8211; 192.168.1.6). Your first notion might be to use IPMARK(src,0xFF,0x10000) so as to produce class IDs 1:1 through 1:6. But 1:1 is an invalid class ID since the <i>major</i> and <i>minor</i> classes are equal. So you might chose instent to use IPMARK(src,0xFF,0x10100) as in the example above so that all of your <i>minor</i> classes will have a value &gt; 256.</dl>
 </dl>

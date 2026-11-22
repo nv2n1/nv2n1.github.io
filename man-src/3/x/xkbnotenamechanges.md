@@ -10,7 +10,7 @@ description: "XkbNoteNameChanges – Note the changed names in a changes structu
 <p>XkbNoteNameChanges &#8211; Note the changed names in a changes structure </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbNoteNameChanges</code> <code>(XkbNameChangesPtr </code><i>old</i><code>,</code> <code>XkbNamesNotifyEvent *</code><i>new</i><code>,</code> <code>unsigned int </code><i>wanted</i><code>);</code><br />
+<dt> <code>void XkbNoteNameChanges</code> <code>(XkbNameChangesPtr </code><i>old</i><code>,</code> <code>XkbNamesNotifyEvent *</code><i>new</i><code>,</code> <code>unsigned int </code><i>wanted</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

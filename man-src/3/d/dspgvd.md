@@ -11,7 +11,7 @@ description: "dspgvd.f –"
 <p> dspgvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dspgvd</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p> subroutine <code>dspgvd</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>DSPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dspgvd (integerITYPE, characterJOBZ, characterUPLO, integerN, double precision, dimension( * )AP, double precision, dimension( * )BP, double precision, dimension( * )W, double precision, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>
@@ -74,14 +74,14 @@ description: "dspgvd.f –"
           On exit, the contents of AP are destroyed.
 </code></pre>
 <p> <i>BP</i> </p>
-<p>          BP is DOUBLE PRECISION array, dimension (N*(N+1)/2)<br />
-          On entry, the upper or lower triangle of the symmetric matrix<br />
-          B, packed columnwise in a linear array.  The j-th column of B<br />
-          is stored in the array BP as follows:<br />
-          if UPLO = &#8216;U&#8217;, BP(i + (j-1)*j/2) = B(i,j) for 1&lt;=i&lt;=j;<br />
-          if UPLO = &#8216;L&#8217;, BP(i + (j-1)*(2*n-j)/2) = B(i,j) for j&lt;=i&lt;=n.<br />
-          On exit, the triangular factor U or L from the Cholesky<br />
-          factorization B = U**T*U or B = L*L**T, in the same storage<br />
+<p>          BP is DOUBLE PRECISION array, dimension (N*(N+1)/2)<br/>
+          On entry, the upper or lower triangle of the symmetric matrix<br/>
+          B, packed columnwise in a linear array.  The j-th column of B<br/>
+          is stored in the array BP as follows:<br/>
+          if UPLO = &#8216;U&#8217;, BP(i + (j-1)*j/2) = B(i,j) for 1&lt;=i&lt;=j;<br/>
+          if UPLO = &#8216;L&#8217;, BP(i + (j-1)*(2*n-j)/2) = B(i,j) for j&lt;=i&lt;=n.<br/>
+          On exit, the triangular factor U or L from the Cholesky<br/>
+          factorization B = U**T*U or B = L*L**T, in the same storage<br/>
           format as B.</p>
 <p> <i>W</i> </p>
 <pre>
@@ -89,8 +89,8 @@ description: "dspgvd.f –"
           If INFO = 0, the eigenvalues in ascending order.
 </pre>
 <p> <i>Z</i> </p>
-<p>Z is DOUBLE PRECISION array, dimension(LDZ, N) If JOBZ = &#8216;V&#8217;, then if INFO = 0, Z contains the matrix Z of eigenvectors.The eigenvectors are normalized as follows : if ITYPE = 1 or 2, Z **T *B *Z = I;<br />
-if ITYPE<br />
+<p>Z is DOUBLE PRECISION array, dimension(LDZ, N) If JOBZ = &#8216;V&#8217;, then if INFO = 0, Z contains the matrix Z of eigenvectors.The eigenvectors are normalized as follows : if ITYPE = 1 or 2, Z **T *B *Z = I;<br/>
+if ITYPE<br/>
 = 3, Z **T *inv(B) *Z = I.If JOBZ = &#8216;N&#8217;, then Z is not referenced.</p>
 <p> <i>LDZ</i> </p>
 <pre>
@@ -104,15 +104,15 @@ if ITYPE<br />
           On exit, if INFO = 0, WORK(1) returns the required LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>LWORK is INTEGER<br />
-        The dimension of the array WORK.If N &lt;= 1,<br />
-    LWORK &gt;= 1. If JOBZ = &#8216;N&#8217; and N &gt; 1, LWORK &gt;= 2 *N.If JOBZ = &#8216;V&#8217; and N &gt; 1, LWORK &gt;= 1 + 6 *N + 2 *N ** 2. If LWORK = -1, then a workspace query is assumed;<br />
-the routine<br />
-    only calculates the required sizes of the WORK and IWORK<br />
-        arrays,<br />
-    returns these values as the first entries of the WORK<br />
-        and IWORK arrays,<br />
-    and no error message related to LWORK or<br />
+<p>LWORK is INTEGER<br/>
+        The dimension of the array WORK.If N &lt;= 1,<br/>
+    LWORK &gt;= 1. If JOBZ = &#8216;N&#8217; and N &gt; 1, LWORK &gt;= 2 *N.If JOBZ = &#8216;V&#8217; and N &gt; 1, LWORK &gt;= 1 + 6 *N + 2 *N ** 2. If LWORK = -1, then a workspace query is assumed;<br/>
+the routine<br/>
+    only calculates the required sizes of the WORK and IWORK<br/>
+        arrays,<br/>
+    returns these values as the first entries of the WORK<br/>
+        and IWORK arrays,<br/>
+    and no error message related to LWORK or<br/>
         LIWORK is issued by XERBLA.</p>
 <p> <i>IWORK</i> </p>
 <pre>
@@ -120,16 +120,16 @@ the routine<br />
           On exit, if INFO = 0, IWORK(1) returns the required LIWORK.
 </pre>
 <p> <i>LIWORK</i> </p>
-<p>LIWORK is INTEGER<br />
-    The dimension of the array IWORK.If JOBZ = &#8216;N&#8217; or N &lt;= 1,<br />
-                                        LIWORK &gt;= 1. If JOBZ = &#8216;V&#8217; and N &gt; 1, LIWORK &gt;= 3 + 5 *N.If LIWORK = -1, then a workspace query is assumed;<br />
-the<br />
-    routine only calculates the required sizes of the WORK and<br />
-        IWORK arrays,<br />
-    returns these values as the first entries of<br />
-        the WORK and IWORK arrays,<br />
-    and no error message related to<br />
-            LWORK or<br />
+<p>LIWORK is INTEGER<br/>
+    The dimension of the array IWORK.If JOBZ = &#8216;N&#8217; or N &lt;= 1,<br/>
+                                        LIWORK &gt;= 1. If JOBZ = &#8216;V&#8217; and N &gt; 1, LIWORK &gt;= 3 + 5 *N.If LIWORK = -1, then a workspace query is assumed;<br/>
+the<br/>
+    routine only calculates the required sizes of the WORK and<br/>
+        IWORK arrays,<br/>
+    returns these values as the first entries of<br/>
+        the WORK and IWORK arrays,<br/>
+    and no error message related to<br/>
+            LWORK or<br/>
         LIWORK is issued by XERBLA.</p>
 <p> <i>INFO</i> </p>
 <pre><code>

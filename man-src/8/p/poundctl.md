@@ -41,5 +41,5 @@ description: "poundctl – control the pound(8) daemon"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;roseg [at] apsis.ch&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2002-2010 Apsis GmbH.<br />
+<p>Copyright &#169; 2002-2010 Apsis GmbH.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>

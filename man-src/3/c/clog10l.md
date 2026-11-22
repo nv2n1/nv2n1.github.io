@@ -10,10 +10,10 @@ description: "clog10, clog10f, clog10l – base-10 logarithm of a complex number
 
 <p> clog10, clog10f, clog10l &#8211; base-10 logarithm of a complex number </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
+<p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br/>
  <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex clog10(double complex </code><i>z</i><code>);</code><br />
- <code>float complex clog10f(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex clog10(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex clog10f(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex clog10l(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

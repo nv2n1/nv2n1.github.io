@@ -32,7 +32,7 @@ description: "crypt_gensalt , crypt_gensalt_rn , crypt_gensalt_ra – encode set
 <dt><code>Er </code>ERANGE</dt>
 <dd> <code>crypt_gensalt_rn</code> only: Fa output_size is too small to hold the compiled Fa setting string.</dd>
 <dt><code>Er </code>ENOMEM</dt>
-<dd> Failed to allocate internal scratch memory.<br />
+<dd> Failed to allocate internal scratch memory.<br/>
  <code>crypt_gensalt_ra</code> only: failed to allocate memory for the compiled Fa setting string.</dd>
 <dt><code>Er </code>ENOSYS , EACCES , EIO , <code>etc.</code></dt>
 <dd> Obtaining random bytes from the operating system failed. This can only happen when Fa rbytes is a null pointer.</dd></dl>

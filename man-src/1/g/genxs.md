@@ -170,15 +170,15 @@ description: "genxs – Mono’s Xml Serializer Generator"
 &lt;/hook&gt;
 </code></pre>
 <p> This hook writes an additional element for all types that have the custom attribute &quot;MyAttribute&quot;: </p>
-<p>&lt;hook type=&#8221;elements&#8221;&gt;<br />
-        &lt;select&gt;<br />
-                &lt;typeAttribute&gt;MyNamespace.MyAttribute&lt;/typeAttribute&gt;<br />
-        &lt;/select&gt;<br />
-        &lt;insertAfter&gt;<br />
-                Writer.WriteStartElement (&#8220;privateData&#8221;);<br />
-                Writer.WriteString ($OBJECT.PrivateData);<br />
-                Writer.WriteEndElement ();<br />
-        &lt;/insertAfter&gt;<br />
+<p>&lt;hook type=&#8221;elements&#8221;&gt;<br/>
+        &lt;select&gt;<br/>
+                &lt;typeAttribute&gt;MyNamespace.MyAttribute&lt;/typeAttribute&gt;<br/>
+        &lt;/select&gt;<br/>
+        &lt;insertAfter&gt;<br/>
+                Writer.WriteStartElement (&#8220;privateData&#8221;);<br/>
+                Writer.WriteString ($OBJECT.PrivateData);<br/>
+                Writer.WriteEndElement ();<br/>
+        &lt;/insertAfter&gt;<br/>
 &lt;/hook&gt;</p>
 <h2>CONFIGURATION FILE EXAMPLE</h2>
 <p> This is the configuration file used to generate the serializer for ServiceDescription: </p>

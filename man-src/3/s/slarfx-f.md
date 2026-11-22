@@ -10,7 +10,7 @@ description: "slarfx.f –"
 <p>slarfx.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slarfx</code> (SIDE, M, N, V, TAU, C, LDC, WORK)<br />
+<p>subroutine <code>slarfx</code> (SIDE, M, N, V, TAU, C, LDC, WORK)<br/>
  <i></i><code>SLARFX</code> applies an elementary reflector to a general rectangular matrix, with loop unrolling when the reflector has order ≤ 10.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slarfx (characterSIDE, integerM, integerN, real, dimension( * )V, realTAU, real, dimension( ldc, * )C, integerLDC, real, dimension( * )WORK)</h3>

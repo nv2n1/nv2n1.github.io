@@ -17,13 +17,13 @@ port
 OPTIONS := {
     -V[ersion] |
     -n[no-nice-names] }</code></pre>
-<p> <code>devlink port set </code> <i>DEV/PORT_INDEX</i> [ <code>type</code> { <code>eth</code> | <code>ib</code> | <code>auto</code> } ]<br />
- <code>devlink port split </code> <i>DEV/PORT_INDEX</i> <code>count</code> <i>COUNT</i><br />
- <code>devlink port unsplit </code> <i>DEV/PORT_INDEX</i><br />
+<p> <code>devlink port set </code> <i>DEV/PORT_INDEX</i> [ <code>type</code> { <code>eth</code> | <code>ib</code> | <code>auto</code> } ]<br/>
+ <code>devlink port split </code> <i>DEV/PORT_INDEX</i> <code>count</code> <i>COUNT</i><br/>
+ <code>devlink port unsplit </code> <i>DEV/PORT_INDEX</i><br/>
  <code>devlink port show</code> [ <i>DEV/PORT_INDEX</i> ] devlink port health</p>
-<p>{ show | recover | diagnose | dump | set }<br />
+<p>{ show | recover | diagnose | dump | set }<br/>
  <code>devlink port add</code> { <i>DEV | DEV/PORT_INDEX</i> } [ <code>flavour</code> <i>FLAVOUR</i> ] [ <code>pfnum</code> <i>PFNUMBER</i> ] [ <code>sfnum</code> <i>SFNUMBER</i> ] [ <code>controller</code> <i>CNUM</i> ] </p>
-<p> <code>devlink port del</code> <i>DEV/PORT_INDEX</i><br />
+<p> <code>devlink port del</code> <i>DEV/PORT_INDEX</i><br/>
  <code>devlink port function set </code> <i>DEV/PORT_INDEX</i> [ <code>hw_addr </code> ADDR ] [ <code>state</code> { <code>active</code> | <code>inactive</code> } ] </p>
 <pre><code>devlink port function rate
 { show | set | add | del | help }
@@ -34,7 +34,7 @@ PARAMETER
 value
 VALUE
 cmode { runtime | driverinit | permanent }</code></pre>
-<p> <code>devlink dev param show</code> [ <i>DEV/PORT_INDEX</i> <code>name</code> <i>PARAMETER</i> ]<br />
+<p> <code>devlink dev param show</code> [ <i>DEV/PORT_INDEX</i> <code>name</code> <i>PARAMETER</i> ]<br/>
  <code>devlink port help</code> </p>
 <h2>Description</h2>
 <h3>devlink port set &#8211; change devlink port attributes</h3>

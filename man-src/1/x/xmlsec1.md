@@ -135,5 +135,5 @@ description: "xmlsec1 – sign, verify, encrypt and decrypt XML documents"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="http://www.aleksey.com/xmlsec/bugs.html">http://www.aleksey.com/xmlsec/bugs.html</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2002-2003 Aleksey Sanin.<br />
+<p> Copyright &#169; 2002-2003 Aleksey Sanin.<br/>
  This is free software: see the source for copying information. </p>

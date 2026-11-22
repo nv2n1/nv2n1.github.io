@@ -10,10 +10,10 @@ description: "ql/termstructures/volatility/equityfx/localconstantvol.hpp – Loc
 
 <p> ql/termstructures/volatility/equityfx/localconstantvol.hpp &#8211; Local constant volatility, no time dependence, no asset dependence. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/volatility/equityfx/blackconstantvol.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/volatility/equityfx/blackconstantvol.hpp&gt;<br/>
  #include &lt;ql/termstructures/volatility/equityfx/localvoltermstructure.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>LocalConstantVol</code><br />
+<p> class <code>LocalConstantVol</code><br/>
  <i>Constant local volatility, no time-strike dependence. </i></p>
 <h2>Detailed Description</h2>
 <p> Local constant volatility, no time dependence, no asset dependence. </p>

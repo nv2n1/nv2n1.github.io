@@ -23,174 +23,174 @@ dcmfile-in  DICOM query file(s)
 </pre>
 <h2>OPTIONS</h2>
 <h3>general options</h3>
-<p>&#8211; h&#8211; help<br />
-        print this help text and exit&#8211; version<br />
-            print version information and exit&#8211; arguments<br />
-                print expanded command line arguments &#8211;<br />
-    q&#8211; quiet<br />
-        quiet mode,<br />
-    print no warnings and errors &#8211; v&#8211; verbose<br />
-                                       verbose mode,<br />
-    print processing details &#8211; d&#8211; debug<br />
-                                   debug mode,<br />
-    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br />
-                                                       constant(fatal, error, warn, info, debug, trace)<br />
-          use level l for the logger<br />
-  -lc   &#8211;log-config  [f]ilename: string<br />
+<p>&#8211; h&#8211; help<br/>
+        print this help text and exit&#8211; version<br/>
+            print version information and exit&#8211; arguments<br/>
+                print expanded command line arguments &#8211;<br/>
+    q&#8211; quiet<br/>
+        quiet mode,<br/>
+    print no warnings and errors &#8211; v&#8211; verbose<br/>
+                                       verbose mode,<br/>
+    print processing details &#8211; d&#8211; debug<br/>
+                                   debug mode,<br/>
+    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br/>
+                                                       constant(fatal, error, warn, info, debug, trace)<br/>
+          use level l for the logger<br/>
+  -lc   &#8211;log-config  [f]ilename: string<br/>
           use config file f for the logger</p>
 <h3>network options</h3>
-<p>override matching keys:<br />
-  -k    &#8211;key  [k]ey: gggg,eeee=&#8221;str&#8221; or dictionary name=&#8221;str&#8221;<br />
-          override matching key<br />
-query information model:<br />
-  -P    &#8211;patient<br />
-          use patient root information model (default)<br />
-  -S    &#8211;study<br />
-          use study root information model<br />
-  -O    &#8211;psonly<br />
-          use patient/study only information model<br />
-application entity titles:<br />
-  -aet  &#8211;aetitle  [a]etitle: string<br />
-          set my calling AE title (default: MOVESCU)<br />
-  -aec  &#8211;call  [a]etitle: string<br />
-          set called AE title of peer (default: ANY-SCP)<br />
-  -aem  &#8211;move  [a]etitle: string<br />
-          set move destination AE title (default: MOVESCU)<br />
-preferred network transfer syntaxes (incoming associations):<br />
-  +x=   &#8211;prefer-uncompr<br />
-          prefer explicit VR local byte order (default)<br />
-  +xe   &#8211;prefer-little<br />
-          prefer explicit VR little endian TS<br />
-  +xb   &#8211;prefer-big<br />
-          prefer explicit VR big endian TS<br />
-  +xs   &#8211;prefer-lossless<br />
-          prefer default JPEG lossless TS<br />
-  +xy   &#8211;prefer-jpeg8<br />
-          prefer default JPEG lossy TS for 8 bit data<br />
-  +xx   &#8211;prefer-jpeg12<br />
-          prefer default JPEG lossy TS for 12 bit data<br />
-  +xv   &#8211;prefer-j2k-lossless<br />
-          prefer JPEG 2000 lossless TS<br />
-  +xw   &#8211;prefer-j2k-lossy<br />
-          prefer JPEG 2000 lossy TS<br />
-  +xt   &#8211;prefer-jls-lossless<br />
-          prefer JPEG-LS lossless TS<br />
-  +xu   &#8211;prefer-jls-lossy<br />
-          prefer JPEG-LS lossy TS<br />
-  +xm   &#8211;prefer-mpeg2<br />
-          prefer MPEG2 Main Profile @ Main Level TS<br />
-  +xh   &#8211;prefer-mpeg2-high<br />
-          prefer MPEG2 Main Profile @ High Level TS<br />
-  +xr   &#8211;prefer-rle<br />
-          prefer RLE lossless TS<br />
-  +xd   &#8211;prefer-deflated<br />
-          prefer deflated explicit VR little endian TS<br />
-  +xi   &#8211;implicit<br />
-          accept implicit VR little endian TS only<br />
-  +xa   &#8211;accept-all<br />
-          accept all supported transfer syntaxes<br />
-proposed transmission transfer syntaxes (outgoing associations):<br />
-  -x=   &#8211;propose-uncompr<br />
-          propose all uncompressed TS, explicit VR<br />
-          with local byte ordering first (default)<br />
-  -xe   &#8211;propose-little<br />
-          propose all uncompressed TS, explicit VR little endian first<br />
-  -xb   &#8211;propose-big<br />
-          propose all uncompressed TS, explicit VR big endian first<br />
-  -xi   &#8211;propose-implicit<br />
-          propose implicit VR little endian TS only<br />
-network host access control (tcp wrapper):<br />
-  -ac   &#8211;access-full<br />
-          accept connections from any host (default)<br />
-  +ac   &#8211;access-control<br />
-          enforce host access control rules<br />
-port for incoming network associations:<br />
-        &#8211;no-port<br />
-          no port for incoming associations (default)<br />
-  +P    &#8211;port  [n]umber: integer<br />
-          port number for incoming associations<br />
-handling of illegal datasets following &#8216;pending&#8217; move responses:<br />
-  -pi   &#8211;pending-ignore<br />
-          assume no dataset present (default)<br />
-  -pr   &#8211;pending-read<br />
-          read and ignore dataset<br />
-other network options:<br />
-  -to   &#8211;timeout  [s]econds: integer (default: unlimited)<br />
-          timeout for connection requests<br />
-  -ta   &#8211;acse-timeout  [s]econds: integer (default: 30)<br />
-          timeout for ACSE messages<br />
-  -td   &#8211;dimse-timeout  [s]econds: integer (default: unlimited)<br />
-          timeout for DIMSE messages<br />
-  -pdu  &#8211;max-pdu  [n]umber of bytes: integer (4096..131072)<br />
-          set max receive pdu to n bytes (default: 16384)<br />
-  -dhl  &#8211;disable-host-lookup<br />
-          disable hostname lookup<br />
-        &#8211;repeat  [n]umber: integer<br />
-          repeat n times<br />
-        &#8211;abort<br />
-          abort association instead of releasing it<br />
-        &#8211;ignore<br />
-          ignore store data, receive but do not store<br />
-        &#8211;cancel  [n]umber: integer<br />
-          cancel after n responses (default: never)<br />
-  -up   &#8211;uid-padding<br />
+<p>override matching keys:<br/>
+  -k    &#8211;key  [k]ey: gggg,eeee=&#8221;str&#8221; or dictionary name=&#8221;str&#8221;<br/>
+          override matching key<br/>
+query information model:<br/>
+  -P    &#8211;patient<br/>
+          use patient root information model (default)<br/>
+  -S    &#8211;study<br/>
+          use study root information model<br/>
+  -O    &#8211;psonly<br/>
+          use patient/study only information model<br/>
+application entity titles:<br/>
+  -aet  &#8211;aetitle  [a]etitle: string<br/>
+          set my calling AE title (default: MOVESCU)<br/>
+  -aec  &#8211;call  [a]etitle: string<br/>
+          set called AE title of peer (default: ANY-SCP)<br/>
+  -aem  &#8211;move  [a]etitle: string<br/>
+          set move destination AE title (default: MOVESCU)<br/>
+preferred network transfer syntaxes (incoming associations):<br/>
+  +x=   &#8211;prefer-uncompr<br/>
+          prefer explicit VR local byte order (default)<br/>
+  +xe   &#8211;prefer-little<br/>
+          prefer explicit VR little endian TS<br/>
+  +xb   &#8211;prefer-big<br/>
+          prefer explicit VR big endian TS<br/>
+  +xs   &#8211;prefer-lossless<br/>
+          prefer default JPEG lossless TS<br/>
+  +xy   &#8211;prefer-jpeg8<br/>
+          prefer default JPEG lossy TS for 8 bit data<br/>
+  +xx   &#8211;prefer-jpeg12<br/>
+          prefer default JPEG lossy TS for 12 bit data<br/>
+  +xv   &#8211;prefer-j2k-lossless<br/>
+          prefer JPEG 2000 lossless TS<br/>
+  +xw   &#8211;prefer-j2k-lossy<br/>
+          prefer JPEG 2000 lossy TS<br/>
+  +xt   &#8211;prefer-jls-lossless<br/>
+          prefer JPEG-LS lossless TS<br/>
+  +xu   &#8211;prefer-jls-lossy<br/>
+          prefer JPEG-LS lossy TS<br/>
+  +xm   &#8211;prefer-mpeg2<br/>
+          prefer MPEG2 Main Profile @ Main Level TS<br/>
+  +xh   &#8211;prefer-mpeg2-high<br/>
+          prefer MPEG2 Main Profile @ High Level TS<br/>
+  +xr   &#8211;prefer-rle<br/>
+          prefer RLE lossless TS<br/>
+  +xd   &#8211;prefer-deflated<br/>
+          prefer deflated explicit VR little endian TS<br/>
+  +xi   &#8211;implicit<br/>
+          accept implicit VR little endian TS only<br/>
+  +xa   &#8211;accept-all<br/>
+          accept all supported transfer syntaxes<br/>
+proposed transmission transfer syntaxes (outgoing associations):<br/>
+  -x=   &#8211;propose-uncompr<br/>
+          propose all uncompressed TS, explicit VR<br/>
+          with local byte ordering first (default)<br/>
+  -xe   &#8211;propose-little<br/>
+          propose all uncompressed TS, explicit VR little endian first<br/>
+  -xb   &#8211;propose-big<br/>
+          propose all uncompressed TS, explicit VR big endian first<br/>
+  -xi   &#8211;propose-implicit<br/>
+          propose implicit VR little endian TS only<br/>
+network host access control (tcp wrapper):<br/>
+  -ac   &#8211;access-full<br/>
+          accept connections from any host (default)<br/>
+  +ac   &#8211;access-control<br/>
+          enforce host access control rules<br/>
+port for incoming network associations:<br/>
+        &#8211;no-port<br/>
+          no port for incoming associations (default)<br/>
+  +P    &#8211;port  [n]umber: integer<br/>
+          port number for incoming associations<br/>
+handling of illegal datasets following &#8216;pending&#8217; move responses:<br/>
+  -pi   &#8211;pending-ignore<br/>
+          assume no dataset present (default)<br/>
+  -pr   &#8211;pending-read<br/>
+          read and ignore dataset<br/>
+other network options:<br/>
+  -to   &#8211;timeout  [s]econds: integer (default: unlimited)<br/>
+          timeout for connection requests<br/>
+  -ta   &#8211;acse-timeout  [s]econds: integer (default: 30)<br/>
+          timeout for ACSE messages<br/>
+  -td   &#8211;dimse-timeout  [s]econds: integer (default: unlimited)<br/>
+          timeout for DIMSE messages<br/>
+  -pdu  &#8211;max-pdu  [n]umber of bytes: integer (4096..131072)<br/>
+          set max receive pdu to n bytes (default: 16384)<br/>
+  -dhl  &#8211;disable-host-lookup<br/>
+          disable hostname lookup<br/>
+        &#8211;repeat  [n]umber: integer<br/>
+          repeat n times<br/>
+        &#8211;abort<br/>
+          abort association instead of releasing it<br/>
+        &#8211;ignore<br/>
+          ignore store data, receive but do not store<br/>
+        &#8211;cancel  [n]umber: integer<br/>
+          cancel after n responses (default: never)<br/>
+  -up   &#8211;uid-padding<br/>
           silently correct space-padded UIDs</p>
 <h3>output options</h3>
-<p>general:<br />
-  -od   &#8211;output-directory  [d]irectory: string (default: &#8220;.&#8221;)<br />
-          write received objects to existing directory d<br />
-bit preserving mode:<br />
-  -B    &#8211;normal<br />
-          allow implicit format conversions (default)<br />
-  +B    &#8211;bit-preserving<br />
-          write data exactly as read<br />
-output file format:<br />
-  +F    &#8211;write-file<br />
-          write file format (default)<br />
-  -F    &#8211;write-dataset<br />
-          write data set without file meta information<br />
-output transfer syntax<br />
-(not with &#8211;bit-preserving or compressed transmission):<br />
-  +t=   &#8211;write-xfer-same<br />
-          write with same TS as input (default)<br />
-  +te   &#8211;write-xfer-little<br />
-          write with explicit VR little endian TS<br />
-  +tb   &#8211;write-xfer-big<br />
-          write with explicit VR big endian TS<br />
-  +ti   &#8211;write-xfer-implicit<br />
-          write with implicit VR little endian TS<br />
-  +td   &#8211;write-xfer-deflated<br />
-          write with deflated explicit VR little endian TS<br />
-post-1993 value representations (not with &#8211;bit-preserving):<br />
-  +u    &#8211;enable-new-vr<br />
-          enable support for new VRs (UN/UT) (default)<br />
-  -u    &#8211;disable-new-vr<br />
-          disable support for new VRs, convert to OB<br />
-group length encoding (not with &#8211;bit-preserving):<br />
-  +g=   &#8211;group-length-recalc<br />
-          recalculate group lengths if present (default)<br />
-  +g    &#8211;group-length-create<br />
-          always write with group length elements<br />
-  -g    &#8211;group-length-remove<br />
-          always write without group length elements<br />
-length encoding in sequences and items (not with &#8211;bit-preserving):<br />
-  +e    &#8211;length-explicit<br />
-          write with explicit lengths (default)<br />
-  -e    &#8211;length-undefined<br />
-          write with undefined lengths<br />
-data set trailing padding<br />
-(not with &#8211;write-dataset or &#8211;bit-preserving):<br />
-  -p    &#8211;padding-off<br />
-          no padding (default)<br />
-  +p    &#8211;padding-create  [f]ile-pad [i]tem-pad: integer<br />
-          align file on multiple of f bytes and items on<br />
-          multiple of i bytes<br />
-deflate compression level (only with &#8211;write-xfer-deflated/same):<br />
-  +cl   &#8211;compression-level  [l]evel: integer (default: 6)<br />
+<p>general:<br/>
+  -od   &#8211;output-directory  [d]irectory: string (default: &#8220;.&#8221;)<br/>
+          write received objects to existing directory d<br/>
+bit preserving mode:<br/>
+  -B    &#8211;normal<br/>
+          allow implicit format conversions (default)<br/>
+  +B    &#8211;bit-preserving<br/>
+          write data exactly as read<br/>
+output file format:<br/>
+  +F    &#8211;write-file<br/>
+          write file format (default)<br/>
+  -F    &#8211;write-dataset<br/>
+          write data set without file meta information<br/>
+output transfer syntax<br/>
+(not with &#8211;bit-preserving or compressed transmission):<br/>
+  +t=   &#8211;write-xfer-same<br/>
+          write with same TS as input (default)<br/>
+  +te   &#8211;write-xfer-little<br/>
+          write with explicit VR little endian TS<br/>
+  +tb   &#8211;write-xfer-big<br/>
+          write with explicit VR big endian TS<br/>
+  +ti   &#8211;write-xfer-implicit<br/>
+          write with implicit VR little endian TS<br/>
+  +td   &#8211;write-xfer-deflated<br/>
+          write with deflated explicit VR little endian TS<br/>
+post-1993 value representations (not with &#8211;bit-preserving):<br/>
+  +u    &#8211;enable-new-vr<br/>
+          enable support for new VRs (UN/UT) (default)<br/>
+  -u    &#8211;disable-new-vr<br/>
+          disable support for new VRs, convert to OB<br/>
+group length encoding (not with &#8211;bit-preserving):<br/>
+  +g=   &#8211;group-length-recalc<br/>
+          recalculate group lengths if present (default)<br/>
+  +g    &#8211;group-length-create<br/>
+          always write with group length elements<br/>
+  -g    &#8211;group-length-remove<br/>
+          always write without group length elements<br/>
+length encoding in sequences and items (not with &#8211;bit-preserving):<br/>
+  +e    &#8211;length-explicit<br/>
+          write with explicit lengths (default)<br/>
+  -e    &#8211;length-undefined<br/>
+          write with undefined lengths<br/>
+data set trailing padding<br/>
+(not with &#8211;write-dataset or &#8211;bit-preserving):<br/>
+  -p    &#8211;padding-off<br/>
+          no padding (default)<br/>
+  +p    &#8211;padding-create  [f]ile-pad [i]tem-pad: integer<br/>
+          align file on multiple of f bytes and items on<br/>
+          multiple of i bytes<br/>
+deflate compression level (only with &#8211;write-xfer-deflated/same):<br/>
+  +cl   &#8211;compression-level  [l]evel: integer (default: 6)<br/>
           0=uncompressed, 1=fastest, 9=best compression</p>
 <h2>NOTES</h2>
 <p> Each file supplied on the command line will be sent to the SCP as part of a C-MOVE request. The query file must be a valid DICOM data set containing the dataset part of a C-MOVE-RQ message. The query file could, for instance, be created with the <code>dump2dcm</code> utility from a script like the following example: </p>
-<p>#request all images for the patient with ID = PAT001<br />
+<p>#request all images for the patient with ID = PAT001<br/>
 (0008, 0052) CS[PATIENT] #QueryRetrieveLevel(0010, 0020) LO[PAT001] #PatientID</p>
 <p> Individual attributes of each file sent can be modified or supplemented using the &#8216;-k key&#8217; option. For example the command: </p>
 <pre>

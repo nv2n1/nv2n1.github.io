@@ -11,7 +11,7 @@ description: "sla_gbrcond.f –"
 <p> sla_gbrcond.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>sla_gbrcond</code> (TRANS, N, KL, KU, AB, LDAB, AFB, LDAFB, IPIV, CMODE, C, INFO, WORK, IWORK)<br />
+<p> REAL function <code>sla_gbrcond</code> (TRANS, N, KL, KU, AB, LDAB, AFB, LDAFB, IPIV, CMODE, C, INFO, WORK, IWORK)<br/>
  <i></i><code>SLA_GBRCOND</code> estimates the Skeel condition number for a general banded matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function sla_gbrcond (characterTRANS, integerN, integerKL, integerKU, real, dimension( ldab, * )AB, integerLDAB, real, dimension( ldafb, * )AFB, integerLDAFB, integer, dimension( * )IPIV, integerCMODE, real, dimension( * )C, integerINFO, real, dimension( * )WORK, integer, dimension( * )IWORK)</h3>

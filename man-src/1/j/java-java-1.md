@@ -132,7 +132,7 @@ static void main(String[] args)
 <dt>
 </dt><dd> Runs the application in a 64-bit environment. If a 64-bit environment is not installed or is not supported, then an error will be reported. By default, the application is run in a 32-bit environment unless a 64-bit system is used. </dd>
 <p> Currently only the Java HotSpot Server VM supports 64-bit operation, and the <code>-server</code> option is implicit with the use of <code>-d64</code>. The <code>-client</code> option is ignored with the use of <code>-d64</code>. This is subject to change in a future release.</dl>
-<p> -disableassertions[:[<i>packagename</i>]&#8230;|:<i>classname</i>]<br />
+<p> -disableassertions[:[<i>packagename</i>]&#8230;|:<i>classname</i>]<br/>
  -da[:[<i>packagename</i>]&#8230;|:<i>classname</i>]</p>
 <dl>
 <dt>
@@ -148,12 +148,12 @@ static void main(String[] args)
 </pre>
 </dd></dl>
 </dl>
-<p> -disablesystemassertions<br />
+<p> -disablesystemassertions<br/>
  -dsa</p>
 <dl>
 <dt>
 </dt><dd> Disables assertions in all system classes.</dd></dl>
-<p> -enableassertions[:[<i>packagename</i>]&#8230;|:<i>classname</i>]<br />
+<p> -enableassertions[:[<i>packagename</i>]&#8230;|:<i>classname</i>]<br/>
  -ea[:[<i>packagename</i>]&#8230;|:<i>classname</i>]</p>
 <dl>
 <dt>
@@ -169,12 +169,12 @@ static void main(String[] args)
 </pre>
 </dd></dl>
 </dl>
-<p> -enablesystemassertions<br />
+<p> -enablesystemassertions<br/>
  -esa</p>
 <dl>
 <dt>
 </dt><dd> Enables assertions in all system classes.</dd></dl>
-<p> -help<br />
+<p> -help<br/>
  -?</p>
 <dl>
 <dt>
@@ -1709,7 +1709,7 @@ static void main(String[] args)
 </dt><dd> Enables caching of commonly allocated strings. This option was removed from JDK 8 with no replacement.</dd></dl>
 <h2>PERFORMANCE TUNING EXAMPLES</h2>
 <p> The following examples show how to use experimental tuning flags to either optimize throughput or to provide lower response time. </p>
-<p> <code>Example 1</code><br />
+<p> <code>Example 1</code><br/>
  Tuning for Higher Throughput</p>
 <dl>
 <dl>
@@ -1720,7 +1720,7 @@ static void main(String[] args)
 </pre>
 </dd></dl>
 </dl>
-<p> <code>Example 2</code><br />
+<p> <code>Example 2</code><br/>
  Tuning for Lower Response Time</p>
 <dl>
 <dl>

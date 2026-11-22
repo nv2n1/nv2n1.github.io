@@ -22,14 +22,14 @@ Protected Member Functions</code></pre>
 <p> Time &amp; <code>time</code> () </p>
 <p> const <code>Array</code> &amp; <code>values</code> () const </p>
 <p> <code>Array</code> &amp; <code>values</code> () </p>
-<p> const boost::shared_ptr&lt; <code>Lattice</code> &gt; &amp; <code>method</code> () const<br />
- <code>High-level interface</code><br />
+<p> const boost::shared_ptr&lt; <code>Lattice</code> &gt; &amp; <code>method</code> () const<br/>
+ <code>High-level interface</code><br/>
  Users of discretized assets should use these methods in order to initialize, evolve and take the present value of the assets. They call the corresponding methods in the <code>Lattice</code> interface, to which we refer for documentation. virtual void reset (Size size)=0</p>
 <p>void preAdjustValues ()</p>
 <p>void postAdjustValues ()</p>
 <p>void adjustValues ()</p>
 <p>virtual std::vector&lt; Time &gt; mandatoryTimes () const =0</p>
-<p>Protected Member Functions <code>Low-level interface</code><br />
+<p>Protected Member Functions <code>Low-level interface</code><br/>
  These methods (that developers should override when deriving from <code>DiscretizedAsset</code>) are to be used by numerical methods and not directly by users, with the exception of <code>adjustValues()</code>, <code>preAdjustValues()</code> and <code>postAdjustValues()</code> that can be used together with partialRollback(). </p>
 <pre><code>virtual void reset (Size size)=0
 void preAdjustValues ()

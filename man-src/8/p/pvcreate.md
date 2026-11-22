@@ -18,11 +18,11 @@ description: "pvcreate – Initialize physical volume(s) for use by LVM"
 <p> <code>Metadata location, size, and alignment</code> </p>
 <p> The LVM disk label begins 512 bytes from the start of the device, and is 512 bytes in size. </p>
 <p> The LVM metadata area begins at an offset (from the start of the device) equal to the page size of the machine creating the PV (often 4 KiB.) The metadata area contains a 512 byte header and a multi-KiB circular buffer that holds text copies of the VG metadata. </p>
-<p> With default settings, the first physical extent (PE), which contains LV data, is 1 MiB from the start of the device. This location is controlled by <code>default_data_alignment</code> in lvm.conf, which is set to 1 (MiB) by default. The pe_start will be a multiple of this many MiB. This location can be checked with:<br />
+<p> With default settings, the first physical extent (PE), which contains LV data, is 1 MiB from the start of the device. This location is controlled by <code>default_data_alignment</code> in lvm.conf, which is set to 1 (MiB) by default. The pe_start will be a multiple of this many MiB. This location can be checked with:<br/>
  <code>pvs -o pe_start</code> <i>PV</i> </p>
-<p> The size of the LVM metadata area is the space between the the start of the metadata area and the first PE. When metadata begins at 4 KiB and the first PE is at 1024 KiB, the metadata area size is 1020 KiB. This can be checked with:<br />
+<p> The size of the LVM metadata area is the space between the the start of the metadata area and the first PE. When metadata begins at 4 KiB and the first PE is at 1024 KiB, the metadata area size is 1020 KiB. This can be checked with:<br/>
  <code>pvs -o mda_size</code> <i>PV</i> </p>
-<p> The mda_size cannot be increased after pvcreate, so if larger metadata is needed, it must be set during pvcreate. Two copies of the VG metadata must always fit within the metadata area, so the maximum VG metadata size is around half the mda_size. This can be checked with:<br />
+<p> The mda_size cannot be increased after pvcreate, so if larger metadata is needed, it must be set during pvcreate. Two copies of the VG metadata must always fit within the metadata area, so the maximum VG metadata size is around half the mda_size. This can be checked with:<br/>
  <code>vgs -o mda_free</code> <i>VG</i> </p>
 <p> A larger metadata area can be set with &#8211;metadatasize. The resulting mda_size may be larger than specified due to default_data_alignment placing pe_start on a MiB boundary, and the fact that the metadata area extends to the first PE. With metadata starting at 4 KiB and default_data_alignment 1 (MiB), setting &#8211;metadatasize 2048k results in pe_start of 3 MiB and mda_size of 3068 KiB. Alternatively, &#8211;metadatasize 2044k results in pe_start at 2 MiB and mda_size of 2044 KiB. </p>
 <p> The alignment of pe_start described above may be automatically overriden based on md device properties or device i/o properties reported in sysfs. These automatic adjustments can be enabled/disabled using lvm.conf settings md_chunk_alignment and data_alignment_offset_detection. </p>
@@ -31,37 +31,37 @@ description: "pvcreate – Initialize physical volume(s) for use by LVM"
 <h2>Usage</h2>
 <p><code>pvcreate</code> <i>PV</i> &#8230; </p>
 <dl>
-<dd>[ <code>-f</code>|<code>&#8211;force</code> ]<br />
- [ <code>-M</code>|<code>&#8211;metadatatype</code> <code>lvm2</code> ]<br />
- [ <code>-u</code>|<code>&#8211;uuid</code> <i>String</i> ]<br />
- [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;dataalignment</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;dataalignmentoffset</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;bootloaderareasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;labelsector</code> <i>Number</i> ]<br />
- [ <code>&#8211;[pv]metadatacopies</code> <code>0</code>|<code>1</code>|<code>2</code> ]<br />
- [ <code>&#8211;metadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;metadataignore</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;norestorefile</code> ]<br />
- [ <code>&#8211;setphysicalvolumesize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br />
- [ <code>&#8211;restorefile</code> <i>String</i> ]<br />
+<dd>[ <code>-f</code>|<code>&#8211;force</code> ]<br/>
+ [ <code>-M</code>|<code>&#8211;metadatatype</code> <code>lvm2</code> ]<br/>
+ [ <code>-u</code>|<code>&#8211;uuid</code> <i>String</i> ]<br/>
+ [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;dataalignment</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;dataalignmentoffset</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;bootloaderareasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;labelsector</code> <i>Number</i> ]<br/>
+ [ <code>&#8211;[pv]metadatacopies</code> <code>0</code>|<code>1</code>|<code>2</code> ]<br/>
+ [ <code>&#8211;metadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;metadataignore</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;norestorefile</code> ]<br/>
+ [ <code>&#8211;setphysicalvolumesize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br/>
+ [ <code>&#8211;restorefile</code> <i>String</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>
@@ -166,9 +166,9 @@ description: "pvcreate – Initialize physical volume(s) for use by LVM"
 <h2>Environment Variables</h2>
 <p>See <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) for information about environment variables used by lvm. For example, LVM_VG_NAME can generally be substituted for a required VG parameter.</p>
 <h2>Examples</h2>
-<p>Initialize a partition and a full device.<br />
+<p>Initialize a partition and a full device.<br/>
  <code>pvcreate /dev/sdc4 /dev/sde</code> </p>
-<p> If a device is a 4KiB sector drive that compensates for windows partitioning (sector 7 is the lowest aligned logical block, the 4KiB sectors start at LBA -1, and consequently sector 63 is aligned on a 4KiB boundary) manually account for this when initializing for use by LVM.<br />
+<p> If a device is a 4KiB sector drive that compensates for windows partitioning (sector 7 is the lowest aligned logical block, the 4KiB sectors start at LBA -1, and consequently sector 63 is aligned on a 4KiB boundary) manually account for this when initializing for use by LVM.<br/>
  <code>pvcreate &#8211;dataalignmentoffset 7s /dev/sdb</code></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8) <code><a href="/docs/linux/man/8-pvchange/">pvchange</a></code>(8) <code><a href="/docs/linux/man/8-pvck/">pvck</a></code>(8) <code><a href="/docs/linux/man/8-pvcreate/">pvcreate</a></code>(8) <code><a href="/docs/linux/man/8-pvdisplay/">pvdisplay</a></code>(8) <code><a href="/docs/linux/man/8-pvmove/">pvmove</a></code>(8) <code><a href="/docs/linux/man/8-pvremove/">pvremove</a></code>(8) <code><a href="/docs/linux/man/8-pvresize/">pvresize</a></code>(8) <code><a href="/docs/linux/man/8-pvs/">pvs</a></code>(8) <code><a href="/docs/linux/man/8-pvscan/">pvscan</a></code>(8) <code><a href="/docs/linux/man/8-vgcfgbackup/">vgcfgbackup</a></code>(8) <code><a href="/docs/linux/man/8-vgcfgrestore/">vgcfgrestore</a></code>(8) <code><a href="/docs/linux/man/8-vgchange/">vgchange</a></code>(8) <code><a href="/docs/linux/man/8-vgck/">vgck</a></code>(8) <code><a href="/docs/linux/man/8-vgcreate/">vgcreate</a></code>(8) <code><a href="/docs/linux/man/8-vgconvert/">vgconvert</a></code>(8) <code><a href="/docs/linux/man/8-vgdisplay/">vgdisplay</a></code>(8) <code><a href="/docs/linux/man/8-vgexport/">vgexport</a></code>(8) <code><a href="/docs/linux/man/8-vgextend/">vgextend</a></code>(8) <code><a href="/docs/linux/man/8-vgimport/">vgimport</a></code>(8) <code><a href="/docs/linux/man/8-vgimportclone/">vgimportclone</a></code>(8) <code><a href="/docs/linux/man/8-vgmerge/">vgmerge</a></code>(8) <code><a href="/docs/linux/man/8-vgmknodes/">vgmknodes</a></code>(8) <code><a href="/docs/linux/man/8-vgreduce/">vgreduce</a></code>(8) <code><a href="/docs/linux/man/8-vgremove/">vgremove</a></code>(8) <code><a href="/docs/linux/man/8-vgrename/">vgrename</a></code>(8) <code><a href="/docs/linux/man/8-vgs/">vgs</a></code>(8) <code><a href="/docs/linux/man/8-vgscan/">vgscan</a></code>(8) <code><a href="/docs/linux/man/8-vgsplit/">vgsplit</a></code>(8) <code><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></code>(8) <code><a href="/docs/linux/man/8-lvchange/">lvchange</a></code>(8) <code><a href="/docs/linux/man/8-lvconvert/">lvconvert</a></code>(8) <code><a href="/docs/linux/man/8-lvdisplay/">lvdisplay</a></code>(8) <code><a href="/docs/linux/man/8-lvextend/">lvextend</a></code>(8) <code><a href="/docs/linux/man/8-lvreduce/">lvreduce</a></code>(8) <code><a href="/docs/linux/man/8-lvremove/">lvremove</a></code>(8) <code><a href="/docs/linux/man/8-lvrename/">lvrename</a></code>(8) <code><a href="/docs/linux/man/8-lvresize/">lvresize</a></code>(8) <code><a href="/docs/linux/man/8-lvs/">lvs</a></code>(8) <code><a href="/docs/linux/man/8-lvscan/">lvscan</a></code>(8) <code><a href="/docs/linux/man/8-lvm-fullreport/">lvm-fullreport</a></code>(8) <code><a href="/docs/linux/man/8-lvm-lvpoll/">lvm-lvpoll</a></code>(8) <code><a href="/docs/linux/man/8-lvm2-activation-generator/">lvm2-activation-generator</a></code>(8) <code><a href="/docs/linux/man/8-blkdeactivate/">blkdeactivate</a></code>(8) <code><a href="/docs/linux/man/8-lvmdump/">lvmdump</a></code>(8) <code><a href="/docs/linux/man/8-dmeventd/">dmeventd</a></code>(8) <code><a href="/docs/linux/man/8-lvmpolld/">lvmpolld</a></code>(8) <code><a href="/docs/linux/man/8-lvmlockd/">lvmlockd</a></code>(8) <code><a href="/docs/linux/man/8-lvmlockctl/">lvmlockctl</a></code>(8) <code><a href="/docs/linux/man/8-cmirrord/">cmirrord</a></code>(8) <code>lvmdbusd</code>(8) <code><a href="/docs/linux/man/7-lvmsystemid/">lvmsystemid</a></code>(7) <code><a href="/docs/linux/man/7-lvmreport/">lvmreport</a></code>(7) <code><a href="/docs/linux/man/7-lvmraid/">lvmraid</a></code>(7) <code><a href="/docs/linux/man/7-lvmthin/">lvmthin</a></code>(7) <code><a href="/docs/linux/man/7-lvmcache/">lvmcache</a></code>(7) </p>

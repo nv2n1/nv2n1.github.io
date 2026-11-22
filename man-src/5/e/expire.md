@@ -10,11 +10,11 @@ description: "expire.ctl – Configuration file for article expiration"
 <p>expire.ctl &#8211; Configuration file for article expiration</p>
 <h2>Description</h2>
 <p>The file <i>pathetc</i>/expire.ctl is the default configuration file for <code>expire</code> and <code>expireover</code>, which read it at start-up. It serves two purposes: it defines how long history entries for expired or rejected articles are remembered, and it determines how long articles stored on the server are retained. </p>
-<p> Normally, if all of the storage methods used by the server are self-expiring (such as <font SIZE="-1">CNFS</font>), all lines except the <tt>&quot;/remember/&quot;</tt> setting (described below) are ignored. This can be changed with the <code>-N</code> option to <code>expire</code> or <code>expireover</code>. </p>
+<p> Normally, if all of the storage methods used by the server are self-expiring (such as CNFS), all lines except the <tt>&quot;/remember/&quot;</tt> setting (described below) are ignored. This can be changed with the <code>-N</code> option to <code>expire</code> or <code>expireover</code>. </p>
 <p> Blank lines and lines beginning with a number sign (<tt>&quot;#&quot;</tt>) are ignored. All other lines should be in one of two formats. The order of the file is significant, and the last matching entry will be used. </p>
 <p> The first format specifies how long to keep history entries for articles that aren&#8217;t present in the news spool. These are articles that have either already expired, or articles which the server rejected (when <i>remembertrash</i> is set to true in <i>inn.conf</i>). There should be one and only one line in this format, which looks like: </p>
 <pre> /remember/:&lt;days&gt;</pre>
-<p>where &lt;days&gt; is a decimal number that specifies the minimum number of days a history record for a given message <font SIZE="-1">ID</font> is retained, regardless of whether the article is present in the spool. (History entries for articles still present in the spool are always retained.) </p>
+<p>where &lt;days&gt; is a decimal number that specifies the minimum number of days a history record for a given message ID is retained, regardless of whether the article is present in the spool. (History entries for articles still present in the spool are always retained.) </p>
 <p> The primary reason to retain a record of old articles is in case a peer offers old articles that were previously accepted but have already expired. Without a history record for such articles, the server would accept the article again and readers would see duplicate articles. Articles older than a certain number of days won&#8217;t be accepted by the server at all (see <i>artcutoff</i> in <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5) and the <code>-c</code> flag in <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8)), and this setting should probably match that time period (10 days by default) to ensure that the server never accepts duplicates. </p>
 <p> Most of the lines in this file will be in the second format, which consists of either four or five colon-separated fields: </p>
 <pre> &lt;pattern&gt;:&lt;flag&gt;:&lt;min&gt;:&lt;default&gt;:&lt;max&gt;</pre>
@@ -57,7 +57,7 @@ description: "expire.ctl – Configuration file for article expiration"
 <pre> # Class 0 is retained for two weeks.
  0:14:14:14</pre>
 <h2>History</h2>
-<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Russ Allbery &lt;rra [at] stanford.edu&gt;. </p>
+<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to POD by Russ Allbery &lt;rra [at] stanford.edu&gt;. </p>
 <p> $Id: expire.ctl.pod 7851 2008-05-26 19:33:08Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-expire/">expire</a></i>(8), <i><a href="/docs/linux/man/8-expireover/">expireover</a></i>(8), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/8-news-daily/">news.daily</a></i>(8), <i><a href="/docs/linux/man/5-storage-conf/">storage.conf</a></i>(5), <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3). </p>

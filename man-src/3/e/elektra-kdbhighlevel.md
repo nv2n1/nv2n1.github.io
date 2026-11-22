@@ -32,21 +32,21 @@ description: "KDB :: High Level methods –"
 <p> When it is not possible to make a key out of that string -1 is returned . </p>
 <p> When parentName starts with / cascading will be used and both keys from user and system will be fetched. </p>
 <p> A typically app with about 3000 keys may have this line: </p>
-<p>KDB *handle = kdbOpen();<br />
-KeySet *myConfig = (4096, KS_END);<br />
-ssize_t ret = kdbGetByName(handle, myConfig, &#8216;/sw/app/current&#8217;, 0);<br />
-// check ret and work with keyset myConfig<br />
-ksDel(myConfig);<br />
-kdbClose(handle);<br />
+<p>KDB *handle = kdbOpen();<br/>
+KeySet *myConfig = (4096, KS_END);<br/>
+ssize_t ret = kdbGetByName(handle, myConfig, &#8216;/sw/app/current&#8217;, 0);<br/>
+// check ret and work with keyset myConfig<br/>
+ksDel(myConfig);<br/>
+kdbClose(handle);<br/>
 *</p>
 <p> myConfig will be loaded with keys from system/sw/app/current but also user/sw/app/current. </p>
 <p> When one of these <code>kdbGet()</code> fails -1 will be returned, but the other <code>kdbGet()</code> will be tried too. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
- <i>name</i> the name where to get the keys below<br />
- <i>returned</i> the (pre-initialized) KeySet returned with all keys found<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br/>
+ <i>name</i> the name where to get the keys below<br/>
+ <i>returned</i> the (pre-initialized) KeySet returned with all keys found<br/>
  <i>options</i> ORed options to control approaches Unlike to <code>kdbGet()</code> is KDB_O_POP set per default.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -66,7 +66,7 @@ kdbClose(handle);<br />
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br/>
  <i>dest</i> a pointer to a Key that has a name set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -97,9 +97,9 @@ kdbClose(handle);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
- <i>keyname</i> the name of the key to receive the value<br />
- <i>returned</i> a buffer to put the key value<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br/>
+ <i>keyname</i> the name of the key to receive the value<br/>
+ <i>returned</i> a buffer to put the key value<br/>
  <i>maxSize</i> the size of the buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -119,7 +119,7 @@ kdbClose(handle);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br/>
  <i>keyname</i> the name of the key to be removed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -137,7 +137,7 @@ kdbClose(handle);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br/>
  <i>key</i> Key to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -157,8 +157,8 @@ kdbClose(handle);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br />
- <i>keyname</i> the name of the key to receive the value<br />
+</dt><dd> <i>handle</i> contains internal information of <code>opened </code> key database<br/>
+ <i>keyname</i> the name of the key to receive the value<br/>
  <i>value</i> the value to be set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

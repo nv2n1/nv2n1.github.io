@@ -382,7 +382,7 @@ shell&gt; innochecksum ./data/*/*.ibd
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Running <code>innochecksum</code> on multiple user-defined tablespace files is not supported on Windows operating systems, as Windows shells such as <code>cmd.exe</code> do not support glob pattern expansion. On Windows systems, <code>innochecksum</code> must be run separately for each user-defined tablespace file. For example: </p>
 <dl>
 <dt>
@@ -415,7 +415,7 @@ shell&gt; cat ibdata* | innochecksum -
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Running <code>innochecksum</code> on multiple files in the same tablespace is not supported on Windows operating systems, as Windows shells such as <code>cmd.exe</code> do not support glob pattern expansion. On Windows systems, <code>innochecksum</code> must be run separately for each system tablespace file. For example: </p>
 <dl>
 <dt>

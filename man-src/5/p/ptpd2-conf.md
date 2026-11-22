@@ -360,7 +360,7 @@ description: "ptpd2.conf – Precision Time Protocol daemon config file"
 <dd>
 </dd><dl>
 <dt><code>usage</code></dt>
-<dd>Compatibility option: In slave state, always respect UTC offset announced by best master, even if the the<br />
+<dd>Compatibility option: In slave state, always respect UTC offset announced by best master, even if the the<br/>
 &nbsp;<wbr>currrentUtcOffsetValid flag is announced FALSE.&nbsp;<wbr><code>NOTE</code>: this behaviour is not part of the standard.</dd>
 <dt><code>default</code></dt>
 <dd><i>N</i> </dd>
@@ -377,7 +377,7 @@ description: "ptpd2.conf – Precision Time Protocol daemon config file"
 <dd>
 </dd><dl>
 <dt><code>usage</code></dt>
-<dd>Compatibility extension to BMC algorithm: when enabled, BMC for both master and save clocks will prefer masters announcing currrentUtcOffsetValid as TRUE.<br />
+<dd>Compatibility extension to BMC algorithm: when enabled, BMC for both master and save clocks will prefer masters announcing currrentUtcOffsetValid as TRUE.<br/>
 &nbsp;<wbr><code>NOTE</code>: this behaviour is not part of the standard.</dd>
 <dt><code>default</code></dt>
 <dd><i>N</i> </dd>
@@ -458,8 +458,8 @@ description: "ptpd2.conf – Precision Time Protocol daemon config file"
 <dd>
 </dd><dl>
 <dt><code>usage</code></dt>
-<dd>PTP announce receipt timeout grace period in slave state: when announce receipt timeout occurs, disqualify current best GM,<br />
-&nbsp;<wbr>then wait n times announce receipt timeout before resetting. Allows for a seamless GM failover when standby GMs are slow<br />
+<dd>PTP announce receipt timeout grace period in slave state: when announce receipt timeout occurs, disqualify current best GM,<br/>
+&nbsp;<wbr>then wait n times announce receipt timeout before resetting. Allows for a seamless GM failover when standby GMs are slow<br/>
 &nbsp;<wbr>to react. When set to 0, this option is not used.</dd>
 <dt><code>default</code></dt>
 <dd><i>0</i> </dd>
@@ -556,7 +556,7 @@ description: "ptpd2.conf – Precision Time Protocol daemon config file"
 <dd>
 </dd><dl>
 <dt><code>usage</code></dt>
-<dd>Minimum delay request interval announced when in master state, in slave state overrides the master interval.<br />
+<dd>Minimum delay request interval announced when in master state, in slave state overrides the master interval.<br/>
 &nbsp;<wbr>(expressed as log 2 i.e. -1=0.5s, 0=1s, 1=2s etc.). When using unicast negotiation&nbsp;<wbr>(<i>ptpengine:unicast_negotiation</i>), for slaves this is the initial (minimum) interval requested and for masters this is the minimum interval granted.</dd>
 <dt><code>default</code></dt>
 <dd><i>0</i> </dd>
@@ -573,7 +573,7 @@ description: "ptpd2.conf – Precision Time Protocol daemon config file"
 <dd>
 </dd><dl>
 <dt><code>usage</code></dt>
-<dd>When using unicast negtiation (<i>ptpengine:unicast_negotiation</i>), this is the maximum delay request interval granted by a master, and the maximum interval a slave will attempt to request.<br />
+<dd>When using unicast negtiation (<i>ptpengine:unicast_negotiation</i>), this is the maximum delay request interval granted by a master, and the maximum interval a slave will attempt to request.<br/>
 &nbsp;<wbr>(expressed as log 2 i.e. -1=0.5s, 0=1s, 1=2s etc.).&nbsp;<wbr></dd>
 <dt><code>default</code></dt>
 <dd><i>5</i> </dd>
@@ -606,7 +606,7 @@ description: "ptpd2.conf – Precision Time Protocol daemon config file"
 <dd>
 </dd><dl>
 <dt><code>usage</code></dt>
-<dd>When using unicast negtiation (<i>ptpengine:unicast_negotiation</i>), this is the maximum peer delay request interval granted by a node, and the maximum interval a node will attempt to request from its peer.<br />
+<dd>When using unicast negtiation (<i>ptpengine:unicast_negotiation</i>), this is the maximum peer delay request interval granted by a node, and the maximum interval a node will attempt to request from its peer.<br/>
 &nbsp;<wbr>(expressed as log 2 i.e. -1=0.5s, 0=1s, 1=2s etc.).&nbsp;<wbr></dd>
 <dt><code>default</code></dt>
 <dd><i>5</i> </dd>
@@ -1235,7 +1235,7 @@ description: "ptpd2.conf – Precision Time Protocol daemon config file"
 <dd>
 </dd><dl>
 <dt><code>usage</code></dt>
-<dd>Delay Response outlier filter threshold: multiplier for Peirce&#8217;s maximum <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> standard deviation. When set below 1.0, filter is tighter, when set above<br />
+<dd>Delay Response outlier filter threshold: multiplier for Peirce&#8217;s maximum <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> standard deviation. When set below 1.0, filter is tighter, when set above<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> 1.0, filter is looser than standard Peirce&#8217;s test.</dd>
 <dt><code>default</code></dt>
 <dd><i>1.000000</i> </dd>
@@ -1364,8 +1364,8 @@ description: "ptpd2.conf – Precision Time Protocol daemon config file"
 <dd>
 </dd><dl>
 <dt><code>usage</code></dt>
-<dd>Delay Response outlier weight: if an outlier is detected, determines <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> the amount of its deviation from mean that is used to build the standard<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> deviation statistics and influence further outlier detection.<br />
+<dd>Delay Response outlier weight: if an outlier is detected, determines <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> the amount of its deviation from mean that is used to build the standard<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> deviation statistics and influence further outlier detection.<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> When set to 1.0, the outlier is used as is.</dd>
 <dt><code>default</code></dt>
 <dd><i>1.000000</i> </dd>
@@ -1512,7 +1512,7 @@ description: "ptpd2.conf – Precision Time Protocol daemon config file"
 <dd>
 </dd><dl>
 <dt><code>usage</code></dt>
-<dd>Sync outlier filter threshold: multiplier for the Peirce&#8217;s maximum standard <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> deviation. When set below 1.0, filter is tighter, when set above 1.0,<br />
+<dd>Sync outlier filter threshold: multiplier for the Peirce&#8217;s maximum standard <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> deviation. When set below 1.0, filter is tighter, when set above 1.0,<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> filter is looser than standard Peirce&#8217;s test.</dd>
 <dt><code>default</code></dt>
 <dd><i>1.000000</i> </dd>
@@ -1641,9 +1641,9 @@ description: "ptpd2.conf – Precision Time Protocol daemon config file"
 <dd>
 </dd><dl>
 <dt><code>usage</code></dt>
-<dd>Sync outlier weight: if an outlier is detected, this value determines the<br />
-&nbsp;<wbr>amount of its deviation from mean that is used to build the standard&nbsp;<wbr><br />
-&nbsp;<wbr>deviation statistics and influence further outlier detection.<br />
+<dd>Sync outlier weight: if an outlier is detected, this value determines the<br/>
+&nbsp;<wbr>amount of its deviation from mean that is used to build the standard&nbsp;<wbr><br/>
+&nbsp;<wbr>deviation statistics and influence further outlier detection.<br/>
 &nbsp;<wbr>When set to 1.0, the outlier is used as is</dd>
 <dt><code>default</code></dt>
 <dd><i>1.000000</i> </dd>
@@ -2282,8 +2282,8 @@ description: "ptpd2.conf – Precision Time Protocol daemon config file"
 <dd>
 </dd><dl>
 <dt><code>usage</code></dt>
-<dd>Maximum absolute frequency shift which can be applied to the clock servo <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> when slewing the clock. Expressed in parts per million (1 ppm = shift of<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> 1 us per second. Values above 512 will use the tick duration correction<br />
+<dd>Maximum absolute frequency shift which can be applied to the clock servo <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> when slewing the clock. Expressed in parts per million (1 ppm = shift of<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> 1 us per second. Values above 512 will use the tick duration correction<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> to allow even faster slewing. Default maximum is 512 without using tick.</dd>
 <dt><code>default</code></dt>
 <dd><i>500</i> </dd>

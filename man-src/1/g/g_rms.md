@@ -24,72 +24,72 @@ description: "g_rms – calculates rmsd’s with a reference structure and rmsd 
 <p> Option <code> -bin</code> does a binary dump of the comparison matrix. </p>
 <p> Option <code> -bm</code> produces a matrix of average bond angle deviations analogously to the <code> -m</code> option. Only bonds between atoms in the comparison group are considered.</p>
 <h2>FILES</h2>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br/>
 &nbsp;<wbr>Structure+mass(db): tpr tpb tpa gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-f2</code><i> traj.xtc</i> <code>Input, Opt.</code><br />
+<p> <code>-f2</code><i> traj.xtc</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-o</code><i> rmsd.xvg</i> <code>Output</code><br />
+<p> <code>-o</code><i> rmsd.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-mir</code><i> rmsdmir.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-mir</code><i> rmsdmir.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-a</code><i> avgrp.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-a</code><i> avgrp.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-dist</code><i> rmsd-dist.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-dist</code><i> rmsd-dist.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-m</code><i> rmsd.xpm</i> <code>Output, Opt.</code><br />
+<p> <code>-m</code><i> rmsd.xpm</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
-<p> <code>-bin</code><i> rmsd.dat</i> <code>Output, Opt.</code><br />
+<p> <code>-bin</code><i> rmsd.dat</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Generic data file&nbsp;<wbr> </p>
-<p> <code>-bm</code><i> bond.xpm</i> <code>Output, Opt.</code><br />
+<p> <code>-bm</code><i> bond.xpm</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-tu</code><i> enum</i><code> ps</code><br />
+<p> <code>-tu</code><i> enum</i><code> ps</code><br/>
 &nbsp;<wbr>Time unit:&nbsp;<wbr><code>&nbsp;<wbr>ps</code>,&nbsp;<wbr><code>&nbsp;<wbr>fs</code>,&nbsp;<wbr><code>&nbsp;<wbr>ns</code>,&nbsp;<wbr><code>&nbsp;<wbr>us</code>,&nbsp;<wbr><code>&nbsp;<wbr>ms</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>s</code> </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-what</code><i> enum</i><code> rmsd</code><br />
+<p> <code>-what</code><i> enum</i><code> rmsd</code><br/>
 &nbsp;<wbr>Structural difference measure:&nbsp;<wbr><code>&nbsp;<wbr>rmsd</code>,&nbsp;<wbr><code>&nbsp;<wbr>rho</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>rhosc</code> </p>
-<p> <code>-[no]pbc</code><i>yes </i><br />
+<p> <code>-[no]pbc</code><i>yes </i><br/>
 &nbsp;<wbr>PBC check </p>
-<p> <code>-fit</code><i> enum</i><code> rot+trans</code><br />
+<p> <code>-fit</code><i> enum</i><code> rot+trans</code><br/>
 &nbsp;<wbr>Fit to reference structure:&nbsp;<wbr><code>&nbsp;<wbr>rot+trans</code>,&nbsp;<wbr><code>&nbsp;<wbr>translation</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>none</code> </p>
-<p> <code>-prev</code><i> int</i><code> 0</code><br />
+<p> <code>-prev</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Compare with previous frame </p>
-<p> <code>-[no]split</code><i>no </i><br />
+<p> <code>-[no]split</code><i>no </i><br/>
 &nbsp;<wbr>Split graph where time is zero </p>
-<p> <code>-skip</code><i> int</i><code> 1</code><br />
+<p> <code>-skip</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>Only write every nr-th frame to matrix </p>
-<p> <code>-skip2</code><i> int</i><code> 1</code><br />
+<p> <code>-skip2</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>Only write every nr-th frame to matrix </p>
-<p> <code>-max</code><i> real</i><code> -1 </code><br />
+<p> <code>-max</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Maximum level in comparison matrix </p>
-<p> <code>-min</code><i> real</i><code> -1 </code><br />
+<p> <code>-min</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Minimum level in comparison matrix </p>
-<p> <code>-bmax</code><i> real</i><code> -1 </code><br />
+<p> <code>-bmax</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Maximum level in bond angle matrix </p>
-<p> <code>-bmin</code><i> real</i><code> -1 </code><br />
+<p> <code>-bmin</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Minimum level in bond angle matrix </p>
-<p> <code>-[no]mw</code><i>yes </i><br />
+<p> <code>-[no]mw</code><i>yes </i><br/>
 &nbsp;<wbr>Use mass weighting for superposition </p>
-<p> <code>-nlevels</code><i> int</i><code> 80</code><br />
+<p> <code>-nlevels</code><i> int</i><code> 80</code><br/>
 &nbsp;<wbr>Number of levels in the matrices </p>
-<p> <code>-ng</code><i> int</i><code> 1</code><br />
+<p> <code>-ng</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>Number of groups to compute RMS between </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

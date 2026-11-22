@@ -10,7 +10,7 @@ description: "ypmatch – print the values of one or more keys from a NIS map"
 
 <p> ypmatch &#8211; print the values of one or more keys from a NIS map</p>
 <h2>SYNOPSIS</h2>
-<p> <code>ypmatch</code> [ <code>-kt</code> ] [ <code>-d</code><i> domain</i> ] <i>key &#8230; mapname</i><br />
+<p> <code>ypmatch</code> [ <code>-kt</code> ] [ <code>-d</code><i> domain</i> ] <i>key &#8230; mapname</i><br/>
  <code>ypmatch</code> <code>-x</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>ypmatch</code> prints the values of one or more keys from the NIS database specified by mapname, which may be a map name or a map nickname.</p>

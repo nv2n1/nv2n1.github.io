@@ -152,7 +152,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code><a href="/docs/linux/man/2-bdflush/">bdflush</a></code>(2)</td>
 <td>1.2</td>
-<td> Deprecated (does nothing)<br />
+<td> Deprecated (does nothing)<br/>
  since 2.6
 </td>
 </tr>
@@ -177,7 +177,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code>breakpoint</code>(2)</td>
 <td>2.2</td>
-<td> ARM OABI only, defined with<br />
+<td> ARM OABI only, defined with<br/>
  <code>__ARM_NR</code> prefix
 </td>
 </tr>
@@ -214,7 +214,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code><a href="/docs/linux/man/2-chown/">chown</a></code>(2)</td>
 <td>2.2</td>
-<td> See <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2) for<br />
+<td> See <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2) for<br/>
  version details
 </td>
 </tr>
@@ -383,7 +383,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code>execv</code>(2)</td>
 <td>2.0</td>
-<td> SPARC/SPARC64 only, for<br />
+<td> SPARC/SPARC64 only, for<br/>
  compatibility with SunOS
 </td>
 </tr>
@@ -666,7 +666,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code>get_tls</code>(2)</td>
 <td>4.15</td>
-<td> ARM OABI only, has<br />
+<td> ARM OABI only, has<br/>
  <code>__ARM_NR</code> prefix
 </td>
 </tr>
@@ -697,16 +697,16 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code><a href="/docs/linux/man/2-getdomainname/">getdomainname</a></code>(2)</td>
 <td>2.2</td>
-<td> SPARC, SPARC64; available<br />
- as <code>osf_getdomainname</code>(2)<br />
+<td> SPARC, SPARC64; available<br/>
+ as <code>osf_getdomainname</code>(2)<br/>
  on Alpha since Linux 2.0
 </td>
 </tr>
 <tr VALIGN=top>
 <td><code><a href="/docs/linux/man/2-getdtablesize/">getdtablesize</a></code>(2)</td>
 <td>2.0</td>
-<td> SPARC (removed in 2.6.26),<br />
- available on Alpha as<br />
+<td> SPARC (removed in 2.6.26),<br/>
+ available on Alpha as<br/>
  <code>osf_getdtablesize</code>(2)
 </td>
 </tr>
@@ -761,7 +761,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code><a href="/docs/linux/man/2-gethostname/">gethostname</a></code>(2)</td>
 <td>2.0</td>
-<td> Alpha, was available on<br />
+<td> Alpha, was available on<br/>
  SPARC up to Linux 2.6.26
 </td>
 </tr>
@@ -1086,7 +1086,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code><a href="/docs/linux/man/2-lchown/">lchown</a></code>(2)</td>
 <td>1.0</td>
-<td> See <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2) for<br />
+<td> See <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2) for<br/>
  version details
 </td>
 </tr>
@@ -1423,8 +1423,8 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code>old_getrlimit</code>(2)</td>
 <td>2.4</td>
-<td> Old variant of <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)<br />
- that used a different value<br />
+<td> Old variant of <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)<br/>
+ that used a different value<br/>
  for <code>RLIM_INFINITY</code>
 </td>
 </tr>
@@ -1455,7 +1455,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code>oldumount</code>(2)</td>
 <td>2.4.116</td>
-<td> Name of the old <code><a href="/docs/linux/man/2-umount/">umount</a></code>(2)<br />
+<td> Name of the old <code><a href="/docs/linux/man/2-umount/">umount</a></code>(2)<br/>
  syscall on Alpha
 </td>
 </tr>
@@ -1528,7 +1528,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code><a href="/docs/linux/man/2-perf_event_open/">perf_event_open</a></code>(2)</td>
 <td>2.6.31</td>
-<td> Was perf_counter_open() in<br />
+<td> Was perf_counter_open() in<br/>
  2.6.31; renamed in 2.6.32
 </td>
 </tr>
@@ -1625,7 +1625,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code><a href="/docs/linux/man/2-pread64/">pread64</a></code>(2)</td>
 <td></td>
-<td> Added as &quot;pread&quot; in 2.2;<br />
+<td> Added as &quot;pread&quot; in 2.2;<br/>
  renamed &quot;pread64&quot; in 2.6
 </td>
 </tr>
@@ -1680,7 +1680,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code><a href="/docs/linux/man/2-pwrite64/">pwrite64</a></code>(2)</td>
 <td></td>
-<td> Added as &quot;pwrite&quot; in 2.2;<br />
+<td> Added as &quot;pwrite&quot; in 2.2;<br/>
  renamed &quot;pwrite64&quot; in 2.6
 </td>
 </tr>
@@ -1921,7 +1921,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code>sched_get_affinity</code>(2)</td>
 <td>2.6</td>
-<td> Name of <code><a href="/docs/linux/man/2-sched_getaffinity/">sched_getaffinity</a></code>(2)<br />
+<td> Name of <code><a href="/docs/linux/man/2-sched_getaffinity/">sched_getaffinity</a></code>(2)<br/>
  on SPARC and SPARC64
 </td>
 </tr>
@@ -1970,7 +1970,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code>sched_set_affinity</code>(2)</td>
 <td>2.6</td>
-<td> Name of <code><a href="/docs/linux/man/2-sched_setaffinity/">sched_setaffinity</a></code>(2)<br />
+<td> Name of <code><a href="/docs/linux/man/2-sched_setaffinity/">sched_setaffinity</a></code>(2)<br/>
  on SPARC and SPARC64
 </td>
 </tr>
@@ -2103,7 +2103,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code>set_tls</code>(2)</td>
 <td>2.6.11</td>
-<td> ARM OABI/EABI only (constant<br />
+<td> ARM OABI/EABI only (constant<br/>
  has <code>__ARM_NR</code> prefix)
 </td>
 </tr>
@@ -2194,7 +2194,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code><a href="/docs/linux/man/2-setpgrp/">setpgrp</a></code>(2)</td>
 <td>2.0</td>
-<td> Alternative name for<br />
+<td> Alternative name for<br/>
  <code><a href="/docs/linux/man/2-setpgid/">setpgid</a></code>(2) on Alpha
 </td>
 </tr>
@@ -2549,7 +2549,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code><a href="/docs/linux/man/2-syscall/">syscall</a></code>(2)</td>
 <td>1.0</td>
-<td> Still available on ARM OABI<br />
+<td> Still available on ARM OABI<br/>
  and MIPS O32 ABI
 </td>
 </tr>
@@ -2784,7 +2784,7 @@ description: "syscalls – Linux system calls"
 <tr VALIGN=top>
 <td><code><a href="/docs/linux/man/2-vm86old/">vm86old</a></code>(2)</td>
 <td>1.0</td>
-<td> Was &quot;vm86&quot;; renamed in<br />
+<td> Was &quot;vm86&quot;; renamed in<br/>
  2.0.28/2.2
 </td>
 </tr>

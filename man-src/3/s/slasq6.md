@@ -11,7 +11,7 @@ description: "slasq6.f –"
 <p> slasq6.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slasq6</code> (I0, N0, Z, PP, DMIN, DMIN1, DMIN2, DN, DNM1, DNM2)<br />
+<p> subroutine <code>slasq6</code> (I0, N0, Z, PP, DMIN, DMIN1, DMIN2, DN, DNM1, DNM2)<br/>
  <i></i><code>SLASQ6</code> computes one dqd transform in ping-pong form. Used by sbdsqr and sstegr.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasq6 (integerI0, integerN0, real, dimension( * )Z, integerPP, realDMIN, realDMIN1, realDMIN2, realDN, realDNM1, realDNM2)</h3>

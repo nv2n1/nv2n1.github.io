@@ -12,12 +12,12 @@ description: "docker-stop – Stop a container by sending SIGTERM and then SIGKI
 <h2>SYNOPSIS</h2>
 <p> <code>docker stop</code> [<code>&#8211;help</code>] [<code>-t</code>|<code>&#8211;time</code>[=<i>10</i>]] CONTAINER [CONTAINER&#8230;] </p>
 <h2>DESCRIPTION</h2>
-<p> Stop a container (Send SIGTERM, and then SIGKILL after<br />
+<p> Stop a container (Send SIGTERM, and then SIGKILL after<br/>
 &nbsp;<wbr>grace period) </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-t</code>, <code>&#8211;time</code>=<i>10</i><br />
+<p> <code>-t</code>, <code>&#8211;time</code>=<i>10</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Number of seconds to wait for the container to stop before killing it. Default is 10 seconds. </p>
 <p> #See also <code><a href="/docs/linux/man/1-docker-start/">docker-start</a>(1)</code> to restart a stopped container. </p>
 <h2>HISTORY</h2>

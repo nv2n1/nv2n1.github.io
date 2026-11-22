@@ -445,7 +445,7 @@ vc110, vc110sp1, vc110sp2, vc110sp3, vc110sp4</pre>
 <p>Deprecated. Do not use. </p>
 <p> The macros provided by this module were once intended for use by cross-compiling toolchain files when CMake was not able to automatically detect the compiler identification. Since the introduction of this module, CMake&#8217;s compiler identification capabilities have improved and can now be taught to recognize any compiler. Furthermore, the suite of information CMake detects from a compiler is now too extensive to be provided by toolchain files using these macros. </p>
 <p> One common use case for this module was to skip CMake&#8217;s checks for a working compiler when using a cross-compiler that cannot link binaries without special flags or custom linker scripts. This case is now supported by setting the <code>CMAKE_TRY_COMPILE_TARGET_TYPE</code> variable in the toolchain file instead. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <p> Macro CMAKE_FORCE_C_COMPILER has the following signature: </p>
 <pre>CMAKE_FORCE_C_COMPILER(&lt;compiler&gt; &lt;compiler-id&gt;)</pre>
@@ -1229,7 +1229,7 @@ cmake_pop_check_state()</pre>
 <p> This variable is cached and can be configured user if need.</dl>
 <h3>Commands</h3>
 <p>The module defines the following commands: </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <dl>
 <dt><code>cpack_ifw_configure_component</code></dt>
@@ -1250,7 +1250,7 @@ cmake_pop_check_state()</pre>
 <p> <code>PRIORITY</code> is priority of the component in the tree. </p>
 <p> <code>DEPENDS</code> list of dependency component identifiers in <i>QtIFW</i> style. </p>
 <p> <code>LICENSES</code> pair of &lt;display_name&gt; and &lt;file_path&gt; of license text for this component. You can specify more then one license. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <dt><code>cpack_ifw_configure_component_group</code></dt>
 <dd>Sets the arguments specific to the CPack IFW generator. </dd>
@@ -1266,7 +1266,7 @@ cmake_pop_check_state()</pre>
 <p> <code>SCRIPT</code> is a relative or absolute path to operations script for this component group. </p>
 <p> <code>PRIORITY</code> is priority of the component group in the tree. </p>
 <p> <code>LICENSES</code> pair of &lt;display_name&gt; and &lt;file_path&gt; of license text for this component group. You can specify more then one license. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <dt><code>cpack_ifw_add_repository</code></dt>
 <dd>Add <i>QtIFW</i> specific remote repository to binary installer. </dd>
@@ -1281,7 +1281,7 @@ cmake_pop_check_state()</pre>
 <p> <code>USERNAME</code> is used as user on a protected repository. </p>
 <p> <code>PASSWORD</code> is password to use on a protected repository. </p>
 <p> <code>DISPLAY_NAME</code> is string to display instead of the URL. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <dt><code>cpack_ifw_update_repository</code></dt>
 <dd>Update <i>QtIFW</i> specific repository from remote repository. </dd>
@@ -4578,7 +4578,7 @@ OPENMP_FOUND - true if openmp is detected</pre>
 <p> This module searches for the OpenSceneGraph core &quot;osg&quot; library as well as OpenThreads, and whatever additional COMPONENTS (nodekits) that you specify. </p>
 <pre>See <a rel="nofollow" href="http://www.openscenegraph.org">http://www.openscenegraph.org</a></pre>
 <p>NOTE: To use this module effectively you must either require CMake &gt;= 2.6.3 with cmake_minimum_required(VERSION 2.6.3) or download and place FindOpenThreads.cmake, Findosg_functions.cmake, Findosg.cmake, and Find&lt;etc&gt;.cmake files into your CMAKE_MODULE_PATH. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <p> This module accepts the following variables (note mixed case) </p>
 <pre>OpenSceneGraph_DEBUG - Enable debugging output</pre>

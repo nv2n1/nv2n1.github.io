@@ -16,7 +16,7 @@ Constraint (const boost::shared_ptr&lt; Impl &gt; &amp;impl=boost::shared_ptr&lt
 Protected Attributes</code></pre>
 <p> Inherited by <code>BoundaryConstraint</code>, PrivateConstraint, <code>CompositeConstraint</code>, FellerConstraint, <code>NoConstraint</code>, and <code>PositiveConstraint</code>.</p>
 <h3>Classes</h3>
-<p>class <code>Impl</code><br />
+<p>class <code>Impl</code><br/>
  <i>Base class for constraint implementations. </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>bool empty () const

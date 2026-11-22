@@ -11,18 +11,18 @@ description: "include/antlr3intstream.h –"
 <p> include/antlr3intstream.h &#8211; </p>
 <p> Defines the the class interface for an antlr3 INTSTREAM.</p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
+<p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br/>
  #include &lt;<a href="file:/usr/include/antlr3commontoken.h">antlr3commontoken.h</a>&gt; </p>
 <h3>Data Structures</h3>
 <p> struct <code>ANTLR3_INT_STREAM_struct</code> </p>
 <h3>Defines</h3>
-<p> #define <code>ANTLR3_CHARSTREAM</code> 0x0001<br />
- <i>Type indicator for a character stream. </i><br />
- #define <code>ANTLR3_COMMONTREENODE</code> 0x0004<br />
- <i>Type indicator for a common tree node stream. </i><br />
- #define <code>ANTLR3_INPUT_MASK</code> 0x0007<br />
- <i>Type mask for input stream so we can switch in the above types. </i><br />
- #define <code>ANTLR3_TOKENSTREAM</code> 0x0002<br />
+<p> #define <code>ANTLR3_CHARSTREAM</code> 0x0001<br/>
+ <i>Type indicator for a character stream. </i><br/>
+ #define <code>ANTLR3_COMMONTREENODE</code> 0x0004<br/>
+ <i>Type indicator for a common tree node stream. </i><br/>
+ #define <code>ANTLR3_INPUT_MASK</code> 0x0007<br/>
+ <i>Type mask for input stream so we can switch in the above types. </i><br/>
+ #define <code>ANTLR3_TOKENSTREAM</code> 0x0002<br/>
  <i>Type indicator for a Token stream. </i></p>
 <h3>Typedefs</h3>
 <p> typedef struct <code>ANTLR3_INT_STREAM_struct</code> <code>ANTLR3_INT_STREAM</code> </p>

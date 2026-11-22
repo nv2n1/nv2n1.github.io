@@ -10,8 +10,8 @@ description: "gpg-agent – Secret key management for GnuPG"
 
 <p> <code>gpg-agent</code> &#8211; Secret key management for GnuPG </p>
 <h2>SYNOPSIS</h2>
-<p> <code>gpg-agent</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>]<br />
- <code>gpg-agent</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <code>&#8211;server</code><br />
+<p> <code>gpg-agent</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>]<br/>
+ <code>gpg-agent</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <code>&#8211;server</code><br/>
  <code>gpg-agent</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <code>&#8211;daemon</code> [<i>command_line</i>] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gpg-agent</code> is a daemon to manage secret (private) keys independently from any protocol. It is used as a backend for <code>gpg</code> and <code>gpgsm</code> as well as for a couple of other utilities. </p>
@@ -275,24 +275,24 @@ then export SSH_AUTH_SOCK = "$(gpgconf --list-dirs agent-ssh-socket)" fi
 <dl>
 <dt><code>gpg-agent.conf</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;This is the standard configuration file read by&nbsp;<code>gpg-agent</code>&nbsp;on<br />
-&nbsp;<wbr>&nbsp;startup.&nbsp;<wbr>&nbsp;It may contain any valid long option;&nbsp;the leading<br />
-&nbsp;<wbr>&nbsp;two dashes may not be entered and the option may not be abbreviated.<br />
-&nbsp;<wbr>&nbsp;This file is also read after a&nbsp;<code>SIGHUP</code>&nbsp;however only a few<br />
-&nbsp;<wbr>&nbsp;options will actually have an effect.&nbsp;<wbr>&nbsp;This default name may be<br />
-&nbsp;<wbr>&nbsp;changed on the command line&nbsp;(see:&nbsp;[option &#8211;options]).<br />
+&nbsp;<wbr>&nbsp;This is the standard configuration file read by&nbsp;<code>gpg-agent</code>&nbsp;on<br/>
+&nbsp;<wbr>&nbsp;startup.&nbsp;<wbr>&nbsp;It may contain any valid long option;&nbsp;the leading<br/>
+&nbsp;<wbr>&nbsp;two dashes may not be entered and the option may not be abbreviated.<br/>
+&nbsp;<wbr>&nbsp;This file is also read after a&nbsp;<code>SIGHUP</code>&nbsp;however only a few<br/>
+&nbsp;<wbr>&nbsp;options will actually have an effect.&nbsp;<wbr>&nbsp;This default name may be<br/>
+&nbsp;<wbr>&nbsp;changed on the command line&nbsp;(see:&nbsp;[option &#8211;options]).<br/>
 &nbsp;<wbr>&nbsp;You should backup this file. </dd>
 <dt><code>trustlist.txt</code></dt>
 <dd>
 &nbsp;<wbr>&nbsp;This is the list of trusted keys.&nbsp;<wbr>&nbsp;You should backup this file. </dd>
-<p>&nbsp;<wbr>&nbsp;Comment lines, indicated by a leading hash mark, as well as empty<br />
-&nbsp;<wbr>&nbsp;lines are ignored.&nbsp;<wbr>&nbsp;To mark a key as trusted you need to enter its<br />
-&nbsp;<wbr>&nbsp;fingerprint followed by a space and a capital letter&nbsp;<code>S</code>.&nbsp;<wbr>&nbsp;Colons<br />
-&nbsp;<wbr>&nbsp;may optionally be used to separate the bytes of a fingerprint;&nbsp;this<br />
-&nbsp;<wbr>&nbsp;enables cutting and pasting the fingerprint from a key listing output.&nbsp;<wbr>&nbsp;If<br />
-&nbsp;<wbr>&nbsp;the line is prefixed with a&nbsp;<code>!</code>&nbsp;the key is explicitly marked as<br />
+<p>&nbsp;<wbr>&nbsp;Comment lines, indicated by a leading hash mark, as well as empty<br/>
+&nbsp;<wbr>&nbsp;lines are ignored.&nbsp;<wbr>&nbsp;To mark a key as trusted you need to enter its<br/>
+&nbsp;<wbr>&nbsp;fingerprint followed by a space and a capital letter&nbsp;<code>S</code>.&nbsp;<wbr>&nbsp;Colons<br/>
+&nbsp;<wbr>&nbsp;may optionally be used to separate the bytes of a fingerprint;&nbsp;this<br/>
+&nbsp;<wbr>&nbsp;enables cutting and pasting the fingerprint from a key listing output.&nbsp;<wbr>&nbsp;If<br/>
+&nbsp;<wbr>&nbsp;the line is prefixed with a&nbsp;<code>!</code>&nbsp;the key is explicitly marked as<br/>
 &nbsp;<wbr>&nbsp;not trusted. </p>
-<p>&nbsp;<wbr>&nbsp;Here is an example where two keys are marked as ultimately trusted<br />
+<p>&nbsp;<wbr>&nbsp;Here is an example where two keys are marked as ultimately trusted<br/>
 &nbsp;<wbr>&nbsp;and one as not trusted: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.RS 2 </p>
 <pre><code>
@@ -355,9 +355,9 @@ i.e.there is no need to list them.
 </dl>
 <dt><code>private-keys-v1.d/</code></dt>
 <dd>
-<p>&nbsp;<wbr>&nbsp;This is the directory where gpg-agent stores the private keys.&nbsp;<wbr>&nbsp;Each<br />
-&nbsp;<wbr>&nbsp;key is stored in a file with the name made up of the keygrip and the<br />
-&nbsp;<wbr>&nbsp;suffix&nbsp;&#8216;<i>key</i>&#8216;.&nbsp;<wbr>&nbsp;You should backup all files in this directory<br />
+<p>&nbsp;<wbr>&nbsp;This is the directory where gpg-agent stores the private keys.&nbsp;<wbr>&nbsp;Each<br/>
+&nbsp;<wbr>&nbsp;key is stored in a file with the name made up of the keygrip and the<br/>
+&nbsp;<wbr>&nbsp;suffix&nbsp;&#8216;<i>key</i>&#8216;.&nbsp;<wbr>&nbsp;You should backup all files in this directory<br/>
 &nbsp;<wbr>&nbsp;and take great care to keep this backup closed away. </p>
 </dd></dl>
 <p> Note that on larger installations, it is useful to put predefined files into the directory &#8216;<i>/etc/skel/.gnupg</i>&#8216; so that newly created users start up with a working configuration. For existing users the a small helper script is provided to create these files (see: [addgnupghome]). </p>

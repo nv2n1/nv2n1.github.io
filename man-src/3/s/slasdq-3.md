@@ -10,7 +10,7 @@ description: "slasdq.f –"
 <p>slasdq.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slasdq</code> (UPLO, SQRE, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br />
+<p>subroutine <code>slasdq</code> (UPLO, SQRE, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br/>
  <i></i><code>SLASDQ</code> computes the SVD of a real bidiagonal matrix with diagonal d and off-diagonal e. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasdq (characterUPLO, integerSQRE, integerN, integerNCVT, integerNRU, integerNCC, real, dimension( * )D, real, dimension( * )E, real, dimension( ldvt, * )VT, integerLDVT, real, dimension( ldu, * )U, integerLDU, real, dimension( ldc, * )C, integerLDC, real, dimension( * )WORK, integerINFO)</h3>

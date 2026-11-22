@@ -22,9 +22,9 @@ perliol - C API for Perl's implementation of IO in Layers.
 
 <h3>History and Background</h3>
 
- The PerlIO abstraction was introduced in perl5.003_02 but languished as just an abstraction until perl5.7.0. However during that time a number of perl extensions switched to using it, so the <font SIZE="-1">API</font> is mostly fixed to maintain (source) compatibility. 
+ The PerlIO abstraction was introduced in perl5.003_02 but languished as just an abstraction until perl5.7.0. However during that time a number of perl extensions switched to using it, so the API is mostly fixed to maintain (source) compatibility. 
 
- The aim of the implementation is to provide the PerlIO <font SIZE="-1">API</font> in a flexible and platform neutral manner. It is also a trial of an ``Object Oriented C, with vtables'' approach which may be applied to Perl 6.
+ The aim of the implementation is to provide the PerlIO API in a flexible and platform neutral manner. It is also a trial of an ``Object Oriented C, with vtables'' approach which may be applied to Perl 6.
 
 <h3>Basic Structure</h3>
 
@@ -40,7 +40,7 @@ perliol - C API for Perl's implementation of IO in Layers.
 
  When you do an <b>open()</b> and specify extra PerlIO layers to be deployed, the layers you specify are ``pushed'' on top of the already existing default stack. One way to see it is that ``operating system is on the left'' and ``Perl is on the right''. 
 
- What exact layers are in this default stack depends on a lot of things: your operating system, Perl version, Perl compile time configuration, and Perl runtime configuration. See PerlIO, ``<font SIZE="-1">PERLIO''</font> in perlrun, and open for more information. 
+ What exact layers are in this default stack depends on a lot of things: your operating system, Perl version, Perl compile time configuration, and Perl runtime configuration. See PerlIO, ``PERLIO'' in perlrun, and open for more information. 
 
  <b>binmode()</b> operates similarly to <b>open()</b>: by default the specified layers are pushed on top of the existing stack. 
 
@@ -50,7 +50,7 @@ perliol - C API for Perl's implementation of IO in Layers.
 
 <h3>Layers vs Disciplines</h3>
 
- Initial discussion of the ability to modify <font SIZE="-1">IO</font> streams behaviour used the term ``discipline'' for the entities which were added. This came (I believe) from the use of the term in ``sfio'', which in turn borrowed it from ``line disciplines'' on Unix terminals. However, this document (and the C code) uses the term ``layer''. 
+ Initial discussion of the ability to modify IO streams behaviour used the term ``discipline'' for the entities which were added. This came (I believe) from the use of the term in ``sfio'', which in turn borrowed it from ``line disciplines'' on Unix terminals. However, this document (and the C code) uses the term ``layer''. 
 
  This is, I hope, a natural term given the implementation, and should avoid connotations that are inherent in earlier uses of ``discipline'' for things which are rather different.
 
@@ -69,9 +69,9 @@ struct _PerlIO {
 };
  
 
- A <tt>&quot;PerlIOl *&quot;</tt> is a pointer to the struct, and the <i>application</i> level <tt>&quot;PerlIO *&quot;</tt> is a pointer to a <tt>&quot;PerlIOl *&quot;</tt> - i.e. a pointer to a pointer to the struct. This allows the application level <tt>&quot;PerlIO *&quot;</tt> to remain constant while the actual <tt>&quot;PerlIOl *&quot;</tt> underneath changes. (Compare perl's <tt>&quot;SV *&quot;</tt> which remains constant while its <tt>&quot;sv_any&quot;</tt> field changes as the scalar's type changes.) An <font SIZE="-1">IO</font> stream is then in general represented as a pointer to this linked-list of ``layers''. 
+ A <tt>&quot;PerlIOl *&quot;</tt> is a pointer to the struct, and the <i>application</i> level <tt>&quot;PerlIO *&quot;</tt> is a pointer to a <tt>&quot;PerlIOl *&quot;</tt> - i.e. a pointer to a pointer to the struct. This allows the application level <tt>&quot;PerlIO *&quot;</tt> to remain constant while the actual <tt>&quot;PerlIOl *&quot;</tt> underneath changes. (Compare perl's <tt>&quot;SV *&quot;</tt> which remains constant while its <tt>&quot;sv_any&quot;</tt> field changes as the scalar's type changes.) An IO stream is then in general represented as a pointer to this linked-list of ``layers''. 
 
- It should be noted that because of the double indirection in a <tt>&quot;PerlIO *&quot;</tt>, a <tt>&quot;&amp;(perlio-&gt;next)&quot;</tt> ``is'' a <tt>&quot;PerlIO *&quot;</tt>, and so to some degree at least one layer can use the ``standard'' <font SIZE="-1">API</font> on the next layer down. 
+ It should be noted that because of the double indirection in a <tt>&quot;PerlIO *&quot;</tt>, a <tt>&quot;&amp;(perlio-&gt;next)&quot;</tt> ``is'' a <tt>&quot;PerlIO *&quot;</tt>, and so to some degree at least one layer can use the ``standard'' API on the next layer down. 
 
  A ``layer'' is composed of two parts:
 <dl>
@@ -145,14 +145,14 @@ struct _PerlIO_funcs {
 <dt>1.
 </dt><dd> Opening and setup functions
 </dd><dt>2.
-</dt><dd> Basic <font SIZE="-1">IO</font> operations
+</dt><dd> Basic IO operations
 </dd><dt>3.
 </dt><dd> Stdio class buffering options.
 </dd><dt>4.
 </dt><dd> Functions to support Perl's traditional ``fast'' access to the buffer.</dd></dl>
  
 
- A layer does not have to implement all the functions, but the whole table has to be present. Unimplemented slots can be <font SIZE="-1">NULL</font> (which will result in an error when called) or can be filled in with stubs to ``inherit'' behaviour from a ``base class''. This ``inheritance'' is fixed for all instances of the layer, but as the layer chooses which stubs to populate the table, limited ``multiple inheritance'' is possible.
+ A layer does not have to implement all the functions, but the whole table has to be present. Unimplemented slots can be NULL (which will result in an error when called) or can be filled in with stubs to ``inherit'' behaviour from a ``base class''. This ``inheritance'' is fixed for all instances of the layer, but as the layer chooses which stubs to populate the table, limited ``multiple inheritance'' is possible.
 
 <h3>Per-instance Data</h3>
 
@@ -191,43 +191,43 @@ table perlio unix | |
 </dd><dt>&bull;
 </dt><dd> Different handles can have different buffering schemes. The ``top'' layer could be the ``mmap'' layer if reading disk files was quicker using <tt>&quot;mmap&quot;</tt> than <tt>&quot;read&quot;</tt>. An ``unbuffered'' stream can be implemented simply by not having a buffer layer.
 </dd><dt>&bull;
-</dt><dd> Extra layers can be inserted to process the data as it flows through. This was the driving need for including the scheme in perl 5.7.0+ - we needed a mechanism to allow data to be translated between perl's internal encoding (conceptually at least Unicode as <font SIZE="-1">UTF-8</font>), and the ``native'' format used by the system. This is provided by the ``:encoding(xxxx)'' layer which typically sits above the buffering layer.
+</dt><dd> Extra layers can be inserted to process the data as it flows through. This was the driving need for including the scheme in perl 5.7.0+ - we needed a mechanism to allow data to be translated between perl's internal encoding (conceptually at least Unicode as UTF-8), and the ``native'' format used by the system. This is provided by the ``:encoding(xxxx)'' layer which typically sits above the buffering layer.
 </dd><dt>&bull;
-</dt><dd> A layer can be added that does ``\n'' to <font SIZE="-1">CRLF</font> translation. This layer can be used on any platform, not just those that normally do such things.</dd></dl>
+</dt><dd> A layer can be added that does ``\n'' to CRLF translation. This layer can be used on any platform, not just those that normally do such things.</dd></dl>
 
 <h3>Per-instance flag bits</h3>
 
  The generic flag bits are a hybrid of <tt>&quot;O_XXXXX&quot;</tt> style flags deduced from the mode string passed to <tt>&quot;PerlIO_open()&quot;</tt>, and state bits for typical buffer layers.
 <dl>
-<dt><font SIZE="-1">PERLIO_F_EOF</font>
+<dt>PERLIO_F_EOF
 </dt><dd> End of file.
-</dd><dt><font SIZE="-1">PERLIO_F_CANWRITE</font>
+</dd><dt>PERLIO_F_CANWRITE
 </dt><dd> Writes are permitted, i.e. opened as ``w'' or ``r+'' or ``a'', etc.
-</dd><dt><font SIZE="-1">PERLIO_F_CANREAD</font>
+</dd><dt>PERLIO_F_CANREAD
 </dt><dd> Reads are permitted i.e. opened ``r'' or ``w+'' (or even ``a+'' - ick).
-</dd><dt><font SIZE="-1">PERLIO_F_ERROR</font>
+</dd><dt>PERLIO_F_ERROR
 </dt><dd> An error has occurred (for <tt>&quot;PerlIO_error()&quot;</tt>).
-</dd><dt><font SIZE="-1">PERLIO_F_TRUNCATE</font>
+</dd><dt>PERLIO_F_TRUNCATE
 </dt><dd> Truncate file suggested by open mode.
-</dd><dt><font SIZE="-1">PERLIO_F_APPEND</font>
+</dd><dt>PERLIO_F_APPEND
 </dt><dd> All writes should be appends.
-</dd><dt><font SIZE="-1">PERLIO_F_CRLF</font>
-</dt><dd> Layer is performing Win32-like ``\n'' mapped to <font SIZE="-1">CR,LF</font> for output and <font SIZE="-1">CR,LF</font> mapped to ``\n'' for input. Normally the provided ``crlf'' layer is the only layer that need bother about this. <tt>&quot;PerlIO_binmode()&quot;</tt> will mess with this flag rather than add/remove layers if the <tt>&quot;PERLIO_K_CANCRLF&quot;</tt> bit is set for the layers class.
-</dd><dt><font SIZE="-1">PERLIO_F_UTF8</font>
-</dt><dd> Data written to this layer should be <font SIZE="-1">UTF-8</font> encoded; data provided by this layer should be considered <font SIZE="-1">UTF-8</font> encoded. Can be set on any layer by ``:utf8'' dummy layer. Also set on ``:encoding'' layer.
-</dd><dt><font SIZE="-1">PERLIO_F_UNBUF</font>
+</dd><dt>PERLIO_F_CRLF
+</dt><dd> Layer is performing Win32-like ``\n'' mapped to CR,LF for output and CR,LF mapped to ``\n'' for input. Normally the provided ``crlf'' layer is the only layer that need bother about this. <tt>&quot;PerlIO_binmode()&quot;</tt> will mess with this flag rather than add/remove layers if the <tt>&quot;PERLIO_K_CANCRLF&quot;</tt> bit is set for the layers class.
+</dd><dt>PERLIO_F_UTF8
+</dt><dd> Data written to this layer should be UTF-8 encoded; data provided by this layer should be considered UTF-8 encoded. Can be set on any layer by ``:utf8'' dummy layer. Also set on ``:encoding'' layer.
+</dd><dt>PERLIO_F_UNBUF
 </dt><dd> Layer is unbuffered - i.e. write to next layer down should occur for each write to this layer.
-</dd><dt><font SIZE="-1">PERLIO_F_WRBUF</font>
+</dd><dt>PERLIO_F_WRBUF
 </dt><dd> The buffer for this layer currently holds data written to it but not sent to next layer.
-</dd><dt><font SIZE="-1">PERLIO_F_RDBUF</font>
+</dd><dt>PERLIO_F_RDBUF
 </dt><dd> The buffer for this layer currently holds unconsumed data read from layer below.
-</dd><dt><font SIZE="-1">PERLIO_F_LINEBUF</font>
+</dd><dt>PERLIO_F_LINEBUF
 </dt><dd> Layer is line buffered. Write data should be passed to next layer down whenever a ``\n'' is seen. Any data beyond the ``\n'' should then be processed.
-</dd><dt><font SIZE="-1">PERLIO_F_TEMP</font>
+</dd><dt>PERLIO_F_TEMP
 </dt><dd> File has been <tt>&quot;unlink()&quot;</tt>ed, or should be deleted on <tt>&quot;close()&quot;</tt>.
-</dd><dt><font SIZE="-1">PERLIO_F_OPEN</font>
+</dd><dt>PERLIO_F_OPEN
 </dt><dd> Handle is open.
-</dd><dt><font SIZE="-1">PERLIO_F_FASTGETS</font>
+</dd><dt>PERLIO_F_FASTGETS
 </dt><dd> This instance of this layer supports the &quot;fast <tt>&quot;gets&quot;</tt>&quot; interface. Normally set based on <tt>&quot;PERLIO_K_FASTGETS&quot;</tt> for the class and by the existence of the function(s) in the table. However a class that normally provides that interface may need to avoid it on a particular instance. The ``pending'' layer needs to do this when it is pushed above a layer which does not support the interface. (Perl's <tt>&quot;sv_gets()&quot;</tt> does not expect the streams fast <tt>&quot;gets&quot;</tt> behaviour to change during one ``get''.)</dd></dl>
 
 <h3>Methods in Detail</h3>
@@ -242,11 +242,11 @@ table perlio unix | |
 </dt><dd> <pre>
         char * name;
 </pre> 
- The name of the layer whose <b>open()</b> method Perl should invoke on <b>open()</b>. For example if the layer is called <font SIZE="-1">APR,</font> you will call: 
+ The name of the layer whose <b>open()</b> method Perl should invoke on <b>open()</b>. For example if the layer is called APR, you will call: 
  <pre>
   open $fh, &quot;&gt;:APR&quot;, ...
 </pre> 
- and Perl knows that it has to invoke the <b>PerlIOAPR_open()</b> method implemented by the <font SIZE="-1">APR</font> layer.
+ and Perl knows that it has to invoke the <b>PerlIOAPR_open()</b> method implemented by the APR layer.
 </dd><dt>size
 </dt><dd> <pre>
         Size_t size;
@@ -263,19 +263,19 @@ table perlio unix | |
 </dd><dl>
 <dl>
 <dt>&bull;
-</dt><dd> <font SIZE="-1">PERLIO_K_BUFFERED</font> 
+</dt><dd> PERLIO_K_BUFFERED 
  The layer is buffered.
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">PERLIO_K_RAW</font> 
- The layer is acceptable to have in a binmode(<font SIZE="-1">FH</font>) stack - i.e. it does not (or will configure itself not to) transform bytes passing through it.
+</dt><dd> PERLIO_K_RAW 
+ The layer is acceptable to have in a binmode(FH) stack - i.e. it does not (or will configure itself not to) transform bytes passing through it.
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">PERLIO_K_CANCRLF</font> 
- Layer can translate between ``\n'' and <font SIZE="-1">CRLF</font> line ends.
+</dt><dd> PERLIO_K_CANCRLF 
+ Layer can translate between ``\n'' and CRLF line ends.
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">PERLIO_K_FASTGETS</font> 
+</dt><dd> PERLIO_K_FASTGETS 
  Layer allows buffer snooping.
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">PERLIO_K_MULTIARG</font> 
+</dt><dd> PERLIO_K_MULTIARG 
  Used when the layer's <b>open()</b> accepts more arguments than usual. The extra arguments should come not before the <tt>&quot;MODE&quot;</tt> argument. When this flag is used it's up to the layer to validate the args.</dd></dl>
 </dl>
 
@@ -288,7 +288,7 @@ IV (*Pushed)
 (pTHX_ PerlIO *f, const char *mode, SV *arg);
  
 
- The only absolutely mandatory method. Called when the layer is pushed onto the stack. The <tt>&quot;mode&quot;</tt> argument may be <font SIZE="-1">NULL</font> if this occurs post-open. The <tt>&quot;arg&quot;</tt> will be non-<tt>&quot;NULL&quot;</tt> if an argument string was passed. In most cases this should call <tt>&quot;PerlIOBase_pushed()&quot;</tt> to convert <tt>&quot;mode&quot;</tt> into the appropriate <tt>&quot;PERLIO_F_XXXXX&quot;</tt> flags in addition to any actions the layer itself takes. If a layer is not expecting an argument it need neither save the one passed to it, nor provide <tt>&quot;Getarg()&quot;</tt> (it could perhaps <tt>&quot;Perl_warn&quot;</tt> that the argument was un-expected). 
+ The only absolutely mandatory method. Called when the layer is pushed onto the stack. The <tt>&quot;mode&quot;</tt> argument may be NULL if this occurs post-open. The <tt>&quot;arg&quot;</tt> will be non-<tt>&quot;NULL&quot;</tt> if an argument string was passed. In most cases this should call <tt>&quot;PerlIOBase_pushed()&quot;</tt> to convert <tt>&quot;mode&quot;</tt> into the appropriate <tt>&quot;PERLIO_F_XXXXX&quot;</tt> flags in addition to any actions the layer itself takes. If a layer is not expecting an argument it need neither save the one passed to it, nor provide <tt>&quot;Getarg()&quot;</tt> (it could perhaps <tt>&quot;Perl_warn&quot;</tt> that the argument was un-expected). 
 
  Returns 0 on success. On failure returns -1 and should set errno.
 </dd><dt>Popped
@@ -315,13 +315,13 @@ PerlIO *(*Open)(pTHX_ PerlIO_funcs *tab,
                 int narg, SV **args);
  
 
- Open should (perhaps indirectly) call <tt>&quot;PerlIO_allocate()&quot;</tt> to allocate a slot in the table and associate it with the layers information for the opened file, by calling <tt>&quot;PerlIO_push&quot;</tt>. The <i>layers</i> is an array of all the layers destined for the <tt>&quot;PerlIO *&quot;</tt>, and any arguments passed to them, <i>n</i> is the index into that array of the layer being called. The macro <tt>&quot;PerlIOArg&quot;</tt> will return a (possibly <tt>&quot;NULL&quot;</tt>) <font SIZE="-1">SV</font> * for the argument passed to the layer. 
+ Open should (perhaps indirectly) call <tt>&quot;PerlIO_allocate()&quot;</tt> to allocate a slot in the table and associate it with the layers information for the opened file, by calling <tt>&quot;PerlIO_push&quot;</tt>. The <i>layers</i> is an array of all the layers destined for the <tt>&quot;PerlIO *&quot;</tt>, and any arguments passed to them, <i>n</i> is the index into that array of the layer being called. The macro <tt>&quot;PerlIOArg&quot;</tt> will return a (possibly <tt>&quot;NULL&quot;</tt>) SV * for the argument passed to the layer. 
 
  Where a layer opens or takes ownership of a file descriptor, that layer is responsible for getting the file descriptor's close-on-exec flag into the correct state. The flag should be clear for a file descriptor numbered less than or equal to <tt>&quot;PL_maxsysfd&quot;</tt>, and set for any file descriptor numbered higher. For thread safety, when a layer opens a new file descriptor it should if possible open it with the close-on-exec flag initially set. 
 
  The <i>mode</i> string is an &quot;<tt>&quot;fopen()&quot;</tt>-like&quot; string which would match the regular expression <tt>&quot;/^[I#]?[rwa]\+?[bt]?$/&quot;</tt>. 
 
- The <tt>'I'</tt> prefix is used during creation of <tt>&quot;stdin&quot;</tt>..<tt>&quot;stderr&quot;</tt> via special <tt>&quot;PerlIO_fdopen&quot;</tt> calls; the <tt>'#'</tt> prefix means that this is <tt>&quot;sysopen&quot;</tt> and that <i>imode</i> and <i>perm</i> should be passed to <tt>&quot;PerlLIO_open3&quot;</tt>; <tt>'r'</tt> means <b>r</b>ead, <tt>'w'</tt> means <b>w</b>rite and <tt>'a'</tt> means <b>a</b>ppend. The <tt>'+'</tt> suffix means that both reading and writing/appending are permitted. The <tt>'b'</tt> suffix means file should be binary, and <tt>'t'</tt> means it is text. (Almost all layers should do the <font SIZE="-1">IO</font> in binary mode, and ignore the b/t bits. The <tt>&quot;:crlf&quot;</tt> layer should be pushed to handle the distinction.) 
+ The <tt>'I'</tt> prefix is used during creation of <tt>&quot;stdin&quot;</tt>..<tt>&quot;stderr&quot;</tt> via special <tt>&quot;PerlIO_fdopen&quot;</tt> calls; the <tt>'#'</tt> prefix means that this is <tt>&quot;sysopen&quot;</tt> and that <i>imode</i> and <i>perm</i> should be passed to <tt>&quot;PerlLIO_open3&quot;</tt>; <tt>'r'</tt> means <b>r</b>ead, <tt>'w'</tt> means <b>w</b>rite and <tt>'a'</tt> means <b>a</b>ppend. The <tt>'+'</tt> suffix means that both reading and writing/appending are permitted. The <tt>'b'</tt> suffix means file should be binary, and <tt>'t'</tt> means it is text. (Almost all layers should do the IO in binary mode, and ignore the b/t bits. The <tt>&quot;:crlf&quot;</tt> layer should be pushed to handle the distinction.) 
 
  If <i>old</i> is not <tt>&quot;NULL&quot;</tt> then this is a <tt>&quot;PerlIO_reopen&quot;</tt>. Perl itself does not use this (yet?) and semantics are a little vague. 
 
@@ -339,14 +339,14 @@ PerlIO *(*Open)(pTHX_ PerlIO_funcs *tab,
         IV        (*Binmode)(pTHX_ PerlIO *f);
 </pre> 
 
- Optional. Used when <tt>&quot;:raw&quot;</tt> layer is pushed (explicitly or as a result of binmode(<font SIZE="-1">FH</font>)). If not present layer will be popped. If present should configure layer as binary (or pop itself) and return 0. If it returns -1 for error <tt>&quot;binmode&quot;</tt> will fail with layer still on the stack.
+ Optional. Used when <tt>&quot;:raw&quot;</tt> layer is pushed (explicitly or as a result of binmode(FH)). If not present layer will be popped. If present should configure layer as binary (or pop itself) and return 0. If it returns -1 for error <tt>&quot;binmode&quot;</tt> will fail with layer still on the stack.
 </dd><dt>Getarg
 </dt><dd> <pre>
         SV *      (*Getarg)(pTHX_ PerlIO *f,
                             CLONE_PARAMS *param, int flags);
 </pre> 
 
- Optional. If present should return an <font SIZE="-1">SV</font> * representing the string argument passed to the layer when it was pushed. e.g. ``:encoding(ascii)'' would return an SvPV with value ``ascii''. (<i>param</i> and <i>flags</i> arguments can be ignored in most cases) 
+ Optional. If present should return an SV * representing the string argument passed to the layer when it was pushed. e.g. ``:encoding(ascii)'' would return an SvPV with value ``ascii''. (<i>param</i> and <i>flags</i> arguments can be ignored in most cases) 
 
  <tt>&quot;Dup&quot;</tt> uses <tt>&quot;Getarg&quot;</tt> to retrieve the argument originally passed to <tt>&quot;Pushed&quot;</tt>, so you must implement this function if your layer has an extra argument to <tt>&quot;Pushed&quot;</tt> and will ever be <tt>&quot;Dup&quot;</tt>ed.
 </dd><dt>Fileno
@@ -363,7 +363,7 @@ PerlIO *(*Open)(pTHX_ PerlIO_funcs *tab,
                         CLONE_PARAMS *param, int flags);
 </pre> 
 
- <font SIZE="-1">XXX:</font> Needs more docs. 
+ XXX: Needs more docs. 
 
  Used as part of the ``clone'' process when a thread is spawned (in which case param will be non-NULL) and when a stream is being duplicated via '&amp;' in the <tt>&quot;open&quot;</tt>. 
 
@@ -375,7 +375,7 @@ PerlIO *(*Open)(pTHX_ PerlIO_funcs *tab,
 
  Basic read operation. 
 
- Typically will call <tt>&quot;Fill&quot;</tt> and manipulate pointers (possibly via the <font SIZE="-1">API</font>). <tt>&quot;PerlIOBuf_read()&quot;</tt> may be suitable for derived classes which provide ``fast gets'' methods. 
+ Typically will call <tt>&quot;Fill&quot;</tt> and manipulate pointers (possibly via the API). <tt>&quot;PerlIOBuf_read()&quot;</tt> may be suitable for derived classes which provide ``fast gets'' methods. 
 
  Returns actual bytes read, or -1 on an error.
 </dd><dt>Unread
@@ -462,13 +462,13 @@ SSize_t (*Write)(PerlIO *f, const void *vbuf, Size_t count);
         void    (*Setlinebuf)(pTHX_ PerlIO *f);
 </pre> 
 
- Mark the stream as line buffered. <tt>&quot;PerlIOBase_setlinebuf()&quot;</tt> sets the <font SIZE="-1">PERLIO_F_LINEBUF</font> flag and is normally sufficient.
+ Mark the stream as line buffered. <tt>&quot;PerlIOBase_setlinebuf()&quot;</tt> sets the PERLIO_F_LINEBUF flag and is normally sufficient.
 </dd><dt>Get_base
 </dt><dd> <pre>
         STDCHAR *       (*Get_base)(pTHX_ PerlIO *f);
 </pre> 
 
- Allocate (if not already done so) the read buffer for this layer and return pointer to it. Return <font SIZE="-1">NULL</font> on failure.
+ Allocate (if not already done so) the read buffer for this layer and return pointer to it. Return NULL on failure.
 </dd><dt>Get_bufsiz
 </dt><dd> <pre>
         Size_t  (*Get_bufsiz)(pTHX_ PerlIO *f);
@@ -505,13 +505,13 @@ SSize_t (*Write)(PerlIO *f, const void *vbuf, Size_t count);
 
  PerlIOSelf(PerlIO* f, type) return the PerlIOBase cast to a type. 
 
- Perl_PerlIO_or_Base(PerlIO* f, callback, base, failure, args) either calls the <i>callback</i> from the functions of the layer <i>f</i> (just by the name of the <font SIZE="-1">IO</font> function, like ``Read'') with the <i>args</i>, or if there is no such callback, calls the <i>base</i> version of the callback with the same args, or if the f is invalid, set errno to <font SIZE="-1">EBADF</font> and return <i>failure</i>. 
+ Perl_PerlIO_or_Base(PerlIO* f, callback, base, failure, args) either calls the <i>callback</i> from the functions of the layer <i>f</i> (just by the name of the IO function, like ``Read'') with the <i>args</i>, or if there is no such callback, calls the <i>base</i> version of the callback with the same args, or if the f is invalid, set errno to EBADF and return <i>failure</i>. 
 
- Perl_PerlIO_or_fail(PerlIO* f, callback, failure, args) either calls the <i>callback</i> of the functions of the layer <i>f</i> with the <i>args</i>, or if there is no such callback, set errno to <font SIZE="-1">EINVAL.</font> Or if the f is invalid, set errno to <font SIZE="-1">EBADF</font> and return <i>failure</i>. 
+ Perl_PerlIO_or_fail(PerlIO* f, callback, failure, args) either calls the <i>callback</i> of the functions of the layer <i>f</i> with the <i>args</i>, or if there is no such callback, set errno to EINVAL. Or if the f is invalid, set errno to EBADF and return <i>failure</i>. 
 
- Perl_PerlIO_or_Base_void(PerlIO* f, callback, base, args) either calls the <i>callback</i> of the functions of the layer <i>f</i> with the <i>args</i>, or if there is no such callback, calls the <i>base</i> version of the callback with the same args, or if the f is invalid, set errno to <font SIZE="-1">EBADF.</font> 
+ Perl_PerlIO_or_Base_void(PerlIO* f, callback, base, args) either calls the <i>callback</i> of the functions of the layer <i>f</i> with the <i>args</i>, or if there is no such callback, calls the <i>base</i> version of the callback with the same args, or if the f is invalid, set errno to EBADF. 
 
- Perl_PerlIO_or_fail_void(PerlIO* f, callback, args) either calls the <i>callback</i> of the functions of the layer <i>f</i> with the <i>args</i>, or if there is no such callback, set errno to <font SIZE="-1">EINVAL.</font> Or if the f is invalid, set errno to <font SIZE="-1">EBADF.</font>
+ Perl_PerlIO_or_fail_void(PerlIO* f, callback, args) either calls the <i>callback</i> of the functions of the layer <i>f</i> with the <i>args</i>, or if there is no such callback, set errno to EINVAL. Or if the f is invalid, set errno to EBADF.
 
 <h3>Implementing PerlIO Layers</h3>
 
@@ -521,10 +521,10 @@ SSize_t (*Write)(PerlIO *f, const void *vbuf, Size_t count);
 </dt><dd> C implementations 
  The <i>perlio.c</i> and <i>perliol.h</i> in the Perl core implement the ``unix'', ``perlio'', ``stdio'', ``crlf'', ``utf8'', ``byte'', ``raw'', ``pending'' layers, and also the ``mmap'' and ``win32'' layers if applicable. (The ``win32'' is currently unfinished and unused, to see what is used instead in Win32, see ``Querying the layers of filehandles'' in PerlIO .) 
  PerlIO::encoding, PerlIO::scalar, PerlIO::via in the Perl core. 
- PerlIO::gzip and APR::PerlIO (mod_perl 2.0) on <font SIZE="-1">CPAN.</font>
+ PerlIO::gzip and APR::PerlIO (mod_perl 2.0) on CPAN.
 </dd><dt>&bull;
 </dt><dd> Perl implementations 
- PerlIO::via::QuotedPrint in the Perl core and PerlIO::via::* on <font SIZE="-1">CPAN.</font></dd></dl>
+ PerlIO::via::QuotedPrint in the Perl core and PerlIO::via::* on CPAN.</dd></dl>
  
 
  If you are creating a PerlIO layer, you may want to be lazy, in other words, implement only the methods that interest you. The other methods you can either replace with the ``blank'' methods 
@@ -534,7 +534,7 @@ SSize_t (*Write)(PerlIO *f, const void *vbuf, Size_t count);
     PerlIOBase_noop_fail
 </pre> 
 
- (which do nothing, and return zero and -1, respectively) or for certain methods you may assume a default behaviour by using a <font SIZE="-1">NULL</font> method. The Open method looks for help in the 'parent' layer. The following table summarizes the behaviour: 
+ (which do nothing, and return zero and -1, respectively) or for certain methods you may assume a default behaviour by using a NULL method. The Open method looks for help in the 'parent' layer. The following table summarizes the behaviour: 
 
  
     method      behaviour with NULL
@@ -576,12 +576,12 @@ SSize_t (*Write)(PerlIO *f, const void *vbuf, Size_t count);
 <dt>&quot;unix&quot;
 </dt><dd> A basic non-buffered layer which calls Unix/POSIX <tt>&quot;read()&quot;</tt>, <tt>&quot;write()&quot;</tt>, <tt>&quot;lseek()&quot;</tt>, <tt>&quot;close()&quot;</tt>. No buffering. Even on platforms that distinguish between O_TEXT and O_BINARY this layer is always O_BINARY.
 </dd><dt>&quot;perlio&quot;
-</dt><dd> A very complete generic buffering layer which provides the whole of PerlIO <font SIZE="-1">API.</font> It is also intended to be used as a ``base class'' for other layers. (For example its <tt>&quot;Read()&quot;</tt> method is implemented in terms of the <tt>&quot;Get_cnt()&quot;</tt>/<tt>&quot;Get_ptr()&quot;</tt>/<tt>&quot;Set_ptrcnt()&quot;</tt> methods). 
- ``perlio'' over ``unix'' provides a complete replacement for stdio as seen via PerlIO <font SIZE="-1">API.</font> This is the default for <font SIZE="-1">USE_PERLIO</font> when system's stdio does not permit perl's ``fast gets'' access, and which do not distinguish between <tt>&quot;O_TEXT&quot;</tt> and <tt>&quot;O_BINARY&quot;</tt>.
+</dt><dd> A very complete generic buffering layer which provides the whole of PerlIO API. It is also intended to be used as a ``base class'' for other layers. (For example its <tt>&quot;Read()&quot;</tt> method is implemented in terms of the <tt>&quot;Get_cnt()&quot;</tt>/<tt>&quot;Get_ptr()&quot;</tt>/<tt>&quot;Set_ptrcnt()&quot;</tt> methods). 
+ ``perlio'' over ``unix'' provides a complete replacement for stdio as seen via PerlIO API. This is the default for USE_PERLIO when system's stdio does not permit perl's ``fast gets'' access, and which do not distinguish between <tt>&quot;O_TEXT&quot;</tt> and <tt>&quot;O_BINARY&quot;</tt>.
 </dd><dt>&quot;stdio&quot;
-</dt><dd> A layer which provides the PerlIO <font SIZE="-1">API</font> via the layer scheme, but implements it by calling system's stdio. This is (currently) the default if system's stdio provides sufficient access to allow perl's ``fast gets'' access and which do not distinguish between <tt>&quot;O_TEXT&quot;</tt> and <tt>&quot;O_BINARY&quot;</tt>.
+</dt><dd> A layer which provides the PerlIO API via the layer scheme, but implements it by calling system's stdio. This is (currently) the default if system's stdio provides sufficient access to allow perl's ``fast gets'' access and which do not distinguish between <tt>&quot;O_TEXT&quot;</tt> and <tt>&quot;O_BINARY&quot;</tt>.
 </dd><dt>&quot;crlf&quot;
-</dt><dd> A layer derived using ``perlio'' as a base class. It provides Win32-like ``\n'' to <font SIZE="-1">CR,LF</font> translation. Can either be applied above ``perlio'' or serve as the buffer layer itself. ``crlf'' over ``unix'' is the default if system distinguishes between <tt>&quot;O_TEXT&quot;</tt> and <tt>&quot;O_BINARY&quot;</tt> opens. (At some point ``unix'' will be replaced by a ``native'' Win32 <font SIZE="-1">IO</font> layer on that platform, as Win32's read/write layer has various drawbacks.) The ``crlf'' layer is a reasonable model for a layer which transforms data in some way.
+</dt><dd> A layer derived using ``perlio'' as a base class. It provides Win32-like ``\n'' to CR,LF translation. Can either be applied above ``perlio'' or serve as the buffer layer itself. ``crlf'' over ``unix'' is the default if system distinguishes between <tt>&quot;O_TEXT&quot;</tt> and <tt>&quot;O_BINARY&quot;</tt> opens. (At some point ``unix'' will be replaced by a ``native'' Win32 IO layer on that platform, as Win32's read/write layer has various drawbacks.) The ``crlf'' layer is a reasonable model for a layer which transforms data in some way.
 </dd><dt>&quot;mmap&quot;
 </dt><dd> If Configure detects <tt>&quot;mmap()&quot;</tt> functions this layer is provided (with ``perlio'' as a ``base'') which does ``read'' operations by <b>mmap()</b>ing the file. Performance improvement is marginal on modern systems, so it is mainly there as a proof of concept. It is likely to be unbundled from the core at some point. The ``mmap'' layer is a reasonable model for a minimalist ``derived'' layer.
 </dd><dt>&quot;pending&quot;
@@ -667,10 +667,10 @@ PerlIO *foo_to_PerlIO(pTHX_ char *mode, ...)
 }
 </code></pre>
 </dd><dt>&bull;
-</dt><dd> fix/add the documentation in places marked as <font SIZE="-1">XXX.</font>
+</dt><dd> fix/add the documentation in places marked as XXX.
 </dd><dt>&bull;
 </dt><dd> The handling of errors by the layer is not specified. e.g. when $! should be set explicitly, when the error handling should be just delegated to the top layer. 
- Probably give some hints on using <font SIZE="-1"><b>SETERRNO</b></font><b>()</b> or pointers to where they can be found.
+ Probably give some hints on using <b>SETERRNO</b><b>()</b> or pointers to where they can be found.
 </dd><dt>&bull;
-</dt><dd> I think it would help to give some concrete examples to make it easier to understand the <font SIZE="-1">API.</font> Of course I agree that the <font SIZE="-1">API</font> has to be concise, but since there is no second document that is more of a guide, I think that it'd make it easier to start with the doc which is an <font SIZE="-1">API,</font> but has examples in it in places where things are unclear, to a person who is not a PerlIO guru (yet). 
+</dt><dd> I think it would help to give some concrete examples to make it easier to understand the API. Of course I agree that the API has to be concise, but since there is no second document that is more of a guide, I think that it'd make it easier to start with the doc which is an API, but has examples in it in places where things are unclear, to a person who is not a PerlIO guru (yet). 
 </dd></dl>

@@ -51,7 +51,7 @@ description: "asn1_read_value_type – API function"
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if value is returned, <code>ASN1_ELEMENT_NOT_FOUND</code> if <i>name</i> is not a valid element, <code>ASN1_VALUE_NOT_FOUND</code> if there isn&#8217;t any value for the element selected, and <code>ASN1_MEM_ERROR</code> if The value vector isn&#8217;t big enough to store the result, and in this case <i>len</i> will contain the number of bytes needed.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>

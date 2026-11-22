@@ -11,7 +11,7 @@ description: "sgglse.f –"
 <p> sgglse.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br />
+<p> subroutine <code>sgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br/>
  <i></i><code> SGGLSE solves overdetermined or underdetermined systems for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgglse (integerM, integerN, integerP, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( * )C, real, dimension( * )D, real, dimension( * )X, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -101,14 +101,14 @@ given by
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>          LWORK is INTEGER<br />
-          The dimension of the array WORK. LWORK &gt;= max(1,M+N+P).<br />
-          For optimum performance LWORK &gt;= P+min(M,N)+max(M,N)*NB,<br />
-          where NB is an upper bound for the optimal blocksizes for<br />
-          SGEQRF, SGERQF, SORMQR and SORMRQ.<br />
-          If LWORK = -1, then a workspace query is assumed;<br />
-          the routine<br />
-              only calculates the optimal size of the WORK array,<br />
+<p>          LWORK is INTEGER<br/>
+          The dimension of the array WORK. LWORK &gt;= max(1,M+N+P).<br/>
+          For optimum performance LWORK &gt;= P+min(M,N)+max(M,N)*NB,<br/>
+          where NB is an upper bound for the optimal blocksizes for<br/>
+          SGEQRF, SGERQF, SORMQR and SORMRQ.<br/>
+          If LWORK = -1, then a workspace query is assumed;<br/>
+          the routine<br/>
+              only calculates the optimal size of the WORK array,<br/>
               returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>INFO</i> </p>
 <pre><code>

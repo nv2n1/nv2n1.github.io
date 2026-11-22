@@ -10,7 +10,7 @@ description: "slae2.f –"
 <p>slae2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slae2</code> (A, B, C, RT1, RT2)<br />
+<p>subroutine <code>slae2</code> (A, B, C, RT1, RT2)<br/>
  <i></i><code>SLAE2</code> computes the eigenvalues of a 2-by-2 symmetric matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slae2 (realA, realB, realC, realRT1, realRT2)</h3>

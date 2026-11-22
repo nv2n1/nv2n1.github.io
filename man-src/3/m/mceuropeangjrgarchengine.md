@@ -10,12 +10,12 @@ description: "ql/pricingengines/vanilla/mceuropeangjrgarchengine.hpp – Monte C
 
 <p> ql/pricingengines/vanilla/mceuropeangjrgarchengine.hpp &#8211; Monte Carlo GJR-GARCH-model engine for European options. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/pricingengines/vanilla/mcvanillaengine.hpp&gt;<br />
+<p> #include &lt;ql/pricingengines/vanilla/mcvanillaengine.hpp&gt;<br/>
  #include &lt;ql/processes/gjrgarchprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>MCEuropeanGJRGARCHEngine&lt; RNG, S &gt;</code><br />
- <i>Monte Carlo GJR-GARCH-model engine for European options. </i><br />
- class <code>MakeMCEuropeanGJRGARCHEngine&lt; RNG, S &gt;</code><br />
+<p> class <code>MCEuropeanGJRGARCHEngine&lt; RNG, S &gt;</code><br/>
+ <i>Monte Carlo GJR-GARCH-model engine for European options. </i><br/>
+ class <code>MakeMCEuropeanGJRGARCHEngine&lt; RNG, S &gt;</code><br/>
  <i>Monte Carlo GJR-GARCH European engine factory. </i></p>
 <h2>Detailed Description</h2>
 <p> Monte Carlo GJR-GARCH-model engine for European options. </p>

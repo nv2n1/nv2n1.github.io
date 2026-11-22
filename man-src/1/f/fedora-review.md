@@ -10,9 +10,9 @@ description: "fedora-review – Customized review template for Fedora packages"
 
 <p> fedora-review &#8211; Customized review template for Fedora packages </p>
 <h2>SYNOPSIS</h2>
-<p> <code>fedora-review</code> [options] -b &lt;bug&gt;<br />
- <code>fedora-review</code> [options] [&#8211;prebuilt] -n &lt;package name&gt;<br />
- <code>fedora-review</code> [options] [&#8211;prebuilt] -rn &lt;srpm path&gt;<br />
+<p> <code>fedora-review</code> [options] -b &lt;bug&gt;<br/>
+ <code>fedora-review</code> [options] [&#8211;prebuilt] -n &lt;package name&gt;<br/>
+ <code>fedora-review</code> [options] [&#8211;prebuilt] -rn &lt;srpm path&gt;<br/>
  <code>fedora-review</code> [options] -u &lt;url&gt; </p>
 <h2>DESCRIPTION</h2>
 <p> Makes reviews of rpm packages for Fedora easier by providing a customized review template, automating some trivial tasks. The tool runs a number of checks to test whether a package complies to the Fedora Packaing Guidelines before creating the template. Through a bash API the checks can be extended. We have at the moment checks for C/C++, R, Java and Perl packages. </p>
@@ -20,7 +20,7 @@ description: "fedora-review – Customized review template for Fedora packages"
 <p> Basic usage:</p>
 <dl>
 <dt>
-</dt><dd> $ fedora-review -b &lt;bug number&gt;<br />
+</dt><dd> $ fedora-review -b &lt;bug number&gt;<br/>
  $ fedora-review -u &lt;url&gt;</dd></dl>
 <p> Will download the SPEC &amp; SRPM files from the Bugzilla report, build them in mock, run a number of tests and generate a template. </p>
 <p> Not all bugzillas support the -b option. The -u option is available for these. See &#8211;url usage notes below.</p>
@@ -151,8 +151,8 @@ description: "fedora-review – Customized review template for Fedora packages"
 <p> fetches spec and srpm file from bugzilla.redhat.com and makes a report. To instead handle a bug at rpmfusion use something like</p>
 <dl>
 <dt>
-</dt><dd> $ fedora-review &#8211;url \<br />
- <a rel="nofollow" href="https://bugzilla.rpmfusion.org/show_bug.cgi?id=2150">https://bugzilla.rpmfusion.org/show_bug.cgi?id=2150</a> \<br />
+</dt><dd> $ fedora-review &#8211;url \<br/>
+ <a rel="nofollow" href="https://bugzilla.rpmfusion.org/show_bug.cgi?id=2150">https://bugzilla.rpmfusion.org/show_bug.cgi?id=2150</a> \<br/>
  &#8211;mock-config fedora-16-i386-rpmfusion_free</dd></dl>
 <p> Occasionally, fedora-review isn&#8217;t able to pick up the links e. g., when the links does not end in .spec and/or .src.rpm. In these case you need to download files manually. Using &#8211;rpm-spec only the srpm is needed: </p>
 <pre>
@@ -196,9 +196,9 @@ $ fedora-review --rpm-spec -n my-package-1.2-1.fc16.src.rpm
 </dl>
 <h2>AUTHORS</h2>
 <p> Original author: Tim Lauridsen &lt;tim.lauridsen [at] gmail.com&gt; </p>
-<p> Developers:<br />
-&nbsp;<wbr>Pierre-Yves Chibon&nbsp;<wbr>&lt;pingou [at] pingoured.fr&gt;<br />
-&nbsp;<wbr>Alec Leamas&nbsp;<wbr>&lt;leamas.alec [at] maybe.gmail&gt;<br />
+<p> Developers:<br/>
+&nbsp;<wbr>Pierre-Yves Chibon&nbsp;<wbr>&lt;pingou [at] pingoured.fr&gt;<br/>
+&nbsp;<wbr>Alec Leamas&nbsp;<wbr>&lt;leamas.alec [at] maybe.gmail&gt;<br/>
 &nbsp;<wbr>Stanislav Ochotnicky&nbsp;<wbr>&lt;sochotnicky [at] redhat.com&gt; </p>
 <p> For a list of all contributors see AUTHORS file </p>
 <h2>SEE ALSO</h2>

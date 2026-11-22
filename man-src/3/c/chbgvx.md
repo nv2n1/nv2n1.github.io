@@ -11,7 +11,7 @@ description: "chbgvx.f –"
 <p> chbgvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chbgvx</code> (JOBZ, RANGE, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, Q, LDQ, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, RWORK, IWORK, IFAIL, INFO)<br />
+<p> subroutine <code>chbgvx</code> (JOBZ, RANGE, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, Q, LDQ, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, RWORK, IWORK, IFAIL, INFO)<br/>
  <i></i><code>CHBGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chbgvx (characterJOBZ, characterRANGE, characterUPLO, integerN, integerKA, integerKB, complex, dimension( ldab, * )AB, integerLDAB, complex, dimension( ldbb, * )BB, integerLDBB, complex, dimension( ldq, * )Q, integerLDQ, realVL, realVU, integerIL, integerIU, realABSTOL, integerM, real, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )WORK, real, dimension( * )RWORK, integer, dimension( * )IWORK, integer, dimension( * )IFAIL, integerINFO)</h3>
@@ -86,14 +86,14 @@ description: "chbgvx.f –"
           The leading dimension of the array AB.  LDAB &gt;= KA+1.
 </pre>
 <p> <i>BB</i> </p>
-<p>          BB is COMPLEX array, dimension (LDBB, N)<br />
-          On entry, the upper or lower triangle of the Hermitian band<br />
-          matrix B, stored in the first kb+1 rows of the array.  The<br />
-          j-th column of B is stored in the j-th column of the array BB<br />
-          as follows:<br />
-          if UPLO = &#8216;U&#8217;, BB(kb+1+i-j,j) = B(i,j) for max(1,j-kb)&lt;=i&lt;=j;<br />
-          if UPLO = &#8216;L&#8217;, BB(1+i-j,j)    = B(i,j) for j&lt;=i&lt;=min(n,j+kb).<br />
-          On exit, the factor S from the split Cholesky factorization<br />
+<p>          BB is COMPLEX array, dimension (LDBB, N)<br/>
+          On entry, the upper or lower triangle of the Hermitian band<br/>
+          matrix B, stored in the first kb+1 rows of the array.  The<br/>
+          j-th column of B is stored in the j-th column of the array BB<br/>
+          as follows:<br/>
+          if UPLO = &#8216;U&#8217;, BB(kb+1+i-j,j) = B(i,j) for max(1,j-kb)&lt;=i&lt;=j;<br/>
+          if UPLO = &#8216;L&#8217;, BB(1+i-j,j)    = B(i,j) for j&lt;=i&lt;=min(n,j+kb).<br/>
+          On exit, the factor S from the split Cholesky factorization<br/>
           B = S**H*S, as returned by CPBSTF.</p>
 <p> <i>LDBB</i> </p>
 <pre>
@@ -130,12 +130,12 @@ description: "chbgvx.f –"
           IL is INTEGER
 </pre>
 <p> <i>IU</i> </p>
-<p>IU is INTEGER<br />
-    If RANGE = &#8216;I&#8217;,<br />
-       the indices(in ascending order) of the<br />
-           smallest and largest eigenvalues to be returned.1 &lt;= IL<br />
-           &lt;= IU &lt;= N,<br />
-       if N &gt; 0;<br />
+<p>IU is INTEGER<br/>
+    If RANGE = &#8216;I&#8217;,<br/>
+       the indices(in ascending order) of the<br/>
+           smallest and largest eigenvalues to be returned.1 &lt;= IL<br/>
+           &lt;= IU &lt;= N,<br/>
+       if N &gt; 0;<br/>
 IL = 1 and IU = 0 if N = 0. Not referenced if RANGE = &#8216;A&#8217; or &#8216;V&#8217;.</p>
 <p> <i>ABSTOL</i> </p>
 <pre>

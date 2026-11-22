@@ -556,8 +556,8 @@ description: "tar – an archiving utility"
 <dt><code>xdev</code></dt>
 <dd> &quot;%s: file is on a different filesystem; not dumped&quot;</dd>
 <dt><code>file-ignored</code></dt>
-<dd> &quot;%s: Unknown file type; file ignored&quot;<br />
- &quot;%s: socket ignored&quot;<br />
+<dd> &quot;%s: Unknown file type; file ignored&quot;<br/>
+ &quot;%s: socket ignored&quot;<br/>
  &quot;%s: door ignored&quot;</dd>
 <dt><code>file-unchanged</code></dt>
 <dd> &quot;%s: file is unchanged; not dumped&quot;</dd>
@@ -574,7 +574,7 @@ description: "tar – an archiving utility"
 <dt><code>existing-file</code></dt>
 <dd> &quot;%s: skipping existing file&quot;</dd>
 <dt><code>timestamp</code></dt>
-<dd> &quot;%s: implausibly old time stamp %s&quot;<br />
+<dd> &quot;%s: implausibly old time stamp %s&quot;<br/>
  &quot;%s: time stamp %s is %s s in the future&quot;</dd>
 <dt><code>contiguous-cast</code></dt>
 <dd> &quot;Extracting contiguous files as regular files&quot;</dd>
@@ -595,7 +595,7 @@ description: "tar – an archiving utility"
 <dt>
 </dt><dd>Keywords controlling incremental extraction:</dd>
 <dt><code>rename-directory</code></dt>
-<dd> &quot;%s: Directory has been renamed from %s&quot;<br />
+<dd> &quot;%s: Directory has been renamed from %s&quot;<br/>
  &quot;%s: Directory has been renamed&quot;</dd>
 <dt><code>new-directory</code></dt>
 <dd> &quot;%s: Directory is new&quot;</dd>
@@ -642,6 +642,6 @@ description: "tar – an archiving utility"
 <h2>BUG REPORTS</h2>
 <p> Report bugs to &lt;bug-tar [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2013-2019 Free Software Foundation, Inc.<br />
- License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 2013-2019 Free Software Foundation, Inc.<br/>
+ License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>

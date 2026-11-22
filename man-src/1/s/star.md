@@ -10,10 +10,10 @@ description: "star – unique standard tape archiver"
 
 <p> star - unique standard tape archiver  </p>
 <h2>SYNOPSIS</h2>
-<p> <code>star&nbsp;<wbr></code> <i>command</i> [<i>options</i>] [<code>-find</code>] <i>file1 ... filen</i> [<i>find_expr</i>] <br />
- <code>ustar</code> <i>command</i> [<i>options</i>] [<code>-find</code>] <i>file1 ... filen</i> [<i>find_expr</i>] <br />
- <code>tar&nbsp;<wbr>&nbsp;<wbr></code> <i>command</i> [<i>options</i>] <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code> <i>file1 ... filen</i> <br />
- <code>star&nbsp;<wbr></code> <code>-copy&nbsp;<wbr>&nbsp;<wbr></code> [<i>options</i>] [<code>-find</code>] <i>file1 ...</i> [<i>f_expr</i>] directory <br />
+<p> <code>star&nbsp;<wbr></code> <i>command</i> [<i>options</i>] [<code>-find</code>] <i>file1 ... filen</i> [<i>find_expr</i>] <br/>
+ <code>ustar</code> <i>command</i> [<i>options</i>] [<code>-find</code>] <i>file1 ... filen</i> [<i>find_expr</i>] <br/>
+ <code>tar&nbsp;<wbr>&nbsp;<wbr></code> <i>command</i> [<i>options</i>] <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code> <i>file1 ... filen</i> <br/>
+ <code>star&nbsp;<wbr></code> <code>-copy&nbsp;<wbr>&nbsp;<wbr></code> [<i>options</i>] [<code>-find</code>] <i>file1 ...</i> [<i>f_expr</i>] directory <br/>
  <code>star&nbsp;<wbr></code> <code>-copy&nbsp;<wbr>&nbsp;<wbr></code> [<i>options</i>] <code>-C</code> <i>from_directory . to_directory</i>  </p>
 <h2>DESCRIPTION</h2>
 <p> <code>Star</code> is a very fast <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1) like tape archiver with improved functionality. </p>
@@ -200,7 +200,7 @@ description: "star – unique standard tape archiver"
 <dt><code>-block-number</code></dt>
 <dd> <p> Print the archive block number (archive offset / 512) at the beginning of each line when in verbose mode. This allows to write backup scripts that archive the offsets for files and that use </p>
 <p> <code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>mt fsr</code><i> blockno</i> </p>
-<p> to skip to the tape block number of interest in a fast way<br />
+<p> to skip to the tape block number of interest in a fast way<br/>
  if a single file needs to be restored. </p>
  </dd>
 <dt><code>blocks=</code>#, <code>b=</code># </dt>
@@ -274,7 +274,7 @@ description: "star – unique standard tape archiver"
  </dd>
 <dt><code>-data-change-warn</code></dt>
 <dd> <p> If the size of a file changes while the file is being archived, treat this condition as a warning only that does not cause a non zero exit code. A warning message is still written if the condition is not otherwise ignored by another rule from an <code>errctl=</code> option. The <code>-data-change-warn</code> option works as if the last error control option was </p>
-<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>errctl=</code><i>&quot;WARN|GROW|SHRINK <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>*&quot;</i><br />
+<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>errctl=</code><i>&quot;WARN|GROW|SHRINK <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>*&quot;</i><br/>
  </p>
 <p> The <code>-e</code> option or an <code>ABORT</code> entry in a condition set up by <code>errctl=</code> has a higher precedence than the <code>-data-change-warn</code> option. This option is ignored in extract or list mode. </p>
  </dd>
@@ -411,7 +411,7 @@ description: "star – unique standard tape archiver"
  </dd>
 <dt><code>-e</code></dt>
 <dd> <p> Exit immediately with exit status -3 (253) if any unexpected error occurs. The <code>-e</code> option works as if the last error control option was </p>
-<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>errctl=</code><i>&quot;ABORT|ALL|DIFF <code>&nbsp;<wbr>&nbsp;<wbr></code>*&quot;</i><br />
+<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>errctl=</code><i>&quot;ABORT|ALL|DIFF <code>&nbsp;<wbr>&nbsp;<wbr></code>*&quot;</i><br/>
  </p>
 <p> This allows to use the <code>errctl=</code> option together with the <code>-e</code> option and thus to ignore some error conditions while aborting on all other conditions. </p>
  </dd>
@@ -638,7 +638,7 @@ description: "star – unique standard tape archiver"
 <p> Note that if <code>list=</code><i>-</i> has been specified, it is no longer possible to use the <code>-find</code> <code>-exec</code> primary. </p>
  </dd>
 <dt><code>-lowmem</code></dt>
-<dd> <p> Try to run with reduced memory requirements. This causes <code>star</code> to default to 1 MB of FIFO memory. Instead of allocating memory to hold the directory content and reading the directory at once, <code>star</code> reads the directory name by name. This may cause <code>star</code> to close the directory if it rans out of file descriptors because of deeply nested directories. If a directory then does not support <code><a href="/docs/linux/man/3-telldir/">telldir</a>(3)/<a href="/docs/linux/man/3-seekdir/">seekdir</a>(3)</code>, <code>star</code> will fail. <br />
+<dd> <p> Try to run with reduced memory requirements. This causes <code>star</code> to default to 1 MB of FIFO memory. Instead of allocating memory to hold the directory content and reading the directory at once, <code>star</code> reads the directory name by name. This may cause <code>star</code> to close the directory if it rans out of file descriptors because of deeply nested directories. If a directory then does not support <code><a href="/docs/linux/man/3-telldir/">telldir</a>(3)/<a href="/docs/linux/man/3-seekdir/">seekdir</a>(3)</code>, <code>star</code> will fail. <br/>
  </p>
  </dd>
 <dt><code>-lzip</code></dt>
@@ -853,7 +853,7 @@ description: "star – unique standard tape archiver"
 <dt><code>-s</code><i> replstr</i></dt>
 <dd> <p> Modify file or archive member names named by a pattern according to the substitution expression <i>replstr</i>. The format of <i>replstr</i> is: </p>
 <p> <code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>-s&nbsp;<wbr></code><i>/old/new/[gp]</i> </p>
-<p> The<br />
+<p> The<br/>
  <code>old</code> pattern may use regular expressions and the <code>new</code> string may contain the special character &#8216;&amp;&#8216;. The character &#8216;&amp;&#8216; is substituted by the string that matches the <code>old</code> pattern. The optional trailing &#8216;g&#8217; means global substitution. If &#8216;g&#8217; is not used, a substitution pattern is only used once on a name. If the optional trailing &#8216;p&#8217; is used, the substitution is printed to standard error. </p>
 <p> Up to 100 substitute options may be used. If more than one substitute option has been specified, <code>star</code> will loop over all substitute patterns until one matches. </p>
 <p> If the name substitutes to the empty string, the file is skipped. </p>
@@ -882,7 +882,7 @@ description: "star – unique standard tape archiver"
 <dd> <p> This option tells <code>star</code> in extract mode to try to create a symlink whenever a hardlink is encountered in the archive. </p>
  </dd>
 <dt><code>-T</code></dt>
-<dd> <p> If the option <code>file= </code> or <code>f= </code> is omitted and the -T option is present, <code>star</code> will use the device indicated by the <font SIZE="-1"><code>TAPE </code></font> environment variable, if set. </p>
+<dd> <p> If the option <code>file= </code> or <code>f= </code> is omitted and the -T option is present, <code>star</code> will use the device indicated by the <code>TAPE </code> environment variable, if set. </p>
  </dd>
 <dt><code>tardumps=</code><i>name</i></dt>
 <dd> <p> Set the file name for tar dump dates database to <code>name</code>. The default name is <code>/etc/tardumps</code>. Use in combination with the <code>level= </code> option to create <i>true incremental dumps</i>. See also <code>-wtardumps</code> option and section <code>INCREMENTAL BACKUPS</code> for more information. </p>
@@ -973,10 +973,10 @@ description: "star – unique standard tape archiver"
 <dd> <p> run the input or output through a <code>compress</code> pipe - see option <code>-z </code> below. </p>
  </dd>
 <dt><code>-z</code></dt>
-<dd> <p> run the input or output through a <code>gzip</code> pipe. This is currently a quick and dirty hack, that mainly will cover the most common usage to compress the <code>tar</code> output if it is a file. No reblocking will be done, so this option will currently only make sense on plain files. As the <code>-bz</code> the <code>-j</code> the <code>-Z</code> and the <code>-z</code> option are non standard, it makes sense to omit the <code>-bz</code> the <code>-j</code> the <code>-Z</code> and the <code>-z</code> options inside shell scripts if you are going to extract a compressed archive that is located inside a plain file as <code>star</code> will auto detect compression and choose the right decompression option to extract. The environment variable <code>STAR_COMPRESS_FLAG</code> may be used to specify one option for gzip. If you want to write write compressed archives to tape, you should use <br />
- <i>star -c . | gzip | sdd ibs=4k obs=32k -fill of=/dev/rmt/1bn</i> <br />
- or <br />
- <i>star -c . | gzip | sdd ibs=4k obs=32k -fill ovsize=60m of=/dev/rmt/1bn</i> <br />
+<dd> <p> run the input or output through a <code>gzip</code> pipe. This is currently a quick and dirty hack, that mainly will cover the most common usage to compress the <code>tar</code> output if it is a file. No reblocking will be done, so this option will currently only make sense on plain files. As the <code>-bz</code> the <code>-j</code> the <code>-Z</code> and the <code>-z</code> option are non standard, it makes sense to omit the <code>-bz</code> the <code>-j</code> the <code>-Z</code> and the <code>-z</code> options inside shell scripts if you are going to extract a compressed archive that is located inside a plain file as <code>star</code> will auto detect compression and choose the right decompression option to extract. The environment variable <code>STAR_COMPRESS_FLAG</code> may be used to specify one option for gzip. If you want to write write compressed archives to tape, you should use <br/>
+ <i>star -c . | gzip | sdd ibs=4k obs=32k -fill of=/dev/rmt/1bn</i> <br/>
+ or <br/>
+ <i>star -c . | gzip | sdd ibs=4k obs=32k -fill ovsize=60m of=/dev/rmt/1bn</i> <br/>
  if the tape can hold 60 MB. </p>
  </dd></dl>
 <h2>INCREMENTAL BACKUPS</h2>
@@ -998,10 +998,10 @@ description: "star – unique standard tape archiver"
 <p> The incremental backup method used by <code>star</code> depends on comparing the time stamps of all files against the time of the last backup. Note that this method only works correctly if the level 0 backup and all higher level incrementals include the whole file system. As <code>star</code> archives all inode meta data, <code>star</code> is able to detect renamed files by comparing the <code>inode numbers</code> of all files while in incremental restore mode. </p>
 <p> Detecting renamed files only works if <code>star</code>, while in backup mode, scans the whole file system tree for each full and incremental backup. This will work in case no files are excluded and the dump starts at the root directory of a file system. In case that no files are renamed from excluded parts to included parts, partial backups may be taken also. Partial backups only make sense if a complete directory sub tree is excluded (e.g. by using the <code>pat=</code> option) or if a partial backup starts at a sub directory that is not the root directory of the file system. </p>
 <p> To create a level 0 dump call: </p>
-<p> <code>star -c -xdev -sparse -acl -link-dirs level=0 -wtardumps \</code> <br />
+<p> <code>star -c -xdev -sparse -acl -link-dirs level=0 -wtardumps \</code> <br/>
  <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>f=</code><i>archive-name</i> -C /<i>filestem-mount-point</i> . </p>
 <p> To create a level 1 dump call: </p>
-<p> <code>star -c -xdev -sparse -acl -link-dirs level=1 -wtardumps \</code> <br />
+<p> <code>star -c -xdev -sparse -acl -link-dirs level=1 -wtardumps \</code> <br/>
  <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>f=</code><i>archive-name</i> -C /<i>filestem-mount-point</i> . </p>
 <p> Do not forget the dot at the end of the command line that specifies the directory to start the operation. </p>
 <p> Backups from live filesystems should be avoided. On operating systems that support <code>file system snapshots</code>, backups should be made from a read-only mount of a snapshot. Be careful that all files that have been created between setting up a snapshot and starting an incremental backup may be missing from all backups unless the <code>dumpdate=</code><i>name</i> option is used. </p>
@@ -1009,10 +1009,10 @@ description: "star – unique standard tape archiver"
 <p> If the the system that is going to be backed up is acting as a file server, it may be that services on remote clients cause inconsistent file states unless all such services that remotely access files are shut down before the snapshot is set up. </p>
 <p> <code>Star</code> includes options that help to deal with <code>file system snapshots</code>. The following example backs up a file system on Solaris using a file system snapshot: </p>
 <p> <code>echo &gt; /tmp/snapstamp</code> </p>
-<p> <code>mount -r `fssnap -F ufs -o \</code> <br />
+<p> <code>mount -r `fssnap -F ufs -o \</code> <br/>
  <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>backing-store=/var/tmp/EXPORT-NFS.snap /export/nfs` /mnt</code> </p>
-<p> <code>star -c -xdev -sparse -acl -link-dirs level=0 -wtardumps \</code> <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>f=</code><i>archive-name</i> dumpdate=/tmp/snapstamp \ <br />
+<p> <code>star -c -xdev -sparse -acl -link-dirs level=0 -wtardumps \</code> <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>f=</code><i>archive-name</i> dumpdate=/tmp/snapstamp \ <br/>
  <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fs-name=/export/nfs -C /mnt .</code> </p>
 <p> First a file with a current time stamp is created, then a snapshot for /export/nfs is created and mounted on /mnt. The following <code>star</code> command then creates a level 0 backup from the file system using the time the snapshot was created and the original mount point of the file system for /etc/tardumps and the archive header. </p>
 <p> Note that if the backup is done on a live file system, it may be unreliable. A typical problem problem in this context is caused by growing log files. As growing files are not a real problem with backups, the best way of dealing with growing files is to set up a <code>star</code> error control file (see <code>errctl=</code> option) and to tell <code>star </code> to ignore growing files.  </p>
@@ -1052,23 +1052,23 @@ description: "star – unique standard tape archiver"
  </dd></dl>
 <p> The disk now contains the same files as it did when the level 10 dump has been made on Wednesday of week 3. </p>
 <p> To extract a level 0 dump call: </p>
-<p> <code>cd /</code><i>filestem-mount-point</i> <br />
+<p> <code>cd /</code><i>filestem-mount-point</i> <br/>
  <code>star -xpU -restore f=</code><i>archive-name</i> </p>
 <p> This creates the directory <code>star-tmpdir</code> and the database <code>star-symtable</code> in the root directory of the new file system. Subsequent restores with higher level backups depend on these files. </p>
 <p> To extract a level 1 (or higher) dump call: </p>
-<p> <code>cd /</code><i>filestem-mount-point</i> <br />
+<p> <code>cd /</code><i>filestem-mount-point</i> <br/>
  <code>star -xpU -restore f=</code><i>archive-name</i> </p>
 <p> Note that the environment variable <code>STAR_DEBUG</code> exists, <code>star</code> does not remove files with link count 1 that have been removed between incremental dumps. These files are moved to the directory <code>star-tmpdir</code>. Before you start to extract the next incremental, you need to remove all files in <code>star-tmpdir</code>. </p>
 <h2>SYNCHRONIZING FILESYSTEMS</h2>
 <p> <code>Star</code> may be used to synchronize filesystem content. To do this, an initial copy of the current content of the source filesystem needs to be performed first. </p>
 <p> To create an initial copy of a filesystem call: </p>
-<p> <code>star -c -xdev -sparse -acl -link-dirs level=0 -wtardumps \</code> <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-C /</code><i>filestem-mount-point</i> . | \ <br />
+<p> <code>star -c -xdev -sparse -acl -link-dirs level=0 -wtardumps \</code> <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-C /</code><i>filestem-mount-point</i> . | \ <br/>
  <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>star -xpU -restore -C /</code><i>extract-target-dir</i> </p>
 <p> In order to perform subsequent synchronization of the target filesystem with the content of the source filesystem, a modified incremental dump/restore procedure may be used. </p>
 <p> To copy incremental content of a filesystem call: </p>
-<p> <code>star -c -xdev -sparse -acl -link-dirs level=1 -wtardumps \</code> <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-cumulative -C /</code><i>filestem-mount-point</i> . | \ <br />
+<p> <code>star -c -xdev -sparse -acl -link-dirs level=1 -wtardumps \</code> <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-cumulative -C /</code><i>filestem-mount-point</i> . | \ <br/>
  <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>star -xpU -restore -C /</code><i>extract-target-dir</i> </p>
 <p> Note that like with backups in general, copies from a live filesystem should be avoided. On operating systems that support <code>file system snapshots</code>, copies should be made from a read-only mount of a snapshot. Be careful that all files that have been created between setting up a snapshot and starting an incremental copy may be missing from all copies unless the <code>dumpdate=</code><i>name</i> option is used. </p>
 <p> See section <code>INCREMENTAL BACKUPS</code> to learn how to modify the command line in case <code>file system snapshots</code> are used.  </p>
@@ -1180,7 +1180,7 @@ description: "star – unique standard tape archiver"
 <p> <i>Pat, </i> in this case should match the <i>tarfile</i> in the <i>tarfile</i> on tape that should be extracted. </p>
 <p> To make a backup of the root filesystem to a tape drive connected to a remote machine, one might use: </p>
 <dl>
-<dd> <p> <code>example# cd /</code> <br />
+<dd> <p> <code>example# cd /</code> <br/>
  </p>
 <pre><code>example# star -cM fs=128m bs=63k f=tape [at] remotehost:/dev/rmt/1bn .
 </code></pre>
@@ -1196,11 +1196,11 @@ description: "star – unique standard tape archiver"
  </dd></dl>
 <p> To repair a corrupted filesystem for which no recent backup exists, do the following: </p>
 <dl>
-<dd> <p> <code>example# fsck -y /filesys</code> <br />
- <code>example# mount /filesys</code> <br />
- <code>example# cd /filesys</code> <br />
- <code>example# star -xpk f=/dev/rmt/1bn</code> <br />
- <code>example# mt -f /dev/rmt/1bn rewind</code> <br />
+<dd> <p> <code>example# fsck -y /filesys</code> <br/>
+ <code>example# mount /filesys</code> <br/>
+ <code>example# cd /filesys</code> <br/>
+ <code>example# star -xpk f=/dev/rmt/1bn</code> <br/>
+ <code>example# mt -f /dev/rmt/1bn rewind</code> <br/>
  <code>example# star -diff -v diffopts=!times f=/dev/rmt/1bn</code> </p>
  </dd></dl>
 <p> Now check the differences and decide whether to restore additional files. This may be done by generating a list containing the needed filenames and using the list= option or by using the interactive mode (see -w option). </p>
@@ -1249,7 +1249,7 @@ description: "star – unique standard tape archiver"
 <h2>FILES</h2>
 <dl>
 <dt><code>/etc/default/star</code></dt>
-<dd> <p> Default values can be set for the following options in /etc/default/star. For example: <font SIZE="-1">CDR_FIFOSIZE=64m</font> </p>
+<dd> <p> Default values can be set for the following options in /etc/default/star. For example: CDR_FIFOSIZE=64m </p>
  </dd>
 <dl>
 <dd>  </dd>
@@ -1278,8 +1278,8 @@ description: "star – unique standard tape archiver"
 <dd> <p> Archive entries for the <code>-[0..7]</code> option. </p>
 <p> A correct <code>archive?=</code> line has 3..4 space separated entries. The first is the device entry (e.g. <i>archive0=/dev/tape</i>). The second is the blocking factor in 512 byte units. The third is the maximum media size in 1024 byte units. If this entry contains a 0, then the media size is unlimited. The fourth entry is optional. If it contains a &#8216;n&#8217; or a &#8216;N&#8217;, then the archive device is not a tape. </p>
 <p> Examples: </p>
-<p> archive0=/dev/tape 512 0 y <br />
- archive1=/dev/fd0 1 1440 n <br />
+<p> archive0=/dev/tape 512 0 y <br/>
+ archive1=/dev/fd0 1 1440 n <br/>
  archive2=/dev/rmt/0mbn 512 0 </p>
 <p> If the default file does not need to be shared with the tar program from Solaris, any number may be used like a generic size option like bs=. </p>
 <p> Example: </p>

@@ -24,7 +24,7 @@ description: "printf, fprintf, dprintf, sprintf, snprintf, vprintf, vfprintf, vd
 <p>Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>snprintf</code>(), <code>vsnprintf</code>():</p>
 <dl>
-<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _ISOC99_SOURCE ||<br />
+<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _ISOC99_SOURCE ||<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>dprintf</code>(), <code>vdprintf</code>():</p>
 <dl>
@@ -198,7 +198,7 @@ description: "printf, fprintf, dprintf, sprintf, snprintf, vprintf, vfprintf, vd
 <p> glibc 2.2 adds the conversion character <code>F</code> with C99 semantics, and the flag character <code>I</code>.  </p>
 <h2>NOTES</h2>
 <p> Some programs imprudently rely on code such as the following </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sprintf(buf,&nbsp;&quot;%s some further text&quot;, buf); </p>
 <p> to append text to <i>buf</i>. However, the standards explicitly note that the results are undefined if source and destination buffers overlap when calling <code>sprintf</code>(), <code>snprintf</code>(), <code>vsprintf</code>(), and <code>vsnprintf</code>(). Depending on the version of <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) used, and the compiler options employed, calls such as the above will <code>not</code> produce the expected results. </p>
 <p> The glibc implementation of the functions <code>snprintf</code>() and <code>vsnprintf</code>() conforms to the C99 standard, that is, behaves as described above, since glibc version 2.1. Until glibc 2.0.6, they would return -1 when the output was truncated.  </p>
@@ -209,47 +209,47 @@ description: "printf, fprintf, dprintf, sprintf, snprintf, vprintf, vfprintf, vd
 <p> To print <i>Pi</i> to five decimal places: </p>
 <p> #include &lt;math.h&gt; #include &lt;stdio.h&gt; fprintf(stdout, &quot;pi = %.5f\n&quot;, 4 * atan(1.0)); </p>
 <p> To print a date and time in the form &quot;Sunday, July 3, 10:02&quot;, where <i>weekday</i> and <i>month</i> are pointers to strings: </p>
-<p> #include &lt;stdio.h&gt; fprintf(stdout, &quot;%s, %s %d, %.2d:%.2d\n&quot;, <br />
+<p> #include &lt;stdio.h&gt; fprintf(stdout, &quot;%s, %s %d, %.2d:%.2d\n&quot;, <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;weekday, month, day, hour, min); </p>
 <p> Many countries use the day-month-year order. Hence, an internationalized version must be able to print the arguments in an order specified by the format: </p>
-<p> #include &lt;stdio.h&gt; fprintf(stdout, format, <br />
+<p> #include &lt;stdio.h&gt; fprintf(stdout, format, <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;weekday, month, day, hour, min); </p>
 <p> where <i>format</i> depends on locale, and may permute the arguments. With the value: </p>
 <p> &quot;%1$s, %3$d. %2$s, %4$d:%5$.2d\n&quot; </p>
 <p> one might obtain &quot;Sonntag, 3. Juli, 10:02&quot;. </p>
 <p> To allocate a sufficiently large string and print into it (code correct for both glibc 2.0 and glibc 2.1): </p>
 <p> #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;stdarg.h&gt; </p>
-<p> char * make_message(const char *fmt, ...) { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int n&nbsp;=&nbsp;0; <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t size&nbsp;=&nbsp;0; <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*p&nbsp;=&nbsp;NULL; <br />
+<p> char * make_message(const char *fmt, ...) { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int n&nbsp;=&nbsp;0; <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t size&nbsp;=&nbsp;0; <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*p&nbsp;=&nbsp;NULL; <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;va_list ap; </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Determine required size&nbsp;*/ </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;va_start(ap, fmt); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;n&nbsp;=&nbsp;vsnprintf(p, size, fmt, ap); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;va_start(ap, fmt); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;n&nbsp;=&nbsp;vsnprintf(p, size, fmt, ap); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;va_end(ap); </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(n&nbsp;&lt;&nbsp;0) <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(n&nbsp;&lt;&nbsp;0) <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return NULL; </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;One extra byte for&nbsp;&#8216;\0&#8217;&nbsp;*/ </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size&nbsp;=&nbsp;(size_t)&nbsp;n&nbsp;+&nbsp;1; <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p&nbsp;=&nbsp;malloc(size); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(p&nbsp;==&nbsp;NULL) <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size&nbsp;=&nbsp;(size_t)&nbsp;n&nbsp;+&nbsp;1; <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p&nbsp;=&nbsp;malloc(size); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(p&nbsp;==&nbsp;NULL) <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return NULL; </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;va_start(ap, fmt); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;n&nbsp;=&nbsp;vsnprintf(p, size, fmt, ap); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;va_start(ap, fmt); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;n&nbsp;=&nbsp;vsnprintf(p, size, fmt, ap); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;va_end(ap); </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(n&nbsp;&lt;&nbsp;0)&nbsp;{ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(p); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return NULL; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(n&nbsp;&lt;&nbsp;0)&nbsp;{ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(p); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return NULL; <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return p; } </p>
 <p> If truncation occurs in glibc versions prior to 2.0.6, this is treated as an error instead of being handled gracefully.  </p>
 <h2>SEE ALSO</h2>

@@ -13,23 +13,23 @@ description: "QwtPlotZoneItem –"
 <p>#include &lt;qwt_plot_zoneitem.h&gt; </p>
 <p> Inherits <code>QwtPlotItem</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotZoneItem</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPlotZoneItem</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotZoneItem</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPlotZoneItem</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
-<p> void <code>setOrientation</code> (Qt::Orientation)<br />
- <i>Set the orientation of the zone. </i><br />
+<p> void <code>setOrientation</code> (Qt::Orientation)<br/>
+ <i>Set the orientation of the zone. </i><br/>
  Qt::Orientation <code>orientation</code> () </p>
 <p> void <code>setInterval</code> (double min, double max) </p>
 <p> void <code>setInterval</code> (const <code>QwtInterval</code> &amp;) </p>
 <p> <code>QwtInterval</code> <code>interval</code> () const </p>
 <p> void <code>setPen</code> (const QColor &amp;, qreal width=0.0, Qt::PenStyle=Qt::SolidLine) </p>
-<p> void <code>setPen</code> (const QPen &amp;)<br />
- <i>Assign a pen. </i><br />
+<p> void <code>setPen</code> (const QPen &amp;)<br/>
+ <i>Assign a pen. </i><br/>
  const QPen &amp; <code>pen</code> () const </p>
-<p> void <code>setBrush</code> (const QBrush &amp;)<br />
- <i>Assign a brush. </i><br />
+<p> void <code>setBrush</code> (const QBrush &amp;)<br/>
+ <i>Assign a brush. </i><br/>
  const QBrush &amp; <code>brush</code> () const </p>
 <p> virtual void <code>draw</code> (QPainter *, const <code>QwtScaleMap</code> &amp;, const <code>QwtScaleMap</code> &amp;, const QRectF &amp;) const </p>
 <p> virtual QRectF <code>boundingRect</code> () const </p>
@@ -71,9 +71,9 @@ description: "QwtPlotZoneItem –"
 <p>Draw the zone </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x Scale Map<br />
- <i>yMap</i> y Scale Map<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x Scale Map<br/>
+ <i>yMap</i> y Scale Map<br/>
  <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates</dd></dl>
 <p> Implements <code>QwtPlotItem</code>.</p>
 <h3><code>QwtInterval</code> QwtPlotZoneItem::interval () const</h3>
@@ -115,7 +115,7 @@ description: "QwtPlotZoneItem –"
 <p> For a horizontal zone the interval is related to the y axis, for a vertical zone it is related to the x axis. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>min</i> Minimum of the interval<br />
+<dd><i>min</i> Minimum of the interval<br/>
  <i>max</i> Maximum of the interval</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -139,8 +139,8 @@ description: "QwtPlotZoneItem –"
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Pen color<br />
- <i>width</i> Pen width<br />
+<dd><i>color</i> Pen color<br/>
+ <i>width</i> Pen width<br/>
  <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

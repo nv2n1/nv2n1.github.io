@@ -10,7 +10,7 @@ description: "zhbgst.f –"
 <p>zhbgst.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhbgst</code> (VECT, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, X, LDX, WORK, RWORK, INFO)<br />
+<p>subroutine <code>zhbgst</code> (VECT, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, X, LDX, WORK, RWORK, INFO)<br/>
  <i></i><code>ZHBGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhbgst (characterVECT, characterUPLO, integerN, integerKA, integerKB, complex*16, dimension( ldab, * )AB, integerLDAB, complex*16, dimension( ldbb, * )BB, integerLDBB, complex*16, dimension( ldx, * )X, integerLDX, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

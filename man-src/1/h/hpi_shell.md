@@ -14,7 +14,7 @@ description: "hpi_shell – An openhpi sample application that allows a user to 
 hpi_shell[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-e][-f&lt;file&gt;][-X][-h] hpi_shell[--domain = nn][--host = host[:port]][--cfgfile = file][--events][--cmdfile = filename][--debug][--help]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> hpi_shell reads commands and performs <font SIZE="-1">HPI</font> operations based on those commands. This allows it to exercise HPI-managed hardware and do manual operations on that hardware. </p>
+<p> hpi_shell reads commands and performs HPI operations based on those commands. This allows it to exercise HPI-managed hardware and do manual operations on that hardware. </p>
 <p> Once in hpi_shell, use the &#8220;help&#8221; command for a list of commands, or &#8220;help command&#8221; for details on a particular command. </p>
 <p> If no domain or host is selected, ohparam uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>
@@ -33,7 +33,7 @@ hpi_shell[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-e][-f&lt;file&gt;][-X][-h] 
 <dt><code>-X</code>, <code>&#8211;debug</code></dt>
 <dd> Display debug messages</dd>
 <dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dd> Open session to the domain served by the daemon at the specified URL (host:port). This option overrides the OPENHPI_DAEMON_HOST and OPENHPI_DAEMON_PORT environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
 <dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
 <dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SEE ALSO</h2>

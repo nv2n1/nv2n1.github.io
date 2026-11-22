@@ -27,7 +27,7 @@ description: "apturl – graphical apt-protocol interpreting package installer"
 <dt>apturl apt:adobe-flashplugin?channel=lucid-partner</dt>
 <dd>Enables the &quot;partner&quot; repository and installs package adobe-flashplugin. Available repositories are listed in /usr/share/app-install/channels/.</dd>
 <dt>apturl apt+<a rel="nofollow" href="http://launchpad.net/~mvo/ppa?package=2vcard">http://launchpad.net/~mvo/ppa?package=2vcard</a></dt>
-<dd>Installs 2vcard from the indicated PPA (if the user confirms), and afterward asks if the PPA should be removed again or it should remain enabled.<br />
+<dd>Installs 2vcard from the indicated PPA (if the user confirms), and afterward asks if the PPA should be removed again or it should remain enabled.<br/>
  Warning: This is currently disabled because of security concerns. </dd>
 <h2>Exit Codes</h2>
 <dl>

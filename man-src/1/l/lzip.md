@@ -57,10 +57,10 @@ description: "lzip – reduces the size of files"
 <p> The bidimensional parameter space of LZMA can&#8217;t be mapped to a linear scale optimal for all files. If your files are large, very repetitive, etc, you may need to use the <code>&#8211;dictionary-size</code> and <code>&#8211;match-length</code> options directly to achieve optimal performance. </p>
 <p> Exit status: 0 for a normal exit, 1 for environmental problems (file not found, invalid flags, I/O errors, etc), 2 to indicate a corrupt or invalid input file, 3 for an internal consistency error (eg, bug) which caused lzip to panic.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to lzip-bug [at] nongnu.org<br />
+<p> Report bugs to lzip-bug [at] nongnu.org<br/>
  Lzip home page: <a rel="nofollow" href="http://www.nongnu.org/lzip/lzip.html">http://www.nongnu.org/lzip/lzip.html</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2016 Antonio Diaz Diaz. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 2016 Antonio Diaz Diaz. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>lzip</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>lzip</code> programs are properly installed at your site, the command</p>

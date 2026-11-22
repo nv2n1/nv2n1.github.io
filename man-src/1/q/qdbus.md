@@ -32,7 +32,7 @@ description: "qdbus – a communication-interface for qt-based applications"
 <dd> print replies literally </dd>
 </dl>
 <h2>EXAMPLE</h2>
-<p> Here is an example of using <code>qdbus</code> to list all status information about a service:<br />
+<p> Here is an example of using <code>qdbus</code> to list all status information about a service:<br/>
  % qdbus org.ktorrent.ktorrent </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-dbus-cleanup-sockets/">dbus-cleanup-sockets</a>(1), <a href="/docs/linux/man/1-dbus-launch/">dbus-launch</a>(1), <a href="/docs/linux/man/1-dbus-send/">dbus-send</a>(1), <a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a>(1), <a href="/docs/linux/man/1-dbus-monitor/">dbus-monitor</a>(1), <a href="/docs/linux/man/1-dbus-uuidgen/">dbus-uuidgen</a>(1) </p>

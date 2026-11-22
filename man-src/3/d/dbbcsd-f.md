@@ -10,7 +10,7 @@ description: "dbbcsd.f –"
 <p>dbbcsd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dbbcsd</code> (JOBU1, JOBU2, JOBV1T, JOBV2T, TRANS, M, P, Q, THETA, PHI, U1, LDU1, U2, LDU2, V1T, LDV1T, V2T, LDV2T, B11D, B11E, B12D, B12E, B21D, B21E, B22D, B22E, WORK, LWORK, INFO)<br />
+<p>subroutine <code>dbbcsd</code> (JOBU1, JOBU2, JOBV1T, JOBV2T, TRANS, M, P, Q, THETA, PHI, U1, LDU1, U2, LDU2, V1T, LDV1T, V2T, LDV2T, B11D, B11E, B12D, B12E, B21D, B21E, B22D, B22E, WORK, LWORK, INFO)<br/>
  <i></i><code>DBBCSD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dbbcsd (characterJOBU1, characterJOBU2, characterJOBV1T, characterJOBV2T, characterTRANS, integerM, integerP, integerQ, double precision, dimension( * )THETA, double precision, dimension( * )PHI, double precision, dimension( ldu1, * )U1, integerLDU1, double precision, dimension( ldu2, * )U2, integerLDU2, double precision, dimension( ldv1t, * )V1T, integerLDV1T, double precision, dimension( ldv2t, * )V2T, integerLDV2T, double precision, dimension( * )B11D, double precision, dimension( * )B11E, double precision, dimension( * )B12D, double precision, dimension( * )B12E, double precision, dimension( * )B21D, double precision, dimension( * )B21E, double precision, dimension( * )B22D, double precision, dimension( * )B22E, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

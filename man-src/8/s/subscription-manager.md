@@ -190,7 +190,7 @@ description: "subscription-manager – Registers systems to a subscription manag
 <dt><code>&#8211;match-installed</code></dt>
 <dd>Shows only subscriptions matching products that are currently installed; only used with <code>&#8211;available</code> option. </dd>
 <dt><code>&#8211;matches=SEARCH</code></dt>
-<dd>Limits the output of &#8211;installed, &#8211;available and &#8211;consumed to only subscriptions or products which contain SEARCH in the subscription or product information, varying with the list requested and the server version.<br />
+<dd>Limits the output of &#8211;installed, &#8211;available and &#8211;consumed to only subscriptions or products which contain SEARCH in the subscription or product information, varying with the list requested and the server version.<br/>
  SEARCH may contain the wildcards ? or * to match a single character or zero or more characters, respectively. The wildcard characters may be escaped with a backslash to represent a literal question mark or asterisk. Likewise, to represent a backslash, it must be escaped with another backslash. </dd>
 <dt><code>&#8211;pool-only</code></dt>
 <dd>Limits the output of &#8211;available and &#8211;consumed such that only the pool IDs are displayed. No labels or errors will be printed if this option is specified. </dd>

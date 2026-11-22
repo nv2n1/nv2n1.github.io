@@ -27,27 +27,27 @@ description: "pamsummcol – summarize (sum, average, etc) a Netpbm image by col
 <dl>
 <dt><code>-sum</code></dt>
 <dd>
-<p> This option makes the summary function addition.<br />
-&nbsp;<wbr>&nbsp;<wbr>In each column and plane of the output row, the sample value is the<br />
-&nbsp;<wbr>&nbsp;<wbr>sum of all the samples values in the same column and plane of the input.<br />
-&nbsp;<wbr>&nbsp;<wbr>If a result is greater than the image maxval, it is clipped to<br />
+<p> This option makes the summary function addition.<br/>
+&nbsp;<wbr>&nbsp;<wbr>In each column and plane of the output row, the sample value is the<br/>
+&nbsp;<wbr>&nbsp;<wbr>sum of all the samples values in the same column and plane of the input.<br/>
+&nbsp;<wbr>&nbsp;<wbr>If a result is greater than the image maxval, it is clipped to<br/>
 &nbsp;<wbr>&nbsp;<wbr>the maxval. </p>
 </dd><dt><code>-mean</code></dt>
 <dd>
-<p> This option makes the summary function arithmetic mean.<br />
-&nbsp;<wbr>&nbsp;<wbr>In each column and plane of the output row, the sample value is the<br />
+<p> This option makes the summary function arithmetic mean.<br/>
+&nbsp;<wbr>&nbsp;<wbr>In each column and plane of the output row, the sample value is the<br/>
 &nbsp;<wbr>&nbsp;<wbr>mean of all the samples values in the same column and plane of the input. </p>
 </dd><dt><code>-min</code></dt>
 <dd>
-<p> This option makes the summary function arithmetic minimum.<br />
-&nbsp;<wbr>&nbsp;<wbr>In each column and plane of the output row, the sample value is the<br />
-&nbsp;<wbr>&nbsp;<wbr>minimum of all the samples values in the same column and plane of<br />
+<p> This option makes the summary function arithmetic minimum.<br/>
+&nbsp;<wbr>&nbsp;<wbr>In each column and plane of the output row, the sample value is the<br/>
+&nbsp;<wbr>&nbsp;<wbr>minimum of all the samples values in the same column and plane of<br/>
 &nbsp;<wbr>&nbsp;<wbr>the input. </p>
 </dd><dt><code>-max</code></dt>
 <dd>
-<p> This option makes the summary function arithmetic maximum.<br />
-&nbsp;<wbr>&nbsp;<wbr>In each column and plane of the output row, the sample value is<br />
-&nbsp;<wbr>&nbsp;<wbr>the maximum of all the samples values in the same column and<br />
+<p> This option makes the summary function arithmetic maximum.<br/>
+&nbsp;<wbr>&nbsp;<wbr>In each column and plane of the output row, the sample value is<br/>
+&nbsp;<wbr>&nbsp;<wbr>the maximum of all the samples values in the same column and<br/>
 &nbsp;<wbr>&nbsp;<wbr>plane of the input. </p>
 </dd></dl>
 <h2>SEE ALSO</h2>

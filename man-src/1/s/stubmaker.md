@@ -23,7 +23,7 @@ stubmaker.pl - Generates client stubs from a WSDL file.
 
 <h2>STUB FILES</h2>
 
-<h2><font SIZE="-1">STUB</font> <font SIZE="-1">SUBROUTINES</font></h2>
+<h2>STUB SUBROUTINES</h2>
 
  The ``class'' or ``package'' created by stubmaker.pl is actually a sub-class of the core SOAP::Lite object. As a result, all methods one can call upon SOAP::Lite one can also call upon generated stubs. 
 
@@ -32,13 +32,13 @@ stubmaker.pl - Generates client stubs from a WSDL file.
  The following subroutines are unique to generated stub classes, and help the user control and configure the stub class.
 <dl>
 <dt>want_som(boolean)
-</dt><dd> When set to 1, SOAP::Lite will return <font SIZE="-1">SOAP::SOM</font> objects to the user upon invoking a method on a remote service. This is very helpful when you need to check to see if the return value is a SOAP::Fault or not. When set to 0, SOAP::Lite will return the return value of the method.</dd></dl>
+</dt><dd> When set to 1, SOAP::Lite will return SOAP::SOM objects to the user upon invoking a method on a remote service. This is very helpful when you need to check to see if the return value is a SOAP::Fault or not. When set to 0, SOAP::Lite will return the return value of the method.</dd></dl>
 
 <h2>EXAMPLES</h2>
 
 <h2>Invoking stubmaker.pl from the command line</h2>
 
- &gt; perl stubmaker.pl <a rel="nofollow" HREF="http://www.xmethods.net/sd/StockQuoteService.wsdl">http://www.xmethods.net/sd/StockQuoteService.wsdl</a> Or: &gt; perl ``-MStockQuoteService qw(:all)'' -le ``print getQuote('<font SIZE="-1">MSFT</font>')''
+ &gt; perl stubmaker.pl <a rel="nofollow" HREF="http://www.xmethods.net/sd/StockQuoteService.wsdl">http://www.xmethods.net/sd/StockQuoteService.wsdl</a> Or: &gt; perl ``-MStockQuoteService qw(:all)'' -le ``print getQuote('MSFT')''
 
 <h2>Working with stub classes</h2>
 

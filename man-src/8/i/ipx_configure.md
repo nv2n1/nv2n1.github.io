@@ -13,15 +13,15 @@ description: "ipx_configure – query/configure IPX behavior"
 <h2>Description</h2>
 <p><code>ipx_configure</code> queries or configures IPX behavior with respect to automatic IPX interface detection. IPX can be configured to automatically create interfaces as they are detected. It can also be configured to automatically select a primary interface when none is explicitly selected. By default, it is configured to <code>NOT </code> have this behavior. Without arguments, <code>ipx_configure</code> returns the current configuration state. The behavior with arguments is described in the section <code>OPTIONS.</code></p>
 <h2>Options</h2>
-<p><code>&#8211;auto_interface=</code><i>on|off</i><br />
+<p><code>&#8211;auto_interface=</code><i>on|off</i><br/>
  <code>-i</code> <i>on|off</i></p>
 <dl>
 <dd>This argument either turns on or off the behavior of automatically creating interfaces.</dd></dl>
-<p> <code>&#8211;auto_primary=</code><i>on|off</i><br />
+<p> <code>&#8211;auto_primary=</code><i>on|off</i><br/>
  <code>-p</code> <i>on|off</i></p>
 <dl>
 <dd>This argument either turns on or off the behavior of automatically selecting a primary interface.</dd></dl>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
  <code>-h</code></p>
 <dl>
 <dd>Print out information about utility.</dd></dl>

@@ -27,18 +27,18 @@ int sd_pid_notify_with_fds(pid_t pid, int unset_environment, const char *state, 
 <dl>
 <dd>Tells the service manager that the service is beginning its shutdown. This is useful to allow the service manager to track the service&#8217;s internal state, and present it to the user.</dd></dl>
 <p> BUSERROR=&#8230;</p>
-<p>If a service fails, the D-Bus error-style error code. Example:<br />
-&quot;BUSERROR=org.freedesktop.DBus.Error.TimedOut&quot;<br />
+<p>If a service fails, the D-Bus error-style error code. Example:<br/>
+&quot;BUSERROR=org.freedesktop.DBus.Error.TimedOut&quot;<br/>
 MAINPID=&#8230;</p>
-<p>The main process ID (PID) of the service, in case the service manager did not fork off the process itself. Example:<br />
+<p>The main process ID (PID) of the service, in case the service manager did not fork off the process itself. Example:<br/>
 &quot;MAINPID=4711&quot; ERRNO=&#8230;</p>
 <dl>
 <dd>If a service fails, the errno-style error code, formatted as string. Example: &quot;ERRNO=2&quot; for ENOENT.</dd></dl>
 <p> BUSERROR=&#8230;</p>
-<p>If a service fails, the D-Bus error-style error code. Example:<br />
-&quot;BUSERROR=org.freedesktop.DBus.Error.TimedOut&quot;<br />
+<p>If a service fails, the D-Bus error-style error code. Example:<br/>
+&quot;BUSERROR=org.freedesktop.DBus.Error.TimedOut&quot;<br/>
 MAINPID=&#8230;</p>
-<p>The main process ID (PID) of the service, in case the service manager did not fork off the process itself. Example:<br />
+<p>The main process ID (PID) of the service, in case the service manager did not fork off the process itself. Example:<br/>
 &quot;MAINPID=4711&quot; WATCHDOG=1</p>
 <dl>
 <dd>Tells the service manager to update the watchdog timestamp. This is the keep-alive ping that services need to issue in regular intervals if <i>WatchdogSec=</i> is enabled for it. See <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5) for information how to enable this functionality and <code><a href="/docs/linux/man/3-sd_watchdog_enabled/">sd_watchdog_enabled</a></code>(3) for the details of how the service can check if the the watchdog is enabled.</dd></dl>
@@ -57,14 +57,14 @@ MAINPID=&#8230;</p>
 <dd>Set by the service manager for supervised processes for status and start-up completion notification. This environment variable specifies the socket <code>sd_notify()</code> talks to. See above for details.</dd></dl>
 <h2>Examples</h2>
 <p><code>Example 1. Start-up Notification</code> When a service finished starting up, it might issue the following call to notify the service manager: sd_pid_notify_with_fds(0, 0, &quot;FDSTORE=1&quot;, &amp;fd, 1); <code>Example 2. Extended Start-up Notification</code> A service could send the following after completing initialization: sd_notifyf(0, &quot;READY=1
-&quot;<br />
+&quot;<br/>
 &quot;STATUS=Processing requests&#8230;
-&quot;<br />
-&quot;MAINPID=%lu&quot;,<br />
+&quot;<br/>
+&quot;MAINPID=%lu&quot;,<br/>
 (unsigned long) getpid()); <code>Example 3. Error Cause Notification</code> A service could send the following shortly before exiting, on failure: sd_notifyf(0, &quot;STATUS=Failed to start up: %s
-&quot;<br />
-&quot;ERRNO=%i&quot;,<br />
-strerror(errno),<br />
+&quot;<br/>
+&quot;ERRNO=%i&quot;,<br/>
+strerror(errno),<br/>
 errno); <code>Example 4. Store a File Descriptor in the Service Manager</code> To store an open file descriptor in the service manager, in order to continue operation after a service restart without losing state use &quot;FDSTORE=1&quot;: </p>
 <pre><code>sd_pid_notify_with_fds(0, 0, &quot;FDSTORE=1&quot;, &amp;fd, 1);</code></pre>
 <h2>See Also</h2>

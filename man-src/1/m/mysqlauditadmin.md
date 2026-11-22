@@ -13,7 +13,7 @@ description: "mysqlauditadmin – Maintain the audit log"
 <dl>
 <dt> <code>mysqlauditadmin [</code><i>OPTIONS</i><code>]&#8230; </code><code>mysqlauditadmin [</code><i>OPTIONS</i><code>]&#8230; [</code><i>COMMAND</i><code>]</code><code>mysqlauditadmin l=</code><i>user:pass [at] host:port</i><code> [</code><i>OPTIONS</i><code>]&#8230; [</code><i>COMMAND</i><code>[&#8211;value=</code><i>VALUE</i><code>]]</code><code>mysqlauditadmin &#8211;file-stats &#8211;audit-log-name=</code><i>FULL_PATH</i><code>mysqlauditadmin copy &#8211;audit-log-name=</code><i>FULL_PATH</i><code> &#8211;copy-to=</code><i>DESTINATION</i><code> [&#8211;remote-login=</code><i>user:host</i><code>]</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This utility allow you to maintain the m[blue]<code>audit log</code>m[]<font SIZE="-2">[1]</font>, allowing you to monitor the audit log file growth and control its rotation. Rotation refers to the action of replacing the current audit log file by a new one for continuous use, renaming (with a timestamp extension) and copying the previously used audit log file to a defined location. </dd>
+<dd>This utility allow you to maintain the m[blue]<code>audit log</code>m[][1], allowing you to monitor the audit log file growth and control its rotation. Rotation refers to the action of replacing the current audit log file by a new one for continuous use, renaming (with a timestamp extension) and copying the previously used audit log file to a defined location. </dd>
 <p> This utility allows you to view and modify a subset of audit log control variables, display the audit log file status, perform on-demand rotation of the log file, and copy files to other locations. These features enable you to easily monitor the audit log file growth and control its rotation (automatically based on the defined file size threshold, or manually by a on-demand command). </p>
 <p> The available actions include the following: </p>
 <dl>
@@ -27,7 +27,7 @@ description: "mysqlauditadmin – Maintain the audit log"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  The <code>&#8211;server</code> option is also required to execute this command. </dd>
 </dl>
 <dl>
@@ -102,11 +102,11 @@ description: "mysqlauditadmin – Maintain the audit log"
 <p> Display version information and exit.</dl>
 <p>NOTES </p>
 <p> This utility is available as of μ 1.2.0. </p>
-<p> This utility can only be applied to servers with the m[blue]<code>audit log plugin enabled</code>m[]<font SIZE="-2">[2]</font>. And the audit log plugin is available as of MySQL Server versions 5.5.28 and 5.6.10. </p>
+<p> This utility can only be applied to servers with the m[blue]<code>audit log plugin enabled</code>m[][2]. And the audit log plugin is available as of MySQL Server versions 5.5.28 and 5.6.10. </p>
 <p> This utility requires Python version 2.6 or higher, but does not support Python 3. </p>
-<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools, which is required to read the login-path values from the login configuration file (.mylogin.cnf). This feature exists as of MySQL Server 5.6.6, see m[blue]<code>mysql_config_editor</code> &#8212; MySQL Configuration Utilitym[]<font SIZE="-2">[3]</font>.<br />
+<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools, which is required to read the login-path values from the login configuration file (.mylogin.cnf). This feature exists as of MySQL Server 5.6.6, see m[blue]<code>mysql_config_editor</code> &#8212; MySQL Configuration Utilitym[][3].<br/>
 LIMITATIONS </p>
-<p> The <code>&#8211;remote-login</code> option is not supported on Microsoft Windows platforms. For Microsoft Windows, use UNC paths and perform a local copy operation, omitting the <code> &#8211;remote-login</code> option.<br />
+<p> The <code>&#8211;remote-login</code> option is not supported on Microsoft Windows platforms. For Microsoft Windows, use UNC paths and perform a local copy operation, omitting the <code> &#8211;remote-login</code> option.<br/>
 EXAMPLES </p>
 <p> To display the audit log system variables, run the following command: </p>
 <dl>
@@ -143,47 +143,47 @@ shell&gt; mysqlauditadmin --server=root [at] localhost:3310 rotate
 <dl>
 <dt>
 </dt><dd>
-shell &gt; mysqlauditadmin&#8211; file &#8211; stats&#8211; audit &#8211; log &#8211; name =../ SERVER / data / audit.log + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | File | Size | Created | Last Modified |<br />
-                                                             +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | audit.log | 3258 | Wed Sep 26 11 : 07 : 43 2012 | Wed Sep 26 11 : 07 : 43 2012 |<br />
-                                                             | audit.log .13486539046497235 | 47317 | Wed Sep 26 11 : 05 : 04 2012 | Wed Sep 26 11 : 05 : 04 2012 |<br />
+shell &gt; mysqlauditadmin&#8211; file &#8211; stats&#8211; audit &#8211; log &#8211; name =../ SERVER / data / audit.log + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | File | Size | Created | Last Modified |<br/>
+                                                             +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | audit.log | 3258 | Wed Sep 26 11 : 07 : 43 2012 | Wed Sep 26 11 : 07 : 43 2012 |<br/>
+                                                             | audit.log .13486539046497235 | 47317 | Wed Sep 26 11 : 05 : 04 2012 | Wed Sep 26 11 : 05 : 04 2012 |<br/>
                                                              +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+
 </dd></dl>
 <p> To change the audit log policy to log only query events, and show the system variables before and after the execution of the <i>policy</i> command, use the following command: </p>
 <dl>
 <dt>
 </dt><dd>
-shell &gt; mysqlauditadmin&#8211; show &#8211; options&#8211; server = root[at] localhost : 3310 policy \<br />
-    &#8211;value = QUERIES<br />
-#<br />
-#Showing options before command.<br />
-#<br />
-#Audit Log Variables and Options<br />
-#<br />
-                  + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ |<br />
-              Variable_name | Value |<br />
-              +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | audit_log_buffer_size | 1048576 |<br />
-              | audit_log_file | audit.log |<br />
-              | audit_log_flush | OFF |<br />
-              | audit_log_policy | ALL |<br />
-              | audit_log_rotate_on_size | 0 |<br />
-              | audit_log_strategy | ASYNCHRONOUS |<br />
-              +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+<br />
-#<br />
-#Executing POLICY command.<br />
-#<br />
-#<br />
-#Showing options after command.<br />
-#<br />
-#Audit Log Variables and Options<br />
-#<br />
-                                                                              +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ |<br />
-              Variable_name | Value |<br />
-              +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | audit_log_buffer_size | 1048576 |<br />
-              | audit_log_file | audit.log |<br />
-              | audit_log_flush | OFF |<br />
-              | audit_log_policy | QUERIES |<br />
-              | audit_log_rotate_on_size | 0 |<br />
-              | audit_log_strategy | ASYNCHRONOUS |<br />
+shell &gt; mysqlauditadmin&#8211; show &#8211; options&#8211; server = root[at] localhost : 3310 policy \<br/>
+    &#8211;value = QUERIES<br/>
+#<br/>
+#Showing options before command.<br/>
+#<br/>
+#Audit Log Variables and Options<br/>
+#<br/>
+                  + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ |<br/>
+              Variable_name | Value |<br/>
+              +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | audit_log_buffer_size | 1048576 |<br/>
+              | audit_log_file | audit.log |<br/>
+              | audit_log_flush | OFF |<br/>
+              | audit_log_policy | ALL |<br/>
+              | audit_log_rotate_on_size | 0 |<br/>
+              | audit_log_strategy | ASYNCHRONOUS |<br/>
+              +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+<br/>
+#<br/>
+#Executing POLICY command.<br/>
+#<br/>
+#<br/>
+#Showing options after command.<br/>
+#<br/>
+#Audit Log Variables and Options<br/>
+#<br/>
+                                                                              +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ |<br/>
+              Variable_name | Value |<br/>
+              +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | audit_log_buffer_size | 1048576 |<br/>
+              | audit_log_file | audit.log |<br/>
+              | audit_log_flush | OFF |<br/>
+              | audit_log_policy | QUERIES |<br/>
+              | audit_log_rotate_on_size | 0 |<br/>
+              | audit_log_strategy | ASYNCHRONOUS |<br/>
               +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+
 </dd></dl>
 <p> To change the audit log automatic file rotation size to 32535, and show the system variables before and after the execution of the <i>rotate_on_size</i> command, use the following command. (Notice that the value set is actually 28672 because the specified rotate_on_size value is truncated to a multiple of 4096): </p>

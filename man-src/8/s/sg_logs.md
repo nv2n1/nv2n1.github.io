@@ -27,7 +27,7 @@ description: "sg_logs – access log pages with SCSI LOG SENSE command"
 <p>&nbsp;<wbr>&nbsp;<wbr><code>0</code>&nbsp;<wbr>: current threshold values </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>1</code>&nbsp;<wbr>: current cumulative values </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>2</code>&nbsp;<wbr>: default threshold values </p>
-<p>&nbsp;<wbr>&nbsp;<wbr><code>3</code>&nbsp;<wbr>: default cumulative values<br />
+<p>&nbsp;<wbr>&nbsp;<wbr><code>3</code>&nbsp;<wbr>: default cumulative values<br/>
  The default value is 1 (i.e. current cumulative values).</p>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>print out the usage message then exit.</dd>
@@ -69,30 +69,30 @@ description: "sg_logs – access log pages with SCSI LOG SENSE command"
 <p>This utility will usually do a double fetch of log pages with the SCSI LOG SENSE command. The first fetch requests a 4 byte response (i.e. place 4 in the &quot;allocation length&quot; field in the cdb). From that response it can calculate the actual length of the response which is what it asks for on the second fetch. This is typical practice in SCSI and guaranteed to work in the standards. However some older devices don&#8217;t comply. For those devices using the <i>&#8211;maxlen=LEN</i> option will do a single fetch. A value of 252 should be a safe starting point. </p>
 <p> Various log pages hold information error rates, device temperature, start stop cycles since device produced and the results of the last 20 self tests. Self tests can be initiated by the <a href="/docs/linux/man/8-sg_senddiag/">sg_senddiag</a>(8) utility. The smartmontools package provides much of the information found with sg_logs in a form suitable for monitoring the health of SCSI disks and tape drives. </p>
 <p> Here is a list of log pages that are decoded by this utility. [The code values can be given to &#8216;&#8211;page=&#8217; as is, with a trailing &quot;h&quot; instead of the leading &quot;0x&quot;, or as their decimal equivalents.]: </p>
-<p> 0x0 Supported log pages<br />
- 0x0,0xff Supported log pages and subpages<br />
- 0x1 Buffer overrun/underrun<br />
- 0x2 Write error counter<br />
- 0x3 Read error counter<br />
- 0x4 Read reverse error counter<br />
- 0x5 Verify error counter<br />
- 0x6 Non-medium error<br />
- 0x7 Last n error events<br />
- 0x8 Format status (sbc-2)<br />
- 0xb Last n deferred errors or asynchronous events<br />
- 0xc Logical block provisioning (sbc-3) or Sequential access device (ssc-2)<br />
- 0xd Temperature<br />
- 0xe Start-stop cycle counter<br />
- 0x10 Self-test results<br />
- 0x11 Solid state media<br />
- 0x15 Background scan results (sbc-3)<br />
- 0x16 ATA pass-through results (sat-3)<br />
- 0x17 Non-volatile cache (sbc-3)<br />
- 0x18 Protocol specific port (SAS transport)<br />
- 0x19 General statistics and performance<br />
- 0x1a Power condition transitions<br />
- 0x2f Informational exceptions<br />
- 0x37 Seagate cache (vendor, disk)<br />
+<p> 0x0 Supported log pages<br/>
+ 0x0,0xff Supported log pages and subpages<br/>
+ 0x1 Buffer overrun/underrun<br/>
+ 0x2 Write error counter<br/>
+ 0x3 Read error counter<br/>
+ 0x4 Read reverse error counter<br/>
+ 0x5 Verify error counter<br/>
+ 0x6 Non-medium error<br/>
+ 0x7 Last n error events<br/>
+ 0x8 Format status (sbc-2)<br/>
+ 0xb Last n deferred errors or asynchronous events<br/>
+ 0xc Logical block provisioning (sbc-3) or Sequential access device (ssc-2)<br/>
+ 0xd Temperature<br/>
+ 0xe Start-stop cycle counter<br/>
+ 0x10 Self-test results<br/>
+ 0x11 Solid state media<br/>
+ 0x15 Background scan results (sbc-3)<br/>
+ 0x16 ATA pass-through results (sat-3)<br/>
+ 0x17 Non-volatile cache (sbc-3)<br/>
+ 0x18 Protocol specific port (SAS transport)<br/>
+ 0x19 General statistics and performance<br/>
+ 0x1a Power condition transitions<br/>
+ 0x2f Informational exceptions<br/>
+ 0x37 Seagate cache (vendor, disk)<br/>
  0x3e Seagate factory (vendor, disk) </p>
 <p> In the 2.4 series of Linux kernels the <i>DEVICE</i> must be a SCSI generic (sg) device. In the 2.6 series block devices (e.g. SCSI disks and DVD drives) can also be specified. For example &quot;sg_logs -a /dev/sda&quot; will work in the 2.6 series kernels.</p>
 <h2>Exit Status</h2>
@@ -150,7 +150,7 @@ description: "sg_logs – access log pages with SCSI LOG SENSE command"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2002-2013 Douglas Gilbert<br />
+<p>Copyright &#169; 2002-2013 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>smartctl(smartmontools), <a href="/docs/linux/man/8-sg_senddiag/">sg_senddiag</a>(8)</code> </p>

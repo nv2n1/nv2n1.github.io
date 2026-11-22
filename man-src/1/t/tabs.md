@@ -12,16 +12,16 @@ description: "tabs – set tabs on a terminal"
 <h2>SYNOPSIS</h2>
 <p> <code>tabs</code> [<i>options</i>]] <i>[tabstop-list]</i></p>
 <h2>DESCRIPTION</h2>
-<p> The <code>tabs</code> program clears and sets tab-stops on the terminal. This uses the terminfo <i>clear_all_tabs</i> and <i>set_tab</i> capabilities. If either is absent, <code>tabs</code> is unable to clear/set tab-stops. The terminal should be configured to use hard tabs, e.g.,<br />
-&nbsp;.sp<br />
+<p> The <code>tabs</code> program clears and sets tab-stops on the terminal. This uses the terminfo <i>clear_all_tabs</i> and <i>set_tab</i> capabilities. If either is absent, <code>tabs</code> is unable to clear/set tab-stops. The terminal should be configured to use hard tabs, e.g.,<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre>
 stty tab0
 </pre>
 <p>&nbsp;.in -4 </p>
 <p> Like <code><a href="/docs/linux/man/1-clear/">clear</a></code>(1), <code>tabs</code> writes to the standard output. You can redirect the standard output to a file (which prevents <code>tabs</code> from actually changing the tabstops), and later <code>cat</code> the file to the screen, setting tabstops at that point. </p>
-<p> These are hardware tabs, which cannot be queried rapidly by applications running in the terminal, if at all. Curses and other full-screen applications may use hardware tabs in optimizing their output to the terminal. If the hardware tabstops differ from the information in the terminal database, the result is unpredictable. Before running curses programs, you should either reset tab-stops to the standard interval<br />
-&nbsp;.sp<br />
+<p> These are hardware tabs, which cannot be queried rapidly by applications running in the terminal, if at all. Curses and other full-screen applications may use hardware tabs in optimizing their output to the terminal. If the hardware tabstops differ from the information in the terminal database, the result is unpredictable. Before running curses programs, you should either reset tab-stops to the standard interval<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre>
 tabs -8
@@ -45,8 +45,8 @@ tabs -8
 <p> Use &#8220;<code>-0</code>&#8221; to clear all tabs. </p>
 <p> Use &#8220;<code>-8</code>&#8221; to set tabs to the standard interval.</p>
 <h3>Explicit Lists</h3>
-<p> An explicit list can be defined after the options (this does not use a &#8220;-&#8221;). The values in the list must be in increasing numeric order, and greater than zero. They are separated by a comma or a blank, for example,<br />
-&nbsp;.sp<br />
+<p> An explicit list can be defined after the options (this does not use a &#8220;-&#8221;). The values in the list must be in increasing numeric order, and greater than zero. They are separated by a comma or a blank, for example,<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre>
 tabs 1,6,11,16,21
@@ -54,8 +54,8 @@ tabs 1,6,11,16,21
 tabs 1 6 11 16 21
 </pre>
 <p>&nbsp;.in -4 </p>
-<p> Use a &#8220;+&#8221; to treat a number as an increment relative to the previous value, e.g.,<br />
-&nbsp;.sp<br />
+<p> Use a &#8220;+&#8221; to treat a number as an increment relative to the previous value, e.g.,<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre>
 tabs 1,+5,+5,+5,+5
@@ -66,31 +66,31 @@ tabs 1,+5,+5,+5,+5
 <p> POSIX defines several predefined lists of tab stops.</p>
 <dl>
 <dt><code>-a</code></dt>
-<dd> Assembler, IBM S/370, first format<br />
+<dd> Assembler, IBM S/370, first format<br/>
  1,10,16,36,72</dd>
 <dt><code>-a2</code></dt>
-<dd> Assembler, IBM S/370, second format<br />
+<dd> Assembler, IBM S/370, second format<br/>
  1,10,16,40,72</dd>
 <dt><code>-c</code></dt>
-<dd> COBOL, normal format<br />
+<dd> COBOL, normal format<br/>
  1,8,12,16,20,55</dd>
 <dt><code>-c2</code></dt>
-<dd> COBOL compact format<br />
+<dd> COBOL compact format<br/>
  1,6,10,14,49</dd>
 <dt><code>-c3</code></dt>
-<dd> COBOL compact format extended<br />
+<dd> COBOL compact format extended<br/>
  1,6,10,14,18,22,26,30,34,38,42,46,50,54,58,62,67</dd>
 <dt><code>-f</code></dt>
-<dd> FORTRAN<br />
+<dd> FORTRAN<br/>
  1,7,11,15,19,23</dd>
 <dt><code>-p</code></dt>
-<dd> PL/I<br />
+<dd> PL/I<br/>
  1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61</dd>
 <dt><code>-s</code></dt>
-<dd> SNOBOL<br />
+<dd> SNOBOL<br/>
  1,10,55</dd>
 <dt><code>-u</code></dt>
-<dd> UNIVAC 1100 Assembler<br />
+<dd> UNIVAC 1100 Assembler<br/>
  1,12,20,44</dd></dl>
 <h3>Margins</h3>
 <p> A few terminals provide the capability for changing their left/right margins. The tabs program has an option to use this feature:</p>
@@ -100,14 +100,14 @@ tabs 1,+5,+5,+5,+5
 <dl>
 <dt>
 </dt><dd>
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the terminal provides the capability for setting the left margin, tabs uses this, and adjusts the available width for tab-stops.<br />
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the terminal provides the capability for setting the left margin, tabs uses this, and adjusts the available width for tab-stops.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If the terminal does not provide the margin capabilities, tabs imitates the effect, putting the tab stops at the appropriate place on each line. The terminal&#8217;s left-margin is not modified.</dd></dl>
 <dt>
 </dt><dd> If the <i>margin</i> parameter is omitted, the default is 10. Use <code>+m0</code> to reset the left margin, i.e., to the left edge of the terminal&#8217;s display. Before setting a left-margin, tabs resets the margin to reduce problems which might arise on moving the cursor before the current left-margin.</dd></dl>
 <p> When setting or resetting the left-margin, tabs may reset the right-margin.</p>
 <h2>PORTABILITY</h2>
-<p> <i>IEEE Std 1003.1/The Open Group Base Specifications Issue 7</i> (POSIX.1-2008) describes a <code>tabs</code> utility. However<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 This standard describes a <code>+m</code> option, to set a terminal&#8217;s left-margin. Very few of the entries in the terminal database provide the <code>smgl</code> (<code>set_left_margin</code>) or <code>smglp</code> (<code>set_left_margin_parm</code>) capability needed to support the feature.<br />
+<p> <i>IEEE Std 1003.1/The Open Group Base Specifications Issue 7</i> (POSIX.1-2008) describes a <code>tabs</code> utility. However<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 This standard describes a <code>+m</code> option, to set a terminal&#8217;s left-margin. Very few of the entries in the terminal database provide the <code>smgl</code> (<code>set_left_margin</code>) or <code>smglp</code> (<code>set_left_margin_parm</code>) capability needed to support the feature.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 There is no counterpart in X/Open Curses Issue 7 for this utility, unlike <code><a href="/docs/linux/man/1-tput/">tput</a></code>(1). </p>
 <p> The <code>-d</code> (debug) and <code>-n</code> (no-op) options are extensions not provided by other implementations. </p>
 <p> A <code>tabs</code> utility appeared in PWB/Unix 1.0 (1977). There was a reduced version of the <code>tabs</code> utility in Unix 7th edition and in 3BSD (1979). The latter supported a single &#8220;-n&#8221; option (to cause the first tab stop to be set on the left margin). That option is not documented by POSIX. </p>

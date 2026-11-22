@@ -14,7 +14,7 @@ description: "dbcolcopylast – create new columns that are copies of prior colu
 dbcolcopylast[-e EMPTY][column...]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> For each <font SIZE="-1">COLUMN,</font> create a new column copylast_COLUMN that is the last value for that column&#8212;that is, the value of that column from the row before.</p>
+<p> For each COLUMN, create a new column copylast_COLUMN that is the last value for that column&#8212;that is, the value of that column from the row before.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-e</code> EmptyValue or <code>&#8211;empty</code></dt>
@@ -54,4 +54,4 @@ dbcolcopylast[-e EMPTY][column...]
 <p> Fsdb.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

@@ -66,9 +66,9 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dd> <p> (<code>.cursorColor</code>) Determines the color of the mouse cursor. The default is the same as the foreground color. </p>
  </dd>
 <dt><code>-debug</code><i> bitmask|string[,string ...]</i></dt>
-<dd> <p> (<code>.debugLevel</code>) If nonzero, prints additional information on standard output. The argument can be either a bitmask specified as a decimal number, or comma-separated list of strings. <br />
- For the bitmask representation, multiple values can be specified by adding the numbers that represent the individual bits; e.g. to debug all all file searching and opening commands, use 4032 (= 2048 + 1024 + 512 + 256 + 128 + 64). Use -1 to turn on debugging of everything (this will produce huge output). <br />
- For the string representation, use the strings listed in the following table, with a comma to separate the values; e.g. to debug all file searching and opening commands, use <code>search,expand,paths,hash,stat,open</code>. (The option `kpathsea&#8217; is provided as a shorthand for these.) Note that such a list may need to be quoted to prevent the shell from interpreting commas or spaces in the list. <br />
+<dd> <p> (<code>.debugLevel</code>) If nonzero, prints additional information on standard output. The argument can be either a bitmask specified as a decimal number, or comma-separated list of strings. <br/>
+ For the bitmask representation, multiple values can be specified by adding the numbers that represent the individual bits; e.g. to debug all all file searching and opening commands, use 4032 (= 2048 + 1024 + 512 + 256 + 128 + 64). Use -1 to turn on debugging of everything (this will produce huge output). <br/>
+ For the string representation, use the strings listed in the following table, with a comma to separate the values; e.g. to debug all file searching and opening commands, use <code>search,expand,paths,hash,stat,open</code>. (The option `kpathsea&#8217; is provided as a shorthand for these.) Note that such a list may need to be quoted to prevent the shell from interpreting commas or spaces in the list. <br/>
  The individual numbers and strings have the following meanings: </p>
 <pre><code> 1 bitmap Bitmap creation
  2 dvi DVI translation
@@ -98,30 +98,30 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dd> <p> (<code>.densityPercent</code>) Determines the density used when shrinking bitmaps for fonts. A higher value produces a lighter font. The default value is 40. If greyscaling is in use, this argument does not apply; use <code>-gamma</code> instead. See also the `<code>S</code>&#8216; keystroke. Same as <code>-S</code>. </p>
  </dd>
 <dt><code>-display</code><i> host</i><code>:</code><i>display</i></dt>
-<dd> <p> Specifies the host and screen to be used for displaying the <i>dvi</i> file. By default this is obtained from the environment variable <font SIZE="-1"><code>DISPLAY.</code></font> </p>
+<dd> <p> Specifies the host and screen to be used for displaying the <i>dvi</i> file. By default this is obtained from the environment variable <code>DISPLAY.</code> </p>
  </dd>
 <dt><code>-dvipspath</code><i> path</i></dt>
 <dd> <p> (<code>.dvipsPath</code>) Use <i>path</i> as the <code>dvips</code> program to use when printing. The default for this is <code>dvips</code>. The program or script should read the DVI file from standard input, and write the Postscript file to standard output. </p>
  </dd>
 <dt><code>-editor</code><i> editor</i></dt>
 <dd> <p> (<code>.editor</code>) Specifies the editor that will be invoked when the <i>source-special()</i> action is triggered to start a reverse search (by default via Ctrl-Mouse 1). The argument to this option is a format string in which occurrences of ``<code>%f</code>&#8216;&#8216; are replaced by the file name, occurrences of ``<code>%l</code>&#8216;&#8216; are replaced by the line number within the file, and optional occurrences of ``<code>%c</code>&#8216;&#8216; are replaced by the column number within the line. </p>
-<p> If neither the option nor the X resource <i>.editor</i> is specified, the following environment variables are checked to determine the editor command: <code>XEDITOR</code>, <code>VISUAL</code>, and <code>EDITOR </code> (in this sequence). If the string is found as the value of the <font SIZE="-1"><code>VISUAL</code></font> or <font SIZE="-1"><code>EDITOR</code></font> environment variables, then ``<i>xterm -e &#8216;&#8216;</i> is prepended to the string; if the editor is specified by other means, then it must be in the form of a shell command to pop up an X window with an editor in it. If none of these variables is set, a warning message is displayed and the command ``<i>xterm -e vi +%l %f&#8217;&#8216;</i> is used. </p>
+<p> If neither the option nor the X resource <i>.editor</i> is specified, the following environment variables are checked to determine the editor command: <code>XEDITOR</code>, <code>VISUAL</code>, and <code>EDITOR </code> (in this sequence). If the string is found as the value of the <code>VISUAL</code> or <code>EDITOR</code> environment variables, then ``<i>xterm -e &#8216;&#8216;</i> is prepended to the string; if the editor is specified by other means, then it must be in the form of a shell command to pop up an X window with an editor in it. If none of these variables is set, a warning message is displayed and the command ``<i>xterm -e vi +%l %f&#8217;&#8216;</i> is used. </p>
 <p> If no ``<code>%f</code>&#8216;&#8216; or ``<code>%l</code>&#8216;&#8216; occurs in the string, the missing format strings are appended automatically. (This is for compatibility with other programs when using one of the environment variables). </p>
 <p> A new instance of the editor is started each time this command is used; therefore it is preferable to use an editor that can be invoked in `client&#8217; mode to load new files into the same instance. Example settings are: </p>
  </dd>
 <dl>
 <dd>  </dd>
 <dl>
-<dt><font SIZE="-1"><code>emacsclient --no-wait</code></font></dt>
+<dt><code>emacsclient --no-wait</code></dt>
 <dd> <p> (older Emacsen) </p>
  </dd>
-<dt><font SIZE="-1"><code>gnuclient -q</code></font></dt>
+<dt><code>gnuclient -q</code></dt>
 <dd> <p> (XEmacs and newer Emacsen) </p>
  </dd>
-<dt><font SIZE="-1"><code>gvim --servername xdvi --remote</code></font></dt>
+<dt><code>gvim --servername xdvi --remote</code></dt>
 <dd> <p> (VIM v6.0+; the `--servername xdvi&#8217; option will cause gvim to run a dedicated instance for the files opened by xdvi.) </p>
  </dd>
-<dt><font SIZE="-1"><code>nc</code></font></dt>
+<dt><code>nc</code></dt>
 <dd> <p> (nedit) </p>
  </dd></dl>
 <p> Note that those strings need to be enclosed into quotes when using them on the command-line to protect them from the shell; when using them as argument for the <i>.editor</i> resource in an X resource file, no quotes should be used. </p>
@@ -170,7 +170,7 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dd> <p> (<code>.gamma</code>) Controls the interpolation of colors in the greyscale anti-aliasing color palette. Default value is 1.0. For 0 &lt; <i>gamma</i> &lt; 1, the fonts will be lighter (more like the background), and for <i>gamma</i> &gt; 1, the fonts will be darker (more like the foreground). Negative values behave the same way, but use a slightly different algorithm. For color and grayscale displays; for monochrome, see <code>-density</code>. See also the `<code>S</code>&#8216; keystroke. </p>
  </dd>
 <dt><code>-geometry</code><i> geometry</i></dt>
-<dd> <p> (<code>.geometry</code>) Specifies the initial geometry of the main window, as described in the <i>X(7x)</i> man page. The geometry of child windows can be set separately, e.g.: <br />
+<dd> <p> (<code>.geometry</code>) Specifies the initial geometry of the main window, as described in the <i>X(7x)</i> man page. The geometry of child windows can be set separately, e.g.: <br/>
  <i>xdvi*helpwindow.geometry: 600x800</i> </p>
  </dd>
 <dt><code>-gsalpha</code></dt>
@@ -277,18 +277,18 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dd> <p> (<code>.matchInverted</code>) Don&#8217;t highlight string search matches in inverted color; instead, draw a rectangle in <i>highlight</i> color (see the <code>-hl</code> option) around the match. This option is activated automatically if the display isn&#8217;t running in TrueColor. (Note: <code>-nomatchinverted</code> corresponds to <code>matchInverted:off</code>; <code>+nomatchinverted</code> to <code>matchInverted:on</code>.) </p>
  </dd>
 <dt><code>-noomega</code></dt>
-<dd> <p> (<code>.omega</code>) This will disable the use of Omega extensions when interpreting DVI files. By default, the additional opcodes <i>129</i> and <i>134</i> are recognized by xdvi as Omega extensions and interpreted as requests to set 2-byte characters. The only drawback is that the virtual font array will require 65536 positions instead of the default 256 positions, i.e. the memory requirements of xdvi will be slightly larger. If you find this unacceptable or encounter another problem with the Omega extensions, you can switch this extension off by using <code>-noomega</code> (but please do send a bug report if you find such problems - see the bug address in the <code>AUTHORS</code> section below). <br />
+<dd> <p> (<code>.omega</code>) This will disable the use of Omega extensions when interpreting DVI files. By default, the additional opcodes <i>129</i> and <i>134</i> are recognized by xdvi as Omega extensions and interpreted as requests to set 2-byte characters. The only drawback is that the virtual font array will require 65536 positions instead of the default 256 positions, i.e. the memory requirements of xdvi will be slightly larger. If you find this unacceptable or encounter another problem with the Omega extensions, you can switch this extension off by using <code>-noomega</code> (but please do send a bug report if you find such problems - see the bug address in the <code>AUTHORS</code> section below). <br/>
  (Note: <code>-noomega</code> corresponds to <code>omega: off</code>; <code>+noomega</code> to <code>omega: on</code>.) </p>
  </dd>
 <dt><code>-noscan</code></dt>
 <dd> <p> (<code>.prescan</code>) By default, <code>xdvi</code> does a preliminary scan of the <i>dvi</i> file to process any <code>papersize</code> specials; this is especially important at startup since the paper size may be needed to determine the window size. If PostScript&lt;tm&gt; is in use, then prescanning is also necessary in order to properly process header files. In addition, prescanning is needed to correctly determine the background color of a page. This option turns off such prescanning. (Prescanning will be automatically be turned back on if <code>xdvi</code> detects any of the specials mentioned above.) (Note: <code>-noscan</code> corresponds to <code>prescan:off</code>; <code>+noscan</code> to <code>prescan:on</code>.) </p>
  </dd>
 <dt><code>-not1lib</code></dt>
-<dd> <p> (<code>.t1lib</code>) This will disable the use of T1Lib to display PostScript&lt;tm&gt; fonts. Use this option as a workaround when you encounter problems with the display of T1Lib (but please don&#8217;t forget to send a bug report in this case, to the URL mentioned in the section AUTHORS below). <br />
+<dd> <p> (<code>.t1lib</code>) This will disable the use of T1Lib to display PostScript&lt;tm&gt; fonts. Use this option as a workaround when you encounter problems with the display of T1Lib (but please don&#8217;t forget to send a bug report in this case, to the URL mentioned in the section AUTHORS below). <br/>
  (Note: <code>-not1lib</code> corresponds to <code>t1lib:off</code>; <code>+not1lib</code> to <code>t1lib:on</code>.) </p>
  </dd>
 <dt><code>-notempfile</code></dt>
-<dd> <p> (<code>.tempFile</code>) As mentioned in the section <code>DESCRIPTION</code> above, xdvi will create a temporary copy of the DVI file so that it can be accessed without interruptions even while the file is being rewritten by <code>TeX</code>. Since this introduces the overhead of copying the file every time it has changed, the <code>-notempfile</code> allows you to turn off this behaviour. In this case, exposing parts of the window while the DVI file is being written by TeX will erase the current window contents until the DVI file can be completely reread. <br />
+<dd> <p> (<code>.tempFile</code>) As mentioned in the section <code>DESCRIPTION</code> above, xdvi will create a temporary copy of the DVI file so that it can be accessed without interruptions even while the file is being rewritten by <code>TeX</code>. Since this introduces the overhead of copying the file every time it has changed, the <code>-notempfile</code> allows you to turn off this behaviour. In this case, exposing parts of the window while the DVI file is being written by TeX will erase the current window contents until the DVI file can be completely reread. <br/>
  (Note: <code>-notempfile</code> corresponds to <code>tempFile:off</code>; <code>+notempfile</code> to <code>tempFile:on</code>.) </p>
  </dd>
 <dt><code>-offsets</code><i> dimen</i></dt>
@@ -300,9 +300,9 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dt><code>-paper</code><i> papertype</i></dt>
 <dd> <p> (<code>.paper</code>) Specifies the size of the printed page. Note that in most cases it&#8217;s best to specify the paper size in the TeX input file via the line </p>
 <p> <code>\usepackage[dvips]{geometry}</code> </p>
-<p> which will be recognized by both dvips and xdvi; in that case the use of a `-paper&#8217; option should be unnecessary. <br />
- The paper size may be specified in the form <i>width</i><code>x</code><i>height</i> optionally followed by a unit, where <i>width</i> and <i>height</i> are decimal numbers giving the width and height of the paper, respectively, and the unit is any of the two-letter abbreviations for units accepted by TeX (<code>pt</code>, <code>pc</code>, <code>in</code>, <code>bp</code>, <code>cm</code>, <code>mm</code>, <code>dd</code>, <code>cc</code>, or <code>sp</code>). By default, the unit is <code>cm</code> (centimeters). <br />
- There are also synonyms which may be used: <code>us</code> (8.5x11in), <code>legal</code> (8.5x14in), <code>foolscap</code> (13.5x17in), as well as the ISO sizes <code>a1</code>-<code>a7</code>, <code>b1</code>-<code>b7</code>, <code>c1</code>-<code>c7</code>. Each of these also has a landscape or `rotated&#8217; variant: <code>usr</code> (11x8.5in), <code>a1r</code>-<code>a7r</code>, etc. For compatibility with <code>dvips</code>, the formats <code>letter</code> (8.5x11in), <code>ledger</code> (17x11in) and <code>tabloid</code> (11x17in) are also supported (these don&#8217;t have rotated variants). <br />
+<p> which will be recognized by both dvips and xdvi; in that case the use of a `-paper&#8217; option should be unnecessary. <br/>
+ The paper size may be specified in the form <i>width</i><code>x</code><i>height</i> optionally followed by a unit, where <i>width</i> and <i>height</i> are decimal numbers giving the width and height of the paper, respectively, and the unit is any of the two-letter abbreviations for units accepted by TeX (<code>pt</code>, <code>pc</code>, <code>in</code>, <code>bp</code>, <code>cm</code>, <code>mm</code>, <code>dd</code>, <code>cc</code>, or <code>sp</code>). By default, the unit is <code>cm</code> (centimeters). <br/>
+ There are also synonyms which may be used: <code>us</code> (8.5x11in), <code>legal</code> (8.5x14in), <code>foolscap</code> (13.5x17in), as well as the ISO sizes <code>a1</code>-<code>a7</code>, <code>b1</code>-<code>b7</code>, <code>c1</code>-<code>c7</code>. Each of these also has a landscape or `rotated&#8217; variant: <code>usr</code> (11x8.5in), <code>a1r</code>-<code>a7r</code>, etc. For compatibility with <code>dvips</code>, the formats <code>letter</code> (8.5x11in), <code>ledger</code> (17x11in) and <code>tabloid</code> (11x17in) are also supported (these don&#8217;t have rotated variants). <br/>
  Any of the above sizes may be preceded by a plus sign (`<code>+</code>&#8216;); this causes the paper size given here to override any paper size given in the <i>dvi</i> file. The default paper size is 21 x 29.7 cm (A4 size). </p>
  </dd>
 <dt><code>-pause</code></dt>
@@ -351,8 +351,8 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dd> <p> If neither of the filenames contains a path name component, the filenames are compared ignoring the `<i>.tex</i>&#8216; extensions in both filenames. </p>
  </dd>
 <dt>2.</dt>
-<dd> <p> Otherwise, if one of the filenames does contain a path component (e.g.: <i>./test.tex</i>, <i>../test.tex</i>, <i>/my/homedir/tex/test.tex</i> or any combination of these), both filenames are expanded to a full path, with any occurrences of <i>../</i> and <i>./</i> expanded, and multiple slashes removed. <br />
- The pathname in the <i>-sourceposition</i> is expanded relative to the current working directory of the <i>xdvi -sourceposition</i> invocation, and the pathnames in the source specials are expanded relative to the path of the current DVI file being viewed. <br />
+<dd> <p> Otherwise, if one of the filenames does contain a path component (e.g.: <i>./test.tex</i>, <i>../test.tex</i>, <i>/my/homedir/tex/test.tex</i> or any combination of these), both filenames are expanded to a full path, with any occurrences of <i>../</i> and <i>./</i> expanded, and multiple slashes removed. <br/>
+ The pathname in the <i>-sourceposition</i> is expanded relative to the current working directory of the <i>xdvi -sourceposition</i> invocation, and the pathnames in the source specials are expanded relative to the path of the current DVI file being viewed. <br/>
  The path names are then compared ignoring the `<i>.tex</i>&#8216; extensions in both path names. </p>
  </dd></dl>
 </dl>
@@ -368,7 +368,7 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dt><code>-unique</code></dt>
 <dd> <p> (<code>.unique</code>) This option will make another instance of xdvi running on the same display act as a `server&#8217;. For example, the invocation </p>
 <p> <code>xdvi -unique +5 file.dvi</code> </p>
-<p> will cause this other instance to load <i>file.dvi</i> on page 5 in place of the file that it is currently displaying. If there is already another instance of xdvi already displaying the file <i>file.dvi</i>, then it will just jump to page 5. If the other instance of xdvi is displaying a different file, it will load <i>file.dvi</i> instead. Otherwise, if no other instance of xdvi is currently running on the display, this option instead starts a new instance of xdvi in the background (unless the <i>-nofork</i> option is specified, which see) displaying page 5 of <i>file.dvi</i>. <br />
+<p> will cause this other instance to load <i>file.dvi</i> on page 5 in place of the file that it is currently displaying. If there is already another instance of xdvi already displaying the file <i>file.dvi</i>, then it will just jump to page 5. If the other instance of xdvi is displaying a different file, it will load <i>file.dvi</i> instead. Otherwise, if no other instance of xdvi is currently running on the display, this option instead starts a new instance of xdvi in the background (unless the <i>-nofork</i> option is specified, which see) displaying page 5 of <i>file.dvi</i>. <br/>
  The filename and the <code>+n</code> option for the page number are the only options available for controlling a remote instance of xdvi like this; all other options are currently ignored. </p>
  </dd>
 <dt><code>-useTeXpages</code></dt>
@@ -384,7 +384,7 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dd> <p> (<code>.warnSpecials</code>) Causes <code>xdvi</code> to issue warnings about <code>\special</code> strings that it cannot process. </p>
  </dd>
 <dt><code>-watchfile</code><i> n</i></dt>
-<dd> <p> (<code>.watchFile</code>) If this option is set to a value larger than 0, xdvi will check the DVI file for changes every <i>n</i> seconds. If the DVI file has been completely written by TeX, it will be reloaded automatically. Fractional values (e.g. `2.5&#8217;) are possible. The default for this option is 0, i.e. no watching. <br />
+<dd> <p> (<code>.watchFile</code>) If this option is set to a value larger than 0, xdvi will check the DVI file for changes every <i>n</i> seconds. If the DVI file has been completely written by TeX, it will be reloaded automatically. Fractional values (e.g. `2.5&#8217;) are possible. The default for this option is 0, i.e. no watching. <br/>
  Since xdvi cannot handle partial DVI files, it tries not to reload the file while it is being rewritten. However, use of the magnifier or switching of pages requires reading (a part of) the DVI file, and if the <code>tempfile</code> option is switched off, this will erase the current contents of the window until the DVI file can be read entirely. </p>
  </dd>
 <dt><code>-wheelunit</code><i> pixels</i></dt>
@@ -413,7 +413,7 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dd> <p> [<code>up-or-previous()</code>] Moves up two-thirds of a window-full, or to the top of the previous page if already at the top of the page. With a float argument, moves up the corresponding fraction of a window-full. </p>
  </dd>
 <dt><code>Space</code> key </dt>
-<dd> <p> [<code>unpause-or-next()</code>] Moves down two-thirds of a window-full, or to the next page if already at the bottom of the page. <br />
+<dd> <p> [<code>unpause-or-next()</code>] Moves down two-thirds of a window-full, or to the next page if already at the bottom of the page. <br/>
  When the option <code>-pause</code><i> special-string</i> is used and the display is currently paused, this key will instead display the next portion of the page until the next <i>special-string</i> or the end of the page is encountered. See the description of the <code>-pause</code> option for details. The action [<code>down-or-next()</code>] does a similar thing, but without pausing; it is not bound to a key by default. </p>
  </dd>
 <dt><code>Ctrl-Home</code> (Xaw), <code>Ctrl-osfBeginLine</code> (Motif) </dt>
@@ -502,7 +502,7 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dd> <p> [<code>find-next()</code>] Find the next match string in the DVI file; this can be used instead of pressing the `Find&#8217; button in the search window. </p>
  </dd>
 <dt><code>g</code></dt>
-<dd> <p> [<code>goto-page()</code>] Moves to the page with the given number. If no page number is given, xdvi jumps to the last page. <br />
+<dd> <p> [<code>goto-page()</code>] Moves to the page with the given number. If no page number is given, xdvi jumps to the last page. <br/>
  If the option/resource <code>useTeXpages</code> is active, the numbers correspond the the actual page numbers in the TeX file; otherwise, absolute page numbers (starting from 1) are used. In the latter case, the page numbers can be changed with the `<code>P</code>&#8216; keystroke, below. Note that with the <code>useTeXpages</code> option it is possible that the same page number occurs multiple times; in such a case, xdvi will use the first page number that matches. </p>
  </dd>
 <dt><code>h</code></dt>
@@ -586,11 +586,11 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dl>
 <dd>  </dd>
 <dl>
-<dt><font SIZE="-1"><code>- specials (like EPS graphics) are displayed;</code></font></dt>
+<dt><code>- specials (like EPS graphics) are displayed;</code></dt>
 <dd>  </dd>
-<dt><font SIZE="-1"><code>- specials are displayed along with their bounding box (if available);</code></font></dt>
+<dt><code>- specials are displayed along with their bounding box (if available);</code></dt>
 <dd>  </dd>
-<dt><font SIZE="-1"><code>- only the bounding box is displayed.</code></font></dt>
+<dt><code>- only the bounding box is displayed.</code></dt>
 <dd>  </dd></dl>
 <p> The states can also be selected directly by using `<code>1v</code>&#8216;, `<code>2v</code>&#8216; and `<code>0v</code>&#8216; respectively. See also the <code>-postscript</code> option. </dl>
  </p>
@@ -598,9 +598,9 @@ description: "xdvi – DVI Previewer for the X Window System"
 <dd> <p> [<code>source-what-special()</code>] Display information about the source special next to the mouse cursor in the statusline. This is the same special that would be found by <i>source-special() ,</i> but without invoking the editor. For debugging purposes. </p>
  </dd>
 <dt><code>x</code></dt>
-<dd> <p> [<code>set-expert-mode()</code>] Toggles expert mode, in which the statusline, the scrollbars, the menu buttons, the toolbar (Motif only) and the page list are not shown. Typing `<code>1x</code>&#8216; toggles the display of the statusline at the bottom of the window. Typing `<code>2x</code>&#8216; toggles the scrollbars (if available). For Xaw, `<code>3x</code>&#8216; toggles the menu buttons and the page list, for Motif, it toggles the page list. In Motif, the additional bindings `<code>4x</code>&#8216; toggle the toolbar, and `<code>5x</code>&#8216; the menu bar. <br />
- Without a prefix argument, all of the mentioned GUI elements are either switched on (if they had been invisible before) or off. <br />
- Toggling the scrollbars may behave erratically with the Xaw widgets; e.g. the scrollbars may reappear after resizing the window, and at certain window sizes one of the scrollbars may fail to disappear. <br />
+<dd> <p> [<code>set-expert-mode()</code>] Toggles expert mode, in which the statusline, the scrollbars, the menu buttons, the toolbar (Motif only) and the page list are not shown. Typing `<code>1x</code>&#8216; toggles the display of the statusline at the bottom of the window. Typing `<code>2x</code>&#8216; toggles the scrollbars (if available). For Xaw, `<code>3x</code>&#8216; toggles the menu buttons and the page list, for Motif, it toggles the page list. In Motif, the additional bindings `<code>4x</code>&#8216; toggle the toolbar, and `<code>5x</code>&#8216; the menu bar. <br/>
+ Without a prefix argument, all of the mentioned GUI elements are either switched on (if they had been invisible before) or off. <br/>
+ Toggling the scrollbars may behave erratically with the Xaw widgets; e.g. the scrollbars may reappear after resizing the window, and at certain window sizes one of the scrollbars may fail to disappear. <br/>
  See also the option <code>-expertmode</code> (the numbers above correspond to the bits in the argument to <code>-expertmode</code>). </p>
  </dd></dl>
 <h2>MOUSE ACTIONS IN THE MAIN WINDOW</h2>
@@ -624,13 +624,13 @@ Ctrl&lt;Btn1Down&gt;:mouse-modes(&quot;source-special()&quot;)\n\
 <dt><code>do-href()</code></dt>
 <dd>  </dd>
 <dt><code>do-href-newwindow()</code></dt>
-<dd> <p> Usually, if a binding specifies more then one action, all actions are executed in a sequence. The hyperlink bindings <code>do-href()</code> and <code>do-href-newwindow()</code> are special in that they are used as an <i>alternative</i> to other actions that might follow them <i>if</i> the mouse is currently located on a hyperlink. In this case, none of the other actions will be executed; otherwise, only the other actions are executed. <br />
+<dd> <p> Usually, if a binding specifies more then one action, all actions are executed in a sequence. The hyperlink bindings <code>do-href()</code> and <code>do-href-newwindow()</code> are special in that they are used as an <i>alternative</i> to other actions that might follow them <i>if</i> the mouse is currently located on a hyperlink. In this case, none of the other actions will be executed; otherwise, only the other actions are executed. <br/>
  The action <code>do-href()</code> jumps to the link target in the current xdvi window (eventually switching to another page), and <code>do-href-newwindow()</code> opens a new instance of xdvi for the link target. In both cases, the location of the target is indicated by a small arrow drawn in the same color as a visited link in the left corner of the window. </p>
  </dd>
 <dt><code>magnifier(n x m)</code></dt>
 <dd>  </dd>
 <dt><code>magnifier(*n)</code></dt>
-<dd> <p> This action will pop up a ``magnifying glass&#8217;&#8216; which shows the unshrunk image of the region around the mouse pointer. The magnifier disappears when the mouse button is released. Moving the mouse cursor while holding the button down will move the magnifier. <br />
+<dd> <p> This action will pop up a ``magnifying glass&#8217;&#8216; which shows the unshrunk image of the region around the mouse pointer. The magnifier disappears when the mouse button is released. Moving the mouse cursor while holding the button down will move the magnifier. <br/>
  Different mouse buttons produce different sized windows, as indicated by the the argument of the <i>magnifier()</i> action. Its argument is either a string of the form <i>width</i>x <i>height</i>, as in the <code>-mgs</code><i>n</i> command-line option, or one of the strings <code>*1</code> through <code>*5</code>, referring to the value specified by the corresponding <code>-mgs</code><i>n</i> option. </p>
  </dd>
 <dt><code>drag(+)</code></dt>
@@ -657,7 +657,7 @@ Ctrl&lt;Btn1Down&gt;:mouse-modes(&quot;source-special()&quot;)\n\
 <dl>
 <dt><code>quit-confirm()</code></dt>
 <dd> <p> Pops up a confirmation window to quit xdvi. To bind it to the `<code>q</code>&#8216; key instead of the default `quit()&#8216; action, put the following into your <i>~/.Xdefaults</i> file: </p>
-<p> xdvi.mainTranslations: #override\ <br />
+<p> xdvi.mainTranslations: #override\ <br/>
  &lt;Key&gt;q: quit-confirm()\n </p>
  </dd>
 <dt><code>down-or-next()</code></dt>
@@ -715,7 +715,7 @@ Ctrl&lt;Key&gt;s: save()\n\
 <p> The scrollbars (if present) behave in the standard way: pushing Button 2 in a scrollbar moves the top or left edge of the scrollbar to that point and optionally drags it; pushing Button 1 moves the image up or right by an amount equal to the distance from the button press to the upper left-hand corner of the window; pushing Button 3 moves the image down or left by the same amount. </p>
 <p> The scrollbars can be removed via the <i>-expertmode</i> flag/keystroke (which see).  </p>
 <h2>MAGNIFIER</h2>
-<p> By default, the mouse buttons 1 to 5 will pop up a ``magnifying glass&#8217;&#8216; that shows an unshrunken image of the page (i.e. an image at the resolution determined by the option/X resource <code>pixels</code> or <code>mfmode</code>) at varying sizes. When the magnifier is moved, small ruler-like tick marks are displayed at the edges of the magnifier (unless the X resource <code>delayRulers</code> is set to false, in which case the tick marks will always be displayed). The unit of the marks is determined by the X resource <code>tickUnits</code> (mm by default). This unit can be changed at runtime via the action <code>switch-magnifier-units()</code>, by default bound to the keystroke `<code>t</code>&#8216; (see the description of that key, and of switch-magnifier-units() for more details on the units available). <br />
+<p> By default, the mouse buttons 1 to 5 will pop up a ``magnifying glass&#8217;&#8216; that shows an unshrunken image of the page (i.e. an image at the resolution determined by the option/X resource <code>pixels</code> or <code>mfmode</code>) at varying sizes. When the magnifier is moved, small ruler-like tick marks are displayed at the edges of the magnifier (unless the X resource <code>delayRulers</code> is set to false, in which case the tick marks will always be displayed). The unit of the marks is determined by the X resource <code>tickUnits</code> (mm by default). This unit can be changed at runtime via the action <code>switch-magnifier-units()</code>, by default bound to the keystroke `<code>t</code>&#8216; (see the description of that key, and of switch-magnifier-units() for more details on the units available). <br/>
  The length of the tick marks can be changed via the X resource <code>tickLength</code> (4 by default). A zero or negative value suppresses the tick marks.  </p>
 <h2>PAGE HISTORY</h2>
 <p> Xdvi keeps a history of viewed pages, and you can move through the history and delete items using the keys <code>[</code> (<i>pagehistory-back()</i>), <code>]</code> (<i>pagehistory-forward()</i>), <code>Ctr-[</code> (<i>pagehistory-delete-backward()</i>) and <code>Ctr-]</code> (<i>pagehistory-delete-forward()</i>). </p>
@@ -775,7 +775,7 @@ Ctrl&lt;Key&gt;s: save()\n\
 <dd> <p> <i>[abc]</i> matches any of the letters a, b, c, and <i>[a-z]</i> matches all characters from a to z. </p>
  </dd>
 <dt>-</dt>
-<dd> <p> Each item in a regular expression can also be one of the following POSIX character classes: <br />
+<dd> <p> Each item in a regular expression can also be one of the following POSIX character classes: <br/>
  </p>
 <pre><code>
  [[:alnum:]] [[:alpha:]] [[:blank:]] [[:cntrl:]] [[:digit:]] 
@@ -810,7 +810,7 @@ http://www.opengroup.org/onlinepubs/007904975/basedefs/xbd_chap09.html
 <dd> <p> match in a case-sensitive manner (the default is to ignore case, i.e. a search string <i>Test</i> will match both the strings <i>test</i> and <i>TEST</i> in the DVI file); </p>
  </dd>
 <dt>-</dt>
-<dd> <p> ignore line breaks and hyphens: This removes all hyphens at the ends of lines and the following newline characters, and replaces all remaining newline characters by white spaces. So hyphenated words will appear as one word to the search, and a search for two words with a space in between will also match the words if they are separated by a linebreak. <br />
+<dd> <p> ignore line breaks and hyphens: This removes all hyphens at the ends of lines and the following newline characters, and replaces all remaining newline characters by white spaces. So hyphenated words will appear as one word to the search, and a search for two words with a space in between will also match the words if they are separated by a linebreak. <br/>
  Note that the hyphen removal may cause unwanted side effects for compound words containing hyphens that are wrapped after the hyphen, and that replacing the newlines affects the interpretation of regular expressions as follows: The <i>.</i> pattern will also match newlines, and <i>^</i> and <i>$</i> won&#8217;t match begin and end of lines any more. (Since currently there is no option for turning off the greediness of <i>*</i> and <i>+</i>, turing on this option will usually result in matches that are longer than desired.) </p>
  </dd></dl>
 </dl>
@@ -855,20 +855,20 @@ http://www.opengroup.org/onlinepubs/007904975/basedefs/xbd_chap09.html
 <p> <code>Note:</code> The modes are implemented by changing the <i>magnifier()</i> action. Switching the mode will not work if <code>Mouse-1</code> has been customized to an action sequence that does not contain the magnifier() action. </p>
 <dl>
 <dt><code>Magnifier Mode</code></dt>
-<dd> <p> In this mode, the mouse buttons 1 to 5 pop up a ``magnifying glass&#8217;&#8216; that shows an unshrunken image of the page (i.e. an image at the resolution determined by the option/X resource <code>pixels</code> or <code>mfmode</code>) at varying sizes. When the magnifier is moved, small ruler-like tick marks are displayed at the edges of the magnifier (unless the X resource <code>delayRulers</code> is set to false, in which case the tick marks are always displayed). The unit of the marks is determined by the X resource <code>tickUnits</code> (mm by default). This unit can be changed at runtime via the action <code>switch-magnifier-units()</code>, by default bound to the keystroke `<code>t</code>&#8216; (see the description of that key, and of switch-magnifier-units() for more details on the units available). <br />
+<dd> <p> In this mode, the mouse buttons 1 to 5 pop up a ``magnifying glass&#8217;&#8216; that shows an unshrunken image of the page (i.e. an image at the resolution determined by the option/X resource <code>pixels</code> or <code>mfmode</code>) at varying sizes. When the magnifier is moved, small ruler-like tick marks are displayed at the edges of the magnifier (unless the X resource <code>delayRulers</code> is set to false, in which case the tick marks are always displayed). The unit of the marks is determined by the X resource <code>tickUnits</code> (mm by default). This unit can be changed at runtime via the action <code>switch-magnifier-units()</code>, by default bound to the keystroke `<code>t</code>&#8216; (see the description of that key, and of switch-magnifier-units() for more details on the units available). <br/>
  The length of the tick marks can be changed via the X resource <code>tickLength</code> (4 by default). A zero or negative value suppresses the tick marks. </p>
  </dd>
 <dt><code>Text Selection Mode</code></dt>
-<dd> <p> This mode allows you to select a rectangular region of text in the DVI file by holding down <code>Mouse-1</code> and moving the mouse. The text is put into the X primary selection so that it can be pasted into other X applications with <code>Mouse-2</code> as usual. <br />
- If xdvi has been compiled with locale, <i>nl_langinfo()</i> and <i>iconv</i> support, the selected text is converted into the character set of the current locale (see the output of <code>locale -a</code> for a list of locale settings available on your system). If <i>nl_langinfo()</i> is not available, but <i>iconv</i> is, you can specify the input encoding for <i>iconv</i> via the X resource <i>textEncoding</i> (see the output of <code>iconv -l</code> for a list of valid encodings). If <i>iconv</i> support is not available, only the encodings <i>ISO-8859-1</i> and <i>UTF-8</i> are supported (these names are case-insensitive). <br />
- Note that UTF-8 is the only encoding that can render all characters (e.g. mathematical symbols) of a DVI file. If ISO-8859-1 is active, characters that cannot be displayed are replaced by `\&#8216; followed by the hexadecimal character code. For other encodings, such characters may trigger iconv error messages. If a character is not recognized at all, it is replaced by `?&#8216;. <br />
+<dd> <p> This mode allows you to select a rectangular region of text in the DVI file by holding down <code>Mouse-1</code> and moving the mouse. The text is put into the X primary selection so that it can be pasted into other X applications with <code>Mouse-2</code> as usual. <br/>
+ If xdvi has been compiled with locale, <i>nl_langinfo()</i> and <i>iconv</i> support, the selected text is converted into the character set of the current locale (see the output of <code>locale -a</code> for a list of locale settings available on your system). If <i>nl_langinfo()</i> is not available, but <i>iconv</i> is, you can specify the input encoding for <i>iconv</i> via the X resource <i>textEncoding</i> (see the output of <code>iconv -l</code> for a list of valid encodings). If <i>iconv</i> support is not available, only the encodings <i>ISO-8859-1</i> and <i>UTF-8</i> are supported (these names are case-insensitive). <br/>
+ Note that UTF-8 is the only encoding that can render all characters (e.g. mathematical symbols) of a DVI file. If ISO-8859-1 is active, characters that cannot be displayed are replaced by `\&#8216; followed by the hexadecimal character code. For other encodings, such characters may trigger iconv error messages. If a character is not recognized at all, it is replaced by `?&#8216;. <br/>
  To extract larger portions of text, you can alternatively save selected pages or the entire file in text format via the <code>File &gt; Save as ...</code> menu. </p>
  </dd>
 <dt><code>Ruler Mode</code></dt>
-<dd> <p> This mode provides a simple way of measuring distances on the page. <br />
- When this mode is activated, the mouse cursor changes into a thin cross, and a larger, cross-shaped ruler is drawn in the highlight color at the mouse location. The ruler doesn&#8217;t have units attached to it; instead, the current distance between the ruler and the mouse cursor is continuously printed to the statusline. <br />
- When activating Ruler Mode, the ruler is at first attached to the mouse and can be moved around. It can then be positioned at a fixed place by clicking <code>Mouse-1</code>. After that, the mouse cursor can be moved to measure the horizontal (<i>dx</i>), vertical (<i>dy</i>) and direct (shortest) (<i>dr</i>) distance between the ruler center point and the mouse. <br />
- Clicking <code>Mouse-1</code> again will move the ruler to the current mouse position, and holding down <code>Mouse-1</code> will drag the ruler around. <br />
+<dd> <p> This mode provides a simple way of measuring distances on the page. <br/>
+ When this mode is activated, the mouse cursor changes into a thin cross, and a larger, cross-shaped ruler is drawn in the highlight color at the mouse location. The ruler doesn&#8217;t have units attached to it; instead, the current distance between the ruler and the mouse cursor is continuously printed to the statusline. <br/>
+ When activating Ruler Mode, the ruler is at first attached to the mouse and can be moved around. It can then be positioned at a fixed place by clicking <code>Mouse-1</code>. After that, the mouse cursor can be moved to measure the horizontal (<i>dx</i>), vertical (<i>dy</i>) and direct (shortest) (<i>dr</i>) distance between the ruler center point and the mouse. <br/>
+ Clicking <code>Mouse-1</code> again will move the ruler to the current mouse position, and holding down <code>Mouse-1</code> will drag the ruler around. <br/>
  In Ruler Mode, the following special keybindings extend or replace the default bindings: </p>
  </dd>
 <dl>
@@ -893,13 +893,13 @@ http://www.opengroup.org/onlinepubs/007904975/basedefs/xbd_chap09.html
 <dl>
 <dd>  </dd>
 <dl>
-<dt><font SIZE="-1"><code>- the index of an icon in the pixmap file (starting from zero);</code></font></dt>
+<dt><code>- the index of an icon in the pixmap file (starting from zero);</code></dt>
 <dd>  </dd>
-<dt><font SIZE="-1"><code>- a long tooltip string, displayed in the status area;</code></font></dt>
+<dt><code>- a long tooltip string, displayed in the status area;</code></dt>
 <dd>  </dd>
-<dt><font SIZE="-1"><code>- a short tooltip string, displayed as popup;</code></font></dt>
+<dt><code>- a short tooltip string, displayed as popup;</code></dt>
 <dd>  </dd>
-<dt><font SIZE="-1"><code>- a sequence of actions to be performed when the corresponding toolbar button is pushed.</code></font></dt>
+<dt><code>- a sequence of actions to be performed when the corresponding toolbar button is pushed.</code></dt>
 <dd>  </dd></dl>
 </dl>
 <p> To illustrate this, the default value of <code>toolbarTranslations</code> looks as follows: </p>
@@ -1000,18 +1000,18 @@ http://xdvi.sourceforge.net/inverse-search.html
 <h2>COLOR SPECIALS</h2>
 <p> The color specials supported by <code>xdvi</code> are the same as those supported by <code>dvips</code>, except that the literal PostScript color specification (as in the <code>AggiePattern</code> example in the <code>dvips</code> documentation) is not supported. There are also some restrictions due to the way xdvi&#8217;s drawing routines are implemented; e.g. the \colorbox and \fcolorbox macros don&#8217;t work with xdvi. See the section LIMITATIONS below for more information on these restrictions. Xdvi supports the same list of named colors as with <code>dvips</code>, namely: <code>Apricot</code>, <code>Aquamarine</code>, <code>Bittersweet</code>, <code>Black</code>, <code>Blue</code>, <code>BlueGreen</code>, <code>BlueViolet</code>, <code>BrickRed</code>, <code>Brown</code>, <code>BurntOrange</code>, <code>CadetBlue</code>, <code>CarnationPink</code>, <code>Cerulean</code>, <code>CornflowerBlue</code>, <code>Cyan</code>, <code>Dandelion</code>, <code>DarkOrchid</code>, <code>Emerald</code>, <code>ForestGreen</code>, <code>Fuchsia</code>, <code>Goldenrod</code>, <code>Gray</code>, <code>Green</code>, <code>GreenYellow</code>, <code>JungleGreen</code>, <code>Lavender</code>, <code>LimeGreen</code>, <code>Magenta</code>, <code>Mahogany</code>, <code>Maroon</code>, <code>Melon</code>, <code>MidnightBlue</code>, <code>Mulberry</code>, <code>NavyBlue</code>, <code>OliveGreen</code>, <code>Orange</code>, <code>OrangeRed</code>, <code>Orchid</code>, <code>Peach</code>, <code>Periwinkle</code>, <code>PineGreen</code>, <code>Plum</code>, <code>ProcessBlue</code>, <code>Purple</code>, <code>RawSienna</code>, <code>Red</code>, <code>RedOrange</code>, <code>RedViolet</code>, <code>Rhodamine</code>, <code>RoyalBlue</code>, <code>RoyalPurple</code>, <code>RubineRed</code>, <code>Salmon</code>, <code>SeaGreen</code>, <code>Sepia</code>, <code>SkyBlue</code>, <code>SpringGreen</code>, <code>Tan</code>, <code>TealBlue</code>, <code>Thistle</code>, <code>Turquoise</code>, <code>Violet</code>, <code>VioletRed</code>, <code>White</code>, <code>WildStrawberry</code>, <code>Yellow</code>, <code>YellowGreen</code>, <code>YellowOrange</code>. Note that these names are case sensitive. The documentation of the LaTeX <code>color</code> package provides more details on how to use such specials with LaTeX; see the <code>dvips</code> documentation for a detailed description of the syntax and semantics of the color specials.  </p>
 <h2>SIGNALS</h2>
-<p> When <code>xdvi</code> receives a <font SIZE="-1"><code>SIGUSR1</code></font> signal, it rereads the <i>dvi</i> file.  </p>
+<p> When <code>xdvi</code> receives a <code>SIGUSR1</code> signal, it rereads the <i>dvi</i> file.  </p>
 <h2>ENVIRONMENT</h2>
 <p> <code>Xdvik</code> uses the same environment variables and algorithms for searching for font files as TeX and friends. See the documentation for the <code>Kpathsea</code> library, <code>kpathsea.dvi</code>, for a detailed description of these. </p>
 <p> In addition, <code>xdvik</code> accepts the following variables: </p>
 <dl>
-<dt><font SIZE="-1"><code>DISPLAY</code></font></dt>
+<dt><code>DISPLAY</code></dt>
 <dd> <p> Specifies which graphics display terminal to use. </p>
  </dd>
-<dt><font SIZE="-1"><code>KPATHSEA_DEBUG</code></font></dt>
+<dt><code>KPATHSEA_DEBUG</code></dt>
 <dd> <p> Trace <code>Kpathsea</code> lookups; set it to <code>-1</code> (= all bits on) for complete tracing. </p>
  </dd>
-<dt><font SIZE="-1"><code>EXTENSIONMAPS</code></font></dt>
+<dt><code>EXTENSIONMAPS</code></dt>
 <dd> <p> A list of files to be searched for mime types entries (as for Acrobat Reader). Earlier entries in one of these files override later ones. If this variable is not set, the following default path is used: </p>
  </dd>
 <dl>
@@ -1020,7 +1020,7 @@ http://xdvi.sourceforge.net/inverse-search.html
     /usr/etc/mime.types:/usr/local/etc/mimetypes
  </code></pre>
  </dd></dl>
-<dt><font SIZE="-1"><code>MAILCAPS</code></font></dt>
+<dt><code>MAILCAPS</code></dt>
 <dd> <p> A list of files to be searched for mailcap entries, as defined by RFC 1343. See this RFC or the <code><a href="/docs/linux/man/4-mailcap/">mailcap</a></code>(4) manual page for a detailed description of the mailcap file format. Currently, only the following mailcap features are supported: </p>
  </dd>
 <dl>
@@ -1043,38 +1043,38 @@ http://xdvi.sourceforge.net/inverse-search.html
     /usr/local/etc/mailcap
  </code></pre>
  </dd></dl>
-<p> <br />
+<p> <br/>
  For security reasons, some special characters (i.e.: ( ) ` \ ;) are escaped in the argument before passing it to <code>system()</code>. </dl>
  </p>
 <dl>
-<dt><font SIZE="-1"><code>BROWSER</code></font></dt>
-<dd> <p> Determines the web browser used to open external links (i.e., all URLs that don&#8217;t start with the `<i>file:</i>&#8216; scheme and are not relative links in the local DVI file), and to open links for which no viewer has been specified in the <code>mailcap</code> files. The value of this variable is a colon-separated list of commands. Xdvi will try each of them in sequence until one succeeds (i.e. doesn&#8217;t immediately return with status 0). This allows you to specify your favourite browser at the beginning, and fallback browsers at the end. Every occurrence of <i>%s</i> in the string is replaced by the target URL; every occurrence of <i>%%</i> is replaced by a single <i>%</i>. If no <i>%s</i> is present, the URL string is added as an extra argument. <br />
+<dt><code>BROWSER</code></dt>
+<dd> <p> Determines the web browser used to open external links (i.e., all URLs that don&#8217;t start with the `<i>file:</i>&#8216; scheme and are not relative links in the local DVI file), and to open links for which no viewer has been specified in the <code>mailcap</code> files. The value of this variable is a colon-separated list of commands. Xdvi will try each of them in sequence until one succeeds (i.e. doesn&#8217;t immediately return with status 0). This allows you to specify your favourite browser at the beginning, and fallback browsers at the end. Every occurrence of <i>%s</i> in the string is replaced by the target URL; every occurrence of <i>%%</i> is replaced by a single <i>%</i>. If no <i>%s</i> is present, the URL string is added as an extra argument. <br/>
  An example setting is: </p>
  </dd>
 <dl>
 <dd>  </dd>
 <dl>
-<dt><font SIZE="-1"><code>&quot;netscape -raise -remote &#8216;openURL(%s,new-window)&#8216;:xterm -e lynx %s:xterm -e wget %s:lynx %s:wget %s&quot;</code></font></dt>
+<dt><code>&quot;netscape -raise -remote &#8216;openURL(%s,new-window)&#8216;:xterm -e lynx %s:xterm -e wget %s:lynx %s:wget %s&quot;</code></dt>
 <dd>  </dd>
 <dt>See</dt>
 <dd>  </dd>
-<dt><font SIZE="-1"><code><a rel="nofollow" href="http://www.catb.org/~esr/BROWSER/">http://www.catb.org/~esr/BROWSER/</a></code></font></dt>
+<dt><code><a rel="nofollow" href="http://www.catb.org/~esr/BROWSER/">http://www.catb.org/~esr/BROWSER/</a></code></dt>
 <dd>  </dd></dl>
 <p> for more details on the <code>BROWSER</code> environment variable. </dl>
  </p>
-<dt><font SIZE="-1"><code>TMPDIR</code></font></dt>
+<dt><code>TMPDIR</code></dt>
 <dd> <p> The directory to use for storing temporary files created when uncompressing PostScript files. </p>
  </dd>
-<dt><font SIZE="-1"><code>XEDITOR</code></font></dt>
+<dt><code>XEDITOR</code></dt>
 <dd> <p> Determines the editor command used for source special `reverse search&#8217;, if neither the <i>-editor</i> command-line option nor the <i>.editor</i> resource are specified. See the description of the <i>-editor</i> command line option for details on the format. </p>
  </dd>
-<dt><font SIZE="-1"><code>VISUAL</code></font></dt>
+<dt><code>VISUAL</code></dt>
 <dd> <p> Determines an editor to be opened in an xterm window if neither of <i>-editor</i>, <i>.editor</i>, or <i>XEDITOR</i> is specified. </p>
  </dd>
-<dt><font SIZE="-1"><code>EDITOR</code></font></dt>
+<dt><code>EDITOR</code></dt>
 <dd> <p> Determines an editor to be opened in an xterm window if neither of <i>-editor</i>, <i>.editor</i>, <i>XEDITOR</i> or <i>VISUAL</i> is specified. </p>
  </dd>
-<dt><font SIZE="-1"><code>WWWBROWSER</code></font></dt>
+<dt><code>WWWBROWSER</code></dt>
 <dd> <p> Obsolete; use <code>BROWSER</code> instead. </p>
  </dd></dl>
 <h2>LIMITATIONS</h2>
@@ -1084,10 +1084,10 @@ http://xdvi.sourceforge.net/inverse-search.html
 <p> <code>Xdvi</code>&#8216;s color handling doesn&#8217;t support the <code>\colorbox</code> and <code>\fcolorbox</code> macros; this is not likely to change in the near future. This also means that e.g. colored tables (as created by the <i>colortbl</i> package) may render incorrectly: Text in colors different from the default foreground color may not be displayed. When the page is redrawn (e.g. after using the magnifier), the background color of the cells may overdraw the text.  </p>
 <h2>FILES</h2>
 <dl>
-<dt><font SIZE="-1"><code>$HOME/.xdvirc</code></font></dt>
+<dt><code>$HOME/.xdvirc</code></dt>
 <dd> <p> A file that holds all settings that the user changed via the keys, the `Options&#8217; and the Xaw `Modes&#8217; menu and the dialogs, as X resources. These resources override the settings in <code>$HOME/.Xdefaults</code>. This file is ignored if the <code>-q</code> option is used or the <code>noInitFile</code> X resource is set. </p>
  </dd>
-<dt><font SIZE="-1"><code>xdvi.cfg</code></font></dt>
+<dt><code>xdvi.cfg</code></dt>
 <dd> <p> A configuration file for the T1 font setup which needs to be supplied in the directory determined by the <code>XDVIINPUTS</code> environment variable. Please see the file <code><a rel="nofollow" href="http://xdvi.sourceforge.net/README.t1fonts">http://xdvi.sourceforge.net/README.t1fonts</a></code> if that file is missing. </p>
  </dd></dl>
 <h2>SEE ALSO</h2>

@@ -19,8 +19,8 @@ description: "funcen – find centroid (for binary tables)"
   -v [0,1,2,3]  # output verbosity level (default: 0)
 </pre>
 <h2>DESCRIPTION</h2>
-<p> <code>funcen</code> iteratively calculates the centroid position within one or more regions of a Funtools table (<font SIZE="-1">FITS</font> binary table or raw event file). Starting with an input table, an initial region specification, and an iteration count, the program calculates the average x and y position within the region and then uses this new position as the region center for the next iteration. Iteration terminates when the maximum number of iterations is reached or when the input tolerance distance is met for that region. A count of events in the final region is then output, along with the pixel position value (and, where available, <font SIZE="-1">WCS</font> position). </p>
-<p> The first argument to the program specifies the Funtools table file to process. Since the file must be read repeatedly, a value of &#8220;stdin&#8221; is not permitted when the number of iterations is non-zero. Use Funtools Bracket Notation to specify <font SIZE="-1">FITS</font> extensions and filters. </p>
+<p> <code>funcen</code> iteratively calculates the centroid position within one or more regions of a Funtools table (FITS binary table or raw event file). Starting with an input table, an initial region specification, and an iteration count, the program calculates the average x and y position within the region and then uses this new position as the region center for the next iteration. Iteration terminates when the maximum number of iterations is reached or when the input tolerance distance is met for that region. A count of events in the final region is then output, along with the pixel position value (and, where available, WCS position). </p>
+<p> The first argument to the program specifies the Funtools table file to process. Since the file must be read repeatedly, a value of &#8220;stdin&#8221; is not permitted when the number of iterations is non-zero. Use Funtools Bracket Notation to specify FITS extensions and filters. </p>
 <p> The second required argument is the initial region descriptor. Multiple regions are permitted. However, compound regions (accelerators, variable argument regions and regions connected via boolean algebra) are not permitted. Points and polygons also are illegal. These restrictions might be lifted in a future version, if warranted. </p>
 <p> The <code>-n</code> (iteration number) switch specifies the maximum number of iterations to perform. The default is 0, which means that the program will simply count and display the number of events in the initial region(s). Note that when iterations is 0, the data can be input via stdin. </p>
 <p> The <code>-t</code> (tolerance) switch specifies a floating point tolerance value. If the distance between the current centroid position value and the last position values is less than this value, iteration terminates. The default value is 1 pixel. </p>
@@ -28,7 +28,7 @@ description: "funcen – find centroid (for binary tables)"
 <pre>
   counts x y [ra dec coordsys]
 </pre>
-<p> The last 3 <font SIZE="-1">WCS</font> values are output if <font SIZE="-1">WCS</font> information is available in the data file header. Thus, for example: </p>
+<p> The last 3 WCS values are output if WCS information is available in the data file header. Thus, for example: </p>
 <pre>
   [sh] funcen -n 0 snr.ev &quot;cir 505 508 5&quot;
   915 505.00 508.00 345.284038 58.870920 j2000
@@ -53,7 +53,7 @@ description: "funcen – find centroid (for binary tables)"
   final_region1:  cir 504.43 509.65 5
 </pre>
 <p> Level 2 outputs results from intermediate calculations as well. </p>
-<p> Ordinarily, region filtering is performed using analytic (event) filtering, i.e. that same style of filtering as is performed by <code>fundisp</code> and <code>funtable</code>. Use the <code>-i</code> switch to specify image filtering, i.e. the same style filtering as is performed by <code>funcnts</code>. Thus, you can perform a quick calculation of counts in regions, using either the analytic or image filtering method, by specifying the<br />
+<p> Ordinarily, region filtering is performed using analytic (event) filtering, i.e. that same style of filtering as is performed by <code>fundisp</code> and <code>funtable</code>. Use the <code>-i</code> switch to specify image filtering, i.e. the same style filtering as is performed by <code>funcnts</code>. Thus, you can perform a quick calculation of counts in regions, using either the analytic or image filtering method, by specifying the<br/>
 &nbsp;<wbr><code>-n 0</code>&nbsp;<wbr>and optional&nbsp;<wbr><code>-i</code>&nbsp;<wbr>switches. These two method often give different results because of how boundary events are processed: </p>
 <pre>
   [sh] funcen  snr.ev &quot;cir 505 508 5&quot;

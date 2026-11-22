@@ -19,20 +19,20 @@ description: "aggregate-ios – optimise a concatenated set of cisco/IOS prefix 
 <p> Any diagnostics produced by <code><a href="/docs/linux/man/1-aggregate/">aggregate</a>(1)</code> are passed through on stderr. </p>
 <h2>EXAMPLES</h2>
 <p> The following configuration fragment: </p>
-<p> <code><br />
-&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 description Foo, Inc<br />
-&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 permit 10.1.0.0/16<br />
-&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 permit 10.2.0.0/16<br />
-&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 permit 10.2.1.0/24<br />
-&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 permit 10.3.0.0/16<br />
-&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65531 description Bar.Com<br />
-&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65531 seq 5 permit 192.168.1.0/24<br />
-&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65531 seq 10 permit 192.168.2.0/24<br />
+<p> <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 description Foo, Inc<br/>
+&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 permit 10.1.0.0/16<br/>
+&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 permit 10.2.0.0/16<br/>
+&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 permit 10.2.1.0/24<br/>
+&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 permit 10.3.0.0/16<br/>
+&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65531 description Bar.Com<br/>
+&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65531 seq 5 permit 192.168.1.0/24<br/>
+&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65531 seq 10 permit 192.168.2.0/24<br/>
 &nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65531 seq 15 permit 192.168.0.0/19 </code> </p>
 <p> is optimised as follows: </p>
-<p> <code><br />
-&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 permit 10.1.0.0/16 le 24<br />
-&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 permit 10.2.0.0/15 le 24<br />
+<p> <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 permit 10.1.0.0/16 le 24<br/>
+&nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65530 permit 10.2.0.0/15 le 24<br/>
 &nbsp;<wbr>&nbsp;<wbr>ip prefix-list AS65531 permit 192.168.0.0/19 le 24 </code> </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-aggregate/">aggregate</a>(1) </p>

@@ -29,6 +29,6 @@ description: "XtInitialize – initialize"
 <h2>Description</h2>
 <p><code>XtInitialize</code> calls <code>XtToolkitInitialize</code> followed by <code>XtOpenDisplay</code> with <i>display_string</i> NULL and <i>application_name</i> NULL, and finally calls <code>XtAppCreateShell</code> with <i>application_name</i> NULL, <i>widget_class</i> <code>applicationShellWidgetClass</code>, and the specified <i>args</i> and <i>num_args</i> and returns the created shell. The semantics of calling <code>XtInitialize</code> more than once are undefined. This routine has been replaced by <code>XtAppInitialize</code>.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xtappinitialize/">XtAppInitialize</a></code>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><code><a href="/docs/linux/man/3-xtappinitialize/">XtAppInitialize</a></code>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

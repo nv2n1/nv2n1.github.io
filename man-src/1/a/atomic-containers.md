@@ -38,29 +38,29 @@ description: "atomic-containers – operations on containers"
 <p> Can use &#8211;set to update environment variables. </p>
 <p> <code>atomic containers rollback</code>, rollback a system container to the other deployment if one exists. </p>
 <h2>OPTIONS:</h2>
-<p> <code>-h</code> <code>&#8211;help</code><br />
+<p> <code>-h</code> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>delete OPTIONS:</h2>
-<p> <code>-a</code> <code>&#8211;all</code><br />
+<p> <code>-a</code> <code>&#8211;all</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Delete all the installed containers </p>
-<p> <code>-f</code> <code>&#8211;force</code><br />
+<p> <code>-f</code> <code>&#8211;force</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Force the deletion of specified running containers </p>
 <h2>list OPTIONS:</h2>
-<p> <code>-a</code> <code>&#8211;all</code><br />
+<p> <code>-a</code> <code>&#8211;all</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print all the installed containers </p>
-<p> <code>-f</code> <code>&#8211;filter</code><br />
+<p> <code>-f</code> <code>&#8211;filter</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Filter output based on given filters, example usage: &#8211;filter id=foo will list all containers that has&nbsp;<wbr>&quot;foo&quot;&nbsp;<wbr>as part of their ID. </p>
 <p> Filterables: container (id), image, command, created, status, runtime </p>
-<p> <code>&#8211;json</code><br />
+<p> <code>&#8211;json</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print in a machine parsable format </p>
-<p> <code>-n</code> <code>&#8211;noheading</code><br />
+<p> <code>-n</code> <code>&#8211;noheading</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Do not print heading when listing the containers </p>
-<p> <code>&#8211;no-trunc</code><br />
+<p> <code>&#8211;no-trunc</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Do not truncate output </p>
-<p> <code>-q</code> <code>&#8211;quiet</code><br />
+<p> <code>-q</code> <code>&#8211;quiet</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Only display container IDs </p>
 <h2>update OPTIONS:</h2>
-<p> <code>&#8211;set=NAME=VALUE</code><br />
+<p> <code>&#8211;set=NAME=VALUE</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Set a value that is going to be used by a system container for its configuration and can be specified multiple times.&nbsp;<wbr>&nbsp;<wbr>OSTree is required for this feature to be available. </p>
 <h2>HISTORY</h2>
 <p> June 2016, Originally compiled by Giuseppe Scrivano (gscrivan at redhat dot com) July 2016, Added sub-commands filter, no-trunc and quiet (jerzhang at redhat dot com) Sept 2016, Added atomic containers trim subcommand (shishir dot mahajan at redhat dot com) </p>

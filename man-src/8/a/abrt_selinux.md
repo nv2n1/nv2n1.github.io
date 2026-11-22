@@ -120,17 +120,17 @@ description: "abrt_selinux – Security Enhanced Linux Policy for the abrt proce
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux abrt policy is very flexible allowing users to setup their abrt processes in as secure a method as possible. </p>
 <p> EQUIVALENCE DIRECTORIES</code> </p>
 <p> abrt policy stores data with multiple different file context types under the /var/cache/abrt directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/cache/abrt /srv/abrt</code><br />
+<p> <code>semanage fcontext -a -e /var/cache/abrt /srv/abrt</code><br/>
  <code>restorecon -R -v /srv/abrt</code> </p>
 <p> abrt policy stores data with multiple different file context types under the /var/spool/abrt directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/spool/abrt /srv/abrt</code><br />
+<p> <code>semanage fcontext -a -e /var/spool/abrt /srv/abrt</code><br/>
  <code>restorecon -R -v /srv/abrt</code> </p>
 <p> abrt policy stores data with multiple different file context types under the /var/run/abrt directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/run/abrt /srv/abrt</code><br />
+<p> <code>semanage fcontext -a -e /var/run/abrt /srv/abrt</code><br/>
  <code>restorecon -R -v /srv/abrt</code> </p>
 <p> <code>STANDARD FILE CONTEXT</code> </p>
 <p> SELinux defines the file context types for the abrt, if you wanted to store files with these types in a diffent paths, you need to execute the semanage command to sepecify alternate labeling and then use restorecon to put the labels on disk. </p>
-<p> <code>semanage fcontext -a -t abrt_var_run_t &#8216;/srv/myabrt_content(/.*)?&#8217;</code><br />
+<p> <code>semanage fcontext -a -t abrt_var_run_t &#8216;/srv/myabrt_content(/.*)?&#8217;</code><br/>
  <code>restorecon -R -v /srv/myabrt_content</code> </p>
 <p> Note: SELinux often uses regular expressions to specify labels that match multiple files. </p>
 <p> <i>The following file types are defined for abrt:</i> </p>
@@ -206,13 +206,13 @@ description: "abrt_selinux – Security Enhanced Linux Policy for the abrt proce
 <dl>
 <dt>Allow abrt servers to read the /var/abrt directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_t &quot;/var/abrt(/.*)?&quot;</code><br />
+<p> <code>semanage fcontext -a -t public_content_t &quot;/var/abrt(/.*)?&quot;</code><br/>
  <code>restorecon -F -R -v /var/abrt</code></p>
 <dl>
 <dt>Allow abrt servers to read and write /var/abrt/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the abrt_anon_write boolean.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/abrt/incoming(/.*)?&quot;</code><br />
- <code>restorecon -F -R -v /var/abrt/incoming</code><br />
+<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/abrt/incoming(/.*)?&quot;</code><br/>
+ <code>restorecon -F -R -v /var/abrt/incoming</code><br/>
  <code>setsebool -P abrt_anon_write 1</code> </p>
 <p> If you want to allow ABRT to modify public files used for public file transfer services., you must turn on the abrt_anon_write boolean. </p>
 <p> <code>setsebool -P abrt_anon_write 1</code></p>

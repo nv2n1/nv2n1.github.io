@@ -10,46 +10,46 @@ description: "src/drmaa.h –"
 <p>src/drmaa.h &#8211; </p>
 <p> DRMAA library for Torque/PBS.</p>
 <h2>Synopsis</h2>
-<p>#include &lt;stddef.h&gt;<br />
+<p>#include &lt;stddef.h&gt;<br/>
  #include &lt;stdio.h&gt; </p>
 <h3>Functions</h3>
-<p>int <code>drmaa_init</code> (const char *contact, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_init()</code> function SHALL initialize DRMAA library and create a new DRMAA session, using the contact parameter, if provided, to determine to which DRMS to connect.<br />
- int <code>drmaa_exit</code> (char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_exit()</code> function SHALL disengage from DRMAA library and allow the DRMAA library to perform any necessary internal cleanup.<br />
- int <code>drmaa_get_attribute</code> (<code>drmaa_job_template_t</code> *jt, const char *name, char *value, size_t value_len, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The function </i><code>drmaa_get_attribute()</code> SHALL fill the <i>value</i> buffer with up to <i>value_len</i> characters of the scalar attribute, <i>name&#8217;s</i>, value in the given job template.<br />
- int <code>drmaa_set_vector_attribute</code> (<code>drmaa_job_template_t</code> *jt, const char *name, const char *value[], char *error_diagnosis, size_t error_diag_len)<br />
- <i>The function </i><code>drmaa_set_vector_attribute()</code> SHALL set the vector attribute, <i>name</i>, in the job template, <i>jt</i>, to the value(s), <i>value</i>.<br />
- int <code>drmaa_get_vector_attribute</code> (<code>drmaa_job_template_t</code> *jt, const char *name, <code>drmaa_attr_values_t</code> **values, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The function </i><code>drmaa_get_vector_attribute()</code> SHALL store in <i>values</i> an opaque values string vector containing the values of the vector attribute, <i>name&#8217;s</i>, value in the given job template.<br />
- int <code>drmaa_get_attribute_names</code> (<code>drmaa_attr_names_t</code> **values, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The function </i><code>drmaa_get_attribute_names()</code> SHALL return the set of supported scalar attribute names in an opaque names string vector stored in <i>values</i>.<br />
- int <code>drmaa_get_vector_attribute_names</code> (<code>drmaa_attr_names_t</code> **values, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The function </i><code>drmaa_get_vector_attribute_names()</code> SHALL return the set of supported vector attribute names in an opaque names string vector stored in <i>values</i>.<br />
- int <code>drmaa_run_job</code> (char *job_id, size_t job_id_len, const <code>drmaa_job_template_t</code> *jt, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_run_job()</code> function submits a single job with the attributes defined in the job template, <i>jt</i>.<br />
- int <code>drmaa_run_bulk_jobs</code> (<code>drmaa_job_ids_t</code> **jobids, const <code>drmaa_job_template_t</code> *jt, int start, int end, int incr, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_run_bulk_jobs()</code> function submits a set of parametric jobs which can be run concurrently.<br />
- int <code>drmaa_control</code> (const char *job_id, int action, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_control()</code> function SHALL enact the action indicated by <i>action</i> on the job specified by the job identifier, <i>jobid</i>.<br />
- int <code>drmaa_job_ps</code> (const char *job_id, int *remote_ps, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_job_ps()</code> function SHALL store in <i>remote_ps</i> the program status of the job identified by <i>job_id</i>.<br />
- int <code>drmaa_synchronize</code> (const char *job_ids[], signed long timeout, int dispose, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_synchronize()</code> function SHALL cause the calling thread to block until all jobs specified by <i>job_ids</i> have finished execution.<br />
- int <code>drmaa_wait</code> (const char *job_id, char *job_id_out, size_t job_id_out_len, int *stat, signed long timeout, <code>drmaa_attr_values_t</code> **rusage, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_wait()</code> function SHALL wait for a job identified by <i>job_id</i> to finish execution or fail.<br />
- const char * <code>drmaa_strerror</code> (int drmaa_errno)<br />
- <i>The </i><code>drmaa_strerror()</code> function SHALL return the error string describing the DRMAA error number <i>drmaa_errno</i>.<br />
- int <code>drmaa_get_contact</code> (char *contact, size_t contact_len, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_get_contact()</code> function, if called before <code>drmaa_init()</code>, SHALL return a string containing a comma-delimited list of default DRMAA implementation contacts strings, one per DRM implementation provided.<br />
- int <code>drmaa_version</code> (unsigned int *major, unsigned int *minor, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_version()</code> function SHALL set major and minor to the major and minor versions of the DRMAA C binding specification implemented by the DRMAA implementation.<br />
- int <code>drmaa_get_DRM_system</code> (char *drm_system, size_t drm_system_len, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_get_DRM_system()</code> function, if called before <code>drmaa_init()</code>, SHALL return a string containing a comma-delimited list of DRM system identifiers, one per DRM system implementation provided.<br />
- int <code>drmaa_get_DRMAA_implementation</code> (char *drmaa_impl, size_t drmaa_impl_len, char *error_diagnosis, size_t error_diag_len)<br />
- <i>The </i><code>drmaa_get_DRMAA_implementation()</code> function, if called before <code>drmaa_init()</code>, SHALL return a string containing a comma-delimited list of DRMAA implementations, one per DRMAA implementation provided.<br />
- void <code>drmaa_set_logging_output</code> (FILE *file)<br />
+<p>int <code>drmaa_init</code> (const char *contact, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_init()</code> function SHALL initialize DRMAA library and create a new DRMAA session, using the contact parameter, if provided, to determine to which DRMS to connect.<br/>
+ int <code>drmaa_exit</code> (char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_exit()</code> function SHALL disengage from DRMAA library and allow the DRMAA library to perform any necessary internal cleanup.<br/>
+ int <code>drmaa_get_attribute</code> (<code>drmaa_job_template_t</code> *jt, const char *name, char *value, size_t value_len, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The function </i><code>drmaa_get_attribute()</code> SHALL fill the <i>value</i> buffer with up to <i>value_len</i> characters of the scalar attribute, <i>name&#8217;s</i>, value in the given job template.<br/>
+ int <code>drmaa_set_vector_attribute</code> (<code>drmaa_job_template_t</code> *jt, const char *name, const char *value[], char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The function </i><code>drmaa_set_vector_attribute()</code> SHALL set the vector attribute, <i>name</i>, in the job template, <i>jt</i>, to the value(s), <i>value</i>.<br/>
+ int <code>drmaa_get_vector_attribute</code> (<code>drmaa_job_template_t</code> *jt, const char *name, <code>drmaa_attr_values_t</code> **values, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The function </i><code>drmaa_get_vector_attribute()</code> SHALL store in <i>values</i> an opaque values string vector containing the values of the vector attribute, <i>name&#8217;s</i>, value in the given job template.<br/>
+ int <code>drmaa_get_attribute_names</code> (<code>drmaa_attr_names_t</code> **values, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The function </i><code>drmaa_get_attribute_names()</code> SHALL return the set of supported scalar attribute names in an opaque names string vector stored in <i>values</i>.<br/>
+ int <code>drmaa_get_vector_attribute_names</code> (<code>drmaa_attr_names_t</code> **values, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The function </i><code>drmaa_get_vector_attribute_names()</code> SHALL return the set of supported vector attribute names in an opaque names string vector stored in <i>values</i>.<br/>
+ int <code>drmaa_run_job</code> (char *job_id, size_t job_id_len, const <code>drmaa_job_template_t</code> *jt, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_run_job()</code> function submits a single job with the attributes defined in the job template, <i>jt</i>.<br/>
+ int <code>drmaa_run_bulk_jobs</code> (<code>drmaa_job_ids_t</code> **jobids, const <code>drmaa_job_template_t</code> *jt, int start, int end, int incr, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_run_bulk_jobs()</code> function submits a set of parametric jobs which can be run concurrently.<br/>
+ int <code>drmaa_control</code> (const char *job_id, int action, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_control()</code> function SHALL enact the action indicated by <i>action</i> on the job specified by the job identifier, <i>jobid</i>.<br/>
+ int <code>drmaa_job_ps</code> (const char *job_id, int *remote_ps, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_job_ps()</code> function SHALL store in <i>remote_ps</i> the program status of the job identified by <i>job_id</i>.<br/>
+ int <code>drmaa_synchronize</code> (const char *job_ids[], signed long timeout, int dispose, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_synchronize()</code> function SHALL cause the calling thread to block until all jobs specified by <i>job_ids</i> have finished execution.<br/>
+ int <code>drmaa_wait</code> (const char *job_id, char *job_id_out, size_t job_id_out_len, int *stat, signed long timeout, <code>drmaa_attr_values_t</code> **rusage, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_wait()</code> function SHALL wait for a job identified by <i>job_id</i> to finish execution or fail.<br/>
+ const char * <code>drmaa_strerror</code> (int drmaa_errno)<br/>
+ <i>The </i><code>drmaa_strerror()</code> function SHALL return the error string describing the DRMAA error number <i>drmaa_errno</i>.<br/>
+ int <code>drmaa_get_contact</code> (char *contact, size_t contact_len, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_get_contact()</code> function, if called before <code>drmaa_init()</code>, SHALL return a string containing a comma-delimited list of default DRMAA implementation contacts strings, one per DRM implementation provided.<br/>
+ int <code>drmaa_version</code> (unsigned int *major, unsigned int *minor, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_version()</code> function SHALL set major and minor to the major and minor versions of the DRMAA C binding specification implemented by the DRMAA implementation.<br/>
+ int <code>drmaa_get_DRM_system</code> (char *drm_system, size_t drm_system_len, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_get_DRM_system()</code> function, if called before <code>drmaa_init()</code>, SHALL return a string containing a comma-delimited list of DRM system identifiers, one per DRM system implementation provided.<br/>
+ int <code>drmaa_get_DRMAA_implementation</code> (char *drmaa_impl, size_t drmaa_impl_len, char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>The </i><code>drmaa_get_DRMAA_implementation()</code> function, if called before <code>drmaa_init()</code>, SHALL return a string containing a comma-delimited list of DRMAA implementations, one per DRMAA implementation provided.<br/>
+ void <code>drmaa_set_logging_output</code> (FILE *file)<br/>
  <i>Specify place where goes log messages from library when they were enabled at configure time. </i></p>
 <h2>Detailed Description</h2>
 <p>DRMAA library for Torque/PBS. </p>

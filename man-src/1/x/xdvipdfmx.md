@@ -16,8 +16,8 @@ description: "dvipdfmx, xdvipdfmx, dvipdfm – produce PDF files directly from D
 <p> In TeX Live, <code>dvipdfm</code> is another incarnation of <code>dvipdfmx</code> rather than a separate program. Compatibility is attempted as best as possible. </p>
 <p> <code>xdvipdfmx</code> is another incarnation. It is used as the back end for <code><a href="/docs/linux/man/1-xetex/">xetex</a></code>(1) and is not intended to be invoked directly. </p>
 <p> <code>dvipdfmx</code> recognizes several commonly used <code>\special</code> commands, which are extensions to the DVI format. Specifically, it understands color specials, papersize specials, tpic specials (which allow it to be used with <code>pic</code>), hypertex specials, and some PostScript specials. These extensions allow documents to contain color, figures, and hyperlinks. The program tries to mimic the behavior of <code>dvips</code> where possible, so that many macro packages produced for use with <code>dvips</code> will also work with <code>dvipdfmx</code>. In addition, <code>dvipdfmx </code> understands its own specific <code>\special</code> commands to allow access to PDF features such as annotations and bookmarks. </p>
-<p> As of December 2018, one such special specific to <code>dvipdfmx</code> is <i>pdf:trailerid</i>, which specifies the /ID in the PDF trailer. It is used like this (from the TeX level):<br />
- \special{pdf:trailerid [ (0123456789abcdef) (01234567890abcdef) ]}<br />
+<p> As of December 2018, one such special specific to <code>dvipdfmx</code> is <i>pdf:trailerid</i>, which specifies the /ID in the PDF trailer. It is used like this (from the TeX level):<br/>
+ \special{pdf:trailerid [ (0123456789abcdef) (01234567890abcdef) ]}<br/>
  That is, the special takes an array (the square brackets) of two 16-byte PDF strings (the parentheses). This is the same syntax as LuaTeX&#8217;s <i>\pdfvariable trailerid</i>, while different from pdfTeX&#8217;s <i>\pdftrailerid</i>. It must appear on the first output page, otherwise it is ignored. </p>
 <p> Unrecognized specials will generate warning messages. Packages that may need a <code>dvipdfm </code> or <code>dvipdfmx </code> driver option include <i>geometry</i>, <i>hyperref</i>, <i>bookmark</i>, <i>graphicx</i>, and <i>xcolor</i>. </p>
 <p> For issues related to bounding boxes (and hence image sizes), see <code><a href="/docs/linux/man/1-extractbb/">extractbb</a></code>(1).</p>
@@ -136,8 +136,8 @@ page_specification : = single_page | page_range
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-dvipdft/">dvipdft</a>(1), <a href="/docs/linux/man/1-extractbb/">extractbb</a>(1),<br />
- <a href="/docs/linux/man/1-tex/">tex</a>(1), <a href="/docs/linux/man/1-luatex/">luatex</a>(1), <a href="/docs/linux/man/1-xetex/">xetex</a>(1), <a href="/docs/linux/man/1-dvips/">dvips</a>(1),<br />
+<p> <a href="/docs/linux/man/1-dvipdft/">dvipdft</a>(1), <a href="/docs/linux/man/1-extractbb/">extractbb</a>(1),<br/>
+ <a href="/docs/linux/man/1-tex/">tex</a>(1), <a href="/docs/linux/man/1-luatex/">luatex</a>(1), <a href="/docs/linux/man/1-xetex/">xetex</a>(1), <a href="/docs/linux/man/1-dvips/">dvips</a>(1),<br/>
  <a href="/docs/linux/man/1-groff/">groff</a>(1), <a href="/docs/linux/man/1-grodvi/">grodvi</a>(1), <a href="/docs/linux/man/1-pic/">pic</a>(1), the Kpathsea library Info documentation (<a rel="nofollow" href="https://tug.org/kpathsea">https://tug.org/kpathsea</a>), and the Dvipdfmx User&#8217;s Manual (in the distribution, and linked from <a rel="nofollow" href="https://tug.org/dvipdfmx">https://tug.org/dvipdfmx</a>).</p>
 <h2>AUTHOR</h2>
 <p> Primarily Mark A. Wicks; dvipdfmx extensions primarily by Jin-Hwan Cho, Shunsaku Hirata, and Matthias Franz. For the version in TeX Live, please send bugs and other reports to the maintainers at dvipdfmx (at) tug.org (<a rel="nofollow" href="https://lists.tug.org/dvipdfmx">https://lists.tug.org/dvipdfmx</a>). </p>

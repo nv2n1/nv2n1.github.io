@@ -22,7 +22,7 @@ description: "xpr – print an X window dump"
 <dt><code>la100</code></dt>
 <dd> Digital LA100</dd>
 <dt><code>ljet</code></dt>
-<dd> <font SIZE="-1">HP</font> LaserJet series and other monochrome PCL devices such as ThinkJet, QuietJet, RuggedWriter, <font SIZE="-1">HP</font>2560 series, and <font SIZE="-1">HP</font>2930 series printers</dd>
+<dd> HP LaserJet series and other monochrome PCL devices such as ThinkJet, QuietJet, RuggedWriter, HP2560 series, and HP2930 series printers</dd>
 <dt><code>ln03</code></dt>
 <dd> Digital LN03</dd>
 <dt><code>pjet</code></dt>
@@ -98,7 +98,7 @@ description: "xpr – print an X window dump"
 <p> If no <code>-scale</code> is specified the image will be expanded to fit the printable page area. </p>
 <p> The default printable page area is 8&#215;10.5 inches. Other paper sizes can be accommodated using the <code>-height</code> and <code>-width</code> options. </p>
 <p> Note that a 1024&#215;768 image fits the default printable area when processed at 100 dpi with scale=1, the same image can also be printed using 300 dpi with scale=3 but will require considerably more data be transferred to the printer. </p>
-<p> <i>xpr</i> may be tailored for use with monochrome PCL printers other than the LaserJet. To print on a ThinkJet (<font SIZE="-1">HP</font>2225A) <i>xpr</i> could be invoked as: </p>
+<p> <i>xpr</i> may be tailored for use with monochrome PCL printers other than the LaserJet. To print on a ThinkJet (HP2225A) <i>xpr</i> could be invoked as: </p>
 <dl>
 <dt>
 </dt><dd> xpr -density 96 -width 6.667 <i>filename</i></dd></dl>
@@ -115,9 +115,9 @@ description: "xpr – print an X window dump"
 <p> The <code>-gamma</code> and <code>-render</code> options are supported only on the PaintJet XL printers. </p>
 <p> The <code>-slide</code> option is not supported for LaserJet printers. </p>
 <p> The <code>-split</code> option is not supported for HP printers. </p>
-<p> The <code>-gray</code> option is not supported for HP or IBM printers.<br />
- Copyright 1986, Marvin Solomon and the University of Wisconsin.<br />
- Copyright 1988, Hewlett Packard Company.<br />
+<p> The <code>-gray</code> option is not supported for HP or IBM printers.<br/>
+ Copyright 1986, Marvin Solomon and the University of Wisconsin.<br/>
+ Copyright 1988, Hewlett Packard Company.<br/>
  See <i>X(1)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHORS</h2>
 <p> Michael R. Gretzinger, MIT Project Athena, Jose Capo, MIT Project Athena (PP3812 support), Marvin Solomon, University of Wisconsin, Bob Scheifler, MIT, Angela Bock and E. Mike Durbin, Rich Inc. (grayscale), Larry Rupp, HP (HP printer support). </p>

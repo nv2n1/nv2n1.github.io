@@ -62,8 +62,8 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <dd> <p> FTP_PASSWORD=mypassword duplicity /local/dir <a href="ftp://user@other.host/some_dir">ftp://user@other.host/some_dir</a> </p>
  </dd></dl>
 <h2>ACTIONS</h2>
-<p> Duplicity knows action commands, which can be finetuned with options. <br />
- The actions for backup (full,incr) and restoration (restore) can as well be left out as duplicity detects in what mode it should switch to by the order of target URL and local folder. If the target URL comes before the local folder a restore is in order, is the local folder before target URL then this folder is about to be backed up to the target URL. <br />
+<p> Duplicity knows action commands, which can be finetuned with options. <br/>
+ The actions for backup (full,incr) and restoration (restore) can as well be left out as duplicity detects in what mode it should switch to by the order of target URL and local folder. If the target URL comes before the local folder a restore is in order, is the local folder before target URL then this folder is about to be backed up to the target URL. <br/>
  If a backup is in order and old signatures can be found duplicity automatically performs an incremental backup. </p>
 <p> <code>Note:</code> The following explanations explain some but <code>not</code> all options that can be used in connection with that action command. Consult the OPTIONS section for more detailed informations. </p>
 <dl>
@@ -74,7 +74,7 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <dd> <p> If this is requested an incremental backup will be performed. Duplicity will abort if no old signatures can be found. </p>
  </dd>
 <dt><code>verify </code><i>[--compare-data] [--time &lt;time&gt;] [--file-to-restore &lt;rel_path&gt;] &lt;url&gt; &lt;local_path&gt;</i></dt>
-<dd> <p> Verify tests the integrity of the backup archives at the remote location by downloading each file and checking both that it can restore the archive and that the restored file matches the signature of that file stored in the backup, i.e. compares the archived file with its hash value from archival time. Verify does not actually restore and will not overwrite any local files. Duplicity will exit with a non-zero error level if any files do not match the signature stored in the archive for that file. On verbosity level 4 or higher, it will log a message for each file that differs from the stored signature. Files must be downloaded to the local machine in order to compare them. Verify does not compare the backed-up version of the file to the current local copy of the files unless the --compare-data option is used (see below). <br />
+<dd> <p> Verify tests the integrity of the backup archives at the remote location by downloading each file and checking both that it can restore the archive and that the restored file matches the signature of that file stored in the backup, i.e. compares the archived file with its hash value from archival time. Verify does not actually restore and will not overwrite any local files. Duplicity will exit with a non-zero error level if any files do not match the signature stored in the archive for that file. On verbosity level 4 or higher, it will log a message for each file that differs from the stored signature. Files must be downloaded to the local machine in order to compare them. Verify does not compare the backed-up version of the file to the current local copy of the files unless the --compare-data option is used (see below). <br/>
  The <i>--file-to-restore</i> option restricts verify to that file or folder. The <i>--time</i> option allows to select a backup to verify. The <i>--compare-data</i> option enables data comparison (see below). </p>
  </dd>
 <dt><code>collection-status </code><i>[--file-changed &lt;relpath&gt;]</i><code>&lt;url&gt;</code></dt>
@@ -117,19 +117,19 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <dd>  </dd>
 <dl>
 <dt>1.</dt>
-<dd> <p> neither specified (default) <br />
+<dd> <p> neither specified (default) <br/>
 &nbsp;~/.cache/duplicity/<i>hash-of-url</i> </p>
  </dd>
 <dt>2.</dt>
-<dd> <p> --archive-dir=/arch, no --name <br />
+<dd> <p> --archive-dir=/arch, no --name <br/>
 &nbsp;/arch/<i>hash-of-url</i> </p>
  </dd>
 <dt>3.</dt>
-<dd> <p> no --archive-dir, --name=foo <br />
+<dd> <p> no --archive-dir, --name=foo <br/>
 &nbsp;~/.cache/duplicity/foo </p>
  </dd>
 <dt>4.</dt>
-<dd> <p> --archive-dir=/arch, --name=foo <br />
+<dd> <p> --archive-dir=/arch, --name=foo <br/>
 &nbsp;/arch/foo </p>
  </dd></dl>
 </dl>
@@ -242,7 +242,7 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
  </dd>
 <dt><code>--max-blocksize </code><i>number</i></dt>
 <dd> <p> determines the number of the blocks examined for changes during the diff process. For files &lt; 1MB the blocksize is a constant of 512. For files over 1MB the size is given by: </p>
-<p> file_blocksize = int((file_len / (2000 * 512)) * 512) <br />
+<p> file_blocksize = int((file_len / (2000 * 512)) * 512) <br/>
  return min(file_blocksize, globals.max_blocksize) </p>
 <p> where globals.max_blocksize defaults to 2048. If you specify a larger max_blocksize, your difftar files will be larger, but your sigtar files will be smaller. If you specify a smaller max_blocksize, the reverse occurs. The --max-blocksize option should be in multiples of 512. </p>
  </dd>
@@ -361,18 +361,18 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <dd> <p> Specify the number of maximum connections to transfer one blob to Azure blob size exceeds 64MB. The default values is 2. </p>
  </dd>
 <dt><code>--scp-command </code><i>command</i></dt>
-<dd> <p> <code>(only ssh pexpect backend with --use-scp enabled)</code> The <i>command</i> will be used instead of &quot;scp&quot; to send or receive files. To list and delete existing files, the sftp command is used. <br />
+<dd> <p> <code>(only ssh pexpect backend with --use-scp enabled)</code> The <i>command</i> will be used instead of &quot;scp&quot; to send or receive files. To list and delete existing files, the sftp command is used. <br/>
  See also <code>A NOTE ON SSH BACKENDS</code> section <code>SSH pexpect backend</code>. </p>
  </dd>
 <dt><code>--sftp-command </code><i>command</i></dt>
-<dd> <p> <code>(only ssh pexpect backend)</code> The <i>command</i> will be used instead of &quot;sftp&quot;. <br />
+<dd> <p> <code>(only ssh pexpect backend)</code> The <i>command</i> will be used instead of &quot;sftp&quot;. <br/>
  See also <code>A NOTE ON SSH BACKENDS</code> section <code>SSH pexpect backend</code>. </p>
  </dd>
 <dt><code>--short-filenames</code></dt>
 <dd> <p> If this option is specified, the names of the files duplicity writes will be shorter (about 30 chars) but less understandable. This may be useful when backing up to MacOS or another OS or FS that doesn&#8217;t support long filenames. </p>
  </dd>
 <dt><code>--sign-key </code><i>key-id</i></dt>
-<dd> <p> This option can be used when backing up, restoring or verifying. When backing up, all backup files will be signed with keyid <i>key</i>. When restoring, duplicity will signal an error if any remote file is not signed with the given key-id. The key-id can be given in any of the formats supported by GnuPG; see <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1), section &quot;HOW TO SPECIFY A USER ID&quot; for details. Should be specified only once because currently only <code>one</code> signing key is supported. Last entry overrides all other entries. <br />
+<dd> <p> This option can be used when backing up, restoring or verifying. When backing up, all backup files will be signed with keyid <i>key</i>. When restoring, duplicity will signal an error if any remote file is not signed with the given key-id. The key-id can be given in any of the formats supported by GnuPG; see <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1), section &quot;HOW TO SPECIFY A USER ID&quot; for details. Should be specified only once because currently only <code>one</code> signing key is supported. Last entry overrides all other entries. <br/>
  See also <code>A NOTE ON SYMMETRIC ENCRYPTION AND SIGNING</code> </p>
  </dd>
 <dt><code>--ssh-askpass</code></dt>
@@ -387,28 +387,28 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <p> <code>NOTE:</code> The <i>ssh paramiko backend</i> currently supports only the <code>-i</code> or <code>-oIdentityFile</code> setting. If needed provide more host specific options via ssh_config file. </p>
  </dd>
 <dt><code>--ssl-cacert-file </code><i>file</i></dt>
-<dd> <p> <code>(only webdav &amp; lftp backend)</code> Provide a cacert file for ssl certificate verification. <br />
+<dd> <p> <code>(only webdav &amp; lftp backend)</code> Provide a cacert file for ssl certificate verification. <br/>
  See also <code>A NOTE ON SSL CERTIFICATE VERIFICATION</code>. </p>
  </dd>
 <dt><code>--ssl-cacert-path </code><i>path/to/certs/</i></dt>
-<dd> <p> <code>(only webdav backend and python 2.7.9+ OR lftp+webdavs and a recent lftp)</code> Provide a path to a folder containing cacert files for ssl certificate verification. <br />
+<dd> <p> <code>(only webdav backend and python 2.7.9+ OR lftp+webdavs and a recent lftp)</code> Provide a path to a folder containing cacert files for ssl certificate verification. <br/>
  See also <code>A NOTE ON SSL CERTIFICATE VERIFICATION</code>. </p>
  </dd>
 <dt><code>--ssl-no-check-certificate</code></dt>
-<dd> <p> <code>(only webdav &amp; lftp backend)</code> Disable ssl certificate verification. <br />
+<dd> <p> <code>(only webdav &amp; lftp backend)</code> Disable ssl certificate verification. <br/>
  See also <code>A NOTE ON SSL CERTIFICATE VERIFICATION</code>. </p>
  </dd>
 <dt><code>--swift-storage-policy</code></dt>
-<dd> <p> Use this storage policy when operating on Swift containers. <br />
+<dd> <p> Use this storage policy when operating on Swift containers. <br/>
  See also <code>A NOTE ON SWIFT (OPENSTACK OBJECT STORAGE) ACCESS</code>. </p>
  </dd>
 <dt><code>--metadata-sync-mode </code><i>mode</i></dt>
-<dd> <p> This option defaults to &#8216;partial&#8217;, but you can set it to &#8216;full&#8217; <br />
- Use &#8216;partial&#8217; to avoid syncing metadata for backup chains that you are not going to use. This saves time when restoring for the first time, and lets you restore an old backup that was encrypted with a different passphrase by supplying only the target passphrase. <br />
+<dd> <p> This option defaults to &#8216;partial&#8217;, but you can set it to &#8216;full&#8217; <br/>
+ Use &#8216;partial&#8217; to avoid syncing metadata for backup chains that you are not going to use. This saves time when restoring for the first time, and lets you restore an old backup that was encrypted with a different passphrase by supplying only the target passphrase. <br/>
  Use &#8216;full&#8217; to sync metadata for all backup chains on the remote. </p>
  </dd>
 <dt><code>--tempdir </code><i>directory</i></dt>
-<dd> <p> Use this existing directory for duplicity temporary files instead of the system default, which is usually the /tmp directory. This option supersedes any environment variable. <br />
+<dd> <p> Use this existing directory for duplicity temporary files instead of the system default, which is usually the /tmp directory. This option supersedes any environment variable. <br/>
  See also <code>ENVIRONMENT VARIABLES</code>. </p>
  </dd>
 <dt><code>-t</code><i>time</i><code>, --time </code><i>time</i><code>, --restore-time </code><i>time</i></dt>
@@ -421,13 +421,13 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <dd> <p> Use <i>seconds</i> as the socket timeout value if duplicity begins to timeout during network operations. The default is 30 seconds. </p>
  </dd>
 <dt><code>--use-agent</code></dt>
-<dd> <p> If this option is specified, then <i>--use-agent</i> is passed to the GnuPG encryption process and it will try to connect to <code>gpg-agent</code> before it asks for a passphrase for <i>--encrypt-key</i> or <i>--sign-key</i> if needed. <br />
+<dd> <p> If this option is specified, then <i>--use-agent</i> is passed to the GnuPG encryption process and it will try to connect to <code>gpg-agent</code> before it asks for a passphrase for <i>--encrypt-key</i> or <i>--sign-key</i> if needed. <br/>
  <code>Note:</code> Contrary to previous versions of duplicity, this option will also be honored by GnuPG 2 and newer versions. If GnuPG 2 is in use, duplicity passes the option <i>--pinentry-mode=loopback</i> to the the gpg process unless <i>--use-agent</i> is specified on the duplicity command line. This has the effect that GnuPG 2 uses the agent only if <i>--use-agent</i> is given, just like GnuPG 1. </p>
  </dd>
 <dt><code>--verbosity </code><i>level</i><code>, -v</code><i>level</i></dt>
-<dd> <p> Specify output verbosity level (log level). Named levels and corresponding values are 0 Error, 2 Warning, 4 Notice (default), 8 Info, 9 Debug (noisiest). <br />
- <i>level</i> may also be <br />
- <code>a character:</code> e, w, n, i, d <br />
+<dd> <p> Specify output verbosity level (log level). Named levels and corresponding values are 0 Error, 2 Warning, 4 Notice (default), 8 Info, 9 Debug (noisiest). <br/>
+ <i>level</i> may also be <br/>
+ <code>a character:</code> e, w, n, i, d <br/>
  <code>a word:</code> error, warning, notice, info, debug </p>
 <p> The options -v4, -vn and -vnotice are functionally equivalent, as are the mixed/upper-case versions -vN, -vNotice and -vNOTICE. </p>
  </dd>
@@ -551,18 +551,18 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
  </dd></dl>
 <p> <code>S3 storage</code> (Amazon) </p>
 <dl>
-<dd> <p> s3://host[:port]/bucket_name[/prefix] <br />
- s3+<a rel="nofollow" href="http://bucket_name[/prefix]">http://bucket_name[/prefix]</a> <br />
- <code>defaults</code> to the legacy boto backend based on boto v2 (last update 2018/07) <br />
+<dd> <p> s3://host[:port]/bucket_name[/prefix] <br/>
+ s3+<a rel="nofollow" href="http://bucket_name[/prefix]">http://bucket_name[/prefix]</a> <br/>
+ <code>defaults</code> to the legacy boto backend based on boto v2 (last update 2018/07) <br/>
  <code>alternatively</code> try the newer boto3+s3://bucket_name[/prefix] </p>
 <p> For details see <code>A NOTE ON AMAZON S3</code> and see also <code>A NOTE ON EUROPEAN S3 BUCKETS</code> below. </p>
  </dd></dl>
 <p> <code>SCP/SFTP access</code> </p>
 <dl>
-<dd> <p> <a href="scp://..">scp://..</a> or <br />
+<dd> <p> <a href="scp://..">scp://..</a> or <br/>
  <a href="sftp://user[:pwd]@other.host[:port]/[relative|/absolute]_path">sftp://user[:pwd]@other.host[:port]/[relative|/absolute]_path</a> </p>
-<p> <code>defaults</code> are paramiko+scp:// and paramiko+sftp:// <br />
- <code>alternatively</code> try pexpect+<a href="scp://,">scp://,</a> pexpect+<a href="sftp://,">sftp://,</a> lftp+sftp:// <br />
+<p> <code>defaults</code> are paramiko+scp:// and paramiko+sftp:// <br/>
+ <code>alternatively</code> try pexpect+<a href="scp://,">scp://,</a> pexpect+<a href="sftp://,">sftp://,</a> lftp+sftp:// <br/>
  See also <code>--ssh-askpass</code>, <code>--ssh-options</code> and <code>A NOTE ON SSH BACKENDS</code>. </p>
  </dd></dl>
 <p> <code>Swift</code> (Openstack) </p>
@@ -621,13 +621,13 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <h2>FILE SELECTION</h2>
 <p> When duplicity is run, it searches through the given source directory and backs up all the files specified by the file selection system. The file selection system comprises a number of file selection conditions, which are set using one of the following command line options: </p>
 <dl>
-<dd> <p> --exclude <br />
- --exclude-device-files <br />
- --exclude-if-present <br />
- --exclude-filelist <br />
- --exclude-regexp <br />
- --include <br />
- --include-filelist <br />
+<dd> <p> --exclude <br/>
+ --exclude-device-files <br/>
+ --exclude-if-present <br/>
+ --exclude-filelist <br/>
+ --exclude-regexp <br/>
+ --include <br/>
+ --include-filelist <br/>
  --include-regexp </p>
  </dd></dl>
 <p> Each file selection condition either matches or doesn&#8217;t match a given file. A given file is excluded by the file selection system exactly when the first matching file selection condition specifies that the file be excluded; otherwise the file is included. </p>
@@ -647,11 +647,11 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <p> The <code>include</code>, <code>exclude</code>, <code>include-filelist</code>, and <code>exclude-filelist</code> options accept some <i>extended shell globbing patterns</i>. These patterns can contain <code>*</code>, <code>**</code>, <code>?</code>, and <code>[...]</code> (character ranges). As in a normal shell, <code>*</code> can be expanded to any string of characters not containing &quot;/&quot;, <code>?</code> expands to any character except &quot;/&quot;, and <code>[...]</code> expands to a single character of those characters specified (ranges are acceptable). The new special pattern, <code>**</code>, expands to any string of characters whether or not it contains &quot;/&quot;. Furthermore, if the pattern starts with &quot;ignorecase:&quot; (case insensitive), then this prefix will be removed and any character in the string can be replaced with an upper- or lowercase version of itself. </p>
 <p> Remember that you may need to quote these characters when typing them into a shell, so the shell does not interpret the globbing patterns before duplicity sees them. </p>
 <p> The <code>--exclude</code> pattern option matches a file if: </p>
-<p> <code>1.</code> <i>pattern</i> can be expanded into the file&#8217;s filename, or <br />
+<p> <code>1.</code> <i>pattern</i> can be expanded into the file&#8217;s filename, or <br/>
  <code>2.</code> the file is inside a directory matched by the option. </p>
 <p> Conversely, the <code>--include </code> pattern matches a file if: </p>
-<p> <code>1.</code> <i>pattern</i> can be expanded into the file&#8217;s filename, or <br />
- <code>2.</code> the file is inside a directory matched by the option, or <br />
+<p> <code>1.</code> <i>pattern</i> can be expanded into the file&#8217;s filename, or <br/>
+ <code>2.</code> the file is inside a directory matched by the option, or <br/>
  <code>3.</code> the file is a directory which contains a file matched by the option. </p>
 <p> For example, </p>
 <dl>
@@ -671,17 +671,17 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <p> The <code>--include-filelist</code>, and <code>--exclude-filelist</code><i>,</i> options also introduce file selection conditions. They direct duplicity to read in a text file (either ASCII or UTF-8), each line of which is a file specification, and to include or exclude the matching files. Lines are separated by newlines or nulls, depending on whether the --null-separator switch was given. Each line in the filelist will be interpreted as a globbing pattern the way <code>--include</code> and <code>--exclude</code> options are interpreted, except that lines starting with &quot;+ &quot; are interpreted as include directives, even if found in a filelist referenced by <code>--exclude-filelist</code>. Similarly, lines starting with &quot;- &quot; exclude files even if they are found within an include filelist. </p>
 <p> For example, if file &quot;list.txt&quot; contains the lines: </p>
 <dl>
-<dd> <p> /usr/local <br />
- - /usr/local/doc <br />
- /usr/local/bin <br />
- + /var <br />
+<dd> <p> /usr/local <br/>
+ - /usr/local/doc <br/>
+ /usr/local/bin <br/>
+ + /var <br/>
  - /var </p>
  </dd></dl>
 <p> then <code>--include-filelist list.txt</code> would include /usr, /usr/local, and /usr/local/bin. It would exclude /usr/local/doc, /usr/local/doc/python, etc. It would also include /usr/local/man, as this is included within /user/local. Finally, it is undefined what happens with /var. A single file list should not contain conflicting file specifications. </p>
 <p> Each line in the filelist will also be interpreted as a globbing pattern the way <code>--include</code> and <code>--exclude</code> options are interpreted. For instance, if the file &quot;list.txt&quot; contains the lines: </p>
 <dl>
-<dd> <p> dir/foo <br />
- + dir/bar <br />
+<dd> <p> dir/foo <br/>
+ + dir/bar <br/>
  - ** </p>
  </dd></dl>
 <p> Then <code>--include-filelist list.txt</code> would be exactly the same as specifying <code>--include dir/foo --include dir/bar --exclude **</code> on the command line. </p>
@@ -733,10 +733,10 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <h2>A NOTE ON DROPBOX ACCESS</h2>
 <dl>
 <dt>1.</dt>
-<dd> <p> First of all Dropbox backend requires valid authentication token. It should be passed via <code>DPBX_ACCESS_TOKEN</code> environment variable. <br />
- To obtain it please create &#8216;Dropbox API&#8217; application at: <a rel="nofollow" href="https://www.dropbox.com/developers/apps/create">https://www.dropbox.com/developers/apps/create</a> <br />
- Then visit app settings and just use &#8216;Generated access token&#8217; under OAuth2 section. <br />
- Alternatively you can let duplicity generate access token itself. In such case temporary export <code>DPBX_APP_KEY ,</code> <code>DPBX_APP_SECRET</code> using values from app settings page and run duplicity interactively. <br />
+<dd> <p> First of all Dropbox backend requires valid authentication token. It should be passed via <code>DPBX_ACCESS_TOKEN</code> environment variable. <br/>
+ To obtain it please create &#8216;Dropbox API&#8217; application at: <a rel="nofollow" href="https://www.dropbox.com/developers/apps/create">https://www.dropbox.com/developers/apps/create</a> <br/>
+ Then visit app settings and just use &#8216;Generated access token&#8217; under OAuth2 section. <br/>
+ Alternatively you can let duplicity generate access token itself. In such case temporary export <code>DPBX_APP_KEY ,</code> <code>DPBX_APP_SECRET</code> using values from app settings page and run duplicity interactively. <br/>
  It will print the URL that you need to open in the browser to obtain OAuth2 token for the application. Just follow on-screen instructions and then put generated token to <code>DPBX_ACCESS_TOKEN</code> variable. Once done, feel free to unset <code>DPBX_APP_KEY and</code> <code>DPBX_APP_SECRET</code> </p>
  </dd>
 <dt>2.</dt>
@@ -745,7 +745,7 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> <code>Full Dropbox:</code> path is absolute and starts from &#8216;Dropbox&#8217; root folder. <br />
+<dd> <p> <code>Full Dropbox:</code> path is absolute and starts from &#8216;Dropbox&#8217; root folder. <br/>
  <code>App Folder:</code> path is related to application folder. Dropbox client will show it in <code>~/Dropbox/Apps/&lt;app-name&gt;</code> </p>
  </dd></dl>
 </dl>
@@ -763,16 +763,16 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <p> Duplicity does not require access to archive files except when restoring from backup. </p>
 <h2>A NOTE ON GOOGLE CLOUD STORAGE</h2>
 <p> Support for Google Cloud Storage relies on its Interoperable Access, which must be enabled for your account. Once enabled, you can generate Interoperable Storage Access Keys and pass them to duplicity via the <code>GS_ACCESS_KEY_ID</code> and <code>GS_SECRET_ACCESS_KEY</code> environment variables. Alternatively, you can run <code>gsutil config -a</code> to have the Google Cloud Storage utility populate the <code>~/.boto</code> configuration file. </p>
-<p> Enable Interoperable Access: <a rel="nofollow" href="https://code.google.com/apis/console#:storage">https://code.google.com/apis/console#:storage</a> <br />
+<p> Enable Interoperable Access: <a rel="nofollow" href="https://code.google.com/apis/console#:storage">https://code.google.com/apis/console#:storage</a> <br/>
  Create Access Keys: <a rel="nofollow" href="https://code.google.com/apis/console#:storage:legacy">https://code.google.com/apis/console#:storage:legacy</a> </p>
 <h2>A NOTE ON HUBIC</h2>
 <p> The hubic backend requires the pyrax library to be installed on the system. See REQUIREMENTS above. You will need to set your credentials for hubiC in a file called ~/.hubic_credentials, following this pattern: </p>
 <dl>
-<dd> <p> [hubic] <br />
- email = your_email <br />
- password = your_password <br />
- client_id = api_client_id <br />
- client_secret = api_secret_key <br />
+<dd> <p> [hubic] <br/>
+ email = your_email <br/>
+ password = your_password <br/>
+ client_id = api_client_id <br/>
+ client_secret = api_secret_key <br/>
  redirect_uri = <a rel="nofollow" href="http://localhost/">http://localhost/</a> </p>
  </dd></dl>
 <h2>A NOTE ON IMAP</h2>
@@ -836,7 +836,7 @@ multi:///path/to/config.json?onfail=abort
 <p> The pydrive backend requires Python PyDrive package to be installed on the system. See <code>REQUIREMENTS</code> above. </p>
 <p> There are two ways to use PyDrive: with a regular account or with a &quot;service account&quot;. With a service account, a separate account is created, that is only accessible with Google APIs and not a web login. With a regular account, you can store backups in your normal Google Drive. </p>
 <p> To use a service account, go to the Google developers console at <a rel="nofollow" href="https://console.developers.google.com.">https://console.developers.google.com.</a> Create a project, and make sure Drive API is enabled for the project. Under &quot;APIs and auth&quot;, click Create New Client ID, then select Service Account with P12 key. </p>
-<p> Download the .p12 key file of the account and convert it to the .pem format: <br />
+<p> Download the .p12 key file of the account and convert it to the .pem format: <br/>
  openssl pkcs12 -in XXX.p12 -nodes -nocerts &gt; pydriveprivatekey.pem </p>
 <p> The content of .pem file should be passed to <code>GOOGLE_DRIVE_ACCOUNT_KEY</code> environment variable for authentification. </p>
 <p> The email address of the account will be used as part of URL. See <code>URL FORMAT</code> above. </p>
@@ -871,14 +871,14 @@ get_refresh_token: True
  </dd></dl>
 <p> Please note the slash after the second colon. Some storage provider will work with or without slash after colon, but some other will not. Since duplicity will complain about malformed URL if a slash is not present, always put it after the colon, and the backend will handle it for you. </p>
 <h2>A NOTE ON SSH BACKENDS</h2>
-<p> The <i>ssh backends</i> support <i>sftp</i> and <i>scp/ssh</i> transport protocols. This is a known user-confusing issue as these are fundamentally different. If you plan to access your backend via one of those please inform yourself about the requirements for a server to support <i>sftp</i> or <i>scp/ssh</i> access. To make it even more confusing the user can choose between several ssh backends via a scheme prefix: paramiko+ (default), pexpect+, lftp+... . <br />
+<p> The <i>ssh backends</i> support <i>sftp</i> and <i>scp/ssh</i> transport protocols. This is a known user-confusing issue as these are fundamentally different. If you plan to access your backend via one of those please inform yourself about the requirements for a server to support <i>sftp</i> or <i>scp/ssh</i> access. To make it even more confusing the user can choose between several ssh backends via a scheme prefix: paramiko+ (default), pexpect+, lftp+... . <br/>
  paramiko &amp; pexpect support <code>--use-scp</code>, <code>--ssh-askpass</code> and <code>--ssh-options</code>. Only the <code>pexpect</code> backend allows to define <code>--scp-command</code> and <code>--sftp-command</code>. </p>
 <p> <code>SSH paramiko backend </code>(default) is a complete reimplementation of ssh protocols natively in python. Advantages are speed and maintainability. Minor disadvantage is that extra packages are needed as listed in <code>REQUIREMENTS</code> above. In <i>sftp</i> (default) mode all operations are done via the according sftp commands. In <i>scp</i> mode ( <i>--use-scp</i> ) though scp access is used for put/get operations but listing is done via ssh remote shell. </p>
 <p> <code>SSH pexpect backend</code> is the legacy ssh backend using the command line ssh binaries via pexpect. Older versions used <i>scp</i> for get and put operations and <i>sftp</i> for list and delete operations. The current version uses <i>sftp</i> for all four supported operations, unless the <i>--use-scp</i> option is used to revert to old behavior. </p>
 <p> <code>SSH lftp backend</code> is simply there because lftp can interact with the ssh cmd line binaries. It is meant as a last resort in case the above options fail for some reason. </p>
 <p> <code>Why use sftp instead of scp?</code> The change to sftp was made in order to allow the remote system to chroot the backup, thus providing better security and because it does not suffer from shell quoting issues like scp. Scp also does not support any kind of file listing, so sftp or ssh access will always be needed in addition for this backend mode to work properly. Sftp does not have these limitations but needs an sftp service running on the backend server, which is sometimes not an option. </p>
 <h2>A NOTE ON SSL CERTIFICATE VERIFICATION</h2>
-<p> Certificate verification as implemented right now [02.2016] only in the webdav and lftp backends. older pythons 2.7.8- and older lftp binaries need a file based database of certification authority certificates (cacert file). <br />
+<p> Certificate verification as implemented right now [02.2016] only in the webdav and lftp backends. older pythons 2.7.8- and older lftp binaries need a file based database of certification authority certificates (cacert file). <br/>
  Newer python 2.7.9+ and recent lftp versions however support the system default certificates (usually in /etc/ssl/certs) and also giving an alternative ca cert folder via <code>--ssl-cacert-path</code>. </p>
 <p> The cacert file has to be a <code>PEM</code> formatted text file as currently provided by the <code>CURL</code> project. See </p>
 <dl>
@@ -886,21 +886,21 @@ get_refresh_token: True
  </dd></dl>
 <p> After creating/retrieving a valid cacert file you should copy it to either </p>
 <dl>
-<dd> <p> ~/.duplicity/cacert.pem <br />
- ~/duplicity_cacert.pem <br />
+<dd> <p> ~/.duplicity/cacert.pem <br/>
+ ~/duplicity_cacert.pem <br/>
  /etc/duplicity/cacert.pem </p>
  </dd></dl>
 <p> Duplicity searches it there in the same order and will fail if it can&#8217;t find it. You can however specify the option <code>--ssl-cacert-file</code><i> &lt;file&gt;</i> to point duplicity to a copy in a different location. </p>
 <p> Finally there is the <code>--ssl-no-check-certificate</code> option to disable certificate verification alltogether, in case some ssl library is missing or verification is not wanted. Use it with care, as even with self signed servers manually providing the private ca certificate is definitely the safer option. </p>
 <h2>A NOTE ON SWIFT (OPENSTACK OBJECT STORAGE) ACCESS</h2>
-<p> Swift is the OpenStack Object Storage service. <br />
+<p> Swift is the OpenStack Object Storage service. <br/>
  The backend requires python-switclient to be installed on the system. python-keystoneclient is also needed to use OpenStack&#8217;s Keystone Identity service. See <code>REQUIREMENTS</code> above. </p>
 <p> It uses following environment variables for authentification: <code>SWIFT_USERNAME</code> (required), <code>SWIFT_PASSWORD</code> (required), <code>SWIFT_AUTHURL</code> (required), <code>SWIFT_USERID</code> (required, only for IBM Bluemix ObjectStorage), <code>SWIFT_TENANTID</code> (required, only for IBM Bluemix ObjectStorage), <code>SWIFT_REGIONNAME</code> (required, only for IBM Bluemix ObjectStorage), <code>SWIFT_TENANTNAME</code> (optional, the tenant can be included in the username) </p>
 <p> If the user was previously authenticated, the following environment variables can be used instead: <code>SWIFT_PREAUTHURL</code> (required), <code>SWIFT_PREAUTHTOKEN</code> (required) </p>
 <p> If <code>SWIFT_AUTHVERSION</code> is unspecified, it will default to version 1. </p>
 <h2>A NOTE ON PCA ACCESS</h2>
 <p> PCA is a long-term data archival solution by OVH. It runs a slightly modified version of Openstack Swift introducing latency in the data retrieval process. It is a good pick for a <code>multi backend </code> configuration where receiving volumes while an other backend is used to store manifests and signatures. </p>
-<p> <br />
+<p> <br/>
  The backend requires python-switclient to be installed on the system. python-keystoneclient is also needed to interact with OpenStack&#8217;s Keystone Identity service. See <code>REQUIREMENTS</code> above. </p>
 <p> It uses following environment variables for authentification: <code>PCA_USERNAME</code> (required), <code>PCA_PASSWORD</code> (required), <code>PCA_AUTHURL</code> (required), <code>PCA_USERID</code> (optional), <code>PCA_TENANTID</code> (optional, but either the tenant name or tenant id must be supplied) <code>PCA_REGIONNAME</code> (optional), <code>PCA_TENANTNAME</code> (optional, but either the tenant name or tenant id must be supplied) </p>
 <p> If the user was previously authenticated, the following environment variables can be used instead: <code>PCA_PREAUTHURL</code> (required), <code>PCA_PREAUTHTOKEN</code> (required) </p>
@@ -932,7 +932,7 @@ get_refresh_token: True
 <p> Some backends also require additional components (probably available as packages for your specific platform): </p>
 <dl>
 <dt><code>Amazon Drive backend</code></dt>
-<dd> <p> <code>python-requests</code> - <a rel="nofollow" href="http://python-requests.org">http://python-requests.org</a> <br />
+<dd> <p> <code>python-requests</code> - <a rel="nofollow" href="http://python-requests.org">http://python-requests.org</a> <br/>
  <code>python-requests-oauthlib</code> - <a rel="nofollow" href="https://github.com/requests/requests-oauthlib">https://github.com/requests/requests-oauthlib</a> </p>
  </dd>
 <dt><code>azure backend</code> (Azure Blob Storage Service) </dt>
@@ -954,7 +954,7 @@ get_refresh_token: True
 <dd> <p> see pydrive backend </p>
  </dd>
 <dt><code>gio backend</code> (Gnome VFS API) </dt>
-<dd> <p> <code>PyGObject</code> - <a rel="nofollow" href="http://live.gnome.org/PyGObject">http://live.gnome.org/PyGObject</a> <br />
+<dd> <p> <code>PyGObject</code> - <a rel="nofollow" href="http://live.gnome.org/PyGObject">http://live.gnome.org/PyGObject</a> <br/>
  <code>D-Bus</code> (dbus)- <a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/dbus">http://www.freedesktop.org/wiki/Software/dbus</a> </p>
  </dd>
 <dt><code>lftp backend</code> (needed for ftp, ftps, fish [over ssh] - also supports sftp, webdav[s]) </dt>
@@ -964,21 +964,21 @@ get_refresh_token: True
 <dd> <p> <code>megatools client</code> - <a rel="nofollow" href="https://github.com/megous/megatools">https://github.com/megous/megatools</a> </p>
  </dd>
 <dt><code>multi backend</code></dt>
-<dd> <p> <code>Multi -- store to more than one backend</code> <br />
+<dd> <p> <code>Multi -- store to more than one backend</code> <br/>
  (also see <code>A NOTE ON MULTI BACKEND</code> ) below. </p>
  </dd>
 <dt><code>ncftp backend</code> (ftp, select via ncftp+<a href="ftp://)">ftp://)</a></dt>
 <dd> <p> <code>NcFTP</code> - <a rel="nofollow" href="http://www.ncftp.com/">http://www.ncftp.com/</a> </p>
  </dd>
 <dt><code>OneDrive backend</code> (Microsoft OneDrive) </dt>
-<dd> <p> <code>python-requests</code> - <a rel="nofollow" href="http://python-requests.org">http://python-requests.org</a> <br />
+<dd> <p> <code>python-requests</code> - <a rel="nofollow" href="http://python-requests.org">http://python-requests.org</a> <br/>
  <code>python-requests-oauthlib</code> - <a rel="nofollow" href="https://github.com/requests/requests-oauthlib">https://github.com/requests/requests-oauthlib</a> </p>
  </dd>
 <dt><code>Par2 Wrapper Backend</code></dt>
 <dd> <p> <code>par2cmdline</code> - <a rel="nofollow" href="http://parchive.sourceforge.net/">http://parchive.sourceforge.net/</a> </p>
  </dd>
 <dt><code>pydrive backend</code></dt>
-<dd> <p> <code>PyDrive -- a wrapper library of google-api-python-client</code> - <a rel="nofollow" href="https://pypi.python.org/pypi/PyDrive">https://pypi.python.org/pypi/PyDrive</a> <br />
+<dd> <p> <code>PyDrive -- a wrapper library of google-api-python-client</code> - <a rel="nofollow" href="https://pypi.python.org/pypi/PyDrive">https://pypi.python.org/pypi/PyDrive</a> <br/>
  (also see <code>A NOTE ON PYDRIVE BACKEND</code> ) below. </p>
  </dd>
 <dt><code>rclone backend</code></dt>
@@ -988,20 +988,20 @@ get_refresh_token: True
 <dd> <p> <code>rsync client binary</code> - <a rel="nofollow" href="http://rsync.samba.org/">http://rsync.samba.org/</a> </p>
  </dd>
 <dt><code>ssh paramiko backend</code> (default) </dt>
-<dd> <p> <code>paramiko</code> (SSH2 for python) - <a rel="nofollow" href="http://pypi.python.org/pypi/paramiko">http://pypi.python.org/pypi/paramiko</a> (downloads); <a rel="nofollow" href="http://github.com/paramiko/paramiko">http://github.com/paramiko/paramiko</a> (project page) <br />
+<dd> <p> <code>paramiko</code> (SSH2 for python) - <a rel="nofollow" href="http://pypi.python.org/pypi/paramiko">http://pypi.python.org/pypi/paramiko</a> (downloads); <a rel="nofollow" href="http://github.com/paramiko/paramiko">http://github.com/paramiko/paramiko</a> (project page) <br/>
  <code>pycrypto</code> (Python Cryptography Toolkit) - <a rel="nofollow" href="http://www.dlitz.net/software/pycrypto/">http://www.dlitz.net/software/pycrypto/</a> </p>
  </dd>
 <dt><code>ssh pexpect backend</code></dt>
-<dd> <p> <code>sftp/scp client binaries</code> OpenSSH - <a rel="nofollow" href="http://www.openssh.com/">http://www.openssh.com/</a> <br />
+<dd> <p> <code>sftp/scp client binaries</code> OpenSSH - <a rel="nofollow" href="http://www.openssh.com/">http://www.openssh.com/</a> <br/>
  <code>Python pexpect module</code> - <a rel="nofollow" href="http://pexpect.sourceforge.net/pexpect.html">http://pexpect.sourceforge.net/pexpect.html</a> </p>
  </dd>
 <dt><code>swift backend (OpenStack Object Storage)</code></dt>
-<dd> <p> <code>Python swiftclient module</code> - <a rel="nofollow" href="https://github.com/openstack/python-swiftclient/">https://github.com/openstack/python-swiftclient/</a> <br />
+<dd> <p> <code>Python swiftclient module</code> - <a rel="nofollow" href="https://github.com/openstack/python-swiftclient/">https://github.com/openstack/python-swiftclient/</a> <br/>
  <code>Python keystoneclient module</code> - <a rel="nofollow" href="https://github.com/openstack/python-keystoneclient/">https://github.com/openstack/python-keystoneclient/</a> </p>
  </dd>
 <dt><code>webdav backend</code></dt>
-<dd> <p> <code>certificate authority database file</code> for ssl certificate verification of HTTPS connections - <a rel="nofollow" href="http://curl.haxx.se/docs/caextract.html">http://curl.haxx.se/docs/caextract.html</a> <br />
- (also see <code>A NOTE ON SSL CERTIFICATE VERIFICATION</code>). <br />
+<dd> <p> <code>certificate authority database file</code> for ssl certificate verification of HTTPS connections - <a rel="nofollow" href="http://curl.haxx.se/docs/caextract.html">http://curl.haxx.se/docs/caextract.html</a> <br/>
+ (also see <code>A NOTE ON SSL CERTIFICATE VERIFICATION</code>). <br/>
  <code>Python kerberos module</code> for kerberos authentication - <a rel="nofollow" href="https://github.com/02strich/pykerberos">https://github.com/02strich/pykerberos</a> </p>
  </dd>
 <dt><code>MediaFire backend</code></dt>

@@ -45,10 +45,10 @@ description: "xpbs – GUI front end to PBS commands"
 <p> This section describes the main parts of the <code>xpbs</code> display. The main window is composed of 5 distinct areas (subwindows) arranged vertically (one on top of another) in the following order:</p>
 <dl>
 <dt>
-</dt><dd> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1) Menu<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2) Hosts<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3) Queues<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4) Jobs<br />
+</dt><dd> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1) Menu<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2) Hosts<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3) Queues<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4) Jobs<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5) Info
 </dd></dl>
 <p> <code>Menu</code>. The Menu area is composed of a row of command buttons that signal some action with a click of the left mouse button. The buttons are:</p>
@@ -174,9 +174,9 @@ description: "xpbs – GUI front end to PBS commands"
 <dd> <code>text</code> &#8211; an editor like widget. This widget is brought into focus with a click of the left mouse button. To manipulate this widget, simply type in the text. Use of arrow keys, backspace/delete key, mouse selection of text for deletion or overwrite, copying and pasting with sole use of mouse buttons are permitted. This widget is usually accompanied by a scrollbar for vertically scanning a long entry.</dd></dl>
 <h2>SUBMITTING JOBS</h2>
 <p> Submitting a PBS job requires only to manipulate the widgets found in the Submit window. The submit dialog box is composed of 4 distinct regions: </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1) Job Script<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2) OPTIONS<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3) OTHER OPTIONS<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1) Job Script<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2) OPTIONS<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3) OTHER OPTIONS<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4) Command Buttons </p>
 <p> The Job Script file region is at the upper left, the OPTIONS region containing various widgets for setting job attributes is scattered all over the dialog box, the OTHER OPTIONS is located just below the Job Script file region, and Command Buttons region is at the bottom. </p>
 <p> The job script region is composed of a header box, the text box, FILE entry box, and a couple of buttons labeled <i> and If you have a script file containing PBS options and executable lines, then type the name of the file on the FILE entry box, and then click on the button. The various widgets in the Submit window will get loaded with values found in the script file. The script file text box will only be loaded with executable lines (non-PBS) found in the script. The job script header box has a entry box that can be modified to specify the PBS directive to look for when parsing a script file for PBS options. If you don&#8217;t have a script file, you can start typing the executable lines of the job in the file text box. </p>
@@ -236,8 +236,8 @@ description: "xpbs – GUI front end to PBS commands"
 <dt>4.</dt>
 <dd> Manipulate the minutes spinbox, located just below the user names matrix, to specify the interval value when output files will be periodically checked.</dd>
 <dt>5.</dt>
-<dd> Specify the location of job output files (whether locally or remotely) by clicking on one of the radio buttons located at the upper right of the dialog box. Returned locally means the output files will be returned back to the host where </i><code>xpbs</code> was run. If the output files are returned to some remote host, then <code>xpbs</code> will execute an<br />
- <code><br />
+<dd> Specify the location of job output files (whether locally or remotely) by clicking on one of the radio buttons located at the upper right of the dialog box. Returned locally means the output files will be returned back to the host where </i><code>xpbs</code> was run. If the output files are returned to some remote host, then <code>xpbs</code> will execute an<br/>
+ <code><br/>
  to test the existence of the files. RSH is whatever you set the remote shell command to in the corresponding entry box. </dd>
 <p> NOTE: Be sure the files are accessible from the host where xpbs</code> was run (i.e. .rhosts appropriately set).</p>
 <dt>6.</dt>
@@ -321,10 +321,10 @@ description: "xpbs – GUI front end to PBS commands"
 <dt>*iconizeInfoView</dt>
 <dd> a boolean value (true or false) indicating whether or not to iconize the INFO region.</dd>
 <dt>*jobResourceList</dt>
-<dd> a curly-braced list of resource names as according to architecture known to xpbs. The format is as follows:<br />
- { &lt;arch-type1&gt; resname1 resname2 &#8230; resnameN }<br />
+<dd> a curly-braced list of resource names as according to architecture known to xpbs. The format is as follows:<br/>
+ { &lt;arch-type1&gt; resname1 resname2 &#8230; resnameN }<br/>
  { &lt;arch-type2&gt; resname1 resname2 &#8230; resnameN } </dd>
-<p>&nbsp;<wbr>. . .<br />
+<p>&nbsp;<wbr>. . .<br/>
  { &lt;arch-typeN&gt; resname1 resname2 &#8230; resnameN }</dl>
 <h2>XPBS AND PBS COMMANDS</h2>
 <p> <code>xpbs</code> calls PBS commands as follows:</p>

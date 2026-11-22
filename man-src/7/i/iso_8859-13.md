@@ -97,7 +97,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>Dec</td>
 <td>Hex</td>
 <td ALIGN=center>Char</td>
-<td><font SIZE="-1">Description</font>
+<td>Description
 </td>
 </tr>
 <tr VALIGN=top>
@@ -110,7 +110,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>160</td>
 <td>A0</td>
 <td ALIGN=center> </td>
-<td><font SIZE="-1">NO-BREAK SPACE</font>
+<td>NO-BREAK SPACE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -118,7 +118,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>161</td>
 <td>A1</td>
 <td ALIGN=center>”</td>
-<td><font SIZE="-1">RIGHT DOUBLE QUOTATION MARK</font>
+<td>RIGHT DOUBLE QUOTATION MARK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -126,7 +126,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>162</td>
 <td>A2</td>
 <td ALIGN=center>¢</td>
-<td><font SIZE="-1">CENT SIGN</font>
+<td>CENT SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -134,7 +134,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>163</td>
 <td>A3</td>
 <td ALIGN=center>£</td>
-<td><font SIZE="-1">POUND SIGN</font>
+<td>POUND SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -142,7 +142,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>164</td>
 <td>A4</td>
 <td ALIGN=center>¤</td>
-<td><font SIZE="-1">CURRENCY SIGN</font>
+<td>CURRENCY SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -150,7 +150,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>165</td>
 <td>A5</td>
 <td ALIGN=center>„</td>
-<td><font SIZE="-1">DOUBLE LOW-9 QUOTATION MARK</font>
+<td>DOUBLE LOW-9 QUOTATION MARK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -158,7 +158,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>166</td>
 <td>A6</td>
 <td ALIGN=center>¦</td>
-<td><font SIZE="-1">BROKEN BAR</font>
+<td>BROKEN BAR
 </td>
 </tr>
 <tr VALIGN=top>
@@ -166,7 +166,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>167</td>
 <td>A7</td>
 <td ALIGN=center>§</td>
-<td><font SIZE="-1">SECTION SIGN</font>
+<td>SECTION SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -174,7 +174,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>168</td>
 <td>A8</td>
 <td ALIGN=center>Ø</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER O WITH STROKE</font>
+<td>LATIN CAPITAL LETTER O WITH STROKE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -182,7 +182,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>169</td>
 <td>A9</td>
 <td ALIGN=center>©</td>
-<td><font SIZE="-1">COPYRIGHT SIGN</font>
+<td>COPYRIGHT SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -190,7 +190,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>170</td>
 <td>AA</td>
 <td ALIGN=center>Ŗ</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER R WITH CEDILLA</font>
+<td>LATIN CAPITAL LETTER R WITH CEDILLA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -198,7 +198,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>171</td>
 <td>AB</td>
 <td ALIGN=center>«</td>
-<td><font SIZE="-1">LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</font>
+<td>LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -206,7 +206,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>172</td>
 <td>AC</td>
 <td ALIGN=center>¬</td>
-<td><font SIZE="-1">NOT SIGN</font>
+<td>NOT SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -214,7 +214,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>173</td>
 <td>AD</td>
 <td ALIGN=center>­</td>
-<td><font SIZE="-1">SOFT HYPHEN</font>
+<td>SOFT HYPHEN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -222,7 +222,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>174</td>
 <td>AE</td>
 <td ALIGN=center>®</td>
-<td><font SIZE="-1">REGISTERED SIGN</font>
+<td>REGISTERED SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -230,7 +230,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>175</td>
 <td>AF</td>
 <td ALIGN=center>Æ</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER AE</font>
+<td>LATIN CAPITAL LETTER AE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -238,7 +238,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>176</td>
 <td>B0</td>
 <td ALIGN=center>°</td>
-<td><font SIZE="-1">DEGREE SIGN</font>
+<td>DEGREE SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -246,7 +246,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>177</td>
 <td>B1</td>
 <td ALIGN=center>±</td>
-<td><font SIZE="-1">PLUS-MINUS SIGN</font>
+<td>PLUS-MINUS SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -254,7 +254,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>178</td>
 <td>B2</td>
 <td ALIGN=center>²</td>
-<td><font SIZE="-1">SUPERSCRIPT TWO</font>
+<td>SUPERSCRIPT TWO
 </td>
 </tr>
 <tr VALIGN=top>
@@ -262,7 +262,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>179</td>
 <td>B3</td>
 <td ALIGN=center>³</td>
-<td><font SIZE="-1">SUPERSCRIPT THREE</font>
+<td>SUPERSCRIPT THREE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -270,7 +270,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>180</td>
 <td>B4</td>
 <td ALIGN=center>“</td>
-<td><font SIZE="-1">LEFT DOUBLE QUOTATION MARK</font>
+<td>LEFT DOUBLE QUOTATION MARK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -278,7 +278,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>181</td>
 <td>B5</td>
 <td ALIGN=center>µ</td>
-<td><font SIZE="-1">MICRO SIGN</font>
+<td>MICRO SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -286,7 +286,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>182</td>
 <td>B6</td>
 <td ALIGN=center>¶</td>
-<td><font SIZE="-1">PILCROW SIGN</font>
+<td>PILCROW SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -294,7 +294,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>183</td>
 <td>B7</td>
 <td ALIGN=center>·</td>
-<td><font SIZE="-1">MIDDLE DOT</font>
+<td>MIDDLE DOT
 </td>
 </tr>
 <tr VALIGN=top>
@@ -302,7 +302,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>184</td>
 <td>B8</td>
 <td ALIGN=center>ø</td>
-<td><font SIZE="-1">LATIN SMALL LETTER O WITH STROKE</font>
+<td>LATIN SMALL LETTER O WITH STROKE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -310,7 +310,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>185</td>
 <td>B9</td>
 <td ALIGN=center>¹</td>
-<td><font SIZE="-1">SUPERSCRIPT ONE</font>
+<td>SUPERSCRIPT ONE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -318,7 +318,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>186</td>
 <td>BA</td>
 <td ALIGN=center>ŗ</td>
-<td><font SIZE="-1">LATIN SMALL LETTER R WITH CEDILLA</font>
+<td>LATIN SMALL LETTER R WITH CEDILLA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -326,7 +326,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>187</td>
 <td>BB</td>
 <td ALIGN=center>»</td>
-<td><font SIZE="-1">RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</font>
+<td>RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -334,7 +334,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>188</td>
 <td>BC</td>
 <td ALIGN=center>¼</td>
-<td><font SIZE="-1">VULGAR FRACTION ONE QUARTER</font>
+<td>VULGAR FRACTION ONE QUARTER
 </td>
 </tr>
 <tr VALIGN=top>
@@ -342,7 +342,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>189</td>
 <td>BD</td>
 <td ALIGN=center>½</td>
-<td><font SIZE="-1">VULGAR FRACTION ONE HALF</font>
+<td>VULGAR FRACTION ONE HALF
 </td>
 </tr>
 <tr VALIGN=top>
@@ -350,7 +350,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>190</td>
 <td>BE</td>
 <td ALIGN=center>¾</td>
-<td><font SIZE="-1">VULGAR FRACTION THREE QUARTERS</font>
+<td>VULGAR FRACTION THREE QUARTERS
 </td>
 </tr>
 <tr VALIGN=top>
@@ -358,7 +358,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>191</td>
 <td>BF</td>
 <td ALIGN=center>æ</td>
-<td><font SIZE="-1">LATIN SMALL LETTER AE</font>
+<td>LATIN SMALL LETTER AE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -366,7 +366,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>192</td>
 <td>C0</td>
 <td ALIGN=center>Ą</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER A WITH OGONEK</font>
+<td>LATIN CAPITAL LETTER A WITH OGONEK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -374,7 +374,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>193</td>
 <td>C1</td>
 <td ALIGN=center>Į</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER I WITH OGONEK</font>
+<td>LATIN CAPITAL LETTER I WITH OGONEK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -382,7 +382,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>194</td>
 <td>C2</td>
 <td ALIGN=center>Ā</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER A WITH MACRON</font>
+<td>LATIN CAPITAL LETTER A WITH MACRON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -390,7 +390,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>195</td>
 <td>C3</td>
 <td ALIGN=center>Ć</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER C WITH ACUTE</font>
+<td>LATIN CAPITAL LETTER C WITH ACUTE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -398,7 +398,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>196</td>
 <td>C4</td>
 <td ALIGN=center>Ä</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER A WITH DIAERESIS</font>
+<td>LATIN CAPITAL LETTER A WITH DIAERESIS
 </td>
 </tr>
 <tr VALIGN=top>
@@ -406,7 +406,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>197</td>
 <td>C5</td>
 <td ALIGN=center>Å</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER A WITH RING ABOVE</font>
+<td>LATIN CAPITAL LETTER A WITH RING ABOVE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -414,7 +414,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>198</td>
 <td>C6</td>
 <td ALIGN=center>Ę</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER E WITH OGONEK</font>
+<td>LATIN CAPITAL LETTER E WITH OGONEK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -422,7 +422,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>199</td>
 <td>C7</td>
 <td ALIGN=center>Ē</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER E WITH MACRON</font>
+<td>LATIN CAPITAL LETTER E WITH MACRON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -430,7 +430,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>200</td>
 <td>C8</td>
 <td ALIGN=center>Č</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER C WITH CARON</font>
+<td>LATIN CAPITAL LETTER C WITH CARON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -438,7 +438,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>201</td>
 <td>C9</td>
 <td ALIGN=center>É</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER E WITH ACUTE</font>
+<td>LATIN CAPITAL LETTER E WITH ACUTE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -446,7 +446,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>202</td>
 <td>CA</td>
 <td ALIGN=center>Ź</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER Z WITH ACUTE</font>
+<td>LATIN CAPITAL LETTER Z WITH ACUTE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -454,7 +454,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>203</td>
 <td>CB</td>
 <td ALIGN=center>Ė</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER E WITH DOT ABOVE</font>
+<td>LATIN CAPITAL LETTER E WITH DOT ABOVE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -462,7 +462,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>204</td>
 <td>CC</td>
 <td ALIGN=center>Ģ</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER G WITH CEDILLA</font>
+<td>LATIN CAPITAL LETTER G WITH CEDILLA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -470,7 +470,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>205</td>
 <td>CD</td>
 <td ALIGN=center>Ķ</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER K WITH CEDILLA</font>
+<td>LATIN CAPITAL LETTER K WITH CEDILLA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -478,7 +478,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>206</td>
 <td>CE</td>
 <td ALIGN=center>Ī</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER I WITH MACRON</font>
+<td>LATIN CAPITAL LETTER I WITH MACRON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -486,7 +486,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>207</td>
 <td>CF</td>
 <td ALIGN=center>Ļ</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER L WITH CEDILLA</font>
+<td>LATIN CAPITAL LETTER L WITH CEDILLA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -494,7 +494,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>208</td>
 <td>D0</td>
 <td ALIGN=center>Š</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER S WITH CARON</font>
+<td>LATIN CAPITAL LETTER S WITH CARON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -502,7 +502,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>209</td>
 <td>D1</td>
 <td ALIGN=center>Ń</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER N WITH ACUTE</font>
+<td>LATIN CAPITAL LETTER N WITH ACUTE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -510,7 +510,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>210</td>
 <td>D2</td>
 <td ALIGN=center>Ņ</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER N WITH CEDILLA</font>
+<td>LATIN CAPITAL LETTER N WITH CEDILLA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -518,7 +518,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>211</td>
 <td>D3</td>
 <td ALIGN=center>Ó</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER O WITH ACUTE</font>
+<td>LATIN CAPITAL LETTER O WITH ACUTE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -526,7 +526,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>212</td>
 <td>D4</td>
 <td ALIGN=center>Ō</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER O WITH MACRON</font>
+<td>LATIN CAPITAL LETTER O WITH MACRON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -534,7 +534,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>213</td>
 <td>D5</td>
 <td ALIGN=center>Õ</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER O WITH TILDE</font>
+<td>LATIN CAPITAL LETTER O WITH TILDE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -542,7 +542,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>214</td>
 <td>D6</td>
 <td ALIGN=center>Ö</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER O WITH DIAERESIS</font>
+<td>LATIN CAPITAL LETTER O WITH DIAERESIS
 </td>
 </tr>
 <tr VALIGN=top>
@@ -550,7 +550,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>215</td>
 <td>D7</td>
 <td ALIGN=center>×</td>
-<td><font SIZE="-1">MULTIPLICATION SIGN</font>
+<td>MULTIPLICATION SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -558,7 +558,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>216</td>
 <td>D8</td>
 <td ALIGN=center>Ų</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER U WITH OGONEK</font>
+<td>LATIN CAPITAL LETTER U WITH OGONEK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -566,7 +566,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>217</td>
 <td>D9</td>
 <td ALIGN=center>Ł</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER L WITH STROKE</font>
+<td>LATIN CAPITAL LETTER L WITH STROKE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -574,7 +574,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>218</td>
 <td>DA</td>
 <td ALIGN=center>Ś</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER S WITH ACUTE</font>
+<td>LATIN CAPITAL LETTER S WITH ACUTE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -582,7 +582,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>219</td>
 <td>DB</td>
 <td ALIGN=center>Ū</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER U WITH MACRON</font>
+<td>LATIN CAPITAL LETTER U WITH MACRON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -590,7 +590,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>220</td>
 <td>DC</td>
 <td ALIGN=center>Ü</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER U WITH DIAERESIS</font>
+<td>LATIN CAPITAL LETTER U WITH DIAERESIS
 </td>
 </tr>
 <tr VALIGN=top>
@@ -598,7 +598,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>221</td>
 <td>DD</td>
 <td ALIGN=center>Ż</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER Z WITH DOT ABOVE</font>
+<td>LATIN CAPITAL LETTER Z WITH DOT ABOVE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -606,7 +606,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>222</td>
 <td>DE</td>
 <td ALIGN=center>Ž</td>
-<td><font SIZE="-1">LATIN CAPITAL LETTER Z WITH CARON</font>
+<td>LATIN CAPITAL LETTER Z WITH CARON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -614,7 +614,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>223</td>
 <td>DF</td>
 <td ALIGN=center>ß</td>
-<td><font SIZE="-1">LATIN SMALL LETTER SHARP S</font>
+<td>LATIN SMALL LETTER SHARP S
 </td>
 </tr>
 <tr VALIGN=top>
@@ -622,7 +622,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>224</td>
 <td>E0</td>
 <td ALIGN=center>ą</td>
-<td><font SIZE="-1">LATIN SMALL LETTER A WITH OGONEK</font>
+<td>LATIN SMALL LETTER A WITH OGONEK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -630,7 +630,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>225</td>
 <td>E1</td>
 <td ALIGN=center>į</td>
-<td><font SIZE="-1">LATIN SMALL LETTER I WITH OGONEK</font>
+<td>LATIN SMALL LETTER I WITH OGONEK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -638,7 +638,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>226</td>
 <td>E2</td>
 <td ALIGN=center>ā</td>
-<td><font SIZE="-1">LATIN SMALL LETTER A WITH MACRON</font>
+<td>LATIN SMALL LETTER A WITH MACRON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -646,7 +646,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>227</td>
 <td>E3</td>
 <td ALIGN=center>ć</td>
-<td><font SIZE="-1">LATIN SMALL LETTER C WITH ACUTE</font>
+<td>LATIN SMALL LETTER C WITH ACUTE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -654,7 +654,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>228</td>
 <td>E4</td>
 <td ALIGN=center>ä</td>
-<td><font SIZE="-1">LATIN SMALL LETTER A WITH DIAERESIS</font>
+<td>LATIN SMALL LETTER A WITH DIAERESIS
 </td>
 </tr>
 <tr VALIGN=top>
@@ -662,7 +662,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>229</td>
 <td>E5</td>
 <td ALIGN=center>å</td>
-<td><font SIZE="-1">LATIN SMALL LETTER A WITH RING ABOVE</font>
+<td>LATIN SMALL LETTER A WITH RING ABOVE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -670,7 +670,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>230</td>
 <td>E6</td>
 <td ALIGN=center>ę</td>
-<td><font SIZE="-1">LATIN SMALL LETTER E WITH OGONEK</font>
+<td>LATIN SMALL LETTER E WITH OGONEK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -678,7 +678,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>231</td>
 <td>E7</td>
 <td ALIGN=center>ē</td>
-<td><font SIZE="-1">LATIN SMALL LETTER E WITH MACRON</font>
+<td>LATIN SMALL LETTER E WITH MACRON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -686,7 +686,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>232</td>
 <td>E8</td>
 <td ALIGN=center>č</td>
-<td><font SIZE="-1">LATIN SMALL LETTER C WITH CARON</font>
+<td>LATIN SMALL LETTER C WITH CARON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -694,7 +694,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>233</td>
 <td>E9</td>
 <td ALIGN=center>é</td>
-<td><font SIZE="-1">LATIN SMALL LETTER E WITH ACUTE</font>
+<td>LATIN SMALL LETTER E WITH ACUTE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -702,7 +702,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>234</td>
 <td>EA</td>
 <td ALIGN=center>ź</td>
-<td><font SIZE="-1">LATIN SMALL LETTER Z WITH ACUTE</font>
+<td>LATIN SMALL LETTER Z WITH ACUTE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -710,7 +710,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>235</td>
 <td>EB</td>
 <td ALIGN=center>ė</td>
-<td><font SIZE="-1">LATIN SMALL LETTER E WITH DOT ABOVE</font>
+<td>LATIN SMALL LETTER E WITH DOT ABOVE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -718,7 +718,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>236</td>
 <td>EC</td>
 <td ALIGN=center>ģ</td>
-<td><font SIZE="-1">LATIN SMALL LETTER G WITH CEDILLA</font>
+<td>LATIN SMALL LETTER G WITH CEDILLA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -726,7 +726,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>237</td>
 <td>ED</td>
 <td ALIGN=center>ķ</td>
-<td><font SIZE="-1">LATIN SMALL LETTER K WITH CEDILLA</font>
+<td>LATIN SMALL LETTER K WITH CEDILLA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -734,7 +734,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>238</td>
 <td>EE</td>
 <td ALIGN=center>ī</td>
-<td><font SIZE="-1">LATIN SMALL LETTER I WITH MACRON</font>
+<td>LATIN SMALL LETTER I WITH MACRON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -742,7 +742,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>239</td>
 <td>EF</td>
 <td ALIGN=center>ļ</td>
-<td><font SIZE="-1">LATIN SMALL LETTER L WITH CEDILLA</font>
+<td>LATIN SMALL LETTER L WITH CEDILLA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -750,7 +750,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>240</td>
 <td>F0</td>
 <td ALIGN=center>š</td>
-<td><font SIZE="-1">LATIN SMALL LETTER S WITH CARON</font>
+<td>LATIN SMALL LETTER S WITH CARON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -758,7 +758,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>241</td>
 <td>F1</td>
 <td ALIGN=center>ń</td>
-<td><font SIZE="-1">LATIN SMALL LETTER N WITH ACUTE</font>
+<td>LATIN SMALL LETTER N WITH ACUTE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -766,7 +766,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>242</td>
 <td>F2</td>
 <td ALIGN=center>ņ</td>
-<td><font SIZE="-1">LATIN SMALL LETTER N WITH CEDILLA</font>
+<td>LATIN SMALL LETTER N WITH CEDILLA
 </td>
 </tr>
 <tr VALIGN=top>
@@ -774,7 +774,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>243</td>
 <td>F3</td>
 <td ALIGN=center>ó</td>
-<td><font SIZE="-1">LATIN SMALL LETTER O WITH ACUTE</font>
+<td>LATIN SMALL LETTER O WITH ACUTE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -782,7 +782,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>244</td>
 <td>F4</td>
 <td ALIGN=center>ō</td>
-<td><font SIZE="-1">LATIN SMALL LETTER O WITH MACRON</font>
+<td>LATIN SMALL LETTER O WITH MACRON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -790,7 +790,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>245</td>
 <td>F5</td>
 <td ALIGN=center>õ</td>
-<td><font SIZE="-1">LATIN SMALL LETTER O WITH TILDE</font>
+<td>LATIN SMALL LETTER O WITH TILDE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -798,7 +798,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>246</td>
 <td>F6</td>
 <td ALIGN=center>ö</td>
-<td><font SIZE="-1">LATIN SMALL LETTER O WITH DIAERESIS</font>
+<td>LATIN SMALL LETTER O WITH DIAERESIS
 </td>
 </tr>
 <tr VALIGN=top>
@@ -806,7 +806,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>247</td>
 <td>F7</td>
 <td ALIGN=center>÷</td>
-<td><font SIZE="-1">DIVISION SIGN</font>
+<td>DIVISION SIGN
 </td>
 </tr>
 <tr VALIGN=top>
@@ -814,7 +814,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>248</td>
 <td>F8</td>
 <td ALIGN=center>ų</td>
-<td><font SIZE="-1">LATIN SMALL LETTER U WITH OGONEK</font>
+<td>LATIN SMALL LETTER U WITH OGONEK
 </td>
 </tr>
 <tr VALIGN=top>
@@ -822,7 +822,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>249</td>
 <td>F9</td>
 <td ALIGN=center>ł</td>
-<td><font SIZE="-1">LATIN SMALL LETTER L WITH STROKE</font>
+<td>LATIN SMALL LETTER L WITH STROKE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -830,7 +830,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>250</td>
 <td>FA</td>
 <td ALIGN=center>ś</td>
-<td><font SIZE="-1">LATIN SMALL LETTER S WITH ACUTE</font>
+<td>LATIN SMALL LETTER S WITH ACUTE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -838,7 +838,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>251</td>
 <td>FB</td>
 <td ALIGN=center>ū</td>
-<td><font SIZE="-1">LATIN SMALL LETTER U WITH MACRON</font>
+<td>LATIN SMALL LETTER U WITH MACRON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -846,7 +846,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>252</td>
 <td>FC</td>
 <td ALIGN=center>ü</td>
-<td><font SIZE="-1">LATIN SMALL LETTER U WITH DIAERESIS</font>
+<td>LATIN SMALL LETTER U WITH DIAERESIS
 </td>
 </tr>
 <tr VALIGN=top>
@@ -854,7 +854,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>253</td>
 <td>FD</td>
 <td ALIGN=center>ż</td>
-<td><font SIZE="-1">LATIN SMALL LETTER Z WITH DOT ABOVE</font>
+<td>LATIN SMALL LETTER Z WITH DOT ABOVE
 </td>
 </tr>
 <tr VALIGN=top>
@@ -862,7 +862,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>254</td>
 <td>FE</td>
 <td ALIGN=center>ž</td>
-<td><font SIZE="-1">LATIN SMALL LETTER Z WITH CARON</font>
+<td>LATIN SMALL LETTER Z WITH CARON
 </td>
 </tr>
 <tr VALIGN=top>
@@ -870,7 +870,7 @@ description: "iso_8859-13 – ISO 8859-13 character set encoded in octal, decima
 <td>255</td>
 <td>FF</td>
 <td ALIGN=center>’</td>
-<td><font SIZE="-1">RIGHT SINGLE QUOTATION MARK</font>
+<td>RIGHT SINGLE QUOTATION MARK
 </td>
 </tr>
 </table>

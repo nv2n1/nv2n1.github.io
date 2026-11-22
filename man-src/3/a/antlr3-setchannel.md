@@ -20,8 +20,8 @@ description: "src/antlr3commontoken.c –"
 <p> static <code>ANTLR3_UINT32</code> <code>getLine</code> (<code>pANTLR3_COMMON_TOKEN</code> token) </p>
 <p> static <code>ANTLR3_MARKER</code> <code>getStartIndex</code> (<code>pANTLR3_COMMON_TOKEN</code> token) </p>
 <p> static <code>ANTLR3_MARKER</code> <code>getStopIndex</code> (<code>pANTLR3_COMMON_TOKEN</code> token) </p>
-<p> static <code>pANTLR3_STRING</code> <code>getText</code> (<code>pANTLR3_COMMON_TOKEN</code> token)<br />
- <i>Contains the default implementation of the common token used within java. </i><br />
+<p> static <code>pANTLR3_STRING</code> <code>getText</code> (<code>pANTLR3_COMMON_TOKEN</code> token)<br/>
+ <i>Contains the default implementation of the common token used within java. </i><br/>
  static <code>ANTLR3_MARKER</code> <code>getTokenIndex</code> (<code>pANTLR3_COMMON_TOKEN</code> token) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>getType</code> (<code>pANTLR3_COMMON_TOKEN</code> token) </p>
 <p> static void <code>newPool</code> (<code>pANTLR3_TOKEN_FACTORY</code> factory) </p>
@@ -33,8 +33,8 @@ description: "src/antlr3commontoken.c –"
 <p> static void <code>setLine</code> (<code>pANTLR3_COMMON_TOKEN</code> token, <code>ANTLR3_UINT32</code> line) </p>
 <p> static void <code>setStartIndex</code> (<code>pANTLR3_COMMON_TOKEN</code> token, <code>ANTLR3_MARKER</code> index) </p>
 <p> static void <code>setStopIndex</code> (<code>pANTLR3_COMMON_TOKEN</code> token, <code>ANTLR3_MARKER</code> index) </p>
-<p> static void <code>setText</code> (<code>pANTLR3_COMMON_TOKEN</code> token, <code>pANTLR3_STRING</code> text)<br />
- <i>Install the supplied text string as teh text for the token. </i><br />
+<p> static void <code>setText</code> (<code>pANTLR3_COMMON_TOKEN</code> token, <code>pANTLR3_STRING</code> text)<br/>
+ <i>Install the supplied text string as teh text for the token. </i><br/>
  static void <code>setText8</code> (<code>pANTLR3_COMMON_TOKEN</code> token, <code>pANTLR3_UINT8</code> text) </p>
 <p> static void <code>setTokenIndex</code> (<code>pANTLR3_COMMON_TOKEN</code> token, <code>ANTLR3_MARKER</code>) </p>
 <p> static void <code>setType</code> (<code>pANTLR3_COMMON_TOKEN</code> token, <code>ANTLR3_UINT32</code> type) </p>

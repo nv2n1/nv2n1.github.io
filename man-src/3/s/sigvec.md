@@ -16,19 +16,19 @@ description: "sigvec, sigblock, sigsetmask, siggetmask, sigmask – BSD signal A
 <p> <code>int sigsetmask(int </code><i>mask</i><code>);</code> </p>
 <p> <code>int siggetmask(void);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> All functions shown above:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> All functions shown above:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
 <h2>Description</h2>
 <p> These functions are provided in glibc as a compatibility interface for programs that make use of the historical BSD signal API. This API is obsolete: new applications should use the POSIX signal API (<code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2), etc.). </p>
 <p> The <code>sigvec</code>() function sets and/or gets the disposition of the signal <i>sig</i> (like the POSIX <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)). If <i>vec</i> is not NULL, it points to a <i>sigvec</i> structure that defines the new disposition for <i>sig</i>. If <i>ovec</i> is not NULL, it points to a <i>sigvec</i> structure that is used to return the previous disposition of <i>sig</i>. To obtain the current disposition of <i>sig</i> without changing it, specify NULL for <i>vec</i>, and a non-null pointer for <i>ovec</i>. </p>
 <p> The dispositions for <code>SIGKILL</code> and <code>SIGSTOP</code> cannot be changed. </p>
 <p> The <i>sigvec</i> structure has the following form: </p>
-<p> struct sigvec {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;(*sv_handler)(int);&nbsp;/*&nbsp;Signal disposition&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sv_mask;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Signals to be blocked in handler&nbsp;*/<br />
+<p> struct sigvec {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;(*sv_handler)(int);&nbsp;/*&nbsp;Signal disposition&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sv_mask;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Signals to be blocked in handler&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sv_flags;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Flags&nbsp;*/ }; </p>
 <p> The <i>sv_handler</i> field specifies the disposition of the signal, and is either: the address of a signal handler function; <code>SIG_DFL</code>, meaning the default disposition applies for the signal; or <code>SIG_IGN</code>, meaning that the signal is ignored. </p>
 <p> If <i>sv_handler</i> specifies the address of a signal handler, then <i>sv_mask</i> specifies a mask of signals that are to be blocked while the handler is executing. In addition, the signal for which the handler is invoked is also blocked. Attempts to block <code>SIGKILL</code> or <code>SIGSTOP</code> are silently ignored. </p>
@@ -41,8 +41,8 @@ description: "sigvec, sigblock, sigsetmask, siggetmask, sigmask – BSD signal A
 <dt><code>SV_ONSTACK</code></dt>
 <dd> Handle the signal on the alternate signal stack (historically established under BSD using the obsolete <code>sigstack</code>() function; the POSIX replacement is <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)).</dd></dl>
 <p> The <code>sigmask</code>() macro constructs and returns a &quot;signal mask&quot; for <i>signum</i>. For example, we can initialize the <i>vec.sv_mask</i> field given to <code>sigvec</code>() using code such as the following: </p>
-<p> vec.sv_mask = sigmask(SIGQUIT) | sigmask(SIGABRT);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Block SIGQUIT and SIGABRT during<br />
+<p> vec.sv_mask = sigmask(SIGQUIT) | sigmask(SIGABRT);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Block SIGQUIT and SIGABRT during<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handler execution&nbsp;*/ </p>
 <p> The <code>sigblock</code>() function adds the signals in <i>mask</i> to the process&#8217;s signal mask (like POSIX <i>sigprocmask(SIG_BLOCK)</i>), and returns the process&#8217;s previous signal mask. Attempts to block <code>SIGKILL</code> or <code>SIGSTOP</code> are silently ignored. </p>
 <p> The <code>sigsetmask</code>() function sets the process&#8217;s signal mask to the value given in <i>mask</i> (like POSIX <i>sigprocmask(SIG_SETMASK)</i>), and returns the process&#8217;s previous signal mask. </p>

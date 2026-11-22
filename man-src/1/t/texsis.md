@@ -24,7 +24,7 @@ description: "TeXsis – TeX macros for Physicists"
 <h2>DIAGNOSTICS</h2>
 <p> TeXsis informational messages are written to the terminal and the log file begining with `% &#8216;. Warning and error messages begin with `&gt; &#8216;. </p>
 <h2>FILES</h2>
-<p> The source files for TeXsis and the TeXsis manual are usually installed in the same place the rest of TeX is kept. Although this may vary from intallation to installation, it will generally include a root directory named <i>texmf. </i> Common examples are <i>/usr/share/texmf/,</i> <i>/usr/lib/teTeX/texmf,</i> or <i>/usr/local/lib/texmf.</i> Filenames here are relative to this <i>texmf</i> root directory. <br />
+<p> The source files for TeXsis and the TeXsis manual are usually installed in the same place the rest of TeX is kept. Although this may vary from intallation to installation, it will generally include a root directory named <i>texmf. </i> Common examples are <i>/usr/share/texmf/,</i> <i>/usr/lib/teTeX/texmf,</i> or <i>/usr/local/lib/texmf.</i> Filenames here are relative to this <i>texmf</i> root directory. <br/>
  </p>
 <dl>
 <dt><i>web2c/texsis.fmt</i></dt>
@@ -54,23 +54,23 @@ description: "TeXsis – TeX macros for Physicists"
 <h2>BUGS</h2>
 <p> Please report bugs (or suggestions for improvements) to texsis [at] feynman.physics.lsa.umich.edu. </p>
 <p> Patchs to correct small problems or make small improvements are available at </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<a href="ftp://feynman.physics.lsa.umich.edu/texsis/">ftp://feynman.physics.lsa.umich.edu/texsis/</a> </p>
 <p> in the file <i>TXSpatch.tex</i> (If that file doesn&#8217;t exist then there are no current patches.) </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-initex/">initex</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-virtex/">virtex</a></code>(1) <br />
- Donald E. Knuth, <i>The TeXbook;</i> <br />
+<p> <code><a href="/docs/linux/man/1-initex/">initex</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-virtex/">virtex</a></code>(1) <br/>
+ Donald E. Knuth, <i>The TeXbook;</i> <br/>
  Michael Doob, <i>A Gentle Introduction to TeX.</i> </p>
 <h2>AUTHORS</h2>
-<p> Eric Myers &lt;myers [at] umich.edu&gt; <br />
- Department of Physics <br />
- University of Michigan <br />
+<p> Eric Myers &lt;myers [at] umich.edu&gt; <br/>
+ Department of Physics <br/>
+ University of Michigan <br/>
  Ann Arbor, Michigan USA </p>
 <p> and </p>
-<p> Frank E. Paige &lt;paige [at] bnl.gov&gt; <br />
- Physics Department <br />
- Brookhaven National Laboratory <br />
+<p> Frank E. Paige &lt;paige [at] bnl.gov&gt; <br/>
+ Physics Department <br/>
+ Brookhaven National Laboratory <br/>
  Upton, New York 11973 USA </p>
 <h2>VERSION</h2>
-<p> Revision Number: 2.18/beta3 <br />
+<p> Revision Number: 2.18/beta3 <br/>
  Release Date: 16 May 2000 </p>

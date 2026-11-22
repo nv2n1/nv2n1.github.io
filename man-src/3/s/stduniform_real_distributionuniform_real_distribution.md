@@ -17,14 +17,14 @@ description: "std::uniform_real_distribution<RealType>::uniform_real_distributio
 (2)(since C++ 11)</code></pre>
 <p>Constructs a new distribution object. <code>(2)</code> uses a and b as the distribution parameters, <code>(3)</code> uses params as the distribution parameters. </p>
 <h2>Parameters</h2>
-<p>a &#8211; the a distribution parameter (minimum value)<br />
-b &#8211; the b distribution parameter (maximum value)<br />
+<p>a &#8211; the a distribution parameter (minimum value)<br/>
+b &#8211; the b distribution parameter (maximum value)<br/>
 params &#8211; the distribution parameter set</p>
 <h2>Notes</h2>
-<p>Requires that a ≤ b and b-a ≤ std::numeric_limits&lt;RealType&gt;::max()<br />
-If a == b, subsequent calls to the operator() overload that does not accept a param_type object will cause undefined behavior.<br />
-To create a distribution over the closed interval [a,b], std::nextafter(b, std::numeric_limits&lt;RealType&gt;::max()) may be used as the second parameter.<br />
-Defect reports<br />
-The following behavior-changing defect reports were applied retroactively to previously published C++ standards.<br />
-DR Applied to Behavior as published Correct behavior<br />
+<p>Requires that a ≤ b and b-a ≤ std::numeric_limits&lt;RealType&gt;::max()<br/>
+If a == b, subsequent calls to the operator() overload that does not accept a param_type object will cause undefined behavior.<br/>
+To create a distribution over the closed interval [a,b], std::nextafter(b, std::numeric_limits&lt;RealType&gt;::max()) may be used as the second parameter.<br/>
+Defect reports<br/>
+The following behavior-changing defect reports were applied retroactively to previously published C++ standards.<br/>
+DR Applied to Behavior as published Correct behavior<br/>
 P0935R0 C++11 default constructor was explicit made implicit </p>

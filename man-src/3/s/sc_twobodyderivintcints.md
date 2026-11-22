@@ -15,10 +15,10 @@ description: "sc::TwoBodyDerivIntCints –"
 <p> Inherits <code>sc::TwoBodyDerivInt</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>TwoBodyDerivIntCints</code> (<code>Integral</code> *integral, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b2, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b3, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b4, size_t storage, tbinteval int2etype) </p>
-<p> int <code>log2_shell_bound</code> (int, int, int, int)<br />
- <i>Return log base 2 of the maximum magnitude of any integral in a shell block. </i><br />
- void <code>compute_shell</code> (int, int, int, int, <code>DerivCenters</code> &amp;)<br />
- <i>Given for shell indices, this will cause the integral buffer to be filled in. </i><br />
+<p> int <code>log2_shell_bound</code> (int, int, int, int)<br/>
+ <i>Return log base 2 of the maximum magnitude of any integral in a shell block. </i><br/>
+ void <code>compute_shell</code> (int, int, int, int, <code>DerivCenters</code> &amp;)<br/>
+ <i>Given for shell indices, this will cause the integral buffer to be filled in. </i><br/>
  size_t <code>used_storage</code> () const</p>
 <h3>Protected Attributes</h3>
 <p><code>Ref</code>&lt; <code>Int2eCints</code> &gt; <code>int2ecints_</code></p>

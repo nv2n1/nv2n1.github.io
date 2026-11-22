@@ -12,10 +12,10 @@ description: "QuantLib::OneFactorModel::ShortRateTree – Recombining trinomial 
 <p>#include &lt;ql/models/shortrate/onefactormodel.hpp&gt; </p>
 <p> Inherits <code>TreeLattice1D&lt; OneFactorModel::ShortRateTree &gt;</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>ShortRateTree</code> (const boost::shared_ptr&lt; <code>TrinomialTree</code> &gt; &amp;tree, const boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; &amp;dynamics, const <code>TimeGrid</code> &amp;timeGrid)<br />
- <i>Plain tree build-up from short-rate dynamics. </i><br />
- <code>ShortRateTree</code> (const boost::shared_ptr&lt; <code>TrinomialTree</code> &gt; &amp;tree, const boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; &amp;dynamics, const boost::shared_ptr&lt; TermStructureFittingParameter::NumericalImpl &gt; &amp;phi, const <code>TimeGrid</code> &amp;timeGrid)<br />
- <i></i><code>Tree</code> build-up + numerical fitting to term-structure.<br />
+<p><code>ShortRateTree</code> (const boost::shared_ptr&lt; <code>TrinomialTree</code> &gt; &amp;tree, const boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; &amp;dynamics, const <code>TimeGrid</code> &amp;timeGrid)<br/>
+ <i>Plain tree build-up from short-rate dynamics. </i><br/>
+ <code>ShortRateTree</code> (const boost::shared_ptr&lt; <code>TrinomialTree</code> &gt; &amp;tree, const boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; &amp;dynamics, const boost::shared_ptr&lt; TermStructureFittingParameter::NumericalImpl &gt; &amp;phi, const <code>TimeGrid</code> &amp;timeGrid)<br/>
+ <i></i><code>Tree</code> build-up + numerical fitting to term-structure.<br/>
  Size <code>size</code> (Size i) const </p>
 <p> <code>DiscountFactor</code> <code>discount</code> (Size i, Size index) const </p>
 <p> <code>Real</code> <code>underlying</code> (Size i, Size index) const </p>

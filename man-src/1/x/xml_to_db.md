@@ -14,10 +14,10 @@ description: "xml_to_db – convert a subset of XML into fsdb"
     xml_to_db -k EntityField &lt;source.xml
 </pre>
 <h2>DESCRIPTION</h2>
-<p> Converts a <i>very limited</i> subset of <font SIZE="-1">XML</font> into Fsdb format. </p>
-<p> The input is XML-format (<i>not</i> fsdb). The input is parsed as <font SIZE="-1">XML,</font> and each entity of type <font SIZE="-1">ENTITYFIELD</font> is extracted as a row. <font SIZE="-1">ENTITYFIELD</font> can have mutliple components separated by slashes to walk down the <font SIZE="-1">XML</font> tree, if necessary. </p>
-<p> The input <font SIZE="-1">XML</font> file is assumed to be <i>very simple</i>. All rows are assumed to be sequential in one entity. Any other than the specified <font SIZE="-1">ENTITYFIELD</font> are ignored. The schema is assumed to be defined by the first instances of that field. </p>
-<p> The output is two-space-separated fsdb. (Someday more general field separators should be supported.) Fsdb fields are normalized version of the <font SIZE="-1">CSV</font> file: spaces are converted to single underscores.</p>
+<p> Converts a <i>very limited</i> subset of XML into Fsdb format. </p>
+<p> The input is XML-format (<i>not</i> fsdb). The input is parsed as XML, and each entity of type ENTITYFIELD is extracted as a row. ENTITYFIELD can have mutliple components separated by slashes to walk down the XML tree, if necessary. </p>
+<p> The input XML file is assumed to be <i>very simple</i>. All rows are assumed to be sequential in one entity. Any other than the specified ENTITYFIELD are ignored. The schema is assumed to be defined by the first instances of that field. </p>
+<p> The output is two-space-separated fsdb. (Someday more general field separators should be supported.) Fsdb fields are normalized version of the CSV file: spaces are converted to single underscores.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-e</code> EmptyValue or <code>&#8211;empty</code></dt>
@@ -67,4 +67,4 @@ description: "xml_to_db – convert a subset of XML into fsdb"
 <p> Fsdb.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 2011-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

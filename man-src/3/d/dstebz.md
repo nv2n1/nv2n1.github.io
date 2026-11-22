@@ -11,7 +11,7 @@ description: "dstebz.f –"
 <p> dstebz.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dstebz</code> (RANGE, ORDER, N, VL, VU, IL, IU, ABSTOL, D, E, M, NSPLIT, W, IBLOCK, ISPLIT, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dstebz</code> (RANGE, ORDER, N, VL, VU, IL, IU, ABSTOL, D, E, M, NSPLIT, W, IBLOCK, ISPLIT, WORK, IWORK, INFO)<br/>
  <i></i><code>DSTEBZ</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dstebz (characterRANGE, characterORDER, integerN, double precisionVL, double precisionVU, integerIL, integerIU, double precisionABSTOL, double precision, dimension( * )D, double precision, dimension( * )E, integerM, integerNSPLIT, double precision, dimension( * )W, integer, dimension( * )IBLOCK, integer, dimension( * )ISPLIT, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

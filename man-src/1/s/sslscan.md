@@ -13,8 +13,8 @@ description: "sslscan – Fast SSL/TLS scanner"
 <p> <code>sslscan</code> [<i>options</i>]<i> [host:port | host]</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>sslscan</code> command </p>
-<p> <code>sslscan</code> queries SSL/TLS services, such as HTTPS, in order to determine the ciphers that are supported.<br />
- SSLScan is designed to be easy, lean and fast. The output includes preferred ciphers of the SSL/TLS service,<br />
+<p> <code>sslscan</code> queries SSL/TLS services, such as HTTPS, in order to determine the ciphers that are supported.<br/>
+ SSLScan is designed to be easy, lean and fast. The output includes preferred ciphers of the SSL/TLS service,<br/>
  the certificate and output is in text and XML formats. It is TLS SNI aware when used with a supported version of OpenSSL.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -68,5 +68,5 @@ description: "sslscan – Fast SSL/TLS scanner"
 <dd> Output results to an XML file.
 </dd></dl>
 <h2>AUTHOR</h2>
-<p> sslscan was originally written by Ian Ventura-Whiting &lt;fizz [at] titania.co.uk&gt;. sslscan was extended by Jacob Appelbaum &lt;jacob [at] appelbaum.net&gt;.<br />
+<p> sslscan was originally written by Ian Ventura-Whiting &lt;fizz [at] titania.co.uk&gt;. sslscan was extended by Jacob Appelbaum &lt;jacob [at] appelbaum.net&gt;.<br/>
  This manual page was originally written by Marvin Stark &lt;marv [at] der-marv.de&gt;. </p>

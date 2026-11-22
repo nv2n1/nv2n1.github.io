@@ -9,8 +9,8 @@ description: "pmdaOpenLog – redirect stderr to a logfile"
 
 <p><code>pmdaOpenLog</code> &#8211; redirect stderr to a logfile</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> void pmdaOpenLog(pmdaInterface * </code><i>dispatch</i>); </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>

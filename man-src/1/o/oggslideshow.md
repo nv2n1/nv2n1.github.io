@@ -31,14 +31,14 @@ description: "oggSlideshow – creates slideshows from pictures"
 <p> <i>Example: -d 1024000</i> </p>
 <dt>-t</dt>
 <dd>Sets the presentation type, as shown above. Actually types are: </dd>
-<p> <code>kb: </code><br />
+<p> <code>kb: </code><br/>
 &nbsp;<wbr>Ken Burns effect&nbsp;<wbr>(default) </p>
-<p> <code>cf:</code><br />
+<p> <code>cf:</code><br/>
 &nbsp;<wbr>Picture crossfade for changeover </p>
-<p> <code>p:</code><br />
+<p> <code>p:</code><br/>
 &nbsp;<wbr>Plain picture presentation </p>
-<p> <code>bl: </code><br />
-&nbsp;<wbr>Bluring at changeover<br />
+<p> <code>bl: </code><br/>
+&nbsp;<wbr>Bluring at changeover<br/>
 &nbsp;<wbr> <i>Example: -t p</i> </p>
 <dt>-e</dt>
 <dd>Enables the reframing. In case a picture does not match the aspect ratio of the video frame, it can be &quot;reframed&quot;, which means black borders are inserted. This option is only usefull with the Ken Burns effect (option -t kb). The pictures are automaticaly &quot;reframed&quot; with the other two slideshow types to match the aspect ratio. </dd>

@@ -10,7 +10,7 @@ description: "XkbSARedirectVModsMask – Returns the vmods_mask0 and vmods_mask1
 <p>XkbSARedirectVModsMask &#8211; Returns the vmods_mask0 and vmods_mask1 fields of act converted to an unsigned int </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>unsigned int XkbSARedirectVModsMask</code> <code>(XkbRedirectKeyAction </code><i>act</i><code>);</code><br />
+<dt> <code>unsigned int XkbSARedirectVModsMask</code> <code>(XkbRedirectKeyAction </code><i>act</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

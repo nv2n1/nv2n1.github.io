@@ -10,7 +10,7 @@ description: "stptrs.f –"
 <p>stptrs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>stptrs</code> (UPLO, TRANS, DIAG, N, NRHS, AP, B, LDB, INFO)<br />
+<p>subroutine <code>stptrs</code> (UPLO, TRANS, DIAG, N, NRHS, AP, B, LDB, INFO)<br/>
  <i></i><code>STPTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stptrs (characterUPLO, characterTRANS, characterDIAG, integerN, integerNRHS, real, dimension( * )AP, real, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

@@ -12,7 +12,7 @@ description: "dosepsbin — Extract PS/WMF/TIFF sections from DOS EPS binary fil
 <h2>VERSION</h2>
 <p> 2012-03-22 v1.2</p>
 <h2>SYNOPSIS</h2>
-<p> The progam <code>dosepsbin</code> analyses an <font SIZE="-1">EPS</font> file that is not a plain <font SIZE="-1">ASCII</font> PostScript file but given as <font SIZE="-1">DOS</font> <font SIZE="-1">EPS</font> binary file. </p>
+<p> The progam <code>dosepsbin</code> analyses an EPS file that is not a plain ASCII PostScript file but given as DOS EPS binary file. </p>
 <pre>
     dosepsbin [options] &lt;input file&gt;
 </pre>
@@ -23,24 +23,24 @@ description: "dosepsbin — Extract PS/WMF/TIFF sections from DOS EPS binary fil
 </code></pre>
 <p> The files for output must be different from the input file.</p>
 <h2>DESCRIPTION</h2>
-<p> <code><font SIZE="-1">DOS</font> <font SIZE="-1">EPS</font> Binary File Format</code> </p>
-<p> A Encapsulated PostScript (<font SIZE="-1">EPS</font>) file can also given in a special binary format to support the inclusion of a thumbnail. The file format starts with a binary header that contains the positions of the possible sections:</p>
+<p> <code>DOS EPS Binary File Format</code> </p>
+<p> A Encapsulated PostScript (EPS) file can also given in a special binary format to support the inclusion of a thumbnail. The file format starts with a binary header that contains the positions of the possible sections:</p>
 <dl>
-<dt>* Postscript (<font SIZE="-1">PS</font>)</dt>
+<dt>* Postscript (PS)</dt>
 <dd>
-</dd><dt>* Windows Metafile Format (<font SIZE="-1">WMF</font>)</dt>
+</dd><dt>* Windows Metafile Format (WMF)</dt>
 <dd>
-</dd><dt>* Tag Image File Format (<font SIZE="-1">TIFF</font>)</dt>
+</dd><dt>* Tag Image File Format (TIFF)</dt>
 <dd></dd></dl>
-<p> The <font SIZE="-1">PS</font> section must be present and either the <font SIZE="-1">WMF</font> file or the <font SIZE="-1">TIFF</font> file should be given.</p>
+<p> The PS section must be present and either the WMF file or the TIFF file should be given.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;</code><code>-eps-file</code>=&lt;<i>file</i>&gt;</dt>
-<dd> The <font SIZE="-1">PS</font> section is written to &lt;<i>file</i>&gt;. The output file must be different from the input file.</dd>
+<dd> The PS section is written to &lt;<i>file</i>&gt;. The output file must be different from the input file.</dd>
 <dt><code>&#8211;</code><code>-wmf-file</code>=&lt;<i>file</i>&gt;</dt>
-<dd> The <font SIZE="-1">WMF</font> section is written to &lt;<i>file</i>&gt; if present. The output file must be different from the input file.</dd>
+<dd> The WMF section is written to &lt;<i>file</i>&gt; if present. The output file must be different from the input file.</dd>
 <dt><code>&#8211;</code><code>-tiff-file</code>=&lt;<i>file</i>&gt;</dt>
-<dd> The <font SIZE="-1">TIFF</font> section is written to &lt;<i>file</i>&gt; if present. The output file must be different from the input file.</dd>
+<dd> The TIFF section is written to &lt;<i>file</i>&gt; if present. The output file must be different from the input file.</dd>
 <dt><code>&#8211;</code><code>-inputfile</code>=&lt;<i>file</i>&gt;</dt>
 <dd> The input file can also be given directly on the command line. If the file does not exist, then the file with extension `.eps&#8217; is tried.</dd>
 <dt><code>&#8211;</code><code>-verbose</code></dt>
@@ -54,7 +54,7 @@ description: "dosepsbin — Extract PS/WMF/TIFF sections from DOS EPS binary fil
 <dt><code>&#8211;</code><code>-version</code></dt>
 <dd> Print version identification and exit.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> The following command extracts the <font SIZE="-1">PS</font> section from file <i>test.eps</i> and stores the result in file <i>test-ps.eps</i>: </p>
+<p> The following command extracts the PS section from file <i>test.eps</i> and stores the result in file <i>test-ps.eps</i>: </p>
 <pre>
     dosepsbin --eps-file test-ps.eps test.eps
 </pre>
@@ -64,7 +64,7 @@ description: "dosepsbin — Extract PS/WMF/TIFF sections from DOS EPS binary fil
 <p> Copyright 2011-2012 by Heiko Oberdiek. </p>
 <p> This library is free software; you may redistribute it and/or modify it under the same terms as Perl itself (Perl Artistic License/GNU General Public License, version 2).</p>
 <h2>SEE ALSO</h2>
-<p> The <font SIZE="-1">DOS</font> <font SIZE="-1">EPS</font> binary file format is described in section &#8220;5.2 Windows Metafile or <font SIZE="-1">TIFF</font>&#8221;: </p>
+<p> The DOS EPS binary file format is described in section &#8220;5.2 Windows Metafile or TIFF&#8221;: </p>
 <pre>
     Adobe Developer Support,
     Encapsulated PostScript File Format Specification,
@@ -96,7 +96,7 @@ description: "dosepsbin — Extract PS/WMF/TIFF sections from DOS EPS binary fil
 <dd>
 </dd><dl>
 <dl>
-<dt>* Fix in validation test for offset of <font SIZE="-1">PS</font> section.</dt>
+<dt>* Fix in validation test for offset of PS section.</dt>
 <dd></dd></dl>
 </dl>
 <dl>

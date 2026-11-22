@@ -15,22 +15,22 @@ void snmp_sess_init(netsnmp_session *sess);</code></pre>
 <dl>
 <dd><i>/* Input parameter not used in active sessions */</i></dd></dl>
 <p> int snmp_send(netsnmp_session *session,</p>
-<p>              netsnmp_pdu *pdu);<br />
+<p>              netsnmp_pdu *pdu);<br/>
 int snmp_async_send(netsnmp_session *session,</p>
 <p>                    netsnmp_pdu *pdu,</p>
 <p>                    snmp_callback callback,</p>
-<p>                    void *callbackData);<br />
+<p>                    void *callbackData);<br/>
 int snmp_select_info(int *numfds, fd_set *fdset,</p>
-<p>                     struct timeval *timeout, int *block);<br />
-void snmp_read(fd_set *fdset);<br />
-void snmp_timeout(void);<br />
+<p>                     struct timeval *timeout, int *block);<br/>
+void snmp_read(fd_set *fdset);<br/>
+void snmp_timeout(void);<br/>
 int snmp_synch_response(netsnmp_session *session,</p>
 <p>                        netsnmp_pdu *pdu,</p>
-<p>                        netsnmp_pdu **response);<br />
+<p>                        netsnmp_pdu **response);<br/>
 int snmp_close(netsnmp_session *session);</p>
 <p>int snmp_close_sessions(void);</p>
 <h3>Error Reporting</h3>
-<p><i>(Move to output_api(3))</i><br />
+<p><i>(Move to output_api(3))</i><br/>
  <code>void snmp_error ( netsnmp_session *session,</code></p>
 <dl>
 <dd><code>int *</code><i>pcliberr,</i><code>int *</code><i>psnmperr,</i><code>char **</code><i>pperrstring</i><code>);</code></dd></dl>

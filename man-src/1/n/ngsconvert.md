@@ -10,11 +10,11 @@ description: "sconvert – convert spice formats"
 
 <p> sconvert &#8211; convert spice formats </p>
 <h2>SYNOPSIS</h2>
-<p> <code>sconvert fromtype fromfile totype tofile</code><br />
- <code>sconvert fromtype totype</code><br />
+<p> <code>sconvert fromtype fromfile totype tofile</code><br/>
+ <code>sconvert fromtype totype</code><br/>
  <code>sconvert</code> </p>
 <h2>DESCRIPTION</h2>
-<p> <code>Sconvert</code> translates spice output files among three formats: the old binary format, a new binary format, and a new ascii format. The formats are specified by the <code>fromtype</code> and <code>totype</code> arguments: `o&#8217; for the old format, `b&#8217; for the new binary format, and `a&#8217; for the new ascii format. <code>Fromtype</code> specifies the format to be read, and <code>totype</code> specifies the format to be written. If <code>fromfile</code> and <code>tofile</code> are given, then they are used as the input and output, otherwise standard input and output are used. (Note that this second option is only available on <font SIZE="-2">UNIX</font> systems &#8211; on VMS and other systems you must supply the filenames.) If no arguments are given, the parameters are prompted for. </p>
+<p> <code>Sconvert</code> translates spice output files among three formats: the old binary format, a new binary format, and a new ascii format. The formats are specified by the <code>fromtype</code> and <code>totype</code> arguments: `o&#8217; for the old format, `b&#8217; for the new binary format, and `a&#8217; for the new ascii format. <code>Fromtype</code> specifies the format to be read, and <code>totype</code> specifies the format to be written. If <code>fromfile</code> and <code>tofile</code> are given, then they are used as the input and output, otherwise standard input and output are used. (Note that this second option is only available on UNIX systems &#8211; on VMS and other systems you must supply the filenames.) If no arguments are given, the parameters are prompted for. </p>
 <p> Binary format is the preferred format for general use, as it is the most economical in terms of space and speed of access, and ascii is provided to make it easy to modify data files and transfer them between machines with different floating-point formats. The old format is provided only for backward compatibility. The three formats are as follows: </p>
 <pre><code>
 Old : What Size in Bytes

@@ -66,5 +66,5 @@ description: "XInitImage, XCreateImage, XGetPixel, XPutPixel, XSubImage, XAddPix
 <p> The <code>XAddPixel</code> function adds a constant value to every pixel in an image. It is useful when you have a base pixel value from allocating color resources and need to manipulate the image to that form. </p>
 <p> The <code>XDestroyImage</code> function deallocates the memory associated with the <code>XImage</code> structure.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xputimage/">XPutImage</a>(3)<br />
+<p><a href="/docs/linux/man/3-xputimage/">XPutImage</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

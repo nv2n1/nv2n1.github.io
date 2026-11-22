@@ -10,7 +10,7 @@ description: "sgbbrd.f –"
 <p>sgbbrd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgbbrd</code> (VECT, M, N, NCC, KL, KU, AB, LDAB, D, E, Q, LDQ, PT, LDPT, C, LDC, WORK, INFO)<br />
+<p>subroutine <code>sgbbrd</code> (VECT, M, N, NCC, KL, KU, AB, LDAB, D, E, Q, LDQ, PT, LDPT, C, LDC, WORK, INFO)<br/>
  <i></i><code>SGBBRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgbbrd (characterVECT, integerM, integerN, integerNCC, integerKL, integerKU, real, dimension( ldab, * )AB, integerLDAB, real, dimension( * )D, real, dimension( * )E, real, dimension( ldq, * )Q, integerLDQ, real, dimension( ldpt, * )PT, integerLDPT, real, dimension( ldc, * )C, integerLDC, real, dimension( * )WORK, integerINFO)</h3>

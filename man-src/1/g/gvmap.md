@@ -29,14 +29,14 @@ description: "gvmap – find clusters and create a geographical map highlighting
 <dt>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Acceptable values are:</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 : no polygons<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 : pastel<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 : blue to yellow<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;3 : white to red<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;4 : light grey to red<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;5 : primary colors<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;6 : sequential single hue red<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;7 : sequential single hue lighter red<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 : no polygons<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 : pastel<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 : blue to yellow<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;3 : white to red<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;4 : light grey to red<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;5 : primary colors<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;6 : sequential single hue red<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;7 : sequential single hue lighter red<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;8 : light grey</dd>
 <dt><code>-c_opacity=</code><i>xy</i></dt>
 <dd> Specifies a two-character hexadecimal string specifying the opacity of the polygons.</dd>
@@ -69,9 +69,9 @@ description: "gvmap – find clusters and create a geographical map highlighting
 <dt>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Acceptable values are:</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 : no points<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 : all points<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 : label points<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 : no points<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 : all points<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 : label points<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;3 : random/artificial points</dd>
 <dt><code>-Q</code></dt>
 <dd> Use modularity quality for clustering rather than the default modularity clustering.</dd>

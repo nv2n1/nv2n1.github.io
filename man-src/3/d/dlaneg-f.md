@@ -10,7 +10,7 @@ description: "dlaneg.f –"
 <p>dlaneg.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>INTEGER function <code>dlaneg</code> (N, D, LLD, SIGMA, PIVMIN, R)<br />
+<p>INTEGER function <code>dlaneg</code> (N, D, LLD, SIGMA, PIVMIN, R)<br/>
  <i></i><code>DLANEG</code> computes the Sturm count.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function dlaneg (integerN, double precision, dimension( * )D, double precision, dimension( * )LLD, double precisionSIGMA, double precisionPIVMIN, integerR)</h3>

@@ -286,36 +286,36 @@ description: "Attributes and Cntls –"
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Initialize delegation-at-any-time process. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>credential</i> The GSS credential to delegate<br />
- <i>restriction_oids</i> The OIDS for X.509 extensions to embed in the delegated credential<br />
- <i>restriction_buffers</i> The corresponding bodies for the X.509 extensions<br />
+</dt><dd> <i>credential</i> The GSS credential to delegate<br/>
+ <i>restriction_oids</i> The OIDS for X.509 extensions to embed in the delegated credential<br/>
+ <i>restriction_buffers</i> The corresponding bodies for the X.509 extensions<br/>
  <i>time_req</i> The lifetime of the delegated credential</dd></dl>
 <h3>globus_result_t globus_xio_handle_cntl (handle, driver, GLOBUS_XIO_GSI_REGISTER_INIT_DELEGATION, gss_cred_id_t credential, gss_OID_set restriction_oids, gss_buffer_set_t restriction_buffers, OM_uint32 time_req, <code>globus_xio_gsi_delegation_init_callback_t</code> callback, void * callback_arg)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Initialize non-blocking delegation-at-any-time process. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>credential</i> The GSS credential to delegate<br />
- <i>restriction_oids</i> The OIDS for X.509 extensions to embed in the delegated credential<br />
- <i>restriction_buffers</i> The corresponding bodies for the X.509 extensions<br />
- <i>time_req</i> The lifetime of the delegated credential<br />
- <i>callback</i> The callback to call when the operation completes<br />
+</dt><dd> <i>credential</i> The GSS credential to delegate<br/>
+ <i>restriction_oids</i> The OIDS for X.509 extensions to embed in the delegated credential<br/>
+ <i>restriction_buffers</i> The corresponding bodies for the X.509 extensions<br/>
+ <i>time_req</i> The lifetime of the delegated credential<br/>
+ <i>callback</i> The callback to call when the operation completes<br/>
  <i>callback_arg</i> The arguments to pass to the callback</dd></dl>
 <h3>globus_result_t globus_xio_handle_cntl (handle, driver, GLOBUS_XIO_GSI_ACCEPT_DELEGATION, gss_cred_id_t * credential, gss_OID_set restriction_oids, gss_buffer_set_t restriction_buffers, OM_uint32 time_req)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Accept delegation-at-any-time process. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>credential</i> The delegated GSS credential<br />
- <i>restriction_oids</i> The OIDS for X.509 extensions to embed in the delegated credential<br />
- <i>restriction_buffers</i> The corresponding bodies for the X.509 extensions<br />
+</dt><dd> <i>credential</i> The delegated GSS credential<br/>
+ <i>restriction_oids</i> The OIDS for X.509 extensions to embed in the delegated credential<br/>
+ <i>restriction_buffers</i> The corresponding bodies for the X.509 extensions<br/>
  <i>time_req</i> The requested lifetime of the delegated credential</dd></dl>
 <h3>globus_result_t globus_xio_handle_cntl (handle, driver, GLOBUS_XIO_GSI_REGISTER_ACCEPT_DELEGATION, gss_OID_set restriction_oids, gss_buffer_set_t restriction_buffers, OM_uint32 time_req, <code>globus_xio_gsi_delegation_accept_callback_t</code> callback, void * callback_arg)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Accept non-blocking delegation-at-any-time process. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>restriction_oids</i> The OIDS for X.509 extensions to embed in the delegated credential<br />
- <i>restriction_buffers</i> The corresponding bodies for the X.509 extensions<br />
- <i>time_req</i> The lifetime of the delegated credential<br />
- <i>callback</i> The callback to call when the operation completes<br />
+</dt><dd> <i>restriction_oids</i> The OIDS for X.509 extensions to embed in the delegated credential<br/>
+ <i>restriction_buffers</i> The corresponding bodies for the X.509 extensions<br/>
+ <i>time_req</i> The lifetime of the delegated credential<br/>
+ <i>callback</i> The callback to call when the operation completes<br/>
  <i>callback_arg</i> The arguments to pass to the callback</dd></dl>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, GLOBUS_XIO_GSI_FORCE_SERVER_MODE, globus_bool_t server_mode)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Force the server mode setting. This explicitly sets the directionality of context establishment and delegation. </p>

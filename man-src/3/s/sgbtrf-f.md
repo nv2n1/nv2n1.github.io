@@ -10,7 +10,7 @@ description: "sgbtrf.f –"
 <p>sgbtrf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgbtrf</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br />
+<p>subroutine <code>sgbtrf</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br/>
  <i></i><code>SGBTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgbtrf (integerM, integerN, integerKL, integerKU, real, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, integerINFO)</h3>

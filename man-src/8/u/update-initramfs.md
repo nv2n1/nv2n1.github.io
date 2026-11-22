@@ -9,7 +9,7 @@ description: "update-initramfs – generate an initramfs image"
 
 <p>update-initramfs &#8211; generate an initramfs image</p>
 <h2>Synopsis</h2>
-<p><code>update-initramfs</code> {<code>-c</code>|<code>-d</code>|<code>-u</code>} [<code>-k</code> <i>version</i>] [<code>-v</code>] [<code>-b</code> <i>directory</i>]<br />
+<p><code>update-initramfs</code> {<code>-c</code>|<code>-d</code>|<code>-u</code>} [<code>-k</code> <i>version</i>] [<code>-v</code>] [<code>-b</code> <i>directory</i>]<br/>
  <code>update-initramfs</code> <code>-h</code></p>
 <h2>Description</h2>
 <p>The <code>update-initramfs</code> script manages your initramfs images on your local box. It keeps track of the existing initramfs archives in /boot. There are three modes of operation create, update or delete. You must at least specify one of those modes. The initramfs is a gzipped cpio archive. At boot time, the kernel unpacks that archive into RAM disk, mounts and uses it as initial root file system. All finding of the root device happens in this early userspace. </p>

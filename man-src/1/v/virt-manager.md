@@ -10,7 +10,7 @@ description: "virt-manager – display the virtual machine desktop management to
 
 <p> virt-manager &#8211; display the virtual machine desktop management tool </p>
 <h2>SYNOPSIS</h2>
-<p> <code>virt-manager</code> [<font SIZE="-1">OPTIONS</font>]</p>
+<p> <code>virt-manager</code> [OPTIONS]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>virt-manager</code> is a desktop tool for managing virtual machines. It provides the ability to control the lifecycle of existing machines (bootup/shutdown,pause/resume,suspend/restore), provision new virtual machines and various types of store, manage virtual networks, access the graphical console of virtual machines, and view performance statistics, all done locally or remotely.</p>
 <h2>OPTIONS</h2>
@@ -22,7 +22,7 @@ description: "virt-manager – display the virtual machine desktop management to
 <dd> Display command line help summary</dd>
 <dt><code>&#8211;version</code></dt>
 <dd> Show virt-manager&#8217;s version number and exit</dd>
-<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
+<dt><code>-c</code> URI</dt>
 <dd>
 </dd><dt><code>&#8211;connect</code>=URI</dt>
 <dd> Specify the hypervisor connection <tt>&quot;URI&quot;</tt></dd>
@@ -40,22 +40,22 @@ description: "virt-manager – display the virtual machine desktop management to
 <dt><code>&#8211;show-domain-creator</code></dt>
 <dd> Display the wizard for creating new virtual machines</dd>
 <dt><code>&#8211;show-domain-editor</code> NAME|ID|UUID</dt>
-<dd> Display the dialog for editing properties of the virtual machine with unique <font SIZE="-1">ID</font> matching either the domain name, <font SIZE="-1">ID,</font> or <font SIZE="-1">UUID</font></dd>
+<dd> Display the dialog for editing properties of the virtual machine with unique ID matching either the domain name, ID, or UUID</dd>
 <dt><code>&#8211;show-domain-performance</code> NAME|ID|UUID</dt>
-<dd> Display the dialog for monitoring performance of the virtual machine with unique <font SIZE="-1">ID</font> matching either the domain name, <font SIZE="-1">ID,</font> or <font SIZE="-1">UUID</font></dd>
+<dd> Display the dialog for monitoring performance of the virtual machine with unique ID matching either the domain name, ID, or UUID</dd>
 <dt><code>&#8211;show-domain-console</code> NAME|ID|UUID</dt>
-<dd> Display the virtual console of the virtual machine with unique <font SIZE="-1">ID</font> matching either the domain name, <font SIZE="-1">ID,</font> or <font SIZE="-1">UUID</font></dd>
+<dd> Display the virtual console of the virtual machine with unique ID matching either the domain name, ID, or UUID</dd>
 <dt><code>&#8211;show-host-summary</code></dt>
 <dd> Display the main window summarizing performance for all virtual machines on the host.</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt><code>&#8211;spice-disable-auto-usbredir</code></dt>
-<dd> Auto <font SIZE="-1">USB</font> redirection is supported by default. This option switches off it.</dd></dl>
-<p> Standard <font SIZE="-1">GTK</font> options like &#8211;g-fatal-warnings are also accepted.</p>
+<dd> Auto USB redirection is supported by default. This option switches off it.</dd></dl>
+<p> Standard GTK options like &#8211;g-fatal-warnings are also accepted.</p>
 <h2>BUGS</h2>
 <p> Please see &lt;<a rel="nofollow" href="http://virt-manager.org/bugs/">http://virt-manager.org/bugs/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) Red Hat, Inc, and various contributors. This is free software. You may redistribute copies of it under the terms of the <font SIZE="-1">GNU</font> General Public License <tt>&quot;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&quot;</tt>. There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law.</p>
+<p> Copyright (C) Red Hat, Inc, and various contributors. This is free software. You may redistribute copies of it under the terms of the GNU General Public License <tt>&quot;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&quot;</tt>. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <tt><a href="/docs/linux/man/1-virsh/">virsh</a>(1)</tt>, <tt>&quot;<a href="/docs/linux/man/1-virt-viewer/">virt-viewer</a>(1)&quot;</tt>, the project website <tt>&quot;<a rel="nofollow" href="http://virt-manager.org">http://virt-manager.org</a>&quot;</tt> </p>

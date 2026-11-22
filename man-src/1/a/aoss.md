@@ -15,12 +15,12 @@ description: "aoss – Wrapper script to facilitate use of the ALSA OSS compatib
 <p> <code>aoss</code> is a simple wrapper script which facilitates the use of the ALSA OSS compatibility library. It just sets the appropriate LD_PRELOAD path and then runs the command. </p>
 <p> This is useful in cases where routing settings (which can be made in your .asoundrc file) need to be applied to commands that use the OSS API. </p>
 <p> Examples of asoundrc configuration: </p>
-<p> pcm.dsp0 { <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>type plug<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>slave.pcm &quot;hw:0,0&quot;<br />
+<p> pcm.dsp0 { <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>type plug<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>slave.pcm &quot;hw:0,0&quot;<br/>
  } </p>
 <p> or </p>
-<p> pcm.dsp0 { <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>type plug<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>slave.pcm &quot;dmix&quot;<br />
+<p> pcm.dsp0 { <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>type plug<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>slave.pcm &quot;dmix&quot;<br/>
  } </p>
 <p> In the above configuration examples, the pcm.dsp0 definition is used to wrap calls do /dev/dsp0. You can also wrap usage of /dev/dsp1, /dev/dsp2, etc. by defining pcm.dsp1, pcm.dsp2, etc.. </p>
 <p> The PCM name to open can be given explicitly via <code>ALSA_OSS_PCM_DEVICE</code> environment variable, too. This overrides the default <code>dsp0</code>, etc. </p>

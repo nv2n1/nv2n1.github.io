@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-syslinux/"
 description: "syslinux – install the SYSLINUX bootloader on a FAT filesystem"
 ---
 
-<p> syslinux &#8211; install the <font SIZE="-1">SYSLINUX</font> bootloader on a FAT filesystem </p>
+<p> syslinux &#8211; install the SYSLINUX bootloader on a FAT filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>syslinux</code> [<code>OPTIONS</code>] <i>device</i></p>
 <h2>DESCRIPTION</h2>
@@ -19,22 +19,22 @@ description: "syslinux – install the SYSLINUX bootloader on a FAT filesystem"
 </dt><dd> <code>syslinux &#8211;install /dev/fd0</code></dd></dl>
 <p> This will alter the boot sector on the disk and copy a file named <i>ldlinux.sys</i> into its root directory. </p>
 <p> On boot time, by default, the kernel will be loaded from the image named LINUX on the boot floppy. This default can be changed, see the section on the <code>syslinux</code> configuration file. </p>
-<p> If the Shift or Alt keys are held down during boot, or the Caps or Scroll locks are set, <code>syslinux</code> will display a <code>lilo</code>(8) -style &quot;boot:&quot; prompt. The user can then type a kernel file name followed by any kernel parameters. The <font SIZE="-1">SYSLINUX</font> bootloader does not need to know about the kernel file in advance; all that is required is that it is a file located in the root directory on the disk. </p>
+<p> If the Shift or Alt keys are held down during boot, or the Caps or Scroll locks are set, <code>syslinux</code> will display a <code>lilo</code>(8) -style &quot;boot:&quot; prompt. The user can then type a kernel file name followed by any kernel parameters. The SYSLINUX bootloader does not need to know about the kernel file in advance; all that is required is that it is a file located in the root directory on the disk. </p>
 <p> <code>Syslinux</code> supports the loading of initial ramdisks (initrd) and the bzImage kernel format.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-i</code>, <code>&#8211;install</code></dt>
-<dd> Install <font SIZE="-1">SYSLINUX</font> on a new medium, overwriting any previously installed bootloader.</dd>
+<dd> Install SYSLINUX on a new medium, overwriting any previously installed bootloader.</dd>
 <dt><code>-U</code>, <code>&#8211;update</code></dt>
-<dd> Install <font SIZE="-1">SYSLINUX</font> on a new medium if and only if a version of <font SIZE="-1">SYSLINUX</font> is already installed.</dd>
+<dd> Install SYSLINUX on a new medium if and only if a version of SYSLINUX is already installed.</dd>
 <dt><code>-s</code>, <code>&#8211;stupid</code></dt>
-<dd> Install a &quot;safe, slow and stupid&quot; version of <font SIZE="-1">SYSLINUX</font>. This version may work on some very buggy BIOSes on which <font SIZE="-1">SYSLINUX</font> would otherwise fail. If you find a machine on which the -s option is required to make it boot reliably, please send as much info about your machine as you can, and include the failure mode.</dd>
+<dd> Install a &quot;safe, slow and stupid&quot; version of SYSLINUX. This version may work on some very buggy BIOSes on which SYSLINUX would otherwise fail. If you find a machine on which the -s option is required to make it boot reliably, please send as much info about your machine as you can, and include the failure mode.</dd>
 <dt><code>-f</code>, <code>&#8211;force</code></dt>
 <dd> Force install even if it appears unsafe.</dd>
 <dt><code>-r</code>, <code>&#8211;raid</dt>
 <dd> RAID mode. If boot fails, tell the BIOS to boot the next device in the boot sequence (usually the next hard disk) instead of stopping with an error message. This is useful for RAID-1 booting.</dd>
 <dt>-d</code>, <code>&#8211;directory</code> <i>subdirectory</i></dt>
-<dd> Install the <font SIZE="-1">SYSLINUX</font> control files in a subdirectory with the specified name (relative to the root directory on the device).</dd>
+<dd> Install the SYSLINUX control files in a subdirectory with the specified name (relative to the root directory on the device).</dd>
 <dt><code>-t</code>, <code>&#8211;offset</code> <i>offset</i></dt>
 <dd> Indicates that the filesystem is at an offset from the base of the device or file.</dd>
 <dt><code>&#8211;once</code> <i>command</i></dt>
@@ -50,20 +50,20 @@ description: "syslinux – install the SYSLINUX bootloader on a FAT filesystem"
 <p> </i></p>
 <h2>FILES</h2>
 <h3>Configuration file</h3>
-<p> All the configurable defaults in <font SIZE="-1">SYSLINUX</font> can be changed by putting a file called <code>syslinux.cfg</code> in the install directory of the boot disk. This is a text file in either UNIX or DOS format, containing one or more of the following items (case is insensitive for keywords). </p>
+<p> All the configurable defaults in SYSLINUX can be changed by putting a file called <code>syslinux.cfg</code> in the install directory of the boot disk. This is a text file in either UNIX or DOS format, containing one or more of the following items (case is insensitive for keywords). </p>
 <p> This list is out of date. </p>
 <p> In the configuration file blank lines and comment lines beginning with a hash mark (#) are ignored.</p>
 <dl>
 <dt><code>default</code> <i>kernel</i> [ <i>options &#8230;</i> ]</dt>
 <dd> Sets the default command line. If <code>syslinux</code> boots automatically, it will act just as if the entries after &quot;default&quot; had been typed in at the &quot;boot:&quot; prompt.</dd>
 <dt>
-</dt><dd> If no DEFAULT or UI statement is found, or the configuration file is missing entirely, <font SIZE="-1">SYSLINUX</font> drops to the boot: prompt with an error message (if NOESCAPE is set, it stops with a &quot;boot failed&quot; message; this is also the case for PXELINUX if the configuration file is not found.)</dd>
-<dt>NOTE: Until <font SIZE="-1">SYSLINUX</font> 3.85, if no configuration file is present, or no</dt>
+</dt><dd> If no DEFAULT or UI statement is found, or the configuration file is missing entirely, SYSLINUX drops to the boot: prompt with an error message (if NOESCAPE is set, it stops with a &quot;boot failed&quot; message; this is also the case for PXELINUX if the configuration file is not found.)</dd>
+<dt>NOTE: Until SYSLINUX 3.85, if no configuration file is present, or no</dt>
 <dd> &quot;default&quot; entry is present in the configuration file, the default is &quot;linux auto&quot;.</dd>
-<dt>Even earlier versions of <font SIZE="-1">SYSLINUX</font> used to automatically</dt>
+<dt>Even earlier versions of SYSLINUX used to automatically</dt>
 <dd> append the string &quot;auto&quot; to whatever the user specified using the DEFAULT command. As of version 1.54, this is no longer true, as it caused problems when using a shell as a substitute for &quot;init.&quot; You may want to include this option manually.</dd>
 <dt><code>append</code><i> options &#8230;</i></dt>
-<dd> Add one or more <i>options</i> to the kernel command line. These are added both for automatic and manual boots. The options are added at the very beginning of the kernel command line, usually permitting explicitly entered kernel options to override them. This is the equivalent of the <code>lilo</code>(8)<br />
+<dd> Add one or more <i>options</i> to the kernel command line. These are added both for automatic and manual boots. The options are added at the very beginning of the kernel command line, usually permitting explicitly entered kernel options to override them. This is the equivalent of the <code>lilo</code>(8)<br/>
 &nbsp;&quot;append&quot;&nbsp;option.</dd></dl>
 <pre>
 <code>label&nbsp;</code><i>label</i>
@@ -92,7 +92,7 @@ description: "syslinux – install the SYSLINUX bootloader on a FAT filesystem"
 <dt><code>kbdmap&nbsp;</code><i>keymap</i></dt>
 <dd> Install a simple keyboard map. The keyboard remapper used is <i>very</i> simplistic (it simply remaps the keycodes received from the BIOS, which means that only the key combinations relevant in the default layout &#8211; usually U.S. English &#8211; can be mapped) but should at least help people with AZERTY keyboard layout and the locations of = and , (two special characters used heavily on the Linux kernel command line.)</dd>
 <dt>
-</dt><dd> The included program <code>keytab-lilo.pl</code>(8) from the <code>lilo</code>(8)<br />
+</dt><dd> The included program <code>keytab-lilo.pl</code>(8) from the <code>lilo</code>(8)<br/>
 &nbsp;distribution can be used to create such keymaps.</dd>
 <dt><code>display&nbsp;</code><i>filename</i></dt>
 <dd> Displays the indicated file on the screen at boot time (before the boot: prompt, if displayed). Please see the section below on DISPLAY files. If the file is missing, this option is simply ignored.</dd>
@@ -145,7 +145,7 @@ filename
 <dt>
 </dt><dd> The image is displayed in 640&#215;480 16-color mode. Once in graphics mode, the display attributes (set by <i>&lt;SI&gt;</i> code sequences) work slightly differently: the background color is ignored, and the foreground colors are the 16 colors specified in the image file. For that reason, ppmtolss16 allows you to specify that certain colors should be assigned to specific color indicies.</dd>
 <dt>
-</dt><dd> Color indicies 0 and 7, in particular, should be chosen with care: 0 is the background color, and 7 is the color used for the text printed by <font SIZE="-1">SYSLINUX</font> itself.</dd>
+</dt><dd> Color indicies 0 and 7, in particular, should be chosen with care: 0 is the background color, and 7 is the color used for the text printed by SYSLINUX itself.</dd>
 <dt><i>&lt;EM&gt;</i>, <i>&lt;EM&gt;</i> = <i>&lt;Ctrl-U&gt;</i> = ASCII 25</dt>
 <dd> If we are currently in graphics mode, return to text mode.</dd>
 <dt><i>&lt;DLE&gt;</i>..<i>&lt;ETB&gt;</i><code>, </code><i>&lt;Ctrl-P&gt;</i>..<i>&lt;Ctrl-W&gt;</i> = ASCII 16-23</dt>
@@ -175,22 +175,22 @@ BS               Boot sector
 <h3>Novice protection</h3>
 <p> <code>Syslinux</code> will attempt to detect if the user is trying to boot on a 286 or lower class machine, or a machine with less than 608K of low (&quot;DOS&quot;) RAM (which means the Linux boot sequence cannot complete). If so, a message is displayed and the boot sequence aborted. Holding down the Ctrl key while booting disables this feature. </p>
 <p> The compile time and date of a specific <code>syslinux</code> version can be obtained by the DOS command &quot;type ldlinux.sys&quot;. This is also used as the signature for the LDLINUX.SYS file, which must match the boot sector </p>
-<p> Any file that <code>syslinux</code> uses can be marked hidden, system or readonly if so is convenient; <code>syslinux</code> ignores all file attributes. The <font SIZE="-1">SYSLINUX</font> installed automatically sets the readonly attribute on LDLINUX.SYS.</p>
+<p> Any file that <code>syslinux</code> uses can be marked hidden, system or readonly if so is convenient; <code>syslinux</code> ignores all file attributes. The SYSLINUX installed automatically sets the readonly attribute on LDLINUX.SYS.</p>
 <h3>Bootable CD-ROMs</h3>
-<p> <font SIZE="-1">SYSLINUX</font> can be used to create bootdisk images for El Torito-compatible bootable CD-ROMs. However, it appears that many BIOSes are very buggy when it comes to booting CD-ROMs. Some users have reported that the following steps are helpful in making a CD-ROM that is bootable on the largest possible number of machines:</p>
+<p> SYSLINUX can be used to create bootdisk images for El Torito-compatible bootable CD-ROMs. However, it appears that many BIOSes are very buggy when it comes to booting CD-ROMs. Some users have reported that the following steps are helpful in making a CD-ROM that is bootable on the largest possible number of machines:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> Use the -s (safe, slow and stupid) option to <font SIZE="-1">SYSLINUX</font></dd>
+<dd> Use the -s (safe, slow and stupid) option to SYSLINUX</dd>
 <dt>&bull;</dt>
 <dd> Put the boot image as close to the beginning of the ISO 9660 filesystem as possible.</dd></dl>
 <p> A CD-ROM is so much faster than a floppy that the -s option shouldn&#8217;t matter from a speed perspective. </p>
 <p> Of course, you probably want to use ISOLINUX instead. See the documentation file <code>isolinux.doc</code>.</p>
 <h3>Booting from a FAT partition on a hard disk</h3>
-<p> <font SIZE="-1">SYSLINUX</font> can boot from a FAT filesystem partition on a hard disk (including FAT32). The installation procedure is identical to the procedure for installing it on a floppy, and should work under either DOS or Linux. To boot from a partition, <font SIZE="-1">SYSLINUX</font> needs to be launched from a Master Boot Record or another boot loader, just like DOS itself would. A sample master boot sector (<code>mbr.bin</code>) is included with <font SIZE="-1">SYSLINUX</font>.</p>
+<p> SYSLINUX can boot from a FAT filesystem partition on a hard disk (including FAT32). The installation procedure is identical to the procedure for installing it on a floppy, and should work under either DOS or Linux. To boot from a partition, SYSLINUX needs to be launched from a Master Boot Record or another boot loader, just like DOS itself would. A sample master boot sector (<code>mbr.bin</code>) is included with SYSLINUX.</p>
 <h2>BUGS</h2>
-<p> I would appreciate hearing of any problems you have with <font SIZE="-1">SYSLINUX</font>. I would also like to hear from you if you have successfully used <font SIZE="-1">SYSLINUX</font>, especially if you are using it for a distribution. </p>
+<p> I would appreciate hearing of any problems you have with SYSLINUX. I would also like to hear from you if you have successfully used SYSLINUX, especially if you are using it for a distribution. </p>
 <p> If you are reporting problems, please include all possible information about your system and your BIOS; the vast majority of all problems reported turn out to be BIOS or hardware bugs, and I need as much information as possible in order to diagnose the problems. </p>
-<p> There is a mailing list for discussion among <font SIZE="-1">SYSLINUX</font> users and for announcements of new and test versions. To join, send a message to majordomo [at] linux.kernel.org with the line: </p>
+<p> There is a mailing list for discussion among SYSLINUX users and for announcements of new and test versions. To join, send a message to majordomo [at] linux.kernel.org with the line: </p>
 <p> <code>subscribe syslinux</code> </p>
 <p> in the body of the message. The submission address is syslinux [at] linux.kernel.org.</p>
 <h2>SEE ALSO</h2>

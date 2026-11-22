@@ -9,8 +9,8 @@ description: "dash – command interpreter (shell)"
 
 <p><code>dash</code> &#8211; command interpreter (shell) </p>
 <h2>Synopsis</h2>
-<p>-words [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] -words [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] -words [<i>command_file </i>[<i>argument &#8230; </i>] ]<br />
- &#8211;<code>c</code> -words [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] -words [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] -words <i>command_string</i> [<i>command_name </i>[<i>argument &#8230; </i>] ]<br />
+<p>-words [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] -words [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] -words [<i>command_file </i>[<i>argument &#8230; </i>] ]<br/>
+ &#8211;<code>c</code> -words [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] -words [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] -words <i>command_string</i> [<i>command_name </i>[<i>argument &#8230; </i>] ]<br/>
  &#8211;<code>s</code> -words [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] -words [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] -words [<i>argument &#8230;</i> ]</p>
 <h2>Description</h2>
 <p>is the standard command interpreter for the system. The current version of is in the process of being changed to conform with the <code>POSIX</code> 1003.2 and 1003.2a specifications for the shell. This version has many features which make it appear similar in some respects to the Korn shell, but it is not a Korn shell clone (see ksh(1)). Only features designated by <code>POSIX</code> plus a few Berkeley extensions, are being incorporated into this shell. This man page is not intended to be a tutorial or a complete specification of the shell.</p>

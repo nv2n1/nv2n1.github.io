@@ -14,18 +14,18 @@ description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation
 <p> Format types that can be handled by an external library via an optional pseudo file type (currently <code>sndfile</code> or <code>ffmpeg</code>) are marked e.g. `(also with <code>-t sndfile</code>)&#8217;. This might be useful if you have a file that doesn&#8217;t work with SoX&#8217;s default format readers and writers, and there&#8217;s an external reader or writer for that format. </p>
 <p> To see if SoX has support for an optional format or device, enter <code>sox -h</code> and look for its name under the list: `AUDIO FILE FORMATS&#8217; or `AUDIO DEVICE DRIVERS&#8217;.</p>
 <h3>SOX FORMATS &amp; DEVICE DRIVERS</h3>
-<p><code>.raw</code> (also with <code>-t sndfile</code>), <code>.f32</code>, <code>.f64</code>, <code>.s8</code>, <code>.s16</code>, <code>.s24</code>, <code>.s32</code>,<br />
+<p><code>.raw</code> (also with <code>-t sndfile</code>), <code>.f32</code>, <code>.f64</code>, <code>.s8</code>, <code>.s16</code>, <code>.s24</code>, <code>.s32</code>,<br/>
  <code>.u8</code>, <code>.u16</code>, <code>.u24</code>, <code>.u32</code>, <code>.ul</code>, <code>.al</code>, <code>.lu</code>, <code>.la</code> </p>
 <dl>
 <dt>&nbsp;<wbr></dt>
 <dd>Raw (headerless) audio files. For <code>raw</code>, the sample rate and the data encoding must be given using command-line format options; for the other listed types, the sample rate defaults to 8kHz (but may be overridden), and the data encoding is defined by the given suffix. Thus <code>f32</code> and <code>f64</code> indicate files encoded as 32 and 64-bit (IEEE single and double precision) floating point PCM respectively; <code>s8</code>, <code>s16</code>, <code>s24</code>, and <code>s32</code> indicate 8, 16, 24, and 32-bit signed integer PCM respectively; <code>u8</code>, <code>u16</code>, <code>u24</code>, and <code>u32</code> indicate 8, 16, 24, and 32-bit unsigned integer PCM respectively; <code>ul</code> indicates `&mu;-law&#8217; (8-bit), <code>al</code> indicates `A-law&#8217; (8-bit), and <code>lu</code> and <code>la</code> are inverse bit order `&mu;-law&#8217; and inverse bit order `A-law&#8217; respectively. For all raw formats, the number of channels defaults to 1 (but may be overridden). </dd>
 <p> Headerless audio files on a SPARC computer are likely to be of format <code>ul</code>; on a Mac, they&#8217;re likely to be <code>u8</code> but with a sample rate of 11025 or 22050 Hz. </p>
 <p> See <code>.ima</code> and <code>.vox</code> for raw ADPCM formats, and <code>.cdda</code> for raw CD digital audio.</dl>
-<p> <code>.f4</code>, <code>.f8</code>, <code>.s1</code>, <code>.s2</code>, <code>.s3</code>, <code>.s4</code>,<br />
+<p> <code>.f4</code>, <code>.f8</code>, <code>.s1</code>, <code>.s2</code>, <code>.s3</code>, <code>.s4</code>,<br/>
  <code>.u1</code>, <code>.u2</code>, <code>.u3</code>, <code>.u4</code>, <code>.sb</code>, <code>.sw</code>, <code>.sl</code>, <code>.ub</code>, <code>.uw</code> </p>
 <dl>
 <dt>&nbsp;<wbr></dt>
-<dd>Deprecated aliases for <code>f32</code>, <code>f64</code>, <code>s8</code>, <code>s16</code>, <code>s24</code>, <code>s32</code>,<br />
+<dd>Deprecated aliases for <code>f32</code>, <code>f64</code>, <code>s8</code>, <code>s16</code>, <code>s24</code>, <code>s32</code>,<br/>
  <code>u8</code>, <code>u16</code>, <code>u24</code>, <code>u32</code>, <code>s8</code>, <code>s16</code>, <code>s32</code>, <code>u8</code>, and <code>u16</code> respectively.</dd>
 <dt><code>.8svx</code> (also with <code>-t sndfile</code>)</dt>
 <dd>Amiga 8SVX musical instrument description format.</dd>
@@ -242,7 +242,7 @@ description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation
 <dd>Fasttracker 2 Extended Instrument format.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-sox/">sox</a></code>(1), <code><a href="/docs/linux/man/1-soxi/">soxi</a></code>(1), <code><a href="/docs/linux/man/3-libsox/">libsox</a></code>(3), <code><a href="/docs/linux/man/1-octave/">octave</a></code>(1), <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) </p>
-<p> The SoX web page at <a rel="nofollow" href="http://sox.sourceforge.net">http://sox.sourceforge.net</a><br />
+<p> The SoX web page at <a rel="nofollow" href="http://sox.sourceforge.net">http://sox.sourceforge.net</a><br/>
  SoX scripting examples at <a rel="nofollow" href="http://sox.sourceforge.net/Docs/Scripts">http://sox.sourceforge.net/Docs/Scripts</a></p>
 <h3>References</h3>
 <dl>
@@ -251,7 +251,7 @@ description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation
 <dt>[2]</dt>
 <dd>Wikipedia, <i>PLS</i>, <a rel="nofollow" href="http://en.wikipedia.org/wiki/PLS_(file_format)">http://en.wikipedia.org/wiki/PLS_(file_format)</a></dd></dl>
 <h2>License</h2>
-<p>Copyright 1998-2013 Chris Bagwell and SoX Contributors.<br />
+<p>Copyright 1998-2013 Chris Bagwell and SoX Contributors.<br/>
  Copyright 1991 Lance Norskog and Sundry Contributors.</p>
 <h2>Authors</h2>
 <p>Chris Bagwell (cbagwell [at] users.sourceforge.net). Other authors and contributors are listed in the ChangeLog file that is distributed with the source code.</p>

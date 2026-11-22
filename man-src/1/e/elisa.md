@@ -10,7 +10,7 @@ description: "elisa – media center solution"
 
 <p> elisa &#8211; media center solution</p>
 <h2>SYNOPSIS</h2>
-<p> <code>elisa</code> [<i>option&#8230;</i>]<i> </i>[<i>config_file</i>]<br />
+<p> <code>elisa</code> [<i>option&#8230;</i>]<i> </i>[<i>config_file</i>]<br/>
  <code>elisa</code> [<i>option&#8230;</i>]<i> </i>-i<i> </i>import_file.py</p>
 <h2>DESCRIPTION</h2>
 <p> <code>elisa</code> is a open source media center solution. Elisa runs on the top of the GStreamer multimedia framework and uses the pigment lib for graphical user interaction. It is meant to be the all-in-one multimedia solution for your managing and playing your videos, audios and watch slide shows of your photos. It also automatically detects samba-shares, UPnP-devices and DAAP shares sharing media and makes them accessible from inside elisa. You can use it with your mouse, lirc-input device or simply with the keyboard.</p>
@@ -31,50 +31,50 @@ description: "elisa – media center solution"
 <p> To navigate through the menus, elisa reacts on key presses:</p>
 <dl>
 <dt><code>Basic keys</code></dt>
-<dd> <code>q or ESC</code><br />
-&nbsp;<wbr>Exit from Elisa<br />
- <code>f</code><br />
-&nbsp;<wbr>Toggle fullscreen<br />
- <code>Space</code><br />
-&nbsp;<wbr>Toggle menu/player<br />
- <code>Enter</code><br />
+<dd> <code>q or ESC</code><br/>
+&nbsp;<wbr>Exit from Elisa<br/>
+ <code>f</code><br/>
+&nbsp;<wbr>Toggle fullscreen<br/>
+ <code>Space</code><br/>
+&nbsp;<wbr>Toggle menu/player<br/>
+ <code>Enter</code><br/>
 &nbsp;<wbr>Activate Action on the selected Item </dd>
 <dt><code>Menu hidden and player active</code></dt>
-<dd> <code>Left or v</code><br />
-&nbsp;<wbr>Seek backward<br />
- <code>Right or b</code><br />
-&nbsp;<wbr>Seek forward<br />
- <code>Up/Down</code><br />
-&nbsp;<wbr>Volume up/down<br />
- <code>Enter</code><br />
-&nbsp;<wbr>Toggle play/pause<br />
- <code>x</code><br />
-&nbsp;<wbr>Previous track of playlist<br />
- <code>c</code><br />
-&nbsp;<wbr>Next track of playlist<br />
- <code>Space</code><br />
+<dd> <code>Left or v</code><br/>
+&nbsp;<wbr>Seek backward<br/>
+ <code>Right or b</code><br/>
+&nbsp;<wbr>Seek forward<br/>
+ <code>Up/Down</code><br/>
+&nbsp;<wbr>Volume up/down<br/>
+ <code>Enter</code><br/>
+&nbsp;<wbr>Toggle play/pause<br/>
+ <code>x</code><br/>
+&nbsp;<wbr>Previous track of playlist<br/>
+ <code>c</code><br/>
+&nbsp;<wbr>Next track of playlist<br/>
+ <code>Space</code><br/>
 &nbsp;<wbr>Show the menu </dd>
 <dt><code>List menu mode</code></dt>
-<dd> <code>Up/Down</code><br />
-&nbsp;<wbr>Navigate in the current menu level<br />
- <code>Right</code><br />
-&nbsp;<wbr>Go to the top context bar<br />
- <code>Backspace</code><br />
-&nbsp;<wbr>Go to previous menu<br />
- <code>Enter</code><br />
+<dd> <code>Up/Down</code><br/>
+&nbsp;<wbr>Navigate in the current menu level<br/>
+ <code>Right</code><br/>
+&nbsp;<wbr>Go to the top context bar<br/>
+ <code>Backspace</code><br/>
+&nbsp;<wbr>Go to previous menu<br/>
+ <code>Enter</code><br/>
 &nbsp;<wbr>Play media if it&#8217;s a media or navigate in the selected directory </dd>
 <dt><code>Grid menu mode</code></dt>
 <dd> The user can navigate in the 4 directions (up, down, left, right) using the direction keys. When the first row of the grid is reached, the user can enter the top context bar by hitting &quot;Up&quot; key once more. When the last row of the grid is reached, the user can enter the grid context bar by hitting &quot;Down&quot; key once more. </dd>
 <p> Navigation inside the grid context bar is horizontal, use Left/Right keys to navigate in the 3 buttons. To activate a button, press Enter. To leave the context bar, press Up key.</p>
 <dt><code>Cover flow menu mode</code></dt>
 <dd>
- <code>Left/Right</code><br />
-&nbsp;<wbr>Navigate in the current menu level<br />
- <code>Up</code><br />
-&nbsp;<wbr>Go to the top context bar<br />
- <code>Backspace</code><br />
-&nbsp;<wbr>Go to previous menu<br />
- <code>Enter</code><br />
+ <code>Left/Right</code><br/>
+&nbsp;<wbr>Navigate in the current menu level<br/>
+ <code>Up</code><br/>
+&nbsp;<wbr>Go to the top context bar<br/>
+ <code>Backspace</code><br/>
+&nbsp;<wbr>Go to previous menu<br/>
+ <code>Enter</code><br/>
 &nbsp;<wbr>Play media if it&#8217;s a media or navigate in the selected directory </dd>
 <dt><code>Top context bar</code></dt>
 <dd> When navigating inside menus, there should always be a context bar available on the top of the window. Navigation inside this bar is horizontal, use Left/Right keys to navigate in the bar buttons. To activate a button, press Enter. To leave the context bar, press Down key. </dd>

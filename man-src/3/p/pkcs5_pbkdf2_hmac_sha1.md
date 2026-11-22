@@ -16,12 +16,12 @@ description: "hcrypto miscellaneous functions –"
 <p>As descriped in PKCS5, convert a password, salt, and iteration counter into a crypto key. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>password</i> Password.<br />
- <i>password_len</i> Length of password.<br />
- <i>salt</i> Salt<br />
- <i>salt_len</i> Length of salt.<br />
- <i>iter</i> iteration counter.<br />
- <i>keylen</i> the output key length.<br />
+<dd><i>password</i> Password.<br/>
+ <i>password_len</i> Length of password.<br/>
+ <i>salt</i> Salt<br/>
+ <i>salt_len</i> Length of salt.<br/>
+ <i>iter</i> iteration counter.<br/>
+ <i>keylen</i> the output key length.<br/>
  <i>key</i> the output key.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

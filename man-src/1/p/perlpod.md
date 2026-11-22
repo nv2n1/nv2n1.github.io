@@ -13,7 +13,7 @@ perlpod - the Plain Old Documentation format
 
  Pod is a simple-to-use markup language used for writing documentation for Perl, Perl programs, and Perl modules. 
 
- Translators are available for converting Pod to various formats like plain text, <font SIZE="-1">HTML,</font> man pages, and more. 
+ Translators are available for converting Pod to various formats like plain text, HTML, man pages, and more. 
 
  Pod markup consists of three basic kinds of paragraphs: ordinary, verbatim, and command.
 
@@ -155,7 +155,7 @@ perlpod - the Plain Old Documentation format
 
  Some <i>formatnames</i> will require a leading colon (as in <tt>&quot;=for :formatname&quot;</tt>, or <tt>&quot;=begin :formatname&quot; ... &quot;=end :formatname&quot;</tt>), to signal that the text is not raw data, but instead <i>is</i> Pod text (i.e., possibly containing formatting codes) that's just not for normal formatting (e.g., may not be a normal-use paragraph, but might be for formatting as a footnote).
 </dd><dt>&quot;=encoding <i>encodingname</i>&quot;
-</dt><dd> This command is used for declaring the encoding of a document. Most users won't need this; but if your encoding isn't US-ASCII, then put a <tt>&quot;=encoding </tt>encodingname<tt>&quot;</tt> command very early in the document so that pod formatters will know how to decode the document. For <i>encodingname</i>, use a name recognized by the Encode::Supported module. Some pod formatters may try to guess between a Latin-1 or <font SIZE="-1">CP-1252</font> versus <font SIZE="-1">UTF-8</font> encoding, but they may guess wrong. It's best to be explicit if you use anything besides strict <font SIZE="-1">ASCII.</font> Examples: 
+</dt><dd> This command is used for declaring the encoding of a document. Most users won't need this; but if your encoding isn't US-ASCII, then put a <tt>&quot;=encoding </tt>encodingname<tt>&quot;</tt> command very early in the document so that pod formatters will know how to decode the document. For <i>encodingname</i>, use a name recognized by the Encode::Supported module. Some pod formatters may try to guess between a Latin-1 or CP-1252 versus UTF-8 encoding, but they may guess wrong. It's best to be explicit if you use anything besides strict ASCII. Examples: 
 
  <pre>
   =encoding latin1
@@ -237,14 +237,14 @@ perlpod - the Plain Old Documentation format
 <dt>&bull;
 </dt><dd> <tt>&quot;L&lt;scheme:...&gt;&quot;</tt> 
  <tt>&quot;L&lt;text|scheme:...&gt;&quot;</tt> 
- Links to an absolute <font SIZE="-1">URL.</font> For example, <tt>&quot;L&lt;<a rel="nofollow" HREF="http://www.perl.org/">http://www.perl.org/</a>&gt;&quot;</tt> or <tt>&quot;L&lt;The Perl Home Page|<a rel="nofollow" HREF="http://www.perl.org/">http://www.perl.org/</a>&gt;&quot;</tt>.</dd></dl>
+ Links to an absolute URL. For example, <tt>&quot;L&lt;<a rel="nofollow" HREF="http://www.perl.org/">http://www.perl.org/</a>&gt;&quot;</tt> or <tt>&quot;L&lt;The Perl Home Page|<a rel="nofollow" HREF="http://www.perl.org/">http://www.perl.org/</a>&gt;&quot;</tt>.</dd></dl>
 </dl>
 
 <dl>
 </dl>
 
 <dt>&quot;E&lt;escape&gt;&quot; --- a character escape
-</dt><dd> Very similar to <font SIZE="-1">HTML/XML</font> <tt>&quot;&amp;</tt>foo<tt>;&quot;</tt> ``entity references'':
+</dt><dd> Very similar to HTML/XML <tt>&quot;&amp;</tt>foo<tt>;&quot;</tt> ``entity references'':
 </dd><dl>
 <dl>
 <dt>&bull;
@@ -258,7 +258,7 @@ perlpod - the Plain Old Documentation format
  The above four are optional except in other formatting codes, notably <tt>&quot;L&lt;...&gt;&quot;</tt>, and when preceded by a capital letter.
 </dd><dt>&bull;
 </dt><dd> <tt>&quot;E&lt;htmlname&gt;&quot;</tt> 
- Some non-numeric <font SIZE="-1">HTML</font> entity name, such as <tt>&quot;E&lt;eacute&gt;&quot;</tt>, meaning the same thing as <tt>&quot;&amp;eacute;&quot;</tt> in <font SIZE="-1">HTML</font> --- i.e., a lowercase e with an acute (/-shaped) accent.
+ Some non-numeric HTML entity name, such as <tt>&quot;E&lt;eacute&gt;&quot;</tt>, meaning the same thing as <tt>&quot;&amp;eacute;&quot;</tt> in HTML --- i.e., a lowercase e with an acute (/-shaped) accent.
 </dd><dt>&bull;
 </dt><dd> <tt>&quot;E&lt;number&gt;&quot;</tt> 
  The ASCII/Latin-1/Unicode character with that number. A leading ``0x'' means that <i>number</i> is hex, as in <tt>&quot;E&lt;0x201E&gt;&quot;</tt>. A leading ``0'' means that <i>number</i> is octal, as in <tt>&quot;E&lt;075&gt;&quot;</tt>. Otherwise <i>number</i> is interpreted as being in decimal, as in <tt>&quot;E&lt;181&gt;&quot;</tt>. 
@@ -339,7 +339,7 @@ C&lt;open(X, "E&lt;gt&gt;E&lt;gt&gt;thing.dat") || die $ !&gt;
 
  The intent is simplicity of use, not power of expression. Paragraphs look like paragraphs (block format), so that they stand out visually, and so that I could run them through <tt>&quot;fmt&quot;</tt> easily to reformat them (that's F7 in my version of <b>vi</b>, or Esc Q in my version of <b>emacs</b>). I wanted the translator to always leave the <tt>&quot;'&quot;</tt> and <tt>&quot;`&quot;</tt> and <tt>&quot;&quot;&quot;</tt> quotes alone, in verbatim mode, so I could slurp in a working program, shift it over four spaces, and have it print out, er, verbatim. And presumably in a monospace font. 
 
- The Pod format is not necessarily sufficient for writing a book. Pod is just meant to be an idiot-proof common source for nroff, <font SIZE="-1">HTML,</font> TeX, and other markup languages, as used for online documentation. Translators exist for <b>pod2text</b>, <b>pod2html</b>, <b>pod2man</b> (that's for <b><a HREF="/docs/linux/man/1-nroff/">nroff</a></b>(1) and <b><a HREF="/docs/linux/man/1-troff/">troff</a></b>(1)), <b>pod2latex</b>, and <b>pod2fm</b>. Various others are available in <font SIZE="-1">CPAN.</font>
+ The Pod format is not necessarily sufficient for writing a book. Pod is just meant to be an idiot-proof common source for nroff, HTML, TeX, and other markup languages, as used for online documentation. Translators exist for <b>pod2text</b>, <b>pod2html</b>, <b>pod2man</b> (that's for <b><a HREF="/docs/linux/man/1-nroff/">nroff</a></b>(1) and <b><a HREF="/docs/linux/man/1-troff/">troff</a></b>(1)), <b>pod2latex</b>, and <b>pod2fm</b>. Various others are available in CPAN.
 
 <h3>Embedding Pods in Perl Modules</h3>
 
@@ -362,7 +362,7 @@ C&lt;open(X, "E&lt;gt&gt;E&lt;gt&gt;thing.dat") || die $ !&gt;
 </dt><dd> 
  The <b>podchecker</b> command is provided for checking Pod syntax for errors and warnings. For example, it checks for completely blank lines in Pod blocks and for unknown commands and formatting codes. You should still also pass your document through one or more translators and proofread the result, or print out the result and proofread that. Some of the problems found may be bugs in the translators, which you may or may not wish to work around.
 </dd><dt>&bull;
-</dt><dd> If you're more familiar with writing in <font SIZE="-1">HTML</font> than with writing in Pod, you can try your hand at writing documentation in simple <font SIZE="-1">HTML,</font> and converting it to Pod with the experimental Pod::HTML2Pod module, (available in <font SIZE="-1">CPAN</font>), and looking at the resulting code. The experimental Pod::PXML module in <font SIZE="-1">CPAN</font> might also be useful.
+</dt><dd> If you're more familiar with writing in HTML than with writing in Pod, you can try your hand at writing documentation in simple HTML, and converting it to Pod with the experimental Pod::HTML2Pod module, (available in CPAN), and looking at the resulting code. The experimental Pod::PXML module in CPAN might also be useful.
 </dd><dt>&bull;
 </dt><dd> Many older Pod translators require the lines before every Pod command and after every Pod command (including ``=cut''!) to be a blank line. Having something like this: 
  <pre>

@@ -38,15 +38,15 @@ description: "ppmtoxpm – convert a portable pixmap into an X11 pixmap"
 <p> An option to match the closest (rather than exact) color name mnemonic from the rgb text would be a desirable enhancement. </p>
 <p> Truncation of the least significant bits of a RGB value may result in nonexact matches when performing color name mnemonic lookups. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ppmcolormask/">ppmcolormask</a></code>(1), <code><a href="/docs/linux/man/1-xpmtoppm/">xpmtoppm</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5)<br />
+<p> <code><a href="/docs/linux/man/1-ppmcolormask/">ppmcolormask</a></code>(1), <code><a href="/docs/linux/man/1-xpmtoppm/">xpmtoppm</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5)<br/>
  XPM Manual by Arnaud Le Hors lehors [at] mirsa.inria.fr</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1990 by Mark W. Snitily. </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. This software is provided &quot;as is&quot; without express or implied warranty. </p>
 <p> This tool was developed for Schlumberger Technologies, ATE Division, and with their permission is being made available to the public with the above copyright notice and permission notice. </p>
-<p> Upgraded to XPM2 by<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;Paul Breslaw, Mecasoft SA, Zurich, Switzerland&nbsp;(paul [at] mecazh.uu.ch)<br />
+<p> Upgraded to XPM2 by<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;Paul Breslaw, Mecasoft SA, Zurich, Switzerland&nbsp;(paul [at] mecazh.uu.ch)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Thu Nov&nbsp;<wbr>&nbsp;8 16:01:17 1990 </p>
-<p> Upgraded to XPM version 3 by<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;Arnaud Le Hors&nbsp;(lehors [at] mirsa.inria.fr)<br />
+<p> Upgraded to XPM version 3 by<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;Arnaud Le Hors&nbsp;(lehors [at] mirsa.inria.fr)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Tue Apr 9 1991 </p>

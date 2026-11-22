@@ -22,10 +22,10 @@ description: "std::_List_base< _Tp, _Alloc > –"
 <p> void <code>_M_init</code> () </p>
 <p> allocator_type <code>get_allocator</code> () const noexcept</p>
 <h3>Protected Types</h3>
-<p>typedef _Alloc::template<br />
+<p>typedef _Alloc::template<br/>
  rebind&lt; <code>_List_node</code>&lt; _Tp &gt; </p>
 <p>&nbsp;<wbr>&gt;::other&nbsp;<wbr><code>_Node_alloc_type</code>&quot; </p>
-<p> typedef _Alloc::template<br />
+<p> typedef _Alloc::template<br/>
  rebind&lt; _Tp &gt;::other <code>_Tp_alloc_type</code>&quot;</p>
 <h3>Protected Member Functions</h3>
 <p><code>_List_node</code>&lt; _Tp &gt; * <code>_M_get_node</code> () </p>

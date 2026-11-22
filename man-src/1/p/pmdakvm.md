@@ -10,7 +10,7 @@ description: "pmdakvm – Linux virtualization performance metrics domain agent 
 
 <p> <code>pmdakvm</code> &#8211; Linux virtualization performance metrics domain agent (PMDA)</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdakvm</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the Linux KVM virtualisation subsystem. </p>
+<p> <code>pmdakvm</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values from the Linux KVM virtualisation subsystem. </p>
 <p> Unlike many PMDAs it dynamically enumerates its metric hierarchy, based entirely on the contents of /sys/kernel/debug/kvm.</p>
 <h2>INSTALLATION</h2>
 <p> Install the kvm PMDA by using the Install script as root: </p>

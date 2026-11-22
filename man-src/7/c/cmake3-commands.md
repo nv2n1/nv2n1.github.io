@@ -142,11 +142,11 @@ description: "cmake-commands – CMake Language Command Reference"
 <p> If <code>MACOSX_BUNDLE</code> is given the corresponding property will be set on the created target. See documentation of the <code>MACOSX_BUNDLE</code> target property for details. </p>
 <p> If <code>EXCLUDE_FROM_ALL</code> is given the corresponding property will be set on the created target. See documentation of the <code>EXCLUDE_FROM_ALL</code> target property for details. </p>
 <p> Source arguments to <code>add_executable</code> may use &quot;generator expressions&quot; with the syntax <code>$&lt;&#8230;&gt;</code>. See the <code><a href="/docs/linux/man/7-cmake3-generator-expressions/">cmake3-generator-expressions</a>(7)</code> manual for available expressions. See the <code><a href="/docs/linux/man/7-cmake3-buildsystem/">cmake3-buildsystem</a>(7)</code> manual for more on defining buildsystem properties. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>add_executable(&lt;name&gt; IMPORTED [GLOBAL])</pre>
 <p>An <i>IMPORTED executable target</i> references an executable file located outside the project. No rules are generated to build it, and the <code>IMPORTED</code> target property is <code>True</code>. The target name has scope in the directory in which it is created and below, but the <code>GLOBAL</code> option extends visibility. It may be referenced like any target built within the project. <code>IMPORTED</code> executables are useful for convenient reference from commands like <code>add_custom_command()</code>. Details about the imported executable are specified by setting properties whose names begin in <code>IMPORTED_</code>. The most important such property is <code>IMPORTED_LOCATION</code> (and its per-configuration version <code>IMPORTED_LOCATION_&lt;CONFIG&gt;</code>) which specifies the location of the main executable file on disk. See documentation of the <code>IMPORTED_*</code> properties for more information. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>add_executable(&lt;name&gt; ALIAS &lt;target&gt;)</pre>
 <p>Creates an <i>Alias Target</i>, such that <code>&lt;name&gt;</code> can be used to refer to <code>&lt;target&gt;</code> in subsequent commands. The <code>&lt;name&gt;</code> does not appear in the generated buildsystem as a make target. The <code>&lt;target&gt;</code> may not be an <i>Imported Target</i> or an <code>ALIAS</code>. <code>ALIAS</code> targets can be used as targets to read properties from, executables for custom commands and custom targets. They can also be tested for existence with the regular <code>if(TARGET)</code> subcommand. The <code>&lt;name&gt;</code> may not be used to modify properties of <code>&lt;target&gt;</code>, that is, it may not be used as the operand of <code>set_property()</code>, <code>set_target_properties()</code>, <code>target_link_libraries()</code> etc. An <code>ALIAS</code> target may not be installed or exported.</p>
@@ -220,7 +220,7 @@ add_executable(... $&lt;TARGET_OBJECTS:objlib&gt; ...)</pre>
  --exe $&lt;TARGET_FILE:myexe&gt;)</pre>
 <p>This creates a test <code>mytest</code> whose command runs a <code>testDriver</code> tool passing the configuration name and the full path to the executable file produced by target <code>myexe</code>. </p>
 <p> <code>NOTE:</code> CMake will generate tests only if the <code>enable_testing()</code> command has been invoked. The <code>CTest</code> module invokes the command automatically when the <code>BUILD_TESTING</code> option is <code>ON</code>. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>add_test(&lt;name&gt; &lt;command&gt; [&lt;arg&gt;...])</pre>
 <p>Add a test called <code>&lt;name&gt;</code> with the given command-line. Unlike the above <code>NAME</code> signature no transformation is performed on the command-line to support target names or generator expressions.</dl>
@@ -495,17 +495,17 @@ CACHED_VARIABLE = documents a CMake cache variable</pre>
 <p>Store the current build directory in the CMake user package registry for package <code>&lt;name&gt;</code>. The find_package command may consider the directory while searching for package <code>&lt;name&gt;</code>. This helps dependent projects find and use a package from the current project&#8217;s build tree without help from the user. Note that the entry in the package registry that this command creates works only in conjunction with a package configuration file (<code>&lt;name&gt;Config.cmake</code>) that works with the build tree. In some cases, for example for packaging and for system wide installations, it is not desirable to write the user package registry. If the <code>CMAKE_EXPORT_NO_PACKAGE_REGISTRY</code> variable is enabled, the <code>export(PACKAGE)</code> command will do nothing.</p>
 <h3>file</h3>
 <p>File manipulation command. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(WRITE &lt;filename&gt; &lt;content&gt;...)
 file(APPEND &lt;filename&gt; &lt;content&gt;...)</pre>
 <p>Write <code>&lt;content&gt;</code> into a file called <code>&lt;filename&gt;</code>. If the file does not exist, it will be created. If the file already exists, <code>WRITE</code> mode will overwrite it and <code>APPEND</code> mode will append to the end. (If the file is a build input, use the <code>configure_file()</code> command to update the file only when its content changes.) </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(READ &lt;filename&gt; &lt;variable&gt;
  [OFFSET &lt;offset&gt;] [LIMIT &lt;max-in&gt;] [HEX])</pre>
 <p>Read content from a file called <code>&lt;filename&gt;</code> and store it in a <code>&lt;variable&gt;</code>. Optionally start from the given <code>&lt;offset&gt;</code> and read at most <code>&lt;max-in&gt;</code> bytes. The <code>HEX</code> option causes data to be converted to a hexadecimal representation (useful for binary data). </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(STRINGS &lt;filename&gt; &lt;variable&gt; [&lt;options&gt;...])</pre>
 <p>Parse a list of ASCII strings from <code>&lt;filename&gt;</code> and store it in <code>&lt;variable&gt;</code>. Binary data in the file are ignored. Carriage return (<code>
@@ -533,11 +533,11 @@ file(APPEND &lt;filename&gt; &lt;content&gt;...)</pre>
 <p> For example, the code </p>
 <pre>file(STRINGS myfile.txt myfile)</pre>
 <p>stores a list in the variable <code>myfile</code> in which each item is a line from the input file. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(&lt;MD5|SHA1|SHA224|SHA256|SHA384|SHA512&gt; &lt;filename&gt; &lt;variable&gt;)</pre>
 <p>Compute a cryptographic hash of the content of <code>&lt;filename&gt;</code> and store it in a <code>&lt;variable&gt;</code>. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(GLOB &lt;variable&gt;
  [LIST_DIRECTORIES true|false] [RELATIVE &lt;path&gt;]
@@ -556,31 +556,31 @@ f[3-5].txt - match files f3.txt, f4.txt, f5.txt</pre>
 <p> By default <code>GLOB_RECURSE</code> omits directories from result list &#8211; setting <code>LIST_DIRECTORIES</code> to true adds directories to result list. If <code>FOLLOW_SYMLINKS</code> is given or policy <code>CMP0009</code> is not set to <code>OLD</code> then <code>LIST_DIRECTORIES</code> treats symlinks as directories. </p>
 <p> Examples of recursive globbing include: </p>
 <pre>/dir/*.py - match all python files in /dir and subdirectories</pre>
-<p><center> &#8212;-<br />
+<p><center> &#8212;-<br/>
  </center> </p>
 <pre>file(RENAME &lt;oldname&gt; &lt;newname&gt;)</pre>
 <p>Move a file or directory within a filesystem from <code>&lt;oldname&gt;</code> to <code>&lt;newname&gt;</code>, replacing the destination atomically. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(REMOVE [&lt;files&gt;...])
 file(REMOVE_RECURSE [&lt;files&gt;...])</pre>
 <p>Remove the given files. The <code>REMOVE_RECURSE</code> mode will remove the given files and directories, also non-empty directories </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(MAKE_DIRECTORY [&lt;directories&gt;...])</pre>
 <p>Create the given directories and their parents as needed. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(RELATIVE_PATH &lt;variable&gt; &lt;directory&gt; &lt;file&gt;)</pre>
 <p>Compute the relative path from a <code>&lt;directory&gt;</code> to a <code>&lt;file&gt;</code> and store it in the <code>&lt;variable&gt;</code>. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(TO_CMAKE_PATH &quot;&lt;path&gt;&quot; &lt;variable&gt;)
 file(TO_NATIVE_PATH &quot;&lt;path&gt;&quot; &lt;variable&gt;)</pre>
 <p>The <code>TO_CMAKE_PATH</code> mode converts a native <code>&lt;path&gt;</code> into a cmake-style path with forward-slashes (<code>/</code>). The input can be a single path or a system search path like <code>$ENV{PATH}</code>. A search path will be converted to a cmake-style list separated by <code>;</code> characters. </p>
 <p> The <code>TO_NATIVE_PATH</code> mode converts a cmake-style <code>&lt;path&gt;</code> into a native path with platform-specific slashes (<code>\</code> on Windows and <code>/</code> elsewhere). </p>
 <p> Always use double quotes around the <code>&lt;path&gt;</code> to be sure it is treated as a single argument to this command. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(DOWNLOAD &lt;url&gt; &lt;file&gt; [&lt;options&gt;...])
 file(UPLOAD &lt;file&gt; &lt;url&gt; [&lt;options&gt;...])</pre>
@@ -605,12 +605,12 @@ file(UPLOAD &lt;file&gt; &lt;url&gt; [&lt;options&gt;...])</pre>
 <dt><code>TLS_CAINFO &lt;file&gt;</code></dt>
 <dd>Specify a custom Certificate Authority file for <code>https://</code> URLs. </dd>
 <p> For <code>https://</code> URLs CMake must be built with OpenSSL support. <code>TLS/SSL</code> certificates are not checked by default. Set <code>TLS_VERIFY</code> to <code>ON</code> to check certificates and/or use <code>EXPECTED_HASH</code> to verify downloaded content. If neither <code>TLS</code> option is given CMake will check variables <code>CMAKE_TLS_VERIFY</code> and <code>CMAKE_TLS_CAINFO</code>, respectively. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(TIMESTAMP &lt;filename&gt; &lt;variable&gt; [&lt;format&gt;] [UTC])</pre>
 <p>Compute a string representation of the modification time of <code>&lt;filename&gt;</code> and store it in <code>&lt;variable&gt;</code>. Should the command be unable to obtain a timestamp variable will be set to the empty string (&quot;&quot;). </p>
 <p> See the <code>string(TIMESTAMP)</code> command for documentation of the <code>&lt;format&gt;</code> and <code>UTC</code> options. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(GENERATE OUTPUT output-file
  &lt;INPUT input-file|CONTENT content&gt;
@@ -625,7 +625,7 @@ file(UPLOAD &lt;file&gt; &lt;url&gt; [&lt;options&gt;...])</pre>
 <dt><code>OUTPUT &lt;output-file&gt;</code></dt>
 <dd>Specify the output file name to generate. Use generator expressions such as <code>$&lt;CONFIG&gt;</code> to specify a configuration-specific output file name. Multiple configurations may generate the same output file only if the generated content is identical. Otherwise, the <code>&lt;output-file&gt;</code> must evaluate to an unique name for each configuration. </dd>
 <p> Exactly one <code>CONTENT</code> or <code>INPUT</code> option must be given. A specific <code>OUTPUT</code> file may be named by at most one invocation of <code>file(GENERATE)</code>. Generated files are modified on subsequent cmake runs only if their content is changed. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(&lt;COPY|INSTALL&gt; &lt;files&gt;... DESTINATION &lt;dir&gt;
  [FILE_PERMISSIONS &lt;permissions&gt;...]
@@ -637,7 +637,7 @@ file(UPLOAD &lt;file&gt; &lt;url&gt; [&lt;options&gt;...])</pre>
 <p>The <code>COPY</code> signature copies files, directories, and symlinks to a destination folder. Relative input paths are evaluated with respect to the current source directory, and a relative destination is evaluated with respect to the current build directory. Copying preserves input file timestamps, and optimizes out a file if it exists at the destination with the same timestamp. Copying preserves input permissions unless explicit permissions or <code>NO_SOURCE_PERMISSIONS</code> are given (default is <code>USE_SOURCE_PERMISSIONS</code>). </p>
 <p> See the <code>install(DIRECTORY)</code> command for documentation of permissions, <code>FILES_MATCHING</code>, <code>PATTERN</code>, <code>REGEX</code>, and <code>EXCLUDE</code> options. Copying directories preserves the structure of their content even if options are used to select a subset of files. </p>
 <p> The <code>INSTALL</code> signature differs slightly from <code>COPY</code>: it prints status messages (subject to the <code>CMAKE_INSTALL_MESSAGE</code> variable), and <code>NO_SOURCE_PERMISSIONS</code> is default. Installation scripts generated by the <code>install()</code> command use this signature (with some undocumented options for internal use). </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>file(LOCK &lt;path&gt; [DIRECTORY] [RELEASE]
  [GUARD &lt;FUNCTION|FILE|PROCESS&gt;]
@@ -1183,7 +1183,7 @@ endfunction(&lt;name&gt;)</pre>
 <p> See also the more general <code>get_property()</code> command.</p>
 <h3>get_filename_component</h3>
 <p>Get a specific component of a full filename. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>get_filename_component(&lt;VAR&gt; &lt;FileName&gt; &lt;COMP&gt; [CACHE])</pre>
 <p>Set <code>&lt;VAR&gt;</code> to a component of <code>&lt;FileName&gt;</code>, where <code>&lt;COMP&gt;</code> is one of: </p>
@@ -1193,7 +1193,7 @@ EXT = File name longest extension (.b.c from d/a.b.c)
 NAME_WE = File name without directory or longest extension
 PATH = Legacy alias for DIRECTORY (use for CMake &lt;= 2.8.11)</pre>
 <p>Paths are returned with forward slashes and have no trailing slashes. The longest file extension is always considered. If the optional <code>CACHE</code> argument is specified, the result variable is added to the cache. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>get_filename_component(&lt;VAR&gt; &lt;FileName&gt;
  &lt;COMP&gt; [BASE_DIR &lt;BASE_DIR&gt;]
@@ -1203,7 +1203,7 @@ PATH = Legacy alias for DIRECTORY (use for CMake &lt;= 2.8.11)</pre>
 REALPATH = Full path to existing file with symlinks resolved</pre>
 <p>If the provided <code>&lt;FileName&gt;</code> is a relative path, it is evaluated relative to the given base directory <code>&lt;BASE_DIR&gt;</code>. If no base directory is provided, the default base directory will be <code>CMAKE_CURRENT_SOURCE_DIR</code>. </p>
 <p> Paths are returned with forward slashes and have no trailing slahes. If the optional <code>CACHE</code> argument is specified, the result variable is added to the cache. </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <pre>get_filename_component(&lt;VAR&gt; &lt;FileName&gt;
  PROGRAM [PROGRAM_ARGS &lt;ARG_VAR&gt;]

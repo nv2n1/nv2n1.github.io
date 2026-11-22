@@ -10,7 +10,7 @@ description: "claqge.f –"
 <p>claqge.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>claqge</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, EQUED)<br />
+<p>subroutine <code>claqge</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, EQUED)<br/>
  <i></i><code>CLAQGE</code> scales a general rectangular matrix, using row and column scaling factors computed by sgeequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claqge (integerM, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )R, real, dimension( * )C, realROWCND, realCOLCND, realAMAX, characterEQUED)</h3>

@@ -96,25 +96,25 @@ description: "gimprc – gimp configuration file"
 <dt>(global-font yes)</dt>
 <dd>When enabled, the selected font will be used for all tools. Possible values are yes and no. </dd>
 <dt>(default-image</dt>
-<dd>&nbsp;<wbr>(width 640)<br />
-&nbsp;<wbr>(height 400)<br />
-&nbsp;<wbr>(unit pixels)<br />
-&nbsp;<wbr>(xresolution 72.000000)<br />
-&nbsp;<wbr>(yresolution 72.000000)<br />
-&nbsp;<wbr>(resolution-unit inches)<br />
-&nbsp;<wbr>(image-type rgb)<br />
-&nbsp;<wbr>(fill-type background-fill)<br />
+<dd>&nbsp;<wbr>(width 640)<br/>
+&nbsp;<wbr>(height 400)<br/>
+&nbsp;<wbr>(unit pixels)<br/>
+&nbsp;<wbr>(xresolution 72.000000)<br/>
+&nbsp;<wbr>(yresolution 72.000000)<br/>
+&nbsp;<wbr>(resolution-unit inches)<br/>
+&nbsp;<wbr>(image-type rgb)<br/>
+&nbsp;<wbr>(fill-type background-fill)<br/>
 &nbsp;<wbr>(comment&nbsp;<wbr>&quot;Created with GIMP&quot;)) </dd>
 <p> Sets the default image in the &quot;File/New&quot; dialog. This is a parameter list. </p>
 <dt>(default-grid</dt>
-<dd>&nbsp;<wbr>(style solid)<br />
-&nbsp;<wbr>(fgcolor&nbsp;<wbr>(color-rgba 0.000000 0.000000 0.000000 1.000000))<br />
-&nbsp;<wbr>(bgcolor&nbsp;<wbr>(color-rgba 1.000000 1.000000 1.000000 1.000000))<br />
-&nbsp;<wbr>(xspacing 10.000000)<br />
-&nbsp;<wbr>(yspacing 10.000000)<br />
-&nbsp;<wbr>(spacing-unit inches)<br />
-&nbsp;<wbr>(xoffset 0.000000)<br />
-&nbsp;<wbr>(yoffset 0.000000)<br />
+<dd>&nbsp;<wbr>(style solid)<br/>
+&nbsp;<wbr>(fgcolor&nbsp;<wbr>(color-rgba 0.000000 0.000000 0.000000 1.000000))<br/>
+&nbsp;<wbr>(bgcolor&nbsp;<wbr>(color-rgba 1.000000 1.000000 1.000000 1.000000))<br/>
+&nbsp;<wbr>(xspacing 10.000000)<br/>
+&nbsp;<wbr>(yspacing 10.000000)<br/>
+&nbsp;<wbr>(spacing-unit inches)<br/>
+&nbsp;<wbr>(xoffset 0.000000)<br/>
+&nbsp;<wbr>(yoffset 0.000000)<br/>
 &nbsp;<wbr>(offset-unit inches)) </dd>
 <p> Specify a default image grid. This is a parameter list. </p>
 <dt>(undo-levels 5)</dt>
@@ -136,12 +136,12 @@ description: "gimprc – gimp configuration file"
 <dt>(thumbnail-filesize-limit 4M)</dt>
 <dd>The thumbnail in the Open dialog will be automatically updated if the file being previewed is smaller than the size set here. The integer size can contain a suffix of &#8216;B&#8217;, &#8216;K&#8217;, &#8216;M&#8217; or &#8216;G&#8217; which makes GIMP interpret the size as being specified in bytes, kilobytes, megabytes or gigabytes. If no suffix is specified the size defaults to being specified in kilobytes. </dd>
 <dt>(color-management</dt>
-<dd>&nbsp;<wbr>(mode display)<br />
-&nbsp;<wbr>(display-profile-from-gdk no)<br />
-&nbsp;<wbr>(display-rendering-intent perceptual)<br />
-&nbsp;<wbr>(simulation-rendering-intent perceptual)<br />
-&nbsp;<wbr>(simulation-gamut-check no)<br />
-&nbsp;<wbr>(out-of-gamut-color&nbsp;<wbr>(color-rgb 0.501961 0.501961 0.501961))<br />
+<dd>&nbsp;<wbr>(mode display)<br/>
+&nbsp;<wbr>(display-profile-from-gdk no)<br/>
+&nbsp;<wbr>(display-rendering-intent perceptual)<br/>
+&nbsp;<wbr>(simulation-rendering-intent perceptual)<br/>
+&nbsp;<wbr>(simulation-gamut-check no)<br/>
+&nbsp;<wbr>(out-of-gamut-color&nbsp;<wbr>(color-rgb 0.501961 0.501961 0.501961))<br/>
 &nbsp;<wbr>(display-module&nbsp;<wbr>&quot;CdisplayLcms&quot;)) </dd>
 <p> Defines the color management behavior. This is a parameter list. </p>
 <dt>(color-profile-policy ask)</dt>
@@ -178,57 +178,57 @@ description: "gimprc – gimp configuration file"
 <dd>When enabled, the mouse pointer will be shown over the image while using a paint tool. Possible values are yes and no. </dd>
 <dt>(image-title-format &quot;%D*%f-%p.%i (%t, %L) %wx%h&quot;)</dt>
 <dd>Sets the text to appear in image window titles. This is a format string; certain % character sequences are recognised and expanded as follows: </dd>
-<p> %% literal percent sign<br />
- %f bare filename, or &quot;Untitled&quot;<br />
- %F full path to file, or &quot;Untitled&quot;<br />
- %p PDB image id<br />
- %i view instance number<br />
- %t image type (RGB, grayscale, indexed)<br />
- %z zoom factor as a percentage<br />
- %s source scale factor<br />
- %d destination scale factor<br />
- %Dx expands to x if the image is dirty, the empty string otherwise<br />
- %Cx expands to x if the image is clean, the empty string otherwise<br />
- %B expands to (modified) if the image is dirty, the empty string otherwise<br />
- %A expands to (clean) if the image is clean, the empty string otherwise<br />
- %l the number of layers<br />
- %L the number of layers (long form)<br />
- %m memory used by the image<br />
- %n the name of the active layer/channel<br />
- %P the PDB id of the active layer/channel<br />
- %w image width in pixels<br />
- %W image width in real-world units<br />
- %h image height in pixels<br />
- %H image height in real-world units<br />
- %M the image size expressed in megapixels<br />
- %u unit symbol<br />
+<p> %% literal percent sign<br/>
+ %f bare filename, or &quot;Untitled&quot;<br/>
+ %F full path to file, or &quot;Untitled&quot;<br/>
+ %p PDB image id<br/>
+ %i view instance number<br/>
+ %t image type (RGB, grayscale, indexed)<br/>
+ %z zoom factor as a percentage<br/>
+ %s source scale factor<br/>
+ %d destination scale factor<br/>
+ %Dx expands to x if the image is dirty, the empty string otherwise<br/>
+ %Cx expands to x if the image is clean, the empty string otherwise<br/>
+ %B expands to (modified) if the image is dirty, the empty string otherwise<br/>
+ %A expands to (clean) if the image is clean, the empty string otherwise<br/>
+ %l the number of layers<br/>
+ %L the number of layers (long form)<br/>
+ %m memory used by the image<br/>
+ %n the name of the active layer/channel<br/>
+ %P the PDB id of the active layer/channel<br/>
+ %w image width in pixels<br/>
+ %W image width in real-world units<br/>
+ %h image height in pixels<br/>
+ %H image height in real-world units<br/>
+ %M the image size expressed in megapixels<br/>
+ %u unit symbol<br/>
  %U unit abbreviation </p>
 <dt>(image-status-format &quot;%n (%m)&quot;)</dt>
 <dd>Sets the text to appear in image window status bars. This is a format string; certain % character sequences are recognised and expanded as follows: </dd>
-<p> %% literal percent sign<br />
- %f bare filename, or &quot;Untitled&quot;<br />
- %F full path to file, or &quot;Untitled&quot;<br />
- %p PDB image id<br />
- %i view instance number<br />
- %t image type (RGB, grayscale, indexed)<br />
- %z zoom factor as a percentage<br />
- %s source scale factor<br />
- %d destination scale factor<br />
- %Dx expands to x if the image is dirty, the empty string otherwise<br />
- %Cx expands to x if the image is clean, the empty string otherwise<br />
- %B expands to (modified) if the image is dirty, the empty string otherwise<br />
- %A expands to (clean) if the image is clean, the empty string otherwise<br />
- %l the number of layers<br />
- %L the number of layers (long form)<br />
- %m memory used by the image<br />
- %n the name of the active layer/channel<br />
- %P the PDB id of the active layer/channel<br />
- %w image width in pixels<br />
- %W image width in real-world units<br />
- %h image height in pixels<br />
- %H image height in real-world units<br />
- %M the image size expressed in megapixels<br />
- %u unit symbol<br />
+<p> %% literal percent sign<br/>
+ %f bare filename, or &quot;Untitled&quot;<br/>
+ %F full path to file, or &quot;Untitled&quot;<br/>
+ %p PDB image id<br/>
+ %i view instance number<br/>
+ %t image type (RGB, grayscale, indexed)<br/>
+ %z zoom factor as a percentage<br/>
+ %s source scale factor<br/>
+ %d destination scale factor<br/>
+ %Dx expands to x if the image is dirty, the empty string otherwise<br/>
+ %Cx expands to x if the image is clean, the empty string otherwise<br/>
+ %B expands to (modified) if the image is dirty, the empty string otherwise<br/>
+ %A expands to (clean) if the image is clean, the empty string otherwise<br/>
+ %l the number of layers<br/>
+ %L the number of layers (long form)<br/>
+ %m memory used by the image<br/>
+ %n the name of the active layer/channel<br/>
+ %P the PDB id of the active layer/channel<br/>
+ %w image width in pixels<br/>
+ %W image width in real-world units<br/>
+ %h image height in pixels<br/>
+ %H image height in real-world units<br/>
+ %M the image size expressed in megapixels<br/>
+ %u unit symbol<br/>
  %U unit abbreviation </p>
 <dt>(confirm-on-close yes)</dt>
 <dd>Ask for confirmation before closing an image without saving. Possible values are yes and no. </dd>
@@ -241,29 +241,29 @@ description: "gimprc – gimp configuration file"
 <dt>(navigation-preview-size medium)</dt>
 <dd>Sets the size of the navigation preview available in the lower right corner of the image window. Possible values are tiny, extra-small, small, medium, large, extra-large, huge, enormous and gigantic. </dd>
 <dt>(default-view</dt>
-<dd>&nbsp;<wbr>(show-menubar yes)<br />
-&nbsp;<wbr>(show-statusbar yes)<br />
-&nbsp;<wbr>(show-rulers yes)<br />
-&nbsp;<wbr>(show-scrollbars yes)<br />
-&nbsp;<wbr>(show-selection yes)<br />
-&nbsp;<wbr>(show-layer-boundary yes)<br />
-&nbsp;<wbr>(show-guides yes)<br />
-&nbsp;<wbr>(show-grid no)<br />
-&nbsp;<wbr>(show-sample-points yes)<br />
-&nbsp;<wbr>(padding-mode default)<br />
+<dd>&nbsp;<wbr>(show-menubar yes)<br/>
+&nbsp;<wbr>(show-statusbar yes)<br/>
+&nbsp;<wbr>(show-rulers yes)<br/>
+&nbsp;<wbr>(show-scrollbars yes)<br/>
+&nbsp;<wbr>(show-selection yes)<br/>
+&nbsp;<wbr>(show-layer-boundary yes)<br/>
+&nbsp;<wbr>(show-guides yes)<br/>
+&nbsp;<wbr>(show-grid no)<br/>
+&nbsp;<wbr>(show-sample-points yes)<br/>
+&nbsp;<wbr>(padding-mode default)<br/>
 &nbsp;<wbr>(padding-color&nbsp;<wbr>(color-rgb 1.000000 1.000000 1.000000))) </dd>
 <p> Sets the default settings for the image view. This is a parameter list. </p>
 <dt>(default-fullscreen-view</dt>
-<dd>&nbsp;<wbr>(show-menubar yes)<br />
-&nbsp;<wbr>(show-statusbar yes)<br />
-&nbsp;<wbr>(show-rulers yes)<br />
-&nbsp;<wbr>(show-scrollbars yes)<br />
-&nbsp;<wbr>(show-selection yes)<br />
-&nbsp;<wbr>(show-layer-boundary yes)<br />
-&nbsp;<wbr>(show-guides yes)<br />
-&nbsp;<wbr>(show-grid no)<br />
-&nbsp;<wbr>(show-sample-points yes)<br />
-&nbsp;<wbr>(padding-mode default)<br />
+<dd>&nbsp;<wbr>(show-menubar yes)<br/>
+&nbsp;<wbr>(show-statusbar yes)<br/>
+&nbsp;<wbr>(show-rulers yes)<br/>
+&nbsp;<wbr>(show-scrollbars yes)<br/>
+&nbsp;<wbr>(show-selection yes)<br/>
+&nbsp;<wbr>(show-layer-boundary yes)<br/>
+&nbsp;<wbr>(show-guides yes)<br/>
+&nbsp;<wbr>(show-grid no)<br/>
+&nbsp;<wbr>(show-sample-points yes)<br/>
+&nbsp;<wbr>(padding-mode default)<br/>
 &nbsp;<wbr>(padding-color&nbsp;<wbr>(color-rgb 1.000000 1.000000 1.000000))) </dd>
 <p> Sets the default settings used when an image is viewed in fullscreen mode. This is a parameter list. </p>
 <dt>(default-snap-to-guides yes)</dt>
@@ -275,7 +275,7 @@ description: "gimprc – gimp configuration file"
 <dt>(default-snap-to-path no)</dt>
 <dd>Snap to the active path by default in new image windows. Possible values are yes and no. </dd>
 <dt>(activate-on-focus yes)</dt>
-<dd>When enabled, an image will become the active image when its image window receives the focus. This is useful for window managers using &quot;click to focus&quot;.<br />
+<dd>When enabled, an image will become the active image when its image window receives the focus. This is useful for window managers using &quot;click to focus&quot;.<br/>
 &nbsp;<wbr>Possible values are yes and no. </dd>
 <dt>(space-bar-action pan)</dt>
 <dd>What to do when the space bar is pressed in the image window. Possible values are none, pan and move. </dd>

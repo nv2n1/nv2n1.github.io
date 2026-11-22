@@ -10,7 +10,7 @@ description: "globus_libc.h –"
 <p>globus_libc.h &#8211; </p>
 <p> Thread-safe libc macros, function prototypes.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;globus_common_include.h&#8217;<br />
+<p>#include &#8216;globus_common_include.h&#8217;<br/>
  #include &#8216;globus_thread.h&#8217; </p>
 <h3>Functions</h3>
 <p>char * <code>globus_libc_join</code> (const char **array, int count) </p>
@@ -25,7 +25,7 @@ description: "globus_libc.h –"
 <p>create a new string from all of the strings in array </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>array</i> an array of strings to concatenate (null entries are skipped)<br />
+<dd><i>array</i> an array of strings to concatenate (null entries are skipped)<br/>
  <i>count</i> length of array</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_common from the source code.</p>

@@ -10,7 +10,7 @@ description: "zlaqhp.f –"
 <p>zlaqhp.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaqhp</code> (UPLO, N, AP, S, SCOND, AMAX, EQUED)<br />
+<p>subroutine <code>zlaqhp</code> (UPLO, N, AP, S, SCOND, AMAX, EQUED)<br/>
  <i></i><code>ZLAQHP</code> scales a Hermitian matrix stored in packed form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaqhp (characterUPLO, integerN, complex*16, dimension( * )AP, double precision, dimension( * )S, double precisionSCOND, double precisionAMAX, characterEQUED)</h3>

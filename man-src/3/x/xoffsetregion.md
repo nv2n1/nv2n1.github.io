@@ -46,5 +46,5 @@ description: "XIntersectRegion, XUnionRegion, XUnionRectWithRegion, XSubtractReg
 <p> The <code>XOffsetRegion</code> function moves the specified region by a specified amount. </p>
 <p> The <code>XShrinkRegion</code> function reduces the specified region by a specified amount. Positive values shrink the size of the region, and negative values expand the region.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcreateregion/">XCreateRegion</a>(3), <a href="/docs/linux/man/3-xdrawrectangle/">XDrawRectangle</a>(3), <a href="/docs/linux/man/3-xemptyregion/">XEmptyRegion</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcreateregion/">XCreateRegion</a>(3), <a href="/docs/linux/man/3-xdrawrectangle/">XDrawRectangle</a>(3), <a href="/docs/linux/man/3-xemptyregion/">XEmptyRegion</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

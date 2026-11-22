@@ -11,7 +11,7 @@ description: "clacgv.f –"
 <p> clacgv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clacgv</code> (N, X, INCX)<br />
+<p> subroutine <code>clacgv</code> (N, X, INCX)<br/>
  <i></i><code>CLACGV</code> conjugates a complex vector.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clacgv (integerN, complex, dimension( * )X, integerINCX)</h3>

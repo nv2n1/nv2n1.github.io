@@ -92,7 +92,7 @@ description: "isnsadm – iSNS client utility"
 <p> The syntax of attribute <i>value</i> depends on the attribute type. For strings and numeric values, no special conventions apply, but bitfields have a special syntax described below. </p>
 <p> The attribute name is usually preceded by the object type it applies to (such as <code>entity</code>), followed by a hyphen and the name itself. However, where the context clearly determines a specific object type, the prefix can be omitted. For instance, when editing a policy object using <code>&#8211;edit-policy</code>, it is acceptable to use <code>node-type</code> as shorthand for <code>policy-node-type</code>. </p>
 <p> Likewise, in a query command, it is not permitted to mix attributes from different object types. Thus, the first attribute of a query string establishes a type context, so that the following two invocations are equivalent: </p>
-<p> <code>isnsadm &#8211;query pg-name=iqn.com.foo pg-addr=10.1.1.1 pg-port=860/tcp</code><br />
+<p> <code>isnsadm &#8211;query pg-name=iqn.com.foo pg-addr=10.1.1.1 pg-port=860/tcp</code><br/>
  <code>isnsadm &#8211;query pg-name=iqn.com.foo addr=10.1.1.1 port=860/tcp</code> </p>
 <p> <code>Isnsadm</code> currently supports the following attributes: </p>
 <p> <center></p>
@@ -485,28 +485,28 @@ description: "isnsadm – iSNS client utility"
 <p> <code>isnsd &#8211;init</code> </p>
 <p> This will create the server&#8217;s private and public key, and place them in <code>/etc/isns/auth_key</code> and <code>auth_key.pub</code>, respectively. </p>
 <p> The following command will create a policy object for a node named <code>isns.control ,</code> and grant it control privileges: </p>
-<p> <code>isnsadm &#8211;local &#8211;keyfile=control.key</code> <code>&#8211;enroll isns.control \</code><br />
+<p> <code>isnsadm &#8211;local &#8211;keyfile=control.key</code> <code>&#8211;enroll isns.control \</code><br/>
  <code> node-type=ALL functions=ALL object-type=ALL</code> </p>
 <p> In the process of entrolling the client, this will generate a DSA key pair, and place the private key portion in the file <code>control.key</code>. This file must be installed as <code>/etc/isns/control.key</code> on the host you wish to use as an iSNS management station. </p>
 <p> Next, you need to create a storage node object for the management station: </p>
 <p> <code>isnsadm &#8211;local &#8211;register control</code> </p>
 <p> On the management station, you can then enroll additional hosts: </p>
-<p> <code>isnsadm &#8211;control &#8211;keyfile=somehost.key</code> <code>&#8211;enroll iqn.2005-01.org.open-iscsi.somehost \</code><br />
+<p> <code>isnsadm &#8211;control &#8211;keyfile=somehost.key</code> <code>&#8211;enroll iqn.2005-01.org.open-iscsi.somehost \</code><br/>
  <code> node-type=target+initiator</code> </p>
 <p> Again, this will generate a DSA key pair and store the private key portion in auth_key. Note the use of the <code>&#8211;control</code> option that tells <code>isnsadm</code> to use the identity of the control node instead of the default key and source name. </p>
 <p> You then need to copy <code>somehost.key</code> to the client host and install it as <code>/etc/isns/auth_key</code>. Likewise, the server&#8217;s public key (which resides in <code>/etc/isns/auth_key.pub</code> on the server) needs to be copied to the client machine, and placed in <code>/etc/isns/server_key.pub</code>. </p>
 <p> By default, when a client registers a storage node (be it initiator or target) with iSNS, the client will not be able to see any other storage nodes. In order for targets to be visible to a given initiator, you need to create so-called Discovery Domains (or DDs for short). </p>
 <p> Currently, domain membership operations require administrator privilege. Future extensions may allow iSNS clients to add themselves to one or more DDs upon registration. </p>
 <p> To create a discovery domain, and add nodes to it, you can use </p>
-<p> <code>isnsadm &#8211;control &#8211;dd-register dd-name=mydomain \</code><br />
+<p> <code>isnsadm &#8211;control &#8211;dd-register dd-name=mydomain \</code><br/>
  <code> member-name=iqn.org.bozo.client iqn.org.bozo.jbod &#8230;</code> </p>
 <p> In order to add members to an existing DD, you have to specify the numeric domain ID &#8211; using the DD name is not sufficient, unfortunately (this is a requirement of the RFC, not an implementation issue): </p>
-<p> <code>isnsadm &#8211;control &#8211;dd-register dd-id=42 \</code><br />
+<p> <code>isnsadm &#8211;control &#8211;dd-register dd-id=42 \</code><br/>
  <code> member-name=iqn.com.foo member-name=iqn.com.bar</code> </p>
 <p> The DD ID can be obtained by doing a query for the DD name: </p>
 <p> <code>isnsadm &#8211;control &#8211;query dd-name=mydomain</code> </p>
 <p> In management mode, you can also register and deregister nodes and portals manually, in case you want to fix up an inconsisteny in the database. For instance, this will register a node and portal on a host named client.bozo.org: </p>
-<p> <code>isnsadm &#8211;control &#8211;register entity=client.bozo.org \</code><br />
+<p> <code>isnsadm &#8211;control &#8211;register entity=client.bozo.org \</code><br/>
  <code> initiator=iqn.org.bozo.client portal=191.168.7.1:860</code> </p>
 <p> Note that this registration explicitly specifies the network entity in which to place the new objects. If you omit this, the new objects will be placed in an entity named <code>CONTROL</code>, which is decidedly not what you want.</p>
 <h2>See Also</h2>

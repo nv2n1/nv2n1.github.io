@@ -10,7 +10,7 @@ description: "dgesv.f –"
 <p>dgesv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgesv</code> (N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
+<p>subroutine <code>dgesv</code> (N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br/>
  <i></i><code> DGESV computes the solution to system of linear equations A * X = B for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgesv (integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

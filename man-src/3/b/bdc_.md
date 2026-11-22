@@ -14,8 +14,8 @@ description: "QuantLib::InflationSwap – Abstract base class for inflation swap
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <p> Inherited by <code>YearOnYearInflationSwap</code>, and <code>ZeroCouponInflationSwap</code>. </p>
 <h3>Public Member Functions</h3>
-<p> <code>InflationSwap</code> (const <code>Date</code> &amp;start, const <code>Date</code> &amp;maturity, const <code>Period</code> &amp;lag, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> convention, const <code>DayCounter</code> &amp;dayCounter, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS)<br />
- <i>the constructor sets common data members </i><br />
+<p> <code>InflationSwap</code> (const <code>Date</code> &amp;start, const <code>Date</code> &amp;maturity, const <code>Period</code> &amp;lag, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> convention, const <code>DayCounter</code> &amp;dayCounter, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS)<br/>
+ <i>the constructor sets common data members </i><br/>
  virtual <code>Rate</code> <code>fairRate</code> () const =0 </p>
 <p> <code>Inspectors</code> </p>
 <p> <code>Date</code> <code>baseDate</code> () const </p>

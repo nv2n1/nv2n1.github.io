@@ -13,7 +13,7 @@ description: "apt-file — APT package searching utility — command-line interf
 <p> <code>apt-file</code> [<i>options</i>] search <i>pattern</i> </p>
 <p> <code>apt-file</code> [<i>options</i>] show <i>package</i></p>
 <h2>DESCRIPTION</h2>
-<p> <code>apt-file</code> is a command line tool for searching files in packages for the <font SIZE="-1">APT</font> package management system. </p>
+<p> <code>apt-file</code> is a command line tool for searching files in packages for the APT package management system. </p>
 <p> Some actions are required to run the search:</p>
 <dl>
 <dt>find</dt>
@@ -40,10 +40,10 @@ description: "apt-file — APT package searching utility — command-line interf
 <dt>-a, &#8211;architecture <i>architecture[,&#8230;]</i></dt>
 <dd> This option is useful if you search a package for a different architecture from the one installed on your system. </dd>
 <p> It can be a comma-separated list for searching on multiple architectures.</p>
-<dt>-c, &#8211;config-file <i></i><font SIZE="-1"><i>APT</i></font><i> config-file</i></dt>
-<dd> Configuration File; Specify a configuration file to use. The program will read the default configuration file and then this configuration file. If configuration settings need to be set before the default configuration files are parsed specify a file with the <font SIZE="-1"><code>APT_CONFIG</code></font> environment variable. See <code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5) for syntax information. </dd>
+<dt>-c, &#8211;config-file <i></i><i>APT</i><i> config-file</i></dt>
+<dd> Configuration File; Specify a configuration file to use. The program will read the default configuration file and then this configuration file. If configuration settings need to be set before the default configuration files are parsed specify a file with the <code>APT_CONFIG</code> environment variable. See <code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5) for syntax information. </dd>
 <p> The configuration file will be read relative to when it appears on the command line and can overwrite options that appear before it. </p>
-<p> Note that the config file will also be passed to all <font SIZE="-1">APT</font> tools called by <code>apt-file</code>.</p>
+<p> Note that the config file will also be passed to all APT tools called by <code>apt-file</code>.</p>
 <dt>-D, &#8211;from-deb</dt>
 <dd> Use contents of the given .deb archives(s) as patterns. Useful for searching for file conflicts with other packages. Implies -F.</dd>
 <dt>-f, &#8211;from-file</dt>
@@ -52,18 +52,18 @@ description: "apt-file — APT package searching utility — command-line interf
 <dd> Only search indices from the listed origins (e.g. &#8220;Debian&#8221;). </dd>
 <p> This filter matches against the name listed in the <i>Origin</i> field from the Release file. </p>
 <p> If set to &#8216;*&#8217;, this filter will be disabled (mostly useful for overriding the setting in a configuration file) </p>
-<p> Alias of the <font SIZE="-1">APT</font> config option: <code>apt-file::Search-Filter::Origin</code></p>
+<p> Alias of the APT config option: <code>apt-file::Search-Filter::Origin</code></p>
 <dt>&#8211;filter-suites <i>suite[,&#8230;]</i></dt>
 <dd> Only search indices from the listed suites or codenames (e.g. &#8220;unstable&#8221;). </dd>
 <p> This filter matches against the name listed in the <i>Codename</i> and <i>Suite</i> fields from the Release file. This means that either &#8220;unstable&#8221; or &#8220;sid&#8221; will match Debian&#8217;s unstable suite. </p>
 <p> If set to &#8216;*&#8217;, this filter will be disabled (mostly useful for overriding the setting in a configuration file) </p>
-<p> Alias of the <font SIZE="-1">APT</font> config option: <code>apt-file::Search-Filter::Suite</code></p>
+<p> Alias of the APT config option: <code>apt-file::Search-Filter::Suite</code></p>
 <dt>-F, &#8211;fixed-string</dt>
 <dd> Do not expand search pattern with generic characters at pattern&#8217;s start and end. </dd>
 <p> This is default for <code>show</code> and <code>list</code> actions.</p>
 <dt>&#8211;index-names <i>type[,&#8230;]</i>, -I <i>type[,&#8230;]</i></dt>
-<dd> Only search indexes of the given name(s). If set to the special value <i></i><font SIZE="-1"><i>ALL</i></font><i></i> (case-sensitive), then all <code>apt-file</code> indices are searched. </dd>
-<p> The name(s) must match one or more of the identifiers used in the <font SIZE="-1">APT</font> configuration (minus leading &#8220;Contents-&#8221;). Example if the configuration has the following snippets: </p>
+<dd> Only search indexes of the given name(s). If set to the special value <i></i><i>ALL</i><i></i> (case-sensitive), then all <code>apt-file</code> indices are searched. </dd>
+<p> The name(s) must match one or more of the identifiers used in the APT configuration (minus leading &#8220;Contents-&#8221;). Example if the configuration has the following snippets: </p>
 <pre><code>
 Acquire::IndexTargets::deb::Contents - deb{...};
 Acquire::IndexTargets::deb - src::Contents - dsc{...};
@@ -84,7 +84,7 @@ Acquire::IndexTargets::deb::Contents - deb - legacy
 <dt>-o, &#8211;option APT::Option=Value</dt>
 <dd> Set a Configuration Option; This will set an arbitrary configuration option. The syntax is <code>-o APT::Option=Value</code>. <code>-o</code> and <code>&#8211;option</code> can be used multiple times to set different options. </dd>
 <p> This option <i>can</i> be used to overwrite other command line options (e.g. &#8220;-o apt-file::Search-Filter::Origin=Debian&#8221; is effectively the same as &#8220;&#8211;filter-origins Debian&#8221;). </p>
-<p> Note that the config options passed via this option will also be passed to all <font SIZE="-1">APT</font> tools called by <code>apt-file</code>.</p>
+<p> Note that the config options passed via this option will also be passed to all APT tools called by <code>apt-file</code>.</p>
 <dt>&#8211;substring-match</dt>
 <dd> Match if the given search <i>pattern</i> is a substring of a path or package. </dd>
 <p> This is default for <code>search</code> and <code>find</code> actions.</p>
@@ -96,14 +96,14 @@ Acquire::IndexTargets::deb::Contents - deb - legacy
 <dt>-h, &#8211;help</dt>
 <dd> Display a short help screen.</dd></dl>
 <h2>CONFIGURATION FILES</h2>
-<p> The apt-file command relies on the <font SIZE="-1">APT</font> configuration. Notably, the default configuration makes <code>apt</code> fetch Contents files by default during a call to <code>apt update</code>. </p>
-<p> For information on how to configure <font SIZE="-1">APT</font> to fetch more or fewer Contents files, please refer to <i>/usr/share/doc/apt-file/README.md.gz</i>. </p>
+<p> The apt-file command relies on the APT configuration. Notably, the default configuration makes <code>apt</code> fetch Contents files by default during a call to <code>apt update</code>. </p>
+<p> For information on how to configure APT to fetch more or fewer Contents files, please refer to <i>/usr/share/doc/apt-file/README.md.gz</i>. </p>
 <p> The following files are notably interesting:</p>
 <dl>
 <dt><i>/etc/apt/apt-file.conf</i></dt>
-<dd> Note this path is actually configurable by changing the value of the <font SIZE="-1">APT</font> configuration called &#8220;Dir::Etc::apt-file-main&#8221;. The listed value is merely the default value of that option. </dd>
-<p> If this file is present, <code>apt-file</code> will read this file <i>after</i> all default <font SIZE="-1">APT</font> configuration files. Any config file <code>-c</code> or option (<code>-o</code>) will be evaluated <i>before</i> this file (and can override options set in it). </p>
-<p> The file will also be passed on to all <font SIZE="-1">APT</font> tools called by <code>apt-file</code>.</p>
+<dd> Note this path is actually configurable by changing the value of the APT configuration called &#8220;Dir::Etc::apt-file-main&#8221;. The listed value is merely the default value of that option. </dd>
+<p> If this file is present, <code>apt-file</code> will read this file <i>after</i> all default APT configuration files. Any config file <code>-c</code> or option (<code>-o</code>) will be evaluated <i>before</i> this file (and can override options set in it). </p>
+<p> The file will also be passed on to all APT tools called by <code>apt-file</code>.</p>
 <dt><i>/etc/apt/apt.conf.d/50apt-file.conf</i></dt>
 <dd> Chooses which Contents files to download. Note that apt-file recognises only &#8220;Acquire&#8221; targets that starts with &#8220;Contents-&#8221;.</dd></dl>
 <h3>Special configurations similar to apt-file 2</h3>
@@ -152,7 +152,7 @@ EOF
 <p> If you search such files, you will want to set <code>apt-file::Parser::Check-For-Description-Header</code> to true (e.g. in <i>/etc/apt/apt.conf.d/50apt-file.conf</i>) to have <code>apt-file</code> properly filter out the headers to avoid false matches. </p>
 <p> The reason this is not the default is that it costs a factor 2 in overhead while most common Contents files no longer have the header. (see #881405 for more details).</p>
 <dt>&bull;</dt>
-<dd> Not all <font SIZE="-1">APT</font> repositories have Contents files. Notably common install media (CDs etc.) may omit them to conserve space. </dd>
+<dd> Not all APT repositories have Contents files. Notably common install media (CDs etc.) may omit them to conserve space. </dd>
 <p> The default configuration by <code>apt-file</code> marks Contents files as optional and will just silently fail to search in Contents files in such repositories.</dl>
 <h2>EXIT CODES</h2>
 <p> <code>apt-file</code> has the following defined exit codes, which can be used for scripting purposes.</p>
@@ -164,7 +164,7 @@ EOF
 <dt><code>2</code></dt>
 <dd> An error occurred (including invalid/conflicting user options).</dd>
 <dt><code>3</code></dt>
-<dd> <code>apt-file</code> could not complete the command because the cache was empty. Please ensure there are indices enabled in the <font SIZE="-1">APT</font> config and run <code>apt update</code> to fetch them.</dd>
+<dd> <code>apt-file</code> could not complete the command because the cache was empty. Please ensure there are indices enabled in the APT config and run <code>apt update</code> to fetch them.</dd>
 <dt><code>4</code></dt>
 <dd> <code>apt-file</code> could not complete the command because the cache does not have any files matching the restrictions. Either change the restrictions (e.g. <code>&#8211;index-names</code>) or configure apt to fetch the relevant files and run <code>apt update</code>.</dd>
 <dt><code>255</code></dt>
@@ -172,6 +172,6 @@ EOF
 <p> Any other exit code is reserved for future use.</p>
 <h2>SEE ALSO</h2>
 <p> <code>apt</code>(1), <code><a href="/docs/linux/man/8-apt-cache/">apt-cache</a></code>(8), <code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5) </p>
-<p> The <font SIZE="-1">APT</font> users guide in /usr/share/doc/apt/ </p>
+<p> The APT users guide in /usr/share/doc/apt/ </p>
 <p> The example config in /usr/share/doc/apt-file/examples </p>
-<p> The <font SIZE="-1">README</font> at <i>/usr/share/doc/apt-file/README.md.gz</i> </p>
+<p> The README at <i>/usr/share/doc/apt-file/README.md.gz</i> </p>

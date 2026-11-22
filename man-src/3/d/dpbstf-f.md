@@ -10,7 +10,7 @@ description: "dpbstf.f –"
 <p>dpbstf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dpbstf</code> (UPLO, N, KD, AB, LDAB, INFO)<br />
+<p>subroutine <code>dpbstf</code> (UPLO, N, KD, AB, LDAB, INFO)<br/>
  <i></i><code>DPBSTF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpbstf (characterUPLO, integerN, integerKD, double precision, dimension( ldab, * )AB, integerLDAB, integerINFO)</h3>

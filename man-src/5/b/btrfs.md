@@ -27,7 +27,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <h2>Mount Options</h2>
 <p>This section describes mount options specific to BTRFS. For the generic mount options please refer to <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) manpage. The options are sorted alphabetically (discarding the <i>no</i> prefix). </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> most mount options apply to the whole filesystem and only options in the first mounted subvolume will take effect. This is due to lack of implementation and may change in the future. This means that (for example) you can&#8217;t set per-subvolume <i>nodatacow</i>, <i>nodatasum</i>, or <i>compress</i> using mount options. This should eventually be fixed, but it has proved to be difficult to implement correctly within the Linux VFS framework. </p>
 </dl>
 <p> <code>acl</code>, <code>noacl</code></p>
@@ -42,7 +42,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <p> Enable automatic file defragmentation. When enabled, small random writes into files (in a range of tens of kilobytes, currently it&#8217;s 64K) are detected and queued up for the defragmentation process. Not well suited for large database workloads. </p>
 <p> The read latency may increase due to reading the adjacent blocks that make up the range for defragmentation, successive write will merge the blocks in the new location. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font> </dd>
+<dd> <code>Warning</code>  </dd>
 <p> Defragmenting with Linux kernel versions &lt; 3.9 or &ge; 3.14-rc2 as well as with Linux stable kernel versions &ge; 3.10.31, &ge; 3.12.12 or &ge; 3.13.4 will break up the reflinks of COW data (for example files copied with <code>cp &#8211;reflink</code>, snapshots or de-duplicated data). This may cause considerable increase of space usage depending on the broken up reflinks. </p>
 </dl>
 </dl>
@@ -78,7 +78,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <p> Both <i>zlib</i> and <i>zstd</i> (since version 5.1) expose the compression level as a tunable knob with higher levels trading speed and memory (<i>zstd</i>) for higher compression ratios. This can be set by appending a colon and the desired level. Zlib accepts the range [1, 9] and zstd accepts [1, 15]. If no level is set, both currently use a default level of 3. The value 0 is an alias for the defaul level. </p>
 <p> Otherwise some simple heuristics are applied to detect an incompressible file. If the first blocks written to a file are not compressible, the whole file is permanently marked to skip compression. As this is too simple, the <i>compress-force</i> is a workaround that will compress most of the files at the cost of some wasted CPU cycles on failed attempts. Since kernel 4.15, a set of heuristic algorithms have been improved by using frequency sampling, repeated pattern detection and Shannon entropy calculation to avoid that. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If compression is enabled, <i>nodatacow</i> and <i>nodatasum</i> are disabled. </p>
 </dl>
 </dl>
@@ -87,7 +87,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <dd>(default: on) </dd>
 <p> Enable data copy-on-write for newly created files. <i>Nodatacow</i> implies <i>nodatasum</i>, and disables <i>compression</i>. All files created under <i>nodatacow</i> are also set the NOCOW file attribute (see <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1)). </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If <i>nodatacow</i> or <i>nodatasum</i> are enabled, compression is disabled. </p>
 </dl>
 <p> Updates in-place improve performance for workloads that do frequent overwrites, at the cost of potential partial writes, in case the write is interrupted (system crash, device failure). </p>
@@ -97,7 +97,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <dd>(default: on) </dd>
 <p> Enable data checksumming for newly created files. <i>Datasum</i> implies <i>datacow</i>, ie. the normal mode of operation. All files created under <i>nodatasum</i> inherit the &quot;no checksums&quot; property, however there&#8217;s no corresponding file attribute (see <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1)). </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If <i>nodatacow</i> or <i>nodatasum</i> are enabled, compression is disabled. </p>
 </dl>
 <p> There is a slight performance gain when checksums are turned off, the corresponding metadata blocks holding the checksums do not need to updated. The cost of checksumming of the blocks in memory is much lower than the IO, modern CPUs feature hardware support of the checksumming algorithm. </p>
@@ -114,7 +114,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <dl>
 <dd>Specify a path to a device that will be scanned for BTRFS filesystem during mount. This is usually done automatically by a device manager (like udev) or using the <code>btrfs device scan</code> command (eg. run from the initial ramdisk). In cases where this is not possible the <i>device</i> mount option can help. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> booting eg. a RAID1 system may fail even if all filesystem&#8217;s <i>device</i> paths are provided as the actual device nodes may not be discovered by the system at that point. </p>
 </dl>
 </dl>
@@ -160,7 +160,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <p> Enable free inode number caching. Not recommended to use unless files on your filesystem get assigned inode numbers that are approaching 264. Normally, new files in each subvolume get assigned incrementally (plus one from the last time) and are not reused. The mount option turns on caching of the existing inode numbers and reuse of inode numbers of deleted files. </p>
 <p> This option may slow down your system at first run, or after mounting without the option. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Defaults to off due to a potential overflow problem when the free space checksums don&#8217;t fit inside a single page. </p>
 </dl>
 <p> Don&#8217;t use this option unless you really need it. The inode number limit on 64bit system is 264, which is practically enough for the whole filesystem lifetime. Due to implementation of linux VFS layer, the inode numbers on 32bit systems are only 32 bits wide. This lowers the limit significantly and makes it possible to reach it. In such case, this mount option will help. Alternatively, files with high inode numbers can be copied to a new subvolume which will effectively start the inode numbers from the beginning again. </p>
@@ -170,7 +170,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <dd>(default: on, even read-only) </dd>
 <p> Enable/disable log replay at mount time. See also <i>treelog</i>. Note that <i>nologreplay</i> is the same as <i>norecovery</i>. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font> </dd>
+<dd> <code>Warning</code>  </dd>
 <p> currently, the tree log is replayed even with a read-only mount! To disable that behaviour, mount also with <i>nologreplay</i>. </p>
 </dl>
 </dl>
@@ -180,7 +180,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <p> Specify the maximum amount of space, that can be inlined in a metadata B-tree leaf. The value is specified in bytes, optionally with a K suffix (case insensitive). In practice, this value is limited by the filesystem block size (named <i>sectorsize</i> at mkfs time), and memory page size of the system. In case of sectorsize limit, there&#8217;s some space unavailable due to leaf headers. For example, a 4k sectorsize, maximum size of inline data is about 3900 bytes. </p>
 <p> Inlining can be completely turned off by specifying 0. This will increase data block slack if file sizes are much smaller than block size but will reduce metadata consumption in return. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> the default value has changed to 2048 in kernel 4.6. </p>
 </dl>
 </dl>
@@ -194,7 +194,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <dd>(since: 4.5, default: off) </dd>
 <p> Do not attempt any data recovery at mount time. This will disable <i>logreplay</i> and avoids other write operations. Note that this option is the same as <i>nologreplay</i>. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> The opposite option <i>recovery</i> used to have different meaning but was changed for consistency with other filesystems, where <i>norecovery</i> is used for skipping log replay. BTRFS does the same and in general will try to avoid any write operations. </p>
 </dl>
 </dl>
@@ -222,7 +222,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <p> Options to control SSD allocation schemes. By default, BTRFS will enable or disable SSD optimizations depending on status of a device with respect to rotational or non-rotational type. This is determined by the contents of <i>/sys/block/DEV/queue/rotational</i>). If it is 0, the <i>ssd</i> option is turned on. The option <i>nossd</i> will disable the autodetection. </p>
 <p> The optimizations make use of the absence of the seek penalty that&#8217;s inherent for the rotational devices. The blocks can be typically written faster and are not offloaded to separate threads. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Since 4.14, the block layout optimizations have been dropped. This used to help with first generations of SSD devices. Their FTL (flash translation layer) was not effective and the optimization was supposed to improve the wear by better aligning blocks. This is no longer true with modern SSD devices and the optimization had no real benefit. Furthermore it caused increased fragmentation. The layout tuning has been kept intact for the option <i>ssd_spread</i>. </p>
 </dl>
 <p> The <i>ssd_spread</i> mount option attempts to allocate into bigger and aligned chunks of unused space, and may perform better on low-end SSDs. <i>ssd_spread</i> implies <i>ssd</i>, enabling all other SSD heuristics as well. The option <i>nossd</i> will disable all SSD options while <i>nossd_spread</i> only disables <i>ssd_spread</i>. </p>
@@ -235,7 +235,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <dl>
 <dd>Mount subvolume specified by a <i>subvolid</i> number rather than the toplevel subvolume. You can use <code>btrfs subvolume list</code> of <code>btrfs subvolume show</code> to see subvolume ID numbers. This mount option overrides the default subvolume set for the given filesystem. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> if both <i>subvolid</i> and <i>subvol</i> are specified, they must point at the same subvolume, otherwise the mount will fail. </p>
 </dl>
 </dl>
@@ -249,7 +249,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <dd>(default: on) </dd>
 <p> Enable the tree logging used for <i>fsync</i> and <i>O_SYNC</i> writes. The tree log stores changes without the need of a full filesystem sync. The log operations are flushed at sync and transaction commit. If the system crashes between two such syncs, the pending tree log operations are replayed during mount. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font> </dd>
+<dd> <code>Warning</code>  </dd>
 <p> currently, the tree log is replayed even with a read-only mount! To disable that behaviour, also mount with <i>nologreplay</i>. </p>
 </dl>
 <p> The tree log could contain new files/directories, these would not exist on a mounted filesystem if the log is not replayed. </p>
@@ -259,7 +259,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <dd>(since: 4.6, default: off) </dd>
 <p> Enable autorecovery attempts if a bad tree root is found at mount time. Currently this scans a backup list of several previous tree roots and tries to use the first readable. This can be used with read-only mounts as well. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> This option has replaced <i>recovery</i>. </p>
 </dl>
 </dl>
@@ -268,7 +268,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <dd>(default: off) </dd>
 <p> Allow subvolumes to be deleted by their respective owner. Otherwise, only the root user can do that. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> historically, any user could create a snapshot even if he was not owner of the source subvolume, the subvolume deletion has been restricted for that reason. The subvolume creation has been restricted but this mount option is still required. This is a usability issue. Since 4.18, the <code><a href="/docs/linux/man/2-rmdir/">rmdir</a></code>(2) syscall can delete an empty subvolume just like an ordinary directory. Whether this is possible can be detected at runtime, see <i>rmdir_subvol</i> feature in <i>FILESYSTEM FEATURES</i>. </p>
 </dl>
 </dl>
@@ -283,7 +283,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <dl>
 <dd>(since: 3.2, default: off, deprecated since: 4.5) </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> this option has been replaced by <i>usebackuproot</i> and should not be used but will work on 4.5+ kernels. </p>
 </dl>
 </dl>
@@ -545,7 +545,7 @@ description: "btrfs-man5 – topics about the BTRFS filesystem (mount options, s
 <dd><i>no copy-on-write</i>, file modifications are done in-place </dd>
 <p> When set on a directory, all newly created files will inherit this attribute. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> due to implementation limitations, this flag can be set/unset only on empty files. </p>
 </dl>
 </dl>

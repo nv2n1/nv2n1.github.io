@@ -40,7 +40,7 @@ description: "regtree – Text-mode registry viewer"
 <h2>SEE ALSO</h2>
 <p> gregedit, regshell, regdiff, regpatch, samba</p>
 <h2>AUTHOR</h2>
-<p> This utility is part of the m[blue]<code>Samba</code>m[]<font SIZE="-2">[1]</font> suite, which is developed by the global m[blue]<code>Samba Team</code>m[]<font SIZE="-2">[2]</font>. </p>
+<p> This utility is part of the m[blue]<code>Samba</code>m[][1] suite, which is developed by the global m[blue]<code>Samba Team</code>m[][2]. </p>
 <p> This manpage and regtree were written by Jelmer Vernooij.</p>
 <h2>NOTES</h2>
 <dl>

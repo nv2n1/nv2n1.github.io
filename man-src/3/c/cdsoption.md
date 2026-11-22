@@ -15,7 +15,7 @@ description: "QuantLib::CdsOption – CDS option."
 <p><code>CdsOption</code> (const <code>Date</code> &amp;expiry, <code>Rate</code> strike, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;volatility, const Issuer &amp;issuer, Protection::Side side, Real nominal, const <code>Schedule</code> &amp;premiumSchedule, const <code>DayCounter</code> &amp;dayCounter, bool settlePremiumAccrual, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS) </p>
 <p> Real <code>forward</code> () const </p>
 <p> Real <code>riskyAnnuity</code> () const </p>
-<p> bool <code>isExpired</code> () const<br />
+<p> bool <code>isExpired</code> () const<br/>
  <i>returns whether the instrument is still tradable. </i></p>
 <h2>Detailed Description</h2>
 <p>CDS option. </p>

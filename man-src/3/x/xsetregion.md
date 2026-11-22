@@ -26,5 +26,5 @@ description: "XCreateRegion, XSetRegion, XDestroyRegion – create or destroy re
 <p> The <code>XSetRegion</code> function sets the clip-mask in the GC to the specified region. The region is specified relative to the drawable&#8217;s origin. The resulting GC clip origin is implementation-dependent. Once it is set in the GC, the region can be destroyed. </p>
 <p> The <code>XDestroyRegion</code> function deallocates the storage associated with a specified region.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xemptyregion/">XEmptyRegion</a>(3), <a href="/docs/linux/man/3-xintersectregion/">XIntersectRegion</a>(3)<br />
+<p><a href="/docs/linux/man/3-xemptyregion/">XEmptyRegion</a>(3), <a href="/docs/linux/man/3-xintersectregion/">XIntersectRegion</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -10,7 +10,7 @@ description: "XkbResizeKeyActions – Change the number of actions bound to a ke
 <p>XkbResizeKeyActions &#8211; Change the number of actions bound to a key </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbAction * XkbResizeKeyActions</code> <code>(XkbDescRec *</code><i>xkb</i><code>,</code> <code>int </code><i>key</i><code>,</code> <code>int </code><i>needed</i><code>);</code><br />
+<dt> <code>XkbAction * XkbResizeKeyActions</code> <code>(XkbDescRec *</code><i>xkb</i><code>,</code> <code>int </code><i>key</i><code>,</code> <code>int </code><i>needed</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

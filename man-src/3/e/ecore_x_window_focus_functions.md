@@ -9,11 +9,11 @@ description: "X Window Focus Functions – Functions that give the focus to an X
 
 <p>X Window Focus Functions &#8211; Functions that give the focus to an X Window. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>ecore_x_window_focus</code> (Ecore_X_Window win)<br />
- <i>Sets the focus to the window </i>win.<br />
- EAPI void <code>ecore_x_window_focus_at_time</code> (Ecore_X_Window win, Ecore_X_Time t)<br />
- <i>Sets the focus to the given window at a specific time. </i><br />
- EAPI Ecore_X_Window <code>ecore_x_window_focus_get</code> (void)<br />
+<p>EAPI void <code>ecore_x_window_focus</code> (Ecore_X_Window win)<br/>
+ <i>Sets the focus to the window </i>win.<br/>
+ EAPI void <code>ecore_x_window_focus_at_time</code> (Ecore_X_Window win, Ecore_X_Time t)<br/>
+ <i>Sets the focus to the given window at a specific time. </i><br/>
+ EAPI Ecore_X_Window <code>ecore_x_window_focus_get</code> (void)<br/>
  <i>gets the focus to the window </i>win.</p>
 <h2>Detailed Description</h2>
 <p>Functions that give the focus to an X Window.</p>
@@ -28,7 +28,7 @@ description: "X Window Focus Functions – Functions that give the focus to an X
 <p>Sets the focus to the given window at a specific time. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>win</i> The window to focus.<br />
+<dd><i>win</i> The window to focus.<br/>
  <i>t</i> When to set the focus to the window.</dd></dl>
 <h3>EAPI Ecore_X_Window ecore_x_window_focus_get (void)</h3>
 <p>gets the focus to the window win. </p>

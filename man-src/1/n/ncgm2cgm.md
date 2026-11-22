@@ -28,6 +28,6 @@ description: "cgm2ncgm ncgm2cgm – filter NCAR CGM to/from vanilla CGM"
 <h2>BUGS</h2>
 <p> Some <i>vanilla</i> metafile interpretors take advantage of shortcuts provided by their CGM generators. In effect, they are not <i>true</i> CGM interpretors. Although it will still be possible to convert these metafiles to NCAR format that may be interpreted by NCAR Graphics translators. It may not be the case that the aforementioned interpreters will be able to translate <i>true</i> vanilla metafiles, such as produced by <code>ncgm2cgm.</code></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1987-2009<br />
+<p> Copyright (C) 1987-2009<br/>
  University Corporation for Atmospheric Research </p>
 <p> The use of this Software is governed by a License Agreement. </p>

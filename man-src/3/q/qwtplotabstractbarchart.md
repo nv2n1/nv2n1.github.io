@@ -14,26 +14,26 @@ description: "QwtPlotAbstractBarChart –"
 <p> Inherits <code>QwtPlotSeriesItem</code>. </p>
 <p> Inherited by <code>QwtPlotBarChart</code>, and <code>QwtPlotMultiBarChart</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>LayoutPolicy</code> { <code>AutoAdjustSamples</code>, <code>ScaleSamplesToAxes</code>, <code>ScaleSampleToCanvas</code>, <code>FixedSampleSize</code> }<br />
+<p>enum <code>LayoutPolicy</code> { <code>AutoAdjustSamples</code>, <code>ScaleSamplesToAxes</code>, <code>ScaleSampleToCanvas</code>, <code>FixedSampleSize</code> }<br/>
  <i>Mode how to calculate the bar width. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPlotAbstractBarChart</code> (const <code>QwtText</code> &amp;<code>title</code>) </p>
-<p> virtual <code>~QwtPlotAbstractBarChart</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtPlotAbstractBarChart</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setLayoutPolicy</code> (<code>LayoutPolicy</code>) </p>
 <p> <code>LayoutPolicy</code> <code>layoutPolicy</code> () const </p>
 <p> void <code>setLayoutHint</code> (double) </p>
 <p> double <code>layoutHint</code> () const </p>
-<p> void <code>setSpacing</code> (int)<br />
- <i>Set the spacing. </i><br />
+<p> void <code>setSpacing</code> (int)<br/>
+ <i>Set the spacing. </i><br/>
  int <code>spacing</code> () const </p>
-<p> void <code>setMargin</code> (int)<br />
- <i>Set the margin. </i><br />
+<p> void <code>setMargin</code> (int)<br/>
+ <i>Set the margin. </i><br/>
  int <code>margin</code> () const </p>
-<p> void <code>setBaseline</code> (double)<br />
- <i>Set the baseline. </i><br />
+<p> void <code>setBaseline</code> (double)<br/>
+ <i>Set the baseline. </i><br/>
  double <code>baseline</code> () const </p>
-<p> virtual void <code>getCanvasMarginHint</code> (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, double &amp;left, double &amp;top, double &amp;right, double &amp;bottom) const<br />
+<p> virtual void <code>getCanvasMarginHint</code> (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, double &amp;left, double &amp;top, double &amp;right, double &amp;bottom) const<br/>
  <i>Calculate a hint for the canvas margin. </i></p>
 <h3>Protected Member Functions</h3>
 <p>double <code>sampleWidth</code> (const <code>QwtScaleMap</code> &amp;map, double canvasSize, double <code>dataSize</code>, double value) const </p>
@@ -80,12 +80,12 @@ description: "QwtPlotAbstractBarChart –"
 <p> The margins are in target device coordinates ( pixels on screen ) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates<br />
- <i>left</i> Returns the left margin<br />
- <i>top</i> Returns the top margin<br />
- <i>right</i> Returns the right margin<br />
+<dd><i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates<br/>
+ <i>left</i> Returns the left margin<br/>
+ <i>top</i> Returns the top margin<br/>
+ <i>right</i> Returns the right margin<br/>
  <i>bottom</i> Returns the bottom margin</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -121,9 +121,9 @@ description: "QwtPlotAbstractBarChart –"
 <p>Calculate the width for a sample in paint device coordinates </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>map</i> Scale map for the corresponding scale<br />
- <i>canvasSize</i> Size of the canvas in paint device coordinates<br />
- <i>boundingSize</i> Bounding size of the chart in plot coordinates ( used in AutoAdjustSamples mode )<br />
+<dd><i>map</i> Scale map for the corresponding scale<br/>
+ <i>canvasSize</i> Size of the canvas in paint device coordinates<br/>
+ <i>boundingSize</i> Bounding size of the chart in plot coordinates ( used in AutoAdjustSamples mode )<br/>
  <i>value</i> Value of the sample</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

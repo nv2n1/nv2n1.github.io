@@ -16,7 +16,7 @@ description: "ql/termstructures/volatility/smilesection.hpp – Smile section ba
 #include &lt;ql/utilities/null.hpp&gt;
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>SmileSection</code><br />
+<p>class <code>SmileSection</code><br/>
  <i>interest rate volatility smile section </i></p>
 <h2>Detailed Description</h2>
 <p>Smile section base class.</p>

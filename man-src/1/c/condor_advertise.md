@@ -90,8 +90,8 @@ description: "condor_advertise Send a ClassAd to the condor_collector daemon"
 <dl>
 </dl>
 <p> For any of these INVALIDATE commands, the ClassAd in the required file consists of three entries. The file contents will be similar to: </p>
-<p> MyType = &quot;Query&quot;<br />
- TargetType = &quot;Machine&quot;<br />
+<p> MyType = &quot;Query&quot;<br/>
+ TargetType = &quot;Machine&quot;<br/>
  Requirements = Name == &quot;condor.example.com&quot; </p>
 <p> The definition for MyType is always Query . TargetType is set to the MyType of the ad to be deleted. This MyType is DaemonMaster for the <i>condor_master</i> ClassAd, Machine for the <i>condor_startd</i> ClassAd, Scheduler for the <i>condor_schedd</i> ClassAd, and Negotiator for the <i>condor_negotiator</i> ClassAd. Requirements is an expression evaluated within the context of ads of TargetType . When Requirements evaluates to True , the matching ad is invalidated. A full example is given below. </p>
 <h2>Options</h2>
@@ -152,8 +152,8 @@ description: "condor_advertise Send a ClassAd to the condor_collector daemon"
 </dl>
 <h2>Examples</h2>
 <p> Assume that a machine called condor.example.com is turned off, yet its <i>condor_startd</i> ClassAd does not expire for another 20 minutes. To avoid this machine being matched, an administrator chooses to delete the machine&#8217;s <i>condor_startd</i> ClassAd. Create a file (called remove_file in this example) with the three required attributes: </p>
-<p> MyType = &quot;Query&quot;<br />
- TargetType = &quot;Machine&quot;<br />
+<p> MyType = &quot;Query&quot;<br/>
+ TargetType = &quot;Machine&quot;<br/>
  Requirements = Name == &quot;condor.example.com&quot; </p>
 <p> This file is used with the command: </p>
 <p> % condor_advertise INVALIDATE_STARTD_ADS remove_file </p>

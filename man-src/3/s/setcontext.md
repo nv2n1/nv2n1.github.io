@@ -15,11 +15,11 @@ int setcontext(const ucontext_t *ucp);</code></pre>
 <h2>Description</h2>
 <p>In a System V-like environment, one has the two types <i>mcontext_t</i> and <i>ucontext_t</i> defined in <i>&lt;ucontext.h&gt;</i> and the four functions <code>getcontext</code>(), <code>setcontext</code>(), <code><a href="/docs/linux/man/3-makecontext/">makecontext</a></code>(3), and <code><a href="/docs/linux/man/3-swapcontext/">swapcontext</a></code>(3) that allow user-level context switching between multiple threads of control within a process. </p>
 <p> The <i>mcontext_t</i> type is machine-dependent and opaque. The <i>ucontext_t</i> type is a structure that has at least the following fields: </p>
-<p> typedef struct ucontext_t {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ucontext_t&nbsp;*uc_link;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sigset_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uc_sigmask;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;stack_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uc_stack;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mcontext_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uc_mcontext;<br />
+<p> typedef struct ucontext_t {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ucontext_t&nbsp;*uc_link;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sigset_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uc_sigmask;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;stack_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uc_stack;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mcontext_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uc_mcontext;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8230; } ucontext_t; </p>
 <p> with <i>sigset_t</i> and <i>stack_t</i> defined in <i>&lt;signal.h&gt;</i>. Here <i>uc_link</i> points to the context that will be resumed when the current context terminates (in case the current context was created using <code><a href="/docs/linux/man/3-makecontext/">makecontext</a></code>(3)), <i>uc_sigmask</i> is the set of signals blocked in this context (see <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2)), <i>uc_stack</i> is the stack used by this context (see <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)), and <i>uc_mcontext</i> is the machine-specific representation of the saved context, that includes the calling thread&#8217;s machine registers. </p>
 <p> The function <code>getcontext</code>() initializes the structure pointed to by <i>ucp</i> to the currently active context. </p>

@@ -12,7 +12,7 @@ description: "update-inetd – create, remove, enable or disable entry /etc/inet
 <h2>SYNOPSIS</h2>
 <p> <code>update-inetd</code> [<i>option</i>&#8230;] <i>command</i> <i>argument</i></p>
 <h2>DESCRIPTION</h2>
-<p> <code>update-inetd</code> can be used to add, remove, enable or disable entries in the <i>/etc/inetd.conf</i> file (you can specify a different file by using the <code>&#8211;file</code> option). After the <i>/etc/inetd.conf</i> file has been changed, <code>update-inetd</code> will send a <font SIZE="-1"><code>SIGHUP</code></font> signal to the inetd process to make sure that inetd will use the new <i>/etc/inetd.conf</i> file. For Perl scripts you can also use the Perl module <code>DebianNet</code>. See <code>DebianNet</code>(3pm) for further information. <code>update-inetd</code> can also be used to add entries that are commented out by default. They will be treated like normal entries. That also means that if you already have an entry that is commented out you cannot add an entry for the same service without removing the old one first. </p>
+<p> <code>update-inetd</code> can be used to add, remove, enable or disable entries in the <i>/etc/inetd.conf</i> file (you can specify a different file by using the <code>&#8211;file</code> option). After the <i>/etc/inetd.conf</i> file has been changed, <code>update-inetd</code> will send a <code>SIGHUP</code> signal to the inetd process to make sure that inetd will use the new <i>/etc/inetd.conf</i> file. For Perl scripts you can also use the Perl module <code>DebianNet</code>. See <code>DebianNet</code>(3pm) for further information. <code>update-inetd</code> can also be used to add entries that are commented out by default. They will be treated like normal entries. That also means that if you already have an entry that is commented out you cannot add an entry for the same service without removing the old one first. </p>
 <p> In accordance with the Debian Policy, <code>update-inetd</code> treats entries that are prefixed with a single &#8216;<code>#</code>&#8216; character as commented out by a user. This means that for a user to disable a service using <code>update-inetd</code>, and for the service to remain disabled after upgrades, the user must run <code>update-inetd</code> with <code>&#8211;comment-chars &#8216;#&#8217;</code> (see relevant option below). Conversely, package maintainer scripts should not override the default comment chars (and when they do, they must not use &#8216;<code>#</code>&#8216;). </p>
 <p> Also note that <code>&#8211;enable</code> and <code>&#8211;remove</code> will not be acted upon for service entries that are commented out using anything but the value specified with <code>&#8211;comment-chars</code> (or the default value if none is specified).</p>
 <h2>COMMANDS</h2>
@@ -29,7 +29,7 @@ description: "update-inetd – create, remove, enable or disable entry /etc/inet
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;group</code> <i>groupname</i></dt>
-<dd> Specify that the new entry should be placed in group <i>groupname</i> (e.g. &quot;<i></i><font SIZE="-1"><i>MAIL</i></font><i></i>&#8220;). If the group does not exist the entry will be placed at the end of the file. The default group is &#8221;<font SIZE="-1"><code>OTHER</code></font>&quot;. </dd>
+<dd> Specify that the new entry should be placed in group <i>groupname</i> (e.g. &quot;<i></i><i>MAIL</i><i></i>&#8220;). If the group does not exist the entry will be placed at the end of the file. The default group is &#8221;<code>OTHER</code>&quot;. </dd>
 <p> This option is only relevant with the <code>&#8211;add</code> command.</p>
 <dt><code>&#8211;pattern</code> <i>pattern</i></dt>
 <dd> This option can be used to select a service. You only need this option if you have two (or more) services of the same name. </dd>
@@ -62,11 +62,11 @@ description: "update-inetd – create, remove, enable or disable entry /etc/inet
 <pre>
   update-inetd --enable time,daytime
 </pre>
-<p> You hear a rumor that inetd is easily crashed via a <font SIZE="-1">SYN</font> attack against the time and daytime services, you want to turn off only their <font SIZE="-1">TCP</font> versions, while leaving the analogous <font SIZE="-1">UDP</font> services enabled: </p>
+<p> You hear a rumor that inetd is easily crashed via a SYN attack against the time and daytime services, you want to turn off only their TCP versions, while leaving the analogous UDP services enabled: </p>
 <pre>
   update-inetd --comment-chars '#' --pattern tcp --disable time,daytime
 </pre>
-<p> You just finished writing a <font SIZE="-1">POP3</font> server and want to install the <i>/etc/inetd.conf</i> entry from the Makefile: </p>
+<p> You just finished writing a POP3 server and want to install the <i>/etc/inetd.conf</i> entry from the Makefile: </p>
 <pre>
   update-inetd --group MAIL --add \
     'pop-3		stream	tcp	nowait	root	/usr/sbin/tcpd	/usr/sbin/in.pop3d'

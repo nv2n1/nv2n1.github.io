@@ -15,10 +15,10 @@ nexthop
 { COMMAND |
     help }
 </code></pre>
-<p> <code>ip nexthop</code> { <code>show</code> | <code>flush</code> } <i>SELECTOR</i><br />
- <code>ip nexthop</code> { <code>add</code> | <code>replace</code> } id <i>ID</i> <i>NH</i><br />
- <code>ip nexthop</code> { <code>get</code> | <code>del</code> } id <i>ID</i><br />
- <code>ip nexthop bucket list </code><i>BUCKET_SELECTOR</i><br />
+<p> <code>ip nexthop</code> { <code>show</code> | <code>flush</code> } <i>SELECTOR</i><br/>
+ <code>ip nexthop</code> { <code>add</code> | <code>replace</code> } id <i>ID</i> <i>NH</i><br/>
+ <code>ip nexthop</code> { <code>get</code> | <code>del</code> } id <i>ID</i><br/>
+ <code>ip nexthop bucket list </code><i>BUCKET_SELECTOR</i><br/>
  <code>ip nexthop bucket get </code>id <i>ID</i> index <i>INDEX</i> </p>
 <pre><code>SELECTOR :=
 [ id

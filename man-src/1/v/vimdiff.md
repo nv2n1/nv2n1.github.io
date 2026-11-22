@@ -16,8 +16,8 @@ description: "vimdiff – edit between two and eight versions of a file with Vim
 <p> <code>Vimdiff</code> starts <code>Vim</code> on two up to eight files. Each file gets its own window. The differences between the files are highlighted. This is a nice way to inspect changes and to move changes from one version to another version of the same file. </p>
 <p> See <a href="/docs/linux/man/1-vim/">vim</a>(1) for details about Vim itself. </p>
 <p> When started as <code>gvimdiff</code> the GUI will be started, if available. </p>
-<p> In each window the &#8216;diff&#8217; option will be set, which causes the differences to be highlighted.<br />
- The &#8216;wrap&#8217; and &#8216;scrollbind&#8217; options are set to make the text look good.<br />
+<p> In each window the &#8216;diff&#8217; option will be set, which causes the differences to be highlighted.<br/>
+ The &#8216;wrap&#8217; and &#8216;scrollbind&#8217; options are set to make the text look good.<br/>
  The &#8216;foldmethod&#8217; option is set to &quot;diff&quot;, which puts ranges of lines without changes in a fold. &#8216;foldcolumn&#8217; is set to two to make it easy to spot the folds and open or close them.</p>
 <h2>OPTIONS</h2>
 <p> Vertical splits are used to align the lines, as if the &quot;-O&quot; argument was used. To use horizontal splits instead, use the &quot;-o&quot; argument. </p>

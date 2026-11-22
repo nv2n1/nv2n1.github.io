@@ -13,27 +13,27 @@ description: "QwtMatrixRasterData –"
 <p>#include &lt;qwt_matrix_raster_data.h&gt; </p>
 <p> Inherits <code>QwtRasterData</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>ResampleMode</code> { <code>NearestNeighbour</code>, <code>BilinearInterpolation</code> }<br />
+<p>enum <code>ResampleMode</code> { <code>NearestNeighbour</code>, <code>BilinearInterpolation</code> }<br/>
  <i>Resampling algorithm The default setting is NearestNeighbour;. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtMatrixRasterData</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtMatrixRasterData</code> ()<br />
- <i>Destructor. </i><br />
- void <code>setResampleMode</code> (<code>ResampleMode</code> mode)<br />
- <i>Set the resampling algorithm. </i><br />
+<p><code>QwtMatrixRasterData</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtMatrixRasterData</code> ()<br/>
+ <i>Destructor. </i><br/>
+ void <code>setResampleMode</code> (<code>ResampleMode</code> mode)<br/>
+ <i>Set the resampling algorithm. </i><br/>
  <code>ResampleMode</code> <code>resampleMode</code> () const </p>
-<p> virtual void <code>setInterval</code> (Qt::Axis, const <code>QwtInterval</code> &amp;)<br />
- <i>Assign the bounding interval for an axis. </i><br />
- void <code>setValueMatrix</code> (const QVector&lt; double &gt; &amp;values, int <code>numColumns</code>)<br />
- <i>Assign a value matrix. </i><br />
+<p> virtual void <code>setInterval</code> (Qt::Axis, const <code>QwtInterval</code> &amp;)<br/>
+ <i>Assign the bounding interval for an axis. </i><br/>
+ void <code>setValueMatrix</code> (const QVector&lt; double &gt; &amp;values, int <code>numColumns</code>)<br/>
+ <i>Assign a value matrix. </i><br/>
  const QVector&lt; double &gt; <code>valueMatrix</code> () const </p>
-<p> void <code>setValue</code> (int row, int col, double <code>value</code>)<br />
- <i>Change a single value in the matrix. </i><br />
+<p> void <code>setValue</code> (int row, int col, double <code>value</code>)<br/>
+ <i>Change a single value in the matrix. </i><br/>
  int <code>numColumns</code> () const </p>
 <p> int <code>numRows</code> () const </p>
-<p> virtual QRectF <code>pixelHint</code> (const QRectF &amp;) const<br />
- <i>Calculate the pixel hint. </i><br />
+<p> virtual QRectF <code>pixelHint</code> (const QRectF &amp;) const<br/>
+ <i>Calculate the pixel hint. </i><br/>
  virtual double <code>value</code> (double x, double y) const </p>
 <h2>Detailed Description</h2>
 <p>A class representing a matrix of values as raster data. </p>
@@ -92,7 +92,7 @@ description: "QwtMatrixRasterData –"
 <p>Assign the bounding interval for an axis. Setting the bounding intervals for the X/Y axis is mandatory to define the positions for the values of the value matrix. The interval in Z direction defines the possible range for the values in the matrix, what is f.e used by <code>QwtPlotSpectrogram</code> to map values to colors. The Z-interval might be the bounding interval of the values in the matrix, but usually it isn&#8217;t. ( f.e a interval of 0.0-100.0 for values in percentage ) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> X, Y or Z axis<br />
+<dd><i>axis</i> X, Y or Z axis<br/>
  <i>interval</i> Interval</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -110,8 +110,8 @@ description: "QwtMatrixRasterData –"
 <p>Change a single value in the matrix. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>row</i> Row index<br />
- <i>col</i> Column index<br />
+<dd><i>row</i> Row index<br/>
+ <i>col</i> Column index<br/>
  <i>value</i> New value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -120,7 +120,7 @@ description: "QwtMatrixRasterData –"
 <p>Assign a value matrix. The positions of the values are calculated by dividing the bounding rectangle of the X/Y intervals into equidistant rectangles ( pixels ). Each value corresponds to the center of a pixel. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>values</i> Vector of values<br />
+<dd><i>values</i> Vector of values<br/>
  <i>numColumns</i> Number of columns</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -131,7 +131,7 @@ description: "QwtMatrixRasterData –"
 <dd>the value at a raster position</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> X value in plot coordinates<br />
+<dd><i>x</i> X value in plot coordinates<br/>
  <i>y</i> Y value in plot coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

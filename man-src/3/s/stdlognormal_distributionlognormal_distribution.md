@@ -17,10 +17,10 @@ description: "std::lognormal_distribution<RealType>::lognormal_distribution – 
 (3)(since C++ 11)</code></pre>
 <p>Constructs a new distribution object. <code>(2)</code> uses m and s as the distribution parameters. <code>(3)</code> uses params as the distribution parameters. </p>
 <h2>Parameters</h2>
-<p>m &#8211; the m distribution parameter (log-scale)<br />
-s &#8211; the s distribution parameter (shape)<br />
+<p>m &#8211; the m distribution parameter (log-scale)<br/>
+s &#8211; the s distribution parameter (shape)<br/>
 params &#8211; the distribution parameter set </p>
 <p>Defect reports </p>
 <p>The following behavior-changing defect reports were applied retroactively to previously published C++ standards. </p>
-<p>DR Applied to Behavior as published Correct behavior<br />
+<p>DR Applied to Behavior as published Correct behavior<br/>
 P0935R0 C++11 default constructor was explicit made implicit</p>

@@ -10,10 +10,10 @@ description: "ql/pricingengines/asian/analytic_discr_geom_av_price.hpp – Analy
 
 <p> ql/pricingengines/asian/analytic_discr_geom_av_price.hpp &#8211; Analytic engine for discrete geometric average price Asian. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instruments/asianoption.hpp&gt;<br />
+<p> #include &lt;ql/instruments/asianoption.hpp&gt;<br/>
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>AnalyticDiscreteGeometricAveragePriceAsianEngine</code><br />
+<p> class <code>AnalyticDiscreteGeometricAveragePriceAsianEngine</code><br/>
  <i>Pricing engine for European discrete geometric average price Asian. </i></p>
 <h2>Detailed Description</h2>
 <p> Analytic engine for discrete geometric average price Asian. </p>

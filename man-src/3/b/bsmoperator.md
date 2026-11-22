@@ -10,10 +10,10 @@ description: "ql/methods/finitedifferences/bsmoperator.hpp – differential oper
 
 <p> ql/methods/finitedifferences/bsmoperator.hpp &#8211; differential operator for Black-Scholes-Merton equation </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt;<br />
+<p> #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt;<br/>
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>BSMOperator</code><br />
+<p> class <code>BSMOperator</code><br/>
  <i>Black-Scholes-Merton differential operator. </i></p>
 <h2>Detailed Description</h2>
 <p> differential operator for Black-Scholes-Merton equation </p>

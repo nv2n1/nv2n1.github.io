@@ -10,7 +10,7 @@ description: "ldns_dnssec_data_chain_new, ldns_dnssec_data_chain_free, ldns_dnss
 
 <p> ldns_dnssec_data_chain_new, ldns_dnssec_data_chain_free, ldns_dnssec_data_chain_deep_free, ldns_dnssec_build_data_chain, ldns_dnssec_data_chain_print </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_dnssec_data_chain* ldns_dnssec_data_chain_new(); </p>

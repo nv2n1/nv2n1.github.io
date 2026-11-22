@@ -90,19 +90,19 @@ description: "certmgr – Mono Certificate Manager (CLI version)"
 <dl>
 <dt><code>MD2</code></dt>
 <dd> Some Certificate Authorities (CA) old root certificates use the MD2 hash algorithm. MD2 is old enough not to be part of the standard .NET framework. This makes it impossible to validate a digital signature made with MD2. For this reason MD2 is included in the Mono.Security.dll assembly. However the machine.config file must be updated so the OID for MD2 is known at runtime. </dd>
-<p> To correct this insert the following XML snippet inside the &lt;configuration&gt; element of your machine.config file.<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;mscorlib&gt;<br />
-&nbsp;<wbr>&lt;cryptographySettings&gt;<br />
-&lt;cryptoNameMapping&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;cryptoClasses&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;cryptoClass monoMD2=&quot;Mono.Security.Cryptography.MD2Managed, Mono.Security, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756&quot;&nbsp;<wbr>/&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;/cryptoClasses&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;nameEntry name=&quot;MD2&quot;&nbsp;<wbr>class=&quot;monoMD2&quot;&nbsp;<wbr>/&gt;<br />
-&lt;/cryptoNameMapping&gt;<br />
-&lt;oidMap&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;oidEntry OID=&quot;1.2.840.113549.2.2&quot;&nbsp;<wbr>name=&quot;MD2&quot;&nbsp;<wbr>/&gt;<br />
-&lt;/oidMap&gt;<br />
-&nbsp;<wbr>&lt;/cryptographySettings&gt;<br />
+<p> To correct this insert the following XML snippet inside the &lt;configuration&gt; element of your machine.config file.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;mscorlib&gt;<br/>
+&nbsp;<wbr>&lt;cryptographySettings&gt;<br/>
+&lt;cryptoNameMapping&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;cryptoClasses&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;cryptoClass monoMD2=&quot;Mono.Security.Cryptography.MD2Managed, Mono.Security, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756&quot;&nbsp;<wbr>/&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;/cryptoClasses&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;nameEntry name=&quot;MD2&quot;&nbsp;<wbr>class=&quot;monoMD2&quot;&nbsp;<wbr>/&gt;<br/>
+&lt;/cryptoNameMapping&gt;<br/>
+&lt;oidMap&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;oidEntry OID=&quot;1.2.840.113549.2.2&quot;&nbsp;<wbr>name=&quot;MD2&quot;&nbsp;<wbr>/&gt;<br/>
+&lt;/oidMap&gt;<br/>
+&nbsp;<wbr>&lt;/cryptographySettings&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;/mscorlib&gt; </p>
 </dl>
 <h2>AUTHOR</h2>

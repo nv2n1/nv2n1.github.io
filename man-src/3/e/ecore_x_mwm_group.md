@@ -9,13 +9,13 @@ description: "MWM related functions. – Functions related to MWM."
 
 <p>MWM related functions. &#8211; Functions related to MWM. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>ecore_x_mwm_hints_get_prefetch</code> (Ecore_X_Window window)<br />
- <i>Sends the GetProperty request. </i><br />
- EAPI void <code>ecore_x_mwm_hints_get_fetch</code> (void)<br />
- <i>Gets the reply of the GetProperty request sent by </i><code>ecore_x_mwm_hints_get_prefetch()</code>.<br />
- EAPI int <code>ecore_x_mwm_hints_get</code> (Ecore_X_Window window __UNUSED__, Ecore_X_MWM_Hint_Func *fhint, Ecore_X_MWM_Hint_Decor *dhint, Ecore_X_MWM_Hint_Input *ihint)<br />
- <i>To document. </i><br />
- EAPI void <code>ecore_x_mwm_borderless_set</code> (Ecore_X_Window window, int borderless)<br />
+<p>EAPI void <code>ecore_x_mwm_hints_get_prefetch</code> (Ecore_X_Window window)<br/>
+ <i>Sends the GetProperty request. </i><br/>
+ EAPI void <code>ecore_x_mwm_hints_get_fetch</code> (void)<br/>
+ <i>Gets the reply of the GetProperty request sent by </i><code>ecore_x_mwm_hints_get_prefetch()</code>.<br/>
+ EAPI int <code>ecore_x_mwm_hints_get</code> (Ecore_X_Window window __UNUSED__, Ecore_X_MWM_Hint_Func *fhint, Ecore_X_MWM_Hint_Decor *dhint, Ecore_X_MWM_Hint_Input *ihint)<br/>
+ <i>To document. </i><br/>
+ EAPI void <code>ecore_x_mwm_borderless_set</code> (Ecore_X_Window window, int borderless)<br/>
  <i>Sets the borderless flag of a window using MWM. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions related to MWM.</p>
@@ -24,15 +24,15 @@ description: "MWM related functions. – Functions related to MWM."
 <p>Sets the borderless flag of a window using MWM. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> The window.<br />
+<dd><i>window</i> The window.<br/>
  <i>borderless</i> The borderless flag.</dd></dl>
 <h3>EAPI int ecore_x_mwm_hints_get (Ecore_X_Window window __UNUSED__, Ecore_X_MWM_Hint_Func * fhint, Ecore_X_MWM_Hint_Decor * dhint, Ecore_X_MWM_Hint_Input * ihint)</h3>
 <p>To document. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> Unused.<br />
- <i>fhint</i> To document.<br />
- <i>dhint</i> To document.<br />
+<dd><i>window</i> Unused.<br/>
+ <i>fhint</i> To document.<br/>
+ <i>dhint</i> To document.<br/>
  <i>ihint</i> To document.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

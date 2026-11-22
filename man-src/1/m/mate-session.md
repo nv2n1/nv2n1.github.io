@@ -13,14 +13,14 @@ description: "mate-session – Start the MATE Desktop Environment."
 <p> <code>mate-session [OPTIONS]</code></p>
 <h2>DESCRIPTION</h2>
 <p> The <code>mate-session</code> program starts up the MATE desktop environment. This command is typically executed by your Login/Display Manager (like GDM, LXDM, XDM, SLiM, or from your X startup scripts like .xinitrc). It will load either your saved session, or it will provide a default session for the user as defined by the system administrator (or the default MATE installation on your system). </p>
-<p> The default session is defined in the dconf keys under <code>/</code><i>org</i><code>/</code><i>mate</i><code>/</code><i>desktop</i><code>/</code><i>session</i><code>/</code><br />
+<p> The default session is defined in the dconf keys under <code>/</code><i>org</i><code>/</code><i>mate</i><code>/</code><i>desktop</i><code>/</code><i>session</i><code>/</code><br/>
  When saving a session, <code>mate-session</code> saves the currently running applications in the <code>~/.config/mate-session/saved-session</code> directory of the users /home. </p>
 <p> <code>mate-session</code> is an X11 session manager. It can manage MATE applications as well as any other X11 SM compliant ones. </p>
 <h2>OPTIONS</h2>
 <h3>The following options are supported:</h3>
 <dl>
 <dt><code>-a, &#8211;autostart=DIR</code></dt>
-<dd> Start all applications defined in &quot;<code>DIR</code>&quot;, instead of starting the applications defined in <code>/</code><i>org</i><code>/</code><i>mate</i><code>/</code><i>desktop</i><code>/</code><i>session</i><code>/</code><i>default-session</i><br />
+<dd> Start all applications defined in &quot;<code>DIR</code>&quot;, instead of starting the applications defined in <code>/</code><i>org</i><code>/</code><i>mate</i><code>/</code><i>desktop</i><code>/</code><i>session</i><code>/</code><i>default-session</i><br/>
  Multiple <code>&#8211;autostart</code> options can be passed.</dd>
 <dt><code>-f, &#8211;failsafe</code></dt>
 <dd> Run in fail-safe mode. User-specified applications will not be started.</dd>

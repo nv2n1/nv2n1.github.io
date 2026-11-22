@@ -16,13 +16,13 @@ description: "isdnrep – report ISDN activity"
 <dt><code>-V</code></dt>
 <dd> show version information and exit. </dd>
 <dt><code>-a<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>all</code></dt>
-<dd> Show all connections registered. If this option is<br />
+<dd> Show all connections registered. If this option is<br/>
  not given, show only the connections made today. </dd>
 <dt><code>-S<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Summary</code></dt>
-<dd> Show a summary (no individual calls) for selected date range. If this<br />
+<dd> Show a summary (no individual calls) for selected date range. If this<br/>
  option is given twice, the summaries per day are hidden too. Don&#8217;t use with <code>-h</code> </dd>
 <dt><code>-h<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>no header</code></dt>
-<dd> There will be no header for each day, nor will the summary at the end<br />
+<dd> There will be no header for each day, nor will the summary at the end<br/>
  of each day and at the end of the report be generated. This is useful if the output is to be processed by another program. </dd>
 <p> This option doesn&#8217;t work if the <code>-wX</code> is also given. </p>
 <dt><code>-n<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>numbers</code></dt>
@@ -30,7 +30,7 @@ description: "isdnrep – report ISDN activity"
 <dt><code>-fFILE</code></dt>
 <dd> The file from which to generate the report. This is usually /var/log/isdn.log, or whatever is configured in /etc/isdn/isdn.conf as <code>LOGFILE = .</code> The -f option will override the setting in /etc/isdn/isdn.conf. </dd>
 <dt><code>-t time span<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>time=time span</code></dt>
-<dd> With this option a specific time span covered by the log file can be<br />
+<dd> With this option a specific time span covered by the log file can be<br/>
  displayed, e.g. all calls in November 1995, or on January 3rd 1996 between 03:00 and 09:45. </dd>
 <p> The format in which times are given is described below. The time span has the following syntax: </p>
 <dl>
@@ -45,16 +45,16 @@ description: "isdnrep – report ISDN activity"
 <dd> display the given month, day, hour, &#8230;</dd></dl>
 </dl>
 <dt><code>-d -time<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>delete=time</code></dt>
-<dd> Delete entries from the log file up to (but not including) the specified<br />
+<dd> Delete entries from the log file up to (but not including) the specified<br/>
  time. The format is the same as for the -t option. The minus before the time <code>must</code> be given! It is not possible to define begin and end times; entries are always deleted from the beginning up to the time given. </dd>
 <p> <code>Warning!</code> Entries are <code>really</code> deleted from the file. Careless use can result in all entries being deleted, e.g. with &quot;isdnrep -d -&quot;. </p>
 <dt><code>-E<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>print Errors</code></dt>
-<dd> Display all connections and connection attempts. Without this option,<br />
+<dd> Display all connections and connection attempts. Without this option,<br/>
  only successful connections are displayed. </dd>
 <dt><code>-v<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>verbose</code></dt>
 <dd> Display warnings on start-up.</dd>
 <dt><code>-c<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ignore default options</code></dt>
-<dd> Do not append the &quot;REPOPTIONS&quot; setting from /etc/isdn/isdn.conf<br />
+<dd> Do not append the &quot;REPOPTIONS&quot; setting from /etc/isdn/isdn.conf<br/>
  to the command line. </dd>
 <dt><code>-p [n][m]&#8217;number'[,[m]&#8217;number&#8217;&#8230;]<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>phonenumber</code></dt>
 <dd> Display only selected phone numbers.</dd>
@@ -69,7 +69,7 @@ description: "isdnrep – report ISDN activity"
 <dt><code>-o<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>outgoing</code></dt>
 <dd> Only outgoing connections are displayed.</dd>
 <dt><code>-xX<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>include/exclude calls</code></dt>
-<dd> Select calls by day and/or hour. The following selections are possible<br />
+<dd> Select calls by day and/or hour. The following selections are possible<br/>
  and can specified in any combination and quantity using <code>: </code> as separator:</dd>
 <dl>
 <dl>
@@ -89,10 +89,10 @@ description: "isdnrep – report ISDN activity"
 </dt><dd> -xd2-4:DH:h9-17:H12-15</dd></dl>
 <p> This will display all calls on Tuesdays, Wednesdays, or Thursdays that are not holidays with a start time between 09:00 and 12:00 or 15:00 and 17:00. </p>
 <dt><code>-u<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>unknown caller</code></dt>
-<dd> At the end of the report, all numbers not aliased in callerid.conf or<br />
+<dd> At the end of the report, all numbers not aliased in callerid.conf or<br/>
  ~/.isdn are displayed. This option is unavailable when HTML output is requested. </dd>
 <dt><code>-LX<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>summary lists</code></dt>
-<dd> Select the summaries in the footer by any combination of the following<br />
+<dd> Select the summaries in the footer by any combination of the following<br/>
  letters:</dd>
 <dl>
 <dl>
@@ -132,7 +132,7 @@ description: "isdnrep – report ISDN activity"
 <dt><code>-m</code>[<code>*</code>|<code>/</code>]<i>number</i><code> modify call costs</code></dt>
 <dd> Multiply (*) or divide (/) the stored or recalculated call costs by number before displaying them. If neither * nor / is given, multiply. </dd>
 <dt><code>-wX<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>WWW</code></dt>
-<dd> isdnrep can give its output in HTML format; this is switched on with<br />
+<dd> isdnrep can give its output in HTML format; this is switched on with<br/>
  this option. Two modes are possible: </dd>
 <dl>
 <dl>
@@ -142,7 +142,7 @@ description: "isdnrep – report ISDN activity"
 <dd> A complete HTML page is generated.</dd></dl>
 </dl>
 <dt><code>-sX<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>format string</code></dt>
-<dd> The output generated by isdnrep can be modified by specifying the format<br />
+<dd> The output generated by isdnrep can be modified by specifying the format<br/>
  of the line generated for each connection. The syntax is similar to that used by printf. The following parameters are possible (the <code>x</code> where given means that a width for the field, also known as the precision, must be given): </dd>
 <dl>
 <dl>
@@ -213,7 +213,7 @@ description: "isdnrep – report ISDN activity"
 </dt><dd> &quot; %X %D %16.16H %T %-25.25F %U&quot;</dd></dl>
 <p> It is included as <code>REPFMTNIO.</code> </p>
 <dt><code>-FX<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>format</code></dt>
-<dd> format strings can be specified in isdn.conf; this option<br />
+<dd> format strings can be specified in isdn.conf; this option<br/>
  is used to select one of these. Entries can be defined in the section [ISDNLOG] with names beginning with &quot;REPFMT&quot;. The string after the -F option is added to REPFMT to find the correct entry. Case is not sensitive. E.g.: </dd>
 <pre>
 REPFMT1        = ... # -&gt; isdnrep -F1

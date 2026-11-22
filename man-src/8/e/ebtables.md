@@ -9,17 +9,17 @@ description: "ebtables (v2.0.10-4) – Ethernet bridge frame table administratio
 
 <p>ebtables (v2.0.10-4) &#8211; Ethernet bridge frame table administration</p>
 <h2>Synopsis</h2>
-<p><code>ebtables </code>[<code>-t</code> table ] <code>&#8211;</code>[<code>ACDI</code>] chain rule specification [match extensions] [watcher extensions] target<br />
- <code>ebtables </code>[<code>-t</code> table ] <code>-P</code> chain <code>ACCEPT</code> | <code>DROP</code> | <code>RETURN</code><br />
- <code>ebtables </code>[<code>-t</code> table ] <code>-F</code> [chain]<br />
- <code>ebtables </code>[<code>-t</code> table ] <code>-Z</code> [chain]<br />
- <code>ebtables </code>[<code>-t</code> table ] <code>-L</code> [<code>-Z</code>] [chain] [ [<code>&#8211;Ln</code>] | [<code>&#8211;Lx</code>] ] [<code>&#8211;Lc</code>] [<code>&#8211;Lmac2</code>]<br />
- <code>ebtables </code>[<code>-t</code> table ] <code>-N</code> chain [<code>-P ACCEPT </code>|<code> DROP </code>|<code> RETURN</code>]<br />
- <code>ebtables </code>[<code>-t</code> table ] <code>-X</code> [chain]<br />
- <code>ebtables </code>[<code>-t</code> table ] <code>-E</code> old-chain-name new-chain-name<br />
- <code>ebtables </code>[<code>-t</code> table ] <code>&#8211;init-table</code><br />
- <code>ebtables </code>[<code>-t</code> table ] [<code>&#8211;atomic-file</code> file] <code>&#8211;atomic-commit</code><br />
- <code>ebtables </code>[<code>-t</code> table ] [<code>&#8211;atomic-file</code> file] <code>&#8211;atomic-init</code><br />
+<p><code>ebtables </code>[<code>-t</code> table ] <code>&#8211;</code>[<code>ACDI</code>] chain rule specification [match extensions] [watcher extensions] target<br/>
+ <code>ebtables </code>[<code>-t</code> table ] <code>-P</code> chain <code>ACCEPT</code> | <code>DROP</code> | <code>RETURN</code><br/>
+ <code>ebtables </code>[<code>-t</code> table ] <code>-F</code> [chain]<br/>
+ <code>ebtables </code>[<code>-t</code> table ] <code>-Z</code> [chain]<br/>
+ <code>ebtables </code>[<code>-t</code> table ] <code>-L</code> [<code>-Z</code>] [chain] [ [<code>&#8211;Ln</code>] | [<code>&#8211;Lx</code>] ] [<code>&#8211;Lc</code>] [<code>&#8211;Lmac2</code>]<br/>
+ <code>ebtables </code>[<code>-t</code> table ] <code>-N</code> chain [<code>-P ACCEPT </code>|<code> DROP </code>|<code> RETURN</code>]<br/>
+ <code>ebtables </code>[<code>-t</code> table ] <code>-X</code> [chain]<br/>
+ <code>ebtables </code>[<code>-t</code> table ] <code>-E</code> old-chain-name new-chain-name<br/>
+ <code>ebtables </code>[<code>-t</code> table ] <code>&#8211;init-table</code><br/>
+ <code>ebtables </code>[<code>-t</code> table ] [<code>&#8211;atomic-file</code> file] <code>&#8211;atomic-commit</code><br/>
+ <code>ebtables </code>[<code>-t</code> table ] [<code>&#8211;atomic-file</code> file] <code>&#8211;atomic-init</code><br/>
  <code>ebtables </code>[<code>-t</code> table ] [<code>&#8211;atomic-file</code> file] <code>&#8211;atomic-save</code></p>
 <h2>Description</h2>
 <p><code>ebtables</code> is an application program used to set up and maintain the tables of rules (inside the Linux kernel) that inspect Ethernet frames. It is analogous to the <code>iptables</code> application, but less complicated, due to the fact that the Ethernet protocol is much simpler than the IP protocol.</p>
@@ -55,15 +55,15 @@ description: "ebtables (v2.0.10-4) – Ethernet bridge frame table administratio
 <dt><code>-Z, &#8211;zero</code></dt>
 <dd>Set the counters of the selected chain to zero. If no chain is selected, all the counters are set to zero. The <code>-Z</code> command can be used in conjunction with the <code>-L</code> command. When both the <code>-Z</code> and <code>-L</code> commands are used together in this way, the rule counters are printed on the screen before they are set to zero.</dd>
 <dt><code>-L, &#8211;list</code></dt>
-<dd>List all rules in the selected chain. If no chain is selected, all chains are listed.<br />
- The following options change the output of the <code>-L</code> command.<br />
- <code>&#8211;Ln</code><br />
- Places the rule number in front of every rule. This option is incompatible with the <code>&#8211;Lx</code> option.<br />
- <code>&#8211;Lc</code><br />
- Shows the counters at the end of each rule displayed by the <code>-L</code> command. Both a frame counter (pcnt) and a byte counter (bcnt) are displayed. The frame counter shows how many frames have matched the specific rule, the byte counter shows the sum of the frame sizes of these matching frames. Using this option in combination with the <code>&#8211;Lx</code> option causes the counters to be written out in the &#8216;<code>-c</code> &lt;pcnt&gt; &lt;bcnt&gt;&#8217; option format.<br />
- <code>&#8211;Lx</code><br />
- Changes the output so that it produces a set of ebtables commands that construct the contents of the chain, when specified. If no chain is specified, ebtables commands to construct the contents of the table are given, including commands for creating the user-defined chains (if any). You can use this set of commands in an ebtables boot or reload script. For example the output could be used at system startup. The <code>&#8211;Lx</code> option is incompatible with the <code>&#8211;Ln</code> listing option. Using the <code>&#8211;Lx</code> option together with the <code>&#8211;Lc</code> option will cause the counters to be written out in the &#8216;<code>-c</code> &lt;pcnt&gt; &lt;bcnt&gt;&#8217; option format.<br />
- <code>&#8211;Lmac2</code><br />
+<dd>List all rules in the selected chain. If no chain is selected, all chains are listed.<br/>
+ The following options change the output of the <code>-L</code> command.<br/>
+ <code>&#8211;Ln</code><br/>
+ Places the rule number in front of every rule. This option is incompatible with the <code>&#8211;Lx</code> option.<br/>
+ <code>&#8211;Lc</code><br/>
+ Shows the counters at the end of each rule displayed by the <code>-L</code> command. Both a frame counter (pcnt) and a byte counter (bcnt) are displayed. The frame counter shows how many frames have matched the specific rule, the byte counter shows the sum of the frame sizes of these matching frames. Using this option in combination with the <code>&#8211;Lx</code> option causes the counters to be written out in the &#8216;<code>-c</code> &lt;pcnt&gt; &lt;bcnt&gt;&#8217; option format.<br/>
+ <code>&#8211;Lx</code><br/>
+ Changes the output so that it produces a set of ebtables commands that construct the contents of the chain, when specified. If no chain is specified, ebtables commands to construct the contents of the table are given, including commands for creating the user-defined chains (if any). You can use this set of commands in an ebtables boot or reload script. For example the output could be used at system startup. The <code>&#8211;Lx</code> option is incompatible with the <code>&#8211;Ln</code> listing option. Using the <code>&#8211;Lx</code> option together with the <code>&#8211;Lc</code> option will cause the counters to be written out in the &#8216;<code>-c</code> &lt;pcnt&gt; &lt;bcnt&gt;&#8217; option format.<br/>
+ <code>&#8211;Lmac2</code><br/>
  Shows all MAC addresses with the same length, adding leading zeroes if necessary. The default representation omits leading zeroes in the addresses.</dd>
 <dt><code>-N, &#8211;new-chain</code></dt>
 <dd>Create a new user-defined chain with the given name. The number of user-defined chains is limited only by the number of possible chain names. A user-defined chain name has a maximum length of 31 characters. The standard policy of the user-defined chain is ACCEPT. The policy of the new chain can be initialized to a different standard target by using the <code>-P</code> command together with the <code>-N</code> command. In this case, the chain name does not have to be specified for the <code>-P</code> command.</dd>
@@ -98,7 +98,7 @@ description: "ebtables (v2.0.10-4) – Ethernet bridge frame table administratio
 <p>The following command line arguments make up a rule specification (as used in the add and delete commands). A &quot;!&quot; option before the specification inverts the test for that specification. Apart from these standard rule specifications there are some other command line arguments of interest. See both the <code>MATCH EXTENSIONS</code> and the <code>WATCHER EXTENSIONS</code> below.</p>
 <dl>
 <dt><code>-p, &#8211;protocol </code>[!] <i>protocol</i></dt>
-<dd>The protocol that was responsible for creating the frame. This can be a hexadecimal number, above <i>0x0600</i>, a name (e.g. <i>ARP</i> ) or <code>LENGTH</code>. The protocol field of the Ethernet frame can be used to denote the length of the header (802.2/802.3 networks). When the value of that field is below or equals <i>0x0600</i>, the value equals the size of the header and shouldn&#8217;t be used as a protocol number. Instead, all frames where the protocol field is used as the length field are assumed to be of the same &#8216;protocol&#8217;. The protocol name used in ebtables for these frames is <code>LENGTH</code>.<br />
+<dd>The protocol that was responsible for creating the frame. This can be a hexadecimal number, above <i>0x0600</i>, a name (e.g. <i>ARP</i> ) or <code>LENGTH</code>. The protocol field of the Ethernet frame can be used to denote the length of the header (802.2/802.3 networks). When the value of that field is below or equals <i>0x0600</i>, the value equals the size of the header and shouldn&#8217;t be used as a protocol number. Instead, all frames where the protocol field is used as the length field are assumed to be of the same &#8216;protocol&#8217;. The protocol name used in ebtables for these frames is <code>LENGTH</code>.<br/>
  The file <code>/etc/ethertypes</code> can be used to show readable characters instead of hexadecimal numbers for the protocols. For example, <i>0x0800</i> will be represented by <i>IPV4</i>. The use of this file is not case sensitive. See that file for more information. The flag <code>&#8211;proto</code> is an alias for this option.</dd>
 <dt><code>-i, &#8211;in-interface </code>[!] <i>name</i></dt>
 <dd>The interface (bridge port) via which a frame is received (this option is useful in the <code>INPUT</code>, <code>FORWARD</code>, <code>PREROUTING</code> and <code>BROUTING</code> chains). If the interface name ends with &#8216;+&#8217;, then any interface name that begins with this name (disregarding &#8216;+&#8217;) will match. The flag <code>&#8211;in-if</code> is an alias for this option.</dd>
@@ -109,7 +109,7 @@ description: "ebtables (v2.0.10-4) – Ethernet bridge frame table administratio
 <dt><code>&#8211;logical-out </code>[!] <i>name</i></dt>
 <dd>The (logical) bridge interface via which a frame is going to be sent (this option is useful in the <code>OUTPUT</code>, <code>FORWARD</code> and <code>POSTROUTING</code> chains). If the interface name ends with &#8216;+&#8217;, then any interface name that begins with this name (disregarding &#8216;+&#8217;) will match.</dd>
 <dt><code>-s, &#8211;source </code>[!] <i>address</i>[/<i>mask</i>]</dt>
-<dd>The source MAC address. Both mask and address are written as 6 hexadecimal numbers separated by colons. Alternatively one can specify Unicast, Multicast, Broadcast or BGA (Bridge Group Address):<br />
+<dd>The source MAC address. Both mask and address are written as 6 hexadecimal numbers separated by colons. Alternatively one can specify Unicast, Multicast, Broadcast or BGA (Bridge Group Address):<br/>
  <i>Unicast</i>=00:00:00:00:00:00/01:00:00:00:00:00, <i>Multicast</i>=01:00:00:00:00:00/01:00:00:00:00:00, <i>Broadcast</i>=ff:ff:ff:ff:ff:ff/ff:ff:ff:ff:ff:ff or <i>BGA</i>=01:80:c2:00:00:00/ff:ff:ff:ff:ff:ff. Note that a broadcast address will also match the multicast specification. The flag <code>&#8211;src</code> is an alias for this option.</dd>
 <dt><code>-d, &#8211;destination </code>[!] <i>address</i>[/<i>mask</i>]</dt>
 <dd>The destination MAC address. See <code>-s</code> (above) for more details on MAC addresses. The flag <code>&#8211;dst</code> is an alias for this option.</dd>

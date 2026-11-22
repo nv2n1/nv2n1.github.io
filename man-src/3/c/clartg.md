@@ -11,7 +11,7 @@ description: "clartg.f –"
 <p> clartg.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clartg</code> (F, G, CS, SN, R)<br />
+<p> subroutine <code>clartg</code> (F, G, CS, SN, R)<br/>
  <i></i><code>CLARTG</code> generates a plane rotation with real cosine and complex sine.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clartg (complexF, complexG, realCS, complexSN, complexR)</h3>

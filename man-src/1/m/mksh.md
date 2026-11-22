@@ -10,7 +10,7 @@ description: "mksh sh – MirBSD Korn shell"
 
 <p> <code>mksh</code> <code>sh</code> - MirBSD Korn shell </p>
 <h2>SYNOPSIS</h2>
-<p> -words [-<code>+abCefhiklmnprUuvXx </code>[-<code>T </code><i>/dev/ttyCn </i>| - ] ] [-<code>+o </code><i>option</i> ] [-<code>c </code><i>string |</i> -<code>s |</code> <i>file</i> [<i>argument ...</i> ] ] <br />
+<p> -words [-<code>+abCefhiklmnprUuvXx </code>[-<code>T </code><i>/dev/ttyCn </i>| - ] ] [-<code>+o </code><i>option</i> ] [-<code>c </code><i>string |</i> -<code>s |</code> <i>file</i> [<i>argument ...</i> ] ] <br/>
 <code>builtin-name</code> [<i>argument ...</i> ]  </p>
 <h2>DESCRIPTION</h2>
 <p> is a command interpreter intended for both interactive and shell script use. Its command language is a superset of the shC shell language and largely compatible to the original Korn shell.  </p>
@@ -305,7 +305,7 @@ EOF
 <dd> <p> The first nine positional parameters that were supplied to the shell, function, or script sourced using the `.&#8216; built-in. Further positional parameters may be accessed using ${ <i>number </i><code>}</code> </p>
  </dd>
 <dt><code>*</code></dt>
-<dd> <p> All positional parameters (except 0), i.e. $1, $2, $3, ... <br />
+<dd> <p> All positional parameters (except 0), i.e. $1, $2, $3, ... <br/>
  If used outside of double quotes, parameters are separate words (which are subjected to word splitting); if used within double quotes, parameters are separated by the first character of the <code>IFS</code> parameter (or the empty string if <code>IFS</code> is <code>NULL )</code> </p>
  </dd>
 <dt><code>@</code></dt>

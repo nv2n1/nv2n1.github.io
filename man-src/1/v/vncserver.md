@@ -10,8 +10,8 @@ description: "vncserver – start or stop a VNC server"
 
 <p> vncserver &#8211; start or stop a VNC server</p>
 <h2>SYNOPSIS</h2>
-<p> <code>vncserver</code> [:<i>display#</i>] [<code>-name</code> <i>desktop-name</i>] [<code>-geometry</code> <i>width</i>x<i>height</i>] [<code>-depth</code> <i>depth</i>] [<code>-pixelformat</code> <i>format</i>] [<code>-fp</code> <i>font-path</i>] [<code>-fg</code>] [<code>-autokill</code>] [<code>-noxstartup</code>] [<code>-xstartup</code> <i>script</i>] [<i>Xvnc-options&#8230;</i>]<br />
- <code>vncserver -kill :</code><i>display#</i><br />
+<p> <code>vncserver</code> [:<i>display#</i>] [<code>-name</code> <i>desktop-name</i>] [<code>-geometry</code> <i>width</i>x<i>height</i>] [<code>-depth</code> <i>depth</i>] [<code>-pixelformat</code> <i>format</i>] [<code>-fp</code> <i>font-path</i>] [<code>-fg</code>] [<code>-autokill</code>] [<code>-noxstartup</code>] [<code>-xstartup</code> <i>script</i>] [<i>Xvnc-options&#8230;</i>]<br/>
+ <code>vncserver -kill :</code><i>display#</i><br/>
  <code>vncserver -list</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>vncserver</code> is used to start a VNC (Virtual Network Computing) desktop. <code>vncserver</code> is a Perl script which simplifies the process of starting an Xvnc server. It runs Xvnc with appropriate options and starts a window manager on the VNC desktop. </p>
@@ -68,7 +68,7 @@ description: "vncserver – start or stop a VNC server"
 <dd> Identifies the Xvnc process ID, used by the <code>-kill</code> option. </dd>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1), <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1), <code><a href="/docs/linux/man/1-vncconfig/">vncconfig</a></code>(1), <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1), <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1), <code><a href="/docs/linux/man/1-vncconfig/">vncconfig</a></code>(1), <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1)<br/>
  <a rel="nofollow" href="http://www.tigervnc.org">http://www.tigervnc.org</a> </p>
 <h2>AUTHOR</h2>
 <p> Tristan Richardson, RealVNC Ltd., D. R. Commander and others. </p>

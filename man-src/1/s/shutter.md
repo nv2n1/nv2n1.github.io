@@ -25,14 +25,14 @@ description: "Shutter – Feature-rich Screenshot Tool"
 <dd> shutter &#8211;window=.*firefox.*</dd>
 <dt>Example 4</dt>
 <dd> shutter &#8211;web=<a rel="nofollow" href="http://shutter-project.org/">http://shutter-project.org/</a> -e</dd></dl>
-<h3><font SIZE="-1">CAPTURE</font> <font SIZE="-1">MODE</font> <font SIZE="-1">OPTIONS</font></h3>
+<h3>CAPTURE MODE OPTIONS</h3>
 <dl>
 <dt><code>-s, &#8211;select=[X,Y,WIDTH,HEIGHT]</code></dt>
 <dd> Capture an area of the screen. Providing X,Y,WIDTH,HEIGHT is optional.</dd>
 <dt><code>-f, &#8211;full</code></dt>
 <dd> Capture the entire screen.</dd>
-<dt><code>-w, &#8211;window=[</code><font SIZE="-1"><code>NAME_PATTERN</code></font><code>]</code></dt>
-<dd> Select a window to capture. Providing a <font SIZE="-1">NAME_PATTERN</font> (Perl-style regex) ist optional.</dd>
+<dt><code>-w, &#8211;window=[</code><code>NAME_PATTERN</code><code>]</code></dt>
+<dd> Select a window to capture. Providing a NAME_PATTERN (Perl-style regex) ist optional.</dd>
 <dt><code>-a, &#8211;active</code></dt>
 <dd> Capture the current active window.</dd>
 <dt><code>&#8211;section</code></dt>
@@ -41,11 +41,11 @@ description: "Shutter – Feature-rich Screenshot Tool"
 <dd> Capture a menu.</dd>
 <dt><code>-t, &#8211;tooltip</code></dt>
 <dd> Capture a tooltip.</dd>
-<dt><code>&#8211;web=[</code><font SIZE="-1"><code>URL</code></font><code>]</code></dt>
-<dd> Capture a webpage. Providing an <font SIZE="-1">URL</font> ist optional.</dd>
+<dt><code>&#8211;web=[</code><code>URL</code><code>]</code></dt>
+<dd> Capture a webpage. Providing an URL ist optional.</dd>
 <dt><code>-r, &#8211;redo</code></dt>
 <dd> Redo last screenshot.</dd></dl>
-<h3><font SIZE="-1">SETTINGS</font> <font SIZE="-1">OPTIONS</font></h3>
+<h3>SETTINGS OPTIONS</h3>
 <dl>
 <dt><code>-p, &#8211;profile=NAME</code></dt>
 <dd> Load a specific profile on startup.</dd>
@@ -74,14 +74,14 @@ description: "Shutter – Feature-rich Screenshot Tool"
 <dd> Include cursor when taking a screenshot.</dd>
 <dt><code>-C, &#8211;remove_cursor</code></dt>
 <dd> Remove cursor when taking a screenshot.</dd></dl>
-<h3><font SIZE="-1">APPLICATION</font> <font SIZE="-1">OPTIONS</font></h3>
+<h3>APPLICATION OPTIONS</h3>
 <dl>
 <dt><code>-h, &#8211;help</code></dt>
 <dd> Prints a brief help message and exits.</dd>
 <dt><code>-v, &#8211;version</code></dt>
 <dd> Prints version information.</dd>
 <dt><code>&#8211;debug</code></dt>
-<dd> Prints a lot of debugging information to <font SIZE="-1">STDOUT</font>.</dd>
+<dd> Prints a lot of debugging information to STDOUT.</dd>
 <dt><code>&#8211;clear_cache</code></dt>
 <dd> Clears cache, e.g. installed plugins, at startup.</dd>
 <dt><code>&#8211;min_at_startup</code></dt>

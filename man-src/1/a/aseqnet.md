@@ -15,12 +15,12 @@ description: "aseqnet – ALSA sequencer connectors over network"
 <p> <code>aseqnet</code> is an ALSA sequencer client which sends and receives event packets over network. Suppose two hosts connected by network, <i>hostA</i> as a server and <i>hostB</i> as a client. The ALSA sequencer system must be running on both hosts. For creating the server port, run the following on hostA:</p>
 <dl>
 <dt>
-</dt><dd> hostA% aseqnet<br />
+</dt><dd> hostA% aseqnet<br/>
  sequencer opened: 128:0</dd></dl>
 <p> Then a user client 128 with port 0 was opened on hostA. (The client number may vary.) For creating the (network-)client port, run <code>aseqnet</code> with the hostname of the server:</p>
 <dl>
 <dt>
-</dt><dd> hostB% aseqnet hostA<br />
+</dt><dd> hostB% aseqnet hostA<br/>
  sequencer opened: 132:0</dd></dl>
 <p> Now all events sent to hostA:128:0 are transferred to hostB:132:0, and vice versa. </p>
 <p> The ports created by <code>aseqnet</code> can be connected arbitrary to other sequencer ports via <code><a href="/docs/linux/man/1-aconnect/">aconnect</a>(1).</code> For example, to connect hostB:132:0 to a MIDI output device 65:0:</p>

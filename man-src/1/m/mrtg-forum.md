@@ -10,9 +10,9 @@ description: "mrtg-forum – Interactive Help for MRTG users"
 
 <p> mrtg-forum &#8211; Interactive Help for MRTG users </p>
 <h2>SYNOPSIS</h2>
-<p> There is a lot of written documentation for mrtg, but nevertheless you may have a problem where you can&#8217;t find the solution. In this case some Human Help may be necessary. With <font SIZE="-1">MRTG</font> there are several ways to get Humans to help you.</p>
+<p> There is a lot of written documentation for mrtg, but nevertheless you may have a problem where you can&#8217;t find the solution. In this case some Human Help may be necessary. With MRTG there are several ways to get Humans to help you.</p>
 <h2>MAILING-LIST</h2>
-<p> There are three mailing lists for <font SIZE="-1">MRTG</font> available.</p>
+<p> There are three mailing lists for MRTG available.</p>
 <dl>
 <dt>mrtg</dt>
 <dd> for discussion among mrtg users.</dd>
@@ -20,11 +20,11 @@ description: "mrtg-forum – Interactive Help for MRTG users"
 <dd> for announcements regarding new versions of mrtg related software.</dd>
 <dt>mrtg-developers</dt>
 <dd> for discussion among people who write software in connection with mrtg or who hack mrtg itself.</dd></dl>
-<h3><font SIZE="-1">THE</font> <font SIZE="-1">RULES</font></h3>
+<h3>THE RULES</h3>
 <p> Please note that the memebers of the mrtg mailinglist value politeness highly. This means behave in a way you would like others to behave towards you.</p>
 <dl>
 <dt>&bull;</dt>
-<dd> No shouting. (<font SIZE="-1">NO</font> <font SIZE="-1">CAPS</font>)</dd>
+<dd> No shouting. (NO CAPS)</dd>
 <dt>&bull;</dt>
 <dd> No rude language</dd>
 <dt>&bull;</dt>
@@ -42,7 +42,7 @@ description: "mrtg-forum – Interactive Help for MRTG users"
  Tobi Oetiker &lt;tobi [at] oetiker.ch&gt;
 </pre>
 </dl>
-<h3><font SIZE="-1">SUBSCRIBING</font></h3>
+<h3>SUBSCRIBING</h3>
 <p> These lists are managed by a mailing-list management program (listar). It allows you to subscribe to these lists by sending a message with the subject: <code>subscribe</code> to the following address: </p>
 <pre>
  listname-request [at] lists.oetiker.ch
@@ -67,21 +67,21 @@ description: "mrtg-forum – Interactive Help for MRTG users"
  <a rel="nofollow" href="http://gmane.org/find.php?list=mrtg">http://gmane.org/find.php?list=mrtg</a>
 </pre>
 <h2>NEWSGROUP</h2>
-<p> For discussion of <font SIZE="-1">MRTG</font> or related topics on the Usenet, please send your posts to: </p>
+<p> For discussion of MRTG or related topics on the Usenet, please send your posts to: </p>
 <pre>
  news:comp.dcom.net-management
 </pre>
-<p> Many <font SIZE="-1">MRTG</font> users are in this forum and will help you. You can also find an archive of past activity from this Newsgroup on: </p>
+<p> Many MRTG users are in this forum and will help you. You can also find an archive of past activity from this Newsgroup on: </p>
 <pre>
  <a rel="nofollow" href="http://groups.google.com/group/comp.dcom.net-management">http://groups.google.com/group/comp.dcom.net-management</a>
 </pre>
 <h2>IRC Channel</h2>
-<p> For discussion of <font SIZE="-1">MRTG</font> and related topics on <font SIZE="-1">IRC</font>, the `#mrtg&#8217; channel on EFNet has been created. </p>
+<p> For discussion of MRTG and related topics on IRC, the `#mrtg&#8217; channel on EFNet has been created. </p>
 <p> More information can be found at </p>
 <pre>
  <a rel="nofollow" href="http://mrtg.easymac.org">http://mrtg.easymac.org</a>
 </pre>
 <h2>MRTG Japan</h2>
-<p> There is a special Mailinglist for <font SIZE="-1">MRTG</font> Users in Japan. It carries translations of the traffic from MRTG-ANNOUNCE as well as updates on the Japanese Translation of the <font SIZE="-1">MRTG</font> documentation. Go to <a rel="nofollow" href="http://www.mrtg.jp/">http://www.mrtg.jp/</a> for further Information.</p>
+<p> There is a special Mailinglist for MRTG Users in Japan. It carries translations of the traffic from MRTG-ANNOUNCE as well as updates on the Japanese Translation of the MRTG documentation. Go to <a rel="nofollow" href="http://www.mrtg.jp/">http://www.mrtg.jp/</a> for further Information.</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; and many contributors </p>

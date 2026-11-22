@@ -39,13 +39,13 @@ description: "stapdyn – systemtap dyninst runtime"
 <p> $ stap &#8211;dyninst -p4 -m mod1 -e&nbsp;<wbr>&#8216;global var1=&quot;foo&quot;; probe begin{printf(&quot;%s
 &quot;, var1); exit()}&#8217; </p>
 <p> Running this with an additional module argument: </p>
-<p> $ stapdyn mod1.so var1=&quot;HelloWorld&quot;<br />
+<p> $ stapdyn mod1.so var1=&quot;HelloWorld&quot;<br/>
  HelloWorld </p>
 <p> Spaces and exclamation marks currently cannot be passed into global variables this way.</p>
 <h2>Examples</h2>
 <p>See the <i>stapex</i>(3stap) manual page for a collection of sample scripts. Here is a very basic example of how to use <i>stapdyn.</i> First, use <i>stap</i> to compile a script. The <i>stap</i> program will report the pathname to the resulting module. $ stap &#8211;dyninst -p4 -e &#8216;probe begin { printf(&quot;Hello World!
-&quot;); exit() }&#8217;<br />
- /home/user/.systemtap/cache/85/stap_8553d83f78c_265.so Run <i>stapdyn</i> with the pathname to the module as an argument. $ stapdyn /home/user/.systemtap/cache/85/stap_8553d83f78c_265.so<br />
+&quot;); exit() }&#8217;<br/>
+ /home/user/.systemtap/cache/85/stap_8553d83f78c_265.so Run <i>stapdyn</i> with the pathname to the module as an argument. $ stapdyn /home/user/.systemtap/cache/85/stap_8553d83f78c_265.so<br/>
  Hello World! </p>
 <h2>Safety And Security</h2>
 <p>Systemtap, in DynInst mode, is a developer tool, and runs completely unprivileged. The Linux kernel will only permit one&#8217;s own processes to be accessed, which is enforced by the <i><a href="/docs/linux/man/2-ptrace/">ptrace</a></i>(2) system call. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for additional information on safety and security.</p>

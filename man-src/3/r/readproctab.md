@@ -10,7 +10,7 @@ description: "readproctab, freeproctab – read information for all current proc
 <p>readproctab, freeproctab &#8211; read information for all current processes at once</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;proc/readproc.h&gt;</code></pre>
-<p> <code>proc_t** readproctab(int </code><i>flags</i><code>, &#8230; );</code><br />
+<p> <code>proc_t** readproctab(int </code><i>flags</i><code>, &#8230; );</code><br/>
  <code>void freeproctab(proc_t **</code><i>p</i><code>);</code> </p>
 <h2>Description</h2>
 <p><code>readproctab</code> reads information on all processes matching the criteria from <i>flags</i>, allocating memory for everything as needed. It returns a NULL-terminated list of <i>proc_t</i> pointers. For more information on the arguments of <code>readproctab</code>, see <code><a href="/docs/linux/man/3-openproc/">openproc</a></code>(3). <code>freeproctab</code> frees all memory allocated by <code>readproctab</code>. The <i>proc_t</i> structure is defined in <i>&lt;proc/readproc.h&gt;</i>, please look there for a definition of all fields. </p>

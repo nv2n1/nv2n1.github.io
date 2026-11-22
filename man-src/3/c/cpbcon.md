@@ -11,7 +11,7 @@ description: "cpbcon.f –"
 <p> cpbcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cpbcon</code> (UPLO, N, KD, AB, LDAB, ANORM, RCOND, WORK, RWORK, INFO)<br />
+<p> subroutine <code>cpbcon</code> (UPLO, N, KD, AB, LDAB, ANORM, RCOND, WORK, RWORK, INFO)<br/>
  <i></i><code>CPBCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpbcon (characterUPLO, integerN, integerKD, complex, dimension( ldab, * )AB, integerLDAB, realANORM, realRCOND, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

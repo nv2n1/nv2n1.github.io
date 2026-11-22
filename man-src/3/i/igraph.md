@@ -18,5 +18,5 @@ description: "igraph – a library for creating and manipulating graphs"
 <h2>BUGS</h2>
 <p> If you think you have found a bug in igraph, feel free to use the mailing list at <code>igraph-help [at] nongnu.org.</code> </p>
 <h2>AUTHORS</h2>
-<p> Gabor Csardi &lt;csardi.gabor [at] gmail.com&gt;,<br />
+<p> Gabor Csardi &lt;csardi.gabor [at] gmail.com&gt;,<br/>
  Tamas Nepusz &lt;ntamas [at] gmail.com&gt; </p>

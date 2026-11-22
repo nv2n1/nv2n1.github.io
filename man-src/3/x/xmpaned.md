@@ -15,7 +15,7 @@ description: "XmPaned — The Paned widget class"
 <p> Application programmers have control over whether or not sashes and separators are displayed, the preferred size of each pane, and which pane will be forced to absorb size restrictions imposed by the Paned widget&#8217;s parent.</p>
 <h3>Geometry Management</h3>
 <p>The Paned widget usually resizes its children to their preferred sizes when a new child is managed. It will first attempt to resize itself to contain its panes exactly. If this is not possible then it will hunt through the children, from bottom to top (or right to left), for a pane to resize. </p>
-<p> The Paned widget will attempt to honor the geometry request of its children. It will first attempt to resize itself to satisfy the request then go through the layout rules below to satisfy the request. Only if all panes are at their min/max values will a geometry request be refused. If the XmNallowResize resource is False for the child then all geometry requests will be denied,<br />
+<p> The Paned widget will attempt to honor the geometry request of its children. It will first attempt to resize itself to satisfy the request then go through the layout rules below to satisfy the request. Only if all panes are at their min/max values will a geometry request be refused. If the XmNallowResize resource is False for the child then all geometry requests will be denied,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>of course.</p>
 <h3>Special Considerations</h3>
 <p>When a user resizes a pane with the sashes, the Paned widget assumes that this new size is the preferred size of both the pane above and the pane below, unless the XmNresizeToPreferred constraint resource is True for that pane.</p>

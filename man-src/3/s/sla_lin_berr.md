@@ -11,7 +11,7 @@ description: "sla_lin_berr.f –"
 <p> sla_lin_berr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sla_lin_berr</code> (N, NZ, NRHS, RES, AYB, BERR)<br />
+<p> subroutine <code>sla_lin_berr</code> (N, NZ, NRHS, RES, AYB, BERR)<br/>
  <i></i><code>SLA_LIN_BERR</code> computes a component-wise relative backward error.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sla_lin_berr (integerN, integerNZ, integerNRHS, real, dimension( n, nrhs )RES, real, dimension( n, nrhs )AYB, real, dimension( nrhs )BERR)</h3>

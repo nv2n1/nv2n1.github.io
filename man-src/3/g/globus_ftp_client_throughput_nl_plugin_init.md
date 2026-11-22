@@ -80,9 +80,9 @@ description: "Netlogger Throughput Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> a plugin to be initialized<br />
- <i>nl_url</i> the url to log to (May be NULL) Valid urls are: file://tmp/netlog.log x-<a href="netlog://host[:port]">netlog://host[:port]</a> x-<a href="syslog://localhost">syslog://localhost</a><br />
- <i>prog_name</i> This is used as the prog name in the NetLoggerOpen call<br />
+</dt><dd> <i>plugin</i> a plugin to be initialized<br/>
+ <i>nl_url</i> the url to log to (May be NULL) Valid urls are: file://tmp/netlog.log x-<a href="netlog://host[:port]">netlog://host[:port]</a> x-<a href="syslog://localhost">syslog://localhost</a><br/>
+ <i>prog_name</i> This is used as the prog name in the NetLoggerOpen call<br/>
  <i>opaque_string</i> this is an opaque string that will be inserted into all logged statements. (may be NULL)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -100,8 +100,8 @@ description: "Netlogger Throughput Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> a plugin to be initialized<br />
- <i>nl_handle</i> a previously opened NetLogger handle<br />
+</dt><dd> <i>plugin</i> a plugin to be initialized<br/>
+ <i>nl_handle</i> a previously opened NetLogger handle<br/>
  <i>opaque_string</i> this is an opaque string that will be inserted into all logged statements. (may be NULL)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -119,11 +119,11 @@ description: "Netlogger Throughput Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i><br />
- <i>begin_cb</i> the callback to be called upon the start of a transfer<br />
- <i>per_stripe_cb</i> the callback to be called every time updated throughput info is available for a given stripe<br />
- <i>total_cb</i> the callback to be called every time updated throughput info is available for any stripe<br />
- <i>complete_cb</i> the callback to be called to indicate transfer completion<br />
+</dt><dd> <i>plugin</i><br/>
+ <i>begin_cb</i> the callback to be called upon the start of a transfer<br/>
+ <i>per_stripe_cb</i> the callback to be called every time updated throughput info is available for a given stripe<br/>
+ <i>total_cb</i> the callback to be called every time updated throughput info is available for any stripe<br/>
+ <i>complete_cb</i> the callback to be called to indicate transfer completion<br/>
  <i>user_specific</i> a pointer to some user specific data that will be provided to all callbacks</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

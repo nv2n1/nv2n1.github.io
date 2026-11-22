@@ -16,8 +16,8 @@ description: "dictSetValue – set/reset an items value."
 NEOERR *dictSetValue(dictCtx dict, const char *id, void *value);
 </pre>
 <h2>Arguments</h2>
-<p> dict &#8211; dictionary to add pair to.<br />
- id &#8211; identifier to insert/update<br />
+<p> dict &#8211; dictionary to add pair to.<br/>
+ id &#8211; identifier to insert/update<br/>
  value &#8211; value to store (may NOT be NULL) </p>
 <h2>Description</h2>
 <p> Updates the &lt;id&gt;/&lt;value&gt; pair into &lt;dict&gt;. If &lt;id&gt; is not in &lt;dict&gt;, it is created. </p>

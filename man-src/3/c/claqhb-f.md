@@ -10,7 +10,7 @@ description: "claqhb.f –"
 <p>claqhb.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>claqhb</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, EQUED)<br />
+<p>subroutine <code>claqhb</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, EQUED)<br/>
  <i></i><code>CLAQHB</code> scales a Hermitian band matrix, using scaling factors computed by cpbequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claqhb (characterUPLO, integerN, integerKD, complex, dimension( ldab, * )AB, integerLDAB, real, dimension( * )S, realSCOND, realAMAX, characterEQUED)</h3>

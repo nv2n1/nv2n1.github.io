@@ -11,7 +11,7 @@ description: "dcabs1.f –"
 <p> dcabs1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dcabs1</code> (Z)<br />
+<p> DOUBLE PRECISION function <code>dcabs1</code> (Z)<br/>
  <i></i><code>DCABS1</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dcabs1 (complex*16Z)</h3>

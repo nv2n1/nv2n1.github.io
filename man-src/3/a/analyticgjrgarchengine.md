@@ -10,13 +10,13 @@ description: "ql/pricingengines/vanilla/analyticgjrgarchengine.hpp – analytic 
 
 <p> ql/pricingengines/vanilla/analyticgjrgarchengine.hpp &#8211; analytic GJR-GARCH-model engine </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/pricingengines/genericmodelengine.hpp&gt;<br />
- #include &lt;ql/models/equity/gjrgarchmodel.hpp&gt;<br />
- #include &lt;ql/instruments/vanillaoption.hpp&gt;<br />
- #include &lt;ql/math/integrals/gaussianquadratures.hpp&gt;<br />
+<p> #include &lt;ql/pricingengines/genericmodelengine.hpp&gt;<br/>
+ #include &lt;ql/models/equity/gjrgarchmodel.hpp&gt;<br/>
+ #include &lt;ql/instruments/vanillaoption.hpp&gt;<br/>
+ #include &lt;ql/math/integrals/gaussianquadratures.hpp&gt;<br/>
  #include &lt;complex&gt; </p>
 <h3>Classes</h3>
-<p> class <code>AnalyticGJRGARCHEngine</code><br />
+<p> class <code>AnalyticGJRGARCHEngine</code><br/>
  <i>GJR-GARCH(1,1) engine. </i></p>
 <h2>Detailed Description</h2>
 <p> analytic GJR-GARCH-model engine </p>

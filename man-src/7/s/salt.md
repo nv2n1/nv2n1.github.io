@@ -4362,7 +4362,7 @@ http://example.com/:  http.query:
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <i>template</i><font SIZE="-2">1</font> </td>
+<td> <i>template</i>1 </td>
 <td> Yes </td>
 <td> Yes 
 </td>
@@ -4372,7 +4372,7 @@ http://example.com/:  http.query:
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <i>options</i><font SIZE="-2">1</font> </td>
+<td> <i>options</i>1 </td>
 <td> Yes </td>
 <td> No 
 </td>
@@ -4382,7 +4382,7 @@ http://example.com/:  http.query:
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <i>image</i><font SIZE="-2">1</font> </td>
+<td> <i>image</i>1 </td>
 <td> Yes </td>
 <td> Yes 
 </td>
@@ -4402,7 +4402,7 @@ http://example.com/:  http.query:
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <i>snapshot</i><font SIZE="-2">2</font> </td>
+<td> <i>snapshot</i>2 </td>
 <td> Yes </td>
 <td> Yes 
 </td>
@@ -4412,7 +4412,7 @@ http://example.com/:  http.query:
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <i>lvname</i><font SIZE="-2">1</font> </td>
+<td> <i>lvname</i>1 </td>
 <td> Yes </td>
 <td> Yes 
 </td>
@@ -4422,7 +4422,7 @@ http://example.com/:  http.query:
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <i>fstype</i><font SIZE="-2">1</font> </td>
+<td> <i>fstype</i>1 </td>
 <td> Yes </td>
 <td> Yes 
 </td>
@@ -65827,7 +65827,7 @@ done
 <p> <code>SEE ALSO:</code> See </p>
 <pre><code>:glob:`tests/eventlisten.sh`
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>for an example of usage within a shell script. </p>
  </dd>
 <dt><code>salt.runners.state.orchestrate(mods, saltenv=&#8216;base&#8217;, test=None, exclude=None, pillar=None)</code></dt>
@@ -86416,7 +86416,7 @@ appX_server_xml:
 <p>The <code>file.serialize</code> state can provide a shorthand for creating some files from data structures. There are also many examples within Salt Formulas of creating one-off &quot;serializers&quot; (often as Jinja macros) that reformat a data structure to a specific config file format. For example, </p>
 <pre><code>`Nginx vhosts`__
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>or the&nbsp;<wbr> </p>
 <pre><code>`php.ini`__
 </code></pre>
@@ -97175,7 +97175,7 @@ ignore = E226,E241,E242,E126
 <dd> <p> <code>PR</code> <i>#28373</i>: (<i>beverlcl</i>) Fixing bug </p>
 <pre><code>`#28372`_
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>for use_carrier option on bonding network interfaces. </p>
  </dd>
 <dt>&bull;</dt>
@@ -97530,7 +97530,7 @@ ignore = E226,E241,E242,E126
 <dd> <p> <code>PR</code> <i>#28373</i>: (<i>beverlcl</i>) Fixing bug </p>
 <pre><code>`#28372`_
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>for use_carrier option on bonding network interfaces. </p>
  </dd>
 <dt>&bull;</dt>

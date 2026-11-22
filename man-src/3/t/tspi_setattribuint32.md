@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-tspi_setattribuint32/"
 description: "Tspi_SetAttribUint32 – set a 32bit attribute associated with a given class or object"
 ---
 
-<p>TCG Software Stack Developers Reference<br />
+<p>TCG Software Stack Developers Reference<br/>
  </center></p>
 <h2>Name</h2>
 <p>Tspi_SetAttribUint32 &#8211; set a 32bit attribute associated with a given class or object </p>
@@ -35,17 +35,17 @@ description: "Tspi_SetAttribUint32 – set a 32bit attribute associated with a g
 <h2>Return Codes</h2>
 <p><code>Tspi_SetAttribUint32</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dt>TSS_E_INVALID_HANDLE</dt>
 <dd><i>hObject</i> is not a valid handle. </dd>
-<dt><font SIZE="-1">TSS_E_INVALID_ATTRIB_FLAG</font></dt>
+<dt>TSS_E_INVALID_ATTRIB_FLAG</dt>
 <dd><i>attribFlag</i> is incorrect. </dd>
-<dt><font SIZE="-1">TSS_E_INVALID_ATTRIB_SUBFLAG</font></dt>
+<dt>TSS_E_INVALID_ATTRIB_SUBFLAG</dt>
 <dd><i>subFlag</i> is incorrect. </dd>
-<dt><font SIZE="-1">TSS_E_INVALID_ATTRIB_DATA</font></dt>
+<dt>TSS_E_INVALID_ATTRIB_DATA</dt>
 <dd><i>ulAttrib</i> is incorrect. </dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An internal SW error has been detected. </dd>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dt>TSS_E_BAD_PARAMETER</dt>
 <dd>One or more parameters is bad. </dd>
 </dl>
 <h2>Conforming To</h2>

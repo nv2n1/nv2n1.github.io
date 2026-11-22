@@ -53,10 +53,10 @@ SELECT *
 <dl>
 <dt>
 </dt><dd>
-CREATE VIEW myremote_pg_proc AS<br />
-    SELECT *<br />
-        FROM dblink(&#8216;dbname=postgres&#8217;, &#8216;select proname, prosrc from pg_proc&#8217;)<br />
-            AS t1(proname name, prosrc text);<br />
+CREATE VIEW myremote_pg_proc AS<br/>
+    SELECT *<br/>
+        FROM dblink(&#8216;dbname=postgres&#8217;, &#8216;select proname, prosrc from pg_proc&#8217;)<br/>
+            AS t1(proname name, prosrc text);<br/>
 SELECT *FROM myremote_pg_proc WHERE proname LIKE &#8216;bytea%&#8217;;
 </dd></dl>
 <h2>EXAMPLES</h2>

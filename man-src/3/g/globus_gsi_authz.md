@@ -13,15 +13,15 @@ description: "GSI Authorization API –"
 <h3>Modules</h3>
 <p> <code>GSI Credential Constants</code> </p>
 <h3>Functions</h3>
-<p> globus_result_t <code>globus_gsi_authz_handle_init</code> (globus_gsi_authz_handle_t *handle, const char *service_name, const gss_ctx_id_t context, globus_gsi_authz_cb_t callback, void *callback_arg)<br />
- <i>Initialize an authorization handle. </i><br />
- globus_result_t <code>globus_gsi_authorize</code> (globus_gsi_authz_handle_t handle, const void *action, const void *object, globus_gsi_authz_cb_t callback, void *callback_arg)<br />
- <i>Start the authorization decision-making process. </i><br />
- globus_result_t <code>globus_gsi_cancel_authz</code> (globus_gsi_authz_handle_t handle)<br />
- <i>Cancel Authorization. </i><br />
- globus_result_t <code>globus_gsi_authz_handle_destroy</code> (globus_gsi_authz_handle_t handle, globus_gsi_authz_cb_t callback, void *callback_arg)<br />
- <i>Destroy an authz handle. </i><br />
- globus_result_t <code>globus_gsi_authz_get_authorization_identity</code> (globus_gsi_authz_handle_t handle, char **identity_ptr, globus_gsi_authz_cb_t callback, void *callback_arg)<br />
+<p> globus_result_t <code>globus_gsi_authz_handle_init</code> (globus_gsi_authz_handle_t *handle, const char *service_name, const gss_ctx_id_t context, globus_gsi_authz_cb_t callback, void *callback_arg)<br/>
+ <i>Initialize an authorization handle. </i><br/>
+ globus_result_t <code>globus_gsi_authorize</code> (globus_gsi_authz_handle_t handle, const void *action, const void *object, globus_gsi_authz_cb_t callback, void *callback_arg)<br/>
+ <i>Start the authorization decision-making process. </i><br/>
+ globus_result_t <code>globus_gsi_cancel_authz</code> (globus_gsi_authz_handle_t handle)<br/>
+ <i>Cancel Authorization. </i><br/>
+ globus_result_t <code>globus_gsi_authz_handle_destroy</code> (globus_gsi_authz_handle_t handle, globus_gsi_authz_cb_t callback, void *callback_arg)<br/>
+ <i>Destroy an authz handle. </i><br/>
+ globus_result_t <code>globus_gsi_authz_get_authorization_identity</code> (globus_gsi_authz_handle_t handle, char **identity_ptr, globus_gsi_authz_cb_t callback, void *callback_arg)<br/>
  <i>Query for authorization identity. </i></p>
 <h2>Detailed Description</h2>
 <p> Authorization Callouts. </p>
@@ -37,10 +37,10 @@ description: "GSI Authorization API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> Pointer to an authorization handle<br />
- <i>action</i> Action to authorize<br />
- <i>object</i> Object that the action pertains to.<br />
- <i>callback</i> Callback function to call when authorization completes<br />
+</dt><dd> <i>handle</i> Pointer to an authorization handle<br/>
+ <i>action</i> Action to authorize<br/>
+ <i>object</i> Object that the action pertains to.<br/>
+ <i>callback</i> Callback function to call when authorization completes<br/>
  <i>callback_arg</i> Argument to callback function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -51,9 +51,9 @@ description: "GSI Authorization API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle that is to be used for the identity check.<br />
- <i>identity_ptr</i> The authorization identity determined by the authorization handle. This is must be freed by the caller. If the value is NULL (and this function returned GLOBUS_SUCCESS), the caller should use the authenticated identity.<br />
- <i>callback</i> Callback function to call when identity is determined.<br />
+</dt><dd> <i>handle</i> The handle that is to be used for the identity check.<br/>
+ <i>identity_ptr</i> The authorization identity determined by the authorization handle. This is must be freed by the caller. If the value is NULL (and this function returned GLOBUS_SUCCESS), the caller should use the authenticated identity.<br/>
+ <i>callback</i> Callback function to call when identity is determined.<br/>
  <i>callback_arg</i> Argument to callback function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -64,8 +64,8 @@ description: "GSI Authorization API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle that is to be destroyed<br />
- <i>callback</i> Callback function to call when handle is destroyed<br />
+</dt><dd> <i>handle</i> The handle that is to be destroyed<br/>
+ <i>callback</i> Callback function to call when handle is destroyed<br/>
  <i>callback_arg</i> Argument to callback function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -76,10 +76,10 @@ description: "GSI Authorization API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> Pointer to the handle that is to be initialized<br />
- <i>service_name</i> Service to authorize access to<br />
- <i>context</i> Security context used to contact the service<br />
- <i>callback</i> Callback function to call when authz handle init completes<br />
+</dt><dd> <i>handle</i> Pointer to the handle that is to be initialized<br/>
+ <i>service_name</i> Service to authorize access to<br/>
+ <i>context</i> Security context used to contact the service<br/>
+ <i>callback</i> Callback function to call when authz handle init completes<br/>
  <i>callback_arg</i> Argument to callback function</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>

@@ -21,7 +21,7 @@ kitrace_to_db[-Y year][registers]&lt;kitrace.out&gt; kitrace.fsdb
 <dt><code>-Y Y</code> or <code>&#8211;year Y</code></dt>
 <dd> Specify the 4-digit year for the dataset (defaults to current year).</dd>
 <dt><code>-u</code> or <code>&#8211;utc</code></dt>
-<dd> Specify <font SIZE="-1">UTC</font> timezone (defaults to local time zeon).</dd></dl>
+<dd> Specify UTC timezone (defaults to local time zeon).</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
 <dt><code>-d</code></dt>
@@ -77,4 +77,4 @@ kitrace_to_db[-Y year][registers]&lt;kitrace.out&gt; kitrace.fsdb
 <p> Fsdb.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2011 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

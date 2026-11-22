@@ -11,7 +11,7 @@ description: "slasq4.f –"
 <p> slasq4.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slasq4</code> (I0, N0, Z, PP, N0IN, DMIN, DMIN1, DMIN2, DN, DN1, DN2, TAU, TTYPE, G)<br />
+<p> subroutine <code>slasq4</code> (I0, N0, Z, PP, N0IN, DMIN, DMIN1, DMIN2, DN, DN1, DN2, TAU, TTYPE, G)<br/>
  <i></i><code>SLASQ4</code> computes an approximation to the smallest eigenvalue using values of d from the previous transform. Used by sbdsqr.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasq4 (integerI0, integerN0, real, dimension( * )Z, integerPP, integerN0IN, realDMIN, realDMIN1, realDMIN2, realDN, realDN1, realDN2, realTAU, integerTTYPE, realG)</h3>

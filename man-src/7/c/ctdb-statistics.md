@@ -94,70 +94,70 @@ Statistics collected since : (000 01:49:20) Fri Sep 12 11:43:12 2014
 <p>Number of keepalive messages received from other nodes.</p>
 <h3>node</h3>
 <p>This section lists various types of messages processed which originated from other nodes via TCP. </p>
-<p> <font SIZE="+1"> <code>req_call</code></p>
+<p>  <code>req_call</code></p>
 <dl>
 <dd>Number of REQ_CALL messages from the other nodes.</dd></dl>
-<p> </font><font SIZE="+2"> <code>reply_call</code></p>
+<p>  <code>reply_call</code></p>
 <dl>
 <dd>Number of REPLY_CALL messages from the other nodes.</dd></dl>
-<p> </font><font SIZE="+3"> <code>req_dmaster</code></p>
+<p>  <code>req_dmaster</code></p>
 <dl>
 <dd>Number of REQ_DMASTER messages from the other nodes.</dd></dl>
-<p> </font><font SIZE="+4"> <code>reply_dmaster</code></p>
+<p>  <code>reply_dmaster</code></p>
 <dl>
 <dd>Number of REPLY_DMASTER messages from the other nodes.</dd></dl>
-<p> </font><font SIZE="+5"> <code>reply_error</code></p>
+<p>  <code>reply_error</code></p>
 <dl>
 <dd>Number of REPLY_ERROR messages from the other nodes.</dd></dl>
-<p> </font><font SIZE="+6"> <code>req_message</code></p>
+<p>  <code>req_message</code></p>
 <dl>
 <dd>Number of REQ_MESSAGE messages from the other nodes.</dd></dl>
-<p> </font><font SIZE="+7"> <code>req_control</code></p>
+<p>  <code>req_control</code></p>
 <dl>
 <dd>Number of REQ_CONTROL messages from the other nodes.</dd></dl>
-<p> </font><font SIZE="+8"> <code>reply_control</code></p>
+<p>  <code>reply_control</code></p>
 <dl>
 <dd>Number of REPLY_CONTROL messages from the other nodes.</dd></dl>
-<p> </font></p>
+<p> </p>
 <h3>client</h3>
 <p>This section lists various types of messages processed which originated from clients via unix domain socket. </p>
-<p> <font SIZE="+1"> <code>req_call</code></p>
+<p>  <code>req_call</code></p>
 <dl>
 <dd>Number of REQ_CALL messages from the clients.</dd></dl>
-<p> </font><font SIZE="+2"> <code>req_message</code></p>
+<p>  <code>req_message</code></p>
 <dl>
 <dd>Number of REQ_MESSAGE messages from the clients.</dd></dl>
-<p> </font><font SIZE="+3"> <code>req_control</code></p>
+<p>  <code>req_control</code></p>
 <dl>
 <dd>Number of REQ_CONTROL messages from the clients.</dd></dl>
-<p> </font></p>
+<p> </p>
 <h3>timeouts</h3>
 <p>This section lists timeouts occurred when sending various messages. </p>
-<p> <font SIZE="+1"> <code>call</code></p>
+<p>  <code>call</code></p>
 <dl>
 <dd>Number of timeouts for REQ_CALL messages.</dd></dl>
-<p> </font><font SIZE="+2"> <code>control</code></p>
+<p>  <code>control</code></p>
 <dl>
 <dd>Number of timeouts for REQ_CONTROL messages.</dd></dl>
-<p> </font><font SIZE="+3"> <code>traverse</code></p>
+<p>  <code>traverse</code></p>
 <dl>
 <dd>Number of timeouts for database traverse operations.</dd></dl>
-<p> </font></p>
+<p> </p>
 <h3>locks</h3>
 <p>This section lists locking statistics. </p>
-<p> <font SIZE="+1"> <code>num_calls</code></p>
+<p>  <code>num_calls</code></p>
 <dl>
 <dd>Number of completed lock calls. This includes database locks and record locks.</dd></dl>
-<p> </font><font SIZE="+2"> <code>num_current</code></p>
+<p>  <code>num_current</code></p>
 <dl>
 <dd>Number of scheduled lock calls. This includes database locks and record locks.</dd></dl>
-<p> </font><font SIZE="+3"> <code>num_pending</code></p>
+<p>  <code>num_pending</code></p>
 <dl>
 <dd>Number of queued lock calls. This includes database locks and record locks.</dd></dl>
-<p> </font><font SIZE="+4"> <code>num_failed</code></p>
+<p>  <code>num_failed</code></p>
 <dl>
 <dd>Number of failed lock calls. This includes database locks and record locks.</dd></dl>
-<p> </font></p>
+<p> </p>
 <h3>total_calls</h3>
 <p>Number of req_call messages processed from clients. This number should be same as client &#8211;&gt; req_call.</p>
 <h3>pending_calls</h3>
@@ -218,19 +218,19 @@ Statistics collected since : (000 01:49:20) Fri Sep 12 11:43:12 2014
 <p>Number of readonly delegations revoked. The difference in ro_delegations and ro_revokes indicates the currently active readonly delegations.</p>
 <h3>locks</h3>
 <p>This section lists locking statistics. </p>
-<p> <font SIZE="+1"> <code>total</code></p>
+<p>  <code>total</code></p>
 <dl>
 <dd>Number of completed lock calls. This includes database locks and record locks.</dd></dl>
-<p> </font><font SIZE="+2"> <code>failed</code></p>
+<p>  <code>failed</code></p>
 <dl>
 <dd>Number of failed lock calls. This includes database locks and record locks.</dd></dl>
-<p> </font><font SIZE="+3"> <code>current</code></p>
+<p>  <code>current</code></p>
 <dl>
 <dd>Number of scheduled lock calls. This includes database locks and record locks.</dd></dl>
-<p> </font><font SIZE="+4"> <code>pending</code></p>
+<p>  <code>pending</code></p>
 <dl>
 <dd>Number of queued lock calls. This includes database locks and record locks.</dd></dl>
-<p> </font></p>
+<p> </p>
 <h3>hop_count_buckets</h3>
 <p>Distribution of migration requests based on hop counts values. Buckets are 1, &lt; 4, &lt; 8, &lt; 16, &lt; 32, &lt; 64, &lt; 128, &lt; 256, &lt; 512, ≥ 512.</p>
 <h3>lock_buckets</h3>

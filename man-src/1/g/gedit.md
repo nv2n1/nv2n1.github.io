@@ -10,7 +10,7 @@ description: "gedit – text editor for the GNOME Desktop"
 
 <p> <code>gedit</code> &#8211; text editor for the GNOME Desktop</p>
 <h2>SYNOPSIS</h2>
-<p> <code>gedit</code> [<i>OPTION</i>&#8230;] [<i>FILE</i>&#8230;] [+<i>LINE</i>[:<i>COLUMN</i>]]<br />
+<p> <code>gedit</code> [<i>OPTION</i>&#8230;] [<i>FILE</i>&#8230;] [+<i>LINE</i>[:<i>COLUMN</i>]]<br/>
  <code>gedit</code> [<i>OPTION</i>&#8230;] &#8211; </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gedit</code> is the official text editor of the GNOME desktop environment. </p>

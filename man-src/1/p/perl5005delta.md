@@ -15,10 +15,10 @@ description: "perl5005delta – what’s new for perl5.005"
 <p> Perl is now developed on two tracks: a maintenance track that makes small, safe updates to released production versions with emphasis on compatibility; and a development track that pursues more aggressive evolution. Maintenance releases (which should be considered production quality) have subversion numbers that run from <tt>1</tt> to <tt>49</tt>, and development releases (which should be considered &#8220;alpha&#8221; quality) run from <tt>50</tt> to <tt>99</tt>. </p>
 <p> Perl 5.005 is the combined product of the new dual-track development scheme.</p>
 <h2>Incompatible Changes</h2>
-<h3><font SIZE="-1">WARNING:</font> This version is not binary compatible with Perl 5.004.</h3>
-<p> Starting with Perl 5.004_50 there were many deep and far-reaching changes to the language internals. If you have dynamically loaded extensions that you built under perl 5.003 or 5.004, you can continue to use them with 5.004, but you will need to rebuild and reinstall those extensions to use them 5.005. See <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> for detailed instructions on how to upgrade.</p>
+<h3>WARNING: This version is not binary compatible with Perl 5.004.</h3>
+<p> Starting with Perl 5.004_50 there were many deep and far-reaching changes to the language internals. If you have dynamically loaded extensions that you built under perl 5.003 or 5.004, you can continue to use them with 5.004, but you will need to rebuild and reinstall those extensions to use them 5.005. See <i></i><i>INSTALL</i><i></i> for detailed instructions on how to upgrade.</p>
 <h3>Default installation structure has changed</h3>
-<p> The new Configure defaults are designed to allow a smooth upgrade from 5.004 to 5.005, but you should read <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> for a detailed discussion of the changes in order to adapt them to your system.</p>
+<p> The new Configure defaults are designed to allow a smooth upgrade from 5.004 to 5.005, but you should read <i></i><i>INSTALL</i><i></i> for a detailed discussion of the changes in order to adapt them to your system.</p>
 <h3>Perl Source Compatibility</h3>
 <p> When none of the experimental features are enabled, there should be very few user-visible Perl source compatibility issues. </p>
 <p> If threads are enabled, then some caveats apply. <tt>@_</tt> and <tt>$_</tt> become lexical variables. The effect of this should be largely transparent to the user, but there are some boundary conditions under which user will need to be aware of the issues. For example, <tt>&quot;local(@_)&quot;</tt> results in a &#8220;Can&#8217;t localize lexical variable <tt>@_</tt> &#8230;&#8221; message. This may be enabled in a future version. </p>
@@ -28,21 +28,21 @@ description: "perl5005delta – what’s new for perl5.005"
 <p> There have been a large number of changes in the internals to support the new features in this release.</p>
 <dl>
 <dt>&bull;</dt>
-<dd> Core sources now require <font SIZE="-1">ANSI C</font> compiler </dd>
-<p> An <font SIZE="-1">ANSI C</font> compiler is now <code>required</code> to build perl. See <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i>.</p>
+<dd> Core sources now require ANSI C compiler </dd>
+<p> An ANSI C compiler is now <code>required</code> to build perl. See <i></i><i>INSTALL</i><i></i>.</p>
 <dt>&bull;</dt>
 <dd> All Perl global variables must now be referenced with an explicit prefix </dd>
 <p> All Perl global variables that are visible for use by extensions now have a <tt>&quot;PL_&quot;</tt> prefix. New extensions should <tt>&quot;not&quot;</tt> refer to perl globals by their unqualified names. To preserve sanity, we provide limited backward compatibility for globals that are being widely used like <tt>&quot;sv_undef&quot;</tt> and <tt>&quot;na&quot;</tt> (which should now be written as <tt>&quot;PL_sv_undef&quot;</tt>, <tt>&quot;PL_na&quot;</tt> etc.) </p>
-<p> If you find that your <font SIZE="-1">XS</font> extension does not compile anymore because a perl global is not visible, try adding a <tt>&quot;PL_&quot;</tt> prefix to the global and rebuild. </p>
-<p> It is strongly recommended that all functions in the Perl <font SIZE="-1">API</font> that don&#8217;t begin with <tt>&quot;perl&quot;</tt> be referenced with a <tt>&quot;Perl_&quot;</tt> prefix. The bare function names without the <tt>&quot;Perl_&quot;</tt> prefix are supported with macros, but this support may cease in a future release. </p>
+<p> If you find that your XS extension does not compile anymore because a perl global is not visible, try adding a <tt>&quot;PL_&quot;</tt> prefix to the global and rebuild. </p>
+<p> It is strongly recommended that all functions in the Perl API that don&#8217;t begin with <tt>&quot;perl&quot;</tt> be referenced with a <tt>&quot;Perl_&quot;</tt> prefix. The bare function names without the <tt>&quot;Perl_&quot;</tt> prefix are supported with macros, but this support may cease in a future release. </p>
 <p> See perlapi.</p>
 <dt>&bull;</dt>
 <dd> Enabling threads has source compatibility issues </dd>
-<p> Perl built with threading enabled requires extensions to use the new <tt>&quot;dTHR&quot;</tt> macro to initialize the handle to access per-thread data. If you see a compiler error that talks about the variable <tt>&quot;thr&quot;</tt> not being declared (when building a module that has <font SIZE="-1">XS</font> code), you need to add <tt>&quot;dTHR;&quot;</tt> at the beginning of the block that elicited the error. </p>
-<p> The <font SIZE="-1">API</font> function <tt>&quot;perl_get_sv(&quot;@&quot;,GV_ADD)&quot;</tt> should be used instead of directly accessing perl globals as <tt>&quot;GvSV(errgv)&quot;</tt>. The <font SIZE="-1">API</font> call is backward compatible with existing perls and provides source compatibility with threading is enabled. </p>
+<p> Perl built with threading enabled requires extensions to use the new <tt>&quot;dTHR&quot;</tt> macro to initialize the handle to access per-thread data. If you see a compiler error that talks about the variable <tt>&quot;thr&quot;</tt> not being declared (when building a module that has XS code), you need to add <tt>&quot;dTHR;&quot;</tt> at the beginning of the block that elicited the error. </p>
+<p> The API function <tt>&quot;perl_get_sv(&quot;@&quot;,GV_ADD)&quot;</tt> should be used instead of directly accessing perl globals as <tt>&quot;GvSV(errgv)&quot;</tt>. The API call is backward compatible with existing perls and provides source compatibility with threading is enabled. </p>
 <p> See &#8220;C Source Compatibility&#8221; for more information.</dl>
 <h3>Binary Compatibility</h3>
-<p> This version is <font SIZE="-1">NOT</font> binary compatible with older versions. All extensions will need to be recompiled. Further binaries built with threads enabled are incompatible with binaries built without. This should largely be transparent to the user, as all binary incompatible configurations have their own unique architecture name, and extension binaries get installed at unique locations. This allows coexistence of several configurations in the same directory hierarchy. See <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i>.</p>
+<p> This version is NOT binary compatible with older versions. All extensions will need to be recompiled. Further binaries built with threads enabled are incompatible with binaries built without. This should largely be transparent to the user, as all binary incompatible configurations have their own unique architecture name, and extension binaries get installed at unique locations. This allows coexistence of several configurations in the same directory hierarchy. See <i></i><i>INSTALL</i><i></i>.</p>
 <h3>Security fixes may affect compatibility</h3>
 <p> A few taint leaks and taint omissions have been corrected. This may lead to &#8220;failure&#8221; of scripts that used to work with older versions. Compiling with -DINCOMPLETE_TAINTS provides a perl with minimal amounts of changes to the tainting behavior. But note that the resulting perl will have known insecurities. </p>
 <p> Oneliners with the <tt>&quot;-e&quot;</tt> switch do not create temporary files anymore.</p>
@@ -50,14 +50,14 @@ description: "perl5005delta – what’s new for perl5.005"
 <p> Many new warnings that were introduced in 5.004 have been made optional. Some of these warnings are still present, but perl&#8217;s new features make them less often a problem. See &#8220;New Diagnostics&#8221;.</p>
 <h3>Licensing</h3>
 <p> Perl has a new Social Contract for contributors. See <i>Porting/Contract</i>. </p>
-<p> The license included in much of the Perl documentation has changed. Most of the Perl documentation was previously under the implicit <font SIZE="-1">GNU</font> General Public License or the Artistic License (at the user&#8217;s choice). Now much of the documentation unambiguously states the terms under which it may be distributed. Those terms are in general much less restrictive than the <font SIZE="-1">GNU GPL.</font> See perl and the individual perl manpages listed therein.</p>
+<p> The license included in much of the Perl documentation has changed. Most of the Perl documentation was previously under the implicit GNU General Public License or the Artistic License (at the user&#8217;s choice). Now much of the documentation unambiguously states the terms under which it may be distributed. Those terms are in general much less restrictive than the GNU GPL. See perl and the individual perl manpages listed therein.</p>
 <h2>Core Changes</h2>
 <h3>Threads</h3>
-<p> <font SIZE="-1">WARNING:</font> Threading is considered an <code>experimental</code> feature. Details of the implementation may change without notice. There are known limitations and some bugs. These are expected to be fixed in future versions. </p>
-<p> See <i></i><font SIZE="-1"><i>README</i></font><i>.threads</i>.</p>
+<p> WARNING: Threading is considered an <code>experimental</code> feature. Details of the implementation may change without notice. There are known limitations and some bugs. These are expected to be fixed in future versions. </p>
+<p> See <i></i><i>README</i><i>.threads</i>.</p>
 <h3>Compiler</h3>
-<p> <font SIZE="-1">WARNING:</font> The Compiler and related tools are considered <code>experimental</code>. Features may change without notice, and there are known limitations and bugs. Since the compiler is fully external to perl, the default configuration will build and install it. </p>
-<p> The Compiler produces three different types of transformations of a perl program. The C backend generates C code that captures perl&#8217;s state just before execution begins. It eliminates the compile-time overheads of the regular perl interpreter, but the run-time performance remains comparatively the same. The <font SIZE="-1">CC</font> backend generates optimized C code equivalent to the code path at run-time. The <font SIZE="-1">CC</font> backend has greater potential for big optimizations, but only a few optimizations are implemented currently. The Bytecode backend generates a platform independent bytecode representation of the interpreter&#8217;s state just before execution. Thus, the Bytecode back end also eliminates much of the compilation overhead of the interpreter. </p>
+<p> WARNING: The Compiler and related tools are considered <code>experimental</code>. Features may change without notice, and there are known limitations and bugs. Since the compiler is fully external to perl, the default configuration will build and install it. </p>
+<p> The Compiler produces three different types of transformations of a perl program. The C backend generates C code that captures perl&#8217;s state just before execution begins. It eliminates the compile-time overheads of the regular perl interpreter, but the run-time performance remains comparatively the same. The CC backend generates optimized C code equivalent to the code path at run-time. The CC backend has greater potential for big optimizations, but only a few optimizations are implemented currently. The Bytecode backend generates a platform independent bytecode representation of the interpreter&#8217;s state just before execution. Thus, the Bytecode back end also eliminates much of the compilation overhead of the interpreter. </p>
 <p> The compiler comes with several valuable utilities. </p>
 <p> <tt>&quot;B::Lint&quot;</tt> is an experimental module to detect and warn about suspicious code, especially the cases that the <tt>&quot;-w&quot;</tt> switch does not detect. </p>
 <p> <tt>&quot;B::Deparse&quot;</tt> can be used to demystify perl code, and understand how perl optimizes certain constructs. </p>
@@ -70,7 +70,7 @@ description: "perl5005delta – what’s new for perl5.005"
 <p> Here is an itemized summary:</p>
 <dl>
 <dt>Many new and improved optimizations</dt>
-<dd> Changes in the <font SIZE="-1">RE</font> engine: </dd>
+<dd> Changes in the RE engine: </dd>
 <pre><code>
 Unneeded nodes removed;
 Substrings merged together;
@@ -81,21 +81,21 @@ New types of nodes to process(SUBEXPR) * and similar expressions
         Better optimizations by lookup for constant substrings;
         Better search for constants substrings anchored by $ ;
 </code></pre>
-<p> Changes in Perl code using <font SIZE="-1">RE</font> engine: </p>
-<p>More optimizations to s / longer / short / ;<br />
-study() was not working;<br />
-/ blah / may be optimized to an analogue of index() if $ &amp;$` $&#8217; not seen; Unneeded copying of matched &#8211; against string removed;<br />
+<p> Changes in Perl code using RE engine: </p>
+<p>More optimizations to s / longer / short / ;<br/>
+study() was not working;<br/>
+/ blah / may be optimized to an analogue of index() if $ &amp;$` $&#8217; not seen; Unneeded copying of matched &#8211; against string removed;<br/>
 Only matched part of the string is copying if $` $&#8217; were not seen;</p>
 <dt>Many bug fixes</dt>
 <dd> Note that only the major bug fixes are listed here. See <i>Changes</i> for others. </dd>
-<p>        Backtracking might not restore start of $3.<br />
-        No feedback if max count for * or + on &#8220;complex&#8221; subexpression<br />
-            was reached, similarly (but at compile time) for {3,34567}<br />
-        Primitive restrictions on max count introduced to decrease a<br />
-            possibility of a segfault;<br />
-        (ZERO &#8211; LENGTH) * could segfault;<br />
-        (ZERO &#8211; LENGTH) * was prohibited;<br />
-        Long REs were not allowed;<br />
+<p>        Backtracking might not restore start of $3.<br/>
+        No feedback if max count for * or + on &#8220;complex&#8221; subexpression<br/>
+            was reached, similarly (but at compile time) for {3,34567}<br/>
+        Primitive restrictions on max count introduced to decrease a<br/>
+            possibility of a segfault;<br/>
+        (ZERO &#8211; LENGTH) * could segfault;<br/>
+        (ZERO &#8211; LENGTH) * was prohibited;<br/>
+        Long REs were not allowed;<br/>
         / RE / g could skip matches at the same position after a zero &#8211; length match;</p>
 <dt>New regular expression constructs</dt>
 <dd> The following new syntax elements are supported: </dd>
@@ -113,12 +113,12 @@ Only matched part of the string is copying if $` $&#8217; were not seen;</p>
 <dd> See &quot;New <tt>&quot;qr//&quot;</tt> operator&quot;.</dd>
 <dt>Other improvements</dt>
 <dd>
-Better debugging output(possibly with colors),<br />
-    even from non &#8211; debugging Perl;<br />
-RE engine code now looks like C, not like assembler;<br />
-Behaviour of RE modifiable by `use re&#8217; directive; Improved documentation;<br />
-Test suite significantly extended;<br />
-Syntax<br />
+Better debugging output(possibly with colors),<br/>
+    even from non &#8211; debugging Perl;<br/>
+RE engine code now looks like C, not like assembler;<br/>
+Behaviour of RE modifiable by `use re&#8217; directive; Improved documentation;<br/>
+Test suite significantly extended;<br/>
+Syntax<br/>
     [:^upper:] etc., reserved inside character classes;</dd>
 <dt>Incompatible changes</dt>
 <dd>
@@ -137,17 +137,17 @@ Syntax<br />
 <p> See <tt>&quot;perlfunc/sort&quot;</tt>.</p>
 <h3>Reliable signals</h3>
 <p> Perl&#8217;s signal handling is susceptible to random crashes, because signals arrive asynchronously, and the Perl runtime is not reentrant at arbitrary times. </p>
-<p> However, one experimental implementation of reliable signals is available when threads are enabled. See <tt>&quot;Thread::Signal&quot;</tt>. Also see <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> for how to build a Perl capable of threads.</p>
+<p> However, one experimental implementation of reliable signals is available when threads are enabled. See <tt>&quot;Thread::Signal&quot;</tt>. Also see <i></i><i>INSTALL</i><i></i> for how to build a Perl capable of threads.</p>
 <h3>Reliable stack pointers</h3>
 <p> The internals now reallocate the perl stack only at predictable times. In particular, magic calls never trigger reallocations of the stack, because all reentrancy of the runtime is handled using a &#8220;stack of stacks&#8221;. This should improve reliability of cached stack pointers in the internals and in XSUBs.</p>
 <h3>More generous treatment of carriage returns</h3>
 <p> Perl used to complain if it encountered literal carriage returns in scripts. Now they are mostly treated like whitespace within program text. Inside string literals and here documents, literal carriage returns are ignored if they occur paired with linefeeds, or get interpreted as whitespace if they stand alone. This behavior means that literal carriage returns in files should be avoided. You can get the older, more compatible (but less generous) behavior by defining the preprocessor symbol <tt>&quot;PERL_STRICT_CR&quot;</tt> when building perl. Of course, all this has nothing whatever to do with how escapes like <tt>&quot;
 &quot;</tt> are handled within strings. </p>
-<p> Note that this doesn&#8217;t somehow magically allow you to keep all text files in <font SIZE="-1">DOS</font> format. The generous treatment only applies to files that perl itself parses. If your C compiler doesn&#8217;t allow carriage returns in files, you may still be unable to build modules that need a C compiler.</p>
+<p> Note that this doesn&#8217;t somehow magically allow you to keep all text files in DOS format. The generous treatment only applies to files that perl itself parses. If your C compiler doesn&#8217;t allow carriage returns in files, you may still be unable to build modules that need a C compiler.</p>
 <h3>Memory leaks</h3>
 <p> <tt>&quot;substr&quot;</tt>, <tt>&quot;pos&quot;</tt> and <tt>&quot;vec&quot;</tt> don&#8217;t leak memory anymore when used in lvalue context. Many small leaks that impacted applications that embed multiple interpreters have been fixed.</p>
 <h3>Better support for multiple interpreters</h3>
-<p> The build-time option <tt>&quot;-DMULTIPLICITY&quot;</tt> has had many of the details reworked. Some previously global variables that should have been per-interpreter now are. With care, this allows interpreters to call each other. See the <tt>&quot;PerlInterp&quot;</tt> extension on <font SIZE="-1">CPAN.</font></p>
+<p> The build-time option <tt>&quot;-DMULTIPLICITY&quot;</tt> has had many of the details reworked. Some previously global variables that should have been per-interpreter now are. With care, this allows interpreters to call each other. See the <tt>&quot;PerlInterp&quot;</tt> extension on CPAN.</p>
 <h3>Behavior of <code>local()</code> on array and hash elements is now well-defined</h3>
 <p> See &#8220;Temporary Values via <code>local()</code>&#8221; in perlsub.</p>
 <h3>%! is transparently tied to the Errno module</h3>
@@ -174,7 +174,7 @@ Syntax<br />
 <p> See &#8220;prototype&#8221; in perlfunc.</p>
 <h3>Extended support for exception handling</h3>
 <p> <tt>&quot;die()&quot;</tt> now accepts a reference value, and <tt>$@</tt> gets set to that value in exception traps. This makes it possible to propagate exception objects. This is an undocumented <code>experimental</code> feature.</p>
-<h3>Re-blessing in <font SIZE="-1"><code>DESTROY</code></font><code>()</code> supported for chaining <font SIZE="-1"><code>DESTROY</code></font><code>()</code> methods</h3>
+<h3>Re-blessing in <code>DESTROY</code><code>()</code> supported for chaining <code>DESTROY</code><code>()</code> methods</h3>
 <p> See &#8220;Destructors&#8221; in perlobj.</p>
 <h3>All printf format conversions are handled internally</h3>
 <p> See &#8220;printf&#8221; in perlfunc.</p>
@@ -190,20 +190,20 @@ Syntax<br />
 <h3>Tied arrays are now fully supported</h3>
 <p> See Tie::Array.</p>
 <h3>Tied handles support is better</h3>
-<p> Several missing hooks have been added. There is also a new base class for <font SIZE="-1">TIEARRAY</font> implementations. See Tie::Array.</p>
+<p> Several missing hooks have been added. There is also a new base class for TIEARRAY implementations. See Tie::Array.</p>
 <h3>4th argument to substr</h3>
 <p> <code>substr()</code> can now both return and replace in one operation. The optional 4th argument is the replacement string. See &#8220;substr&#8221; in perlfunc.</p>
-<h3>Negative <font SIZE="-1">LENGTH</font> argument to splice</h3>
-<p> <code>splice()</code> with a negative <font SIZE="-1">LENGTH</font> argument now work similar to what the <font SIZE="-1">LENGTH</font> did for <code>substr()</code>. Previously a negative <font SIZE="-1">LENGTH</font> was treated as 0. See &#8220;splice&#8221; in perlfunc.</p>
+<h3>Negative LENGTH argument to splice</h3>
+<p> <code>splice()</code> with a negative LENGTH argument now work similar to what the LENGTH did for <code>substr()</code>. Previously a negative LENGTH was treated as 0. See &#8220;splice&#8221; in perlfunc.</p>
 <h3>Magic lvalues are now more magical</h3>
 <p> When you say something like <tt>&quot;substr($x, 5) = &quot;hi&quot;&quot;</tt>, the scalar returned by <code>substr()</code> is special, in that any modifications to it affect <tt>$x</tt>. (This is called a &#8216;magic lvalue&#8217; because an &#8216;lvalue&#8217; is something on the left side of an assignment.) Normally, this is exactly what you would expect to happen, but Perl uses the same magic if you use <code>substr()</code>, <code>pos()</code>, or <code>vec()</code> in a context where they might be modified, like taking a reference with <tt>&quot;\&quot;</tt> or as an argument to a sub that modifies <tt>@_</tt>. In previous versions, this &#8216;magic&#8217; only went one way, but now changes to the scalar the magic refers to ($x in the above example) affect the magic lvalue too. For instance, this code now acts differently: </p>
-<p>$x = &#8220;hello&#8221;;<br />
-sub printit<br />
-{<br />
-    $x = &#8220;g&#8217;bye&#8221;;<br />
+<p>$x = &#8220;hello&#8221;;<br/>
+sub printit<br/>
+{<br/>
+    $x = &#8220;g&#8217;bye&#8221;;<br/>
     print $_[0], &#8220;
-&#8221;;<br />
-}<br />
+&#8221;;<br/>
+}<br/>
 printit(substr($x, 0, 5));</p>
 <p> In previous versions, this would print &#8220;hello&#8221;, but it now prints &#8220;g&#8217;bye&#8221;.</p>
 <h3>&lt;&gt; now reads in records</h3>
@@ -211,15 +211,15 @@ printit(substr($x, 0, 5));</p>
 <h2>Supported Platforms</h2>
 <p> Configure has many incremental improvements. Site-wide policy for building perl can now be made persistent, via Policy.sh. Configure also records the command-line arguments used in <i>config.sh</i>.</p>
 <h3>New Platforms</h3>
-<p> BeOS is now supported. See <i></i><font SIZE="-1"><i>README</i></font><i>.beos</i>. </p>
-<p> <font SIZE="-1">DOS</font> is now supported under the <font SIZE="-1">DJGPP</font> tools. See <i></i><font SIZE="-1"><i>README</i></font><i>.dos</i> (installed as perldos on some systems). </p>
-<p> MiNT is now supported. See <i></i><font SIZE="-1"><i>README</i></font><i>.mint</i>. </p>
-<p> MPE/iX is now supported. See <font SIZE="-1">README</font>.mpeix. </p>
-<p> <font SIZE="-1">MVS</font> (aka <font SIZE="-1">OS390,</font> aka Open Edition) is now supported. See <i></i><font SIZE="-1"><i>README</i></font><i>.os390</i> (installed as perlos390 on some systems). </p>
-<p> Stratus <font SIZE="-1">VOS</font> is now supported. See <i></i><font SIZE="-1"><i>README</i></font><i>.vos</i>.</p>
+<p> BeOS is now supported. See <i></i><i>README</i><i>.beos</i>. </p>
+<p> DOS is now supported under the DJGPP tools. See <i></i><i>README</i><i>.dos</i> (installed as perldos on some systems). </p>
+<p> MiNT is now supported. See <i></i><i>README</i><i>.mint</i>. </p>
+<p> MPE/iX is now supported. See README.mpeix. </p>
+<p> MVS (aka OS390, aka Open Edition) is now supported. See <i></i><i>README</i><i>.os390</i> (installed as perlos390 on some systems). </p>
+<p> Stratus VOS is now supported. See <i></i><i>README</i><i>.vos</i>.</p>
 <h3>Changes in existing support</h3>
-<p> Win32 support has been vastly enhanced. Support for Perl Object, a C<font SIZE="-2">++</font> encapsulation of Perl. <font SIZE="-1">GCC</font> and <font SIZE="-1">EGCS</font> are now supported on Win32. See <i></i><font SIZE="-1"><i>README</i></font><i>.win32</i>, aka perlwin32. </p>
-<p> <font SIZE="-1">VMS</font> configuration system has been rewritten. See <i></i><font SIZE="-1"><i>README</i></font><i>.vms</i> (installed as <i>README_vms</i> on some systems). </p>
+<p> Win32 support has been vastly enhanced. Support for Perl Object, a C++ encapsulation of Perl. GCC and EGCS are now supported on Win32. See <i></i><i>README</i><i>.win32</i>, aka perlwin32. </p>
+<p> VMS configuration system has been rewritten. See <i></i><i>README</i><i>.vms</i> (installed as <i>README_vms</i> on some systems). </p>
 <p> The hints files for most Unix platforms have seen incremental improvements.</p>
 <h2>Modules and Pragmata</h2>
 <h3>New Modules</h3>
@@ -233,7 +233,7 @@ printit(substr($x, 0, 5));</p>
 <dt>Errno</dt>
 <dd> A module to look up errors more conveniently. See Errno.</dd>
 <dt>File::Spec</dt>
-<dd> A portable <font SIZE="-1">API</font> for file operations.</dd>
+<dd> A portable API for file operations.</dd>
 <dt>ExtUtils::Installed</dt>
 <dd> Query and manage installed modules.</dd>
 <dt>ExtUtils::Packlist</dt>
@@ -241,7 +241,7 @@ printit(substr($x, 0, 5));</p>
 <dt>Fatal</dt>
 <dd> Make functions/builtins succeed or die.</dd>
 <dt>IPC::SysV</dt>
-<dd> Constants and other support infrastructure for System V <font SIZE="-1">IPC</font> operations in perl.</dd>
+<dd> Constants and other support infrastructure for System V IPC operations in perl.</dd>
 <dt>Test</dt>
 <dd> A framework for writing test suites.</dd>
 <dt>Tie::Array</dt>
@@ -263,29 +263,29 @@ printit(substr($x, 0, 5));</p>
 <p> Keeps better time.</p>
 <dt>Carp</dt>
 <dd> Carp has a new function <code>cluck()</code>. <code>cluck()</code> warns, like <code>carp()</code>, but also adds a stack backtrace to the error message, like <code>confess()</code>.</dd>
-<dt><font SIZE="-1">CGI</font></dt>
-<dd> <font SIZE="-1">CGI</font> has been updated to version 2.42.</dd>
+<dt>CGI</dt>
+<dd> CGI has been updated to version 2.42.</dd>
 <dt>Fcntl</dt>
 <dd> More Fcntl constants added: F_SETLK64, F_SETLKW64, O_LARGEFILE for large (more than 4G) file access (the 64-bit support is not yet working, though, so no need to get overly excited), Free/Net/OpenBSD locking behaviour flags F_FLOCK, F_POSIX, Linux F_SHLCK, and O_ACCMODE: the mask of O_RDONLY, O_WRONLY, and O_RDWR.</dd>
 <dt>Math::Complex</dt>
 <dd> The accessors methods Re, Im, arg, abs, rho, theta, methods can ($z-&gt;<code>Re()</code>) now also act as mutators ($z-&gt;<code>Re</code>(3)).</dd>
 <dt>Math::Trig</dt>
 <dd> A little bit of radial trigonometry (cylindrical and spherical) added, for example the great circle distance.</dd>
-<dt><font SIZE="-1">POSIX</font></dt>
-<dd> <font SIZE="-1">POSIX</font> now has its own platform-specific hints files.</dd>
+<dt>POSIX</dt>
+<dd> POSIX now has its own platform-specific hints files.</dd>
 <dt>DB_File</dt>
-<dd> DB_File supports version 2.x of Berkeley <font SIZE="-1">DB.</font> See <tt>&quot;ext/DB_File/Changes&quot;</tt>.</dd>
+<dd> DB_File supports version 2.x of Berkeley DB. See <tt>&quot;ext/DB_File/Changes&quot;</tt>.</dd>
 <dt>MakeMaker</dt>
 <dd> MakeMaker now supports writing empty makefiles, provides a way to specify that site <code>umask()</code> policy should be honored. There is also better support for manipulation of .packlist files, and getting information about installed modules. </dd>
 <p> Extensions that have both architecture-dependent and architecture-independent files are now always installed completely in the architecture-dependent locations. Previously, the shareable parts were shared both across architectures and across perl versions and were therefore liable to be overwritten with newer versions that might have subtle incompatibilities.</p>
-<dt><font SIZE="-1">CPAN</font></dt>
-<dd> See perlmodinstall and <font SIZE="-1">CPAN</font>.</dd>
+<dt>CPAN</dt>
+<dd> See perlmodinstall and CPAN.</dd>
 <dt>Cwd</dt>
 <dd> Cwd::cwd is faster on most platforms.</dd></dl>
 <h2>Utility Changes</h2>
 <p> <tt>&quot;h2ph&quot;</tt> and related utilities have been vastly overhauled. </p>
 <p> <tt>&quot;perlcc&quot;</tt>, a new experimental front end for the compiler is available. </p>
-<p> The crude <font SIZE="-1">GNU</font> <tt>&quot;configure&quot;</tt> emulator is now called <tt>&quot;configure.gnu&quot;</tt> to avoid trampling on <tt>&quot;Configure&quot;</tt> under case-insensitive filesystems. </p>
+<p> The crude GNU <tt>&quot;configure&quot;</tt> emulator is now called <tt>&quot;configure.gnu&quot;</tt> to avoid trampling on <tt>&quot;Configure&quot;</tt> under case-insensitive filesystems. </p>
 <p> <tt>&quot;perldoc&quot;</tt> used to be rather slow. The slower features are now optional. In particular, case-insensitive searches need the <tt>&quot;-i&quot;</tt> switch, and recursive searches need <tt>&quot;-r&quot;</tt>. You can set these switches in the <tt>&quot;PERLDOC&quot;</tt> environment variable to get the old behavior.</p>
 <h2>Documentation Changes</h2>
 <p> Config.pm now has a glossary of variables. </p>
@@ -308,15 +308,15 @@ printit(substr($x, 0, 5));</p>
 <dd> (W) You used a qualified bareword of the form <tt>&quot;Foo::&quot;</tt>, but the compiler saw no other uses of that namespace before that point. Perhaps you need to predeclare a package?</dd>
 <dt>Can&#8217;t call method &quot;%s&quot; on an undefined value</dt>
 <dd> (F) You used the syntax of a method call, but the slot filled by the object reference or package name contains an undefined value. Something like this will reproduce the error: </dd>
-<p>$BADREF = 42;<br />
-process $BADREF 1, 2, 3;<br />
+<p>$BADREF = 42;<br/>
+process $BADREF 1, 2, 3;<br/>
 $BADREF-&gt;process(1, 2, 3);</p>
 <dt>Can&#8217;t check filesystem of script &quot;%s&quot; for nosuid</dt>
 <dd> (P) For some reason you can&#8217;t check the filesystem of the script for nosuid.</dd>
 <dt>Can&#8217;t coerce array into hash</dt>
 <dd> (F) You used an array where a hash was expected, but the array has no information on how to map from keys to array indices. You can do that only with arrays that have a hash reference at index 0.</dd>
 <dt>Can&#8217;t goto subroutine from an eval-string</dt>
-<dd> (F) The &#8220;goto subroutine&#8221; call can&#8217;t be used to jump out of an eval &#8220;string&#8221;. (You can use it to jump out of an eval {<font SIZE="-1">BLOCK</font>}, but you probably don&#8217;t want to.)</dd>
+<dd> (F) The &#8220;goto subroutine&#8221; call can&#8217;t be used to jump out of an eval &#8220;string&#8221;. (You can use it to jump out of an eval {BLOCK}, but you probably don&#8217;t want to.)</dd>
 <dt>Can&#8217;t localize pseudo-hash element</dt>
 <dd> (F) You said something like <tt>&quot;local $ar-&gt;{'key'}&quot;</tt>, where <tt>$ar</tt> is a reference to a pseudo-hash. That hasn&#8217;t been implemented yet, but you can get a similar effect by localizing the corresponding array element directly: <tt>&quot;local $ar-&gt;[$ar-&gt;[0]{'key'}]&quot;</tt>.</dd>
 <dt>Can&#8217;t use %%! because Errno.pm is not available</dt>
@@ -375,7 +375,7 @@ $BADREF-&gt;process(1, 2, 3);</p>
            are supported and installed on your system.
        perl: warning: Falling back to the standard locale (&quot;C&quot;).
 </pre>
-<p> Exactly what were the failed locale settings varies. In the above the settings were that the <font SIZE="-1">LC_ALL</font> was &#8220;En_US&#8221; and the <font SIZE="-1">LANG</font> had no value. This error means that Perl detected that you and/or your system administrator have set up the so-called variable system but Perl could not use those settings. This was not dead serious, fortunately: there is a &#8220;default locale&#8221; called &#8220;C&#8221; that Perl can and will use, the script will be run. Before you really fix the problem, however, you will get the same error message each time you run Perl. How to really fix the problem can be found in &#8220;<font SIZE="-1">LOCALE PROBLEMS&#8221;</font> in perllocale.</dl>
+<p> Exactly what were the failed locale settings varies. In the above the settings were that the LC_ALL was &#8220;En_US&#8221; and the LANG had no value. This error means that Perl detected that you and/or your system administrator have set up the so-called variable system but Perl could not use those settings. This was not dead serious, fortunately: there is a &#8220;default locale&#8221; called &#8220;C&#8221; that Perl can and will use, the script will be run. Before you really fix the problem, however, you will get the same error message each time you run Perl. How to really fix the problem can be found in &#8220;LOCALE PROBLEMS&#8221; in perllocale.</dl>
 <h2>Obsolete Diagnostics</h2>
 <dl>
 <dt>Can&#8217;t <code>mktemp()</code></dt>
@@ -396,8 +396,8 @@ $BADREF-&gt;process(1, 2, 3);</p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Make sure you trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to &lt;<i>perlbug [at] perl.com</i>&gt; to be analysed by the Perl porting team.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information.</p>
 <h2>HISTORY</h2>
 <p> Written by Gurusamy Sarathy &lt;<i>gsar [at] activestate.com</i>&gt;, with many contributions from The Perl Porters. </p>

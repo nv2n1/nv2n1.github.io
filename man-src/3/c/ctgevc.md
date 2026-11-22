@@ -11,7 +11,7 @@ description: "ctgevc.f –"
 <p> ctgevc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctgevc</code> (SIDE, HOWMNY, SELECT, N, S, LDS, P, LDP, VL, LDVL, VR, LDVR, MM, M, WORK, RWORK, INFO)<br />
+<p> subroutine <code>ctgevc</code> (SIDE, HOWMNY, SELECT, N, S, LDS, P, LDP, VL, LDVL, VR, LDVR, MM, M, WORK, RWORK, INFO)<br/>
  <i></i><code>CTGEVC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctgevc (characterSIDE, characterHOWMNY, logical, dimension( * )SELECT, integerN, complex, dimension( lds, * )S, integerLDS, complex, dimension( ldp, * )P, integerLDP, complex, dimension( ldvl, * )VL, integerLDVL, complex, dimension( ldvr, * )VR, integerLDVR, integerMM, integerM, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

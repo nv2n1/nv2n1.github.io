@@ -44,8 +44,8 @@ description: "Lintian::Group — A group of objects that Lintian can process"
 <dd>
 </dd><dt>&quot;shared_storage&quot;</dt>
 <dd>
-</dd><dt>Lintian::Group-&gt;init_from_file (<font SIZE="-1">FILE</font>)</dt>
-<dd>Add all processables from .changes or .buildinfo file <font SIZE="-1">FILE.</font></dd>
+</dd><dt>Lintian::Group-&gt;init_from_file (FILE)</dt>
+<dd>Add all processables from .changes or .buildinfo file FILE.</dd>
 <dt>unpack</dt>
 <dd>Unpack this group.</dd>
 <dt>process</dt>
@@ -64,12 +64,12 @@ description: "Lintian::Group — A group of objects that Lintian can process"
 <p> If <tt>$group</tt> does not have any binary processables then an empty list is returned.</p>
 <dt>$group-&gt;info</dt>
 <dd>
-</dd><dt>direct_dependencies (<font SIZE="-1">PROC</font>)</dt>
-<dd>If <font SIZE="-1">PROC</font> is a part of the underlying processable group, this method returns a listref containing all the direct dependencies of <font SIZE="-1">PROC.</font> If <font SIZE="-1">PROC</font> is not a part of the group, this returns undef. </dd>
+</dd><dt>direct_dependencies (PROC)</dt>
+<dd>If PROC is a part of the underlying processable group, this method returns a listref containing all the direct dependencies of PROC. If PROC is not a part of the group, this returns undef. </dd>
 <p> Note: Only strong dependencies (Pre-Depends and Depends) are considered. </p>
 <p> Note: Self-dependencies (if any) are <i>not</i> included in the result.</p>
-<dt>direct_reliants (<font SIZE="-1">PROC</font>)</dt>
-<dd>If <font SIZE="-1">PROC</font> is a part of the underlying processable group, this method returns a listref containing all the packages in the group that rely on <font SIZE="-1">PROC.</font> If <font SIZE="-1">PROC</font> is not a part of the group, this returns undef. </dd>
+<dt>direct_reliants (PROC)</dt>
+<dd>If PROC is a part of the underlying processable group, this method returns a listref containing all the packages in the group that rely on PROC. If PROC is not a part of the group, this returns undef. </dd>
 <p> Note: Only strong dependencies (Pre-Depends and Depends) are considered. </p>
 <p> Note: Self-dependencies (if any) are <i>not</i> included in the result.</p>
 <dt>$ginfo-&gt;type</dt>

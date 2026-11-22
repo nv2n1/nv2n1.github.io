@@ -14,7 +14,7 @@ description: "arm4.conf – ARM 4 agent configuration file"
 <p>The agent has a number of configurable options that are controlled through the configuration file. The agent and it&#8217;s utilities can use either the default file at <i>/etc/arm4.conf</i>, or a file passed in as a command line argument. While the options are passed to the programs as they start, they generally affect persistent global objects shuch as the shared memory regions that remain after the program exits. Because of this, many options will only be changed when the shared memory objects are recreated.</p>
 <dl>
 <dt>Options may be set in one of two ways:</dt>
-<dd>&lt;<i>option</i>&gt; &lt;<i>value</i>&gt;<br />
+<dd>&lt;<i>option</i>&gt; &lt;<i>value</i>&gt;<br/>
  &lt;<i>option</i>&gt; = &lt;<i>value</i>&gt; Blank lines and lines starting with <i>#</i> are considered to be comment lines. The different configuration options are:</dd>
 <dt><code>hostname</code></dt>
 <dd>overrides the default hostname. The default value is the same as returned by running the command <code>uname -n</code>.</dd>

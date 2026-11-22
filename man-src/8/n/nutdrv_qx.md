@@ -104,7 +104,7 @@ description: "nutdrv_qx – Driver for Q* protocol serial and USB based UPS equi
 <p> <code>output_phase_angle =</code> <i>value</i></p>
 <dl>
 <dd>Changes output phase angle to the provided value [000, 120, 180, 240]&#176;.</dd></dl>
-<p> <font SIZE="+1"> <code>UPS CAPABILITY SETTINGS</code></p>
+<p>  <code>UPS CAPABILITY SETTINGS</code></p>
 <dl>
 <dd><code>reset_to_default</code></dd>
 <dl>
@@ -148,7 +148,7 @@ description: "nutdrv_qx – Driver for Q* protocol serial and USB based UPS equi
 <dl>
 <dd>Enable or disable limited runtime on battery mode [enabled/disabled].</dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>BYPASS MODE VOLTAGE/FREQUENCY LIMITS</code></p>
+<p>  <code>BYPASS MODE VOLTAGE/FREQUENCY LIMITS</code></p>
 <dl>
 <dd>Variables to fine-tune voltage and frequency limits for Bypass mode. These limits are reset to safe default values by <code>reset_to_default</code>. </dd>
 <p> If AC voltage and frequency are within acceptable range, Bypass mode will be used (If the UPS is capable of and it&#8217;s enabled). </p>
@@ -166,21 +166,21 @@ description: "nutdrv_qx – Driver for Q* protocol serial and USB based UPS equi
 <dl>
 <dd>Minimum frequency for Bypass Mode (Hz).</dd></dl>
 </dl>
-<p> </font><font SIZE="+3"> <code>OPTIONS SPECIFIC FOR P31 UPSES</code></p>
+<p>  <code>OPTIONS SPECIFIC FOR P31 UPSES</code></p>
 <dl>
 <dd>The following options are available only on P31 UPSes. </dd>
 <p> <code>work_range_type =</code> <i>string</i></p>
 <dl>
 <dd>Device grid working range for P31 UPSes [Appliance/UPS].</dd></dl>
 </dl>
-<p> </font><font SIZE="+4"> <code>TESTING</code></p>
+<p>  <code>TESTING</code></p>
 <dl>
 <dd>This protocol comes with a couple of functions that are not enabled by default because of the lack of knowledge of some part of the communication protocol used by these UPSes by your friendly neighborhood developer. Since these functions are supposed to be queries to the UPS for some kind of informations, they <i>should</i> not make your UPS go boom. So if you are brave enough to risk your UPS and attached devices&#8217; life to help the developers, this will be very appreciated.. <code>Do it at your own risk</code>. </dd>
 <p> <code>testing</code></p>
 <dl>
 <dd>If invoked the driver will exec also commands that still need testing.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>Serial Interface Only</h3>
 <p><code>cablepower =</code> <i>string</i></p>
 <dl>
@@ -245,13 +245,13 @@ description: "nutdrv_qx – Driver for Q* protocol serial and USB based UPS equi
 <p><code>test.battery.start</code> <i>value</i></p>
 <dl>
 <dd>Perform a battery test for the duration of <i>value</i> seconds (truncated to 60 seconds) [60..5940].</dd></dl>
-<p> <font SIZE="+1"> <code>VOLTRONIC POWER P98 UNITS (WITH MECER PROTOCOL)</code></p>
+<p>  <code>VOLTRONIC POWER P98 UNITS (WITH MECER PROTOCOL)</code></p>
 <dl>
 <dd><code>test.battery.start</code> <i>value</i></dd>
 <dl>
 <dd>Perform a battery test for the duration of <i>value</i> seconds (truncated to 60 seconds) [12..5940]. This value is truncated to units of 6 seconds (less than 60 seconds) or 60 seconds (more than 60 seconds).</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>Voltronic Protocol</h3>
 <p>The following instant commands are available for the <i>voltronic</i> protocol. Not all of them are available on all the UPSes supported by this protocol. </p>
 <p> <code>beeper.enable</code></p>

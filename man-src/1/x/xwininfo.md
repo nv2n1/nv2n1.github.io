@@ -73,25 +73,25 @@ description: "xwininfo – window information utility for X"
 <h2>EXAMPLE</h2>
 <p> The following is a sample summary taken with no options specified: </p>
 <p> xwininfo: Window id: 0x60000f &quot;xterm&quot; </p>
-<p>&nbsp;<wbr>&nbsp;Absolute upper-left X: 2<br />
-&nbsp;<wbr>&nbsp;Absolute upper-left Y: 85<br />
-&nbsp;<wbr>&nbsp;Relative upper-left X:&nbsp;<wbr>&nbsp;0<br />
-&nbsp;<wbr>&nbsp;Relative upper-left Y:&nbsp;<wbr>&nbsp;25<br />
-&nbsp;<wbr>&nbsp;Width: 579<br />
-&nbsp;<wbr>&nbsp;Height: 316<br />
-&nbsp;<wbr>&nbsp;Depth: 8<br />
-&nbsp;<wbr>&nbsp;Visual: 0x1e<br />
-&nbsp;<wbr>&nbsp;Visual Class: PseudoColor<br />
-&nbsp;<wbr>&nbsp;Border width: 0<br />
-&nbsp;<wbr>&nbsp;Class: InputOutput<br />
-&nbsp;<wbr>&nbsp;Colormap: 0x27&nbsp;(installed)<br />
-&nbsp;<wbr>&nbsp;Bit Gravity State: NorthWestGravity<br />
-&nbsp;<wbr>&nbsp;Window Gravity State: NorthWestGravity<br />
-&nbsp;<wbr>&nbsp;Backing Store State: NotUseful<br />
-&nbsp;<wbr>&nbsp;Save Under State: no<br />
-&nbsp;<wbr>&nbsp;Map State: IsViewable<br />
-&nbsp;<wbr>&nbsp;Override Redirect State: no<br />
-&nbsp;<wbr>&nbsp;Corners:&nbsp;<wbr>&nbsp;+2+85&nbsp;<wbr>&nbsp;-699+85&nbsp;<wbr>&nbsp;-699-623&nbsp;<wbr>&nbsp;+2-623<br />
+<p>&nbsp;<wbr>&nbsp;Absolute upper-left X: 2<br/>
+&nbsp;<wbr>&nbsp;Absolute upper-left Y: 85<br/>
+&nbsp;<wbr>&nbsp;Relative upper-left X:&nbsp;<wbr>&nbsp;0<br/>
+&nbsp;<wbr>&nbsp;Relative upper-left Y:&nbsp;<wbr>&nbsp;25<br/>
+&nbsp;<wbr>&nbsp;Width: 579<br/>
+&nbsp;<wbr>&nbsp;Height: 316<br/>
+&nbsp;<wbr>&nbsp;Depth: 8<br/>
+&nbsp;<wbr>&nbsp;Visual: 0x1e<br/>
+&nbsp;<wbr>&nbsp;Visual Class: PseudoColor<br/>
+&nbsp;<wbr>&nbsp;Border width: 0<br/>
+&nbsp;<wbr>&nbsp;Class: InputOutput<br/>
+&nbsp;<wbr>&nbsp;Colormap: 0x27&nbsp;(installed)<br/>
+&nbsp;<wbr>&nbsp;Bit Gravity State: NorthWestGravity<br/>
+&nbsp;<wbr>&nbsp;Window Gravity State: NorthWestGravity<br/>
+&nbsp;<wbr>&nbsp;Backing Store State: NotUseful<br/>
+&nbsp;<wbr>&nbsp;Save Under State: no<br/>
+&nbsp;<wbr>&nbsp;Map State: IsViewable<br/>
+&nbsp;<wbr>&nbsp;Override Redirect State: no<br/>
+&nbsp;<wbr>&nbsp;Corners:&nbsp;<wbr>&nbsp;+2+85&nbsp;<wbr>&nbsp;-699+85&nbsp;<wbr>&nbsp;-699-623&nbsp;<wbr>&nbsp;+2-623<br/>
 &nbsp;<wbr>&nbsp;-geometry 80&#215;24+0+58 </p>
 <h2>ENVIRONMENT</h2>
 <dl>

@@ -23,5 +23,5 @@ description: "xdpyinfo – display information utility for X"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-x/">X</a></i>(7), <i><a href="/docs/linux/man/1-xprop/">xprop</a></i>(1), <i><a href="/docs/linux/man/1-xrdb/">xrdb</a></i>(1), <i><a href="/docs/linux/man/1-xwininfo/">xwininfo</a></i>(1), <i><a href="/docs/linux/man/1-xrandr/">xrandr</a></i>(1), <i><a href="/docs/linux/man/1-xdriinfo/">xdriinfo</a></i>(1), <i><a href="/docs/linux/man/1-xvinfo/">xvinfo</a></i>(1), <i><a href="/docs/linux/man/1-glxinfo/">glxinfo</a></i>(1)</p>
 <h2>AUTHOR</h2>
-<p> Jim Fulton, MIT X Consortium<br />
+<p> Jim Fulton, MIT X Consortium<br/>
  Support for the XFree86-VidModeExtension, XFree86-DGA, XFree86-Misc, and XKB extensions added by Joe Moss </p>

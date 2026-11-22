@@ -76,7 +76,7 @@ description: "mgettydefs – speed and terminal settings used by mgetty"
 <dd> <p> <i>initial-flags</i>. <i>getty</i> automatically sets the terminal to raw input mode and takes care of the other flags. If the &quot;-s&quot; option is used with <i>mgetty</i>(1) the speed setting is ignored. The <i>initial-flag</i> settings remain in effect until <i>getty</i> executes <i><a href="/docs/linux/man/1-login/">login</a></i>(1). </p>
  </dd>
 <dt><i>final-flags</i></dt>
-<dd> <p> These flags take the same values as the <i>initial-flags</i> and are set just before <i>getty</i> executes <i>login</i>. The speed flag is again required, except with <i>mgetty</i> if the -s flag was supplied. Two other commonly specified <i>final-flags</i> are <font SIZE="-1"><code>TAB3</code>, </font> so that tabs are sent to the terminal as spaces, and <font SIZE="-1"><code>HUPCL</code>, </font> so that the line is hung up on the final close. </p>
+<dd> <p> These flags take the same values as the <i>initial-flags</i> and are set just before <i>getty</i> executes <i>login</i>. The speed flag is again required, except with <i>mgetty</i> if the -s flag was supplied. Two other commonly specified <i>final-flags</i> are <code>TAB3</code>,  so that tabs are sent to the terminal as spaces, and <code>HUPCL</code>,  so that the line is hung up on the final close. </p>
  </dd>
 <dt><i>login-prompt</i></dt>
 <dd> <p> This entire field is printed as the <i>login-prompt</i>. Unlike the above fields where white space (a space, tab or new-line) is ignored, they are included in the <i>login-prompt</i> field. This field is ignored if the &quot;-p&quot; option has been specified to <i>mgetty</i>(1). </p>
@@ -136,7 +136,7 @@ description: "mgettydefs – speed and terminal settings used by mgetty"
 <h2>EXAMPLES</h2>
 <p> The following two lines show an example of 300/1200 baud toggle, which is useful for dial-up ports: </p>
 <dl>
-<dd> <p> 1200# B1200 HUPCL # B1200 SANE IXANY TAB3 #login: #300 <br />
+<dd> <p> 1200# B1200 HUPCL # B1200 SANE IXANY TAB3 #login: #300 <br/>
  300# B300 HUPCL # B300 SANE IXANY TAB3 #login: #1200 </p>
  </dd></dl>
 <p>The following line shows a typical 9600 baud entry for a hard-wired connection (not currently supported for <i>mgetty</i>): </p>

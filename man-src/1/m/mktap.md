@@ -32,8 +32,8 @@ description: "mktap – create twisted.servers"
 <dt><code>&#8211;type</code>, <code>-t</code> <i>&lt;type&gt;</i></dt>
 <dd> Specify the output file type. Available types are:</dd>
 <dt>
-</dt><dd> pickle &#8211; (default) Output as a python pickle file.<br />
- xml &#8211; Output as a .tax XML file.<br />
+</dt><dd> pickle &#8211; (default) Output as a python pickle file.<br/>
+ xml &#8211; Output as a .tax XML file.<br/>
  source &#8211; Output as a .tas (AOT Python source) file. <i>apptype</i> Can be &#8216;web&#8217;, &#8216;portforward&#8217;, &#8216;toc&#8217;, &#8216;coil&#8217;, &#8216;words&#8217;,</dd></dl>
 <h2><code>portforward</code> options</h2>
 <dl>
@@ -144,7 +144,7 @@ description: "mktap – create twisted.servers"
 <h2>REPORTING BUGS</h2>
 <p> To report a bug, visit <i><a rel="nofollow" href="http://twistedmatrix.com/bugs/">http://twistedmatrix.com/bugs/</a></i></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2000-2008 Twisted Matrix Laboratories.<br />
+<p> Copyright &#169; 2000-2008 Twisted Matrix Laboratories.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-twistd/">twistd</a>(1) </p>

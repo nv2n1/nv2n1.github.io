@@ -10,7 +10,7 @@ description: "zptcon.f –"
 <p>zptcon.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zptcon</code> (N, D, E, ANORM, RCOND, RWORK, INFO)<br />
+<p>subroutine <code>zptcon</code> (N, D, E, ANORM, RCOND, RWORK, INFO)<br/>
  <i></i><code>ZPTCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zptcon (integerN, double precision, dimension( * )D, complex*16, dimension( * )E, double precisionANORM, double precisionRCOND, double precision, dimension( * )RWORK, integerINFO)</h3>

@@ -10,7 +10,7 @@ description: "CURLOPT_FTP_SSL_CCC – switch off SSL again with FTP after auth"
 <p>CURLOPT_FTP_SSL_CCC &#8211; switch off SSL again with FTP after auth</p>
 <h2>Synopsis</h2>
 <p>#include &lt;curl/curl.h&gt; </p>
-<p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_FTP_SSL_CCC,<br />
+<p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_FTP_SSL_CCC,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>long how);</p>
 <h2>Description</h2>
 <p>If enabled, this option makes libcurl use CCC (Clear Command Channel). It shuts down the SSL/TLS layer after authenticating. The rest of the control channel communication will be unencrypted. This allows NAT routers to follow the FTP transaction. Pass a long using one of the values below</p>

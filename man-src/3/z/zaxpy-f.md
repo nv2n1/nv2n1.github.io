@@ -10,7 +10,7 @@ description: "zaxpy.f –"
 <p>zaxpy.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zaxpy</code> (N, ZA, ZX, INCX, ZY, INCY)<br />
+<p>subroutine <code>zaxpy</code> (N, ZA, ZX, INCX, ZY, INCY)<br/>
  <i></i><code>ZAXPY</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zaxpy (integerN, complex*16ZA, complex*16, dimension(*)ZX, integerINCX, complex*16, dimension(*)ZY, integerINCY)</h3>

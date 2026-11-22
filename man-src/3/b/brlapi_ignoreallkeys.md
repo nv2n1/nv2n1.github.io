@@ -79,7 +79,7 @@ description: "Reading key presses –"
 <p> This function asks the server to return the provided key ranges (inclusive) to the application, and not give them to <i>brltty</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ranges</i> key ranges, which are inclusive<br />
+<dd><i>ranges</i> key ranges, which are inclusive<br/>
  <i>count</i> number of ranges</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -89,8 +89,8 @@ description: "Reading key presses –"
 <p> This function asks the server to give the provided keys to the application, and not give them to <i>brltty</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>type</i> type of keys to be ignored<br />
- <i>keys</i> array of keys to be ignored<br />
+<dd><i>type</i> type of keys to be ignored<br/>
+ <i>keys</i> array of keys to be ignored<br/>
  <i>count</i> number of keys</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -99,7 +99,7 @@ description: "Reading key presses –"
 <p>Describe the components of a key code. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>code</i> the keycode to be described<br />
+<dd><i>code</i> the keycode to be described<br/>
  <i>description</i> pointer to the structure that receives the description</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -108,7 +108,7 @@ description: "Reading key presses –"
 <p>Expand the components of a key code </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>code</i> the key code to be expanded<br />
+<dd><i>code</i> the key code to be expanded<br/>
  <i>expansion</i> pointer to the structure that receives the components</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -118,7 +118,7 @@ description: "Reading key presses –"
 <p> This function asks the server to give the provided key ranges to <i>brltty</i>, rather than returning them to the application via <code>brlapi_readKey()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ranges</i> key ranges, which are inclusive<br />
+<dd><i>ranges</i> key ranges, which are inclusive<br/>
  <i>count</i> number of ranges</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -128,8 +128,8 @@ description: "Reading key presses –"
 <p> This function asks the server to give the provided keys to <i>brltty</i>, rather than returning them to the application via <code>brlapi_readKey()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>type</i> type of keys to be ignored<br />
- <i>keys</i> array of keys to be ignored<br />
+<dd><i>type</i> type of keys to be ignored<br/>
+ <i>keys</i> array of keys to be ignored<br/>
  <i>count</i> number of keys</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -143,7 +143,7 @@ description: "Reading key presses –"
 <p> By default, all the keypresses will be passed to the client, none will go through brltty, so the application will have to handle console switching itself for instance. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>wait</i> tells whether the call should block until a key is pressed (1) or should only probe key presses (0);<br />
+<dd><i>wait</i> tells whether the call should block until a key is pressed (1) or should only probe key presses (0);<br/>
  <i>code</i> holds the key code if a key press is indeed read.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

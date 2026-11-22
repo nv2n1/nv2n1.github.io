@@ -22,7 +22,7 @@ description: "dh_installdirs – create subdirectories in package build director
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-A</code>, <code>&#8211;all</code></dt>
-<dd> Create any directories specified by command line parameters in <font SIZE="-1">ALL</font> packages acted on, not just the first.</dd>
+<dd> Create any directories specified by command line parameters in ALL packages acted on, not just the first.</dd>
 <dt><i>dir</i> &#8230;</dt>
 <dd> Create these directories in the package build directory of the first package acted on. (Or in all packages if <code>-A</code> is specified.)</dd></dl>
 <h2>SEE ALSO</h2>

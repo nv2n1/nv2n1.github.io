@@ -10,7 +10,7 @@ description: "clascl.f –"
 <p>clascl.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>clascl</code> (TYPE, KL, KU, CFROM, CTO, M, N, A, LDA, INFO)<br />
+<p>subroutine <code>clascl</code> (TYPE, KL, KU, CFROM, CTO, M, N, A, LDA, INFO)<br/>
  <i></i><code>CLASCL</code> multiplies a general rectangular matrix by a real scalar defined as cto/cfrom.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clascl (characterTYPE, integerKL, integerKU, realCFROM, realCTO, integerM, integerN, complex, dimension( lda, * )A, integerLDA, integerINFO)</h3>

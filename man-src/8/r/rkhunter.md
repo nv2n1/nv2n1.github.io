@@ -9,10 +9,10 @@ description: "rkhunter – RootKit Hunter"
 
 <p>rkhunter &#8211; RootKit Hunter</p>
 <h2>Synopsis</h2>
-<p><code>rkhunter</code> {&#8211;check | &#8211;unlock | &#8211;update | &#8211;versioncheck |<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;propupd&nbsp;<wbr>[{filename | directory | package name},&#8230;]&nbsp;<wbr>|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;list&nbsp;<wbr>[tests |&nbsp;<wbr>{lang | languages}&nbsp;<wbr>| rootkits | perl |<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>propfiles]&nbsp;<wbr>|<br />
+<p><code>rkhunter</code> {&#8211;check | &#8211;unlock | &#8211;update | &#8211;versioncheck |<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;propupd&nbsp;<wbr>[{filename | directory | package name},&#8230;]&nbsp;<wbr>|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;list&nbsp;<wbr>[tests |&nbsp;<wbr>{lang | languages}&nbsp;<wbr>| rootkits | perl |<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>propfiles]&nbsp;<wbr>|<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;config-check | &#8211;version | &#8211;help}&nbsp;<wbr>[options] </p>
 <h2>Description</h2>
 <p><code>rkhunter</code> is a shell script which carries out various checks on the local system to try and detect known rootkits and malware. It also performs checks to see if commands have been modified, if the system startup files have been modified, and various checks on the network interfaces, including checks for listening applications. <code>rkhunter</code> has been written to be as generic as possible, and so should run on most Linux and UNIX systems. It is provided with some support scripts should certain commands be missing from the system, and some of these are perl scripts. <code>rkhunter</code> does require certain commands to be present for it to be able to execute. Additionally, some tests require specific commands, but if these are not present then the test will be skipped. <code>rkhunter</code> needs to be run under a Bourne-type shell, typically <code>bash</code> or <code>ksh</code>. <code>rkhunter</code> can be run as a cron job or from the command-line. </p>
@@ -80,7 +80,7 @@ description: "rkhunter – RootKit Hunter"
 <dt><code>&#8211;enable &lt;test&gt;[,&lt;test&gt;&#8230;]</code></dt>
 <dd>This option tells <code>rkhunter</code> to only run the specified tests. If only one test name, other than <i>all</i>, is given, then the <code>&#8211;skip-keypress</code> option is assumed. Read the README file for more information about test names. By default all tests are enabled. All the test names are listed below under TESTS. </dd>
 <dt><code>&#8211;hash {MD5 | SHA1 | SHA224 | SHA256 | SHA384 | SHA512 |</code></dt>
-<dd><code> NONE | &lt;command&gt;}</code><br />
+<dd><code> NONE | &lt;command&gt;}</code><br/>
  Both the file properties check and the <code>&#8211;propupd</code> command option will use a hash function to determine a files current hash value. This option tells <code>rkhunter</code> which hash function to use. The <i>MD5</i> and <i>SHA</i> options will look for the relevant command, and, if not found, a perl support script will then be used to see if a perl module supporting the function has been installed. Alternatively, a specific <i>command</i> may be specified. A value of <i>NONE</i> can be used to indicate that the hash values should not be obtained or used as part of the file properties check. The default is <i>SHA1</i>, or <i>MD5</i> if no SHA1 command can be found. </dd>
 <p> Systems using prelinking must use either MD5, SHA1 or NONE. </p>
 <dt><code>&#8211;lang, &#8211;language &lt;language&gt;</code></dt>
@@ -207,12 +207,12 @@ description: "rkhunter – RootKit Hunter"
 </dd><dt><code>trojans</code></dt>
 <dd></dd></dl>
 <h2>Files</h2>
-<p>(For a default installation)<br />
- /etc/rkhunter.conf<br />
+<p>(For a default installation)<br/>
+ /etc/rkhunter.conf<br/>
  /var/log/rkhunter.log</p>
 <h2>See Also</h2>
-<p>See the CHANGELOG file for recent changes.<br />
- The README file has information about installing <code>rkhunter</code>, as well as specific sections on test names and using package managers.<br />
+<p>See the CHANGELOG file for recent changes.<br/>
+ The README file has information about installing <code>rkhunter</code>, as well as specific sections on test names and using package managers.<br/>
  The FAQ file should also answer some questions. </p>
 <h2>Licensing</h2>
 <p>RootKit Hunter is licensed under the GPL, copyright Michael Boelen. See the LICENSE file for details of GPL licensing.</p>

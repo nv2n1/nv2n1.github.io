@@ -25,7 +25,7 @@ description: "idmapd.conf – configuration file for libnfsidmap"
 <dt><code>Reformat-Group</code></dt>
 <dd>Winbind has a quirk whereby doing a group lookup in UPN format (e.g. staff [at] americas.example.com) will cause the group to be displayed prefixed with the full domain in uppercase (e.g. AMERICAS.EXAMPLE.COM\staff) instead of in the familiar netbios name format (e.g. AMERICAS\staff). Setting this option to true causes the name to be reformatted before passing it to the group lookup function in order to work around this. This setting is ignored unless No-Strip is set to either &quot;both&quot; or &quot;group&quot;. (Default: &quot;false&quot;)</dd>
 <dt><code>Local-Realms</code></dt>
-<dd>A comma-separated list of Kerberos realm names that may be considered equivalent to the local realm name. For example, users juser [at] ORDER.EDU and juser [at] MAIL.ORDER.EDU may be considered to be the same user in the specified <code>Domain.</code> (Default: the host&#8217;s default realm name)<br />
+<dd>A comma-separated list of Kerberos realm names that may be considered equivalent to the local realm name. For example, users juser [at] ORDER.EDU and juser [at] MAIL.ORDER.EDU may be considered to be the same user in the specified <code>Domain.</code> (Default: the host&#8217;s default realm name)<br/>
  <code>Note:</code> If a value is specified here, the default local realm must be included as well.</dd></dl>
 <h3>[Mapping] section variables</h3>
 <dl>

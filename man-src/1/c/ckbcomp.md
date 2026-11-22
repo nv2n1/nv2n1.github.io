@@ -30,7 +30,7 @@ description: "ckbcomp – compile a XKB keyboard description to a keymap suitabl
 <dt><code>-freebsd</code></dt>
 <dd> Generate a keymap for FreeBSD.</dd>
 <dt><code>-backspace&nbsp;</code>[<code>bs</code>|<code>del</code>]</dt>
-<dd> Specifies the behaviour of the <font SIZE="-1">&lt;BackSpace&gt;</font> and <font SIZE="-1">&lt;Delete&gt;</font> keys. Value <code>bs</code> specifies VT100-conformant behaviour: <font SIZE="-1">&lt;BackSpace&gt;</font> will generate <code>^H</code> <font SIZE="-1">(ASCII BS)</font> and <font SIZE="-1">&lt;Delete&gt;</font> will generate <code>^?</code> <font SIZE="-1">(ASCII DEL).</font> Value <code>del</code> specifies VT220-conformant behavior: <font SIZE="-1">&lt;BackSpace&gt;</font> will generate <code>^?</code> <font SIZE="-1">(ASCII DEL)</font> and <font SIZE="-1">&lt;Delete&gt;</font> will generate a special function sequence. </dd>
+<dd> Specifies the behaviour of the &lt;BackSpace&gt; and &lt;Delete&gt; keys. Value <code>bs</code> specifies VT100-conformant behaviour: &lt;BackSpace&gt; will generate <code>^H</code> (ASCII BS) and &lt;Delete&gt; will generate <code>^?</code> (ASCII DEL). Value <code>del</code> specifies VT220-conformant behavior: &lt;BackSpace&gt; will generate <code>^?</code> (ASCII DEL) and &lt;Delete&gt; will generate a special function sequence. </dd>
 </dl>
 <h3>XKB Keyboard Description</h3>
 <p> The keyboard layout, variant and options components can be also specified directly on the command line. See the synopsis of the command.</p>
@@ -51,12 +51,12 @@ description: "ckbcomp – compile a XKB keyboard description to a keymap suitabl
 <dd> Adds an option used to choose component names. </dd>
 </dl>
 <h2>FILES</h2>
-<p> <i>/usr/share/consoletrans</i><br />
- <i>/etc/console-setup/ckb</i><br />
- <i>/usr/share/X11/xkb</i><br />
+<p> <i>/usr/share/consoletrans</i><br/>
+ <i>/etc/console-setup/ckb</i><br/>
+ <i>/usr/share/X11/xkb</i><br/>
  <i>/etc/X11/xkb</i> </p>
 <h2>NOTES</h2>
-<p> If the option <i>-freebsd</i> is used together with <i>-backspace del</i>, then the key <font SIZE="-1">&lt;Delete&gt;</font> will generate the special code <code>fkey70</code>. It is your responsibility to assign the appropriate sequence to this special code by using the following command: </p>
+<p> If the option <i>-freebsd</i> is used together with <i>-backspace del</i>, then the key &lt;Delete&gt; will generate the special code <code>fkey70</code>. It is your responsibility to assign the appropriate sequence to this special code by using the following command: </p>
 <pre>
 kbdcontrol -f 70 &quot;`printf '[3~'`&quot;
 </pre>

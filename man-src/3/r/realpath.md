@@ -14,8 +14,8 @@ description: "realpath – return the canonicalized absolute pathname"
 char *realpath(const char *path, char *resolved_path);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>realpath</code>():</p>
 <dl>
-<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p><code>realpath</code>() expands all symbolic links and resolves references to <i>/./</i>, <i>/../</i> and extra &#8216;/&#8217; characters in the null-terminated string named by <i>path</i> to produce a canonicalized absolute pathname. The resulting pathname is stored as a null-terminated string, up to a maximum of <code>PATH_MAX</code> bytes, in the buffer pointed to by <i>resolved_path</i>. The resulting path will have no symbolic link, <i>/./</i> or <i>/../</i> components. </p>

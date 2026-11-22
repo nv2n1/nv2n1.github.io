@@ -9,14 +9,14 @@ description: "conntrack – command line interface for netfilter connection trac
 
 <p>conntrack &#8211; command line interface for netfilter connection tracking</p>
 <h2>Synopsis</h2>
-<p><code>conntrack -L [table] [options] [-z]</code><br />
- <code>conntrack -G [table] parameters</code><br />
- <code>conntrack -D [table] parameters</code><br />
- <code>conntrack -I [table] parameters</code><br />
- <code>conntrack -U [table] parameters</code><br />
- <code>conntrack -E [table] [options]</code><br />
- <code>conntrack -F [table]</code><br />
- <code>conntrack -C [table]</code><br />
+<p><code>conntrack -L [table] [options] [-z]</code><br/>
+ <code>conntrack -G [table] parameters</code><br/>
+ <code>conntrack -D [table] parameters</code><br/>
+ <code>conntrack -I [table] parameters</code><br/>
+ <code>conntrack -U [table] parameters</code><br/>
+ <code>conntrack -E [table] [options]</code><br/>
+ <code>conntrack -F [table]</code><br/>
+ <code>conntrack -C [table]</code><br/>
  <code>conntrack -S </code></p>
 <h2>Description</h2>
 <p>The <code>conntrack</code> utilty provides a full featured userspace interface to the Netfilter connection tracking system that is intended to replace the old /proc/net/ip_conntrack interface. This tool can be used to search, list, inspect and maintain the connection tracking subsystem of the Linux kernel. Using <code>conntrack</code>, you can dump a list of all (or a filtered selection of) currently tracked connections, delete connections from the state table, and even add new ones. In addition, you can also monitor connection tracking events, e.g. show an event message (one line) per newly established connection. </p>
@@ -223,7 +223,7 @@ description: "conntrack – command line interface for netfilter connection trac
 <h2>Bugs</h2>
 <p>Please, report them to netfilter-devel [at] vger.kernel.org or file a bug in Netfilter&#8217;s bugzilla (<a rel="nofollow" href="https://bugzilla.netfilter.org">https://bugzilla.netfilter.org</a>). </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-nftables/">nftables</a></code>(8),<code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8),<code><a href="/docs/linux/man/8-conntrackd/">conntrackd</a>(8)</code><br />
+<p><code><a href="/docs/linux/man/8-nftables/">nftables</a></code>(8),<code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8),<code><a href="/docs/linux/man/8-conntrackd/">conntrackd</a>(8)</code><br/>
  See <code><a rel="nofollow" href="http://conntrack-tools.netfilter.org">http://conntrack-tools.netfilter.org</a></code> </p>
 <h2>Authors</h2>
 <p>Jay Schulist, Patrick McHardy, Harald Welte and Pablo Neira Ayuso wrote the kernel-level &quot;ctnetlink&quot; interface that is used by the conntrack tool. </p>

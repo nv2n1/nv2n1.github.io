@@ -11,11 +11,11 @@ tv_count - Count (and print) the number of channels and programmes in an XMLTV f
 
 <h2>SYNOPSIS</h2>
 
- tv_count <font SIZE="-1">FILE</font>
+ tv_count FILE
 
 <h2>DESCRIPTION</h2>
 
- Read <font SIZE="-1">XMLTV</font> listings and print a count of the number of channels and number of programmes in the file.
+ Read XMLTV listings and print a count of the number of channels and number of programmes in the file.
 
 <h2>EXAMPLE</h2>
 
@@ -29,4 +29,4 @@ tv_count - Count (and print) the number of channels and programmes in an XMLTV f
 
  Copyright Geoff Westcott, February 2013. 
 
- This code is distributed under the <font SIZE="-1">GNU</font> General Public License v2 (GPLv2) .
+ This code is distributed under the GNU General Public License v2 (GPLv2) .

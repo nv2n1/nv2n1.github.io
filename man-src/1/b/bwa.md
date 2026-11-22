@@ -146,8 +146,8 @@ description: "bwa – Burrows-Wheeler Alignment Tool"
 <dd> Length of barcode starting from the 5&#8242;-end. When <i>INT</i> is positive, the barcode of each read will be trimmed before mapping and will be written at the <code>BC</code> SAM tag. For paired-end reads, the barcode from both ends are concatenated. [0]</dd>
 <dt><code>-b</code></dt>
 <dd> Specify the input read sequence file is the BAM format. For paired-end data, two ends in a pair must be grouped together and options <code>-1</code> or <code>-2</code> are usually applied to specify which end should be mapped. Typical command lines for mapping pair-end data in the BAM format are: </dd>
-<p>&nbsp;<wbr>bwa aln ref.fa -b1 reads.bam&nbsp;<wbr>&gt;&nbsp;<wbr>1.sai<br />
-&nbsp;<wbr>bwa aln ref.fa -b2 reads.bam&nbsp;<wbr>&gt;&nbsp;<wbr>2.sai<br />
+<p>&nbsp;<wbr>bwa aln ref.fa -b1 reads.bam&nbsp;<wbr>&gt;&nbsp;<wbr>1.sai<br/>
+&nbsp;<wbr>bwa aln ref.fa -b2 reads.bam&nbsp;<wbr>&gt;&nbsp;<wbr>2.sai<br/>
 &nbsp;<wbr>bwa sampe ref.fa 1.sai 2.sai reads.bam reads.bam&nbsp;<wbr>&gt;&nbsp;<wbr>aln.sam</p>
 <dt><code>-0</code></dt>
 <dd> When <code>-b</code> is specified, only use single-end reads in mapping.</dd>

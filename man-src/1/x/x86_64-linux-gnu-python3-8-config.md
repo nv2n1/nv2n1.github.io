@@ -47,8 +47,8 @@ description: "python-config – output build options for python C/C++ extensions
 <dl COMPACT>
 <dd>gcc $(python-config &#8211;cflags &#8211;ldflags) -shared -fPIC progr.cpp -o progr.so</dd></dl>
 <h2>See Also</h2>
-<p>python (1)<br />
- <a rel="nofollow" href="http://docs.python.org/extending/extending.html">http://docs.python.org/extending/extending.html</a><br />
+<p>python (1)<br/>
+ <a rel="nofollow" href="http://docs.python.org/extending/extending.html">http://docs.python.org/extending/extending.html</a><br/>
  /usr/share/doc/python/faq/extending.html </p>
 <h2>Authors</h2>
 <p>This manual page was written by Johann Felix Soden &lt;johfel [at] gmx.de&gt; for the Debian project (and may be used by others).</p>

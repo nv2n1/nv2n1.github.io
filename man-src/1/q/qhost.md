@@ -70,14 +70,14 @@ description: "qhost – show the status of xxQS_NAMExx hosts, queues, jobs"
 <p> If the <code>-F</code> option was used, resource availability information is printed following the host status line. For each resource (as selected in an option argument to <code>-F</code> or for all resources if the option argument was omitted) a single line is displayed with the following format:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> a one letter specifier indicating whether the current resource availability value was dominated by either<br />
- `<code>g</code>&#8216; &#8211; a cluster global,<br />
+<dd> a one letter specifier indicating whether the current resource availability value was dominated by either<br/>
+ `<code>g</code>&#8216; &#8211; a cluster global,<br/>
  `<code>h</code>&#8216; &#8211; a host total or</dd>
 <dt>&bull;</dt>
-<dd> a second one letter specifier indicating the source for the current resource availability value, being one of<br />
- `<code>l</code>&#8216; &#8211; a load value reported for the resource,<br />
- `<code>L</code>&#8216; &#8211; a load value for the resource after administrator defined load scaling has been applied,<br />
- `<code>c</code>&#8216; &#8211; availability derived from the consumable resources facility (see<br />
+<dd> a second one letter specifier indicating the source for the current resource availability value, being one of<br/>
+ `<code>l</code>&#8216; &#8211; a load value reported for the resource,<br/>
+ `<code>L</code>&#8216; &#8211; a load value for the resource after administrator defined load scaling has been applied,<br/>
+ `<code>c</code>&#8216; &#8211; availability derived from the consumable resources facility (see<br/>
  `<code>f</code>&#8216; &#8211; a fixed availability definition derived from a non-consumable complex attribute or a fixed resource limit.</dd>
 <dt>&bull;</dt>
 <dd> after a colon the name of the resource on which information is displayed.</dd>

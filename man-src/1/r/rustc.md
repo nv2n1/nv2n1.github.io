@@ -182,13 +182,13 @@ description: "rustc – The Rust compiler"
 <dd> If set to a value different than &quot;0&quot;, produces a backtrace in the output of a program which panics. </dd>
 </dl>
 <h2>EXAMPLES</h2>
-<p> To build an executable from a source file with a main function:<br />
+<p> To build an executable from a source file with a main function:<br/>
 &nbsp;<wbr>$&nbsp;<wbr>rustc -o hello hello.rs </p>
-<p> To build a library from a source file:<br />
+<p> To build a library from a source file:<br/>
 &nbsp;<wbr>$&nbsp;<wbr>rustc &#8211;crate-type=lib hello-lib.rs </p>
-<p> To build either with a crate (.rs) file:<br />
+<p> To build either with a crate (.rs) file:<br/>
 &nbsp;<wbr>$&nbsp;<wbr>rustc hello.rs </p>
-<p> To build an executable with debug info:<br />
+<p> To build an executable with debug info:<br/>
 &nbsp;<wbr>$&nbsp;<wbr>rustc -g -o hello hello.rs </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rustdoc/">rustdoc</a></code>(1) </p>

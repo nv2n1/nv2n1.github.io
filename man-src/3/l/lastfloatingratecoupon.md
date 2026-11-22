@@ -13,9 +13,9 @@ description: "QuantLib::CapFloor – Base class for cap-like instruments."
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <p> Inherited by <code>Cap</code>, <code>Collar</code>, and <code>Floor</code>. </p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for cap/floor calculation </i><br />
- class <code>engine</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for cap/floor calculation </i><br/>
+ class <code>engine</code><br/>
  <i>base class for cap/floor engines </i></p>
 <h3>Public Types</h3>
 <p>enum <code>Type</code> { <code>Cap</code>, <code>Floor</code>, <code>Collar</code> } </p>
@@ -23,11 +23,11 @@ description: "QuantLib::CapFloor – Base class for cap-like instruments."
 <p><code>CapFloor</code> (Type type, const Leg &amp;floatingLeg, const std::vector&lt; <code>Rate</code> &gt; &amp;capRates, const std::vector&lt; <code>Rate</code> &gt; &amp;floorRates) </p>
 <p> <code>CapFloor</code> (Type type, const Leg &amp;floatingLeg, const std::vector&lt; <code>Rate</code> &gt; &amp;strikes) </p>
 <p> <code>Rate</code> <code>atmRate</code> (const <code>YieldTermStructure</code> &amp;discountCurve) const </p>
-<p> <code>Volatility</code> <code>impliedVolatility</code> (<code>Real</code> price, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve, <code>Volatility</code> guess, <code>Real</code> accuracy=1.0e-4, Natural maxEvaluations=100, Volatility minVol=1.0e-7, Volatility maxVol=4.0) const<br />
+<p> <code>Volatility</code> <code>impliedVolatility</code> (<code>Real</code> price, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve, <code>Volatility</code> guess, <code>Real</code> accuracy=1.0e-4, Natural maxEvaluations=100, Volatility minVol=1.0e-7, Volatility maxVol=4.0) const<br/>
  <i>implied term volatility </i> </p>
 <p> <code>Instrument interface</code> </p>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  void <code>setupArguments</code> (PricingEngine::arguments *) const </p>
 <p> <code>Inspectors</code> </p>
 <p> Type <code>type</code> () const </p>
@@ -37,7 +37,7 @@ description: "QuantLib::CapFloor – Base class for cap-like instruments."
 <p> <code>Date</code> <code>startDate</code> () const </p>
 <p> <code>Date</code> <code>maturityDate</code> () const </p>
 <p> boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; <code>lastFloatingRateCoupon</code> () const </p>
-<p> boost::shared_ptr&lt; <code>CapFloor</code> &gt; <code>optionlet</code> (const Size n) const<br />
+<p> boost::shared_ptr&lt; <code>CapFloor</code> &gt; <code>optionlet</code> (const Size n) const<br/>
  <i>Returns the n-th optionlet as a new </i><code>CapFloor</code> with only one cash flow.</p>
 <h2>Detailed Description</h2>
 <p>Base class for cap-like instruments. </p>

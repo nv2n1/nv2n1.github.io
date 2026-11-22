@@ -16,31 +16,31 @@ description: "docker-images – List images"
 <p> By default, intermediate images, used during builds, are not listed. Some of the output, e.g., image ID, is truncated, for space reasons. However the truncated image ID, and often the first few characters, are enough to be used in other Docker commands that use the image ID. The output includes repository, tag, image ID, date created and the virtual size. </p>
 <p> The title REPOSITORY for the first title may seem confusing. It is essentially the image name. However, because you can tag a specific image, and multiple tags (image instances) can be associated with a single name, the name is really a repository for all tagged images of the same name. For example consider an image called fedora. It may be tagged with 18, 19, or 20, etc. to manage different versions. </p>
 <h2>OPTIONS</h2>
-<p> <code>-a</code>, <code>&#8211;all</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-a</code>, <code>&#8211;all</code>=<i>true</i>|<i>false</i><br/>
 Show all images&nbsp;<wbr>(by default filter out the intermediate image layers). The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>&#8211;digests</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;digests</code>=<i>true</i>|<i>false</i><br/>
 Show image digests. The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>-f</code>, <code>&#8211;filter</code>=[]<br />
-Filters the output based on these conditions:<br />
-&#8211; dangling=(true|false)&nbsp;<wbr>&#8211; finds unused images.<br />
-&#8211; label=&lt;key&gt;&nbsp;<wbr>or label=&lt;key&gt;=&lt;value&gt;<br />
-&#8211; before=(&lt;image-name&gt;[:tag]|&lt;image-id&gt;| &lt;image [at] digest&gt;)<br />
+<p> <code>-f</code>, <code>&#8211;filter</code>=[]<br/>
+Filters the output based on these conditions:<br/>
+&#8211; dangling=(true|false)&nbsp;<wbr>&#8211; finds unused images.<br/>
+&#8211; label=&lt;key&gt;&nbsp;<wbr>or label=&lt;key&gt;=&lt;value&gt;<br/>
+&#8211; before=(&lt;image-name&gt;[:tag]|&lt;image-id&gt;| &lt;image [at] digest&gt;)<br/>
 &#8211; since=(&lt;image-name&gt;[:tag]|&lt;image-id&gt;| &lt;image [at] digest&gt;) </p>
-<p> <code>&#8211;format</code>=&quot;<i>TEMPLATE</i>&quot;<br />
-Pretty-print containers using a Go template.<br />
-Valid placeholders:<br />
-.ID &#8211; Image ID<br />
-.Repository &#8211; Image repository<br />
-.Tag &#8211; Image tag<br />
-.Digest &#8211; Image digest<br />
-.CreatedSince &#8211; Elapsed time since the image was created.<br />
-.CreatedAt &#8211; Time when the image was created..<br />
+<p> <code>&#8211;format</code>=&quot;<i>TEMPLATE</i>&quot;<br/>
+Pretty-print containers using a Go template.<br/>
+Valid placeholders:<br/>
+.ID &#8211; Image ID<br/>
+.Repository &#8211; Image repository<br/>
+.Tag &#8211; Image tag<br/>
+.Digest &#8211; Image digest<br/>
+.CreatedSince &#8211; Elapsed time since the image was created.<br/>
+.CreatedAt &#8211; Time when the image was created..<br/>
 .Size &#8211; Image disk size. </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>&#8211;no-trunc</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;no-trunc</code>=<i>true</i>|<i>false</i><br/>
 Don&#8217;t truncate output. The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>-q</code>, <code>&#8211;quiet</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-q</code>, <code>&#8211;quiet</code>=<i>true</i>|<i>false</i><br/>
 Only show numeric IDs. The default is&nbsp;<wbr><i>false</i>. </p>
 <h2>EXAMPLES</h2>
 <h2>Listing the images</h2>

@@ -11,7 +11,7 @@ description: "slargv.f –"
 <p> slargv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slargv</code> (N, X, INCX, Y, INCY, C, INCC)<br />
+<p> subroutine <code>slargv</code> (N, X, INCX, Y, INCY, C, INCC)<br/>
  <i></i><code>SLARGV</code> generates a vector of plane rotations with real cosines and real sines.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slargv (integerN, real, dimension( * )X, integerINCX, real, dimension( * )Y, integerINCY, real, dimension( * )C, integerINCC)</h3>

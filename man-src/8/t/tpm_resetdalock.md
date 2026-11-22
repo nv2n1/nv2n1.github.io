@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_resetdalock/"
 description: "tpm_resetdalock – reset the dictionary attack lock for the user (require owner authentication)"
 ---
 
-<p>TPM Management &#8211; tpm_resetdalock<br />
+<p>TPM Management &#8211; tpm_resetdalock<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_resetdalock &#8211; reset the dictionary attack lock for the user (require owner authentication)</p>

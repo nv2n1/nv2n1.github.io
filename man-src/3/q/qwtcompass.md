@@ -13,10 +13,10 @@ description: "QwtCompass –"
 <p>#include &lt;qwt_compass.h&gt; </p>
 <p> Inherits <code>QwtDial</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtCompass</code> (QWidget *parent=NULL)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtCompass</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtCompass</code> (QWidget *parent=NULL)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtCompass</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setRose</code> (<code>QwtCompassRose</code> *<code>rose</code>) </p>
 <p> const <code>QwtCompassRose</code> * <code>rose</code> () const </p>
 <p> <code>QwtCompassRose</code> * <code>rose</code> () </p>
@@ -43,17 +43,17 @@ description: "QwtCompass –"
 <p>Draw the compass rose </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>center</i> Center of the compass<br />
- <i>radius</i> of the circle, where to paint the rose<br />
- <i>north</i> Direction pointing north, in degrees counter clockwise<br />
+<dd><i>painter</i> Painter<br/>
+ <i>center</i> Center of the compass<br/>
+ <i>radius</i> of the circle, where to paint the rose<br/>
+ <i>north</i> Direction pointing north, in degrees counter clockwise<br/>
  <i>cg</i> Color group</dd></dl>
 <h3>void QwtCompass::drawScaleContents (QPainter *painter, const QPointF &amp;center, doubleradius) const [protected], [virtual]</h3>
 <p>Draw the contents of the scale </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>center</i> Center of the content circle<br />
+<dd><i>painter</i> Painter<br/>
+ <i>center</i> Center of the content circle<br/>
  <i>radius</i> Radius of the content circle</dd></dl>
 <p> Reimplemented from <code>QwtDial</code>.</p>
 <h3>void QwtCompass::keyPressEvent (QKeyEvent *kev) [protected], [virtual]</h3>

@@ -17,7 +17,7 @@ description: "dc_snoop – Distributed session cache traffic analysis"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-listen</code> address</dt>
-<dd> Configures the address on which <code>dc_snoop</code> should listen for incoming connections. The syntax is that defined by the <i>libnal</i> <font SIZE="-1">API</font>.</dd>
+<dd> Configures the address on which <code>dc_snoop</code> should listen for incoming connections. The syntax is that defined by the <i>libnal</i> API.</dd>
 <dt><code>-server</code> address</dt>
 <dd>
 </dd><dt><code>-connect</code> address</dt>

@@ -12,7 +12,7 @@ description: "QuantLib::NelsonSiegelFitting – Nelson-Siegel fitting method."
 <p>#include &lt;ql/termstructures/yield/nonlinearfittingmethods.hpp&gt; </p>
 <p> Inherits <code>QuantLib::FittedBondDiscountCurve::FittingMethod</code>. </p>
 <h3>Public Member Functions</h3>
-<p>std::auto_ptr&lt; <code>FittedBondDiscountCurve::FittingMethod</code> &gt; <code>clone</code> () const<br />
+<p>std::auto_ptr&lt; <code>FittedBondDiscountCurve::FittingMethod</code> &gt; <code>clone</code> () const<br/>
  <i>clone of the current object </i></p>
 <h2>Detailed Description</h2>
 <p>Nelson-Siegel fitting method. </p>

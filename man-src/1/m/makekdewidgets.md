@@ -179,7 +179,7 @@ description: "makekdewidgets – Builds Qt(TM) widget plugins from an ini style 
 <dt>
 </dt><dd> KDE Developer&#8217;s Corner website</dd></dl>
 <h2>BUGS</h2>
-<p> Please use m[blue]<code>bugs.kde.org</code>m[]<font SIZE="-2">[1]</font> to report bugs, do not mail the authors directly.</p>
+<p> Please use m[blue]<code>bugs.kde.org</code>m[][1] to report bugs, do not mail the authors directly.</p>
 <h2>AUTHOR</h2>
 <p> <code>Ian Reinhart Geiser</code> &lt;geiseri [at] kde.org&gt;</p>
 <dl>

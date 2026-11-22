@@ -63,7 +63,7 @@ description: "rapper – Raptor RDF parsing and serializing utility"
 <dt><code>-v, &#8211;version</code></dt>
 <dd> Print the raptor version and exit.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> <code>rapper -q -i ntriples -o rdfxml -f &#8216;xmlns:rss=<a rel="nofollow" href="http://purl.org/rss/1.0/'">http://purl.org/rss/1.0/&#8217;</a> -f &#8216;xmlns:ex=<a href="http://example.org/'">http://example.org/&#8217;</a> tests/test.nt</code><br />
+<p> <code>rapper -q -i ntriples -o rdfxml -f &#8216;xmlns:rss=<a rel="nofollow" href="http://purl.org/rss/1.0/'">http://purl.org/rss/1.0/&#8217;</a> -f &#8216;xmlns:ex=<a href="http://example.org/'">http://example.org/&#8217;</a> tests/test.nt</code><br/>
  <code>rapper -q -o rdfxml -f &#8216;xmlns:rdfs=<a rel="nofollow" href="http://www.w3.org/2000/01/rdf-schema#'">http://www.w3.org/2000/01/rdf-schema#&#8217;</a> tests/rdf-schema.rdf &#8216;<a href="http://www.w3.org/2000/01/rdf-schema#'">http://www.w3.org/2000/01/rdf-schema#&#8217;</a></code></p>
 <h2>CONFORMING TO</h2>
 <p> <i>RDF/XML Syntax (Revised)</i>, W3C Recommendation, <a rel="nofollow" href="http://www.w3.org/TR/rdf-syntax-grammar/">http://www.w3.org/TR/rdf-syntax-grammar/</a> </p>
@@ -88,7 +88,7 @@ description: "rapper – Raptor RDF parsing and serializing utility"
 <h3>1.4.3</h3>
 <p> Updated potential parser and serializers and described -f for defining namespaces.</p>
 <h3>1.3.0</h3>
-<p> Added -f for features.<br />
+<p> Added -f for features.<br/>
  Added -g for guessing the parser to use.</p>
 <h3>1.1.0</h3>
 <p> Removed -a, &#8211;assume since rdf:RDF is now always optional. </p>

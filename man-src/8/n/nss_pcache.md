@@ -13,13 +13,13 @@ description: "nss_pcache – Helper program used to store token password pins"
 <h2>Description</h2>
 <p>A helper program used by the Apache <code>httpd</code> mod_nss plug-in to store the NSS PKCS #11 token password pins between restarts of Apache. Whenever an Apache <code>httpd</code> process configured to use the mod_nss plug-in is started, this program will be automatically invoked via reference to the mod_nss configuration file stored under <code>/etc/httpd/conf.d/nss.conf</code> which contains the following default entry:</p>
 <dl>
-<dd># Pass Phrase Helper:<br />
- # This helper program stores the token password pins between<br />
- # restarts of Apache.<br />
- #<br />
- # NOTE: Located at &#8216;/usr/sbin/nss_pcache&#8217; prior<br />
- # to &#8216;mod_nss-1.0.8-22&#8217;.<br />
- #<br />
+<dd># Pass Phrase Helper:<br/>
+ # This helper program stores the token password pins between<br/>
+ # restarts of Apache.<br/>
+ #<br/>
+ # NOTE: Located at &#8216;/usr/sbin/nss_pcache&#8217; prior<br/>
+ # to &#8216;mod_nss-1.0.8-22&#8217;.<br/>
+ #<br/>
  NSSPassPhraseHelper /usr/libexec/nss_pcache </dd>
 <h2>Options</h2>
 <dl>

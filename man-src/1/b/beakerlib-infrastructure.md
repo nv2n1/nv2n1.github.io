@@ -11,7 +11,7 @@ BeakerLib - infrastructure - mounting, backup and service helpers
 
 <h2>DESCRIPTION</h2>
 
- BeakerLib functions providing checking and mounting <font SIZE="-1">NFS</font> shares, backing up and restoring files and controlling running services.
+ BeakerLib functions providing checking and mounting NFS shares, backing up and restoring files and controlling running services.
 
 <h2>FUNCTIONS</h2>
 
@@ -19,19 +19,19 @@ BeakerLib - infrastructure - mounting, backup and service helpers
 
  <i>rlMount</i> 
 
- Create mount point (if neccessary) and mount a <font SIZE="-1">NFS</font> share. 
+ Create mount point (if neccessary) and mount a NFS share. 
 
  <pre>
     rlMount [-o MOUNT_OPTS] server share mountpoint
 </pre>
 <dl>
 <dt>server
-</dt><dd> <font SIZE="-1">NFS</font> server hostname.
+</dt><dd> NFS server hostname.
 </dd><dt>share
 </dt><dd> Shared directory name.
 </dd><dt>mountpoint
 </dt><dd> Local mount point.
-</dd><dt><font SIZE="-1">MOUNT_OPTS</font>
+</dd><dt>MOUNT_OPTS
 </dt><dd> Mount options.</dd></dl>
  
 
@@ -50,10 +50,10 @@ rlCheckMount[-o MOUNT_OPTS] mountpoint
 <dt>mountpoint
 </dt><dd> Local mount point.
 </dd><dt>server
-</dt><dd> <font SIZE="-1">NFS</font> server hostname
+</dt><dd> NFS server hostname
 </dd><dt>share
 </dt><dd> Shared directory name
-</dd><dt><font SIZE="-1">MOUNT_OPTS</font>
+</dd><dt>MOUNT_OPTS
 </dt><dd> Mount options to check (comma separated list)</dd></dl>
  
 
@@ -74,16 +74,16 @@ rlAssertMount[-o MOUNT_OPTS] mountpoint
 <dt>mountpoint
 </dt><dd> Local mount point.
 </dd><dt>server
-</dt><dd> <font SIZE="-1">NFS</font> server hostname
+</dt><dd> NFS server hostname
 </dd><dt>share
 </dt><dd> Shared directory name
-</dd><dt><font SIZE="-1">MOUNT_OPTS</font>
+</dd><dt>MOUNT_OPTS
 </dt><dd> Mount options to check (comma separated list)</dd></dl>
  
 
- With one parameter, returns 0 when specified directory exists and is a mountpoint. With two parameters, returns 0 when specific directory exists, is a mountpoint and an export from specific server is mounted there. With three parameters, returns 0 if a specific shared directory is mounted on a given server on a given mountpoint. Asserts <font SIZE="-1">PASS</font> when the condition is true. 
+ With one parameter, returns 0 when specified directory exists and is a mountpoint. With two parameters, returns 0 when specific directory exists, is a mountpoint and an export from specific server is mounted there. With three parameters, returns 0 if a specific shared directory is mounted on a given server on a given mountpoint. Asserts PASS when the condition is true. 
 
- If the -o option is provided, asserts <font SIZE="-1">PASS</font> if the above conditions are met and the mountpoint uses all the given options. 
+ If the -o option is provided, asserts PASS if the above conditions are met and the mountpoint uses all the given options. 
 
  <i>rlHash, rlUnhash</i> 
 
@@ -103,7 +103,7 @@ rlHash[--decode][--algorithm HASH_ALG]-- stdin | STRING rlUnhash[--algorithm HAS
  Defaults to hex. Default algorithm can be override using global variable rlHashAlgorithm.
 </dd><dt>--stdin
 </dt><dd> Get the string from stdin.
-</dd><dt><font SIZE="-1">STRING</font>
+</dd><dt>STRING
 </dt><dd> String to be hashed/unhashed.</dd></dl>
  
 
@@ -139,7 +139,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </dt><dd> Files and/or directories to be backed up.</dd></dl>
  
 
- Returns 0 if the backup was successful. Returns 1 if parsing of parameters was not successful. Returns 2 if no files specification was provided. Returns 3 if <font SIZE="-1">BEAKERLIB_DIR</font> variable is not set, e.g. rlJournalStart was not executed. Returns 4 if creating of main backup destination directories was not successful. Returns 5 if creating of file specific backup destination directories was not successful. Returns 6 if the copy of backed up files was not successful. Returns 7 if attributes of backedup files were not successfuly copied. Returns 8 if backed up files does not exist. This can be suppressed based on other options. 
+ Returns 0 if the backup was successful. Returns 1 if parsing of parameters was not successful. Returns 2 if no files specification was provided. Returns 3 if BEAKERLIB_DIR variable is not set, e.g. rlJournalStart was not executed. Returns 4 if creating of main backup destination directories was not successful. Returns 5 if creating of file specific backup destination directories was not successful. Returns 6 if the copy of backed up files was not successful. Returns 7 if attributes of backedup files were not successfuly copied. Returns 8 if backed up files does not exist. This can be suppressed based on other options. 
 
  Example with --clean: 
 
@@ -170,8 +170,8 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 
  Returns 0 if backup dir is found and files are restored successfully. 
 
- Return code bits meaning <font SIZE="-1">XXXXX 
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></font>&nbsp;<wbr>||||| 
+ Return code bits meaning XXXXX 
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>||||| 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>||||\_&nbsp;<wbr>error parsing parameters 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|||\__&nbsp;<wbr>could not find backup directory 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>||\___&nbsp;<wbr>files cleanup failed 
@@ -194,7 +194,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </dt><dd> Name of the service(s) to start.</dd></dl>
  
 
- Returns number of services which failed to start/restart; thus zero is returned when everything is <font SIZE="-1">OK.</font> 
+ Returns number of services which failed to start/restart; thus zero is returned when everything is OK. 
 
  <i>rlServiceStop</i> 
 
@@ -208,7 +208,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </dt><dd> Name of the service(s) to stop.</dd></dl>
  
 
- Returns number of services which failed to become stopped; thus zero is returned when everything is <font SIZE="-1">OK.</font> 
+ Returns number of services which failed to become stopped; thus zero is returned when everything is OK. 
 
  <i>rlServiceRestore</i> 
 
@@ -222,7 +222,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </dt><dd> Name of the service(s) to restore to original state. All services will be restored in reverse order if no service name is given.</dd></dl>
  
 
- Returns number of services which failed to get back to their original state; thus zero is returned when everything is <font SIZE="-1">OK.</font> 
+ Returns number of services which failed to get back to their original state; thus zero is returned when everything is OK. 
 
  <i>rlServiceEnable</i> 
 
@@ -236,7 +236,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </dt><dd> Name of the service(s) to enable.</dd></dl>
  
 
- Returns number of services which failed enablement; thus zero is returned when everything is <font SIZE="-1">OK.</font> 
+ Returns number of services which failed enablement; thus zero is returned when everything is OK. 
 
  <i>rlServiceDisable</i> 
 
@@ -250,7 +250,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </dt><dd> Name of the service(s) to disable.</dd></dl>
  
 
- Returns number of services which failed disablement; thus zero is returned when everything is <font SIZE="-1">OK.</font>
+ Returns number of services which failed disablement; thus zero is returned when everything is OK.
 
 <h3>Sockets</h3>
 
@@ -268,7 +268,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </dt><dd> Name of the socket(s) to start.</dd></dl>
  
 
- Returns number of sockets which failed to start/restart; thus zero is returned when everything is <font SIZE="-1">OK.</font> 
+ Returns number of sockets which failed to start/restart; thus zero is returned when everything is OK. 
 
  <i>rlSocketStop</i> 
 
@@ -282,13 +282,13 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </dt><dd> Name of the socket(s) to stop.</dd></dl>
  
 
- Returns number of sockets which failed to become stopped; thus zero is returned when everything is <font SIZE="-1">OK.</font> 
+ Returns number of sockets which failed to become stopped; thus zero is returned when everything is OK. 
 
  <i>rlSocketRestore</i> 
 
  Restore given <tt>&quot;socket&quot;</tt> into its original state (before the first <tt>&quot;rlSocketStart&quot;</tt> or <tt>&quot;rlSocketStop&quot;</tt> was called). 
 
- Warning !!! Xinetd process [even though it might have been used] is <font SIZE="-1">NOT</font> restored. It is recommended to call rlServiceRestore xinetd as well. 
+ Warning !!! Xinetd process [even though it might have been used] is NOT restored. It is recommended to call rlServiceRestore xinetd as well. 
 
  <pre>
     rlSocketRestore socket [socket...]
@@ -298,7 +298,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </dt><dd> Name of the socket(s) to restore to original state.</dd></dl>
  
 
- Returns number of sockets which failed to get back to their original state; thus zero is returned when everything is <font SIZE="-1">OK.</font>
+ Returns number of sockets which failed to get back to their original state; thus zero is returned when everything is OK.
 
 <h3>Cleanup management</h3>
 
@@ -306,7 +306,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 
  The test watcher usage is mandatory for the cleanup management system to work properly as it is the test watcher that executes the actual cleanup script. Limited, catastrophe-avoiding mechanism is in place even when the test is not run in test watcher, but that should be seen as a backup and such situation is to be avoided whenever possible. 
 
- The cleanup script shares all environment (variables, exported or not, and functions) with the test itself - the cleanup append/prepend functions ``sample'' or ``snapshot'' the environment at the time of their call, <font SIZE="-1">IOW</font> any changes to the test environment are synchronized to the cleanup script only upon calling append/prepend. When the append/prepend functions are called within a function which has local variables, these will appear as global in the cleanup. 
+ The cleanup script shares all environment (variables, exported or not, and functions) with the test itself - the cleanup append/prepend functions ``sample'' or ``snapshot'' the environment at the time of their call, IOW any changes to the test environment are synchronized to the cleanup script only upon calling append/prepend. When the append/prepend functions are called within a function which has local variables, these will appear as global in the cleanup. 
 
  While the cleanup script receives <tt>$PWD</tt> from the test, its working dir is set to the initial test execution dir even if <tt>$PWD</tt> contains something else. It is impossible to use relative paths inside cleanup reliably - certain parts of the cleanup might have been added under different current directories (CWDs). Therefore always use absolute paths in append/prepend cleanup or make sure you never 'cd' elsewhere (ie. to a TmpDir). 
 

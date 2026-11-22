@@ -10,16 +10,16 @@ url: "/docs/linux/man/3-aa_putpixel/"
 <p> aa_putpixel - put pixel to emulated framebuffer  </p>
 
 <p> <code> #include &lt;aalib.h&gt; </p>
-<p>void aa_putpixel <br />
- ( <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>aa_context *c,<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>int x,<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>int y,<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>int color<br />
- <br />
+<p>void aa_putpixel <br/>
+ ( <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>aa_context *c,<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>int x,<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>int y,<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>int color<br/>
+ <br/>
  ); </code>  </p>
 <h2>PARAMETERS</h2>
 <dl>

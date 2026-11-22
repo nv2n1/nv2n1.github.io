@@ -9,7 +9,7 @@ description: "pppdump – convert PPP record file to readable format"
 
 <p>pppdump &#8211; convert PPP record file to readable format</p>
 <h2>Synopsis</h2>
-<p><code>pppdump</code> [ <code>-h</code> | <code>-p</code> [ <code>-d</code> ]] [ <code>-r</code> ] [ <code>-a</code> ] [ <code>-m </code><i>mru</i> ] [ <i>file </i>&#8230; ]<br />
+<p><code>pppdump</code> [ <code>-h</code> | <code>-p</code> [ <code>-d</code> ]] [ <code>-r</code> ] [ <code>-a</code> ] [ <code>-m </code><i>mru</i> ] [ <i>file </i>&#8230; ]<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</p>
 <h2>Description</h2>
 <p>The <code>pppdump</code> utility converts the files written using the <i>record</i> option of <code>pppd</code> into a human-readable format. If one or more filenames are specified, <code>pppdump</code> will read each in turn; otherwise it will read its standard input. In each case the result is written to standard output. </p>

@@ -29,7 +29,7 @@ description: "sg_read_block_limits – send SCSI READ BLOCK LIMITS command"
 <p>The exit status of sg_read_block_limits is 0 when it is successful. Otherwise see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>
 <h2>Examples</h2>
 <p>It is usually okay to use no options. Here is an invocation (on the first line following the &quot;#&quot; command prompt) followed by some typical output: </p>
-<p>#&nbsp;<wbr>sg_read_block_limits&nbsp;<wbr>/dev/st0<br />
+<p>#&nbsp;<wbr>sg_read_block_limits&nbsp;<wbr>/dev/st0<br/>
  Read Block Limits results: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Minimum block size: 1 byte(s) </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Maximum block size: 16777215 byte(s), 16383 KB, 15 MB</p>
@@ -38,7 +38,7 @@ description: "sg_read_block_limits – send SCSI READ BLOCK LIMITS command"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2009-2012 Douglas Gilbert<br />
+<p>Copyright &#169; 2009-2012 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg3_utils(sg3_utils)</code> </p>

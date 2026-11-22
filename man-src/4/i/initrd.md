@@ -48,7 +48,7 @@ description: "initrd – boot loader initialized RAM disk"
 <p> It is also possible for the <i>/linuxrc</i> executable to change the normal root device. For <i>/linuxrc</i> to change the normal root device, <i>/proc</i> must be mounted. After mounting <i>/proc</i>, <i>/linuxrc</i> changes the normal root device by writing into the proc files <i>/proc/sys/kernel/real-root-dev</i>, <i>/proc/sys/kernel/nfs-root-name</i>, and <i>/proc/sys/kernel/nfs-root-addrs</i>. For a physical root device, the root device is changed by having <i>/linuxrc</i> write the new root filesystem device number into <i>/proc/sys/kernel/real-root-dev</i>. For an NFS root filesystem, the root device is changed by having <i>/linuxrc</i> write the NFS setting into files <i>/proc/sys/kernel/nfs-root-name</i> and <i>/proc/sys/kernel/nfs-root-addrs</i> and then writing 0xff (e.g., the pseudo-NFS-device number) into file <i>/proc/sys/kernel/real-root-dev</i>. For example, the following shell command line would change the normal root device to <i>/dev/hdb1</i>: </p>
 <p> echo 0x365 &gt;/proc/sys/kernel/real-root-dev </p>
 <p> For an NFS example, the following shell command lines would change the normal root device to the NFS directory <i>/var/nfsroot</i> on a local networked NFS server with IP number 193.8.232.7 for a system with IP number 193.8.232.2 and named &quot;idefix&quot;: </p>
-<p> echo /var/nfsroot &gt;/proc/sys/kernel/nfs-root-name echo 193.8.232.2:193.8.232.7::255.255.255.0:idefix \<br />
+<p> echo /var/nfsroot &gt;/proc/sys/kernel/nfs-root-name echo 193.8.232.2:193.8.232.7::255.255.255.0:idefix \<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&gt;/proc/sys/kernel/nfs-root-addrs echo 255 &gt;/proc/sys/kernel/real-root-dev </p>
 <p> <code>Note</code>: The use of <i>/proc/sys/kernel/real-root-dev</i> to change the root filesystem is obsolete. See the Linux kernel source file <i>Documentation/admin-guide/initrd.rst</i> (or <i>Documentation/initrd.txt</i> before Linux 4.10) as well as <code><a href="/docs/linux/man/2-pivot_root/">pivot_root</a></code>(2) and <code><a href="/docs/linux/man/8-pivot_root/">pivot_root</a></code>(8) for information on the modern method of changing the root filesystem.</p>
 <h3>Usage</h3>
@@ -78,9 +78,9 @@ description: "initrd – boot loader initialized RAM disk"
 <p> A third scenario is more convenient recovery disks. Because information like the location of the root filesystem partition is not needed at boot time, the system loaded from <i>/dev/initrd</i> can use a dialog and/or auto-detection followed by a possible sanity check. </p>
 <p> Last but not least, Linux distributions on CD-ROM may use <code>initrd</code> for easy installation from the CD-ROM. The distribution can use <code>LOADLIN</code> to directly load <i>/dev/initrd</i> from CD-ROM without the need of any floppies. The distribution could also use a <code>LILO</code> boot floppy and then bootstrap a bigger RAM disk via <i>/dev/initrd</i> from the CD-ROM.</p>
 <h2>Files</h2>
-<p><i>/dev/initrd</i><br />
- <i>/dev/ram0</i><br />
- <i>/linuxrc</i><br />
+<p><i>/dev/initrd</i><br/>
+ <i>/dev/ram0</i><br/>
+ <i>/linuxrc</i><br/>
  <i>/initrd</i></p>
 <h2>Notes</h2>
 <dl>

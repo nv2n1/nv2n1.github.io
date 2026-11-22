@@ -10,7 +10,7 @@ description: "zlaqr0.f –"
 <p>zlaqr0.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaqr0</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, W, ILOZ, IHIZ, Z, LDZ, WORK, LWORK, INFO)<br />
+<p>subroutine <code>zlaqr0</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, W, ILOZ, IHIZ, Z, LDZ, WORK, LWORK, INFO)<br/>
  <i></i><code>ZLAQR0</code> computes the eigenvalues of a Hessenberg matrix, and optionally the matrices from the Schur decomposition.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaqr0 (logicalWANTT, logicalWANTZ, integerN, integerILO, integerIHI, complex*16, dimension( ldh, * )H, integerLDH, complex*16, dimension( * )W, integerILOZ, integerIHIZ, complex*16, dimension( ldz, * )Z, integerLDZ, complex*16, dimension( * )WORK, integerLWORK, integerINFO)</h3>

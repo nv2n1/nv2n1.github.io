@@ -10,7 +10,7 @@ description: "ipsec scepclient – Client for the SCEP protocol"
 <p>ipsec scepclient &#8211; Client for the SCEP protocol</p>
 <h2>Synopsis</h2>
 <p><code>ipsec scepclient [argument &#8230;]</code> </p>
-<p> <code>ipsec scepclient</code> <code>&#8211;help</code><br />
+<p> <code>ipsec scepclient</code> <code>&#8211;help</code><br/>
  <code>ipsec scepclient</code> <code>&#8211;version</code></p>
 <h2>Description</h2>
 <p><code>scepclient</code> is a client implementation of Cisco System&#8217;s Simple Certificate Enrollment Protocol (SCEP) written for Linux strongSwan &lt;<a rel="nofollow" href="http://www.strongswan.org">http://www.strongswan.org</a>&gt;. <code>scepclient</code> is designed to be used for certificate enrollment on machines using the OpenSource IPsec solution <i>strongSwan.</i></p>
@@ -48,7 +48,7 @@ description: "ipsec scepclient – Client for the SCEP protocol"
 <h3>Options for CA Certificate Acquisition</h3>
 <p><code>-o, &#8211;out cacert[=</code><i>filename</i>]</p>
 <dl>
-<dd>Output file of acquired CA certificate. If more then one CA certificate is available, <i>filename</i> is used as prefix for the resulting files (refer to EXAMPLES below for details).<br />
+<dd>Output file of acquired CA certificate. If more then one CA certificate is available, <i>filename</i> is used as prefix for the resulting files (refer to EXAMPLES below for details).<br/>
  The default <i>filename</i> is $CONFDIR/ipsec.d/cacerts/caCert.der.</dd></dl>
 <h3>Options For Certificate Enrollment</h3>
 <p><code>-i, &#8211;in </code><i>type</i>[=<i>filename</i>]</p>
@@ -57,19 +57,19 @@ description: "ipsec scepclient – Client for the SCEP protocol"
 <p> Supported values for <i>type</i>:</p>
 <dl>
 <dt><code>pkcs1</code></dt>
-<dd>RSA private key in PKCS#1 file format. If no input of this type is specified, a RSA key gets generated.<br />
+<dd>RSA private key in PKCS#1 file format. If no input of this type is specified, a RSA key gets generated.<br/>
  The default <i>filename</i> is $CONFDIR/ipsec.d/private/myKey.der.</dd>
 <dt><code>pkcs10</code></dt>
-<dd>PKCS#10 certificate request to be used in the SCEP request. If no input of this type is specified, a request is generated.<br />
+<dd>PKCS#10 certificate request to be used in the SCEP request. If no input of this type is specified, a request is generated.<br/>
  The default <i>filename</i> is $CONFDIR/ipsec.d/req/myReq.der.</dd>
 <dt><code>cacert-enc</code></dt>
-<dd>CA certificate to encrypt the SCEP request. Has to be specified for certificate enrollment.<br />
+<dd>CA certificate to encrypt the SCEP request. Has to be specified for certificate enrollment.<br/>
  The default <i>filename</i> is $CONFDIR/ipsec.d/cacerts/caCert.der.</dd>
 <dt><code>cacert-sig</code></dt>
-<dd>CA certificate to check signature of SCEP reply. Has to be specified for certificate enrollment.<br />
+<dd>CA certificate to check signature of SCEP reply. Has to be specified for certificate enrollment.<br/>
  The default <i>filename</i> is $CONFDIR/ipsec.d/cacerts/caCert.der.</dd>
 <dt><code>cert-self</code></dt>
-<dd>Certificate to be used in the SCEP request. If it is not specified a self-signed certificate is generated automatically.<br />
+<dd>Certificate to be used in the SCEP request. If it is not specified a self-signed certificate is generated automatically.<br/>
  The default <i>filename</i> is $CONFDIR/ipsec.d/certs/selfCert.der.</dd></dl>
 </dl>
 <p> <code>-k, &#8211;keylength </code><i>bits</i></p>
@@ -144,19 +144,19 @@ description: "ipsec scepclient – Client for the SCEP protocol"
 <p> Supported values for <i>type</i>:</p>
 <dl>
 <dt><code>pkcs1</code></dt>
-<dd>RSA private key in PKCS#1 file format. If specified, the RSA key used for enrollment is stored in file <i>filename</i>. If none of the <i>types</i> listed below are specified, <code>scepclient</code> will stop after outputting this file.<br />
+<dd>RSA private key in PKCS#1 file format. If specified, the RSA key used for enrollment is stored in file <i>filename</i>. If none of the <i>types</i> listed below are specified, <code>scepclient</code> will stop after outputting this file.<br/>
  The default <i>filename</i> is $CONFDIR/ipsec.d/private/myKey.der.</dd>
 <dt><code>pkcs10</code></dt>
-<dd>PKCS#10 certificate request. If specified, the PKCS#10 request used or certificate enrollment is stored in file <i>filename</i>. If none of the <i>types</i> listed below are specified, <code>scepclient</code> will stop after outputting this file.<br />
+<dd>PKCS#10 certificate request. If specified, the PKCS#10 request used or certificate enrollment is stored in file <i>filename</i>. If none of the <i>types</i> listed below are specified, <code>scepclient</code> will stop after outputting this file.<br/>
  The default <i>filename</i> is $CONFDIR/ipsec.d/req/myReq.der.</dd>
 <dt><code>pkcs7</code></dt>
-<dd>PKCS#7 SCEP request as it is sent using HTTP to the SCEP server. If specified, this SCEP request is stored in file <i>filename</i>. If none of <i>types</i> listed below is not specified, <code>scepclient</code> will stop after outputting this file.<br />
+<dd>PKCS#7 SCEP request as it is sent using HTTP to the SCEP server. If specified, this SCEP request is stored in file <i>filename</i>. If none of <i>types</i> listed below is not specified, <code>scepclient</code> will stop after outputting this file.<br/>
  The default <i>filename</i> is $CONFDIR/ipsec.d/req/pkcs7.der.</dd>
 <dt><code>cert-self</code></dt>
-<dd>Self-signed certificate. If specified the self-signed certificate is stored in file <i>filename</i>.<br />
+<dd>Self-signed certificate. If specified the self-signed certificate is stored in file <i>filename</i>.<br/>
  The default <i>filename</i> is $CONFDIR/ipsec.d/certs/selfCert.der.</dd>
 <dt><code>cert</code></dt>
-<dd>Enrolled certificate. This <i>type</i> must be specified for certificate enrollment. The enrolled certificate is stored in file <i>filename</i>.<br />
+<dd>Enrolled certificate. This <i>type</i> must be specified for certificate enrollment. The enrolled certificate is stored in file <i>filename</i>.<br/>
  The default <i>filename</i> is set to $CONFDIR/ipsec.d/certs/myCert.der.</dd></dl>
 </dl>
 <p> <code>-m, &#8211;method </code><i>method</i></p>
@@ -186,13 +186,13 @@ description: "ipsec scepclient – Client for the SCEP protocol"
 <p> <code>ipsec scepclient &#8211;out pkcs1=joeKey.der -k 1024</code></p>
 <dl>
 <dd>Generate RSA private key with key length of 1024 bit and store it in file joeKey.der.</dd></dl>
-<p> <code>ipsec scepclient &#8211;in pkcs1=joeKey.der &#8211;out pkcs10=joeReq.der \</code><br />
+<p> <code>ipsec scepclient &#8211;in pkcs1=joeKey.der &#8211;out pkcs10=joeReq.der \</code><br/>
  <code>&#8211;dn &#8221;C=AT, CN=John Doe&#8221; -s email=john [at] doe.com -p mypassword</code></p>
 <dl>
 <dd>Generate a PKCS#10 request and store it in file joeReq.der. Use the RSA private key joeKey.der created earlier to sign the PKCS#10-Request. In addition to the distinguished name include a email-subjectAltName and a challenge password in the request.</dd></dl>
-<p> <code>ipsec scepclient &#8211;out pkcs1=joeKey.der &#8211;out cert==joeCert.der \</code><br />
- <code>&#8211;dn &#8221;C=CH, CN=John Doe&#8221; -k 512 -p 5xH2pnT7wq \</code><br />
- <code>&#8211;url <a rel="nofollow" href="http://scep.hsr.ch/cgi-bin/pkiclient.exe">http://scep.hsr.ch/cgi-bin/pkiclient.exe</a> \</code><br />
+<p> <code>ipsec scepclient &#8211;out pkcs1=joeKey.der &#8211;out cert==joeCert.der \</code><br/>
+ <code>&#8211;dn &#8221;C=CH, CN=John Doe&#8221; -k 512 -p 5xH2pnT7wq \</code><br/>
+ <code>&#8211;url <a rel="nofollow" href="http://scep.hsr.ch/cgi-bin/pkiclient.exe">http://scep.hsr.ch/cgi-bin/pkiclient.exe</a> \</code><br/>
  <code>&#8211;in cacert-enc=caCert.der &#8211;in cacert-sig=caCert.der</code></p>
 <dl>
 <dd>Generate a new RSA key for the request and store it in joeKey.der. Then enroll a certificate and store as joeCert.der. The challenge password is &#8216;5xH2pnT7wq&#8217;. The encryption and signature check has to be made with the same CA certificate caCert.der.</dd></dl>

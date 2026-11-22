@@ -19,10 +19,10 @@ description: "zmq_sendmsg – send a message part on a socket"
 <dd>Specifies that the message being sent is a multi-part message, and that further message parts are to follow. Refer to the section regarding multi-part messages below for a detailed description.</dd></dl>
 <p> The <i>zmq_msg_t</i> structure passed to <i>zmq_sendmsg()</i> is nullified during the call. If you want to send the same message to multiple sockets you have to copy it using (e.g. using <i>zmq_msg_copy()</i>).</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  A successful invocation of <i>zmq_sendmsg()</i> does not indicate that the message has been transmitted to the network, only that it has been queued on the <i>socket</i> and 0MQ has assumed responsibility for the message. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  this API method is deprecated in favor of <a href="/docs/linux/man/3-zmq_msg_send/">zmq_msg_send</a>(3).</dd></dl>
 <h3>Multi-part messages</h3>
 <p>A 0MQ message is composed of 1 or more message parts. Each message part is an independent <i>zmq_msg_t</i> in its own right. 0MQ ensures atomic delivery of messages: peers shall receive either all <i>message parts</i> of a message or none at all. The total number of message parts is unlimited except by available memory. An application that sends multi-part messages must use the <i>ZMQ_SNDMORE</i> flag when sending each message part except the final one.</p>
@@ -54,14 +54,14 @@ description: "zmq_sendmsg – send a message part on a socket"
 <dl>
 <dd>The message cannot be routed.</dd></dl>
 <h2>Example</h2>
-<p><code>Filling in a message and sending it to a socket</code>. /* Create a new message, allocating 6 bytes for message content */<br />
-zmq_msg_t msg;<br />
-int rc = zmq_msg_init_size(&amp;msg, 6);<br />
-assert(rc == 0);<br />
-/* Fill in message content with &#8216;AAAAAA&#8217; */<br />
-memset(zmq_msg_data(&amp;msg), &#8216;A&#8217;, 6);<br />
-/* Send the message to the socket */<br />
-rc = zmq_sendmsg(socket, &amp;msg, 0);<br />
+<p><code>Filling in a message and sending it to a socket</code>. /* Create a new message, allocating 6 bytes for message content */<br/>
+zmq_msg_t msg;<br/>
+int rc = zmq_msg_init_size(&amp;msg, 6);<br/>
+assert(rc == 0);<br/>
+/* Fill in message content with &#8216;AAAAAA&#8217; */<br/>
+memset(zmq_msg_data(&amp;msg), &#8216;A&#8217;, 6);<br/>
+/* Send the message to the socket */<br/>
+rc = zmq_sendmsg(socket, &amp;msg, 0);<br/>
 assert(rc == 6); <code>Sending a multi-part message</code>. </p>
 <pre><code>/* Send a multi-part message consisting of three parts to socket */
 rc = zmq_sendmsg (socket, &amp;part1, ZMQ_SNDMORE);

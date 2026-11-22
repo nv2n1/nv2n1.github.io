@@ -26,7 +26,7 @@ description: "ppmtospu – convert a PPM image to an Atari Spectrum 512 image"
 <dd> The program uses a 2&#215;2 ordered dither. </dd>
 <p> This is the default. </p>
 <dt><code>-d4</code></dt>
-<dd> The program uses a 4&#215;4 ordered dither.<br />
+<dd> The program uses a 4&#215;4 ordered dither.<br/>
 &nbsp;<wbr> </dd>
 </dl>
 <h2>SEE ALSO</h2>

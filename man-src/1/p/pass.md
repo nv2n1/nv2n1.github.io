@@ -43,103 +43,103 @@ description: "pass – stores, retrieves, generates, and synchronizes passwords 
 <h2>SIMPLE EXAMPLES</h2>
 <dl>
 <dt>Initialize password store</dt>
-<dd> <code>zx2c4 [at] laptop ~ $ pass init Jason [at] zx2c4.com </code><br />
- mkdir: created directory 18/home/zx2c4/.password-store19<br />
+<dd> <code>zx2c4 [at] laptop ~ $ pass init Jason [at] zx2c4.com </code><br/>
+ mkdir: created directory 18/home/zx2c4/.password-store19<br/>
  Password store initialized for Jason [at] zx2c4.com.</dd>
 <dt>List existing passwords in store</dt>
-<dd> <code>zx2c4 [at] laptop ~ $ pass </code><br />
- Password Store<br />
- 1C0000 Business<br />
- 02 1C0000 some-silly-business-site.com<br />
- 02 140000 another-business-site.net<br />
- 1C0000 Email<br />
- 02 1C0000 donenfeld.com<br />
- 02 140000 zx2c4.com<br />
+<dd> <code>zx2c4 [at] laptop ~ $ pass </code><br/>
+ Password Store<br/>
+ 1C0000 Business<br/>
+ 02 1C0000 some-silly-business-site.com<br/>
+ 02 140000 another-business-site.net<br/>
+ 1C0000 Email<br/>
+ 02 1C0000 donenfeld.com<br/>
+ 02 140000 zx2c4.com<br/>
  140000 France </dd>
 <p>&nbsp;<wbr>1C0000 bank&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>1C0000 freebox&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>140000 mobilephone&nbsp;<wbr>&nbsp;<wbr> </p>
 <p> Alternatively, &quot;<code>pass ls</code>&quot;.</p>
 <dt>Show existing password</dt>
-<dd> <code>zx2c4 [at] laptop ~ $ pass Email/zx2c4.com </code><br />
+<dd> <code>zx2c4 [at] laptop ~ $ pass Email/zx2c4.com </code><br/>
  sup3rh4x3rizmynam3</dd>
 <dt>Copy existing password to clipboard</dt>
-<dd> <code>zx2c4 [at] laptop ~ $ pass -c Email/zx2c4.com </code><br />
+<dd> <code>zx2c4 [at] laptop ~ $ pass -c Email/zx2c4.com </code><br/>
  Copied Email/jason [at] zx2c4.com to clipboard. Will clear in 45 seconds.</dd>
 <dt>Add password to store</dt>
-<dd> <code>zx2c4 [at] laptop ~ $ pass insert Business/cheese-whiz-factory </code><br />
+<dd> <code>zx2c4 [at] laptop ~ $ pass insert Business/cheese-whiz-factory </code><br/>
  Enter password for Business/cheese-whiz-factory: omg so much cheese what am i gonna do</dd>
 <dt>Add multiline password to store</dt>
-<dd> <code>zx2c4 [at] laptop ~ $ pass insert -m Business/cheese-whiz-factory </code><br />
+<dd> <code>zx2c4 [at] laptop ~ $ pass insert -m Business/cheese-whiz-factory </code><br/>
  Enter contents of Business/cheese-whiz-factory and press Ctrl+D when finished: </dd>
-<p>&nbsp;<wbr><br />
- Hey this is my<br />
- awesome<br />
- multi<br />
- line<br />
- passworrrrrrrrd.<br />
+<p>&nbsp;<wbr><br/>
+ Hey this is my<br/>
+ awesome<br/>
+ multi<br/>
+ line<br/>
+ passworrrrrrrrd.<br/>
  ^D</p>
 <dt>Generate new password</dt>
-<dd> <code>zx2c4 [at] laptop ~ $ pass generate Email/jasondonenfeld.com 15 </code><br />
- The generated password to Email/jasondonenfeld.com is:<br />
+<dd> <code>zx2c4 [at] laptop ~ $ pass generate Email/jasondonenfeld.com 15 </code><br/>
+ The generated password to Email/jasondonenfeld.com is:<br/>
  $(-QF&amp;Q=IN2nFBx</dd>
 <dt>Generate new alphanumeric password</dt>
-<dd> <code>zx2c4 [at] laptop ~ $ pass generate -n Email/jasondonenfeld.com 12</code><br />
- The generated password to Email/jasondonenfeld.com is:<br />
+<dd> <code>zx2c4 [at] laptop ~ $ pass generate -n Email/jasondonenfeld.com 12</code><br/>
+ The generated password to Email/jasondonenfeld.com is:<br/>
  YqFsMkBeO6di</dd>
 <dt>Generate new password and copy it to the clipboard</dt>
-<dd> <code>zx2c4 [at] laptop ~ $ pass generate -c Email/jasondonenfeld.com 19</code><br />
+<dd> <code>zx2c4 [at] laptop ~ $ pass generate -c Email/jasondonenfeld.com 19</code><br/>
  Copied Email/jasondonenfeld.com to clipboard. Will clear in 45 seconds.</dd>
 <dt>Remove password from store</dt>
-<dd> <code>zx2c4 [at] laptop ~ $ pass remove Business/cheese-whiz-factory </code><br />
- rm: remove regular file 18/home/zx2c4/.password-store/Business/cheese-whiz-factory.gpg19? y<br />
+<dd> <code>zx2c4 [at] laptop ~ $ pass remove Business/cheese-whiz-factory </code><br/>
+ rm: remove regular file 18/home/zx2c4/.password-store/Business/cheese-whiz-factory.gpg19? y<br/>
  removed 18/home/zx2c4/.password-store/Business/cheese-whiz-factory.gpg19 </dd>
 </dl>
 <h2>EXTENDED GIT EXAMPLE</h2>
 <p> Here, we initialize new password store, create a git repository, and then manipulate and sync passwords. Make note of the arguments to the first call of <code>pass git push</code>; consult <code><a href="/docs/linux/man/1-git-push/">git-push</a></code>(1) for more information. </p>
-<p> <code>zx2c4 [at] laptop ~ $ pass init Jason [at] zx2c4.com </code><br />
- mkdir: created directory 18/home/zx2c4/.password-store19<br />
+<p> <code>zx2c4 [at] laptop ~ $ pass init Jason [at] zx2c4.com </code><br/>
+ mkdir: created directory 18/home/zx2c4/.password-store19<br/>
  Password store initialized for Jason [at] zx2c4.com. </p>
-<p> <code>zx2c4 [at] laptop ~ $ pass git init </code><br />
- Initialized empty Git repository in /home/zx2c4/.password-store/.git/<br />
+<p> <code>zx2c4 [at] laptop ~ $ pass git init </code><br/>
+ Initialized empty Git repository in /home/zx2c4/.password-store/.git/<br/>
  [master (root-commit) 998c8fd] Added current contents of password store. </p>
 <p>&nbsp;<wbr>1 file changed, 1 insertion(+) </p>
 <p>&nbsp;<wbr>create mode 100644 .gpg-id </p>
 <p> <code>zx2c4 [at] laptop ~ $ pass git remote add origin kexec.com:pass-store </code> </p>
-<p> <code>zx2c4 [at] laptop ~ $ pass generate Amazon/amazonemail [at] email.com 21 </code><br />
- mkdir: created directory 18/home/zx2c4/.password-store/Amazon19<br />
- [master 30fdc1e] Added generated password for Amazon/amazonemail [at] email.com to store.<br />
- 1 file changed, 0 insertions(+), 0 deletions(-)<br />
- create mode 100644 Amazon/amazonemail [at] email.com.gpg<br />
- The generated password to Amazon/amazonemail [at] email.com is:<br />
+<p> <code>zx2c4 [at] laptop ~ $ pass generate Amazon/amazonemail [at] email.com 21 </code><br/>
+ mkdir: created directory 18/home/zx2c4/.password-store/Amazon19<br/>
+ [master 30fdc1e] Added generated password for Amazon/amazonemail [at] email.com to store.<br/>
+ 1 file changed, 0 insertions(+), 0 deletions(-)<br/>
+ create mode 100644 Amazon/amazonemail [at] email.com.gpg<br/>
+ The generated password to Amazon/amazonemail [at] email.com is:<br/>
  &lt;5m,_BrZY`antNDxKN&lt;0A </p>
-<p> <code>zx2c4 [at] laptop ~ $ pass git push -u &#8211;all</code><br />
- Counting objects: 4, done.<br />
- Delta compression using up to 2 threads.<br />
- Compressing objects: 100% (3/3), done.<br />
- Writing objects: 100% (4/4), 921 bytes, done.<br />
- Total 4 (delta 0), reused 0 (delta 0)<br />
- To kexec.com:pass-store<br />
- * [new branch] master -&gt; master<br />
+<p> <code>zx2c4 [at] laptop ~ $ pass git push -u &#8211;all</code><br/>
+ Counting objects: 4, done.<br/>
+ Delta compression using up to 2 threads.<br/>
+ Compressing objects: 100% (3/3), done.<br/>
+ Writing objects: 100% (4/4), 921 bytes, done.<br/>
+ Total 4 (delta 0), reused 0 (delta 0)<br/>
+ To kexec.com:pass-store<br/>
+ * [new branch] master -&gt; master<br/>
  Branch master set up to track remote branch master from origin. </p>
-<p> <code>zx2c4 [at] laptop ~ $ pass insert Amazon/otheraccount [at] email.com </code><br />
- Enter password for Amazon/otheraccount [at] email.com: som3r3a11yb1gp4ssw0rd!!88**<br />
- [master b9b6746] Added given password for Amazon/otheraccount [at] email.com to store.<br />
- 1 file changed, 0 insertions(+), 0 deletions(-)<br />
+<p> <code>zx2c4 [at] laptop ~ $ pass insert Amazon/otheraccount [at] email.com </code><br/>
+ Enter password for Amazon/otheraccount [at] email.com: som3r3a11yb1gp4ssw0rd!!88**<br/>
+ [master b9b6746] Added given password for Amazon/otheraccount [at] email.com to store.<br/>
+ 1 file changed, 0 insertions(+), 0 deletions(-)<br/>
  create mode 100644 Amazon/otheraccount [at] email.com.gpg </p>
-<p> <code>zx2c4 [at] laptop ~ $ pass rm Amazon/amazonemail [at] email.com </code><br />
- rm: remove regular file 18/home/zx2c4/.password-store/Amazon/amazonemail [at] email.com.gpg19? y<br />
- removed 18/home/zx2c4/.password-store/Amazon/amazonemail [at] email.com.gpg19<br />
- rm &#8216;Amazon/amazonemail [at] email.com.gpg&#8217;<br />
- [master 288b379] Removed Amazon/amazonemail [at] email.com from store.<br />
- 1 file changed, 0 insertions(+), 0 deletions(-)<br />
+<p> <code>zx2c4 [at] laptop ~ $ pass rm Amazon/amazonemail [at] email.com </code><br/>
+ rm: remove regular file 18/home/zx2c4/.password-store/Amazon/amazonemail [at] email.com.gpg19? y<br/>
+ removed 18/home/zx2c4/.password-store/Amazon/amazonemail [at] email.com.gpg19<br/>
+ rm &#8216;Amazon/amazonemail [at] email.com.gpg&#8217;<br/>
+ [master 288b379] Removed Amazon/amazonemail [at] email.com from store.<br/>
+ 1 file changed, 0 insertions(+), 0 deletions(-)<br/>
  delete mode 100644 Amazon/amazonemail [at] email.com.gpg </p>
-<p> <code>zx2c4 [at] laptop ~ $ pass git push</code><br />
- Counting objects: 9, done.<br />
- Delta compression using up to 2 threads.<br />
- Compressing objects: 100% (5/5), done.<br />
- Writing objects: 100% (7/7), 1.25 KiB, done.<br />
- Total 7 (delta 0), reused 0 (delta 0)<br />
+<p> <code>zx2c4 [at] laptop ~ $ pass git push</code><br/>
+ Counting objects: 9, done.<br/>
+ Delta compression using up to 2 threads.<br/>
+ Compressing objects: 100% (5/5), done.<br/>
+ Writing objects: 100% (7/7), 1.25 KiB, done.<br/>
+ Total 7 (delta 0), reused 0 (delta 0)<br/>
  To kexec.com:pass-store </p>
 <h2>FILES</h2>
 <dl>

@@ -10,7 +10,7 @@ description: "perlembed – how to embed perl in your C program"
 
 <p> perlembed - how to embed perl in your C program </p>
 <h2>DESCRIPTION</h2>
-<font SIZE="-1"></font><h3>PREAMBLE</h3>
+<h3>PREAMBLE</h3>
 <p> Do you want to: </p>
 <dl>
 <dt><code>Use C from Perl?</code></dt>
@@ -28,7 +28,7 @@ description: "perlembed – how to embed perl in your C program"
 <dt><code>Use Perl from C?</code></dt>
 <dd> <p> Read on... </p>
  </dd></dl>
-<font SIZE="-1"></font><h3>ROADMAP</h3>
+<h3>ROADMAP</h3>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> Compiling your C program </p>
@@ -61,10 +61,10 @@ description: "perlembed – how to embed perl in your C program"
 <dd> <p> Embedding Perl under Win32 </p>
  </dd></dl>
 <h3>Compiling your C program</h3>
-<p> If you have trouble compiling the scripts in this documentation, you&#8217;re not alone. The cardinal rule: <font SIZE="-1">COMPILE THE PROGRAMS IN EXACTLY THE SAME WAY THAT YOUR PERL WAS COMPILED.</font> (Sorry for yelling.) </p>
+<p> If you have trouble compiling the scripts in this documentation, you&#8217;re not alone. The cardinal rule: COMPILE THE PROGRAMS IN EXACTLY THE SAME WAY THAT YOUR PERL WAS COMPILED. (Sorry for yelling.) </p>
 <p> Also, every C program that uses Perl must link in the <i>perl library</i>. What&#8217;s that, you ask? Perl is itself written in C; the perl library is the collection of compiled C programs that were used to create your perl executable (<i>/usr/bin/perl</i> or equivalent). (Corollary: you can&#8217;t use Perl from your C program unless Perl has been compiled on your machine, or installed properly---that&#8217;s why you shouldn&#8217;t blithely copy Perl executables from machine to machine without also copying the <i>lib</i> directory.) </p>
 <p> When you use Perl from C, your C program will---usually--allocate, ``run&#8217;&#8216;, and deallocate a <i>PerlInterpreter</i> object, which is defined by the perl library. </p>
-<p> If your copy of Perl is recent enough to contain this documentation (version 5.002 or later), then the perl library (and <i></i><font SIZE="-1"><i>EXTERN</i></font><i>.h</i> and <i>perl.h</i>, which you&#8217;ll also need) will reside in a directory that looks like this: </p>
+<p> If your copy of Perl is recent enough to contain this documentation (version 5.002 or later), then the perl library (and <i></i><i>EXTERN</i><i>.h</i> and <i>perl.h</i>, which you&#8217;ll also need) will reside in a directory that looks like this: </p>
 <pre><code>    /usr/local/lib/perl5/your_architecture_here/CORE
 </code></pre>
 <p> or perhaps just </p>
@@ -73,7 +73,7 @@ description: "perlembed – how to embed perl in your C program"
 <p> or maybe something like </p>
 <pre><code>    /usr/opt/perl5/CORE
 </code></pre>
-<p> Execute this statement for a hint about where to find <font SIZE="-1">CORE:</font> </p>
+<p> Execute this statement for a hint about where to find CORE: </p>
 <pre><code>    perl -MConfig -e 'print $Config{archlib}'
 </code></pre>
 <p> Here&#8217;s how you&#8217;d compile the example in the next section, ``Adding a Perl interpreter to your C program&#8217;&#8216;, on my Linux box: </p>
@@ -82,7 +82,7 @@ description: "perlembed – how to embed perl in your C program"
     -L/usr/local/lib/perl5/i586-linux/5.003/CORE
     -o interp interp.c -lperl -lm
 </code></pre>
-<p> (That&#8217;s all one line.) On my <font SIZE="-1">DEC</font> Alpha running old 5.003_05, the incantation is a bit different: </p>
+<p> (That&#8217;s all one line.) On my DEC Alpha running old 5.003_05, the incantation is a bit different: </p>
 <pre><code>    % cc -O2 -Olimit 2900 -I/usr/local/include
     -I/usr/local/lib/perl5/alpha-dec_osf/5.00305/CORE
     -L/usr/local/lib/perl5/alpha-dec_osf/5.00305/CORE -L/usr/local/lib
@@ -90,7 +90,7 @@ description: "perlembed – how to embed perl in your C program"
 </code></pre>
 <p> How can you figure out what to add? Assuming your Perl is post-5.001, execute a <code>&quot;perl -V&quot;</code> command and pay special attention to the ``cc&#8217;&#8216; and ``ccflags&#8217;&#8216; information. </p>
 <p> You&#8217;ll have to choose the appropriate compiler (<i>cc</i>, <i>gcc</i>, et al.) for your machine: <code>&quot;perl -MConfig -e &#8216;print $Config{cc}&#8216;&quot;</code> will tell you what to use. </p>
-<p> You&#8217;ll also have to choose the appropriate library directory (<i>/usr/local/lib/...</i>) for your machine. If your compiler complains that certain functions are undefined, or that it can&#8217;t locate <i>-lperl</i>, then you need to change the path following the <code>&quot;-L&quot;</code>. If it complains that it can&#8217;t find <i></i><font SIZE="-1"><i>EXTERN</i></font><i>.h</i> and <i>perl.h</i>, you need to change the path following the <code>&quot;-I&quot;</code>. </p>
+<p> You&#8217;ll also have to choose the appropriate library directory (<i>/usr/local/lib/...</i>) for your machine. If your compiler complains that certain functions are undefined, or that it can&#8217;t locate <i>-lperl</i>, then you need to change the path following the <code>&quot;-L&quot;</code>. If it complains that it can&#8217;t find <i></i><i>EXTERN</i><i>.h</i> and <i>perl.h</i>, you need to change the path following the <code>&quot;-I&quot;</code>. </p>
 <p> You may have to add extra libraries as well. Which ones? Perhaps those printed by </p>
 <pre><code>   perl -MConfig -e 'print $Config{libs}'
 </code></pre>
@@ -98,7 +98,7 @@ description: "perlembed – how to embed perl in your C program"
 <pre><code>   % cc -o interp interp.c `perl -MExtUtils::Embed -e ccopts -e ldopts`
 </code></pre>
 <p> If the <code>ExtUtils::Embed</code> module isn&#8217;t part of your Perl distribution, you can retrieve it from &lt;<a rel="nofollow" href="http://www.perl.com/perl/CPAN/modules/by-module/ExtUtils/">http://www.perl.com/perl/CPAN/modules/by-module/ExtUtils/</a>&gt; (If this documentation came from your Perl distribution, then you&#8217;re running 5.004 or better and you already have it.) </p>
-<p> The <code>ExtUtils::Embed</code> kit on <font SIZE="-1">CPAN</font> also contains all source code for the examples in this document, tests, additional examples and other information you may find useful.  </p>
+<p> The <code>ExtUtils::Embed</code> kit on CPAN also contains all source code for the examples in this document, tests, additional examples and other information you may find useful.  </p>
 <h3>Adding a Perl interpreter to your C program</h3>
 <p> In a sense, perl (the C program) is a good example of embedding Perl (the language), so I&#8217;ll demonstrate embedding with <i>miniperlmain.c</i>, included in the source distribution. Here&#8217;s a bastardized, non-portable version of <i>miniperlmain.c</i> containing the essentials of embedding: </p>
 <pre><code> #include &lt;EXTERN.h&gt; /* from the Perl distribution */
@@ -119,10 +119,10 @@ description: "perlembed – how to embed perl in your C program"
  }
 </code></pre>
 <p> Notice that we don&#8217;t use the <code>&quot;env&quot;</code> pointer. Normally handed to <code>&quot;perl_parse&quot;</code> as its final argument, <code>&quot;env&quot;</code> here is replaced by <code>&quot;NULL&quot;</code>, which means that the current environment will be used. </p>
-<p> The macros <font SIZE="-1"><code>PERL_SYS_INIT3</code></font><code>()</code> and <font SIZE="-1"><code>PERL_SYS_TERM</code></font><code>()</code> provide system-specific tune up of the C runtime environment necessary to run Perl interpreters; they should only be called once regardless of how many interpreters you create or destroy. Call <font SIZE="-1"><code>PERL_SYS_INIT3</code></font><code>()</code> before you create your first interpreter, and <font SIZE="-1"><code>PERL_SYS_TERM</code></font><code>()</code> after you free your last interpreter. </p>
-<p> Since <font SIZE="-1"><code>PERL_SYS_INIT3</code></font><code>()</code> may change <code>&quot;env&quot;</code>, it may be more appropriate to provide <code>&quot;env&quot;</code> as an argument to <code>perl_parse()</code>. </p>
-<p> Also notice that no matter what arguments you pass to <code>perl_parse()</code>, <font SIZE="-1"><code>PERL_SYS_INIT3</code></font><code>()</code> must be invoked on the C <code>main()</code> argc, argv and env and only once. </p>
-<p> Mind that argv[argc] must be <font SIZE="-1">NULL,</font> same as those passed to a main function in C. </p>
+<p> The macros <code>PERL_SYS_INIT3</code><code>()</code> and <code>PERL_SYS_TERM</code><code>()</code> provide system-specific tune up of the C runtime environment necessary to run Perl interpreters; they should only be called once regardless of how many interpreters you create or destroy. Call <code>PERL_SYS_INIT3</code><code>()</code> before you create your first interpreter, and <code>PERL_SYS_TERM</code><code>()</code> after you free your last interpreter. </p>
+<p> Since <code>PERL_SYS_INIT3</code><code>()</code> may change <code>&quot;env&quot;</code>, it may be more appropriate to provide <code>&quot;env&quot;</code> as an argument to <code>perl_parse()</code>. </p>
+<p> Also notice that no matter what arguments you pass to <code>perl_parse()</code>, <code>PERL_SYS_INIT3</code><code>()</code> must be invoked on the C <code>main()</code> argc, argv and env and only once. </p>
+<p> Mind that argv[argc] must be NULL, same as those passed to a main function in C. </p>
 <p> Now compile this program (I&#8217;ll call it <i>interp.c</i>) into an executable: </p>
 <pre><code>    % cc -o interp interp.c `perl -MExtUtils::Embed -e ccopts -e ldopts`
 </code></pre>
@@ -175,10 +175,10 @@ description: "perlembed – how to embed perl in your C program"
  818284590
 </code></pre>
 <p> yielding the number of seconds that elapsed between January 1, 1970 (the beginning of the Unix epoch), and the moment I began writing this sentence. </p>
-<p> In this particular case we don&#8217;t have to call <i>perl_run</i>, as we set the PL_exit_flag <font SIZE="-1">PERL_EXIT_DESTRUCT_END</font> which executes <font SIZE="-1">END</font> blocks in perl_destruct. </p>
+<p> In this particular case we don&#8217;t have to call <i>perl_run</i>, as we set the PL_exit_flag PERL_EXIT_DESTRUCT_END which executes END blocks in perl_destruct. </p>
 <p> If you want to pass arguments to the Perl subroutine, you can add strings to the <code>&quot;NULL&quot;</code>-terminated <code>&quot;args&quot;</code> list passed to <i>call_argv</i>. For other data types, or to examine return values, you&#8217;ll need to manipulate the Perl stack. That&#8217;s demonstrated in ``Fiddling with the Perl stack from your C program&#8217;&#8216;.  </p>
 <h3>Evaluating a Perl statement from your C program</h3>
-<p> Perl provides two <font SIZE="-1">API</font> functions to evaluate pieces of Perl code. These are ``eval_sv&#8217;&#8216; in perlapi and ``eval_pv&#8217;&#8216; in perlapi. </p>
+<p> Perl provides two API functions to evaluate pieces of Perl code. These are ``eval_sv&#8217;&#8216; in perlapi and ``eval_pv&#8217;&#8216; in perlapi. </p>
 <p> Arguably, these are the only routines you&#8217;ll ever need to execute snippets of Perl code from within your C program. Your code can be as long as you wish; it can contain multiple statements; it can employ ``use&#8217;&#8216; in perlfunc, ``require&#8217;&#8216; in perlfunc, and ``do&#8217;&#8216; in perlfunc to include external Perl files. </p>
 <p> <i>eval_pv</i> lets us evaluate individual Perl strings, and then extract variables for coercion into C types. The following program, <i>string.c</i>, executes three Perl strings, extracting an <code>&quot;int&quot;</code> from the first, a <code>&quot;float&quot;</code> from the second, and a <code>&quot;char *&quot;</code> from the third. </p>
 <pre><code> #include &lt;EXTERN.h&gt;
@@ -559,10 +559,10 @@ description: "perlembed – how to embed perl in your C program"
  foo says: hello
  Enter file name: ^C
 </code></pre>
-<font SIZE="-1"></font><h3>Execution of END blocks</h3>
-<p> Traditionally <font SIZE="-1">END</font> blocks have been executed at the end of the perl_run. This causes problems for applications that never call perl_run. Since perl 5.7.2 you can specify <code>&quot;PL_exit_flags |= PERL_EXIT_DESTRUCT_END&quot;</code> to get the new behaviour. This also enables the running of <font SIZE="-1">END</font> blocks if the perl_parse fails and <code>&quot;perl_destruct&quot;</code> will return the exit value.  </p>
+<h3>Execution of END blocks</h3>
+<p> Traditionally END blocks have been executed at the end of the perl_run. This causes problems for applications that never call perl_run. Since perl 5.7.2 you can specify <code>&quot;PL_exit_flags |= PERL_EXIT_DESTRUCT_END&quot;</code> to get the new behaviour. This also enables the running of END blocks if the perl_parse fails and <code>&quot;perl_destruct&quot;</code> will return the exit value.  </p>
 <h3>$0 assignments</h3>
-<p> When a perl script assigns a value to <code>$0</code> then the perl runtime will try to make this value show up as the program name reported by ``ps&#8217;&#8216; by updating the memory pointed to by the argv passed to <code>perl_parse()</code> and also calling <font SIZE="-1">API</font> functions like <code>setproctitle()</code> where available. This behaviour might not be appropriate when embedding perl and can be disabled by assigning the value <code>1</code> to the variable <code>&quot;PL_origalen&quot;</code> before <code>perl_parse()</code> is called. </p>
+<p> When a perl script assigns a value to <code>$0</code> then the perl runtime will try to make this value show up as the program name reported by ``ps&#8217;&#8216; by updating the memory pointed to by the argv passed to <code>perl_parse()</code> and also calling API functions like <code>setproctitle()</code> where available. This behaviour might not be appropriate when embedding perl and can be disabled by assigning the value <code>1</code> to the variable <code>&quot;PL_origalen&quot;</code> before <code>perl_parse()</code> is called. </p>
 <p> The <i>persistent.c</i> example above is for instance likely to segfault when <code>$0</code> is assigned to if the <code>&quot;PL_origalen = 1;&quot;</code> assignment is removed. This because perl will try to write to the read only memory of the <code>&quot;embedding[]&quot;</code> strings.  </p>
 <h3>Maintaining multiple interpreter instances</h3>
 <p> Some rare applications will need to create more than one interpreter during a session. Such an application might sporadically decide to release any resources associated with the interpreter. </p>
@@ -623,8 +623,8 @@ description: "perlembed – how to embed perl in your C program"
      exit(EXIT_SUCCESS);
  }
 </code></pre>
-<p> Note the calls to <font SIZE="-1"><code>PERL_SET_CONTEXT</code></font><code>()</code>. These are necessary to initialize the global state that tracks which interpreter is the ``current&#8217;&#8216; one on the particular process or thread that may be running it. It should always be used if you have more than one interpreter and are making perl <font SIZE="-1">API</font> calls on both interpreters in an interleaved fashion. </p>
-<p> <font SIZE="-1">PERL_SET_CONTEXT</font>(interp) should also be called whenever <code>&quot;interp&quot;</code> is used by a thread that did not create it (using either <code>perl_alloc()</code>, or the more esoteric <code>perl_clone()</code>). </p>
+<p> Note the calls to <code>PERL_SET_CONTEXT</code><code>()</code>. These are necessary to initialize the global state that tracks which interpreter is the ``current&#8217;&#8216; one on the particular process or thread that may be running it. It should always be used if you have more than one interpreter and are making perl API calls on both interpreters in an interleaved fashion. </p>
+<p> PERL_SET_CONTEXT(interp) should also be called whenever <code>&quot;interp&quot;</code> is used by a thread that did not create it (using either <code>perl_alloc()</code>, or the more esoteric <code>perl_clone()</code>). </p>
 <p> Compile as usual: </p>
 <pre><code> % cc -o multiplicity multiplicity.c \
   `perl -MExtUtils::Embed -e ccopts -e ldopts`
@@ -635,16 +635,16 @@ description: "perlembed – how to embed perl in your C program"
  Hi, I'm two_perl
 </code></pre>
 <h3>Using Perl modules, which themselves use C libraries, from your C program</h3>
-<p> If you&#8217;ve played with the examples above and tried to embed a script that <i></i>use()<i></i>s a Perl module (such as <i>Socket</i>) which itself uses a C or C<font SIZE="-2">++</font> library, this probably happened: </p>
+<p> If you&#8217;ve played with the examples above and tried to embed a script that <i></i>use()<i></i>s a Perl module (such as <i>Socket</i>) which itself uses a C or C++ library, this probably happened: </p>
 <pre><code> Can't load module Socket, dynamic loading not available in this perl.
   (You may need to build a new perl executable which either supports
   dynamic loading or has the Socket module statically linked into it.)
 </code></pre>
 <p> What&#8217;s wrong? </p>
-<p> Your interpreter doesn&#8217;t know how to communicate with these extensions on its own. A little glue will help. Up until now you&#8217;ve been calling <i></i>perl_parse()<i></i>, handing it <font SIZE="-1">NULL</font> for the second argument: </p>
+<p> Your interpreter doesn&#8217;t know how to communicate with these extensions on its own. A little glue will help. Up until now you&#8217;ve been calling <i></i>perl_parse()<i></i>, handing it NULL for the second argument: </p>
 <pre><code> perl_parse(my_perl, NULL, argc, my_argv, NULL);
 </code></pre>
-<p> That&#8217;s where the glue code can be inserted to create the initial contact between Perl and linked C/C<font SIZE="-2">++</font> routines. Let&#8217;s take a look some pieces of <i>perlmain.c</i> to see how Perl does this: </p>
+<p> That&#8217;s where the glue code can be inserted to create the initial contact between Perl and linked C/C++ routines. Let&#8217;s take a look some pieces of <i>perlmain.c</i> to see how Perl does this: </p>
 <pre><code> static void xs_init (pTHX);
  EXTERN_C void boot_DynaLoader (pTHX_ CV* cv);
  EXTERN_C void boot_Socket (pTHX_ CV* cv);
@@ -657,7 +657,7 @@ description: "perlembed – how to embed perl in your C program"
         newXS(&quot;Socket::bootstrap&quot;, boot_Socket, file);
  }
 </code></pre>
-<p> Simply put: for each extension linked with your Perl executable (determined during its initial configuration on your computer or when adding a new extension), a Perl subroutine is created to incorporate the extension&#8217;s routines. Normally, that subroutine is named <i></i>Module::bootstrap()<i></i> and is invoked when you say <i>use Module</i>. In turn, this hooks into an <font SIZE="-1">XSUB,</font> <i>boot_Module</i>, which creates a Perl counterpart for each of the extension&#8217;s XSUBs. Don&#8217;t worry about this part; leave that to the <i>xsubpp</i> and extension authors. If your extension is dynamically loaded, DynaLoader creates <i></i>Module::bootstrap()<i></i> for you on the fly. In fact, if you have a working DynaLoader then there is rarely any need to link in any other extensions statically. </p>
+<p> Simply put: for each extension linked with your Perl executable (determined during its initial configuration on your computer or when adding a new extension), a Perl subroutine is created to incorporate the extension&#8217;s routines. Normally, that subroutine is named <i></i>Module::bootstrap()<i></i> and is invoked when you say <i>use Module</i>. In turn, this hooks into an XSUB, <i>boot_Module</i>, which creates a Perl counterpart for each of the extension&#8217;s XSUBs. Don&#8217;t worry about this part; leave that to the <i>xsubpp</i> and extension authors. If your extension is dynamically loaded, DynaLoader creates <i></i>Module::bootstrap()<i></i> for you on the fly. In fact, if you have a working DynaLoader then there is rarely any need to link in any other extensions statically. </p>
 <p> Once you have this code, slap it into the second argument of <i></i>perl_parse()<i></i>: </p>
 <pre><code> perl_parse(my_perl, xs_init, argc, my_argv, NULL);
 </code></pre>
@@ -675,17 +675,17 @@ description: "perlembed – how to embed perl in your C program"
  % cc -o interp perlxsi.o interp.o `perl -MExtUtils::Embed -e ldopts`
 </code></pre>
 <p> Consult perlxs, perlguts, and perlapi for more details.  </p>
-<font SIZE="-1"></font><h3>Using embedded Perl with POSIX locales</h3>
-<p> (See perllocale for information about these.) When a Perl interpreter normally starts up, it tells the system it wants to use the system&#8217;s default locale. This is often, but not necessarily, the ``C&#8217;&#8216; or ``<font SIZE="-1">POSIX&#8217;&#8216;</font> locale. Absent a <code>&quot;use locale&quot;</code> within the perl code, this mostly has no effect (but see ``Not within the scope of &#8216;&#8216;use locale&quot;&quot; in perllocale). Also, there is not a problem if the locale you want to use in your embedded perl is the same as the system default. However, this doesn&#8217;t work if you have set up and want to use a locale that isn&#8217;t the system default one. Starting in Perl v5.20, you can tell the embedded Perl interpreter that the locale is already properly set up, and to skip doing its own normal initialization. It skips if the environment variable <code>&quot;PERL_SKIP_LOCALE_INIT&quot;</code> is set (even if set to 0 or <code>&quot;&quot;</code>). A perl that has this capability will define the C pre-processor symbol <code>&quot;HAS_SKIP_LOCALE_INIT&quot;</code>. This allows code that has to work with multiple Perl versions to do some sort of work-around when confronted with an earlier Perl. </p>
-<p> If your program is using the <font SIZE="-1">POSIX 2008</font> multi-thread locale functionality, you should switch into the global locale and set that up properly before starting the Perl interpreter. It will then properly switch back to using the thread-safe functions.  </p>
+<h3>Using embedded Perl with POSIX locales</h3>
+<p> (See perllocale for information about these.) When a Perl interpreter normally starts up, it tells the system it wants to use the system&#8217;s default locale. This is often, but not necessarily, the ``C&#8217;&#8216; or ``POSIX&#8217;&#8216; locale. Absent a <code>&quot;use locale&quot;</code> within the perl code, this mostly has no effect (but see ``Not within the scope of &#8216;&#8216;use locale&quot;&quot; in perllocale). Also, there is not a problem if the locale you want to use in your embedded perl is the same as the system default. However, this doesn&#8217;t work if you have set up and want to use a locale that isn&#8217;t the system default one. Starting in Perl v5.20, you can tell the embedded Perl interpreter that the locale is already properly set up, and to skip doing its own normal initialization. It skips if the environment variable <code>&quot;PERL_SKIP_LOCALE_INIT&quot;</code> is set (even if set to 0 or <code>&quot;&quot;</code>). A perl that has this capability will define the C pre-processor symbol <code>&quot;HAS_SKIP_LOCALE_INIT&quot;</code>. This allows code that has to work with multiple Perl versions to do some sort of work-around when confronted with an earlier Perl. </p>
+<p> If your program is using the POSIX 2008 multi-thread locale functionality, you should switch into the global locale and set that up properly before starting the Perl interpreter. It will then properly switch back to using the thread-safe functions.  </p>
 <h2>Hiding Perl_</h2>
-<p> If you completely hide the short forms of the Perl public <font SIZE="-1">API,</font> add -DPERL_NO_SHORT_NAMES to the compilation flags. This means that for example instead of writing </p>
+<p> If you completely hide the short forms of the Perl public API, add -DPERL_NO_SHORT_NAMES to the compilation flags. This means that for example instead of writing </p>
 <pre><code>    warn(&quot;%d bottles of beer on the wall&quot;, bottlecount);
 </code></pre>
 <p> you will have to write the explicit full form </p>
 <pre><code>    Perl_warn(aTHX_ &quot;%d bottles of beer on the wall&quot;, bottlecount);
 </code></pre>
-<p> (See ``Background and <font SIZE="-1">PERL_IMPLICIT_CONTEXT&#8217;&#8216;</font> in perlguts for the explanation of the <code>&quot;aTHX_&quot;</code>. ) Hiding the short forms is very useful for avoiding all sorts of nasty (C preprocessor or otherwise) conflicts with other software packages (Perl defines about 2400 APIs with these short names, take or leave few hundred, so there certainly is room for conflict.)  </p>
+<p> (See ``Background and PERL_IMPLICIT_CONTEXT&#8217;&#8216; in perlguts for the explanation of the <code>&quot;aTHX_&quot;</code>. ) Hiding the short forms is very useful for avoiding all sorts of nasty (C preprocessor or otherwise) conflicts with other software packages (Perl defines about 2400 APIs with these short names, take or leave few hundred, so there certainly is room for conflict.)  </p>
 <h2>MORAL</h2>
 <p> You can sometimes <i>write faster code</i> in C, but you can always <i>write code faster</i> in Perl. Because you can use each from the other, combine them as you wish.  </p>
 <h2>AUTHOR</h2>

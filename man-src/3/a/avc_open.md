@@ -10,7 +10,7 @@ description: "avc_open, avc_destroy, avc_reset, avc_cleanup – userspace SELinu
 
 <p> avc_open, avc_destroy, avc_reset, avc_cleanup &#8211; userspace SELinux AVC setup and teardown </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
+<p> <code>#include &lt;selinux/selinux.h&gt;</code><br/>
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>int avc_open(struct selinux_opt *</code><i>options</i><code>, unsigned </code><i>nopt</i><code>);</code> </p>
 <p> <code>void avc_destroy(void);</code> </p>

@@ -10,7 +10,7 @@ description: "bzmore, bzless – file perusal filter for crt viewing of bzip2 co
 
 <p> bzmore, bzless &#8211; file perusal filter for crt viewing of bzip2 compressed text </p>
 <h2>SYNOPSIS</h2>
-<p> <code>bzmore</code> [ name &#8230; ]<br />
+<p> <code>bzmore</code> [ name &#8230; ]<br/>
  <code>bzless</code> [ name &#8230; ]</p>
 <h2>NOTE</h2>
 <p> In the following description, <i>bzless</i> and <i>less</i> can be used interchangeably with <i>bzmore</i> and <i>more.</i></p>

@@ -45,8 +45,8 @@ int ftw(const char *dirpath,
 <dt><code>FTW_SLN</code></dt>
 <dd> <i>fpath</i> is a symbolic link pointing to a nonexistent file. (This occurs only if <code>FTW_PHYS</code> is not set.) In this case the <i>sb</i> argument passed to <i>fn</i>() contains information returned by performing <code><a href="/docs/linux/man/2-lstat/">lstat</a></code>(2) on the &quot;dangling&quot; symbolic link. (But see BUGS.)</dd></dl>
 <p> The fourth argument (<i>ftwbuf</i>) that <code>nftw</code>() supplies when calling <i>fn</i>() is a pointer to a structure of type <i>FTW</i>: </p>
-<p> struct FTW {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int base;<br />
+<p> struct FTW {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int base;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int level; }; </p>
 <p> <i>base</i> is the offset of the filename (i.e., basename component) in the pathname given in <i>fpath</i>. <i>level</i> is the depth of <i>fpath</i> in the directory tree, relative to the root of the tree (<i>dirpath</i>, which has depth 0). </p>
 <p> To stop the tree walk, <i>fn</i>() returns a nonzero value; this value will become the return value of <code>nftw</code>(). As long as <i>fn</i>() returns 0, <code>nftw</code>() will continue either until it has traversed the entire tree, in which case it will return zero, or until it encounters an error (such as a <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) failure), in which case it will return -1. </p>
@@ -126,32 +126,32 @@ int ftw(const char *dirpath,
 <p> The following program traverses the directory tree under the path named in its first command-line argument, or under the current directory if no argument is supplied. It displays various information about each file. The second command-line argument can be used to specify characters that control the value assigned to the <i>flags</i> argument when calling <code>nftw</code>().</p>
 <h3>Program source</h3>
 <p> #define _XOPEN_SOURCE 500 #include &lt;ftw.h&gt; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt; #include &lt;stdint.h&gt; </p>
-<p> static int display_info(const char *fpath, const struct stat *sb,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tflag, struct FTW&nbsp;*ftwbuf) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;%-3s&nbsp;%2d&nbsp;&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(tflag&nbsp;==&nbsp;FTW_D)&nbsp;?&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;d&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;:&nbsp;(tflag&nbsp;==&nbsp;FTW_DNR)&nbsp;?&nbsp;&quot;dnr&quot;&nbsp;:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(tflag&nbsp;==&nbsp;FTW_DP)&nbsp;?&nbsp;<wbr>&nbsp;&quot;dp&quot;&nbsp;<wbr>&nbsp;:&nbsp;(tflag&nbsp;==&nbsp;FTW_F)&nbsp;?&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;f&quot;&nbsp;:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(tflag&nbsp;==&nbsp;FTW_NS)&nbsp;?&nbsp;<wbr>&nbsp;&quot;ns&quot;&nbsp;<wbr>&nbsp;:&nbsp;(tflag&nbsp;==&nbsp;FTW_SL)&nbsp;?&nbsp;<wbr>&nbsp;&quot;sl&quot;&nbsp;:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(tflag&nbsp;==&nbsp;FTW_SLN)&nbsp;?&nbsp;&quot;sln&quot;&nbsp;:&nbsp;&quot;???&quot;,<br />
+<p> static int display_info(const char *fpath, const struct stat *sb,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tflag, struct FTW&nbsp;*ftwbuf) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;%-3s&nbsp;%2d&nbsp;&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(tflag&nbsp;==&nbsp;FTW_D)&nbsp;?&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;d&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;:&nbsp;(tflag&nbsp;==&nbsp;FTW_DNR)&nbsp;?&nbsp;&quot;dnr&quot;&nbsp;:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(tflag&nbsp;==&nbsp;FTW_DP)&nbsp;?&nbsp;<wbr>&nbsp;&quot;dp&quot;&nbsp;<wbr>&nbsp;:&nbsp;(tflag&nbsp;==&nbsp;FTW_F)&nbsp;?&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;f&quot;&nbsp;:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(tflag&nbsp;==&nbsp;FTW_NS)&nbsp;?&nbsp;<wbr>&nbsp;&quot;ns&quot;&nbsp;<wbr>&nbsp;:&nbsp;(tflag&nbsp;==&nbsp;FTW_SL)&nbsp;?&nbsp;<wbr>&nbsp;&quot;sl&quot;&nbsp;:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(tflag&nbsp;==&nbsp;FTW_SLN)&nbsp;?&nbsp;&quot;sln&quot;&nbsp;:&nbsp;&quot;???&quot;,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ftwbuf-&gt;level); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(tflag&nbsp;==&nbsp;FTW_NS)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&#8212;&#8212;-&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;else<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(tflag&nbsp;==&nbsp;FTW_NS)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&#8212;&#8212;-&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;else<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;%7jd&quot;,&nbsp;(intmax_t)&nbsp;sb-&gt;st_size); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;%-40s&nbsp;%d&nbsp;%s
-&quot;,<br />
+&quot;,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fpath, ftwbuf-&gt;base, fpath&nbsp;+&nbsp;ftwbuf-&gt;base); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return 0;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;To tell nftw()&nbsp;to continue&nbsp;*/ } </p>
-<p> int main(int argc, char *argv[]) {<br />
+<p> int main(int argc, char *argv[]) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int flags&nbsp;=&nbsp;0; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;&gt;&nbsp;2&nbsp;&amp;&amp;&nbsp;strchr(argv[2],&nbsp;&#8216;d&#8217;)&nbsp;!=&nbsp;NULL)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;flags |=&nbsp;FTW_DEPTH;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;&gt;&nbsp;2&nbsp;&amp;&amp;&nbsp;strchr(argv[2],&nbsp;&#8216;p&#8217;)&nbsp;!=&nbsp;NULL)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;&gt;&nbsp;2&nbsp;&amp;&amp;&nbsp;strchr(argv[2],&nbsp;&#8216;d&#8217;)&nbsp;!=&nbsp;NULL)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;flags |=&nbsp;FTW_DEPTH;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;&gt;&nbsp;2&nbsp;&amp;&amp;&nbsp;strchr(argv[2],&nbsp;&#8216;p&#8217;)&nbsp;!=&nbsp;NULL)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;flags |=&nbsp;FTW_PHYS; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(nftw((argc&nbsp;&lt;&nbsp;2)&nbsp;?&nbsp;&quot;.&quot;&nbsp;: argv[1], display_info, 20, flags)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;==&nbsp;-1)&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;nftw&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(nftw((argc&nbsp;&lt;&nbsp;2)&nbsp;?&nbsp;&quot;.&quot;&nbsp;: argv[1], display_info, 20, flags)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;==&nbsp;-1)&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;nftw&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>

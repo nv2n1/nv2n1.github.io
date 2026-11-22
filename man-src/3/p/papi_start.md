@@ -20,12 +20,12 @@ description: "PAPI_start –"
 <dd><i>EventSet</i> &#8212; an integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code></dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i><br />
- <i>PAPI_EINVAL</i> &#8212; One or more of the arguments is invalid.<br />
- <i>PAPI_ESYS</i> &#8212; A system or C library call failed inside PAPI, see the errno variable.<br />
- <i>PAPI_ENOEVST</i> &#8212; The EventSet specified does not exist.<br />
- <i>PAPI_EISRUN</i> &#8212; The EventSet is currently counting events.<br />
- <i>PAPI_ECNFLCT</i> &#8212; The underlying counter hardware can not count this event and other events in the EventSet simultaneously.<br />
+<dd><i>PAPI_OK</i><br/>
+ <i>PAPI_EINVAL</i> &#8212; One or more of the arguments is invalid.<br/>
+ <i>PAPI_ESYS</i> &#8212; A system or C library call failed inside PAPI, see the errno variable.<br/>
+ <i>PAPI_ENOEVST</i> &#8212; The EventSet specified does not exist.<br/>
+ <i>PAPI_EISRUN</i> &#8212; The EventSet is currently counting events.<br/>
+ <i>PAPI_ECNFLCT</i> &#8212; The underlying counter hardware can not count this event and other events in the EventSet simultaneously.<br/>
  <i>PAPI_ENOEVNT</i> &#8212; The PAPI preset is not available on the underlying hardware.</dd></dl>
 <p> <code>PAPI_start</code> starts counting all of the hardware events contained in the previously defined EventSet. All counters are implicitly set to zero before counting. Assumes an initialized PAPI library and a properly added event set. </p>
 <p> <code>Example:</code></p>

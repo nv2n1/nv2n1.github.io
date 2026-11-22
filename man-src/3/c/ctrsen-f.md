@@ -10,7 +10,7 @@ description: "ctrsen.f –"
 <p>ctrsen.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ctrsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, W, M, S, SEP, WORK, LWORK, INFO)<br />
+<p>subroutine <code>ctrsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, W, M, S, SEP, WORK, LWORK, INFO)<br/>
  <i></i><code>CTRSEN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctrsen (characterJOB, characterCOMPQ, logical, dimension( * )SELECT, integerN, complex, dimension( ldt, * )T, integerLDT, complex, dimension( ldq, * )Q, integerLDQ, complex, dimension( * )W, integerM, realS, realSEP, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

@@ -11,36 +11,36 @@ description: "Key :: Name Manipulation Methods –"
 <p> Key :: Name Manipulation Methods - </p>
 <p> Methods to do various operations on Key names.  </p>
 <h3>Functions</h3>
-<p> <br />
- const char * <code>keyName</code> (const Key *key) <br />
- <br />
- ssize_t <code>keyGetNameSize</code> (const Key *key) <br />
- <br />
- ssize_t <code>keyGetName</code> (const Key *key, char *returnedName, size_t maxSize) <br />
- <br />
- ssize_t <code>keySetName</code> (Key *key, const char *newName) <br />
- <br />
- ssize_t <code>keyGetFullNameSize</code> (const Key *key) <br />
- <br />
- ssize_t <code>keyGetFullName</code> (const Key *key, char *returnedName, size_t maxSize) <br />
- <br />
- const char * <code>keyBaseName</code> (const Key *key) <br />
- <br />
- ssize_t <code>keyGetBaseNameSize</code> (const Key *key) <br />
- <br />
- ssize_t <code>keyGetBaseName</code> (const Key *key, char *returned, size_t maxSize) <br />
- <br />
- ssize_t <code>keyAddBaseName</code> (Key *key, const char *baseName) <br />
- <br />
- ssize_t <code>keySetBaseName</code> (Key *key, const char *baseName) <br />
- <br />
- const char * <code>keyOwner</code> (const Key *key) <br />
- <br />
- ssize_t <code>keyGetOwnerSize</code> (const Key *key) <br />
- <br />
- ssize_t <code>keyGetOwner</code> (const Key *key, char *returned, size_t maxSize) <br />
- <br />
- ssize_t <code>keySetOwner</code> (Key *key, const char *owner) <br />
+<p> <br/>
+ const char * <code>keyName</code> (const Key *key) <br/>
+ <br/>
+ ssize_t <code>keyGetNameSize</code> (const Key *key) <br/>
+ <br/>
+ ssize_t <code>keyGetName</code> (const Key *key, char *returnedName, size_t maxSize) <br/>
+ <br/>
+ ssize_t <code>keySetName</code> (Key *key, const char *newName) <br/>
+ <br/>
+ ssize_t <code>keyGetFullNameSize</code> (const Key *key) <br/>
+ <br/>
+ ssize_t <code>keyGetFullName</code> (const Key *key, char *returnedName, size_t maxSize) <br/>
+ <br/>
+ const char * <code>keyBaseName</code> (const Key *key) <br/>
+ <br/>
+ ssize_t <code>keyGetBaseNameSize</code> (const Key *key) <br/>
+ <br/>
+ ssize_t <code>keyGetBaseName</code> (const Key *key, char *returned, size_t maxSize) <br/>
+ <br/>
+ ssize_t <code>keyAddBaseName</code> (Key *key, const char *baseName) <br/>
+ <br/>
+ ssize_t <code>keySetBaseName</code> (Key *key, const char *baseName) <br/>
+ <br/>
+ const char * <code>keyOwner</code> (const Key *key) <br/>
+ <br/>
+ ssize_t <code>keyGetOwnerSize</code> (const Key *key) <br/>
+ <br/>
+ ssize_t <code>keyGetOwner</code> (const Key *key, char *returned, size_t maxSize) <br/>
+ <br/>
+ ssize_t <code>keySetOwner</code> (Key *key, const char *owner) <br/>
   </p>
 <h2>Detailed Description</h2>
 <p> Methods to do various operations on Key names. </p>
@@ -80,7 +80,7 @@ description: "Key :: Name Manipulation Methods –"
  </dd></dl>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>key</i> the key object to work with <br />
+<dd> <p> <i>key</i> the key object to work with <br/>
  <i>baseName</i> the string to append to the name </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -134,8 +134,8 @@ keyDel(key);
  </dd></dl>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>key</i> the key to extract basename from <br />
- <i>returned</i> a pre-allocated buffer to store the basename <br />
+<dd> <p> <i>key</i> the key to extract basename from <br/>
+ <i>returned</i> a pre-allocated buffer to store the basename <br/>
  <i>maxSize</i> size of the returned buffer </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -183,8 +183,8 @@ keyDel(key);
  </dd></dl>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>key</i> the key object <br />
- <i>returnedName</i> pre-allocated memory to write the key name <br />
+<dd> <p> <i>key</i> the key object <br/>
+ <i>returnedName</i> pre-allocated memory to write the key name <br/>
  <i>maxSize</i> maximum number of bytes that will fit in returnedName, including the final NULL </p>
  </dd></dl>
 <h3>ssize_t keyGetFullNameSize (const Key * key)Bytes needed to store the key name including user domain and ending NULL.</h3>
@@ -213,8 +213,8 @@ keyDel(key);
  </dd></dl>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>key</i> the key object to work with <br />
- <i>returnedName</i> pre-allocated memory to write the key name <br />
+<dd> <p> <i>key</i> the key object to work with <br/>
+ <i>returnedName</i> pre-allocated memory to write the key name <br/>
  <i>maxSize</i> maximum number of bytes that will fit in returnedName, including the final NULL </p>
  </dd></dl>
 <p> <code>See also:</code> </p>
@@ -252,8 +252,8 @@ keyDel(key);
 <p> Although usually the same, the owner of a key is not related to its UID. Owner are related to WHERE the key is stored on disk, while UIDs are related to mode controls of a key. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>key</i> the object to work with <br />
- <i>returned</i> a pre-allocated space to store the owner <br />
+<dd> <p> <i>key</i> the object to work with <br/>
+ <i>returned</i> a pre-allocated space to store the owner <br/>
  <i>maxSize</i> maximum number of bytes that fit returned </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -358,7 +358,7 @@ keyOwner(key); // you would expect '' here
  </dd></dl>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>key</i> the key object to work with <br />
+<dd> <p> <i>key</i> the key object to work with <br/>
  <i>baseName</i> the string used to overwrite the basename of the key </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -398,7 +398,7 @@ keyOwner(key); // you would expect '' here
  </dd></dl>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>key</i> the key object to work with <br />
+<dd> <p> <i>key</i> the key object to work with <br/>
  <i>newName</i> the new key name </p>
  </dd></dl>
 <p> <code>See also:</code> </p>
@@ -412,7 +412,7 @@ keyOwner(key); // you would expect '' here
 <p> A private copy is stored, so the passed parameter can be freed after the call. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>key</i> the key object to work with <br />
+<dd> <p> <i>key</i> the key object to work with <br/>
  <i>owner</i> the owner (or user name) </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>

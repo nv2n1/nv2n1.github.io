@@ -8,14 +8,14 @@ url: "/docs/linux/man/1-ps2pdf14/"
 description: "ps2pdf – Convert PostScript to PDF using ghostscript ps2pdf12 – Convert PostScript to PDF 1.2 (Acrobat 3-and-later compatible) using ghostscript ps2pdf13 – Convert PostScript to PDF 1.3 (Acrobat 4-..."
 ---
 
-<p> ps2pdf &#8211; Convert PostScript to PDF using ghostscript<br />
- ps2pdf12 &#8211; Convert PostScript to PDF 1.2 (Acrobat 3-and-later compatible) using ghostscript<br />
- ps2pdf13 &#8211; Convert PostScript to PDF 1.3 (Acrobat 4-and-later compatible) using ghostscript<br />
+<p> ps2pdf &#8211; Convert PostScript to PDF using ghostscript<br/>
+ ps2pdf12 &#8211; Convert PostScript to PDF 1.2 (Acrobat 3-and-later compatible) using ghostscript<br/>
+ ps2pdf13 &#8211; Convert PostScript to PDF 1.3 (Acrobat 4-and-later compatible) using ghostscript<br/>
  ps2pdf14 &#8211; Convert PostScript to PDF 1.4 (Acrobat 5-and-later compatible) using ghostscript </p>
 <h2>SYNOPSIS</h2>
-<p> <code>ps2pdf</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]<br />
- <code>ps2pdf12</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]<br />
- <code>ps2pdf13</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]<br />
+<p> <code>ps2pdf</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]<br/>
+ <code>ps2pdf12</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]<br/>
+ <code>ps2pdf13</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]<br/>
  <code>ps2pdf14</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>ps2pdf</code> scripts are work-alikes for nearly all the functionality (but not the user interface) of Adobe&#8217;s Acrobat(TM) Distiller(TM) product: they convert PostScript files to Portable Document Format (PDF) files. </p>
@@ -47,7 +47,7 @@ description: "ps2pdf – Convert PostScript to PDF using ghostscript ps2pdf12 �
 <dt>
 </dt><dd> <code>make_report.pl </code> -t ps | <code>ps2pdf</code> -dCompatibilityLevel=1.3 &#8211; &#8211; | <code>lpr</code></dd></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gs/">gs</a>(1), <a href="/docs/linux/man/1-ps2pdfwr/">ps2pdfwr</a>(1),<br />
+<p> <a href="/docs/linux/man/1-gs/">gs</a>(1), <a href="/docs/linux/man/1-ps2pdfwr/">ps2pdfwr</a>(1),<br/>
  VectorDevices.htm in the Ghostscript documentation</p>
 <h2>BUGS</h2>
 <p> See <a rel="nofollow" href="http://bugs.ghostscript.com/">http://bugs.ghostscript.com/</a> and the Usenet news group comp.lang.postscript.</p>

@@ -11,7 +11,7 @@ description: "claqsp.f –"
 <p> claqsp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>claqsp</code> (UPLO, N, AP, S, SCOND, AMAX, EQUED)<br />
+<p> subroutine <code>claqsp</code> (UPLO, N, AP, S, SCOND, AMAX, EQUED)<br/>
  <i></i><code>CLAQSP</code> scales a symmetric/Hermitian matrix in packed storage, using scaling factors computed by sppequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claqsp (characterUPLO, integerN, complex, dimension( * )AP, real, dimension( * )S, realSCOND, realAMAX, characterEQUED)</h3>

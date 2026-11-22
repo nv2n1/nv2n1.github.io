@@ -15,19 +15,19 @@ description: "docker-search – Search the Docker Hub for images"
 <p> Search Docker Hub for images that match the specified TERM. The table of images returned displays the name, description (truncated by default), number of stars awarded, whether the image is official, and whether it is automated. </p>
 <p> <i>Note</i> &#8211; Search queries will only return up to 25 results </p>
 <h2>OPTIONS</h2>
-<p> <code>-f</code>, <code>&#8211;filter</code>=[]<br />
-Filter output based on these conditions:<br />
-&#8211; stars=&lt;numberOfStar&gt;<br />
-&#8211; is-automated=(true|false)<br />
+<p> <code>-f</code>, <code>&#8211;filter</code>=[]<br/>
+Filter output based on these conditions:<br/>
+&#8211; stars=&lt;numberOfStar&gt;<br/>
+&#8211; is-automated=(true|false)<br/>
 &#8211; is-official=(true|false) </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 Print usage statement </p>
-<p> <code>&#8211;no-index</code>=<i>true</i>|<i>false</i><br />
-Do not include index name in output. Sort results primarily by registry<br />
+<p> <code>&#8211;no-index</code>=<i>true</i>|<i>false</i><br/>
+Do not include index name in output. Sort results primarily by registry<br/>
 name. </p>
-<p> <code>&#8211;limit</code>=<i>LIMIT</i><br />
+<p> <code>&#8211;limit</code>=<i>LIMIT</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Maximum returned search results. The default is 25. </p>
-<p> <code>&#8211;no-trunc</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;no-trunc</code>=<i>true</i>|<i>false</i><br/>
 Don&#8217;t truncate output. The default is&nbsp;<wbr><i>false</i>. </p>
 <h2>EXAMPLES</h2>
 <h2>Search Docker Hub for ranked images</h2>

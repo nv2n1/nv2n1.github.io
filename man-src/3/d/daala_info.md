@@ -16,23 +16,23 @@ description: "daala_info –"
 <p> unsigned char <code>version_major</code> </p>
 <p> unsigned char <code>version_minor</code> </p>
 <p> unsigned char <code>version_sub</code> </p>
-<p> int32_t <code>pic_width</code><br />
- <i>pic_width,_height form a region of interest to encode </i><br />
+<p> int32_t <code>pic_width</code><br/>
+ <i>pic_width,_height form a region of interest to encode </i><br/>
  int32_t <code>pic_height</code> </p>
 <p> uint32_t <code>pixel_aspect_numerator</code> </p>
 <p> uint32_t <code>pixel_aspect_denominator</code> </p>
 <p> uint32_t <code>timebase_numerator</code> </p>
 <p> uint32_t <code>timebase_denominator</code> </p>
 <p> uint32_t <code>frame_duration</code> </p>
-<p> int <code>keyframe_granule_shift</code><br />
- <i>The amount to shift to extract the last keyframe number from the granule position. </i><br />
- int <code>bitdepth_mode</code><br />
- <i>bitdepth_mode is one of the three OD_BITDEPTH_MODE_X choices allowed above. </i><br />
- int <code>full_precision_references</code><br />
- <i>FPR must be on for high-depth, including lossless high-depth. </i><br />
+<p> int <code>keyframe_granule_shift</code><br/>
+ <i>The amount to shift to extract the last keyframe number from the granule position. </i><br/>
+ int <code>bitdepth_mode</code><br/>
+ <i>bitdepth_mode is one of the three OD_BITDEPTH_MODE_X choices allowed above. </i><br/>
+ int <code>full_precision_references</code><br/>
+ <i>FPR must be on for high-depth, including lossless high-depth. </i><br/>
  int <code>nplanes</code> </p>
 <p> <code>daala_plane_info</code> <code>plane_info</code> [<code>OD_NPLANES_MAX</code>] </p>
-<p> int <code>keyframe_rate</code><br />
+<p> int <code>keyframe_rate</code><br/>
  <i>key frame rate defined how often a key frame is emitted by encoder in number of frames. </i></p>
 <h2>Detailed Description</h2>
 <p> Configuration parameters for a codec instance. </p>

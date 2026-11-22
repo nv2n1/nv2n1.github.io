@@ -10,41 +10,41 @@ description: "objdump – display information from object files."
 
 <p> objdump &#8211; display information from object files.</p>
 <h2>SYNOPSIS</h2>
-<p> objdump [<code>-a</code>|<code>&#8211;archive-headers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-d</code>|<code>&#8211;disassemble</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-D</code>|<code>&#8211;disassemble-all</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-z</code>|<code>&#8211;disassemble-zeroes</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-EB</code>|<code>-EL</code>|<code>&#8211;endian=</code>{big | little&nbsp;<wbr>}]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-f</code>|<code>&#8211;file-headers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;file-start-context</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-g</code>|<code>&#8211;debugging</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>|<code>&#8211;debugging-tags</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-h</code>|<code>&#8211;section-headers</code>|<code>&#8211;headers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>|<code>&#8211;info</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-j</code>&nbsp;<wbr><i>section</i>|<code>&#8211;section=</code><i>section</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-l</code>|<code>&#8211;line-numbers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-S</code>|<code>&#8211;source</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-m</code>&nbsp;<wbr><i>machine</i>|<code>&#8211;architecture=</code><i>machine</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-M</code>&nbsp;<wbr><i>options</i>|<code>&#8211;disassembler-options=</code><i>options</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;private-headers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-r</code>|<code>&#8211;reloc</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-R</code>|<code>&#8211;dynamic-reloc</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-s</code>|<code>&#8211;full-contents</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-G</code>|<code>&#8211;stabs</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>|<code>&#8211;syms</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-T</code>|<code>&#8211;dynamic-syms</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-x</code>|<code>&#8211;all-headers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-w</code>|<code>&#8211;wide</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;start-address=</code><i>address</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;stop-address=</code><i>address</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix-addresses</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;[no-]show-raw-insn</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;adjust-vma=</code><i>offset</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;special-syms</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-H</code>|<code>&#8211;help</code>]<br />
+<p> objdump [<code>-a</code>|<code>&#8211;archive-headers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-d</code>|<code>&#8211;disassemble</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-D</code>|<code>&#8211;disassemble-all</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-z</code>|<code>&#8211;disassemble-zeroes</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-EB</code>|<code>-EL</code>|<code>&#8211;endian=</code>{big | little&nbsp;<wbr>}]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-f</code>|<code>&#8211;file-headers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;file-start-context</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-g</code>|<code>&#8211;debugging</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>|<code>&#8211;debugging-tags</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-h</code>|<code>&#8211;section-headers</code>|<code>&#8211;headers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>|<code>&#8211;info</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-j</code>&nbsp;<wbr><i>section</i>|<code>&#8211;section=</code><i>section</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-l</code>|<code>&#8211;line-numbers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-S</code>|<code>&#8211;source</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-m</code>&nbsp;<wbr><i>machine</i>|<code>&#8211;architecture=</code><i>machine</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-M</code>&nbsp;<wbr><i>options</i>|<code>&#8211;disassembler-options=</code><i>options</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;private-headers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-r</code>|<code>&#8211;reloc</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-R</code>|<code>&#8211;dynamic-reloc</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-s</code>|<code>&#8211;full-contents</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-G</code>|<code>&#8211;stabs</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>|<code>&#8211;syms</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-T</code>|<code>&#8211;dynamic-syms</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-x</code>|<code>&#8211;all-headers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-w</code>|<code>&#8211;wide</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;start-address=</code><i>address</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;stop-address=</code><i>address</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix-addresses</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;[no-]show-raw-insn</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;adjust-vma=</code><i>offset</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;special-syms</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-H</code>|<code>&#8211;help</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>objfile</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>objdump</code> displays information about one or more object files. The options control what particular information to display. This information is mostly useful to programmers who are working on the compilation tools, as opposed to programmers who just want their program to compile and work. </p>
@@ -66,11 +66,11 @@ description: "objdump – display information from object files."
 <pre>
         objdump -b oasys -m vax -h fu.o
 </pre>
-<p> displays summary information from the section headers (<code>-h</code>) of <i>fu.o</i>, which is explicitly identified (<code>-m</code>) as a <font SIZE="-1">VAX</font> object file in the format produced by Oasys compilers. You can list the formats available with the <code>-i</code> option.</p>
+<p> displays summary information from the section headers (<code>-h</code>) of <i>fu.o</i>, which is explicitly identified (<code>-m</code>) as a VAX object file in the format produced by Oasys compilers. You can list the formats available with the <code>-i</code> option.</p>
 <dt><code>-C</code></dt>
 <dd>
 </dd><dt><code>&#8211;demangle[=</code><i>style</i><code>]</code></dt>
-<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C<font SIZE="-2">++</font> function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
+<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C++ function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
 <dt><code>-g</code></dt>
 <dd>
 </dd><dt><code>&#8211;debugging</code></dt>
@@ -132,33 +132,33 @@ description: "objdump – display information from object files."
 <dd>
 </dd><dt><code>&#8211;disassembler-options=</code><i>options</i></dt>
 <dd> Pass target specific information to the disassembler. Only supported on some targets. If it is necessary to specify more than one disassembler option then multiple <code>-M</code> options can be used or can be placed together into a comma separated list. </dd>
-<p> If the target is an <font SIZE="-1">ARM</font> architecture then this switch can be used to select which register name set is used during disassembler. Specifying <code>-M reg-name-std</code> (the default) will select the register names as used in <font SIZE="-1">ARM</font>&#8216;s instruction set documentation, but with register 13 called &#8216;sp&#8217;, register 14 called &#8216;lr&#8217; and register 15 called &#8216;pc&#8217;. Specifying <code>-M reg-names-apcs</code> will select the name set used by the <font SIZE="-1">ARM</font> Procedure Call Standard, whilst specifying <code>-M reg-names-raw</code> will just use <code>r</code> followed by the register number. </p>
-<p> There are also two variants on the <font SIZE="-1">APCS</font> register naming scheme enabled by <code>-M reg-names-atpcs</code> and <code>-M reg-names-special-atpcs</code> which use the ARM/Thumb Procedure Call Standard naming conventions. (Either with the normal register names or the special register names). </p>
-<p> This option can also be used for <font SIZE="-1">ARM</font> architectures to force the disassembler to interpret all instructions as Thumb instructions by using the switch <code>&#8211;disassembler-options=force-thumb</code>. This can be useful when attempting to disassemble thumb code produced by other compilers. </p>
-<p> For the x86, some of the options duplicate functions of the <code>-m</code> switch, but allow finer grained control. Multiple selections from the following may be specified as a comma separated string. <code>x86-64</code>, <code>i386</code> and <code>i8086</code> select disassembly for the given architecture. <code>intel</code> and <code>att</code> select between intel syntax mode and <font SIZE="-1">AT&amp;T</font> syntax mode. <code>addr32</code>, <code>addr16</code>, <code>data32</code> and <code>data16</code> specify the default address size and operand size. These four options will be overridden if <code>x86-64</code>, <code>i386</code> or <code>i8086</code> appear later in the option string. Lastly, <code>suffix</code>, when in <font SIZE="-1">AT&amp;T</font> mode, instructs the disassembler to print a mnemonic suffix even when the suffix could be inferred by the operands. </p>
-<p> For <font SIZE="-1">PPC</font>, <code>booke</code>, <code>booke32</code> and <code>booke64</code> select disassembly of BookE instructions. <code>32</code> and <code>64</code> select PowerPC and PowerPC64 disassembly, respectively. </p>
-<p> For <font SIZE="-1">MIPS</font>, this option controls the printing of instruction mneumonic names and register names in disassembled instructions. Multiple selections from the following may be specified as a comma separated string, and invalid options are ignored:</p>
+<p> If the target is an ARM architecture then this switch can be used to select which register name set is used during disassembler. Specifying <code>-M reg-name-std</code> (the default) will select the register names as used in ARM&#8216;s instruction set documentation, but with register 13 called &#8216;sp&#8217;, register 14 called &#8216;lr&#8217; and register 15 called &#8216;pc&#8217;. Specifying <code>-M reg-names-apcs</code> will select the name set used by the ARM Procedure Call Standard, whilst specifying <code>-M reg-names-raw</code> will just use <code>r</code> followed by the register number. </p>
+<p> There are also two variants on the APCS register naming scheme enabled by <code>-M reg-names-atpcs</code> and <code>-M reg-names-special-atpcs</code> which use the ARM/Thumb Procedure Call Standard naming conventions. (Either with the normal register names or the special register names). </p>
+<p> This option can also be used for ARM architectures to force the disassembler to interpret all instructions as Thumb instructions by using the switch <code>&#8211;disassembler-options=force-thumb</code>. This can be useful when attempting to disassemble thumb code produced by other compilers. </p>
+<p> For the x86, some of the options duplicate functions of the <code>-m</code> switch, but allow finer grained control. Multiple selections from the following may be specified as a comma separated string. <code>x86-64</code>, <code>i386</code> and <code>i8086</code> select disassembly for the given architecture. <code>intel</code> and <code>att</code> select between intel syntax mode and AT&amp;T syntax mode. <code>addr32</code>, <code>addr16</code>, <code>data32</code> and <code>data16</code> specify the default address size and operand size. These four options will be overridden if <code>x86-64</code>, <code>i386</code> or <code>i8086</code> appear later in the option string. Lastly, <code>suffix</code>, when in AT&amp;T mode, instructs the disassembler to print a mnemonic suffix even when the suffix could be inferred by the operands. </p>
+<p> For PPC, <code>booke</code>, <code>booke32</code> and <code>booke64</code> select disassembly of BookE instructions. <code>32</code> and <code>64</code> select PowerPC and PowerPC64 disassembly, respectively. </p>
+<p> For MIPS, this option controls the printing of instruction mneumonic names and register names in disassembled instructions. Multiple selections from the following may be specified as a comma separated string, and invalid options are ignored:</p>
 <dl>
 <dl>
 <dt>no-aliases</dt>
 <dd> Print the &#8216;raw&#8217; instruction mneumonic instead of some pseudo instruction mneumonic. I.E. print &#8216;daddu&#8217; or &#8216;or&#8217; instead of &#8216;move&#8217;, &#8216;sll&#8217; instead of &#8216;nop&#8217;, etc.</dd>
-<dt>gpr-names=<font SIZE="-1">ABI</font><tt></dt>
-<dd> Print </tt><font SIZE="-1"><tt>GPR</tt></font><tt> (general-purpose register) names as appropriate for the specified </tt><font SIZE="-1"><tt>ABI</tt></font><tt>. By default, </tt><font SIZE="-1"><tt>GPR</tt></font><tt> names are selected according to the </tt><font SIZE="-1"><tt>ABI</tt></font><tt> of the binary being disassembled.</dd>
-<dt>fpr-names=</tt><font SIZE="-1">ABI</font><tt></dt>
-<dd> Print </tt><font SIZE="-1"><tt>FPR</tt></font><tt> (floating-point register) names as appropriate for the specified </tt><font SIZE="-1"><tt>ABI</tt></font><tt>. By default, </tt><font SIZE="-1"><tt>FPR</tt></font><tt> numbers are printed rather than names.</dd>
-<dt>cp0-names=</tt><font SIZE="-1">ARCH</font><tt></dt>
-<dd> Print </tt><font SIZE="-1"><tt>CP0</tt></font><tt> (system control coprocessor; coprocessor 0) register names as appropriate for the </tt><font SIZE="-1"><tt>CPU</tt></font><tt> or architecture specified by </tt><i></i><font SIZE="-1"><i>ARCH</i></font><i></i>. By default, <font SIZE="-1">CP0</font> register names are selected according to the architecture and <font SIZE="-1">CPU</font> of the binary being disassembled.</dd>
-<dt>hwr-names=<font SIZE="-1">ARCH</font><tt></dt>
-<dd> Print </tt><font SIZE="-1"><tt>HWR</tt></font><tt> (hardware register, used by the &quot;rdhwr&quot;</tt> instruction) names as appropriate for the <font SIZE="-1">CPU</font> or architecture specified by <i></i><font SIZE="-1"><i>ARCH</i></font><i></i>. By default, <font SIZE="-1">HWR</font> names are selected according to the architecture and <font SIZE="-1">CPU</font> of the binary being disassembled.</dd>
-<dt>reg-names=<font SIZE="-1">ABI</font><tt></dt>
-<dd> Print </tt><font SIZE="-1"><tt>GPR</tt></font><tt> and </tt><font SIZE="-1"><tt>FPR</tt></font><tt> names as appropriate for the selected </tt><font SIZE="-1"><tt>ABI</tt></font><tt>.</dd>
-<dt>reg-names=</tt><font SIZE="-1">ARCH</font><tt></dt>
-<dd> Print CPU-specific register names (</tt><font SIZE="-1"><tt>CP0</tt></font><tt> register and </tt><font SIZE="-1"><tt>HWR</tt></font><tt> names) as appropriate for the selected </tt><font SIZE="-1"><tt>CPU</tt></font><tt> or architecture.</dd></dl>
+<dt>gpr-names=ABI<tt></dt>
+<dd> Print </tt><tt>GPR</tt><tt> (general-purpose register) names as appropriate for the specified </tt><tt>ABI</tt><tt>. By default, </tt><tt>GPR</tt><tt> names are selected according to the </tt><tt>ABI</tt><tt> of the binary being disassembled.</dd>
+<dt>fpr-names=</tt>ABI<tt></dt>
+<dd> Print </tt><tt>FPR</tt><tt> (floating-point register) names as appropriate for the specified </tt><tt>ABI</tt><tt>. By default, </tt><tt>FPR</tt><tt> numbers are printed rather than names.</dd>
+<dt>cp0-names=</tt>ARCH<tt></dt>
+<dd> Print </tt><tt>CP0</tt><tt> (system control coprocessor; coprocessor 0) register names as appropriate for the </tt><tt>CPU</tt><tt> or architecture specified by </tt><i></i><i>ARCH</i><i></i>. By default, CP0 register names are selected according to the architecture and CPU of the binary being disassembled.</dd>
+<dt>hwr-names=ARCH<tt></dt>
+<dd> Print </tt><tt>HWR</tt><tt> (hardware register, used by the &quot;rdhwr&quot;</tt> instruction) names as appropriate for the CPU or architecture specified by <i></i><i>ARCH</i><i></i>. By default, HWR names are selected according to the architecture and CPU of the binary being disassembled.</dd>
+<dt>reg-names=ABI<tt></dt>
+<dd> Print </tt><tt>GPR</tt><tt> and </tt><tt>FPR</tt><tt> names as appropriate for the selected </tt><tt>ABI</tt><tt>.</dd>
+<dt>reg-names=</tt>ARCH<tt></dt>
+<dd> Print CPU-specific register names (</tt><tt>CP0</tt><tt> register and </tt><tt>HWR</tt><tt> names) as appropriate for the selected </tt><tt>CPU</tt><tt> or architecture.</dd></dl>
 </dl>
 <dl>
 <dt>
 </dt><dd>
-<p> For any of the options listed above, </tt><i></i><font SIZE="-1"><i>ABI</i></font><i></i> or <i></i><font SIZE="-1"><i>ARCH</i></font><i></i> may be specified as <code>numeric</code> to have numbers printed rather than names, for the selected types of registers. You can list the available values of <i></i><font SIZE="-1"><i>ABI</i></font><i></i> and <i></i><font SIZE="-1"><i>ARCH</i></font><i></i> using the <code>&#8211;help</code> option.</dd></dl>
+<p> For any of the options listed above, </tt><i></i><i>ABI</i><i></i> or <i></i><i>ARCH</i><i></i> may be specified as <code>numeric</code> to have numbers printed rather than names, for the selected types of registers. You can list the available values of <i></i><i>ABI</i><i></i> and <i></i><i>ARCH</i><i></i> using the <code>&#8211;help</code> option.</dd></dl>
 <dt><code>-p</code></dt>
 <dd>
 </dd><dt><code>&#8211;private-headers</code></dt>
@@ -186,7 +186,7 @@ description: "objdump – display information from object files."
 <dt><code>-G</code></dt>
 <dd>
 </dd><dt><code>&#8211;stabs</code></dt>
-<dd> Display the full contents of any sections requested. Display the contents of the .stab and .stab.index and .stab.excl sections from an <font SIZE="-1">ELF</font> file. This is only useful on systems (such as Solaris 2.0) in which <tt>&quot;.stab&quot;</tt> debugging symbol-table entries are carried in an <font SIZE="-1">ELF</font> section. In most other file formats, debugging symbol-table entries are interleaved with linkage symbols, and are visible in the <code>&#8211;syms</code> output.</dd>
+<dd> Display the full contents of any sections requested. Display the contents of the .stab and .stab.index and .stab.excl sections from an ELF file. This is only useful on systems (such as Solaris 2.0) in which <tt>&quot;.stab&quot;</tt> debugging symbol-table entries are carried in an ELF section. In most other file formats, debugging symbol-table entries are interleaved with linkage symbols, and are visible in the <code>&#8211;syms</code> output.</dd>
 <dt><code>&#8211;start-address=</code><i>address</i></dt>
 <dd> Start displaying data at the specified address. This affects the output of the <code>-d</code>, <code>-r</code> and <code>-s</code> options.</dd>
 <dt><code>&#8211;stop-address=</code><i>address</i></dt>
@@ -221,4 +221,4 @@ description: "objdump – display information from object files."
 <p> <i><a href="/docs/linux/man/1-nm/">nm</a></i>(1), <i><a href="/docs/linux/man/1-readelf/">readelf</a></i>(1), and the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

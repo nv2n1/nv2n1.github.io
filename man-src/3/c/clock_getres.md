@@ -24,8 +24,8 @@ description: "clock_getres, clock_gettime, clock_settime – clock and time func
 <p> The function <code>clock_getres</code>() finds the resolution (precision) of the specified clock <i>clk_id</i>, and, if <i>res</i> is non-NULL, stores it in the <i>struct timespec</i> pointed to by <i>res</i>. The resolution of clocks depends on the implementation and cannot be configured by a particular process. If the time value pointed to by the argument <i>tp</i> of <code>clock_settime</code>() is not a multiple of <i>res</i>, then it is truncated to a multiple of <i>res</i>. </p>
 <p> The functions <code>clock_gettime</code>() and <code>clock_settime</code>() retrieve and set the time of the specified clock <i>clk_id</i>. </p>
 <p> The <i>res</i> and <i>tp</i> arguments are <i>timespec</i> structures, as specified in <i>&lt;time.h&gt;</i>: </p>
-<p> struct timespec {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br />
+<p> struct timespec {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_nsec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;nanoseconds&nbsp;*/ }; </p>
 <p> The <i>clk_id</i> argument is the identifier of the particular clock on which to act. A clock may be system-wide and hence visible for all processes, or per-process if it measures time only within a single process. </p>
 <p> All implementations support the system-wide real-time clock, which is identified by <code>CLOCK_REALTIME</code>. Its time represents seconds and nanoseconds since the Epoch. When its time is changed, timers for a relative interval are unaffected, but timers for an absolute point in time are affected. </p>

@@ -15,9 +15,9 @@ address
 { COMMAND |
     help }
 </code></pre>
-<p> <code>ip address</code> { <code>add</code> | <code>change</code> | <code>replace</code> } <i>IFADDR</i><code> dev </code><i>IFNAME</i> [ <i>LIFETIME</i> ] [ <i>CONFFLAG-LIST</i> ]<br />
- <code>ip address del</code> <i>IFADDR</i><code> dev </code><i>IFNAME</i><code> [ </code><i>mngtmpaddr</i><code> ]</code><br />
- <code>ip address</code> { <code>save</code> | <code>flush</code> } [ <code>dev</code> <i>IFNAME</i> ] [ <code>scope</code> <i>SCOPE-ID</i> ] [ <code>metric</code> <i>METRIC</i> ] [ <code>to</code> <i>PREFIX</i> ] [ <i>FLAG-LIST</i> ] [ <code>label</code> <i>PATTERN</i> ] [ <i>up</i> ]<br />
+<p> <code>ip address</code> { <code>add</code> | <code>change</code> | <code>replace</code> } <i>IFADDR</i><code> dev </code><i>IFNAME</i> [ <i>LIFETIME</i> ] [ <i>CONFFLAG-LIST</i> ]<br/>
+ <code>ip address del</code> <i>IFADDR</i><code> dev </code><i>IFNAME</i><code> [ </code><i>mngtmpaddr</i><code> ]</code><br/>
+ <code>ip address</code> { <code>save</code> | <code>flush</code> } [ <code>dev</code> <i>IFNAME</i> ] [ <code>scope</code> <i>SCOPE-ID</i> ] [ <code>metric</code> <i>METRIC</i> ] [ <code>to</code> <i>PREFIX</i> ] [ <i>FLAG-LIST</i> ] [ <code>label</code> <i>PATTERN</i> ] [ <i>up</i> ]<br/>
  <code>ip address</code> [ <code>show</code> [ <code>dev</code> <i>IFNAME</i> ] [ <code>scope</code> <i>SCOPE-ID</i> ] [ <code>to</code> <i>PREFIX</i> ] [ <i>FLAG-LIST</i> ] [ <code>label</code> <i>PATTERN</i> ] [ <code>master</code> <i>DEVICE</i> ] [ <code>type</code> <i>TYPE</i> ] [ <code>vrf</code> <i>NAME</i> ] [ <code>up</code> ] ] </p>
 <pre><code>ip address { showdump | restore }
 IFADDR := PREFIX | ADDR

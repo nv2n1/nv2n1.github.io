@@ -15,18 +15,18 @@ description: "src/antlr3commontreenodestream.c –"
 <p> static <code>ANTLR3_UINT32</code> <code>_LA</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_INT32</code> i) </p>
 <p> static <code>pANTLR3_BASE_TREE</code> <code>_LT</code> (<code>pANTLR3_TREE_NODE_STREAM</code> tns, <code>ANTLR3_INT32</code> k) </p>
 <p> static void <code>addNavigationNode</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctns, <code>ANTLR3_UINT32</code> ttype) </p>
-<p> static void <code>antlr3CommonTreeNodeStreamFree</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctns)<br />
- <i>Free up any resources that belong to this common tree node stream. </i><br />
+<p> static void <code>antlr3CommonTreeNodeStreamFree</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctns)<br/>
+ <i>Free up any resources that belong to this common tree node stream. </i><br/>
  ANTLR3_API <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>antlr3CommonTreeNodeStreamNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory, <code>ANTLR3_UINT32</code> hint) </p>
 <p> ANTLR3_API <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>antlr3CommonTreeNodeStreamNewStream</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> inStream) </p>
 <p> ANTLR3_API <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>antlr3CommonTreeNodeStreamNewTree</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>ANTLR3_UINT32</code> hint) </p>
 <p> static void <code>antlr3TreeNodeStreamFree</code> (<code>pANTLR3_TREE_NODE_STREAM</code> tns) </p>
 <p> ANTLR3_API <code>pANTLR3_TREE_NODE_STREAM</code> <code>antlr3TreeNodeStreamNew</code> () </p>
 <p> static void <code>consume</code> (<code>pANTLR3_INT_STREAM</code> is) </p>
-<p> static void <code>fillBuffer</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctns, <code>pANTLR3_BASE_TREE</code> t)<br />
- <i>Walk tree with depth-first-search and fill nodes buffer. </i><br />
- static void <code>fillBufferRoot</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctns)<br />
- <i>Walk and fill the tree node buffer from the root tree. </i><br />
+<p> static void <code>fillBuffer</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctns, <code>pANTLR3_BASE_TREE</code> t)<br/>
+ <i>Walk tree with depth-first-search and fill nodes buffer. </i><br/>
+ static void <code>fillBufferRoot</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctns)<br/>
+ <i>Walk and fill the tree node buffer from the root tree. </i><br/>
  static <code>pANTLR3_BASE_TREE</code> <code>get</code> (<code>pANTLR3_TREE_NODE_STREAM</code> tns, <code>ANTLR3_INT32</code> k) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>getLookaheadSize</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctns) </p>
 <p> static <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>getTreeAdaptor</code> (<code>pANTLR3_TREE_NODE_STREAM</code> tns) </p>
@@ -40,8 +40,8 @@ description: "src/antlr3commontreenodestream.c –"
 <p> static void <code>push</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctns, <code>ANTLR3_INT32</code> index) </p>
 <p> static void <code>release</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_MARKER</code> marker) </p>
 <p> static void <code>replaceChildren</code> (<code>pANTLR3_TREE_NODE_STREAM</code> tns, <code>pANTLR3_BASE_TREE</code> parent, <code>ANTLR3_INT32</code> startChildIndex, <code>ANTLR3_INT32</code> stopChildIndex, <code>pANTLR3_BASE_TREE</code> t) </p>
-<p> static void <code>reset</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctns)<br />
- <i>Reset the input stream to the start of the input nodes. </i><br />
+<p> static void <code>reset</code> (<code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctns)<br/>
+ <i>Reset the input stream to the start of the input nodes. </i><br/>
  static void <code>rewindLast</code> (<code>pANTLR3_INT_STREAM</code> is) </p>
 <p> static void <code>rewindMark</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_MARKER</code> marker) </p>
 <p> static void <code>seek</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_MARKER</code> index) </p>

@@ -34,13 +34,13 @@ fusioninventory-esx - vCenter/ESX/ESXi remote inventory from command line
 
 <h2>DESCRIPTION</h2>
 
- <i>fusioninventory-esx</i> creates inventory of remote ESX/ESXi and vCenter VMware. It uses the <font SIZE="-1">SOAP</font> interface of the remote server. 
+ <i>fusioninventory-esx</i> creates inventory of remote ESX/ESXi and vCenter VMware. It uses the SOAP interface of the remote server. 
 
  Supported systems:
 <dl>
-<dt><i></i><font SIZE="-1"><i>ESX</i></font><i> and ESXi 3.5</i>
+<dt><i></i><i>ESX</i><i> and ESXi 3.5</i>
 </dt><dd>
-</dd><dt><i></i><font SIZE="-1"><i>ESX</i></font><i> and ESXi 4.1</i>
+</dd><dt><i></i><i>ESX</i><i> and ESXi 4.1</i>
 </dt><dd>
 </dd><dt><i>ESXi 5.0</i>
 </dt><dd>
@@ -50,12 +50,12 @@ fusioninventory-esx - vCenter/ESX/ESXi remote inventory from command line
 </dt><dd></dd></dl>
  
 
- Active Directory users, please note the <font SIZE="-1">AD</font> authentication doesn't work. You must create a account on the VMware server.
+ Active Directory users, please note the AD authentication doesn't work. You must create a account on the VMware server.
 
 <h2>LIMITATION</h2>
 
- So far, <font SIZE="-1">ESX</font> serial number are not collected.
+ So far, ESX serial number are not collected.
 
 <h2>SECURITY</h2>
 
- The <font SIZE="-1">SSL</font> hostname check of the server is disabled.
+ The SSL hostname check of the server is disabled.

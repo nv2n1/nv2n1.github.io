@@ -44,5 +44,5 @@ description: "genrb – compile a resource bundle"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2000-2002 IBM, Inc. and others.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-derb/">derb</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-derb/">derb</a></code>(1)<br/>
  <code><a href="/docs/linux/man/1-pkgdata/">pkgdata</a></code>(1) </p>

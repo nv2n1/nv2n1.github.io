@@ -11,7 +11,7 @@ description: "sgeqrt3.f –"
 <p> sgeqrt3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> recursive subroutine <code>sgeqrt3</code> (M, N, A, LDA, T, LDT, INFO)<br />
+<p> recursive subroutine <code>sgeqrt3</code> (M, N, A, LDA, T, LDT, INFO)<br/>
  <i></i><code>SGEQRT3</code> recursively computes a QR factorization of a general real or complex matrix using the compact WY representation of Q.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>recursive subroutine sgeqrt3 (integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldt, * )T, integerLDT, integerINFO)</h3>

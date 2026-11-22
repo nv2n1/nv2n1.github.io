@@ -10,7 +10,7 @@ description: "clansb.f –"
 <p>clansb.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>clansb</code> (NORM, UPLO, N, K, AB, LDAB, WORK)<br />
+<p>REAL function <code>clansb</code> (NORM, UPLO, N, K, AB, LDAB, WORK)<br/>
  <i></i><code>CLANSB</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a symmetric band matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function clansb (characterNORM, characterUPLO, integerN, integerK, complex, dimension( ldab, * )AB, integerLDAB, real, dimension( * )WORK)</h3>

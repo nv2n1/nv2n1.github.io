@@ -14,13 +14,13 @@ description: "QuantLib::ZeroCouponInflationSwap – Zero-coupon inflation-indexe
 <h3>Public Member Functions</h3>
 <p><code>ZeroCouponInflationSwap</code> (const <code>Date</code> &amp;start, const <code>Date</code> &amp;maturity, const <code>Period</code> &amp;lag, <code>Rate</code> fixedRate, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> convention, const <code>DayCounter</code> &amp;dayCounter, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS, const <code>Handle</code>&lt; <code>ZeroInflationTermStructure</code> &gt; &amp;inflationTS) </p>
 <p> <code>Instrument interface</code> </p>
-<p> bool <code>isExpired</code> () const<br />
+<p> bool <code>isExpired</code> () const<br/>
  <i>returns whether the instrument is still tradable. </i> </p>
 <p> <code>InflationSwap interface</code> </p>
-<p> <code>Rate</code> <code>fairRate</code> () const<br />
+<p> <code>Rate</code> <code>fairRate</code> () const<br/>
  <i>the rate $ ilde{K} $ such that NPV = 0. </i> </p>
 <p> <code>Inspectors</code> </p>
-<p> <code>Rate</code> <code>fixedRate</code> () const<br />
+<p> <code>Rate</code> <code>fixedRate</code> () const<br/>
  <i>$ K $ in the above formula. </i></p>
 <h3>Protected Member Functions</h3>
 <p><code>Instrument interface</code> </p>

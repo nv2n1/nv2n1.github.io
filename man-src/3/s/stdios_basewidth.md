@@ -9,17 +9,17 @@ description: "std::ios_base::width – std::ios_base::width"
 
 <p>std::ios_base::width &#8211; std::ios_base::width</p>
 <h2>Synopsis</h2>
-<p>streamsize width() const; <code>(1)</code><br />
-streamsize width( streamsize new_width ); <code>(2)</code><br />
-Manages the minimum number of characters to generate on certain output operations and the maximum number of characters to generate on certain input operations.<br />
-1) Returns the current field width.<br />
+<p>streamsize width() const; <code>(1)</code><br/>
+streamsize width( streamsize new_width ); <code>(2)</code><br/>
+Manages the minimum number of characters to generate on certain output operations and the maximum number of characters to generate on certain input operations.<br/>
+1) Returns the current field width.<br/>
 2) Sets the field width to the given one. Returns the previous field width. </p>
 <h2>Parameters</h2>
 <p>new_width &#8211; new field width setting</p>
 <h2>Return value</h2>
 <p>The field width before the call to the function </p>
 <h2>Notes</h2>
-<p>Some I/O functions call width<code>(0)</code> before returning, see std::setw (this results in this field having effect on the next I/O function only, and not on any subsequent I/O)<br />
+<p>Some I/O functions call width<code>(0)</code> before returning, see std::setw (this results in this field having effect on the next I/O function only, and not on any subsequent I/O)<br/>
 The exact effects this modifier has on the input and output vary between the individual I/O functions and are described at each operator&lt;&lt; and operator&gt;&gt; overload page individually. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -86,15 +86,15 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
-&nbsp;<wbr>&nbsp;| Name | Birthdate | Death date | Language Created |<br />
-&nbsp;<wbr>&nbsp;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
-&nbsp;<wbr>&nbsp;| Dennis MacAlistair Ritchie | Tuesday, September 09, 1941 | Wednesday, October 12, 2011 | C |<br />
-&nbsp;<wbr>&nbsp;| Bjarne Stroustrup | Saturday, December 30, 1950 | | C++ |<br />
-&nbsp;<wbr>&nbsp;| Anders Hejlsberg | Friday, December 02, 1960 | | C# |<br />
-&nbsp;<wbr>&nbsp;| Guido van Rossum | Tuesday, January 31, 1956 | | Python |<br />
-&nbsp;<wbr>&nbsp;| Brendan Eich | Tuesday, July 04, 1961 | | Javascript |<br />
+<p>&nbsp;<wbr>&nbsp;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br/>
+&nbsp;<wbr>&nbsp;| Name | Birthdate | Death date | Language Created |<br/>
+&nbsp;<wbr>&nbsp;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br/>
+&nbsp;<wbr>&nbsp;| Dennis MacAlistair Ritchie | Tuesday, September 09, 1941 | Wednesday, October 12, 2011 | C |<br/>
+&nbsp;<wbr>&nbsp;| Bjarne Stroustrup | Saturday, December 30, 1950 | | C++ |<br/>
+&nbsp;<wbr>&nbsp;| Anders Hejlsberg | Friday, December 02, 1960 | | C# |<br/>
+&nbsp;<wbr>&nbsp;| Guido van Rossum | Tuesday, January 31, 1956 | | Python |<br/>
+&nbsp;<wbr>&nbsp;| Brendan Eich | Tuesday, July 04, 1961 | | Javascript |<br/>
 &nbsp;<wbr>&nbsp;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;manages decimal precision of floating point operations<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;manages decimal precision of floating point operations<br/>
 precision <i>(public member function)</i> </p>

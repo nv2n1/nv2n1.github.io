@@ -43,6 +43,6 @@ description: "XtRealizeWidget, XtIsRealized, XtUnrealizeWidget – realize and u
 <p> Some widget procedures (for example, set_values) might wish to operate differently after the widget has been realized. </p>
 <p> The <code>XtUnrealizeWidget</code> function destroys the windows of an existing widget and all of its children (recursively down the widget tree). To recreate the windows at a later time, call <code>XtRealizeWidget</code> again. If the widget was managed, it will be unmanaged automatically before its window is freed.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtmanagechildren/">XtManageChildren</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtmanagechildren/">XtManageChildren</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

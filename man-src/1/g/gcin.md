@@ -29,16 +29,16 @@ description: "gcin – an input method server"
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
 <dt>LC_CTYPE</dt>
-<dd> For bash: export LC_CTYPE=zh_TW.UTF-8<br />
+<dd> For bash: export LC_CTYPE=zh_TW.UTF-8<br/>
  For csh: setenv LC_CTYPE zh_TW.UTF-8</dd>
 <dt>XMODIFIERS</dt>
-<dd> For bash: export XMODIFIERS=@im=gcin<br />
+<dd> For bash: export XMODIFIERS=@im=gcin<br/>
  For csh: setenv XMODIFIERS @im=gcin</dd>
 <dt>GTK_IM_MODULE</dt>
-<dd> For bash: export GTK_IM_MODULE=gcin<br />
+<dd> For bash: export GTK_IM_MODULE=gcin<br/>
  For csh: setenv GTK_IM_MODULE gcin</dd>
 <dt>QT_IM_MODULE</dt>
-<dd> For bash: export QT_IM_MODULE=gcin<br />
+<dd> For bash: export QT_IM_MODULE=gcin<br/>
  For csh: setenv QT_IM_MODULE gcin</dd>
 <dt>GCIN_CONNECT_MSG_ON</dt>
 <dd> Display messages for socket connections.</dd>

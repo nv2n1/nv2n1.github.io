@@ -9,7 +9,7 @@ description: "atmsigd – ATM signaling demon"
 
 <p>atmsigd &#8211; ATM signaling demon</p>
 <h2>Synopsis</h2>
-<p><code>atmsigd</code> [<code>-b</code>] [<code>-c&nbsp;<wbr></code><i>config_file</i>] [<code>-d</code>] [<code>-D&nbsp;<wbr></code><i>dump_dir</i>] [<code>-l&nbsp;<wbr></code><i>logfile</i>] [<code>-m&nbsp;<wbr></code><i>mode</i>] [<code>-n</code>] [<code>-q&nbsp;<wbr></code><i>qos</i>] [<code>-t&nbsp;<wbr></code><i>trace_length</i>] [<code>-u&nbsp;<wbr></code><i>uni_version</i>] [<code>[</code><i>itf</i>.]<i>vpi</i>.<i>vci</i> [<i>input output</i>]<code>]</code><br />
+<p><code>atmsigd</code> [<code>-b</code>] [<code>-c&nbsp;<wbr></code><i>config_file</i>] [<code>-d</code>] [<code>-D&nbsp;<wbr></code><i>dump_dir</i>] [<code>-l&nbsp;<wbr></code><i>logfile</i>] [<code>-m&nbsp;<wbr></code><i>mode</i>] [<code>-n</code>] [<code>-q&nbsp;<wbr></code><i>qos</i>] [<code>-t&nbsp;<wbr></code><i>trace_length</i>] [<code>-u&nbsp;<wbr></code><i>uni_version</i>] [<code>[</code><i>itf</i>.]<i>vpi</i>.<i>vci</i> [<i>input output</i>]<code>]</code><br/>
  <code>atmsigd</code> <code>-V</code></p>
 <h2>Description</h2>
 <p><code>atmsigd</code> implements the ATM UNI signaling protocol. Requests to establish, accept, or close ATM SVCs are sent from the kernel (using a comparably simple protocol) to the signaling demon, which then performs the dialog with the network. </p>

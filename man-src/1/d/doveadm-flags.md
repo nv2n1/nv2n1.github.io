@@ -10,8 +10,8 @@ description: "doveadm-flags – add, remove or replace messages’ flags"
 
 <p> doveadm-flags &#8211; add, remove or replace messages&#8217; flags</p>
 <h2>SYNOPSIS</h2>
-<p> <code>doveadm</code> [<code>-Dv</code>] <code>flags</code> [<code>-S</code> <i>socket_path</i>] <i>command flags search_query</i><br />
- <code>doveadm</code> [<code>-Dv</code>] <code>flags</code> [<code>-S</code> <i>socket_path</i>] <i>command flags search_query</i> <code>-A</code><br />
+<p> <code>doveadm</code> [<code>-Dv</code>] <code>flags</code> [<code>-S</code> <i>socket_path</i>] <i>command flags search_query</i><br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>flags</code> [<code>-S</code> <i>socket_path</i>] <i>command flags search_query</i> <code>-A</code><br/>
  <code>doveadm</code> [<code>-Dv</code>] <code>flags</code> [<code>-S</code> <i>socket_path</i>] <i>command flags search_query</i> <code>-u </code><i>user</i></p>
 <h2>DESCRIPTION</h2>
 <p> This command is used to manipulate flags of messages.</p>
@@ -31,12 +31,12 @@ description: "doveadm-flags – add, remove or replace messages’ flags"
 <dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
 <p> This allows an administrator to execute <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) mail commands through the given socket.</p>
 <dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
-<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
+<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br/>
  When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt><i>flags</i></dt>
-<dd> Message flags as described in RFC 3501, section 2.3.2 (Flags Message Attribute): <code>\Answered</code>, <code>\Deleted</code>, <code>\Draft</code>, <code>\Flagged</code>, <code>\Recent</code> and <code>\Seen</code>. And the IMAP keywords <code>$Forwarded</code>, <code>$MDNSent</code>, <code>$SubmitPending</code> and <code>$Submitted</code> or user-defined keywords, e.g. Junk, $NonSpam or $Label1.<br />
+<dd> Message flags as described in RFC 3501, section 2.3.2 (Flags Message Attribute): <code>\Answered</code>, <code>\Deleted</code>, <code>\Draft</code>, <code>\Flagged</code>, <code>\Recent</code> and <code>\Seen</code>. And the IMAP keywords <code>$Forwarded</code>, <code>$MDNSent</code>, <code>$SubmitPending</code> and <code>$Submitted</code> or user-defined keywords, e.g. Junk, $NonSpam or $Label1.<br/>
  One or multiple flags and/or keywords can be specified.</dd>
 <dt><i>search_query</i></dt>
 <dd> Manipulate the flags of messages matching the given search query. See <code><a href="/docs/linux/man/7-doveadm-search-query/">doveadm-search-query</a></code>(7) for details.</dd></dl>

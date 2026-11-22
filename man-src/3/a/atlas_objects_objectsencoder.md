@@ -12,11 +12,11 @@ description: "Atlas::Objects::ObjectsEncoder – Objects hierarchy encoder."
 <p>#include &lt;<a href="file:/usr/include/Encoder.h">Encoder.h</a>&gt; </p>
 <p> Inherits <code>Atlas::EncoderBase</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>ObjectsEncoder</code> (<code>Atlas::Bridge</code> &amp;b)<br />
- <i>The default constructor. </i><br />
- <code>~ObjectsEncoder</code> ()<br />
- <i>The default destructor. </i><br />
- template&lt;class ObjectData &gt; void <code>streamObjectsMessage</code> (const Atlas::Objects::SmartPtr&lt; ObjectData &gt; &amp;o)<br />
+<p><code>ObjectsEncoder</code> (<code>Atlas::Bridge</code> &amp;b)<br/>
+ <i>The default constructor. </i><br/>
+ <code>~ObjectsEncoder</code> ()<br/>
+ <i>The default destructor. </i><br/>
+ template&lt;class ObjectData &gt; void <code>streamObjectsMessage</code> (const Atlas::Objects::SmartPtr&lt; ObjectData &gt; &amp;o)<br/>
  <i>Send an object to the bridge. </i></p>
 <h2>Detailed Description</h2>
 <p><code>Objects</code> hierarchy encoder. </p>

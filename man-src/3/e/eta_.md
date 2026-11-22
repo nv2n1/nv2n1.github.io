@@ -15,14 +15,14 @@ description: "QuantLib::G2ForwardProcess – Forward G2 stochastic process"
 <h3>Public Member Functions</h3>
 <p> <code>G2ForwardProcess</code> (<code>Real</code> a, <code>Real</code> sigma, <code>Real</code> b, <code>Real</code> eta, <code>Real</code> rho) </p>
 <p> <code>StochasticProcess interface</code> </p>
-<p> Size <code>size</code> () const<br />
- <i>returns the number of dimensions of the stochastic process </i><br />
- <code>Disposable</code>&lt; <code>Array</code> &gt; <code>initialValues</code> () const<br />
- <i>returns the initial values of the state variables </i><br />
- <code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (Time t, const <code>Array</code> &amp;x) const<br />
- <i>returns the drift part of the equation, i.e., $ mu(t, mathrm{x}_t) $ </i><br />
- <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>diffusion</code> (Time t, const <code>Array</code> &amp;x) const<br />
- <i>returns the diffusion part of the equation, i.e. $ igma(t, mathrm{x}_t) $ </i><br />
+<p> Size <code>size</code> () const<br/>
+ <i>returns the number of dimensions of the stochastic process </i><br/>
+ <code>Disposable</code>&lt; <code>Array</code> &gt; <code>initialValues</code> () const<br/>
+ <i>returns the initial values of the state variables </i><br/>
+ <code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (Time t, const <code>Array</code> &amp;x) const<br/>
+ <i>returns the drift part of the equation, i.e., $ mu(t, mathrm{x}_t) $ </i><br/>
+ <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>diffusion</code> (Time t, const <code>Array</code> &amp;x) const<br/>
+ <i>returns the diffusion part of the equation, i.e. $ igma(t, mathrm{x}_t) $ </i><br/>
  <code>Disposable</code>&lt; <code>Array</code> &gt; <code>expectation</code> (Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>
 <p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>stdDeviation</code> (Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>
 <p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>covariance</code> (Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>

@@ -10,7 +10,7 @@ description: "dgesdd.f –"
 <p>dgesdd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgesdd</code> (JOBZ, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, IWORK, INFO)<br />
+<p>subroutine <code>dgesdd</code> (JOBZ, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>DGESDD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgesdd (characterJOBZ, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )S, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldvt, * )VT, integerLDVT, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>

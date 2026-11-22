@@ -28,7 +28,7 @@ const Matrix &amp; operator/= (Real)</code></pre>
 <p> typedef boost::reverse_iterator&lt; <code>column_iterator</code> &gt; <code>reverse_column_iterator</code> </p>
 <p> typedef boost::reverse_iterator&lt; <code>const_column_iterator</code> &gt; <code>const_reverse_column_iterator</code></p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors, destructor, and assignment</code><br />
+<p><code>Constructors, destructor, and assignment</code><br/>
  const Matrix &amp; operator+= (const Matrix &amp;)</p>
 <p>const Matrix &amp; operator-= (const Matrix &amp;)</p>
 <p>const Matrix &amp; operator*= (Real)</p>
@@ -61,21 +61,21 @@ const Matrix &amp; operator/= (Real)</code></pre>
 <p> const_reverse_column_iterator <code>column_rbegin</code> (Size i) const </p>
 <p> reverse_column_iterator <code>column_rbegin</code> (Size i) </p>
 <p> const_reverse_column_iterator <code>column_rend</code> (Size i) const </p>
-<p> reverse_column_iterator <code>column_rend</code> (Size i)<br />
+<p> reverse_column_iterator <code>column_rend</code> (Size i)<br/>
  <code>Element access</code> </p>
 <p> const_row_iterator <code>operator[]</code> (Size) const </p>
 <p> const_row_iterator <code>at</code> (Size) const </p>
 <p> row_iterator <code>operator[]</code> (Size) </p>
 <p> row_iterator <code>at</code> (Size) </p>
-<p> <code>Disposable</code>&lt; <code>Array</code> &gt; <code>diagonal</code> (void) const<br />
+<p> <code>Disposable</code>&lt; <code>Array</code> &gt; <code>diagonal</code> (void) const<br/>
  <code>Inspectors</code> </p>
 <p> Size <code>rows</code> () const </p>
 <p> Size <code>columns</code> () const </p>
-<p> bool <code>empty</code> () const<br />
+<p> bool <code>empty</code> () const<br/>
  <code>Utilities</code> </p>
 <p> void <code>swap</code> (<code>Matrix</code> &amp;)</p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>operator+</code> (const <code>Matrix</code> &amp;, const <code>Matrix</code> &amp;) </p>
 <p> const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>operator-</code> (const <code>Matrix</code> &amp;, const <code>Matrix</code> &amp;) </p>
 <p> const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>operator*</code> (const <code>Matrix</code> &amp;, Real) </p>
@@ -92,9 +92,9 @@ const Matrix &amp; operator/= (Real)</code></pre>
 <p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>inverse</code> (const <code>Matrix</code> &amp;m) </p>
 <p> Real <code>determinant</code> (const <code>Matrix</code> &amp;m) </p>
 <p> const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>CholeskyDecomposition</code> (const <code>Matrix</code> &amp;m, bool flexible=false) </p>
-<p> const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>pseudoSqrt</code> (const <code>Matrix</code> &amp;, SalvagingAlgorithm::Type=SalvagingAlgorithm::None)<br />
- <i>Returns the pseudo square root of a real symmetric matrix. </i><br />
- const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>rankReducedSqrt</code> (const <code>Matrix</code> &amp;, Size maxRank, Real componentRetainedPercentage, SalvagingAlgorithm::Type)<br />
+<p> const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>pseudoSqrt</code> (const <code>Matrix</code> &amp;, SalvagingAlgorithm::Type=SalvagingAlgorithm::None)<br/>
+ <i>Returns the pseudo square root of a real symmetric matrix. </i><br/>
+ const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>rankReducedSqrt</code> (const <code>Matrix</code> &amp;, Size maxRank, Real componentRetainedPercentage, SalvagingAlgorithm::Type)<br/>
  <i>Returns the rank-reduced pseudo square root of a real symmetric matrix. </i></p>
 <h2>Detailed Description</h2>
 <p>Matrix used in linear algebra. </p>

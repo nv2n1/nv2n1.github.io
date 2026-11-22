@@ -13,20 +13,20 @@ description: "QwtPlotPanner –"
 <p>#include &lt;qwt_plot_panner.h&gt; </p>
 <p> Inherits <code>QwtPanner</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotPanner</code> (QWidget *)<br />
- <i>A panner for the canvas of a </i><code>QwtPlot</code>.<br />
- virtual <code>~QwtPlotPanner</code> ()<br />
- <i>Destructor. </i><br />
- QWidget * <code>canvas</code> ()<br />
- <i>Return observed plot canvas. </i><br />
- const QWidget * <code>canvas</code> () const<br />
- <i>Return Observed plot canvas. </i><br />
- <code>QwtPlot</code> * <code>plot</code> ()<br />
- <i>Return plot widget, containing the observed plot canvas. </i><br />
- const <code>QwtPlot</code> * <code>plot</code> () const<br />
- <i>Return plot widget, containing the observed plot canvas. </i><br />
- void <code>setAxisEnabled</code> (int axis, bool on)<br />
- <i>En/Disable an axis. </i><br />
+<p><code>QwtPlotPanner</code> (QWidget *)<br/>
+ <i>A panner for the canvas of a </i><code>QwtPlot</code>.<br/>
+ virtual <code>~QwtPlotPanner</code> ()<br/>
+ <i>Destructor. </i><br/>
+ QWidget * <code>canvas</code> ()<br/>
+ <i>Return observed plot canvas. </i><br/>
+ const QWidget * <code>canvas</code> () const<br/>
+ <i>Return Observed plot canvas. </i><br/>
+ <code>QwtPlot</code> * <code>plot</code> ()<br/>
+ <i>Return plot widget, containing the observed plot canvas. </i><br/>
+ const <code>QwtPlot</code> * <code>plot</code> () const<br/>
+ <i>Return plot widget, containing the observed plot canvas. </i><br/>
+ void <code>setAxisEnabled</code> (int axis, bool on)<br/>
+ <i>En/Disable an axis. </i><br/>
  bool <code>isAxisEnabled</code> (int axis) const </p>
 <h3>Protected Slots</h3>
 <p>virtual void <code>moveCanvas</code> (int dx, int dy) </p>
@@ -83,7 +83,7 @@ description: "QwtPlotPanner –"
 <p>Adjust the enabled axes according to dx/dy </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dx</i> Pixel offset in x direction<br />
+<dd><i>dx</i> Pixel offset in x direction<br/>
  <i>dy</i> Pixel offset in y direction</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -92,7 +92,7 @@ description: "QwtPlotPanner –"
 <p>En/Disable an axis. Axes that are enabled will be synchronized to the result of panning. All other axes will remain unchanged. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> Axis, see <code>QwtPlot::Axis</code><br />
+<dd><i>axis</i> Axis, see <code>QwtPlot::Axis</code><br/>
  <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

@@ -18,10 +18,10 @@ description: "btrfs-convert – convert from ext2/3/4 or reiserfs filesystem to 
 <dd>&bull; reiserfs &#8212; since version 4.13, optionally built, requires libreiserfscore 3.6.27</dd></dl>
 <p> The list of supported source filesystem by a given binary is listed at the end of help (option <i>&#8211;help</i>).</p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  If you are going to perform rollback to the original filesystem, you should not execute <code>btrfs balance</code> command on the converted filesystem. This will change the extent layout and make <code>btrfs-convert</code> unable to rollback.  The conversion utilizes free space of the original filesystem. The exact estimate of the required space cannot be foretold. The final btrfs metadata might occupy several gigabytes on a hundreds-gigabyte filesystem. If the ability to rollback is no longer important, the it is recommended to perform a few more steps to transition the btrfs filesystem to a more compact layout. This is because the conversion inherits the original data blocks&#8217; fragmentation, and also because the metadata blocks are bound to the original free space layout. Due to different constraints, it is only possible to convert filesystems that have a supported data block size (ie. the same that would be valid for <i>mkfs.btrfs</i>). This is typically the system page size (4KiB on x86_64 machines).</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  The source filesystem should be clean, you are encouraged to run the <i>fsck</i> tool if you&#8217;re not sure.  <code>REMOVE THE ORIGINAL FILESYSTEM METADATA</code> By removing the subvolume named like <i>ext2_saved</i> or <i>reiserfs_saved</i>, all metadata of the original filesystem will be removed:</dd>
 <dl>
 <dd>

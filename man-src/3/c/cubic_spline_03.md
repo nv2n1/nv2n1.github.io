@@ -10,12 +10,12 @@ description: "ql/math/interpolations/multicubicspline.hpp – N-dimensional cubi
 
 <p> ql/math/interpolations/multicubicspline.hpp &#8211; N-dimensional cubic spline interpolation between discrete points. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/errors.hpp&gt;<br />
- #include &lt;ql/types.hpp&gt;<br />
- #include &lt;functional&gt;<br />
+<p> #include &lt;ql/errors.hpp&gt;<br/>
+ #include &lt;ql/types.hpp&gt;<br/>
+ #include &lt;functional&gt;<br/>
  #include &lt;vector&gt; </p>
 <h3>Classes</h3>
-<p> class <code>MultiCubicSpline&lt; i &gt;</code><br />
+<p> class <code>MultiCubicSpline&lt; i &gt;</code><br/>
  <i>N-dimensional cubic spline interpolation between discrete points. </i></p>
 <h3>Typedefs</h3>
 <p> typedef std::vector&lt; std::vector&lt; Real &gt; &gt; <code>SplineGrid</code> </p>

@@ -76,6 +76,6 @@ msguntypot - update po files when a typo is fixed in pot file
 
 <h2>COPYRIGHT AND LICENSE</h2>
 
- Copyright 2005 by <font SIZE="-1">SPI</font>, inc. 
+ Copyright 2005 by SPI, inc. 
 
- This program is free software; you may redistribute it and/or modify it under the terms of <font SIZE="-1">GPL</font> (see the <font SIZE="-1">COPYING</font> file).
+ This program is free software; you may redistribute it and/or modify it under the terms of GPL (see the COPYING file).

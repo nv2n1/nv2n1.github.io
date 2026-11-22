@@ -9,11 +9,11 @@ description: "exportfs – maintain table of exported NFS file systems"
 
 <p>exportfs &#8211; maintain table of exported NFS file systems</p>
 <h2>Synopsis</h2>
-<p><code>/usr/sbin/exportfs [-avi] [-o </code><i>options,..</i><code>] [</code><i>client:/path</i><code> ..]</code><br />
- <code>/usr/sbin/exportfs -r [-v]</code><br />
- <code>/usr/sbin/exportfs [-av] -u [</code><i>client:/path</i><code> ..]</code><br />
- <code>/usr/sbin/exportfs [-v]</code><br />
- <code>/usr/sbin/exportfs -f</code><br />
+<p><code>/usr/sbin/exportfs [-avi] [-o </code><i>options,..</i><code>] [</code><i>client:/path</i><code> ..]</code><br/>
+ <code>/usr/sbin/exportfs -r [-v]</code><br/>
+ <code>/usr/sbin/exportfs [-av] -u [</code><i>client:/path</i><code> ..]</code><br/>
+ <code>/usr/sbin/exportfs [-v]</code><br/>
+ <code>/usr/sbin/exportfs -f</code><br/>
  <code>/usr/sbin/exportfs -s</code></p>
 <h2>Description</h2>
 <p>An NFS server maintains a table of local physical file systems that are accessible to NFS clients. Each file system in this table is referred to as an <i>exported file system</i>, or <i>export</i>, for short. </p>
@@ -82,5 +82,5 @@ description: "exportfs – maintain table of exported NFS file systems"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-exports/">exports</a></code>(5), <code><a href="/docs/linux/man/5-nfs-conf/">nfs.conf</a></code>(5), <code>rpc.mountd</code>(8), <code><a href="/docs/linux/man/5-netgroup/">netgroup</a></code>(5)</p>
 <h2>Authors</h2>
-<p>Olaf Kirch &lt;okir [at] monad.swb.de&gt;<br />
+<p>Olaf Kirch &lt;okir [at] monad.swb.de&gt;<br/>
  Neil Brown &lt;neilb [at] cse.unsw.edu.au&gt;</p>

@@ -30,30 +30,30 @@ description: "arcproxy – ARC Credentials Proxy generation utility"
 <dt><code>-V</code></dt>
 <dd> path to VOMS server configuration file, only needed for VOMS client functionality if the path is a directory rather than a file, all of the files under this directory will be searched </dd>
 <dt><code>-S</code></dt>
-<dd> voms&lt;:command&gt;. Specify VOMS server.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:command is optional, and is used to ask for specific attributes(e.g: roles)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>command option is:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>all &#8212; put all of this DN&#8217;s attributes into AC;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list &#8212;list all of the DN&#8217;s attribute,will not create AC extension;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/Role=yourRole &#8212; specify the role, if this DN<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>has such a role, the role will be put into AC<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/voname/groupname/Role=yourRole &#8212; specify the vo,group and role if this DN<br />
+<dd> voms&lt;:command&gt;. Specify VOMS server.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:command is optional, and is used to ask for specific attributes(e.g: roles)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>command option is:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>all &#8212; put all of this DN&#8217;s attributes into AC;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list &#8212;list all of the DN&#8217;s attribute,will not create AC extension;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/Role=yourRole &#8212; specify the role, if this DN<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>has such a role, the role will be put into AC<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/voname/groupname/Role=yourRole &#8212; specify the vo,group and role if this DN<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>has such a role, the role will be put into AC </dd>
 <dt><code>-o</code></dt>
-<dd> group&lt;:role&gt;. Specify ordering of attributes.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example: &#8211;order&nbsp;<wbr>/knowarc.eu/coredev:Developer,/knowarc.eu/testers:Tester<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>or: &#8211;order&nbsp;<wbr>/knowarc.eu/coredev:Developer &#8211;order&nbsp;<wbr>/knowarc.eu/testers:Tester<br />
+<dd> group&lt;:role&gt;. Specify ordering of attributes.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example: &#8211;order&nbsp;<wbr>/knowarc.eu/coredev:Developer,/knowarc.eu/testers:Tester<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>or: &#8211;order&nbsp;<wbr>/knowarc.eu/coredev:Developer &#8211;order&nbsp;<wbr>/knowarc.eu/testers:Tester<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Note that it does not make sense to specify the order if you have two or more different VOMS server specified </dd>
 <dt><code>-G</code></dt>
 <dd> use GSI communication protocol for contacting VOMS services </dd>
 <dt><code>-H</code></dt>
-<dd> use HTTP communication protocol for contacting VOMS services that provide RESTful access<br />
+<dd> use HTTP communication protocol for contacting VOMS services that provide RESTful access<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Note for RESTful access,&nbsp;<wbr>&#8216;list&#8217;&nbsp;<wbr>command and multiple VOMS server are not supported </dd>
 <dt><code>-O</code></dt>
 <dd> use GSI proxy (RFC 3820 compliant proxy is default) </dd>
 <dt><code>-I</code></dt>
-<dd> print all information about this proxy.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>In order to show the Identity&nbsp;<wbr>(DN without CN as subfix for proxy)<br />
+<dd> print all information about this proxy.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>In order to show the Identity&nbsp;<wbr>(DN without CN as subfix for proxy)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>of the certificate, the&nbsp;<wbr>&#8216;trusted certdir&#8217;&nbsp;<wbr>is needed. </dd>
 <dt><code>-i</code></dt>
 <dd> print selected information about this proxy. Currently following information items are supported: </dd>
@@ -83,25 +83,25 @@ description: "arcproxy – ARC Credentials Proxy generation utility"
 <dt><code>-U</code></dt>
 <dd> Username to myproxy server. </dd>
 <dt><code>-N</code></dt>
-<dd> don&#8217;t prompt for a credential passphrase, when retrieve a credential from on MyProxy server.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The precondition of this choice is the credential is PUT onto&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the MyProxy server without a passphrase by using -R&nbsp;<wbr>(&#8211;retrievable_by_cert)&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>option when being PUTing onto Myproxy server.&nbsp;<wbr><br />
+<dd> don&#8217;t prompt for a credential passphrase, when retrieve a credential from on MyProxy server.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The precondition of this choice is the credential is PUT onto&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the MyProxy server without a passphrase by using -R&nbsp;<wbr>(&#8211;retrievable_by_cert)&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>option when being PUTing onto Myproxy server.&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>This option is specific for the GET command when contacting Myproxy server. </dd>
 <dt><code>-R</code></dt>
-<dd> Allow specified entity to retrieve credential without passphrase.<br />
+<dd> Allow specified entity to retrieve credential without passphrase.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>This option is specific for the PUT command when contacting Myproxy server. </dd>
 <dt><code>-L</code></dt>
-<dd> hostname of myproxy server optionally followed by colon and port number, e.g.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>example.org:7512. If the port number has not<br />
+<dd> hostname of myproxy server optionally followed by colon and port number, e.g.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>example.org:7512. If the port number has not<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>been specified, 7512 is used by default. </dd>
 <dt><code>-M</code></dt>
-<dd> command to myproxy server. The command can be PUT and GET.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PUT/put &#8212; put a delegated credential to myproxy server;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>GET/get &#8212; get a delegated credential from myproxy server,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>credential&nbsp;<wbr>(certificate and key)&nbsp;<wbr>is not needed in this case;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>myproxy functionality can be used together with VOMS functionality.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>voms and vomses can be used for Get command if VOMS attributes<br />
+<dd> command to myproxy server. The command can be PUT and GET.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PUT/put &#8212; put a delegated credential to myproxy server;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>GET/get &#8212; get a delegated credential from myproxy server,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>credential&nbsp;<wbr>(certificate and key)&nbsp;<wbr>is not needed in this case;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>myproxy functionality can be used together with VOMS functionality.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>voms and vomses can be used for Get command if VOMS attributes<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>is required to be included in the proxy. </dd>
 <dt><code>-F</code></dt>
 <dd> use NSS credential DB in default Mozilla profiles, including Firefox, Seamonkey and Thunderbird. </dd>

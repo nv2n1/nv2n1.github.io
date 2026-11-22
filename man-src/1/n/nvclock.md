@@ -55,7 +55,7 @@ description: "nvclock – Overclock your nVidia graphics adapter."
 <dd> Query current setting for one of the options listed under OpenGL / Display options.</dd>
 <dt><code>-a, &#8211;assign </code><i>option / option[display]=value</i></dt>
 <dd> Set a value for a supported option. </dd>
-<p> For OpenGL options like fsaa the following syntax is enough: nvclock -a option=value<br />
+<p> For OpenGL options like fsaa the following syntax is enough: nvclock -a option=value<br/>
 &nbsp;<wbr> Display specific options like Digital Vibrance sometimes need the display name: nvclock -a vibrance[crt-0]=value.</p>
 <dt><code>-x, &#8211;xdisplay </code></dt>
 <dd> Choose another X display</dd>

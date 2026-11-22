@@ -11,7 +11,7 @@ description: "spttrf.f –"
 <p> spttrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>spttrf</code> (N, D, E, INFO)<br />
+<p> subroutine <code>spttrf</code> (N, D, E, INFO)<br/>
  <i></i><code>SPTTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spttrf (integerN, real, dimension( * )D, real, dimension( * )E, integerINFO)</h3>

@@ -15,12 +15,12 @@ description: "log4cpp::OstreamAppender –"
 <h3>Public Member Functions</h3>
 <p><code>OstreamAppender</code> (const std::string &amp;name, std::ostream *stream) </p>
 <p> virtual <code>~OstreamAppender</code> () </p>
-<p> virtual bool <code>reopen</code> ()<br />
- <i>Reopens the output destination of this </i><code>Appender</code>, e.g.<br />
- virtual void <code>close</code> ()<br />
+<p> virtual bool <code>reopen</code> ()<br/>
+ <i>Reopens the output destination of this </i><code>Appender</code>, e.g.<br/>
+ virtual void <code>close</code> ()<br/>
  <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i></p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Log in </i><code>Appender</code> specific way.</p>
 <h3>Protected Attributes</h3>
 <p>std::ostream * <code>_stream</code> </p>

@@ -10,7 +10,7 @@ description: "zlatps.f –"
 <p>zlatps.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlatps</code> (UPLO, TRANS, DIAG, NORMIN, N, AP, X, SCALE, CNORM, INFO)<br />
+<p>subroutine <code>zlatps</code> (UPLO, TRANS, DIAG, NORMIN, N, AP, X, SCALE, CNORM, INFO)<br/>
  <i></i><code>ZLATPS</code> solves a triangular system of equations with the matrix held in packed storage.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlatps (characterUPLO, characterTRANS, characterDIAG, characterNORMIN, integerN, complex*16, dimension( * )AP, complex*16, dimension( * )X, double precisionSCALE, double precision, dimension( * )CNORM, integerINFO)</h3>

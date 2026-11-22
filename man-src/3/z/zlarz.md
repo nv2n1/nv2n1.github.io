@@ -10,7 +10,7 @@ description: "zlarz.f –"
 <p>zlarz.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlarz</code> (SIDE, M, N, L, V, INCV, TAU, C, LDC, WORK)<br />
+<p>subroutine <code>zlarz</code> (SIDE, M, N, L, V, INCV, TAU, C, LDC, WORK)<br/>
  <i></i><code>ZLARZ</code> applies an elementary reflector (as returned by stzrzf) to a general matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlarz (characterSIDE, integerM, integerN, integerL, complex*16, dimension( * )V, integerINCV, complex*16TAU, complex*16, dimension( ldc, * )C, integerLDC, complex*16, dimension( * )WORK)</h3>

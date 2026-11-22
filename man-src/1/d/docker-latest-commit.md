@@ -15,16 +15,16 @@ description: "docker-commit – Create a new image from a container’s changes"
 <p> Create a new image from an existing container specified by name or container ID. The new image will contain the contents of the container filesystem, <i>excluding</i> any data volumes. Refer to <code><a href="/docs/linux/man/1-docker-tag/">docker-tag</a>(1)</code> for more information about valid image and tag names. </p>
 <p> While the docker commit command is a convenient way of extending an existing image, you should prefer the use of a Dockerfile and docker build for generating images that you intend to share with other people. </p>
 <h2>OPTIONS</h2>
-<p> <code>-a</code>, <code>&#8211;author</code>=&quot;&quot;<br />
+<p> <code>-a</code>, <code>&#8211;author</code>=&quot;&quot;<br/>
 Author&nbsp;<wbr>(e.g.,&nbsp;<wbr>&quot;John Hannibal Smith&nbsp;<wbr> &lt;hannibal [at] a-team.com&gt;&quot;) </p>
-<p> <code>-c</code> , <code>&#8211;change</code>=[]<br />
-Apply specified Dockerfile instructions while committing the image<br />
+<p> <code>-c</code> , <code>&#8211;change</code>=[]<br/>
+Apply specified Dockerfile instructions while committing the image<br/>
 Supported Dockerfile instructions: CMD|ENTRYPOINT|ENV|EXPOSE|LABEL|ONBUILD|USER|VOLUME|WORKDIR </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-m</code>, <code>&#8211;message</code>=&quot;&quot;<br />
+<p> <code>-m</code>, <code>&#8211;message</code>=&quot;&quot;<br/>
 Commit message </p>
-<p> <code>-p</code>, <code>&#8211;pause</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-p</code>, <code>&#8211;pause</code>=<i>true</i>|<i>false</i><br/>
 Pause container during commit. The default is&nbsp;<wbr><i>true</i>. </p>
 <h2>EXAMPLES</h2>
 <h2>Creating a new image from an existing container</h2>

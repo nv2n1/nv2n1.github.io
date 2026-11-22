@@ -17,7 +17,7 @@ description: "uberftp – GridFTP-enabled client"
 <p> <code>uberftp</code> [options] -cmd <i>url</i> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>uberftp </code> is a GridFTP-enabled client that supports both interactive use and FTP commands on the <code>uberftp</code> command line to transfer files between two computers. It is intended for use with computers that have a GridFTP server installed. <code>Uberftp</code> supports GSI authentication, parallel data channels and striping. For more information about GridFTP, see the GridFTP URL in the &quot;SEE ALSO&quot; section below. </p>
-<p> Only the first usage shown above will create an interactive session. If <i>host</i> is specified, <code>uberftp</code> immediately attempts to establish a connection to the <font SIZE="-1">GridFTP</font> server on <i>host</i>, enters its command interpreter and awaits commands from the user. If <i>host</i> is not specified, <code>uberftp</code> immediately drops into the command interpreter without connecting to any <font SIZE="-1">GridFTP</font> server. </p>
+<p> Only the first usage shown above will create an interactive session. If <i>host</i> is specified, <code>uberftp</code> immediately attempts to establish a connection to the GridFTP server on <i>host</i>, enters its command interpreter and awaits commands from the user. If <i>host</i> is not specified, <code>uberftp</code> immediately drops into the command interpreter without connecting to any GridFTP server. </p>
 <p> The second usage option denotes a non interactive session in which &#8220;<i>cmd</i>&#8221; is a series of one or more commands as described in the <code>COMMANDS</code> section below to run once the control connection is established. These commands are run exactly as if they had been entered from the interactive prompt. This list must be enclosed in quotes. Multiple commands are semicolon or comma delimited. uberftp will execute these commands and then exit. <code>Uberftp</code> will exit upon the first error encountered. </p>
 <p> The third and forth usage statements use the URL style format for specifying the source and destination for the files to transfer. The third usage statement places these URLs on the command line. The forth usage allows the user to specify multiple URL pairs in a separate file for <code>Uberftp</code> to transfer one at a time. The supported URL syntaxes are <a href="gsiftp://[user@]host[:port]/file,">gsiftp://[user@]host[:port]/file,</a> <a href="ftp://[user[:pass]@]host[:port]/file">ftp://[user[:pass]@]host[:port]/file</a> and file://path. </p>
 <p> The fifth usage statement allows for commands that take pathnames to accept URLs instead. The allowable commands are listed in the <code>-cmds</code> section below. </p>
@@ -141,49 +141,49 @@ description: "uberftp – GridFTP-enabled client"
 <dt><code>cd [</code><i>dir</i>]</dt>
 <dd> Change the remote working directory to <i>dir</i>. If <i>dir</i> is not given, the client will make every attempt to change to the user&#8217;s home directory. </dd>
 <dt><code>chgrp [</code><i>-r</i>] <i>group</i> <i>object</i> [<i>object2</i> &#8230; <i>objectn</i>]</dt>
-<dd> Change group ownership on the remote object(s).<br />
+<dd> Change group ownership on the remote object(s).<br/>
  <i>-r</i> Recursively chgrp everything in the given directory. </dd>
 <dt><code>chmod [</code><i>-r</i>] <i>perms</i> <i>object</i> [<i>object2</i> &#8230; <i>objectn</i>]</dt>
-<dd> Change permissions on the remote object(s).<br />
+<dd> Change permissions on the remote object(s).<br/>
  <i>-r</i> Recursively chmod everything in the given directory.</dd>
 <dt><code>close</code></dt>
 <dd> Close the control connection to the remote host.</dd>
 <dt><code>cksum [</code><i>on</i>|<i>off</i>]</dt>
-<dd> Enable file cksum comparison after each file transfer. This only works with NCSA&#8217;s mass storage system.<br />
- <i>on</i> Enable checksum comparison<br />
+<dd> Enable file cksum comparison after each file transfer. This only works with NCSA&#8217;s mass storage system.<br/>
+ <i>on</i> Enable checksum comparison<br/>
  <i>off</i> Disable checksum comparison</dd>
 <dt><code>cos </code><i>name</i></dt>
 <dd> Sets the HPSS class of service to <i>name</i> on the FTP service if the service supports it. If <i>name</i> is omitted, the current class of service is printed. Use the class of service name <i>default</i> to allow the remote server to decide which class of service to use.</dd>
 <dt><code>dcau [</code><i>N</i>|<i>A</i>|<i>S</i> <i>subject</i>]</dt>
-<dd> Change the data channel authentication settings. If the service does not support DCAU, these settings are ignored.<br />
- <i>N</i> Disabled dcau.<br />
- <i>A</i> Expect the remote identity to be mine. (Default)<br />
+<dd> Change the data channel authentication settings. If the service does not support DCAU, these settings are ignored.<br/>
+ <i>N</i> Disabled dcau.<br/>
+ <i>A</i> Expect the remote identity to be mine. (Default)<br/>
  <i>S</i> <i>subject</i> Expect the remote identity to be <i>subject</i>.</dd>
 <dt><code>debug [</code><i>0-3</i>]</dt>
-<dd> Turn debug statements on/off. If no value is given, this command will toggle between debug(2) and non debug(1) mode. Otherwise the debug level is set to the given level.<br />
- 0 Only errors are printed<br />
- 1 Default. Errors and some helpful messages are printed<br />
- 2 Print useful control channel information<br />
+<dd> Turn debug statements on/off. If no value is given, this command will toggle between debug(2) and non debug(1) mode. Otherwise the debug level is set to the given level.<br/>
+ 0 Only errors are printed<br/>
+ 1 Default. Errors and some helpful messages are printed<br/>
+ 2 Print useful control channel information<br/>
  3 Print all information</dd>
 <dt><code>family </code><i>name</i></dt>
 <dd> Sets the tape family to <i>name</i> on the FTP service if the service supports it. If <i>name</i> is omitted, the current family is printed. Use the family name <i>default</i> to allow the remote server to decide which family to use.</dd>
 <dt><code>glob [</code><i>on</i>|<i>off</i>]</dt>
-<dd> Enable or disable filename globbing. If no option is given, this command will toggle the current setting.<br />
- <i>on</i> Enable filename globbing<br />
+<dd> Enable or disable filename globbing. If no option is given, this command will toggle the current setting.<br/>
+ <i>on</i> Enable filename globbing<br/>
  <i>off</i> Disable filename globbing</dd>
 <dt><code>dir [</code><i>-r</i>] [<i>target</i>]</dt>
-<dd> List the contents of the remote target directory. If <i>target</i> is not given, then the current working directory is used.<br />
- <i>-r</i> Recursively list <i>target</i>.<br />
+<dd> List the contents of the remote target directory. If <i>target</i> is not given, then the current working directory is used.<br/>
+ <i>-r</i> Recursively list <i>target</i>.<br/>
  <i>target</i> Directory or file to list. &#8216;.&#8217; is used by default.</dd>
 <dt><code>get [</code><i>-r</i>] <i>source</i> [<i>destination</i>]</dt>
-<dd> Retrieve file(s) from the remote service. If <i>source</i> implies multiple transfers, either through regular expressions or by using the recursive feature, then <i>destination</i> must be a directory. If <i>destination</i> is not specified, <i>source</i> is used.<br />
+<dd> Retrieve file(s) from the remote service. If <i>source</i> implies multiple transfers, either through regular expressions or by using the recursive feature, then <i>destination</i> must be a directory. If <i>destination</i> is not specified, <i>source</i> is used.<br/>
  <i>-r</i> Recursively transfer the given directory.</dd>
 <dt><code>hash</code></dt>
 <dd> Print hash marks during data transfers. This does not work during third party transfers.</dd>
 <dt><code>help [</code><i>command</i>]</dt>
 <dd> If <i>command</i> is given, print a helpful blurb about <i>command</i>. Otherwise, list all commands.</dd>
 <dt><code>keepalive [</code><i>seconds</i>]</dt>
-<dd> Attempts to keep the control channel from being blocked by firewalls during long data channel operations. UberFTP sends a NOOP command to the service at intervals equal to the specified number of <i>seconds</i>. Setting it to zero will disable keepalive. If <i>seconds</i> are not given, the current timeout is displayed. This feature is disabled by default.<br />
+<dd> Attempts to keep the control channel from being blocked by firewalls during long data channel operations. UberFTP sends a NOOP command to the service at intervals equal to the specified number of <i>seconds</i>. Setting it to zero will disable keepalive. If <i>seconds</i> are not given, the current timeout is displayed. This feature is disabled by default.<br/>
  seconds number of seconds between NOOPs. Disabled if zero.</dd>
 <dt><code>lcat </code><i>file1</i> [<i>file2</i> &#8230; <i>filen</i>]</dt>
 <dd> Print the contents of the local file(s) to stdout.</dd>
@@ -192,24 +192,24 @@ description: "uberftp – GridFTP-enabled client"
 <dt><code>lcdup</code></dt>
 <dd> Change the local working directory up one level.</dd>
 <dt><code>lchgrp [</code><i>-r</i>] <i>group</i> <i>object</i> [<i>object2</i> &#8230; <i>objectn</i>]</dt>
-<dd> Change group ownership on the local object(s).<br />
+<dd> Change group ownership on the local object(s).<br/>
  <i>-r</i> Recursively chgrp everything in the given directory. </dd>
 <dt><code>lchmod [</code><i>-r</i>] <i>perms</i> <i>object</i> [<i>object2</i> &#8230; <i>objectn</i>]</dt>
-<dd> Change permissions on the local object(s).<br />
+<dd> Change permissions on the local object(s).<br/>
  <i>-r</i> Recursively chmod everything in the given directory.</dd>
 <dt><code>lclose</code></dt>
 <dd> Close the control connection to the local host.</dd>
 <dt><code>ldir [</code><i>-r</i>] [<i>target</i>]</dt>
-<dd> List the contents of the local <i>target</i> directory. If <i>target</i> is not given, then the current working directory is used.<br />
- <i>-r</i> Recursively list <i>target</i>.<br />
+<dd> List the contents of the local <i>target</i> directory. If <i>target</i> is not given, then the current working directory is used.<br/>
+ <i>-r</i> Recursively list <i>target</i>.<br/>
  target Directory or file to list. &#8216;.&#8217; is used by default.</dd>
 <dt><code>link [</code><i>oldfile</i>] [<i>newfile</i>]</dt>
 <dd> Create a hardlink to oldfile named newfile on the remote service.</dd>
 <dt><code>llink [</code><i>oldfile</i>] [<i>newfile</i>]</dt>
 <dd> Create a hardlink to oldfile named newfile on the local service.</dd>
 <dt><code>lls [</code><i>-r</i>] [<i>target</i>]</dt>
-<dd> List the contents of the local <i>target</i> directory. If <i>target</i> is not given, then the current working directory is used.<br />
- <i>-r</i> Recursively list <i>target</i>.<br />
+<dd> List the contents of the local <i>target</i> directory. If <i>target</i> is not given, then the current working directory is used.<br/>
+ <i>-r</i> Recursively list <i>target</i>.<br/>
  target Directory or file to list. &#8216;.&#8217; is used by default.</dd>
 <dt><code>llscos</code></dt>
 <dd> List the available class of services on the local server (HPSS only).</dd>
@@ -218,28 +218,28 @@ description: "uberftp – GridFTP-enabled client"
 <dt><code>lmkdir </code><i>dir1</i> [<i>dir2</i> &#8230; <i>dirn</i>]</dt>
 <dd> Create the local directory(ies).</dd>
 <dt><code>lopen [</code><i>-P port</i>] [<i>-u user</i>] [<i>-p pass</i> | <i>X</i>] <i>host</i></dt>
-<dd> Opens a control channel to <i>host</i> and that host becomes the &#8216;local&#8217; machine. After using lopen, all local (l*) commands perform their respective operations on <i>host</i> rather than the local machine. This is how third party transfers are accomplished. GSI authentication is used unless the <i>-p</i> option is used.<br />
- <i>-P port</i> Connect to port (Default 2811 for GSI, 21 for password).<br />
- <i>-u user</i> Connect as alternate user.<br />
+<dd> Opens a control channel to <i>host</i> and that host becomes the &#8216;local&#8217; machine. After using lopen, all local (l*) commands perform their respective operations on <i>host</i> rather than the local machine. This is how third party transfers are accomplished. GSI authentication is used unless the <i>-p</i> option is used.<br/>
+ <i>-P port</i> Connect to port (Default 2811 for GSI, 21 for password).<br/>
+ <i>-u user</i> Connect as alternate user.<br/>
  <i>-p pass</i> | <i>X</i> </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Use password&nbsp;<wbr><i>pass</i>&nbsp;<wbr>when authenticating with&nbsp;<wbr><i>host</i>. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>If&nbsp;<wbr><i>pass</i>&nbsp;<wbr>equals&nbsp;<wbr><i>X</i>, read the password from STDIN with </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>character echoing turned off.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>character echoing turned off.<br/>
  <i>host</i> Connect to <i>host</i>.</p>
 <dt><code>lpwd</code></dt>
 <dd> Prints the current local working directory.</dd>
 <dt><code>lrename </code><i>src</i> <i>dst</i></dt>
 <dd> Rename the local object <i>src</i> to <i>dst</i>.</dd>
 <dt><code>lrm [</code><i>-r</i>] <i>object1</i> [<i>object1</i>&#8230;<i>objectn</i>]</dt>
-<dd> Removes the local file system object(s).<br />
+<dd> Removes the local file system object(s).<br/>
  <i>-r</i> Recursively remove the given directory.</dd>
 <dt><code>lrmdir </code><i>dir1</i> [<i>dir2</i>&#8230;<i>dirn</i>]</dt>
 <dd> Removes the given directories from the local service.</dd>
 <dt><code>lquote </code><i>cmd</i></dt>
 <dd> Pass <i>cmd</i> to the local FTP service. This allows the user to use server-specific commands that are not available through the uberftp interface.</dd>
 <dt><code>ls [</code><i>-r</i>] [<i>target</i>]</dt>
-<dd> List the contents of the remote target directory. If [<i>target</i>] is not given, then the current working directory is used.<br />
- <i>-r</i> Recursively list <i>target</i>.<br />
+<dd> List the contents of the remote target directory. If [<i>target</i>] is not given, then the current working directory is used.<br/>
+ <i>-r</i> Recursively list <i>target</i>.<br/>
  <i>target</i> Directory or file to list. &#8216;.&#8217; is used by default.</dd>
 <dt><code>lscos</code></dt>
 <dd> List the available class of services on the remote server (HPSS only).</dd>
@@ -248,34 +248,34 @@ description: "uberftp – GridFTP-enabled client"
 <dt><code>lsize </code><i>file1</i> [<i>file2</i>&#8230;<i>filen</i>]</dt>
 <dd> Prints the size of the given object(s).</dd>
 <dt><code>lstage [</code><i>-r</i>] <i>seconds</i> <i>object1</i> [<i>object2</i>&#8230;<i>objectn</i>]</dt>
-<dd> Attempt to stage all matching files within the given number of <i>seconds</i> on the local service.<br />
- seconds number of seconds to attempt staging<br />
+<dd> Attempt to stage all matching files within the given number of <i>seconds</i> on the local service.<br/>
+ seconds number of seconds to attempt staging<br/>
  <i>-r</i> Recursively stage all files in the given subdirectory.</dd>
 <dt><code>lsymlink [</code><i>oldfile</i>] [<i>newfile</i>]</dt>
 <dd> Create a symlink to oldfile named newfile on the local service.</dd>
 <dt><code>mput [</code><i>-r</i>] <i>object1</i> [<i>object2</i>&#8230;<i>objectn</i>]</dt>
-<dd> Retrieve file(s) from the remote service. This is similiar to making multiple calls to get without specifying a destination.<br />
+<dd> Retrieve file(s) from the remote service. This is similiar to making multiple calls to get without specifying a destination.<br/>
  <i>-r</i> Recursively transfer the given directory.</dd>
 <dt><code>mkdir </code><i>dir</i></dt>
 <dd> Create the remote directory.</dd>
 <dt><code>mode [</code><i>E</i>|<i>S</i>]</dt>
-<dd> Toggle the data transfer mode between Streams mode and Extended Block mode. The default is Streams mode. If no option is given, it will display the current mode.<br />
- E Extended block mode<br />
+<dd> Toggle the data transfer mode between Streams mode and Extended Block mode. The default is Streams mode. If no option is given, it will display the current mode.<br/>
+ E Extended block mode<br/>
  S Streams mode</dd>
 <dt><code>mput [</code><i>-r</i>] <i>object1</i> [<i>object2</i>&#8230;<i>objectn</i>]</dt>
-<dd> Store file(s) to the remote service. This is similiar to making multiple calls to put without specifying a destination.<br />
+<dd> Store file(s) to the remote service. This is similiar to making multiple calls to put without specifying a destination.<br/>
  <i>-r</i> Recursively transfer the given directory.</dd>
 <dt><code>open [</code><i>-P port</i>] [<i>-u user</i>] [<i>-p pass</i> | <i>X</i>] <i>host</i></dt>
-<dd> Opens a control channel to <i>host</i> and that host becomes the &#8216;remote&#8217; machine. GSI authentication is used unless the -p option is used.<br />
- <i>-P port</i> Connect to <i>port</i> (Default 2811 for GSI, 21 for password).<br />
- <i>-u user</i> Connect as <i>user</i>.<br />
+<dd> Opens a control channel to <i>host</i> and that host becomes the &#8216;remote&#8217; machine. GSI authentication is used unless the -p option is used.<br/>
+ <i>-P port</i> Connect to <i>port</i> (Default 2811 for GSI, 21 for password).<br/>
+ <i>-u user</i> Connect as <i>user</i>.<br/>
  <i>-p pass</i> | <i>X</i> </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Use password&nbsp;<wbr><i>pass</i>&nbsp;<wbr>when authenticating with&nbsp;<wbr><i>host</i>. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>If&nbsp;<wbr><i>pass</i>&nbsp;<wbr>equals&nbsp;<wbr><i>X</i>, read the password from STDIN with </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>character echoing turned off.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>character echoing turned off.<br/>
  <i>host</i> Connect to <i>host</i>.</p>
 <dt><code>order [</code><i>type</i>]</dt>
-<dd> Changes the order of lists returned from ls and lls to the given scheme. If <i>type</i> is not given, the current order is displayed.<br />
+<dd> Changes the order of lists returned from ls and lls to the given scheme. If <i>type</i> is not given, the current order is displayed.<br/>
  <i>type</i> Ordering scheme to use. Value options are: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>none&nbsp;<wbr>&nbsp;<wbr>Do not order listings </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>name&nbsp;<wbr>&nbsp;<wbr>Order listings by name </p>
@@ -286,30 +286,30 @@ description: "uberftp – GridFTP-enabled client"
 <dt><code>passive</code></dt>
 <dd> Change to PASSIVE mode which causes the client to initiate the data connection. This is the default mode unless the variable UBERFTP_ACTIVE_MODE is set in the environment. If you are behind a firewall you must use PASSIVE mode.</dd>
 <dt><code>pbsz [</code><i>size</i>]</dt>
-<dd> Change the length of the protection buffer. The protection buffer is used to encrypt data on the data channel. The length of the protection buffer represents the largest encoded message that is allowed on the data channel. By default, the protection buffer is grown to match the internal buffer used. For efficient transfers, pbsz should be sufficiently larger than blksize so that the wrapped buffer fits within the protection buffer. Otherwise, the blksize buffer is broken into multiple pieces so that each write is less than pbsz when wrapped. If <i>pbsz</i> is not given, the current size is displayed.<br />
+<dd> Change the length of the protection buffer. The protection buffer is used to encrypt data on the data channel. The length of the protection buffer represents the largest encoded message that is allowed on the data channel. By default, the protection buffer is grown to match the internal buffer used. For efficient transfers, pbsz should be sufficiently larger than blksize so that the wrapped buffer fits within the protection buffer. Otherwise, the blksize buffer is broken into multiple pieces so that each write is less than pbsz when wrapped. If <i>pbsz</i> is not given, the current size is displayed.<br/>
  <i>size</i> length of protection buffer. 0 will set it to its default.</dd>
 <dt><code>pget </code><i>offset</i> <i>size</i> <i>srcfile</i> [<i>destfile</i>]</dt>
-<dd> Retrieve only the specified portion of the file(s). If srcfile is a regular expression and expands to multiple files, and destination is given, destination must refer to a directory.<br />
- <i>offset</i> Offset within the file<br />
- <i>size</i> Amount of data to retrieve<br />
- <i>srcfile</i> Name of remote file<br />
- <i>destfile</i> Name of local file. srcfile is used if destfile<br />
+<dd> Retrieve only the specified portion of the file(s). If srcfile is a regular expression and expands to multiple files, and destination is given, destination must refer to a directory.<br/>
+ <i>offset</i> Offset within the file<br/>
+ <i>size</i> Amount of data to retrieve<br/>
+ <i>srcfile</i> Name of remote file<br/>
+ <i>destfile</i> Name of local file. srcfile is used if destfile<br/>
  is not specified</dd>
 <dt><code>pput </code><i>offset</i> <i>size</i> <i>srcfile</i> [<i>destfile</i>]</dt>
-<dd> Store only the specified portion of the file(s). If srcfile is a regular expression and expands to multiple files, and destination is given, destination must refer to a directory.<br />
- <i>offset</i> Offset within the file<br />
- <i>size</i> Amount of data to retrieve<br />
- <i>srcfile</i> Name of local file<br />
+<dd> Store only the specified portion of the file(s). If srcfile is a regular expression and expands to multiple files, and destination is given, destination must refer to a directory.<br/>
+ <i>offset</i> Offset within the file<br/>
+ <i>size</i> Amount of data to retrieve<br/>
+ <i>srcfile</i> Name of local file<br/>
  <i>destfile</i> Name of remote file. srcfile is used if destfile </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>is not specified</p>
 <dt><code>prot [</code><i>C</i>|<i>S</i>|<i>E</i>|<i>P</i>]</dt>
-<dd> This command configures the level of security on the data channel after data channel authentication has completed. Clear means that the data will not be protected. Safe means that the data will be integrity protected meaning that altered data will be detected. Confidential means that the data will be unreadable to third parties. Private mode means the data will be confidential and safe.<br />
- <i>C</i> Set protection level to clear.<br />
- <i>S</i> Set protection level to safe.<br />
- <i>E</i> Set protection level to confidential.<br />
+<dd> This command configures the level of security on the data channel after data channel authentication has completed. Clear means that the data will not be protected. Safe means that the data will be integrity protected meaning that altered data will be detected. Confidential means that the data will be unreadable to third parties. Private mode means the data will be confidential and safe.<br/>
+ <i>C</i> Set protection level to clear.<br/>
+ <i>S</i> Set protection level to safe.<br/>
+ <i>E</i> Set protection level to confidential.<br/>
  <i>P</i> Set protection level to private.</dd>
 <dt><code>put [</code><i>-r</i>] <i>source</i> [<i>destination</i>]</dt>
-<dd> Store file(s) to the remote service. If <i>source</i> implies multiple transfers, either through regular expressions or by using the recursive feature, then <i>destination</i> must be a directory. If <i>destination</i> is not specified, <i>source</i> is used.<br />
+<dd> Store file(s) to the remote service. If <i>source</i> implies multiple transfers, either through regular expressions or by using the recursive feature, then <i>destination</i> must be a directory. If <i>destination</i> is not specified, <i>source</i> is used.<br/>
  <i>-r</i> Recursively transfer the given directory.</dd>
 <dt><code>pwd</code></dt>
 <dd> Prints the current working directory.</dd>
@@ -320,15 +320,15 @@ description: "uberftp – GridFTP-enabled client"
 <dt><code>rename </code><i>src</i> <i>dst</i></dt>
 <dd> Rename the remote object <i>src</i> to <i>dst</i>.</dd>
 <dt><code>retry [</code><i>cnt</i>]</dt>
-<dd> Configures retry on failed commands that have transient errors. <i>cnt</i> represents the number of times a failed command is retried. A value of zero effectively disables retry. Zero is the default. If no value is given the current setting is displayed.<br />
+<dd> Configures retry on failed commands that have transient errors. <i>cnt</i> represents the number of times a failed command is retried. A value of zero effectively disables retry. Zero is the default. If no value is given the current setting is displayed.<br/>
  <i>cnt</i> Number of times a failed command is retried.</dd>
 <dt><code>resume [</code><i>-d</i>] <i>path</i></dt>
-<dd> Sets a restart point for recursive transfers. If a long recursive transfer fails, you can set resume to the path that failed and UberFTP will skip all file and directory creations up to the given path.<br />
+<dd> Sets a restart point for recursive transfers. If a long recursive transfer fails, you can set resume to the path that failed and UberFTP will skip all file and directory creations up to the given path.<br/>
  <i>path</i> Path to resume transfer at. If <i>path</i> is not given, print the current </dd>
-<p>&nbsp;<wbr>resume target.<br />
+<p>&nbsp;<wbr>resume target.<br/>
  <i>-d</i> Remove the current resume path.</p>
 <dt><code>rm [</code><i>-r</i>] <i>object1</i> [<i>object1</i>&#8230;<i>objectn</i>]</dt>
-<dd> Removes the remote file system object(s).<br />
+<dd> Removes the remote file system object(s).<br/>
  <i>-r</i> Recursively remove the given directory.</dd>
 <dt><code>rmdir </code><i>dir1</i> [<i>dir2</i>&#8230;<i>dirn</i>]</dt>
 <dd> Removes the given directories from the remote service.</dd>
@@ -337,8 +337,8 @@ description: "uberftp – GridFTP-enabled client"
 <dt><code>size </code><i>file1</i> [<i>file2</i>&#8230;<i>filen</i>]</dt>
 <dd> Prints the size of the given object(s).</dd>
 <dt><code>stage [</code><i>-r</i>] <i>seconds</i> <i>object1</i> [<i>object2</i>&#8230;<i>objectn</i>]</dt>
-<dd> Attempt to stage all matching files within the given number of seconds on the remote service.<br />
- <i>seconds</i> number of seconds to attempt staging<br />
+<dd> Attempt to stage all matching files within the given number of seconds on the remote service.<br/>
+ <i>seconds</i> number of seconds to attempt staging<br/>
  <i>-r</i> Recursively stage all files in the given subdirectory.</dd>
 <dt><code>sunique</code></dt>
 <dd> Toggles the client to store files using unique names during get operations.</dd>
@@ -356,8 +356,8 @@ description: "uberftp – GridFTP-enabled client"
 <h2>THIRD-PARTY TRANSFERS</h2>
 <p> In order to perform a third-party transfer, you must log into two <code>FTP</code> servers. Typically, you connect to a single <code>FTP</code> service to &quot;get&quot; files to the local machine and &quot;put&quot; files to the remote service. For third-party transfers, you must connect to a second service thereby replacing the former local machine. In <code>UberFTP</code> terminology, it is referred to as &quot;opening a new local service&quot; since, from the perspective of the user, the new local service will appear as though the user initiated the FTP session from that machine. </p>
 <p> All remote service commands have &quot;l*&quot; counterparts that allow you to specify that the command is to be performed on the local service, whether that service is the local machine or a new local service. So to open a new local service, use the &quot;l*&quot; version of the open command: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>UberFTP&gt;&nbsp;<wbr>lopen mss.ncsa.teragrid.org<br />
-&nbsp;<wbr>&nbsp;<wbr>UberFTP&gt;&nbsp;<wbr>lclose<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>UberFTP&gt;&nbsp;<wbr>lopen mss.ncsa.teragrid.org<br/>
+&nbsp;<wbr>&nbsp;<wbr>UberFTP&gt;&nbsp;<wbr>lclose<br/>
  Once you have connected to both services, files can be transferred as before with the change that files you &quot;get&quot; go to the new local service and files you &quot;put&quot; are sent from the new local service.</p>
 <h2>CONTROLLING EPHEMERAL PORT SELECTION</h2>
 <p> By default, local port selection is managed by the operating system. However, you may wish to specify which ports UberFTP should use for incoming and out going connections. This is useful when dealing with firewalls. </p>
@@ -373,24 +373,24 @@ description: "uberftp – GridFTP-enabled client"
 <p> UberFTP will exit with a value of 0 if no errors occurred during the session, otherwise it will exit with a value of 1. In non interactive, commandline mode, it will exit after the first error occurs.</p>
 <h2>EXAMPLES</h2>
 <p> Set the environment variable to set <i>active</i> mode FTP (improves file transfer performance to the mass storage system). Connect to NCSA&#8217;s UniTree mass storage system interactively from NCSA&#8217;s TeraGrid cluster: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>setenv UBERFTP_ACTIVE_MODE on<br />
-&nbsp;<wbr>&nbsp;<wbr>%&nbsp;<wbr>uberftp mss.ncsa.teragrid.org<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8230;<br />
-&nbsp;<wbr>&nbsp;<wbr>220 UNIX Archive FTP server ready.<br />
-&nbsp;<wbr>&nbsp;<wbr>230 User consult logged in.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>setenv UBERFTP_ACTIVE_MODE on<br/>
+&nbsp;<wbr>&nbsp;<wbr>%&nbsp;<wbr>uberftp mss.ncsa.teragrid.org<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8230;<br/>
+&nbsp;<wbr>&nbsp;<wbr>220 UNIX Archive FTP server ready.<br/>
+&nbsp;<wbr>&nbsp;<wbr>230 User consult logged in.<br/>
 &nbsp;<wbr>&nbsp;<wbr>UberFTP&gt; </p>
 <p> Use the command-line interface to copy a file from NCSA&#8217;s TeraGrid cluster to the UniTree mass storage system. (There is no need to set <code>tcpbuf</code> since it is over a LAN but <i>active</i> mode is turned on to improve file transfer performance to the mass storage system.): </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>uberftp mss.ncsa.teragrid.org&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>uberftp mss.ncsa.teragrid.org&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;active;&nbsp;<wbr>cd work;&nbsp;<wbr>get file.tar&quot; </p>
 <p> Copy a file from SDSC&#8217;s TeraGrid cluster to NCSA&#8217;s TeraGrid cluster. (Note that <code>tcpbuf</code> is set to 16777216 since there is a long network latency between NCSA and SDSC): </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>uberftp tg-grid<a href="ftp://ftp.sdsc.teragrid.org">ftp.sdsc.teragrid.org</a>&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>uberftp tg-grid<a href="ftp://ftp.sdsc.teragrid.org">ftp.sdsc.teragrid.org</a>&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;tcpbuf 16777216;&nbsp;<wbr>cd scr;&nbsp;<wbr>put file.tar&quot;</p>
 <h2>SEE ALSO</h2>
-<p> <code>mssftp</code>(1), <code>msscmd</code>(1), <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1),<br />
+<p> <code>mssftp</code>(1), <code>msscmd</code>(1), <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1),<br/>
  GridFTP: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.globus.org/datagrid/gridftp.html">http://www.globus.org/datagrid/gridftp.html</a><br />
+<p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.globus.org/datagrid/gridftp.html">http://www.globus.org/datagrid/gridftp.html</a><br/>
  TCP Window Size: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://dast.nlanr.net/Articles/GettingStarted/TCP_window_size.html">http://dast.nlanr.net/Articles/GettingStarted/TCP_window_size.html</a><br />
+<p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://dast.nlanr.net/Articles/GettingStarted/TCP_window_size.html">http://dast.nlanr.net/Articles/GettingStarted/TCP_window_size.html</a><br/>
  Active vs. Passive FTP: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://slacksite.com/other/ftp.html">http://slacksite.com/other/ftp.html</a> </p>
 <p> <code>Note: The links above are not under NCSA&#8217;s control so they may become obsolete.</code> </p>

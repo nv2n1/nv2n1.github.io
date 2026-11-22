@@ -144,7 +144,7 @@ description: "pg_top – display and update information about the top cpu Postgr
 <h2>AUTHOR</h2>
 <p> William LeFebvre Mark Wong</p>
 <h2>ENVIRONMENT</h2>
-<p> PG_TOP<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>user-configurable defaults for options.<br />
+<p> PG_TOP<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>user-configurable defaults for options.<br/>
  PG_TOPCOLORS<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>color specification</p>
 <h2>BUGS</h2>
 <p> As with <i><a href="/docs/linux/man/1-ps/">ps</a></i>(1), things can change while <i>pg_top</i> is collecting information for an update. The picture it gives is only a close approximation to reality.</p>

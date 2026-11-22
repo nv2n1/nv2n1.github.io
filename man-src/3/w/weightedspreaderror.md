@@ -23,7 +23,7 @@ description: "QuantLib::CmsMarket – set of CMS quotes"
 <p> <code>Real</code> <code>weightedFwdNpvError</code> (const <code>Matrix</code> &amp;weights) </p>
 <p> <code>Disposable</code>&lt; <code>Array</code> &gt; <code>weightedSpreadErrors</code> (const <code>Matrix</code> &amp;weights) </p>
 <p> <code>Disposable</code>&lt; <code>Array</code> &gt; <code>weightedSpotNpvErrors</code> (const <code>Matrix</code> &amp;weights) </p>
-<p> <code>Disposable</code>&lt; <code>Array</code> &gt; <code>weightedFwdNpvErrors</code> (const <code>Matrix</code> &amp;weights)<br />
+<p> <code>Disposable</code>&lt; <code>Array</code> &gt; <code>weightedFwdNpvErrors</code> (const <code>Matrix</code> &amp;weights)<br/>
  <code>LazyObject interface</code> </p>
 <pre><code>void update ()</code></pre>
 <h2>Detailed Description</h2>

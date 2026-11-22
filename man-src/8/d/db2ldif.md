@@ -28,7 +28,7 @@ description: "db2ldif – Directory Server script for exporting the database"
 <dt><code>-m</code></dt>
 <dd>Minimize the base64 encodings in the exported LDIF file.</dd>
 <dt><code>-M</code></dt>
-<dd>Exported ldif is stored in multiple files. These files are named : &lt;instance&gt;_&lt;filename&gt;<br />
+<dd>Exported ldif is stored in multiple files. These files are named : &lt;instance&gt;_&lt;filename&gt;<br/>
  By default, all instances are stored in the filename specified by the -a option.</dd>
 <dt><code>-r</code></dt>
 <dd>Export replication data(information required to initialize a replica when the LDIF is imported).</dd>

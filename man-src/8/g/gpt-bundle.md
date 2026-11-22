@@ -37,11 +37,11 @@ description: "gpt-bundle – Creates binary or source bundles from an installati
  -rpmlicense=LABEL License Label added to the RPM header
  [packages] List of packages to be bundled</pre>
 <h2>Description</h2>
-<p><code>gpt-bundle</code> Creates binary or source bundles from an installation or a collection of source packages. These bundles can then distributed be installed using <i>gpt-install</i> or <i>gpt-build</i>. A bundle consists of a collection of packages and a <font SIZE="-1">XML</font> formatted description file. The <font SIZE="-1">DTD</font> for this file is found in <i></i>$GPT_LOCATION<i>/share/dtd/gpt_bundle.dtd</i>. </p>
+<p><code>gpt-bundle</code> Creates binary or source bundles from an installation or a collection of source packages. These bundles can then distributed be installed using <i>gpt-install</i> or <i>gpt-build</i>. A bundle consists of a collection of packages and a XML formatted description file. The DTD for this file is found in <i></i>$GPT_LOCATION<i>/share/dtd/gpt_bundle.dtd</i>. </p>
 <p> The script accepts a list of packages from the command line or from an inputed bundle description file. It expands this list to include all of the packages that the listed packages depend on. It then uses this expanded list to create a new bundle description file which is then added to the collection of packages to form a bundle. </p>
 <p> <code>gpt-bundle</code> assumes that all of the packages needed to create a source bundle are found in one subdirectory identified by the <i>-srcdir</i> switch. </p>
 <p> <code>gpt-bundle</code> assumes that all of the packages need to create a binary bundle are installed in a location identified by the <i>-installdir</i> flag or <tt>$GLOBUS_LOCATION</tt>. </p>
-<p> The list of packages that can be entered from the command line are of the form <i></i><font SIZE="-1"><i>NAME-FLAVOR-PACKAGE_TYPE</i></font><i></i>. The wildcard character &#8216;*&#8217; can also be used.</p>
+<p> The list of packages that can be entered from the command line are of the form <i></i><i>NAME-FLAVOR-PACKAGE_TYPE</i><i></i>. The wildcard character &#8216;*&#8217; can also be used.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-srcdir=PATH</code></dt>
@@ -63,7 +63,7 @@ description: "gpt-bundle – Creates binary or source bundles from an installati
 <dt><code>-all</code></dt>
 <dd>Tells <code>gpt-bundle</code> to bundle all of the packages in the source package directory or installation.</dd>
 <dt><code>-native</code></dt>
-<dd>Tells <code>gpt-bundle</code> to also bundle packages that are in the native format of the operating system. Presently this only works for <font SIZE="-1">RPMS</font> on linux. <code>gpt-bundle</code> will output two bundle giving the native bundle a platform specific extension such as -rpm.</dd>
+<dd>Tells <code>gpt-bundle</code> to also bundle packages that are in the native format of the operating system. Presently this only works for RPMS on linux. <code>gpt-bundle</code> will output two bundle giving the native bundle a platform specific extension such as -rpm.</dd>
 <dt><code>-nodeps</code></dt>
 <dd>Tells <code>gpt-bundle</code> to only include the packages specified&#8212;do not check for or include dependencies.</dd>
 <dt><code>-nosetups</code></dt>
@@ -73,13 +73,13 @@ description: "gpt-bundle – Creates binary or source bundles from an installati
 <dt><code>-output=FILE</code></dt>
 <dd>This is an alternative way to specify the bundle name. The output file is put in the directory from which <code>gpt-bundle</code> was invoked if no path was given, in a directory relative it if a relative path was given, or in the absolute location, if given.</dd>
 <dt><code>-template</code></dt>
-<dd>Creates an empty Bundle <font SIZE="-1">XML</font> that can be modified and used to create a new bundle.</dd>
+<dd>Creates an empty Bundle XML that can be modified and used to create a new bundle.</dd>
 <dt><code>-bundledef=FILE</code></dt>
-<dd>Creates an <font SIZE="-1">XML</font> file with name equal to <font SIZE="-1"><code>FILE</code></font>.gpt-bundle.xml. This file will contain a <font SIZE="-1">GPT</font> Bundle definition with values set to those passed in on the command line.</dd>
+<dd>Creates an XML file with name equal to <code>FILE</code>.gpt-bundle.xml. This file will contain a GPT Bundle definition with values set to those passed in on the command line.</dd>
 <dt><code>-rpmprefix=&lt;path_to_installation</code>&gt;</dt>
-<dd>This should be set to the path to your <font SIZE="-1">GLOBUS_LOCATION</font>. <font SIZE="-1">GPT</font> will use a value of &#8220;/usr/grid&#8221; if this option is not specified.</dd>
+<dd>This should be set to the path to your GLOBUS_LOCATION. GPT will use a value of &#8220;/usr/grid&#8221; if this option is not specified.</dd>
 <dt><code>-rpmlicense=&lt;label</code>&gt;</dt>
-<dd>Provides an alternate copyright label for the rpms. The default is whatever <font SIZE="-1">GPT</font> was configured with.</dd>
+<dd>Provides an alternate copyright label for the rpms. The default is whatever GPT was configured with.</dd>
 <dt><code>-help</code></dt>
 <dd>Print a brief help message and exits.</dd>
 <dt><code>-buildnumber=&lt;number</code>&gt;</dt>
@@ -87,7 +87,7 @@ description: "gpt-bundle – Creates binary or source bundles from an installati
 <dt><code>-man</code></dt>
 <dd>Prints the manual page and exits.</dd>
 <dt><code>-version</code></dt>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
+<dd>Prints the version of GPT and exits.</dd></dl>
 <h2>Bundle Definition File Overrides</h2>
 <p>The <i>-bundle*</i> switches can be used to override content in the bundle definition file inputted by the <i>-xml</i> switch. The relationship between the switches and the bundle definition file contents is shown in the following table: </p>
 <pre> I&lt;Switch&gt; I&lt;Element&gt; I&lt;Attribute&gt;
@@ -100,7 +100,7 @@ description: "gpt-bundle – Creates binary or source bundles from an installati
 <pre> NAME-VERSION-src_bundle.tar.gz for source bundles
  NAME-VERSION-ARCH-gpt.tar.gz for gpt binary bundles. ARCH is the platform ID.
  NAME-VERSION-ARCH-rpm.tar.gz for rpm binary bundles.</pre>
-<p><font SIZE="-1">NAME</font> comes from the <i>-bundlename</i> switch. <font SIZE="-1">VERSION</font> comes from the <i>-bundlelabel</i> switch. If this switch is not used then <font SIZE="-1">VERSION</font> comes from the <i>-bundleversion</i> switch. </p>
+<p>NAME comes from the <i>-bundlename</i> switch. VERSION comes from the <i>-bundlelabel</i> switch. If this switch is not used then VERSION comes from the <i>-bundleversion</i> switch. </p>
 <p> Unless overrided by the switches previously mentioned, the values for can also be extracted from the bundle definition file inputted by the <i>-xml</i> switch.</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-gpt-build/">gpt-build</a></i>(8) <i><a href="/docs/linux/man/8-gpt-install/">gpt-install</a></i>(8) <i><a href="/docs/linux/man/8-gpt-pkg/">gpt-pkg</a></i>(8)</p>

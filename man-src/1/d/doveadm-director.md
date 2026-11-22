@@ -10,11 +10,11 @@ description: "doveadm-director – Manage Dovecot directors"
 
 <p> doveadm-director &#8211; Manage Dovecot directors</p>
 <h2>SYNOPSIS</h2>
-<p> <code>doveadm</code> [<code>-Dv</code>] <code>director add</code> [<code>-a</code> <i>director_socket_path</i>] <i>host</i> [<i>vhost_count</i>]<br />
- <code>doveadm</code> [<code>-Dv</code>] <code>director flush</code> [<code>-a</code> <i>director_socket_path</i>] <i>host</i>|<code>all</code><br />
- <code>doveadm</code> [<code>-Dv</code>] <code>director map</code> [<code>-a</code> <i>director_socket_path</i>] [<code>-f</code> <i>users_file</i>] [<i>host</i>]<br />
- <code>doveadm</code> [<code>-Dv</code>] <code>director remove</code> [<code>-a</code> <i>director_socket_path</i>] <i>host</i><br />
- <code>doveadm</code> [<code>-Dv</code>] <code>director dump</code> [<code>-a</code> <i>director_socket_path</i>]<br />
+<p> <code>doveadm</code> [<code>-Dv</code>] <code>director add</code> [<code>-a</code> <i>director_socket_path</i>] <i>host</i> [<i>vhost_count</i>]<br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>director flush</code> [<code>-a</code> <i>director_socket_path</i>] <i>host</i>|<code>all</code><br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>director map</code> [<code>-a</code> <i>director_socket_path</i>] [<code>-f</code> <i>users_file</i>] [<i>host</i>]<br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>director remove</code> [<code>-a</code> <i>director_socket_path</i>] <i>host</i><br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>director dump</code> [<code>-a</code> <i>director_socket_path</i>]<br/>
  <code>doveadm</code> [<code>-Dv</code>] <code>director status</code> [<code>-a</code> <i>director_socket_path</i>] [<i>user</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>doveadm director</code> can be used to manage and query the status of the list of backend mail servers where Dovecot proxy can redirect connections to.</p>
@@ -66,7 +66,7 @@ description: "doveadm-director – Manage Dovecot directors"
 <p> Dump the current host configuration as doveadm commands. These commands can be easily run after a full director cluster restart to get back to the dumped state.</p>
 <h3>director status</h3>
 <p> <code>doveadm director status</code> [<code>-a</code> <i>director_socket_path</i>] [<i>user</i>] </p>
-<p> This command is used to show the current usage of all assigned mail servers.<br />
+<p> This command is used to show the current usage of all assigned mail servers.<br/>
  When a user name is given, this command shows which server the <i>user</i> is currently assigned to, where the user will be assigned after the current saved assignment gets removed and where the user would be assigned to if the whole proxy cluster was restarted fresh.</p>
 <h2>FILES</h2>
 <dl>

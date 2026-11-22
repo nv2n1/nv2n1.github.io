@@ -26,5 +26,5 @@ description: "XtRegisterDrawable – register a drawable with the Intrinsics eve
 <p> If the drawable is already registered with another widget, or if the drawable is the window of a widget in the client&#8217;s widget tree, the results of calling <code>XtRegisterDrawable</code> are undefined. </p>
 <p> <code>XtUnregisterDrawable</code> removes an association created with <code>XtRegisterDrawable</code>. If the drawable is the window of a widget in the client&#8217;s widget tree the results of calling <code>XtUnregisterDrawable</code> are undefined.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

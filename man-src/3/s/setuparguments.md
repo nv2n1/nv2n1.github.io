@@ -13,16 +13,16 @@ description: "QuantLib::CallableBond – Callable bond base class."
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Bond</code>. Inherited by <code>CallableFixedRateBond</code>.</p>
 <h3>Classes</h3>
-<p>class <code>engine</code><br />
- <i>base class for callable fixed rate bond </i><code>engine</code><br />
- class <code>results</code><br />
+<p>class <code>engine</code><br/>
+ <i>base class for callable fixed rate bond </i><code>engine</code><br/>
+ class <code>results</code><br/>
  <i></i><code>results</code> for a callable bond calculation</p>
 <h3>Public Member Functions</h3>
-<p>virtual void <code>setupArguments</code> (PricingEngine::arguments *args) const<br />
- <code>Inspectors</code><br />
+<p>virtual void <code>setupArguments</code> (PricingEngine::arguments *args) const<br/>
+ <code>Inspectors</code><br/>
  CallableBond (Natural settlementDays, Real faceAmount, const Schedule &amp;schedule, const DayCounter &amp;paymentDayCounter, BusinessDayConvention paymentConvention=Following, Real redemption=100.0, const Date &amp;issueDate=Date(), const CallabilitySchedule &amp;putCallSchedule=CallabilitySchedule())</p>
 <p>Protected Attributes <code>Calculations</code> </p>
-<p> <code>Volatility</code> <code>impliedVolatility</code> (<code>Real</code> targetValue, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve, <code>Real</code> accuracy, Size maxEvaluations, <code>Volatility</code> minVol, <code>Volatility</code> maxVol) const<br />
+<p> <code>Volatility</code> <code>impliedVolatility</code> (<code>Real</code> targetValue, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve, <code>Real</code> accuracy, Size maxEvaluations, <code>Volatility</code> minVol, <code>Volatility</code> maxVol) const<br/>
  <i>returns the Black implied forward yield volatility </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>CallableBond (Natural settlementDays, Real faceAmount, const Schedule &amp;schedule, const DayCounter &amp;paymentDayCounter, BusinessDayConvention paymentConvention=Following, Real redemption=100.0, const Date &amp;issueDate=Date(), const CallabilitySchedule &amp;putCallSchedule=CallabilitySchedule())
@@ -30,11 +30,11 @@ Protected Attributes</code></pre>
 <p> <code>DayCounter</code> <code>paymentDayCounter_</code> </p>
 <p> <code>Frequency</code> <code>frequency_</code> </p>
 <p> CallabilitySchedule <code>putCallSchedule_</code> </p>
-<p> boost::shared_ptr&lt; <code>PricingEngine</code> &gt; <code>blackEngine_</code><br />
- <i>must be set by derived classes for </i><code>impliedVolatility()</code> to work<br />
- <code>RelinkableHandle</code>&lt; <code>Quote</code> &gt; <code>blackVolQuote_</code><br />
- <i>Black fwd yield volatility quote handle to internal blackEngine_. </i><br />
- <code>RelinkableHandle</code>&lt; <code>YieldTermStructure</code> &gt; <code>blackDiscountCurve_</code><br />
+<p> boost::shared_ptr&lt; <code>PricingEngine</code> &gt; <code>blackEngine_</code><br/>
+ <i>must be set by derived classes for </i><code>impliedVolatility()</code> to work<br/>
+ <code>RelinkableHandle</code>&lt; <code>Quote</code> &gt; <code>blackVolQuote_</code><br/>
+ <i>Black fwd yield volatility quote handle to internal blackEngine_. </i><br/>
+ <code>RelinkableHandle</code>&lt; <code>YieldTermStructure</code> &gt; <code>blackDiscountCurve_</code><br/>
  <i>Black fwd yield volatility quote handle to internal blackEngine_. </i></p>
 <h3>Friends</h3>
 <p>class <code>ImpliedVolHelper</code></p>

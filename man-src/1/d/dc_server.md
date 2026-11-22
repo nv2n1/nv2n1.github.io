@@ -18,9 +18,9 @@ description: "dc_server – Distributed session cache server"
 <dt><code>-daemon</code></dt>
 <dd> After initialising, <code>dc_server</code> will detach from the parent process, close standard file-descriptors, etc. If this flag is not set, <code>dc_server</code> will run in the foreground. It is recommended to use this flag in combination with the <i>pidfile</i> flag to simplify stopping and restarting services.</dd>
 <dt><code>-user</code> user</dt>
-<dd> This switch will attempt to change user privileges of <code>dc_server</code> to the given user <font SIZE="-1">ID</font> after initialising its listening socket. On most systems, this can only work if <code>dc_server</code> is started as the <i>root</i> user. It is important to note that the change of user <font SIZE="-1">ID</font> occurs after the listening socket is create. This ensures that the listening socket is created with the most restrictive permissions, and that the ability to connect to servers at run-time corresponds to the given user (rather than having unusual root permissions on startup).</dd>
+<dd> This switch will attempt to change user privileges of <code>dc_server</code> to the given user ID after initialising its listening socket. On most systems, this can only work if <code>dc_server</code> is started as the <i>root</i> user. It is important to note that the change of user ID occurs after the listening socket is create. This ensures that the listening socket is created with the most restrictive permissions, and that the ability to connect to servers at run-time corresponds to the given user (rather than having unusual root permissions on startup).</dd>
 <dt><code>-listen</code> address</dt>
-<dd> Configures the address on which <code>dc_server</code> should listen for incoming connections. The syntax is that defined by the <i>libnal</i> <font SIZE="-1">API</font>. Some examples follow; </dd>
+<dd> Configures the address on which <code>dc_server</code> should listen for incoming connections. The syntax is that defined by the <i>libnal</i> API. Some examples follow; </dd>
 <pre>
     # Listen on port 9001 for all TCP/IPv4 interfaces
     dc_server -listen IP:9001
@@ -50,12 +50,12 @@ description: "dc_server – Distributed session cache server"
 <dt><code>-progress</code> num</dt>
 <dd> <code>dc_server</code> will, by default, log a line of output to stdout whenever there is cache activity, but will make sure to do so no more often than once a second. If <code>-progress</code> is specified, this will take precedence so that output will be emitted whenever <code>num</code> operations have occurred since the last output, irrespective of how little time has elapsed. The once-a-second logic remains behind this, so that if less than <code>num</code> operations has taken place but at least one second has passed, output will still be logged. This flag has no effect if <code>-daemon</code> is used.</dd>
 <dt><code>-pidfile</code> path</dt>
-<dd> This is a standard flag for many programs, and most useful in combination with <code>-daemon</code>. When <code>-pidfile</code> is specified <code>dc_server</code> will write its process <font SIZE="-1">ID</font> to a file at the specified path upon successful initialisation. To use this path file to later kill the running <code>dc_server</code> instance, use something like (where <code>pidfile.pid</code> is whatever <code>path</code> was); </dd>
+<dd> This is a standard flag for many programs, and most useful in combination with <code>-daemon</code>. When <code>-pidfile</code> is specified <code>dc_server</code> will write its process ID to a file at the specified path upon successful initialisation. To use this path file to later kill the running <code>dc_server</code> instance, use something like (where <code>pidfile.pid</code> is whatever <code>path</code> was); </dd>
 <pre>
     kill `cat pidfile.pid`
 </pre>
 <dt><code>-killable</code></dt>
-<dd> The default behaviour of <code>dc_server</code> is to silently ignore <font SIZE="-1">SIGUSR1</font> and <font SIZE="-1">SIGUSR2</font> signals, but with this switch enabled it will handle these signals and close down cleanly (mainly useful for developers as an alternative to <font SIZE="-1">SIGKILL</font> which is less useful for debugging memory leaks).</dd>
+<dd> The default behaviour of <code>dc_server</code> is to silently ignore SIGUSR1 and SIGUSR2 signals, but with this switch enabled it will handle these signals and close down cleanly (mainly useful for developers as an alternative to SIGKILL which is less useful for debugging memory leaks).</dd>
 <dt><code>-h</code>, <code>-help</code>, <code>-?</code></dt>
 <dd> Any of these flags will cause <code>dc_server</code> to display a brief usage summary to the console and exit cleanly. Any other flags are ignored.</dd></dl>
 <h2>SEE ALSO</h2>

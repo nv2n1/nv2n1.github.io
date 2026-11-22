@@ -10,7 +10,7 @@ description: "pmdarsyslog – rsyslog (reliable and extended syslog) PMDA"
 
 <p> <code>pmdarsyslog</code> &#8211; rsyslog (reliable and extended syslog) PMDA</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdarsyslog</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the <code><a href="/docs/linux/man/8-rsyslogd/">rsyslogd</a></code>(8) server. Further details about rsyslog can be found at <a rel="nofollow" href="http://www.rsyslog.com/.">http://www.rsyslog.com/.</a></p>
+<p> <code>pmdarsyslog</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values from the <code><a href="/docs/linux/man/8-rsyslogd/">rsyslogd</a></code>(8) server. Further details about rsyslog can be found at <a rel="nofollow" href="http://www.rsyslog.com/.">http://www.rsyslog.com/.</a></p>
 <h2>INSTALLATION</h2>
 <p> If you want access to the names and values for the rsyslog performance metrics, do the following as root: </p>
 <p>#&nbsp;<wbr>cd&nbsp;<wbr>$PCP_PMDAS_DIR/rsyslog </p>
@@ -23,11 +23,11 @@ description: "pmdarsyslog – rsyslog (reliable and extended syslog) PMDA"
 <p>$ModLoad impstats </p>
 <p>$PStatsInterval 5&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>log every 5 seconds </p>
 <p>syslog.info&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|/var/log/pcp/rsyslog/stats </p>
-<p> to your <i><a href="/docs/linux/man/5-rsyslog-conf/">rsyslog.conf</a></i>(5) configuration file after installing the <font SIZE="-1">PMDA</font>. Take care to ensure the syslog.info messages do not get logged in any other file, as this could unexpectedly fill your filesystem. Syntax useful for this is syslog.!=info for explicitly excluding these.</p>
+<p> to your <i><a href="/docs/linux/man/5-rsyslog-conf/">rsyslog.conf</a></i>(5) configuration file after installing the PMDA. Take care to ensure the syslog.info messages do not get logged in any other file, as this could unexpectedly fill your filesystem. Syntax useful for this is syslog.!=info for explicitly excluding these.</p>
 <h2>FILES</h2>
 <dl>
 <dt><code>$PCP_LOG_DIR/rsyslog/stats</code></dt>
-<dd> named pipe containing statistics exported from rsyslog, usually created by the <font SIZE="-1">PMDA</font> Install script.</dd>
+<dd> named pipe containing statistics exported from rsyslog, usually created by the PMDA Install script.</dd>
 <dt><code>$PCP_PMDAS_DIR/rsyslog/rsyslog.conf</code></dt>
 <dd> optional configuration file for <code>pmdarsyslog</code></dd>
 <dt><code>$PCP_PMDAS_DIR/rsyslog/Install</code></dt>

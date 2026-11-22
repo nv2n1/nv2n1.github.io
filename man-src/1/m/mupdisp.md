@@ -59,7 +59,7 @@ mupdisp.geometry:     400x760+100-34
 <h2>FILES</h2>
 <p> $HOME/.Xdefaults default X window resource definitions</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gs/">gs</a>(1), <a href="/docs/linux/man/1-mup/">mup</a>(1), <a href="/docs/linux/man/1-mupmate/">mupmate</a>(1), <a href="/docs/linux/man/1-mupprnt/">mupprnt</a>(1).<br />
+<p> <a href="/docs/linux/man/1-gs/">gs</a>(1), <a href="/docs/linux/man/1-mup/">mup</a>(1), <a href="/docs/linux/man/1-mupmate/">mupmate</a>(1), <a href="/docs/linux/man/1-mupprnt/">mupprnt</a>(1).<br/>
  Mup &#8212; Music Publisher User&#8217;s Guide</p>
 <h2>CAVEATS AND BUGS</h2>
 <p> You must have mup in your PATH. You must have ghostscript (gs or gs386.exe) in your PATH and it must be built to include the &quot;bit&quot; device. </p>

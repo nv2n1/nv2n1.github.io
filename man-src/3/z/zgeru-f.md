@@ -10,7 +10,7 @@ description: "zgeru.f –"
 <p>zgeru.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgeru</code> (M, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br />
+<p>subroutine <code>zgeru</code> (M, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br/>
  <i></i><code>ZGERU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgeru (integerM, integerN, complex*16ALPHA, complex*16, dimension(*)X, integerINCX, complex*16, dimension(*)Y, integerINCY, complex*16, dimension(lda,*)A, integerLDA)</h3>

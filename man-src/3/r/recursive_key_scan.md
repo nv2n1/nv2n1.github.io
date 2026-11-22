@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-recursive_key_scan/"
 description: "recursive_key_scan – Apply a function to all keys in a keyring tree recursive_session_key_scan – Apply a function to all keys in the session keyring tree"
 ---
 
-<p>recursive_key_scan &#8211; Apply a function to all keys in a keyring tree<br />
+<p>recursive_key_scan &#8211; Apply a function to all keys in a keyring tree<br/>
  recursive_session_key_scan &#8211; Apply a function to all keys in the session keyring tree</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;keyutils.h&gt;

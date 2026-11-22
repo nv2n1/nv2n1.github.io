@@ -15,11 +15,11 @@ description: "QwtPicker –"
 <p> Inherited by <code>QwtPlotPicker</code>.</p>
 <h3>Public Types</h3>
 <p>enum <code>RubberBand</code> { <code>NoRubberBand</code> = 0, <code>HLineRubberBand</code>, <code>VLineRubberBand</code>, <code>CrossRubberBand</code>, <code>RectRubberBand</code>, <code>EllipseRubberBand</code>, <code>PolygonRubberBand</code>, <code>UserRubberBand</code> = 100 } </p>
-<p> enum <code>DisplayMode</code> { <code>AlwaysOff</code>, <code>AlwaysOn</code>, <code>ActiveOnly</code> }<br />
- <i>Display mode. </i><br />
+<p> enum <code>DisplayMode</code> { <code>AlwaysOff</code>, <code>AlwaysOn</code>, <code>ActiveOnly</code> }<br/>
+ <i>Display mode. </i><br/>
  enum <code>ResizeMode</code> { <code>Stretch</code>, <code>KeepSize</code> } </p>
 <h3>Public Slots</h3>
-<p>void <code>setEnabled</code> (bool)<br />
+<p>void <code>setEnabled</code> (bool)<br/>
  <i>En/disable the picker. </i></p>
 <h3>Signals</h3>
 <p>void <code>activated</code> (bool on) </p>
@@ -31,18 +31,18 @@ description: "QwtPicker –"
 <h3>Public Member Functions</h3>
 <p><code>QwtPicker</code> (QWidget *parent) </p>
 <p> <code>QwtPicker</code> (<code>RubberBand</code> <code>rubberBand</code>, <code>DisplayMode</code> <code>trackerMode</code>, QWidget *) </p>
-<p> virtual <code>~QwtPicker</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtPicker</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setStateMachine</code> (<code>QwtPickerMachine</code> *) </p>
 <p> const <code>QwtPickerMachine</code> * <code>stateMachine</code> () const </p>
 <p> <code>QwtPickerMachine</code> * <code>stateMachine</code> () </p>
 <p> void <code>setRubberBand</code> (<code>RubberBand</code>) </p>
 <p> <code>RubberBand</code> <code>rubberBand</code> () const </p>
-<p> void <code>setTrackerMode</code> (<code>DisplayMode</code>)<br />
- <i>Set the display mode of the tracker. </i><br />
+<p> void <code>setTrackerMode</code> (<code>DisplayMode</code>)<br/>
+ <i>Set the display mode of the tracker. </i><br/>
  <code>DisplayMode</code> <code>trackerMode</code> () const </p>
-<p> void <code>setResizeMode</code> (<code>ResizeMode</code>)<br />
- <i>Set the resize mode. </i><br />
+<p> void <code>setResizeMode</code> (<code>ResizeMode</code>)<br/>
+ <i>Set the resize mode. </i><br/>
  <code>ResizeMode</code> <code>resizeMode</code> () const </p>
 <p> void <code>setRubberBandPen</code> (const QPen &amp;) </p>
 <p> QPen <code>rubberBandPen</code> () const </p>
@@ -52,33 +52,33 @@ description: "QwtPicker –"
 <p> QFont <code>trackerFont</code> () const </p>
 <p> bool <code>isEnabled</code> () const </p>
 <p> bool <code>isActive</code> () const </p>
-<p> virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br />
- <i>Event filter. </i><br />
- QWidget * <code>parentWidget</code> ()<br />
- <i>Return the parent widget, where the selection happens. </i><br />
- const QWidget * <code>parentWidget</code> () const<br />
- <i>Return the parent widget, where the selection happens. </i><br />
+<p> virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br/>
+ <i>Event filter. </i><br/>
+ QWidget * <code>parentWidget</code> ()<br/>
+ <i>Return the parent widget, where the selection happens. </i><br/>
+ const QWidget * <code>parentWidget</code> () const<br/>
+ <i>Return the parent widget, where the selection happens. </i><br/>
  virtual QPainterPath <code>pickArea</code> () const </p>
 <p> virtual void <code>drawRubberBand</code> (QPainter *) const </p>
 <p> virtual void <code>drawTracker</code> (QPainter *) const </p>
 <p> virtual QRegion <code>rubberBandMask</code> () const </p>
-<p> virtual <code>QwtText</code> <code>trackerText</code> (const QPoint &amp;pos) const<br />
- <i>Return the label for a position. </i><br />
+<p> virtual <code>QwtText</code> <code>trackerText</code> (const QPoint &amp;pos) const<br/>
+ <i>Return the label for a position. </i><br/>
  QPoint <code>trackerPosition</code> () const </p>
 <p> virtual QRect <code>trackerRect</code> (const QFont &amp;) const </p>
 <p> QPolygon <code>selection</code> () const </p>
 <h3>Protected Member Functions</h3>
-<p>virtual QPolygon <code>adjustedPoints</code> (const QPolygon &amp;) const<br />
- <i>Map the </i><code>pickedPoints()</code> into a <code>selection()</code><br />
+<p>virtual QPolygon <code>adjustedPoints</code> (const QPolygon &amp;) const<br/>
+ <i>Map the </i><code>pickedPoints()</code> into a <code>selection()</code><br/>
  virtual void <code>transition</code> (const QEvent *) </p>
 <p> virtual void <code>begin</code> () </p>
 <p> virtual void <code>append</code> (const QPoint &amp;) </p>
 <p> virtual void <code>move</code> (const QPoint &amp;) </p>
 <p> virtual void <code>remove</code> () </p>
-<p> virtual bool <code>end</code> (bool ok=true)<br />
- <i>Close a selection setting the state to inactive. </i><br />
- virtual bool <code>accept</code> (QPolygon &amp;) const<br />
- <i>Validate and fix up the selection. </i><br />
+<p> virtual bool <code>end</code> (bool ok=true)<br/>
+ <i>Close a selection setting the state to inactive. </i><br/>
+ virtual bool <code>accept</code> (QPolygon &amp;) const<br/>
+ <i>Validate and fix up the selection. </i><br/>
  virtual void <code>reset</code> () </p>
 <p> virtual void <code>widgetMousePressEvent</code> (QMouseEvent *) </p>
 <p> virtual void <code>widgetMouseReleaseEvent</code> (QMouseEvent *) </p>
@@ -90,8 +90,8 @@ description: "QwtPicker –"
 <p> virtual void <code>widgetEnterEvent</code> (QEvent *) </p>
 <p> virtual void <code>widgetLeaveEvent</code> (QEvent *) </p>
 <p> virtual void <code>stretchSelection</code> (const QSize &amp;oldSize, const QSize &amp;newSize) </p>
-<p> virtual void <code>updateDisplay</code> ()<br />
- <i>Update the state of rubber band and tracker label. </i><br />
+<p> virtual void <code>updateDisplay</code> ()<br/>
+ <i>Update the state of rubber band and tracker label. </i><br/>
  const <code>QwtWidgetOverlay</code> * <code>rubberBandOverlay</code> () const </p>
 <p> const <code>QwtWidgetOverlay</code> * <code>trackerOverlay</code> () const </p>
 <p> const QPolygon &amp; <code>pickedPoints</code> () const </p>
@@ -207,8 +207,8 @@ picker-&gt;setRubberBand(QwtPicker::RectRubberBand); </pre>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rubberBand</i> Rubber band style<br />
- <i>trackerMode</i> Tracker mode<br />
+<dd><i>rubberBand</i> Rubber band style<br/>
+ <i>trackerMode</i> Tracker mode<br/>
  <i>parent</i> Parent widget, that will be observed</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>bool QwtPicker::accept (QPolygon &amp;selection) const [protected], [virtual]</h3>
@@ -323,7 +323,7 @@ picker-&gt;setRubberBand(QwtPicker::RectRubberBand); </pre>
 <p>Event filter. When <code>isEnabled()</code> is true all events of the observed widget are filtered. Mouse and keyboard events are translated into widgetMouse- and widgetKey- and widgetWheel-events. Paint and Resize events are handled to keep rubber band and tracker up to date. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>object</i> Object to be filtered<br />
+<dd><i>object</i> Object to be filtered<br/>
  <i>event</i> Event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -517,7 +517,7 @@ picker-&gt;setRubberBand(QwtPicker::RectRubberBand); </pre>
 <p>Scale the selection by the ratios of oldSize and newSize The <code>changed()</code> signal is emitted. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>oldSize</i> Previous size<br />
+<dd><i>oldSize</i> Previous size<br/>
  <i>newSize</i> Current size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

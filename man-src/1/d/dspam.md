@@ -16,7 +16,7 @@ description: "dspam – DSPAM Anti-Spam Agent"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;user</code><i>&nbsp;<wbr>user1</i>&nbsp;<wbr>user2 &#8230; userN</dt>
-<dd> Specifies the destination users of the incoming message. In most cases this is the local user on the system, however some implementations may call for virtual usernames, specific to DSPAM, to be assigned. The agent processes an incoming message once for each user specified. If the message is to be delivered, the $u (or %u) parameters of the argument string will be interpolated for the current user being processed.<br />
+<dd> Specifies the destination users of the incoming message. In most cases this is the local user on the system, however some implementations may call for virtual usernames, specific to DSPAM, to be assigned. The agent processes an incoming message once for each user specified. If the message is to be delivered, the $u (or %u) parameters of the argument string will be interpolated for the current user being processed.<br/>
 &nbsp;<wbr></dd>
 <dt><code>&#8211;mode=</code><i>toe|tum|teft|notrain</i></dt>
 <dd> Configures the training mode to be used for this process, overriding any defaults in dspam.conf or the preference extension: </dd>
@@ -32,14 +32,14 @@ description: "dspam – DSPAM Anti-Spam Agent"
 <p> <code>(wh)itelist</code> : Automatic whitelisting. DSPAM will keep track of the entire &quot;From:&quot; line for each message received per user, and automatically whitelist messages from senders with more than 20 innocent messages and zero spams. Once the user reports a spam from the sender, automatic whitelisting will automatically be deactivated for that sender. Since DSPAM uses the entire &quot;From:&quot; line, and not just the sender&#8217;s email address, automatic whitelisting is a very safe approach to improving accuracy especially during initial training. </p>
 <p> <code>NOTE:</code> : None of the present features are necessary when the source is &quot;error&quot;, because the original training data is used from the signature to retrain, instantiating whatever features (such as whitelisting) were active at the time of the initial classification. Since BNR is only necessary when a message is being classified, the <code>&#8211;feature</code> flag can be safely omitted from error source calls. </p>
 <dt><code>&#8211;class=</code><i>spam|innocent</i></dt>
-<dd> Identifies the disposition (if any) of the message being presented. This flag should be used when a misclassification has occured, when the user is corpus-feeding a message, or when an inoculation is being presented. This flag should not be used for standard processing. This flag must be used in conjunction with the <code>&#8211;source</code> flag. Omitting this flag causes DSPAM to determine the disposition of the message on its own (the standard operating mode).<br />
+<dd> Identifies the disposition (if any) of the message being presented. This flag should be used when a misclassification has occured, when the user is corpus-feeding a message, or when an inoculation is being presented. This flag should not be used for standard processing. This flag must be used in conjunction with the <code>&#8211;source</code> flag. Omitting this flag causes DSPAM to determine the disposition of the message on its own (the standard operating mode).<br/>
 &nbsp;<wbr></dd>
 <dt><code>&#8211;source=</code><i>error|corpus|inoculation</i></dt>
-<dd> Where <code>&#8211;class</code> is used, the source of the classification must also be provided. The source tells dspam how to learn the message being presented:<br />
+<dd> Where <code>&#8211;class</code> is used, the source of the classification must also be provided. The source tells dspam how to learn the message being presented:<br/>
 &nbsp;<wbr> <code>error</code> : The message being presented was a message previously misclassified by DSPAM. When &#8216;error&#8217; is provided as a source, DSPAM requires that the DSPAM signature be present in the message, and will use the signature to recall the original training metadata. If the signature is not present, the message will be rejected. In this source mode, DSPAM will also decrement each token&#8217;s previous classification&#8217;s count as well as the user totals. </dd>
 <p> You should use error only when DSPAM has made an error in classifying the message, and should present the modified version of the message with the DSPAM signature when doing so. </p>
 <p> <code>corpus</code> : The message being presented is from a mail corpus, and should be trained as a new message, rather than re-trained based on a signature. The message&#8217;s full headers and body will be analyzed and the correct classification will be incremented, without its opposite being decremented. </p>
-<p> You should use corpus only when feeding messages in from corpus.<br />
+<p> You should use corpus only when feeding messages in from corpus.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>inoculation</code> : The message being presented is in pristine form, and should be trained as an inoculation. Inoculations are a more intense mode of training designed to cause DSPAM to train the user&#8217;s metadata repeatedly on previoulsy unknown tokens, in an attempt to vaccinate the user from future messages similar to the one being presented. You should use inoculation only on honeypots and the like. </p>
 <dt><code>&#8211;profile=</code><i>PROFILE</i></dt>
 <dd> Specify a storage profile from dspam.conf. The storage profile selected will be used for all database connectivity. See dspam.conf for more information. </dd>
@@ -81,7 +81,7 @@ description: "dspam – DSPAM Anti-Spam Agent"
 <dd> Operation resulted in an error. If the error involved an error in calling the delivery agent, the exit value of the delivery agent will be returned. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2002-2012 DSPAM Project<br />
+<p> Copyright &#169; 2002-2012 DSPAM Project<br/>
  All rights reserved. </p>
 <p> For more information, see <a rel="nofollow" href="http://dspam.sourceforge.net.">http://dspam.sourceforge.net.</a> </p>
 <h2>SEE ALSO</h2>

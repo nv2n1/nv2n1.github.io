@@ -11,7 +11,7 @@ description: "dgbtf2.f –"
 <p> dgbtf2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgbtf2</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br />
+<p> subroutine <code>dgbtf2</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br/>
  <i></i><code>DGBTF2</code> computes the LU factorization of a general band matrix using the unblocked version of the algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgbtf2 (integerM, integerN, integerKL, integerKU, double precision, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, integerINFO)</h3>

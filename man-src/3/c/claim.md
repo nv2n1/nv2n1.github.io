@@ -12,11 +12,11 @@ description: "ql/instruments/claim.hpp – Classes for default-event claims."
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/bond.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>Claim</code><br />
- <i></i><code>Claim</code> associated to a default event.<br />
- class <code>FaceValueClaim</code><br />
- <i></i><code>Claim</code> on a notional.<br />
- class <code>FaceValueAccrualClaim</code><br />
+<p> class <code>Claim</code><br/>
+ <i></i><code>Claim</code> associated to a default event.<br/>
+ class <code>FaceValueClaim</code><br/>
+ <i></i><code>Claim</code> on a notional.<br/>
+ class <code>FaceValueAccrualClaim</code><br/>
  <i></i><code>Claim</code> on the notional of a reference security, including accrual.</p>
 <h2>Detailed Description</h2>
 <p> Classes for default-event claims. </p>

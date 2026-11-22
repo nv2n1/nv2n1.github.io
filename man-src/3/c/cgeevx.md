@@ -11,7 +11,7 @@ description: "cgeevx.f –"
 <p> cgeevx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgeevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, W, VL, LDVL, VR, LDVR, ILO, IHI, SCALE, ABNRM, RCONDE, RCONDV, WORK, LWORK, RWORK, INFO)<br />
+<p> subroutine <code>cgeevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, W, VL, LDVL, VR, LDVR, ILO, IHI, SCALE, ABNRM, RCONDE, RCONDV, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code> CGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgeevx (characterBALANC, characterJOBVL, characterJOBVR, characterSENSE, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )W, complex, dimension( ldvl, * )VL, integerLDVL, complex, dimension( ldvr, * )VR, integerLDVR, integerILO, integerIHI, real, dimension( * )SCALE, realABNRM, real, dimension( * )RCONDE, real, dimension( * )RCONDV, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerINFO)</h3>
@@ -125,9 +125,9 @@ SENSE is CHARACTER * 1 Determines which reciprocal condition numbers are compute
           u(j) = VL(:,j), the j-th column of VL.
 </pre>
 <p> <i>LDVL</i> </p>
-<p>LDVL is INTEGER<br />
-        The leading dimension of the array VL.LDVL &gt;= 1;<br />
-if JOBVL<br />
+<p>LDVL is INTEGER<br/>
+        The leading dimension of the array VL.LDVL &gt;= 1;<br/>
+if JOBVL<br/>
 = &#8216;V&#8217;, LDVL &gt;= N.</p>
 <p> <i>VR</i> </p>
 <pre>
@@ -139,9 +139,9 @@ if JOBVL<br />
           v(j) = VR(:,j), the j-th column of VR.
 </pre>
 <p> <i>LDVR</i> </p>
-<p>LDVR is INTEGER<br />
-        The leading dimension of the array VR.LDVR &gt;= 1;<br />
-if JOBVR<br />
+<p>LDVR is INTEGER<br/>
+        The leading dimension of the array VR.LDVR &gt;= 1;<br/>
+if JOBVR<br/>
 = &#8216;V&#8217;, LDVR &gt;= N.</p>
 <p> <i>ILO</i> </p>
 <pre>

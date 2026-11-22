@@ -10,7 +10,7 @@ description: "skill, snice – send a signal or report process status"
 
 <p> skill, snice &#8211; send a signal or report process status </p>
 <h2>SYNOPSIS</h2>
-<p> <code>skill</code> [<i>signal</i>] [<i>options</i>] <i>expression</i><br />
+<p> <code>skill</code> [<i>signal</i>] [<i>options</i>] <i>expression</i><br/>
  <code>snice</code> [<i>new priority</i>] [<i>options</i>] <i>expression</i></p>
 <h2>DESCRIPTION</h2>
 <p> These tools are obsolete and unportable. The command syntax is poorly defined. Consider using the killall, pkill, and pgrep commands instead. </p>

@@ -17,7 +17,7 @@ description: "resolveip – resolve host name to IP address or vice versa"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> <code>resolveip</code> is deprecated and is removed in MySQL 8.0. <code>nslookup</code>, <code>host</code>, or <code>dig</code> can be used instead. </p>
 </dl>
 <p> Invoke <code>resolveip</code> like this: </p>

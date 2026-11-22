@@ -10,7 +10,7 @@ description: "sgbmv.f –"
 <p>sgbmv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgbmv</code> (TRANS, M, N, KL, KU, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>sgbmv</code> (TRANS, M, N, KL, KU, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>SGBMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgbmv (characterTRANS, integerM, integerN, integerKL, integerKU, realALPHA, real, dimension(lda,*)A, integerLDA, real, dimension(*)X, integerINCX, realBETA, real, dimension(*)Y, integerINCY)</h3>

@@ -36,5 +36,5 @@ description: "XEmptyRegion, XEqualRegion, XPointInRegion, XRectInRegion – dete
 <p> The <code>XPointInRegion</code> function returns <code>True</code> if the point (x, y) is contained in the region r. </p>
 <p> The <code>XRectInRegion</code> function returns <code>RectangleIn</code> if the rectangle is entirely in the specified region, <code>RectangleOut</code> if the rectangle is entirely out of the specified region, and <code>RectanglePart</code> if the rectangle is partially in the specified region.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcreateregion/">XCreateRegion</a>(3), <a href="/docs/linux/man/3-xintersectregion/">XIntersectRegion</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcreateregion/">XCreateRegion</a>(3), <a href="/docs/linux/man/3-xintersectregion/">XIntersectRegion</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

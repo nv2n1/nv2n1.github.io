@@ -10,7 +10,7 @@ description: "kgetcred – get a ticket for a particular service"
 
 <p> <code>kgetcred</code> &#8211; get a ticket for a particular service </p>
 <h2>SYNOPSIS</h2>
-<p> [-<code>-canonicalize</code> ] [-<code>c cache | </code> &#8211;<code>-cache= </code><i>cache</i> ] [-<code>e </code><i>enctype | </i> &#8211;<code>-enctype= </code><i>enctype</i> ] [-<code>name-type= </code><i>name-type</i> ] [-<code>-no-transit-check</code> ] [-<code>-version</code> ] [-<code>-help</code> ] <i>service</i><br />
+<p> [-<code>-canonicalize</code> ] [-<code>c cache | </code> &#8211;<code>-cache= </code><i>cache</i> ] [-<code>e </code><i>enctype | </i> &#8211;<code>-enctype= </code><i>enctype</i> ] [-<code>name-type= </code><i>name-type</i> ] [-<code>-no-transit-check</code> ] [-<code>-version</code> ] [-<code>-help</code> ] <i>service</i><br/>
  [options] &#8211;<code>name-type= </code><i>SRV_HST</i> <i>service</i> <i>hostname</i></p>
 <h2>DESCRIPTION</h2>
 <p> obtains a ticket for a service. Usually tickets for services are obtained automatically when needed but sometimes for some odd reason you want to obtain a particular ticket or of a special type. </p>

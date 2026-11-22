@@ -10,7 +10,7 @@ description: "kibitz – allow two people to interact with one shell"
 
 <p> kibitz &#8211; allow two people to interact with one shell </p>
 <h2>SYNOPSIS</h2>
-<p> <code>kibitz</code> [ <i>kibitz-args</i> ] <i>user</i> [ <i>program program-args&#8230;</i> ]<br />
+<p> <code>kibitz</code> [ <i>kibitz-args</i> ] <i>user</i> [ <i>program program-args&#8230;</i> ]<br/>
  <code>kibitz</code> [ <i>kibitz-args</i> ] <i>user [at] host</i> [ <i>program program-args&#8230;</i> ]</p>
 <h2>INTRODUCTION</h2>
 <p> <code>kibitz</code> allows two (or more) people to interact with one shell (or any arbitrary program). Uses include:</p>
@@ -64,8 +64,8 @@ description: "kibitz – allow two people to interact with one shell"
 <p> If the environment variable EXPECT_PROMPT exists, it is taken as a regular expression which matches the end of your login prompt (but does not otherwise occur while logging in). See also CAVEATS above. </p>
 <p> If the environment variables USER or LOGNAME are defined, they are used to determine the current user name for a <code>kibitz</code> to a remote computer. See description of the <code>-proxy</code> option in ARGUMENTS above.</p>
 <h2>SEE ALSO</h2>
-<p> <code>Tcl</code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3), <code><a href="/docs/linux/man/1-xkibitz/">xkibitz</a></code>(1)<br />
- <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, O&#8217;Reilly and Associates, January 1995.<br />
+<p> <code>Tcl</code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3), <code><a href="/docs/linux/man/1-xkibitz/">xkibitz</a></code>(1)<br/>
+ <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, O&#8217;Reilly and Associates, January 1995.<br/>
  <i>&quot;Kibitz &#8211; Connecting Multiple Interactive Programs Together&quot;, </i>by Don Libes, Software &#8211; Practice &amp; Experience, John Wiley &amp; Sons, West Sussex, England, Vol. 23, No. 5, May, 1993.</p>
 <h2>AUTHOR</h2>
 <p> Don Libes, National Institute of Standards and Technology </p>

@@ -9,7 +9,7 @@ description: "pmCtime – format the date and time for a reporting timezone"
 
 <p><code>pmCtime</code> &#8211; format the date and time for a reporting timezone</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;time.h&gt;<br />
+<p><code> #include &lt;time.h&gt;<br/>
  #include &lt;pcp/pmapi.h&gt; </p>
 <p> char *pmCtime(const time_t *</code><i>clock</i>, char *<i>buf</i>); </p>
 <p> cc &#8230; -lpcp</p>

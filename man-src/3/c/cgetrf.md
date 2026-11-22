@@ -11,7 +11,7 @@ description: "cgetrf.f –"
 <p> cgetrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgetrf</code> (M, N, A, LDA, IPIV, INFO)<br />
+<p> subroutine <code>cgetrf</code> (M, N, A, LDA, IPIV, INFO)<br/>
  <i></i><code>CGETRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgetrf (integerM, integerN, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integerINFO)</h3>

@@ -9,23 +9,23 @@ description: "GRAM Client Attribute Functions –"
 
 <p>GRAM Client Attribute Functions &#8211; </p>
 <h3>Macros</h3>
-<p>#define <code>GLOBUS_GRAM_CLIENT_NO_ATTR</code><br />
+<p>#define <code>GLOBUS_GRAM_CLIENT_NO_ATTR</code><br/>
  <i>Default GRAM client operation attribute. </i></p>
 <h3>Typedefs</h3>
-<p>typedef void * <code>globus_gram_client_attr_t</code><br />
+<p>typedef void * <code>globus_gram_client_attr_t</code><br/>
  <i>GRAM client operation attribute. </i></p>
 <h3>Functions</h3>
-<p>int <code>globus_gram_client_attr_init</code> (<code>globus_gram_client_attr_t</code> *attr)<br />
- <i>Initialize a GRAM client attribute. </i><br />
- int <code>globus_gram_client_attr_destroy</code> (<code>globus_gram_client_attr_t</code> *attr)<br />
- <i>Destroy a GRAM client attribute. </i><br />
- int <code>globus_gram_client_attr_set_credential</code> (<code>globus_gram_client_attr_t</code> attr, gss_cred_id_t credential)<br />
- <i>Set a GRAM client attribute&#8217;s security credential. </i><br />
- int <code>globus_gram_client_attr_get_credential</code> (<code>globus_gram_client_attr_t</code> attr, gss_cred_id_t *credential)<br />
- <i>Get a GRAM client attribute&#8217;s security credential. </i><br />
- int <code>globus_gram_client_attr_set_delegation_mode</code> (<code>globus_gram_client_attr_t</code> attr, globus_io_secure_delegation_mode_t mode)<br />
- <i>Set a GRAM client attribute&#8217;s delegation mode. </i><br />
- int <code>globus_gram_client_attr_get_delegation_mode</code> (<code>globus_gram_client_attr_t</code> attr, globus_io_secure_delegation_mode_t *mode)<br />
+<p>int <code>globus_gram_client_attr_init</code> (<code>globus_gram_client_attr_t</code> *attr)<br/>
+ <i>Initialize a GRAM client attribute. </i><br/>
+ int <code>globus_gram_client_attr_destroy</code> (<code>globus_gram_client_attr_t</code> *attr)<br/>
+ <i>Destroy a GRAM client attribute. </i><br/>
+ int <code>globus_gram_client_attr_set_credential</code> (<code>globus_gram_client_attr_t</code> attr, gss_cred_id_t credential)<br/>
+ <i>Set a GRAM client attribute&#8217;s security credential. </i><br/>
+ int <code>globus_gram_client_attr_get_credential</code> (<code>globus_gram_client_attr_t</code> attr, gss_cred_id_t *credential)<br/>
+ <i>Get a GRAM client attribute&#8217;s security credential. </i><br/>
+ int <code>globus_gram_client_attr_set_delegation_mode</code> (<code>globus_gram_client_attr_t</code> attr, globus_io_secure_delegation_mode_t mode)<br/>
+ <i>Set a GRAM client attribute&#8217;s delegation mode. </i><br/>
+ int <code>globus_gram_client_attr_get_delegation_mode</code> (<code>globus_gram_client_attr_t</code> attr, globus_io_secure_delegation_mode_t *mode)<br/>
  <i>Get a GRAM client attribute&#8217;s security credential. </i></p>
 <h2>Detailed Description</h2>
 <h2>Macro Definition Documentation</h2>
@@ -45,7 +45,7 @@ description: "GRAM Client Attribute Functions –"
 <dd>Upon success, <code>globus_gram_client_attr_destroy()</code> destroys the attribute pointed to by the <i>attr</i> parameter and sets it to an invalid state. If an error occurs, <code>globus_gram_client_attr_destroy()</code> returns an integer error code and value of <i>attr</i> is unchanged.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>GLOBUS_SUCCESS</i> Success<br />
+<dd><i>GLOBUS_SUCCESS</i> Success<br/>
  <i>GLOBUS_GRAM_PROTOCOL_ERROR_INVALID_ATTR</i> Invalid attribute</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -54,15 +54,15 @@ description: "GRAM Client Attribute Functions –"
 <p>Get a GRAM client attribute&#8217;s security credential. The <code>globus_gram_client_attr_get_credential()</code> function gets the value of the <code>credential</code> in an attribute and modifies the <i>credential</i> parameter to point to it. This is a shallow copy. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attr</i> The attribute set to query for its <i>credential</i>.<br />
+<dd><i>attr</i> The attribute set to query for its <i>credential</i>.<br/>
  <i>credential</i> An output parameter that will be initialized to point to the GSSAPI credential which the <i>attr</i> is currently using.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>Upon success, <code>globus_gram_client_attr_get_credential()</code> modifies the the value pointed to by the <i>credential</i> parameter to be the same credential as that being used by the attribute named by the <i>attr</i> parameter and returns <i>GLOBUS_SUCCESS</i>. If an error occurs, <code>globus_gram_client_attr_get_credential()</code> returns an integer error code and the value pointed to by the <i>credential</i> parameter is undefined.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>GLOBUS_SUCCESS</i> Success<br />
- <i>GLOBUS_GRAM_PROTOCOL_ERROR_INVALID_ATTR</i> Invalid attribute<br />
+<dd><i>GLOBUS_SUCCESS</i> Success<br/>
+ <i>GLOBUS_GRAM_PROTOCOL_ERROR_INVALID_ATTR</i> Invalid attribute<br/>
  <i>GLOBUS_GRAM_PROTOCOL_ERROR_NULL_PARAMETER</i> Null parameter</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -71,15 +71,15 @@ description: "GRAM Client Attribute Functions –"
 <p>Get a GRAM client attribute&#8217;s security credential. The <code>globus_gram_client_attr_get_delegation_mode()</code> function gets the value of the <code>delegation_mode</code> in an attribute and modifies the <i>mode</i> parameter to point to its value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attr</i> The attribute set to query for its <i>delegation_mode</i>.<br />
+<dd><i>attr</i> The attribute set to query for its <i>delegation_mode</i>.<br/>
  <i>mode</i> An output parameter that will be set to point to the delegation mode which the <i>attr</i> is currently using.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>Upon success, <code>globus_gram_client_attr_get_delegation_mode()</code> modifies the the value pointed to by the <i>mode</i> parameter as described above and returns <i>GLOBUS_SUCCESS</i>. If an error occurs, <code>globus_gram_client_attr_get_delegation_mode()</code> returns an integer error code and the value pointed to by the <i>mode</i> parameter is undefined.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>GLOBUS_SUCCESS</i> Success<br />
- <i>GLOBUS_GRAM_PROTOCOL_ERROR_INVALID_ATTR</i> Invalid attribute<br />
+<dd><i>GLOBUS_SUCCESS</i> Success<br/>
+ <i>GLOBUS_GRAM_PROTOCOL_ERROR_INVALID_ATTR</i> Invalid attribute<br/>
  <i>GLOBUS_GRAM_PROTOCOL_ERROR_NULL_PARAMETER</i> Null parameter</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -94,8 +94,8 @@ description: "GRAM Client Attribute Functions –"
 <dd>Upon success, <code>globus_gram_client_attr_init()</code> modifies the <i>attr</i> parameter to point to a new GRAM client attribute and returns <i>GLOBUS_SUCCESS</i>. If an error occurs, <code>globus_gram_client_attr_init()</code> returns an integer error code and value of <i>attr</i> is undefined.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>GLOBUS_SUCCESS</i> Success<br />
- <i>GLOBUS_GRAM_PROTOCOL_ERROR_INVALID_ATTR</i> Invalid attribute<br />
+<dd><i>GLOBUS_SUCCESS</i> Success<br/>
+ <i>GLOBUS_GRAM_PROTOCOL_ERROR_INVALID_ATTR</i> Invalid attribute<br/>
  <i>GLOBUS_GRAM_PROTOCOL_ERROR_MALLOC_FAILED</i> Out of memory</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -104,7 +104,7 @@ description: "GRAM Client Attribute Functions –"
 <p>Set a GRAM client attribute&#8217;s security credential. The <code>globus_gram_client_attr_set_credential()</code> function sets the value of the <code>credential</code> in an attribute to the GSSAPI credential named by the <i>credential</i> parameter. This is done as a shallow copy, so the value of <i>credential</i> must not be freed until the attribute will no longer be used. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attr</i> The attribute set to modify to use the credential named by the <i>credential</i> parameter.<br />
+<dd><i>attr</i> The attribute set to modify to use the credential named by the <i>credential</i> parameter.<br/>
  <i>credential</i> The GSSAPI credential to use with the attribute named by the <i>attr</i> parameter. This may be <i>GSS_C_NO_CREDENTIAL</i> to set the attribute to use the default security credential.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -125,14 +125,14 @@ description: "GRAM Client Attribute Functions –"
 <dd><code>GLOBUS_IO_SECURE_DELEGATION_MODE_FULL_PROXY</code></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attr</i> The attribute set to modify to use the delegation mode in the <i>mode</i> parameter.<br />
+<dd><i>attr</i> The attribute set to modify to use the delegation mode in the <i>mode</i> parameter.<br/>
  <i>mode</i> The new value of the delegation mode.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>Upon success, <code>globus_gram_client_attr_set_delegation_mode()</code> modifies the the attribute named by the <i>attr</i> parameter to use the delegation mode in the <i>mode</i> parameter and returns GLOBUS_SUCCESS. If an error occurs, <code>globus_gram_client_attr_set_delegation_mode()</code> returns an integer error code and the <i>delegation_mode</i> attribute value is unchanged.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>GLOBUS_SUCCESS</i> Success<br />
+<dd><i>GLOBUS_SUCCESS</i> Success<br/>
  <i>GLOBUS_GRAM_PROTOCOL_ERROR_INVALID_ATTR</i> Invalid attribute</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

@@ -10,7 +10,7 @@ description: "dptrfs.f –"
 <p>dptrfs.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dptrfs</code> (N, NRHS, D, E, DF, EF, B, LDB, X, LDX, FERR, BERR, WORK, INFO)<br />
+<p>subroutine <code>dptrfs</code> (N, NRHS, D, E, DF, EF, B, LDB, X, LDX, FERR, BERR, WORK, INFO)<br/>
  <i></i><code>DPTRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dptrfs (integerN, integerNRHS, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( * )DF, double precision, dimension( * )EF, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldx, * )X, integerLDX, double precision, dimension( * )FERR, double precision, dimension( * )BERR, double precision, dimension( * )WORK, integerINFO)</h3>

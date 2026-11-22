@@ -47,7 +47,7 @@ makedat blacklist /etc/mail/blacklist.tmp /etc/mail/blacklist.dat
 </dd></dl>
 <p> Takes blacklist, and creates /etc/mail/blacklist.dat, using /etc/mail/blacklist.tmp as a temporary file.</p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[1]</font>, m[blue]<code>maildropgdbm</code>(5)m[]<font SIZE="-2">[2]</font>.</p>
+<p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[][1], m[blue]<code>maildropgdbm</code>(5)m[][2].</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>

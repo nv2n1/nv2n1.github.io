@@ -65,26 +65,26 @@ description: "ms-sys – write Microsoft boot block"
 <dl>
 <dt>This example assumes that you have your windows installation mounted at /dosc and also have mtools and fdformat installed.</dt>
 <dd></dd></dl>
-<p> fdformat /dev/fd0u1680<br />
- mformat a:<br />
- ms-sys -w /dev/fd0<br />
- mcopy /dosc/io.sys a:<br />
- mcopy /dosc/msdos.sys a:<br />
+<p> fdformat /dev/fd0u1680<br/>
+ mformat a:<br/>
+ ms-sys -w /dev/fd0<br/>
+ mcopy /dosc/io.sys a:<br/>
+ mcopy /dosc/msdos.sys a:<br/>
  mcopy /dosc/command.com a: </p>
 <p> <code>Creating a bootable 2.8 MB floppy image to use with an el-torito bootable CD</code> </p>
-<p> dd if=/dev/zero of=floppy288.img bs=1024 count=2880<br />
- /sbin/mkdosfs floppy288.img<br />
- ms-sys -1 -f floppy288.img<br />
- su<br />
- mount -o loop floppy288.img /mnt<br />
- cp msdos.sys /mnt/<br />
- cp io.sys /mnt/<br />
- cp command.com /mnt/<br />
- (it might also be a good idea to add a config.sys and autoexec.bat with CDROM support)<br />
- umount /mnt<br />
- exit<br />
- cp floppy288.img cd-files/boot.img<br />
- mkisofs -b boot.img -c boot.cat -o cdimage.iso cd-files<br />
+<p> dd if=/dev/zero of=floppy288.img bs=1024 count=2880<br/>
+ /sbin/mkdosfs floppy288.img<br/>
+ ms-sys -1 -f floppy288.img<br/>
+ su<br/>
+ mount -o loop floppy288.img /mnt<br/>
+ cp msdos.sys /mnt/<br/>
+ cp io.sys /mnt/<br/>
+ cp command.com /mnt/<br/>
+ (it might also be a good idea to add a config.sys and autoexec.bat with CDROM support)<br/>
+ umount /mnt<br/>
+ exit<br/>
+ cp floppy288.img cd-files/boot.img<br/>
+ mkisofs -b boot.img -c boot.cat -o cdimage.iso cd-files<br/>
  (burn the file cdimage.iso to a CD with cdrecord or another program) </p>
 <p> <code>restoring a backup of Win9x or Win ME to a fresh hard disk</code> </p>
 <p> Step 1, use GNU parted to create your FAT32 partition and file system: </p>

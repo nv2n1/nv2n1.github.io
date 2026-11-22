@@ -47,9 +47,9 @@ description: "tcpick – tcp stream sniffer and connection tracker"
 <dt><code>-Ef </code><i>number</i></dt>
 <dd>Exit when <code>the first</code> <i>number</i> connections are detected as &quot;CLOSED&quot;</dd>
 <dt><code>-F1 -F2 &#8211;filenaming 1|2</code></dt>
-<dd>Choose the filenaming system.<br />
- <code> -F1 </code>: tcpick_<code>clientip</code>_<code>serverip</code>.<code>side</code>.dat<br />
- (side means <code>clnt</code>, <code>serv</code> or <code>both</code>)<br />
+<dd>Choose the filenaming system.<br/>
+ <code> -F1 </code>: tcpick_<code>clientip</code>_<code>serverip</code>.<code>side</code>.dat<br/>
+ (side means <code>clnt</code>, <code>serv</code> or <code>both</code>)<br/>
  <code> -F2 </code>: tcpick_<code>connectionnumber</code>_<code>clientip</code>_<code>serverip</code>.<code>side</code>.dat</dd>
 <dt><code>-h</code></dt>
 <dd>Shows source and destination ip and port; shows tcp flags as letters.</dd>
@@ -93,28 +93,28 @@ description: "tcpick – tcp stream sniffer and connection tracker"
 <dd>Shows all data after the header, but <code>U</code>nprintable charachters are displayed as hexadecimal values between a &quot;&lt;&quot; and a &quot;&gt;&quot; symbol. </dd>
 </dl>
 <h2>Rebuild And Write The Tcp Stream To File</h2>
-<p>The prefix for these options is <code>-w</code>. The TCP stream that has been sniffed with these options will be written to file named:<br />
- <i>client_&lt;ip_client&gt;_&lt;ip_server&gt;_&lt;port_server&gt;.tcpick</i> and<br />
- <i>server_&lt;ip_client&gt;_&lt;ip_server&gt;_&lt;port_server&gt;.tcpick</i><br />
- With the <code>u</code> flag of the <code>-w</code> option (i.e. <code>-wRu</code>) both client and server data will be written to a unique file named in that way:<br />
- <i>&lt;ip_client&gt;_&lt;ip_server&gt;_&lt;port_server&gt;.tcpick</i><br />
+<p>The prefix for these options is <code>-w</code>. The TCP stream that has been sniffed with these options will be written to file named:<br/>
+ <i>client_&lt;ip_client&gt;_&lt;ip_server&gt;_&lt;port_server&gt;.tcpick</i> and<br/>
+ <i>server_&lt;ip_client&gt;_&lt;ip_server&gt;_&lt;port_server&gt;.tcpick</i><br/>
+ With the <code>u</code> flag of the <code>-w</code> option (i.e. <code>-wRu</code>) both client and server data will be written to a unique file named in that way:<br/>
+ <i>&lt;ip_client&gt;_&lt;ip_server&gt;_&lt;port_server&gt;.tcpick</i><br/>
  If you use the additional flag <code>b</code> of the <code>-w</code> option (i.e. <code>-wPub</code>), in the file will be written this banner: </p>
 <p> <code>[client|server] offset before:offset after (lenght of rebuilded segment)</code> </p>
-<p> to distinguish between client and server data.<br />
- The flow is rebuilded, reordered and the duplicates are dropped. In that way it is possible to sniff entire files transmitted via ftp without data corruption (you can see this with md5sum). If no argument is given to <code>-w</code> the data will be written like <code>-wR</code> You can decide to write only client or server data by setting the flag<br />
+<p> to distinguish between client and server data.<br/>
+ The flow is rebuilded, reordered and the duplicates are dropped. In that way it is possible to sniff entire files transmitted via ftp without data corruption (you can see this with md5sum). If no argument is given to <code>-w</code> the data will be written like <code>-wR</code> You can decide to write only client or server data by setting the flag<br/>
 &nbsp;<wbr><code>C</code>&nbsp;<wbr>(output only client data)&nbsp;<wbr>and&nbsp;<wbr><code>S</code>&nbsp;<wbr>(output only server data) to the <code>-w</code> set. </p>
 <dl>
 <dt><code>-wR</code></dt>
-<dd>This is the preferred option: data will be written without any changes. Useful for sniffing binary or compressed files.<br />
+<dd>This is the preferred option: data will be written without any changes. Useful for sniffing binary or compressed files.<br/>
  (<code>-wRC</code> only the client, <code>-wRS</code> only the server)</dd>
 <dt><code>-wP</code></dt>
-<dd>Unprintable charachters are written like dots.<br />
+<dd>Unprintable charachters are written like dots.<br/>
  (<code>-wPC</code> only the client, <code>-wPS</code> only the server)</dd>
 <dt><code>-wU</code></dt>
-<dd><code>U</code>nprintable charachters are displayed as hexadecimal values between a &quot;&lt;&quot; and a &quot;&gt;&quot; symbol.<br />
+<dd><code>U</code>nprintable charachters are displayed as hexadecimal values between a &quot;&lt;&quot; and a &quot;&gt;&quot; symbol.<br/>
  (<code>-wPC</code> only the client, <code>-wPS</code> only the server)</dd>
 <dt><code>-wH</code></dt>
-<dd>The flow is written in hexadecimal-spaced mode.<br />
+<dd>The flow is written in hexadecimal-spaced mode.<br/>
  (<code>-wHC</code> only the client, <code>-wHS</code> only the server) </dd>
 </dl>
 <h2>Display The Rebuilded Tcp Stream</h2>
@@ -151,24 +151,24 @@ description: "tcpick – tcp stream sniffer and connection tracker"
 <dt>log http data in unique files (client and server mixed together):</dt>
 <dd><code> # tcpick -i eth0 &quot;port 80&quot; -wRub</code></dd>
 <dt>redirect the first connection to a software:</dt>
-<dd><code> # tcpick -i eth0 &#8211;pipe client &quot;port 80&quot; | gzip &gt; http_response.gz</code><br />
+<dd><code> # tcpick -i eth0 &#8211;pipe client &quot;port 80&quot; | gzip &gt; http_response.gz</code><br/>
  <code> # tcpick -i eth0 &#8211;pipe server &quot;port 25&quot; | nc foobar.net 25</code> </dd>
 <h2>Mailing-List</h2>
-<p>Address: <i>&lt;tcpick-project[a]lists.sourceforge.net&gt;</i><br />
- Archive: <i><a rel="nofollow" href="http://sourceforge.net/mailarchive/forum.php?forum=tcpick-project">http://sourceforge.net/mailarchive/forum.php?forum=tcpick-project</a></i><br />
- Subscribe: <i><a rel="nofollow" href="http://lists.sourceforge.net/lists/listinfo/tcpick-project">http://lists.sourceforge.net/lists/listinfo/tcpick-project</a></i><br />
+<p>Address: <i>&lt;tcpick-project[a]lists.sourceforge.net&gt;</i><br/>
+ Archive: <i><a rel="nofollow" href="http://sourceforge.net/mailarchive/forum.php?forum=tcpick-project">http://sourceforge.net/mailarchive/forum.php?forum=tcpick-project</a></i><br/>
+ Subscribe: <i><a rel="nofollow" href="http://lists.sourceforge.net/lists/listinfo/tcpick-project">http://lists.sourceforge.net/lists/listinfo/tcpick-project</a></i><br/>
  If you have new ideas, patches, feature requests or simply need help, don&#8217;t wait! I will be grateful if you send a message to the mailing list (even if you want to say what you liked most on tcpick).</p>
 <h2>Tcpick Website</h2>
-<p>The tcpick website is at <i><a rel="nofollow" href="http://tcpick.sf.net">http://tcpick.sf.net</a></i>.<br />
+<p>The tcpick website is at <i><a rel="nofollow" href="http://tcpick.sf.net">http://tcpick.sf.net</a></i>.<br/>
  You can find the project page here: <i><a rel="nofollow" href="http://sourceforge.net/projects/tcpick">http://sourceforge.net/projects/tcpick</a></i> kindly hosted by the sourceforge team.</p>
 <h2>Authors</h2>
 <p>Please check <code>AUTHORS</code> file.</p>
 <h2>Bugs</h2>
-<p>Tcpick is an experimental software, and maybe some bugs are described in the <code>KNOWN-BUGS</code> file.<br />
- On some versions of MacOSX Segmentation Fault happens and connections aren&#8217;t tracked properly.<br />
+<p>Tcpick is an experimental software, and maybe some bugs are described in the <code>KNOWN-BUGS</code> file.<br/>
+ On some versions of MacOSX Segmentation Fault happens and connections aren&#8217;t tracked properly.<br/>
  If you find any other bug, please write to the tcpick mailing list. </p>
 <h2>See Also</h2>
-<p>Other nice packet/data sniffers:<br />
+<p>Other nice packet/data sniffers:<br/>
  tcpdump, ngrep, tcptrack, ettercap, ethereal, snort </p>
 <h2>License</h2>
 <p>This program is <code>free software</code>; you can redistribute it and/or modify it under the terms of the <code>GNU General Public License</code> as published by the Free Software Foundation; either version 2 of the License, or (at you option) any later version. </p>

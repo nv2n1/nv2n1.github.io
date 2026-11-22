@@ -22,10 +22,10 @@ description: "fiascotopnm – Convert compressed FIASCO image to PGM, or PPM"
 <dt><code>-z</code>, <code>&#8211;fast</code></dt>
 <dd> Decompress images in the 4:2:0 format; i.e., each chroma channel is decompressed to an image of halved width and height. Use this option on slow machines when the desired frame rate is not achieved; the output quality is only slightly decreased. </dd>
 <dt><code>-d</code>, <code>&#8211;double</code></dt>
-<dd> Double the size of the X11 window both in width and height; no pixel interpolation is used, each pixel is just replaced by four identical pixels.<br />
+<dd> Double the size of the X11 window both in width and height; no pixel interpolation is used, each pixel is just replaced by four identical pixels.<br/>
 &nbsp;</dd>
 <dt><code>-p</code>, <code>&#8211;panel</code></dt>
-<dd> Show a panel with play, stop, pause, record and exit buttons to control the display of videos. When pressing the record button, all frames are decompressed and stored in memory. The other buttons work in the usual way.<br />
+<dd> Show a panel with play, stop, pause, record and exit buttons to control the display of videos. When pressing the record button, all frames are decompressed and stored in memory. The other buttons work in the usual way.<br/>
 &nbsp;</dd>
 <dt><code>-m</code> <i>N</i>, <code>&#8211;magnify=</code><i>N</i></dt>
 <dd> Set magnification of the decompressed image. Positive values enlarge and negative values reduce the image width and height by a factor of 2^|<i>N</i>|. </dd>
@@ -74,7 +74,7 @@ description: "fiascotopnm – Convert compressed FIASCO image to PGM, or PPM"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmtofiasco/">pnmtofiasco</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
-<p> Ullrich Hafner, Juergen Albert, Stefan Frank, and Michael Unger. <code>Weighted Finite Automata for Video Compression</code>, IEEE Journal on Selected Areas In Communications, January 1998<br />
+<p> Ullrich Hafner, Juergen Albert, Stefan Frank, and Michael Unger. <code>Weighted Finite Automata for Video Compression</code>, IEEE Journal on Selected Areas In Communications, January 1998<br/>
  Ullrich Hafner. <code>Low Bit-Rate Image and Video Coding with Weighted Finite Automata</code>, Ph.D. thesis, Mensch &amp; Buch Verlag, ISBN 3-89820-002-7, October 1999. </p>
 <h2>AUTHOR</h2>
 <p> Ullrich Hafner &lt;hafner [at] bigfoot.de&gt; </p>

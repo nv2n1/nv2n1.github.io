@@ -10,7 +10,7 @@ description: "XkbFreeComponentList – Free the structure returned by XkbListCom
 <p>XkbFreeComponentList &#8211; Free the structure returned by <i>XkbListComponents</i> </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbFreeComponentList</code> <code>(XkbComponentListPtr </code><i>list</i><code>);</code><br />
+<dt> <code>void XkbFreeComponentList</code> <code>(XkbComponentListPtr </code><i>list</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

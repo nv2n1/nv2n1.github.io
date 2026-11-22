@@ -31,8 +31,8 @@ Protected Member Functions</code></pre>
 <p> void <code>ao_fock</code> (double accuracy) </p>
 <p> double <code>scf_energy</code> () </p>
 <p> <code>Ref</code>&lt; <code>SCExtrapData</code> &gt; <code>extrap_data</code> () </p>
-<p> <code>RefSymmSCMatrix</code> <code>effective_fock</code> ()<br />
- <i>Returns effective Fock matrix in MO basis (including XC </i><code>contribution</code> for KS DFT).<br />
+<p> <code>RefSymmSCMatrix</code> <code>effective_fock</code> ()<br/>
+ <i>Returns effective Fock matrix in MO basis (including XC </i><code>contribution</code> for KS DFT).<br/>
  void <code>init_vector</code> () </p>
 <p> void <code>done_vector</code> () </p>
 <p> void <code>two_body_deriv</code> (double *) </p>

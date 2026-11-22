@@ -10,7 +10,7 @@ description: "ldns_rr_list_clone"
 
 <p> ldns_rr_list_clone </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr_list* ldns_rr_list_clone(const ldns_rr_list *rrlist); </p>

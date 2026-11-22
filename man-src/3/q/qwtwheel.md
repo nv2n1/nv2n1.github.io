@@ -13,87 +13,87 @@ description: "QwtWheel –"
 <p>#include &lt;qwt_wheel.h&gt; </p>
 <p> Inherits QWidget.</p>
 <h3>Public Slots</h3>
-<p>void <code>setValue</code> (double)<br />
- <i>Set a new value without adjusting to the step raster. </i><br />
- void <code>setTotalAngle</code> (double)<br />
- <i>Set the total angle which the wheel can be turned. </i><br />
- void <code>setViewAngle</code> (double)<br />
- <i>Specify the visible portion of the wheel. </i><br />
- void <code>setMass</code> (double)<br />
+<p>void <code>setValue</code> (double)<br/>
+ <i>Set a new value without adjusting to the step raster. </i><br/>
+ void <code>setTotalAngle</code> (double)<br/>
+ <i>Set the total angle which the wheel can be turned. </i><br/>
+ void <code>setViewAngle</code> (double)<br/>
+ <i>Specify the visible portion of the wheel. </i><br/>
+ void <code>setMass</code> (double)<br/>
  <i>Set the slider&#8217;s mass for flywheel effect. </i></p>
 <h3>Signals</h3>
-<p>void <code>valueChanged</code> (double <code>value</code>)<br />
- <i>Notify a change of value. </i><br />
+<p>void <code>valueChanged</code> (double <code>value</code>)<br/>
+ <i>Notify a change of value. </i><br/>
  void <code>wheelPressed</code> () </p>
 <p> void <code>wheelReleased</code> () </p>
 <p> void <code>wheelMoved</code> (double <code>value</code>) </p>
 <h3>Public Member Functions</h3>
-<p><code>QwtWheel</code> (QWidget *parent=NULL)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtWheel</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtWheel</code> (QWidget *parent=NULL)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtWheel</code> ()<br/>
+ <i>Destructor. </i><br/>
  double <code>value</code> () const </p>
-<p> void <code>setOrientation</code> (Qt::Orientation)<br />
- <i>Set the wheel&#8217;s orientation. </i><br />
+<p> void <code>setOrientation</code> (Qt::Orientation)<br/>
+ <i>Set the wheel&#8217;s orientation. </i><br/>
  Qt::Orientation <code>orientation</code> () const </p>
 <p> double <code>totalAngle</code> () const </p>
 <p> double <code>viewAngle</code> () const </p>
-<p> void <code>setTickCount</code> (int)<br />
- <i>Adjust the number of grooves in the wheel&#8217;s surface. </i><br />
+<p> void <code>setTickCount</code> (int)<br/>
+ <i>Adjust the number of grooves in the wheel&#8217;s surface. </i><br/>
  int <code>tickCount</code> () const </p>
-<p> void <code>setWheelWidth</code> (int)<br />
- <i>Set the width of the wheel. </i><br />
+<p> void <code>setWheelWidth</code> (int)<br/>
+ <i>Set the width of the wheel. </i><br/>
  int <code>wheelWidth</code> () const </p>
-<p> void <code>setWheelBorderWidth</code> (int)<br />
- <i>Set the wheel border width of the wheel. </i><br />
+<p> void <code>setWheelBorderWidth</code> (int)<br/>
+ <i>Set the wheel border width of the wheel. </i><br/>
  int <code>wheelBorderWidth</code> () const </p>
-<p> void <code>setBorderWidth</code> (int)<br />
- <i>Set the border width. </i><br />
+<p> void <code>setBorderWidth</code> (int)<br/>
+ <i>Set the border width. </i><br/>
  int <code>borderWidth</code> () const </p>
-<p> void <code>setInverted</code> (bool tf)<br />
- <i>En/Disable inverted appearance. </i><br />
+<p> void <code>setInverted</code> (bool tf)<br/>
+ <i>En/Disable inverted appearance. </i><br/>
  bool <code>isInverted</code> () const </p>
-<p> void <code>setWrapping</code> (bool tf)<br />
- <i>En/Disable wrapping. </i><br />
+<p> void <code>setWrapping</code> (bool tf)<br/>
+ <i>En/Disable wrapping. </i><br/>
  bool <code>wrapping</code> () const </p>
-<p> void <code>setSingleStep</code> (double)<br />
- <i>Set the step size of the counter. </i><br />
+<p> void <code>setSingleStep</code> (double)<br/>
+ <i>Set the step size of the counter. </i><br/>
  double <code>singleStep</code> () const </p>
-<p> void <code>setPageStepCount</code> (int)<br />
- <i>Set the page step count. </i><br />
+<p> void <code>setPageStepCount</code> (int)<br/>
+ <i>Set the page step count. </i><br/>
  int <code>pageStepCount</code> () const </p>
-<p> void <code>setStepAlignment</code> (bool on)<br />
- <i>En/Disable step alignment. </i><br />
+<p> void <code>setStepAlignment</code> (bool on)<br/>
+ <i>En/Disable step alignment. </i><br/>
  bool <code>stepAlignment</code> () const </p>
-<p> void <code>setRange</code> (double vmin, double vmax)<br />
- <i>Set the minimum and maximum values. </i><br />
+<p> void <code>setRange</code> (double vmin, double vmax)<br/>
+ <i>Set the minimum and maximum values. </i><br/>
  void <code>setMinimum</code> (double min) </p>
 <p> double <code>minimum</code> () const </p>
 <p> void <code>setMaximum</code> (double max) </p>
 <p> double <code>maximum</code> () const </p>
-<p> void <code>setUpdateInterval</code> (int)<br />
- <i>Specify the update interval when the wheel is flying. </i><br />
+<p> void <code>setUpdateInterval</code> (int)<br/>
+ <i>Specify the update interval when the wheel is flying. </i><br/>
  int <code>updateInterval</code> () const </p>
-<p> void <code>setTracking</code> (bool enable)<br />
- <i>En/Disable tracking. </i><br />
+<p> void <code>setTracking</code> (bool enable)<br/>
+ <i>En/Disable tracking. </i><br/>
  bool <code>isTracking</code> () const </p>
 <p> double <code>mass</code> () const </p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>paintEvent</code> (QPaintEvent *)<br />
- <i>Qt Paint Event. </i><br />
- virtual void <code>mousePressEvent</code> (QMouseEvent *)<br />
- <i>Mouse press event handler. </i><br />
- virtual void <code>mouseReleaseEvent</code> (QMouseEvent *)<br />
- <i>Mouse Release Event handler. </i><br />
- virtual void <code>mouseMoveEvent</code> (QMouseEvent *)<br />
- <i>Mouse Move Event handler. </i><br />
+<p>virtual void <code>paintEvent</code> (QPaintEvent *)<br/>
+ <i>Qt Paint Event. </i><br/>
+ virtual void <code>mousePressEvent</code> (QMouseEvent *)<br/>
+ <i>Mouse press event handler. </i><br/>
+ virtual void <code>mouseReleaseEvent</code> (QMouseEvent *)<br/>
+ <i>Mouse Release Event handler. </i><br/>
+ virtual void <code>mouseMoveEvent</code> (QMouseEvent *)<br/>
+ <i>Mouse Move Event handler. </i><br/>
  virtual void <code>keyPressEvent</code> (QKeyEvent *) </p>
-<p> virtual void <code>wheelEvent</code> (QWheelEvent *)<br />
- <i>Handle wheel events. </i><br />
- virtual void <code>timerEvent</code> (QTimerEvent *)<br />
- <i>Qt timer event. </i><br />
- void <code>stopFlying</code> ()<br />
- <i>Stop the flying movement of the wheel. </i><br />
+<p> virtual void <code>wheelEvent</code> (QWheelEvent *)<br/>
+ <i>Handle wheel events. </i><br/>
+ virtual void <code>timerEvent</code> (QTimerEvent *)<br/>
+ <i>Qt timer event. </i><br/>
+ void <code>stopFlying</code> ()<br/>
+ <i>Stop the flying movement of the wheel. </i><br/>
  QRect <code>wheelRect</code> () const </p>
 <p> virtual QSize <code>sizeHint</code> () const </p>
 <p> virtual QSize <code>minimumSizeHint</code> () const </p>
@@ -119,13 +119,13 @@ description: "QwtWheel –"
 <p>Draw the Wheel&#8217;s ticks </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>rect</i> Geometry for the wheel</dd></dl>
 <h3>void QwtWheel::drawWheelBackground (QPainter *painter, const QRectF &amp;rect) [protected], [virtual]</h3>
 <p>Draw the Wheel&#8217;s background gradient </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>rect</i> Geometry for the wheel</dd></dl>
 <h3>bool QwtWheel::isInverted () const</h3>
 <p><code>Returns:</code></p>
@@ -293,7 +293,7 @@ description: "QwtWheel –"
 <p>Set the minimum and maximum values. The maximum is adjusted if necessary to ensure that the range remains valid. The value might be modified to be inside of the range. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>min</i> Minimum value<br />
+<dd><i>min</i> Minimum value<br/>
  <i>max</i> Maximum value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

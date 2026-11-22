@@ -35,9 +35,9 @@ description: "sane-hpsj5s – SANE backend for HP ScanJet 5S sheet-fed scanner"
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/3-libieee1284/">libieee1284</a></code>(3)<br />
- <i><a rel="nofollow" href="http://hpsj5s.sourceforge.net">http://hpsj5s.sourceforge.net</a></i><br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/3-libieee1284/">libieee1284</a></code>(3)<br/>
+ <i><a rel="nofollow" href="http://hpsj5s.sourceforge.net">http://hpsj5s.sourceforge.net</a></i><br/>
  <i><a rel="nofollow" href="http://cyberelk.net/tim/libieee1284">http://cyberelk.net/tim/libieee1284</a></i></p>
 <h2>Author</h2>
-<p>Max Vorobiev<br />
+<p>Max Vorobiev<br/>
  Man page mostly based on <i>canon.man</i>.</p>

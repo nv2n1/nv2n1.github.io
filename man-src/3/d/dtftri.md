@@ -11,7 +11,7 @@ description: "dtftri.f –"
 <p> dtftri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtftri</code> (TRANSR, UPLO, DIAG, N, A, INFO)<br />
+<p> subroutine <code>dtftri</code> (TRANSR, UPLO, DIAG, N, A, INFO)<br/>
  <i></i><code>DTFTRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtftri (characterTRANSR, characterUPLO, characterDIAG, integerN, double precision, dimension( 0: * )A, integerINFO)</h3>

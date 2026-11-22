@@ -20,10 +20,10 @@ description: "sos.conf – sosreport configuration"
 <dd>plugin.option Alter available options for defined plugin.</dd></dl>
 <h2>Examples</h2>
 <p>To disable the &#8216;general&#8217; and &#8216;filesys&#8217; plugins: </p>
-<p> [plugins]<br />
+<p> [plugins]<br/>
  disable = general, filesys </p>
 <p> To disable rpm package verification in the RPM plugin: </p>
-<p> [tunables]<br />
+<p> [tunables]<br/>
  rpm.rpmva = off</p>
 <h2>Files</h2>
 <p>/etc/sos.conf</p>

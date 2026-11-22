@@ -18,8 +18,8 @@ description: "greylist.conf – milter-greylist configuration file"
 <dl>
 <dt><i>addr</i></dt>
 <dd>This clause is used to specify a netblock of source IP addresses. The syntax is an IP address followed by a slash and a CIDR netmask. Here is an example:</dd>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist addr 127.0.0.0/8<br />
-&nbsp;<wbr>&nbsp;<wbr>racl whitelist addr 192.168.3.0/24<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl whitelist addr 127.0.0.0/8<br/>
+&nbsp;<wbr>&nbsp;<wbr>racl whitelist addr 192.168.3.0/24<br/>
 &nbsp;<wbr>&nbsp;<wbr>racl whitelist addr ::1</dd>
 <dd>If the netmask is omitted, /32 is assumed for an IPv4 address and /128 is assumed for an IPv6 address.</dd>
 <dd>You should at least whitelist localhost (127.0.0.1/8), and if you have some user clients connecting to the machine, you should whitelist the addresses they connect from if you don&#8217;t want them to get error messages when sending e-mail.</dd>
@@ -77,7 +77,7 @@ description: "greylist.conf – milter-greylist configuration file"
 <dd>Specify the greylisting delay used before the message can be accepted. This overrides the <i>greylist</i> global setting, and it only makes sense on an <i>racl greylist</i> entry.</dd>
 <dt><i>autowhite</i></dt>
 <dd>Specify the autowhitelisting duration for messages matching this ACL. This overrides the <i>autowhite</i> global setting, and it only makes sense on an <i>racl greylist</i> entry. Example:</dd>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl greylist rcpt JDoe [at] example.net delay 15m autowhite 3d<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl greylist rcpt JDoe [at] example.net delay 15m autowhite 3d<br/>
 &nbsp;<wbr>&nbsp;<wbr>racl greylist rcpt root [at] example.net delay 1h autowhite 3d</dd>
 <dt><i>flushaddr</i></dt>
 <dd>If a message matches the rule, any entry in the greylist or autowhite databases matching the sender IP is removed. Used with a DNSRBL blacklist ACL, it is useful for freeing the database from entries set up by a machine which is known to be a spammer. Example:</dd>
@@ -91,7 +91,7 @@ description: "greylist.conf – milter-greylist configuration file"
 <dd>
 </dd><dt><i>msg</i></dt>
 <dd>These 3 values can be used to choose the SMTP code, extended code and reply message for temporary failures and rejects. Example:</dd>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl blacklist dnsrbl&nbsp;<wbr>&quot;spamstomp&quot;&nbsp;<wbr>msg&nbsp;<wbr>&quot;IP caught by spamstomp&quot;<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl blacklist dnsrbl&nbsp;<wbr>&quot;spamstomp&quot;&nbsp;<wbr>msg&nbsp;<wbr>&quot;IP caught by spamstomp&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>racl greylist default code&nbsp;<wbr>&quot;451&quot;&nbsp;<wbr>ecode&nbsp;<wbr>&quot;4.7.1&quot;</dd>
 <dd>The <i>msg</i> strings accepts format string substitution as documented in the <code>FORMAT STRINGS </code> section. For instance, <i>%A</i> gets substituted by the ACL line number.</dd>
 <dd>None of the last 3 values makes sense for a whitelist entry.</dd>
@@ -153,10 +153,10 @@ racl whitelist default</pre>
 <h2>Lists</h2>
 <p>It is often useful to group several users or sender IP addresses in a single ACL. This can be done with lists. Lists must be first defined and given a name before they can be used in ACL entries. Here is an example:</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>list&nbsp;<wbr>&quot;my users&quot;&nbsp;<wbr>rcpt&nbsp;<wbr>{&nbsp;<wbr>user1 [at] example.com user2 [at] example.com&nbsp;<wbr>}<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>list&nbsp;<wbr>&quot;my users&quot;&nbsp;<wbr>rcpt&nbsp;<wbr>{&nbsp;<wbr>user1 [at] example.com user2 [at] example.com&nbsp;<wbr>}<br/>
 &nbsp;<wbr>&nbsp;<wbr>list&nbsp;<wbr>&quot;local&quot;&nbsp;<wbr>addr&nbsp;<wbr>{&nbsp;<wbr>192.0.2.0/24 10.0.0.0/8&nbsp;<wbr>} </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>racl whitelist list&nbsp;<wbr>&quot;local&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>racl greylist list&nbsp;<wbr>&quot;my users&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>racl whitelist list&nbsp;<wbr>&quot;local&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>racl greylist list&nbsp;<wbr>&quot;my users&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>racl whitelist default </p>
 </dl>
 <h2>Backward Compatibility</h2>
@@ -165,17 +165,17 @@ racl whitelist default</pre>
 <p> <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> also used to only have a RCPT-stage ACL, which was configured through <i>acl</i> statements. These have been replaced by <i>racl</i> statements (as opposed to <i>dacl</i> statements for DATA-stage ACL). <i>acl</i> statements are still accepted for backward compatibility and are a synonym for <i>racl</i> statements.</p>
 <h2>Mx Sync</h2>
 <p>Synchronization of the greylist among multiple MX is configured using the <i>peer </i> keyword. List each other MX IP addresses using the <i>peer </i> keyword. Here is an example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>peer 192.0.2.18<br />
-&nbsp;<wbr>&nbsp;<wbr>peer 192.0.2.17<br />
-&nbsp;<wbr>&nbsp;<wbr>peer 192.0.2.22 timeout 7<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>peer 192.0.2.18<br/>
+&nbsp;<wbr>&nbsp;<wbr>peer 192.0.2.17<br/>
+&nbsp;<wbr>&nbsp;<wbr>peer 192.0.2.22 timeout 7<br/>
 &nbsp;<wbr>&nbsp;<wbr>peer 192.0.2.38 timeout 5m </p>
 <p> You can list the local machine in the peer statements, it will be ignored. </p>
 <p> The <i>timeout</i> clause sets a peer communication timeout to have proper retrial in case of slow MX peer. The default value is 3 seconds. The special value of 0 disables the connection retrials. </p>
 <p> By default, milter-greylist will listen on all interfaces using TCP port 5252 or the port number given by service named mxglsync if defined in <i>/etc/services</i> or other directory service. This behaviour can be changed by using the <i>syncaddr</i> keyword. Here are a few examples: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>syncaddr&nbsp;<wbr>*<br />
-&nbsp;<wbr>&nbsp;<wbr>syncaddr&nbsp;<wbr>*&nbsp;<wbr>port 7689<br />
-&nbsp;<wbr>&nbsp;<wbr>syncaddr 192.0.2.2 port 9785<br />
-&nbsp;<wbr>&nbsp;<wbr>syncaddr 2001:db8::1:c3b5:123<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>syncaddr&nbsp;<wbr>*<br/>
+&nbsp;<wbr>&nbsp;<wbr>syncaddr&nbsp;<wbr>*&nbsp;<wbr>port 7689<br/>
+&nbsp;<wbr>&nbsp;<wbr>syncaddr 192.0.2.2 port 9785<br/>
+&nbsp;<wbr>&nbsp;<wbr>syncaddr 2001:db8::1:c3b5:123<br/>
 &nbsp;<wbr>&nbsp;<wbr>syncaddr 2001:db8::1:c3b5:123 port 1234 </p>
 <p> Using &#8216;*&#8217; as the address means to bind to all local interfaces&#8217; addresses. Note that if you are not using the default port, all MXs must use the same port number. </p>
 <p> For outbound connections the system is selecting one of the possible addresses. If you want to use a specific IP you can use: </p>
@@ -204,7 +204,7 @@ racl whitelist default</pre>
 <p>Any sendmail macro can be used as a clause in the access list. You need to define a (macro, value) pair using the <i>sm_macro</i> keyword before using it. Here is an example that uses the <i>{client_resolve}</i> macro to apply a larger greylisting delay to hosts that have a bogus reverse DNS:</p>
 <dl>
 <dd>&nbsp;<wbr>&nbsp;<wbr>sm_macro&nbsp;<wbr>&quot;maybe_forged&quot;&nbsp;<wbr>&quot;{client_resolve}&quot;&nbsp;<wbr>&quot;FORGED&quot; </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>racl greylist sm_macro&nbsp;<wbr>&quot;maybe_forged&quot;&nbsp;<wbr>delay 1h<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>racl greylist sm_macro&nbsp;<wbr>&quot;maybe_forged&quot;&nbsp;<wbr>delay 1h<br/>
 &nbsp;<wbr>&nbsp;<wbr>racl greylist default delay 15m</dl>
 <p> A regular expression can be used as the macro value. It must be surrounded with slashes and not by quotes. The special value <i>unset</i> can also be used to match an unset macro:</p>
 <dl>
@@ -214,7 +214,7 @@ racl whitelist default</pre>
 <p>DNS Reverse Black List can be used to toggle an ACL. They must be defined and named before they can be used. Here is an example which uses a bigger greylisting delay for hosts caught in the SORBS dynamic pool DNRSBL (this will include DSL and cable customers pools, which are well known to be massively infected by spamwares):</p>
 <dl>
 <dd>&nbsp;<wbr>&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;SORBS DUN&quot;&nbsp;<wbr>dnsbl.sorbs.net 127.0.0.10/32 </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>racl greylist dnsrbl&nbsp;<wbr>&quot;SORBS DUN&quot;&nbsp;<wbr>delay 1h<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>racl greylist dnsrbl&nbsp;<wbr>&quot;SORBS DUN&quot;&nbsp;<wbr>delay 1h<br/>
 &nbsp;<wbr>&nbsp;<wbr>racl greylist default delay 15m</dl>
 <p> The definition of a DNSRBL starts by the <i>dnsrbl</i> keyword, followed by the quoted name of the DNSRBL, the DNS domain on which addresses should be looked up, and the answer we should consider as a positive hit. </p>
 <p> DNSRBL support is only available if enabled through the &#8211;enable-dnsrbl config flag. Please make sure <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8)</code> is linked against a thread-safe DNS resolver, otherwise it shall crash.</p>
@@ -222,7 +222,7 @@ racl whitelist default</pre>
 <p>ACL are able to trigger a DNS update, which can be used to feed a DNSRBL. That functionnality is enabled at build time if the DNS resolver has DNS update support. </p>
 <p> Configuration is done with the <i>nsupdate</i> statement, which may be used several times, and the optionnal <i>tsig</i> statement, if you want ot use authenticated DNS update. Here is an example syntax:</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>tsig&nbsp;<wbr>&quot;dns-update&quot;&nbsp;<wbr>&quot;hmac-md5&quot;&nbsp;<wbr>&quot;1B2M2Y8AsgTpgAmY7PhCfg==&quot;<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>tsig&nbsp;<wbr>&quot;dns-update&quot;&nbsp;<wbr>&quot;hmac-md5&quot;&nbsp;<wbr>&quot;1B2M2Y8AsgTpgAmY7PhCfg==&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>nsupdate&nbsp;<wbr>&quot;bl.example.net&quot;&nbsp;<wbr>{&nbsp;<wbr>rname&nbsp;<wbr>&quot;%j.bl.example.net&quot;&nbsp;<wbr>rvalue&nbsp;<wbr>&quot;127.0.0.2&quot;&nbsp;<wbr>tsig&nbsp;<wbr>&quot;dns-update&quot;&nbsp;<wbr>}</dd></dl>
 <p> The options for <i>nsupdate</i> are:</p>
 <dl>
@@ -256,22 +256,22 @@ racl whitelist default</pre>
 <dd>These clause will cause properties to be fetched from a LDAP directory See the <code>LDAP CHECKS</code> section below for details.</dd></dl>
 <p> Properties can be used as left-hand side part of ACL clauses:</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl blacklist&nbsp;<wbr>$name&nbsp;<wbr>&quot;badvalue&quot;<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl blacklist&nbsp;<wbr>$name&nbsp;<wbr>&quot;badvalue&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>racl blacklist&nbsp;<wbr>$name&nbsp;<wbr>/badregex/</dd></dl>
 <p> If used left-hand side and prefixed by a star, the property will be evaluated as a <code><a href="/docs/linux/man/7-glob/">glob</a>(7)</code> pattern, In the example below, if sender DNS domain is <i>test.example.net</i> and <i>$domain</i> is <i>*.example.net</i>, we get a match.</p>
 <dl>
 <dd>&nbsp;<wbr>&nbsp;<wbr>racl blacklist&nbsp;<wbr>*$domain&nbsp;<wbr>&quot;%f&quot;</dd></dl>
 <p> They are also available as right-hand side of many ACL clauses:</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl continue set&nbsp;<wbr>$badword=&quot;spam&quot;<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl continue set&nbsp;<wbr>$badword=&quot;spam&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>racl blacklist body&nbsp;<wbr>$badword</dd></dl>
 <p> Values of properties can be obtained in any quoted string that is subject to format string expantion:</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl continue set&nbsp;<wbr>$webmaster=&quot;webmaster [at] example.net&quot;<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl continue set&nbsp;<wbr>$webmaster=&quot;webmaster [at] example.net&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>racl blacklist domain evil.net msg&nbsp;<wbr>&quot;blacklisted, ask&nbsp;<wbr>$P{webmaster}&nbsp;<wbr>why&quot;</dd></dl>
 <p> When the property value is a number, it can be increased or decreased using this syntax:</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>racl continue set&nbsp;<wbr>$score+=5<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>racl continue set&nbsp;<wbr>$score+=5<br/>
 &nbsp;<wbr>&nbsp;<wbr>racl continue set&nbsp;<wbr>$score-=5</dd></dl>
 <p> Here again, right hand side may be a quoted string, a number or another property. For the quoted string and property cases, a conversion is first made to an integer, using 0 as a value on failure. Note that no arithmetic evaluation occurs. For instance, the quoted string <i>341 + 134</i> will be evaluated as 0. </p>
 <p> The <code>log</code> ACL clause can be helpful when one need to figure what happens to property values during the ACL flow. See the <code>CUSTOM REPORT</code> section for more details.</p>
@@ -279,7 +279,7 @@ racl whitelist default</pre>
 <p><code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8) </code> is able to query external sources of information through various URL, if it was built with &#8211;with-libcurl. Here is an example:</p>
 <dl>
 <dd>&nbsp;<wbr>&nbsp;<wbr>urlcheck&nbsp;<wbr>&quot;glusr&quot;&nbsp;<wbr>&quot;<a rel="nofollow" href="http://www.example.net/mgl-config?rcpt=%r">http://www.example.net/mgl-config?rcpt=%r</a>&quot;&nbsp;<wbr>5 </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>racl greylist urlcheck&nbsp;<wbr>&quot;glusr&quot;&nbsp;<wbr>delay 15m&nbsp;<wbr><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>racl greylist urlcheck&nbsp;<wbr>&quot;glusr&quot;&nbsp;<wbr>delay 15m&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>racl whitelist default</dl>
 <p> The trailing 5 at the end of the <i>urlcheck</i> definition is the maximum number of simultaneous connections we want to launch on this URL. For each message, the URL will be queried, with % format tags being substituted. For instance, <i>%r</i> is substituted by the recipient. See the <code>FORMAT STRINGS</code> section for the complete list of substitutions. </p>
 <p> <code><a href="/docs/linux/man/8-milter-greylist/">milter-greylist</a>(8) </code> expects an answer containing a list of 
@@ -313,7 +313,7 @@ racl whitelist default</pre>
 <dt><i>postmsg</i></dt>
 <dd>On DATA-stage ACL, This causes the message to be sent (up to <i>maxpeek</i> bytes) in a POST request. Here is an example:</dd>
 <dd>&nbsp;<wbr>&nbsp;<wbr>urlcheck&nbsp;<wbr>&quot;extfilter&quot;&nbsp;<wbr>&quot;<a rel="nofollow" href="http://www.example.net/f.cgi">http://www.example.net/f.cgi</a>&quot;&nbsp;<wbr>5 postmsg </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>dacl blacklist urlcheck&nbsp;<wbr>&quot;extfilter&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>dacl blacklist urlcheck&nbsp;<wbr>&quot;extfilter&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>dacl whitelist default</dl>
 <dl>
 <dt><i>getprop</i></dt>
@@ -326,12 +326,12 @@ racl whitelist default</pre>
 <dd>Cause the ldapcheck clause to be evaluated in ACL. Default behavior is to ignore the result and just fecth properties, except if the LDAP directory is unreachecable, in which case a temporary failure occurs. The <i>fixldapcheck</i> gloabal settings may also be used to globaly cause all <i>ldapcheck</i> and <i>urlcheck</i> clauses to match.</dd></dl>
 <p> Here is an example that will use various DNSRBL depending on a per-recipient setting stored in the <i>dnsrbl</i> attribute of a LDAP directory.</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL2&quot;&nbsp;<wbr>&quot;rbl.example.net&quot;&nbsp;<wbr>&quot;127.0.0.2&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL3&quot;&nbsp;<wbr>&quot;rbl.example.net&quot;&nbsp;<wbr>&quot;127.0.0.3&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL4&quot;&nbsp;<wbr>&quot;rbl.example.net&quot;&nbsp;<wbr>&quot;127.0.0.4&quot;<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL2&quot;&nbsp;<wbr>&quot;rbl.example.net&quot;&nbsp;<wbr>&quot;127.0.0.2&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL3&quot;&nbsp;<wbr>&quot;rbl.example.net&quot;&nbsp;<wbr>&quot;127.0.0.3&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL4&quot;&nbsp;<wbr>&quot;rbl.example.net&quot;&nbsp;<wbr>&quot;127.0.0.4&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>urlcheck&nbsp;<wbr>&quot;userconf&quot;&nbsp;<wbr>&quot;<a href="ldap://localhost/dc=example,dc=net?milterGreylistStatus,dnsrbl?one?mail=%r">ldap://localhost/dc=example,dc=net?milterGreylistStatus,dnsrbl?one?mail=%r</a>&quot;&nbsp;<wbr>5 getprop clear </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>racl blacklist urlcheck&nbsp;<wbr>&quot;userconf&quot;&nbsp;<wbr>$dnsrbl&nbsp;<wbr>&quot;RBL2&quot;&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL2&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>racl blacklist&nbsp;<wbr>$dnsrbl&nbsp;<wbr>&quot;RBL3&quot;&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL3&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>racl blacklist urlcheck&nbsp;<wbr>&quot;userconf&quot;&nbsp;<wbr>$dnsrbl&nbsp;<wbr>&quot;RBL2&quot;&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL2&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>racl blacklist&nbsp;<wbr>$dnsrbl&nbsp;<wbr>&quot;RBL3&quot;&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL3&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>racl blacklist&nbsp;<wbr>$dnsrbl&nbsp;<wbr>&quot;RBL4&quot;&nbsp;<wbr>dnsrbl&nbsp;<wbr>&quot;RBL4&quot;</dl>
 <p> Note that when matching gathered properties, format strings and regex can be used.</p>
 <h2>Ldap Checks</h2>

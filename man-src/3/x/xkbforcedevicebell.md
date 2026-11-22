@@ -10,7 +10,7 @@ description: "XkbForceDeviceBell – Rings the bell on any keyboard, overriding 
 <p>XkbForceDeviceBell &#8211; Rings the bell on any keyboard, overriding user preference settings for audible bells </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbForceDeviceBell</code> <code>(Display *</code><i>display</i><code>,</code> <code>Window </code><i>window</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>bell_class</i><code>,</code> <code>unsigned int </code><i>bell_id</i><code>,</code> <code>int </code><i>percent</i><code>);</code><br />
+<dt> <code>Bool XkbForceDeviceBell</code> <code>(Display *</code><i>display</i><code>,</code> <code>Window </code><i>window</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>bell_class</i><code>,</code> <code>unsigned int </code><i>bell_id</i><code>,</code> <code>int </code><i>percent</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

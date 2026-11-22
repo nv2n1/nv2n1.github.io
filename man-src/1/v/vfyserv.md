@@ -13,7 +13,7 @@ description: "vfyserv_ – TBD"
 <dl>
 <dt> <code>vfyserv</code></dt></dl>
 <h2>STATUS</h2>
-<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
+<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[][1]</dd>
 <h2>DESCRIPTION</h2>
 <p> The <code>vfyserv </code> tool verifies a certificate chain</p>
 <h2>OPTIONS</h2>

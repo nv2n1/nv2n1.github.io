@@ -53,5 +53,5 @@ description: "pnmtops – convert portable anymap to PostScript"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5), <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), <code><a href="/docs/linux/man/1-psidtopgm/">psidtopgm</a></code>(1), <code><a href="/docs/linux/man/1-pstopnm/">pstopnm</a></code>(1), <code><a href="/docs/linux/man/1-pbmtolps/">pbmtolps</a></code>(1), <code><a href="/docs/linux/man/1-pbmtoepsi/">pbmtoepsi</a></code>(1), <code><a href="/docs/linux/man/1-pbmtopsg3/">pbmtopsg3</a></code>(1), <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1), </p>
 <h2>AUTHOR</h2>
-<p> Copyright (C) 1989, 1991 by Jef Poskanzer.<br />
+<p> Copyright (C) 1989, 1991 by Jef Poskanzer.<br/>
  Modified November 1993 by Wolfgang Stuerzlinger, wrzl [at] gup.uni-linz.ac.at </p>

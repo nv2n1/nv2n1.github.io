@@ -10,7 +10,7 @@ description: "ps2ascii – Ghostscript translator from PostScript or PDF to ASCI
 
 <p> ps2ascii &#8211; Ghostscript translator from PostScript or PDF to ASCII </p>
 <h2>SYNOPSIS</h2>
-<p> <code>ps2ascii</code> [ <i>input.ps</i> [ <i>output.txt</i> ] ]<br />
+<p> <code>ps2ascii</code> [ <i>input.ps</i> [ <i>output.txt</i> ] ]<br/>
  <code>ps2ascii</code> <i>input.pdf</i> [ <i>output.txt</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>ps2ascii</code> uses <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) to extract ASCII text from <code>PostScript</code>(tm) or Adobe <code>Portable Document Format</code> (PDF) files. If no files are specified on the command line, <code>gs</code> reads from standard input; but PDF input must come from an explicitly-named file, not standard input. If no output file is specified, the ASCII text is written to standard output. </p>

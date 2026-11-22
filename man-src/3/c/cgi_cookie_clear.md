@@ -18,9 +18,9 @@ NEOERR *cgi_cookie_clear(CGI *cgi, const char *name, const char *domain,
                          const char *path);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> cgi &#8211; a CGI struct<br />
- name &#8211; the cookie name to clear<br />
- domain &#8211; the domain to clear, NULL for none<br />
+<p> cgi &#8211; a CGI struct<br/>
+ name &#8211; the cookie name to clear<br/>
+ domain &#8211; the domain to clear, NULL for none<br/>
  path &#8211; the cookie&#8217;s path </p>
 <h2>DESCRIPTION</h2>
 <p> cgi_cookie_clear will send back a Set-Cookie string that will attempt to stop a browser from continuing to send back a cookie. Note that the cookie has to match in name, domain, and path, and the luck of the Irish has to be with you for this work all the time, but at the least it will make the browser send back a cookie with no value, which the ClearSilver cookie parsing code will ignore. </p>

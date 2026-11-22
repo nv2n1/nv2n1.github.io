@@ -37,7 +37,7 @@ url: "/docs/linux/man/1-l4p-tmpl/"
 
  Send bug reports or requests for enhancements to the authors via our 
 
- <font SIZE="-1">MAILING LIST </font>(questions, bug reports, suggestions/patches): log4perl-devel [at] lists.sourceforge.net 
+ MAILING LIST (questions, bug reports, suggestions/patches): log4perl-devel [at] lists.sourceforge.net 
 
  Authors (please contact them via the list above, not directly): Mike Schilli &lt;m@perlmeister.com&gt;, Kevin Goess &lt;cpan [at] goess.org&gt; 
 

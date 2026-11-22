@@ -102,7 +102,7 @@ description: "rpc.gssd – RPCSEC_GSS daemon"
 <h2>See Also</h2>
 <p><code>rpc.svcgssd</code>(8), <code><a href="/docs/linux/man/1-kerberos/">kerberos</a></code>(1), <code><a href="/docs/linux/man/1-kinit/">kinit</a></code>(1), <code><a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a></code>(5)</p>
 <h2>Authors</h2>
-<p>Dug Song &lt;dugsong [at] umich.edu&gt;<br />
- Andy Adamson &lt;andros [at] umich.edu&gt;<br />
- Marius Aamodt Eriksen &lt;marius [at] umich.edu&gt;<br />
+<p>Dug Song &lt;dugsong [at] umich.edu&gt;<br/>
+ Andy Adamson &lt;andros [at] umich.edu&gt;<br/>
+ Marius Aamodt Eriksen &lt;marius [at] umich.edu&gt;<br/>
  J. Bruce Fields &lt;bfields [at] umich.edu&gt;</p>

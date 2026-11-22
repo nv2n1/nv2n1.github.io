@@ -10,7 +10,7 @@ description: "clahef.f –"
 <p>clahef.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>clahef</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />
+<p>subroutine <code>clahef</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br/>
  <i></i><code>CLAHEF</code> computes a partial factorization of a complex Hermitian indefinite matrix, using the diagonal pivoting method.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clahef (characterUPLO, integerN, integerNB, integerKB, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex, dimension( ldw, * )W, integerLDW, integerINFO)</h3>

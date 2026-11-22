@@ -11,90 +11,90 @@ description: "XDGA – Client library for the XFree86-DGA extension."
 <h2>Synopsis</h2>
 <p><code>#include &lt;X11/extensions/xf86dga.h&gt;</code></p>
 <dl COMPACT>
-<dd>Bool <code>XDGAQueryExtension</code>(<br />
- Display *<i>dpy</i>,<br />
- int *<i>eventBase</i>,<br />
+<dd>Bool <code>XDGAQueryExtension</code>(<br/>
+ Display *<i>dpy</i>,<br/>
+ int *<i>eventBase</i>,<br/>
  int *<i>errorBase</i>)</dd>
-<dd>Bool <code>XDGAQueryVersion</code>(<br />
- Display *<i>dpy</i>,<br />
- int *<i>majorVersion</i>,<br />
+<dd>Bool <code>XDGAQueryVersion</code>(<br/>
+ Display *<i>dpy</i>,<br/>
+ int *<i>majorVersion</i>,<br/>
  int *<i>minorVersion</i>)</dd>
-<dd>XDGAMode *<code>XDGAQueryModes</code>(<br />
- Display *<i>dpy</i>,<br />
- int <i>screen</i>,<br />
+<dd>XDGAMode *<code>XDGAQueryModes</code>(<br/>
+ Display *<i>dpy</i>,<br/>
+ int <i>screen</i>,<br/>
  int *<i>num</i>)</dd>
-<dd>XDGADevice *<code>XDGASetMode</code>(<br />
- Display *<i>dpy</i>,<br />
- int <i>screen</i>,<br />
+<dd>XDGADevice *<code>XDGASetMode</code>(<br/>
+ Display *<i>dpy</i>,<br/>
+ int <i>screen</i>,<br/>
  int <i>mode</i>)</dd>
-<dd>Bool <code>XDGAOpenFramebuffer</code>(<br />
- Display *<i>dpy</i>,<br />
+<dd>Bool <code>XDGAOpenFramebuffer</code>(<br/>
+ Display *<i>dpy</i>,<br/>
  int <i>screen</i>)</dd>
-<dd>void <code>XDGACloseFramebuffer</code>(<br />
- Display *<i>dpy</i>,<br />
+<dd>void <code>XDGACloseFramebuffer</code>(<br/>
+ Display *<i>dpy</i>,<br/>
  int <i>screen</i>)</dd>
-<dd>void <code>XDGASetViewport</code>(<br />
- Display *<i>dpy</i>,<br />
- int <i>screen</i>,<br />
- int <i>x</i>,<br />
- int <i>y</i>,<br />
+<dd>void <code>XDGASetViewport</code>(<br/>
+ Display *<i>dpy</i>,<br/>
+ int <i>screen</i>,<br/>
+ int <i>x</i>,<br/>
+ int <i>y</i>,<br/>
  int <i>flags</i>)</dd>
-<dd>void <code>XDGAInstallColormap</code>(<br />
- Display *<i>dpy</i>,<br />
- int <i>screen</i>,<br />
+<dd>void <code>XDGAInstallColormap</code>(<br/>
+ Display *<i>dpy</i>,<br/>
+ int <i>screen</i>,<br/>
  Colormap <i>cmap</i>)</dd>
-<dd>Colormap <code>XDGACreateColormap</code>(<br />
- Display *<i>dpy</i>,<br />
- int <i>screen</i>,<br />
- XDGADevice *<i>device</i>,<br />
+<dd>Colormap <code>XDGACreateColormap</code>(<br/>
+ Display *<i>dpy</i>,<br/>
+ int <i>screen</i>,<br/>
+ XDGADevice *<i>device</i>,<br/>
  int <i>alloc</i>)</dd>
-<dd>void <code>XDGASelectInput</code>(<br />
- Display *<i>dpy</i>,<br />
- int <i>screen</i>,<br />
+<dd>void <code>XDGASelectInput</code>(<br/>
+ Display *<i>dpy</i>,<br/>
+ int <i>screen</i>,<br/>
  long <i>event_mask</i>)</dd>
-<dd>void <code>XDGAFillRectangle</code>(<br />
- Display *<i>dpy</i>,<br />
- int <i>screen</i>,<br />
- int <i>x</i>,<br />
- int <i>y</i>,<br />
- unsigned int <i>width</i>,<br />
- unsigned int <i>height</i>,<br />
+<dd>void <code>XDGAFillRectangle</code>(<br/>
+ Display *<i>dpy</i>,<br/>
+ int <i>screen</i>,<br/>
+ int <i>x</i>,<br/>
+ int <i>y</i>,<br/>
+ unsigned int <i>width</i>,<br/>
+ unsigned int <i>height</i>,<br/>
  unsigned long <i>color</i>)</dd>
-<dd>void <code>XDGACopyArea</code>(<br />
- Display *<i>dpy</i>,<br />
- int <i>screen</i>,<br />
- int <i>srcx</i>,<br />
- int <i>srcy</i>,<br />
- unsigned int <i>width</i>,<br />
- unsigned int <i>height</i>,<br />
- int <i>dstx</i>,<br />
+<dd>void <code>XDGACopyArea</code>(<br/>
+ Display *<i>dpy</i>,<br/>
+ int <i>screen</i>,<br/>
+ int <i>srcx</i>,<br/>
+ int <i>srcy</i>,<br/>
+ unsigned int <i>width</i>,<br/>
+ unsigned int <i>height</i>,<br/>
+ int <i>dstx</i>,<br/>
  int <i>dsty</i>)</dd>
-<dd>void <code>XDGACopyTransparentArea</code>(<br />
- Display *<i>dpy</i>,<br />
- int <i>screen</i>,<br />
- int <i>srcx</i>,<br />
- int <i>srcy</i>,<br />
- unsigned int <i>width</i>,<br />
- unsigned int <i>height</i>,<br />
- int <i>dstx</i>,<br />
- int <i>dsty</i>,<br />
+<dd>void <code>XDGACopyTransparentArea</code>(<br/>
+ Display *<i>dpy</i>,<br/>
+ int <i>screen</i>,<br/>
+ int <i>srcx</i>,<br/>
+ int <i>srcy</i>,<br/>
+ unsigned int <i>width</i>,<br/>
+ unsigned int <i>height</i>,<br/>
+ int <i>dstx</i>,<br/>
+ int <i>dsty</i>,<br/>
  unsigned long <i>key</i>)</dd>
-<dd>int <code>XDGAGetViewportStatus</code>(<br />
- Display *<i>dpy</i>,<br />
+<dd>int <code>XDGAGetViewportStatus</code>(<br/>
+ Display *<i>dpy</i>,<br/>
  int <i>screen</i>)</dd>
-<dd>void <code>XDGASync</code>(<br />
- Display *<i>dpy</i>,<br />
+<dd>void <code>XDGASync</code>(<br/>
+ Display *<i>dpy</i>,<br/>
  int <i>screen</i>)</dd>
-<dd>Bool <code>XDGASetClientVersion</code>(<br />
+<dd>Bool <code>XDGASetClientVersion</code>(<br/>
  Display *<i>dpy</i>)</dd>
-<dd>void <code>XDGAChangePixmapMode</code>(<br />
- Display *<i>dpy</i>,<br />
- int <i>screen</i>,<br />
- int *<i>x</i>,<br />
- int *<i>y</i>,<br />
+<dd>void <code>XDGAChangePixmapMode</code>(<br/>
+ Display *<i>dpy</i>,<br/>
+ int <i>screen</i>,<br/>
+ int *<i>x</i>,<br/>
+ int *<i>y</i>,<br/>
  int <i>mode</i>)</dd>
-<dd>void <code>XDGAKeyEventToXKeyEvent</code>(<br />
- XDGAKeyEvent *<i>dk</i>,<br />
+<dd>void <code>XDGAKeyEventToXKeyEvent</code>(<br/>
+ XDGAKeyEvent *<i>dk</i>,<br/>
  XKeyEvent *<i>xk</i>) </dd>
 </dl>
 <h2>Description</h2>

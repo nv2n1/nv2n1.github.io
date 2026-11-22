@@ -53,21 +53,21 @@ url: "/docs/linux/man/1-firstaidkit-plugin/"
 <h2>Python Modules:</h2>
 <p> A plugin for the FirstAidKit must inherit from the pyfirstaidkit.Plugin class. It must also implement the mandatory plugin steps. The pyfirstaidkit.Plugin parent will provide a default flow that will use the functions defined by the plugin developer. Moreover, for the mandatory steps, the plugin developer must guarantee that the function will return a valid return class (see &quot;Return Values section&quot;). In other words, the function must return one of the possible return classes included in the default flow. Each plugin must have the get_plugin method in order to actually be seen by the firstaidkit backend. </p>
 <h2>Class Attributes:</h2>
-<p> This is how the diagnose and fix flows are coded in the backend plugin system.<br />
-&nbsp;<wbr>flows[&quot;diagnose&quot;]&nbsp;<wbr>=&nbsp;<wbr>Flow({<br />
-initial&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{Return:&nbsp;<wbr>&quot;prepare&quot;},<br />
-&quot;prepare&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;diagnose&quot;, None:&nbsp;<wbr>&quot;clean&quot;},<br />
-&quot;diagnose&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;clean&quot;, ReturnFailure:&nbsp;<wbr>&quot;clean&quot;, None:&nbsp;<wbr>&quot;clean&quot;},<br />
-&quot;clean&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess: final, ReturnFailure: final, None: final}<br />
+<p> This is how the diagnose and fix flows are coded in the backend plugin system.<br/>
+&nbsp;<wbr>flows[&quot;diagnose&quot;]&nbsp;<wbr>=&nbsp;<wbr>Flow({<br/>
+initial&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{Return:&nbsp;<wbr>&quot;prepare&quot;},<br/>
+&quot;prepare&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;diagnose&quot;, None:&nbsp;<wbr>&quot;clean&quot;},<br/>
+&quot;diagnose&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;clean&quot;, ReturnFailure:&nbsp;<wbr>&quot;clean&quot;, None:&nbsp;<wbr>&quot;clean&quot;},<br/>
+&quot;clean&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess: final, ReturnFailure: final, None: final}<br/>
 }, description=&quot;The default, fully automated, diagnose sequence&quot;) </p>
-<p>&nbsp;<wbr>flows[&quot;fix&quot;]&nbsp;<wbr>=&nbsp;<wbr>Flow({<br />
-initial&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{Return:&nbsp;<wbr>&quot;prepare&quot;},<br />
-&quot;prepare&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;diagnose&quot;, None:&nbsp;<wbr>&quot;clean&quot;},<br />
-&quot;diagnose&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;clean&quot;, ReturnFailure:&nbsp;<wbr>&quot;backup&quot;, None:&nbsp;<wbr>&quot;clean&quot;},<br />
-&quot;backup&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;fix&quot;, ReturnFailure:&nbsp;<wbr>&quot;clean&quot;, None:&nbsp;<wbr>&quot;clean&quot;},<br />
-&quot;fix&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;clean&quot;, ReturnFailure:&nbsp;<wbr>&quot;restore&quot;, None:&nbsp;<wbr>&quot;restore&quot;},<br />
-&quot;restore&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;clean&quot;, ReturnFailure:&nbsp;<wbr>&quot;clean&quot;, None:&nbsp;<wbr>&quot;clean&quot;},<br />
-&quot;clean&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess: final, ReturnFailure: final, None: final}<br />
+<p>&nbsp;<wbr>flows[&quot;fix&quot;]&nbsp;<wbr>=&nbsp;<wbr>Flow({<br/>
+initial&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{Return:&nbsp;<wbr>&quot;prepare&quot;},<br/>
+&quot;prepare&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;diagnose&quot;, None:&nbsp;<wbr>&quot;clean&quot;},<br/>
+&quot;diagnose&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;clean&quot;, ReturnFailure:&nbsp;<wbr>&quot;backup&quot;, None:&nbsp;<wbr>&quot;clean&quot;},<br/>
+&quot;backup&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;fix&quot;, ReturnFailure:&nbsp;<wbr>&quot;clean&quot;, None:&nbsp;<wbr>&quot;clean&quot;},<br/>
+&quot;fix&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;clean&quot;, ReturnFailure:&nbsp;<wbr>&quot;restore&quot;, None:&nbsp;<wbr>&quot;restore&quot;},<br/>
+&quot;restore&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess:&nbsp;<wbr>&quot;clean&quot;, ReturnFailure:&nbsp;<wbr>&quot;clean&quot;, None:&nbsp;<wbr>&quot;clean&quot;},<br/>
+&quot;clean&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>{ReturnSuccess: final, ReturnFailure: final, None: final}<br/>
 }, description=&quot;The default, fully automated, fixing sequence&quot;) </p>
 <p> Other important class attributes are: name, version, author and description. They are selfexplanatory. </p>
 <h2>Class Methods:</h2>
@@ -99,24 +99,24 @@ initial&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;
 <h2>Examples</h2>
 <dl>
 <dt>Flow description (Example 1):</dt>
-<dd> Consider the following flow and its dictionary:<br />
-&nbsp;<wbr>start-&gt;fix-&gt;end<br />
-&nbsp;<wbr>dict&nbsp;<wbr>=&nbsp;<wbr>{&nbsp;<wbr>start:fix,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fix:end<br />
+<dd> Consider the following flow and its dictionary:<br/>
+&nbsp;<wbr>start-&gt;fix-&gt;end<br/>
+&nbsp;<wbr>dict&nbsp;<wbr>=&nbsp;<wbr>{&nbsp;<wbr>start:fix,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fix:end<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>} </dd>
 <dt>Flow description (Example 2):</dt>
-<dd> Consider the following flow and its dictionary:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>,&gt;end<br />
-&nbsp;<wbr>start-&gt;diagnose<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>`&gt;fix-&gt;end<br />
-&nbsp;<wbr>dict&nbsp;<wbr>=&nbsp;<wbr>{&nbsp;<wbr>start:diagnose,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>diagnose:{&quot;goodSys&quot;:end,&quot;badSys&quot;:fix},&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fix:end&nbsp;<wbr><br />
+<dd> Consider the following flow and its dictionary:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>,&gt;end<br/>
+&nbsp;<wbr>start-&gt;diagnose<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>`&gt;fix-&gt;end<br/>
+&nbsp;<wbr>dict&nbsp;<wbr>=&nbsp;<wbr>{&nbsp;<wbr>start:diagnose,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>diagnose:{&quot;goodSys&quot;:end,&quot;badSys&quot;:fix},&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fix:end&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>} </dd>
 <p> This flow has a conditional after the diagnose function. If diagnose results in a corrupt state of the system, then the plugin proceeds with fix. If all is good in the system, then the flow end. Note that the next step in the diagnose case is defined buy whatever diagnose returned. </p>
 <dt>Adding a flow (Example 3):</dt>
-<dd> class MyPlugin(Plugin):<br />
-&nbsp;<wbr>flows&nbsp;<wbr>=&nbsp;<wbr>Flow.init(Plugin)<br />
+<dd> class MyPlugin(Plugin):<br/>
+&nbsp;<wbr>flows&nbsp;<wbr>=&nbsp;<wbr>Flow.init(Plugin)<br/>
 &nbsp;<wbr>flows[&quot;myflow&quot;]&nbsp;<wbr>=&nbsp;<wbr>Flow({flow rules}, description=&quot;&quot;) </dd>
 </dl>
 <h2>SEE ALSO</h2>

@@ -11,7 +11,7 @@ description: "sggbal.f –"
 <p> sggbal.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sggbal</code> (JOB, N, A, LDA, B, LDB, ILO, IHI, LSCALE, RSCALE, WORK, INFO)<br />
+<p> subroutine <code>sggbal</code> (JOB, N, A, LDA, B, LDB, ILO, IHI, LSCALE, RSCALE, WORK, INFO)<br/>
  <i></i><code>SGGBAL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sggbal (characterJOB, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, integerILO, integerIHI, real, dimension( * )LSCALE, real, dimension( * )RSCALE, real, dimension( * )WORK, integerINFO)</h3>

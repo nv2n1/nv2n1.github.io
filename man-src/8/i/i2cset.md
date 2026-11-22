@@ -9,7 +9,7 @@ description: "i2cset – set I2C registers"
 
 <p>i2cset &#8211; set I2C registers </p>
 <h2>Synopsis</h2>
-<p><code>i2cset</code> [<code>-f</code>] [<code>-y</code>] [<code>-m mask</code>] [<code>-r</code>] <i>i2cbus</i> <i>chip-address</i> <i>data-address</i> [<i>value </i>[<i>mode</i>]]<br />
+<p><code>i2cset</code> [<code>-f</code>] [<code>-y</code>] [<code>-m mask</code>] [<code>-r</code>] <i>i2cbus</i> <i>chip-address</i> <i>data-address</i> [<i>value </i>[<i>mode</i>]]<br/>
  <code>i2cset</code> <code>-V</code> </p>
 <h2>Description</h2>
 <p>i2cset is a small helper program to set registers visible through the I2C bus. </p>

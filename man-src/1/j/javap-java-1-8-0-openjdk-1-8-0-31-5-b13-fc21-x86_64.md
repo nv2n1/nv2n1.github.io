@@ -27,8 +27,8 @@ description: "javap – Disassembles one or more class files."
 <h2>Description</h2>
 <p> The <code>javap</code> command disassembles one or more class files. The output depends on the options used. When no options are used, then the <code>javap</code> command prints the package, protected and public fields, and methods of the classes passed to it. The <code>javap</code> command prints its output to <code>stdout</code>.</p>
 <h2>Options</h2>
-<p> -help<br />
- &#8211;help<br />
+<p> -help<br/>
+ &#8211;help<br/>
  -?</p>
 <dl>
 <dt>
@@ -49,7 +49,7 @@ description: "javap – Disassembles one or more class files."
 <dl>
 <dt>
 </dt><dd> Shows only protected and public classes and members.</dd></dl>
-<p> -private<br />
+<p> -private<br/>
  -p</p>
 <dl>
 <dt>

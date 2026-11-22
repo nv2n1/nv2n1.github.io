@@ -50,7 +50,7 @@ description: "initctl2dot – manual page for initctl2dot"
 <h2>Reporting Bugs</h2>
 <p>Report bugs at &lt;<code><a rel="nofollow" href="https://launchpad.net/upstart/+bugs">https://launchpad.net/upstart/+bugs</a></code>&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2011 Canonical Ltd.<br />
+<p>Copyright &#169; 2011 Canonical Ltd.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-init/">init</a></code>(8) <code><a href="/docs/linux/man/8-initctl/">initctl</a></code>(8) </p>

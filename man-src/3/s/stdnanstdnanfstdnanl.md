@@ -9,13 +9,13 @@ description: "std::nan,std::nanf,std::nanl – std::nan,std::nanf,std::nanl"
 
 <p>std::nan,std::nanf,std::nanl &#8211; std::nan,std::nanf,std::nanl</p>
 <h2>Synopsis</h2>
-<p>Defined in header &lt;cmath&gt;<br />
-float nanf( const char* arg ); <i>(since C++11)</i><br />
-double nan( const char* arg ); <i>(since C++11)</i><br />
-long double nanl( const char* arg ); <i>(since C++11)</i><br />
-Converts the implementation-defined character string arg into the corresponding quiet NaN value, as if by calling std::strtod, std::strtof, or std::strtold, respectively, as follows:<br />
-The call std::nan(&quot;n-char-sequence&quot;), where n-char-sequence is a sequence of digits, Latin letters, and underscores, is equivalent to the call std::strtod(&quot;NAN(n-char-sequence)&quot;, (char**)nullptr);.<br />
-The call std::nan(&quot;&quot;) is equivalent to the call std::strtod(&quot;NAN()&quot;, (char**)nullptr);.<br />
+<p>Defined in header &lt;cmath&gt;<br/>
+float nanf( const char* arg ); <i>(since C++11)</i><br/>
+double nan( const char* arg ); <i>(since C++11)</i><br/>
+long double nanl( const char* arg ); <i>(since C++11)</i><br/>
+Converts the implementation-defined character string arg into the corresponding quiet NaN value, as if by calling std::strtod, std::strtof, or std::strtold, respectively, as follows:<br/>
+The call std::nan(&quot;n-char-sequence&quot;), where n-char-sequence is a sequence of digits, Latin letters, and underscores, is equivalent to the call std::strtod(&quot;NAN(n-char-sequence)&quot;, (char**)nullptr);.<br/>
+The call std::nan(&quot;&quot;) is equivalent to the call std::strtod(&quot;NAN()&quot;, (char**)nullptr);.<br/>
 The call std::nan(&quot;string&quot;), where string is neither an n-char-sequence nor an empty string, is equivalent to the call std::strtod(&quot;NAN&quot;, (char**)nullptr);. </p>
 <h2>Parameters</h2>
 <p>arg &#8211; narrow character string identifying the contents of a NaN</p>
@@ -42,24 +42,24 @@ int main()
 }
 </code></pre>
 <h2>Possible output:</h2>
-<p>&nbsp;<wbr>&nbsp;nan(&quot;1&quot;) = nan (7ff0000000000001)<br />
+<p>&nbsp;<wbr>&nbsp;nan(&quot;1&quot;) = nan (7ff0000000000001)<br/>
 &nbsp;<wbr>&nbsp;nan(&quot;2&quot;) = nan (7ff0000000000002)</p>
 <h2>See also</h2>
-<p>isnan checks if the given number is NaN<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br />
-<i>(C++11)</i><br />
-NAN evaluates to a quiet NaN of type float<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(macro constant)<br />
-<i>(C++11)</i><br />
-has_quiet_NaN identifies floating-point types that can represent the special value &quot;quiet not-a-number&quot; (NaN)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant of std::numeric_limits&lt;T&gt;)</i><br />
-<code>[static]</code><br />
-has_signaling_NaN identifies floating-point types that can represent the special value &quot;signaling not-a-number&quot; (NaN)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant of std::numeric_limits&lt;T&gt;)</i><br />
-<code>[static]</code><br />
-quiet_NaN returns a quiet NaN value of the given floating-point type<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function of std::numeric_limits&lt;T&gt;)</i><br />
-<code>[static]</code><br />
-signaling_NaN returns a signaling NaN value of the given floating-point type<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function of std::numeric_limits&lt;T&gt;)</i><br />
+<p>isnan checks if the given number is NaN<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br/>
+<i>(C++11)</i><br/>
+NAN evaluates to a quiet NaN of type float<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(macro constant)<br/>
+<i>(C++11)</i><br/>
+has_quiet_NaN identifies floating-point types that can represent the special value &quot;quiet not-a-number&quot; (NaN)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant of std::numeric_limits&lt;T&gt;)</i><br/>
+<code>[static]</code><br/>
+has_signaling_NaN identifies floating-point types that can represent the special value &quot;signaling not-a-number&quot; (NaN)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant of std::numeric_limits&lt;T&gt;)</i><br/>
+<code>[static]</code><br/>
+quiet_NaN returns a quiet NaN value of the given floating-point type<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function of std::numeric_limits&lt;T&gt;)</i><br/>
+<code>[static]</code><br/>
+signaling_NaN returns a signaling NaN value of the given floating-point type<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function of std::numeric_limits&lt;T&gt;)</i><br/>
 <code>[static]</code> </p>

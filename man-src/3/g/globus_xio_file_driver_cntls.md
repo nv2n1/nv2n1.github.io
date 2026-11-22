@@ -160,7 +160,7 @@ description: "Attributes and Cntls –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>in_out_offset</i> Specify the desired offset (according to whence). On success, the actual file offset will be stored here.<br />
+</dt><dd> <i>in_out_offset</i> Specify the desired offset (according to whence). On success, the actual file offset will be stored here.<br/>
  <i>whence</i> Specify how offset should be interpreted.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>

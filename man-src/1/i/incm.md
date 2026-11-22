@@ -59,40 +59,40 @@ new /
     3, 4
 }
 </code></pre>
-<p> Executing <code>incm</code> without the options results in:<br />
-cur /<br />
-{<br />
-    1, 2<br />
-}<br />
-new /<br />
-{<br />
-}<br />
-to inbox:<br />
-{<br />
-    3, 4<br />
+<p> Executing <code>incm</code> without the options results in:<br/>
+cur /<br/>
+{<br/>
+    1, 2<br/>
+}<br/>
+new /<br/>
+{<br/>
+}<br/>
+to inbox:<br/>
+{<br/>
+    3, 4<br/>
 }</p>
-<p> Executing <code>incm</code> with the <code>-a</code> option results in:<br />
-cur /<br />
-{<br />
-}<br />
-new /<br />
-{<br />
-}<br />
-to inbox:<br />
-{<br />
-    1, 2, 3, 4<br />
+<p> Executing <code>incm</code> with the <code>-a</code> option results in:<br/>
+cur /<br/>
+{<br/>
+}<br/>
+new /<br/>
+{<br/>
+}<br/>
+to inbox:<br/>
+{<br/>
+    1, 2, 3, 4<br/>
 }</p>
-<p> Executing <code>incm</code> with the <code>-b</code> option results in:<br />
-cur /<br />
-{<br />
-    1, 2, 3, 4<br />
-}<br />
-new /<br />
-{<br />
-}<br />
-to inbox:<br />
-{<br />
-    3, 4<br />
+<p> Executing <code>incm</code> with the <code>-b</code> option results in:<br/>
+cur /<br/>
+{<br/>
+    1, 2, 3, 4<br/>
+}<br/>
+new /<br/>
+{<br/>
+}<br/>
+to inbox:<br/>
+{<br/>
+    3, 4<br/>
 }</p>
 <p> Executing <code>incm</code> with the <code>-a</code> option and the <code>-b</code> option results in: </p>
 <pre><code>

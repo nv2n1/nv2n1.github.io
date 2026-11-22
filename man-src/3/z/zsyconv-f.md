@@ -10,7 +10,7 @@ description: "zsyconv.f –"
 <p>zsyconv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zsyconv</code> (UPLO, WAY, N, A, LDA, IPIV, WORK, INFO)<br />
+<p>subroutine <code>zsyconv</code> (UPLO, WAY, N, A, LDA, IPIV, WORK, INFO)<br/>
  <i></i><code>ZSYCONV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zsyconv (characterUPLO, characterWAY, integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( * )WORK, integerINFO)</h3>

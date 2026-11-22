@@ -10,7 +10,7 @@ description: "ldns_rr_list_sort"
 
 <p> ldns_rr_list_sort </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_rr_list_sort(ldns_rr_list *unsorted); </p>

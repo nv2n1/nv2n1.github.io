@@ -11,7 +11,7 @@ description: "dtrtrs.f –"
 <p> dtrtrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtrtrs</code> (UPLO, TRANS, DIAG, N, NRHS, A, LDA, B, LDB, INFO)<br />
+<p> subroutine <code>dtrtrs</code> (UPLO, TRANS, DIAG, N, NRHS, A, LDA, B, LDB, INFO)<br/>
  <i></i><code>DTRTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtrtrs (characterUPLO, characterTRANS, characterDIAG, integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

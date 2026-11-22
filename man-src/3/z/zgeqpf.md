@@ -10,7 +10,7 @@ description: "zgeqpf.f –"
 <p>zgeqpf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgeqpf</code> (M, N, A, LDA, JPVT, TAU, WORK, RWORK, INFO)<br />
+<p>subroutine <code>zgeqpf</code> (M, N, A, LDA, JPVT, TAU, WORK, RWORK, INFO)<br/>
  <i></i><code>ZGEQPF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgeqpf (integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )JPVT, complex*16, dimension( * )TAU, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

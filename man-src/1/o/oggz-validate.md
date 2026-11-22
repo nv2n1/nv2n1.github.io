@@ -8,14 +8,14 @@ url: "/docs/linux/man/1-oggz-validate/"
 description: "oggz-validate — Validate the Ogg framing of one or more files"
 ---
 
-<p> oggz-validate &#8212; Validate the Ogg framing of one or more files<br />
+<p> oggz-validate &#8212; Validate the Ogg framing of one or more files<br/>
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>
 <p> <code>oggz-validate </code> [-M <code>num</code> | &#8211;max-errors <code>num</code> ] [-p | &#8211;prefix ] [-s | &#8211;suffix ] [-P | &#8211;partial ] filename &#8230; </p>
 <p> <code>oggz-validate</code> [-h | &#8211;help ] [-v | &#8211;version ]</p>
 <h2>Description</h2>
 <p> <code>oggz-validate</code> validates the Ogg framing of one or more Ogg files. </p>
-<p> <code>oggz-validate</code> detects the following errors in Ogg framing:<br />
+<p> <code>oggz-validate</code> detects the following errors in Ogg framing:<br/>
 &nbsp;<wbr></p>
 <dl>
 <dt> &bull;</dt>
@@ -46,10 +46,10 @@ description: "oggz-validate — Validate the Ogg framing of one or more files"
 <dd> Terminal header page contains non-header packet</dd>
 <dt> &bull;</dt>
 <dd> Terminal header page contains non-header segment</dd></dl>
-<p> <code>oggz-validate</code> exits with status 0 if all files are valid Ogg files, and with status 1 if one or more errors are found.<br />
+<p> <code>oggz-validate</code> exits with status 0 if all files are valid Ogg files, and with status 1 if one or more errors are found.<br/>
 &nbsp;<wbr></p>
 <h2>Options</h2>
-<p> <code>oggz-validate</code> accepts the following options:<br />
+<p> <code>oggz-validate</code> accepts the following options:<br/>
 &nbsp;<wbr></p>
 <h3>Error reporting options</h3>
 <dl>
@@ -70,7 +70,7 @@ description: "oggz-validate — Validate the Ogg framing of one or more files"
 <h2>AUTHOR</h2>
 <p> Conrad Parker April 3, 2005;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2005 CSIRO Australia<br />
+<p> Copyright &#169; 2005 CSIRO Australia<br/>
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-oggz-sort/">oggz-sort</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-dump/">oggz-dump</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-info/">oggz-info</a></code><code>(1)</code> </p>

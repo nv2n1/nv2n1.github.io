@@ -13,30 +13,30 @@ description: "yum list data plugin"
 <p> <code>yum</code> [options] [command] [package &#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> This plugin extends <code>yum</code> for some commands that give aggregate package data based on lists of packages </p>
-<p> added yum <i>command</i>s are:<br />
- <i></i> * list-vendors<br />
- <i></i> * info-vendors<br />
- <i></i> * list-rpm-groups<br />
- <i></i> * info-rpm-groups<br />
- <i></i> * list-packagers<br />
- <i></i> * info-packagers<br />
- <i></i> * list-licenses<br />
- <i></i> * info-licenses<br />
- <i></i> * list-arches<br />
- <i></i> * info-arches<br />
- <i></i> * list-committers<br />
- <i></i> * info-committers<br />
- <i></i> * list-buildhosts<br />
- <i></i> * info-buildhosts<br />
- <i></i> * list-baseurls<br />
- <i></i> * info-baseurls<br />
- <i></i> * list-package-sizes<br />
- <i></i> * info-package-sizes<br />
- <i></i> * list-archive-sizes<br />
- <i></i> * info-archive-sizes<br />
- <i></i> * list-installed-sizes<br />
- <i></i> * info-installed-sizes<br />
- <i></i> * list-groups<br />
+<p> added yum <i>command</i>s are:<br/>
+ <i></i> * list-vendors<br/>
+ <i></i> * info-vendors<br/>
+ <i></i> * list-rpm-groups<br/>
+ <i></i> * info-rpm-groups<br/>
+ <i></i> * list-packagers<br/>
+ <i></i> * info-packagers<br/>
+ <i></i> * list-licenses<br/>
+ <i></i> * info-licenses<br/>
+ <i></i> * list-arches<br/>
+ <i></i> * info-arches<br/>
+ <i></i> * list-committers<br/>
+ <i></i> * info-committers<br/>
+ <i></i> * list-buildhosts<br/>
+ <i></i> * info-buildhosts<br/>
+ <i></i> * list-baseurls<br/>
+ <i></i> * info-baseurls<br/>
+ <i></i> * list-package-sizes<br/>
+ <i></i> * info-package-sizes<br/>
+ <i></i> * list-archive-sizes<br/>
+ <i></i> * info-archive-sizes<br/>
+ <i></i> * list-installed-sizes<br/>
+ <i></i> * info-installed-sizes<br/>
+ <i></i> * list-groups<br/>
  <i></i> * info-groups </p>
 <p> all of which take the same arguments as the list and info yum commands. The difference between the list and info varieties is that the info versions lists all the packages under each aggregation. </p>
 <dl>

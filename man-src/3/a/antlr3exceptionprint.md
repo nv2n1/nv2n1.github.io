@@ -12,11 +12,11 @@ description: "src/antlr3exception.c –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3exception.h">antlr3exception.h</a>&gt; </p>
 <h3>Functions</h3>
-<p>static void <code>antlr3ExceptionFree</code> (<code>pANTLR3_EXCEPTION</code> ex)<br />
- <i>Frees up a chain of ANTLR3 exceptions. </i><br />
- <code>pANTLR3_EXCEPTION</code> <code>antlr3ExceptionNew</code> (<code>ANTLR3_UINT32</code> exception, void *name, void *message, <code>ANTLR3_BOOLEAN</code> freeMessage)<br />
- <i>Creates a new ANTLR3 exception structure. </i><br />
- static void <code>antlr3ExceptionPrint</code> (<code>pANTLR3_EXCEPTION</code> ex)<br />
+<p>static void <code>antlr3ExceptionFree</code> (<code>pANTLR3_EXCEPTION</code> ex)<br/>
+ <i>Frees up a chain of ANTLR3 exceptions. </i><br/>
+ <code>pANTLR3_EXCEPTION</code> <code>antlr3ExceptionNew</code> (<code>ANTLR3_UINT32</code> exception, void *name, void *message, <code>ANTLR3_BOOLEAN</code> freeMessage)<br/>
+ <i>Creates a new ANTLR3 exception structure. </i><br/>
+ static void <code>antlr3ExceptionPrint</code> (<code>pANTLR3_EXCEPTION</code> ex)<br/>
  <i>Prints out the message in all the exceptions in the supplied chain. </i></p>
 <h2>Detailed Description</h2>
 <p>Contains default functions for creating and destroying as well as otherwise handling ANTLR3 standard exception structures. </p>
@@ -33,8 +33,8 @@ description: "src/antlr3exception.c –"
 <h3><code>pANTLR3_EXCEPTION</code> antlr3ExceptionNew (<code>ANTLR3_UINT32</code> exception, void * name, void * message, <code>ANTLR3_BOOLEAN</code> freeMessage)</h3>
 <p>Creates a new ANTLR3 exception structure. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exception</i> One of the ANTLR3_xxx_EXCEPTION indicators such as <code>ANTLR3_RECOGNITION_EXCEPTION</code><br />
- <i>message</i> Pointer to message string<br />
+<dd><i>exception</i> One of the ANTLR3_xxx_EXCEPTION indicators such as <code>ANTLR3_RECOGNITION_EXCEPTION</code><br/>
+ <i>message</i> Pointer to message string<br/>
  <i>freeMessage</i> Set to ANTLR3_TRUE if the message parameter should be freed by a call to <code>ANTLR3_FREE()</code> when the exception is destroyed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

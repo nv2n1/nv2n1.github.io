@@ -10,7 +10,7 @@ description: "slag2.f –"
 <p>slag2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slag2</code> (A, LDA, B, LDB, SAFMIN, SCALE1, SCALE2, WR1, WR2, WI)<br />
+<p>subroutine <code>slag2</code> (A, LDA, B, LDB, SAFMIN, SCALE1, SCALE2, WR1, WR2, WI)<br/>
  <i></i><code>SLAG2</code> computes the eigenvalues of a 2-by-2 generalized eigenvalue problem, with scaling as necessary to avoid over-/underflow.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slag2 (real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, realSAFMIN, realSCALE1, realSCALE2, realWR1, realWR2, realWI)</h3>

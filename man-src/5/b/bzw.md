@@ -13,72 +13,72 @@ description: "bzw – BZFlag world file format"
 <dl>
 <dt>Here is small example world:</dt>
 <dd></dd></dl>
-<p> # simple world containing a box, pyramid, and mesh<br />
- <code>world</code><br />
- <code> name</code> Simple World<br />
- <code> size</code> 100.0<br />
- <code>end</code><br />
- <code>box</code><br />
- <code> position</code> -20 -20 0<br />
- <code> size</code> 10 20 10<br />
- <code>end</code><br />
- <code>pyramid</code><br />
- <code> position</code> 20 20 0<br />
- <code> size</code> 10 10 20<br />
- <code>end</code><br />
- <code>mesh</code><br />
- <code> vertex</code> -10 0 0<br />
- <code> vertex</code> 10 0 0<br />
- <code> vertex</code> 0 10 0<br />
- <code> face</code><br />
- <code> vertices</code> 0 1 2<br />
- <code> endface</code><br />
- <code>end</code><br />
- The .bzw file is a plain text file with a relatively simple file format. The format of this text file consists of any number of objects listed in any order (except that physics, textureMatrix, dynamicColor, and material must come before they are referenced) separated by newlines and grouped into blocks of types. The list of world types consists of:<br />
- <code>world</code><br />
- <code>options</code><br />
- <code>waterLevel</code><br />
- <code>dynamicColor</code><br />
- <code>textureMatrix</code><br />
- <code>transform</code><br />
- <code>material</code><br />
- <code>physics</code><br />
- <code>define</code><br />
- <code>group</code><br />
- <code>mesh</code><br />
- <code>meshbox</code><br />
- <code>meshpyr</code><br />
- <code>arc</code><br />
- <code>cone</code><br />
- <code>sphere</code><br />
- <code>tetra</code><br />
- <code>box</code><br />
- <code>pyramid</code><br />
- <code>link</code><br />
- <code>teleporter</code><br />
- <code>base</code><br />
- <code>weapon</code><br />
- <code>zone</code><br />
- Each object is described by placing the type on one line, the word <i>end</i> on a following line, and a list of attributes for that object, one per line, in between. The exceptions to the rule are <i>define</i> and <i>face</i>, which are concluded with <i>enddef</i> and <i>endface</i>. Attributes may be listed in any order. Attributes have default values, and if that is good enough, the attribute need not be listed. Words are always specified in lowercase. Line comments can be specified by placing a # sign at the start of the line. For documentation purposes, you can tag each object by adding a name attribute. There is no set limit to the number of times you may use any of the objects except for the world, options, and waterLevel objects, they can only be specified once. The options object contains command line arguments that are used to configure the server&#8217;s game mode, but can not contain server specific options such as -p, -passwd, and -conf.<br />
- In the following examples, the values are the defaults. <code>The World object</code><br />
- Header for the world. <code>world</code><br />
- <code> name</code> example_world<br />
- <code> size</code> 400.0<br />
- <code> flagHeight</code> 10.0<br />
- <code>end</code><br />
- <code>The Options object</code><br />
+<p> # simple world containing a box, pyramid, and mesh<br/>
+ <code>world</code><br/>
+ <code> name</code> Simple World<br/>
+ <code> size</code> 100.0<br/>
+ <code>end</code><br/>
+ <code>box</code><br/>
+ <code> position</code> -20 -20 0<br/>
+ <code> size</code> 10 20 10<br/>
+ <code>end</code><br/>
+ <code>pyramid</code><br/>
+ <code> position</code> 20 20 0<br/>
+ <code> size</code> 10 10 20<br/>
+ <code>end</code><br/>
+ <code>mesh</code><br/>
+ <code> vertex</code> -10 0 0<br/>
+ <code> vertex</code> 10 0 0<br/>
+ <code> vertex</code> 0 10 0<br/>
+ <code> face</code><br/>
+ <code> vertices</code> 0 1 2<br/>
+ <code> endface</code><br/>
+ <code>end</code><br/>
+ The .bzw file is a plain text file with a relatively simple file format. The format of this text file consists of any number of objects listed in any order (except that physics, textureMatrix, dynamicColor, and material must come before they are referenced) separated by newlines and grouped into blocks of types. The list of world types consists of:<br/>
+ <code>world</code><br/>
+ <code>options</code><br/>
+ <code>waterLevel</code><br/>
+ <code>dynamicColor</code><br/>
+ <code>textureMatrix</code><br/>
+ <code>transform</code><br/>
+ <code>material</code><br/>
+ <code>physics</code><br/>
+ <code>define</code><br/>
+ <code>group</code><br/>
+ <code>mesh</code><br/>
+ <code>meshbox</code><br/>
+ <code>meshpyr</code><br/>
+ <code>arc</code><br/>
+ <code>cone</code><br/>
+ <code>sphere</code><br/>
+ <code>tetra</code><br/>
+ <code>box</code><br/>
+ <code>pyramid</code><br/>
+ <code>link</code><br/>
+ <code>teleporter</code><br/>
+ <code>base</code><br/>
+ <code>weapon</code><br/>
+ <code>zone</code><br/>
+ Each object is described by placing the type on one line, the word <i>end</i> on a following line, and a list of attributes for that object, one per line, in between. The exceptions to the rule are <i>define</i> and <i>face</i>, which are concluded with <i>enddef</i> and <i>endface</i>. Attributes may be listed in any order. Attributes have default values, and if that is good enough, the attribute need not be listed. Words are always specified in lowercase. Line comments can be specified by placing a # sign at the start of the line. For documentation purposes, you can tag each object by adding a name attribute. There is no set limit to the number of times you may use any of the objects except for the world, options, and waterLevel objects, they can only be specified once. The options object contains command line arguments that are used to configure the server&#8217;s game mode, but can not contain server specific options such as -p, -passwd, and -conf.<br/>
+ In the following examples, the values are the defaults. <code>The World object</code><br/>
+ Header for the world. <code>world</code><br/>
+ <code> name</code> example_world<br/>
+ <code> size</code> 400.0<br/>
+ <code> flagHeight</code> 10.0<br/>
+ <code>end</code><br/>
+ <code>The Options object</code><br/>
  A world file interface for setting command line options for BZFS. <code>options</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>-set&nbsp;<wbr>_tankSpeed 36 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>-j&nbsp;<wbr>+r -ms 3 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>+f GM{5}&nbsp;<wbr>+f SW{5}<br />
- <code>end</code><br />
- <code>The Water Level object</code><br />
- Sets how high the water is, in a matter of units. <code>waterLevel</code><br />
- <code> name</code> example_waterlevel<br />
- <code> height</code> -1.0 # anything below 0 turns it off<br />
- <code>end</code><br />
- <code>The Group Definition object</code><br />
- Defines a group, which may include other group instances<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>+f GM{5}&nbsp;<wbr>+f SW{5}<br/>
+ <code>end</code><br/>
+ <code>The Water Level object</code><br/>
+ Sets how high the water is, in a matter of units. <code>waterLevel</code><br/>
+ <code> name</code> example_waterlevel<br/>
+ <code> height</code> -1.0 # anything below 0 turns it off<br/>
+ <code>end</code><br/>
+ <code>The Group Definition object</code><br/>
+ Defines a group, which may include other group instances<br/>
  This does not place any objects into the world, a group instance must be used to generate world objects from a group definition. <code>define</code> &lt;example_groupdef&gt; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>You can add any object to a group definition, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>except for the following types: </p>
@@ -88,24 +88,24 @@ description: "bzw – BZFlag world file format"
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>physics </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>links </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>weapon </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>zone<br />
- <code>enddef</code><br />
- <code>The Group Instantiation object</code><br />
- Instantiates a group, and possibly modifies subobjects <code>group</code> &lt;example_groupdef&gt; # a valid group definition reference<br />
- <code> shift</code> 0 0 0 # (<code>repeatable</code>)<br />
- <code> scale</code> 1 1 1 # (<code>repeatable</code>)<br />
- <code> shear</code> 0 0 0 # (<code>repeatable</code>)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>zone<br/>
+ <code>enddef</code><br/>
+ <code>The Group Instantiation object</code><br/>
+ Instantiates a group, and possibly modifies subobjects <code>group</code> &lt;example_groupdef&gt; # a valid group definition reference<br/>
+ <code> shift</code> 0 0 0 # (<code>repeatable</code>)<br/>
+ <code> scale</code> 1 1 1 # (<code>repeatable</code>)<br/>
+ <code> shear</code> 0 0 0 # (<code>repeatable</code>)<br/>
  <code> spin</code> angle nx ny nz # (<code>repeatable</code>) </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>angle degrees about vector n<br />
- <code> team</code> 0 # change all base colors within group<br />
- <code> tint</code> 1 1 1 1 # hierarchically tints objects within this group<br />
- <code> drivethrough</code> # make all subobjects drivethrough<br />
- <code> shootthrough</code> # make all subobjects shootthrough<br />
- <code> phydrv</code> example_phydrv # reassign any valid physics drivers<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>angle degrees about vector n<br/>
+ <code> team</code> 0 # change all base colors within group<br/>
+ <code> tint</code> 1 1 1 1 # hierarchically tints objects within this group<br/>
+ <code> drivethrough</code> # make all subobjects drivethrough<br/>
+ <code> shootthrough</code> # make all subobjects shootthrough<br/>
+ <code> phydrv</code> example_phydrv # reassign any valid physics drivers<br/>
  <code> matref</code> example_material # set material properties </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>(except for the color)<br />
- <code>end</code><br />
- <code>The Dynamic Color object</code> <code>dynamicColor</code><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>(except for the color)<br/>
+ <code>end</code><br/>
+ <code>The Dynamic Color object</code> <code>dynamicColor</code><br/>
  <code> name</code> example_dyncol </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>there are 4 channels that can be modified: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>red</code>,&nbsp;<wbr><code>green</code>,&nbsp;<wbr><code>blue</code>,&nbsp;<wbr><code>alpha</code> </p>
@@ -119,260 +119,260 @@ description: "bzw – BZFlag world file format"
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2 &#8211; equivalent to an active clampUp </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>if both clampUp and clampDown are active, the value is&nbsp;<wbr>(min+max)/2 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>the sinusoid function starts at the max value </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>the sum of a channel&#8217;s sinusoids is clamped between 0 and 1<br />
- <code> red limits</code> 0 1 # min/max limits<br />
- <code> green sinusoid</code> 0.1 0 0.25 # period, offset, weight<br />
- <code> blue clampUp</code> 0.1 0 0.75 # period, offset, width<br />
- <code> alpha clampDown</code> 0.2 0.5 0.5 # period, offset, width<br />
- <code> red sequence</code> 0.0 0.0 2 0 1 1 2 0 &#8230; # period, offset, list of states<br />
- <code>end</code><br />
- <code>The Texture Matrix object</code> <code>textureMatrix</code><br />
- <code> name</code> example_texmat<br />
- <code> scale</code> 0.0 0.0 1.0 1.0 # u/v freqs, u/v scales<br />
- <code> spin</code> 0.0 # rotation freq<br />
- <code> shift</code> 0.0 0.0 # u/v freqs<br />
- <code> center</code> 0.5 0.5 # dynamic u/v center (for spin and scale)<br />
- <code> fixedscale</code> 0.0 0.0 # time invariant u/v scale<br />
- <code> fixedspin</code> 0.0 # time invariant rotation<br />
- <code> fixedshift</code> 0.0 0.0 # time invariant u/v shift<br />
- <code>end</code><br />
- <code>Material Properties</code> Material properties may be set on several types of objects, including meshes, mesh faces, arcs, cones, spheres, and tetras. Here are the properties:<br />
- <code>material</code><br />
- <code> name</code> example_material<br />
- <code> resetmat</code> # restore default values<br />
- <code> matref</code> material_name # copy another material&#8217;s properties<br />
- <code> ambient</code> 0.2 0.2 0.2 1.0 # ambient color<br />
- <code> diffuse</code> 1.0 1.0 1.0 1.0 # diffuse color (<code>main color</code>)<br />
- <code> color</code> 1.0 1.0 1.0 1.0 # synonym for &#8216;diffuse&#8217;<br />
- <code> specular</code> 0.0 0.0 0.0 1.0 # specular color<br />
- <code> emission</code> 0.0 0.0 0.0 1.0 # emission color<br />
- <code> shininess</code> 0.0 # shininess (0.0 &#8211; 128.0)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>the sum of a channel&#8217;s sinusoids is clamped between 0 and 1<br/>
+ <code> red limits</code> 0 1 # min/max limits<br/>
+ <code> green sinusoid</code> 0.1 0 0.25 # period, offset, weight<br/>
+ <code> blue clampUp</code> 0.1 0 0.75 # period, offset, width<br/>
+ <code> alpha clampDown</code> 0.2 0.5 0.5 # period, offset, width<br/>
+ <code> red sequence</code> 0.0 0.0 2 0 1 1 2 0 &#8230; # period, offset, list of states<br/>
+ <code>end</code><br/>
+ <code>The Texture Matrix object</code> <code>textureMatrix</code><br/>
+ <code> name</code> example_texmat<br/>
+ <code> scale</code> 0.0 0.0 1.0 1.0 # u/v freqs, u/v scales<br/>
+ <code> spin</code> 0.0 # rotation freq<br/>
+ <code> shift</code> 0.0 0.0 # u/v freqs<br/>
+ <code> center</code> 0.5 0.5 # dynamic u/v center (for spin and scale)<br/>
+ <code> fixedscale</code> 0.0 0.0 # time invariant u/v scale<br/>
+ <code> fixedspin</code> 0.0 # time invariant rotation<br/>
+ <code> fixedshift</code> 0.0 0.0 # time invariant u/v shift<br/>
+ <code>end</code><br/>
+ <code>Material Properties</code> Material properties may be set on several types of objects, including meshes, mesh faces, arcs, cones, spheres, and tetras. Here are the properties:<br/>
+ <code>material</code><br/>
+ <code> name</code> example_material<br/>
+ <code> resetmat</code> # restore default values<br/>
+ <code> matref</code> material_name # copy another material&#8217;s properties<br/>
+ <code> ambient</code> 0.2 0.2 0.2 1.0 # ambient color<br/>
+ <code> diffuse</code> 1.0 1.0 1.0 1.0 # diffuse color (<code>main color</code>)<br/>
+ <code> color</code> 1.0 1.0 1.0 1.0 # synonym for &#8216;diffuse&#8217;<br/>
+ <code> specular</code> 0.0 0.0 0.0 1.0 # specular color<br/>
+ <code> emission</code> 0.0 0.0 0.0 1.0 # emission color<br/>
+ <code> shininess</code> 0.0 # shininess (0.0 &#8211; 128.0)<br/>
  <code> texture</code> filename # set working texture </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&#8211; non-interlaced PNG </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&#8211; http://&nbsp;<wbr>or ftp://&nbsp;<wbr>hyperlinks can be used&nbsp;<wbr>&nbsp;<wbr>(no spaces) </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&#8211; BZFlag default texture names can be used&nbsp;<wbr>&nbsp;<wbr>(.png not required)<br />
- <code> addtexture</code> filename # add texture<br />
- <code> notextures</code> # specify that no textures are to be used<br />
- <code> notexalpha</code> # don&#8217;t use the texture&#8217;s alpha channel<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&#8211; BZFlag default texture names can be used&nbsp;<wbr>&nbsp;<wbr>(.png not required)<br/>
+ <code> addtexture</code> filename # add texture<br/>
+ <code> notextures</code> # specify that no textures are to be used<br/>
+ <code> notexalpha</code> # don&#8217;t use the texture&#8217;s alpha channel<br/>
  <code> notexcolor</code> # the color is not applied to the texture </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>if a texture is specified, but not found, the default texture </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>will be used. if the default texture is also not available, then </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>the color will be used&nbsp;<wbr>(untextured)<br />
- <code> spheremap</code> # use spherical texture coordinate mapping<br />
- <code> texmat</code> -1 # texture matrix (-1 for none)<br />
- <code> dyncol</code> -1 # dynamic color (-1 for none)<br />
- <code> noradar</code> # do not display on radar (except normal mode)<br />
- <code> noshadow</code> # do not render shadows<br />
- <code> noculling</code> # do not cull by face winding (double-sided)<br />
- <code> nosorting</code> # do not do front-to-back alpha sorting<br />
- <code> nolighting</code> # disable lighting<br />
- <code> alphathresh 0.0</code> # alpha thresholding value<br />
- <code> groupalpha</code> # sort translucent faces as a group<br />
- <code> occluder</code> # faces with this material will occlude<br />
- <code>end</code><br />
- <code>The Physics Driver object</code> <code>physics</code><br />
- <code> name</code> example_phydrv<br />
- <code> linear</code> 0.0 0.0 0.0 # x/y/z linear velocities<br />
- <code> angular</code> 0.0 0.0 0.0 # rotation freq, x/y coordinates<br />
- <code> slide</code> 0.0 # time until max velocity (&gt; 0.0 enables)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>the color will be used&nbsp;<wbr>(untextured)<br/>
+ <code> spheremap</code> # use spherical texture coordinate mapping<br/>
+ <code> texmat</code> -1 # texture matrix (-1 for none)<br/>
+ <code> dyncol</code> -1 # dynamic color (-1 for none)<br/>
+ <code> noradar</code> # do not display on radar (except normal mode)<br/>
+ <code> noshadow</code> # do not render shadows<br/>
+ <code> noculling</code> # do not cull by face winding (double-sided)<br/>
+ <code> nosorting</code> # do not do front-to-back alpha sorting<br/>
+ <code> nolighting</code> # disable lighting<br/>
+ <code> alphathresh 0.0</code> # alpha thresholding value<br/>
+ <code> groupalpha</code> # sort translucent faces as a group<br/>
+ <code> occluder</code> # faces with this material will occlude<br/>
+ <code>end</code><br/>
+ <code>The Physics Driver object</code> <code>physics</code><br/>
+ <code> name</code> example_phydrv<br/>
+ <code> linear</code> 0.0 0.0 0.0 # x/y/z linear velocities<br/>
+ <code> angular</code> 0.0 0.0 0.0 # rotation freq, x/y coordinates<br/>
+ <code> slide</code> 0.0 # time until max velocity (&gt; 0.0 enables)<br/>
  <code> death</code> Message goes here. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>the&nbsp;<wbr>&#8216;death&#8217;&nbsp;<wbr>property requires a non-blank message<br />
- <code>end</code><br />
- <code>The Mesh object</code> <code>mesh</code><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>the&nbsp;<wbr>&#8216;death&#8217;&nbsp;<wbr>property requires a non-blank message<br/>
+ <code>end</code><br/>
+ <code>The Mesh object</code> <code>mesh</code><br/>
  <code> name</code> example_mesh </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Material properties applied to a mesh apply to all faces </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>that follow the setting. Mesh faces will alter their own </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>properties without affecting the state of the mesh properties. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>The same pattern is used to apply physics drivers.<br />
- <code> vertex</code> 100 200 300 # add a vertex (<code>repeatable</code>)<br />
- <code> normal</code> 1.0 0 0 # add a normal (<code>repeatable</code>)<br />
- <code> texcoord</code> 0.1 0.75 # add a texture coordinate (<code>repeatable</code>)<br />
- <code> inside</code> 5.5 4.5 1.2 # add an inside point (<code>repeatable</code>)<br />
- <code> outside</code> 0 0 1000 # add an outside point (<code>repeatable</code>)<br />
- <code> shift</code> 0 0 0 # (<code>repeatable</code>)<br />
- <code> scale</code> 1 1 1 # (<code>repeatable</code>)<br />
- <code> shear</code> 0 0 0 # (<code>repeatable</code>)<br />
- <code> spin</code> angle nx ny nz # (<code>repeatable</code>)<br />
- <code> phydrv</code> example_phydrv # assign a physics driver<br />
- <code> smoothbounce</code> # ricochets use normals<br />
- <code> noclusters</code> # render each mesh face individually<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>The same pattern is used to apply physics drivers.<br/>
+ <code> vertex</code> 100 200 300 # add a vertex (<code>repeatable</code>)<br/>
+ <code> normal</code> 1.0 0 0 # add a normal (<code>repeatable</code>)<br/>
+ <code> texcoord</code> 0.1 0.75 # add a texture coordinate (<code>repeatable</code>)<br/>
+ <code> inside</code> 5.5 4.5 1.2 # add an inside point (<code>repeatable</code>)<br/>
+ <code> outside</code> 0 0 1000 # add an outside point (<code>repeatable</code>)<br/>
+ <code> shift</code> 0 0 0 # (<code>repeatable</code>)<br/>
+ <code> scale</code> 1 1 1 # (<code>repeatable</code>)<br/>
+ <code> shear</code> 0 0 0 # (<code>repeatable</code>)<br/>
+ <code> spin</code> angle nx ny nz # (<code>repeatable</code>)<br/>
+ <code> phydrv</code> example_phydrv # assign a physics driver<br/>
+ <code> smoothbounce</code> # ricochets use normals<br/>
+ <code> noclusters</code> # render each mesh face individually<br/>
  <code> face</code> # start a face (<code>repeatable</code>) </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>the front-face winding is counter-clockwise<br />
- <code> vertices</code> 1 4 0 3 5 # list of vertices (requires at least three)<br />
- <code> normals</code> 2 6 0 4 7 # list of normals (optional)<br />
- <code> texcoords</code> 0 3 2 4 9 # list of texture coordinates (optional)<br />
- <code> phydrv</code> example_phydrv # assign a physics driver<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>the front-face winding is counter-clockwise<br/>
+ <code> vertices</code> 1 4 0 3 5 # list of vertices (requires at least three)<br/>
+ <code> normals</code> 2 6 0 4 7 # list of normals (optional)<br/>
+ <code> texcoords</code> 0 3 2 4 9 # list of texture coordinates (optional)<br/>
+ <code> phydrv</code> example_phydrv # assign a physics driver<br/>
  <code> endface</code> # end the face </p>
 <p>&nbsp;<wbr>&nbsp;<wbr># </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&nbsp;<wbr>This next element can be added to increase the rendering speed </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&nbsp;<wbr>of the mesh object. If the client is capable of using this data, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&nbsp;<wbr>then it is used to draw the mesh instead of the face information. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#<br />
- <code> drawInfo</code><br />
- <code> dlist</code> # display list for all material sets<br />
- <code> decorative</code> # older clients with not see this mesh<br />
- <code> angvel</code> &lt;degrees/sec&gt; # rotation about initial Z axis<br />
- <code> extents</code> &lt;minX&gt; &lt;minY&gt; &lt;minZ&gt; &lt;maxX&gt; &lt;maxY&gt; &lt;maxZ&gt;<br />
- <code> sphere</code> &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;radiusSquared&gt;<br />
- <code> corner</code> &lt;v&gt; &lt;n&gt; &lt;t&gt; (<code>repeatable</code>)<br />
- <code> vertex</code> 0.0 0.0 0.0 (<code>repeatable</code>)<br />
- <code> normal</code> 0.0 0.0 0.0 (<code>repeatable</code>)<br />
- <code> texcoord</code> 0.0 0.0 (<code>repeatable</code>)<br />
- <code> lod</code> (<code>repeatable</code>)<br />
- <code> lengthPerPixel</code> &lt;value&gt;<br />
- <code> matref</code> &lt;name&gt; (<code>repeatable</code>)<br />
- <code> dlist</code> # display list for this material set<br />
- <code> sphere</code> &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;radiusSquared&gt;<br />
- <code> points</code> 0 (<code>repeatable</code>)<br />
- <code> lines</code> 0 1 (<code>repeatable</code>)<br />
- <code> lineloop</code> 0 1 (<code>repeatable</code>)<br />
- <code> linestrip</code> 0 1 (<code>repeatable</code>)<br />
- <code> tris</code> 0 1 2 (<code>repeatable</code>)<br />
- <code> tristrip</code> 0 1 2 (<code>repeatable</code>)<br />
- <code> trifan</code> 0 1 2 (<code>repeatable</code>)<br />
- <code> quads</code> 0 1 2 3 (<code>repeatable</code>)<br />
- <code> quadstrip</code> 0 1 2 3 (<code>repeatable</code>)<br />
- <code> polygon</code> 0 1 2 (<code>repeatable</code>)<br />
- <code> end</code> # matref<br />
- <code> end</code> # lod<br />
- <code> end</code> # drawInfo<br />
- <code>end</code> # mesh<br />
- <code>The Arc object</code> <code>arc</code><br />
- <code> name</code> example_arc<br />
- <code> divisions 16</code> # number of subdivisions<br />
- <code> flatshading</code> # flat shading (smooth is default)<br />
- <code> angle 360</code> # the sweep angle<br />
- <code> ratio 1</code> # (outrad &#8211; inrad) / outrad<br />
- <code> position</code> 0.0 0.0 0.0<br />
- <code> size</code> 10 10 10<br />
- <code> rotation</code> 0.0<br />
- <code> shift</code> 0 0 0 # (<code>repeatable</code>)<br />
- <code> scale</code> 1 1 1 # (<code>repeatable</code>)<br />
- <code> shear</code> 0 0 0 # (<code>repeatable</code>)<br />
- <code> spin</code> angle nx ny nz # (<code>repeatable</code>)<br />
- <code> phydrv</code> example_phydrv # assign a physics driver<br />
- <code> smoothbounce</code> # ricochets use normals<br />
- <code>end</code><br />
- <code>The Cone object</code> <code>cone</code><br />
- <code> name</code> example_cone<br />
- <code> divisions 16</code> # number of subdivisions<br />
- <code> flatshading</code> # flat shading (smooth is default)<br />
- <code> angle 360</code> # the sweep angle<br />
- <code> position</code> 0.0 0.0 0.0<br />
- <code> size</code> 10 10 10<br />
- <code> rotation</code> 0.0<br />
- <code> shift</code> 0 0 0 # (<code>repeatable</code>)<br />
- <code> scale</code> 1 1 1 # (<code>repeatable</code>)<br />
- <code> shear</code> 0 0 0 # (<code>repeatable</code>)<br />
- <code> spin</code> angle nx ny nz # (<code>repeatable</code>)<br />
- <code> phydrv</code> example_phydrv # assign a physics driver<br />
- <code> smoothbounce</code> # ricochets use normals<br />
- <code>end</code><br />
- <code>The Sphere object</code> <code>sphere</code><br />
- <code> name</code> example_sphere<br />
- <code> divisions 4</code> # number of subdivisions<br />
- <code> flatshading</code> # flat shading (smooth is default)<br />
- <code> position</code> 0.0 0.0 10.0<br />
- <code> size</code> 10 10 10<br />
- <code> radius 10</code> # sets all size values to this value<br />
- <code> rotation</code> 0.0<br />
- <code> shift</code> 0 0 0 # (<code>repeatable</code>)<br />
- <code> scale</code> 1 1 1 # (<code>repeatable</code>)<br />
- <code> shear</code> 0 0 0 # (<code>repeatable</code>)<br />
- <code> spin</code> angle nx ny nz # (<code>repeatable</code>)<br />
- <code> phydrv</code> example_phydrv # assign a physics driver<br />
- <code> smoothbounce</code> # ricochets use normals<br />
- <code>end</code><br />
- <code>The Tetrahedron object</code> <code>tetra</code><br />
- <code> name</code> example_tetra<br />
- # there must always be 4 vertices<br />
- <code> vertex</code> -10.0 -5.0 0.0<br />
- <code> vertex</code> +10.0 -5.0 0.0<br />
- <code> vertex</code> 0.0 10.0 0.0<br />
- <code> vertex</code> 0.0 5.0 10.0<br />
- <code> shift</code> 0 0 0 # (<code>repeatable</code>)<br />
- <code> scale</code> 1 1 1 # (<code>repeatable</code>)<br />
- <code> shear</code> 0 0 0 # (<code>repeatable</code>)<br />
- <code> spin</code> angle nx ny nz # (<code>repeatable</code>)<br />
- <code>end</code><br />
- <code>The Box object</code><br />
- Adds a simple block. <code>box</code><br />
- <code> name</code> example_box<br />
- <code> position</code> 0.0 0.0 0.0<br />
- <code> size</code> 30.0 30.0 9.42<br />
- <code> rotation</code> 0.0<br />
- <code>end</code><br />
- <code>The Pyramid object</code><br />
- Adds a triangular shaped object. <code>pyramid</code><br />
- <code> name</code> example_pyramid<br />
- <code> position</code> 0.0 0.0 0.0<br />
- <code> size</code> 8.2 8.2 10.25<br />
- <code> rotation</code> 0.0<br />
- <code>end</code><br />
- <code>The Teleporter object</code><br />
- Adds an object that places a tank at another teleporter in a different area when ran through. <code>teleporter</code> [name]<br />
- # the [name] tag is used for linkage<br />
- <code> name</code> example_teleporter<br />
- <code> position</code> 0.0 0.0 0.0<br />
- <code> size</code> 5.06 4.48 20.16<br />
- <code> rotation</code> 0.0<br />
- <code> border</code> 1.12<br />
- <code>end</code><br />
- <code>The Link object</code><br />
- Adds a route to teleport a tank between two teleporters. # Teleporter names are terminated with either :f (forward)<br />
- # or :b (backwards). The forwards link points to 0 degrees,<br />
- # and the backwards link points to 180. Links are made by<br />
- # pattern matching the teleporter names. The &#8216;*&#8217; and &#8216;?&#8217;<br />
- # globbing characters can be used to make multiple matches.<br />
- # If there are multiple matches for the &quot;to&quot; link, then the<br />
- # destination will be selected randomly between the matches.<br />
- # in-game.<br />
- # NOTE: bzfs -d -d -d -d will print the linkage table. <code>link</code><br />
- <code> name</code> example_link<br />
- # this will link all teleporters randomly to all other teleporters<br />
- <code> from</code> *<br />
- <code> to</code> *<br />
- <code>end</code><br />
- # or, to link between known teleporters examp_tele1(front) and examp_tele2(back) <code>link</code><br />
- <code> name</code> example_realLink<br />
- <code> from</code> examp_tele1:f<br />
- <code> to</code> examp_tele2:b<br />
- <code>end</code><br />
- <code>The Base object</code><br />
- Creates a team base where the corresponding team&#8217;s flag is stored. The oncap option will fire a world weapon of the specified type when the team flag for this base is captured. <code>base</code><br />
- <code> name</code> example_base<br />
- <code> position</code> 0.0 0.0 0.0<br />
- <code> size</code> 60.0 60.0 0.0<br />
- <code> rotation</code> 0.0<br />
- <code> color</code> 0<br />
- <code> oncap</code> V<br />
- <code>end</code><br />
- <code>The Weapon object</code><br />
- Creates a world weapon, or a weapon fired automatically by the world. The weapon can either be timed or be event driven. Timed weapons should use the initdelay and delay fields. Event driven weapons need to use the trigger option to define what the trigger event is. Valid trigger events are; OnCap, for flag capture events. OnSpawn, for player spawn events. OnDie, for player death events. If the weapon is to be triggered only for a specific team then the eventteam option should be used with a team number (1 to 4). A eventteam value of -1 will trigger this weapon for any team. -1 is the default eventteam value. <code>weapon</code><br />
- <code> name</code> example_weapon<br />
- <code> position</code> 0.0 0.0 0.0<br />
- <code> rotation</code> 0.0<br />
- <code> tilt</code> 0.0<br />
- <code> initdelay</code> 10.0<br />
- <code> delay</code> 10.0 3.0 5.0 3.0<br />
- <code> type</code> V<br />
- <code> trigger</code> flagcap<br />
- <code> eventteam</code> V<br />
- <code>end</code><br />
- <code>The Zone object</code><br />
- Specifies a certain range in the world, and what attributes that range has. <code>zone</code><br />
- <code> name</code> example_zone<br />
- <code> position</code> 0.0 0.0 0.0<br />
- <code> size</code> 1.0 1.0 1.0<br />
- <code> rotation</code> 0.0<br />
- # where players may spawn<br />
- <code> team</code> 0 1 2 3 4<br />
- # where flag may spawn<br />
- <code> flag</code> GM SW good bad<br />
- # dropped team flags will fly to the closest safety zone<br />
- <code> safety</code> 1 2 3 4<br />
- # attach a flag to this zone (always spawn in this zone)<br />
- <code> zoneflag</code> GM 3 # type, count (type can be a team flag, ex: R*)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#<br/>
+ <code> drawInfo</code><br/>
+ <code> dlist</code> # display list for all material sets<br/>
+ <code> decorative</code> # older clients with not see this mesh<br/>
+ <code> angvel</code> &lt;degrees/sec&gt; # rotation about initial Z axis<br/>
+ <code> extents</code> &lt;minX&gt; &lt;minY&gt; &lt;minZ&gt; &lt;maxX&gt; &lt;maxY&gt; &lt;maxZ&gt;<br/>
+ <code> sphere</code> &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;radiusSquared&gt;<br/>
+ <code> corner</code> &lt;v&gt; &lt;n&gt; &lt;t&gt; (<code>repeatable</code>)<br/>
+ <code> vertex</code> 0.0 0.0 0.0 (<code>repeatable</code>)<br/>
+ <code> normal</code> 0.0 0.0 0.0 (<code>repeatable</code>)<br/>
+ <code> texcoord</code> 0.0 0.0 (<code>repeatable</code>)<br/>
+ <code> lod</code> (<code>repeatable</code>)<br/>
+ <code> lengthPerPixel</code> &lt;value&gt;<br/>
+ <code> matref</code> &lt;name&gt; (<code>repeatable</code>)<br/>
+ <code> dlist</code> # display list for this material set<br/>
+ <code> sphere</code> &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;radiusSquared&gt;<br/>
+ <code> points</code> 0 (<code>repeatable</code>)<br/>
+ <code> lines</code> 0 1 (<code>repeatable</code>)<br/>
+ <code> lineloop</code> 0 1 (<code>repeatable</code>)<br/>
+ <code> linestrip</code> 0 1 (<code>repeatable</code>)<br/>
+ <code> tris</code> 0 1 2 (<code>repeatable</code>)<br/>
+ <code> tristrip</code> 0 1 2 (<code>repeatable</code>)<br/>
+ <code> trifan</code> 0 1 2 (<code>repeatable</code>)<br/>
+ <code> quads</code> 0 1 2 3 (<code>repeatable</code>)<br/>
+ <code> quadstrip</code> 0 1 2 3 (<code>repeatable</code>)<br/>
+ <code> polygon</code> 0 1 2 (<code>repeatable</code>)<br/>
+ <code> end</code> # matref<br/>
+ <code> end</code> # lod<br/>
+ <code> end</code> # drawInfo<br/>
+ <code>end</code> # mesh<br/>
+ <code>The Arc object</code> <code>arc</code><br/>
+ <code> name</code> example_arc<br/>
+ <code> divisions 16</code> # number of subdivisions<br/>
+ <code> flatshading</code> # flat shading (smooth is default)<br/>
+ <code> angle 360</code> # the sweep angle<br/>
+ <code> ratio 1</code> # (outrad &#8211; inrad) / outrad<br/>
+ <code> position</code> 0.0 0.0 0.0<br/>
+ <code> size</code> 10 10 10<br/>
+ <code> rotation</code> 0.0<br/>
+ <code> shift</code> 0 0 0 # (<code>repeatable</code>)<br/>
+ <code> scale</code> 1 1 1 # (<code>repeatable</code>)<br/>
+ <code> shear</code> 0 0 0 # (<code>repeatable</code>)<br/>
+ <code> spin</code> angle nx ny nz # (<code>repeatable</code>)<br/>
+ <code> phydrv</code> example_phydrv # assign a physics driver<br/>
+ <code> smoothbounce</code> # ricochets use normals<br/>
+ <code>end</code><br/>
+ <code>The Cone object</code> <code>cone</code><br/>
+ <code> name</code> example_cone<br/>
+ <code> divisions 16</code> # number of subdivisions<br/>
+ <code> flatshading</code> # flat shading (smooth is default)<br/>
+ <code> angle 360</code> # the sweep angle<br/>
+ <code> position</code> 0.0 0.0 0.0<br/>
+ <code> size</code> 10 10 10<br/>
+ <code> rotation</code> 0.0<br/>
+ <code> shift</code> 0 0 0 # (<code>repeatable</code>)<br/>
+ <code> scale</code> 1 1 1 # (<code>repeatable</code>)<br/>
+ <code> shear</code> 0 0 0 # (<code>repeatable</code>)<br/>
+ <code> spin</code> angle nx ny nz # (<code>repeatable</code>)<br/>
+ <code> phydrv</code> example_phydrv # assign a physics driver<br/>
+ <code> smoothbounce</code> # ricochets use normals<br/>
+ <code>end</code><br/>
+ <code>The Sphere object</code> <code>sphere</code><br/>
+ <code> name</code> example_sphere<br/>
+ <code> divisions 4</code> # number of subdivisions<br/>
+ <code> flatshading</code> # flat shading (smooth is default)<br/>
+ <code> position</code> 0.0 0.0 10.0<br/>
+ <code> size</code> 10 10 10<br/>
+ <code> radius 10</code> # sets all size values to this value<br/>
+ <code> rotation</code> 0.0<br/>
+ <code> shift</code> 0 0 0 # (<code>repeatable</code>)<br/>
+ <code> scale</code> 1 1 1 # (<code>repeatable</code>)<br/>
+ <code> shear</code> 0 0 0 # (<code>repeatable</code>)<br/>
+ <code> spin</code> angle nx ny nz # (<code>repeatable</code>)<br/>
+ <code> phydrv</code> example_phydrv # assign a physics driver<br/>
+ <code> smoothbounce</code> # ricochets use normals<br/>
+ <code>end</code><br/>
+ <code>The Tetrahedron object</code> <code>tetra</code><br/>
+ <code> name</code> example_tetra<br/>
+ # there must always be 4 vertices<br/>
+ <code> vertex</code> -10.0 -5.0 0.0<br/>
+ <code> vertex</code> +10.0 -5.0 0.0<br/>
+ <code> vertex</code> 0.0 10.0 0.0<br/>
+ <code> vertex</code> 0.0 5.0 10.0<br/>
+ <code> shift</code> 0 0 0 # (<code>repeatable</code>)<br/>
+ <code> scale</code> 1 1 1 # (<code>repeatable</code>)<br/>
+ <code> shear</code> 0 0 0 # (<code>repeatable</code>)<br/>
+ <code> spin</code> angle nx ny nz # (<code>repeatable</code>)<br/>
+ <code>end</code><br/>
+ <code>The Box object</code><br/>
+ Adds a simple block. <code>box</code><br/>
+ <code> name</code> example_box<br/>
+ <code> position</code> 0.0 0.0 0.0<br/>
+ <code> size</code> 30.0 30.0 9.42<br/>
+ <code> rotation</code> 0.0<br/>
+ <code>end</code><br/>
+ <code>The Pyramid object</code><br/>
+ Adds a triangular shaped object. <code>pyramid</code><br/>
+ <code> name</code> example_pyramid<br/>
+ <code> position</code> 0.0 0.0 0.0<br/>
+ <code> size</code> 8.2 8.2 10.25<br/>
+ <code> rotation</code> 0.0<br/>
+ <code>end</code><br/>
+ <code>The Teleporter object</code><br/>
+ Adds an object that places a tank at another teleporter in a different area when ran through. <code>teleporter</code> [name]<br/>
+ # the [name] tag is used for linkage<br/>
+ <code> name</code> example_teleporter<br/>
+ <code> position</code> 0.0 0.0 0.0<br/>
+ <code> size</code> 5.06 4.48 20.16<br/>
+ <code> rotation</code> 0.0<br/>
+ <code> border</code> 1.12<br/>
+ <code>end</code><br/>
+ <code>The Link object</code><br/>
+ Adds a route to teleport a tank between two teleporters. # Teleporter names are terminated with either :f (forward)<br/>
+ # or :b (backwards). The forwards link points to 0 degrees,<br/>
+ # and the backwards link points to 180. Links are made by<br/>
+ # pattern matching the teleporter names. The &#8216;*&#8217; and &#8216;?&#8217;<br/>
+ # globbing characters can be used to make multiple matches.<br/>
+ # If there are multiple matches for the &quot;to&quot; link, then the<br/>
+ # destination will be selected randomly between the matches.<br/>
+ # in-game.<br/>
+ # NOTE: bzfs -d -d -d -d will print the linkage table. <code>link</code><br/>
+ <code> name</code> example_link<br/>
+ # this will link all teleporters randomly to all other teleporters<br/>
+ <code> from</code> *<br/>
+ <code> to</code> *<br/>
+ <code>end</code><br/>
+ # or, to link between known teleporters examp_tele1(front) and examp_tele2(back) <code>link</code><br/>
+ <code> name</code> example_realLink<br/>
+ <code> from</code> examp_tele1:f<br/>
+ <code> to</code> examp_tele2:b<br/>
+ <code>end</code><br/>
+ <code>The Base object</code><br/>
+ Creates a team base where the corresponding team&#8217;s flag is stored. The oncap option will fire a world weapon of the specified type when the team flag for this base is captured. <code>base</code><br/>
+ <code> name</code> example_base<br/>
+ <code> position</code> 0.0 0.0 0.0<br/>
+ <code> size</code> 60.0 60.0 0.0<br/>
+ <code> rotation</code> 0.0<br/>
+ <code> color</code> 0<br/>
+ <code> oncap</code> V<br/>
+ <code>end</code><br/>
+ <code>The Weapon object</code><br/>
+ Creates a world weapon, or a weapon fired automatically by the world. The weapon can either be timed or be event driven. Timed weapons should use the initdelay and delay fields. Event driven weapons need to use the trigger option to define what the trigger event is. Valid trigger events are; OnCap, for flag capture events. OnSpawn, for player spawn events. OnDie, for player death events. If the weapon is to be triggered only for a specific team then the eventteam option should be used with a team number (1 to 4). A eventteam value of -1 will trigger this weapon for any team. -1 is the default eventteam value. <code>weapon</code><br/>
+ <code> name</code> example_weapon<br/>
+ <code> position</code> 0.0 0.0 0.0<br/>
+ <code> rotation</code> 0.0<br/>
+ <code> tilt</code> 0.0<br/>
+ <code> initdelay</code> 10.0<br/>
+ <code> delay</code> 10.0 3.0 5.0 3.0<br/>
+ <code> type</code> V<br/>
+ <code> trigger</code> flagcap<br/>
+ <code> eventteam</code> V<br/>
+ <code>end</code><br/>
+ <code>The Zone object</code><br/>
+ Specifies a certain range in the world, and what attributes that range has. <code>zone</code><br/>
+ <code> name</code> example_zone<br/>
+ <code> position</code> 0.0 0.0 0.0<br/>
+ <code> size</code> 1.0 1.0 1.0<br/>
+ <code> rotation</code> 0.0<br/>
+ # where players may spawn<br/>
+ <code> team</code> 0 1 2 3 4<br/>
+ # where flag may spawn<br/>
+ <code> flag</code> GM SW good bad<br/>
+ # dropped team flags will fly to the closest safety zone<br/>
+ <code> safety</code> 1 2 3 4<br/>
+ # attach a flag to this zone (always spawn in this zone)<br/>
+ <code> zoneflag</code> GM 3 # type, count (type can be a team flag, ex: R*)<br/>
  <code>end</code> </p>
 <h2>File Syntax</h2>
 <p>The symbol &#8216;?&#8217; means that the item is optional. </p>
@@ -675,7 +675,7 @@ description: "bzw – BZFlag world file format"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| (&quot;edge&quot; | &quot;bottom&quot;) material</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| obstacle</p>
 <dt><code>(CustomTetra.cxx/CustomTetra::read)</code></dt>
-<dd>Note: At most 4 vertices can be specified.<br />
+<dd>Note: At most 4 vertices can be specified.<br/>
  Note2: material will apply to all vertices when specified first, otherwise like &quot;normals&quot; and &quot;texcoords&quot; they apply to the previous vertex. </dd>
 <dt>tetra :=</dt>
 <dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &quot;vertex&quot; 3dpoint</dd>

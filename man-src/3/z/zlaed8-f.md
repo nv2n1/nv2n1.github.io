@@ -10,7 +10,7 @@ description: "zlaed8.f –"
 <p>zlaed8.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaed8</code> (K, N, QSIZ, Q, LDQ, D, RHO, CUTPNT, Z, DLAMDA, Q2, LDQ2, W, INDXP, INDX, INDXQ, PERM, GIVPTR, GIVCOL, GIVNUM, INFO)<br />
+<p>subroutine <code>zlaed8</code> (K, N, QSIZ, Q, LDQ, D, RHO, CUTPNT, Z, DLAMDA, Q2, LDQ2, W, INDXP, INDX, INDXQ, PERM, GIVPTR, GIVCOL, GIVNUM, INFO)<br/>
  <i></i><code>ZLAED8</code> used by sstedc. Merges eigenvalues and deflates secular equation. Used when the original matrix is dense.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaed8 (integerK, integerN, integerQSIZ, complex*16, dimension( ldq, * )Q, integerLDQ, double precision, dimension( * )D, double precisionRHO, integerCUTPNT, double precision, dimension( * )Z, double precision, dimension( * )DLAMDA, complex*16, dimension( ldq2, * )Q2, integerLDQ2, double precision, dimension( * )W, integer, dimension( * )INDXP, integer, dimension( * )INDX, integer, dimension( * )INDXQ, integer, dimension( * )PERM, integerGIVPTR, integer, dimension( 2, * )GIVCOL, double precision, dimension( 2, * )GIVNUM, integerINFO)</h3>

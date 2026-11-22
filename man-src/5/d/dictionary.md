@@ -19,26 +19,26 @@ description: "dictionary – RADIUS dictionary file"
 <p> The <i>name</i> field is a printable field, taken from various specifications or vendor definitions. It is most commonly used as a series of words, separated by hyphens. e.g. &quot;User-Name&quot;. Vendor-specific attributes (VSAs) are prefixed by the vendor name, e.g. &quot;Cisco-AVPair&quot;. The names should be globally unique, as they are used as a key to look up the properties of the attribute. </p>
 <p> The <i>oid</i> field is taken from the relevant specification for that name. In most cases, it is a decimal number, such as &quot;256&quot;. For certain attributes, a &quot;dotted number&quot; notation is used, e.g. &quot;1.2&quot;. The &quot;dotted number&quot; notation is used only for certain attributes. </p>
 <p> The <i>type</i> field can be one of the standard types: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>string&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>UTF-8 printable text&nbsp;<wbr>(the RFCs call this&nbsp;<wbr>&quot;text&quot;)<br />
-&nbsp;<wbr>&nbsp;<wbr>octets&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>opaque binary data&nbsp;<wbr>(the RFCs call this&nbsp;<wbr>&quot;string&quot;)<br />
-&nbsp;<wbr>&nbsp;<wbr>ipaddr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>IPv4 address<br />
-&nbsp;<wbr>&nbsp;<wbr>date&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Seconds since January 1, 1970&nbsp;<wbr>(32-bits)<br />
-&nbsp;<wbr>&nbsp;<wbr>integer&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>32-bit unsigned integer<br />
-&nbsp;<wbr>&nbsp;<wbr>ipv6addr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>IPv6 Address<br />
-&nbsp;<wbr>&nbsp;<wbr>ipv6prefix&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>IPV6 prefix, with mask<br />
-&nbsp;<wbr>&nbsp;<wbr>ifid&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Interface Id&nbsp;<wbr>(hex:hex:hex:hex)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>string&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>UTF-8 printable text&nbsp;<wbr>(the RFCs call this&nbsp;<wbr>&quot;text&quot;)<br/>
+&nbsp;<wbr>&nbsp;<wbr>octets&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>opaque binary data&nbsp;<wbr>(the RFCs call this&nbsp;<wbr>&quot;string&quot;)<br/>
+&nbsp;<wbr>&nbsp;<wbr>ipaddr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>IPv4 address<br/>
+&nbsp;<wbr>&nbsp;<wbr>date&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Seconds since January 1, 1970&nbsp;<wbr>(32-bits)<br/>
+&nbsp;<wbr>&nbsp;<wbr>integer&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>32-bit unsigned integer<br/>
+&nbsp;<wbr>&nbsp;<wbr>ipv6addr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>IPv6 Address<br/>
+&nbsp;<wbr>&nbsp;<wbr>ipv6prefix&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>IPV6 prefix, with mask<br/>
+&nbsp;<wbr>&nbsp;<wbr>ifid&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Interface Id&nbsp;<wbr>(hex:hex:hex:hex)<br/>
 &nbsp;<wbr>&nbsp;<wbr>integer64<tt>&nbsp;<wbr>&nbsp;<wbr></tt>&nbsp;<wbr>&nbsp;<wbr>64-bit unsigned integer</p>
 <p> The <i>type</i> field can be one of the following non-standard types: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>ether&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Ethernet MAC address<br />
-&nbsp;<wbr>&nbsp;<wbr>abinary&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Ascend binary filter format<br />
-&nbsp;<wbr>&nbsp;<wbr>byte&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>8-bit unsigned integer<br />
-&nbsp;<wbr>&nbsp;<wbr>short&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16-bit unsigned integer<br />
-&nbsp;<wbr>&nbsp;<wbr>signed&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>31-bit signed integer&nbsp;<wbr>(packed into 32-bit field)<br />
-&nbsp;<wbr>&nbsp;<wbr>tlv&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Type-Length-Value&nbsp;<wbr>(allows nested attributes)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>ether&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Ethernet MAC address<br/>
+&nbsp;<wbr>&nbsp;<wbr>abinary&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Ascend binary filter format<br/>
+&nbsp;<wbr>&nbsp;<wbr>byte&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>8-bit unsigned integer<br/>
+&nbsp;<wbr>&nbsp;<wbr>short&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16-bit unsigned integer<br/>
+&nbsp;<wbr>&nbsp;<wbr>signed&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>31-bit signed integer&nbsp;<wbr>(packed into 32-bit field)<br/>
+&nbsp;<wbr>&nbsp;<wbr>tlv&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Type-Length-Value&nbsp;<wbr>(allows nested attributes)<br/>
 &nbsp;<wbr>&nbsp;<wbr>ipv4prefix&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>IPv4 Prefix as given in RFC 6572. </p>
 <p> The last (optional) field of an attribute definition are additional flags for that attribute, in a comma-separated list. Previous versions of the server allowed these flags to include a vendor name. This behavior may still work, but it is deprecated, and is not recommended. </p>
 <p> The options are: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>encrypt=#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>set encryption type 1, 2, or 3.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>encrypt=#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>set encryption type 1, 2, or 3.<br/>
 &nbsp;<wbr>&nbsp;<wbr>has_tag&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The attribute can have an RFC 2868 style tag </p>
 <p> The &quot;encrypt&quot; flag marks the attribute as being encrypted with one of three possible methods. &quot;1&quot; means that the attribute is encrypted with the method as defined in <i>RFC2865</i> for the User-Password attribute. &quot;2&quot; means that the password is encrypted with the method as defined in <i>RFC2868</i> for the Tunnel-Password attribute. &quot;3&quot; means that the attribute is encrypted as per Ascend&#8217;s definitions for the Ascend-Send-Secret attribute. </p>
 <p> The &quot;has_tag&quot; flag marks the attribute as being permitted to have a tag, as defined in <i>RFC2868</i>. The purpose of the tag is to allow grouping of attributes for tunneled users. See <i>RFC2868</i> for more details. </p>

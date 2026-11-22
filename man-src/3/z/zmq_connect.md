@@ -25,10 +25,10 @@ description: "zmq_connect – create outgoing connection from socket"
 <dd>reliable multicast transport using PGM, see <code><a href="/docs/linux/man/7-zmq_pgm/">zmq_pgm</a></code>(7)</dd></dl>
 <p> Every 0MQ socket type except <i>ZMQ_PAIR</i> supports one-to-many and many-to-one semantics. The precise semantics depend on the socket type and are defined in <code><a href="/docs/linux/man/3-zmq_socket/">zmq_socket</a></code>(3).</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  for most transports and socket types the connection is not performed immediately but as needed by 0MQ. Thus a successful call to <i>zmq_connect()</i> does not mean that the connection was or could actually be established. Because of this, for most transports and socket types the order in which a <i>server</i> socket is bound and a <i>client</i> socket is connected to it does not matter. The first exception is when using the inproc:// transport: you must call <i>zmq_bind()</i> before calling <i>zmq_connect()</i>. The second exception are <i>ZMQ_PAIR</i> sockets, which do not automatically reconnect to endpoints. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  following a <i>zmq_connect()</i>, for socket types except for ZMQ_ROUTER, the socket enters its normal <i>ready</i> state. By contrast, following a <i>zmq_bind()</i> alone, the socket enters a <i>mute</i> state in which the socket blocks or drops messages according to the socket type, as defined in <code><a href="/docs/linux/man/3-zmq_socket/">zmq_socket</a></code>(3). A ZMQ_ROUTER socket enters its normal <i>ready</i> state for a specific peer only when handshaking is complete for that peer, which may take an arbitrary time. </dd>
 <h2>Return Value</h2>
 <p>The <i>zmq_connect()</i> function returns zero if successful. Otherwise it returns -1 and sets <i>errno</i> to one of the values defined below.</p>

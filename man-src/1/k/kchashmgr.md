@@ -82,27 +82,27 @@ description: "kchashmgr – command line interface to manage the file hash datab
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-otr</code> : opens the database with the truncation option.<br />
- <code>-onl</code> : opens the database with the no locking option.<br />
- <code>-otl</code> : opens the database with the try locking option.<br />
- <code>-onr</code> : opens the database with the no auto repair option.<br />
- <code>-apow </code><i>num</i> : specifies the power of the alignment of record size.<br />
- <code>-fpow </code><i>num</i> : specifies the power of the capacity of the free block pool.<br />
- <code>-ts</code> : tunes the database with the small option.<br />
- <code>-tl</code> : tunes the database with the linear option.<br />
- <code>-tc</code> : tunes the database with the compression option.<br />
- <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.<br />
- <code>-st</code> : prints miscellaneous information.<br />
- <code>-add</code> : performs adding operation.<br />
- <code>-app</code> : performs appending operation.<br />
- <code>-rep</code> : performs replacing operation.<br />
- <code>-inci</code> : performs integer increment operation.<br />
- <code>-incd</code> : performs real number increment operation.<br />
- <code>-sx</code> : the input data is evaluated as a hexadecimal data string.<br />
- <code>-rm</code> : removes the record.<br />
- <code>-px</code> : the output data is converted into a hexadecimal data string.<br />
- <code>-pz</code> : does not append line feed at the end of the output.<br />
- <code>-max </code><i>num</i> : specifies the maximum number of shown records.<br />
+</dt><dd> <code>-otr</code> : opens the database with the truncation option.<br/>
+ <code>-onl</code> : opens the database with the no locking option.<br/>
+ <code>-otl</code> : opens the database with the try locking option.<br/>
+ <code>-onr</code> : opens the database with the no auto repair option.<br/>
+ <code>-apow </code><i>num</i> : specifies the power of the alignment of record size.<br/>
+ <code>-fpow </code><i>num</i> : specifies the power of the capacity of the free block pool.<br/>
+ <code>-ts</code> : tunes the database with the small option.<br/>
+ <code>-tl</code> : tunes the database with the linear option.<br/>
+ <code>-tc</code> : tunes the database with the compression option.<br/>
+ <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.<br/>
+ <code>-st</code> : prints miscellaneous information.<br/>
+ <code>-add</code> : performs adding operation.<br/>
+ <code>-app</code> : performs appending operation.<br/>
+ <code>-rep</code> : performs replacing operation.<br/>
+ <code>-inci</code> : performs integer increment operation.<br/>
+ <code>-incd</code> : performs real number increment operation.<br/>
+ <code>-sx</code> : the input data is evaluated as a hexadecimal data string.<br/>
+ <code>-rm</code> : removes the record.<br/>
+ <code>-px</code> : the output data is converted into a hexadecimal data string.<br/>
+ <code>-pz</code> : does not append line feed at the end of the output.<br/>
+ <code>-max </code><i>num</i> : specifies the maximum number of shown records.<br/>
  <code>-pv</code> : prints values of records also.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

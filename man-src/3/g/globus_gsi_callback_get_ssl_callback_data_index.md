@@ -9,17 +9,17 @@ description: "Callback Functions –"
 
 <p>Callback Functions &#8211; </p>
 <h3>Functions</h3>
-<p>globus_result_t <code>globus_gsi_callback_get_X509_STORE_callback_data_index</code> (int *index)<br />
- <i>Get callback data index from X509_STORE. </i><br />
- globus_result_t <code>globus_gsi_callback_get_SSL_callback_data_index</code> (int *index)<br />
- <i>Get callback data index from SSL structure. </i><br />
- int <code>globus_gsi_callback_X509_verify_cert</code> (X509_STORE_CTX *context, void *arg)<br />
- <i>Certificate verify wrapper. </i><br />
- int <code>globus_gsi_callback_create_proxy_callback</code> (int preverify_ok, X509_STORE_CTX *x509_context)<br />
- <i>Independent path validation callback. </i><br />
- int <code>globus_gsi_callback_handshake_callback</code> (int preverify_ok, X509_STORE_CTX *x509_context)<br />
- <i>SSL path validation callback. </i><br />
- int <code>globus_gsi_callback_check_issued</code> (X509_STORE_CTX *context, X509 *cert, X509 *issuer)<br />
+<p>globus_result_t <code>globus_gsi_callback_get_X509_STORE_callback_data_index</code> (int *index)<br/>
+ <i>Get callback data index from X509_STORE. </i><br/>
+ globus_result_t <code>globus_gsi_callback_get_SSL_callback_data_index</code> (int *index)<br/>
+ <i>Get callback data index from SSL structure. </i><br/>
+ int <code>globus_gsi_callback_X509_verify_cert</code> (X509_STORE_CTX *context, void *arg)<br/>
+ <i>Certificate verify wrapper. </i><br/>
+ int <code>globus_gsi_callback_create_proxy_callback</code> (int preverify_ok, X509_STORE_CTX *x509_context)<br/>
+ <i>Independent path validation callback. </i><br/>
+ int <code>globus_gsi_callback_handshake_callback</code> (int preverify_ok, X509_STORE_CTX *x509_context)<br/>
+ <i>SSL path validation callback. </i><br/>
+ int <code>globus_gsi_callback_check_issued</code> (X509_STORE_CTX *context, X509 *cert, X509 *issuer)<br/>
  <i>OpenSSL X509_check_issued() wrapper. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that plug into various plug points in the OpenSSL path validation mechanism. These functions add CRL checking, X509 Extension handling and proxy validation.</p>
@@ -28,8 +28,8 @@ description: "Callback Functions –"
 <p>OpenSSL X509_check_issued() wrapper. This function wraps the OpenSSL X509_check_issued() call and catches the error caused by the fact that a proxy certificate issuer may not have to have the correct KeyUsage fields set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The validation state object.<br />
- <i>cert</i> The certificate to check<br />
+<dd><i>context</i> The validation state object.<br/>
+ <i>cert</i> The certificate to check<br/>
  <i>issuer</i> The issuer certificate to check</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -38,7 +38,7 @@ description: "Callback Functions –"
 <p>Independent path validation callback. This function provides a path validation callback for validation outside of a SSL session. It should be used in X509_STORE_set_verify_cb_func(). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>preverify_ok</i> Communicates the result of default validation steps performed by OpenSSL<br />
+<dd><i>preverify_ok</i> Communicates the result of default validation steps performed by OpenSSL<br/>
  <i>x509_context</i> The validation state object</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -63,7 +63,7 @@ description: "Callback Functions –"
 <p>SSL path validation callback. This function provides a path validation callback for the validation part of establishing a SSL session. It handles proxy certificates, X509 Extensions and CRL checking. It should be used in SSL_CTX_set_verify(). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>preverify_ok</i> Communicates the result of default validation steps performed by OpenSSL<br />
+<dd><i>preverify_ok</i> Communicates the result of default validation steps performed by OpenSSL<br/>
  <i>x509_context</i> The validation state object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -72,7 +72,7 @@ description: "Callback Functions –"
 <p>Certificate verify wrapper. This function wraps the OpenSSL certificate verification callback for the purpose of a replacing the standard issuer check with one that deals with proxy certificates. Should be used with SSL_CTX_set_cert_verify_callback() </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The X509_STORE_CTX for which to register the callback.<br />
+<dd><i>context</i> The X509_STORE_CTX for which to register the callback.<br/>
  <i>arg</i> Arguments to the callback. Currently ignored.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

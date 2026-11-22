@@ -9,12 +9,12 @@ description: "arptables – ARP table administration"
 
 <p>arptables &#8211; ARP table administration</p>
 <h2>Synopsis</h2>
-<p><code>arptables </code>[<code>-t table</code>]<code> &#8211;</code>[<code>AD</code>]<code> chain rule-specification </code>[<code>options</code>]<br />
- <code>arptables </code>[<code>-t table</code>]<code> &#8211;</code>[<code>RI</code>]<code> chain rulenum rule-specification </code>[<code>options</code>]<br />
- <code>arptables </code>[<code>-t table</code>]<code> -D chain rulenum </code>[<code>options</code>]<br />
- <code>arptables </code>[<code>-t table</code>]<code> &#8211;</code>[<code>LFZ</code>][<code>chain</code>][<code>options</code>]<br />
- <code>arptables </code>[<code>-t table</code>]<code> &#8211;</code>[<code>NX</code>]<code> chain</code><br />
- <code>arptables </code>[<code>-t table</code>]<code> -E old-chain-name new-chain-name</code><br />
+<p><code>arptables </code>[<code>-t table</code>]<code> &#8211;</code>[<code>AD</code>]<code> chain rule-specification </code>[<code>options</code>]<br/>
+ <code>arptables </code>[<code>-t table</code>]<code> &#8211;</code>[<code>RI</code>]<code> chain rulenum rule-specification </code>[<code>options</code>]<br/>
+ <code>arptables </code>[<code>-t table</code>]<code> -D chain rulenum </code>[<code>options</code>]<br/>
+ <code>arptables </code>[<code>-t table</code>]<code> &#8211;</code>[<code>LFZ</code>][<code>chain</code>][<code>options</code>]<br/>
+ <code>arptables </code>[<code>-t table</code>]<code> &#8211;</code>[<code>NX</code>]<code> chain</code><br/>
+ <code>arptables </code>[<code>-t table</code>]<code> -E old-chain-name new-chain-name</code><br/>
  <code>arptables </code>[<code>-t table</code>]<code> -P chain target </code>[<code>options</code>]</p>
 <h2>Description</h2>
 <p><code>arptables</code> is a user space tool, it is used to set up and maintain the tables of ARP rules in the Linux kernel. These rules inspect the ARP frames which they see. <code>arptables</code> is analogous to the <code>iptables</code> user space tool, but <code>arptables</code> is less complicated.</p>

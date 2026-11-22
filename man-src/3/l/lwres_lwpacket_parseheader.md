@@ -97,5 +97,5 @@ struct lwres_lwpacket {
 <h2>RETURN VALUES</h2>
 <p> Successful calls to <code>lwres_lwpacket_renderheader()</code> and <code>lwres_lwpacket_parseheader()</code> return <code>LWRES_R_SUCCESS</code>. If there is insufficient space to copy data between the buffer <i>*b</i> and lightweight resolver packet <i>*pkt</i> both functions return <code>LWRES_R_UNEXPECTEDEND</code>.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001 Internet Software Consortium. </p>

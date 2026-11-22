@@ -39,7 +39,7 @@ description: "rsnapshot – remote filesystem snapshot utility"
 <p> <code>include_conf</code> Include another file in the configuration at this point. </p>
 <dl>
 <dt>
-</dt><dd> This is recursive, but you may need to be careful about paths when specifying which file to include. We check to see if the file you have specified is readable, and will yell an error if it isn&#8217;t. We recommend using a full path. As a special case, include_conf&#8217;s value may be enclosed in `backticks` in which case it will be executed and whatever it spits to <font SIZE="-1">STDOUT</font> will be included in the configuration. Note that shell meta-characters may be interpreted.</dd></dl>
+</dt><dd> This is recursive, but you may need to be careful about paths when specifying which file to include. We check to see if the file you have specified is readable, and will yell an error if it isn&#8217;t. We recommend using a full path. As a special case, include_conf&#8217;s value may be enclosed in `backticks` in which case it will be executed and whatever it spits to STDOUT will be included in the configuration. Note that shell meta-characters may be interpreted.</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -47,11 +47,11 @@ description: "rsnapshot – remote filesystem snapshot utility"
 <p> <code>no_create_root</code> If set to 1, rsnapshot won&#8217;t create snapshot_root directory </p>
 <p> <code>cmd_rsync</code> Full path to rsync (required) </p>
 <p> <code>cmd_ssh</code> Full path to ssh (optional) </p>
-<p> <code>cmd_cp</code> Full path to cp (optional, but must be <font SIZE="-1">GNU</font> version) </p>
+<p> <code>cmd_cp</code> Full path to cp (optional, but must be GNU version) </p>
 </dd><dl>
 <dt>
-</dt><dd> If you are using Linux, you should uncomment cmd_cp. If you are using a platform which does not have <font SIZE="-1">GNU</font> cp, you should leave cmd_cp commented out. </dd>
-<p> With <font SIZE="-1">GNU</font> cp, rsnapshot can take care of both normal files and special files (such as FIFOs, sockets, and block/character devices) in one pass. </p>
+</dt><dd> If you are using Linux, you should uncomment cmd_cp. If you are using a platform which does not have GNU cp, you should leave cmd_cp commented out. </dd>
+<p> With GNU cp, rsnapshot can take care of both normal files and special files (such as FIFOs, sockets, and block/character devices) in one pass. </p>
 <p> If cmd_cp is disabled, rsnapshot will use its own built-in function, <i>native_cp_al()</i> to backup up regular files and directories. This will then be followed up by a separate call to rsync, to move the special files over (assuming there are any).</dl>
 </dl>
 <dl>
@@ -83,7 +83,7 @@ description: "rsnapshot – remote filesystem snapshot utility"
 <p> <code>linux_lvm_cmd_umount</code> </p>
 </dd><dl>
 <dt>
-</dt><dd> Paths to lvcreate, lvremove, mount and umount commands, for use with Linux LVMs. You may include options to the commands also. The lvcreate, lvremove, mount and umount commands are required for managing snapshots of <font SIZE="-1">LVM</font> volumes and are otherwise optional.</dd></dl>
+</dt><dd> Paths to lvcreate, lvremove, mount and umount commands, for use with Linux LVMs. You may include options to the commands also. The lvcreate, lvremove, mount and umount commands are required for managing snapshots of LVM volumes and are otherwise optional.</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -120,7 +120,7 @@ description: "rsnapshot – remote filesystem snapshot utility"
 <p> <code>link_dest 1</code> </p>
 </dd><dl>
 <dt>
-</dt><dd> If your version of rsync supports &#8211;link-dest (2.5.7 or newer), you can enable this to let rsync handle some things that <font SIZE="-1">GNU</font> cp or the built-in subroutines would otherwise do. Enabling this makes rsnapshot take a slightly more complicated code branch, but it&#8217;s the best way to support special files on non-Linux systems.</dd></dl>
+</dt><dd> If your version of rsync supports &#8211;link-dest (2.5.7 or newer), you can enable this to let rsync handle some things that GNU cp or the built-in subroutines would otherwise do. Enabling this makes rsnapshot take a slightly more complicated code branch, but it&#8217;s the best way to support special files on non-Linux systems.</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -210,7 +210,7 @@ description: "rsnapshot – remote filesystem snapshot utility"
 <p> <code>rsync_long_args &#8211;delete &#8211;numeric-ids &#8211;relative &#8211;delete-excluded</code> </p>
 </dd><dl>
 <dt>
-</dt><dd> List of long arguments to pass to rsync. The default values are<br />
+</dt><dd> List of long arguments to pass to rsync. The default values are<br/>
 &nbsp;<wbr>&#8211;delete &#8211;numeric-ids &#8211;relative &#8211;delete-excluded This means that the directory structure in each backup point destination will match that in the backup point source. </dd>
 <p> Quotes are permitted in rsync_long_args, eg &#8211;rsync-path=&#8220;sudo /usr/bin/rsync&#8221;. You may use either single (&#8216;) or double (&quot;) quotes, but nested quotes (including mixed nested quotes) are not permitted. Similar quoting is also allowed in per-backup-point rsync_long_args.</dl>
 </dl>
@@ -228,7 +228,7 @@ description: "rsnapshot – remote filesystem snapshot utility"
 <p> <code>du_args -csh</code> </p>
 </dd><dl>
 <dt>
-</dt><dd> Arguments to be passed to du. If not specified, the default is -csh. <font SIZE="-1">GNU</font> du supports -csh, <font SIZE="-1">BSD</font> du supports -csk, Solaris du doesn&#8217;t support -c at all. The <font SIZE="-1">GNU</font> version is recommended, since it offers the most features.</dd></dl>
+</dt><dd> Arguments to be passed to du. If not specified, the default is -csh. GNU du supports -csh, BSD du supports -csk, Solaris du doesn&#8217;t support -c at all. The GNU version is recommended, since it offers the most features.</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -238,7 +238,7 @@ description: "rsnapshot – remote filesystem snapshot utility"
 </dd><dl>
 <dt>
 </dt><dd> Lockfile to use when rsnapshot is run. This prevents a second invocation from clobbering the first one. If not specified, no lock file is used. Make sure to use a directory that is not world writeable for security reasons. Use of a lock file is strongly recommended. </dd>
-<p> If a lockfile exists when rsnapshot starts, it will try to read the file and stop with an error if it can&#8217;t. If it *can* read the file, it sees if a process exists with the <font SIZE="-1">PID</font> noted in the file. If it does, rsnapshot stops with an error message. If there is no process with that <font SIZE="-1">PID,</font> then we assume that the lockfile is stale and ignore it *unless* stop_on_stale_lockfile is set to 1 in which case we stop. </p>
+<p> If a lockfile exists when rsnapshot starts, it will try to read the file and stop with an error if it can&#8217;t. If it *can* read the file, it sees if a process exists with the PID noted in the file. If it does, rsnapshot stops with an error message. If there is no process with that PID, then we assume that the lockfile is stale and ignore it *unless* stop_on_stale_lockfile is set to 1 in which case we stop. </p>
 <p> stop_on_stale_lockfile defaults to 0.</dl>
 </dl>
 <dl>
@@ -265,7 +265,7 @@ description: "rsnapshot – remote filesystem snapshot utility"
 <p> <code>linux_lvm_snapshotsize 2G</code> </p>
 </dd><dl>
 <dt>
-</dt><dd> <font SIZE="-1">LVM</font> snapshot(s) size (lvcreate &#8211;size option).</dd></dl>
+</dt><dd> LVM snapshot(s) size (lvcreate &#8211;size option).</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -273,7 +273,7 @@ description: "rsnapshot – remote filesystem snapshot utility"
 <p> <code>linux_lvm_snapshotname rsnapshot</code> </p>
 </dd><dl>
 <dt>
-</dt><dd> Name to be used when creating the <font SIZE="-1">LVM</font> logical volume snapshot(s) (lvcreate &#8211;name option).</dd></dl>
+</dt><dd> Name to be used when creating the LVM logical volume snapshot(s) (lvcreate &#8211;name option).</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -281,7 +281,7 @@ description: "rsnapshot – remote filesystem snapshot utility"
 <p> <code>linux_lvm_vgpath<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/dev</code></p>
 </dd><dl>
 <dt>
-</dt><dd> Path to the <font SIZE="-1">LVM</font> Volume Groups.</dd></dl>
+</dt><dd> Path to the LVM Volume Groups.</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -365,7 +365,7 @@ description: "rsnapshot – remote filesystem snapshot utility"
 <p> <code>backup <a href="lvm://vg0/home/path2/">lvm://vg0/home/path2/</a> lvm-vg0/</code> </p>
 </dd><dl>
 <dt>
-</dt><dd> Backs up the <font SIZE="-1">LVM</font> logical volume called home, of volume group vg0, to &lt;snapshot_root&gt;/&lt;interval&gt;.0/lvm-vg0/. Will create, mount, backup, unmount and remove an <font SIZE="-1">LVM</font> snapshot for each lvm:// entry.</dd></dl>
+</dt><dd> Backs up the LVM logical volume called home, of volume group vg0, to &lt;snapshot_root&gt;/&lt;interval&gt;.0/lvm-vg0/. Will create, mount, backup, unmount and remove an LVM snapshot for each lvm:// entry.</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -453,12 +453,12 @@ config_version 1.2 snapshot_root /.snapshots /
 <dl>
 <dt>
 </dt><dd> <code>rsnapshot du</code></dd></dl>
-<p> This will show you exactly how much disk space is taken up in the snapshot root. This feature requires the <font SIZE="-1">UNIX </font><code>du</code> command to be installed on your system, for it to support the &#8220;-csh&#8221; command line arguments, and to be in your path. You can also override your path settings and the flags passed to du using the cmd_du and du_args parameters. </p>
+<p> This will show you exactly how much disk space is taken up in the snapshot root. This feature requires the UNIX <code>du</code> command to be installed on your system, for it to support the &#8220;-csh&#8221; command line arguments, and to be in your path. You can also override your path settings and the flags passed to du using the cmd_du and du_args parameters. </p>
 <p> It is also possible to pass a relative file path as a second argument, to get a report on a particular file or subdirectory. </p>
 <dl>
 <dt>
 </dt><dd> <code>rsnapshot du localhost/home/</code></dd></dl>
-<p> The <font SIZE="-1">GNU</font> version of &#8220;du&#8221; is preferred. The <font SIZE="-1">BSD</font> version works well also, but does not support the -h flag (use -k instead, to see the totals in kilobytes). Other versions of &#8220;du&#8221;, such as Solaris, may not work at all. </p>
+<p> The GNU version of &#8220;du&#8221; is preferred. The BSD version works well also, but does not support the -h flag (use -k instead, to see the totals in kilobytes). Other versions of &#8220;du&#8221;, such as Solaris, may not work at all. </p>
 <p> To check the differences between two directories, call rsnapshot with the &#8220;diff&#8221; argument, followed by two backup levels or directory paths. </p>
 <p> For example: </p>
 <dl>
@@ -494,7 +494,7 @@ config_version 1.2 snapshot_root /.snapshots /
 <dl>
 <dt>
 </dt><dd>
-<p> This command will only sync the files that normally get backed up into example.com. It will <font SIZE="-1">NOT</font> get any other backup points with slightly different values (like example.com/etc/, for example). In order to sync example.com/etc, you would need to run rsnapshot again, using example.com/etc as the optional parameter.</dd></dl>
+<p> This command will only sync the files that normally get backed up into example.com. It will NOT get any other backup points with slightly different values (like example.com/etc/, for example). In order to sync example.com/etc, you would need to run rsnapshot again, using example.com/etc as the optional parameter.</dd></dl>
 <p> <code>rsnapshot configtest</code> </p>
 <dl>
 <dt>
@@ -511,7 +511,7 @@ config_version 1.2 snapshot_root /.snapshots /
 <p> <i><a href="/docs/linux/man/1-rsync/">rsync</a></i>(1), <i><a href="/docs/linux/man/1-ssh/">ssh</a></i>(1), <i><a href="/docs/linux/man/1-logger/">logger</a></i>(1), <i>sshd</i>(1), <i><a href="/docs/linux/man/1-ssh-keygen/">ssh-keygen</a></i>(1), <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i><a href="/docs/linux/man/1-cp/">cp</a></i>(1), <i><a href="/docs/linux/man/1-du/">du</a></i>(1), <i><a href="/docs/linux/man/1-crontab/">crontab</a></i>(1)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Use the <code>-t</code> flag to see what commands would have been executed. This will show you the commands rsnapshot would try to run. There are a few minor differences (for example, not showing an attempt to remove the lockfile because it wasn&#8217;t really created in the test), but should give you a very good idea what will happen. </p>
-<p> Using the <code>-v</code>, <code>-V</code>, and <code>-D</code> flags will print increasingly more information to <font SIZE="-1">STDOUT.</font> </p>
+<p> Using the <code>-v</code>, <code>-V</code>, and <code>-D</code> flags will print increasingly more information to STDOUT. </p>
 <p> Make sure you don&#8217;t have spaces in the config file that you think are actually tabs. </p>
 <p> Much other weird behavior can probably be attributed to plain old file system permissions and ssh authentication issues.</p>
 <h2>BUGS</h2>
@@ -528,12 +528,12 @@ config_version 1.2 snapshot_root /.snapshots /
 <dt>
 </dt><dd> drwx&#8212;&#8212; /.private </dd>
 <p> drwxr-xr-x /.private/.snapshots</dl>
-<p> Export the /.private/.snapshots directory over read-only <font SIZE="-1">NFS,</font> a read-only Samba share, etc. </p>
-<p> See the rsnapshot <font SIZE="-1">HOWTO</font> for more information on making backups accessible to non-privileged users. </p>
-<p> For ssh to work unattended through cron, you will probably want to use public key logins. Create an ssh key with no passphrase for root, and install the public key on each machine you want to backup. If you are backing up system files from remote machines, this probably means unattended root logins. Another possibility is to create a second user on the machine just for backups. Give the user a different name such as &#8220;rsnapshot&#8221;, but keep the <font SIZE="-1">UID</font> and <font SIZE="-1">GID</font> set to 0, to give root privileges. However, make logins more restrictive, either through ssh configuration, or using an alternate shell. </p>
-<p> <font SIZE="-1">BE CAREFUL</font>! If the private key is obtained by an attacker, they will have free run of all the systems involved. If you are unclear on how to do this, see <a href="/docs/linux/man/1-ssh/">ssh</a><code>(1)</code>, sshd<code>(1)</code>, and <a href="/docs/linux/man/1-ssh-keygen/">ssh-keygen</a><code>(1)</code>. </p>
+<p> Export the /.private/.snapshots directory over read-only NFS, a read-only Samba share, etc. </p>
+<p> See the rsnapshot HOWTO for more information on making backups accessible to non-privileged users. </p>
+<p> For ssh to work unattended through cron, you will probably want to use public key logins. Create an ssh key with no passphrase for root, and install the public key on each machine you want to backup. If you are backing up system files from remote machines, this probably means unattended root logins. Another possibility is to create a second user on the machine just for backups. Give the user a different name such as &#8220;rsnapshot&#8221;, but keep the UID and GID set to 0, to give root privileges. However, make logins more restrictive, either through ssh configuration, or using an alternate shell. </p>
+<p> BE CAREFUL! If the private key is obtained by an attacker, they will have free run of all the systems involved. If you are unclear on how to do this, see <a href="/docs/linux/man/1-ssh/">ssh</a><code>(1)</code>, sshd<code>(1)</code>, and <a href="/docs/linux/man/1-ssh-keygen/">ssh-keygen</a><code>(1)</code>. </p>
 <p> Backup scripts are run as the same user that rsnapshot is running as. Typically this is root. Make sure that all of your backup scripts are only writable by root, and that they don&#8217;t call any other programs that aren&#8217;t owned by root. If you fail to do this, anyone who can write to the backup script or any program it calls can fully take over the machine. Of course, this is not a situation unique to rsnapshot. </p>
-<p> By default, rsync transfers are done using the &#8211;numeric-ids option. This means that user names and group names are ignored during transfers, but the <font SIZE="-1">UID/GID</font> information is kept intact. The assumption is that the backups will be restored in the same environment they came from. Without this option, restoring backups for multiple heterogeneous servers would be unmanageable. If you are archiving snapshots with <font SIZE="-1">GNU</font> tar, you may want to use the &#8211;numeric-owner parameter. Also, keep a copy of the archived system&#8217;s /etc/passwd and /etc/group files handy for the <font SIZE="-1">UID/GID</font> to name mapping. </p>
+<p> By default, rsync transfers are done using the &#8211;numeric-ids option. This means that user names and group names are ignored during transfers, but the UID/GID information is kept intact. The assumption is that the backups will be restored in the same environment they came from. Without this option, restoring backups for multiple heterogeneous servers would be unmanageable. If you are archiving snapshots with GNU tar, you may want to use the &#8211;numeric-owner parameter. Also, keep a copy of the archived system&#8217;s /etc/passwd and /etc/group files handy for the UID/GID to name mapping. </p>
 <p> If you remove backup points in the config file, the previously archived files under those points will permanently stay in the snapshots directory unless you remove the files yourself. If you want to conserve disk space, you will need to go into the &lt;snapshot_root&gt; directory and manually remove the files from the smallest backup level&#8217;s &#8220;.0&#8221; directory. </p>
 <p> For example, if you were previously backing up /home/ with a destination of localhost/, and alpha is your smallest backup level, you would need to do the following to reclaim that disk space: </p>
 <dl>
@@ -573,7 +573,7 @@ config_version 1.2 snapshot_root /.snapshots /
 <dd></dd></dl>
 <p> Carl Wilhelm Soderstrom <code>(chrome [at] real-time.com)</code></p>
 <dl>
-<dt>&#8211; Created the <font SIZE="-1">RPM </font>.spec file which allowed the <font SIZE="-1">RPM</font> package to be built, among other things.</dt>
+<dt>&#8211; Created the RPM .spec file which allowed the RPM package to be built, among other things.</dt>
 <dd></dd></dl>
 <p> Ted Zlatanov (<code>tzz [at] lifelogs.com</code>)</p>
 <dl>
@@ -654,11 +654,11 @@ config_version 1.2 snapshot_root /.snapshots /
 <p> Ben Low (<code>ben [at] bdlow.net</code>) </p>
 <dl>
 <dt>
-</dt><dd> Linux <font SIZE="-1">LVM</font> snapshot support</dd></dl>
+</dt><dd> Linux LVM snapshot support</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2003-2005 Nathan Rosenquist </p>
 <p> Portions Copyright (C) 2002-2007 Mike Rubel, Carl Wilhelm Soderstrom, Ted Zlatanov, Carl Boe, Shane Liebling, Bharat Mediratta, Peter Palfrader, Nicolas Kaiser, David Cantrell, Chris Petersen, Robert Jackson, Justin Grote, David Keegel, Alan Batie, Dieter Bloms, Henning Moll, Ben Low, Anthony Ettinger </p>
-<p> This man page is distributed under the same license as rsnapshot: the <font SIZE="-1">GPL </font>(see below). </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA</font> </p>
+<p> This man page is distributed under the same license as rsnapshot: the GPL (see below). </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA </p>

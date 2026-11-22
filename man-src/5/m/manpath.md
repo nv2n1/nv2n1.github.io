@@ -56,5 +56,5 @@ description: "manpath – format of the /etc/manpath.config file"
 <dt><code>NOCACHE</code></dt>
 <dd>This flag prevents <code><a href="/docs/linux/man/1-man/">man</a></code>(1) from creating cat pages automatically.</dd></dl>
 <h2>Bugs</h2>
-<p>Unless the rules above are followed and observed precisely, the manual pager utilities will not function as desired. The rules are overly complicated. <a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br />
+<p>Unless the rules above are followed and observed precisely, the manual pager utilities will not function as desired. The rules are overly complicated. <a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br/>
  <a rel="nofollow" href="https://savannah.nongnu.org/bugs/?group=man-db">https://savannah.nongnu.org/bugs/?group=man-db</a> </p>

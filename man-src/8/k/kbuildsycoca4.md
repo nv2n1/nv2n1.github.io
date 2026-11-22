@@ -75,7 +75,7 @@ description: "kbuildsycoca4 – Rebuilds the system configuration cache."
 <h2>See Also</h2>
 <p>kdeinit4</p>
 <h2>Bugs</h2>
-<p>There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[]<font SIZE="-2">[1]</font> to report them.</p>
+<p>There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[][1] to report them.</p>
 <h2>Author</h2>
 <p><code>Darian Lanx</code> &lt;content [at] openprojects.net&gt;</p>
 <dl>

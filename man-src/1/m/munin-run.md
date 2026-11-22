@@ -28,9 +28,9 @@ description: "munin-run – A program to run Munin plugins from the command line
 <dt><code>&#8211;help </code></dt>
 <dd> View this help message.</dd>
 <dt><code>&#8211;debug </code></dt>
-<dd> Print debug messages. Debug messages are sent to <font SIZE="-1">STDOUT</font> and are prefixed with &#8220;#&#8221; (this makes it easier for other parts of munin to use munin-run and still have &#8211;debug on). Only errors go to <font SIZE="-1">STDERR.</font></dd>
+<dd> Print debug messages. Debug messages are sent to STDOUT and are prefixed with &#8220;#&#8221; (this makes it easier for other parts of munin to use munin-run and still have &#8211;debug on). Only errors go to STDERR.</dd>
 <dt><code>&#8211;pidebug </code></dt>
-<dd> Plugin debug. Sets the environment variable <font SIZE="-1">MUNIN_DEBUG</font> to 1 so that plugins may enable debugging. [disabled]</dd>
+<dd> Plugin debug. Sets the environment variable MUNIN_DEBUG to 1 so that plugins may enable debugging. [disabled]</dd>
 <dt><code>&#8211;version </code></dt>
 <dd> Show version information.</dd></dl>
 <h2>FILES</h2>
@@ -49,6 +49,6 @@ description: "munin-run – A program to run Munin plugins from the command line
 <h2>BUGS</h2>
 <p> Please see &lt;<a rel="nofollow" href="http://munin-monitoring.org/report/1">http://munin-monitoring.org/report/1</a>&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2002-2009 Audun Ytterdal, Jimmy Olsen, Tore Anderson, Nicolai Langfeldt / Linpro <font SIZE="-1">AS.</font> </p>
-<p> This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> </p>
-<p> This program is released under the <font SIZE="-1">GNU</font> General Public License </p>
+<p> Copyright (C) 2002-2009 Audun Ytterdal, Jimmy Olsen, Tore Anderson, Nicolai Langfeldt / Linpro AS. </p>
+<p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
+<p> This program is released under the GNU General Public License </p>

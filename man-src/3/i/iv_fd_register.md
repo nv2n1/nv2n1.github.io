@@ -20,13 +20,13 @@ struct iv_fd {
     void (*handler_err)(void *);
 };
 </code></pre>
-<p> <code>void IV_FD_INIT(struct iv_fd *</code><i>fd</i><code>);</code><br />
- <code>void iv_fd_register(struct iv_fd *</code><i>fd</i><code>);</code><br />
- <code>int iv_fd_register_try(struct iv_fd *</code><i>fd</i><code>);</code><br />
- <code>void iv_fd_unregister(struct iv_fd *</code><i>fd</i><code>);</code><br />
- <code>int iv_fd_registered(struct iv_fd *</code><i>fd</i><code>);</code><br />
- <code>void iv_fd_set_handler_in(struct iv_fd *</code><i>fd</i><code>, void (*</code><i>handler</i><code>)(void *));</code><br />
- <code>void iv_fd_set_handler_out(struct iv_fd *</code><i>fd</i><code>, void (*</code><i>handler</i><code>)(void *));</code><br />
+<p> <code>void IV_FD_INIT(struct iv_fd *</code><i>fd</i><code>);</code><br/>
+ <code>void iv_fd_register(struct iv_fd *</code><i>fd</i><code>);</code><br/>
+ <code>int iv_fd_register_try(struct iv_fd *</code><i>fd</i><code>);</code><br/>
+ <code>void iv_fd_unregister(struct iv_fd *</code><i>fd</i><code>);</code><br/>
+ <code>int iv_fd_registered(struct iv_fd *</code><i>fd</i><code>);</code><br/>
+ <code>void iv_fd_set_handler_in(struct iv_fd *</code><i>fd</i><code>, void (*</code><i>handler</i><code>)(void *));</code><br/>
+ <code>void iv_fd_set_handler_out(struct iv_fd *</code><i>fd</i><code>, void (*</code><i>handler</i><code>)(void *));</code><br/>
  <code>void iv_fd_set_handler_err(struct iv_fd *</code><i>fd</i><code>, void (*</code><i>handler</i><code>)(void *));</code> </p>
 <h2>DESCRIPTION</h2>
 <p> The functions <code>iv_fd_register</code> and <code>iv_fd_unregister</code> register, respectively unregister, a file descriptor with the current thread&#8217;s ivykis event loop. Calling <code>iv_fd_registered</code> on a file descriptor returns true if that file descriptor is currently registered with ivykis. </p>

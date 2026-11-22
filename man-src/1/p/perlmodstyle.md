@@ -13,15 +13,15 @@ perlmodstyle - Perl module style guide
 
  This document attempts to describe the Perl Community's ``best practice'' for writing Perl modules. It extends the recommendations found in perlstyle , which should be considered required reading before reading this document. 
 
- While this document is intended to be useful to all module authors, it is particularly aimed at authors who wish to publish their modules on <font SIZE="-1">CPAN.</font> 
+ While this document is intended to be useful to all module authors, it is particularly aimed at authors who wish to publish their modules on CPAN. 
 
  The focus is on elements of style which are visible to the users of a module, rather than those parts which are only seen by the module's developers. However, many of the guidelines presented in this document can be extrapolated and applied successfully to a module's internals. 
 
- This document differs from perlnewmod in that it is a style guide rather than a tutorial on creating <font SIZE="-1">CPAN</font> modules. It provides a checklist against which modules can be compared to determine whether they conform to best practice, without necessarily describing in detail how to achieve this. 
+ This document differs from perlnewmod in that it is a style guide rather than a tutorial on creating CPAN modules. It provides a checklist against which modules can be compared to determine whether they conform to best practice, without necessarily describing in detail how to achieve this. 
 
- All the advice contained in this document has been gleaned from extensive conversations with experienced <font SIZE="-1">CPAN</font> authors and users. Every piece of advice given here is the result of previous mistakes. This information is here to help you avoid the same mistakes and the extra work that would inevitably be required to fix them. 
+ All the advice contained in this document has been gleaned from extensive conversations with experienced CPAN authors and users. Every piece of advice given here is the result of previous mistakes. This information is here to help you avoid the same mistakes and the extra work that would inevitably be required to fix them. 
 
- The first section of this document provides an itemized checklist; subsequent sections provide a more detailed discussion of the items on the list. The final section, ``Common Pitfalls'', describes some of the most popular mistakes made by <font SIZE="-1">CPAN</font> authors.
+ The first section of this document provides an itemized checklist; subsequent sections provide a more detailed discussion of the items on the list. The final section, ``Common Pitfalls'', describes some of the most popular mistakes made by CPAN authors.
 
 <h2>QUICK CHECKLIST</h2>
 
@@ -41,11 +41,11 @@ perlmodstyle - Perl module style guide
 </dd><dt>&bull;
 </dt><dd> Get feedback before publishing</dd></dl>
 
-<h3>The <font SIZE="-1">API</font></h3>
+<h3>The API</h3>
 
 <dl>
 <dt>&bull;
-</dt><dd> <font SIZE="-1">API</font> should be understandable by the average programmer
+</dt><dd> API should be understandable by the average programmer
 </dd><dt>&bull;
 </dt><dd> Simple methods for simple tasks
 </dd><dt>&bull;
@@ -67,7 +67,7 @@ perlmodstyle - Perl module style guide
 
 <dl>
 <dt>&bull;
-</dt><dd> Write documentation in <font SIZE="-1">POD</font>
+</dt><dd> Write documentation in POD
 </dd><dt>&bull;
 </dt><dd> Document purpose, scope and target applications
 </dd><dt>&bull;
@@ -75,9 +75,9 @@ perlmodstyle - Perl module style guide
 </dd><dt>&bull;
 </dt><dd> Give examples of use in your documentation
 </dd><dt>&bull;
-</dt><dd> Provide a <font SIZE="-1">README</font> file and perhaps also release notes, changelog, etc
+</dt><dd> Provide a README file and perhaps also release notes, changelog, etc
 </dd><dt>&bull;
-</dt><dd> Provide links to further information (<font SIZE="-1">URL,</font> email)</dd></dl>
+</dt><dd> Provide links to further information (URL, email)</dd></dl>
 
 <h3>Release considerations</h3>
 
@@ -117,13 +117,13 @@ perlmodstyle - Perl module style guide
 
  Bad example: 
 
- ``FooBar.pm provides an implementation of the <font SIZE="-1">FOO</font> protocol and the related <font SIZE="-1">BAR</font> standard.'' 
+ ``FooBar.pm provides an implementation of the FOO protocol and the related BAR standard.'' 
 
  Good example: 
 
- ``Foo.pm provides an implementation of the <font SIZE="-1">FOO</font> protocol. Bar.pm implements the related <font SIZE="-1">BAR</font> protocol.'' 
+ ``Foo.pm provides an implementation of the FOO protocol. Bar.pm implements the related BAR protocol.'' 
 
- This means that if a developer only needs a module for the <font SIZE="-1">BAR</font> standard, they should not be forced to install libraries for <font SIZE="-1">FOO</font> as well.
+ This means that if a developer only needs a module for the BAR standard, they should not be forced to install libraries for FOO as well.
 
 <h3>What's in a name?</h3>
 
@@ -142,19 +142,19 @@ perlmodstyle - Perl module style guide
 
 <h3>Get feedback before publishing</h3>
 
- If you have never uploaded a module to <font SIZE="-1">CPAN</font> before (and even if you have), you are strongly encouraged to get feedback on PrePAN &lt;<a rel="nofollow" HREF="http://prepan.org">http://prepan.org</a>&gt;. PrePAN is a site dedicated to discussing ideas for <font SIZE="-1">CPAN</font> modules with other Perl developers and is a great resource for new (and experienced) Perl developers. 
+ If you have never uploaded a module to CPAN before (and even if you have), you are strongly encouraged to get feedback on PrePAN &lt;<a rel="nofollow" HREF="http://prepan.org">http://prepan.org</a>&gt;. PrePAN is a site dedicated to discussing ideas for CPAN modules with other Perl developers and is a great resource for new (and experienced) Perl developers. 
 
- You should also try to get feedback from people who are already familiar with the module's application domain and the <font SIZE="-1">CPAN</font> naming system. Authors of similar modules, or modules with similar names, may be a good place to start, as are community sites like Perl Monks &lt;<a rel="nofollow" HREF="http://www.perlmonks.org">http://www.perlmonks.org</a>&gt;.
+ You should also try to get feedback from people who are already familiar with the module's application domain and the CPAN naming system. Authors of similar modules, or modules with similar names, may be a good place to start, as are community sites like Perl Monks &lt;<a rel="nofollow" HREF="http://www.perlmonks.org">http://www.perlmonks.org</a>&gt;.
 
 <h2>DESIGNING AND WRITING YOUR MODULE</h2>
 
  Considerations for module design and coding:
 
-<h3>To <font SIZE="-1">OO</font> or not to <font SIZE="-1">OO</font>?</h3>
+<h3>To OO or not to OO?</h3>
 
- Your module may be object oriented (<font SIZE="-1">OO</font>) or not, or it may have both kinds of interfaces available. There are pros and cons of each technique, which should be considered when you design your <font SIZE="-1">API.</font> 
+ Your module may be object oriented (OO) or not, or it may have both kinds of interfaces available. There are pros and cons of each technique, which should be considered when you design your API. 
 
- In <i>Perl Best Practices</i> (copyright 2004, Published by O'Reilly Media, Inc.), Damian Conway provides a list of criteria to use when deciding if <font SIZE="-1">OO</font> is the right fit for your problem:
+ In <i>Perl Best Practices</i> (copyright 2004, Published by O'Reilly Media, Inc.), Damian Conway provides a list of criteria to use when deciding if OO is the right fit for your problem:
 <dl>
 <dt>&bull;
 </dt><dd> The system being designed is large, or is likely to become large.
@@ -178,16 +178,16 @@ perlmodstyle - Perl module style guide
 </dt><dd> Large numbers of other programmers will be using your code modules.</dd></dl>
  
 
- Think carefully about whether <font SIZE="-1">OO</font> is appropriate for your module. Gratuitous object orientation results in complex APIs which are difficult for the average module user to understand or use.
+ Think carefully about whether OO is appropriate for your module. Gratuitous object orientation results in complex APIs which are difficult for the average module user to understand or use.
 
-<h3>Designing your <font SIZE="-1">API</font></h3>
+<h3>Designing your API</h3>
 
- Your interfaces should be understandable by an average Perl programmer. The following guidelines may help you judge whether your <font SIZE="-1">API</font> is sufficiently straightforward:
+ Your interfaces should be understandable by an average Perl programmer. The following guidelines may help you judge whether your API is sufficiently straightforward:
 <dl>
 <dt>Write simple routines to do simple things.
 </dt><dd> It's better to have numerous simple routines than a few monolithic ones. If your routine changes its behaviour significantly based on its arguments, it's a sign that you should have two (or more) separate routines.
 </dd><dt>Separate functionality from output.
-</dt><dd> Return your results in the most generic form possible and allow the user to choose how to use them. The most generic form possible is usually a Perl data structure which can then be used to generate a text report, <font SIZE="-1">HTML, XML,</font> a database query, or whatever else your users require. 
+</dt><dd> Return your results in the most generic form possible and allow the user to choose how to use them. The most generic form possible is usually a Perl data structure which can then be used to generate a text report, HTML, XML, a database query, or whatever else your users require. 
  If your routine iterates through some kind of list (such as a list of files, or records in a database) you may consider providing a callback so that users can manipulate each element of the list in turn. File::Find provides an example of this with its <tt>&quot;find(\&amp;wanted, $dir)&quot;</tt> syntax.
 </dd><dt>Provide sensible shortcuts and defaults.
 </dt><dd> Don't require every module user to jump through the same hoops to achieve a simple result. You can always include optional parameters or routines for more complex or non-standard behaviour. If most of your users have to type a few almost identical lines of code when they start using your module, it's a sign that you should have made that behaviour a default. Another good indicator that you should use defaults is if most of your users call your routines with the same arguments.
@@ -235,9 +235,9 @@ $obj-&gt;do_something(undef, undef, undef, undef, undef, 1024);
 <dt>&bull;
 </dt><dd> Return an undefined value.
 </dd><dt>&bull;
-</dt><dd> set <tt>$Module::errstr</tt> or similar (<tt>&quot;errstr&quot;</tt> is a common name used by <font SIZE="-1">DBI</font> and other popular modules; if you choose something else, be sure to document it clearly).
+</dt><dd> set <tt>$Module::errstr</tt> or similar (<tt>&quot;errstr&quot;</tt> is a common name used by DBI and other popular modules; if you choose something else, be sure to document it clearly).
 </dd><dt>&bull;
-</dt><dd> <tt>&quot;warn()&quot;</tt> or <tt>&quot;carp()&quot;</tt> a message to <font SIZE="-1">STDERR.</font>
+</dt><dd> <tt>&quot;warn()&quot;</tt> or <tt>&quot;carp()&quot;</tt> a message to STDERR.
 </dd><dt>&bull;
 </dt><dd> <tt>&quot;croak()&quot;</tt> only when your module absolutely cannot figure out what to do. (<tt>&quot;croak()&quot;</tt> is a better version of <tt>&quot;die()&quot;</tt> for use within modules, which reports its errors from the perspective of the caller. See Carp for details of <tt>&quot;croak()&quot;</tt>, <tt>&quot;carp()&quot;</tt> and other useful routines.)
 </dd><dt>&bull;
@@ -248,9 +248,9 @@ $obj-&gt;do_something(undef, undef, undef, undef, undef, 1024);
 
 <h2>DOCUMENTING YOUR MODULE</h2>
 
-<h3><font SIZE="-1">POD</font></h3>
+<h3>POD</h3>
 
- Your module should include documentation aimed at Perl developers. You should use Perl's ``plain old documentation'' (<font SIZE="-1">POD</font>) for your general technical documentation, though you may wish to write additional documentation (white papers, tutorials, etc) in some other format. You need to cover the following subjects:
+ Your module should include documentation aimed at Perl developers. You should use Perl's ``plain old documentation'' (POD) for your general technical documentation, though you may wish to write additional documentation (white papers, tutorials, etc) in some other format. You need to cover the following subjects:
 <dl>
 <dt>&bull;
 </dt><dd> A synopsis of the common uses of the module
@@ -266,37 +266,37 @@ $obj-&gt;do_something(undef, undef, undef, undef, undef, 1024);
 </dt><dd> A contact email address for the author/maintainer</dd></dl>
  
 
- The level of detail in Perl module documentation generally goes from less detailed to more detailed. Your <font SIZE="-1">SYNOPSIS</font> section should contain a minimal example of use (perhaps as little as one line of code; skip the unusual use cases or anything not needed by most users); the <font SIZE="-1">DESCRIPTION</font> should describe your module in broad terms, generally in just a few paragraphs; more detail of the module's routines or methods, lengthy code examples, or other in-depth material should be given in subsequent sections. 
+ The level of detail in Perl module documentation generally goes from less detailed to more detailed. Your SYNOPSIS section should contain a minimal example of use (perhaps as little as one line of code; skip the unusual use cases or anything not needed by most users); the DESCRIPTION should describe your module in broad terms, generally in just a few paragraphs; more detail of the module's routines or methods, lengthy code examples, or other in-depth material should be given in subsequent sections. 
 
  Ideally, someone who's slightly familiar with your module should be able to refresh their memory without hitting ``page down''. As your reader continues through the document, they should receive a progressively greater amount of knowledge. 
 
  The recommended order of sections in Perl module documentation is:
 <dl>
 <dt>&bull;
-</dt><dd> <font SIZE="-1">NAME</font>
+</dt><dd> NAME
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">SYNOPSIS</font>
+</dt><dd> SYNOPSIS
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">DESCRIPTION</font>
+</dt><dd> DESCRIPTION
 </dd><dt>&bull;
 </dt><dd> One or more sections or subsections giving greater detail of available methods and routines and any other relevant information.
 </dd><dt>&bull;
 </dt><dd> BUGS/CAVEATS/etc
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">AUTHOR</font>
+</dt><dd> AUTHOR
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">SEE ALSO</font>
+</dt><dd> SEE ALSO
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">COPYRIGHT</font> and <font SIZE="-1">LICENSE</font></dd></dl>
+</dt><dd> COPYRIGHT and LICENSE</dd></dl>
  
 
- Keep your documentation near the code it documents (``inline'' documentation). Include <font SIZE="-1">POD</font> for a given method right above that method's subroutine. This makes it easier to keep the documentation up to date, and avoids having to document each piece of code twice (once in <font SIZE="-1">POD</font> and once in comments).
+ Keep your documentation near the code it documents (``inline'' documentation). Include POD for a given method right above that method's subroutine. This makes it easier to keep the documentation up to date, and avoids having to document each piece of code twice (once in POD and once in comments).
 
-<h3><font SIZE="-1">README, INSTALL,</font> release notes, changelogs</h3>
+<h3>README, INSTALL, release notes, changelogs</h3>
 
- Your module should also include a <font SIZE="-1">README</font> file describing the module and giving pointers to further information (website, author email). 
+ Your module should also include a README file describing the module and giving pointers to further information (website, author email). 
 
- An <font SIZE="-1">INSTALL</font> file should be included, and should contain simple installation instructions. When using ExtUtils::MakeMaker this will usually be:
+ An INSTALL file should be included, and should contain simple installation instructions. When using ExtUtils::MakeMaker this will usually be:
 <dl>
 <dt>perl Makefile.PL
 </dt><dd>
@@ -330,20 +330,20 @@ $obj-&gt;do_something(undef, undef, undef, undef, undef, 1024);
 
  Version numbers should indicate at least major and minor releases, and possibly sub-minor releases. A major release is one in which most of the functionality has changed, or in which major new functionality is added. A minor release is one in which a small amount of functionality has been added or changed. Sub-minor version numbers are usually used for changes which do not affect functionality, such as documentation patches. 
 
- The most common <font SIZE="-1">CPAN</font> version numbering scheme looks like this: 
+ The most common CPAN version numbering scheme looks like this: 
 
  <pre>
     1.00, 1.10, 1.11, 1.20, 1.30, 1.31, 1.32
 </pre> 
 
- A correct <font SIZE="-1">CPAN</font> version number is a floating point number with at least 2 digits after the decimal. You can test whether it conforms to <font SIZE="-1">CPAN</font> by using 
+ A correct CPAN version number is a floating point number with at least 2 digits after the decimal. You can test whether it conforms to CPAN by using 
 
  <pre>
     perl -MExtUtils::MakeMaker -le 'print MM-&gt;parse_version(shift)' \
                                                             'Foo.pm'
 </pre> 
 
- If you want to release a 'beta' or 'alpha' version of a module but don't want <font SIZE="-1">CPAN</font>.pm to list it as most recent use an '_' after the regular version number followed by at least 2 digits, eg. 1.20_01. If you do this, the following idiom is recommended: 
+ If you want to release a 'beta' or 'alpha' version of a module but don't want CPAN.pm to list it as most recent use an '_' after the regular version number followed by at least 2 digits, eg. 1.20_01. If you do this, the following idiom is recommended: 
 
  <pre><code>
 our $VERSION = "1.12_01";
@@ -371,11 +371,11 @@ our $VERSION = "1.12_01";
 <dt>&bull;
 </dt><dd> Core Perl modules
 </dd><dt>&bull;
-</dt><dd> Stable <font SIZE="-1">CPAN</font> modules
+</dt><dd> Stable CPAN modules
 </dd><dt>&bull;
-</dt><dd> Unstable <font SIZE="-1">CPAN</font> modules
+</dt><dd> Unstable CPAN modules
 </dd><dt>&bull;
-</dt><dd> Modules not available from <font SIZE="-1">CPAN</font></dd></dl>
+</dt><dd> Modules not available from CPAN</dd></dl>
  
 
  Specify version requirements for other Perl modules in the pre-requisites in your Makefile.PL or Build.PL. 
@@ -398,13 +398,13 @@ our $VERSION = "1.12_01";
 
  Make sure that your module has a license, and that the full text of it is included in the distribution (unless it's a common one and the terms of the license don't require you to include it). 
 
- If you don't know what license to use, dual licensing under the <font SIZE="-1">GPL</font> and Artistic licenses (the same as Perl itself) is a good idea. See perlgpl and perlartistic.
+ If you don't know what license to use, dual licensing under the GPL and Artistic licenses (the same as Perl itself) is a good idea. See perlgpl and perlartistic.
 
 <h2>COMMON PITFALLS</h2>
 
 <h3>Reinventing the wheel</h3>
 
- There are certain application spaces which are already very, very well served by <font SIZE="-1">CPAN.</font> One example is templating systems, another is date and time modules, and there are many more. While it is a rite of passage to write your own version of these things, please consider carefully whether the Perl world really needs you to publish it.
+ There are certain application spaces which are already very, very well served by CPAN. One example is templating systems, another is date and time modules, and there are many more. While it is a rite of passage to write your own version of these things, please consider carefully whether the Perl world really needs you to publish it.
 
 <h3>Trying to do too much</h3>
 
@@ -414,7 +414,7 @@ our $VERSION = "1.12_01";
 
  Don't fall into the trap of writing for the wrong audience. Your primary audience is a reasonably experienced developer with at least a moderate understanding of your module's application domain, who's just downloaded your module and wants to start using it as quickly as possible. 
 
- Tutorials, end-user documentation, research papers, FAQs etc are not appropriate in a module's main documentation. If you really want to write these, include them as sub-documents such as <tt>&quot;My::Module::Tutorial&quot;</tt> or <tt>&quot;My::Module::FAQ&quot;</tt> and provide a link in the <font SIZE="-1">SEE ALSO</font> section of the main documentation.
+ Tutorials, end-user documentation, research papers, FAQs etc are not appropriate in a module's main documentation. If you really want to write these, include them as sub-documents such as <tt>&quot;My::Module::Tutorial&quot;</tt> or <tt>&quot;My::Module::FAQ&quot;</tt> and provide a link in the SEE ALSO section of the main documentation.
 
 <h2>SEE ALSO</h2>
 
@@ -424,9 +424,9 @@ our $VERSION = "1.12_01";
 </dd><dt>perlnewmod
 </dt><dd> How to create a new module
 </dd><dt>perlpod
-</dt><dd> <font SIZE="-1">POD</font> documentation
+</dt><dd> POD documentation
 </dd><dt>podchecker
-</dt><dd> Verifies your <font SIZE="-1">POD</font>'s correctness
+</dt><dd> Verifies your POD's correctness
 </dd><dt>Packaging Tools
 </dt><dd> ExtUtils::MakeMaker, Module::Build
 </dd><dt>Testing tools

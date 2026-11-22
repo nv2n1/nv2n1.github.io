@@ -22,7 +22,7 @@ description: "maildirmake – create maildirs and maildir folders"
 <p> -q <i>quota</i></p>
 <dl>
 <dt>
-</dt><dd> install a quota on the maildir. See m[blue]<code><a href="/docs/linux/man/7-maildirquota/">maildirquota</a></code>(7)m[]<font SIZE="-2">[1]</font>, below.</dd></dl>
+</dt><dd> install a quota on the maildir. See m[blue]<code><a href="/docs/linux/man/7-maildirquota/">maildirquota</a></code>(7)m[][1], below.</dd></dl>
 <p> -f <i>folder</i></p>
 <dl>
 <dt>
@@ -49,8 +49,8 @@ description: "maildirmake – create maildirs and maildir folders"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
-<p> The Courier IMAP server implements two types of shared folders: filesystem permission-based shared folders, as well as virtual shared folders based on IMAP access control lists. Use the <code>maildirmake</code> command to implement shared folders based on filesystem permissions. The m[blue]<code>maildiracl</code>(1)m[]<font SIZE="-2">[2]</font> command manages access control lists, which are used by virtual shared folders. </p>
+  <code>Note</code>  </dd>
+<p> The Courier IMAP server implements two types of shared folders: filesystem permission-based shared folders, as well as virtual shared folders based on IMAP access control lists. Use the <code>maildirmake</code> command to implement shared folders based on filesystem permissions. The m[blue]<code>maildiracl</code>(1)m[][2] command manages access control lists, which are used by virtual shared folders. </p>
 <p> See the Courier IMAP server documentation for more information. </p>
 </dl>
 <p> First, you need to create a collection of sharable folders, as a separate maildir: </p>
@@ -94,7 +94,7 @@ description: "maildirmake – create maildirs and maildir folders"
 <p> You may have read or write access to a shared folder. If you have write access, you can add messages to the shared folder. You can also delete messages that you&#8217;ve added. </p>
 <p> Anyone can create a sharable maildir, so if the sharable maildir is actually created by you, can can delete any message, not just your own.</p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a href="/docs/linux/man/5-maildir/">maildir</a></code>(5)m[]<font SIZE="-2">[3]</font>, m[blue]<code>maildiracl</code>(1)m[]<font SIZE="-2">[2]</font>, m[blue]<code>maildirkw</code>(1)m[]<font SIZE="-2">[4]</font>, m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[5]</font>, m[blue]<code><a href="/docs/linux/man/7-maildirquota/">maildirquota</a></code>(7)m[]<font SIZE="-2">[1]</font>, m[blue]<code><a href="/docs/linux/man/8-deliverquota/">deliverquota</a></code>(8)m[]<font SIZE="-2">[6]</font>, m[blue]<code><a href="/docs/linux/man/7-maildropfilter/">maildropfilter</a></code>(7)m[]<font SIZE="-2">[7]</font>, m[blue]<code><a rel="nofollow" href="http://www.qmail.org/man/man5/maildir.html">http://www.qmail.org/man/man5/maildir.html</a></code>m[].</p>
+<p> m[blue]<code><a href="/docs/linux/man/5-maildir/">maildir</a></code>(5)m[][3], m[blue]<code>maildiracl</code>(1)m[][2], m[blue]<code>maildirkw</code>(1)m[][4], m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[][5], m[blue]<code><a href="/docs/linux/man/7-maildirquota/">maildirquota</a></code>(7)m[][1], m[blue]<code><a href="/docs/linux/man/8-deliverquota/">deliverquota</a></code>(8)m[][6], m[blue]<code><a href="/docs/linux/man/7-maildropfilter/">maildropfilter</a></code>(7)m[][7], m[blue]<code><a rel="nofollow" href="http://www.qmail.org/man/man5/maildir.html">http://www.qmail.org/man/man5/maildir.html</a></code>m[].</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>

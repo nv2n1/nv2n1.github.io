@@ -15,19 +15,19 @@ description: "sestatus.conf – The"
 <dd><i>/etc/sestatus.conf</i></dd></dl>
 <p> The file consists of two optional sections as described in the <code>FILE FORMAT</code> section. Whether these exist or not, the following will always be displayed:</p>
 <dl>
-<dd>The current process context<br />
- The init process context<br />
+<dd>The current process context<br/>
+ The init process context<br/>
  The controlling terminal file context</dd></dl>
 <h2>File Format</h2>
 <p>The format consists of two optional sections as follows:</p>
 <dl>
-<dd><code>[files]</code><br />
- <i>file_name</i><br />
- <i>[file_name]</i><br />
+<dd><code>[files]</code><br/>
+ <i>file_name</i><br/>
+ <i>[file_name]</i><br/>
  <i>&#8230;</i> </dd>
-<p> <code>[process]</code><br />
- <i>executable_file_name</i><br />
- <i>[executable_file_name]</i><br />
+<p> <code>[process]</code><br/>
+ <i>executable_file_name</i><br/>
+ <i>[executable_file_name]</i><br/>
  <i>&#8230;</i></dl>
 <p> Where:</p>
 <dl>
@@ -45,17 +45,17 @@ description: "sestatus.conf – The"
 <dd>One or more fully qualified executable file names that should it be an active process, have its context displayed. Each entry is on a new line.</dd></dl>
 </dl>
 <h2>Example</h2>
-<p># /etc/sestatus.conf<br />
- [files]<br />
- /etc/passwd<br />
- /etc/shadow<br />
- /bin/bash<br />
- /bin/login<br />
- /lib/libc.so.6<br />
- /lib/ld-linux.so.2<br />
- /lib/ld.so.1 [process]<br />
- /sbin/mingetty<br />
- /sbin/agetty<br />
+<p># /etc/sestatus.conf<br/>
+ [files]<br/>
+ /etc/passwd<br/>
+ /etc/shadow<br/>
+ /bin/bash<br/>
+ /bin/login<br/>
+ /lib/libc.so.6<br/>
+ /lib/ld-linux.so.2<br/>
+ /lib/ld.so.1 [process]<br/>
+ /sbin/mingetty<br/>
+ /sbin/agetty<br/>
  /usr/sbin/sshd </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-sestatus/">sestatus</a></code>(8) </p>

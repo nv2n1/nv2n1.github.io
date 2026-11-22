@@ -9,10 +9,10 @@ description: "atmaddr – list and maintain local ATM addresses"
 
 <p>atmaddr &#8211; list and maintain local ATM addresses</p>
 <h2>Synopsis</h2>
-<p><code>atmaddr</code> [<code>-n</code>]&nbsp;<wbr>[<i>itf</i>]<br />
- <code>atmaddr</code> <code>-r</code> [<i>itf</i>]<br />
- <code>atmaddr</code> <code>-a</code> [<i>itf</i>]&nbsp;<wbr><i>atm_addr</i><br />
- <code>atmaddr</code> <code>-d</code> [<i>itf</i>]&nbsp;<wbr><i>atm_addr</i><br />
+<p><code>atmaddr</code> [<code>-n</code>]&nbsp;<wbr>[<i>itf</i>]<br/>
+ <code>atmaddr</code> <code>-r</code> [<i>itf</i>]<br/>
+ <code>atmaddr</code> <code>-a</code> [<i>itf</i>]&nbsp;<wbr><i>atm_addr</i><br/>
+ <code>atmaddr</code> <code>-d</code> [<i>itf</i>]&nbsp;<wbr><i>atm_addr</i><br/>
  <code>atmaddr</code> <code>-V</code></p>
 <h2>Description</h2>
 <p><code>atmaddr</code> is used to list the local addresses configured for ATM interfaces and to manually change the list of addresses. If the interface number <i>itf</i> is omitted, interface 0 is used by default. The ATM address <i>atm_addr</i> can be any valid ATM SVC address, e.g. an E.164 address or an ATM Forum NSAP address. </p>

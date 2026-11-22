@@ -53,17 +53,17 @@ description: "XkbGetNamedGeometry – Loads a keyboard geometry description from
 </tr>
 <tr VALIGN=top>
 <td>Keymap</td>
-<td> Complete keyboard description<br />
+<td> Complete keyboard description<br/>
  Normally assembled using a complete component from each of the other types </td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
 <td>Keycodes</td>
-<td> Symbolic name for each key<br />
+<td> Symbolic name for each key<br/>
  Minimum and maximum legal keycodes </td>
-<td> Aliases for some keys<br />
- Symbolic names for indicators<br />
+<td> Aliases for some keys<br/>
+ Symbolic names for indicators<br/>
  Description of indicators physically present
 </td>
 </tr>
@@ -76,24 +76,24 @@ description: "XkbGetNamedGeometry – Loads a keyboard geometry description from
 <tr VALIGN=top>
 <td>Compatibility</td>
 <td> Rules used to assign actions to keysyms </td>
-<td> Maps for some indicators<br />
+<td> Maps for some indicators<br/>
  Real modifier bindings and symbolic names for some virtual modifiers
 </td>
 </tr>
 <tr VALIGN=top>
 <td>Symbols</td>
-<td> Symbol mapping for keyboard keys<br />
- Modifier mapping<br />
+<td> Symbol mapping for keyboard keys<br/>
+ Modifier mapping<br/>
  Symbolic names for groups </td>
-<td> Explicit actions and behaviors for some keys<br />
+<td> Explicit actions and behaviors for some keys<br/>
  Real modifier bindings and symbolic names for some virtual modifiers
 </td>
 </tr>
 <tr VALIGN=top>
 <td>Geometry</td>
 <td>Layout of the keyboard</td>
-<td> Aliases for some keys; overrides keycodes component aliases<br />
- Symbolic names for some indicators<br />
+<td> Aliases for some keys; overrides keycodes component aliases<br/>
+ Symbolic names for some indicators<br/>
  Description of indicators physically present
 </td>
 </tr>

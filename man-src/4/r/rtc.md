@@ -36,15 +36,15 @@ int ioctl(fd, RTC_request, param);</code></pre>
 <dl>
 <dt><code>RTC_RD_TIME</code></dt>
 <dd>Returns this RTC&#8217;s time in the following structure:</dd>
-<dd>struct rtc_time {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_sec;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_min;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_hour;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_mday;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_mon;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_year;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_wday;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;unused&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_yday;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;unused&nbsp;*/<br />
+<dd>struct rtc_time {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_sec;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_min;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_hour;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_mday;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_mon;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_year;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_wday;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;unused&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_yday;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;unused&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_isdst;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;unused&nbsp;*/ };</dd>
 <dd>The fields in this structure have the same meaning and ranges as for the <i>tm</i> structure described in <code><a href="/docs/linux/man/3-gmtime/">gmtime</a></code>(3). A pointer to this structure should be passed as the third <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) argument.</dd>
 <dt><code>RTC_SET_TIME</code></dt>
@@ -64,9 +64,9 @@ int ioctl(fd, RTC_request, param);</code></pre>
 <dt><code>RTC_WKALM_RD</code>, <code>RTC_WKALM_SET</code></dt>
 <dd>Some RTCs support a more powerful alarm interface, using these ioctls to read or write the RTC&#8217;s alarm time (respectively) with this structure:</dd></dl>
 <dl>
-<dd>struct rtc_wkalrm {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char enabled;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char pending;<br />
+<dd>struct rtc_wkalrm {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char enabled;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char pending;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct rtc_time time; };</dd></dl>
 <dl>
 <dd>The <i>enabled</i> flag is used to enable or disable the alarm interrupt, or to read its current status; when using these calls, <code>RTC_AIE_ON</code> and <code>RTC_AIE_OFF</code> are not used. The <i>pending</i> flag is used by <code>RTC_WKALM_RD</code> to report a pending interrupt (so it&#8217;s mostly useless on Linux, except when talking to the RTC managed by EFI firmware). The <i>time</i> field is as used with <code>RTC_ALM_READ</code> and <code>RTC_ALM_SET</code> except that the <i>tm_mday</i>, <i>tm_mon</i>, and <i>tm_year</i> fields are also valid. A pointer to this structure should be passed as the third <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) argument.</dd></dl>

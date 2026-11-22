@@ -37,7 +37,7 @@ perlhaiku - Perl version 5.10+ on Haiku
  The following problems are encountered with Haiku revision 28311:
 <dl>
 <dt>&bull;
-</dt><dd> Perl cannot be compiled with threading support <font SIZE="-1">ATM.</font>
+</dt><dd> Perl cannot be compiled with threading support ATM.
 </dd><dt>&bull;
 </dt><dd> The <i>cpan/Socket/t/socketpair.t</i> test fails. More precisely: the subtests using datagram sockets fail. Unix datagram sockets aren't implemented in Haiku yet.
 </dd><dt>&bull;

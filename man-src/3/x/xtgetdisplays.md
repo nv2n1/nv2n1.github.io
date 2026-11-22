@@ -23,5 +23,5 @@ description: "XtGetDisplays – retrieve a list of displays associated with an a
 <h2>Description</h2>
 <p>To free the list of displays, use <code>XtFree</code>.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

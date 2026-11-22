@@ -98,14 +98,14 @@ description: "texlogsieve – filter and summarize LaTeX log files"
 <h2>CONFIGURATION FILE</h2>
 <p> texlogsieve always searches automatically for the (optional) <i>,texlogsieverc/</i> configuration file in the TeX path (i.e., it searches using Kpathsea). In the default configuration, the current directory is in the search path, so adding a config file with that name to the project directory is enough to make it work. Options in the config file are exactly the same as the long command-line options described above, but without the preceding "--" characters. Lines starting with a "#" sign are comments. An example configuration file: </p>
 <dl>
-<dd> <p> no-page-delay <br />
- # no-page-delay enables shipouts, but we do not want that <br />
- no-shipouts <br />
- silence-string = Hyperreferences in rotated content will be misplaced <br />
- # no need to escape the &quot;\&quot; (or any other) character <br />
- silence-string = Using \overbracket and \underbracket from `mathtools&#8217; <br />
- # silence a string using lua pattern matching <br />
- silence-string = ////luaotfload | aux : font no %d+ %(.-%) <br />
+<dd> <p> no-page-delay <br/>
+ # no-page-delay enables shipouts, but we do not want that <br/>
+ no-shipouts <br/>
+ silence-string = Hyperreferences in rotated content will be misplaced <br/>
+ # no need to escape the &quot;\&quot; (or any other) character <br/>
+ silence-string = Using \overbracket and \underbracket from `mathtools&#8217; <br/>
+ # silence a string using lua pattern matching <br/>
+ silence-string = ////luaotfload | aux : font no %d+ %(.-%) <br/>
  silence-files = *.sty </p>
  </dd></dl>
 <h2>LIMITATIONS</h2>
@@ -116,6 +116,6 @@ description: "texlogsieve – filter and summarize LaTeX log files"
 <p> If you want to know more about the TeX log file and the workings of the program, check the initial comments in the code. </p>
 <h2>BUGS AND DEVELOPMENT</h2>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2021, 2022 Nelson Lago &lt;lago [at] ime.usp.br&gt; <br />
+<p> Copyright &#169; 2021, 2022 Nelson Lago &lt;lago [at] ime.usp.br&gt; <br/>
  License GPLv3+: GNU GPL version 3 or later </p>
 <p> This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>

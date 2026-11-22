@@ -1089,8 +1089,8 @@ description: "zip – package and compress (archive) files"
 <p> If you are short on disk space, you might not have enough room to hold both the original directory and the corresponding compressed <i>zip</i> archive. In this case, you can create the archive in steps using the <code>-m</code> option. If <i>foo</i> contains the subdirectories <i>tom</i>, <i>dick</i>, and <i>harry</i>, you can:</p>
 <dl>
 <dt>
-</dt><dd> zip -rm foo foo/tom<br />
- zip -rm foo foo/dick<br />
+</dt><dd> zip -rm foo foo/tom<br/>
+ zip -rm foo foo/dick<br/>
  zip -rm foo foo/harry</dd></dl>
 <p> where the first command creates <i>foo.zip</i>, and the next two add to it. At the completion of each <i>zip</i> command, the last created archive is deleted, making room for the next <i>zip</i> command to function. </p>
 <p> Use <code>-s</code> to set the split size and create a split archive. The size is given as a number followed optionally by one of k (kB), m (MB), g (GB), or t (TB). The command</p>

@@ -73,7 +73,7 @@ PROXYCERTINFO * d2i_PROXYCERTINFO_OLD (PROXYCERTINFO **cert_info, unsigned char 
 <h3>int PROXYCERTINFO_cmp (const <code>PROXYCERTINFO</code> * a, const <code>PROXYCERTINFO</code> * b)</h3>
 <p>Compares two PROXYCERTINFO structures. <code>Parameters:</code></p>
 <dl>
-<dd><i>a</i> pointer to the first PROXYCERTINFO structure<br />
+<dd><i>a</i> pointer to the first PROXYCERTINFO structure<br/>
  <i>b</i> pointer to the second PROXYCERTINFO structure</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -81,7 +81,7 @@ PROXYCERTINFO * d2i_PROXYCERTINFO_OLD (PROXYCERTINFO **cert_info, unsigned char 
 <h3>int PROXYCERTINFO_print (BIO * bp, <code>PROXYCERTINFO</code> * cert_info)</h3>
 <p>print the PROXYCERTINFO structure to stdout <code>Parameters:</code></p>
 <dl>
-<dd><i>bp</i> the BIO to print to<br />
+<dd><i>bp</i> the BIO to print to<br/>
  <i>cert_info</i> the PROXYCERTINFO to print</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -89,7 +89,7 @@ PROXYCERTINFO * d2i_PROXYCERTINFO_OLD (PROXYCERTINFO **cert_info, unsigned char 
 <h3>int PROXYCERTINFO_print_fp (FILE * fp, <code>PROXYCERTINFO</code> * cert_info)</h3>
 <p>print the PROXYCERTINFO structure to the specified file stream <code>Parameters:</code></p>
 <dl>
-<dd><i>fp</i> the file stream (FILE *) to print to<br />
+<dd><i>fp</i> the file stream (FILE *) to print to<br/>
  <i>cert_info</i> the PROXYCERTINFO structure to print</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -97,7 +97,7 @@ PROXYCERTINFO * d2i_PROXYCERTINFO_OLD (PROXYCERTINFO **cert_info, unsigned char 
 <h3>int PROXYCERTINFO_set_policy (<code>PROXYCERTINFO</code> * cert_info, <code>PROXYPOLICY</code> * policy)</h3>
 <p>Sets the policy on the PROXYCERTINFO Since this is an optional field in the ASN1 encoding, this variable can be set to NULL through this function &#8211; which means that when the PROXYCERTINFO is encoded the policy won&#8217;t be included. <code>Parameters:</code></p>
 <dl>
-<dd><i>cert_info</i> the PROXYCERTINFO object to set the policy of<br />
+<dd><i>cert_info</i> the PROXYCERTINFO object to set the policy of<br/>
  <i>policy</i> the PROXYPOLICY to set it to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -114,7 +114,7 @@ PROXYCERTINFO * d2i_PROXYCERTINFO_OLD (PROXYCERTINFO **cert_info, unsigned char 
 <p> Since this is an optional field in its ASN1 coded representation, it can be set to NULL through this function &#8211; which means that it won&#8217;t be included in the encoding. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>cert_info</i> the PROXYCERTINFO to set the path length of<br />
+<dd><i>cert_info</i> the PROXYCERTINFO to set the path length of<br/>
  <i>path_length</i> the path length to set it to if -1 is passed in, the path length gets unset, which configures the PROXYCERTINFO to not include the path length in the DER encoding</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -132,7 +132,7 @@ PROXYCERTINFO * d2i_PROXYCERTINFO_OLD (PROXYCERTINFO **cert_info, unsigned char 
 <h3>int i2d_PROXYCERTINFO (<code>PROXYCERTINFO</code> * cert_info, unsigned char ** pp)</h3>
 <p>Converts the PROXYCERTINFO structure from internal format to a DER encoded ASN.1 string. <code>Parameters:</code></p>
 <dl>
-<dd><i>cert_info</i> the PROXYCERTINFO structure to convert<br />
+<dd><i>cert_info</i> the PROXYCERTINFO structure to convert<br/>
  <i>pp</i> the resulting DER encoded string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -140,8 +140,8 @@ PROXYCERTINFO * d2i_PROXYCERTINFO_OLD (PROXYCERTINFO **cert_info, unsigned char 
 <h3><code>PROXYCERTINFO</code>* d2i_PROXYCERTINFO (<code>PROXYCERTINFO</code> ** cert_info, unsigned char ** pp, long length)</h3>
 <p>Convert from a DER encoded ASN.1 string of a PROXYCERTINFO to its internal structure. <code>Parameters:</code></p>
 <dl>
-<dd><i>cert_info</i> the resulting PROXYCERTINFO in internal form<br />
- <i>pp</i> the DER encoded ASN.1 string containing the PROXYCERTINFO<br />
+<dd><i>cert_info</i> the resulting PROXYCERTINFO in internal form<br/>
+ <i>pp</i> the DER encoded ASN.1 string containing the PROXYCERTINFO<br/>
  <i>length</i> the length of the buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -149,7 +149,7 @@ PROXYCERTINFO * d2i_PROXYCERTINFO_OLD (PROXYCERTINFO **cert_info, unsigned char 
 <h3>int i2d_PROXYCERTINFO_OLD (<code>PROXYCERTINFO</code> * cert_info, unsigned char ** pp)</h3>
 <p>Converts the old PROXYCERTINFO structure from internal format to a DER encoded ASN.1 string. <code>Parameters:</code></p>
 <dl>
-<dd><i>cert_info</i> the old PROXYCERTINFO structure to convert<br />
+<dd><i>cert_info</i> the old PROXYCERTINFO structure to convert<br/>
  <i>pp</i> the resulting DER encoded string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -157,8 +157,8 @@ PROXYCERTINFO * d2i_PROXYCERTINFO_OLD (PROXYCERTINFO **cert_info, unsigned char 
 <h3><code>PROXYCERTINFO</code>* d2i_PROXYCERTINFO_OLD (<code>PROXYCERTINFO</code> ** cert_info, unsigned char ** pp, long length)</h3>
 <p>Convert from a DER encoded ASN.1 string of a old PROXYCERTINFO to its internal structure. <code>Parameters:</code></p>
 <dl>
-<dd><i>cert_info</i> the resulting old PROXYCERTINFO in internal form<br />
- <i>pp</i> the DER encoded ASN.1 string containing the old PROXYCERTINFO<br />
+<dd><i>cert_info</i> the resulting old PROXYCERTINFO in internal form<br/>
+ <i>pp</i> the DER encoded ASN.1 string containing the old PROXYCERTINFO<br/>
  <i>length</i> the length of the buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

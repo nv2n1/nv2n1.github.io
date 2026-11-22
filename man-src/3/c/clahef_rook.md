@@ -11,7 +11,7 @@ description: "clahef_rook.f –"
 <p> clahef_rook.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clahef_rook</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />
+<p> subroutine <code>clahef_rook</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br/>
  <i> </i></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clahef_rook (characterUPLO, integerN, integerNB, integerKB, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex, dimension( ldw, * )W, integerLDW, integerINFO)</h3>

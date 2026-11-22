@@ -71,11 +71,11 @@ expression = ["!"]["("] valExp[")"][AND_OR expression] *valExp = pattern | expre
                                                                                AND_OR = "&amp;" | "|"
 </code></pre>
 <p> where: </p>
-<p>&#8220;!&#8221; not operator&#8211; negate the following pattern or expression<br />
-    &#8220;&amp;&#8221; and<br />
-    operator&#8211; logically and with the following expression<br />
-    &#8220;|&#8221; or<br />
-    operator&#8211; logically or with the following expression<br />
+<p>&#8220;!&#8221; not operator&#8211; negate the following pattern or expression<br/>
+    &#8220;&amp;&#8221; and<br/>
+    operator&#8211; logically and with the following expression<br/>
+    &#8220;|&#8221; or<br/>
+    operator&#8211; logically or with the following expression<br/>
     &#8220;(&#8221; open bracket&#8211; begin an inner expression.&#8221;)&#8221; close bracket&#8211; end an inner expression.&#8221;pattern&#8221; see the pattern definition that&#8217;s follow</p>
 <p> The expression itself should be put inside quotes (&#8216;&quot;&#8217;) to ensure that clients receive the complete expression. </p>
 <p> e.g.</p>
@@ -243,7 +243,7 @@ mm denotes the minute in 2 digits.
 ss denotes the seconds in 2 digits (default 00).
 seconds  is a number of seconds (is used for duration values)
 </pre>
-<p> If any of the optional date fields are omitted, the corresponding value of the current date is assumed. If CC is not specified, a YY of &lt; 70 means 20YY.<br />
+<p> If any of the optional date fields are omitted, the corresponding value of the current date is assumed. If CC is not specified, a YY of &lt; 70 means 20YY.<br/>
  Use of this option may cause unexpected results if the clocks of the hosts in the Grid Engine pool are out of sync. Also, the proper behavior of this option very much depends on the correct setting of the appropriate timezone, e.g. in the TZ environment variable (see for details), when the Grid Engine daemons and are invoked.</dd></dl>
 <h3><code>name</code></h3>
 <p> The <code>name</code> may be any arbitrary alphanumeric ASCII string, but may not contain &quot;

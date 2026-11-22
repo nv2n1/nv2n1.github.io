@@ -54,9 +54,9 @@ input file format:
   # but unfortunately it does.
 </pre>
 <h3>processing options</h3>
-<p>SOP Instance UID : +ud&#8211; uid &#8211; default keep same SOP Instance UID(default) + ua&#8211; uid &#8211; always always assign new UID RLE byte segment order : +bd&#8211; byte &#8211; order &#8211; default most significant byte first(default) + br&#8211; byte &#8211; order &#8211; reverse least significant byte first<br />
-#This option allows to decompress RLE compressed DICOM files in which the<br />
-#order of byte segments is encoded in incorrect order.This only affects<br />
+<p>SOP Instance UID : +ud&#8211; uid &#8211; default keep same SOP Instance UID(default) + ua&#8211; uid &#8211; always always assign new UID RLE byte segment order : +bd&#8211; byte &#8211; order &#8211; default most significant byte first(default) + br&#8211; byte &#8211; order &#8211; reverse least significant byte first<br/>
+#This option allows to decompress RLE compressed DICOM files in which the<br/>
+#order of byte segments is encoded in incorrect order.This only affects<br/>
 #images with more than one byte per sample.</p>
 <h3>output options</h3>
 <pre><code>

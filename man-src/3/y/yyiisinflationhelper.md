@@ -13,8 +13,8 @@ description: "QuantLib::YyiisInflationHelper – Year-on-year inflation-swap boo
 <p> Inherits <code>BootstrapHelper&lt; YoYInflationTermStructure &gt;</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>YyiisInflationHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;quote, const <code>Period</code> &amp;lag, const <code>Date</code> &amp;maturity, <code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const <code>DayCounter</code> &amp;dayCounter, <code>Frequency</code> frequency) </p>
-<p> void <code>setTermStructure</code> (<code>YoYInflationTermStructure</code> *)<br />
- <i>sets the term structure to be used for pricing </i><br />
+<p> void <code>setTermStructure</code> (<code>YoYInflationTermStructure</code> *)<br/>
+ <i>sets the term structure to be used for pricing </i><br/>
  <code>Real</code> <code>impliedQuote</code> () const </p>
 <h3>Protected Attributes</h3>
 <p><code>Period</code> <code>lag_</code> </p>

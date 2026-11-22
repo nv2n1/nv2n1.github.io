@@ -9,13 +9,13 @@ description: "ds-logpipe.py – Create and read from a named pipe instead of a l
 
 <p>ds-logpipe.py &#8211; Create and read from a named pipe instead of a log file </p>
 <h2>Synopsis</h2>
-<p><code>ds-logpipe.py</code> /full/path/to/namedpipe<br />
+<p><code>ds-logpipe.py</code> /full/path/to/namedpipe<br/>
 &nbsp;<wbr>[<i>-m maxlinestobuffer</i>]&nbsp;<wbr>[<i>-u userid</i>]&nbsp;<wbr>[<i>-s serverpidfile</i>]&nbsp;<wbr>[<i>-t servertimeout</i>]&nbsp;<wbr>[<i>&#8211;plugin=/path/to/pluginfile.py</i>]&nbsp;<wbr>[<i>pluginfile.arg=value</i>] </p>
 <h2>Description</h2>
 <p>The Named Pipe Log Script allows you to replace a log file with a named pipe attached to a script. The server can then send the log output to a script instead of to a log file. This allows you to do many different things such as: </p>
-<p>&nbsp;<wbr>*&nbsp;<wbr>log only certain events e.g. failed binds, connections from certain ip addresses, etc.<br />
-&nbsp;<wbr>*&nbsp;<wbr>log only lines that match a certain pattern<br />
-&nbsp;<wbr>*&nbsp;<wbr>log only the last N lines &#8211; useful for enabling full error log debug levels in production environments<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>log only certain events e.g. failed binds, connections from certain ip addresses, etc.<br/>
+&nbsp;<wbr>*&nbsp;<wbr>log only lines that match a certain pattern<br/>
+&nbsp;<wbr>*&nbsp;<wbr>log only the last N lines &#8211; useful for enabling full error log debug levels in production environments<br/>
 &nbsp;<wbr>*&nbsp;<wbr>send an email or other notification when a certain event is detected&nbsp;<wbr> </p>
 <p> The script is written in python, and allows plugins. By default, the script will log the last N lines (default 1000). There are two plugins provided &#8211; one to log only failed bind attempts, and one that will log only lines that match given regular expressions. </p>
 <h2>Options</h2>
@@ -38,24 +38,24 @@ description: "ds-logpipe.py – Create and read from a named pipe instead of a l
 <dt><code>pluginname.arg1=value &#8230; pluginname.argN=value</code></dt>
 <dd>You can specify arguments to plugins on the command line. If there is a plugin specified as &#8211;plugin=/full/path/to/pluginname.py, the arguments for that plugin are specified as <i>pluginname.argname=value</i>. The script parses these arguments and passes them to the plugin <i>pre</i> function as a python dict. IF there is more than one argument named <i>pluginname.argname</i> the values are passed as a python list.</dd></dl>
 <h2>Directory Server Notes</h2>
-<p>The directory server will usually need to be configured to log to the named pipe instead of the usual log file. For example, use the following LDIF to tell the server to use the file <i>access.pipe</i> for the access log:<br />
-&nbsp;<wbr>dn: cn=config<br />
-&nbsp;<wbr>changetype: modify<br />
-&nbsp;<wbr>replace: nsslapd-accesslog-maxlogsperdir<br />
-&nbsp;<wbr>nsslapd-accesslog-maxlogsperdir: 1<br />
-&nbsp;<wbr>&#8211;<br />
-&nbsp;<wbr>replace: nsslapd-accesslog-logexpirationtime<br />
-&nbsp;<wbr>nsslapd-accesslog-logexpirationtime: -1<br />
-&nbsp;<wbr>&#8211;<br />
-&nbsp;<wbr>replace: nsslapd-accesslog-logrotationtime<br />
-&nbsp;<wbr>nsslapd-accesslog-logrotationtime: -1<br />
-&nbsp;<wbr>&#8211;<br />
-&nbsp;<wbr>replace: nsslapd-accesslog<br />
-&nbsp;<wbr>nsslapd-accesslog:&nbsp;<wbr>/var/log/dirsrv/slapd-localhost/access.pipe<br />
-&nbsp;<wbr>&#8211;<br />
-&nbsp;<wbr>replace: nsslapd-accesslog-logbuffering<br />
+<p>The directory server will usually need to be configured to log to the named pipe instead of the usual log file. For example, use the following LDIF to tell the server to use the file <i>access.pipe</i> for the access log:<br/>
+&nbsp;<wbr>dn: cn=config<br/>
+&nbsp;<wbr>changetype: modify<br/>
+&nbsp;<wbr>replace: nsslapd-accesslog-maxlogsperdir<br/>
+&nbsp;<wbr>nsslapd-accesslog-maxlogsperdir: 1<br/>
+&nbsp;<wbr>&#8211;<br/>
+&nbsp;<wbr>replace: nsslapd-accesslog-logexpirationtime<br/>
+&nbsp;<wbr>nsslapd-accesslog-logexpirationtime: -1<br/>
+&nbsp;<wbr>&#8211;<br/>
+&nbsp;<wbr>replace: nsslapd-accesslog-logrotationtime<br/>
+&nbsp;<wbr>nsslapd-accesslog-logrotationtime: -1<br/>
+&nbsp;<wbr>&#8211;<br/>
+&nbsp;<wbr>replace: nsslapd-accesslog<br/>
+&nbsp;<wbr>nsslapd-accesslog:&nbsp;<wbr>/var/log/dirsrv/slapd-localhost/access.pipe<br/>
+&nbsp;<wbr>&#8211;<br/>
+&nbsp;<wbr>replace: nsslapd-accesslog-logbuffering<br/>
 &nbsp;<wbr>nsslapd-accesslog-logbuffering: off </p>
-<p> NOTE: Before doing this, you should save your current configuration so you can restore it later.<br />
+<p> NOTE: Before doing this, you should save your current configuration so you can restore it later.<br/>
 &nbsp;<wbr>ldapsearch &#8230; -s base -b&nbsp;<wbr>&quot;cn=config&quot;&nbsp;<wbr>nsslapd-accesslog-maxlogsperdir nsslapd-accesslog-logexpirationtime&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>nsslapd-accesslog-logrotationtime nsslapd-accesslog nsslapd-accesslog&nbsp;<wbr>&gt;&nbsp;<wbr>savedaccesslog.ldif </p>
 <p> The error log and audit log have similarly named configuration attributes e.g. nsslapd-errorlog, nsslapd-auditlog. Note that the audit log is disabled by default &#8211; use nsslapd-auditlog-logging-enabled: on to enable it. </p>
 <h2>Author</h2>
@@ -63,5 +63,5 @@ description: "ds-logpipe.py – Create and read from a named pipe instead of a l
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="https://fedorahosted.org/389/newticket.">https://fedorahosted.org/389/newticket.</a></p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2009 Red Hat, Inc.<br />
+<p>Copyright &#169; 2009 Red Hat, Inc.<br/>
  This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. This license is essentially the GNU General Public License version 2 with an exception for plug-in distribution.</p>

@@ -12,17 +12,17 @@ description: "ql/math/optimization/constraint.hpp – Abstract constraint class.
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/array.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>Constraint</code><br />
- <i>Base constraint class. </i><br />
- class <code>Impl</code><br />
- <i>Base class for constraint implementations. </i><br />
- class <code>NoConstraint</code><br />
- <i>No constraint. </i><br />
- class <code>PositiveConstraint</code><br />
- <i>Constraint imposing positivity to all arguments </i><br />
- class <code>BoundaryConstraint</code><br />
- <i>Constraint imposing all arguments to be in [low,high] </i><br />
- class <code>CompositeConstraint</code><br />
+<p> class <code>Constraint</code><br/>
+ <i>Base constraint class. </i><br/>
+ class <code>Impl</code><br/>
+ <i>Base class for constraint implementations. </i><br/>
+ class <code>NoConstraint</code><br/>
+ <i>No constraint. </i><br/>
+ class <code>PositiveConstraint</code><br/>
+ <i>Constraint imposing positivity to all arguments </i><br/>
+ class <code>BoundaryConstraint</code><br/>
+ <i>Constraint imposing all arguments to be in [low,high] </i><br/>
+ class <code>CompositeConstraint</code><br/>
  <i>Constraint enforcing both given sub-constraints </i></p>
 <h2>Detailed Description</h2>
 <p> Abstract constraint class. </p>

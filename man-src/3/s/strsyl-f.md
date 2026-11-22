@@ -10,7 +10,7 @@ description: "strsyl.f –"
 <p>strsyl.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>strsyl</code> (TRANA, TRANB, ISGN, M, N, A, LDA, B, LDB, C, LDC, SCALE, INFO)<br />
+<p>subroutine <code>strsyl</code> (TRANA, TRANB, ISGN, M, N, A, LDA, B, LDB, C, LDC, SCALE, INFO)<br/>
  <i></i><code>STRSYL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine strsyl (characterTRANA, characterTRANB, integerISGN, integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( ldc, * )C, integerLDC, realSCALE, integerINFO)</h3>

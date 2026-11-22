@@ -10,7 +10,7 @@ description: "daxpy.f –"
 <p>daxpy.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>daxpy</code> (N, DA, DX, INCX, DY, INCY)<br />
+<p>subroutine <code>daxpy</code> (N, DA, DX, INCX, DY, INCY)<br/>
  <i></i><code>DAXPY</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine daxpy (integerN, double precisionDA, double precision, dimension(*)DX, integerINCX, double precision, dimension(*)DY, integerINCY)</h3>

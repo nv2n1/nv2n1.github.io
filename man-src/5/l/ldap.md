@@ -27,7 +27,7 @@ description: "ldap.conf, .ldaprc – LDAP configuration file/environment variabl
 <p>Settings late in the list override earlier ones.</p>
 <h2>Syntax</h2>
 <p>The configuration options are case-insensitive; their value, on a case by case basis, may be case-sensitive. </p>
-<p> Blank lines are ignored.<br />
+<p> Blank lines are ignored.<br/>
  Lines beginning with a hash mark (`#&#8217;) are comments, and ignored. </p>
 <p> Valid lines are made of an option&#8217;s name (a sequence of non-blanks, conventionally written in uppercase, although not required), followed by a value. The value starts with the first non-blank character after the option&#8217;s name, and terminates at the end of the line, or at the last sequence of blanks before the end of the line. The tokenization of the value, if any, is delegated to the handler(s) for that option, if any. Quoting values that contain blanks may be incorrect, as the quotes would become part of the value. For example, </p>
 <pre> # Wrong - erroneous quotes:

@@ -10,9 +10,9 @@ description: "getuid, geteuid – get user identity"
 
 <p> getuid, geteuid &#8211; get user identity </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;unistd.h&gt;</code><br />
+<p> <code>#include &lt;unistd.h&gt;</code><br/>
  <code>#include &lt;sys/types.h&gt;</code> </p>
-<p> <code>uid_t getuid(void);</code><br />
+<p> <code>uid_t getuid(void);</code><br/>
  <code>uid_t geteuid(void);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>getuid</code>() returns the real user ID of the calling process. </p>

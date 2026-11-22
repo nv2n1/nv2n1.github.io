@@ -34,9 +34,9 @@ long syscall(long number, ...);
 <h3>Architecture-specific requirements</h3>
 <p> Each architecture ABI has its own requirements on how system call arguments are passed to the kernel. For system calls that have a glibc wrapper (e.g., most system calls), glibc handles the details of copying arguments to the right registers in a manner suitable for the architecture. However, when using <code>syscall</code>() to make a system call, the caller might need to handle architecture-dependent details; this requirement is most commonly encountered on certain 32-bit architectures. </p>
 <p> For example, on the ARM architecture Embedded ABI (EABI), a 64-bit value (e.g., <i>long long</i>) must be aligned to an even register pair. Thus, using <code>syscall</code>() instead of the wrapper provided by glibc, the <code><a href="/docs/linux/man/2-readahead/">readahead</a></code>(2) system call would be invoked as follows on the ARM architecture with the EABI in little endian mode: </p>
-<p> syscall(SYS_readahead, fd, 0,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(unsigned int)&nbsp;(offset&nbsp;&amp;&nbsp;0xFFFFFFFF),<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(unsigned int)&nbsp;(offset&nbsp;&gt;&gt;&nbsp;32),<br />
+<p> syscall(SYS_readahead, fd, 0,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(unsigned int)&nbsp;(offset&nbsp;&amp;&nbsp;0xFFFFFFFF),<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(unsigned int)&nbsp;(offset&nbsp;&gt;&gt;&nbsp;32),<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;count); </p>
 <p> Since the offset argument is 64 bits, and the first argument (<i>fd</i>) is passed in <i>r0</i>, the caller must manually split and align the 64-bit value so that it is passed in the <i>r2</i>/<i>r3</i> register pair. That means inserting a dummy value into <i>r1</i> (the second argument of 0). Care also must be taken so that the split follows endian conventions (according to the C ABI for the platform). </p>
 <p> Similar issues can occur on MIPS with the O32 ABI, on PowerPC and parisc with the 32-bit ABI, and on Xtensa. </p>
@@ -683,9 +683,9 @@ long syscall(long number, ...);
 <p> Note that these tables don&#8217;t cover the entire calling convention&#8212;some architectures may indiscriminately clobber other registers not listed here.</p>
 <h2>EXAMPLES</h2>
 <p> #define _GNU_SOURCE #include &lt;unistd.h&gt; #include &lt;sys/syscall.h&gt; #include &lt;sys/types.h&gt; #include &lt;signal.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
+<p> int main(int argc, char *argv[]) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pid_t tid; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tid&nbsp;=&nbsp;syscall(SYS_gettid);<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tid&nbsp;=&nbsp;syscall(SYS_gettid);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;syscall(SYS_tgkill, getpid(), tid, SIGHUP); }</p>
 <h2>SEE ALSO</h2>
 <p> <code>_syscall</code>(2), <code><a href="/docs/linux/man/2-intro/">intro</a></code>(2), <code><a href="/docs/linux/man/2-syscalls/">syscalls</a></code>(2), <code><a href="/docs/linux/man/3-errno/">errno</a></code>(3), <code><a href="/docs/linux/man/7-vdso/">vdso</a></code>(7)</p>

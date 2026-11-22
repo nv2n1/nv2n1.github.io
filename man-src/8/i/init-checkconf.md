@@ -41,7 +41,7 @@ description: "init-checkconf – manual page for init-checkconf"
 <h2>Reporting Bugs</h2>
 <p>Report bugs at &lt;<code><a rel="nofollow" href="https://launchpad.net/upstart/+bugs">https://launchpad.net/upstart/+bugs</a></code>&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2011-2013 Canonical Ltd.<br />
+<p>Copyright &#169; 2011-2013 Canonical Ltd.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-sh/">sh</a></code>(1) <code><a href="/docs/linux/man/5-init/">init</a></code>(5) <code><a href="/docs/linux/man/8-init/">init</a></code>(8) </p>

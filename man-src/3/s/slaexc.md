@@ -11,7 +11,7 @@ description: "slaexc.f –"
 <p> slaexc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slaexc</code> (WANTQ, N, T, LDT, Q, LDQ, J1, N1, N2, WORK, INFO)<br />
+<p> subroutine <code>slaexc</code> (WANTQ, N, T, LDT, Q, LDQ, J1, N1, N2, WORK, INFO)<br/>
  <i></i><code>SLAEXC</code> swaps adjacent diagonal blocks of a real upper quasi-triangular matrix in Schur canonical form, by an orthogonal similarity transformation.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaexc (logicalWANTQ, integerN, real, dimension( ldt, * )T, integerLDT, real, dimension( ldq, * )Q, integerLDQ, integerJ1, integerN1, integerN2, real, dimension( * )WORK, integerINFO)</h3>

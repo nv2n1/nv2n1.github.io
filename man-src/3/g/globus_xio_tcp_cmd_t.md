@@ -215,7 +215,7 @@ description: "Attributes and Cntls –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>listener_min_port</i> The lower bound on the listener port. (default 0 &#8212; no bound)<br />
+</dt><dd> <i>listener_min_port</i> The lower bound on the listener port. (default 0 &#8212; no bound)<br/>
  <i>listener_max_port</i> The upper bound on the listener port. (default 0 &#8212; no bound)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -227,7 +227,7 @@ description: "Attributes and Cntls –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>listener_min_port_out</i> The lower bound will be stored here.<br />
+</dt><dd> <i>listener_min_port_out</i> The lower bound will be stored here.<br/>
  <i>listener_max_port_out</i> The upper bound will be stored here.</dd></dl>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_TCP_GET_HANDLE</code>, globus_xio_system_socket_t *handle_out)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the tcp socket handle on an attr, handle, or server. </p>
@@ -308,7 +308,7 @@ description: "Attributes and Cntls –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>connector_min_port</i> The lower bound on the listener port. (default 0 &#8212; no bound)<br />
+</dt><dd> <i>connector_min_port</i> The lower bound on the listener port. (default 0 &#8212; no bound)<br/>
  <i>connector_max_port</i> The upper bound on the listener port. (default 0 &#8212; no bound)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -319,7 +319,7 @@ description: "Attributes and Cntls –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>connector_min_port_out</i> The lower bound will be stored here.<br />
+</dt><dd> <i>connector_min_port_out</i> The lower bound will be stored here.<br/>
  <i>connector_max_port_out</i> The upper bound will be stored here.</dd></dl>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_TCP_SET_KEEPALIVE</code>, globus_bool_tkeepalive)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Enable tcp keepalive. </p>
@@ -341,14 +341,14 @@ description: "Attributes and Cntls –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>linger</i> GLOBUS_TRUE to enable, GLOBUS_FALSE to disable (default)<br />
+</dt><dd> <i>linger</i> GLOBUS_TRUE to enable, GLOBUS_FALSE to disable (default)<br/>
  <i>linger_time</i> The time (in seconds) to block at close time if linger is true and data is queued in the socket buffer.</dd></dl>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_TCP_GET_LINGER</code>, globus_bool_t *linger_out, int *linger_time_out)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the tcp linger flag and time. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>linger_out</i> The linger flag will be stored here.<br />
+</dt><dd> <i>linger_out</i> The linger flag will be stored here.<br/>
  <i>linger_time_out</i> The linger time will be set here.</dd></dl>
 <h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_TCP_SET_OOBINLINE</code>, globus_bool_toobinline)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Receive out of band data (tcp urgent data) in normal stream. </p>
@@ -466,14 +466,14 @@ description: "Attributes and Cntls –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>linger</i> GLOBUS_TRUE to enable, GLOBUS_FALSE to disable (default)<br />
+</dt><dd> <i>linger</i> GLOBUS_TRUE to enable, GLOBUS_FALSE to disable (default)<br/>
  <i>linger_time</i> The time (in seconds) to block at close time if linger is true and data is queued in the socket buffer.</dd></dl>
 <h3>globus_result_t globus_xio_handle_cntl (handle, driver, <code>GLOBUS_XIO_TCP_GET_LINGER</code>, globus_bool_t *linger_out, int *linger_time_out)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the tcp linger flag and time. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>linger_out</i> The linger flag will be stored here.<br />
+</dt><dd> <i>linger_out</i> The linger flag will be stored here.<br/>
  <i>linger_time_out</i> The linger time will be set here.</dd></dl>
 <h3>globus_result_t globus_xio_handle_cntl (handle, driver, <code>GLOBUS_XIO_TCP_SET_OOBINLINE</code>, globus_bool_toobinline)</h3>
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Receive out of band data (tcp urgent data) in normal stream. </p>

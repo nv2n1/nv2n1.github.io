@@ -10,7 +10,7 @@ description: "mm-config – OSSP mm library configuration/build utility"
 
 <p> <code>mm-config</code> &#8211; OSSP mm library configuration/build utility</p>
 <h2>VERSION</h2>
-<p> <font SIZE="-1">OSSP</font> mm <font SIZE="-1">1.4.1 (10-Aug-2006)</font></p>
+<p> OSSP mm 1.4.1 (10-Aug-2006)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mm-config</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<code>&#8211;cflags</code>] [<code>&#8211;ldflags</code>] [<code>&#8211;libs</code>]</p>
 <h2>DESCRIPTION</h2>

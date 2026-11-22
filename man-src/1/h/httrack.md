@@ -347,18 +347,18 @@ description: "httrack – offline browser : copy websites to a local directory"
 <dt>-N1099</dt>
 <dd> Identical to N99 exept that there is no &quot;web&quot; directory</dd></dl>
 <h3>Details: User-defined option N</h3>
-<p>%n&nbsp;<wbr>&nbsp;<wbr>Name of file without file type&nbsp;<wbr>(ex: image)<br />
-%N&nbsp;<wbr>&nbsp;<wbr>Name of file, including file type&nbsp;<wbr>(ex: image.gif)<br />
-%t&nbsp;<wbr>&nbsp;<wbr>File type&nbsp;<wbr>(ex: gif)<br />
-%p&nbsp;<wbr>&nbsp;<wbr>Path&nbsp;<wbr>[without ending&nbsp;<wbr>/]&nbsp;<wbr>(ex:&nbsp;<wbr>/someimages)<br />
-%h&nbsp;<wbr>&nbsp;<wbr>Host name&nbsp;<wbr>(ex:&nbsp;<wbr><a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>)<br />
-%M&nbsp;<wbr>&nbsp;<wbr>URL MD5&nbsp;<wbr>(128 bits, 32 ascii bytes)<br />
-%Q&nbsp;<wbr>&nbsp;<wbr>query string MD5&nbsp;<wbr>(128 bits, 32 ascii bytes)<br />
-%k&nbsp;<wbr>&nbsp;<wbr>full query string<br />
-%r&nbsp;<wbr>&nbsp;<wbr>protocol name&nbsp;<wbr>(ex: http)<br />
-%q&nbsp;<wbr>&nbsp;<wbr>small query string MD5&nbsp;<wbr>(16 bits, 4 ascii bytes)<br />
-%s?&nbsp;<wbr>&nbsp;<wbr>Short name version&nbsp;<wbr>(ex:&nbsp;<wbr>%sN)<br />
-%[param]&nbsp;<wbr>&nbsp;<wbr>param variable in query string<br />
+<p>%n&nbsp;<wbr>&nbsp;<wbr>Name of file without file type&nbsp;<wbr>(ex: image)<br/>
+%N&nbsp;<wbr>&nbsp;<wbr>Name of file, including file type&nbsp;<wbr>(ex: image.gif)<br/>
+%t&nbsp;<wbr>&nbsp;<wbr>File type&nbsp;<wbr>(ex: gif)<br/>
+%p&nbsp;<wbr>&nbsp;<wbr>Path&nbsp;<wbr>[without ending&nbsp;<wbr>/]&nbsp;<wbr>(ex:&nbsp;<wbr>/someimages)<br/>
+%h&nbsp;<wbr>&nbsp;<wbr>Host name&nbsp;<wbr>(ex:&nbsp;<wbr><a rel="nofollow" href="http://www.someweb.com">www.someweb.com</a>)<br/>
+%M&nbsp;<wbr>&nbsp;<wbr>URL MD5&nbsp;<wbr>(128 bits, 32 ascii bytes)<br/>
+%Q&nbsp;<wbr>&nbsp;<wbr>query string MD5&nbsp;<wbr>(128 bits, 32 ascii bytes)<br/>
+%k&nbsp;<wbr>&nbsp;<wbr>full query string<br/>
+%r&nbsp;<wbr>&nbsp;<wbr>protocol name&nbsp;<wbr>(ex: http)<br/>
+%q&nbsp;<wbr>&nbsp;<wbr>small query string MD5&nbsp;<wbr>(16 bits, 4 ascii bytes)<br/>
+%s?&nbsp;<wbr>&nbsp;<wbr>Short name version&nbsp;<wbr>(ex:&nbsp;<wbr>%sN)<br/>
+%[param]&nbsp;<wbr>&nbsp;<wbr>param variable in query string<br/>
 %[param:before:after:empty:notfound]&nbsp;<wbr>&nbsp;<wbr>advanced variable extraction</p>
 <h3>Details: User-defined option N and advanced variable extraction</h3>
 <p>%[param:before:after:empty:notfound]</p>
@@ -445,9 +445,9 @@ description: "httrack – offline browser : copy websites to a local directory"
 <p> Errors/Warnings are reported to <i>hts-log.txt</i> by default, or to stderr if the <i>-v</i> option was specified.</p>
 <h2>LIMITS</h2>
 <p> These are the principals limits of HTTrack for that moment. Note that we did not heard about any other utility that would have solved them. </p>
-<p> <font SIZE="-1">&#8211; Several scripts generating complex filenames may not find them (ex: img.src=&#8217;image&#8217;+a+Mobj.dst+&#8217;.gif&#8217;)</font> </p>
-<p> <font SIZE="-1">&#8211; Some java classes may not find some files on them (class included)</font> </p>
-<p> <font SIZE="-1">&#8211; Cgi-bin links may not work properly in some cases (parameters needed). To avoid them: use filters like -*cgi-bin*</font></p>
+<p> &#8211; Several scripts generating complex filenames may not find them (ex: img.src=&#8217;image&#8217;+a+Mobj.dst+&#8217;.gif&#8217;) </p>
+<p> &#8211; Some java classes may not find some files on them (class included) </p>
+<p> &#8211; Cgi-bin links may not work properly in some cases (parameters needed). To avoid them: use filters like -*cgi-bin*</p>
 <h2>BUGS</h2>
 <p> Please reports bugs to <code>&lt;bugs [at] httrack.com&gt;.</code> Include a complete, self-contained example that will allow the bug to be reproduced, and say which version of httrack you are using. Do not forget to detail options used, OS version, and any other information you deem necessary.</p>
 <h2>COPYRIGHT</h2>

@@ -11,13 +11,13 @@ description: "GRAM Protocol –"
 <p> GRAM Protocol &#8211; </p>
 <p> GRAM Protocol.</p>
 <h3>Modules</h3>
-<p> <code>Functions</code><br />
- <i>GRAM Functions. </i><br />
- <code>GRAM Error codes</code><br />
- <i>GRAM Error codes. </i><br />
- <code>GRAM Signals</code><br />
- <i>GRAM Signals. </i><br />
- <code>GRAM Job States</code><br />
+<p> <code>Functions</code><br/>
+ <i>GRAM Functions. </i><br/>
+ <code>GRAM Error codes</code><br/>
+ <i>GRAM Error codes. </i><br/>
+ <code>GRAM Signals</code><br/>
+ <i>GRAM Signals. </i><br/>
+ <code>GRAM Job States</code><br/>
  <i>GRAM Job States. </i></p>
 <h2>Detailed Description</h2>
 <p> GRAM Protocol. </p>

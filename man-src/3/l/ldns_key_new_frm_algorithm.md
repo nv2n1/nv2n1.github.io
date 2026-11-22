@@ -10,7 +10,7 @@ description: "ldns_key_new_frm_algorithm, ldns_key_new_frm_fp, ldns_key_new_frm_
 
 <p> ldns_key_new_frm_algorithm, ldns_key_new_frm_fp, ldns_key_new_frm_fp_l </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_key* ldns_key_new_frm_algorithm(ldns_signing_algorithm a, uint16_t size); </p>

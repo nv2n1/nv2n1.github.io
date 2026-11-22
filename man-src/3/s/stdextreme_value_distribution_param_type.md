@@ -10,8 +10,8 @@ description: "std::extreme_value_distribution< _RealType >::param_type –"
 <p>std::extreme_value_distribution&lt; _RealType &gt;::param_type &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Public Types</h3>
-<p>typedef<br />
- <code>extreme_value_distribution</code><br />
+<p>typedef<br/>
+ <code>extreme_value_distribution</code><br/>
  &lt; _RealType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>param_type (_RealType __a=_RealType(0), _RealType __b=_RealType(1))

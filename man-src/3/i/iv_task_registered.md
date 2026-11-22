@@ -17,9 +17,9 @@ struct iv_task {
     void (*handler)(void *);
 };
 </code></pre>
-<p> <code>void IV_TASK_INIT(struct iv_task *</code><i>task</i><code>);</code><br />
- <code>void iv_task_register(struct iv_task *</code><i>task</i><code>);</code><br />
- <code>void iv_task_unregister(struct iv_task *</code><i>task</i><code>);</code><br />
+<p> <code>void IV_TASK_INIT(struct iv_task *</code><i>task</i><code>);</code><br/>
+ <code>void iv_task_register(struct iv_task *</code><i>task</i><code>);</code><br/>
+ <code>void iv_task_unregister(struct iv_task *</code><i>task</i><code>);</code><br/>
  <code>int iv_task_registered(struct iv_task *</code><i>task</i><code>);</code> </p>
 <h2>DESCRIPTION</h2>
 <p> The functions <code>iv_task_register</code> and <code>iv_task_unregister</code> register, respectively unregister, a task with the current thread&#8217;s ivykis event loop. <code>iv_task_registered</code> on a task returns true if that task is currently registered with ivykis. </p>

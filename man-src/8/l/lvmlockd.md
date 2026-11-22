@@ -9,64 +9,64 @@ description: "lvmlockd — LVM locking daemon"
 
 <p>lvmlockd &#8212; LVM locking daemon</p>
 <h2>Description</h2>
-<p>LVM commands use lvmlockd to coordinate access to shared storage.<br />
- When LVM is used on devices shared by multiple hosts, locks will: &bull; coordinate reading and writing of LVM metadata<br />
- &bull; validate caching of LVM metadata<br />
- &bull; prevent concurrent activation of logical volumes<br />
- lvmlockd uses an external lock manager to perform basic locking.<br />
- Lock manager (lock type) options are: &bull; sanlock: places locks on disk within LVM storage.<br />
+<p>LVM commands use lvmlockd to coordinate access to shared storage.<br/>
+ When LVM is used on devices shared by multiple hosts, locks will: &bull; coordinate reading and writing of LVM metadata<br/>
+ &bull; validate caching of LVM metadata<br/>
+ &bull; prevent concurrent activation of logical volumes<br/>
+ lvmlockd uses an external lock manager to perform basic locking.<br/>
+ Lock manager (lock type) options are: &bull; sanlock: places locks on disk within LVM storage.<br/>
  &bull; dlm: uses network communication and a cluster manager. </p>
 <h2>Options</h2>
 <p>lvmlockd [options] </p>
 <p> For default settings, see lvmlockd -h. </p>
-<p> <code>&#8211;help | -h</code><br />
+<p> <code>&#8211;help | -h</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Show this help information. </p>
-<p> <code>&#8211;version | -V</code><br />
+<p> <code>&#8211;version | -V</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Show version of lvmlockd. </p>
-<p> <code>&#8211;test | -T</code><br />
+<p> <code>&#8211;test | -T</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Test mode, do not call lock manager. </p>
-<p> <code>&#8211;foreground | -f</code><br />
+<p> <code>&#8211;foreground | -f</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Don&#8217;t fork. </p>
-<p> <code>&#8211;daemon-debug | -D</code><br />
+<p> <code>&#8211;daemon-debug | -D</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Don&#8217;t fork and print debugging to stdout. </p>
-<p> <code>&#8211;pid-file | -p</code> <i>path</i><br />
+<p> <code>&#8211;pid-file | -p</code> <i>path</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Set path to the pid file. </p>
-<p> <code>&#8211;socket-path | -s</code> <i>path</i><br />
+<p> <code>&#8211;socket-path | -s</code> <i>path</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Set path to the socket to listen on. </p>
-<p> <code>&#8211;syslog-priority | -S err|warning|debug</code><br />
+<p> <code>&#8211;syslog-priority | -S err|warning|debug</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Write log messages from this level up to syslog. </p>
-<p> <code>&#8211;gl-type | -g sanlock|dlm</code><br />
+<p> <code>&#8211;gl-type | -g sanlock|dlm</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Set global lock type to be sanlock or dlm. </p>
-<p> <code>&#8211;host-id | -i</code> <i>num</i><br />
+<p> <code>&#8211;host-id | -i</code> <i>num</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Set the local sanlock host id. </p>
-<p> <code>&#8211;host-id-file | -F</code> <i>path</i><br />
+<p> <code>&#8211;host-id-file | -F</code> <i>path</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>A file containing the local sanlock host_id. </p>
-<p> <code>&#8211;sanlock-timeout | -o</code> <i>seconds</i><br />
+<p> <code>&#8211;sanlock-timeout | -o</code> <i>seconds</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Override the default sanlock I/O timeout. </p>
-<p> <code>&#8211;adopt | -A 0|1</code><br />
+<p> <code>&#8211;adopt | -A 0|1</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Adopt locks from a previous instance of lvmlockd.</p>
 <h2>Usage</h2>
 <h3>Initial set up</h3>
 <p>Using LVM with lvmlockd for the first time includes some one-time set up steps:</p>
 <h3>1. choose a lock manager</h3>
-<p><i>dlm</i><br />
+<p><i>dlm</i><br/>
  If dlm (or corosync) are already being used by other cluster software, then select dlm. dlm uses corosync which requires additional configuration beyond the scope of this document. See corosync and dlm documentation for instructions on configuration, setup and usage. </p>
-<p> <i>sanlock</i><br />
+<p> <i>sanlock</i><br/>
  Choose sanlock if dlm/corosync are not otherwise required. sanlock does not depend on any clustering software or configuration.</p>
 <h3>2. configure hosts to use lvmlockd</h3>
 <p>On all hosts running lvmlockd, configure lvm.conf: </p>
 <pre>locking_type = 1
 use_lvmlockd = 1</pre>
-<p><i>sanlock</i><br />
- Assign each host a unique host_id in the range 1-2000 by setting<br />
+<p><i>sanlock</i><br/>
+ Assign each host a unique host_id in the range 1-2000 by setting<br/>
  /etc/lvm/lvmlocal.conf local/host_id</p>
 <h3>3. start lvmlockd</h3>
 <p>Use a service/init file if available, or just run &quot;lvmlockd&quot;.</p>
 <h3>4. start lock manager</h3>
-<p><i>sanlock</i><br />
+<p><i>sanlock</i><br/>
  systemctl start wdmd sanlock </p>
-<p> <i>dlm</i><br />
- Follow external clustering documentation when applicable, otherwise:<br />
+<p> <i>dlm</i><br/>
+ Follow external clustering documentation when applicable, otherwise:<br/>
  systemctl start corosync dlm</p>
 <h3>5. create VG on shared devices</h3>
 <p>vgcreate &#8211;shared &lt;vgname&gt; &lt;devices&gt; </p>
@@ -79,16 +79,16 @@ use_lvmlockd = 1</pre>
 <p> An LV activated exclusively on one host cannot be activated on another. When multiple hosts need to use the same LV concurrently, the LV can be activated with a shared lock (see lvchange options -aey vs -asy.) (Shared locks are disallowed for certain LV types that cannot be used from multiple hosts.)</p>
 <h3>Normal start up and shut down</h3>
 <p>After initial set up, start up and shut down include the following general steps. They can be performed manually or using the system service manager. </p>
-<p> &bull; start lvmetad<br />
- &bull; start lvmlockd<br />
- &bull; start lock manager<br />
- &bull; vgchange &#8211;lock-start<br />
+<p> &bull; start lvmetad<br/>
+ &bull; start lvmlockd<br/>
+ &bull; start lock manager<br/>
+ &bull; vgchange &#8211;lock-start<br/>
  &bull; activate LVs in shared VGs </p>
 <p> The shut down sequence is the reverse: </p>
-<p> &bull; deactivate LVs in shared VGs<br />
- &bull; vgchange &#8211;lock-stop<br />
- &bull; stop lock manager<br />
- &bull; stop lvmlockd<br />
+<p> &bull; deactivate LVs in shared VGs<br/>
+ &bull; vgchange &#8211;lock-stop<br/>
+ &bull; stop lock manager<br/>
+ &bull; stop lvmlockd<br/>
  &bull; stop lvmetad</p>
 <h2>Topics</h2>
 <h3>VG access control</h3>
@@ -159,20 +159,20 @@ use_lvmlockd = 1</pre>
 <p>Starting a lockd VG (vgchange &#8211;lock-start) causes the lock manager to start (join) the lockspace for the VG on the host where it is run. This makes locks for the VG available to LVM commands on the host. Before a VG is started, only LVM commands that read/display the VG are allowed to continue without locks (and with a warning). </p>
 <p> Stopping a lockd VG (vgchange &#8211;lock-stop) causes the lock manager to stop (leave) the lockspace for the VG on the host where it is run. This makes locks for the VG inaccessible to the host. A VG cannot be stopped while it has active LVs. </p>
 <p> When using the lock type sanlock, starting a VG can take a long time (potentially minutes if the host was previously shut down without cleanly stopping the VG.) </p>
-<p> A lockd VG can be started after all the following are true:<br />
- &bull; lvmlockd is running<br />
- &bull; the lock manager is running<br />
+<p> A lockd VG can be started after all the following are true:<br/>
+ &bull; lvmlockd is running<br/>
+ &bull; the lock manager is running<br/>
  &bull; the VG is visible to the system </p>
 <p> A lockd VG can be stopped if all LVs are deactivated. </p>
-<p> All lockd VGs can be started/stopped using:<br />
- vgchange &#8211;lock-start<br />
+<p> All lockd VGs can be started/stopped using:<br/>
+ vgchange &#8211;lock-start<br/>
  vgchange &#8211;lock-stop </p>
-<p> Individual VGs can be started/stopped using:<br />
- vgchange &#8211;lock-start &lt;vgname&gt; &#8230;<br />
+<p> Individual VGs can be started/stopped using:<br/>
+ vgchange &#8211;lock-start &lt;vgname&gt; &#8230;<br/>
  vgchange &#8211;lock-stop &lt;vgname&gt; &#8230; </p>
-<p> To make vgchange not wait for start to complete:<br />
+<p> To make vgchange not wait for start to complete:<br/>
  vgchange &#8211;lock-start &#8211;lock-opt nowait &#8230; </p>
-<p> lvmlockd can be asked directly to stop all lockspaces:<br />
+<p> lvmlockd can be asked directly to stop all lockspaces:<br/>
  lvmlockctl &#8211;stop-lockspaces </p>
 <p> To start only selected lockd VGs, use the lvm.conf activation/lock_start_list. When defined, only VG names in this list are started by vgchange. If the list is not defined (the default), all visible lockd VGs are started. To start only &quot;vg1&quot;, use the following lvm.conf configuration: </p>
 <pre>activation {
@@ -190,8 +190,8 @@ use_lvmlockd = 1</pre>
 <p>To optimize the use of LVM with lvmlockd, be aware of the three kinds of locks and when they are used: </p>
 <p> <i>GL lock</i> </p>
 <p> The global lock (GL lock) is associated with global information, which is information not isolated to a single VG. This includes: </p>
-<p> &bull; The global VG namespace.<br />
- &bull; The set of orphan PVs and unused devices.<br />
+<p> &bull; The global VG namespace.<br/>
+ &bull; The set of orphan PVs and unused devices.<br/>
  &bull; The properties of orphan PVs, e.g. PV size. </p>
 <p> The global lock is used in shared mode by commands that read this information, or in exclusive mode by commands that change it. </p>
 <p> The command &#8216;vgs&#8217; acquires the global lock in shared mode because it reports the list of all VG names. </p>
@@ -243,24 +243,24 @@ use_lvmlockd = 1</pre>
 <p> If the sanlock daemon fails or exits while a lockspace is started, the local watchdog will reset the host. This is necessary to protect any application resources that depend on sanlock leases which will be lost without sanlock running.</p>
 <h3>changing dlm cluster name</h3>
 <p>When a dlm VG is created, the cluster name is saved in the VG metadata. To use the VG, a host must be in the named dlm cluster. If the dlm cluster name changes, or the VG is moved to a new cluster, the dlm cluster name saved in the VG must also be changed. </p>
-<p> To see the dlm cluster name saved in the VG, use the command:<br />
+<p> To see the dlm cluster name saved in the VG, use the command:<br/>
  vgs -o+locktype,lockargs &lt;vgname&gt; </p>
 <p> To change the dlm cluster name in the VG when the VG is still used by the original cluster: </p>
 <dl>
 <dt>&bull;</dt>
-<dd>Stop the VG on all hosts:<br />
+<dd>Stop the VG on all hosts:<br/>
  vgchange &#8211;lock-stop &lt;vgname&gt; </dd>
 <dt>&bull;</dt>
-<dd>Change the VG lock type to none:<br />
+<dd>Change the VG lock type to none:<br/>
  vgchange &#8211;lock-type none &lt;vgname&gt; </dd>
 <dt>&bull;</dt>
-<dd>Change the dlm cluster name on the host or move the VG to the new cluster. The new dlm cluster must now be active on the host. Verify the new name by:<br />
+<dd>Change the dlm cluster name on the host or move the VG to the new cluster. The new dlm cluster must now be active on the host. Verify the new name by:<br/>
  cat /sys/kernel/config/dlm/cluster/cluster_name </dd>
 <dt>&bull;</dt>
-<dd>Change the VG lock type back to dlm which sets the new cluster name:<br />
+<dd>Change the VG lock type back to dlm which sets the new cluster name:<br/>
  vgchange &#8211;lock-type dlm &lt;vgname&gt; </dd>
 <dt>&bull;</dt>
-<dd>Start the VG on hosts to use it:<br />
+<dd>Start the VG on hosts to use it:<br/>
  vgchange &#8211;lock-start &lt;vgname&gt; </dd>
 </dl>
 <p> To change the dlm cluster name in the VG when the dlm cluster name has already changed, or the VG has already moved to a different cluster: </p>
@@ -268,27 +268,27 @@ use_lvmlockd = 1</pre>
 <dt>&bull;</dt>
 <dd>Ensure the VG is not being used by any hosts. </dd>
 <dt>&bull;</dt>
-<dd>The new dlm cluster must be active on the host making the change. The current dlm cluster name can be seen by:<br />
+<dd>The new dlm cluster must be active on the host making the change. The current dlm cluster name can be seen by:<br/>
  cat /sys/kernel/config/dlm/cluster/cluster_name </dd>
 <dt>&bull;</dt>
-<dd>Change the VG lock type to none:<br />
+<dd>Change the VG lock type to none:<br/>
  vgchange &#8211;lock-type none &#8211;force &lt;vgname&gt; </dd>
 <dt>&bull;</dt>
-<dd>Change the VG lock type back to dlm which sets the new cluster name:<br />
+<dd>Change the VG lock type back to dlm which sets the new cluster name:<br/>
  vgchange &#8211;lock-type dlm &lt;vgname&gt; </dd>
 <dt>&bull;</dt>
-<dd>Start the VG on hosts to use it:<br />
+<dd>Start the VG on hosts to use it:<br/>
  vgchange &#8211;lock-start &lt;vgname&gt; </dd>
 </dl>
 <h3>changing a local VG to a lockd VG</h3>
 <p>All LVs must be inactive to change the lock type. </p>
 <p> lvmlockd must be configured and running as described in USAGE. </p>
-<p> Change a local VG to a lockd VG with the command:<br />
+<p> Change a local VG to a lockd VG with the command:<br/>
  vgchange &#8211;lock-type sanlock|dlm &lt;vgname&gt; </p>
-<p> Start the VG on hosts to use it:<br />
+<p> Start the VG on hosts to use it:<br/>
  vgchange &#8211;lock-start &lt;vgname&gt;</p>
 <h3>changing a lockd VG to a local VG</h3>
-<p>Stop the lockd VG on all hosts, then run:<br />
+<p>Stop the lockd VG on all hosts, then run:<br/>
  vgchange &#8211;lock-type none &lt;vgname&gt; </p>
 <p> To change a VG from one lockd type to another (i.e. between sanlock and dlm), first change it to a local VG, then to the new type.</p>
 <h3>changing a clvm VG to a lockd VG</h3>
@@ -301,13 +301,13 @@ use_lvmlockd = 1</pre>
 <dd>-cn &lt;vgname&gt;</dd></dl>
 <p> After the VG is local, follow the steps described in &quot;changing a local VG to a lockd VG&quot;.</p>
 <h3>limitations of lockd VGs</h3>
-<p>Things that do not yet work in lockd VGs:<br />
- &bull; creating a new thin pool and a new thin LV in a single command<br />
- &bull; using lvcreate to create cache pools or cache LVs (use lvconvert)<br />
- &bull; using external origins for thin LVs<br />
- &bull; splitting mirrors and snapshots from LVs<br />
- &bull; vgsplit<br />
- &bull; vgmerge<br />
+<p>Things that do not yet work in lockd VGs:<br/>
+ &bull; creating a new thin pool and a new thin LV in a single command<br/>
+ &bull; using lvcreate to create cache pools or cache LVs (use lvconvert)<br/>
+ &bull; using external origins for thin LVs<br/>
+ &bull; splitting mirrors and snapshots from LVs<br/>
+ &bull; vgsplit<br/>
+ &bull; vgmerge<br/>
  &bull; resizing an LV that is active in the shared mode on multiple hosts</p>
 <h3>lvmlockd changes from clvmd</h3>
 <p>(See above for converting an existing clvm VG to a lockd VG.) </p>

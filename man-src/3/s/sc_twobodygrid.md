@@ -15,22 +15,22 @@ description: "sc::TwoBodyGrid –"
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>TwoBodyGrid</code> (<code>StateIn</code> &amp;) </p>
-<p> <code>TwoBodyGrid</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor.<br />
- void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> <code>TwoBodyGrid</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor.<br/>
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  const std::string &amp; <code>name</code> () const </p>
 <p> int <code>nelem</code> () const </p>
 <p> const <code>SCVector3</code> &amp; <code>origin</code> () const </p>
-<p> <code>SCVector3</code> <code>xyz1</code> (int i, const <code>SCVector3</code> &amp;O=<code>SCVector3</code>(0.0)) const<br />
- <i>Cartesian coordinates of particle 1 at grid </i><code>point</code> i with respect to origin O.<br />
- <code>SCVector3</code> <code>xyz2</code> (int i, const <code>SCVector3</code> &amp;O=<code>SCVector3</code>(0.0)) const<br />
- <i>Cartesian coordinates of particle 2 at grid </i><code>point</code> i with respect to origin O.<br />
- <code>SCVector3</code> <code>rtp1</code> (int i, const <code>SCVector3</code> &amp;O=<code>SCVector3</code>(0.0)) const<br />
- <i>Spherical polar coordinates of particle 1 at grid </i><code>point</code> i with respect to origin O.<br />
- <code>SCVector3</code> <code>rtp2</code> (int i, const <code>SCVector3</code> &amp;O=<code>SCVector3</code>(0.0)) const<br />
- <i>Spherical polar coordinates of particle 2 at grid </i><code>point</code> i with respect to origin O.<br />
- void <code>print</code> (std::ostream &amp;o=ExEnv::out0()) const<br />
+<p> <code>SCVector3</code> <code>xyz1</code> (int i, const <code>SCVector3</code> &amp;O=<code>SCVector3</code>(0.0)) const<br/>
+ <i>Cartesian coordinates of particle 1 at grid </i><code>point</code> i with respect to origin O.<br/>
+ <code>SCVector3</code> <code>xyz2</code> (int i, const <code>SCVector3</code> &amp;O=<code>SCVector3</code>(0.0)) const<br/>
+ <i>Cartesian coordinates of particle 2 at grid </i><code>point</code> i with respect to origin O.<br/>
+ <code>SCVector3</code> <code>rtp1</code> (int i, const <code>SCVector3</code> &amp;O=<code>SCVector3</code>(0.0)) const<br/>
+ <i>Spherical polar coordinates of particle 1 at grid </i><code>point</code> i with respect to origin O.<br/>
+ <code>SCVector3</code> <code>rtp2</code> (int i, const <code>SCVector3</code> &amp;O=<code>SCVector3</code>(0.0)) const<br/>
+ <i>Spherical polar coordinates of particle 2 at grid </i><code>point</code> i with respect to origin O.<br/>
+ void <code>print</code> (std::ostream &amp;o=ExEnv::out0()) const<br/>
  <i>Prints out this. </i></p>
 <h2>Detailed Description</h2>
 <p>Class <code>TwoBodyGrid</code> describes a set of coordinates of 2 particles.</p>

@@ -38,23 +38,23 @@ description: "nfdump – netflow display and analyze program"
 <dd> Set sort order to print flows or aggregated flows. <i>order</i> can be:</dd>
 <dl>
 <dt>
-</dt><dd> flows Sort according the number of flows<br />
- packets Sort according to (in)packets<br />
- ipkg Same as packets<br />
- opkg Sort according to output packets<br />
- bytes Sort according to (in)bytes<br />
- ibyte Same as bytes<br />
- obyte Sort according to output bytes<br />
- pps Sort according to (in)packets per second<br />
- ipps Same as ipps<br />
- opps Sort according to out packets per second<br />
- bps Sort according to (in)bytes per second<br />
- ibps Same as bps<br />
- obps Sort according to output bytes per second<br />
- bpp Sort according to (in)bytes per packet<br />
- ibpp Same as bpp<br />
- obpp Sort according to output packets<br />
- tstart Sort according to start time of flow &#8211; former -m<br />
+</dt><dd> flows Sort according the number of flows<br/>
+ packets Sort according to (in)packets<br/>
+ ipkg Same as packets<br/>
+ opkg Sort according to output packets<br/>
+ bytes Sort according to (in)bytes<br/>
+ ibyte Same as bytes<br/>
+ obyte Sort according to output bytes<br/>
+ pps Sort according to (in)packets per second<br/>
+ ipps Same as ipps<br/>
+ opps Sort according to out packets per second<br/>
+ bps Sort according to (in)bytes per second<br/>
+ ibps Same as bps<br/>
+ obps Sort according to output bytes per second<br/>
+ bpp Sort according to (in)bytes per packet<br/>
+ ibpp Same as bpp<br/>
+ obpp Sort according to output packets<br/>
+ tstart Sort according to start time of flow &#8211; former -m<br/>
  tend&quot; Sort according to end time of flows</dd></dl>
 <dt><code>-w </code><i>outputfile</i></dt>
 <dd> If specified writes binary netflow records to <i>outputfile</i> ready to be processed again with nfdump. The default output is ASCII on stdout. In combination with options -m, -a, -b, and -B write aggregated and/or sorted flow cache in binary format to disk.</dd>
@@ -70,46 +70,46 @@ description: "nfdump – netflow display and analyze program"
 <dd> Similar to Flexible Netflow (FNF), netflow records can be aggregated by any number of given v9 fields. <i>aggregation</i> is a &#8216;,&#8217; separated list of recognised tags of the following list:</dd>
 <dl>
 <dt>
-</dt><dd> proto IP protocol<br />
- srcip Source IP address<br />
- dstip Destination IP address<br />
- srcip4/net IPv4 source IP address with applied netmask<br />
- srcip6/net IPv6 source IP address with applied netmask<br />
- dstip4/net IPv4 destination IP address with applied netmask<br />
- dstip6/net IPv6 destination IP address with applied netmask<br />
- srcnet Apply netmask srcmask in netflow record for source IP<br />
- dstnet Apply netmask dstmask in netflow record for dest IP<br />
- srcport Source port<br />
- dstport Destination port<br />
- srcmask Source mask<br />
- dstmask Destination mask<br />
- srcvlan Source vlan label<br />
- dstvlan Destination vlan label<br />
- srcas Source AS number<br />
- dstas Destination AS number<br />
- nextas BGP Next AS<br />
- prevas BGP Previous AS<br />
- inif SNMP input interface number<br />
- outif SNMP output interface number<br />
- next IP next hop<br />
- bgpnext BGP next hop<br />
- insrcmac In source MAC address<br />
- outdstmac out destination MAC address<br />
- indstmac In destintation MAC address<br />
- outsrcmac Out source MAC address<br />
- tos Source type of service<br />
- srctos Source type of Service<br />
- dsttos Destination type of Service<br />
- mpls1 MPLS label 1<br />
- mpls2 MPLS label 2<br />
- mpls3 MPLS label 3<br />
- mpls4 MPLS label 4<br />
- mpls5 MPLS label 5<br />
- mpls6 MPLS label 6<br />
- mpls7 MPLS label 7<br />
- mpls8 MPLS label 8<br />
- mpls9 MPLS label 9<br />
- mpls10 MPLS label 10<br />
+</dt><dd> proto IP protocol<br/>
+ srcip Source IP address<br/>
+ dstip Destination IP address<br/>
+ srcip4/net IPv4 source IP address with applied netmask<br/>
+ srcip6/net IPv6 source IP address with applied netmask<br/>
+ dstip4/net IPv4 destination IP address with applied netmask<br/>
+ dstip6/net IPv6 destination IP address with applied netmask<br/>
+ srcnet Apply netmask srcmask in netflow record for source IP<br/>
+ dstnet Apply netmask dstmask in netflow record for dest IP<br/>
+ srcport Source port<br/>
+ dstport Destination port<br/>
+ srcmask Source mask<br/>
+ dstmask Destination mask<br/>
+ srcvlan Source vlan label<br/>
+ dstvlan Destination vlan label<br/>
+ srcas Source AS number<br/>
+ dstas Destination AS number<br/>
+ nextas BGP Next AS<br/>
+ prevas BGP Previous AS<br/>
+ inif SNMP input interface number<br/>
+ outif SNMP output interface number<br/>
+ next IP next hop<br/>
+ bgpnext BGP next hop<br/>
+ insrcmac In source MAC address<br/>
+ outdstmac out destination MAC address<br/>
+ indstmac In destintation MAC address<br/>
+ outsrcmac Out source MAC address<br/>
+ tos Source type of service<br/>
+ srctos Source type of Service<br/>
+ dsttos Destination type of Service<br/>
+ mpls1 MPLS label 1<br/>
+ mpls2 MPLS label 2<br/>
+ mpls3 MPLS label 3<br/>
+ mpls4 MPLS label 4<br/>
+ mpls5 MPLS label 5<br/>
+ mpls6 MPLS label 6<br/>
+ mpls7 MPLS label 7<br/>
+ mpls8 MPLS label 8<br/>
+ mpls9 MPLS label 9<br/>
+ mpls10 MPLS label 10<br/>
  router Exporting router IP</dd></dl>
 <dl>
 <dt>
@@ -134,72 +134,72 @@ description: "nfdump – netflow display and analyze program"
 <dd> Generate the Top N flow or flow element statistic. <i>statistic</i> can be:</dd>
 <dl>
 <dt>
-</dt><dd> record Statistic about arregated netflow records.<br />
- srcip Statistic about source IP addresses<br />
- dstip Statistic about destination IP addresses<br />
- ip Statistic about any (source or destination) IP addresses<br />
- nhip Statistic about next hop IP addresses<br />
- nhbip Statistic about BGP next hop IP addresses<br />
- router Statistic about exporting router IP address<br />
- srcport Statistic about source ports<br />
- dstport Statistic about destination ports<br />
- port Statistic about any (source or destination) ports<br />
- tos Statistic about type of service &#8211; default src<br />
- srctos Statistic about src type of service<br />
- dsttos Statistic about dst type of service<br />
- dir Statistic about flow directions ingress/egress<br />
- srcas Statistic about source AS numbers<br />
- dstas Statistic about destination AS numbers<br />
- as Statistic about any (source or destination) AS numbers<br />
- inif Statistic about input interface<br />
- outif Statistic about output interface<br />
- if Statistic about any interface<br />
- srcmask Statistic about src mask<br />
- dstmask Statistic about dst mask<br />
- srcvlan Statistic about src vlan label<br />
- dstvlan Statistic about dst vlan label<br />
- vlan Statistic about any vlan label<br />
- insrcmac Statistic about input src MAC address<br />
- outdstmac Statistic about output dst MAC address<br />
- indstmac Statistic about input dst MAC address<br />
- outsrcmac Statistic about output src MAC address<br />
- srcmac Statistic about any src MAC address<br />
- dstmac Statistic about any dst MAC address<br />
- inmac Statistic about any input MAC address<br />
- outmac Statistic about any output MAC address<br />
- mask Statistic about any mask<br />
- proto Statistic about IP protocols<br />
- mpls1 Statistic about MPLS label 1<br />
- mpls2 Statistic about MPLS label 2<br />
- mpls3 Statistic about MPLS label 3<br />
- mpls4 Statistic about MPLS label 4<br />
- mpls5 Statistic about MPLS label 5<br />
- mpls6 Statistic about MPLS label 6<br />
- mpls7 Statistic about MPLS label 7<br />
- mpls8 Statistic about MPLS label 8<br />
- mpls9 Statistic about MPLS label 9<br />
- mpls10 Statistic about MPLS label 10<br />
+</dt><dd> record Statistic about arregated netflow records.<br/>
+ srcip Statistic about source IP addresses<br/>
+ dstip Statistic about destination IP addresses<br/>
+ ip Statistic about any (source or destination) IP addresses<br/>
+ nhip Statistic about next hop IP addresses<br/>
+ nhbip Statistic about BGP next hop IP addresses<br/>
+ router Statistic about exporting router IP address<br/>
+ srcport Statistic about source ports<br/>
+ dstport Statistic about destination ports<br/>
+ port Statistic about any (source or destination) ports<br/>
+ tos Statistic about type of service &#8211; default src<br/>
+ srctos Statistic about src type of service<br/>
+ dsttos Statistic about dst type of service<br/>
+ dir Statistic about flow directions ingress/egress<br/>
+ srcas Statistic about source AS numbers<br/>
+ dstas Statistic about destination AS numbers<br/>
+ as Statistic about any (source or destination) AS numbers<br/>
+ inif Statistic about input interface<br/>
+ outif Statistic about output interface<br/>
+ if Statistic about any interface<br/>
+ srcmask Statistic about src mask<br/>
+ dstmask Statistic about dst mask<br/>
+ srcvlan Statistic about src vlan label<br/>
+ dstvlan Statistic about dst vlan label<br/>
+ vlan Statistic about any vlan label<br/>
+ insrcmac Statistic about input src MAC address<br/>
+ outdstmac Statistic about output dst MAC address<br/>
+ indstmac Statistic about input dst MAC address<br/>
+ outsrcmac Statistic about output src MAC address<br/>
+ srcmac Statistic about any src MAC address<br/>
+ dstmac Statistic about any dst MAC address<br/>
+ inmac Statistic about any input MAC address<br/>
+ outmac Statistic about any output MAC address<br/>
+ mask Statistic about any mask<br/>
+ proto Statistic about IP protocols<br/>
+ mpls1 Statistic about MPLS label 1<br/>
+ mpls2 Statistic about MPLS label 2<br/>
+ mpls3 Statistic about MPLS label 3<br/>
+ mpls4 Statistic about MPLS label 4<br/>
+ mpls5 Statistic about MPLS label 5<br/>
+ mpls6 Statistic about MPLS label 6<br/>
+ mpls7 Statistic about MPLS label 7<br/>
+ mpls8 Statistic about MPLS label 8<br/>
+ mpls9 Statistic about MPLS label 9<br/>
+ mpls10 Statistic about MPLS label 10<br/>
  sysid Internal SysID of exporter </dd>
-<p> NSEL/ASA stats<br />
- event NSEL/ASA event<br />
- xevent NSEL/ASA extended event<br />
- xsrcip NSEL/ASA translated src IP address<br />
- xsrcport NSEL/ASA translated src port<br />
- xdstip NSEL/ASA translated dst IP address<br />
- xdstport NSEL/ASA translated dst port<br />
- iacl NSEL/ASA ingress ACL<br />
- iace NSEL/ASA ingress ACE<br />
- ixace NSEL/ASA ingress xACE<br />
- eacl NSEL/ASA egress ACL<br />
- eace NSEL/ASA egress ACE<br />
+<p> NSEL/ASA stats<br/>
+ event NSEL/ASA event<br/>
+ xevent NSEL/ASA extended event<br/>
+ xsrcip NSEL/ASA translated src IP address<br/>
+ xsrcport NSEL/ASA translated src port<br/>
+ xdstip NSEL/ASA translated dst IP address<br/>
+ xdstport NSEL/ASA translated dst port<br/>
+ iacl NSEL/ASA ingress ACL<br/>
+ iace NSEL/ASA ingress ACE<br/>
+ ixace NSEL/ASA ingress xACE<br/>
+ eacl NSEL/ASA egress ACL<br/>
+ eace NSEL/ASA egress ACE<br/>
  exace NSEL/ASA egress xACE </p>
-<p> NAT stats<br />
- nevent NAT event<br />
- vrf/ivrf NAT ingress vrf<br />
- evrf NAT egress vrf<br />
- nsrcip NAT src IP address<br />
- nsrcport NAT src port<br />
- ndstip NAT dst IP address<br />
+<p> NAT stats<br/>
+ nevent NAT event<br/>
+ vrf/ivrf NAT ingress vrf<br/>
+ evrf NAT egress vrf<br/>
+ nsrcip NAT src IP address<br/>
+ nsrcport NAT src port<br/>
+ ndstip NAT dst IP address<br/>
  ndstport NAT dst port
 </dl>
 <dl>
@@ -221,22 +221,22 @@ description: "nfdump – netflow display and analyze program"
 <dt><code>-L </code><i>[+/-]byte_num</i></dt>
 <dd> Limit statistics output to those records above or below the <i>byte_num</i> limit. <i>byte_num</i> accepts positive or negative numbers followed by &#8216;K&#8217; , &#8216;M&#8217; or &#8216;G&#8217; 10E3, 10E6 or 10E9 bytes respectively. <i>Note:</i> These limits only apply to the statistics and aggregated outputs generated with -a -s. To filter netflow records by packets and bytes, use the filter syntax &#8216;packets&#8217; and &#8216;bytes&#8217; described below.</dd>
 <dt><code>-n </code><i>num</i></dt>
-<dd> For record statistics (-s .. ): Define the number for the Top N. Defaults to 10. Use -n 0 to list all records.<br />
+<dd> For record statistics (-s .. ): Define the number for the Top N. Defaults to 10. Use -n 0 to list all records.<br/>
  For record sorting and aggregation (-a .. -O ..): Limit the records to the first top <i>num</i> sorted records. if not specified or -n 0 is given, all records are listed.</dd>
 <dt><code>-o </code><i>format</i></dt>
 <dd> Selects the output format to print flows or flow record statistics (-s record). The following formats are available:</dd>
 <dl>
 <dt>
-</dt><dd> raw Print each file flow record on multiple lines.<br />
- line Print each flow on one line. Default format.<br />
- long Print each flow on one line with more details<br />
- biline Same as line, but for bidir flows<br />
- bilong Same as long, but for bidir flows<br />
- extended Print each flow on one line with even more details.<br />
- nsel Print each NSEL event on one line. Default if NSEL/ASA enabled.<br />
- nel Print each NAT event on one line. Default if NEL enabled.<br />
- csv Comma separated output for machine readable processing.<br />
- pipe Legacy machine readable format: fields &#8216;|&#8217; separated.<br />
+</dt><dd> raw Print each file flow record on multiple lines.<br/>
+ line Print each flow on one line. Default format.<br/>
+ long Print each flow on one line with more details<br/>
+ biline Same as line, but for bidir flows<br/>
+ bilong Same as long, but for bidir flows<br/>
+ extended Print each flow on one line with even more details.<br/>
+ nsel Print each NSEL event on one line. Default if NSEL/ASA enabled.<br/>
+ nel Print each NAT event on one line. Default if NEL enabled.<br/>
+ csv Comma separated output for machine readable processing.<br/>
+ pipe Legacy machine readable format: fields &#8216;|&#8217; separated.<br/>
  fmt:<i>format</i> User defined output format.</dd></dl>
 <dl>
 <dt>
@@ -303,109 +303,109 @@ description: "nfdump – netflow display and analyze program"
 <p> The output format <code>fmt:&lt;format&gt;</code> allows you to define your own output format. A format description <code>format</code> consists of a single line containing arbitrary strings and format specifier as described below </p>
 <dl>
 <dt>
-</dt><dd> <code>%&lt;format&gt;</code> Inserts the predefined <code>format</code> at this position. e.g. <code>%line</code><br />
- <code>%ff</code> flow record flags in hex.<br />
- <code>%ts</code> Start Time &#8211; first seen<br />
- <code>%te</code> End Time &#8211; last seen<br />
- <code>%tr</code> Time the flow was received by the collector<br />
- <code>%td</code> Duration<br />
- <code>%pr</code> Protocol<br />
- <code>%exp</code> Exporter ID<br />
- <code>%eng</code> Engine Type/ID<br />
- <code>%sa</code> Source Address<br />
- <code>%da</code> Destination Address<br />
- <code>%sap</code> Source Address:Port<br />
- <code>%dap</code> Destination Address:Port<br />
- <code>%sp</code> Source Port<br />
- <code>%dp</code> Destination Port<br />
- <code>%sn</code> Source Network, mask applied<br />
- <code>%dn</code> Destination Network, mask applied<br />
- <code>%nh</code> Next-hop IP Address<br />
- <code>%nhb</code> BGP Next-hop IP Address<br />
- <code>%ra</code> Router IP Address<br />
- <code>%sas</code> Source AS<br />
- <code>%das</code> Destination AS<br />
- <code>%nas</code> Next AS<br />
- <code>%pas</code> Previous AS<br />
- <code>%in</code> Input Interface num<br />
- <code>%out</code> Output Interface num<br />
- <code>%pkt</code> Packets &#8211; default input<br />
- <code>%ipkt</code> Input Packets<br />
- <code>%opkt</code> Output Packets<br />
- <code>%byt</code> Bytes &#8211; default input<br />
- <code>%ibyt</code> Input Bytes<br />
- <code>%obyt</code> Output Bytes<br />
- <code>%fl</code> Flows<br />
- <code>%flg</code> TCP Flags<br />
- <code>%tos</code> Tos &#8211; default src<br />
- <code>%stos</code> Src Tos<br />
- <code>%dtos</code> Dst Tos<br />
- <code>%dir</code> Direction: ingress, egress<br />
- <code>%smk</code> Src mask<br />
- <code>%dmk</code> Dst mask<br />
- <code>%fwd</code> Forwarding Status<br />
- <code>%svln</code> Src vlan label<br />
- <code>%dvln</code> Dst vlan label<br />
- <code>%ismc</code> Input Src Mac Addr<br />
- <code>%odmc</code> Output Dst Mac Addr<br />
- <code>%idmc</code> Input Dst Mac Addr<br />
- <code>%osmc</code> Output Src Mac Addr<br />
- <code>%mpls1</code> MPLS label 1<br />
- <code>%mpls2</code> MPLS label 2<br />
- <code>%mpls3</code> MPLS label 3<br />
- <code>%mpls4</code> MPLS label 4<br />
- <code>%mpls5</code> MPLS label 5<br />
- <code>%mpls6</code> MPLS label 6<br />
- <code>%mpls7</code> MPLS label 7<br />
- <code>%mpls8</code> MPLS label 8<br />
- <code>%mpls9</code> MPLS label 9<br />
- <code>%mpls10</code> MPLS label 10<br />
- <code>%mpls</code> MPLS labels 1-10<br />
- <code>%bps</code> bps &#8211; bits per second<br />
- <code>%pps</code> pps &#8211; packets per second<br />
+</dt><dd> <code>%&lt;format&gt;</code> Inserts the predefined <code>format</code> at this position. e.g. <code>%line</code><br/>
+ <code>%ff</code> flow record flags in hex.<br/>
+ <code>%ts</code> Start Time &#8211; first seen<br/>
+ <code>%te</code> End Time &#8211; last seen<br/>
+ <code>%tr</code> Time the flow was received by the collector<br/>
+ <code>%td</code> Duration<br/>
+ <code>%pr</code> Protocol<br/>
+ <code>%exp</code> Exporter ID<br/>
+ <code>%eng</code> Engine Type/ID<br/>
+ <code>%sa</code> Source Address<br/>
+ <code>%da</code> Destination Address<br/>
+ <code>%sap</code> Source Address:Port<br/>
+ <code>%dap</code> Destination Address:Port<br/>
+ <code>%sp</code> Source Port<br/>
+ <code>%dp</code> Destination Port<br/>
+ <code>%sn</code> Source Network, mask applied<br/>
+ <code>%dn</code> Destination Network, mask applied<br/>
+ <code>%nh</code> Next-hop IP Address<br/>
+ <code>%nhb</code> BGP Next-hop IP Address<br/>
+ <code>%ra</code> Router IP Address<br/>
+ <code>%sas</code> Source AS<br/>
+ <code>%das</code> Destination AS<br/>
+ <code>%nas</code> Next AS<br/>
+ <code>%pas</code> Previous AS<br/>
+ <code>%in</code> Input Interface num<br/>
+ <code>%out</code> Output Interface num<br/>
+ <code>%pkt</code> Packets &#8211; default input<br/>
+ <code>%ipkt</code> Input Packets<br/>
+ <code>%opkt</code> Output Packets<br/>
+ <code>%byt</code> Bytes &#8211; default input<br/>
+ <code>%ibyt</code> Input Bytes<br/>
+ <code>%obyt</code> Output Bytes<br/>
+ <code>%fl</code> Flows<br/>
+ <code>%flg</code> TCP Flags<br/>
+ <code>%tos</code> Tos &#8211; default src<br/>
+ <code>%stos</code> Src Tos<br/>
+ <code>%dtos</code> Dst Tos<br/>
+ <code>%dir</code> Direction: ingress, egress<br/>
+ <code>%smk</code> Src mask<br/>
+ <code>%dmk</code> Dst mask<br/>
+ <code>%fwd</code> Forwarding Status<br/>
+ <code>%svln</code> Src vlan label<br/>
+ <code>%dvln</code> Dst vlan label<br/>
+ <code>%ismc</code> Input Src Mac Addr<br/>
+ <code>%odmc</code> Output Dst Mac Addr<br/>
+ <code>%idmc</code> Input Dst Mac Addr<br/>
+ <code>%osmc</code> Output Src Mac Addr<br/>
+ <code>%mpls1</code> MPLS label 1<br/>
+ <code>%mpls2</code> MPLS label 2<br/>
+ <code>%mpls3</code> MPLS label 3<br/>
+ <code>%mpls4</code> MPLS label 4<br/>
+ <code>%mpls5</code> MPLS label 5<br/>
+ <code>%mpls6</code> MPLS label 6<br/>
+ <code>%mpls7</code> MPLS label 7<br/>
+ <code>%mpls8</code> MPLS label 8<br/>
+ <code>%mpls9</code> MPLS label 9<br/>
+ <code>%mpls10</code> MPLS label 10<br/>
+ <code>%mpls</code> MPLS labels 1-10<br/>
+ <code>%bps</code> bps &#8211; bits per second<br/>
+ <code>%pps</code> pps &#8211; packets per second<br/>
  <code>%bpp</code> bps &#8211; Bytes per package </dd>
-<p> NSEL specific formats<br />
- <code>%nfc</code> NSEL connection ID<br />
- <code>%evt</code> NSEL event<br />
- <code>%xevt</code> NSEL extended event<br />
- <code>%msec</code> NSEL event time in msec<br />
- <code>%iacl</code> NSEL ingress ACL<br />
- <code>%eacl</code> NSEL egress ACL<br />
- <code>%xsa</code> NSEL XLATE src IP address<br />
- <code>%xda</code> NSEL XLATE dst IP address<br />
- <code>%xsp</code> NSEL XLATE src port<br />
- <code>%xdp</code> NSEL SLATE dst port<br />
- <code>%xsap</code> Xlate Source Address:Port<br />
- <code>%xdap</code> Xlate Destination Address:Port<br />
+<p> NSEL specific formats<br/>
+ <code>%nfc</code> NSEL connection ID<br/>
+ <code>%evt</code> NSEL event<br/>
+ <code>%xevt</code> NSEL extended event<br/>
+ <code>%msec</code> NSEL event time in msec<br/>
+ <code>%iacl</code> NSEL ingress ACL<br/>
+ <code>%eacl</code> NSEL egress ACL<br/>
+ <code>%xsa</code> NSEL XLATE src IP address<br/>
+ <code>%xda</code> NSEL XLATE dst IP address<br/>
+ <code>%xsp</code> NSEL XLATE src port<br/>
+ <code>%xdp</code> NSEL SLATE dst port<br/>
+ <code>%xsap</code> Xlate Source Address:Port<br/>
+ <code>%xdap</code> Xlate Destination Address:Port<br/>
  <code>%uname</code> NSEL user name </p>
-<p> NEL/NAT specific formats<br />
- <code>%nevt</code> NAT event &#8211; same as %evt<br />
- <code>%ivrf</code> NAT ingress VRF ID<br />
- <code>%evrf</code> NAT egress VRF ID<br />
- <code>%nsa</code> NAT src IP address<br />
- <code>%nda</code> NAT dst IP address<br />
- <code>%nsp</code> NAT src port<br />
- <code>%ndp</code> NAT dst port<br />
- <code>%pbstart</code> NAT pool block start<br />
- <code>%pbend</code> NAT pool block end<br />
- <code>%pbstep</code> NAT pool block step<br />
+<p> NEL/NAT specific formats<br/>
+ <code>%nevt</code> NAT event &#8211; same as %evt<br/>
+ <code>%ivrf</code> NAT ingress VRF ID<br/>
+ <code>%evrf</code> NAT egress VRF ID<br/>
+ <code>%nsa</code> NAT src IP address<br/>
+ <code>%nda</code> NAT dst IP address<br/>
+ <code>%nsp</code> NAT src port<br/>
+ <code>%ndp</code> NAT dst port<br/>
+ <code>%pbstart</code> NAT pool block start<br/>
+ <code>%pbend</code> NAT pool block end<br/>
+ <code>%pbstep</code> NAT pool block step<br/>
  <code>%pbsize</code> NAT pool block size </p>
-<p> Nprobe formats<br />
- <code>%cl</code> Client latency<br />
- <code>%sl</code> Server latency<br />
+<p> Nprobe formats<br/>
+ <code>%cl</code> Client latency<br/>
+ <code>%sl</code> Server latency<br/>
  <code>%al</code> Application latency </p>
 </dl>
 <p> The &quot;flow flags&quot; format (%ff) prints the internal record flags as a single hexadecimal number, consisting of any of these flag values or-ed together: </p>
 <dl>
 <dt>
 </dt><dd>
- 1 Record contains IPv6 addresses<br />
- 2 Packet counters are 64-bit<br />
- 4 Byte counters are 64-bit<br />
- 8 IP next hop is an IPv6 address<br />
+ 1 Record contains IPv6 addresses<br/>
+ 2 Packet counters are 64-bit<br/>
+ 4 Byte counters are 64-bit<br/>
+ 8 IP next hop is an IPv6 address<br/>
  16<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>BGP next hop is an IPv6 address</dd>
-<p> 32 Exporting router is an IPv6 address<br />
- 64 Record is an EVENT record<br />
+<p> 32 Exporting router is an IPv6 address<br/>
+ 64 Record is an EVENT record<br/>
  128 Record is sampled</dl>
 <p> Example: the standard output format <code>long</code> can be created as</p>
 <dl>
@@ -416,16 +416,16 @@ description: "nfdump – netflow display and analyze program"
 <p> Example:</p>
 <dl>
 <dt>
-</dt><dd> Index line: ts,te,td,sa,da,sp,dp,pr,&#8230;<br />
+</dt><dd> Index line: ts,te,td,sa,da,sp,dp,pr,&#8230;<br/>
  Record line: 2004-07-11 10:30:00,2004-07-11 10:30:10,10.010,&#8230;
 </dd></dl>
 <p> All records are in ASCII readable form. Numbers are not scaled, so each line can easily be parsed. </p>
 <p> Indices used in nfdump 1.6: </p>
 <dl>
 <dt>
-</dt><dd> ts,te,td time records: t-start, t-end, duration<br />
- sa,da src dst address sp,dp src, dst port<br />
- pr protocol PF_INET or PF_INET6<br />
+</dt><dd> ts,te,td time records: t-start, t-end, duration<br/>
+ sa,da src dst address sp,dp src, dst port<br/>
+ pr protocol PF_INET or PF_INET6<br/>
  flg TCP Flags: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>000001 FIN. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>000010 SYN </p>
@@ -433,26 +433,26 @@ description: "nfdump – netflow display and analyze program"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>001000 PUSH </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>010000 ACK </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>100000 URGENT </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>e.g. 6&nbsp;<wbr>=&gt;&nbsp;<wbr>SYN&nbsp;<wbr>+&nbsp;<wbr>RESET<br />
- fwd forwarding status<br />
- stos src tos<br />
- ipkt,ibyt input packets/bytes<br />
- opkt,obyt output packets, bytes<br />
- in,out input/output interface SNMP number<br />
- sas,das src, dst AS<br />
- smk,dmk src, dst mask<br />
- dtos dst tos<br />
- dir direction<br />
- nh,nhb nethop IP address, bgp next hop IP<br />
- svln,dvln src, dst vlan id<br />
- ismc,odmc input src, output dst MAC<br />
- idmc,osmc input dst, output src MAC<br />
- mpls1,mpls2 MPLS label 1-10<br />
- mpls3,mpls4<br />
- mpls5,mpls6<br />
- mpls7,mpls8<br />
- mpls9,mpls10<br />
- ra router IP<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>e.g. 6&nbsp;<wbr>=&gt;&nbsp;<wbr>SYN&nbsp;<wbr>+&nbsp;<wbr>RESET<br/>
+ fwd forwarding status<br/>
+ stos src tos<br/>
+ ipkt,ibyt input packets/bytes<br/>
+ opkt,obyt output packets, bytes<br/>
+ in,out input/output interface SNMP number<br/>
+ sas,das src, dst AS<br/>
+ smk,dmk src, dst mask<br/>
+ dtos dst tos<br/>
+ dir direction<br/>
+ nh,nhb nethop IP address, bgp next hop IP<br/>
+ svln,dvln src, dst vlan id<br/>
+ ismc,odmc input src, output dst MAC<br/>
+ idmc,osmc input dst, output src MAC<br/>
+ mpls1,mpls2 MPLS label 1-10<br/>
+ mpls3,mpls4<br/>
+ mpls5,mpls6<br/>
+ mpls7,mpls8<br/>
+ mpls9,mpls10<br/>
+ ra router IP<br/>
  eng router engine type/id
 </dl>
 <p> See parse_csv.pl for more details. </p>
@@ -463,130 +463,130 @@ description: "nfdump – netflow display and analyze program"
 <p> <i>Expr</i> can be one of the following filter primitives:</p>
 <dl>
 <dt><i>include</i></dt>
-<dd> <code>@include &lt;file&gt;</code><br />
+<dd> <code>@include &lt;file&gt;</code><br/>
  include the content of <i>&lt;file&gt;</i> into filter.</dd>
 <dt><i>ip version</i></dt>
-<dd> <code>inet</code> or <code>ipv4</code> for IPv4<br />
+<dd> <code>inet</code> or <code>ipv4</code> for IPv4<br/>
  <code>inet6</code> or <code>ipv6</code> for IPv6</dd>
 <dt><i>protocol</i></dt>
-<dd> <code>proto &lt;protocol&gt;</code><br />
- <code>proto &lt;number&gt;</code><br />
+<dd> <code>proto &lt;protocol&gt;</code><br/>
+ <code>proto &lt;number&gt;</code><br/>
  where <code>&lt;protocol&gt;</code> is known protocol such as <code>tcp</code>, <code>udp</code>, <code>icmp</code>, <code>icmp6</code>, <code>gre</code>, <code>esp</code>, <code>ah</code>, etc. or a valid protocol number: <code>6</code>, <code>17</code> etc.</dd>
 <dt><i>IP address</i></dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <code>[src|dst] ip &lt;ipaddr&gt;</code><br />
- <code>[src|dst] host &lt;ipaddr&gt;</code><br />
+</dt><dd> <code>[src|dst] ip &lt;ipaddr&gt;</code><br/>
+ <code>[src|dst] host &lt;ipaddr&gt;</code><br/>
  with <i>&lt;ipaddr&gt;</i> as any valid IPv4, IPv6 address, or a full qualified hostname. In case of a hostname, the IP address is looked up in DNS. If more than a single IP address is found, all IP addresses are chained together. <code>(ip1 or ip2 or ip3 &#8230; )</code> </dd>
-<p> To check if an IP address is in a known IP list, use<br />
- <code>[src|dst] ip in [ &lt;iplist&gt; ] </code><br />
- <code>[src|dst] host in [ &lt;iplist&gt; ] </code><br />
+<p> To check if an IP address is in a known IP list, use<br/>
+ <code>[src|dst] ip in [ &lt;iplist&gt; ] </code><br/>
+ <code>[src|dst] host in [ &lt;iplist&gt; ] </code><br/>
  <i>&lt;iplist&gt;</i> is a space or comma separated list of individual <code>&lt;ipaddr&gt;</code> or full qualified hostnames, which are looked up in DNS. If more than a single IP address is found, all IP addresses are put into the list.</dl>
 <dt><i>[src|dst]</i></dt>
 <dd> IP addresses, networks, ports, AS number etc. can be specifically selected by using a direction qualifier, such as src or <code>dst</code>. They can also be used in combination with <code>and</code> and <code>or</code>. such as <code>src and dst ip ..</code>.</dd>
 <dt><i>network</i></dt>
-<dd> <code>[src|dst] net a.b.c.d m.n.r.s</code><br />
+<dd> <code>[src|dst] net a.b.c.d m.n.r.s</code><br/>
  Select the IPv4 network <i>a.b.c.d</i> with netmask <i>m.n.r.s</i>. </dd>
-<p> <code>[src|dst] net &lt;net&gt;/&lt;num&gt;</code><br />
+<p> <code>[src|dst] net &lt;net&gt;/&lt;num&gt;</code><br/>
  with <i>&lt;net&gt;</i> as a valid IPv4 or IPv6 network and <i>&lt;num&gt;</i> as maskbits. The number of mask bits must match the appropriate address familiy in IPv4 or IPv6. Networks may be abreviated such as 172.16/16 if they are unambiguous.</p>
 <dt><i>Port</i></dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <code>[src|dst] port [comp] &lt;num&gt;</code><br />
- with <i>&lt;num&gt;</i> as any valid port number. If <i>comp</i> is omitted,<br />
-&nbsp;<wbr>&#8216;=&#8217;&nbsp;<wbr>is assumed.&nbsp;<wbr><i>comp</i>&nbsp;<wbr>is explained more detailed below.<br />
- <code>[src|dst] port in [ &lt;portlist&gt; ] </code><br />
+</dt><dd> <code>[src|dst] port [comp] &lt;num&gt;</code><br/>
+ with <i>&lt;num&gt;</i> as any valid port number. If <i>comp</i> is omitted,<br/>
+&nbsp;<wbr>&#8216;=&#8217;&nbsp;<wbr>is assumed.&nbsp;<wbr><i>comp</i>&nbsp;<wbr>is explained more detailed below.<br/>
+ <code>[src|dst] port in [ &lt;portlist&gt; ] </code><br/>
  A port can be compared against a know list, where <code>&lt;portlist&gt;</code> is a space separated list of individual port numbers.</dd></dl>
 <dt><i>ICMP</i></dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <code>icmp-type &lt;num&gt;</code><br />
- <code>icmp-code &lt;num&gt;</code><br />
+</dt><dd> <code>icmp-type &lt;num&gt;</code><br/>
+ <code>icmp-code &lt;num&gt;</code><br/>
  with <i>&lt;num&gt;</i> as a valid icmp type/code. This automatically implies <code>proto icmp</code>.</dd></dl>
 <dt><i>Router ID</i></dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <code>engine-type &lt;num&gt;</code><br />
- <code>engine-id &lt;num&gt;</code><br />
- <code>sysid &lt;num&gt;</code><br />
+</dt><dd> <code>engine-type &lt;num&gt;</code><br/>
+ <code>engine-id &lt;num&gt;</code><br/>
+ <code>sysid &lt;num&gt;</code><br/>
  with <i>&lt;num&gt;</i> as a valid router engine type/id or exporter ID(0..255).</dd></dl>
 <dt><i>Interface</i></dt>
-<dd> <code>[in|out] if &lt;num&gt;</code><br />
- Select input or output or either interface ID, with <i>num</i> as the SNMP interface number.<br />
+<dd> <code>[in|out] if &lt;num&gt;</code><br/>
+ Select input or output or either interface ID, with <i>num</i> as the SNMP interface number.<br/>
  Example: <code>in if 3</code></dd>
 <dt><i>AS numbers</i></dt>
-<dd> <code>[src|dst|prev|next] as [comp] &lt;num&gt;</code><br />
+<dd> <code>[src|dst|prev|next] as [comp] &lt;num&gt;</code><br/>
  Selects source, dstination, previous, next or any AS number with <i>&lt;num&gt;</i> as any valid as number. 32bit AS numbers are suported. If <i>comp</i> is omitted, &#8216;=&#8217; is assumed. <i>comp</i> is explained more detailed below. </dd>
-<p> <code>[src|dst|prev|next] as in [ &lt;ASlist&gt; ] </code><br />
+<p> <code>[src|dst|prev|next] as in [ &lt;ASlist&gt; ] </code><br/>
  An AS number can be compared against a know list, where <code>&lt;ASlist&gt;</code> is a space or comma separated list of individual AS numbers.</p>
 <dt><i>Prefix mask bits </i></dt>
-<dd> <code>[src|dst] mask &lt;bits&gt;</code><br />
+<dd> <code>[src|dst] mask &lt;bits&gt;</code><br/>
  with <i>&lt;bits&gt;</i> as any valid prefix mask bit value.</dd>
 <dt><i>Vlan labels</i></dt>
-<dd> <code>[src|dst] vlan &lt;num&gt;</code><br />
+<dd> <code>[src|dst] vlan &lt;num&gt;</code><br/>
  with <i>&lt;num&gt;</i> as any valid vlan label.</dd>
 <dt><i>Flags</i></dt>
-<dd> <code>flags &lt;tcpflags&gt;</code><br />
+<dd> <code>flags &lt;tcpflags&gt;</code><br/>
  with <i>&lt;tcpflags&gt;</i> as a combination of:</dd>
 <dl>
 <dt>
-</dt><dd> A ACK.<br />
- S SYN.<br />
- F FIN.<br />
- R Reset.<br />
- P Push.<br />
- U Urgent.<br />
+</dt><dd> A ACK.<br/>
+ S SYN.<br/>
+ F FIN.<br/>
+ R Reset.<br/>
+ P Push.<br/>
+ U Urgent.<br/>
  X All flags on.</dd></dl>
 <p> The ordering of the flags is not relevant. Flags not mentioned are treated as don&#8217;t care. In order to get those flows with only the SYN flag set, use the syntax &#8216;<code>flags S and not flags AFRPU</code>&#8216;.</p>
 <dt><i>Next hop IP</i></dt>
-<dd> <code>next ip &lt;ipaddr&gt;</code><br />
+<dd> <code>next ip &lt;ipaddr&gt;</code><br/>
  with <i>&lt;ipaddr&gt;</i> as IPv4/IPv6 IP address of next hop router.</dd>
 <dt><i>Next-hop router&#8217;s IP in the BGP domain</i></dt>
-<dd> <code>bgpnext ip &lt;ipaddr&gt;</code><br />
+<dd> <code>bgpnext ip &lt;ipaddr&gt;</code><br/>
  with <i>&lt;ipaddr&gt;</i> as IPv4/IPv6 next-hop router&#8217;s IP in the BGP domain. ( v9 #18 )</dd>
 <dt><i>Router IP</i></dt>
 <dd>
- <code>router ip &lt;ipaddr&gt;</code><br />
+ <code>router ip &lt;ipaddr&gt;</code><br/>
  Filter the flows according the IP address of the exporting router.</dd>
 <dt><i>MAC addresses</i></dt>
-<dd> <code>[InOutSrcDst] mac &lt;addr&gt;</code><br />
+<dd> <code>[InOutSrcDst] mac &lt;addr&gt;</code><br/>
  With <i>&lt;addr&gt;</i> any valid MAC address. <code>mac</code> can be more specific specified by using any combination of a direction specifier as defined by CISCO v9. <code>in src</code>, <code>in dst</code>, <code>out src</code>, <code>out dst</code>.</dd>
 <dt><i>MPLS labels</i></dt>
-<dd> <code>mpls label&lt;n&gt; [comp] &lt;num&gt;</code><br />
- With <i>&lt;n&gt;</i> as any mpls label number 1..10. Filters exactly specified label&lt;n&gt;.<br />
+<dd> <code>mpls label&lt;n&gt; [comp] &lt;num&gt;</code><br/>
+ With <i>&lt;n&gt;</i> as any mpls label number 1..10. Filters exactly specified label&lt;n&gt;.<br/>
  <code>mpls eos [comp] &lt;num&gt;</code> </dd>
-<p> Filters End of Stack label for a given value <i>&lt;num&gt;</i>.<br />
- <code>mpls exp&lt;n&gt; [comp] &lt;bits&gt;</code><br />
+<p> Filters End of Stack label for a given value <i>&lt;num&gt;</i>.<br/>
+ <code>mpls exp&lt;n&gt; [comp] &lt;bits&gt;</code><br/>
  Filters experimental bits of label <i>&lt;n&gt;</i> with <i>&lt;bits&gt;</i> 0..7.</p>
 <dt><i>Packets</i></dt>
-<dd> <code>packets [comp] &lt;num&gt; [scale]</code><br />
- To filter for netflow records with a specific packet count.<br />
+<dd> <code>packets [comp] &lt;num&gt; [scale]</code><br/>
+ To filter for netflow records with a specific packet count.<br/>
  Example: <code>packets &gt; 1k</code></dd>
 <dt><i>Bytes</i></dt>
-<dd> <code>bytes [comp] &lt;num&gt; [scale]</code><br />
- To filter for netflow records with a specific byte count.<br />
+<dd> <code>bytes [comp] &lt;num&gt; [scale]</code><br/>
+ To filter for netflow records with a specific byte count.<br/>
  Example: <code>bytes 46</code> filters all empty IPv4 packets</dd>
 <dt><i>Aggregated flows</i></dt>
-<dd> <code>flows [comp] &lt;num&gt; [scale]</code><br />
+<dd> <code>flows [comp] &lt;num&gt; [scale]</code><br/>
  To filter for netflow records with a specific number of aggregated flows.</dd>
 <dt><i>Type of Service (TOS)</i></dt>
-<dd> <i>[SourceDestination]</i> <code>tos &lt;num&gt;</code><br />
+<dd> <i>[SourceDestination]</i> <code>tos &lt;num&gt;</code><br/>
  With <i>&lt;num&gt;</i> 0..255. For compatibility with nfump 1.5.x: <code>tos &lt;num&gt;</code> is equivalent with <code>src tos &lt;num&gt;</code></dd>
 <dt><i>Packets per second: Calculated value.</i></dt>
-<dd> <code>pps</code> <i>[comp]</i> <i>num</i> <i>[scale]</i><br />
+<dd> <code>pps</code> <i>[comp]</i> <i>num</i> <i>[scale]</i><br/>
  To filter for flows with specific packets per second.</dd>
 <dt><i>Duration: Calculated value</i></dt>
-<dd> <code>duration</code> <i>[comp]</i> <i>num</i><br />
+<dd> <code>duration</code> <i>[comp]</i> <i>num</i><br/>
  To filter for flows with specific duration in miliseconds.</dd>
 <dt><i>Bits per second: Calculated value.</i></dt>
-<dd> <code>bps</code> <i>[comp]</i> <i>num</i> <i>[scale]</i><br />
+<dd> <code>bps</code> <i>[comp]</i> <i>num</i> <i>[scale]</i><br/>
  To filter for flows with specific bytes per second.</dd>
 <dt><i>Bytes per packet: Calculated value.</i></dt>
-<dd> <code>bpp</code> <i>[comp]</i> <i>num</i> <i>[scale]</i><br />
+<dd> <code>bpp</code> <i>[comp]</i> <i>num</i> <i>[scale]</i><br/>
  To filter for flows with specific bytes per packet.</dd>
 <dt><i>scale</i> scaling factor. Maybe <i>k</i> <i>m</i> <i>g</i>. Factor is 1000</dt>
 <dd>
@@ -598,8 +598,8 @@ description: "nfdump – netflow display and analyze program"
 <p> <i>NSEL/ASA Event</i></p>
 <dl>
 <dt>
-</dt><dd> <code>asa event &lt;ignore|create|term|delete|deny&gt;</code><br />
- <code>asa event [comp] &lt;number&gt;</code><br />
+</dt><dd> <code>asa event &lt;ignore|create|term|delete|deny&gt;</code><br/>
+ <code>asa event [comp] &lt;number&gt;</code><br/>
  select NSEL/ASA event by name or number. If given as number it can be compared with a number
 </dd></dl>
 <dl>
@@ -607,31 +607,31 @@ description: "nfdump – netflow display and analyze program"
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <code>asa event denied &lt;ingress|egress|interface|nosyn&gt;</code><br />
+</dt><dd> <code>asa event denied &lt;ingress|egress|interface|nosyn&gt;</code><br/>
  Select a NSEL/ASA denied event by type</dd></dl>
 <dt><i>NSEL/ASA extended events</i></dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <code>asa xevent [comp] &lt;num&gt;</code><br />
+</dt><dd> <code>asa xevent [comp] &lt;num&gt;</code><br/>
  Select an extended NSELL ASA event by number, or optionally compared by a number.</dd></dl>
 <dt><i>X-late IP addresses and ports</i></dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <code>[src|dst] xip &lt;ip&gt;</code><br />
+</dt><dd> <code>[src|dst] xip &lt;ip&gt;</code><br/>
  Select the translated IP address </dd>
-<p> <code>[src|dst] xnet &lt;net&gt;/&lt;num&gt;</code><br />
+<p> <code>[src|dst] xnet &lt;net&gt;/&lt;num&gt;</code><br/>
  with <i>&lt;net&gt;</i> as a valid translated IPv4 or IPv6 network and <i>&lt;num&gt;</i> as maskbits. The number of mask bits must match the appropriate address familiy in IPv4 or IPv6. Networks may be abreviated such as 172.16/16 if they are unambiguous. </p>
-<p> <code>[src|dst] xport &lt;port&gt;</code><br />
+<p> <code>[src|dst] xport &lt;port&gt;</code><br/>
  Select the translated port</dl>
 <dt><i>NSEL/ASA ingress/egress</i></dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <code>ingress &lt;ACL|ACE|XACE&gt; [comp] number<br />
+</dt><dd> <code>ingress &lt;ACL|ACE|XACE&gt; [comp] number<br/>
  Select/compare an ingress ACL </dd>
-<p> egress ACL [comp] &lt;number&gt;</code><br />
+<p> egress ACL [comp] &lt;number&gt;</code><br/>
  Select/compare an egress ACL </p>
 </dl>
 <dt><code>NEL specific NAT filters:</code></dt>
@@ -639,8 +639,8 @@ description: "nfdump – netflow display and analyze program"
 <p> <i>NAT Event</i></p>
 <dl>
 <dt>
-</dt><dd> <code>nat event &lt;add|delete&gt;</code><br />
- <code>nat event [comp] &lt;number&gt;</code><br />
+</dt><dd> <code>nat event &lt;add|delete&gt;</code><br/>
+ <code>nat event [comp] &lt;number&gt;</code><br/>
  select NEL NAT event by name or number. If given as number it can be compared with a number
 </dd></dl>
 <dl>
@@ -648,9 +648,9 @@ description: "nfdump – netflow display and analyze program"
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <code>[src|dst] nip &lt;ip&gt;<br />
+</dt><dd> <code>[src|dst] nip &lt;ip&gt;<br/>
  Select the NAT IP address </dd>
-<p> [src|dst] nport &lt;port&gt;<br />
+<p> [src|dst] nport &lt;port&gt;<br/>
  Select the NAT port</dl>
 <dt></code><i>NEL NAT vrf</i></dt>
 <dd> <code>ingress vrf &lt;num&gt;</code> Select the vrf </dd>

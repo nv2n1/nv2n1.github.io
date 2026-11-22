@@ -47,8 +47,8 @@ encoding:
          template element encloses content items
 </pre>
 <h3>processing options</h3>
-<p>validation : +Vs&#8211; validate &#8211; schema validate XML document against Schema(not with&#8211; template &#8211; envelope) + Vn&#8211; check &#8211; namespace check XML namespace in document root unique identifiers : +Ug&#8211; generate &#8211; new &#8211; uids generate new Study / Series / SOP Instance UID<br />
-                                                                                                                                                                                             &#8211;<br />
+<p>validation : +Vs&#8211; validate &#8211; schema validate XML document against Schema(not with&#8211; template &#8211; envelope) + Vn&#8211; check &#8211; namespace check XML namespace in document root unique identifiers : +Ug&#8211; generate &#8211; new &#8211; uids generate new Study / Series / SOP Instance UID<br/>
+                                                                                                                                                                                             &#8211;<br/>
                                                                                                                                                                                              Uo&#8211; dont &#8211; overwrite &#8211; uids do not overwrite existing UIDs(default) + Uo&#8211; overwrite &#8211; uids overwrite existing UIDs</p>
 <h3>output options</h3>
 <pre><code>

@@ -14,57 +14,57 @@ description: "sc::Ref –"
 #include &lt;ref.h&gt;</code></pre>
 <p> Inherits <code>sc::RefBase</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>Ref</code> ()<br />
- <i>Create a reference to a null object. </i><br />
- <code>Ref</code> (T *a)<br />
- <i>Create a reference to the object a. </i><br />
- <code>Ref</code> (const <code>Ref</code>&lt; T &gt; &amp;a)<br />
- <i>Create a reference to the object referred to by a. </i><br />
- template&lt;class A &gt; <code>Ref</code> (const <code>Ref</code>&lt; A &gt; &amp;a)<br />
- <i>Create a reference to the object referred to by a. </i><br />
- <code>~Ref</code> ()<br />
- <i>Create a reference to the object a. </i><br />
- T * <code>operator-&gt;</code> () const<br />
- <i>Returns the reference counted object. </i><br />
- T * <code>pointer</code> () const<br />
- <i>Returns a pointer the reference counted object. </i><br />
- <code>RefCount</code> * <code>parentpointer</code> () const<br />
- <i>Implements the parentpointer pure virtual in the base class. </i><br />
+<p><code>Ref</code> ()<br/>
+ <i>Create a reference to a null object. </i><br/>
+ <code>Ref</code> (T *a)<br/>
+ <i>Create a reference to the object a. </i><br/>
+ <code>Ref</code> (const <code>Ref</code>&lt; T &gt; &amp;a)<br/>
+ <i>Create a reference to the object referred to by a. </i><br/>
+ template&lt;class A &gt; <code>Ref</code> (const <code>Ref</code>&lt; A &gt; &amp;a)<br/>
+ <i>Create a reference to the object referred to by a. </i><br/>
+ <code>~Ref</code> ()<br/>
+ <i>Create a reference to the object a. </i><br/>
+ T * <code>operator-&gt;</code> () const<br/>
+ <i>Returns the reference counted object. </i><br/>
+ T * <code>pointer</code> () const<br/>
+ <i>Returns a pointer the reference counted object. </i><br/>
+ <code>RefCount</code> * <code>parentpointer</code> () const<br/>
+ <i>Implements the parentpointer pure virtual in the base class. </i><br/>
  <code>operator T *</code> () const </p>
-<p> T &amp; <code>operator*</code> () const<br />
- <i>Returns a C++ reference to the reference counted object. </i><br />
- int <code>null</code> () const<br />
- <i>Return 1 if this is a reference to a null object. </i><br />
- int <code>nonnull</code> () const<br />
- <i>Return !null(). </i><br />
- template&lt;class A &gt; int <code>operator==</code> (const <code>Ref</code>&lt; A &gt; &amp;a) const<br />
- <i>A variety of ordering and equivalence operators are provided using the </i><code>Identity</code> class.<br />
+<p> T &amp; <code>operator*</code> () const<br/>
+ <i>Returns a C++ reference to the reference counted object. </i><br/>
+ int <code>null</code> () const<br/>
+ <i>Return 1 if this is a reference to a null object. </i><br/>
+ int <code>nonnull</code> () const<br/>
+ <i>Return !null(). </i><br/>
+ template&lt;class A &gt; int <code>operator==</code> (const <code>Ref</code>&lt; A &gt; &amp;a) const<br/>
+ <i>A variety of ordering and equivalence operators are provided using the </i><code>Identity</code> class.<br/>
  template&lt;class A &gt; int <code>operator&gt;=</code> (const <code>Ref</code>&lt; A &gt; &amp;a) const </p>
 <p> template&lt;class A &gt; int <code>operator&lt;=</code> (const <code>Ref</code>&lt; A &gt; &amp;a) const </p>
 <p> template&lt;class A &gt; int <code>operator&gt;</code> (const <code>Ref</code>&lt; A &gt; &amp;a) const </p>
 <p> template&lt;class A &gt; int <code>operator&lt;</code> (const <code>Ref</code>&lt; A &gt; &amp;a) const </p>
 <p> template&lt;class A &gt; int <code>operator!=</code> (const <code>Ref</code>&lt; A &gt; &amp;a) const </p>
-<p> int <code>compare</code> (const <code>Ref</code>&lt; T &gt; &amp;a) const<br />
- <i>Compare two objects returning -1, 0, or 1. </i><br />
- void <code>clear</code> ()<br />
- <i>Refer to the null object. </i><br />
- <code>Ref</code>&lt; T &gt; &amp; <code>operator=</code> (const <code>Ref</code>&lt; T &gt; &amp;c)<br />
- <i>Assignment to c. </i><br />
- template&lt;class A &gt; <code>Ref</code>&lt; T &gt; &amp; <code>operator=</code> (const <code>Ref</code>&lt; A &gt; &amp;c)<br />
- <i>Assignment to c. </i><br />
- <code>Ref</code>&lt; T &gt; &amp; <code>operator&lt;&lt;</code> (const <code>RefBase</code> &amp;a)<br />
- <i>Assignment to the object that a references using dynamic_cast. </i><br />
- <code>Ref</code>&lt; T &gt; &amp; <code>operator&lt;&lt;</code> (<code>RefCount</code> *a)<br />
- <i>Assigns to the given base class pointer using dynamic_cast. </i><br />
- <code>Ref</code>&lt; T &gt; &amp; <code>operator=</code> (T *cr)<br />
- <i>Assignment to cr. </i><br />
- void <code>assign_pointer</code> (T *cr)<br />
- <i>Assignment to cr. </i><br />
- void <code>check_pointer</code> () const<br />
- <i>Check the validity of the pointer. </i><br />
- void <code>ref_info</code> (std::ostream &amp;os) const<br />
- <i>Print information about the reference to os. </i><br />
- void <code>warn</code> (const char *s) const<br />
+<p> int <code>compare</code> (const <code>Ref</code>&lt; T &gt; &amp;a) const<br/>
+ <i>Compare two objects returning -1, 0, or 1. </i><br/>
+ void <code>clear</code> ()<br/>
+ <i>Refer to the null object. </i><br/>
+ <code>Ref</code>&lt; T &gt; &amp; <code>operator=</code> (const <code>Ref</code>&lt; T &gt; &amp;c)<br/>
+ <i>Assignment to c. </i><br/>
+ template&lt;class A &gt; <code>Ref</code>&lt; T &gt; &amp; <code>operator=</code> (const <code>Ref</code>&lt; A &gt; &amp;c)<br/>
+ <i>Assignment to c. </i><br/>
+ <code>Ref</code>&lt; T &gt; &amp; <code>operator&lt;&lt;</code> (const <code>RefBase</code> &amp;a)<br/>
+ <i>Assignment to the object that a references using dynamic_cast. </i><br/>
+ <code>Ref</code>&lt; T &gt; &amp; <code>operator&lt;&lt;</code> (<code>RefCount</code> *a)<br/>
+ <i>Assigns to the given base class pointer using dynamic_cast. </i><br/>
+ <code>Ref</code>&lt; T &gt; &amp; <code>operator=</code> (T *cr)<br/>
+ <i>Assignment to cr. </i><br/>
+ void <code>assign_pointer</code> (T *cr)<br/>
+ <i>Assignment to cr. </i><br/>
+ void <code>check_pointer</code> () const<br/>
+ <i>Check the validity of the pointer. </i><br/>
+ void <code>ref_info</code> (std::ostream &amp;os) const<br/>
+ <i>Print information about the reference to os. </i><br/>
+ void <code>warn</code> (const char *s) const<br/>
  <i>Print a warning concerning the reference. </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class T&gt; class sc::Ref&lt; T &gt;</h3>

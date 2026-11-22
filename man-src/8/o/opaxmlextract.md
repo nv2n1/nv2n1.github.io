@@ -11,7 +11,7 @@ description: "opaxmlextract"
 <p> <code>(Linux)</code> Extracts element values from XML input and outputs the data in CSV format. opaxmlextract is intended to be used with opareport, to parse and filter its XML output, and to allow the filtered output to be imported into other tools such as spreadsheets and customer-written scripts. opaxmlextract can also be used with any well-formed XML stream to extract element values into a delimited format. </p>
 <p> Five sample scripts are available as prototypes for customized scripts. They combine various calls to opareport with a call to opaxmlextract with commonly used parameters.</p>
 <h2>Syntax</h2>
-<p>opaxmlextract [-v][-H][-d <i>delimiter</i>][-e <i>extract_element</i>]<br />
+<p>opaxmlextract [-v][-H][-d <i>delimiter</i>][-e <i>extract_element</i>]<br/>
  [-s <i>suppress_element</i>][-X <i>input_file</i>] [-P <i>param_file</i>]</p>
 <h2>Options</h2>
 <dl>
@@ -60,21 +60,21 @@ description: "opaxmlextract"
 <dd>Produces verbose output. Includes output progress reports during extraction and output prepended wildcard characters on element names in output header record. </dd>
 </dl>
 <h2>Example</h2>
-<p>Here is an example of opareport output filtered by opaxmlextract :# opareport -o comps -s -x | opaxmlextract -d ; -e NodeDesc<br />
- -e SystemImageGUID -e NumPorts -s Neighbor<br />
- Getting All Node Records&#8230;<br />
- Done Getting All Node Records<br />
- Done Getting All Link Records<br />
- Done Getting All Cable Info Records<br />
- Done Getting All SM Info Records<br />
- Getting All Port Counters&#8230;<br />
- Done Getting All Port Counters<br />
- NodeDesc;SystemImageGUID;NumPorts<br />
- phs1fnivd13u07n4 hfi1_0;0x00117501016033c7;1<br />
- phs1fnivd13u07n2 hfi1_0;0x00117501016033ef;1<br />
- phs1fnivd13u07n1 hfi1_0;0x001175010160347a;1<br />
- phs1fnivd13u07n3 hfi1_0;0x0011750101603593;1<br />
- phs1swivd13u21;0x00117501ff6a5619;48<br />
+<p>Here is an example of opareport output filtered by opaxmlextract :# opareport -o comps -s -x | opaxmlextract -d ; -e NodeDesc<br/>
+ -e SystemImageGUID -e NumPorts -s Neighbor<br/>
+ Getting All Node Records&#8230;<br/>
+ Done Getting All Node Records<br/>
+ Done Getting All Link Records<br/>
+ Done Getting All Cable Info Records<br/>
+ Done Getting All SM Info Records<br/>
+ Getting All Port Counters&#8230;<br/>
+ Done Getting All Port Counters<br/>
+ NodeDesc;SystemImageGUID;NumPorts<br/>
+ phs1fnivd13u07n4 hfi1_0;0x00117501016033c7;1<br/>
+ phs1fnivd13u07n2 hfi1_0;0x00117501016033ef;1<br/>
+ phs1fnivd13u07n1 hfi1_0;0x001175010160347a;1<br/>
+ phs1fnivd13u07n3 hfi1_0;0x0011750101603593;1<br/>
+ phs1swivd13u21;0x00117501ff6a5619;48<br/>
  phs1fnivd13u07n1 hfi1_0;; </p>
 <h2>Details</h2>
 <p>opaxmlextract is a flexible and powerful tool to process an XML stream. The tool:</p>

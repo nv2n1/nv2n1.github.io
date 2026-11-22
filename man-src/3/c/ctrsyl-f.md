@@ -10,7 +10,7 @@ description: "ctrsyl.f –"
 <p>ctrsyl.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ctrsyl</code> (TRANA, TRANB, ISGN, M, N, A, LDA, B, LDB, C, LDC, SCALE, INFO)<br />
+<p>subroutine <code>ctrsyl</code> (TRANA, TRANB, ISGN, M, N, A, LDA, B, LDB, C, LDC, SCALE, INFO)<br/>
  <i></i><code>CTRSYL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctrsyl (characterTRANA, characterTRANB, integerISGN, integerM, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldc, * )C, integerLDC, realSCALE, integerINFO)</h3>

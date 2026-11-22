@@ -33,5 +33,5 @@ description: "ocamlyacc – The OCaml parser generator"
 <dd> Process <i>file</i> as the grammar specification, even if its name starts with a dash (-) character. This option must be the last on the command line. </dd>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1).<br/>
  <i>The OCaml user&#8217;s manual</i>, chapter &quot;Lexer and parser generators&quot;. </p>

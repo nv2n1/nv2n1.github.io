@@ -76,22 +76,22 @@ $ sudo docker network inspect bridge
 <dl>
 <dt>
 </dt><dd>
-<p>$ docker network create simple &#8211; network 69568e6336d8c96bbf57869030919f7c69524f71183b44d80948bd3927c87f6a $ docker network inspect simple &#8211; network[{<br />
-    &#8220;Name&#8221; : &#8220;simple-network&#8221;,<br />
-    &#8220;Id&#8221; : &#8220;69568e6336d8c96bbf57869030919f7c69524f71183b44d80948bd3927c87f6a&#8221;,<br />
-    &#8220;Scope&#8221; : &#8220;local&#8221;,<br />
-    &#8220;Driver&#8221; : &#8220;bridge&#8221;,<br />
-    &#8220;IPAM&#8221; : {<br />
-        &#8220;Driver&#8221; : &#8220;default&#8221;,<br />
-        &#8220;Config&#8221; : [<br />
-            {<br />
-                &#8220;Subnet&#8221; : &#8220;172.22.0.0/16&#8221;,<br />
-                &#8220;Gateway&#8221; : &#8220;172.22.0.1&#8221;<br />
-            }<br />
-        ]<br />
-    },<br />
-    &#8220;Containers&#8221; : {},<br />
-    &#8220;Options&#8221; : {}<br />
+<p>$ docker network create simple &#8211; network 69568e6336d8c96bbf57869030919f7c69524f71183b44d80948bd3927c87f6a $ docker network inspect simple &#8211; network[{<br/>
+    &#8220;Name&#8221; : &#8220;simple-network&#8221;,<br/>
+    &#8220;Id&#8221; : &#8220;69568e6336d8c96bbf57869030919f7c69524f71183b44d80948bd3927c87f6a&#8221;,<br/>
+    &#8220;Scope&#8221; : &#8220;local&#8221;,<br/>
+    &#8220;Driver&#8221; : &#8220;bridge&#8221;,<br/>
+    &#8220;IPAM&#8221; : {<br/>
+        &#8220;Driver&#8221; : &#8220;default&#8221;,<br/>
+        &#8220;Config&#8221; : [<br/>
+            {<br/>
+                &#8220;Subnet&#8221; : &#8220;172.22.0.0/16&#8221;,<br/>
+                &#8220;Gateway&#8221; : &#8220;172.22.0.1&#8221;<br/>
+            }<br/>
+        ]<br/>
+    },<br/>
+    &#8220;Containers&#8221; : {},<br/>
+    &#8220;Options&#8221; : {}<br/>
 }]
 </dd></dl>
 <p> docker network inspect &#8211;verbose for swarm mode overlay networks shows service-specific details such as the service&#8217;s VIP and port mappings. It also shows IPs of service tasks, and the IPs of the nodes where the tasks are running. </p>

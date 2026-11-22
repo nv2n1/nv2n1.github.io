@@ -48,8 +48,8 @@ description: "hfind – Lookup a hash value in a hash database"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;76b1f4de1522c20b67acc132937cf82e&nbsp;<wbr>&nbsp;Hash Not Found </p>
 <p> You can even do both SHA-1 and MD5 if you want: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;hfind -i nsrl-sha1&nbsp;/usr/local/hash/nsrl/NSRLFile.txt </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;hfind&nbsp;/usr/local/hash/nsrl/NSRLFile.txt<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;76b1f4de1522c20b67acc132937cf82e<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;hfind&nbsp;/usr/local/hash/nsrl/NSRLFile.txt<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;76b1f4de1522c20b67acc132937cf82e<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;80001A80B3F1B80076B297CEE8805AAA04E1B5BA </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;76b1f4de1522c20b67acc132937cf82e&nbsp;<wbr>&nbsp;Hash Not Found </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;80001A80B3F1B80076B297CEE8805AAA04E1B5BA&nbsp;<wbr>&nbsp;thrdcore.cpp </p>

@@ -11,7 +11,7 @@ description: "cppsv.f –"
 <p> cppsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cppsv</code> (UPLO, N, NRHS, AP, B, LDB, INFO)<br />
+<p> subroutine <code>cppsv</code> (UPLO, N, NRHS, AP, B, LDB, INFO)<br/>
  <i></i><code> CPPSV computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cppsv (characterUPLO, integerN, integerNRHS, complex, dimension( * )AP, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

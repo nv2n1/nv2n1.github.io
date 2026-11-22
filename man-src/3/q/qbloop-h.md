@@ -14,8 +14,8 @@ description: "qbloop.h –"
 #include &lt;signal.h&gt;
 #include &lt;stdint.h&gt;</code></pre>
 <h3>Typedefs</h3>
-<p>typedef struct qb_loop <code>qb_loop_t</code><br />
- <i>An opaque data type representing the main loop. </i><br />
+<p>typedef struct qb_loop <code>qb_loop_t</code><br/>
+ <i>An opaque data type representing the main loop. </i><br/>
  typedef uint64_t <code>qb_loop_timer_handle</code> </p>
 <p> typedef void * <code>qb_loop_signal_handle</code> </p>
 <p> typedef int32_t(* <code>qb_loop_poll_dispatch_fn</code> )(int32_t fd, int32_t revents, void *data) </p>
@@ -27,38 +27,38 @@ description: "qbloop.h –"
 <pre><code>enum qb_loop_priority { QB_LOOP_LOW = 0, QB_LOOP_MED = 1, QB_LOOP_HIGH = 2 }
 Priorites for jobs, timers &amp; poll.
 Functions</code></pre>
-<p> <code>qb_loop_t</code> * <code>qb_loop_create</code> (void)<br />
- <i>Create a new main loop. </i><br />
+<p> <code>qb_loop_t</code> * <code>qb_loop_create</code> (void)<br/>
+ <i>Create a new main loop. </i><br/>
  void <code>qb_loop_destroy</code> (struct qb_loop *l) </p>
-<p> void <code>qb_loop_stop</code> (<code>qb_loop_t</code> *l)<br />
- <i>Stop the main loop. </i><br />
- void <code>qb_loop_run</code> (<code>qb_loop_t</code> *l)<br />
- <i>Run the main loop. </i><br />
- int32_t <code>qb_loop_job_add</code> (<code>qb_loop_t</code> *l, enum <code>qb_loop_priority</code> p, void *data, <code>qb_loop_job_dispatch_fn</code> dispatch_fn)<br />
- <i>Add a job to the mainloop. </i><br />
- int32_t <code>qb_loop_job_del</code> (struct qb_loop *l, enum <code>qb_loop_priority</code> p, void *data, <code>qb_loop_job_dispatch_fn</code> dispatch_fn)<br />
- <i>Delete a job from the mainloop. </i><br />
- int32_t <code>qb_loop_timer_add</code> (<code>qb_loop_t</code> *l, enum <code>qb_loop_priority</code> p, uint64_t nsec_duration, void *data, <code>qb_loop_timer_dispatch_fn</code> dispatch_fn, <code>qb_loop_timer_handle</code> *timer_handle_out)<br />
- <i>Add a timer to the mainloop. </i><br />
- int32_t <code>qb_loop_timer_del</code> (<code>qb_loop_t</code> *l, <code>qb_loop_timer_handle</code> th)<br />
- <i>Delete a timer that is still outstanding. </i><br />
- int32_t <code>qb_loop_timer_is_running</code> (<code>qb_loop_t</code> *l, <code>qb_loop_timer_handle</code> th)<br />
- <i>Check to see if a timer that is still outstanding. </i><br />
- uint64_t <code>qb_loop_timer_expire_time_get</code> (struct qb_loop *l, <code>qb_loop_timer_handle</code> th)<br />
- <i>Get the time remaining before it expires. </i><br />
- int32_t <code>qb_loop_poll_low_fds_event_set</code> (<code>qb_loop_t</code> *l, <code>qb_loop_poll_low_fds_event_fn</code> fn)<br />
- <i>Set a callback to receive events on file descriptors getting low. </i><br />
- int32_t <code>qb_loop_poll_add</code> (<code>qb_loop_t</code> *l, enum <code>qb_loop_priority</code> p, int32_t fd, int32_t events, void *data, <code>qb_loop_poll_dispatch_fn</code> dispatch_fn)<br />
- <i>Add a poll job to the mainloop. </i><br />
- int32_t <code>qb_loop_poll_mod</code> (<code>qb_loop_t</code> *l, enum <code>qb_loop_priority</code> p, int32_t fd, int32_t events, void *data, <code>qb_loop_poll_dispatch_fn</code> dispatch_fn)<br />
- <i>Modify a poll job. </i><br />
- int32_t <code>qb_loop_poll_del</code> (<code>qb_loop_t</code> *l, int32_t fd)<br />
- <i>Delete a poll job. </i><br />
- int32_t <code>qb_loop_signal_add</code> (<code>qb_loop_t</code> *l, enum <code>qb_loop_priority</code> p, int32_t sig, void *data, <code>qb_loop_signal_dispatch_fn</code> dispatch_fn, <code>qb_loop_signal_handle</code> *handle)<br />
- <i>Add a signal job. </i><br />
- int32_t <code>qb_loop_signal_mod</code> (<code>qb_loop_t</code> *l, enum <code>qb_loop_priority</code> p, int32_t sig, void *data, <code>qb_loop_signal_dispatch_fn</code> dispatch_fn, <code>qb_loop_signal_handle</code> handle)<br />
- <i>Modify the signal job. </i><br />
- int32_t <code>qb_loop_signal_del</code> (<code>qb_loop_t</code> *l, <code>qb_loop_signal_handle</code> handle)<br />
+<p> void <code>qb_loop_stop</code> (<code>qb_loop_t</code> *l)<br/>
+ <i>Stop the main loop. </i><br/>
+ void <code>qb_loop_run</code> (<code>qb_loop_t</code> *l)<br/>
+ <i>Run the main loop. </i><br/>
+ int32_t <code>qb_loop_job_add</code> (<code>qb_loop_t</code> *l, enum <code>qb_loop_priority</code> p, void *data, <code>qb_loop_job_dispatch_fn</code> dispatch_fn)<br/>
+ <i>Add a job to the mainloop. </i><br/>
+ int32_t <code>qb_loop_job_del</code> (struct qb_loop *l, enum <code>qb_loop_priority</code> p, void *data, <code>qb_loop_job_dispatch_fn</code> dispatch_fn)<br/>
+ <i>Delete a job from the mainloop. </i><br/>
+ int32_t <code>qb_loop_timer_add</code> (<code>qb_loop_t</code> *l, enum <code>qb_loop_priority</code> p, uint64_t nsec_duration, void *data, <code>qb_loop_timer_dispatch_fn</code> dispatch_fn, <code>qb_loop_timer_handle</code> *timer_handle_out)<br/>
+ <i>Add a timer to the mainloop. </i><br/>
+ int32_t <code>qb_loop_timer_del</code> (<code>qb_loop_t</code> *l, <code>qb_loop_timer_handle</code> th)<br/>
+ <i>Delete a timer that is still outstanding. </i><br/>
+ int32_t <code>qb_loop_timer_is_running</code> (<code>qb_loop_t</code> *l, <code>qb_loop_timer_handle</code> th)<br/>
+ <i>Check to see if a timer that is still outstanding. </i><br/>
+ uint64_t <code>qb_loop_timer_expire_time_get</code> (struct qb_loop *l, <code>qb_loop_timer_handle</code> th)<br/>
+ <i>Get the time remaining before it expires. </i><br/>
+ int32_t <code>qb_loop_poll_low_fds_event_set</code> (<code>qb_loop_t</code> *l, <code>qb_loop_poll_low_fds_event_fn</code> fn)<br/>
+ <i>Set a callback to receive events on file descriptors getting low. </i><br/>
+ int32_t <code>qb_loop_poll_add</code> (<code>qb_loop_t</code> *l, enum <code>qb_loop_priority</code> p, int32_t fd, int32_t events, void *data, <code>qb_loop_poll_dispatch_fn</code> dispatch_fn)<br/>
+ <i>Add a poll job to the mainloop. </i><br/>
+ int32_t <code>qb_loop_poll_mod</code> (<code>qb_loop_t</code> *l, enum <code>qb_loop_priority</code> p, int32_t fd, int32_t events, void *data, <code>qb_loop_poll_dispatch_fn</code> dispatch_fn)<br/>
+ <i>Modify a poll job. </i><br/>
+ int32_t <code>qb_loop_poll_del</code> (<code>qb_loop_t</code> *l, int32_t fd)<br/>
+ <i>Delete a poll job. </i><br/>
+ int32_t <code>qb_loop_signal_add</code> (<code>qb_loop_t</code> *l, enum <code>qb_loop_priority</code> p, int32_t sig, void *data, <code>qb_loop_signal_dispatch_fn</code> dispatch_fn, <code>qb_loop_signal_handle</code> *handle)<br/>
+ <i>Add a signal job. </i><br/>
+ int32_t <code>qb_loop_signal_mod</code> (<code>qb_loop_t</code> *l, enum <code>qb_loop_priority</code> p, int32_t sig, void *data, <code>qb_loop_signal_dispatch_fn</code> dispatch_fn, <code>qb_loop_signal_handle</code> handle)<br/>
+ <i>Modify the signal job. </i><br/>
+ int32_t <code>qb_loop_signal_del</code> (<code>qb_loop_t</code> *l, <code>qb_loop_signal_handle</code> handle)<br/>
  <i>Delete the signal job. </i></p>
 <h2>Detailed Description</h2>
 <p>Main loop manages timers, jobs and polling sockets.</p>
@@ -97,9 +97,9 @@ Functions</code></pre>
 <dd>it is a one-shot job.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
- <i>p</i> the priority<br />
- <i>data</i> user data passed into the dispatch function<br />
+<dd><i>l</i> pointer to the loop instance<br/>
+ <i>p</i> the priority<br/>
+ <i>data</i> user data passed into the dispatch function<br/>
  <i>dispatch_fn</i> callback function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -111,9 +111,9 @@ Functions</code></pre>
 <dd>this will remove the first job that matches the paramaters (priority, data, dispatch_fn).</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
- <i>p</i> the priority<br />
- <i>data</i> user data passed into the dispatch function<br />
+<dd><i>l</i> pointer to the loop instance<br/>
+ <i>p</i> the priority<br/>
+ <i>data</i> user data passed into the dispatch function<br/>
  <i>dispatch_fn</i> callback function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -125,11 +125,11 @@ Functions</code></pre>
 <dd>it is a re-occuring job.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
- <i>p</i> the priority<br />
- <i>fd</i> file descriptor.<br />
- <i>events</i> (POLLIN|POLLOUT) etc &#8230;.<br />
- <i>data</i> user data passed into the dispatch function<br />
+<dd><i>l</i> pointer to the loop instance<br/>
+ <i>p</i> the priority<br/>
+ <i>fd</i> file descriptor.<br/>
+ <i>events</i> (POLLIN|POLLOUT) etc &#8230;.<br/>
+ <i>data</i> user data passed into the dispatch function<br/>
  <i>dispatch_fn</i> callback function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -138,7 +138,7 @@ Functions</code></pre>
 <p>Delete a poll job. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
+<dd><i>l</i> pointer to the loop instance<br/>
  <i>fd</i> file descriptor.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -147,7 +147,7 @@ Functions</code></pre>
 <p>Set a callback to receive events on file descriptors getting low. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
+<dd><i>l</i> pointer to the loop instance<br/>
  <i>fn</i> callback function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -156,11 +156,11 @@ Functions</code></pre>
 <p>Modify a poll job. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
- <i>p</i> the priority<br />
- <i>fd</i> file descriptor.<br />
- <i>events</i> (POLLIN|POLLOUT) etc &#8230;.<br />
- <i>data</i> user data passed into the dispatch function<br />
+<dd><i>l</i> pointer to the loop instance<br/>
+ <i>p</i> the priority<br/>
+ <i>fd</i> file descriptor.<br/>
+ <i>events</i> (POLLIN|POLLOUT) etc &#8230;.<br/>
+ <i>data</i> user data passed into the dispatch function<br/>
  <i>dispatch_fn</i> callback function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -174,11 +174,11 @@ Functions</code></pre>
 <p>Add a signal job. Get a callback on this signal (not in the context of the signal). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
- <i>p</i> the priority<br />
- <i>sig</i> (SIGHUP or SIGINT) etc &#8230;.<br />
- <i>data</i> user data passed into the dispatch function<br />
- <i>dispatch_fn</i> callback function<br />
+<dd><i>l</i> pointer to the loop instance<br/>
+ <i>p</i> the priority<br/>
+ <i>sig</i> (SIGHUP or SIGINT) etc &#8230;.<br/>
+ <i>data</i> user data passed into the dispatch function<br/>
+ <i>dispatch_fn</i> callback function<br/>
  <i>handle</i> (out) a reference to the signal job</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -187,7 +187,7 @@ Functions</code></pre>
 <p>Delete the signal job. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
+<dd><i>l</i> pointer to the loop instance<br/>
  <i>handle</i> (in) a reference to the signal job</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -196,11 +196,11 @@ Functions</code></pre>
 <p>Modify the signal job. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
- <i>p</i> the priority<br />
- <i>sig</i> (SIGHUP or SIGINT) etc &#8230;.<br />
- <i>data</i> user data passed into the dispatch function<br />
- <i>dispatch_fn</i> callback function<br />
+<dd><i>l</i> pointer to the loop instance<br/>
+ <i>p</i> the priority<br/>
+ <i>sig</i> (SIGHUP or SIGINT) etc &#8230;.<br/>
+ <i>data</i> user data passed into the dispatch function<br/>
+ <i>dispatch_fn</i> callback function<br/>
  <i>handle</i> (in) a reference to the signal job</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -217,11 +217,11 @@ Functions</code></pre>
 <dd>it is a one-shot job.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
- <i>p</i> the priority<br />
- <i>nsec_duration</i> nano-secs in the future to run the dispatch.<br />
- <i>data</i> user data passed into the dispatch function<br />
- <i>dispatch_fn</i> callback function<br />
+<dd><i>l</i> pointer to the loop instance<br/>
+ <i>p</i> the priority<br/>
+ <i>nsec_duration</i> nano-secs in the future to run the dispatch.<br/>
+ <i>data</i> user data passed into the dispatch function<br/>
+ <i>dispatch_fn</i> callback function<br/>
  <i>timer_handle_out</i> handle to delete the timer if needed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -230,7 +230,7 @@ Functions</code></pre>
 <p>Delete a timer that is still outstanding. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
+<dd><i>l</i> pointer to the loop instance<br/>
  <i>th</i> handle to delete the timer if needed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -242,7 +242,7 @@ Functions</code></pre>
 <dd>if the timer has already expired it will return 0</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
+<dd><i>l</i> pointer to the loop instance<br/>
  <i>th</i> timer handle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -251,11 +251,11 @@ Functions</code></pre>
 <p>Check to see if a timer that is still outstanding. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>l</i> pointer to the loop instance<br />
+<dd><i>l</i> pointer to the loop instance<br/>
  <i>th</i> handle to delete the timer if needed.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
-<dd><i>QB_TRUE</i> yes this timer is outstanding<br />
+<dd><i>QB_TRUE</i> yes this timer is outstanding<br/>
  <i>QB_FALSE</i> this timer does not exist or has expired</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for libqb from the source code.</p>

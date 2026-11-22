@@ -10,7 +10,7 @@ description: "ztfsm.f –"
 <p>ztfsm.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztfsm</code> (TRANSR, SIDE, UPLO, TRANS, DIAG, M, N, ALPHA, A, B, LDB)<br />
+<p>subroutine <code>ztfsm</code> (TRANSR, SIDE, UPLO, TRANS, DIAG, M, N, ALPHA, A, B, LDB)<br/>
  <i></i><code>ZTFSM</code> solves a matrix equation (one operand is a triangular matrix in RFP format).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztfsm (characterTRANSR, characterSIDE, characterUPLO, characterTRANS, characterDIAG, integerM, integerN, complex*16ALPHA, complex*16, dimension( 0: * )A, complex*16, dimension( 0: ldb-1, 0: * )B, integerLDB)</h3>

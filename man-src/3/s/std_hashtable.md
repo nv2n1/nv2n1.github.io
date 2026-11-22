@@ -127,15 +127,15 @@ Protected Member Functions</code></pre>
 <p>Primary class template _Hashtable. </p>
 <p> <code>Template Parameters:</code></p>
 <dl>
-<dd><i>_Value</i> CopyConstructible type.<br />
- <i>_Key</i> CopyConstructible type.<br />
- <i>_Alloc</i> An allocator type ([lib.allocator.requirements]) whose _Alloc::value_type is _Value. As a conforming extension, we allow for _Alloc::value_type != _Value.<br />
- <i>_ExtractKey</i> Function object that takes an object of type _Value and returns a value of type _Key.<br />
- <i>_Equal</i> Function object that takes two objects of type k and returns a bool-like value that is true if the two objects are considered equal.<br />
- <i>_H1</i> The hash function. A unary function object with argument type _Key and result type size_t. Return values should be distributed over the entire range [0, numeric_limits&lt;size_t&gt;:max()].<br />
- <i>_H2</i> The range-hashing function (in the terminology of Tavori and Dreizin). A binary function object whose argument types and result type are all size_t. Given arguments r and N, the return value is in the range [0, N).<br />
- <i>_Hash</i> The ranged hash function (Tavori and Dreizin). A binary function whose argument types are _Key and size_t and whose result type is size_t. Given arguments k and N, the return value is in the range [0, N). Default: hash(k, N) = h2(h1(k), N). If _Hash is anything other than the default, _H1 and _H2 are ignored.<br />
- <i>_RehashPolicy</i> Policy class with three members, all of which govern the bucket count. _M_next_bkt(n) returns a bucket count no smaller than n. _M_bkt_for_elements(n) returns a bucket count appropriate for an element count of n. _M_need_rehash(n_bkt, n_elt, n_ins) determines whether, if the current bucket count is n_bkt and the current element count is n_elt, we need to increase the bucket count. If so, returns make_pair(true, n), where n is the new bucket count. If not, returns make_pair(false, &lt;anything&gt;)<br />
+<dd><i>_Value</i> CopyConstructible type.<br/>
+ <i>_Key</i> CopyConstructible type.<br/>
+ <i>_Alloc</i> An allocator type ([lib.allocator.requirements]) whose _Alloc::value_type is _Value. As a conforming extension, we allow for _Alloc::value_type != _Value.<br/>
+ <i>_ExtractKey</i> Function object that takes an object of type _Value and returns a value of type _Key.<br/>
+ <i>_Equal</i> Function object that takes two objects of type k and returns a bool-like value that is true if the two objects are considered equal.<br/>
+ <i>_H1</i> The hash function. A unary function object with argument type _Key and result type size_t. Return values should be distributed over the entire range [0, numeric_limits&lt;size_t&gt;:max()].<br/>
+ <i>_H2</i> The range-hashing function (in the terminology of Tavori and Dreizin). A binary function object whose argument types and result type are all size_t. Given arguments r and N, the return value is in the range [0, N).<br/>
+ <i>_Hash</i> The ranged hash function (Tavori and Dreizin). A binary function whose argument types are _Key and size_t and whose result type is size_t. Given arguments k and N, the return value is in the range [0, N). Default: hash(k, N) = h2(h1(k), N). If _Hash is anything other than the default, _H1 and _H2 are ignored.<br/>
+ <i>_RehashPolicy</i> Policy class with three members, all of which govern the bucket count. _M_next_bkt(n) returns a bucket count no smaller than n. _M_bkt_for_elements(n) returns a bucket count appropriate for an element count of n. _M_need_rehash(n_bkt, n_elt, n_ins) determines whether, if the current bucket count is n_bkt and the current element count is n_elt, we need to increase the bucket count. If so, returns make_pair(true, n), where n is the new bucket count. If not, returns make_pair(false, &lt;anything&gt;)<br/>
  <i>_Traits</i> Compile-time class with three boolean std::integral_constant members: __cache_hash_code, __constant_iterators, __unique_keys.</dd></dl>
 <p> Each _Hashtable data structure has: </p>
 <dl>

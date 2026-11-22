@@ -11,8 +11,8 @@ description: "perlvar – Perl predefined variables"
 <p> perlvar &#8211; Perl predefined variables </p>
 <h2>DESCRIPTION</h2>
 <h3>The Syntax of Variable Names</h3>
-<p> Variable names in Perl can have several formats. Usually, they must begin with a letter or underscore, in which case they can be arbitrarily long (up to an internal limit of 251 characters) and may contain letters, digits, underscores, or the special sequence <tt>&quot;::&quot;</tt> or <tt>&quot;'&quot;</tt>. In this case, the part before the last <tt>&quot;::&quot;</tt> or <tt>&quot;'&quot;</tt> is taken to be a <i>package qualifier</i>; see perlmod. A Unicode letter that is not <font SIZE="-1">ASCII</font> is not considered to be a letter unless <tt>&quot;use utf8&quot;</tt> is in effect, and somewhat more complicated rules apply; see &#8220;Identifier parsing&#8221; in perldata for details. </p>
-<p> Perl variable names may also be a sequence of digits, a single punctuation character, or the two-character sequence: <tt>&quot;^&quot;</tt> (caret or <font SIZE="-1">CIRCUMFLEX ACCENT</font>) followed by any one of the characters <tt>&quot;[][A-Z^_?\]&quot;</tt>. These names are all reserved for special uses by Perl; for example, the all-digits names are used to hold data captured by backreferences after a regular expression match. </p>
+<p> Variable names in Perl can have several formats. Usually, they must begin with a letter or underscore, in which case they can be arbitrarily long (up to an internal limit of 251 characters) and may contain letters, digits, underscores, or the special sequence <tt>&quot;::&quot;</tt> or <tt>&quot;'&quot;</tt>. In this case, the part before the last <tt>&quot;::&quot;</tt> or <tt>&quot;'&quot;</tt> is taken to be a <i>package qualifier</i>; see perlmod. A Unicode letter that is not ASCII is not considered to be a letter unless <tt>&quot;use utf8&quot;</tt> is in effect, and somewhat more complicated rules apply; see &#8220;Identifier parsing&#8221; in perldata for details. </p>
+<p> Perl variable names may also be a sequence of digits, a single punctuation character, or the two-character sequence: <tt>&quot;^&quot;</tt> (caret or CIRCUMFLEX ACCENT) followed by any one of the characters <tt>&quot;[][A-Z^_?\]&quot;</tt>. These names are all reserved for special uses by Perl; for example, the all-digits names are used to hold data captured by backreferences after a regular expression match. </p>
 <p> Since Perl v5.6.0, Perl variable names may also be alphanumeric strings preceded by a caret. These must all be written in the form <tt>&quot;${^Foo}&quot;</tt>; the braces are not optional. <tt>&quot;${^Foo}&quot;</tt> denotes the scalar variable whose name is considered to be a control-<tt>&quot;F&quot;</tt> followed by two <tt>&quot;o&quot;</tt>&#8216;s. These variables are reserved for future special uses by Perl, except for the ones that begin with <tt>&quot;^_&quot;</tt> (caret-underscore). No name that begins with <tt>&quot;^_&quot;</tt> will acquire a special meaning in any future version of Perl; such names may therefore be used safely in programs. <tt>$^_</tt> itself, however, <i>is</i> reserved. </p>
 <p> Perl identifiers that begin with digits or punctuation characters are exempt from the effects of the <tt>&quot;package&quot;</tt> declaration and are always forced to be in package <tt>&quot;main&quot;</tt>; they are also exempt from <tt>&quot;strict 'vars'&quot;</tt> errors. A few other names are also exempt in these ways: </p>
 <pre>
@@ -52,7 +52,7 @@ while (&lt;&gt;) {
 <dd> The following functions use <tt>$_</tt> as a default argument: </dd>
 <p> abs, alarm, chomp, chop, chr, chroot, cos, defined, eval, evalbytes, exp, fc, glob, hex, int, lc, lcfirst, length, log, lstat, mkdir, oct, ord, pos, print, printf, quotemeta, readlink, readpipe, ref, require, reverse (in scalar context only), rmdir, say, sin, split (for its second argument), sqrt, stat, study, uc, ucfirst, unlink, unpack.</p>
 <dt>&bull;</dt>
-<dd> All file tests (<tt>&quot;-f&quot;</tt>, <tt>&quot;-d&quot;</tt>) except for <tt>&quot;-t&quot;</tt>, which defaults to <font SIZE="-1">STDIN.</font> See &#8220;-X&#8221; in perlfunc</dd>
+<dd> All file tests (<tt>&quot;-f&quot;</tt>, <tt>&quot;-d&quot;</tt>) except for <tt>&quot;-t&quot;</tt>, which defaults to STDIN. See &#8220;-X&#8221; in perlfunc</dd>
 <dt>&bull;</dt>
 <dd> The pattern matching operations <tt>&quot;m//&quot;</tt>, <tt>&quot;s///&quot;</tt> and <tt>&quot;tr///&quot;</tt> (aka <tt>&quot;y///&quot;</tt>) when used without an <tt>&quot;=~&quot;</tt> operator.</dd>
 <dt>&bull;</dt>
@@ -95,10 +95,10 @@ while (&lt;&gt;) {
 <dd>
 </dd><dt>$$</dt>
 <dd> The process number of the Perl running this script. Though you <i>can</i> set this variable, doing so is generally discouraged, although it can be invaluable for some testing purposes. It will be reset automatically across <tt>&quot;fork()&quot;</tt> calls. </dd>
-<p> Note for Linux and Debian GNU/kFreeBSD users: Before Perl v5.16.0 perl would emulate <font SIZE="-1">POSIX</font> semantics on Linux systems using LinuxThreads, a partial implementation of <font SIZE="-1">POSIX</font> Threads that has since been superseded by the Native <font SIZE="-1">POSIX</font> Thread Library (<font SIZE="-1">NPTL</font>). </p>
+<p> Note for Linux and Debian GNU/kFreeBSD users: Before Perl v5.16.0 perl would emulate POSIX semantics on Linux systems using LinuxThreads, a partial implementation of POSIX Threads that has since been superseded by the Native POSIX Thread Library (NPTL). </p>
 <p> LinuxThreads is now obsolete on Linux, and caching <tt>&quot;getpid()&quot;</tt> like this made embedding perl unnecessarily complex (since you&#8217;d have to manually update the value of $$), so now <tt>$$</tt> and <tt>&quot;getppid()&quot;</tt> will always return the same values as the underlying C library. </p>
 <p> Debian GNU/kFreeBSD systems also used LinuxThreads up until and including the 6.0 release, but after that moved to FreeBSD thread semantics, which are POSIX-like. </p>
-<p> To see if your system is affected by this discrepancy check if <tt>&quot;getconf GNU_LIBPTHREAD_VERSION | grep -q NPTL&quot;</tt> returns a false value. <font SIZE="-1">NTPL</font> threads preserve the <font SIZE="-1">POSIX</font> semantics. </p>
+<p> To see if your system is affected by this discrepancy check if <tt>&quot;getconf GNU_LIBPTHREAD_VERSION | grep -q NPTL&quot;</tt> returns a false value. NTPL threads preserve the POSIX semantics. </p>
 <p> Mnemonic: same as shells.</p>
 <dt>$PROGRAM_NAME</dt>
 <dd>
@@ -107,10 +107,10 @@ while (&lt;&gt;) {
 <p> On some (but not all) operating systems assigning to <tt>$0</tt> modifies the argument area that the <tt>&quot;ps&quot;</tt> program sees. On some platforms you may have to use special <tt>&quot;ps&quot;</tt> options or a different <tt>&quot;ps&quot;</tt> to see the changes. Modifying the <tt>$0</tt> is more useful as a way of indicating the current program state than it is for hiding the program you&#8217;re running. </p>
 <p> Note that there are platform-specific limitations on the maximum length of <tt>$0</tt>. In the most extreme case it may be limited to the space occupied by the original <tt>$0</tt>. </p>
 <p> In some platforms there may be arbitrary amount of padding, for example space characters, after the modified name as shown by <tt>&quot;ps&quot;</tt>. In some platforms this padding may extend all the way to the original length of the argument area, no matter what you do (this is the case for example with Linux 2.2). </p>
-<p> Note for <font SIZE="-1">BSD</font> users: setting <tt>$0</tt> does not completely remove &#8220;perl&#8221; from the <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1) output. For example, setting <tt>$0</tt> to <tt>&quot;foobar&quot;</tt> may result in <tt>&quot;perl: foobar (perl)&quot;</tt> (whether both the <tt>&quot;perl: &quot;</tt> prefix and the &#8220; (perl)&#8221; suffix are shown depends on your exact <font SIZE="-1">BSD</font> variant and version). This is an operating system feature, Perl cannot help it. </p>
+<p> Note for BSD users: setting <tt>$0</tt> does not completely remove &#8220;perl&#8221; from the <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1) output. For example, setting <tt>$0</tt> to <tt>&quot;foobar&quot;</tt> may result in <tt>&quot;perl: foobar (perl)&quot;</tt> (whether both the <tt>&quot;perl: &quot;</tt> prefix and the &#8220; (perl)&#8221; suffix are shown depends on your exact BSD variant and version). This is an operating system feature, Perl cannot help it. </p>
 <p> In multithreaded scripts Perl coordinates the threads so that any thread may modify its copy of the <tt>$0</tt> and the change becomes visible to <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1) (assuming the operating system plays along). Note that the view of <tt>$0</tt> the other threads have will not change since they have their own copies of it. </p>
 <p> If the program has been given to perl via the switches <tt>&quot;-e&quot;</tt> or <tt>&quot;-E&quot;</tt>, <tt>$0</tt> will contain the string <tt>&quot;-e&quot;</tt>. </p>
-<p> On Linux as of perl v5.14.0 the legacy process name will be set with <tt><a href="/docs/linux/man/2-prctl/">prctl</a>(2)</tt>, in addition to altering the <font SIZE="-1">POSIX</font> name via <tt>&quot;argv[0]&quot;</tt> as perl has done since version 4.000. Now system utilities that read the legacy process name such as ps, top and killall will recognize the name you set when assigning to <tt>$0</tt>. The string you supply will be cut off at 16 bytes, this is a limitation imposed by Linux. </p>
+<p> On Linux as of perl v5.14.0 the legacy process name will be set with <tt><a href="/docs/linux/man/2-prctl/">prctl</a>(2)</tt>, in addition to altering the POSIX name via <tt>&quot;argv[0]&quot;</tt> as perl has done since version 4.000. Now system utilities that read the legacy process name such as ps, top and killall will recognize the name you set when assigning to <tt>$0</tt>. The string you supply will be cut off at 16 bytes, this is a limitation imposed by Linux. </p>
 <p> Mnemonic: same as <code>sh</code> and <code>ksh</code>.</p>
 <dt>$REAL_GROUP_ID</dt>
 <dd>
@@ -170,7 +170,7 @@ while (&lt;&gt;) {
 </pre>
 <p> which means </p>
 <p>($foo{$x}, $foo{$y}, $foo{$z})</p>
-<p> Default is &#8220;&#8221;, the same as <font SIZE="-1">SUBSEP</font> in <code>awk</code>. If your keys contain binary data there might not be any safe value for <tt>$;</tt>. </p>
+<p> Default is &#8220;&#8221;, the same as SUBSEP in <code>awk</code>. If your keys contain binary data there might not be any safe value for <tt>$;</tt>. </p>
 <p> Consider using &#8220;real&#8221; multidimensional arrays as described in perllol. </p>
 <p> Mnemonic: comma (the syntactic subscript separator) is a semi-semicolon.</p>
 <dt>$a</dt>
@@ -180,24 +180,24 @@ while (&lt;&gt;) {
 <dt>%ENV</dt>
 <dd> The hash <tt>%ENV</tt> contains your current environment. Setting a value in <tt>&quot;ENV&quot;</tt> changes the environment for any child processes you subsequently <tt>&quot;fork()&quot;</tt> off. </dd>
 <p> As of v5.18.0, both keys and values stored in <tt>%ENV</tt> are stringified. </p>
-<p>my $foo = 1;<br />
-$ENV{&#8216;bar&#8217;} = \$foo;<br />
-if (ref $ENV{&#8216;bar&#8217;}) {<br />
-    say &#8220;Pre 5.18.0 Behaviour&#8221;;<br />
-} else {<br />
-    say &#8220;Post 5.18.0 Behaviour&#8221;;<br />
+<p>my $foo = 1;<br/>
+$ENV{&#8216;bar&#8217;} = \$foo;<br/>
+if (ref $ENV{&#8216;bar&#8217;}) {<br/>
+    say &#8220;Pre 5.18.0 Behaviour&#8221;;<br/>
+} else {<br/>
+    say &#8220;Post 5.18.0 Behaviour&#8221;;<br/>
 }</p>
 <p> Previously, only child processes received stringified values: </p>
-<p>my $foo = 1;<br />
-$ENV{&#8216;bar&#8217;} = \$foo;<br />
-#Always printed &#8216;non ref&#8217;<br />
-system($ ^ X, &#8216;-e&#8217;,<br />
+<p>my $foo = 1;<br/>
+$ENV{&#8216;bar&#8217;} = \$foo;<br/>
+#Always printed &#8216;non ref&#8217;<br/>
+system($ ^ X, &#8216;-e&#8217;,<br/>
        q / print(ref $ENV{&#8216;bar&#8217;} ? &#8216;ref&#8217; : &#8216;non ref&#8217;) /);</p>
 <p> This happens because you can&#8217;t really share arbitrary data structures with foreign processes.</p>
 <dt>$OLD_PERL_VERSION</dt>
 <dd>
 </dd><dt>$]</dt>
-<dd> The revision, version, and subversion of the Perl interpreter, represented as a decimal of the form 5.XXXYYY, where <font SIZE="-1">XXX</font> is the version / 1e3 and <font SIZE="-1">YYY</font> is the subversion / 1e6. For example, Perl v5.10.1 would be &#8220;5.010001&#8221;. </dd>
+<dd> The revision, version, and subversion of the Perl interpreter, represented as a decimal of the form 5.XXXYYY, where XXX is the version / 1e3 and YYY is the subversion / 1e6. For example, Perl v5.10.1 would be &#8220;5.010001&#8221;. </dd>
 <p> This variable can be used to determine whether the Perl interpreter executing a script is in the right range of versions: </p>
 <pre>
     warn &quot;No PerlIO!
@@ -238,60 +238,60 @@ system($ ^ X, &#8216;-e&#8217;,<br />
 <pre>
     $^M = 'a' x (1 &lt;&lt; 16);
 </pre>
-<p> would allocate a 64K buffer for use in an emergency. See the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file in the Perl distribution for information on how to add custom C compilation flags when compiling perl. To discourage casual use of this advanced feature, there is no English long name for this variable. </p>
+<p> would allocate a 64K buffer for use in an emergency. See the <i></i><i>INSTALL</i><i></i> file in the Perl distribution for information on how to add custom C compilation flags when compiling perl. To discourage casual use of this advanced feature, there is no English long name for this variable. </p>
 <p> This variable was added in Perl 5.004.</p>
 <dt>$OSNAME</dt>
 <dd>
 </dd><dt>$^O</dt>
-<dd> The name of the operating system under which this copy of Perl was built, as determined during the configuration process. For examples see &#8220;<font SIZE="-1">PLATFORMS&#8221;</font> in perlport. </dd>
+<dd> The name of the operating system under which this copy of Perl was built, as determined during the configuration process. For examples see &#8220;PLATFORMS&#8221; in perlport. </dd>
 <p> The value is identical to <tt>$Config{'osname'}</tt>. See also Config and the <code>-V</code> command-line switch documented in perlrun. </p>
 <p> In Windows platforms, <tt>$^O</tt> is not very helpful: since it is always <tt>&quot;MSWin32&quot;</tt>, it doesn&#8217;t tell the difference between 95/98/ME/NT/2000/XP/CE/.NET. Use <tt>&quot;Win32::GetOSName()&quot;</tt> or <code>Win32::GetOSVersion()</code> (see Win32 and perlport) to distinguish between the variants. </p>
 <p> This variable was added in Perl 5.003.</p>
 <dt>%SIG</dt>
 <dd> The hash <tt>%SIG</tt> contains signal handlers for signals. For example: </dd>
-<p>sub handler<br />
-{<br />
-# 1st argument is signal name my($sig) = @_;<br />
+<p>sub handler<br/>
+{<br/>
+# 1st argument is signal name my($sig) = @_;<br/>
     print &#8220;Caught a SIG$sig&#8211;shutting down
-&#8221;;<br />
-    close(LOG);<br />
-    exit(0);<br />
-}<br />
-$SIG{&#8216;INT&#8217;} = \&amp; handler;<br />
-$SIG{&#8216;QUIT&#8217;} = \&amp; handler;<br />
-&#8230; $SIG{&#8216;INT&#8217;} = &#8216;DEFAULT&#8217;;<br />
-#restore default action<br />
-    $SIG{&#8216;QUIT&#8217; } = &#8216;IGNORE&#8217;;<br />
+&#8221;;<br/>
+    close(LOG);<br/>
+    exit(0);<br/>
+}<br/>
+$SIG{&#8216;INT&#8217;} = \&amp; handler;<br/>
+$SIG{&#8216;QUIT&#8217;} = \&amp; handler;<br/>
+&#8230; $SIG{&#8216;INT&#8217;} = &#8216;DEFAULT&#8217;;<br/>
+#restore default action<br/>
+    $SIG{&#8216;QUIT&#8217; } = &#8216;IGNORE&#8217;;<br/>
 #ignore SIGQUIT</p>
 <p> Using a value of <tt>'IGNORE'</tt> usually has the effect of ignoring the signal, except for the <tt>&quot;CHLD&quot;</tt> signal. See perlipc for more about this special case. </p>
 <p> Here are some other examples: </p>
-<p>$SIG{&#8220;PIPE&#8221;} = &#8220;Plumber&#8221;;<br />
-#assumes main::Plumber(not<br />
-#recommended)<br />
-                       $SIG{&#8220;PIPE&#8221;} = \&amp; Plumber;<br />
-                       #just fine; assume current<br />
-#Plumber<br />
-                                       $SIG{&#8220;PIPE&#8221;} = *Plumber;<br />
-                       #somewhat esoteric<br />
-                           $SIG{&#8220;PIPE&#8221;} = Plumber();<br />
-                       #oops, what did Plumber()<br />
+<p>$SIG{&#8220;PIPE&#8221;} = &#8220;Plumber&#8221;;<br/>
+#assumes main::Plumber(not<br/>
+#recommended)<br/>
+                       $SIG{&#8220;PIPE&#8221;} = \&amp; Plumber;<br/>
+                       #just fine; assume current<br/>
+#Plumber<br/>
+                                       $SIG{&#8220;PIPE&#8221;} = *Plumber;<br/>
+                       #somewhat esoteric<br/>
+                           $SIG{&#8220;PIPE&#8221;} = Plumber();<br/>
+                       #oops, what did Plumber()<br/>
 #return ? ?</p>
 <p> Be sure not to use a bareword as the name of a signal handler, lest you inadvertently call it. </p>
 <p> If your system has the <tt>&quot;sigaction()&quot;</tt> function then signal handlers are installed using it. This means you get reliable signal handling. </p>
 <p> The default delivery policy of signals changed in Perl v5.8.0 from immediate (also known as &#8220;unsafe&#8221;) to deferred, also known as &#8220;safe signals&#8221;. See perlipc for more information. </p>
 <p> Certain internal hooks can be also set using the <tt>%SIG</tt> hash. The routine indicated by <tt>$SIG{__WARN__}</tt> is called when a warning message is about to be printed. The warning message is passed as the first argument. The presence of a <tt>&quot;__WARN__&quot;</tt> hook causes the ordinary printing of warnings to <tt>&quot;STDERR&quot;</tt> to be suppressed. You can use this to save warnings in a variable, or turn warnings into fatal errors, like this: </p>
-<p>local $SIG{__WARN__} = sub{die $_[0]};<br />
+<p>local $SIG{__WARN__} = sub{die $_[0]};<br/>
 eval $proggie;</p>
 <p> As the <tt>'IGNORE'</tt> hook is not supported by <tt>&quot;__WARN__&quot;</tt>, you can disable warnings using the empty subroutine: </p>
 <p>local $SIG{__WARN__} = sub{};</p>
 <p> The routine indicated by <tt>$SIG{__DIE__}</tt> is called when a fatal exception is about to be thrown. The error message is passed as the first argument. When a <tt>&quot;__DIE__&quot;</tt> hook routine returns, the exception processing continues as it would have in the absence of the hook, unless the hook routine itself exits via a <tt>&quot;goto &amp;sub&quot;</tt>, a loop exit, or a <tt>&quot;die()&quot;</tt>. The <tt>&quot;__DIE__&quot;</tt> handler is explicitly disabled during the call, so that you can die from a <tt>&quot;__DIE__&quot;</tt> handler. Similarly for <tt>&quot;__WARN__&quot;</tt>. </p>
 <p> The <tt>$SIG{__DIE__}</tt> hook is called even inside an <tt>&quot;eval()&quot;</tt>. It was never intended to happen this way, but an implementation glitch made this possible. This used to be deprecated, as it allowed strange action at a distance like rewriting a pending exception in <tt>$@</tt>. Plans to rectify this have been scrapped, as users found that rewriting a pending exception is actually a useful feature, and not a bug. </p>
 <p> <tt>&quot;__DIE__&quot;</tt>/<tt>&quot;__WARN__&quot;</tt> handlers are very special in one respect: they may be called to report (probable) errors found by the parser. In such a case the parser may be in inconsistent state, so any attempt to evaluate Perl code from such a handler will probably result in a segfault. This means that warnings or errors that result from parsing Perl should be used with extreme caution, like this: </p>
-<p>require Carp if defined $ ^ S;<br />
-Carp::confess(&#8220;Something wrong&#8221;) if defined &amp;Carp::confess;<br />
-die &#8220;Something wrong, but could not load Carp to give &#8221;<br />
+<p>require Carp if defined $ ^ S;<br/>
+Carp::confess(&#8220;Something wrong&#8221;) if defined &amp;Carp::confess;<br/>
+die &#8220;Something wrong, but could not load Carp to give &#8221;<br/>
     .&#8221;backtrace&#8230;
-	&#8221;<br />
+	&#8221;<br/>
     .&#8221;To see backtrace try starting Perl with -MCarp switch&#8221;;</p>
 <p> Here the first line will load <tt>&quot;Carp&quot;</tt> <i>unless</i> it is the parser who called the handler. The second line will print backtrace and die if <tt>&quot;Carp&quot;</tt> was available. The third line will be executed only if <tt>&quot;Carp&quot;</tt> was not available. </p>
 <p> Having to even think about the <tt>$^S</tt> variable in your exception handlers is simply wrong. <tt>$SIG{__DIE__}</tt> as currently implemented invites grievous and difficult to track down errors. Avoid it and use an <tt>&quot;END{}&quot;</tt> or CORE::GLOBAL::die override instead. </p>
@@ -327,46 +327,46 @@ die &#8220;Something wrong, but could not load Carp to give &#8221;<br />
 <dd>
 </dd><dt>$^X</dt>
 <dd> The name used to execute the current copy of Perl, from C&#8217;s <tt>&quot;argv[0]&quot;</tt> or (where supported) <i>/proc/self/exe</i>. </dd>
-<p> Depending on the host operating system, the value of <tt>$^X</tt> may be a relative or absolute pathname of the perl program file, or may be the string used to invoke perl but not the pathname of the perl program file. Also, most operating systems permit invoking programs that are not in the <font SIZE="-1">PATH</font> environment variable, so there is no guarantee that the value of <tt>$^X</tt> is in <font SIZE="-1">PATH.</font> For <font SIZE="-1">VMS,</font> the value may or may not include a version number. </p>
+<p> Depending on the host operating system, the value of <tt>$^X</tt> may be a relative or absolute pathname of the perl program file, or may be the string used to invoke perl but not the pathname of the perl program file. Also, most operating systems permit invoking programs that are not in the PATH environment variable, so there is no guarantee that the value of <tt>$^X</tt> is in PATH. For VMS, the value may or may not include a version number. </p>
 <p> You usually can use the value of <tt>$^X</tt> to re-invoke an independent copy of the same perl that is currently running, e.g., </p>
 <pre>
     @first_run = `$^X -le &quot;print int rand 100 for 1..100&quot;`;
 </pre>
 <p> But recall that not all operating systems support forking or capturing of the output of commands, so this complex statement may not be portable. </p>
 <p> It is not safe to use the value of <tt>$^X</tt> as a path name of a file, as some operating systems that have a mandatory suffix on executable files do not require use of the suffix when invoking a command. To convert the value of <tt>$^X</tt> to a path name, use the following statements: </p>
-<p>#Build up a set of file names(not command names).<br />
-use Config;<br />
-my $this_perl = $ ^ X;<br />
-if ($ ^ O ne &#8216;VMS&#8217;) {<br />
-    $this_perl.= $Config{_exe} unless $this_perl = ~m / $Config{_exe} $ / i;<br />
+<p>#Build up a set of file names(not command names).<br/>
+use Config;<br/>
+my $this_perl = $ ^ X;<br/>
+if ($ ^ O ne &#8216;VMS&#8217;) {<br/>
+    $this_perl.= $Config{_exe} unless $this_perl = ~m / $Config{_exe} $ / i;<br/>
 }</p>
 <p> Because many operating systems permit anyone with read access to the Perl program file to make a copy of it, patch the copy, and then execute the copy, the security-conscious Perl programmer should take care to invoke the installed copy of perl, not the copy referenced by <tt>$^X</tt>. The following statements accomplish this goal, and produce a pathname that can be invoked as a command or referenced as a file. </p>
-<p>use Config;<br />
-my $secure_perl_path = $Config{perlpath};<br />
-if ($ ^ O ne &#8216;VMS&#8217;) {<br />
-    $secure_perl_path.= $Config{_exe} unless $secure_perl_path = ~m / $Config{_exe} $ / i;<br />
+<p>use Config;<br/>
+my $secure_perl_path = $Config{perlpath};<br/>
+if ($ ^ O ne &#8216;VMS&#8217;) {<br/>
+    $secure_perl_path.= $Config{_exe} unless $secure_perl_path = ~m / $Config{_exe} $ / i;<br/>
 }
 </dl>
 <h3>Variables related to regular expressions</h3>
 <p> Most of the special variables related to regular expressions are side effects. Perl sets these variables when it has a successful match, so you should check the match result before using them. For instance: </p>
-<p>if (/ P(A) TT(ER) N /) {<br />
+<p>if (/ P(A) TT(ER) N /) {<br/>
     print &#8220;I found $1 and $2
-&#8221;;<br />
+&#8221;;<br/>
 }</p>
 <p> These variables are read-only and dynamically-scoped, unless we note otherwise. </p>
 <p> The dynamic nature of the regular expression variables means that their value is limited to the block that they are in, as demonstrated by this bit of code: </p>
-<p>my $outer = &#8216;Wallace and Grommit&#8217;;<br />
-my $inner = &#8216;Mutt and Jeff&#8217;;<br />
-my $pattern = qr / (\S +) and (\S +) / ;<br />
+<p>my $outer = &#8216;Wallace and Grommit&#8217;;<br/>
+my $inner = &#8216;Mutt and Jeff&#8217;;<br/>
+my $pattern = qr / (\S +) and (\S +) / ;<br/>
 sub show_n{print &#8220;\$1 is $1; \$2 is $2
-&#8221;}<br />
-{<br />
-OUTER:<br />
-    show_n() if $outer = ~m / $pattern / ;<br />
-INNER : {<br />
-    show_n() if $inner = ~m / $pattern / ;<br />
-}<br />
-    show_n();<br />
+&#8221;}<br/>
+{<br/>
+OUTER:<br/>
+    show_n() if $outer = ~m / $pattern / ;<br/>
+INNER : {<br/>
+    show_n() if $inner = ~m / $pattern / ;<br/>
+}<br/>
+    show_n();<br/>
 }</p>
 <p> The output shows that while in the <tt>&quot;OUTER&quot;</tt> block, the values of <tt>$1</tt> and <tt>$2</tt> are from the match against <tt>$outer</tt>. Inside the <tt>&quot;INNER&quot;</tt> block, the values of <tt>$1</tt> and <tt>$2</tt> are from the match against <tt>$inner</tt>, but only until the end of the block (i.e. the dynamic scope). After the <tt>&quot;INNER&quot;</tt> block completes, the values of <tt>$1</tt> and <tt>$2</tt> return to the values for the match against <tt>$outer</tt> even though we have not made another match: </p>
 <pre>
@@ -377,9 +377,9 @@ INNER : {<br />
 <p> <i>Performance issues</i> </p>
 <p> Traditionally in Perl, any use of any of the three variables <tt>&quot;$`&quot;</tt>, <tt>$&amp;</tt> or <tt>&quot;$'&quot;</tt> (or their <tt>&quot;use English&quot;</tt> equivalents) anywhere in the code, caused all subsequent successful pattern matches to make a copy of the matched string, in case the code might subsequently access one of those variables. This imposed a considerable performance penalty across the whole program, so generally the use of these variables has been discouraged. </p>
 <p> In Perl 5.6.0 the <tt>&quot;@-&quot;</tt> and <tt>&quot;@+&quot;</tt> dynamic arrays were introduced that supply the indices of successful matches. So you could for example do this: </p>
-<p>$str = ~ / pattern / ;<br />
-print $`, $ &amp;, $&#8217;; # bad: performance hit print #good : no performance hit substr($str, 0, $ &#8211; [0]),<br />
-                                                        substr($str, $ &#8211; [0], $ + [0] &#8211; $ &#8211; [0]),<br />
+<p>$str = ~ / pattern / ;<br/>
+print $`, $ &amp;, $&#8217;; # bad: performance hit print #good : no performance hit substr($str, 0, $ &#8211; [0]),<br/>
+                                                        substr($str, $ &#8211; [0], $ + [0] &#8211; $ &#8211; [0]),<br/>
                                                         substr($str, $ + [0]);</p>
 <p> In Perl 5.10.0 the <tt>&quot;/p&quot;</tt> match operator flag and the <tt>&quot;${^PREMATCH}&quot;</tt>, <tt>&quot;${^MATCH}&quot;</tt>, and <tt>&quot;${^POSTMATCH}&quot;</tt> variables were introduced, that allowed you to suffer the penalties only on patterns marked with <tt>&quot;/p&quot;</tt>. </p>
 <p> In Perl 5.18.0 onwards, perl started noting the presence of each of the three variables separately, and only copied that part of the string required; so in </p>
@@ -403,8 +403,8 @@ print $`, $ &amp;, $&#8217;; # bad: performance hit print #good : no performance
 <dt>@{^CAPTURE}</dt>
 <dd> An array which exposes the contents of the capture buffers, if any, of the last successful pattern match, not counting patterns matched in nested blocks that have been exited already. </dd>
 <p> Note that the 0 index of @{^CAPTURE} is equivalent to <tt>$1</tt>, the 1 index is equivalent to <tt>$2</tt>, etc. </p>
-<p>if (&#8220;foal&#8221; = ~ / (.)(.)(.)(.) /) {<br />
-    print join &#8220;-&#8220;, @{^CAPTURE};<br />
+<p>if (&#8220;foal&#8221; = ~ / (.)(.)(.)(.) /) {<br/>
+    print join &#8220;-&#8220;, @{^CAPTURE};<br/>
 }</p>
 <p> should output &#8220;f-o-a-l&#8221;. </p>
 <p> See also &quot;$&lt;<i>digits</i>&gt; ($1, <tt>$2</tt>, &#8230;)&quot;, &#8220;%{^CAPTURE}&#8221; and &#8220;%{^CAPTURE_ALL}&#8221;. </p>
@@ -413,7 +413,7 @@ print $`, $ &amp;, $&#8217;; # bad: performance hit print #good : no performance
 <dt>$MATCH</dt>
 <dd>
 </dd><dt>$&amp;</dt>
-<dd> The string matched by the last successful pattern match (not counting any matches hidden within a <font SIZE="-1">BLOCK</font> or <tt>&quot;eval()&quot;</tt> enclosed by the current <font SIZE="-1">BLOCK</font>). </dd>
+<dd> The string matched by the last successful pattern match (not counting any matches hidden within a BLOCK or <tt>&quot;eval()&quot;</tt> enclosed by the current BLOCK). </dd>
 <p> See &#8220;Performance issues&#8221; above for the serious performance implications of using this variable (even once) in your code. </p>
 <p> This variable is read-only and dynamically-scoped. </p>
 <p> Mnemonic: like <tt>&quot;&amp;&quot;</tt> in some editors.</p>
@@ -426,7 +426,7 @@ print $`, $ &amp;, $&#8217;; # bad: performance hit print #good : no performance
 <dt>$PREMATCH</dt>
 <dd>
 </dd><dt>$`</dt>
-<dd> The string preceding whatever was matched by the last successful pattern match, not counting any matches hidden within a <font SIZE="-1">BLOCK</font> or <tt>&quot;eval&quot;</tt> enclosed by the current <font SIZE="-1">BLOCK.</font> </dd>
+<dd> The string preceding whatever was matched by the last successful pattern match, not counting any matches hidden within a BLOCK or <tt>&quot;eval&quot;</tt> enclosed by the current BLOCK. </dd>
 <p> See &#8220;Performance issues&#8221; above for the serious performance implications of using this variable (even once) in your code. </p>
 <p> This variable is read-only and dynamically-scoped. </p>
 <p> Mnemonic: <tt>&quot;`&quot;</tt> often precedes a quoted string.</p>
@@ -439,7 +439,7 @@ print $`, $ &amp;, $&#8217;; # bad: performance hit print #good : no performance
 <dt>$POSTMATCH</dt>
 <dd>
 </dd><dt>$&#8217;</dt>
-<dd> The string following whatever was matched by the last successful pattern match (not counting any matches hidden within a <font SIZE="-1">BLOCK</font> or <tt>&quot;eval()&quot;</tt> enclosed by the current <font SIZE="-1">BLOCK</font>). Example: </dd>
+<dd> The string following whatever was matched by the last successful pattern match (not counting any matches hidden within a BLOCK or <tt>&quot;eval()&quot;</tt> enclosed by the current BLOCK). Example: </dd>
 <pre>
     local $_ = 'abcdefghi';
     /def/;
@@ -537,22 +537,22 @@ print $`, $ &amp;, $&#8217;; # bad: performance hit print #good : no performance
 </dd><dt>%-</dt>
 <dd> Similar to <tt>&quot;%+&quot;</tt>, this variable allows access to the named capture groups in the last successful match in the currently active dynamic scope. To each capture group name found in the regular expression, it associates a reference to an array containing the list of values captured by all buffers with that name (should there be several of them), in the order where they appear. </dd>
 <p> Here&#8217;s an example: </p>
-<p>    if (&#8216;1234&#8217; =~ /(?&lt;A&gt;1)(?&lt;B&gt;2)(?&lt;A&gt;3)(?&lt;B&gt;4)/) {<br />
-        foreach<br />
-            my $bufname(sort keys % -)<br />
-            {<br />
-                my $ary = $ &#8211; {$bufname};<br />
-                foreach<br />
-                    my $idx(0.. $ #$ary)<br />
-                    {<br />
-                        print &#8220;\$-{$bufname}[$idx] : &#8220;,<br />
-                            (defined($ary-&gt;[$idx])<br />
-                                 ? &#8220;&#8216;$ary-&gt;[$idx]'&#8221;<br />
-                                 : &#8220;undef&#8221;),<br />
+<p>    if (&#8216;1234&#8217; =~ /(?&lt;A&gt;1)(?&lt;B&gt;2)(?&lt;A&gt;3)(?&lt;B&gt;4)/) {<br/>
+        foreach<br/>
+            my $bufname(sort keys % -)<br/>
+            {<br/>
+                my $ary = $ &#8211; {$bufname};<br/>
+                foreach<br/>
+                    my $idx(0.. $ #$ary)<br/>
+                    {<br/>
+                        print &#8220;\$-{$bufname}[$idx] : &#8220;,<br/>
+                            (defined($ary-&gt;[$idx])<br/>
+                                 ? &#8220;&#8216;$ary-&gt;[$idx]'&#8221;<br/>
+                                 : &#8220;undef&#8221;),<br/>
                             &#8220;
-&#8221;;<br />
-                    }<br />
-            }<br />
+&#8221;;<br/>
+                    }<br/>
+            }<br/>
     }</p>
 <p> would print out: </p>
 <p>$ &#8211; {A}[0] : &#8216;1&#8217; $ &#8211; {A}[1] : &#8216;3&#8217; $ &#8211; {B}[0] : &#8216;2&#8217; $ &#8211; {B}[1] : &#8216;4&#8217;</p>
@@ -576,7 +576,7 @@ print $`, $ &amp;, $&#8217;; # bad: performance hit print #good : no performance
 <dd> Controls how certain regex optimisations are applied and how much memory they utilize. This value by default is 65536 which corresponds to a 512kB temporary cache. Set this to a higher value to trade memory for speed when matching large alternations. Set it to a lower value if you want the optimisations to be as conservative of memory as possible but still occur, and set it to a negative value to prevent the optimisation and conserve the most memory. Under normal situations this variable should be of no interest to you. </dd>
 <p> This variable was added in Perl v5.10.0.</dl>
 <h3>Variables related to filehandles</h3>
-<p> Variables that depend on the currently selected filehandle may be set by calling an appropriate object method on the <tt>&quot;IO::Handle&quot;</tt> object, although this is less efficient than using the regular built-in variables. (Summary lines below for this contain the word <font SIZE="-1">HANDLE.</font>) First you must say </p>
+<p> Variables that depend on the currently selected filehandle may be set by calling an appropriate object method on the <tt>&quot;IO::Handle&quot;</tt> object, although this is less efficient than using the regular built-in variables. (Summary lines below for this contain the word HANDLE.) First you must say </p>
 <pre>
     use IO::Handle;
 </pre>
@@ -588,41 +588,41 @@ print $`, $ &amp;, $&#8217;; # bad: performance hit print #good : no performance
 <pre>
     HANDLE-&gt;method(EXPR)
 </pre>
-<p> Each method returns the old value of the <tt>&quot;IO::Handle&quot;</tt> attribute. The methods each take an optional <font SIZE="-1">EXPR,</font> which, if supplied, specifies the new value for the <tt>&quot;IO::Handle&quot;</tt> attribute in question. If not supplied, most methods do nothing to the current value&#8212;except for <tt>&quot;autoflush()&quot;</tt>, which will assume a 1 for you, just to be different. </p>
+<p> Each method returns the old value of the <tt>&quot;IO::Handle&quot;</tt> attribute. The methods each take an optional EXPR, which, if supplied, specifies the new value for the <tt>&quot;IO::Handle&quot;</tt> attribute in question. If not supplied, most methods do nothing to the current value&#8212;except for <tt>&quot;autoflush()&quot;</tt>, which will assume a 1 for you, just to be different. </p>
 <p> Because loading in the <tt>&quot;IO::Handle&quot;</tt> class is an expensive operation, you should learn how to use the regular built-in variables. </p>
 <p> A few of these variables are considered &#8220;read-only&#8221;. This means that if you try to assign to this variable, either directly or indirectly through a reference, you&#8217;ll raise a run-time exception. </p>
 <p> You should be very careful when modifying the default values of most special variables described in this document. In most cases you want to localize these variables before changing them, since if you don&#8217;t, the change may affect other modules which rely on the default values of the special variables that you have changed. This is one of the correct ways to read the whole file at once: </p>
-<p>open my $fh, &#8220;&lt;&#8220;, &#8220;foo&#8221; or die $ !;<br />
-local $ / ;<br />
-#enable localized slurp mode<br />
-    my $content = &lt; $fh&gt;;<br />
+<p>open my $fh, &#8220;&lt;&#8220;, &#8220;foo&#8221; or die $ !;<br/>
+local $ / ;<br/>
+#enable localized slurp mode<br/>
+    my $content = &lt; $fh&gt;;<br/>
 close $fh;</p>
 <p> But the following code is quite bad: </p>
-<p>open my $fh, &#8220;&lt;&#8220;, &#8220;foo&#8221; or die $ !;<br />
-undef $ / ;<br />
-#enable slurp mode<br />
-    my $content = &lt; $fh&gt;;<br />
+<p>open my $fh, &#8220;&lt;&#8220;, &#8220;foo&#8221; or die $ !;<br/>
+undef $ / ;<br/>
+#enable slurp mode<br/>
+    my $content = &lt; $fh&gt;;<br/>
 close $fh;</p>
 <p> since some other module, may want to read data from some file in the default &#8220;line mode&#8221;, so if the code we have just presented has been executed, the global value of <tt>$/</tt> is now changed for any other code running inside the same Perl interpreter. </p>
 <p> Usually when a variable is localized you want to make sure that this change affects the shortest scope possible. So unless you are already inside some short <tt>&quot;{}&quot;</tt> block, you should create one yourself. For example: </p>
-<p>my $content = &#8221;;<br />
-open my $fh, &#8220;&lt;&#8220;, &#8220;foo&#8221; or die $ !;<br />
-{<br />
-    local $ / ;<br />
-    $content = &lt;$fh&gt;;<br />
-}<br />
+<p>my $content = &#8221;;<br/>
+open my $fh, &#8220;&lt;&#8220;, &#8220;foo&#8221; or die $ !;<br/>
+{<br/>
+    local $ / ;<br/>
+    $content = &lt;$fh&gt;;<br/>
+}<br/>
 close $fh;</p>
 <p> Here is an example of how your own code can go broken: </p>
-<p>for (1..3) {<br />
+<p>for (1..3) {<br/>
     $\ = &#8220;
-&#8221;;<br />
-    nasty_break();<br />
-    print &#8220;$_&#8221;;<br />
-}<br />
-sub nasty_break<br />
-{<br />
-    $\ = &#8220;&#8221;;<br />
-#do something with $_<br />
+&#8221;;<br/>
+    nasty_break();<br/>
+    print &#8220;$_&#8221;;<br/>
+}<br/>
+sub nasty_break<br/>
+{<br/>
+    $\ = &#8220;&#8221;;<br/>
+#do something with $_<br/>
 }</p>
 <p> You probably expect this code to print the equivalent of </p>
 <pre>
@@ -645,11 +645,11 @@ sub nasty_break<br />
 <dd> Contains the name of the current file when reading from <tt>&quot;&lt;&gt;&quot;</tt>.</dd>
 <dt>@ARGV</dt>
 <dd> The array <tt>@ARGV</tt> contains the command-line arguments intended for the script. <tt>$#ARGV</tt> is generally the number of arguments minus one, because <tt>$ARGV[0]</tt> is the first argument, <i>not</i> the program&#8217;s command name itself. See &#8220;$0&#8221; for the command name.</dd>
-<dt><font SIZE="-1">ARGV</font></dt>
+<dt>ARGV</dt>
 <dd> The special filehandle that iterates over command-line filenames in <tt>@ARGV</tt>. Usually written as the null filehandle in the angle operator <tt>&quot;&lt;&gt;&quot;</tt>. Note that currently <tt>&quot;ARGV&quot;</tt> only has its magical effect within the <tt>&quot;&lt;&gt;&quot;</tt> operator; elsewhere it is just a plain filehandle corresponding to the last file opened by <tt>&quot;&lt;&gt;&quot;</tt>. In particular, passing <tt>&quot;\*ARGV&quot;</tt> as a parameter to a function that expects a filehandle may not cause your function to automatically read the contents of all the files in <tt>@ARGV</tt>.</dd>
-<dt><font SIZE="-1">ARGVOUT</font></dt>
+<dt>ARGVOUT</dt>
 <dd> The special filehandle that points to the currently open output file when doing edit-in-place processing with <code>-i</code>. Useful when you have to do a lot of inserting and don&#8217;t want to keep modifying <tt>$_</tt>. See perlrun for the <code>-i</code> switch.</dd>
-<dt>IO::Handle-&gt;output_field_separator( <font SIZE="-1">EXPR</font> )</dt>
+<dt>IO::Handle-&gt;output_field_separator( EXPR )</dt>
 <dd>
 </dd><dt>$OUTPUT_FIELD_SEPARATOR</dt>
 <dd>
@@ -659,7 +659,7 @@ sub nasty_break<br />
 <dd> The output field separator for the print operator. If defined, this value is printed between each of print&#8217;s arguments. Default is <tt>&quot;undef&quot;</tt>. </dd>
 <p> You cannot call <tt>&quot;output_field_separator()&quot;</tt> on a handle, only as a static method. See IO::Handle. </p>
 <p> Mnemonic: what is printed when there is a &#8220;,&#8221; in your print statement.</p>
-<dt><font SIZE="-1">HANDLE-</font>&gt;input_line_number( <font SIZE="-1">EXPR</font> )</dt>
+<dt>HANDLE-&gt;input_line_number( EXPR )</dt>
 <dd>
 </dd><dt>$INPUT_LINE_NUMBER</dt>
 <dd>
@@ -672,20 +672,20 @@ sub nasty_break<br />
 <p> <tt>$.</tt> is reset when the filehandle is closed, but <code>not</code> when an open filehandle is reopened without an intervening <tt>&quot;close()&quot;</tt>. For more details, see &#8220;I/O Operators&#8221; in perlop. Because <tt>&quot;&lt;&gt;&quot;</tt> never does an explicit close, line numbers increase across <tt>&quot;ARGV&quot;</tt> files (but see examples in &#8220;eof&#8221; in perlfunc). </p>
 <p> You can also use <tt>&quot;HANDLE-&gt;input_line_number(EXPR)&quot;</tt> to access the line counter for a given filehandle without having to worry about which handle you last accessed. </p>
 <p> Mnemonic: many programs use &#8220;.&#8221; to mean the current line number.</p>
-<dt>IO::Handle-&gt;input_record_separator( <font SIZE="-1">EXPR</font> )</dt>
+<dt>IO::Handle-&gt;input_record_separator( EXPR )</dt>
 <dd>
 </dd><dt>$INPUT_RECORD_SEPARATOR</dt>
 <dd>
 </dd><dt>$RS</dt>
 <dd>
 </dd><dt>$/</dt>
-<dd> The input record separator, newline by default. This influences Perl&#8217;s idea of what a &#8220;line&#8221; is. Works like <code>awk</code>&#8216;s <font SIZE="-1">RS</font> variable, including treating empty lines as a terminator if set to the null string (an empty line cannot contain any spaces or tabs). You may set it to a multi-character string to match a multi-character terminator, or to <tt>&quot;undef&quot;</tt> to read through the end of file. Setting it to <tt>&quot;
+<dd> The input record separator, newline by default. This influences Perl&#8217;s idea of what a &#8220;line&#8221; is. Works like <code>awk</code>&#8216;s RS variable, including treating empty lines as a terminator if set to the null string (an empty line cannot contain any spaces or tabs). You may set it to a multi-character string to match a multi-character terminator, or to <tt>&quot;undef&quot;</tt> to read through the end of file. Setting it to <tt>&quot;
 &quot;</tt> means something slightly different than setting to <tt>&quot;&quot;</tt>, if the file contains consecutive empty lines. Setting to <tt>&quot;&quot;</tt> will treat two or more consecutive empty lines as a single empty line. Setting to <tt>&quot;
 &quot;</tt> will blindly assume that the next input character belongs to the next paragraph, even if it&#8217;s a newline. </dd>
-<p>local $ / ;<br />
-#enable &#8220;slurp&#8221; mode<br />
-    local $_ = &lt; FH&gt;;<br />
-#whole file now here<br />
+<p>local $ / ;<br/>
+#enable &#8220;slurp&#8221; mode<br/>
+    local $_ = &lt; FH&gt;;<br/>
+#whole file now here<br/>
         s /
 [ 	] + / / g;</p>
 <p> Remember: the value of <tt>$/</tt> is a string, not a regex. <code>awk</code> has to be better for something. :-) </p>
@@ -693,24 +693,24 @@ sub nasty_break<br />
 &quot;</tt> at the beginning of the file is discarded. With the exception of the final record in the file, each sequence of characters ending in two or more newlines is treated as one record and is read in to end in exactly two newlines. If the last record in the file ends in zero or one consecutive newlines, that record is read in with that number of newlines. If the last record ends in two or more consecutive newlines, it is read in with two newlines like all preceding records. </p>
 <p> Suppose we wrote the following string to a file: </p>
 <p>my $string = &#8220;
-&#8221;;<br />
+&#8221;;<br/>
 $string.= &#8220;alpha beta
 gamma delta
-&#8221;;<br />
+&#8221;;<br/>
 $string.= &#8220;epsilon zeta eta
-&#8221;;<br />
+&#8221;;<br/>
 $string.= &#8220;theta
-&#8221;;<br />
-my $file = &#8216;simple_file.txt&#8217;;<br />
-open my $OUT, &#8216;&gt;&#8217;, $file or die;<br />
-print $OUT $string;<br />
+&#8221;;<br/>
+my $file = &#8216;simple_file.txt&#8217;;<br/>
+open my $OUT, &#8216;&gt;&#8217;, $file or die;<br/>
+print $OUT $string;<br/>
 close $OUT or die;</p>
 <p> Now we read that file in paragraph mode: </p>
-<p>local $ / = &#8220;&#8221;;<br />
-#paragraph mode<br />
-    open my $IN,<br />
-    &#8216;&lt;&#8216;, $file or die;<br />
-my @records = &lt;$IN&gt;;<br />
+<p>local $ / = &#8220;&#8221;;<br/>
+#paragraph mode<br/>
+    open my $IN,<br/>
+    &#8216;&lt;&#8216;, $file or die;<br/>
+my @records = &lt;$IN&gt;;<br/>
 close $IN or die;</p>
 <p> <tt>@records</tt> will consist of these 3 strings: </p>
 <pre>
@@ -730,13 +730,13 @@ gamma delta
     open my $fh, &quot;&lt;&quot;, $myfile or die $!;
     local $_ = &lt;$fh&gt;;
 </pre>
-<p> will read a record of no more than 32768 characters from <tt>$fh</tt>. If you&#8217;re not reading from a record-oriented file (or your <font SIZE="-1">OS</font> doesn&#8217;t have record-oriented files), then you&#8217;ll likely get a full chunk of data with every read. If a record is larger than the record size you&#8217;ve set, you&#8217;ll get the record back in pieces. Trying to set the record size to zero or less is deprecated and will cause $/ to have the value of &#8220;undef&#8221;, which will cause reading in the (rest of the) whole file. </p>
+<p> will read a record of no more than 32768 characters from <tt>$fh</tt>. If you&#8217;re not reading from a record-oriented file (or your OS doesn&#8217;t have record-oriented files), then you&#8217;ll likely get a full chunk of data with every read. If a record is larger than the record size you&#8217;ve set, you&#8217;ll get the record back in pieces. Trying to set the record size to zero or less is deprecated and will cause $/ to have the value of &#8220;undef&#8221;, which will cause reading in the (rest of the) whole file. </p>
 <p> As of 5.19.9 setting <tt>$/</tt> to any other form of reference will throw a fatal exception. This is in preparation for supporting new ways to set <tt>$/</tt> in the future. </p>
-<p> On <font SIZE="-1">VMS</font> only, record reads bypass PerlIO layers and any associated buffering, so you must not mix record and non-record reads on the same filehandle. Record mode mixes with line mode only when the same buffering layer is in use for both modes. </p>
+<p> On VMS only, record reads bypass PerlIO layers and any associated buffering, so you must not mix record and non-record reads on the same filehandle. Record mode mixes with line mode only when the same buffering layer is in use for both modes. </p>
 <p> You cannot call <tt>&quot;input_record_separator()&quot;</tt> on a handle, only as a static method. See IO::Handle. </p>
 <p> See also &#8220;Newlines&#8221; in perlport. Also see &#8220;$.&#8221;. </p>
 <p> Mnemonic: / delimits line boundaries when quoting poetry.</p>
-<dt>IO::Handle-&gt;output_record_separator( <font SIZE="-1">EXPR</font> )</dt>
+<dt>IO::Handle-&gt;output_record_separator( EXPR )</dt>
 <dd>
 </dd><dt>$OUTPUT_RECORD_SEPARATOR</dt>
 <dd>
@@ -747,15 +747,15 @@ gamma delta
 <p> You cannot call <tt>&quot;output_record_separator()&quot;</tt> on a handle, only as a static method. See IO::Handle. </p>
 <p> Mnemonic: you set <tt>&quot;$\&quot;</tt> instead of adding &#8220;
 &#8221; at the end of the print. Also, it&#8217;s just like <tt>$/</tt>, but it&#8217;s what you get &#8220;back&#8221; from Perl.</p>
-<dt><font SIZE="-1">HANDLE-</font>&gt;autoflush( <font SIZE="-1">EXPR</font> )</dt>
+<dt>HANDLE-&gt;autoflush( EXPR )</dt>
 <dd>
 </dd><dt>$OUTPUT_AUTOFLUSH</dt>
 <dd>
 </dd><dt>$|</dt>
-<dd> If set to nonzero, forces a flush right away and after every write or print on the currently selected output channel. Default is 0 (regardless of whether the channel is really buffered by the system or not; <tt>$|</tt> tells you only whether you&#8217;ve asked Perl explicitly to flush after each write). <font SIZE="-1">STDOUT</font> will typically be line buffered if output is to the terminal and block buffered otherwise. Setting this variable is useful primarily when you are outputting to a pipe or socket, such as when you are running a Perl program under <code>rsh</code> and want to see the output as it&#8217;s happening. This has no effect on input buffering. See &#8220;getc&#8221; in perlfunc for that. See &#8220;select&#8221; in perlfunc on how to select the output channel. See also IO::Handle. </dd>
+<dd> If set to nonzero, forces a flush right away and after every write or print on the currently selected output channel. Default is 0 (regardless of whether the channel is really buffered by the system or not; <tt>$|</tt> tells you only whether you&#8217;ve asked Perl explicitly to flush after each write). STDOUT will typically be line buffered if output is to the terminal and block buffered otherwise. Setting this variable is useful primarily when you are outputting to a pipe or socket, such as when you are running a Perl program under <code>rsh</code> and want to see the output as it&#8217;s happening. This has no effect on input buffering. See &#8220;getc&#8221; in perlfunc for that. See &#8220;select&#8221; in perlfunc on how to select the output channel. See also IO::Handle. </dd>
 <p> Mnemonic: when you want your pipes to be piping hot.</p>
 <dt>${^LAST_FH}</dt>
-<dd> This read-only variable contains a reference to the last-read filehandle. This is set by <tt>&quot;&lt;HANDLE&gt;&quot;</tt>, <tt>&quot;readline&quot;</tt>, <tt>&quot;tell&quot;</tt>, <tt>&quot;eof&quot;</tt> and <tt>&quot;seek&quot;</tt>. This is the same handle that <tt>$.</tt> and <tt>&quot;tell&quot;</tt> and <tt>&quot;eof&quot;</tt> without arguments use. It is also the handle used when Perl appends &#8220;, &lt;<font SIZE="-1">STDIN</font>&gt; line 1&#8221; to an error or warning message. </dd>
+<dd> This read-only variable contains a reference to the last-read filehandle. This is set by <tt>&quot;&lt;HANDLE&gt;&quot;</tt>, <tt>&quot;readline&quot;</tt>, <tt>&quot;tell&quot;</tt>, <tt>&quot;eof&quot;</tt> and <tt>&quot;seek&quot;</tt>. This is the same handle that <tt>$.</tt> and <tt>&quot;tell&quot;</tt> and <tt>&quot;eof&quot;</tt> without arguments use. It is also the handle used when Perl appends &#8220;, &lt;STDIN&gt; line 1&#8221; to an error or warning message. </dd>
 <p> This variable was added in Perl v5.18.0.</dl>
 <p> <i>Variables related to formats</i> </p>
 <p> The special variables for formats are a subset of those for filehandles. See perlform for more information about Perl&#8217;s formats.</p>
@@ -763,29 +763,29 @@ gamma delta
 <dt>$ACCUMULATOR</dt>
 <dd>
 </dd><dt>$^A</dt>
-<dd> The current value of the <tt>&quot;write()&quot;</tt> accumulator for <tt>&quot;format()&quot;</tt> lines. A format contains <tt>&quot;formline()&quot;</tt> calls that put their result into <tt>$^A</tt>. After calling its format, <tt>&quot;write()&quot;</tt> prints out the contents of <tt>$^A</tt> and empties. So you never really see the contents of <tt>$^A</tt> unless you call <tt>&quot;formline()&quot;</tt> yourself and then look at it. See perlform and &#8220;formline <font SIZE="-1">PICTURE,LIST&#8221;</font> in perlfunc.</dd>
-<dt>IO::Handle-&gt;format_formfeed(<font SIZE="-1">EXPR</font>)</dt>
+<dd> The current value of the <tt>&quot;write()&quot;</tt> accumulator for <tt>&quot;format()&quot;</tt> lines. A format contains <tt>&quot;formline()&quot;</tt> calls that put their result into <tt>$^A</tt>. After calling its format, <tt>&quot;write()&quot;</tt> prints out the contents of <tt>$^A</tt> and empties. So you never really see the contents of <tt>$^A</tt> unless you call <tt>&quot;formline()&quot;</tt> yourself and then look at it. See perlform and &#8220;formline PICTURE,LIST&#8221; in perlfunc.</dd>
+<dt>IO::Handle-&gt;format_formfeed(EXPR)</dt>
 <dd>
 </dd><dt>$FORMAT_FORMFEED</dt>
 <dd>
 </dd><dt>$^L</dt>
 <dd> What formats output as a form feed. The default is <tt>&quot;&quot;</tt>. </dd>
 <p> You cannot call <tt>&quot;format_formfeed()&quot;</tt> on a handle, only as a static method. See IO::Handle.</p>
-<dt><font SIZE="-1">HANDLE-</font>&gt;format_page_number(<font SIZE="-1">EXPR</font>)</dt>
+<dt>HANDLE-&gt;format_page_number(EXPR)</dt>
 <dd>
 </dd><dt>$FORMAT_PAGE_NUMBER</dt>
 <dd>
 </dd><dt>$%</dt>
 <dd> The current page number of the currently selected output channel. </dd>
 <p> Mnemonic: <tt>&quot;%&quot;</tt> is page number in <code>nroff</code>.</p>
-<dt><font SIZE="-1">HANDLE-</font>&gt;format_lines_left(<font SIZE="-1">EXPR</font>)</dt>
+<dt>HANDLE-&gt;format_lines_left(EXPR)</dt>
 <dd>
 </dd><dt>$FORMAT_LINES_LEFT</dt>
 <dd>
 </dd><dt>$-</dt>
 <dd> The number of lines left on the page of the currently selected output channel. </dd>
 <p> Mnemonic: lines_on_page &#8211; lines_printed.</p>
-<dt>IO::Handle-&gt;format_line_break_characters <font SIZE="-1">EXPR</font></dt>
+<dt>IO::Handle-&gt;format_line_break_characters EXPR</dt>
 <dd>
 </dd><dt>$FORMAT_LINE_BREAK_CHARACTERS</dt>
 <dd>
@@ -794,21 +794,21 @@ gamma delta
 -&#8221;, to break on a space, newline, or a hyphen. </dd>
 <p> You cannot call <tt>&quot;format_line_break_characters()&quot;</tt> on a handle, only as a static method. See IO::Handle. </p>
 <p> Mnemonic: a &#8220;colon&#8221; in poetry is a part of a line.</p>
-<dt><font SIZE="-1">HANDLE-</font>&gt;format_lines_per_page(<font SIZE="-1">EXPR</font>)</dt>
+<dt>HANDLE-&gt;format_lines_per_page(EXPR)</dt>
 <dd>
 </dd><dt>$FORMAT_LINES_PER_PAGE</dt>
 <dd>
 </dd><dt>$=</dt>
 <dd> The current page length (printable lines) of the currently selected output channel. The default is 60. </dd>
 <p> Mnemonic: = has horizontal lines.</p>
-<dt><font SIZE="-1">HANDLE-</font>&gt;format_top_name(<font SIZE="-1">EXPR</font>)</dt>
+<dt>HANDLE-&gt;format_top_name(EXPR)</dt>
 <dd>
 </dd><dt>$FORMAT_TOP_NAME</dt>
 <dd>
 </dd><dt>$^</dt>
 <dd> The name of the current top-of-page format for the currently selected output channel. The default is the name of the filehandle with <tt>&quot;_TOP&quot;</tt> appended. For example, the default format top name for the <tt>&quot;STDOUT&quot;</tt> filehandle is <tt>&quot;STDOUT_TOP&quot;</tt>. </dd>
 <p> Mnemonic: points to top of page.</p>
-<dt><font SIZE="-1">HANDLE-</font>&gt;format_name(<font SIZE="-1">EXPR</font>)</dt>
+<dt>HANDLE-&gt;format_name(EXPR)</dt>
 <dd>
 </dd><dt>$FORMAT_NAME</dt>
 <dd>
@@ -818,29 +818,29 @@ gamma delta
 <h3>Error Variables</h3>
 <p> The variables <tt>$@</tt>, <tt>$!</tt>, <tt>$^E</tt>, and <tt>$?</tt> contain information about different types of error conditions that may appear during execution of a Perl program. The variables are shown ordered by the &#8220;distance&#8221; between the subsystem which reported the error and the Perl process. They correspond to errors detected by the Perl interpreter, C library, operating system, or an external program, respectively. </p>
 <p> To illustrate the differences between these variables, consider the following Perl expression, which uses a single-quoted string. After execution of this statement, perl may have set all four special error variables: </p>
-<p>eval q<br />
-{<br />
-    open my $pipe, &#8220;/cdrom/install |&#8221; or die $ !;<br />
-    my @res = &lt;$pipe&gt;;<br />
-    close $pipe or die &#8220;bad pipe: $?, $!&#8221;;<br />
+<p>eval q<br/>
+{<br/>
+    open my $pipe, &#8220;/cdrom/install |&#8221; or die $ !;<br/>
+    my @res = &lt;$pipe&gt;;<br/>
+    close $pipe or die &#8220;bad pipe: $?, $!&#8221;;<br/>
 };</p>
 <p> When perl executes the <tt>&quot;eval()&quot;</tt> expression, it translates the <tt>&quot;open()&quot;</tt>, <tt>&quot;&lt;PIPE&gt;&quot;</tt>, and <tt>&quot;close&quot;</tt> calls in the C run-time library and thence to the operating system kernel. perl sets <tt>$!</tt> to the C library&#8217;s <tt>&quot;errno&quot;</tt> if one of these calls fails. </p>
 <p> <tt>$@</tt> is set if the string to be <tt>&quot;eval&quot;</tt>-ed did not compile (this may happen if <tt>&quot;open&quot;</tt> or <tt>&quot;close&quot;</tt> were imported with bad prototypes), or if Perl code executed during evaluation <tt>&quot;die()&quot;</tt>d. In these cases the value of <tt>$@</tt> is the compile error, or the argument to <tt>&quot;die&quot;</tt> (which will interpolate <tt>$!</tt> and <tt>$?</tt>). (See also Fatal, though.) </p>
-<p> Under a few operating systems, <tt>$^E</tt> may contain a more verbose error indicator, such as in this case, &#8220;<font SIZE="-1">CDROM</font> tray not closed.&#8221; Systems that do not support extended error messages leave <tt>$^E</tt> the same as <tt>$!</tt>. </p>
+<p> Under a few operating systems, <tt>$^E</tt> may contain a more verbose error indicator, such as in this case, &#8220;CDROM tray not closed.&#8221; Systems that do not support extended error messages leave <tt>$^E</tt> the same as <tt>$!</tt>. </p>
 <p> Finally, <tt>$?</tt> may be set to a non-0 value if the external program <i>/cdrom/install</i> fails. The upper eight bits reflect specific error conditions encountered by the program (the program&#8217;s <tt>&quot;exit()&quot;</tt> value). The lower eight bits reflect mode of failure, like signal death and core dump information. See <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2) for details. In contrast to <tt>$!</tt> and <tt>$^E</tt>, which are set only if an error condition is detected, the variable <tt>$?</tt> is set on each <tt>&quot;wait&quot;</tt> or pipe <tt>&quot;close&quot;</tt>, overwriting the old value. This is more like <tt>$@</tt>, which on every <tt>&quot;eval()&quot;</tt> is always set on failure and cleared on success. </p>
 <p> For more details, see the individual descriptions at <tt>$@</tt>, <tt>$!</tt>, <tt>$^E</tt>, and <tt>$?</tt>.</p>
 <dl>
 <dt>${^CHILD_ERROR_NATIVE}</dt>
-<dd> The native status returned by the last pipe close, backtick (<tt>&quot;``&quot;</tt>) command, successful call to <tt>&quot;wait()&quot;</tt> or <tt>&quot;waitpid()&quot;</tt>, or from the <tt>&quot;system()&quot;</tt> operator. On POSIX-like systems this value can be decoded with the <font SIZE="-1">WIFEXITED, WEXITSTATUS, WIFSIGNALED, WTERMSIG, WIFSTOPPED, WSTOPSIG</font> and <font SIZE="-1">WIFCONTINUED</font> functions provided by the <font SIZE="-1">POSIX</font> module. </dd>
-<p> Under <font SIZE="-1">VMS</font> this reflects the actual <font SIZE="-1">VMS</font> exit status; i.e. it is the same as <tt>$?</tt> when the pragma <tt>&quot;use vmsish 'status'&quot;</tt> is in effect. </p>
+<dd> The native status returned by the last pipe close, backtick (<tt>&quot;``&quot;</tt>) command, successful call to <tt>&quot;wait()&quot;</tt> or <tt>&quot;waitpid()&quot;</tt>, or from the <tt>&quot;system()&quot;</tt> operator. On POSIX-like systems this value can be decoded with the WIFEXITED, WEXITSTATUS, WIFSIGNALED, WTERMSIG, WIFSTOPPED, WSTOPSIG and WIFCONTINUED functions provided by the POSIX module. </dd>
+<p> Under VMS this reflects the actual VMS exit status; i.e. it is the same as <tt>$?</tt> when the pragma <tt>&quot;use vmsish 'status'&quot;</tt> is in effect. </p>
 <p> This variable was added in Perl v5.10.0.</p>
 <dt>$EXTENDED_OS_ERROR</dt>
 <dd>
 </dd><dt>$^E</dt>
-<dd> Error information specific to the current operating system. At the moment, this differs from <tt>&quot;$!&quot;</tt> under only <font SIZE="-1">VMS, OS/2,</font> and Win32 (and for MacPerl). On all other platforms, <tt>$^E</tt> is always just the same as <tt>$!</tt>. </dd>
-<p> Under <font SIZE="-1">VMS,</font> <tt>$^E</tt> provides the <font SIZE="-1">VMS</font> status value from the last system error. This is more specific information about the last system error than that provided by <tt>$!</tt>. This is particularly important when <tt>$!</tt> is set to <font SIZE="-1"><code>EVMSERR</code></font>. </p>
-<p> Under <font SIZE="-1">OS/2,</font> <tt>$^E</tt> is set to the error code of the last call to <font SIZE="-1">OS/2 API</font> either via <font SIZE="-1">CRT,</font> or directly from perl. </p>
-<p> Under Win32, <tt>$^E</tt> always returns the last error information reported by the Win32 call <tt>&quot;GetLastError()&quot;</tt> which describes the last error from within the Win32 <font SIZE="-1">API.</font> Most Win32-specific code will report errors via <tt>$^E</tt>. <font SIZE="-1">ANSI C</font> and Unix-like calls set <tt>&quot;errno&quot;</tt> and so most portable Perl code will report errors via <tt>$!</tt>. </p>
+<dd> Error information specific to the current operating system. At the moment, this differs from <tt>&quot;$!&quot;</tt> under only VMS, OS/2, and Win32 (and for MacPerl). On all other platforms, <tt>$^E</tt> is always just the same as <tt>$!</tt>. </dd>
+<p> Under VMS, <tt>$^E</tt> provides the VMS status value from the last system error. This is more specific information about the last system error than that provided by <tt>$!</tt>. This is particularly important when <tt>$!</tt> is set to <code>EVMSERR</code>. </p>
+<p> Under OS/2, <tt>$^E</tt> is set to the error code of the last call to OS/2 API either via CRT, or directly from perl. </p>
+<p> Under Win32, <tt>$^E</tt> always returns the last error information reported by the Win32 call <tt>&quot;GetLastError()&quot;</tt> which describes the last error from within the Win32 API. Most Win32-specific code will report errors via <tt>$^E</tt>. ANSI C and Unix-like calls set <tt>&quot;errno&quot;</tt> and so most portable Perl code will report errors via <tt>$!</tt>. </p>
 <p> Caveats mentioned in the description of <tt>&quot;$!&quot;</tt> generally apply to <tt>$^E</tt>, also. </p>
 <p> This variable was added in Perl 5.003. </p>
 <p> Mnemonic: Extra error explanation.</p>
@@ -848,7 +848,7 @@ gamma delta
 <dd>
 </dd><dt>$^S</dt>
 <dd> Current state of the interpreter. </dd>
-<p>$ ^ S State&#8211; &#8212; &#8212; &#8212; &#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -undef Parsing module, eval, or main program true(1) Executing an eval<br />
+<p>$ ^ S State&#8211; &#8212; &#8212; &#8212; &#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -undef Parsing module, eval, or main program true(1) Executing an eval<br/>
                                                                                                                 false(0) Otherwise</p>
 <p> The first state may happen in <tt>$SIG{__DIE__}</tt> and <tt>$SIG{__WARN__}</tt> handlers. </p>
 <p> The English name <tt>$EXCEPTIONS_BEING_CAUGHT</tt> is slightly misleading, because the <tt>&quot;undef&quot;</tt> value does not indicate whether exceptions are being caught, since compilation of the main program does not catch exceptions. </p>
@@ -869,15 +869,15 @@ gamma delta
 </dd><dt>$!</dt>
 <dd> When referenced, <tt>$!</tt> retrieves the current value of the C <tt>&quot;errno&quot;</tt> integer variable. If <tt>$!</tt> is assigned a numerical value, that value is stored in <tt>&quot;errno&quot;</tt>. When referenced as a string, <tt>$!</tt> yields the system error string corresponding to <tt>&quot;errno&quot;</tt>. </dd>
 <p> Many system or library calls set <tt>&quot;errno&quot;</tt> if they fail, to indicate the cause of failure. They usually do <code>not</code> set <tt>&quot;errno&quot;</tt> to zero if they succeed. This means <tt>&quot;errno&quot;</tt>, hence <tt>$!</tt>, is meaningful only <i>immediately</i> after a <code>failure</code>: </p>
-<p>if (open my $fh, &#8220;&lt;&#8220;, $filename) {<br />
-#Here $ !is meaningless.<br />
-    &#8230;<br />
-} else {<br />
-#ONLY here is $ !meaningful.<br />
-    &#8230;<br />
-#Already here $ !might be meaningless.<br />
-}<br />
-#Since here we might have either success or failure,<br />
+<p>if (open my $fh, &#8220;&lt;&#8220;, $filename) {<br/>
+#Here $ !is meaningless.<br/>
+    &#8230;<br/>
+} else {<br/>
+#ONLY here is $ !meaningful.<br/>
+    &#8230;<br/>
+#Already here $ !might be meaningless.<br/>
+}<br/>
+#Since here we might have either success or failure,<br/>
 #$ !is meaningless.</p>
 <p> Here, <i>meaningless</i> means that <tt>$!</tt> may be unrelated to the outcome of the <tt>&quot;open()&quot;</tt> operator. Assignment to <tt>$!</tt> is similarly ephemeral. It can be used immediately before invoking the <tt>&quot;die()&quot;</tt> operator, to set the exit value, or to inspect the system error string corresponding to error <i>n</i>, or to restore <tt>$!</tt> to a meaningful state. </p>
 <p> Mnemonic: What just went bang?</p>
@@ -895,12 +895,12 @@ gamma delta
 <p> Additionally, if the <tt>&quot;h_errno&quot;</tt> variable is supported in C, its value is returned via <tt>$?</tt> if any <tt>&quot;gethost*()&quot;</tt> function fails. </p>
 <p> If you have installed a signal handler for <tt>&quot;SIGCHLD&quot;</tt>, the value of <tt>$?</tt> will usually be wrong outside that handler. </p>
 <p> Inside an <tt>&quot;END&quot;</tt> subroutine <tt>$?</tt> contains the value that is going to be given to <tt>&quot;exit()&quot;</tt>. You can modify <tt>$?</tt> in an <tt>&quot;END&quot;</tt> subroutine to change the exit status of your program. For example: </p>
-<p>END<br />
-{<br />
-    $ ? = 1 if $ ? == 255;<br />
-#die would make it 255<br />
+<p>END<br/>
+{<br/>
+    $ ? = 1 if $ ? == 255;<br/>
+#die would make it 255<br/>
 }</p>
-<p> Under <font SIZE="-1">VMS,</font> the pragma <tt>&quot;use vmsish 'status'&quot;</tt> makes <tt>$?</tt> reflect the actual <font SIZE="-1">VMS</font> exit status, instead of the default emulation of <font SIZE="-1">POSIX</font> status; see &#8220;$?&#8221; in perlvms for details. </p>
+<p> Under VMS, the pragma <tt>&quot;use vmsish 'status'&quot;</tt> makes <tt>$?</tt> reflect the actual VMS exit status, instead of the default emulation of POSIX status; see &#8220;$?&#8221; in perlvms for details. </p>
 <p> Mnemonic: similar to <code>sh</code> and <code>ksh</code>.</p>
 <dt>$EVAL_ERROR</dt>
 <dd>
@@ -925,7 +925,7 @@ gamma delta
 <dt>${^ENCODING}</dt>
 <dd> This variable is no longer supported. </dd>
 <p> It used to hold the <i>object reference</i> to the <tt>&quot;Encode&quot;</tt> object that was used to convert the source code to Unicode. </p>
-<p> Its purpose was to allow your non-ASCII Perl scripts not to have to be written in <font SIZE="-1">UTF-8</font>; this was useful before editors that worked on <font SIZE="-1">UTF-8</font> encoded text were common, but that was long ago. It caused problems, such as affecting the operation of other modules that weren&#8217;t expecting it, causing general mayhem. </p>
+<p> Its purpose was to allow your non-ASCII Perl scripts not to have to be written in UTF-8; this was useful before editors that worked on UTF-8 encoded text were common, but that was long ago. It caused problems, such as affecting the operation of other modules that weren&#8217;t expecting it, causing general mayhem. </p>
 <p> If you need something like this functionality, it is recommended that use you a simple source filter, such as Filter::Encoding. </p>
 <p> If you are coming here because code of yours is being adversely affected by someone&#8217;s use of this variable, you can usually work around it by doing this: </p>
 <pre>
@@ -938,20 +938,20 @@ gamma delta
 <p> Possible values are:</p>
 <dl>
 <dl>
-<dt><font SIZE="-1">CONSTRUCT</font></dt>
+<dt>CONSTRUCT</dt>
 <dd> The <tt>&quot;PerlInterpreter*&quot;</tt> is being constructed via <tt>&quot;perl_construct&quot;</tt>. This value is mostly there for completeness and for use via the underlying C variable <tt>&quot;PL_phase&quot;</tt>. It&#8217;s not really possible for Perl code to be executed unless construction of the interpreter is finished.</dd>
-<dt><font SIZE="-1">START</font></dt>
+<dt>START</dt>
 <dd> This is the global compile-time. That includes, basically, every <tt>&quot;BEGIN&quot;</tt> block executed directly or indirectly from during the compile-time of the top-level program. </dd>
-<p> This phase is not called &#8220;<font SIZE="-1">BEGIN&#8221;</font> to avoid confusion with <tt>&quot;BEGIN&quot;</tt>-blocks, as those are executed during compile-time of any compilation unit, not just the top-level program. A new, localised compile-time entered at run-time, for example by constructs as <tt>&quot;eval &quot;use SomeModule&quot;&quot;</tt> are not global interpreter phases, and therefore aren&#8217;t reflected by <tt>&quot;${^GLOBAL_PHASE}&quot;</tt>.</p>
-<dt><font SIZE="-1">CHECK</font></dt>
+<p> This phase is not called &#8220;BEGIN&#8221; to avoid confusion with <tt>&quot;BEGIN&quot;</tt>-blocks, as those are executed during compile-time of any compilation unit, not just the top-level program. A new, localised compile-time entered at run-time, for example by constructs as <tt>&quot;eval &quot;use SomeModule&quot;&quot;</tt> are not global interpreter phases, and therefore aren&#8217;t reflected by <tt>&quot;${^GLOBAL_PHASE}&quot;</tt>.</p>
+<dt>CHECK</dt>
 <dd> Execution of any <tt>&quot;CHECK&quot;</tt> blocks.</dd>
-<dt><font SIZE="-1">INIT</font></dt>
-<dd> Similar to &#8220;<font SIZE="-1">CHECK&#8221;,</font> but for <tt>&quot;INIT&quot;</tt>-blocks, not <tt>&quot;CHECK&quot;</tt> blocks.</dd>
-<dt><font SIZE="-1">RUN</font></dt>
+<dt>INIT</dt>
+<dd> Similar to &#8220;CHECK&#8221;, but for <tt>&quot;INIT&quot;</tt>-blocks, not <tt>&quot;CHECK&quot;</tt> blocks.</dd>
+<dt>RUN</dt>
 <dd> The main run-time, i.e. the execution of <tt>&quot;PL_main_root&quot;</tt>.</dd>
-<dt><font SIZE="-1">END</font></dt>
+<dt>END</dt>
 <dd> Execution of any <tt>&quot;END&quot;</tt> blocks.</dd>
-<dt><font SIZE="-1">DESTRUCT</font></dt>
+<dt>DESTRUCT</dt>
 <dd> Global destruction.</dd></dl>
 </dl>
 <dl>
@@ -963,27 +963,27 @@ gamma delta
 <p>BEGIN{print &#8220;compile-time: ${^GLOBAL_PHASE}
 &#8221;} INIT{print &#8220;init-time: ${^GLOBAL_PHASE}
 &#8221;} CHECK{print &#8220;check-time: ${^GLOBAL_PHASE}
-&#8221;}<br />
-{<br />
-    package Print::Phase;<br />
-    sub new<br />
-    {<br />
-        my($class, $time) = @_;<br />
-        return bless \$time, $class;<br />
-    }<br />
-    sub DESTROY<br />
-    {<br />
-        my $self = shift;<br />
+&#8221;}<br/>
+{<br/>
+    package Print::Phase;<br/>
+    sub new<br/>
+    {<br/>
+        my($class, $time) = @_;<br/>
+        return bless \$time, $class;<br/>
+    }<br/>
+    sub DESTROY<br/>
+    {<br/>
+        my $self = shift;<br/>
         print &#8220;$$self: ${^GLOBAL_PHASE}
-&#8221;;<br />
-    }<br />
-}<br />
+&#8221;;<br/>
+    }<br/>
+}<br/>
 print &#8220;run-time: ${^GLOBAL_PHASE}
-&#8221;;<br />
-my $runtime = Print::Phase-&gt;new (<br />
-    &#8220;lexical variables are garbage collected before END&#8221;);<br />
+&#8221;;<br/>
+my $runtime = Print::Phase-&gt;new (<br/>
+    &#8220;lexical variables are garbage collected before END&#8221;);<br/>
 END{print &#8220;end-time: ${^GLOBAL_PHASE}
-&#8221;} our $destruct = Print::Phase-&gt;new (<br />
+&#8221;} our $destruct = Print::Phase-&gt;new (<br/>
     &#8220;package variables are garbage collected after END&#8221;);</p>
 <p> This will print out </p>
 <pre>
@@ -997,21 +997,21 @@ END{print &#8220;end-time: ${^GLOBAL_PHASE}
 </pre>
 <p> This variable was added in Perl 5.14.0.</dd></dl>
 <dt>$^H</dt>
-<dd> <font SIZE="-1">WARNING:</font> This variable is strictly for internal use only. Its availability, behavior, and contents are subject to change without notice. </dd>
-<p> This variable contains compile-time hints for the Perl interpreter. At the end of compilation of a <font SIZE="-1">BLOCK</font> the value of this variable is restored to the value when the interpreter started to compile the <font SIZE="-1">BLOCK.</font> </p>
-<p> When perl begins to parse any block construct that provides a lexical scope (e.g., eval body, required file, subroutine body, loop body, or conditional block), the existing value of <tt>$^H</tt> is saved, but its value is left unchanged. When the compilation of the block is completed, it regains the saved value. Between the points where its value is saved and restored, code that executes within <font SIZE="-1">BEGIN</font> blocks is free to change the value of <tt>$^H</tt>. </p>
+<dd> WARNING: This variable is strictly for internal use only. Its availability, behavior, and contents are subject to change without notice. </dd>
+<p> This variable contains compile-time hints for the Perl interpreter. At the end of compilation of a BLOCK the value of this variable is restored to the value when the interpreter started to compile the BLOCK. </p>
+<p> When perl begins to parse any block construct that provides a lexical scope (e.g., eval body, required file, subroutine body, loop body, or conditional block), the existing value of <tt>$^H</tt> is saved, but its value is left unchanged. When the compilation of the block is completed, it regains the saved value. Between the points where its value is saved and restored, code that executes within BEGIN blocks is free to change the value of <tt>$^H</tt>. </p>
 <p> This behavior provides the semantic of lexical scoping, and is used in, for instance, the <tt>&quot;use strict&quot;</tt> pragma. </p>
 <p> The contents should be an integer; different bits of it are used for different pragmatic flags. Here&#8217;s an example: </p>
-<p>sub add_100{$ ^ H |= 0x100} sub foo<br />
-{<br />
-    BEGIN{add_100()} bar-&gt;baz($boon);<br />
+<p>sub add_100{$ ^ H |= 0x100} sub foo<br/>
+{<br/>
+    BEGIN{add_100()} bar-&gt;baz($boon);<br/>
 }</p>
-<p> Consider what happens during execution of the <font SIZE="-1">BEGIN</font> block. At this point the <font SIZE="-1">BEGIN</font> block has already been compiled, but the body of <tt>&quot;foo()&quot;</tt> is still being compiled. The new value of <tt>$^H</tt> will therefore be visible only while the body of <tt>&quot;foo()&quot;</tt> is being compiled. </p>
+<p> Consider what happens during execution of the BEGIN block. At this point the BEGIN block has already been compiled, but the body of <tt>&quot;foo()&quot;</tt> is still being compiled. The new value of <tt>$^H</tt> will therefore be visible only while the body of <tt>&quot;foo()&quot;</tt> is being compiled. </p>
 <p> Substitution of <tt>&quot;BEGIN { add_100() }&quot;</tt> block with: </p>
-<p>BEGIN<br />
-{<br />
-    require strict;<br />
-    strict-&gt;import(&#8216;vars&#8217;)<br />
+<p>BEGIN<br/>
+{<br/>
+    require strict;<br/>
+    strict-&gt;import(&#8216;vars&#8217;)<br/>
 }</p>
 <p> demonstrates how <tt>&quot;use strict 'vars'&quot;</tt> is implemented. Here&#8217;s a conditional version of the same lexical pragma: </p>
 <pre><code>

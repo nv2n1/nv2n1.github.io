@@ -10,7 +10,7 @@ description: "dorbdb.f –"
 <p>dorbdb.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dorbdb</code> (TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, PHI, TAUP1, TAUP2, TAUQ1, TAUQ2, WORK, LWORK, INFO)<br />
+<p>subroutine <code>dorbdb</code> (TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, PHI, TAUP1, TAUP2, TAUQ1, TAUQ2, WORK, LWORK, INFO)<br/>
  <i></i><code>DORBDB</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dorbdb (characterTRANS, characterSIGNS, integerM, integerP, integerQ, double precision, dimension( ldx11, * )X11, integerLDX11, double precision, dimension( ldx12, * )X12, integerLDX12, double precision, dimension( ldx21, * )X21, integerLDX21, double precision, dimension( ldx22, * )X22, integerLDX22, double precision, dimension( * )THETA, double precision, dimension( * )PHI, double precision, dimension( * )TAUP1, double precision, dimension( * )TAUP2, double precision, dimension( * )TAUQ1, double precision, dimension( * )TAUQ2, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

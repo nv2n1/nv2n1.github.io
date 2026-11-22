@@ -10,28 +10,28 @@ description: "tv_grab_uk_guardian – Grab TV listings for UK from The Guardian 
 
 <p> tv_grab_uk_guardian &#8211; Grab TV listings for UK from The Guardian website. </p>
 <h2>DESCRIPTION</h2>
-<p> Output <font SIZE="-1">TV</font> listings in <font SIZE="-1">XMLTV</font> format for many channels available in <font SIZE="-1">UK.</font> The data come from &lt;<a rel="nofollow" href="http://theguardian.co.uk">http://theguardian.co.uk</a>&gt; </p>
+<p> Output TV listings in XMLTV format for many channels available in UK. The data come from &lt;<a rel="nofollow" href="http://theguardian.co.uk">http://theguardian.co.uk</a>&gt; </p>
 <p> First you must run <code>tv_grab_uk_guardian &#8211;configure</code> to choose which channels you want to receive. </p>
-<p> Then running <code>tv_grab_uk_guardian</code> with no arguments will get a listings in <font SIZE="-1">XML</font> format for the channels you chose for available days including today.</p>
+<p> Then running <code>tv_grab_uk_guardian</code> with no arguments will get a listings in XML format for the channels you chose for available days including today.</p>
 <h2>OPTIONS</h2>
 <p> Please see <code>tv_grab_uk_guardian &#8211;help</code></p>
 <h2>INSTALLATION</h2>
-<p> The file <i>tv_grab_uk_guardian.map.conf</i> has two purposes. Firstly you can map the channel ids used by the site into something more meaningful to your <font SIZE="-1">PVR. E</font>.g. </p>
+<p> The file <i>tv_grab_uk_guardian.map.conf</i> has two purposes. Firstly you can map the channel ids used by the site into something more meaningful to your PVR. E.g. </p>
 <pre>
       map==bbc-1-south==BBC 1
 </pre>
-<p> will change &#8220;bbc-1-south&#8221; to &#8220;<font SIZE="-1">BBC 1&#8221;</font> in the output <font SIZE="-1">XML.</font> </p>
+<p> will change &#8220;bbc-1-south&#8221; to &#8220;BBC 1&#8221; in the output XML. </p>
 <p> Note: the lines are of the form &#8220;map=={channel id}=={my name}&#8221;. </p>
-<p> The second purpose is to likewise translate genre names. So if your <font SIZE="-1">PVR</font> doesn&#8220;t have a category for &#8221;Science Fiction&#8220; but uses &#8221;Sci-fi&quot; instead, then you can specify </p>
+<p> The second purpose is to likewise translate genre names. So if your PVR doesn&#8220;t have a category for &#8221;Science Fiction&#8220; but uses &#8221;Sci-fi&quot; instead, then you can specify </p>
 <pre>
       cat==Science Fiction==Sci-fi
 </pre>
-<p> and the output <font SIZE="-1">XML</font> will have &#8220;Sci-fi&#8221;. </p>
-<p> <font SIZE="-1">IMPORTANT:</font> the downloaded &#8220;tv_grab_uk_guardian.map.conf&#8221; contains example lines to illustrate the format &#8211; you should edit this file to suit your own purposes!</p>
+<p> and the output XML will have &#8220;Sci-fi&#8221;. </p>
+<p> IMPORTANT: the downloaded &#8220;tv_grab_uk_guardian.map.conf&#8221; contains example lines to illustrate the format &#8211; you should edit this file to suit your own purposes!</p>
 <h2>ERROR HANDLING</h2>
-<p> If the grabber fails to download data for some channel on a specific day, it will print an errormessage to <font SIZE="-1">STDERR</font> and then continue with the other channels and days. The grabber will exit with a status code of 1 to indicate that the data is incomplete.</p>
+<p> If the grabber fails to download data for some channel on a specific day, it will print an errormessage to STDERR and then continue with the other channels and days. The grabber will exit with a status code of 1 to indicate that the data is incomplete.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
-<p> The environment variable <font SIZE="-1">HOME</font> can be set to change where configuration files are stored. All configuration is stored in <tt>$HOME</tt>/.xmltv/. On Windows, it might be necessary to set <font SIZE="-1">HOME</font> to a path without spaces in it.</p>
+<p> The environment variable HOME can be set to change where configuration files are stored. All configuration is stored in <tt>$HOME</tt>/.xmltv/. On Windows, it might be necessary to set HOME to a path without spaces in it.</p>
 <h2>SUPPORTED CHANNELS</h2>
 <p> For information on supported channels, see &lt;<a rel="nofollow" href="http://tvlistings.guardian.co.uk/text-only/all-channels/">http://tvlistings.guardian.co.uk/text-only/all-channels/</a>&gt;</p>
 <h2>XMLTV VALIDATION</h2>
@@ -39,7 +39,7 @@ description: "tv_grab_uk_guardian – Grab TV listings for UK from The Guardian 
 <pre>
       &quot;Line 5 Invalid channel-id BBC 1&quot;
 </pre>
-<p> This is a because ValidateFile.pm insists the channel-id adheres to <font SIZE="-1">RFC2838 </font> despite the xmltv.dtd only saying &#8220;preferably&#8221; not &#8220;<font SIZE="-1">SHOULD&#8221;. </font>(Having channel ids of the form &#8220;bbc1.bbc.co.uk&#8221; will be rejected by many PVRs since they require the data to match their own list.) </p>
+<p> This is a because ValidateFile.pm insists the channel-id adheres to RFC2838  despite the xmltv.dtd only saying &#8220;preferably&#8221; not &#8220;SHOULD&#8221;. (Having channel ids of the form &#8220;bbc1.bbc.co.uk&#8221; will be rejected by many PVRs since they require the data to match their own list.) </p>
 <p> It may also report: </p>
 <pre>
       &quot;tv_sort failed on the concatenated data. Probably due to 

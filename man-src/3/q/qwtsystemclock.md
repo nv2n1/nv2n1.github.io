@@ -12,10 +12,10 @@ description: "QwtSystemClock –"
 <h2>Synopsis</h2>
 <p>#include &lt;qwt_system_clock.h&gt;</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtSystemClock</code> ()<br />
- <i>Constructs a null clock object. </i><br />
- virtual <code>~QwtSystemClock</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtSystemClock</code> ()<br/>
+ <i>Constructs a null clock object. </i><br/>
+ virtual <code>~QwtSystemClock</code> ()<br/>
+ <i>Destructor. </i><br/>
  bool <code>isNull</code> () const </p>
 <p> void <code>start</code> () </p>
 <p> double <code>restart</code> () </p>

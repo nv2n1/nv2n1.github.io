@@ -45,7 +45,7 @@ description: "ipa-join – Join a machine to an IPA realm and get a keytab for t
 <dd> Print the raw XML-RPC output in GSSAPI mode.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Join IPA domain and retrieve a keytab with kerberos credentials. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>kinit admin<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>kinit admin<br/>
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>ipa-join </p>
 <p> Join IPA domain and retrieve a keytab using a one-time password. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>ipa-join -w secret123 </p>

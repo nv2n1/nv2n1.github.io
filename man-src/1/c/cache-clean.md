@@ -10,7 +10,7 @@ description: "cache-clean – Administration tool for the A-REX cache."
 
 <p> cache-clean &#8211; Administration tool for the A-REX cache. </p>
 <h2>SYNOPSIS</h2>
-<p> cache-clean [-h] [-s] [-S] [-m NN -M NN] [-E N] [-D debug_level]<br />
+<p> cache-clean [-h] [-s] [-S] [-m NN -M NN] [-E N] [-D debug_level]<br/>
 &nbsp;<wbr>&nbsp;<wbr>[-f space_command]&nbsp;<wbr>[&nbsp;<wbr>-c&nbsp;<wbr>&lt;arex_config_file&gt;&nbsp;<wbr>|&nbsp;<wbr>&lt;dir1&gt;&nbsp;<wbr>[&lt;dir2&gt;&nbsp;<wbr>[&#8230;]]&nbsp;<wbr>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>cache-clean</code> is a tool for administrators of ARC server installations to safely remove A-REX cache data and to provide an overview of the contents of the cache. It is used by the A-REX to automatically manage cache contents. </p>

@@ -10,7 +10,7 @@ description: "ieeeck.f –"
 <p>ieeeck.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>INTEGER function <code>ieeeck</code> (ISPEC, ZERO, ONE)<br />
+<p>INTEGER function <code>ieeeck</code> (ISPEC, ZERO, ONE)<br/>
  <i></i><code>IEEECK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function ieeeck (integerISPEC, realZERO, realONE)</h3>

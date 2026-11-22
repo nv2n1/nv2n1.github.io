@@ -14,8 +14,8 @@ description: "mpd.conf – Music Player Daemon configuration file"
 <p> parameter &quot;value&quot; </p>
 <p> The exception to this rule is the audio_output parameter, which is of the form: </p>
 <p> audio_output { </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>parameter1&nbsp;<wbr>&quot;value&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>parameter2&nbsp;<wbr>&quot;value&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>parameter1&nbsp;<wbr>&quot;value&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>parameter2&nbsp;<wbr>&quot;value&quot;<br/>
  } </p>
 <p> Parameters that take a file or directory as an argument should use absolute paths. </p>
 <p> See <code>docs/mpdconf.example</code> in the source tarball for an example configuration file. </p>

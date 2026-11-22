@@ -15,7 +15,7 @@ description: "systemd-cryptsetup [at] .service, systemd-cryptsetup – Full disk
 <h2>Description</h2>
 <p>systemd-cryptsetup [at] .service is a service responsible for setting up encrypted block devices. It is instantiated for each device that requires decryption for access. </p>
 <p> systemd-cryptsetup [at] .service instances are part of the system-systemd-cryptsetup.slice slice, which is destroyed only very late in the shutdown procedure. This allows the encrypted devices to remain up until filesystems have been unmounted. </p>
-<p> systemd-cryptsetup [at] .service will ask for hard disk passwords via the m[blue]<code>password agent logic</code>m[]<font SIZE="-2">[1]</font>, in order to query the user for the password using the right mechanism at boot and during runtime. </p>
+<p> systemd-cryptsetup [at] .service will ask for hard disk passwords via the m[blue]<code>password agent logic</code>m[][1], in order to query the user for the password using the right mechanism at boot and during runtime. </p>
 <p> At early boot and when the system manager configuration is reloaded, /etc/crypttab is translated into systemd-cryptsetup [at] .service units by <code><a href="/docs/linux/man/8-systemd-cryptsetup-generator/">systemd-cryptsetup-generator</a></code>(8). </p>
 <p> In order to unlock a volume a password or binary key is required. systemd-cryptsetup [at] .service tries to acquire a suitable password or binary key via the following mechanisms, tried in order: </p>
 <dl>

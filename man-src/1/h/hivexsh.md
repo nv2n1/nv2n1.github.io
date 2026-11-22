@@ -41,7 +41,7 @@ hivexsh[-options][hivefile]
  #!/usr/bin/hivexsh -f
 </pre>
 <dt><code>-w</code></dt>
-<dd> If this option is given, then writes are allowed to the hive (see &#8220;commit&#8221; command below, and the discussion of modifying hives in &#8220;<font SIZE="-1">WRITING TO HIVE FILES&#8221;</font> in <i><a href="/docs/linux/man/3-hivex/">hivex</a></i>(3)). </dd>
+<dd> If this option is given, then writes are allowed to the hive (see &#8220;commit&#8221; command below, and the discussion of modifying hives in &#8220;WRITING TO HIVE FILES&#8221; in <i><a href="/docs/linux/man/3-hivex/">hivex</a></i>(3)). </dd>
 <p> <code>Important Note:</code> Even if you specify this option, nothing is written to a hive unless you call the &#8220;commit&#8221; command. If you exit the shell without committing, all changes will be discarded. </p>
 <p> If this option is not given, then write commands are disabled.</dl>
 <h2>COMMANDS</h2>
@@ -92,7 +92,7 @@ hivexsh[-options][hivefile]
 <dt><code>setval</code> nrvals</dt>
 <dd> This command replaces all (key, value) pairs at the current node with the values in subsequent input. <tt>&quot;nrvals&quot;</tt> is the number of values (ie. (key, value) pairs), and any existing values at this node are deleted. So <tt>&quot;setval 0&quot;</tt> just deletes any values at the current node. </dd>
 <p> The command reads 2 * nrvals lines of input, with each pair of lines of input corresponding to a key and a value to add. </p>
-<p> For example, the following setval command replaces whatever is at the current node with two (key, value) pairs. The default key is set to the UTF16-LE-encoded string &#8220;abcd&#8221;. The other value is named &#8220;ANumber&#8221; and is a little-endian <font SIZE="-1">DWORD</font> 0x12345678. </p>
+<p> For example, the following setval command replaces whatever is at the current node with two (key, value) pairs. The default key is set to the UTF16-LE-encoded string &#8220;abcd&#8221;. The other value is named &#8220;ANumber&#8221; and is a little-endian DWORD 0x12345678. </p>
 <pre>
  setval 2
  @
@@ -155,6 +155,6 @@ hivexsh[-options][hivefile]
 <p> Richard W.M. Jones (<code>&quot;rjones at redhat dot com&quot;</code>)  </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009-2010 Red Hat Inc. </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font> </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. </p>

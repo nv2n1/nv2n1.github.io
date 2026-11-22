@@ -54,9 +54,9 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
- <i>signer</i> the CA certificate object to sign with (need private key).<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
+ <i>signer</i> the CA certificate object to sign with (need private key).<br/>
  <i>certificate</i> return cerificate, free with <code>hx509_cert_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -67,9 +67,9 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
- <i>signer</i> private key to sign with.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
+ <i>signer</i> private key to sign with.<br/>
  <i>certificate</i> return cerificate, free with <code>hx509_cert_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -80,9 +80,9 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
- <i>uri</i> uri to the CRL.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
+ <i>uri</i> uri to the CRL.<br/>
  <i>issuername</i> name of the issuer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -94,8 +94,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>oid</i> extended key usage to add.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -107,8 +107,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>dnsname</i> a hostame.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -119,8 +119,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>jid</i> string of an a jabber id in UTF8.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -131,8 +131,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>principal</i> Microsoft UPN string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -143,9 +143,9 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
- <i>oid</i> the oid of the OtherName.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
+ <i>oid</i> the oid of the OtherName.<br/>
  <i>os</i> data in the other name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -156,8 +156,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>principal</i> Kerberos principal to add to the certificate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -168,8 +168,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>rfc822Name</i> a string to a email address.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -186,7 +186,7 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
  <i>tbs</i> returned to-be-signed certicate object, free with <code>hx509_ca_tbs_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -197,8 +197,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>pathLenConstraint</i> path length constraint, negative, no constraint.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -209,7 +209,7 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
  <i>tbs</i> object to be signed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -220,8 +220,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>t</i> time when the certificate will expire</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -232,8 +232,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>delta</i> seconds to the certificate is going to expire.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -244,8 +244,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>t</i> time the certificated will start to be valid</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -256,8 +256,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>pathLenConstraint</i> path length constraint, negative, no constraint.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -268,8 +268,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>serialNumber</i> serial number to use for the to-be-signed certificate object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -280,8 +280,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>sigalg</i> signature algorithm to use</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -292,8 +292,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>spki</i> subject public key info to use for the to-be-signed certificate object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -304,8 +304,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>subject</i> the name to set a subject.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -316,9 +316,9 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
- <i>flags</i> bit field selecting what to copy from the template certifiate.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
+ <i>flags</i> bit field selecting what to copy from the template certifiate.<br/>
  <i>cert</i> template certificate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -330,9 +330,9 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
- <i>issuerUniqueID</i> to be set<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
+ <i>issuerUniqueID</i> to be set<br/>
  <i>subjectUniqueID</i> to be set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -343,8 +343,8 @@ description: "hx509 CA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>tbs</i> object to be signed.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>tbs</i> object to be signed.<br/>
  <i>env</i> enviroment variable to expand variables in the subject name, see hx509_env_init().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

@@ -10,7 +10,7 @@ description: "savetextmode, textmode – save or restore the complete SVGA statu
 
 <p> savetextmode, textmode &#8211; save or restore the complete SVGA status for textmode.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>savetextmode</code><br />
+<p> <code>savetextmode</code><br/>
  <code>textmode</code> </p>
 <h2>DESCRIPTION</h2>
 <p> These are simple scripts to save the SVGA register state when in textmode to the files <i>/etc/vga/fontdata</i> and <i>/etc/vga/textregs</i> (<i>$HOME/.vga/fontdata</i> and <i>$HOME/.vga/textregs</i> if directory <i>/etc/vga</i> is not writeable) or to restore it from these files. </p>
@@ -19,7 +19,7 @@ description: "savetextmode, textmode – save or restore the complete SVGA statu
 <p> You do this by being a smart guy and running <code>savetextmode</code> right after booting of your machine, <code>prior</code> to any problems. Then, in case the SVGA state is hosed and you sit in front of a blank or useless console, change VC (maybe login) to get to a shell. Or exist the currently running program with <code>&lt;Ctrl&gt;-C</code>, <code>&lt;Ctrl&gt;-&lt;Alt&gt;-&lt;Backspace&gt;</code>, or whatever applies. Once you got a shell, run <code>textmode</code> and it will hopefully render your console useable again. </p>
 <p> To make it clear: You do all this while not seeing anything on your console screen, you enter this information blindly or after logging in from a network. Also, if the keyboard is left in raw mode, nothing can really help you as you cannot enter anything which a shell will understand. </p>
 <h2>FILES</h2>
-<p> <i>/etc/vga/fontdata</i> or <i>$HOME/.vga/fontdata</i><br />
+<p> <i>/etc/vga/fontdata</i> or <i>$HOME/.vga/fontdata</i><br/>
  <i>/etc/vga/textregs</i> or <i>$HOME/.vga/textregs</i> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-svgalib/">svgalib</a></code>(7), <code><a href="/docs/linux/man/7-vgagl/">vgagl</a></code>(7), <code>libvga.config</code>(5), <code><a href="/docs/linux/man/1-dumpreg/">dumpreg</a></code>(1), <code><a href="/docs/linux/man/1-convfont/">convfont</a></code>(1), <code><a href="/docs/linux/man/1-fix132x43/">fix132x43</a></code>(1), <code><a href="/docs/linux/man/1-restorefont/">restorefont</a></code>(1), <code><a href="/docs/linux/man/1-restoretextmode/">restoretextmode</a></code>(1), <code><a href="/docs/linux/man/1-restorepalette/">restorepalette</a></code>(1), <code><a href="/docs/linux/man/1-runx/">runx</a></code>(1), <code><a href="/docs/linux/man/1-setmclk/">setmclk</a></code>(1),</p>

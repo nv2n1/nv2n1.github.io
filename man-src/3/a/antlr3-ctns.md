@@ -12,28 +12,28 @@ description: "ANTLR3_TREE_NODE_STREAM_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontreenodestream.h">antlr3commontreenodestream.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> <code>pANTLR3_BASE_TREE</code>(* <code>_LT</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>ANTLR3_INT32</code> k)<br />
- <i>Get tree node at current input pointer + i ahead where i=1 is next node. </i><br />
- <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>ctns</code><br />
- <i>Any interface that implements this interface (is a super structure containing this structure), may store the pointer to itself here in the super pointer, which is not used by the tree node stream. </i><br />
- void(* <code>free</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns)<br />
- <i>Release up any and all space the the interface allocate, including for this structure. </i><br />
- <code>pANTLR3_BASE_TREE</code>(* <code>get</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>ANTLR3_INT32</code> i)<br />
- <i>Get a tree node at an absolute index i; 0..n-1. </i><br />
- <code>pANTLR3_BASE_TREE_ADAPTOR</code>(* <code>getTreeAdaptor</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns)<br />
- <i>What adaptor can tell me how to interpret/navigate nodes and trees. </i><br />
- <code>pANTLR3_BASE_TREE</code>(* <code>getTreeSource</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns)<br />
- <i>Where is this stream pulling nodes from? This is not the name, but the object that provides node objects. </i><br />
- <code>pANTLR3_INT_STREAM</code> <code>istream</code><br />
- <i>All input streams implement the ANTLR3_INT_STREAM interface. </i><br />
- void(* <code>replaceChildren</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>pANTLR3_BASE_TREE</code> parent, <code>ANTLR3_INT32</code> startChildIndex, <code>ANTLR3_INT32</code> stopChildIndex, <code>pANTLR3_BASE_TREE</code> t)<br />
- <i>Replace from start to stop child index of parent with t, which might be a list. </i><br />
- void(* <code>setUniqueNavigationNodes</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>ANTLR3_BOOLEAN</code> uniqueNavigationNodes)<br />
- <i>As we flatten the tree, we use UP, DOWN nodes to represent the tree structure. </i><br />
+<p> <code>pANTLR3_BASE_TREE</code>(* <code>_LT</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>ANTLR3_INT32</code> k)<br/>
+ <i>Get tree node at current input pointer + i ahead where i=1 is next node. </i><br/>
+ <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>ctns</code><br/>
+ <i>Any interface that implements this interface (is a super structure containing this structure), may store the pointer to itself here in the super pointer, which is not used by the tree node stream. </i><br/>
+ void(* <code>free</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns)<br/>
+ <i>Release up any and all space the the interface allocate, including for this structure. </i><br/>
+ <code>pANTLR3_BASE_TREE</code>(* <code>get</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>ANTLR3_INT32</code> i)<br/>
+ <i>Get a tree node at an absolute index i; 0..n-1. </i><br/>
+ <code>pANTLR3_BASE_TREE_ADAPTOR</code>(* <code>getTreeAdaptor</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns)<br/>
+ <i>What adaptor can tell me how to interpret/navigate nodes and trees. </i><br/>
+ <code>pANTLR3_BASE_TREE</code>(* <code>getTreeSource</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns)<br/>
+ <i>Where is this stream pulling nodes from? This is not the name, but the object that provides node objects. </i><br/>
+ <code>pANTLR3_INT_STREAM</code> <code>istream</code><br/>
+ <i>All input streams implement the ANTLR3_INT_STREAM interface. </i><br/>
+ void(* <code>replaceChildren</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>pANTLR3_BASE_TREE</code> parent, <code>ANTLR3_INT32</code> startChildIndex, <code>ANTLR3_INT32</code> stopChildIndex, <code>pANTLR3_BASE_TREE</code> t)<br/>
+ <i>Replace from start to stop child index of parent with t, which might be a list. </i><br/>
+ void(* <code>setUniqueNavigationNodes</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>ANTLR3_BOOLEAN</code> uniqueNavigationNodes)<br/>
+ <i>As we flatten the tree, we use UP, DOWN nodes to represent the tree structure. </i><br/>
  <code>pANTLR3_STRING</code>(* <code>toString</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns) </p>
-<p> <code>pANTLR3_STRING</code>(* <code>toStringSS</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>pANTLR3_BASE_TREE</code> start, <code>pANTLR3_BASE_TREE</code> stop)<br />
- <i>Return the text of all nodes from start to stop, inclusive. </i><br />
- void(* <code>toStringWork</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>pANTLR3_BASE_TREE</code> start, <code>pANTLR3_BASE_TREE</code> stop, <code>pANTLR3_STRING</code> buf)<br />
+<p> <code>pANTLR3_STRING</code>(* <code>toStringSS</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>pANTLR3_BASE_TREE</code> start, <code>pANTLR3_BASE_TREE</code> stop)<br/>
+ <i>Return the text of all nodes from start to stop, inclusive. </i><br/>
+ void(* <code>toStringWork</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>pANTLR3_BASE_TREE</code> start, <code>pANTLR3_BASE_TREE</code> stop, <code>pANTLR3_STRING</code> buf)<br/>
  <i>Return the text of all nodes from start to stop, inclusive, into the supplied buffer. </i></p>
 <h2>Field Documentation</h2>
 <h3><code>pANTLR3_BASE_TREE</code>(* <code>ANTLR3_TREE_NODE_STREAM_struct::_LT</code>)(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>ANTLR3_INT32</code> k)</h3>

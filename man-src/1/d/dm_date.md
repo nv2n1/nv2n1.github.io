@@ -23,18 +23,18 @@ dm_date[OPTION]...[+FORMAT]
 <dl>
 <dt>-h, --help
 </dt><dd> Print online help.
-</dd><dt>-d <font SIZE="-1">STRING,</font> --date=STRING
-</dt><dd> Display time described by <font SIZE="-1">STRING. STRING</font> can be any string which can be parsed by Date::Manip. Please refer to the Date::Manip::Date documentation for details.
-</dd><dt>-f <font SIZE="-1">DATEFILE,</font> --file=DATEFILE
-</dt><dd> This reads each line in <font SIZE="-1">DATEFILE,</font> and extracts a date from it and prints out the information. 
+</dd><dt>-d STRING, --date=STRING
+</dt><dd> Display time described by STRING. STRING can be any string which can be parsed by Date::Manip. Please refer to the Date::Manip::Date documentation for details.
+</dd><dt>-f DATEFILE, --file=DATEFILE
+</dt><dd> This reads each line in DATEFILE, and extracts a date from it and prints out the information. 
  Blank lines and lines starting with a pound (#) are ignored. Lines not containing a valid date are also ignored.
-</dd><dt>-r <font SIZE="-1">FILE,</font> --reference=FILE
-</dt><dd> Displays the last modification time of <font SIZE="-1">FILE.</font>
+</dd><dt>-r FILE, --reference=FILE
+</dt><dd> Displays the last modification time of FILE.
 </dd><dt>-R, --rfc-2822
-</dt><dd> Displayc the date and time in <font SIZE="-1">RFC 2822</font> format. 
+</dt><dd> Displayc the date and time in RFC 2822 format. 
  Example: Mon, 07 Aug 2006 12:34:56 -0600
 </dd><dt>-u, --utc, --universal
-</dt><dd> Converts the date to <font SIZE="-1">UT </font>(<font SIZE="-1">GMT</font>) and prints out the information.</dd></dl>
+</dt><dd> Converts the date to UT (GMT) and prints out the information.</dd></dl>
  
 
  Only one of -d, -f, or -r should be included. If more than one is included, the first one from the list (-d, -f, -r) is used and any other is ignored. 

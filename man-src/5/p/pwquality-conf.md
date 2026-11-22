@@ -14,7 +14,7 @@ description: "pwquality.conf – configuration for the libpwquality library"
 <h2>Description</h2>
 <p><code>pwquality.conf</code> provides a way to configure the default password quality requirements for the system passwords. This file is read by the libpwquality library and utilities that use this library for checking and generating passwords. </p>
 <p> The file has a very simple <i>name = value</i> format with possible comments starting with <tt>&quot;#&quot;</tt> character. The whitespace at the beginning of line, end of line, and around the <tt>&quot;=&quot;</tt> sign is ignored. </p>
-<p> The libpwquality library also first reads all <i>*.conf</i> files from the <i>/etc/security/pwquality.conf.d</i> directory in <font SIZE="-1">ASCII</font> sorted order. The values of the same settings are overridden in the order the files are parsed.</p>
+<p> The libpwquality library also first reads all <i>*.conf</i> files from the <i>/etc/security/pwquality.conf.d</i> directory in ASCII sorted order. The values of the same settings are overridden in the order the files are parsed.</p>
 <h2>Options</h2>
 <p>The possible options in the file are:</p>
 <dl>
@@ -40,7 +40,7 @@ description: "pwquality.conf – configuration for the libpwquality library"
 <dt><code>maxclassrepeat</code></dt>
 <dd>The maximum number of allowed consecutive characters of the same class in the new password. The check is disabled if the value is 0. (default 0)</dd>
 <dt><code>gecoscheck</code></dt>
-<dd>If nonzero, check whether the words longer than 3 characters from the <i></i><font SIZE="-1"><i>GECOS</i></font><i></i> field of the user&#8217;s <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5) entry are contained in the new password. The check is disabled if the value is 0. (default 0)</dd>
+<dd>If nonzero, check whether the words longer than 3 characters from the <i></i><i>GECOS</i><i></i> field of the user&#8217;s <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5) entry are contained in the new password. The check is disabled if the value is 0. (default 0)</dd>
 <dt><code>dictcheck</code></dt>
 <dd>If nonzero, check whether the password (with possible modifications) matches a word in a dictionary. Currently the dictionary check is performed using the cracklib library. (default 1)</dd>
 <dt><code>usercheck=</code><i>N</i></dt>

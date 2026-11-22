@@ -10,7 +10,7 @@ description: "avc_compute_create, avc_compute_member – obtain SELinux label fo
 
 <p> avc_compute_create, avc_compute_member &#8211; obtain SELinux label for new object </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
+<p> <code>#include &lt;selinux/selinux.h&gt;</code><br/>
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>int avc_compute_create(security_id_t </code><i>ssid</i><code>, security_id_t </code><i>tsid</i><code>,</code> <code>security_class_t </code><i>tclass</i><code>, security_id_t *</code><i>newsid</i><code>);</code> </p>
 <p> <code>int avc_compute_member(security_id_t </code><i>ssid</i><code>, security_id_t </code><i>tsid</i><code>,</code> <code>security_class_t </code><i>tclass</i><code>, security_id_t *</code><i>newsid</i><code>);</code></p>

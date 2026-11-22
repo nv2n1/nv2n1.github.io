@@ -28,8 +28,8 @@ description: "loadkeys – load keyboard translation tables"
 <p> The option <i>-s</i> (or <i>&#8211;clearstrings</i> ) clears the kernel string table. If this option is not given, <code>loadkeys</code> will only add or replace strings, not remove them. (Thus, the option -s is required to reach a well-defined state.) The kernel string table is a sequence of strings with names like F31. One can make function key F5 (on an ordinary PC keyboard) produce the text `Hello!&#8217;, and Shift+F5 `Goodbye!&#8217; using lines </p>
 <dl>
 <dt>
-</dt><dd> keycode 63 = F70 F71<br />
- string F70 = &quot;Hello!&quot;<br />
+</dt><dd> keycode 63 = F70 F71<br/>
+ string F70 = &quot;Hello!&quot;<br/>
  string F71 = &quot;Goodbye!&quot;</dd></dl>
 <p> in the keymap. The default bindings for the function keys are certain escape sequences mostly inspired by the VT100 terminal.</p>
 <h2>CREATE KERNEL SOURCE TABLE</h2>

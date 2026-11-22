@@ -28,7 +28,7 @@ description: "sqlsharp – Mono SQL Query command-line tool"
 <pre>
         \open
 </pre>
-<p> Basically, there are five commands a user should know: <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>\provider, \connectionstring, \open, \quit, and \help<br />
+<p> Basically, there are five commands a user should know: <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>\provider, \connectionstring, \open, \quit, and \help<br/>
  </p>
 <p> To connect to a database, you need to do the following: </p>
 <p> 1. set your data provider via \provider </p>

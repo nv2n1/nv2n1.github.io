@@ -19,6 +19,6 @@ description: "XtGetKeyboardFocusWidget – extension event handling"
 <h2>Description</h2>
 <p><code>XtGetKeyboardFocusWidget</code> function returns the widget that would be the end result of keyboard event forwarding for a keyboard event for the specified widget.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtinserteventtypehandler/">XtInsertEventTypeHandler</a>(3), <a href="/docs/linux/man/3-xtremoveeventtypehandler/">XtRemoveEventTypeHandler</a>(3), <a href="/docs/linux/man/3-xtregisterextensionselector/">XtRegisterExtensionSelector</a>(3), <a href="/docs/linux/man/3-xtseteventdispatcher/">XtSetEventDispatcher</a>(3), <a href="/docs/linux/man/3-xtdispatcheventtowidget/">XtDispatchEventToWidget</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtinserteventtypehandler/">XtInsertEventTypeHandler</a>(3), <a href="/docs/linux/man/3-xtremoveeventtypehandler/">XtRemoveEventTypeHandler</a>(3), <a href="/docs/linux/man/3-xtregisterextensionselector/">XtRegisterExtensionSelector</a>(3), <a href="/docs/linux/man/3-xtseteventdispatcher/">XtSetEventDispatcher</a>(3), <a href="/docs/linux/man/3-xtdispatcheventtowidget/">XtDispatchEventToWidget</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

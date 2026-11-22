@@ -32,7 +32,7 @@ description: "namespaces – overview of Linux namespaces"
 <td>IPC&nbsp;</td>
 <td><code>CLONE_NEWIPC&nbsp;</code></td>
 <td><code><a href="/docs/linux/man/7-ipc_namespaces/">ipc_namespaces</a></code>(7)&nbsp;</td>
-<td> System V IPC,<br />
+<td> System V IPC,<br/>
  POSIX message queues
 </td>
 </tr>
@@ -40,7 +40,7 @@ description: "namespaces – overview of Linux namespaces"
 <td>Network&nbsp;</td>
 <td><code>CLONE_NEWNET&nbsp;</code></td>
 <td><code><a href="/docs/linux/man/7-network_namespaces/">network_namespaces</a></code>(7)&nbsp;</td>
-<td> Network devices,<br />
+<td> Network devices,<br/>
  stacks, ports, etc.
 </td>
 </tr>
@@ -62,7 +62,7 @@ description: "namespaces – overview of Linux namespaces"
 <td>Time&nbsp;</td>
 <td><code>CLONE_NEWTIME&nbsp;</code></td>
 <td><code><a href="/docs/linux/man/7-time_namespaces/">time_namespaces</a></code>(7)&nbsp;</td>
-<td> Boot and monotonic<br />
+<td> Boot and monotonic<br/>
  clocks
 </td>
 </tr>
@@ -77,7 +77,7 @@ description: "namespaces – overview of Linux namespaces"
 <td>UTS&nbsp;</td>
 <td><code>CLONE_NEWUTS&nbsp;</code></td>
 <td><code><a href="/docs/linux/man/7-uts_namespaces/">uts_namespaces</a></code>(7)&nbsp;</td>
-<td> Hostname and NIS<br />
+<td> Hostname and NIS<br/>
  domain name
 </td>
 </tr>

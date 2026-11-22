@@ -9,17 +9,17 @@ description: "Ecore Time Functions – Functions that deal with time."
 
 <p>Ecore Time Functions &#8211; Functions that deal with time. </p>
 <h3>Functions</h3>
-<p>EAPI double <code>ecore_time_get</code> (void)<br />
- <i>Retrieves the current system time as a floating point value in seconds. </i><br />
- EAPI <code>Ecore_Timer</code> * <code>ecore_timer_add</code> (double in, int(*func)(void *data), const void *data)<br />
- <i>Creates a timer to call the given function in the given period of time. </i><br />
- EAPI void * <code>ecore_timer_del</code> (<code>Ecore_Timer</code> *timer)<br />
- <i>Delete the specified timer from the timer list. </i><br />
- EAPI void <code>ecore_timer_interval_set</code> (<code>Ecore_Timer</code> *timer, double in)<br />
- <i>Change the interval the timer ticks of. </i><br />
- EAPI void <code>ecore_timer_delay</code> (<code>Ecore_Timer</code> *timer, double add)<br />
- <i>Add some delay for the next occurence of a timer. </i><br />
- EAPI double <code>ecore_timer_pending_get</code> (<code>Ecore_Timer</code> *timer)<br />
+<p>EAPI double <code>ecore_time_get</code> (void)<br/>
+ <i>Retrieves the current system time as a floating point value in seconds. </i><br/>
+ EAPI <code>Ecore_Timer</code> * <code>ecore_timer_add</code> (double in, int(*func)(void *data), const void *data)<br/>
+ <i>Creates a timer to call the given function in the given period of time. </i><br/>
+ EAPI void * <code>ecore_timer_del</code> (<code>Ecore_Timer</code> *timer)<br/>
+ <i>Delete the specified timer from the timer list. </i><br/>
+ EAPI void <code>ecore_timer_interval_set</code> (<code>Ecore_Timer</code> *timer, double in)<br/>
+ <i>Change the interval the timer ticks of. </i><br/>
+ EAPI void <code>ecore_timer_delay</code> (<code>Ecore_Timer</code> *timer, double add)<br/>
+ <i>Add some delay for the next occurence of a timer. </i><br/>
+ EAPI double <code>ecore_timer_pending_get</code> (<code>Ecore_Timer</code> *timer)<br/>
  <i>Get the pending time regarding a timer. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that deal with time. </p>
@@ -35,8 +35,8 @@ description: "Ecore Time Functions – Functions that deal with time."
 <p>Creates a timer to call the given function in the given period of time. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>in</i> The interval in seconds.<br />
- <i>func</i> The given function. If func returns 1, the timer is rescheduled for the next interval in.<br />
+<dd><i>in</i> The interval in seconds.<br/>
+ <i>func</i> The given function. If func returns 1, the timer is rescheduled for the next interval in.<br/>
  <i>data</i> Data to pass to func when it is called.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -60,14 +60,14 @@ description: "Ecore Time Functions – Functions that deal with time."
 <p> This doesn&#8217;t affect the interval of a timer. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>timer</i> The timer to change.<br />
+<dd><i>timer</i> The timer to change.<br/>
  <i>add</i> The dalay to add to the next iteration.</dd></dl>
 <h3>EAPI void ecore_timer_interval_set (<code>Ecore_Timer</code> * timer, double in)</h3>
 <p>Change the interval the timer ticks of. </p>
 <p> If set during a timer call, this will affect the next interval. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>timer</i> The timer to change.<br />
+<dd><i>timer</i> The timer to change.<br/>
  <i>in</i> The interval in seconds.</dd></dl>
 <h3>EAPI double ecore_timer_pending_get (<code>Ecore_Timer</code> * timer)</h3>
 <p>Get the pending time regarding a timer. </p>

@@ -26,8 +26,8 @@ description: "cas – c aMule statistics"
 <p> Without any options, it prints online signature data to stdout. </p>
 <p> <code>cas</code> was written by Pedro de Oliveira &lt;falso [at] rdk.homeip.net&gt;</p>
 <h2>FILES</h2>
-<p> ~/.aMule/casrc<br />
- stat.png<br />
+<p> ~/.aMule/casrc<br/>
+ stat.png<br/>
  tmp.html</p>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs either on our forum (<i><a rel="nofollow" href="http://forum.amule.org/">http://forum.amule.org/</a></i>), or in our bugtracker (<i><a href="http://bugs.amule.org/">http://bugs.amule.org/</a></i>). Please do not report bugs in e-mail, neither to our mailing list nor directly to any team member.</p>

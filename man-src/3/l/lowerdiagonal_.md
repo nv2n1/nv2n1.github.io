@@ -12,7 +12,7 @@ description: "QuantLib::TridiagonalOperator – Base implementation for tridiago
 <p>#include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt; </p>
 <p> Inherited by <code>BSMOperator</code>, <code>DMinus</code>, <code>DPlus</code>, <code>DPlusDMinus</code>, <code>DZero</code>, and PdeOperator&lt; PdeClass &gt;. </p>
 <h3>Classes</h3>
-<p>class <code>TimeSetter</code><br />
+<p>class <code>TimeSetter</code><br/>
  <i>encapsulation of time-setting logic </i></p>
 <h3>Public Types</h3>
 <p>typedef <code>Array</code> <code>array_type</code> </p>
@@ -49,13 +49,13 @@ description: "QuantLib::TridiagonalOperator – Base implementation for tridiago
 <p> <code>Disposable</code>&lt; <code>TridiagonalOperator</code> &gt; <code>operator*</code> (const <code>TridiagonalOperator</code> &amp;, Real) </p>
 <p> <code>Disposable</code>&lt; <code>TridiagonalOperator</code> &gt; <code>operator/</code> (const <code>TridiagonalOperator</code> &amp;, Real) </p>
 <h3>Operator interface</h3>
-<p><code>Disposable</code>&lt; <code>Array</code> &gt; <code>applyTo</code> (const <code>Array</code> &amp;v) const<br />
- <i>apply operator to a given array </i><br />
- <code>Disposable</code>&lt; <code>Array</code> &gt; <code>solveFor</code> (const <code>Array</code> &amp;rhs) const<br />
- <i>solve linear system for a given right-hand side </i><br />
- <code>Disposable</code>&lt; <code>Array</code> &gt; <code>SOR</code> (const <code>Array</code> &amp;rhs, Real tol) const<br />
- <i>solve linear system with SOR approach </i><br />
- static <code>Disposable</code>&lt; <code>TridiagonalOperator</code> &gt; <code>identity</code> (Size size)<br />
+<p><code>Disposable</code>&lt; <code>Array</code> &gt; <code>applyTo</code> (const <code>Array</code> &amp;v) const<br/>
+ <i>apply operator to a given array </i><br/>
+ <code>Disposable</code>&lt; <code>Array</code> &gt; <code>solveFor</code> (const <code>Array</code> &amp;rhs) const<br/>
+ <i>solve linear system for a given right-hand side </i><br/>
+ <code>Disposable</code>&lt; <code>Array</code> &gt; <code>SOR</code> (const <code>Array</code> &amp;rhs, Real tol) const<br/>
+ <i>solve linear system with SOR approach </i><br/>
+ static <code>Disposable</code>&lt; <code>TridiagonalOperator</code> &gt; <code>identity</code> (Size size)<br/>
  <i>identity instance </i></p>
 <h2>Detailed Description</h2>
 <p>Base implementation for tridiagonal operator. </p>

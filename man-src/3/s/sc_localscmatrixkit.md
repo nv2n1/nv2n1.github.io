@@ -15,8 +15,8 @@ description: "sc::LocalSCMatrixKit –"
 <p> Inherits <code>sc::SCMatrixKit</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>LocalSCMatrixKit</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> <code>SCMatrix</code> * <code>matrix</code> (const <code>RefSCDimension</code> &amp;, const <code>RefSCDimension</code> &amp;)<br />
- <i>Given the dimensions, create matrices or vectors. </i><br />
+<p> <code>SCMatrix</code> * <code>matrix</code> (const <code>RefSCDimension</code> &amp;, const <code>RefSCDimension</code> &amp;)<br/>
+ <i>Given the dimensions, create matrices or vectors. </i><br/>
  <code>SymmSCMatrix</code> * <code>symmmatrix</code> (const <code>RefSCDimension</code> &amp;) </p>
 <p> <code>DiagSCMatrix</code> * <code>diagmatrix</code> (const <code>RefSCDimension</code> &amp;) </p>
 <p> <code>SCVector</code> * <code>vector</code> (const <code>RefSCDimension</code> &amp;)</p>

@@ -16,7 +16,7 @@ description: "linefind – Detect vertical features in images"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-o|&#8211;output</code> output.pto</dt>
-<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &#8216;&lt;filename&gt;_line.pto&#8217;.</dd>
+<dd> Output Hugin PTO file. Default: &#8216;&lt;filename&gt;_line.pto&#8217;.</dd>
 <dt><code>-l|&#8211;lines</code> num</dt>
 <dd> The maximum number of lines added per image (default: 5) Attention: Keep in mind that more vertical control points will dominate the optimisation in favour of &#8220;normal&#8221; control points.</dd>
 <dt><code>-i|&#8211;image</code> num</dt>

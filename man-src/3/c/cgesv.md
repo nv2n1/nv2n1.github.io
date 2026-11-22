@@ -11,7 +11,7 @@ description: "cgesv.f –"
 <p> cgesv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgesv</code> (N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
+<p> subroutine <code>cgesv</code> (N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br/>
  <i></i><code> CGESV computes the solution to system of linear equations A * X = B for GE matrices</code> (simple driver)</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgesv (integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

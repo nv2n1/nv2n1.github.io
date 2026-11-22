@@ -45,5 +45,5 @@ description: "XtSetValues, XtVaSetValues, XtSetSubvalues, XtVaSetSubvalues, XtGe
 <p> If the widget&#8217;s parent is a subclass of <code>constraintWidgetClass</code>, <code>XtGetValues</code> then fetches the values for any constraint resources requested. It starts with the constraint resources specified for <code>constraintWidgetClass</code> and proceeds down to the subclass chain to the parent&#8217;s constraint resources. If the argument list contains a resource name that is not found in any of the resource lists searched, the value at the corresponding address is not modified. Finally, if the get_values_hook procedures are non-NULL, they are called in superclass-to-subclass order after all the resource values have been fetched by <code>XtGetValues</code>. This permits a subclass to provide nonwidget resource data to <code>XtGetValues</code>. </p>
 <p> The <code>XtGetSubvalues</code> function obtains resource values from the structure identified by base.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

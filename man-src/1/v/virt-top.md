@@ -18,7 +18,7 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
 <dl>
 <dt><code>-1</code></dt>
 <dd> Display physical CPUs by default (instead of domains). </dd>
-<p> Under each domain column, two numbers are shown. The first is the percentage of the physical <font SIZE="-1">CPU</font> used by the domain and the hypervisor together. The second is the percentage used by just the domain. </p>
+<p> Under each domain column, two numbers are shown. The first is the percentage of the physical CPU used by the domain and the hypervisor together. The second is the percentage used by just the domain. </p>
 <p> When virt-top is running, use the <i>1</i> key to toggle between physical CPUs and domains display.</p>
 <dt><code>-2</code></dt>
 <dd> Display network interfaces by default (instead of domains). When virt-top is running, use the <i>2</i> key to toggle between network interfaces and domains display.</dd>
@@ -27,8 +27,8 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
 <dt><code>-b</code></dt>
 <dd> Batch mode. In this mode keypresses are ignored.</dd>
 <dt><code>-c uri</code> or <code>&#8211;connect uri</code></dt>
-<dd> Connect to the libvirt <font SIZE="-1">URI</font> given. </dd>
-<p> To connect to <font SIZE="-1">QEMU/KVM</font> you would normally do <i>-c <a href="qemu:///system">qemu:///system</a></i> </p>
+<dd> Connect to the libvirt URI given. </dd>
+<p> To connect to QEMU/KVM you would normally do <i>-c <a href="qemu:///system">qemu:///system</a></i> </p>
 <p> To connect to Xen on the same host, do <i>-c <a href="xen:///">xen:///</a></i> </p>
 <p> To connect to libvirtd on a remote machine you would normally do <i>-c <a href="qemu://host/system">qemu://host/system</a></i> </p>
 <p> If this option is not given then virt-top connects by default to whatever is the default hypervisor for libvirt, although this can be overridden by setting environment variables. </p>
@@ -38,25 +38,25 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
 <dt><code>-n iterations</code></dt>
 <dd> Set the number of iterations to run. The default is to run continuously.</dd>
 <dt><code>-o sort</code></dt>
-<dd> Set the sort order to one of: <code>cpu</code> (sort by <tt>%CPU</tt> used), <code>mem</code> (sort by total memory), <code>time</code> (sort by total time), <code>id</code> (sort by domain <font SIZE="-1">ID</font>), <code>name</code> (sort by domain name), <code>netrx</code> (sort by network received bytes), <code>nettx</code> (sort by network transmitted bytes), <code>blockrdrq</code> (sort by block device [disk] read requests), <code>blockwrrq</code> (sort by block device [disk] write requests). </dd>
-<p> While virt-top is running you can change the sort order using keys <i>P</i> (cpu), <i>M</i> (memory), <i>T</i> (total time), <i>N</i> (domain <font SIZE="-1">ID</font>), <i>F</i> (interactively select the sort field).</p>
+<dd> Set the sort order to one of: <code>cpu</code> (sort by <tt>%CPU</tt> used), <code>mem</code> (sort by total memory), <code>time</code> (sort by total time), <code>id</code> (sort by domain ID), <code>name</code> (sort by domain name), <code>netrx</code> (sort by network received bytes), <code>nettx</code> (sort by network transmitted bytes), <code>blockrdrq</code> (sort by block device [disk] read requests), <code>blockwrrq</code> (sort by block device [disk] write requests). </dd>
+<p> While virt-top is running you can change the sort order using keys <i>P</i> (cpu), <i>M</i> (memory), <i>T</i> (total time), <i>N</i> (domain ID), <i>F</i> (interactively select the sort field).</p>
 <dt><code>-s</code></dt>
 <dd> Secure mode. Currently this does nothing.</dd>
 <dt><code>&#8211;hist-cpu secs</code></dt>
 <dd> Set the time in seconds between updates of the historical <tt>%CPU</tt> at the top right of the display.</dd>
 <dt><code>&#8211;csv file.csv</code></dt>
-<dd> Write the statistics to file <i>file.csv</i>. First a header is written showing the statistics being recorded in each column, then one line is written for each screen update. The <font SIZE="-1">CSV</font> file can be loaded directly by most spreadsheet programs. </dd>
-<p> Currently the statistics which this records vary between releases of virt-top (but the column headers will stay the same, so you can use those to process the <font SIZE="-1">CSV</font> file). </p>
-<p> Not every version of virt-top supports <font SIZE="-1">CSV</font> output &#8211; it depends how the program was compiled (see <i></i><font SIZE="-1"><i>README</i></font><i></i> file in the source distribution for details). </p>
-<p> To save space you can compress your <font SIZE="-1">CSV</font> files (if your shell supports this feature, eg. <i>bash</i>): </p>
+<dd> Write the statistics to file <i>file.csv</i>. First a header is written showing the statistics being recorded in each column, then one line is written for each screen update. The CSV file can be loaded directly by most spreadsheet programs. </dd>
+<p> Currently the statistics which this records vary between releases of virt-top (but the column headers will stay the same, so you can use those to process the CSV file). </p>
+<p> Not every version of virt-top supports CSV output &#8211; it depends how the program was compiled (see <i></i><i>README</i><i></i> file in the source distribution for details). </p>
+<p> To save space you can compress your CSV files (if your shell supports this feature, eg. <i>bash</i>): </p>
 <pre>
  virt-top --csv &gt;(gzip -9 &gt; output.csv.gz)
 </pre>
-<p> You can use a similar trick to split the <font SIZE="-1">CSV</font> file up. In this example the <font SIZE="-1">CSV</font> file is split every 1000 lines into files called <i>output.csv.00</i>, <i>output.csv.01</i> etc. </p>
+<p> You can use a similar trick to split the CSV file up. In this example the CSV file is split every 1000 lines into files called <i>output.csv.00</i>, <i>output.csv.01</i> etc. </p>
 <pre>
  virt-top --csv &gt;(split -d -l 1000 - output.csv.)
 </pre>
-<p> <font SIZE="-1">RHEL</font> provides a short Python script called <tt>&quot;processcsv.py&quot;</tt> which can be used to post-process the <font SIZE="-1">CSV</font> output. Run it like this: </p>
+<p> RHEL provides a short Python script called <tt>&quot;processcsv.py&quot;</tt> which can be used to post-process the CSV output. Run it like this: </p>
 <pre>
  virt-top --csv data.csv
  processcsv.py &lt; data.csv
@@ -66,23 +66,23 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
  global.csv
  domain&lt;NNN&gt;.csv
 </pre>
-<p> <tt>&quot;global.csv&quot;</tt> will contain the global data. One <tt>&quot;domain&lt;NNN&gt;.csv&quot;</tt> file will also be created for each domain with <font SIZE="-1">ID </font><tt>&quot;NNN&quot;</tt>, containing the per-domain data.</p>
+<p> <tt>&quot;global.csv&quot;</tt> will contain the global data. One <tt>&quot;domain&lt;NNN&gt;.csv&quot;</tt> file will also be created for each domain with ID <tt>&quot;NNN&quot;</tt>, containing the per-domain data.</p>
 <dt><code>&#8211;no-csv-cpu</code></dt>
-<dd> Disable domain <font SIZE="-1">CPU</font> stats in <font SIZE="-1">CSV</font> output.</dd>
+<dd> Disable domain CPU stats in CSV output.</dd>
 <dt><code>&#8211;no-csv-mem</code></dt>
-<dd> Disable domain memory stats in <font SIZE="-1">CSV</font> output.</dd>
+<dd> Disable domain memory stats in CSV output.</dd>
 <dt><code>&#8211;no-csv-block</code></dt>
-<dd> Disable domain block device stats in <font SIZE="-1">CSV</font> output.</dd>
+<dd> Disable domain block device stats in CSV output.</dd>
 <dt><code>&#8211;no-csv-net</code></dt>
-<dd> Disable domain network interface stats in <font SIZE="-1">CSV</font> output.</dd>
+<dd> Disable domain network interface stats in CSV output.</dd>
 <dt><code>&#8211;debug filename</code></dt>
 <dd> Send debug and error messages to <i>filename</i>. To send error messages to syslog you can do: </dd>
 <pre>
  virt-top --debug &gt;(logger -t virt-top)
 </pre>
-<p> See also <font SIZE="-1">REPORTING BUGS</font> below.</p>
+<p> See also REPORTING BUGS below.</p>
 <dt><code>&#8211;init-file filename</code></dt>
-<dd> Read <i>filename</i> as the init file instead of the default which is <i></i>$HOME<i>/.virt-toprc</i>. See also <font SIZE="-1">INIT FILE</font> below.</dd>
+<dd> Read <i>filename</i> as the init file instead of the default which is <i></i>$HOME<i>/.virt-toprc</i>. See also INIT FILE below.</dd>
 <dt><code>&#8211;no-init-file</code></dt>
 <dd> Do not read any init file.</dd>
 <dt><code>&#8211;script</code></dt>
@@ -96,12 +96,12 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
 <p> The time may be given in one of the following formats:</p>
 <dl>
 <dl>
-<dt><i>YYYY-MM-DD </i><font SIZE="-1"><i>HH:MM:SS</i></font><i></i></dt>
+<dt><i>YYYY-MM-DD </i><i>HH:MM:SS</i><i></i></dt>
 <dd> End time is the date and time given.</dd>
-<dt><i></i><font SIZE="-1"><i>HH:MM:SS</i></font><i></i></dt>
+<dt><i></i><i>HH:MM:SS</i><i></i></dt>
 <dd> End time is the time given, today.</dd>
 <dt><i>+HH:MM:SS</i></dt>
-<dd> End time is <font SIZE="-1">HH</font> hours, <font SIZE="-1">MM</font> minutes, <font SIZE="-1">SS</font> seconds in the future (counted from the moment that program starts).</dd>
+<dd> End time is HH hours, MM minutes, SS seconds in the future (counted from the moment that program starts).</dd>
 <dt><i>+secs</i></dt>
 <dd> End time is <i>secs</i> seconds in the future.</dd></dl>
 </dl>
@@ -116,7 +116,7 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
 <pre>
  virt-top --end-time +180
 </pre>
-<p> Not every version of virt-top supports this option &#8211; it depends how the program was compiled (see <i></i><font SIZE="-1"><i>README</i></font><i></i> file in the source distribution for details).</dd></dl>
+<p> Not every version of virt-top supports this option &#8211; it depends how the program was compiled (see <i></i><i>README</i><i></i> file in the source distribution for details).</dd></dl>
 <dt><code>&#8211;help</code></dt>
 <dd> Display usage summary.</dd>
 <dt><code>&#8211;version</code></dt>
@@ -149,7 +149,7 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
 <dt><i>T</i></dt>
 <dd> Sort by total time.</dd>
 <dt><i>N</i></dt>
-<dd> Sort by domain <font SIZE="-1">ID.</font></dd>
+<dd> Sort by domain ID.</dd>
 <dt><i>F</i></dt>
 <dd> Select the sort field interactively (there are other sort fields you can choose using this key).</dd>
 <dt><i>W</i></dt>
@@ -165,25 +165,25 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
 <dt><code>delay</code> <i>secs</i></dt>
 <dd> Sets the delay between display updates in seconds.</dd>
 <dt><code>hist-cpu</code> <i>secs</i></dt>
-<dd> Sets the historical <font SIZE="-1">CPU</font> delay in seconds.</dd>
+<dd> Sets the historical CPU delay in seconds.</dd>
 <dt><code>iterations</code> <i>n</i></dt>
 <dd> Sets the number of iterations to run before we exit. Setting this to <i>-1</i> means to run continuously.</dd>
 <dt><code>sort</code> <i>cpu|mem|time|id|name|&#8230;</i></dt>
 <dd> Sets the sort order. The option names are the same as for the command line <i>-o</i> option.</dd>
 <dt><code>connect</code> <i>uri</i></dt>
-<dd> Sets the default connection <font SIZE="-1">URI.</font></dd>
+<dd> Sets the default connection URI.</dd>
 <dt><code>debug</code> <i>filename</i></dt>
 <dd> Sets the default filename to use for debug and error messages.</dd>
 <dt><code>csv</code> <i>filename</i></dt>
-<dd> Enables <font SIZE="-1">CSV</font> output to the named file.</dd>
+<dd> Enables CSV output to the named file.</dd>
 <dt><code>csv-cpu</code> <i>true|false</i></dt>
-<dd> Enable or disable domain <font SIZE="-1">CPU</font> stats in <font SIZE="-1">CSV</font> output.</dd>
+<dd> Enable or disable domain CPU stats in CSV output.</dd>
 <dt><code>csv-mem</code> <i>true|false</i></dt>
-<dd> Enable or disable domain memory stats in <font SIZE="-1">CSV</font> output.</dd>
+<dd> Enable or disable domain memory stats in CSV output.</dd>
 <dt><code>csv-block</code> <i>true|false</i></dt>
-<dd> Enable or disable domain block device stats in <font SIZE="-1">CSV</font> output.</dd>
+<dd> Enable or disable domain block device stats in CSV output.</dd>
 <dt><code>csv-net</code> <i>true|false</i></dt>
-<dd> Enable or disable domain network interface stats in <font SIZE="-1">CSV</font> output.</dd>
+<dd> Enable or disable domain network interface stats in CSV output.</dd>
 <dt><code>batch</code> <i>true|false</i></dt>
 <dd> Sets batch mode.</dd>
 <dt><code>secure</code> <i>true|false</i></dt>
@@ -202,28 +202,28 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
 <h2>COLUMN HEADINGS</h2>
 <dl>
 <dt><code>%CPU</code></dt>
-<dd> Percentage of <font SIZE="-1">CPU</font> used. As with <i><a href="/docs/linux/man/1-top/">top</a></i>(1), 100% means that all physical CPUs are being fully used.</dd>
-<dt><font SIZE="-1"><code>DEVICE</code></font></dt>
+<dd> Percentage of CPU used. As with <i><a href="/docs/linux/man/1-top/">top</a></i>(1), 100% means that all physical CPUs are being fully used.</dd>
+<dt><code>DEVICE</code></dt>
 <dd> The block device name.</dd>
-<dt><font SIZE="-1"><code>DOMAIN</code></font></dt>
+<dt><code>DOMAIN</code></dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>NAME</code></font></dt>
+</dd><dt><code>NAME</code></dt>
 <dd> The name of the libvirt domain.</dd>
-<dt><font SIZE="-1"><code>ID</code></font></dt>
-<dd> The libvirt domain <font SIZE="-1">ID.</font></dd>
-<dt><font SIZE="-1"><code>INTERFACE</code></font></dt>
+<dt><code>ID</code></dt>
+<dd> The libvirt domain ID.</dd>
+<dt><code>INTERFACE</code></dt>
 <dd> The network interface name.</dd>
 <dt><code>%MEM</code></dt>
 <dd> The percentage of host memory assigned to the guest.</dd>
-<dt><font SIZE="-1"><code>PHYCPU</code></font></dt>
-<dd> The physical <font SIZE="-1">CPU.</font></dd>
-<dt><font SIZE="-1"><code>RDBY</code></font></dt>
+<dt><code>PHYCPU</code></dt>
+<dd> The physical CPU.</dd>
+<dt><code>RDBY</code></dt>
 <dd> Disk bytes read since last displayed.</dd>
-<dt><font SIZE="-1"><code>RDRQ</code></font></dt>
+<dt><code>RDRQ</code></dt>
 <dd> Disk read requests since last displayed.</dd>
-<dt><font SIZE="-1"><code>RXBY</code></font></dt>
+<dt><code>RXBY</code></dt>
 <dd> Network bytes received since last displayed.</dd>
-<dt><font SIZE="-1"><code>RXPK</code></font></dt>
+<dt><code>RXPK</code></dt>
 <dd> Network packets received since last displayed.</dd>
 <dt><code>S</code></dt>
 <dd> The state of the domain, one of:</dd>
@@ -246,23 +246,23 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
 </dl>
 <dl>
 </dl>
-<dt><font SIZE="-1"><code>TIME</code></font></dt>
-<dd> Total <font SIZE="-1">CPU</font> time used.</dd>
-<dt><font SIZE="-1"><code>TXBY</code></font></dt>
+<dt><code>TIME</code></dt>
+<dd> Total CPU time used.</dd>
+<dt><code>TXBY</code></dt>
 <dd> Network bytes transmitted since last displayed.</dd>
-<dt><font SIZE="-1"><code>TXPK</code></font></dt>
+<dt><code>TXPK</code></dt>
 <dd> Network packets transmitted since last displayed.</dd>
-<dt><font SIZE="-1"><code>WRBY</code></font></dt>
+<dt><code>WRBY</code></dt>
 <dd> Disk bytes written since last displayed.</dd>
-<dt><font SIZE="-1"><code>WRRQ</code></font></dt>
+<dt><code>WRRQ</code></dt>
 <dd> Disk write requests since last displayed.</dd></dl>
 <h2>NOTES</h2>
 <h3>Block I/O statistics</h3>
 <p> This I/O value is the amount of I/O since the previous iteration of virt-top. To calculate speed of I/O, you should divide the number by delay secs.</p>
-<h3><font SIZE="-1">NETWORK RX BYTES AND PACKETS</font></h3>
-<p> Libvirt/virt-top has no way to know that a packet transmitted to a guest was received (eg. if the guest is not listening). In the network <font SIZE="-1">RX</font> stats, virt-top reports the packets transmitted to the guest, on the basis that the guest might receive them. </p>
-<p> In particular this includes broadcast packets. Because of the way that Linux bridges work, if the guest is connected to a bridge, it will probably see a steady &#8220;background noise&#8221; of <font SIZE="-1">RX</font> packets even when the network interface is idle or down. These are caused by <font SIZE="-1">STP</font> packets generated by the bridge.</p>
-<h3><font SIZE="-1">DEBUGGING LIBVIRT ISSUES</font></h3>
+<h3>NETWORK RX BYTES AND PACKETS</h3>
+<p> Libvirt/virt-top has no way to know that a packet transmitted to a guest was received (eg. if the guest is not listening). In the network RX stats, virt-top reports the packets transmitted to the guest, on the basis that the guest might receive them. </p>
+<p> In particular this includes broadcast packets. Because of the way that Linux bridges work, if the guest is connected to a bridge, it will probably see a steady &#8220;background noise&#8221; of RX packets even when the network interface is idle or down. These are caused by STP packets generated by the bridge.</p>
+<h3>DEBUGGING LIBVIRT ISSUES</h3>
 <p> virt-top tries to turn libvirt errors into informative messages. However if libvirt initialization fails then this is not possible. Instead you will get an obscure error like: </p>
 <pre>
  libvir: error : Unknown failure
@@ -278,9 +278,9 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
 <p> Richard W.M. Jones &lt;rjones @ redhat . com&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> (C) Copyright 2007-2012 Red Hat Inc., Richard W.M. Jones <a rel="nofollow" href="http://libvirt.org/">http://libvirt.org/</a> </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>
 <h2>REPORTING BUGS</h2>
 <p> Bugs can be viewed on the Red Hat Bugzilla page: &lt;<a rel="nofollow" href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a>&gt;. </p>
 <p> If you find a bug in virt-top, please follow these steps to report it:</p>

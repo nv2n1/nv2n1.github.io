@@ -14,7 +14,7 @@ description: "virt-diff – Differences between files in two virtual machines"
 virt - diff[--options] - d domain1 - D domain2 virt - diff[--options] - a disk1.img[-a...] - A disk2.img[-A...]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <tt>&quot;virt-diff&quot;</tt> lists the differences between files in two virtual machines or disk images. The usual use case is to show the changes in a <font SIZE="-1">VM</font> after it has been running for a while, by taking a snapshot, running the <font SIZE="-1">VM,</font> and then using this tool to show what changed between the new <font SIZE="-1">VM</font> state and the old snapshot. </p>
+<p> <tt>&quot;virt-diff&quot;</tt> lists the differences between files in two virtual machines or disk images. The usual use case is to show the changes in a VM after it has been running for a while, by taking a snapshot, running the VM, and then using this tool to show what changed between the new VM state and the old snapshot. </p>
 <p> This tool will find differences in filenames, file sizes, checksums, extended attributes, file content and more from a virtual machine or disk image. However it <code>does not</code> look at the boot loader, unused space between partitions or within filesystems, &#8220;hidden&#8221; sectors and so on. In other words, it is not a security or forensics tool. </p>
 <p> To specify two guests, you have to use the <i>-a</i> or <i>-d</i> option(s) for the first guest, and the <i>-A</i> or <i>-D</i> option(s) for the second guest. The common case is: </p>
 <pre>
@@ -33,30 +33,30 @@ virt - diff[--options] - d domain1 - D domain2 virt - diff[--options] - a disk1.
 </dd><dt><code>&#8211;add</code> file</dt>
 <dd> Add <i>file</i> which should be a disk image from the first virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a</code> <font SIZE="-1">URI</font></dt>
+<dt><code>-a</code> URI</dt>
 <dd>
-</dd><dt><code>&#8211;add</code> <font SIZE="-1">URI</font></dt>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+</dd><dt><code>&#8211;add</code> URI</dt>
+<dd> Add a remote disk. See &#8220;ADDING REMOTE STORAGE&#8221; in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
 <dt><code>&#8211;all</code></dt>
 <dd> Same as <i>&#8211;extra-stats</i> <i>&#8211;times</i> <i>&#8211;uids</i> <i>&#8211;xattrs</i>.</dd>
 <dt><code>&#8211;atime</code></dt>
 <dd> The default is to ignore changes in file access times, since those are unlikely to be interesting. Using this flag shows atime differences as well.</dd>
 <dt><code>-A</code> file</dt>
 <dd>
-</dd><dt><code>-A</code> <font SIZE="-1">URI</font></dt>
+</dd><dt><code>-A</code> URI</dt>
 <dd> Add a disk image from the second virtual machine.</dd>
 <dt><code>&#8211;checksum</code></dt>
 <dd>
 </dd><dt><code>&#8211;checksum=crc|md5|sha1|sha224|sha256|sha384|sha512</code></dt>
 <dd> Use a checksum over file contents to detect when regular files have changed content. </dd>
 <p> With no argument, this defaults to using <i>md5</i>. Using an argument, you can select the checksum type to use. If the flag is omitted then file times and size are used to determine if a file has changed.</p>
-<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
+<dt><code>-c</code> URI</dt>
 <dd>
-</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
+</dd><dt><code>&#8211;connect</code> URI</dt>
+<dd> If using libvirt, connect to the given <i></i><i>URI</i><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
 <dt><code>&#8211;csv</code></dt>
-<dd> Write out the results in <font SIZE="-1">CSV</font> format (comma-separated values). This format can be imported easily into databases and spreadsheets, but read &#8220;<font SIZE="-1">NOTE ABOUT CSV FORMAT&#8221;</font> below.</dd>
+<dd> Write out the results in CSV format (comma-separated values). This format can be imported easily into databases and spreadsheets, but read &#8220;NOTE ABOUT CSV FORMAT&#8221; below.</dd>
 <dt><code>&#8211;dir-links</code></dt>
 <dd> The default is to ignore changed in the number of links in directory entries, since those are unlikely to be interesting. Using this flag shows changes to the nlink field of directories.</dd>
 <dt><code>&#8211;dir-times</code></dt>
@@ -84,7 +84,7 @@ virt - diff[--options] - d domain1 - D domain2 virt - diff[--options] - a disk1.
 virt - diff-- format = raw - a disk.img-- format - a another.img[...]
 </code></pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
-<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
+<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (CVE-2010-3851).</p>
 <dt><code>-h</code></dt>
 <dd>
 </dd><dt><code>&#8211;human-readable</code></dt>
@@ -101,7 +101,7 @@ virt - diff-- format = raw - a disk.img-- format - a another.img[...]
 <dt><code>&#8211;time-t</code></dt>
 <dd> Display time fields as seconds since the Unix epoch.</dd>
 <dt><code>&#8211;uids</code></dt>
-<dd> Display <font SIZE="-1">UID</font> and <font SIZE="-1">GID</font> fields.</dd>
+<dd> Display UID and GID fields.</dd>
 <dt><code>-v</code></dt>
 <dd>
 </dd><dt><code>&#8211;verbose</code></dt>
@@ -111,11 +111,11 @@ virt - diff-- format = raw - a disk.img-- format - a another.img[...]
 </dd><dt><code>&#8211;version</code></dt>
 <dd> Display version number and exit.</dd>
 <dt><code>-x</code></dt>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd>
+<dd> Enable tracing of libguestfs API calls.</dd>
 <dt><code>&#8211;xattrs</code></dt>
 <dd> Display extended attributes.</dd></dl>
 <h2>NOTE ABOUT CSV FORMAT</h2>
-<p> Comma-separated values (<font SIZE="-1">CSV</font>) is a deceptive format. It <i>seems</i> like it should be easy to parse, but it is definitely not easy to parse. </p>
+<p> Comma-separated values (CSV) is a deceptive format. It <i>seems</i> like it should be easy to parse, but it is definitely not easy to parse. </p>
 <p> Myth: Just split fields at commas. Reality: This does <i>not</i> work reliably. This example has two columns: </p>
 <pre>
  &quot;foo,bar&quot;,baz
@@ -126,8 +126,8 @@ virt - diff-- format = raw - a disk.img-- format - a another.img[...]
  bar&quot;,baz
 </pre>
 <p> For shell scripts, use <tt>&quot;csvtool&quot;</tt> (<a rel="nofollow" href="https://github.com/Chris00/ocaml-csv">https://github.com/Chris00/ocaml-csv</a> also packaged in major Linux distributions). </p>
-<p> For other languages, use a <font SIZE="-1">CSV</font> processing library (eg. <tt>&quot;Text::CSV&quot;</tt> for Perl or Python&#8217;s built-in csv library). </p>
-<p> Most spreadsheets and databases can import <font SIZE="-1">CSV</font> directly.</p>
+<p> For other languages, use a CSV processing library (eg. <tt>&quot;Text::CSV&quot;</tt> for Perl or Python&#8217;s built-in csv library). </p>
+<p> Most spreadsheets and databases can import CSV directly.</p>
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or non-zero if there was an error.</p>
 <h2>SEE ALSO</h2>
@@ -137,9 +137,9 @@ virt - diff-- format = raw - a disk.img-- format - a another.img[...]
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009-2016 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

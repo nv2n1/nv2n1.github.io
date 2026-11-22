@@ -13,7 +13,7 @@ description: "ANTLR3_HASH_BUCKET_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> <code>pANTLR3_HASH_ENTRY</code> <code>entries</code><br />
+<p> <code>pANTLR3_HASH_ENTRY</code> <code>entries</code><br/>
  <i>Pointer to the first entry in the bucket (if any, it may be NULL). </i></p>
 <h2>Detailed Description</h2>
 <p> Internal structure of a hash table bucket, which tracks all keys that hash to the same bucket.</p>

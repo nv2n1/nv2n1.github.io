@@ -17,7 +17,7 @@ description: "innxbatch – send xbatched Usenet articles to a remote NNTP serve
 <dt><code>-t seconds</code></dt>
 <dd><i>Innxbatch</i> normally blocks until the connection is made. To specify a timeout on how long to try to make the connection, use the &#8220;-t&#8221; flag.</dd>
 <dt><code>-T seconds</code></dt>
-<dd>To specify the total amount of time that should be allowed for article transfers, use the &#8220;-T&#8221; flag.<br />
+<dd>To specify the total amount of time that should be allowed for article transfers, use the &#8220;-T&#8221; flag.<br/>
  The default is to wait until an I/O error occurs, or all the articles have been transferred. If the &#8220;-T&#8221; flag is used, the time is checked just before each article is started; it will not abort a transfer that is in progress.</dd>
 <dt><code>-v</code></dt>
 <dd>Upon exit, <i>innxbatch</i> reports transfer and CPU usage statistics via <i><a href="/docs/linux/man/3-syslog/">syslog</a></i>(3). If the &#8220;-v&#8221; flag is used, they will also be printed on the standard output.</dd>

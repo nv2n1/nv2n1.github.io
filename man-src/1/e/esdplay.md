@@ -11,11 +11,11 @@ esddsp - attempt to reroute audio device to esd
 
 <h2>DESCRIPTION</h2>
 
- Plays the <font SIZE="-1">FILE</font> on EsounD.
+ Plays the FILE on EsounD.
 
 <h2>USAGE</h2>
 
- esdplay [<font SIZE="-1">OPTIONS</font>] <font SIZE="-1">FILE</font> 
+ esdplay [OPTIONS] FILE 
 
  Options: 
 

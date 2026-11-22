@@ -20,7 +20,7 @@ description: "confdb2ldif – Create an LDIF file from a cluster configuration"
 <dd>Configuration object in the objdb to start from. This defaults to &quot;cluster&quot; and there should rarely be any need to change it. </dd>
 </dl>
 <h2>Comments</h2>
-<p><code>confdb2ldif</code> uses the openais libconfdb to read the configuration. The default way to do this is run against a running aisexec to read the live configuration. It is possible to generate an LDIF file from a non-running system by using the standalone feature of openais&#8217;s libconfdb.<br />
+<p><code>confdb2ldif</code> uses the openais libconfdb to read the configuration. The default way to do this is run against a running aisexec to read the live configuration. It is possible to generate an LDIF file from a non-running system by using the standalone feature of openais&#8217;s libconfdb.<br/>
  eg to read the configuration from /etc/cluster/cluster.conf, use the following command: </p>
 <pre>OPENAIS_DEFAULT_CONFIG_IFACE=xmlconfig:cmanpreconfig confdb2ldif dc=mycompany,dc=com</pre>
 <p>or to do it from CCS </p>

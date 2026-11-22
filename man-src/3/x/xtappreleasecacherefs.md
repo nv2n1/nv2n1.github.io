@@ -21,5 +21,5 @@ description: "XtAppReleaseCacheRefs – decrement reference counts for resources
 <h2>Description</h2>
 <p><code>XtAppReleaseCacheRefs</code> decrements the reference count for the conversion entries identified by the <i>refs</i> argument. This argument is a pointer to a NULL-terminated list of <code>XtCacheRef</code> values. If any reference count reaches zero, the destructor, if any, will be called and the resource removed from the conversion cache.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -12,7 +12,7 @@ description: "QuantLib::Brazil – Brazilian calendar."
 <p>#include &lt;ql/time/calendars/brazil.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Calendar</code>. </p>
 <h3>Public Types</h3>
-<p>enum <code>Market</code> { <code>Settlement</code>, <code>Exchange</code> }<br />
+<p>enum <code>Market</code> { <code>Settlement</code>, <code>Exchange</code> }<br/>
  <i>Brazilian calendars. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>Brazil</code> (<code>Market</code> market=<code>Settlement</code>) </p>

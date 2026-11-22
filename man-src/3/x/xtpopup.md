@@ -83,6 +83,6 @@ description: "XtPopup, XtPopupSpringLoaded, XtCallbackNone, XtCallbackNonexclusi
 <dd>Calls <code>XMapWindow</code> with popup_shell specified.</dd></dl>
 <p> (Note that these actions are the same as those for <code>XtPopup</code>.) <code>XtMenuPopup</code> tries to find the shell by searching the widget tree starting at the parent of the widget in which it is invoked. If it finds a shell with the specified name in the pop-up children of that parent, it pops up the shell with the appropriate parameters. Otherwise, it moves up the parent chain as needed. If <code>XtMenuPopup</code> gets to the application widget and cannot find a matching shell, it generates an error.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtcreatepopupshell/">XtCreatePopupShell</a>(3), <a href="/docs/linux/man/3-xtpopdown/">XtPopdown</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtcreatepopupshell/">XtCreatePopupShell</a>(3), <a href="/docs/linux/man/3-xtpopdown/">XtPopdown</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

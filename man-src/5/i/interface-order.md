@@ -28,7 +28,7 @@ ppp*
 <h2>Author</h2>
 <p>Resolvconf was written by Thomas Hood &lt;jdthood [at] gmail.com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2004, 2011 Thomas Hood<br />
+<p>Copyright &#169; 2004, 2011 Thomas Hood<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-resolvconf/">resolvconf</a></code>(8) </p>

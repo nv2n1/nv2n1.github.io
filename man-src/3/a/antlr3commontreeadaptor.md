@@ -11,11 +11,11 @@ description: "include/antlr3commontreeadaptor.h –"
 <p> include/antlr3commontreeadaptor.h &#8211; </p>
 <p> Definition of the ANTLR3 common tree adaptor.</p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/antlr3string.h">antlr3string.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/antlr3basetreeadaptor.h">antlr3basetreeadaptor.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/antlr3commontree.h">antlr3commontree.h</a>&gt;<br />
+<p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/antlr3string.h">antlr3string.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/antlr3basetreeadaptor.h">antlr3basetreeadaptor.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/antlr3commontree.h">antlr3commontree.h</a>&gt;<br/>
  #include &lt;<a href="file:/usr/include/antlr3debugeventlistener.h">antlr3debugeventlistener.h</a>&gt; </p>
 <h3>Data Structures</h3>
 <p> struct <code>ANTLR3_COMMON_TREE_ADAPTOR_struct</code> </p>

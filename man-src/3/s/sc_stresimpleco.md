@@ -15,17 +15,17 @@ description: "sc::StreSimpleCo –"
 <p> Inherits <code>sc::SimpleCo</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>StreSimpleCo</code> (const <code>StreSimpleCo</code> &amp;) </p>
-<p> <code>StreSimpleCo</code> (const char *, int, int)<br />
- <i>This constructor takes a string containing a label, and two integers which are the indices of the atoms we&#8217;re measuring the distance between. </i><br />
- <code>StreSimpleCo</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor.<br />
- const char * <code>ctype</code> () const<br />
- <i>Always returns the string &#8216;STRE&#8217;. </i><br />
- double <code>bohr</code> () const<br />
- <i>Returns the distance between the two atoms in atomic units. </i><br />
- double <code>angstrom</code> () const<br />
- <i>Returns the distance between the two atoms in angstrom units. </i><br />
- double <code>preferred_value</code> () const<br />
+<p> <code>StreSimpleCo</code> (const char *, int, int)<br/>
+ <i>This constructor takes a string containing a label, and two integers which are the indices of the atoms we&#8217;re measuring the distance between. </i><br/>
+ <code>StreSimpleCo</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor.<br/>
+ const char * <code>ctype</code> () const<br/>
+ <i>Always returns the string &#8216;STRE&#8217;. </i><br/>
+ double <code>bohr</code> () const<br/>
+ <i>Returns the distance between the two atoms in atomic units. </i><br/>
+ double <code>angstrom</code> () const<br/>
+ <i>Returns the distance between the two atoms in angstrom units. </i><br/>
+ double <code>preferred_value</code> () const<br/>
  <i>Returns the distance between the two atoms in angstrom units. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>StreSimpleCo</code> class describes an stretch internal coordinate of a molecule. </p>

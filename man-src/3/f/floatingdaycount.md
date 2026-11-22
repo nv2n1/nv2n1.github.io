@@ -12,9 +12,9 @@ description: "QuantLib::VanillaSwap – Plain-vanilla swap."
 <p>#include &lt;ql/instruments/vanillaswap.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Swap</code>. </p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for simple swap calculation </i><br />
- class <code>results</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for simple swap calculation </i><br/>
+ class <code>results</code><br/>
  <i>Results from simple swap calculation </i></p>
 <h3>Public Types</h3>
 <p>enum <code>Type</code> { <code>Receiver</code> = -1, <code>Payer</code> = 1 } </p>

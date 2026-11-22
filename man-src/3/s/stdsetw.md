@@ -18,16 +18,16 @@ description: "std::setw – std::setw"
 <p>Returns an object of unspecified type such that if str is the name of an output stream of type std::basic_ostream&lt;CharT, Traits&gt; or std::basic_istream&lt;CharT, Traits&gt;, then the expression str &lt;&lt; setw(n) or str &gt;&gt; setw(n) behaves as if the following code was executed :</p>
 <p>    str.width(n);</p>
 <h2>Notes</h2>
-<p>The width property of the stream will be reset to zero (meaning &quot;unspecified&quot;) if any of the following functions are called:<br />
-* Input<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* operator&gt;&gt;(basic_istream&amp;,_basic_string&amp;)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* operator&gt;&gt;(basic_istream&amp;,_char*)<br />
-* Output<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* Overloads 1-7 of basic_ostream::operator&lt;&lt;() (at Stage 3 of num_put::put())<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* operator&lt;&lt;(basic_ostream&amp;,_char) and operator&lt;&lt;(basic_ostream&amp;,_char*)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* operator&lt;&lt;(basic_ostream&amp;,_basic_string&amp;)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* std::put_money (inside money_put::put())<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* std::quoted (when used with an output stream)<br />
+<p>The width property of the stream will be reset to zero (meaning &quot;unspecified&quot;) if any of the following functions are called:<br/>
+* Input<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* operator&gt;&gt;(basic_istream&amp;,_basic_string&amp;)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* operator&gt;&gt;(basic_istream&amp;,_char*)<br/>
+* Output<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* Overloads 1-7 of basic_ostream::operator&lt;&lt;() (at Stage 3 of num_put::put())<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* operator&lt;&lt;(basic_ostream&amp;,_char) and operator&lt;&lt;(basic_ostream&amp;,_char*)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* operator&lt;&lt;(basic_ostream&amp;,_basic_string&amp;)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* std::put_money (inside money_put::put())<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* std::quoted (when used with an output stream)<br/>
 The exact effects this modifier has on the input and output vary between the individual I/O functions and are described at each operator&lt;&lt; and operator&gt;&gt; overload page individually. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -51,15 +51,15 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;no setw:42<br />
-&nbsp;<wbr>&nbsp;setw<code>(6)</code>: 42<br />
-&nbsp;<wbr>&nbsp;setw<code>(6)</code>, several elements: 89 1234<br />
+<p>&nbsp;<wbr>&nbsp;no setw:42<br/>
+&nbsp;<wbr>&nbsp;setw<code>(6)</code>: 42<br/>
+&nbsp;<wbr>&nbsp;setw<code>(6)</code>, several elements: 89 1234<br/>
 &nbsp;<wbr>&nbsp;Input from &quot;hello, world&quot; with setw<code>(6)</code> gave &quot;hello&quot;</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;manages field width<br />
-width <i>(public member function of std::ios_base)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;changes the fill character<br />
-setfill <i>(function template)</i><br />
-internal sets the placement of fill characters<br />
-left <i>(function)</i><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;manages field width<br/>
+width <i>(public member function of std::ios_base)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;changes the fill character<br/>
+setfill <i>(function template)</i><br/>
+internal sets the placement of fill characters<br/>
+left <i>(function)</i><br/>
 right </p>

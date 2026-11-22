@@ -9,11 +9,11 @@ description: "ql/math/sampledcurve.hpp – a class that contains a sampled curve
 
 <p>ql/math/sampledcurve.hpp &#8211; a class that contains a sampled curve </p>
 <h2>Synopsis</h2>
-<p>#include &lt;ql/math/array.hpp&gt;<br />
- #include &lt;ql/grid.hpp&gt;<br />
+<p>#include &lt;ql/math/array.hpp&gt;<br/>
+ #include &lt;ql/grid.hpp&gt;<br/>
  #include &lt;ql/math/interpolations/cubicinterpolation.hpp&gt; </p>
 <h3>Classes</h3>
-<p>class <code>SampledCurve</code><br />
+<p>class <code>SampledCurve</code><br/>
  <i>This class contains a sampled curve. </i></p>
 <h3>Typedefs</h3>
 <p>typedef SampledCurve <code>SampledCurveSet</code> </p>

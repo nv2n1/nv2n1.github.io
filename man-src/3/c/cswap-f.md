@@ -10,7 +10,7 @@ description: "cswap.f –"
 <p>cswap.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cswap</code> (N, CX, INCX, CY, INCY)<br />
+<p>subroutine <code>cswap</code> (N, CX, INCX, CY, INCY)<br/>
  <i></i><code>CSWAP</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cswap (integerN, complex, dimension(*)CX, integerINCX, complex, dimension(*)CY, integerINCY)</h3>

@@ -11,7 +11,7 @@ description: "csycon_rook.f –"
 <p> csycon_rook.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>csycon_rook</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, INFO)<br />
+<p> subroutine <code>csycon_rook</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, INFO)<br/>
  <i></i><code>CSYCON_ROOK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine csycon_rook (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, realANORM, realRCOND, complex, dimension( * )WORK, integerINFO)</h3>

@@ -11,7 +11,7 @@ description: "dbdsqr.f –"
 <p> dbdsqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dbdsqr</code> (UPLO, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br />
+<p> subroutine <code>dbdsqr</code> (UPLO, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br/>
  <i></i><code>DBDSQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dbdsqr (characterUPLO, integerN, integerNCVT, integerNRU, integerNCC, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( ldvt, * )VT, integerLDVT, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( * )WORK, integerINFO)</h3>
@@ -100,9 +100,9 @@ DBDSQR computes the singular values and, optionally, the right and / or left sin
           Not referenced if NCVT = 0.
 </pre>
 <p> <i>LDVT</i> </p>
-<p>LDVT is INTEGER<br />
-        The leading dimension of the array VT.LDVT &gt;= max(1, N) if NCVT<br />
-    &gt; 0;<br />
+<p>LDVT is INTEGER<br/>
+        The leading dimension of the array VT.LDVT &gt;= max(1, N) if NCVT<br/>
+    &gt; 0;<br/>
 LDVT &gt;= 1 if NCVT = 0.</p>
 <p> <i>U</i> </p>
 <pre>
@@ -124,9 +124,9 @@ LDVT &gt;= 1 if NCVT = 0.</p>
           Not referenced if NCC = 0.
 </pre>
 <p> <i>LDC</i> </p>
-<p>LDC is INTEGER<br />
-        The leading dimension of the array C.LDC &gt;= max(1, N) if NCC<br />
-    &gt; 0;<br />
+<p>LDC is INTEGER<br/>
+        The leading dimension of the array C.LDC &gt;= max(1, N) if NCC<br/>
+    &gt; 0;<br/>
 LDC &gt;= 1 if NCC = 0.</p>
 <p> <i>WORK</i> </p>
 <pre>

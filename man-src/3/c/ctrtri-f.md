@@ -10,7 +10,7 @@ description: "ctrtri.f –"
 <p>ctrtri.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ctrtri</code> (UPLO, DIAG, N, A, LDA, INFO)<br />
+<p>subroutine <code>ctrtri</code> (UPLO, DIAG, N, A, LDA, INFO)<br/>
  <i></i><code>CTRTRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctrtri (characterUPLO, characterDIAG, integerN, complex, dimension( lda, * )A, integerLDA, integerINFO)</h3>

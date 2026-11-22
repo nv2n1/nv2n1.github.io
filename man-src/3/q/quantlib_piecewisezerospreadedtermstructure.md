@@ -14,19 +14,19 @@ description: "QuantLib::PiecewiseZeroSpreadedTermStructure – Term structure wi
 <h3>Public Member Functions</h3>
 <p><code>PiecewiseZeroSpreadedTermStructure</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;, const std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &amp;spreads, const std::vector&lt; <code>Date</code> &gt; &amp;dates) </p>
 <p> <code>YieldTermStructure interface</code> </p>
-<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>the day counter used for date/time conversion </i><br />
- <code>Natural</code> <code>settlementDays</code> () const<br />
- <i>the settlementDays used for reference date calculation </i><br />
- <code>Calendar</code> <code>calendar</code> () const<br />
- <i>the calendar used for reference and/or option date calculation </i><br />
- const <code>Date</code> &amp; <code>referenceDate</code> () const<br />
- <i>the date at which discount = 1.0 and/or variance = 0.0 </i><br />
- <code>Date</code> <code>maxDate</code> () const<br />
+<p> <code>DayCounter</code> <code>dayCounter</code> () const<br/>
+ <i>the day counter used for date/time conversion </i><br/>
+ <code>Natural</code> <code>settlementDays</code> () const<br/>
+ <i>the settlementDays used for reference date calculation </i><br/>
+ <code>Calendar</code> <code>calendar</code> () const<br/>
+ <i>the calendar used for reference and/or option date calculation </i><br/>
+ const <code>Date</code> &amp; <code>referenceDate</code> () const<br/>
+ <i>the date at which discount = 1.0 and/or variance = 0.0 </i><br/>
+ <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i></p>
 <h3>Protected Member Functions</h3>
-<p><code>Rate</code> <code>zeroYieldImpl</code> (Time) const<br />
- <i>returns the spreaded zero yield rate </i><br />
+<p><code>Rate</code> <code>zeroYieldImpl</code> (Time) const<br/>
+ <i>returns the spreaded zero yield rate </i><br/>
  void <code>update</code> () </p>
 <h2>Detailed Description</h2>
 <p>Term structure with an added vector of spreads on the zero-yield rate. </p>

@@ -13,13 +13,13 @@ description: "sc::SumMolecularEnergy –"
 <h3>Public Member Functions</h3>
 <p><code>SumMolecularEnergy</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
 <p> <code>SumMolecularEnergy</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- int <code>value_implemented</code> () const<br />
- <i>Information about the availability of values, gradients, and hessians. </i><br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ int <code>value_implemented</code> () const<br/>
+ <i>Information about the availability of values, gradients, and hessians. </i><br/>
  int <code>gradient_implemented</code> () const </p>
 <p> int <code>hessian_implemented</code> () const </p>
-<p> void <code>set_x</code> (const <code>RefSCVector</code> &amp;)<br />
+<p> void <code>set_x</code> (const <code>RefSCVector</code> &amp;)<br/>
  <i>Set and retrieve the coordinate values. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void compute ()

@@ -9,9 +9,9 @@ description: "atmloop – get/set loopback mode of ATM interfaces"
 
 <p>atmloop &#8211; get/set loopback mode of ATM interfaces</p>
 <h2>Synopsis</h2>
-<p><code>atmloop</code> <code>-s</code> [<code>-l&nbsp;<wbr></code><i>level</i>] [<code>-r&nbsp;<wbr></code><i>level</i>] [<i>itf</i>]<br />
- <code>atmloop</code> [<i>itf</i>]<br />
- <code>atmloop</code> <code>-q</code> [<i>itf</i>]<br />
+<p><code>atmloop</code> <code>-s</code> [<code>-l&nbsp;<wbr></code><i>level</i>] [<code>-r&nbsp;<wbr></code><i>level</i>] [<i>itf</i>]<br/>
+ <code>atmloop</code> [<i>itf</i>]<br/>
+ <code>atmloop</code> <code>-q</code> [<i>itf</i>]<br/>
  <code>atmloop</code> <code>-V</code></p>
 <h2>Description</h2>
 <p><code>atmloop</code> sets or shows the current loopback settings of an ATM interface, and allows to query the loopback modes supported by the interface. </p>

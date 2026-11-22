@@ -44,7 +44,7 @@ int linkat(int olddirfd, const char *oldpath,
 <dt><code>AT_SYMLINK_FOLLOW</code> (since Linux 2.6.18)</dt>
 <dd> By default, <code>linkat</code>(), does not dereference <i>oldpath</i> if it is a symbolic link (like <code>link</code>()). The flag <code>AT_SYMLINK_FOLLOW</code> can be specified in <i>flags</i> to cause <i>oldpath</i> to be dereferenced if it is a symbolic link. If procfs is mounted, this can be used as an alternative to <code>AT_EMPTY_PATH</code>, like this:</dd>
 <dt>
-</dt><dd> linkat(AT_FDCWD, &quot;/proc/self/fd/&lt;fd&gt;&quot;, newdirfd,<br />
+</dt><dd> linkat(AT_FDCWD, &quot;/proc/self/fd/&lt;fd&gt;&quot;, newdirfd,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;newname, AT_SYMLINK_FOLLOW);</dd></dl>
 <p> Before kernel 2.6.18, the <i>flags</i> argument was unused, and had to be specified as 0. </p>
 <p> See <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2) for an explanation of the need for <code>linkat</code>().</p>

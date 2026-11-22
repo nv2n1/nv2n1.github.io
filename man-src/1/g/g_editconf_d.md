@@ -33,64 +33,64 @@ description: "editconf – edits the box and writes subgroups"
 <p> <code> editconf -f in -rotate 0 45 35.264 -bt o -box veclen -o out</code> </p>
 <p> where <code> veclen</code> is the size of the cubic box times <a href="/docs/linux/man/3-sqrt/">sqrt</a>(3)/2.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> conf.gro</i> <code>Input</code><br />
+<p> <code>-f</code><i> conf.gro</i> <code>Input</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-o</code><i> out.gro</i> <code>Output, Opt.</code><br />
+<p> <code>-o</code><i> out.gro</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-mead</code><i> mead.pqr</i> <code>Output, Opt.</code><br />
+<p> <code>-mead</code><i> mead.pqr</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Coordinate file for MEAD&nbsp;<wbr> </p>
-<p> <code>-bf</code><i> bfact.dat</i> <code>Input, Opt.</code><br />
+<p> <code>-bf</code><i> bfact.dat</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Generic data file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]ndef</code><i>no </i><br />
+<p> <code>-[no]ndef</code><i>no </i><br/>
 &nbsp;<wbr>Choose output from default index groups </p>
-<p> <code>-bt</code><i> enum</i><code> triclinic</code><br />
+<p> <code>-bt</code><i> enum</i><code> triclinic</code><br/>
 &nbsp;<wbr>Box type for -box and -d:&nbsp;<wbr><code>&nbsp;<wbr>triclinic</code>,&nbsp;<wbr><code>&nbsp;<wbr>cubic</code>,&nbsp;<wbr><code>&nbsp;<wbr>dodecahedron</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>octahedron</code> </p>
-<p> <code>-box</code><i> vector</i><code> 0 0 0</code><br />
+<p> <code>-box</code><i> vector</i><code> 0 0 0</code><br/>
 &nbsp;<wbr>Box vector lengths&nbsp;<wbr>(a,b,c) </p>
-<p> <code>-angles</code><i> vector</i><code> 90 90 90</code><br />
+<p> <code>-angles</code><i> vector</i><code> 90 90 90</code><br/>
 &nbsp;<wbr>Angles between the box vectors&nbsp;<wbr>(bc,ac,ab) </p>
-<p> <code>-d</code><i> real</i><code> 0 </code><br />
+<p> <code>-d</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Distance between the solute and the box </p>
-<p> <code>-[no]c</code><i>no </i><br />
+<p> <code>-[no]c</code><i>no </i><br/>
 &nbsp;<wbr>Center molecule in box&nbsp;<wbr>(implied by -box and -d) </p>
-<p> <code>-center</code><i> vector</i><code> 0 0 0</code><br />
+<p> <code>-center</code><i> vector</i><code> 0 0 0</code><br/>
 &nbsp;<wbr>Coordinates of geometrical center </p>
-<p> <code>-translate</code><i> vector</i><code> 0 0 0</code><br />
+<p> <code>-translate</code><i> vector</i><code> 0 0 0</code><br/>
 &nbsp;<wbr>Translation </p>
-<p> <code>-rotate</code><i> vector</i><code> 0 0 0</code><br />
+<p> <code>-rotate</code><i> vector</i><code> 0 0 0</code><br/>
 &nbsp;<wbr>Rotation around the X, Y and Z axes in degrees </p>
-<p> <code>-[no]princ</code><i>no </i><br />
+<p> <code>-[no]princ</code><i>no </i><br/>
 &nbsp;<wbr>Orient molecule(s)&nbsp;<wbr>along their principal axes </p>
-<p> <code>-scale</code><i> vector</i><code> 1 1 1</code><br />
+<p> <code>-scale</code><i> vector</i><code> 1 1 1</code><br/>
 &nbsp;<wbr>Scaling factor </p>
-<p> <code>-density</code><i> real</i><code> 1000 </code><br />
+<p> <code>-density</code><i> real</i><code> 1000 </code><br/>
 &nbsp;<wbr>Density&nbsp;<wbr>(g/l)&nbsp;<wbr>of the output box achieved by scaling </p>
-<p> <code>-[no]vol</code><i>yes </i><br />
+<p> <code>-[no]vol</code><i>yes </i><br/>
 &nbsp;<wbr>Compute and print volume of the box </p>
-<p> <code>-[no]pbc</code><i>no </i><br />
+<p> <code>-[no]pbc</code><i>no </i><br/>
 &nbsp;<wbr>Remove the periodicity&nbsp;<wbr>(make molecule whole again) </p>
-<p> <code>-[no]grasp</code><i>no </i><br />
+<p> <code>-[no]grasp</code><i>no </i><br/>
 &nbsp;<wbr>Store the charge of the atom in the B-factor field and the radius of the atom in the occupancy field </p>
-<p> <code>-rvdw</code><i> real</i><code> 0.12 </code><br />
+<p> <code>-rvdw</code><i> real</i><code> 0.12 </code><br/>
 &nbsp;<wbr>Default Van der Waals radius&nbsp;<wbr>(in nm)&nbsp;<wbr>if one can not be found in the database or if no parameters are present in the topology file </p>
-<p> <code>-sig56</code><i> real</i><code> 0 </code><br />
+<p> <code>-sig56</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Use rmin/2&nbsp;<wbr>(minimum in the Van der Waals potential)&nbsp;<wbr>rather than sigma/2&nbsp;<wbr> </p>
-<p> <code>-[no]vdwread</code><i>no </i><br />
+<p> <code>-[no]vdwread</code><i>no </i><br/>
 &nbsp;<wbr>Read the Van der Waals radii from the file vdwradii.dat rather than computing the radii based on the force field </p>
-<p> <code>-[no]atom</code><i>no </i><br />
+<p> <code>-[no]atom</code><i>no </i><br/>
 &nbsp;<wbr>Force B-factor attachment per atom </p>
-<p> <code>-[no]legend</code><i>no </i><br />
+<p> <code>-[no]legend</code><i>no </i><br/>
 &nbsp;<wbr>Make B-factor legend </p>
-<p> <code>-label</code><i> string</i><code> A</code><br />
+<p> <code>-label</code><i> string</i><code> A</code><br/>
 &nbsp;<wbr>Add chain label for all residues </p>
 <h2>KNOWN PROBLEMS</h2>
 <p> &#8211; For complex molecules, the periodicity removal routine may break down, in that case you can use trjconv </p>

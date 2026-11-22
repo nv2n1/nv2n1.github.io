@@ -25,5 +25,5 @@ description: "ds_unregister – Un-register a directory server instance from the
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugzilla.redhat.com.">http://bugzilla.redhat.com.</a></p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2011 Red Hat, Inc.<br />
+<p>Copyright &#169; 2011 Red Hat, Inc.<br/>
  This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. This license is essentially the GNU General Public License version 2 with an exception for plug-in distribution.</p>

@@ -27,7 +27,7 @@ description: "grconvert"
 <h2>AUTHORS</h2>
 <p> <code>Grace</code> is derived from <code>ACE/gr</code> (a.k.a <code>Xmgr</code> ) written by Paul J Turner. From version number 4.00, the development was taken over by a team of volunteers under the coordination of Evgeny Stambulchik. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (c) 1991-95 Paul J Turner, Portland, OR<br />
+<p> Copyright (c) 1991-95 Paul J Turner, Portland, OR<br/>
  Copyright (c) 1996-99 Grace Development Team </p>
 <h2>LICENSE</h2>
 <p> The program is distributed under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

@@ -39,6 +39,6 @@ description: "XtAppInitialize, XtVaAppInitialize – initialize, open, or close 
 <p>The <code>XtAppInitialize</code> function calls <code>XtToolkitInitialize</code> followed by <code>XtCreateApplicationContext</code>, then calls <code>XtOpenDisplay</code> with <i>display_string</i> NULL and <i>application_name</i> NULL, and finally calls <code>XtAppCreateShell</code> with <i>application_name</i> NULL, <i>widget_class</i> <code>applicationShellWidgetClass</code>, and the specified <i>args</i> and <i>num_args</i> and returns the created shell. The modified <i>argc</i> and <i>argv</i> returned by <code>XtDisplayInitialize</code> are returned in <i>argc_in_out</i> and <i>argv_in_out</i>. If <i>app_context_return</i> is not NULL, the created application context is also returned. If the display specified by the command line cannot be opened, an error message is issued and <code>XtAppInitialize</code> terminates the application. If <i>fallback_resources</i> is non-NULL, <code>XtAppSetFallbackResources</code> is called with the value prior to calling <code>XtOpenDisplay</code>. </p>
 <p> XtAppInitialize and XtVaAppInitialize have been superceded by <code>XtOpenApplication</code> and <code>XtVaOpenApplication</code> respectively.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtopenapplication/">XtOpenApplication</a>(3), <a href="/docs/linux/man/3-xtvaopenapplication/">XtVaOpenApplication</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtopenapplication/">XtOpenApplication</a>(3), <a href="/docs/linux/man/3-xtvaopenapplication/">XtVaOpenApplication</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

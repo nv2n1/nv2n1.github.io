@@ -12,15 +12,15 @@ description: "cfg_defvalue_t – Data structure holding the default value given 
 <h2>SYNOPSIS</h2>
 <p> #include &lt;confuse.h&gt; </p>
 <h3>Data Fields</h3>
-<p> long int <code>number</code><br />
- <i>default integer value </i><br />
- double <code>fpnumber</code><br />
- <i>default floating point value </i><br />
- <code>cfg_bool_t</code> <code>boolean</code><br />
- <i>default boolean value </i><br />
- char * <code>string</code><br />
- <i>default string value </i><br />
- char * <code>parsed</code><br />
+<p> long int <code>number</code><br/>
+ <i>default integer value </i><br/>
+ double <code>fpnumber</code><br/>
+ <i>default floating point value </i><br/>
+ <code>cfg_bool_t</code> <code>boolean</code><br/>
+ <i>default boolean value </i><br/>
+ char * <code>string</code><br/>
+ <i>default string value </i><br/>
+ char * <code>parsed</code><br/>
  <i>default value that is parsed by libConfuse, used for lists and functions </i></p>
 <h2>Detailed Description</h2>
 <p> Data structure holding the default value given by the initialization macros. </p>

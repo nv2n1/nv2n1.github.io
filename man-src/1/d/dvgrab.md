@@ -29,7 +29,7 @@ description: "dvgrab — Capture DV or MPEG-2 Transport Stream (HDV) video and a
 <dt><code>-card </code><i>num</i></dt>
 <dd> Tells <code>dvgrab</code> to receive data from FireWire card <i>num</i>. The default behaviour is to automatically select the first card containing the first discovered camera If used in conjunction with <code>-noavc</code>, then no bus probing is performed If used in conjunction with <code>-guid</code> <i>hex</i>, then only the specified bus is probed for node with guid <i>hex</i>. </dd>
 <dt><code>-channel </code><i>num</i></dt>
-<dd> Isochronous channel to receive data from. Defaults to 63, which is pretty much standard among DV camcorders these days. If you specify anything different, no attempt is made at this time to tell the device which channel to use. You must have some manual way to tell the transmitting device which channel to use.<br />
+<dd> Isochronous channel to receive data from. Defaults to 63, which is pretty much standard among DV camcorders these days. If you specify anything different, no attempt is made at this time to tell the device which channel to use. You must have some manual way to tell the transmitting device which channel to use.<br/>
 &nbsp;<wbr></dd>
 <dt><code>-cmincutsize </code><i>num</i></dt>
 <dd> This option is used to start the collection if a cut occurs <i>num</i> megabytes (actually, mebibytes) prior to the end of the collection. This option reduces small files being created when using the <code>-csize</code> option. When a new collection is started in this manner, the amount of free space in the previous collection is stored, and while the following clips fit within the previous collection, the new collection starting point is reset. </dd>
@@ -46,18 +46,18 @@ description: "dvgrab — Capture DV or MPEG-2 Transport Stream (HDV) video and a
 <dt>
 </dt><dd> [[HH:]MM:]SS[.ms], or smpte=[[[HH:]MM:]SS:]FF. </dd>
 <dt><code>-every </code><i>n</i></dt>
-<dd> This option tells <code>dvgrab</code> to write every <i>n</i>&#8216;th frame only (default all frames).<br />
+<dd> This option tells <code>dvgrab</code> to write every <i>n</i>&#8216;th frame only (default all frames).<br/>
 &nbsp;<wbr></dd>
 <dt><code>-f, -format </code><i>dv1</i> | <i>dv2</i> | <i>avi</i> | <i>raw</i> | <i>dif</i> | <i>qt</i> | <i>mov</i> | <i>jpeg</i> | <i>jpg</i> | <i>mpeg2</i> | <i>hdv</i></dt>
 <dd> Specifies the format of the output file(s). File format can also be determined if you include an extension on the <i>base</i> name. The following extensions are recognizable: avi, dv, dif, mov, jpg, jpeg, and m2t (HDV). </dd>
 <dt>
-</dt><dd> <i>dv1</i> and <i>dv2</i> both are AVI files with slightly different formats. <i>dv2</i> stores a separate audio track in addition to the DV video track, which is more compatible with other applications. <i>dv1</i> only stores a single, integrated DV track since the DV format natively interleaves audio with video. Therefore, while <i>dv1</i> produces smaller output, some applications won&#8217;t grok it and require <i>dv2</i> instead. <code>dvgrab</code> is capable of creating extremely large AVI files&#8212;well over 2 or 4 GB&#8212;however, compatibility with other tools starts to decrease over the 1 GB size.<br />
+</dt><dd> <i>dv1</i> and <i>dv2</i> both are AVI files with slightly different formats. <i>dv2</i> stores a separate audio track in addition to the DV video track, which is more compatible with other applications. <i>dv1</i> only stores a single, integrated DV track since the DV format natively interleaves audio with video. Therefore, while <i>dv1</i> produces smaller output, some applications won&#8217;t grok it and require <i>dv2</i> instead. <code>dvgrab</code> is capable of creating extremely large AVI files&#8212;well over 2 or 4 GB&#8212;however, compatibility with other tools starts to decrease over the 1 GB size.<br/>
 &nbsp;<wbr></dd>
 <dt>
-</dt><dd> <i>raw</i> stores the data unmodified and have the .dv extension. These files are read by a number of GNU/Linux tools as well as Apple Quicktime.<br />
+</dt><dd> <i>raw</i> stores the data unmodified and have the .dv extension. These files are read by a number of GNU/Linux tools as well as Apple Quicktime.<br/>
 &nbsp;<wbr></dd>
 <dt>
-</dt><dd> <i>dif</i> is a variation of raw DV that names files with a .dif extension so they can be more immediately loaded into MainConcept MainActor5.<br />
+</dt><dd> <i>dif</i> is a variation of raw DV that names files with a .dif extension so they can be more immediately loaded into MainConcept MainActor5.<br/>
 &nbsp;<wbr></dd>
 <dt>
 </dt><dd> <i>qt</i> is Quicktime, but requires that dvgrab be compiled with libquicktime. </dd>
@@ -68,12 +68,12 @@ description: "dvgrab — Capture DV or MPEG-2 Transport Stream (HDV) video and a
 <dt>
 </dt><dd> Defaults to <i>raw</i> </dd>
 <dt><code>-F, -frames </code><i>num</i></dt>
-<dd> This option tells <code>dvgrab</code> to store at most <i>num</i> frames per file before splitting to a new file, where <i>num</i> = 0 means ulimited. The corresponding time depends on the video system used. PAL shows 25, NTSC about 30 frames per second.<br />
+<dd> This option tells <code>dvgrab</code> to store at most <i>num</i> frames per file before splitting to a new file, where <i>num</i> = 0 means ulimited. The corresponding time depends on the video system used. PAL shows 25, NTSC about 30 frames per second.<br/>
 &nbsp;<wbr></dd>
 <dt><code>-guid </code><i>hex</i></dt>
 <dd> If you have more than one DV device, then select one using the node&#8217;s GUID specified in <i>hex</i> (hexadecimal) format. This is the format as displayed in /proc/bus/ieee1394/devices or the new kernel 2.6 /sys filesystem. When you specify a GUID, <code>dvgrab</code> will establish (or overlay) a peer-to-peer connection with the device instead of listening to the device&#8217;s broadcast. If you supply a <i>hex</i> value of 1, then <code>dvgrab</code> attempts to discover the device as well as setup a peer-to-peer connection. This is especially handy with MPEG2-TS settop boxes, which typically require a connection management procedure to start transmitting. </dd>
 <dt><code>-h, -help</code></dt>
-<dd> Show summary of options.<br />
+<dd> Show summary of options.<br/>
 &nbsp;<wbr></dd>
 <dt><code>-I, -input </code><i>file</i></dt>
 <dd> Read from <i>file</i> instead of FireWire. You can use &#8216;-&#8216; for stdin instead of using <code>-stdin</code>. </dd>
@@ -120,18 +120,18 @@ description: "dvgrab — Capture DV or MPEG-2 Transport Stream (HDV) video and a
 <dt><code>-srt</code></dt>
 <dd> Generate subtitle files containing the recording date and time in SRT format. For each video file that is created two additional files with the extension .srt0 and .srt1 are created. They contain the recording date and time as subtitles in the SRT format. The .srt0 file contains the subtitles with timing based on the running time from the start of the current file. Use this file if you transcode to a format like AVI. The .srt1 file contains the subtitles with timing based on the time code as delivered by the camera. The mplayer program understands this type of subtitles. </dd>
 <dt><code>-stdin</code></dt>
-<dd> Read the DV stream from a pipe on stdin instead of FireWire.<br />
+<dd> Read the DV stream from a pipe on stdin instead of FireWire.<br/>
 &nbsp;<wbr></dd>
 <dt><code>-timecode</code></dt>
-<dd> Put the timecode of the first frame of each file into the file name.<br />
+<dd> Put the timecode of the first frame of each file into the file name.<br/>
 &nbsp;<wbr></dd>
 <dt><code>-t, -timestamp</code></dt>
-<dd> Put information on date and time of recording into file name.<br />
+<dd> Put information on date and time of recording into file name.<br/>
 &nbsp;<wbr></dd>
 <dt><code>-timesys</code></dt>
 <dd> Put system rather than recording date and time into file name. This is useful when using converter devices that do not change the recording date time in the DV stream. </dd>
 <dt><code>-V, -v4l2</code></dt>
-<dd> Capture from a USB Video Class (UVC) device that supports DV. This uses the uvcvideo kernel module via V4L2. The default device file is /dev/video. Use the <code>-input</code> option to set a different device file.<br />
+<dd> Capture from a USB Video Class (UVC) device that supports DV. This uses the uvcvideo kernel module via V4L2. The default device file is /dev/video. Use the <code>-input</code> option to set a different device file.<br/>
 &nbsp;<wbr></dd>
 <dt><code>-v, -version</code></dt>
 <dd> Show version of program. </dd>
@@ -143,10 +143,10 @@ description: "dvgrab — Capture DV or MPEG-2 Transport Stream (HDV) video and a
 <h2>EXAMPLES</h2>
 <dl>
 <dt><code>dvgrab foo-</code></dt>
-<dd> Captures video data from the default FireWire source and stores it to files <code>foo-001.avi</code>, <code>foo-002.avi</code>, etc.<br />
+<dd> Captures video data from the default FireWire source and stores it to files <code>foo-001.avi</code>, <code>foo-002.avi</code>, etc.<br/>
 &nbsp;<wbr></dd>
 <dt><code>dvgrab -frames 25 foo-</code></dt>
-<dd> Assuming a PAL video source, this command records one second&#8217;s worth of video data per file.<br />
+<dd> Assuming a PAL video source, this command records one second&#8217;s worth of video data per file.<br/>
 &nbsp;<wbr></dd>
 <dt><code>dvgrab -autosplit -frames 750 -timestamp foo-</code></dt>
 <dd> Records video data from the default FireWire source, cuts it into chunks of 30 seconds (assuming PAL) or when a new recording starts and names the resulting files according to date and time info in the videostream. </dd>
@@ -157,23 +157,23 @@ description: "dvgrab — Capture DV or MPEG-2 Transport Stream (HDV) video and a
 <dt>
 </dt><dd> Warning: It is possible to make ISO9660 filesystems with files greater than 2 Gb, but the current linux IS09660 driver can&#8217;t read them! Newer linux kernels may be able to handle ISO9660 filesystems with filesizes greater than 2 Gb. </dd>
 <dt><code>dvgrab -format hdv -autosplit</code></dt>
-<dd> Capture from a HDV camcorder.<br />
+<dd> Capture from a HDV camcorder.<br/>
 &nbsp;<wbr></dd>
 <dt><code>dvgrab -format mpeg2 -guid 1</code></dt>
 <dd> Record from a digital TV settop box. </dd>
 <dt><code>dvgrab -jpeg-over -jpeg-w=320 -jpeg-h=240 -d smpte=1 webcam.jpeg</code></dt>
-<dd> Capture a single frame, save it as a JPEG named webcam.jpg and exit. This example also demonstrates option handling. You only need to specify enough of a long option name to uniquely identify it. You can use space or equal sign to separate option name and argument. The file format is inferred from the filename extension. Also, since <code>-jpeg-overwrite</code> is used, the filename will be exactly &quot;webcam.jpeg&quot; and not include any numbers.<br />
+<dd> Capture a single frame, save it as a JPEG named webcam.jpg and exit. This example also demonstrates option handling. You only need to specify enough of a long option name to uniquely identify it. You can use space or equal sign to separate option name and argument. The file format is inferred from the filename extension. Also, since <code>-jpeg-overwrite</code> is used, the filename will be exactly &quot;webcam.jpeg&quot; and not include any numbers.<br/>
 &nbsp;<wbr></dd>
 <dt><code>dvgrab -V</code></dt>
-<dd> Capture over USB from a UVC compliant DV device.<br />
+<dd> Capture over USB from a UVC compliant DV device.<br/>
 &nbsp;<wbr></dd>
 <dt><code>dvgrab -v4l -input /dev/video1</code></dt>
-<dd> Capture over USB from a UVC compliant DV device using device file /dev/video1.<br />
+<dd> Capture over USB from a UVC compliant DV device using device file /dev/video1.<br/>
 &nbsp;<wbr></dd>
 <dt><code>dvgrab -format=hdv -autosplit=28800 -srt foo-</code></dt>
 <dd> Capture from a HDV camcorder, splitting whenever there is a gap in the recording that lasts longer than 8 hours. This will likely generate a separate file for each day (useful for holiday videos). It will also generate subtitle files. Assuming that the files foo-001.m2t and foo-002.m2t are generated, the corresponding subtitle files will be foo-001.srt0, foo-001.srt1 and foo-002.srt0, foo-002.srt1. You can use the subtitle files to show the recording date and time while viewing the video. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Dan Dennedy &lt;dan [at] dennedy.org&gt; and Daniel Kobras kobras [at] debian.org&gt; </p>
-<p> See <a rel="nofollow" href="http://www.kinodv.org/">http://www.kinodv.org/</a> for more information and support.<br />
+<p> See <a rel="nofollow" href="http://www.kinodv.org/">http://www.kinodv.org/</a> for more information and support.<br/>
 &nbsp;<wbr> </p>

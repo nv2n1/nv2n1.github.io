@@ -14,10 +14,10 @@ description: "times – get process times"
 <p> <code>clock_t times(struct tms *</code><i>buf</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>times</code>() stores the current process times in the <i>struct tms</i> that <i>buf</i> points to. The <i>struct tms</i> is as defined in <i>&lt;sys/times.h&gt;</i>: </p>
-<p> struct tms {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clock_t tms_utime;&nbsp;<wbr>&nbsp;/*&nbsp;user time&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clock_t tms_stime;&nbsp;<wbr>&nbsp;/*&nbsp;system time&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clock_t tms_cutime;&nbsp;/*&nbsp;user time of children&nbsp;*/<br />
+<p> struct tms {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clock_t tms_utime;&nbsp;<wbr>&nbsp;/*&nbsp;user time&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clock_t tms_stime;&nbsp;<wbr>&nbsp;/*&nbsp;system time&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clock_t tms_cutime;&nbsp;/*&nbsp;user time of children&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clock_t tms_cstime;&nbsp;/*&nbsp;system time of children&nbsp;*/ }; </p>
 <p> The <i>tms_utime</i> field contains the CPU time spent executing instructions of the calling process. The <i>tms_stime</i> field contains the CPU time spent executing inside the kernel while performing tasks on behalf of the calling process. </p>
 <p> The <i>tms_cutime</i> field contains the sum of the <i>tms_utime</i> and <i>tms_cutime</i> values for all waited-for terminated children. The <i>tms_cstime</i> field contains the sum of the <i>tms_stime</i> and <i>tms_cstime</i> values for all waited-for terminated children. </p>

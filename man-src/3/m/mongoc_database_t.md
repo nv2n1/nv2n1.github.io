@@ -14,7 +14,7 @@ description: "mongoc_database_t – MongoDB Database Abstraction"
 <p> Read preferences and write concerns are inherited from the parent client. They can be overridden with <code><a href="/docs/linux/man/3-mongoc_database_set_read_prefs/">mongoc_database_set_read_prefs</a>(3)</code> and <code><a href="/docs/linux/man/3-mongoc_database_set_write_concern/">mongoc_database_set_write_concern</a>(3)</code> \&amp;. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>It is an error to call <code><a href="/docs/linux/man/3-mongoc_database_destroy/">mongoc_database_destroy</a>(3)</code> on a<br />
+<dd>It is an error to call <code><a href="/docs/linux/man/3-mongoc_database_destroy/">mongoc_database_destroy</a>(3)</code> on a<br/>
 &nbsp;<wbr>database that has operations pending. It is required that you release <code>mongoc_cursor_t</code> structures before calling <code>mongoc_database_destroy</code> \&amp;.</dd></dl>
 <h2>Examples</h2>
 <pre>#include &lt;mongoc.h&gt;

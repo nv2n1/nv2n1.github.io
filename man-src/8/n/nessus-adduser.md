@@ -34,24 +34,24 @@ description: "nessus-adduser – add a user in the nessusd userbase"
 <p> The <i>default</i> statement must be the last rule and defines the policy of the user. </p>
 <p> The following rule set will allow the user to test 192.168.1.0/24, 192.168.3.0/24 and 172.22.0.0/16, but nothing else:</p>
 <dl>
-<dd>accept 192.168.1.0/24<br />
- accept 192.168.3.0/24<br />
- accept 172.22.0.0/16<br />
+<dd>accept 192.168.1.0/24<br/>
+ accept 192.168.3.0/24<br/>
+ accept 172.22.0.0/16<br/>
  default deny</dd></dl>
 <p> The following rule set will allow the user to test whatever he wants, except the network 192.168.1.0/24:</p>
 <dl>
-<dd>deny 192.168.1.0/24<br />
+<dd>deny 192.168.1.0/24<br/>
  default accept</dd></dl>
 <p> The keyword <i>client_ip</i> has been defined, and is replaced at run time by the IP address of the <code>nessusd </code> user. For instance, if you want your users to be able to only be able to scan the system they come from, then you want them to have the following ruleset:</p>
 <dl>
-<dd>accept client_ip<br />
+<dd>accept client_ip<br/>
  default deny</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-nessus-rmuser/">nessus-rmuser</a></code>(8),&nbsp;<wbr><code><a href="/docs/linux/man/8-nessusd/">nessusd</a></code>(8),&nbsp;<wbr><code><a href="/docs/linux/man/1-nessus/">nessus</a></code>(1) </p>
 <h2>More Information About The Nessus Project</h2>
 <p>The canonical places where you will find more information about the Nessus project are:</p>
 <dl>
-<dd><a rel="nofollow" href="http://www.nessus.org/">http://www.nessus.org/</a> (Official site)<br />
+<dd><a rel="nofollow" href="http://www.nessus.org/">http://www.nessus.org/</a> (Official site)<br/>
  <a rel="nofollow" href="http://cvs.nessus.org">http://cvs.nessus.org</a> (Developers site)</dd></dl>
 <h2>Author</h2>
 <p><code>nessus-adduser </code> was quickly written by Renaud Deraison &lt;deraison [at] cvs.nessus.org&gt;</p>

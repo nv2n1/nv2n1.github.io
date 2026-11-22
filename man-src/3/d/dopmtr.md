@@ -11,7 +11,7 @@ description: "dopmtr.f –"
 <p> dopmtr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dopmtr</code> (SIDE, UPLO, TRANS, M, N, AP, TAU, C, LDC, WORK, INFO)<br />
+<p> subroutine <code>dopmtr</code> (SIDE, UPLO, TRANS, M, N, AP, TAU, C, LDC, WORK, INFO)<br/>
  <i></i><code>DOPMTR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dopmtr (characterSIDE, characterUPLO, characterTRANS, integerM, integerN, double precision, dimension( * )AP, double precision, dimension( * )TAU, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( * )WORK, integerINFO)</h3>

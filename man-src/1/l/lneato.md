@@ -26,5 +26,5 @@ description: "lneato – A Customizable Graph Editor"
 <dt><code>-el</code><i>lev</i></dt>
 <dd> Sets the mesage level. The <i>lev</i> can be <code>0</code> or <code>1</code>. The default is <code>0</code>.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-neato/">neato</a>(1), <a href="/docs/linux/man/1-lefty/">lefty</a>(1), <a href="/docs/linux/man/1-dotty/">dotty</a>(1), <a href="/docs/linux/man/3-xdot/">xdot</a>(3),<br />
+<p> <a href="/docs/linux/man/1-neato/">neato</a>(1), <a href="/docs/linux/man/1-lefty/">lefty</a>(1), <a href="/docs/linux/man/1-dotty/">dotty</a>(1), <a href="/docs/linux/man/3-xdot/">xdot</a>(3),<br/>
  <i>dotty</i> user guide. </p>

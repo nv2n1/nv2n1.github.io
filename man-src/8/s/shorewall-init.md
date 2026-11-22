@@ -45,7 +45,7 @@ PRODUCTS=&quot;shorewall shorewall6&quot;</code></pre>
 <dd>&bull; On Debian-based systems, edit /etc/default/<i>product</i> for each <i>product</i> listed in the PRODUCTS setting and set <code>startup=0</code>.</dd></dl>
 <dl>
 <dd>&bull; On other systems, use the distribution&#8217;s service control tool (insserv, chkconfig, etc.) to disable startup of the products listed in the PRODUCTS setting.</dd></dl>
-<p> On a laptop with both Ethernet and wireless interfaces, you will want to make both interfaces optional and set the REQUIRE_INTERFACE option to Yes in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[1]</font>(5) or m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font> (5). This causes the firewall to remain stopped until at least one of the interfaces comes up.</p>
+<p> On a laptop with both Ethernet and wireless interfaces, you will want to make both interfaces optional and set the REQUIRE_INTERFACE option to Yes in m[blue]<code>shorewall.conf</code>m[][1](5) or m[blue]<code>shorewall6.conf</code>m[][2] (5). This causes the firewall to remain stopped until at least one of the interfaces comes up.</p>
 <h2>Files</h2>
 <p>/etc/default/shorewall-init (Debian-based systems) or /etc/sysconfig/shorewall-init (other distributions)</p>
 <h2>See Also</h2>

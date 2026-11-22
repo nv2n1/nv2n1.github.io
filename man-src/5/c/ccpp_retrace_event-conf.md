@@ -108,7 +108,7 @@ EVENT=post-create
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-abrtd/">abrtd</a>(8)</p>
 <h2>Author</h2>
-<p>Manual page written by Denys Vlasenko &lt;m[blue]<code>dvlasenk [at] redhat.com</code>m[]<font SIZE="-2">[1]</font>&gt;.</p>
+<p>Manual page written by Denys Vlasenko &lt;m[blue]<code>dvlasenk [at] redhat.com</code>m[][1]&gt;.</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

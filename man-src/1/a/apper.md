@@ -55,7 +55,7 @@ description: "apper – An application and package manager using PackageKit"
 <dt>
 </dt><dd> Remove a package containing file <i>filename</i>.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> More information about Apper can be found at m[blue]<code>the Apper website</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> More information about Apper can be found at m[blue]<code>the Apper website</code>m[][1].</p>
 <h2>AUTHORS</h2>
 <p> The maintainer of Apper is Daniel Nicoletti &lt;dantti12 [at] gmail.com&gt;; This manual page was written by Matthias Klumpp &lt;matthias [at] tenstral.net&gt;.</p>
 <h2>AUTHORS</h2>

@@ -8,13 +8,13 @@ url: "/docs/linux/man/1-tiff2ps/"
 description: "tiff2ps – convert a TIFF image to PostScript"
 ---
 
-<p> tiff2ps &#8211; convert a <font SIZE="-1">TIFF</font> image to PostScript</p>
+<p> tiff2ps &#8211; convert a TIFF image to PostScript</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiff2ps</code> [ <i>options</i> ] <i>input.tif &#8230;</i></p>
 <h2>DESCRIPTION</h2>
-<p> <i>tiff2ps</i> reads <font SIZE="-1">TIFF</font> images and writes PostScript or Encapsulated PostScript (EPS) on the standard output. By default, <i>tiff2ps</i> writes Encapsulated PostScript for the first image in the specified <font SIZE="-1">TIFF</font> image file. </p>
-<p> By default, <i>tiff2ps</i> will generate PostScript that fills a printed area specified by the <font SIZE="-1">TIFF</font> tags in the input file. If the file does not contain <i>XResolution</i> or <i>YResolution</i> tags, then the printed area is set according to the image dimensions. The <code>-w</code> and <code>-h</code> options (see below) can be used to set the dimensions of the printed area in inches; overriding any relevant <font SIZE="-1">TIFF</font> tags. </p>
-<p> The PostScript generated for <font SIZE="-1">RGB,</font> palette, and <font SIZE="-1">CMYK</font> images uses the <i>colorimage</i> operator. The PostScript generated for greyscale and bilevel images uses the <i>image</i> operator. When the <i>colorimage</i> operator is used, PostScript code to emulate this operator on older PostScript printers is also generated. Note that this emulation code can be very slow. </p>
+<p> <i>tiff2ps</i> reads TIFF images and writes PostScript or Encapsulated PostScript (EPS) on the standard output. By default, <i>tiff2ps</i> writes Encapsulated PostScript for the first image in the specified TIFF image file. </p>
+<p> By default, <i>tiff2ps</i> will generate PostScript that fills a printed area specified by the TIFF tags in the input file. If the file does not contain <i>XResolution</i> or <i>YResolution</i> tags, then the printed area is set according to the image dimensions. The <code>-w</code> and <code>-h</code> options (see below) can be used to set the dimensions of the printed area in inches; overriding any relevant TIFF tags. </p>
+<p> The PostScript generated for RGB, palette, and CMYK images uses the <i>colorimage</i> operator. The PostScript generated for greyscale and bilevel images uses the <i>image</i> operator. When the <i>colorimage</i> operator is used, PostScript code to emulate this operator on older PostScript printers is also generated. Note that this emulation code can be very slow. </p>
 <p> Color images with associated alpha data are composited over a white background.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -33,7 +33,7 @@ description: "tiff2ps – convert a TIFF image to PostScript"
 <dt><code>-c</code></dt>
 <dd> Center the image in the output. This option only shows an effect if both the <code>-w</code> and the <code>-h</code> option are given.</dd>
 <dt><code>-d</code></dt>
-<dd> Set the initial <font SIZE="-1">TIFF</font> directory to the specified directory number. (NB: Directories are numbered starting at zero.) This option is useful for selecting individual pages in a multi-page (e.g. facsimile) file.</dd>
+<dd> Set the initial TIFF directory to the specified directory number. (NB: Directories are numbered starting at zero.) This option is useful for selecting individual pages in a multi-page (e.g. facsimile) file.</dd>
 <dt><code>-D</code></dt>
 <dd> Enable duplex printing (two pages per sheet of paper)</dd>
 <dt><code>-e</code></dt>
@@ -53,7 +53,7 @@ description: "tiff2ps – convert a TIFF image to PostScript"
 <dt><code>-m</code></dt>
 <dd> Where possible render using the <i>imagemask</i> PostScript operator instead of the <i>image</i> operator. When this option is specified <i>tiff2ps</i> will use <i>imagemask</i> for rendering 1 bit deep images. If this option is not specified or if the image depth is greater than 1 then the <i>image</i> operator is used.</dd>
 <dt><code>-o</code></dt>
-<dd> Set the initial <font SIZE="-1">TIFF</font> directory to the <font SIZE="-1">IFD</font> at the specified file offset. This option is useful for selecting thumbnail images and the like which are hidden using the <i>SubIFD</i> tag.</dd>
+<dd> Set the initial TIFF directory to the IFD at the specified file offset. This option is useful for selecting thumbnail images and the like which are hidden using the <i>SubIFD</i> tag.</dd>
 <dt><code>-O</code></dt>
 <dd> Write PostScript to specified file instead of standard output Set the initial</dd>
 <dt><code>-p</code></dt>

@@ -39,12 +39,12 @@ description: "cue2toc – convert CUE to TOC format"
 <p> Timecode values are accepted in the forms &quot;X:X:X&quot;, &quot;X:X&quot; and &quot;X&quot; where each &quot;X&quot; must consist of at most two digits and may be zero padded to the left. They are interpreted as &quot;M:S:F&quot;, &quot;S:F&quot; and &quot;F&quot; respectively where &quot;M&quot; means &quot;minutes&quot; and must be in the range 0 &lt;= M &lt;= 99, &quot;S&quot; means &quot;seconds&quot; and must be in the range 0 &lt;= S &lt;= 59, and &quot;F&quot; means &quot;frames&quot; and must be in the range 0 &lt;= F &lt;= 74. </p>
 <p> CUE files are logically divided into a global section and one to 99 track sections. Inside these sections the following commands are allowed: </p>
 <h3>Global Section</h3>
-<p> <code>REM</code> <i>anything_to_newline</i><br />
- <code>CATALOG</code> <i>string</i><br />
- <code>CDTEXTFILE</code> <i>string</i><br />
- <code>TITLE</code> <i>string</i><br />
- <code>PERFORMER</code> <i>string</i><br />
- <code>SONGWRITER</code> <i>string</i><br />
+<p> <code>REM</code> <i>anything_to_newline</i><br/>
+ <code>CATALOG</code> <i>string</i><br/>
+ <code>CDTEXTFILE</code> <i>string</i><br/>
+ <code>TITLE</code> <i>string</i><br/>
+ <code>PERFORMER</code> <i>string</i><br/>
+ <code>SONGWRITER</code> <i>string</i><br/>
  <code>FILE</code> <i>string</i> <code>BINARY</code>|<code>MOTOROLA</code>|<code>AIFF</code>|<code>WAVE</code>|<code>MP3</code> </p>
 <dl>
 <dt><code>REM</code></dt>
@@ -64,16 +64,16 @@ description: "cue2toc – convert CUE to TOC format"
 </dl>
 <p> The first appearance of a <code>TRACK</code> command causes leaving of the global section and entering the track section. </p>
 <h3>Track Section</h3>
-<p> <code>TRACK</code> <i>number</i> <i>mode</i><br />
- <code>REM</code> <i>anything_to_newline</i><br />
- <code>FLAGS</code> [<code>DCP</code>] [<code>4CH</code>] [<code>PRE</code>] [<code>SCMS</code>]<br />
- <code>ISRC</code> <i>string</i><br />
- <code>TITLE</code> <i>string</i><br />
- <code>PERFORMER</code> <i>string</i><br />
- <code>SONGWRITER</code> <i>string</i><br />
- <code>PREGAP</code> <i>timecode</i><br />
- <code>INDEX</code> <i>number</i> <i>timecode</i><br />
- <code>POSTGAP</code> <i>timecode</i><br />
+<p> <code>TRACK</code> <i>number</i> <i>mode</i><br/>
+ <code>REM</code> <i>anything_to_newline</i><br/>
+ <code>FLAGS</code> [<code>DCP</code>] [<code>4CH</code>] [<code>PRE</code>] [<code>SCMS</code>]<br/>
+ <code>ISRC</code> <i>string</i><br/>
+ <code>TITLE</code> <i>string</i><br/>
+ <code>PERFORMER</code> <i>string</i><br/>
+ <code>SONGWRITER</code> <i>string</i><br/>
+ <code>PREGAP</code> <i>timecode</i><br/>
+ <code>INDEX</code> <i>number</i> <i>timecode</i><br/>
+ <code>POSTGAP</code> <i>timecode</i><br/>
  <code>FILE</code> <i>string</i> <code>BINARY</code>|<code>MOTOROLA</code>|<code>AIFF</code>|<code>WAVE</code>|<code>MP3</code> </p>
 <dl>
 <dt><code>TRACK</code></dt>

@@ -25,8 +25,8 @@ description: "xmdomain.cfg – xm domain config file format"
 <dt><code>ramdisk</code></dt>
 <dd>The initial ramdisk for the domain. The format of the parameter is the fully qualified path to the initrd, i.e. <i>/boot/initrd.gz</i>. On many Linux distros you will not need a ramdisk if using the default xen kernel.</dd>
 <dt><code>memory</code></dt>
-<dd>The amount of <font SIZE="-1">RAM</font>, in megabytes, to allocate to the domain when it starts. Allocating insufficient memory for a domain may produce extremely bizarre behavior. If there isn&#8217;t enough free memory left on the machine to fulfill this request, the domain will fail to start. </dd>
-<p> Xen does not support overcommit of memory, so the total memory of all guests (+ 64 <font SIZE="-1">MB</font> needed for Xen) must be less than or equal to the physical <font SIZE="-1">RAM</font> in the machine.</p>
+<dd>The amount of RAM, in megabytes, to allocate to the domain when it starts. Allocating insufficient memory for a domain may produce extremely bizarre behavior. If there isn&#8217;t enough free memory left on the machine to fulfill this request, the domain will fail to start. </dd>
+<p> Xen does not support overcommit of memory, so the total memory of all guests (+ 64 MB needed for Xen) must be less than or equal to the physical RAM in the machine.</p>
 <dt><code>name</code></dt>
 <dd>A unique name for the domain. Attempting to create two domains with the same name will cause an error.</dd>
 <dt><code>root</code></dt>
@@ -55,14 +55,14 @@ description: "xmdomain.cfg – xm domain config file format"
 <dd>An array of virtual interface stanzas in the form: </dd>
 <pre> vif = [ &quot;stanza1&quot;, &quot;stanza2&quot;, ... ]</pre>
 <p>Each stanza specifies a set of <i>name = value</i> options separated by commas, in the form: &#8220;name1=value1, name2=value2, &#8230;&#8221; </p>
-<p> <font SIZE="-1"><code>OPTIONS</code></font></p>
+<p> <code>OPTIONS</code></p>
 <dl>
 <dd>
 </dd><dl>
 <dt><i>bridge</i></dt>
 <dd>The network bridge to be used for this device. This is especially needed if multiple bridges exist on the machine.</dd>
 <dt><i>mac</i></dt>
-<dd>The <font SIZE="-1">MAC</font> address for the virtual interface. If mac is not specified, one will be randomly chosen by xen with the 00:16:3e vendor id prefix.</dd></dl>
+<dd>The MAC address for the virtual interface. If mac is not specified, one will be randomly chosen by xen with the 00:16:3e vendor id prefix.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
@@ -70,24 +70,24 @@ description: "xmdomain.cfg – xm domain config file format"
 <dd>A virtual frame buffer stanza in the form: </dd>
 <pre> vfb = [ &quot;stanza&quot; ]</pre>
 <p>The stanza specifies a set of <i>name = value</i> options separated by commas, in the form: &#8220;name1=value1, name2=value2, &#8230;&#8221; </p>
-<p> <font SIZE="-1"><code>OPTIONS</code></font></p>
+<p> <code>OPTIONS</code></p>
 <dl>
 <dd>
 </dd><dl>
 <dt><i>type</i></dt>
-<dd>There are currently two valid options: <i>vnc</i> starts a <font SIZE="-1">VNC</font> server that lets you connect an external <font SIZE="-1">VNC</font> viewer, and <i>sdl</i> starts an internal viewer.</dd>
+<dd>There are currently two valid options: <i>vnc</i> starts a VNC server that lets you connect an external VNC viewer, and <i>sdl</i> starts an internal viewer.</dd>
 <dt><i>vncdisplay</i></dt>
-<dd>The <font SIZE="-1">VNC</font> display number to use, defaults to the domain <font SIZE="-1">ID</font>. The <font SIZE="-1">VNC</font> server listens on port 5900 + display number.</dd>
+<dd>The VNC display number to use, defaults to the domain ID. The VNC server listens on port 5900 + display number.</dd>
 <dt><i>vnclisten</i></dt>
-<dd>The listening address for the <font SIZE="-1">VNC</font> server, default 127.0.0.1.</dd>
+<dd>The listening address for the VNC server, default 127.0.0.1.</dd>
 <dt><i>vncunused</i></dt>
-<dd>If non-zero, the <font SIZE="-1">VNC</font> server listens on the first unused port above 5900.</dd>
+<dd>If non-zero, the VNC server listens on the first unused port above 5900.</dd>
 <dt><i>vncpasswd</i></dt>
 <dd>Overrides the XenD configured default password.</dd>
 <dt><i>display</i></dt>
-<dd>Display to use for the internal viewer, defaults to environment variable <i></i><font SIZE="-1"><i>DISPLAY</i></font><i></i>.</dd>
+<dd>Display to use for the internal viewer, defaults to environment variable <i></i><i>DISPLAY</i><i></i>.</dd>
 <dt><i>xauthority</i></dt>
-<dd>Authority file to use for the internal viewer, defaults to environment variable <i></i><font SIZE="-1"><i>XAUTHORITY</i></font><i></i>.</dd></dl>
+<dd>Authority file to use for the internal viewer, defaults to environment variable <i></i><i>XAUTHORITY</i><i></i>.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
@@ -98,7 +98,7 @@ description: "xmdomain.cfg – xm domain config file format"
 <dt><code>builder</code></dt>
 <dd>Which builder should be used to construct the domain. This defaults to the <i>linux</i> if not specified, which is the builder for paravirtualized Linux domains.</dd>
 <dt><code>cpu</code></dt>
-<dd>Specifies which <font SIZE="-1">CPU</font> the domain should be started on, where 0 specifies the first cpu, 1 the second, and so on. This defaults to -1, which means Xen is free to pick which <font SIZE="-1">CPU</font> to start on.</dd>
+<dd>Specifies which CPU the domain should be started on, where 0 specifies the first cpu, 1 the second, and so on. This defaults to -1, which means Xen is free to pick which CPU to start on.</dd>
 <dt><code>cpus</code></dt>
 <dd>Specifies a list of CPUs on which the domains&#8217; VCPUs are allowed to execute upon. The syntax supports ranges (0-3), and negation, ^1. For instance: </dd>
 <pre> cpus = &quot;0-3,5,^1&quot;</pre>
@@ -108,12 +108,12 @@ description: "xmdomain.cfg – xm domain config file format"
 <pre> extra = &quot;4&quot;</pre>
 <p>Will cause the domain to boot to runlevel 4.</p>
 <dt><code>nfs_server</code></dt>
-<dd>The <font SIZE="-1">IP</font> address of the <font SIZE="-1">NFS</font> server to use as the root device for the domain. In order to do this you&#8217;ll need to specify <i>root=/dev/nfs</i>, and specify <i>nfs_root</i>.</dd>
+<dd>The IP address of the NFS server to use as the root device for the domain. In order to do this you&#8217;ll need to specify <i>root=/dev/nfs</i>, and specify <i>nfs_root</i>.</dd>
 <dt><code>nfs_root</code></dt>
-<dd>The directory on the <font SIZE="-1">NFS</font> server to be used as the root filesystem. Specified as a fully qualified path, i.e. <i>/full/path/to/root/dir</i>.</dd>
+<dd>The directory on the NFS server to be used as the root filesystem. Specified as a fully qualified path, i.e. <i>/full/path/to/root/dir</i>.</dd>
 <dt><code>vcpus</code></dt>
-<dd>The number of virtual cpus to allocate to the domain. In order to use this the xen kernel must be compiled with <font SIZE="-1">SMP</font> support. </dd>
-<p> This defaults to 1, meaning running the domain as a <font SIZE="-1">UP</font>.</dl>
+<dd>The number of virtual cpus to allocate to the domain. In order to use this the xen kernel must be compiled with SMP support. </dd>
+<p> This defaults to 1, meaning running the domain as a UP.</dl>
 <h2>Domain Shutdown Options</h2>
 <p>There are 3 options which control domain shutdown (both planned and unplanned) under certain events. The 3 events currently captured are:</p>
 <dl>
@@ -132,7 +132,7 @@ description: "xmdomain.cfg – xm domain config file format"
 <dt><code>preserve</code></dt>
 <dd>The domain will not be cleaned up at all. This is often useful for crash state domains which ensures that enough evidence is to debug the real issue.</dd>
 <dt><code>rename-restart</code></dt>
-<dd>The old domain will not be cleaned up, but will be renamed so a new domain can be restarted in it&#8217;s place. The old domain will be renamed with a suffix -1, -2, etc, and assigned a new random <font SIZE="-1">UUID</font>; the new domain will keep the original name and <font SIZE="-1">UUID</font>. The old domain will release the devices that it holds, so that the new one may take them.</dd></dl>
+<dd>The old domain will not be cleaned up, but will be renamed so a new domain can be restarted in it&#8217;s place. The old domain will be renamed with a suffix -1, -2, etc, and assigned a new random UUID; the new domain will keep the original name and UUID. The old domain will release the devices that it holds, so that the new one may take them.</dd></dl>
 <p> Additionally, the &#8220;on_crash&#8221; event can also take:</p>
 <dl>
 <dt><code>coredump-destroy</code></dt>
@@ -149,13 +149,13 @@ description: "xmdomain.cfg – xm domain config file format"
  name = &quot;MyLinux&quot; 
  root = &quot;/dev/hda1 ro&quot;
  disk = [ &quot;file:/var/xen/mylinux.img,hda1,w&quot; ]</pre>
-<p>This creates a domain called MyLinux with 128 <font SIZE="-1">MB</font> of memory using a default xen kernel, and the file /var/xen/mylinux.img loopback mounted at hda1, which is the root filesystem.</p>
-</dd><dt><i></i><font SIZE="-1"><i>NFS</i></font><i> Root</i></dt>
-<dd><font SIZE="-1">FIXME:</font> write me</dd>
-<dt><i></i><font SIZE="-1"><i>LVM</i></font><i> Root</i></dt>
-<dd><font SIZE="-1">FIXME:</font> write me</dd>
+<p>This creates a domain called MyLinux with 128 MB of memory using a default xen kernel, and the file /var/xen/mylinux.img loopback mounted at hda1, which is the root filesystem.</p>
+</dd><dt><i></i><i>NFS</i><i> Root</i></dt>
+<dd>FIXME: write me</dd>
+<dt><i></i><i>LVM</i><i> Root</i></dt>
+<dd>FIXME: write me</dd>
 <dt><i>Two Networks</i></dt>
-<dd><font SIZE="-1">FIXME:</font> write me</dd></dl>
+<dd>FIXME: write me</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-xm/">xm</a></code>(1)</p>
 <h2>Author</h2>

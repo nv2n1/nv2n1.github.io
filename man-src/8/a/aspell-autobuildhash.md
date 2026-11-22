@@ -52,4 +52,4 @@ description: "aspell-autobuildhash – Autobuilding aspell hash files for some d
 <p>Agustin Martin &lt;agmartin [at] debian.org&gt;</p>
 <h2>Copyright</h2>
 <p>Copyright (C) 2004-2013 Agustin Martin &lt;agmartin [at] debian.org&gt; </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.</p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.</p>

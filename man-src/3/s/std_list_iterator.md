@@ -13,7 +13,7 @@ description: "std::_List_iterator< _Tp > –"
 <p>typedef <code>_List_node</code>&lt; _Tp &gt; <code>_Node</code> </p>
 <p> typedef <code>_List_iterator</code>&lt; _Tp &gt; <code>_Self</code> </p>
 <p> typedef ptrdiff_t <code>difference_type</code> </p>
-<p> typedef<br />
+<p> typedef<br/>
  <code>std::bidirectional_iterator_tag</code> <code>iterator_category</code>&quot; </p>
 <p> typedef _Tp * <code>pointer</code> </p>
 <p> typedef _Tp &amp; <code>reference</code> </p>

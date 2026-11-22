@@ -56,7 +56,7 @@ description: "kcookiejar4 – KDE HTTP cookie daemon"
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/7-kdeoptions/">kdeoptions</a></i>(7), <i><a href="/docs/linux/man/7-qtoptions/">qtoptions</a></i>(7)</p>
 <h2>Bugs</h2>
-<p>There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[]<font SIZE="-2">[1]</font> to report them.</p>
+<p>There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[][1] to report them.</p>
 <h2>Authors</h2>
 <p><code>Waldo Bastian</code> &lt;bastian [at] kde.org&gt;</p>
 <dl>

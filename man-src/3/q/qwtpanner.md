@@ -18,24 +18,24 @@ description: "QwtPanner –"
 <p> void <code>moved</code> (int dx, int dy) </p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPanner</code> (QWidget *parent) </p>
-<p> virtual <code>~QwtPanner</code> ()<br />
- <i>Destructor. </i><br />
- void <code>setEnabled</code> (bool)<br />
- <i>En/disable the panner. </i><br />
+<p> virtual <code>~QwtPanner</code> ()<br/>
+ <i>Destructor. </i><br/>
+ void <code>setEnabled</code> (bool)<br/>
+ <i>En/disable the panner. </i><br/>
  bool <code>isEnabled</code> () const </p>
 <p> void <code>setMouseButton</code> (Qt::MouseButton, Qt::KeyboardModifiers=Qt::NoModifier) </p>
-<p> void <code>getMouseButton</code> (Qt::MouseButton &amp;button, Qt::KeyboardModifiers &amp;) const<br />
- <i>Get mouse button and modifiers used for panning. </i><br />
+<p> void <code>getMouseButton</code> (Qt::MouseButton &amp;button, Qt::KeyboardModifiers &amp;) const<br/>
+ <i>Get mouse button and modifiers used for panning. </i><br/>
  void <code>setAbortKey</code> (int key, Qt::KeyboardModifiers=Qt::NoModifier) </p>
-<p> void <code>getAbortKey</code> (int &amp;key, Qt::KeyboardModifiers &amp;) const<br />
- <i>Get the abort key and modifiers. </i><br />
+<p> void <code>getAbortKey</code> (int &amp;key, Qt::KeyboardModifiers &amp;) const<br/>
+ <i>Get the abort key and modifiers. </i><br/>
  void <code>setCursor</code> (const QCursor &amp;) </p>
 <p> const QCursor <code>cursor</code> () const </p>
 <p> void <code>setOrientations</code> (Qt::Orientations) </p>
-<p> Qt::Orientations <code>orientations</code> () const<br />
- <i>Return the orientation, where paning is enabled. </i><br />
+<p> Qt::Orientations <code>orientations</code> () const<br/>
+ <i>Return the orientation, where paning is enabled. </i><br/>
  bool <code>isOrientationEnabled</code> (Qt::Orientation) const </p>
-<p> virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br />
+<p> virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br/>
  <i>Event filter. </i></p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>widgetMousePressEvent</code> (QMouseEvent *) </p>
@@ -43,10 +43,10 @@ description: "QwtPanner –"
 <p> virtual void <code>widgetMouseMoveEvent</code> (QMouseEvent *) </p>
 <p> virtual void <code>widgetKeyPressEvent</code> (QKeyEvent *) </p>
 <p> virtual void <code>widgetKeyReleaseEvent</code> (QKeyEvent *) </p>
-<p> virtual void <code>paintEvent</code> (QPaintEvent *)<br />
- <i>Paint event. </i><br />
- virtual QBitmap <code>contentsMask</code> () const<br />
- <i>Calculate a mask for the contents of the panned widget. </i><br />
+<p> virtual void <code>paintEvent</code> (QPaintEvent *)<br/>
+ <i>Paint event. </i><br/>
+ virtual QBitmap <code>contentsMask</code> () const<br/>
+ <i>Calculate a mask for the contents of the panned widget. </i><br/>
  virtual QPixmap <code>grab</code> () const </p>
 <h2>Detailed Description</h2>
 <p><code>QwtPanner</code> provides panning of a widget. </p>
@@ -77,7 +77,7 @@ description: "QwtPanner –"
 <p>Event filter. When <code>isEnabled()</code> is true mouse events of the observed widget are filtered. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>object</i> Object to be filtered<br />
+<dd><i>object</i> Object to be filtered<br/>
  <i>event</i> Event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -109,7 +109,7 @@ description: "QwtPanner –"
 <p>Signal emitted, while the widget moved, but panning is not finished. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dx</i> Offset in horizontal direction<br />
+<dd><i>dx</i> Offset in horizontal direction<br/>
  <i>dy</i> Offset in vertical direction</dd></dl>
 <h3>void QwtPanner::paintEvent (QPaintEvent *pe) [protected], [virtual]</h3>
 <p>Paint event. Repaint the grabbed pixmap on its current position and fill the empty spaces by the background of the parent widget. </p>
@@ -120,13 +120,13 @@ description: "QwtPanner –"
 <p>Signal emitted, when panning is done </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dx</i> Offset in horizontal direction<br />
+<dd><i>dx</i> Offset in horizontal direction<br/>
  <i>dy</i> Offset in vertical direction</dd></dl>
 <h3>void QwtPanner::setAbortKey (intkey, Qt::KeyboardModifiersmodifiers = Qt::NoModifier)</h3>
 <p>Change the abort key The defaults are Qt::Key_Escape and Qt::NoModifiers </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> Key ( See Qt::Keycode )<br />
+<dd><i>key</i> Key ( See Qt::Keycode )<br/>
  <i>modifiers</i> Keyboard modifiers</dd></dl>
 <h3>void QwtPanner::setCursor (const QCursor &amp;cursor)</h3>
 <p>Change the cursor, that is active while panning The default is the cursor of the parent widget. </p>

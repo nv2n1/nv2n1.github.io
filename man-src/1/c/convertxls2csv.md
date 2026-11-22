@@ -34,7 +34,7 @@ xls2csv - A script that recodes a spreadsheet's charset and saves as CSV.
 
 <h2>EXAMPLE USAGE</h2>
 
- The following example will convert a spreadsheet that is in the <font SIZE="-1">WINDOWS-1252</font> character set (WinLatin1) and save it as a csv file in the <font SIZE="-1">UTF-8</font> character set. 
+ The following example will convert a spreadsheet that is in the WINDOWS-1252 character set (WinLatin1) and save it as a csv file in the UTF-8 character set. 
 
  <pre>
         xls2csv -x &quot;1252spreadsheet.xls&quot; -b WINDOWS-1252 -c &quot;ut8csvfile.csv&quot; -a UTF-8
@@ -48,9 +48,9 @@ xls2csv - A script that recodes a spreadsheet's charset and saves as CSV.
 
 <h2>NOTES</h2>
 
- The spreadsheet's charset (-b) will default to <font SIZE="-1">UTF-8</font> if not set. 
+ The spreadsheet's charset (-b) will default to UTF-8 if not set. 
 
- If the csv's charset (-a) is not set, the <font SIZE="-1">CSV</font> file will be created using the same charset as the spreadsheet.
+ If the csv's charset (-a) is not set, the CSV file will be created using the same charset as the spreadsheet.
 
 <h2>REQUIRED MODULES</h2>
 

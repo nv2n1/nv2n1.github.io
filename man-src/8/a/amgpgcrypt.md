@@ -20,8 +20,8 @@ description: "amgpgcrypt – reference crypt program for Amanda public-key data 
 <p> It is very important to store, manage and protect the key and the passphrase properly. Encrypted backup data can <code>only</code> be recovered with the correct key and passphrase.</p>
 <h2>How To Create Encryption Keys And Passphrase For Amgpgcrypt</h2>
 <p>Store the passphrase that you used in following &quot;gpg &#8211;gen-key&quot; command inside the home-directory of the AMANDA-user($amanda_user) and protect it with proper permissions: </p>
-<p>echo my_secret_passphrase&nbsp;<wbr>&gt;&nbsp;<wbr>~$amanda_user/.am_passphrase<br />
-chown&nbsp;<wbr>$amanda_user:disk&nbsp;<wbr>~$amanda_user/.am_passphrase<br />
+<p>echo my_secret_passphrase&nbsp;<wbr>&gt;&nbsp;<wbr>~$amanda_user/.am_passphrase<br/>
+chown&nbsp;<wbr>$amanda_user:disk&nbsp;<wbr>~$amanda_user/.am_passphrase<br/>
 chmod 700&nbsp;<wbr>~$amanda_user/.am_passphrase </p>
 <p> Run &quot;gpg &#8211;gen-key&quot;. Below is an example: </p>
 <pre>$ gpg --gen-key

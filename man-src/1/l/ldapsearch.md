@@ -39,7 +39,7 @@ description: "ldapsearch – LDAP search tool"
 <dt><code>-A</code></dt>
 <dd> Retrieve attributes only (no values). This is useful when you just want to see if an attribute is present in an entry and are not interested in the specific values.</dd>
 <dt><code>-L</code></dt>
-<dd> Search results are display in LDAP Data Interchange Format detailed in <code><a href="/docs/linux/man/5-ldif/">ldif</a></code>(5). A single <code>-L</code> restricts the output to LDIFv1.<br />
+<dd> Search results are display in LDAP Data Interchange Format detailed in <code><a href="/docs/linux/man/5-ldif/">ldif</a></code>(5). A single <code>-L</code> restricts the output to LDIFv1.<br/>
 &nbsp;<wbr>A second&nbsp;<wbr><code>-L</code>&nbsp;<wbr>disables comments. A third <code>-L</code> disables printing of the LDIF version. The default is to use an extended version of LDIF.</dd>
 <dt><code>-S</code><i>&nbsp;<wbr>attribute</i></dt>
 <dd> Sort the entries returned based on <i>attribute</i>. The default is not to sort entries returned. If <i>attribute</i> is a zero-length string (&quot;&quot;), the entries are sorted by the components of their Distinguished Name. See <code><a href="/docs/linux/man/3-ldap_sort/">ldap_sort</a></code>(3) for more details. Note that <code>ldapsearch</code> normally prints out entries as it receives them. The use of the <code>-S</code> option defeats this behavior, causing all entries to be retrieved, then sorted, then printed.</dd>
@@ -95,18 +95,18 @@ description: "ldapsearch – LDAP search tool"
                                                 abandon,
     cancel, ignore(SIGINT sends abandon / cancel, or ignores response; if critical, doesn't wait for SIGINT. not really controls)
 </code></pre>
-<p> Search extensions:<br />
-!dontUseCopy<br />
-    [!] domainScope(domain scope)<br />
-        [!] mv = &lt;filter&gt;(matched values filter)<br />
-    [!] pr = &lt;size&gt;[/ prompt | noprompt](paged results / prompt)<br />
-        [!] sss = [-]&lt;attr[:OID]&gt;[/[-]&lt;attr[:OID]&gt;&#8230;](server side sorting)<br />
-            [!] subentries[= true | false](subentries)<br />
-                [!] sync = ro[/&lt;cookie&gt;](LDAP Sync refreshOnly)<br />
-                    rp[/&lt;cookie&gt;][/&lt;slimit&gt;](LDAP Sync refreshAndPersist)<br />
-                        [!] vlv = &lt;before&gt; / &lt;after&gt;(/ &lt;offset&gt; / &lt;count&gt; |<br />
-                                                     : &lt;value&gt;)(virtual list view)<br />
-                                                 [!] deref = derefAttr : attr[, attr[&#8230;]] [; derefAttr:attr[, attr[&#8230;]]]<br />
+<p> Search extensions:<br/>
+!dontUseCopy<br/>
+    [!] domainScope(domain scope)<br/>
+        [!] mv = &lt;filter&gt;(matched values filter)<br/>
+    [!] pr = &lt;size&gt;[/ prompt | noprompt](paged results / prompt)<br/>
+        [!] sss = [-]&lt;attr[:OID]&gt;[/[-]&lt;attr[:OID]&gt;&#8230;](server side sorting)<br/>
+            [!] subentries[= true | false](subentries)<br/>
+                [!] sync = ro[/&lt;cookie&gt;](LDAP Sync refreshOnly)<br/>
+                    rp[/&lt;cookie&gt;][/&lt;slimit&gt;](LDAP Sync refreshAndPersist)<br/>
+                        [!] vlv = &lt;before&gt; / &lt;after&gt;(/ &lt;offset&gt; / &lt;count&gt; |<br/>
+                                                     : &lt;value&gt;)(virtual list view)<br/>
+                                                 [!] deref = derefAttr : attr[, attr[&#8230;]] [; derefAttr:attr[, attr[&#8230;]]]<br/>
                                                                              [!]&lt;oid&gt;[=&lt;value&gt;]</p>
 </dd><dt><code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]</dt>
 <dd>

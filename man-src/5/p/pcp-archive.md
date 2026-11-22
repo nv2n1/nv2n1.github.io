@@ -440,7 +440,7 @@ description: "pcp-archive – Archive Files for Performance Co-Pilot"
 </table>
 <p></center></p>
 <h3>pmLogIndom</h3>
-<p>Instances of this record represent the number-string mapping table of an instance domain. The instance domain number will have already been mentioned in a prior <i>pmDesc</i> record. Since new instances may appear over a long archiving run, these records are timestamped, and must be searched when decoding <i>pmResult</i> records from the main archive volumes. Instance names may be reused between instance numbers, so an offset-based string table is used that could permit sharing.<br />
+<p>Instances of this record represent the number-string mapping table of an instance domain. The instance domain number will have already been mentioned in a prior <i>pmDesc</i> record. Since new instances may appear over a long archiving run, these records are timestamped, and must be searched when decoding <i>pmResult</i> records from the main archive volumes. Instance names may be reused between instance numbers, so an offset-based string table is used that could permit sharing.<br/>
 &nbsp;<wbr> <center></p>
 <table BORDER>
 <tr>
@@ -538,7 +538,7 @@ description: "pcp-archive – Archive Files for Performance Co-Pilot"
 </table>
 </table>
 <p></center> </p>
-<p> Records of this form <i>replace</i> the existing instance-domain: prior records are not searched for resolving instance numbers in measurements after this timestamp.<br />
+<p> Records of this form <i>replace</i> the existing instance-domain: prior records are not searched for resolving instance numbers in measurements after this timestamp.<br/>
 &nbsp;<wbr></p>
 <h2>INDEX FILE (.index) RECORDS</h2>
 <p>After the archive log label record, the temporal index file contains a plainly concatenated, unframed group of tuples, which relate timestamps to 32-bit seek offsets in the volume and meta files. (This limits those files to 2GB in size.) These records are fixed-size, fixed-format, and are <i>not</i> enclosed in the standard length/payload/length wrapper: they just take up the entire remainder of the .index file. See also <i>src/libpcp/src/logutil.c</i>. </p>

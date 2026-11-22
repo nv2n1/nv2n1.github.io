@@ -65,7 +65,7 @@ description: "/etc/yaws/yaws.conf – Configuration file for the Yaws web server
 <dt><code>acceptor_pool_size = Integer</code></dt>
 <dd>Set the size of the pool of cached acceptor processes. The specified value must be greater than or equal to 0. The default value is <i>8</i>. Specifying a value of 0 effectively disables the process pool. </dd>
 <dt><code>log_wrap_size = Integer</code></dt>
-<dd>The logs written by Yaws are all wrap logs, the default value at the size where they wrap around and the original gets renamed to File.old is <i>1000000</i>, 1 megabyte. This value can be changed.<br />
+<dd>The logs written by Yaws are all wrap logs, the default value at the size where they wrap around and the original gets renamed to File.old is <i>1000000</i>, 1 megabyte. This value can be changed.<br/>
  If we set the value to 0 the logs will never wrap. If we want to use Yaws in combination with a more traditional log wrapper such as logrotate, set the size to 0 and Yaws will reopen the logfiles once they have be renamed/removed. </dd>
 <dt><code>log_resolve_hostname = true | false</code></dt>
 <dd>By default the client host IP is not resolved in the access logs. </dd>
@@ -78,7 +78,7 @@ description: "/etc/yaws/yaws.conf – Configuration file for the Yaws web server
 <p> For example, we can specify </p>
 <pre> soap_srv_mods=&lt;Mod1, Handler, Wsdl1&gt; &lt;Mod2, Handler, Wsdl2, Prefix&gt; ...</pre>
 <dt><code>php_exe_path = Path</code></dt>
-<dd><code>this target is deprecated and useless. use &#8216;php_handler&#8217; target in server part instead.</code><br />
+<dd><code>this target is deprecated and useless. use &#8216;php_handler&#8217; target in server part instead.</code><br/>
  The name of (and possibly path to) the php executable used to interpret php scripts (if allowed). Default is <i>php_exe_path = php-cgi</i>. </dd>
 <dt><code>copy_error_log = true | false</code></dt>
 <dd>Enable or disable copying of the error log. When we run in embedded mode, there may very well be some other systems process that is responsible for writing the errorlog to a file whereas when we run in normal standalone mode, we typically want the Erlang errorlog written to a report.log file. Default value is <i>true</i>. </dd>
@@ -148,7 +148,7 @@ description: "/etc/yaws/yaws.conf – Configuration file for the Yaws web server
 <dt><code>access_log = true | false</code></dt>
 <dd>Setting this directive to false turns of traffic logging for this virtual server. The default value is <i>true</i>. </dd>
 <dt><code>logger_mod = Module</code></dt>
-<dd>It is possible to set a special module that handles access and auth logging. The default is to log all web server traffic to &lt;Host&gt;.access and &lt;Host&gt;.auth files in the configured or default logdir.<br />
+<dd>It is possible to set a special module that handles access and auth logging. The default is to log all web server traffic to &lt;Host&gt;.access and &lt;Host&gt;.auth files in the configured or default logdir.<br/>
  This module must implement the behaviour <i>yaws_logger</i>. Default value is <i>yaws_log</i>. </dd>
 <p> The following functions should be exported: </p>
 <p> <code>Module:open_log(ServerName, Type, LogDir)</code></p>
@@ -219,7 +219,7 @@ description: "/etc/yaws/yaws.conf – Configuration file for the Yaws web server
  mime_types = application/xml application/xhtml+xml application/rss+xml</pre>
 <p>By default, following MIME types are compressed (if <code>deflate</code> is set to true): <i>text/*, application/rtf, application/msword, application/pdf, application/x-dvi, application/javascript, application/x-javascript</i>. Multiple <code>mime_types</code> directive can be used.</dl>
 <dt><code>docroot = Directory &#8230;</code></dt>
-<dd>This makes the server serve all its content from Directory.<br />
+<dd>This makes the server serve all its content from Directory.<br/>
  It is possible to pass a space-separated list of directories as docroot. If this is the case, the various directories will be searched in order for the requested file. This also works with the ssi and yssi constructs where the full list of directories will be searched for files to ssi/yssi include. Multiple docroot directives can be used. You need at least one valid docroot, invalid docroots are skipped with their associated auth structures. </dd>
 <dt><code>auth_skip_docroot = true | false</code></dt>
 <dd>If true, the docroot will not be searched for <i>.yaws_auth</i> files. This is useful when the docroot is quite large and the time to search it is prohibitive when Yaws starts up. Defaults to <i>false</i>. </dd>
@@ -239,7 +239,7 @@ description: "/etc/yaws/yaws.conf – Configuration file for the Yaws web server
 <dt><code>appmods = ListOfModuleNames</code></dt>
 <dd>If any the names in ListOfModuleNames appear as components in the path for a request, the path request parsing will terminate and that module will be called. There is also an alternate syntax for specifying the appmods if we don&#8217;t want our internal erlang module names to be exposed in the URL paths. We can specify </dd>
 <pre> appmods = &lt;Path1, Module1&gt; &lt;Path2, Modules2&gt; ...</pre>
-<p>Assume for example that we have the URL <a rel="nofollow" href="http://www.hyber.org/myapp/foo/bar/baz?user=joe">http://www.hyber.org/myapp/foo/bar/baz?user=joe</a> while we have the module foo defined as an appmod, the function foo:out(Arg) will be invoked instead of searching the filesystems below the point foo.<br />
+<p>Assume for example that we have the URL <a rel="nofollow" href="http://www.hyber.org/myapp/foo/bar/baz?user=joe">http://www.hyber.org/myapp/foo/bar/baz?user=joe</a> while we have the module foo defined as an appmod, the function foo:out(Arg) will be invoked instead of searching the filesystems below the point foo.<br/>
  The Arg argument will have the missing path part supplied in its appmoddata field. </p>
 <p> It is also possible to exclude certain directories from appmod processing. This is particulaly interesting for &#8216;/&#8217; appmods. Here is an example: </p>
 <pre> appmods = &lt;/, myapp exclude_paths icons js top/static&gt;</pre>
@@ -266,8 +266,8 @@ description: "/etc/yaws/yaws.conf – Configuration file for the Yaws web server
 <p> <code>Realm</code> &#8211; a string</dl>
 <dd>The function can and must do the same things that a normal <i>out/1</i> does. </dd>
 <dt><code>errormod_crash = Module</code></dt>
-<dd>It is possible to set a special module that handles the HTML generation of server crash messages. The default is to display the entire formated crash message in the browser. This is good for debugging but not in production.<br />
- The function <i>Module:crashmsg(Arg, SC, Str)</i> will be called. The <i>Str</i> is the real crash message formated as a string.<br />
+<dd>It is possible to set a special module that handles the HTML generation of server crash messages. The default is to display the entire formated crash message in the browser. This is good for debugging but not in production.<br/>
+ The function <i>Module:crashmsg(Arg, SC, Str)</i> will be called. The <i>Str</i> is the real crash message formated as a string.<br/>
  The function must return, <i>{content,MimeType,Cont}</i> or <i>{html, Str}</i> or <i>{ehtml, Term}</i>. That data will be shipped to the client. </dd>
 <dt><code>expires = ListOfExpires</code></dt>
 <dd>Controls the setting of the <i>Expires</i> HTTP header and the <i>max-age</i> directive of the <i>Cache-Control</i> HTTP header in server responses for specific MIME types. The expiration date can set to be relative to either the time the source file was last modified, or to the time of the client access. ListOfExpires is defined as follows: </dd>
@@ -276,7 +276,7 @@ description: "/etc/yaws/yaws.conf – Configuration file for the Yaws web server
 <pre> expires = &lt;image/gif, access+2592000&gt; &lt;image/png, access+2592000&gt;
  expires = &lt;image/jpeg, access+2592000&gt; &lt;text/css, access+2592000&gt;</pre>
 <dt><code>arg_rewrite_mod = Module</code></dt>
-<dd>It is possible to install a module that rewrites all the Arg #arg{} records at an early stage in the Yaws server. This can be used to do various things such as checking a cookie, rewriting paths etc.<br />
+<dd>It is possible to install a module that rewrites all the Arg #arg{} records at an early stage in the Yaws server. This can be used to do various things such as checking a cookie, rewriting paths etc.<br/>
  The module <i>yaws_vdir</i> can be used in case you want to serve static content that is not located in your docroot. See the example at the bottom of this man page for how to use the <i>opaque</i> + <i>vdir</i> elements to instruct the <i>yaws_vdir</i> module what paths to rewrite. </dd>
 <dt><code>start_mod = Module</code></dt>
 <dd>Defines a user provided callback module. At startup of the server, Module:start/1 will be called. The #sconf{} record (defined in yaws.hrl) will be used as the input argument. This makes it possible for a user application to synchronize the startup with the Yaws server as well as getting hold of user specific configuration data, see the explanation for the &lt;opaque&gt; context. </dd>
@@ -303,7 +303,7 @@ description: "/etc/yaws/yaws.conf – Configuration file for the Yaws web server
 <dt><code>serveralias = ListOfNames</code></dt>
 <dd>This directive sets the alternate names for a virtual host. A server alias may contain wildcards:</dd>
 <dl>
-<dd>&nbsp;<wbr>&#8216;*&#8217;&nbsp;<wbr>matches any sequence of zero or more characters<br />
+<dd>&nbsp;<wbr>&#8216;*&#8217;&nbsp;<wbr>matches any sequence of zero or more characters<br/>
 &nbsp;<wbr>&#8216;?&#8217;&nbsp;<wbr>matches one character unless that character is a period&nbsp;<wbr>(&#8216;.&#8217;)</dd></dl>
 <dd>Multiple <code>serveralias</code> directives may be used. Here is an example: </dd>
 <pre> &lt;server server.domain.com&gt;
@@ -320,15 +320,15 @@ description: "/etc/yaws/yaws.conf – Configuration file for the Yaws web server
 <pre> php5-cgi -b '127.0.0.1:54321'</pre>
 <p>This starts a php5 in fastcgi mode listening on the local network interface. To make use of this PHP server from Yaws, specify: </p>
 <pre> php_handler = &lt;fcgi, 127.0.0.1:54321&gt;</pre>
-<p>The PHP interpreter needs read access to the files it is to serve. Thus, if you run it in a different security context than Yaws itself, make sure it has access to the .php files.<br />
+<p>The PHP interpreter needs read access to the files it is to serve. Thus, if you run it in a different security context than Yaws itself, make sure it has access to the .php files.<br/>
  Please note that anyone who is able to connect to the php fastcgi server directly can use it to read any file to which it has read access. You should consider this when setting up a system with several mutually untrusted instances of php.</dl>
 <dd><code>php_handler = &lt;extern, Module:Function | Node:Module:Function&gt;</code> &#8211; Use an external handler, possibly on another node, to interpret .php files (if allowed). </dd>
 <dl>
-<dd>To interpret a .php file, the function <i>Module:Function(Arg)</i> will be invoked (Evaluated inside a rpc call if a <i>Node</i> is specified), where Arg is a #arg{} record.<br />
+<dd>To interpret a .php file, the function <i>Module:Function(Arg)</i> will be invoked (Evaluated inside a rpc call if a <i>Node</i> is specified), where Arg is a #arg{} record.<br/>
  The function must do the same things that a normal out/1 does.</dd></dl>
 <dd>Default value is <i>&lt;cgi, &quot;/usr/bin/php-cgi&quot;&gt;</i>. </dd>
 <dt><code>phpfcgi = Host:Port</code></dt>
-<dd><code>this target is deprecated. use &#8216;php_handler&#8217; target in server part instead.</code><br />
+<dd><code>this target is deprecated. use &#8216;php_handler&#8217; target in server part instead.</code><br/>
  Use this directive is same as: php_handler = &lt;fcgi, Host:Port&gt;. </dd>
 <dt><code>default_type = MimeType</code></dt>
 <dd>Overloads the global <code>default_type</code> value for this virtual server.</dd>

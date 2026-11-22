@@ -68,18 +68,18 @@ Protected Member Functions</code></pre>
 <p> void <code>get_directory</code> () </p>
 <p> int <code>directory_location</code> () const </p>
 <p> void <code>find_and_get_directory</code> () </p>
-<p> virtual int <code>getobject</code> (<code>Ref</code>&lt; <code>SavableState</code> &gt; &amp;)<br />
- <i>This is used to restore an object. </i><br />
- virtual int <code>dir_getobject</code> (<code>Ref</code>&lt; <code>SavableState</code> &gt; &amp;, const char *name)<br />
- <i>This restores objects that are listed in the directory. </i><br />
- virtual void <code>haveobject</code> (int, const <code>Ref</code>&lt; <code>SavableState</code> &gt; &amp;)<br />
- <i>When storage has been allocated during object restoration, this routine is called with the object reference number and the pointer to the new storage so getpointer can find the data if it is referenced again. </i><br />
- virtual void <code>nextobject</code> (int)<br />
- <i>A call to nextobject followed by havepointer(int) is equiv to havepointer(int,void**);. </i><br />
+<p> virtual int <code>getobject</code> (<code>Ref</code>&lt; <code>SavableState</code> &gt; &amp;)<br/>
+ <i>This is used to restore an object. </i><br/>
+ virtual int <code>dir_getobject</code> (<code>Ref</code>&lt; <code>SavableState</code> &gt; &amp;, const char *name)<br/>
+ <i>This restores objects that are listed in the directory. </i><br/>
+ virtual void <code>haveobject</code> (int, const <code>Ref</code>&lt; <code>SavableState</code> &gt; &amp;)<br/>
+ <i>When storage has been allocated during object restoration, this routine is called with the object reference number and the pointer to the new storage so getpointer can find the data if it is referenced again. </i><br/>
+ virtual void <code>nextobject</code> (int)<br/>
+ <i>A call to nextobject followed by havepointer(int) is equiv to havepointer(int,void**);. </i><br/>
  virtual void <code>haveobject</code> (const <code>Ref</code>&lt; <code>SavableState</code> &gt; &amp;) </p>
 <p> void <code>have_classdesc</code> () </p>
 <p> int <code>need_classdesc</code> () </p>
-<p> virtual int <code>get</code> (const <code>ClassDesc</code> **)<br />
+<p> virtual int <code>get</code> (const <code>ClassDesc</code> **)<br/>
  <i>This restores ClassDesc&#8217;s. </i></p>
 <h3>Protected Attributes</h3>
 <p><code>Ref</code>&lt; <code>KeyVal</code> &gt; <code>override_</code> </p>

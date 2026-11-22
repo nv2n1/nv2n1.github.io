@@ -9,8 +9,8 @@ description: "pmiUseContext – change LOGIMPORT context"
 
 <p><code>pmiUseContext</code> &#8211; change LOGIMPORT context</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/import.h&gt; </p>
 <p> int pmiUseContext(int </code><i>context</i>); </p>
 <p> cc &#8230; -lpcp_import -lpcp</p>

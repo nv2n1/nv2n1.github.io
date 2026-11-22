@@ -10,8 +10,8 @@ description: "html2text – an advanced HTML-to-text converter"
 
 <p> html2text &#8211; an advanced HTML-to-text converter </p>
 <h2>SYNOPSIS</h2>
-<p> <code>html2text -help</code><br />
- <code>html2text -version</code><br />
+<p> <code>html2text -help</code><br/>
+ <code>html2text -version</code><br/>
  <code>html2text</code> [ <code>-unparse</code> | <code>-check</code> ] [ <code>-debug-scanner</code> ] [ <code>-debug-parser</code> ] [ <code>-rcfile</code> <i>path</i> ] [ <code>-style</code> ( <code>compact</code> | <code>pretty</code> ) ] [ <code>-width</code> <i>width</i> ] [ <code>-o</code> <i>output-file</i> ] [ <code>-nobs</code> ] [ <code>-ascii</code> | <code>-utf8</code> ] [ <code>-nometa</code> ] [ <i>input-file</i> &#8230; ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>html2text</code> reads HTML documents from the <i>input-file</i>s, formats each of them into a stream of plain text characters, and writes the result to standard output (or into <i>output-file</i>, if the <code>-o</code> command line option is used). </p>
@@ -62,8 +62,8 @@ description: "html2text – an advanced HTML-to-text converter"
 <p> <code>html2text</code> was written to convert HTML 3.2 documents. When using it with HTML 4 or even XHTML 1 documents, some constructs present only in these HTML versions might not be rendered.</p>
 <h2>AUTHOR</h2>
 <p> <code>html2text</code> was written up to version 1.2.2 by Arno Unkrig &lt;arno [at] unkrig.de&gt; for GMRS Software GmbH, Unterschleissheim. </p>
-<p> Current maintainer and primary download location is:<br />
- Martin Bayer &lt;mail [at] mbayer.de&gt;<br />
+<p> Current maintainer and primary download location is:<br/>
+ Martin Bayer &lt;mail [at] mbayer.de&gt;<br/>
  <a rel="nofollow" href="http://www.mbayer.de/html2text/files.shtml">http://www.mbayer.de/html2text/files.shtml</a> </p>
 <p> This man page was modified for Debian by Eugene V. Lyubimkin &lt;jackyf.devel [at] gmail.com&gt;</p>
 <h2>SEE ALSO</h2>

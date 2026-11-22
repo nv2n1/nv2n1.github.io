@@ -140,13 +140,13 @@ description: "httpd_sys_script_selinux – Security Enhanced Linux Policy for th
 <dl>
 <dt>Allow httpd_sys_script servers to read the /var/httpd_sys_script directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_t &quot;/var/httpd_sys_script(/.*)?&quot;</code><br />
+<p> <code>semanage fcontext -a -t public_content_t &quot;/var/httpd_sys_script(/.*)?&quot;</code><br/>
  <code>restorecon -F -R -v /var/httpd_sys_script</code></p>
 <dl>
 <dt>Allow httpd_sys_script servers to read and write /var/httpd_sys_script/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the httpd_sys_script_anon_write boolean.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/httpd_sys_script/incoming(/.*)?&quot;</code><br />
- <code>restorecon -F -R -v /var/httpd_sys_script/incoming</code><br />
+<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/httpd_sys_script/incoming(/.*)?&quot;</code><br/>
+ <code>restorecon -F -R -v /var/httpd_sys_script/incoming</code><br/>
  <code>setsebool -P httpd_sys_script_anon_write 1</code> </p>
 <p> If you want to allow apache scripts to write to public content, directories/files must be labeled public_rw_content_t., you must turn on the httpd_sys_script_anon_write boolean. </p>
 <p> <code>setsebool -P httpd_sys_script_anon_write 1</code></p>

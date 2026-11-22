@@ -35,11 +35,11 @@ description: "sane-ma1509 – SANE backend for Mustek BearPaw 1200F USB scanner"
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-gt68xx/">sane-gt68xx</a></code>(5), <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_usb/">sane-mustek_usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek/">sane-mustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_pp/">sane-mustek_pp</a></code>(5),<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-gt68xx/">sane-gt68xx</a></code>(5), <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_usb/">sane-mustek_usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek/">sane-mustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_pp/">sane-mustek_pp</a></code>(5),<br/>
  <i><a rel="nofollow" href="http://www.meier-geinitz.de/sane/ma1509-backend/">http://www.meier-geinitz.de/sane/ma1509-backend/</a></i> </p>
 <h2>Author</h2>
 <p>Henning Meier-Geinitz &lt;<i>henning [at] meier-geinitz.de</i>&gt;</p>
 <h2>Bugs</h2>
-<p>Resolutions higher than 600 dpi don&#8217;t work<br />
- Transparency adapter and automatic document feeder is not supported yet<br />
+<p>Resolutions higher than 600 dpi don&#8217;t work<br/>
+ Transparency adapter and automatic document feeder is not supported yet<br/>
  No support for &quot;high-speed&quot; mode (jpeg) More detailed bug information is available at the MA-1509 backend homepage <i><a rel="nofollow" href="http://www.meier-geinitz.de/sane/ma1509-backend/">http://www.meier-geinitz.de/sane/ma1509-backend/</a></i>. </p>

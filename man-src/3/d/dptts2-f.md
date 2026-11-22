@@ -10,7 +10,7 @@ description: "dptts2.f –"
 <p>dptts2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dptts2</code> (N, NRHS, D, E, B, LDB)<br />
+<p>subroutine <code>dptts2</code> (N, NRHS, D, E, B, LDB)<br/>
  <i></i><code>DPTTS2</code> solves a tridiagonal system of the form AX=B using the L D LH factorization computed by spttrf.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dptts2 (integerN, integerNRHS, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( ldb, * )B, integerLDB)</h3>

@@ -10,7 +10,7 @@ description: "XkbSetAccessXTimeout – Configures the AccessXTimeout options for
 <p>XkbSetAccessXTimeout &#8211; Configures the AccessXTimeout options for a keyboard device </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbSetAccessXTimeout</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned short </code><i>timeout</i><code>,</code> <code>unsigned int </code><i>ctrls_mask</i><code>,</code> <code>unsigned int </code><i>ctrls_values</i><code>,</code> <code>unsigned short </code><i>opts_mask</i><code>,</code> <code>unsigned short </code><i>opts_values</i><code>);</code><br />
+<dt> <code>Bool XkbSetAccessXTimeout</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned short </code><i>timeout</i><code>,</code> <code>unsigned int </code><i>ctrls_mask</i><code>,</code> <code>unsigned int </code><i>ctrls_values</i><code>,</code> <code>unsigned short </code><i>opts_mask</i><code>,</code> <code>unsigned short </code><i>opts_values</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
@@ -32,7 +32,7 @@ description: "XkbSetAccessXTimeout – Configures the AccessXTimeout options for
 <h2>Description</h2>
 <p>In environments where computers are shared, features such as SlowKeys present a problem: if SlowKeys is on, the keyboard can appear to be unresponsive because keys are not accepted until they are held for a certain period of time. To help solve this problem, Xkb provides an AccessXTimeout control to automatically change the enabled/disabled state of any boolean controls and to change the value of the AccessXKeys and AccessXFeedback control attributes if the keyboard is idle for a specified period of time. </p>
 <p> When a timeout as specified by AccessXTimeout occurs and a control is consequently modified, Xkb generates an XkbControlsNotify event. For more information on XkbControlsNotify events. </p>
-<p> <i>timeout </i> specifies the number of seconds the keyboard must be idle before the controls are modified. <i>ctrls_mask </i> specifies what controls are to be enabled or disabled, and <i>ctrls_values </i> specifies whether those controls are to be enabled or disabled. The bit values correspond to those for enabling and disabling boolean controls using <i>XkbChangeEnabledControls.</i><br />
+<p> <i>timeout </i> specifies the number of seconds the keyboard must be idle before the controls are modified. <i>ctrls_mask </i> specifies what controls are to be enabled or disabled, and <i>ctrls_values </i> specifies whether those controls are to be enabled or disabled. The bit values correspond to those for enabling and disabling boolean controls using <i>XkbChangeEnabledControls.</i><br/>
 &nbsp;The&nbsp; <i>opts_mask </i> field specifies which attributes of the AccessXKeys and AccessXFeedback controls are to be changed, and <i>opts_values </i> specifies the new values for those options. The bit values correspond to those for the <i>ax_options </i> field of an XkbDescRec. </p>
 <p> <i>XkbSetAccessXTimeout </i> sends a request to configure the AccessXTimeout control to the server. It does not wait for a reply, and normally returns True. If a compatible version of the Xkb extension is not available in the server, <i>XkbSetAccessXTimeout </i> returns False.</p>
 <h2>Return Values</h2>

@@ -19,5 +19,5 @@ description: "XExtentsOfFontSet – obtain the maximum extents structure for a f
 <p>The <code>XExtentsOfFontSet</code> function returns an <code>XFontSetExtents</code> structure for the fonts used by the Xmb and Xwc layers for the given font set. </p>
 <p> The <code>XFontSetExtents</code> structure is owned by Xlib and should not be modified or freed by the client. It will be freed by a call to <code>XFreeFontSet</code> with the associated <code>XFontSet</code>. Until freed, its contents will not be modified by Xlib.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcreatefontset/">XCreateFontSet</a>(3), <a href="/docs/linux/man/3-xfontsoffontset/">XFontsOfFontSet</a>(3), <a href="/docs/linux/man/3-xfontsetextents/">XFontSetExtents</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcreatefontset/">XCreateFontSet</a>(3), <a href="/docs/linux/man/3-xfontsoffontset/">XFontsOfFontSet</a>(3), <a href="/docs/linux/man/3-xfontsetextents/">XFontSetExtents</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

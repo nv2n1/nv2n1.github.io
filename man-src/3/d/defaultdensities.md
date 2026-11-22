@@ -14,7 +14,7 @@ description: "QuantLib::InterpolatedDefaultDensityCurve – interpolated default
 <h3>Public Member Functions</h3>
 <p><code>InterpolatedDefaultDensityCurve</code> (const std::vector&lt; <code>Date</code> &gt; &amp;dates, const std::vector&lt; <code>Real</code> &gt; &amp;densities, const <code>DayCounter</code> &amp;dayCounter, const <code>Calendar</code> &amp;calendar=<code>Calendar</code>(), const Interpolator &amp;interpolator=Interpolator()) </p>
 <p> <code>TermStructure interface</code> </p>
-<p> <code>Date</code> <code>maxDate</code> () const<br />
+<p> <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i> </p>
 <p> <code>other inspectors</code> </p>
 <p> const std::vector&lt; Time &gt; &amp; <code>times</code> () const </p>
@@ -25,9 +25,9 @@ description: "QuantLib::InterpolatedDefaultDensityCurve – interpolated default
 <p><code>InterpolatedDefaultDensityCurve</code> (const <code>DayCounter</code> &amp;, const Interpolator &amp;interpolator=Interpolator()) </p>
 <p> <code>InterpolatedDefaultDensityCurve</code> (const <code>Date</code> &amp;referenceDate, const <code>DayCounter</code> &amp;, const Interpolator &amp;interpolator=Interpolator()) </p>
 <p> <code>InterpolatedDefaultDensityCurve</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, const <code>DayCounter</code> &amp;, const Interpolator &amp;interpolator=Interpolator()) </p>
-<p> <code>Real</code> <code>defaultDensityImpl</code> (Time) const<br />
- <i>instantaneous default density at a given time </i><br />
- Probability <code>survivalProbabilityImpl</code> (Time) const<br />
+<p> <code>Real</code> <code>defaultDensityImpl</code> (Time) const<br/>
+ <i>instantaneous default density at a given time </i><br/>
+ Probability <code>survivalProbabilityImpl</code> (Time) const<br/>
  <i>probability of survival between today (t = 0) and a given time </i></p>
 <h3>Protected Attributes</h3>
 <p>std::vector&lt; <code>Date</code> &gt; <code>dates_</code> </p>

@@ -35,7 +35,7 @@ description: "sane-scsi – SCSI adapter tips for scanners"
 <p> On some platforms (e.g., OpenStep), SANE device names take a special form. This is explained below in the relevant platform-specific section. </p>
 <p> When using a SCSI scanner, ensure that the access permission for the generic SCSI device is set appropriately. We recommend to add a group &quot;scanner&quot; to <i>/etc/group</i> which contains all users that should have access to the scanner. The permission of the device should then be set to allow group read and write access. For example, if the scanner is at generic SCSI device <i>/dev/sg0</i>, then the following two commands would set the permission correctly: </p>
 <dl>
-<dd>$ chgrp scanner /dev/sg0<br />
+<dd>$ chgrp scanner /dev/sg0<br/>
  $ chmod 660 /dev/sg0
 </dd></dl>
 <p> When your system uses the device filesystem (devfs), you have to edit <i>/etc/devfs/perms.</i> There you should search the line </p>
@@ -83,7 +83,7 @@ description: "sane-scsi – SCSI adapter tips for scanners"
 <dt>NCR/Symbios 53c400/53c400a or Domex DTC3181E/L/LE (DTCT436/436P) ISA SCSI card</dt>
 <dd>This card is supplied by Mustek (and other vendors). It&#8217;s supported since Linux 2.2. The SCSI cards are supported by the module g_NCR5380. It&#8217;s necessary to tell the kernel the io port and type of card. Example for a 53c400a: <i>modprobe g_NCR5380 ncr_addr=0x280 ncr_53c400a=1 .</i> Once the kernel detects the card, it should work all right. However, while it should work, do not expect good performance out of this card&#8212;it has no interrupt line and therefore while a scan is in progress, the system becomes almost unusable. You may change the values of the USLEEP macros in <i>drivers/scsi/g_NCR5380.c</i>. Some documentation is in this file and <i>NCR5380.c</i>.</dd>
 <dt>NCR/Symbios 810</dt>
-<dd>For some scanners it may be necessary to disable disconnect/reconnect. To achieve this use the option ncr53c8xx=&quot;disc:n&quot;. Some people reported that their scanner only worked with the 53c7,8xx driver, not the ncr53c8xx. Try both if you have trouble.<br />
+<dd>For some scanners it may be necessary to disable disconnect/reconnect. To achieve this use the option ncr53c8xx=&quot;disc:n&quot;. Some people reported that their scanner only worked with the 53c7,8xx driver, not the ncr53c8xx. Try both if you have trouble.<br/>
  For Linux kernels before 2.0.33 it may be necessary to increase the SCSI timeout. The default timeout for the Linux kernels before 2.0.33 is 10 seconds, which is way too low when scanning large area. If you get messages of the form &#8220;restart (ncr dead ?)&#8221; in your <i>/var/log/messages</i> file or on the system console, it&#8217;s an indication that the timeout is too short. In this case, find the line &#8220;if (np-&gt;latetime&gt;10)&#8221; in file <i>ncr53c8xx.</i> (normally in directory <i>/usr/src/linux/drivers/scsi</i>) and change the constant 10 to, say, 60 (one minute). Then rebuild the kernel/module and try again.</dd>
 <dt>Tekram DC315</dt>
 <dd>The driver can be downloaded from <i><a rel="nofollow" href="http://www.garloff.de/kurt/linux/dc395/">http://www.garloff.de/kurt/linux/dc395/</a></i>. For some older scanners it may be necessary to disable all the more advanced features by using e.g. <i>modprobe dc395x_trm dc395x_trm=7,5,1,32</i>.</dd>

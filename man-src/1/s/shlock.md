@@ -12,20 +12,20 @@ description: "shlock – Create lock files for use in shell scripts"
 <h2>SYNOPSIS</h2>
 <p> <code>shlock</code> [<code>-b</code>|<code>-c</code>|<code>-u</code>] <code>-f</code> <i>name</i> <code>-p</code> <i>pid</i></p>
 <h2>DESCRIPTION</h2>
-<p> <code>shlock</code> tries to create a lock file named <i>name</i> and write the process <font SIZE="-1">ID</font> <i>pid</i> into it. If the file already exists, <code>shlock</code> will read the process <font SIZE="-1">ID</font> from the file and test to see whether the process is currently running. If the process exists, then the file will not be created. <i>shlock</i> exits with a zero status if it could create the lock file, or non-zero if the file refers to a currently active process. </p>
+<p> <code>shlock</code> tries to create a lock file named <i>name</i> and write the process ID <i>pid</i> into it. If the file already exists, <code>shlock</code> will read the process ID from the file and test to see whether the process is currently running. If the process exists, then the file will not be created. <i>shlock</i> exits with a zero status if it could create the lock file, or non-zero if the file refers to a currently active process. </p>
 <p> A Perl wrapper around <code>shlock</code> can be used via the <tt>&quot;INN::Utils::Shlock&quot;</tt> module.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-b</code></dt>
-<dd> Process IDs are normally read and written in <font SIZE="-1">ASCII</font>. If the <code>-b</code> flag is used, then they will be written as a binary int.</dd>
+<dd> Process IDs are normally read and written in ASCII. If the <code>-b</code> flag is used, then they will be written as a binary int.</dd>
 <dt><code>-c</code></dt>
 <dd> If the <code>-c</code> flag is used, then <code>shlock</code> will not create a lock file, but will instead use the file to see if the lock is held by another program. If the lock is valid, the program will exit with a non-zero status; if the lock is not valid (i.e. invoking <code>shlock</code> without the flag would have succeeded), then the program will exit with a zero status.</dd>
 <dt><code>-f</code> <i>name</i></dt>
-<dd> <i>name</i> is the name of the lock file <code>shlock</code> attempts to create. If the file already exists, it will read the process <font SIZE="-1">ID</font> from the file and exit with a non-zero status if this process is currently active.</dd>
+<dd> <i>name</i> is the name of the lock file <code>shlock</code> attempts to create. If the file already exists, it will read the process ID from the file and exit with a non-zero status if this process is currently active.</dd>
 <dt><code>-p</code> <i>pid</i></dt>
-<dd> <i>pid</i> is the process <font SIZE="-1">ID</font> to write into the file <i>name</i>.</dd>
+<dd> <i>pid</i> is the process ID to write into the file <i>name</i>.</dd>
 <dt><code>-u</code></dt>
-<dd> For compatibility with other systems, the <code>-u</code> flag is accepted as a synonym for <code>-b</code> since binary locks are used by many <font SIZE="-1">UUCP</font> packages.</dd></dl>
+<dd> For compatibility with other systems, the <code>-u</code> flag is accepted as a synonym for <code>-b</code> since binary locks are used by many UUCP packages.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The following example shows how <code>shlock</code> would be used within a shell script: </p>
 <pre><code>
@@ -37,7 +37,7 @@ then
     else echo "Locked by `cat ${LOCK}`" fi
 </code></pre>
 <h2>HISTORY</h2>
-<p> Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews after a description of <font SIZE="-1">HDB</font> <font SIZE="-1">UUCP</font> locking given by Peter Honeyman, and improved by Berend Reitsma to solve a race condition. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
+<p> Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews after a description of HDB UUCP locking given by Peter Honeyman, and improved by Berend Reitsma to solve a race condition. Converted to POD by Julien Elie. </p>
 <p> <tt>$Id:</tt> shlock.pod 9304 2011-08-04 22:10:47Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i>INN::Utils::Shlock</i>(3pm). </p>

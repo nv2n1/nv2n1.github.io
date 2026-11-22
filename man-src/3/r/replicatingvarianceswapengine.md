@@ -15,7 +15,7 @@ description: "ql/pricingengines/forward/replicatingvarianceswapengine.hpp – Re
 #include &lt;ql/pricingengines/vanilla/analyticeuropeanengine.hpp&gt;
 #include &lt;ql/exercise.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>ReplicatingVarianceSwapEngine</code><br />
+<p>class <code>ReplicatingVarianceSwapEngine</code><br/>
  <i>Variance-swap pricing engine using replicating cost,. </i></p>
 <h2>Detailed Description</h2>
 <p>Replicating engine for variance swaps.</p>

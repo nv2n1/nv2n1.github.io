@@ -9,9 +9,9 @@ description: "cupsd-helper – cupsd helper programs (deprecated)"
 
 <p>cupsd-helper &#8211; cupsd helper programs (deprecated)</p>
 <h2>Synopsis</h2>
-<p><code>cups-deviced</code> <i>request-id</i> <i>limit</i> <i>user-id</i> <i>options</i><br />
- <code>cups-driverd</code> <code>cat</code> <i>ppd-name</i><br />
- <code>cups-driverd</code> <code>list</code> <i>request_id</i> <i>limit</i> <i>options</i><br />
+<p><code>cups-deviced</code> <i>request-id</i> <i>limit</i> <i>user-id</i> <i>options</i><br/>
+ <code>cups-driverd</code> <code>cat</code> <i>ppd-name</i><br/>
+ <code>cups-driverd</code> <code>list</code> <i>request_id</i> <i>limit</i> <i>options</i><br/>
  <code>cups-exec</code> <i>sandbox-profile</i> [ <i>-g</i> <i>group-id</i> ] [ <i>-n</i> <i>nice-value</i> ] [ <i>-u</i> <i>user-id</i> ] <i>/path/to/program</i> <i>argv0</i> <i>&#8230;</i> <i>argvN</i></p>
 <h2>Description</h2>
 <p>The <code>cupsd-helper</code> programs perform long-running operations on behalf of the scheduler, <code><a href="/docs/linux/man/8-cupsd/">cupsd</a></code>(8). The <code>cups-deviced</code> helper program runs each CUPS <code><a href="/docs/linux/man/7-backend/">backend</a></code>(7) with no arguments in order to discover the available printers. </p>

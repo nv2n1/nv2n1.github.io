@@ -11,7 +11,7 @@ description: "dggsvd.f –"
 <p> dggsvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dggsvd</code> (JOBU, JOBV, JOBQ, M, N, P, K, L, A, LDA, B, LDB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dggsvd</code> (JOBU, JOBV, JOBQ, M, N, P, K, L, A, LDA, B, LDB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, IWORK, INFO)<br/>
  <i></i><code> DGGSVD computes the singular value decomposition (SVD) for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dggsvd (characterJOBU, characterJOBV, characterJOBQ, integerM, integerN, integerP, integerK, integerL, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )ALPHA, double precision, dimension( * )BETA, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldv, * )V, integerLDV, double precision, dimension( ldq, * )Q, integerLDQ, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -188,8 +188,8 @@ ALPHA(1
           If JOBU = 'N', U is not referenced.
 </pre>
 <p> <i>LDU</i> </p>
-<p>LDU is INTEGER<br />
-        The leading dimension of the array U.LDU &gt;= max(1, M) if JOBU = &#8216;U&#8217;;<br />
+<p>LDU is INTEGER<br/>
+        The leading dimension of the array U.LDU &gt;= max(1, M) if JOBU = &#8216;U&#8217;;<br/>
 LDU &gt;= 1 otherwise.</p>
 <p> <i>V</i> </p>
 <pre>
@@ -198,8 +198,8 @@ LDU &gt;= 1 otherwise.</p>
           If JOBV = 'N', V is not referenced.
 </pre>
 <p> <i>LDV</i> </p>
-<p>LDV is INTEGER<br />
-        The leading dimension of the array V.LDV &gt;= max(1, P) if JOBV = &#8216;V&#8217;;<br />
+<p>LDV is INTEGER<br/>
+        The leading dimension of the array V.LDV &gt;= max(1, P) if JOBV = &#8216;V&#8217;;<br/>
 LDV &gt;= 1 otherwise.</p>
 <p> <i>Q</i> </p>
 <pre>
@@ -208,8 +208,8 @@ LDV &gt;= 1 otherwise.</p>
           If JOBQ = 'N', Q is not referenced.
 </pre>
 <p> <i>LDQ</i> </p>
-<p>LDQ is INTEGER<br />
-        The leading dimension of the array Q.LDQ &gt;= max(1, N) if JOBQ = &#8216;Q&#8217;;<br />
+<p>LDQ is INTEGER<br/>
+        The leading dimension of the array Q.LDQ &gt;= max(1, N) if JOBQ = &#8216;Q&#8217;;<br/>
 LDQ &gt;= 1 otherwise.</p>
 <p> <i>WORK</i> </p>
 <pre>

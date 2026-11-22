@@ -11,7 +11,7 @@ description: "sggglm.f –"
 <p> sggglm.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sggglm</code> (N, M, P, A, LDA, B, LDB, D, X, Y, WORK, LWORK, INFO)<br />
+<p> subroutine <code>sggglm</code> (N, M, P, A, LDA, B, LDB, D, X, Y, WORK, LWORK, INFO)<br/>
  <i></i><code> SGGEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sggglm (integerN, integerM, integerP, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( * )D, real, dimension( * )X, real, dimension( * )Y, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -59,13 +59,13 @@ denotes the inverse of B.
           The leading dimension of the array A. LDA &gt;= max(1,N).
 </pre>
 <p> <i>B</i> </p>
-<p>B is REAL array, dimension(LDB, P) On entry, the N &#8211; by &#8211; P matrix B.On exit, if N &lt;= P, the upper triangle of the subarray B(1<br />
-                                                                                                                              : N, P &#8211; N + 1<br />
-                                                                                                                              : P) contains the N<br />
-                                                                                             &#8211; by &#8211; N upper triangular matrix T;<br />
-if N<br />
-&gt; P, the elements on and above the(N &#8211; P) th subdiagonal<br />
-         contain the N<br />
+<p>B is REAL array, dimension(LDB, P) On entry, the N &#8211; by &#8211; P matrix B.On exit, if N &lt;= P, the upper triangle of the subarray B(1<br/>
+                                                                                                                              : N, P &#8211; N + 1<br/>
+                                                                                                                              : P) contains the N<br/>
+                                                                                             &#8211; by &#8211; N upper triangular matrix T;<br/>
+if N<br/>
+&gt; P, the elements on and above the(N &#8211; P) th subdiagonal<br/>
+         contain the N<br/>
          &#8211; by &#8211; P upper trapezoidal matrix T.</p>
 <p> <i>LDB</i> </p>
 <pre>
@@ -93,14 +93,14 @@ if N<br />
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>          LWORK is INTEGER<br />
-          The dimension of the array WORK. LWORK &gt;= max(1,N+M+P).<br />
-          For optimum performance, LWORK &gt;= M+min(N,P)+max(N,P)*NB,<br />
-          where NB is an upper bound for the optimal blocksizes for<br />
-          SGEQRF, SGERQF, SORMQR and SORMRQ.<br />
-          If LWORK = -1, then a workspace query is assumed;<br />
-          the routine<br />
-              only calculates the optimal size of the WORK array,<br />
+<p>          LWORK is INTEGER<br/>
+          The dimension of the array WORK. LWORK &gt;= max(1,N+M+P).<br/>
+          For optimum performance, LWORK &gt;= M+min(N,P)+max(N,P)*NB,<br/>
+          where NB is an upper bound for the optimal blocksizes for<br/>
+          SGEQRF, SGERQF, SORMQR and SORMRQ.<br/>
+          If LWORK = -1, then a workspace query is assumed;<br/>
+          the routine<br/>
+              only calculates the optimal size of the WORK array,<br/>
               returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>INFO</i> </p>
 <pre><code>

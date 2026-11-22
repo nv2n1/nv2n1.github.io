@@ -12,24 +12,24 @@ description: "QwtIntervalSymbol –"
 <h2>Synopsis</h2>
 <p>#include &lt;qwt_interval_symbol.h&gt;</p>
 <h3>Public Types</h3>
-<p>enum <code>Style</code> { <code>NoSymbol</code> = -1, <code>Bar</code>, <code>Box</code>, <code>UserSymbol</code> = 1000 }<br />
+<p>enum <code>Style</code> { <code>NoSymbol</code> = -1, <code>Bar</code>, <code>Box</code>, <code>UserSymbol</code> = 1000 }<br/>
  <i>Symbol style. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtIntervalSymbol</code> (<code>Style</code>=<code>NoSymbol</code>) </p>
-<p> <code>QwtIntervalSymbol</code> (const <code>QwtIntervalSymbol</code> &amp;)<br />
- <i>Copy constructor. </i><br />
- virtual <code>~QwtIntervalSymbol</code> ()<br />
- <i>Destructor. </i><br />
- <code>QwtIntervalSymbol</code> &amp; <code>operator=</code> (const <code>QwtIntervalSymbol</code> &amp;)<br />
- <i>Assignment operator. </i><br />
- bool <code>operator==</code> (const <code>QwtIntervalSymbol</code> &amp;) const<br />
- <i>Compare two symbols. </i><br />
- bool <code>operator!=</code> (const <code>QwtIntervalSymbol</code> &amp;) const<br />
- <i>Compare two symbols. </i><br />
+<p> <code>QwtIntervalSymbol</code> (const <code>QwtIntervalSymbol</code> &amp;)<br/>
+ <i>Copy constructor. </i><br/>
+ virtual <code>~QwtIntervalSymbol</code> ()<br/>
+ <i>Destructor. </i><br/>
+ <code>QwtIntervalSymbol</code> &amp; <code>operator=</code> (const <code>QwtIntervalSymbol</code> &amp;)<br/>
+ <i>Assignment operator. </i><br/>
+ bool <code>operator==</code> (const <code>QwtIntervalSymbol</code> &amp;) const<br/>
+ <i>Compare two symbols. </i><br/>
+ bool <code>operator!=</code> (const <code>QwtIntervalSymbol</code> &amp;) const<br/>
+ <i>Compare two symbols. </i><br/>
  void <code>setWidth</code> (int) </p>
 <p> int <code>width</code> () const </p>
-<p> void <code>setBrush</code> (const QBrush &amp;b)<br />
- <i>Assign a brush. </i><br />
+<p> void <code>setBrush</code> (const QBrush &amp;b)<br/>
+ <i>Assign a brush. </i><br/>
  const QBrush &amp; <code>brush</code> () const </p>
 <p> void <code>setPen</code> (const QColor &amp;, qreal <code>width</code>=0.0, Qt::PenStyle=Qt::SolidLine) </p>
 <p> void <code>setPen</code> (const QPen &amp;) </p>
@@ -76,9 +76,9 @@ description: "QwtIntervalSymbol –"
 <p>Draw a symbol depending on its style </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>orientation</i> Orientation<br />
- <i>from</i> Start point of the interval in target device coordinates<br />
+<dd><i>painter</i> Painter<br/>
+ <i>orientation</i> Orientation<br/>
+ <i>from</i> Start point of the interval in target device coordinates<br/>
  <i>to</i> End point of the interval in target device coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -103,8 +103,8 @@ description: "QwtIntervalSymbol –"
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Pen color<br />
- <i>width</i> Pen width<br />
+<dd><i>color</i> Pen color<br/>
+ <i>width</i> Pen width<br/>
  <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

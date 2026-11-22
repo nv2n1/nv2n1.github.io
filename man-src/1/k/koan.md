@@ -15,7 +15,7 @@ koan - kickstart over a network, client side helper for cobbler
 
 <h2>DESCRIPTION</h2>
 
- Koan stands for ``kickstart-over-a-network'' and is a client-side helper program for use with Cobbler. koan allows for both network provisioning of new virtualized guests (Xen, <font SIZE="-1">QEMU/KVM,</font> VMware) and re-installation of an existing system. 
+ Koan stands for ``kickstart-over-a-network'' and is a client-side helper program for use with Cobbler. koan allows for both network provisioning of new virtualized guests (Xen, QEMU/KVM, VMware) and re-installation of an existing system. 
 
  When invoked, koan requests install information from a remote cobbler boot server, it then kicks off installations based on what is retrieved from cobbler and fed in on the koan command line. The examples below show the various use cases.
 
@@ -75,13 +75,13 @@ koan - kickstart over a network, client side helper for cobbler
 
  --virt-path use this directory /opt/myimages 
 
- --virt-path use this existing <font SIZE="-1">LVM</font> volume VolGroup00 
+ --virt-path use this existing LVM volume VolGroup00 
 
- --nogfx do not use <font SIZE="-1">VNC</font> graphics (Xen only) (does not take options) 
+ --nogfx do not use VNC graphics (Xen only) (does not take options) 
 
  Nearly all of these variables can also be defined and centrally managed by the Cobbler server. 
 
- If installing virtual machines in environments without <font SIZE="-1">DHCP,</font> use of --system instead of --profile is required. Additionally use --static-interface=eth0 to supply which interface to use to supply network information. The installer will boot from this virtual interface. Leaving off --static-interface will result in an unsuccessful network installation.
+ If installing virtual machines in environments without DHCP, use of --system instead of --profile is required. Additionally use --static-interface=eth0 to supply which interface to use to supply network information. The installer will boot from this virtual interface. Leaving off --static-interface will result in an unsuccessful network installation.
 
 <h2>CONFIGURATION MANAGEMENT</h2>
 
@@ -91,13 +91,13 @@ koan - kickstart over a network, client side helper for cobbler
 
  Additionally, adding the flag --summary will print configuration run stats. 
 
- Koan passes in the system's <font SIZE="-1">FQDN</font> in the background during the configuration request. Cobbler will match this <font SIZE="-1">FQDN</font> to a configured system defined by Cobbler. 
+ Koan passes in the system's FQDN in the background during the configuration request. Cobbler will match this FQDN to a configured system defined by Cobbler. 
 
- The <font SIZE="-1">FQDN </font>(Fully Qualified Domain Name) maps to the system's hostname field.
+ The FQDN (Fully Qualified Domain Name) maps to the system's hostname field.
 
 <h2>ENVIRONMENT VARIABLES</h2>
 
- Koan respects the <font SIZE="-1">COBBLER_SERVER</font> variable to specify the cobbler server to use. This is a convenient way to avoid using the --server option for each command. This variable is set automatically on systems installed via cobbler, assuming standard kickstart templates are used. If you need to change this on an installed system, edit /etc/profile.d/cobbler.{csh,sh}.
+ Koan respects the COBBLER_SERVER variable to specify the cobbler server to use. This is a convenient way to avoid using the --server option for each command. This variable is set automatically on systems installed via cobbler, assuming standard kickstart templates are used. If you need to change this on an installed system, edit /etc/profile.d/cobbler.{csh,sh}.
 
 <h2>ADDITIONAL</h2>
 
@@ -109,4 +109,4 @@ koan - kickstart over a network, client side helper for cobbler
 
 <h2>AUTHOR</h2>
 
- Michael DeHaan &lt;michael.dehaan <font SIZE="-1">AT</font> gmail&gt;
+ Michael DeHaan &lt;michael.dehaan AT gmail&gt;

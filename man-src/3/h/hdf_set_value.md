@@ -17,8 +17,8 @@ description: "hdf_set_value – Set the value of a named node"
 NEOERR *hdf_set_value(HDF *hdf, const char *name, const char *value);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf -&gt; the pointer to the hdf dataset<br />
- name -&gt; the named node to walk to<br />
+<p> hdf -&gt; the pointer to the hdf dataset<br/>
+ name -&gt; the named node to walk to<br/>
  value -&gt; the value to set the node to </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_set_value will set the value of a named node. All of the interstitial nodes which don&#8217;t exist will be created with a value of NULL. Existing nodes are not modified. New nodes are created at the end of the list. If a list of nodes exceeds FORCE_HASH_AT, then a HASH will be created at that level and all of the nodes will be added to the hash for faster lookup times. The copy of the value will be made which the dataset will own. </p>

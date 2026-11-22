@@ -41,10 +41,10 @@ description: "mgd77togmt – Convert an MGD-77 ASCII file to a binary gmt file"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-dat2gmt/">dat2gmt</a></i>(1), <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1)</p>
 <h2>REFERENCES</h2>
-<p> Wessel, P., and W. H. F. Smith, 2009, The Generic Mapping Tools (GMT) version 4.5.0 Technical Reference &amp; Cookbook, SOEST/NOAA.<br />
- Wessel, P., and W. H. F. Smith, 1998, New, Improved Version of Generic Mapping Tools Released, EOS Trans., AGU, 79 (47), p. 579.<br />
- Wessel, P., and W. H. F. Smith, 1995, New Version of the Generic Mapping Tools Released, EOS Trans., AGU, 76 (33), p. 329.<br />
- Wessel, P., and W. H. F. Smith, 1995, New Version of the Generic Mapping Tools Released, <a rel="nofollow" href="http://www.agu.org/eos_elec/95154e.html,">http://www.agu.org/eos_elec/95154e.html,</a> Copyright 1995 by the American Geophysical Union.<br />
+<p> Wessel, P., and W. H. F. Smith, 2009, The Generic Mapping Tools (GMT) version 4.5.0 Technical Reference &amp; Cookbook, SOEST/NOAA.<br/>
+ Wessel, P., and W. H. F. Smith, 1998, New, Improved Version of Generic Mapping Tools Released, EOS Trans., AGU, 79 (47), p. 579.<br/>
+ Wessel, P., and W. H. F. Smith, 1995, New Version of the Generic Mapping Tools Released, EOS Trans., AGU, 76 (33), p. 329.<br/>
+ Wessel, P., and W. H. F. Smith, 1995, New Version of the Generic Mapping Tools Released, <a rel="nofollow" href="http://www.agu.org/eos_elec/95154e.html,">http://www.agu.org/eos_elec/95154e.html,</a> Copyright 1995 by the American Geophysical Union.<br/>
  Wessel, P., and W. H. F. Smith, 1991, Free Software Helps Map and Display Data, EOS Trans., AGU, 72 (41), p. 441. </p>
 <p> MGD77 Task Group, 1977, The Marine Geophysical Data Exchange Format &#8211; MGD77, Key to Geophysical Records documentation No. 10, National Geophysical and Solar-Terrestrial Data Center, Boulder, CO. </p>
 <p> Carter, D. J. T., <i>Echo Sounding Correction Tables: Formerly Matthews&#8217; Tables</i>,150 pp, Hydrographic Department, Ministry of Defense, Taunton, Somerset, England, 1980. </p>

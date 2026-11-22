@@ -13,9 +13,9 @@ description: "QuantLib::CubicBSplinesFitting – CubicSpline B-splines fitting m
 <p> Inherits <code>QuantLib::FittedBondDiscountCurve::FittingMethod</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>CubicBSplinesFitting</code> (const std::vector&lt; Time &gt; &amp;knotVector, bool constrainAtZero=true) </p>
-<p> <code>Real</code> <code>basisFunction</code> (<code>Integer</code> i, Time t) const<br />
- <i>cubic B-spline basis functions </i><br />
- std::auto_ptr&lt; <code>FittedBondDiscountCurve::FittingMethod</code> &gt; <code>clone</code> () const<br />
+<p> <code>Real</code> <code>basisFunction</code> (<code>Integer</code> i, Time t) const<br/>
+ <i>cubic B-spline basis functions </i><br/>
+ std::auto_ptr&lt; <code>FittedBondDiscountCurve::FittingMethod</code> &gt; <code>clone</code> () const<br/>
  <i>clone of the current object </i></p>
 <h2>Detailed Description</h2>
 <p>CubicSpline B-splines fitting method. </p>

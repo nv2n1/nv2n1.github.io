@@ -10,7 +10,7 @@ description: "XkbSetModActionVMods – Sets the vmods1 and vmods2 fields of act 
 <p>XkbSetModActionVMods &#8211; Sets the vmods1 and vmods2 fields of act using the vmods format of an Xkb modifier description </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbSetModActionVMods</code> <code>(XkbAction </code><i>act</i><code>,</code> <code>unsigned short </code><i>vmods</i><code>);</code><br />
+<dt> <code>void XkbSetModActionVMods</code> <code>(XkbAction </code><i>act</i><code>,</code> <code>unsigned short </code><i>vmods</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

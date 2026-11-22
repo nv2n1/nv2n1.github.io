@@ -10,15 +10,15 @@ description: "Handle Attributes –"
 
 <p> Handle Attributes &#8211; </p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_i_ftp_client_handleattr_t</code><br />
+<p> struct <code>globus_i_ftp_client_handleattr_t</code><br/>
  <i>Handle attributes. </i></p>
 <h3>Typedefs</h3>
-<p> typedef struct<br />
- <code>globus_i_ftp_client_handleattr_t</code> * <code>globus_ftp_client_handleattr_t</code>&quot;<br />
+<p> typedef struct<br/>
+ <code>globus_i_ftp_client_handleattr_t</code> * <code>globus_ftp_client_handleattr_t</code>&quot;<br/>
  <i>Handle Attributes.</i> </p>
-<p> Handle attributes are used to control the caching behavior of the ftp client handle, and to implement the plugin features for reliability and performance tuning. &quot;<br />
- typedef struct<br />
- <code>globus_i_ftp_client_handleattr_t</code> <code>globus_i_ftp_client_handleattr_t</code>&quot;<br />
+<p> Handle attributes are used to control the caching behavior of the ftp client handle, and to implement the plugin features for reliability and performance tuning. &quot;<br/>
+ typedef struct<br/>
+ <code>globus_i_ftp_client_handleattr_t</code> <code>globus_i_ftp_client_handleattr_t</code>&quot;<br/>
  <i>Handle attributes. </i></p>
 <h3>Initialize</h3>
 <p> globus_result_t <code>globus_ftp_client_handleattr_init</code> (<code>globus_ftp_client_handleattr_t</code> *attr) </p>
@@ -72,7 +72,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> Attribute to modify<br />
+</dt><dd> <i>attr</i> Attribute to modify<br/>
  <i>url</i> URL string to cache</dd></dl>
 <h3>globus_result_t globus_ftp_client_handleattr_add_plugin (<code>globus_ftp_client_handleattr_t</code> *attr, <code>globus_ftp_client_plugin_t</code> *plugin)</h3>
 <p> Add/Remove a plugin to a handle attribute set. </p>
@@ -82,7 +82,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to modify.<br />
+</dt><dd> <i>attr</i> The attribute set to modify.<br/>
  <i>plugin</i> The plugin to add or remove from the list.</dd></dl>
 <p> <code>Examples: </code> <code>globus_ftp_client_debug_plugin.example</code>, and <code>globus_ftp_client_restart_plugin.example</code>.</p>
 <h3>globus_result_t globus_ftp_client_handleattr_copy (<code>globus_ftp_client_handleattr_t</code> *dest, <code>globus_ftp_client_handleattr_t</code> *src)</h3>
@@ -91,7 +91,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>dest</i> The attribute set to be initialized to the same values as src.<br />
+</dt><dd> <i>dest</i> The attribute set to be initialized to the same values as src.<br/>
  <i>src</i> The original attribute set to duplicate.</dd></dl>
 <h3>globus_result_t globus_ftp_client_handleattr_destroy (<code>globus_ftp_client_handleattr_t</code> *attr)</h3>
 <p> Destroy an FTP client handle attribute set. </p>
@@ -119,7 +119,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> Attribute to query or modify.<br />
+</dt><dd> <i>attr</i> Attribute to query or modify.<br/>
  <i>cache_all</i> Value of the cache_all attribute.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -130,9 +130,9 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> Attribute to modify<br />
- <i>app_name</i> Name of client application.<br />
- <i>app_version</i> Client application specific version string.<br />
+</dt><dd> <i>attr</i> Attribute to modify<br/>
+ <i>app_name</i> Name of client application.<br/>
+ <i>app_version</i> Client application specific version string.<br/>
  <i>other</i> Additional client info to be reported to the server. This may be used to pass custom info to a custom server module. The format of the string must be: key1=&#8217;value1&#8242;;key2=&#8217;value2&#8242;;[keyn=&#8217;valuen&#8217;;]</dd></dl>
 <p> Any parameter may be NULL. By default, generic library info will be reported to the server &#8212; set all NULL to disable this.</p>
 <h3>globus_result_t globus_ftp_client_handleattr_set_gridftp2 (<code>globus_ftp_client_handleattr_t</code> *attr, globus_bool_tgridftp2)</h3>
@@ -140,7 +140,7 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> Attribute to modify<br />
+</dt><dd> <i>attr</i> Attribute to modify<br/>
  <i>gridftp2</i> Set to GLOBUS_FALSE to disable GridFTP2 support. GridFTP2 support is enabled by default for servers that support it.</dd></dl>
 <h3>globus_result_t globus_ftp_client_handleattr_set_netlogger (<code>globus_ftp_client_handleattr_t</code> *attr, globus_netlogger_handle_t *nl_handle)</h3>
 <p> Set the netlogger handle used with this transfer. </p>
@@ -149,23 +149,23 @@ description: "Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to modify.<br />
+</dt><dd> <i>attr</i> The attribute set to modify.<br/>
  <i>nl_handle</i> The open netlogger handle to be associated with this attribute set.</dd></dl>
 <h3>globus_result_t globus_ftp_client_handleattr_set_pipeline (<code>globus_ftp_client_handleattr_t</code> *attr, globus_size_toutstanding_commands, globus_ftp_client_pipeline_callback_tpipeline_callback, void *pipeline_arg)</h3>
 <p> Enable/Disable command queueing for pipelined transfers. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> Attribute to modify<br />
- <i>outstanding_commands</i> Set to the number of commands to have sent without receiving a reply. Use 0 for the library default.<br />
- <i>pipeline_callback</i> Set to a function of type globus_ftp_client_pipeline_callback_t to enable command pipelining. This function will be called during a transfer operation to request the next urls to be transferred.<br />
+</dt><dd> <i>attr</i> Attribute to modify<br/>
+ <i>outstanding_commands</i> Set to the number of commands to have sent without receiving a reply. Use 0 for the library default.<br/>
+ <i>pipeline_callback</i> Set to a function of type globus_ftp_client_pipeline_callback_t to enable command pipelining. This function will be called during a transfer operation to request the next urls to be transferred.<br/>
  <i>pipeline_arg</i> User data that will be passed in the pipeline_callback.</dd></dl>
 <h3>globus_result_t globus_ftp_client_handleattr_set_rfc1738_url (<code>globus_ftp_client_handleattr_t</code> *attr, globus_bool_trfc1738_url)</h3>
 <p> Enable/Disable rfc1738 support for non-root relative URLs. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> Attribute to modify<br />
+</dt><dd> <i>attr</i> Attribute to modify<br/>
  <i>rfc1738_url</i> Set to GLOBUS_TRUE to enable non-root relative URLs. Default of GLOBUS_FALSE specifies root-relative URLs.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>

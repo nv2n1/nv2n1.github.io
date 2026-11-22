@@ -10,14 +10,14 @@ description: "avc_has_perm, avc_has_perm_noaudit, avc_audit, avc_entry_ref_init 
 
 <p> avc_has_perm, avc_has_perm_noaudit, avc_audit, avc_entry_ref_init &#8211; obtain and audit SELinux access decisions </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
+<p> <code>#include &lt;selinux/selinux.h&gt;</code><br/>
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>void avc_entry_ref_init(struct avc_entry_ref *</code><i>aeref</i><code>);</code> </p>
-<p> <code>int avc_has_perm(security_id_t </code><i>ssid</i><code>, security_id_t </code><i>tsid</i><code>,</code> <code>security_class_t </code><i>tclass</i><code>, access_vector_t </code><i>requested</i><code>,</code><br />
+<p> <code>int avc_has_perm(security_id_t </code><i>ssid</i><code>, security_id_t </code><i>tsid</i><code>,</code> <code>security_class_t </code><i>tclass</i><code>, access_vector_t </code><i>requested</i><code>,</code><br/>
  <code>struct avc_entry_ref *</code><i>aeref</i><code>, void *</code><i>auditdata</i><code>);</code> </p>
-<p> <code>int avc_has_perm_noaudit(security_id_t </code><i>ssid</i><code>, security_id_t </code><i>tsid</i><code>,</code> <code>security_class_t </code><i>tclass</i><code>, access_vector_t </code><i>requested</i><code>,</code><br />
+<p> <code>int avc_has_perm_noaudit(security_id_t </code><i>ssid</i><code>, security_id_t </code><i>tsid</i><code>,</code> <code>security_class_t </code><i>tclass</i><code>, access_vector_t </code><i>requested</i><code>,</code><br/>
  <code>struct avc_entry_ref *</code><i>aeref</i><code>, struct av_decision *</code><i>avd</i><code>);</code> </p>
-<p> <code>void avc_audit(security_id_t </code><i>ssid</i><code>, security_id_t </code><i>tsid</i><code>,</code> <code>security_class_t </code><i>tclass</i><code>, access_vector_t </code><i>requested</i><code>,</code><br />
+<p> <code>void avc_audit(security_id_t </code><i>ssid</i><code>, security_id_t </code><i>tsid</i><code>,</code> <code>security_class_t </code><i>tclass</i><code>, access_vector_t </code><i>requested</i><code>,</code><br/>
  <code>struct av_decision *</code><i>avd</i><code>, int </code><i>result</i><code>, void *</code><i>auditdata</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>avc_entry_ref_init</code>() initializes an <code>avc_entry_ref</code> structure; see <code>ENTRY REFERENCES</code> below. This function may be implemented as a macro. </p>

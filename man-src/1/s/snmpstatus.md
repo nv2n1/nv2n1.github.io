@@ -18,17 +18,17 @@ description: "snmpstatus – retrieves a fixed set of management information fro
 <p> The information returned is:</p>
 <dl>
 <dt>
-</dt><dd> The IP address of the entity.<br />
- A textual description of the entity (sysDescr.0)<br />
- The uptime of the entity&#8217;s SNMP agent (sysUpTime.0)<br />
- The sum of received packets on all interfaces (ifInUCastPkts.* + ifInNUCastPkts.*)<br />
- The sum of transmitted packets on all interfaces (ifOutUCastPkts.* + ifOutNUCastPkts.*)<br />
- The number of IP input packets (ipInReceives.0)<br />
+</dt><dd> The IP address of the entity.<br/>
+ A textual description of the entity (sysDescr.0)<br/>
+ The uptime of the entity&#8217;s SNMP agent (sysUpTime.0)<br/>
+ The sum of received packets on all interfaces (ifInUCastPkts.* + ifInNUCastPkts.*)<br/>
+ The sum of transmitted packets on all interfaces (ifOutUCastPkts.* + ifOutNUCastPkts.*)<br/>
+ The number of IP input packets (ipInReceives.0)<br/>
  The number of IP output packets (ipOutRequests.0)</dd></dl>
 <p> For example: </p>
 <p> snmpstatus -c public -v 1 netdev-kbox.cc.cmu.edu </p>
 <p> will produce output similar to the following: </p>
-<p> [128.2.56.220]=&gt;[Kinetics FastPath2] Up: 1 day, 4:43:31<br />
+<p> [128.2.56.220]=&gt;[Kinetics FastPath2] Up: 1 day, 4:43:31<br/>
  Interfaces: 1, Recv/Trans packets: 262874/39867 | IP: 31603/15805 </p>
 <p> <code>snmpstatus</code> also checks the operational status of all interfaces (ifOperStatus.*), and if it finds any that are not running, it will report in a manner similar to this: </p>
 <p> 2 interfaces are down! </p>

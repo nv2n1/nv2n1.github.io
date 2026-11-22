@@ -12,13 +12,13 @@ description: "sc::SCMatrixSimpleSubblockIter –"
 <p> Inherits <code>sc::SCMatrixSubblockIter</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>SCMatrixSimpleSubblockIter</code> (Access, const <code>Ref</code>&lt; <code>SCMatrixBlock</code> &gt; &amp;b) </p>
-<p> void <code>begin</code> ()<br />
- <i>Start at the beginning. </i><br />
- int <code>ready</code> ()<br />
- <i>Returns nonzero if there is another block. </i><br />
- void <code>next</code> ()<br />
- <i>Proceed to the next block. </i><br />
- <code>SCMatrixBlock</code> * <code>block</code> ()<br />
+<p> void <code>begin</code> ()<br/>
+ <i>Start at the beginning. </i><br/>
+ int <code>ready</code> ()<br/>
+ <i>Returns nonzero if there is another block. </i><br/>
+ void <code>next</code> ()<br/>
+ <i>Proceed to the next block. </i><br/>
+ <code>SCMatrixBlock</code> * <code>block</code> ()<br/>
  <i>Return the current block. </i></p>
 <h3>Protected Attributes</h3>
 <p><code>Ref</code>&lt; <code>SCMatrixBlock</code> &gt; <code>block_</code> </p>

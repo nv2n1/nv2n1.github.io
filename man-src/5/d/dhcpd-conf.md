@@ -225,9 +225,9 @@ include &quot;/etc/dhcpd.master&quot;;</pre>
 <p> A zero value disables the auto-partner-down feature (also the default), and any positive value indicates the time in seconds to wait before automatically entering partner-down.</dl>
 <p> The Failover pool balance statements.</p>
 <dl>
-<dd>&nbsp;<wbr><code>max-lease-misbalance&nbsp;<wbr></code><i>percentage</i><code>;</code><br />
-&nbsp;<wbr><code>max-lease-ownership&nbsp;<wbr></code><i>percentage</i><code>;</code><br />
-&nbsp;<wbr><code>min-balance&nbsp;<wbr></code><i>seconds</i><code>;</code><br />
+<dd>&nbsp;<wbr><code>max-lease-misbalance&nbsp;<wbr></code><i>percentage</i><code>;</code><br/>
+&nbsp;<wbr><code>max-lease-ownership&nbsp;<wbr></code><i>percentage</i><code>;</code><br/>
+&nbsp;<wbr><code>min-balance&nbsp;<wbr></code><i>seconds</i><code>;</code><br/>
 &nbsp;<wbr><code>max-balance&nbsp;<wbr></code><i>seconds</i><code>;</code> </dd>
 <p> This version of the DHCP Server evaluates pool balance on a schedule, rather than on demand as leases are allocated. The latter approach proved to be slightly klunky when pool misbalanced reach total saturation&#8230;when any server ran out of leases to assign, it also lost its ability to notice it had run dry. </p>
 <p> In order to understand pool balance, some elements of its operation first need to be defined. First, there are &#8216;free&#8217; and &#8216;backup&#8217; leases. Both of these are referred to as &#8216;free state leases&#8217;. &#8216;free&#8217; and &#8216;backup&#8217; are &#8216;the free states&#8217; for the purpose of this document. The difference is that only the primary may allocate from &#8216;free&#8217; leases unless under special circumstances, and only the secondary may allocate &#8216;backup&#8217; leases. </p>
@@ -474,38 +474,38 @@ zone 17.127.10.in-addr.arpa. {
 <h2>Allow Deny And Ignore In Scope</h2>
 <p>The following usages of allow and deny will work in any scope, although it is not recommended that they be used in pool declarations. </p>
 <p> <code>The</code> <i>unknown-clients</i> <code>keyword</code> </p>
-<p>&nbsp;<wbr><code>allow unknown-clients;</code><br />
-&nbsp;<wbr><code>deny unknown-clients;</code><br />
+<p>&nbsp;<wbr><code>allow unknown-clients;</code><br/>
+&nbsp;<wbr><code>deny unknown-clients;</code><br/>
 &nbsp;<wbr><code>ignore unknown-clients;</code> </p>
 <p> The <code>unknown-clients</code> flag is used to tell dhcpd whether or not to dynamically assign addresses to unknown clients. Dynamic address assignment to unknown clients is <code>allow</code>ed by default. An unknown client is simply a client that has no host declaration. </p>
 <p> The use of this option is now <i>deprecated</i>. If you are trying to restrict access on your network to known clients, you should use <code>deny unknown-clients;</code> inside of your address pool, as described under the heading ALLOW AND DENY WITHIN POOL DECLARATIONS. </p>
 <p> <code>The</code> <i>bootp</i> <code>keyword</code> </p>
-<p>&nbsp;<wbr><code>allow bootp;</code><br />
-&nbsp;<wbr><code>deny bootp;</code><br />
+<p>&nbsp;<wbr><code>allow bootp;</code><br/>
+&nbsp;<wbr><code>deny bootp;</code><br/>
 &nbsp;<wbr><code>ignore bootp;</code> </p>
 <p> The <code>bootp</code> flag is used to tell dhcpd whether or not to respond to bootp queries. Bootp queries are <code>allow</code>ed by default. </p>
 <p> <code>The</code> <i>booting</i> <code>keyword</code> </p>
-<p>&nbsp;<wbr><code>allow booting;</code><br />
-&nbsp;<wbr><code>deny booting;</code><br />
+<p>&nbsp;<wbr><code>allow booting;</code><br/>
+&nbsp;<wbr><code>deny booting;</code><br/>
 &nbsp;<wbr><code>ignore booting;</code> </p>
 <p> The <code>booting</code> flag is used to tell dhcpd whether or not to respond to queries from a particular client. This keyword only has meaning when it appears in a host declaration. By default, booting is <code>allow</code>ed, but if it is disabled for a particular client, then that client will not be able to get an address from the DHCP server. </p>
 <p> <code>The</code> <i>duplicates</i> <code>keyword</code> </p>
-<p>&nbsp;<wbr><code>allow duplicates;</code><br />
+<p>&nbsp;<wbr><code>allow duplicates;</code><br/>
 &nbsp;<wbr><code>deny duplicates;</code> </p>
 <p> Host declarations can match client messages based on the DHCP Client Identifier option or based on the client&#8217;s network hardware type and MAC address. If the MAC address is used, the host declaration will match any client with that MAC address &#8211; even clients with different client identifiers. This doesn&#8217;t normally happen, but is possible when one computer has more than one operating system installed on it &#8211; for example, Microsoft Windows and NetBSD or Linux. </p>
 <p> The <code>duplicates</code> flag tells the DHCP server that if a request is received from a client that matches the MAC address of a host declaration, any other leases matching that MAC address should be discarded by the server, even if the UID is not the same. This is a violation of the DHCP protocol, but can prevent clients whose client identifiers change regularly from holding many leases at the same time. By default, duplicates are <code>allow</code>ed. </p>
 <p> <code>The</code> <i>declines</i> <code>keyword</code> </p>
-<p>&nbsp;<wbr><code>allow declines;</code><br />
-&nbsp;<wbr><code>deny declines;</code><br />
+<p>&nbsp;<wbr><code>allow declines;</code><br/>
+&nbsp;<wbr><code>deny declines;</code><br/>
 &nbsp;<wbr><code>ignore declines;</code> </p>
 <p> The DHCPDECLINE message is used by DHCP clients to indicate that the lease the server has offered is not valid. When the server receives a DHCPDECLINE for a particular address, it normally abandons that address, assuming that some unauthorized system is using it. Unfortunately, a malicious or buggy client can, using DHCPDECLINE messages, completely exhaust the DHCP server&#8217;s allocation pool. The server will reclaim these leases, but while the client is running through the pool, it may cause serious thrashing in the DNS, and it will also cause the DHCP server to forget old DHCP client address allocations. </p>
 <p> The <code>declines</code> flag tells the DHCP server whether or not to honor DHCPDECLINE messages. If it is set to <code>deny</code> or <code>ignore</code> in a particular scope, the DHCP server will not respond to DHCPDECLINE messages. </p>
 <p> <code>The</code> <i>client-updates</i> <code>keyword</code> </p>
-<p>&nbsp;<wbr><code>allow client-updates;</code><br />
+<p>&nbsp;<wbr><code>allow client-updates;</code><br/>
 &nbsp;<wbr><code>deny client-updates;</code> </p>
 <p> The <code>client-updates</code> flag tells the DHCP server whether or not to honor the client&#8217;s intention to do its own update of its A record. This is only relevant when doing <i>interim</i> DNS updates. See the documentation under the heading THE INTERIM DNS UPDATE SCHEME for details. </p>
 <p> <code>The</code> <i>leasequery</i> <code>keyword</code> </p>
-<p>&nbsp;<wbr><code>allow leasequery;</code><br />
+<p>&nbsp;<wbr><code>allow leasequery;</code><br/>
 &nbsp;<wbr><code>deny leasequery;</code> </p>
 <p> The <code>leasequery</code> flag tells the DHCP server whether or not to answer DHCPLEASEQUERY packets. The answer to a DHCPLEASEQUERY packet includes information about a specific lease, such as when it was issued and when it will expire. By default, the server will not respond to these packets.</p>
 <h2>Allow And Deny Within Pool Declarations</h2>
@@ -598,7 +598,7 @@ zone 17.127.10.in-addr.arpa. {
 <dd><code>dynamic-bootp-lease-cutoff </code><i>date</i><code>;</code> </dd>
 <p> The <i>dynamic-bootp-lease-cutoff</i> statement sets the ending time for all leases assigned dynamically to BOOTP clients. Because BOOTP clients do not have any way of renewing leases, and don&#8217;t know that their leases could expire, by default dhcpd assigns infinite leases to all BOOTP clients. However, it may make sense in some situations to set a cutoff date for all BOOTP leases &#8211; for example, the end of a school term, or the time at night when a facility is closed and all machines are required to be powered off. </p>
 <p> <i>Date</i> should be the date on which all assigned BOOTP leases will end. The date is specified in the form: </p>
-<p> <center> W YYYY/MM/DD HH:MM:SS<br />
+<p> <center> W YYYY/MM/DD HH:MM:SS<br/>
  </center> </p>
 <p> W is the day of the week expressed as a number from zero (Sunday) to six (Saturday). YYYY is the year, including the century. MM is the month expressed as a number from 1 to 12. DD is the day of the month, counting from 1. HH is the hour, from zero to 23. MM is the minute and SS is the second. The time is always in Coordinated Universal Time (UTC), not local time.</dl>
 <p> The <i>dynamic-bootp-lease-length</i> statement</p>

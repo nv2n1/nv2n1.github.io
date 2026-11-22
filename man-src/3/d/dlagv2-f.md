@@ -10,7 +10,7 @@ description: "dlagv2.f –"
 <p>dlagv2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlagv2</code> (A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, CSL, SNL, CSR, SNR)<br />
+<p>subroutine <code>dlagv2</code> (A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, CSL, SNL, CSR, SNR)<br/>
  <i></i><code>DLAGV2</code> computes the Generalized Schur factorization of a real 2-by-2 matrix pencil (A,B) where B is upper triangular.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlagv2 (double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( 2 )ALPHAR, double precision, dimension( 2 )ALPHAI, double precision, dimension( 2 )BETA, double precisionCSL, double precisionSNL, double precisionCSR, double precisionSNR)</h3>

@@ -13,8 +13,8 @@ description: "autokey-run – command-line execution utility for AutoKey"
 <p> <code>autokey-run</code> -[s|p|f]<i>[name]</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>autokey-run</code> command. </p>
-<p> <code>autokey-run</code> A command-line execution utility for AutoKey, autokey-run allows you to initiate execution of phrases, scripts or folders from the command line.<br />
- For more information refer to the online wiki at:<br />
+<p> <code>autokey-run</code> A command-line execution utility for AutoKey, autokey-run allows you to initiate execution of phrases, scripts or folders from the command line.<br/>
+ For more information refer to the online wiki at:<br/>
 &nbsp;<wbr><a rel="nofollow" href="http://code.google.com/p/autokey/w/list">http://code.google.com/p/autokey/w/list</a></p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

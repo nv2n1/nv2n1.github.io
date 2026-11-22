@@ -408,7 +408,7 @@ rather than:
 <dd> <p> The rdnss-selection option specifies an 8 bit flags field, a primary and secondary ip address for the name server and a domainlist of domains for which the RDNSS has special knowledge. </p>
 <p> This option is included based on RFC 6731. </p>
  </dd></dl>
-<p> <code>option resource-location-servers</code> <i>ip-address</i> <br />
+<p> <code>option resource-location-servers</code> <i>ip-address</i> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>,&nbsp;</code><i>ip-address</i>...]<code>;</code> </p>
 <dl>
 <dd> <p> This option specifies a list of RFC 887 Resource Location servers available to the client. Servers should be listed in order of preference. </p>
@@ -615,7 +615,7 @@ rather than:
 <dl>
 <dd> <p> This suboption specifies a list of up to five IP addresses, each of which should be the IP address of a NetWare Domain SAP/RIP server (DSS). </p>
  </dd></dl>
-<p> <code>option nwip.nearest-nwip-server</code> <i>ip-address</i> <br />
+<p> <code>option nwip.nearest-nwip-server</code> <i>ip-address</i> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>,</code>&nbsp;<i>ip-address</i>...]<code>;</code> </p>
 <dl>
 <dd> <p> This suboption specifies a list of up to five IP addresses, each of which should be the IP address of a Nearest NetWare IP server. </p>

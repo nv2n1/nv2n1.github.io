@@ -38,7 +38,7 @@ description: "xev – print contents of X events"
 <dt><code>-version</code></dt>
 <dd> This option prints the program version and exits.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xwininfo/">xwininfo</a>(1), <a href="/docs/linux/man/1-xdpyinfo/">xdpyinfo</a>(1), Xlib Programmers Manual, X Protocol Specification<br />
+<p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xwininfo/">xwininfo</a>(1), <a href="/docs/linux/man/1-xdpyinfo/">xdpyinfo</a>(1), Xlib Programmers Manual, X Protocol Specification<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHOR</h2>
 <p> Jim Fulton, MIT X Consortium </p>

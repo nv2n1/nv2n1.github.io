@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-tpmtoken_setpasswd/"
 description: "tpmtoken_setpasswd – change the password(s) associated with the user’s TPM PKCS#11 data store"
 ---
 
-<p>TPM Management &#8211; tpmtoken_setpasswd<br />
+<p>TPM Management &#8211; tpmtoken_setpasswd<br/>
  </center></p>
 
 <p> tpmtoken_setpasswd &#8211; change the password(s) associated with the user&#8217;s TPM PKCS#11 data store </p>

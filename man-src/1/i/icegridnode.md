@@ -12,7 +12,7 @@ description: "icegridnode – The IceGrid node server."
 <h2>SYNOPSIS</h2>
 <p> icegridnode [options] </p>
 <h2>DESCRIPTION</h2>
-<p> An IceGrid node is a process that activates, monitors, and deactivates registered server processes. You can run any number of nodes in a domain, but typically there is one node per host. A node must be running on each host on which servers are activated automatically, and nodes cannot run without an IceGrid registry. The IceGrid node server is implemented by the icegridnode executable. If you wish to run a registry and node in one process, icegridnode is the executable you must use. Full documentation for icegridnode is available online at:<br />
+<p> An IceGrid node is a process that activates, monitors, and deactivates registered server processes. You can run any number of nodes in a domain, but typically there is one node per host. A node must be running on each host on which servers are activated automatically, and nodes cannot run without an IceGrid registry. The IceGrid node server is implemented by the icegridnode executable. If you wish to run a registry and node in one process, icegridnode is the executable you must use. Full documentation for icegridnode is available online at:<br/>
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/icegridnode">http://doc.zeroc.com/display/Ice/icegridnode</a>&quot;. </p>
 <h2>OPTIONS</h2>
 <dl>

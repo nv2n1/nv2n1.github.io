@@ -44,84 +44,84 @@ description: "trjconv – converts and manipulates trajectory files"
 <p> Option <code> -dump</code> can be used to extract a frame at or near one specific time from your trajectory. </p>
 <p> Option <code> -drop</code> reads an <code> .xvg</code> file with times and values. When options <code> -dropunder</code> and/or <code> -dropover</code> are set, frames with a value below and above the value of the respective options will not be written.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-o</code><i> trajout.xtc</i> <code>Output</code><br />
+<p> <code>-o</code><i> trajout.xtc</i> <code>Output</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure+mass(db): tpr tpb tpa gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-fr</code><i> frames.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-fr</code><i> frames.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-sub</code><i> cluster.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-sub</code><i> cluster.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-drop</code><i> drop.xvg</i> <code>Input, Opt.</code><br />
+<p> <code>-drop</code><i> drop.xvg</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-tu</code><i> enum</i><code> ps</code><br />
+<p> <code>-tu</code><i> enum</i><code> ps</code><br/>
 &nbsp;<wbr>Time unit:&nbsp;<wbr><code>&nbsp;<wbr>ps</code>,&nbsp;<wbr><code>&nbsp;<wbr>fs</code>,&nbsp;<wbr><code>&nbsp;<wbr>ns</code>,&nbsp;<wbr><code>&nbsp;<wbr>us</code>,&nbsp;<wbr><code>&nbsp;<wbr>ms</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>s</code> </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-skip</code><i> int</i><code> 1</code><br />
+<p> <code>-skip</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>Only write every nr-th frame </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only write frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-dump</code><i> time</i><code> -1 </code><br />
+<p> <code>-dump</code><i> time</i><code> -1 </code><br/>
 &nbsp;<wbr>Dump frame nearest specified time&nbsp;<wbr>(ps) </p>
-<p> <code>-t0</code><i> time</i><code> 0 </code><br />
+<p> <code>-t0</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Starting time&nbsp;<wbr>(ps)&nbsp;<wbr>(default: don&#8217;t change) </p>
-<p> <code>-timestep</code><i> time</i><code> 0 </code><br />
+<p> <code>-timestep</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Change time step between input frames&nbsp;<wbr>(ps) </p>
-<p> <code>-pbc</code><i> enum</i><code> none</code><br />
+<p> <code>-pbc</code><i> enum</i><code> none</code><br/>
 &nbsp;<wbr>PBC treatment&nbsp;<wbr>(see help text for full description):&nbsp;<wbr><code>&nbsp;<wbr>none</code>,&nbsp;<wbr><code>&nbsp;<wbr>mol</code>,&nbsp;<wbr><code>&nbsp;<wbr>res</code>,&nbsp;<wbr><code>&nbsp;<wbr>atom</code>,&nbsp;<wbr><code>&nbsp;<wbr>nojump</code>,&nbsp;<wbr><code>&nbsp;<wbr>cluster</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>whole</code> </p>
-<p> <code>-ur</code><i> enum</i><code> rect</code><br />
+<p> <code>-ur</code><i> enum</i><code> rect</code><br/>
 &nbsp;<wbr>Unit-cell representation:&nbsp;<wbr><code>&nbsp;<wbr>rect</code>,&nbsp;<wbr><code>&nbsp;<wbr>tric</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>compact</code> </p>
-<p> <code>-[no]center</code><i>no </i><br />
+<p> <code>-[no]center</code><i>no </i><br/>
 &nbsp;<wbr>Center atoms in box </p>
-<p> <code>-boxcenter</code><i> enum</i><code> tric</code><br />
+<p> <code>-boxcenter</code><i> enum</i><code> tric</code><br/>
 &nbsp;<wbr>Center for -pbc and -center:&nbsp;<wbr><code>&nbsp;<wbr>tric</code>,&nbsp;<wbr><code>&nbsp;<wbr>rect</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>zero</code> </p>
-<p> <code>-box</code><i> vector</i><code> 0 0 0</code><br />
+<p> <code>-box</code><i> vector</i><code> 0 0 0</code><br/>
 &nbsp;<wbr>Size for new cubic box&nbsp;<wbr>(default: read from input) </p>
-<p> <code>-trans</code><i> vector</i><code> 0 0 0</code><br />
+<p> <code>-trans</code><i> vector</i><code> 0 0 0</code><br/>
 &nbsp;<wbr>All coordinates will be translated by trans. This can advantageously be combined with -pbc mol -ur compact. </p>
-<p> <code>-shift</code><i> vector</i><code> 0 0 0</code><br />
+<p> <code>-shift</code><i> vector</i><code> 0 0 0</code><br/>
 &nbsp;<wbr>All coordinates will be shifted by framenr*shift </p>
-<p> <code>-fit</code><i> enum</i><code> none</code><br />
+<p> <code>-fit</code><i> enum</i><code> none</code><br/>
 &nbsp;<wbr>Fit molecule to ref structure in the structure file:&nbsp;<wbr><code>&nbsp;<wbr>none</code>,&nbsp;<wbr><code>&nbsp;<wbr>rot+trans</code>,&nbsp;<wbr><code>&nbsp;<wbr>rotxy+transxy</code>,&nbsp;<wbr><code>&nbsp;<wbr>translation</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>progressive</code> </p>
-<p> <code>-ndec</code><i> int</i><code> 3</code><br />
+<p> <code>-ndec</code><i> int</i><code> 3</code><br/>
 &nbsp;<wbr>Precision for .xtc and .gro writing in number of decimal places </p>
-<p> <code>-[no]vel</code><i>yes </i><br />
+<p> <code>-[no]vel</code><i>yes </i><br/>
 &nbsp;<wbr>Read and write velocities if possible </p>
-<p> <code>-[no]force</code><i>no </i><br />
+<p> <code>-[no]force</code><i>no </i><br/>
 &nbsp;<wbr>Read and write forces if possible </p>
-<p> <code>-trunc</code><i> time</i><code> -1 </code><br />
+<p> <code>-trunc</code><i> time</i><code> -1 </code><br/>
 &nbsp;<wbr>Truncate input trj file after this time&nbsp;<wbr>(ps) </p>
-<p> <code>-exec</code><i> string</i><br />
+<p> <code>-exec</code><i> string</i><br/>
 &nbsp;<wbr>Execute command for every output frame with the frame number as argument </p>
-<p> <code>-[no]app</code><i>no </i><br />
+<p> <code>-[no]app</code><i>no </i><br/>
 &nbsp;<wbr>Append output </p>
-<p> <code>-split</code><i> time</i><code> 0 </code><br />
+<p> <code>-split</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Start writing new file when t MOD split&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-[no]sep</code><i>no </i><br />
+<p> <code>-[no]sep</code><i>no </i><br/>
 &nbsp;<wbr>Write each frame to a separate .gro, .g96 or .pdb file </p>
-<p> <code>-nzero</code><i> int</i><code> 0</code><br />
+<p> <code>-nzero</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Prepend file number in case you use the -sep flag with this number of zeroes </p>
-<p> <code>-[no]ter</code><i>no </i><br />
+<p> <code>-[no]ter</code><i>no </i><br/>
 &nbsp;<wbr>Use&nbsp;<wbr>&#8216;TER&#8217;&nbsp;<wbr>in pdb file as end of frame in stead of default&nbsp;<wbr>&#8216;ENDMDL&#8217; </p>
-<p> <code>-dropunder</code><i> real</i><code> 0 </code><br />
+<p> <code>-dropunder</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Drop all frames below this value </p>
-<p> <code>-dropover</code><i> real</i><code> 0 </code><br />
+<p> <code>-dropover</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Drop all frames above this value </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

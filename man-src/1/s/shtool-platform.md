@@ -44,17 +44,17 @@ description: "shtool platform – GNU shtool Unix platform identification"
 <dt><code>-n</code>, <code>&#8211;no-newline</code></dt>
 <dd> This option omits the usual trailing newline character in the output.</dd>
 <dt><code>-t</code>, <code>&#8211;type</code> <i>type</i></dt>
-<dd> This option is a meta option which internally sets options <code>-F</code>, <code>-S</code>, <code>-C</code>, <code>-L</code>, <code>-U</code>, <code>-v</code> or <code>-c</code> according to <i></i><font SIZE="-1"><i>TYPE</i></font><i></i>. It can be used to easily specify various commonly known outputs. The following <i></i><font SIZE="-1"><i>TYPE</i></font><i></i>s are available:</dd>
+<dd> This option is a meta option which internally sets options <code>-F</code>, <code>-S</code>, <code>-C</code>, <code>-L</code>, <code>-U</code>, <code>-v</code> or <code>-c</code> according to <i></i><i>TYPE</i><i></i>. It can be used to easily specify various commonly known outputs. The following <i></i><i>TYPE</i><i></i>s are available:</dd>
 <dl>
 <dl>
 <dt><code>binary</code></dt>
-<dd> Binary Package Id (OpenPKG <font SIZE="-1">RPM</font>). This is equal to &quot;<tt>&quot;-F '%&lt;ap&quot;</tt>-%&lt;sp&gt;&#8217; -L -S &#8221; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;ix86-freebsd4.9&quot;</tt>&#8220; and &#8221;<tt>&quot;ix86-debian3.0&quot;</tt>&quot;.</dd>
+<dd> Binary Package Id (OpenPKG RPM). This is equal to &quot;<tt>&quot;-F '%&lt;ap&quot;</tt>-%&lt;sp&gt;&#8217; -L -S &#8221; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;ix86-freebsd4.9&quot;</tt>&#8220; and &#8221;<tt>&quot;ix86-debian3.0&quot;</tt>&quot;.</dd>
 <dt><code>build</code></dt>
-<dd> Build-Time Checking (OpenPKG <font SIZE="-1">RPM</font>). This is equal to &quot;<tt>&quot;-F '%&lt;at&quot;</tt>-%&lt;st&gt;&#8217; -L -S &#8221; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;i686-freebsd4.9&quot;</tt>&#8220; and &#8221;<tt>&quot;i586-linux2.4&quot;</tt>&quot;.</dd>
+<dd> Build-Time Checking (OpenPKG RPM). This is equal to &quot;<tt>&quot;-F '%&lt;at&quot;</tt>-%&lt;st&gt;&#8217; -L -S &#8221; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;i686-freebsd4.9&quot;</tt>&#8220; and &#8221;<tt>&quot;i586-linux2.4&quot;</tt>&quot;.</dd>
 <dt><code>gnu</code></dt>
-<dd> <font SIZE="-1">GNU </font><i>config.guess</i> Style Id. This is similar to <code>build</code> and is equal to &quot;<tt>&quot;-F '&quot;%&lt;at&quot;</tt>-unknown-%&lt;st&gt;&#8217; -L -S &#8221; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;i686-unknown-freebsd4.9&quot;</tt>&#8220; and &#8221;<tt>&quot;i586-unknown-linux2.4&quot;</tt>&quot;.</dd>
+<dd> GNU <i>config.guess</i> Style Id. This is similar to <code>build</code> and is equal to &quot;<tt>&quot;-F '&quot;%&lt;at&quot;</tt>-unknown-%&lt;st&gt;&#8217; -L -S &#8221; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;i686-unknown-freebsd4.9&quot;</tt>&#8220; and &#8221;<tt>&quot;i586-unknown-linux2.4&quot;</tt>&quot;.</dd>
 <dt><code>web</code></dt>
-<dd> <font SIZE="-1">HTTP</font> Server Header Id. This is equal to &quot;<tt>&quot;-F '&quot;%&lt;sp&quot;</tt>-%&lt;ac&gt;&#8217; -S &#8216;/&#8217; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;FreeBSD/4.9-iX86&quot;</tt>&#8220; and &#8221;<tt>&quot;Debian/3.0-iX86&quot;</tt>&quot;.</dd>
+<dd> HTTP Server Header Id. This is equal to &quot;<tt>&quot;-F '&quot;%&lt;sp&quot;</tt>-%&lt;ac&gt;&#8217; -S &#8216;/&#8217; -C &#8216;+&#8217;&gt;&#8220; and results in outputs like &#8221;<tt>&quot;FreeBSD/4.9-iX86&quot;</tt>&#8220; and &#8221;<tt>&quot;Debian/3.0-iX86&quot;</tt>&quot;.</dd>
 <dt><code>summary</code></dt>
 <dd> Human Readable Verbose Summary Information. This is equal to &quot;<tt>&quot;-F 'Class: %[sc] (%[ac])
 Product: %[sp] (%[ap])
@@ -90,12 +90,12 @@ Technology: %[st] (%[at])' -S ' ' -C '/'&quot;</tt>&quot; and results in outputs
  $ platform -c -L -S &quot;&quot; -C &quot;+&quot; -F &quot;%at-%st&quot;
  $ platform -c -L -S &quot;&quot; -C &quot;+&quot; -F &quot;%ac-%sc&quot;
 </pre>
-</dd><dt><code>OpenPKG</code> binary <font SIZE="-1">RPM</font> packages</dt>
+</dd><dt><code>OpenPKG</code> binary RPM packages</dt>
 <dd>
 <pre>
  $ platform -c -L -S &quot;&quot; -C &quot;+&quot; -F &quot;%ap-%sp&quot;
 </pre>
-</dd><dt><i></i><font SIZE="-1"><i>README</i></font><i></i> files</dt>
+</dd><dt><i></i><i>README</i><i></i> files</dt>
 <dd>
 <pre>
  $ platform -v -F &quot;%sp (%ap)&quot;
@@ -108,10 +108,10 @@ Technology: %[st] (%[at])' -S ' ' -C '/'&quot;</tt>&quot; and results in outputs
 </pre>
 </dd></dl>
 <h2>SUPPORT</h2>
-<p> <code>shtool platform</code> currently knows the following particular Unix platforms in detail: FreeBSD, NetBSD, OpenBSD, Linux, Sun Solaris, <font SIZE="-1">SCO</font> UnixWare, <font SIZE="-1">QNX</font> Neutrino, <font SIZE="-1">SGI IRIX, HP</font> HP-UX, <font SIZE="-1">HP</font> Tru64, <font SIZE="-1">IBM AIX</font> and Apple Mac <font SIZE="-1">OS X</font> Darwin. </p>
+<p> <code>shtool platform</code> currently knows the following particular Unix platforms in detail: FreeBSD, NetBSD, OpenBSD, Linux, Sun Solaris, SCO UnixWare, QNX Neutrino, SGI IRIX, HP HP-UX, HP Tru64, IBM AIX and Apple Mac OS X Darwin. </p>
 <p> All other Unix platforms are recognized through generic <i><a href="/docs/linux/man/1-uname/">uname</a></i>(1) information and so usually can be identified sufficiently, although the identification might be not as precise as possible.</p>
 <h2>HISTORY</h2>
-<p> <code>shtool platform</code> was implemented in September 2003 by <i>Ralf S. Engelschall</i> for use in the <font SIZE="-1"><code>OSSP</code></font> and <code>OpenPKG</code> projects. It was prompted by the need in <code>OpenPKG</code> to have both product (for <font SIZE="-1">RPM</font> filenames) and technology (for build-time decisions) identifiers for the Unix platforms, OpenPKG packages are maintained for. It was inspired by the <font SIZE="-1"><code>GNU</code></font> <i>config.guess</i> and the old <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <i>guessos</i> command. </p>
-<p> The major difference to <font SIZE="-1"><code>GNU</code></font> <i>config.guess</i> is that <code>shtool platform</code> does not use a <i>vendor</i> identification (cannot be determined most of the time and is not used at all in all projects I&#8217;ve ever seen) and is a lot more flexible (class, product and technology identifications combined with verbose, regular and concise outputs). The drawback of <code>shtool platform</code> is that it (still) knows less particular platforms, although the generic platform identification is sufficient enough most of the time.</p>
+<p> <code>shtool platform</code> was implemented in September 2003 by <i>Ralf S. Engelschall</i> for use in the <code>OSSP</code> and <code>OpenPKG</code> projects. It was prompted by the need in <code>OpenPKG</code> to have both product (for RPM filenames) and technology (for build-time decisions) identifiers for the Unix platforms, OpenPKG packages are maintained for. It was inspired by the <code>GNU</code> <i>config.guess</i> and the old <code>GNU</code><code> shtool</code> <i>guessos</i> command. </p>
+<p> The major difference to <code>GNU</code> <i>config.guess</i> is that <code>shtool platform</code> does not use a <i>vendor</i> identification (cannot be determined most of the time and is not used at all in all projects I&#8217;ve ever seen) and is a lot more flexible (class, product and technology identifications combined with verbose, regular and concise outputs). The drawback of <code>shtool platform</code> is that it (still) knows less particular platforms, although the generic platform identification is sufficient enough most of the time.</p>
 <h2>SEE ALSO</h2>
-<p> <i>uname</i>(3), <font SIZE="-1">GNU </font><i>config.guess</i>. </p>
+<p> <i>uname</i>(3), GNU <i>config.guess</i>. </p>

@@ -76,8 +76,8 @@ description: "XChangeKeyboardMapping, XGetKeyboardMapping, XDisplayKeycodes, XSe
 <p> The <code>XFreeModifiermap</code> function frees the specified <code>XModifierKeymap</code> structure.</p>
 <h2>Structures</h2>
 <p>The <code>XModifierKeymap</code> structure contains: </p>
-<p> typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int max_keypermod;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;This server&#8217;s max number of keys per modifier&nbsp;*/<br />
+<p> typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int max_keypermod;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;This server&#8217;s max number of keys per modifier&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;KeyCode&nbsp;*modifiermap;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;An 8 by max_keypermod array of the modifiers&nbsp;*/ } XModifierKeymap;</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
@@ -86,5 +86,5 @@ description: "XChangeKeyboardMapping, XGetKeyboardMapping, XDisplayKeycodes, XSe
 <dt><code>BadValue</code></dt>
 <dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xfree/">XFree</a>(3), <a href="/docs/linux/man/3-xkbgetmap/">XkbGetMap</a>(3), <a href="/docs/linux/man/3-xsetpointermapping/">XSetPointerMapping</a>(3)<br />
+<p><a href="/docs/linux/man/3-xfree/">XFree</a>(3), <a href="/docs/linux/man/3-xkbgetmap/">XkbGetMap</a>(3), <a href="/docs/linux/man/3-xsetpointermapping/">XSetPointerMapping</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

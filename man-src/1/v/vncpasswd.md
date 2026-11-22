@@ -10,7 +10,7 @@ description: "vncpasswd – change the VNC password"
 
 <p> vncpasswd &#8211; change the VNC password</p>
 <h2>SYNOPSIS</h2>
-<p> <code>vncpasswd</code> [<i>passwd-file</i>]<br />
+<p> <code>vncpasswd</code> [<i>passwd-file</i>]<br/>
  <code>vncpasswd</code> -f</p>
 <h2>DESCRIPTION</h2>
 <p> <code>vncpasswd</code> allows you to set the password used to access VNC desktops. Its default behavior is to prompt for a VNC password and then store an obfuscated version of this password to <i>passwd-file</i> (or to $HOME/.vnc/passwd if no password file is specified.) The <code>vncserver</code> script runs <code>vncpasswd</code> the first time you start a VNC desktop, and it invokes <code>Xvnc</code> with the appropriate <code>-rfbauth</code> option. <code>vncviewer</code> can also be given a password file to use via the <code>-passwd</code> option. </p>
@@ -26,7 +26,7 @@ description: "vncpasswd – change the VNC password"
 <dd> Default location of the VNC password file. </dd>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1), <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1), <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1) <code><a href="/docs/linux/man/1-vncconfig/">vncconfig</a></code>(1),<br />
+<p> <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1), <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1), <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1) <code><a href="/docs/linux/man/1-vncconfig/">vncconfig</a></code>(1),<br/>
  <a rel="nofollow" href="http://www.tigervnc.org">http://www.tigervnc.org</a> </p>
 <h2>AUTHORS</h2>
 <p> Tristan Richardson, RealVNC Ltd., Antoine Martin, D. R. Commander and others. </p>

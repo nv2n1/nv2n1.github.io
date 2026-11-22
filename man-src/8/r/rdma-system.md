@@ -17,8 +17,8 @@ sys
 OPTIONS := {
     -V[ersion] |
     -d[etails] }</code></pre>
-<p> <code>rdma system show</code><br />
- <code>rdma system set</code> <code>netns</code> <code>NEWMODE</code><br />
+<p> <code>rdma system show</code><br/>
+ <code>rdma system set</code> <code>netns</code> <code>NEWMODE</code><br/>
  <code>rdma system help</code> </p>
 <h2>Description</h2>
 <h3>rdma system set &#8211; set RDMA subsystem network namespace mode</h3>

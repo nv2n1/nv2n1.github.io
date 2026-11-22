@@ -12,21 +12,21 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <h2>DESCRIPTION</h2>
 <p> This page contains recipes for and links to things you can do using libguestfs, <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) and the virt tools.</p>
 <h2>Access a remote disk image using guestfish</h2>
-<p> If the disk image is on a remote server which is accessible using <font SIZE="-1">SSH, HTTP, FTP, NBD,</font> iSCSI, or similar, then you can open it directly. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) for several examples. This requires libguestfs ≥ 1.22 and qemu ≥ 1.5.</p>
+<p> If the disk image is on a remote server which is accessible using SSH, HTTP, FTP, NBD, iSCSI, or similar, then you can open it directly. See &#8220;ADDING REMOTE STORAGE&#8221; in <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) for several examples. This requires libguestfs ≥ 1.22 and qemu ≥ 1.5.</p>
 <h2>Audit a virtual machine for setuid files</h2>
-<p> See: &#8220;<font SIZE="-1">EXAMPLES&#8221;</font> in <code><a href="/docs/linux/man/1-virt-ls/">virt-ls</a></code>(1).</p>
+<p> See: &#8220;EXAMPLES&#8221; in <code><a href="/docs/linux/man/1-virt-ls/">virt-ls</a></code>(1).</p>
 <h2>Audit a virtual machine for vulnerabilities and security problems</h2>
 <p> See: <a rel="nofollow" href="https://rwmj.wordpress.com/2013/05/16/scanning-offline-guests-using-openscap-and-guestmount/#content">https://rwmj.wordpress.com/2013/05/16/scanning-offline-guests-using-openscap-and-guestmount/#content</a></p>
 <h2>Change the background image in a Windows XP VM</h2>
-<p> The links below explain how to use <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) to change the background image for a user of a Windows <font SIZE="-1">XP VM.</font> Unfortunately the technique appears to be substantially different for each version of Windows. </p>
+<p> The links below explain how to use <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) to change the background image for a user of a Windows XP VM. Unfortunately the technique appears to be substantially different for each version of Windows. </p>
 <p> <a rel="nofollow" href="https://lists.fedoraproject.org/pipermail/virt/2011-May/002655.html">https://lists.fedoraproject.org/pipermail/virt/2011-May/002655.html</a> <a rel="nofollow" href="https://lists.fedoraproject.org/pipermail/virt/2011-May/002658.html">https://lists.fedoraproject.org/pipermail/virt/2011-May/002658.html</a></p>
 <h2>Checksum a file or device within a disk image</h2>
-<p> To checksum a whole device, or a partition, <font SIZE="-1">LV</font> etc within a disk image: </p>
+<p> To checksum a whole device, or a partition, LV etc within a disk image: </p>
 <pre>
  guestfish --ro -a disk.img run : checksum-device md5 /dev/sda1
 </pre>
 <p> Replace <tt>&quot;md5&quot;</tt> with the type of checksum you want. See &#8220;guestfs_checksum_device&#8221; in <code>guestfs</code>(3) for a list of supported types. </p>
-<p> <i>/dev/sda1</i> means &#8220;the first partition&#8221;. You could use <i>/dev/sda</i> to checksum the whole disk image, or the name of a logical volume or <font SIZE="-1">RAID</font> device. </p>
+<p> <i>/dev/sda1</i> means &#8220;the first partition&#8221;. You could use <i>/dev/sda</i> to checksum the whole disk image, or the name of a logical volume or RAID device. </p>
 <p> To checksum a single file: </p>
 <pre>
  guestfish --ro -a disk.img -i checksum sha256 /etc/passwd
@@ -38,7 +38,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 </code></pre>
 <h2>Cloning a virtual machine</h2>
 <p> Use a combination of tools like <code><a href="/docs/linux/man/1-cp/">cp</a></code>(1), <code><a href="/docs/linux/man/1-dd/">dd</a></code>(1), and virt tools like <code><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></code>(1), <code><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></code>(1) and <code><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></code>(1). </p>
-<p> For more details, see: ``<font SIZE="-1">COPYING AND CLONING&#8217;&#8216;</font> in <code><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></code>(1).  </p>
+<p> For more details, see: ``COPYING AND CLONING&#8217;&#8216; in <code><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></code>(1).  </p>
 <h2>Convert a CD-ROM / DVD / ISO to a tarball</h2>
 <p> This converts input <i>cd.iso</i> to output <i>cd.tar.gz</i>: </p>
 <pre><code> guestfish --ro -a cd.iso -m /dev/sda tgz-out / cd.tar.gz
@@ -66,7 +66,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <h2>Convert Windows DVD to bootable USB key</h2>
 <p> <a rel="nofollow" href="http://rwmj.wordpress.com/2013/05/09/tip-convert-a-windows-dvd-iso-to-a-bootable-usb-key-using-guestfish/#content">http://rwmj.wordpress.com/2013/05/09/tip-convert-a-windows-dvd-iso-to-a-bootable-usb-key-using-guestfish/#content</a>  </p>
 <h2>Convert Xen-style partitionless image to partitioned disk image</h2>
-<p> Xen disk images are often partitionless, meaning that the filesystem starts directly at the beginning of the disk with no partition table. You can in fact use these directly in <font SIZE="-1">KVM</font> (provided the guest isn&#8217;t Windows), but some people like to convert them to regular partitioned disk images, and this is required for Windows guests. Here is how to use guestfish to do this: </p>
+<p> Xen disk images are often partitionless, meaning that the filesystem starts directly at the beginning of the disk with no partition table. You can in fact use these directly in KVM (provided the guest isn&#8217;t Windows), but some people like to convert them to regular partitioned disk images, and this is required for Windows guests. Here is how to use guestfish to do this: </p>
 <pre><code> guestfish
  &gt;&lt;fs&gt; add-ro input.img
  &gt;&lt;fs&gt; sparse output.img 10G # adjust the output size
@@ -80,7 +80,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
  # for Windows guests:
  &gt;&lt;fs&gt; resize2fs /dev/sdb1
 </code></pre>
-<p> Such a disk image won’t be directly bootable. You may need to boot it with an external kernel and initramfs (see below). Or you can use the guestfish commands <code>&quot;syslinux&quot;</code> or <code>&quot;extlinux&quot;</code> to install a <font SIZE="-1">SYSLINUX</font> bootloader.  </p>
+<p> Such a disk image won’t be directly bootable. You may need to boot it with an external kernel and initramfs (see below). Or you can use the guestfish commands <code>&quot;syslinux&quot;</code> or <code>&quot;extlinux&quot;</code> to install a SYSLINUX bootloader.  </p>
 <h2>Create empty disk images</h2>
 <p> The <code><a href="/docs/linux/man/1-virt-format/">virt-format</a></code>(1) tool can do this directly. </p>
 <p> Use <code><a href="/docs/linux/man/1-virt-make-fs/">virt-make-fs</a></code>(1) to create a disk image with content. This can also create some standard disk images such as virtual floppy devices (VFDs). </p>
@@ -113,7 +113,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <pre><code> virt-ls -a /tmp/fedora-19.img -R /lib/systemd/system
 </code></pre>
 <h2>Drive letters over FUSE</h2>
-<p> You have a Windows guest, and you want to expose the drive letters as <font SIZE="-1">FUSE</font> mountpoints (<i>/C/...</i>, <i>/D/...</i> etc). Instead of <code><a href="/docs/linux/man/1-guestmount/">guestmount</a></code>(1), use this Perl script: </p>
+<p> You have a Windows guest, and you want to expose the drive letters as FUSE mountpoints (<i>/C/...</i>, <i>/D/...</i> etc). Instead of <code><a href="/docs/linux/man/1-guestmount/">guestmount</a></code>(1), use this Perl script: </p>
 <pre><code> #!/usr/bin/perl -w
  use strict;
  use Sys::Guestfs;
@@ -158,7 +158,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
  $ guestunmount /tmp/mnt
 </code></pre>
 <h2>Dump raw filesystem content from inside a disk image or VM</h2>
-<p> You can use the <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) <code>&quot;download&quot;</code> command to extract the raw filesystem content from any filesystem in a disk image or a <font SIZE="-1">VM</font> (even one which is encrypted or buried inside an <font SIZE="-1">LV</font> or <font SIZE="-1">RAID</font> device): </p>
+<p> You can use the <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) <code>&quot;download&quot;</code> command to extract the raw filesystem content from any filesystem in a disk image or a VM (even one which is encrypted or buried inside an LV or RAID device): </p>
 <pre><code> guestfish --ro -a disk.img run : download /dev/sda1 sda1.img
  guestfish --ro -d Guest run : download /dev/vg_guest/lv_root lv.img
 </code></pre>
@@ -174,7 +174,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <dd> <p> Fix a virtual machine that does not boot. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Change which kernel is used to boot the <font SIZE="-1">VM.</font> </p>
+<dd> <p> Change which kernel is used to boot the VM. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Change kernel command line options. </p>
@@ -182,11 +182,11 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <p> Use <code><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></code>(1) to edit the grub configuration: </p>
 <pre><code> virt-edit -d BrokenGuest /boot/grub2/grub.cfg
 </code></pre>
-<p> or for general tinkering inside an unbootable <font SIZE="-1">VM</font> use <code><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></code>(1) like this: </p>
+<p> or for general tinkering inside an unbootable VM use <code><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></code>(1) like this: </p>
 <pre><code> virt-rescue -d BrokenGuest
 </code></pre>
 <h2>Export any directory from a VM</h2>
-<p> To export <i>/home</i> from a <font SIZE="-1">VM</font> into a local directory use <code><a href="/docs/linux/man/1-virt-copy-out/">virt-copy-out</a></code>(1): </p>
+<p> To export <i>/home</i> from a VM into a local directory use <code><a href="/docs/linux/man/1-virt-copy-out/">virt-copy-out</a></code>(1): </p>
 <pre><code> virt-copy-out -d Guest /home .
 </code></pre>
 <p> Notes: </p>
@@ -203,7 +203,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <p> To get the output as a compressed tarball, do: </p>
 <pre><code> virt-tar-out -d Guest /home - | gzip --best &gt; home.tar.gz
 </code></pre>
-<p> Although it sounds tempting, this is usually not a reliable way to get a backup from a running guest. See the entry in the <font SIZE="-1">FAQ:</font> <a rel="nofollow" href="http://libguestfs.org/FAQ.html#backup">http://libguestfs.org/FAQ.html#backup</a>  </p>
+<p> Although it sounds tempting, this is usually not a reliable way to get a backup from a running guest. See the entry in the FAQ: <a rel="nofollow" href="http://libguestfs.org/FAQ.html#backup">http://libguestfs.org/FAQ.html#backup</a>  </p>
 <h2>Export external kernel and initramfs (initrd)</h2>
 <p> If a Linux guest doesn&#8217;t have a boot loader or it is broken, then you can usually boot it using an external kernel and initramfs. In this configuration, the hypervisor acts like a bootloader, loading the kernel from the host disk into guest memory and jumping straight into the kernel. </p>
 <p> However you may wonder how to get the right kernel corresponding to the disk image you have. Since libguestfs ≥ 1.24 <code><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></code>(1) can get the latest kernel and corresponding initramfs for you: </p>
@@ -226,7 +226,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
  guestfish --remote exit
 </code></pre>
 <h2>Get DHCP address from a VM</h2>
-<p> The link below explains the many different possible techniques for getting the last assigned <font SIZE="-1">DHCP</font> address of a virtual machine. </p>
+<p> The link below explains the many different possible techniques for getting the last assigned DHCP address of a virtual machine. </p>
 <p> <a rel="nofollow" href="https://rwmj.wordpress.com/2011/03/31/tip-code-for-getting-dhcp-address-from-a-virtual-machine-disk-image/#content">https://rwmj.wordpress.com/2011/03/31/tip-code-for-getting-dhcp-address-from-a-virtual-machine-disk-image/#content</a> </p>
 <p> In the libguestfs source examples directory you will find the latest version of the <i>virt-dhcp-address.c</i> program.  </p>
 <h2>Get the operating system product name string</h2>
@@ -242,7 +242,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <pre><code> # product-name.sh RHEL60x64
  Red Hat Enterprise Linux Server release 6.0 (Santiago)
 </code></pre>
-<p> You can also use an XPath query on the <code><a href="/docs/linux/man/1-virt-inspector/">virt-inspector</a></code>(1) <font SIZE="-1">XML</font> using the <code>&quot;xpath&quot;</code> command line tool or from your favourite programming language: </p>
+<p> You can also use an XPath query on the <code><a href="/docs/linux/man/1-virt-inspector/">virt-inspector</a></code>(1) XML using the <code>&quot;xpath&quot;</code> command line tool or from your favourite programming language: </p>
 <pre><code> # virt-inspector RHEL60x64 &gt; xml
  # xpath '//product_name' &lt; xml
  Found 1 nodes:
@@ -250,7 +250,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
  &lt;product_name&gt;Red Hat Enterprise Linux Server release 6.0 (Santiago)&lt;/product_name&gt;
 </code></pre>
 <h2>Get the default boot kernel for a Linux VM</h2>
-<p> The link below contains a program to print the default boot kernel for a Linux <font SIZE="-1">VM.</font> </p>
+<p> The link below contains a program to print the default boot kernel for a Linux VM. </p>
 <p> <a rel="nofollow" href="https://rwmj.wordpress.com/2010/10/30/tip-use-augeas-to-get-the-default-boot-kernel-for-a-vm/#content">https://rwmj.wordpress.com/2010/10/30/tip-use-augeas-to-get-the-default-boot-kernel-for-a-vm/#content</a> </p>
 <p> It uses Augeas, and the technique is generally applicable for many different tasks, such as: </p>
 <dl>
@@ -261,7 +261,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <dd> <p> what repositories is it configured to use </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> what <font SIZE="-1">NTP</font> servers does it connect to </p>
+<dd> <p> what NTP servers does it connect to </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> what were the boot messages last time it booted </p>
@@ -292,7 +292,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <pre><code> guestfish --ro -a disk.img run : pread-device /dev/sda 0x200 0 |
    hexdump -C
 </code></pre>
-<p> (<code>0x200</code> = 512 bytes which is the size of traditional <font SIZE="-1">PC</font> sectors) </p>
+<p> (<code>0x200</code> = 512 bytes which is the size of traditional PC sectors) </p>
 <p> To hexdump the N&#8217;th partition, substitute a number for <code>&quot;N&quot;</code> in the following command: </p>
 <pre><code> guestfish --ro -a disk.img \
      run : pread-device /dev/sda 0x200 $((N*0x200)) |
@@ -316,9 +316,9 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
    --install emacs
 </code></pre>
 <h2>Install SYSLINUX bootloader in a guest</h2>
-<p> <font SIZE="-1">SYSLINUX</font> is a small, easy to configure bootloader for Linux and Windows guests. If your guest is not bootable, you can install the <font SIZE="-1">SYSLINUX</font> bootloader using either the guestfish commands <code>&quot;syslinux&quot;</code> (for FAT-based guests) or <code>&quot;extlinux&quot;</code> (for ext2/3/4 and btrfs-based guests). </p>
+<p> SYSLINUX is a small, easy to configure bootloader for Linux and Windows guests. If your guest is not bootable, you can install the SYSLINUX bootloader using either the guestfish commands <code>&quot;syslinux&quot;</code> (for FAT-based guests) or <code>&quot;extlinux&quot;</code> (for ext2/3/4 and btrfs-based guests). </p>
 <p> This guide assumes a Linux guest where <i>/dev/sda1</i> is <i>/boot</i>, <i>/boot/vmlinuz</i> is the guest kernel, and <i>/dev/sda3</i> is the root partition. For a Windows guest you would need a FAT-formatted boot partition and you would need to use the <code>&quot;syslinux&quot;</code> command instead. </p>
-<p> Create a <i>syslinux.cfg</i> configuration file. You should check the <font SIZE="-1">SYSLINUX</font> documentation at <a rel="nofollow" href="http://www.syslinux.org">http://www.syslinux.org</a> but it may look something like this: </p>
+<p> Create a <i>syslinux.cfg</i> configuration file. You should check the SYSLINUX documentation at <a rel="nofollow" href="http://www.syslinux.org">http://www.syslinux.org</a> but it may look something like this: </p>
 <pre><code> DEFAULT linux
  LABEL linux
    SAY Booting the kernel
@@ -381,7 +381,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <h2>List files and directories in a VM</h2>
 <p> Use <code><a href="/docs/linux/man/1-virt-ls/">virt-ls</a></code>(1).  </p>
 <h2>List services in a Windows VM</h2>
-<p> The link below contains a script that can be used to list out the services from a Windows <font SIZE="-1">VM,</font> and whether those services run at boot time or are loaded on demand. </p>
+<p> The link below contains a script that can be used to list out the services from a Windows VM, and whether those services run at boot time or are loaded on demand. </p>
 <p> <a rel="nofollow" href="https://rwmj.wordpress.com/2010/12/10/tip-list-services-in-a-windows-guest/#content">https://rwmj.wordpress.com/2010/12/10/tip-list-services-in-a-windows-guest/#content</a>  </p>
 <h2>Make a disk image sparse</h2>
 <p> Use <code><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></code>(1).  </p>
@@ -397,7 +397,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
  virt-edit -a disk.img /etc/passwd -e 's/^root:.*?:/root::/'
 </code></pre>
 <h2>Remove Administrator password (Windows)</h2>
-<p> The link below contains one technique for removing the Administrator password from a Windows <font SIZE="-1">VM,</font> or to be more precise, it gives you a command prompt the next time you log in which you can use to bypass any security: </p>
+<p> The link below contains one technique for removing the Administrator password from a Windows VM, or to be more precise, it gives you a command prompt the next time you log in which you can use to bypass any security: </p>
 <p> <a rel="nofollow" href="https://mdbooth.wordpress.com/2010/10/18/resetting-a-windows-guests-administrator-password-with-guestfish/">https://mdbooth.wordpress.com/2010/10/18/resetting-a-windows-guests-administrator-password-with-guestfish/</a>  </p>
 <h2>Sysprepping a virtual machine (Windows)</h2>
 <p> It is possible to do a ``sysprep&#8217;&#8216; using libguestfs alone, although not straightforward. Currently there is code in the Aeolus Oz project which does this (using libguestfs). It is likely we will add this to <code><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></code>(1) in future. </p>
@@ -409,7 +409,7 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <p> The link below contains general tips on uploading (copying in) and downloading (copying out) files from VMs. </p>
 <p> <a rel="nofollow" href="https://rwmj.wordpress.com/2010/12/02/tip-uploading-and-downloading/#content">https://rwmj.wordpress.com/2010/12/02/tip-uploading-and-downloading/#content</a>  </p>
 <h2>Uploading raw filesystem content</h2>
-<p> You can use <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) to upload whole filesystems into a <font SIZE="-1">VM,</font> even into a filesystem which is encrypted or buried inside an <font SIZE="-1">LV</font> or <font SIZE="-1">RAID</font> device: </p>
+<p> You can use <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) to upload whole filesystems into a VM, even into a filesystem which is encrypted or buried inside an LV or RAID device: </p>
 <pre><code> guestfish --rw -a disk.img run : upload sda1.img /dev/sda1
  guestfish --rw -d Guest run : upload lv.img /dev/vg_guest/lv_root
 </code></pre>
@@ -418,9 +418,9 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
    upload lv.img /dev/vg_guest/lv_root : \
    resize2fs /dev/vg_guest/lv_root
 </code></pre>
-<p> (or use <code>&quot;ntfsresize&quot;</code> if the filesystem is <font SIZE="-1">NTFS</font>).  </p>
+<p> (or use <code>&quot;ntfsresize&quot;</code> if the filesystem is NTFS).  </p>
 <h2>Use libguestfs tools on VMware ESX guests</h2>
-<p> The link below explains how to use libguestfs, <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) and the virt tools on any VMware <font SIZE="-1">ESX</font> guests, by first sharing the VMware <font SIZE="-1">VMFS</font> over sshfs. </p>
+<p> The link below explains how to use libguestfs, <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) and the virt tools on any VMware ESX guests, by first sharing the VMware VMFS over sshfs. </p>
 <p> <a rel="nofollow" href="https://rwmj.wordpress.com/2011/05/10/tip-use-libguestfs-on-vmware-esx-guests/#content">https://rwmj.wordpress.com/2011/05/10/tip-use-libguestfs-on-vmware-esx-guests/#content</a>  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3), <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1), <code><a href="/docs/linux/man/3-guestfs-examples/">guestfs-examples</a></code>(3), <code><a href="/docs/linux/man/3-guestfs-erlang/">guestfs-erlang</a></code>(3), <code><a href="/docs/linux/man/3-guestfs-gobject/">guestfs-gobject</a></code>(3), <code><a href="/docs/linux/man/3-guestfs-golang/">guestfs-golang</a></code>(3), <code><a href="/docs/linux/man/3-guestfs-java/">guestfs-java</a></code>(3), <code><a href="/docs/linux/man/3-guestfs-lua/">guestfs-lua</a></code>(3), <code><a href="/docs/linux/man/3-guestfs-ocaml/">guestfs-ocaml</a></code>(3), <code><a href="/docs/linux/man/3-guestfs-perl/">guestfs-perl</a></code>(3), <code><a href="/docs/linux/man/3-guestfs-python/">guestfs-python</a></code>(3), <code><a href="/docs/linux/man/3-guestfs-ruby/">guestfs-ruby</a></code>(3), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a>  </p>

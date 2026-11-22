@@ -14,16 +14,16 @@ description: "docker-container-stats – Display a live stream of container(s) r
 <h2>DESCRIPTION</h2>
 <p> Display a live stream of one or more containers&#8217; resource usage statistics </p>
 <h2>Format</h2>
-<p> Pretty-print containers statistics using a Go template.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;Valid placeholders:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Container &#8211; Container name or ID.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Name &#8211; Container name.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.ID &#8211; Container ID.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.CPUPerc &#8211; CPU percentage.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.MemUsage &#8211; Memory usage.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.NetIO &#8211; Network IO.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.BlockIO &#8211; Block IO.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.MemPerc &#8211; Memory percentage&nbsp;(Not available on Windows).<br />
+<p> Pretty-print containers statistics using a Go template.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;Valid placeholders:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Container &#8211; Container name or ID.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Name &#8211; Container name.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.ID &#8211; Container ID.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.CPUPerc &#8211; CPU percentage.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.MemUsage &#8211; Memory usage.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.NetIO &#8211; Network IO.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.BlockIO &#8211; Block IO.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.MemPerc &#8211; Memory percentage&nbsp;(Not available on Windows).<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.PIDs &#8211; Number of PIDs&nbsp;(Not available on Windows). </p>
 <h2>EXAMPLES</h2>
 <p> Running docker container stats on all running containers. </p>

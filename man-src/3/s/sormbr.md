@@ -9,11 +9,11 @@ url: "/docs/linux/man/3-sormbr/"
 
 <p> sormbr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
-<p> <br />
+<p> <br/>
  </p>
 <h3>Functions/Subroutines</h3>
-<p> <br />
- subroutine <code>sormbr</code> (VECT, SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO) <br />
+<p> <br/>
+ subroutine <code>sormbr</code> (VECT, SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO) <br/>
  <i></i><code>SORMBR</code>  </p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sormbr (characterVECT, characterSIDE, characterTRANS, integerM, integerN, integerK, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( ldc, * )C, integerLDC, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -43,7 +43,7 @@ url: "/docs/linux/man/3-sormbr/"
  if k &lt; nq, P =G(1)G(2) . . . G(k);
  if k &gt;= nq, P =G(1)G(2) . . . G(nq-1).
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr> </p>
  </dd></dl>
 <p> <code>Parameters:</code> </p>
@@ -53,29 +53,29 @@ url: "/docs/linux/man/3-sormbr/"
           = 'Q': apply Q or Q**T;
           = 'P': apply P or P**T.
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>SIDE</i> </p>
 <pre><code>          SIDE is CHARACTER*1
           = 'L': apply Q, Q**T, P or P**T from the Left;
           = 'R': apply Q, Q**T, P or P**T from the Right.
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>TRANS</i> </p>
 <pre><code>          TRANS is CHARACTER*1
           = 'N': No transpose, apply Q or P;
           = 'T': Transpose, apply Q**T or P**T.
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>M</i> </p>
 <pre><code>          M is INTEGER
           The number of rows of the matrix C. M &gt;= 0.
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>N</i> </p>
 <pre><code>          N is INTEGER
           The number of columns of the matrix C. N &gt;= 0.
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>K</i> </p>
 <pre><code>          K is INTEGER
           If VECT = 'Q', the number of columns in the original
@@ -84,7 +84,7 @@ url: "/docs/linux/man/3-sormbr/"
           matrix reduced by SGEBRD.
           K &gt;= 0.
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>A</i> </p>
 <pre><code>          A is REAL array, dimension
                                 (LDA,min(nq,K)) if VECT = 'Q'
@@ -93,38 +93,38 @@ url: "/docs/linux/man/3-sormbr/"
           G(i), whose products determine the matrices Q and P, as
           returned by SGEBRD.
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>LDA</i> </p>
 <pre><code>          LDA is INTEGER
           The leading dimension of the array A.
           If VECT = 'Q', LDA &gt;= max(1,nq);
           if VECT = 'P', LDA &gt;= max(1,min(nq,K)).
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>TAU</i> </p>
 <pre><code>          TAU is REAL array, dimension (min(nq,K))
           TAU(i) must contain the scalar factor of the elementary
           reflector H(i) or G(i) which determines Q or P, as returned
           by SGEBRD in the array argument TAUQ or TAUP.
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>C</i> </p>
 <pre><code>          C is REAL array, dimension (LDC,N)
           On entry, the M-by-N matrix C.
           On exit, C is overwritten by Q*C or Q**T*C or C*Q**T or C*Q
           or P*C or P**T*C or C*P or C*P**T.
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>LDC</i> </p>
 <pre><code>          LDC is INTEGER
           The leading dimension of the array C. LDC &gt;= max(1,M).
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>WORK</i> </p>
 <pre><code>          WORK is REAL array, dimension (MAX(1,LWORK))
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>LWORK</i> </p>
 <pre><code>          LWORK is INTEGER
           The dimension of the array WORK.
@@ -138,13 +138,13 @@ url: "/docs/linux/man/3-sormbr/"
           this value as the first entry of the WORK array, and no error
           message related to LWORK is issued by XERBLA.
 </code></pre>
-<p> <br />
+<p> <br/>
  <i>INFO</i> </p>
 <pre><code>          INFO is INTEGER
           = 0: successful exit
           &lt; 0: if INFO = -i, the i-th argument had an illegal value
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr> </p>
  </dd></dl>
 <p> <code>Author:</code> </p>

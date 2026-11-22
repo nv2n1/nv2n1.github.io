@@ -45,14 +45,14 @@ description: "fedfs-lookup-junction – send a FEDFS_LOOKUP_JUNCTION ADMIN proto
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that your domain&#8217;s NSDB hostname is <i>nsdb.example.net</i>. You have created a FedFS junction on remote server <i>fs.example.net</i>. To see how the junction appears on the file server, use:</p>
 <dl>
-<dd>$ fedfs-lookup-junction -h fs.example.net /export/junction1<br />
- Call completed successfully<br />
- FSN UUID: 89c6d208-7280-11e0-9f1d-000c297fd679<br />
+<dd>$ fedfs-lookup-junction -h fs.example.net /export/junction1<br/>
+ Call completed successfully<br/>
+ FSN UUID: 89c6d208-7280-11e0-9f1d-000c297fd679<br/>
  NSDB: nsdb.example.net:389 </dd>
 </dl>
 <p> To see real-time junction lookup results as the remote server sees them, use:</p>
 <dl>
-<dd>$ fedfs-lookup-junction -h fs.example.net -t nsdb /export/junction1<br />
+<dd>$ fedfs-lookup-junction -h fs.example.net -t nsdb /export/junction1<br/>
  Server returned FEDFS_ERR_NSDB_NOFSN </dd>
 </dl>
 <p> In this example, the junction exists on the file server, but the domain&#8217;s NSDB has not yet been updated to contain a list of fileset locations for the FSN UUID contained in the junction. The file server is therefore not able to resolve the junction.</p>

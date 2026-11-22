@@ -13,7 +13,7 @@ description: "QuantLib::ForwardRateStructure – Forward-rate term structure"
 <p> Inherits <code>QuantLib::YieldTermStructure</code>. </p>
 <p> Inherited by <code>CompoundForward</code>, <code>ForwardSpreadedTermStructure</code>, and <code>InterpolatedForwardCurve&lt; Interpolator &gt;</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors</code><br />
+<p><code>Constructors</code><br/>
  See the <code>TermStructure</code> documentation for issues regarding constructors. </p>
 <p> <code>ForwardRateStructure</code> (const <code>DayCounter</code> &amp;dayCounter=<code>Actual365Fixed</code>()) </p>
 <p> <code>ForwardRateStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), const <code>DayCounter</code> &amp;dayCounter=<code>Actual365Fixed</code>()) </p>
@@ -21,8 +21,8 @@ description: "QuantLib::ForwardRateStructure – Forward-rate term structure"
 <h3>Protected Member Functions</h3>
 <p><code>YieldTermStructure implementation</code> </p>
 <p> <code>DiscountFactor</code> <code>discountImpl</code> (Time) const </p>
-<p> virtual <code>Rate</code> <code>forwardImpl</code> (Time) const =0<br />
- <i>instantaneous forward-rate calculation </i><br />
+<p> virtual <code>Rate</code> <code>forwardImpl</code> (Time) const =0<br/>
+ <i>instantaneous forward-rate calculation </i><br/>
  virtual <code>Rate</code> <code>zeroYieldImpl</code> (Time) const </p>
 <h2>Detailed Description</h2>
 <p>Forward-rate term structure </p>

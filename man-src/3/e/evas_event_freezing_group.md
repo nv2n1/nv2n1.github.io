@@ -9,11 +9,11 @@ description: "Evas Event Freezing Functions – Functions that deal with the fre
 
 <p>Evas Event Freezing Functions &#8211; Functions that deal with the freezing of event processing of an evas. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_event_freeze</code> (<code>Evas</code> *e)<br />
- <i>Freeze all event processing. </i><br />
- EAPI void <code>evas_event_thaw</code> (<code>Evas</code> *e)<br />
- <i>Thaw a canvas out after freezing. </i><br />
- EAPI int <code>evas_event_freeze_get</code> (const <code>Evas</code> *e)<br />
+<p>EAPI void <code>evas_event_freeze</code> (<code>Evas</code> *e)<br/>
+ <i>Freeze all event processing. </i><br/>
+ EAPI void <code>evas_event_thaw</code> (<code>Evas</code> *e)<br/>
+ <i>Thaw a canvas out after freezing. </i><br/>
+ EAPI int <code>evas_event_freeze_get</code> (const <code>Evas</code> *e)<br/>
  <i>Return the freeze count of a given canvas. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that deal with the freezing of event processing of an evas.</p>

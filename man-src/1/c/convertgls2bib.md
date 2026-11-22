@@ -76,7 +76,7 @@ opostdesc&quot;</tt> or <tt>&quot;\glsxtrnopostpunc&quot;</tt> (default).</dd>
 <h2>REQUIRES</h2>
 <p> Java 8 and a TeX distribution.</p>
 <h2>LICENSE</h2>
-<p> License GPLv3+: <font SIZE="-1">GNU GPL</font> version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt; This is free software: you are free to change and redistribute it. There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law.</p>
+<p> License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt; This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>RECOMMENDED READING</h2>
 <p> The bib2gls manual: </p>
 <pre>

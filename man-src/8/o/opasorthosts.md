@@ -28,20 +28,20 @@ description: "opasorthosts"
 <p>opasorthosts #8217lt; host.xml &gt; Sorted_host</p>
 <dl>
 <dt><code>Standard Input</code></dt>
-<dd>opasorthosts<br />
- osd04<br />
- osd1<br />
- compute20<br />
- compute3<br />
- mgmt1<br />
- mgmt2<br />
+<dd>opasorthosts<br/>
+ osd04<br/>
+ osd1<br/>
+ compute20<br/>
+ compute3<br/>
+ mgmt1<br/>
+ mgmt2<br/>
  login</dd>
 <dt><code>Standard Output</code></dt>
-<dd>compute3<br />
- compute20<br />
- login<br />
- mgmt1<br />
- mgmt2<br />
- osd1<br />
+<dd>compute3<br/>
+ compute20<br/>
+ login<br/>
+ mgmt1<br/>
+ mgmt2<br/>
+ osd1<br/>
  osd04 </dd>
 </dl>

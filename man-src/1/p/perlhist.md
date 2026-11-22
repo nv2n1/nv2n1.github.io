@@ -31,9 +31,9 @@ perlhist - the Perl history records
 
 <h2>THE KEEPERS OF THE PUMPKIN</h2>
 
- Larry Wall, Andy Dougherty, Tom Christiansen, Charles Bailey, Nick Ing-Simmons, Chip Salzenberg, Tim Bunce, Malcolm Beattie, Gurusamy Sarathy, Graham Barr, Jarkko Hietaniemi, Hugo van der Sanden, Michael Schwern, Rafael Garcia-Suarez, Nicholas Clark, Richard Clamp, Leon Brocard, Dave Mitchell, Jesse Vincent, Ricardo Signes, Steve Hay, Matt S Trout, David Golden, Florian Ragwitz, Tatsuhiko Miyagawa, Chris <tt>&quot;BinGOs&quot;</tt> Williams, Zefram, Ævar Arnfjörð Bjarmason, Stevan Little, Dave Rolsky, Max Maischein, Abigail, Jesse Luehrs, Tony Cook, Dominic Hargreaves, Aaron Crane, Aristotle Pagaltzis, Matthew Horsfall, Peter Martini, Sawyer X, Chad 'Exodist' Granum, Renee Bäcker, Eric Herman, John <font SIZE="-1">SJ</font> Anderson, Karen Etheridge, and Zak B. Elep.
+ Larry Wall, Andy Dougherty, Tom Christiansen, Charles Bailey, Nick Ing-Simmons, Chip Salzenberg, Tim Bunce, Malcolm Beattie, Gurusamy Sarathy, Graham Barr, Jarkko Hietaniemi, Hugo van der Sanden, Michael Schwern, Rafael Garcia-Suarez, Nicholas Clark, Richard Clamp, Leon Brocard, Dave Mitchell, Jesse Vincent, Ricardo Signes, Steve Hay, Matt S Trout, David Golden, Florian Ragwitz, Tatsuhiko Miyagawa, Chris <tt>&quot;BinGOs&quot;</tt> Williams, Zefram, Ævar Arnfjörð Bjarmason, Stevan Little, Dave Rolsky, Max Maischein, Abigail, Jesse Luehrs, Tony Cook, Dominic Hargreaves, Aaron Crane, Aristotle Pagaltzis, Matthew Horsfall, Peter Martini, Sawyer X, Chad 'Exodist' Granum, Renee Bäcker, Eric Herman, John SJ Anderson, Karen Etheridge, and Zak B. Elep.
 
-<h3><font SIZE="-1">PUMPKIN</font>?</h3>
+<h3>PUMPKIN?</h3>
 
  [from Porting/pumpkin.pod in the Perl source code distribution] 
 
@@ -608,7 +608,7 @@ perlhist - the Perl history records
  Sawyer X  5.30.0       2019-May-22
 </code></pre>
 
-<h3><font SIZE="-1">SELECTED RELEASE SIZES</font></h3>
+<h3>SELECTED RELEASE SIZES</h3>
 
  For example the notation ``core: 212 29'' in the release 1.000 means that it had in the core 212 kilobytes, in 29 files. The ``core''..``doc'' are explained below. 
 
@@ -649,7 +649,7 @@ release core lib ext t doc == == == == == == == == == == == == == == == == == ==
     5.26.0 5.28.0 5.30.0 Configure 593 1 580 1 587 1 Cross 122 15 125 15 126 15 djgpp 21 7 21 7 21 7 h2pl 24 15 24 15 24 15 hints 376 87 364 85 372 86 mad - - - - - -NetWare 499 61 493 61 493 61 os2 552 70 552 70 552 70 plan9 322 17 309 17 308 17 Porting 1380 73 1462 75 1460 74 qnx 5 4 5 4 5 4 symbian 315 54 315 54 315 54 utils 578 50 584 50 587 50 vms 527 12 526 12 526 12 vos 12 7 12 7 12 7 win32 1313 65 1326 65 1331 65 x2p - - - - - -
 
 
-<h3><font SIZE="-1">SELECTED PATCH SIZES</font></h3>
+<h3>SELECTED PATCH SIZES</h3>
 
  The ``diff lines kB'' means that for example the patch 5.003_08, to be applied on top of the 5.003_07 (or whatever was before the 5.003_08) added lines for 110 kilobytes, it removed lines for 19 kilobytes, and changed lines for 424 kilobytes. Just the lines themselves are counted, not their context. The ``+ - !'' become from the <b><a HREF="/docs/linux/man/1-diff/">diff</a></b>(1) context diff output format. 
 

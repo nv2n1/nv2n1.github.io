@@ -13,11 +13,11 @@ description: "QuantLib::GeometricBrownianMotionProcess – Geometric brownian-mo
 <p> Inherits <code>QuantLib::StochasticProcess1D</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>GeometricBrownianMotionProcess</code> (double initialValue, double mue, double sigma) </p>
-<p> Real <code>x0</code> () const<br />
- <i>returns the initial value of the state variable </i><br />
- Real <code>drift</code> (Time t, Real x) const<br />
- <i>returns the drift part of the equation, i.e. $ mu(t, x_t) $ </i><br />
- Real <code>diffusion</code> (Time t, Real x) const<br />
+<p> Real <code>x0</code> () const<br/>
+ <i>returns the initial value of the state variable </i><br/>
+ Real <code>drift</code> (Time t, Real x) const<br/>
+ <i>returns the drift part of the equation, i.e. $ mu(t, x_t) $ </i><br/>
+ Real <code>diffusion</code> (Time t, Real x) const<br/>
  <i>returns the diffusion part of the equation, i.e. $ igma(t, x_t) $ </i></p>
 <h3>Protected Attributes</h3>
 <p>double <code>initialValue_</code> </p>

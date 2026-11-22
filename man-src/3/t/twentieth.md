@@ -13,7 +13,7 @@ description: "QuantLib::DateGeneration – Date-generation rule."
 <h3>Public Types</h3>
 <p>enum <code>Rule</code> { <code>Backward</code>, <code>Forward</code>, <code>Zero</code>, <code>ThirdWednesday</code>, <code>Twentieth</code>, <code>TwentiethIMM</code> } </p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, <code>DateGeneration::Rule</code>) </p>
 <h2>Detailed Description</h2>
 <p>Date-generation rule. </p>

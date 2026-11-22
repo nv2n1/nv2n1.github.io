@@ -58,6 +58,6 @@ description: "opagenesmchassis"
 <dt><code>PORTS_FILE</code></dt>
 <dd>File containing list of ports, used in absence of -t and -p.</dd></dl>
 <h2>Examples</h2>
-<p>opagenesmchassis<br />
- opagenesmchassis -S -p &#8216;1:1 1:2 2:1 2:2&#8217; Alternatively, while editing the file, use a vi command to include the output such as:<br />
+<p>opagenesmchassis<br/>
+ opagenesmchassis -S -p &#8216;1:1 1:2 2:1 2:2&#8217; Alternatively, while editing the file, use a vi command to include the output such as:<br/>
  :r! opagenesmchassis </p>

@@ -14,7 +14,7 @@ description: "gendesc – Generate a test case description file"
 <dl>
 <dt>
 </dt><dd>
- [<code>-o</code>|<code>&#8211;output-filename</code> <i>filename</i>]<br />
+ [<code>-o</code>|<code>&#8211;output-filename</code> <i>filename</i>]<br/>
  <i>inputfile</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Convert plain text test case descriptions into a format as understood by <code>genhtml</code>. <i>inputfile</i> needs to observe the following format: </p>
@@ -28,7 +28,7 @@ description: "gendesc – Generate a test case description file"
 <p> test01</p>
 <dl>
 <dt>
-</dt><dd> An example test case description.<br />
+</dt><dd> An example test case description.<br/>
  Description continued</dd></dl>
 <p> test42</p>
 <dl>
@@ -36,17 +36,17 @@ description: "gendesc – Generate a test case description file"
 </dt><dd> Supposedly the answer to most of your questions</dd></dl>
 <p> Note: valid test names can consist of letters, decimal digits and the underscore character (&#8216;_&#8217;).</dl>
 <h2>OPTIONS</h2>
-<p> <code>-h</code><br />
+<p> <code>-h</code><br/>
  <code>&#8211;help</code></p>
 <dl>
 <dt>
 </dt><dd> Print a short help text, then exit.</dd></dl>
-<p> <code>-v</code><br />
+<p> <code>-v</code><br/>
  <code>&#8211;version</code></p>
 <dl>
 <dt>
 </dt><dd> Print version number, then exit.</dd></dl>
-<p> <code>-o </code><i>filename</i><br />
+<p> <code>-o </code><i>filename</i><br/>
  <code>&#8211;output-filename </code><i>filename</i></p>
 <dl>
 <dt>

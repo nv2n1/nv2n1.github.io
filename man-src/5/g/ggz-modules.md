@@ -13,9 +13,9 @@ description: "ggz.modules – GGZ Gaming Zone module configuration file"
 <h2>Parameters</h2>
 <p>The <i>ggz.modules</i> file is formattted in sections, each of which begins with a <i>[SectionID]</i> line. The first (required) section is <i>[Games]</i>. This section is followed by any number of game-specific sections named <i>[g#]</i>. </p>
 <p> The <i>[Games]</i> section is formatted as follows: </p>
-<p> [Games]<br />
- <code>*GameList*</code> = GameName1 GameName2 &#8230;<br />
- <code>GameName1</code> = g1 g2 &#8230;<br />
+<p> [Games]<br/>
+ <code>*GameList*</code> = GameName1 GameName2 &#8230;<br/>
+ <code>GameName1</code> = g1 g2 &#8230;<br/>
  <code>GameName2</code> = g3 &#8230;</p>
 <dl>
 <dt><code>*GameList*</code></dt>
@@ -24,13 +24,13 @@ description: "ggz.modules – GGZ Gaming Zone module configuration file"
 <dd>Should equal a game name from the <i>*GameList*</i>, a real world example would be <i>NetSpades</i>. It should be set to a list of unique game section ID&#8217;s of the form <i>g#</i>. Each game section ID must be the name of a section ID which follows in the file. The ID&#8217;s need not be in any specific order, and ID numbers may be skipped but NOT repeated. </dd>
 </dl>
 <p> A game section is formatted as follows: </p>
-<p> <code>[g#]</code><br />
- Author = Game&#8217;s Author<br />
- CommandLine = /path/to/command [optionlist]<br />
- Frontend = <code>FECODE</code><br />
- Homepage = URL to Game&#8217;s homepage<br />
- Name = <code>GameName</code><br />
- Protocol = <code>ProtocolVersion</code><br />
+<p> <code>[g#]</code><br/>
+ Author = Game&#8217;s Author<br/>
+ CommandLine = /path/to/command [optionlist]<br/>
+ Frontend = <code>FECODE</code><br/>
+ Homepage = URL to Game&#8217;s homepage<br/>
+ Name = <code>GameName</code><br/>
+ Protocol = <code>ProtocolVersion</code><br/>
  Version = <code>GameVersion</code> </p>
 <p> Most of these parameters are self explanatory, however the following may need clarification:</p>
 <dl>

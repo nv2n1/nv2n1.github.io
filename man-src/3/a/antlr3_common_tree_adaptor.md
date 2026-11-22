@@ -9,7 +9,7 @@ description: "ANTLR3_COMMON_TREE_ADAPTOR – Common Tree Adaptor Class Definitio
 
 <p>ANTLR3_COMMON_TREE_ADAPTOR &#8211; Common Tree Adaptor Class Definition &#8211; </p>
 <h3>Typedefs</h3>
-<p>typedef struct <code>ANTLR3_COMMON_TREE_ADAPTOR_struct</code> * <code>pANTLR3_COMMON_TREE_ADAPTOR</code><br />
+<p>typedef struct <code>ANTLR3_COMMON_TREE_ADAPTOR_struct</code> * <code>pANTLR3_COMMON_TREE_ADAPTOR</code><br/>
  <i>Pointer to an instantiation of &#8216;class&#8217; </i><code>ANTLR3_COMMON_TREE_ADAPTOR</code>.</p>
 <h2>Typedef Documentation</h2>
 <h3>typedef struct <code>ANTLR3_COMMON_TREE_ADAPTOR_struct</code>* <code>pANTLR3_COMMON_TREE_ADAPTOR</code></h3>

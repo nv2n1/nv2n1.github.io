@@ -13,32 +13,32 @@ description: "QwtPlotBarChart –"
 <p>#include &lt;qwt_plot_barchart.h&gt; </p>
 <p> Inherits <code>QwtPlotAbstractBarChart</code>, and <code>QwtSeriesStore&lt; QPointF &gt;</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>LegendMode</code> { <code>LegendChartTitle</code>, <code>LegendBarTitles</code> }<br />
+<p>enum <code>LegendMode</code> { <code>LegendChartTitle</code>, <code>LegendBarTitles</code> }<br/>
  <i>Legend modes. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPlotBarChart</code> (const QString &amp;<code>title</code>=QString::null) </p>
 <p> <code>QwtPlotBarChart</code> (const <code>QwtText</code> &amp;<code>title</code>) </p>
-<p> virtual <code>~QwtPlotBarChart</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtPlotBarChart</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
 <p> void <code>setSamples</code> (const QVector&lt; QPointF &gt; &amp;) </p>
 <p> void <code>setSamples</code> (const QVector&lt; double &gt; &amp;) </p>
 <p> void <code>setSamples</code> (<code>QwtSeriesData</code>&lt; QPointF &gt; *series) </p>
-<p> void <code>setSymbol</code> (<code>QwtColumnSymbol</code> *)<br />
- <i>Assign a symbol. </i><br />
+<p> void <code>setSymbol</code> (<code>QwtColumnSymbol</code> *)<br/>
+ <i>Assign a symbol. </i><br/>
  const <code>QwtColumnSymbol</code> * <code>symbol</code> () const </p>
 <p> void <code>setLegendMode</code> (<code>LegendMode</code>) </p>
 <p> <code>LegendMode</code> <code>legendMode</code> () const </p>
 <p> virtual void <code>drawSeries</code> (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const </p>
 <p> virtual QRectF <code>boundingRect</code> () const </p>
 <p> virtual <code>QwtColumnSymbol</code> * <code>specialSymbol</code> (int sampleIndex, const QPointF &amp;) const </p>
-<p> virtual <code>QwtText</code> <code>barTitle</code> (int sampleIndex) const<br />
+<p> virtual <code>QwtText</code> <code>barTitle</code> (int sampleIndex) const<br/>
  <i>Return the title of a bar. </i></p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>drawSample</code> (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, const <code>QwtInterval</code> &amp;boundingInterval, int index, const QPointF &amp;<code>sample</code>) const </p>
 <p> virtual void <code>drawBar</code> (QPainter *, int sampleIndex, const QPointF &amp;point, const <code>QwtColumnRect</code> &amp;) const </p>
-<p> QList&lt; <code>QwtLegendData</code> &gt; <code>legendData</code> () const<br />
- <i>Return all information, that is needed to represent the item on the legend. </i><br />
+<p> QList&lt; <code>QwtLegendData</code> &gt; <code>legendData</code> () const<br/>
+ <i>Return all information, that is needed to represent the item on the legend. </i><br/>
  <code>QwtGraphic</code> <code>legendIcon</code> (int index, const QSizeF &amp;) const </p>
 <h2>Detailed Description</h2>
 <p><code>QwtPlotBarChart</code> displays a series of a values as bars. </p>
@@ -101,20 +101,20 @@ description: "QwtPlotBarChart –"
 <p>Draw a bar </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>sampleIndex</i> Index of the sample represented by the bar<br />
- <i>sample</i> Value of the sample<br />
+<dd><i>painter</i> Painter<br/>
+ <i>sampleIndex</i> Index of the sample represented by the bar<br/>
+ <i>sample</i> Value of the sample<br/>
  <i>rect</i> Bounding rectangle of the bar</dd></dl>
 <h3>void QwtPlotBarChart::drawSample (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, const <code>QwtInterval</code> &amp;boundingInterval, intindex, const QPointF &amp;sample) const [protected], [virtual]</h3>
 <p>Draw a sample </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rect of the canvas<br />
- <i>boundingInterval</i> Bounding interval of sample values<br />
- <i>index</i> Index of the sample<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rect of the canvas<br/>
+ <i>boundingInterval</i> Bounding interval of sample values<br/>
+ <i>index</i> Index of the sample<br/>
  <i>sample</i> Value of the sample</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -123,11 +123,11 @@ description: "QwtPlotBarChart –"
 <p>Draw an interval of the bar chart </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rect of the canvas<br />
- <i>from</i> Index of the first point to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>canvasRect</i> Contents rect of the canvas<br/>
+ <i>from</i> Index of the first point to be painted<br/>
  <i>to</i> Index of the last point to be painted. If to &lt; 0 the curve will be painted to its last point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -149,7 +149,7 @@ description: "QwtPlotBarChart –"
 <p> When the <code>legendMode()</code> is LegendBarTitles the icon shows the bar corresponding to index &#8211; otherwise the bar displays the default symbol. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index of the legend entry<br />
+<dd><i>index</i> Index of the legend entry<br/>
  <i>size</i> Icon size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -215,7 +215,7 @@ description: "QwtPlotBarChart –"
 <p>Needs to be overloaded to return a non default symbol for a specific sample </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>sampleIndex</i> Index of the sample represented by the bar<br />
+<dd><i>sampleIndex</i> Index of the sample represented by the bar<br/>
  <i>sample</i> Value of the sample</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

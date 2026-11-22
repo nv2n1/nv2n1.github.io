@@ -10,7 +10,7 @@ description: "grepjar – search files in a jar file for a pattern"
 
 <p> grepjar &#8211; search files in a jar file for a pattern </p>
 <h2>SYNOPSIS</h2>
-<p> grepjar [<code>-bcinsw</code>] <code>-e</code> <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i> | <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i> <i>files</i>&#8230;</p>
+<p> grepjar [<code>-bcinsw</code>] <code>-e</code> <i></i><i>PATTERN</i><i></i> | <i></i><i>PATTERN</i><i></i> <i>files</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> The <tt>&quot;grepjar&quot;</tt> program can be used to search files in a jar file for a pattern.</p>
 <h2>OPTIONS</h2>
@@ -26,9 +26,9 @@ description: "grepjar – search files in a jar file for a pattern"
 <dt><code>-s</code></dt>
 <dd> Suppress error messages.</dd>
 <dt><code>-w</code></dt>
-<dd> Force <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i> to match only whole words.</dd>
-<dt><code>-e</code> <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i></dt>
-<dd> Use <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i> as regular expression.</dd>
+<dd> Force <i></i><i>PATTERN</i><i></i> to match only whole words.</dd>
+<dt><code>-e</code> <i></i><i>PATTERN</i><i></i></dt>
+<dd> Use <i></i><i>PATTERN</i><i></i> as regular expression.</dd>
 <dt><code>&#8211;help</code></dt>
 <dd> Print help, then exit.</dd>
 <dt><code>-V</code></dt>
@@ -39,4 +39,4 @@ description: "grepjar – search files in a jar file for a pattern"
 <p> <i><a href="/docs/linux/man/1-fastjar/">fastjar</a></i>(1), <i><a href="/docs/linux/man/1-gcj/">gcj</a></i>(1), <i><a href="/docs/linux/man/1-gij/">gij</a></i>(1), <i>gfdl</i>(7) and the Info entry for <i>gcj</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2002, 2007, 2008 Matthias Klose </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. A copy of the license is included in the man page <i>gfdl</i>(7). </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. A copy of the license is included in the man page <i>gfdl</i>(7). </p>

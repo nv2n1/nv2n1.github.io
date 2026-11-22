@@ -10,7 +10,7 @@ description: "XkbFreeIndicatorMaps – Frees memory used by the indicators membe
 <p>XkbFreeIndicatorMaps &#8211; Frees memory used by the <i>indicators </i> member of an XkbDescRec structure </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbFreeIndicatorMaps</code> <code>(XkbDescPtr </code><i>xkb</i><code>);</code><br />
+<dt> <code>void XkbFreeIndicatorMaps</code> <code>(XkbDescPtr </code><i>xkb</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

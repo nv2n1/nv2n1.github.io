@@ -174,39 +174,39 @@ $ pycodestyle testsuite / E40.py-- format = default testsuite / E40.py : 2 : 10 
 </table>
 <p></center> </p>
 <p> Quick help is available on the command line: </p>
-<p>$ pycodestyle -h<br />
-Usage: pycodestyle [options] input &#8230;<br />
-Options:<br />
-  &#8211;version            show program&#8217;s version number and exit<br />
-  -h, &#8211;help           show this help message and exit<br />
-  -v, &#8211;verbose        print status messages, or debug with -vv<br />
-  -q, &#8211;quiet          report only file names, or nothing with -qq<br />
-  &#8211;first              show first occurrence of each error<br />
-  &#8211;exclude=patterns   exclude files or directories which match these comma<br />
-                       separated patterns (default: .svn,CVS,.bzr,.hg,.git)<br />
-  &#8211;filename=patterns  when parsing directories, only check filenames matching<br />
-                       these comma separated patterns (default: *.py)<br />
-  &#8211;select=errors      select errors and warnings (e.g. E,W6)<br />
-  &#8211;ignore=errors      skip errors and warnings (e.g. E4,W)<br />
-  &#8211;show-source        show source code for each error<br />
-  &#8211;show-pep8          show text of PEP 8 for each error (implies &#8211;first)<br />
-  &#8211;statistics         count errors and warnings<br />
-  &#8211;count              print total number of errors and warnings to standard<br />
-                       error and set exit code to 1 if total is not null<br />
-  &#8211;max-line-length=n  set maximum allowed line length (default: 79)<br />
-  &#8211;hang-closing       hang closing bracket instead of matching indentation of<br />
-                       opening bracket&#8217;s line<br />
-  &#8211;format=format      set the error format [default|pylint|&lt;custom&gt;]<br />
-  &#8211;diff               report only lines changed according to the unified diff<br />
-                       received on STDIN<br />
-  Testing Options:<br />
-    &#8211;benchmark        measure processing speed<br />
-  Configuration:<br />
-    The project options are read from the [pep8] section of the tox.ini<br />
-    file or the setup.cfg file located in any parent folder of the path(s)<br />
-being processed.Allowed options are : exclude, filename, select,<br />
-    ignore, max &#8211; line &#8211; length, hang &#8211; closing, count, format, quiet, show &#8211; pep8,<br />
-    show &#8211; source, statistics, verbose.&#8211;config = path user config file location(default<br />
+<p>$ pycodestyle -h<br/>
+Usage: pycodestyle [options] input &#8230;<br/>
+Options:<br/>
+  &#8211;version            show program&#8217;s version number and exit<br/>
+  -h, &#8211;help           show this help message and exit<br/>
+  -v, &#8211;verbose        print status messages, or debug with -vv<br/>
+  -q, &#8211;quiet          report only file names, or nothing with -qq<br/>
+  &#8211;first              show first occurrence of each error<br/>
+  &#8211;exclude=patterns   exclude files or directories which match these comma<br/>
+                       separated patterns (default: .svn,CVS,.bzr,.hg,.git)<br/>
+  &#8211;filename=patterns  when parsing directories, only check filenames matching<br/>
+                       these comma separated patterns (default: *.py)<br/>
+  &#8211;select=errors      select errors and warnings (e.g. E,W6)<br/>
+  &#8211;ignore=errors      skip errors and warnings (e.g. E4,W)<br/>
+  &#8211;show-source        show source code for each error<br/>
+  &#8211;show-pep8          show text of PEP 8 for each error (implies &#8211;first)<br/>
+  &#8211;statistics         count errors and warnings<br/>
+  &#8211;count              print total number of errors and warnings to standard<br/>
+                       error and set exit code to 1 if total is not null<br/>
+  &#8211;max-line-length=n  set maximum allowed line length (default: 79)<br/>
+  &#8211;hang-closing       hang closing bracket instead of matching indentation of<br/>
+                       opening bracket&#8217;s line<br/>
+  &#8211;format=format      set the error format [default|pylint|&lt;custom&gt;]<br/>
+  &#8211;diff               report only lines changed according to the unified diff<br/>
+                       received on STDIN<br/>
+  Testing Options:<br/>
+    &#8211;benchmark        measure processing speed<br/>
+  Configuration:<br/>
+    The project options are read from the [pep8] section of the tox.ini<br/>
+    file or the setup.cfg file located in any parent folder of the path(s)<br/>
+being processed.Allowed options are : exclude, filename, select,<br/>
+    ignore, max &#8211; line &#8211; length, hang &#8211; closing, count, format, quiet, show &#8211; pep8,<br/>
+    show &#8211; source, statistics, verbose.&#8211;config = path user config file location(default<br/>
                                                                                  : ~ /.config / pep8)</p>
 <h3>Configuration</h3>
 <p> The behaviour may be configured at two levels, the user and project levels. </p>
@@ -1329,11 +1329,11 @@ style = pycodestyle.StyleGuide(ignore=['E501'])
 </pre>
 <h3>Skip file header</h3>
 <p> Another example is related to the <i>feature request #143</i>: skip a number of lines at the beginning and the end of a file. This use case is easy to implement through a custom wrapper for the PEP 8 library: </p>
-<p>#!python<br />
-import pycodestyle LINES_SLICE = slice(14, &#8211; 20) class StyleGuide(pycodestyle.StyleGuide) : &#8220;&#8221;<br />
-                                                                                            &#8220;This subclass of pycodestyle.StyleGuide will skip the first and last lines<br />
-                                                                  of each file.&#8221;&#8221;<br />
-                                                                               &#8221;<br />
+<p>#!python<br/>
+import pycodestyle LINES_SLICE = slice(14, &#8211; 20) class StyleGuide(pycodestyle.StyleGuide) : &#8220;&#8221;<br/>
+                                                                                            &#8220;This subclass of pycodestyle.StyleGuide will skip the first and last lines<br/>
+                                                                  of each file.&#8221;&#8221;<br/>
+                                                                               &#8221;<br/>
                                                                   def input_file(self, filename, lines = None, expected = None, line_offset = 0) : if lines is None:assert line_offset == 0 line_offset = LINES_SLICE.start or 0 lines = pycodestyle.readlines(filename)[LINES_SLICE] return super(StyleGuide, self).input_file(filename, lines = lines, expected = expected, line_offset = line_offset) if __name__ == &#8216;__main__&#8217; :style = StyleGuide(parse_argv = True, config_file = True) report = style.check_files() if report.total_errors:raise SystemExit(1)</p>
 <p> This module declares a lines&#8217; window which skips 14 lines at the beginning and 20 lines at the end. If there&#8217;s no line to skip at the end, it could be changed with <code>LINES_SLICE = slice(14, None)</code> for example. </p>
 <p> You can save it in a file and use it with the same options as the original <code>pycodestyle</code>.</p>

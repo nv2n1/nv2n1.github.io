@@ -26,7 +26,7 @@ PDL::Dataflow -- description of the dataflow philosophy
 
  <pre> $b = $a + 1;
  $b ++;</pre>where there are several possible outcomes and the semantics get a little murky.
-<h2>Description</h2>Dataflow is new to <font SIZE="-1">PDL2.0.</font> The basic philosophy behind dataflow is that 
+<h2>Description</h2>Dataflow is new to PDL2.0. The basic philosophy behind dataflow is that 
 
  <pre> &gt; $a = pdl 2,3,4;
  &gt; $b = $a * 2;
@@ -58,9 +58,9 @@ PDL::Dataflow -- description of the dataflow philosophy
  &gt; $b-&gt;resize(4);
  &gt; print $c;</pre>Now, if <tt>$c</tt> were evaluated between the two resizes, an error condition of incompatible sizes would occur. 
 
- What happens in the current version is that resizing <tt>$a</tt> raises a flag in <tt>$c:</tt> ``<font SIZE="-1">PDL_PARENTDIMSCHANGED''</font> and <tt>$b</tt> just raises the same flag again. When <tt>$c</tt> is next evaluated, the flags are checked and it is found that a recalculation is needed. 
+ What happens in the current version is that resizing <tt>$a</tt> raises a flag in <tt>$c:</tt> ``PDL_PARENTDIMSCHANGED'' and <tt>$b</tt> just raises the same flag again. When <tt>$c</tt> is next evaluated, the flags are checked and it is found that a recalculation is needed. 
 
- Of course, lazy evaluation can sometimes make debugging more painful because errors may occur somewhere where you'd not expect them. A better stack trace for errors is in the works for <font SIZE="-1">PDL,</font> probably so that you can toggle a switch <tt>$PDL::traceevals</tt> and get a good trace of where the error actually was.
+ Of course, lazy evaluation can sometimes make debugging more painful because errors may occur somewhere where you'd not expect them. A better stack trace for errors is in the works for PDL, probably so that you can toggle a switch <tt>$PDL::traceevals</tt> and get a good trace of where the error actually was.
 <h2>Families</h2>This is one of the more intricate concepts of one-directional dataflow. Consider the following code ($a and <tt>$b</tt> are pdls that have dataflow enabled): 
 
  <pre> $c = $a + $b;
@@ -76,7 +76,7 @@ PDL::Dataflow -- description of the dataflow philosophy
  c
  /|
  / |
- e d</pre>This is what <font SIZE="-1">PDL</font> actually has in memory after the first three lines. When <tt>$d</tt> is changed, we want <tt>$c</tt> to change but we don't want <tt>$e</tt> to change because it already is on the graph. It may not be clear now why you don't want it to change but if there were 40 lines of code between the 2nd and 4th lines, you would. So we need to make a copy of <tt>$c</tt> and <tt>$d:</tt> 
+ e d</pre>This is what PDL actually has in memory after the first three lines. When <tt>$d</tt> is changed, we want <tt>$c</tt> to change but we don't want <tt>$e</tt> to change because it already is on the graph. It may not be clear now why you don't want it to change but if there were 40 lines of code between the 2nd and 4th lines, you would. So we need to make a copy of <tt>$c</tt> and <tt>$d:</tt> 
 
  <pre> a b
  \ /
@@ -96,7 +96,7 @@ PDL::Dataflow -- description of the dataflow philosophy
 
  <pre> $a = pdl 2,3,4; $b = pdl 5,6,7;
  $c = $a + $b;
- line($c);</pre>Now, if you know that <tt>$a</tt> is going to change and that you want its children to change with it, you can declare it into a data source (<font SIZE="-1">XXX</font> unimplemented in current version): 
+ line($c);</pre>Now, if you know that <tt>$a</tt> is going to change and that you want its children to change with it, you can declare it into a data source (XXX unimplemented in current version): 
 
  <pre> $a-&gt;datasource(1);</pre>After this, <tt>$a</tt>++ or <tt>$a</tt> .= something will not create a new family but will alter <tt>$a</tt> and cut its relation with its previous parents. All its children will follow its current value. 
 
@@ -116,7 +116,7 @@ PDL::Dataflow -- description of the dataflow philosophy
 
  There are many kinds of uses for this feature: self-updating graphs, for instance. 
 
- Blah blah blah <font SIZE="-1">XXX</font> more explanation
+ Blah blah blah XXX more explanation
 <h2>Limitations</h2>Dataflow as such is a fairly limited addition on top of Perl. To get a more refined addition, the internals of Perl need to be hacked a little. A true implementation would enable flow of everything, including
 <dl><dt>data
 </dt><dd></dd><dt>data size

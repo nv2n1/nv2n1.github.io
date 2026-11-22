@@ -18,7 +18,7 @@ description: "systemd-logind.service, systemd-logind – Login manager"
 <dl>
 <dd>&bull; Generating and managing session IDs. If auditing is available and an audit session ID is already set for a session, then this ID is reused as the session ID. Otherwise, an independent session counter is used.</dd></dl>
 <dl>
-<dd>&bull; Providing m[blue]<code>polkit</code>m[]<font SIZE="-2">[1]</font>-based access for users for operations such as system shutdown or sleep</dd></dl>
+<dd>&bull; Providing m[blue]<code>polkit</code>m[][1]-based access for users for operations such as system shutdown or sleep</dd></dl>
 <dl>
 <dd>&bull; Implementing a shutdown/sleep inhibition logic for applications</dd></dl>
 <dl>
@@ -35,8 +35,8 @@ description: "systemd-logind.service, systemd-logind – Login manager"
 <p> See <code><a href="/docs/linux/man/5-logind-conf/">logind.conf</a></code>(5) for information about the configuration of this service. </p>
 <p> See <code><a href="/docs/linux/man/3-sd-login/">sd-login</a></code>(3) for information about the basic concepts of logind such as users, sessions and seats. </p>
 <p> See <code><a href="/docs/linux/man/5-org-freedesktop-login1/">org.freedesktop.login1</a></code>(5) and <code><a href="/docs/linux/man/5-org-freedesktop-logcontrol1/">org.freedesktop.LogControl1</a></code>(5) for information about the D-Bus APIs systemd-logind provides. </p>
-<p> For more information on the inhibition logic see the m[blue]<code>Inhibitor Lock Developer Documentation</code>m[]<font SIZE="-2">[2]</font>. </p>
-<p> If you are interested in writing a display manager that makes use of logind, please have look at m[blue]<code>Writing Display Managers</code>m[]<font SIZE="-2">[3]</font>. If you are interested in writing a desktop environment that makes use of logind, please have look at m[blue]<code>Writing Desktop Environments</code>m[]<font SIZE="-2">[4]</font>.</p>
+<p> For more information on the inhibition logic see the m[blue]<code>Inhibitor Lock Developer Documentation</code>m[][2]. </p>
+<p> If you are interested in writing a display manager that makes use of logind, please have look at m[blue]<code>Writing Display Managers</code>m[][3]. If you are interested in writing a desktop environment that makes use of logind, please have look at m[blue]<code>Writing Desktop Environments</code>m[][4].</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-user-sessions-service/">systemd-user-sessions.service</a></code>(8), <code><a href="/docs/linux/man/1-loginctl/">loginctl</a></code>(1), <code><a href="/docs/linux/man/5-logind-conf/">logind.conf</a></code>(5), <code><a href="/docs/linux/man/8-pam_systemd/">pam_systemd</a></code>(8), <code><a href="/docs/linux/man/3-sd-login/">sd-login</a></code>(3)</p>
 <h2>Notes</h2>

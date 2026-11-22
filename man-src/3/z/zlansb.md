@@ -10,7 +10,7 @@ description: "zlansb.f –"
 <p>zlansb.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>zlansb</code> (NORM, UPLO, N, K, AB, LDAB, WORK)<br />
+<p>DOUBLE PRECISION function <code>zlansb</code> (NORM, UPLO, N, K, AB, LDAB, WORK)<br/>
  <i></i><code>ZLANSB</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a symmetric band matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function zlansb (characterNORM, characterUPLO, integerN, integerK, complex*16, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )WORK)</h3>

@@ -11,7 +11,7 @@ description: "pstoedit – a tool converting PostScript and PDF files into vario
 <p> pstoedit - a tool converting PostScript and PDF files into various vector graphic formats  </p>
 <h2>SYNOPSIS</h2>
 <h3>FROM THE COMMAND SHELL</h3>
-<p> pstoedit [<code>-v -help</code>] <br />
+<p> pstoedit [<code>-v -help</code>] <br/>
  </p>
 <p> pstoedit [<code>-include</code><i> name of a PostScript file to be included</i>] [<code>-df</code><i> font name</i>] [<code>-nomaptoisolatin1</code>] [<code>-dis</code>] [<code>-pngimage</code><i> filename</i>] [<code>-q</code>] [<code>-nq</code>] [<code>-nc</code>] [<code>-mergelines</code>] [<code>-filledrecttostroke</code>] [<code>-mergetext</code>] [<code>-dt</code>] [<code>-adt</code>] [<code>-ndt</code>] [<code>-dgbm</code>] [<code>-correctdefinefont</code>] [<code>-pti</code>] [<code>-pta</code>] [<code>-xscale</code><i> number</i>] [<code>-yscale</code><i> number</i>] [<code>-xshift</code><i> number</i>] [<code>-yshift</code><i> number</i>] [<code>-centered</code>] [<code>-minlinewidth</code><i> number</i>] [<code>-pagenumberformat</code><i> page number format specification</i>] [<code>-split</code>] [<code>-v</code>] [<code>-vl</code><i> </i>] [<code>-usebbfrominput</code>] [<code>-ssp</code>] [<code>-sfill</code>] [<code>-uchar</code><i> character</i>] [<code>-nb</code>] [<code>-rdb</code>] [<code>-page</code><i> page number</i>] [<code>-flat</code><i> flatness factor</i>] [<code>-sclip</code>] [<code>-ups</code>] [<code>-rgb</code>] [<code>-useagl</code>] [<code>-noclip</code>] [<code>-t2fontsast1</code>] [<code>-keep</code>] [<code>-debugfonthandling</code>] [<code>-gstest</code>] [<code>-fakedateandversion</code>] [<code>-nfr</code>] [<code>-glyphs</code>] [<code>-useoldnormalization</code>] [<code>-rotate</code><i> angle (0-360)</i>] [<code>-fontmap</code><i> name of font map file for pstoedit</i>] [<code>-pagesize</code><i> page format</i>] [<code>-help</code>] [<code>-gs</code><i> path to the Ghostscript executable/DLL</i>] [<code>-bo</code>] [<code>-psarg</code><i> argument string</i>] [<code>-pslanguagelevel</code><i> PostScript Language Level 1, 2, or 3 to be used.</i>] <code>-f</code><i> &quot;format[:options]&quot;</i> [<code>-gsregbase</code><i> Ghostscript base registry path</i>] [ inputfile [outputfile] ] </p>
 <h3>FROM GSVIEW</h3>
@@ -37,190 +37,190 @@ description: "pstoedit – a tool converting PostScript and PDF files into vario
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-include</code><i> name of a PostScript file to be included</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;This option allows specifying an additional PostScript file that will be executed just before the normal input is read. This is helpful for including specific page settings or for disabling potentially unsafe PostScript operators, e.g., file, renamefile, or deletefile.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-xscale</code><i> number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-yscale</code><i> number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-xshift</code><i> number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-yshift</code><i> number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-centered</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-minlinewidth</code><i> number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-pagenumberformat</code><i> page number format specification</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-split</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Create a new file for each page of the input. For this the output filename must contain a&nbsp;%d which is replaced with the current page number. This option is automatically switched on for output formats that do not support multiple pages within one file, e.g. fig or gnuplot.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-usebbfrominput</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;If specified, pstoedit uses the BoundingBox as is&nbsp;(hopefully)&nbsp;found in the input file instead of one that is calculated by its own.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-page</code><i> page number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Select a single page from a multi-page PostScript or PDF file.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-rgb</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Since version 3.30 pstoedit uses the CMYK colors internally. The -rgb option turns on the old behavior to use RGB values.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-useagl</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-noclip</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-rotate</code><i> angle (0-360)</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Rotate image by angle.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-pagesize</code><i> page format</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;set page size for output medium.&nbsp; This option sets the page size for the output medium. Currently this is just used by the libplot output format driver, but might be used by other output format drivers in future. The page size is specified in terms of the usual page size names, e.g. letter or a4. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-help</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-gs</code><i> path to the Ghostscript executable/DLL</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-bo</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;You can run backend processing only&nbsp;(without the PostScript interpreter frontend)&nbsp;by first running&nbsp;<code>pstoedit</code> <code>-f dump</code> <i>infile</i> <i>dumpfile</i> and then running <code>pstoedit</code> <code>-f</code><i> format</i> <code>-bo</code> <i>dumpfile</i> <i>outfile</i>. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-psarg</code><i> argument string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;The string given with this option is passed directly to Ghostscript when Ghostscript is called to process the PostScript file for pstoedit. For example: <code>-psarg</code><code> &quot;</code><code>-r300x300</code><code>&quot;</code>. This causes the resolution to be changed to 300x300 dpi. (With older versions of Ghostscript, changing the resolution this way has an effect only if the <code>-dis</code> option is given.) If you want to pass multiple options to Ghostscript you can use multiple -psarg options <code>-psarg opt1</code> <code>-psarg opt2</code> <code>-psarg opt2</code>. See the Ghostscript manual for other possible options. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-pslanguagelevel</code><i> PostScript Language Level 1, 2, or 3 to be used.</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt><code>-f</code><i> &quot;format[:options]&quot;</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;target output format recognized by pstoedit. Since other format drivers can be loaded dynamically, type pstoedit -help to get a full list of formats. See &quot;Available formats and their specific options&quot; below for an explanation of the [<i>:options</i>] to <code>-f</code> format. If the format option is not given, pstoedit tries to guess the target format from the suffix of the output filename. However, in a lot of cases, this is not a unique mapping and hence pstoedit demands the <code>-f</code> option. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-gsregbase</code><i> Ghostscript base registry path</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;registry path to use as a base path when searching Ghostscript interpreter.&nbsp; This option provides means to specify a registry key under HKLM/Software where to search for GS interpreter key, version and GS_DLL / GS_LIB values. Example: &quot;-gsregbase MyCompany&quot; means that HKLM/Software/MyCompany/GPL Ghostscript would be searched instead of HKLM/Software/GPL Ghostscript. </p>
  </dd></dl>
 <h3>TEXT AND FONT HANDLING RELATED OPTIONS</h3>
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-df</code><i> font name</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Sometimes fonts embedded in a PostScript program do not have a fontname. For example, this happens in PostScript files generated by&nbsp;<i><a href="/docs/linux/man/1-dvips/">dvips</a></i>(1). In such a case pstoedit uses a replacement font. The default for this is Courier. Another font can be specified using the <code>-df</code> option. <code>-df Helvetica</code> causes all unnamed fonts to be replaced by Helvetica. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-nomaptoisolatin1</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Normally pstoedit maps all character codes to the ones defined by the ISO Latin1 encoding. If you specify <code>-nomaptoisolatin1</code> then the encoding from the input PostScript is passed unchanged to the output. This may result in strange text output but on the other hand may be the only way to get some fonts converted appropriately. Try what fits best to your concrete case. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-pngimage</code><i> filename</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-dt</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;draw text. Text is drawn as polygons. This might produce a large output file. This option is automatically switched on if the selected output format does not support text, e.g.&nbsp;<i><a href="/docs/linux/man/1-gnuplot/">gnuplot</a></i>(1). </p>
  </dd></dl>
 <dl>
 <dt>[<code>-adt</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;automatic draw text. This option turns on the&nbsp;<code>-dt</code> option selectively for fonts that seem to be no normal text fonts, e.g. Symbol. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-ndt</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;never draw text. Fully disable the heuristics used by pstoedit to decide when to&nbsp;&quot;draw&quot;&nbsp;text instead of showing it as text. This may produce incorrect results, but in some cases it might nevertheless be useful.&nbsp;&quot;Use at own risk&quot;.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-dgbm</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-correctdefinefont</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Some PostScript files, e.g. such as generated by ChemDraw, use the PostScript definefont operator in a way that is incompatible with pstoedit&#8217;s assumptions. The new font is defined by copying an old font without changing the FontName of the new font. When this option is applied, some&nbsp;&quot;patches&quot;&nbsp;are done after a definefont in order to make it again compatible with pstoedit&#8217;s assumptions. This option is not enabled by default, since it may break other PostScript files. It is tested only with ChemDraw generated files.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-pti</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;precision text. Normally a text string is drawn as it occurs in the input file. However, in some situations, this might produce wrongly positioned characters. This is due to limitations in most output formats of pstoedit. They cannot represent text with arbitrary inter-letter spacing which is easily possible in PDF and PostScript. With&nbsp;<code>-pta</code>, each character of a text string is placed separately. With <code>-pti</code>, this is done only in cases when there is a non zero inter-letter spacing. The downside of &quot;precision text&quot; is a bigger file size and hard to edit text. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-pta</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;see -pti&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-uchar</code><i> character</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Sometimes pstoedit cannot map a character from the encoding used by the PostScript file to the font encoding of the target format. In this case pstoedit replaces the input character by a special character in order to show all the places that could not be mapped correctly. The default for this is a&nbsp;&quot;#&quot;. Using the&nbsp;<code>-uchar</code> option it is possible to specify another character to be used instead. If you want to use a space, use -uchar &quot; &quot;. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-t2fontsast1</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Handle Type 2 fonts same as Type 1. Type 2 fonts sometimes occur as embedded fonts within PDF files. In the default mode, text using such fonts is drawn as polygons since pstoedit assumes that such a font is not available on the user&#8217;s machine. If this option is set, pstoedit assumes that the internal encoding follows the same as for a standard font and generates normal text output. This assumption may not be true in all cases. But it is nearly impossible for pstoedit to verify this assumption - it would have to do a sort of OCR.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-nfr</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;In normal mode pstoedit replaces bitmap fonts with a font as defined by the&nbsp;<code>-df</code> option. This is done, because most output formats cannot handle such fonts. This behavior can be switched off using the <code>-nfr</code> option but then it strongly depends on the application reading the generated file whether the file is usable and correctly interpreted or not. Any problems are then out of control of pstoedit. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-glyphs</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;pass glyph names to the output format driver. So far no output format driver really uses the glyph names, so this does not have any effect at the moment. It is a preparation for future work.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-useoldnormalization</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Just use this option in case the new heuristic introduced in 3.5 does not produce correct results - however, this normalization of font encoding will always be a best-effort approach since there is no real general solution to it with reasonable effort&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-fontmap</code><i> name of font map file for pstoedit</i>]</dt>
-<dd> <p> <br />
-&nbsp;The font map is a simple text file containing lines in the following format: <br />
+<dd> <p> <br/>
+&nbsp;The font map is a simple text file containing lines in the following format: <br/>
  </p>
  </dd></dl>
-<p> document_font_name target_font_name <br />
- Lines beginning with % are considerd comments. <br />
+<p> document_font_name target_font_name <br/>
+ Lines beginning with % are considerd comments. <br/>
  For font names with spaces use the &quot;font name with spaces&quot; notation. </p>
 <p> If a target_font_name starts with /, it is regarded as alias to a former entry. </p>
 <p> Each font name found in the document is checked against this mapping and if there is a corresponding entry, the new name is used for the output. </p>
@@ -236,7 +236,7 @@ description: "pstoedit – a tool converting PostScript and PDF files into vario
 <dl>
 <dd>  </dd></dl>
 <dt><code>*</code></dt>
-<dd> <p> Unix: <br />
+<dd> <p> Unix: <br/>
  The default installation directory. If it fails, then &lt;<i>The directory where the pstoedit executable is located</i>&gt; /../lib/ </p>
  </dd>
 <dl>
@@ -250,99 +250,99 @@ description: "pstoedit – a tool converting PostScript and PDF files into vario
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-nc</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;no curves.&nbsp; Normally pstoedit tries to keep curves from the input and transfers them to the output if the output format supports curves. If the output format does not support curves, then pstoedit replaces curves by a series of lines (see also <code>-flat</code> option). However, in some cases the user might wish to have this behavior also for output formats that originally support curves. This can be forced via the <code>-nc</code> option. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-mergelines</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Some output formats permit the representation of filled polygons with edges that are in a different color than the fill color. Since PostScript does not support this by the standard drawing primitives directly, drawing programs typically generate two objects&nbsp;(the outline and the filled polygon)&nbsp;into the PostScript output. pstoedit is able to recombine these, if they follow each other directly and you specify <code>-mergelines</code>. However, this merging is not supported by all output formats due to restrictions in the target format. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-filledrecttostroke</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Rectangles filled with a solid color can be converted to a stroked line with a width that corresponds to the width of the rectangle. This is of primary interest for output formats which do not support filled polygons at all. But it is restricted to rectangles only, i.e. it is not supported for general polygons&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-mergetext</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;In order to produce nice looking text output, programs producing PostScript files often split words into smaller pieces which are then placed individually on adjacent positions. However, such split text is hard to edit later on and hence it is sometime better to recombine these pieces again to form a word&nbsp;(or even sequence of words). For this pstoedit implements some heuristics about what text pieces are to be considered parts of a split word. This is based on the geometrical proximity of the different parts and seems to work quite well so far. But there are certainly cases where this simple heuristic fails. So please check the results carefully.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-ssp</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;simulate subpaths.&nbsp; Several output formats do not support PostScript paths containing subpaths, i.e. paths with intermediate movetos. In the normal case, each subpath is treated as an independent path for such output formats. This can lead to bad looking results. The most common case where this happens is if you use the <code>-dt</code> option and show some text with letters like e, o, or b, i.e. letters that have a &quot;hole&quot;. When the <code>-ssp</code> option is set, pstoedit tries to eliminate these problems. However, this option is CPU time intensive! </p>
  </dd></dl>
 <dl>
 <dt>[<code>-sfill</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;simulate filling by individual strokes.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-flat</code><i> flatness factor</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;If the output format does not support curves in the way PostScript does or if the&nbsp;<code>-nc</code> option is specified, all curves are approximated by lines. Using the <code>-flat</code> option one can control this approximation. This parameter is directly converted to a PostScript <code>setflat</code> command. Higher numbers, e.g. 10 give rougher, lower numbers, e.g. 0.1, give finer approximations. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-sclip</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;simulate clipping.&nbsp; Most output formats of pstoedit do not have native support for clipping. For that pstoedit offers an option to perform the clipping of the graphics directly without passing the clippath to the output driver. However, this results in curves being replaced by a lot of line segments and thus larger output files. So use this option only if your output looks different from the input due to clipping. In addition, this &quot;simulated clipping&quot; is not exactly the same as defined in PostScript. There might be lines drawn at double size. Also clipping of text is not supported unless you also use the <code>-dt</code> option. </p>
  </dd></dl>
 <h3>DEBUG OPTIONS</h3>
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-dis</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Open a display during processing by Ghostscript. Some files only work correctly this way.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-q</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-nq</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;no exit from the PostScript interpreter. Normally Ghostscript exits after processing the pstoedit input-file. For debugging it can be useful to avoid this. If you do, you will have to type quit at the GS&gt;&nbsp;prompt to exit from Ghostscript.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-v</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Switch on verbose mode. Some additional information is shown during processing.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-vl</code><i></i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Switch on verbose mode with a given level. Some additional information is shown during processing.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-nb</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Since version 3.10 pstoedit uses the -dDELAYBIND option when calling Ghostscript. Previously the -dNOBIND option was used instead but that sometimes caused problems if a user&#8217;s PostScript file overloaded standard PostScript operator with totally new semantic, e.g. lt for lineto instead of the standard meaning of &quot;less than&quot;. Using <code>-nb</code> the old style can be activated again in case the -dDELAYBIND gives different results as before. In such a case please also contact the author. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-rdb</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Since version 3.10 pstoedit uses the -dDELAYBIND option when calling Ghostscript. But in version 9.22 of GhostScript, that option is not supported anymore because of security reasons. As a fallback, that version provides the REALLYDELAYBIND option and pstoedit can use this if you supply the <code>-rdb</code> option. Use this with caution as it might open security risks, e.g. a PostScript file injecting some malicious code into PostScript standard operators. However, not using this option can cause some of the PostScript drawings operations to be not seen by pstoedit, hence causing missing artefacts in the output. Later versions of Ghostscript will probably support -dDELAYBIND again. But also in that case the security risk remains. So be careful with what files you process with pstoedit and Ghostscript. </p>
  </dd></dl>
 <dl>
 <dt>[<code>-ups</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-keep</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-debugfonthandling</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-gstest</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd>
 <dt>[<code>-fakedateandversion</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;.PP </p>
  </dd></dl>
 <h3>INPUT AND OUTFILE FILE ARGUMENTS</h3>
@@ -351,7 +351,7 @@ description: "pstoedit – a tool converting PostScript and PDF files into vario
 <h2>AVAILABLE FORMATS AND THEIR SPECIFIC OPTIONS</h2>
 <p> pstoedit allows passing individual options to an output format driver. This is done by appending all options to the format specified after the <code>-f</code> option. The format specifier and its options must be separated by a colon (:). If more than one option needs to be passed to the output format driver, the whole argument to <code>-f</code> must be enclosed within double-quote characters, thus: </p>
 <p> <code>-f</code><i> &quot;format[:option option ...]&quot;</i> </p>
-<p> To see which options are supported by a specific format, type: <code>pstoedit -f format:-help</code> <br />
+<p> To see which options are supported by a specific format, type: <code>pstoedit -f format:-help</code> <br/>
  </p>
 <p> The following description of the different formats supported by pstoedit is extracted from the source code of the individual drivers. </p>
 <h3>Format group: psf ps debug dump gs ps2ai</h3>
@@ -381,7 +381,7 @@ description: "pstoedit – a tool converting PostScript and PDF files into vario
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-sampleoption</code><i> integer</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;just an example&nbsp; </p>
  </dd></dl>
 <h3>idraw - Interviews draw format (EPS)</h3>
@@ -398,7 +398,7 @@ description: "pstoedit – a tool converting PostScript and PDF files into vario
 <dt>tfig: </dt>
 <dd> <p> .fig format for xfig - test only version. </p>
  </dd></dl>
-<p> The xfig format driver supports special fontnames, which may be produced by using a fontmap file. The following types of names are supported: <br />
+<p> The xfig format driver supports special fontnames, which may be produced by using a fontmap file. The following types of names are supported: <br/>
  </p>
 <pre><code>General notation:
 &quot;PostScript Font Name&quot; ((LaTeX|PostScript|empty)(::special)::)XFigFontName
@@ -413,29 +413,29 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-startdepth</code><i> number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;set the initial depth&nbsp;(default 999)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-metric</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;switch to centimeter display&nbsp;(default inches)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-usecorrectfontsize</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;do not scale fonts for xfig. Use this if you also use this option with xfig&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-depth</code><i> number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;set the page depth in inches&nbsp;(default 11)&nbsp; </p>
  </dd></dl>
 <h3>tgif - Tgif .obj format</h3>
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-ta</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;text as attribute&nbsp; </p>
  </dd></dl>
 <h3>gnuplot - gnuplot format</h3>
@@ -445,12 +445,12 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-m</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;map to Arial&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-nf</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;emulate narrow fonts&nbsp; </p>
  </dd></dl>
 <h3>vtk - VTK driver: if you do not want to see this, uncomment the corresponding line in makefile and make again</h3>
@@ -458,24 +458,24 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-VTKeoption</code><i> integer</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;just an example&nbsp; </p>
  </dd></dl>
 <h3>tk - tk and/or tk applet source code</h3>
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-R</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;swap HW&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-I</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;no impress&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-n</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;tagnames&nbsp; </p>
  </dd></dl>
 <h3>cfdg - Context Free Design Grammar</h3>
@@ -489,37 +489,37 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-grid</code><i> missing arg name</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;attempt to snap relevant output to grid&nbsp;(mils)&nbsp;and put failed objects to a different layer&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-snapdist</code><i> missing arg name</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;grid snap distance ratio&nbsp;(0&nbsp;&lt;&nbsp;snapdist&nbsp;&lt;=&nbsp;0.5, default 0.1)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-tshiftx</code><i> missing arg name</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;additional x shift measured in target units&nbsp;(mils)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-tshifty</code><i> missing arg name</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;additional y shift measured in target units&nbsp;(mils)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-grid</code><i> missing arg name</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;attempt to snap relevant output to grid&nbsp;(mils)&nbsp;and put failed objects to a different layer&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-mm</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;switch to metric units&nbsp;(mm)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-forcepoly</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;force all objects to be interpreted as polygons&nbsp; </p>
  </dd></dl>
 <h3>pcbfill - pcb format with fills</h3>
@@ -530,42 +530,42 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-grid</code><i> missing arg name</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;attempt to snap relevant output to grid&nbsp;(mils)&nbsp;and put failed objects to a different layer&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-snapdist</code><i> missing arg name</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;grid snap distance ratio&nbsp;(0&nbsp;&lt;&nbsp;snapdist&nbsp;&lt;=&nbsp;0.5, default 0.1)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-tshiftx</code><i> missing arg name</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;additional x shift measured in target units&nbsp;(mils)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-tshifty</code><i> missing arg name</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;additional y shift measured in target units&nbsp;(mils)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-grid</code><i> missing arg name</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;attempt to snap relevant output to grid&nbsp;(mils)&nbsp;and put failed objects to a different layer&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-mm</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;switch to metric units&nbsp;(mm)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-stdnames</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;use standard layer names instead of descriptive names&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-forcepoly</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;force all objects to be interpreted as polygons&nbsp; </p>
  </dd></dl>
 <h3>pcbi - engrave data - insulate/PCB format</h3>
@@ -583,74 +583,74 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-penplotter</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;plotter is pen plotter&nbsp;(i.e. no support for specific line widths)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-pencolorsfromfile</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;read pen colors from file drvhpgl.pencolors in pstoedit&#8217;s data directory&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-pencolors</code><i> number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;maximum number of pen colors to be used by pstoedit&nbsp;(default 0)&nbsp;-&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-filltype</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;select fill type e.g. FT 1&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-hpgl2</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Use HPGL/2 instead of HPGL/1&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-rot90</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;rotate hpgl by 90 degrees&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-rot180</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;rotate hpgl by 180 degrees&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-rot270</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;rotate hpgl by 270 degrees&nbsp; </p>
  </dd></dl>
 <h3>pic - PIC format for troff et.al.</h3>
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-troff</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;troff mode&nbsp;(default is groff)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-landscape</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;landscape output&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-portrait</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;portrait output&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-keepfont</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;print unrecognized literally&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-text</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;try not to make pictures from running text&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-debug</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;enable debug output&nbsp; </p>
  </dd></dl>
 <h3>noixml - Nemetschek NOI XML format</h3>
@@ -658,26 +658,26 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-r</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Allplan resource file&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-bsl</code><i> number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Bezier Split Level&nbsp;(default 3)&nbsp; </p>
  </dd></dl>
 <h3>latex2e - LaTeX2e picture format</h3>
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-integers</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;round all coordinates to the nearest integer&nbsp; </p>
  </dd></dl>
 <h3>mma - Mathematica graphics</h3>
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-eofillfills</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Filling is used for eofill&nbsp;(default is not to fill)&nbsp; </p>
  </dd></dl>
 <h3>asy - Asymptote Format</h3>
@@ -690,17 +690,17 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-height</code><i> number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;page height in terms of characters&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-width</code><i> number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;page width in terms of characters&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-dump</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;dump text pieces&nbsp; </p>
  </dd></dl>
 <h3>kil - .kil format for Kontour</h3>
@@ -711,14 +711,14 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>java class name</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;name of java class to generate&nbsp; </p>
  </dd></dl>
 <h3>java1 - java 1 applet source code</h3>
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>java class name</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;name of java class to generate&nbsp; </p>
  </dd></dl>
 <h3>Format group: dxf dxf_14 dxf_s</h3>
@@ -736,72 +736,72 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-polyaslines</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;use LINE instead of POLYLINE in DXF&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-mm</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;use mm coordinates instead of points in DXF&nbsp;(mm=pt/72*25.4)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-ctl</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;map colors to layers&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-filltohatch</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;generate hatch objects from fill operations&nbsp;(still experimental)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-splineaspolyline</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;approximate splines with PolyLines&nbsp;(only for -f dxf_s)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-splineasnurb</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;experimental&nbsp;(only for -f dxf_s)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-splineasbspline</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;experimental&nbsp;(only for -f dxf_s)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-splineassinglespline</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;experimental&nbsp;(only for -f dxf_s)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-splineasmultispline</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;experimental&nbsp;(only for -f dxf_s)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-splineasbezier</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;use Bezier splines in DXF format&nbsp;(only for -f dxf_s)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-splineprecision</code><i> number</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;number of samples to take from spline curve when doing approximation with -splineaspolyline or -splineasmultispline - should be&nbsp;=2&nbsp;(default 5)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-dumplayernames</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;dump all layer names found to standard output&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-layers</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;layers to be shown&nbsp;(comma separated list of layer names, no space)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-layerfilter</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;layers to be hidden&nbsp;(comma separated list of layer names, no space)&nbsp; </p>
  </dd></dl>
 <h3>rpl - Real3D Programming Language format</h3>
@@ -815,17 +815,17 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-pango</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;use pango for font rendering&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-funcname</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;sets the base name for the generated functions and variables. e.g. myfig&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-header</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;sets the output file name for the generated C header file. e.g. myfig.h&nbsp; </p>
  </dd></dl>
 <h3>gcode - emc2 gcode format</h3>
@@ -876,7 +876,7 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-plotformat</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;plotutil format to generate&nbsp; </p>
  </dd></dl>
 <h3>pptx - PresentationML (PowerPoint) format</h3>
@@ -884,54 +884,54 @@ Symbol ::special::Symbol (same as PostScript::special::Symbol)
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-colors</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;&quot;original&quot;&nbsp;to retain original colors&nbsp;(default),&nbsp;&quot;theme&quot;&nbsp;to convert randomly to theme colors, or&nbsp;&quot;theme-lum&quot;&nbsp;also to vary luminance&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-fonts</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;use&nbsp;&quot;windows&quot;&nbsp;fonts&nbsp;(default),&nbsp;&quot;native&quot;&nbsp;fonts, or convert to the&nbsp;&quot;theme&quot;&nbsp;font&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-embed</code><i> string</i>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;embed fonts, specified as a comma-separated list of EOT-format font files&nbsp; </p>
  </dd></dl>
 <h3>emf - Enhanced MS Windows Metafile</h3>
 <p> The following format specific options are available: </p>
 <dl>
 <dt>[<code>-m</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;map to Arial&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-nf</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;emulate narrow fonts&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-drawbb</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;draw bounding box&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-p</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;prune line ends&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-nfw</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Newer versions of MS Windows&nbsp;(2000, XP, Vista, 7, ...)&nbsp;will not accept WMF/EMF files generated when this option is set and the input contains text. But if this option is not set, then the WMF/EMF driver will estimate interletter spacing of text using a very coarse heuristic. This may result in ugly looking output. On the other hand, OpenOffice can still read EMF/WMF files where pstoedit delegates the calculation of the inter letter spacing to the program reading the WMF/EMF file. So if the generated WMF/EMF file shall never be processed under MS Windows, use this option. If WMF/EMF files with high precision text need to be generated under&nbsp;*nix the only option is to use the -pta option of pstoedit. However that causes every text to be split into single characters which makes the text hard to edit afterwards. Hence the -nfw option provides a sort of compromise between portability and nice to edit but still nice looking text. Again - this option has no meaning when pstoedit is executed under MS Windows anyway. In that case the output is portable but nevertheless not split and still looks fine.&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-winbb</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;let the MS Windows API calculate the Bounding Box&nbsp;(MS Windows only)&nbsp; </p>
  </dd></dl>
 <dl>
 <dt>[<code>-OO</code>]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;generate OpenOffice compatible EMF file&nbsp; </p>
  </dd></dl>
 <h2>NOTES</h2>

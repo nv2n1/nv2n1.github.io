@@ -16,19 +16,19 @@ description: "std::experimental::filesystem::canonical – std::experimental::fi
 (2)(filesystem TS)
     path canonical(const path &amp;p, const path &amp;base, error_code &amp;ec);
 (3)(filesystem TS)</code></pre>
-<p>Converts path p to a canonical absolute path, i.e. an absolute path that has no dot, dot-dot elements or symbolic links.<br />
-If p is not an absolute path, the function behaves as if it is first made absolute by absolute(p, base) or absolute(p) for <code>(2)</code><br />
+<p>Converts path p to a canonical absolute path, i.e. an absolute path that has no dot, dot-dot elements or symbolic links.<br/>
+If p is not an absolute path, the function behaves as if it is first made absolute by absolute(p, base) or absolute(p) for <code>(2)</code><br/>
 The path p must exist. </p>
 <h2>Parameters</h2>
-<p>p &#8211; a path which may be absolute or relative to base, and which must be an existing path<br />
-base &#8211; base path to be used in case p is relative<br />
+<p>p &#8211; a path which may be absolute or relative to base, and which must be an existing path<br/>
+base &#8211; base path to be used in case p is relative<br/>
 ec &#8211; error code to store error status to</p>
 <h2>Return value</h2>
 <p>An absolute path that resolves to the same file as absolute(p, base) (or absolute(p) for <code>(2)</code>). </p>
 <h2>Exceptions</h2>
-<p>The overload that does not take a error_code&amp; parameter throws filesystem_error on underlying OS API errors, constructed with p as the first argument, base as the second argument, and the OS error code as the error code argument. std::bad_alloc may be thrown if memory allocation fails. The overload taking a error_code&amp; parameter sets it to the OS API error code if an OS API call fails, and executes ec.clear() if no errors occur. This overload has<br />
-noexcept specification:<br />
-noexcept<br />
+<p>The overload that does not take a error_code&amp; parameter throws filesystem_error on underlying OS API errors, constructed with p as the first argument, base as the second argument, and the OS error code as the error code argument. std::bad_alloc may be thrown if memory allocation fails. The overload taking a error_code&amp; parameter sets it to the OS API error code if an OS API call fails, and executes ec.clear() if no errors occur. This overload has<br/>
+noexcept specification:<br/>
+noexcept<br/>
 This function is modeled after the POSIX realpath.</p>
 <h2>Example</h2>
 <p>// Run this code </p>

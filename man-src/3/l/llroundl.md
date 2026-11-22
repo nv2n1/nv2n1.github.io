@@ -50,7 +50,7 @@ long long llroundl(long double x);
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>lround</code>(), <code>lroundf</code>(), <code>lroundl</code>(),<br />
+<td> <code>lround</code>(), <code>lroundf</code>(), <code>lroundl</code>(),<br/>
  <code>llround</code>(), <code>llroundf</code>(), <code>llroundl</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

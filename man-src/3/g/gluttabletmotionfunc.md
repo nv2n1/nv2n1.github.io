@@ -13,19 +13,19 @@ description: "glutTabletMotionFunc – Sets a tablet motion callback."
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutTabletMotionFunc void (* callback)( int x int y )</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>callback Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>callback Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Client tablet motion hook.</p>
 <h2>Description</h2>
-<p>This function registers a Bf Sy<br />
-&nbsp;<wbr>callback Ef<br />
-&nbsp;<wbr>by which OpenGLUT reports a puck or stylus position in the range of [0, 2000] along the Bf Sy<br />
-&nbsp;<wbr>x Ef<br />
-&nbsp;<wbr>and&nbsp;<wbr> Bf Sy<br />
-&nbsp;<wbr>y Ef<br />
+<p>This function registers a Bf Sy<br/>
+&nbsp;<wbr>callback Ef<br/>
+&nbsp;<wbr>by which OpenGLUT reports a puck or stylus position in the range of [0, 2000] along the Bf Sy<br/>
+&nbsp;<wbr>x Ef<br/>
+&nbsp;<wbr>and&nbsp;<wbr> Bf Sy<br/>
+&nbsp;<wbr>y Ef<br/>
 &nbsp;<wbr>axes. </p>
-<p> The callback is bound to the Bf Li<br />
-&nbsp;<wbr>current window Ef<br />
+<p> The callback is bound to the Bf Li<br/>
+&nbsp;<wbr>current window Ef<br/>
 &nbsp;<wbr>. </p>
 <h2>Caveats</h2>
 <p>OpenGLUT does not implement tablet support. </p>

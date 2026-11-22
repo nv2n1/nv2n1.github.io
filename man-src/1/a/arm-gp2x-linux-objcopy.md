@@ -10,67 +10,67 @@ description: "objcopy – copy and translate object files"
 
 <p> objcopy &#8211; copy and translate object files</p>
 <h2>SYNOPSIS</h2>
-<p> objcopy [<code>-F</code> <i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-I</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;input-target=</code><i>bfdname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-O</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;output-target=</code><i>bfdname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-B</code>&nbsp;<wbr><i>bfdarch</i>|<code>&#8211;binary-architecture=</code><i>bfdarch</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-S</code>|<code>&#8211;strip-all</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-g</code>|<code>&#8211;strip-debug</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-K</code>&nbsp;<wbr><i>symbolname</i>|<code>&#8211;keep-symbol=</code><i>symbolname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-N</code>&nbsp;<wbr><i>symbolname</i>|<code>&#8211;strip-symbol=</code><i>symbolname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;strip-unneeded-symbol=</code><i>symbolname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-G</code>&nbsp;<wbr><i>symbolname</i>|<code>&#8211;keep-global-symbol=</code><i>symbolname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-L</code>&nbsp;<wbr><i>symbolname</i>|<code>&#8211;localize-symbol=</code><i>symbolname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-W</code>&nbsp;<wbr><i>symbolname</i>|<code>&#8211;weaken-symbol=</code><i>symbolname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-w</code>|<code>&#8211;wildcard</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-x</code>|<code>&#8211;discard-all</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-X</code>|<code>&#8211;discard-locals</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>&nbsp;<wbr><i>byte</i>|<code>&#8211;byte=</code><i>byte</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>&nbsp;<wbr><i>interleave</i>|<code>&#8211;interleave=</code><i>interleave</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-j</code>&nbsp;<wbr><i>sectionname</i>|<code>&#8211;only-section=</code><i>sectionname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-R</code>&nbsp;<wbr><i>sectionname</i>|<code>&#8211;remove-section=</code><i>sectionname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;preserve-dates</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;debugging</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;gap-fill=</code><i>val</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;pad-to=</code><i>address</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;set-start=</code><i>val</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;adjust-start=</code><i>incr</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;change-addresses=</code><i>incr</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;change-section-address</code>&nbsp;<wbr><i>section</i>{=,+,-}<i>val</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;change-section-lma</code>&nbsp;<wbr><i>section</i>{=,+,-}<i>val</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;change-section-vma</code>&nbsp;<wbr><i>section</i>{=,+,-}<i>val</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;change-warnings</code>]&nbsp;<wbr>[<code>&#8211;no-change-warnings</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;set-section-flags</code>&nbsp;<wbr><i>section</i>=<i>flags</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;add-section</code>&nbsp;<wbr><i>sectionname</i>=<i>filename</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;rename-section</code>&nbsp;<wbr><i>oldname</i>=<i>newname</i>[,<i>flags</i>]]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;change-leading-char</code>]&nbsp;<wbr>[<code>&#8211;remove-leading-char</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;srec-len=</code><i>ival</i>]&nbsp;<wbr>[<code>&#8211;srec-forceS3</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;redefine-sym</code>&nbsp;<wbr><i>old</i>=<i>new</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;redefine-syms=</code><i>filename</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;weaken</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;keep-symbols=</code><i>filename</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;strip-symbols=</code><i>filename</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;strip-unneeded-symbols=</code><i>filename</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;keep-global-symbols=</code><i>filename</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;localize-symbols=</code><i>filename</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;weaken-symbols=</code><i>filename</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;alt-machine-code=</code><i>index</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix-symbols=</code><i>string</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix-sections=</code><i>string</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix-alloc-sections=</code><i>string</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;add-gnu-debuglink=</code><i>path-to-file</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;only-keep-debug</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;writable-text</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;readonly-text</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;pure</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;impure</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-v</code>|<code>&#8211;verbose</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;info</code>]<br />
+<p> objcopy [<code>-F</code> <i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-I</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;input-target=</code><i>bfdname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-O</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;output-target=</code><i>bfdname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-B</code>&nbsp;<wbr><i>bfdarch</i>|<code>&#8211;binary-architecture=</code><i>bfdarch</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-S</code>|<code>&#8211;strip-all</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-g</code>|<code>&#8211;strip-debug</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-K</code>&nbsp;<wbr><i>symbolname</i>|<code>&#8211;keep-symbol=</code><i>symbolname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-N</code>&nbsp;<wbr><i>symbolname</i>|<code>&#8211;strip-symbol=</code><i>symbolname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;strip-unneeded-symbol=</code><i>symbolname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-G</code>&nbsp;<wbr><i>symbolname</i>|<code>&#8211;keep-global-symbol=</code><i>symbolname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-L</code>&nbsp;<wbr><i>symbolname</i>|<code>&#8211;localize-symbol=</code><i>symbolname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-W</code>&nbsp;<wbr><i>symbolname</i>|<code>&#8211;weaken-symbol=</code><i>symbolname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-w</code>|<code>&#8211;wildcard</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-x</code>|<code>&#8211;discard-all</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-X</code>|<code>&#8211;discard-locals</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>&nbsp;<wbr><i>byte</i>|<code>&#8211;byte=</code><i>byte</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>&nbsp;<wbr><i>interleave</i>|<code>&#8211;interleave=</code><i>interleave</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-j</code>&nbsp;<wbr><i>sectionname</i>|<code>&#8211;only-section=</code><i>sectionname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-R</code>&nbsp;<wbr><i>sectionname</i>|<code>&#8211;remove-section=</code><i>sectionname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;preserve-dates</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;debugging</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;gap-fill=</code><i>val</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;pad-to=</code><i>address</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;set-start=</code><i>val</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;adjust-start=</code><i>incr</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;change-addresses=</code><i>incr</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;change-section-address</code>&nbsp;<wbr><i>section</i>{=,+,-}<i>val</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;change-section-lma</code>&nbsp;<wbr><i>section</i>{=,+,-}<i>val</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;change-section-vma</code>&nbsp;<wbr><i>section</i>{=,+,-}<i>val</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;change-warnings</code>]&nbsp;<wbr>[<code>&#8211;no-change-warnings</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;set-section-flags</code>&nbsp;<wbr><i>section</i>=<i>flags</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;add-section</code>&nbsp;<wbr><i>sectionname</i>=<i>filename</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;rename-section</code>&nbsp;<wbr><i>oldname</i>=<i>newname</i>[,<i>flags</i>]]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;change-leading-char</code>]&nbsp;<wbr>[<code>&#8211;remove-leading-char</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;srec-len=</code><i>ival</i>]&nbsp;<wbr>[<code>&#8211;srec-forceS3</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;redefine-sym</code>&nbsp;<wbr><i>old</i>=<i>new</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;redefine-syms=</code><i>filename</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;weaken</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;keep-symbols=</code><i>filename</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;strip-symbols=</code><i>filename</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;strip-unneeded-symbols=</code><i>filename</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;keep-global-symbols=</code><i>filename</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;localize-symbols=</code><i>filename</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;weaken-symbols=</code><i>filename</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;alt-machine-code=</code><i>index</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix-symbols=</code><i>string</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix-sections=</code><i>string</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;prefix-alloc-sections=</code><i>string</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;add-gnu-debuglink=</code><i>path-to-file</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;only-keep-debug</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;writable-text</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;readonly-text</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;pure</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;impure</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-v</code>|<code>&#8211;verbose</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;info</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>infile</i>&nbsp;<wbr>[<i>outfile</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> The <font SIZE="-1">GNU</font> <code>objcopy</code> utility copies the contents of an object file to another. <code>objcopy</code> uses the <font SIZE="-1">GNU</font> <font SIZE="-1">BFD</font> Library to read and write the object files. It can write the destination object file in a format different from that of the source object file. The exact behavior of <code>objcopy</code> is controlled by command-line options. Note that <code>objcopy</code> should be able to copy a fully linked file between any two formats. However, copying a relocatable object file between any two formats may not work as expected. </p>
-<p> <code>objcopy</code> creates temporary files to do its translations and deletes them afterward. <code>objcopy</code> uses <font SIZE="-1">BFD</font> to do all its translation work; it has access to all the formats described in <font SIZE="-1">BFD</font> and thus is able to recognize most formats without being told explicitly. </p>
+<p> The GNU <code>objcopy</code> utility copies the contents of an object file to another. <code>objcopy</code> uses the GNU BFD Library to read and write the object files. It can write the destination object file in a format different from that of the source object file. The exact behavior of <code>objcopy</code> is controlled by command-line options. Note that <code>objcopy</code> should be able to copy a fully linked file between any two formats. However, copying a relocatable object file between any two formats may not work as expected. </p>
+<p> <code>objcopy</code> creates temporary files to do its translations and deletes them afterward. <code>objcopy</code> uses BFD to do all its translation work; it has access to all the formats described in BFD and thus is able to recognize most formats without being told explicitly. </p>
 <p> <code>objcopy</code> can be used to generate S-records by using an output target of <code>srec</code> (e.g., use <code>-O srec</code>). </p>
 <p> <code>objcopy</code> can be used to generate a raw binary file by using an output target of <code>binary</code> (e.g., use <code>-O binary</code>). When <code>objcopy</code> generates a raw binary file, it will essentially produce a memory dump of the contents of the input object file. All symbols and relocation information will be discarded. The memory dump will start at the load address of the lowest section copied into the output file. </p>
 <p> When generating an S-record or a raw binary file, it may be helpful to use <code>-S</code> to remove sections containing debugging information. In some cases <code>-R</code> will be useful to remove sections which contain information that is not needed by the binary file. </p>
@@ -156,7 +156,7 @@ description: "objcopy – copy and translate object files"
 <dt><code>-b</code> <i>byte</i></dt>
 <dd>
 </dd><dt><code>&#8211;byte=</code><i>byte</i></dt>
-<dd> Keep only every <i>byte</i>th byte of the input file (header data is not affected). <i>byte</i> can be in the range from 0 to <i>interleave</i>-1, where <i>interleave</i> is given by the <code>-i</code> or <code>&#8211;interleave</code> option, or the default of 4. This option is useful for creating files to program <font SIZE="-1">ROM</font>. It is typically used with an <tt>&quot;srec&quot;</tt> output target.</dd>
+<dd> Keep only every <i>byte</i>th byte of the input file (header data is not affected). <i>byte</i> can be in the range from 0 to <i>interleave</i>-1, where <i>interleave</i> is given by the <code>-i</code> or <code>&#8211;interleave</code> option, or the default of 4. This option is useful for creating files to program ROM. It is typically used with an <tt>&quot;srec&quot;</tt> output target.</dd>
 <dt><code>-i</code> <i>interleave</i></dt>
 <dd>
 </dd><dt><code>&#8211;interleave=</code><i>interleave</i></dt>
@@ -168,7 +168,7 @@ description: "objcopy – copy and translate object files"
 <dt><code>&#8211;debugging</code></dt>
 <dd> Convert debugging information, if possible. This is not the default because only certain debugging formats are supported, and the conversion process can be time consuming.</dd>
 <dt><code>&#8211;gap-fill</code> <i>val</i></dt>
-<dd> Fill gaps between sections with <i>val</i>. This operation applies to the <i>load address</i> (<font SIZE="-1">LMA</font>) of the sections. It is done by increasing the size of the section with the lower address, and filling in the extra space created with <i>val</i>.</dd>
+<dd> Fill gaps between sections with <i>val</i>. This operation applies to the <i>load address</i> (LMA) of the sections. It is done by increasing the size of the section with the lower address, and filling in the extra space created with <i>val</i>.</dd>
 <dt><code>&#8211;pad-to</code> <i>address</i></dt>
 <dd> Pad the output file up to the load address <i>address</i>. This is done by increasing the size of the last section. The extra space is filled in with the value specified by <code>&#8211;gap-fill</code> (default zero).</dd>
 <dt><code>&#8211;set-start</code> <i>val</i></dt>
@@ -180,15 +180,15 @@ description: "objcopy – copy and translate object files"
 <dt><code>&#8211;change-addresses</code> <i>incr</i></dt>
 <dd>
 </dd><dt><code>&#8211;adjust-vma</code> <i>incr</i></dt>
-<dd> Change the <font SIZE="-1">VMA</font> and <font SIZE="-1">LMA</font> addresses of all sections, as well as the start address, by adding <i>incr</i>. Some object file formats do not permit section addresses to be changed arbitrarily. Note that this does not relocate the sections; if the program expects sections to be loaded at a certain address, and this option is used to change the sections such that they are loaded at a different address, the program may fail.</dd>
+<dd> Change the VMA and LMA addresses of all sections, as well as the start address, by adding <i>incr</i>. Some object file formats do not permit section addresses to be changed arbitrarily. Note that this does not relocate the sections; if the program expects sections to be loaded at a certain address, and this option is used to change the sections such that they are loaded at a different address, the program may fail.</dd>
 <dt><code>&#8211;change-section-address</code> <i>section</i><code>{=,+,-}</code><i>val</i></dt>
 <dd>
 </dd><dt><code>&#8211;adjust-section-vma</code> <i>section</i><code>{=,+,-}</code><i>val</i></dt>
-<dd> Set or change both the <font SIZE="-1">VMA</font> address and the <font SIZE="-1">LMA</font> address of the named <i>section</i>. If <code>=</code> is used, the section address is set to <i>val</i>. Otherwise, <i>val</i> is added to or subtracted from the section address. See the comments under <code>&#8211;change-addresses</code>, above. If <i>section</i> does not exist in the input file, a warning will be issued, unless <code>&#8211;no-change-warnings</code> is used.</dd>
+<dd> Set or change both the VMA address and the LMA address of the named <i>section</i>. If <code>=</code> is used, the section address is set to <i>val</i>. Otherwise, <i>val</i> is added to or subtracted from the section address. See the comments under <code>&#8211;change-addresses</code>, above. If <i>section</i> does not exist in the input file, a warning will be issued, unless <code>&#8211;no-change-warnings</code> is used.</dd>
 <dt><code>&#8211;change-section-lma</code> <i>section</i><code>{=,+,-}</code><i>val</i></dt>
-<dd> Set or change the <font SIZE="-1">LMA</font> address of the named <i>section</i>. The <font SIZE="-1">LMA</font> address is the address where the section will be loaded into memory at program load time. Normally this is the same as the <font SIZE="-1">VMA</font> address, which is the address of the section at program run time, but on some systems, especially those where a program is held in <font SIZE="-1">ROM</font>, the two can be different. If <code>=</code> is used, the section address is set to <i>val</i>. Otherwise, <i>val</i> is added to or subtracted from the section address. See the comments under <code>&#8211;change-addresses</code>, above. If <i>section</i> does not exist in the input file, a warning will be issued, unless <code>&#8211;no-change-warnings</code> is used.</dd>
+<dd> Set or change the LMA address of the named <i>section</i>. The LMA address is the address where the section will be loaded into memory at program load time. Normally this is the same as the VMA address, which is the address of the section at program run time, but on some systems, especially those where a program is held in ROM, the two can be different. If <code>=</code> is used, the section address is set to <i>val</i>. Otherwise, <i>val</i> is added to or subtracted from the section address. See the comments under <code>&#8211;change-addresses</code>, above. If <i>section</i> does not exist in the input file, a warning will be issued, unless <code>&#8211;no-change-warnings</code> is used.</dd>
 <dt><code>&#8211;change-section-vma</code> <i>section</i><code>{=,+,-}</code><i>val</i></dt>
-<dd> Set or change the <font SIZE="-1">VMA</font> address of the named <i>section</i>. The <font SIZE="-1">VMA</font> address is the address where the section will be located once the program has started executing. Normally this is the same as the <font SIZE="-1">LMA</font> address, which is the address where the section will be loaded into memory, but on some systems, especially those where a program is held in <font SIZE="-1">ROM</font>, the two can be different. If <code>=</code> is used, the section address is set to <i>val</i>. Otherwise, <i>val</i> is added to or subtracted from the section address. See the comments under <code>&#8211;change-addresses</code>, above. If <i>section</i> does not exist in the input file, a warning will be issued, unless <code>&#8211;no-change-warnings</code> is used.</dd>
+<dd> Set or change the VMA address of the named <i>section</i>. The VMA address is the address where the section will be located once the program has started executing. Normally this is the same as the LMA address, which is the address where the section will be loaded into memory, but on some systems, especially those where a program is held in ROM, the two can be different. If <code>=</code> is used, the section address is set to <i>val</i>. Otherwise, <i>val</i> is added to or subtracted from the section address. See the comments under <code>&#8211;change-addresses</code>, above. If <i>section</i> does not exist in the input file, a warning will be issued, unless <code>&#8211;no-change-warnings</code> is used.</dd>
 <dt><code>&#8211;change-warnings</code></dt>
 <dd>
 </dd><dt><code>&#8211;adjust-warnings</code></dt>
@@ -255,7 +255,7 @@ description: "objcopy – copy and translate object files"
 <dd> Creates a .gnu_debuglink section which contains a reference to <i>path-to-file</i> and adds it to the output file.</dd>
 <dt><code>&#8211;only-keep-debug</code></dt>
 <dd> Strip a file, removing any sections that would be stripped by <code>&#8211;strip-debug</code> and leaving the debugging sections. </dd>
-<p> The intention is that this option will be used in conjunction with <code>&#8211;add-gnu-debuglink</code> to create a two part executable. One a stripped binary which will occupy less space in <font SIZE="-1">RAM</font> and in a distribution and the second a debugging information file which is only needed if debugging abilities are required. The suggested procedure to create these files is as follows:</p>
+<p> The intention is that this option will be used in conjunction with <code>&#8211;add-gnu-debuglink</code> to create a two part executable. One a stripped binary which will occupy less space in RAM and in a distribution and the second a debugging information file which is only needed if debugging abilities are required. The suggested procedure to create these files is as follows:</p>
 <dl>
 <dl>
 <dt>1.&lt;Link the executable as normal. Assuming that is is called&gt;</dt>
@@ -301,4 +301,4 @@ description: "objcopy – copy and translate object files"
 <p> <i><a href="/docs/linux/man/1-ld/">ld</a></i>(1), <i><a href="/docs/linux/man/1-objdump/">objdump</a></i>(1), and the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

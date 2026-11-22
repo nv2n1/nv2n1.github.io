@@ -37,7 +37,7 @@ description: "rmic – The Java RMI Compiler"
 <dd>
 <pre><code>% rmic -d /java/classes foo.MyClass</code></pre>
 </dd></dl>
-<p> would place the stub and skeleton classes derived from <i>MyClass</i> into the directory <i>/java/classes/foo</i>. If the <i>-d</i> option is not specified, the default behavior is as if <i>&quot;-d .&quot;</i> were specified: the package hierarchy of the target class is created in the current directory, and stub/tie/skeleton files are placed within it. (Note that in some previous versions of <code>rmic</code>, if <i>-d</i> was not specified, then the package hierarchy was <i>not</i> created, and all of the output files were placed directly in the current directory.)<br />
+<p> would place the stub and skeleton classes derived from <i>MyClass</i> into the directory <i>/java/classes/foo</i>. If the <i>-d</i> option is not specified, the default behavior is as if <i>&quot;-d .&quot;</i> were specified: the package hierarchy of the target class is created in the current directory, and stub/tie/skeleton files are placed within it. (Note that in some previous versions of <code>rmic</code>, if <i>-d</i> was not specified, then the package hierarchy was <i>not</i> created, and all of the output files were placed directly in the current directory.)<br/>
  &nbsp;<wbr></p>
 <dt>-extdirs path</dt>
 <dd>Overrides location of installed extensions</dd>

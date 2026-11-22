@@ -9,17 +9,17 @@ description: "Ecore Config Property Functions – Functions that retrieve or set
 
 <p>Ecore Config Property Functions &#8211; Functions that retrieve or set the attributes relating to a property. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Ecore_Config_Prop</code> * <code>ecore_config_dst</code> (<code>Ecore_Config_Prop</code> *e)<br />
- <i>Removes the given property from the local configuration and destroys it. </i><br />
- EAPI const char * <code>ecore_config_type_get</code> (const <code>Ecore_Config_Prop</code> *e)<br />
- <i>Returns the type of the property. </i><br />
- EAPI int <code>ecore_config_describe</code> (const char *key, const char *desc)<br />
- <i>Sets the description field of the indicated property. </i><br />
- EAPI int <code>ecore_config_short_opt_set</code> (const char *key, char short_opt)<br />
- <i>Set the short option character of a property. </i><br />
- EAPI int <code>ecore_config_long_opt_set</code> (const char *key, const char *long_opt)<br />
- <i>Set the long option string of the property. </i><br />
- EAPI int <code>ecore_config_typed_set</code> (const char *key, const void *val, int type)<br />
+<p>EAPI <code>Ecore_Config_Prop</code> * <code>ecore_config_dst</code> (<code>Ecore_Config_Prop</code> *e)<br/>
+ <i>Removes the given property from the local configuration and destroys it. </i><br/>
+ EAPI const char * <code>ecore_config_type_get</code> (const <code>Ecore_Config_Prop</code> *e)<br/>
+ <i>Returns the type of the property. </i><br/>
+ EAPI int <code>ecore_config_describe</code> (const char *key, const char *desc)<br/>
+ <i>Sets the description field of the indicated property. </i><br/>
+ EAPI int <code>ecore_config_short_opt_set</code> (const char *key, char short_opt)<br/>
+ <i>Set the short option character of a property. </i><br/>
+ EAPI int <code>ecore_config_long_opt_set</code> (const char *key, const char *long_opt)<br/>
+ <i>Set the long option string of the property. </i><br/>
+ EAPI int <code>ecore_config_typed_set</code> (const char *key, const void *val, int type)<br/>
  <i>Sets the indicated property to the given value and type. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that retrieve or set the attributes relating to a property.</p>
@@ -28,7 +28,7 @@ description: "Ecore Config Property Functions – Functions that retrieve or set
 <p>Sets the description field of the indicated property. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>desc</i> Description string.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -49,7 +49,7 @@ description: "Ecore Config Property Functions – Functions that retrieve or set
 <p>Set the long option string of the property. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>long_opt</i> String used to indicate the value of a property given on the command line.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -60,7 +60,7 @@ description: "Ecore Config Property Functions – Functions that retrieve or set
 <p>Set the short option character of a property. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>short_opt</i> Character used to indicate the value of a property given on the command line.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -79,8 +79,8 @@ description: "Ecore Config Property Functions – Functions that retrieve or set
 <p>Sets the indicated property to the given value and type. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
- <i>val</i> A pointer to the value to set the property to.<br />
+<dd><i>key</i> The property key.<br/>
+ <i>val</i> A pointer to the value to set the property to.<br/>
  <i>type</i> The type of the property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

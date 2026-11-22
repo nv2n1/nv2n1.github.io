@@ -29,10 +29,10 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <code> PCRE2_SIZE *</code><i>blength</i>, pcre2_convert_context *<i>cvcontext</i>);
 <code>void pcre2_converted_pattern_free(PCRE2_UCHAR *</code><i>converted_pattern</i>);</pre>
 <p>The first two arguments of <code>pcre2_pattern_convert()</code> define the foreign pattern that is to be converted. The length may be given as PCRE2_ZERO_TERMINATED. The <code>options</code> argument defines how the pattern is to be processed. If the input is UTF, the PCRE2_CONVERT_UTF option should be set. PCRE2_CONVERT_NO_UTF_CHECK may also be set if you are sure the input is valid. One or more of the glob options, or one of the following POSIX options must be set to define the type of conversion that is required: </p>
-<p>&nbsp;<wbr>&nbsp;PCRE2_CONVERT_GLOB<br />
-&nbsp;<wbr>&nbsp;PCRE2_CONVERT_GLOB_NO_WILD_SEPARATOR<br />
-&nbsp;<wbr>&nbsp;PCRE2_CONVERT_GLOB_NO_STARSTAR<br />
-&nbsp;<wbr>&nbsp;PCRE2_CONVERT_POSIX_BASIC<br />
+<p>&nbsp;<wbr>&nbsp;PCRE2_CONVERT_GLOB<br/>
+&nbsp;<wbr>&nbsp;PCRE2_CONVERT_GLOB_NO_WILD_SEPARATOR<br/>
+&nbsp;<wbr>&nbsp;PCRE2_CONVERT_GLOB_NO_STARSTAR<br/>
+&nbsp;<wbr>&nbsp;PCRE2_CONVERT_POSIX_BASIC<br/>
 &nbsp;<wbr>&nbsp;PCRE2_CONVERT_POSIX_EXTENDED </p>
 <p> Details of the conversions are given below. The <code>buffer</code> and <code>blength</code> arguments define how the output is handled: </p>
 <p> If <code>buffer</code> is NULL, the function just returns the length of the converted pattern via <code>blength</code>. This is one less than the length of buffer needed, because a terminating zero is always added to the output. </p>

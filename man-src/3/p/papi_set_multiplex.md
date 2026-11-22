@@ -20,11 +20,11 @@ description: "PAPI_set_multiplex –"
 <dd><i>EventSet</i> an integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code></dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i><br />
- <i>PAPI_EINVAL</i> &#8212; One or more of the arguments is invalid, or the EventSet is already multiplexed.<br />
- <i>PAPI_ENOCMP</i> &#8212; The EventSet specified is not yet bound to a component.<br />
- <i>PAPI_ENOEVST</i> &#8212; The EventSet specified does not exist.<br />
- <i>PAPI_EISRUN</i> &#8212; The EventSet is currently counting events.<br />
+<dd><i>PAPI_OK</i><br/>
+ <i>PAPI_EINVAL</i> &#8212; One or more of the arguments is invalid, or the EventSet is already multiplexed.<br/>
+ <i>PAPI_ENOCMP</i> &#8212; The EventSet specified is not yet bound to a component.<br/>
+ <i>PAPI_ENOEVST</i> &#8212; The EventSet specified does not exist.<br/>
+ <i>PAPI_EISRUN</i> &#8212; The EventSet is currently counting events.<br/>
  <i>PAPI_ENOMEM</i> &#8212; Insufficient memory to complete the operation.</dd></dl>
 <p> <code>PAPI_set_multiplex</code> converts a standard PAPI event set created by a call to <code>PAPI_create_eventset</code> into an event set capable of handling multiplexed events. This must be done after calling <code>PAPI_multiplex_init</code>, and either <code>PAPI_add_event</code> or <code>PAPI_assign_eventset_component</code>, but prior to calling <code>PAPI_start()</code>. </p>
 <p> Events can be added to an event set either before or after converting it into a multiplexed set, but the conversion must be done prior to using it as a multiplexed set. </p>

@@ -8,12 +8,12 @@ url: "/docs/linux/man/1-rgb2ycbcr/"
 description: "rgb2ycbcr – convert non-YCbCr TIFF images to a YCbCr TIFF image"
 ---
 
-<p> rgb2ycbcr &#8211; convert non-YCbCr <font SIZE="-1">TIFF</font> images to a YCbCr <font SIZE="-1">TIFF</font> image</p>
+<p> rgb2ycbcr &#8211; convert non-YCbCr TIFF images to a YCbCr TIFF image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rgb2ycbcr</code> [ <i>options</i> ] <i>src1.tif src2.tif &#8230; dst.tif</i></p>
 <h2>DESCRIPTION</h2>
-<p> <i>rgb2ycbcr</i> converts <font SIZE="-1">RGB</font> color, greyscale, or bi-level <font SIZE="-1">TIFF</font> images to YCbCr images by transforming and sampling pixel data. If multiple files are specified on the command line each source file is converted to a separate directory in the destination file. </p>
-<p> By default, chrominance samples are created by sampling 2 by 2 blocks of luminance values; this can be changed with the <code>-h</code> and <code>-v</code> options. Output data are compressed with the <font SIZE="-1">PackBits</font> compression scheme, by default; an alternate scheme can be selected with the <code>-c</code> option. By default, output data are compressed in strips with the number of rows in each strip selected so that the size of a strip is never more than 8 kilobytes; the <code>-r</code> option can be used to explicitly set the number of rows per strip.</p>
+<p> <i>rgb2ycbcr</i> converts RGB color, greyscale, or bi-level TIFF images to YCbCr images by transforming and sampling pixel data. If multiple files are specified on the command line each source file is converted to a separate directory in the destination file. </p>
+<p> By default, chrominance samples are created by sampling 2 by 2 blocks of luminance values; this can be changed with the <code>-h</code> and <code>-v</code> options. Output data are compressed with the PackBits compression scheme, by default; an alternate scheme can be selected with the <code>-c</code> option. By default, output data are compressed in strips with the number of rows in each strip selected so that the size of a strip is never more than 8 kilobytes; the <code>-r</code> option can be used to explicitly set the number of rows per strip.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-c</code></dt>

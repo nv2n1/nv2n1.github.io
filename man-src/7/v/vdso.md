@@ -178,7 +178,7 @@ void *vdso = (uintptr_t)getauxval(AT_SYSINFO_EHDR);</code></pre>
 </table>
 <h3>bfin (Blackfin) functions (port removed in Linux 4.17)</h3>
 <p>As this CPU lacks a memory management unit (MMU), it doesn&#8217;t set up a vDSO in the normal sense. Instead, it maps at boot time a few raw functions into a fixed location in memory. User-space applications then call directly into that region. There is no provision for backward compatibility beyond sniffing raw opcodes, but as this is an embedded CPU, it can get away with things&#8212;some of the object formats it runs aren&#8217;t even ELF based (they&#8217;re bFLT/FLAT). </p>
-<p> For information on this code page, it&#8217;s best to refer to the public documentation:<br />
+<p> For information on this code page, it&#8217;s best to refer to the public documentation:<br/>
  <a rel="nofollow" href="http://docs.blackfin.uclinux.org/doku.php?id=linux-kernel:fixed-code">http://docs.blackfin.uclinux.org/doku.php?id=linux-kernel:fixed-code</a></p>
 <h3>mips functions</h3>
 <p>The table below lists the symbols exported by the vDSO. </p>

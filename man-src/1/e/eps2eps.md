@@ -10,7 +10,7 @@ description: "ps2ps, eps2eps – Ghostscript PostScript \"distiller\""
 
 <p> ps2ps, eps2eps &#8211; Ghostscript PostScript &quot;distiller&quot; </p>
 <h2>SYNOPSIS</h2>
-<p> <code>ps2ps</code> [ <i>options</i> ] <i>input output.ps</i><br />
+<p> <code>ps2ps</code> [ <i>options</i> ] <i>input output.ps</i><br/>
  <code>eps2eps</code> [ <i>options</i> ] <i>input output.eps</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>ps2ps</code> uses <i><a href="/docs/linux/man/1-gs/">gs</a></i>(1) to convert <code>PostScript</code>(tm) or <code>PDF</code>(tm) file &quot;input&quot; to simpler, normalized and (usually) faster PostScript in &quot;output.ps&quot;. The output is level 2 DSC 3.0 conforming PostScript. </p>

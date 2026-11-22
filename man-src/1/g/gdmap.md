@@ -11,7 +11,7 @@ description: "Graphical Disk Map"
 <p> <code>Graphical Disk Map </p>
 <p> </code></p>
 <h2>SYNOPSIS</h2>
-<p> gdmap [<code>-?</code>|<code>&#8211;help</code>]<br />
+<p> gdmap [<code>-?</code>|<code>&#8211;help</code>]<br/>
 [<code>-f</code>&nbsp;<wbr><i>dir</i>|<code>&#8211;folder=</code><i>dir</i>] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>GdMap</code> is a tool to display disk space using tree maps. </p>

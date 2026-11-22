@@ -56,7 +56,7 @@ url: "/docs/linux/man/1-thunar-volman-settings/"
 <p> This manual page was written by Jackson Doak &lt;noskcaj [at] ubuntu.com&gt; (with help from help2man) for the Debian project but may be used by others. </p>
 <p> Please report bugs to Debian&#8217;s bug tracking system. Details can be found at <a rel="nofollow" href="http://bugs.debian.org/">http://bugs.debian.org/</a>  </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004-2013 <br />
+<p> Copyright &#169; 2004-2013 <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;The Thunar development team. All rights reserved.  </p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>thunar-volman-settings</code> is maintained in /usr/share/doc/thunar/html/C/using-removable-media.html </p>

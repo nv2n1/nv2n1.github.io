@@ -10,12 +10,12 @@ description: "FTP Operation Attributes –"
 
 <p> FTP Operation Attributes &#8211; </p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_i_ftp_client_range_t</code><br />
+<p> struct <code>globus_i_ftp_client_range_t</code><br/>
  <i>Byte range report.</i> </p>
 <p> This structure contains information about a single extent of data stored on an FTP server. A report structure is generated from each part of an extended-block mode restart marker message from an FTP server. &quot;</p>
 <h3>Typedefs</h3>
-<p> typedef struct<br />
- <code>globus_i_ftp_client_operationattr_t</code> * <code>globus_ftp_client_operationattr_t</code>&quot;<br />
+<p> typedef struct<br/>
+ <code>globus_i_ftp_client_operationattr_t</code> * <code>globus_ftp_client_operationattr_t</code>&quot;<br/>
  <i>Operation Attributes.</i> </p>
 <p> FTP Client attributes are used to control the parameters needed to access an URL using the FTP protocol. Attributes are created and manipulated using the functions in the <code>attributes </code> section of the library. &quot;</p>
 <h3>Functions</h3>
@@ -98,7 +98,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>dst</i> The attribute set to be initialized to the same values as src.<br />
+</dt><dd> <i>dst</i> The attribute set to be initialized to the same values as src.<br/>
  <i>src</i> The original attribute set to duplicate.</dd></dl>
 <h3>globus_result_t globus_ftp_client_operationattr_destroy (<code>globus_ftp_client_operationattr_t</code> *attr)</h3>
 <p> Destroy an FTP client attribute set. </p>
@@ -119,7 +119,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>allocated_size</i> The size to direct server to allocate.</dd></dl>
 <h3>globus_result_t globus_ftp_client_operationattr_set_allow_ipv6 (<code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_tallow_ipv6)</h3>
 <p> Set/Get the allow ipv6 attribute for an ftp client attribute set. </p>
@@ -128,7 +128,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>allow_ipv6</i> GLOBUS_TRUE to allow ipv6 or GLOBUS_FALSE to disallow(default)</dd></dl>
 <h3>globus_result_t globus_ftp_client_operationattr_set_append (<code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_tappend)</h3>
 <p> Set/Get the append attribute for an ftp client attribute set. </p>
@@ -137,7 +137,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>append</i> The value of append attribute.</dd></dl>
 <h3>globus_result_t globus_ftp_client_operationattr_set_authorization (<code>globus_ftp_client_operationattr_t</code> *attr, gss_cred_id_tcredential, const char *user, const char *password, const char *account, const char *subject)</h3>
 <p> Set/Get the authorization attribute for an ftp client attribute set. </p>
@@ -146,11 +146,11 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
- <i>credential</i> The credential to use for authenticating with a GSIFTP server. This may be GSS_C_NO_CREDENTIAL to use the default credential.<br />
- <i>user</i> The user name to send to the FTP server. When doing a gsiftp transfer, this may be set to NULL, and the default globusmap entry for the user&#8217;s GSI identity will be usd.<br />
- <i>password</i> The password to send to the FTP server. When doing a gsiftp transfer, this may be set to NULL.<br />
- <i>account</i> The account to use for the data transfer. Most FTP servers do not require this.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
+ <i>credential</i> The credential to use for authenticating with a GSIFTP server. This may be GSS_C_NO_CREDENTIAL to use the default credential.<br/>
+ <i>user</i> The user name to send to the FTP server. When doing a gsiftp transfer, this may be set to NULL, and the default globusmap entry for the user&#8217;s GSI identity will be usd.<br/>
+ <i>password</i> The password to send to the FTP server. When doing a gsiftp transfer, this may be set to NULL.<br/>
+ <i>account</i> The account to use for the data transfer. Most FTP servers do not require this.<br/>
  <i>subject</i> The subject name of the FTP server. This is only used when doing a gsiftp transfer, and then only when the security subject name does not match the hostname of the server (ie, when the server is being run by a user).</dd></dl>
 <h3>globus_result_t globus_ftp_client_operationattr_set_authz_assert (<code>globus_ftp_client_operationattr_t</code> *attr, const char *authz_assert, globus_bool_tcache_authz_assert)</h3>
 <p> Set/Get the authz_assert attribute for an ftp client attribute set. </p>
@@ -158,8 +158,8 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
- <i>authz_assert</i> The AUTHORIZATION assertion.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
+ <i>authz_assert</i> The AUTHORIZATION assertion.<br/>
  <i>cache_authz_assert</i> Boolean that specifies whether to cache this assertion for subsequent operations</dd></dl>
 <h3>globus_result_t globus_ftp_client_operationattr_set_control_protection (<code>globus_ftp_client_operationattr_t</code> *attr, globus_ftp_control_protection_tprotection)</h3>
 <p> Set/Get the control channel protection attribute for an ftp client attribute set. </p>
@@ -167,7 +167,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>protection</i> The value of control channel protection attribute.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -178,7 +178,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>protection</i> The value of data channel protection attribute.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -189,8 +189,8 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
- <i>type</i> The type of credential. Currently only &#8216;P&#8217; is supported, and requires a gss_cred_id_t for the credential.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
+ <i>type</i> The type of credential. Currently only &#8216;P&#8217; is supported, and requires a gss_cred_id_t for the credential.<br/>
  <i>credential</i> A credential appropriate for the type specified.</dd></dl>
 <h3>globus_result_t globus_ftp_client_operationattr_set_dcau (<code>globus_ftp_client_operationattr_t</code> *attr, const globus_ftp_control_dcau_t *dcau)</h3>
 <p> Set/Get the data channel authentication attribute for an ftp client attribute set. </p>
@@ -198,7 +198,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>dcau</i> The value of data channel authentication attribute.</dd></dl>
 <h3>globus_result_t globus_ftp_client_operationattr_set_delayed_pasv (const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_tdelayed_pasv)</h3>
 <p> Set/Get whether or not delayed passive should be used </p>
@@ -206,7 +206,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>delayed_pasv</i> globus_bool_t</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -218,7 +218,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>driver_list</i> driver list in the following format: driver1[:driver1opts][,driver2[:driver2opts]][&#8230;]. The string &#8216;default&#8217; will reset the stack list to the server default.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -231,7 +231,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>layout</i> The value of layout attribute.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -248,7 +248,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>list_uses_data_mode</i> globus_bool_t</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -262,7 +262,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>mode</i> The value of mode attribute</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -279,7 +279,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>driver_list</i> driver list in the following format: driver1[:driver1opts][,driver2[:driver2opts]][&#8230;]. The string &#8216;default&#8217; will reset the stack list to the server default.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -292,7 +292,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>parallelism</i> The value of parallelism attribute.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -312,9 +312,9 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
- <i>read_all</i> The value of read_all attribute.<br />
- <i>intermediate_callback</i> Callback to be invoked when a subsection of the data has been retreived. This callback may be GLOBUS_NULL, if the user only wants to be notified when the data transfer is completed.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
+ <i>read_all</i> The value of read_all attribute.<br/>
+ <i>intermediate_callback</i> Callback to be invoked when a subsection of the data has been retreived. This callback may be GLOBUS_NULL, if the user only wants to be notified when the data transfer is completed.<br/>
  <i>intermediate_callback_arg</i> User data to be passed to the intermediate callback function.</dd></dl>
 <h3>globus_result_t globus_ftp_client_operationattr_set_storage_module (<code>globus_ftp_client_operationattr_t</code> *attr, const char *module_name, const char *module_args)</h3>
 <p> Set/Get the gridftp storage module (DSI). </p>
@@ -323,8 +323,8 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
- <i>module_name</i> The backend storage module name<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
+ <i>module_name</i> The backend storage module name<br/>
  <i>module_args</i> The backend storage module parameters</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -337,7 +337,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>striped</i> The value of striped attribute.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -370,7 +370,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>tcp_buffer</i> The value of tcp_buffer attribute.</dd></dl>
 <p>&nbsp;<wbr></p>
 <h3>globus_result_t globus_ftp_client_operationattr_set_type (<code>globus_ftp_client_operationattr_t</code> *attr, globus_ftp_control_type_ttype)</h3>
@@ -386,7 +386,7 @@ description: "FTP Operation Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>type</i> The value of type attribute.</dd></dl>
 <p>&nbsp;<wbr></p>
 <h2>Author</h2>

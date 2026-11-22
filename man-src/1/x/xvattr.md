@@ -11,14 +11,14 @@ description: "xvattr – Query/Set X11 XVideo Setting(s)"
 <p> xvattr &#8211; Query/Set X11 XVideo Setting(s) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xvattr</code> [<i>options</i>&#8230;] </p>
-<p> This program is used for getting and setting X11 Xv attributes such as <font SIZE="-1">XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY, &#8230;</font> </p>
+<p> This program is used for getting and setting X11 Xv attributes such as XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY, &#8230; </p>
 <p> For this program to work, you must have a version of X11 with the XVideo extension and a graphics card that has Xv graphics acceleration. </p>
-<p> Note: On some cards <font SIZE="-1">XV_BRIGHTNESS</font> and <font SIZE="-1">XV_CONTRAST</font> are not listed among the available attributes, but they can still be set/changed.</p>
-<h3><font SIZE="-1">OPTIONS</font></h3>
+<p> Note: On some cards XV_BRIGHTNESS and XV_CONTRAST are not listed among the available attributes, but they can still be set/changed.</p>
+<h3>OPTIONS</h3>
 <p> With no options, all parameters are displayed. </p>
-<p> Long options are handled by <font SIZE="-1">GNU</font> getopts and follow those rules. In particular, options that are specified with a double dash (&#8211;) rather than a single dash (-), can be abbreviated as long as they are unique. Long parameters that need a value specified may have the parameter and the value separated with blank space or an optional equals sign (and no intervening space). </p>
+<p> Long options are handled by GNU getopts and follow those rules. In particular, options that are specified with a double dash (&#8211;) rather than a single dash (-), can be abbreviated as long as they are unique. Long parameters that need a value specified may have the parameter and the value separated with blank space or an optional equals sign (and no intervening space). </p>
 <p> For example the following are all equivalent: </p>
-<p> xvattr -a <font SIZE="-1">XV_BRIGHTNESS</font> xvattr &#8211;attribute <font SIZE="-1">XV_BRIGHTNESS</font> xvattr &#8211;att <font SIZE="-1">XV_BRIGHTNESS</font> xvattr &#8211;att=XV_BRIGHTNESS </p>
+<p> xvattr -a XV_BRIGHTNESS xvattr &#8211;attribute XV_BRIGHTNESS xvattr &#8211;att XV_BRIGHTNESS xvattr &#8211;att=XV_BRIGHTNESS </p>
 <p> Example: </p>
 <pre>
   &gt; xvattr
@@ -73,7 +73,7 @@ description: "xvattr – Query/Set X11 XVideo Setting(s)"
 </pre>
 </dl>
 <h2>AUTHOR</h2>
-<p> Bjo.rn Englund. Send bug reports to <tt>&quot;d4bjorn [at] dtek.chalmers.se&quot;</tt> <tt>&quot;rocky [at] panix.com&quot;</tt> turned the <font SIZE="-1">README</font> into this document.</p>
+<p> Bjo.rn Englund. Send bug reports to <tt>&quot;d4bjorn [at] dtek.chalmers.se&quot;</tt> <tt>&quot;rocky [at] panix.com&quot;</tt> turned the README into this document.</p>
 <h2>SEE ALSO</h2>
 <p> See also xvinfo and XvQueryAdaptors, XvSetPortAttribute, and XvGetPortAttribute.</p>
 <h2>COPYRIGHT</h2>

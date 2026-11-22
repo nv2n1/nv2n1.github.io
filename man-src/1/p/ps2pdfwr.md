@@ -13,7 +13,7 @@ description: "ps2pdfwr – Convert PostScript to PDF without specifying Compatib
 <p> <code>ps2pdfwr</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]</p>
 <h2>DESCRIPTION</h2>
 <p> This wrapper script invokes <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) with following arguments </p>
-<p> <center> <code>-q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite</code><br />
+<p> <center> <code>-q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite</code><br/>
  </center> </p>
 <p> as well as the appropriate <code>-dOutputFile</code> argument, all preceded and followed by any command-line arguments. Finally, the security option <code>-dSAFER</code> is prepended before all the other options (This is now redundant as &quot;SAFER&quot; is now the default, but the option does no harm). </p>
 <p> The version-specific <code>ps2pdf</code> scripts all invoke this one with the addition of the respective compatibility level option.</p>

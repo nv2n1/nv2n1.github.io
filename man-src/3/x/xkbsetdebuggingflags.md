@@ -10,7 +10,7 @@ description: "XkbSetDebuggingFlags – Change the values of any of the debug con
 <p>XkbSetDebuggingFlags &#8211; Change the values of any of the debug controls </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbSetDebuggingFlags</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>mask</i><code>,</code> <code>unsigned int </code><i>flags</i><code>,</code> <code>char *</code><i>msg</i><code>,</code> <code>unsigned int </code><i>ctrls_mask</i><code>,</code> <code>unsigned int </code><i>ctrls</i><code>,</code> <code>unsigned int *</code><i>ret_flags</i><code>,</code> <code>unsigned int *</code><i>ret_ctrls</i><code>);</code><br />
+<dt> <code>Bool XkbSetDebuggingFlags</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>mask</i><code>,</code> <code>unsigned int </code><i>flags</i><code>,</code> <code>char *</code><i>msg</i><code>,</code> <code>unsigned int </code><i>ctrls_mask</i><code>,</code> <code>unsigned int </code><i>ctrls</i><code>,</code> <code>unsigned int *</code><i>ret_flags</i><code>,</code> <code>unsigned int *</code><i>ret_ctrls</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -9,11 +9,11 @@ description: "XCB Atom Functions – Functions that operate on atoms."
 
 <p>XCB Atom Functions &#8211; Functions that operate on atoms. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>ecore_x_atom_get_prefetch</code> (const char *name)<br />
- <i>Sends the InternAtom request. </i><br />
- EAPI void <code>ecore_x_atom_get_fetch</code> (void)<br />
- <i>Gets the reply of the InternAtom request sent by </i><code>ecore_x_atom_get_prefetch()</code>.<br />
- EAPI Ecore_X_Atom <code>ecore_x_atom_get</code> (const char *name __UNUSED__)<br />
+<p>EAPI void <code>ecore_x_atom_get_prefetch</code> (const char *name)<br/>
+ <i>Sends the InternAtom request. </i><br/>
+ EAPI void <code>ecore_x_atom_get_fetch</code> (void)<br/>
+ <i>Gets the reply of the InternAtom request sent by </i><code>ecore_x_atom_get_prefetch()</code>.<br/>
+ EAPI Ecore_X_Atom <code>ecore_x_atom_get</code> (const char *name __UNUSED__)<br/>
  <i>Retrieves the atom value associated to a name. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that operate on atoms.</p>

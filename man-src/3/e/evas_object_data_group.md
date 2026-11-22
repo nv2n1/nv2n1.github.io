@@ -9,11 +9,11 @@ description: "Object Data Functions – Functions that retrieve and set data ass
 
 <p>Object Data Functions &#8211; Functions that retrieve and set data associated attached to an evas object. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_object_data_set</code> (<code>Evas_Object</code> *obj, const char *key, const void *data)<br />
- <i>Set an attached data pointer to an object with a given string key. </i><br />
- EAPI void * <code>evas_object_data_get</code> (const <code>Evas_Object</code> *obj, const char *key)<br />
- <i>Return an attached data pointer by its given string key. </i><br />
- EAPI void * <code>evas_object_data_del</code> (<code>Evas_Object</code> *obj, const char *key)<br />
+<p>EAPI void <code>evas_object_data_set</code> (<code>Evas_Object</code> *obj, const char *key, const void *data)<br/>
+ <i>Set an attached data pointer to an object with a given string key. </i><br/>
+ EAPI void * <code>evas_object_data_get</code> (const <code>Evas_Object</code> *obj, const char *key)<br/>
+ <i>Return an attached data pointer by its given string key. </i><br/>
+ EAPI void * <code>evas_object_data_del</code> (<code>Evas_Object</code> *obj, const char *key)<br/>
  <i>Delete at attached data pointer from an object. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that retrieve and set data associated attached to an evas object.</p>
@@ -22,7 +22,7 @@ description: "Object Data Functions – Functions that retrieve and set data ass
 <p>Delete at attached data pointer from an object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The object to delete the data pointer from<br />
+<dd><i>obj</i> The object to delete the data pointer from<br/>
  <i>key</i> The string key the data was stored under</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -39,7 +39,7 @@ description: "Object Data Functions – Functions that retrieve and set data ass
 <p>Return an attached data pointer by its given string key. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The object to which the data was attached<br />
+<dd><i>obj</i> The object to which the data was attached<br/>
  <i>key</i> The string key the data was stored under</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -57,8 +57,8 @@ description: "Object Data Functions – Functions that retrieve and set data ass
 <p>Set an attached data pointer to an object with a given string key. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The object to attach the data pointer to<br />
- <i>key</i> The string key for the data to access it<br />
+<dd><i>obj</i> The object to attach the data pointer to<br/>
+ <i>key</i> The string key for the data to access it<br/>
  <i>data</i> The ponter to the data to be attached</dd></dl>
 <p> This attaches the pointer data to the object obj given the string key. This pointer will stay &#8216;hooked&#8217; to the object until a new pointer with the same string key is attached with <code>evas_object_data_set()</code> or it is deleted with <code>evas_object_data_del()</code>. On deletion of the object obj, the pointers will not be accessible from the object anymore. </p>
 <p> You can find the pointer attached under a string key using <code>evas_object_data_get()</code>. It is the job of the calling application to free any data pointed to by data when it is no longer required. </p>

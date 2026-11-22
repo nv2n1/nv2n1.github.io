@@ -32,16 +32,16 @@ description: "btrace – perform live tracing for block devices"
 <dd>Specifies the device to trace. </dd>
 </dl>
 <h2>Example</h2>
-<p>Simply running<br />
+<p>Simply running<br/>
 &nbsp;<wbr>%&nbsp;<wbr>btrace&nbsp;<wbr>/dev/sda will show a trace of the device <i>/dev/sda</i>. </p>
 <h2>Authors</h2>
 <p><i>blkparse</i> was written by Jens Axboe, Alan D. Brunelle and Nathan Scott. This man page was created from the <i>blktrace</i> documentation by Bas Zoetekouw.</p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;linux-btrace [at] vger.kernel.org&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2006 Jens Axboe, Alan D. Brunelle and Nathan Scott.<br />
- This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.<br />
- This manual page was created for Debian by Bas Zoetekouw. It was derived from the documentation provided by the authors and it may be used, distributed and modified under the terms of the GNU General Public License, version 2.<br />
+<p>Copyright &#169; 2006 Jens Axboe, Alan D. Brunelle and Nathan Scott.<br/>
+ This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.<br/>
+ This manual page was created for Debian by Bas Zoetekouw. It was derived from the documentation provided by the authors and it may be used, distributed and modified under the terms of the GNU General Public License, version 2.<br/>
  On Debian systems, the text of the GNU General Public License can be found in /usr/share/common-licenses/GPL-2.</p>
 <h2>See Also</h2>
 <p>blktrace (8), blkparse (1), verify_blkparse (1), blkrawverify (1), btt (1) </p>

@@ -10,8 +10,8 @@ description: "doveadm-purge – Remove messages with refcount=0 from mdbox files
 
 <p> doveadm-purge &#8211; Remove messages with refcount=0 from mdbox files</p>
 <h2>SYNOPSIS</h2>
-<p> <code>doveadm</code> [<code>-Dv</code>] <code>purge</code> [<code>-S</code> <i>socket_path</i>]<br />
- <code>doveadm</code> [<code>-Dv</code>] <code>purge</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><br />
+<p> <code>doveadm</code> [<code>-Dv</code>] <code>purge</code> [<code>-S</code> <i>socket_path</i>]<br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>purge</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><br/>
  <code>doveadm</code> [<code>-Dv</code>] <code>purge</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i>&nbsp;<wbr>user</i></p>
 <h2>DESCRIPTION</h2>
 <p> The <code>doveadm purge</code> command is used to remove all messages with refcount=0 from a user&#8217;s mail storage. The refcount of a message is decreased to 0 when the user (or some administration utility) has expunged all instances of a message from all mailboxes. </p>
@@ -34,7 +34,7 @@ description: "doveadm-purge – Remove messages with refcount=0 from mdbox files
 <dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
 <p> This allows an administrator to execute <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) mail commands through the given socket.</p>
 <dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
-<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
+<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br/>
  When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs, including <i>doveconf -n</i> output, to the Dovecot Mailing List &lt;dovecot [at] dovecot.org&gt;. Information about reporting bugs is available at: <a rel="nofollow" href="http://dovecot.org/bugreport.html">http://dovecot.org/bugreport.html</a></p>

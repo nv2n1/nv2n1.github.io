@@ -41,24 +41,24 @@ void specific_function()
 <dd> <code>talloc_get_type_abort()</code></dd></dl>
 <h2>Examples</h2>
 <p> The following example will show how generic programming with talloc is handled &#8211; if we provide invalid data to the callback, the program will be aborted. This is a sufficient reaction for such an error in most applications. </p>
-<p>void foo_callback(void *pvt)<br />
-{<br />
-    struct foo *data = talloc_get_type_abort(pvt, struct foo);<br />
-    /* &#8230; */<br />
-}<br />
-int do_foo()<br />
-{<br />
-    struct foo *data = talloc_zero(NULL, struct foo);<br />
-    /* &#8230; */<br />
-    return generic_function(foo_callback, data);<br />
+<p>void foo_callback(void *pvt)<br/>
+{<br/>
+    struct foo *data = talloc_get_type_abort(pvt, struct foo);<br/>
+    /* &#8230; */<br/>
+}<br/>
+int do_foo()<br/>
+{<br/>
+    struct foo *data = talloc_zero(NULL, struct foo);<br/>
+    /* &#8230; */<br/>
+    return generic_function(foo_callback, data);<br/>
 }</p>
 <p> But what if we are creating a service application that should be running for the uptime of a server, we may want to abort the application during the development process (to make sure the error is not overlooked) and try to recover from the error in the customer release. This can be achieved by creating a custom abort function with a conditional build. </p>
-<p>void my_abort(const char *reason)<br />
-{<br />
-  fprintf(stderr, &#8220;talloc abort: %s, reason);<br />
-#ifdef ABORT_ON_TYPE_MISMATCH<br />
-  abort();<br />
-#endif<br />
+<p>void my_abort(const char *reason)<br/>
+{<br/>
+  fprintf(stderr, &#8220;talloc abort: %s, reason);<br/>
+#ifdef ABORT_ON_TYPE_MISMATCH<br/>
+  abort();<br/>
+#endif<br/>
 }</p>
 <p> The usage of <code>talloc_get_type_abort()</code> would be then: </p>
 <pre><code>

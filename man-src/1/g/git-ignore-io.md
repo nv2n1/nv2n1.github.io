@@ -15,19 +15,19 @@ description: "git-ignore-io – Get sample gitignore file"
 <p> Get sample gitignore file from gitignore.io <i><a rel="nofollow" href="https://www.gitignore.io">https://www.gitignore.io</a></i></p>
 <h2>OPTIONS</h2>
 <p> &lt;OPTIONS&gt; </p>
-<p> -a, &#8211;append &lt;types&gt;&#8230;<br />
+<p> -a, &#8211;append &lt;types&gt;&#8230;<br/>
  Append new .gitignore content to .gitignore under the current directory </p>
-<p> -r, &#8211;replace &lt;types&gt;&#8230;<br />
+<p> -r, &#8211;replace &lt;types&gt;&#8230;<br/>
  Export new .gitignore to the current directory (The old one will be replaced) </p>
-<p> -l, &#8211;list-in-table<br />
+<p> -l, &#8211;list-in-table<br/>
  Print available types in table format </p>
-<p> -L, &#8211;list-alphabetically<br />
+<p> -L, &#8211;list-alphabetically<br/>
  Print available types in alphabetical order </p>
-<p> -s, &#8211;search &lt;word&gt;<br />
+<p> -s, &#8211;search &lt;word&gt;<br/>
  Search word in available types </p>
-<p> -t, &#8211;show-update-time<br />
+<p> -t, &#8211;show-update-time<br/>
  Show the last modified time of ~/.gi_list (where the list of available types is stored) </p>
-<p> -u, &#8211;update-list<br />
+<p> -u, &#8211;update-list<br/>
  Update ~/.gi_list</p>
 <h2>EXAMPLES</h2>
 <p> Show sample gitignore file for vim</p>

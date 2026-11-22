@@ -33,5 +33,5 @@ int ares_gethostbyname_file(ares_channel channel, const char *name,
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_gethostbyname/">ares_gethostbyname</a></code>(3), <code><a href="/docs/linux/man/3-ares_free_hostent/">ares_free_hostent</a></code>(3), <code><a href="/docs/linux/man/3-ares_init_options/">ares_init_options</a></code>(3)</p>
 <h2>AUTHOR</h2>
-<p> Brad Spencer<br />
+<p> Brad Spencer<br/>
  Copyright 1998 by the Massachusetts Institute of Technology. </p>

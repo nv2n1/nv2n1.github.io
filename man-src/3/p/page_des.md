@@ -24,6 +24,6 @@ description: "page_des – DES – Data Encryption Standard crypto interface See
 * </pre>
 <h2>DES implementation history</h2>
 <p>There was no complete BSD licensed, fast, GPL compatible implementation of DES, so Love wrote the part that was missing, fast key schedule setup and adapted the interface to the orignal libdes. </p>
-<p> The document that got me started for real was &#8216;Efficient<br />
+<p> The document that got me started for real was &#8216;Efficient<br/>
 &nbsp;<wbr>&nbsp;<wbr>Implementation of the Data Encryption Standard&#8217;&nbsp;<wbr>by Dag Arne Osvik. I never got to the PC1 transformation was working, instead I used table-lookup was used for all key schedule setup. The document was very useful since it de-mystified other implementations for me. </p>
 <p> The core DES function (SBOX + P transformation) is from Richard Outerbridge public domain DES implementation. My sanity is saved thanks to his work. Thank you Richard.</p>

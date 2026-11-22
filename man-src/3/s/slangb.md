@@ -11,7 +11,7 @@ description: "slangb.f –"
 <p> slangb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>slangb</code> (NORM, N, KL, KU, AB, LDAB, WORK)<br />
+<p> REAL function <code>slangb</code> (NORM, N, KL, KU, AB, LDAB, WORK)<br/>
  <i></i><code>SLANGB</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of general band matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function slangb (characterNORM, integerN, integerKL, integerKU, real, dimension( ldab, * )AB, integerLDAB, real, dimension( * )WORK)</h3>

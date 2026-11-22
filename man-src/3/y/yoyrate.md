@@ -20,7 +20,7 @@ to be defined in derived classes</code></pre>
 <p><code>Constructors</code> </p>
 <p> <code>YoYInflationTermStructure</code> (const <code>DayCounter</code> &amp;dayCounter, const <code>Period</code> &amp;lag, <code>Frequency</code> frequency, <code>Rate</code> baseYoYRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS) </p>
 <p> <code>YoYInflationTermStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;calendar, const <code>DayCounter</code> &amp;dayCounter, const <code>Period</code> &amp;lag, <code>Frequency</code> frequency, <code>Rate</code> baseYoYRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS) </p>
-<p> <code>YoYInflationTermStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const <code>DayCounter</code> &amp;dayCounter, const <code>Period</code> &amp;lag, <code>Frequency</code> frequency, <code>Rate</code> baseYoYRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS)<br />
+<p> <code>YoYInflationTermStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const <code>DayCounter</code> &amp;dayCounter, const <code>Period</code> &amp;lag, <code>Frequency</code> frequency, <code>Rate</code> baseYoYRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS)<br/>
  <code>Inspectors</code> </p>
 <pre><code>Rate yoyRate (const Date &amp;d, bool extrapolate=false) const
 year-on-year inflation rate

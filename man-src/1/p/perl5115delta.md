@@ -28,8 +28,8 @@ description: "perl5115delta – what is new for perl v5.11.5"
 <dd> Upgraded from version 1.11 to 1.12.</dd>
 <dt>&quot;CPAN&quot;</dt>
 <dd> Upgraded from version 1.94_53 to 1.94_56. </dd>
-<p> This resolves <font SIZE="-1">RT</font> #72362, in which <font SIZE="-1">CPAN</font> was ignoring <tt>&quot;configure_requires&quot;</tt>, and <font SIZE="-1">RT</font> #72348, in which the command <tt>&quot;o conf init&quot;</tt> in the <font SIZE="-1">CPAN</font> shell could cause an exception to be thrown. </p>
-<p> This module is also now built in a less specialized way, which resolves a problem that caused <tt>&quot;make&quot;</tt> after <tt>&quot;make clean&quot;</tt> to fail, fixing <font SIZE="-1">RT</font> #72218.</p>
+<p> This resolves RT #72362, in which CPAN was ignoring <tt>&quot;configure_requires&quot;</tt>, and RT #72348, in which the command <tt>&quot;o conf init&quot;</tt> in the CPAN shell could cause an exception to be thrown. </p>
+<p> This module is also now built in a less specialized way, which resolves a problem that caused <tt>&quot;make&quot;</tt> after <tt>&quot;make clean&quot;</tt> to fail, fixing RT #72218.</p>
 <dt>&quot;CPANPLUS::Dist::Build&quot;</dt>
 <dd> Upgraded from version 0.44 to 0.46. </dd>
 <p> This makes the prereq resolving fall back to <i>_build/</i> querying if the <tt>&quot;prereq_data&quot;</tt> action fails.</p>
@@ -39,10 +39,10 @@ description: "perl5115delta – what is new for perl v5.11.5"
 <dd> Upgraded from version 1.01 to 1.02.</dd>
 <dt>&quot;Safe&quot;</dt>
 <dd> Upgraded from version 2.21 to 2.22. </dd>
-<p> This resolves <font SIZE="-1">RT</font> #72700, in which an exception thrown from a closure was getting lost.</p>
+<p> This resolves RT #72700, in which an exception thrown from a closure was getting lost.</p>
 <dt>&quot;Socket&quot;</dt>
 <dd> Upgraded from version 1.85 to 1.86. </dd>
-<p> This makes the new Socket implementation of <tt>&quot;inet_pton&quot;</tt> consistent with the existing Socket6 implementation of <tt>&quot;inet_pton&quot;</tt>, fixing <font SIZE="-1">RT</font> #72884.</p>
+<p> This makes the new Socket implementation of <tt>&quot;inet_pton&quot;</tt> consistent with the existing Socket6 implementation of <tt>&quot;inet_pton&quot;</tt>, fixing RT #72884.</p>
 <dt>&quot;podlators&quot;</dt>
 <dd> Upgraded from version 2.2.2 to 2.3.1.</dd></dl>
 <h2>Changes to Existing Documentation</h2>
@@ -50,36 +50,36 @@ description: "perl5115delta – what is new for perl v5.11.5"
 <h2>Installation and Configuration Improvements</h2>
 <h3>Configuration improvements</h3>
 <p> Support for SystemTap&#8217;s <tt>&quot;dtrace&quot;</tt> compatibility layer has been added and an issue with linking <tt>&quot;miniperl&quot;</tt> has been fixed in the process. </p>
-<p> <tt>&quot;less -R&quot;</tt> is now used instead of <tt>&quot;less&quot;</tt> for <tt>&quot;groff&quot;</tt>&#8216;s new usage of <font SIZE="-1">ANSI</font> escape codes by setting <tt>$Config{less}</tt> (and thereby <tt>$Config{pager}</tt>, which fixes <font SIZE="-1">RT</font> #72156. </p>
-<p> <font SIZE="-1">USE_PERL_ATOF</font> is now reported in the compile-time options listed by the <tt>&quot;-V&quot;</tt> switch.</p>
+<p> <tt>&quot;less -R&quot;</tt> is now used instead of <tt>&quot;less&quot;</tt> for <tt>&quot;groff&quot;</tt>&#8216;s new usage of ANSI escape codes by setting <tt>$Config{less}</tt> (and thereby <tt>$Config{pager}</tt>, which fixes RT #72156. </p>
+<p> USE_PERL_ATOF is now reported in the compile-time options listed by the <tt>&quot;-V&quot;</tt> switch.</p>
 <h2>Selected Bug Fixes</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> Arbitrary whitespace is now allowed between <tt>&quot;NAME&quot;</tt> and <tt>&quot;VERSION&quot;</tt> in <tt>&quot;package NAME VERSION;&quot;</tt> statements. (Fixes <font SIZE="-1">RT</font> #72432)</dd>
+<dd> Arbitrary whitespace is now allowed between <tt>&quot;NAME&quot;</tt> and <tt>&quot;VERSION&quot;</tt> in <tt>&quot;package NAME VERSION;&quot;</tt> statements. (Fixes RT #72432)</dd>
 <dt>&bull;</dt>
-<dd> A panic caused by trying to load <tt>&quot;charnames&quot;</tt> when the parser is already in error (e.g. by a missing <tt>&quot;my&quot;</tt> under <tt>&quot;use strict;&quot;</tt>) is now averted. This was a regression since Perl 5.10.0. (Fixes <font SIZE="-1">RT</font> #72590)</dd>
+<dd> A panic caused by trying to load <tt>&quot;charnames&quot;</tt> when the parser is already in error (e.g. by a missing <tt>&quot;my&quot;</tt> under <tt>&quot;use strict;&quot;</tt>) is now averted. This was a regression since Perl 5.10.0. (Fixes RT #72590)</dd>
 <dt>&bull;</dt>
-<dd> Reading <tt>$!</tt> no longer causes a <font SIZE="-1">SEGV</font> for out of range <tt>&quot;errno&quot;</tt> values. (Fixes <font SIZE="-1">RT</font> #72850)</dd>
+<dd> Reading <tt>$!</tt> no longer causes a SEGV for out of range <tt>&quot;errno&quot;</tt> values. (Fixes RT #72850)</dd>
 <dt>&bull;</dt>
-<dd> A possible <font SIZE="-1">SEGV</font> in <tt>&quot;/\N{...}/&quot;</tt> has been fixed. This was a regression since Perl 5.10.</dd>
+<dd> A possible SEGV in <tt>&quot;/\N{...}/&quot;</tt> has been fixed. This was a regression since Perl 5.10.</dd>
 <dt>&bull;</dt>
-<dd> A possible <font SIZE="-1">SEGV</font> when freeing a scalar that was upgraded to an <tt>&quot;SVt_REGEXP&quot;</tt> type from a simple(r) scalar has been fixed.</dd>
+<dd> A possible SEGV when freeing a scalar that was upgraded to an <tt>&quot;SVt_REGEXP&quot;</tt> type from a simple(r) scalar has been fixed.</dd>
 <dt>&bull;</dt>
 <dd> A type conversion bug in <tt>&quot;gmtime64&quot;</tt> that caused it to break around <tt>&quot;2**48&quot;</tt> has been fixed.</dd>
 <dt>&bull;</dt>
-<dd> Interpolating a regex that makes use of the <tt>&quot;charnames&quot;</tt> pragma will no longer cause a run-time error. (Fixes <font SIZE="-1">RT</font> #56444)</dd>
+<dd> Interpolating a regex that makes use of the <tt>&quot;charnames&quot;</tt> pragma will no longer cause a run-time error. (Fixes RT #56444)</dd>
 <dt>&bull;</dt>
-<dd> Array references assigned to <tt>*Foo::ISA</tt> now have the necessary magic added to them to catch any further updates to the new <tt>@ISA</tt>. (Fixes <font SIZE="-1">RT</font> #72866)</dd>
+<dd> Array references assigned to <tt>*Foo::ISA</tt> now have the necessary magic added to them to catch any further updates to the new <tt>@ISA</tt>. (Fixes RT #72866)</dd>
 <dt>&bull;</dt>
 <dd> Filehandles are now always blessed into <tt>&quot;IO::File&quot;</tt>, which, together with some suitable manipulation of <tt>@IO::File::ISA</tt>, fixes a breakage introduced in Perl 5.11.3 by a change that always blessed filehandles into <tt>&quot;IO::Handle&quot;</tt> rather than checking for <tt>&quot;FileHandle&quot;</tt> first.</dd>
 <dt>&bull;</dt>
-<dd> A change in the behaviour of <tt>&quot;warnings::enabled&quot;</tt> and <tt>&quot;warnings::warnif&quot;</tt> in Perl 5.10.0 that wasn&#8217;t documented at the time is now documented in perl5100delta. (Fixes <font SIZE="-1">RT</font> #62522)</dd>
+<dd> A change in the behaviour of <tt>&quot;warnings::enabled&quot;</tt> and <tt>&quot;warnings::warnif&quot;</tt> in Perl 5.10.0 that wasn&#8217;t documented at the time is now documented in perl5100delta. (Fixes RT #62522)</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">RT</font> #71504 is now fixed by simply skipping the tests that failed on OpenBSD with ithreads and perlio.</dd></dl>
+<dd> RT #71504 is now fixed by simply skipping the tests that failed on OpenBSD with ithreads and perlio.</dd></dl>
 <h2>New or Changed Diagnostics</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> The fatal error <tt>&quot;Malformed UTF-8 returned by \N&quot;</tt> is now produced if the <tt>&quot;charnames&quot;</tt> handler returns malformed <font SIZE="-1">UTF-8</font>.</dd>
+<dd> The fatal error <tt>&quot;Malformed UTF-8 returned by \N&quot;</tt> is now produced if the <tt>&quot;charnames&quot;</tt> handler returns malformed UTF-8.</dd>
 <dt>&bull;</dt>
 <dd> If an unresolved named character or sequence was encountered when compiling a regex pattern then the fatal error <tt>&quot;\N{NAME} must be resolved by the lexer&quot;</tt> is now produced. This can happen, for example, when using a single-quotish context like <tt>&quot;$re = '\N{SPACE}'; $re;&quot;</tt>. See perldiag for more examples of how the lexer can get bypassed.</dd>
 <dt>&bull;</dt>
@@ -104,17 +104,17 @@ description: "perl5115delta – what is new for perl v5.11.5"
 <dt><i>t/op/time_loop.t</i></dt>
 <dd> Tests that times greater than <tt>&quot;2**63&quot;</tt>, which can now be handed to <tt>&quot;gmtime&quot;</tt> and <tt>&quot;localtime&quot;</tt>, do not cause an internal overflow or an excessively long loop.</dd></dl>
 <h2>Known Problems</h2>
-<p> Perl 5.11.5 is a development release leading up to Perl 5.12.0. Some notable known problems found in 5.11.5 are listed as dependencies of <font SIZE="-1">RT</font> #69710, the Perl 5 version 12 meta-ticket.</p>
+<p> Perl 5.11.5 is a development release leading up to Perl 5.12.0. Some notable known problems found in 5.11.5 are listed as dependencies of RT #69710, the Perl 5 version 12 meta-ticket.</p>
 <h2>Acknowledgements</h2>
 <p> Perl 5.11.5 represents approximately one month of development since Perl 5.11.4 and contains 9618 lines of changes across 151 files from 33 authors and committers: </p>
 <p> var Arnfjo.rd<i>&#8211;</i> Bjarmason, Abigail, brian d foy, Chris Williams, David Golden, David Mitchell, Eric Brine, Frank Wiegand, Gisle Aas, H.Merijn Brand, Jan Dubois, Jesse Vincent, Jim Cromie, John Peacock, Josh ben Jore, Karl Williamson, Marcus Holland-Moritz, Michael G Schwern, Nicholas Clark, Offer Kaye, Philippe Bruhat (BooK), Rafael Garcia-Suarez, Reini Urban, Ricardo Signes, Robin Barker, Slaven Rezic, Steffen Mueller, Steve Hay, Steve Peters, Tim Bunce, Todd Rinaldo, Tony Cook and Vincent Pit. </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish.</p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish.</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analyzed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN</font>.</p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

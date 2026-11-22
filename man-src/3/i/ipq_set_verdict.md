@@ -10,7 +10,7 @@ description: "ipq_set_verdict — issue verdict and optionally modified packet t
 
 <p> ipq_set_verdict &#8212; issue verdict and optionally modified packet to kernel </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />
+<p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br/>
  <code>#include &lt;<a href="file:/usr/include/libipq.h">libipq.h</a>&gt;</code> </p>
 <p> <code>int ipq_set_verdict(const struct ipq_handle *</code><i>h</i><code>, ipq_id_t </code><i>id</i><code>, unsigned int </code><i>verdict</i><code>, size_t </code><i>data_len</i><code>, unsigned char *</code><i>buf</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
@@ -30,7 +30,7 @@ description: "ipq_set_verdict — issue verdict and optionally modified packet t
 <p> If simply setting a verdict without modifying the payload data, use zero for <i>data_len</i> and NULL for <i>buf</i>. </p>
 <p> The application is responsible for recalculating any packet checksums when modifying packets.</p>
 <h2>RETURN VALUE</h2>
-<p> On failure, -1 is returned.<br />
+<p> On failure, -1 is returned.<br/>
  On success, a non-zero positive value is returned.</p>
 <h2>ERRORS</h2>
 <p> On error, a descriptive error message will be available via the <code>ipq_errstr</code> function.</p>

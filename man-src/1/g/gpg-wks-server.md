@@ -10,12 +10,12 @@ description: "gpg-wks-server – Server providing the Web Key Service"
 
 <p> <code>gpg-wks-server</code> &#8211; Server providing the Web Key Service </p>
 <h2>SYNOPSIS</h2>
-<p> <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;receive</code><br />
- <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;cron</code><br />
- <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;list-domains</code><br />
- <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;check-key</code> <i>user-id</i><br />
- <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;install-key</code> <i>file</i> <i>user-id</i><br />
- <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;remove-key</code> <i>user-id</i><br />
+<p> <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;receive</code><br/>
+ <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;cron</code><br/>
+ <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;list-domains</code><br/>
+ <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;check-key</code> <i>user-id</i><br/>
+ <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;install-key</code> <i>file</i> <i>user-id</i><br/>
+ <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;remove-key</code> <i>user-id</i><br/>
  <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;revoke-key</code> <i>user-id</i> </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>gpg-wks-server</code> is a server site implementation of the Web Key Service. It receives requests for publication, sends confirmation requests, receives confirmations, and published the key. It also has features to ease the setup and maintenance of a Web Key Directory. </p>

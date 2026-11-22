@@ -10,7 +10,7 @@ description: "zhpr.f –"
 <p>zhpr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhpr</code> (UPLO, N, ALPHA, X, INCX, AP)<br />
+<p>subroutine <code>zhpr</code> (UPLO, N, ALPHA, X, INCX, AP)<br/>
  <i></i><code>ZHPR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhpr (characterUPLO, integerN, double precisionALPHA, complex*16, dimension(*)X, integerINCX, complex*16, dimension(*)AP)</h3>

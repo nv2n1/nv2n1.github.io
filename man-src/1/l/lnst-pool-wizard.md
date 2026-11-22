@@ -29,16 +29,16 @@ description: "lnst-pool-wizard – Linux Network Stack Test Pool Wizard"
 <dt><code>-p, &#8211;pool_dir=</code><i>directory</i></dt>
 <dd> Directory where result XML files will be stored. If none is entered default location will be used (~/.lnst/pool)</dd></dl>
 <h2>INTERNET RESOURCES</h2>
-<p> Project Homepage: <a rel="nofollow" href="http://lnst-project.org/">http://lnst-project.org/</a><br />
- Online Documentation: <a rel="nofollow" href="https://github.com/jpirko/lnst/wiki#learn">https://github.com/jpirko/lnst/wiki#learn</a><br />
- Git Source Tree: <a rel="nofollow" href="https://github.com/jpirko/lnst">https://github.com/jpirko/lnst</a><br />
+<p> Project Homepage: <a rel="nofollow" href="http://lnst-project.org/">http://lnst-project.org/</a><br/>
+ Online Documentation: <a rel="nofollow" href="https://github.com/jpirko/lnst/wiki#learn">https://github.com/jpirko/lnst/wiki#learn</a><br/>
+ Git Source Tree: <a rel="nofollow" href="https://github.com/jpirko/lnst">https://github.com/jpirko/lnst</a><br/>
  Mailing List: &lt;lnst-developers [at] lists.fedorahosted.org&gt; </p>
 <h2>AUTHORS</h2>
-<p> <code>Jiri Pirko</code> &lt;jiri [at] resnulli.us&gt;<br />
- <code>Jan Tluka</code> &lt;jtluka [at] redhat.com&gt;<br />
- <code>Ondrej Lichtner</code> &lt;olichtne [at] redhat.com&gt;<br />
- <code>Jiri Prochazka</code> &lt;jprochaz [at] redhat.com&gt;<br />
- <code>Jiri Zupka</code> &lt;jzupka [at] redhat.com&gt;<br />
+<p> <code>Jiri Pirko</code> &lt;jiri [at] resnulli.us&gt;<br/>
+ <code>Jan Tluka</code> &lt;jtluka [at] redhat.com&gt;<br/>
+ <code>Ondrej Lichtner</code> &lt;olichtne [at] redhat.com&gt;<br/>
+ <code>Jiri Prochazka</code> &lt;jprochaz [at] redhat.com&gt;<br/>
+ <code>Jiri Zupka</code> &lt;jzupka [at] redhat.com&gt;<br/>
  <code>Radek Pazdera</code> &lt;radek [at] pazdera.co.uk&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2011-2015 Red Hat, Inc. </p>

@@ -13,19 +13,19 @@ description: "totem-video-thumbnailer – video thumbnailer for the GNOME deskto
 <p> <code>totem-video-thumbnailer</code> [-j|&#8211;jpeg] [-l|&#8211;no-limit] [-s size] input output [backend options]</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>totem-video-thumbnailer</code> command. This manual page was written for the Debian Project because the original program does not have a manual page. </p>
-<p> <code>totem-video-thumbnailer</code> is used internally by <font SIZE="-1">GNOME</font> applications such as <code>nautilus</code> to generate <font SIZE="-1">PNG</font> thumbnails of video files. While it is possible to invoke it manually, it is usually done automatically by <code>nautilus</code>.</p>
+<p> <code>totem-video-thumbnailer</code> is used internally by GNOME applications such as <code>nautilus</code> to generate PNG thumbnails of video files. While it is possible to invoke it manually, it is usually done automatically by <code>nautilus</code>.</p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt><code>input</code></dt>
 <dd> The input filename. This can be in any format that <code>totem</code> can play.</dd>
 <dt><code>output</code></dt>
-<dd> The output filename, output in <font SIZE="-1">PNG</font> format.</dd>
+<dd> The output filename, output in PNG format.</dd>
 <dt><code>backend options</code></dt>
 <dd> Options to be passed to the backend (i.e. <code>gstreamer</code>).</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-j</code> <code>&#8211;jpeg</code></dt>
-<dd> Switch the output format to <font SIZE="-1">JPEG.</font> The default is <font SIZE="-1">PNG.</font></dd>
+<dd> Switch the output format to JPEG. The default is PNG.</dd>
 <dt><code>-l</code> <code>&#8211;no-limit</code></dt>
 <dd> Don&#8217;t limit the thumbnailing time to 30 seconds. For debugging purposes.</dd>
 <dt><code>-s size</code></dt>

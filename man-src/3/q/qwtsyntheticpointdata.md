@@ -18,8 +18,8 @@ description: "QwtSyntheticPointData –"
 <p> virtual size_t <code>size</code> () const </p>
 <p> void <code>setInterval</code> (const <code>QwtInterval</code> &amp;) </p>
 <p> <code>QwtInterval</code> <code>interval</code> () const </p>
-<p> virtual QRectF <code>boundingRect</code> () const<br />
- <i>Calculate the bounding rectangle. </i><br />
+<p> virtual QRectF <code>boundingRect</code> () const<br/>
+ <i>Calculate the bounding rectangle. </i><br/>
  virtual QPointF <code>sample</code> (size_t i) const </p>
 <p> virtual double <code>y</code> (double <code>x</code>) const =0 </p>
 <p> virtual double <code>x</code> (uint index) const </p>
@@ -69,7 +69,7 @@ int main(int argc, char **argv)
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>size</i> Number of points<br />
+<dd><i>size</i> Number of points<br/>
  <i>interval</i> Bounding interval for the points</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

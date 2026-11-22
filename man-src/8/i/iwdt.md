@@ -11,9 +11,9 @@ description: "ipmiutil_wdt- display and set WatchDog Timer parameters"
 <h2>Synopsis</h2>
 <p><code>ipmiutil wdt [-acdelrtx -N node -P/-R pswd -U user -EFJTVY]</code> </p>
 <h2>Description</h2>
-<p><i>ipmiutil wdt</i> is a program that uses IPMI commands to display and set WatchDog Timer parameters. This utility can use either any available IPMI driver, or direct user-space IOs, or the IPMI LAN interface if -N. This utility is an example of how to access the IPMI watchdog parameters directly, which allows changing the timer configuration. There is an init script provided with ipmiutil to automate the task of managing the watchdog timer in user-space.<br />
- # chkconfig &#8211;add ipmiutil_wdt (skip this if no chkconfig)<br />
- # /etc/init.d/ipmiutil_wdt start<br />
+<p><i>ipmiutil wdt</i> is a program that uses IPMI commands to display and set WatchDog Timer parameters. This utility can use either any available IPMI driver, or direct user-space IOs, or the IPMI LAN interface if -N. This utility is an example of how to access the IPMI watchdog parameters directly, which allows changing the timer configuration. There is an init script provided with ipmiutil to automate the task of managing the watchdog timer in user-space.<br/>
+ # chkconfig &#8211;add ipmiutil_wdt (skip this if no chkconfig)<br/>
+ # /etc/init.d/ipmiutil_wdt start<br/>
  This sets the watchdog timer to reset the system if the wdt is not restarted within 90 seconds. It creates an /etc/cron.d/wdt file to restart wdt every 60 seconds. See also ipmiutil UserGuide section 4.4 for more information. </p>
 <h2>Options</h2>
 <p>Command line options are described below.</p>

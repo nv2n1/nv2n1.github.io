@@ -23,44 +23,44 @@ description: "grompp – makes a run input file"
 <p> By default all bonded interactions which have constant energy due to virtual site constructions will be removed. If this constant energy is not zero, this will result in a shift in the total energy. All bonded interactions can be kept by turning off <code> -rmvsbds</code>. Additionally, all constraints for distances which will be constant anyway because of virtual site constructions will be removed. If any constraints remain which involve virtual sites, a fatal error will result. </p>
 <p> To verify your run input file, please make notice of all warnings on the screen, and correct where necessary. Do also look at the contents of the <code> mdout.mdp</code> file, this contains comment lines, as well as the input that <code> grompp</code> has read. If in doubt you can start grompp with the <code> -debug</code> option which will give you more information in a file called grompp.log (along with real debug info). Finally, you can see the contents of the run input file with the <code> gmxdump</code> program.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> grompp.mdp</i> <code>Input, Opt.</code><br />
+<p> <code>-f</code><i> grompp.mdp</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>grompp input file with MD parameters&nbsp;<wbr> </p>
-<p> <code>-po</code><i> mdout.mdp</i> <code>Output</code><br />
+<p> <code>-po</code><i> mdout.mdp</i> <code>Output</code><br/>
 &nbsp;<wbr>grompp input file with MD parameters&nbsp;<wbr> </p>
-<p> <code>-c</code><i> conf.gro</i> <code>Input</code><br />
+<p> <code>-c</code><i> conf.gro</i> <code>Input</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-r</code><i> conf.gro</i> <code>Input, Opt.</code><br />
+<p> <code>-r</code><i> conf.gro</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-rb</code><i> conf.gro</i> <code>Input, Opt.</code><br />
+<p> <code>-rb</code><i> conf.gro</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-p</code><i> topol.top</i> <code>Input</code><br />
+<p> <code>-p</code><i> topol.top</i> <code>Input</code><br/>
 &nbsp;<wbr>Topology file&nbsp;<wbr> </p>
-<p> <code>-pp</code><i> processed.top</i> <code>Output, Opt.</code><br />
+<p> <code>-pp</code><i> processed.top</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Topology file&nbsp;<wbr> </p>
-<p> <code>-o</code><i> topol.tpr</i> <code>Output</code><br />
+<p> <code>-o</code><i> topol.tpr</i> <code>Output</code><br/>
 &nbsp;<wbr>Run input file: tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-t</code><i> traj.trr</i> <code>Input, Opt.</code><br />
+<p> <code>-t</code><i> traj.trr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Full precision trajectory: trr trj cpt&nbsp;<wbr> </p>
-<p> <code>-e</code><i> ener.edr</i> <code>Input, Opt.</code><br />
+<p> <code>-e</code><i> ener.edr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Energy file: edr ene&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-[no]v</code><i>yes </i><br />
+<p> <code>-[no]v</code><i>yes </i><br/>
 &nbsp;<wbr>Be loud and noisy </p>
-<p> <code>-time</code><i> real</i><code> -1 </code><br />
+<p> <code>-time</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Take frame at or first after this time. </p>
-<p> <code>-[no]rmvsbds</code><i>yes </i><br />
+<p> <code>-[no]rmvsbds</code><i>yes </i><br/>
 &nbsp;<wbr>Remove constant bonded interactions with virtual sites </p>
-<p> <code>-maxwarn</code><i> int</i><code> 0</code><br />
+<p> <code>-maxwarn</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Number of allowed warnings during input processing </p>
-<p> <code>-[no]zero</code><i>no </i><br />
+<p> <code>-[no]zero</code><i>no </i><br/>
 &nbsp;<wbr>Set parameters for bonded interactions without defaults to zero instead of generating an error </p>
-<p> <code>-[no]renum</code><i>yes </i><br />
+<p> <code>-[no]renum</code><i>yes </i><br/>
 &nbsp;<wbr>Renumber atomtypes and minimize number of atomtypes </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

@@ -44,12 +44,12 @@ description: "ntfsdecrypt – decrypt or update NTFS files encrypted according t
 <dl>
 <dd><code>ntfsdecrypt -k foo.key /dev/sda1 Documents/hamlet.doc &lt; new.doc</code> </dd>
 <h2>Bugs</h2>
-<p>There are no known problems with <code>ntfsdecrypt</code>. If you find a bug please send an email describing the problem to the development team:<br />
+<p>There are no known problems with <code>ntfsdecrypt</code>. If you find a bug please send an email describing the problem to the development team:<br/>
  ntfs-3g-devel [at] lists.sf.net</p>
 <h2>Authors</h2>
 <p><code>ntfsdecrypt</code> was written by Yuval Fledel, Anton Altaparmakov and Yura Pakhuchiy. It was ported to ntfs-3g by Erik Larsson and upgraded by Jean-Pierre Andre.</p>
 <h2>Availability</h2>
-<p><code>ntfsdecrypt</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+<p><code>ntfsdecrypt</code> is part of the <code>ntfs-3g</code> package and is available from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p>Read <code><a href="/docs/linux/man/8-ntfs-3g/">ntfs-3g</a></code>(8) for details on option efs_raw, <code><a href="/docs/linux/man/8-ntfscat/">ntfscat</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>

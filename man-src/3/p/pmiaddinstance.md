@@ -9,8 +9,8 @@ description: "pmiAddInstance – add an element to an instance domain in a LOGIM
 
 <p><code>pmiAddInstance</code> &#8211; add an element to an instance domain in a LOGIMPORT context</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/import.h&gt; </p>
 <p> int pmiAddInstance(pmInDom </code><i>indom</i>, const char *<i>instance</i>, int <i>inst</i>); </p>
 <p> cc &#8230; -lpcp_import -lpcp</p>

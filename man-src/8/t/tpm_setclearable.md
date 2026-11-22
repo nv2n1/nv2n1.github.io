@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_setclearable/"
 description: "tpm_setclearable – disable TPM clear operations"
 ---
 
-<p>TPM Management &#8211; tpm_setclearable<br />
+<p>TPM Management &#8211; tpm_setclearable<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_setclearable &#8211; disable TPM clear operations</p>

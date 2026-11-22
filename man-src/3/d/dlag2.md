@@ -11,7 +11,7 @@ description: "dlag2.f –"
 <p> dlag2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlag2</code> (A, LDA, B, LDB, SAFMIN, SCALE1, SCALE2, WR1, WR2, WI)<br />
+<p> subroutine <code>dlag2</code> (A, LDA, B, LDB, SAFMIN, SCALE1, SCALE2, WR1, WR2, WI)<br/>
  <i></i><code>DLAG2</code> computes the eigenvalues of a 2-by-2 generalized eigenvalue problem, with scaling as necessary to avoid over-/underflow.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlag2 (double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precisionSAFMIN, double precisionSCALE1, double precisionSCALE2, double precisionWR1, double precisionWR2, double precisionWI)</h3>

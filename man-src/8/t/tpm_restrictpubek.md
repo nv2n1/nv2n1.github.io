@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_restrictpubek/"
 description: "tpm_restrictpubek – restrict the ability to display the public portion of the Endorsement Key to the owner"
 ---
 
-<p>TPM Management &#8211; tpm_restrictpubek<br />
+<p>TPM Management &#8211; tpm_restrictpubek<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_restrictpubek &#8211; restrict the ability to display the public portion of the Endorsement Key to the owner</p>

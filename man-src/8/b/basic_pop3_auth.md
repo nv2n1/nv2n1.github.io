@@ -10,9 +10,9 @@ url: "/docs/linux/man/8-basic_pop3_auth/"
 <h2>Synopsis</h2>
 <pre> basic_pop3_auth server</pre>
 <h2>Description</h2>
-<p><code>basic_pop3_auth</code> authenticates user credentials against a <font SIZE="-1">POP3</font> server.</p>
+<p><code>basic_pop3_auth</code> authenticates user credentials against a POP3 server.</p>
 <h2>Options</h2>
-<p>The only option this helper takes is the name of the <font SIZE="-1">POP3</font> server to validate against.</p>
+<p>The only option this helper takes is the name of the POP3 server to validate against.</p>
 <h2>Author</h2>
 <p>This program was written by <i>Henrik Nordstrom &lt;henrik [at] henriknordstrom.net</i>&gt; </p>
 <p> This manual was written by <i>Amos Jeffries &lt;squid3 [at] treenet.co.nz</i>&gt;</p>
@@ -49,4 +49,4 @@ url: "/docs/linux/man/8-basic_pop3_auth/"
 <p> Report serious security bugs to <i>Squid Bugs &lt;squid-bugs [at] squid-cache.org</i>&gt; </p>
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list &lt;squid-dev [at] squid-cache.org</i>&gt;</p>
 <h2>See Also</h2>
-<p>squid (8), <font SIZE="-1">GPL \fIs0(7), The Squid </font><font SIZE="-2">FAQ</font> wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a> The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>
+<p>squid (8), GPL \fIs0(7), The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a> The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>

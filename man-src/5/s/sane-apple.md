@@ -76,8 +76,8 @@ ColorOneScanner 24bit RGB color 3-pass</pre>
 <dt><code>Options too much</code></dt>
 <dd>It is possible, especially for the ColorOneScanner, for the backend&#8217;s options panel to extend beyond your screen. It happens with mine and I am running my X Server at 1024&#215;768. What can I say? Try smaller fonts in the X server, or virtual screens.</dd>
 <dt><code>Weird SCSI behaviour</code></dt>
-<dd>I am quoting David Myers Here&#8230; &gt;&gt; OS: FreeBSD 2.2.6<br />
- &gt;&gt; CC: egcs-1.02<br />
+<dd>I am quoting David Myers Here&#8230; &gt;&gt; OS: FreeBSD 2.2.6<br/>
+ &gt;&gt; CC: egcs-1.02<br/>
  Just wanted to follow up on this&#8230; I recently changed my SCSI card from the Adaptec 2940UW to a dual-channel Symbios 786 chipset. When I started up SANE with your driver, I managed to scan line art drawings okay, but Gray16 scans led to a stream of SCSI error messages on the console, ultimately hanging with a message saying the scanner wasn&#8217;t releasing the SCSI bus. This may be that the Symbios is simply less tolerant of ancient hardware, or may be bugs in your driver or in SANE itself&#8230; </dd>
 <h2>Debug</h2>
 <p>If you encounter a GUI bug please set the environmental variable <code>SANE_DEBUG_APPLE</code> to 255 and rerun the exact sequence of keystrokes and menu selections to reproduce it. Then send me a report with the log attached. </p>

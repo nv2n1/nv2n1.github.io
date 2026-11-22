@@ -10,7 +10,7 @@ description: "zptts2.f –"
 <p>zptts2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zptts2</code> (IUPLO, N, NRHS, D, E, B, LDB)<br />
+<p>subroutine <code>zptts2</code> (IUPLO, N, NRHS, D, E, B, LDB)<br/>
  <i></i><code>ZPTTS2</code> solves a tridiagonal system of the form AX=B using the L D LH factorization computed by spttrf.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zptts2 (integerIUPLO, integerN, integerNRHS, double precision, dimension( * )D, complex*16, dimension( * )E, complex*16, dimension( ldb, * )B, integerLDB)</h3>

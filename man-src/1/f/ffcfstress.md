@@ -28,7 +28,7 @@ description: "ffcfstress – constant force stress test for force-feedback devic
 <dt><code>-s</code> &lt;<i>strength</i>&gt;</dt>
 <dd> The spring strength factor (1.0 by default).</dd>
 <dt><code>-x</code> &lt;<i>axis</i>&gt;</dt>
-<dd> absolute axis to test (default: 0)<br />
+<dd> absolute axis to test (default: 0)<br/>
  [0 = X, 1 = Y, 2 = Z, 3 = RX, 4 = RY, 5 = RZ, 6 = WHEEL]</dd>
 <dt><code>-A</code></dt>
 <dd> switch off auto-centering</dd>

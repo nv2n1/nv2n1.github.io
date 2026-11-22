@@ -10,8 +10,8 @@ description: "par – parallel command processing"
 
 <p> par &#8211; parallel command processing</p>
 <h2>SYNOPSIS</h2>
-<p> <code>par</code> [<code>-defiqx</code>] [<code>-c&nbsp;<wbr></code> command] [<code>-l&nbsp;<wbr></code> logfile] [<code>-n</code><br />
-&nbsp;<wbr>#] [<code>-p</code><br />
+<p> <code>par</code> [<code>-defiqx</code>] [<code>-c&nbsp;<wbr></code> command] [<code>-l&nbsp;<wbr></code> logfile] [<code>-n</code><br/>
+&nbsp;<wbr>#] [<code>-p</code><br/>
 &nbsp;<wbr>#] [file [file&#8230;]]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>par</code> takes a list of files to run a command on. The first line of each file begins with a colon (:) or a pound-sign (#). If a colon, the remainder of the line is a command to run for each of the subsequent lines. If a pound-sign, then each subsequent line is a (self-contained) command, unless the <code>-c</code> option was specified, in which case it operates as if the argument to <code>-c</code> had followed a colon on the first line. </p>

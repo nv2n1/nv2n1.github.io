@@ -23,7 +23,7 @@ long perfmonctl(int fd, int cmd, void *arg, int narg);
 <dl>
 <dt><code>PFM_CREATE_CONTEXT</code></dt>
 <dd>
-perfmonctl(int fd, PFM_CREATE_CONTEXT, pfarg_context_t *ctxt, 1);<br />
+perfmonctl(int fd, PFM_CREATE_CONTEXT, pfarg_context_t *ctxt, 1);<br/>
  Set up a context.</dd>
 <dt>
 </dt><dd> The <i>fd</i> parameter is ignored. A new perfmon context is created as specified in <i>ctxt</i> and its file descriptor is returned in <i>ctxt-&gt;ctx_fd</i>.</dd>
@@ -33,42 +33,42 @@ perfmonctl(int fd, PFM_CREATE_CONTEXT, pfarg_context_t *ctxt, 1);<br />
 </dt><dd> The context can be destroyed by calling <code><a href="/docs/linux/man/2-close/">close</a></code>(2) on the file descriptor.</dd>
 <dt><code>PFM_WRITE_PMCS</code></dt>
 <dd>
-perfmonctl(int fd, PFM_WRITE_PMCS, pfarg_reg_t *pmcs, n);<br />
+perfmonctl(int fd, PFM_WRITE_PMCS, pfarg_reg_t *pmcs, n);<br/>
  Set PMC registers.</dd>
 <dt><code>PFM_WRITE_PMDS</code></dt>
 <dd>
-perfmonctl(int fd, PFM_WRITE_PMDS, pfarg_reg_t *pmds, n);<br />
+perfmonctl(int fd, PFM_WRITE_PMDS, pfarg_reg_t *pmds, n);<br/>
  Set PMD registers.</dd>
 <dt><code>PFM_READ_PMDS</code></dt>
 <dd>
-perfmonctl(int fd, PFM_READ_PMDS, pfarg_reg_t *pmds, n);<br />
+perfmonctl(int fd, PFM_READ_PMDS, pfarg_reg_t *pmds, n);<br/>
  Read PMD registers.</dd>
 <dt><code>PFM_START</code></dt>
 <dd>
-perfmonctl(int fd, PFM_START, NULL, 0);<br />
+perfmonctl(int fd, PFM_START, NULL, 0);<br/>
  Start monitoring.</dd>
 <dt><code>PFM_STOP</code></dt>
 <dd>
-perfmonctl(int fd, PFM_STOP, NULL, 0);<br />
+perfmonctl(int fd, PFM_STOP, NULL, 0);<br/>
  Stop monitoring.</dd>
 <dt><code>PFM_LOAD_CONTEXT</code></dt>
 <dd>
-perfmonctl(int fd, PFM_LOAD_CONTEXT, pfarg_load_t *largs, 1);<br />
+perfmonctl(int fd, PFM_LOAD_CONTEXT, pfarg_load_t *largs, 1);<br/>
  Attach the context to a thread.</dd>
 <dt><code>PFM_UNLOAD_CONTEXT</code></dt>
 <dd>
-perfmonctl(int fd, PFM_UNLOAD_CONTEXT, NULL, 0);<br />
+perfmonctl(int fd, PFM_UNLOAD_CONTEXT, NULL, 0);<br/>
  Detach the context from a thread.</dd>
 <dt><code>PFM_RESTART</code></dt>
 <dd>
-perfmonctl(int fd, PFM_RESTART, NULL, 0);<br />
+perfmonctl(int fd, PFM_RESTART, NULL, 0);<br/>
  Restart monitoring after receiving an overflow notification.</dd>
 <dt><code>PFM_GET_FEATURES</code></dt>
 <dd>
 perfmonctl(int fd, PFM_GET_FEATURES, pfarg_features_t *arg, 1);</dd>
 <dt><code>PFM_DEBUG</code></dt>
 <dd>
-perfmonctl(int fd, PFM_DEBUG, val, 0);<br />
+perfmonctl(int fd, PFM_DEBUG, val, 0);<br/>
  If <i>val</i> is nonzero, enable debugging mode, otherwise disable.</dd>
 <dt><code>PFM_GET_PMC_RESET_VAL</code></dt>
 <dd>

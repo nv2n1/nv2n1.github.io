@@ -17,8 +17,8 @@ description: "hdf_set_int_value – Set the value of a named node to a number"
 NEOERR *hdf_set_int_value(HDF *hdf, const char *name, int value);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf -&gt; the pointer to the hdf dataset<br />
- name -&gt; the named node to walk to<br />
+<p> hdf -&gt; the pointer to the hdf dataset<br/>
+ name -&gt; the named node to walk to<br/>
  value -&gt; the value to set the node to </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_set_int_value is a helper function that maps an integer to a string, and then calls hdf_set_value with that string </p>

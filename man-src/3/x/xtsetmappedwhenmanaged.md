@@ -23,6 +23,6 @@ description: "XtMapWidget, XtSetMappedWhenManaged, XtUnmapWidget – map and unm
 <h2>Description</h2>
 <p>If the widget is realized and managed and if the new value of map_when_managed is <code>True</code>, <code>XtSetMappedWhenManaged</code> maps the window. If the widget is realized and managed and if the new value of map_when_managed is <code>False</code>, it unmaps the window. <code>XtSetMappedWhenManaged</code> is a convenience function that is equivalent to (but slightly faster than) calling <code>XtSetValues</code> and setting the new value for the mappedWhenManaged resource. As an alternative to using <code>XtSetMappedWhenManaged</code> to control mapping, a client may set mapped_when_managed to <code>False</code> and use <code>XtMapWidget</code> and <code>XtUnmapWidget</code> explicitly.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtmanagechildren/">XtManageChildren</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtmanagechildren/">XtManageChildren</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

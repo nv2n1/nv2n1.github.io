@@ -10,7 +10,7 @@ description: "dlaed9.f –"
 <p>dlaed9.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlaed9</code> (K, KSTART, KSTOP, N, D, Q, LDQ, RHO, DLAMDA, W, S, LDS, INFO)<br />
+<p>subroutine <code>dlaed9</code> (K, KSTART, KSTOP, N, D, Q, LDQ, RHO, DLAMDA, W, S, LDS, INFO)<br/>
  <i></i><code>DLAED9</code> used by sstedc. Finds the roots of the secular equation and updates the eigenvectors. Used when the original matrix is dense.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaed9 (integerK, integerKSTART, integerKSTOP, integerN, double precision, dimension( * )D, double precision, dimension( ldq, * )Q, integerLDQ, double precisionRHO, double precision, dimension( * )DLAMDA, double precision, dimension( * )W, double precision, dimension( lds, * )S, integerLDS, integerINFO)</h3>

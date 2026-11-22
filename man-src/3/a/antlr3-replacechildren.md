@@ -12,22 +12,22 @@ description: "src/antlr3basetree.c –"
 <p>#include &lt;<a href="file:/usr/include/antlr3basetree.h">antlr3basetree.h</a>&gt; </p>
 <h3>Functions</h3>
 <p>static void <code>addChild</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>pANTLR3_BASE_TREE</code> child) </p>
-<p> static void <code>addChildren</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>pANTLR3_LIST</code> kids)<br />
- <i>Add all elements of the supplied list as children of this node. </i><br />
+<p> static void <code>addChildren</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>pANTLR3_LIST</code> kids)<br/>
+ <i>Add all elements of the supplied list as children of this node. </i><br/>
  ANTLR3_API <code>pANTLR3_BASE_TREE</code> <code>antlr3BaseTreeNew</code> (<code>pANTLR3_BASE_TREE</code> tree) </p>
 <p> static void * <code>deleteChild</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>ANTLR3_UINT32</code> i) </p>
 <p> static void * <code>dupTree</code> (<code>pANTLR3_BASE_TREE</code> tree) </p>
-<p> static void <code>freshenPACIndexes</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>ANTLR3_UINT32</code> offset)<br />
- <i>Set the parent and child indexes for some of the children of the supplied tree, starting with the child at the supplied index. </i><br />
- static void <code>freshenPACIndexesAll</code> (<code>pANTLR3_BASE_TREE</code> tree)<br />
- <i>Set the parent and child indexes for all children of the supplied tree. </i><br />
+<p> static void <code>freshenPACIndexes</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>ANTLR3_UINT32</code> offset)<br/>
+ <i>Set the parent and child indexes for some of the children of the supplied tree, starting with the child at the supplied index. </i><br/>
+ static void <code>freshenPACIndexesAll</code> (<code>pANTLR3_BASE_TREE</code> tree)<br/>
+ <i>Set the parent and child indexes for all children of the supplied tree. </i><br/>
  static <code>ANTLR3_UINT32</code> <code>getCharPositionInLine</code> (<code>pANTLR3_BASE_TREE</code> tree) </p>
 <p> static void * <code>getChild</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>ANTLR3_UINT32</code> i) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>getChildCount</code> (<code>pANTLR3_BASE_TREE</code> tree) </p>
 <p> static <code>pANTLR3_BASE_TREE</code> <code>getFirstChildWithType</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>ANTLR3_UINT32</code> type) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>getLine</code> (<code>pANTLR3_BASE_TREE</code> tree) </p>
-<p> static void <code>replaceChildren</code> (<code>pANTLR3_BASE_TREE</code> parent, <code>ANTLR3_INT32</code> startChildIndex, <code>ANTLR3_INT32</code> stopChildIndex, <code>pANTLR3_BASE_TREE</code> newTree)<br />
- <i>Delete children from start to stop and replace with t even if t is a list (nil-root tree). </i><br />
+<p> static void <code>replaceChildren</code> (<code>pANTLR3_BASE_TREE</code> parent, <code>ANTLR3_INT32</code> startChildIndex, <code>ANTLR3_INT32</code> stopChildIndex, <code>pANTLR3_BASE_TREE</code> newTree)<br/>
+ <i>Delete children from start to stop and replace with t even if t is a list (nil-root tree). </i><br/>
  static void <code>setChild</code> (<code>pANTLR3_BASE_TREE</code> tree, <code>ANTLR3_UINT32</code> i, void *child) </p>
 <p> static <code>pANTLR3_STRING</code> <code>toStringTree</code> (<code>pANTLR3_BASE_TREE</code> tree) </p>
 <h2>Function Documentation</h2>

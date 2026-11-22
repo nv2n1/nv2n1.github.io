@@ -104,9 +104,9 @@ objcopy - copy and translate object files
 
 <h2>DESCRIPTION</h2>
 
- The <font SIZE="-1">GNU</font> <b>objcopy</b> utility copies the contents of an object file to another. <b>objcopy</b> uses the <font SIZE="-1">GNU BFD</font> Library to read and write the object files. It can write the destination object file in a format different from that of the source object file. The exact behavior of <b>objcopy</b> is controlled by command-line options. Note that <b>objcopy</b> should be able to copy a fully linked file between any two formats. However, copying a relocatable object file between any two formats may not work as expected. 
+ The GNU <b>objcopy</b> utility copies the contents of an object file to another. <b>objcopy</b> uses the GNU BFD Library to read and write the object files. It can write the destination object file in a format different from that of the source object file. The exact behavior of <b>objcopy</b> is controlled by command-line options. Note that <b>objcopy</b> should be able to copy a fully linked file between any two formats. However, copying a relocatable object file between any two formats may not work as expected. 
 
- <b>objcopy</b> creates temporary files to do its translations and deletes them afterward. <b>objcopy</b> uses <font SIZE="-1">BFD</font> to do all its translation work; it has access to all the formats described in <font SIZE="-1">BFD</font> and thus is able to recognize most formats without being told explicitly. 
+ <b>objcopy</b> creates temporary files to do its translations and deletes them afterward. <b>objcopy</b> uses BFD to do all its translation work; it has access to all the formats described in BFD and thus is able to recognize most formats without being told explicitly. 
 
  <b>objcopy</b> can be used to generate S-records by using an output target of <b>srec</b> (e.g., use <b>-O srec</b>). 
 
@@ -195,7 +195,7 @@ objcopy - copy and translate object files
 </dd><dt><b>--keep-global-symbol=</b><i>symbolname</i>
 </dt><dd> Keep only symbol <i>symbolname</i> global. Make all other symbols local to the file, so that they are not visible externally. This option may be given more than once. Note: this option cannot be used in conjunction with the <b>--globalize-symbol</b> or <b>--globalize-symbols</b> options.
 </dd><dt><b>--localize-hidden</b>
-</dt><dd> In an <font SIZE="-1">ELF</font> object, mark all symbols that have hidden or internal visibility as local. This option applies on top of symbol-specific localization options such as <b>-L</b>.
+</dt><dd> In an ELF object, mark all symbols that have hidden or internal visibility as local. This option applies on top of symbol-specific localization options such as <b>-L</b>.
 </dd><dt><b>-L</b> <i>symbolname</i>
 </dt><dd>
 </dd><dt><b>--localize-symbol=</b><i>symbolname</i>
@@ -230,7 +230,7 @@ objcopy - copy and translate object files
 </dt><dd>
 </dd><dt><b>--interleave[=</b><i>breadth</i><b>]</b>
 </dt><dd> Only copy a range out of every <i>breadth</i> bytes. (Header data is not affected). Select which byte in the range begins the copy with the <b>--byte</b> option. Select the width of the range with the <b>--interleave-width</b> option. 
- This option is useful for creating files to program <font SIZE="-1">ROM.</font> It is typically used with an <tt>&quot;srec&quot;</tt> output target. Note that <b>objcopy</b> will complain if you do not specify the <b>--byte</b> option as well. 
+ This option is useful for creating files to program ROM. It is typically used with an <tt>&quot;srec&quot;</tt> output target. Note that <b>objcopy</b> will complain if you do not specify the <b>--byte</b> option as well. 
  The default interleave breadth is 4, so with <b>--byte</b> set to 0, <b>objcopy</b> would copy the first byte out of every four bytes from the input to the output.
 </dd><dt><b>--interleave-width=</b><i>width</i>
 </dt><dd> When used with the <b>--interleave</b> option, copy <i>width</i> bytes at a time. The start of the range of bytes to be copied is set by the <b>--byte</b> option, and the extent of the range is set with the <b>--interleave</b> option. 
@@ -248,12 +248,12 @@ objcopy - copy and translate object files
 </dd><dt><b>-U</b>
 </dt><dd>
 </dd><dt><b>--disable-deterministic-archives</b>
-</dt><dd> Do <i>not</i> operate in <i>deterministic</i> mode. This is the inverse of the <b>-D</b> option, above: when copying archive members and writing the archive index, use their actual <font SIZE="-1">UID, GID,</font> timestamp, and file mode values. 
+</dt><dd> Do <i>not</i> operate in <i>deterministic</i> mode. This is the inverse of the <b>-D</b> option, above: when copying archive members and writing the archive index, use their actual UID, GID, timestamp, and file mode values. 
  This is the default unless <i>binutils</i> was configured with <b>--enable-deterministic-archives</b>.
 </dd><dt><b>--debugging</b>
 </dt><dd> Convert debugging information, if possible. This is not the default because only certain debugging formats are supported, and the conversion process can be time consuming.
 </dd><dt><b>--gap-fill</b> <i>val</i>
-</dt><dd> Fill gaps between sections with <i>val</i>. This operation applies to the <i>load address</i> (<font SIZE="-1">LMA</font>) of the sections. It is done by increasing the size of the section with the lower address, and filling in the extra space created with <i>val</i>.
+</dt><dd> Fill gaps between sections with <i>val</i>. This operation applies to the <i>load address</i> (LMA) of the sections. It is done by increasing the size of the section with the lower address, and filling in the extra space created with <i>val</i>.
 </dd><dt><b>--pad-to</b> <i>address</i>
 </dt><dd> Pad the output file up to the load address <i>address</i>. This is done by increasing the size of the last section. The extra space is filled in with the value specified by <b>--gap-fill</b> (default zero).
 </dd><dt><b>--set-start</b> <i>val</i>
@@ -265,15 +265,15 @@ objcopy - copy and translate object files
 </dd><dt><b>--change-addresses</b> <i>incr</i>
 </dt><dd>
 </dd><dt><b>--adjust-vma</b> <i>incr</i>
-</dt><dd> Change the <font SIZE="-1">VMA</font> and <font SIZE="-1">LMA</font> addresses of all sections, as well as the start address, by adding <i>incr</i>. Some object file formats do not permit section addresses to be changed arbitrarily. Note that this does not relocate the sections; if the program expects sections to be loaded at a certain address, and this option is used to change the sections such that they are loaded at a different address, the program may fail.
+</dt><dd> Change the VMA and LMA addresses of all sections, as well as the start address, by adding <i>incr</i>. Some object file formats do not permit section addresses to be changed arbitrarily. Note that this does not relocate the sections; if the program expects sections to be loaded at a certain address, and this option is used to change the sections such that they are loaded at a different address, the program may fail.
 </dd><dt><b>--change-section-address</b> <i>sectionpattern</i><b>{=,+,-}</b><i>val</i>
 </dt><dd>
 </dd><dt><b>--adjust-section-vma</b> <i>sectionpattern</i><b>{=,+,-}</b><i>val</i>
-</dt><dd> Set or change both the <font SIZE="-1">VMA</font> address and the <font SIZE="-1">LMA</font> address of any section matching <i>sectionpattern</i>. If <b>=</b> is used, the section address is set to <i>val</i>. Otherwise, <i>val</i> is added to or subtracted from the section address. See the comments under <b>--change-addresses</b>, above. If <i>sectionpattern</i> does not match any sections in the input file, a warning will be issued, unless <b>--no-change-warnings</b> is used.
+</dt><dd> Set or change both the VMA address and the LMA address of any section matching <i>sectionpattern</i>. If <b>=</b> is used, the section address is set to <i>val</i>. Otherwise, <i>val</i> is added to or subtracted from the section address. See the comments under <b>--change-addresses</b>, above. If <i>sectionpattern</i> does not match any sections in the input file, a warning will be issued, unless <b>--no-change-warnings</b> is used.
 </dd><dt><b>--change-section-lma</b> <i>sectionpattern</i><b>{=,+,-}</b><i>val</i>
-</dt><dd> Set or change the <font SIZE="-1">LMA</font> address of any sections matching <i>sectionpattern</i>. The <font SIZE="-1">LMA</font> address is the address where the section will be loaded into memory at program load time. Normally this is the same as the <font SIZE="-1">VMA</font> address, which is the address of the section at program run time, but on some systems, especially those where a program is held in <font SIZE="-1">ROM,</font> the two can be different. If <b>=</b> is used, the section address is set to <i>val</i>. Otherwise, <i>val</i> is added to or subtracted from the section address. See the comments under <b>--change-addresses</b>, above. If <i>sectionpattern</i> does not match any sections in the input file, a warning will be issued, unless <b>--no-change-warnings</b> is used.
+</dt><dd> Set or change the LMA address of any sections matching <i>sectionpattern</i>. The LMA address is the address where the section will be loaded into memory at program load time. Normally this is the same as the VMA address, which is the address of the section at program run time, but on some systems, especially those where a program is held in ROM, the two can be different. If <b>=</b> is used, the section address is set to <i>val</i>. Otherwise, <i>val</i> is added to or subtracted from the section address. See the comments under <b>--change-addresses</b>, above. If <i>sectionpattern</i> does not match any sections in the input file, a warning will be issued, unless <b>--no-change-warnings</b> is used.
 </dd><dt><b>--change-section-vma</b> <i>sectionpattern</i><b>{=,+,-}</b><i>val</i>
-</dt><dd> Set or change the <font SIZE="-1">VMA</font> address of any section matching <i>sectionpattern</i>. The <font SIZE="-1">VMA</font> address is the address where the section will be located once the program has started executing. Normally this is the same as the <font SIZE="-1">LMA</font> address, which is the address where the section will be loaded into memory, but on some systems, especially those where a program is held in <font SIZE="-1">ROM,</font> the two can be different. If <b>=</b> is used, the section address is set to <i>val</i>. Otherwise, <i>val</i> is added to or subtracted from the section address. See the comments under <b>--change-addresses</b>, above. If <i>sectionpattern</i> does not match any sections in the input file, a warning will be issued, unless <b>--no-change-warnings</b> is used.
+</dt><dd> Set or change the VMA address of any section matching <i>sectionpattern</i>. The VMA address is the address where the section will be located once the program has started executing. Normally this is the same as the LMA address, which is the address where the section will be loaded into memory, but on some systems, especially those where a program is held in ROM, the two can be different. If <b>=</b> is used, the section address is set to <i>val</i>. Otherwise, <i>val</i> is added to or subtracted from the section address. See the comments under <b>--change-addresses</b>, above. If <i>sectionpattern</i> does not match any sections in the input file, a warning will be issued, unless <b>--no-change-warnings</b> is used.
 </dd><dt><b>--change-warnings</b>
 </dt><dd>
 </dd><dt><b>--adjust-warnings</b>
@@ -283,7 +283,7 @@ objcopy - copy and translate object files
 </dd><dt><b>--no-adjust-warnings</b>
 </dt><dd> Do not issue a warning if <b>--change-section-address</b> or <b>--adjust-section-lma</b> or <b>--adjust-section-vma</b> is used, even if the section pattern does not match any sections.
 </dd><dt><b>--set-section-flags</b> <i>sectionpattern</i><b>=</b><i>flags</i>
-</dt><dd> Set the flags for any sections matching <i>sectionpattern</i>. The <i>flags</i> argument is a comma separated string of flag names. The recognized names are <b>alloc</b>, <b>contents</b>, <b>load</b>, <b>noload</b>, <b>readonly</b>, <b>code</b>, <b>data</b>, <b>rom</b>, <b>exclude</b>, <b>share</b>, and <b>debug</b>. You can set the <b>contents</b> flag for a section which does not have contents, but it is not meaningful to clear the <b>contents</b> flag of a section which does have contents---just remove the section instead. Not all flags are meaningful for all object file formats. In particular the <b>share</b> flag is only meaningful for <font SIZE="-1">COFF</font> format files and not for <font SIZE="-1">ELF</font> format files.
+</dt><dd> Set the flags for any sections matching <i>sectionpattern</i>. The <i>flags</i> argument is a comma separated string of flag names. The recognized names are <b>alloc</b>, <b>contents</b>, <b>load</b>, <b>noload</b>, <b>readonly</b>, <b>code</b>, <b>data</b>, <b>rom</b>, <b>exclude</b>, <b>share</b>, and <b>debug</b>. You can set the <b>contents</b> flag for a section which does not have contents, but it is not meaningful to clear the <b>contents</b> flag of a section which does have contents---just remove the section instead. Not all flags are meaningful for all object file formats. In particular the <b>share</b> flag is only meaningful for COFF format files and not for ELF format files.
 </dd><dt><b>--set-section-alignment</b> <i>sectionpattern</i><b>=</b><i>align</i>
 </dt><dd> Set the alignment for any sections matching <i>sectionpattern</i>. <i>align</i> specifies the alignment in bytes and must be a power of two, i.e. 1, 2, 4, 8....
 </dd><dt><b>--add-section</b> <i>sectionname</i><b>=</b><i>filename</i>
@@ -291,10 +291,10 @@ objcopy - copy and translate object files
 </dd><dt><b>--dump-section</b> <i>sectionname</i><b>=</b><i>filename</i>
 </dt><dd> Place the contents of section named <i>sectionname</i> into the file <i>filename</i>, overwriting any contents that may have been there previously. This option is the inverse of <b>--add-section</b>. This option is similar to the <b>--only-section</b> option except that it does not create a formatted file, it just dumps the contents as raw binary data, without applying any relocations. The option can be specified more than once.
 </dd><dt><b>--update-section</b> <i>sectionname</i><b>=</b><i>filename</i>
-</dt><dd> Replace the existing contents of a section named <i>sectionname</i> with the contents of file <i>filename</i>. The size of the section will be adjusted to the size of the file. The section flags for <i>sectionname</i> will be unchanged. For <font SIZE="-1">ELF</font> format files the section to segment mapping will also remain unchanged, something which is not possible using <b>--remove-section</b> followed by <b>--add-section</b>. The option can be specified more than once. 
+</dt><dd> Replace the existing contents of a section named <i>sectionname</i> with the contents of file <i>filename</i>. The size of the section will be adjusted to the size of the file. The section flags for <i>sectionname</i> will be unchanged. For ELF format files the section to segment mapping will also remain unchanged, something which is not possible using <b>--remove-section</b> followed by <b>--add-section</b>. The option can be specified more than once. 
  Note - it is possible to use <b>--rename-section</b> and <b>--update-section</b> to both update and rename a section from one command line. In this case, pass the original section name to <b>--update-section</b>, and the original and new section names to <b>--rename-section</b>.
 </dd><dt><b>--add-symbol</b> <i>name</i><b>=[</b><i>section</i><b>:]</b><i>value</i><b>[,</b><i>flags</i><b>]</b>
-</dt><dd> Add a new symbol named <i>name</i> while copying the file. This option may be specified multiple times. If the <i>section</i> is given, the symbol will be associated with and relative to that section, otherwise it will be an <font SIZE="-1">ABS</font> symbol. Specifying an undefined section will result in a fatal error. There is no check for the value, it will be taken as specified. Symbol flags can be specified and not all flags will be meaningful for all object file formats. By default, the symbol will be global. The special flag 'before=<i>othersym</i>' will insert the new symbol in front of the specified <i>othersym</i>, otherwise the symbol(s) will be added at the end of the symbol table in the order they appear.
+</dt><dd> Add a new symbol named <i>name</i> while copying the file. This option may be specified multiple times. If the <i>section</i> is given, the symbol will be associated with and relative to that section, otherwise it will be an ABS symbol. Specifying an undefined section will result in a fatal error. There is no check for the value, it will be taken as specified. Symbol flags can be specified and not all flags will be meaningful for all object file formats. By default, the symbol will be global. The special flag 'before=<i>othersym</i>' will insert the new symbol in front of the specified <i>othersym</i>, otherwise the symbol(s) will be added at the end of the symbol table in the order they appear.
 </dd><dt><b>--rename-section</b> <i>oldname</i><b>=</b><i>newname</i><b>[,</b><i>flags</i><b>]</b>
 </dt><dd> Rename a section from <i>oldname</i> to <i>newname</i>, optionally changing the section's flags to <i>flags</i> in the process. This has the advantage over using a linker script to perform the rename in that the output stays as an object file and does not become a linked executable. This option accepts the same set of flags as the <b>--sect-section-flags</b> option. 
  This option is particularly helpful when the input format is binary, since this will always create a section called .data. If for example, you wanted instead to create a section called .rodata containing binary data you could use the following command line to achieve it: 
@@ -311,7 +311,7 @@ objcopy - copy and translate object files
 </dt><dd> If the first character of a global symbol is a special symbol leading character used by the object file format, remove the character. The most common symbol leading character is underscore. This option will remove a leading underscore from all global symbols. This can be useful if you want to link together objects of different file formats with different conventions for symbol names. This is different from <b>--change-leading-char</b> because it always changes the symbol name when appropriate, regardless of the object file format of the output file.
 </dd><dt><b>--reverse-bytes=</b><i>num</i>
 </dt><dd> Reverse the bytes in a section with output contents. A section length must be evenly divisible by the value given in order for the swap to be able to take place. Reversing takes place before the interleaving is performed. 
- This option is used typically in generating <font SIZE="-1">ROM</font> images for problematic target systems. For example, on some target boards, the 32-bit words fetched from 8-bit ROMs are re-assembled in little-endian byte order regardless of the <font SIZE="-1">CPU</font> byte order. Depending on the programming model, the endianness of the <font SIZE="-1">ROM</font> may need to be modified. 
+ This option is used typically in generating ROM images for problematic target systems. For example, on some target boards, the 32-bit words fetched from 8-bit ROMs are re-assembled in little-endian byte order regardless of the CPU byte order. Depending on the programming model, the endianness of the ROM may need to be modified. 
  Consider a simple file with a section containing the following eight bytes: <tt>12345678</tt>. 
  Using <b>--reverse-bytes=2</b> for the above example, the bytes in the output file would be ordered <tt>21436587</tt>. 
  Using <b>--reverse-bytes=4</b> for the above example, the bytes in the output file would be ordered <tt>43218765</tt>. 
@@ -341,7 +341,7 @@ objcopy - copy and translate object files
 </dd><dt><b>--weaken-symbols=</b><i>filename</i>
 </dt><dd> Apply <b>--weaken-symbol</b> option to each symbol listed in the file <i>filename</i>. <i>filename</i> is simply a flat file, with one symbol name per line. Line comments may be introduced by the hash character. This option may be given more than once.
 </dd><dt><b>--alt-machine-code=</b><i>index</i>
-</dt><dd> If the output architecture has alternate machine codes, use the <i>index</i>th code instead of the default one. This is useful in case a machine is assigned an official code and the tool-chain adopts the new code, but other applications still depend on the original code being used. For <font SIZE="-1">ELF</font> based architectures if the <i>index</i> alternative does not exist then the value is treated as an absolute number to be stored in the e_machine field of the <font SIZE="-1">ELF</font> header.
+</dt><dd> If the output architecture has alternate machine codes, use the <i>index</i>th code instead of the default one. This is useful in case a machine is assigned an official code and the tool-chain adopts the new code, but other applications still depend on the original code being used. For ELF based architectures if the <i>index</i> alternative does not exist then the value is treated as an absolute number to be stored in the e_machine field of the ELF header.
 </dd><dt><b>--writable-text</b>
 </dt><dd> Mark the output text as writable. This option isn't meaningful for all object file formats.
 </dd><dt><b>--readonly-text</b>
@@ -383,11 +383,11 @@ objcopy - copy and translate object files
 </dd><dt><b>--keep-file-symbols</b>
 </dt><dd> When stripping a file, perhaps with <b>--strip-debug</b> or <b>--strip-unneeded</b>, retain any symbols specifying source file names, which would otherwise get stripped.
 </dd><dt><b>--only-keep-debug</b>
-</dt><dd> Strip a file, removing contents of any sections that would not be stripped by <b>--strip-debug</b> and leaving the debugging sections intact. In <font SIZE="-1">ELF</font> files, this preserves all note sections in the output. 
+</dt><dd> Strip a file, removing contents of any sections that would not be stripped by <b>--strip-debug</b> and leaving the debugging sections intact. In ELF files, this preserves all note sections in the output. 
 
  Note - the section headers of the stripped sections are preserved, including their sizes, but the contents of the section are discarded. The section headers are preserved so that other tools can match up the debuginfo file with the real executable, even if that executable has been relocated to a different address space. 
 
- The intention is that this option will be used in conjunction with <b>--add-gnu-debuglink</b> to create a two part executable. One a stripped binary which will occupy less space in <font SIZE="-1">RAM</font> and in a distribution and the second a debugging information file which is only needed if debugging abilities are required. The suggested procedure to create these files is as follows:
+ The intention is that this option will be used in conjunction with <b>--add-gnu-debuglink</b> to create a two part executable. One a stripped binary which will occupy less space in RAM and in a distribution and the second a debugging information file which is only needed if debugging abilities are required. The suggested procedure to create these files is as follows:
 </dd><dl>
 <dl>
 <dt>1.&lt;Link the executable as normal. Assuming that it is called&gt;
@@ -422,29 +422,29 @@ objcopy - copy and translate object files
  Note---this switch is only intended for use on fully linked files. It does not make sense to use it on object files where the debugging information may be incomplete. Besides the gnu_debuglink feature currently only supports the presence of one filename containing debugging information, not multiple filenames on a one-per-object-file basis.</dd></dl>
 
 <dt><b>--strip-dwo</b>
-</dt><dd> Remove the contents of all <font SIZE="-1">DWARF</font> .dwo sections, leaving the remaining debugging sections and all symbols intact. This option is intended for use by the compiler as part of the <b>-gsplit-dwarf</b> option, which splits debug information between the .o file and a separate .dwo file. The compiler generates all debug information in the same file, then uses the <b>--extract-dwo</b> option to copy the .dwo sections to the .dwo file, then the <b>--strip-dwo</b> option to remove those sections from the original .o file.
+</dt><dd> Remove the contents of all DWARF .dwo sections, leaving the remaining debugging sections and all symbols intact. This option is intended for use by the compiler as part of the <b>-gsplit-dwarf</b> option, which splits debug information between the .o file and a separate .dwo file. The compiler generates all debug information in the same file, then uses the <b>--extract-dwo</b> option to copy the .dwo sections to the .dwo file, then the <b>--strip-dwo</b> option to remove those sections from the original .o file.
 </dd><dt><b>--extract-dwo</b>
-</dt><dd> Extract the contents of all <font SIZE="-1">DWARF</font> .dwo sections. See the <b>--strip-dwo</b> option for more information.
+</dt><dd> Extract the contents of all DWARF .dwo sections. See the <b>--strip-dwo</b> option for more information.
 </dd><dt><b>--file-alignment</b> <i>num</i>
-</dt><dd> Specify the file alignment. Sections in the file will always begin at file offsets which are multiples of this number. This defaults to 512. [This option is specific to <font SIZE="-1">PE</font> targets.]
+</dt><dd> Specify the file alignment. Sections in the file will always begin at file offsets which are multiples of this number. This defaults to 512. [This option is specific to PE targets.]
 </dd><dt><b>--heap</b> <i>reserve</i>
 </dt><dd>
 </dd><dt><b>--heap</b> <i>reserve</i><b>,</b><i>commit</i>
-</dt><dd> Specify the number of bytes of memory to reserve (and optionally commit) to be used as heap for this program. [This option is specific to <font SIZE="-1">PE</font> targets.]
+</dt><dd> Specify the number of bytes of memory to reserve (and optionally commit) to be used as heap for this program. [This option is specific to PE targets.]
 </dd><dt><b>--image-base</b> <i>value</i>
-</dt><dd> Use <i>value</i> as the base address of your program or dll. This is the lowest memory location that will be used when your program or dll is loaded. To reduce the need to relocate and improve performance of your dlls, each should have a unique base address and not overlap any other dlls. The default is 0x400000 for executables, and 0x10000000 for dlls. [This option is specific to <font SIZE="-1">PE</font> targets.]
+</dt><dd> Use <i>value</i> as the base address of your program or dll. This is the lowest memory location that will be used when your program or dll is loaded. To reduce the need to relocate and improve performance of your dlls, each should have a unique base address and not overlap any other dlls. The default is 0x400000 for executables, and 0x10000000 for dlls. [This option is specific to PE targets.]
 </dd><dt><b>--section-alignment</b> <i>num</i>
-</dt><dd> Sets the section alignment field in the <font SIZE="-1">PE</font> header. Sections in memory will always begin at addresses which are a multiple of this number. Defaults to 0x1000. [This option is specific to <font SIZE="-1">PE</font> targets.]
+</dt><dd> Sets the section alignment field in the PE header. Sections in memory will always begin at addresses which are a multiple of this number. Defaults to 0x1000. [This option is specific to PE targets.]
 </dd><dt><b>--stack</b> <i>reserve</i>
 </dt><dd>
 </dd><dt><b>--stack</b> <i>reserve</i><b>,</b><i>commit</i>
-</dt><dd> Specify the number of bytes of memory to reserve (and optionally commit) to be used as stack for this program. [This option is specific to <font SIZE="-1">PE</font> targets.]
+</dt><dd> Specify the number of bytes of memory to reserve (and optionally commit) to be used as stack for this program. [This option is specific to PE targets.]
 </dd><dt><b>--subsystem</b> <i>which</i>
 </dt><dd>
 </dd><dt><b>--subsystem</b> <i>which</i><b>:</b><i>major</i>
 </dt><dd>
 </dd><dt><b>--subsystem</b> <i>which</i><b>:</b><i>major</i><b>.</b><i>minor</i>
-</dt><dd> Specifies the subsystem under which your program will execute. The legal values for <i>which</i> are <tt>&quot;native&quot;</tt>, <tt>&quot;windows&quot;</tt>, <tt>&quot;console&quot;</tt>, <tt>&quot;posix&quot;</tt>, <tt>&quot;efi-app&quot;</tt>, <tt>&quot;efi-bsd&quot;</tt>, <tt>&quot;efi-rtd&quot;</tt>, <tt>&quot;sal-rtd&quot;</tt>, and <tt>&quot;xbox&quot;</tt>. You may optionally set the subsystem version also. Numeric values are also accepted for <i>which</i>. [This option is specific to <font SIZE="-1">PE</font> targets.]
+</dt><dd> Specifies the subsystem under which your program will execute. The legal values for <i>which</i> are <tt>&quot;native&quot;</tt>, <tt>&quot;windows&quot;</tt>, <tt>&quot;console&quot;</tt>, <tt>&quot;posix&quot;</tt>, <tt>&quot;efi-app&quot;</tt>, <tt>&quot;efi-bsd&quot;</tt>, <tt>&quot;efi-rtd&quot;</tt>, <tt>&quot;sal-rtd&quot;</tt>, and <tt>&quot;xbox&quot;</tt>. You may optionally set the subsystem version also. Numeric values are also accepted for <i>which</i>. [This option is specific to PE targets.]
 </dd><dt><b>--extract-symbol</b>
 </dt><dd> Keep the file's section flags and symbols but remove all section data. Specifically, the option:
 </dd><dl>
@@ -463,7 +463,7 @@ objcopy - copy and translate object files
  This option is used to build a <i>.sym</i> file for a VxWorks kernel. It can also be a useful way of reducing the size of a <b>--just-symbols</b> linker input file.</dd></dl>
 
 <dt><b>--compress-debug-sections</b>
-</dt><dd> Compress <font SIZE="-1">DWARF</font> debug sections using zlib with <font SIZE="-1">SHF_COMPRESSED</font> from the <font SIZE="-1">ELF ABI.</font> Note - if compression would actually make a section <i>larger</i>, then it is not compressed.
+</dt><dd> Compress DWARF debug sections using zlib with SHF_COMPRESSED from the ELF ABI. Note - if compression would actually make a section <i>larger</i>, then it is not compressed.
 </dd><dt><b>--compress-debug-sections=none</b>
 </dt><dd>
 </dd><dt><b>--compress-debug-sections=zlib</b>
@@ -471,17 +471,17 @@ objcopy - copy and translate object files
 </dd><dt><b>--compress-debug-sections=zlib-gnu</b>
 </dt><dd>
 </dd><dt><b>--compress-debug-sections=zlib-gabi</b>
-</dt><dd> For <font SIZE="-1">ELF</font> files, these options control how <font SIZE="-1">DWARF</font> debug sections are compressed. <b>--compress-debug-sections=none</b> is equivalent to <b>--decompress-debug-sections</b>. <b>--compress-debug-sections=zlib</b> and <b>--compress-debug-sections=zlib-gabi</b> are equivalent to <b>--compress-debug-sections</b>. <b>--compress-debug-sections=zlib-gnu</b> compresses <font SIZE="-1">DWARF</font> debug sections using zlib. The debug sections are renamed to begin with <b>.zdebug</b> instead of <b>.debug</b>. Note - if compression would actually make a section <i>larger</i>, then it is not compressed nor renamed.
+</dt><dd> For ELF files, these options control how DWARF debug sections are compressed. <b>--compress-debug-sections=none</b> is equivalent to <b>--decompress-debug-sections</b>. <b>--compress-debug-sections=zlib</b> and <b>--compress-debug-sections=zlib-gabi</b> are equivalent to <b>--compress-debug-sections</b>. <b>--compress-debug-sections=zlib-gnu</b> compresses DWARF debug sections using zlib. The debug sections are renamed to begin with <b>.zdebug</b> instead of <b>.debug</b>. Note - if compression would actually make a section <i>larger</i>, then it is not compressed nor renamed.
 </dd><dt><b>--decompress-debug-sections</b>
-</dt><dd> Decompress <font SIZE="-1">DWARF</font> debug sections using zlib. The original section names of the compressed sections are restored.
+</dt><dd> Decompress DWARF debug sections using zlib. The original section names of the compressed sections are restored.
 </dd><dt><b>--elf-stt-common=yes</b>
 </dt><dd>
 </dd><dt><b>--elf-stt-common=no</b>
-</dt><dd> For <font SIZE="-1">ELF</font> files, these options control whether common symbols should be converted to the <tt>&quot;STT_COMMON&quot;</tt> or <tt>&quot;STT_OBJECT&quot;</tt> type. <b>--elf-stt-common=yes</b> converts common symbol type to <tt>&quot;STT_COMMON&quot;</tt>. <b>--elf-stt-common=no</b> converts common symbol type to <tt>&quot;STT_OBJECT&quot;</tt>.
+</dt><dd> For ELF files, these options control whether common symbols should be converted to the <tt>&quot;STT_COMMON&quot;</tt> or <tt>&quot;STT_OBJECT&quot;</tt> type. <b>--elf-stt-common=yes</b> converts common symbol type to <tt>&quot;STT_COMMON&quot;</tt>. <b>--elf-stt-common=no</b> converts common symbol type to <tt>&quot;STT_OBJECT&quot;</tt>.
 </dd><dt><b>--merge-notes</b>
 </dt><dd>
 </dd><dt><b>--no-merge-notes</b>
-</dt><dd> For <font SIZE="-1">ELF</font> files, attempt (or do not attempt) to reduce the size of any <font SIZE="-1">SHT_NOTE</font> type sections by removing duplicate notes.
+</dt><dd> For ELF files, attempt (or do not attempt) to reduce the size of any SHT_NOTE type sections by removing duplicate notes.
 </dd><dt><b>-V</b>
 </dt><dd>
 </dd><dt><b>--version</b>
@@ -509,4 +509,4 @@ objcopy - copy and translate object files
 
  Copyright (c) 1991-2022 Free Software Foundation, Inc. 
 
- Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled ``<font SIZE="-1">GNU</font> Free Documentation License''.
+ Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled ``GNU Free Documentation License''.

@@ -24,11 +24,11 @@ description: "XvQueryPortAttributes – return list of attributes of a video por
 <p><code><a href="/docs/linux/man/3-xvqueryportattributes/">XvQueryPortAttributes</a></code>(3)<code>returns</code>the<code>number</code>of<code>attributes</code> and an array of XvAttributes valid for the given port. The array may be freed with <code><a href="/docs/linux/man/3-xfree/">XFree</a></code>(3).</p>
 <h2>Return Values</h2>
 <p>XvAttribute has the following structure: </p>
-<p>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br />
-int flags;<br />
-int min_value;<br />
-int max_value;<br />
-char&nbsp;<wbr>*name;<br />
+<p>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br/>
+int flags;<br/>
+int min_value;<br/>
+int max_value;<br/>
+char&nbsp;<wbr>*name;<br/>
 &nbsp;<wbr>}&nbsp;<wbr>XvAttribute; </p>
 <dl COMPACT>
 <dt><i>flags</i></dt>

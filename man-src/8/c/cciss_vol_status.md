@@ -152,7 +152,7 @@ as by vendor, model, serial number, and firmware revision.</pre>
  &quot;Door alert&quot;
  &quot;Power Supply Unit failed&quot;</pre>
 <h2>Files</h2>
-<p>/dev/cciss/c*d0 (Smart Array PCI controllers using the cciss driver)<br />
+<p>/dev/cciss/c*d0 (Smart Array PCI controllers using the cciss driver)<br/>
  /dev/sg* (Fibre attached MSA1000 controllers and Smart Array controllers using the hpsa driver or hpahcisr software RAID driver.)</p>
 <h2>Exit Codes</h2>
 <dl>
@@ -169,7 +169,7 @@ as by vendor, model, serial number, and firmware revision.</pre>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;scameron [at] beardog.cce.hp.com&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2007 Hewlett-Packard Development Company, L.P.<br />
+<p>Copyright &#169; 2007 Hewlett-Packard Development Company, L.P.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><a rel="nofollow" href="http://cciss.sourceforge.net">http://cciss.sourceforge.net</a></p>

@@ -20,38 +20,38 @@ description: "Utility Functions –"
 <p> globus_result_t <code>globus_gss_assist_lookup_all_globusid</code> (char *username, char **dns[], int *dn_count) </p>
 <p> globus_result_t <code>globus_gss_assist_map_and_authorize</code> (gss_ctx_id_t context, char *service, char *desired_identity, char *identity_buffer, unsigned int identity_buffer_length) </p>
 <h3>Accept Security Context</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  OM_uint32 <code>globus_gss_assist_accept_sec_context</code> (OM_uint32 *minor_status, gss_ctx_id_t *context_handle, const gss_cred_id_t cred_handle, char **src_name_char, OM_uint32 *ret_flags, int *user_to_user_flag, int *token_status, gss_cred_id_t *delegated_cred_handle, int(*gss_assist_get_token)(void *, void **, size_t *), void *gss_assist_get_context, int(*gss_assist_send_token)(void *, void *, size_t), void *gss_assist_send_context) </p>
 <h3>Accept Security Context Asyncronous</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  OM_uint32 <code>globus_gss_assist_accept_sec_context_async</code> (OM_uint32 *minor_status, gss_ctx_id_t *context_handle, const gss_cred_id_t cred_handle, char **src_name_char, OM_uint32 *ret_flags, int *user_to_user_flag, void *input_buffer, size_t input_buffer_len, void **output_bufferp, size_t *output_buffer_lenp, gss_cred_id_t *delegated_cred_handle) </p>
 <h3>Acquire Credential</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  OM_uint32 <code>globus_gss_assist_acquire_cred</code> (OM_uint32 *minor_status, gss_cred_usage_t cred_usage, gss_cred_id_t *output_cred_handle) </p>
 <h3>Acquire Credential Extension</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  OM_uint32 <code>globus_gss_assist_acquire_cred_ext</code> (OM_uint32 *minor_status, char *desired_name_char, OM_uint32 time_req, const gss_OID_set desired_mechs, gss_cred_usage_t cred_usage, gss_cred_id_t *output_cred_handle, gss_OID_set *actual_mechs, OM_uint32 *time_rec) </p>
 <h3>Display Status</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  OM_uint32 <code>globus_gss_assist_display_status</code> (FILE *fp, char *comment, OM_uint32 major_status, OM_uint32 minor_status, int token_status) </p>
 <h3>Display Status String</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  OM_uint32 <code>globus_gss_assist_display_status_str</code> (char **str, char *comment, OM_uint32 major_status, OM_uint32 minor_status, int token_status) </p>
 <p> OM_uint32 <code>globus_gss_assist_import_sec_context</code> (OM_uint32 *minor_status, gss_ctx_id_t *context_handle, int *token_status, int fdp, FILE *fperr) </p>
 <h3>Init Security Context</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  OM_uint32 <code>globus_gss_assist_init_sec_context</code> (OM_uint32 *minor_status, const gss_cred_id_t cred_handle, gss_ctx_id_t *context_handle, char *target_name_char, OM_uint32 req_flags, OM_uint32 *ret_flags, int *token_status, int(*gss_assist_get_token)(void *, void **, size_t *), void *gss_assist_get_context, int(*gss_assist_send_token)(void *, void *, size_t), void *gss_assist_send_context) </p>
 <h3>Init Security Context Async</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  OM_uint32 <code>globus_gss_assist_init_sec_context_async</code> (OM_uint32 *minor_status, const gss_cred_id_t cred_handle, gss_ctx_id_t *context_handle, char *target_name_char, OM_uint32 req_flags, OM_uint32 *ret_flags, void *input_buffer, size_t input_buffer_len, void **output_bufferp, size_t *output_buffer_lenp) </p>
 <h3>Will Handle Restrictions</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  OM_uint32 <code>globus_gss_assist_will_handle_restrictions</code> (OM_uint32 *minor_status, gss_ctx_id_t *context_handle) </p>
 <h3>Get Unwrap</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  OM_uint32 <code>globus_gss_assist_get_unwrap</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, char **data, size_t *length, int *token_status, int(*gss_assist_get_token)(void *, void **, size_t *), void *gss_assist_get_context, FILE *fperr) </p>
 <h3>Wrap</h3>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  OM_uint32 <code>globus_gss_assist_wrap_send</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, char *data, size_t length, int *token_status, int(*gss_assist_send_token)(void *, void *, size_t), void *gss_assist_send_context, FILE *fperr) </p>
 <h2>Detailed Description</h2>
 <p> Utility functions for GSSAPI.</p>
@@ -71,7 +71,7 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>hostname</i> The host name or numerical address to be resolved and transform into a GSS Name<br />
+</dt><dd> <i>hostname</i> The host name or numerical address to be resolved and transform into a GSS Name<br/>
  <i>authorization_hostname</i> The resulting GSS Name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -84,17 +84,17 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> gssapi return code<br />
- <i>context_handle</i> pointer to returned context.<br />
- <i>cred_handle</i> the cred handle obtained by acquire_cred.<br />
- <i>src_name_char</i> Pointer to char string repersentation of the client which contacted the server. Maybe NULL if not wanted. Should be freed when done.<br />
- <i>ret_flags</i> Pointer to which services are available after the connection is established. Maybe NULL if not wanted. We will also use this to pass in flags to the globus version of gssapi_ssleay<br />
- <i>user_to_user_flag</i> Pointer to flag to be set if the src_name is the same as our name. (Follwing are particular to this assist routine)<br />
- <i>token_status</i> assist routine get/send token status<br />
- <i>delegated_cred_handle</i> pointer to be set to the credential delegated by the client if delegation occurs during the security handshake<br />
- <i>gss_assist_get_token</i> a get token routine<br />
- <i>gss_assist_get_context</i> first arg for the get token routine<br />
- <i>gss_assist_send_token</i> a send token routine<br />
+</dt><dd> <i>minor_status</i> gssapi return code<br/>
+ <i>context_handle</i> pointer to returned context.<br/>
+ <i>cred_handle</i> the cred handle obtained by acquire_cred.<br/>
+ <i>src_name_char</i> Pointer to char string repersentation of the client which contacted the server. Maybe NULL if not wanted. Should be freed when done.<br/>
+ <i>ret_flags</i> Pointer to which services are available after the connection is established. Maybe NULL if not wanted. We will also use this to pass in flags to the globus version of gssapi_ssleay<br/>
+ <i>user_to_user_flag</i> Pointer to flag to be set if the src_name is the same as our name. (Follwing are particular to this assist routine)<br/>
+ <i>token_status</i> assist routine get/send token status<br/>
+ <i>delegated_cred_handle</i> pointer to be set to the credential delegated by the client if delegation occurs during the security handshake<br/>
+ <i>gss_assist_get_token</i> a get token routine<br/>
+ <i>gss_assist_get_context</i> first arg for the get token routine<br/>
+ <i>gss_assist_send_token</i> a send token routine<br/>
  <i>gss_assist_send_context</i> first arg for the send token routine</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -105,16 +105,16 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> gssapi return code<br />
- <i>context_handle</i> pointer to returned context.<br />
- <i>cred_handle</i> the cred handle obtained by acquire_cred.<br />
- <i>src_name_char</i> Pointer to char string repersentation of the client which contacted the server. Maybe NULL if not wanted. Should be freed when done.<br />
- <i>ret_flags</i> Pointer to which services are available after the connection is established. Maybe NULL if not wanted. We will also use this to pass in flags to the globus version of gssapi_ssleay<br />
- <i>user_to_user_flag</i> Pointer to flag to be set if the src_name is the same as our name.<br />
- <i>input_buffer</i> pointer to a buffer received from peer.<br />
- <i>input_buffer_len</i> length of the buffer input_buffer.<br />
- <i>output_bufferp</i> pointer to a pointer which will be filled in with a pointer to a allocated block of memory. If non-NULL the contents of this block should be written to the peer where they will be fed into the gss_assist_init_sec_context_async() function.<br />
- <i>output_buffer_lenp</i> pointer to an integer which will be filled in with the length of the allocated output buffer pointed to by *output_bufferp.<br />
+</dt><dd> <i>minor_status</i> gssapi return code<br/>
+ <i>context_handle</i> pointer to returned context.<br/>
+ <i>cred_handle</i> the cred handle obtained by acquire_cred.<br/>
+ <i>src_name_char</i> Pointer to char string repersentation of the client which contacted the server. Maybe NULL if not wanted. Should be freed when done.<br/>
+ <i>ret_flags</i> Pointer to which services are available after the connection is established. Maybe NULL if not wanted. We will also use this to pass in flags to the globus version of gssapi_ssleay<br/>
+ <i>user_to_user_flag</i> Pointer to flag to be set if the src_name is the same as our name.<br/>
+ <i>input_buffer</i> pointer to a buffer received from peer.<br/>
+ <i>input_buffer_len</i> length of the buffer input_buffer.<br/>
+ <i>output_bufferp</i> pointer to a pointer which will be filled in with a pointer to a allocated block of memory. If non-NULL the contents of this block should be written to the peer where they will be fed into the gss_assist_init_sec_context_async() function.<br/>
+ <i>output_buffer_lenp</i> pointer to an integer which will be filled in with the length of the allocated output buffer pointed to by *output_bufferp.<br/>
  <i>delegated_cred_handle</i> pointer to be set to the credential delegated by the client if delegation occurs during the security handshake</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -127,8 +127,8 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> pointer for return code<br />
- <i>cred_usage</i> GSS_C_INITIATE, GSS_C_ACCEPT, or GSS_C_BOTH<br />
+</dt><dd> <i>minor_status</i> pointer for return code<br/>
+ <i>cred_usage</i> GSS_C_INITIATE, GSS_C_ACCEPT, or GSS_C_BOTH<br/>
  <i>output_cred_handle</i> Pointer to the returned handle. This needs to be passed to many gss routines.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -149,10 +149,10 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>fp</i> a file pointer<br />
- <i>comment</i> String to print out before other error messages.<br />
- <i>major_status</i> The major status to display<br />
- <i>minor_status</i> The minor status to display<br />
+</dt><dd> <i>fp</i> a file pointer<br/>
+ <i>comment</i> String to print out before other error messages.<br/>
+ <i>major_status</i> The major status to display<br/>
+ <i>minor_status</i> The minor status to display<br/>
  <i>token_status</i> token status to display</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -163,10 +163,10 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>str</i> pointer to char * for returned string. Must be freed<br />
- <i>comment</i> String to print out before other error messages.<br />
- <i>major_status</i> The major status to display<br />
- <i>minor_status</i> The minor status to display<br />
+</dt><dd> <i>str</i> pointer to char * for returned string. Must be freed<br/>
+ <i>comment</i> String to print out before other error messages.<br/>
+ <i>major_status</i> The major status to display<br/>
+ <i>minor_status</i> The minor status to display<br/>
  <i>token_status</i> token status to display</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -178,7 +178,7 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>globusidp</i> The GSSAPI name string of the identity who requested authorization<br />
+</dt><dd> <i>globusidp</i> The GSSAPI name string of the identity who requested authorization<br/>
  <i>useridp</i> A pointer to a string to be set to the default user ID for the local system. No validation is done to check that such a user exists.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -187,7 +187,7 @@ description: "Utility Functions –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>1</i> Error</dd></dl>
 <h3>int globus_gss_assist_userok (char * globusid, char * userid)</h3>
 <p> Gridmap entry existence check. The <i></i><code>globus_gss_assist_userok()</code> function parses the default gridmap file and checks whether any mapping exists for the grid identity passed as the <i>globusid</i> parameter and the local user identity passed as the @ userid parameter. </p>
@@ -195,7 +195,7 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>globusid</i> The GSSAPI name string of the identity who requested authorization<br />
+</dt><dd> <i>globusid</i> The GSSAPI name string of the identity who requested authorization<br/>
  <i>userid</i> The local account name that access is sought for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -204,7 +204,7 @@ description: "Utility Functions –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>1</i> Error</dd></dl>
 <h3>int globus_gss_assist_map_local_user (char * local_user, char ** globusidp)</h3>
 <p> Look up the default Grid identity associated with a local user name. The <i></i><code>globus_gss_assist_map_local_user()</code> function parses the gridmap file to determine a if the user name passed as the <i>local_user</i> parameter is the default local user for a Grid ID in the gridmap file. If so, it modifies <i>globusidp</i> to point to a copy of that ID. Otherwise, it searches the gridmap file for a Grid ID that has a non-default mapping for <i>local_user</i> and modifies <i>globusidp</i> to point to a copy of that ID. If successful, the caller is responsible for freeing the string pointed to by the <i>globusidp</i> pointer. </p>
@@ -212,7 +212,7 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>local_user</i> The local username to find a Grid ID for<br />
+</dt><dd> <i>local_user</i> The local username to find a Grid ID for<br/>
  <i>globusidp</i> A Grid ID that maps from the local_user.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -221,7 +221,7 @@ description: "Utility Functions –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>1</i> Error</dd></dl>
 <h3>globus_result_t globus_gss_assist_lookup_all_globusid (char * username, char ** dns[], int * dn_count)</h3>
 <p> Look up all Grid IDs associated with a local user ID. The <i></i><code>globus_gss_assist_lookup_all_globusid()</code> function parses a gridmap file and finds all Grid IDs that map to a local user ID. The <i>dns</i> parameter is modified to point to an array of Grid ID strings from the gridmap file, and the <i>dn_count</i> parameter is modified to point to the number of Grid ID strings in the array. The caller is responsible for freeing the array using the macro <i></i><code>GlobusGssAssistFreeDNArray()</code>. </p>
@@ -229,8 +229,8 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>username</i> The local username to look up in the gridmap file.<br />
- <i>dns</i> A pointer to an array of strings. This function modifies this to point to a newly allocated array of strings. The caller must use the macro <i></i><code>GlobusGssAssistFreeDNArray()</code> to free this memory.<br />
+</dt><dd> <i>username</i> The local username to look up in the gridmap file.<br/>
+ <i>dns</i> A pointer to an array of strings. This function modifies this to point to a newly allocated array of strings. The caller must use the macro <i></i><code>GlobusGssAssistFreeDNArray()</code> to free this memory.<br/>
  <i>dn_count</i> A pointer to an integer that is modified to contain the number of entries in the array returned via the <i>dns</i> parameter.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -239,9 +239,9 @@ description: "Utility Functions –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
- <i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_ARGUMENTS</i> Error with arguments<br />
- <i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_GRIDMAP</i> Invalid path to gridmap<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
+ <i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_ARGUMENTS</i> Error with arguments<br/>
+ <i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_GRIDMAP</i> Invalid path to gridmap<br/>
  <i>GLOBUS_GSI_GSS_ASSIST_ERROR_ERRNO</i> System error</dd></dl>
 <h3>globus_result_t globus_gss_assist_map_and_authorize (gss_ctx_id_t context, char * service, char * desired_identity, char * identity_buffer, unsigned int identity_buffer_length)</h3>
 <p> Authorize the peer of a security context to use a service. The <code>globus_gss_assist_map_and_authorize()</code> function attempts to authorize the peer of a security context to use a particular service. If the <i>desired_identity</i> parameter is non-NULL, the authorization will succeed only if the peer is authorized for that identity. Otherwise, any valid authorized local user name will be used. If authorized, the local user name will be copied to the string pointed to by the <i>identity_buffer</i> parameter, which must be at least as long as the value passed as the <i>identity_buffer_length</i> parameter. </p>
@@ -250,10 +250,10 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Security context to inspect for peer identity information.<br />
- <i>service</i> A NULL-terminated string containing the name of the service that an authorization decision is being made for.<br />
- <i>desired_identity</i> Optional. If non-NULL, perform an authorization to act as the local user named by this NULL-terminated string.<br />
- <i>identity_buffer</i> A pointer to a string buffer into which will be copied the local user name that the peer of the context is authorized to act as.<br />
+</dt><dd> <i>context</i> Security context to inspect for peer identity information.<br/>
+ <i>service</i> A NULL-terminated string containing the name of the service that an authorization decision is being made for.<br/>
+ <i>desired_identity</i> Optional. If non-NULL, perform an authorization to act as the local user named by this NULL-terminated string.<br/>
+ <i>identity_buffer</i> A pointer to a string buffer into which will be copied the local user name that the peer of the context is authorized to act as.<br/>
  <i>identity_buffer_length</i> Length of the <i>identity_buffer</i> array.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -262,23 +262,23 @@ description: "Utility Functions –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
- <i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_CALLOUT_CONFIG</i> Invalid authorization configuration file<br />
- <i>GLOBUS_CALLOUT_ERROR_WITH_HASHTABLE</i> Hash table operation failed.<br />
- <i>GLOBUS_CALLOUT_ERROR_CALLOUT_ERROR</i> The callout itself returned a error.<br />
- <i>GLOBUS_CALLOUT_ERROR_WITH_DL</i> Dynamic library operation failed.<br />
- <i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY</i> Out of memory<br />
- <i>GLOBUS_GSI_GSS_ASSIST_GSSAPI_ERROR</i> A GSSAPI function returned an error<br />
- <i>GLOBUS_GSI_GSS_ASSIST_GRIDMAP_LOOKUP_FAILED</i> Gridmap lookup failure<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
+ <i>GLOBUS_GSI_GSS_ASSIST_ERROR_WITH_CALLOUT_CONFIG</i> Invalid authorization configuration file<br/>
+ <i>GLOBUS_CALLOUT_ERROR_WITH_HASHTABLE</i> Hash table operation failed.<br/>
+ <i>GLOBUS_CALLOUT_ERROR_CALLOUT_ERROR</i> The callout itself returned a error.<br/>
+ <i>GLOBUS_CALLOUT_ERROR_WITH_DL</i> Dynamic library operation failed.<br/>
+ <i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY</i> Out of memory<br/>
+ <i>GLOBUS_GSI_GSS_ASSIST_GSSAPI_ERROR</i> A GSSAPI function returned an error<br/>
+ <i>GLOBUS_GSI_GSS_ASSIST_GRIDMAP_LOOKUP_FAILED</i> Gridmap lookup failure<br/>
  <i>GLOBUS_GSI_GSS_ASSIST_BUFFER_TOO_SMALL</i> Caller provided insufficient buffer space for local identity</dd></dl>
 <h3>OM_uint32 globus_gss_assist_import_sec_context (OM_uint32 * minor_status, gss_ctx_id_t * context_handle, int * token_status, int fdp, FILE * fperr)</h3>
 <p> Import the security context from a file. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> GSSAPI return code. This is a Globus Error code (or GLOBUS_SUCCESS) cast to a OM_uint32 pointer. If an erro has occurred, the resulting error (from calling globus_error_get on this variable) needs to be freed by the caller<br />
- <i>context_handle</i> The imported context<br />
- <i>token_status</i> Errors that occurred while reading from the file<br />
- <i>fdp</i> the file descriptor pointing to a file containing the security context<br />
+</dt><dd> <i>minor_status</i> GSSAPI return code. This is a Globus Error code (or GLOBUS_SUCCESS) cast to a OM_uint32 pointer. If an erro has occurred, the resulting error (from calling globus_error_get on this variable) needs to be freed by the caller<br/>
+ <i>context_handle</i> The imported context<br/>
+ <i>token_status</i> Errors that occurred while reading from the file<br/>
+ <i>fdp</i> the file descriptor pointing to a file containing the security context<br/>
  <i>fperr</i> FILE * to write error messages</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -289,20 +289,20 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> GSSAPI return code. The new minor_status is a globus_result_t cast to an OM_uint32. If the call was successful, the minor status is equivalant to GLOBUS_SUCCESS. Otherwise, it is a globus error object ID that can be passed to globus_error_get to get the error object. The error object needs to be freed with globus_object_free.<br />
- <i>cred_handle</i> the cred handle obtained by acquire_cred.<br />
- <i>context_handle</i> pointer to returned context.<br />
- <i>target_name_char</i> char string repersentation of the server to be contacted.<br />
- <i>req_flags</i> request flags, such as GSS_C_DELEG_FLAG for delegation and the GSS_C_MUTUAL_FLAG for mutual authentication.<br />
+</dt><dd> <i>minor_status</i> GSSAPI return code. The new minor_status is a globus_result_t cast to an OM_uint32. If the call was successful, the minor status is equivalant to GLOBUS_SUCCESS. Otherwise, it is a globus error object ID that can be passed to globus_error_get to get the error object. The error object needs to be freed with globus_object_free.<br/>
+ <i>cred_handle</i> the cred handle obtained by acquire_cred.<br/>
+ <i>context_handle</i> pointer to returned context.<br/>
+ <i>target_name_char</i> char string repersentation of the server to be contacted.<br/>
+ <i>req_flags</i> request flags, such as GSS_C_DELEG_FLAG for delegation and the GSS_C_MUTUAL_FLAG for mutual authentication.<br/>
  <i>ret_flags</i> Pointer to which services are available after the connection is established. Maybe NULL if not wanted.</dd></dl>
 <p> The Follwing are particular to this assist routine: </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>token_status</i> the assist routine&#8217;s get/send token status<br />
- <i>gss_assist_get_token</i> function pointer for getting the token<br />
- <i>gss_assist_get_context</i> first argument passed to the gss_assist_get_token function<br />
- <i>gss_assist_send_token</i> function pointer for setting the token<br />
+</dt><dd> <i>token_status</i> the assist routine&#8217;s get/send token status<br/>
+ <i>gss_assist_get_token</i> function pointer for getting the token<br/>
+ <i>gss_assist_get_context</i> first argument passed to the gss_assist_get_token function<br/>
+ <i>gss_assist_send_token</i> function pointer for setting the token<br/>
  <i>gss_assist_send_context</i> first argument passed to the gss_assist_set_token function pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -313,15 +313,15 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> GSSAPI return code. The new minor status is a globus_result_t cast to a OM_uint32. If an error occurred (GSS_ERROR(major_status)) the minor_status is a globus error object id. The error object can be obtained via globus_error_get and should be destroyed with globus_object_free when no longer needed. If no error occurred, the minor status is equal to GLOBUS_SUCCESS.<br />
- <i>cred_handle</i> the cred handle obtained by acquire_cred.<br />
- <i>context_handle</i> pointer to returned context.<br />
- <i>target_name_char</i> char string repersentation of the server to be contacted.<br />
- <i>req_flags</i> request flags, such as GSS_C_DELEG_FLAG for delegation and the GSS_C_MUTUAL_FLAG for mutual authentication.<br />
- <i>ret_flags</i> Pointer to which services are available after the connection is established. Maybe NULL if not wanted.<br />
- <i>input_buffer</i> pointer to a buffer received from peer. Should be NULL on first call.<br />
- <i>input_buffer_len</i> length of the buffer input_buffer. Should be zero on first call.<br />
- <i>output_bufferp</i> pointer to a pointer which will be filled in with a pointer to a allocated block of memory. If non-NULL the contents of this block should be written to the peer where they will be fed into the gss_assist_init_sec_context_async() function.<br />
+</dt><dd> <i>minor_status</i> GSSAPI return code. The new minor status is a globus_result_t cast to a OM_uint32. If an error occurred (GSS_ERROR(major_status)) the minor_status is a globus error object id. The error object can be obtained via globus_error_get and should be destroyed with globus_object_free when no longer needed. If no error occurred, the minor status is equal to GLOBUS_SUCCESS.<br/>
+ <i>cred_handle</i> the cred handle obtained by acquire_cred.<br/>
+ <i>context_handle</i> pointer to returned context.<br/>
+ <i>target_name_char</i> char string repersentation of the server to be contacted.<br/>
+ <i>req_flags</i> request flags, such as GSS_C_DELEG_FLAG for delegation and the GSS_C_MUTUAL_FLAG for mutual authentication.<br/>
+ <i>ret_flags</i> Pointer to which services are available after the connection is established. Maybe NULL if not wanted.<br/>
+ <i>input_buffer</i> pointer to a buffer received from peer. Should be NULL on first call.<br/>
+ <i>input_buffer_len</i> length of the buffer input_buffer. Should be zero on first call.<br/>
+ <i>output_bufferp</i> pointer to a pointer which will be filled in with a pointer to a allocated block of memory. If non-NULL the contents of this block should be written to the peer where they will be fed into the gss_assist_init_sec_context_async() function.<br/>
  <i>output_buffer_lenp</i> pointer to an integer which will be filled in with the length of the allocated output buffer pointed to by *output_bufferp.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -333,7 +333,7 @@ description: "Utility Functions –"
 <p> Sets the context to handle restrictions. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> the resulting minor status from setting the context handle<br />
+</dt><dd> <i>minor_status</i> the resulting minor status from setting the context handle<br/>
  <i>context_handle</i> the context handle to set the minor status of</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -355,12 +355,12 @@ description: "Utility Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context_handle</i> the context<br />
- <i>data</i> pointer to be set to the unwrapped application data. This must be freed by the caller.<br />
- <i>length</i> pointer to be set to the length of the <i>data</i> byte array.<br />
- <i>token_status</i> assist routine get/send token status<br />
- <i>gss_assist_get_token</i> a detokenizing routine<br />
- <i>gss_assist_get_context</i> first arg for above routine<br />
+</dt><dd> <i>context_handle</i> the context<br/>
+ <i>data</i> pointer to be set to the unwrapped application data. This must be freed by the caller.<br/>
+ <i>length</i> pointer to be set to the length of the <i>data</i> byte array.<br/>
+ <i>token_status</i> assist routine get/send token status<br/>
+ <i>gss_assist_get_token</i> a detokenizing routine<br/>
+ <i>gss_assist_get_context</i> first arg for above routine<br/>
  <i>fperr</i> error stream to print to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -369,13 +369,13 @@ description: "Utility Functions –"
 <h3>OM_uint32 globus_gss_assist_wrap_send (OM_uint32 * minor_status, const gss_ctx_id_t context_handle, char * data, size_t length, int * token_status, int(*)(void *, void *, size_t) gss_assist_send_token, void * gss_assist_send_context, FILE * fperr)<code>Parameters:</code></h3>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> GSSAPI return code. If the call was successful, the minor status is equal to GLOBUS_SUCCESS. Otherwise, it is an error object ID for which globus_error_get() and globus_object_free() can be used to get and destroy it.<br />
- <i>context_handle</i> the context.<br />
- <i>data</i> pointer to application data to wrap and send<br />
- <i>length</i> length of the <i>data</i> array<br />
- <i>token_status</i> assist routine get/send token status<br />
- <i>gss_assist_send_token</i> a send_token routine<br />
- <i>gss_assist_send_context</i> first arg for the send_token<br />
+</dt><dd> <i>minor_status</i> GSSAPI return code. If the call was successful, the minor status is equal to GLOBUS_SUCCESS. Otherwise, it is an error object ID for which globus_error_get() and globus_object_free() can be used to get and destroy it.<br/>
+ <i>context_handle</i> the context.<br/>
+ <i>data</i> pointer to application data to wrap and send<br/>
+ <i>length</i> length of the <i>data</i> array<br/>
+ <i>token_status</i> assist routine get/send token status<br/>
+ <i>gss_assist_send_token</i> a send_token routine<br/>
+ <i>gss_assist_send_context</i> first arg for the send_token<br/>
  <i>fperr</i> file handle to write error message to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

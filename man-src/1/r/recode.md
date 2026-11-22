@@ -70,7 +70,7 @@ description: "recode – manual page for recode 3.6"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;recode-bugs [at] iro.umontreal.ca&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1990, 92, 93, 94, 96, 97, 99 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 1990, 92, 93, 94, 96, 97, 99 Free Software Foundation, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>recode</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>recode</code> programs are properly installed at your site, the command</p>

@@ -28,95 +28,95 @@ description: "blkparse – produce formatted output of event streams of block de
 </dl>
 <p> By default, blkparse sends formatted data to standard output. This may be changed via the <code>-o</code> option, or text output can be disabled via the <code>-O</code> option. A merged binary stream can be produced using the <code>-d</code> option. </p>
 <h2>OPTIONS</h2>
-<p> -A <i>hex-mask</i><br />
+<p> -A <i>hex-mask</i><br/>
  &#8211;set-mask=<i>hex-mask</i></p>
 <dl>
 <dt>
 </dt><dd> Set filter mask to <i>hex-mask</i>, see blktrace (8) for masks</dd></dl>
-<p> -a <i>mask</i><br />
+<p> -a <i>mask</i><br/>
  &#8211;act-mask=<i>mask</i></p>
 <dl>
 <dt>
 </dt><dd> Add <i>mask</i> to current filter, see blktrace (8) for masks</dd></dl>
-<p> -D <i>dir</i><br />
+<p> -D <i>dir</i><br/>
  &#8211;input-directory=<i>dir</i></p>
 <dl>
 <dt>
 </dt><dd> Prepend <i>dir</i> to input file names</dd></dl>
-<p> -b <i>batch</i><br />
+<p> -b <i>batch</i><br/>
  &#8211;batch={batch}</p>
 <dl>
 <dt>
 </dt><dd> Standard input read batching</dd></dl>
-<p> -i <i>file</i><br />
+<p> -i <i>file</i><br/>
  &#8211;input=<i>file</i></p>
 <dl>
 <dt>
 </dt><dd> Specifies base name for input files &#8212; default is <i>device</i>.blktrace.<i>cpu</i>. </dd>
 <p> As noted above, specifying <code>-i &#8211;</code> runs in live mode with blktrace (reading data from standard in).</dl>
-<p> -F <i>typ,fmt</i><br />
- &#8211;format=<i>typ,fmt</i><br />
- -f <i>fmt</i><br />
+<p> -F <i>typ,fmt</i><br/>
+ &#8211;format=<i>typ,fmt</i><br/>
+ -f <i>fmt</i><br/>
  &#8211;format-spec=<i>fmt</i></p>
 <dl>
 <dt>
 </dt><dd> Sets output format (See OUTPUT DESCRIPTION AND FORMATTING for details.) </dd>
 <p> The -f form specifies a format for all events </p>
 <p> The -F form allows one to specify a format for a specific event type. The single-character <i>typ</i> field is one of the action specifiers described in ACTION IDENTIFIERS.</dl>
-<p> -M<br />
+<p> -M<br/>
  &#8211;no-msgs</p>
 <dl>
 <dt>
 </dt><dd> When -d is specified, this will stop messages from being output to the file. (Can seriously reduce the size of the resultant file when using the CFQ I/O scheduler.)</dd></dl>
-<p> -h<br />
+<p> -h<br/>
  &#8211;hash-by-name</p>
 <dl>
 <dt>
 </dt><dd> Hash processes by name, not by PID</dd></dl>
-<p> -o <i>file</i><br />
+<p> -o <i>file</i><br/>
  &#8211;output=<i>file</i></p>
 <dl>
 <dt>
 </dt><dd> Output file</dd></dl>
-<p> -O<br />
+<p> -O<br/>
  &#8211;no-text-output</p>
 <dl>
 <dt>
 </dt><dd> Do <i>not</i> produce text output, used for binary (<code>-d</code>) only</dd></dl>
-<p> -d <i>file</i><br />
+<p> -d <i>file</i><br/>
  &#8211;dump-binary=<i>file</i></p>
 <dl>
 <dt>
 </dt><dd> Binary output file</dd></dl>
-<p> -q<br />
+<p> -q<br/>
  &#8211;quiet</p>
 <dl>
 <dt>
 </dt><dd> Quiet mode</dd></dl>
-<p> -s<br />
+<p> -s<br/>
  &#8211;per-program-stats</p>
 <dl>
 <dt>
 </dt><dd> Displays data sorted by program</dd></dl>
-<p> -t<br />
+<p> -t<br/>
  &#8211;track-ios</p>
 <dl>
 <dt>
 </dt><dd> Display time deltas per IO</dd></dl>
-<p> -w <i>span</i><br />
+<p> -w <i>span</i><br/>
  &#8211;stopwatch=<i>span</i></p>
 <dl>
 <dt>
-</dt><dd> Display traces for the <i>span</i> specified &#8212; where span can be:<br />
- <i>end-time</i> &#8212; Display traces from time 0 through <i>end-time</i> (in ns)<br />
- or<br />
+</dt><dd> Display traces for the <i>span</i> specified &#8212; where span can be:<br/>
+ <i>end-time</i> &#8212; Display traces from time 0 through <i>end-time</i> (in ns)<br/>
+ or<br/>
  <i>start:end-time</i> &#8212; Display traces from time <i>start</i> through end-time (in ns).</dd></dl>
-<p> -v<br />
+<p> -v<br/>
  &#8211;verbose</p>
 <dl>
 <dt>
 </dt><dd> More verbose marginal on marginal errors</dd></dl>
-<p> -V<br />
+<p> -V<br/>
  &#8211;version</p>
 <dl>
 <dt>
@@ -263,17 +263,17 @@ description: "blkparse – produce formatted output of event streams of block de
 <dt>
 </dt><dd> If a payload is present, this is presented between parenthesis following the header, followed by the error value. </dd>
 <p> If no payload is present, the sector and number of blocks are presented (with an intervening plus (+) character). If the <code>-t</code> option was specified, then the elapsed time is presented. In either case, it is followed by the error value for the completion.</dl>
-<p> <code>B &#8212; bounced</code><br />
- <code>D &#8212; issued</code><br />
- <code>I &#8212; inserted</code><br />
+<p> <code>B &#8212; bounced</code><br/>
+ <code>D &#8212; issued</code><br/>
+ <code>I &#8212; inserted</code><br/>
  <code>Q &#8212; queued</code></p>
 <dl>
 <dt>
 </dt><dd> If a payload is present, the number of payload bytes is output, followed by the payload in hexadecimal between parenthesis. </dd>
 <p> If no payload is present, the sector and number of blocks are presented (with an intervening plus (+) character). If the <code>-t</code> option was specified, then the elapsed time is presented (in parenthesis). In either case, it is followed by the command associated with the event (surrounded by square brackets).</dl>
-<p> <code>F &#8212; front merge</code><br />
- <code>G &#8212; get request</code><br />
- <code>M &#8212; back merge</code><br />
+<p> <code>F &#8212; front merge</code><br/>
+ <code>G &#8212; get request</code><br/>
+ <code>M &#8212; back merge</code><br/>
  <code>S &#8212; sleep</code></p>
 <dl>
 <dt>
@@ -282,7 +282,7 @@ description: "blkparse – produce formatted output of event streams of block de
 <dl>
 <dt>
 </dt><dd> The command associated with the event (surrounded by square brackets) is output.</dd></dl>
-<p> <code>U &#8212; unplug</code><br />
+<p> <code>U &#8212; unplug</code><br/>
  <code>T &#8212; unplug due to timer</code></p>
 <dl>
 <dt>
@@ -311,9 +311,9 @@ description: "blkparse – produce formatted output of event streams of block de
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;linux-btrace [at] vger.kernel.org&gt; </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2006 Jens Axboe, Alan D. Brunelle and Nathan Scott.<br />
- This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.<br />
- This manual page was created for Debian by Bas Zoetekouw. It was derived from the documentation provided by the authors and it may be used, distributed and modified under the terms of the GNU General Public License, version 2.<br />
+<p> Copyright &#169; 2006 Jens Axboe, Alan D. Brunelle and Nathan Scott.<br/>
+ This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.<br/>
+ This manual page was created for Debian by Bas Zoetekouw. It was derived from the documentation provided by the authors and it may be used, distributed and modified under the terms of the GNU General Public License, version 2.<br/>
  On Debian systems, the text of the GNU General Public License can be found in /usr/share/common-licenses/GPL-2. </p>
 <h2>SEE ALSO</h2>
 <p> btrace (8), blktrace (8), verify_blkparse (1), blkrawverify (1), btt (1) </p>

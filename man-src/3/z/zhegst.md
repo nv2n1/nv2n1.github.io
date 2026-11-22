@@ -10,7 +10,7 @@ description: "zhegst.f –"
 <p>zhegst.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhegst</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br />
+<p>subroutine <code>zhegst</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br/>
  <i></i><code>ZHEGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhegst (integerITYPE, characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

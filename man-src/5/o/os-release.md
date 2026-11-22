@@ -19,9 +19,9 @@ description: "os-release, initrd-release – Operating system identification"
 <p> os-release contains data that is defined by the operating system vendor and should generally not be changed by the administrator. </p>
 <p> As this file only encodes names and identifiers it should not be localized. </p>
 <p> The /etc/os-release and /usr/lib/os-release files might be symlinks to other files, but it is important that the file is available from earliest boot on, and hence must be located on the root file system. </p>
-<p> For a longer rationale for os-release please refer to the m[blue]<code>Announcement of /etc/os-release</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> For a longer rationale for os-release please refer to the m[blue]<code>Announcement of /etc/os-release</code>m[][1].</p>
 <h3>/etc/initrd-release</h3>
-<p>In the m[blue]<code>initrd</code>m[]<font SIZE="-2">[2]</font>, /etc/initrd-release plays the same role as os-release in the main system. Additionally, the presence of that file means that the system is in the initrd phase. /etc/os-release should be symlinked to /etc/initrd-release (or vice versa), so programs that only look for /etc/os-release (as described above) work correctly. The rest of this document that talks about os-release should be understood to apply to initrd-release too.</p>
+<p>In the m[blue]<code>initrd</code>m[][2], /etc/initrd-release plays the same role as os-release in the main system. Additionally, the presence of that file means that the system is in the initrd phase. /etc/os-release should be symlinked to /etc/initrd-release (or vice versa), so programs that only look for /etc/os-release (as described above) work correctly. The rest of this document that talks about os-release should be understood to apply to initrd-release too.</p>
 <h2>Options</h2>
 <p>The following OS identifications parameters may be set using os-release:</p>
 <h3>General information identifying the operating system</h3>
@@ -43,7 +43,7 @@ description: "os-release, initrd-release – Operating system identification"
 <p> Example: &quot;PRETTY_NAME=&quot;Fedora 17 (Beefy Miracle)&quot;&quot;.</dl>
 <p> <i>CPE_NAME=</i></p>
 <dl>
-<dd>A CPE name for the operating system, in URI binding syntax, following the m[blue]<code>Common Platform Enumeration Specification</code>m[]<font SIZE="-2">[3]</font> as proposed by the NIST. This field is optional. </dd>
+<dd>A CPE name for the operating system, in URI binding syntax, following the m[blue]<code>Common Platform Enumeration Specification</code>m[][3] as proposed by the NIST. This field is optional. </dd>
 <p> Example: &quot;CPE_NAME=&quot;cpe:/o:fedoraproject:fedora:17&quot;&quot;</dl>
 <p> <i>VARIANT=</i></p>
 <dl>
@@ -83,11 +83,11 @@ description: "os-release, initrd-release – Operating system identification"
 <h3>Presentation information and links</h3>
 <p><i>HOME_URL=</i>, <i>DOCUMENTATION_URL=</i>, <i>SUPPORT_URL=</i>, <i>BUG_REPORT_URL=</i>, <i>PRIVACY_POLICY_URL=</i></p>
 <dl>
-<dd>Links to resources on the Internet related to the operating system. <i>HOME_URL=</i> should refer to the homepage of the operating system, or alternatively some homepage of the specific version of the operating system. <i>DOCUMENTATION_URL=</i> should refer to the main documentation page for this operating system. <i>SUPPORT_URL=</i> should refer to the main support page for the operating system, if there is any. This is primarily intended for operating systems which vendors provide support for. <i>BUG_REPORT_URL=</i> should refer to the main bug reporting page for the operating system, if there is any. This is primarily intended for operating systems that rely on community QA. <i>PRIVACY_POLICY_URL=</i> should refer to the main privacy policy page for the operating system, if there is any. These settings are optional, and providing only some of these settings is common. These URLs are intended to be exposed in &quot;About this system&quot; UIs behind links with captions such as &quot;About this Operating System&quot;, &quot;Obtain Support&quot;, &quot;Report a Bug&quot;, or &quot;Privacy Policy&quot;. The values should be in m[blue]<code>RFC3986 format</code>m[]<font SIZE="-2">[4]</font>, and should be &quot;http:&quot; or &quot;https:&quot; URLs, and possibly &quot;mailto:&quot; or &quot;tel:&quot;. Only one URL shall be listed in each setting. If multiple resources need to be referenced, it is recommended to provide an online landing page linking all available resources. </dd>
+<dd>Links to resources on the Internet related to the operating system. <i>HOME_URL=</i> should refer to the homepage of the operating system, or alternatively some homepage of the specific version of the operating system. <i>DOCUMENTATION_URL=</i> should refer to the main documentation page for this operating system. <i>SUPPORT_URL=</i> should refer to the main support page for the operating system, if there is any. This is primarily intended for operating systems which vendors provide support for. <i>BUG_REPORT_URL=</i> should refer to the main bug reporting page for the operating system, if there is any. This is primarily intended for operating systems that rely on community QA. <i>PRIVACY_POLICY_URL=</i> should refer to the main privacy policy page for the operating system, if there is any. These settings are optional, and providing only some of these settings is common. These URLs are intended to be exposed in &quot;About this system&quot; UIs behind links with captions such as &quot;About this Operating System&quot;, &quot;Obtain Support&quot;, &quot;Report a Bug&quot;, or &quot;Privacy Policy&quot;. The values should be in m[blue]<code>RFC3986 format</code>m[][4], and should be &quot;http:&quot; or &quot;https:&quot; URLs, and possibly &quot;mailto:&quot; or &quot;tel:&quot;. Only one URL shall be listed in each setting. If multiple resources need to be referenced, it is recommended to provide an online landing page linking all available resources. </dd>
 <p> Examples: &quot;HOME_URL=&quot;<a rel="nofollow" href="https://fedoraproject.org/">https://fedoraproject.org/</a>&quot;&quot;, &quot;BUG_REPORT_URL=&quot;<a rel="nofollow" href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a>&quot;&quot;.</dl>
 <p> <i>LOGO=</i></p>
 <dl>
-<dd>A string, specifying the name of an icon as defined by m[blue]<code>freedesktop.org Icon Theme Specification</code>m[]<font SIZE="-2">[5]</font>. This can be used by graphical applications to display an operating system&#8217;s or distributor&#8217;s logo. This field is optional and may not necessarily be implemented on all systems. </dd>
+<dd>A string, specifying the name of an icon as defined by m[blue]<code>freedesktop.org Icon Theme Specification</code>m[][5]. This can be used by graphical applications to display an operating system&#8217;s or distributor&#8217;s logo. This field is optional and may not necessarily be implemented on all systems. </dd>
 <p> Examples: &quot;LOGO=fedora-logo&quot;, &quot;LOGO=distributor-logo-opensuse&quot;</dl>
 <p> <i>ANSI_COLOR=</i></p>
 <dl>
@@ -156,7 +156,7 @@ if 'fedora' in [os_release.get('ID', 'linux'),
  *os_release.get('ID_LIKE', '').split()]:
  print('Looks like Fedora!')</pre>
 </dd></dl>
-<p> See docs for m[blue]<code>platform.freedesktop_os_release</code>m[]<font SIZE="-2">[6]</font> for more details. </p>
+<p> See docs for m[blue]<code>platform.freedesktop_os_release</code>m[][6] for more details. </p>
 <p> <code>Example 4. Reading os-release in <a href="/docs/linux/man/1-python/">python</a>(1) (any version)</code> </p>
 <dl>
 <dd>

@@ -9,7 +9,7 @@ description: "sln – create symbolic links"
 
 <p>sln &#8211; create symbolic links</p>
 <h2>Synopsis</h2>
-<p><code>sln</code><i> source dest</i><br />
+<p><code>sln</code><i> source dest</i><br/>
  <code>sln</code><i> filelist</i></p>
 <h2>Description</h2>
 <p>The <code>sln</code> program creates symbolic links. Unlike the <code><a href="/docs/linux/man/1-ln/">ln</a></code>(1) program, it is statically linked. This means that if for some reason the dynamic linker is not working, <code>sln</code> can be used to make symbolic links to dynamic libraries. </p>

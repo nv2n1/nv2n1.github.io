@@ -10,7 +10,7 @@ description: "dspsv.f –"
 <p>dspsv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dspsv</code> (UPLO, N, NRHS, AP, IPIV, B, LDB, INFO)<br />
+<p>subroutine <code>dspsv</code> (UPLO, N, NRHS, AP, IPIV, B, LDB, INFO)<br/>
  <i></i><code> DSPSV computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dspsv (characterUPLO, integerN, integerNRHS, double precision, dimension( * )AP, integer, dimension( * )IPIV, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

@@ -49,7 +49,7 @@ description: "glite-lb-bkserverd – bookkeeping server daemon"
 <dt><code>-j </code>, &#8211;enable-jpreg-export</dt>
 <dd>Enable JP registration export (disabled by default). </dd>
 <dt><code>-m</code><i> STRING</i>, &#8211;mysql <i>STRING</i></dt>
-<dd><i>STRING</i> is a database connect string in the form<br />
+<dd><i>STRING</i> is a database connect string in the form<br/>
 &nbsp;<wbr> USER_NAME/PASSWORD [at] DB_HOSTNAME:DB_NAME </dd>
 <p> It defaults to lbserver/@localhost:lbserver20. </p>
 <dt><code>-n, &#8211;noauth</code></dt>

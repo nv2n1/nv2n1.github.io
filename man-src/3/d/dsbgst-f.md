@@ -10,7 +10,7 @@ description: "dsbgst.f –"
 <p>dsbgst.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dsbgst</code> (VECT, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, X, LDX, WORK, INFO)<br />
+<p>subroutine <code>dsbgst</code> (VECT, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, X, LDX, WORK, INFO)<br/>
  <i></i><code>DSBGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsbgst (characterVECT, characterUPLO, integerN, integerKA, integerKB, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( ldbb, * )BB, integerLDBB, double precision, dimension( ldx, * )X, integerLDX, double precision, dimension( * )WORK, integerINFO)</h3>

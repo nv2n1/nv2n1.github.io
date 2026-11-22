@@ -10,7 +10,7 @@ description: "ldns_native2rdf_int8, ldns_native2rdf_int16, ldns_native2rdf_int32
 
 <p> ldns_native2rdf_int8, ldns_native2rdf_int16, ldns_native2rdf_int32, ldns_native2rdf_int16_data, ldns_rdf2native_int8, ldns_rdf2native_int16, ldns_rdf2native_int32, ldns_rdf2native_sockaddr_storage, ldns_rdf2native_time_t </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_native2rdf_int8(ldns_rdf_type type, uint8_t value); </p>

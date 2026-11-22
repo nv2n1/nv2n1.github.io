@@ -102,17 +102,17 @@ description: "mh-profile – user profile customization for nmh message handler"
 <dl>
 <dd>Indicates how the username and password credentials will be retrieved for access to external servers, such as those that provide SMTP or POP service. The supported entry values are &#8220;legacy&#8221; and &#8220;file:<i>netrc</i>&#8221;. With &#8220;legacy&#8221;, or if there is no credentials entry, the username is the first of: </dd>
 <dl>
-<dd>1) <code>-user</code> switch to <code>send</code>, <code>post</code>, <code>whom</code>, <code>inc</code>, or <code>msgchk</code> program<br />
+<dd>1) <code>-user</code> switch to <code>send</code>, <code>post</code>, <code>whom</code>, <code>inc</code>, or <code>msgchk</code> program<br/>
  2) the login name on the local machine</dd></dl>
 <p> The password for SMTP services is the first of: </p>
 <dl>
-<dd>1) password value from matching entry in file named &#8220;.netrc&#8221; in the user&#8217;s home directory<br />
+<dd>1) password value from matching entry in file named &#8220;.netrc&#8221; in the user&#8217;s home directory<br/>
  2) password obtained by interactively prompting the user</dd></dl>
 <p> The password for POP service when the <code>-sasl</code> switch is used with one of these programs is the login name on the local machine. </p>
 <p> With a &#8220;file:<i>netrc</i>&#8221; <code>credentials</code> entry, the username is the first of: </p>
 <dl>
-<dd>1) <code>-user</code> switch to program<br />
- 2) login name from matching entry in <i>netrc</i> file<br />
+<dd>1) <code>-user</code> switch to program<br/>
+ 2) login name from matching entry in <i>netrc</i> file<br/>
  3) value provided by user in response to interactive query</dd></dl>
 <p> Similarly, the password is provided either in the <i>netrc</i> file or interactively. <i>netrc</i> can be any valid filename, either absolute or relative to Path or $HOME. The <i>netrc</i> file contains authentication information, for each server, using a line of the following form. Replace the words <i>myserver</i>, <i>mylogin</i>, and <i>mypassword</i> with your own account information: </p>
 <dl>

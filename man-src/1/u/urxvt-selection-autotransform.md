@@ -38,7 +38,7 @@ URxvt.selection - autotransform .0 : s / ^([^:[:space:]] +)
 
  Of course, this can be modified to suit your needs and your editor :) 
 
- To expand the example above to typical perl error messages (``<font SIZE="-1">XXX</font> at <font SIZE="-1">FILENAME</font> line <font SIZE="-1">YYY.''</font>), you need a slightly more elaborate solution: 
+ To expand the example above to typical perl error messages (``XXX at FILENAME line YYY.''), you need a slightly more elaborate solution: 
 
  <pre><code>
    URxvt.selection.pattern-0: ( at .*? line \\d+[,.])

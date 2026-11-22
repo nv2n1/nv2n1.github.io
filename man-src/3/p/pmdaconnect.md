@@ -9,8 +9,8 @@ description: "pmdaConnect – establish a connection between a daemon PMDA and P
 
 <p><code>pmdaConnect</code> &#8211; establish a connection between a daemon PMDA and PMCD</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> void pmdaConnect(pmdaInterface *</code><i>dispatch</i>); </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>

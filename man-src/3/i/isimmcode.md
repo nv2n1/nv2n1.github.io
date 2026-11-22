@@ -13,16 +13,16 @@ description: "QuantLib::IMM – Main cycle of the International Money Market (a.
 <h3>Public Types</h3>
 <p>enum <code>Month</code> { <code>F</code> = 1, <code>G</code> = 2, <code>H</code> = 3, <code>J</code> = 4, <code>K</code> = 5, <code>M</code> = 6, <code>N</code> = 7, <code>Q</code> = 8, <code>U</code> = 9, <code>V</code> = 10, <code>X</code> = 11, <code>Z</code> = 12 } </p>
 <h3>Static Public Member Functions</h3>
-<p>static bool <code>isIMMdate</code> (const <code>Date</code> &amp;d, bool mainCycle=true)<br />
- <i>returns whether or not the given date is an </i><code>IMM</code> date<br />
- static bool <code>isIMMcode</code> (const std::string &amp;in, bool mainCycle=true)<br />
- <i>returns whether or not the given string is an </i><code>IMM</code> code<br />
+<p>static bool <code>isIMMdate</code> (const <code>Date</code> &amp;d, bool mainCycle=true)<br/>
+ <i>returns whether or not the given date is an </i><code>IMM</code> date<br/>
+ static bool <code>isIMMcode</code> (const std::string &amp;in, bool mainCycle=true)<br/>
+ <i>returns whether or not the given string is an </i><code>IMM</code> code<br/>
  static std::string <code>code</code> (const <code>Date</code> &amp;immDate) </p>
 <p> static <code>Date</code> <code>date</code> (const std::string &amp;immCode, const <code>Date</code> &amp;referenceDate=<code>Date</code>()) </p>
-<p> static <code>Date</code> <code>nextDate</code> (const <code>Date</code> &amp;d=<code>Date</code>(), bool mainCycle=true)<br />
- <i>next </i><code>IMM</code> date following the given date<br />
- static <code>Date</code> <code>nextDate</code> (const std::string &amp;immCode, bool mainCycle=true, const <code>Date</code> &amp;referenceDate=<code>Date</code>())<br />
- <i>next </i><code>IMM</code> date following the given <code>IMM</code> code<br />
+<p> static <code>Date</code> <code>nextDate</code> (const <code>Date</code> &amp;d=<code>Date</code>(), bool mainCycle=true)<br/>
+ <i>next </i><code>IMM</code> date following the given date<br/>
+ static <code>Date</code> <code>nextDate</code> (const std::string &amp;immCode, bool mainCycle=true, const <code>Date</code> &amp;referenceDate=<code>Date</code>())<br/>
+ <i>next </i><code>IMM</code> date following the given <code>IMM</code> code<br/>
  static std::string <code>nextCode</code> (const <code>Date</code> &amp;d=<code>Date</code>(), bool mainCycle=true) </p>
 <p> static std::string <code>nextCode</code> (const std::string &amp;immCode, bool mainCycle=true, const <code>Date</code> &amp;referenceDate=<code>Date</code>()) </p>
 <h2>Detailed Description</h2>

@@ -10,8 +10,8 @@ description: "XdbeGetBackBufferAttributes – returns attributes of a DBE buffer
 <p>XdbeGetBackBufferAttributes &#8211; returns attributes of a DBE buffer. </p>
 <h2>Synopsis</h2>
 <p>#include &lt;X11/extensions/Xdbe.h&gt; </p>
-<p> XdbeBackBufferAttributes *XdbeGetBackBufferAttributes(<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Display&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*dpy,<br />
+<p> XdbeBackBufferAttributes *XdbeGetBackBufferAttributes(<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Display&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*dpy,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;XdbeBackBuffer buffer)</p>
 <h2>Description</h2>
 <p>This function returns the attributes associated with the specified buffer. </p>

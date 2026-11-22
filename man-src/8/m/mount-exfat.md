@@ -46,7 +46,7 @@ description: "mount.exfat-fuse – mount an exFAT file system"
 <h2>Exit Codes</h2>
 <p>Zero is returned on successful mount. Any other code means an error.</p>
 <h2>Bugs</h2>
-<p>exFAT is a case-insensitive file system. Some things can behave unexpectedly, e.g. directory renaming that changes only case of some characters: <code> $ mv FOO Foo</code><br />
+<p>exFAT is a case-insensitive file system. Some things can behave unexpectedly, e.g. directory renaming that changes only case of some characters: <code> $ mv FOO Foo</code><br/>
  <code> mv: cannot move &#8216;FOO&#8217; to a subdirectory of itself, &#8216;Foo/FOO&#8217;</code> This happens because <code>mv</code> finds that destination exists (for case-insensitive file systems <code>FOO</code> and <code>Foo</code> are the same thing) and adds source basename to the destination. The file system gets <code>rename(&quot;FOO&quot;,&nbsp;&quot;Foo/FOO&quot;)</code> syscall and returns an error. </p>
 <h2>Author</h2>
 <p>Andrew Nayenko</p>

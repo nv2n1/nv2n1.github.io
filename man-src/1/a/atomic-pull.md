@@ -18,7 +18,7 @@ description: "atomic-pull – fetch an image locally"
 <p> Use the &#8211;storage ostree option to store it into the OSTree repository. You can define a default storage type in <code>/etc/atomic.conf</code> with the key of <code>default_storage</code>. </p>
 <p> IMAGE has the form SOURCE:IMAGE-NAME, where SOURCE can be one of then &#8216;oci&#8217; is assumed. </p>
 <p> An &#8216;oci&#8217; image is fetched via Skopeo from a Docker registry. These two commands are equivalent: </p>
-<p> atomic pull etcd<br />
+<p> atomic pull etcd<br/>
  atomic pull oci:etcd </p>
 <p> A &#8216;docker&#8217; image is imported from the local Docker engine, thus not accessing the network. It is equivalent to saving the image from docker (docker save IMAGE) and importing it into the OSTree repository: </p>
 <p> atomic pull &#8211;storage ostree docker:fedora </p>

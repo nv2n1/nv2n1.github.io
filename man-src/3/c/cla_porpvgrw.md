@@ -11,7 +11,7 @@ description: "cla_porpvgrw.f –"
 <p> cla_porpvgrw.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>cla_porpvgrw</code> (UPLO, NCOLS, A, LDA, AF, LDAF, WORK)<br />
+<p> REAL function <code>cla_porpvgrw</code> (UPLO, NCOLS, A, LDA, AF, LDAF, WORK)<br/>
  <i></i><code>CLA_PORPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a symmetric or Hermitian positive-definite matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function cla_porpvgrw (character*1UPLO, integerNCOLS, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF, real, dimension( * )WORK)</h3>

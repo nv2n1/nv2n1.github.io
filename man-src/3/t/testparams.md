@@ -18,7 +18,7 @@ const boost::shared_ptr&lt; Impl &gt; &amp; implementation () const
 Protected Member Functions</code></pre>
 <p> Inherited by <code>ConstantParameter</code>, <code>NullParameter</code>, <code>PiecewiseConstantParameter</code>, and <code>TermStructureFittingParameter</code>.</p>
 <h3>Classes</h3>
-<p>class <code>Impl</code><br />
+<p>class <code>Impl</code><br/>
  <i>Base class for model parameter implementation. </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>const Array &amp; params () const

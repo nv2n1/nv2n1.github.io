@@ -22,52 +22,52 @@ description: "mpeg2enc – MPEG-1/2 encoder"
 </dl>
 <h2>SELECTING THE MPEG PROFILE</h2>
 <p> Set the MPEG profile to use. The MPEG standards support a vast number of options. In practice, different applications of the MPEG format place additional constraints of the form the MPEG stream. Setting this flag selects the kind of stream to produce. </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>0<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>0<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Generic MPEG1. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>A basic MPEG-1 profile that lets most parameters<br />
-&nbsp;<wbr>&nbsp;<wbr>be adjusted for particular applications using the other flags.<br />
-&nbsp;<wbr>&nbsp;<wbr>Typical applications would be to produce a variable bitrate MPEG-1<br />
-&nbsp;<wbr>&nbsp;<wbr>stream with big buffers and a high data-rate software playback<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>A basic MPEG-1 profile that lets most parameters<br/>
+&nbsp;<wbr>&nbsp;<wbr>be adjusted for particular applications using the other flags.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Typical applications would be to produce a variable bitrate MPEG-1<br/>
+&nbsp;<wbr>&nbsp;<wbr>stream with big buffers and a high data-rate software playback<br/>
 &nbsp;<wbr>&nbsp;<wbr>on a computer. </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>1<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>1<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Standard VCD. </p>
 <p> An MPEG1 profile exactly to the VCD2.0 specification. Flag settings that would result in a non-standard stream structure are simply ignored. </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>2<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>2<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>User VCD. </p>
 <p> As for profile 2 but bitrate and video buffer size can be set to non-standard values. Frame size may also be non-standard. Bit-rate and buffer sizes default to those for standard VCD. </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>3<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>3<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Generic MPEG2. </p>
 <p> A basic MPEG-2 profile that lets most parameters be adjusted for particular applications using the other flags. Typical applications would be to produce a MPEG-2 stream with big buffers and long GOP&#8217;s for software playback on a computer. </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>4<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>4<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Standard SVCD. </p>
 <p> An MPEG-2 profile exactly to the SVCD2.0 specification. Flag settings that would result in a non-standard stream structure are simply ignored. </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>5<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>5<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Non-standard SVCD. </p>
 <p> As for profile 4 but bitrate, video buffer size, GOP sizes and structure can be set to non-standard values. Frame size may also be non-standard. Bit-rate and buffer sizes default to those for standard SVCD. </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>6<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>6<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>VCD Stills sequence. </p>
 <p> Encodes the special style of MPEG stream used for still images on VCDs. To use this profile you must set the target size you wish to compress the images to using the -T flag. Reasonable values are around 35KB for standard resolution stills (352 wide) and 120KB for high resolution stills (704 wide). </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>7<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>7<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SVCD Stills sequence. </p>
 <p> Encodes the special style of MPEG stream used for still images on SVCDs. Both standard (480 wide) and high resolution (704 wide) images are supported. As with VCD stills you select how big each compressed still should be using the -T flag. </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>8<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>8<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>DVD MPEG-2 for&nbsp;<wbr>&#8216;dvdauthor&#8217; </p>
 <p> This version adds special dummy navigation packets into the output stream that the dvdauthor tool fills in to make a proper .VOB for authoring. Bit-rate defaults to 7500kbps, buffer sizes to the maximum permitted by the DVD specification. </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>9<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>9<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>DVD MPEG-2.&nbsp;<wbr> </p>
 <p> Just a very basic implementation. Useful with DXR2 board and similar hardware that can decode MPEG-2 only if it is presented in a DVD like form. Bit-rate defaults to 7500kbps, buffer sizes to the maximum permitted by the DVD specification. </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>10<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>10<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ATSC 480i&nbsp;<wbr> </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>11<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>11<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ATSC 480p </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>12<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>12<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ATSC 720p </p>
-<p> <code>-f|&#8211;format</code>&nbsp;<wbr>13<br />
+<p> <code>-f|&#8211;format</code>&nbsp;<wbr>13<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ATSC 1080i </p>
 <h2>GENERAL FUNCTION LETTERS</h2>
 <p> <code>-v|&#8211;verbose</code>&nbsp;<wbr>num </p>
 <p> Set verbosity level to num. 0 = warnings and errors only, 1 = information as well, 2=really verbose. </p>
-<p> <code>-K|&#8211;custom-quant-matrices</code><code>kvcd</code><code>|</code><code>tmpgenc</code><code>|</code><br />
+<p> <code>-K|&#8211;custom-quant-matrices</code><code>kvcd</code><code>|</code><code>tmpgenc</code><code>|</code><br/>
 &nbsp;<wbr><code>default</code>&nbsp;<wbr>|&nbsp;<wbr><code>hi-res</code>&nbsp;<wbr>|&nbsp;<wbr><code>file=</code>inputfile |&nbsp;<wbr><code>help</code> </p>
 <p> Specify which quantisation matrices to use instead of the defaults (which can be specified by using &quot;-K default&quot;). Using &quot;-K hi-res&quot; is identical to using the -H option. The value kvcd uses the Kvcd.Net matrices from <a rel="nofollow" href="http://www.kvcd.net/;">http://www.kvcd.net/;</a> the value tmpgenc invokes the TMPGEnc matrices from <a rel="nofollow" href="http://www.tmpgenc.net/e_main.html.">http://www.tmpgenc.net/e_main.html.</a> On average (this depends on the source material), the tmpgenc tables reduce the average bitrate by about 10% and the kvcd tables reduce bitrate by about 16% (compared to the default tables). </p>
 <p> <code>-E|&#8211;unit-coeff-elim</code>&nbsp;<wbr>-40..40 </p>
@@ -196,9 +196,9 @@ INFO : [mpeg2enc] Signaling last frame = 499 mpeg2enc : seqencoder.cc : 433 : vo
 <p> There should be an option to force GOP sizes that permit 2 B frames between I/P frames. Some decoders (even software) can&#8217;t handle the case where I/P frames come back to back or with only 1 B frame between them. </p>
 <p> There needs to be a facility for writing dummy user-data fields so that the multiplexer/imager can insert forward/backward pointers when muxing/imaging an SVCD.</p>
 <h2>AUTHOR</h2>
-<p> This man page was written by Andrew Stevens. If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was written by Andrew Stevens. If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
-<p> For more info, see our website at<br />
+<p> For more info, see our website at<br/>
 &nbsp;<wbr>&nbsp;<wbr><i><a rel="nofollow" href="http://mjpeg.sourceforge.net">http://mjpeg.sourceforge.net</a> </p>
 <p> </i></p>
 <h2>SEE ALSO</h2>

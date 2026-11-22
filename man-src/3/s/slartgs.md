@@ -11,7 +11,7 @@ description: "slartgs.f –"
 <p> slartgs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slartgs</code> (X, Y, SIGMA, CS, SN)<br />
+<p> subroutine <code>slartgs</code> (X, Y, SIGMA, CS, SN)<br/>
  <i></i><code>SLARTGS</code> generates a plane rotation designed to introduce a bulge in implicit QR iteration for the bidiagonal SVD problem.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slartgs (realX, realY, realSIGMA, realCS, realSN)</h3>

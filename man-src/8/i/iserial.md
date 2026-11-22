@@ -79,15 +79,15 @@ description: "ipmiutil_serial – configure a system for Serial/EMP management f
 <dt>ipmiutil serial -s</dt>
 <dd>Enables Basic Mode management functions shared with BIOS Serial Console redirection. The user can switch between serial console operations and IPMI Basic Mode management programs on the same serial port.</dd>
 <dt>ipmiutil serial -d</dt>
-<dd>Disables the serial port management functions. This would be used if only the BIOS Serial Console were used and no BMC serial management functions.  How to login to a Terminal Mode console:<br />
- ESC ( (switch to Terminal mode)<br />
- [SYS PWD -N ] (login for default user, null psw)<br />
- [SYS PWD -U ROOT -N PASSWORD] (syntax example for user 3)<br />
- [SYS 000157 ACTIVATE] (activate advanced commands)<br />
- [SYS HEALTH QUERY]<br />
- [SYS HELP]<br />
- [SYS PWD] (logoff)<br />
- ESC Q (switch to BIOS console)<br />
+<dd>Disables the serial port management functions. This would be used if only the BIOS Serial Console were used and no BMC serial management functions.  How to login to a Terminal Mode console:<br/>
+ ESC ( (switch to Terminal mode)<br/>
+ [SYS PWD -N ] (login for default user, null psw)<br/>
+ [SYS PWD -U ROOT -N PASSWORD] (syntax example for user 3)<br/>
+ [SYS 000157 ACTIVATE] (activate advanced commands)<br/>
+ [SYS HEALTH QUERY]<br/>
+ [SYS HELP]<br/>
+ [SYS PWD] (logoff)<br/>
+ ESC Q (switch to BIOS console)<br/>
  See IPMI 1.5 Spec, Appendix E, and Intel TIGPR2U TPS for more information. </dd>
 <h2>Dependencies</h2>
 <p>The ipmiutil serial utility is intended to configure the EMP serial port on the server for shared access between BMC/IPMI functions and BIOS Console Redirection. Some platforms only support only Basic Mode for BMC/IPMI functions. Basic Mode requires a remote client application to utilize it (Windows ISC Console/DPC, or a special modified Linux telnet). There are some platforms which implement Terminal Mode via IPMI v1.5 Appendix E to make remote management with character commands available on the serial port without a special remote client application. </p>
@@ -99,15 +99,15 @@ description: "ipmiutil_serial – configure a system for Serial/EMP management f
 <p>&nbsp;<wbr>&nbsp;<wbr>Baud Rate&nbsp;<wbr>=&nbsp;<wbr>115.2K </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Flow Control&nbsp;<wbr>=&nbsp;<wbr>CTS/RTS </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Terminal Type&nbsp;<wbr>=&nbsp;<wbr>VT100 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Legacy Redirection&nbsp;<wbr>=&nbsp;<wbr>Enabled<br />
- Note that the Baud Rate can vary, but it must match in all locations where it is used (BIOS, IPMI, and Linux).<br />
- For some non-Intel platforms, the serial console would be COM1 instead of COM2, but should be enabled in BIOS.<br />
- From Linux, run &quot;ipmiutil serial -c&quot; for Terminal Mode shared configuration.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Legacy Redirection&nbsp;<wbr>=&nbsp;<wbr>Enabled<br/>
+ Note that the Baud Rate can vary, but it must match in all locations where it is used (BIOS, IPMI, and Linux).<br/>
+ For some non-Intel platforms, the serial console would be COM1 instead of COM2, but should be enabled in BIOS.<br/>
+ From Linux, run &quot;ipmiutil serial -c&quot; for Terminal Mode shared configuration.<br/>
  Or, on older Intel TSRLT2 platforms: From Linux, run &quot;ipmiutil serial -s&quot; for Basic Mode Shared configuration.</p>
 <h2>Linux Configuration For Serial Console</h2>
 <p>If using lilo, in /etc/lilo.conf, add </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>append=&quot;console=ttyS1,19200n8 console=tty0&quot;<br />
- (and comment out the &quot;message=&quot; line because it includes graphics)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>append=&quot;console=ttyS1,19200n8 console=tty0&quot;<br/>
+ (and comment out the &quot;message=&quot; line because it includes graphics)<br/>
  Note that the append line can be placed in the global section and removed from each kernel section if there are no other differences. </p>
 <p> Or, if using grub, edit /boot/grub/grub.conf as follows: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#Omit the splashimage or gfxmenu </p>

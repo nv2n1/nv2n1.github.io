@@ -10,8 +10,8 @@ description: "smaclient – tool for accessing z/VM System Management functions"
 
 <p> smaclient &#8211; tool for accessing z/VM System Management functions</p>
 <h2>SYNOPSIS</h2>
-<p> <code>smaclient</code> [FUNCTION] [OPTION] [PARAMETER]<br />
- <code>smaclient</code> [-?|&#8211;help]<br />
+<p> <code>smaclient</code> [FUNCTION] [OPTION] [PARAMETER]<br/>
+ <code>smaclient</code> [-?|&#8211;help]<br/>
  <code>smaclient</code> [-T <i>target</i>] [-H <i>host</i>] [-U <i>user</i>] [-P <i>pass</i>] &lt;function&gt;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>smaclient</code> is a tool which provides a line-mode interface to the z/VM System Management API (SMAPI) for most Unix-compatible systems such as Linux. Smaclient can exercise all the VM management interfaces to create, modify and destroy virtual machines without ever logging into z/VM.</p>
@@ -37,7 +37,7 @@ description: "smaclient – tool for accessing z/VM System Management functions"
 <dt>supported long function names MUST match SMAPI function name. For a list of supported functions, execute smaclient without arguments.</dt>
 <dd></dd></dl>
 <h2>FILES</h2>
-<p> /etc/smaclient.conf<br />
+<p> /etc/smaclient.conf<br/>
  ~/.smaclient</p>
 <dl>
 <dt>For /etc/smaclient.conf and ~/.smaclient, you can specify any or all of the following variables:</dt>
@@ -53,16 +53,16 @@ description: "smaclient – tool for accessing z/VM System Management functions"
 <dl>
 <dt><code>smuser</code></dt>
 <dd>
- For TCP/IP, specify the userid authorized to use SMAPPI.<br />
+ For TCP/IP, specify the userid authorized to use SMAPPI.<br/>
  For IUCV, there&#8217;s no need to specify this, but it doesn&#8217;t hurt.</dd>
 <dt><code>smpass</code></dt>
 <dd>
- For TCP/IP, specify the corresponding password.<br />
+ For TCP/IP, specify the corresponding password.<br/>
  For IUCV, there&#8217;s no need to specify this, but it doesn&#8217;t hurt.</dd>
 <dt>An example ~/.smaclient:</dt>
 <dd></dd></dl>
-<p> smhost=&quot;myzvm/44444&quot;<br />
- smuser=&quot;vsmuser&quot;<br />
+<p> smhost=&quot;myzvm/44444&quot;<br/>
+ smuser=&quot;vsmuser&quot;<br/>
  smpass=&quot;secret&quot;</p>
 <h2>AUTHOR</h2>
 <p> smaclient written by Leland Lucius one fun week in the snowy winter of 2011. Manpage written by Rafael Fonseca.</p>

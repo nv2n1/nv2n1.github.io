@@ -19,7 +19,7 @@ description: "pamtoavs – convert a Netpbm image to an AVS X image"
 <pre>
     gnuplot&gt; plot 'myimage.avs' binary filetype=avs with rgbimage
 </pre>
-<p> See the <code>Gnuplot</code> manual (1)<br />
+<p> See the <code>Gnuplot</code> manual (1)<br/>
 &nbsp;<wbr>for more information. </p>
 <h2>AUTHOR</h2>
 <p> Copyright&nbsp;<wbr>&#169; 2010 Scott Pakin, <i>scott+pbm [at] pakin.org.</i> </p>

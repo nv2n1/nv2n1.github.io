@@ -155,9 +155,9 @@ $ git reset --merge ORIG_HEAD        <code>(3)</code>
 $ git cherry-pick -Xpatience topic^  <code>(4)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>apply the change that would be shown by <code>git show topic^</code>. In this example, the patch does not apply cleanly, so information about the conflict is written to the index and working tree and no new commit results.<br />
- <code>2. </code>summarize changes to be reconciled<br />
- <code>3. </code>cancel the cherry-pick. In other words, return to the pre-cherry-pick state, preserving any local modifications you had in the working tree.<br />
+<p> <code>1. </code>apply the change that would be shown by <code>git show topic^</code>. In this example, the patch does not apply cleanly, so information about the conflict is written to the index and working tree and no new commit results.<br/>
+ <code>2. </code>summarize changes to be reconciled<br/>
+ <code>3. </code>cancel the cherry-pick. In other words, return to the pre-cherry-pick state, preserving any local modifications you had in the working tree.<br/>
  <code>4. </code>try to apply the change introduced by <code>topic^</code> again, spending extra time to avoid mistakes based on incorrectly matching context lines. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-git-revert/">git-revert</a></code>(1)</p>

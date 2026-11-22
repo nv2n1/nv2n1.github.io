@@ -96,5 +96,5 @@ struct hostent {
 <h2>SEE ALSO</h2>
 <p> <code>RFC2553</code>(), <code><a href="/docs/linux/man/3-lwres/">lwres</a></code>(3), <code><a href="/docs/linux/man/3-lwres_gethostent/">lwres_gethostent</a></code>(3), <code><a href="/docs/linux/man/3-lwres_getaddrinfo/">lwres_getaddrinfo</a></code>(3), <code><a href="/docs/linux/man/3-lwres_getnameinfo/">lwres_getnameinfo</a></code>(3), <code><a href="/docs/linux/man/3-lwres_hstrerror/">lwres_hstrerror</a></code>(3).</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001, 2003 Internet Software Consortium. </p>

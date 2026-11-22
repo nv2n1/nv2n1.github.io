@@ -117,13 +117,13 @@ description: "sadf – Display data collected by sar in multiple formats."
 <dl>
 <dt><code>S_COLORS_PALETTE</code></dt>
 <dd> Specify the colors used by <code>sadf -g</code> to render the SVG output. This environment variable is taken into account only when the custom color palette has been selected with the option <code>customcol </code>(see option <code>-O</code>). Its value is a colon-separated list of capabilities associated with six-digit, three-byte hexadecimal numbers (hex triplets) representing colors that defaults to </dd>
-<p> <code>0=000000:1=1a1aff:2=1affb2:3=b21aff:</code><br />
- <code>4=1ab2ff:5=ff1a1a:6=ffb31a:7=b2ff1a:</code><br />
- <code>8=efefef:9=000000:A=1a1aff:B=1affb2:</code><br />
- <code>C=b21aff:D=1ab2ff:E=ff1a1a:F=ffb31a:</code><br />
- <code>G=bebebe:H=000000:I=000000:K=ffffff:</code><br />
+<p> <code>0=000000:1=1a1aff:2=1affb2:3=b21aff:</code><br/>
+ <code>4=1ab2ff:5=ff1a1a:6=ffb31a:7=b2ff1a:</code><br/>
+ <code>8=efefef:9=000000:A=1a1aff:B=1affb2:</code><br/>
+ <code>C=b21aff:D=1ab2ff:E=ff1a1a:F=ffb31a:</code><br/>
+ <code>G=bebebe:H=000000:I=000000:K=ffffff:</code><br/>
  <code>L=000000:T=000000:W=000000:X=000000</code> </p>
-<p> Capabilities consisting of an hexadecimal digit (<code>0 </code>through <code>F</code>) are used to specify the first sixteen colors in the palette (these colors are used to draw the graphs), e.g., 3=ffffff would indicate that the third color in the palette is white (0xffffff).<br />
+<p> Capabilities consisting of an hexadecimal digit (<code>0 </code>through <code>F</code>) are used to specify the first sixteen colors in the palette (these colors are used to draw the graphs), e.g., 3=ffffff would indicate that the third color in the palette is white (0xffffff).<br/>
  Other capabilities are:</p>
 <dl>
 <dl>
@@ -157,7 +157,7 @@ description: "sadf – Display data collected by sar in multiple formats."
 <h2>BUGS</h2>
 <p> SVG output (as created by option <code>-g</code>) is fully compliant with SVG 1.1 standard. Graphics have been successfully displayed in various web browsers, including Firefox, Chrome and Opera. Yet SVG rendering is broken on Microsoft browsers (tested on Internet Explorer 11 and Edge 13.1): So please don&#8217;t use them. </p>
 <h2>FILES</h2>
-<p> <i>/var/log/sysstat/saDD</i><br />
+<p> <i>/var/log/sysstat/saDD</i><br/>
  <i>/var/log/sysstat/saYYYYMMDD</i></p>
 <dl>
 <dt>
@@ -166,5 +166,5 @@ description: "sadf – Display data collected by sar in multiple formats."
 <p> Sebastien Godard (sysstat &lt;at&gt; orange.fr) </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sar/">sar</a></code>(1), <code><a href="/docs/linux/man/8-sadc/">sadc</a></code>(8), <code><a href="/docs/linux/man/8-sa1/">sa1</a></code>(8), <code><a href="/docs/linux/man/8-sa2/">sa2</a></code>(8), <code><a href="/docs/linux/man/5-sysstat/">sysstat</a></code>(5) </p>
-<p> <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br />
+<p> <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br/>
  <i><a rel="nofollow" href="http://pagesperso-orange.fr/sebastien.godard/">http://pagesperso-orange.fr/sebastien.godard/</a></i> </p>

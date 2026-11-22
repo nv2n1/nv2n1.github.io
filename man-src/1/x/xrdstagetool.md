@@ -24,5 +24,5 @@ xrdstagetool[options] paths
 <h2>LICENSE</h2>
 <p> License terms can be displayed by typing &quot;<code>xrootd -H</code>&quot;.</p>
 <h2>SUPPORT LEVEL</h2>
-<p> The <code>xrdstagetool</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
+<p> The <code>xrdstagetool</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br/>
  </center> </p>

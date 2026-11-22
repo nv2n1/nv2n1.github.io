@@ -13,7 +13,7 @@ description: "zmq_errno – retrieve value of errno for the calling thread"
 <h2>Description</h2>
 <p>The <i>zmq_errno()</i> function shall retrieve the value of the <i>errno</i> variable for the calling thread. The <i>zmq_errno()</i> function is provided to assist users on non-POSIX systems who are experiencing issues with retrieving the correct value of <i>errno</i> directly. Specifically, users on Win32 systems whose application is using a different C run-time library from the C run-time library in use by 0MQ will need to use <i>zmq_errno()</i> for correct operation.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
+<dd> <code>Important</code> <br/>
  Users not experiencing issues with retrieving the correct value of <i>errno</i> should not use this function and should instead access the <i>errno</i> variable directly. </dd>
 <h2>Return Value</h2>
 <p>The <i>zmq_errno()</i> function shall return the value of the <i>errno</i> variable for the calling thread.</p>

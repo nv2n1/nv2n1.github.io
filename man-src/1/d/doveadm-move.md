@@ -8,17 +8,17 @@ url: "/docs/linux/man/1-doveadm-move/"
 description: "doveadm-move – Move messages matching the given search query into another mailbox doveadm-copy – Copy messages matching the given search query into another mailbox"
 ---
 
-<p> doveadm-move &#8211; Move messages matching the given search query into another mailbox<br />
+<p> doveadm-move &#8211; Move messages matching the given search query into another mailbox<br/>
  doveadm-copy &#8211; Copy messages matching the given search query into another mailbox</p>
 <h2>SYNOPSIS</h2>
-<p> <code>doveadm</code> [<code>-Dv</code>] <code>move</code> [<code>-S</code> <i>socket_path</i>] <i>destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i><br />
- <code>doveadm</code> [<code>-Dv</code>] <code>move</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i> destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i><br />
+<p> <code>doveadm</code> [<code>-Dv</code>] <code>move</code> [<code>-S</code> <i>socket_path</i>] <i>destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i><br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>move</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i> destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i><br/>
  <code>doveadm</code> [<code>-Dv</code>] <code>move</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i> user destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i> </p>
-<p> <code>doveadm</code> [<code>-Dv</code>] <code>copy</code> [<code>-S</code> <i>socket_path</i>] <i>destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i><br />
- <code>doveadm</code> [<code>-Dv</code>] <code>copy</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i> destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i><br />
+<p> <code>doveadm</code> [<code>-Dv</code>] <code>copy</code> [<code>-S</code> <i>socket_path</i>] <i>destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i><br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>copy</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i> destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i><br/>
  <code>doveadm</code> [<code>-Dv</code>] <code>copy</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i> user destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i></p>
 <h2>DESCRIPTION</h2>
-<p> <code>doveadm move</code> can be used for moving mails between mailboxes for one or more users. The <i>search_query</i> is used to restrict which messages are moved into the <i>destination</i> mailbox.<br />
+<p> <code>doveadm move</code> can be used for moving mails between mailboxes for one or more users. The <i>search_query</i> is used to restrict which messages are moved into the <i>destination</i> mailbox.<br/>
  <code>doveadm copy</code> behaves the same as <code>doveadm move</code>, except that copied messages will not be expunged after copying. </p>
 <p> In the first form, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will execute the <code>move</code>/<code>copy</code> action with the environment of the logged in system user. </p>
 <p> In the second form, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will iterate over all users, found in the configured <i>user_db</i>(s), and move or copy each user&#8217;s messages, matching the given <i>search_query</i>, into the user&#8217;s <i>destination</i> mailbox. </p>
@@ -39,7 +39,7 @@ description: "doveadm-move – Move messages matching the given search query int
 <dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
 <p> This allows an administrator to execute <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) mail commands through the given socket.</p>
 <dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
-<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
+<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br/>
  When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
@@ -48,7 +48,7 @@ description: "doveadm-move – Move messages matching the given search query int
 <dt><i>search_query</i></dt>
 <dd> Move/copy messages matching the given search query. See <code><a href="/docs/linux/man/7-doveadm-search-query/">doveadm-search-query</a></code>(7) for details.</dd>
 <dt><code>user</code><i>&nbsp;<wbr>source_user</i></dt>
-<dd> The keyword <code>user</code> followed by a valid user name. When this argument is present, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will apply the <i>search_query</i> to the <i>source_user</i>&#8216;s <i>mail_location</i>.<br />
+<dd> The keyword <code>user</code> followed by a valid user name. When this argument is present, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will apply the <i>search_query</i> to the <i>source_user</i>&#8216;s <i>mail_location</i>.<br/>
  <code>Limitation:</code> Currently the users, specified by <code>-u</code><i> user</i> and <code>user</code><i> source_user,</i> must share the same UID and GID.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Move jane&#8217;s messages &#8211; received in September 2011 &#8211; from her INBOX into her archive. </p>

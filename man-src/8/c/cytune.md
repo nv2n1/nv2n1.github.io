@@ -13,10 +13,10 @@ description: "cytune – tune driver parameters for Cyclades-Z multiport serial 
 <h2>Description</h2>
 <p><code>cytune</code> queries and modifies the interruption threshold for the Cyclades driver. Each serial line on a Cyclades card has a 12-byte FIFO for input (and another 12-byte FIFO for output). The &quot;threshold&quot; specifies how many input characters must be present in the FIFO before an interruption is raised. When a Cyclades tty is opened, this threshold is set to a default value based on baud rate:</p>
 <dl>
-<dd>&nbsp;<wbr>Baud&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Threshold 50-4800 10<br />
- 9600 8<br />
- 19200 4<br />
- 38400 2<br />
+<dd>&nbsp;<wbr>Baud&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Threshold 50-4800 10<br/>
+ 9600 8<br/>
+ 19200 4<br/>
+ 38400 2<br/>
  57600-150000 1</dd></dl>
 <p> If the threshold is set too low, the large number of interruptions can load the machine and decrease overall system throughput. If the threshold is set too high, the FIFO buffer can overflow, and characters will be lost. Slower machines, however, may not be able to deal with the interrupt load, and will require that the threshold be adjusted upwards. If the cyclades driver was compiled with <code>ENABLE_MONITORING</code> defined, the cytune command can be used with the <code>-q</code> option to report interrupts over the monitoring interval and characters transferred over the monitoring interval. It will also report the state of the FIFO. The maximum number of characters in the FIFO when an interrupt occurred, the instantaneous count of characters in the FIFO, and how many characters are now in the FIFO are reported. This output might look like this:</p>
 <dl>
@@ -44,7 +44,7 @@ description: "cytune – tune driver parameters for Cyclades-Z multiport serial 
 <h2>Bugs</h2>
 <p>If you run two copies of <code>cytune</code> at the same time to report statistics about the same port, the &#8216;ints&#8217;, &#8216;chars&#8217;, and &#8216;max&#8217; value will be reset and not reported correctly. <code>cytune</code> should prevent this, but does not.</p>
 <h2>Files</h2>
-<p><i>/dev/ttyC[0-8]</i><br />
+<p><i>/dev/ttyC[0-8]</i><br/>
  <i>/dev/cubC[0-8]</i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-setserial/">setserial</a></code>(8)</p>

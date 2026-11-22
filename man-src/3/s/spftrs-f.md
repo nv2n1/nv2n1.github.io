@@ -10,7 +10,7 @@ description: "spftrs.f –"
 <p>spftrs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>spftrs</code> (TRANSR, UPLO, N, NRHS, A, B, LDB, INFO)<br />
+<p>subroutine <code>spftrs</code> (TRANSR, UPLO, N, NRHS, A, B, LDB, INFO)<br/>
  <i></i><code>SPFTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spftrs (characterTRANSR, characterUPLO, integerN, integerNRHS, real, dimension( 0: * )A, real, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

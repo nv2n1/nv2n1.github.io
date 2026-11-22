@@ -9,9 +9,9 @@ description: "Object Layer Functions – Functions that retrieve and set the lay
 
 <p>Object Layer Functions &#8211; Functions that retrieve and set the layer that an evas object is on. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_object_layer_set</code> (<code>Evas_Object</code> *obj, short l)<br />
- <i>Sets the layer of the evas that the given object will be part of. </i><br />
- EAPI short <code>evas_object_layer_get</code> (const <code>Evas_Object</code> *obj)<br />
+<p>EAPI void <code>evas_object_layer_set</code> (<code>Evas_Object</code> *obj, short l)<br/>
+ <i>Sets the layer of the evas that the given object will be part of. </i><br/>
+ EAPI short <code>evas_object_layer_get</code> (const <code>Evas_Object</code> *obj)<br/>
  <i>Retrieves the layer of the evas that the given object is part of. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that retrieve and set the layer that an evas object is on. </p>
@@ -31,7 +31,7 @@ description: "Object Layer Functions – Functions that retrieve and set the lay
 <p>Sets the layer of the evas that the given object will be part of. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given evas object.<br />
+<dd><i>obj</i> The given evas object.<br/>
  <i>l</i> The number of the layer to place the object on.</dd></dl>
 <p> References evas_list_find().</p>
 <h2>Author</h2>

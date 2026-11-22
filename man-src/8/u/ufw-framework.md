@@ -58,14 +58,14 @@ description: "ufw-framework – using the ufw framework"
 <p> After modifying any of these files, you must reload <code>ufw</code> for the rules to take effect. See the EXAMPLES section for common uses of these rules files.</p>
 <h2>Modules</h2>
 <p>Netfilter has many different connection tracking modules. These modules are aware of the underlying protocol and allow the administrator to simplify his or her rule sets. You can adjust which netfilter modules to load by adjusting IPT_MODULES in /etc/default/ufw. Some popular modules to load are: </p>
-<p>&nbsp;<wbr>&nbsp;nf_conntrack_ftp<br />
-&nbsp;<wbr>&nbsp;nf_nat_ftp<br />
-&nbsp;<wbr>&nbsp;nf_conntrack_irc<br />
-&nbsp;<wbr>&nbsp;nf_nat_irc<br />
-&nbsp;<wbr>&nbsp;nf_conntrack_netbios_ns<br />
-&nbsp;<wbr>&nbsp;nf_conntrack_pptp<br />
-&nbsp;<wbr>&nbsp;nf_conntrack_tftp<br />
-&nbsp;<wbr>&nbsp;nf_nat_tftp<br />
+<p>&nbsp;<wbr>&nbsp;nf_conntrack_ftp<br/>
+&nbsp;<wbr>&nbsp;nf_nat_ftp<br/>
+&nbsp;<wbr>&nbsp;nf_conntrack_irc<br/>
+&nbsp;<wbr>&nbsp;nf_nat_irc<br/>
+&nbsp;<wbr>&nbsp;nf_conntrack_netbios_ns<br/>
+&nbsp;<wbr>&nbsp;nf_conntrack_pptp<br/>
+&nbsp;<wbr>&nbsp;nf_conntrack_tftp<br/>
+&nbsp;<wbr>&nbsp;nf_nat_tftp<br/>
 &nbsp;<wbr>&nbsp;nf_conntrack_sane </p>
 <p> Unconditional loading of connection tracking modules (nf_conntrack_*) in this manner is deprecated. <code>ufw</code> continues to support the functionality but new configuration should only contain the specific modules required for the site. For more information, see CONNECTION HELPERS.</p>
 <h2>Kernel Parameters</h2>
@@ -80,14 +80,14 @@ description: "ufw-framework – using the ufw framework"
 <dt>Edit /etc/ufw/sysctl.conf to have:</dt>
 <dd>&nbsp;net.ipv4.ip_forward=1</dd>
 <dt>Add to the end of /etc/ufw/before.rules, after the *filter section:</dt>
-<dd>&nbsp;*nat<br />
-&nbsp;:POSTROUTING ACCEPT&nbsp;[0:0]<br />
-&nbsp;-A POSTROUTING -s 10.0.0.0/8 -o eth0 -j MASQUERADE<br />
+<dd>&nbsp;*nat<br/>
+&nbsp;:POSTROUTING ACCEPT&nbsp;[0:0]<br/>
+&nbsp;-A POSTROUTING -s 10.0.0.0/8 -o eth0 -j MASQUERADE<br/>
 &nbsp;COMMIT</dd>
 <dt>If your firewall is using IPv6 tunnels or 6to4 and is also doing NAT, then you should not usually masquerade protocol &#8217;41&#8217; (ipv6) packets. For example, instead of the above, /etc/ufw/before.rules can be adjusted to have:</dt>
-<dd>&nbsp;*nat<br />
-&nbsp;:POSTROUTING ACCEPT&nbsp;[0:0]<br />
-&nbsp;-A POSTROUTING -s 10.0.0.0/8&nbsp;!&nbsp;&#8211;protocol 41 -o eth0 -j MASQUERADE<br />
+<dd>&nbsp;*nat<br/>
+&nbsp;:POSTROUTING ACCEPT&nbsp;[0:0]<br/>
+&nbsp;-A POSTROUTING -s 10.0.0.0/8&nbsp;!&nbsp;&#8211;protocol 41 -o eth0 -j MASQUERADE<br/>
 &nbsp;COMMIT</dd>
 <dt>Add the <code>ufw route</code> to allow the traffic:</dt>
 <dd>&nbsp;ufw route allow in on eth1 out on eth0 from 10.0.0.0/8</dd></dl>
@@ -97,10 +97,10 @@ description: "ufw-framework – using the ufw framework"
 <dt>Edit /etc/ufw/sysctl.conf to have:</dt>
 <dd>&nbsp;net.ipv4.ip_forward=1</dd>
 <dt>Add to the end of /etc/ufw/before.rules, after the *filter section:</dt>
-<dd>&nbsp;*nat<br />
-&nbsp;:PREROUTING ACCEPT&nbsp;[0:0]<br />
-&nbsp;-A PREROUTING -p tcp -i eth0 &#8211;dport 80 -j DNAT&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;to-destination 10.0.0.2:80<br />
+<dd>&nbsp;*nat<br/>
+&nbsp;:PREROUTING ACCEPT&nbsp;[0:0]<br/>
+&nbsp;-A PREROUTING -p tcp -i eth0 &#8211;dport 80 -j DNAT&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;to-destination 10.0.0.2:80<br/>
 &nbsp;COMMIT</dd>
 <dt>Add the <code>ufw route</code> rule to allow the traffic:</dt>
 <dd>&nbsp;ufw route allow in on eth0 to 10.0.0.2 port 80 proto tcp</dd></dl>
@@ -108,8 +108,8 @@ description: "ufw-framework – using the ufw framework"
 <p>To block RFC1918 addresses going out of eth0:</p>
 <dl>
 <dt>Add the <code>ufw route</code> rules to reject the traffic:</dt>
-<dd>&nbsp;ufw route reject out on eth0 to 10.0.0.0/8<br />
-&nbsp;ufw route reject out on eth0 to 172.16.0.0/12<br />
+<dd>&nbsp;ufw route reject out on eth0 to 10.0.0.0/8<br/>
+&nbsp;ufw route reject out on eth0 to 172.16.0.0/12<br/>
 &nbsp;ufw route reject out on eth0 to 192.168.0.0/16</dd></dl>
 <h3>Full example</h3>
 <p>This example combines the other examples and demonstrates a simple routing firewall. <code>Warning</code>: this setup is only an example to demonstrate the functionality of the <code>ufw</code> framework in a concise and simple manner and should not be used in production without understanding what each part does and does not do. Your firewall will undoubtedly want to be less open. This router/firewall has two interfaces: eth0 (Internet facing) and eth1 (internal LAN). Internal clients have addresses on the 10.0.0.0/8 network and should be able to connect to anywhere on the Internet. Connections to port 80 from the Internet should be forwarded to 10.0.0.2. Access to ssh port 22 from the administrative workstation (10.0.0.100) to this machine should be allowed. Also make sure no internal traffic goes to the Internet.</p>
@@ -117,19 +117,19 @@ description: "ufw-framework – using the ufw framework"
 <dt>Edit /etc/ufw/sysctl.conf to have:</dt>
 <dd>&nbsp;<wbr>&nbsp;net.ipv4.ip_forward=1</dd>
 <dt>Add to the end of /etc/ufw/before.rules, after the *filter section:</dt>
-<dd>&nbsp;*nat<br />
-&nbsp;:PREROUTING ACCEPT&nbsp;[0:0]<br />
-&nbsp;:POSTROUTING ACCEPT&nbsp;[0:0]<br />
-&nbsp;-A PREROUTING -p tcp -i eth0 &#8211;dport 80 -j DNAT&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;to-destination 10.0.0.2:80<br />
-&nbsp;-A POSTROUTING -s 10.0.0.0/8 -o eth0 -j MASQUERADE<br />
+<dd>&nbsp;*nat<br/>
+&nbsp;:PREROUTING ACCEPT&nbsp;[0:0]<br/>
+&nbsp;:POSTROUTING ACCEPT&nbsp;[0:0]<br/>
+&nbsp;-A PREROUTING -p tcp -i eth0 &#8211;dport 80 -j DNAT&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;to-destination 10.0.0.2:80<br/>
+&nbsp;-A POSTROUTING -s 10.0.0.0/8 -o eth0 -j MASQUERADE<br/>
 &nbsp;COMMIT</dd>
 <dt>Add the necessary <code>ufw</code> rules:</dt>
-<dd>&nbsp;ufw route reject out on eth0 to 10.0.0.0/8<br />
-&nbsp;ufw route reject out on eth0 to 172.16.0.0/12<br />
-&nbsp;ufw route reject out on eth0 to 192.168.0.0/16<br />
-&nbsp;ufw route allow in on eth1 out on eth0 from 10.0.0.0/8<br />
-&nbsp;ufw route allow in on eth0 to 10.0.0.2 port 80 proto tcp<br />
+<dd>&nbsp;ufw route reject out on eth0 to 10.0.0.0/8<br/>
+&nbsp;ufw route reject out on eth0 to 172.16.0.0/12<br/>
+&nbsp;ufw route reject out on eth0 to 192.168.0.0/16<br/>
+&nbsp;ufw route allow in on eth1 out on eth0 from 10.0.0.0/8<br/>
+&nbsp;ufw route allow in on eth0 to 10.0.0.2 port 80 proto tcp<br/>
 &nbsp;ufw allow in on eth1 from 10.0.0.100 to any port 22 proto tcp </dd>
 <h2>Connection Helpers</h2>
 <p>Various protocols require the use of netfilter connection tracking helpers to group related packets into RELATED flows to make rulesets clearer and more precise. For example, with a couple of kernel modules and a couple of rules, a ruleset could simply allow a connection to FTP port 21, then the kernel would examine the traffic and mark the other FTP data packets as RELATED to the initial connection. </p>
@@ -155,7 +155,7 @@ description: "ufw-framework – using the ufw framework"
 <pre><code>net.bridge.bridge-nf-call-ip6tables = 0
 net.bridge.bridge-nf-call-iptables = 0
 net.bridge.bridge-nf-call-arptables = 0</code></pre>
-<p> Note that the bridge module must be loaded in to the kernel before these values are set. One way to ensure this works properly with ufw is to add &#8216;bridge&#8217; to IPT_MODULES in /etc/default/ufw, and then add the above rules to /etc/ufw/sysctl.conf. Alternatively to disabling netfilter on the bridge, you can configure iptables to allow all traffic to be forwarded across the bridge. Eg, add to /etc/ufw/before.rules within the *filter section:<br />
+<p> Note that the bridge module must be loaded in to the kernel before these values are set. One way to ensure this works properly with ufw is to add &#8216;bridge&#8217; to IPT_MODULES in /etc/default/ufw, and then add the above rules to /etc/ufw/sysctl.conf. Alternatively to disabling netfilter on the bridge, you can configure iptables to allow all traffic to be forwarded across the bridge. Eg, add to /etc/ufw/before.rules within the *filter section:<br/>
 &nbsp;<wbr>&nbsp;-I FORWARD -m physdev &#8211;physdev-is-bridged -j ACCEPT </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ufw/">ufw</a></code>(8), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/8-ip6tables/">ip6tables</a></code>(8), <code><a href="/docs/linux/man/8-iptables-restore/">iptables-restore</a></code>(8), <code><a href="/docs/linux/man/8-ip6tables-restore/">ip6tables-restore</a></code>(8), <code><a href="/docs/linux/man/8-sysctl/">sysctl</a></code>(8), <code><a href="/docs/linux/man/5-sysctl-conf/">sysctl.conf</a></code>(5) </p>

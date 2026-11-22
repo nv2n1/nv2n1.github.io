@@ -19,8 +19,8 @@ description: "Lintian::Processable::Binary::Relation – Lintian interface to bi
 <p> Native heuristics are only available in source packages.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>relation (<font SIZE="-1">FIELD</font>)</dt>
-<dd> Returns a Lintian::Relation object for the specified <font SIZE="-1">FIELD,</font> which should be one of the possible relationship fields of a Debian package or one of the following special values:</dd>
+<dt>relation (FIELD)</dt>
+<dd> Returns a Lintian::Relation object for the specified FIELD, which should be one of the possible relationship fields of a Debian package or one of the following special values:</dd>
 <dl COMPACT>
 <dl COMPACT>
 <dt>all</dt>
@@ -33,7 +33,7 @@ description: "Lintian::Processable::Binary::Relation – Lintian interface to bi
 <dl COMPACT>
 <dt>
 </dt><dd>
-<p> If <font SIZE="-1">FIELD</font> isn&#8217;t present in the package, the returned Lintian::Relation object will be empty (always satisfied and implies nothing).</dd></dl>
+<p> If FIELD isn&#8217;t present in the package, the returned Lintian::Relation object will be empty (always satisfied and implies nothing).</dd></dl>
 <dt>saved_relations</dt>
 <dd></dd></dl>
 <h2>Author</h2>

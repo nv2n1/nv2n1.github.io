@@ -10,8 +10,8 @@ description: "texi2dvi – convert Texinfo documents to DVI or PDF"
 
 <p> texi2dvi &#8211; convert Texinfo documents to DVI or PDF </p>
 <h2>SYNOPSIS</h2>
-<p> <code>texi2dvi</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;<br />
- <code>texi2pdf</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;<br />
+<p> <code>texi2dvi</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;<br/>
+ <code>texi2pdf</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;<br/>
  <code>pdftexi2dvi</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> Run each Texinfo or (La)TeX FILE through TeX in turn until all cross-references are resolved, building all indices. The directory containing each FILE is searched for included files. The suffix of FILE is used to determine its language ((La)TeX or Texinfo). To process (e)plain TeX files, set the environment variable LATEX=tex. </p>
@@ -98,11 +98,11 @@ description: "texi2dvi – convert Texinfo documents to DVI or PDF"
 </dt><dd> info texi2dvi</dd></dl>
 <p> should give you access to more documentation.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to bug-texinfo [at] gnu.org, general questions and discussion to help-texinfo [at] gnu.org.<br />
- GNU Texinfo home page: &lt;<a rel="nofollow" href="http://www.gnu.org/software/texinfo/">http://www.gnu.org/software/texinfo/</a>&gt;<br />
+<p> Report bugs to bug-texinfo [at] gnu.org, general questions and discussion to help-texinfo [at] gnu.org.<br/>
+ GNU Texinfo home page: &lt;<a rel="nofollow" href="http://www.gnu.org/software/texinfo/">http://www.gnu.org/software/texinfo/</a>&gt;<br/>
  General help using GNU software: &lt;<a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2021 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 2021 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>texi2dvi</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>texi2dvi</code> programs are properly installed at your site, the command</p>

@@ -18,7 +18,7 @@ If the <tt>&quot;readserver&quot;</tt> parameter in <i>ovdb.conf</i> is true, <t
 
  <tt>&quot;ovdb_server&quot;</tt> opens the overview database, and accesses it on behalf of the nnrpd reader processes. 
 
- To shut down ovdb_server, send a <font SIZE="-1">TERM</font> signal to the process <font SIZE="-1">ID</font> in <i>pathrun/ovdb_server.pid</i> . The parent process will shut down its children and wait for their exit before exiting itself.
+ To shut down ovdb_server, send a TERM signal to the process ID in <i>pathrun/ovdb_server.pid</i> . The parent process will shut down its children and wait for their exit before exiting itself.
 
 <h2>History</h2>
 

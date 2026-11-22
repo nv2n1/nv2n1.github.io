@@ -9,7 +9,7 @@ description: "sepolicy-transition – Examine the SELinux Policy and generate a 
 
 <p>sepolicy-transition &#8211; Examine the SELinux Policy and generate a process transition report </p>
 <h2>Synopsis</h2>
-<p><code>sepolicy transition [-h] -s SOURCE</code><br />
+<p><code>sepolicy transition [-h] -s SOURCE</code><br/>
  <code>sepolicy transition [-h] -s SOURCE -t TARGET</code> </p>
 <h2>Description</h2>
 <p>sepolicy transition will show all domains that a give SELinux source domain can transition to, including the entrypoint. If a target domain is given, sepolicy transition will examine policy for all transition paths from the source domain to the target domain, and will list the paths. If a transition is possible, this tool will print out all transition paths from the source domain to the target domain </p>

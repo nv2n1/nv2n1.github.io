@@ -12,7 +12,7 @@ description: "log4cpp::HierarchyMaintainer –"
 <h2>Synopsis</h2>
 <p>#include &lt;HierarchyMaintainer.hh&gt;</p>
 <h3>Public Types</h3>
-<p>typedef std::map&lt; std::string,<br />
+<p>typedef std::map&lt; std::string,<br/>
  <code>Category</code> * &gt; <code>CategoryMap</code>&quot; </p>
 <p> typedef void(* <code>shutdown_fun_ptr</code> )() </p>
 <h3>Public Member Functions</h3>

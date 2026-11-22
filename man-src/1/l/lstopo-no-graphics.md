@@ -160,8 +160,8 @@ description: "lstopo, lstopo-no-graphics, hwloc-ls – Show the topology of the 
 <dt><code>Text2</dt>
 <dd> Sets the color of the additional text near the object, for instance the link speed behind a PCI bridge.</dd></dl>
 <p> The &quot;lstopoStyle&quot; info may be added to a temporarily-saved XML topologies with hwloc-annotate, or with hwloc_obj_add_info(). For instance, to display all core objects in blue (with white names): </p>
-<p>&nbsp;<wbr>lstopo save.xml<br />
-&nbsp;<wbr>hwloc-annotate save.xml save.xml core:all info lstopoStyle&nbsp;<wbr>&quot;Background=#0000ff;Text=#ffffff&quot;<br />
+<p>&nbsp;<wbr>lstopo save.xml<br/>
+&nbsp;<wbr>hwloc-annotate save.xml save.xml core:all info lstopoStyle&nbsp;<wbr>&quot;Background=#0000ff;Text=#ffffff&quot;<br/>
 &nbsp;<wbr>lstopo -i save.xml </code></p>
 <h2>LAYOUT</h2>
 <p> In its graphical output, lstopo uses simple rectangular heuristics to try to achieve a 4/3 ratio between width and height. However, in the particular case of NUMA nodes, the layout is always a flat rectangle, to avoid letting the user believe any particular NUMA topology (lstopo is not able to render that yet). The layout of a level may be changed with &#8211;vert, &#8211;horiz, and &#8211;rect.</p>
@@ -175,12 +175,12 @@ description: "lstopo, lstopo-no-graphics, hwloc-ls – Show the topology of the 
 <p> To export the topology to a PNG file: </p>
 <p>&nbsp;<wbr>lstopo file.png </p>
 <p> To export an XML file on a machine and later display the corresponding graphical output on another machine: </p>
-<p>&nbsp;<wbr>machine1$&nbsp;<wbr>lstopo file.xml<br />
-&nbsp;<wbr>&lt;transfer file.xml from machine1 to machine2&gt;<br />
+<p>&nbsp;<wbr>machine1$&nbsp;<wbr>lstopo file.xml<br/>
+&nbsp;<wbr>&lt;transfer file.xml from machine1 to machine2&gt;<br/>
 &nbsp;<wbr>machine2$&nbsp;<wbr>lstopo &#8211;input file.xml </p>
 <p> To save the current machine topology to XML and later reload it faster while still considering it as the current machine: </p>
-<p>$&nbsp;<wbr>lstopo file.xml<br />
-&lt;&#8230;&gt;<br />
+<p>$&nbsp;<wbr>lstopo file.xml<br/>
+&lt;&#8230;&gt;<br/>
 $&nbsp;<wbr>lstopo &#8211;input file.xml &#8211;thissystem </p>
 <p> To restrict an XML topology to only physical processors 0, 1, 4 and 5: </p>
 <p>&nbsp;<wbr>lstopo &#8211;input file.xml &#8211;restrict 0x33 newfile.xml </p>

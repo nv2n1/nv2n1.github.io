@@ -9,10 +9,10 @@ description: "make-ssl-cert – Debconf wrapper for openssl"
 
 <p>make-ssl-cert &#8211; Debconf wrapper for openssl</p>
 <h2>Synopsis</h2>
-<p><code>make-ssl-cert</code> [<i>,OPTION/</i>]&#8230; <i>template</i> <i>output-certificate</i><br />
+<p><code>make-ssl-cert</code> [<i>,OPTION/</i>]&#8230; <i>template</i> <i>output-certificate</i><br/>
  <code>make-ssl-cert [</code><i>,OPTION/</i>]&#8230; generate-default-snakeoil</p>
 <h2>Description</h2>
-<p>make-ssl-cert is a simple debconf to openssl wrapper to create self-signed certificates. It requires a source template (Ex: /usr/share/ssl-cert/ssleay.cnf) and it will place the new generated certificate in the specified output file.<br />
+<p>make-ssl-cert is a simple debconf to openssl wrapper to create self-signed certificates. It requires a source template (Ex: /usr/share/ssl-cert/ssleay.cnf) and it will place the new generated certificate in the specified output file.<br/>
  Invoked with &quot;generate-default-snakeoil&quot;, it will generate /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key.</p>
 <h2>Options</h2>
 <p>A summary of options are included below.</p>

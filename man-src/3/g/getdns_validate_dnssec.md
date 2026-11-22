@@ -13,11 +13,11 @@ description: "getdns_validate_dnssec — DNSSEC validate a given getdns record"
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_validate_dnssec</code> (getdns_list *record_to_validate, </p>
 <dl>
 <dt>
-</dt><dd> getdns_list *bundle_of_support_records,<br />
+</dt><dd> getdns_list *bundle_of_support_records,<br/>
  getdns_list *trust_anchor_records)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> If an application wants the API to perform DNSSEC validation without using the extensions, it can use the getdns_validate_dnssec() helper function. The API will use the resource records in bundle_of_support_records to construct the validation chain and the DNSKEY or DS records in trust_anchor_records as trust anchors. The default list of trust anchor records that is used by the library to validate DNSSEC can be retrieved by using the getdns_root_trust_anchor helper function. </p>

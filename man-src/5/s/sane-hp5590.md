@@ -90,7 +90,7 @@ description: "sane-hp5590 – SANE backend for Hewlett-Packard 4500C/4570C/5500C
 <dt><code>&#8211;preview[=yes|no]</code></dt>
 <dd>Request a preview-quality scan. (Default: no)</dd>
 <dt><code>&#8211;hide-eop-pixel[=yes|no]</code></dt>
-<dd>Hide end-of-page indicator pixels and overwrite with color of next neighbor pixels. (Default: yes)<br />
+<dd>Hide end-of-page indicator pixels and overwrite with color of next neighbor pixels. (Default: yes)<br/>
  The scanner uses the last pixel in every scan line for storing the end-of-page status. This is needed to detect the end of the document sheet when the automatic document feeder (ADF) is used. Unfortunately the end-of-page pixels are also generated in flatbed scans. It is recommended to hide these pixels.</dd>
 <dt><code>&#8211;trailing-lines-mode </code>mode</dt>
 <dd>Filling mode of trailing lines after end of page when automatic document feeder (ADF) is used. mode must be one of: &#8220;last&#8221;, &#8220;raw&#8221;, &#8220;raster&#8221;, &#8220;white&#8221;, &#8220;black&#8221;, &#8220;color&#8221;. (Default: &#8220;last&#8221;)</dd>
@@ -111,13 +111,13 @@ description: "sane-hp5590 – SANE backend for Hewlett-Packard 4500C/4570C/5500C
 <dd>&#8220;color&#8221; = RGB or gray colored pixels (see next option).</dd></dl>
 </dl>
 <dt><code>&#8211;trailing-lines-color </code>n</dt>
-<dd>Set color value for filling trailing scan lines in trailing lines mode &#8220;color&#8221; (see previous option). (Default color: violet)<br />
+<dd>Set color value for filling trailing scan lines in trailing lines mode &#8220;color&#8221; (see previous option). (Default color: violet)<br/>
  The RGB color value must be specified and calculated as 65536 * r + 256 * g + b, with r, g, b being values in the range of 0 .. 255.</dd></dl>
 <h2>Read Out Options</h2>
 <p>The following options allow reading out the button state, counter value, color setting, and the state of document in ADF. This can be used to programmatically control corresponding scanner options like switching between flatbed and ADF mode, or triggering post processing tasks after scanning.</p>
 <dl>
 <dt><code>&#8211;button-pressed</code></dt>
-<dd>Get the id of the last button pressed. Id is one of &#8220;none&#8221;, &#8220;power&#8221;, &#8220;scan&#8221;, &#8220;collect&#8221;, &#8220;file&#8221;, &#8220;email&#8221;, &#8220;copy&#8221;, &#8220;up&#8221;, &#8220;down&#8221;, &#8220;mode&#8221;, &#8220;cancel&#8221;.<br />
+<dd>Get the id of the last button pressed. Id is one of &#8220;none&#8221;, &#8220;power&#8221;, &#8220;scan&#8221;, &#8220;collect&#8221;, &#8220;file&#8221;, &#8220;email&#8221;, &#8220;copy&#8221;, &#8220;up&#8221;, &#8220;down&#8221;, &#8220;mode&#8221;, &#8220;cancel&#8221;.<br/>
  The scanner stores the id of the last button pressed until it is read. After read out, the state is reset and subsequent readings will return &#8220;none&#8221;. </dd>
 <dt><code>&#8211;color-led</code></dt>
 <dd>Get the state of the color LED indicators. The state is either &#8220;color&#8221; or &#8220;black_white&#8221;. </dd>

@@ -51,7 +51,7 @@ description: "pmproxy – proxy for performance metrics collector daemon"
 <dt><code>$PCP_SYSCONFIG_DIR/pmproxy</code></dt>
 <dd> additional environment variables that will be set when <code>pmproxy</code> executes. Only settings of the form &quot;PMPROXY_VARIABLE=value&quot; will be honoured.</dd>
 <dt><code>./pmproxy.log</code></dt>
-<dd> (or <code>$PCP_LOG_DIR/pmproxy/pmproxy.log</code> when started automatically)<br />
+<dd> (or <code>$PCP_LOG_DIR/pmproxy/pmproxy.log</code> when started automatically)<br/>
  All messages and diagnostics are directed here</dd>
 <dt><code>/etc/pki/nssdb</code></dt>
 <dd> default Network Security Services (NSS) certificate database directory, used for optional Secure Socket Layer connections. This database can be created and queried using the NSS <code>certutil</code> tool, amongst others.</dd></dl>

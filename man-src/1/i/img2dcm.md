@@ -40,30 +40,30 @@ dcmfile-out  DICOM output file
           use config file f for the logger
 </code></pre>
 <h3>input options</h3>
-<p>general:<br />
-  -i    &#8211;input-format  [i]nput file format: string<br />
-          supported formats: JPEG (default), BMP<br />
-  -df   &#8211;dataset-from  [f]ilename: string<br />
-          use dataset from DICOM file f<br />
-  -stf  &#8211;study-from  [f]ilename: string<br />
-          read patient/study from DICOM file f<br />
-  -sef  &#8211;series-from  [f]ilename: string<br />
-          read patient/study/series from DICOM file f<br />
-  -ii   &#8211;instance-inc<br />
-          increase instance number read from DICOM file<br />
-JPEG format:<br />
-  -dp   &#8211;disable-progr<br />
-          disable support for progressive JPEG<br />
-  -de   &#8211;disable-ext<br />
-          disable support for extended sequential JPEG<br />
-  -jf   &#8211;insist-on-jfif<br />
-          insist on JFIF header existence<br />
-  -ka   &#8211;keep-appn<br />
+<p>general:<br/>
+  -i    &#8211;input-format  [i]nput file format: string<br/>
+          supported formats: JPEG (default), BMP<br/>
+  -df   &#8211;dataset-from  [f]ilename: string<br/>
+          use dataset from DICOM file f<br/>
+  -stf  &#8211;study-from  [f]ilename: string<br/>
+          read patient/study from DICOM file f<br/>
+  -sef  &#8211;series-from  [f]ilename: string<br/>
+          read patient/study/series from DICOM file f<br/>
+  -ii   &#8211;instance-inc<br/>
+          increase instance number read from DICOM file<br/>
+JPEG format:<br/>
+  -dp   &#8211;disable-progr<br/>
+          disable support for progressive JPEG<br/>
+  -de   &#8211;disable-ext<br/>
+          disable support for extended sequential JPEG<br/>
+  -jf   &#8211;insist-on-jfif<br/>
+          insist on JFIF header existence<br/>
+  -ka   &#8211;keep-appn<br/>
           keep APPn sections (except JFIF)</p>
 <h3>processing options</h3>
-<p>attribute checking : &#8211;do &#8211; checks enable attribute validity checking(default)&#8211; no &#8211; checks disable attribute validity checking<br />
-                     +<br />
-                     i2&#8211; insert &#8211; type2 insert missing type 2 attributes(default)(only with&#8211; do &#8211; checks) &#8211; i2&#8211; no &#8211; type2 &#8211; insert do not insert missing type 2 attributes(only with&#8211; do &#8211; checks) + i1&#8211; invent &#8211; type1 invent missing type 1 attributes(only with&#8211; do &#8211; checks) &#8211; i1&#8211; no &#8211; type1 &#8211; invent do not invent missing type 1 attributes(only with&#8211; do &#8211; checks) character set : +l1&#8211; latin1 set latin &#8211; 1 as standard character set(default) &#8211; l1&#8211; no &#8211; latin1 keep 7 &#8211; bit ASCII as standard character set other processing options : -k&#8211; key[k] ey : gggg,<br />
+<p>attribute checking : &#8211;do &#8211; checks enable attribute validity checking(default)&#8211; no &#8211; checks disable attribute validity checking<br/>
+                     +<br/>
+                     i2&#8211; insert &#8211; type2 insert missing type 2 attributes(default)(only with&#8211; do &#8211; checks) &#8211; i2&#8211; no &#8211; type2 &#8211; insert do not insert missing type 2 attributes(only with&#8211; do &#8211; checks) + i1&#8211; invent &#8211; type1 invent missing type 1 attributes(only with&#8211; do &#8211; checks) &#8211; i1&#8211; no &#8211; type1 &#8211; invent do not invent missing type 1 attributes(only with&#8211; do &#8211; checks) character set : +l1&#8211; latin1 set latin &#8211; 1 as standard character set(default) &#8211; l1&#8211; no &#8211; latin1 keep 7 &#8211; bit ASCII as standard character set other processing options : -k&#8211; key[k] ey : gggg,<br/>
     eeee = &#8220;str&#8221;, path or dictionary name = &#8220;str&#8221; add further attribute</p>
 <h3>output options</h3>
 <pre><code>
@@ -142,31 +142,31 @@ target SOP class : -sc-- sec - capture write Secondary Capture SOP class
 <p> Here are some examples that show how the <code>img2dcm</code> application can be used. </p>
 <dl>
 <dt>1.</dt>
-<dd> img2dcm image.jpg out.dcm<br />
+<dd> img2dcm image.jpg out.dcm<br/>
  Read JPEG file &#8216;image.jpg&#8217;, convert to the old Secondary Capture SOP class and save the result to DICOM file &#8216;out.dcm&#8217;. This is the easiest way of using <code>img2dcm</code>. Any type 1 and type 2 attributes required for writing valid objects of this SOP class are inserted automatically.</dd></dl>
 <dl>
 <dt>2.</dt>
-<dd> img2dcm -i BMP image.bmp out.dcm<br />
+<dd> img2dcm -i BMP image.bmp out.dcm<br/>
  Same as above but tells img2dcm to read a BMP file instead of JPEG.</dd></dl>
 <dl>
 <dt>3.</dt>
-<dd> img2dcm image.jpg out.dcm -vlp -k &#8216;PatientName=Bond^James&#8217;<br />
+<dd> img2dcm image.jpg out.dcm -vlp -k &#8216;PatientName=Bond^James&#8217;<br/>
  Same as first example, but writes Visible Light Photographic Image object to &#8216;out.dcm&#8217; and sets PatientName to &#8216;Bond^James&#8217; which otherwise would be left empty.</dd></dl>
 <dl>
 <dt>4.</dt>
-<dd> img2dcm image.jpg out.dcm &#8211;series-from template.dcm -k &#8216;PatientName=Bond^James&#8217;<br />
+<dd> img2dcm image.jpg out.dcm &#8211;series-from template.dcm -k &#8216;PatientName=Bond^James&#8217;<br/>
  Same as 1), but imports patient/study/series infomation from DICOM file &#8216;template.dcm&#8217;. Please note that attribute PatientName will contain &#8216;Bond^James&#8217; at the end, any value from &#8216;template.dcm&#8217; will be overwritten. That is, because the -k option is applied at the very end of the conversion pipeline (see above).</dd></dl>
 <dl>
 <dt>5.</dt>
-<dd> img2dcm image.jpg out.dcm &#8211;no-checks<br />
+<dd> img2dcm image.jpg out.dcm &#8211;no-checks<br/>
  Same as 1), but does not perform any attribute checking and no type 1 and type 2 attribute insertion! So in this case, an invalid DICOM object would be generated. This can be interesting if the output file is not meant to be completed but will undergo further transformations, e. g. adding attributes using <code>dcmodify</code>. Only use option <i>&#8211;no-checks</i> if you know what you are doing!</dd></dl>
 <dl>
 <dt>6.</dt>
-<dd> img2dcm image.jpg out.dcm &#8211;no-type1-invent<br />
+<dd> img2dcm image.jpg out.dcm &#8211;no-type1-invent<br/>
  Same as 1), but does not insert missing type 1 attributes and/or their values. Type 2 attributes will be inserted. Note that in this case it must be assured that all type 1 attributes are provided by other means, i. e. by adding them with the <i>&#8211;key</i> option. Otherwise, <code>img2dcm</code> will report an error and will stop converting.</dd></dl>
 <dl>
 <dt>7.</dt>
-<dd> img2dcm image.jpg out.dcm &#8211;keep-appn &#8211;insist-on-jfif<br />
+<dd> img2dcm image.jpg out.dcm &#8211;keep-appn &#8211;insist-on-jfif<br/>
  Same as 1), but takes over APPn information like EXIF into the DICOM object&#8217;s resulting JPEG stream. Further, <i>&#8211;insist-on-jfif</i> will force <code>img2dcm</code> to abort if no JFIF information is existent in the source file.</dd></dl>
 <h2>LOGGING</h2>
 <p> The level of logging output of the various command line tools and underlying libraries can be specified by the user. By default, only errors and warnings are written to the standard error stream. Using option <i>&#8211;verbose</i> also informational messages like processing details are reported. Option <i>&#8211;debug</i> can be used to get more details on the internal activity, e.g. for debugging purposes. Other logging levels can be selected using option <i>&#8211;log-level</i>. In <i>&#8211;quiet</i> mode only fatal errors are reported. In such very severe error events, the application will usually terminate. For more details on the different logging levels, see documentation of module &#8216;oflog&#8217;. </p>
@@ -179,7 +179,7 @@ target SOP class : -sc-- sec - capture write Secondary Capture SOP class
 <p> The <code>img2dcm</code> utility will attempt to load DICOM data dictionaries specified in the <i>DCMDICTPATH</i> environment variable. By default, i.e. if the <i>DCMDICTPATH</i> environment variable is not set, the file <i>&lt;datadir&gt;/dicom.dic</i> will be loaded unless the dictionary is built into the application (default for Windows). </p>
 <p> The default behaviour should be preferred and the <i>DCMDICTPATH</i> environment variable only used when alternative data dictionaries are required. The <i>DCMDICTPATH</i> environment variable has the same format as the Unix shell <i>PATH</i> variable in that a colon (&#8216;:&#8217;) separates entries. On Windows systems, a semicolon (&#8216;;&#8217;) is used as a separator. The data dictionary code will attempt to load each file specified in the <i>DCMDICTPATH</i> environment variable. It is an error if no data dictionary can be loaded.</p>
 <h2>FILES</h2>
-<p> <i>&lt;datadir&gt;/SC.dump</i> &#8211; Sample dump file for Secondary Capture images<br />
+<p> <i>&lt;datadir&gt;/SC.dump</i> &#8211; Sample dump file for Secondary Capture images<br/>
  <i>&lt;datadir&gt;/VLP.dump</i> &#8211; Sample dump file for Visible Light Photographic images</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dcm2pnm/">dcm2pnm</a></code>(1), <code><a href="/docs/linux/man/1-dcmj2pnm/">dcmj2pnm</a></code>(1), <code><a href="/docs/linux/man/1-dump2dcm/">dump2dcm</a></code>(1), <code><a href="/docs/linux/man/1-dcmconv/">dcmconv</a></code>(1), <code><a href="/docs/linux/man/1-dcmodify/">dcmodify</a></code>(1)</p>

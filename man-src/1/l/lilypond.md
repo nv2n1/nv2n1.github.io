@@ -51,9 +51,9 @@ description: "LilyPond – manual page for LilyPond 2.12.2"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs via <a rel="nofollow" href="http://post.gmane.org/post.php?group=gmane.comp.gnu.lilypond.bugs">http://post.gmane.org/post.php?group=gmane.comp.gnu.lilypond.bugs</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1996&#8211;2009 by<br />
-&nbsp;<wbr>&nbsp;<wbr>Han-Wen Nienhuys&nbsp;<wbr>&lt;hanwen [at] xs4all.nl&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>Jan Nieuwenhuizen&nbsp;<wbr>&lt;janneke [at] gnu.org&gt;<br />
+<p> Copyright &#169; 1996&#8211;2009 by<br/>
+&nbsp;<wbr>&nbsp;<wbr>Han-Wen Nienhuys&nbsp;<wbr>&lt;hanwen [at] xs4all.nl&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>Jan Nieuwenhuizen&nbsp;<wbr>&lt;janneke [at] gnu.org&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>and others. </p>
 <p> This program is free software. It is covered by the GNU General Public License and you are welcome to change it and/or distribute copies of it under certain conditions. Invoke as `lilypond <code>&#8211;warranty</code>&#8216; for more information.</p>
 <h2>SEE ALSO</h2>

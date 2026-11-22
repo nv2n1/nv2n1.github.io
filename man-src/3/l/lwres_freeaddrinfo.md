@@ -63,5 +63,5 @@ struct addrinfo {
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-lwres/">lwres</a></code>(3), <code><a href="/docs/linux/man/3-lwres_getaddrinfo/">lwres_getaddrinfo</a></code>(3), <code><a href="/docs/linux/man/3-lwres_freeaddrinfo/">lwres_freeaddrinfo</a></code>(3), <code><a href="/docs/linux/man/3-lwres_gai_strerror/">lwres_gai_strerror</a></code>(3), <code>RFC2133</code>(), <code><a href="/docs/linux/man/3-getservbyname/">getservbyname</a></code>(3), <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2), <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2), <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2), <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2).</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001, 2003 Internet Software Consortium. </p>

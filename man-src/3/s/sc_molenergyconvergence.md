@@ -12,15 +12,15 @@ description: "sc::MolEnergyConvergence –"
 <p> Inherits <code>sc::Convergence</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>MolEnergyConvergence</code> (<code>StateIn</code> &amp;) </p>
-<p> <code>MolEnergyConvergence</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor.<br />
- void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- void <code>get_grad</code> (const <code>Ref</code>&lt; <code>Function</code> &gt; &amp;)<br />
- <i>Set the current gradient and displacement. </i><br />
+<p> <code>MolEnergyConvergence</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor.<br/>
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ void <code>get_grad</code> (const <code>Ref</code>&lt; <code>Function</code> &gt; &amp;)<br/>
+ <i>Set the current gradient and displacement. </i><br/>
  void <code>get_x</code> (const <code>Ref</code>&lt; <code>Function</code> &gt; &amp;) </p>
 <p> void <code>set_nextx</code> (const <code>RefSCVector</code> &amp;) </p>
-<p> int <code>converged</code> ()<br />
+<p> int <code>converged</code> ()<br/>
  <i>Return nonzero if the optimization has converged. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void set_defaults ()

@@ -15,7 +15,7 @@ ntable
 { COMMAND |
     help }
 </code></pre>
-<p> <code>ip ntable change name</code> <i>NAME</i> [ <code>dev</code> <i>DEV</i> ] [ <code>thresh1</code> <i>VAL</i> ] [ <code>thresh2</code> <i>VAL</i> ] [ <code>thresh3</code> <i>VAL</i> ] [ <code>gc_int</code> <i>MSEC</i> ] [ <code>base_reachable</code> <i>MSEC</i> ] [ <code>retrans</code> <i>MSEC</i> ] [ <code>gc_stale</code> <i>MSEC</i> ] [ <code>delay_probe</code> <i>MSEC</i> ] [ <code>queue</code> <i>LEN</i> ] [ <code>app_probs</code> <i>VAL</i> ] [ <code>ucast_probes</code> <i>VAL</i> ] [ <code>mcast_probes</code> <i>VAL</i> ] [ <code>anycast_delay</code> <i>MSEC</i> ] [ <code>proxy_delay</code> <i>MSEC</i> ] [ <code>proxy_queue</code> <i>LEN</i> ] [ <code>locktime</code> <i>MSEC</i> ]<br />
+<p> <code>ip ntable change name</code> <i>NAME</i> [ <code>dev</code> <i>DEV</i> ] [ <code>thresh1</code> <i>VAL</i> ] [ <code>thresh2</code> <i>VAL</i> ] [ <code>thresh3</code> <i>VAL</i> ] [ <code>gc_int</code> <i>MSEC</i> ] [ <code>base_reachable</code> <i>MSEC</i> ] [ <code>retrans</code> <i>MSEC</i> ] [ <code>gc_stale</code> <i>MSEC</i> ] [ <code>delay_probe</code> <i>MSEC</i> ] [ <code>queue</code> <i>LEN</i> ] [ <code>app_probs</code> <i>VAL</i> ] [ <code>ucast_probes</code> <i>VAL</i> ] [ <code>mcast_probes</code> <i>VAL</i> ] [ <code>anycast_delay</code> <i>MSEC</i> ] [ <code>proxy_delay</code> <i>MSEC</i> ] [ <code>proxy_queue</code> <i>LEN</i> ] [ <code>locktime</code> <i>MSEC</i> ]<br/>
  <code>ip ntable show</code> [ <code>dev</code> <i>DEV</i> ] [ <code>name</code> <i>NAME</i> ] </p>
 <h2>Description</h2>
 <p><i>ip ntable</i> controls the parameters for the neighbour tables.</p>

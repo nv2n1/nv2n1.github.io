@@ -15,35 +15,35 @@ description: "alexandria – a book collection manager"
 <p> <i>Alexandria</i> is a GNOME desktop application for managing book collections. It has a simple user interface which makes it easy to enter the details of your library, generally using Internet sources to find catalogue information for your books. It also enables you to create filtered views of your book collection based on details such as author, publisher etc. </p>
 <p> When launched without any options the <i>Alexandria</i> main window opens and presents a view of your libraries, or if run for the first time creates a new library ready for you to add books either manually or with the help of providers of book information on the Internet. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;debug</code><br />
-&nbsp;<wbr>Print verbose debug information describing the operation of the<br />
-&nbsp;<wbr>program. Useful for determining behaviour when a problem is<br />
+<p> <code>&#8211;debug</code><br/>
+&nbsp;<wbr>Print verbose debug information describing the operation of the<br/>
+&nbsp;<wbr>program. Useful for determining behaviour when a problem is<br/>
 &nbsp;<wbr>encountered. This also sets the logger level to DEBUG. </p>
-<p> <code>&#8211;version</code><br />
+<p> <code>&#8211;version</code><br/>
 &nbsp;<wbr>Show program version information and exit. </p>
-<p> <code>&#8211;help</code><br />
-&nbsp;<wbr>Show summary of options and exit. This also shows a great many<br />
-&nbsp;<wbr>predefined options common to all GTK programs which are not<br />
+<p> <code>&#8211;help</code><br/>
+&nbsp;<wbr>Show summary of options and exit. This also shows a great many<br/>
+&nbsp;<wbr>predefined options common to all GTK programs which are not<br/>
 &nbsp;<wbr>defined in this manual page. </p>
 <h2>FILES</h2>
-<p> <code>$HOME/.alexandria</code><br />
-&nbsp;<wbr>The per-user configuration of&nbsp;<wbr> <i>Alexandria </i><br />
-&nbsp;<wbr>is stored in this directory. Each the books in each library are<br />
-&nbsp;<wbr>stored in a sub-directory with the library&#8217;s name e.g.&nbsp;<wbr>`My<br />
-&nbsp;<wbr>Library&#8217;. Book files are stored in YAML format&nbsp;<wbr>(a text-based data<br />
-&nbsp;<wbr>format). They are named after the book&#8217;s ISBN<br />
-&nbsp;<wbr>e.g. 9780755322800.yaml The cover images are also named after with<br />
-&nbsp;<wbr>book&#8217;s ISBN, with the file extension .cover, although they are<br />
-&nbsp;<wbr>usually JPEG format files. If a book has no ISBN, it&#8217;s ID will be<br />
+<p> <code>$HOME/.alexandria</code><br/>
+&nbsp;<wbr>The per-user configuration of&nbsp;<wbr> <i>Alexandria </i><br/>
+&nbsp;<wbr>is stored in this directory. Each the books in each library are<br/>
+&nbsp;<wbr>stored in a sub-directory with the library&#8217;s name e.g.&nbsp;<wbr>`My<br/>
+&nbsp;<wbr>Library&#8217;. Book files are stored in YAML format&nbsp;<wbr>(a text-based data<br/>
+&nbsp;<wbr>format). They are named after the book&#8217;s ISBN<br/>
+&nbsp;<wbr>e.g. 9780755322800.yaml The cover images are also named after with<br/>
+&nbsp;<wbr>book&#8217;s ISBN, with the file extension .cover, although they are<br/>
+&nbsp;<wbr>usually JPEG format files. If a book has no ISBN, it&#8217;s ID will be<br/>
 &nbsp;<wbr>a number generated from the book title. </p>
-<p> <code>$HOME/.alexandria/.smart_libraries</code><br />
-&nbsp;<wbr>Smart Libraries are a filtered view of your book collection, and<br />
+<p> <code>$HOME/.alexandria/.smart_libraries</code><br/>
+&nbsp;<wbr>Smart Libraries are a filtered view of your book collection, and<br/>
 &nbsp;<wbr>are saved as YAML format files in this directory. </p>
 <h2>ENVIRONMENT</h2>
-<p> <code>LOGLEVEL</code><br />
-&nbsp;<wbr>Setting this environment variable affects the level at which<br />
-&nbsp;<wbr>messages will be logged. The log levels are cumulative, setting<br />
-&nbsp;<wbr>the level to log information messages means it will also include<br />
+<p> <code>LOGLEVEL</code><br/>
+&nbsp;<wbr>Setting this environment variable affects the level at which<br/>
+&nbsp;<wbr>messages will be logged. The log levels are cumulative, setting<br/>
+&nbsp;<wbr>the level to log information messages means it will also include<br/>
 &nbsp;<wbr>all warnings and error messages. Possible values are:</p>
 <dl>
 <dt>

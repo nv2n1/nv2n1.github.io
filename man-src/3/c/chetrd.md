@@ -11,7 +11,7 @@ description: "chetrd.f –"
 <p> chetrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chetrd</code> (UPLO, N, A, LDA, D, E, TAU, WORK, LWORK, INFO)<br />
+<p> subroutine <code>chetrd</code> (UPLO, N, A, LDA, D, E, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>CHETRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chetrd (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )D, real, dimension( * )E, complex, dimension( * )TAU, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

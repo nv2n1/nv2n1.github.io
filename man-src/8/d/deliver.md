@@ -14,7 +14,7 @@ description: "deliver – deliver mail to an IMAP mailbox"
 <h2>Synopsis</h2>
 <p><code>deliver</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-d</code> ] [ <code>-r</code> <i>address</i> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>[ <code>-f</code> <i>address</i> ] [ <code>-m</code> <i>mailbox</i> ] [ <code>-a</code> <i>auth-id</i> ] </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>[ <code>-q</code> ] [ <i>userid</i> ]&#8230;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>[ <code>-q</code> ] [ <i>userid</i> ]&#8230;<br/>
  <code>deliver</code> [ <code>-C</code> <i>config-file</i> ] <code>-l</code></p>
 <h2>Description</h2>
 <p><i>Deliver</i> reads a message from the standard input and delivers it to one or more IMAP mailboxes. </p>

@@ -87,7 +87,7 @@ description: "memcached – high-performance memory object caching system"
 <h2>LICENSE</h2>
 <p> The memcached daemon is copyright Danga Interactive and is distributed under the BSD license. Note that daemon clients are licensed separately. </p>
 <h2>SEE ALSO</h2>
-<p> The README file that comes with memcached<br />
+<p> The README file that comes with memcached<br/>
  <code><a rel="nofollow" href="http://www.memcached.org">http://www.memcached.org</a></code></p>
 <h2>AUTHOR</h2>
 <p> The memcached daemon was written by Anatoly Vorobey <code>&lt;mellon [at] pobox.com&gt;</code> and Brad Fitzpatrick <code>&lt;brad [at] danga.com&gt;</code> and the rest of the crew of Danga Interactive <code><a rel="nofollow" href="http://www.danga.com">http://www.danga.com</a></code> </p>

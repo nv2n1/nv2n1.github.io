@@ -19,15 +19,15 @@ description: "e2freefrag – report free space fragmentation information"
 <dt><code>-h</code></dt>
 <dd>Print the usage of the program.</dd></dl>
 <h2>Example</h2>
-<p># e2freefrag /dev/vgroot/lvhome<br />
- Device: /dev/vgroot/lvhome<br />
- Blocksize: 4096 bytes<br />
- Total blocks: 1504085<br />
+<p># e2freefrag /dev/vgroot/lvhome<br/>
+ Device: /dev/vgroot/lvhome<br/>
+ Blocksize: 4096 bytes<br/>
+ Total blocks: 1504085<br/>
  Free blocks: 292995 (19.5%) </p>
-<p> Min. free extent: 4 KB<br />
- Max. free extent: 24008 KB<br />
+<p> Min. free extent: 4 KB<br/>
+ Max. free extent: 24008 KB<br/>
  Avg. free extent: 252 KB </p>
-<p> HISTOGRAM OF FREE EXTENT SIZES:<br />
+<p> HISTOGRAM OF FREE EXTENT SIZES:<br/>
  Extent Size Range : Free extents Free Blocks Percent </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4K&#8230;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;8K- :&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;704&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;704&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0.2% </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;8K&#8230;&nbsp;<wbr>&nbsp;<wbr>&nbsp;16K- :&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;810&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1979&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0.7% </p>

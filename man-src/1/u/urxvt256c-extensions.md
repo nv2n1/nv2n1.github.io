@@ -47,7 +47,7 @@ urxvt-extensions - briefly list urxvt perl extensions
 
  option-popup - option menu (enabled by default) 
 
- overlay-osc - implement <font SIZE="-1">OSC</font> to manage overlays 
+ overlay-osc - implement OSC to manage overlays 
 
  readline - improve readline editing (enabled by default) 
 
@@ -67,7 +67,7 @@ urxvt-extensions - briefly list urxvt perl extensions
 
  tabbed - tabbed interface to urxvt 
 
- xim-onthespot - implement <font SIZE="-1">XIM </font>``on-the-spot'' behaviour
+ xim-onthespot - implement XIM ``on-the-spot'' behaviour
 
 <h2>SEE ALSO</h2>
 

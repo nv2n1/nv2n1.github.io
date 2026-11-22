@@ -28,78 +28,78 @@ description: "vhostmd – A metrics gathering daemon."
 <dt><code>-f, &#8211;config &lt;file&gt;</code></dt>
 <dd>Specify a different configuration file. Normally /etc/vhostmd/vhostmd.conf</dd></dl>
 <h2>Config File</h2>
-<p>At startup, vhostmd reads <i>/etc/vhostmd/vhostmd.conf,</i> if it exists.<br />
+<p>At startup, vhostmd reads <i>/etc/vhostmd/vhostmd.conf,</i> if it exists.<br/>
 &nbsp;<wbr>(See the&nbsp;<wbr> <code>-f</code> option.) </p>
 <p> The default configuration file (listed below) defines a 256Kbyte metrics disk in /dev/shm/vhostmd0, updated every 5 seconds. It also includes a few examples of user-defined metrics, which provide a (currently simplistic) mechanism for extending metrics gathered by vhostmd. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&lt;vhostmd&gt;<br />
-&nbsp;<wbr>&lt;globals&gt;<br />
-&lt;disk&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;host-metrics-disk&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;path&gt;/dev/shm/vhostmd0&lt;/path&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;size unit=&quot;k&quot;&gt;256&lt;/size&gt;<br />
-&lt;/disk&gt;<br />
-&lt;update_period&gt;5&lt;/update_period&gt;<br />
-&lt;path&gt;/usr/bin:/usr/sbin:/usr/share/vhostmd/scripts&lt;/path&gt;<br />
-&nbsp;<wbr>&lt;/globals&gt;<br />
-&nbsp;<wbr>&lt;metrics&gt;<br />
-&lt;metric type=&quot;string&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;HostName&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;virsh hostname | tr -d&nbsp;<wbr>&#8216;[:space:]'&lt;/action&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&quot;string&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;VirtualizationVendor&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;/bin/rpm -q &#8211;info xen | grep Vendor: |<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>awk&nbsp;<wbr>&#8216;{print substr($0, index($0,$5))&nbsp;<wbr>}'&lt;/action&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&quot;uint32&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalPhyCPUs&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;xm info | gawk&nbsp;<wbr>&#8216;/^nr_cpus/&nbsp;<wbr>{print&nbsp;<wbr>$3}'&lt;/action&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&quot;uint32&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;NumCPUs&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;xm info | gawk&nbsp;<wbr>&#8216;/^nr_cpus/&nbsp;<wbr>{print&nbsp;<wbr>$3}'&lt;/action&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&quot;uint64&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalPhyMem&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;xm info | gawk&nbsp;<wbr>&#8216;/^total_memory/&nbsp;<wbr>{print&nbsp;<wbr>$3}'&lt;/action&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&quot;uint64&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;UsedMem&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;xentop -b -i 1 | gawk&nbsp;<wbr>&#8216;/Domain-0/&nbsp;<wbr>{print&nbsp;<wbr>$5}'&lt;/action&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&quot;uint64&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;FreeMem&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;xm info | gawk&nbsp;<wbr>&#8216;/^max_free_memory/&nbsp;<wbr>{print&nbsp;<wbr>$3}'&lt;/action&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&quot;uint64&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PagedInMemory&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;vmstat -s | gawk&nbsp;<wbr>&#8216;/pages paged in/&nbsp;<wbr>{print&nbsp;<wbr>$1}'&lt;/action&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&quot;uint64&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PagedOutMemory&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;vmstat -s | gawk&nbsp;<wbr>&#8216;/pages paged out/&nbsp;<wbr>{print&nbsp;<wbr>$1}'&lt;/action&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&quot;group&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PageRates&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;pagerate.pl&lt;/action&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;variable name=&quot;PageInRate&quot;&nbsp;<wbr>type=&quot;uint64&quot;/&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;variable name=&quot;PageFaultRate&quot;&nbsp;<wbr>type=&quot;uint64&quot;/&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&quot;real64&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalCPUTime&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;virsh dominfo 0 | sed&nbsp;<wbr>&#8216;s/:&nbsp;<wbr>*/:/&#8217;&nbsp;<wbr>|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>gawk -F:&nbsp;<wbr>&#8216;/CPU time/&nbsp;<wbr>{print&nbsp;<wbr>$2;}'&lt;/action&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&quot;real64&quot;&nbsp;<wbr>context=&quot;vm&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalCPUTime&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;virsh dominfo NAME | sed&nbsp;<wbr>&#8216;s/:&nbsp;<wbr>*/:/&#8217;&nbsp;<wbr>|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>gawk -F:&nbsp;<wbr>&#8216;/CPU time/&nbsp;<wbr>{print&nbsp;<wbr>$2;}'&lt;/action&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&quot;xml&quot;&nbsp;<wbr>context=&quot;vm&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;my-metric&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;xml-metrics-test.sh&lt;/action&gt;<br />
-&lt;/metric&gt;<br />
-&nbsp;<wbr>&lt;/metrics&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&lt;vhostmd&gt;<br/>
+&nbsp;<wbr>&lt;globals&gt;<br/>
+&lt;disk&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;host-metrics-disk&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;path&gt;/dev/shm/vhostmd0&lt;/path&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;size unit=&quot;k&quot;&gt;256&lt;/size&gt;<br/>
+&lt;/disk&gt;<br/>
+&lt;update_period&gt;5&lt;/update_period&gt;<br/>
+&lt;path&gt;/usr/bin:/usr/sbin:/usr/share/vhostmd/scripts&lt;/path&gt;<br/>
+&nbsp;<wbr>&lt;/globals&gt;<br/>
+&nbsp;<wbr>&lt;metrics&gt;<br/>
+&lt;metric type=&quot;string&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;HostName&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;virsh hostname | tr -d&nbsp;<wbr>&#8216;[:space:]'&lt;/action&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&quot;string&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;VirtualizationVendor&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;/bin/rpm -q &#8211;info xen | grep Vendor: |<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>awk&nbsp;<wbr>&#8216;{print substr($0, index($0,$5))&nbsp;<wbr>}'&lt;/action&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&quot;uint32&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalPhyCPUs&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;xm info | gawk&nbsp;<wbr>&#8216;/^nr_cpus/&nbsp;<wbr>{print&nbsp;<wbr>$3}'&lt;/action&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&quot;uint32&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;NumCPUs&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;xm info | gawk&nbsp;<wbr>&#8216;/^nr_cpus/&nbsp;<wbr>{print&nbsp;<wbr>$3}'&lt;/action&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&quot;uint64&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalPhyMem&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;xm info | gawk&nbsp;<wbr>&#8216;/^total_memory/&nbsp;<wbr>{print&nbsp;<wbr>$3}'&lt;/action&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&quot;uint64&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;UsedMem&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;xentop -b -i 1 | gawk&nbsp;<wbr>&#8216;/Domain-0/&nbsp;<wbr>{print&nbsp;<wbr>$5}'&lt;/action&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&quot;uint64&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;FreeMem&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;xm info | gawk&nbsp;<wbr>&#8216;/^max_free_memory/&nbsp;<wbr>{print&nbsp;<wbr>$3}'&lt;/action&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&quot;uint64&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PagedInMemory&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;vmstat -s | gawk&nbsp;<wbr>&#8216;/pages paged in/&nbsp;<wbr>{print&nbsp;<wbr>$1}'&lt;/action&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&quot;uint64&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PagedOutMemory&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;vmstat -s | gawk&nbsp;<wbr>&#8216;/pages paged out/&nbsp;<wbr>{print&nbsp;<wbr>$1}'&lt;/action&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&quot;group&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PageRates&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;pagerate.pl&lt;/action&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;variable name=&quot;PageInRate&quot;&nbsp;<wbr>type=&quot;uint64&quot;/&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;variable name=&quot;PageFaultRate&quot;&nbsp;<wbr>type=&quot;uint64&quot;/&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&quot;real64&quot;&nbsp;<wbr>context=&quot;host&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalCPUTime&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;virsh dominfo 0 | sed&nbsp;<wbr>&#8216;s/:&nbsp;<wbr>*/:/&#8217;&nbsp;<wbr>|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>gawk -F:&nbsp;<wbr>&#8216;/CPU time/&nbsp;<wbr>{print&nbsp;<wbr>$2;}'&lt;/action&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&quot;real64&quot;&nbsp;<wbr>context=&quot;vm&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalCPUTime&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;virsh dominfo NAME | sed&nbsp;<wbr>&#8216;s/:&nbsp;<wbr>*/:/&#8217;&nbsp;<wbr>|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>gawk -F:&nbsp;<wbr>&#8216;/CPU time/&nbsp;<wbr>{print&nbsp;<wbr>$2;}'&lt;/action&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&quot;xml&quot;&nbsp;<wbr>context=&quot;vm&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;my-metric&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;action&gt;xml-metrics-test.sh&lt;/action&gt;<br/>
+&lt;/metric&gt;<br/>
+&nbsp;<wbr>&lt;/metrics&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;/vhostmd&gt; </p>
 <p> A valid configuration file must contain the root element &lt;vhostmd&gt;. The &lt;globals&gt; element contains configuration global to vhostmd, such as the metrics disk path and the metrics refresh interval. The &lt;metrics&gt; element is a container for all of the &lt;metric&gt; elements. A metric element is used to define a metric, giving it a name and an action that produces the metric value. </p>
 <p> The supplied vhostmd configuration file provides a useful set of default metrics to be collected. This can be extended or modified by editing /etc/vhostmd/vhostmd.conf and changing existing metric definitions or adding new metric definitions under the metrics container. </p>
@@ -112,72 +112,72 @@ description: "vhostmd – A metrics gathering daemon."
 <h2>Metrics Disk Format</h2>
 <p>Currently, the disk format is quite simple: a raw, file-backed disk containing a header, immediately followed by metric content. </p>
 <p> The header contains the following, all in network-byte order </p>
-<p>&nbsp;<wbr>&#8211; 4 byte signature,&nbsp;<wbr>&#8216;mvbd&#8217;<br />
-&nbsp;<wbr>&#8211; 4 byte busy flag<br />
-&nbsp;<wbr>&#8211; 4 byte content checksum<br />
+<p>&nbsp;<wbr>&#8211; 4 byte signature,&nbsp;<wbr>&#8216;mvbd&#8217;<br/>
+&nbsp;<wbr>&#8211; 4 byte busy flag<br/>
+&nbsp;<wbr>&#8211; 4 byte content checksum<br/>
 &nbsp;<wbr>&#8211; 4 byte content length </p>
 <p> The busy flag permits simple reader/writer synchronization. The busy flag can be checked for clear, content read into a buffer, and the busy flag checked again for clear to ensure stable content.</p>
 <h2>XML Format of Content</h2>
 <p>The content is an XML document containing default and user-defined metrics. The format is quite similar to the metrics definitions found in the vhostmd configuration file. A notable addition, as illustrated below, is the value element containing the metric&#8217;s current value. </p>
-<p>&nbsp;<wbr>&lt;metrics&gt;<br />
-&lt;metric type=&#8217;real64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalCPUTime&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;846.600000&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PageInRate&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;0.000000&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PageFaultRate&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;0.000000&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PagedOutMemory&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;6885044&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PagedInMemory&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;2367980&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;FreeMem&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;829&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;UsedMem&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;1369088&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalPhyMem&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;1919&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;uint32&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;NumCPUs&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;2&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;uint32&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalPhyCPUs&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;2&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;string&#8217;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;VirtualizationVendor&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;SUSE LINUX Products GmbH&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;string&#8217;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;HostName&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;laptop&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;real64&#8242;&nbsp;<wbr>context=&#8217;vm&#8217;&nbsp;<wbr>id=&#8217;0&#8242;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>uuid=&#8217;00000000-0000-0000-0000-000000000000&#8242;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalCPUTime&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;847.700000&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
-&lt;metric type=&#8217;real64&#8242;&nbsp;<wbr>context=&#8217;vm&#8217;&nbsp;<wbr>id=&#8217;2&#8242;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>uuid=&#8217;6be3fdb8-bef5-6fec-b1b7-e61bbceab708&#8242;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalCPUTime&lt;/name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;69.400000&lt;/value&gt;<br />
-&lt;/metric&gt;<br />
+<p>&nbsp;<wbr>&lt;metrics&gt;<br/>
+&lt;metric type=&#8217;real64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalCPUTime&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;846.600000&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PageInRate&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;0.000000&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PageFaultRate&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;0.000000&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PagedOutMemory&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;6885044&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;PagedInMemory&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;2367980&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;FreeMem&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;829&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;UsedMem&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;1369088&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;uint64&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalPhyMem&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;1919&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;uint32&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;NumCPUs&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;2&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;uint32&#8242;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalPhyCPUs&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;2&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;string&#8217;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;VirtualizationVendor&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;SUSE LINUX Products GmbH&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;string&#8217;&nbsp;<wbr>context=&#8217;host&#8217;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;HostName&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;laptop&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;real64&#8242;&nbsp;<wbr>context=&#8217;vm&#8217;&nbsp;<wbr>id=&#8217;0&#8242;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>uuid=&#8217;00000000-0000-0000-0000-000000000000&#8242;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalCPUTime&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;847.700000&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
+&lt;metric type=&#8217;real64&#8242;&nbsp;<wbr>context=&#8217;vm&#8217;&nbsp;<wbr>id=&#8217;2&#8242;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>uuid=&#8217;6be3fdb8-bef5-6fec-b1b7-e61bbceab708&#8242;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;name&gt;TotalCPUTime&lt;/name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;value&gt;69.400000&lt;/value&gt;<br/>
+&lt;/metric&gt;<br/>
 &nbsp;<wbr>&lt;/metrics&gt;</p>
 <h2>Files</h2>
 <p><i>/etc/vhostmd/vhostmd.conf</i> </p>
@@ -186,5 +186,5 @@ description: "vhostmd – A metrics gathering daemon."
 <p> <i>/var/run/vhostmd.pid</i></p>
 <h2>See Also</h2>
 <h2>Authors</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>Pat Campbell&nbsp;<wbr>&lt;plc [at] novell.com&gt;.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Pat Campbell&nbsp;<wbr>&lt;plc [at] novell.com&gt;.<br/>
 &nbsp;<wbr>&nbsp;<wbr>Jim Fehlig&nbsp;<wbr>&lt;jfehlig [at] novell.com&gt;.</p>

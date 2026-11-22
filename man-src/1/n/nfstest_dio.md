@@ -195,7 +195,7 @@ request size greater than stripe size.
 Verify vectored I/O functionality.
 </pre>
 <h2>EXAMPLES</h2>
-<p> The only required option is &#8211;server<br />
+<p> The only required option is &#8211;server<br/>
  $ nfstest_dio &#8211;server 192.168.0.11</p>
 <h2>NOTES</h2>
 <p> The user id in the local host must have access to run commands as root using the &#8216;sudo&#8217; command without the need for a password.</p>

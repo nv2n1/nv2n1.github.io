@@ -81,6 +81,6 @@ description: "XtCreateWidget, XtVaCreateWidget, XtCreateManagedWidget, XtVaCreat
 <dt>&bull;</dt>
 <dd>Recursively descends the tree and deallocates all pop-up widgets, constraint records, callback lists and, if the widget is a subclass of <code>compositeWidgetClass</code>, children.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappcreateshell/">XtAppCreateShell</a>(3), <a href="/docs/linux/man/3-xtcreatepopupshell/">XtCreatePopupShell</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappcreateshell/">XtAppCreateShell</a>(3), <a href="/docs/linux/man/3-xtcreatepopupshell/">XtCreatePopupShell</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

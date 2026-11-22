@@ -33,9 +33,9 @@ description: "dpkg-name – rename Debian packages to full package names"
 <dd> Show the version and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
-<dt><font SIZE="-1"><code>DPKG_NLS</code></font></dt>
+<dt><code>DPKG_NLS</code></dt>
 <dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dd></dl>
 <h2>BUGS</h2>
 <p> Some packages don&#8217;t follow the name structure <i>package</i><code>_</code><i>version</i><code>_</code><i>architecture</i><code>.deb</code>. Packages renamed by <code>dpkg-name</code> will follow this structure. Generally this will have no impact on how packages are installed by <code><a href="/docs/linux/man/1-dselect/">dselect</a></code>(1)/<code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1), but other installation tools might depend on this naming structure.</p>

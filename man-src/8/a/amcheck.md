@@ -189,7 +189,7 @@ Client check: 136 hosts checked in 51.945 seconds, 3 problems found.
 <dl>
 <dd>(warning) <i>amanda.conf</i> requested <i>R</i> KBytes of free space on holding disk <i>disk</i>, but only <i>F</i> KBytes were available. 10 MBytes is subtracted for each backup process (see the <code>inparallel</code> <i>amanda.conf</i> option) to allow for unexpected overruns. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Even though this message is listed as a warning, it causes <code>amcheck</code> to exit with a non-zero status. </dd>
 </dl>
 </dl>

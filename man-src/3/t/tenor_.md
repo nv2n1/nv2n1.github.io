@@ -16,23 +16,23 @@ virtual Rate forecastFixing (const Date &amp;fixingDate) const =0
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Index</code>, and <code>QuantLib::Observer</code>. Inherited by <code>BMAIndex</code>, <code>IborIndex</code>, and <code>SwapIndex</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>InterestRateIndex</code> (const std::string &amp;familyName, const <code>Period</code> &amp;tenor, <code>Natural</code> settlementDays, const <code>Currency</code> &amp;currency, const <code>Calendar</code> &amp;fixingCalendar, const <code>DayCounter</code> &amp;dayCounter)<br />
- <code>Index interface</code><br />
+<p><code>InterestRateIndex</code> (const std::string &amp;familyName, const <code>Period</code> &amp;tenor, <code>Natural</code> settlementDays, const <code>Currency</code> &amp;currency, const <code>Calendar</code> &amp;fixingCalendar, const <code>DayCounter</code> &amp;dayCounter)<br/>
+ <code>Index interface</code><br/>
  virtual Date valueDate (const Date &amp;fixingDate) const</p>
 <p>virtual Date maturityDate (const Date &amp;valueDate) const =0</p>
-<p>Protected Member Functions<br />
+<p>Protected Member Functions<br/>
 virtual Rate forecastFixing (const Date &amp;fixingDate) const =0</p>
-<p>Protected Attributes <code>Observer interface</code><br />
+<p>Protected Attributes <code>Observer interface</code><br/>
  virtual Date valueDate (const Date &amp;fixingDate) const</p>
 <p>virtual Date maturityDate (const Date &amp;valueDate) const =0</p>
-<p>Protected Member Functions<br />
+<p>Protected Member Functions<br/>
 virtual Rate forecastFixing (const Date &amp;fixingDate) const =0</p>
-<p>Protected Attributes <code>Inspectors</code><br />
+<p>Protected Attributes <code>Inspectors</code><br/>
  virtual Date valueDate (const Date &amp;fixingDate) const</p>
 <p>virtual Date maturityDate (const Date &amp;valueDate) const =0</p>
-<p>Protected Member Functions<br />
+<p>Protected Member Functions<br/>
 virtual Rate forecastFixing (const Date &amp;fixingDate) const =0</p>
-<p>Protected Attributes <code>Date calculations</code><br />
+<p>Protected Attributes <code>Date calculations</code><br/>
  These method can be overridden to implement particular conventions (e.g. EurLibor) </p>
 <pre><code>virtual Date valueDate (const Date &amp;fixingDate) const
 virtual Date maturityDate (const Date &amp;valueDate) const =0

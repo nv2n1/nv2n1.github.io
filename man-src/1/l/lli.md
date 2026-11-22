@@ -12,8 +12,8 @@ description: "lli – directly execute programs from LLVM bitcode"
 <h2>SYNOPSIS</h2>
 <p> <code>lli</code> [<i>options</i>] [<i>filename</i>] [<i>program args</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>lli</code> directly executes programs in <font SIZE="-1">LLVM</font> bitcode format. It takes a program in <font SIZE="-1">LLVM</font> bitcode format and executes it using a just-in-time compiler, if one is available for the current architecture, or an interpreter. <code>lli</code> takes all of the same code generator options as llc, but they are only effective when <code>lli</code> is using the just-in-time compiler. </p>
-<p> If <i>filename</i> is not specified, then <code>lli</code> reads the <font SIZE="-1">LLVM</font> bitcode for the program from standard input. </p>
+<p> <code>lli</code> directly executes programs in LLVM bitcode format. It takes a program in LLVM bitcode format and executes it using a just-in-time compiler, if one is available for the current architecture, or an interpreter. <code>lli</code> takes all of the same code generator options as llc, but they are only effective when <code>lli</code> is using the just-in-time compiler. </p>
+<p> If <i>filename</i> is not specified, then <code>lli</code> reads the LLVM bitcode for the program from standard input. </p>
 <p> The optional <i>args</i> specified on the command line are passed to the program as arguments.</p>
 <h2>GENERAL OPTIONS</h2>
 <dl>
@@ -40,13 +40,13 @@ description: "lli – directly execute programs from LLVM bitcode"
 <dt><code>-mcpu</code>=<i>cpuname</i></dt>
 <dd> Specify a specific chip in the current architecture to generate code for. By default this is inferred from the target triple and autodetected to the current architecture. For a list of available CPUs, use: <code>llvm-as &lt; /dev/null | llc -march=xyz -mcpu=help</code></dd>
 <dt><code>-mattr</code>=<i>a1,+a2,-a3,&#8230;</i></dt>
-<dd> Override or control specific attributes of the target, such as whether <font SIZE="-1">SIMD</font> operations are enabled or not. The default set of attributes is set by the current <font SIZE="-1">CPU</font>. For a list of available attributes, use: <code>llvm-as &lt; /dev/null | llc -march=xyz -mattr=help</code></dd></dl>
+<dd> Override or control specific attributes of the target, such as whether SIMD operations are enabled or not. The default set of attributes is set by the current CPU. For a list of available attributes, use: <code>llvm-as &lt; /dev/null | llc -march=xyz -mattr=help</code></dd></dl>
 <h2>FLOATING POINT OPTIONS</h2>
 <dl>
 <dt><code>-disable-excess-fp-precision</code></dt>
 <dd> Disable optimizations that may increase floating point precision.</dd>
 <dt><code>-enable-finite-only-fp-math</code></dt>
-<dd> Enable optimizations that assumes only finite floating point math. That is, there is no <font SIZE="-1">NAN</font> or Inf values.</dd>
+<dd> Enable optimizations that assumes only finite floating point math. That is, there is no NAN or Inf values.</dd>
 <dt><code>-enable-unsafe-fp-math</code></dt>
 <dd> Causes <code>lli</code> to enable optimizations that may decrease floating point precision.</dd>
 <dt><code>-soft-float</code></dt>
@@ -67,12 +67,12 @@ description: "lli – directly execute programs from LLVM bitcode"
 <dt><code>-disable-spill-fusing</code></dt>
 <dd> Disable fusing of spill code into instructions.</dd>
 <dt><code>-enable-correct-eh-support</code></dt>
-<dd> Make the -lowerinvoke pass insert expensive, but correct, <font SIZE="-1">EH</font> code.</dd>
+<dd> Make the -lowerinvoke pass insert expensive, but correct, EH code.</dd>
 <dt><code>-enable-eh</code></dt>
 <dd> Exception handling should be emitted.</dd>
 <dt><code>-join-liveintervals</code></dt>
 <dd> Coalesce copies (default=true).</dd>
-<dt><code>-nozero-initialized-in-bss</code> Don&#8217;t place zero-initialized symbols into the <font SIZE="-1">BSS</font> section.</dt>
+<dt><code>-nozero-initialized-in-bss</code> Don&#8217;t place zero-initialized symbols into the BSS section.</dt>
 <dd>
 </dd><dt><code>-pre-RA-sched</code>=<i>scheduler</i></dt>
 <dd> Instruction schedulers available (before register allocation): </dd>
@@ -117,4 +117,4 @@ description: "lli – directly execute programs from LLVM bitcode"
 <h2>SEE ALSO</h2>
 <p> llc</p>
 <h2>AUTHOR</h2>
-<p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
+<p> Maintained by the LLVM Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>

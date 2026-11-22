@@ -9,15 +9,15 @@ description: "Hash Data Functions – Functions that set, access and delete valu
 
 <p>Hash Data Functions &#8211; Functions that set, access and delete values from the hash tables. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_hash_set</code> (Ecore_Hash *hash, void *key, void *value)<br />
- <i>Sets a key-value pair in the given hash table. </i><br />
- EAPI int <code>ecore_hash_hash_set</code> (Ecore_Hash *hash, Ecore_Hash *set)<br />
- <i>Sets all key-value pairs from set in the given hash table. </i><br />
- EAPI void * <code>ecore_hash_get</code> (Ecore_Hash *hash, const void *key)<br />
- <i>Retrieves the value associated with the given key from the given hash table. </i><br />
- EAPI void * <code>ecore_hash_remove</code> (Ecore_Hash *hash, const void *key)<br />
- <i>Removes the value associated with the given key in the given hash table. </i><br />
- EAPI void * <code>ecore_hash_find</code> (Ecore_Hash *hash, Ecore_Compare_Cb compare, const void *value)<br />
+<p>EAPI int <code>ecore_hash_set</code> (Ecore_Hash *hash, void *key, void *value)<br/>
+ <i>Sets a key-value pair in the given hash table. </i><br/>
+ EAPI int <code>ecore_hash_hash_set</code> (Ecore_Hash *hash, Ecore_Hash *set)<br/>
+ <i>Sets all key-value pairs from set in the given hash table. </i><br/>
+ EAPI void * <code>ecore_hash_get</code> (Ecore_Hash *hash, const void *key)<br/>
+ <i>Retrieves the value associated with the given key from the given hash table. </i><br/>
+ EAPI void * <code>ecore_hash_remove</code> (Ecore_Hash *hash, const void *key)<br/>
+ <i>Removes the value associated with the given key in the given hash table. </i><br/>
+ EAPI void * <code>ecore_hash_find</code> (Ecore_Hash *hash, Ecore_Compare_Cb compare, const void *value)<br/>
  <i>Retrieves the first value that matches table. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that set, access and delete values from the hash tables.</p>
@@ -26,7 +26,7 @@ description: "Hash Data Functions – Functions that set, access and delete valu
 <p>Retrieves the first value that matches table. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash table.<br />
+<dd><i>hash</i> The given hash table.<br/>
  <i>key</i> The key to search for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -35,7 +35,7 @@ description: "Hash Data Functions – Functions that set, access and delete valu
 <p>Retrieves the value associated with the given key from the given hash table. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash table.<br />
+<dd><i>hash</i> The given hash table.<br/>
  <i>key</i> The key to search for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -45,7 +45,7 @@ description: "Hash Data Functions – Functions that set, access and delete valu
 <p>Sets all key-value pairs from set in the given hash table. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash table.<br />
+<dd><i>hash</i> The given hash table.<br/>
  <i>set</i> The hash table to import.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -55,7 +55,7 @@ description: "Hash Data Functions – Functions that set, access and delete valu
 <p>Removes the value associated with the given key in the given hash table. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash table.<br />
+<dd><i>hash</i> The given hash table.<br/>
  <i>key</i> The key to search for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -65,8 +65,8 @@ description: "Hash Data Functions – Functions that set, access and delete valu
 <p>Sets a key-value pair in the given hash table. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash table.<br />
- <i>key</i> The key.<br />
+<dd><i>hash</i> The given hash table.<br/>
+ <i>key</i> The key.<br/>
  <i>value</i> The value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

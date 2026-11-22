@@ -42,7 +42,7 @@ description: "snap2tzx – Convert ZX Spectrum snapshot to .tzx tape images"
 <p> None known.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-fuse/">fuse</a></i>(1), <i><a href="/docs/linux/man/1-fuse-utils/">fuse-utils</a></i>(1), <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3), <i><a href="/docs/linux/man/1-listbasic/">listbasic</a></i>(1), <i><a href="/docs/linux/man/1-snapconv/">snapconv</a></i>(1) </p>
-<p> The comp.sys.sinclair Spectrum FAQ, at<br />
+<p> The comp.sys.sinclair Spectrum FAQ, at<br/>
  <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/index.html">http://www.worldofspectrum.org/faq/index.html</a></i>.</p>
 <h2>AUTHOR</h2>
 <p> Philip Kendall (philip-fuse [at] shadowmagic.org.uk). </p>

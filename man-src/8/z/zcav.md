@@ -25,7 +25,7 @@ description: "zcav – program to test raw hard drive throughput."
 <dt><code>-f</code></dt>
 <dd>the file-name for the input data. This isn&#8217;t needed on well configured systems that have a recent Glibc where you can specify the file name without the -f flag. </dd>
 <dt><code>-u</code></dt>
-<dd>user-id to use. When running as root specify the UID to run the tests as, it is not recommended to use root, so if you want to run as root use <code>-u root.</code> Also if you want to specify the group to run as then use the <code>user:group</code> format. If you specify a user by name but no group then the primary group of that user will be chosen. If you specify a user by number and no group then the group will be <code>nogroup.</code><br />
+<dd>user-id to use. When running as root specify the UID to run the tests as, it is not recommended to use root, so if you want to run as root use <code>-u root.</code> Also if you want to specify the group to run as then use the <code>user:group</code> format. If you specify a user by name but no group then the primary group of that user will be chosen. If you specify a user by number and no group then the group will be <code>nogroup.</code><br/>
 &nbsp;<wbr></dd>
 <dt><code>-g</code></dt>
 <dd>group-id to use. Same as using <code>:group</code> for the <code>-u</code> parameter, just a different way to specify it for compatibility with other programs. </dd>

@@ -9,9 +9,9 @@ description: "X Window Z Order Functions – Functions that change the Z order o
 
 <p>X Window Z Order Functions &#8211; Functions that change the Z order of X windows. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>ecore_x_window_raise</code> (Ecore_X_Window win)<br />
- <i>Raises the given window. </i><br />
- EAPI void <code>ecore_x_window_lower</code> (Ecore_X_Window win)<br />
+<p>EAPI void <code>ecore_x_window_raise</code> (Ecore_X_Window win)<br/>
+ <i>Raises the given window. </i><br/>
+ EAPI void <code>ecore_x_window_lower</code> (Ecore_X_Window win)<br/>
  <i>Lowers the given window. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that change the Z order of X windows.</p>

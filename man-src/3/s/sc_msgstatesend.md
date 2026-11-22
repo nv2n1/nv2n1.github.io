@@ -15,20 +15,20 @@ description: "sc::MsgStateSend –"
 <p> Inherited by <code>sc::BcastStateSend</code>, and <code>sc::StateSend</code>.</p>
 <h3>Public Member Functions</h3>
 <p> <code>MsgStateSend</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;) </p>
-<p> virtual void <code>flush</code> ()=0<br />
- <i>Specializations must implement </i><code>flush()</code>.<br />
- void <code>set_buffer_size</code> (int)<br />
- <i>The buffer size of statein and stateout objects that communicate with each other must match. </i><br />
- int <code>put</code> (const <code>ClassDesc</code> *)<br />
- <i>I only need to override </i><code>put(const ClassDesc*)</code> but C++ will hide all of the other put&#8217;s so I must override everything.<br />
- int <code>put</code> (char r)<br />
- <i>Write the given datum. </i><br />
+<p> virtual void <code>flush</code> ()=0<br/>
+ <i>Specializations must implement </i><code>flush()</code>.<br/>
+ void <code>set_buffer_size</code> (int)<br/>
+ <i>The buffer size of statein and stateout objects that communicate with each other must match. </i><br/>
+ int <code>put</code> (const <code>ClassDesc</code> *)<br/>
+ <i>I only need to override </i><code>put(const ClassDesc*)</code> but C++ will hide all of the other put&#8217;s so I must override everything.<br/>
+ int <code>put</code> (char r)<br/>
+ <i>Write the given datum. </i><br/>
  int <code>put</code> (unsigned int r) </p>
 <p> int <code>put</code> (int r) </p>
 <p> int <code>put</code> (float r) </p>
 <p> int <code>put</code> (double r) </p>
-<p> int <code>put</code> (const char *, int)<br />
- <i>Write the given array data. </i><br />
+<p> int <code>put</code> (const char *, int)<br/>
+ <i>Write the given array data. </i><br/>
  int <code>put</code> (const int *, int) </p>
 <p> int <code>put</code> (const unsigned int *, int) </p>
 <p> int <code>put</code> (const float *, int) </p>

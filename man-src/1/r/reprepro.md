@@ -95,19 +95,19 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <dd> <p> This option specify whether and how the high level actions (e.g. install, update, pull, delete) should export the index files of the distributions they work with. </p>
  </dd>
 <dt><code>--export=lookedat</code></dt>
-<dd> <p> In this mode every distribution the action handled will be exported, unless there was an error possibly corrupting it. <br />
- <i>Note</i> that only missing files and files whose intended content changed between before and after the action will be written. To get a guaranteed current export, use the <code>export</code> action. <br />
+<dd> <p> In this mode every distribution the action handled will be exported, unless there was an error possibly corrupting it. <br/>
+ <i>Note</i> that only missing files and files whose intended content changed between before and after the action will be written. To get a guaranteed current export, use the <code>export</code> action. <br/>
  For backwards compatibility, <code>lookedat</code> is also available under the old name <code>normal</code>. The name <code>normal</code> is deprecated and will be removed in future versions. </p>
  </dd>
 <dt><code>--export=changed</code></dt>
-<dd> <p> In this mode every distribution actually changed will be exported, unless there was an error possibly corrupting it. (i.e. if nothing changed, not even missing files will be created.) <br />
+<dd> <p> In this mode every distribution actually changed will be exported, unless there was an error possibly corrupting it. (i.e. if nothing changed, not even missing files will be created.) <br/>
  <i>Note</i> that only missing files and files whose intended content changed between before and after the action will be written. To get a guaranteed current export, use the <code>export</code> action. </p>
  </dd>
 <dt><code>--export=force</code></dt>
 <dd> <p> Always export all distributions looked at, even if there was some error possibly bringing it into a inconsistent state. </p>
  </dd>
 <dt><code>--export=never</code></dt>
-<dd> <p> No index files are exported. You will have to call <code>export</code> later. <br />
+<dd> <p> No index files are exported. You will have to call <code>export</code> later. <br/>
  <i>Note</i> that you most likely additionally need the <code>--keepunreferencedfiles</code> option, if you do not want some of the files pointed to by the untouched index files to vanish. </p>
  </dd>
 <dt><code>--ignore=</code><i>what</i></dt>
@@ -143,8 +143,8 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <dd> <p> If there is a lockfile indicating another instance of reprepro is currently using the database, retry <i>count</i> times after waiting for 10 seconds each time. The default is 0 and means to error out instantly. </p>
  </dd>
 <dt><code>--spacecheck full</code>|none </dt>
-<dd> <p> The default is <code>full</code>: <br />
- In the update commands, check for every to be downloaded file which filesystem it is on and how much space is left. <br />
+<dd> <p> The default is <code>full</code>: <br/>
+ In the update commands, check for every to be downloaded file which filesystem it is on and how much space is left. <br/>
  To disable this behaviour, use <code>none</code>. </p>
  </dd>
 <dt><code>--dbsafetymargin</code><i> bytes-count</i></dt>
@@ -186,7 +186,7 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <p> The special field names <code>$identifier</code>, <code>$architecture</code>, <code>$component</code>, <code>$type</code>, <code>$codename</code> denote where the package was found. </p>
 <p> The special field names <code>$source</code> and <code>$sourceversion</code> denote the source and source version a package belongs to. (i.e. <code>${$source}</code> will either be the same as <code>${source}</code> (without a possible version in parentheses at the end) or the same as <code>${package}</code>. </p>
 <p> The special field names <code>$basename</code>, <code>$filekey</code> and <code>$fullfilename</code> denote the first package file part of this entry (i.e. usually the .deb, .udeb or .dsc file) as basename, as filekey (filename relative to the outdir) and the full filename with outdir prepended (i.e. as relative or absolute as your outdir (or basedir if you did not set outdir) is). </p>
-<p> When <code>--list-format</code> is not given or <code>NONE</code>, then the default is equivalent to <br />
+<p> When <code>--list-format</code> is not given or <code>NONE</code>, then the default is equivalent to <br/>
  <code>${$identifier} ${package} ${version}\n</code>. </p>
 <p> Escaping digits or letters not in above list, using dollars not escaped outside specified constructs, or any field names not listed as special and not consisting entirely out of letters, digits and minus signs have undefined behaviour and might change meaning without any further notice. </p>
 <p> If you give this option on the command line, don&#8217;t forget that $ is also interpreted by your shell. So you have to properly escape it. For example by putting the whole argument to --list-format in single quotes. </p>
@@ -216,19 +216,19 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <dd> <p> Run the specified <i>hookscript</i> once reprepro exits. It will get the usual <code>REPREPRO_</code>* environment variables set (or unset) and additionally a variable <code>REPREPRO_EXIT_CODE</code> that is the exit code with which reprepro would have exited (the hook is always called once the initial parsing of global options and the command name is done, no matter if reprepro did anything or not). Reprepro will return to the calling process with the exitcode of this script. Reprepro has closed all its databases and removed all its locks, so you can run reprepro again in this script (unless someone else did so in the same repository before, of course). </p>
 <p> The only advantage over running that command always directly after reprepro is that you can some environment variables set and cannot so easily forget it if this option is in conf/options. </p>
 <p> The script is supposed to be located relative to <i>confdir</i>, unless its name starts with <code>/</code>, <code>./</code>, <code>+b/</code>, <code>+o/</code>, or <code>+c/</code> and the name may not start (except in the cases given before) with a <code>+</code>. </p>
-<p> An example script looks like: <code> <br />
-&nbsp;<wbr>#!/bin/sh <br />
-&nbsp;<wbr> <br />
-&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>&quot;$REPREPRO_EXIT_CODE&quot;&nbsp;<wbr>-ne 0&nbsp;<wbr>]&nbsp;<wbr>;&nbsp;<wbr>then <br />
-&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>exit&nbsp;<wbr>&quot;$REPREPRO_EXIT_CODE&quot;<br />
- <br />
-&nbsp;<wbr>fi <br />
-&nbsp;<wbr> <br />
-&nbsp;<wbr>echo&nbsp;<wbr>&quot;congratulations, reprepro with arguments:&nbsp;<wbr>$*&quot; <br />
-&nbsp;<wbr>echo&nbsp;<wbr>&quot;seems to have run successfully. REPREPRO_&nbsp;<wbr>part of the environment is:&quot; <br />
-&nbsp;<wbr>set | grep&nbsp;<wbr>^REPREPRO_ <br />
-&nbsp;<wbr> <br />
-&nbsp;<wbr>exit 0 <br />
+<p> An example script looks like: <code> <br/>
+&nbsp;<wbr>#!/bin/sh <br/>
+&nbsp;<wbr> <br/>
+&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>&quot;$REPREPRO_EXIT_CODE&quot;&nbsp;<wbr>-ne 0&nbsp;<wbr>]&nbsp;<wbr>;&nbsp;<wbr>then <br/>
+&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>exit&nbsp;<wbr>&quot;$REPREPRO_EXIT_CODE&quot;<br/>
+ <br/>
+&nbsp;<wbr>fi <br/>
+&nbsp;<wbr> <br/>
+&nbsp;<wbr>echo&nbsp;<wbr>&quot;congratulations, reprepro with arguments:&nbsp;<wbr>$*&quot; <br/>
+&nbsp;<wbr>echo&nbsp;<wbr>&quot;seems to have run successfully. REPREPRO_&nbsp;<wbr>part of the environment is:&quot; <br/>
+&nbsp;<wbr>set | grep&nbsp;<wbr>^REPREPRO_ <br/>
+&nbsp;<wbr> <br/>
+&nbsp;<wbr>exit 0 <br/>
 &nbsp;<wbr></code> </p>
  </dd>
 <dt><code>--outhook </code><i>hookscript</i></dt>
@@ -421,7 +421,7 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <dt><code>gensnapshot </code><i>codename</i><i>directoryname</i></dt>
 <dd> <p> Generate a snapshot of the distribution specified by <i>codename</i> in the directory <i>dists</i><code>/</code><i>codename</i><code>/snapshots/</code><i>directoryname</i><code>/</code> and reference all needed files in the pool as needed by that. No Content files are generated and no export hooks are run. </p>
 <p> Note that there is currently no automated way to remove that snapshot again (not even clearvanished will unlock the referenced files after the distribution itself vanished). You will have to remove the directory yourself and tell reprepro to <code>_removereferences s=</code><i>codename</i><code>=</code><i>directoryname</i> before <code>deleteunreferenced</code> will delete the files from the pool locked by this. </p>
-<p> To access such a snapshot with apt, add something like the following to your sources.list file: <br />
+<p> To access such a snapshot with apt, add something like the following to your sources.list file: <br/>
  <code>deb <a href="method://as/without/snapshot">method://as/without/snapshot</a> </code><i>codename</i><code>/snapshots/</code><i>name</i><code> main</code> </p>
  </dd>
 <dt><code>rerunnotifiers</code> [ <i>codenames</i> ] </dt>
@@ -439,9 +439,9 @@ description: "reprepro – produce, manage and sync a local repository of Debian
  </dd>
 <dt><code>flood </code><i>distribution</i> [<i>architecture</i>] </dt>
 <dd> <p> For each architecture of <i>distribution</i> (or for the one specified) add architecture <code>all</code> packages from other architectures (but the same component or packagetype) under the following conditions: </p>
-<p> <br />
-&nbsp;<wbr>Packages are only upgraded, never downgraded. <br />
-&nbsp;<wbr>If there is a package not being architecture all, then architecture <code>all</code> packages of the same source from the same source version are preferred over those that have no such binary sibling. <br />
+<p> <br/>
+&nbsp;<wbr>Packages are only upgraded, never downgraded. <br/>
+&nbsp;<wbr>If there is a package not being architecture all, then architecture <code>all</code> packages of the same source from the same source version are preferred over those that have no such binary sibling. <br/>
 &nbsp;<wbr>Otherwise the package with the highest version wins. </p>
 <p> You can restrict with architectures are looked for architecture all packages using <code>-A</code> and which components/packagetypes are flooded by <code>-C</code>/<code>-T</code> as usual. </p>
 <p> There are mostly two use cases for this command: If you added an new architecture to an distribution and want to copy all architecture <code>all</code> packages to it. Or if you included some architecture all packages only to some architectures using <code>-A</code> to avoid breaking the other architectures for which the binary packages were still missing and now want to copy it to those architectures were they are unlikely to break something (because a newbinary is already available). </p>
@@ -540,21 +540,21 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <dd> <p> This optional field is simply copied into the Release files. In Debian it contains names like stable, testing or unstable. To create symlinks from the Suite to the Codename, use the <code>createsymlinks</code> command of reprepro. </p>
  </dd>
 <dt><code>FakeComponentPrefix</code></dt>
-<dd> <p> If this field is present, its argument is added - separated by a slash - before every Component written to the main Release file (unless the component already starts with it), and removed from the end of the Codename and Suite fields in that file. Also if a component starts with it, its directory in the dists dir is shortened by this. <br />
- So <code> <br />
-&nbsp;<wbr>Codename: bla/updates <br />
-&nbsp;<wbr>Suite: foo/updates <br />
-&nbsp;<wbr>FakeComponentPrefix: updates <br />
-&nbsp;<wbr>Components: main bad </code> will create a Release file with <code> <br />
-&nbsp;<wbr>Codename: bla <br />
-&nbsp;<wbr>Suite: foo <br />
-&nbsp;<wbr>Components: updates/main updates/bad </code> in it, but otherwise nothing is changed, while <code> <br />
-&nbsp;<wbr>Codename: bla/updates <br />
-&nbsp;<wbr>Suite: foo/updates <br />
-&nbsp;<wbr>FakeComponentPrefix: updates <br />
-&nbsp;<wbr>Components: updates/main updates/bad </code> will also create a Release file with <code> <br />
-&nbsp;<wbr>Codename: bla <br />
-&nbsp;<wbr>Suite: foo <br />
+<dd> <p> If this field is present, its argument is added - separated by a slash - before every Component written to the main Release file (unless the component already starts with it), and removed from the end of the Codename and Suite fields in that file. Also if a component starts with it, its directory in the dists dir is shortened by this. <br/>
+ So <code> <br/>
+&nbsp;<wbr>Codename: bla/updates <br/>
+&nbsp;<wbr>Suite: foo/updates <br/>
+&nbsp;<wbr>FakeComponentPrefix: updates <br/>
+&nbsp;<wbr>Components: main bad </code> will create a Release file with <code> <br/>
+&nbsp;<wbr>Codename: bla <br/>
+&nbsp;<wbr>Suite: foo <br/>
+&nbsp;<wbr>Components: updates/main updates/bad </code> in it, but otherwise nothing is changed, while <code> <br/>
+&nbsp;<wbr>Codename: bla/updates <br/>
+&nbsp;<wbr>Suite: foo/updates <br/>
+&nbsp;<wbr>FakeComponentPrefix: updates <br/>
+&nbsp;<wbr>Components: updates/main updates/bad </code> will also create a Release file with <code> <br/>
+&nbsp;<wbr>Codename: bla <br/>
+&nbsp;<wbr>Suite: foo <br/>
 &nbsp;<wbr>Components: updates/main updates/bad </code> but the packages will actually be in the components <code>updates/main</code> and <code>updates/bad</code>, most likely causing the same file using duplicate storage space. </p>
 <p> This makes the distribution look more like Debian&#8217;s security archive, thus work around problems with apt&#8217;s workarounds for that. </p>
  </dd>
@@ -597,8 +597,8 @@ description: "reprepro – produce, manage and sync a local repository of Debian
  </dd>
 <dt><code>SignWith</code></dt>
 <dd> <p> When this field is present, a Release.gpg file will be generated. If the value is &quot;yes&quot; or &quot;default&quot;, the default key of gpg is used. If the field starts with an exlamation mark (&quot;!&quot;), the given script is executed to do the signing. Otherwise the value will be given to libgpgme to determine to key to use. </p>
-<p> If there are problems with signing, you can try <br />
- <code>gpg --list-secret-keys </code><i>value</i> <br />
+<p> If there are problems with signing, you can try <br/>
+ <code>gpg --list-secret-keys </code><i>value</i> <br/>
  to see how gpg could interprete the value. If that command does not list any keys or multiple ones, try to find some other value (like the keyid), that gpg can more easily associate with a unique key. </p>
 <p> If this key has a passphrase, you need to use gpg-agent or the insecure option <code>--ask-passphrase</code>. </p>
 <p> A &#8216;<code>!</code>&#8216; hook script is looked for in the confdir, unless it starts with <code>~/</code>, <code>./</code>, <code>+b/</code>, <code>+o/</code>, <code>+c/</code> or <code>/</code> . Is gets three command line arguments: The filename to sign, an empty argument or the filename to create with an inline signature (i.e. InRelease) and an empty argument or the filename to create an detached signature (i.e. Release.gpg). The script may generate no Release.gpg file if it choses to (then the repository will look like unsigned for older clients), but generating empty files is not allowed. Reprepro waits for the script to finish and will abort the exporting of the distribution this signing is part of unless the scripts returns normally with exit code 0. Using a space after ! is recommended to avoid incompatibilities with possible future extensions. </p>
@@ -613,14 +613,14 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <dd> <p> When this field is present, it describes the override file used when including .dsc files. </p>
  </dd>
 <dt><code>DebIndices</code>, <code>UDebIndices</code>, <code>DscIndices</code></dt>
-<dd> <p> Choose what kind of Index files to export. The first part describes what the Index file shall be called. The second argument determines the name of a Release file to generate or not to generate if missing. Then at least one of &quot;<code>.</code>&quot;, &quot;<code>.gz</code>&quot;, &quot;<code>.xz</code>&quot; or &quot;<code>.bz2</code>&quot; specifying whether to generate uncompressed output, gzipped output, bzip2ed output or any combination. (bzip2 is only available when compiled with bzip2 support, so it might not be available when you compiled it on your own, same for xz and liblzma). If an argument not starting with dot follows, it will be executed after all index files are generated. (See the examples for what argument this gets). The default is: <br />
- DebIndices: Packages Release . .gz <br />
- UDebIndices: Packages . .gz <br />
+<dd> <p> Choose what kind of Index files to export. The first part describes what the Index file shall be called. The second argument determines the name of a Release file to generate or not to generate if missing. Then at least one of &quot;<code>.</code>&quot;, &quot;<code>.gz</code>&quot;, &quot;<code>.xz</code>&quot; or &quot;<code>.bz2</code>&quot; specifying whether to generate uncompressed output, gzipped output, bzip2ed output or any combination. (bzip2 is only available when compiled with bzip2 support, so it might not be available when you compiled it on your own, same for xz and liblzma). If an argument not starting with dot follows, it will be executed after all index files are generated. (See the examples for what argument this gets). The default is: <br/>
+ DebIndices: Packages Release . .gz <br/>
+ UDebIndices: Packages . .gz <br/>
  DscIndices: Sources Release .gz </p>
  </dd>
 <dt><code>ExportOptions</code></dt>
-<dd> <p> Options to modify how and if exporting is done: <br />
- <code>noexport</code> Never export this distribution. That means there will be no directory below <code>dists/</code> generated and the distribution is only useful to copy packages to other distributions. <br />
+<dd> <p> Options to modify how and if exporting is done: <br/>
+ <code>noexport</code> Never export this distribution. That means there will be no directory below <code>dists/</code> generated and the distribution is only useful to copy packages to other distributions. <br/>
  <code>keepunknown</code> Ignore unknown files and directories in the exported directory. This is currently the only available option and the default, but might change in the future, so it can already be requested explicitely. </p>
  </dd>
 <dt><code>Contents</code></dt>
@@ -644,16 +644,16 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <dd> <p> Specifies a file (relative to confdir if not starting with <code>~/</code>, <code>+b/</code>, <code>+c/</code> or <code>/</code> ) to specify who is allowed to upload packages. Without this there are no limits, and this file can be ignored via <code>--ignore=uploaders</code>. See the section <code>UPLOADERS FILES</code> below. </p>
  </dd>
 <dt><code>Tracking</code></dt>
-<dd> <p> Enable the (experimental) tracking of source packages. The argument list needs to contain exactly one of the following: <br />
- <code>keep</code> Keeps all files of a given source package, until that is deleted explicitly via <code>removetrack</code>. This is currently the only possibility to keep older packages around when all indices contain newer files. <br />
- <code>all</code> Keep all files belonging to a given source package until the last file of it is no longer used within that distribution. <br />
- <code>minimal</code> Remove files no longer included in the tracked distribution. (Remove changes, logs and includebyhand files once no file is in any part of the distribution). <br />
- And any number of the following (or none): <br />
- <code>includechanges</code> Add the .changes file to the tracked files of a source package. Thus it is also put into the pool. <br />
- <code>includebyhand</code> Add <code>byhand</code> and <code>raw-</code><i>*</i> files to the tracked files and thus in the pool. <br />
- <code>includelogs</code> Add log files to the tracked files and thus in the pool. (Not that putting log files in changes files is a reprepro extension not found in normal changes files) <br />
- <code>embargoalls</code> Not yet implemented. <br />
- <code>keepsources</code> Even when using minimal mode, do not remove source files until no file is needed any more. <br />
+<dd> <p> Enable the (experimental) tracking of source packages. The argument list needs to contain exactly one of the following: <br/>
+ <code>keep</code> Keeps all files of a given source package, until that is deleted explicitly via <code>removetrack</code>. This is currently the only possibility to keep older packages around when all indices contain newer files. <br/>
+ <code>all</code> Keep all files belonging to a given source package until the last file of it is no longer used within that distribution. <br/>
+ <code>minimal</code> Remove files no longer included in the tracked distribution. (Remove changes, logs and includebyhand files once no file is in any part of the distribution). <br/>
+ And any number of the following (or none): <br/>
+ <code>includechanges</code> Add the .changes file to the tracked files of a source package. Thus it is also put into the pool. <br/>
+ <code>includebyhand</code> Add <code>byhand</code> and <code>raw-</code><i>*</i> files to the tracked files and thus in the pool. <br/>
+ <code>includelogs</code> Add log files to the tracked files and thus in the pool. (Not that putting log files in changes files is a reprepro extension not found in normal changes files) <br/>
+ <code>embargoalls</code> Not yet implemented. <br/>
+ <code>keepsources</code> Even when using minimal mode, do not remove source files until no file is needed any more. <br/>
  <code>needsources</code> Not yet implemented. </p>
  </dd>
 <dt><code>Log</code></dt>
@@ -717,14 +717,14 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <dd> <p> IF this is present, no <code>InRelease</code> file is downloaded but only <code>Release</code> (and <code>Release.gpg</code> ) are tried. </p>
  </dd>
 <dt><code>Flat</code></dt>
-<dd> <p> If this field is in an update rule, it is supposed to be a flat repository, i.e. a repository without a <code>dists</code> dir and no subdirectories for the index files. (If the corresponding <code>sources.list</code> line has the suite end with a slash, then you might need this one.) The argument for the <code>Flat:</code> field is the Component to put those packages into. No <code>Components</code> or <code>UDebComponents</code> fields are allowed in a flat update rule. If the <code>Architecture</code> field has any <code>&gt;</code> items, the part left of the &quot;<code>&gt;</code>&quot; is ignored. <br />
- For example the <code>sources.list</code> line <br />
-&nbsp;<wbr>deb&nbsp;<wbr><a rel="nofollow" href="http://cran.r-project.org/bin/linux/debian">http://cran.r-project.org/bin/linux/debian</a>&nbsp;<wbr>etch-cran/ <br />
- would translate to <br />
- <br />
-&nbsp;<wbr>Name: R <br />
-&nbsp;<wbr>Method:&nbsp;<wbr><a rel="nofollow" href="http://cran.r-project.org/bin/linux/debian">http://cran.r-project.org/bin/linux/debian</a> <br />
-&nbsp;<wbr>Suite: etch-cran <br />
+<dd> <p> If this field is in an update rule, it is supposed to be a flat repository, i.e. a repository without a <code>dists</code> dir and no subdirectories for the index files. (If the corresponding <code>sources.list</code> line has the suite end with a slash, then you might need this one.) The argument for the <code>Flat:</code> field is the Component to put those packages into. No <code>Components</code> or <code>UDebComponents</code> fields are allowed in a flat update rule. If the <code>Architecture</code> field has any <code>&gt;</code> items, the part left of the &quot;<code>&gt;</code>&quot; is ignored. <br/>
+ For example the <code>sources.list</code> line <br/>
+&nbsp;<wbr>deb&nbsp;<wbr><a rel="nofollow" href="http://cran.r-project.org/bin/linux/debian">http://cran.r-project.org/bin/linux/debian</a>&nbsp;<wbr>etch-cran/ <br/>
+ would translate to <br/>
+ <br/>
+&nbsp;<wbr>Name: R <br/>
+&nbsp;<wbr>Method:&nbsp;<wbr><a rel="nofollow" href="http://cran.r-project.org/bin/linux/debian">http://cran.r-project.org/bin/linux/debian</a> <br/>
+&nbsp;<wbr>Suite: etch-cran <br/>
 &nbsp;<wbr>Flat: whatevercomponentyoudlikethepackagesin </p>
  </dd>
 <dt><code>IgnoreHashes</code></dt>
@@ -748,10 +748,10 @@ description: "reprepro – produce, manage and sync a local repository of Debian
  </dd>
 <dt><code>ListShellHook</code></dt>
 <dd> <p> This is like ListHook, but the whole argument is given to the shell as argument, and the input and output file are stdin and stdout. </p>
-<p> i.e.: <br />
- ListShellHook: cat <br />
- works but does nothing but useless use of a shell and cat, while <br />
- ListShellHook: grep-dctrl -X -S apt -o -X -S dpkg || [ $? -eq 1 ] <br />
+<p> i.e.: <br/>
+ ListShellHook: cat <br/>
+ works but does nothing but useless use of a shell and cat, while <br/>
+ ListShellHook: grep-dctrl -X -S apt -o -X -S dpkg || [ $? -eq 1 ] <br/>
  will limit the update rule to packages from the specified source packages. </p>
  </dd>
 <dt><code>DownloadListsAs</code></dt>
@@ -793,18 +793,18 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <h2>OVERRIDE FILES</h2>
 <p> The format of override files used by reprepro should resemble the extended ftp-archive format, to be specific it is: </p>
 <p> <i>packagename</i> <i>field name</i> <i>new value</i> </p>
-<p> For example: <br />
- <code>kernel-image-2.4.31-yourorga Section protected/base</code> <br />
- <code>kernel-image-2.4.31-yourorga Priority standard</code> <br />
- <code>kernel-image-2.4.31-yourorga Maintainer That&#8217;s me &lt;me [at] localhost&gt;</code> <br />
+<p> For example: <br/>
+ <code>kernel-image-2.4.31-yourorga Section protected/base</code> <br/>
+ <code>kernel-image-2.4.31-yourorga Priority standard</code> <br/>
+ <code>kernel-image-2.4.31-yourorga Maintainer That&#8217;s me &lt;me [at] localhost&gt;</code> <br/>
  <code>reprepro Priority required</code> </p>
 <p> All fields of a given package will be replaced by the new value specified in the override file with the exception of special fields starting with a dollar sign ($). While the field name is compared case-insensitive, it is copied in exactly the form in the override file there. (Thus I suggest to keep to the exact case it is normally found in index files in case some other tool confuses them.) More than copied is the Section header (unless <code>-S</code> is supplied), which is also used to guess the component (unless <code>-C</code> is there). </p>
 <p> Some values like <code>Package</code>, <code>Filename</code>, <code>Size</code> or <code>MD5sum</code> are forbidden, as their usage would severly confuse reprepro. </p>
 <p> As an extension reprepro also supports patterns instead of packagenames. If the package name contains &#8216;*&#8216;, &#8216;[&#8216; or &#8216;?&#8216;, it is considered a pattern and applied to each package that is not matched by any non-pattern override nor by any previous pattern. </p>
 <p> Fieldnames starting with a dollar ($) are not be placed in the exported control data but have special meaning. Unknown ones are loudly ignored. Special fields are: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr><code>$Component</code>: includedeb, includedsc, include and processincoming will put the package in the component given as value (unless itself overridden with <code>-C</code>). Note that the proper way to specify the component is by setting the section field and using this extension will most likely confuse people and/or tools. </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr><code>$Delete</code>: the value is treated a fieldname and fields of that name are removed. (This way one can remove fields previously added without removing and readding the package. And fields already included in the package can be removed, too). </p>
 <h3>conf/incoming</h3>
 <p> Every chunk is a rule set for the <code>process_incoming</code> command. Possible fields are: </p>
@@ -822,10 +822,10 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <dd> <p> A directory where .changes files, .log files and otherwise unused .byhand files are stored upon procession. </p>
  </dd>
 <dt><code>Allow</code></dt>
-<dd> <p> Each argument is either a pair <i>name1</i><code>&gt;</code><i>name2</i> or simply <i>name</i> which is short for <i>name</i><code>&gt;</code><i>name</i>. Each <i>name2</i> must identify a distribution, either by being Codename, a unique Suite, or a unique AlsoAcceptFor from <code>conf/distributions</code>. Each upload has each item in its <code>Distribution:</code> header compared first to last with each <i>name1</i> in the rules and is put in the first one accepting this package. e.g.: <br />
- Allow: local unstable&gt;sid <br />
- or <br />
- Allow: stable&gt;security-updates stable&gt;proposed-updates <br />
+<dd> <p> Each argument is either a pair <i>name1</i><code>&gt;</code><i>name2</i> or simply <i>name</i> which is short for <i>name</i><code>&gt;</code><i>name</i>. Each <i>name2</i> must identify a distribution, either by being Codename, a unique Suite, or a unique AlsoAcceptFor from <code>conf/distributions</code>. Each upload has each item in its <code>Distribution:</code> header compared first to last with each <i>name1</i> in the rules and is put in the first one accepting this package. e.g.: <br/>
+ Allow: local unstable&gt;sid <br/>
+ or <br/>
+ Allow: stable&gt;security-updates stable&gt;proposed-updates <br/>
  (Note that this makes only sense if Multiple is set to true or if there are people only allowed to upload to proposed-updates but not to security-updates). </p>
  </dd>
 <dt><code>Default </code><i>distribution</i></dt>
@@ -835,30 +835,30 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <dd> <p> Old form of Options: multiple_distributions. </p>
  </dd>
 <dt><code>Options</code></dt>
-<dd> <p> A list of options <br />
- <code>multiple_distributions</code> <br />
+<dd> <p> A list of options <br/>
+ <code>multiple_distributions</code> <br/>
  Allow including a upload in multiple distributions. </p>
 <p> If a .changes file lists multiple distributions, then reprepro will start with the first name given, check all Accept and Default options till it finds a distribution this upload can go into. </p>
-<p> If this found no distribution or if this option was given, reprepro will then do the same with the second distribution name given in the .changes file and so on. <br />
- <code>limit_arch_all</code> <br />
+<p> If this found no distribution or if this option was given, reprepro will then do the same with the second distribution name given in the .changes file and so on. <br/>
+ <code>limit_arch_all</code> <br/>
  If an upload contains binaries from some architecture and architecture all packages, the architecture all packages are only put into the architectures within this upload. Useful to combine with the <code>flood</code> command. </p>
  </dd>
 <dt><code>Permit</code></dt>
-<dd> <p> A list of options to allow things otherwise causing errors: <br />
- <code>unused_files</code> <br />
- Do not stop with error if there are files listed in the <code>.changes</code> file if it lists files not belonging to any package in it. <br />
- <code>older_version</code> <br />
- Ignore a package not added because there already is a strictly newer version available instead of treating this as an error. <br />
- <code>unlisted_binaries</code> <br />
+<dd> <p> A list of options to allow things otherwise causing errors: <br/>
+ <code>unused_files</code> <br/>
+ Do not stop with error if there are files listed in the <code>.changes</code> file if it lists files not belonging to any package in it. <br/>
+ <code>older_version</code> <br/>
+ Ignore a package not added because there already is a strictly newer version available instead of treating this as an error. <br/>
+ <code>unlisted_binaries</code> <br/>
  Do not abort with an error if a .changes file contains .deb files that are not listed in the Binaries header. </p>
  </dd>
 <dt><code>Cleanup </code><i>options</i></dt>
-<dd> <p> A list of options to cause more files in the incoming directory to be deleted: <br />
- <code>unused_files</code> <br />
- If there is <code>unused_files</code> in <code>Permit</code> then also delete those files when the package is deleted after successful processing. <br />
- <code>on_deny</code> <br />
- If a <code>.changes</code> file is denied processing because of missing signatures or allowed distributions to be put in, delete it and all the files it references. <br />
- <code>on_error</code> <br />
+<dd> <p> A list of options to cause more files in the incoming directory to be deleted: <br/>
+ <code>unused_files</code> <br/>
+ If there is <code>unused_files</code> in <code>Permit</code> then also delete those files when the package is deleted after successful processing. <br/>
+ <code>on_deny</code> <br/>
+ If a <code>.changes</code> file is denied processing because of missing signatures or allowed distributions to be put in, delete it and all the files it references. <br/>
+ <code>on_error</code> <br/>
  If a <code>.changes</code> file causes errors while processing, delete it and the files it references. </p>
 <p> Note that allowing cleanup in publically accessible incoming queues allows a denial of service by sending in .changes files deleting other peoples files before they are completed. Especially when .changes files are handled directly (e.g. by inoticoming). </p>
  </dd>
@@ -934,13 +934,13 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <dt><code>distribution &#8216;</code><i>codename</i><code>&#8216;</code></dt>
 <dd> <p> which means any package when it is to be included in <i>codename</i>. As the uploaders file is given by distribution, this is only useful to reuse a complex uploaders file for multiple distributions. </p>
  </dd></dl>
-<p> Putting <code>not</code> in front of a condition, inverses it&#8217;s meaning. For example <br />
- <code>allow not source &#8216;r*&#8216; by anybody</code> <br />
+<p> Putting <code>not</code> in front of a condition, inverses it&#8217;s meaning. For example <br/>
+ <code>allow not source &#8216;r*&#8216; by anybody</code> <br/>
  means anybody may upload packages which source name does not start with an &#8216;r&#8217;. </p>
-<p> Multiple conditions can be connected with <code>and</code> and <code>or</code>, with <code>or</code> binding stronger (but both weaker than <code>not</code>). That means <br />
- <code>allow source &#8216;r*&#8216; and source &#8216;*xxx&#8217; or source &#8216;*o&#8217; by anybody</code> <br />
- is equivalent to <br />
- <code>allow source &#8216;r*xxx&#8217; by anybody</code> <br />
+<p> Multiple conditions can be connected with <code>and</code> and <code>or</code>, with <code>or</code> binding stronger (but both weaker than <code>not</code>). That means <br/>
+ <code>allow source &#8216;r*&#8216; and source &#8216;*xxx&#8217; or source &#8216;*o&#8217; by anybody</code> <br/>
+ is equivalent to <br/>
+ <code>allow source &#8216;r*xxx&#8217; by anybody</code> <br/>
  <code>allow source &#8216;r*o&#8217; by anybody</code> </p>
 <p> (Other conditions will follow once somebody tells me what restrictions are useful. Currently planned is only something for architectures).  </p>
 <h2>ERROR IGNORING</h2>
@@ -1021,11 +1021,11 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <dd> <p> Do not error out if a .changes file is to be placed in a distribution not listed in that files&#8217; Distributions: header. </p>
  </dd>
 <dt><code>wrongsourceversion</code></dt>
-<dd> <p> Do not reject a .changes file containing .deb files with a different opinion on what the version of the source package is. <br />
+<dd> <p> Do not reject a .changes file containing .deb files with a different opinion on what the version of the source package is. <br/>
  (Note: reprepro only compares literally here, not by meaning.) </p>
  </dd>
 <dt><code>wrongversion</code></dt>
-<dd> <p> Do not reject a .changes file containing .dsc files with a different version. <br />
+<dd> <p> Do not reject a .changes file containing .dsc files with a different version. <br/>
  (Note: reprepro only compares literally here, not by meaning.) </p>
  </dd>
 <dt><code>expiredkey </code>(I hope you know what you do) </dt>
@@ -1081,11 +1081,11 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <p> Environment variables are always overwritten by command line options, but overwrite options set in the <code>options</code> file. (Even when the options file is obviously parsed after the environment variables as the environment may determine the place of the options file). </p>
 <dl>
 <dt><code>REPREPRO_BASE_DIR</code></dt>
-<dd> <p> The directory in this variable is used instead of the current directory, if no <code>-b</code> or <code>--basedir</code> options are supplied. <br />
+<dd> <p> The directory in this variable is used instead of the current directory, if no <code>-b</code> or <code>--basedir</code> options are supplied. <br/>
  It is also set in all hook scripts called by reprepro (relative to the current directory or absolute, depending on how reprepro got it). </p>
  </dd>
 <dt><code>REPREPRO_CONFIG_DIR</code></dt>
-<dd> <p> The directory in this variable is used when no <code>--confdir</code> is supplied. <br />
+<dd> <p> The directory in this variable is used when no <code>--confdir</code> is supplied. <br/>
  It is also set in all hook scripts called by reprepro (relative to the current directory or absolute, depending on how reprepro got it). </p>
  </dd>
 <dt><code>REPREPRO_OUT_DIR</code></dt>
@@ -1133,21 +1133,21 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <h2>WORK-AROUNDS TO COMMON PROBLEMS</h2>
 <dl>
 <dt><code>gpgme returned an impossible condition</code></dt>
-<dd> <p> With the woody version this normally meant that there was no .gnupg directory in $HOME, but it created one and reprepro succeeds when called again with the same command. Since sarge the problem sometimes shows up, too. But it is no longer reproducible and it does not fix itself, neither. Try running <code>gpg --verify </code><i>file-you-had-problems-with</i> manually as the user reprepro is running and with the same $HOME. This alone might fix the problem. It should not print any messages except perhaps <br />
- gpg: no valid OpenPGP data found. <br />
- gpg: the signature could not be verified. <br />
+<dd> <p> With the woody version this normally meant that there was no .gnupg directory in $HOME, but it created one and reprepro succeeds when called again with the same command. Since sarge the problem sometimes shows up, too. But it is no longer reproducible and it does not fix itself, neither. Try running <code>gpg --verify </code><i>file-you-had-problems-with</i> manually as the user reprepro is running and with the same $HOME. This alone might fix the problem. It should not print any messages except perhaps <br/>
+ gpg: no valid OpenPGP data found. <br/>
+ gpg: the signature could not be verified. <br/>
  if it was an unsigned file. </p>
  </dd>
 <dt><code>not including .orig.tar.gz when a .changes file&#8217;s version does not end in -0 or -1</code></dt>
-<dd> <p> If dpkg-buildpackage is run without the <code>-sa</code> option to build a version with a Debian revision not being -0 or -1, it does not list the <code>.orig.tar.gz</code> file in the <code>.changes</code> file. If you want to <code>include</code> such a file with reprepro when the .orig.tar.gz file does not already exist in the pool, reprepro will report an error. This can be worked around by: <br />
- call <code>dpkg-buildpackage</code> with <code>-sa</code> (recommended) <br />
- copy the .orig.tar.gz file to the proper place in the pool before <br />
+<dd> <p> If dpkg-buildpackage is run without the <code>-sa</code> option to build a version with a Debian revision not being -0 or -1, it does not list the <code>.orig.tar.gz</code> file in the <code>.changes</code> file. If you want to <code>include</code> such a file with reprepro when the .orig.tar.gz file does not already exist in the pool, reprepro will report an error. This can be worked around by: <br/>
+ call <code>dpkg-buildpackage</code> with <code>-sa</code> (recommended) <br/>
+ copy the .orig.tar.gz file to the proper place in the pool before <br/>
  call reprepro with --ignore=missingfile (discouraged) </p>
  </dd>
 <dt><code>leftover files in the pool directory.</code></dt>
-<dd> <p> reprepro is sometimes a bit too timid of deleting stuff. When things go wrong and there have been errors it sometimes just leaves everything where it is. To see what files reprepro remembers to be in your pool directory but does not know anything needing them right know, you can use <br />
- <code>reprepro dumpunreferenced</code> <br />
- To delete them: <br />
+<dd> <p> reprepro is sometimes a bit too timid of deleting stuff. When things go wrong and there have been errors it sometimes just leaves everything where it is. To see what files reprepro remembers to be in your pool directory but does not know anything needing them right know, you can use <br/>
+ <code>reprepro dumpunreferenced</code> <br/>
+ To delete them: <br/>
  <code>reprepro deleteunreferenced</code> </p>
  </dd></dl>
 <h2>INTERRUPTING</h2>
@@ -1155,9 +1155,9 @@ description: "reprepro – produce, manage and sync a local repository of Debian
 <p> <code>It only catches the first signal of each type. The second signal of a given type will terminate reprepro. You will risk database corruption and have to remove the lockfile manually.</code> </p>
 <p> Also note that even normal interruption leads to code-paths mostly untested and thus expose a multitude of bugs including those leading to data corruption. Better think a second more before issuing a command than risking the need for interruption.  </p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs or wishlist requests to the Debian BTS <br />
- (e.g. by using <code>reportbug reprepro</code> under Debian) <br />
+<p> Report bugs or wishlist requests to the Debian BTS <br/>
+ (e.g. by using <code>reportbug reprepro</code> under Debian) <br/>
  or directly to  </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004,2005,2006,2007,2008,2009,2010,2011,2012 <br />
+<p> Copyright &#169; 2004,2005,2006,2007,2008,2009,2010,2011,2012 <br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

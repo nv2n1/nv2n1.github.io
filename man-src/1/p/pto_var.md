@@ -22,7 +22,7 @@ description: "pto_var – change image variables inside Hugin .pto project files
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-o|&#8211;output</code> = file.pto</dt>
-<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &lt;filename&gt;_var.pto</dd>
+<dd> Output Hugin PTO file. Default: &lt;filename&gt;_var.pto</dd>
 <dt><code>-h|&#8211;help</code></dt>
 <dd> Shows help</dd>
 <dt><code>&#8211;opt</code> varlist</dt>
@@ -56,8 +56,8 @@ description: "pto_var – change image variables inside Hugin .pto project files
 </pre>
 </dd><dt><code>&#8211;unlink varlist</code></dt>
 <dd>
-   Examples:<br />
-   &#8211;unlink v5        Unlink hfov for image 5<br />
+   Examples:<br/>
+   &#8211;unlink v5        Unlink hfov for image 5<br/>
    &#8211;unlink a2,b2,c2  Unlink distortions parameters for image 2</dd>
 <dt><code>&#8211;set varlist</code></dt>
 <dd>

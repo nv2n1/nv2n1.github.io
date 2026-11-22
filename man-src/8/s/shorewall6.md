@@ -66,27 +66,27 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <h2>Description</h2>
 <dd>The shorewall6 utility is used to control the Shoreline Firewall 6 (Shorewall6).</dd>
 <h2>Options</h2>
-<p>The <code>trace</code> and <code>debug</code> options are used for debugging. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/starting_and_stopping_shorewall.htm#Trace">http://www.shorewall.net/starting_and_stopping_shorewall.htm#Trace</a></code>m[]<font SIZE="-2">[1]</font>. </p>
+<p>The <code>trace</code> and <code>debug</code> options are used for debugging. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/starting_and_stopping_shorewall.htm#Trace">http://www.shorewall.net/starting_and_stopping_shorewall.htm#Trace</a></code>m[][1]. </p>
 <p> The <code>nolock</code> option prevents the command from attempting to acquire the Shorewall6 lockfile. It is useful if you need to include <code>shorewall6</code> commands in /etc/shorewall6/started. </p>
-<p> The <i>options</i> control the amount of output that the command produces. They consist of a sequence of the letters <code>v</code> and <code>q</code>. If the options are omitted, the amount of output is determined by the setting of the VERBOSITY parameter in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). Each <code>v</code> adds one to the effective verbosity and each <code>q</code> subtracts one from the effective VERBOSITY. Alternatively, <code>v</code> may be followed immediately with one of -1,0,1,2 to specify a specify VERBOSITY. There may be no white-space between <code>v</code> and the VERBOSITY. </p>
+<p> The <i>options</i> control the amount of output that the command produces. They consist of a sequence of the letters <code>v</code> and <code>q</code>. If the options are omitted, the amount of output is determined by the setting of the VERBOSITY parameter in m[blue]<code>shorewall6.conf</code>m[][2](5). Each <code>v</code> adds one to the effective verbosity and each <code>q</code> subtracts one from the effective VERBOSITY. Alternatively, <code>v</code> may be followed immediately with one of -1,0,1,2 to specify a specify VERBOSITY. There may be no white-space between <code>v</code> and the VERBOSITY. </p>
 <p> The <i>options</i> may also include the letter <code>t</code> which causes all progress messages to be timestamped.</p>
 <h2>Commands</h2>
 <p>The available commands are listed below. </p>
 <p> <code>add </code>{ <i>interface</i>[:<i>host-list</i>]&#8230; <i>zone</i> | <i>zone</i> <i>host-list</i> }</p>
 <dl>
 <dd>Added in Shorewall 4.4.21. Adds a list of hosts or subnets to a dynamic zone usually used with VPN&#8217;s. </dd>
-<p> The <i>interface</i> argument names an interface defined in the m[blue]<code>shorewall6-interfaces</code>m[]<font SIZE="-2">[3]</font>(5) file. A <i>host-list</i> is comma-separated list whose elements are host or network addresses..if n </p>
+<p> The <i>interface</i> argument names an interface defined in the m[blue]<code>shorewall6-interfaces</code>m[][3](5) file. A <i>host-list</i> is comma-separated list whose elements are host or network addresses..if n </p>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  The <code>add</code> command is not very robust. If there are errors in the <i>host-list</i>, you may see a large number of error messages yet a subsequent <code>shorewall show zones</code> command will indicate that all hosts were added. If this happens, replace <code>add</code> by <code>delete</code> and run the same command again. Then enter the correct command. </dd>
 </dl>
-<p> Beginning with Shorewall 4.5.9, the <code>dynamic_shared</code> zone option (m[blue]<code>shorewall6-zones</code>m[]<font SIZE="-2">[4]</font>(5)) allows a single ipset to handle entries for multiple interfaces. When that option is specified for a zone, the <code>add</code> command has the alternative syntax in which the <i>zone</i> name precedes the <i>host-list</i>.</dl>
+<p> Beginning with Shorewall 4.5.9, the <code>dynamic_shared</code> zone option (m[blue]<code>shorewall6-zones</code>m[][4](5)) allows a single ipset to handle entries for multiple interfaces. When that option is specified for a zone, the <code>add</code> command has the alternative syntax in which the <i>zone</i> name precedes the <i>host-list</i>.</dl>
 <p> <code>allow </code><i>address</i></p>
 <dl>
 <dd>Re-enables receipt of packets from hosts previously blacklisted by a <code>drop</code>, <code>logdrop</code>, <code>reject</code>, or <code>logreject</code> command. Beginning with Shorewall 5.0.10, this command can also re-enable addresses blacklisted using the <code>blacklist</code> command.</dd></dl>
 <p> <code>blacklist</code> <i>address</i> [ <i>option</i> &#8230; ]</p>
 <dl>
-<dd>Added in Shorewall 5.0.8 and requires DYNAMIC_BLACKLIST=ipset.. in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). Causes packets from the given host or network <i>address</i> to be dropped, based on the setting of BLACKLIST in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). The <i>address</i> along with any <i>option</i>s are passed to the <code>ipset add</code> command. </dd>
+<dd>Added in Shorewall 5.0.8 and requires DYNAMIC_BLACKLIST=ipset.. in m[blue]<code>shorewall6.conf</code>m[][2](5). Causes packets from the given host or network <i>address</i> to be dropped, based on the setting of BLACKLIST in m[blue]<code>shorewall6.conf</code>m[][2](5). The <i>address</i> along with any <i>option</i>s are passed to the <code>ipset add</code> command. </dd>
 <p> If the <code>disconnect</code> option is specified in the DYNAMIC_BLACKLISTING setting, then the effective VERBOSITY determines the amount of information displayed: </p>
 <dl>
 <dd>&bull; If the effective verbosity is &gt; 0, then a message giving the number of conntrack flows deleted by the command is displayed.</dd></dl>
@@ -105,7 +105,7 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <p> The <code>-p</code> option causes the compiler to be profiled via the Perl <code>-wd:DProf</code> command-line option. </p>
 <p> The <code>-r</code> option was added in Shorewall 4.5.2 and causes the compiler to print the generated ruleset to standard out. </p>
 <p> The <code>-T</code> option was added in Shorewall 4.4.20 and causes a Perl stack trace to be included with each compiler-generated error and warning message. </p>
-<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[2]</font>.</dl>
+<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[][2].</dl>
 <p> <code>clear </code>[-<code>f</code>]</p>
 <dl>
 <dd>Clear will remove all rules and chains installed by Shorewall6. The firewall is then wide open and unprotected. Existing connections are untouched. Clear is often used to see if the firewall is causing connection problems.</dd></dl>
@@ -121,16 +121,16 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <p> The <code>-d</code> option causes the compiler to be run under control of the Perl debugger. </p>
 <p> The <code>-p</code> option causes the compiler to be profiled via the Perl <code>-wd:DProf</code> command-line option. </p>
 <p> The <code>-T</code> option was added in Shorewall 4.4.20 and causes a Perl stack trace to be included with each compiler-generated error and warning message. </p>
-<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[2]</font>.</dl>
+<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[][2].</dl>
 <p> <code>delete </code>{ <i>interface</i>[:<i>host-list</i>]&#8230; <i>zone</i> | <i>zone</i> <i>host-list</i> }</p>
 <dl>
 <dd>Added in Shorewall 4.4.21. The delete command reverses the effect of an earlier <code>add</code> command. </dd>
-<p> The <i>interface</i> argument names an interface defined in the m[blue]<code>shorewall6-interfaces</code>m[]<font SIZE="-2">[3]</font>(5) file. A <i>host-list</i> is comma-separated list whose elements are a host or network address. </p>
-<p> Beginning with Shorewall 4.5.9, the <code>dynamic_shared</code> zone option (m[blue]<code>shorewall6-zones</code>m[]<font SIZE="-2">[4]</font>(5)) allows a single ipset to handle entries for multiple interfaces. When that option is specified for a zone, the <code>delete</code> command has the alternative syntax in which the <i>zone</i> name precedes the <i>host-list</i>.</dl>
+<p> The <i>interface</i> argument names an interface defined in the m[blue]<code>shorewall6-interfaces</code>m[][3](5) file. A <i>host-list</i> is comma-separated list whose elements are a host or network address. </p>
+<p> Beginning with Shorewall 4.5.9, the <code>dynamic_shared</code> zone option (m[blue]<code>shorewall6-zones</code>m[][4](5)) allows a single ipset to handle entries for multiple interfaces. When that option is specified for a zone, the <code>delete</code> command has the alternative syntax in which the <i>zone</i> name precedes the <i>host-list</i>.</dl>
 <p> <code>disable </code>{ <i>interface</i> | <i>provider</i> }</p>
 <dl>
 <dd>Added in Shorewall 4.4.26. Disables the optional provider associated with the specified <i>interface</i> or <i>provider</i>. Where more than one provider share a single network interface, a <i>provider</i> name must be given. </dd>
-<p> Beginning with Shorewall 4.5.10, this command may be used with any optional network interface. <i>interface</i> may be either the logical or physical name of the interface. The command removes any routes added from m[blue]<code>shorewall6-routes</code>m[]<font SIZE="-2">[5]</font>(5) and any traffic shaping configuration for the interface.</dl>
+<p> Beginning with Shorewall 4.5.10, this command may be used with any optional network interface. <i>interface</i> may be either the logical or physical name of the interface. The command removes any routes added from m[blue]<code>shorewall6-routes</code>m[][5](5) and any traffic shaping configuration for the interface.</dl>
 <p> <code>drop </code><i>address</i></p>
 <dl>
 <dd>Causes traffic from the listed <i>address</i>es to be silently dropped.</dd></dl>
@@ -144,7 +144,7 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <p> <code>enable </code>{ <i>interface</i> | <i>provider</i> }</p>
 <dl>
 <dd>Added in Shorewall 4.4.26. Enables the optional provider associated with the specified <i>interface</i> or <i>provider</i>. Where more than one provider share a single network interface, a <i>provider</i> name must be given. </dd>
-<p> Beginning with Shorewall 4.5.10, this command may be used with any optional network interface. <i>interface</i> may be either the logical or physical name of the interface. The command sets /proc entries for the interface, adds any route specified in m[blue]<code>shorewall6-routes</code>m[]<font SIZE="-2">[5]</font>(5) and installs the interface&#8217;s traffic shaping configuration, if any.</dl>
+<p> Beginning with Shorewall 4.5.10, this command may be used with any optional network interface. <i>interface</i> may be either the logical or physical name of the interface. The command sets /proc entries for the interface, adds any route specified in m[blue]<code>shorewall6-routes</code>m[][5](5) and installs the interface&#8217;s traffic shaping configuration, if any.</dl>
 <p> <code>export </code>[<i>directory1</i> ] [<i>user</i>@]<i>system</i>[:<i>directory2</i> ]</p>
 <dl>
 <dd>If <i>directory1</i> is omitted, the current working directory is assumed. </dd>
@@ -157,7 +157,7 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <p> In other words, the configuration in the specified (or defaulted) directory is compiled to a file called firewall in that directory. If compilation succeeds, then firewall and firewall.conf are copied to <i>system</i> using scp.</dl>
 <p> <code>forget </code>[ <i>filename</i> ]</p>
 <dl>
-<dd>Deletes /var/lib/shorewall6/<i>filename </i> and /var/lib/shorewall6/save. If no <i>filename</i> is given then the file specified by RESTOREFILE in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5) is assumed.</dd></dl>
+<dd>Deletes /var/lib/shorewall6/<i>filename </i> and /var/lib/shorewall6/save. If no <i>filename</i> is given then the file specified by RESTOREFILE in m[blue]<code>shorewall6.conf</code>m[][2](5) is assumed.</dd></dl>
 <p> <code>help</code></p>
 <dl>
 <dd>Displays a syntax summary.</dd></dl>
@@ -165,19 +165,19 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <dl>
 <dd>This is a low-level debugging command that causes iptables TRACE log records to be created. See <a href="/docs/linux/man/8-ip6tables/">ip6tables</a>(8) for details. </dd>
 <p> The <i>ip6tables match expression</i> must be one or more matches that may appear in both the raw table OUTPUT and raw table PREROUTING chains. </p>
-<p> The log message destination is determined by the currently-selected IPv6 m[blue]<code>logging backend</code>m[]<font SIZE="-2">[6]</font>.</dl>
+<p> The log message destination is determined by the currently-selected IPv6 m[blue]<code>logging backend</code>m[][6].</dl>
 <p> <code>list</code></p>
 <dl>
 <dd><code>list</code> is a synonym for <code>show</code> &#8212; please see below.</dd></dl>
 <p> <code>logdrop </code><i>address</i></p>
 <dl>
-<dd>Causes traffic from the listed <i>address</i>es to be logged then discarded. Logging occurs at the log level specified by the BLACKLIST_LOGLEVEL setting in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font> (5).</dd></dl>
+<dd>Causes traffic from the listed <i>address</i>es to be logged then discarded. Logging occurs at the log level specified by the BLACKLIST_LOGLEVEL setting in m[blue]<code>shorewall6.conf</code>m[][2] (5).</dd></dl>
 <p> <code>logwatch </code>[-<code>m</code>] [<i>refresh-interval</i>]</p>
 <dl>
-<dd>Monitors the log file specified by the LOGFILE option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5) and produces an audible alarm when new Shorewall6 messages are logged. The <code>-m</code> option causes the MAC address of each packet source to be displayed if that information is available. The <i>refresh-interval</i> specifies the time in seconds between screen refreshes. You can enter a negative number by preceding the number with &quot;&#8211;&quot; (e.g., <code>shorewall6 logwatch &#8212; -30</code>). In this case, when a packet count changes, you will be prompted to hit any key to resume screen refreshes.</dd></dl>
+<dd>Monitors the log file specified by the LOGFILE option in m[blue]<code>shorewall6.conf</code>m[][2](5) and produces an audible alarm when new Shorewall6 messages are logged. The <code>-m</code> option causes the MAC address of each packet source to be displayed if that information is available. The <i>refresh-interval</i> specifies the time in seconds between screen refreshes. You can enter a negative number by preceding the number with &quot;&#8211;&quot; (e.g., <code>shorewall6 logwatch &#8212; -30</code>). In this case, when a packet count changes, you will be prompted to hit any key to resume screen refreshes.</dd></dl>
 <p> <code>logreject</code> <i>address</i></p>
 <dl>
-<dd>Causes traffic from the listed <i>address</i>es to be logged then rejected. Logging occurs at the log level specified by the BLACKLIST_LOGLEVEL setting in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font> (5).</dd></dl>
+<dd>Causes traffic from the listed <i>address</i>es to be logged then rejected. Logging occurs at the log level specified by the BLACKLIST_LOGLEVEL setting in m[blue]<code>shorewall6.conf</code>m[][2] (5).</dd></dl>
 <p> <code>ls</code></p>
 <dl>
 <dd><code>ls</code> is a synonym for <code>show</code> &#8212; please see below.</dd></dl>
@@ -187,7 +187,7 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <p> The <i>iptables match expression</i> must be one given in the <code>iptrace</code> command being canceled.</dl>
 <p> <code>open</code> <i>source</i> <i>dest</i> [ <i>protocol</i> [ <i>port</i> ] ]</p>
 <dl>
-<dd>Added in Shorewall 4.6.8. This command requires that the firewall be in the started state and that DYNAMIC_BLACKLIST=Yes in m[blue]<code>shorewall6.conf (5)</code>m[]<font SIZE="-2">[2]</font>. The effect of the command is to temporarily open the firewall for connections matching the parameters. </dd>
+<dd>Added in Shorewall 4.6.8. This command requires that the firewall be in the started state and that DYNAMIC_BLACKLIST=Yes in m[blue]<code>shorewall6.conf (5)</code>m[][2]. The effect of the command is to temporarily open the firewall for connections matching the parameters. </dd>
 <p> The <i>source</i> and <i>dest</i> parameters may each be specified as <code>all</code> if you don&#8217;t wish to restrict the connection source or destination respectively. Otherwise, each must contain a host or network address or a valid DNS name. </p>
 <p> The <i>protocol</i> may be specified either as a number or as a name listed in /etc/protocols. The <i>port</i> may be specified numerically or as a name listed in /etc/services. </p>
 <p> To reverse the effect of a successful <code>open</code> command, use the <code>close</code> command with the same parameters or simply restart the firewall. </p>
@@ -212,7 +212,7 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <p> The <code>-n</code> option was added in Shorewall 4.5.3 causes Shorewall to avoid updating the routing table(s). </p>
 <p> The <code>-d</code> option was added in Shorewall 4.5.3 causes the compiler to run under the Perl debugger. </p>
 <p> The <code>-T</code> option was added in Shorewall 4.5.3 and causes a Perl stack trace to be included with each compiler-generated error and warning message. </p>
-<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). </p>
+<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[][2](5). </p>
 <p> The &#8211;<code>D</code> option was added in Shorewall 4.5.3 and causes Shorewall to look in the given <i>directory</i> first for configuration files. </p>
 <p> <code>Example 1. Refresh the &#8216;net-fw&#8217; chain in the filter table and the &#8216;net_dnat&#8217; chain in the nat table</code> </p>
 <dl>
@@ -232,10 +232,10 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <p> The <code>-p</code> option causes the connection tracking table to be flushed; the <code>conntrack</code> utility must be installed to use this option. </p>
 <p> The <code>-d</code> option causes the compiler to run under the Perl debugger. </p>
 <p> The <code>-f</code> option suppresses the compilation step and simply reused the compiled script which last started/restarted Shorewall, provided that /etc/shorewall6 and its contents have not been modified since the last start/restart. </p>
-<p> The <code>-c</code> option was added in Shorewall 4.4.20 and performs the compilation step unconditionally, overriding the AUTOMAKE setting in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). When both <code>-f</code> and <code>-c</code> are present, the result is determined by the option that appears last. </p>
+<p> The <code>-c</code> option was added in Shorewall 4.4.20 and performs the compilation step unconditionally, overriding the AUTOMAKE setting in m[blue]<code>shorewall6.conf</code>m[][2](5). When both <code>-f</code> and <code>-c</code> are present, the result is determined by the option that appears last. </p>
 <p> The <code>-T</code> option was added in Shorewall 4.5.3 and causes a Perl stack trace to be included with each compiler-generated error and warning message. </p>
-<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). </p>
-<p> The <code>-C</code> option was added in Shorewall 4.6.5 and is only meaningful when AUTOMAKE=Yes in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). If an existing firewall script is used and if that script was the one that generated the current running configuration, then the running netfilter configuration will be reloaded as is so as to preserve the iptables packet and byte counters.</dl>
+<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[][2](5). </p>
+<p> The <code>-C</code> option was added in Shorewall 4.6.5 and is only meaningful when AUTOMAKE=Yes in m[blue]<code>shorewall6.conf</code>m[][2](5). If an existing firewall script is used and if that script was the one that generated the current running configuration, then the running netfilter configuration will be reloaded as is so as to preserve the iptables packet and byte counters.</dl>
 <p> <code>remote-reload </code>[-<code>s</code>] [-<code>c</code>] [-<code>r</code> <i>root-user-name</i>] [-<code>T</code>] [-<code>i</code>] [ [ -D ] <i>directory</i> ] [ <i>system</i> ],</p>
 <dl>
 <dd>This command was added in Shorewall 5.0.0. </dd>
@@ -246,12 +246,12 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
  <code>scp</code> <i>directory</i><code>/firewall</code> <i>directory</i><code>/firewall.conf</code> <code>root@</code><i>system</i><code>:/var/lib/shorewall6-lite/ &amp;&amp;\</code>
  <code>ssh root@</code><i>system</i> <code>'/sbin/shorewall6-lite reload'</code></pre>
 </dd></dl>
-<p> In other words, the configuration in the specified (or defaulted) directory is compiled to a file called firewall in that directory. If compilation succeeds, then firewall is copied to <i>system</i> using scp. If the copy succeeds, Shorewall6 Lite on <i>system</i> is restarted via ssh. Beginning with Shorewall 5.0.13, if <i>system</i> is omitted, then the FIREWALL option setting in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[7]</font> is assumed. In that case, if you want to specify a <i>directory</i>, then the <code>-D</code> option must be given. </p>
+<p> In other words, the configuration in the specified (or defaulted) directory is compiled to a file called firewall in that directory. If compilation succeeds, then firewall is copied to <i>system</i> using scp. If the copy succeeds, Shorewall6 Lite on <i>system</i> is restarted via ssh. Beginning with Shorewall 5.0.13, if <i>system</i> is omitted, then the FIREWALL option setting in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[][7] is assumed. In that case, if you want to specify a <i>directory</i>, then the <code>-D</code> option must be given. </p>
 <p> If <code>-s</code> is specified and the <code>restart</code> command succeeds, then the remote Shorewall6-lite configuration is saved by executing <code>shorewall6-lite save</code> via ssh. </p>
 <p> if <code>-c</code> is included, the command <code>shorewall6-lite show capabilities -f &gt; /var/lib/shorewall6-lite/capabilities</code> is executed via ssh then the generated file is copied to <i>directory</i> using scp. This step is performed before the configuration is compiled. </p>
 <p> If <code>-r</code> is included, it specifies that the root user on <i>system</i> is named <i>root-user-name</i> rather than &quot;root&quot;. </p>
 <p> The <code>-T</code> option was added in Shorewall 4.5.3 and causes a Perl stack trace to be included with each compiler-generated error and warning message. </p>
-<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5).</dl>
+<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[][2](5).</dl>
 <p> <code>remote- restart </code>[-<code>s</code>] [-<code>c</code>] [-<code>r</code> <i>root-user-name</i>] [-<code>T</code>] [-<code>i</code>] [ [ -D ] <i>directory</i> ] [ <i>system</i> ]</p>
 <dl>
 <dd>This command was renamed from <code>reload</code> in Shorewall 5.0.0. </dd>
@@ -263,12 +263,12 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
  <code>ssh root@</code><i>system</i> <code>'/sbin/shorewall6-lite restart'</code></pre>
 </dd></dl>
 <p> In other words, the configuration in the specified (or defaulted) directory is compiled to a file called firewall in that directory. If compilation succeeds, then firewall is copied to <i>system</i> using scp. If the copy succeeds, Shorewall6 Lite on <i>system</i> is restarted via ssh. </p>
-<p> Beginning with Shorewall 5.0.13, if <i>system</i> is omitted, then the FIREWALL option setting in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[7]</font> is assumed. In that case, if you want to specify a <i>directory</i>, then the <code>-D</code> option must be given. </p>
+<p> Beginning with Shorewall 5.0.13, if <i>system</i> is omitted, then the FIREWALL option setting in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[][7] is assumed. In that case, if you want to specify a <i>directory</i>, then the <code>-D</code> option must be given. </p>
 <p> If <code>-s</code> is specified and the <code>restart</code> command succeeds, then the remote Shorewall6-lite configuration is saved by executing <code>shorewall6-lite save</code> via ssh. </p>
 <p> if <code>-c</code> is included, the command <code>shorewall6-lite show capabilities -f &gt; /var/lib/shorewall6-lite/capabilities</code> is executed via ssh then the generated file is copied to <i>directory</i> using scp. This step is performed before the configuration is compiled. </p>
 <p> If <code>-r</code> is included, it specifies that the root user on <i>system</i> is named <i>root-user-name</i> rather than &quot;root&quot;. </p>
 <p> The <code>-T</code> option was added in Shorewall 4.5.3 and causes a Perl stack trace to be included with each compiler-generated error and warning message. </p>
-<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5).</dl>
+<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[][2](5).</dl>
 <p> <code>remote-start </code> [-<code>s</code>] [-<code>c</code>] [-<code>r</code> <i>root-user-name</i>] [-<code>T</code>] [-<code>i</code>] [ [-D ] <i>directory</i> ] [ <i>system</i> ]</p>
 <dl>
 <dd>This command was added in Shorewall 5.0.0. </dd>
@@ -279,12 +279,12 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
  <code>scp</code> <i>directory</i><code>/firewall</code> <i>directory</i><code>/firewall.conf</code> <code>root@</code><i>system</i><code>:/var/lib/shorewall6-lite/ &amp;&amp;\</code>
  <code>ssh root@</code><i>system</i> <code>'/sbin/shorewall6-lite start'</code></pre>
 </dd></dl>
-<p> In other words, the configuration in the specified (or defaulted) directory is compiled to a file called firewall in that directory. If compilation succeeds, then firewall is copied to <i>system</i> using scp. If the copy succeeds, Shorewall6 Lite on <i>system</i> is started via ssh. Beginning with Shorewall 5.0.13, if <i>system</i> is omitted, then the FIREWALL option setting in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[7]</font> is assumed. In that case, if you want to specify a <i>directory</i>, then the <code>-D</code> option must be given. </p>
+<p> In other words, the configuration in the specified (or defaulted) directory is compiled to a file called firewall in that directory. If compilation succeeds, then firewall is copied to <i>system</i> using scp. If the copy succeeds, Shorewall6 Lite on <i>system</i> is started via ssh. Beginning with Shorewall 5.0.13, if <i>system</i> is omitted, then the FIREWALL option setting in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[][7] is assumed. In that case, if you want to specify a <i>directory</i>, then the <code>-D</code> option must be given. </p>
 <p> If <code>-s</code> is specified and the <code>start</code> command succeeds, then the remote Shorewall6-lite configuration is saved by executing <code>shorewall6-lite save</code> via ssh. </p>
 <p> if <code>-c</code> is included, the command <code>shorewall6-lite show capabilities -f &gt; /var/lib/shorewall6-lite/capabilities</code> is executed via ssh then the generated file is copied to <i>directory</i> using scp. This step is performed before the configuration is compiled. </p>
 <p> If <code>-r</code> is included, it specifies that the root user on <i>system</i> is named <i>root-user-name</i> rather than &quot;root&quot;. </p>
 <p> The <code>-T</code> option was added in Shorewall 4.5.3 and causes a Perl stack trace to be included with each compiler-generated error and warning message. </p>
-<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5).</dl>
+<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[][2](5).</dl>
 <p> <code>reset [</code><i>chain</i><code>, &#8230;]</code></p>
 <dl>
 <dd>Resets the packet and byte counters in the specified <i>chain</i>(s). If no <i>chain</i> is specified, all the packet and byte counters in the firewall are reset. </dd>
@@ -297,15 +297,15 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <p> The <code>-p</code> option causes the connection tracking table to be flushed; the <code>conntrack</code> utility must be installed to use this option. </p>
 <p> The <code>-d</code> option causes the compiler to run under the Perl debugger. </p>
 <p> The <code>-f</code> option suppresses the compilation step and simply reused the compiled script which last started/restarted Shorewall, provided that /etc/shorewall6 and its contents have not been modified since the last start/restart. </p>
-<p> The <code>-c</code> option was added in Shorewall 4.4.20 and performs the compilation step unconditionally, overriding the AUTOMAKE setting in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). When both <code>-f</code> and <code>-c</code> are present, the result is determined by the option that appears last. </p>
+<p> The <code>-c</code> option was added in Shorewall 4.4.20 and performs the compilation step unconditionally, overriding the AUTOMAKE setting in m[blue]<code>shorewall6.conf</code>m[][2](5). When both <code>-f</code> and <code>-c</code> are present, the result is determined by the option that appears last. </p>
 <p> The <code>-T</code> option was added in Shorewall 4.5.3 and causes a Perl stack trace to be included with each compiler-generated error and warning message. </p>
-<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). </p>
-<p> The <code>-C</code> option was added in Shorewall 4.6.5 and is only meaningful when AUTOMAKE=Yes in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). If an existing firewall script is used and if that script was the one that generated the current running configuration, then the running netfilter configuration will be reloaded as is so as to preserve the iptables packet and byte counters.</dl>
+<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[][2](5). </p>
+<p> The <code>-C</code> option was added in Shorewall 4.6.5 and is only meaningful when AUTOMAKE=Yes in m[blue]<code>shorewall6.conf</code>m[][2](5). If an existing firewall script is used and if that script was the one that generated the current running configuration, then the running netfilter configuration will be reloaded as is so as to preserve the iptables packet and byte counters.</dl>
 <p> <code>restore </code>[-<code>n</code>] [-<code>p</code>] [-<code>C</code>] [ <i>filename</i> ]</p>
 <dl>
-<dd>Restore Shorewall6 to a state saved using the <code>shorewall6 save</code> command. Existing connections are maintained. The <i>filename</i> names a restore file in /var/lib/shorewall6 created using <code>shorewall6 save</code>; if no <i>filename</i> is given then Shorewall6 will be restored from the file specified by the RESTOREFILE option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). </dd>
+<dd>Restore Shorewall6 to a state saved using the <code>shorewall6 save</code> command. Existing connections are maintained. The <i>filename</i> names a restore file in /var/lib/shorewall6 created using <code>shorewall6 save</code>; if no <i>filename</i> is given then Shorewall6 will be restored from the file specified by the RESTOREFILE option in m[blue]<code>shorewall6.conf</code>m[][2](5). </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  If your ip6tables ruleset depends on variables that are detected at run-time, either in your params file or by Shorewall-generated code, <code>restore</code> will use the values that were current when the ruleset was saved, which may be different from the current values. </dd>
 </dl>
 <p> The <code>-C</code> option was added in Shorewall 4.6.5. If the <code>-C</code> option was specified during <code>shorewall6 save</code>, then the counters saved by that operation will be restored.</dl>
@@ -330,11 +330,11 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <p> Beginning with Shorewall 4.5.0, you may specify a different <i>timeout</i> value using the <code>-t</code> option. The numeric <i>timeout</i> may optionally be followed by an <code>s</code>, <code>m</code> or <code>h</code> suffix (e.g., 5m) to specify seconds, minutes or hours respectively. If the suffix is omitted, seconds is assumed.</dl>
 <p> <code>save </code>[-<code>C</code>] [ <i>filename</i> ]</p>
 <dl>
-<dd>The dynamic blacklist is stored in /var/lib/shorewall6/save. The state of the firewall is stored in /var/lib/shorewall6/<i>filename</i> for use by the <code>shorewall6 restore</code> and <code> shorewall6 -f start</code> commands. If <i>filename </i> is not given then the state is saved in the file specified by the RESTOREFILE option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). </dd>
+<dd>The dynamic blacklist is stored in /var/lib/shorewall6/save. The state of the firewall is stored in /var/lib/shorewall6/<i>filename</i> for use by the <code>shorewall6 restore</code> and <code> shorewall6 -f start</code> commands. If <i>filename </i> is not given then the state is saved in the file specified by the RESTOREFILE option in m[blue]<code>shorewall6.conf</code>m[][2](5). </dd>
 <p> The <code>-C</code> option, added in Shorewall 4.6.5, causes the ip6tables packet and byte counters to be saved along with the chains and rules.</dl>
 <p> <code>savesets</code></p>
 <dl>
-<dd>Added in shorewall 4.6.8. Performs the same action as the <code>stop</code> command with respect to saving ipsets (see the SAVE_IPSETS option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font> (5)). This command may be used to proactively save your ipset contents in the event that a system failure occurs prior to issuing a <code>stop</code> command.</dd></dl>
+<dd>Added in shorewall 4.6.8. Performs the same action as the <code>stop</code> command with respect to saving ipsets (see the SAVE_IPSETS option in m[blue]<code>shorewall6.conf</code>m[][2] (5)). This command may be used to proactively save your ipset contents in the event that a system failure occurs prior to issuing a <code>stop</code> command.</dd></dl>
 <p> <code>show</code></p>
 <dl>
 <dd>The show command can have a number of different arguments: </dd>
@@ -374,7 +374,7 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <dd>Displays the system&#8217;s IPv6 configuration.</dd></dl>
 <p> [-<code>m</code>] <code>log</code></p>
 <dl>
-<dd>Displays the last 20 Shorewall6 messages from the log file specified by the LOGFILE option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). The <code>-m</code> option causes the MAC address of each packet source to be displayed if that information is available.</dd></dl>
+<dd>Displays the last 20 Shorewall6 messages from the log file specified by the LOGFILE option in m[blue]<code>shorewall6.conf</code>m[][2](5). The <code>-m</code> option causes the MAC address of each packet source to be displayed if that information is available.</dd></dl>
 <p> <code>macros</code></p>
 <dl>
 <dd>Displays information about each macro defined on the firewall system.</dd></dl>
@@ -411,16 +411,16 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 </dl>
 <p> <code>start </code>[-<code>n</code>] [-<code>p</code>] [-<code>d</code>] [-<code>f</code>] [-<code>c</code>] [-<code>T</code>] [-<code>i</code>] [-<code>C</code>] [ <i>directory</i> ]</p>
 <dl>
-<dd>Start shorewall6. Existing connections through shorewall6 managed interfaces are untouched. New connections will be allowed only if they are allowed by the firewall rules or policies. If a <i>directory</i> is included in the command, Shorewall6 will look in that <i>directory</i> first for configuration files. If <code>-f</code> is specified, the saved configuration specified by the RESTOREFILE option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5) will be restored if that saved configuration exists and has been modified more recently than the files in /etc/shorewall6. When <code>-f </code> is given, a <i>directory</i> may not be specified. </dd>
-<p> Update: In Shorewall6 4.4.20, a new LEGACY_FASTSTART option was added to m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). When LEGACY_FASTSTART=No, the modification times of files in /etc/shorewall6 are compared with that of /var/lib/shorewall6/firewall (the compiled script that last started/restarted the firewall). </p>
+<dd>Start shorewall6. Existing connections through shorewall6 managed interfaces are untouched. New connections will be allowed only if they are allowed by the firewall rules or policies. If a <i>directory</i> is included in the command, Shorewall6 will look in that <i>directory</i> first for configuration files. If <code>-f</code> is specified, the saved configuration specified by the RESTOREFILE option in m[blue]<code>shorewall6.conf</code>m[][2](5) will be restored if that saved configuration exists and has been modified more recently than the files in /etc/shorewall6. When <code>-f </code> is given, a <i>directory</i> may not be specified. </dd>
+<p> Update: In Shorewall6 4.4.20, a new LEGACY_FASTSTART option was added to m[blue]<code>shorewall6.conf</code>m[][2](5). When LEGACY_FASTSTART=No, the modification times of files in /etc/shorewall6 are compared with that of /var/lib/shorewall6/firewall (the compiled script that last started/restarted the firewall). </p>
 <p> The <code>-n</code> option causes Shorewall6 to avoid updating the routing table(s). </p>
-<p> The <code>-c</code> option was added in Shorewall 4.4.20 and performs the compilation step unconditionally, overriding the AUTOMAKE setting in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). When both <code>-f</code> and <code>-c</code> are present, the result is determined by the option that appears last. </p>
+<p> The <code>-c</code> option was added in Shorewall 4.4.20 and performs the compilation step unconditionally, overriding the AUTOMAKE setting in m[blue]<code>shorewall6.conf</code>m[][2](5). When both <code>-f</code> and <code>-c</code> are present, the result is determined by the option that appears last. </p>
 <p> The <code>-T</code> option was added in Shorewall 4.5.3 and causes a Perl stack trace to be included with each compiler-generated error and warning message. </p>
-<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). </p>
+<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall6.conf</code>m[][2](5). </p>
 <p> The <code>-C</code> option was added in Shorewall 4.6.5 and is only meaningful when the <code>-f</code> option is also specified. If the previously-saved configuration is restored, and if the <code>-C</code> option was also specified in the <code>save</code> command, then the packet and byte counters will be restored along with the chains and rules.</dl>
 <p> <code>stop </code>[-<code>f</code>]</p>
 <dl>
-<dd>Stops the firewall. All existing connections, except those listed in m[blue]<code>shorewall6-routestopped</code>m[]<font SIZE="-2">[8]</font>(5) or permitted by the ADMINISABSENTMINDED option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5), are taken down. The only new traffic permitted through the firewall is from systems listed in m[blue]<code>shorewall6-routestopped</code>m[]<font SIZE="-2">[8]</font>(5) or by ADMINISABSENTMINDED. </dd>
+<dd>Stops the firewall. All existing connections, except those listed in m[blue]<code>shorewall6-routestopped</code>m[][8](5) or permitted by the ADMINISABSENTMINDED option in m[blue]<code>shorewall6.conf</code>m[][2](5), are taken down. The only new traffic permitted through the firewall is from systems listed in m[blue]<code>shorewall6-routestopped</code>m[][8](5) or by ADMINISABSENTMINDED. </dd>
 <p> If <code>-f</code> is given, the command will be processed by the compiled script that executed the last successful <code>start</code>, <code>restart</code> or <code>refresh</code> command if that script exists.</dl>
 <p> <code>status</code></p>
 <dl>
@@ -447,7 +447,7 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <p> In each case, the old file is renamed with a .bak suffix. </p>
 <p> In Shorewall 5.0.0, the options were eliminated and the <code>update</code> command performs all of the updates described above. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
+<dd> <code>Important</code> <br/>
  There are some notable restrictions with the <code>update</code> command: </dd>
 <dl>
 <dd>1. Converted rules will be appended to the existing file; if there is no existing file in the CONFIG_PATH, one will be created in the directory specified in the command or in the first entry in the CONFIG_PATH (normally /etc/shorewall6) otherwise.</dd></dl>
@@ -459,7 +459,7 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <dd>4. Columns in the output file will be separated by a single tab character; there is no attempt made to otherwise align the columns.</dd></dl>
 </dl>
 <p> The <code>-a</code> option causes the updated shorewall.conf file to be annotated with documentation. </p>
-<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[9]</font>(5). </p>
+<p> The <code>-i</code> option was added in Shorewall 4.6.0 and causes a warning message to be issued if the current line contains alternative input specifications following a semicolon (&quot;;&quot;). Such lines will be handled incorrectly if INLINE_MATCHES is set to Yes in m[blue]<code>shorewall.conf</code>m[][9](5). </p>
 <p> The <code>-A</code> option is included for compatibility with Shorewall 4.6 and is equivalent to specifying the <code>-i</code> option. </p>
 <p> For a description of the other options, see the <code>check</code> command above.</dl>
 <p> <code>version [-</code><code>a</code><code>]</code></p>
@@ -475,12 +475,12 @@ description: "shorewall6 – Administration tool for Shoreline Firewall 6 (Shore
 <p>Two environmental variables are recognized by Shorewall6: </p>
 <p> SHOREWALL_INIT_SCRIPT</p>
 <dl>
-<dd>When set to 1, causes Std out to be redirected to the file specified in the STARTUP_LOG option in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[7]</font>.</dd></dl>
+<dd>When set to 1, causes Std out to be redirected to the file specified in the STARTUP_LOG option in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[][7].</dd></dl>
 <p> SW_LOGGERTAG</p>
 <dl>
 <dd>Added in Shorewall 5.0.8. When set to a non-empty value, that value is passed to the logger utility in its -t (&#8211;tag) option.</dd></dl>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/starting_and_stopping_shorewall.htm">http://www.shorewall.net/starting_and_stopping_shorewall.htm</a></code>m[]<font SIZE="-2">[10]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/starting_and_stopping_shorewall.htm">http://www.shorewall.net/starting_and_stopping_shorewall.htm</a></code>m[][10] </p>
 <p> <a href="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), <a href="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a href="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5), <a href="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5),<a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), <a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), shorewall6-routestopped(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a href="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), shorewall6-tcrules(5), shorewall6-tos(5), <a href="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

@@ -26,5 +26,5 @@ description: "XtAppAddActionHook, XtRemoveActionHook – register an action hook
 <p> Action hook procedures are removed automatically and the <code>XtActionHookId</code> s destroyed when the application context in which they were added is destroyed. </p>
 <p> <code>XtRemoveActionHook</code> removes the specified action hook procedure from the list in which it was registered.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

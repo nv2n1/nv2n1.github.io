@@ -48,8 +48,8 @@ description: "slattach – attach a network interface to a serial line"
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-kissattach/">kissattach</a>(8), dip(8) <a href="/docs/linux/man/8-pppd/">pppd</a>(8), sliplogin(8).</p>
 <h2>Authors</h2>
-<p>Fred N. van Kempen, &lt;waltje [at] uwalt.nl.mugnet.org&gt;<br />
- Alan Cox, &lt;Alan.Cox [at] linux.org&gt;<br />
- Miquel van Smoorenburg, &lt;miquels [at] drinkel.ow.org&gt;<br />
- George Shearer, &lt;gshearer [at] one.net&gt;<br />
+<p>Fred N. van Kempen, &lt;waltje [at] uwalt.nl.mugnet.org&gt;<br/>
+ Alan Cox, &lt;Alan.Cox [at] linux.org&gt;<br/>
+ Miquel van Smoorenburg, &lt;miquels [at] drinkel.ow.org&gt;<br/>
+ George Shearer, &lt;gshearer [at] one.net&gt;<br/>
  Yossi Gottlieb, &lt;yogo [at] math.tau.ac.il&gt;</p>

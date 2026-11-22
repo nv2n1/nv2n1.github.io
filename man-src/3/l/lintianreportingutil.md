@@ -17,11 +17,11 @@ description: "Lintian::Reporting::Util – Lintian utility functions"
 <p> Most subs are imported only on request.</p>
 <h2>Functions</h2>
 <dl COMPACT>
-<dt>load_state_cache(<font SIZE="-1">STATE_DIR</font>)</dt>
-<dd>[Reporting tools only] Load the state cache from <font SIZE="-1">STATE_DIR.</font></dd>
-<dt>save_state_cache(<font SIZE="-1">STATE_DIR, STATE</font>)</dt>
-<dd>[Reporting tools only] Save the <font SIZE="-1">STATE</font> cache to <font SIZE="-1">STATE_DIR.</font></dd>
-<dt>find_backlog(<font SIZE="-1">LINTIAN_VERSION, STATE</font>)</dt>
+<dt>load_state_cache(STATE_DIR)</dt>
+<dd>[Reporting tools only] Load the state cache from STATE_DIR.</dd>
+<dt>save_state_cache(STATE_DIR, STATE)</dt>
+<dd>[Reporting tools only] Save the STATE cache to STATE_DIR.</dd>
+<dt>find_backlog(LINTIAN_VERSION, STATE)</dt>
 <dd>[Reporting tools only] Given the current lintian version and the harness state, return a list of group ids that are part of the backlog. The list is sorted based on what version of Lintian processed the package. </dd>
 <p> Note the result is by design not deterministic to reduce the risk of all large packages being in the same run (e.g. like gcc-5 + gcc-5-cross + gcc-6 + gcc-6-cross).</dl>
 <h2>See Also</h2>

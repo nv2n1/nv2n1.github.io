@@ -140,8 +140,8 @@ description: "watchdog – a software watchdog daemon"
 <p> Note that the watchdog daemon may interpret and act upon any of the reserved return codes noted in the Check Binary section prior to calling a given command in &quot;repair&quot; mode.</p>
 <h2>Systemd</h2>
 <p>To start watchdog after the network is available: </p>
-<p> systemctl disable watchdog<br />
- systemctl enable NetworkManager-wait-online<br />
+<p> systemctl disable watchdog<br/>
+ systemctl enable NetworkManager-wait-online<br/>
  systemctl enable watchdog-ping </p>
 <p> When using custom service pid check with custom service systemd unit file please be aware the &quot;Requires=&quot; does dependent service deactivation. Using &quot;Before=watchdog.service&quot; or &quot;Before=watchdog-ping.service&quot; in the custom service unit file may be the desired operation instead. See systemd.unit documentation for more details.</p>
 <h2>Selinux</h2>

@@ -9,7 +9,7 @@ description: "systemd.offline-updates – Implementation of offline updates in s
 
 <p>systemd.offline-updates &#8211; Implementation of offline updates in systemd</p>
 <h2>Implementing Offline System Updates</h2>
-<p>This man page describes how to implement &quot;offline&quot; system updates with systemd. By &quot;offline&quot; OS updates we mean package installations and updates that are run with the system booted into a special system update mode, in order to avoid problems related to conflicts of libraries and services that are currently running with those on disk. This document is inspired by this m[blue]<code>GNOME design whiteboard</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p>This man page describes how to implement &quot;offline&quot; system updates with systemd. By &quot;offline&quot; OS updates we mean package installations and updates that are run with the system booted into a special system update mode, in order to avoid problems related to conflicts of libraries and services that are currently running with those on disk. This document is inspired by this m[blue]<code>GNOME design whiteboard</code>m[][1]. </p>
 <p> The logic: </p>
 <dl>
 <dd>1. The package manager prepares system updates by downloading all (.rpm or .deb or whatever) packages to update off-line in a special directory /var/lib/system-update (or another directory of the package/upgrade manager&#8217;s choice).</dd></dl>

@@ -13,8 +13,8 @@ description: "sigaltstack – set and/or get signal stack context"
 int sigaltstack(const stack_t *ss, stack_t *old_ss);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>sigaltstack</code>():</p>
 <dl>
-<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
+<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p><code>sigaltstack</code>() allows a thread to define a new alternate signal stack and/or retrieve the state of an existing alternate signal stack. An alternate signal stack is used during the execution of a signal handler if the establishment of that handler (see <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)) requested it. </p>
@@ -28,9 +28,9 @@ int sigaltstack(const stack_t *ss, stack_t *old_ss);</code></pre>
 <dd>When establishing a signal handler using <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), inform the system that the signal handler should be executed on the alternate signal stack by specifying the <code>SA_ONSTACK</code> flag.</dd></dl>
 <p> The <i>ss</i> argument is used to specify a new alternate signal stack, while the <i>old_ss</i> argument is used to retrieve information about the currently established signal stack. If we are interested in performing just one of these tasks, then the other argument can be specified as NULL. </p>
 <p> The <i>stack_t</i> type used to type the arguments of this function is defined as follows: </p>
-<p> typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;*ss_sp;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Base address of stack&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ss_flags;&nbsp;<wbr>&nbsp;/*&nbsp;Flags&nbsp;*/<br />
+<p> typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;*ss_sp;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Base address of stack&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ss_flags;&nbsp;<wbr>&nbsp;/*&nbsp;Flags&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t ss_size;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of bytes in stack&nbsp;*/ } stack_t; </p>
 <p> To establish a new alternate signal stack, the fields of this structure are set as follows:</p>
 <dl>

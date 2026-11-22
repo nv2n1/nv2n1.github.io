@@ -226,7 +226,7 @@ $ GIT_COMMITTER_DATE=&quot;2006-10-02 10:31&quot; git tag -s v1.0.1
 <dl>
 <dt>
 </dt><dd>
- <span class="smallcaps"><code>Note</code></span><br />
+ <span class="smallcaps"><code>Note</code></span><br/>
  In addition, the date part is accepted in the following formats: <code>YYYY.MM.DD</code>, <code>MM/DD/YYYY</code> and <code>DD.MM.YYYY</code>. </dd>
 </dl>
 </dl>

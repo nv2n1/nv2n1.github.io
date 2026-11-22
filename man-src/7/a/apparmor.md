@@ -51,7 +51,7 @@ comm=&quot;sh&quot; capability=2  capname=&quot;dac_override&quot;</code></pre>
  audit(1386512577.017:276): apparmor=&quot;ALLOWED&quot; operation=&quot;open&quot;
  parent=8012 profile=&quot;/usr/bin/du&quot; name=&quot;/etc/apparmor.d/tunables/&quot;
  pid=8049 comm=&quot;du&quot; requested_mask=&quot;r&quot; denied_mask=&quot;r&quot; fsuid=1000 ouid=0</pre>
-<p>If the userland auditd is not running, the kernel will send audit events to klogd; klogd will send the messages to syslog, which will log the messages with the <font SIZE="-1">KERN</font> facility. Thus, <font SIZE="-1">REJECTING</font> and <font SIZE="-1">PERMITTING</font> messages may go to either <i>/var/log/audit/audit.log</i> or <i>/var/log/messages</i>, depending upon local configuration.</p>
+<p>If the userland auditd is not running, the kernel will send audit events to klogd; klogd will send the messages to syslog, which will log the messages with the KERN facility. Thus, REJECTING and PERMITTING messages may go to either <i>/var/log/audit/audit.log</i> or <i>/var/log/messages</i>, depending upon local configuration.</p>
 <h2>Debugging</h2>
 <p>AppArmor provides a few facilities to log more information, which can help debugging profiles.</p>
 <h3>Enable debug mode</h3>

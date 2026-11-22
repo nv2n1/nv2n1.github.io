@@ -11,11 +11,11 @@ description: "ipsec_anyaddr, ipsec_isanyaddr, ipsec_unspecaddr, ipsec_isunspecad
 <p> ipsec_anyaddr, ipsec_isanyaddr, ipsec_unspecaddr, ipsec_isunspecaddr, ipsec_loopbackaddr, ipsec_isloopbackaddr &#8211; get and test for addresses of type &quot;any&quot;, &quot;unspecified&quot; and loopback get &quot;any&quot; address</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
-<p> <code>const char *anyaddr(int af, ip_address *dst);</code><br />
- <code>int isanyaddr(const ip_address *src);</code><br />
- <code>const char *unspecaddr(int af, ip_address *dst);</code><br />
- <code>int isunspecaddr(const ip_address *src);</code><br />
- <code>const char *loopbackaddr(int af, ip_address *dst);</code><br />
+<p> <code>const char *anyaddr(int af, ip_address *dst);</code><br/>
+ <code>int isanyaddr(const ip_address *src);</code><br/>
+ <code>const char *unspecaddr(int af, ip_address *dst);</code><br/>
+ <code>int isunspecaddr(const ip_address *src);</code><br/>
+ <code>const char *loopbackaddr(int af, ip_address *dst);</code><br/>
  <code>int isloopbackaddr(const ip_address *src);</code></p>
 <h2>DESCRIPTION</h2>
 <p> These functions fill in, and test for, special values of the <i>ip_address</i> type. </p>

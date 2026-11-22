@@ -10,7 +10,7 @@ description: "ezstream – source client for Icecast with external de-/encoder s
 
 <p> <code>ezstream</code> &#8211; source client for Icecast with external de-/encoder support </p>
 <h2>SYNOPSIS</h2>
-<p> -words [-<code>hmnqVv </code>&#8211;<code>c </code><i>configfile</i> ]<br />
+<p> -words [-<code>hmnqVv </code>&#8211;<code>c </code><i>configfile</i> ]<br/>
  -words &#8211;<code>s</code> [<i>playlist</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> The utility is a source client for the Icecast media streaming server. In its basic mode of operation, it streams media files and data from standard input Qq as-is &#8212; such as Ogg Vorbis, Ogg Theora and MP3 &#8212; to a server. It can also use various external decoders and encoders to re-encode from one format to another, and stream the result. The only requirement is that the external programs support writing to or reading from standard input, and can be used from the command line.</p>

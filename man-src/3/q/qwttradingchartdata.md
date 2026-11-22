@@ -13,7 +13,7 @@ description: "QwtTradingChartData –"
 <p> Inherits <code>QwtArraySeriesData&lt; QwtOHLCSample &gt;</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtTradingChartData</code> (const QVector&lt; <code>QwtOHLCSample</code> &gt; &amp;=QVector&lt; <code>QwtOHLCSample</code> &gt;()) </p>
-<p> virtual QRectF <code>boundingRect</code> () const<br />
+<p> virtual QRectF <code>boundingRect</code> () const<br/>
  <i>Calculate the bounding rectangle. </i></p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>

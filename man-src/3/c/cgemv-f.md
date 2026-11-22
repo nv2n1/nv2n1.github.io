@@ -10,7 +10,7 @@ description: "cgemv.f –"
 <p>cgemv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgemv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>cgemv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>CGEMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgemv (characterTRANS, integerM, integerN, complexALPHA, complex, dimension(lda,*)A, integerLDA, complex, dimension(*)X, integerINCX, complexBETA, complex, dimension(*)Y, integerINCY)</h3>

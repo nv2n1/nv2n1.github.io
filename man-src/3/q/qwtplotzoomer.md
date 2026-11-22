@@ -15,39 +15,39 @@ description: "QwtPlotZoomer –"
 <h3>Public Slots</h3>
 <p>void <code>moveBy</code> (double x, double y) </p>
 <p> virtual void <code>moveTo</code> (const QPointF &amp;) </p>
-<p> virtual void <code>zoom</code> (const QRectF &amp;)<br />
- <i>Zoom in. </i><br />
- virtual void <code>zoom</code> (int up)<br />
+<p> virtual void <code>zoom</code> (const QRectF &amp;)<br/>
+ <i>Zoom in. </i><br/>
+ virtual void <code>zoom</code> (int up)<br/>
  <i>Zoom in or out. </i></p>
 <h3>Signals</h3>
 <p>void <code>zoomed</code> (const QRectF &amp;rect) </p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotZoomer</code> (QWidget *, bool doReplot=true)<br />
- <i>Create a zoomer for a plot canvas. </i><br />
- <code>QwtPlotZoomer</code> (int <code>xAxis</code>, int <code>yAxis</code>, QWidget *, bool doReplot=true)<br />
- <i>Create a zoomer for a plot canvas. </i><br />
+<p><code>QwtPlotZoomer</code> (QWidget *, bool doReplot=true)<br/>
+ <i>Create a zoomer for a plot canvas. </i><br/>
+ <code>QwtPlotZoomer</code> (int <code>xAxis</code>, int <code>yAxis</code>, QWidget *, bool doReplot=true)<br/>
+ <i>Create a zoomer for a plot canvas. </i><br/>
  virtual void <code>setZoomBase</code> (bool doReplot=true) </p>
-<p> virtual void <code>setZoomBase</code> (const QRectF &amp;)<br />
- <i>Set the initial size of the zoomer. </i><br />
+<p> virtual void <code>setZoomBase</code> (const QRectF &amp;)<br/>
+ <i>Set the initial size of the zoomer. </i><br/>
  QRectF <code>zoomBase</code> () const </p>
 <p> QRectF <code>zoomRect</code> () const </p>
 <p> virtual void <code>setAxis</code> (int <code>xAxis</code>, int <code>yAxis</code>) </p>
-<p> void <code>setMaxStackDepth</code> (int)<br />
- <i>Limit the number of recursive zoom operations to depth. </i><br />
+<p> void <code>setMaxStackDepth</code> (int)<br/>
+ <i>Limit the number of recursive zoom operations to depth. </i><br/>
  int <code>maxStackDepth</code> () const </p>
 <p> const QStack&lt; QRectF &gt; &amp; <code>zoomStack</code> () const </p>
-<p> void <code>setZoomStack</code> (const QStack&lt; QRectF &gt; &amp;, int <code>zoomRectIndex</code>=-1)<br />
- <i>Assign a zoom stack. </i><br />
+<p> void <code>setZoomStack</code> (const QStack&lt; QRectF &gt; &amp;, int <code>zoomRectIndex</code>=-1)<br/>
+ <i>Assign a zoom stack. </i><br/>
  uint <code>zoomRectIndex</code> () const </p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>rescale</code> () </p>
-<p> virtual QSizeF <code>minZoomSize</code> () const<br />
- <i>Limit zooming by a minimum rectangle. </i><br />
+<p> virtual QSizeF <code>minZoomSize</code> () const<br/>
+ <i>Limit zooming by a minimum rectangle. </i><br/>
  virtual void <code>widgetMouseReleaseEvent</code> (QMouseEvent *) </p>
 <p> virtual void <code>widgetKeyPressEvent</code> (QKeyEvent *) </p>
 <p> virtual void <code>begin</code> () </p>
 <p> virtual bool <code>end</code> (bool ok=true) </p>
-<p> virtual bool <code>accept</code> (QPolygon &amp;) const<br />
+<p> virtual bool <code>accept</code> (QPolygon &amp;) const<br/>
  <i>Check and correct a selected rectangle. </i></p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>
@@ -94,7 +94,7 @@ zoomer-&gt;setKeyPattern( QwtEventPattern::KeyHome, Qt::Key_Home );</pre>
 <p> The zoomer is initialized with a <code>QwtPickerDragRectMachine</code>, the tracker mode is set to <code>QwtPicker::ActiveOnly</code> and the rubber band is set to <code>QwtPicker::RectRubberBand</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>canvas</i> Plot canvas to observe, also the parent object<br />
+<dd><i>canvas</i> Plot canvas to observe, also the parent object<br/>
  <i>doReplot</i> Call <code>QwtPlot::replot()</code> for the attached plot before initializing the zoomer with its scales. This might be necessary, when the plot is in a state with pending scale changes.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -103,9 +103,9 @@ zoomer-&gt;setKeyPattern( QwtEventPattern::KeyHome, Qt::Key_Home );</pre>
 <p>Create a zoomer for a plot canvas. The zoomer is initialized with a <code>QwtPickerDragRectMachine</code>, the tracker mode is set to <code>QwtPicker::ActiveOnly</code> and the rubber band is set to <code>QwtPicker</code>;;RectRubberBand </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xAxis</i> X axis of the zoomer<br />
- <i>yAxis</i> Y axis of the zoomer<br />
- <i>canvas</i> Plot canvas to observe, also the parent object<br />
+<dd><i>xAxis</i> X axis of the zoomer<br/>
+ <i>yAxis</i> Y axis of the zoomer<br/>
+ <i>canvas</i> Plot canvas to observe, also the parent object<br/>
  <i>doReplot</i> Call <code>QwtPlot::replot()</code> for the attached plot before initializing the zoomer with its scales. This might be necessary, when the plot is in a state with pending scale changes.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -151,7 +151,7 @@ zoomer-&gt;setKeyPattern( QwtEventPattern::KeyHome, Qt::Key_Home );</pre>
 <p>Move the current zoom rectangle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dx</i> X offset<br />
+<dd><i>dx</i> X offset<br/>
  <i>dy</i> Y offset</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -176,7 +176,7 @@ zoomer-&gt;setKeyPattern( QwtEventPattern::KeyHome, Qt::Key_Home );</pre>
 <p>Reinitialize the axes, and set the zoom base to their scales. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xAxis</i> X axis<br />
+<dd><i>xAxis</i> X axis<br/>
  <i>yAxis</i> Y axis</dd></dl>
 <p> Reimplemented from <code>QwtPlotPicker</code>.</p>
 <h3>void QwtPlotZoomer::setMaxStackDepth (intdepth)</h3>
@@ -210,7 +210,7 @@ zoomer-&gt;setKeyPattern( QwtEventPattern::KeyHome, Qt::Key_Home );</pre>
 <p>Assign a zoom stack. In combination with other types of navigation it might be useful to modify to manipulate the complete zoom stack. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>zoomStack</i> New zoom stack<br />
+<dd><i>zoomStack</i> New zoom stack<br/>
  <i>zoomRectIndex</i> Index of the current position of zoom stack. In case of -1 the current position is at the top of the stack.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>

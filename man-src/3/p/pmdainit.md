@@ -9,8 +9,8 @@ description: "pmdaInit, pmdaRehash, pmdaSetFlags – initialize a PMDA"
 
 <p><code>pmdaInit</code>, <code>pmdaRehash</code>, <code>pmdaSetFlags</code> &#8211; initialize a PMDA</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> void pmdaInit(pmdaInterface *</code><i>dispatch</i>, pmdaIndom *<i>indoms</i>, int&nbsp;<wbr><i>nindoms</i>, pmdaMetric&nbsp;<wbr>*<i>metrics</i>, int&nbsp;<wbr><i>nmetrics</i>); </p>
 <p> void pmdaRehash(pmdaExt *<i>pmda</i>, pmdaMetric&nbsp;<wbr>*<i>metrics</i>, int&nbsp;<wbr><i>nmetrics</i>); </p>

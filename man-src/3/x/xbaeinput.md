@@ -16,8 +16,8 @@ description: "XbaeInput – The Input widget class."
 <p> Unlike the <code>XmText</code> field from which this widget is subclassed, the <code>toggle-overwrite</code> action is bound to the <code>osfInsert</code> key. The <code>XmNoverwriteMode</code> is also provided to allow the resource to be changed programatically. </p>
 <p> When the <code>XbaeInput</code> widget loses focus or is activated in the same way as the <code>XmText</code> field would be, callbacks on the XmNvalidateCallback list are invoked, allowing the programmer to validate the data as well as reformatting the existing string.</p>
 <h3>Classes</h3>
-<p><code>XbaeInput</code> inherits behavior and resources from the <code>Core</code>, <code>XmPrimitive</code>, and <code>XmText</code> widget classes.<br />
- The class pointer is <code>xbaeInputWidgetClass</code>.<br />
+<p><code>XbaeInput</code> inherits behavior and resources from the <code>Core</code>, <code>XmPrimitive</code>, and <code>XmText</code> widget classes.<br/>
+ The class pointer is <code>xbaeInputWidgetClass</code>.<br/>
  The class name is <code>XbaeInput</code>.</p>
 <h3>New Resources</h3>
 <p>The following table lists the new resources defined by <code>XbaeInput</code>. The codes in the Access column indicate whether the given resource can be set at creation time (C), or set by using XtSetValues (S), or retrieved by using XtGetValues (G). </p>
@@ -49,11 +49,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNalignment</font></td>
-<td><font SIZE="-9">XmCAlignment</font></td>
-<td><font SIZE="-9">unsigned char</font></td>
-<td><font SIZE="-9">XmALIGNMENT_BEGINNING</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNalignment</td>
+<td>XmCAlignment</td>
+<td>unsigned char</td>
+<td>XmALIGNMENT_BEGINNING</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -62,11 +62,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNautoFill</font></td>
-<td><font SIZE="-9">XmCBoolean</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNautoFill</td>
+<td>XmCBoolean</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -75,11 +75,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNconvertCase</font></td>
-<td><font SIZE="-9">XmCBoolean</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNconvertCase</td>
+<td>XmCBoolean</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -88,11 +88,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNoverwriteMode</font></td>
-<td><font SIZE="-9">XmCBoolean</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNoverwriteMode</td>
+<td>XmCBoolean</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -101,11 +101,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNpattern</font></td>
-<td><font SIZE="-9">XmCString</font></td>
-<td><font SIZE="-9">String</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNpattern</td>
+<td>XmCString</td>
+<td>String</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -114,11 +114,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNvalidateCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNvalidateCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 </table>
@@ -135,7 +135,7 @@ description: "XbaeInput – The Input widget class."
 <dt><code>overwriteMode</code></dt>
 <dd>Whether the widget accepts characters in insert mode or overwrite mode is controlled by the resource. Setting this resource calls the <code>XmText</code> <code>toggle-overwrite()</code> action routine, so the Motif toolkit being used must also support this routine.</dd>
 <dt><code>XmNpattern</code></dt>
-<dd>The <code>XmNpattern</code> resource specifies what can be typed into the <code>XbaeInput</code> widget. If set to the default value of <font SIZE="-1">NULL</font> any character may be entered. The <code>XmNpattern</code> can be set to a string containing the following characters. </dd>
+<dd>The <code>XmNpattern</code> resource specifies what can be typed into the <code>XbaeInput</code> widget. If set to the default value of NULL any character may be entered. The <code>XmNpattern</code> can be set to a string containing the following characters. </dd>
 <table>
 <tr VALIGN=top>
 <td><code>a</code></td>
@@ -219,11 +219,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNautoShowCursorPosition</font></td>
-<td><font SIZE="-9">XmCAutoShowCursorPosition</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNautoShowCursorPosition</td>
+<td>XmCAutoShowCursorPosition</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -232,11 +232,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcursorPosition</font></td>
-<td><font SIZE="-9">XmCCursorPosition</font></td>
-<td><font SIZE="-9">XmTextPosition</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcursorPosition</td>
+<td>XmCCursorPosition</td>
+<td>XmTextPosition</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -245,11 +245,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNeditable</font></td>
-<td><font SIZE="-9">XmCEditable</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNeditable</td>
+<td>XmCEditable</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -258,11 +258,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNeditMode</font></td>
-<td><font SIZE="-9">XmCEditMode</font></td>
-<td><font SIZE="-9">int</font></td>
-<td><font SIZE="-9">XmSINGLE_LINE_EDIT</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNeditMode</td>
+<td>XmCEditMode</td>
+<td>int</td>
+<td>XmSINGLE_LINE_EDIT</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -271,11 +271,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNfocusCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNfocusCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -284,11 +284,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNgainPrimaryCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNgainPrimaryCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -297,11 +297,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNlosePrimaryCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNlosePrimaryCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -310,11 +310,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNlosingFocusCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNlosingFocusCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -323,11 +323,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNmarginHeight</font></td>
-<td><font SIZE="-9">XmCMarginHeight</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">5</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNmarginHeight</td>
+<td>XmCMarginHeight</td>
+<td>Dimension</td>
+<td>5</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -336,11 +336,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNmarginWidth</font></td>
-<td><font SIZE="-9">XmCMarginWidth</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">5</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNmarginWidth</td>
+<td>XmCMarginWidth</td>
+<td>Dimension</td>
+<td>5</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -349,11 +349,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNmaxLength</font></td>
-<td><font SIZE="-9">XmCMaxLength</font></td>
-<td><font SIZE="-9">int</font></td>
-<td><font SIZE="-9">largest integer</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNmaxLength</td>
+<td>XmCMaxLength</td>
+<td>int</td>
+<td>largest integer</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -362,11 +362,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNmodifyVerifyCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNmodifyVerifyCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -375,11 +375,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNmodifyVerifyCallbackWcs</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNmodifyVerifyCallbackWcs</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -388,11 +388,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNmotionVerifyCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNmotionVerifyCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -401,11 +401,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNsource</font></td>
-<td><font SIZE="-9">XmCSource</font></td>
-<td><font SIZE="-9">XmTextSource</font></td>
-<td><font SIZE="-9">Default source</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNsource</td>
+<td>XmCSource</td>
+<td>XmTextSource</td>
+<td>Default source</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -414,11 +414,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtopCharacter</font></td>
-<td><font SIZE="-9">XmCTextPosition</font></td>
-<td><font SIZE="-9">XmTextPosition</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtopCharacter</td>
+<td>XmCTextPosition</td>
+<td>XmTextPosition</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -427,11 +427,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNvalue</font></td>
-<td><font SIZE="-9">XmCValue</font></td>
-<td><font SIZE="-9">String</font></td>
-<td><font SIZE="-9">&quot;&quot;</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNvalue</td>
+<td>XmCValue</td>
+<td>String</td>
+<td>&quot;&quot;</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -440,11 +440,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNvalueChangedCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNvalueChangedCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -453,11 +453,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNvalueWcs</font></td>
-<td><font SIZE="-9">XmCvalueWcs</font></td>
-<td><font SIZE="-9">wchar_t *</font></td>
-<td><font SIZE="-9">(wchar_t *)&quot;&quot;</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNvalueWcs</td>
+<td>XmCvalueWcs</td>
+<td>wchar_t *</td>
+<td>(wchar_t *)&quot;&quot;</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -466,11 +466,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNverifyBell</font></td>
-<td><font SIZE="-9">XmCVerifyBell</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNverifyBell</td>
+<td>XmCVerifyBell</td>
+<td>Boolean</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 </table>
@@ -503,11 +503,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbottomShadowColor</font></td>
-<td><font SIZE="-9">XmCBottomShadowColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbottomShadowColor</td>
+<td>XmCBottomShadowColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -516,11 +516,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbottomShadowPixmap</font></td>
-<td><font SIZE="-9">XmCBottomShadowPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">XmUNSPECIFIED_PIXMAP</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbottomShadowPixmap</td>
+<td>XmCBottomShadowPixmap</td>
+<td>Pixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -529,11 +529,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNforeground</font></td>
-<td><font SIZE="-9">XmCForeground</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNforeground</td>
+<td>XmCForeground</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -542,11 +542,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhighlightColor</font></td>
-<td><font SIZE="-9">XmCHighlightColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNhighlightColor</td>
+<td>XmCHighlightColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -555,11 +555,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhighlightOnEnter</font></td>
-<td><font SIZE="-9">XmCHighlightOnEnter</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNhighlightOnEnter</td>
+<td>XmCHighlightOnEnter</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -568,11 +568,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhighlightPixmap</font></td>
-<td><font SIZE="-9">XmCHighlightPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNhighlightPixmap</td>
+<td>XmCHighlightPixmap</td>
+<td>Pixmap</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -581,11 +581,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhighlightThickness</font></td>
-<td><font SIZE="-9">XmCHighlightThickness</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">2</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNhighlightThickness</td>
+<td>XmCHighlightThickness</td>
+<td>Dimension</td>
+<td>2</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -594,11 +594,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNnavigationType</font></td>
-<td><font SIZE="-9">XmCNavigationType</font></td>
-<td><font SIZE="-9">XmNavigationType</font></td>
-<td><font SIZE="-9">XmNONE</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNnavigationType</td>
+<td>XmCNavigationType</td>
+<td>XmNavigationType</td>
+<td>XmNONE</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -607,11 +607,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNshadowThickness</font></td>
-<td><font SIZE="-9">XmCShadowThickness</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">2</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNshadowThickness</td>
+<td>XmCShadowThickness</td>
+<td>Dimension</td>
+<td>2</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -620,11 +620,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtopShadowColor</font></td>
-<td><font SIZE="-9">XmCTopShadowColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtopShadowColor</td>
+<td>XmCTopShadowColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -633,11 +633,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtopShadowPixmap</font></td>
-<td><font SIZE="-9">XmCTopShadowPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtopShadowPixmap</td>
+<td>XmCTopShadowPixmap</td>
+<td>Pixmap</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -646,11 +646,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtraversalOn</font></td>
-<td><font SIZE="-9">XmCTraversalOn</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtraversalOn</td>
+<td>XmCTraversalOn</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -659,11 +659,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNunitType</font></td>
-<td><font SIZE="-9">XmCUnitType</font></td>
-<td><font SIZE="-9">unsignedChar</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNunitType</td>
+<td>XmCUnitType</td>
+<td>unsignedChar</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -672,11 +672,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNuserData</font></td>
-<td><font SIZE="-9">XmCUserData</font></td>
-<td><font SIZE="-9">Pointer</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNuserData</td>
+<td>XmCUserData</td>
+<td>Pointer</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 </table>
@@ -709,11 +709,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNaccelerators</font></td>
-<td><font SIZE="-9">XmCAccelerators</font></td>
-<td><font SIZE="-9">XtAccelerators</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNaccelerators</td>
+<td>XmCAccelerators</td>
+<td>XtAccelerators</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -722,11 +722,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNancestorSensitive</font></td>
-<td><font SIZE="-9">XmCSensitive</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">G</font>
+<td>XmNancestorSensitive</td>
+<td>XmCSensitive</td>
+<td>Boolean</td>
+<td>dynamic</td>
+<td>G
 </td>
 </tr>
 <tr VALIGN=top>
@@ -735,11 +735,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbackground</font></td>
-<td><font SIZE="-9">XmCBackground</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbackground</td>
+<td>XmCBackground</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -748,11 +748,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbackgroundPixmap</font></td>
-<td><font SIZE="-9">XmCPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">XmUNSPECIFIED_PIXMAP</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbackgroundPixmap</td>
+<td>XmCPixmap</td>
+<td>Pixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -761,11 +761,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNborderColor</font></td>
-<td><font SIZE="-9">XmCBorderColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">XtDefaultForeground</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNborderColor</td>
+<td>XmCBorderColor</td>
+<td>Pixel</td>
+<td>XtDefaultForeground</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -774,11 +774,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNborderPixmap</font></td>
-<td><font SIZE="-9">XmCPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">XmUNSPECIFIED_PIXMAP</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNborderPixmap</td>
+<td>XmCPixmap</td>
+<td>Pixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -787,11 +787,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNborderWidth</font></td>
-<td><font SIZE="-9">XmCBorderWidth</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">1</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNborderWidth</td>
+<td>XmCBorderWidth</td>
+<td>Dimension</td>
+<td>1</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -800,11 +800,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolormap</font></td>
-<td><font SIZE="-9">XmCColormap</font></td>
-<td><font SIZE="-9">Colormap</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNcolormap</td>
+<td>XmCColormap</td>
+<td>Colormap</td>
+<td>dynamic</td>
+<td>CG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -813,11 +813,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNdepth</font></td>
-<td><font SIZE="-9">XmCDepth</font></td>
-<td><font SIZE="-9">int</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNdepth</td>
+<td>XmCDepth</td>
+<td>int</td>
+<td>dynamic</td>
+<td>CG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -826,11 +826,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNdestroyCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNdestroyCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>C
 </td>
 </tr>
 <tr VALIGN=top>
@@ -839,11 +839,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNheight</font></td>
-<td><font SIZE="-9">XmCHeight</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNheight</td>
+<td>XmCHeight</td>
+<td>Dimension</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -852,11 +852,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNinitialResourcesPersistent</font></td>
-<td><font SIZE="-9">XmCInitialResourcesPersistent</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNinitialResourcesPersistent</td>
+<td>XmCInitialResourcesPersistent</td>
+<td>Boolean</td>
+<td>True</td>
+<td>C
 </td>
 </tr>
 <tr VALIGN=top>
@@ -865,11 +865,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNmappedWhenManaged</font></td>
-<td><font SIZE="-9">XmCMappedWhenManaged</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNmappedWhenManaged</td>
+<td>XmCMappedWhenManaged</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -878,11 +878,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNscreen</font></td>
-<td><font SIZE="-9">XmCScreen</font></td>
-<td><font SIZE="-9">Screen</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNscreen</td>
+<td>XmCScreen</td>
+<td>Screen</td>
+<td>dynamic</td>
+<td>CG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -891,11 +891,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNsensitive</font></td>
-<td><font SIZE="-9">XmCSensitive</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNsensitive</td>
+<td>XmCSensitive</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -904,11 +904,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtranslations</font></td>
-<td><font SIZE="-9">XmCTranslations</font></td>
-<td><font SIZE="-9">XtTranslations</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtranslations</td>
+<td>XmCTranslations</td>
+<td>XtTranslations</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -917,11 +917,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNwidth</font></td>
-<td><font SIZE="-9">XmCWidth</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNwidth</td>
+<td>XmCWidth</td>
+<td>Dimension</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -930,11 +930,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNx</font></td>
-<td><font SIZE="-9">XmCPosition</font></td>
-<td><font SIZE="-9">Position</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNx</td>
+<td>XmCPosition</td>
+<td>Position</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -943,11 +943,11 @@ description: "XbaeInput – The Input widget class."
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNy</font></td>
-<td><font SIZE="-9">XmCPosition</font></td>
-<td><font SIZE="-9">Position</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNy</td>
+<td>XmCPosition</td>
+<td>Position</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 </table>
@@ -1010,7 +1010,7 @@ description: "XbaeInput – The Input widget class."
 <dt><i>event</i></dt>
 <dd>The event pointer that triggered the callback.</dd>
 <dt><i>pattern</i></dt>
-<dd>A pointer to the pattern for the <code>XbaeInput</code> widget or <font SIZE="-1">NULL</font> if one does not exist. This value is provided as a convenience to the callback.</dd>
+<dd>A pointer to the pattern for the <code>XbaeInput</code> widget or NULL if one does not exist. This value is provided as a convenience to the callback.</dd>
 <dt><i>value</i></dt>
 <dd>The value as it appears in the cell at the time of the callback being invoked.</dd>
 <dt><i>doit</i></dt>
@@ -1099,6 +1099,6 @@ description: "XbaeInput – The Input widget class."
 <p>The Author, previous and current maintainers of the Xbae widgets (collectively &#8216;authors&#8217;) provide this information solely to professionals who have the appropriate degree of experience to understand and interpret its contents in accordance with generally accepted engineering or other professional standards and applicable regulations. No recommendations as to products or vendors is made or should be implied. </p>
 <p> While the information contained herein has been prepared from sources deemed to be reliable, the authors reserve the right to revise the information without notice, but have no obligation to do so. Unless the recipient has been expressly granted a license by Bellcore under separate applicable written agreement with Bellcore, no license, expressed or implied, is granted under any patents, copyrights or other intellectual property rights. Use of the information is at your discretion and shall not be deemed an inducement by Bellcore to infringe any existing or later-issued patent, copyrights or other intellectual property right. </p>
 <p> THE AUTHORS MAKE NO REPRESENTATIONS AND EXTENDS NO WARRANTIES, EXPRESS OR IMPLIED, WITH RESPECT TO THE INFORMATION, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR ANY PARTICULAR PURPOSE, AND THE WARRANTY AGAINST INFRINGEMENT OF PATENTS OR OTHER INTELLECTUAL PROPERTY RIGHTS. THE INFORMATION IS PROVIDED &#8220;AS IS&#8221;, AND IN NO EVENT SHALL THE AUTHORS OR ANY OF ITS AFFILIATES BE LIABLE FOR ANY DAMAGES, INCLUDING ANY LOST PROFITS OR OTHER INCIDENTAL OR CONSEQUENTIAL DAMAGES RELATING TO THE INFORMATION. </p>
-<p> Copyright 1999 Andrew Lister. All Rights Reserved.<br />
+<p> Copyright 1999 Andrew Lister. All Rights Reserved.<br/>
  Copyright 1999-2002 LessTif Developers </p>
 <p> The above no warranty extends to all additions and contributions. No contributor shall be held liable; this work is provided &#8220;as is&#8221;. If this is a problem for you, then don&#8217;t use this software.</p>

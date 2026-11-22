@@ -10,7 +10,7 @@ description: "XkbAllocKeyboard – Creates a keyboard description from scratch"
 <p>XkbAllocKeyboard &#8211; Creates a keyboard description from scratch </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbDescRec XkbAllocKeyboard</code> <code>(void);</code><br />
+<dt> <code>XkbDescRec XkbAllocKeyboard</code> <code>(void);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Description</h2>
 <dd>Applications seldom need to directly allocate a keyboard description; calling <i>XkbGetKeyboard </i> usually suffices. In the event you need to create a keyboard description from scratch, however, use <i>XkbAllocKeyboard </i> rather than directly calling <i>malloc.</i> </dd>

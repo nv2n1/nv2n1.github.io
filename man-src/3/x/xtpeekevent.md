@@ -31,6 +31,6 @@ description: "XtNextEvent, XtPending, XtPeekEvent, XtProcessEvent, XtMainLoop â€
 <p> <code>XtProcessEvent</code> has been replaced by <code>XtAppProcessEvent</code>. </p>
 <p> <code>XtMainLoop</code> has been replaced by <code>XtAppMainLoop</code>.</p>
 <h2>See Also</h2>
-<p>XtAppNextEvent(3xt), <a href="/docs/linux/man/3-xtapppending/">XtAppPending</a>(3), <a href="/docs/linux/man/3-xtapppeekevent/">XtAppPeekEvent</a>(3), <a href="/docs/linux/man/3-xtappprocessevent/">XtAppProcessEvent</a>(3), <a href="/docs/linux/man/3-xtappmainloop/">XtAppMainLoop</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p>XtAppNextEvent(3xt), <a href="/docs/linux/man/3-xtapppending/">XtAppPending</a>(3), <a href="/docs/linux/man/3-xtapppeekevent/">XtAppPeekEvent</a>(3), <a href="/docs/linux/man/3-xtappprocessevent/">XtAppProcessEvent</a>(3), <a href="/docs/linux/man/3-xtappmainloop/">XtAppMainLoop</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

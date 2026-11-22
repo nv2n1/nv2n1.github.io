@@ -13,27 +13,27 @@ description: "QwtPlotDirectPainter –"
 <p>#include &lt;qwt_plot_directpainter.h&gt; </p>
 <p> Inherits QObject.</p>
 <h3>Public Types</h3>
-<p>enum <code>Attribute</code> { <code>AtomicPainter</code> = 0x01, <code>FullRepaint</code> = 0x02, <code>CopyBackingStore</code> = 0x04 }<br />
- <i>Paint attributes. </i><br />
- typedef QFlags&lt; <code>Attribute</code> &gt; <code>Attributes</code><br />
+<p>enum <code>Attribute</code> { <code>AtomicPainter</code> = 0x01, <code>FullRepaint</code> = 0x02, <code>CopyBackingStore</code> = 0x04 }<br/>
+ <i>Paint attributes. </i><br/>
+ typedef QFlags&lt; <code>Attribute</code> &gt; <code>Attributes</code><br/>
  <i>Paint attributes. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotDirectPainter</code> (QObject *parent=NULL)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPlotDirectPainter</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotDirectPainter</code> (QObject *parent=NULL)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPlotDirectPainter</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setAttribute</code> (<code>Attribute</code>, bool on) </p>
 <p> bool <code>testAttribute</code> (<code>Attribute</code>) const </p>
 <p> void <code>setClipping</code> (bool) </p>
 <p> bool <code>hasClipping</code> () const </p>
-<p> void <code>setClipRegion</code> (const QRegion &amp;)<br />
- <i>Assign a clip region and enable clipping. </i><br />
+<p> void <code>setClipRegion</code> (const QRegion &amp;)<br/>
+ <i>Assign a clip region and enable clipping. </i><br/>
  QRegion <code>clipRegion</code> () const </p>
-<p> void <code>drawSeries</code> (<code>QwtPlotSeriesItem</code> *, int from, int to)<br />
- <i>Draw a set of points of a seriesItem. </i><br />
- void <code>reset</code> ()<br />
- <i>Close the internal QPainter. </i><br />
- virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br />
+<p> void <code>drawSeries</code> (<code>QwtPlotSeriesItem</code> *, int from, int to)<br/>
+ <i>Draw a set of points of a seriesItem. </i><br/>
+ void <code>reset</code> ()<br/>
+ <i>Close the internal QPainter. </i><br/>
+ virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br/>
  <i>Event filter. </i></p>
 <h2>Detailed Description</h2>
 <p>Painter object trying to paint incrementally. </p>
@@ -70,8 +70,8 @@ description: "QwtPlotDirectPainter –"
 <p> Setting plot()-&gt;canvas()-&gt;setAttribute(Qt::WA_PaintOutsidePaintEvent, true); will result in faster painting, if the paint engine of the canvas widget supports this feature. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>seriesItem</i> Item to be painted<br />
- <i>from</i> Index of the first point to be painted<br />
+<dd><i>seriesItem</i> Item to be painted<br/>
+ <i>from</i> Index of the first point to be painted<br/>
  <i>to</i> Index of the last point to be painted. If to &lt; 0 the series will be painted to its last point.</dd></dl>
 <h3>bool QwtPlotDirectPainter::hasClipping () const</h3>
 <p><code>Returns:</code></p>
@@ -84,7 +84,7 @@ description: "QwtPlotDirectPainter –"
 <p>Change an attribute </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Attribute to change<br />
+<dd><i>attribute</i> Attribute to change<br/>
  <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

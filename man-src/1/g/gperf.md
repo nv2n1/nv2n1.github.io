@@ -101,7 +101,7 @@ description: "gperf – generate a perfect hash function from a key set"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-gnu-gperf [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1989-1998, 2000-2004, 2006-2007, 2009 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 1989-1998, 2000-2004, 2006-2007, 2009 Free Software Foundation, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gperf</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gperf</code> programs are properly installed at your site, the command</p>

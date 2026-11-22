@@ -107,8 +107,8 @@ m[blue] printable = yes m[]
 <p>Each alias should be an acceptable printer name for your printing subsystem. In the [global] section, specify the new file as your printcap. The server will only recognize names found in your pseudo-printcap, which of course can contain whatever aliases you like. The same technique could be used simply to limit access to a subset of your local printers. </p>
 <p>An alias, by the way, is defined as any component of the first entry of a printcap record. Records are separated by newlines, components (if there are more than one) are separated by vertical bar symbols (|). </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>On SYSV systems which use lpstat to determine what printers are defined on the system you may be able to use printcap name = lpstat to automatically obtain a list of printers. See the printcap name option for more details. </p>
  </dd></dl>
@@ -1023,8 +1023,8 @@ veto files = /.AppleDouble/.bin/.AppleDesktop/Network Trash Folder/
 <dd> <p> This is a tuning parameter added due to bugs in both Windows 9x and WinNT. If Samba responds to a client too quickly when that client issues an SMB that can cause an oplock break request, then the network client can fail and not respond to the break request. This tuning parameter (which is set in milliseconds) is the amount of time Samba will wait before sending an oplock break request to such (broken) clients. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Warning</code> </font> <br />
+<dd> <p> <br/>
+  <code>Warning</code>  <br/>
  DO NOT CHANGE THIS PARAMETER UNLESS YOU HAVE READ AND UNDERSTOOD THE SAMBA OPLOCK CODE. </p>
  </dd></dl>
 <p> Default: <i>oplock break wait time</i><i> = </i><i>0</i><i> </i> </dl>
@@ -1035,8 +1035,8 @@ veto files = /.AppleDouble/.bin/.AppleDesktop/Network Trash Folder/
 <p>In brief it specifies a number, which causes <code><a href="/docs/linux/man/8-smbd/">smbd</a></code>(8)not to grant an oplock even when requested if the approximate number of clients contending for an oplock on the same file goes over this limit. This causes smbd to behave in a similar way to Windows NT. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Warning</code> </font> <br />
+<dd> <p> <br/>
+  <code>Warning</code>  <br/>
  DO NOT CHANGE THIS PARAMETER UNLESS YOU HAVE READ AND UNDERSTOOD THE SAMBA OPLOCK CODE. </p>
  </dd></dl>
 <p> Default: <i>oplock contention limit</i><i> = </i><i>2</i><i> </i> </dl>
@@ -1320,8 +1320,8 @@ veto files = /.AppleDouble/.bin/.AppleDesktop/Network Trash Folder/
 <p>This option takes the standard substitutions, allowing you to have separate logon scripts for each user or machine. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Warning</code> </font> <br />
+<dd> <p> <br/>
+  <code>Warning</code>  <br/>
  Do not quote the value. Setting this as "\\%N\profile\%U" will break profile handling. Where the tdbsam or ldapsam passdb backend is used, at the time the user account is created the value configured for this parameter is written to the passdb backend and that value will over-ride the parameter value present in the smb.conf file. Any error present in the passdb backend account record must be editted using the appropriate tool (pdbedit on the command-line, or any other locally provided system tool). </p>
  </dd></dl>
 <p> Note that this option is only useful if Samba is set up as a domain controller. </p>
@@ -1672,8 +1672,8 @@ df $1 | tail -1 | awk '{print $(NF-4),$(NF-2)}'
  </dd></dl>
 <p>and the program will extract the servername from before the first &#8216;:&#8216;. There should probably be a better parsing system that copes with different map formats and also Amd (another automounter) maps. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  A working NIS client is required on the system for this option to work. </p>
  </dd></dl>
 <p> Default: <i>homedir map</i><i> = </i><i></i><i> </i> </p>
@@ -1714,8 +1714,8 @@ df $1 | tail -1 | awk '{print $(NF-4),$(NF-2)}'
 <dd> <p> This parameter specifies the name of a file which will contain output created by a magic script (see the m[blue]<code>magic script</code>m[] parameter below). </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Warning</code> </font> <br />
+<dd> <p> <br/>
+  <code>Warning</code>  <br/>
  If two clients use the same <i>magic script </i> in the same directory the output file content is undefined. </p>
  </dd></dl>
 <p> Default: <i>magic output</i><i> = </i><i>&lt;magic script name&gt;.out</i><i> </i> </p>
@@ -2359,8 +2359,8 @@ print5|My Printer 5
  </dd></dl>
 <p>where the &#8216;|&#8216; separates aliases of a printer. The fact that the second alias has a space in it gives a hint to Samba that it&#8217;s a comment. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  Under AIX the default printcap name is /etc/qconfig. Samba will assume the file is in AIX qconfig format if the string qconfig appears in the printcap filename. </p>
  </dd></dl>
 <p> Default: <i>printcap name</i><i> = </i><i>/etc/printcap</i><i> </i> </p>
@@ -2452,8 +2452,8 @@ print5|My Printer 5
 <p>Disabling the <i>show add printer wizard</i> parameter will always cause the OpenPrinterEx() on the server to fail. Thus the APW icon will never be displayed. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  This does not prevent the same user from having administrative privilege on an individual printer. </p>
  </dd></dl>
 <p> Default: <i>show add printer wizard</i><i> = </i><i>yes</i><i> </i> </dl>
@@ -2580,8 +2580,8 @@ print5|My Printer 5
 <dd> <p> Enabling this parameter will disable netbios support in Samba. Netbios is the only available form of browsing in all windows versions except for 2000 and XP. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  Clients that only support netbios won&#8217;t be able to see your samba server when netbios support is disabled. </p>
  </dd></dl>
 <p> Default: <i>disable netbios</i><i> = </i><i>no</i><i> </i> </dl>
@@ -3104,8 +3104,8 @@ print5|My Printer 5
 <p>hosts deny = pirate </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  Note that access still requires suitable user-level passwords. </p>
  </dd></dl>
 <p> See <code><a href="/docs/linux/man/1-testparm/">testparm</a></code>(1) for a way of testing your host access to see if it does what you expect. </p>
@@ -3278,7 +3278,7 @@ print5|My Printer 5
 <p>LDAP connections should be secured where possible. This may be done using either Start-TLS (see m[blue]<code>ldap ssl</code>m[]) or by specifying <i>ldaps://</i> in the URL argument. </p>
 <p>Multiple servers may also be specified in double-quotes. Whether multiple servers are supported or not and the exact syntax depends on the LDAP library you use. </p>
  </dd></dl>
-<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>Examples of use are:<br />
+<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>Examples of use are:<br/>
  </p>
 <dl>
 <dd> <pre><code>passdb backend = tdbsam:/etc/samba/private/passdb.tdb
@@ -3373,8 +3373,8 @@ passdb backend = ldapsam:&quot;ldap://ldap-1.example.com ldap-2.example.com&quot
 <p>When a user with admin authority or SeAddUserPrivilege rights renames a user (e.g.: from the NT4 User Manager for Domains), this script will be run to rename the POSIX user. Two variables, %uold and %unew, will be substituted with the old and new usernames, respectively. The script should return 0 upon successful completion, and nonzero otherwise. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  The script has all responsibility to rename all the necessary data that is accessible in this posix method. This can mean different requirements for different backends. The tdbsam and smbpasswd backends will take care of the contents of their respective files, so the script is responsible only for changing the POSIX username, and other data that may required for your circumstances, such as home directory. Please also consider whether or not you need to rename the actual home directories themselves. The ldapsam backend will not make any changes, because of the potential issues with renaming the LDAP naming attribute. In this case the script is responsible for changing the attribute that samba uses (uid) for locating users, as well as any data that needs to change for other applications using the same directory. </p>
  </dd></dl>
 <p> Default: <i>rename user script</i><i> = </i><i>no</i><i> </i> </dl>
@@ -3391,8 +3391,8 @@ passdb backend = ldapsam:&quot;ldap://ldap-1.example.com ldap-2.example.com&quot
 <p>registry key in Windows 2000 and Windows NT. When set to 0, user and group list information is returned to anyone who asks. When set to 1, only an authenticated user can retrieve user and group list information. For the value 2, supported by Windows 2000/XP and Samba, no anonymous connections are allowed at all. This can break third party and Microsoft applications which expect to be allowed to perform operations anonymously. </p>
 <p>The security advantage of using restrict anonymous = 1 is dubious, as user and group list information can be obtained using other means. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  The security advantage of using restrict anonymous = 2 is removed by setting m[blue]<code>guest ok = yes</code>m[] on any share. </p>
  </dd></dl>
 <p> Default: <i>restrict anonymous</i><i> = </i><i>0</i><i> </i> </dl>
@@ -3762,8 +3762,8 @@ guest = *
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Warning</code> </font> <br />
+<dd> <p> <br/>
+  <code>Warning</code>  <br/>
  Modern server operating systems are tuned for high network performance in the majority of situations; when you set socket options you are overriding those settings. Linux in particular has an auto-tuning mechanism for buffer sizes that will be disabled if you specify a socket buffer size. This can potentially cripple your TCP/IP stack. </p>
 <p>Getting the socket options correct can make a big difference to your performance, but getting them wrong can degrade it by just as much. As with any other low level setting, if you must make changes to it, make small changes and <i>test</i> the effect before making any large changes. </p>
  </dd></dl>
@@ -4125,8 +4125,8 @@ guest = *
 <dd> <p> On large installations using <code><a href="/docs/linux/man/8-winbindd/">winbindd</a></code>(8) it may be necessary to suppress the enumeration of groups through the setgrent(), getgrent() and endgrent() group of system calls. If the <i>winbind enum groups</i> parameter is <code>no</code>, calls to the getgrent() system call will not return any data. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Warning</code> </font> <br />
+<dd> <p> <br/>
+  <code>Warning</code>  <br/>
  Turning off group enumeration may cause some programs to behave oddly. </p>
  </dd></dl>
 <p> Default: <i>winbind enum groups</i><i> = </i><i>no</i><i> </i> </dl>
@@ -4136,8 +4136,8 @@ guest = *
 <dd> <p> On large installations using <code><a href="/docs/linux/man/8-winbindd/">winbindd</a></code>(8) it may be necessary to suppress the enumeration of users through the setpwent(), getpwent() and endpwent() group of system calls. If the <i>winbind enum users</i> parameter is <code>no</code>, calls to the getpwent system call will not return any data. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Warning</code> </font> <br />
+<dd> <p> <br/>
+  <code>Warning</code>  <br/>
  Turning off user enumeration may cause some programs to behave oddly. For example, the finger program relies on having access to the full user list when searching for matching usernames. </p>
  </dd></dl>
 <p> Default: <i>winbind enum users</i><i> = </i><i>no</i><i> </i> </dl>
@@ -4280,8 +4280,8 @@ guest = *
 <p>If you want to work in multiple namespaces, you can give every wins server a &#8216;tag&#8217;. For each tag, only one (working) server will be queried for a name. The tag should be separated from the ip address by a colon. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  You need to set up Samba to point to a WINS server if you have multiple subnets and wish cross-subnet browsing to work correctly. </p>
  </dd></dl>
 <p> See the chapter in the Samba3-HOWTO on Network Browsing. </p>

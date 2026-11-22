@@ -10,7 +10,7 @@ description: "matho-primes – generate consecutive prime numbers"
 
 <p> matho-primes &#8211; generate consecutive prime numbers</p>
 <h2>SYNOPSIS</h2>
-<p> <code>matho-primes</code> [start [stop]] [&quot;twin&quot;] [&quot;pal&quot; [base]]<br />
+<p> <code>matho-primes</code> [start [stop]] [&quot;twin&quot;] [&quot;pal&quot; [base]]<br/>
  <code>matho-primes</code> [-t] [-p base] [start [stop]] </p>
 <h2>DESCRIPTION</h2>
 <p> This command line utility is optionally part of the <code><a href="/docs/linux/man/1-mathomatic/">mathomatic</a></code>(1) package. It quickly computes any number of consecutive prime numbers using a windowing, memory efficient sieve of Eratosthenes algorithm, dumping them to standard output. They are displayed one prime per line in ascending order, unless the &quot;twin&quot; option is specified, which displays only twin primes, two primes per line. </p>

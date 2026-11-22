@@ -22,7 +22,7 @@ const char *ne_get_server_hostport(ne_sesssion *session);</code></pre>
 <p> The scheme used to initially create the session will be returned by <code>ne_get_scheme</code>. </p>
 <p> The hostport pair with which the session is associated will be returned by the <code>ne_get_server_hostport</code>; for example <a rel="nofollow" href="http://www.example.com">www.example.com</a>:8080. Note that the :port will be omitted if the default port for the scheme is used.</p>
 <h2>Examples</h2>
-<p>Set a user-agent string: ne_session *sess = ne_session_create(&#8230;);<br />
+<p>Set a user-agent string: ne_session *sess = ne_session_create(&#8230;);<br/>
 ne_set_read_timeout(sess, 30); Set a 30 second read timeout: </p>
 <pre><code>ne_session *sess = ne_session_create(...);
 ne_set_read_timeout(sess, 30);</code></pre>

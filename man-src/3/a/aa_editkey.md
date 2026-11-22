@@ -11,8 +11,8 @@ description: "aa_editkey – Notify the line editor about keypress."
 <p> aa_editkey &#8211; Notify the line editor about keypress.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
-<p> void aa_editkey<br />
- (<br />
+<p> void aa_editkey<br/>
+ (<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>struct aa_edit *e,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int c</p>
 <p> ); </code></p>

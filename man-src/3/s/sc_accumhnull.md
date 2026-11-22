@@ -13,8 +13,8 @@ description: "sc::AccumHNull –"
 <h3>Public Member Functions</h3>
 <p><code>AccumHNull</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>AccumHNull</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>accum</code> (const <code>RefSymmSCMatrix</code> &amp;h)</p>
 <h2>Member Function Documentation</h2>
 <h3>void sc::AccumHNull::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>

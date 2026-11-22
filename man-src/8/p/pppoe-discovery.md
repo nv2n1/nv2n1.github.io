@@ -9,7 +9,7 @@ description: "pppoe-discovery – perform PPPoE discovery"
 
 <p>pppoe-discovery &#8211; perform PPPoE discovery</p>
 <h2>Synopsis</h2>
-<p><code>pppoe-discovery</code> [ <i>options</i> ]<br />
+<p><code>pppoe-discovery</code> [ <i>options</i> ]<br/>
  <code>pppoe-discovery</code> { <code>-V</code> | <code>-h</code> }</p>
 <h2>Description</h2>
 <p><code>pppoe-discovery</code> performs the same discovery process as <code>pppoe</code>, but does not initiate a session. It sends a PADI packet and then prints the names of access concentrators in each PADO packet it receives.</p>

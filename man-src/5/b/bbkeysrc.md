@@ -50,21 +50,21 @@ description: "bbkeysrc – bbkeys configuration file"
 <dl>
 <dd>[command] (keys) {parameters} </dd>
 </dl>
-<p> <code>Parameters:</code><br />
+<p> <code>Parameters:</code><br/>
  Not all directives need to have parameters provided, and within the [keybindings] section, the only sub-group allowed (a group that will have an [end] tag) is the [chain] tag. The chain tag is special and allows the user to give emacs-style keybindings, where a certain keystroke is given, released, and then another keystroke is given to complete the action. A good example would be the following: </p>
 <dl>
-<dd>&nbsp;<wbr>[chain]&nbsp;<wbr>(Control-Mod1-W)<br />
-[sendToWorkspace]&nbsp;<wbr>(1)&nbsp;<wbr>{1}<br />
-[sendToWorkspace]&nbsp;<wbr>(2)&nbsp;<wbr>{2}<br />
-[sendToWorkspace]&nbsp;<wbr>(3)&nbsp;<wbr>{3}<br />
-[sendToWorkspace]&nbsp;<wbr>(4)&nbsp;<wbr>{4}<br />
+<dd>&nbsp;<wbr>[chain]&nbsp;<wbr>(Control-Mod1-W)<br/>
+[sendToWorkspace]&nbsp;<wbr>(1)&nbsp;<wbr>{1}<br/>
+[sendToWorkspace]&nbsp;<wbr>(2)&nbsp;<wbr>{2}<br/>
+[sendToWorkspace]&nbsp;<wbr>(3)&nbsp;<wbr>{3}<br/>
+[sendToWorkspace]&nbsp;<wbr>(4)&nbsp;<wbr>{4}<br/>
 &nbsp;<wbr>[end] </dd>
 </dl>
 <p> Note that both the beginning [chain] and the ending [end] tags must be provided. In this example, the chain is begun by the user pressing (and holding) the Control modifier, the Mod1 (Alt) modifier, and the &quot;W&quot; key on his keyboard. The user then releases these keys and bbkeys enters the chain. Bbkeys will then wait for the user to press one of the keybindings from within that chain to execute the next action. In this case, if bbkeys sees either the 1, 2, 3 or 4 key pressed on the keyboard, it will execute the given action for that key. Again, in this case, bbkeys will send the currently-focused window to the workspace specified in the {}-enclosed parameter (workspace 1, 2, 3, or 4 as the case may be here. </p>
 <p> So, the parameters provided in a keybinding directive can be seen as additional information to provide to the &quot;command&quot;. In some cases, it will be a number (what workspace to send a window to, how many pixels to move the window, how many pixels to resize a window, etc.). In other cases, it will be a string (&quot;xterm -fn nexus&quot;, for example, as an argument to the Execute command. And for many directives, it is not needed at all. </p>
-<p> <code>Keys:</code><br />
+<p> <code>Keys:</code><br/>
  The format for the keybindings are using 0 or more modifiers, separated with the &quot;-&quot; character, finally followed by the key name as known to X. The &quot;left&quot; key, for example, is known to X as &quot;Left&quot;. The &quot;j&quot; key is known as &quot;J&quot;. You get the idea. The modifiers are typically, &quot;Shift&quot;, &quot;Control&quot;, and &quot;Mod1&quot;. An example would be Mod1-Control-K. This would be listed as the second element in a keybinding directive. </p>
-<p> <code>Commands:</code><br />
+<p> <code>Commands:</code><br/>
  The following commands are understood by bbkeys. Bbkeys is not case-sensitive with regards to its commands, so the case may be mixed accidentally or on purpose. =:) </p>
 <dl>
 <dt><i>execute</i></dt>
@@ -145,20 +145,20 @@ description: "bbkeysrc – bbkeys configuration file"
 <dd>No parameter is needed for this directive. </dd>
 </dl>
 <h2>Example</h2>
-<p>Example config file below&#8230;<br />
- [begin] (bbkeys configuration file)<br />
-&nbsp;<wbr>&nbsp;<wbr>[config]<br />
-&nbsp;<wbr>[option]&nbsp;<wbr>(stylefile)&nbsp;<wbr>{~/local/blackbox-CVS/share/blackbox/styles/Cthulhain}<br />
-&nbsp;<wbr>[option]&nbsp;<wbr>(honorModifiers)&nbsp;<wbr>{false}<br />
-&nbsp;<wbr>[option]&nbsp;<wbr>(raiseWhileCycling)&nbsp;<wbr>{false}<br />
-&nbsp;<wbr>[option]&nbsp;<wbr>(showCycleMenu)&nbsp;<wbr>&nbsp;<wbr>{true}<br />
-&nbsp;<wbr>[option]&nbsp;<wbr>(menuTextJustify)&nbsp;<wbr>{right}<br />
-&nbsp;<wbr>[option]&nbsp;<wbr>(autoConfig)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>{true}<br />
-&nbsp;<wbr>[option]&nbsp;<wbr>(autoConfigCheckTimeout)&nbsp;<wbr>{2}<br />
-&nbsp;<wbr>[option]&nbsp;<wbr>(workspaceColumns)&nbsp;<wbr>{4}<br />
-&nbsp;<wbr>[option]&nbsp;<wbr>(workspaceRows)&nbsp;<wbr>{2}<br />
-&nbsp;<wbr>[option]&nbsp;<wbr>(cycleMenuX)&nbsp;<wbr>{20}<br />
-&nbsp;<wbr>[option]&nbsp;<wbr>(cycleMenuY)&nbsp;<wbr>{20}<br />
+<p>Example config file below&#8230;<br/>
+ [begin] (bbkeys configuration file)<br/>
+&nbsp;<wbr>&nbsp;<wbr>[config]<br/>
+&nbsp;<wbr>[option]&nbsp;<wbr>(stylefile)&nbsp;<wbr>{~/local/blackbox-CVS/share/blackbox/styles/Cthulhain}<br/>
+&nbsp;<wbr>[option]&nbsp;<wbr>(honorModifiers)&nbsp;<wbr>{false}<br/>
+&nbsp;<wbr>[option]&nbsp;<wbr>(raiseWhileCycling)&nbsp;<wbr>{false}<br/>
+&nbsp;<wbr>[option]&nbsp;<wbr>(showCycleMenu)&nbsp;<wbr>&nbsp;<wbr>{true}<br/>
+&nbsp;<wbr>[option]&nbsp;<wbr>(menuTextJustify)&nbsp;<wbr>{right}<br/>
+&nbsp;<wbr>[option]&nbsp;<wbr>(autoConfig)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>{true}<br/>
+&nbsp;<wbr>[option]&nbsp;<wbr>(autoConfigCheckTimeout)&nbsp;<wbr>{2}<br/>
+&nbsp;<wbr>[option]&nbsp;<wbr>(workspaceColumns)&nbsp;<wbr>{4}<br/>
+&nbsp;<wbr>[option]&nbsp;<wbr>(workspaceRows)&nbsp;<wbr>{2}<br/>
+&nbsp;<wbr>[option]&nbsp;<wbr>(cycleMenuX)&nbsp;<wbr>{20}<br/>
+&nbsp;<wbr>[option]&nbsp;<wbr>(cycleMenuY)&nbsp;<wbr>{20}<br/>
 &nbsp;<wbr>&nbsp;<wbr>[end] </p>
 <pre><code>[keybindings] (begin keybindings)
 [chain] (Control-Mod1-W)
@@ -204,17 +204,17 @@ description: "bbkeysrc – bbkeys configuration file"
 [changeWorkspace]  (Mod1-6) {6}
 [changeWorkspace]  (Mod1-7) {7}
 [changeWorkspace]  (Mod1-8) {8}</code></pre>
-<p>&nbsp;<wbr>[upWorkspace]&nbsp;<wbr>(Mod1-Control-K)<br />
-&nbsp;<wbr>[downWorkspace]&nbsp;<wbr>(Mod1-Control-J)<br />
-&nbsp;<wbr>[leftWorkspace]&nbsp;<wbr>(Mod1-Control-H)<br />
-&nbsp;<wbr>[rightWorkspace]&nbsp;<wbr>(Mod1-Control-L)<br />
-&nbsp;<wbr>[showRootMenu]&nbsp;<wbr>(Mod1-Control-Escape)<br />
-&nbsp;<wbr>[Execute]&nbsp;<wbr>&nbsp;<wbr>(Mod1-F5)&nbsp;<wbr>{xrefresh}<br />
-&nbsp;<wbr>[Execute]&nbsp;<wbr>&nbsp;<wbr>(Mod1-F1)&nbsp;<wbr>{gnome-terminal}<br />
-&nbsp;<wbr>#[Execute]&nbsp;<wbr>&nbsp;<wbr>(Mod4-E)&nbsp;<wbr>{kfmclient openProfile filemanagement}<br />
-&nbsp;<wbr>#[Execute]&nbsp;<wbr>&nbsp;<wbr>(F20)&nbsp;<wbr>{kfmclient openProfile filemanagement}<br />
-&nbsp;<wbr>[Execute]&nbsp;<wbr>&nbsp;<wbr>(Mod4-E)&nbsp;<wbr>{nautilus&nbsp;<wbr>/home/gideon}<br />
-&nbsp;<wbr>[Execute]&nbsp;<wbr>&nbsp;<wbr>(F20)&nbsp;<wbr>{nautilus&nbsp;<wbr>/home/gideon}<br />
+<p>&nbsp;<wbr>[upWorkspace]&nbsp;<wbr>(Mod1-Control-K)<br/>
+&nbsp;<wbr>[downWorkspace]&nbsp;<wbr>(Mod1-Control-J)<br/>
+&nbsp;<wbr>[leftWorkspace]&nbsp;<wbr>(Mod1-Control-H)<br/>
+&nbsp;<wbr>[rightWorkspace]&nbsp;<wbr>(Mod1-Control-L)<br/>
+&nbsp;<wbr>[showRootMenu]&nbsp;<wbr>(Mod1-Control-Escape)<br/>
+&nbsp;<wbr>[Execute]&nbsp;<wbr>&nbsp;<wbr>(Mod1-F5)&nbsp;<wbr>{xrefresh}<br/>
+&nbsp;<wbr>[Execute]&nbsp;<wbr>&nbsp;<wbr>(Mod1-F1)&nbsp;<wbr>{gnome-terminal}<br/>
+&nbsp;<wbr>#[Execute]&nbsp;<wbr>&nbsp;<wbr>(Mod4-E)&nbsp;<wbr>{kfmclient openProfile filemanagement}<br/>
+&nbsp;<wbr>#[Execute]&nbsp;<wbr>&nbsp;<wbr>(F20)&nbsp;<wbr>{kfmclient openProfile filemanagement}<br/>
+&nbsp;<wbr>[Execute]&nbsp;<wbr>&nbsp;<wbr>(Mod4-E)&nbsp;<wbr>{nautilus&nbsp;<wbr>/home/gideon}<br/>
+&nbsp;<wbr>[Execute]&nbsp;<wbr>&nbsp;<wbr>(F20)&nbsp;<wbr>{nautilus&nbsp;<wbr>/home/gideon}<br/>
 &nbsp;<wbr>&nbsp;<wbr>[end]&nbsp;<wbr>(end keybindings) [end] (end bbkeys configuration)</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-bbkeys/">bbkeys</a>(1),</code> <code><a href="/docs/linux/man/1-blackbox/">blackbox</a>(1)</code> </p>

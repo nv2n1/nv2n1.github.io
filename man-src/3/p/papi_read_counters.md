@@ -16,7 +16,7 @@ description: "PAPI_read_counters –"
 int PAPI_read_counters( long long *values, int array_len );</pre>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>*values</i> an array to hold the counter values of the counting events<br />
+<dd><i>*values</i> an array to hold the counter values of the counting events<br/>
  <i>arry_len</i> the number of items in the *events array</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
@@ -26,7 +26,7 @@ int PAPI_read_counters( long long *values, int array_len );</pre>
 <dd>The counters are reset and left running after the call.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
+<dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br/>
  <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.</dd></dl>
 <p> <code>PAPI_read_counters()</code> copies the event counters into the array *values. </p>
 <pre>do_100events();

@@ -13,13 +13,13 @@ description: "perl573delta – what’s new for perl v5.7.3"
 <p> This document describes differences between the 5.7.2 release and the 5.7.3 release. </p>
 <p> (To view the differences between the 5.6.0 release and the 5.7.0 release, see perl570delta. To view the differences between the 5.7.0 release and the 5.7.1 release, see perl571delta. To view the differences between the 5.7.1 release and the 5.7.2 release, see perl572delta.)  </p>
 <h2>Changes</h2>
-<p> This is just a selected list of some of the more notable changes. The numbers refer to the Perl repository change numbers; see Changes58 (or Changes in Perl 5.8.1). In addition to these changes, lots of work took place in integrating threads, PerlIO, and Unicode; general code cleanup; and last but not least porting to non-Unix lands such as Win32, <font SIZE="-1">VMS</font>, Cygwin, <font SIZE="-1">DJGPP</font>, <font SIZE="-1">VOS</font>, MacOS Classic, and <font SIZE="-1">EBCDIC</font>. </p>
+<p> This is just a selected list of some of the more notable changes. The numbers refer to the Perl repository change numbers; see Changes58 (or Changes in Perl 5.8.1). In addition to these changes, lots of work took place in integrating threads, PerlIO, and Unicode; general code cleanup; and last but not least porting to non-Unix lands such as Win32, VMS, Cygwin, DJGPP, VOS, MacOS Classic, and EBCDIC. </p>
 <dl>
 <dt>11362</dt>
-<dd> <p> add <font SIZE="-1">LC_MESSAGES</font> to <font SIZE="-1">POSIX</font> :locale_h export tag </p>
+<dd> <p> add LC_MESSAGES to POSIX :locale_h export tag </p>
  </dd>
 <dt>11371</dt>
-<dd> <p> add <font SIZE="-1">DEL</font> to [:cntrl:] </p>
+<dd> <p> add DEL to [:cntrl:] </p>
  </dd>
 <dt>11375</dt>
 <dd> <p> make h2ph understand constants like 1234L and 5678LL </p>
@@ -34,7 +34,7 @@ description: "perl573delta – what’s new for perl v5.7.3"
 <dd> <p> make perl <i>fork()</i> safe even on platforms that don&#8217;t have <i>pthread_atfork()</i> </p>
  </dd>
 <dt>11459</dt>
-<dd> <p> make switching optimization and debugging levels during Perl builds easier via the <font SIZE="-1">OPTIMIZE</font> environment variable </p>
+<dd> <p> make switching optimization and debugging levels during Perl builds easier via the OPTIMIZE environment variable </p>
  </dd>
 <dt>11475</dt>
 <dd> <p> make <i>split()</i>&#8216;s unused captures to be undef, not &#8216;&#8216; </p>
@@ -58,7 +58,7 @@ description: "perl573delta – what’s new for perl v5.7.3"
 <dd> <p> Win32: 4-arg select was broken </p>
  </dd>
 <dt>11594</dt>
-<dd> <p> introduce the perlivp utility for verifying the Perl installation (<font SIZE="-1">IVP</font> = Installation Verification Procedure) </p>
+<dd> <p> introduce the perlivp utility for verifying the Perl installation (IVP = Installation Verification Procedure) </p>
  </dd>
 <dt>11623</dt>
 <dd> <p> rename lib/unicode to lib/unicore to avoid case-insensitivity problems with lib/Unicode </p>
@@ -70,7 +70,7 @@ description: "perl573delta – what’s new for perl v5.7.3"
 <dd> <p> document that use utf8 is not the right way most of the time </p>
  </dd>
 <dt>11656</dt>
-<dd> <p> allow building perl with -DUSE_UTF8_SCRIPTS which makes <font SIZE="-1">UTF-8</font> the default script encoding (not the default since that would break all scripts having legacy eight-bit data in them) </p>
+<dd> <p> allow building perl with -DUSE_UTF8_SCRIPTS which makes UTF-8 the default script encoding (not the default since that would break all scripts having legacy eight-bit data in them) </p>
  </dd>
 <dt>11725</dt>
 <dd> <p> division preserving 64-bit integers </p>
@@ -97,13 +97,13 @@ description: "perl573delta – what’s new for perl v5.7.3"
 <dd> <p> fix unpack U to be the reverse of pack U </p>
  </dd>
 <dt>12056</dt>
-<dd> <p> <font SIZE="-1">VMS:</font> waitpid enhancements </p>
+<dd> <p> VMS: waitpid enhancements </p>
  </dd>
 <dt>12180</dt>
 <dd> <p> unpack(``Z*Z*&#8216;&#8216;, pack(``Z*Z*&#8216;&#8216;, ..)) was broken </p>
  </dd>
 <dt>12243</dt>
-<dd> <p> Devel::Peek: display <font SIZE="-1">UTF-8</font> SVs also as \x{...} </p>
+<dd> <p> Devel::Peek: display UTF-8 SVs also as \x{...} </p>
  </dd>
 <dt>12288</dt>
 <dd> <p> Data::Dumper: option to sort hashes </p>
@@ -127,7 +127,7 @@ description: "perl573delta – what’s new for perl v5.7.3"
 <dd> <p> add the sort pragma </p>
  </dd>
 <dt>13326</dt>
-<dd> <p> <font SIZE="-1">VMS:</font> fix perl -P </p>
+<dd> <p> VMS: fix perl -P </p>
  </dd>
 <dt>13358</dt>
 <dd> <p> add perlpacktut </p>
@@ -148,15 +148,15 @@ description: "perl573delta – what’s new for perl v5.7.3"
 <dd> <p> implement IV/UV/NV/long double un/packing with j/J/F/D </p>
  </dd>
 <dt>14854</dt>
-<dd> <p> document the new taint behaviour of exec <font SIZE="-1">LIST</font> and system <font SIZE="-1">LIST</font> </p>
+<dd> <p> document the new taint behaviour of exec LIST and system LIST </p>
  </dd></dl>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://bugs.perl.org.">http://bugs.perl.org.</a> There may also be information at <a rel="nofollow" href="http://www.perl.com/,">http://www.perl.com/,</a> the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information.  </p>
 <h2>HISTORY</h2>
 <p> Written by Jarkko Hietaniemi &lt;<i>jhi [at] iki.fi</i>&gt;, with many contributions from The Perl Porters and Perl Users submitting feedback and patches. </p>

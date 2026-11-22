@@ -30,5 +30,5 @@ description: "XcmsQueryBlack, XcmsQueryBlue, XcmsQueryGreen, XcmsQueryRed, XcmsQ
 <p> The <code>XcmsQueryRed</code> function returns the color specification in the specified target format for full-intensity red while green and blue are zero. </p>
 <p> The <code>XcmsQueryWhite</code> function returns the color specification in the specified target format for full-intensity red, green, and blue.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcmscielabquerymaxc/">XcmsCIELabQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmscieluvquerymaxc/">XcmsCIELuvQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmstekhvcquerymaxc/">XcmsTekHVCQueryMaxC</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcmscielabquerymaxc/">XcmsCIELabQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmscieluvquerymaxc/">XcmsCIELuvQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmstekhvcquerymaxc/">XcmsTekHVCQueryMaxC</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

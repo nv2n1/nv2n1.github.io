@@ -23,16 +23,16 @@ description: "da – setup development environment and create basic projects in 
 </dl>
 <h2>DESCRIPTION &#8211; ASSISTANT_TYPE</h2>
 <p> DevAssistant can help you with various tasks during development. The tasks are carried out by so called &quot;assistants&quot; &#8211; there are four types of assistants: </p>
-<p> <code>create</code> &#8211; create new projects, install dependencies and setup environment<br />
- <code>modify</code> &#8211; modify previously created projects (e.g. import them to Eclipse)<br />
- <code>prepare</code> &#8211; prepare development environment for an upstream project<br />
+<p> <code>create</code> &#8211; create new projects, install dependencies and setup environment<br/>
+ <code>modify</code> &#8211; modify previously created projects (e.g. import them to Eclipse)<br/>
+ <code>prepare</code> &#8211; prepare development environment for an upstream project<br/>
  <code>task</code> &#8211; carry out a custom task not related to a specific project </p>
 <p> You can shorten &quot;create&quot; to &quot;crt&quot;, &quot;modify&quot; to &quot;mod&quot; and &quot;prepare&quot; to &quot;prep&quot;. </p>
 <p> Each assistant type can have many associated assistants (e.g. python, ruby) and each assistant can have many associated subassistants (e.g. django, flask). You can display these (and also other options) by running e.g. <code>da crt -h</code> and <code>da crt python -h</code>. Once you select the desired assistant (and its subassistants), just run it, e.g. <code>da crt python django -n newproject</code>. </p>
 <p> The list of assistants and their functionality may vary depending on your installation &#8211; just run help to see currently available assistants. </p>
 <h2>DESCRIPTION &#8211; ACTION</h2>
 <p> DevAssistant is designed to also provide custom functionality through so-called actions. Currently, these contain: </p>
-<p> <code>help</code> &#8211; display verbose help.<br />
+<p> <code>help</code> &#8211; display verbose help.<br/>
  <code>version</code> &#8211; display devassistant version. </p>
 <p> Again, to show options, just use <code>-h</code> with the action, e.g. <code>da version -h</code>. </p>
 <h2>COMMON OPTIONS</h2>

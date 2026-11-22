@@ -29,7 +29,7 @@ description: "ncid – Network Caller ID Client"
     [--verbose | -V]
 </code></pre>
 <p> <i>Arguments:</i> </p>
-<p>[IP_ADDRESS | HOSTNAME]<br />
+<p>[IP_ADDRESS | HOSTNAME]<br/>
     [PORT_NUMBER]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>Ncid</code> displays Caller ID information sent to it by the Caller ID server. In the default GUI mode, if the server is configured to send the CID Call Log, it will load the call log in the CID log window at startup. The call log is updated by <i>ncid</i> whenever a call is received. </p>
@@ -53,14 +53,14 @@ description: "ncid – Network Caller ID Client"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;no-gui</code></dt>
-<dd> Do not display CID information using a GUI<br />
+<dd> Do not display CID information using a GUI<br/>
  Default: display CID using a GUI, except if called tivocid</dd>
 <dt><code>&#8211;call-prog | -C</code></dt>
-<dd> Output the Caller ID information to a external program or output module.<br />
+<dd> Output the Caller ID information to a external program or output module.<br/>
  Default: does not call a external program unless name is tivocid or tivoncid</dd>
 <dt><code>&#8211;delay SECONDS | -D SECONDS</code></dt>
-<dd> Delay SECONDS between server connection attempts if SECONDS &gt; 0.<br />
- Only one attempt to connect to server if SECONDS = 0.<br />
+<dd> Delay SECONDS between server connection attempts if SECONDS &gt; 0.<br/>
+ Only one attempt to connect to server if SECONDS = 0.<br/>
  Default: 60 seconds</dd>
 <dt><code>&#8211;message | -M</code></dt>
 <dd> Send messages to the output modules</dd>
@@ -69,39 +69,39 @@ description: "ncid – Network Caller ID Client"
 <dt><code>&#8211;pidfile | -p</code></dt>
 <dd> Name of PID file to create. Set to <i>/var/run/ncid.pid</i><code> in a rc or init script when used as a service. Set to </code><i>/var/run/OUTPUTMODULE.pid</i><code> in a rc or init script when used as a service and when using a output module. There is no default. If pidfile is not set, no pid file will be used.</dd>
 <dt>&#8211;program PROGRAM | -P PROGRAM</code></dt>
-<dd> Name of the output module (program) to use. Some output modules are ncid-kpopup, ncid-page, and ncid-speak.<br />
- Default PATH: /usr/share/ncid<br />
+<dd> Name of the output module (program) to use. Some output modules are ncid-kpopup, ncid-page, and ncid-speak.<br/>
+ Default PATH: /usr/share/ncid<br/>
  Default PROGRAM: ncid-speak</dd>
 <dt><code>&#8211;raw | -R</code></dt>
-<dd> display data received from the CID Server<br />
+<dd> display data received from the CID Server<br/>
  Default: raw data not displayed</dd>
 <dt><code>&#8211;ring count | -r count</code></dt>
-<dd> Call output module on specific ring count.<br />
- For modems that indicate RING, count can be: 0 2 3 4 5 6 7 8 9<br />
- For VoIP, using a SIP gateway, count can be: -2 -1<br />
- A count of -1 incdicates a hangup before answer.<br />
- A count of -2 incdicates a hangup after answer.<br />
+<dd> Call output module on specific ring count.<br/>
+ For modems that indicate RING, count can be: 0 2 3 4 5 6 7 8 9<br/>
+ For VoIP, using a SIP gateway, count can be: -2 -1<br/>
+ A count of -1 incdicates a hangup before answer.<br/>
+ A count of -2 incdicates a hangup after answer.<br/>
  Default: output module called as soon as CID received</dd>
 <dt><code>&#8211;Tivo | -T</code></dt>
-<dd> This option is for a TiVo using out2osd or text2osd<br />
- Changes output to 2 lines: name number line<br />
+<dd> This option is for a TiVo using out2osd or text2osd<br/>
+ Changes output to 2 lines: name number line<br/>
  Default output is 5 lines: date time number name line</dd>
 <dt><code>&#8211;PopupTime seconds | -t seconds</code></dt>
-<dd> Time for the popup to stay on top of all windows. Range is 1 second to 99 seconds<br />
+<dd> Time for the popup to stay on top of all windows. Range is 1 second to 99 seconds<br/>
  Default popup time os 5 seconds</dd>
 <dt><code>&#8211;verbose | -V</code></dt>
-<dd> display formatted CID information, including CID log file<br />
+<dd> display formatted CID information, including CID log file<br/>
  Default: silent</dd></dl>
 <h3>Arguments</h3>
 <dl>
 <dt><code>IP_ADDRESS | HOSTNAME</code></dt>
-<dd> set the IP Address<br />
+<dd> set the IP Address<br/>
  Default: 127.0.0.1 (localhost)</dd>
 <dt><code>PORT_NUMBER</code></dt>
-<dd> set the port number<br />
+<dd> set the port number<br/>
  Default: 3333</dd></dl>
 <h2>FILES</h2>
-<p> /etc/ncid/*<br />
+<p> /etc/ncid/*<br/>
  /usr/share/ncid/*</p>
 <h2>EXAMPLES</h2>
 <pre><code>

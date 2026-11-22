@@ -314,26 +314,26 @@ description: "opasmaquery"
 </dl>
 </dl>
 <h2>Examples</h2>
-<p> opasmaquery -o desc -l 6<br />
+<p> opasmaquery -o desc -l 6<br/>
  # get nodedesc via lid routed </p>
-<p> opasmaquery -o nodedesc 1 3<br />
+<p> opasmaquery -o nodedesc 1 3<br/>
  # get nodedesc via directed route (2 dr hops) </p>
-<p> opasmaquery -o nodeinfo -l 2 3<br />
+<p> opasmaquery -o nodeinfo -l 2 3<br/>
  # get nodeinfo via a combination of lid routed and # directed route (1 dr hop) </p>
-<p> opasmaquery -o portinfo<br />
+<p> opasmaquery -o portinfo<br/>
  # get local port info </p>
-<p> opasmaquery -o portinfo -l 6 -m 1<br />
+<p> opasmaquery -o portinfo -l 6 -m 1<br/>
  # get port info of port 1 of lid 6 </p>
-<p> opasmaquery -o pkey -l 2 3<br />
- # get pkey table entries starting (lid routed to lid 2,<br />
+<p> opasmaquery -o pkey -l 2 3<br/>
+ # get pkey table entries starting (lid routed to lid 2,<br/>
  # then 1 dr hop to port 3) </p>
-<p> opasmaquery -o vlarb -l 6<br />
+<p> opasmaquery -o vlarb -l 6<br/>
  # get vlarb table entries from lid 6 </p>
-<p> opasmaquery -o swinfo -l 2<br />
+<p> opasmaquery -o swinfo -l 2<br/>
  # get switch info </p>
-<p> opasmaquery -o sminfo -l 1<br />
+<p> opasmaquery -o sminfo -l 1<br/>
  # get SM info </p>
-<p> opasmaquery -o slsc -l 3<br />
+<p> opasmaquery -o slsc -l 3<br/>
  # get sl2sc table entries from lid 3 </p>
-<p> opasmaquery -o scsl -l 3<br />
+<p> opasmaquery -o scsl -l 3<br/>
  # get sc2sl table entries from lid 3 </p>

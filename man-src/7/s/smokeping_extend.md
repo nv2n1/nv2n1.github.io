@@ -10,17 +10,17 @@ description: "smokeping_extend – Notes on extending Smokeping"
 <p>smokeping_extend &#8211; Notes on extending Smokeping</p>
 <h2>Overview</h2>
 <p>This document is intended to guide prospective authors in writing new Smokeping probes. It mostly describes the interface between Smokeping and its probe modules. If it seems too complicated to understand, look at the existing modules for examples. </p>
-<p> Comments and proposed changes or additions are welcome. Please send them to the smokeping-users mailing list. Patches against the <font SIZE="-1">POD</font> source of this document are most appreciated.</p>
+<p> Comments and proposed changes or additions are welcome. Please send them to the smokeping-users mailing list. Patches against the POD source of this document are most appreciated.</p>
 <h2>Choosing A Base Class</h2>
 <p>The first thing you should decide is which base class you should use for your probe. For most (if not all) uses it&#8217;s a choice between Smokeping::probes::base and Smokeping::probes::basefork. The former is intended for probes that can measure their targets all in one go, while the latter is for probing them one at a time, possibly in several concurrent subprocesses. </p>
 <p> At the moment, the only probes that use <tt>&quot;Smokeping::probes::base&quot;</tt> are the FPing derivatives. All the others use <tt>&quot;Smokeping::probes::basefork&quot;</tt>, and chances are you should too. This document will thus concentrate on the latter case.</p>
 <h2>Skeleton File</h2>
 <p>The Smokeping::probes::skel module is a non-functional probe that is intended to make a good basis for a new probe module. Copy the file, <tt>&quot;lib/probes/skel.pm&quot;</tt>, to a new name and just fill out the blanks :) Note that the names of real probe modules must start with a capital letter.</p>
 <h2>Probe Documentation</h2>
-<p>The probe documentation is generated from the source code with the smokeping arguments <tt>&quot;--man&quot;</tt> or <tt>&quot;--makepod&quot;</tt>. The embedded <font SIZE="-1">POD</font> documentation should point to this real documentation, so that curious users of the <tt>&quot;perldoc&quot;</tt> command see what&#8217;s going on. All the current probes do this. </p>
+<p>The probe documentation is generated from the source code with the smokeping arguments <tt>&quot;--man&quot;</tt> or <tt>&quot;--makepod&quot;</tt>. The embedded POD documentation should point to this real documentation, so that curious users of the <tt>&quot;perldoc&quot;</tt> command see what&#8217;s going on. All the current probes do this. </p>
 <p> You should provide the method <tt>&quot;pod_hash&quot;</tt> that returns a reference to a hash with keys corresponding to the section names you want in the manpage. The supported section names are <tt>&quot;name&quot;</tt>, <tt>&quot;overview&quot;</tt>, <tt>&quot;description&quot;</tt>, <tt>&quot;authors&quot;</tt>, <tt>&quot;notes&quot;</tt>, <tt>&quot;bugs&quot;</tt>, and <tt>&quot;see_also&quot;</tt>. If you don&#8217;t need a particular section, just leave it out. </p>
 <p> The special sections <tt>&quot;synopsis&quot;</tt> and <tt>&quot;variables&quot;</tt> are automatically generated from the description of your variables. See below. </p>
-<p> Note that if you use &#8216;here documents&#8217; (&#8216;&lt;&lt;&#8216;) that have <font SIZE="-1">POD</font> markup inside, you should escape the markup so that it doesn&#8217;t show up in the embedded <font SIZE="-1">POD</font> documentation. Most probes do it like this: </p>
+<p> Note that if you use &#8216;here documents&#8217; (&#8216;&lt;&lt;&#8216;) that have POD markup inside, you should escape the markup so that it doesn&#8217;t show up in the embedded POD documentation. Most probes do it like this: </p>
 <pre> my $e = &quot;=&quot;;
  my $doc = &lt;&lt;DOC;
  ${e}head1 SECTION TITLE
@@ -49,7 +49,7 @@ description: "smokeping_extend – Notes on extending Smokeping"
 <dt>_doc</dt>
 <dd>Description of the variable.</dd>
 <dt>_example</dt>
-<dd>An example value. This will be used in the <font SIZE="-1">SYNOPSIS</font> section in the probe manual.</dd></dl>
+<dd>An example value. This will be used in the SYNOPSIS section in the probe manual.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
@@ -72,14 +72,14 @@ description: "smokeping_extend – Notes on extending Smokeping"
 </dl>
 <p> The <tt>&quot;probevars&quot;</tt> and <tt>&quot;targetvars&quot;</tt> methods should return hash references that contain the variable names as keys and the hashes described above as values. In addition the <tt>&quot;Config::Grammar&quot;</tt> special section key <tt>&quot;_mandatory&quot;</tt> is supported and should contain a reference to a list of mandatory variables. The <tt>&quot;_makevars&quot;</tt> method is aware of this special key and merges the mandatory lists in its arguments. Note that no other <tt>&quot;Config::Grammar&quot;</tt> special section keys are supported.</p>
 <h2>Initialization</h2>
-<p>If you must do something at probe initialization time, like check that the external program you&#8217;re going to use behaves as you expect, you should do it in the <tt>&quot;new&quot;</tt> method. You should probably also take care that you don&#8217;t run the tests needlessly while in <font SIZE="-1">CGI</font> mode. The usual way to do this is to test for <tt>$ENV</tt>{<font SIZE="-1">SERVER_SOFTWARE</font>}. See the <tt>&quot;Smokeping::probes::skel&quot;</tt> module for an example.</p>
+<p>If you must do something at probe initialization time, like check that the external program you&#8217;re going to use behaves as you expect, you should do it in the <tt>&quot;new&quot;</tt> method. You should probably also take care that you don&#8217;t run the tests needlessly while in CGI mode. The usual way to do this is to test for <tt>$ENV</tt>{SERVER_SOFTWARE}. See the <tt>&quot;Smokeping::probes::skel&quot;</tt> module for an example.</p>
 <h2>Pinging</h2>
 <p>All the real action happens in the <tt>&quot;pingone&quot;</tt> method (or, for <tt>&quot;Smokeping::probes::base&quot;</tt>-derived probes, in the <tt>&quot;ping&quot;</tt> method.) The arguments for <tt>&quot;pingone&quot;</tt> are <tt>$self</tt>, the module instance (since this is a method) and <tt>$target</tt>, the target to be probed. </p>
 <p> You can access the probe-specific variables here via the <tt>&quot;$self-&gt;{properties}&quot;</tt> hash and the target-specific ones via the <tt>&quot;$target-&gt;{vars}&quot;</tt> hash. You get the number of pings needed for the target via the <tt>&quot;pings&quot;</tt> method: <tt>&quot;my $count = $self-&gt;pings($target)&quot;</tt>. </p>
 <p> You should return a sorted array of the latency times measured. If a ping fails, don&#8217;t put anything in the array. </p>
 <p> That&#8217;s it, you&#8217;re done!</p>
 <h2>Example Configurations</h2>
-<p>If you would like to provide a documented example configuration for your probe (in addition to the automatically generated <font SIZE="-1">SYNOPSIS</font> section in the probe manual), you can do so by adding it to the Smokeping::Examples module. Look for the &#8216;examples&#8217; subroutine and add your example there. </p>
+<p>If you would like to provide a documented example configuration for your probe (in addition to the automatically generated SYNOPSIS section in the probe manual), you can do so by adding it to the Smokeping::Examples module. Look for the &#8216;examples&#8217; subroutine and add your example there. </p>
 <p> Future versions of Smokeping might provide a way to embed examples in the probe modules too. The author&#8217;s motivation for implementing this would be greatly increased by even a single demand for it, so please speak up if you think you&#8217;d use it.</p>
 <h2>Timeout Handling</h2>
 <p>If you deal with timeouts (for example because your program offers a parameter for specifying the timeout for the pings), you should know a few things. </p>
@@ -97,9 +97,9 @@ description: "smokeping_extend – Notes on extending Smokeping"
 <h2>Copyright</h2>
 <p>Copyright 2005 by Niko Tyni.</p>
 <h2>License</h2>
-<p>This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font></p>
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>
 <h2>Author</h2>
 <p>Niko Tyni &lt;ntyni [at] iki.fi&gt;</p>
 <h2>Bugs</h2>

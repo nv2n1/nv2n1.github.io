@@ -18,7 +18,7 @@ description: "supermin-helper – Reconstruct initramfs from supermin appliance.
 <h2>Parameters</h2>
 <p>Of the required parameters, the first few are <i>input</i> files, and the last two or three are <i>output</i> files. </p>
 <p> <tt>&quot;supermin.img&quot;</tt> and <tt>&quot;hostfiles.txt&quot;</tt> are the input files which describe the supermin appliance. (You can also use a directory name here which is searched for files). </p>
-<p> <tt>&quot;host_cpu&quot;</tt> should be the host <font SIZE="-1">CPU,</font> eg. <tt>&quot;x86_64&quot;</tt> or <tt>&quot;i686&quot;</tt>. </p>
+<p> <tt>&quot;host_cpu&quot;</tt> should be the host CPU, eg. <tt>&quot;x86_64&quot;</tt> or <tt>&quot;i686&quot;</tt>. </p>
 <p> <tt>&quot;kernel&quot;</tt>, <tt>&quot;initrd&quot;</tt> and <tt>&quot;appliance&quot;</tt> are the temporary output files that this script produces. These output files are meant to be used just for booting the appliance, and should be deleted straight afterwards. The extra <tt>&quot;appliance&quot;</tt> parameter is only required when the format is <tt>&quot;ext2&quot;</tt>. None of these parameters are needed for the checksum output <tt>&quot;-f checksum&quot;</tt>.</p>
 <h2>Options</h2>
 <dl>
@@ -41,7 +41,7 @@ description: "supermin-helper – Reconstruct initramfs from supermin appliance.
 <dt>checksum</dt>
 <dd>Output a checksum. </dd>
 <p> This prints a checksum which only changes when one of the input files changes. </p>
-<p> You can use this in order to cache the output of a previous run of this program: computing the checksum is much quicker than building an appliance, and you only need to invalidate the cache (and consequently rebuild the appliance) when the checksum changes. Note that the host_cpu and the <font SIZE="-1">UID</font> of the current user are included in the checksum.</dl>
+<p> You can use this in order to cache the output of a previous run of this program: computing the checksum is much quicker than building an appliance, and you only need to invalidate the cache (and consequently rebuild the appliance) when the checksum changes. Note that the host_cpu and the UID of the current user are included in the checksum.</dl>
 </dl>
 <dl>
 <dd></dd></dl>
@@ -78,7 +78,7 @@ description: "supermin-helper – Reconstruct initramfs from supermin appliance.
 <p>supermin-helper ≥ 4.1.4 supports gzip-compressed input cpio image files. <tt>&quot;hostfiles&quot;</tt> cannot be compressed. </p>
 <p> Compressing input files saves space, but can make supermin-helper run fractionally slower.</p>
 <h2>Speed</h2>
-<p>In libguestfs, on a mid-range Intel-based <font SIZE="-1">PC,</font> we reconstruct the initramfs using this script in around 1/5th of a second (assuming a &#8220;hot cache&#8221; &#8211; it&#8217;s rather slower when run the first time on a cold cache). </p>
+<p>In libguestfs, on a mid-range Intel-based PC, we reconstruct the initramfs using this script in around 1/5th of a second (assuming a &#8220;hot cache&#8221; &#8211; it&#8217;s rather slower when run the first time on a cold cache). </p>
 <p> Some tips to improve performance:</p>
 <dl>
 <dt>&bull;</dt>
@@ -87,11 +87,11 @@ description: "supermin-helper – Reconstruct initramfs from supermin appliance.
 <dd>Minimize the appliance, removing as much extraneous junk as possible.</dd></dl>
 <h2>Environment Variables</h2>
 <dl>
-<dt><font SIZE="-1">SUPERMIN_KERNEL</font></dt>
+<dt>SUPERMIN_KERNEL</dt>
 <dd>If this environment variable is set, then automatic selection of the kernel is bypassed and this kernel is used. </dd>
 <p> The environment variable should point to a kernel file, eg. <tt>&quot;/boot/vmlinuz-3.0.x86_64&quot;</tt> </p>
 <p> The corresponding module path is guessed from the kernel name, but you can override that by setting <tt>&quot;SUPERMIN_MODULES&quot;</tt>.</p>
-<dt><font SIZE="-1">SUPERMIN_MODULES</font></dt>
+<dt>SUPERMIN_MODULES</dt>
 <dd>If <tt>&quot;SUPERMIN_KERNEL&quot;</tt> and <tt>&quot;SUPERMIN_MODULES&quot;</tt> are both set, then automatic selection of the kernel is bypassed and the kernel and module path are set to these values. </dd>
 <p> The environment variable should point to a module directory, eg. <tt>&quot;/lib/modules/3.0.x86_64/&quot;</tt> </p>
 <p> This has no effect if <tt>&quot;SUPERMIN_KERNEL&quot;</tt> is not set.</dl>
@@ -101,7 +101,7 @@ description: "supermin-helper – Reconstruct initramfs from supermin appliance.
 <p>Richard W.M. Jones &lt;rjones @ redhat . com&gt;</p>
 <h2>Copyright</h2>
 <p>(C) Copyright 2009-2013 Red Hat Inc., &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/supermin">http://people.redhat.com/~rjones/supermin</a>&gt;. </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>
 </p>

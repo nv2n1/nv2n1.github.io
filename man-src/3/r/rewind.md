@@ -42,7 +42,7 @@ int fsetpos(FILE *stream, const fpos_t *pos);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>fseek</code>(), <code>ftell</code>(), <code>rewind</code>(),<br />
+<td> <code>fseek</code>(), <code>ftell</code>(), <code>rewind</code>(),<br/>
  <code>fgetpos</code>(), <code>fsetpos</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

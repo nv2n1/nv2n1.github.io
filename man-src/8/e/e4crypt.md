@@ -9,9 +9,9 @@ description: "e4crypt – ext4 file system encryption utility"
 
 <p>e4crypt &#8211; ext4 file system encryption utility</p>
 <h2>Synopsis</h2>
-<p><code>e4crypt add_key -S </code>[<code> -k </code><i>keyring</i> ] [<code>-v</code>] [<code>-q</code>] [<code> -p </code><i>pad</i> ] [ <i>path</i> &#8230; ]<br />
- <code>e4crypt new_session</code><br />
- <code>e4crypt get_policy </code><i>path</i> &#8230;<br />
+<p><code>e4crypt add_key -S </code>[<code> -k </code><i>keyring</i> ] [<code>-v</code>] [<code>-q</code>] [<code> -p </code><i>pad</i> ] [ <i>path</i> &#8230; ]<br/>
+ <code>e4crypt new_session</code><br/>
+ <code>e4crypt get_policy </code><i>path</i> &#8230;<br/>
  <code>e4crypt set_policy </code>[<code> -p </code><i>pad</i> ] <i>policy path</i> &#8230;</p>
 <h2>Description</h2>
 <p><code>e4crypt</code> performs encryption management for ext4 file systems.</p>

@@ -27,27 +27,27 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <p> Another way that performance can be hit is by running a pattern that has a very large search tree against a string that will never match. Nested unlimited repeats in a pattern are a common example. PCRE2 provides some protection against this: see the <code>pcre2_set_match_limit()</code> function in the <code>pcre2api</code> page. There is a similar function called <code>pcre2_set_depth_limit()</code> that can be used to restrict the amount of memory that is used.</p>
 <h2>User Documentation</h2>
 <p>The user documentation for PCRE2 comprises a number of different sections. In the &quot;man&quot; format, each of these is a separate &quot;man page&quot;. In the HTML format, each is a separate page, linked from the index page. In the plain text format, the descriptions of the <code>pcre2grep</code> and <code>pcre2test</code> programs are in files called <code>pcre2grep.txt</code> and <code>pcre2test.txt</code>, respectively. The remaining sections, except for the <code>pcre2demo</code> section (which is a program listing), and the short pages for individual functions, are concatenated in <code>pcre2.txt</code>, for ease of searching. The sections are as follows: </p>
-<p>&nbsp;<wbr>&nbsp;pcre2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;this document<br />
-&nbsp;<wbr>&nbsp;pcre2-config&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;show PCRE2 installation configuration information<br />
-&nbsp;<wbr>&nbsp;pcre2api&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of PCRE2&#8217;s native C API<br />
-&nbsp;<wbr>&nbsp;pcre2build&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;building PCRE2<br />
-&nbsp;<wbr>&nbsp;pcre2callout&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the pattern callout feature<br />
-&nbsp;<wbr>&nbsp;pcre2compat&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of Perl compatibility<br />
-&nbsp;<wbr>&nbsp;pcre2convert&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of pattern conversion functions<br />
-&nbsp;<wbr>&nbsp;pcre2demo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a demonstration C program that uses PCRE2<br />
-&nbsp;<wbr>&nbsp;pcre2grep&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;description of the&nbsp;<code>pcre2grep</code>&nbsp;command&nbsp;(8-bit only)<br />
-&nbsp;<wbr>&nbsp;pcre2jit&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of just-in-time optimization support<br />
-&nbsp;<wbr>&nbsp;pcre2limits&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of size and other limits<br />
-&nbsp;<wbr>&nbsp;pcre2matching&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of the two matching algorithms<br />
-&nbsp;<wbr>&nbsp;pcre2partial&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the partial matching facility<br />
-&nbsp;<wbr>&nbsp;pcre2pattern&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;syntax and semantics of supported regular<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;expression patterns<br />
-&nbsp;<wbr>&nbsp;pcre2perform&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of performance issues<br />
-&nbsp;<wbr>&nbsp;pcre2posix&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the POSIX-compatible C API for the 8-bit library<br />
-&nbsp;<wbr>&nbsp;pcre2sample&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of the pcre2demo program<br />
-&nbsp;<wbr>&nbsp;pcre2serialize&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of pattern serialization<br />
-&nbsp;<wbr>&nbsp;pcre2syntax&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;quick syntax reference<br />
-&nbsp;<wbr>&nbsp;pcre2test&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;description of the&nbsp;<code>pcre2test</code>&nbsp;command<br />
+<p>&nbsp;<wbr>&nbsp;pcre2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;this document<br/>
+&nbsp;<wbr>&nbsp;pcre2-config&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;show PCRE2 installation configuration information<br/>
+&nbsp;<wbr>&nbsp;pcre2api&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of PCRE2&#8217;s native C API<br/>
+&nbsp;<wbr>&nbsp;pcre2build&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;building PCRE2<br/>
+&nbsp;<wbr>&nbsp;pcre2callout&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the pattern callout feature<br/>
+&nbsp;<wbr>&nbsp;pcre2compat&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of Perl compatibility<br/>
+&nbsp;<wbr>&nbsp;pcre2convert&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of pattern conversion functions<br/>
+&nbsp;<wbr>&nbsp;pcre2demo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a demonstration C program that uses PCRE2<br/>
+&nbsp;<wbr>&nbsp;pcre2grep&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;description of the&nbsp;<code>pcre2grep</code>&nbsp;command&nbsp;(8-bit only)<br/>
+&nbsp;<wbr>&nbsp;pcre2jit&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of just-in-time optimization support<br/>
+&nbsp;<wbr>&nbsp;pcre2limits&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of size and other limits<br/>
+&nbsp;<wbr>&nbsp;pcre2matching&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of the two matching algorithms<br/>
+&nbsp;<wbr>&nbsp;pcre2partial&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of the partial matching facility<br/>
+&nbsp;<wbr>&nbsp;pcre2pattern&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;syntax and semantics of supported regular<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;expression patterns<br/>
+&nbsp;<wbr>&nbsp;pcre2perform&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of performance issues<br/>
+&nbsp;<wbr>&nbsp;pcre2posix&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the POSIX-compatible C API for the 8-bit library<br/>
+&nbsp;<wbr>&nbsp;pcre2sample&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of the pcre2demo program<br/>
+&nbsp;<wbr>&nbsp;pcre2serialize&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;details of pattern serialization<br/>
+&nbsp;<wbr>&nbsp;pcre2syntax&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;quick syntax reference<br/>
+&nbsp;<wbr>&nbsp;pcre2test&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;description of the&nbsp;<code>pcre2test</code>&nbsp;command<br/>
 &nbsp;<wbr>&nbsp;pcre2unicode&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;discussion of Unicode and UTF support </p>
 <p> In the &quot;man&quot; and HTML formats, there is also a short page for each C library function, listing its arguments and results.</p>
 <h2>Author</h2>

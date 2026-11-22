@@ -13,8 +13,8 @@ description: "xcscope.el – xemacs cscope lisp support package"
 <p> xcscope is a lisp package for use in integrating cscope functionality into xemacs</p>
 <h2>INSTALLATION</h2>
 <p>&nbsp;<wbr>Installation steps: </p>
-<p>&nbsp;<wbr>0.&nbsp;<wbr>(It is, of course, assumed that cscope is already properly<br />
-&nbsp;<wbr>installed on the current system.)<br />
+<p>&nbsp;<wbr>0.&nbsp;<wbr>(It is, of course, assumed that cscope is already properly<br/>
+&nbsp;<wbr>installed on the current system.)<br/>
 &nbsp;<wbr>1. Ensure that the location of cscope-indexer is located in your path </p>
 <p>&nbsp;<wbr>2. Ensure that the location of xcscope.el is in the xemacs module load path </p>
 <p>&nbsp;<wbr>3. Edit your&nbsp;<wbr>~/.emacs file to add the line: <code>(require</code><i>&#8216;xcscope)</i> </p>
@@ -37,10 +37,10 @@ description: "xcscope.el – xemacs cscope lisp support package"
 <p>&nbsp;<wbr>6. Restart&nbsp;<wbr>(X)Emacs.&nbsp;<wbr>&nbsp;<wbr>That&#8217;s it. </p>
 <h2>USING THIS MODULE</h2>
 <h3>* Basic usage:</h3>
-<p>&nbsp;<wbr>If all of your C/C++/lex/yacc source files are in the same<br />
-&nbsp;<wbr>directory, you can just start using this module.&nbsp;<wbr>&nbsp;<wbr>If your files are<br />
+<p>&nbsp;<wbr>If all of your C/C++/lex/yacc source files are in the same<br/>
+&nbsp;<wbr>directory, you can just start using this module.&nbsp;<wbr>&nbsp;<wbr>If your files are<br/>
 &nbsp;<wbr>spread out over multiple directories, see&nbsp;<wbr>&quot;Advanced usage&quot;, below. </p>
-<p>&nbsp;<wbr>Just edit a source file, and use the pull-down or pop-up&nbsp;<wbr>(button 3)<br />
+<p>&nbsp;<wbr>Just edit a source file, and use the pull-down or pop-up&nbsp;<wbr>(button 3)<br/>
 &nbsp;<wbr>menus to select one of: </p>
 <pre>
         Find symbol
@@ -141,8 +141,8 @@ description: "xcscope.el – xemacs cscope lisp support package"
         rm -f cscope.out          # not always necessary
         cscope -b
 </pre>
-<p>&nbsp;<wbr>3. If the source files are scattered in many different, unrelated<br />
-&nbsp;<wbr>places, you&#8217;ll have to manually create cscope.files and put a<br />
+<p>&nbsp;<wbr>3. If the source files are scattered in many different, unrelated<br/>
+&nbsp;<wbr>places, you&#8217;ll have to manually create cscope.files and put a<br/>
 &nbsp;<wbr>list of all pathnames into it.&nbsp;<wbr>&nbsp;<wbr>Then build the database using: </p>
 <pre>
         cd some-directory         # wherever cscope.files exists
@@ -169,30 +169,30 @@ description: "xcscope.el – xemacs cscope lisp support package"
         t
 </pre>
 <p> Here, <code>DBDIR </code> is a directory (or a file) that contains a cscope database. If DBDIR is a directory, then it is expected that the cscope database, if present, has the filename given by the variable, `cscope-database-file&#8217;; if DBDIR is a file, then DBDIR is the path name to a cscope database file (which does not have to be the same as that given by `cscope-database-file&#8217;). If only DBDIR is specified, then that cscope database will be searched without any additional cscope command-line options. If OPTIONS is given, then OPTIONS is a list of strings, where each string is a separate cscope command-line option. </p>
-<p>&nbsp;<wbr>In the case of&nbsp;<wbr>&quot;(&nbsp;<wbr>t&nbsp;<wbr>)&quot;, this specifies that the search is to use the<br />
-&nbsp;<wbr>normal hierarchical database search.&nbsp;<wbr>&nbsp;<wbr>This option is used to<br />
-&nbsp;<wbr>explicitly search using the hierarchical database search either before<br />
+<p>&nbsp;<wbr>In the case of&nbsp;<wbr>&quot;(&nbsp;<wbr>t&nbsp;<wbr>)&quot;, this specifies that the search is to use the<br/>
+&nbsp;<wbr>normal hierarchical database search.&nbsp;<wbr>&nbsp;<wbr>This option is used to<br/>
+&nbsp;<wbr>explicitly search using the hierarchical database search either before<br/>
 &nbsp;<wbr>or after other cscope database directories. </p>
-<p>&nbsp;<wbr>If&nbsp;<wbr>&quot;t&quot;&nbsp;<wbr>is specified&nbsp;<wbr>(not inside a list), this tells the searching<br />
-&nbsp;<wbr>mechanism to stop searching if a match has been found&nbsp;<wbr>(at the point<br />
-&nbsp;<wbr>where&nbsp;<wbr>&quot;t&quot;&nbsp;<wbr>is encountered).&nbsp;<wbr>&nbsp;<wbr>This is useful for those projects that<br />
-&nbsp;<wbr>consist of many subprojects.&nbsp;<wbr>&nbsp;<wbr>You can specify the most-used<br />
-&nbsp;<wbr>subprojects first, followed by a&nbsp;<wbr>&quot;t&quot;, and then followed by a master<br />
-&nbsp;<wbr>cscope database directory that covers all subprojects.&nbsp;<wbr>&nbsp;<wbr>This will<br />
-&nbsp;<wbr>cause the most-used subprojects to be searched first&nbsp;<wbr>(hopefully<br />
-&nbsp;<wbr>quickly), and the search will then stop if a match was found.&nbsp;<wbr>&nbsp;<wbr>If not,<br />
+<p>&nbsp;<wbr>If&nbsp;<wbr>&quot;t&quot;&nbsp;<wbr>is specified&nbsp;<wbr>(not inside a list), this tells the searching<br/>
+&nbsp;<wbr>mechanism to stop searching if a match has been found&nbsp;<wbr>(at the point<br/>
+&nbsp;<wbr>where&nbsp;<wbr>&quot;t&quot;&nbsp;<wbr>is encountered).&nbsp;<wbr>&nbsp;<wbr>This is useful for those projects that<br/>
+&nbsp;<wbr>consist of many subprojects.&nbsp;<wbr>&nbsp;<wbr>You can specify the most-used<br/>
+&nbsp;<wbr>subprojects first, followed by a&nbsp;<wbr>&quot;t&quot;, and then followed by a master<br/>
+&nbsp;<wbr>cscope database directory that covers all subprojects.&nbsp;<wbr>&nbsp;<wbr>This will<br/>
+&nbsp;<wbr>cause the most-used subprojects to be searched first&nbsp;<wbr>(hopefully<br/>
+&nbsp;<wbr>quickly), and the search will then stop if a match was found.&nbsp;<wbr>&nbsp;<wbr>If not,<br/>
 &nbsp;<wbr>the search will continue using the master cscope database directory. </p>
-<p>&nbsp;<wbr>Here,&nbsp;<wbr>`cscope-database-regexps&#8217;&nbsp;<wbr>is generally not used, as the normal<br />
-&nbsp;<wbr>hierarchical database search is sufficient for placing and/or locating<br />
-&nbsp;<wbr>the cscope databases.&nbsp;<wbr>&nbsp;<wbr>However, there may be cases where it makes<br />
-&nbsp;<wbr>sense to place the cscope databases away from where the source files<br />
-&nbsp;<wbr>are kept;&nbsp;<wbr>in this case, this variable is used to determine the<br />
+<p>&nbsp;<wbr>Here,&nbsp;<wbr>`cscope-database-regexps&#8217;&nbsp;<wbr>is generally not used, as the normal<br/>
+&nbsp;<wbr>hierarchical database search is sufficient for placing and/or locating<br/>
+&nbsp;<wbr>the cscope databases.&nbsp;<wbr>&nbsp;<wbr>However, there may be cases where it makes<br/>
+&nbsp;<wbr>sense to place the cscope databases away from where the source files<br/>
+&nbsp;<wbr>are kept;&nbsp;<wbr>in this case, this variable is used to determine the<br/>
 &nbsp;<wbr>mapping. </p>
-<p>&nbsp;<wbr>This module searches for the cscope databases by first using this<br />
-&nbsp;<wbr>variable;&nbsp;<wbr>if a database location cannot be found using this variable,<br />
-&nbsp;<wbr>then the current directory is searched, then the parent, then the<br />
-&nbsp;<wbr>parent&#8217;s parent, until a cscope database directory is found, or the<br />
-&nbsp;<wbr>root directory is reached.&nbsp;<wbr>&nbsp;<wbr>If the root directory is reached, the<br />
+<p>&nbsp;<wbr>This module searches for the cscope databases by first using this<br/>
+&nbsp;<wbr>variable;&nbsp;<wbr>if a database location cannot be found using this variable,<br/>
+&nbsp;<wbr>then the current directory is searched, then the parent, then the<br/>
+&nbsp;<wbr>parent&#8217;s parent, until a cscope database directory is found, or the<br/>
+&nbsp;<wbr>root directory is reached.&nbsp;<wbr>&nbsp;<wbr>If the root directory is reached, the<br/>
 &nbsp;<wbr>current directory will be used. </p>
 <p> A cscope database directory is one in which EITHER a cscope database file (e.g., &quot;cscope.out&quot;) OR a cscope file list (e.g., &quot;cscope.files&quot;) exists. If only &quot;cscope.files&quot; exists, the corresponding &quot;cscope.out&quot; will be automatically created by cscope when a search is done. By default, the cscope database file is called &quot;cscope.out&quot;, but this can be changed (on a global basis) via the variable, `cscope-database-file&#8217;. There is limited support for cscope databases that are named differently than that given by `cscope-database-file&#8217;, using the variable, `cscope-database-regexps&#8217;. </p>
 <p> Here is an example of `cscope-database-regexps&#8217;: </p>

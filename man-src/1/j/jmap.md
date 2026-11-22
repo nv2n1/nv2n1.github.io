@@ -47,39 +47,39 @@ description: "jmap – Prints shared object memory maps or heap memory details f
 <dd> <p> When no option is used, the <code>jmap</code> command prints shared object mappings. For each shared object loaded in the target JVM, the start address, size of the mapping, and the full path of the shared object file are printed. This behavior is similar to the Oracle Solaris <code>pmap</code> utility. </p>
  </dd>
 <dt>-dump:[live,] format=b, file=<i>filename</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Dumps the Java heap in <code>hprof</code> binary format to <code>filename</code>. The <code>live</code> suboption is optional, but when specified, only the active objects in the heap are dumped. To browse the heap dump, you can use the jhat(1) command to read the generated file. </p>
  </dd>
 <dt>-finalizerinfo</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints information about objects that are awaiting finalization. </p>
  </dd>
 <dt>-heap</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints a heap summary of the garbage collection used, the head configuration, and generation-wise heap usage. In addition, the number and size of interned Strings are printed. </p>
  </dd>
 <dt>-histo[:live]</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints a histogram of the heap. For each Java class, the number of objects, memory size in bytes, and the fully qualified class names are printed. The JVM internal class names are printed with an asterisk (*) prefix. If the <code>live</code> suboption is specified, then only active objects are counted. </p>
  </dd>
 <dt>-clstats</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints class loader wise statistics of Java heap. For each class loader, its name, how active it is, address, parent class loader, and the number and size of classes it has loaded are printed. </p>
  </dd>
 <dt>-F</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Force. Use this option with the <code>jmap -dump</code> or <code>jmap -histo</code> option when the pid does not respond. The <code>live</code> suboption is not supported in this mode. </p>
  </dd>
 <dt>-h</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints a help message. </p>
  </dd>
 <dt>-help</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints a help message. </p>
  </dd>
 <dt>-J <i>flag</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Passes <code>flag</code> to the Java Virtual Machine where the <code>jmap</code> command is running. </p>
  </dd></dl>
 <h2>SEE ALSO</h2>
@@ -91,6 +91,6 @@ description: "jmap – Prints shared object memory maps or heap memory details f
 <dd> <p> <a href="/docs/linux/man/1-jps/">jps</a>(1) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> jsadebugd(1) <br />
+<dd> <p> jsadebugd(1) <br/>
  </p>
  </dd></dl>

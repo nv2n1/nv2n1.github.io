@@ -40,11 +40,11 @@ description: "std::__profile –"
 <p> template&lt;typename _Key , typename _Tp , typename _Compare , typename _Allocator &gt; bool <code>operator!=</code> (const <code>map</code>&lt; _Key, _Tp, _Compare, _Allocator &gt; &amp;__lhs, const <code>map</code>&lt; _Key, _Tp, _Compare, _Allocator &gt; &amp;__rhs) </p>
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator!=</code> (const <code>list</code>&lt; _Tp, _Alloc &gt; &amp;__lhs, const <code>list</code>&lt; _Tp, _Alloc &gt; &amp;__rhs) </p>
 <p> template&lt;size_t _Nb&gt; <code>bitset</code>&lt; _Nb &gt; <code>operator&amp;</code> (const <code>bitset</code>&lt; _Nb &gt; &amp;__x, const <code>bitset</code>&lt; _Nb &gt; &amp;__y) noexcept </p>
-<p> template&lt;typename _Iterator , typename _Sequence &gt; __iterator_tracker&lt; _Iterator,<br />
+<p> template&lt;typename _Iterator , typename _Sequence &gt; __iterator_tracker&lt; _Iterator,<br/>
  _Sequence &gt; <code>operator+</code> (typename __iterator_tracker&lt; _Iterator, _Sequence &gt;::difference_type __n, const __iterator_tracker&lt; _Iterator, _Sequence &gt; &amp;__i)&quot; </p>
-<p> template&lt;typename _IteratorL , typename _IteratorR , typename _Sequence &gt; __iterator_tracker&lt; _IteratorL,<br />
+<p> template&lt;typename _IteratorL , typename _IteratorR , typename _Sequence &gt; __iterator_tracker&lt; _IteratorL,<br/>
  _Sequence &gt;::difference_type <code>operator-</code> (const __iterator_tracker&lt; _IteratorL, _Sequence &gt; &amp;__lhs, const __iterator_tracker&lt; _IteratorR, _Sequence &gt; &amp;__rhs)&quot; </p>
-<p> template&lt;typename _Iterator , typename _Sequence &gt; __iterator_tracker&lt; _Iterator,<br />
+<p> template&lt;typename _Iterator , typename _Sequence &gt; __iterator_tracker&lt; _Iterator,<br/>
  _Sequence &gt;::difference_type <code>operator-</code> (const __iterator_tracker&lt; _Iterator, _Sequence &gt; &amp;__lhs, const __iterator_tracker&lt; _Iterator, _Sequence &gt; &amp;__rhs)&quot; </p>
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator&lt;</code> (const <code>forward_list</code>&lt; _Tp, _Alloc &gt; &amp;__lx, const <code>forward_list</code>&lt; _Tp, _Alloc &gt; &amp;__ly) </p>
 <p> template&lt;typename _IteratorL , typename _IteratorR , typename _Sequence &gt; bool <code>operator&lt;</code> (const __iterator_tracker&lt; _IteratorL, _Sequence &gt; &amp;__lhs, const __iterator_tracker&lt; _IteratorR, _Sequence &gt; &amp;__rhs) </p>
@@ -56,7 +56,7 @@ description: "std::__profile –"
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator&lt;</code> (const vector&lt; _Tp, _Alloc &gt; &amp;__lhs, const vector&lt; _Tp, _Alloc &gt; &amp;__rhs) </p>
 <p> template&lt;typename _Key , typename _Tp , typename _Compare , typename _Allocator &gt; bool <code>operator&lt;</code> (const <code>map</code>&lt; _Key, _Tp, _Compare, _Allocator &gt; &amp;__lhs, const <code>map</code>&lt; _Key, _Tp, _Compare, _Allocator &gt; &amp;__rhs) </p>
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator&lt;</code> (const <code>list</code>&lt; _Tp, _Alloc &gt; &amp;__lhs, const <code>list</code>&lt; _Tp, _Alloc &gt; &amp;__rhs) </p>
-<p> template&lt;typename _CharT , typename _Traits , size_t _Nb&gt; <code>std::basic_ostream</code>&lt; _CharT,<br />
+<p> template&lt;typename _CharT , typename _Traits , size_t _Nb&gt; <code>std::basic_ostream</code>&lt; _CharT,<br/>
  _Traits &gt; &amp; <code>operator&lt;&lt;</code> (<code>std::basic_ostream</code>&lt; _CharT, _Traits &gt; &amp;__os, const <code>bitset</code>&lt; _Nb &gt; &amp;__x)&quot; </p>
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator&lt;=</code> (const <code>forward_list</code>&lt; _Tp, _Alloc &gt; &amp;__lx, const <code>forward_list</code>&lt; _Tp, _Alloc &gt; &amp;__ly) </p>
 <p> template&lt;typename _IteratorL , typename _IteratorR , typename _Sequence &gt; bool <code>operator&lt;=</code> (const __iterator_tracker&lt; _IteratorL, _Sequence &gt; &amp;__lhs, const __iterator_tracker&lt; _IteratorR, _Sequence &gt; &amp;__rhs) </p>
@@ -102,7 +102,7 @@ description: "std::__profile –"
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator&gt;=</code> (const vector&lt; _Tp, _Alloc &gt; &amp;__lhs, const vector&lt; _Tp, _Alloc &gt; &amp;__rhs) </p>
 <p> template&lt;typename _Key , typename _Tp , typename _Compare , typename _Allocator &gt; bool <code>operator&gt;=</code> (const <code>map</code>&lt; _Key, _Tp, _Compare, _Allocator &gt; &amp;__lhs, const <code>map</code>&lt; _Key, _Tp, _Compare, _Allocator &gt; &amp;__rhs) </p>
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator&gt;=</code> (const <code>list</code>&lt; _Tp, _Alloc &gt; &amp;__lhs, const <code>list</code>&lt; _Tp, _Alloc &gt; &amp;__rhs) </p>
-<p> template&lt;typename _CharT , typename _Traits , size_t _Nb&gt; <code>std::basic_istream</code>&lt; _CharT,<br />
+<p> template&lt;typename _CharT , typename _Traits , size_t _Nb&gt; <code>std::basic_istream</code>&lt; _CharT,<br/>
  _Traits &gt; &amp; <code>operator&gt;&gt;</code> (<code>std::basic_istream</code>&lt; _CharT, _Traits &gt; &amp;__is, <code>bitset</code>&lt; _Nb &gt; &amp;__x)&quot; </p>
 <p> template&lt;size_t _Nb&gt; <code>bitset</code>&lt; _Nb &gt; <code>operator^</code> (const <code>bitset</code>&lt; _Nb &gt; &amp;__x, const <code>bitset</code>&lt; _Nb &gt; &amp;__y) noexcept </p>
 <p> template&lt;size_t _Nb&gt; <code>bitset</code>&lt; _Nb &gt; <code>operator|</code> (const <code>bitset</code>&lt; _Nb &gt; &amp;__x, const <code>bitset</code>&lt; _Nb &gt; &amp;__y) noexcept </p>

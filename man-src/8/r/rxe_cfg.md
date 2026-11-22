@@ -9,13 +9,13 @@ description: "rxe_cfg – rxe configuration tool for RXE (Soft RoCE)"
 
 <p>rxe_cfg &#8211; rxe configuration tool for RXE (Soft RoCE)</p>
 <h2>Synopsis</h2>
-<p><code>rxe_cfg [status]</code><br />
- <code>rxe_cfg start</code> [<code>-p</code> <i>proto</i>]<br />
- <code>rxe_cfg stop</code><br />
- <code>rxe_cfg persistent</code><br />
- <code>rxe_cfg add</code> [<code>-n</code>] <i>ethN</i><br />
- <code>rxe_cfg remove</code> [<code>-n</code>] <i>ethN</i>|<i>rxeN</i><br />
- <code>rxe_cfg crc enable</code>|<code>disable</code><br />
+<p><code>rxe_cfg [status]</code><br/>
+ <code>rxe_cfg start</code> [<code>-p</code> <i>proto</i>]<br/>
+ <code>rxe_cfg stop</code><br/>
+ <code>rxe_cfg persistent</code><br/>
+ <code>rxe_cfg add</code> [<code>-n</code>] <i>ethN</i><br/>
+ <code>rxe_cfg remove</code> [<code>-n</code>] <i>ethN</i>|<i>rxeN</i><br/>
+ <code>rxe_cfg crc enable</code>|<code>disable</code><br/>
  <code>rxe_cfg</code> <code>mtu</code> [<code>-f</code>] [<i>rxeN</i>] <i>mtu_size</i></p>
 <h2>Description</h2>
 <p>rxe_cfg is the configuration tool for the RXE software implementation of the RoCE protocol. The RXE kernel modules are loaded, configured, reconfigured and unloaded via the various rxe_cfg command options, documented below. </p>

@@ -15,13 +15,13 @@ description: "ql/experimental/varianceoption/varianceoption.hpp – Variance opt
 #include &lt;ql/option.hpp&gt;
 #include &lt;ql/position.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>VarianceOption</code><br />
- <i>Variance option. </i><br />
- class <code>arguments</code><br />
- <i>Arguments for forward fair-variance calculation </i><br />
- class <code>results</code><br />
- <i>Results from variance-option calculation </i><br />
- class <code>engine</code><br />
+<p>class <code>VarianceOption</code><br/>
+ <i>Variance option. </i><br/>
+ class <code>arguments</code><br/>
+ <i>Arguments for forward fair-variance calculation </i><br/>
+ class <code>results</code><br/>
+ <i>Results from variance-option calculation </i><br/>
+ class <code>engine</code><br/>
  <i>base class for variance-option engines </i></p>
 <h2>Detailed Description</h2>
 <p>Variance option.</p>

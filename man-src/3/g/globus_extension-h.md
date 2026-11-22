@@ -10,8 +10,8 @@ description: "globus_extension.h –"
 <p>globus_extension.h &#8211; </p>
 <p> Globus Extension Modules.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;globus_common_include.h&#8217;<br />
- #include &#8216;globus_module.h&#8217;<br />
+<p>#include &#8216;globus_common_include.h&#8217;<br/>
+ #include &#8216;globus_module.h&#8217;<br/>
  #include &#8216;globus_hashtable.h&#8217; </p>
 <h3>Macros</h3>
 <p>#define <code>GlobusExtensionDefineModule</code>(name) <code>globus_module_descriptor_t</code> name##_module </p>

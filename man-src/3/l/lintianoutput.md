@@ -31,7 +31,7 @@ description: "Lintian::Output – Lintian messaging handling"
 <dt>color</dt>
 <dd>Can take the values &#8220;never&#8221;, &#8220;always&#8221;, &#8220;auto&#8221; or &#8220;html&#8221;. </dd>
 <p> Whether to colorize tags based on their severity. The default is &#8220;never&#8221;, which never uses color. &#8220;always&#8221; will always use color, &#8220;auto&#8221; will use color only if the output is going to a terminal. </p>
-<p> &#8220;html&#8221; will output <font SIZE="-1">HTML</font> &lt;span&gt; tags with a color style attribute (instead of <font SIZE="-1">ANSI</font> color escape sequences).</p>
+<p> &#8220;html&#8221; will output HTML &lt;span&gt; tags with a color style attribute (instead of ANSI color escape sequences).</p>
 <dt>colors</dt>
 <dd>
 </dd><dt>debug</dt>
@@ -77,9 +77,9 @@ description: "Lintian::Output – Lintian messaging handling"
 <dt>&quot;issued_tag($tag_name)&quot;</dt>
 <dd>Indicate that the named tag has been issued. Returns a boolean value indicating whether the tag had previously been issued by the object.</dd>
 <dt>&quot;string($lead, @args)&quot;</dt>
-<dd><font SIZE="-1">TODO:</font> Is this part of the public interface?</dd></dl>
+<dd>TODO: Is this part of the public interface?</dd></dl>
 <h2>Instance Methods For Subclassing</h2>
-<p>The following methods are only intended for subclassing and are only available as instance methods. The methods mentioned in &#8220;<font SIZE="-1">CLASS/INSTANCE METHODS&#8221;</font> usually only check whether they should do anything at all (according to the values of verbosity_level and debug) and then call one of the following methods to do the actual printing. Almost all of them finally call <code>_print()</code> to do that. This convoluted scheme is necessary to be able to use the methods above as class methods and still make the behaviour overridable in subclasses.</p>
+<p>The following methods are only intended for subclassing and are only available as instance methods. The methods mentioned in &#8220;CLASS/INSTANCE METHODS&#8221; usually only check whether they should do anything at all (according to the values of verbosity_level and debug) and then call one of the following methods to do the actual printing. Almost all of them finally call <code>_print()</code> to do that. This convoluted scheme is necessary to be able to use the methods above as class methods and still make the behaviour overridable in subclasses.</p>
 <dl COMPACT>
 <dt>&quot;_message(@args)&quot;</dt>
 <dd>Called by <code>msg()</code>, <code>v_msg()</code>, and <code>debug_msg()</code> to print the message.</dd>
@@ -97,8 +97,8 @@ description: "Lintian::Output – Lintian messaging handling"
 <p>Lintian::Output exports nothing by default, but the following export tags are available:</p>
 <dl COMPACT>
 <dt>:messages</dt>
-<dd>Exports all the methods in &#8220;<font SIZE="-1">CLASS/INSTANCE METHODS&#8221;</font></dd>
+<dd>Exports all the methods in &#8220;CLASS/INSTANCE METHODS&#8221;</dd>
 <dt>:util</dt>
-<dd>Exports all the methods in &#8220;<font SIZE="-1">CLASS METHODS&#8221;</font></dd></dl>
+<dd>Exports all the methods in &#8220;CLASS METHODS&#8221;</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-lintian/">lintian</a></code>(1)</p>

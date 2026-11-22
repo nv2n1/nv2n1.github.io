@@ -21,8 +21,8 @@ description: "qrun – run a pbs batch job"
 <dd>Specifies the host within the cluster on which the job(s) are to be run. The <i> argument is the name of a host that is a member of the cluster of hosts managed by the server. If the option is not specified, the server will select the &quot;worst possible&quot; host on which to execute the job.</dd></dl>
 <p> </i></p>
 <h2>Operands</h2>
-<p>The qrun command accepts one or more <i> operands of the form:<br />
- </i><code><br />
+<p>The qrun command accepts one or more <i> operands of the form:<br/>
+ </i><code><br/>
  </code></p>
 <h2>Standard Error</h2>
 <p>The qrun command will write a diagnostic message to standard error for each error occurrence.</p>

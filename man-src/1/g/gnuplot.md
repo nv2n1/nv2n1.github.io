@@ -18,7 +18,7 @@ description: "gnuplot – an interactive plotting program"
 <p> Plots any number of functions, built up of C operators, C math library functions, and some things C doesn&#8217;t have like **, sgn(), etc. </p>
 <p> User-defined constants and functions. </p>
 <p> All computations performed in the complex domain. Just the real part is plotted by default, but functions like imag() and abs() and arg() are available to override this. </p>
-<p> Many presentation styles for plotting user data from files, including surface-fitting, error bars, boxplots, histograms, heat maps, and simple manipulation of image data. There is an on-line demo collection at<br />
+<p> Many presentation styles for plotting user data from files, including surface-fitting, error bars, boxplots, histograms, heat maps, and simple manipulation of image data. There is an on-line demo collection at<br/>
  <i><a rel="nofollow" href="http://gnuplot.info/demo">http://gnuplot.info/demo</a></i> </p>
 <p> Nonlinear least-squares fitting. </p>
 <p> 2D and 3D plots with mouse-controlled zooming, rotation, and hypertext. </p>

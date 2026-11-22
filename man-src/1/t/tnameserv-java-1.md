@@ -196,8 +196,8 @@ static void main(String args[])
 <pre>
 <code>public class NameClientList {</code>
 </pre>
-<p>public<br />
-static void main(String args[])<br />
+<p>public<br/>
+static void main(String args[])<br/>
 {</p>
 <pre>
 <code>        try {</code>
@@ -236,7 +236,7 @@ static void main(String args[])<br />
 <pre>
 <code>            Binding bindings[] = bl.value;</code>
 </pre>
-<p>if (bindings.length == 0)<br />
+<p>if (bindings.length == 0)<br/>
     return;</p>
 <p> The remainder of the code loops through the bindings and prints outs the names. </p>
 <p>for (int i = 0; i &lt; bindings.length; i++) {</p>

@@ -69,7 +69,7 @@ description: "samusrgrp – add or remove users from groups in SAM database file
 <h2>KNOWN BUGS</h2>
 <p> If the username includes international (non-ASCII) characters the program will not (usually) find it. Use the RID number instead. </p>
 <h2>SEE ALSO</h2>
-<p> <code>chntpwd, reged, sampasswd</code> <br />
+<p> <code>chntpwd, reged, sampasswd</code> <br/>
  You will find more information available on how this program works, in the text files <i>/usr/share/doc/chntpw/README.txt</i> and <i>/usr/share/doc/chntpw/MANUAL.txt</i> </p>
 <p> More documentation is available at the upstream&#8217;s author site: <code><a rel="nofollow" href="http://pogostick.net/~pnh/ntpasswd/">http://pogostick.net/~pnh/ntpasswd/</a></code> </p>
 <h2>AUTHOR</h2>

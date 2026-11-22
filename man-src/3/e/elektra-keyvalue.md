@@ -34,9 +34,9 @@ description: "Key :: Value Manipulation Methods –"
 <h3>const char* keyComment (const Key * key)Return a pointer to the real internal key comment.</h3>
 <p> This is a much more efficient version of <code>keyGetComment()</code> and you should use it if you are responsible enough to not mess up things. You are not allowed to change anything in the memory region the returned pointer points to. </p>
 <p> <code>keyComment()</code> returns &#8221; when there is no keyComment. The reason is </p>
-<p>key = keyNew(0);<br />
-keySetComment(key,&#8221;);<br />
-keyComment(key); // you would expect &#8221; here<br />
+<p>key = keyNew(0);<br/>
+keySetComment(key,&#8221;);<br/>
+keyComment(key); // you would expect &#8221; here<br/>
 keyDel(key);</p>
 <p> See <code>keySetComment()</code> for more information on comments. </p>
 <p> <code>Note:</code></p>
@@ -62,16 +62,16 @@ keyDel(key);</p>
 <p> For string values see <code>keyGetString()</code> and <code>keyIsString()</code>. </p>
 <p> When the returnedBinary is to small to hold the data (its maximum size is given by maxSize), the returnedBinary will not be changed and -1 is returned. </p>
 <p> <code>Example:</code>.RS 4 </p>
-<p>Key *key = keyNew(&#8216;user/keyname&#8217;, KEY_TYPE, KEY_TYPE_BINARY, KEY_END);<br />
-char buffer[300];<br />
-if (keyGetBinary(key, buffer, sizeof(buffer)) == -1) {<br />
-    // handle error<br />
+<p>Key *key = keyNew(&#8216;user/keyname&#8217;, KEY_TYPE, KEY_TYPE_BINARY, KEY_END);<br/>
+char buffer[300];<br/>
+if (keyGetBinary(key, buffer, sizeof(buffer)) == -1) {<br/>
+    // handle error<br/>
 }</p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the object to gather the value from<br />
- <i>returnedBinary</i> pre-allocated memory to store a copy of the key value<br />
+</dt><dd> <i>key</i> the object to gather the value from<br/>
+ <i>returnedBinary</i> pre-allocated memory to store a copy of the key value<br/>
  <i>maxSize</i> number of bytes of pre-allocated memory in returnedBinary</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -94,8 +94,8 @@ if (keyGetBinary(key, buffer, sizeof(buffer)) == -1) {<br />
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the key object to work with<br />
- <i>returnedComment</i> pre-allocated memory to copy the comments to<br />
+</dt><dd> <i>key</i> the key object to work with<br/>
+ <i>returnedComment</i> pre-allocated memory to copy the comments to<br/>
  <i>maxSize</i> number of bytes that will fit returnedComment</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -112,9 +112,9 @@ if (keyGetBinary(key, buffer, sizeof(buffer)) == -1) {<br />
 <p> Use this method to know to size for allocated memory to retrieve a key comment. </p>
 <p> See <code>keySetComment()</code> for more information on comments. </p>
 <p> For an empty key name you need one byte to store the ending NULL. For that reason 1 is returned. </p>
-<p>char *buffer;<br />
-buffer = malloc(keyGetCommentSize(key));<br />
-// use this buffer to store the comment<br />
+<p>char *buffer;<br/>
+buffer = malloc(keyGetCommentSize(key));<br/>
+// use this buffer to store the comment<br/>
 // pass keyGetCommentSize (key) for maxSize</p>
 <p> <code>Parameters:</code></p>
 <dl>
@@ -134,18 +134,18 @@ buffer = malloc(keyGetCommentSize(key));<br />
 <p> When there is no value inside the string, 1 will be returned and the returnedString will be empty &#8221; to avoid programming errors that old strings are shown to the user. </p>
 <p> For binary values see <code>keyGetBinary()</code> and <code>keyIsBinary()</code>. </p>
 <p> <code>Example:</code>.RS 4 </p>
-<p>Key *key = keyNew(&#8216;user/keyname&#8217;, KEY_END);<br />
-char buffer[300];<br />
-if (keyGetString(key, buffer, sizeof(buffer)) == -1) {<br />
-    // handle error<br />
-} else {<br />
-        printf (&#8216;buffer: %s, buffer);<br />
+<p>Key *key = keyNew(&#8216;user/keyname&#8217;, KEY_END);<br/>
+char buffer[300];<br/>
+if (keyGetString(key, buffer, sizeof(buffer)) == -1) {<br/>
+    // handle error<br/>
+} else {<br/>
+        printf (&#8216;buffer: %s, buffer);<br/>
 }</p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the object to gather the value from<br />
- <i>returnedString</i> pre-allocated memory to store a copy of the key value<br />
+</dt><dd> <i>key</i> the object to gather the value from<br/>
+ <i>returnedString</i> pre-allocated memory to store a copy of the key value<br/>
  <i>maxSize</i> number of bytes of allocated memory in returnedString</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -196,8 +196,8 @@ buffer = malloc (keyGetValueSize (key));
  </dd></dl>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>key</i> the object on which to set the value <br />
- <i>newBinary</i> is a pointer to any binary data or NULL to free the previous set data <br />
+<dd> <p> <i>key</i> the object on which to set the value <br/>
+ <i>newBinary</i> is a pointer to any binary data or NULL to free the previous set data <br/>
  <i>dataSize</i> number of bytes to copy from newBinary </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -217,7 +217,7 @@ buffer = malloc (keyGetValueSize (key));
 <p> A key comment is like a configuration file comment. See <code>keySetComment()</code> for more information. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>key</i> the key object to work with <br />
+<dd> <p> <i>key</i> the key object to work with <br/>
  <i>newComment</i> the comment, that can be freed after this call. </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>
@@ -236,7 +236,7 @@ buffer = malloc (keyGetValueSize (key));
 <p> The type will be set to KEY_TYPE_STRING. When the type of the key is already a string type it won&#8217;t be changed. </p>
 <p> <code>Parameters:</code> </p>
 <dl>
-<dd> <p> <i>key</i> the key to set the string value <br />
+<dd> <p> <i>key</i> the key to set the string value <br/>
  <i>newStringValue</i> NULL-terminated text string to be set as key&#8217;s value </p>
  </dd></dl>
 <p> <code>Returns:</code> </p>

@@ -54,7 +54,7 @@ description: "makeglossaries – Calls makeindex/xindy for LaTeX documents using
 <h2>REQUIRES</h2>
 <p> Perl, Getopt::Std, and makeindex or xindy (depending on glossaries package options).</p>
 <h2>LICENSE</h2>
-<p> This is free software distributed under the LaTeX Project Public License. There is <font SIZE="-1">NO WARRANTY.</font> See &lt;<a rel="nofollow" href="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</a>&gt; for details.</p>
+<p> This is free software distributed under the LaTeX Project Public License. There is NO WARRANTY. See &lt;<a rel="nofollow" href="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</a>&gt; for details.</p>
 <h2>AUTHOR</h2>
 <p> Nicola L. C. Talbot, &lt;<a rel="nofollow" href="http://www.dickimaw-books.com/">http://www.dickimaw-books.com/</a>&gt;</p>
 <h2>RECOMMENDED READING</h2>

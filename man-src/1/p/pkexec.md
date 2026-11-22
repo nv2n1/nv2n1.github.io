@@ -24,7 +24,7 @@ description: "pkexec – Execute a command as another user"
 <p> Executing a program as another user is a privileged operation. By default the required authorization (See the section called &#8220;REQUIRED AUTHORIZATIONS&#8221;) requires administrator authentication. In addition, the authentication dialog presented to the user will display the full path to the program to be executed so the user is aware of what will happen: </p>
 <dl>
 <dt>
-</dt><dd> [IMAGE]<font SIZE="-2">[1]</font> </dd>
+</dt><dd> [IMAGE][1] </dd>
 <dl>
 <dt>
 </dt><dd>
@@ -89,37 +89,37 @@ description: "pkexec – Execute a command as another user"
 <p> and drop it in the /usr/share/polkit-1/actions directory under a suitable name (e.g. matching the namespace of the action). Note that in addition to specifying the program, the authentication message, description, icon and defaults can be specified. Note that occurences of the strings $(user), $(program) and $(command_line) in the message will be replaced with respectively the user (of the form &quot;Real Name (username)&quot; or just &quot;username&quot; if there is no real name for the username), the binary to execute (a fully-qualified path, e.g. &quot;/usr/bin/pk-example-frobnicate&quot;) and the command-line, e.g. &quot;pk-example-frobnicate foo bar&quot;. For example, for the action defined above, the following authentication dialog will be shown: </p>
 <dl>
 <dt>
-</dt><dd> [IMAGE]<font SIZE="-2">[2]</font> </dd>
+</dt><dd> [IMAGE][2] </dd>
 <dl>
 <dt>
 </dt><dd>
-+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+<br />
-|                     Authenticate                     [X] |<br />
-+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+<br />
-|                                                          |<br />
-|  [Icon]  Authentication is required to run the PolicyKit |<br />
-|          example program Frobnicate                      |<br />
-|                                                          |<br />
-|          An application is attempting to perform an      |<br />
-|          action that requires privileges. Authentication |<br />
-|          is required to perform this action.             |<br />
-|                                                          |<br />
-|          Password: [__________________________________]  |<br />
-|                                                          |<br />
-| [V] Details:                                             |<br />
-|  Command: /usr/bin/pk-example-frobnicate                 |<br />
-|  Run As:  Super User (root)                              |<br />
-|  Action:  org.fd.pk.example.pkexec.run-frobnicate        |<br />
-|  Vendor:  Examples for the PolicyKit Project             |<br />
-|                                                          |<br />
-|                                  [Cancel] [Authenticate] |<br />
++&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+<br/>
+|                     Authenticate                     [X] |<br/>
++&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+<br/>
+|                                                          |<br/>
+|  [Icon]  Authentication is required to run the PolicyKit |<br/>
+|          example program Frobnicate                      |<br/>
+|                                                          |<br/>
+|          An application is attempting to perform an      |<br/>
+|          action that requires privileges. Authentication |<br/>
+|          is required to perform this action.             |<br/>
+|                                                          |<br/>
+|          Password: [__________________________________]  |<br/>
+|                                                          |<br/>
+| [V] Details:                                             |<br/>
+|  Command: /usr/bin/pk-example-frobnicate                 |<br/>
+|  Run As:  Super User (root)                              |<br/>
+|  Action:  org.fd.pk.example.pkexec.run-frobnicate        |<br/>
+|  Vendor:  Examples for the PolicyKit Project             |<br/>
+|                                                          |<br/>
+|                                  [Cancel] [Authenticate] |<br/>
 +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+
 </dd></dl>
 </dl>
 <p> If the user is using the da_DK locale, the dialog looks like this: </p>
 <dl>
 <dt>
-</dt><dd> [IMAGE]<font SIZE="-2">[3]</font> </dd>
+</dt><dd> [IMAGE][3] </dd>
 <dl>
 <dt>
 </dt><dd>

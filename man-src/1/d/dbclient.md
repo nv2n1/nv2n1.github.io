@@ -88,8 +88,8 @@ description: "dbclient – lightweight SSH client"
 <h2>NOTES</h2>
 <p> If compiled with zlib support and if the server supports it, dbclient will always use compression. </p>
 <h2>AUTHOR</h2>
-<p> Matt Johnston (matt [at] ucc.asn.au).<br />
- Mihnea Stoenescu wrote initial Dropbear client support<br />
+<p> Matt Johnston (matt [at] ucc.asn.au).<br/>
+ Mihnea Stoenescu wrote initial Dropbear client support<br/>
  Gerrit Pape (pape [at] smarden.org) wrote this manual page.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-dropbear/">dropbear</a>(8), <a href="/docs/linux/man/1-dropbearkey/">dropbearkey</a>(1) </p>

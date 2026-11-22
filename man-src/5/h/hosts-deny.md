@@ -139,13 +139,13 @@ description: "hosts_access – format of host access control files"
 <p> /etc/hosts.deny: ALL: ALL </p>
 <p> This denies all service to all hosts, unless they are permitted access by entries in the allow file. </p>
 <p> The explicitly authorized hosts are listed in the allow file. For example: </p>
-<p> /etc/hosts.allow: ALL: LOCAL @some_netgroup<br />
+<p> /etc/hosts.allow: ALL: LOCAL @some_netgroup<br/>
  ALL: .foobar.edu EXCEPT terminalserver.foobar.edu </p>
 <p> The first rule permits access from hosts in the local domain (no `.&#8217; in the host name) and from members of the <i>some_netgroup</i> netgroup. The second rule permits access from all hosts in the <i>foobar.edu</i> domain (notice the leading dot), with the exception of <i>terminalserver.foobar.edu</i>.</p>
 <h2>Mostly Open</h2>
 <p>Here, access is granted by default; only explicitly specified hosts are refused service. </p>
 <p> The default policy (access granted) makes the allow file redundant so that it can be omitted. The explicitly non-authorized hosts are listed in the deny file. For example: </p>
-<p> /etc/hosts.deny: ALL: some.host.name, .some.domain<br />
+<p> /etc/hosts.deny: ALL: some.host.name, .some.domain<br/>
  ALL EXCEPT in.fingerd: other.host.name, .other.domain </p>
 <p> The first rule denies some hosts and domains all services; the second rule still permits finger requests from other hosts and domains.</p>
 <h2>Booby Traps</h2>

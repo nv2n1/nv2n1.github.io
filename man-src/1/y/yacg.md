@@ -10,7 +10,7 @@ description: "yacg – Yet Another Configuration Generator"
 
 <p> yacg &#8211; Yet Another Configuration Generator </p>
 <h2>SYNOPSIS</h2>
-<p> <code>yacg</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] <i></i><font SIZE="-1"><i>PATH</i></font><i></i> </p>
+<p> <code>yacg</code> [<i></i><i>OPTIONS</i><i></i>] <i></i><i>PATH</i><i></i> </p>
 <p> <code>yacg</code> <code>&#8211;help</code>|<code>&#8211;manual</code>|<code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>yacg</code> reads the given high-level configuration file, carefully validates it and generates ready-to-use (configuration) files. </p>
@@ -37,33 +37,33 @@ description: "yacg – Yet Another Configuration Generator"
 </dl>
 <dl>
 </dl>
-<dt><code>&#8211;dump-format</code> <i></i><font SIZE="-1"><i>NAME</i></font><i></i></dt>
+<dt><code>&#8211;dump-format</code> <i></i><i>NAME</i><i></i></dt>
 <dd> set the output format for the <code>&#8211;dump</code> option; possible values: <tt>&quot;Config::General&quot;</tt> (default) and <tt>&quot;JSON&quot;</tt></dd>
 <dt><code>&#8211;help</code>, <code>-h</code>, <code>-?</code></dt>
 <dd> show some help</dd>
-<dt><code>&#8211;home</code>, <code>-H</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;home</code>, <code>-H</code> <i></i><i>PATH</i><i></i></dt>
 <dd> set the home directory where the <tt>&quot;cfg&quot;</tt>, <tt>&quot;lib&quot;</tt> and <tt>&quot;tpl&quot;</tt> sub-directories may be located</dd>
-<dt><code>&#8211;include</code>, <code>-I</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;include</code>, <code>-I</code> <i></i><i>PATH</i><i></i></dt>
 <dd> add the given directory to the list of paths that will be looked at to find configuration files, Config::Generator modules or templates; this option can be given multiple times</dd>
-<dt><code>&#8211;manifest</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;manifest</code> <i></i><i>PATH</i><i></i></dt>
 <dd> store the list of files that <code>yacg</code> handled in the given &#8220;manifest&#8221; file</dd>
 <dt><code>&#8211;manual</code>, <code>-m</code></dt>
 <dd> show this manual</dd>
-<dt><code>&#8211;merge</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i>=<i></i><font SIZE="-1"><i>VALUE</i></font><i></i></dt>
+<dt><code>&#8211;merge</code> <i></i><i>PATH</i><i></i>=<i></i><i>VALUE</i><i></i></dt>
 <dd> hack the loaded configuration to merge the given value at the given path</dd>
 <dt><code>&#8211;noaction</code>, <code>-n</code></dt>
 <dd> print what would be done but do not actually touch the generated files</dd>
 <dt><code>&#8211;quiet</code>, <code>-q</code></dt>
 <dd> set the verbosity level to 0</dd>
-<dt><code>&#8211;rndfile</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;rndfile</code> <i></i><i>PATH</i><i></i></dt>
 <dd> set the path of the file that will be used as seed to generate random data</dd>
-<dt><code>&#8211;rootdir</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;rootdir</code> <i></i><i>PATH</i><i></i></dt>
 <dd> set the path specifying where the generated files will be put</dd>
-<dt><code>&#8211;set</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i>=<i></i><font SIZE="-1"><i>VALUE</i></font><i></i></dt>
+<dt><code>&#8211;set</code> <i></i><i>PATH</i><i></i>=<i></i><i>VALUE</i><i></i></dt>
 <dd> hack the loaded configuration to set the given value at the given path</dd>
-<dt><code>&#8211;spec</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;spec</code> <i></i><i>PATH</i><i></i></dt>
 <dd> store the list of files that <code>yacg</code> handled in the given &#8220;spec&#8221; file (same format as rpm&#8217;s spec <tt>%files</tt>)</dd>
-<dt><code>&#8211;unset</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;unset</code> <i></i><i>PATH</i><i></i></dt>
 <dd> hack the loaded configuration to unset the given path</dd>
 <dt><code>&#8211;verbose</code>, <code>-v</code></dt>
 <dd> increase the verbosity level (default: 1)</dd>
@@ -73,4 +73,4 @@ description: "yacg – Yet Another Configuration Generator"
 <p> Config-Generator.</p>
 <h2>AUTHOR</h2>
 <p> Lionel Cons &lt;<a rel="nofollow" href="http://cern.ch/lionel.cons">http://cern.ch/lionel.cons</a>&gt; </p>
-<p> Copyright (C) <font SIZE="-1">CERN 2013-2016</font> </p>
+<p> Copyright (C) CERN 2013-2016 </p>

@@ -10,9 +10,9 @@ description: "getgid, getegid – get group identity"
 
 <p> getgid, getegid &#8211; get group identity </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;unistd.h&gt;</code><br />
+<p> <code>#include &lt;unistd.h&gt;</code><br/>
  <code>#include &lt;sys/types.h&gt;</code> </p>
-<p> <code>gid_t getgid(void);</code><br />
+<p> <code>gid_t getgid(void);</code><br/>
  <code>gid_t getegid(void);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>getgid</code>() returns the real group ID of the calling process. </p>

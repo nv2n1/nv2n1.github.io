@@ -14,18 +14,18 @@ description: "masq – Shorewall6 Masquerade/SNAT definition file"
 <h2>Description</h2>
 <dd>Use this file to define Source NAT (SNAT). Requires Shorewall 4.5.14 or later.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  The entries in this file are order-sensitive. The first entry that matches a particular connection will be the one that is used. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
- If you have more than one ISP link, adding entries to this file will <code>not</code> force connections to go out through a particular link. You must use entries in m[blue]<code>shorewall6-rtrules</code>m[]<font SIZE="-2">[1]</font>(5) or PREROUTING entries in m[blue]<code>shorewall-tcrules</code>m[]<font SIZE="-2">[2]</font>(5) to do that.  The columns in the file are as follows. <code>INTERFACE:DEST</code> &#8211; {[<code>+</code>]<i>interfacelist</i>|[<code>:</code>[<i>dest-address</i>[<code>,</code><i>dest-address</i>]&#8230;[<i>exclusion</i>]]|?COMMENT}</dd>
+<dd> <code>Warning</code> <br/>
+ If you have more than one ISP link, adding entries to this file will <code>not</code> force connections to go out through a particular link. You must use entries in m[blue]<code>shorewall6-rtrules</code>m[][1](5) or PREROUTING entries in m[blue]<code>shorewall-tcrules</code>m[][2](5) to do that.  The columns in the file are as follows. <code>INTERFACE:DEST</code> &#8211; {[<code>+</code>]<i>interfacelist</i>|[<code>:</code>[<i>dest-address</i>[<code>,</code><i>dest-address</i>]&#8230;[<i>exclusion</i>]]|?COMMENT}</dd>
 <dl>
-<dd>Outgoing <i>interfacelist</i>. This may be a comma-separated list of interface names. This is usually your internet interface. Each interface must match an entry in m[blue]<code>shorewall6-interfaces</code>m[]<font SIZE="-2">[3]</font>(5). Shorewall allows loose matches to wildcard entries in m[blue]<code>shorewall6-interfaces</code>m[]<font SIZE="-2">[3]</font>(5). For example, ppp0 in this file will match a m[blue]<code>shorewall6-interfaces</code>m[]<font SIZE="-2">[3]</font>(5) entry that defines ppp+. Where m[blue]<code>more that one internet provider share a single interface</code>m[]<font SIZE="-2">[4]</font>, the provider is specified by including the provider name or number in parentheses:</dd>
+<dd>Outgoing <i>interfacelist</i>. This may be a comma-separated list of interface names. This is usually your internet interface. Each interface must match an entry in m[blue]<code>shorewall6-interfaces</code>m[][3](5). Shorewall allows loose matches to wildcard entries in m[blue]<code>shorewall6-interfaces</code>m[][3](5). For example, ppp0 in this file will match a m[blue]<code>shorewall6-interfaces</code>m[][3](5) entry that defines ppp+. Where m[blue]<code>more that one internet provider share a single interface</code>m[][4], the provider is specified by including the provider name or number in parentheses:</dd>
 <dl>
 <dd>
 <pre> eth0(Avvanta)</pre>
 </dd></dl>
-<p> In that case, you will want to specify the interface&#8217;s address for that provider in the ADDRESS column. The interface may be qualified by adding the character &quot;:&quot; followed by a comma-separated list of destination host or subnet addresses to indicate that you only want to change the source IP address for packets being sent to those particular destinations. Exclusion is allowed (see m[blue]<code>shorewall6-exclusion</code>m[]<font SIZE="-2">[5]</font>(5)) as are ipset names preceded by a plus sign &#8216;+&#8217;. Comments may be attached to Netfilter rules generated from entries in this file through the use of ?COMMENT lines. These lines begin with ?COMMENT; the remainder of the line is treated as a comment which is attached to subsequent rules until another ?COMMENT line is found or until the end of the file is reached. To stop adding comments to rules, use a line containing only ?COMMENT. Beginning with Shorewall 4.6.0, a new syntax is also accepted. With the exception of the leading &#8216;+&#8217;, the interfacelist and qualifiers may appear within the parentheses of <code>INLINE</code>(&#8230;). Example:</p>
+<p> In that case, you will want to specify the interface&#8217;s address for that provider in the ADDRESS column. The interface may be qualified by adding the character &quot;:&quot; followed by a comma-separated list of destination host or subnet addresses to indicate that you only want to change the source IP address for packets being sent to those particular destinations. Exclusion is allowed (see m[blue]<code>shorewall6-exclusion</code>m[][5](5)) as are ipset names preceded by a plus sign &#8216;+&#8217;. Comments may be attached to Netfilter rules generated from entries in this file through the use of ?COMMENT lines. These lines begin with ?COMMENT; the remainder of the line is treated as a comment which is attached to subsequent rules until another ?COMMENT line is found or until the end of the file is reached. To stop adding comments to rules, use a line containing only ?COMMENT. Beginning with Shorewall 4.6.0, a new syntax is also accepted. With the exception of the leading &#8216;+&#8217;, the interfacelist and qualifiers may appear within the parentheses of <code>INLINE</code>(&#8230;). Example:</p>
 <dl>
 <dd>
 <pre> +INLINE(eth0)</pre>
@@ -111,16 +111,16 @@ description: "masq – Shorewall6 Masquerade/SNAT definition file"
 <dl>
 <dd>#program named upnpd</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
+<dd> <code>Important</code> <br/>
  The ability to specify a program name was removed from Netfilter in kernel version 2.6.14.  <code>SWITCH &#8211; [!]</code><i>switch-name</i><code>[={0|1}]</code></dd>
 <dl>
 <dd>Added in Shorewall 4.5.1 and allows enabling and disabling the rule without requiring <code>shorewall restart</code>. The rule is enabled if the value stored in /proc/net/nf_condition/<i>switch-name</i> is 1. The rule is disabled if that file contains 0 (the default). If &#8216;!&#8217; is supplied, the test is inverted such that the rule is enabled if the file contains 0. Within the <i>switch-name</i>, &#8216;@0&#8217; and &#8216;@{0}&#8217; are replaced by the name of the chain to which the rule is a added. The <i>switch-name</i> (after &#8216;@&#8230;&#8217; expansion) must begin with a letter and be composed of letters, decimal digits, underscores or hyphens. Switch names must be 30 characters or less in length. Switches are normally <code>off</code>. To turn a switch <code>on</code>:</dd>
 <dl>
-<dd><code>echo 1 &gt;<br />
+<dd><code>echo 1 &gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/proc/net/nf_condition/</code><i>switch-name</i></dd></dl>
 <p> To turn it <code>off</code> again:</p>
 <dl>
-<dd><code>echo 0 &gt;<br />
+<dd><code>echo 0 &gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/proc/net/nf_condition/</code><i>switch-name</i></dd></dl>
 <p> Switch settings are retained over <code>shorewall restart</code>. Beginning with Shorewall 4.5.10, when the <i>switch-name</i> is followed by <code>=0</code> or <code>=1</code>, then the switch is initialized to off or on respectively by the <code>start</code> command. Other commands do not affect the switch setting.</dl>
 <p> <code>ORIGDEST</code> &#8211; [<code>&#8211;</code>|<i>address</i>[,<i>address</i>]&#8230;[<i>exclusion</i>]|<i>exclusion</i>]</p>
@@ -150,7 +150,7 @@ description: "masq – Shorewall6 Masquerade/SNAT definition file"
  INLINE(sit1) ::/0 2001:470:a:227::1 ; -m statistic --mode random --probability 0.50
  sit1 ::/0 2001:470:a:227::2 </pre>
 </dd></dl>
-<p> If INLINE_MATCHES=Yes in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[6]</font>(5), then these rules may be specified as follows: </p>
+<p> If INLINE_MATCHES=Yes in m[blue]<code>shorewall6.conf</code>m[][6](5), then these rules may be specified as follows: </p>
 <dl>
 <dd>
 <pre>/etc/shorewall/masq:

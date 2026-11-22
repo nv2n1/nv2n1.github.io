@@ -23,7 +23,7 @@ description: "ptksh – Perl/Tk script to provide a graphical user interface for
 <p> ptksh is <code>*not*</code> a full symbolic debugger. To debug perl/Tk programs at a low level use the more powerful perl debugger. (Just enter &#8220;O tk&#8221; on debuggers command line to start the Tk eventloop.)</p>
 <h2>FEATURES</h2>
 <h3>History</h3>
-<p> Press &lt;Up&gt; (the Up Arrow) in the perlwish window to obtain a gui-based history list. Press &lt;Enter&gt; on any history line to enter it into the perlwish window. Then hit return. So, for example, repeat last command is &lt;Up&gt;&lt;Enter&gt;&lt;Enter&gt;. You can quit the history window with &lt;Escape&gt;. <font SIZE="-1">NOTE:</font> history is only saved if exit is &#8220;graceful&#8221; (i.e. by the &#8220;exit&#8221; command from the console or by quitting all main windows&#8212;NOT by interrupt).</p>
+<p> Press &lt;Up&gt; (the Up Arrow) in the perlwish window to obtain a gui-based history list. Press &lt;Enter&gt; on any history line to enter it into the perlwish window. Then hit return. So, for example, repeat last command is &lt;Up&gt;&lt;Enter&gt;&lt;Enter&gt;. You can quit the history window with &lt;Escape&gt;. NOTE: history is only saved if exit is &#8220;graceful&#8221; (i.e. by the &#8220;exit&#8221; command from the console or by quitting all main windows&#8212;NOT by interrupt).</p>
 <h3>Debugging Support</h3>
 <p> ptksh provides some convenience function to make browsing in perl/Tk widget easier:</p>
 <dl>
@@ -70,7 +70,7 @@ description: "ptksh – Perl/Tk script to provide a graphical user interface for
 <h2>SEE ALSO</h2>
 <p> Tk perldebug</p>
 <h2>VERSION</h2>
-<p> <font SIZE="-1">VERSION 2.03</font></p>
+<p> VERSION 2.03</p>
 <h2>AUTHORS</h2>
 <p> Mike Beller &lt;beller [at] penvision.com&gt;, Achim Bohnet &lt;ach [at] mpe.mpg.de&gt; </p>
 <p> Copyright (c) 1996 &#8211; 1998 Achim Bohnet and Mike Beller. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. </p>

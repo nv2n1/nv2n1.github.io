@@ -13,14 +13,14 @@ description: "mtkbabel – Tool for managing GPS data loggers based on the MTK c
 <p> <code>mtkbabel </code>[<code>-abcdEfhilmopRrstvwx</code>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>mtkbabel</code> is a command line program to operate GPS data loggers based on the MediaTek MTK chip. It was tested on the i-Blue 747, Qstarz BT-Q1000 and on the Holux M-241, it should work also with other GPS devices based on the same chip. </p>
-<p> The main features are:<br />
-&nbsp;<wbr>&#8211; Command line interface<br />
-&nbsp;<wbr>&#8211; Save data log in GPX and raw binary format<br />
-&nbsp;<wbr>&#8211; If required retrieve all the data, also the old one being overlapped<br />
-&nbsp;<wbr>&#8211; Change logging criteria: time, distance, speed<br />
-&nbsp;<wbr>&#8211; Change log format<br />
-&nbsp;<wbr>&#8211; START/STOP logging<br />
-&nbsp;<wbr>&#8211; Set OVERLAP or STOP method on memory full<br />
+<p> The main features are:<br/>
+&nbsp;<wbr>&#8211; Command line interface<br/>
+&nbsp;<wbr>&#8211; Save data log in GPX and raw binary format<br/>
+&nbsp;<wbr>&#8211; If required retrieve all the data, also the old one being overlapped<br/>
+&nbsp;<wbr>&#8211; Change logging criteria: time, distance, speed<br/>
+&nbsp;<wbr>&#8211; Change log format<br/>
+&nbsp;<wbr>&#8211; START/STOP logging<br/>
+&nbsp;<wbr>&#8211; Set OVERLAP or STOP method on memory full<br/>
 &nbsp;<wbr>&#8211; Erase the internal memory</p>
 <h2>USAGE</h2>
 <p> In order to use mtkbabel, please follow these instructions: </p>

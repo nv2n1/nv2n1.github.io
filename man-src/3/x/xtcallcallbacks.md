@@ -31,6 +31,6 @@ description: "XtCallCallbacks, XtCallCallbackList, XtHasCallbacks – process ca
 <p> If <i>callbacks</i> is not NULL, <code>XtCallCallbackList</code> calls each of the callback procedures in the list, passing client data and <i>call_data</i>. The <i>callbacks</i> parameter must specify the contents of a widget or object resource declared with representation type <code>XtRCallback</code>. </p>
 <p> The <code>XtHasCallbacks</code> function first checks to see if the widget has a callback list identified by callback_name. If the callback list does not exist, <code>XtHasCallbacks</code> returns <code>XtCallbackNoList</code>. If the callback list exists but is empty, it returns <code>XtCallbackHasNone</code>. If the callback list exists and has at least one callback registered, it returns <code>XtCallbackHasSome</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtaddcallback/">XtAddCallback</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtaddcallback/">XtAddCallback</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

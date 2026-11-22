@@ -10,7 +10,7 @@ description: "ctrti2.f –"
 <p>ctrti2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ctrti2</code> (UPLO, DIAG, N, A, LDA, INFO)<br />
+<p>subroutine <code>ctrti2</code> (UPLO, DIAG, N, A, LDA, INFO)<br/>
  <i></i><code>CTRTI2</code> computes the inverse of a triangular matrix (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctrti2 (characterUPLO, characterDIAG, integerN, complex, dimension( lda, * )A, integerLDA, integerINFO)</h3>

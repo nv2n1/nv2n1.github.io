@@ -15,23 +15,23 @@ description: "h5repack – Copy an HDF5 file to a new file with or without compr
 <p> <code>h5repack</code> is a command line tool that applies HDF5 filters to a input file <i>file1</i>, saving the output in a new file, <i>file2</i>. </p>
 <p> <i>&#8216;filter&#8217;</i> is a string with the format <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;list of objects&gt; : &lt;name of filter&gt; = &lt;filter parameters&gt;.</p>
 <p> <i>&lt;list of objects&gt;</i> is a comma separated list of object names meaning apply compression only to those objects. If no object names are specified, the filter is applied to all objects. </p>
-<p> <i>&lt;name of filter&gt;</i> can be:<br />
-&nbsp;<wbr>GZIP, to apply the HDF5 GZIP filter&nbsp;<wbr>(GZIP compression)<br />
-&nbsp;<wbr>SZIP, to apply the HDF5 SZIP filter&nbsp;<wbr>(SZIP compression)<br />
-&nbsp;<wbr>SHUF, to apply the HDF5 shuffle filter<br />
-&nbsp;<wbr>FLET, to apply the HDF5 checksum filter<br />
+<p> <i>&lt;name of filter&gt;</i> can be:<br/>
+&nbsp;<wbr>GZIP, to apply the HDF5 GZIP filter&nbsp;<wbr>(GZIP compression)<br/>
+&nbsp;<wbr>SZIP, to apply the HDF5 SZIP filter&nbsp;<wbr>(SZIP compression)<br/>
+&nbsp;<wbr>SHUF, to apply the HDF5 shuffle filter<br/>
+&nbsp;<wbr>FLET, to apply the HDF5 checksum filter<br/>
 &nbsp;<wbr>NONE, to remove the filter </p>
-<p> <i>&lt;filter parameters&gt;</i> contains the optional compression information:<br />
-&nbsp;<wbr>SHUF&nbsp;<wbr>(no parameter)&nbsp;<wbr><br />
-&nbsp;<wbr>FLET&nbsp;<wbr>(no parameter)&nbsp;<wbr><br />
-&nbsp;<wbr>GZIP=&lt;deflation level&gt;&nbsp;<wbr>from 1-9&nbsp;<wbr><br />
+<p> <i>&lt;filter parameters&gt;</i> contains the optional compression information:<br/>
+&nbsp;<wbr>SHUF&nbsp;<wbr>(no parameter)&nbsp;<wbr><br/>
+&nbsp;<wbr>FLET&nbsp;<wbr>(no parameter)&nbsp;<wbr><br/>
+&nbsp;<wbr>GZIP=&lt;deflation level&gt;&nbsp;<wbr>from 1-9&nbsp;<wbr><br/>
 &nbsp;<wbr>SZIP=&lt;pixels per block,coding&gt;&nbsp;<wbr>(pixels per block is a even number in&nbsp;<wbr> 2-32 and coding method is &#8216;EC&#8217; or &#8216;NN&#8217;) </p>
-<p> <i>&#8216;layout&#8217; is a string with the format</i><br />
+<p> <i>&#8216;layout&#8217; is a string with the format</i><br/>
 &nbsp;<wbr>&lt;list of objects&gt;&nbsp;<wbr>:&nbsp;<wbr>&lt;layout type&gt;&nbsp;<wbr> </p>
 <p> <i>&lt;list of objects&gt;</i> is a comma separated list of object names, meaning that layout information is supplied for those objects. If no object names are specified, the layout is applied to all objects. </p>
-<p> <i>&lt;layout type&gt; </i> can be:<br />
-&nbsp;<wbr>CHUNK, to apply chunking layout&nbsp;<wbr><br />
-&nbsp;<wbr>COMPA, to apply compact layout&nbsp;<wbr><br />
+<p> <i>&lt;layout type&gt; </i> can be:<br/>
+&nbsp;<wbr>CHUNK, to apply chunking layout&nbsp;<wbr><br/>
+&nbsp;<wbr>COMPA, to apply compact layout&nbsp;<wbr><br/>
 &nbsp;<wbr>CONTI, to apply continuous layout&nbsp;<wbr> </p>
 <p> <i>&lt;layout parameters&gt;</i> is present for the chunk case only it is the chunk size of each dimension: <i>&lt;dim_1 x dim_2 x &#8230; dim_n&gt;</i></p>
 <h2>OPTIONS</h2>

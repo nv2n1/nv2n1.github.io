@@ -11,19 +11,19 @@ description: "Globus GSS Assist –"
 <p> Globus GSS Assist &#8211; </p>
 <p> Convenience Functions for GSSAPI.</p>
 <h3>Modules</h3>
-<p> <code>Activation</code><br />
- <i>Module Activation. </i><br />
- <code>Token Transport</code><br />
- <i>Send and Receive Security Tokens. </i><br />
- <code>Credential Management</code><br />
- <i>Acquire Credential. </i><br />
- <code>Security Context Management</code><br />
- <i>Security Context Creation and Use. </i><br />
- <code>GSSAPI Result Status Strings</code><br />
- <i>Display Error Status from a GSSAPI Result. </i><br />
- <code>Gridmap Authorization</code><br />
- <i>Gridmap Authorization and Local User Mapping. </i><br />
- <code>GSI GSS Assist Constants</code><br />
+<p> <code>Activation</code><br/>
+ <i>Module Activation. </i><br/>
+ <code>Token Transport</code><br/>
+ <i>Send and Receive Security Tokens. </i><br/>
+ <code>Credential Management</code><br/>
+ <i>Acquire Credential. </i><br/>
+ <code>Security Context Management</code><br/>
+ <i>Security Context Creation and Use. </i><br/>
+ <code>GSSAPI Result Status Strings</code><br/>
+ <i>Display Error Status from a GSSAPI Result. </i><br/>
+ <code>Gridmap Authorization</code><br/>
+ <i>Gridmap Authorization and Local User Mapping. </i><br/>
+ <code>GSI GSS Assist Constants</code><br/>
  <i>Constant Definitions. </i></p>
 <h2>Detailed Description</h2>
 <p> Convenience Functions for GSSAPI. </p>

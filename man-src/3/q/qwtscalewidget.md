@@ -13,20 +13,20 @@ description: "QwtScaleWidget –"
 <p>#include &lt;qwt_scale_widget.h&gt; </p>
 <p> Inherits QWidget.</p>
 <h3>Public Types</h3>
-<p>enum <code>LayoutFlag</code> { <code>TitleInverted</code> = 1 }<br />
- <i>Layout flags of the title. </i><br />
- typedef QFlags&lt; <code>LayoutFlag</code> &gt; <code>LayoutFlags</code><br />
+<p>enum <code>LayoutFlag</code> { <code>TitleInverted</code> = 1 }<br/>
+ <i>Layout flags of the title. </i><br/>
+ typedef QFlags&lt; <code>LayoutFlag</code> &gt; <code>LayoutFlags</code><br/>
  <i>Layout flags of the title. </i></p>
 <h3>Signals</h3>
-<p>void <code>scaleDivChanged</code> ()<br />
+<p>void <code>scaleDivChanged</code> ()<br/>
  <i>Signal emitted, whenever the scale division changes. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtScaleWidget</code> (QWidget *parent=NULL)<br />
- <i>Create a scale with the position QwtScaleWidget::Left. </i><br />
- <code>QwtScaleWidget</code> (<code>QwtScaleDraw::Alignment</code>, QWidget *parent=NULL)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtScaleWidget</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtScaleWidget</code> (QWidget *parent=NULL)<br/>
+ <i>Create a scale with the position QwtScaleWidget::Left. </i><br/>
+ <code>QwtScaleWidget</code> (<code>QwtScaleDraw::Alignment</code>, QWidget *parent=NULL)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtScaleWidget</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setTitle</code> (const QString &amp;<code>title</code>) </p>
 <p> void <code>setTitle</code> (const <code>QwtText</code> &amp;<code>title</code>) </p>
 <p> <code>QwtText</code> <code>title</code> () const </p>
@@ -35,26 +35,26 @@ description: "QwtScaleWidget –"
 <p> void <code>setBorderDist</code> (int start, int end) </p>
 <p> int <code>startBorderDist</code> () const </p>
 <p> int <code>endBorderDist</code> () const </p>
-<p> void <code>getBorderDistHint</code> (int &amp;start, int &amp;end) const<br />
- <i>Calculate a hint for the border distances. </i><br />
+<p> void <code>getBorderDistHint</code> (int &amp;start, int &amp;end) const<br/>
+ <i>Calculate a hint for the border distances. </i><br/>
  void <code>getMinBorderDist</code> (int &amp;start, int &amp;end) const </p>
 <p> void <code>setMinBorderDist</code> (int start, int end) </p>
-<p> void <code>setMargin</code> (int)<br />
- <i>Specify the margin to the colorBar/base line. </i><br />
+<p> void <code>setMargin</code> (int)<br/>
+ <i>Specify the margin to the colorBar/base line. </i><br/>
  int <code>margin</code> () const </p>
-<p> void <code>setSpacing</code> (int td)<br />
- <i>Specify the distance between color bar, scale and title. </i><br />
+<p> void <code>setSpacing</code> (int td)<br/>
+ <i>Specify the distance between color bar, scale and title. </i><br/>
  int <code>spacing</code> () const </p>
-<p> void <code>setScaleDiv</code> (const <code>QwtScaleDiv</code> &amp;sd)<br />
- <i>Assign a scale division. </i><br />
+<p> void <code>setScaleDiv</code> (const <code>QwtScaleDiv</code> &amp;sd)<br/>
+ <i>Assign a scale division. </i><br/>
  void <code>setTransformation</code> (<code>QwtTransform</code> *) </p>
 <p> void <code>setScaleDraw</code> (<code>QwtScaleDraw</code> *) </p>
 <p> const <code>QwtScaleDraw</code> * <code>scaleDraw</code> () const </p>
 <p> <code>QwtScaleDraw</code> * <code>scaleDraw</code> () </p>
-<p> void <code>setLabelAlignment</code> (Qt::Alignment)<br />
- <i>Change the alignment for the labels. </i><br />
- void <code>setLabelRotation</code> (double rotation)<br />
- <i>Change the rotation for the labels. See </i><code>QwtScaleDraw::setLabelRotation()</code>.<br />
+<p> void <code>setLabelAlignment</code> (Qt::Alignment)<br/>
+ <i>Change the alignment for the labels. </i><br/>
+ void <code>setLabelRotation</code> (double rotation)<br/>
+ <i>Change the rotation for the labels. See </i><code>QwtScaleDraw::setLabelRotation()</code>.<br/>
  void <code>setColorBarEnabled</code> (bool) </p>
 <p> bool <code>isColorBarEnabled</code> () const </p>
 <p> void <code>setColorBarWidth</code> (int) </p>
@@ -64,23 +64,23 @@ description: "QwtScaleWidget –"
 <p> const <code>QwtColorMap</code> * <code>colorMap</code> () const </p>
 <p> virtual QSize <code>sizeHint</code> () const </p>
 <p> virtual QSize <code>minimumSizeHint</code> () const </p>
-<p> int <code>titleHeightForWidth</code> (int width) const<br />
- <i>Find the height of the title for a given width. </i><br />
- int <code>dimForLength</code> (int length, const QFont &amp;scaleFont) const<br />
- <i>Find the minimum dimension for a given length. dim is the height, length the width seen in direction of the title. </i><br />
+<p> int <code>titleHeightForWidth</code> (int width) const<br/>
+ <i>Find the height of the title for a given width. </i><br/>
+ int <code>dimForLength</code> (int length, const QFont &amp;scaleFont) const<br/>
+ <i>Find the minimum dimension for a given length. dim is the height, length the width seen in direction of the title. </i><br/>
  void <code>drawColorBar</code> (QPainter *painter, const QRectF &amp;) const </p>
 <p> void <code>drawTitle</code> (QPainter *painter, <code>QwtScaleDraw::Alignment</code>, const QRectF &amp;rect) const </p>
 <p> void <code>setAlignment</code> (<code>QwtScaleDraw::Alignment</code>) </p>
 <p> <code>QwtScaleDraw::Alignment</code> <code>alignment</code> () const </p>
 <p> QRectF <code>colorBarRect</code> (const QRectF &amp;) const </p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>paintEvent</code> (QPaintEvent *)<br />
- <i>paintEvent </i><br />
+<p>virtual void <code>paintEvent</code> (QPaintEvent *)<br/>
+ <i>paintEvent </i><br/>
  virtual void <code>resizeEvent</code> (QResizeEvent *) </p>
-<p> void <code>draw</code> (QPainter *p) const<br />
- <i>draw the scale </i><br />
- void <code>scaleChange</code> ()<br />
- <i>Notify a change of the scale. </i><br />
+<p> void <code>draw</code> (QPainter *p) const<br/>
+ <i>draw the scale </i><br/>
+ void <code>scaleChange</code> ()<br/>
+ <i>Notify a change of the scale. </i><br/>
  void <code>layoutScale</code> (bool update=true) </p>
 <h2>Detailed Description</h2>
 <p>A Widget which contains a scale. </p>
@@ -102,7 +102,7 @@ description: "QwtScaleWidget –"
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>align</i> Alignment.<br />
+<dd><i>align</i> Alignment.<br/>
  <i>parent</i> Parent widget</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>QwtScaleDraw::Alignment</code> QwtScaleWidget::alignment () const</h3>
@@ -145,7 +145,7 @@ description: "QwtScaleWidget –"
 <p>Find the minimum dimension for a given length. dim is the height, length the width seen in direction of the title. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>length</i> width for horizontal, height for vertical scales<br />
+<dd><i>length</i> width for horizontal, height for vertical scales<br/>
  <i>scaleFont</i> Font of the scale</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -154,7 +154,7 @@ description: "QwtScaleWidget –"
 <p>Draw the color bar of the scale widget </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>rect</i> Bounding rectangle for the color bar</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -163,8 +163,8 @@ description: "QwtScaleWidget –"
 <p>Rotate and paint a title according to its position into a given rectangle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>align</i> Alignment<br />
+<dd><i>painter</i> Painter<br/>
+ <i>align</i> Alignment<br/>
  <i>rect</i> Bounding rectangle</dd></dl>
 <h3>int QwtScaleWidget::endBorderDist () const</h3>
 <p><code>Returns:</code></p>
@@ -177,7 +177,7 @@ description: "QwtScaleWidget –"
 <p>Calculate a hint for the border distances. This member function calculates the distance of the scale&#8217;s endpoints from the widget borders which is required for the mark labels to fit into the widget. The maximum of this distance an the minimum border distance is returned. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>start</i> Return parameter for the border width at the beginning of the scale<br />
+<dd><i>start</i> Return parameter for the border width at the beginning of the scale<br/>
  <i>end</i> Return parameter for the border width at the end of the scale</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
@@ -193,7 +193,7 @@ description: "QwtScaleWidget –"
 <p>Get the minimum value for the distances of the scale&#8217;s endpoints from the widget borders. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>start</i> Return parameter for the border width at the beginning of the scale<br />
+<dd><i>start</i> Return parameter for the border width at the beginning of the scale<br/>
  <i>end</i> Return parameter for the border width at the end of the scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -254,7 +254,7 @@ description: "QwtScaleWidget –"
 <p>Specify distances of the scale&#8217;s endpoints from the widget&#8217;s borders. The actual borders will never be less than minimum border distance. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dist1</i> Left or top Distance<br />
+<dd><i>dist1</i> Left or top Distance<br/>
  <i>dist2</i> Right or bottom distance</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -276,7 +276,7 @@ description: "QwtScaleWidget –"
 <p>Set the color map and value interval, that are used for displaying the color bar. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Value interval<br />
+<dd><i>interval</i> Value interval<br/>
  <i>colorMap</i> Color map</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -298,7 +298,7 @@ description: "QwtScaleWidget –"
 <p>Toggle an layout flag </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>flag</i> Layout flag<br />
+<dd><i>flag</i> Layout flag<br/>
  <i>on</i> true/false</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -315,7 +315,7 @@ description: "QwtScaleWidget –"
 <p>Set a minimum value for the distances of the scale&#8217;s endpoints from the widget borders. This is useful to avoid that the scales are &#8216;jumping&#8217;, when the tick labels or their positions change often. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>start</i> Minimum for the start border<br />
+<dd><i>start</i> Minimum for the start border<br/>
  <i>end</i> Minimum for the end border</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

@@ -10,7 +10,7 @@ description: "dgebak.f –"
 <p>dgebak.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgebak</code> (JOB, SIDE, N, ILO, IHI, SCALE, M, V, LDV, INFO)<br />
+<p>subroutine <code>dgebak</code> (JOB, SIDE, N, ILO, IHI, SCALE, M, V, LDV, INFO)<br/>
  <i></i><code>DGEBAK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgebak (characterJOB, characterSIDE, integerN, integerILO, integerIHI, double precision, dimension( * )SCALE, integerM, double precision, dimension( ldv, * )V, integerLDV, integerINFO)</h3>

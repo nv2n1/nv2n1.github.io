@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-tspi_tpm_pcrextend/"
 description: "Tspi_TPM_PcrExtend – extend a PCR register and optionally write the PCR event log."
 ---
 
-<p>TCG Software Stack Developer&#8217;s Reference<br />
+<p>TCG Software Stack Developer&#8217;s Reference<br/>
  </center></p>
 <h2>Name</h2>
 <p>Tspi_TPM_PcrExtend &#8211; extend a PCR register and optionally write the PCR event log. </p>
@@ -43,11 +43,11 @@ description: "Tspi_TPM_PcrExtend – extend a PCR register and optionally write 
 <h2>Return Codes</h2>
 <p><code>Tspi_TPM_PcrExtend</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dt>TSS_E_INVALID_HANDLE</dt>
 <dd><i>hTPM</i> is not a valid handle. </dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An internal SW error has been detected. </dd>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dt>TSS_E_BAD_PARAMETER</dt>
 <dd>One or more parameters is bad. </dd>
 </dl>
 <h2>Conforming To</h2>

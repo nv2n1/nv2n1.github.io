@@ -73,74 +73,74 @@ void arg_freetable(void **argtable, size_t n)
 <p> Specifying a NULL glossary string causes that option to be omitted from the glossary table.</p>
 <h3>LITERAL COMMAND LINE OPTIONS</h3>
 <p> -x, -y, -z, &#8211;help, &#8211;verbose </p>
-<p>struct arg_lit {<br />
-    struct arg_hdr hdr; /* internal argtable header */<br />
-    int count;          /* number of matching command line options */<br />
+<p>struct arg_lit {<br/>
+    struct arg_hdr hdr; /* internal argtable header */<br/>
+    int count;          /* number of matching command line options */<br/>
 };</p>
 <p> Literal options take no argument values. Upon a successful parse, <i>count</i> is guaranteed to be within the <i>mincount</i> and <i>maxcount</i> limits specified at construction.</p>
 <h3>INTEGER COMMAND LINE OPTIONS</h3>
 <p> -x2, -z 32MB, &#8211;size=734kb, &#8211;hex 0x7, &#8211;binary 0b10011010, &#8211;octal 0o123 </p>
 <p> Argtable accepts command line integers in decimal (eg 123), hexadecimal (eg 0xFF12), octal (eg 0o123) and binary (eg 0b0101110) formats. It also accepts integers that are suffixed by &quot;KB&quot; (x1024), &quot;MB&quot; (x1048576) or &quot;GB&quot; (x1073741824). All characters are case insensitive </p>
-<p>struct arg_int {<br />
-    struct arg_hdr hdr; /* internal argtable header */<br />
-    int count;          /* number of values returned in ival[] */<br />
-    int *ival;          /* array of parsed integer values */<br />
+<p>struct arg_int {<br/>
+    struct arg_hdr hdr; /* internal argtable header */<br/>
+    int count;          /* number of values returned in ival[] */<br/>
+    int *ival;          /* array of parsed integer values */<br/>
 };</p>
 <p> Upon a successful parse, <i>count</i> is guaranteed to be within the <i>mincount</i> and <i>maxcount</i> limits set for the option at construction with the appropriate values store in the <i>ival</i> array. The parser will not accept any values beyond that limit. </p>
 <p> Hint: It is legal to set default values in the <i>ival</i> array prior to calling the <code>arg_parse</code> function. Argtable will not alter <i>ival</i> entries for which no command line argument is received. </p>
 <p> Hint: <i>Untagged</i> numeric arguments are not recommended because GNU getopt mistakes negative values (eg -123) for tagged options (eg -1 -2 -3). <i>Tagged</i> arguments (eg -x -123, &#8211;tag=-123) do not suffer this problem.</p>
 <h3>REAL/DOUBLE COMMAND LINE OPTIONS</h3>
 <p> -x2.234, -y 7e-03, -z-3.3E+6, &#8211;pi=3.1415, &#8211;tolerance 1.0E-6 </p>
-<p>struct arg_dbl {<br />
-    struct arg_hdr hdr; /* internal argtable header */<br />
-    int count;          /* number of values returned in dval[] */<br />
-    double *dval;       /* array of parsed double values */<br />
+<p>struct arg_dbl {<br/>
+    struct arg_hdr hdr; /* internal argtable header */<br/>
+    int count;          /* number of values returned in dval[] */<br/>
+    double *dval;       /* array of parsed double values */<br/>
 };</p>
 <p> Same as <code>arg_int</code> except the parsed values are stored in <i>dval</i> as doubles.</p>
 <h3>STRING COMMAND LINE OPTIONS</h3>
 <p> -Dmacro, -t mytitle, -m &quot;my message string&quot;, &#8211;title=&quot;hello world&quot; </p>
-<p>struct arg_str {<br />
-    struct arg_hdr hdr; /* internal argtable header */<br />
-    int count;          /* number of strings returned in sval[] */<br />
-    const char **sval;  /* array of pointers to parsed argument strings */<br />
+<p>struct arg_str {<br/>
+    struct arg_hdr hdr; /* internal argtable header */<br/>
+    int count;          /* number of strings returned in sval[] */<br/>
+    const char **sval;  /* array of pointers to parsed argument strings */<br/>
 };</p>
 <p> Same as <code>arg_int</code> except pointers to the parsed strings are returned in <i>sval</i> rather than a separate copy of the string. Indeed, these pointers actually reference the original string buffers stored in argv[], so their contents should not be altered. However, it is legal to initialise the string pointers in the <i>sval</i> array to reference user-supplied default strings prior to calling arg_parse. Argtable will only alter the contents of <i>sval</i> when matching command line arguments are detected.</p>
 <h3>REGULAR EXPRESSION COMMAND LINE OPTIONS</h3>
 <p> commit, update, &#8211;command=commit, &#8211;command=update </p>
-<p>struct arg_rex {<br />
-    struct arg_hdr hdr; /* internal argtable header */<br />
-    int count;          /* number of strings returned in sval[] */<br />
-    const char **sval;  /* array of pointers to parsed argument strings */<br />
+<p>struct arg_rex {<br/>
+    struct arg_hdr hdr; /* internal argtable header */<br/>
+    int count;          /* number of strings returned in sval[] */<br/>
+    const char **sval;  /* array of pointers to parsed argument strings */<br/>
 };</p>
 <p> Similar to <code>arg_str</code> except the string argument values are only accepted if they match a predefined regular expression. Regular expressions are useful for matching command line keywords, particularly if case insensitive strings or pattern matching is required. The regular expression is defined by the <i>pattern</i> parameter passed to the <i>arg_rex</i> constructor and evaluated using regex. Its behaviour can be controlled via standard regex bit flags. These are passed to argtable via the <i>flags</i> parameter in the <i>arg_rex</i> constructor. However the only two of the standard regex flags are relevant to argtable, namely REG_EXTENDED (use extended regular expressions rather than basic ones) and REG_ICASE (ignore case). These flags may be logically ORed if desired. See <code><a href="/docs/linux/man/3-regex/">regex</a>(3)</code> for more details of regular expression matching. </p>
 <p> Restrictions: Argtable does not support <code>arg_rex</code> functionality under Microsoft Windows platforms because the Microsoft compilers do include the necessary <code>regex</code> support as standard.</p>
 <h3>FILENAME COMMAND LINE OPTIONS</h3>
 <p> -o myfile, -Ihome/foo/bar, &#8211;input=~/doc/letter.txt, &#8211;name a.out </p>
-<p>struct arg_file {<br />
-    struct arg_hdr hdr;     /* internal argtable header */<br />
-    int count;              /* number of filename strings returned */<br />
-    const char **filename;  /* pointer to full filename string */<br />
-    const char **basename;  /* pointer to filename excluding leading path */<br />
-    const char **extension; /* pointer to the filename extension */<br />
+<p>struct arg_file {<br/>
+    struct arg_hdr hdr;     /* internal argtable header */<br/>
+    int count;              /* number of filename strings returned */<br/>
+    const char **filename;  /* pointer to full filename string */<br/>
+    const char **basename;  /* pointer to filename excluding leading path */<br/>
+    const char **extension; /* pointer to the filename extension */<br/>
 };</p>
 <p> Similar to <code>arg_str</code> but the argument strings are presumed to refer to filenames hence some additional parsing is done to separate out the filename&#8217;s basename and extension (if they exist). The three arrays filename[], basename[], extension[] each store up to maxcount entries, and the i&#8217;th entry of each of these arrays refer to different components of the same string buffer. </p>
-<p> For example, <code>-o /home/heitmann/mydir/foo.txt</code> would be parsed as:<br />
+<p> For example, <code>-o /home/heitmann/mydir/foo.txt</code> would be parsed as:<br/>
 filename[i] = &#8220;/home/heitmann/mydir/foo.txt&#8221; basename[i] = &#8220;foo.txt&#8221; extension[i] = &#8220;.txt&#8221;</p>
 <p> If the filename has no leading path then the basename is the same as the filename. If no extension could be identified then it is given as NULL. Extensions are considered as all text from the last dot in the filename. </p>
 <p> Hint: Argtable only ever treats the filenames as strings and never attempts to open them as files or perform any directory lookups on them.</p>
 <h3>DATE/TIME COMMAND LINE OPTIONS</h3>
 <p> 12/31/04, -d 1982-11-28, &#8211;time 23:59 </p>
-<p>struct arg_date {<br />
-    struct arg_hdr hdr; /* internal argtable header */<br />
-    const char *format; /* user-supplied date format string that was passed to constructor */<br />
-    int count;          /* number of datestamps returned in tmval[] */<br />
-    struct tm *tmval;   /* array of datestamps */<br />
+<p>struct arg_date {<br/>
+    struct arg_hdr hdr; /* internal argtable header */<br/>
+    const char *format; /* user-supplied date format string that was passed to constructor */<br/>
+    int count;          /* number of datestamps returned in tmval[] */<br/>
+    struct tm *tmval;   /* array of datestamps */<br/>
 };</p>
 <p> Accepts a timestamp string from the command line and converts it to <i>struct tm</i> format using the system <code>strptime</code> function. The time format is defined by the <i>format</i> string passed to the <i>arg_date</i> constructor, and is passed directly to <code>strptime</code>. See <code><a href="/docs/linux/man/3-strptime/">strptime</a>(3)</code> for more details on the format string. </p>
 <p> Restrictions: Argtable does not support <code>arg_date</code> functionality under Microsoft Windows because the Microsoft compilers do include the necessary <code>strptime</code> support as standard.</p>
 <h3>REMARK OPTIONS</h3>
-<p>struct arg_rem {<br />
-    struct arg_hdr hdr; /* internal argtable header */<br />
+<p>struct arg_rem {<br/>
+    struct arg_hdr hdr; /* internal argtable header */<br/>
 };</p>
 <p> The <code>arg_rem</code> struct is a dummy struct in the sense it does not represent a command line option to be parsed. Instead it provides a means to include additional <i>datatype</i> and <i>glossary</i> strings in the output of the <code>arg_print_syntax</code>, <code>arg_print_syntaxv</code>, and <code>arg_print_glossary functions</code>. As such, <code>arg_rem</code> structs may be used in the argument table to insert additional lines of text into the glossary descriptions or to insert additional text fields into the syntax description.</p>
 <h3>END-OF-TABLE OPTION</h3>
@@ -167,10 +167,10 @@ Every argument table must have an arg_end structure as its last entry.It marks t
 <h3>void arg_print_option (FILE *fp, const char *shortopts, const char *longopts, const char *datatype, const char *suffix)</h3>
 <p> This function prints an option&#8217;s syntax, as in <code>-K|&#8211;scalar=&lt;int&gt;</code>, where the short options, long options, and datatype are all given as parameters of this function. It is primarily used within the <code>arg_xxx</code> structures&#8217; <i>errorfn</i> functions as a way of displaying an option&#8217;s syntax inside of error messages. However, it can also be used in user code if desired. The <i>suffix</i> string is provided as a convenience for appending newlines and so forth to the end of the display and can be given as NULL if not required.</p>
 <h3>void arg_print_syntax (FILE *fp, void **argtable, const char *suffix)</h3>
-<p> Prints the GNU style command line syntax for the given argument table, as in: [-abcv] [&#8211;scalar=&lt;n&gt;] [-o myfile] &lt;file&gt; [&lt;file&gt;]<br />
+<p> Prints the GNU style command line syntax for the given argument table, as in: [-abcv] [&#8211;scalar=&lt;n&gt;] [-o myfile] &lt;file&gt; [&lt;file&gt;]<br/>
  The <i>suffix</i> string is provided as a convenience for appending newlines and so forth to the end of the display and can be given as NULL if not required.</p>
 <h3>void arg_print_syntaxv (FILE *fp, void **argtable, const char *suffix)</h3>
-<p> Prints the verbose form of the command line syntax for the given argument table, as in: [-a] [-b] [-c] [&#8211;scalar=&lt;n&gt;] [-o myfile] [-v|&#8211;verbose] &lt;file&gt; [&lt;file&gt;]<br />
+<p> Prints the verbose form of the command line syntax for the given argument table, as in: [-a] [-b] [-c] [&#8211;scalar=&lt;n&gt;] [-o myfile] [-v|&#8211;verbose] &lt;file&gt; [&lt;file&gt;]<br/>
  The <i>suffix</i> string is provided as a convenience for appending newlines and so forth to the end of the display and can be given as NULL if not required.</p>
 <h3>void arg_print_glossary (FILE *fp, void **argtable, const char *format)</h3>
 <p> Prints a glossary table describing each option in the given argument table. The <i>format</i> string is passed to printf to control the formatting of each entry in the the glossary. It must have exactly two &quot;%s&quot; format parameters as in &quot;%-25s %s
@@ -182,11 +182,11 @@ Every argument table must have an arg_end structure as its last entry.It marks t
 <h3>void arg_freetable (void ** argtable, size_t n)</h3>
 <p> Deallocates the memory used by each <code>arg_xxx</code> struct referenced by <i>argtable[]</i>. It does this by calling <code>free</code> for each of the <i>n</i> pointers in the argtable array and then nulling them for safety. </p>
 <h2>FILES</h2>
-<p> /usr/include/argtable2.h<br />
- /usr/lib/libargtable2.a<br />
- /usr/lib/libargtable2.so<br />
- /usr/man3/argtable2.3<br />
- /usr/share/doc/argtable2/<br />
+<p> /usr/include/argtable2.h<br/>
+ /usr/lib/libargtable2.a<br/>
+ /usr/lib/libargtable2.so<br/>
+ /usr/man3/argtable2.3<br/>
+ /usr/share/doc/argtable2/<br/>
  /usr/share/doc/argtable2/example/ </p>
 <h2>AUTHOR</h2>
 <p> Stewart Heitmann &lt;sheitmann [at] users.sourceforge.net&gt; </p>

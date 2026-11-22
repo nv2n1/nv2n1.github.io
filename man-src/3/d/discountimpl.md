@@ -15,8 +15,8 @@ description: "QuantLib::CompoundForward – compound-forward structure"
 <p><code>CompoundForward</code> (const <code>Date</code> &amp;referenceDate, const std::vector&lt; <code>Date</code> &gt; &amp;dates, const std::vector&lt; <code>Rate</code> &gt; &amp;forwards, const <code>Calendar</code> &amp;calendar, const <code>BusinessDayConvention</code> conv, const Integer compounding, const <code>DayCounter</code> &amp;dayCounter) </p>
 <p> <code>BusinessDayConvention</code> <code>businessDayConvention</code> () const </p>
 <p> Integer <code>compounding</code> () const </p>
-<p> <code>Date</code> <code>maxDate</code> () const<br />
- <i>the latest date for which the curve can return values </i><br />
+<p> <code>Date</code> <code>maxDate</code> () const<br/>
+ <i>the latest date for which the curve can return values </i><br/>
  const std::vector&lt; Time &gt; &amp; <code>times</code> () const </p>
 <p> const std::vector&lt; <code>Date</code> &gt; &amp; <code>dates</code> () const </p>
 <p> const std::vector&lt; <code>Rate</code> &gt; &amp; <code>forwards</code> () const </p>
@@ -29,8 +29,8 @@ description: "QuantLib::CompoundForward – compound-forward structure"
 <p> <code>Rate</code> <code>zeroYieldImpl</code> (Time) const </p>
 <p> <code>DiscountFactor</code> <code>discountImpl</code> (Time) const </p>
 <p> Size <code>referenceNode</code> (Time) const </p>
-<p> <code>Rate</code> <code>forwardImpl</code> (Time) const<br />
- <i>instantaneous forward-rate calculation </i><br />
+<p> <code>Rate</code> <code>forwardImpl</code> (Time) const<br/>
+ <i>instantaneous forward-rate calculation </i><br/>
  <code>Rate</code> <code>compoundForwardImpl</code> (Time, Integer) const </p>
 <h2>Detailed Description</h2>
 <p>compound-forward structure </p>

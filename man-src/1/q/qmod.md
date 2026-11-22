@@ -18,7 +18,7 @@ description: "qmod – modify a xxQS_NAMExx queue and running job"
 <dt><code>-c</code></dt>
 <dd>
 </dd><dt><code>&#8211;clear</code></dt>
-<dd> <code>Note:</code> Deprecated, may be removed in future release. Please use the <code>-cj</code> or <code>-cq</code> switch instead.<br />
+<dd> <code>Note:</code> Deprecated, may be removed in future release. Please use the <code>-cj</code> or <code>-cq</code> switch instead.<br/>
  Clears the error state of the specified jobs(s)/queue(s).</dd>
 <dt><code>-cj</code></dt>
 <dd>
@@ -47,7 +47,7 @@ description: "qmod – modify a xxQS_NAMExx queue and running job"
 <dt><code>-r</code></dt>
 <dd>
 </dd><dt><code>&#8211;reschedule</code></dt>
-<dd> <code>Note:</code> Deprecated, may be removed in future release. Please use the <code>-rj</code> or <code>-rq</code> switch instead.<br />
+<dd> <code>Note:</code> Deprecated, may be removed in future release. Please use the <code>-rj</code> or <code>-rq</code> switch instead.<br/>
  If applied to queues, reschedules all jobs currently running in this queue. If applied to running jobs, reschedules the jobs. Requires root or manager privileges. In order for a job to be rescheduled, it, or the queue in which it is executing must have the rerun flag activated. (See -r option in the man page and the <i>rerun</i> option in the man page for more information.) Additional restrictions apply for parallel and checkpointing jobs. (See the <i>reschedule_unknown</i> description in the man page for details).</dd>
 <dt><code>-rj</code></dt>
 <dd>
@@ -60,7 +60,7 @@ description: "qmod – modify a xxQS_NAMExx queue and running job"
 <dt><code>-s</code></dt>
 <dd>
 </dd><dt><code>&#8211;suspend</code></dt>
-<dd> <code>Note:</code> Deprecated, may be removed in future release. Please use the <code>-sj</code> or <code>-sq</code> switch instead.<br />
+<dd> <code>Note:</code> Deprecated, may be removed in future release. Please use the <code>-sj</code> or <code>-sq</code> switch instead.<br/>
  If applied to queues, suspends the queues and any jobs which might be active in them. If applied to running jobs, suspends the jobs.</dd>
 <dt><code>-sj</code></dt>
 <dd>
@@ -73,7 +73,7 @@ description: "qmod – modify a xxQS_NAMExx queue and running job"
 <dt><code>-us</code></dt>
 <dd>
 </dd><dt><code>&#8211;unsuspend</code></dt>
-<dd> <code>Note:</code> Deprecated, may be removed in future release. Please use the <code>-usj</code> or <code>-usq</code> switch instead.<br />
+<dd> <code>Note:</code> Deprecated, may be removed in future release. Please use the <code>-usj</code> or <code>-usq</code> switch instead.<br/>
  If applied to queues, unsuspends the queues and any jobs which might be active in them. If applied to jobs, unsuspends the jobs.</dd>
 <dt><code>-usj</code></dt>
 <dd>

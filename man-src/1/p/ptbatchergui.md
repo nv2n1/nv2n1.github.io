@@ -11,7 +11,7 @@ description: "PTBatcherGUI – Hugin batch processor"
 <h2>Synopsis</h2>
 <p><code>PTBatcherGUI</code> [options] [&lt;project1 &lt;output prefix&gt;&gt; &lt;project2 &lt;output prefix&gt;&gt; &lt;project3&#8230;]</p>
 <h2>Description</h2>
-<p>A <font SIZE="-1">GUI</font> Batch Processor for managing the stitching of a queue of hugin .pto projects.</p>
+<p>A GUI Batch Processor for managing the stitching of a queue of hugin .pto projects.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-h|&#8211;help</code></dt>

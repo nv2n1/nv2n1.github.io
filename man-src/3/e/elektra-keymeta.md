@@ -209,7 +209,7 @@ description: "Key :: Meta Info Manipulation Methods –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> The Key object to work with<br />
+</dt><dd> <i>key</i> The Key object to work with<br/>
  <i>atime</i> The new access time for the key</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -224,7 +224,7 @@ description: "Key :: Meta Info Manipulation Methods –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> The Key object to work with<br />
+</dt><dd> <i>key</i> The Key object to work with<br/>
  <i>ctime</i> The new change metadata time for the key</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -271,7 +271,7 @@ description: "Key :: Meta Info Manipulation Methods –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the key object to work with<br />
+</dt><dd> <i>key</i> the key object to work with<br/>
  <i>gid</i> is the group ID</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -303,7 +303,7 @@ description: "Key :: Meta Info Manipulation Methods –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the key to set mode permissions<br />
+</dt><dd> <i>key</i> the key to set mode permissions<br/>
  <i>mode</i> the mode permissions</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -318,7 +318,7 @@ description: "Key :: Meta Info Manipulation Methods –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> The Key object to work with<br />
+</dt><dd> <i>key</i> The Key object to work with<br/>
  <i>mtime</i> The new modification time for the key</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -356,7 +356,7 @@ if (keyGetType(k1) == KEY_TYPE_COLOR)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the key object to work with<br />
+</dt><dd> <i>key</i> the key object to work with<br/>
  <i>newType</i> contains the new type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -368,7 +368,7 @@ if (keyGetType(k1) == KEY_TYPE_COLOR)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>key</i> the key object to work with<br />
+</dt><dd> <i>key</i> the key object to work with<br/>
  <i>uid</i> the user ID to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

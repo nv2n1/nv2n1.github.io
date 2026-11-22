@@ -14,14 +14,14 @@ description: "gnokii – tool suite for mobile phones"
 <h2>DESCRIPTION</h2>
 <p> <code>gnokii</code> is a multiple systems tool suite and driver for mobile phones. </p>
 <p> <code>gnokii</code> supports the AT protocol defined by the GSM standard (with workarounds for some vendor&#8217;s quirks), some proprietary protocols of Nokia phones (the so called FBUS and FBUS2) and SIM cards in PC/SC compatible Smart Card readers. Limited support for the older and slow Nokia MBUS protocol is also available. </p>
-<p> You can assume that your phone will work with <code>gnokii</code> when using the AT protocol, however some phones implement only a subset of the protocol and in those cases you will get very limited functionality. The recommended model setting for your config file are:<br />
-&nbsp;<wbr>&#8211; model&nbsp;<wbr>=&nbsp;<wbr>series40, if you have a fairly recent Nokia phone except Symbian phones prior to Series60 3rd Edition<br />
-&nbsp;<wbr>&#8211; model&nbsp;<wbr>=&nbsp;<wbr>gnapplet, if you have a Nokia Symbian Series60 prior to 3rd Edition phone<br />
-&nbsp;<wbr>&#8211; model&nbsp;<wbr>=&nbsp;<wbr>AT, for all other phones of any brand<br />
+<p> You can assume that your phone will work with <code>gnokii</code> when using the AT protocol, however some phones implement only a subset of the protocol and in those cases you will get very limited functionality. The recommended model setting for your config file are:<br/>
+&nbsp;<wbr>&#8211; model&nbsp;<wbr>=&nbsp;<wbr>series40, if you have a fairly recent Nokia phone except Symbian phones prior to Series60 3rd Edition<br/>
+&nbsp;<wbr>&#8211; model&nbsp;<wbr>=&nbsp;<wbr>gnapplet, if you have a Nokia Symbian Series60 prior to 3rd Edition phone<br/>
+&nbsp;<wbr>&#8211; model&nbsp;<wbr>=&nbsp;<wbr>AT, for all other phones of any brand<br/>
 &nbsp;<wbr>&#8211; if you have some older Nokia phone that doesn&#8217;t work with model&nbsp;<wbr>=&nbsp;<wbr>series40 you may try using its brand name, eg. for Nokia 6210 use <i>model = 6210</i>. </p>
-<p> The recommended connection and port settings for your config file are:<br />
-&nbsp;<wbr>&#8211; connection&nbsp;<wbr>=&nbsp;<wbr>bluetooth and port&nbsp;<wbr>=&nbsp;<wbr>phone address, for Bluetooth connections<br />
-&nbsp;<wbr>&#8211; connection&nbsp;<wbr>=&nbsp;<wbr>dku2libusb and port&nbsp;<wbr>=&nbsp;<wbr>1, for most Nokia USB cables<br />
+<p> The recommended connection and port settings for your config file are:<br/>
+&nbsp;<wbr>&#8211; connection&nbsp;<wbr>=&nbsp;<wbr>bluetooth and port&nbsp;<wbr>=&nbsp;<wbr>phone address, for Bluetooth connections<br/>
+&nbsp;<wbr>&#8211; connection&nbsp;<wbr>=&nbsp;<wbr>dku2libusb and port&nbsp;<wbr>=&nbsp;<wbr>1, for most Nokia USB cables<br/>
 &nbsp;<wbr>&#8211; connection&nbsp;<wbr>=&nbsp;<wbr>serial and port&nbsp;<wbr>=&nbsp;<wbr>/dev/&#8230;, for all other cables </p>
 <p> See also the sample gnokiirc for a description of all configuration parameters and our &lt;<a rel="nofollow" href="http://wiki.gnokii.org/index.php/Config">http://wiki.gnokii.org/index.php/Config</a>&gt; for configurations known to work. </p>
 <p> Symbian series60 3rd edition and later (most Nokia N and E series) are not supported by the gnapplet driver due to changes in Symbian API. For now you can get some functionality using the AT driver (with all connection types supported by the phone) or using the series40 driver (only with connection = dku2libusb). </p>
@@ -54,8 +54,8 @@ description: "gnokii – tool suite for mobile phones"
 <dd> specify speed dial. <i>location</i> number 1 is usually reserved for voice mailbox number and it is unavailable as speed dial.</dd>
 <dt><code>&#8211;dialvoice </code><i>number</i></dt>
 <dd> initiate voice call. On success print the <i>callid</i> identifier to be used with the &#8211;hangup command. The &#8211;monitor command can be used to show the <i>callid</i>. </dd>
-<p> With <i>model = AT</i> direct dialing from phonebooks is supported with careful use of shell quoting, for example:<br />
-&nbsp;<wbr>gnokii &#8211;dialvoice&nbsp;<wbr>&quot;&gt;SM42&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>dial the number in location 42 of SM memory<br />
+<p> With <i>model = AT</i> direct dialing from phonebooks is supported with careful use of shell quoting, for example:<br/>
+&nbsp;<wbr>gnokii &#8211;dialvoice&nbsp;<wbr>&quot;&gt;SM42&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>dial the number in location 42 of SM memory<br/>
 &nbsp;<wbr>gnokii &#8211;dialvoice&nbsp;<wbr>&#8216;&gt;&quot;Home&quot;&#8217;&nbsp;<wbr>#&nbsp;<wbr>dial the number if string matches exactly a contact name&nbsp;<wbr>(note the use of single and double quotes)</p>
 <dt><code>&#8211;senddtmf </code><i>string</i></dt>
 <dd> send DTMF sequence.</dd>

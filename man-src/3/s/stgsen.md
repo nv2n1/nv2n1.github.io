@@ -11,7 +11,7 @@ description: "stgsen.f –"
 <p> stgsen.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>stgsen</code> (IJOB, WANTQ, WANTZ, SELECT, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, Q, LDQ, Z, LDZ, M, PL, PR, DIF, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p> subroutine <code>stgsen</code> (IJOB, WANTQ, WANTZ, SELECT, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, Q, LDQ, Z, LDZ, M, PL, PR, DIF, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>STGSEN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stgsen (integerIJOB, logicalWANTQ, logicalWANTZ, logical, dimension( * )SELECT, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( * )ALPHAR, real, dimension( * )ALPHAI, real, dimension( * )BETA, real, dimension( ldq, * )Q, integerLDQ, real, dimension( ldz, * )Z, integerLDZ, integerM, realPL, realPR, real, dimension( * )DIF, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>
@@ -125,27 +125,27 @@ description: "stgsen.f –"
           ALPHAI is REAL array, dimension (N)
 </pre>
 <p> <i>BETA</i> </p>
-<p>BETA is REAL array, dimension(N) On exit, (ALPHAR(j) + ALPHAI(j) * i) / BETA(j), j = 1, &#8230;, N, will be the generalized eigenvalues.ALPHAR(j) + ALPHAI(j) * i and BETA(j), j = 1, &#8230;, N are the diagonals of the complex Schur form(S, T)<br />
-that would result if the 2 &#8211; by &#8211; 2 diagonal blocks of the real generalized Schur form of(A, B)<br />
-were further reduced<br />
-    to triangular form using complex unitary transformations.If<br />
-    ALPHAI(j)<br />
-is zero, then the j &#8211; th eigenvalue is real;<br />
-if positive<br />
+<p>BETA is REAL array, dimension(N) On exit, (ALPHAR(j) + ALPHAI(j) * i) / BETA(j), j = 1, &#8230;, N, will be the generalized eigenvalues.ALPHAR(j) + ALPHAI(j) * i and BETA(j), j = 1, &#8230;, N are the diagonals of the complex Schur form(S, T)<br/>
+that would result if the 2 &#8211; by &#8211; 2 diagonal blocks of the real generalized Schur form of(A, B)<br/>
+were further reduced<br/>
+    to triangular form using complex unitary transformations.If<br/>
+    ALPHAI(j)<br/>
+is zero, then the j &#8211; th eigenvalue is real;<br/>
+if positive<br/>
 , then the j &#8211; th and (j + 1) &#8211; st eigenvalues are a complex conjugate pair, with ALPHAI(j + 1) negative.</p>
 <p> <i>Q</i> </p>
-<p>Q is REAL array, dimension(LDQ, N) On entry, if WANTQ =.TRUE., Q is an N &#8211; by &#8211; N matrix.On exit, Q has been postmultiplied by the left orthogonal transformation matrix which reorder(A, B); The leading M<br />
-          columns of Q form orthonormal bases for the specified pair of<br />
-          left eigenspaces (deflating subspaces).<br />
+<p>Q is REAL array, dimension(LDQ, N) On entry, if WANTQ =.TRUE., Q is an N &#8211; by &#8211; N matrix.On exit, Q has been postmultiplied by the left orthogonal transformation matrix which reorder(A, B); The leading M<br/>
+          columns of Q form orthonormal bases for the specified pair of<br/>
+          left eigenspaces (deflating subspaces).<br/>
           If WANTQ = .FALSE., Q is not referenced.</p>
 <p> <i>LDQ</i> </p>
-<p>LDQ is INTEGER<br />
-        The leading dimension of the array Q.LDQ &gt;= 1;<br />
+<p>LDQ is INTEGER<br/>
+        The leading dimension of the array Q.LDQ &gt;= 1;<br/>
 and if WANTQ =.TRUE., LDQ &gt;= N.</p>
 <p> <i>Z</i> </p>
-<p>Z is REAL array, dimension(LDZ, N) On entry, if WANTZ =.TRUE., Z is an N &#8211; by &#8211; N matrix.On exit, Z has been postmultiplied by the left orthogonal transformation matrix which reorder(A, B); The leading M<br />
-          columns of Z form orthonormal bases for the specified pair of<br />
-          left eigenspaces (deflating subspaces).<br />
+<p>Z is REAL array, dimension(LDZ, N) On entry, if WANTZ =.TRUE., Z is an N &#8211; by &#8211; N matrix.On exit, Z has been postmultiplied by the left orthogonal transformation matrix which reorder(A, B); The leading M<br/>
+          columns of Z form orthonormal bases for the specified pair of<br/>
+          left eigenspaces (deflating subspaces).<br/>
           If WANTZ = .FALSE., Z is not referenced.</p>
 <p> <i>LDZ</i> </p>
 <pre>
@@ -189,11 +189,11 @@ and if WANTQ =.TRUE., LDQ &gt;= N.</p>
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>LWORK is INTEGER<br />
-        The dimension of the array WORK.LWORK &gt;= 4 *N + 16. If IJOB = 1,<br />
-                                                               2 or 4, LWORK &gt;= MAX(4 * N + 16, 2 * M * (N &#8211; M)).If IJOB = 3 or 5, LWORK &gt;= MAX(4 * N + 16, 4 * M * (N &#8211; M)).If LWORK = -1, then a workspace query is assumed;<br />
-the routine<br />
-    only calculates the optimal size of the WORK array,<br />
+<p>LWORK is INTEGER<br/>
+        The dimension of the array WORK.LWORK &gt;= 4 *N + 16. If IJOB = 1,<br/>
+                                                               2 or 4, LWORK &gt;= MAX(4 * N + 16, 2 * M * (N &#8211; M)).If IJOB = 3 or 5, LWORK &gt;= MAX(4 * N + 16, 4 * M * (N &#8211; M)).If LWORK = -1, then a workspace query is assumed;<br/>
+the routine<br/>
+    only calculates the optimal size of the WORK array,<br/>
     returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>IWORK</i> </p>
 <pre>
@@ -201,11 +201,11 @@ the routine<br />
           On exit, if INFO = 0, IWORK(1) returns the optimal LIWORK.
 </pre>
 <p> <i>LIWORK</i> </p>
-<p>LIWORK is INTEGER<br />
-        The dimension of the array IWORK.LIWORK &gt;= 1. If IJOB = 1,<br />
-                                                         2 or 4, LIWORK &gt;= N + 6. If IJOB = 3 or 5, LIWORK &gt;= MAX(2 * M * (N &#8211; M), N + 6).If LIWORK = -1, then a workspace query is assumed;<br />
-the<br />
-    routine only calculates the optimal size of the IWORK array,<br />
+<p>LIWORK is INTEGER<br/>
+        The dimension of the array IWORK.LIWORK &gt;= 1. If IJOB = 1,<br/>
+                                                         2 or 4, LIWORK &gt;= N + 6. If IJOB = 3 or 5, LIWORK &gt;= MAX(2 * M * (N &#8211; M), N + 6).If LIWORK = -1, then a workspace query is assumed;<br/>
+the<br/>
+    routine only calculates the optimal size of the IWORK array,<br/>
     returns this value as the first entry of the IWORK array, and no error message related to LIWORK is issued by XERBLA.</p>
 <p> <i>INFO</i> </p>
 <pre>
@@ -234,68 +234,68 @@ the<br />
 <dl>
 <dt>
 </dt><dd>
-<p>STGSEN first collects the selected eigenvalues by computing<br />
-    orthogonal U and W that move them to the top left corner<br />
-    of(A, B)<br />
-        .In other words,<br />
-    the selected eigenvalues are the eigenvalues of(A11, B11) in : U **T *(A, B) *W = (A11 A12)(B11 B12)n1(0 A22), (0 B22)n2 n1 n2 n1 n2 where N = n1 + n2 and U * *T means the transpose of U.The first n1 columns of U and W span the specified pair of left and right eigenspaces(deflating subspaces) of(A, B).If(A, B) has been obtained from the generalized real Schur decomposition of a matrix pair(C, D) = Q * (A, B) * Z * *T, then the reordered generalized real Schur form of(C, D)<br />
-is given by(C, D) = (Q * U) * (U * *T * (A, B) * W) * (Z * W) * *T,<br />
-               and the first n1 columns of Q *U and Z *W span the corresponding<br />
-                   deflating subspaces of(C, D)(Q and Z store Q *U and Z *W, resp.)<br />
-                       .Note that if the selected eigenvalue is sufficiently ill<br />
-                   &#8211; conditioned,<br />
-               then its value may differ significantly from its value before<br />
-               reordering.The reciprocal condition numbers of the left and right eigenspaces<br />
-               spanned by the first n1 columns of U and W(or Q * U and Z * W) may<br />
-               be returned in DIF(1 : 2),<br />
-               corresponding to Difu and Difl, resp.The Difu and Difl are defined as : Difu[(A11, B11), (A22, B22)] = sigma &#8211; min(Zu) and Difl[(A11, B11), (A22, B22)] = Difu[(A22, B22), (A11, B11)],<br />
-               where sigma &#8211; min(Zu) is the smallest singular value of the(2 * n1 * n2) &#8211; by &#8211; (2 * n1 * n2) matrix Zu = [kron(In2, A11) &#8211; kron(A22 * *T, In1)]<br />
-                                                                                                                             [kron(In2, B11) &#8211; kron(B22 * *T, In1)]<br />
-                                                                                                                                 .Here,<br />
-               Inx is the identity matrix of size nx and A22 **T is the<br />
-               transpose of A22.kron(X, Y) is the Kronecker product between<br />
-               the matrices X and Y.When DIF(2) is small,<br />
-               small changes in(A, B)<br />
-can cause large changes<br />
-    in the deflating subspace.An<br />
-    approximate(asymptotic)<br />
-bound on the<br />
-        maximum angular error in the computed deflating subspaces is<br />
-            EPS *norm((A, B)) /<br />
-    DIF(2),<br />
-    where EPS is the machine precision.The reciprocal norm of the projectors on the left and right<br />
-    eigenspaces associated with(A11, B11)<br />
-may be returned in PL and PR.They are computed as follows.First we compute L and R so that<br />
-        P *(A, B) *<br />
-    Q is block diagonal,<br />
-    where<br />
-    P = (I &#8211; L) n1 Q = (I R)n1(0 I) n2 and (0 I) n2 n1 n2 n1 n2<br />
-                       and (L, R) is the solution to the generalized Sylvester equation A11 *R &#8211; L *A22 = -A12<br />
-                                                                                                          B11 *R<br />
-                                                                                                          &#8211; L *B22 = -B12<br />
-                                                                                                                     Then PL = (F &#8211; norm(L) * *2 + 1) * *(-1 / 2) and PR = (F &#8211; norm(R) * *2 + 1) * *(-1 / 2).An approximate(asymptotic) bound on the average absolute error of<br />
-  the selected eigenvalues is<br />
-       EPS * norm((A, B)) / PL.<br />
-  There are also global error bounds which valid for perturbations up<br />
-  to a certain restriction:  A lower bound (x) on the smallest<br />
-  F-norm(E,F) for which an eigenvalue of (A11, B11)<br />
-may move and<br />
-    coalesce with an eigenvalue<br />
-    of(A22, B22) under perturbation (E,F),<br />
-  (i.e. (A + E, B + F), is<br />
-   x = min(Difu,Difl)/((1/(PL*PL)+1/(PR*PR))**(1/2)+2*max(1/PL,1/PR)).<br />
-  An approximate bound on x can be computed from DIF(1:2), PL and PR.<br />
-  If y = ( F-norm(E,F) / x) &lt;= 1, the angles between the perturbed<br />
-  (L&#8217;, R&#8217;) and unperturbed (L, R) left and right deflating subspaces<br />
-  associated with the selected cluster in the (1,1)-blocks can be<br />
-  bounded as<br />
-   max-angle(L, L&#8217;) &lt;= arctan( y * PL / (1 &#8211; y * (1 &#8211; PL * PL)**(1/2))<br />
-   max-angle(R, R&#8217;) &lt;= arctan( y * PR / (1 &#8211; y * (1 &#8211; PR * PR)**(1/2))<br />
-  See LAPACK User&#8217;s Guide section 4.11 or the following references<br />
-  for more information.<br />
-  Note that if the default method for computing the Frobenius-norm-<br />
-  based estimate DIF is not wanted (see SLATDF), then the parameter<br />
-  IDIFJB (see below) should be changed from 3 to 4 (routine SLATDF<br />
+<p>STGSEN first collects the selected eigenvalues by computing<br/>
+    orthogonal U and W that move them to the top left corner<br/>
+    of(A, B)<br/>
+        .In other words,<br/>
+    the selected eigenvalues are the eigenvalues of(A11, B11) in : U **T *(A, B) *W = (A11 A12)(B11 B12)n1(0 A22), (0 B22)n2 n1 n2 n1 n2 where N = n1 + n2 and U * *T means the transpose of U.The first n1 columns of U and W span the specified pair of left and right eigenspaces(deflating subspaces) of(A, B).If(A, B) has been obtained from the generalized real Schur decomposition of a matrix pair(C, D) = Q * (A, B) * Z * *T, then the reordered generalized real Schur form of(C, D)<br/>
+is given by(C, D) = (Q * U) * (U * *T * (A, B) * W) * (Z * W) * *T,<br/>
+               and the first n1 columns of Q *U and Z *W span the corresponding<br/>
+                   deflating subspaces of(C, D)(Q and Z store Q *U and Z *W, resp.)<br/>
+                       .Note that if the selected eigenvalue is sufficiently ill<br/>
+                   &#8211; conditioned,<br/>
+               then its value may differ significantly from its value before<br/>
+               reordering.The reciprocal condition numbers of the left and right eigenspaces<br/>
+               spanned by the first n1 columns of U and W(or Q * U and Z * W) may<br/>
+               be returned in DIF(1 : 2),<br/>
+               corresponding to Difu and Difl, resp.The Difu and Difl are defined as : Difu[(A11, B11), (A22, B22)] = sigma &#8211; min(Zu) and Difl[(A11, B11), (A22, B22)] = Difu[(A22, B22), (A11, B11)],<br/>
+               where sigma &#8211; min(Zu) is the smallest singular value of the(2 * n1 * n2) &#8211; by &#8211; (2 * n1 * n2) matrix Zu = [kron(In2, A11) &#8211; kron(A22 * *T, In1)]<br/>
+                                                                                                                             [kron(In2, B11) &#8211; kron(B22 * *T, In1)]<br/>
+                                                                                                                                 .Here,<br/>
+               Inx is the identity matrix of size nx and A22 **T is the<br/>
+               transpose of A22.kron(X, Y) is the Kronecker product between<br/>
+               the matrices X and Y.When DIF(2) is small,<br/>
+               small changes in(A, B)<br/>
+can cause large changes<br/>
+    in the deflating subspace.An<br/>
+    approximate(asymptotic)<br/>
+bound on the<br/>
+        maximum angular error in the computed deflating subspaces is<br/>
+            EPS *norm((A, B)) /<br/>
+    DIF(2),<br/>
+    where EPS is the machine precision.The reciprocal norm of the projectors on the left and right<br/>
+    eigenspaces associated with(A11, B11)<br/>
+may be returned in PL and PR.They are computed as follows.First we compute L and R so that<br/>
+        P *(A, B) *<br/>
+    Q is block diagonal,<br/>
+    where<br/>
+    P = (I &#8211; L) n1 Q = (I R)n1(0 I) n2 and (0 I) n2 n1 n2 n1 n2<br/>
+                       and (L, R) is the solution to the generalized Sylvester equation A11 *R &#8211; L *A22 = -A12<br/>
+                                                                                                          B11 *R<br/>
+                                                                                                          &#8211; L *B22 = -B12<br/>
+                                                                                                                     Then PL = (F &#8211; norm(L) * *2 + 1) * *(-1 / 2) and PR = (F &#8211; norm(R) * *2 + 1) * *(-1 / 2).An approximate(asymptotic) bound on the average absolute error of<br/>
+  the selected eigenvalues is<br/>
+       EPS * norm((A, B)) / PL.<br/>
+  There are also global error bounds which valid for perturbations up<br/>
+  to a certain restriction:  A lower bound (x) on the smallest<br/>
+  F-norm(E,F) for which an eigenvalue of (A11, B11)<br/>
+may move and<br/>
+    coalesce with an eigenvalue<br/>
+    of(A22, B22) under perturbation (E,F),<br/>
+  (i.e. (A + E, B + F), is<br/>
+   x = min(Difu,Difl)/((1/(PL*PL)+1/(PR*PR))**(1/2)+2*max(1/PL,1/PR)).<br/>
+  An approximate bound on x can be computed from DIF(1:2), PL and PR.<br/>
+  If y = ( F-norm(E,F) / x) &lt;= 1, the angles between the perturbed<br/>
+  (L&#8217;, R&#8217;) and unperturbed (L, R) left and right deflating subspaces<br/>
+  associated with the selected cluster in the (1,1)-blocks can be<br/>
+  bounded as<br/>
+   max-angle(L, L&#8217;) &lt;= arctan( y * PL / (1 &#8211; y * (1 &#8211; PL * PL)**(1/2))<br/>
+   max-angle(R, R&#8217;) &lt;= arctan( y * PR / (1 &#8211; y * (1 &#8211; PR * PR)**(1/2))<br/>
+  See LAPACK User&#8217;s Guide section 4.11 or the following references<br/>
+  for more information.<br/>
+  Note that if the default method for computing the Frobenius-norm-<br/>
+  based estimate DIF is not wanted (see SLATDF), then the parameter<br/>
+  IDIFJB (see below) should be changed from 3 to 4 (routine SLATDF<br/>
   (IJOB = 2 will be used)). See STGSYL for more details.</p>
 <p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>

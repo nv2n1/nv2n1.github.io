@@ -10,7 +10,7 @@ description: "jove – an interactive display-oriented text editor"
 
 <p> jove &#8211; an interactive display-oriented text editor</p>
 <h2>SYNOPSIS</h2>
-<p> <code>jove</code> [ <code>-d</code><i>&nbsp;<wbr>directory</i> ] [ <code>-l</code><i>&nbsp;<wbr>libdir</i> ] [ <code>-s</code><i>&nbsp;<wbr>sharedir</i> ] [ <code>-ls</code><i>&nbsp;<wbr>bothdir</i> ] [ <code>-J</code> ] [ <code>-j</code> ] [ <code>-w</code><i>n</i> ] [ <code>-t</code><i>&nbsp;<wbr>tag</i> ] [ <code>+</code><i>n file</i> ] [ <code>+/</code><i>pattern file</i> ] [ <code>-p</code><i>&nbsp;<wbr>file</i> ] [ <i>file</i>&#8230; ]<br />
+<p> <code>jove</code> [ <code>-d</code><i>&nbsp;<wbr>directory</i> ] [ <code>-l</code><i>&nbsp;<wbr>libdir</i> ] [ <code>-s</code><i>&nbsp;<wbr>sharedir</i> ] [ <code>-ls</code><i>&nbsp;<wbr>bothdir</i> ] [ <code>-J</code> ] [ <code>-j</code> ] [ <code>-w</code><i>n</i> ] [ <code>-t</code><i>&nbsp;<wbr>tag</i> ] [ <code>+</code><i>n file</i> ] [ <code>+/</code><i>pattern file</i> ] [ <code>-p</code><i>&nbsp;<wbr>file</i> ] [ <i>file</i>&#8230; ]<br/>
  <code>jove -r</code></p>
 <h2>DESCRIPTION</h2>
 <p> JOVE is Jonathan&#8217;s Own Version of Emacs. It is based on the original EMACS editor written at MIT by Richard Stallman. Although JOVE is meant to be compatible with EMACS, there are some major differences between the two editors and you shouldn&#8217;t rely on their behaving identically. </p>
@@ -82,10 +82,10 @@ description: "jove – an interactive display-oriented text editor"
 </pre>
 <p> (Note that the Control Characters can be either two character sequences (e.g. ^ and C together as ^C) or the actual control character. If you want to use an ^ by itself you must BackSlash it (e.g., bind-to-key grow-window ^X\^ binds grow-window to &#8220;^X^&#8221;).</p>
 <h2>ENVIRONMENT</h2>
-<p> If the variable <font SIZE="-1"><code>&quot;LC_CTYPE&quot;</code></font> (see <code><a href="/docs/linux/man/5-environ/">environ</a></code>(5)) is not set in the environment, the operational behavior of JOVE for the <font SIZE="-1"><code>&quot;LC_CTYPE&quot;</code></font> locale category is determined by the value of the <font SIZE="-1"><code>LANG</code></font> environment variable. If <font SIZE="-1"><code>LC_ALL</code></font> is set, its contents are used to override both the <font SIZE="-1"><code>LANG</code></font> and the <font SIZE="-1"><code>&quot;LC_CTYPE&quot;</code></font> variable. If none of the above variables is set in the environment, the &quot;C&quot; (U.S. style) locale determines how JOVE behaves.</p>
+<p> If the variable <code>&quot;LC_CTYPE&quot;</code> (see <code><a href="/docs/linux/man/5-environ/">environ</a></code>(5)) is not set in the environment, the operational behavior of JOVE for the <code>&quot;LC_CTYPE&quot;</code> locale category is determined by the value of the <code>LANG</code> environment variable. If <code>LC_ALL</code> is set, its contents are used to override both the <code>LANG</code> and the <code>&quot;LC_CTYPE&quot;</code> variable. If none of the above variables is set in the environment, the &quot;C&quot; (U.S. style) locale determines how JOVE behaves.</p>
 <dl>
-<dt><font SIZE="-1"><code>LC_CTYPE</code></font></dt>
-<dd> Determines how JOVE handles characters. When <font SIZE="-1"><code>LC_CTYPE</code></font> is set to a valid value, JOVE can display and handle text and filenames containing valid characters for that locale. In particular, characters will be correctly recognised as upper or lower case and displayed if printable. However JOVE cannot display or handle Extended Unix Code (EUC) characters which are more than 1 byte wide. In the &quot;C&quot; locale, only characters from 7-bit ASCII are valid (all characters with the eighth bit set being displayed in octal). In the &quot;iso_8859_1&quot; locale (if supported by the OS), the full Latin-1 alphabet is available. The JOVE variable &#8220;lc-ctype&#8221; can be used to change the locale while JOVE is running.</dd></dl>
+<dt><code>LC_CTYPE</code></dt>
+<dd> Determines how JOVE handles characters. When <code>LC_CTYPE</code> is set to a valid value, JOVE can display and handle text and filenames containing valid characters for that locale. In particular, characters will be correctly recognised as upper or lower case and displayed if printable. However JOVE cannot display or handle Extended Unix Code (EUC) characters which are more than 1 byte wide. In the &quot;C&quot; locale, only characters from 7-bit ASCII are valid (all characters with the eighth bit set being displayed in octal). In the &quot;iso_8859_1&quot; locale (if supported by the OS), the full Latin-1 alphabet is available. The JOVE variable &#8220;lc-ctype&#8221; can be used to change the locale while JOVE is running.</dd></dl>
 <h2>SOME MINOR DETAILS</h2>
 <p> You should type ^\ instead of ^S in many instances. For example, the way to search for a string is documented as being &#8220;^S&#8221; but in reality you should type &#8220;^\&#8221;. This is because ^S is the XOFF character (what gets sent when you type the NO SCROLL key), and clearly that won&#8217;t work. The XON character is &#8220;^Q&#8221; (what gets sent when you type NO SCROLL again) which is documented as the way to do a quoted-insert. The alternate key for this is &#8220;^^&#8221; (typed as &#8220;^`&#8221; on vt100&#8217;s and its look-alikes). If you want to enable ^S and ^Q and you know what you are doing, you can put the line: </p>
 <pre>
@@ -106,14 +106,14 @@ description: "jove – an interactive display-oriented text editor"
 /usr/lib64/jove/portsrv --- for running shells in windows (pdp11 only)
 </code></pre>
 <h2>ENVIRONMENT VARIABLES</h2>
-<p>TERM &#8212; your terminal type<br />
-METAKEY &#8212; if defined, sets the &#8220;meta-key&#8221; variable<br />
-SHELL &#8212; the shell to be used by the &#8220;shell&#8221; and other commands<br />
-COMSPEC &#8212; (on MSDOS) used if SHELL is not defined<br />
-MAIL &#8212; to initialize the &#8220;mailbox&#8221; variable<br />
-JOVELIB &#8212; overrides /usr/lib64/jove unless overridden by -l<br />
-JOVESHARE &#8212; overrides /usr/share/jove unless overridden by -s<br />
-TMPDIR &#8212; overrides /tmp as directory for temporary files<br />
+<p>TERM &#8212; your terminal type<br/>
+METAKEY &#8212; if defined, sets the &#8220;meta-key&#8221; variable<br/>
+SHELL &#8212; the shell to be used by the &#8220;shell&#8221; and other commands<br/>
+COMSPEC &#8212; (on MSDOS) used if SHELL is not defined<br/>
+MAIL &#8212; to initialize the &#8220;mailbox&#8221; variable<br/>
+JOVELIB &#8212; overrides /usr/lib64/jove unless overridden by -l<br/>
+JOVESHARE &#8212; overrides /usr/share/jove unless overridden by -s<br/>
+TMPDIR &#8212; overrides /tmp as directory for temporary files<br/>
 LC_ALL, LC_CTYPE, LANG &#8212; to set the locale</p>
 <h2>SEE ALSO</h2>
 <pre><code>

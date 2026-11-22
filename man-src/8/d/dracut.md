@@ -45,7 +45,7 @@ description: "dracut – low-level tool for generating an initramfs image"
 </dd></dl>
 <p> If you want to create lighter, smaller initramfs images, you may want to specify the &#8211;hostonly or -H option. Using this option, the resulting image will contain only those dracut modules, kernel modules and filesystems, which are needed to boot this specific machine. This has the drawback, that you can&#8217;t put the disk on another controller or machine, and that you can&#8217;t switch to another root filesystem, without recreating the initramfs image. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> On RHEL-7 the hostonly mode is the default mode. Generic &quot;non-hostonly&quot; images are created, if the dracut-config-generic rpm is installed. The rescue kernel entry in the bootloader menu is also a generic image. </p>
 </dl>
 <h3>Inspecting the Contents</h3>
@@ -94,11 +94,11 @@ include ld.so.conf.d/*.conf</pre>
 <pre># dracut --print-cmdline
  root=UUID=8b8b6f91-95c7-4da2-831b-171e12179081 rootflags=rw,relatime,discard,data=ordered rootfstype=ext4</pre>
 </dd></dl>
-<p> <font SIZE="+1"> <code>Specifying the root Device</code></p>
+<p>  <code>Specifying the root Device</code></p>
 <dl>
 <dd>This is the only option dracut really needs to boot from your root partition. Because your root partition can live in various environments, there are a lot of formats for the root= option. The most basic one is root=<i>&lt;path to device node&gt;</i>: </dd>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>root=/dev/sda2</pre>
 </dl>
 <p> Because device node names can change, dependent on the drive ordering, you are encouraged to use the filesystem identifier (UUID) or filesystem label (LABEL) to specify your root partition: </p>
@@ -122,28 +122,28 @@ include ld.so.conf.d/*.conf</pre>
 <pre># ls -l /dev/disk/by-label</pre>
 </dd></dl>
 <p> If your root partition is on the network see the section called &#8220;Network Boot&#8221;.</dl>
-<p> <font SIZE="+1"> <code>Keyboard Settings</code></p>
+<p>  <code>Keyboard Settings</code></p>
 <dl>
 <dd>If you have to input passwords for encrypted disk volumes, you might want to set the keyboard layout and specify a display font. </dd>
 <p> A typical german kernel command would contain: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>rd.vconsole.font=latarcyrheb-sun16 rd.vconsole.keymap=de-latin1-nodeadkeys rd.locale.LANG=de_DE.UTF-8</pre>
 </dl>
 <p> Setting these options can override the setting stored on your system, if you use a modern init system, like systemd.</dl>
-<p> <font SIZE="+1"> <code>Blacklisting Kernel Modules</code></p>
+<p>  <code>Blacklisting Kernel Modules</code></p>
 <dl>
 <dd>Sometimes it is required to prevent the automatic kernel module loading of a specific kernel module. To do this, just add rd.blacklist=<i>&lt;kernel module name&gt;</i>, with <i>&lt;kernel module name&gt;</i> not containing the <i>.ko</i> suffix, to the kernel command line. For example: </dd>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>rd.driver.blacklist=mptsas rd.driver.blacklist=nouveau</pre>
 </dl>
 <p> The option can be specified multiple times on the kernel command line.</dl>
-<p> <font SIZE="+1"> <code>Speeding up the Boot Process</code></p>
+<p>  <code>Speeding up the Boot Process</code></p>
 <dl>
 <dd>If you want to speed up the boot process, you can specify as much information for dracut on the kernel command as possible. For example, you can tell dracut, that you root partition is not on a LVM volume or not on a raid partition, or that it lives inside a specific crypto LUKS encrypted volume. By default, dracut searches everywhere. A typical dracut kernel command line for a plain primary or logical partition would contain: </dd>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>rd.luks=0 rd.lvm=0 rd.md=0 rd.dm=0</pre>
 </dl>
 <p> This turns off every automatic assembly of LVM, MD raids, DM raids and crypto LUKS. </p>
@@ -187,15 +187,15 @@ rd.live.overlay/
 <pre># yum install dracut-network</pre>
 </dd></dl>
 <p> The resulting initramfs image can be served by a boot manager residing on your local hard drive or it can be served by a PXE/TFTP server. </p>
-<p> How to setup your PXE/TFTP server can be found in the m[blue]<code>Red Hat Enterprise Linux Storage Administration Guide</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> How to setup your PXE/TFTP server can be found in the m[blue]<code>Red Hat Enterprise Linux Storage Administration Guide</code>m[][1]. </p>
 <p> If you specify ip=dhcp on the kernel command line, then dracut asks a dhcp server about the ip adress for the machine. The dhcp server can also serve an additional root-path, which will set the root device for dracut. With this mechanism, you have static configuration on your client machine and a centralized boot configuration on your TFTP/DHCP server. If you can&#8217;t pass a kernel command line, then you can inject <i>/etc/cmdline.d/mycmdline.conf</i>, with a method described in the section called &#8220;Injecting custom Files&#8221;. </p>
-<p> <font SIZE="+1"> <code>Reducing the Image Size</code></p>
+<p>  <code>Reducing the Image Size</code></p>
 <dl>
 <dd>To reduce the size of the initramfs, you should create it with by ommitting all dracut modules, which you know, you don&#8217;t need to boot the machine. </dd>
 <p> You can also specify the exact dracut and kernel modules to produce a very tiny initramfs image. </p>
 <p> For example for a NFS image, you would do: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre># dracut -m &quot;nfs network base&quot; initramfs-nfs-only.img</pre>
 </dl>
 <p> Then you would boot from this image with your target machine and reduce the size once more by creating it on the target machine with the &#8211;host-only option: </p>
@@ -217,7 +217,7 @@ rd.live.overlay/
 <dd>4. The file /run/initramfs/rdsosreport.txt is generated, which contains all the logs and the output of all significant tools, which are mentioned later.</dd></dl>
 <p> If you want to save that output, simply mount /boot by hand or insert an USB stick and mount that. Then you can store the output for later inspection.</p>
 <h3>Information to include in your report</h3>
-<p><font SIZE="+1"> <code>All bug reports</code></p>
+<p> <code>All bug reports</code></p>
 <dl>
 <dd>In all cases, the following should be mentioned and attached to your bug report: </dd>
 <dl>
@@ -229,33 +229,33 @@ rd.live.overlay/
 <dl>
 <dd>&bull; If you use a dracut configuration file, please include <i>/etc/dracut.conf</i> and all files in <i>/etc/dracut.conf.d/*.conf</i></dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Network root device related problems</code></p>
+<p>  <code>Network root device related problems</code></p>
 <dl>
 <dd>This section details information to include when experiencing problems on a system whose root device is located on a network attached volume (e.g. iSCSI, NFS or NBD). As well as the information from the section called &#8220;All bug reports&#8221;, include the following information: </dd>
 <dl>
 <dd>&bull; Please include the output of </dd>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre># /sbin/ifup &lt;interfacename&gt;
 # ip addr show</pre>
 </dl>
 </dl>
 </dl>
 <h3>Debugging dracut</h3>
-<p><font SIZE="+1"> <code>Configure a serial console</code></p>
+<p> <code>Configure a serial console</code></p>
 <dl>
 <dd>Successfully debugging dracut will require some form of console logging during the system boot. This section documents configuring a serial console connection to record boot messages. </dd>
 <dl>
 <dd>1. In <i>/boot/grub2/grub.cfg</i> (or <i>/boot/efi/EFI/redhat/grub.cfg</i> for EFI systems), add the following boot arguments to the <i>&#8216;linux16</i>&#8216; line: </dd>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>console=tty0 console=ttyS0,9600</pre>
 </dl>
 </dl>
 <dl>
 <dd>2. More detailed information on how to configure the kernel for console output can be found at m[blue]<code><a rel="nofollow" href="http://www.faqs.org/docs/Linux-HOWTO/Remote-Serial-Console-HOWTO.html#CONFIGURE-KERNEL">http://www.faqs.org/docs/Linux-HOWTO/Remote-Serial-Console-HOWTO.html#CONFIGURE-KERNEL</a></code>m[].</dd></dl>
 </dl>
-<p> <font SIZE="+1"> <code>Using the dracut shell</code></p>
+<p>  <code>Using the dracut shell</code></p>
 <dl>
 <dd>dracut offers a shell for interactive debugging in the event dracut fails to locate your root filesystem. To enable the shell: </dd>
 <dl>
@@ -264,7 +264,7 @@ rd.live.overlay/
 <dd>2. Remove the boot arguments <i>&#8216;rhgb</i>&#8216; and <i>&#8216;quiet</i>&#8216; </dd>
 <p> A sample <i>grub.cfg</i> bootloader configuration file snippet is listed below. </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>menuentry 'Red Hat Enterprise Linux Server (3.10.0-308.el7.x86_64) 7.0 (Maipo)' [...] {
  [...]
  linux16 /vmlinuz-3.10.0-308.el7.x86_64 ro root=/dev/mapper/vg_uc1-lv_root console=tty0 rd.shell
@@ -285,7 +285,7 @@ Dropping to debug shell.
 <dl>
 <dd>4. Use this shell prompt to gather the information requested above (see the section called &#8220;All bug reports&#8221;).</dd></dl>
 </dl>
-<p> <font SIZE="+1"> <code>Accessing the root volume from the dracut shell</code></p>
+<p>  <code>Accessing the root volume from the dracut shell</code></p>
 <dl>
 <dd>From the dracut debug shell, you can manually perform the task of locating and preparing your root volume for boot. The required steps will depend on how your root volume is configured. Common scenarios include: </dd>
 <dl>
@@ -300,7 +300,7 @@ Dropping to debug shell.
 <dl>
 <dd>1. Inspect your partitions using parted </dd>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre># parted /dev/sda -s p
 Model: ATA HTS541060G9AT00 (scsi)
 Disk /dev/sda: 60.0GB
@@ -356,15 +356,15 @@ Key slot 0 unlocked.</pre>
 </dd></dl>
 </dl>
 </dl>
-<p> <font SIZE="+1"> <code>Additional dracut boot parameters</code></p>
+<p>  <code>Additional dracut boot parameters</code></p>
 <dl>
 <dd>For more debugging options, see <code><a href="/docs/linux/man/7-dracut-cmdline/">dracut.cmdline</a></code>(7).</dd></dl>
-<p> </font><font SIZE="+2"> <code>Debugging dracut on shutdown</code></p>
+<p>  <code>Debugging dracut on shutdown</code></p>
 <dl>
 <dd>To debug the shutdown sequence on systemd systems, you can <i>rd.break</i> on <i>pre-shutdown</i> or <i>shutdown</i>. </dd>
 <p> To do this from an already booted system: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre># mkdir -p /run/initramfs/etc/cmdline.d
 # echo &quot;rd.break=pre-shutdown&quot; &gt; /run/initramfs/etc/cmdline.d/debug.conf
 # touch /run/initramfs/.need_shutdown</pre>
@@ -385,7 +385,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>specify a space-separated list of dracut modules to call when building the initramfs. Modules are located in <i>/usr/lib/dracut/modules.d</i>. This parameter can be specified multiple times. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If [LIST] has multiple arguments, then you have to put these in quotes. For example: </dd>
 <dl>
 <dd>
@@ -397,7 +397,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>omit a space-separated list of dracut modules. This parameter can be specified multiple times. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If [LIST] has multiple arguments, then you have to put these in quotes. For example: </dd>
 <dl>
 <dd>
@@ -409,7 +409,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>add a space-separated list of dracut modules to the default set of modules. This parameter can be specified multiple times. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If [LIST] has multiple arguments, then you have to put these in quotes. For example: </dd>
 <dl>
 <dd>
@@ -421,7 +421,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>force to add a space-separated list of dracut modules to the default set of modules, when -H is specified. This parameter can be specified multiple times. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If [LIST] has multiple arguments, then you have to put these in quotes. For example: </dd>
 <dl>
 <dd>
@@ -433,7 +433,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>specify a space-separated list of kernel modules to exclusively include in the initramfs. The kernel modules have to be specified without the &quot;.ko&quot; suffix. This parameter can be specified multiple times. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If [LIST] has multiple arguments, then you have to put these in quotes. For example: </dd>
 <dl>
 <dd>
@@ -445,7 +445,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>specify a space-separated list of kernel modules to add to the initramfs. The kernel modules have to be specified without the &quot;.ko&quot; suffix. This parameter can be specified multiple times. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If [LIST] has multiple arguments, then you have to put these in quotes. For example: </dd>
 <dl>
 <dd>
@@ -457,7 +457,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>specify a space-separated list of kernel modules not to add to the initramfs. The kernel modules have to be specified without the &quot;.ko&quot; suffix. This parameter can be specified multiple times. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If [LIST] has multiple arguments, then you have to put these in quotes. For example: </dd>
 <dl>
 <dd>
@@ -469,7 +469,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>specify a space-separated list of kernel filesystem modules to exclusively include in the generic initramfs. This parameter can be specified multiple times. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If [LIST] has multiple arguments, then you have to put these in quotes. For example: </dd>
 <dl>
 <dd>
@@ -517,7 +517,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>add a space-separated list of fsck tools, in addition to <i>dracut.conf</i>&#8216;s specification; the installation is opportunistic (non-existing tools are ignored) </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If [LIST] has multiple arguments, then you have to put these in quotes. For example: </dd>
 <dl>
 <dd>
@@ -590,7 +590,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>Host-Only mode: Install only what is needed for booting the local host instead of a generic host and generate host-specific configuration. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  If chrooted to another root other than the real root device, use &quot;&#8211;fstab&quot; and provide a valid <i>/etc/fstab</i>. </dd>
 </dl>
 </dl>
@@ -623,7 +623,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>install the space separated list of files into the initramfs. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If [LIST] has multiple arguments, then you have to put these in quotes. For example: </dd>
 <dl>
 <dd>
@@ -641,7 +641,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>Compress the generated initramfs using bzip2. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Make sure your kernel has bzip2 decompression support compiled in, otherwise you will not be able to boot. Equivalent to &quot;&#8211;compress=bzip2&quot; </dd>
 </dl>
 </dl>
@@ -649,7 +649,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>Compress the generated initramfs using lzma. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Make sure your kernel has lzma decompression support compiled in, otherwise you will not be able to boot. Equivalent to &quot;lzma &#8211;compress=lzma -9&quot; </dd>
 </dl>
 </dl>
@@ -657,7 +657,7 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>Compress the generated initramfs using xz. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Make sure your kernel has xz decompression support compiled in, otherwise you will not be able to boot. Equivalent to &quot;lzma &#8211;compress=xz &#8211;check=crc32 &#8211;lzma2=dict=1MiB&quot; </dd>
 </dl>
 </dl>
@@ -665,14 +665,14 @@ Key slot 0 unlocked.</pre>
 <dl>
 <dd>Compress the generated initramfs using lzop.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font> </dd>
+<dd> <code>Warning</code>  </dd>
 <p> Make sure your kernel has lzo decompression support compiled in, otherwise you will not be able to boot. </p>
 </dl>
 <p> <code>&#8211;lz4</code></p>
 <dl>
 <dd>Compress the generated initramfs using lz4.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font> </dd>
+<dd> <code>Warning</code>  </dd>
 <p> Make sure your kernel has lz4 decompression support compiled in, otherwise you will not be able to boot. </p>
 </dl>
 <p> <code>&#8211;compress</code>&nbsp;<wbr><i>&lt;compressor&gt;</i></p>

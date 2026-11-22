@@ -11,7 +11,7 @@ description: "cryptsetup-reencrypt – tool for offline LUKS device re-encryptio
 <h2>Synopsis</h2>
 <p><code>cryptsetup-reencrypt &lt;options&gt; &lt;device&gt;</code></p>
 <h2>Description</h2>
-<p>Cryptsetup-reencrypt can be used to change reencryption parameters which otherwise require full on-disk data change (re-encryption). You can regenerate <code>volume key</code> (the real key used in on-disk encryption unclocked by passphrase), <code>cipher</code>, <code>cipher mode</code>. Cryptsetup-reencrypt reencrypts data on LUKS device in-place. During reencryption process the LUKS device is marked unavailable. <i>NOTE</i>: If you&#8217;re looking for LUKS2 online reencryption manual please read <a href="/docs/linux/man/8-cryptsetup/">cryptsetup</a>(8) man page instead (see reencrypt action). This page is for legacy offline reencryption utility only. <i>WARNING</i>: The cryptsetup-reencrypt program is not resistant to hardware or kernel failures during reencryption (you can lose your data in this case). <i>ALWAYS BE SURE YOU HAVE RELIABLE BACKUP BEFORE USING THIS TOOL.</i><br />
+<p>Cryptsetup-reencrypt can be used to change reencryption parameters which otherwise require full on-disk data change (re-encryption). You can regenerate <code>volume key</code> (the real key used in on-disk encryption unclocked by passphrase), <code>cipher</code>, <code>cipher mode</code>. Cryptsetup-reencrypt reencrypts data on LUKS device in-place. During reencryption process the LUKS device is marked unavailable. <i>NOTE</i>: If you&#8217;re looking for LUKS2 online reencryption manual please read <a href="/docs/linux/man/8-cryptsetup/">cryptsetup</a>(8) man page instead (see reencrypt action). This page is for legacy offline reencryption utility only. <i>WARNING</i>: The cryptsetup-reencrypt program is not resistant to hardware or kernel failures during reencryption (you can lose your data in this case). <i>ALWAYS BE SURE YOU HAVE RELIABLE BACKUP BEFORE USING THIS TOOL.</i><br/>
  The reencryption can be temporarily suspended (by TERM signal or by using ctrl+c) but you need to retain temporary files named LUKS-&lt;uuid&gt;.[log|org|new]. LUKS device is unavailable until reencryption is finished though. Current working directory must be writable and temporary files created during reencryption must be present. For more info about LUKS see <a href="/docs/linux/man/8-cryptsetup/">cryptsetup</a>(8). </p>
 <h2>Options</h2>
 <dl>
@@ -127,7 +127,7 @@ description: "cryptsetup-reencrypt – tool for offline LUKS device re-encryptio
 <dt>Reencrypt and also change cipher and cipher mode</dt>
 <dd>cryptsetup-reencrypt /dev/sdb1 -c aes-xts-plain64</dd>
 <dt>Add LUKS encryption to not yet encrypted device</dt>
-<dd>First, be sure you have space added to disk. Or alternatively shrink filesystem in advance.<br />
+<dd>First, be sure you have space added to disk. Or alternatively shrink filesystem in advance.<br/>
  Here we need 4096 512-bytes sectors (enough for 2&#215;128 bit key). fdisk -u /dev/sdb # move sdb1 partition end + 4096 sectors (or use resize2fs or tool for your filesystem and shrink it) cryptsetup-reencrypt /dev/sdb1 &#8211;new &#8211;reduce-device-size 4096S</dd>
 <dt>Remove LUKS encryption completely</dt>
 <dd>cryptsetup-reencrypt /dev/sdb1 &#8211;decrypt </dd>
@@ -136,7 +136,7 @@ description: "cryptsetup-reencrypt – tool for offline LUKS device re-encryptio
 <h2>Authors</h2>
 <p>Cryptsetup-reencrypt was written by Milan Broz &lt;gmazyland [at] gmail.com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2012-2019 Milan Broz<br />
+<p>Copyright &#169; 2012-2019 Milan Broz<br/>
  Copyright &#169; 2012-2019 Red Hat, Inc. </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>

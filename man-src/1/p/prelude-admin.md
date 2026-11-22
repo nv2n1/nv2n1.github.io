@@ -19,9 +19,9 @@ description: "prelude-admin – Manage agents accounts"
 <p> <code>prelude-admin registration-server &lt;profile name&gt; [&#8211;uid UID] [&#8211;gid GID] [&#8211;prompt] [&#8211;passwd=PASSWD&gt;] [&#8211;passwd-file=&lt;FILE&gt;] [&#8211;keepalive] [&#8211;no-confirm] [&#8211;listen]</code> </p>
 <p> <code>prelude-admin revoke &lt;profile&gt; &lt;analyzerID&gt; [&#8211;uid UID] [&#8211;gid GID]</code> </p>
 <h2>DESCRIPTION</h2>
-<p> In order for an agent to communicate with a manager, it must be registered. Registration involves several steps:<br />
-&nbsp;<wbr>&#8211; Allocating an unique identity for the agent<br />
-&nbsp;<wbr>&#8211; Creating directory to be used by the agent&nbsp;<wbr>(example: failover purpose)<br />
+<p> In order for an agent to communicate with a manager, it must be registered. Registration involves several steps:<br/>
+&nbsp;<wbr>&#8211; Allocating an unique identity for the agent<br/>
+&nbsp;<wbr>&#8211; Creating directory to be used by the agent&nbsp;<wbr>(example: failover purpose)<br/>
 &nbsp;<wbr>&#8211; Registering to a remote&nbsp;<wbr>&#8216;prelude-manager&#8217;: get a signed X509 certificate that will allow communication between agent and manager using the specified permissions.&nbsp;<wbr> </p>
 <p> All these informations are stored in an agent profile. </p>
 <p> An agent profile is identified by its name. When an agent is started, it will load the profile of the same name as the program itself, that is, if your agent is named &quot;prelude-lml&quot;, the agent will load the profile named &quot;prelude-lml&quot;. </p>

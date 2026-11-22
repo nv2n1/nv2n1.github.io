@@ -83,8 +83,8 @@ description: "bmon – bandwidth monitor and rate estimator"
 <h2>Module Configuration</h2>
 <p>The syntax to configure modules is as follows: </p>
 <dl>
-<dd>ARGUMENT ::= mod1[:OPTS][,mod2[:OPTS]&#8230;]<br />
- OPTS ::= OPTION[;OPTION&#8230;]<br />
+<dd>ARGUMENT ::= mod1[:OPTS][,mod2[:OPTS]&#8230;]<br/>
+ OPTS ::= OPTION[;OPTION&#8230;]<br/>
  OPTION ::= option[=value]</dd></dl>
 <p> Run the module with option &quot;help&quot; to receive the list of options for each module: </p>
 <dl>
@@ -92,19 +92,19 @@ description: "bmon – bandwidth monitor and rate estimator"
 <h2>Interface Selection</h2>
 <p>The following syntax is used to define the interface selection policy: </p>
 <dl>
-<dd>SELECTION ::= NAME[,NAME[,&#8230;]]<br />
+<dd>SELECTION ::= NAME[,NAME[,&#8230;]]<br/>
  NAME ::= [!]interface</dd></dl>
 <p> The interface name may contain the character &#8216;*&#8217; which will act as a wildcard and represents any number of any character type, e.g. eth*, h*0, &#8230; </p>
 <p> Examples: </p>
 <dl>
-<dd>lo,eth0,eth1<br />
+<dd>lo,eth0,eth1<br/>
  eth*,!eth0</dd></dl>
 <h2>Examples</h2>
 <p>To run bmon in curses mode monitoring the interfaces eth0 and eth1:</p>
 <dl>
 <dd><code>bmon -p eth0,eth1 -o curses</code></dd></dl>
 <h2>Files</h2>
-<p>/etc/bmon.conf<br />
+<p>/etc/bmon.conf<br/>
  $HOME/.bmonrc</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ip/">ip</a></code>(8), <code><a href="/docs/linux/man/8-netstat/">netstat</a></code>(8), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code><a href="/docs/linux/man/7-netlink/">netlink</a></code>(7), </p>

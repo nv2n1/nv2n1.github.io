@@ -9,11 +9,11 @@ description: "Error Functions – Functions that set and retrieve error codes in
 
 <p>Error Functions &#8211; Functions that set and retrieve error codes in Embryo programs. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>embryo_program_error_set</code> (Embryo_Program *ep, int error)<br />
- <i>Sets the error code for the given program to the given code. </i><br />
- EAPI int <code>embryo_program_error_get</code> (Embryo_Program *ep)<br />
- <i>Retrieves the current error code for the given program. </i><br />
- EAPI const char * <code>embryo_error_string_get</code> (int error)<br />
+<p>EAPI void <code>embryo_program_error_set</code> (Embryo_Program *ep, int error)<br/>
+ <i>Sets the error code for the given program to the given code. </i><br/>
+ EAPI int <code>embryo_program_error_get</code> (Embryo_Program *ep)<br/>
+ <i>Retrieves the current error code for the given program. </i><br/>
+ EAPI const char * <code>embryo_error_string_get</code> (int error)<br/>
  <i>Retrieves a string describing the given error code. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that set and retrieve error codes in Embryo programs.</p>
@@ -38,7 +38,7 @@ description: "Error Functions – Functions that set and retrieve error codes in
 <p>Sets the error code for the given program to the given code. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ep</i> The given program.<br />
+<dd><i>ep</i> The given program.<br/>
  <i>error</i> The given error code.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Embryo from the source code.</p>

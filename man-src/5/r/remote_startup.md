@@ -111,11 +111,11 @@ description: "remote_startup – the xxQS_NAMExx remote startup mechanism"
 <p>It is important to note that the communication method set up for one particular startup method must match at each end. This can either be achieved by using only a global configuration, or carefully setting up local configurations for the exechosts involved. Whether or not local configurations exist, which must be taken care of, can be checked with <code>qconf -sconfl</code>. </p>
 <p> As a general rule, for setting up a communication method between a machine A (where the <code>command</code> is issued) and a machine B (where the <code>daemon</code> is started) it must be guaranteed that the: </p>
 <dl>
-<dd>setup communication method for the <code>command</code> on machine A<br />
+<dd>setup communication method for the <code>command</code> on machine A<br/>
  (either global configuration from or local configuration <code>qconf -sconf </code><code>A</code> of machine A)</dd></dl>
 <p> matches </p>
 <dl>
-<dd>setup communication method for the <code>daemon</code> for machine B<br />
+<dd>setup communication method for the <code>daemon</code> for machine B<br/>
  (either global configuration from or local configuration <code>qconf -sconf </code><code>B</code> of machine B)</dd></dl>
 <p> This way it is also possible to use different communication methods, depending whether a connection from A to B is invoked, or from B to A.</p>
 <h2>Restrictions</h2>
@@ -135,17 +135,17 @@ description: "remote_startup – the xxQS_NAMExx remote startup mechanism"
 <dl>
 <dd>in main():</dd>
 <dl>
-<dd>init_rng();<br />
- #ifdef SGESSH_INTEGRATION<br />
- sgessh_readconfig();<br />
+<dd>init_rng();<br/>
+ #ifdef SGESSH_INTEGRATION<br/>
+ sgessh_readconfig();<br/>
  #endif</dd></dl>
 <p> in privsep_postauth():</p>
 <dl>
-<dd>/* Drop privileges */<br />
- #ifdef SGESSH_INTEGRATION<br />
- sgessh_do_setusercontext(authctxt-&gt;pw);<br />
- #else<br />
- do_setusercontext(authctxt-&gt;pw);<br />
+<dd>/* Drop privileges */<br/>
+ #ifdef SGESSH_INTEGRATION<br/>
+ sgessh_do_setusercontext(authctxt-&gt;pw);<br/>
+ #else<br/>
+ do_setusercontext(authctxt-&gt;pw);<br/>
  #endif</dd></dl>
 <p> See the original documentation &lt;URL: <a rel="nofollow" href="http://gridengine.org/assets/static/ws2007/SGE-openSSHTightIntegration.RonChen.pdf">http://gridengine.org/assets/static/ws2007/SGE-openSSHTightIntegration.RonChen.pdf</a> &gt;.</dl>
 </dl>
@@ -157,19 +157,19 @@ description: "remote_startup – the xxQS_NAMExx remote startup mechanism"
 <h2>Examples</h2>
 <p>Using SSH with the PAM module, forcing tty allocation, and preventing the delegation of GSSAPI credentials to the compute nodes:</p>
 <dl>
-<dd>rsh_daemon /opt/sge/util/rshdwrapper<br />
- rsh_command ssh -tt -o GSSAPIDelegateCredentials=no<br />
- qlogin_daemon /opt/sge/util/rshdwrapper<br />
- qlogin_command ssh -tt -o GSSAPIDelegateCredentials=no<br />
- rlogin_daemon /opt/sge/util/rshdwrapper<br />
+<dd>rsh_daemon /opt/sge/util/rshdwrapper<br/>
+ rsh_command ssh -tt -o GSSAPIDelegateCredentials=no<br/>
+ qlogin_daemon /opt/sge/util/rshdwrapper<br/>
+ qlogin_command ssh -tt -o GSSAPIDelegateCredentials=no<br/>
+ rlogin_daemon /opt/sge/util/rshdwrapper<br/>
  rlogin_command ssh -tt -o GSSAPIDelegateCredentials=no</dd></dl>
 <p> Old-style method, using telnet and rlogin:</p>
 <dl>
-<dd>qlogin_command /usr/bin/telnet<br />
- qlogin_daemon /usr/sbin/in.telnetd<br />
- rlogin_command /opt/sge/utilbin/lx-x86/rlogin<br />
- rlogin_daemon /usr/sbin/in.rlogind<br />
- rsh_command /opt/sge/utilbin/lx-x86/rsh<br />
+<dd>qlogin_command /usr/bin/telnet<br/>
+ qlogin_daemon /usr/sbin/in.telnetd<br/>
+ rlogin_command /opt/sge/utilbin/lx-x86/rlogin<br/>
+ rlogin_daemon /usr/sbin/in.rlogind<br/>
+ rsh_command /opt/sge/utilbin/lx-x86/rsh<br/>
  rsh_daemon /opt/sge/utilbin/lx-x86/rshd -l</dd></dl>
 <h2>Files</h2>
 <dl>

@@ -13,7 +13,7 @@ description: "zmq_close – close 0MQ socket"
 <h2>Description</h2>
 <p>The <i>zmq_close()</i> function shall destroy the socket referenced by the <i>socket</i> argument. Any outstanding messages physically received from the network but not yet received by the application with <i>zmq_recv()</i> shall be discarded. The behaviour for discarding messages sent by the application with <i>zmq_send()</i> but not yet physically transferred to the network depends on the value of the <i>ZMQ_LINGER</i> socket option for the specified <i>socket</i>.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  The default setting of <i>ZMQ_LINGER</i> does not discard unsent messages; this behaviour may cause the application to block when calling <i>zmq_term()</i>. For details refer to <code><a href="/docs/linux/man/3-zmq_setsockopt/">zmq_setsockopt</a></code>(3) and <code>zmq_term</code>(3). </dd>
 <h2>Return Value</h2>
 <p>The <i>zmq_close()</i> function shall return zero if successful. Otherwise it shall return -1 and set <i>errno</i> to one of the values defined below.</p>

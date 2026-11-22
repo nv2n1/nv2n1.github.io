@@ -10,7 +10,7 @@ description: "dtpmqrt.f –"
 <p>dtpmqrt.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtpmqrt</code> (SIDE, TRANS, M, N, K, L, NB, V, LDV, T, LDT, A, LDA, B, LDB, WORK, INFO)<br />
+<p>subroutine <code>dtpmqrt</code> (SIDE, TRANS, M, N, K, L, NB, V, LDV, T, LDT, A, LDA, B, LDB, WORK, INFO)<br/>
  <i></i><code>DTPMQRT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtpmqrt (characterSIDE, characterTRANS, integerM, integerN, integerK, integerL, integerNB, double precision, dimension( ldv, * )V, integerLDV, double precision, dimension( ldt, * )T, integerLDT, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )WORK, integerINFO)</h3>

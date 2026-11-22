@@ -114,7 +114,7 @@ git clone <a href="git://github.com/davvid/git-cola.git">git://github.com/davvid
 <h2>GIT</h2>
 <p> <i>git-cola</i> is independently developed from the linkgit:git[7] suite, but you can use it just like any other git command, e.g. git cola.</p>
 <h2>AUTHOR</h2>
-<p> Written by David Aguilar &lt;m[blue]<code>davvid [at] gmail.com</code>m[]<font SIZE="-2">[1]</font>&gt;.</p>
+<p> Written by David Aguilar &lt;m[blue]<code>davvid [at] gmail.com</code>m[][1]&gt;.</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

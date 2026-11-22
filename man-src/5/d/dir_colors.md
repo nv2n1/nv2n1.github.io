@@ -327,7 +327,7 @@ description: "dir_colors – configuration file for"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code></code><br />
+<td><code></code><br/>
 </td>
 </tr>
 <tr VALIGN=top>

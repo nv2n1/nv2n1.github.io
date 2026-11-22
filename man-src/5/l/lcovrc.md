@@ -9,7 +9,7 @@ description: "lcovrc – lcov configuration file"
 
 <p>lcovrc &#8211; lcov configuration file</p>
 <h2>Description</h2>
-<p>The <i>lcovrc</i> file contains configuration information for the <code>lcov</code> code coverage tool (see <code><a href="/docs/linux/man/1-lcov/">lcov</a></code>(1)).<br />
+<p>The <i>lcovrc</i> file contains configuration information for the <code>lcov</code> code coverage tool (see <code><a href="/docs/linux/man/1-lcov/">lcov</a></code>(1)).<br/>
  The system-wide configuration file is located at <i>/etc/lcovrc</i>. To change settings for a single user, place a customized copy of this file at location <i>~/.lcovrc</i>. Where available, command-line options override configuration file settings. Lines in a configuration file can either be:</p>
 <dl>
 <dt> *</dt>
@@ -20,91 +20,91 @@ description: "lcovrc – lcov configuration file"
 <dd>statements in the form &#8216;<i>key</i> = <i>value</i>&#8216;. A list of valid statements and their description can be found in section &#8216;OPTIONS&#8217; below.</dd></dl>
 <p> <code>Example configuration:</code></p>
 <dl>
-<dd>#<br />
- # Example LCOV configuration file<br />
- #<br />
- # External style sheet file<br />
- #genhtml_css_file = gcov.css<br />
- # Coverage rate limits<br />
- genhtml_hi_limit = 90<br />
- genhtml_med_limit = 75<br />
- # Width of line coverage field in source code view<br />
- genhtml_line_field_width = 12<br />
- # Width of branch coverage field in source code view<br />
- genhtml_branch_field_width = 16<br />
- # Width of overview image<br />
- genhtml_overview_width = 80<br />
- # Resolution of overview navigation<br />
- genhtml_nav_resolution = 4<br />
- # Offset for source code navigation<br />
- genhtml_nav_offset = 10<br />
- # Do not remove unused test descriptions if non-zero<br />
- genhtml_keep_descriptions = 0<br />
- # Do not remove prefix from directory names if non-zero<br />
- genhtml_no_prefix = 0<br />
- # Do not create source code view if non-zero<br />
- genhtml_no_source = 0<br />
- # Specify size of tabs<br />
- genhtml_num_spaces = 8<br />
- # Highlight lines with converted-only data if non-zero<br />
- genhtml_highlight = 0<br />
- # Include color legend in HTML output if non-zero<br />
- genhtml_legend = 0<br />
- # Include HTML file at start of HTML output<br />
- #genhtml_html_prolog = prolog.html<br />
- # Include HTML file at end of HTML output<br />
- #genhtml_html_epilog = epilog.html<br />
- # Use custom HTML file extension<br />
- #genhtml_html_extension = html<br />
- # Compress all generated html files with gzip.<br />
- #genhtml_html_gzip = 1<br />
- # Include sorted overview pages<br />
- genhtml_sort = 1<br />
- # Include function coverage data display<br />
- #genhtml_function_coverage = 1<br />
- # Include branch coverage data display<br />
- #genhtml_branch_coverage = 1<br />
- # Specify the character set of all generated HTML pages<br />
- genhtml_charset=UTF-8<br />
- # Location of the gcov tool<br />
- #geninfo_gcov_tool = gcov<br />
- # Adjust test names if non-zero<br />
- #geninfo_adjust_testname = 0<br />
- # Calculate a checksum for each line if non-zero<br />
- geninfo_checksum = 0<br />
- # Enable libtool compatibility mode if non-zero<br />
- geninfo_compat_libtool = 0<br />
- # Specify whether to capture coverage data for external source<br />
- # files<br />
- #geninfo_external = 1<br />
- # Use gcov&#8217;s &#8211;all-blocks option if non-zero<br />
- #geninfo_gcov_all_blocks = 1<br />
- # Specify compatiblity modes (same as &#8211;compat option<br />
- # of geninfo)<br />
- #geninfo_compat = libtool=on, hammer=auto, split_crc=auto<br />
- # Adjust path to source files by removing or changing path<br />
- # components that match the specified pattern (Perl regular<br />
- # expression format)<br />
- #geninfo_adjust_src_path = /tmp/build =&gt; /usr/src # Specify if geninfo should try to automatically determine<br />
- # the base-directory when collecting coverage data.<br />
- geninfo_auto_base = 1<br />
- # Directory containing gcov kernel files<br />
- lcov_gcov_dir = /proc/gcov<br />
- # Location for temporary directories<br />
- lcov_tmp_dir = /tmp<br />
- # Show full paths during list operation if non-zero<br />
- lcov_list_full_path = 0<br />
- # Specify the maximum width for list output. This value is<br />
- # ignored when lcov_list_full_path is non-zero.<br />
- lcov_list_width = 80<br />
- # Specify the maximum percentage of file names which may be<br />
- # truncated when choosing a directory prefix in list output.<br />
- # This value is ignored when lcov_list_full_path is non-zero.<br />
- lcov_list_truncate_max = 20 # Specify if function coverage data should be collected and<br />
- # processed.<br />
- lcov_function_coverage = 1<br />
- # Specify if branch coverage data should be collected and<br />
- # processed.<br />
+<dd>#<br/>
+ # Example LCOV configuration file<br/>
+ #<br/>
+ # External style sheet file<br/>
+ #genhtml_css_file = gcov.css<br/>
+ # Coverage rate limits<br/>
+ genhtml_hi_limit = 90<br/>
+ genhtml_med_limit = 75<br/>
+ # Width of line coverage field in source code view<br/>
+ genhtml_line_field_width = 12<br/>
+ # Width of branch coverage field in source code view<br/>
+ genhtml_branch_field_width = 16<br/>
+ # Width of overview image<br/>
+ genhtml_overview_width = 80<br/>
+ # Resolution of overview navigation<br/>
+ genhtml_nav_resolution = 4<br/>
+ # Offset for source code navigation<br/>
+ genhtml_nav_offset = 10<br/>
+ # Do not remove unused test descriptions if non-zero<br/>
+ genhtml_keep_descriptions = 0<br/>
+ # Do not remove prefix from directory names if non-zero<br/>
+ genhtml_no_prefix = 0<br/>
+ # Do not create source code view if non-zero<br/>
+ genhtml_no_source = 0<br/>
+ # Specify size of tabs<br/>
+ genhtml_num_spaces = 8<br/>
+ # Highlight lines with converted-only data if non-zero<br/>
+ genhtml_highlight = 0<br/>
+ # Include color legend in HTML output if non-zero<br/>
+ genhtml_legend = 0<br/>
+ # Include HTML file at start of HTML output<br/>
+ #genhtml_html_prolog = prolog.html<br/>
+ # Include HTML file at end of HTML output<br/>
+ #genhtml_html_epilog = epilog.html<br/>
+ # Use custom HTML file extension<br/>
+ #genhtml_html_extension = html<br/>
+ # Compress all generated html files with gzip.<br/>
+ #genhtml_html_gzip = 1<br/>
+ # Include sorted overview pages<br/>
+ genhtml_sort = 1<br/>
+ # Include function coverage data display<br/>
+ #genhtml_function_coverage = 1<br/>
+ # Include branch coverage data display<br/>
+ #genhtml_branch_coverage = 1<br/>
+ # Specify the character set of all generated HTML pages<br/>
+ genhtml_charset=UTF-8<br/>
+ # Location of the gcov tool<br/>
+ #geninfo_gcov_tool = gcov<br/>
+ # Adjust test names if non-zero<br/>
+ #geninfo_adjust_testname = 0<br/>
+ # Calculate a checksum for each line if non-zero<br/>
+ geninfo_checksum = 0<br/>
+ # Enable libtool compatibility mode if non-zero<br/>
+ geninfo_compat_libtool = 0<br/>
+ # Specify whether to capture coverage data for external source<br/>
+ # files<br/>
+ #geninfo_external = 1<br/>
+ # Use gcov&#8217;s &#8211;all-blocks option if non-zero<br/>
+ #geninfo_gcov_all_blocks = 1<br/>
+ # Specify compatiblity modes (same as &#8211;compat option<br/>
+ # of geninfo)<br/>
+ #geninfo_compat = libtool=on, hammer=auto, split_crc=auto<br/>
+ # Adjust path to source files by removing or changing path<br/>
+ # components that match the specified pattern (Perl regular<br/>
+ # expression format)<br/>
+ #geninfo_adjust_src_path = /tmp/build =&gt; /usr/src # Specify if geninfo should try to automatically determine<br/>
+ # the base-directory when collecting coverage data.<br/>
+ geninfo_auto_base = 1<br/>
+ # Directory containing gcov kernel files<br/>
+ lcov_gcov_dir = /proc/gcov<br/>
+ # Location for temporary directories<br/>
+ lcov_tmp_dir = /tmp<br/>
+ # Show full paths during list operation if non-zero<br/>
+ lcov_list_full_path = 0<br/>
+ # Specify the maximum width for list output. This value is<br/>
+ # ignored when lcov_list_full_path is non-zero.<br/>
+ lcov_list_width = 80<br/>
+ # Specify the maximum percentage of file names which may be<br/>
+ # truncated when choosing a directory prefix in list output.<br/>
+ # This value is ignored when lcov_list_full_path is non-zero.<br/>
+ lcov_list_truncate_max = 20 # Specify if function coverage data should be collected and<br/>
+ # processed.<br/>
+ lcov_function_coverage = 1<br/>
+ # Specify if branch coverage data should be collected and<br/>
+ # processed.<br/>
  lcov_branch_coverage = 0
 </dd></dl>
 <h2>Options</h2>
@@ -113,12 +113,12 @@ description: "lcovrc – lcov configuration file"
 <dd>Specify an external style sheet file. Use this option to modify the appearance of the HTML output as generated by <code>genhtml</code>. During output generation, a copy of this file will be placed in the output directory. </dd>
 <p> This option corresponds to the &#8211;css-file command line option of <code>genhtml</code>. </p>
 <p> By default, a standard CSS file is generated.</dl>
-<p> <code>genhtml_hi_limit</code> = <i>hi_limit</i><br />
+<p> <code>genhtml_hi_limit</code> = <i>hi_limit</i><br/>
  <code>genhtml_med_limit</code> = <i>med_limit</i> </p>
 <dl>
 <dd>Specify coverage rate limits for classifying file entries. Use this option to modify the coverage rates (in percent) for line, function and branch coverage at which a result is classified as high, medium or low coverage. This classification affects the color of the corresponding entries on the overview pages of the HTML output: </dd>
-<p> High: hi_limit &lt;= rate &lt;= 100 default color: green<br />
- Medium: med_limit &lt;= rate &lt; hi_limit default color: orange<br />
+<p> High: hi_limit &lt;= rate &lt;= 100 default color: green<br/>
+ Medium: med_limit &lt;= rate &lt; hi_limit default color: orange<br/>
  Low: 0 &lt;= rate &lt; med_limit default color: red </p>
 <p> Defaults are 90 and 75 percent.</dl>
 <p> <code>genhtml_line_field_width</code> = <i>number_of_characters</i></p>
@@ -246,7 +246,7 @@ description: "lcovrc – lcov configuration file"
 <dd>Specify that geninfo should enable one or more compatibility modes when capturing coverage data. </dd>
 <p> This option corresponds to the &#8211;compat command line option of <code>geninfo</code>. </p>
 <p> Default is &#8216;libtool=on, hammer=auto, split_crc=auto&#8217;.</dl>
-<p> <code>geninfo_adjust_src_path</code> = <i>pattern</i> =&gt; <i>replacement</i><br />
+<p> <code>geninfo_adjust_src_path</code> = <i>pattern</i> =&gt; <i>replacement</i><br/>
  <code>geninfo_adjust_src_path</code> = <i>pattern</i></p>
 <dl>
 <dd>Adjust source paths when capturing coverage data. </dd>

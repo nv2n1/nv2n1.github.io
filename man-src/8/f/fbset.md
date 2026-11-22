@@ -127,7 +127,7 @@ description: "fbset – show and modify frame buffer device settings"
 <dl>
 <dd><code>export</code> FRAMEBUFFER=<i>/dev/fb0</i></dd></dl>
 <h2>Files</h2>
-<p><i>/dev/fb*</i><br />
+<p><i>/dev/fb*</i><br/>
  <i>/etc/fb.modes</i></p>
 <h2>See Also</h2>
 <p><code>fb.modes</code>(5), <code><a href="/docs/linux/man/4-fbdev/">fbdev</a></code>(4)</p>

@@ -10,7 +10,7 @@ description: "chla_transtype.f –"
 <p>chla_transtype.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>CHARACTER *1 function <code>chla_transtype</code> (TRANS)<br />
+<p>CHARACTER *1 function <code>chla_transtype</code> (TRANS)<br/>
  <i></i><code>CHLA_TRANSTYPE</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>CHARACTER*1 function chla_transtype (integerTRANS)</h3>

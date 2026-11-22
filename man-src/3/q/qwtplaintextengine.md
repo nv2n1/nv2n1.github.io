@@ -13,14 +13,14 @@ description: "QwtPlainTextEngine –"
 <p>#include &lt;qwt_text_engine.h&gt; </p>
 <p> Inherits <code>QwtTextEngine</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlainTextEngine</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPlainTextEngine</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlainTextEngine</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPlainTextEngine</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual double <code>heightForWidth</code> (const QFont &amp;font, int flags, const QString &amp;text, double width) const </p>
 <p> virtual QSizeF <code>textSize</code> (const QFont &amp;font, int flags, const QString &amp;text) const </p>
-<p> virtual void <code>draw</code> (QPainter *painter, const QRectF &amp;rect, int flags, const QString &amp;text) const<br />
- <i>Draw the text in a clipping rectangle. </i><br />
+<p> virtual void <code>draw</code> (QPainter *painter, const QRectF &amp;rect, int flags, const QString &amp;text) const<br/>
+ <i>Draw the text in a clipping rectangle. </i><br/>
  virtual bool <code>mightRender</code> (const QString &amp;) const </p>
 <p> virtual void <code>textMargins</code> (const QFont &amp;, const QString &amp;, double &amp;left, double &amp;right, double &amp;top, double &amp;bottom) const </p>
 <h3>Additional Inherited Members</h3>
@@ -32,18 +32,18 @@ description: "QwtPlainTextEngine –"
 <p>Draw the text in a clipping rectangle. A wrapper for QPainter::drawText. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>rect</i> Clipping rectangle<br />
- <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText<br />
+<dd><i>painter</i> Painter<br/>
+ <i>rect</i> Clipping rectangle<br/>
+ <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText<br/>
  <i>text</i> Text to be rendered</dd></dl>
 <p> Implements <code>QwtTextEngine</code>.</p>
 <h3>double QwtPlainTextEngine::heightForWidth (const QFont &amp;font, intflags, const QString &amp;text, doublewidth) const [virtual]</h3>
 <p>Find the height for a given width </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>font</i> Font of the text<br />
- <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText<br />
- <i>text</i> Text to be rendered<br />
+<dd><i>font</i> Font of the text<br/>
+ <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText<br/>
+ <i>text</i> Text to be rendered<br/>
  <i>width</i> Width</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -59,18 +59,18 @@ description: "QwtPlainTextEngine –"
 <p>Return margins around the texts </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>font</i> Font of the text<br />
- <i>left</i> Return 0<br />
- <i>right</i> Return 0<br />
- <i>top</i> Return value for the top margin<br />
+<dd><i>font</i> Font of the text<br/>
+ <i>left</i> Return 0<br/>
+ <i>right</i> Return 0<br/>
+ <i>top</i> Return value for the top margin<br/>
  <i>bottom</i> Return value for the bottom margin</dd></dl>
 <p> Implements <code>QwtTextEngine</code>.</p>
 <h3>QSizeF QwtPlainTextEngine::textSize (const QFont &amp;font, intflags, const QString &amp;text) const [virtual]</h3>
 <p>Returns the size, that is needed to render text </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>font</i> Font of the text<br />
- <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText<br />
+<dd><i>font</i> Font of the text<br/>
+ <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText<br/>
  <i>text</i> Text to be rendered</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

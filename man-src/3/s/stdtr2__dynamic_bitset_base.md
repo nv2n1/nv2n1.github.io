@@ -54,7 +54,7 @@ static size_type _S_whichbyte (size_type __pos) noexcept
 static size_type _S_whichword (size_type __pos) noexcept
 Public Attributes</code></pre>
 <p> <code>__pad0__</code>: <code>_M_w</code>(__alloc) { } explicit <code>__dynamic_bitset_base</code>(<code>__dynamic_bitset_base</code>&amp;&amp; __b) { this-&gt;_M_w.swap(__b._M_w) </p>
-<p> <code>std::vector</code>&lt; block_type,<br />
+<p> <code>std::vector</code>&lt; block_type,<br/>
  allocator_type &gt; <code>_M_w</code>&quot;</p>
 <h3>Static Public Attributes</h3>
 <pre><code>static const size_type _S_bits_per_block

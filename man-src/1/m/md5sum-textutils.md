@@ -47,11 +47,11 @@ description: "md5sum – compute and check MD5 message digest"
 <h2>Author</h2>
 <p>Written by Ulrich Drepper, Scott Miller, and David Madore.</p>
 <h2>Reporting Bugs</h2>
-<p>GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+<p>GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br/>
  Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p>Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>See Also</h2>
-<p>Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/md5sum">https://www.gnu.org/software/coreutils/md5sum</a>&gt;<br />
+<p>Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/md5sum">https://www.gnu.org/software/coreutils/md5sum</a>&gt;<br/>
  or available locally via: info &#8216;(coreutils) md5sum invocation&#8217;</p>

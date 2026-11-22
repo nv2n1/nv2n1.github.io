@@ -10,7 +10,7 @@ description: "cla_herpvgrw.f –"
 <p>cla_herpvgrw.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>cla_herpvgrw</code> (UPLO, N, INFO, A, LDA, AF, LDAF, IPIV, WORK)<br />
+<p>REAL function <code>cla_herpvgrw</code> (UPLO, N, INFO, A, LDA, AF, LDAF, IPIV, WORK)<br/>
  <i></i><code>CLA_HERPVGRW</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function cla_herpvgrw (character*1UPLO, integerN, integerINFO, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, real, dimension( * )WORK)</h3>

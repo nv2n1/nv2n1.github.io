@@ -14,10 +14,10 @@ description: "ANTLR3_CYCLIC_DFA_struct –"
 <p> #include &lt;<a href="file:/usr/include/antlr3cyclicdfa.h">antlr3cyclicdfa.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> const <code>ANTLR3_INT32</code> *const <code>accept</code> </p>
-<p> const <code>ANTLR3_INT32</code> <code>decisionNumber</code><br />
- <i>Decision number that a particular static structure represents. </i><br />
- const <code>pANTLR3_UCHAR</code> <code>description</code><br />
- <i>What this decision represents. </i><br />
+<p> const <code>ANTLR3_INT32</code> <code>decisionNumber</code><br/>
+ <i>Decision number that a particular static structure represents. </i><br/>
+ const <code>pANTLR3_UCHAR</code> <code>description</code><br/>
+ <i>What this decision represents. </i><br/>
  const <code>ANTLR3_INT32</code> *const <code>eof</code> </p>
 <p> const <code>ANTLR3_INT32</code> *const <code>eot</code> </p>
 <p> const <code>ANTLR3_INT32</code> *const <code>max</code> </p>

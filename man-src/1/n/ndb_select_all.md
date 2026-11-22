@@ -108,17 +108,17 @@ shell &gt;./ ndb_select_all &#8211; c localhost fish &#8211; d ctest1 id name 3 
 <dl>
 <dt>
 </dt><dd>
-CREATE TABLE dogs(<br />
-    id INT(11) NOT NULL AUTO_INCREMENT,<br />
-    name VARCHAR(25) NOT NULL,<br />
-    breed VARCHAR(50) NOT NULL,<br />
-    PRIMARY KEY pk(id),<br />
-    KEY ix(name))<br />
-    TABLESPACE ts STORAGE DISK<br />
-    ENGINE = NDBCLUSTER;<br />
-INSERT INTO dogs VALUES(&#8221;, &#8216;Lassie&#8217;, &#8216;collie&#8217;),<br />
-    (&#8221;, &#8216;Scooby-Doo&#8217;, &#8216;Great Dane&#8217;),<br />
-    (&#8221;, &#8216;Rin-Tin-Tin&#8217;, &#8216;Alsatian&#8217;),<br />
+CREATE TABLE dogs(<br/>
+    id INT(11) NOT NULL AUTO_INCREMENT,<br/>
+    name VARCHAR(25) NOT NULL,<br/>
+    breed VARCHAR(50) NOT NULL,<br/>
+    PRIMARY KEY pk(id),<br/>
+    KEY ix(name))<br/>
+    TABLESPACE ts STORAGE DISK<br/>
+    ENGINE = NDBCLUSTER;<br/>
+INSERT INTO dogs VALUES(&#8221;, &#8216;Lassie&#8217;, &#8216;collie&#8217;),<br/>
+    (&#8221;, &#8216;Scooby-Doo&#8217;, &#8216;Great Dane&#8217;),<br/>
+    (&#8221;, &#8216;Rin-Tin-Tin&#8217;, &#8216;Alsatian&#8217;),<br/>
     (&#8221;, &#8216;Rosscoe&#8217;, &#8216;Mutt&#8217;);
 </dd></dl>
 <p> This demonstrates the use of several additional <code>ndb_select_all</code> options: </p>

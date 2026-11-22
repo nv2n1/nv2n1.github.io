@@ -40,5 +40,5 @@ description: "sg_test_rwbuf – test a SCSI host adapter by issuing dummy writes
 <h2>Authors</h2>
 <p>Written by D. Gilbert and K. Garloff</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2000-2012 Douglas Gilbert, Kurt Garloff<br />
+<p>Copyright &#169; 2000-2012 Douglas Gilbert, Kurt Garloff<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>

@@ -18,16 +18,16 @@ description: "PAPI_remove_events –"
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_remove_events(&nbsp;<wbr>int&nbsp;<wbr>&nbsp;<wbr>EventSet, int&nbsp;<wbr>*&nbsp;<wbr>EventCode, int&nbsp;<wbr>&nbsp;<wbr>number&nbsp;<wbr>)</code>;</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>EventSet</i> an integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code><br />
- <i>*Events</i> an array of defined events<br />
+<dd><i>EventSet</i> an integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code><br/>
+ <i>*Events</i> an array of defined events<br/>
  <i>number</i> an integer indicating the number of events in the array *EventCode</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>Positive</i> integer The number of consecutive elements that succeeded before the error.<br />
- <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
- <i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br />
- <i>PAPI_EISRUN</i> The EventSet is currently counting events.<br />
- <i>PAPI_ECNFLCT</i> The underlying counter hardware can not count this event and other events in the EventSet simultaneously.<br />
+<dd><i>Positive</i> integer The number of consecutive elements that succeeded before the error.<br/>
+ <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br/>
+ <i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br/>
+ <i>PAPI_EISRUN</i> The EventSet is currently counting events.<br/>
+ <i>PAPI_ECNFLCT</i> The underlying counter hardware can not count this event and other events in the EventSet simultaneously.<br/>
  <i>PAPI_ENOEVNT</i> The PAPI preset is not available on the underlying hardware.</dd></dl>
 <p> <code>Example:</code></p>
 <dl COMPACT>

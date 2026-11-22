@@ -11,7 +11,7 @@ description: "arm_is_charset_supported – check character encoding"
 <p> arm_is_charset_supported &#8211; check character encoding</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
-<p> <code>arm_error_t<br />
+<p> <code>arm_error_t<br/>
  arm_is_charset_supported( </p>
 <p>&nbsp;<wbr>const arm_charset_t&nbsp;<wbr></code><i>charset</i><code>, </p>
 <p>&nbsp;<wbr>arm_boolean_t&nbsp;<wbr>*</code><i>supported</i><code>);</code></p>

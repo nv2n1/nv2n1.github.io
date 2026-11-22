@@ -294,9 +294,9 @@ description: "TkCVS – a Tk/Tcl Graphical Interface to CVS and Subversion"
 <dt><code>cvscfg(cvsroot)</code></dt>
 <dd> If set, it overrides the CVSROOT environment variable.</dd></dl>
 <h3>Subversion</h3>
-<p> If your SVN repository has a structure similar to trunk, branches, and tags but with different names, you can tell TkCVS about it by setting variables in tkcvs_def.tcl:<br />
-&nbsp;<wbr>set cvscfg(svn_trunkdir)&nbsp;<wbr>&quot;elephants&quot;<br />
-&nbsp;<wbr>set cvscfg(svn_branchdir)&nbsp;<wbr>&quot;dogs&quot;<br />
+<p> If your SVN repository has a structure similar to trunk, branches, and tags but with different names, you can tell TkCVS about it by setting variables in tkcvs_def.tcl:<br/>
+&nbsp;<wbr>set cvscfg(svn_trunkdir)&nbsp;<wbr>&quot;elephants&quot;<br/>
+&nbsp;<wbr>set cvscfg(svn_branchdir)&nbsp;<wbr>&quot;dogs&quot;<br/>
 &nbsp;<wbr>set cvscfg(svn_tagdir)&nbsp;<wbr>&quot;ducklings&quot; The branch browser depends on the convention of having a trunk, branches, and tags structure to draw the diagram. These variables may give you a little more flexibility.</p>
 <h3>GUI</h3>
 <p> Most colors and fonts can be customized by using the options database. For example, you can add lines like these to your .tkcvs file: </p>

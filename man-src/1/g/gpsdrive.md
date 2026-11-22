@@ -22,7 +22,7 @@ description: "gpsdrive – displays GPS position on a map"
 <p> &quot;<code>Gpsd</code> is a service daemon that monitors one or more GPSes attached to a host computer through serial or USB ports, making all data on the location/course/velocity of the sensors available to be queried on a TCP port of the host computer. With <code>gpsd</code>, multiple GPS client applications (such as navigational and wardriving software) can share access to GPSes without contention or loss of data.&quot; </p>
 <p> You must install and launch <code>gpsd</code> before running <code>GpsDrive</code>. </p>
 <h2>DISCLAIMER</h2>
-<p> <code>Do not use GpsDrive as a primary means of navigation!</code><br />
+<p> <code>Do not use GpsDrive as a primary means of navigation!</code><br/>
  <code>Keep your eyes on the road and hands on the wheel.</code> </p>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License (GPL) for more details. </p>
 <h2>OPTIONS</h2>
@@ -71,7 +71,7 @@ description: "gpsdrive – displays GPS position on a map"
 <dd> The X-Window display to use. </dd>
 </dl>
 <h2>CONNECTING A GPS RECEIVER</h2>
-<p> <code>Start GPSD</code><br />
+<p> <code>Start GPSD</code><br/>
  This program runs as daemon in background and provides a server which sends the GPS data on port number 2947. You can download and learn more about <code>gpsd</code> at <i><a rel="nofollow" href="http://gpsd.berlios.de">http://gpsd.berlios.de</a></i>. </p>
 <p> Once <code>gpsd</code> is running you can monitor the raw NMEA output of your GPS with <code>telnet localhost 2947</code> and after the connection is made hit the <code>R</code> key to see the NMEA sentences. You can use the <code>xgps</code> program that comes with <code>gpsd</code> for a more comprehensive test. </p>
 <p> If you have connected a GPS receiver, and are successfully communicating with it, you will see GpsDrive&#8217;s signal strength indicator turn from red to green. By clicking on the signal strength indicator you can open the <i>Satellite Info</i> window which will show you information about the satellites in view. </p>
@@ -86,17 +86,17 @@ description: "gpsdrive – displays GPS position on a map"
 <p> In simulation mode the pointer will move by itself on the map towards the target position. It may be switched permanently on or off in the <i>Preferences</i> menu. </p>
 <h3>Modes Of Operation</h3>
 <p> <code>GpsDrive</code> operates in three modes: </p>
-<p> <code>Normal mode:</code><br />
- This mode is entered if you have a GPS receiver connected. The cursor is at the position your GPS receiver sends.<br />
- Black and red arrows show your position on the map. The <code>red arrow</code> points to your selected target (aka &quot;<i>Bearing</i>&quot;), and the <code>black arrow</code> shows the direction in which you are moving (aka &quot;<i>Heading</i>&quot;).<br />
+<p> <code>Normal mode:</code><br/>
+ This mode is entered if you have a GPS receiver connected. The cursor is at the position your GPS receiver sends.<br/>
+ Black and red arrows show your position on the map. The <code>red arrow</code> points to your selected target (aka &quot;<i>Bearing</i>&quot;), and the <code>black arrow</code> shows the direction in which you are moving (aka &quot;<i>Heading</i>&quot;).<br/>
  When the GPS is not sending a valid position the arrows blink. </p>
-<p> <code>Simulation mode</code><br />
+<p> <code>Simulation mode</code><br/>
  If GpsDrive does not find a GPS receiver when the program starts, it shows the last known position and the cursor will move towards the target you set. You can set the target with a right-mouse click on the map or by selecting a waypoint from the <i>Find</i> dialog. The target appears as a cross-hair and is available in all modes. </p>
-<p> <code>Explore mode</code><br />
- In this mode you can temporarily change the cursor position for looking around and jumping to other positions (e.g. for downloading maps). The lat/lon position shown in the dashboard is that of the current <code>mouse position</code>.<br />
- This mode is selected by ticking the &quot;Explore mode&quot; box in the <i>Map Control</i> window, or if you &quot;Jump to POI&quot; in the <i>Find</i> window. The <i>Jump</i> button simply jumps to the current target, so it is useful to move the target to a waypoint/POI first by selecting one from the list.<br />
- In this mode GpsDrive <code>does not show your real position</code> and the positioning arrows are replaced with a box.<br />
- You can relocate your position with a simple left-mouse click on the map or with the arrow keys (including diagonals on the keypad). Maps are automatically scrolled or load the next map when you click near the border.<br />
+<p> <code>Explore mode</code><br/>
+ In this mode you can temporarily change the cursor position for looking around and jumping to other positions (e.g. for downloading maps). The lat/lon position shown in the dashboard is that of the current <code>mouse position</code>.<br/>
+ This mode is selected by ticking the &quot;Explore mode&quot; box in the <i>Map Control</i> window, or if you &quot;Jump to POI&quot; in the <i>Find</i> window. The <i>Jump</i> button simply jumps to the current target, so it is useful to move the target to a waypoint/POI first by selecting one from the list.<br/>
+ In this mode GpsDrive <code>does not show your real position</code> and the positioning arrows are replaced with a box.<br/>
+ You can relocate your position with a simple left-mouse click on the map or with the arrow keys (including diagonals on the keypad). Maps are automatically scrolled or load the next map when you click near the border.<br/>
  To leave Explore Mode untick the &quot;Explore mode&quot; entry in the <i>Map Control</i> window, or middle or right-mouse click on the map. If a right-mouse click is used the target is reset to that position in the process. </p>
 <p> You can change the preferred map scale with mouse wheel, or if there is no mouse wheel, with Shift-left and right mouse click. This works from any mode. </p>
 <p> Please have a look in the <code>Help</code> menu in GpsDrive to learn more about available keyboard shortcuts and mouse functions. </p>
@@ -105,16 +105,16 @@ description: "gpsdrive – displays GPS position on a map"
 <p> GpsDrive now supports OSM maps with the help of the Mapnik renderer. To activate this mode you have to build GpsDrive with the Mapnik option enabled. </p>
 <h3>Map Download</h3>
 <p> You can easily download maps from the internet with the <code>Download</code> tool. This is found in the Options -&gt; Maps menu. A preview of already downloaded maps near to the current preferred mapscale are shown as yellow rectangles drawn over the map. The area to be downloaded is drawn as a green rectangle over the map. Reposition the area to be downloaded with a left-mouse click. </p>
-<p> There is also a program called <i>gpsfetchmap.pl</i> provided with GpsDrive which can be used to automatically download a series of maps covering a larger area.<br />
+<p> There is also a program called <i>gpsfetchmap.pl</i> provided with GpsDrive which can be used to automatically download a series of maps covering a larger area.<br/>
  <code>Please consider the copyright information and terms of service</code> of map providers if you want to use their maps! <code>Do not misuse this service by downloading more maps than you need!</code> You will risk being blocked by these servers, and possibly cause trouble for the GpsDrive project. </p>
 <p> If you must access the internet via a proxy server, set the <i>HTTP_PROXY</i> or <i>http_proxy</i> environment variable to a value like <i><a rel="nofollow" href="http://proxy.provider.com:3128">http://proxy.provider.com:3128</a></i> where 3128 in this example is the proxy port. </p>
 <h3>About Maps</h3>
 <p> GpsDrive stores an index of your maps in a file called &quot;map_koord.txt&quot; in your ~/.gpsdrive/maps/ directory. You can use another directory for your maps if you like, to change this set the appropriate directory in the Preferences menu. </p>
 <p> Here is a sample of its contents: </p>
-<p> top_WORLD.jpg 0.00000 0.00000 88226037<br />
- map_file0000.gif 53.60751 10.01145 3160000<br />
- map_file0001.gif 43.08210 12.24552 3160000<br />
- map_file0002.gif 49.81574 9.71454 7900000<br />
+<p> top_WORLD.jpg 0.00000 0.00000 88226037<br/>
+ map_file0000.gif 53.60751 10.01145 3160000<br/>
+ map_file0001.gif 43.08210 12.24552 3160000<br/>
+ map_file0002.gif 49.81574 9.71454 7900000<br/>
  map_file0003.gif 47.72837 14.46487 592500 </p>
 <p> The first column is the filename, then comes the latitude, the longitude and the scale of the map. Typical scales for all of Europe might be 1:10,000,000, and 1:100,000 for a town. To see detailed streets in a city, choose a scale like 1:10,000 or 1:5,000. </p>
 <p> You can figure out the exact &quot;scale&quot; factor by meters/pixel * 2817.947378. The 2817 number is derived from some ancient screen dpi converted into pixels/meter. </p>
@@ -130,8 +130,8 @@ description: "gpsdrive – displays GPS position on a map"
 <h3>Importing waypoints</h3>
 <p> The manual way: </p>
 <p> You may create a file &quot;way.txt&quot; in your ~/.gpsdrive directory which looks like: </p>
-<p> DFN-Cert 53.577694 9.991263 FRITZ<br />
- Finkenwerder 53.541765 9.842541 AIRPORT<br />
+<p> DFN-Cert 53.577694 9.991263 FRITZ<br/>
+ Finkenwerder 53.541765 9.842541 AIRPORT<br/>
  Fritz_Wohnung 53.582700 9.971390 FRITZ </p>
 <p> The rows are: {label latitude longitude waypoint-type}. The label may not exceed 80 characters or contain spaces. Use underscores (_) in place of spaces, these will automatically be converted into spaces by the program. A blank label is denoted by a single underscore. </p>
 <p> Latitude and longitude may be in decimal degrees or in the form of DDDdMM&#8217;SS&quot;[NSEW] or DDD:MM:SS[NSEW]. Seconds or minutes and seconds may be omitted or in decimal form. Thus the following are valid: 42d30&#8217;55&quot;N, 75:30.6425W, -46.25. In fact the delimiters can be anything except numbers, &quot;.&quot;, or spaces. </p>
@@ -158,7 +158,7 @@ description: "gpsdrive – displays GPS position on a map"
 <p> $waypoint_name Text which is displayed and spoken </p>
 <p> $next_waypoint_name Some more text </p>
 <p> Example: </p>
-<p> $Fritz_Wohnung Hier wohnt Fritz, der Autor von diesem Programm. Er freut sich auf Besuch und eine Einladung zu einem saftigen Steak.<br />
+<p> $Fritz_Wohnung Hier wohnt Fritz, der Autor von diesem Programm. Er freut sich auf Besuch und eine Einladung zu einem saftigen Steak.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> $Hubertus Hier wohnt Hubertus, ein Freund von Fritz. </p>
 <p> There is no limit of the length of the comment. It is important is to start the line with &#8216;$name&#8217; and the comment on the following line. </p>
 <h3>Route planning</h3>
@@ -168,15 +168,15 @@ description: "gpsdrive – displays GPS position on a map"
 <p> For more details have a look at the <i>README.kismet</i> file. </p>
 <h2>LOCALISATION</h2>
 <p> The program will display messages in English, German, French, Italian, Dutch, Dansk, Hungarian, Slovak, Swedish, Turkish or Spanish if your language is set either with LANG or LANGUAGE. LANGUAGE overrides all other settings. Call &quot;locale&quot; to see the settings and call &quot;set&quot; if LANG or LANGUAGE is set. For German do: </p>
-<p> <code>export LANGUAGE=de</code><br />
+<p> <code>export LANGUAGE=de</code><br/>
  and then call gpsdrive in this shell. </p>
 <p> You can also start it with the line <code>LANGUAGE=de gpsdrive</code> without setting the language for the shell. </p>
 <p> Sometimes it is necessary use LANG instead of LANGUAGE. </p>
 <p> If your own language isn&#8217;t available, please contact the GpsDrive Development Team if you want to make the translation. No programming experience is necessary! </p>
 <h2>SPEECH OUTPUT</h2>
-<p> If you want speech output you have to install speech dispatcher and at least one of the supported speech synthesizers (festival, espeak, &#8230;).<br />
+<p> If you want speech output you have to install speech dispatcher and at least one of the supported speech synthesizers (festival, espeak, &#8230;).<br/>
  See <i><a rel="nofollow" href="http://www.freebsoft.org/speechd">http://www.freebsoft.org/speechd</a></i> for information. </p>
-<p> For German output you can use espeak or the German festival from<br />
+<p> For German output you can use espeak or the German festival from<br/>
  <i><a rel="nofollow" href="http://www.ims.uni-stuttgart.de/phonetik/synthesis/index.html">http://www.ims.uni-stuttgart.de/phonetik/synthesis/index.html</a></i> </p>
 <p> If you have a functional festival software call it as server with: </p>
 <p> festival &#8211;server </p>
@@ -208,7 +208,7 @@ description: "gpsdrive – displays GPS position on a map"
 <h2>WARRANTY</h2>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (c) 2001-2004 by Fritz Ganter<br />
+<p> Copyright (c) 2001-2004 by Fritz Ganter<br/>
  Copyright (c) 2005-2008 by the members of the GpsDrive Development Team </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. Indeed, you are encouraged to do so! </p>
 <h3>This document last modified</h3>

@@ -21,7 +21,7 @@ description: "aa-enabled – test whether AppArmor is enabled"
 <dt>-q, &#8211;quiet</dt>
 <dd> Do not output anything to stdout. This option is intended to be used by scripts that simply want to use the exit code to determine if AppArmor is enabled.</dd>
 <dt>-x, &#8211;exclusive</dt>
-<dd> Require AppArmor to have exclusive access to shared <font SIZE="-1">LSM</font> interfaces to be considered enabled.</dd></dl>
+<dd> Require AppArmor to have exclusive access to shared LSM interfaces to be considered enabled.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> Upon exiting, <code>aa-enabled</code> will set its exit status to the following values:</p>
 <dl>
@@ -36,7 +36,7 @@ description: "aa-enabled – test whether AppArmor is enabled"
 <dt><code>4</code></dt>
 <dd> if <code>aa-enabled</code> doesn&#8217;t have enough privileges to read the apparmor control files.</dd>
 <dt><code>10</code></dt>
-<dd> AppArmor is enabled but does not have access to shared <font SIZE="-1">LSM</font> interfaces.</dd>
+<dd> AppArmor is enabled but does not have access to shared LSM interfaces.</dd>
 <dt><code>64</code></dt>
 <dd> if any unexpected error or condition is encountered.</dd></dl>
 <h2>BUGS</h2>

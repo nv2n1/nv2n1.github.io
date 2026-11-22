@@ -11,7 +11,7 @@ description: "dgsvj0.f –"
 <p> dgsvj0.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgsvj0</code> (JOBV, M, N, A, LDA, D, SVA, MV, V, LDV, EPS, SFMIN, TOL, NSWEEP, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dgsvj0</code> (JOBV, M, N, A, LDA, D, SVA, MV, V, LDV, EPS, SFMIN, TOL, NSWEEP, WORK, LWORK, INFO)<br/>
  <i></i><code>DGSVJ0</code> pre-processor for the routine sgesvj.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgsvj0 (character*1JOBV, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( n )D, double precision, dimension( n )SVA, integerMV, double precision, dimension( ldv, * )V, integerLDV, double precisionEPS, double precisionSFMIN, double precisionTOL, integerNSWEEP, double precision, dimension( lwork )WORK, integerLWORK, integerINFO)</h3>

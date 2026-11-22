@@ -10,16 +10,16 @@ description: "mcrypt, mdecrypt – encrypt or decrypt files"
 
 <p> mcrypt, mdecrypt - encrypt or decrypt files  </p>
 <h2>SYNOPSIS</h2>
-<p> <code>mcrypt</code> [<code> -dLFubhvrzp </code>] [<code>-a algorithm</code>] [<code>-c config_file</code>] [<code>-m mode</code>] [<code>-s keysize</code>] [<code>-o keymode</code>] [<code>-k key1 key2 ...</code>] [<code>-f keyfile</code>] [ <i>filename ...</i> ] <br />
+<p> <code>mcrypt</code> [<code> -dLFubhvrzp </code>] [<code>-a algorithm</code>] [<code>-c config_file</code>] [<code>-m mode</code>] [<code>-s keysize</code>] [<code>-o keymode</code>] [<code>-k key1 key2 ...</code>] [<code>-f keyfile</code>] [ <i>filename ...</i> ] <br/>
  </p>
-<p> <code>mdecrypt</code> [<code> -LFusbhvzp </code>] [<code>-a algorithm</code>] [<code>-c config_file</code>] [<code>-m mode</code>] [<code>-s keysize</code>] [<code>-o keymode</code>] [<code>-k key1 key2 ...</code>] [<code>-f keyfile</code>] [ <i>filename ...</i> ] <br />
+<p> <code>mdecrypt</code> [<code> -LFusbhvzp </code>] [<code>-a algorithm</code>] [<code>-c config_file</code>] [<code>-m mode</code>] [<code>-s keysize</code>] [<code>-o keymode</code>] [<code>-k key1 key2 ...</code>] [<code>-f keyfile</code>] [ <i>filename ...</i> ] <br/>
   </p>
 <h2>DESCRIPTION</h2>
 <p> <i>Mcrypt</i> is a simple crypting program, a replacement for the old unix <i>crypt</i>(1). When encrypting or decrypting a file, a new file is created with the extension <code>.nc</code> and mode 0600. The new file keeps the modification date of the original. The original file may be deleted by specifying the -u parameter. If no files are specified, the standard input is encrypted to the standard output. </p>
 <p> <i>Mcrypt</i> uses all the symmetric algorithms included in libmcrypt. </p>
 <h2>HINTS</h2>
-<p> By default, <i>mcrypt</i> , when one of these algorithms is specified, prompts something like: <br />
-&nbsp;<wbr>Enter passphrase: ... <br />
+<p> By default, <i>mcrypt</i> , when one of these algorithms is specified, prompts something like: <br/>
+&nbsp;<wbr>Enter passphrase: ... <br/>
 &nbsp;<wbr>You should then enter a passphrase long enough&nbsp;<wbr>(512 characters is the maximum length). Now in order to encrypt the file, The passphrase is transformed using the specified (or the default) key generation algorithm, and a random salt. The produced value is then used as the key, which is fed to the algorithm. </p>
 <p> <code>Algorithm Vulnerability:</code> Most algorithms today are designed to resist in specific attacks. None of them is proved not to be vulnerable to some kind of attack not as yet known. </p>
 <p> <code>Compression:</code> By compressing your data before encryption you gain both in efficiency (faster encryption) and safety of your data (language redundancy is removed). A drawback is that most compression programs will add specific headers in the compressed file, thus making known plaintext attacks easier. Compression after encryption is useless and may result to compressed files with longer size than the original. </p>
@@ -106,9 +106,9 @@ description: "mcrypt, mdecrypt – encrypt or decrypt files"
 <dd> <p> Enter the keyword(s) via the command line. The KEY(s) is/are then used as keyword instead of prompting for them. Keep in mind that someone may see the command you are executing and so your keyword(s). </p>
  </dd>
 <dt><code>-c --config FILE</code></dt>
-<dd> <p> Use the specified configuration file. The default is .mcryptrc in your home directory. The format of the configuration file is the same as the parameters. An example file is: <br />
-&nbsp;<wbr>algorithm safer+ <br />
-&nbsp;<wbr>mode cbc <br />
+<dd> <p> Use the specified configuration file. The default is .mcryptrc in your home directory. The format of the configuration file is the same as the parameters. An example file is: <br/>
+&nbsp;<wbr>algorithm safer+ <br/>
+&nbsp;<wbr>mode cbc <br/>
 &nbsp;<wbr>key a_very_secret_one </p>
  </dd>
 <dt><code>-f --keyfile FILE</code></dt>

@@ -51,29 +51,29 @@ void endnetent(void);</code></pre>
 <tr VALIGN=top>
 <td> <code>getnetent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:netent<br />
+<td> MT-Unsafe race:netent<br/>
  race:netentbuf env locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>getnetbyname</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:netbyname<br />
+<td> MT-Unsafe race:netbyname<br/>
  env locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>getnetbyaddr</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:netbyaddr<br />
+<td> MT-Unsafe race:netbyaddr<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>setnetent</code>(),<br />
+<td> <code>setnetent</code>(),<br/>
  <code>endnetent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:netent env<br />
+<td> MT-Unsafe race:netent env<br/>
  locale
 </td>
 </tr>
@@ -84,7 +84,7 @@ void endnetent(void);</code></pre>
 <h2>Notes</h2>
 <p>In glibc versions before 2.2, the <i>net</i> argument of <code>getnetbyaddr</code>() was of type <i>long</i>.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-getnetent_r/">getnetent_r</a></code>(3), <code><a href="/docs/linux/man/3-getprotoent/">getprotoent</a></code>(3), <code><a href="/docs/linux/man/3-getservent/">getservent</a></code>(3)<br />
+<p><code><a href="/docs/linux/man/3-getnetent_r/">getnetent_r</a></code>(3), <code><a href="/docs/linux/man/3-getprotoent/">getprotoent</a></code>(3), <code><a href="/docs/linux/man/3-getservent/">getservent</a></code>(3)<br/>
  RFC 1101</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

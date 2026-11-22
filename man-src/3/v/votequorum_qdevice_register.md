@@ -12,10 +12,10 @@ description: "votequorum_qdevice_register – Registers a new quorum device"
 <pre><code>#include &lt;corosync/votequorum.h&gt;
 int votequorum_qdevice_register(votequorum_handle_t handle, const char *name);</code></pre>
 <h2>Description</h2>
-<p>The <code>votequorum_qdevice_register</code> is used to register a new quorum device. A quorum device is an external way of adding votes to a small cluster. The quorum device is, in effect, a pseudo node in the cluster that provide votes based on some external device, usually a shared disk partition or perhaps a network router.<br />
- This call creates the device but does not mark it active. <code>votequorum_qdevice_poll</code> must be called for the votes to be included in the quorum calculation.<br />
- <code>name</code> is string containing an informative name for the quorum device. It is simply stored by votequorum and used in the display of corosync-quorumtool, it can be a maximum of 254 characters.<br />
- The number of votes contributed by the quorum device is already known to votequorum, it is set in cmap quorum.device.votes and not by the device.<br />
+<p>The <code>votequorum_qdevice_register</code> is used to register a new quorum device. A quorum device is an external way of adding votes to a small cluster. The quorum device is, in effect, a pseudo node in the cluster that provide votes based on some external device, usually a shared disk partition or perhaps a network router.<br/>
+ This call creates the device but does not mark it active. <code>votequorum_qdevice_poll</code> must be called for the votes to be included in the quorum calculation.<br/>
+ <code>name</code> is string containing an informative name for the quorum device. It is simply stored by votequorum and used in the display of corosync-quorumtool, it can be a maximum of 254 characters.<br/>
+ The number of votes contributed by the quorum device is already known to votequorum, it is set in cmap quorum.device.votes and not by the device.<br/>
  Note that it is the responsibility of the quorum device subsystem (not provided as part of votequorum) to keep all nodes informed of the quorum device status.</p>
 <h2>Return Value</h2>
 <p>This call returns the CS_OK value if successful, otherwise an error is returned. </p>

@@ -16,13 +16,13 @@ description: "QuantLib::Lattice – Lattice (tree, finite-differences) base clas
 <p> virtual <code>Disposable</code>&lt; <code>Array</code> &gt; <code>grid</code> (Time) const =0 </p>
 <p> <code>Inspectors</code> </p>
 <p> const <code>TimeGrid</code> &amp; <code>timeGrid</code> () const </p>
-<p> <code>Numerical method interface</code><br />
+<p> <code>Numerical method interface</code><br/>
  These methods are to be used by discretized assets and must be overridden by developers implementing numerical methods. Users are advised to use the corresponding methods of <code>DiscretizedAsset</code> instead. </p>
-<p> virtual void <code>initialize</code> (<code>DiscretizedAsset</code> &amp;, Time time) const =0<br />
- <i>initialize an asset at the given time. </i><br />
+<p> virtual void <code>initialize</code> (<code>DiscretizedAsset</code> &amp;, Time time) const =0<br/>
+ <i>initialize an asset at the given time. </i><br/>
  virtual void <code>rollback</code> (<code>DiscretizedAsset</code> &amp;, Time to) const =0 </p>
 <p> virtual void <code>partialRollback</code> (<code>DiscretizedAsset</code> &amp;, Time to) const =0 </p>
-<p> virtual <code>Real</code> <code>presentValue</code> (<code>DiscretizedAsset</code> &amp;) const =0<br />
+<p> virtual <code>Real</code> <code>presentValue</code> (<code>DiscretizedAsset</code> &amp;) const =0<br/>
  <i>computes the present value of an asset. </i></p>
 <h3>Protected Attributes</h3>
 <p><code>TimeGrid</code> <code>t_</code> </p>

@@ -16,13 +16,13 @@ description: "docker-attach – Attach to a running container"
 <p> To stop a container, use CTRL-c. This key sequence sends SIGKILL to the container. You can detach from the container (and leave it running) using a configurable key sequence. The default sequence is CTRL-p CTRL-q. You configure the key sequence using the <code>&#8211;detach-keys</code> option or a configuration file. See <code>config-json(5)</code> for documentation on using a configuration file. </p>
 <p> It is forbidden to redirect the standard input of a docker attach command while attaching to a tty-enabled container (i.e.: launched with -t). </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;detach-keys</code>=&quot;&quot;<br />
+<p> <code>&#8211;detach-keys</code>=&quot;&quot;<br/>
 &nbsp;<wbr>Override the key sequence for detaching a container. Format is a single character&nbsp;<wbr>[a-Z]&nbsp;<wbr>or ctrl-&lt;value&gt;&nbsp;<wbr>where&nbsp;<wbr>&lt;value&gt;&nbsp;<wbr>is one of: a-z,&nbsp;<wbr>@,&nbsp;<wbr>^,&nbsp;<wbr>[, , or&nbsp;<wbr>_. </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>&#8211;no-stdin</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;no-stdin</code>=<i>true</i>|<i>false</i><br/>
 Do not attach STDIN. The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>&#8211;sig-proxy</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;sig-proxy</code>=<i>true</i>|<i>false</i><br/>
 Proxy all received signals to the process&nbsp;<wbr>(non-TTY mode only). SIGCHLD, SIGKILL, and SIGSTOP are not proxied. The default is&nbsp;<wbr><i>true</i>. </p>
 <h2>Override the detach sequence</h2>
 <p> If you want, you can configure an override the Docker key sequence for detach. This is useful if the Docker default sequence conflicts with key sequence you use for other applications. There are two ways to define your own detach key sequence, as a per-container override or as a configuration property on your entire configuration. </p>

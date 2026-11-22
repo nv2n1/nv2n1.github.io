@@ -71,9 +71,9 @@ description: "ddrescuelog – tool for ddrescue mapfiles"
 <p> Use &#8216;-&#8216; to read a mapfile from standard input or to write the mapfile created by &#8216;&#8211;create-mapfile&#8217; to standard output. Numbers may be in decimal, hexadecimal or octal, and may be followed by a multiplier: s = sectors, k = 1000, Ki = 1024, M = 10^6, Mi = 2^20, etc&#8230; </p>
 <p> Exit status: 0 for a normal exit, 1 for environmental problems (file not found, invalid flags, I/O errors, etc), 2 to indicate a corrupt or invalid input file, 3 for an internal consistency error (eg, bug) which caused ddrescuelog to panic.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to bug-ddrescue [at] gnu.org<br />
- Ddrescue home page: <a rel="nofollow" href="http://www.gnu.org/software/ddrescue/ddrescue.html">http://www.gnu.org/software/ddrescue/ddrescue.html</a><br />
+<p> Report bugs to bug-ddrescue [at] gnu.org<br/>
+ Ddrescue home page: <a rel="nofollow" href="http://www.gnu.org/software/ddrescue/ddrescue.html">http://www.gnu.org/software/ddrescue/ddrescue.html</a><br/>
  General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp">http://www.gnu.org/gethelp</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2017 Antonio Diaz Diaz. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 2017 Antonio Diaz Diaz. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>

@@ -19,7 +19,7 @@ description: "afppasswd – netatalk password maintenance utility"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> With this utility you can only change the passwords used by two specific UAMs. As they provide only weak password encryption, the use of the &quot;Randnum exchange&quot; and &quot;2-Way Randnum exchange&quot; UAMs is deprecated unless one has to support very old AFP clients, that can not deal with the more secure &quot;DHCAST128&quot; UAM instead. Please compare with the Authentication chapter inside Netatalk&#8217;s documentation. </p>
 </dl>
 <h2>EXAMPLE</h2>

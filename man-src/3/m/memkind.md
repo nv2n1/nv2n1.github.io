@@ -8,7 +8,7 @@ url: "/docs/linux/man/3-memkind/"
 description: "memkind – Heap manager that enables allocations to memory with different properties. This header expose EXPERIMENTAL API in except of STANDARD API placed in section LIBRARY VERSION. API Standards a..."
 ---
 
-<p> memkind &#8211; Heap manager that enables allocations to memory with different properties.<br />
+<p> memkind &#8211; Heap manager that enables allocations to memory with different properties.<br/>
  This header expose EXPERIMENTAL API in except of STANDARD API placed in section LIBRARY VERSION. API Standards are described below in this man page.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
@@ -58,7 +58,7 @@ LIBRARY VERSION : int memkind_get_version();
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> <code>memkind_error_message</code>() converts an error number <i>err</i> returned by a member of the memkind interface to an error message <i>msg</i> where the maximium size of the message is passed by the <i>size</i> parameter. </p>
-<p> <code>HEAP MANAGMENT:</code><br />
+<p> <code>HEAP MANAGMENT:</code><br/>
  The functions described in this section define a heap manager with an interface modeled on the ISO C standard API&#8217;s, except that the user must specify the <i>kind</i> of memory with the first argument to each function. See the <code>KINDS</code> section below for a full description of the implemented kinds. </p>
 <p> <code>memkind_malloc</code>() allocates <i>size</i> bytes of uninitialized memory of the specified <i>kind</i>. The allocated space is suitably aligned (after possible pointer coercion) for storage of any type of object. If <i>size</i> is 0, then <code>memkind_malloc</code>() returns NULL. </p>
 <p> <code>memkind_calloc</code>() allocates space for <i>num</i> objects each <i>size</i> bytes in length in memory of the specified <i>kind</i>. The result is identical to calling <code>memkind_malloc</code>() with an argument of <i>num</i>*<i>size</i>, with the exception that the allocated memory is explicitly initialized to zero bytes. If <i>num</i> or <i>size</i> is 0, then <code>memkind_calloc</code>() returns NULL. </p>
@@ -67,13 +67,13 @@ LIBRARY VERSION : int memkind_get_version();
 <p> If <i>ptr</i> is NULL, the <code>memkind_realloc</code>() function behaves identically to <code>memkind_malloc</code>() for the specified size. The address <i>ptr</i>, if not NULL, must have been returned by a previous call to <code>memkind_malloc</code>(), <code>memkind_calloc</code>(), <code>memkind_realloc</code>(), or <code>memkind_posix_memalign</code>() with the same <i>kind</i> as specified to the call to <code>memkind_realloc</code>(). Otherwise, if <i>memkind_free(kind, ptr)</i> was called before, undefined behavior occurs. </p>
 <p> <code>memkind_posix_memalign</code>() allocates <i>size</i> bytes of memory of a specified <i>kind</i> such that the allocation&#8217;s base address is an even multiple of <i>alignment</i>, and returns the allocation in the value pointed to by <i>memptr</i>. The requested <i>alignment</i> must be a power of 2 at least as large as <i>sizeof(void *)</i>. If <i>size</i> is 0, then <code>memkind_posix_memalign</code>() returns NULL. </p>
 <p> <code>memkind_free</code>() causes the allocated memory referenced by <i>ptr</i> to be made available for future allocations. This pointer must have been returned by a previous call to <code>memkind_malloc</code>(), <code>memkind_calloc</code>(), <code>memkind_realloc</code>(), or <code>memkind_posix_memalign</code>(). Otherwise, if <i>memkind_free(kind, ptr)</i> was already called before, undefined behavior occurs. If <i>ptr</i> is NULL, no operation is performed. The value of <code>MEMKIND_DEFAULT</code> can be given as the <i>kind</i> for all buffers allocated by a kind that leverages the jemalloc allocator. This includes all interally defined kinds other than those that use gigabyte pages. In cases where the kind is unknown in the context of the call to <code>memkind_free</code>() <code>0</code> can be given as the <i>kind</i> specified to <code>memkind_free</code>() but this will require a look up that can be bypassed by specifying a non-zero value. </p>
-<p> <code>ALLOCATOR CALLBACK FUNCTION:</code><br />
+<p> <code>ALLOCATOR CALLBACK FUNCTION:</code><br/>
  This section describes the memkind interface which is used internally by the heap manager. For this API the kind is determined by the partition index. This enables the underlying heap manager to call routines with standard type arguments, and allows the heap manager implementation to be independent of the specifics of the <i>memkind_t</i> implementation. Currently there is only one callback function. </p>
 <p> <code>memkind_partition_mmap</code>() which is a wrapper around the <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) system call. The hint address <i>addr</i> and the length in bytes of the buffer to be allocated <i>size</i> are passed through to <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2). The other <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) parameters are determined by the kind operations. </p>
-<p> <code>KIND MANAGEMENT:</code><br />
+<p> <code>KIND MANAGEMENT:</code><br/>
  There are built-in kinds that are always available, and these are enumerated in the <code>KINDS</code> section. The user can also create their own kinds of memory. This section describes the API&#8217;s that enable the tracking of the different kinds of memory and determining their properties. </p>
 <p> <code>memkind_create</code>()<code>(DEPRECATED)</code> is used to create a new kind of memory. It takes as input a pointer to a vtable called <i>ops</i> that determines the operations that define the kind of memory. These operations can be taken from one of the memkind built-in implementations defined in the memkind headers, or it can be user implemented. The requirements for each operation is defined in the <code>MEMKIND OPERATIONS</code> section. See the <code>SEE ALSO</code> section for the list of memkind header files that implement the built-in operations: each header has a man page. </p>
-<p> <code>memkind_create_pmem</code>() is a convenience function used to create a file-backed kind of memory. It allocates a temporary file in the given directory <i>dir</i>. The file is created in a fashion similar to <code><a href="/docs/linux/man/3-tmpfile/">tmpfile</a></code>(3), so that the file name does not appear when the directory is listed and the space is automatically freed when the program terminates. The file is truncated to a size of <i>max_size</i> bytes and the resulting space is memory-mapped. Then, the actual pmem <i>kind</i> is created by calling <code>memkind_create</code>() with a unique <i>name</i> string (&quot;pmemXXXXXXXX&quot;), and the pointer to <code>MEMKIND_PMEM_OPS</code> as <i>ops</i> argument.<br />
+<p> <code>memkind_create_pmem</code>() is a convenience function used to create a file-backed kind of memory. It allocates a temporary file in the given directory <i>dir</i>. The file is created in a fashion similar to <code><a href="/docs/linux/man/3-tmpfile/">tmpfile</a></code>(3), so that the file name does not appear when the directory is listed and the space is automatically freed when the program terminates. The file is truncated to a size of <i>max_size</i> bytes and the resulting space is memory-mapped. Then, the actual pmem <i>kind</i> is created by calling <code>memkind_create</code>() with a unique <i>name</i> string (&quot;pmemXXXXXXXX&quot;), and the pointer to <code>MEMKIND_PMEM_OPS</code> as <i>ops</i> argument.<br/>
  Note that the actual file system space is not allocated immediately, but only on a call to <code>memkind_pmem_mmap</code>() (see <code><a href="/docs/linux/man/3-memkind_pmem/">memkind_pmem</a></code>(3)). This allows to create a pmem memkind of a pretty large size without the need to reserve in advance the corresponding file system space for the entire heap. The minimum <i>max_size</i> value allowed by the library is defined in <code>&lt;memkind_pmem.h&gt;</code> as <code>MEMKIND_PMEM_MIN_SIZE</code>. Calling <code>memkind_create_pmem</code>() with a size smaller than that will return an error. The maximum allowed size is not limited by <code>memkind</code>, but by the file system specified by the <i>dir</i> argument. The <i>max_size</i> passed in is the raw size of the memory pool and <code>jemalloc</code> will use some of that space for its own metadata. </p>
 <p> <code>memkind_finalize</code>() releases all resources associated with the memkind library including the resouces used by all of the kinds that were created, but it does not free memory allocated with the <code>HEAP MANAGEMENT</code> interface. This must be the last call to the memkind library before application termination, but it can be called more than once. </p>
 <p> <code>memkind_get_num_kind</code>() sets <i>num_kind</i> to the number of available kinds of memory. This accounts for the built-in static kinds and any dynamically created kinds. Since there is a one-to-one mapping between partitions and kinds, this is also the number of partitions. </p>
@@ -82,58 +82,58 @@ LIBRARY VERSION : int memkind_get_version();
 <p> <code>memkind_get_size</code>()<code>(DEPRECATED)</code> sets <i>total</i> to the number of bytes on the system which can be allocated with the specified <i>kind</i>, and sets <i>free</i> to the number of unallocated bytes available of memory with the specified <i>kind.</i> </p>
 <p> <code>Note:</code> These numbers may be specific to the CPU of the calling thread if the <i>kind</i> binds memory to NUMA nodes associated with the CPU. </p>
 <p> <code>memkind_check_available</code>() Returns a zero if the specified <i>kind</i> is available or an error code from the <code>ERRORS</code> section if it is not. </p>
-<p> <code>DECORATORS:</code><br />
+<p> <code>DECORATORS:</code><br/>
  The memkind library enables the user to define decorator functions that can be called before and after each memkind heap management API. The decorators that are called at the beginning of the function end are named after that function with <i>_pre</i> appended to the name, and those that are called at the end of the function are named after that function with <i>_post</i> appended to the name. These are weak symbols, and if they are not present at link time they are not called. The memkind library does not define these symbols which are reserved for user definition. These decorators can be used to track calls to the heap management interface or to modify parameters. The decorators that are called at the beginning of the allocator pass all inputs by reference, and the decorators that are called at the end of the allocator pass the output by reference. This enables the modification of the input and output of each heap management function by the decorators. </p>
-<p> <code>LIBRARY VERSION</code><br />
- The memkind library version scheme consist major, minor and patch numbers separated by dot. Combining those numbers, we got the following representation:<br />
- major.minor.patch, where:<br />
+<p> <code>LIBRARY VERSION</code><br/>
+ The memkind library version scheme consist major, minor and patch numbers separated by dot. Combining those numbers, we got the following representation:<br/>
+ major.minor.patch, where:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-major number is incremented whenever API is changed (loss of backward compatibility),</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-minor number is incremented whenever additional extensions are introduced, or behavior has been changed,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-patch number is incremented whenever small bug fixes are added.</p>
-<p> memkind library provide numeric representation of the version by exposing the following API:<br />
- int memkind_get_version() return version number represented by a single integer number, obtained from the formula:<br />
+<p> memkind library provide numeric representation of the version by exposing the following API:<br/>
+ int memkind_get_version() return version number represented by a single integer number, obtained from the formula:<br/>
  major * 1000000 + minor * 1000 + patch </p>
 <p> Note: major &lt; 1 means unstable API. </p>
-<p> API standards:<br />
- -STANDARD API, API is considered as stable<br />
- -NON-STANDARD API, API is considered as stable, however this is not a standard way to use memkind<br />
+<p> API standards:<br/>
+ -STANDARD API, API is considered as stable<br/>
+ -NON-STANDARD API, API is considered as stable, however this is not a standard way to use memkind<br/>
  -EXPERIMENTAL API, API is considered as unstable and the subject to change </p>
-<p> <code>MEMKIND OPERATIONS:</code><br />
+<p> <code>MEMKIND OPERATIONS:</code><br/>
  The <i>memkind_ops</i> structure is a vtable that defines the operations which determine the kind of memory. This design pattern is modeled after the &quot;mix-in&quot; pattern used in the Linux kernel to enable some of the features of an object oriented language in C. This section defines the inputs, outputs and responsiblities of each function pointer enumerated in the <i>memkind_ops</i> structure. Each of these methods takes a <code>memkind_t</code> argument as its first parameter which shall be self referencing. In this documentation the function pointers in the <i>memkind_ops</i> structure will be prepended with &quot;<code>ops.</code>&quot; and should be considered the operation associated with the <i>kind</i>. </p>
-<p> <code>int ops.create(memkind_t </code><i>kind</i><code>, const struct memkind_ops </code><i>*ops</i><code>, const char </code><i>*name</i><code>);</code><br />
+<p> <code>int ops.create(memkind_t </code><i>kind</i><code>, const struct memkind_ops </code><i>*ops</i><code>, const char </code><i>*name</i><code>);</code><br/>
  shall instantiate all of the dynamic resources associated with the <i>kind</i>. It takes a pointer to the vtable structure <i>ops</i> which has a function pointer for each of methods defined in this section of the man page. If any methods are unnessary to the implementation of the <i>kind</i> these function pointers shall be set to <code>NULL</code>. The <i>name</i> string is an input parameter that identifies the kind of memory so that it can be fetched with the <code>memkind_get_kind_by_name</code>() function. Typically this method is either a pointer to the function <code>memkind_default_create</code>() defined in <i>&lt;memkind_default.h&gt;</i>, or a function that calls <code>memkind_default_create</code>() before performing other setup. </p>
-<p> <code>int ops.destroy(memkind_t </code><i>kind</i><code>);</code><br />
+<p> <code>int ops.destroy(memkind_t </code><i>kind</i><code>);</code><br/>
  shall free all of the dynamic resources reserved by the <code>ops.create</code>() method. If no dynamic resources were explicitly allocated in the <i>ops.create</i>() method, this pointer can be set to <code>NULL</code>. </p>
-<p> <code>void *ops.malloc(memkind_t </code><i>kind</i><code>, size_t </code><i>size</i><code>);</code><br />
+<p> <code>void *ops.malloc(memkind_t </code><i>kind</i><code>, size_t </code><i>size</i><code>);</code><br/>
  shall implement <code>memkind_malloc</code>(), as described above. </p>
-<p> <code>void *ops.calloc(memkind_t </code><i>kind</i><code>, size_t </code><i>num</i><code>, size_t </code><i>size</i><code>);</code><br />
+<p> <code>void *ops.calloc(memkind_t </code><i>kind</i><code>, size_t </code><i>num</i><code>, size_t </code><i>size</i><code>);</code><br/>
  shall implement <code>memkind_calloc</code>(), as described above. </p>
-<p> <code>int ops.posix_memalign(memkind_t </code><i>kind</i><code>, void </code><i>**memptr</i><code>, size_t </code><i>alignment</i><code>, size_t </code><i>size</i><code>);</code><br />
+<p> <code>int ops.posix_memalign(memkind_t </code><i>kind</i><code>, void </code><i>**memptr</i><code>, size_t </code><i>alignment</i><code>, size_t </code><i>size</i><code>);</code><br/>
  shall implement <code>memkind_posix_memalign</code>(), as described above. </p>
-<p> <code>void *ops.realloc(memkind_t </code><i>kind</i><code>, void </code><i>*ptr</i><code>, size_t </code><i>size</i><code>);</code><br />
+<p> <code>void *ops.realloc(memkind_t </code><i>kind</i><code>, void </code><i>*ptr</i><code>, size_t </code><i>size</i><code>);</code><br/>
  shall implement <code>memkind_realloc</code>(), as described above. </p>
-<p> <code>void ops.free(memkind_t </code><i>kind</i><code>, void </code><i>*ptr</i><code>);</code><br />
+<p> <code>void ops.free(memkind_t </code><i>kind</i><code>, void </code><i>*ptr</i><code>);</code><br/>
  shall implement <code>memkind_free</code>(), as described above. </p>
 <p> <code>void *ops.mmap(memkind_t </code><i>kind</i><code>, void </code><i>*addr</i><code>, size_t </code><i>size</i><code>);</code> shall wrap the <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) <code><a href="/docs/linux/man/2-mbind/">mbind</a></code>(2) and <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) system calls while passing <i>addr</i> and <i>size</i> through and determining all other parameters for <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) <code><a href="/docs/linux/man/2-mbind/">mbind</a></code>(2) and <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) by calling other functions resolved by the <code>kind.ops</code> vtable. This function shall return a virtual address to the memory mapped, or <code>MAP_FAILED</code> as defined in <i>&lt;sys/mman.h&gt;</i> which is <i>(void *) -1</i>. </p>
-<p> <code>int ops.mbind(memkind_t </code><i>kind</i><code>, void </code><i>*ptr</i><code>, size_t </code><i>size</i><code>);</code><br />
+<p> <code>int ops.mbind(memkind_t </code><i>kind</i><code>, void </code><i>*ptr</i><code>, size_t </code><i>size</i><code>);</code><br/>
  shall wrap the <code><a href="/docs/linux/man/2-mbind/">mbind</a></code>(2) system call and pass through the start address <i>ptr</i> to be bound, and the number of bytes <i>size</i> from that address to be bound. The other parmeters to <code><a href="/docs/linux/man/2-mbind/">mbind</a></code>(2) shall be determined by calling other functions resolved by the <code>kind.ops</code> vtable. </p>
-<p> <code>int ops.madvise(memkind_t </code><i>kind</i><code>, void </code><i>*addr</i><code>, size_t </code><i>size</i><code>);</code><br />
+<p> <code>int ops.madvise(memkind_t </code><i>kind</i><code>, void </code><i>*addr</i><code>, size_t </code><i>size</i><code>);</code><br/>
  shall wrap the <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) system call and pass through the start address <i>addr</i> to be advised, and the number of bytes <i>size</i> from that address to be advised. This may call <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) multiple times with different advice. </p>
-<p> <code>int ops.get_mmap_flags(memkind_t </code><i>kind</i><code>, int </code><i>*flags</i><code>);</code><br />
+<p> <code>int ops.get_mmap_flags(memkind_t </code><i>kind</i><code>, int </code><i>*flags</i><code>);</code><br/>
  shall set <i>flags</i> to a value appropriate for passing to the <i><a href="/docs/linux/man/2-mmap/">mmap</a></i>(2) system call for the <i>kind</i>. </p>
-<p> <code>int ops.get_mbind_mode(memkind_t </code><i>kind</i><code>, int </code><i>*mode</i><code>);</code><br />
+<p> <code>int ops.get_mbind_mode(memkind_t </code><i>kind</i><code>, int </code><i>*mode</i><code>);</code><br/>
  shall set <i>mode</i> to a value appropriate for passing to the <i><a href="/docs/linux/man/2-mmap/">mmap</a></i>(2) system call for the <i>kind</i>. </p>
-<p> <code>int ops.get_mbind_nodemask(memkind_t </code><i>kind</i><code>, unsigned long </code><i>*nodemask</i><code>, unsigned long </code><i>maxnode</i><code>);</code><br />
+<p> <code>int ops.get_mbind_nodemask(memkind_t </code><i>kind</i><code>, unsigned long </code><i>*nodemask</i><code>, unsigned long </code><i>maxnode</i><code>);</code><br/>
  shall set the <i>nodemask</i> of length <i>maxnode</i> bits to a value appropriate for passing to the <i><a href="/docs/linux/man/2-mbind/">mbind</a></i>(2) system call for the <i>kind</i>. </p>
-<p> <code>int ops.get_arena(memkind_t </code><i>kind</i><code>, unsigned int </code><i>*arena, </i><code>size_t</code><i> size );</i><br />
+<p> <code>int ops.get_arena(memkind_t </code><i>kind</i><code>, unsigned int </code><i>*arena, </i><code>size_t</code><i> size );</i><br/>
  shall set <i>arena</i> to an index appropriate for the <i>kind,</i> allocation <i>size,</i> and CPU when using the jemalloc arena allocation through the <code>jemk_mallocx</code>() API. Size parameter is not used at the moment, but will be necesary for integration with jemalloc 4.0.x (planned for one of the future releases). </p>
-<p> <code>int ops.get_size(memkind_t </code><i>kind</i><code>, size_t </code><i>*total</i><code>, size_t </code><i>*free</i><code>);</code><br />
+<p> <code>int ops.get_size(memkind_t </code><i>kind</i><code>, size_t </code><i>*total</i><code>, size_t </code><i>*free</i><code>);</code><br/>
  shall implement <code>memkind_get_size</code>(), as described above. </p>
-<p> <code>int ops.check_available(memkind_t </code><i>kind</i><code>);</code><br />
+<p> <code>int ops.check_available(memkind_t </code><i>kind</i><code>);</code><br/>
  shall return 0 if the <i>kind</i> is available on the system, and an error code if not. </p>
-<p> <code>int ops.check_addr(memkind_t </code><i>kind</i><code>, void </code><i>*addr</i><code>);</code><br />
+<p> <code>int ops.check_addr(memkind_t </code><i>kind</i><code>, void </code><i>*addr</i><code>);</code><br/>
  shall return 0 if the <i>addr</i> can be freed with the specified <i>kind</i> and an error code otherwise. If the memory cannot be freed with <code>jemk_free</code>(), then at least one of the instantiated kinds must return 0 to enable freeing. </p>
-<p> <code>void ops.init_once(void);</code><br />
+<p> <code>void ops.init_once(void);</code><br/>
  this function pointer shall be set to NULL for any kind that is not built-in. The method is used to allocate dynamic resources for built-in kinds without requiring and initialization routine.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>memkind_calloc</code>(), <code>memkind_malloc</code>(), and <code>memkind_realloc</code>(), return the pointer to the allocated memory, or NULL if the request fails. <code>memkind_free</code>() and <code>memkind_error_message</code>() do not have return values. All other memkind API&#8217;s return 0 upon success, and an error code defined in the ERRORS section upon failure. The memkind library avoids setting <i>errno</i> directly, but calls to underlying libraries and system calls may set <i>errno</i>.</p>

@@ -13,7 +13,7 @@ description: "PAPIF_num_events –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217;<br />
+<dd>#include &#8216;fpapi.h&#8217;<br/>
  <code>PAPIF_num_events(C_INT EventSet, C_INT count)</code></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

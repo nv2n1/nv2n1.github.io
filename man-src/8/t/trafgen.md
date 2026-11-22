@@ -53,125 +53,125 @@ description: "trafgen – a fast, multithreaded network packet generator"
 <p>Show user help and exit.</p>
 <h2>Syntax</h2>
 <p>trafgen&#8217;s packet configuration syntax is fairly simple. The very basic things one needs to know is that a configuration file is a simple plain text file where packets are defined. It can contain one or more packets. Packets are enclosed by opening &#8216;{&#8216; and closing &#8216;}&#8217; braces, for example: </p>
-<p>{&nbsp;<wbr>/*&nbsp;<wbr>packet 1 content goes here &#8230;&nbsp;<wbr>*/&nbsp;<wbr>}<br />
+<p>{&nbsp;<wbr>/*&nbsp;<wbr>packet 1 content goes here &#8230;&nbsp;<wbr>*/&nbsp;<wbr>}<br/>
 {&nbsp;<wbr>/*&nbsp;<wbr>packet 2 content goes here &#8230;&nbsp;<wbr>*/&nbsp;<wbr>} </p>
 <p> When trafgen is started using multiple CPUs (default), then each of those packets will be scheduled for transmission on all CPUs by default. However, it is possible to tell trafgen to schedule a packet only on a particular CPU: </p>
-<p>cpu(1):&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>packet 1 content goes here &#8230;&nbsp;<wbr>*/&nbsp;<wbr>}<br />
+<p>cpu(1):&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>packet 1 content goes here &#8230;&nbsp;<wbr>*/&nbsp;<wbr>}<br/>
 cpu(2-3):&nbsp;<wbr>{&nbsp;<wbr>/*&nbsp;<wbr>packet 2 content goes here &#8230;&nbsp;<wbr>*/&nbsp;<wbr>} </p>
 <p> Thus, in case we have a 4 core machine with CPU0-CPU3, packet 1 will be scheduled only on CPU1, packet 2 on CPU2 and CPU3. When using trafgen with &#8211;num option, then these constraints will still be valid and the packet is fairly distributed among those CPUs. </p>
 <p> Packet content is delimited either by a comma or whitespace, or both: </p>
 <p>{&nbsp;<wbr>0xca, 0xfe, 0xba 0xbe&nbsp;<wbr>} </p>
 <p> Packet content can be of the following: </p>
-<p>hex bytes:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0xca, xff<br />
-decimal:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>42<br />
-binary:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0b11110000, b11110000<br />
-octal:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>011<br />
-character:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8216;a&#8217;<br />
-string:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;hello world&quot;<br />
+<p>hex bytes:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0xca, xff<br/>
+decimal:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>42<br/>
+binary:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0b11110000, b11110000<br/>
+octal:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>011<br/>
+character:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8216;a&#8217;<br/>
+string:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;hello world&quot;<br/>
 shellcode:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;1ۍC�̀1�&quot; </p>
 <p> Thus, a quite useless packet packet configuration might look like this (one can verify this when running this with trafgen in combination with -V): </p>
-<p>{&nbsp;<wbr>0xca, 42, 0b11110000, 011,&nbsp;<wbr>&#8216;a&#8217;,&nbsp;<wbr>&quot;hello world&quot;,<br />
+<p>{&nbsp;<wbr>0xca, 42, 0b11110000, 011,&nbsp;<wbr>&#8216;a&#8217;,&nbsp;<wbr>&quot;hello world&quot;,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;1ۍC�̀1�&quot;&nbsp;<wbr>} </p>
 <p> There are a couple of helper functions in trafgen&#8217;s language to make life easier to write configurations: </p>
 <p> i) Fill with garbage functions: </p>
-<p>byte fill function:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fill(&lt;content&gt;,&nbsp;<wbr>&lt;times&gt;): fill(0xca, 128)<br />
-compile-time random:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rnd(&lt;times&gt;): rnd(128), rnd()<br />
-runtime random numbers:&nbsp;<wbr>&nbsp;<wbr>drnd(&lt;times&gt;): drnd(128), drnd()<br />
-compile-time counter:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>seqinc(&lt;start-val&gt;,&nbsp;<wbr>&lt;increment&gt;,&nbsp;<wbr>&lt;times&gt;)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>seqdec(&lt;start-val&gt;,&nbsp;<wbr>&lt;decrement&gt;,&nbsp;<wbr>&lt;times&gt;)<br />
-runtime counter&nbsp;<wbr>(1byte): dinc(&lt;min-val&gt;,&nbsp;<wbr>&lt;max-val&gt;,&nbsp;<wbr>&lt;increment&gt;)<br />
+<p>byte fill function:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fill(&lt;content&gt;,&nbsp;<wbr>&lt;times&gt;): fill(0xca, 128)<br/>
+compile-time random:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rnd(&lt;times&gt;): rnd(128), rnd()<br/>
+runtime random numbers:&nbsp;<wbr>&nbsp;<wbr>drnd(&lt;times&gt;): drnd(128), drnd()<br/>
+compile-time counter:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>seqinc(&lt;start-val&gt;,&nbsp;<wbr>&lt;increment&gt;,&nbsp;<wbr>&lt;times&gt;)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>seqdec(&lt;start-val&gt;,&nbsp;<wbr>&lt;decrement&gt;,&nbsp;<wbr>&lt;times&gt;)<br/>
+runtime counter&nbsp;<wbr>(1byte): dinc(&lt;min-val&gt;,&nbsp;<wbr>&lt;max-val&gt;,&nbsp;<wbr>&lt;increment&gt;)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ddec(&lt;min-val&gt;,&nbsp;<wbr>&lt;max-val&gt;,&nbsp;<wbr>&lt;decrement&gt;) </p>
 <p> ii) Checksum helper functions (packet offsets start with 0): </p>
-<p>IP/ICMP checksum:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>csumip/csumicmp(&lt;off-from&gt;,&nbsp;<wbr>&lt;off-to&gt;)<br />
-UDP checksum:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>csumudp(&lt;off-iphdr&gt;,&nbsp;<wbr>&lt;off-udpdr&gt;)<br />
+<p>IP/ICMP checksum:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>csumip/csumicmp(&lt;off-from&gt;,&nbsp;<wbr>&lt;off-to&gt;)<br/>
+UDP checksum:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>csumudp(&lt;off-iphdr&gt;,&nbsp;<wbr>&lt;off-udpdr&gt;)<br/>
 TCP checksum:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>csumtcp(&lt;off-iphdr&gt;,&nbsp;<wbr>&lt;off-tcphdr&gt;) </p>
 <p> iii) Multibyte functions, compile-time expression evaluation: </p>
-<p>const8(&lt;content&gt;), c8(&lt;content&gt;), const16(&lt;content&gt;), c16(&lt;content&gt;),<br />
+<p>const8(&lt;content&gt;), c8(&lt;content&gt;), const16(&lt;content&gt;), c16(&lt;content&gt;),<br/>
 const32(&lt;content&gt;), c32(&lt;content&gt;), const64(&lt;content&gt;), c64(&lt;content&gt;) </p>
 <p>These functions write their result in network byte order into the packet configuration, e.g. const16(0xaa) will result in &#8221;00 aa&#8221;. Within c*() functions, it is possible to do some arithmetics: -,+,*,/,%,&amp;,|,&lt;&lt;,&gt;&gt;,^ E.g. const16((((1&lt;&lt;8)+0x32)|0b110)*2) will be evaluated to &#8221;02 6c&#8221;. </p>
 <p> Furthermore, there are two types of comments in trafgen configuration files: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>1. Multi-line C-style comments:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>put comment here&nbsp;<wbr>*/<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>1. Multi-line C-style comments:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>put comment here&nbsp;<wbr>*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>2. Single-line Shell-style comments:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&nbsp;<wbr>put comment here </p>
 <p> Next to all of this, a configuration can be passed through the C preprocessor before the trafgen compiler gets to see it with option &#8211;cpp. To give you a taste of a more advanced example, run &#8221;trafgen -e&#8221;, fields are commented: </p>
-<p>/*&nbsp;<wbr>Note: dynamic elements make trafgen slower!&nbsp;<wbr>*/<br />
+<p>/*&nbsp;<wbr>Note: dynamic elements make trafgen slower!&nbsp;<wbr>*/<br/>
 #include&nbsp;<wbr>&lt;stddef.h&gt; </p>
-<p>{<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>MAC Destination&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>fill(0xff, ETH_ALEN),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>MAC Source&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>0x00, 0x02, 0xb3,&nbsp;<wbr>drnd(3),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Protocol&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>c16(ETH_P_IP),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Version, IHL, TOS&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>0b01000101, 0,<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Total Len&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>c16(59),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Ident&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>drnd(2),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Flags, Frag Off&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>0b01000000, 0,<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 TTL&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>64,<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Proto TCP&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>0x06,<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Checksum&nbsp;<wbr>(IP header from, to)&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>csumip(14, 33),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Source IP&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>drnd(4),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Dest IP&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>drnd(4),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Source Port&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>drnd(2),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Dest Port&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>c16(80),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Sequence Number&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>drnd(4),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Ackn. Number&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>c32(0),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Header length&nbsp;<wbr>+&nbsp;<wbr>TCP SYN/ECN Flag&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>c16((8&nbsp;<wbr>&lt;&lt;&nbsp;<wbr>12)&nbsp;<wbr>| TCP_FLAG_SYN | TCP_FLAG_ECE)<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Window Size&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>c16(16),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Checksum&nbsp;<wbr>(offset IP, offset TCP)&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>csumtcp(14, 34),<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Options&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>0x00, 0x00, 0x01, 0x01, 0x08, 0x0a, 0x06,<br />
-&nbsp;<wbr>&nbsp;<wbr>0x91, 0x68, 0x7d, 0x06, 0x91, 0x68, 0x6f,<br />
-&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Data blob&nbsp;<wbr>*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;gotcha!&quot;,<br />
+<p>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>MAC Destination&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>fill(0xff, ETH_ALEN),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>MAC Source&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>0x00, 0x02, 0xb3,&nbsp;<wbr>drnd(3),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Protocol&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>c16(ETH_P_IP),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Version, IHL, TOS&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>0b01000101, 0,<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Total Len&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>c16(59),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Ident&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>drnd(2),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Flags, Frag Off&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>0b01000000, 0,<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 TTL&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>64,<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Proto TCP&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>0x06,<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>IPv4 Checksum&nbsp;<wbr>(IP header from, to)&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>csumip(14, 33),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Source IP&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>drnd(4),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Dest IP&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>drnd(4),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Source Port&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>drnd(2),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Dest Port&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>c16(80),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Sequence Number&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>drnd(4),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Ackn. Number&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>c32(0),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Header length&nbsp;<wbr>+&nbsp;<wbr>TCP SYN/ECN Flag&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>c16((8&nbsp;<wbr>&lt;&lt;&nbsp;<wbr>12)&nbsp;<wbr>| TCP_FLAG_SYN | TCP_FLAG_ECE)<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Window Size&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>c16(16),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Checksum&nbsp;<wbr>(offset IP, offset TCP)&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>csumtcp(14, 34),<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>TCP Options&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>0x00, 0x00, 0x01, 0x01, 0x08, 0x0a, 0x06,<br/>
+&nbsp;<wbr>&nbsp;<wbr>0x91, 0x68, 0x7d, 0x06, 0x91, 0x68, 0x6f,<br/>
+&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Data blob&nbsp;<wbr>*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;gotcha!&quot;,<br/>
 } </p>
 <p> Another real-world example by Jesper Dangaard Brouer [1]: </p>
-<p>{<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&#8212; ethernet header &#8212;<br />
-&nbsp;<wbr>&nbsp;<wbr>0x00, 0x1b, 0x21, 0x3c, 0x9d, 0xf8,&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>mac destination<br />
-&nbsp;<wbr>&nbsp;<wbr>0x90, 0xe2, 0xba, 0x0a, 0x56, 0xb4,&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>mac source<br />
-&nbsp;<wbr>&nbsp;<wbr>const16(0x0800),&nbsp;<wbr>#&nbsp;<wbr>protocol<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&#8212; ip header &#8212;<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>ipv4 version&nbsp;<wbr>(4-bit)&nbsp;<wbr>+&nbsp;<wbr>ihl&nbsp;<wbr>(4-bit), tos<br />
-&nbsp;<wbr>&nbsp;<wbr>0b01000101, 0,<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>ipv4 total len<br />
-&nbsp;<wbr>&nbsp;<wbr>const16(40),<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>id&nbsp;<wbr>(note: runtime dynamic random)<br />
-&nbsp;<wbr>&nbsp;<wbr>drnd(2),<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>ipv4 3-bit flags&nbsp;<wbr>+&nbsp;<wbr>13-bit fragment offset<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>001&nbsp;<wbr>=&nbsp;<wbr>more fragments<br />
-&nbsp;<wbr>&nbsp;<wbr>0b00100000, 0,<br />
-&nbsp;<wbr>&nbsp;<wbr>64,&nbsp;<wbr>#&nbsp;<wbr>ttl<br />
-&nbsp;<wbr>&nbsp;<wbr>17,&nbsp;<wbr>#&nbsp;<wbr>proto udp<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>dynamic ip checksum&nbsp;<wbr>(note: offsets are zero indexed)<br />
-&nbsp;<wbr>&nbsp;<wbr>csumip(14, 33),<br />
-&nbsp;<wbr>&nbsp;<wbr>192, 168, 51, 1,&nbsp;<wbr>#&nbsp;<wbr>source ip<br />
-&nbsp;<wbr>&nbsp;<wbr>192, 168, 51, 2,&nbsp;<wbr>#&nbsp;<wbr>dest ip<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&#8212; udp header &#8212;<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>as this is a fragment the below stuff does not matter too much<br />
-&nbsp;<wbr>&nbsp;<wbr>const16(48054),&nbsp;<wbr>#&nbsp;<wbr>src port<br />
-&nbsp;<wbr>&nbsp;<wbr>const16(43514),&nbsp;<wbr>#&nbsp;<wbr>dst port<br />
-&nbsp;<wbr>&nbsp;<wbr>const16(20),&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>udp length<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>udp checksum can be dyn calc via csumudp(offset ip, offset tcp)<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>which is csumudp(14, 34), but for udp its allowed to be zero<br />
-&nbsp;<wbr>&nbsp;<wbr>const16(0),<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>payload<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8216;A&#8217;,&nbsp;<wbr>&nbsp;<wbr>fill(0x41, 11),<br />
+<p>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&#8212; ethernet header &#8212;<br/>
+&nbsp;<wbr>&nbsp;<wbr>0x00, 0x1b, 0x21, 0x3c, 0x9d, 0xf8,&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>mac destination<br/>
+&nbsp;<wbr>&nbsp;<wbr>0x90, 0xe2, 0xba, 0x0a, 0x56, 0xb4,&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>mac source<br/>
+&nbsp;<wbr>&nbsp;<wbr>const16(0x0800),&nbsp;<wbr>#&nbsp;<wbr>protocol<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&#8212; ip header &#8212;<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>ipv4 version&nbsp;<wbr>(4-bit)&nbsp;<wbr>+&nbsp;<wbr>ihl&nbsp;<wbr>(4-bit), tos<br/>
+&nbsp;<wbr>&nbsp;<wbr>0b01000101, 0,<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>ipv4 total len<br/>
+&nbsp;<wbr>&nbsp;<wbr>const16(40),<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>id&nbsp;<wbr>(note: runtime dynamic random)<br/>
+&nbsp;<wbr>&nbsp;<wbr>drnd(2),<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>ipv4 3-bit flags&nbsp;<wbr>+&nbsp;<wbr>13-bit fragment offset<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>001&nbsp;<wbr>=&nbsp;<wbr>more fragments<br/>
+&nbsp;<wbr>&nbsp;<wbr>0b00100000, 0,<br/>
+&nbsp;<wbr>&nbsp;<wbr>64,&nbsp;<wbr>#&nbsp;<wbr>ttl<br/>
+&nbsp;<wbr>&nbsp;<wbr>17,&nbsp;<wbr>#&nbsp;<wbr>proto udp<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>dynamic ip checksum&nbsp;<wbr>(note: offsets are zero indexed)<br/>
+&nbsp;<wbr>&nbsp;<wbr>csumip(14, 33),<br/>
+&nbsp;<wbr>&nbsp;<wbr>192, 168, 51, 1,&nbsp;<wbr>#&nbsp;<wbr>source ip<br/>
+&nbsp;<wbr>&nbsp;<wbr>192, 168, 51, 2,&nbsp;<wbr>#&nbsp;<wbr>dest ip<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>&#8212; udp header &#8212;<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>as this is a fragment the below stuff does not matter too much<br/>
+&nbsp;<wbr>&nbsp;<wbr>const16(48054),&nbsp;<wbr>#&nbsp;<wbr>src port<br/>
+&nbsp;<wbr>&nbsp;<wbr>const16(43514),&nbsp;<wbr>#&nbsp;<wbr>dst port<br/>
+&nbsp;<wbr>&nbsp;<wbr>const16(20),&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>udp length<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>udp checksum can be dyn calc via csumudp(offset ip, offset tcp)<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>which is csumudp(14, 34), but for udp its allowed to be zero<br/>
+&nbsp;<wbr>&nbsp;<wbr>const16(0),<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>payload<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8216;A&#8217;,&nbsp;<wbr>&nbsp;<wbr>fill(0x41, 11),<br/>
 } </p>
 <p>[1]&nbsp;<wbr><a rel="nofollow" href="http://thread.gmane.org/gmane.linux.network/257155">http://thread.gmane.org/gmane.linux.network/257155</a></p>
 <h2>Usage Example</h2>
@@ -195,10 +195,10 @@ const32(&lt;content&gt;), c32(&lt;content&gt;), const64(&lt;content&gt;), c64(&l
 <p> For introducing bit errors, delays with random variation and more, there is no built-in option in trafgen. Rather, one should reuse existing methods for that which integrate nicely with trafgen, such as <a href="/docs/linux/man/8-tc/">tc</a>(8) with its different disciplines, i.e. netem. </p>
 <p> For more complex packet configurations, it is recommended to use high-level scripting for generating trafgen packet configurations in a more automated way, i.e. also to create different traffic distributions that are common for industrial benchmarking: </p>
 <p>&nbsp;<wbr>Traffic model&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Distribution </p>
-<p>&nbsp;<wbr>IMIX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64:7,&nbsp;<wbr>&nbsp;<wbr>570:4,&nbsp;<wbr>&nbsp;<wbr>1518:1<br />
-&nbsp;<wbr>Tolly&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64:55,&nbsp;<wbr>&nbsp;<wbr>78:5,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>576:17, 1518:23<br />
-&nbsp;<wbr>Cisco&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64:7,&nbsp;<wbr>&nbsp;<wbr>594:4,&nbsp;<wbr>&nbsp;<wbr>1518:1<br />
-&nbsp;<wbr>RPR Trimodal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64:60, 512:20, 1518:20<br />
+<p>&nbsp;<wbr>IMIX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64:7,&nbsp;<wbr>&nbsp;<wbr>570:4,&nbsp;<wbr>&nbsp;<wbr>1518:1<br/>
+&nbsp;<wbr>Tolly&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64:55,&nbsp;<wbr>&nbsp;<wbr>78:5,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>576:17, 1518:23<br/>
+&nbsp;<wbr>Cisco&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64:7,&nbsp;<wbr>&nbsp;<wbr>594:4,&nbsp;<wbr>&nbsp;<wbr>1518:1<br/>
+&nbsp;<wbr>RPR Trimodal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64:60, 512:20, 1518:20<br/>
 &nbsp;<wbr>RPR Quadrimodal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64:50, 512:15, 1518:15, 9218:20 </p>
 <p> The low-level nature of trafgen makes trafgen rather protocol independent and therefore useful in many scenarios when stress testing is needed, for instance. However, if a traffic generator with higher level packet descriptions is desired, netsniff-ng&#8217;s mausezahn(8) can be of good use as well. </p>
 <p> For smoke/fuzz testing with trafgen, it is recommended to have a direct link between the host you want to analyze (&#8221;victim&#8221; machine) and the host you run trafgen on (&#8221;attacker&#8221; machine). If the ICMP reply from the victim fails, we assume that probably its kernel crashed, thus we print the last sent packet togther with the seed and quit probing. It might be very unlikely to find such a ping-of-death on modern Linux systems. However, there might be a good chance to find it on some proprietary (e.g. embedded) systems or buggy driver firmwares that are in the wild. Also, fuzz testing can be done on raw 802.11 frames, of course. In case you find a ping-of-death, please mention that you were using trafgen in your commit message of the fix!</p>

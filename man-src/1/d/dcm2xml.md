@@ -23,50 +23,50 @@ xmlfile-out  XML output filename (default: stdout)
 </pre>
 <h2>OPTIONS</h2>
 <h3>general options</h3>
-<p>&#8211; h&#8211; help<br />
-        print this help text and exit&#8211; version<br />
-            print version information and exit&#8211; arguments<br />
-                print expanded command line arguments &#8211;<br />
-    q&#8211; quiet<br />
-        quiet mode,<br />
-    print no warnings and errors &#8211; v&#8211; verbose<br />
-                                       verbose mode,<br />
-    print processing details &#8211; d&#8211; debug<br />
-                                   debug mode,<br />
-    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br />
-                                                       constant(fatal, error, warn, info, debug, trace)<br />
-         use level l for the logger<br />
-  -lc  &#8211;log-config  [f]ilename: string<br />
+<p>&#8211; h&#8211; help<br/>
+        print this help text and exit&#8211; version<br/>
+            print version information and exit&#8211; arguments<br/>
+                print expanded command line arguments &#8211;<br/>
+    q&#8211; quiet<br/>
+        quiet mode,<br/>
+    print no warnings and errors &#8211; v&#8211; verbose<br/>
+                                       verbose mode,<br/>
+    print processing details &#8211; d&#8211; debug<br/>
+                                   debug mode,<br/>
+    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br/>
+                                                       constant(fatal, error, warn, info, debug, trace)<br/>
+         use level l for the logger<br/>
+  -lc  &#8211;log-config  [f]ilename: string<br/>
          use config file f for the logger</p>
 <h3>input options</h3>
-<p>input file format:<br />
-  +f   &#8211;read-file<br />
-         read file format or data set (default)<br />
-  +fo  &#8211;read-file-only<br />
-         read file format only<br />
-  -f   &#8211;read-dataset<br />
-         read data set without file meta information<br />
-input transfer syntax:<br />
-  -t=  &#8211;read-xfer-auto<br />
-         use TS recognition (default)<br />
-  -td  &#8211;read-xfer-detect<br />
-         ignore TS specified in the file meta header<br />
-  -te  &#8211;read-xfer-little<br />
-         read with explicit VR little endian TS<br />
-  -tb  &#8211;read-xfer-big<br />
-         read with explicit VR big endian TS<br />
-  -ti  &#8211;read-xfer-implicit<br />
-         read with implicit VR little endian TS<br />
-long tag values:<br />
-  +M   &#8211;load-all<br />
-         load very long tag values (e.g. pixel data)<br />
-  -M   &#8211;load-short<br />
-         do not load very long values (default)<br />
-  +R   &#8211;max-read-length  [k]bytes: integer (4..4194302, default: 4)<br />
+<p>input file format:<br/>
+  +f   &#8211;read-file<br/>
+         read file format or data set (default)<br/>
+  +fo  &#8211;read-file-only<br/>
+         read file format only<br/>
+  -f   &#8211;read-dataset<br/>
+         read data set without file meta information<br/>
+input transfer syntax:<br/>
+  -t=  &#8211;read-xfer-auto<br/>
+         use TS recognition (default)<br/>
+  -td  &#8211;read-xfer-detect<br/>
+         ignore TS specified in the file meta header<br/>
+  -te  &#8211;read-xfer-little<br/>
+         read with explicit VR little endian TS<br/>
+  -tb  &#8211;read-xfer-big<br/>
+         read with explicit VR big endian TS<br/>
+  -ti  &#8211;read-xfer-implicit<br/>
+         read with implicit VR little endian TS<br/>
+long tag values:<br/>
+  +M   &#8211;load-all<br/>
+         load very long tag values (e.g. pixel data)<br/>
+  -M   &#8211;load-short<br/>
+         do not load very long values (default)<br/>
+  +R   &#8211;max-read-length  [k]bytes: integer (4..4194302, default: 4)<br/>
          set threshold for long values to k kbytes</p>
 <h3>processing options</h3>
-<p>character set : +Cr&#8211; charset &#8211; require require declaration of extended charset(default) + Ca&#8211; charset &#8211; assume[c] harset : string constant(latin &#8211; 1 to &#8211; 5, cyrillic, arabic, greek, hebrew)<br />
-assume charset c if no extended charset declared + Cc&#8211; charset &#8211; check &#8211; all check all data elements with string values(default<br />
+<p>character set : +Cr&#8211; charset &#8211; require require declaration of extended charset(default) + Ca&#8211; charset &#8211; assume[c] harset : string constant(latin &#8211; 1 to &#8211; 5, cyrillic, arabic, greek, hebrew)<br/>
+assume charset c if no extended charset declared + Cc&#8211; charset &#8211; check &#8211; all check all data elements with string values(default<br/>
                                                                                                                          : only PN, LO, LT, SH, ST and UT)</p>
 <h3>output options</h3>
 <pre><code>

@@ -279,7 +279,7 @@ description: "unoconv – convert any document from and to any LibreOffice suppo
 <dd>&bull; Resolution</dd></dl>
 <dl COMPACT>
 <dd>&bull; Width</dd></dl>
-<p> <font SIZE="+1"> <code>BMP EXPORT FILTER OPTIONS</code></p>
+<p>  <code>BMP EXPORT FILTER OPTIONS</code></p>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
@@ -287,7 +287,7 @@ description: "unoconv – convert any document from and to any LibreOffice suppo
 <dl COMPACT>
 <dd>&bull; RLEEncoding</dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>JPEG EXPORT FILTER OPTIONS</code></p>
+<p>  <code>JPEG EXPORT FILTER OPTIONS</code></p>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
@@ -295,13 +295,13 @@ description: "unoconv – convert any document from and to any LibreOffice suppo
 <dl COMPACT>
 <dd>&bull; Quality</dd></dl>
 </dl>
-<p> </font><font SIZE="+3"> <code>PBM/PGM/PPM EXPORT FILTER OPTIONS</code></p>
+<p>  <code>PBM/PGM/PPM EXPORT FILTER OPTIONS</code></p>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
 <dd>&bull; Encoding</dd></dl>
 </dl>
-<p> </font><font SIZE="+4"> <code>PNG EXPORT FILTER OPTIONS</code></p>
+<p>  <code>PNG EXPORT FILTER OPTIONS</code></p>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
@@ -309,7 +309,7 @@ description: "unoconv – convert any document from and to any LibreOffice suppo
 <dl COMPACT>
 <dd>&bull; InterlacedMode</dd></dl>
 </dl>
-<p> </font><font SIZE="+5"> <code>GIF EXPORT FILTER OPTIONS</code></p>
+<p>  <code>GIF EXPORT FILTER OPTIONS</code></p>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
@@ -317,7 +317,7 @@ description: "unoconv – convert any document from and to any LibreOffice suppo
 <dl COMPACT>
 <dd>&bull; Transparency</dd></dl>
 </dl>
-<p> </font><font SIZE="+6"> <code>EPS EXPORT FILTER OPTIONS</code></p>
+<p>  <code>EPS EXPORT FILTER OPTIONS</code></p>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
@@ -329,7 +329,7 @@ description: "unoconv – convert any document from and to any LibreOffice suppo
 <dl COMPACT>
 <dd>&bull; Version</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h2>Examples</h2>
 <p>You can use unoconv in standalone mode, this means that in absence of an LibreOffice listener, it will starts its own: </p>
 <dl COMPACT>
@@ -388,7 +388,7 @@ Code: 16 (ERRCODE_IO_CANTWRITE)</pre>
 <h2>Bugs</h2>
 <p>unoconv uses the UNO bindings to connect to LibreOffice, in absence of a usable socket, it will start its own LibreOffice instance with the correct parameters. </p>
 <dl COMPACT>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Please see the TODO file for known bugs and future plans. </p>
 </dl>
 <h2>References</h2>
@@ -410,7 +410,7 @@ Code: 16 (ERRCODE_IO_CANTWRITE)</pre>
 <dl COMPACT>
 <dd>m[blue]<code><a rel="nofollow" href="http://wiki.services.openoffice.org/wiki/Framework/Article/Filter/FilterList_OOo_3_0">http://wiki.services.openoffice.org/wiki/Framework/Article/Filter/FilterList_OOo_3_0</a></code>m[]</dd></dl>
 <h2>Author</h2>
-<p>Written by Dag Wieers, &lt;m[blue]<code>dag [at] wieers.com</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
+<p>Written by Dag Wieers, &lt;m[blue]<code>dag [at] wieers.com</code>m[][1]&gt;</p>
 <h2>Resources</h2>
 <p>Main web site: m[blue]<code><a rel="nofollow" href="http://dag.wieers.com/home-made/unoconv/">http://dag.wieers.com/home-made/unoconv/</a></code>m[]</p>
 <h2>Copying</h2>

@@ -12,7 +12,7 @@ description: "mpxstats – Multiplexing Monitor Statistics daemon"
 <pre><code>mpxstats</code> [<i>options</i>] <code>-p</code> <i>port</i></pre>
 <h2>Description</h2>
 <p>The <code>mpxstats</code> daemon multiplexes xrootd and cmsd monitoring data streams into a single sequential format suitable for ingestion by a monitoring agent (e.g. ganglia, MonaLisa, nagios, etc.). Usage synopsis can be displayed by typing &quot;<code>mpxstats</code>&quot;. Complete HTML documentation can be found at </p>
-<p> <center> <a rel="nofollow" href="http://xrootd.org/doc/prod/xrd_monitoring.htm">http://xrootd.org/doc/prod/xrd_monitoring.htm</a><br />
+<p> <center> <a rel="nofollow" href="http://xrootd.org/doc/prod/xrd_monitoring.htm">http://xrootd.org/doc/prod/xrd_monitoring.htm</a><br/>
  </center></p>
 <h2>Notes</h2>
 <p>Documentation for all components associated with <code>mpxstats</code> can be found at <a rel="nofollow" href="http://xrootd.org/docs.html">http://xrootd.org/docs.html</a></p>
@@ -21,5 +21,5 @@ description: "mpxstats – Multiplexing Monitor Statistics daemon"
 <h2>License</h2>
 <p>License terms can be displayed by typing &quot;<code>xrootd -H</code>&quot;.</p>
 <h2>Support Level</h2>
-<p>The <code>mpxstats</code> daemon is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
+<p>The <code>mpxstats</code> daemon is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br/>
  </center></p>

@@ -172,7 +172,7 @@ description: "kconfig_compiler – KDE configuration compiler"
 <dt>
 </dt><dd> KDE Developer&#8217;s Corner website</dd></dl>
 <h2>BUGS</h2>
-<p> Please use m[blue]<code>bugs.kde.org</code>m[]<font SIZE="-2">[1]</font> to report bugs, do not mail the authors directly.</p>
+<p> Please use m[blue]<code>bugs.kde.org</code>m[][1] to report bugs, do not mail the authors directly.</p>
 <h2>AUTHORS</h2>
 <p> <code>Cornelius Schumacher</code> &lt;schumacher [at] kde.org&gt;</p>
 <dl>

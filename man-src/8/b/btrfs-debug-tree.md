@@ -19,7 +19,7 @@ description: "btrfs-inspect-internal – query various internal information"
 <p> Show btrfs superblock information stored on given devices in textual form. By default the first superblock is printed, more details about all copies or additional backup data can be printed. </p>
 <p> Besides verification of the filesystem signature, there are no other sanity checks. The superblock checksum status is reported, the device item and filesystem UUIDs are checked and reported. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  the meaning of option <i>-s</i> has changed in version 4.8 to be consistent with other tools to specify superblock copy rather the offset. The old way still works, but prints a warning. Please update your scripts to use <i>&#8211;bytenr</i> instead. The option <i>-i</i> has been deprecated. </dd>
 </dl>
 <p> <code>Options</code> </p>
@@ -49,7 +49,7 @@ description: "btrfs-inspect-internal – query various internal information"
 <dd>(replaces the standalone tool <code>btrfs-debug-tree</code>) </dd>
 <p> Dump tree structures from a given device in textual form, expand keys to human readable equivalents where possible. This is useful for analyzing filesystem state or inconsistencies and has a positive educational effect on understanding the internal filesystem structure. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  contains file names, consider that if you&#8217;re asked to send the dump for analysis. Does not contain file data. </dd>
 </dl>
 <p> <code>Options</code> </p>
@@ -124,7 +124,7 @@ description: "btrfs-inspect-internal – query various internal information"
 <dl>
 <dd>for a given file or directory, return the containing tree root id, but for a subvolume itself return its own tree id (ie. subvol id) </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  The result is undefined for the so-called empty subvolumes (identified by inode number 2), but such a subvolume does not contain any files anyway </dd>
 </dl>
 </dl>

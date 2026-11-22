@@ -11,7 +11,7 @@ description: "slartv.f –"
 <p> slartv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slartv</code> (N, X, INCX, Y, INCY, C, S, INCC)<br />
+<p> subroutine <code>slartv</code> (N, X, INCX, Y, INCY, C, S, INCC)<br/>
  <i></i><code>SLARTV</code> applies a vector of plane rotations with real cosines and real sines to the elements of a pair of vectors.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slartv (integerN, real, dimension( * )X, integerINCX, real, dimension( * )Y, integerINCY, real, dimension( * )C, real, dimension( * )S, integerINCC)</h3>

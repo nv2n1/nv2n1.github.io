@@ -18,7 +18,7 @@ description: "datefudge – pretend the system time is different"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;static</code>, <code>-s</code></dt>
-<dd> Mark the date as a `static&#8217; one. The above mentioned system calls will always return the date given in the <i>at_date</i> argument, regardless of time passing. See EXAMPLES<br />
+<dd> Mark the date as a `static&#8217; one. The above mentioned system calls will always return the date given in the <i>at_date</i> argument, regardless of time passing. See EXAMPLES<br/>
 &nbsp;<wbr>below.</dd>
 <dt><code>&#8211;help</code>, <code>-h</code></dt>
 <dd> Print short usage information and exit.</dd>
@@ -43,9 +43,9 @@ $ datefudge "2007-04-01 10:23" sh - c "sleep 3; date -R" Sun, 01 Apr 2007 10 : 2
 <h2>BUGS</h2>
 <p> There is no attempt to make this change undetectable by the program. In particular, file modification times are <code>not</code> modified.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2003 by Matthias Urlichs.<br />
+<p> Copyright &#169; 2003 by Matthias Urlichs.<br/>
  Copyright &#169; 2008-2016 by Robert Luberda. </p>
-<p> There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. You may redistribute copies of datefudge under the terms of the GNU General Public License.<br />
+<p> There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. You may redistribute copies of datefudge under the terms of the GNU General Public License.<br/>
  For more information about these matters, see the file named COPYING.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-date/">date</a></code>(1), <code>ld.so</code>(1), <code><a href="/docs/linux/man/2-time/">time</a></code>(2), <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2), <code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2) </p>

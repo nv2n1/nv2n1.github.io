@@ -127,17 +127,17 @@ description: "mc – Visual shell for Unix-like systems."
 <dl>
 <dt>
 </dt><dd>
- 1) command line option <code>-K &lt;keymap&gt;</code> or <code>&#8211;keymap=&lt;keymap&gt;</code><br />
- 2) Environment variable <code>MC_KEYMAP</code><br />
- 3) Parameter <code>keymap</code> in section <code>[Midnight-Commander]</code> of config file.<br />
+ 1) command line option <code>-K &lt;keymap&gt;</code> or <code>&#8211;keymap=&lt;keymap&gt;</code><br/>
+ 2) Environment variable <code>MC_KEYMAP</code><br/>
+ 3) Parameter <code>keymap</code> in section <code>[Midnight-Commander]</code> of config file.<br/>
  4) File <code>~/.config/mc/mc.keymap</code>
 </dd></dl>
 <p> Command line option, environment variable and parameter in config file may contain the absolute path to the keymap-file (with the extension .keymap or without it). Search of keymap-file will occur in (to the first one found):</p>
 <dl>
 <dt>
 </dt><dd>
- 1) <code>~/.config/mc</code><br />
- 2) <code>/etc/mc/</code><br />
+ 1) <code>~/.config/mc</code><br/>
+ 2) <code>/etc/mc/</code><br/>
  3) <code>/usr/share/mc/</code> </dd>
 </dl>
 <h2> Miscellaneous Keys</h2>
@@ -648,7 +648,7 @@ L       List the contents of a compressed tar-archive
 <h2> Layout</h2>
 <p> The layout dialog gives you a possibility to change the general layout of screen. The options in this dialog are divided into several groups: &quot;Panel split&quot;, &quot;Console output&quot; and &quot;Other options&quot;. </p>
 <p> <code>Panel split</code> </p>
-<p> The rest of the screen area is used for the two directory panels. You can specify whether the area is split to the panels in <i>Vertical</i><br />
+<p> The rest of the screen area is used for the two directory panels. You can specify whether the area is split to the panels in <i>Vertical</i><br/>
 &nbsp;<wbr>or <i>Horizontal</i> direction. Panel layout can be changed using Alt-, (Alt-comma) shortcut. </p>
 <p> <i>Equal split.</i> By default, panels have equal sizes. Using this option you can specify an unequal split. </p>
 <p> <code>Console output</code> </p>
@@ -681,7 +681,7 @@ L       List the contents of a compressed tar-archive
 <p> <code>Quick search</code> </p>
 <p> You can specify how the Quick search mode should work: case insensitively, case sensitively or be matched to the panel sort order: case sensitive or not.</p>
 <h2> Confirmation</h2>
-<p> In this dialog you configure the confirmation options for file deletion, overwriting files, execution by pressing enter, quitting the program, directory hotlist entries deletion and history cleanup.<br />
+<p> In this dialog you configure the confirmation options for file deletion, overwriting files, execution by pressing enter, quitting the program, directory hotlist entries deletion and history cleanup.<br/>
 &nbsp;<wbr>and.</p>
 <h2> Display bits</h2>
 <p> This is used to configure the range of visible characters on the screen. This setting may be 7-bits if your terminal/curses supports only seven output bits, ISO-8859-1 displays all the characters in the ISO-8859-1 map and full 8 bits is for those terminals that can display full 8 bit characters.</p>
@@ -1090,26 +1090,26 @@ base_color=normal=white,default:marked=magenta,default
 <p> If your skin contains any of 256-color definitions, you should define the &#8216;256colors&#8217; key set to TRUE value in [skin] section. </p>
 <p> A skin-file is searched on the following algorithm (to the first one found): </p>
 <dl>
-<dd> <p> <br />
- 1) command line option <code>-S &lt;skin&gt;</code> or <code>--skin=&lt;skin&gt;</code> <br />
- 2) Environment variable <code>MC_SKIN</code> <br />
- 3) Parameter <code>skin</code> in section <code>[Midnight-Commander]</code> in config file. <br />
- 4) File <code>/etc/mc/skins/default.ini</code> <br />
+<dd> <p> <br/>
+ 1) command line option <code>-S &lt;skin&gt;</code> or <code>--skin=&lt;skin&gt;</code> <br/>
+ 2) Environment variable <code>MC_SKIN</code> <br/>
+ 3) Parameter <code>skin</code> in section <code>[Midnight-Commander]</code> in config file. <br/>
+ 4) File <code>/etc/mc/skins/default.ini</code> <br/>
  5) File <code>/usr/share/mc/skins/default.ini</code> </p>
  </dd></dl>
 <p> Command line option, environment variable and parameter in config file may contain the absolute path to the skin-file (with the extension .ini or without it). Search of skin-file will occur in (to the first one found): </p>
 <dl>
-<dd> <p> 1) <code>~/.local/share/mc/skins/</code> <br />
- 2) <code>@sysconfdir@/mc/skins/</code> <br />
- 3) <code>/usr/share/mc/skins/</code> <br />
+<dd> <p> 1) <code>~/.local/share/mc/skins/</code> <br/>
+ 2) <code>@sysconfdir@/mc/skins/</code> <br/>
+ 3) <code>/usr/share/mc/skins/</code> <br/>
  </p>
  </dd></dl>
 <p> For getting extended info, refer to: </p>
 <dl>
-<dd> <p> Description of section and parameters <br />
- Color pair definitions <br />
- Draw lines <br />
- Compatibility <br />
+<dd> <p> Description of section and parameters <br/>
+ Color pair definitions <br/>
+ Draw lines <br/>
+ Compatibility <br/>
  </p>
  </dd></dl>
 <h2>Description of section and parameters</h2>
@@ -1234,7 +1234,7 @@ base_color=normal=white,default:marked=magenta,default
 <h2>Color pair definitions</h2>
 <p> Any parameter in skin-file contain definition of color pair. </p>
 <p> Color pairs described as two colors and the optional attributes separated by &#8216;;&#8216;. First field sets the foreground color, second field sets background color, third field sets the attributes. Any of the fields may be omitted, in this case value will be taken from default color pair (global color pair or from default color pair of this section). </p>
-<p> Example: <br />
+<p> Example: <br/>
  </p>
 <pre><code>[core]
     # green on black

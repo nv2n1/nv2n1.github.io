@@ -30,7 +30,7 @@ description: "archive – Usenet article archiver"
 <pre> comp.sources.unix/2211</pre>
 <p>in the archive area.</p>
 <dt><code>-i</code> <i>index</i></dt>
-<dd>If the <code>-i</code> flag is used, <code>archive</code> will append one line to the file <i>index</i> for each article that it archives. This line will contain the destination file name, the Message-ID: header, and the Subject: header of the message, separated by spaces. If either header is missing (normally not possible if the article was accepted by <code>innd</code>), it will be replaced by <tt>&quot;&lt;none&gt;&quot;</tt>. The headers will be transformed using the same rules as are used to generate overview data (unfolded and then with tabs, <font SIZE="-1">CR</font>, and <font SIZE="-1">LF</font> replaced by spaces).</dd>
+<dd>If the <code>-i</code> flag is used, <code>archive</code> will append one line to the file <i>index</i> for each article that it archives. This line will contain the destination file name, the Message-ID: header, and the Subject: header of the message, separated by spaces. If either header is missing (normally not possible if the article was accepted by <code>innd</code>), it will be replaced by <tt>&quot;&lt;none&gt;&quot;</tt>. The headers will be transformed using the same rules as are used to generate overview data (unfolded and then with tabs, CR, and LF replaced by spaces).</dd>
 <dt><code>-p</code> <i>pattern</i></dt>
 <dd>Limits the targets taken from the Xref: header to the groups specified in <i>pattern</i>. <i>pattern</i> is a <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3) pattern matching newsgroups that you wish to have <code>archive</code> handle.</dd>
 <dt><code>-r</code></dt>
@@ -45,7 +45,7 @@ description: "archive – Usenet article archiver"
  :&lt;pathbin&gt;/archive -f -i &lt;patharchive&gt;/INDEX</pre>
 <p>Replace &lt;pathbin&gt; and &lt;patharchive&gt; with the appropriate paths.</p>
 <h2>History</h2>
-<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
+<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to POD by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
 <p> <tt>$Id:</tt> archive.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5). </p>

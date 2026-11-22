@@ -12,7 +12,7 @@ description: "GPaste – A lightweight clipboard manager for the Gnome desktop"
 <h2>SYNOPSIS</h2>
 <p> <code>[command |] gpaste-client [options&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>
-<p> GPaste is a modular clipboard management system with a fully DBus-based daemon, a <font SIZE="-1">CLI</font> client and a gtk+ tray icon. </p>
+<p> GPaste is a modular clipboard management system with a fully DBus-based daemon, a CLI client and a gtk+ tray icon. </p>
 <h2>COMMANDS</h2>
 <dl>
 <dt><code>gpaste-client [history]</code></dt>
@@ -46,9 +46,9 @@ description: "GPaste – A lightweight clipboard manager for the Gnome desktop"
 <dt><code>gpaste-client replace &lt;number&gt; &lt;contents&gt;</code></dt>
 <dd> Replace the contents of the &lt;number&gt;th item of the history with the provided one </dd>
 <dt><code>gpaste-client merge [&#8211;decoration|-d &lt;string&gt;] [&#8211;separator|-s &lt;string&gt;] &lt;number&gt; … &lt;number&gt;</code></dt>
-<dd> Merge the &lt;number&gt;th items of the history and put the result in the clipboard<br />
- If foo bar and baz are respectively index 1 3 and 4 in history and you run<br />
- gpaste-client merge -d &#8216;&quot;&#8217; -s &#8216;,&#8217; 1 3 4<br />
+<dd> Merge the &lt;number&gt;th items of the history and put the result in the clipboard<br/>
+ If foo bar and baz are respectively index 1 3 and 4 in history and you run<br/>
+ gpaste-client merge -d &#8216;&quot;&#8217; -s &#8216;,&#8217; 1 3 4<br/>
  You will end up with &quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot; in your clipboard </dd>
 <dt><code>gpaste-client delete &lt;number&gt;</code></dt>
 <dd> Delete the &lt;number&gt;th item of the history </dd>

@@ -11,7 +11,7 @@ description: "srot.f –"
 <p> srot.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>srot</code> (N, SX, INCX, SY, INCY, C, S)<br />
+<p> subroutine <code>srot</code> (N, SX, INCX, SY, INCY, C, S)<br/>
  <i></i><code>SROT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine srot (integerN, real, dimension(*)SX, integerINCX, real, dimension(*)SY, integerINCY, realC, realS)</h3>

@@ -77,7 +77,7 @@ description: "doveadm-search-query – Overview of search queries for doveadm ma
 <dt><code>ON&nbsp;<wbr></code><i>date specification</i></dt>
 <dd>Matches messages whose internal date matches the given <i>date specification</i>.</dd>
 <dt><i>search key&nbsp;<wbr></i><code>OR&nbsp;<wbr></code><i>search key</i></dt>
-<dd>Matches messages where one of the OR-ed search keys matches.<br />
+<dd>Matches messages where one of the OR-ed search keys matches.<br/>
  Note: IMAP4rev1 uses the syntax: <code>OR&nbsp;<wbr></code><i>search key search key</i></dd>
 <dt><code>RECENT</code></dt>
 <dd>Matches messages with the IMAP flag \Recent set.</dd>
@@ -126,14 +126,14 @@ description: "doveadm-search-query – Overview of search queries for doveadm ma
 <p><code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) supports a few additional <i>date specification</i> formats. They can be used anywhere, where a <i>date specification</i> value is obligatory.</p>
 <dl>
 <dt><i>day</i><code>&#8211;</code><i>month</i><code>&#8211;</code><i>year</i></dt>
-<dd>Default IMAP4rev1 date format.<br />
- <i>day</i>, the day of month: <code>1</code>&#8211;<code>31</code>.<br />
- <i>month</i>, the abbreviated month name: <code>Jan</code>, <code>Feb</code>, <code>Mar</code>, <code>Apr</code>, <code>May</code>, <code>Jun</code>, <code>Jul</code>, <code>Aug</code>, <code>Sep</code>, <code>Oct</code>, <code>Nov</code>&nbsp;<wbr>or <code>Dec</code>.<br />
- <i>year</i>, four digits of year, e.g. <code>2007</code>.<br />
+<dd>Default IMAP4rev1 date format.<br/>
+ <i>day</i>, the day of month: <code>1</code>&#8211;<code>31</code>.<br/>
+ <i>month</i>, the abbreviated month name: <code>Jan</code>, <code>Feb</code>, <code>Mar</code>, <code>Apr</code>, <code>May</code>, <code>Jun</code>, <code>Jul</code>, <code>Aug</code>, <code>Sep</code>, <code>Oct</code>, <code>Nov</code>&nbsp;<wbr>or <code>Dec</code>.<br/>
+ <i>year</i>, four digits of year, e.g. <code>2007</code>.<br/>
  For example the &quot;13th of April 2007&quot; will be represented as <code>13-Apr-2007</code>.</dd>
 <dt><i>interval</i></dt>
-<dd>Combination of a positive integer <i>number</i> and a <i>time unit</i>.<br />
- Available <i>time units</i> are: <code>weeks</code> (abbr: <code>w</code>), <code>days</code> (abbr: <code>d</code>), <code>hours</code> (abbr: <code>h</code>), <code>mins</code> (abbr: <code>m</code>) and <code>secs</code> (abbr: <code>s</code>).<br />
+<dd>Combination of a positive integer <i>number</i> and a <i>time unit</i>.<br/>
+ Available <i>time units</i> are: <code>weeks</code> (abbr: <code>w</code>), <code>days</code> (abbr: <code>d</code>), <code>hours</code> (abbr: <code>h</code>), <code>mins</code> (abbr: <code>m</code>) and <code>secs</code> (abbr: <code>s</code>).<br/>
  To match messages from last week, you may specify for example: <code>since 1w</code>, <code>since 1weeks</code>&nbsp;<wbr>or <code>since 7days</code>.</dd>
 <dt><i>Unix timestamp</i></dt>
 <dd>A 10 digit Unix timestamp, seconds since the 1st of January 1970, 00:00:00 UTC. For example the &quot;13th of April 2007&quot; will be represented as <code>1176418800</code>.</dd>
@@ -145,7 +145,7 @@ description: "doveadm-search-query – Overview of search queries for doveadm ma
 <dt><i>octets</i></dt>
 <dd>The message size in octets, as specified in the IMAP4rev1 specification.</dd>
 <dt><i>size</i></dt>
-<dd>The message size in <code>B</code>&nbsp;<wbr>(byte), <code>k</code>&nbsp;<wbr>(kilobyte), <code>M</code>&nbsp;<wbr>(megabyte), <code>G</code>&nbsp;<wbr>(gigabyte)&nbsp;<wbr>or <code>T</code>&nbsp;<wbr>(terabyte).<br />
+<dd>The message size in <code>B</code>&nbsp;<wbr>(byte), <code>k</code>&nbsp;<wbr>(kilobyte), <code>M</code>&nbsp;<wbr>(megabyte), <code>G</code>&nbsp;<wbr>(gigabyte)&nbsp;<wbr>or <code>T</code>&nbsp;<wbr>(terabyte).<br/>
  To match messages, bigger than 1 megabyte, you may specify for example: <code>larger 1M</code>&nbsp;<wbr>or <code>larger 1024k</code>.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1), <code><a href="/docs/linux/man/1-doveadm-search/">doveadm-search</a></code>(1) </p>

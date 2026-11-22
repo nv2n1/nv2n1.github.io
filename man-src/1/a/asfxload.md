@@ -14,7 +14,7 @@ description: "sfxload, asfxload – load a SoundFont file on the Emux WaveTable"
 <p> <code>asfxload</code> [<i>-options</i>]<i> fontfile</i> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>sfxload</code> and <code>asfxload</code> are utility program sto transfer the sound wave and instruments data in a SoundFont file to the AWE32 sound driver, or to the Emux WaveTable of ALSA sbawe and emu10k1 drivers. This program is necessary for playing MIDI samples via sequencer programs supporting AWE driver. There is no big difference between <code>sfxload</code> and <code>asfxload</code> except for that <code>asfxload</code> is for ALSA and <code>sfxload</code> is for OSS, respecitvely. The options to specify devices are different between them (see below). </p>
-<p> Basically, sfxload behaves as two ways. % sfxload fontfile<br />
+<p> Basically, sfxload behaves as two ways. % sfxload fontfile<br/>
  % sfxload -b1 fontfile </p>
 <p> The first usage is to read SF2 (or SBK) file and transfer to the awe driver. In this case, the samples which were loaded on the driver are replaced with the new one. In the second case, sfxload reads the file and appends it to the pre-loaded samples on the driver with specified bank number. The old samples remain in the driver. The additional samples can be cleared via <code>-x</code> option (see below). </p>
 <p> The sound files are searched through the path list. The path list is defined as built-in. If the environment variable <code>SFBANKDIR</code> or the command line option <code>-P</code> is given, it replaces the default search list. The file extension <i>.sf2</i>, and <i>.sbk</i> can be abbreviated. </p>
@@ -33,20 +33,20 @@ description: "sfxload, asfxload – load a SoundFont file on the Emux WaveTable"
 <dt><code>-N, &#8211;increment</code><i></i>[=bool]</dt>
 <dd> Do not clear samples even with the absence of <code>-b</code> option. However, this option is not exclusive with <code>-x</code> option. If both options are specified, and the memory full error is encountered during loading fonts, <code>sfxload</code> will try to remove samples and load the fonts again.</dd>
 <dt><code>-b, &#8211;bank=</code><i>number</i></dt>
-<dd> Append the sound samples on the specified bank. Without this option, all present samples in the driver are removed before loading the new fonts unless <code>-N</code> option is specified. Usually, this option is necessary to load user bank, typically in bank one. For example, % sfxload synthgm.sbk<br />
+<dd> Append the sound samples on the specified bank. Without this option, all present samples in the driver are removed before loading the new fonts unless <code>-N</code> option is specified. Usually, this option is necessary to load user bank, typically in bank one. For example, % sfxload synthgm.sbk<br/>
  % sfxload -b1 surprise.sf2 </dd>
 <dt><code>-l, &#8211;lock</code><i></i>[=bool]</dt>
 <dd> Lock the font. The locked font is no longer removed via remove option (<code>-x</code>) even if it&#8217;s loaded together with <code>-b</code> option.</dd>
 <dt><code>-C, &#8211;compat</code><i></i>[=bool]</dt>
 <dd> Use the old (v0.4.2) parameter calculations.</dd>
 <dt><code>-A, &#8211;sense=</code><i>sensitivity</i></dt>
-<dd> (Only valid on compatible mode)<br />
+<dd> (Only valid on compatible mode)<br/>
  Set sample attenuation sensitivity. This option controls the sensitivity of initial attenuation parameter of each instrument defined in SoundFont file. In the program, each parameter is calculated from the value divided by this number for the original value. The number <i>1.0</i> means that the original initial attenuation parameters would be used. Generally, smaller number makes drum sounds louder. (I think <code>&quot;-A 2&quot;</code> would be similar to Windows sounds.) The default value is <i>10</i>. Note that this option changes also the default attenuation automatically (see below).</dd>
 <dt><code>-a, &#8211;atten=</code><i>attenuation</i></dt>
-<dd> (Only valid on compatible mode)<br />
+<dd> (Only valid on compatible mode)<br/>
  Set the default attenuation level. This option controls the minimum attenuation of the sample. The parameter is given in raw digit number for AWE driver, that is, in 8/3 dB unit. Since <code>&#8211;sense</code> option changes the default attenuation automatically, specify this option later from <code>&#8211;sense</code> option. The default value is <i>32</i>.</dd>
 <dt><code>-d, &#8211;decay=</code><i>scale</i></dt>
-<dd> (Only valid on compatible mode)<br />
+<dd> (Only valid on compatible mode)<br/>
  Set the scale of envelope decay time. Default value is <i>50.0</i>. Sounds decay fast when larger number is set. The ver.0.3 sfxload uses <i>54.8</i>. If you want to keep the same sound, use this number instead.</dd>
 <dt><code>-M, &#8211;memory</code><i></i>[=bool]</dt>
 <dd> Display the left memory size in DRAM on the AWE32 card.</dd>
@@ -72,7 +72,7 @@ description: "sfxload, asfxload – load a SoundFont file on the Emux WaveTable"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>source:map[:soundfont [preset-name]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>source:map[:soundfont [preset-name]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8230;</p>
-<p> The first and second items are the source and mapped presets, respectively. The former is the existing preset in the soundfont, and the latter is the actual preset loaded on the sound driver. The preset is described by the following three values, <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>preset/bank/keynote<br />
+<p> The first and second items are the source and mapped presets, respectively. The former is the existing preset in the soundfont, and the latter is the actual preset loaded on the sound driver. The preset is described by the following three values, <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>preset/bank/keynote<br/>
  If bank and keynote are omitted, bank 0 and keynote -1 (meaning to search all keys) are applied. </p>
 <p> The third item is the name of soundfont file. The file is searched from the prescribed search-path. The remaining arguments are ignored in <code>sfxload</code>. </p>
 <p> If the soundfont name is omitted, sfxload loads it as preset mapping. It just behaves like a symbolic link of file opposing to copying of the file. Any sample data is not referred at this time, but searched first when the note is played. </p>
@@ -82,7 +82,7 @@ description: "sfxload, asfxload – load a SoundFont file on the Emux WaveTable"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0/128:0/128:drum.sf2</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>include xgsfx.bnk</p>
 <h2>SYSTEM RESROUCE FILE</h2>
-<p> The default option arguments can be stored in the system resource file. There are two files loaded as default. <i>$HOME/.sfxloadrc</i><br />
+<p> The default option arguments can be stored in the system resource file. There are two files loaded as default. <i>$HOME/.sfxloadrc</i><br/>
  <i>/etc/sfxloadrc</i> </p>
 <p> The syntax is as follows: fontname -options.. The first argument is soundfont file name for each option. The remaining arguments are identical with command line options. The font name <i>default</i> is used for default options for all sound fonts. The default options are overridden by specific options or command line options. </p>
 <p> For example, to set default chorus level 20 except for synthgm font, you can write a resource file <i>~/.sfxloadrc</i> like that: default<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8211;chorus=20</p>

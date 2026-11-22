@@ -63,7 +63,7 @@ description: "xinetd.log – xinetd service log format"
 <dt><code>login</code></dt>
 <dd>remote_user=%s local_user=%s tty=%s</dd>
 <dt><code>exec</code></dt>
-<dd>remote_user=%s verify=<i>status</i> command=%s<br />
+<dd>remote_user=%s verify=<i>status</i> command=%s<br/>
  Possible <i>status</i> values:</dd>
 <dl>
 <dd>

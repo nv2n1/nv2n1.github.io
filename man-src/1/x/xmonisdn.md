@@ -13,7 +13,7 @@ description: "xmonisdn – monitor for ISDN network"
 <p> <code>xmonisdn</code> [ &#8211;<i>toolkitoption</i> &#8230; ] [ <i>-option</i> &#8230; ]</p>
 <h2>DESCRIPTION</h2>
 <p> The <i>xmonisdn</i> program displays the status of the ISDN network connection and allows the starting and stopping of the ISDN subsystem. If the ISDN subsystem is not active, a window showing a terminal in the foreground and a dashed terminal in the backgorund is displayed. If the ISDN system is active, but there is no network connection established, two terminals with dashed arrows between them is displayed. If there is a incoming connection or there is dialing in progress, the arrows become more solid. An outgoing network connection is signaled by solid arrows between the terminals and the window is displayed in reverse video. If the ISDN subsystem dials out or hangs up, the program beeps to signal the state change (this can be changed using the <i>volume </i> option). </p>
-<p> Pressing button 2 on the window executes the command <i>/sbin/ifup</i> and pressing button 3 executes <i>/sbin/ifdown</i><br />
+<p> Pressing button 2 on the window executes the command <i>/sbin/ifup</i> and pressing button 3 executes <i>/sbin/ifdown</i><br/>
  <i>/sbin/ifup</i> and <i>/sbin/ifdown</i> should start and stop the ISDN subsystem; if the route command is used, xmonisdn must be run as setuid root for this to work. Alternatively, the scripts can manipulate the isdnctrl dialmode setting, in which case only permission to access /dev/isdnctrl is needed.</p>
 <h2>OPTIONS</h2>
 <p> <i>xmonisdn</i> accepts all of the standard X Toolkit command line options along with the additional options listed below:</p>
@@ -106,7 +106,7 @@ description: "xmonisdn – monitor for ISDN network"
         &lt;ButtonPress&gt;Button3:  netdown()
 </pre>
 <h2>SECURITY ISSUES</h2>
-<p> There are a number of reasons why you should not run <i>xmonisdn</i> as a `setuid root&#8217; program. Most importantly, any setuid root program is a potential security hole. The scripts that are executed by <i>xmonisdn</i> may be compromised, or contain non-absolute paths to the commands called (so that by changing the PATH variable the wrong binary is executed!); or the script may in turn call other things that are not secure.<br />
+<p> There are a number of reasons why you should not run <i>xmonisdn</i> as a `setuid root&#8217; program. Most importantly, any setuid root program is a potential security hole. The scripts that are executed by <i>xmonisdn</i> may be compromised, or contain non-absolute paths to the commands called (so that by changing the PATH variable the wrong binary is executed!); or the script may in turn call other things that are not secure.<br/>
  If you are sure that your scripts are secure and you insist on making <i>xmonisdn</i> setuid root, you can give the <code>-r</code> option as <i>first</i> option. This will turn off xmonisdn&#8217;s setuid detection. However, you are on your own if you do this! </p>
 <p> A better alternative is to put the isdn devices in group <code>dialout</code> (if not so already), and add yourself to the <code>dialout</code> group. This way you have permission to manipulate the ISDN devices, e.g. to use <i>isdnctrl</i> to change the dialmode setting to off (to disable dialing) or auto (for autodial). The whole ISDN system may also be turned on and off, see the <i>isdnctrl manpage for more info.</i> This is a more secure way of controlling the dialing than e.g. by manipulating routes. </p>
 <h2>ENVIRONMENT</h2>

@@ -20,8 +20,8 @@ description: "afs5log – AFS token initializer"
 <dt>-p <i>path</i></dt>
 <dd> Determine which cell the specified <i>path</i> resides in, and obtain tokens for that cell.</dd>
 <dt>-s <i>strategy</i></dt>
-<dd> Overrides the default token-setting strategy (&quot;<i>2b</i>&quot;) with the named strategy. Recognized strategy names include:<br />
-&nbsp;<wbr><i>rxk5</i>&nbsp;<wbr>&nbsp;<wbr>rxk5&nbsp;<wbr>(requires OpenAFS 1.6 or later)<br />
+<dd> Overrides the default token-setting strategy (&quot;<i>2b</i>&quot;) with the named strategy. Recognized strategy names include:<br/>
+&nbsp;<wbr><i>rxk5</i>&nbsp;<wbr>&nbsp;<wbr>rxk5&nbsp;<wbr>(requires OpenAFS 1.6 or later)<br/>
 &nbsp;<wbr><i>2b</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rxkad&nbsp;<wbr>&quot;2b&quot;&nbsp;<wbr>(requires OpenAFS 1.2.8 or later)</dd>
 <dt>-5</dt>
 <dd> Skip attempts to use Kerberos IV and just use <i>2b</i>-style tokens, which are only supported by OpenAFS 1.2.8 and later.</dd>

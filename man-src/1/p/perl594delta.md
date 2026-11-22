@@ -12,7 +12,7 @@ description: "perl594delta – what is new for perl v5.9.4"
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.9.3 and the 5.9.4 development releases. See perl590delta, perl591delta, perl592delta and perl593delta for the differences between 5.8.0 and 5.9.3.</p>
 <h2>Incompatible Changes</h2>
-<h3>chdir <font SIZE="-1">FOO</font></h3>
+<h3>chdir FOO</h3>
 <p> A bareword argument to <i>chdir()</i> is now recognized as a file handle. Earlier releases interpreted the bareword as a directory name. (Gisle Aas)</p>
 <h3>Handling of pmc files</h3>
 <p> An old feature of perl was that before <tt>&quot;require&quot;</tt> or <tt>&quot;use&quot;</tt> look for a file with a <i>.pm</i> extension, they will first look for a similar filename with a <i>.pmc</i> extension. If this file is found, it will be loaded in place of any potentially existing file ending in a <i>.pm</i> extension. </p>
@@ -20,7 +20,7 @@ description: "perl594delta – what is new for perl v5.9.4"
 <h3>@- and @+ in patterns</h3>
 <p> The special arrays <tt>&quot;@-&quot;</tt> and <tt>&quot;@+&quot;</tt> are no longer interpolated in regular expressions. (Sadahiro Tomoyuki)</p>
 <h3>$AUTOLOAD can now be tainted</h3>
-<p> If you call a subroutine by a tainted name, and if it defers to an <font SIZE="-1">AUTOLOAD</font> function, then <tt>$AUTOLOAD</tt> will be (correctly) tainted. (Rick Delaney)</p>
+<p> If you call a subroutine by a tainted name, and if it defers to an AUTOLOAD function, then <tt>$AUTOLOAD</tt> will be (correctly) tainted. (Rick Delaney)</p>
 <h2>Core Enhancements</h2>
 <h3><i>state()</i> variables</h3>
 <p> A new class of variables has been introduced. State variables are similar to <tt>&quot;my&quot;</tt> variables, but are declared with the <tt>&quot;state&quot;</tt> keyword in place of <tt>&quot;my&quot;</tt>. They&#8217;re visible only in their lexical scope, but their value is persistent: unlike <tt>&quot;my&quot;</tt> variables, they&#8217;re not undefined at scope entry, but retain their previous value. (Rafael Garcia-Suarez) </p>
@@ -30,21 +30,21 @@ description: "perl594delta – what is new for perl v5.9.4"
 </pre>
 <p> or by using the <tt>&quot;-E&quot;</tt> command-line switch in one-liners. </p>
 <p> See &#8220;Persistent variables via <i>state()</i>&#8221; in perlsub.</p>
-<h3><font SIZE="-1"><i>UNIVERSAL::DOES</i></font><i>()</i></h3>
+<h3><i>UNIVERSAL::DOES</i><i>()</i></h3>
 <p> The <tt>&quot;UNIVERSAL&quot;</tt> class has a new method, <tt>&quot;DOES()&quot;</tt>. It has been added to solve semantic problems with the <tt>&quot;isa()&quot;</tt> method. <tt>&quot;isa()&quot;</tt> checks for inheritance, while <tt>&quot;DOES()&quot;</tt> has been designed to be overridden when module authors use other types of relations between classes (in addition to inheritance). (chromatic) </p>
-<p> See &#8220;$obj-&gt;<font SIZE="-1">DOES</font>( <font SIZE="-1">ROLE</font> )&#8221; in <font SIZE="-1">UNIVERSAL</font>.</p>
+<p> See &#8220;$obj-&gt;DOES( ROLE )&#8221; in UNIVERSAL.</p>
 <h3>Exceptions in constant folding</h3>
 <p> The constant folding routine is now wrapped in an exception handler, and if folding throws an exception (such as attempting to evaluate 0/0), perl now retains the current optree, rather than aborting the whole program. (Nicholas Clark, Dave Mitchell)</p>
 <h3>Source filters in @INC</h3>
 <p> It&#8217;s possible to enhance the mechanism of subroutine hooks in <tt>@INC</tt> by adding a source filter on top of the filehandle opened and returned by the hook. This feature was planned a long time ago, but wasn&#8217;t quite working until now. See &#8220;require&#8221; in perlfunc for details. (Nicholas Clark)</p>
-<h3><font SIZE="-1">MAD</font></h3>
-<p> <font SIZE="-1">MAD</font>, which stands for <i>Misc Attribute Decoration</i>, is a still-in-development work leading to a Perl 5 to Perl 6 converter. To enable it, it&#8217;s necessary to pass the argument <tt>&quot;-Dmad&quot;</tt> to Configure. The obtained perl isn&#8217;t binary compatible with a regular perl 5.9.4, and has space and speed penalties; moreover not all regression tests still pass with it. (Larry Wall, Nicholas Clark)</p>
+<h3>MAD</h3>
+<p> MAD, which stands for <i>Misc Attribute Decoration</i>, is a still-in-development work leading to a Perl 5 to Perl 6 converter. To enable it, it&#8217;s necessary to pass the argument <tt>&quot;-Dmad&quot;</tt> to Configure. The obtained perl isn&#8217;t binary compatible with a regular perl 5.9.4, and has space and speed penalties; moreover not all regression tests still pass with it. (Larry Wall, Nicholas Clark)</p>
 <h2>Modules and Pragmas</h2>
 <dl>
 <dt>&bull;</dt>
 <dd> <tt>&quot;encoding::warnings&quot;</tt> is now a lexical pragma. (Although on older perls, which don&#8217;t have support for lexical pragmas, it keeps its global behaviour.) (Audrey Tang)</dd>
 <dt>&bull;</dt>
-<dd> <tt>&quot;threads&quot;</tt> is now a dual-life module, also available on <font SIZE="-1">CPAN</font>. It has been expanded in many ways. A <i>kill()</i> method is available for thread signalling. One can get thread status, or the list of running or joinable threads. </dd>
+<dd> <tt>&quot;threads&quot;</tt> is now a dual-life module, also available on CPAN. It has been expanded in many ways. A <i>kill()</i> method is available for thread signalling. One can get thread status, or the list of running or joinable threads. </dd>
 <p> A new <tt>&quot;threads-&gt;exit()&quot;</tt> method is used to exit from the application (this is the default for the main thread) or from the current thread only (this is the default for all other threads). On the other hand, the <i>exit()</i> built-in now always causes the whole application to terminate. (Jerry D. Hedden)</dl>
 <h3>New Core Modules</h3>
 <dl>
@@ -59,7 +59,7 @@ description: "perl594delta – what is new for perl v5.9.4"
 <dt>&bull;</dt>
 <dd> <tt>&quot;Package::Constants&quot;</tt>, by Jos Boumans, has been added. It&#8217;s a simple helper to list all constants declared in a given package.</dd>
 <dt>&bull;</dt>
-<dd> <tt>&quot;Win32API::File&quot;</tt>, by Tye McQueen, has been added (for Windows builds). This module provides low-level access to Win32 system <font SIZE="-1">API</font> calls for files/dirs.</dd></dl>
+<dd> <tt>&quot;Win32API::File&quot;</tt>, by Tye McQueen, has been added (for Windows builds). This module provides low-level access to Win32 system API calls for files/dirs.</dd></dl>
 <h2>Utility Changes</h2>
 <h3>config_data</h3>
 <p> <tt>&quot;config_data&quot;</tt> is a new utility that comes with <tt>&quot;Module::Build&quot;</tt>. It provides a command-line interface to the configuration of Perl modules that use Module::Build&#8217;s framework of configurability (that is, <tt>*::ConfigData</tt> modules that contain local configuration information for their parent modules.)</p>
@@ -73,8 +73,8 @@ description: "perl594delta – what is new for perl v5.9.4"
 <h2>Performance Enhancements</h2>
 <h3>Memory optimisations</h3>
 <p> Several internal data structures (typeglobs, GVs, CVs, formats) have been restructured to use less memory. (Nicholas Clark)</p>
-<h3><font SIZE="-1">UTF-8</font> cache optimisation</h3>
-<p> The <font SIZE="-1">UTF-8</font> caching code is now more efficient, and used more often. (Nicholas Clark)</p>
+<h3>UTF-8 cache optimisation</h3>
+<p> The UTF-8 caching code is now more efficient, and used more often. (Nicholas Clark)</p>
 <h3>Regular expressions</h3>
 <dl>
 <dt>Engine de-recursivised</dt>
@@ -96,24 +96,24 @@ description: "perl594delta – what is new for perl v5.9.4"
 <p> Many improvements have been made towards making Perl work correctly on z/OS. </p>
 <p> Perl has been reported to work on DragonFlyBSD.</p>
 <h3>Compilation improvements</h3>
-<p> All <i>ppport.h</i> files in the <font SIZE="-1">XS</font> modules bundled with perl are now autogenerated at build time. (Marcus Holland-Moritz)</p>
+<p> All <i>ppport.h</i> files in the XS modules bundled with perl are now autogenerated at build time. (Marcus Holland-Moritz)</p>
 <h3>New probes</h3>
 <p> The configuration process now detects whether <i>strlcat()</i> and <i>strlcpy()</i> are available. When they are not available, perl&#8217;s own version is used (from Russ Allbery&#8217;s public domain implementation). Various places in the perl interpreter now use them. (Steve Peters)</p>
 <h3>Windows build improvements</h3>
 <dl>
-<dt>Building <font SIZE="-1">XS</font> extensions</dt>
-<dd> Support for building <font SIZE="-1">XS</font> extension modules with the free MinGW compiler has been improved in the case where perl itself was built with the Microsoft <font SIZE="-1">VC++</font> compiler. (ActiveState)</dd>
+<dt>Building XS extensions</dt>
+<dd> Support for building XS extension modules with the free MinGW compiler has been improved in the case where perl itself was built with the Microsoft VC++ compiler. (ActiveState)</dd>
 <dt>Support for 64-bit compiler</dt>
 <dd> Support for building perl with Microsoft&#8217;s 64-bit compiler has been improved. (ActiveState)</dd></dl>
 <h2>Selected Bug Fixes</h2>
-<h3><font SIZE="-1">PERL5SHELL</font> and tainting</h3>
-<p> On Windows, the <font SIZE="-1">PERL5SHELL</font> environment variable is now checked for taintedness. (Rafael Garcia-Suarez)</p>
-<h3>Using *FILE{<font SIZE="-1">IO</font>}</h3>
-<p> <tt>&quot;stat()&quot;</tt> and <tt>&quot;-X&quot;</tt> filetests now treat *FILE{<font SIZE="-1">IO</font>} filehandles like *FILE filehandles. (Steve Peters)</p>
+<h3>PERL5SHELL and tainting</h3>
+<p> On Windows, the PERL5SHELL environment variable is now checked for taintedness. (Rafael Garcia-Suarez)</p>
+<h3>Using *FILE{IO}</h3>
+<p> <tt>&quot;stat()&quot;</tt> and <tt>&quot;-X&quot;</tt> filetests now treat *FILE{IO} filehandles like *FILE filehandles. (Steve Peters)</p>
 <h3>Overloading and reblessing</h3>
 <p> Overloading now works when references are reblessed into another class. Internally, this has been implemented by moving the flag for &#8220;overloading&#8221; from the reference to the referent, which logically is where it should always have been. (Nicholas Clark)</p>
-<h3>Overloading and <font SIZE="-1">UTF-8</font></h3>
-<p> A few bugs related to <font SIZE="-1">UTF-8</font> handling with objects that have stringification overloaded have been fixed. (Nicholas Clark)</p>
+<h3>Overloading and UTF-8</h3>
+<p> A few bugs related to UTF-8 handling with objects that have stringification overloaded have been fixed. (Nicholas Clark)</p>
 <h3>eval memory leaks fixed</h3>
 <p> Traditionally, <tt>&quot;eval 'syntax error'&quot;</tt> has leaked badly. Many (but not all) of these leaks have now been eliminated or reduced. (Dave Mitchell)</p>
 <h3>Random device on Windows</h3>
@@ -123,16 +123,16 @@ description: "perl594delta – what is new for perl v5.9.4"
 <dt>State variable %s will be reinitialized</dt>
 <dd> One can assign initial values to state variables, but not when they&#8217;re declared as a sub-part of a list assignment. See perldiag.</dd></dl>
 <h2>Changed Internals</h2>
-<p> A new file, <i>mathoms.c</i>, contains functions that aren&#8217;t used anymore in the perl core, but remain around because modules out there might still use them. They come from a factorization effort: for example, many <font SIZE="-1">PP</font> functions are now shared for several ops. </p>
+<p> A new file, <i>mathoms.c</i>, contains functions that aren&#8217;t used anymore in the perl core, but remain around because modules out there might still use them. They come from a factorization effort: for example, many PP functions are now shared for several ops. </p>
 <p> The implementation of the special variables $^H and %^H has changed, to allow implementing lexical pragmas in pure perl.</p>
 <h2>Known Problems</h2>
-<p> One warning test (number 263 in <i>lib/warnings.t</i>) fails under <font SIZE="-1">UTF-8</font> locales. </p>
+<p> One warning test (number 263 in <i>lib/warnings.t</i>) fails under UTF-8 locales. </p>
 <p> Bytecode tests fail under several platforms. We are considering removing support for byteloader and compiler before the 5.10.0 release.</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/rt3/">http://rt.perl.org/rt3/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

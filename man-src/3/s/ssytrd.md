@@ -11,7 +11,7 @@ description: "ssytrd.f –"
 <p> ssytrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssytrd</code> (UPLO, N, A, LDA, D, E, TAU, WORK, LWORK, INFO)<br />
+<p> subroutine <code>ssytrd</code> (UPLO, N, A, LDA, D, E, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>SSYTRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssytrd (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )D, real, dimension( * )E, real, dimension( * )TAU, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

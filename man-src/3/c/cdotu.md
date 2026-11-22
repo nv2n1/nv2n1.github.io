@@ -11,7 +11,7 @@ description: "cdotu.f –"
 <p> cdotu.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> COMPLEX function <code>cdotu</code> (N, CX, INCX, CY, INCY)<br />
+<p> COMPLEX function <code>cdotu</code> (N, CX, INCX, CY, INCY)<br/>
  <i></i><code>CDOTU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>COMPLEX function cdotu (integerN, complex, dimension(*)CX, integerINCX, complex, dimension(*)CY, integerINCY)</h3>

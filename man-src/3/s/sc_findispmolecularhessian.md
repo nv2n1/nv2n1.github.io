@@ -15,13 +15,13 @@ description: "sc::FinDispMolecularHessian –"
 <p> Inherits <code>sc::MolecularHessian</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>FinDispMolecularHessian</code> (const <code>Ref</code>&lt; <code>MolecularEnergy</code> &gt; &amp;) </p>
-<p> <code>FinDispMolecularHessian</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>FinDispMolecularHessian</code> <code>KeyVal</code> constructor is used to generate a <code>FinDispMolecularHessian</code> object from the input.<br />
+<p> <code>FinDispMolecularHessian</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>FinDispMolecularHessian</code> <code>KeyVal</code> constructor is used to generate a <code>FinDispMolecularHessian</code> object from the input.<br/>
  <code>FinDispMolecularHessian</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- <code>RefSymmSCMatrix</code> <code>compute_hessian_from_gradients</code> ()<br />
- <i>These members are used to compute a cartesian hessian from gradients at finite displacements. </i><br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ <code>RefSymmSCMatrix</code> <code>compute_hessian_from_gradients</code> ()<br/>
+ <i>These members are used to compute a cartesian hessian from gradients at finite displacements. </i><br/>
  int <code>ndisplace</code> () const </p>
 <p> int <code>ndisplacements_done</code> () const </p>
 <p> <code>RefSCMatrix</code> <code>displacements</code> (int irrep) const </p>
@@ -30,16 +30,16 @@ description: "sc::FinDispMolecularHessian –"
 <p> void <code>set_gradient</code> (int disp, const <code>RefSCVector</code> &amp;grad) </p>
 <p> void <code>checkpoint_displacements</code> (<code>StateOut</code> &amp;) </p>
 <p> void <code>restore_displacements</code> (<code>StateIn</code> &amp;) </p>
-<p> <code>RefSymmSCMatrix</code> <code>cartesian_hessian</code> ()<br />
- <i>This returns the cartesian hessian. </i><br />
- void <code>set_checkpoint</code> (int c)<br />
- <i>Set checkpoint option. </i><br />
- int <code>checkpoint</code> () const<br />
- <i>Return the current value of the checkpoint option. </i><br />
- void <code>set_energy</code> (const <code>Ref</code>&lt; <code>MolecularEnergy</code> &gt; &amp;energy)<br />
- <i>Some </i><code>MolecularHessian</code> specializations require a molecular energy object.<br />
- <code>MolecularEnergy</code> * <code>energy</code> () const<br />
- <i>This returns a </i><code>MolecularEnergy</code> object, if used by this specialization.<br />
+<p> <code>RefSymmSCMatrix</code> <code>cartesian_hessian</code> ()<br/>
+ <i>This returns the cartesian hessian. </i><br/>
+ void <code>set_checkpoint</code> (int c)<br/>
+ <i>Set checkpoint option. </i><br/>
+ int <code>checkpoint</code> () const<br/>
+ <i>Return the current value of the checkpoint option. </i><br/>
+ void <code>set_energy</code> (const <code>Ref</code>&lt; <code>MolecularEnergy</code> &gt; &amp;energy)<br/>
+ <i>Some </i><code>MolecularHessian</code> specializations require a molecular energy object.<br/>
+ <code>MolecularEnergy</code> * <code>energy</code> () const<br/>
+ <i>This returns a </i><code>MolecularEnergy</code> object, if used by this specialization.<br/>
  <code>Ref</code>&lt; <code>SCMatrixKit</code> &gt; <code>matrixkit</code> () const </p>
 <p> <code>RefSCDimension</code> <code>d3natom</code> () const</p>
 <h3>Protected Member Functions</h3>

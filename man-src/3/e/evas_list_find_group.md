@@ -9,13 +9,13 @@ description: "Linked List Find Functions – Functions that find specified data 
 
 <p>Linked List Find Functions &#8211; Functions that find specified data in a linked list. </p>
 <h3>Functions</h3>
-<p>EAPI void * <code>evas_list_find</code> (const <code>Evas_List</code> *list, const void *data)<br />
- <i>Find a member of a list and return the member. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_list_find_list</code> (const <code>Evas_List</code> *list, const void *data)<br />
- <i>Find a member of a list and return the list node containing that member. </i><br />
- EAPI void * <code>evas_list_nth</code> (const <code>Evas_List</code> *list, int n)<br />
- <i>Get the nth member&#8217;s data pointer in a list. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_list_nth_list</code> (const <code>Evas_List</code> *list, int n)<br />
+<p>EAPI void * <code>evas_list_find</code> (const <code>Evas_List</code> *list, const void *data)<br/>
+ <i>Find a member of a list and return the member. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_list_find_list</code> (const <code>Evas_List</code> *list, const void *data)<br/>
+ <i>Find a member of a list and return the list node containing that member. </i><br/>
+ EAPI void * <code>evas_list_nth</code> (const <code>Evas_List</code> *list, int n)<br/>
+ <i>Get the nth member&#8217;s data pointer in a list. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_list_nth_list</code> (const <code>Evas_List</code> *list, int n)<br/>
  <i>Get the nth member&#8217;s list node in a list. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that find specified data in a linked list.</p>
@@ -24,7 +24,7 @@ description: "Linked List Find Functions – Functions that find specified data 
 <p>Find a member of a list and return the member. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list handle to search for data<br />
+<dd><i>list</i> The list handle to search for data<br/>
  <i>data</i> The data pointer to find in the list list</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -44,7 +44,7 @@ description: "Linked List Find Functions – Functions that find specified data 
 <p>Find a member of a list and return the list node containing that member. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list handle to search for data<br />
+<dd><i>list</i> The list handle to search for data<br/>
  <i>data</i> The data pointer to find in the list list</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -65,7 +65,7 @@ description: "Linked List Find Functions – Functions that find specified data 
 <p>Get the nth member&#8217;s data pointer in a list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list to get member number n from<br />
+<dd><i>list</i> The list to get member number n from<br/>
  <i>n</i> The number of the element (0 being the first)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -84,7 +84,7 @@ description: "Linked List Find Functions – Functions that find specified data 
 <p>Get the nth member&#8217;s list node in a list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list to get member number n from<br />
+<dd><i>list</i> The list to get member number n from<br/>
  <i>n</i> The number of the element (0 being the first)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

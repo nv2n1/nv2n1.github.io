@@ -10,11 +10,11 @@ description: "ql/pricingengines/swaption/jamshidianswaptionengine.hpp – Swapti
 
 <p> ql/pricingengines/swaption/jamshidianswaptionengine.hpp &#8211; Swaption engine using Jamshidian&#8217;s decomposition. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instruments/swaption.hpp&gt;<br />
- #include &lt;ql/models/shortrate/onefactormodel.hpp&gt;<br />
+<p> #include &lt;ql/instruments/swaption.hpp&gt;<br/>
+ #include &lt;ql/models/shortrate/onefactormodel.hpp&gt;<br/>
  #include &lt;ql/pricingengines/genericmodelengine.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>JamshidianSwaptionEngine</code><br />
+<p> class <code>JamshidianSwaptionEngine</code><br/>
  <i>Jamshidian swaption engine. </i></p>
 <h2>Detailed Description</h2>
 <p> Swaption engine using Jamshidian&#8217;s decomposition. </p>

@@ -8,14 +8,14 @@ url: "/docs/linux/man/1-gracebat/"
 description: "grace – command line interface xmgrace – full-featured GUI mode gracebat – batch mode – print and exit"
 ---
 
-<p> grace &#8211; command line interface<br />
- xmgrace &#8211; full-featured GUI mode<br />
+<p> grace &#8211; command line interface<br/>
+ xmgrace &#8211; full-featured GUI mode<br/>
  gracebat &#8211; batch mode &#8211; print and exit</p>
 <h2>DESCRIPTION</h2>
 <p> Grace is a WYSIWYG tool to make two-dimensional plots of scientific data. </p>
 <h2>SYNOPSIS</h2>
-<p> <code>grace</code> [ <i>option</i> | <i>filename</i> ]&#8230;<br />
- <code>xmgrace</code> [ <i>option</i> | <i>filename</i> ]&#8230;<br />
+<p> <code>grace</code> [ <i>option</i> | <i>filename</i> ]&#8230;<br/>
+ <code>xmgrace</code> [ <i>option</i> | <i>filename</i> ]&#8230;<br/>
  <code>gracebat</code> [ <i>option</i> | <i>filename</i> ]&#8230; </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -131,7 +131,7 @@ description: "grace – command line interface xmgrace – full-featured GUI mod
 <dd> and <code>GRACE_FFTW_WISDOM_FILE</code> A flag (0 or 1) and a file name which determine whether a FFT should use `wisdom&#8217; when using the FFTW libraries. </dd>
 </dl>
 <h2>FILES</h2>
-<p> In many cases, when Grace needs to access a file given with a relative <i> pathname</i> , it searches for the file along the following path: <i><br />
+<p> In many cases, when Grace needs to access a file given with a relative <i> pathname</i> , it searches for the file along the following path: <i><br/>
 &nbsp;<wbr>./pathname:./.grace/pathname:~/.grace/pathname:$GRACE_HOME/pathname </i> </p>
 <p> The following files are of a special importance: </p>
 <p> <code>gracerc</code> &#8211; init file loaded upon start up. </p>
@@ -146,7 +146,7 @@ description: "grace – command line interface xmgrace – full-featured GUI mod
 <h2>AUTHORS</h2>
 <p> <code>Grace</code> is derived from <code>ACE/gr</code> (a.k.a <code>Xmgr</code> ) written by Paul J Turner. From version number 4.00, the development was taken over by a team of volunteers under the coordination of Evgeny Stambulchik. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (c) 1991-1995 Paul J Turner, Portland, OR<br />
+<p> Copyright (c) 1991-1995 Paul J Turner, Portland, OR<br/>
  Copyright (c) 1996-2007 Grace Development Team </p>
 <h2>LICENSE</h2>
 <p> The program is distributed under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

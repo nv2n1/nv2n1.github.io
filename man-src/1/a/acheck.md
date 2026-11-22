@@ -10,7 +10,7 @@ description: "acheck – Check common localization mistakes"
 
 <p> acheck &#8211; Check common localization mistakes </p>
 <h2>SYNOPSIS</h2>
-<p> acheck [<font SIZE="-1">OPTIONS</font>] [<font SIZE="-1">INPUT_FILE</font>]</p>
+<p> acheck [OPTIONS] [INPUT_FILE]</p>
 <h2>DESCRIPTION</h2>
 <p> This program parses a file checking for syntax rules and optionally asking Aspell for checking word spelling. It makes fix suggestions and outputs a corrected file accordingly adding review comments if requested. </p>
 <p> It tries to find the file type according to the extension or the first lines and loads rules accordingly. </p>

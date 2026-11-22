@@ -47,7 +47,7 @@ description: "winicontopam – convert a Microsoft Windows icon file into a Netp
 <p> <code><a href="/docs/linux/man/1-pamsplit/">pamsplit</a></code>(1) </p>
 </dd><dt>&bull;</dt>
 <dd>
-<p> <code>pam</code>(1)<br />
+<p> <code>pam</code>(1)<br/>
 &nbsp;<wbr></p>
 </dd><dt>&bull;</dt>
 <dd>

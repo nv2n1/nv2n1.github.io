@@ -11,7 +11,7 @@ description: "slaed1.f –"
 <p> slaed1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slaed1</code> (N, D, Q, LDQ, INDXQ, RHO, CUTPNT, WORK, IWORK, INFO)<br />
+<p> subroutine <code>slaed1</code> (N, D, Q, LDQ, INDXQ, RHO, CUTPNT, WORK, IWORK, INFO)<br/>
  <i></i><code>SLAED1</code> used by sstedc. Computes the updated eigensystem of a diagonal matrix after modification by a rank-one symmetric matrix. Used when the original matrix is tridiagonal.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaed1 (integerN, real, dimension( * )D, real, dimension( ldq, * )Q, integerLDQ, integer, dimension( * )INDXQ, realRHO, integerCUTPNT, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

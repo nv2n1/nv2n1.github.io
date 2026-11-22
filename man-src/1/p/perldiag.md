@@ -72,10 +72,10 @@ description: "perldiag – various Perl diagnostics"
 <p> In regular expressions, the <code>&quot;${foo[2]}&quot;</code> syntax is sometimes necessary to disambiguate between array subscripts and character classes. <code>&quot;/$length[2345]/&quot;</code>, for instance, will be interpreted as <code>$length</code> followed by the character class <code>&quot;[2345]&quot;</code>. If an array subscript is what you want, you can avoid the warning by changing <code>&quot;/${length[2345]}/&quot;</code> to the unsightly <code>&quot;/${\$length[2345]}/&quot;</code>, by renaming your array to something that does not coincide with a built-in keyword, or by simply turning off warnings with <code>&quot;no warnings &#8216;ambiguous&#8217;;&quot;</code>. </p>
  </dd>
 <dt>&#8216;|&#8216; and &#8216;&lt;&#8216; may not both be specified on command line</dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">VMS.</font> Perl does its own command line redirection, and found that <font SIZE="-1">STDIN</font> was a pipe, and that you also tried to redirect <font SIZE="-1">STDIN</font> using &#8216;&lt;&#8216;. Only one <font SIZE="-1">STDIN</font> stream to a customer, please. </p>
+<dd> <p> (F) An error peculiar to VMS. Perl does its own command line redirection, and found that STDIN was a pipe, and that you also tried to redirect STDIN using &#8216;&lt;&#8216;. Only one STDIN stream to a customer, please. </p>
  </dd>
 <dt>&#8216;|&#8216; and &#8216;&gt;&#8216; may not both be specified on command line</dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">VMS.</font> Perl does its own command line redirection, and thinks you tried to redirect stdout both to a file and into a pipe to another command. You need to choose one or the other, though nothing&#8217;s stopping you from piping into a program or Perl script which &#8216;splits&#8217; output into two streams, such as </p>
+<dd> <p> (F) An error peculiar to VMS. Perl does its own command line redirection, and thinks you tried to redirect stdout both to a file and into a pipe to another command. You need to choose one or the other, though nothing&#8217;s stopping you from piping into a program or Perl script which &#8216;splits&#8217; output into two streams, such as </p>
 <pre><code>    open(OUT,&quot;&gt;$ARGV[0]&quot;) or die &quot;Can't write to $ARGV[0]: $!&quot;;
     while (&lt;STDIN&gt;) {
         print;
@@ -95,7 +95,7 @@ description: "perldiag – various Perl diagnostics"
 <p> Note that for the <code>&quot;Inf&quot;</code> and <code>&quot;NaN&quot;</code> (infinity and not-a-number) the definition of ``numeric&#8217;&#8216; is somewhat unusual: the strings themselves (like ``Inf&#8217;&#8216;) are considered numeric, and anything following them is considered non-numeric. </p>
  </dd>
 <dt>Argument list not closed for PerlIO layer &quot;%s&quot;</dt>
-<dd> <p> (W layer) When pushing a layer with arguments onto the Perl I/O system you forgot the ) that closes the argument list. (Layers take care of transforming data between external and internal representations.) Perl stopped parsing the layer list at this point and did not attempt to push this layer. If your program didn&#8217;t explicitly request the failing operation, it may be the result of the value of the environment variable <font SIZE="-1">PERLIO.</font> </p>
+<dd> <p> (W layer) When pushing a layer with arguments onto the Perl I/O system you forgot the ) that closes the argument list. (Layers take care of transforming data between external and internal representations.) Perl stopped parsing the layer list at this point and did not attempt to push this layer. If your program didn&#8217;t explicitly request the failing operation, it may be the result of the value of the environment variable PERLIO. </p>
  </dd>
 <dt>Argument &quot;%s&quot; treated as 0 in increment (++)</dt>
 <dd> <p> (W numeric) The indicated string was fed as an argument to the <code>&quot;++&quot;</code> operator which expects either a number or a string matching <code>&quot;/^[a-zA-Z]*[0-9]*\z/&quot;</code>. See ``Auto-increment and Auto-decrement&#8217;&#8216; in perlop for details. </p>
@@ -138,17 +138,17 @@ description: "perldiag – various Perl diagnostics"
 <dt>Assignment to both a list and a scalar</dt>
 <dd> <p> (F) If you assign to a conditional operator, the 2nd and 3rd arguments must either both be scalars or both be lists. Otherwise Perl won&#8217;t know which context to supply to the right side. </p>
  </dd>
-<dt>Assuming <font SIZE="-1">NOT</font> a <font SIZE="-1">POSIX</font> class since %s in regex; marked by &lt;-- HERE in m/%s/</dt>
+<dt>Assuming NOT a POSIX class since %s in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (W regexp) You had something like these: </p>
 <pre><code> [[:alnum]]
  [[:digit:xyz]
 </code></pre>
-<p> They look like they might have been meant to be the <font SIZE="-1">POSIX</font> classes <code>&quot;[:alnum:]&quot;</code> or <code>&quot;[:digit:]&quot;</code>. If so, they should be written: </p>
+<p> They look like they might have been meant to be the POSIX classes <code>&quot;[:alnum:]&quot;</code> or <code>&quot;[:digit:]&quot;</code>. If so, they should be written: </p>
 <pre><code> [[:alnum:]]
  [[:digit:]xyz]
 </code></pre>
-<p> Since these aren&#8217;t legal <font SIZE="-1">POSIX</font> class specifications, but are legal bracketed character classes, Perl treats them as the latter. In the first example, it matches the characters <code>&quot;:&quot;</code>, <code>&quot;[&quot;</code>, <code>&quot;a&quot;</code>, <code>&quot;l&quot;</code>, <code>&quot;m&quot;</code>, <code>&quot;n&quot;</code>, and <code>&quot;u&quot;</code>. </p>
-<p> If these weren&#8217;t meant to be <font SIZE="-1">POSIX</font> classes, this warning message is spurious, and can be suppressed by reordering things, such as </p>
+<p> Since these aren&#8217;t legal POSIX class specifications, but are legal bracketed character classes, Perl treats them as the latter. In the first example, it matches the characters <code>&quot;:&quot;</code>, <code>&quot;[&quot;</code>, <code>&quot;a&quot;</code>, <code>&quot;l&quot;</code>, <code>&quot;m&quot;</code>, <code>&quot;n&quot;</code>, and <code>&quot;u&quot;</code>. </p>
+<p> If these weren&#8217;t meant to be POSIX classes, this warning message is spurious, and can be suppressed by reordering things, such as </p>
 <pre><code> [[al:num]]
 </code></pre>
 <p> or </p>
@@ -165,7 +165,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You wrote <code>&quot;bless $foo&quot;</code> with one argument after somehow causing the current package to be freed. Perl cannot figure out what to do, so it throws up its hands in despair. </p>
  </dd>
 <dt>Attempt to bless into a reference</dt>
-<dd> <p> (F) The <font SIZE="-1">CLASSNAME</font> argument to the <code>bless()</code> operator is expected to be the name of the package to bless the resulting object into. You&#8217;ve supplied instead a reference to something: perhaps you wrote </p>
+<dd> <p> (F) The CLASSNAME argument to the <code>bless()</code> operator is expected to be the name of the package to bless the resulting object into. You&#8217;ve supplied instead a reference to something: perhaps you wrote </p>
 <pre><code>    bless $self, $proto;
 </code></pre>
 <p> when you intended </p>
@@ -176,7 +176,7 @@ description: "perldiag – various Perl diagnostics"
 </code></pre>
  </dd>
 <dt>Attempt to clear deleted array</dt>
-<dd> <p> (S debugging) An array was assigned to when it was being freed. Freed values are not supposed to be visible to Perl code. This can also happen if <font SIZE="-1">XS</font> code calls <code>&quot;av_clear&quot;</code> from a custom magic callback on the array. </p>
+<dd> <p> (S debugging) An array was assigned to when it was being freed. Freed values are not supposed to be visible to Perl code. This can also happen if XS code calls <code>&quot;av_clear&quot;</code> from a custom magic callback on the array. </p>
  </dd>
 <dt>Attempt to delete disallowed key &#8216;%s&#8217; from a restricted hash</dt>
 <dd> <p> (F) The failing code attempted to delete from a restricted hash a key which is not in its key set. </p>
@@ -184,20 +184,20 @@ description: "perldiag – various Perl diagnostics"
 <dt>Attempt to delete readonly key &#8216;%s&#8217; from a restricted hash</dt>
 <dd> <p> (F) The failing code attempted to delete a key whose value has been declared readonly from a restricted hash. </p>
  </dd>
-<dt>Attempt to free non-arena <font SIZE="-1">SV:</font> 0x%x</dt>
-<dd> <p> (S internal) All <font SIZE="-1">SV</font> objects are supposed to be allocated from arenas that will be garbage collected on exit. An <font SIZE="-1">SV</font> was discovered to be outside any of those arenas. </p>
+<dt>Attempt to free non-arena SV: 0x%x</dt>
+<dd> <p> (S internal) All SV objects are supposed to be allocated from arenas that will be garbage collected on exit. An SV was discovered to be outside any of those arenas. </p>
  </dd>
 <dt>Attempt to free nonexistent shared string &#8216;%s&#8217;%s</dt>
 <dd> <p> (S internal) Perl maintains a reference-counted internal table of strings to optimize the storage and access of hash keys and other strings. This indicates someone tried to decrement the reference count of a string that can no longer be found in the table. </p>
  </dd>
-<dt>Attempt to free temp prematurely: <font SIZE="-1">SV</font> 0x%x</dt>
-<dd> <p> (S debugging) Mortalized values are supposed to be freed by the <code>free_tmps()</code> routine. This indicates that something else is freeing the <font SIZE="-1">SV</font> before the <code>free_tmps()</code> routine gets a chance, which means that the <code>free_tmps()</code> routine will be freeing an unreferenced scalar when it does try to free it. </p>
+<dt>Attempt to free temp prematurely: SV 0x%x</dt>
+<dd> <p> (S debugging) Mortalized values are supposed to be freed by the <code>free_tmps()</code> routine. This indicates that something else is freeing the SV before the <code>free_tmps()</code> routine gets a chance, which means that the <code>free_tmps()</code> routine will be freeing an unreferenced scalar when it does try to free it. </p>
  </dd>
 <dt>Attempt to free unreferenced glob pointers</dt>
 <dd> <p> (S internal) The reference counts got screwed up on symbol aliases. </p>
  </dd>
-<dt>Attempt to free unreferenced scalar: <font SIZE="-1">SV</font> 0x%x</dt>
-<dd> <p> (S internal) Perl went to decrement the reference count of a scalar to see if it would go to 0, and discovered that it had already gone to 0 earlier, and should have been freed, and in fact, probably was freed. This could indicate that <code>SvREFCNT_dec()</code> was called too many times, or that <code>SvREFCNT_inc()</code> was called too few times, or that the <font SIZE="-1">SV</font> was mortalized when it shouldn&#8217;t have been, or that memory has been corrupted. </p>
+<dt>Attempt to free unreferenced scalar: SV 0x%x</dt>
+<dd> <p> (S internal) Perl went to decrement the reference count of a scalar to see if it would go to 0, and discovered that it had already gone to 0 earlier, and should have been freed, and in fact, probably was freed. This could indicate that <code>SvREFCNT_dec()</code> was called too many times, or that <code>SvREFCNT_inc()</code> was called too few times, or that the SV was mortalized when it shouldn&#8217;t have been, or that memory has been corrupted. </p>
  </dd>
 <dt>Attempt to pack pointer to temporary value</dt>
 <dd> <p> (W pack) You tried to pass a temporary value (like the result of a function, or a computed expression) to the ``p&#8217;&#8216; <code>pack()</code> template. This means the result contains a pointer to a location that could become invalid anytime, even before the end of the current statement. Use literals or global values as arguments to the ``p&#8217;&#8216; <code>pack()</code> template to avoid this warning. </p>
@@ -234,7 +234,7 @@ description: "perldiag – various Perl diagnostics"
 <p> This message can be seen quite often with DB_File on systems with ``hard&#8217;&#8216; dynamic linking, like <code>&quot;AIX&quot;</code> and <code>&quot;OS/2&quot;</code>. It is a bug of <code>&quot;Berkeley DB&quot;</code> which is left unnoticed if <code>&quot;DB&quot;</code> uses <i>forgiving</i> system <code>malloc()</code>. </p>
  </dd>
 <dt>Bad hash</dt>
-<dd> <p> (P) One of the internal hash routines was passed a null <font SIZE="-1">HV</font> pointer. </p>
+<dd> <p> (P) One of the internal hash routines was passed a null HV pointer. </p>
  </dd>
 <dt>Badly placed ()&#8216;s</dt>
 <dd> <p> (A) You&#8217;ve accidentally run your script through <code>csh</code> instead of Perl. Check the #! line, or manually feed your script into Perl yourself. </p>
@@ -250,7 +250,7 @@ description: "perldiag – various Perl diagnostics"
 </code></pre>
  </dd>
 <dt>Bad plugin affecting keyword &#8216;%s&#8217;</dt>
-<dd> <p> (F) An extension using the keyword plugin mechanism violated the plugin <font SIZE="-1">API.</font> </p>
+<dd> <p> (F) An extension using the keyword plugin mechanism violated the plugin API. </p>
  </dd>
 <dt>Bad <code>realloc()</code> ignored</dt>
 <dd> <p> (S malloc) An internal routine called <code>realloc()</code> on something that had never been <code>malloc()</code>ed in the first place. Mandatory, but can be disabled by setting the environment variable <code>&quot;PERL_BADFREE&quot;</code> to 1. </p>
@@ -285,7 +285,7 @@ description: "perldiag – various Perl diagnostics"
 <dt>Bareword in require maps to disallowed filename &quot;%s&quot;</dt>
 <dd>  </dd>
 <dt>Bareword in require maps to empty filename</dt>
-<dd> <p> (F) The bareword form of require has been invoked with a filename which could not have been generated by a valid bareword permitted by the parser. You shouldn&#8217;t be able to get this error from Perl code, but <font SIZE="-1">XS</font> code may throw it if it passes an invalid module name to <code>&quot;Perl_load_module&quot;</code>. </p>
+<dd> <p> (F) The bareword form of require has been invoked with a filename which could not have been generated by a valid bareword permitted by the parser. You shouldn&#8217;t be able to get this error from Perl code, but XS code may throw it if it passes an invalid module name to <code>&quot;Perl_load_module&quot;</code>. </p>
  </dd>
 <dt>Bareword in require must not start with a double-colon: &quot;%s&quot;</dt>
 <dd> <p> (F) In <code>&quot;require Bare::Word&quot;</code>, the bareword is not allowed to start with a double-colon. Write <code>&quot;require ::Foo::Bar&quot;</code> as <code>&quot;require Foo::Bar&quot;</code> instead. </p>
@@ -296,10 +296,10 @@ description: "perldiag – various Perl diagnostics"
 <dt>Bareword &quot;%s&quot; refers to nonexistent package</dt>
 <dd> <p> (W bareword) You used a qualified bareword of the form <code>&quot;Foo::&quot;</code>, but the compiler saw no other uses of that namespace before that point. Perhaps you need to predeclare a package? </p>
  </dd>
-<dt><font SIZE="-1">BEGIN</font> failed---compilation aborted</dt>
-<dd> <p> (F) An untrapped exception was raised while executing a <font SIZE="-1">BEGIN</font> subroutine. Compilation stops immediately and the interpreter is exited. </p>
+<dt>BEGIN failed---compilation aborted</dt>
+<dd> <p> (F) An untrapped exception was raised while executing a BEGIN subroutine. Compilation stops immediately and the interpreter is exited. </p>
  </dd>
-<dt><font SIZE="-1">BEGIN</font> not safe after errors---compilation aborted</dt>
+<dt>BEGIN not safe after errors---compilation aborted</dt>
 <dd> <p> (F) Perl found a <code>&quot;BEGIN {}&quot;</code> subroutine (or a <code>&quot;use&quot;</code> directive, which implies a <code>&quot;BEGIN {}&quot;</code>) after one or more compilation errors had already occurred. Since the intended environment for the <code>&quot;BEGIN {}&quot;</code> could not be guaranteed (due to the errors), and since subsequent code likely depends on its correct operation, Perl just gave up. </p>
  </dd>
 <dt>\%d better written as $%d</dt>
@@ -328,7 +328,7 @@ description: "perldiag – various Perl diagnostics"
 <p> In a bracketed character class in a regular expression pattern, you had a range which has exactly one end of it specified using <code>&quot;\N{}&quot;</code>, and the other end is specified using a non-portable mechanism. Perl treats the range as a Unicode range, that is, all the characters in it are considered to be the Unicode characters, and which may be different code points on some platforms Perl runs on. For example, <code>&quot;[\N{U+06}-\x08]&quot;</code> is treated as if you had instead said <code>&quot;[\N{U+06}-\N{U+08}]&quot;</code>, that is it matches the characters whose code points in Unicode are 6, 7, and 8. But that <code>&quot;\x08&quot;</code> might indicate that you meant something different, so the warning gets raised. </p>
  </dd>
 <dt>Buffer overflow in prime_env_iter: %s</dt>
-<dd> <p> (W internal) A warning peculiar to <font SIZE="-1">VMS.</font> While Perl was preparing to iterate over <code>%ENV</code>, it encountered a logical name or symbol definition which was too long, so it was truncated to the string shown. </p>
+<dd> <p> (W internal) A warning peculiar to VMS. While Perl was preparing to iterate over <code>%ENV</code>, it encountered a logical name or symbol definition which was too long, so it was truncated to the string shown. </p>
  </dd>
 <dt>Callback called exit</dt>
 <dd> <p> (F) A subroutine invoked from an external package via <code>call_sv()</code> exited by calling exit. </p>
@@ -340,16 +340,16 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You passed an invalid number (like an infinity or not-a-number) to <code>&quot;chr&quot;</code>. </p>
  </dd>
 <dt>Cannot complete in-place edit of %s: %s</dt>
-<dd> <p> (F) Your perl script appears to have changed directory while performing an in-place edit of a file specified by a relative path, and your system doesn&#8217;t include the directory relative <font SIZE="-1">POSIX</font> functions needed to handle that. </p>
+<dd> <p> (F) Your perl script appears to have changed directory while performing an in-place edit of a file specified by a relative path, and your system doesn&#8217;t include the directory relative POSIX functions needed to handle that. </p>
  </dd>
 <dt>Cannot compress %f in pack</dt>
-<dd> <p> (F) You tried compressing an infinity or not-a-number as an unsigned integer with <font SIZE="-1">BER,</font> which makes no sense. </p>
+<dd> <p> (F) You tried compressing an infinity or not-a-number as an unsigned integer with BER, which makes no sense. </p>
  </dd>
 <dt>Cannot compress integer in pack</dt>
-<dd> <p> (F) An argument to pack(``w&#8217;&#8216;,...) was too large to compress. The <font SIZE="-1">BER</font> compressed integer format can only be used with positive integers, and you attempted to compress a very large number (&gt; 1e308). See ``pack&#8217;&#8216; in perlfunc. </p>
+<dd> <p> (F) An argument to pack(``w&#8217;&#8216;,...) was too large to compress. The BER compressed integer format can only be used with positive integers, and you attempted to compress a very large number (&gt; 1e308). See ``pack&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>Cannot compress negative numbers in pack</dt>
-<dd> <p> (F) An argument to pack(``w&#8217;&#8216;,...) was negative. The <font SIZE="-1">BER</font> compressed integer format can only be used with positive integers. See ``pack&#8217;&#8216; in perlfunc. </p>
+<dd> <p> (F) An argument to pack(``w&#8217;&#8216;,...) was negative. The BER compressed integer format can only be used with positive integers. See ``pack&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>Cannot convert a reference to %s to typeglob</dt>
 <dd> <p> (F) You manipulated Perl&#8217;s symbol table directly, stored a reference in it, then tried to access that symbol via conventional Perl syntax. The access triggers Perl to autovivify that typeglob, but it there is no legal conversion from that type of reference to a typeglob. </p>
@@ -379,10 +379,10 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (P) You somehow managed to call <code>&quot;tie&quot;</code> on an array that does not keep a reference count on its arguments and cannot be made to do so. Such arrays are not even supposed to be accessible to Perl code, but are only used internally. </p>
  </dd>
 <dt>Cannot yet reorder <code>sv_vcatpvfn()</code> arguments from va_list</dt>
-<dd> <p> (F) Some <font SIZE="-1">XS</font> code tried to use <code>&quot;sv_vcatpvfn()&quot;</code> or a related function with a format string that specifies explicit indexes for some of the elements, and using a C-style variable-argument list (a <code>&quot;va_list&quot;</code>). This is not currently supported. <font SIZE="-1">XS</font> authors wanting to do this must instead construct a C array of <code>&quot;SV*&quot;</code> scalars containing the arguments. </p>
+<dd> <p> (F) Some XS code tried to use <code>&quot;sv_vcatpvfn()&quot;</code> or a related function with a format string that specifies explicit indexes for some of the elements, and using a C-style variable-argument list (a <code>&quot;va_list&quot;</code>). This is not currently supported. XS authors wanting to do this must instead construct a C array of <code>&quot;SV*&quot;</code> scalars containing the arguments. </p>
  </dd>
 <dt>Can only compress unsigned integers in pack</dt>
-<dd> <p> (F) An argument to pack(``w&#8217;&#8216;,...) was not an integer. The <font SIZE="-1">BER</font> compressed integer format can only be used with positive integers, and you attempted to compress something else. See ``pack&#8217;&#8216; in perlfunc. </p>
+<dd> <p> (F) An argument to pack(``w&#8217;&#8216;,...) was not an integer. The BER compressed integer format can only be used with positive integers, and you attempted to compress something else. See ``pack&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>Can&#8217;t bless non-reference value</dt>
 <dd> <p> (F) Only hard references may be blessed. This is how Perl ``enforces&#8217;&#8216; encapsulation of objects. See perlobj. </p>
@@ -414,7 +414,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (P) Perl got confused as to whether a hash was a plain hash or a symbol table hash when trying to update <code>@ISA</code> caches. </p>
  </dd>
 <dt>Can&#8217;t call <code>mro_method_changed_in()</code> on anonymous symbol table</dt>
-<dd> <p> (F) An <font SIZE="-1">XS</font> module tried to call <code>&quot;mro_method_changed_in&quot;</code> on a hash that was not attached to the symbol table. </p>
+<dd> <p> (F) An XS module tried to call <code>&quot;mro_method_changed_in&quot;</code> on a hash that was not attached to the symbol table. </p>
  </dd>
 <dt>Can&#8217;t chdir to %s</dt>
 <dd> <p> (F) You called <code>&quot;perl -x/foo/bar&quot;</code>, but <i>/foo/bar</i> is not a directory that you can chdir to, possibly because it doesn&#8217;t exist. </p>
@@ -426,7 +426,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) Certain types of SVs, in particular real symbol table entries (typeglobs), can&#8217;t be forced to stop being what they are. So you can&#8217;t say things like: </p>
 <pre><code>    *foo += 1;
 </code></pre>
-<p> You <font SIZE="-1">CAN</font> say </p>
+<p> You CAN say </p>
 <pre><code>    $foo = *foo;
     $foo += 1;
 </code></pre>
@@ -436,7 +436,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You called <code>&quot;continue&quot;</code>, but you&#8217;re not inside a <code>&quot;when&quot;</code> or <code>&quot;default&quot;</code> block. </p>
  </dd>
 <dt>Can&#8217;t create pipe mailbox</dt>
-<dd> <p> (P) An error peculiar to <font SIZE="-1">VMS.</font> The process is suffering from exhausted quotas or other plumbing problems. </p>
+<dd> <p> (P) An error peculiar to VMS. The process is suffering from exhausted quotas or other plumbing problems. </p>
  </dd>
 <dt>Can&#8217;t declare %s in &quot;%s&quot;</dt>
 <dd> <p> (F) Only scalar, array, and hash variables may be declared as ``my&#8217;&#8216;, ``our&#8217;&#8216; or ``state&#8217;&#8216; variables. They must have ordinary identifiers as names. </p>
@@ -444,11 +444,11 @@ description: "perldiag – various Perl diagnostics"
 <dt>Can&#8217;t &quot;default&quot; outside a topicalizer</dt>
 <dd> <p> (F) You have used a <code>&quot;default&quot;</code> block that is neither inside a <code>&quot;foreach&quot;</code> loop nor a <code>&quot;given&quot;</code> block. (Note that this error is issued on exit from the <code>&quot;default&quot;</code> block, so you won&#8217;t get the error if you use an explicit <code>&quot;continue&quot;</code>.) </p>
  </dd>
-<dt>Can&#8217;t determine class of operator %s, assuming <font SIZE="-1">BASEOP</font></dt>
-<dd> <p> (S) This warning indicates something wrong in the internals of perl. Perl was trying to find the class (e.g. <font SIZE="-1">LISTOP</font>) of a particular <font SIZE="-1">OP,</font> and was unable to do so. This is likely to be due to a bug in the perl internals, or due to a bug in <font SIZE="-1">XS</font> code which manipulates perl optrees. </p>
+<dt>Can&#8217;t determine class of operator %s, assuming BASEOP</dt>
+<dd> <p> (S) This warning indicates something wrong in the internals of perl. Perl was trying to find the class (e.g. LISTOP) of a particular OP, and was unable to do so. This is likely to be due to a bug in the perl internals, or due to a bug in XS code which manipulates perl optrees. </p>
  </dd>
 <dt>Can&#8217;t do inplace edit: %s is not a regular file</dt>
-<dd> <p> (S inplace) You tried to use the <code>-i</code> switch on a special file, such as a file in /dev, a <font SIZE="-1">FIFO</font> or an uneditable directory. The file was ignored. </p>
+<dd> <p> (S inplace) You tried to use the <code>-i</code> switch on a special file, such as a file in /dev, a FIFO or an uneditable directory. The file was ignored. </p>
  </dd>
 <dt>Can&#8217;t do inplace edit on %s: %s</dt>
 <dd> <p> (S inplace) The creation of the new file failed for the indicated reason. </p>
@@ -457,7 +457,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (S inplace) Your filesystem does not support filenames longer than 14 characters and Perl was unable to create a unique filename during inplace editing with the <code>-i</code> switch. The file was ignored. </p>
  </dd>
 <dt>Can&#8217;t do %s(&quot;%s&quot;) on non-UTF-8 locale; resolved to &quot;%s&quot;.</dt>
-<dd> <p> (W locale) You are 1) running under &quot;<code>&quot;use locale&quot;</code>&quot;; 2) the current locale is not a <font SIZE="-1">UTF-8</font> one; 3) you tried to do the designated case-change operation on the specified Unicode character; and 4) the result of this operation would mix Unicode and locale rules, which likely conflict. Mixing of different rule types is forbidden, so the operation was not done; instead the result is the indicated value, which is the best available that uses entirely Unicode rules. That turns out to almost always be the original character, unchanged. </p>
+<dd> <p> (W locale) You are 1) running under &quot;<code>&quot;use locale&quot;</code>&quot;; 2) the current locale is not a UTF-8 one; 3) you tried to do the designated case-change operation on the specified Unicode character; and 4) the result of this operation would mix Unicode and locale rules, which likely conflict. Mixing of different rule types is forbidden, so the operation was not done; instead the result is the indicated value, which is the best available that uses entirely Unicode rules. That turns out to almost always be the original character, unchanged. </p>
 <p> It is generally a bad idea to mix non-UTF-8 locales and Unicode, and this issue is one of the reasons why. This warning is raised when Unicode rules would normally cause the result of this operation to contain a character that is in the range specified by the locale, 0..255, and hence is subject to the locale&#8217;s rules, not Unicode&#8217;s. </p>
 <p> If you are using locale purely for its characteristics related to things like its numeric and time formatting (and not <code>&quot;LC_CTYPE&quot;</code>), consider using a restricted form of the locale pragma (see ``The &#8216;&#8216;use locale`` pragma&#8217;&#8216; in perllocale) like &quot;<code>&quot;use locale &#8216;:not_characters&#8217;&quot;</code>&quot;. </p>
 <p> Note that failed case-changing operations done as a result of case-insensitive <code>&quot;/i&quot;</code> regular expression matching will show up in this warning as having the <code>&quot;fc&quot;</code> operation (as that is what the regular expression engine calls behind the scenes.) </p>
@@ -478,7 +478,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) Perl was trying to execute the indicated program for you because that&#8217;s what the #! line said. If that&#8217;s not what you wanted, you may need to mention ``perl&#8217;&#8216; on the #! line somewhere. </p>
  </dd>
 <dt>Can&#8217;t execute %s</dt>
-<dd> <p> (F) You used the <code>-S</code> switch, but the copies of the script to execute found in the <font SIZE="-1">PATH</font> did not have correct permissions. </p>
+<dd> <p> (F) You used the <code>-S</code> switch, but the copies of the script to execute found in the PATH did not have correct permissions. </p>
  </dd>
 <dt>Can&#8217;t find an opnumber for &quot;%s&quot;</dt>
 <dd> <p> (F) A string of a form <code>&quot;CORE::word&quot;</code> was given to <code>prototype()</code>, but there is no builtin with the name <code>&quot;word&quot;</code>. </p>
@@ -486,13 +486,13 @@ description: "perldiag – various Perl diagnostics"
 <dt>Can&#8217;t find label %s</dt>
 <dd> <p> (F) You said to goto a label that isn&#8217;t mentioned anywhere that it&#8217;s possible for us to go to. See ``goto&#8217;&#8216; in perlfunc. </p>
  </dd>
-<dt>Can&#8217;t find %s on <font SIZE="-1">PATH</font></dt>
-<dd> <p> (F) You used the <code>-S</code> switch, but the script to execute could not be found in the <font SIZE="-1">PATH.</font> </p>
+<dt>Can&#8217;t find %s on PATH</dt>
+<dd> <p> (F) You used the <code>-S</code> switch, but the script to execute could not be found in the PATH. </p>
  </dd>
-<dt>Can&#8217;t find %s on <font SIZE="-1">PATH,</font> &#8216;.&#8216; not in <font SIZE="-1">PATH</font></dt>
-<dd> <p> (F) You used the <code>-S</code> switch, but the script to execute could not be found in the <font SIZE="-1">PATH,</font> or at least not with the correct permissions. The script exists in the current directory, but <font SIZE="-1">PATH</font> prohibits running it. </p>
+<dt>Can&#8217;t find %s on PATH, &#8216;.&#8216; not in PATH</dt>
+<dd> <p> (F) You used the <code>-S</code> switch, but the script to execute could not be found in the PATH, or at least not with the correct permissions. The script exists in the current directory, but PATH prohibits running it. </p>
  </dd>
-<dt>Can&#8217;t find string terminator %s anywhere before <font SIZE="-1">EOF</font></dt>
+<dt>Can&#8217;t find string terminator %s anywhere before EOF</dt>
 <dd> <p> (F) Perl strings can stretch over multiple lines. This message means that the closing delimiter was omitted. Because bracketed quotes count nesting levels, the following is missing its final parenthesis: </p>
 <pre><code>    print q(The character '(' starts a side comment.);
 </code></pre>
@@ -500,7 +500,7 @@ description: "perldiag – various Perl diagnostics"
  </dd>
 <dt>Can&#8217;t find Unicode property definition &quot;%s&quot;</dt>
 <dd>  </dd>
-<dt>Can&#8217;t find Unicode property definition &quot;%s&quot; in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Can&#8217;t find Unicode property definition &quot;%s&quot; in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) The named property which you specified via <code>&quot;\p&quot;</code> or <code>&quot;\P&quot;</code> is not one known to Perl. Perhaps you misspelled the name? See ``Properties accessible through \p{} and \P{}&#8216;&#8216; in perluniprops for a complete list of available official properties. If it is a user-defined property it must have been defined by the time the regular expression is matched. </p>
 <p> If you didn&#8217;t mean to use a Unicode property, escape the <code>&quot;\p&quot;</code>, either by <code>&quot;\\p&quot;</code> (just the <code>&quot;\p&quot;</code>) or by <code>&quot;\Q\p&quot;</code> (the rest of the string, or until <code>&quot;\E&quot;</code>). </p>
  </dd>
@@ -508,16 +508,16 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) A fatal error occurred while trying to fork while opening a pipeline. </p>
  </dd>
 <dt>Can&#8217;t fork, trying again in 5 seconds</dt>
-<dd> <p> (W pipe) A fork in a piped open failed with <font SIZE="-1">EAGAIN</font> and will be retried after five seconds. </p>
+<dd> <p> (W pipe) A fork in a piped open failed with EAGAIN and will be retried after five seconds. </p>
  </dd>
 <dt>Can&#8217;t get filespec - stale stat buffer?</dt>
-<dd> <p> (S) A warning peculiar to <font SIZE="-1">VMS.</font> This arises because of the difference between access checks under <font SIZE="-1">VMS</font> and under the Unix model Perl assumes. Under <font SIZE="-1">VMS,</font> access checks are done by filename, rather than by bits in the stat buffer, so that ACLs and other protections can be taken into account. Unfortunately, Perl assumes that the stat buffer contains all the necessary information, and passes it, instead of the filespec, to the access-checking routine. It will try to retrieve the filespec using the device name and <font SIZE="-1">FID</font> present in the stat buffer, but this works only if you haven&#8217;t made a subsequent call to the <font SIZE="-1">CRTL</font> <code>stat()</code> routine, because the device name is overwritten with each call. If this warning appears, the name lookup failed, and the access-checking routine gave up and returned <font SIZE="-1">FALSE,</font> just to be conservative. (Note: The access-checking routine knows about the Perl <code>&quot;stat&quot;</code> operator and file tests, so you shouldn&#8217;t ever see this warning in response to a Perl command; it arises only if some internal code takes stat buffers lightly.) </p>
+<dd> <p> (S) A warning peculiar to VMS. This arises because of the difference between access checks under VMS and under the Unix model Perl assumes. Under VMS, access checks are done by filename, rather than by bits in the stat buffer, so that ACLs and other protections can be taken into account. Unfortunately, Perl assumes that the stat buffer contains all the necessary information, and passes it, instead of the filespec, to the access-checking routine. It will try to retrieve the filespec using the device name and FID present in the stat buffer, but this works only if you haven&#8217;t made a subsequent call to the CRTL <code>stat()</code> routine, because the device name is overwritten with each call. If this warning appears, the name lookup failed, and the access-checking routine gave up and returned FALSE, just to be conservative. (Note: The access-checking routine knows about the Perl <code>&quot;stat&quot;</code> operator and file tests, so you shouldn&#8217;t ever see this warning in response to a Perl command; it arises only if some internal code takes stat buffers lightly.) </p>
  </dd>
 <dt>Can&#8217;t get pipe mailbox device name</dt>
-<dd> <p> (P) An error peculiar to <font SIZE="-1">VMS.</font> After creating a mailbox to act as a pipe, Perl can&#8217;t retrieve its name for later use. </p>
+<dd> <p> (P) An error peculiar to VMS. After creating a mailbox to act as a pipe, Perl can&#8217;t retrieve its name for later use. </p>
  </dd>
-<dt>Can&#8217;t get <font SIZE="-1">SYSGEN</font> parameter value for <font SIZE="-1">MAXBUF</font></dt>
-<dd> <p> (P) An error peculiar to <font SIZE="-1">VMS.</font> Perl asked <code>$GETSYI</code> how big you want your mailbox buffers to be, and didn&#8217;t get an answer. </p>
+<dt>Can&#8217;t get SYSGEN parameter value for MAXBUF</dt>
+<dd> <p> (P) An error peculiar to VMS. Perl asked <code>$GETSYI</code> how big you want your mailbox buffers to be, and didn&#8217;t get an answer. </p>
  </dd>
 <dt>Can&#8217;t &quot;goto&quot; into a binary or list expression</dt>
 <dd> <p> (F) A ``goto&#8217;&#8216; statement was executed to jump into the middle of a binary or list expression. You can&#8217;t get there from here. The reason for this restriction is that the interpreter would get confused as to how many arguments there are, resulting in stack corruption or crashes. This error occurs in cases such as these: </p>
@@ -543,19 +543,19 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) The ``goto subroutine&#8217;&#8216; call can&#8217;t be used to jump out of the comparison sub for a <code>sort()</code>, or from a similar callback (such as the <code>reduce()</code> function in List::Util). </p>
  </dd>
 <dt>Can&#8217;t goto subroutine outside a subroutine</dt>
-<dd> <p> (F) The deeply magical ``goto subroutine&#8217;&#8216; call can only replace one subroutine call for another. It can&#8217;t manufacture one out of whole cloth. In general you should be calling it out of only an <font SIZE="-1">AUTOLOAD</font> routine anyway. See ``goto&#8217;&#8216; in perlfunc. </p>
+<dd> <p> (F) The deeply magical ``goto subroutine&#8217;&#8216; call can only replace one subroutine call for another. It can&#8217;t manufacture one out of whole cloth. In general you should be calling it out of only an AUTOLOAD routine anyway. See ``goto&#8217;&#8216; in perlfunc. </p>
  </dd>
-<dt>Can&#8217;t ignore signal <font SIZE="-1">CHLD,</font> forcing to default</dt>
-<dd> <p> (W signal) Perl has detected that it is being run with the <font SIZE="-1">SIGCHLD</font> signal (sometimes known as <font SIZE="-1">SIGCLD</font>) disabled. Since disabling this signal will interfere with proper determination of exit status of child processes, Perl has reset the signal to its default value. This situation typically indicates that the parent program under which Perl may be running (e.g. cron) is being very careless. </p>
+<dt>Can&#8217;t ignore signal CHLD, forcing to default</dt>
+<dd> <p> (W signal) Perl has detected that it is being run with the SIGCHLD signal (sometimes known as SIGCLD) disabled. Since disabling this signal will interfere with proper determination of exit status of child processes, Perl has reset the signal to its default value. This situation typically indicates that the parent program under which Perl may be running (e.g. cron) is being very careless. </p>
  </dd>
-<dt>Can&#8217;t kill a non-numeric process <font SIZE="-1">ID</font></dt>
+<dt>Can&#8217;t kill a non-numeric process ID</dt>
 <dd> <p> (F) Process identifiers must be (signed) integers. It is a fatal error to attempt to <code>kill()</code> an undefined, empty-string or otherwise non-numeric process identifier. </p>
  </dd>
 <dt>Can&#8217;t &quot;last&quot; outside a loop block</dt>
 <dd> <p> (F) A ``last&#8217;&#8216; statement was executed to break out of the current block, except that there&#8217;s this itty bitty problem called there isn&#8217;t a current block. Note that an ``if&#8217;&#8216; or ``else&#8217;&#8216; block doesn&#8217;t count as a ``loopish&#8217;&#8216; block, as doesn&#8217;t a block given to <code>sort()</code>, <code>map()</code> or <code>grep()</code>. You can usually double the curlies to get the same effect though, because the inner curlies will be considered a block that loops once. See ``last&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>Can&#8217;t linearize anonymous symbol table</dt>
-<dd> <p> (F) Perl tried to calculate the method resolution order (<font SIZE="-1">MRO</font>) of a package, but failed because the package stash has no name. </p>
+<dd> <p> (F) Perl tried to calculate the method resolution order (MRO) of a package, but failed because the package stash has no name. </p>
  </dd>
 <dt>Can&#8217;t load &#8216;%s&#8217; for module %s</dt>
 <dd> <p> (F) The module you tried to load failed to load a dynamic extension. This may either mean that you upgraded your version of perl to one that is incompatible with your old dynamic extensions (which is known to happen between major versions of perl), or (more likely) that your dynamic extension was built against an older version of the library that is installed on your system. You may need to rebuild your old dynamic extensions. </p>
@@ -567,7 +567,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You said something like <code>&quot;local $$ref&quot;</code>, which Perl can&#8217;t currently handle, because when it goes to restore the old value of whatever <code>$ref</code> pointed to after the scope of the <code>local()</code> is finished, it can&#8217;t be sure that <code>$ref</code> will still be a reference. </p>
  </dd>
 <dt>Can&#8217;t locate %s</dt>
-<dd> <p> (F) You said to <code>&quot;do&quot;</code> (or <code>&quot;require&quot;</code>, or <code>&quot;use&quot;</code>) a file that couldn&#8217;t be found. Perl looks for the file in all the locations mentioned in <code>@INC</code>, unless the file name included the full path to the file. Perhaps you need to set the <font SIZE="-1">PERL5LIB</font> or <font SIZE="-1">PERL5OPT</font> environment variable to say where the extra library is, or maybe the script needs to add the library name to <code>@INC</code>. Or maybe you just misspelled the name of the file. See ``require&#8217;&#8216; in perlfunc and lib. </p>
+<dd> <p> (F) You said to <code>&quot;do&quot;</code> (or <code>&quot;require&quot;</code>, or <code>&quot;use&quot;</code>) a file that couldn&#8217;t be found. Perl looks for the file in all the locations mentioned in <code>@INC</code>, unless the file name included the full path to the file. Perhaps you need to set the PERL5LIB or PERL5OPT environment variable to say where the extra library is, or maybe the script needs to add the library name to <code>@INC</code>. Or maybe you just misspelled the name of the file. See ``require&#8217;&#8216; in perlfunc and lib. </p>
  </dd>
 <dt>Can&#8217;t locate auto/%s.al in @INC</dt>
 <dd> <p> (F) A function (or method) was called in a package which allows autoload, but there is no function to autoload. Most probable causes are a misprint in a function/method name or a failure to <code>&quot;AutoSplit&quot;</code> the file, say, by doing <code>&quot;make install&quot;</code>. </p>
@@ -579,25 +579,25 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You called a method correctly, and it correctly indicated a package functioning as a class, but that package doesn&#8217;t define that particular method, nor does any of its base classes. See perlobj. </p>
  </dd>
 <dt>Can&#8217;t locate object method &quot;%s&quot; via package &quot;%s&quot; (perhaps you forgot to load &quot;%s&quot;?)</dt>
-<dd> <p> (F) You called a method on a class that did not exist, and the method could not be found in <font SIZE="-1">UNIVERSAL.</font> This often means that a method requires a package that has not been loaded. </p>
+<dd> <p> (F) You called a method on a class that did not exist, and the method could not be found in UNIVERSAL. This often means that a method requires a package that has not been loaded. </p>
  </dd>
 <dt>Can&#8217;t locate package %s for @%s::ISA</dt>
 <dd> <p> (W syntax) The <code>@ISA</code> array contained the name of another package that doesn&#8217;t seem to exist. </p>
  </dd>
 <dt>Can&#8217;t locate PerlIO%s</dt>
-<dd> <p> (F) You tried to use in <code>open()</code> a PerlIO layer that does not exist, e.g. open(<font SIZE="-1">FH, ``</font>&gt;:nosuchlayer&#8217;&#8216;, ``somefile&#8217;&#8216;). </p>
+<dd> <p> (F) You tried to use in <code>open()</code> a PerlIO layer that does not exist, e.g. open(FH, ``&gt;:nosuchlayer&#8217;&#8216;, ``somefile&#8217;&#8216;). </p>
  </dd>
 <dt>Can&#8217;t make list assignment to %ENV on this system</dt>
-<dd> <p> (F) List assignment to <code>%ENV</code> is not supported on some systems, notably <font SIZE="-1">VMS.</font> </p>
+<dd> <p> (F) List assignment to <code>%ENV</code> is not supported on some systems, notably VMS. </p>
  </dd>
 <dt>Can&#8217;t make loaded symbols global on this platform while loading %s</dt>
-<dd> <p> (S) A module passed the flag 0x01 to <code>DynaLoader::dl_load_file()</code> to request that symbols from the stated file are made available globally within the process, but that functionality is not available on this platform. Whilst the module likely will still work, this may prevent the perl interpreter from loading other XS-based extensions which need to link directly to functions defined in the C or <font SIZE="-1">XS</font> code in the stated file. </p>
+<dd> <p> (S) A module passed the flag 0x01 to <code>DynaLoader::dl_load_file()</code> to request that symbols from the stated file are made available globally within the process, but that functionality is not available on this platform. Whilst the module likely will still work, this may prevent the perl interpreter from loading other XS-based extensions which need to link directly to functions defined in the C or XS code in the stated file. </p>
  </dd>
 <dt>Can&#8217;t modify %s in %s</dt>
 <dd> <p> (F) You aren&#8217;t allowed to assign to the item indicated, or otherwise try to change it, such as with an auto-increment. </p>
  </dd>
 <dt>Can&#8217;t modify nonexistent substring</dt>
-<dd> <p> (P) The internal routine that does assignment to a <code>substr()</code> was handed a <font SIZE="-1">NULL.</font> </p>
+<dd> <p> (P) The internal routine that does assignment to a <code>substr()</code> was handed a NULL. </p>
  </dd>
 <dt>Can&#8217;t modify non-lvalue subroutine call of &amp;%s</dt>
 <dd>  </dd>
@@ -633,23 +633,23 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W pipe) You tried to say <code>&quot;open(CMD, &quot;|cmd|&quot;)&quot;</code>, which is not supported. You can try any of several modules in the Perl library to do this, such as IPC::Open2. Alternately, direct the pipe&#8217;s output to a file using ``&gt;&#8216;&#8216;, and then read it in under a different file handle. </p>
  </dd>
 <dt>Can&#8217;t open error file %s as stderr</dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">VMS.</font> Perl does its own command line redirection, and couldn&#8217;t open the file specified after &#8216;2&gt;&#8216; or &#8216;2&gt;&gt;&#8216; on the command line for writing. </p>
+<dd> <p> (F) An error peculiar to VMS. Perl does its own command line redirection, and couldn&#8217;t open the file specified after &#8216;2&gt;&#8216; or &#8216;2&gt;&gt;&#8216; on the command line for writing. </p>
  </dd>
 <dt>Can&#8217;t open input file %s as stdin</dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">VMS.</font> Perl does its own command line redirection, and couldn&#8217;t open the file specified after &#8216;&lt;&#8216; on the command line for reading. </p>
+<dd> <p> (F) An error peculiar to VMS. Perl does its own command line redirection, and couldn&#8217;t open the file specified after &#8216;&lt;&#8216; on the command line for reading. </p>
  </dd>
 <dt>Can&#8217;t open output file %s as stdout</dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">VMS.</font> Perl does its own command line redirection, and couldn&#8217;t open the file specified after &#8216;&gt;&#8216; or &#8216;&gt;&gt;&#8216; on the command line for writing. </p>
+<dd> <p> (F) An error peculiar to VMS. Perl does its own command line redirection, and couldn&#8217;t open the file specified after &#8216;&gt;&#8216; or &#8216;&gt;&gt;&#8216; on the command line for writing. </p>
  </dd>
 <dt>Can&#8217;t open output pipe (name: %s)</dt>
-<dd> <p> (P) An error peculiar to <font SIZE="-1">VMS.</font> Perl does its own command line redirection, and couldn&#8217;t open the pipe into which to send data destined for stdout. </p>
+<dd> <p> (P) An error peculiar to VMS. Perl does its own command line redirection, and couldn&#8217;t open the pipe into which to send data destined for stdout. </p>
  </dd>
 <dt>Can&#8217;t open perl script &quot;%s&quot;: %s</dt>
 <dd> <p> (F) The script you specified can&#8217;t be opened for the indicated reason. </p>
 <p> If you&#8217;re debugging a script that uses #!, and normally relies on the shell&#8217;s <code>$PATH</code> search, the -S option causes perl to do that search, so you don&#8217;t have to type the path or <code>&quot;`which $scriptname`&quot;</code>. </p>
  </dd>
-<dt>Can&#8217;t read <font SIZE="-1">CRTL</font> environ</dt>
-<dd> <p> (S) A warning peculiar to <font SIZE="-1">VMS.</font> Perl tried to read an element of <code>%ENV</code> from the <font SIZE="-1">CRTL</font>&#8216;s internal environment array and discovered the array was missing. You need to figure out where your <font SIZE="-1">CRTL</font> misplaced its environ or define <i></i><font SIZE="-1"><i>PERL_ENV_TABLES</i></font><i></i> (see perlvms) so that environ is not searched. </p>
+<dt>Can&#8217;t read CRTL environ</dt>
+<dd> <p> (S) A warning peculiar to VMS. Perl tried to read an element of <code>%ENV</code> from the CRTL&#8216;s internal environment array and discovered the array was missing. You need to figure out where your CRTL misplaced its environ or define <i></i><i>PERL_ENV_TABLES</i><i></i> (see perlvms) so that environ is not searched. </p>
  </dd>
 <dt>Can&#8217;t redeclare &quot;%s&quot; in &quot;%s&quot;</dt>
 <dd> <p> (F) A ``my&#8217;&#8216;, ``our&#8217;&#8216; or ``state&#8217;&#8216; declaration was found within another declaration, such as <code>&quot;my ($x, my($y), $z)&quot;</code> or <code>&quot;our (my $x)&quot;</code>. </p>
@@ -667,13 +667,13 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) The rename done by the <code>-i</code> switch failed for some reason, probably because you don&#8217;t have write permission to the directory. </p>
  </dd>
 <dt>Can&#8217;t reopen input pipe (name: %s) in binary mode</dt>
-<dd> <p> (P) An error peculiar to <font SIZE="-1">VMS.</font> Perl thought stdin was a pipe, and tried to reopen it to accept binary data. Alas, it failed. </p>
+<dd> <p> (P) An error peculiar to VMS. Perl thought stdin was a pipe, and tried to reopen it to accept binary data. Alas, it failed. </p>
  </dd>
 <dt>Can&#8217;t represent character for Ox%X on this platform</dt>
-<dd> <p> (F) There is a hard limit to how big a character code point can be due to the fundamental properties of <font SIZE="-1">UTF-8,</font> especially on <font SIZE="-1">EBCDIC</font> platforms. The given code point exceeds that. The only work-around is to not use such a large code point. </p>
+<dd> <p> (F) There is a hard limit to how big a character code point can be due to the fundamental properties of UTF-8, especially on EBCDIC platforms. The given code point exceeds that. The only work-around is to not use such a large code point. </p>
  </dd>
 <dt>Can&#8217;t reset %ENV on this system</dt>
-<dd> <p> (F) You called <code>&quot;reset(&#8216;E&#8217;)&quot;</code> or similar, which tried to reset all variables in the current package beginning with ``E&#8217;&#8216;. In the main package, that includes <code>%ENV</code>. Resetting <code>%ENV</code> is not supported on some systems, notably <font SIZE="-1">VMS.</font> </p>
+<dd> <p> (F) You called <code>&quot;reset(&#8216;E&#8217;)&quot;</code> or similar, which tried to reset all variables in the current package beginning with ``E&#8217;&#8216;. In the main package, that includes <code>%ENV</code>. Resetting <code>%ENV</code> is not supported on some systems, notably VMS. </p>
  </dd>
 <dt>Can&#8217;t resolve method &quot;%s&quot; overloading &quot;%s&quot; in package &quot;%s&quot;</dt>
 <dd> <p> (F)(P) Error resolving overloading specified by a method name (as opposed to a subroutine reference): no such method callable via the package. If the method name is <code>&quot;???&quot;</code>, this is an internal error. </p>
@@ -703,7 +703,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You attempted to unweaken something that was not a reference. Only references can be unweakened. </p>
  </dd>
 <dt>Can&#8217;t upgrade %s (%d) to %d</dt>
-<dd> <p> (P) The internal sv_upgrade routine adds ``members&#8217;&#8216; to an <font SIZE="-1">SV,</font> making it into a more specialized kind of <font SIZE="-1">SV.</font> The top several <font SIZE="-1">SV</font> types are so specialized, however, that they cannot be interconverted. This message indicates that such a conversion was attempted. </p>
+<dd> <p> (P) The internal sv_upgrade routine adds ``members&#8217;&#8216; to an SV, making it into a more specialized kind of SV. The top several SV types are so specialized, however, that they cannot be interconverted. This message indicates that such a conversion was attempted. </p>
  </dd>
 <dt>Can&#8217;t use &#8216;%c&#8217; after -mname</dt>
 <dd> <p> (F) You tried to call perl with the <code>-m</code> switch, but you put something other than ``=&#8216;&#8216; after the module name. </p>
@@ -766,7 +766,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) The compiler tried to interpret a bracketed expression as a subscript. But to the left of the brackets was an expression that didn&#8217;t look like a hash or array reference, or anything else subscriptable. </p>
  </dd>
 <dt>Can&#8217;t use \%c to mean $%c in expression</dt>
-<dd> <p> (W syntax) In an ordinary expression, backslash is a unary operator that creates a reference to its argument. The use of backslash to indicate a backreference to a matched substring is valid only as part of a regular expression pattern. Trying to do this in ordinary Perl code produces a value that prints out looking like <font SIZE="-1"><code>SCALAR</code></font>(0xdecaf). Use the <code>$1</code> form instead. </p>
+<dd> <p> (W syntax) In an ordinary expression, backslash is a unary operator that creates a reference to its argument. The use of backslash to indicate a backreference to a matched substring is valid only as part of a regular expression pattern. Trying to do this in ordinary Perl code produces a value that prints out looking like <code>SCALAR</code>(0xdecaf). Use the <code>$1</code> form instead. </p>
  </dd>
 <dt>Can&#8217;t weaken a nonreference</dt>
 <dd> <p> (F) You attempted to weaken something that was not a reference. Only references can be weakened. </p>
@@ -777,18 +777,18 @@ description: "perldiag – various Perl diagnostics"
 <dt>Can&#8217;t x= to read-only value</dt>
 <dd> <p> (F) You tried to repeat a constant value (often the undefined value) with an assignment operator, which implies modifying the value itself. Perhaps you need to copy the value to a temporary, and repeat that. </p>
  </dd>
-<dt>Character following &quot;\c&quot; must be printable <font SIZE="-1">ASCII</font></dt>
-<dd> <p> (F) In <code>&quot;\c</code>X <code>&quot;</code>, <i>X</i> must be a printable (non-control) <font SIZE="-1">ASCII</font> character. </p>
-<p> Note that <font SIZE="-1">ASCII</font> characters that don&#8217;t map to control characters are discouraged, and will generate the warning (when enabled) &quot;``\c%c&#8217;&#8216; is more clearly written simply as ``%s&#8217;&#8216;&quot;. </p>
+<dt>Character following &quot;\c&quot; must be printable ASCII</dt>
+<dd> <p> (F) In <code>&quot;\c</code>X <code>&quot;</code>, <i>X</i> must be a printable (non-control) ASCII character. </p>
+<p> Note that ASCII characters that don&#8217;t map to control characters are discouraged, and will generate the warning (when enabled) &quot;``\c%c&#8217;&#8216; is more clearly written simply as ``%s&#8217;&#8216;&quot;. </p>
  </dd>
-<dt>Character following \%c must be &#8216;{&#8216; or a single-character Unicode property name in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Character following \%c must be &#8216;{&#8216; or a single-character Unicode property name in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) (In the above the <code>%c</code> is replaced by either <code>&quot;p&quot;</code> or <code>&quot;P&quot;</code>.) You specified something that isn&#8217;t a legal Unicode property name. Most Unicode properties are specified by <code>&quot;\p{...}&quot;</code>. But if the name is a single character one, the braces may be omitted. </p>
  </dd>
 <dt>Character in &#8216;C&#8217; format wrapped in pack</dt>
 <dd> <p> (W pack) You said </p>
 <pre><code>    pack(&quot;C&quot;, $x)
 </code></pre>
-<p> where <code>$x</code> is either less than 0 or more than 255; the <code>&quot;C&quot;</code> format is only for encoding native operating system characters (<font SIZE="-1">ASCII, EBCDIC,</font> and so on) and not for Unicode characters, so Perl behaved as if you meant </p>
+<p> where <code>$x</code> is either less than 0 or more than 255; the <code>&quot;C&quot;</code> format is only for encoding native operating system characters (ASCII, EBCDIC, and so on) and not for Unicode characters, so Perl behaved as if you meant </p>
 <pre><code>    pack(&quot;C&quot;, $x &amp; 255)
 </code></pre>
 <p> If you actually want to pack Unicode codepoints, use the <code>&quot;U&quot;</code> format instead. </p>
@@ -797,7 +797,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W pack) You said </p>
 <pre><code>    pack(&quot;c&quot;, $x)
 </code></pre>
-<p> where <code>$x</code> is either less than -128 or more than 127; the <code>&quot;c&quot;</code> format is only for encoding native operating system characters (<font SIZE="-1">ASCII, EBCDIC,</font> and so on) and not for Unicode characters, so Perl behaved as if you meant </p>
+<p> where <code>$x</code> is either less than -128 or more than 127; the <code>&quot;c&quot;</code> format is only for encoding native operating system characters (ASCII, EBCDIC, and so on) and not for Unicode characters, so Perl behaved as if you meant </p>
 <pre><code>    pack(&quot;c&quot;, $x &amp; 255);
 </code></pre>
 <p> If you actually want to pack Unicode codepoints, use the <code>&quot;U&quot;</code> format instead. </p>
@@ -835,16 +835,16 @@ description: "perldiag – various Perl diagnostics"
 </code></pre>
  </dd>
 <dt>charnames alias definitions may not contain a sequence of multiple spaces; marked by &lt;-- HERE in %s</dt>
-<dd> <p> (F) You defined a character name which had multiple space characters in a row. Change them to single spaces. Usually these names are defined in the <code>&quot;:alias&quot;</code> import argument to <code>&quot;use charnames&quot;</code>, but they could be defined by a translator installed into <code>$^H{charnames}</code>. See ``<font SIZE="-1">CUSTOM ALIASES&#8217;&#8216;</font> in charnames. </p>
+<dd> <p> (F) You defined a character name which had multiple space characters in a row. Change them to single spaces. Usually these names are defined in the <code>&quot;:alias&quot;</code> import argument to <code>&quot;use charnames&quot;</code>, but they could be defined by a translator installed into <code>$^H{charnames}</code>. See ``CUSTOM ALIASES&#8217;&#8216; in charnames. </p>
  </dd>
 <dt>charnames alias definitions may not contain trailing white-space; marked by &lt;-- HERE in %s</dt>
-<dd> <p> (F) You defined a character name which ended in a space character. Remove the trailing space(s). Usually these names are defined in the <code>&quot;:alias&quot;</code> import argument to <code>&quot;use charnames&quot;</code>, but they could be defined by a translator installed into <code>$^H{charnames}</code>. See ``<font SIZE="-1">CUSTOM ALIASES&#8217;&#8216;</font> in charnames. </p>
+<dd> <p> (F) You defined a character name which ended in a space character. Remove the trailing space(s). Usually these names are defined in the <code>&quot;:alias&quot;</code> import argument to <code>&quot;use charnames&quot;</code>, but they could be defined by a translator installed into <code>$^H{charnames}</code>. See ``CUSTOM ALIASES&#8217;&#8216; in charnames. </p>
  </dd>
 <dt><code>chdir()</code> on unopened filehandle %s</dt>
 <dd> <p> (W unopened) You tried <code>chdir()</code> on a filehandle that was never opened. </p>
  </dd>
 <dt>&quot;\c%c&quot; is more clearly written simply as &quot;%s&quot;</dt>
-<dd> <p> (W syntax) The <code>&quot;\c</code>X <code>&quot;</code> construct is intended to be a way to specify non-printable characters. You used it for a printable one, which is better written as simply itself, perhaps preceded by a backslash for non-word characters. Doing it the way you did is not portable between <font SIZE="-1">ASCII</font> and <font SIZE="-1">EBCDIC</font> platforms. </p>
+<dd> <p> (W syntax) The <code>&quot;\c</code>X <code>&quot;</code> construct is intended to be a way to specify non-printable characters. You used it for a printable one, which is better written as simply itself, perhaps preceded by a backslash for non-word characters. Doing it the way you did is not portable between ASCII and EBCDIC platforms. </p>
  </dd>
 <dt>Cloning substitution context is unimplemented</dt>
 <dd> <p> (F) Creating a new thread inside the <code>&quot;s///&quot;</code> operator is not supported. </p>
@@ -865,15 +865,15 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You had a (sub-)template that ends with a &#8216;/&#8216;. There must be another template code following the slash. See ``pack&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>Code point 0x%X is not Unicode, and not portable</dt>
-<dd> <p> (S non_unicode) You had a code point that has never been in any standard, so it is likely that languages other than Perl will <font SIZE="-1">NOT</font> understand it. At one time, it was legal in some standards to have code points up to 0x7FFF_FFFF, but not higher, and this code point is higher. </p>
-<p> Acceptance of these code points is a Perl extension, and you should expect that nothing other than Perl can handle them; Perl itself on <font SIZE="-1">EBCDIC</font> platforms before v5.24 does not handle them. </p>
+<dd> <p> (S non_unicode) You had a code point that has never been in any standard, so it is likely that languages other than Perl will NOT understand it. At one time, it was legal in some standards to have code points up to 0x7FFF_FFFF, but not higher, and this code point is higher. </p>
+<p> Acceptance of these code points is a Perl extension, and you should expect that nothing other than Perl can handle them; Perl itself on EBCDIC platforms before v5.24 does not handle them. </p>
 <p> Code points above 0xFFFF_FFFF require larger than a 32 bit word. </p>
 <p> Perl also makes no guarantees that the representation of these code points won&#8217;t change at some point in the future, say when machines become available that have larger than a 64-bit word. At that time, files written by an older Perl would require conversion before being readable by a newer Perl. </p>
  </dd>
 <dt>Code point 0x%X is not Unicode, may not be portable</dt>
 <dd> <p> (S non_unicode) You had a code point above the Unicode maximum of U+10FFFF. </p>
 <p> Perl allows strings to contain a superset of Unicode code points, but these may not be accepted by other languages/systems. Further, even if these languages/systems accept these large code points, they may have chosen a different representation for them than the UTF-8-like one that Perl has, which would mean files are not exchangeable between them and Perl. </p>
-<p> On <font SIZE="-1">EBCDIC</font> platforms, code points above 0x3FFF_FFFF have a different representation in Perl v5.24 than before, so any file containing these that was written before that version will require conversion before being readable by a later Perl. </p>
+<p> On EBCDIC platforms, code points above 0x3FFF_FFFF have a different representation in Perl v5.24 than before, so any file containing these that was written before that version will require conversion before being readable by a later Perl. </p>
  </dd>
 <dt>%s: Command not found</dt>
 <dd> <p> (A) You&#8217;ve accidentally run your script through <code>csh</code> or another shell instead of Perl. Check the #! line, or manually feed your script into Perl yourself. The #! line at the top of your file could look like </p>
@@ -900,7 +900,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W closed) You tried to do a connect on a closed socket. Did you forget to check the return value of your <code>socket()</code> call? See ``connect&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>Constant(%s): Call to &amp;{$^H{%s}} did not return a defined value</dt>
-<dd> <p> (F) The subroutine registered to handle constant overloading (see overload) or a custom charnames handler (see ``<font SIZE="-1">CUSTOM TRANSLATORS&#8217;&#8216;</font> in charnames) returned an undefined value. </p>
+<dd> <p> (F) The subroutine registered to handle constant overloading (see overload) or a custom charnames handler (see ``CUSTOM TRANSLATORS&#8217;&#8216; in charnames) returned an undefined value. </p>
  </dd>
 <dt>Constant(%s): $^H{%s} is not defined</dt>
 <dd> <p> (F) The parser found inconsistencies while attempting to define an overloaded constant. Perhaps you forgot to load the corresponding overload pragma? </p>
@@ -950,7 +950,7 @@ description: "perldiag – various Perl diagnostics"
 </code></pre>
  </dd>
 <dt>CORE::%s is not a keyword</dt>
-<dd> <p> (F) The <font SIZE="-1">CORE::</font> namespace is reserved for Perl keywords. </p>
+<dd> <p> (F) The CORE:: namespace is reserved for Perl keywords. </p>
  </dd>
 <dt>Corrupted regexp opcode %d &gt; %d</dt>
 <dd> <p> (P) This is either an error in Perl, or, if you&#8217;re using one, your custom regular expression engine. If not the latter, report the problem through the perlbug utility. </p>
@@ -980,14 +980,14 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W recursion) This subroutine has called itself (directly or indirectly) 100 times more than it has returned. This probably indicates an infinite recursion, unless you&#8217;re writing strange benchmark programs, in which case it indicates something else. </p>
 <p> This threshold can be changed from 100, by recompiling the <i>perl</i> binary, setting the C pre-processor macro <code>&quot;PERL_SUB_DEPTH_WARN&quot;</code> to the desired value. </p>
  </dd>
-<dt>(?(<font SIZE="-1">DEFINE</font>)....) does not allow branches in regex; marked by &lt;-- HERE in m/%s/</dt>
+<dt>(?(DEFINE)....) does not allow branches in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) You used something like <code>&quot;(?(DEFINE)...|..)&quot;</code> which is illegal. The most likely cause of this error is that you left out a parenthesis inside of the <code>&quot;....&quot;</code> part. </p>
 <p> The &lt;-- HERE shows whereabouts in the regular expression the problem was discovered. </p>
  </dd>
 <dt>%s defines neither package nor VERSION---version check failed</dt>
 <dd> <p> (F) You said something like ``use Module 42&#8217;&#8216; but in the Module file there are neither package declarations nor a <code>$VERSION</code>. </p>
  </dd>
-<dt>delete argument is not a <font SIZE="-1">HASH</font> or <font SIZE="-1">ARRAY</font> element or slice</dt>
+<dt>delete argument is not a HASH or ARRAY element or slice</dt>
 <dd> <p> (F) The argument to <code>&quot;delete&quot;</code> must be either a hash or array element, such as: </p>
 <pre><code>    $foo{$bar}
     $ref-&gt;{&quot;susie&quot;}[12]
@@ -1016,8 +1016,8 @@ description: "perldiag – various Perl diagnostics"
 </code></pre>
 <p> This use of <code>&quot;my()&quot;</code> in a false conditional has been deprecated since Perl 5.10, and it will become a fatal error in Perl 5.30. </p>
  </dd>
-<dt><font SIZE="-1">DESTROY</font> created new reference to dead object &#8216;%s&#8217;</dt>
-<dd> <p> (F) A <font SIZE="-1"><code>DESTROY</code></font><code>()</code> method created a new reference to the object which is just being DESTROYed. Perl is confused, and prefers to abort rather than to create a dangling reference. </p>
+<dt>DESTROY created new reference to dead object &#8216;%s&#8217;</dt>
+<dd> <p> (F) A <code>DESTROY</code><code>()</code> method created a new reference to the object which is just being DESTROYed. Perl is confused, and prefers to abort rather than to create a dangling reference. </p>
  </dd>
 <dt>Did not produce a valid header</dt>
 <dd> <p> See ``500 Server error&#8217;&#8216;. </p>
@@ -1050,7 +1050,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (D deprecated) Previously <code>&quot; do &quot;somefile&quot;; &quot;</code> would search the current directory for the specified file. Since perl v5.26.0, <i>.</i> has been removed from <code>@INC</code> by default, so this is no longer true. To search the current directory (and only the current directory) you can write <code>&quot; do &quot;./somefile&quot;; &quot;</code>. </p>
  </dd>
 <dt>Don&#8217;t know how to get file name</dt>
-<dd> <p> (P) <code>&quot;PerlIO_getname&quot;</code>, a perl internal I/O function specific to <font SIZE="-1">VMS,</font> was somehow called on another platform. This should not happen. </p>
+<dd> <p> (P) <code>&quot;PerlIO_getname&quot;</code>, a perl internal I/O function specific to VMS, was somehow called on another platform. This should not happen. </p>
  </dd>
 <dt>Don&#8217;t know how to handle magic of type \%o</dt>
 <dd> <p> (P) The internal handling of magical variables has been cursed. </p>
@@ -1059,7 +1059,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (P) This should have been caught by <code>safemalloc()</code> instead. </p>
  </dd>
 <dt>(Do you need to predeclare %s?)</dt>
-<dd> <p> (S syntax) This is an educated guess made in conjunction with the message ``%s found where operator expected&#8217;&#8216;. It often means a subroutine or module name is being referenced that hasn&#8217;t been declared yet. This may be because of ordering problems in your file, or because of a missing ``sub&#8217;&#8216;, ``package&#8217;&#8216;, ``require&#8217;&#8216;, or ``use&#8217;&#8216; statement. If you&#8217;re referencing something that isn&#8217;t defined yet, you don&#8217;t actually have to define the subroutine or package before the current location. You can use an empty ``sub foo;&#8216;&#8216; or ``package <font SIZE="-1">FOO</font>;&#8216;&#8216; to enter a ``forward&#8217;&#8216; declaration. </p>
+<dd> <p> (S syntax) This is an educated guess made in conjunction with the message ``%s found where operator expected&#8217;&#8216;. It often means a subroutine or module name is being referenced that hasn&#8217;t been declared yet. This may be because of ordering problems in your file, or because of a missing ``sub&#8217;&#8216;, ``package&#8217;&#8216;, ``require&#8217;&#8216;, or ``use&#8217;&#8216; statement. If you&#8217;re referencing something that isn&#8217;t defined yet, you don&#8217;t actually have to define the subroutine or package before the current location. You can use an empty ``sub foo;&#8216;&#8216; or ``package FOO;&#8216;&#8216; to enter a ``forward&#8217;&#8216; declaration. </p>
  </dd>
 <dt><code>dump()</code> must be written as <code>CORE::dump()</code> as of Perl 5.30</dt>
 <dd> <p> (F) You used the obsolete <code>&quot;dump()&quot;</code> built-in function. That was deprecated in Perl 5.8.0. As of Perl 5.30 it must be written in fully qualified format: <code>&quot;CORE::dump()&quot;</code>. </p>
@@ -1083,9 +1083,9 @@ description: "perldiag – various Perl diagnostics"
 <dd>  </dd>
 <dt>Empty \%c{} in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) You used something like <code>&quot;\b{}&quot;</code>, <code>&quot;\B{}&quot;</code>, <code>&quot;\o{}&quot;</code>, <code>&quot;\p&quot;</code>, <code>&quot;\P&quot;</code>, or <code>&quot;\x&quot;</code> without specifying anything for it to operate on. </p>
-<p> Unfortunately, for backwards compatibility reasons, an empty <code>&quot;\x&quot;</code> is legal outside <code>&quot;use re &#8216;strict&#8217;&quot;</code> and expands to a <font SIZE="-1">NUL</font> character. </p>
+<p> Unfortunately, for backwards compatibility reasons, an empty <code>&quot;\x&quot;</code> is legal outside <code>&quot;use re &#8216;strict&#8217;&quot;</code> and expands to a NUL character. </p>
  </dd>
-<dt>Empty (?) without any modifiers in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Empty (?) without any modifiers in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (W regexp) (only under <code>&quot;use re &#8216;strict&#8217;&quot;</code>) <code>&quot;(?)&quot;</code> does nothing, so perhaps this is a typo. </p>
  </dd>
 <dt>${^ENCODING} is no longer supported</dt>
@@ -1099,7 +1099,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You&#8217;re running under taint mode, and the <code>%ENV</code> variable has been aliased to another hash, so it doesn&#8217;t reflect anymore the state of the program&#8217;s environment. This is potentially insecure. </p>
  </dd>
 <dt>Error converting file specification %s</dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">VMS.</font> Because Perl may have to deal with file specifications in either <font SIZE="-1">VMS</font> or Unix syntax, it converts them to a single form when it must operate on them directly. Either you&#8217;ve passed an invalid file specification to Perl, or you&#8217;ve found a case the conversion routines don&#8217;t handle. Drat. </p>
+<dd> <p> (F) An error peculiar to VMS. Because Perl may have to deal with file specifications in either VMS or Unix syntax, it converts them to a single form when it must operate on them directly. Either you&#8217;ve passed an invalid file specification to Perl, or you&#8217;ve found a case the conversion routines don&#8217;t handle. Drat. </p>
  </dd>
 <dt>Eval-group in insecure regular expression</dt>
 <dd> <p> (F) Perl detected tainted data when trying to compile a regular expression that contains the <code>&quot;(?{ ... })&quot;</code> zero-width assertion, which is unsafe. See ``(?{ code })&#8216;&#8216; in perlre, and perlsec. </p>
@@ -1110,20 +1110,20 @@ description: "perldiag – various Perl diagnostics"
 <dt>Eval-group not allowed, use re &#8216;eval&#8217; in regex m/%s/</dt>
 <dd> <p> (F) A regular expression contained the <code>&quot;(?{ ... })&quot;</code> zero-width assertion, but that construct is only allowed when the <code>&quot;use re &#8216;eval&#8217;&quot;</code> pragma is in effect. See ``(?{ code })&#8216;&#8216; in perlre. </p>
  </dd>
-<dt><font SIZE="-1">EVAL</font> without pos change exceeded limit in regex; marked by &lt;-- HERE in m/%s/</dt>
-<dd> <p> (F) You used a pattern that nested too many <font SIZE="-1">EVAL</font> calls without consuming any text. Restructure the pattern so that text is consumed. </p>
+<dt>EVAL without pos change exceeded limit in regex; marked by &lt;-- HERE in m/%s/</dt>
+<dd> <p> (F) You used a pattern that nested too many EVAL calls without consuming any text. Restructure the pattern so that text is consumed. </p>
 <p> The &lt;-- HERE shows whereabouts in the regular expression the problem was discovered. </p>
  </dd>
 <dt>Excessively long &lt;&gt; operator</dt>
 <dd> <p> (F) The contents of a &lt;&gt; operator may not exceed the maximum size of a Perl identifier. If you&#8217;re just trying to glob a long list of filenames, try using the <code>glob()</code> operator, or put the filenames into a variable and glob that. </p>
  </dd>
 <dt>exec? I&#8217;m not *that* kind of operating system</dt>
-<dd> <p> (F) The <code>&quot;exec&quot;</code> function is not implemented on some systems, e.g., Symbian <font SIZE="-1">OS.</font> See perlport. </p>
+<dd> <p> (F) The <code>&quot;exec&quot;</code> function is not implemented on some systems, e.g., Symbian OS. See perlport. </p>
  </dd>
 <dt>%sExecution of %s aborted due to compilation errors.</dt>
 <dd> <p> (F) The final summary message when a Perl compilation fails. </p>
  </dd>
-<dt>exists argument is not a <font SIZE="-1">HASH</font> or <font SIZE="-1">ARRAY</font> element or a subroutine</dt>
+<dt>exists argument is not a HASH or ARRAY element or a subroutine</dt>
 <dd> <p> (F) The argument to <code>&quot;exists&quot;</code> must be a hash or array element or a subroutine with an ampersand, such as: </p>
 <pre><code>    $foo{$bar}
     $ref-&gt;{&quot;susie&quot;}[12]
@@ -1154,14 +1154,14 @@ description: "perldiag – various Perl diagnostics"
 </code></pre>
 <p> to denote a capturing group of the form <code>&quot;(?</code>PARNO <code>)&quot;</code>, but omitted the <code>&quot;)&quot;</code>. </p>
  </dd>
-<dt>Expecting close paren for nested extended charclass in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Expecting close paren for nested extended charclass in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) While parsing a nested extended character class like: </p>
 <pre><code>    (?[ ... (?flags:(?[ ... ])) ... ])
                              ^
 </code></pre>
 <p> we expected to see a close paren &#8216;)&#8216; (marked by ^) but did not. </p>
  </dd>
-<dt>Expecting close paren for wrapper for nested extended charclass in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Expecting close paren for wrapper for nested extended charclass in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) While parsing a nested extended character class like: </p>
 <pre><code>    (?[ ... (?flags:(?[ ... ])) ... ])
                               ^
@@ -1195,7 +1195,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (A) You&#8217;ve accidentally run your script through <code>csh</code> instead of Perl. Check the #! line, or manually feed your script into Perl yourself. </p>
  </dd>
 <dt>%s failed---call queue aborted</dt>
-<dd> <p> (F) An untrapped exception was raised while executing a <font SIZE="-1">UNITCHECK, CHECK, INIT,</font> or <font SIZE="-1">END</font> subroutine. Processing of the remainder of the queue of such routines has been prematurely ended. </p>
+<dd> <p> (F) An untrapped exception was raised while executing a UNITCHECK, CHECK, INIT, or END subroutine. Processing of the remainder of the queue of such routines has been prematurely ended. </p>
  </dd>
 <dt>Failed to close in-place work file %s: %s</dt>
 <dd> <p> (F) Closing an output file from in-place editing, as with the <code>&quot;-i&quot;</code> command-line switch, failed. </p>
@@ -1203,13 +1203,13 @@ description: "perldiag – various Perl diagnostics"
 <dt>False [] range &quot;%s&quot; in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (W regexp)(F) A character class range must start and end at a literal character, not another character class like <code>&quot;\d&quot;</code> or <code>&quot;[:alpha:]&quot;</code>. The ``-&#8216;&#8216; in your false range is interpreted as a literal ``-&#8216;&#8216;. In a <code>&quot;(?[...])&quot;</code> construct, this is an error, rather than a warning. Consider quoting the ``-&#8216;&#8216;, ``\-&#8216;&#8216;. The &lt;-- HERE shows whereabouts in the regular expression the problem was discovered. See perlre. </p>
  </dd>
-<dt>Fatal <font SIZE="-1">VMS</font> error (status=%d) at %s, line %d</dt>
-<dd> <p> (P) An error peculiar to <font SIZE="-1">VMS.</font> Something untoward happened in a <font SIZE="-1">VMS</font> system service or <font SIZE="-1">RTL</font> routine; Perl&#8217;s exit status should provide more details. The filename in ``at <code>%s</code>&#8216;&#8216; and the line number in ``line <code>%d</code>&#8216;&#8216; tell you which section of the Perl source code is distressed. </p>
+<dt>Fatal VMS error (status=%d) at %s, line %d</dt>
+<dd> <p> (P) An error peculiar to VMS. Something untoward happened in a VMS system service or RTL routine; Perl&#8217;s exit status should provide more details. The filename in ``at <code>%s</code>&#8216;&#8216; and the line number in ``line <code>%d</code>&#8216;&#8216; tell you which section of the Perl source code is distressed. </p>
  </dd>
 <dt>fcntl is not implemented</dt>
-<dd> <p> (F) Your machine apparently doesn&#8217;t implement <code>fcntl()</code>. What is this, a <font SIZE="-1">PDP-11</font> or something? </p>
+<dd> <p> (F) Your machine apparently doesn&#8217;t implement <code>fcntl()</code>. What is this, a PDP-11 or something? </p>
  </dd>
-<dt><font SIZE="-1">FETCHSIZE</font> returned a negative value</dt>
+<dt>FETCHSIZE returned a negative value</dt>
 <dd> <p> (F) A tied array claimed to have a negative number of elements, which is not possible. </p>
  </dd>
 <dt>Field too wide in &#8216;u&#8217; format in pack</dt>
@@ -1224,13 +1224,13 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W io) You tried to write on a read-only filehandle. If you intended it to be a read-write filehandle, you needed to open it with ``+&lt;&#8216;&#8216; or ``+&gt;&#8216;&#8216; or ``+&gt;&gt;&#8216;&#8216; instead of with ``&lt;&#8216;&#8216; or nothing. If you intended only to write the file, use ``&gt;&#8216;&#8216; or ``&gt;&gt;&#8216;&#8216;. See ``open&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>Filehandle %s opened only for output</dt>
-<dd> <p> (W io) You tried to read from a filehandle opened only for writing, If you intended it to be a read/write filehandle, you needed to open it with ``+&lt;&#8216;&#8216; or ``+&gt;&#8216;&#8216; or ``+&gt;&gt;&#8216;&#8216; instead of with ``&gt;&#8216;&#8216;. If you intended only to read from the file, use ``&lt;&#8216;&#8216;. See ``open&#8217;&#8216; in perlfunc. Another possibility is that you attempted to open filedescriptor 0 (also known as <font SIZE="-1">STDIN</font>) for output (maybe you closed <font SIZE="-1">STDIN</font> earlier?). </p>
+<dd> <p> (W io) You tried to read from a filehandle opened only for writing, If you intended it to be a read/write filehandle, you needed to open it with ``+&lt;&#8216;&#8216; or ``+&gt;&#8216;&#8216; or ``+&gt;&gt;&#8216;&#8216; instead of with ``&gt;&#8216;&#8216;. If you intended only to read from the file, use ``&lt;&#8216;&#8216;. See ``open&#8217;&#8216; in perlfunc. Another possibility is that you attempted to open filedescriptor 0 (also known as STDIN) for output (maybe you closed STDIN earlier?). </p>
  </dd>
 <dt>Filehandle %s reopened as %s only for input</dt>
-<dd> <p> (W io) You opened for reading a filehandle that got the same filehandle id as <font SIZE="-1">STDOUT</font> or <font SIZE="-1">STDERR.</font> This occurred because you closed <font SIZE="-1">STDOUT</font> or <font SIZE="-1">STDERR</font> previously. </p>
+<dd> <p> (W io) You opened for reading a filehandle that got the same filehandle id as STDOUT or STDERR. This occurred because you closed STDOUT or STDERR previously. </p>
  </dd>
-<dt>Filehandle <font SIZE="-1">STDIN</font> reopened as %s only for output</dt>
-<dd> <p> (W io) You opened for writing a filehandle that got the same filehandle id as <font SIZE="-1">STDIN.</font> This occurred because you closed <font SIZE="-1">STDIN</font> previously. </p>
+<dt>Filehandle STDIN reopened as %s only for output</dt>
+<dd> <p> (W io) You opened for writing a filehandle that got the same filehandle id as STDIN. This occurred because you closed STDIN previously. </p>
  </dd>
 <dt>Final $ should be \$ or $name</dt>
 <dd> <p> (F) You must now decide whether the final $ in a string was meant to be a literal dollar sign, or was meant to introduce a variable name that happens to be missing. So you have to put either the backslash or the name. </p>
@@ -1270,8 +1270,8 @@ description: "perldiag – various Perl diagnostics"
 <dt>get%<code>sname()</code> on closed socket %s</dt>
 <dd> <p> (W closed) You tried to get a socket or peer socket name on a closed socket. Did you forget to check the return value of your <code>socket()</code> call? </p>
  </dd>
-<dt>getpwnam returned invalid <font SIZE="-1">UIC</font> %#o for user &quot;%s&quot;</dt>
-<dd> <p> (S) A warning peculiar to <font SIZE="-1">VMS.</font> The call to <code>&quot;sys$getuai&quot;</code> underlying the <code>&quot;getpwnam&quot;</code> operator returned an invalid <font SIZE="-1">UIC.</font> </p>
+<dt>getpwnam returned invalid UIC %#o for user &quot;%s&quot;</dt>
+<dd> <p> (S) A warning peculiar to VMS. The call to <code>&quot;sys$getuai&quot;</code> underlying the <code>&quot;getpwnam&quot;</code> operator returned an invalid UIC. </p>
  </dd>
 <dt><code>getsockopt()</code> on closed socket %s</dt>
 <dd> <p> (W closed) You tried to get a socket option on a closed socket. Did you forget to check the return value of your <code>socket()</code> call? See ``getsockopt&#8217;&#8216; in perlfunc. </p>
@@ -1298,7 +1298,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W overflow) You called <code>&quot;gmtime&quot;</code> with a number that was smaller than it can reliably handle and <code>&quot;gmtime&quot;</code> probably returned the wrong date. </p>
  </dd>
 <dt>Got an error from DosAllocMem</dt>
-<dd> <p> (P) An error peculiar to <font SIZE="-1">OS/2.</font> Most probably you&#8217;re using an obsolete version of Perl, and this should not happen anyway. </p>
+<dd> <p> (P) An error peculiar to OS/2. Most probably you&#8217;re using an obsolete version of Perl, and this should not happen anyway. </p>
  </dd>
 <dt>goto must have label</dt>
 <dd> <p> (F) Unlike with ``next&#8217;&#8216; or ``last&#8217;&#8216;, you&#8217;re not allowed to goto an unspecified destination. See ``goto&#8217;&#8216; in perlfunc. </p>
@@ -1325,7 +1325,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W overflow) The hexadecimal floating point has a larger exponent than the floating point supports. </p>
  </dd>
 <dt>Hexadecimal float: exponent underflow</dt>
-<dd> <p> (W overflow) The hexadecimal floating point has a smaller exponent than the floating point supports. With the <font SIZE="-1">IEEE 754</font> floating point, this may also mean that the subnormals (formerly known as denormals) are being used, which may or may not be an error. </p>
+<dd> <p> (W overflow) The hexadecimal floating point has a smaller exponent than the floating point supports. With the IEEE 754 floating point, this may also mean that the subnormals (formerly known as denormals) are being used, which may or may not be an error. </p>
  </dd>
 <dt>Hexadecimal float: internal error (%s)</dt>
 <dd> <p> (F) Something went horribly bad in hexadecimal float handling. </p>
@@ -1414,27 +1414,27 @@ description: "perldiag – various Perl diagnostics"
 <dt>Illegal suidscript</dt>
 <dd> <p> (F) The script run under suidperl was somehow illegal. </p>
  </dd>
-<dt>Illegal switch in <font SIZE="-1">PERL5OPT:</font> -%c</dt>
-<dd> <p> (X) The <font SIZE="-1">PERL5OPT</font> environment variable may only be used to set the following switches: <code>-[CDIMUdmtw]</code>. </p>
+<dt>Illegal switch in PERL5OPT: -%c</dt>
+<dd> <p> (X) The PERL5OPT environment variable may only be used to set the following switches: <code>-[CDIMUdmtw]</code>. </p>
  </dd>
 <dt>Illegal user-defined property name</dt>
 <dd> <p> (F) You specified a Unicode-like property name in a regular expression pattern (using <code>&quot;\p{}&quot;</code> or <code>&quot;\P{}&quot;</code>) that Perl knows isn&#8217;t an official Unicode property, and was likely meant to be a user-defined property name, but it can&#8217;t be one of those, as they must begin with either <code>&quot;In&quot;</code> or <code>&quot;Is&quot;</code>. Check the spelling. See also ``Can&#8217;t find Unicode property definition &#8216;&#8216;%s&quot;&quot;. </p>
  </dd>
-<dt>Ill-formed <font SIZE="-1">CRTL</font> environ value &quot;%s&quot;</dt>
-<dd> <p> (W internal) A warning peculiar to <font SIZE="-1">VMS.</font> Perl tried to read the <font SIZE="-1">CRTL</font>&#8216;s internal environ array, and encountered an element without the <code>&quot;=&quot;</code> delimiter used to separate keys from values. The element is ignored. </p>
+<dt>Ill-formed CRTL environ value &quot;%s&quot;</dt>
+<dd> <p> (W internal) A warning peculiar to VMS. Perl tried to read the CRTL&#8216;s internal environ array, and encountered an element without the <code>&quot;=&quot;</code> delimiter used to separate keys from values. The element is ignored. </p>
  </dd>
 <dt>Ill-formed message in prime_env_iter: |%s|</dt>
-<dd> <p> (W internal) A warning peculiar to <font SIZE="-1">VMS.</font> Perl tried to read a logical name or <font SIZE="-1">CLI</font> symbol definition when preparing to iterate over <code>%ENV</code>, and didn&#8217;t see the expected delimiter between key and value, so the line was ignored. </p>
+<dd> <p> (W internal) A warning peculiar to VMS. Perl tried to read a logical name or CLI symbol definition when preparing to iterate over <code>%ENV</code>, and didn&#8217;t see the expected delimiter between key and value, so the line was ignored. </p>
  </dd>
 <dt>(in cleanup) %s</dt>
-<dd> <p> (W misc) This prefix usually indicates that a <font SIZE="-1"><code>DESTROY</code></font><code>()</code> method raised the indicated exception. Since destructors are usually called by the system at arbitrary points during execution, and often a vast number of times, the warning is issued only once for any number of failures that would otherwise result in the same message being repeated. </p>
+<dd> <p> (W misc) This prefix usually indicates that a <code>DESTROY</code><code>()</code> method raised the indicated exception. Since destructors are usually called by the system at arbitrary points during execution, and often a vast number of times, the warning is issued only once for any number of failures that would otherwise result in the same message being repeated. </p>
 <p> Failure of user callbacks dispatched using the <code>&quot;G_KEEPERR&quot;</code> flag could also result in this warning. See ``G_KEEPERR&#8217;&#8216; in perlcall. </p>
  </dd>
 <dt>Incomplete expression within &#8216;(?[ ])&#8216; in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) There was a syntax error within the <code>&quot;(?[ ])&quot;</code>. This can happen if the expression inside the construct was completely empty, or if there are too many or few operands for the number of operators. Perl is not smart enough to give you a more precise indication as to what is wrong. </p>
  </dd>
 <dt>Inconsistent hierarchy during C3 merge of class &#8216;%s&#8217;: merging failed on parent &#8216;%s&#8217;</dt>
-<dd> <p> (F) The method resolution order (<font SIZE="-1">MRO</font>) of the given class is not C3-consistent, and you have enabled the C3 <font SIZE="-1">MRO</font> for this class. See the C3 documentation in mro for more information. </p>
+<dd> <p> (F) The method resolution order (MRO) of the given class is not C3-consistent, and you have enabled the C3 MRO for this class. See the C3 documentation in mro for more information. </p>
  </dd>
 <dt>Indentation on line %d of here-doc doesn&#8217;t match delimiter</dt>
 <dd> <p> (F) You have an indented here-document where one or more of its lines have whitespace at the beginning that does not match the closing delimiter. </p>
@@ -1468,7 +1468,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You tried to do something that the tainting mechanism didn&#8217;t like. The tainting mechanism is turned on when you&#8217;re running setuid or setgid, or when you specify <code>-T</code> to turn it on explicitly. The tainting mechanism labels all data that&#8217;s derived directly or indirectly from the user, who is considered to be unworthy of your trust. If any such data is used in a ``dangerous&#8217;&#8216; operation, you get this error. See perlsec for more information. </p>
  </dd>
 <dt>Insecure directory in %s</dt>
-<dd> <p> (F) You can&#8217;t use <code>system()</code>, <code>exec()</code>, or a piped open in a setuid or setgid script if <code>$ENV{PATH}</code> contains a directory that is writable by the world. Also, the <font SIZE="-1">PATH</font> must not contain any relative directory. See perlsec. </p>
+<dd> <p> (F) You can&#8217;t use <code>system()</code>, <code>exec()</code>, or a piped open in a setuid or setgid script if <code>$ENV{PATH}</code> contains a directory that is writable by the world. Also, the PATH must not contain any relative directory. See perlsec. </p>
  </dd>
 <dt>Insecure $ENV{%s} while running %s</dt>
 <dd> <p> (F) You can&#8217;t use <code>system()</code>, <code>exec()</code>, or a piped open in a setuid or setgid script if any of <code>$ENV{PATH}</code>, <code>$ENV{IFS}</code>, <code>$ENV{CDPATH}</code>, <code>$ENV{ENV}</code>, <code>$ENV{BASH_ENV}</code> or <code>$ENV{TERM}</code> are derived from data supplied (or potentially supplied) by the user. The script must set the path to a known value, using trustworthy data. See perlsec. </p>
@@ -1494,10 +1494,10 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (P) Something went badly wrong in the regular expression parser. The &lt;-- HERE shows whereabouts in the regular expression the problem was discovered. </p>
  </dd>
 <dt>Internal inconsistency in tracking vforks</dt>
-<dd> <p> (S) A warning peculiar to <font SIZE="-1">VMS.</font> Perl keeps track of the number of times you&#8217;ve called <code>&quot;fork&quot;</code> and <code>&quot;exec&quot;</code>, to determine whether the current call to <code>&quot;exec&quot;</code> should affect the current script or a subprocess (see ``exec <font SIZE="-1">LIST&#8217;&#8216;</font> in perlvms). Somehow, this count has become scrambled, so Perl is making a guess and treating this <code>&quot;exec&quot;</code> as a request to terminate the Perl script and execute the specified command. </p>
+<dd> <p> (S) A warning peculiar to VMS. Perl keeps track of the number of times you&#8217;ve called <code>&quot;fork&quot;</code> and <code>&quot;exec&quot;</code>, to determine whether the current call to <code>&quot;exec&quot;</code> should affect the current script or a subprocess (see ``exec LIST&#8217;&#8216; in perlvms). Somehow, this count has become scrambled, so Perl is making a guess and treating this <code>&quot;exec&quot;</code> as a request to terminate the Perl script and execute the specified command. </p>
  </dd>
 <dt>internal %&lt;num&gt;p might conflict with future printf extensions</dt>
-<dd> <p> (S internal) Perl&#8217;s internal routine that handles <code>&quot;printf&quot;</code> and <code>&quot;sprintf&quot;</code> formatting follows a slightly different set of rules when called from C or <font SIZE="-1">XS</font> code. Specifically, formats consisting of digits followed by ``p&#8217;&#8216; (e.g., ``%7p&#8217;&#8216;) are reserved for future use. If you see this message, then an <font SIZE="-1">XS</font> module tried to call that routine with one such reserved format. </p>
+<dd> <p> (S internal) Perl&#8217;s internal routine that handles <code>&quot;printf&quot;</code> and <code>&quot;sprintf&quot;</code> formatting follows a slightly different set of rules when called from C or XS code. Specifically, formats consisting of digits followed by ``p&#8217;&#8216; (e.g., ``%7p&#8217;&#8216;) are reserved for future use. If you see this message, then an XS module tried to call that routine with one such reserved format. </p>
  </dd>
 <dt>Internal urp in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (P) Something went badly awry in the regular expression parser. The &lt;-- HERE shows whereabouts in the regular expression the problem was discovered. </p>
@@ -1518,19 +1518,19 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) The indicated attributes for a subroutine or variable were not recognized by Perl or by a user-supplied handler. See attributes. </p>
  </dd>
 <dt>Invalid character in charnames alias definition; marked by &lt;-- HERE in &#8216;%s</dt>
-<dd> <p> (F) You tried to create a custom alias for a character name, with the <code>&quot;:alias&quot;</code> option to <code>&quot;use charnames&quot;</code> and the specified character in the indicated name isn&#8217;t valid. See ``<font SIZE="-1">CUSTOM ALIASES&#8217;&#8216;</font> in charnames. </p>
+<dd> <p> (F) You tried to create a custom alias for a character name, with the <code>&quot;:alias&quot;</code> option to <code>&quot;use charnames&quot;</code> and the specified character in the indicated name isn&#8217;t valid. See ``CUSTOM ALIASES&#8217;&#8216; in charnames. </p>
  </dd>
 <dt>Invalid \0 character in %s for %s: %s\0%s</dt>
 <dd> <p> (W syscalls) Embedded \0 characters in pathnames or other system call arguments produce a warning as of 5.20. The parts after the \0 were formerly ignored by system calls. </p>
  </dd>
 <dt>Invalid character in \N{...}; marked by &lt;-- HERE in \N{%s}</dt>
-<dd> <p> (F) Only certain characters are valid for character names. The indicated one isn&#8217;t. See ``<font SIZE="-1">CUSTOM ALIASES&#8217;&#8216;</font> in charnames. </p>
+<dd> <p> (F) Only certain characters are valid for character names. The indicated one isn&#8217;t. See ``CUSTOM ALIASES&#8217;&#8216; in charnames. </p>
  </dd>
 <dt>Invalid conversion in %s: &quot;%s&quot;</dt>
 <dd> <p> (W printf) Perl does not understand the given format conversion. See ``sprintf&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>Invalid escape in the specified encoding in regex; marked by &lt;-- HERE in m/%s/</dt>
-<dd> <p> (W regexp)(F) The numeric escape (for example <code>&quot;\xHH&quot;</code>) of value &lt; 256 didn&#8217;t correspond to a single character through the conversion from the encoding specified by the encoding pragma. The escape was replaced with <font SIZE="-1">REPLACEMENT CHARACTER</font> (U+FFFD) instead, except within <code>&quot;(?[ ])&quot;</code>, where it is a fatal error. The &lt;-- HERE shows whereabouts in the regular expression the escape was discovered. </p>
+<dd> <p> (W regexp)(F) The numeric escape (for example <code>&quot;\xHH&quot;</code>) of value &lt; 256 didn&#8217;t correspond to a single character through the conversion from the encoding specified by the encoding pragma. The escape was replaced with REPLACEMENT CHARACTER (U+FFFD) instead, except within <code>&quot;(?[ ])&quot;</code>, where it is a fatal error. The &lt;-- HERE shows whereabouts in the regular expression the escape was discovered. </p>
  </dd>
 <dt>Invalid hexadecimal number in \N{U+...}</dt>
 <dd>  </dd>
@@ -1541,7 +1541,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) The module argument to perl&#8217;s <code>-m</code> and <code>-M</code> command-line options cannot contain single colons in the module name, but only in the arguments after ``=&#8216;&#8216;. In other words, <code>-MFoo::Bar=:baz</code> is ok, but <code>-MFoo:Bar=baz</code> is not. </p>
  </dd>
 <dt>Invalid mro name: &#8216;%s&#8217;</dt>
-<dd> <p> (F) You tried to <code>&quot;mro::set_mro(&quot;classname&quot;, &quot;foo&quot;)&quot;</code> or <code>&quot;use mro &#8216;foo&#8217;&quot;</code>, where <code>&quot;foo&quot;</code> is not a valid method resolution order (<font SIZE="-1">MRO</font>). Currently, the only valid ones supported are <code>&quot;dfs&quot;</code> and <code>&quot;c3&quot;</code>, unless you have loaded a module that is a <font SIZE="-1">MRO</font> plugin. See mro and perlmroapi. </p>
+<dd> <p> (F) You tried to <code>&quot;mro::set_mro(&quot;classname&quot;, &quot;foo&quot;)&quot;</code> or <code>&quot;use mro &#8216;foo&#8217;&quot;</code>, where <code>&quot;foo&quot;</code> is not a valid method resolution order (MRO). Currently, the only valid ones supported are <code>&quot;dfs&quot;</code> and <code>&quot;c3&quot;</code>, unless you have loaded a module that is a MRO plugin. See mro and perlmroapi. </p>
  </dd>
 <dt>Invalid negative number (%s) in chr</dt>
 <dd> <p> (W utf8) You passed a negative number to <code>&quot;chr&quot;</code>. Negative numbers are not valid character numbers, so it returns the Unicode replacement character (U+FFFD). </p>
@@ -1589,19 +1589,19 @@ description: "perldiag – various Perl diagnostics"
 <dt><code>ioctl()</code> on unopened %s</dt>
 <dd> <p> (W unopened) You tried <code>ioctl()</code> on a filehandle that was never opened. Check your control flow and number of arguments. </p>
  </dd>
-<dt><font SIZE="-1">IO</font> layers (like &#8216;%s&#8217;) unavailable</dt>
-<dd> <p> (F) Your Perl has not been configured to have PerlIO, and therefore you cannot use <font SIZE="-1">IO</font> layers. To have PerlIO, Perl must be configured with &#8216;useperlio&#8217;. </p>
+<dt>IO layers (like &#8216;%s&#8217;) unavailable</dt>
+<dd> <p> (F) Your Perl has not been configured to have PerlIO, and therefore you cannot use IO layers. To have PerlIO, Perl must be configured with &#8216;useperlio&#8217;. </p>
  </dd>
 <dt>IO::Socket::atmark not implemented on this architecture</dt>
-<dd> <p> (F) Your machine doesn&#8217;t implement the <code>sockatmark()</code> functionality, neither as a system call nor an ioctl call (<font SIZE="-1">SIOCATMARK</font>). </p>
+<dd> <p> (F) Your machine doesn&#8217;t implement the <code>sockatmark()</code> functionality, neither as a system call nor an ioctl call (SIOCATMARK). </p>
  </dd>
 <dt>&#8216;%s&#8217; is an unknown bound type in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) You used <code>&quot;\b{...}&quot;</code> or <code>&quot;\B{...}&quot;</code> and the <code>&quot;...&quot;</code> is not known to Perl. The current valid ones are given in ``\b{}, \b, \B{}, \B&#8217;&#8216; in perlrebackslash. </p>
  </dd>
 <dt>%s() isn&#8217;t allowed on :utf8 handles</dt>
 <dd> <p> (F) The <code>sysread()</code>, <code>recv()</code>, <code>syswrite()</code> and <code>send()</code> operators are not allowed on handles that have the <code>&quot;:utf8&quot;</code> layer, either explicitly, or implicitly, eg., with the <code>&quot;:encoding(UTF-16LE)&quot;</code> layer. </p>
-<p> Previously <code>sysread()</code> and <code>recv()</code> currently use only the <code>&quot;:utf8&quot;</code> flag for the stream, ignoring the actual layers. Since <code>sysread()</code> and <code>recv()</code> did no <font SIZE="-1">UTF-8</font> validation they can end up creating invalidly encoded scalars. </p>
-<p> Similarly, <code>syswrite()</code> and <code>send()</code> used only the <code>&quot;:utf8&quot;</code> flag, otherwise ignoring any layers. If the flag is set, both wrote the value <font SIZE="-1">UTF-8</font> encoded, even if the layer is some different encoding, such as the example above. </p>
+<p> Previously <code>sysread()</code> and <code>recv()</code> currently use only the <code>&quot;:utf8&quot;</code> flag for the stream, ignoring the actual layers. Since <code>sysread()</code> and <code>recv()</code> did no UTF-8 validation they can end up creating invalidly encoded scalars. </p>
+<p> Similarly, <code>syswrite()</code> and <code>send()</code> used only the <code>&quot;:utf8&quot;</code> flag, otherwise ignoring any layers. If the flag is set, both wrote the value UTF-8 encoded, even if the layer is some different encoding, such as the example above. </p>
 <p> Ideally, all of these operators would completely ignore the <code>&quot;:utf8&quot;</code> state, working only with bytes, but this would result in silently breaking existing code. </p>
  </dd>
 <dt>&quot;%s&quot; is more clearly written simply as &quot;%s&quot; in regex; marked by &lt;-- HERE in m/%s/</dt>
@@ -1622,8 +1622,8 @@ description: "perldiag – various Perl diagnostics"
 <dt>&#8216;%s&#8217; is not an overloadable type</dt>
 <dd> <p> (W overload) You tried to overload a constant type the overload package is unaware of. </p>
  </dd>
-<dt>-i used with no filenames on the command line, reading from <font SIZE="-1">STDIN</font></dt>
-<dd> <p> (S inplace) The <code>&quot;-i&quot;</code> option was passed on the command line, indicating that the script is intended to edit files in place, but no files were given. This is usually a mistake, since editing <font SIZE="-1">STDIN</font> in place doesn&#8217;t make sense, and can be confusing because it can make perl look like it is hanging when it is really just trying to read from <font SIZE="-1">STDIN.</font> You should either pass a filename to edit, or remove <code>&quot;-i&quot;</code> from the command line. See perlrun for more details. </p>
+<dt>-i used with no filenames on the command line, reading from STDIN</dt>
+<dd> <p> (S inplace) The <code>&quot;-i&quot;</code> option was passed on the command line, indicating that the script is intended to edit files in place, but no files were given. This is usually a mistake, since editing STDIN in place doesn&#8217;t make sense, and can be confusing because it can make perl look like it is hanging when it is really just trying to read from STDIN. You should either pass a filename to edit, or remove <code>&quot;-i&quot;</code> from the command line. See perlrun for more details. </p>
  </dd>
 <dt>Junk on end of regexp in regex m/%s/</dt>
 <dd> <p> (P) The regular expression parser is confused. </p>
@@ -1653,10 +1653,10 @@ description: "perldiag – various Perl diagnostics"
 </code></pre>
  </dd>
 <dt>Lexing code attempted to stuff non-Latin-1 character into Latin-1 input</dt>
-<dd> <p> (F) An extension is attempting to insert text into the current parse (using lex_stuff_pvn or similar), but tried to insert a character that couldn&#8217;t be part of the current input. This is an inherent pitfall of the stuffing mechanism, and one of the reasons to avoid it. Where it is necessary to stuff, stuffing only plain <font SIZE="-1">ASCII</font> is recommended. </p>
+<dd> <p> (F) An extension is attempting to insert text into the current parse (using lex_stuff_pvn or similar), but tried to insert a character that couldn&#8217;t be part of the current input. This is an inherent pitfall of the stuffing mechanism, and one of the reasons to avoid it. Where it is necessary to stuff, stuffing only plain ASCII is recommended. </p>
  </dd>
 <dt>Lexing code internal error (%s)</dt>
-<dd> <p> (F) Lexing code supplied by an extension violated the lexer&#8217;s <font SIZE="-1">API</font> in a detectable way. </p>
+<dd> <p> (F) Lexing code supplied by an extension violated the lexer&#8217;s API in a detectable way. </p>
  </dd>
 <dt><code>listen()</code> on closed socket %s</dt>
 <dd> <p> (W closed) You tried to do a listen on a closed socket. Did you forget to check the return value of your <code>socket()</code> call? See ``listen&#8217;&#8216; in perlfunc. </p>
@@ -1666,7 +1666,7 @@ description: "perldiag – various Perl diagnostics"
  </dd>
 <dt>Literal vertical space in [] is illegal except under /x in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) (only under <code>&quot;use re &#8216;strict&#8217;&quot;</code> or within <code>&quot;(?[...])&quot;</code>) </p>
-<p> Likely you forgot the <code>&quot;/x&quot;</code> modifier or there was a typo in the pattern. For example, did you really mean to match a form-feed? If so, all the <font SIZE="-1">ASCII</font> vertical space control characters are representable by escape sequences which won&#8217;t present such a jarring appearance as your pattern does when displayed. </p>
+<p> Likely you forgot the <code>&quot;/x&quot;</code> modifier or there was a typo in the pattern. For example, did you really mean to match a form-feed? If so, all the ASCII vertical space control characters are representable by escape sequences which won&#8217;t present such a jarring appearance as your pattern does when displayed. </p>
 <pre><code>  \r carriage return
   \f form feed
   \n line feed
@@ -1674,23 +1674,23 @@ description: "perldiag – various Perl diagnostics"
 </code></pre>
  </dd>
 <dt>%s: loadable library and perl binaries are mismatched (got handshake key %p, needed %p)</dt>
-<dd> <p> (P) A dynamic loading library <code>&quot;.so&quot;</code> or <code>&quot;.dll&quot;</code> was being loaded into the process that was built against a different build of perl than the said library was compiled against. Reinstalling the <font SIZE="-1">XS</font> module will likely fix this error. </p>
+<dd> <p> (P) A dynamic loading library <code>&quot;.so&quot;</code> or <code>&quot;.dll&quot;</code> was being loaded into the process that was built against a different build of perl than the said library was compiled against. Reinstalling the XS module will likely fix this error. </p>
  </dd>
 <dt>Locale &#8216;%s&#8217; contains (at least) the following characters which have unexpected meanings: %s The Perl program will use the expected meanings</dt>
-<dd> <p> (W locale) You are using the named <font SIZE="-1">UTF-8</font> locale. <font SIZE="-1">UTF-8</font> locales are expected to have very particular behavior, which most do. This message arises when perl found some departures from the expectations, and is notifying you that the expected behavior overrides these differences. In some cases the differences are caused by the locale definition being defective, but the most common causes of this warning are when there are ambiguities and conflicts in following the Standard, and the locale has chosen an approach that differs from Perl&#8217;s. </p>
+<dd> <p> (W locale) You are using the named UTF-8 locale. UTF-8 locales are expected to have very particular behavior, which most do. This message arises when perl found some departures from the expectations, and is notifying you that the expected behavior overrides these differences. In some cases the differences are caused by the locale definition being defective, but the most common causes of this warning are when there are ambiguities and conflicts in following the Standard, and the locale has chosen an approach that differs from Perl&#8217;s. </p>
 <p> One of these is because that, contrary to the claims, Unicode is not completely locale insensitive. Turkish and some related languages have two types of <code>&quot;I&quot;</code> characters. One is dotted in both upper- and lowercase, and the other is dotless in both cases. Unicode allows a locale to use either the Turkish rules, or the rules used in all other instances, where there is only one type of <code>&quot;I&quot;</code>, which is dotless in the uppercase, and dotted in the lower. The perl core does not (yet) handle the Turkish case, and this message warns you of that. Instead, the Unicode::Casing module allows you to mostly implement the Turkish casing rules. </p>
 <p> The other common cause is for the characters </p>
 <pre><code> $ + &lt; = &gt; ^ ` | ~
 </code></pre>
-<p> These are probematic. The C standard says that these should be considered punctuation in the C locale (and the <font SIZE="-1">POSIX</font> standard defers to the C standard), and Unicode is generally considered a superset of the C locale. But Unicode has added an extra category, ``Symbol&#8217;&#8216;, and classifies these particular characters as being symbols. Most <font SIZE="-1">UTF-8</font> locales have them treated as punctuation, so that <code>ispunct</code>(2) returns non-zero for them. But a few locales have it return 0. Perl takes the first approach, not using <code>&quot;ispunct()&quot;</code> at all (see Note [5] in perlrecharclass), and this message is raised to notify you that you are getting Perl&#8217;s approach, not the locale&#8217;s. </p>
+<p> These are probematic. The C standard says that these should be considered punctuation in the C locale (and the POSIX standard defers to the C standard), and Unicode is generally considered a superset of the C locale. But Unicode has added an extra category, ``Symbol&#8217;&#8216;, and classifies these particular characters as being symbols. Most UTF-8 locales have them treated as punctuation, so that <code>ispunct</code>(2) returns non-zero for them. But a few locales have it return 0. Perl takes the first approach, not using <code>&quot;ispunct()&quot;</code> at all (see Note [5] in perlrecharclass), and this message is raised to notify you that you are getting Perl&#8217;s approach, not the locale&#8217;s. </p>
  </dd>
 <dt>Locale &#8216;%s&#8217; may not work well.%s</dt>
 <dd> <p> (W locale) You are using the named locale, which is a non-UTF-8 one, and which perl has determined is not fully compatible with what it can handle. The second <code>%s</code> gives a reason. </p>
-<p> By far the most common reason is that the locale has characters in it that are represented by more than one byte. The only such locales that Perl can handle are the <font SIZE="-1">UTF-8</font> locales. Most likely the specified locale is a non-UTF-8 one for an East Asian language such as Chinese or Japanese. If the locale is a superset of <font SIZE="-1">ASCII,</font> the <font SIZE="-1">ASCII</font> portion of it may work in Perl. </p>
-<p> Some essentially obsolete locales that aren&#8217;t supersets of <font SIZE="-1">ASCII,</font> mainly those in <font SIZE="-1">ISO 646</font> or other 7-bit locales, such as <font SIZE="-1">ASMO 449,</font> can also have problems, depending on what portions of the <font SIZE="-1">ASCII</font> character set get changed by the locale and are also used by the program. The warning message lists the determinable conflicting characters. </p>
+<p> By far the most common reason is that the locale has characters in it that are represented by more than one byte. The only such locales that Perl can handle are the UTF-8 locales. Most likely the specified locale is a non-UTF-8 one for an East Asian language such as Chinese or Japanese. If the locale is a superset of ASCII, the ASCII portion of it may work in Perl. </p>
+<p> Some essentially obsolete locales that aren&#8217;t supersets of ASCII, mainly those in ISO 646 or other 7-bit locales, such as ASMO 449, can also have problems, depending on what portions of the ASCII character set get changed by the locale and are also used by the program. The warning message lists the determinable conflicting characters. </p>
 <p> Note that not all incompatibilities are found. </p>
-<p> If this happens to you, there&#8217;s not much you can do except switch to use a different locale or use Encode to translate from the locale into <font SIZE="-1">UTF-8</font>; if that&#8217;s impracticable, you have been warned that some things may break. </p>
-<p> This message is output once each time a bad locale is switched into within the scope of <code>&quot;use locale&quot;</code>, or on the first possibly-affected operation if the <code>&quot;use locale&quot;</code> inherits a bad one. It is not raised for any operations from the <font SIZE="-1">POSIX</font> module. </p>
+<p> If this happens to you, there&#8217;s not much you can do except switch to use a different locale or use Encode to translate from the locale into UTF-8; if that&#8217;s impracticable, you have been warned that some things may break. </p>
+<p> This message is output once each time a bad locale is switched into within the scope of <code>&quot;use locale&quot;</code>, or on the first possibly-affected operation if the <code>&quot;use locale&quot;</code> inherits a bad one. It is not raised for any operations from the POSIX module. </p>
  </dd>
 <dt>localtime(%f) failed</dt>
 <dd> <p> (W overflow) You called <code>&quot;localtime&quot;</code> with a number that it could not handle: too large, too small, or NaN. The returned value is <code>&quot;undef&quot;</code>. </p>
@@ -1726,41 +1726,41 @@ description: "perldiag – various Perl diagnostics"
 <dt>Malformed integer in [] in unpack</dt>
 <dd> <p> (F) Between the brackets enclosing a numeric repeat count only digits are permitted. See ``pack&#8217;&#8216; in perlfunc. </p>
  </dd>
-<dt>Malformed <font SIZE="-1">PERLLIB_PREFIX</font></dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">OS/2.</font> <font SIZE="-1">PERLLIB_PREFIX</font> should be of the form </p>
+<dt>Malformed PERLLIB_PREFIX</dt>
+<dd> <p> (F) An error peculiar to OS/2. PERLLIB_PREFIX should be of the form </p>
 <pre><code>    prefix1;prefix2
 </code></pre>
-<p> or <br />
+<p> or <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;prefix1 prefix2 </p>
-<p> with nonempty prefix1 and prefix2. If <code>&quot;prefix1&quot;</code> is indeed a prefix of a builtin library search path, prefix2 is substituted. The error may appear if components are not found, or are too long. See ``<font SIZE="-1">PERLLIB_PREFIX&#8217;&#8216;</font> in perlos2. </p>
+<p> with nonempty prefix1 and prefix2. If <code>&quot;prefix1&quot;</code> is indeed a prefix of a builtin library search path, prefix2 is substituted. The error may appear if components are not found, or are too long. See ``PERLLIB_PREFIX&#8217;&#8216; in perlos2. </p>
  </dd>
 <dt>Malformed prototype for %s: %s</dt>
 <dd> <p> (F) You tried to use a function with a malformed prototype. The syntax of function prototypes is given a brief compile-time check for obvious errors like invalid characters. A more rigorous check is run when the function is called. Perhaps the function&#8217;s author was trying to write a subroutine signature but didn&#8217;t enable that feature first (<code>&quot;use feature &#8216;signatures&#8217;&quot;</code>), so the signature was instead interpreted as a bad prototype. </p>
  </dd>
-<dt>Malformed <font SIZE="-1">UTF-8</font> character%s</dt>
-<dd> <p> (S utf8)(F) Perl detected a string that should be <font SIZE="-1">UTF-8,</font> but didn&#8217;t comply with <font SIZE="-1">UTF-8</font> encoding rules, or represents a code point whose ordinal integer value doesn&#8217;t fit into the word size of the current platform (overflows). Details as to the exact malformation are given in the variable, <code>%s</code>, part of the message. </p>
-<p> One possible cause is that you set the <font SIZE="-1">UTF8</font> flag yourself for data that you thought to be in <font SIZE="-1">UTF-8</font> but it wasn&#8217;t (it was for example legacy 8-bit data). To guard against this, you can use <code>&quot;Encode::decode(&#8216;UTF-8&#8217;, ...)&quot;</code>. </p>
+<dt>Malformed UTF-8 character%s</dt>
+<dd> <p> (S utf8)(F) Perl detected a string that should be UTF-8, but didn&#8217;t comply with UTF-8 encoding rules, or represents a code point whose ordinal integer value doesn&#8217;t fit into the word size of the current platform (overflows). Details as to the exact malformation are given in the variable, <code>%s</code>, part of the message. </p>
+<p> One possible cause is that you set the UTF8 flag yourself for data that you thought to be in UTF-8 but it wasn&#8217;t (it was for example legacy 8-bit data). To guard against this, you can use <code>&quot;Encode::decode(&#8216;UTF-8&#8217;, ...)&quot;</code>. </p>
 <p> If you use the <code>&quot;:encoding(UTF-8)&quot;</code> PerlIO layer for input, invalid byte sequences are handled gracefully, but if you use <code>&quot;:utf8&quot;</code>, the flag is set without validating the data, possibly resulting in this error message. </p>
 <p> See also ``Handling Malformed Data&#8217;&#8216; in Encode. </p>
  </dd>
-<dt>Malformed <font SIZE="-1">UTF-8</font> returned by \N{%s} immediately after &#8216;%s&#8217;</dt>
-<dd> <p> (F) The charnames handler returned malformed <font SIZE="-1">UTF-8.</font> </p>
+<dt>Malformed UTF-8 returned by \N{%s} immediately after &#8216;%s&#8217;</dt>
+<dd> <p> (F) The charnames handler returned malformed UTF-8. </p>
  </dd>
-<dt>Malformed <font SIZE="-1">UTF-8</font> string in &quot;%s&quot;</dt>
-<dd> <p> (F) This message indicates a bug either in the Perl core or in <font SIZE="-1">XS</font> code. Such code was trying to find out if a character, allegedly stored internally encoded as <font SIZE="-1">UTF-8,</font> was of a given type, such as being punctuation or a digit. But the character was not encoded in legal <font SIZE="-1">UTF-8.</font> The <code>%s</code> is replaced by a string that can be used by knowledgeable people to determine what the type being checked against was. </p>
+<dt>Malformed UTF-8 string in &quot;%s&quot;</dt>
+<dd> <p> (F) This message indicates a bug either in the Perl core or in XS code. Such code was trying to find out if a character, allegedly stored internally encoded as UTF-8, was of a given type, such as being punctuation or a digit. But the character was not encoded in legal UTF-8. The <code>%s</code> is replaced by a string that can be used by knowledgeable people to determine what the type being checked against was. </p>
 <p> Passing malformed strings was deprecated in Perl 5.18, and became fatal in Perl 5.26. </p>
  </dd>
-<dt>Malformed <font SIZE="-1">UTF-8</font> string in &#8216;%c&#8217; format in unpack</dt>
-<dd> <p> (F) You tried to unpack something that didn&#8217;t comply with <font SIZE="-1">UTF-8</font> encoding rules and perl was unable to guess how to make more progress. </p>
+<dt>Malformed UTF-8 string in &#8216;%c&#8217; format in unpack</dt>
+<dd> <p> (F) You tried to unpack something that didn&#8217;t comply with UTF-8 encoding rules and perl was unable to guess how to make more progress. </p>
  </dd>
-<dt>Malformed <font SIZE="-1">UTF-8</font> string in pack</dt>
-<dd> <p> (F) You tried to pack something that didn&#8217;t comply with <font SIZE="-1">UTF-8</font> encoding rules and perl was unable to guess how to make more progress. </p>
+<dt>Malformed UTF-8 string in pack</dt>
+<dd> <p> (F) You tried to pack something that didn&#8217;t comply with UTF-8 encoding rules and perl was unable to guess how to make more progress. </p>
  </dd>
-<dt>Malformed <font SIZE="-1">UTF-8</font> string in unpack</dt>
-<dd> <p> (F) You tried to unpack something that didn&#8217;t comply with <font SIZE="-1">UTF-8</font> encoding rules and perl was unable to guess how to make more progress. </p>
+<dt>Malformed UTF-8 string in unpack</dt>
+<dd> <p> (F) You tried to unpack something that didn&#8217;t comply with UTF-8 encoding rules and perl was unable to guess how to make more progress. </p>
  </dd>
-<dt>Malformed <font SIZE="-1">UTF-16</font> surrogate</dt>
-<dd> <p> (F) Perl thought it was reading <font SIZE="-1">UTF-16</font> encoded character data but while doing it Perl met a malformed Unicode surrogate. </p>
+<dt>Malformed UTF-16 surrogate</dt>
+<dd> <p> (F) Perl thought it was reading UTF-16 encoded character data but while doing it Perl met a malformed Unicode surrogate. </p>
  </dd>
 <dt>Mandatory parameter follows optional parameter</dt>
 <dd> <p> (F) In a subroutine signature, you wrote something like ``$a = undef, <code>$b</code>&#8216;&#8216;, making an earlier parameter optional and a later one mandatory. Parameters are filled from left to right, so it&#8217;s impossible for the caller to omit an earlier one and pass a later one. If you want to act as if the parameters are filled from right to left, declare the rightmost optional and then shuffle the parameters around in the subroutine&#8217;s body. </p>
@@ -1835,7 +1835,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (S syntax) This is an educated guess made in conjunction with the message ``%s found where operator expected&#8217;&#8216;. Often the missing operator is a comma. </p>
  </dd>
 <dt>Missing or undefined argument to %s</dt>
-<dd> <p> (F) You tried to call require or do with no argument or with an undefined value as an argument. Require expects either a package name or a file-specification as an argument; do expects a filename. See ``require <font SIZE="-1">EXPR&#8217;&#8216;</font> in perlfunc and ``do <font SIZE="-1">EXPR&#8217;&#8216;</font> in perlfunc. </p>
+<dd> <p> (F) You tried to call require or do with no argument or with an undefined value as an argument. Require expects either a package name or a file-specification as an argument; do expects a filename. See ``require EXPR&#8217;&#8216; in perlfunc and ``do EXPR&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>Missing right brace on \%c{} in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) Missing right brace in <code>&quot;\x{...}&quot;</code>, <code>&quot;\p{...}&quot;</code>, <code>&quot;\P{...}&quot;</code>, or <code>&quot;\N{...}&quot;</code>. </p>
@@ -1860,7 +1860,7 @@ description: "perldiag – various Perl diagnostics"
 <pre><code>    sub mod { $_[0] = 1 }mod(2);
 </code></pre>
 <p> Another way is to assign to a <code>substr()</code> that&#8217;s off the end of the string. </p>
-<p> Yet another way is to assign to a <code>&quot;foreach&quot;</code> loop <i></i><font SIZE="-1"><i>VAR</i></font><i></i> when <i></i><font SIZE="-1"><i>VAR</i></font><i></i> is aliased to a constant in the look <i></i><font SIZE="-1"><i>LIST</i></font><i></i>: </p>
+<p> Yet another way is to assign to a <code>&quot;foreach&quot;</code> loop <i></i><i>VAR</i><i></i> when <i></i><i>VAR</i><i></i> is aliased to a constant in the look <i></i><i>LIST</i><i></i>: </p>
 <pre><code>    $x = 1;
     foreach my $n ($x, 2) {
         $n *= 2; # modifies the $x, but fails on attempt to
@@ -1882,20 +1882,20 @@ description: "perldiag – various Perl diagnostics"
 <dt>More than one argument to &#8216;%s&#8217; open</dt>
 <dd> <p> (F) The <code>&quot;open&quot;</code> function has been asked to open multiple files. This can happen if you are trying to open a pipe to a command that takes a list of arguments, but have forgotten to specify a piped open mode. See ``open&#8217;&#8216; in perlfunc for details. </p>
  </dd>
-<dt>mprotect for <font SIZE="-1">COW</font> string %p %u failed with %d</dt>
-<dd> <p> (S) You compiled perl with <code>-D</code><font SIZE="-1">PERL_DEBUG_READONLY_COW</font> (see ``Copy on Write&#8217;&#8216; in perlguts), but a shared string buffer could not be made read-only. </p>
+<dt>mprotect for COW string %p %u failed with %d</dt>
+<dd> <p> (S) You compiled perl with <code>-D</code>PERL_DEBUG_READONLY_COW (see ``Copy on Write&#8217;&#8216; in perlguts), but a shared string buffer could not be made read-only. </p>
  </dd>
 <dt>mprotect for %p %u failed with %d</dt>
-<dd> <p> (S) You compiled perl with <code>-D</code><font SIZE="-1">PERL_DEBUG_READONLY_OPS</font> (see perlhacktips), but an op tree could not be made read-only. </p>
+<dd> <p> (S) You compiled perl with <code>-D</code>PERL_DEBUG_READONLY_OPS (see perlhacktips), but an op tree could not be made read-only. </p>
  </dd>
-<dt>mprotect <font SIZE="-1">RW</font> for <font SIZE="-1">COW</font> string %p %u failed with %d</dt>
-<dd> <p> (S) You compiled perl with <code>-D</code><font SIZE="-1">PERL_DEBUG_READONLY_COW</font> (see ``Copy on Write&#8217;&#8216; in perlguts), but a read-only shared string buffer could not be made mutable. </p>
+<dt>mprotect RW for COW string %p %u failed with %d</dt>
+<dd> <p> (S) You compiled perl with <code>-D</code>PERL_DEBUG_READONLY_COW (see ``Copy on Write&#8217;&#8216; in perlguts), but a read-only shared string buffer could not be made mutable. </p>
  </dd>
-<dt>mprotect <font SIZE="-1">RW</font> for %p %u failed with %d</dt>
-<dd> <p> (S) You compiled perl with <code>-D</code><font SIZE="-1">PERL_DEBUG_READONLY_OPS</font> (see perlhacktips), but a read-only op tree could not be made mutable before freeing the ops. </p>
+<dt>mprotect RW for %p %u failed with %d</dt>
+<dd> <p> (S) You compiled perl with <code>-D</code>PERL_DEBUG_READONLY_OPS (see perlhacktips), but a read-only op tree could not be made mutable before freeing the ops. </p>
  </dd>
 <dt>msg%s not implemented</dt>
-<dd> <p> (F) You don&#8217;t have System V message <font SIZE="-1">IPC</font> on your system. </p>
+<dd> <p> (F) You don&#8217;t have System V message IPC on your system. </p>
  </dd>
 <dt>Multidimensional syntax %s not supported</dt>
 <dd> <p> (W syntax) Multidimensional arrays aren&#8217;t written like <code>$foo[1,2,3]</code>. They&#8217;re written like <code>$foo[1][2][3]</code>, as in C. </p>
@@ -1926,7 +1926,7 @@ description: "perldiag – various Perl diagnostics"
  </dd>
 <dt>Name &quot;%s::%s&quot; used only once: possible typo</dt>
 <dd> <p> (W once) Typographical errors often show up as unique variable names. If you had a good reason for having a unique name, then just mention it again somehow to suppress the message. The <code>&quot;our&quot;</code> declaration is also provided for this purpose. </p>
-<p> <font SIZE="-1">NOTE:</font> This warning detects package symbols that have been used only once. This means lexical variables will never trigger this warning. It also means that all of the package variables <code>$c</code>, <code>@c</code>, <code>%c</code>, as well as *c, &amp;c, sub c{}, c(), and c (the filehandle or format) are considered the same; if a program uses <code>$c</code> only once but also uses any of the others it will not trigger this warning. Symbols beginning with an underscore and symbols using special identifiers (q.v. perldata) are exempt from this warning. </p>
+<p> NOTE: This warning detects package symbols that have been used only once. This means lexical variables will never trigger this warning. It also means that all of the package variables <code>$c</code>, <code>@c</code>, <code>%c</code>, as well as *c, &amp;c, sub c{}, c(), and c (the filehandle or format) are considered the same; if a program uses <code>$c</code> only once but also uses any of the others it will not trigger this warning. Symbols beginning with an underscore and symbols using special identifiers (q.v. perldata) are exempt from this warning. </p>
  </dd>
 <dt>Need exactly 3 octal digits in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) Within <code>&quot;(?[ ])&quot;</code>, all constants interpreted as octal need to be exactly 3 digits long. This helps catch some ambiguities. If your constant is too short, add leading zeros, like </p>
@@ -1966,7 +1966,7 @@ description: "perldiag – various Perl diagnostics"
 <dt>\N in a character class must be a named character: \N{...} in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) The new (as of Perl 5.12) meaning of <code>&quot;\N&quot;</code> as <code>&quot;[^\n]&quot;</code> is not valid in a bracketed character class, for the same reason that <code>&quot;.&quot;</code> in a character class loses its specialness: it matches almost everything, which is probably not what you want. </p>
  </dd>
-<dt>\N{} in inverted character class or as a range end-point is restricted to one character in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>\N{} in inverted character class or as a range end-point is restricted to one character in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) Named Unicode character escapes (<code>&quot;\N{...}&quot;</code>) may return a multi-character sequence. Even though a character class is supposed to match just one character of input, perl will match the whole thing correctly, except under certain conditions. These currently are </p>
  </dd>
 <dl>
@@ -2002,13 +2002,13 @@ description: "perldiag – various Perl diagnostics"
 <p> One possible cause for this is that you expected to have imported a constant to your name space with <code>use</code> or <code>import</code> while no such importing took place, it may for example be that your operating system does not support that particular constant. Hopefully you did use an explicit import list for the constants you expect to see; please see ``use&#8217;&#8216; in perlfunc and ``import&#8217;&#8216; in perlfunc. While an explicit import list would probably have caught this error earlier it naturally does not remedy the fact that your operating system still does not support that constant. Maybe you have a typo in the constants of the symbol import list of <code>use</code> or <code>import</code> or in the constant name at the line where this error was triggered? </p>
  </dd>
 <dt>No command into which to pipe on command line</dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">VMS.</font> Perl handles its own command line redirection, and found a &#8216;|&#8216; at the end of the command line, so it doesn&#8217;t know where you want to pipe the output from this command. </p>
+<dd> <p> (F) An error peculiar to VMS. Perl handles its own command line redirection, and found a &#8216;|&#8216; at the end of the command line, so it doesn&#8217;t know where you want to pipe the output from this command. </p>
  </dd>
-<dt>No <font SIZE="-1">DB::DB</font> routine defined</dt>
+<dt>No DB::DB routine defined</dt>
 <dd> <p> (F) The currently executing code was compiled with the <code>-d</code> switch, but for some reason the current debugger (e.g. <i>perl5db.pl</i> or a <code>&quot;Devel::&quot;</code> module) didn&#8217;t define a routine to be called at the beginning of each statement. </p>
  </dd>
 <dt>No dbm on this machine</dt>
-<dd> <p> (P) This is counted as an internal error, because every machine should supply dbm nowadays, because Perl comes with <font SIZE="-1">SDBM.</font> See SDBM_File. </p>
+<dd> <p> (P) This is counted as an internal error, because every machine should supply dbm nowadays, because Perl comes with SDBM. See SDBM_File. </p>
  </dd>
 <dt>No DB::sub routine defined</dt>
 <dd> <p> (F) The currently executing code was compiled with the <code>-d</code> switch, but for some reason the current debugger (e.g. <i>perl5db.pl</i> or a <code>&quot;Devel::&quot;</code> module) didn&#8217;t define a <code>&quot;DB::sub&quot;</code> routine to be called at the beginning of each ordinary subroutine call. </p>
@@ -2017,16 +2017,16 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) The <code>-I</code> command-line switch requires a directory name as part of the <i>same</i> argument. Use <code>-Ilib</code>, for instance. <code>-I lib</code> won&#8217;t work. </p>
  </dd>
 <dt>No error file after 2&gt; or 2&gt;&gt; on command line</dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">VMS.</font> Perl handles its own command line redirection, and found a &#8216;2&gt;&#8216; or a &#8216;2&gt;&gt;&#8216; on the command line, but can&#8217;t find the name of the file to which to write data destined for stderr. </p>
+<dd> <p> (F) An error peculiar to VMS. Perl handles its own command line redirection, and found a &#8216;2&gt;&#8216; or a &#8216;2&gt;&gt;&#8216; on the command line, but can&#8217;t find the name of the file to which to write data destined for stderr. </p>
  </dd>
 <dt>No group ending character &#8216;%c&#8217; found in template</dt>
 <dd> <p> (F) A pack or unpack template has an opening &#8216;(&#8216; or &#8216;[&#8216; without its matching counterpart. See ``pack&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>No input file after &lt; on command line</dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">VMS.</font> Perl handles its own command line redirection, and found a &#8216;&lt;&#8216; on the command line, but can&#8217;t find the name of the file from which to read data for stdin. </p>
+<dd> <p> (F) An error peculiar to VMS. Perl handles its own command line redirection, and found a &#8216;&lt;&#8216; on the command line, but can&#8217;t find the name of the file from which to read data for stdin. </p>
  </dd>
 <dt>No next::method &#8216;%s&#8217; found for %s</dt>
-<dd> <p> (F) <code>&quot;next::method&quot;</code> found no further instances of this method name in the remaining packages of the <font SIZE="-1">MRO</font> of this class. If you don&#8217;t want it throwing an exception, use <code>&quot;maybe::next::method&quot;</code> or <code>&quot;next::can&quot;</code>. See mro. </p>
+<dd> <p> (F) <code>&quot;next::method&quot;</code> found no further instances of this method name in the remaining packages of the MRO of this class. If you don&#8217;t want it throwing an exception, use <code>&quot;maybe::next::method&quot;</code> or <code>&quot;next::can&quot;</code>. See mro. </p>
  </dd>
 <dt>Non-finite repeat count does nothing</dt>
 <dd> <p> (W numeric) You tried to execute the <code>&quot;x&quot;</code> repetition operator <code>&quot;Inf&quot;</code> (or <code>&quot;-Inf&quot;</code>) or <code>&quot;NaN&quot;</code> times, which doesn&#8217;t make sense. </p>
@@ -2052,10 +2052,10 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W misc) A number has been passed as a bitmask argument to <code>select()</code>. Use the <code>vec()</code> function to construct the file descriptor bitmasks for select. See ``select&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>No output file after &gt; on command line</dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">VMS.</font> Perl handles its own command line redirection, and found a lone &#8216;&gt;&#8216; at the end of the command line, so it doesn&#8217;t know where you wanted to redirect stdout. </p>
+<dd> <p> (F) An error peculiar to VMS. Perl handles its own command line redirection, and found a lone &#8216;&gt;&#8216; at the end of the command line, so it doesn&#8217;t know where you wanted to redirect stdout. </p>
  </dd>
 <dt>No output file after &gt; or &gt;&gt; on command line</dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">VMS.</font> Perl handles its own command line redirection, and found a &#8216;&gt;&#8216; or a &#8216;&gt;&gt;&#8216; on the command line, but can&#8217;t find the name of the file to which to write data destined for stdout. </p>
+<dd> <p> (F) An error peculiar to VMS. Perl handles its own command line redirection, and found a &#8216;&gt;&#8216; or a &#8216;&gt;&gt;&#8216; on the command line, but can&#8217;t find the name of the file to which to write data destined for stdout. </p>
  </dd>
 <dt>No package name allowed for subroutine %s in &quot;our&quot;</dt>
 <dd>  </dd>
@@ -2081,7 +2081,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You specified a signal hook that was not recognized by Perl. Currently, Perl accepts <code>&quot;__DIE__&quot;</code> and <code>&quot;__WARN__&quot;</code> as valid signal hooks. </p>
  </dd>
 <dt>No such pipe open</dt>
-<dd> <p> (P) An error peculiar to <font SIZE="-1">VMS.</font> The internal routine <code>my_pclose()</code> tried to close a pipe which hadn&#8217;t been opened. This should have been caught earlier as an attempt to close an unopened filehandle. </p>
+<dd> <p> (P) An error peculiar to VMS. The internal routine <code>my_pclose()</code> tried to close a pipe which hadn&#8217;t been opened. This should have been caught earlier as an attempt to close an unopened filehandle. </p>
  </dd>
 <dt>No such signal: SIG%s</dt>
 <dd> <p> (W signal) You specified a signal name as a subscript to <code>%SIG</code> that was not recognized. Say <code>&quot;kill -l&quot;</code> in your shell to see the valid signal names on your system. </p>
@@ -2089,13 +2089,13 @@ description: "perldiag – various Perl diagnostics"
 <dt>No Unicode property value wildcard matches:</dt>
 <dd> <p> (W regexp) You specified a wildcard for a Unicode property value, but there is no property value in the current Unicode release that matches it. Check your spelling. </p>
  </dd>
-<dt>Not a <font SIZE="-1">CODE</font> reference</dt>
+<dt>Not a CODE reference</dt>
 <dd> <p> (F) Perl was trying to evaluate a reference to a code value (that is, a subroutine), but found a reference to something else instead. You can use the <code>ref()</code> function to find out what kind of ref it really was. See also perlref. </p>
  </dd>
-<dt>Not a <font SIZE="-1">GLOB</font> reference</dt>
+<dt>Not a GLOB reference</dt>
 <dd> <p> (F) Perl was trying to evaluate a reference to a ``typeglob&#8217;&#8216; (that is, a symbol table entry that looks like <code>*foo</code>), but found a reference to something else instead. You can use the <code>ref()</code> function to find out what kind of ref it really was. See perlref. </p>
  </dd>
-<dt>Not a <font SIZE="-1">HASH</font> reference</dt>
+<dt>Not a HASH reference</dt>
 <dd> <p> (F) Perl was trying to evaluate a reference to a hash value, but found a reference to something else instead. You can use the <code>ref()</code> function to find out what kind of ref it really was. See perlref. </p>
  </dd>
 <dt>&#8216;#&#8216; not allowed immediately following a sigil in a subroutine signature</dt>
@@ -2108,10 +2108,10 @@ description: "perldiag – various Perl diagnostics"
            $b) {}
 </code></pre>
  </dd>
-<dt>Not an <font SIZE="-1">ARRAY</font> reference</dt>
+<dt>Not an ARRAY reference</dt>
 <dd> <p> (F) Perl was trying to evaluate a reference to an array value, but found a reference to something else instead. You can use the <code>ref()</code> function to find out what kind of ref it really was. See perlref. </p>
  </dd>
-<dt>Not a <font SIZE="-1">SCALAR</font> reference</dt>
+<dt>Not a SCALAR reference</dt>
 <dd> <p> (F) Perl was trying to evaluate a reference to a scalar value, but found a reference to something else instead. You can use the <code>ref()</code> function to find out what kind of ref it really was. See perlref. </p>
  </dd>
 <dt>Not a subroutine reference</dt>
@@ -2129,22 +2129,22 @@ description: "perldiag – various Perl diagnostics"
 <dt>%s: not found</dt>
 <dd> <p> (A) You&#8217;ve accidentally run your script through the Bourne shell instead of Perl. Check the #! line, or manually feed your script into Perl yourself. </p>
  </dd>
-<dt>no <font SIZE="-1">UTC</font> offset information; assuming local time is <font SIZE="-1">UTC</font></dt>
-<dd> <p> (S) A warning peculiar to <font SIZE="-1">VMS.</font> Perl was unable to find the local timezone offset, so it&#8217;s assuming that local system time is equivalent to <font SIZE="-1">UTC.</font> If it&#8217;s not, define the logical name <i></i><font SIZE="-1"><i>SYS$TIMEZONE_DIFFERENTIAL</i></font><i></i> to translate to the number of seconds which need to be added to <font SIZE="-1">UTC</font> to get local time. </p>
+<dt>no UTC offset information; assuming local time is UTC</dt>
+<dd> <p> (S) A warning peculiar to VMS. Perl was unable to find the local timezone offset, so it&#8217;s assuming that local system time is equivalent to UTC. If it&#8217;s not, define the logical name <i></i><i>SYS$TIMEZONE_DIFFERENTIAL</i><i></i> to translate to the number of seconds which need to be added to UTC to get local time. </p>
  </dd>
-<dt><font SIZE="-1">NULL OP IN RUN</font></dt>
+<dt>NULL OP IN RUN</dt>
 <dd> <p> (S debugging) Some internal routine called <code>run()</code> with a null opcode pointer. </p>
  </dd>
 <dt>Null picture in formline</dt>
 <dd> <p> (F) The first argument to formline must be a valid format picture specification. It was found to be empty, which probably means you supplied it an uninitialized value. See perlform. </p>
  </dd>
 <dt>Null realloc</dt>
-<dd> <p> (P) An attempt was made to realloc <font SIZE="-1">NULL.</font> </p>
+<dd> <p> (P) An attempt was made to realloc NULL. </p>
  </dd>
-<dt><font SIZE="-1">NULL</font> regexp argument</dt>
+<dt>NULL regexp argument</dt>
 <dd> <p> (P) The internal pattern matching routines blew it big time. </p>
  </dd>
-<dt><font SIZE="-1">NULL</font> regexp parameter</dt>
+<dt>NULL regexp parameter</dt>
 <dd> <p> (P) The internal pattern matching routines are out of their gourd. </p>
  </dd>
 <dt>Number too long</dt>
@@ -2201,8 +2201,8 @@ description: "perldiag – various Perl diagnostics"
 <p> If the operation shown is ``ToFold&#8217;&#8216;, it means that case-insensitive matching in a regular expression was done on the code point. </p>
 <p> If you know what you are doing you can turn off this warning by <code>&quot;no warnings &#8216;non_unicode&#8217;;&quot;</code>. </p>
  </dd>
-<dt>Operation &quot;%s&quot; returns its argument for <font SIZE="-1">UTF-16</font> surrogate U+%X</dt>
-<dd> <p> (S surrogate) You performed an operation requiring Unicode rules on a Unicode surrogate. Unicode frowns upon the use of surrogates for anything but storing strings in <font SIZE="-1">UTF-16,</font> but rules are (reluctantly) defined for the surrogates, and they are to do nothing for this operation. Because the use of surrogates can be dangerous, Perl warns. </p>
+<dt>Operation &quot;%s&quot; returns its argument for UTF-16 surrogate U+%X</dt>
+<dd> <p> (S surrogate) You performed an operation requiring Unicode rules on a Unicode surrogate. Unicode frowns upon the use of surrogates for anything but storing strings in UTF-16, but rules are (reluctantly) defined for the surrogates, and they are to do nothing for this operation. Because the use of surrogates can be dangerous, Perl warns. </p>
 <p> If the operation shown is ``ToFold&#8217;&#8216;, it means that case-insensitive matching in a regular expression was done on the code point. </p>
 <p> If you know what you are doing you can turn off this warning by <code>&quot;no warnings &#8216;surrogate&#8217;;&quot;</code>. </p>
  </dd>
@@ -2241,8 +2241,8 @@ description: "perldiag – various Perl diagnostics"
 <dt>&#8216;@&#8216; outside of string in unpack</dt>
 <dd> <p> (F) You had a template that specified an absolute position outside the string being unpacked. See ``pack&#8217;&#8216; in perlfunc. </p>
  </dd>
-<dt>&#8216;@&#8216; outside of string with malformed <font SIZE="-1">UTF-8</font> in unpack</dt>
-<dd> <p> (F) You had a template that specified an absolute position outside the string being unpacked. The string being unpacked was also invalid <font SIZE="-1">UTF-8.</font> See ``pack&#8217;&#8216; in perlfunc. </p>
+<dt>&#8216;@&#8216; outside of string with malformed UTF-8 in unpack</dt>
+<dd> <p> (F) You had a template that specified an absolute position outside the string being unpacked. The string being unpacked was also invalid UTF-8. See ``pack&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>overload arg &#8216;%s&#8217; is invalid</dt>
 <dd> <p> (W overload) The overload pragma was passed an argument it did not recognize. Did you mistype an operator? </p>
@@ -2250,7 +2250,7 @@ description: "perldiag – various Perl diagnostics"
 <dt>Overloaded dereference did not return a reference</dt>
 <dd> <p> (F) An object with an overloaded dereference operator was dereferenced, but the overloaded operation did not return a reference. See overload. </p>
  </dd>
-<dt>Overloaded qr did not return a <font SIZE="-1">REGEXP</font></dt>
+<dt>Overloaded qr did not return a REGEXP</dt>
 <dd> <p> (F) An object with a <code>&quot;qr&quot;</code> overload was used as part of a match, but the overloaded operation didn&#8217;t return a compiled regexp. See overload. </p>
  </dd>
 <dt>%s package attribute may clash with future reserved word: %s</dt>
@@ -2266,7 +2266,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (P) An internal error. </p>
  </dd>
 <dt>panic: attempt to call %s in %s</dt>
-<dd> <p> (P) One of the file test operators entered a code branch that calls an <font SIZE="-1">ACL</font> related-function, but that function is not available on this platform. Earlier checks mean that it should not be possible to enter this branch on this platform. </p>
+<dd> <p> (P) One of the file test operators entered a code branch that calls an ACL related-function, but that function is not available on this platform. Earlier checks mean that it should not be possible to enter this branch on this platform. </p>
  </dd>
 <dt>panic: child pseudo-process was never scheduled</dt>
 <dd> <p> (P) A child pseudo-process in the ithreads implementation on Windows was not scheduled within the time period allowed and therefore was not able to initialize properly. </p>
@@ -2286,7 +2286,7 @@ description: "perldiag – various Perl diagnostics"
 <dt>panic: do_trans_%s</dt>
 <dd> <p> (P) The internal do_trans routines were called with invalid operational data. </p>
  </dd>
-<dt>panic: fold_constants <font SIZE="-1">JMPENV_PUSH</font> returned %d</dt>
+<dt>panic: fold_constants JMPENV_PUSH returned %d</dt>
 <dd> <p> (P) While attempting folding constants an exception other than an <code>&quot;eval&quot;</code> failure was caught. </p>
  </dd>
 <dt>panic: frexp: %f</dt>
@@ -2298,10 +2298,10 @@ description: "perldiag – various Perl diagnostics"
 <dt>panic: gp_free failed to free glob pointer</dt>
 <dd> <p> (P) The internal routine used to clear a typeglob&#8217;s entries tried repeatedly, but each time something re-created entries in the glob. Most likely the glob contains an object with a reference back to the glob and a destructor that adds a new object to the glob. </p>
  </dd>
-<dt>panic: <font SIZE="-1">INTERPCASEMOD,</font> %s</dt>
+<dt>panic: INTERPCASEMOD, %s</dt>
 <dd> <p> (P) The lexer got into a bad state at a case modifier. </p>
  </dd>
-<dt>panic: <font SIZE="-1">INTERPCONCAT,</font> %s</dt>
+<dt>panic: INTERPCONCAT, %s</dt>
 <dd> <p> (P) The lexer got into a bad state parsing a string with brackets. </p>
  </dd>
 <dt>panic: kid popen errno read</dt>
@@ -2356,7 +2356,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (P) Something requested a negative number of bytes of realloc. </p>
  </dd>
 <dt>panic: reference miscount on nsv in <code>sv_replace()</code> (%d != 1)</dt>
-<dd> <p> (P) The internal <code>sv_replace()</code> function was handed a new <font SIZE="-1">SV</font> with a reference count other than 1. </p>
+<dd> <p> (P) The internal <code>sv_replace()</code> function was handed a new SV with a reference count other than 1. </p>
  </dd>
 <dt>panic: restartop in %s</dt>
 <dd> <p> (P) Some internal routine requested a goto (or something like it), and didn&#8217;t supply the destination. </p>
@@ -2407,16 +2407,16 @@ description: "perldiag – various Perl diagnostics"
 <p> Remember that ``my&#8217;&#8216;, ``our&#8217;&#8216;, ``local&#8217;&#8216; and ``state&#8217;&#8216; bind tighter than comma. </p>
  </dd>
 <dt>Parsing code internal error (%s)</dt>
-<dd> <p> (F) Parsing code supplied by an extension violated the parser&#8217;s <font SIZE="-1">API</font> in a detectable way. </p>
+<dd> <p> (F) Parsing code supplied by an extension violated the parser&#8217;s API in a detectable way. </p>
  </dd>
 <dt>Pattern subroutine nesting without pos change exceeded limit in regex</dt>
 <dd> <p> (F) You used a pattern that uses too many nested subpattern calls without consuming any text. Restructure the pattern so text is consumed before the nesting limit is exceeded. </p>
  </dd>
 <dt>&quot;-p&quot; destination: %s</dt>
-<dd> <p> (F) An error occurred during the implicit output invoked by the <code>&quot;-p&quot;</code> command-line switch. (This output goes to <font SIZE="-1">STDOUT</font> unless you&#8217;ve redirected it with <code>select()</code>.) </p>
+<dd> <p> (F) An error occurred during the implicit output invoked by the <code>&quot;-p&quot;</code> command-line switch. (This output goes to STDOUT unless you&#8217;ve redirected it with <code>select()</code>.) </p>
  </dd>
-<dt>Perl <font SIZE="-1">API</font> version %s of %s does not match %s</dt>
-<dd> <p> (F) The <font SIZE="-1">XS</font> module in question was compiled against a different incompatible version of Perl than the one that has loaded the <font SIZE="-1">XS</font> module. </p>
+<dt>Perl API version %s of %s does not match %s</dt>
+<dd> <p> (F) The XS module in question was compiled against a different incompatible version of Perl than the one that has loaded the XS module. </p>
  </dd>
 <dt>Perl folding rules are not up-to-date for 0x%X; please use the perlbug utility to report; in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (S regexp) You used a regular expression with case-insensitive matching, and there is a bug in Perl in which the built-in regular expression folding rules are not accurate. This may lead to incorrect results. Please report this as a bug using the perlbug utility. </p>
@@ -2435,17 +2435,17 @@ description: "perldiag – various Perl diagnostics"
 <dt>Perl %s required---this is only %s, stopped</dt>
 <dd> <p> (F) The module in question uses features of a version of Perl more recent than the currently running version. How long has it been since you upgraded, anyway? See ``require&#8217;&#8216; in perlfunc. </p>
  </dd>
-<dt><font SIZE="-1">PERL_SH_DIR</font> too long</dt>
-<dd> <p> (F) An error peculiar to <font SIZE="-1">OS/2.</font> <font SIZE="-1">PERL_SH_DIR</font> is the directory to find the <code>&quot;sh&quot;</code>-shell in. See ``<font SIZE="-1">PERL_SH_DIR&#8217;&#8216;</font> in perlos2. </p>
+<dt>PERL_SH_DIR too long</dt>
+<dd> <p> (F) An error peculiar to OS/2. PERL_SH_DIR is the directory to find the <code>&quot;sh&quot;</code>-shell in. See ``PERL_SH_DIR&#8217;&#8216; in perlos2. </p>
  </dd>
-<dt><font SIZE="-1">PERL_SIGNALS</font> illegal: &quot;%s&quot;</dt>
-<dd> <p> (X) See ``<font SIZE="-1">PERL_SIGNALS&#8217;&#8216;</font> in perlrun for legal values. </p>
+<dt>PERL_SIGNALS illegal: &quot;%s&quot;</dt>
+<dd> <p> (X) See ``PERL_SIGNALS&#8217;&#8216; in perlrun for legal values. </p>
  </dd>
 <dt>Perls since %s too modern---this is %s, stopped</dt>
 <dd> <p> (F) The code you are trying to run claims it will not run on the version of Perl you are using because it is too new. Maybe the code needs to be updated, or maybe it is simply wrong and the version check should just be removed. </p>
  </dd>
-<dt>perl: warning: Non hex character in &#8216;$ENV{<font SIZE="-1">PERL_HASH_SEED</font>}&#8216;, seed only partially set</dt>
-<dd> <p> (S) <font SIZE="-1">PERL_HASH_SEED</font> should match /^\s*(?:0x)?[0-9a-fA-F]+\s*\z/ but it contained a non hex character. This could mean you are not using the hash seed you think you are. </p>
+<dt>perl: warning: Non hex character in &#8216;$ENV{PERL_HASH_SEED}&#8216;, seed only partially set</dt>
+<dd> <p> (S) PERL_HASH_SEED should match /^\s*(?:0x)?[0-9a-fA-F]+\s*\z/ but it contained a non hex character. This could mean you are not using the hash seed you think you are. </p>
  </dd>
 <dt>perl: warning: Setting locale failed.</dt>
 <dd> <p> (S) The whole warning message will look something like: </p>
@@ -2456,10 +2456,10 @@ description: "perldiag – various Perl diagnostics"
             are supported and installed on your system.
         perl: warning: Falling back to the standard locale (&quot;C&quot;).
 </code></pre>
-<p> Exactly what were the failed locale settings varies. In the above the settings were that the <font SIZE="-1">LC_ALL</font> was ``En_US&#8217;&#8216; and the <font SIZE="-1">LANG</font> had no value. This error means that Perl detected that you and/or your operating system supplier and/or system administrator have set up the so-called locale system but Perl could not use those settings. This was not dead serious, fortunately: there is a ``default locale&#8217;&#8216; called ``C&#8217;&#8216; that Perl can and will use, and the script will be run. Before you really fix the problem, however, you will get the same error message each time you run Perl. How to really fix the problem can be found in perllocale section <font SIZE="-1"><code>LOCALE PROBLEMS</code></font>. </p>
+<p> Exactly what were the failed locale settings varies. In the above the settings were that the LC_ALL was ``En_US&#8217;&#8216; and the LANG had no value. This error means that Perl detected that you and/or your operating system supplier and/or system administrator have set up the so-called locale system but Perl could not use those settings. This was not dead serious, fortunately: there is a ``default locale&#8217;&#8216; called ``C&#8217;&#8216; that Perl can and will use, and the script will be run. Before you really fix the problem, however, you will get the same error message each time you run Perl. How to really fix the problem can be found in perllocale section <code>LOCALE PROBLEMS</code>. </p>
  </dd>
-<dt>perl: warning: strange setting in &#8216;$ENV{<font SIZE="-1">PERL_PERTURB_KEYS</font>}&#8216;: &#8216;%s&#8217;</dt>
-<dd> <p> (S) Perl was run with the environment variable <font SIZE="-1">PERL_PERTURB_KEYS</font> defined but containing an unexpected value. The legal values of this setting are as follows. </p>
+<dt>perl: warning: strange setting in &#8216;$ENV{PERL_PERTURB_KEYS}&#8216;: &#8216;%s&#8217;</dt>
+<dd> <p> (S) Perl was run with the environment variable PERL_PERTURB_KEYS defined but containing an unexpected value. The legal values of this setting are as follows. </p>
 <pre><code>  Numeric | String | Result
   --------+---------------+-----------------------------------------
   0 | NO | Disables key traversal randomization
@@ -2467,29 +2467,29 @@ description: "perldiag – various Perl diagnostics"
   2 | DETERMINISTIC | Enables repeatable key traversal
           | | randomization
 </code></pre>
-<p> Both numeric and string values are accepted, but note that string values are case sensitive. The default for this setting is ``<font SIZE="-1">RANDOM&#8217;&#8216;</font> or 1. </p>
+<p> Both numeric and string values are accepted, but note that string values are case sensitive. The default for this setting is ``RANDOM&#8217;&#8216; or 1. </p>
  </dd>
 <dt>pid %x not a child</dt>
-<dd> <p> (W exec) A warning peculiar to <font SIZE="-1">VMS.</font> <code>Waitpid()</code> was asked to wait for a process which isn&#8217;t a subprocess of the current process. While this is fine from <font SIZE="-1">VMS</font>&#8216; perspective, it&#8217;s probably not what you intended. </p>
+<dd> <p> (W exec) A warning peculiar to VMS. <code>Waitpid()</code> was asked to wait for a process which isn&#8217;t a subprocess of the current process. While this is fine from VMS&#8216; perspective, it&#8217;s probably not what you intended. </p>
  </dd>
 <dt>&#8216;P&#8217; must have an explicit size in unpack</dt>
 <dd> <p> (F) The unpack format P must have an explicit size, not ``*&#8216;&#8216;. </p>
  </dd>
-<dt><font SIZE="-1">POSIX</font> class [:%s:] unknown in regex; marked by &lt;-- HERE in m/%s/</dt>
-<dd> <p> (F) The class in the character class [: :] syntax is unknown. The &lt;-- HERE shows whereabouts in the regular expression the problem was discovered. Note that the <font SIZE="-1">POSIX</font> character classes do <code>not</code> have the <code>&quot;is&quot;</code> prefix the corresponding C interfaces have: in other words, it&#8217;s <code>&quot;[[:print:]]&quot;</code>, not <code>&quot;isprint&quot;</code>. See perlre. </p>
+<dt>POSIX class [:%s:] unknown in regex; marked by &lt;-- HERE in m/%s/</dt>
+<dd> <p> (F) The class in the character class [: :] syntax is unknown. The &lt;-- HERE shows whereabouts in the regular expression the problem was discovered. Note that the POSIX character classes do <code>not</code> have the <code>&quot;is&quot;</code> prefix the corresponding C interfaces have: in other words, it&#8217;s <code>&quot;[[:print:]]&quot;</code>, not <code>&quot;isprint&quot;</code>. See perlre. </p>
  </dd>
-<dt><font SIZE="-1">POSIX</font> getpgrp can&#8217;t take an argument</dt>
-<dd> <p> (F) Your system has <font SIZE="-1">POSIX</font> <code>getpgrp()</code>, which takes no argument, unlike the <font SIZE="-1">BSD</font> version, which takes a pid. </p>
+<dt>POSIX getpgrp can&#8217;t take an argument</dt>
+<dd> <p> (F) Your system has POSIX <code>getpgrp()</code>, which takes no argument, unlike the BSD version, which takes a pid. </p>
  </dd>
-<dt><font SIZE="-1">POSIX</font> syntax [%c %c] belongs inside character classes%s in regex; marked by &lt;-- HERE in m/%s/</dt>
-<dd> <p> (W regexp) Perl thinks that you intended to write a <font SIZE="-1">POSIX</font> character class, but didn&#8217;t use enough brackets. These <font SIZE="-1">POSIX</font> class constructs [: :], [= =], and [. .] go <i>inside</i> character classes, the [] are part of the construct, for example: <code>&quot;qr/[012[:alpha:]345]/&quot;</code>. What the regular expression pattern compiled to is probably not what you were intending. For example, <code>&quot;qr/[:alpha:]/&quot;</code> compiles to a regular bracketed character class consisting of the four characters <code>&quot;:&quot;</code>, <code>&quot;a&quot;</code>, <code>&quot;l&quot;</code>, <code>&quot;h&quot;</code>, and <code>&quot;p&quot;</code>. To specify the <font SIZE="-1">POSIX</font> class, it should have been written <code>&quot;qr/[[:alpha:]]/&quot;</code>. </p>
+<dt>POSIX syntax [%c %c] belongs inside character classes%s in regex; marked by &lt;-- HERE in m/%s/</dt>
+<dd> <p> (W regexp) Perl thinks that you intended to write a POSIX character class, but didn&#8217;t use enough brackets. These POSIX class constructs [: :], [= =], and [. .] go <i>inside</i> character classes, the [] are part of the construct, for example: <code>&quot;qr/[012[:alpha:]345]/&quot;</code>. What the regular expression pattern compiled to is probably not what you were intending. For example, <code>&quot;qr/[:alpha:]/&quot;</code> compiles to a regular bracketed character class consisting of the four characters <code>&quot;:&quot;</code>, <code>&quot;a&quot;</code>, <code>&quot;l&quot;</code>, <code>&quot;h&quot;</code>, and <code>&quot;p&quot;</code>. To specify the POSIX class, it should have been written <code>&quot;qr/[[:alpha:]]/&quot;</code>. </p>
 <p> Note that [= =] and [. .] are not currently implemented; they are simply placeholders for future extensions and will cause fatal errors. The &lt;-- HERE shows whereabouts in the regular expression the problem was discovered. See perlre. </p>
 <p> If the specification of the class was not completely valid, the message indicates that. </p>
  </dd>
-<dt><font SIZE="-1">POSIX</font> syntax [. .] is reserved for future extensions in regex; marked by &lt;-- HERE in m/%s/</dt>
+<dt>POSIX syntax [. .] is reserved for future extensions in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) Within regular expression character classes ([]) the syntax beginning with ``[.&#8216;&#8216; and ending with ``.]&#8216;&#8216; is reserved for future extensions. If you need to represent those character sequences inside a regular expression character class, just quote the square brackets with the backslash: ``\[.&#8216;&#8216; and ``.\]&#8216;&#8216;. The &lt;-- HERE shows whereabouts in the regular expression the problem was discovered. See perlre. </p>
  </dd>
-<dt><font SIZE="-1">POSIX</font> syntax [= =] is reserved for future extensions in regex; marked by &lt;-- HERE in m/%s/</dt>
+<dt>POSIX syntax [= =] is reserved for future extensions in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) Within regular expression character classes ([]) the syntax beginning with ``[=&#8216;&#8216; and ending with ``=]&#8216;&#8216; is reserved for future extensions. If you need to represent those character sequences inside a regular expression character class, just quote the square brackets with the backslash: ``\[=&#8216;&#8216; and ``=\]&#8216;&#8216;. The &lt;-- HERE shows whereabouts in the regular expression the problem was discovered. See perlre. </p>
  </dd>
 <dt>Possible attempt to put comments in <code>qw()</code> list</dt>
@@ -2573,7 +2573,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W closed) The filehandle you&#8217;re printing on got itself closed sometime before now. Check your control flow. </p>
  </dd>
 <dt>Process terminated by SIG%s</dt>
-<dd> <p> (W) This is a standard message issued by <font SIZE="-1">OS/2</font> applications, while *nix applications die in silence. It is considered a feature of the <font SIZE="-1">OS/2</font> port. One can easily disable this by appropriate sighandlers, see ``Signals&#8217;&#8216; in perlipc. See also ``Process terminated by <font SIZE="-1">SIGTERM/SIGINT&#8217;&#8216;</font> in perlos2. </p>
+<dd> <p> (W) This is a standard message issued by OS/2 applications, while *nix applications die in silence. It is considered a feature of the OS/2 port. One can easily disable this by appropriate sighandlers, see ``Signals&#8217;&#8216; in perlipc. See also ``Process terminated by SIGTERM/SIGINT&#8217;&#8216; in perlos2. </p>
  </dd>
 <dt>Prototype after &#8216;%c&#8217; for %s : %s</dt>
 <dd> <p> (W illegalproto) A character follows % or @ in a prototype. This is useless, since % and @ gobble the rest of the subroutine arguments. </p>
@@ -2604,9 +2604,9 @@ description: "perldiag – various Perl diagnostics"
 <dt>Range iterator outside integer range</dt>
 <dd> <p> (F) One (or both) of the numeric arguments to the range operator ``..&#8216;&#8216; are outside the range which can be represented by integers internally. One possible workaround is to force Perl to use magical string increment by prepending ``0&#8217;&#8216; to your numbers. </p>
  </dd>
-<dt>Ranges of <font SIZE="-1">ASCII</font> printables should be some subset of &quot;0-9&quot;, &quot;A-Z&quot;, or &quot;a-z&quot; in regex; marked by &lt;-- HERE in m/%s/</dt>
+<dt>Ranges of ASCII printables should be some subset of &quot;0-9&quot;, &quot;A-Z&quot;, or &quot;a-z&quot; in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (W regexp) (only under <code>&quot;use re &#8216;strict&#8217;&quot;</code> or within <code>&quot;(?[...])&quot;</code>) </p>
-<p> Stricter rules help to find typos and other errors. Perhaps you didn&#8217;t even intend a range here, if the <code>&quot;-&quot;</code> was meant to be some other character, or should have been escaped (like <code>&quot;\-&quot;</code>). If you did intend a range, the one that was used is not portable between <font SIZE="-1">ASCII</font> and <font SIZE="-1">EBCDIC</font> platforms, and doesn&#8217;t have an obvious meaning to a casual reader. </p>
+<p> Stricter rules help to find typos and other errors. Perhaps you didn&#8217;t even intend a range here, if the <code>&quot;-&quot;</code> was meant to be some other character, or should have been escaped (like <code>&quot;\-&quot;</code>). If you did intend a range, the one that was used is not portable between ASCII and EBCDIC platforms, and doesn&#8217;t have an obvious meaning to a casual reader. </p>
 <pre><code> [3-7] # OK; Obvious and portable
  [d-g] # OK; Obvious and portable
  [A-Y] # OK; Obvious and portable
@@ -2615,7 +2615,7 @@ description: "perldiag – various Perl diagnostics"
  [%-.] # WRONG; Not portable; not clear what is meant
  [\x41-Z] # WRONG; Not portable; not obvious to non-geek
 </code></pre>
-<p> (You can force portability by specifying a Unicode range, which means that the endpoints are specified by <code>&quot;\N{...}&quot;</code>, but the meaning may still not be obvious.) The stricter rules require that ranges that start or stop with an <font SIZE="-1">ASCII</font> character that is not a control have all their endpoints be the literal character, and not some escape sequence (like <code>&quot;\x41&quot;</code>), and the ranges must be all digits, or all uppercase letters, or all lowercase letters. </p>
+<p> (You can force portability by specifying a Unicode range, which means that the endpoints are specified by <code>&quot;\N{...}&quot;</code>, but the meaning may still not be obvious.) The stricter rules require that ranges that start or stop with an ASCII character that is not a control have all their endpoints be the literal character, and not some escape sequence (like <code>&quot;\x41&quot;</code>), and the ranges must be all digits, or all uppercase letters, or all lowercase letters. </p>
  </dd>
 <dt>Ranges of digits should be from the same group in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (W regexp) (only under <code>&quot;use re &#8216;strict&#8217;&quot;</code> or within <code>&quot;(?[...])&quot;</code>) </p>
@@ -2639,14 +2639,14 @@ description: "perldiag – various Perl diagnostics"
 <dt><code>realloc()</code> of freed memory ignored</dt>
 <dd> <p> (S malloc) An internal routine called <code>realloc()</code> on something that had already been freed. </p>
  </dd>
-<dt>Recompile perl with <code>-D</code><font SIZE="-1">DEBUGGING</font> to use <code>-D</code> switch</dt>
+<dt>Recompile perl with <code>-D</code>DEBUGGING to use <code>-D</code> switch</dt>
 <dd> <p> (S debugging) You can&#8217;t use the <code>-D</code> option unless the code to produce the desired output is compiled into Perl, which entails some overhead, which is why it&#8217;s currently left out of your copy. </p>
  </dd>
 <dt>Recursive call to Perl_load_module in PerlIO_find_layer</dt>
 <dd> <p> (P) It is currently not permitted to load modules when creating a filehandle inside an <code>%INC</code> hook. This can happen with <code>&quot;open my $fh, &#8216;&lt;&#8216;, \$scalar&quot;</code>, which implicitly loads PerlIO::scalar. Try loading PerlIO::scalar explicitly first. </p>
  </dd>
 <dt>Recursive inheritance detected in package &#8216;%s&#8217;</dt>
-<dd> <p> (F) While calculating the method resolution order (<font SIZE="-1">MRO</font>) of a package, Perl believes it found an infinite loop in the <code>@ISA</code> hierarchy. This is a crude check that bails out after 100 levels of <code>@ISA</code> depth. </p>
+<dd> <p> (F) While calculating the method resolution order (MRO) of a package, Perl believes it found an infinite loop in the <code>@ISA</code> hierarchy. This is a crude check that bails out after 100 levels of <code>@ISA</code> depth. </p>
  </dd>
 <dt>Redundant argument in %s</dt>
 <dd> <p> (W redundant) You called a function with more arguments than other arguments you supplied indicated would be needed. Currently only emitted when a printf-type format required fewer arguments than were supplied, but might be used in the future for e.g. ``pack&#8217;&#8216; in perlfunc. </p>
@@ -2695,12 +2695,12 @@ description: "perldiag – various Perl diagnostics"
 <dt>Regexp modifier &quot;%c&quot; may appear a maximum of twice in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) The regular expression pattern had too many occurrences of the specified modifier. Remove the extraneous ones. </p>
  </dd>
-<dt>Regexp modifier &quot;%c&quot; may not appear after the &quot;-&quot; in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Regexp modifier &quot;%c&quot; may not appear after the &quot;-&quot; in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) Turning off the given modifier has the side effect of turning on another one. Perl currently doesn&#8217;t allow this. Reword the regular expression to use the modifier you want to turn on (and place it before the minus), instead of the one you want to turn off. </p>
  </dd>
 <dt>Regexp modifier &quot;/%c&quot; may not appear twice</dt>
 <dd>  </dd>
-<dt>Regexp modifier &quot;%c&quot; may not appear twice in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Regexp modifier &quot;%c&quot; may not appear twice in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) The regular expression pattern had too many occurrences of the specified modifier. Remove the extraneous ones. </p>
  </dd>
 <dt>Regexp modifiers &quot;/%c&quot; and &quot;/%c&quot; are mutually exclusive</dt>
@@ -2717,7 +2717,7 @@ description: "perldiag – various Perl diagnostics"
 <dt>Replacement list is longer than search list</dt>
 <dd> <p> (W misc) You have used a replacement list that is longer than the search list. So the additional elements in the replacement list are meaningless. </p>
  </dd>
-<dt>&#8216;(*%s&#8217; requires a terminating &#8216;:&#8216; in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>&#8216;(*%s&#8217; requires a terminating &#8216;:&#8216; in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) You used a construct that needs a colon and pattern argument. Supply these or check that you are using the right construct. </p>
  </dd>
 <dt>&#8216;%s&#8217; resolved to &#8216;\o{%s}%d&#8217;</dt>
@@ -2763,13 +2763,13 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (S internal) The internal <code>newSVsv()</code> routine was called to duplicate a scalar that had previously been marked as free. </p>
  </dd>
 <dt>sem%s not implemented</dt>
-<dd> <p> (F) You don&#8217;t have System V semaphore <font SIZE="-1">IPC</font> on your system. </p>
+<dd> <p> (F) You don&#8217;t have System V semaphore IPC on your system. </p>
  </dd>
 <dt><code>send()</code> on closed socket %s</dt>
 <dd> <p> (W closed) The socket you&#8217;re sending to got itself closed sometime before now. Check your control flow. </p>
  </dd>
 <dt>Sequence &quot;\c{&quot; invalid</dt>
-<dd> <p> (F) These three characters may not appear in sequence in a double-quotish context. This message is raised only on non-ASCII platforms (a different error message is output on <font SIZE="-1">ASCII</font> ones). If you were intending to specify a control character with this sequence, you&#8217;ll have to use a different way to specify it. </p>
+<dd> <p> (F) These three characters may not appear in sequence in a double-quotish context. This message is raised only on non-ASCII platforms (a different error message is output on ASCII ones). If you were intending to specify a control character with this sequence, you&#8217;ll have to use a different way to specify it. </p>
  </dd>
 <dt>Sequence (? incomplete in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) A regular expression ended with an incomplete extension (?. The &lt;-- HERE shows whereabouts in the regular expression the problem was discovered. See perlre. </p>
@@ -2814,9 +2814,9 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) An <code>&quot;(?R)&quot;</code> or <code>&quot;(?0)&quot;</code> sequence in a regular expression was missing the final parenthesis. </p>
  </dd>
 <dt>500 Server error</dt>
-<dd> <p> (A) This is the error message generally seen in a browser window when trying to run a <font SIZE="-1">CGI</font> program (including <font SIZE="-1">SSI</font>) over the web. The actual error text varies widely from server to server. The most frequently-seen variants are ``500 Server error&#8217;&#8216;, ``Method (something) not permitted&#8217;&#8216;, ``Document contains no data&#8217;&#8216;, ``Premature end of script headers&#8217;&#8216;, and ``Did not produce a valid header&#8217;&#8216;. </p>
-<p> <code>This is a </code><font SIZE="-1"><code>CGI</code></font><code> error, not a Perl error</code>. </p>
-<p> You need to make sure your script is executable, is accessible by the user <font SIZE="-1">CGI</font> is running the script under (which is probably not the user account you tested it under), does not rely on any environment variables (like <font SIZE="-1">PATH</font>) from the user it isn&#8217;t running under, and isn&#8217;t in a location where the <font SIZE="-1">CGI</font> server can&#8217;t find it, basically, more or less. Please see the following for more information: </p>
+<dd> <p> (A) This is the error message generally seen in a browser window when trying to run a CGI program (including SSI) over the web. The actual error text varies widely from server to server. The most frequently-seen variants are ``500 Server error&#8217;&#8216;, ``Method (something) not permitted&#8217;&#8216;, ``Document contains no data&#8217;&#8216;, ``Premature end of script headers&#8217;&#8216;, and ``Did not produce a valid header&#8217;&#8216;. </p>
+<p> <code>This is a </code><code>CGI</code><code> error, not a Perl error</code>. </p>
+<p> You need to make sure your script is executable, is accessible by the user CGI is running the script under (which is probably not the user account you tested it under), does not rely on any environment variables (like PATH) from the user it isn&#8217;t running under, and isn&#8217;t in a location where the CGI server can&#8217;t find it, basically, more or less. Please see the following for more information: </p>
 <pre><code>http://www.perl.org/CGI_MetaFAQ.htmlhttp://www.htmlhelp.org/faq/cgifaq.htmlhttp://www.w3.org/Security/Faq/
 </code></pre>
 <p> You should also look at perlfaq9. </p>
@@ -2828,7 +2828,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You tried to assign to <code>$&gt;</code>, and your operating system doesn&#8217;t support the <code>seteuid()</code> system call (or equivalent), or at least Configure didn&#8217;t think so. </p>
  </dd>
 <dt>setpgrp can&#8217;t take arguments</dt>
-<dd> <p> (F) Your system has the <code>setpgrp()</code> from <font SIZE="-1">BSD 4.2,</font> which takes no arguments, unlike <font SIZE="-1">POSIX</font> <code>setpgid()</code>, which takes a process <font SIZE="-1">ID</font> and process group <font SIZE="-1">ID.</font> </p>
+<dd> <p> (F) Your system has the <code>setpgrp()</code> from BSD 4.2, which takes no arguments, unlike POSIX <code>setpgid()</code>, which takes a process ID and process group ID. </p>
  </dd>
 <dt><code>setrgid()</code> not implemented</dt>
 <dd> <p> (F) You tried to assign to <code>$(</code>, and your operating system doesn&#8217;t support the <code>setrgid()</code> system call (or equivalent), or at least Configure didn&#8217;t think so. </p>
@@ -2848,7 +2848,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You tried to assign a reference to a non integer to <code>$/</code>. In older Perls this would have behaved similarly to setting it to a reference to a positive integer, where the integer was the address of the reference. As of Perl 5.20.0 this is a fatal error, to allow future versions of Perl to use non-integer refs for more interesting purposes. </p>
  </dd>
 <dt>shm%s not implemented</dt>
-<dd> <p> (F) You don&#8217;t have System V shared memory <font SIZE="-1">IPC</font> on your system. </p>
+<dd> <p> (F) You don&#8217;t have System V shared memory IPC on your system. </p>
  </dd>
 <dt>!=~ should be !~</dt>
 <dd> <p> (W syntax) The non-matching operator is !~, not !=~. !=~ will be interpreted as the != (numeric not equal) and ~ (1&#8217;s complement) operators: probably not what you intended. </p>
@@ -2964,9 +2964,9 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W substr)(F) You tried to reference a <code>substr()</code> that pointed outside of a string. That is, the absolute value of the offset was larger than the length of the string. See ``substr&#8217;&#8216; in perlfunc. This warning is fatal if substr is used in an lvalue context (as the left hand side of an assignment or as a subroutine argument for example). </p>
  </dd>
 <dt>sv_upgrade from type %d down to type %d</dt>
-<dd> <p> (P) Perl tried to force the upgrade of an <font SIZE="-1">SV</font> to a type which was actually inferior to its current type. </p>
+<dd> <p> (P) Perl tried to force the upgrade of an SV to a type which was actually inferior to its current type. </p>
  </dd>
-<dt><font SIZE="-1">SWASHNEW</font> didn&#8217;t return an <font SIZE="-1">HV</font> ref</dt>
+<dt>SWASHNEW didn&#8217;t return an HV ref</dt>
 <dd> <p> (P) Something went wrong internally when Perl was trying to look up Unicode characters. </p>
  </dd>
 <dt>Switch (?(condition)... contains too many branches in regex; marked by &lt;-- HERE in m/%s/</dt>
@@ -3012,10 +3012,10 @@ description: "perldiag – various Perl diagnostics"
 <dt>syntax error in file %s at line %d, next 2 tokens &quot;%s&quot;</dt>
 <dd> <p> (F) This error is likely to occur if you run a perl5 script through a perl4 interpreter, especially if the next 2 tokens are ``use strict&#8217;&#8216; or ``my <code>$var</code>&#8216;&#8216; or ``our <code>$var</code>&#8216;&#8216;. </p>
  </dd>
-<dt>Syntax error in (?[...]) in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Syntax error in (?[...]) in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) Perl could not figure out what you meant inside this construct; this notifies you that it is giving up trying. </p>
  </dd>
-<dt>%s syntax <font SIZE="-1">OK</font></dt>
+<dt>%s syntax OK</dt>
 <dd> <p> (F) The final summary message when a <code>&quot;perl -c&quot;</code> succeeds. </p>
  </dd>
 <dt><code>sysread()</code> on closed filehandle %s</dt>
@@ -3025,7 +3025,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W unopened) You tried to read from a filehandle that was never opened. </p>
  </dd>
 <dt>System V %s is not implemented on this machine</dt>
-<dd> <p> (F) You tried to do something with a function beginning with ``sem&#8217;&#8216;, ``shm&#8217;&#8216;, or ``msg&#8217;&#8216; but that System V <font SIZE="-1">IPC</font> is not implemented in your machine. In some machines the functionality can exist but be unconfigured. Consult your system support. </p>
+<dd> <p> (F) You tried to do something with a function beginning with ``sem&#8217;&#8216;, ``shm&#8217;&#8216;, or ``msg&#8217;&#8216; but that System V IPC is not implemented in your machine. In some machines the functionality can exist but be unconfigured. Consult your system support. </p>
  </dd>
 <dt><code>syswrite()</code> on closed filehandle %s</dt>
 <dd> <p> (W closed) The filehandle you&#8217;re writing to got itself closed sometime before now. Check your control flow. </p>
@@ -3084,13 +3084,13 @@ description: "perldiag – various Perl diagnostics"
 <dt>The &#8216;unique&#8217; attribute may only be applied to &#8216;our&#8217; variables</dt>
 <dd> <p> (F) This attribute was never supported on <code>&quot;my&quot;</code> or <code>&quot;sub&quot;</code> declarations. </p>
  </dd>
-<dt>This Perl can&#8217;t reset <font SIZE="-1">CRTL</font> environ elements (%s)</dt>
+<dt>This Perl can&#8217;t reset CRTL environ elements (%s)</dt>
 <dd>  </dd>
-<dt>This Perl can&#8217;t set <font SIZE="-1">CRTL</font> environ elements (%s=%s)</dt>
-<dd> <p> (W internal) Warnings peculiar to <font SIZE="-1">VMS.</font> You tried to change or delete an element of the <font SIZE="-1">CRTL</font>&#8216;s internal environ array, but your copy of Perl wasn&#8217;t built with a <font SIZE="-1">CRTL</font> that contained the <code>setenv()</code> function. You&#8217;ll need to rebuild Perl with a <font SIZE="-1">CRTL</font> that does, or redefine <i></i><font SIZE="-1"><i>PERL_ENV_TABLES</i></font><i></i> (see perlvms) so that the environ array isn&#8217;t the target of the change to <code>%ENV</code> which produced the warning. </p>
+<dt>This Perl can&#8217;t set CRTL environ elements (%s=%s)</dt>
+<dd> <p> (W internal) Warnings peculiar to VMS. You tried to change or delete an element of the CRTL&#8216;s internal environ array, but your copy of Perl wasn&#8217;t built with a CRTL that contained the <code>setenv()</code> function. You&#8217;ll need to rebuild Perl with a CRTL that does, or redefine <i></i><i>PERL_ENV_TABLES</i><i></i> (see perlvms) so that the environ array isn&#8217;t the target of the change to <code>%ENV</code> which produced the warning. </p>
  </dd>
 <dt>This Perl has not been built with support for randomized hash key traversal but something called <code>Perl_hv_rand_set()</code>.</dt>
-<dd> <p> (F) Something has attempted to use an internal <font SIZE="-1">API</font> call which depends on Perl being compiled with the default support for randomized hash key traversal, but this Perl has been compiled without it. You should report this warning to the relevant upstream party, or recompile perl with default options. </p>
+<dd> <p> (F) Something has attempted to use an internal API call which depends on Perl being compiled with the default support for randomized hash key traversal, but this Perl has been compiled without it. You should report this warning to the relevant upstream party, or recompile perl with default options. </p>
  </dd>
 <dt>This use of <code>my()</code> in false conditional is no longer allowed</dt>
 <dd> <p> (F) You used a declaration similar to <code>&quot;my $x if 0&quot;</code>. There has been a long-standing bug in Perl that causes a lexical variable not to be cleared at scope exit when its declaration includes a false conditional. Some people have exploited this bug to achieve a kind of static variable. Since we intend to fix this bug, we don&#8217;t want people relying on this behavior. You can achieve a similar static effect by declaring the variable in a separate block outside the function, eg </p>
@@ -3131,7 +3131,7 @@ description: "perldiag – various Perl diagnostics"
 <p> The <code>-C</code> option only works if it is specified on the command line as well (with the same sequence of letters or numbers following). Either specify this option on the command line, or, if your system supports it, make your script executable and run it directly instead of passing it to perl. </p>
  </dd>
 <dt>Too late to run %s block</dt>
-<dd> <p> (W void) A <font SIZE="-1">CHECK</font> or <font SIZE="-1">INIT</font> block is being defined during run time proper, when the opportunity to run them has already passed. Perhaps you are loading a file with <code>&quot;require&quot;</code> or <code>&quot;do&quot;</code> when you should be using <code>&quot;use&quot;</code> instead. Or perhaps you should put the <code>&quot;require&quot;</code> or <code>&quot;do&quot;</code> inside a <font SIZE="-1">BEGIN</font> block. </p>
+<dd> <p> (W void) A CHECK or INIT block is being defined during run time proper, when the opportunity to run them has already passed. Perhaps you are loading a file with <code>&quot;require&quot;</code> or <code>&quot;do&quot;</code> when you should be using <code>&quot;use&quot;</code> instead. Or perhaps you should put the <code>&quot;require&quot;</code> or <code>&quot;do&quot;</code> inside a BEGIN block. </p>
  </dd>
 <dt>Too many args to syscall</dt>
 <dd> <p> (F) Perl supports a maximum of only 14 args to <code>syscall()</code>. </p>
@@ -3143,8 +3143,8 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) A subroutine using a signature received more arguments than permitted by the signature. The caller of the subroutine is presumably at fault. </p>
 <p> The message attempts to include the name of the called subroutine. If the subroutine has been aliased, the subroutine&#8217;s original name will be shown, regardless of what name the caller used. </p>
  </dd>
-<dt>Too many nested open parens in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
-<dd> <p> (F) You have exceeded the number of open <code>&quot;(&quot;</code> parentheses that haven&#8217;t been matched by corresponding closing ones. This limit prevents eating up too much memory. It is initially set to 1000, but may be changed by setting <code>&quot;${^RE_COMPILE_RECURSION_LIMIT}&quot;</code> to some other value. This may need to be done in a <font SIZE="-1">BEGIN</font> block before the regular expression pattern is compiled. </p>
+<dt>Too many nested open parens in regex; marked by &lt;-- HERE in m/%s/</dt>
+<dd> <p> (F) You have exceeded the number of open <code>&quot;(&quot;</code> parentheses that haven&#8217;t been matched by corresponding closing ones. This limit prevents eating up too much memory. It is initially set to 1000, but may be changed by setting <code>&quot;${^RE_COMPILE_RECURSION_LIMIT}&quot;</code> to some other value. This may need to be done in a BEGIN block before the regular expression pattern is compiled. </p>
  </dd>
 <dt>Too many )&#8216;s</dt>
 <dd> <p> (A) You&#8217;ve accidentally run your script through <code>csh</code> instead of Perl. Check the #! line, or manually feed your script into Perl yourself. </p>
@@ -3168,13 +3168,13 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) Your machine doesn&#8217;t implement a file truncation mechanism that Configure knows about. </p>
  </dd>
 <dt>Type of arg %d to &amp;CORE::%s must be %s</dt>
-<dd> <p> (F) The subroutine in question in the <font SIZE="-1">CORE</font> package requires its argument to be a hard reference to data of the specified type. Overloading is ignored, so a reference to an object that is not the specified type, but nonetheless has overloading to handle it, will still not be accepted. </p>
+<dd> <p> (F) The subroutine in question in the CORE package requires its argument to be a hard reference to data of the specified type. Overloading is ignored, so a reference to an object that is not the specified type, but nonetheless has overloading to handle it, will still not be accepted. </p>
  </dd>
 <dt>Type of arg %d to %s must be %s (not %s)</dt>
-<dd> <p> (F) This function requires the argument in that position to be of a certain type. Arrays must be <code>@NAME</code> or <code>&quot;@{EXPR}&quot;</code>. Hashes must be <code>%NAME</code> or <code>&quot;%{EXPR}&quot;</code>. No implicit dereferencing is allowed---use the {<font SIZE="-1">EXPR</font>} forms as an explicit dereference. See perlref. </p>
+<dd> <p> (F) This function requires the argument in that position to be of a certain type. Arrays must be <code>@NAME</code> or <code>&quot;@{EXPR}&quot;</code>. Hashes must be <code>%NAME</code> or <code>&quot;%{EXPR}&quot;</code>. No implicit dereferencing is allowed---use the {EXPR} forms as an explicit dereference. See perlref. </p>
  </dd>
 <dt>umask not implemented</dt>
-<dd> <p> (F) Your machine doesn&#8217;t implement the umask function and you tried to use it to restrict permissions for yourself (<font SIZE="-1">EXPR &amp; 0700</font>). </p>
+<dd> <p> (F) Your machine doesn&#8217;t implement the umask function and you tried to use it to restrict permissions for yourself (EXPR &amp; 0700). </p>
  </dd>
 <dt>Unbalanced context: %d more PUSHes than POPs</dt>
 <dd> <p> (S internal) The exit code detected an internal inconsistency in how many execution contexts were entered and left. </p>
@@ -3308,13 +3308,13 @@ description: "perldiag – various Perl diagnostics"
 </dl>
 <dl>
 <dd>  </dd></dl>
-<dt>Unescaped literal &#8216;%c&#8217; in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Unescaped literal &#8216;%c&#8217; in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (W regexp) (only under <code>&quot;use re &#8216;strict&#8217;&quot;</code>) </p>
 <p> Within the scope of <code>&quot;use re &#8216;strict&#8217;&quot;</code> in a regular expression pattern, you included an unescaped <code>&quot;}&quot;</code> or <code>&quot;]&quot;</code> which was interpreted literally. These two characters are sometimes metacharacters, and sometimes literals, depending on what precedes them in the pattern. This is unlike the similar <code>&quot;)&quot;</code> which is always a metacharacter unless escaped. </p>
 <p> This action at a distance, perhaps a large distance, can lead to Perl silently misinterpreting what you meant, so when you specify that you want extra checking by <code>&quot;use re &#8216;strict&#8217;&quot;</code>, this warning is generated. If you meant the character as a literal, simply confirm that to Perl by preceding the character with a backslash, or make it into a bracketed character class (like <code>&quot;[}]&quot;</code>). If you meant it as closing a corresponding <code>&quot;[&quot;</code> or <code>&quot;{&quot;</code>, you&#8217;ll need to look back through the pattern to find out why that isn&#8217;t happening. </p>
  </dd>
 <dt>unexec of %s into %s failed!</dt>
-<dd> <p> (F) The <code>unexec()</code> routine failed for some reason. See your local <font SIZE="-1">FSF</font> representative, who probably put it there in the first place. </p>
+<dd> <p> (F) The <code>unexec()</code> routine failed for some reason. See your local FSF representative, who probably put it there in the first place. </p>
  </dd>
 <dt>Unexpected binary operator &#8216;%c&#8217; with no preceding operand in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) You had something like this: </p>
@@ -3346,7 +3346,7 @@ description: "perldiag – various Perl diagnostics"
 </code></pre>
 <p> The <code>&quot;)&quot;</code> is out-of-place. Something apparently was supposed to be combined with the digits, or the <code>&quot;+&quot;</code> shouldn&#8217;t be there, or something like that. Perl can&#8217;t figure out what was intended. </p>
  </dd>
-<dt>Unexpected &#8216;]&#8216; with no following &#8216;)&#8216; in (?[... in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Unexpected &#8216;]&#8216; with no following &#8216;)&#8216; in (?[... in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) While parsing an extended character class a &#8216;]&#8216; character was encountered at a point in the definition where the only legal use of &#8216;]&#8216; is to close the character class definition as part of a &#8216;])&#8216;, you may have forgotten the close paren, or otherwise confused the parser. </p>
  </dd>
 <dt>Unexpected &#8216;(&#8216; with no preceding operator in regex; marked by &lt;-- HERE in m/%s/</dt>
@@ -3362,13 +3362,13 @@ description: "perldiag – various Perl diagnostics"
 <dt>Unicode property wildcard not terminated</dt>
 <dd> <p> (F) A Unicode property wildcard looks like a delimited regular expression pattern (all within the braces of the enclosing <code>&quot;\p{...}&quot;</code>. The closing delimtter to match the opening one was not found. If the opening one is escaped by preceding it with a backslash, the closing one must also be so escaped. </p>
  </dd>
-<dt>Unicode surrogate U+%X is illegal in <font SIZE="-1">UTF-8</font></dt>
-<dd> <p> (S surrogate) You had a <font SIZE="-1">UTF-16</font> surrogate in a context where they are not considered acceptable. These code points, between U+D800 and U+DFFF (inclusive), are used by Unicode only for <font SIZE="-1">UTF-16.</font> However, Perl internally allows all unsigned integer code points (up to the size limit available on your platform), including surrogates. But these can cause problems when being input or output, which is likely where this message came from. If you really really know what you are doing you can turn off this warning by <code>&quot;no warnings &#8216;surrogate&#8217;;&quot;</code>. </p>
+<dt>Unicode surrogate U+%X is illegal in UTF-8</dt>
+<dd> <p> (S surrogate) You had a UTF-16 surrogate in a context where they are not considered acceptable. These code points, between U+D800 and U+DFFF (inclusive), are used by Unicode only for UTF-16. However, Perl internally allows all unsigned integer code points (up to the size limit available on your platform), including surrogates. But these can cause problems when being input or output, which is likely where this message came from. If you really really know what you are doing you can turn off this warning by <code>&quot;no warnings &#8216;surrogate&#8217;;&quot;</code>. </p>
  </dd>
 <dt>Unknown charname &#8216;%s&#8217;</dt>
 <dd> <p> (F) The name you used inside <code>&quot;\N{}&quot;</code> is unknown to Perl. Check the spelling. You can say <code>&quot;use charnames &quot;:loose&quot;&quot;</code> to not have to be so precise about spaces, hyphens, and capitalization on standard Unicode names. (Any custom aliases that have been created must be specified exactly, regardless of whether <code>&quot;:loose&quot;</code> is used or not.) This error may also happen if the <code>&quot;\N{}&quot;</code> is not in the scope of the corresponding <code>&quot;use charnames&quot;</code>. </p>
  </dd>
-<dt>Unknown &#8216;(*...)&#8216; construct &#8216;%s&#8217; in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Unknown &#8216;(*...)&#8216; construct &#8216;%s&#8217; in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) The <code>&quot;(*&quot;</code> was followed by something that the regular expression compiler does not recognize. Check your spelling. </p>
  </dd>
 <dt>Unknown error</dt>
@@ -3381,10 +3381,10 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) The second argument of 3-argument <code>open()</code> is not among the list of valid modes: <code>&quot;&lt;&quot;</code>, <code>&quot;&gt;&quot;</code>, <code>&quot;&gt;&gt;&quot;</code>, <code>&quot;+&lt;&quot;</code>, <code>&quot;+&gt;&quot;</code>, <code>&quot;+&gt;&gt;&quot;</code>, <code>&quot;-|&quot;</code>, <code>&quot;|-&quot;</code>, <code>&quot;&lt;&amp;&quot;</code>, <code>&quot;&gt;&amp;&quot;</code>. </p>
  </dd>
 <dt>Unknown PerlIO layer &quot;%s&quot;</dt>
-<dd> <p> (W layer) An attempt was made to push an unknown layer onto the Perl I/O system. (Layers take care of transforming data between external and internal representations.) Note that some layers, such as <code>&quot;mmap&quot;</code>, are not supported in all environments. If your program didn&#8217;t explicitly request the failing operation, it may be the result of the value of the environment variable <font SIZE="-1">PERLIO.</font> </p>
+<dd> <p> (W layer) An attempt was made to push an unknown layer onto the Perl I/O system. (Layers take care of transforming data between external and internal representations.) Note that some layers, such as <code>&quot;mmap&quot;</code>, are not supported in all environments. If your program didn&#8217;t explicitly request the failing operation, it may be the result of the value of the environment variable PERLIO. </p>
  </dd>
 <dt>Unknown process %x sent message to prime_env_iter: %s</dt>
-<dd> <p> (P) An error peculiar to <font SIZE="-1">VMS.</font> Perl was reading values for <code>%ENV</code> before iterating over it, and someone else stuck a message in the stream of data Perl expected. Someone&#8217;s very confused, or perhaps trying to subvert Perl&#8217;s population of <code>%ENV</code> for nefarious purposes. </p>
+<dd> <p> (P) An error peculiar to VMS. Perl was reading values for <code>%ENV</code> before iterating over it, and someone else stuck a message in the stream of data Perl expected. Someone&#8217;s very confused, or perhaps trying to subvert Perl&#8217;s population of <code>%ENV</code> for nefarious purposes. </p>
  </dd>
 <dt>Unknown regexp modifier &quot;/%s&quot;</dt>
 <dd> <p> (F) Alphanumerics immediately following the closing delimiter of a regular expression pattern are interpreted by Perl as modifier flags for the regex. One of the ones you specified is invalid. One way this can happen is if you didn&#8217;t put in white space between the end of the regex and a following alphanumeric operator: </p>
@@ -3466,7 +3466,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) You specified an illegal option to Perl. Don&#8217;t do that. (If you think you didn&#8217;t do that, check the #! line to see if it&#8217;s supplying the bad switch on your behalf.) </p>
  </dd>
 <dt>Unsuccessful %s on filename containing newline</dt>
-<dd> <p> (W newline) A file operation was attempted on a filename, and that operation failed, <font SIZE="-1">PROBABLY</font> because the filename contained a newline, <font SIZE="-1">PROBABLY</font> because you forgot to <code>chomp()</code> it off. See ``chomp&#8217;&#8216; in perlfunc. </p>
+<dd> <p> (W newline) A file operation was attempted on a filename, and that operation failed, PROBABLY because the filename contained a newline, PROBABLY because you forgot to <code>chomp()</code> it off. See ``chomp&#8217;&#8216; in perlfunc. </p>
  </dd>
 <dt>Unsupported directory function &quot;%s&quot; called</dt>
 <dd> <p> (F) Your machine doesn&#8217;t support <code>opendir()</code> and <code>readdir()</code>. </p>
@@ -3476,15 +3476,15 @@ description: "perldiag – various Perl diagnostics"
  </dd>
 <dt>Unsupported function fork</dt>
 <dd> <p> (F) Your version of executable does not support forking. </p>
-<p> Note that under some systems, like <font SIZE="-1">OS/2,</font> there may be different flavors of Perl executables, some of which may support fork, some not. Try changing the name you call Perl by to <code>&quot;perl_&quot;</code>, <code>&quot;perl__&quot;</code>, and so on. </p>
+<p> Note that under some systems, like OS/2, there may be different flavors of Perl executables, some of which may support fork, some not. Try changing the name you call Perl by to <code>&quot;perl_&quot;</code>, <code>&quot;perl__&quot;</code>, and so on. </p>
  </dd>
 <dt>Unsupported script encoding %s</dt>
-<dd> <p> (F) Your program file begins with a Unicode Byte Order Mark (<font SIZE="-1">BOM</font>) which declares it to be in a Unicode encoding that Perl cannot read. </p>
+<dd> <p> (F) Your program file begins with a Unicode Byte Order Mark (BOM) which declares it to be in a Unicode encoding that Perl cannot read. </p>
  </dd>
 <dt>Unsupported socket function &quot;%s&quot; called</dt>
 <dd> <p> (F) Your machine doesn&#8217;t support the Berkeley socket mechanism, or at least that&#8217;s what Configure thought. </p>
  </dd>
-<dt>Unterminated &#8216;(*...&#8216; argument in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Unterminated &#8216;(*...&#8216; argument in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) You used a pattern of the form <code>&quot;(*...:...)&quot;</code> but did not terminate the pattern with a <code>&quot;)&quot;</code>. Fix the pattern and retry. </p>
  </dd>
 <dt>Unterminated attribute list</dt>
@@ -3494,9 +3494,9 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) The lexer saw an opening (left) parenthesis character while parsing an attribute list, but the matching closing (right) parenthesis character was not found. You may need to add (or remove) a backslash character to get your parentheses to balance. See attributes. </p>
  </dd>
 <dt>Unterminated compressed integer</dt>
-<dd> <p> (F) An argument to unpack(``w&#8217;&#8216;,...) was incompatible with the <font SIZE="-1">BER</font> compressed integer format and could not be converted to an integer. See ``pack&#8217;&#8216; in perlfunc. </p>
+<dd> <p> (F) An argument to unpack(``w&#8217;&#8216;,...) was incompatible with the BER compressed integer format and could not be converted to an integer. See ``pack&#8217;&#8216; in perlfunc. </p>
  </dd>
-<dt>Unterminated &#8216;(*...&#8216; construct in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
+<dt>Unterminated &#8216;(*...&#8216; construct in regex; marked by &lt;-- HERE in m/%s/</dt>
 <dd> <p> (F) You used a pattern of the form <code>&quot;(*...)&quot;</code> but did not terminate the pattern with a <code>&quot;)&quot;</code>. Fix the pattern and retry. </p>
  </dd>
 <dt>Unterminated delimiter for here document</dt>
@@ -3525,7 +3525,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W untie) A copy of the object returned from <code>&quot;tie&quot;</code> (or <code>&quot;tied&quot;</code>) was still valid when <code>&quot;untie&quot;</code> was called. </p>
  </dd>
 <dt>Usage: POSIX::%s(%s)</dt>
-<dd> <p> (F) You called a <font SIZE="-1">POSIX</font> function with incorrect arguments. See ``<font SIZE="-1">FUNCTIONS&#8217;&#8216;</font> in <font SIZE="-1">POSIX</font> for more information. </p>
+<dd> <p> (F) You called a POSIX function with incorrect arguments. See ``FUNCTIONS&#8217;&#8216; in POSIX for more information. </p>
  </dd>
 <dt>Usage: Win32::%s(%s)</dt>
 <dd> <p> (F) You called a Win32 function with incorrect arguments. See Win32 for more information. </p>
@@ -3613,7 +3613,7 @@ description: "perldiag – various Perl diagnostics"
 <p> This is not very useful, and perl currently optimizes this away. </p>
  </dd>
 <dt>Useless use of %s with no values</dt>
-<dd> <p> (W syntax) You used the <code>push()</code> or <code>unshift()</code> function with no arguments apart from the array, like <code>&quot;push(@x)&quot;</code> or <code>&quot;unshift(@foo)&quot;</code>. That won&#8217;t usually have any effect on the array, so is completely useless. It&#8217;s possible in principle that push(@tied_array) could have some effect if the array is tied to a class which implements a <font SIZE="-1">PUSH</font> method. If so, you can write it as <code>&quot;push(@tied_array,())&quot;</code> to avoid this warning. </p>
+<dd> <p> (W syntax) You used the <code>push()</code> or <code>unshift()</code> function with no arguments apart from the array, like <code>&quot;push(@x)&quot;</code> or <code>&quot;unshift(@foo)&quot;</code>. That won&#8217;t usually have any effect on the array, so is completely useless. It&#8217;s possible in principle that push(@tied_array) could have some effect if the array is tied to a class which implements a PUSH method. If so, you can write it as <code>&quot;push(@tied_array,())&quot;</code> to avoid this warning. </p>
  </dd>
 <dt>&quot;use&quot; not allowed in expression</dt>
 <dd> <p> (F) The ``use&#8217;&#8216; keyword is recognized and executed at compile time, and returns no useful value. See perlmod. </p>
@@ -3630,8 +3630,8 @@ description: "perldiag – various Perl diagnostics"
  </dd>
 <dt>Use of code point 0x%s is not allowed; the permissible max is 0x%x</dt>
 <dd>  </dd>
-<dt>Use of code point 0x%s is not allowed; the permissible max is 0x%x in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/</dt>
-<dd> <p> (F) You used a code point that is not allowed, because it is too large. Unicode only allows code points up to 0x10FFFF, but Perl allows much larger ones. Earlier versions of Perl allowed code points above <font SIZE="-1">IV_MAX</font> (0x7FFFFFF on 32-bit platforms, 0x7FFFFFFFFFFFFFFF on 64-bit platforms), however, this could possibly break the perl interpreter in some constructs, including causing it to hang in a few cases. </p>
+<dt>Use of code point 0x%s is not allowed; the permissible max is 0x%x in regex; marked by &lt;-- HERE in m/%s/</dt>
+<dd> <p> (F) You used a code point that is not allowed, because it is too large. Unicode only allows code points up to 0x10FFFF, but Perl allows much larger ones. Earlier versions of Perl allowed code points above IV_MAX (0x7FFFFFF on 32-bit platforms, 0x7FFFFFFFFFFFFFFF on 64-bit platforms), however, this could possibly break the perl interpreter in some constructs, including causing it to hang in a few cases. </p>
 <p> If your code is to run on various platforms, keep in mind that the upper limit depends on the platform. It is much larger on 64-bit word sizes than 32-bit ones. </p>
 <p> The use of out of range code points was deprecated in Perl 5.24, and became a fatal error in Perl 5.28. </p>
  </dd>
@@ -3642,8 +3642,8 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (F) The construction <code>&quot;my $x := 42&quot;</code> used to parse as equivalent to <code>&quot;my $x : = 42&quot;</code> (applying an empty attribute list to <code>$x</code>). This construct was deprecated in 5.12.0, and has now been made a syntax error, so <code>&quot;:=&quot;</code> can be reclaimed as a new operator in the future. </p>
 <p> If you need an empty attribute list, for example in a code generator, add a space before the <code>&quot;=&quot;</code>. </p>
  </dd>
-<dt>Use of %s for non-UTF-8 locale is wrong. Assuming a <font SIZE="-1">UTF-8</font> locale</dt>
-<dd> <p> (W locale) You are matching a regular expression using locale rules, and the specified construct was encountered. This construct is only valid for <font SIZE="-1">UTF-8</font> locales, which the current locale isn&#8217;t. This doesn&#8217;t make sense. Perl will continue, assuming a Unicode (<font SIZE="-1">UTF-8</font>) locale, but the results are likely to be wrong. </p>
+<dt>Use of %s for non-UTF-8 locale is wrong. Assuming a UTF-8 locale</dt>
+<dd> <p> (W locale) You are matching a regular expression using locale rules, and the specified construct was encountered. This construct is only valid for UTF-8 locales, which the current locale isn&#8217;t. This doesn&#8217;t make sense. Perl will continue, assuming a Unicode (UTF-8) locale, but the results are likely to be wrong. </p>
  </dd>
 <dt>Use of freed value in iteration</dt>
 <dd> <p> (F) Perhaps you modified the iterated array within the loop? This error is typically caused by code like the following: </p>
@@ -3662,7 +3662,7 @@ description: "perldiag – various Perl diagnostics"
 <dt>Use of &#8216;%s&#8217; in \p{} or \P{} is deprecated because: %s</dt>
 <dd> <p> (D deprecated) Certain properties are deprecated by Unicode, and may eventually be removed from the Standard, at which time Perl will follow along. In the meantime, this message is raised to notify you. </p>
  </dd>
-<dt>Use of inherited <font SIZE="-1">AUTOLOAD</font> for non-method %s::%s() is no longer allowed</dt>
+<dt>Use of inherited AUTOLOAD for non-method %s::%s() is no longer allowed</dt>
 <dd> <p> (F) As an accidental feature, <code>&quot;AUTOLOAD&quot;</code> subroutines were looked up as methods (using the <code>@ISA</code> hierarchy), even when the subroutines to be autoloaded were called as plain functions (e.g. <code>&quot;Foo::bar()&quot;</code>), not as methods (e.g. <code>&quot;Foo-&gt;bar()&quot;</code> or <code>&quot;$obj-&gt;bar()&quot;</code>). </p>
 <p> This was deprecated in Perl 5.004, and was made fatal in Perl 5.28. </p>
  </dd>
@@ -3713,19 +3713,19 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (W regexp) Named Unicode character escapes <code>&quot;(\N{...})&quot;</code> may return a multi-character sequence. Even though a character class is supposed to match just one character of input, perl will match the whole thing correctly, except when the class is inverted (<code>&quot;[^...]&quot;</code>), or the escape is the beginning or final end point of a range. For these, what should happen isn&#8217;t clear at all. In these circumstances, Perl discards all but the first character of the returned sequence, which is not likely what you want. </p>
  </dd>
 <dt>Using /u for &#8216;%s&#8217; instead of /%s in regex; marked by &lt;-- HERE in m/%s/</dt>
-<dd> <p> (W regexp) You used a Unicode boundary (<code>&quot;\b{...}&quot;</code> or <code>&quot;\B{...}&quot;</code>) in a portion of a regular expression where the character set modifiers <code>&quot;/a&quot;</code> or <code>&quot;/aa&quot;</code> are in effect. These two modifiers indicate an <font SIZE="-1">ASCII</font> interpretation, and this doesn&#8217;t make sense for a Unicode definition. The generated regular expression will compile so that the boundary uses all of Unicode. No other portion of the regular expression is affected. </p>
+<dd> <p> (W regexp) You used a Unicode boundary (<code>&quot;\b{...}&quot;</code> or <code>&quot;\B{...}&quot;</code>) in a portion of a regular expression where the character set modifiers <code>&quot;/a&quot;</code> or <code>&quot;/aa&quot;</code> are in effect. These two modifiers indicate an ASCII interpretation, and this doesn&#8217;t make sense for a Unicode definition. The generated regular expression will compile so that the boundary uses all of Unicode. No other portion of the regular expression is affected. </p>
  </dd>
 <dt>Using !~ with %s doesn&#8217;t make sense</dt>
 <dd> <p> (F) Using the <code>&quot;!~&quot;</code> operator with <code>&quot;s///r&quot;</code>, <code>&quot;tr///r&quot;</code> or <code>&quot;y///r&quot;</code> is currently reserved for future use, as the exact behavior has not been decided. (Simply returning the boolean opposite of the modified string is usually not particularly useful.) </p>
  </dd>
-<dt><font SIZE="-1">UTF-16</font> surrogate U+%X</dt>
-<dd> <p> (S surrogate) You had a <font SIZE="-1">UTF-16</font> surrogate in a context where they are not considered acceptable. These code points, between U+D800 and U+DFFF (inclusive), are used by Unicode only for <font SIZE="-1">UTF-16.</font> However, Perl internally allows all unsigned integer code points (up to the size limit available on your platform), including surrogates. But these can cause problems when being input or output, which is likely where this message came from. If you really really know what you are doing you can turn off this warning by <code>&quot;no warnings &#8216;surrogate&#8217;;&quot;</code>. </p>
+<dt>UTF-16 surrogate U+%X</dt>
+<dd> <p> (S surrogate) You had a UTF-16 surrogate in a context where they are not considered acceptable. These code points, between U+D800 and U+DFFF (inclusive), are used by Unicode only for UTF-16. However, Perl internally allows all unsigned integer code points (up to the size limit available on your platform), including surrogates. But these can cause problems when being input or output, which is likely where this message came from. If you really really know what you are doing you can turn off this warning by <code>&quot;no warnings &#8216;surrogate&#8217;;&quot;</code>. </p>
  </dd>
 <dt>Value of %s can be &quot;0&quot;; test with <code>defined()</code></dt>
-<dd> <p> (W misc) In a conditional expression, you used &lt;<font SIZE="-1">HANDLE</font>&gt;, &lt;*&gt; (glob), <code>&quot;each()&quot;</code>, or <code>&quot;readdir()&quot;</code> as a boolean value. Each of these constructs can return a value of ``0&#8217;&#8216;; that would make the conditional expression false, which is probably not what you intended. When using these constructs in conditional expressions, test their values with the <code>&quot;defined&quot;</code> operator. </p>
+<dd> <p> (W misc) In a conditional expression, you used &lt;HANDLE&gt;, &lt;*&gt; (glob), <code>&quot;each()&quot;</code>, or <code>&quot;readdir()&quot;</code> as a boolean value. Each of these constructs can return a value of ``0&#8217;&#8216;; that would make the conditional expression false, which is probably not what you intended. When using these constructs in conditional expressions, test their values with the <code>&quot;defined&quot;</code> operator. </p>
  </dd>
-<dt>Value of <font SIZE="-1">CLI</font> symbol &quot;%s&quot; too long</dt>
-<dd> <p> (W misc) A warning peculiar to <font SIZE="-1">VMS.</font> Perl tried to read the value of an <code>%ENV</code> element from a <font SIZE="-1">CLI</font> symbol table, and found a resultant string longer than 1024 characters. The return value has been truncated to 1024 characters. </p>
+<dt>Value of CLI symbol &quot;%s&quot; too long</dt>
+<dd> <p> (W misc) A warning peculiar to VMS. Perl tried to read the value of an <code>%ENV</code> element from a CLI symbol table, and found a resultant string longer than 1024 characters. The return value has been truncated to 1024 characters. </p>
  </dd>
 <dt>Variable &quot;%s&quot; is not available</dt>
 <dd> <p> (W closure) During compilation, an inner named subroutine or eval is attempting to capture an outer lexical that is not currently available. This can happen for one of two reasons. First, the outer lexical may be declared in an outer anonymous subroutine that has not yet been created. (Remember that named subs are created at compile time, while anonymous subs are created at run-time.) For example, </p>
@@ -3749,7 +3749,7 @@ description: "perldiag – various Perl diagnostics"
 <dt>Variable length lookbehind not implemented in regex m/%s/</dt>
 <dd> <p> (F) <code>This message no longer should be raised as of Perl 5.30.</code> It is retained in this document as a convenience for people using an earlier Perl version. </p>
 <p> In Perl 5.30 and earlier, lookbehind is allowed only for subexpressions whose length is fixed and known at compile time. For positive lookbehind, you can use the <code>&quot;\K&quot;</code> regex construct as a way to get the equivalent functionality. See (?&lt;=pattern) and \K in perlre. </p>
-<p> Starting in Perl 5.18, there are non-obvious Unicode rules under <code>&quot;/i&quot;</code> that can match variably, but which you might not think could. For example, the substring <code>&quot;ss&quot;</code> can match the single character <font SIZE="-1">LATIN SMALL LETTER SHARP S.</font> Here&#8217;s a complete list of the current ones affecting <font SIZE="-1">ASCII</font> characters: </p>
+<p> Starting in Perl 5.18, there are non-obvious Unicode rules under <code>&quot;/i&quot;</code> that can match variably, but which you might not think could. For example, the substring <code>&quot;ss&quot;</code> can match the single character LATIN SMALL LETTER SHARP S. Here&#8217;s a complete list of the current ones affecting ASCII characters: </p>
 <pre><code>   ASCII
   sequence Matches single letter under /i
     FF U+FB00 LATIN SMALL LIGATURE FF
@@ -3762,13 +3762,13 @@ description: "perldiag – various Perl diagnostics"
     ST U+FB06 LATIN SMALL LIGATURE ST
                 U+FB05 LATIN SMALL LIGATURE LONG S T
 </code></pre>
-<p> This list is subject to change, but is quite unlikely to. Each <font SIZE="-1">ASCII</font> sequence can be any combination of upper- and lowercase. </p>
+<p> This list is subject to change, but is quite unlikely to. Each ASCII sequence can be any combination of upper- and lowercase. </p>
 <p> You can avoid this by using a bracketed character class in the lookbehind assertion, like </p>
 <pre><code> (?&lt;![sS]t)
  (?&lt;![fF]f[iI])
 </code></pre>
 <p> This fools Perl into not matching the ligatures. </p>
-<p> Another option for Perls starting with 5.16, if you only care about <font SIZE="-1">ASCII</font> matches, is to add the <code>&quot;/aa&quot;</code> modifier to the regex. This will exclude all these non-obvious matches, thus getting rid of this message. You can also say </p>
+<p> Another option for Perls starting with 5.16, if you only care about ASCII matches, is to add the <code>&quot;/aa&quot;</code> modifier to the regex. This will exclude all these non-obvious matches, thus getting rid of this message. You can also say </p>
 <pre><code> use if $] ge 5.016, re =&gt; '/aa';
 </code></pre>
 <p> to apply <code>&quot;/aa&quot;</code> to all regular expressions compiled within its scope. See re. </p>
@@ -3824,7 +3824,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (S ambiguous) You wrote a unary operator followed by something that looks like a binary operator that could also have been interpreted as a term or unary operator. For instance, if you know that the rand function has a default argument of 1.0, and you write </p>
 <pre><code>    rand + 5;
 </code></pre>
-<p> you may <font SIZE="-1">THINK</font> you wrote the same thing as </p>
+<p> you may THINK you wrote the same thing as </p>
 <pre><code>    rand() + 5;
 </code></pre>
 <p> but in actual fact, you got </p>
@@ -3841,8 +3841,8 @@ description: "perldiag – various Perl diagnostics"
 <p> If the warning comes from other than I/O, this diagnostic probably indicates that incorrect results are being obtained. You should examine your code to determine how a wide character is getting to an operation that doesn&#8217;t handle them. </p>
  </dd>
 <dt>Wide character (U+%X) in %s</dt>
-<dd> <p> (W locale) While in a single-byte locale (<i>i.e.</i>, a non-UTF-8 one), a multi-byte character was encountered. Perl considers this character to be the specified Unicode code point. Combining non-UTF-8 locales and Unicode is dangerous. Almost certainly some characters will have two different representations. For example, in the <font SIZE="-1">ISO 8859-7</font> (Greek) locale, the code point 0xC3 represents a Capital Gamma. But so also does 0x393. This will make string comparisons unreliable. </p>
-<p> You likely need to figure out how this multi-byte character got mixed up with your single-byte locale (or perhaps you thought you had a <font SIZE="-1">UTF-8</font> locale, but Perl disagrees). </p>
+<dd> <p> (W locale) While in a single-byte locale (<i>i.e.</i>, a non-UTF-8 one), a multi-byte character was encountered. Perl considers this character to be the specified Unicode code point. Combining non-UTF-8 locales and Unicode is dangerous. Almost certainly some characters will have two different representations. For example, in the ISO 8859-7 (Greek) locale, the code point 0xC3 represents a Capital Gamma. But so also does 0x393. This will make string comparisons unreliable. </p>
+<p> You likely need to figure out how this multi-byte character got mixed up with your single-byte locale (or perhaps you thought you had a UTF-8 locale, but Perl disagrees). </p>
  </dd>
 <dt>Within []-length &#8216;%c&#8217; not allowed</dt>
 <dd> <p> (F) The count in the (un)pack template may be replaced by <code>&quot;[TEMPLATE]&quot;</code> only if <code>&quot;TEMPLATE&quot;</code> always matches the same amount of packed bytes that can be determined from the template alone. This is not possible if it contains any of the codes @, /, U, u, w or a *-length. Redesign the template. </p>
@@ -3857,7 +3857,7 @@ description: "perldiag – various Perl diagnostics"
 <dd> <p> (S utf8) When reading in different encodings, Perl tries to map everything into Unicode characters. The bytes you read in are not legal in this encoding. For example </p>
 <pre><code>    utf8 &quot;\xE4&quot; does not map to Unicode
 </code></pre>
-<p> if you try to read in the a-diaereses Latin-1 as <font SIZE="-1">UTF-8.</font> </p>
+<p> if you try to read in the a-diaereses Latin-1 as UTF-8. </p>
  </dd>
 <dt>&#8216;X&#8217; outside of string</dt>
 <dd> <p> (F) You had a (un)pack template that specified a relative position before the beginning of the string being (un)packed. See ``pack&#8217;&#8216; in perlfunc. </p>
@@ -3865,11 +3865,11 @@ description: "perldiag – various Perl diagnostics"
 <dt>&#8216;x&#8217; outside of string in unpack</dt>
 <dd> <p> (F) You had a pack template that specified a relative position after the end of the string being unpacked. See ``pack&#8217;&#8216; in perlfunc. </p>
  </dd>
-<dt><font SIZE="-1">YOU HAVEN</font>&#8216;T <font SIZE="-1">DISABLED</font> SET-ID <font SIZE="-1">SCRIPTS IN THE KERNEL YET</font>!</dt>
+<dt>YOU HAVEN&#8216;T DISABLED SET-ID SCRIPTS IN THE KERNEL YET!</dt>
 <dd> <p> (F) And you probably never will, because you probably don&#8217;t have the sources to your kernel, and your vendor probably doesn&#8217;t give a rip about what you want. There is a vulnerability anywhere that you have a set-id script, and to close it you need to remove the set-id bit from the script that you&#8217;re attempting to run. To actually run the script set-id, your best bet is to put a set-id C wrapper around your script. </p>
  </dd>
 <dt>You need to quote &quot;%s&quot;</dt>
-<dd> <p> (W syntax) You assigned a bareword as a signal handler name. Unfortunately, you already have a subroutine of that name declared, which means that Perl 5 will try to call the subroutine when the assignment is executed, which is probably not what you want. (If it <font SIZE="-1">IS</font> what you want, put an &amp; in front.) </p>
+<dd> <p> (W syntax) You assigned a bareword as a signal handler name. Unfortunately, you already have a subroutine of that name declared, which means that Perl 5 will try to call the subroutine when the assignment is executed, which is probably not what you want. (If it IS what you want, put an &amp; in front.) </p>
  </dd>
 <dt>Your random numbers are not that random</dt>
 <dd> <p> (F) When trying to initialize the random seed for hashes, Perl could not get any randomness out of your system. This usually indicates Something Very Wrong. </p>

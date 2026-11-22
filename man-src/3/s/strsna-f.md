@@ -10,7 +10,7 @@ description: "strsna.f –"
 <p>strsna.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>strsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, IWORK, INFO)<br />
+<p>subroutine <code>strsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, IWORK, INFO)<br/>
  <i></i><code>STRSNA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine strsna (characterJOB, characterHOWMNY, logical, dimension( * )SELECT, integerN, real, dimension( ldt, * )T, integerLDT, real, dimension( ldvl, * )VL, integerLDVL, real, dimension( ldvr, * )VR, integerLDVR, real, dimension( * )S, real, dimension( * )SEP, integerMM, integerM, real, dimension( ldwork, * )WORK, integerLDWORK, integer, dimension( * )IWORK, integerINFO)</h3>

@@ -13,7 +13,7 @@ description: "ql/math/matrixutilities/tqreigendecomposition.hpp – tridiag. QR 
 #include &lt;ql/math/array.hpp&gt;
 #include &lt;ql/math/matrix.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>TqrEigenDecomposition</code><br />
+<p>class <code>TqrEigenDecomposition</code><br/>
  <i>tridiag. QR eigen decomposition with explicite shift aka Wilkinson </i></p>
 <h2>Detailed Description</h2>
 <p>tridiag. QR eigen decomposition with explicite shift aka Wilkinson</p>

@@ -53,9 +53,9 @@ description: "spamassassin – simple front-end filtering script for SpamAssassi
 <h2>DESCRIPTION</h2>
 <p> spamassassin is a simple front-end filter for SpamAssassin. </p>
 <p> Using the SpamAssassin rule base, it uses a wide range of heuristic tests on mail headers and body text to identify &#8220;spam&#8221;, also known as unsolicited bulk email. Once identified, the mail is then tagged as spam for later filtering using the user&#8217;s own mail user-agent application. </p>
-<p> The default tagging operations that take place are detailed in &#8220;<font SIZE="-1">TAGGING&#8221;</font> in spamassassin. </p>
-<p> By default, message(s) are read in from <font SIZE="-1">STDIN </font>(&lt; <i>mailmessage</i>), or from specified files and directories (<i>path</i> &#8230;) <font SIZE="-1">STDIN</font> and files are assumed to be in <i>file</i> format, with a single message per file. Directories are assumed to be in a format where each file in the directory contains only one message (directories are not recursed and filenames containing whitespace or beginning with &#8220;.&#8221; or &#8220;,&#8221; are skipped). The options <i>&#8211;mbox</i> and <i>&#8211;mbx</i> can override the assumed format, see the appropriate <font SIZE="-1">OPTION</font> information below. </p>
-<p> Please note that SpamAssassin is not designed to scan large messages. Don&#8217;t feed messages larger than about 500 <font SIZE="-1">KB</font> to SpamAssassin, as this will consume a huge amount of memory.</p>
+<p> The default tagging operations that take place are detailed in &#8220;TAGGING&#8221; in spamassassin. </p>
+<p> By default, message(s) are read in from STDIN (&lt; <i>mailmessage</i>), or from specified files and directories (<i>path</i> &#8230;) STDIN and files are assumed to be in <i>file</i> format, with a single message per file. Directories are assumed to be in a format where each file in the directory contains only one message (directories are not recursed and filenames containing whitespace or beginning with &#8220;.&#8221; or &#8220;,&#8221; are skipped). The options <i>&#8211;mbox</i> and <i>&#8211;mbx</i> can override the assumed format, see the appropriate OPTION information below. </p>
+<p> Please note that SpamAssassin is not designed to scan large messages. Don&#8217;t feed messages larger than about 500 KB to SpamAssassin, as this will consume a huge amount of memory.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-e</code>, <code>&#8211;error-code</code>, <code>&#8211;exit-code</code></dt>
@@ -68,22 +68,22 @@ description: "spamassassin – simple front-end filtering script for SpamAssassi
 <dd> Test mode. Pipe message through and add extra report. Note that the report text assumes that the message is spam, since in normal use it is only visible in this case. Pay attention to the score instead. </dd>
 <p> If you run this with <code>-d</code>, the message will first have SpamAssassin markup removed before being tested.</p>
 <dt><code>-r</code>, <code>&#8211;report</code></dt>
-<dd> Report this message as manually-verified spam. This will submit the mail message read from <font SIZE="-1">STDIN</font> to various spam-blocker databases. Currently, these are the Distributed Checksum Clearinghouse <tt>&quot;<a rel="nofollow" href="http://www.dcc-servers.net/dcc/">http://www.dcc-servers.net/dcc/</a>&quot;</tt>, Pyzor <tt>&quot;<a rel="nofollow" href="http://pyzor.sourceforge.net/">http://pyzor.sourceforge.net/</a>&quot;</tt>, Vipul&#8217;s Razor <tt>&quot;<a rel="nofollow" href="http://razor.sourceforge.net/">http://razor.sourceforge.net/</a>&quot;</tt>, and SpamCop <tt>&quot;<a href="http://www.spamcop.net/">http://www.spamcop.net/</a>&quot;</tt>. </dd>
-<p> If the message contains SpamAssassin markup, the markup will be stripped out automatically before submission. The support modules for <font SIZE="-1">DCC,</font> Pyzor, and Razor must be installed for spam to be reported to each service. SpamCop reports will have greater effect if you register and set the <tt>&quot;spamcop_to_address&quot;</tt> option. </p>
-<p> The message will also be submitted to SpamAssassin&#8217;s learning systems; currently this is the internal Bayesian statistical-filtering system (the <font SIZE="-1">BAYES</font> rules). (Note that if you <i>only</i> want to perform statistical learning, and do not want to report mail to third-parties, you should use the <tt>&quot;sa-learn&quot;</tt> command directly instead.)</p>
+<dd> Report this message as manually-verified spam. This will submit the mail message read from STDIN to various spam-blocker databases. Currently, these are the Distributed Checksum Clearinghouse <tt>&quot;<a rel="nofollow" href="http://www.dcc-servers.net/dcc/">http://www.dcc-servers.net/dcc/</a>&quot;</tt>, Pyzor <tt>&quot;<a rel="nofollow" href="http://pyzor.sourceforge.net/">http://pyzor.sourceforge.net/</a>&quot;</tt>, Vipul&#8217;s Razor <tt>&quot;<a rel="nofollow" href="http://razor.sourceforge.net/">http://razor.sourceforge.net/</a>&quot;</tt>, and SpamCop <tt>&quot;<a href="http://www.spamcop.net/">http://www.spamcop.net/</a>&quot;</tt>. </dd>
+<p> If the message contains SpamAssassin markup, the markup will be stripped out automatically before submission. The support modules for DCC, Pyzor, and Razor must be installed for spam to be reported to each service. SpamCop reports will have greater effect if you register and set the <tt>&quot;spamcop_to_address&quot;</tt> option. </p>
+<p> The message will also be submitted to SpamAssassin&#8217;s learning systems; currently this is the internal Bayesian statistical-filtering system (the BAYES rules). (Note that if you <i>only</i> want to perform statistical learning, and do not want to report mail to third-parties, you should use the <tt>&quot;sa-learn&quot;</tt> command directly instead.)</p>
 <dt><code>-k</code>, <code>&#8211;revoke</code></dt>
-<dd> Revoke this message. This will revoke the mail message read from <font SIZE="-1">STDIN</font> from various spam-blocker databases. Currently, these are Vipul&#8217;s Razor. </dd>
+<dd> Revoke this message. This will revoke the mail message read from STDIN from various spam-blocker databases. Currently, these are Vipul&#8217;s Razor. </dd>
 <p> Revocation support for the Distributed Checksum Clearinghouse, Pyzor, and SpamCop is not currently available. </p>
 <p> If the message contains SpamAssassin markup, the markup will be stripped out automatically before submission. The support modules for Razor must be installed for spam to be revoked from the service. </p>
-<p> The message will also be submitted as &#8216;ham&#8217; (non-spam) to SpamAssassin&#8217;s learning systems; currently this is the internal Bayesian statistical-filtering system (the <font SIZE="-1">BAYES</font> rules). (Note that if you <i>only</i> want to perform statistical learning, and do not want to report mail to third-parties, you should use the <tt>&quot;sa-learn&quot;</tt> command directly instead.)</p>
+<p> The message will also be submitted as &#8216;ham&#8217; (non-spam) to SpamAssassin&#8217;s learning systems; currently this is the internal Bayesian statistical-filtering system (the BAYES rules). (Note that if you <i>only</i> want to perform statistical learning, and do not want to report mail to third-parties, you should use the <tt>&quot;sa-learn&quot;</tt> command directly instead.)</p>
 <dt><code>&#8211;lint</code></dt>
 <dd> Syntax check (lint) the rule set and configuration files, reporting typos and rules that do not compile correctly. Exits with 0 if there are no errors, or greater than 0 if any errors are found.</dd>
 <dt><code>-W</code>, <code>&#8211;add-to-whitelist</code></dt>
-<dd> Add all email addresses, in the headers and body of the mail message read from <font SIZE="-1">STDIN,</font> to a persistent address whitelist. Note that you must be running <tt>&quot;spamassassin&quot;</tt> or <tt>&quot;spamd&quot;</tt> with a persistent address list plugin enabled for this to work.</dd>
+<dd> Add all email addresses, in the headers and body of the mail message read from STDIN, to a persistent address whitelist. Note that you must be running <tt>&quot;spamassassin&quot;</tt> or <tt>&quot;spamd&quot;</tt> with a persistent address list plugin enabled for this to work.</dd>
 <dt><code>&#8211;add-to-blacklist</code></dt>
-<dd> Add all email addresses, in the headers and body of the mail message read from <font SIZE="-1">STDIN,</font> to the persistent address blacklist. Note that you must be running <tt>&quot;spamassassin&quot;</tt> or <tt>&quot;spamd&quot;</tt> with a persistent address list plugin enabled for this to work.</dd>
+<dd> Add all email addresses, in the headers and body of the mail message read from STDIN, to the persistent address blacklist. Note that you must be running <tt>&quot;spamassassin&quot;</tt> or <tt>&quot;spamd&quot;</tt> with a persistent address list plugin enabled for this to work.</dd>
 <dt><code>-R</code>, <code>&#8211;remove-from-whitelist</code></dt>
-<dd> Remove all email addresses, in the headers and body of the mail message read from <font SIZE="-1">STDIN,</font> from a persistent address list. <font SIZE="-1">STDIN</font> must contain a full email message, so to remove a single address you should use <code>&#8211;remove-addr-from-whitelist</code> instead. </dd>
+<dd> Remove all email addresses, in the headers and body of the mail message read from STDIN, from a persistent address list. STDIN must contain a full email message, so to remove a single address you should use <code>&#8211;remove-addr-from-whitelist</code> instead. </dd>
 <p> Note that you must be running <tt>&quot;spamassassin&quot;</tt> or <tt>&quot;spamd&quot;</tt> with a persistent address list plugin enabled for this to work.</p>
 <dt><code>&#8211;add-addr-to-whitelist</code></dt>
 <dd> Add the named email address to a persistent address whitelist. Note that you must be running <tt>&quot;spamassassin&quot;</tt> or <tt>&quot;spamd&quot;</tt> with a persistent address list plugin enabled for this to work.</dd>
@@ -92,12 +92,12 @@ description: "spamassassin – simple front-end filtering script for SpamAssassi
 <dt><code>&#8211;remove-addr-from-whitelist</code></dt>
 <dd> Remove the named email address from a persistent address whitelist. Note that you must be running <tt>&quot;spamassassin&quot;</tt> or <tt>&quot;spamd&quot;</tt> with a persistent address list plugin enabled for this to work.</dd>
 <dt><code> &#8211;ipv4only</code>, <code>&#8211;ipv4-only</code>, <code>&#8211;ipv4</code></dt>
-<dd> Do not use IPv6 for <font SIZE="-1">DNS</font> tests. Normally, SpamAssassin will try to detect if IPv6 is available, using only IPv4 if it is not. Use if the existing tests for IPv6 availability produce incorrect results or crashes.</dd>
+<dd> Do not use IPv6 for DNS tests. Normally, SpamAssassin will try to detect if IPv6 is available, using only IPv4 if it is not. Use if the existing tests for IPv6 availability produce incorrect results or crashes.</dd>
 <dt><code>-L</code>, <code>&#8211;local</code></dt>
 <dd> Do only the &#8221;local&#8221; tests, ones that do not require an internet connection to operate. Normally, SpamAssassin will try to detect whether you are connected to the net before doing these tests anyway, but for faster checks you may wish to use this. </dd>
 <p> Note that SpamAssassin&#8217;s network rules are run in parallel. This can cause overhead in terms of the number of file descriptors required if <code>&#8211;local</code> is not used; it is recommended that the minimum limit on fds be raised to at least 256 for safety.</p>
 <dt><code>-d</code>, <code>&#8211;remove-markup</code></dt>
-<dd> Remove SpamAssassin markup (the &#8220;SpamAssassin results&#8221; report, X-Spam-Status headers, etc.) from the mail message. The resulting message, which will be more or less identical to the original, pre-SpamAssassin input, will be output to <font SIZE="-1">STDOUT.</font> </dd>
+<dd> Remove SpamAssassin markup (the &#8220;SpamAssassin results&#8221; report, X-Spam-Status headers, etc.) from the mail message. The resulting message, which will be more or less identical to the original, pre-SpamAssassin input, will be output to STDOUT. </dd>
 <p> (Note: the message will not be exactly identical; some headers will be reformatted due to some features of the Mail::Internet package, but the body text will be.)</p>
 <dt><code>-C</code> <i>path</i>, <code>&#8211;configpath</code>=<i>path</i>, <code>&#8211;config-file</code>=<i>path</i></dt>
 <dd> Use the specified path for locating the distributed configuration files. Ignore the default directories (usually <tt>&quot;/usr/share/spamassassin&quot;</tt> or similar).</dd>
@@ -111,7 +111,7 @@ description: "spamassassin – simple front-end filtering script for SpamAssassi
 <dt><code>-p</code> <i>prefs</i>, <code>&#8211;prefspath</code>=<i>prefs</i>, <code>&#8211;prefs-file</code>=<i>prefs</i></dt>
 <dd> Read user score preferences from <i>prefs</i> (usually <tt>&quot;$HOME/.spamassassin/user_prefs&quot;</tt>).</dd>
 <dt><code>&#8211;progress</code></dt>
-<dd> Prints a progress bar (to <font SIZE="-1">STDERR</font>) showing the current progress. This option will only be useful if you are redirecting <font SIZE="-1">STDOUT </font>(and not <font SIZE="-1">STDERR</font>). In the case where no valid terminal is found this option will behave very much like the &#8211;showdots option in other SpamAssassin programs.</dd>
+<dd> Prints a progress bar (to STDERR) showing the current progress. This option will only be useful if you are redirecting STDOUT (and not STDERR). In the case where no valid terminal is found this option will behave very much like the &#8211;showdots option in other SpamAssassin programs.</dd>
 <dt><code>-D</code> [<i>area,&#8230;</i>], <code>&#8211;debug</code> [<i>area,&#8230;</i>]</dt>
 <dd> Produce debugging output. If no areas are listed, all debugging information is printed. Diagnostic output can also be enabled for each area individually; <i>area</i> is the area of the code to instrument. For example, to produce diagnostic output on bayes, learn, and dns, use: </dd>
 <pre>
@@ -127,7 +127,7 @@ description: "spamassassin – simple front-end filtering script for SpamAssassi
 <dt><code>&#8211;mbox</code></dt>
 <dd> Specify that the input message(s) are in mbox format. mbox is a standard Unix message folder format.</dd>
 <dt><code>&#8211;mbx</code></dt>
-<dd> Specify that the input message(s) are in <font SIZE="-1">UW </font>.mbx format. mbx is the mailbox format used within the University of Washington&#8217;s <font SIZE="-1">IMAP</font> implementation; see <tt>&quot;<a rel="nofollow" href="http://www.washington.edu/imap/">http://www.washington.edu/imap/</a>&quot;</tt>.</dd></dl>
+<dd> Specify that the input message(s) are in UW .mbx format. mbx is the mailbox format used within the University of Washington&#8217;s IMAP implementation; see <tt>&quot;<a rel="nofollow" href="http://www.washington.edu/imap/">http://www.washington.edu/imap/</a>&quot;</tt>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-sa-learn/">sa-learn</a></i>(1) <i><a href="/docs/linux/man/1-spamd/">spamd</a></i>(1) <i><a href="/docs/linux/man/1-spamc/">spamc</a></i>(1) <i>Mail::SpamAssassin::Conf</i>(3) <i>Mail::SpamAssassin</i>(3)</p>
 <h2>PREREQUISITES</h2>

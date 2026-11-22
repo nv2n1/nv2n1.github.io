@@ -16,7 +16,7 @@ description: "ql/termstructures/volatility/swaption/swaptionvolmatrix.hpp – Sw
 #include &lt;boost/noncopyable.hpp&gt;
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>SwaptionVolatilityMatrix</code><br />
+<p>class <code>SwaptionVolatilityMatrix</code><br/>
  <i>At-the-money swaption-volatility matrix. </i></p>
 <h2>Detailed Description</h2>
 <p>Swaption at-the-money volatility matrix.</p>

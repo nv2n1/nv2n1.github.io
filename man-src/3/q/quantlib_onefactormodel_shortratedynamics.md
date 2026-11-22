@@ -13,11 +13,11 @@ description: "QuantLib::OneFactorModel::ShortRateDynamics – Base class describ
 <p> Inherited by <code>Dynamics</code>, <code>Dynamics</code>, <code>Dynamics</code>, and <code>Dynamics</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>ShortRateDynamics</code> (const boost::shared_ptr&lt; <code>StochasticProcess1D</code> &gt; &amp;process) </p>
-<p> virtual Real <code>variable</code> (Time t, Rate r) const =0<br />
- <i>Compute state variable from short rate. </i><br />
- virtual Rate <code>shortRate</code> (Time t, Real variable) const =0<br />
- <i>Compute short rate from state variable. </i><br />
- const boost::shared_ptr&lt; <code>StochasticProcess1D</code> &gt; &amp; <code>process</code> ()<br />
+<p> virtual Real <code>variable</code> (Time t, Rate r) const =0<br/>
+ <i>Compute state variable from short rate. </i><br/>
+ virtual Rate <code>shortRate</code> (Time t, Real variable) const =0<br/>
+ <i>Compute short rate from state variable. </i><br/>
+ const boost::shared_ptr&lt; <code>StochasticProcess1D</code> &gt; &amp; <code>process</code> ()<br/>
  <i>Returns the risk-neutral dynamics of the state variable. </i></p>
 <h2>Detailed Description</h2>
 <p>Base class describing the short-rate dynamics. </p>

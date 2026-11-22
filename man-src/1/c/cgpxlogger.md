@@ -71,7 +71,7 @@ GPSD_UNITS one of : imperial = miles / feet
 <p> <code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8), <code><a href="/docs/linux/man/3-libgps/">libgps</a></code>(3), <code><a href="/docs/linux/man/3-libgpsd/">libgpsd</a></code>(3), <code><a href="/docs/linux/man/1-gpsfake/">gpsfake</a></code>(1), <code><a href="/docs/linux/man/1-gpsctl/">gpsctl</a></code>(1), <code><a href="/docs/linux/man/1-gpscat/">gpscat</a></code>(1), <code><a href="/docs/linux/man/1-gpsprof/">gpsprof</a></code>(1). <code><a href="/docs/linux/man/1-gpspipe/">gpspipe</a></code>(1). <code><a href="/docs/linux/man/1-gpsmon/">gpsmon</a></code>(1).</p>
 <h2>AUTHORS</h2>
 <p> Remco Treffcorn, Derrick Brashear, Russ Nelson &amp; Eric S. Raymond, Jeff Francis (cgps). Amaury Jacquot sxpert [at] sxpert.org &amp; Petter Reinholdtsen pere [at] hungry.com (gpxlogger). Chris Kuethe chris.kuethe [at] gmail.com (cgpxlogger). </p>
-<p> This manual page by Eric S. Raymond esr [at] thyrsus.com. There is a project page, with xgps screenshots, at m[blue]<code>berlios.de</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> This manual page by Eric S. Raymond esr [at] thyrsus.com. There is a project page, with xgps screenshots, at m[blue]<code>berlios.de</code>m[][1].</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

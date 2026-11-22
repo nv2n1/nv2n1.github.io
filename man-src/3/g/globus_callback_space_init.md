@@ -10,31 +10,31 @@ description: "Globus Callback Spaces –"
 
 <p> Globus Callback Spaces &#8211; </p>
 <h3>Macros</h3>
-<p> #define <code>GLOBUS_CALLBACK_GLOBAL_SPACE</code><br />
+<p> #define <code>GLOBUS_CALLBACK_GLOBAL_SPACE</code><br/>
  <i>Global callback space. </i></p>
 <h3>Enumerations</h3>
-<p> enum <code>globus_callback_space_behavior_t</code> { <code>GLOBUS_CALLBACK_SPACE_BEHAVIOR_SINGLE</code>, <code>GLOBUS_CALLBACK_SPACE_BEHAVIOR_SERIALIZED</code>, <code>GLOBUS_CALLBACK_SPACE_BEHAVIOR_THREADED</code> }<br />
+<p> enum <code>globus_callback_space_behavior_t</code> { <code>GLOBUS_CALLBACK_SPACE_BEHAVIOR_SINGLE</code>, <code>GLOBUS_CALLBACK_SPACE_BEHAVIOR_SERIALIZED</code>, <code>GLOBUS_CALLBACK_SPACE_BEHAVIOR_THREADED</code> }<br/>
  <i>Callback space behaviors describe how a space behaves. </i></p>
 <h3>Functions</h3>
-<p> <code>globus_result_t</code> <code>globus_callback_space_init</code> (<code>globus_callback_space_t</code> *space, <code>globus_callback_space_attr_t</code> attr)<br />
- <i>Initialize a user space. </i><br />
- <code>globus_result_t</code> <code>globus_callback_space_reference</code> (<code>globus_callback_space_t</code> space)<br />
- <i>Take a reference to a space. </i><br />
- <code>globus_result_t</code> <code>globus_callback_space_destroy</code> (<code>globus_callback_space_t</code> space)<br />
- <i>Destroy a reference to a user space. </i><br />
- <code>globus_result_t</code> <code>globus_callback_space_attr_init</code> (<code>globus_callback_space_attr_t</code> *attr)<br />
- <i>Initialize a space attr. </i><br />
- <code>globus_result_t</code> <code>globus_callback_space_attr_destroy</code> (<code>globus_callback_space_attr_t</code> attr)<br />
- <i>Destroy a space attr. </i><br />
- <code>globus_result_t</code> <code>globus_callback_space_attr_set_behavior</code> (<code>globus_callback_space_attr_t</code> attr, <code>globus_callback_space_behavior_t</code> behavior)<br />
- <i>Set the behavior of a space. </i><br />
- <code>globus_result_t</code> <code>globus_callback_space_attr_get_behavior</code> (<code>globus_callback_space_attr_t</code> attr, <code>globus_callback_space_behavior_t</code> *behavior)<br />
- <i>Get the behavior associated with an attr. </i><br />
- <code>globus_result_t</code> <code>globus_callback_space_get</code> (<code>globus_callback_space_t</code> *space)<br />
- <i>Retrieve the space of a currently running callback. </i><br />
- int <code>globus_callback_space_get_depth</code> (<code>globus_callback_space_t</code> space)<br />
- <i>Retrieve the current nesting level of a space. </i><br />
- <code>globus_bool_t</code> <code>globus_callback_space_is_single</code> (<code>globus_callback_space_t</code> space)<br />
+<p> <code>globus_result_t</code> <code>globus_callback_space_init</code> (<code>globus_callback_space_t</code> *space, <code>globus_callback_space_attr_t</code> attr)<br/>
+ <i>Initialize a user space. </i><br/>
+ <code>globus_result_t</code> <code>globus_callback_space_reference</code> (<code>globus_callback_space_t</code> space)<br/>
+ <i>Take a reference to a space. </i><br/>
+ <code>globus_result_t</code> <code>globus_callback_space_destroy</code> (<code>globus_callback_space_t</code> space)<br/>
+ <i>Destroy a reference to a user space. </i><br/>
+ <code>globus_result_t</code> <code>globus_callback_space_attr_init</code> (<code>globus_callback_space_attr_t</code> *attr)<br/>
+ <i>Initialize a space attr. </i><br/>
+ <code>globus_result_t</code> <code>globus_callback_space_attr_destroy</code> (<code>globus_callback_space_attr_t</code> attr)<br/>
+ <i>Destroy a space attr. </i><br/>
+ <code>globus_result_t</code> <code>globus_callback_space_attr_set_behavior</code> (<code>globus_callback_space_attr_t</code> attr, <code>globus_callback_space_behavior_t</code> behavior)<br/>
+ <i>Set the behavior of a space. </i><br/>
+ <code>globus_result_t</code> <code>globus_callback_space_attr_get_behavior</code> (<code>globus_callback_space_attr_t</code> attr, <code>globus_callback_space_behavior_t</code> *behavior)<br/>
+ <i>Get the behavior associated with an attr. </i><br/>
+ <code>globus_result_t</code> <code>globus_callback_space_get</code> (<code>globus_callback_space_t</code> *space)<br/>
+ <i>Retrieve the space of a currently running callback. </i><br/>
+ int <code>globus_callback_space_get_depth</code> (<code>globus_callback_space_t</code> space)<br/>
+ <i>Retrieve the current nesting level of a space. </i><br/>
+ <code>globus_bool_t</code> <code>globus_callback_space_is_single</code> (<code>globus_callback_space_t</code> space)<br/>
  <i>See if the specified space is a single threaded behavior space. </i></p>
 <h2>Detailed Description</h2>
 <h2>Macro Definition Documentation</h2>
@@ -80,7 +80,7 @@ description: "Globus Callback Spaces –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> attr on which to query behavior<br />
+</dt><dd> <i>attr</i> attr on which to query behavior<br/>
  <i>behavior</i> storage for the behavior</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -111,7 +111,7 @@ description: "Globus Callback Spaces –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> attr to associate behavior with<br />
+</dt><dd> <i>attr</i> attr to associate behavior with<br/>
  <i>behavior</i> desired behavior</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -179,7 +179,7 @@ description: "Globus Callback Spaces –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>space</i> storage for the initialized space handle. This must be destroyed with <code>globus_callback_space_destroy()</code><br />
+</dt><dd> <i>space</i> storage for the initialized space handle. This must be destroyed with <code>globus_callback_space_destroy()</code><br/>
  <i>attr</i> a space attr descibing desired behaviors. If GLOBUS_NULL, the default behavior of GLOBUS_CALLBACK_SPACE_BEHAVIOR_SINGLE is assumed. This attr is copied into the space, so it is acceptable to destroy the attr as soon as it is no longer needed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

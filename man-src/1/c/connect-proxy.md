@@ -33,13 +33,13 @@ description: "connect-proxy — connect over SOCKS4/5 proxy"
 <dt><code>-d</code></dt>
 <dd> used for debug. If you fail to connect, use this and check request to and response from server.</dd></dl>
 <h2>USAGE</h2>
-<p> To use proxy, this example is for SOCKS5 connection to connect to<br />
-&nbsp;<wbr> <code>connect-proxy -S firewall host 25</code><br />
+<p> To use proxy, this example is for SOCKS5 connection to connect to<br/>
+&nbsp;<wbr> <code>connect-proxy -S firewall host 25</code><br/>
 &nbsp;<wbr> <code>SOCKS5_SERVER=firewall; export SOCKS5_SERVER; connect-proxy -s host 25</code> </p>
-<p> For a HTTP-PROXY connection:<br />
-&nbsp;<wbr> <code>connect-proxy -H proxy-server:8080 host 25</code><br />
+<p> For a HTTP-PROXY connection:<br/>
+&nbsp;<wbr> <code>connect-proxy -H proxy-server:8080 host 25</code><br/>
 &nbsp;<wbr> <code>HTTP_PROXY=proxy-server:8080; export HTTP_PROXY; connect-proxy -h host 25</code> </p>
-<p> To forward a local port, for example to use ssh:<br />
+<p> To forward a local port, for example to use ssh:<br/>
 &nbsp;<wbr> <code>connect-proxy -H proxy-server:8080 host 22 </code> <code>ssh -l user -p 5550 localhost</code> </p>
 <p> To use it along ssh transparently: <code> # file://~/.ssh/config Host * ProxyCommand connect-proxy -H proxy-server:8080 %h %p</code></p>
 <h2>ENVIRONMENT</h2>
@@ -49,7 +49,7 @@ description: "connect-proxy — connect over SOCKS4/5 proxy"
 <h2>WWW</h2>
 <p> <a rel="nofollow" href="http://www.taiyo.co.jp/~gotoh/ssh/connect.html">http://www.taiyo.co.jp/~gotoh/ssh/connect.html</a></p>
 <h2>AUTHOR</h2>
-<p> This manual page was written by Philippe COVAL Philippe.COVAL [at] laposte.net for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation.<br />
+<p> This manual page was written by Philippe COVAL Philippe.COVAL [at] laposte.net for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation.<br/>
 &nbsp;<wbr> </p>
-<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br />
+<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br/>
 &nbsp;<wbr> </p>

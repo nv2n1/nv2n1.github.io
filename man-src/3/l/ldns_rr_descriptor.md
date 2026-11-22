@@ -10,7 +10,7 @@ description: "ldns_rr_descriptor, ldns_rr_descript, ldns_rr_descriptor_minimum, 
 
 <p> ldns_rr_descriptor, ldns_rr_descript, ldns_rr_descriptor_minimum, ldns_rr_descriptor_maximum, ldns_rr_descriptor_field_type </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> const ldns_rr_descriptor* ldns_rr_descript(uint16_t type); </p>
@@ -22,9 +22,9 @@ description: "ldns_rr_descriptor, ldns_rr_descript, ldns_rr_descriptor_minimum, 
 <dt> <i>ldns_rr_descriptor</i></dt>
 <dd>
 </dd><dd>Contains all information about resource record types. </dd>
-<p> This structure contains, for all rr types, the rdata fields that are defined.<br />
- struct ldns_struct_rr_descriptor<br />
- {<br />
+<p> This structure contains, for all rr types, the rdata fields that are defined.<br/>
+ struct ldns_struct_rr_descriptor<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>Type of the RR that is described here:</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_type _type;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>Textual name of the RR type.:</code></p>
@@ -41,7 +41,7 @@ description: "ldns_rr_descriptor, ldns_rr_descript, ldns_rr_descriptor_minimum, 
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_compress _compress;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>The number of DNAMEs in the _wireformat string, for parsing.:</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>uint8_t _dname_count;</p>
-<p> };<br />
+<p> };<br/>
  typedef struct ldns_struct_rr_descriptor ldns_rr_descriptor;</dl>
 <dl>
 <dt> <i>ldns_rr_descript</i>()</dt>

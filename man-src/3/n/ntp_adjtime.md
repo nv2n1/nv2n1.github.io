@@ -74,8 +74,8 @@ int ntp_adjtime(struct timex *buf);</code></pre>
 <dt><code>ADJ_SETOFFSET</code> (since Linux 2.6.39)</dt>
 <dd>Add <i>buf.time</i> to the current time. If <i>buf.status</i> includes the <code>ADJ_NANO</code> flag, then <i>buf.time.tv_usec</i> is interpreted as a nanosecond value; otherwise it is interpreted as microseconds.</dd>
 <dd>The value of <i>buf.time</i> is the sum of its two fields, but the field <i>buf.time.tv_usec</i> must always be nonnegative. The following example shows how to normalize a <i>timeval</i> with nanosecond resolution.</dd>
-<dd>while (buf.time.tv_usec &lt; 0) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;buf.time.tv_sec&nbsp;<wbr>&nbsp;-=&nbsp;1;<br />
+<dd>while (buf.time.tv_usec &lt; 0) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;buf.time.tv_sec&nbsp;<wbr>&nbsp;-=&nbsp;1;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;buf.time.tv_usec&nbsp;+=&nbsp;1000000000; }</dd>
 <dt><code>ADJ_MICRO</code> (since Linux 2.6.26)</dt>
 <dd>Select microsecond resolution.</dd>

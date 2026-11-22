@@ -15,14 +15,14 @@ description: "QuantLib::GJRGARCHProcess – Stochastic-volatility GJR-GARCH(1,1)
 <p>enum <code>Discretization</code> { <code>PartialTruncation</code>, <code>FullTruncation</code>, <code>Reflection</code> } </p>
 <h3>Public Member Functions</h3>
 <p><code>GJRGARCHProcess</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;riskFreeRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;dividendYield, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;s0, <code>Real</code> v0, <code>Real</code> omega, <code>Real</code> alpha, <code>Real</code> beta, <code>Real</code> gamma, <code>Real</code> lambda, <code>Real</code> daysPerYear=252.0, Discretization d=FullTruncation) </p>
-<p> Size <code>size</code> () const<br />
- <i>returns the number of dimensions of the stochastic process </i><br />
- <code>Disposable</code>&lt; <code>Array</code> &gt; <code>initialValues</code> () const<br />
- <i>returns the initial values of the state variables </i><br />
- <code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (Time t, const <code>Array</code> &amp;x) const<br />
- <i>returns the drift part of the equation, i.e., $ mu(t, mathrm{x}_t) $ </i><br />
- <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>diffusion</code> (Time t, const <code>Array</code> &amp;x) const<br />
- <i>returns the diffusion part of the equation, i.e. $ igma(t, mathrm{x}_t) $ </i><br />
+<p> Size <code>size</code> () const<br/>
+ <i>returns the number of dimensions of the stochastic process </i><br/>
+ <code>Disposable</code>&lt; <code>Array</code> &gt; <code>initialValues</code> () const<br/>
+ <i>returns the initial values of the state variables </i><br/>
+ <code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (Time t, const <code>Array</code> &amp;x) const<br/>
+ <i>returns the drift part of the equation, i.e., $ mu(t, mathrm{x}_t) $ </i><br/>
+ <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>diffusion</code> (Time t, const <code>Array</code> &amp;x) const<br/>
+ <i>returns the diffusion part of the equation, i.e. $ igma(t, mathrm{x}_t) $ </i><br/>
  <code>Disposable</code>&lt; <code>Array</code> &gt; <code>apply</code> (const <code>Array</code> &amp;x0, const <code>Array</code> &amp;dx) const </p>
 <p> <code>Disposable</code>&lt; <code>Array</code> &gt; <code>evolve</code> (Time t0, const <code>Array</code> &amp;x0, Time dt, const <code>Array</code> &amp;dw) const </p>
 <p> <code>Real</code> <code>v0</code> () const </p>

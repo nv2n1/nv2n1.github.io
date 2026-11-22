@@ -31,7 +31,7 @@ description: "dpkg-trigger – a package trigger utility"
 <dt><code>&#8211;root=</code><i>directory</i></dt>
 <dd> Set the root directory to <i>directory</i>, which sets the administrative directory to &laquo;<i>directory</i>/var/lib/dpkg&raquo; (since dpkg 1.21.0).</dd>
 <dt><code>&#8211;by-package=</code><i>package</i></dt>
-<dd> Override trigger awaiter (normally set by <code>dpkg</code> through the <font SIZE="-1"><code>DPKG_MAINTSCRIPT_PACKAGE</code></font> environment variable of the maintainer scripts, naming the package to which the script belongs, and this will be used by default).</dd>
+<dd> Override trigger awaiter (normally set by <code>dpkg</code> through the <code>DPKG_MAINTSCRIPT_PACKAGE</code> environment variable of the maintainer scripts, naming the package to which the script belongs, and this will be used by default).</dd>
 <dt><code>&#8211;no-await</code></dt>
 <dd> This option arranges that the calling package <i>T</i> (if any) need not await the processing of this trigger; the interested package(s) <i>I</i>, will not be added to <i>T</i>&#8216;s trigger processing awaited list and <i>T</i>&#8216;s status is unchanged. <i>T</i> may be considered installed even though <i>I</i> may not yet have processed the trigger.</dd>
 <dt><code>&#8211;await</code></dt>
@@ -48,11 +48,11 @@ description: "dpkg-trigger – a package trigger utility"
 <dd> Fatal or unrecoverable error due to invalid command-line usage, or interactions with the system, such as accesses to the database, memory allocations, etc.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_ROOT</code></font></dt>
+<dt><code>DPKG_ROOT</code></dt>
 <dd> If set and the <code>&#8211;root</code> option has not been specified, it will be used as the filesystem root directory (since dpkg 1.21.0).</dd>
-<dt><font SIZE="-1"><code>DPKG_ADMINDIR</code></font></dt>
+<dt><code>DPKG_ADMINDIR</code></dt>
 <dd> If set and the <code>&#8211;admindir</code> option has not been specified, it will be used as the <code>dpkg</code> data directory.</dd>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1), <code><a href="/docs/linux/man/5-deb-triggers/">deb-triggers</a></code>(5), <code>/usr/share/doc/dpkg/triggers.txt.gz</code>. </p>

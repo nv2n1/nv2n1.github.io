@@ -11,7 +11,7 @@ description: "clapmr.f –"
 <p> clapmr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clapmr</code> (FORWRD, M, N, X, LDX, K)<br />
+<p> subroutine <code>clapmr</code> (FORWRD, M, N, X, LDX, K)<br/>
  <i></i><code>CLAPMR</code> rearranges rows of a matrix as specified by a permutation vector.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clapmr (logicalFORWRD, integerM, integerN, complex, dimension( ldx, * )X, integerLDX, integer, dimension( * )K)</h3>

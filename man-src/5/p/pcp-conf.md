@@ -16,8 +16,8 @@ description: "pcp.conf – the Performance Co-Pilot configuration and environmen
 <p> The syntax rules for <i>pcp.conf</i> are as follows :</p>
 <dl>
 <dt>1.</dt>
-<dd>the general syntax is<br />
- <center> <code>PCP_VARIABLE_NAME=variable value to end of line</code><br />
+<dd>the general syntax is<br/>
+ <center> <code>PCP_VARIABLE_NAME=variable value to end of line</code><br/>
  </center></dd>
 <dt>2.</dt>
 <dd>lines that begin with <code>#</code> and all blank lines are ignored.</dd>

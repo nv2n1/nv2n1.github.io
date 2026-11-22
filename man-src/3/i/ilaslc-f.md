@@ -10,7 +10,7 @@ description: "ilaslc.f –"
 <p>ilaslc.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>INTEGER function <code>ilaslc</code> (M, N, A, LDA)<br />
+<p>INTEGER function <code>ilaslc</code> (M, N, A, LDA)<br/>
  <i></i><code>ILASLC</code> scans a matrix for its last non-zero column.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function ilaslc (integerM, integerN, real, dimension( lda, * )A, integerLDA)</h3>

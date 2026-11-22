@@ -10,7 +10,7 @@ description: "slaein.f –"
 <p>slaein.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slaein</code> (RIGHTV, NOINIT, N, H, LDH, WR, WI, VR, VI, B, LDB, WORK, EPS3, SMLNUM, BIGNUM, INFO)<br />
+<p>subroutine <code>slaein</code> (RIGHTV, NOINIT, N, H, LDH, WR, WI, VR, VI, B, LDB, WORK, EPS3, SMLNUM, BIGNUM, INFO)<br/>
  <i></i><code>SLAEIN</code> computes a specified right or left eigenvector of an upper Hessenberg matrix by inverse iteration.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaein (logicalRIGHTV, logicalNOINIT, integerN, real, dimension( ldh, * )H, integerLDH, realWR, realWI, real, dimension( * )VR, real, dimension( * )VI, real, dimension( ldb, * )B, integerLDB, real, dimension( * )WORK, realEPS3, realSMLNUM, realBIGNUM, integerINFO)</h3>

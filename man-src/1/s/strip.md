@@ -10,31 +10,31 @@ description: "strip – discard symbols and other data from object files"
 
 <p> strip &#8211; discard symbols and other data from object files </p>
 <h2>SYNOPSIS</h2>
-<p> strip [<code>-F</code> <i>bfdname</i> |<code>&#8211;target=</code><i>bfdname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-I</code>&nbsp;<i>bfdname</i>&nbsp;|<code>&#8211;input-target=</code><i>bfdname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-O</code>&nbsp;<i>bfdname</i>&nbsp;|<code>&#8211;output-target=</code><i>bfdname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-s</code>|<code>&#8211;strip-all</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-S</code>|<code>-g</code>|<code>-d</code>|<code>&#8211;strip-debug</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;strip-dwo</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-K</code>&nbsp;<i>symbolname</i>|<code>&#8211;keep-symbol=</code><i>symbolname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-M</code>|<code>&#8211;merge-notes</code>][<code>&#8211;no-merge-notes</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-N</code>&nbsp;<i>symbolname</i>&nbsp;|<code>&#8211;strip-symbol=</code><i>symbolname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-w</code>|<code>&#8211;wildcard</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-x</code>|<code>&#8211;discard-all</code>]&nbsp;[<code>-X</code>&nbsp;|<code>&#8211;discard-locals</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-R</code>&nbsp;<i>sectionname</i>&nbsp;|<code>&#8211;remove-section=</code><i>sectionname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;keep-section=</code><i>sectionpattern</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;remove-relocations=</code><i>sectionpattern</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>&nbsp;<i>file</i>]&nbsp;[<code>-p</code>|<code>&#8211;preserve-dates</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-D</code>|<code>&#8211;enable-deterministic-archives</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-U</code>|<code>&#8211;disable-deterministic-archives</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;keep-section-symbols</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;keep-file-symbols</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;only-keep-debug</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>&nbsp;|<code>&#8211;verbose</code>]&nbsp;[<code>-V</code>|<code>&#8211;version</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;help</code>]&nbsp;[<code>&#8211;info</code>]<br />
+<p> strip [<code>-F</code> <i>bfdname</i> |<code>&#8211;target=</code><i>bfdname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-I</code>&nbsp;<i>bfdname</i>&nbsp;|<code>&#8211;input-target=</code><i>bfdname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-O</code>&nbsp;<i>bfdname</i>&nbsp;|<code>&#8211;output-target=</code><i>bfdname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-s</code>|<code>&#8211;strip-all</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-S</code>|<code>-g</code>|<code>-d</code>|<code>&#8211;strip-debug</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;strip-dwo</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-K</code>&nbsp;<i>symbolname</i>|<code>&#8211;keep-symbol=</code><i>symbolname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-M</code>|<code>&#8211;merge-notes</code>][<code>&#8211;no-merge-notes</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-N</code>&nbsp;<i>symbolname</i>&nbsp;|<code>&#8211;strip-symbol=</code><i>symbolname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-w</code>|<code>&#8211;wildcard</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-x</code>|<code>&#8211;discard-all</code>]&nbsp;[<code>-X</code>&nbsp;|<code>&#8211;discard-locals</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-R</code>&nbsp;<i>sectionname</i>&nbsp;|<code>&#8211;remove-section=</code><i>sectionname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;keep-section=</code><i>sectionpattern</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;remove-relocations=</code><i>sectionpattern</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>&nbsp;<i>file</i>]&nbsp;[<code>-p</code>|<code>&#8211;preserve-dates</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-D</code>|<code>&#8211;enable-deterministic-archives</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-U</code>|<code>&#8211;disable-deterministic-archives</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;keep-section-symbols</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;keep-file-symbols</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;only-keep-debug</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>&nbsp;|<code>&#8211;verbose</code>]&nbsp;[<code>-V</code>|<code>&#8211;version</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;help</code>]&nbsp;[<code>&#8211;info</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>objfile</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
-<p> <font SIZE="-1">GNU</font> <code>strip</code> discards all symbols from object files <i>objfile</i>. The list of object files may include archives. At least one object file must be given. </p>
+<p> GNU <code>strip</code> discards all symbols from object files <i>objfile</i>. The list of object files may include archives. At least one object file must be given. </p>
 <p> <code>strip</code> modifies the files named in its argument, rather than writing modified copies under different names.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -89,7 +89,7 @@ description: "strip – discard symbols and other data from object files"
 </dd><dt><code>&#8211;strip-debug</code></dt>
 <dd> Remove debugging symbols only.</dd>
 <dt><code>&#8211;strip-dwo</code></dt>
-<dd> Remove the contents of all <font SIZE="-1">DWARF</font> .dwo sections, leaving the remaining debugging sections and all symbols intact. See the description of this option in the <code>objcopy</code> section for more information.</dd>
+<dd> Remove the contents of all DWARF .dwo sections, leaving the remaining debugging sections and all symbols intact. See the description of this option in the <code>objcopy</code> section for more information.</dd>
 <dt><code>&#8211;strip-unneeded</code></dt>
 <dd> Remove all symbols that are not needed for relocation processing in addition to debugging symbols and sections stripped by <code>&#8211;strip-debug</code>.</dd>
 <dt><code>-K</code> <i>symbolname</i></dt>
@@ -101,7 +101,7 @@ description: "strip – discard symbols and other data from object files"
 </dd><dt><code>&#8211;merge-notes</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-merge-notes</code></dt>
-<dd> For <font SIZE="-1">ELF</font> files, attempt (or do not attempt) to reduce the size of any <font SIZE="-1">SHT_NOTE</font> type sections by removing duplicate notes. The default is to attempt this reduction unless stripping debug or <font SIZE="-1">DWO</font> information.</dd>
+<dd> For ELF files, attempt (or do not attempt) to reduce the size of any SHT_NOTE type sections by removing duplicate notes. The default is to attempt this reduction unless stripping debug or DWO information.</dd>
 <dt><code>-N</code> <i>symbolname</i></dt>
 <dd>
 </dd><dt><code>&#8211;strip-symbol=</code><i>symbolname</i></dt>
@@ -120,7 +120,7 @@ description: "strip – discard symbols and other data from object files"
 <dt><code>-U</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-deterministic-archives</code></dt>
-<dd> Do <i>not</i> operate in <i>deterministic</i> mode. This is the inverse of the <code>-D</code> option, above: when copying archive members and writing the archive index, use their actual <font SIZE="-1">UID, GID,</font> timestamp, and file mode values. </dd>
+<dd> Do <i>not</i> operate in <i>deterministic</i> mode. This is the inverse of the <code>-D</code> option, above: when copying archive members and writing the archive index, use their actual UID, GID, timestamp, and file mode values. </dd>
 <p> This is the default unless <i>binutils</i> was configured with <code>&#8211;enable-deterministic-archives</code>.</p>
 <dt><code>-w</code></dt>
 <dd>
@@ -143,9 +143,9 @@ description: "strip – discard symbols and other data from object files"
 <dt><code>&#8211;keep-file-symbols</code></dt>
 <dd> When stripping a file, perhaps with <code>&#8211;strip-debug</code> or <code>&#8211;strip-unneeded</code>, retain any symbols specifying source file names, which would otherwise get stripped.</dd>
 <dt><code>&#8211;only-keep-debug</code></dt>
-<dd> Strip a file, emptying the contents of any sections that would not be stripped by <code>&#8211;strip-debug</code> and leaving the debugging sections intact. In <font SIZE="-1">ELF</font> files, this preserves all the note sections in the output as well. </dd>
+<dd> Strip a file, emptying the contents of any sections that would not be stripped by <code>&#8211;strip-debug</code> and leaving the debugging sections intact. In ELF files, this preserves all the note sections in the output as well. </dd>
 <p> Note &#8211; the section headers of the stripped sections are preserved, including their sizes, but the contents of the section are discarded. The section headers are preserved so that other tools can match up the debuginfo file with the real executable, even if that executable has been relocated to a different address space. </p>
-<p> The intention is that this option will be used in conjunction with <code>&#8211;add-gnu-debuglink</code> to create a two part executable. One a stripped binary which will occupy less space in <font SIZE="-1">RAM</font> and in a distribution and the second a debugging information file which is only needed if debugging abilities are required. The suggested procedure to create these files is as follows:</p>
+<p> The intention is that this option will be used in conjunction with <code>&#8211;add-gnu-debuglink</code> to create a two part executable. One a stripped binary which will occupy less space in RAM and in a distribution and the second a debugging information file which is only needed if debugging abilities are required. The suggested procedure to create these files is as follows:</p>
 <dl>
 <dl>
 <dt>1.&lt;Link the executable as normal. Assuming that it is called&gt;</dt>
@@ -191,4 +191,4 @@ description: "strip – discard symbols and other data from object files"
 <p> the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991-2022 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

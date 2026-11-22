@@ -51,8 +51,8 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>c</i> the certificate to encode.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>c</i> the certificate to encode.<br/>
  <i>os</i> the encode certificate, set to NULL, 0 on case of error. Free the os-&gt;data with <code>hx509_xfree()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -63,9 +63,9 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>cert</i> A hx509 context.<br />
- <i>eku</i> the EKU to check for<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>cert</i> A hx509 context.<br/>
+ <i>eku</i> the EKU to check for<br/>
  <i>allow_any_eku</i> if the any EKU is set, allow that to be a substitute.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -76,7 +76,7 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>p</i> a hx509 certificate object.<br />
+</dt><dd> <i>p</i> a hx509 certificate object.<br/>
  <i>q</i> a hx509 certificate object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -88,9 +88,9 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>cert</i> a hx509 certificate object.<br />
- <i>oid</i> an oid to for SubjectAltName.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>cert</i> a hx509 certificate object.<br/>
+ <i>oid</i> an oid to for SubjectAltName.<br/>
  <i>list</i> list of matching SubjectAltName.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -107,7 +107,7 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cert</i> hx509 certificate object to search<br />
+</dt><dd> <i>cert</i> hx509 certificate object to search<br/>
  <i>oid</i> an oid to search for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -118,8 +118,8 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>c</i> a hx509 certificate object.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>c</i> a hx509 certificate object.<br/>
  <i>name</i> a pointer to a hx509 name, should be freed by <code>hx509_name_free()</code>. See also <code>hx509_cert_get_subject()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -140,7 +140,7 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>p</i> a hx509 certificate object.<br />
+</dt><dd> <i>p</i> a hx509 certificate object.<br/>
  <i>name</i> a pointer to a hx509 name, should be freed by <code>hx509_name_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -151,8 +151,8 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509_context<br />
- <i>p</i> a hx509 certificate<br />
+</dt><dd> <i>context</i> a hx509_context<br/>
+ <i>p</i> a hx509 certificate<br/>
  <i>issuer</i> the issuer id returned, free with der_free_bit_string()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -183,7 +183,7 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>p</i> a hx509 certificate object.<br />
+</dt><dd> <i>p</i> a hx509 certificate object.<br/>
  <i>i</i> serial number, should be freed ith der_free_heim_integer().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -194,8 +194,8 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>p</i> a hx509 certificate object.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>p</i> a hx509 certificate object.<br/>
  <i>spki</i> SubjectPublicKeyInfo, should be freed with free_SubjectPublicKeyInfo().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -206,8 +206,8 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>p</i> a hx509 certificate object.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>p</i> a hx509 certificate object.<br/>
  <i>alg</i> AlgorithmIdentifier, should be freed with free_AlgorithmIdentifier(). The algorithmidentifier is typicly rsaEncryption, or id-ecPublicKey, or some other public key mechanism.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -218,7 +218,7 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>p</i> a hx509 certificate object.<br />
+</dt><dd> <i>p</i> a hx509 certificate object.<br/>
  <i>name</i> a pointer to a hx509 name, should be freed by <code>hx509_name_free()</code>. See also <code>hx509_cert_get_base_subject()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -229,8 +229,8 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509_context<br />
- <i>p</i> a hx509 certificate<br />
+</dt><dd> <i>context</i> a hx509_context<br/>
+ <i>p</i> a hx509 certificate<br/>
  <i>subject</i> the subject id returned, free with der_free_bit_string()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -241,8 +241,8 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>c</i><br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>c</i><br/>
  <i>error</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -254,9 +254,9 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>ptr</i> pointer to memory region containing encoded certificate.<br />
- <i>len</i> length of memory region.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>ptr</i> pointer to memory region containing encoded certificate.<br/>
+ <i>len</i> length of memory region.<br/>
  <i>error</i> possibly returns an error</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -277,7 +277,7 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cert</i> The certificate to set the friendly name on<br />
+</dt><dd> <i>cert</i> The certificate to set the friendly name on<br/>
  <i>name</i> Friendly name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -288,8 +288,8 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context, can be NULL<br />
- <i>cert</i> certificate to print<br />
+</dt><dd> <i>context</i> A hx509 context, can be NULL<br/>
+ <i>cert</i> certificate to print<br/>
  <i>out</i> the stdio output stream, if NULL, stdout is used</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -300,7 +300,7 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
  <i>q</i> return pointer to a hx509_query.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -311,15 +311,15 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
  <i>q</i> a pointer to the query controller.</dd></dl>
 <h3>int hx509_query_match_cmp_func (hx509_query *q, int(*)(hx509_context, hx509_cert, void *)func, void *ctx)</h3>
 <p> Set the query controller to match using a specific match function. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>q</i> a hx509 query controller.<br />
- <i>func</i> function to use for matching, if the argument is NULL, the match function is removed.<br />
+</dt><dd> <i>q</i> a hx509 query controller.<br/>
+ <i>func</i> function to use for matching, if the argument is NULL, the match function is removed.<br/>
  <i>ctx</i> context passed to the function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -330,7 +330,7 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>q</i> a hx509 query controller.<br />
+</dt><dd> <i>q</i> a hx509 query controller.<br/>
  <i>eku</i> an EKU to match on.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -341,7 +341,7 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>q</i> a hx509 query controller.<br />
+</dt><dd> <i>q</i> a hx509 query controller.<br/>
  <i>name</i> a friendly name to match on</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -352,8 +352,8 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>q</i> a hx509 query controller<br />
- <i>issuer</i> issuer to search for<br />
+</dt><dd> <i>q</i> a hx509 query controller<br/>
+ <i>issuer</i> issuer to search for<br/>
  <i>serialNumber</i> the serialNumber of the issuer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -364,7 +364,7 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>q</i> query controller.<br />
+</dt><dd> <i>q</i> query controller.<br/>
  <i>option</i> options to control the query controller.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -375,22 +375,22 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
  <i>fn</i> statistics file name</dd></dl>
 <h3>void hx509_query_unparse_stats (hx509_contextcontext, intprinttype, FILE *out)</h3>
 <p> Unparse the statistics file and print the result on a FILE descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>printtype</i> tyep to print<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>printtype</i> tyep to print<br/>
  <i>out</i> the FILE to write the data on.</dd></dl>
 <h3>void hx509_verify_ctx_f_allow_default_trustanchors (hx509_verify_ctxctx, intboolean)</h3>
 <p> Allow using the operating system builtin trust anchors if no other trust anchors are configured. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ctx</i> a verification context<br />
+</dt><dd> <i>ctx</i> a verification context<br/>
  <i>boolean</i> if non zero, useing the operating systems builtin trust anchors.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -401,8 +401,8 @@ description: "hx509 certificate functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>cert</i> the certificate to match with<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>cert</i> the certificate to match with<br/>
  <i>flags</i> Flags to modify the behavior:</dd>
 <dl>
 <dt>&bull;</dt>
@@ -413,8 +413,8 @@ description: "hx509 certificate functions –"
 <dd> HX509_HN_HOSTNAME for plain hostname.</dd>
 <dt>&bull;</dt>
 <dd> HX509_HN_DNSSRV for DNS SRV names.</dd></dl>
-<p> <i>hostname</i> the hostname to check<br />
- <i>sa</i> address of the host<br />
+<p> <i>hostname</i> the hostname to check<br/>
+ <i>sa</i> address of the host<br/>
  <i>sa_size</i> length of address</dl>
 <p> <code>Returns:</code></p>
 <dl>

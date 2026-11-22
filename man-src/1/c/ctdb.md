@@ -83,24 +83,24 @@ description: "ctdb – CTDB management utility"
 <h3>status</h3>
 <p> This command shows the current status of all CTDB nodes based on information from the queried node. </p>
 <p> Note: If the the queried node is INACTIVE then the status might not be current. </p>
-<p> <font SIZE="+1"> <code>Node status</code></p>
+<p>  <code>Node status</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> This includes the number of physical nodes and the status of each node. See <code><a href="/docs/linux/man/7-ctdb/">ctdb</a></code>(7) for information about node states.</dd></dl>
-<p> </font><font SIZE="+2"> <code>Generation</code></p>
+<p>  <code>Generation</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> The generation id is a number that indicates the current generation of a cluster instance. Each time a cluster goes through a reconfiguration or a recovery its generation id will be changed. </p>
 <p> This number does not have any particular meaning other than to keep track of when a cluster has gone through a recovery. It is a random number that represents the current instance of a ctdb cluster and its databases. The CTDB daemon uses this number internally to be able to tell when commands to operate on the cluster and the databases was issued in a different generation of the cluster, to ensure that commands that operate on the databases will not survive across a cluster database recovery. After a recovery, all old outstanding commands will automatically become invalid. </p>
 <p> Sometimes this number will be shown as &quot;INVALID&quot;. This only means that the ctdbd daemon has started but it has not yet merged with the cluster through a recovery. All nodes start with generation &quot;INVALID&quot; and are not assigned a real generation id until they have successfully been merged with a cluster through a recovery.</dd></dl>
-<p> </font><font SIZE="+3"> <code>Virtual Node Number (VNN) map</code></p>
+<p>  <code>Virtual Node Number (VNN) map</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> Consists of the number of virtual nodes and mapping from virtual node numbers to physical node numbers. Virtual nodes host CTDB databases. Only nodes that are participating in the VNN map can become lmaster or dmaster for database records.</dd></dl>
-<p> </font><font SIZE="+4"> <code>Recovery mode</code></p>
+<p>  <code>Recovery mode</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -109,17 +109,17 @@ description: "ctdb – CTDB management utility"
 <p> RECOVERY &#8211; The cluster databases have all been frozen, pausing all services while the cluster awaits a recovery process to complete. A recovery process should finish within seconds. If a cluster is stuck in the RECOVERY state this would indicate a cluster malfunction which needs to be investigated. </p>
 <p> Once the recovery master detects an inconsistency, for example a node becomes disconnected/connected, the recovery daemon will trigger a cluster recovery process, where all databases are remerged across the cluster. When this process starts, the recovery master will first &quot;freeze&quot; all databases to prevent applications such as samba from accessing the databases and it will also mark the recovery mode as RECOVERY. </p>
 <p> When the CTDB daemon starts up, it will start in RECOVERY mode. Once the node has been merged into a cluster and all databases have been recovered, the node mode will change into NORMAL mode and the databases will be &quot;thawed&quot;, allowing samba to access the databases again.</dd></dl>
-<p> </font><font SIZE="+5"> <code>Recovery master</code></p>
+<p>  <code>Recovery master</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> This is the cluster node that is currently designated as the recovery master. This node is responsible of monitoring the consistency of the cluster and to perform the actual recovery process when reqired. </p>
 <p> Only one node at a time can be the designated recovery master. Which node is designated the recovery master is decided by an election process in the recovery daemons running on each node.</dd></dl>
-<p> </font><font SIZE="+6"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb status
 Number of nodes:4
@@ -147,11 +147,11 @@ Recovery master:0
 <dt>
 </dt><dd> &bull; <code>ctdb status</code> provides status information for all nodes. <code>ctdb nodestatus</code> defaults to providing status for only the current node. If PNN-LIST is provided then status is given for the indicated node(s).</dd></dl>
 <p> A common invocation in scripts is <code>ctdb nodestatus all</code> to check whether all nodes in a cluster are healthy. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb nodestatus
 pnn:0 10.0.0.30        OK (THIS NODE)
@@ -167,11 +167,11 @@ pnn:1 10.0.0.31        OK
 <p> Note: If the the queried node is INACTIVE then the status might not be current.</p>
 <h3>uptime</h3>
 <p> This command shows the uptime for the ctdb daemon. When the last recovery or ip-failover completed and how long it took. If the &quot;duration&quot; is shown as a negative number, this indicates that there is a recovery/failover in progress and it started that many seconds ago. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb uptime
 Current time of node          :                Thu Oct 29 10:38:54 2009
@@ -183,11 +183,11 @@ Duration of last recovery/failover: 2.248552 seconds
 </dl>
 <h3>listnodes</h3>
 <p> This command shows lists the ip addresses of all the nodes in the cluster. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb listnodes
 192.168.2.200
@@ -199,11 +199,11 @@ Duration of last recovery/failover: 2.248552 seconds
 </dl>
 <h3>natgwlist</h3>
 <p> Show the current NAT gateway master and the status of all nodes in the current NAT gateway group. See the NAT GATEWAY section in <code><a href="/docs/linux/man/7-ctdb/">ctdb</a></code>(7) for more details. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb natgwlist
 0 192.168.2.200
@@ -217,11 +217,11 @@ pnn:3 192.168.2.203       OK
 </dl>
 <h3>ping</h3>
 <p> This command will &quot;ping&quot; specified CTDB nodes in the cluster to verify that they are running. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb ping
 response from 0 time=0.000054 sec  (3 clients)
@@ -230,11 +230,11 @@ response from 0 time=0.000054 sec  (3 clients)
 </dl>
 <h3>ifaces</h3>
 <p> This command will display the list of network interfaces, which could host public addresses, along with their status. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb ifaces
 Interfaces on node 0
@@ -253,11 +253,11 @@ name:eth2 link:up references:1
 </dl>
 <h3>ip</h3>
 <p> This command will display the list of public addresses that are provided by the cluster and which physical node is currently serving this ip. By default this command will ONLY show those public addresses that are known to the node itself. To see the full list of all public ips across the cluster you must use &quot;ctdb ip all&quot;. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre><code>
 #ctdb ip - v
 Public IPs on node 0 172.31.91.82 node[1] active[] available[eth2, eth3] configured[eth2, eth3] 172.31.91.83 node[0] active[eth3] available[eth2, eth3] configured[eth2, eth3] 172.31.91.84 node[1] active[] available[eth2, eth3] configured[eth2, eth3] 172.31.91.85 node[0] active[eth2] available[eth2, eth3] configured[eth2, eth3] 172.31.92.82 node[1] active[] available[eth5] configured[eth4, eth5] 172.31.92.83 node[0] active[eth5] available[eth5] configured[eth4, eth5] 172.31.92.84 node[1] active[] available[eth5] configured[eth4, eth5] 172.31.92.85 node[0] active[eth5] available[eth5] configured[eth4, eth5]
@@ -271,11 +271,11 @@ Public IPs on node 0 172.31.91.82 node[1] active[] available[eth2, eth3] configu
 </dl>
 <h3>ipinfo <i>IP</i></h3>
 <p> This command will display details about the specified public addresses. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre><code>
 #ctdb ipinfo 172.31.92.85
 Public IP[172.31.92.85] info on node 0 IP : 172.31.92.85 CurrentNode : 0 NumInterfaces : 2 Interface[1] : Name : eth4 Link : down References : 0 Interface[2] : Name : eth5 Link : up References : 2(active)
@@ -284,11 +284,11 @@ Public IP[172.31.92.85] info on node 0 IP : 172.31.92.85 CurrentNode : 0 NumInte
 </dl>
 <h3>scriptstatus</h3>
 <p> This command displays which scripts where run in the previous monitoring cycle and the result of each script. If a script failed with an error, causing the node to become unhealthy, the output from that script is also shown. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb scriptstatus
 7 scripts were executed last monitoring cycle
@@ -312,11 +312,11 @@ OUTPUT:ERROR: Samba tcp port 445 is not responding
 <p> This will take effect the next time the eventscripts are being executed so it can take a short while until this is reflected in &#8216;scriptstatus&#8217;.</p>
 <h3>listvars</h3>
 <p> List all tuneable variables, except the values of the obsolete tunables like VacuumMinInterval. The obsolete tunables can be retrieved only explicitly with the &quot;ctdb getvar&quot; command. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb listvars
 MaxRedirectCount        = 3
@@ -367,11 +367,11 @@ RecoverPDBBySeqNum      = 0
 </dl>
 <h3>getvar <i>NAME</i></h3>
 <p> Get the runtime value of a tuneable variable. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb getvar MaxRedirectCount
 MaxRedirectCount    = 3
@@ -410,11 +410,11 @@ LVS: NO
 </dd></dl>
 <h3>statistics</h3>
 <p> Collect statistics from the CTDB daemon about how many calls it has served. Information about various fields in statistics can be found in <code><a href="/docs/linux/man/7-ctdb-statistics/">ctdb-statistics</a></code>(7). </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb statistics
 CTDB version 1
@@ -460,11 +460,11 @@ max_lockwait_latency               0.000000 sec
 <p> Example: ctdb statisticsreset</p>
 <h3>dbstatistics <i>DB</i></h3>
 <p> Display statistics about the database DB. Information about various fields in dbstatistics can be found in <code><a href="/docs/linux/man/7-ctdb-statistics/">ctdb-statistics</a></code>(7). </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb dbstatistics locking.tdb
 DB Statistics: locking.tdb
@@ -581,11 +581,11 @@ DB Statistics: locking.tdb
 <p> If a PERSISTENT database is not in a healthy state the database is flagged as UNHEALTHY. If there&#8217;s at least one completely healthy node running in the cluster, it&#8217;s possible that the content is restored by a recovery run automaticly. Otherwise an administrator needs to analyze the problem. </p>
 <p> See also &quot;ctdb getdbstatus&quot;, &quot;ctdb backupdb&quot;, &quot;ctdb restoredb&quot;, &quot;ctdb dumpbackup&quot;, &quot;ctdb wipedb&quot;, &quot;ctdb setvar AllowUnhealthyDBRead 1&quot; and (if samba or tdb-utils are installed) &quot;tdbtool check&quot;. </p>
 <p> Most databases are not persistent and only store the state information that the currently running samba daemons need. These databases are always wiped when ctdb/samba starts and when a node is rebooted. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb getdbmap
 Number of databases:10
@@ -645,11 +645,11 @@ dbid:0xb775fff6 name:secrets.tdb path:/var/lib/ctdb/persistent/secrets.tdb.0 PER
 <h3>runstate [setup|first_recovery|startup|running]</h3>
 <p> Print the runstate of the specified node. Runstates are used to serialise important state transitions in CTDB, particularly during startup. </p>
 <p> If one or more optional runstate arguments are specified then the node must be in one of these runstates for the command to succeed. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb runstate
 RUNNING
@@ -691,11 +691,11 @@ RUNNING
 <p> This command checks if a specific process exists on the CTDB host. This is mainly used by Samba to check if remote instances of samba are still running or not.</p>
 <h3>getdbstatus <i>DB</i></h3>
 <p> This command displays more details about a database. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb getdbstatus test.tdb.0
 dbid: 0x122224da
@@ -754,11 +754,11 @@ HEALTH: NO-HEALTHY-NODES - ERROR - Backup of corrupted TDB in '/var/lib/ctdb/per
 <p> This command marks the given nodes as rebalance targets in the LCP2 IP allocation algorithm. The <code>reloadips</code> command will do this as necessary so this command should not be needed.</p>
 <h3>check_srvids <i>SRVID</i> &#8230;</h3>
 <p> This command checks whether a set of srvid message ports are registered on the node or not. The command takes a list of values to check. </p>
-<p> <font SIZE="+1"> <code>Example</code></p>
+<p>  <code>Example</code></p>
 <dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 # ctdb check_srvids 1 2 3 14765
 Server id 0:1 does not exist

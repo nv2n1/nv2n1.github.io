@@ -114,7 +114,7 @@ mysqldbcompare-- server1 = root[at] host1-- server2 = root[at] host2-- difftype 
 </dt><dd> &bull; <code>&#8211;changes-for=server2</code>: Produce output that shows how to make the definitions of objects on server2 like the definitions of the corresponding objects on server1.</dd></dl>
 <p> The default direction is server1. </p>
 <p> You must provide connection parameters (user, host, password, and so forth) for an account that has the appropriate privileges to access all objects in the operation. </p>
-<p> If the utility is to be run on a server that has binary logging enabled, and you do not want the comparison steps logged, use the <code>&#8211;disable-binary-logging</code> option.<br />
+<p> If the utility is to be run on a server that has binary logging enabled, and you do not want the comparison steps logged, use the <code>&#8211;disable-binary-logging</code> option.<br/>
 OPTIONS </p>
 <p> <code>mysqldbcompare</code> accepts the following command-line options: </p>
 <dl>
@@ -194,84 +194,84 @@ OPTIONS </p>
 <p> The login user must have the appropriate permissions to read all databases and tables listed. </p>
 <p> For the <code>&#8211;difftype</code> option, the permitted values are not case sensitive. In addition, values may be specified as any unambiguous prefix of a valid value. For example, <code>&#8211;difftype=d</code> specifies the differ type. An error occurs if a prefix matches more than one valid value. </p>
 <p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf). </p>
-<p> If any database identifier specified as an argument contains special characters or is a reserved word, then it must be appropriately quoted with backticks (<code>`</code>). In turn, names quoted with backticks must also be quoted with single or double quotes depending on the operating system, i.e. (<code>&quot;</code>) in Windows or (<code>&#8216;</code>) in non-Windows systems, in order for the utilities to read backtick quoted identifiers as a single argument. For example, to compare a database with the name <code>weird`db.name</code> with <code>other:weird`db.name</code>, the database pair must be specified using the following syntax (in non-Windows): <code>&#8216;`weird&#8220;db.name`:`other:weird&#8220;db.name`&#8217;</code>.<br />
+<p> If any database identifier specified as an argument contains special characters or is a reserved word, then it must be appropriately quoted with backticks (<code>`</code>). In turn, names quoted with backticks must also be quoted with single or double quotes depending on the operating system, i.e. (<code>&quot;</code>) in Windows or (<code>&#8216;</code>) in non-Windows systems, in order for the utilities to read backtick quoted identifiers as a single argument. For example, to compare a database with the name <code>weird`db.name</code> with <code>other:weird`db.name</code>, the database pair must be specified using the following syntax (in non-Windows): <code>&#8216;`weird&#8220;db.name`:`other:weird&#8220;db.name`&#8217;</code>.<br/>
 EXAMPLES </p>
 <p> Use the following command to compare the emp1 and emp2 databases on the local server, and run all tests even if earlier tests fail: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqldbcompare&#8211; server1 = root[at] localhost emp1 : emp2&#8211; run &#8211; all &#8211; tests<br />
-#server1 on localhost : &#8230; connected.<br />
-#Checking databases emp1 on server1 and emp2 on server2<br />
-                                                                              WARNING : Objects in server2 : emp2 but not in server1 : emp1 : TRIGGER : trg PROCEDURE : p1 TABLE : t1 VIEW : v1 Defn Row Data Type Object Name Diff Count Check&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -FUNCTION f1 pass &#8211;<br />
-                                                                                                                                                                                             -TABLE departments pass pass FAIL<br />
-                                                                                                                                                                                                  Data differences found among rows : &#8212; -emp1.departments++ +<br />
-                                                                                                                                                                                             emp2.departments<br />
-                                                                                                                                                                                             @ @-1,<br />
-                   4 + 1, 4 @ @ ************************ * 1. row *************************dept_no : d002 &#8211; dept_name : dunno + dept_name : Finance 1 rows.Rows in emp1.departments not in emp2.departments * ************************1. row * ************************dept_no : d008 dept_name : Research 1 rows.Rows in emp2.departments not in emp1.departments * ************************1. row * ************************dept_no : d100 dept_name : stupid 1 rows.TABLE dept_manager pass pass pass Database consistency check failed.<br />
+$ mysqldbcompare&#8211; server1 = root[at] localhost emp1 : emp2&#8211; run &#8211; all &#8211; tests<br/>
+#server1 on localhost : &#8230; connected.<br/>
+#Checking databases emp1 on server1 and emp2 on server2<br/>
+                                                                              WARNING : Objects in server2 : emp2 but not in server1 : emp1 : TRIGGER : trg PROCEDURE : p1 TABLE : t1 VIEW : v1 Defn Row Data Type Object Name Diff Count Check&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -FUNCTION f1 pass &#8211;<br/>
+                                                                                                                                                                                             -TABLE departments pass pass FAIL<br/>
+                                                                                                                                                                                                  Data differences found among rows : &#8212; -emp1.departments++ +<br/>
+                                                                                                                                                                                             emp2.departments<br/>
+                                                                                                                                                                                             @ @-1,<br/>
+                   4 + 1, 4 @ @ ************************ * 1. row *************************dept_no : d002 &#8211; dept_name : dunno + dept_name : Finance 1 rows.Rows in emp1.departments not in emp2.departments * ************************1. row * ************************dept_no : d008 dept_name : Research 1 rows.Rows in emp2.departments not in emp1.departments * ************************1. row * ************************dept_no : d100 dept_name : stupid 1 rows.TABLE dept_manager pass pass pass Database consistency check failed.<br/>
 #&#8230; done
 </dd></dl>
 <p> Given: two databases with the same table layout. Data for each table contains: </p>
 <dl>
 <dt>
 </dt><dd>
-mysql &gt; select *from db1.t1;<br />
-+ &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | a | b |<br />
-    +&#8211; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | 1 | Test 789 |<br />
-    | 2 | Test 456 |<br />
-    | 3 | Test 123 |<br />
-    | 4 | New row &#8211; db1 |<br />
-    +&#8211; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+4 rows in set(0.00 sec)<br />
-                                    mysql<br />
-        &gt; select *from db2.t1;<br />
-+ &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | a | b |<br />
-    +&#8211; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | 1 | Test 123 |<br />
-    | 2 | Test 456 |<br />
-    | 3 | Test 789 |<br />
-    | 5 | New row &#8211; db2 |<br />
+mysql &gt; select *from db1.t1;<br/>
++ &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | a | b |<br/>
+    +&#8211; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | 1 | Test 789 |<br/>
+    | 2 | Test 456 |<br/>
+    | 3 | Test 123 |<br/>
+    | 4 | New row &#8211; db1 |<br/>
+    +&#8211; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+4 rows in set(0.00 sec)<br/>
+                                    mysql<br/>
+        &gt; select *from db2.t1;<br/>
++ &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | a | b |<br/>
+    +&#8211; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | 1 | Test 123 |<br/>
+    | 2 | Test 456 |<br/>
+    | 3 | Test 789 |<br/>
+    | 5 | New row &#8211; db2 |<br/>
     +&#8211; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+4 rows in set(0.00 sec)
 </dd></dl>
 <p> To generate the SQL statements for data transformations to make db1.t1 the same as db2.t1, use the <code>&#8211;changes-for=server1</code> option. We must also include the <code>-a</code> option to ensure that the data consistency test is run. The following command illustrates the options used and an excerpt from the results generated: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqldbcompare &#8211;server1=root:root [at] localhost \<br />
-    &#8211;server2=root:root [at] localhost db1:db2 &#8211;changes-for=server1 -a \<br />
-    &#8211;difftype=sql<br />
-[&#8230;]<br />
-#Defn Row Data<br />
-#Type Object Name Diff Count<br />
-Check #<br />
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
-#TABLE t1 pass pass FAIL<br />
-# #Data transformations for direction = server1:<br />
-#Data differences found among rows : UPDATE db1.t1 SET b = &#8216;Test 123&#8217;<br />
-WHERE a = &#8216;1&#8217;;<br />
-UPDATE db1.t1 SET b = &#8216;Test 789&#8217; WHERE a = &#8216;3&#8217;;<br />
-DELETE<br />
-FROM db1.t1 WHERE a = &#8216;4&#8217;; INSERT INTO db1.t1 (a, b) VALUES(&#8216;5&#8217;, &#8216;New<br />
-row &#8211; db2&#8217;);<br />
+$ mysqldbcompare &#8211;server1=root:root [at] localhost \<br/>
+    &#8211;server2=root:root [at] localhost db1:db2 &#8211;changes-for=server1 -a \<br/>
+    &#8211;difftype=sql<br/>
+[&#8230;]<br/>
+#Defn Row Data<br/>
+#Type Object Name Diff Count<br/>
+Check #<br/>
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br/>
+#TABLE t1 pass pass FAIL<br/>
+# #Data transformations for direction = server1:<br/>
+#Data differences found among rows : UPDATE db1.t1 SET b = &#8216;Test 123&#8217;<br/>
+WHERE a = &#8216;1&#8217;;<br/>
+UPDATE db1.t1 SET b = &#8216;Test 789&#8217; WHERE a = &#8216;3&#8217;;<br/>
+DELETE<br/>
+FROM db1.t1 WHERE a = &#8216;4&#8217;; INSERT INTO db1.t1 (a, b) VALUES(&#8216;5&#8217;, &#8216;New<br/>
+row &#8211; db2&#8217;);<br/>
 #Database consistency check failed.# #&#8230; done
 </dd></dl>
 <p> Similarly, when the same command is run with <code>&#8211;changes-for=server2</code> and <code>&#8211;difftype=sql</code>, the following report is generated: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqldbcompare &#8211;server1=root:root [at] localhost \<br />
-    &#8211;server2=root:root [at] localhost db1:db2 &#8211;changes-for=server2 -a \<br />
-    &#8211;difftype=sql<br />
-[&#8230;]<br />
-#Defn Row Data<br />
-#Type Object Name Diff Count<br />
-Check #<br />
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
-#TABLE t1 pass pass FAIL<br />
-# #Data transformations for direction = server2:<br />
-#Data differences found among rows : UPDATE db2.t1 SET b = &#8216;Test 789&#8217;<br />
-WHERE a = &#8216;1&#8217;;<br />
-UPDATE db2.t1 SET b = &#8216;Test 123&#8217; WHERE a = &#8216;3&#8217;;<br />
-DELETE<br />
-FROM db2.t1 WHERE a = &#8216;5&#8217;; INSERT INTO db2.t1 (a, b) VALUES(&#8216;4&#8217;, &#8216;New<br />
+$ mysqldbcompare &#8211;server1=root:root [at] localhost \<br/>
+    &#8211;server2=root:root [at] localhost db1:db2 &#8211;changes-for=server2 -a \<br/>
+    &#8211;difftype=sql<br/>
+[&#8230;]<br/>
+#Defn Row Data<br/>
+#Type Object Name Diff Count<br/>
+Check #<br/>
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br/>
+#TABLE t1 pass pass FAIL<br/>
+# #Data transformations for direction = server2:<br/>
+#Data differences found among rows : UPDATE db2.t1 SET b = &#8216;Test 789&#8217;<br/>
+WHERE a = &#8216;1&#8217;;<br/>
+UPDATE db2.t1 SET b = &#8216;Test 123&#8217; WHERE a = &#8216;3&#8217;;<br/>
+DELETE<br/>
+FROM db2.t1 WHERE a = &#8216;5&#8217;; INSERT INTO db2.t1 (a, b) VALUES(&#8216;4&#8217;, &#8216;New<br/>
 row &#8211; db1&#8217;);
 </dd></dl>
 <p> With the <code>&#8211;difftype=sql</code> SQL generation option set, <code>&#8211;show-reverse</code> shows the object transformations in both directions. Here is an excerpt of the results: </p>

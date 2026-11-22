@@ -29,7 +29,7 @@ description: "maildropfilter – maildrop’s filtering language"
 <p>This will deliver the current message to the mailbox file (or a maildir directory) named &quot;IN.junk&quot;. </p>
 <p> <code>maildrop</code> initially creates variables from the environment variables of the operating system, UNLESS <code>maildrop</code> runs in delivery mode. Each operating system environment variable becomes a <code>maildrop</code> variable. When running in delivery mode, <code>maildrop</code> does not import the environment for security reasons, except for the environment variables that define the process locale (<i>LANG</i>, <i>LANGUAGE</i>, and <i>LC_</i><i>*</i>), which are still imported. </p>
 <p>In all cases <code>maildrop</code> resets the following variables to their default values: <i>HOME</i>, <i>DEFAULT</i>, <i>SHELL</i>, <i>PATH</i>, <i>LOCKEXT</i>, <i>LOCKREFRESH</i>, <i>LOCKSLEEP</i>, <i>LOCKTIMEOUT</i>, <i>MAILDIRQUOTA</i>, <i>SENDMAIL</i> and <i>LOGNAME</i>. </p>
-<p>There&#8217;s one exception to this rule which applies to the version of <code>maildrop</code> that comes with the m[blue]<code>Courier mail server</code>m[]<font SIZE="-2">[1]</font>. The following does not apply to the standalone version of <code>maildrop</code>: when running in delivery mode, if the <code>-d</code> flag was not used, or if it specifies the same userid as the one that&#8217;s running <code>maildrop</code>: the following variables are automatically imported from the environment: <i>HOME</i>, <i>SHELL</i>, <i>LOGNAME</i> and <i>MAILDIRQUOTA</i>. These environment variables are initialized by the Courier mail server prior to running <code>maildrop</code>. Additionally, the initial value for the <i>DEFAULT</i> maildrop variable is imported from the <i>MAILDROPDEFAULT</i> environment variable. This is because the Courier mail server overloads the DEFAULT environment variable to store the defaulted portion of the local mailbox address. See the m[blue]<code>dot-courier</code>(5)m[]<font SIZE="-2">[2]</font> man page in the Courier mail server distribution. You can get the Courier mail server&#8217;s <i>DEFAULT</i> value by using the <code>import</code> command. Note, however, that this will clobber the old contents of <i>DEFAULT</i>, which is probably not what you want. The right way to do this would be something like this: </p>
+<p>There&#8217;s one exception to this rule which applies to the version of <code>maildrop</code> that comes with the m[blue]<code>Courier mail server</code>m[][1]. The following does not apply to the standalone version of <code>maildrop</code>: when running in delivery mode, if the <code>-d</code> flag was not used, or if it specifies the same userid as the one that&#8217;s running <code>maildrop</code>: the following variables are automatically imported from the environment: <i>HOME</i>, <i>SHELL</i>, <i>LOGNAME</i> and <i>MAILDIRQUOTA</i>. These environment variables are initialized by the Courier mail server prior to running <code>maildrop</code>. Additionally, the initial value for the <i>DEFAULT</i> maildrop variable is imported from the <i>MAILDROPDEFAULT</i> environment variable. This is because the Courier mail server overloads the DEFAULT environment variable to store the defaulted portion of the local mailbox address. See the m[blue]<code>dot-courier</code>(5)m[][2] man page in the Courier mail server distribution. You can get the Courier mail server&#8217;s <i>DEFAULT</i> value by using the <code>import</code> command. Note, however, that this will clobber the old contents of <i>DEFAULT</i>, which is probably not what you want. The right way to do this would be something like this: </p>
 <dl>
 <dd> <pre><code>SAVEDEFAULT=$DEFAULT
 import DEFAULT
@@ -41,16 +41,16 @@ DEFAULT=$SAVEDEFAULT
 <h3>Lexical structure</h3>
 <p>Most whitespace is generally ignored. The # character introduces a comment running to the end of the line, which is also ignored. Unlike other mail filters, <code>maildrop</code> parses the filter file before taking any action with the message. If there are syntax errors in the file, <code>maildrop</code> displays an error message, and returns <code>EX_TEMPFAIL</code>. That should cause the mail message to remain in the queue, and, hopefully allow the problem to be corrected, without bouncing any mail. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>In <code>maildrop</code>, the end of line is a lexical token. In order to continue a long statement on the next line, terminate the line with a backslash character. </p>
  </dd></dl>
 <h3>Literal text</h3>
 <p>Literal text in the <code>maildrop</code> filtering language is surrounded by either single or double quotes. In order to enter a single quote into a text literal surrounded by single quotes, or a double quote into a literal surrounded by double quotes, prefix it with a backslash character. Use two backslash characters characters to enter one backslash character in the text literal. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>A backslash followed by either a backslash, or a matching quote, is the only situation where the backslash character is actually removed, leaving only the following character in the actual text literal. If a backslash character is followed by any other character, the backslash is NOT removed. </p>
  </dd></dl>
@@ -125,7 +125,7 @@ DEFAULT=$SAVEDEFAULT
  </dd></dl>
 <p> <i>MAILFILTER</i> </p>
 <dl>
-<dd> <p> This is the name of the original filter file that was given to <code>maildrop</code> on the command line. This is mostly useful to -defaultfilter files, it allows them to obtain the m[blue]<code>value of the -M option</code>m[]<font SIZE="-2">[3]</font> specified on the command line. </p>
+<dd> <p> This is the name of the original filter file that was given to <code>maildrop</code> on the command line. This is mostly useful to -defaultfilter files, it allows them to obtain the m[blue]<code>value of the -M option</code>m[][3] specified on the command line. </p>
  </dd></dl>
 <p> <i>PATH</i> </p>
 <dl>
@@ -160,7 +160,7 @@ DEFAULT=$SAVEDEFAULT
  </dd></dl>
 <p> <i>KEYWORDS</i> </p>
 <dl>
-<dd> <p> The <i>KEYWORDS</i> variable is used only when delivering a message to a maildir, and implements the optional IMAP keyword extension as implemented in the m[blue]<code>Courier IMAP server</code>m[]<font SIZE="-2">[1]</font>. It may be optionally initialized to contain a comma-separate list of keywords. The <code>to</code>, or the <code>cc</code> command, delivers the message to the maildir normally, but also associated the list of keywords in <i>KEYWORDS</i> with the newly delivered message. </p>
+<dd> <p> The <i>KEYWORDS</i> variable is used only when delivering a message to a maildir, and implements the optional IMAP keyword extension as implemented in the m[blue]<code>Courier IMAP server</code>m[][1]. It may be optionally initialized to contain a comma-separate list of keywords. The <code>to</code>, or the <code>cc</code> command, delivers the message to the maildir normally, but also associated the list of keywords in <i>KEYWORDS</i> with the newly delivered message. </p>
 <p> <i>KEYWORDS</i> must be set before the message is delivered to a maildir. The contents of <i>KEYWORDS</i> are ignored, when delivering on an mbox folder. </p>
  </dd></dl>
 <p> <i>LINES</i> </p>
@@ -169,11 +169,11 @@ DEFAULT=$SAVEDEFAULT
  </dd></dl>
 <p> <i>MAILDIRQUOTA</i> </p>
 <dl>
-<dd> <p> Set this variable in order to manually enforce a maximum size on ANY maildir where the message is delivered. This is an optional feature that must be enabled by the system administrator, see m[blue]<code>maildirquota</code>(8)m[]<font SIZE="-2">[4]</font> for more information. </p>
+<dd> <p> Set this variable in order to manually enforce a maximum size on ANY maildir where the message is delivered. This is an optional feature that must be enabled by the system administrator, see m[blue]<code>maildirquota</code>(8)m[][4] for more information. </p>
  </dd></dl>
 <p> <i>RETURNCODE</i> </p>
 <dl>
-<dd> <p> This variable is set when <code>maildrop</code> runs the m[blue]<code>xfilter</code>m[]<font SIZE="-2">[5]</font> command, or a command that&#8217;s specified within a pair of backtick characters ( command substitution ). The <i>RETURNCODE</i> variable will be set to the exit code of the command, after it completes. </p>
+<dd> <p> This variable is set when <code>maildrop</code> runs the m[blue]<code>xfilter</code>m[][5] command, or a command that&#8217;s specified within a pair of backtick characters ( command substitution ). The <i>RETURNCODE</i> variable will be set to the exit code of the command, after it completes. </p>
  </dd></dl>
 <p> <i>SIZE</i> </p>
 <dl>
@@ -210,7 +210,7 @@ DEFAULT=$SAVEDEFAULT
 </code></pre>
  </dd></dl>
 <p> <i>pattern</i> specifies the text to look for in the message, in the UTF-8 codeset. <i>pattern</i> must not begin with a space, otherwise the leading slash will then be interpreted as a division sign. If you must search for text that starts with a space, use something like &quot;/[ ] ... /&quot;. </p>
-<p>The general syntax of <code>maildrop</code>&#8216;s patterns is described in the <code><a href="/docs/linux/man/3-pcrepattern/">pcrepattern</a></code>(3) manual page, with certain exceptions noted below. <code>maildrop</code> uses the m[blue]<code>PCRE</code>m[]<font SIZE="-2">[6]</font> library to implement pattern matching. Not all features in PCRE are available in <code>maildrop</code>, and the "options" part, which follows the pattern specification, changes the pattern matching further. Consult the <code><a href="/docs/linux/man/3-pcrepattern/">pcrepattern</a></code>(3) manual page for more information, but note the following exceptions: </p>
+<p>The general syntax of <code>maildrop</code>&#8216;s patterns is described in the <code><a href="/docs/linux/man/3-pcrepattern/">pcrepattern</a></code>(3) manual page, with certain exceptions noted below. <code>maildrop</code> uses the m[blue]<code>PCRE</code>m[][6] library to implement pattern matching. Not all features in PCRE are available in <code>maildrop</code>, and the "options" part, which follows the pattern specification, changes the pattern matching further. Consult the <code><a href="/docs/linux/man/3-pcrepattern/">pcrepattern</a></code>(3) manual page for more information, but note the following exceptions: </p>
 <dl>
 <dd> <p> &bull; Internal options settings are not supported (but see the "D" maildrop option, below). Do not include option settings in the <i>pattern</i>, doing so will lead to undefined results. </p>
  </dd></dl>
@@ -252,8 +252,8 @@ DEFAULT=$SAVEDEFAULT
 <p>where <i>xxx</i> and <i>yyy</i> are two numbers. <i>yyy</i> is optional -- it will default to 1, if missing. </p>
 <p>The first occurrence of the pattern is evaluated as xxx. The second occurrence of the pattern is evaluated as xxx*yyy, the third as xxx*yyy*yyy, etc... All occurrences of the pattern are added up to calculate the final score. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p> <code>maildrop</code> does not recognize multiple occurrences of the same pattern in the same line. Multiple occurences of the same pattern in one line count as one occurence. </p>
  </dd></dl>
@@ -276,8 +276,8 @@ DEFAULT=$SAVEDEFAULT
  </dd></dl>
 <p>matched against the same line will set <i>MATCH</i> to "From: postmaster [at] localhost", <i>MATCH1</i> to "postmaster", and <i>MATCH2</i> to "localhost". Of course, in real world the "From:" header is usually much more complicated, and can&#8217;t be handled that easily. This is just an illustrative example. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>Subpatterns are not processed in the foreach statement. </p>
  </dd></dl>
@@ -291,13 +291,13 @@ DEFAULT=$SAVEDEFAULT
  </dd></dl>
 <h3>Expressions</h3>
 <p>Although <code>maildrop</code> evaluates expressions numerically, results of expressions are stored as text literals. When necessary, text literals are converted to numbers, then the results of a mathematical operation is converted back into a text literal. </p>
-<p> <br />
- <font SIZE="+1"> <code>Operators</code> </p>
+<p> <br/>
+  <code>Operators</code> </p>
 <dl>
 <dd> <p>The following operators carry their usual meaning, and are listed in order from lowest precedence, to the highest: </p>
  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>||
 &amp;&amp;
 &lt; &lt;= &gt; &gt;= == != lt le gt ge eq ne
@@ -310,74 +310,74 @@ DEFAULT=$SAVEDEFAULT
 </code></pre>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>Variable assignment</code> </p>
+<p> <br/>
+  <code>Variable assignment</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>VARIABLE= expression 
 </code></pre>
  </dd></dl>
 <p>Assigns the result of the expression to <i>VARIABLE</i> (note no leading $ in front of variable). </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>If <i>VARIABLE</i> is NOT surrounded by quotes, then it may contain only letters, numbers, underscores, dashes, and a selected few other characters. In order to initialize a variable whose name contains non-standard punctuation marks, surround the name of the variable with quotes. </p>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>cc - deliver a copy of the message</code> </p>
+<p> <br/>
+  <code>cc - deliver a copy of the message</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>cc expression 
 </code></pre>
  </dd></dl>
 <p>The <code>cc</code> statement is very similar to the <code>to</code> statement, except that after delivering the message <code>maildrop</code> continues to process the filter file, unlike the <code>to</code> statement which immediately terminates <code>maildrop</code> after the delivery is complete. Essentially, the message is carbon copied to the given mailbox, and may be delivered again to another mailbox by another <code>cc</code> or <code>to</code> statement. </p>
-<p>m[blue]<code>See the to</code> statementm[]<font SIZE="-2">[7]</font> for more details. When <code>cc</code> is used to deliver a message to a process <code>maildrop</code> will set the <i>EXITCODE</i> variable to the process&#8217;s exit code. </dl>
+<p>m[blue]<code>See the to</code> statementm[][7] for more details. When <code>cc</code> is used to deliver a message to a process <code>maildrop</code> will set the <i>EXITCODE</i> variable to the process&#8217;s exit code. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>dotlock - create a manual dot-lock</code> </p>
+<p> <br/>
+  <code>dotlock - create a manual dot-lock</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>dotlock expression  {
    ...
 }
 </code></pre>
  </dd></dl>
 <p> <code>maildrop</code> automatically creates a lock when a message is delivered to a mailbox. Depending upon your system configuration, <code>maildrop</code> will use either dot-locks, or the flock() system call. </p>
-<p>The <code>dotlock</code> statement creates an explicit dot-lock file. Use the m[blue]<code>flock</code> statementm[]<font SIZE="-2">[8]</font> to create an explicit flock() lock. </p>
+<p>The <code>dotlock</code> statement creates an explicit dot-lock file. Use the m[blue]<code>flock</code> statementm[][8] to create an explicit flock() lock. </p>
 <p>The <i>expression</i> is a filename that should be used as a lock file. <code>maildrop</code> creates the indicated dot-lock, executes the filtering instructions contained within the { ... } block, and removes the lock. The expression <i>must</i> be the name of the dot-lock file itself, <i>NOT</i> the name of the mailbox file you want to lock. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>With manual locking, it is possible to deadlock multiple <code>maildrop</code> processes (or any other processes that try to claim the same locks). </p>
 <p>No deadlock detection is possible with dot-locks, and since <code>maildrop</code> automatically refreshes all of its dot-locks regularly, they will never go stale. You&#8217;ll have <code>maildrop</code> processes hanging in limbo, until their watchdog timers go off, aborting the mail delivery. </p>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>echo - output diagnostic information</code> </p>
+<p> <br/>
+  <code>echo - output diagnostic information</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>echo expression 
 </code></pre>
  </dd></dl>
 <p> <code>maildrop</code> will print the given text. This is usually used when <code>maildrop</code> runs in embedded mode, but can be used for debugging purposes. Normally, a newline is printed after the text. If text is terminated with a \c, no newline will be printed. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>exception - trap fatal errors</code> </p>
+<p> <br/>
+  <code>exception - trap fatal errors</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>exception {
    ...
 }
@@ -385,45 +385,45 @@ DEFAULT=$SAVEDEFAULT
  </dd></dl>
 <p>The <code>exception</code> statement traps errors that would normally cause <code>maildrop</code> to terminate. If a fatal error is encountered anywhere within the block of statements enclosed by the <code>exception</code> clause, execution will resume immediately following the <code>exception</code> clause. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>exit - terminate filtering unconditionally</code> </p>
+<p> <br/>
+  <code>exit - terminate filtering unconditionally</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>exit
 </code></pre>
  </dd></dl>
-<p>The <code>exit</code> statement immediately terminates filtering. <code>maildrop</code>&#8216;s return code is set to the value of the <i>EXITCODE</i> variable. Normally, <code>maildrop</code> terminates immediately after m[blue]<code>successfully delivering the message</code>m[]<font SIZE="-2">[7]</font> to a mailbox. The <code>exit</code> statement causes <code>maildrop</code> to terminate without delivering the message anywhere. </p>
-<p>The <code>exit</code> statement is usually used when <code>maildrop</code> runs in m[blue]<code>embedded mode</code>m[]<font SIZE="-2">[9]</font>, when message delivery instructions are not allowed. </dl>
+<p>The <code>exit</code> statement immediately terminates filtering. <code>maildrop</code>&#8216;s return code is set to the value of the <i>EXITCODE</i> variable. Normally, <code>maildrop</code> terminates immediately after m[blue]<code>successfully delivering the message</code>m[][7] to a mailbox. The <code>exit</code> statement causes <code>maildrop</code> to terminate without delivering the message anywhere. </p>
+<p>The <code>exit</code> statement is usually used when <code>maildrop</code> runs in m[blue]<code>embedded mode</code>m[][9], when message delivery instructions are not allowed. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>flock - create an manual flock() lock</code> </p>
+<p> <br/>
+  <code>flock - create an manual flock() lock</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>flock expression  {
    ...
 }
 </code></pre>
  </dd></dl>
 <p> <code>maildrop</code> automatically creates a lock when a message is delivered to a mailbox. Depending upon your system configuration, <code>maildrop</code> will use either dot-locks, or the flock() system call. </p>
-<p>The <code>flock</code> statement creates a manual flock() lock. Use the m[blue]<code>dotlock</code> statementm[]<font SIZE="-2">[10]</font> to create a manual dot-lock file. </p>
+<p>The <code>flock</code> statement creates a manual flock() lock. Use the m[blue]<code>dotlock</code> statementm[][10] to create a manual dot-lock file. </p>
 <p>The <i>expression</i> is the name of the file that should be locked. <code>maildrop</code> creates the lock on the indicated file, executes the filtering instructions contained within the { ... } block, and removes the lock. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>With manual locking, it is possible to deadlock multiple <code>maildrop</code> processes (or any other processes that try to claim the same locks). The operating system will automatically break flock() deadlocks. When that happens, one of the <code>maildrop</code> processes will terminate immediately. Use the <code>exception</code> statement in order to trap this exception condition, and execute an alternative set of filtering instructions. </p>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>foreach - iterate over text sections matched by a pattern</code> </p>
+<p> <br/>
+  <code>foreach - iterate over text sections matched by a pattern</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>foreach /pattern/:options
 {
    ...
@@ -444,12 +444,12 @@ foreach (expression) =~ /pattern/:options
 <dd> <p> Subpatterns are not processed. Only the <i>MATCH</i> variable will be set for each found pattern. </p>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>if - conditional execution</code> </p>
+<p> <br/>
+  <code>if - conditional execution</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>if ( expression )
 {
    ...
@@ -464,8 +464,8 @@ else
 <p> <code>maildrop</code> evaluates all expression as text strings. In the context of a logical expression, an empty string, or the number 0 constitutes a logical false value, anything else is a logical true value. </p>
 <p>If the <code>if</code> part, or the <code>else</code> part consists of only one statement, the braces may be omitted. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>The grammar of this <code>if</code> statement is stricter than usual. If you get baffling syntax errors from <code>maildrop</code>, make sure that the braces, and the if statement, appear on separate lines. Specifically: the closing parenthesis, the closing braces, and the else statement, must be at the end of the line (comments are allowed), and there may not be any blank lines in between (not even ones containing comments only). </p>
  </dd></dl>
@@ -514,12 +514,12 @@ elsif ( expression )
  </dd></dl>
 <p>Consecutive occurences of <code>elsif</code> commands eliminate a significant amount of indentation, and the resulting code is more readable. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>import - access original environment variable</code> </p>
+<p> <br/>
+  <code>import - access original environment variable</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>import variable 
 </code></pre>
  </dd></dl>
@@ -544,37 +544,37 @@ PATH is /home/root/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
  </dd></dl>
 <p>This shows that when <code>maildrop</code> starts <i>PATH</i> is set to the fixed default of /bin:/usr/bin:/usr/local/bin. However, the original contents of the <i>PATH</i> environment variable we different, and the <code>import</code> statement shows what it was. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>include - execute filtering instructions from another file</code> </p>
+<p> <br/>
+  <code>include - execute filtering instructions from another file</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>include expression 
 </code></pre>
  </dd></dl>
 <p>The include statement reads a file, and executes filtering instructions contained in that file. Note that the include statement is processed when the current filter file is being executed. When <code>maildrop</code> reads the initial filter file, any syntax errors in the filtering instructions are immediately reported, and <code>maildrop</code> will terminate with a return code of <code>EX_TEMPFAIL</code>. Any errors in files specified by <code>include</code> statements are NOT reported, because those files will not be read until the <code>include</code> statement is itself executed. </p>
 <p>If the specified file does not exist, or if there are any syntax errors in the file, <code>maildrop</code> reports the error, and terminates with a return code of <code>EX_TEMPFAIL</code>. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>log, logfile - log message deliveries</code> </p>
+<p> <br/>
+  <code>log, logfile - log message deliveries</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>logfile expression log expression 
 </code></pre>
  </dd></dl>
 <p>Logging in <code>maildrop</code> is normally turned off. The <code>logfile</code> statement specifies the file where <code>maildrop</code> will log how the message has been disposed of. The parameter is then name of the file. If the file exists <code>maildrop</code> appends to the file. </p>
-<p>For each delivery (the m[blue]<code>to</code>m[]<font SIZE="-2">[7]</font> and m[blue]<code>cc</code>m[]<font SIZE="-2">[11]</font> statements, and default deliveries) <code>maildrop</code> records the From: and the Subject: fields, together with the current time, in the log file. </p>
+<p>For each delivery (the m[blue]<code>to</code>m[][7] and m[blue]<code>cc</code>m[][11] statements, and default deliveries) <code>maildrop</code> records the From: and the Subject: fields, together with the current time, in the log file. </p>
 <p>The <code>log</code> statement adds additional logging text to the log file. The <code>log</code> statement works exactly like the <code>echo</code> statement, except that the text is written to the logfile, instead of standard output. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>to - deliver message to a mailbox</code> </p>
+<p> <br/>
+  <code>to - deliver message to a mailbox</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>to expression 
 </code></pre>
  </dd></dl>
@@ -584,37 +584,37 @@ PATH is /home/root/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
 <p>An <i>expression</i> that begins with an exclamation mark, &quot;!&quot; specifies a whitespace-delimited list of E-mail addresses to forward the message to. The program specified by the <i>SENDMAIL</i> variable is run as an external program, with the list of E-mail addresses provided as parameters to the program. </p>
 <p>Otherwise, <i>expression</i> names the mailbox where <code>maildrop</code> delivers the message. If <i>expression</i> is a directory, <code>maildrop</code> assumes that the directory is a maildir directory. Otherwise, <code>maildrop</code> will deliver the message to a file, formatted in traditional mailbox format. <code>maildrop</code> will use either dot-locking, or flock()-locking when delivering the message to the file. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>while - repeatedly execute a block of statements</code> </p>
+<p> <br/>
+  <code>while - repeatedly execute a block of statements</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>while ( expression )
 {
    ...
 }
 </code></pre>
  </dd></dl>
-<p>The <i>expression</i> is repeatedly evaluated. Each time it m[blue]<code>evaluates to a logical true</code>m[]<font SIZE="-2">[12]</font>, the statements inside the braces are executed. When <i>expression</i> evaluates to a logical false, the while loop is over. Take care to avoid infinite loops. </dl>
+<p>The <i>expression</i> is repeatedly evaluated. Each time it m[blue]<code>evaluates to a logical true</code>m[][12], the statements inside the braces are executed. When <i>expression</i> evaluates to a logical false, the while loop is over. Take care to avoid infinite loops. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>xfilter - filter message through another program</code> </p>
+<p> <br/>
+  <code>xfilter - filter message through another program</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>xfilter expression 
 </code></pre>
  </dd></dl>
 <p> <i>expression</i> specifies an external program that <code>maildrop</code> runs to filter the current message. The current message will be piped to the filter program as standard input. The output of the filter program replaces the current message being delivered. The external program must terminate with an exit code of 0. If the external program does not terminate with an exit code of 0, or if it does not read the message from the standard input, <code>maildrop</code> terminates with an exit code of <code>EX_TEMPFAIL</code>. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>|| - logical or</code> </p>
+<p> <br/>
+  <code>|| - logical or</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>
  expression1  || expression2 
 </code></pre>
@@ -622,12 +622,12 @@ PATH is /home/root/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
 <p>If <i>expression1</i> evaluates to a logical true, the result of the || is <i>expression1</i>, otherwise it&#8217;s <i>expression2</i>, which is evaluated. </p>
 <p> <code>maildrop</code> uses the following concept of true/false: an empty text literal, or a text literal that consists of the single character &quot;0&quot; is a logical false value. Anything else is a logical true value. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>&amp;&amp; - logical and</code> </p>
+<p> <br/>
+  <code>&amp;&amp; - logical and</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>
  expression1  &amp;&amp; expression2 
 </code></pre>
@@ -635,12 +635,12 @@ PATH is /home/root/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
 <p>If <i>expression1</i> evaluates to a logical false, the result of the &amp;&amp; is <i>expression1</i>, otherwise it&#8217;s <i>expression2</i>, which is evaluated. </p>
 <p> <code>maildrop</code> uses the following concept of true/false: an empty text literal, or a text literal that consists of the single character &quot;0&quot; is a logical false value. Anything else is a logical true value. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>&lt;, &lt;=, &gt;, &gt;=, ==, != - numerical comparison</code> </p>
+<p> <br/>
+  <code>&lt;, &lt;=, &gt;, &gt;=, ==, != - numerical comparison</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>
  expression1  &lt; expression2 
  expression1  &lt;= expression2 
@@ -652,18 +652,18 @@ PATH is /home/root/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
  </dd></dl>
 <p>These operators compare their left hand side expression against their right hand side. These operators compare the numerical values of each side, as floating point numbers. If the numbers compare as indicated, the result of the comparison is the text string &quot;1&quot;, otherwise it is the text string 0. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>Ccomparisons are not associative: &quot;a &lt; b &lt; c&quot; is an error. If it is absolutely necessary, use &quot;(a &lt; b) &lt; c&quot;. </p>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>lt, le, gt, ge, eq, ne - text comparison</code> </p>
+<p> <br/>
+  <code>lt, le, gt, ge, eq, ne - text comparison</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>
  expression1  lt expression2 
  expression1  le expression2 
@@ -675,42 +675,42 @@ PATH is /home/root/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
  </dd></dl>
 <p>These operators compare their left hand side expression against their right hand side. These operators compare each side as text strings (alphabetically, although the text may include anything). If the text strings compare as indicated, the result of the comparison is the text string &quot;1&quot;, otherwise it is the text string 0. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>Comparisons are not associative: &quot;a lt b lt c&quot; is an error. If it is absolutely necessary, use &quot;(a lt b) lt c&quot;. (But why would you?). </p>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>| - bitwise or</code> </p>
+<p> <br/>
+  <code>| - bitwise or</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>
  expression1  | expression2 
 </code></pre>
  </dd></dl>
 <p>This is the bitwise or operator. Its result is a 32 bit integer, which is a bitwise-or combination of the left hand side and the right hand side. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>&amp; - bitwise and</code> </p>
+<p> <br/>
+  <code>&amp; - bitwise and</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>
  expression1  &amp; expression2 
 </code></pre>
  </dd></dl>
 <p>This is the bitwise and operator. Its result is a 32 bit integer, which is a bitwise-and combination of the left hand side and the right hand side. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>+, -, *, / - numerical operations</code> </p>
+<p> <br/>
+  <code>+, -, *, / - numerical operations</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>
  expression1  + expression2 
  expression1  - expression2 
@@ -720,37 +720,37 @@ PATH is /home/root/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
  </dd></dl>
 <p>These are numerical, floating point, operators. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>=~ /pattern/:options - pattern match against string</code> </p>
+<p> <br/>
+  <code>=~ /pattern/:options - pattern match against string</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>
  expression  =~ / pattern /: option 
 </code></pre>
  </dd></dl>
 <p>The left hand side of the =~ operator can be any expression. The right hand side is always a pattern specification. The result of the operator is the weighted match of the pattern against <i>expression</i> (if the options do not specify weighted scoring, the result is simply 1 if the pattern was found, 0 if not). </p>
-<p>See &quot;m[blue]<code>Patterns</code>m[]<font SIZE="-2">[13]</font>&quot; for more information. </dl>
+<p>See &quot;m[blue]<code>Patterns</code>m[][13]&quot; for more information. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>/pattern/:options - pattern match against message</code> </p>
+<p> <br/>
+  <code>/pattern/:options - pattern match against message</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>/ pattern /: option 
 </code></pre>
  </dd></dl>
 <p>The result of this operator is the weighted match of the pattern against the current message (if the options do not specify weighted scoring, the result is simply 1 if the pattern was found, 0 if not). </p>
-<p>See &quot;m[blue]<code>Patterns</code>m[]<font SIZE="-2">[13]</font>&quot; for more information. </dl>
+<p>See &quot;m[blue]<code>Patterns</code>m[][13]&quot; for more information. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>!, ~ - logical/bitwise not operator.</code> </p>
+<p> <br/>
+  <code>!, ~ - logical/bitwise not operator.</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>! expression ~ expression 
 </code></pre>
  </dd></dl>
@@ -758,12 +758,12 @@ PATH is /home/root/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
 <p> <code>maildrop</code> uses the following concept of true/false: an empty text literal, or a text literal that consists of the single character &quot;0&quot; is a logical false value. Anything else is a logical true value. </p>
 <p>The result of the ~ operator is a bitwise complement of its right hand side expression. The right hand side expression is evaluated as a 32 bit integer, and the result of this operator is a bitwise complement of the result. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>escape(string) - escape special characters in a string.</code> </p>
+<p> <br/>
+  <code>escape(string) - escape special characters in a string.</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>
  escape ( expression )
 </code></pre>
@@ -773,7 +773,7 @@ PATH is /home/root/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
 <dd> <pre><code>|!$()[]\+*?.&amp;;`'-~&lt;&gt;^{}&quot;
 </code></pre>
  </dd></dl>
-<p>This can used when m[blue]<code>matching pattern sections</code>m[]<font SIZE="-2">[14]</font>, and then taking one section and matching it again. For example: </p>
+<p>This can used when m[blue]<code>matching pattern sections</code>m[][14], and then taking one section and matching it again. For example: </p>
 <dl>
 <dd> <pre><code>if ( /^From:\s*(.*)/ )
 {
@@ -789,31 +789,31 @@ PATH is /home/root/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
 <p>The reason why this list of special characters also includes characters not used in <code>maildrop</code>&#8216;s regular expressions is to allow <code>maildrop</code>&#8216;s variables to be used on the command line of a shell command executed by the <code>xfilter</code> command, backtick characters, or <code>to</code> or <code>cc</code> commands. </p>
 <p>Although using data from an external data source is dangerous, and it may result in inadvertent exploits, using the escape function should hopefully result in fewer surprises. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>gdbmopen, gdbmclose, gdbmfetch, gdbmstore - GDBM support in maildrop</code> </p>
+<p> <br/>
+  <code>gdbmopen, gdbmclose, gdbmfetch, gdbmstore - GDBM support in maildrop</code> </p>
 <dl>
-<dd> <p>These functions provide support for GDBM database files. See m[blue]<code>maildropgdbm</code>(5)m[]</font><font SIZE="-1">[15]</font><font SIZE="+1"> for more information. </p>
+<dd> <p>These functions provide support for GDBM database files. See m[blue]<code>maildropgdbm</code>(5)m[][15] for more information. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- </font><font SIZE="+2"> <code>Note</code> </font><font SIZE="+1"> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>The system administrator can disable GDBM support in <code>maildrop</code>, so these commands may not be available to you. </p>
  </dd></dl>
 </dl>
-<p> <br />
- </font><font SIZE="+2"> <code>getaddr(string) - extract RFC 2822 addresses from a header.</code> </p>
+<p> <br/>
+  <code>getaddr(string) - extract RFC 2822 addresses from a header.</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>if ( /^From:\s*(.*)/ )
 {
    ADDR=getaddr($MATCH1)
 }
 </code></pre>
  </dd></dl>
-<p>This function is usually applied to a header that contains m[blue]<code>RFC 2822</code>m[]<font SIZE="-2">[16]</font> addresses. It extracts the actual addresses from the header, without any comments or extraneous punctuation. Each address is followed by a newline character. For example, if <i>string</i> contains: </p>
+<p>This function is usually applied to a header that contains m[blue]<code>RFC 2822</code>m[][16] addresses. It extracts the actual addresses from the header, without any comments or extraneous punctuation. Each address is followed by a newline character. For example, if <i>string</i> contains: </p>
 <dl>
 <dd> <pre><code>joe [at] domain.com (Joe Brown), &quot;Alex Smith&quot; &lt;alex [at] domain.com&gt;, tom [at] domain.com
 </code></pre>
@@ -824,10 +824,10 @@ PATH is /home/root/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
 </code></pre>
  </dd></dl>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
-<p>Because <code>getaddr</code>() interprets m[blue]<code>RFC 2822</code>m[]<font SIZE="-2">[17]</font> loosely, it is not necessary to strip off the &quot;To:&quot; or the &quot;Cc:&quot; header from the string, before feeding it to <code>getaddr()</code>. For example, the following snippet of code takes all addresses in the message, and concatenates them into a single string, separated by spaces: </p>
+<p>Because <code>getaddr</code>() interprets m[blue]<code>RFC 2822</code>m[][17] loosely, it is not necessary to strip off the &quot;To:&quot; or the &quot;Cc:&quot; header from the string, before feeding it to <code>getaddr()</code>. For example, the following snippet of code takes all addresses in the message, and concatenates them into a single string, separated by spaces: </p>
  </dd>
 <dl>
 <dd> <pre><code>ADDRLIST=&quot;&quot;
@@ -841,18 +841,18 @@ foreach /^(To|Cc): .*/
 </code></pre>
  </dd></dl>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
-<p>In certain rare situations, m[blue]<code>RFC 2822</code>m[]<font SIZE="-2">[17]</font> allows spaces to be included in E-mail addresses, so this example is just educational. </p>
+<p>In certain rare situations, m[blue]<code>RFC 2822</code>m[][17] allows spaces to be included in E-mail addresses, so this example is just educational. </p>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>hasaddr(string) - Search for an address.</code> </p>
+<p> <br/>
+  <code>hasaddr(string) - Search for an address.</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>if ( hasaddr( string ) )
 {
    ...
@@ -863,12 +863,12 @@ foreach /^(To|Cc): .*/
 <p>This is more than just a simple text search. Each header is parsed according to RFC822. Addresses found in the header are extracted, ignoring all comments and names. The remaining addresses are checked, and if &quot;<i>string</i>&quot; is one of them, <code>hasaddr</code> returns 1, otherwise it returns 0. </p>
 <p>The comparison is case-insensitive. This actually violates RFC822 (and several others) a little bit, because the user part of the address may be (but is not required to be) case sensitive. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>length (string) - length of a string</code> </p>
+<p> <br/>
+  <code>length (string) - length of a string</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>if (length( string ) &gt; 80)
 {
    ...
@@ -877,12 +877,12 @@ foreach /^(To|Cc): .*/
  </dd></dl>
 <p>The <code>length</code> function returns the number of characters in <i>string</i>. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>lookup (expr, &#8216;filename&#8217;, &#8216;options&#8217;) - read file for patterns</code> </p>
+<p> <br/>
+  <code>lookup (expr, &#8216;filename&#8217;, &#8216;options&#8217;) - read file for patterns</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>if (lookup( expr , file, &quot; option &quot;))
 {
    ...
@@ -907,51 +907,51 @@ foreach /^(To|Cc): .*/
 <p>If a message has a To: header that contains the text &quot;friend [at] public&quot;, or does not contain at least one @ character, then the message will be silently dropped on the floor ( <code>maildrop</code> will terminate without delivering the message anywhere). </p>
 <p> <i>options</i> are the pattern matching options to use. The only supported option is &quot;D&quot; (the rest are meaningless, in this case). </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>Be careful with discarding messages like that. Pattern matching can be tricky, and a slight miscalculation can cause mail to be unintentionally discarded. It is much desirable to first deliver message to a separate folder or mailbox, and once the filter is verified to work correctly, change it so the messages are discarded completely. </p>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>substr(string,start [,count]) - return substring</code> </p>
+<p> <br/>
+  <code>substr(string,start [,count]) - return substring</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>foo=substr($foo, 1, 10)
 </code></pre>
  </dd></dl>
 <p>The <code>substr</code> function extracts characters from <i>string</i> beginning with character #<i>start</i>. If <i>count</i> is specified, at most <i>count</i> characters starting at position <i>start</i> are kept, any excess is trimmed. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>time - return current time</code> </p>
+<p> <br/>
+  <code>time - return current time</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>foo=time
 </code></pre>
  </dd></dl>
-<p>The <code>time</code> function returns the current time, in seconds, since January 1, 1970. This function is useful when using GDBM files. See m[blue]<code><a href="/docs/linux/man/7-maildropex/">maildropex</a></code>(7)m[]<font SIZE="-2">[18]</font> for an example of using the <code>time</code> function. </dl>
+<p>The <code>time</code> function returns the current time, in seconds, since January 1, 1970. This function is useful when using GDBM files. See m[blue]<code><a href="/docs/linux/man/7-maildropex/">maildropex</a></code>(7)m[][18] for an example of using the <code>time</code> function. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>tolower(string) - Convert string to lowercase.</code> </p>
+<p> <br/>
+  <code>tolower(string) - Convert string to lowercase.</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>foo=tolower( string )
 </code></pre>
  </dd></dl>
 <p>This function returns the <i>string</i> with all uppercase characters replaced by lowercase characters. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>toupper(string) - Convert string to uppercase.</code> </p>
+<p> <br/>
+  <code>toupper(string) - Convert string to uppercase.</code> </p>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>foo=toupper( string )
 </code></pre>
  </dd></dl>
@@ -964,7 +964,7 @@ foreach /^(To|Cc): .*/
 <p>If <code>getaddr</code>() or <code>hasaddr</code>() functions are used on broken headers, the results are unpredictable. </p>
 <p> <code>hasaddr</code>() is completely case insensitive. This actually violates a few RFCs, because the userid portion of the address could be case-sensitive, but it&#8217;s not in too many cases, so there.  </p>
 <h2>SEE ALSO</h2>
-<p>m[blue]<code><a href="/docs/linux/man/1-lockmail/">lockmail</a></code>(1)m[]<font SIZE="-2">[19]</font>, m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[20]</font>, m[blue]<code>maildropgdbm</code>(5)m[]<font SIZE="-2">[15]</font>, m[blue]<code>maildirquota</code>(8)m[]<font SIZE="-2">[4]</font>, m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[]<font SIZE="-2">[21]</font>, <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code>sendmail</code>(8).  </p>
+<p>m[blue]<code><a href="/docs/linux/man/1-lockmail/">lockmail</a></code>(1)m[][19], m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[][20], m[blue]<code>maildropgdbm</code>(5)m[][15], m[blue]<code>maildirquota</code>(8)m[][4], m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[][21], <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code>sendmail</code>(8).  </p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code> </p>
 <dl>

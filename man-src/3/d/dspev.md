@@ -11,7 +11,7 @@ description: "dspev.f –"
 <p> dspev.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dspev</code> (JOBZ, UPLO, N, AP, W, Z, LDZ, WORK, INFO)<br />
+<p> subroutine <code>dspev</code> (JOBZ, UPLO, N, AP, W, Z, LDZ, WORK, INFO)<br/>
  <i></i><code> DSPEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dspev (characterJOBZ, characterUPLO, integerN, double precision, dimension( * )AP, double precision, dimension( * )W, double precision, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integerINFO)</h3>

@@ -51,5 +51,5 @@ description: "XSetErrorHandler, XGetErrorText, XDisplayName, XSetIOErrorHandler,
 <dt>XRequest</dt>
 <dd>For a core protocol request, the major request protocol number is used for the message argument. For an extension request, the extension name (as given by <code>InitExtension</code>) followed by a period (.) and the minor request protocol number is used for the message argument. If no string is found in the error database, the default_string is returned to the buffer argument.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xopendisplay/">XOpenDisplay</a>(3), <a href="/docs/linux/man/3-xsynchronize/">XSynchronize</a>(3)<br />
+<p><a href="/docs/linux/man/3-xopendisplay/">XOpenDisplay</a>(3), <a href="/docs/linux/man/3-xsynchronize/">XSynchronize</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

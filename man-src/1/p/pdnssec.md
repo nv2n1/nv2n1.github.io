@@ -61,16 +61,16 @@ description: "pdnssec – PowerDNSSEC command and control"
 <dt><code>secure-zone ZONE</code></dt>
 <dd> Configures a zone called ZONE with reasonable DNSSEC settings. You should manually run &#8216;pdnssec rectify-zone&#8217; afterwards.</dd>
 <dt><code>set-nsec3 ZONE &#8216;params&#8217; [narrow]</code></dt>
-<dd> Sets NSEC3 parameters for this zone. A sample commandline is: &quot;pdnssec set-nsec3 powerdnssec.org &#8216;1 1 1 ab&#8217; narrow&quot;. The NSEC3 parameters must be quoted on the command line.<br />
- <code>WARNING:</code><br />
+<dd> Sets NSEC3 parameters for this zone. A sample commandline is: &quot;pdnssec set-nsec3 powerdnssec.org &#8216;1 1 1 ab&#8217; narrow&quot;. The NSEC3 parameters must be quoted on the command line.<br/>
+ <code>WARNING:</code><br/>
  If running in RSASHA1 mode (algorithm 5 or 7), switching from NSEC to NSEC3 will require a DS update at the parent zone!</dd>
 <dt><code>set-presigned ZONE</code></dt>
 <dd> Switches zone to presigned operation, utilizing in-zone RRSIGs.</dd>
 <dt><code>show-zone ZONE</code></dt>
 <dd> Shows all DNSSEC related settings of a zone called ZONE.</dd>
 <dt><code>unset-nsec3 ZONE</code></dt>
-<dd> Converts a zone to NSEC operations.<br />
- <code>WARNING:</code><br />
+<dd> Converts a zone to NSEC operations.<br/>
+ <code>WARNING:</code><br/>
  If running in RSASHA1 mode (algorithm 5 or 7), switching from NSEC to NSEC3 will require a DS update at the parent zone!</dd>
 <dt><code>unset-presigned ZONE</code></dt>
 <dd> Disables presigned operation for ZONE.</dd></dl>

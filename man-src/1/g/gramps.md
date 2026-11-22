@@ -33,14 +33,14 @@ description: "gramps – Genealogical Research and Analysis Management Programmi
 <p> When more than one input file is given, each has to be preceded by <code>-i</code> flag. The files are imported in the specified order, i.e. <code>-i</code> <i>FILE1</i> <code>-i</code> <i>FILE2</i> and <code>-i</code> <i>FILE2</i> <code>-i</code> <i>FILE1</i> might produce different gramps IDs in the resulting database. </p>
 <dt><code>-a,&#8211;action=</code><i> ACTION</i></dt>
 <dd> Perform <i>ACTION</i> on the imported data. This is done after all imports are successfully completed. Currently available actions are <code>summary</code> (same as Reports-&gt;View-&gt;Summary), <code>check</code> (same as Tools-&gt;Database Processing-&gt;Check and Repair), <code>report</code> (generates report), and <code>tool</code> (runs a plugin tool). Both <code>report</code> and <code>tool</code> need the <i>OPTIONSTRING</i> supplied by the <code>-p</code> flag). </dd>
-<p> The <i>OPTIONSTRING</i> should satisfy the following conditions:<br />
+<p> The <i>OPTIONSTRING</i> should satisfy the following conditions:<br/>
  It must not contain any spaces. If some arguments need to include spaces, the string should be enclosed with quotation marks, i.e., follow the shell syntax. Option string is a list of pairs with name and value (separated by the equality sign). The name and value pairs must be separated by commas. </p>
 <p> Most of the report or tools options are specific for each report or tool. However, there are some common options. </p>
-<p> <code>name=name</code><br />
+<p> <code>name=name</code><br/>
  This mandatory option determines which report or tool will be run. If the supplied <i>name</i> does not correspond to any available report or tool, an error message will be printed followed by the list of available reports or tools (depending on the <i>ACTION</i>). </p>
-<p> <code>show=all</code><br />
+<p> <code>show=all</code><br/>
  This will produce the list of names for all options available for a given report or tool. </p>
-<p> <code>show=optionname</code><br />
+<p> <code>show=optionname</code><br/>
  This will print the description of the functionality supplied by <i>optionname</i>, as well as what are the acceptable types and values for this option. </p>
 <p> Use the above options to find out everything about a given report. </p>
 </dl>
@@ -87,16 +87,16 @@ description: "gramps – Genealogical Research and Analysis Management Programmi
 <p> In addition to generating direct printer output, report generators also target other systems, such as <i>OpenOffice.org</i>, <i>AbiWord</i>, HTML, or LaTeX to allow the users to modify the format to suit their needs. </p>
 <h2>KNOWN BUGS AND LIMITATIONS</h2>
 <h2>FILES</h2>
-<p> <i>${PREFIX}/bin/gramps</i><br />
- <i>${PREFIX}/share/gramps</i><br />
+<p> <i>${PREFIX}/bin/gramps</i><br/>
+ <i>${PREFIX}/share/gramps</i><br/>
  <i>${HOME}/.gramps</i> </p>
 <h2>AUTHORS</h2>
-<p> Donald Allingham <i>&lt;don [at] gramps-project.org&gt;</i><br />
+<p> Donald Allingham <i>&lt;don [at] gramps-project.org&gt;</i><br/>
  <i><a rel="nofollow" href="http://gramps.sourceforge.net">http://gramps.sourceforge.net</a></i> </p>
-<p> This man page was originally written by:<br />
- Brandon L. Griffith <i>&lt;brandon [at] debian.org&gt;</i><br />
+<p> This man page was originally written by:<br/>
+ Brandon L. Griffith <i>&lt;brandon [at] debian.org&gt;</i><br/>
  for inclusion in the Debian GNU/Linux system. </p>
-<p> This man page is currently maintained by:<br />
+<p> This man page is currently maintained by:<br/>
  Gramps project <i>&lt;xxx [at] gramps-project.org&gt;</i> </p>
 <h2>DOCUMENTATION</h2>
 <p> The user documentation is available through standard GNOME Help browser in the form of Gramps Manual. The manual is also available in XML format as <code>gramps-manual.xml</code> under <i>doc/gramps-manual/$LANG</i> in the official source distribution. </p>

@@ -13,7 +13,7 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <p> <code>mbsync</code> [<i>options</i> &#8230;] &#123;&#123;<i>channel</i>[<code>:</code><i>box</i>[{<code>,</code>|<code>
 </code>}&#8230;]]|<i>group</i>} &#8230;|<code>-a</code>}</p>
 <h2>DESCRIPTION</h2>
-<p> <code>mbsync</code> is a command line application which synchronizes mailboxes; currently Maildir and IMAP4 mailboxes are supported. New messages, message deletions and flag changes can be propagated both ways; the operation set can be selected in a fine-grained manner.<br />
+<p> <code>mbsync</code> is a command line application which synchronizes mailboxes; currently Maildir and IMAP4 mailboxes are supported. New messages, message deletions and flag changes can be propagated both ways; the operation set can be selected in a fine-grained manner.<br/>
  Synchronization is based on unique message identifiers (UIDs), so no identification conflicts can occur (as opposed to some other mail synchronizers). OTOH, <code>mbsync</code> is susceptible to UID validity changes (that <i>should</i> never happen, but see &quot;Compatibility&quot; in the README). Synchronization state is kept in one local text file per mailbox pair; multiple replicas of a mailbox can be maintained.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -29,10 +29,10 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <dd> Override any <code>Remove</code> options from the config file. See below.</dd>
 <dt><code>-X</code>[<code>m</code>][<code>s</code>], <code>&#8211;expunge</code>[<code>-master</code>|<code>-slave</code>]</dt>
 <dd> Override any <code>Expunge</code> options from the config file. See below.</dd>
-<dt>{<code>-n</code>|<code>-N</code>|<code>-d</code>|<code>-f</code>|<code>-0</code>|<code>-F</code>},<br />
+<dt>{<code>-n</code>|<code>-N</code>|<code>-d</code>|<code>-f</code>|<code>-0</code>|<code>-F</code>},<br/>
 &nbsp;<wbr>{<code>&#8211;new</code>|<code>&#8211;renew</code>|<code>&#8211;delete</code>|<code>&#8211;flags</code>|<code>&#8211;noop</code>|<code>&#8211;full</code>}</dt>
 <dd>
-</dd><dt>{<code>-L</code>|<code>-H</code>}[<code>n</code>][<code>N</code>][<code>d</code>][<code>f</code>],<br />
+</dd><dt>{<code>-L</code>|<code>-H</code>}[<code>n</code>][<code>N</code>][<code>d</code>][<code>f</code>],<br/>
 &nbsp;<wbr>{<code>&#8211;pull</code>|<code>&#8211;push</code>}[<code>-new</code>|<code>-renew</code>|<code>-delete</code>|<code>-flags</code>]</dt>
 <dd> Override any <code>Sync</code> options from the config file. See below.</dd>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
@@ -41,25 +41,25 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <dd> Display version information.</dd>
 <dt><code>-V</code>, <code>&#8211;verbose</code></dt>
 <dd> Enable <i>verbose</i> mode, which displays what is currently happening.</dd>
-<dt><code>-D</code>[<code>C</code>][<code>m</code>][<code>M</code>][<code>n</code>|<code>N</code>][<code>s</code>]],<br />
+<dt><code>-D</code>[<code>C</code>][<code>m</code>][<code>M</code>][<code>n</code>|<code>N</code>][<code>s</code>]],<br/>
 &nbsp;<wbr><code>&#8211;debug</code>[<code>-crash</code>|<code>-maildir</code>|<code>-main</code>|<code>-net</code>|<code>-net-all</code>|<code>-sync</code>]</dt>
-<dd> Enable debugging categories: <code>C</code>, <code>crash</code> &#8211; use built-in crash handler<br />
- <code>m</code>, <code>maildir</code> &#8211; print maildir debug info<br />
- <code>M</code>, <code>main</code> &#8211; print main debug info<br />
- <code>n</code>, <code>net</code> &#8211; print network traffic (protocol only)<br />
- <code>N</code>, <code>net-all</code> &#8211; print network traffic (including payloads)<br />
+<dd> Enable debugging categories: <code>C</code>, <code>crash</code> &#8211; use built-in crash handler<br/>
+ <code>m</code>, <code>maildir</code> &#8211; print maildir debug info<br/>
+ <code>M</code>, <code>main</code> &#8211; print main debug info<br/>
+ <code>n</code>, <code>net</code> &#8211; print network traffic (protocol only)<br/>
+ <code>N</code>, <code>net-all</code> &#8211; print network traffic (including payloads)<br/>
  <code>s</code>, <code>sync</code> &#8211; print synchronization debug info All categories except <code>crash</code> implictly enable <i>verbose</i> mode. Without category specification, all categories except net-all are enabled.</dd>
 <dt><code>-q</code>, <code>&#8211;quiet</code></dt>
 <dd> Suppress progress counters (this is implicit if stdout is no TTY, or any debugging categories are enabled) and notices. If specified twice, suppress warning messages as well.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> The configuration file is mandatory; <code>mbsync</code> will not run without it. Lines starting with a hash mark (<code>#</code>) are comments and are ignored entirely. Configuration items are keywords followed by one or more arguments; arguments containing spaces must be enclosed in double quotes (<code>&quot;</code>), and literal double quotes and backslashes (<code>\</code>) must be backslash-escaped. All keywords (including those used as arguments) are case-insensitive. Bash-like home directory expansion using the tilde (<code>~</code>) is supported in all options which represent local paths. There are a few global options, the rest applies to particular sections. Sections are started by a section keyword and are terminated by an empty line or end of file. Every section defines an object with an identifier unique within that object class. </p>
-<p> There are two basic object classes: Stores and Channels. A Store defines a collection of mailboxes; basically a folder, either local or remote. A Channel connects two Stores, describing the way the two are synchronized.<br />
+<p> There are two basic object classes: Stores and Channels. A Store defines a collection of mailboxes; basically a folder, either local or remote. A Channel connects two Stores, describing the way the two are synchronized.<br/>
  There are two auxiliary object classes: Accounts and Groups. An Account describes the connection part of remote Stores, so a server connection can be shared between multiple Stores. A Group aggregates multiple Channels to save typing on the command line. </p>
-<p> File system locations (in particular, <code>Path</code> and <code>Inbox</code>) use the Store&#8217;s internal path separators, which may be slashes, periods, etc., or even combinations thereof.<br />
+<p> File system locations (in particular, <code>Path</code> and <code>Inbox</code>) use the Store&#8217;s internal path separators, which may be slashes, periods, etc., or even combinations thereof.<br/>
  Mailbox names, OTOH, always use canonical path separators, which are Unix-like forward slashes.</p>
 <h3>All Stores</h3>
-<p> These options can be used in all supported Store types.<br />
- In this context, the term &quot;remote&quot; describes the second Store within a Channel, and not necessarily a remote server.<br />
+<p> These options can be used in all supported Store types.<br/>
+ In this context, the term &quot;remote&quot; describes the second Store within a Channel, and not necessarily a remote server.<br/>
  The special mailbox <code>INBOX</code> exists in every Store; its physical location in the file system is Store type specific.</p>
 <dl>
 <dt><code>Path</code> <i>path</i></dt>
@@ -69,7 +69,7 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <dt><code>MapInbox</code> <i>mailbox</i></dt>
 <dd> Create a virtual mailbox (relative to <code>Path</code>) which aliases the <code>INBOX</code>. Makes sense in conjunction with <code>Patterns</code> in the Channels section, though with a Maildir slave, you probably want to place <code>Inbox</code> under <code>Path</code> instead. This virtual mailbox does not support subfolders.</dd>
 <dt><code>Flatten</code> <i>delim</i></dt>
-<dd> Flatten the hierarchy within this Store by substituting the canonical hierarchy delimiter <code>/</code> with <i>delim</i>. This can be useful when the MUA used to access the Store provides suboptimal handling of hierarchical mailboxes, as is the case with <code>Mutt</code>. A common choice for the delimiter is <code>.</code>.<br />
+<dd> Flatten the hierarchy within this Store by substituting the canonical hierarchy delimiter <code>/</code> with <i>delim</i>. This can be useful when the MUA used to access the Store provides suboptimal handling of hierarchical mailboxes, as is the case with <code>Mutt</code>. A common choice for the delimiter is <code>.</code>.<br/>
  Note that flattened sub-folders of the <code>INBOX</code> always end up under <code>Path</code>, including the &quot;INBOX<i>delim</i>&quot; prefix.</dd>
 <dt><code>Trash</code> <i>mailbox</i></dt>
 <dd> Specifies a mailbox (relative to <code>Path</code>) to copy deleted messages to prior to expunging. See <code>RECOMMENDATIONS</code> and <code>INHERENT PROBLEMS</code> below. (Default: none)</dd>
@@ -79,11 +79,11 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <dd> When expunging the remote Store, copy not yet propagated messages to this Store&#8217;s <code>Trash</code>. When using this, the remote Store does not need an own <code>Trash</code> at all, yet all messages are archived. (Default: <i>no</i>)</dd></dl>
 <h3>Maildir Stores</h3>
 <p> The reference point for relative <code>Path</code>s is the current working directory. </p>
-<p> As <code>mbsync</code> needs UIDs, but no standardized UID storage scheme exists for Maildir, <code>mbsync</code> supports two schemes, each with its pros and cons.<br />
- The <code>native</code> scheme is stolen from the latest Maildir patches to <code>c-client</code> and is therefore compatible with <code>pine</code>. The UID validity is stored in a file named .uidvalidity; the UIDs are encoded in the file names of the messages.<br />
- The <code>alternative</code> scheme is based on the UID mapping used by <code>isync</code> versions 0.8 and 0.9.x. The invariant parts of the file names of the messages are used as keys into a Berkeley database named .isyncuidmap.db, which holds the UID validity as well.<br />
- The <code>native</code> scheme is faster, more space efficient, endianness independent and &quot;human readable&quot;, but will be disrupted if a message is copied from another mailbox without getting a new file name; this would result in duplicated UIDs sooner or later, which in turn results in a UID validity change, making synchronization fail. The <code>alternative</code> scheme would fail if a MUA changed a message&#8217;s file name in a part <code>mbsync</code> considers invariant; this would be interpreted as a message deletion and a new message, resulting in unnecessary traffic.<br />
- <code>Mutt</code> is known to work fine with both schemes.<br />
+<p> As <code>mbsync</code> needs UIDs, but no standardized UID storage scheme exists for Maildir, <code>mbsync</code> supports two schemes, each with its pros and cons.<br/>
+ The <code>native</code> scheme is stolen from the latest Maildir patches to <code>c-client</code> and is therefore compatible with <code>pine</code>. The UID validity is stored in a file named .uidvalidity; the UIDs are encoded in the file names of the messages.<br/>
+ The <code>alternative</code> scheme is based on the UID mapping used by <code>isync</code> versions 0.8 and 0.9.x. The invariant parts of the file names of the messages are used as keys into a Berkeley database named .isyncuidmap.db, which holds the UID validity as well.<br/>
+ The <code>native</code> scheme is faster, more space efficient, endianness independent and &quot;human readable&quot;, but will be disrupted if a message is copied from another mailbox without getting a new file name; this would result in duplicated UIDs sooner or later, which in turn results in a UID validity change, making synchronization fail. The <code>alternative</code> scheme would fail if a MUA changed a message&#8217;s file name in a part <code>mbsync</code> considers invariant; this would be interpreted as a message deletion and a new message, resulting in unnecessary traffic.<br/>
+ <code>Mutt</code> is known to work fine with both schemes.<br/>
  Use <code>mdconvert</code> to convert mailboxes from one scheme to the other.</p>
 <dl>
 <dt><code>MaildirStore</code> <i>name</i></dt>
@@ -99,10 +99,10 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <dt><code>IMAPAccount</code> <i>name</i></dt>
 <dd> Define the IMAP4 Account <i>name</i>, opening a section for its parameters.</dd>
 <dt><code>Host</code> <i>host</i></dt>
-<dd> Specify the DNS name or IP address of the IMAP server.<br />
+<dd> Specify the DNS name or IP address of the IMAP server.<br/>
  If <code>Tunnel</code> is used, this setting is needed only if <code>SSLType</code> is not <i>None</i> and <code>CertificateFile</code> is not used, in which case the host name is used for certificate subject verification.</dd>
 <dt><code>Port</code> <i>port</i></dt>
-<dd> Specify the TCP port number of the IMAP server. (Default: 143 for IMAP, 993 for IMAPS)<br />
+<dd> Specify the TCP port number of the IMAP server. (Default: 143 for IMAP, 993 for IMAPS)<br/>
  If <code>Tunnel</code> is used, this setting is ignored.</dd>
 <dt><code>User</code> <i>username</i></dt>
 <dd> Specify the login name on the IMAP server.</dd>
@@ -115,16 +115,16 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <dt><code>AuthMechs</code> <i>type</i> &#8230;</dt>
 <dd> The list of acceptable authentication mechanisms. In addition to the mechanisms listed in the SASL registry (link below), the legacy IMAP <code>LOGIN</code> mechanism is known. The wildcard <code>*</code> represents all mechanisms that are deemed secure enough for the current <code>SSLType</code> setting. The actually used mechanism is the most secure choice from the intersection of this list, the list supplied by the server, and the installed SASL modules. (Default: <code>*</code>)</dd>
 <dt><code>SSLType</code> {<i>None</i>|<i>STARTTLS</i>|<i>IMAPS</i>}</dt>
-<dd> Select the connection security/encryption method:<br />
- <i>None</i> &#8211; no security. This is the default when <code>Tunnel</code> is set, as tunnels are usually secure.<br />
- <i>STARTTLS</i> &#8211; security is established via the STARTTLS extension after connecting the regular IMAP port 143. Most servers support this, so it is the default (unless a tunnel is used).<br />
+<dd> Select the connection security/encryption method:<br/>
+ <i>None</i> &#8211; no security. This is the default when <code>Tunnel</code> is set, as tunnels are usually secure.<br/>
+ <i>STARTTLS</i> &#8211; security is established via the STARTTLS extension after connecting the regular IMAP port 143. Most servers support this, so it is the default (unless a tunnel is used).<br/>
  <i>IMAPS</i> &#8211; security is established by starting SSL/TLS negotiation right after connecting the secure IMAP port 993.</dd>
 <dt><code>SSLVersions</code> [<i>SSLv2</i>] [<i>SSLv3</i>] [<i>TLSv1</i>] [<i>TLSv1.1</i>] [<i>TLSv1.2</i>]</dt>
 <dd> Select the acceptable SSL/TLS versions. Use of SSLv2 is strongly discouraged for security reasons, but might be the only option on some very old servers. Generally, the newest TLS version is recommended, but as this confuses some servers, <code>TLSv1</code> is the default.</dd>
 <dt><code>SystemCertificates</code> <i>yes</i>|<i>no</i></dt>
 <dd> Whether the system&#8217;s default root cerificate store should be loaded. (Default: <i>yes</i>)</dd>
 <dt><code>CertificateFile</code> <i>path</i></dt>
-<dd> File containing additional X.509 certificates used to verify server identities. Directly matched peer certificates are always trusted, regardless of validity.<br />
+<dd> File containing additional X.509 certificates used to verify server identities. Directly matched peer certificates are always trusted, regardless of validity.<br/>
  Note that the system&#8217;s default certificate store is always used (unless <code>SystemCertificates</code> is disabled) and should not be specified here.</dd>
 <dt><code>PipelineDepth</code> <i>depth</i></dt>
 <dd> Maximum number of IMAP commands which can be simultaneously in flight. Setting this to <i>1</i> disables pipelining. This is mostly a debugging only option. (Default: <i>unlimited</i>)</dd></dl>
@@ -138,7 +138,7 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <dt><code>UseNamespace</code> <i>yes</i>|<i>no</i></dt>
 <dd> Selects whether the server&#8217;s first &quot;personal&quot; NAMESPACE should be prefixed to mailbox names. Disabling this makes sense for some broken IMAP servers. This option is meaningless if a <code>Path</code> was specified. (Default: <i>yes</i>)</dd>
 <dt><code>PathDelimiter</code> <i>delim</i></dt>
-<dd> Specify the server&#8217;s hierarchy delimiter. (Default: taken from the server&#8217;s first &quot;personal&quot; NAMESPACE)<br />
+<dd> Specify the server&#8217;s hierarchy delimiter. (Default: taken from the server&#8217;s first &quot;personal&quot; NAMESPACE)<br/>
  Do <code>NOT</code> abuse this to re-interpret the hierarchy. Use <code>Flatten</code> instead.</dd></dl>
 <h3>Channels</h3>
 <dl>
@@ -147,9 +147,9 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <dt>{<code>Master</code>|<code>Slave</code>} <code>:</code><i>store</i><code>:</code>[<i>mailbox</i>]</dt>
 <dd> Specify the Master resp. Slave Store to be connected by this Channel. If <code>Patterns</code> are specified, <i>mailbox</i> is interpreted as a prefix which is not matched against the patterns, and which is not affected by mailbox list overrides. Otherwise, if <i>mailbox</i> is omitted, <code>INBOX</code> is assumed.</dd>
 <dt><code>Pattern</code>[<code>s</code>] [<code>!</code>]<i>pattern</i> &#8230;</dt>
-<dd> Instead of synchronizing only one mailbox pair, synchronize all mailboxes that match the <i>pattern</i>(s). The mailbox names are the same on both Master and Slave. Patterns are IMAP4 patterns, i.e., <code>*</code> matches anything and <code>%</code> matches anything up to the next hierarchy delimiter. Prepending <code>!</code> to a pattern makes it an exclusion. Multiple patterns can be specified (either by supplying multiple arguments or by using <code>Pattern</code> multiple times); later matches take precedence.<br />
- Note that <code>INBOX</code> is not matched by wildcards, unless it lives under <code>Path</code>.<br />
- The mailbox list selected by <code>Patterns</code> can be overridden by a mailbox list in a channel reference (a <code>Group</code> specification or the command line).<br />
+<dd> Instead of synchronizing only one mailbox pair, synchronize all mailboxes that match the <i>pattern</i>(s). The mailbox names are the same on both Master and Slave. Patterns are IMAP4 patterns, i.e., <code>*</code> matches anything and <code>%</code> matches anything up to the next hierarchy delimiter. Prepending <code>!</code> to a pattern makes it an exclusion. Multiple patterns can be specified (either by supplying multiple arguments or by using <code>Pattern</code> multiple times); later matches take precedence.<br/>
+ Note that <code>INBOX</code> is not matched by wildcards, unless it lives under <code>Path</code>.<br/>
+ The mailbox list selected by <code>Patterns</code> can be overridden by a mailbox list in a channel reference (a <code>Group</code> specification or the command line).<br/>
  Example: &quot;<code>Patterns</code>&nbsp;<wbr><i>%&nbsp;<wbr>!Trash</i>&quot;</dd>
 <dt><code>MaxSize</code> <i>size</i>[<code>k</code>|<code>m</code>][<code>b</code>]</dt>
 <dd> Analogous to the homonymous option in the Stores section, but applies equally to Master and Slave. Note that this actually modifies the Stores, so take care not to provide conflicting settings if you use the Stores in multiple Channels.</dd>
@@ -158,25 +158,25 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <dt><code>ExpireUnread</code> <i>yes</i>|<i>no</i></dt>
 <dd> Selects whether unread messages should be affected by <code>MaxMessages</code>. Normally, unread messages are considered important and thus never expired. This ensures that you never miss new messages even after an extended absence. However, if your archive contains large amounts of unread messages by design, treating them as important would practically defeat <code>MaxMessages</code>. In this case you need to enable this option. (Default: <i>no</i>).</dd>
 <dt><code>Sync</code> {<i>None</i>|[<i>Pull</i>] [<i>Push</i>] [<i>New</i>] [<i>ReNew</i>] [<i>Delete</i>] [<i>Flags</i>]|<i>All</i>}</dt>
-<dd> Select the synchronization operation(s) to perform:<br />
- <i>Pull</i> &#8211; propagate changes from Master to Slave.<br />
- <i>Push</i> &#8211; propagate changes from Slave to Master.<br />
- <i>New</i> &#8211; propagate newly appeared messages.<br />
- <i>ReNew</i> &#8211; previously refused messages are re-evaluated for propagation. Useful after flagging affected messages in the source Store or enlarging MaxSize in the destination Store.<br />
- <i>Delete</i> &#8211; propagate message deletions. This applies only to messages that are actually gone, i.e., were expunged. The affected messages in the remote Store are marked as deleted only, i.e., they won&#8217;t be really deleted until that Store is expunged.<br />
- <i>Flags</i> &#8211; propagate flag changes. Note that Deleted/Trashed is a flag as well; this is particularly interesting if you use <code>mutt</code> with the maildir_trash option.<br />
- <i>All</i> (<code>&#8211;full</code> on the command line) &#8211; all of the above. This is the global default.<br />
+<dd> Select the synchronization operation(s) to perform:<br/>
+ <i>Pull</i> &#8211; propagate changes from Master to Slave.<br/>
+ <i>Push</i> &#8211; propagate changes from Slave to Master.<br/>
+ <i>New</i> &#8211; propagate newly appeared messages.<br/>
+ <i>ReNew</i> &#8211; previously refused messages are re-evaluated for propagation. Useful after flagging affected messages in the source Store or enlarging MaxSize in the destination Store.<br/>
+ <i>Delete</i> &#8211; propagate message deletions. This applies only to messages that are actually gone, i.e., were expunged. The affected messages in the remote Store are marked as deleted only, i.e., they won&#8217;t be really deleted until that Store is expunged.<br/>
+ <i>Flags</i> &#8211; propagate flag changes. Note that Deleted/Trashed is a flag as well; this is particularly interesting if you use <code>mutt</code> with the maildir_trash option.<br/>
+ <i>All</i> (<code>&#8211;full</code> on the command line) &#8211; all of the above. This is the global default.<br/>
  <i>None</i> (<code>&#8211;noop</code> on the command line) &#8211; don&#8217;t propagate anything. Useful if you want to expunge only.</dd>
 <dt>
-</dt><dd> <i>Pull</i> and <i>Push</i> are direction flags, while <i>New</i>, <i>ReNew</i>, <i>Delete</i> and <i>Flags</i> are type flags. The two flag classes make up a two-dimensional matrix (a table). Its cells are the individual actions to perform. There are two styles of asserting the cells:<br />
- In the first style, the flags select entire rows/colums in the matrix. Only the cells which are selected both horizontally and vertically are asserted. Specifying no flags from a class is like specifying all flags from this class. For example, &quot;<code>Sync</code>&nbsp;<wbr><i>Pull</i>&nbsp;<wbr><i>New</i>&nbsp;<wbr><i>Flags</i>&quot; will propagate new messages and flag changes from the Master to the Slave, &quot;<code>Sync</code>&nbsp;<wbr><i>New</i>&nbsp;<wbr><i>Delete</i>&quot; will propagate message arrivals and deletions both ways, and &quot;<code>Sync</code>&nbsp;<wbr><i>Push</i>&quot; will propagate all changes from the Slave to the Master.<br />
+</dt><dd> <i>Pull</i> and <i>Push</i> are direction flags, while <i>New</i>, <i>ReNew</i>, <i>Delete</i> and <i>Flags</i> are type flags. The two flag classes make up a two-dimensional matrix (a table). Its cells are the individual actions to perform. There are two styles of asserting the cells:<br/>
+ In the first style, the flags select entire rows/colums in the matrix. Only the cells which are selected both horizontally and vertically are asserted. Specifying no flags from a class is like specifying all flags from this class. For example, &quot;<code>Sync</code>&nbsp;<wbr><i>Pull</i>&nbsp;<wbr><i>New</i>&nbsp;<wbr><i>Flags</i>&quot; will propagate new messages and flag changes from the Master to the Slave, &quot;<code>Sync</code>&nbsp;<wbr><i>New</i>&nbsp;<wbr><i>Delete</i>&quot; will propagate message arrivals and deletions both ways, and &quot;<code>Sync</code>&nbsp;<wbr><i>Push</i>&quot; will propagate all changes from the Slave to the Master.<br/>
  In the second style, direction flags are concatenated with type flags; every compound flag immediately asserts a cell in the matrix. In addition to at least one compound flag, the individual flags can be used as well, but as opposed to the first style, they immediately assert all cells in their respective row/column. For example, &quot;<code>Sync</code>&nbsp;<wbr><i>PullNew</i>&nbsp;<wbr><i>PullDelete</i>&nbsp;<wbr><i>Push</i>&quot; will propagate message arrivals and deletions from the Master to the Slave and any changes from the Slave to the Master. Note that it is not allowed to assert a cell in two ways, e.g. &quot;<code>Sync</code>&nbsp;<wbr><i>PullNew</i>&nbsp;<wbr><i>Pull</i>&quot; and &quot;<code>Sync</code>&nbsp;<wbr><i>PullNew</i>&nbsp;<wbr><i>Delete</i>&nbsp;<wbr><i>Push</i>&quot; induce error messages.</dd>
 <dt><code>Create</code> {<i>None</i>|<i>Master</i>|<i>Slave</i>|<i>Both</i>}</dt>
 <dd> Automatically create missing mailboxes [on the Master/Slave]. Otherwise print an error message and skip that mailbox pair if a mailbox and the corresponding sync state does not exist. (Global default: <i>None</i>)</dd>
 <dt><code>Remove</code> {<i>None</i>|<i>Master</i>|<i>Slave</i>|<i>Both</i>}</dt>
-<dd> Propagate mailbox deletions [to the Master/Slave]. Otherwise print an error message and skip that mailbox pair if a mailbox does not exist but the corresponding sync state does.<br />
- For MailDir mailboxes it is sufficient to delete the cur/ subdirectory to mark them as deleted. This ensures compatibility with <code>SyncState *</code>.<br />
- Note that for safety, non-empty mailboxes are never deleted.<br />
+<dd> Propagate mailbox deletions [to the Master/Slave]. Otherwise print an error message and skip that mailbox pair if a mailbox does not exist but the corresponding sync state does.<br/>
+ For MailDir mailboxes it is sufficient to delete the cur/ subdirectory to mark them as deleted. This ensures compatibility with <code>SyncState *</code>.<br/>
+ Note that for safety, non-empty mailboxes are never deleted.<br/>
  (Global default: <i>None</i>)</dd>
 <dt><code>Expunge</code> {<i>None</i>|<i>Master</i>|<i>Slave</i>|<i>Both</i>}</dt>
 <dd> Permanently remove all messages [on the Master/Slave] marked for deletion. See <code>RECOMMENDATIONS</code> below. (Global default: <i>None</i>)</dd>
@@ -185,14 +185,14 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <p> <code>Sync</code>, <code>Create</code>, <code>Remove</code>, <code>Expunge</code>, <code>MaxMessages</code>, and <code>CopyArrivalDate</code> can be used before any section for a global effect. The global settings are overridden by Channel-specific options, which in turn are overridden by command line switches.</p>
 <dl>
 <dt><code>SyncState</code> {<code>*</code>|<i>path</i>}</dt>
-<dd> Set the location of this Channel&#8217;s synchronization state files. <code>*</code> means that the state should be saved in a file named .mbsyncstate in the Slave mailbox itself; this has the advantage that you needn&#8217;t to care for the state file if you delete the mailbox, but it works only with Maildir mailboxes, obviously. Otherwise this is interpreted as a string to prepend to the Slave mailbox name to make up a complete path.<br />
- This option can be used outside any section for a global effect. In this case the appended string is made up according to the pattern <code>:</code><i>master</i><code>:</code><i>master-box</i><code>_:</code><i>slave</i><code>:</code><i>slave-box</i> (see also <code>FieldDelimiter</code> below).<br />
+<dd> Set the location of this Channel&#8217;s synchronization state files. <code>*</code> means that the state should be saved in a file named .mbsyncstate in the Slave mailbox itself; this has the advantage that you needn&#8217;t to care for the state file if you delete the mailbox, but it works only with Maildir mailboxes, obviously. Otherwise this is interpreted as a string to prepend to the Slave mailbox name to make up a complete path.<br/>
+ This option can be used outside any section for a global effect. In this case the appended string is made up according to the pattern <code>:</code><i>master</i><code>:</code><i>master-box</i><code>_:</code><i>slave</i><code>:</code><i>slave-box</i> (see also <code>FieldDelimiter</code> below).<br/>
  (Global default: <i>~/.mbsync/</i>).</dd></dl>
 <h3>Groups</h3>
 <dl>
 <dt><code>Group</code> <i>name</i> [<i>channel</i>[<code>:</code><i>box</i>[<code>,</code>&#8230;]]] &#8230;</dt>
-<dd> Define the Group <i>name</i>, opening a section for its parameters. Note that even though Groups have an own namespace, they will &quot;hide&quot; Channels with the same name on the command line.<br />
- One or more Channels can be specified on the same line.<br />
+<dd> Define the Group <i>name</i>, opening a section for its parameters. Note that even though Groups have an own namespace, they will &quot;hide&quot; Channels with the same name on the command line.<br/>
+ One or more Channels can be specified on the same line.<br/>
  If you supply one or more <i>box</i>es to a <i>channel</i>, they will be used instead of what is specified in the Channel&#8217;s Patterns. The same can be done on the command line, except that there newlines can be used as mailbox name separators as well.</dd>
 <dt><code>Channel</code>[<code>s</code>] <i>channel</i>[<code>:</code><i>box</i>[<code>,</code>&#8230;]] &#8230;</dt>
 <dd> Add the specified channels to the group. This option can be specified multiple times within a Group.</dd></dl>
@@ -212,7 +212,7 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <h2>RECOMMENDATIONS</h2>
 <p> Make sure your IMAP server does not auto-expunge deleted messages &#8211; it is slow, and semantically somewhat questionable. Specifically, Gmail needs to be configured not to do it. </p>
 <p> By default, <code>mbsync</code> will not delete any messages &#8211; deletions are propagated by marking the messages as deleted on the remote store. Once you have verified that your setup works, you will typically want to set <code>Expunge</code> to <code>Both</code>, so that deletions become effective. </p>
-<p> <code>mbsync</code>&#8216;s built-in trash functionality relies on <code>mbsync</code> doing the expunging of deleted messages. This is the case when it propagates deletions of previously propagated messages, and the trash is on the target store (typically your IMAP server).<br />
+<p> <code>mbsync</code>&#8216;s built-in trash functionality relies on <code>mbsync</code> doing the expunging of deleted messages. This is the case when it propagates deletions of previously propagated messages, and the trash is on the target store (typically your IMAP server).<br/>
  However, when you intend <code>mbsync</code> to trash messages which were not propagated yet, the MUA must mark the messages as deleted without expunging them (e.g., <code>Mutt</code>&#8216;s <code>maildir_trash</code> option). Note that most messages are propagated a long time before they are deleted, so this is a corner case you probably do not want to optimize for. This also implies that the <code>TrashNewOnly</code> and <code>TrashRemoteNew</code> options are typically not very useful. </p>
 <p> If your server supports auto-trashing (as Gmail does), it is probably a good idea to rely on that instead of <code>mbsync</code>&#8216;s trash functionality. If you do that, and intend to synchronize the trash like other mailboxes, you should not use <code>mbsync</code>&#8216;s <code>Trash</code> option at all.</p>
 <h2>INHERENT PROBLEMS</h2>

@@ -10,9 +10,9 @@ description: "lv – a Powerful Multilingual File Viewer / Grep"
 
 <p> lv &#8211; a Powerful Multilingual File Viewer / Grep</p>
 <h2>SYNOPSIS</h2>
-<p> <code>lv, lgrep</code><br />
- <code>lv</code> -h<br />
- <code>lv</code> -V<br />
+<p> <code>lv, lgrep</code><br/>
+ <code>lv</code> -h<br/>
+ <code>lv</code> -V<br/>
  <code>lv</code> [-acdfgiklmnqsuvz] [+acdfgiklmnqsuvz] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>[-A<i>coding-system</i>]&nbsp;<wbr>[-I<i>coding-system</i>]&nbsp;<wbr>[-K<i>coding-system</i>] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>[-O<i>coding-system</i>]&nbsp;<wbr>[-P<i>coding-system</i>]&nbsp;<wbr>[-D<i>coding-system</i>] </p>
@@ -49,27 +49,27 @@ description: "lv – a Powerful Multilingual File Viewer / Grep"
 <dt>-D&lt;<i>coding-system</i>&gt;</dt>
 <dd> Set default (fall-back) coding system to <i>coding-system</i>.</dd>
 <dt>coding-system:</dt>
-<dd> a: auto-select<br />
- c: iso-2022-cn<br />
- j: iso-2022-jp<br />
- k: iso-2022-kr<br />
- ec: euc-china<br />
- ej: euc-japan<br />
- ek: euc-korea<br />
- et: euc-taiwan<br />
- u7: UTF-7<br />
- u8: UTF-8<br />
- l1..9: iso-8859-1..9<br />
- l0: iso-8859-10<br />
- lb,ld,le,lf,lg: iso-8859-11,13,14,15,16<br />
- s: shift-jis<br />
- b: big5<br />
- h: HZ<br />
+<dd> a: auto-select<br/>
+ c: iso-2022-cn<br/>
+ j: iso-2022-jp<br/>
+ k: iso-2022-kr<br/>
+ ec: euc-china<br/>
+ ej: euc-japan<br/>
+ ek: euc-korea<br/>
+ et: euc-taiwan<br/>
+ u7: UTF-7<br/>
+ u8: UTF-8<br/>
+ l1..9: iso-8859-1..9<br/>
+ l0: iso-8859-10<br/>
+ lb,ld,le,lf,lg: iso-8859-11,13,14,15,16<br/>
+ s: shift-jis<br/>
+ b: big5<br/>
+ h: HZ<br/>
  r: raw mode</dd>
 <dt>Examples:</dt>
-<dd> -Il2: input coding system is iso-8859-2<br />
- -Ks: keyboard coding system is shift-jis<br />
- -Oek: output coding system is euc-korea<br />
+<dd> -Il2: input coding system is iso-8859-2<br/>
+ -Ks: keyboard coding system is shift-jis<br/>
+ -Oek: output coding system is euc-korea<br/>
  -Ab: all coding systems are big5</dd>
 <dt>Coding-system translations / Code-points conversions:</dt>
 <dd> iso-2022-cn, -jp, -kr can be converted into euc-china or -taiwan, euc-japan, euc-korea, respectively (and vice versa). shift-jis uses the same internal code-points as iso-2022-jp and euc-japan. </dd>
@@ -80,10 +80,10 @@ description: "lv – a Powerful Multilingual File Viewer / Grep"
 <dt>-H&lt;<i>number</i>&gt;</dt>
 <dd> Screen height</dd>
 <dt>-E'&lt;<i>editor</i>&gt;&#8217; (default &#8216;vi -c %d&#8217;)</dt>
-<dd> Editor name (default &#8216;vi -c %d&#8217;)<br />
+<dd> Editor name (default &#8216;vi -c %d&#8217;)<br/>
  &#8220;%d&#8221; means the line number of current position in a file.</dd>
 <dt>-q</dt>
-<dd> Assert there is delete/insert-lines control.<br />
+<dd> Assert there is delete/insert-lines control.<br/>
  Please set this option on a MSDOS ANSI terminal that has capability to delete and/or insert lines. As to termcap and terminfo version, it will be set automatically.</dd>
 <dt>-Ss&lt;<i>seq</i>&gt;</dt>
 <dd> Set ANSI Standout sequence to <i>seq</i> (default &quot;7&quot;)</dd>
@@ -125,7 +125,7 @@ description: "lv – a Powerful Multilingual File Viewer / Grep"
 <dt>-z</dt>
 <dd> Enable HZ auto-detection (also enabled by run-time C-t). </dd>
 <dt>-+</dt>
-<dd> Clear all options<br />
+<dd> Clear all options<br/>
  You can also turn OFF specified options, using &#8220;+&lt;option&gt;&#8221; like +c, +d, &#8230; +z.</dd>
 <dt>&#8211;</dt>
 <dd> Treat the following arguments as filenames</dd>

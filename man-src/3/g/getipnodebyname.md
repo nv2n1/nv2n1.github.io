@@ -23,11 +23,11 @@ void freehostent(struct hostent *ip);
 <h2>DESCRIPTION</h2>
 <p> These functions are deprecated (and unavailable in glibc). Use <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3) and <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a></code>(3) instead. </p>
 <p> The <code>getipnodebyname</code>() and <code>getipnodebyaddr</code>() functions return the names and addresses of a network host. These functions return a pointer to the following structure: </p>
-<p> struct hostent {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*h_name;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;**h_aliases;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;h_addrtype;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;h_length;<br />
+<p> struct hostent {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*h_name;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;**h_aliases;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;h_addrtype;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;h_length;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;**h_addr_list; }; </p>
 <p> These functions replace the <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3) and <code><a href="/docs/linux/man/3-gethostbyaddr/">gethostbyaddr</a></code>(3) functions, which could access only the IPv4 network address family. The <code>getipnodebyname</code>() and <code>getipnodebyaddr</code>() functions can access multiple network address families. </p>
 <p> Unlike the <code>gethostby</code> functions, these functions return pointers to dynamically allocated memory. The <code>freehostent</code>() function is used to release the dynamically allocated memory after the caller no longer needs the <i>hostent</i> structure.</p>

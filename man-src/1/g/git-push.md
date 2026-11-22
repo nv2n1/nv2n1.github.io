@@ -519,7 +519,7 @@ git push --force-with-lease=master:base master:master
 <dt>
 </dt><dd>
 o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; A&#8211; &#8211; B origin / master</dd>
-<p>                                       X&#8211; &#8211;<br />
+<p>                                       X&#8211; &#8211;<br/>
     Y&#8211; &#8211; Z dev
 </dl>
 <p> The above command would change the origin repository to </p>

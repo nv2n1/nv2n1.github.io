@@ -128,9 +128,9 @@ mformat[-t cylinders | -T tot_sectors][-h heads][-s sectors]
 <h2>Number of sectors per cluster</h2>
 <p> If the user indicates no cluster size, mformat figures out a default value for it. </p>
 <p> For FAT32 it uses the following table to determine the number of sectors per cluster, depending on the total number of sectors on the filesystem. </p>
-<p> more than 32*1024*1024*2: 64 sectors<br />
- between 16*1024*1024*2 and 32*1024*1024*2: 32 sectors<br />
- between 8*1024*1024*2 and 16*1024*1024*2: 16 sectors<br />
+<p> more than 32*1024*1024*2: 64 sectors<br/>
+ between 16*1024*1024*2 and 32*1024*1024*2: 32 sectors<br/>
+ between 8*1024*1024*2 and 16*1024*1024*2: 16 sectors<br/>
  between 260*1024*2 and 81024*1024*2: 1 sectors </p>
 <p> This is derived from information on page 20 of Microsoft&#8217;s <tt>fatgen103</tt> document, which currently can be found at the following address: </p>
 <p> <tt><a rel="nofollow" href="https://staff.washington.edu/dittrich/misc/fatgen103.pdf">https://staff.washington.edu/dittrich/misc/fatgen103.pdf</a></tt> </p>
@@ -143,7 +143,7 @@ mformat[-t cylinders | -T tot_sectors][-h heads][-s sectors]
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation. However, this process is only approximative, and some items, such as crossreferences, footnotes and indices are lost in this translation process. Indeed, these items have no appropriate representation in the manpage format. Moreover, not all information has been translated into the manpage version. Thus I strongly advise you to use the original texinfo doc. See the end of this manpage for instructions how to view the texinfo doc.</p>
 <dl>
 <dt>* &nbsp;<wbr>&nbsp;</dt>
-<dd> To generate a printable copy from the texinfo doc, run the following commands:<br />
+<dd> To generate a printable copy from the texinfo doc, run the following commands:<br/>
 &nbsp; </dd>
 <pre>
 <code>    ./configure; make dvi; dvips mtools.dvi
@@ -152,7 +152,7 @@ mformat[-t cylinders | -T tot_sectors][-h heads][-s sectors]
 <p>&nbsp;</p>
 <dl>
 <dt>* &nbsp;<wbr>&nbsp;</dt>
-<dd> To generate a html copy, run:<br />
+<dd> To generate a html copy, run:<br/>
 &nbsp; </dd>
 <pre>
 <code>    ./configure; make html
@@ -161,7 +161,7 @@ mformat[-t cylinders | -T tot_sectors][-h heads][-s sectors]
 <p>&nbsp; A premade html can be found at <tt>&infin;<a rel="nofollow" href="http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral">http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral</a></tt></p>
 <dl>
 <dt>* &nbsp;<wbr>&nbsp;</dt>
-<dd> To generate an info copy (browsable using emacs&#8217; info mode), run:<br />
+<dd> To generate an info copy (browsable using emacs&#8217; info mode), run:<br/>
 &nbsp; </dd>
 <pre>
 <code>    ./configure; make info

@@ -14,13 +14,13 @@ description: "QuantLib::TwoFactorModel::ShortRateDynamics – Class describing t
 <h3>Public Member Functions</h3>
 <p><code>ShortRateDynamics</code> (const boost::shared_ptr&lt; <code>StochasticProcess1D</code> &gt; &amp;xProcess, const boost::shared_ptr&lt; <code>StochasticProcess1D</code> &gt; &amp;yProcess, Real correlation) </p>
 <p> virtual <code>Rate</code> <code>shortRate</code> (Time t, Real x, Real y) const =0 </p>
-<p> const boost::shared_ptr&lt; <code>StochasticProcess1D</code> &gt; &amp; <code>xProcess</code> () const<br />
- <i>Risk-neutral dynamics of the first state variable x. </i><br />
- const boost::shared_ptr&lt; <code>StochasticProcess1D</code> &gt; &amp; <code>yProcess</code> () const<br />
- <i>Risk-neutral dynamics of the second state variable y. </i><br />
- Real <code>correlation</code> () const<br />
- <i>Correlation $ ho $ between the two brownian motions. </i><br />
- boost::shared_ptr&lt; <code>StochasticProcess</code> &gt; <code>process</code> () const<br />
+<p> const boost::shared_ptr&lt; <code>StochasticProcess1D</code> &gt; &amp; <code>xProcess</code> () const<br/>
+ <i>Risk-neutral dynamics of the first state variable x. </i><br/>
+ const boost::shared_ptr&lt; <code>StochasticProcess1D</code> &gt; &amp; <code>yProcess</code> () const<br/>
+ <i>Risk-neutral dynamics of the second state variable y. </i><br/>
+ Real <code>correlation</code> () const<br/>
+ <i>Correlation $ ho $ between the two brownian motions. </i><br/>
+ boost::shared_ptr&lt; <code>StochasticProcess</code> &gt; <code>process</code> () const<br/>
  <i>Joint process of the two variables. </i></p>
 <h2>Detailed Description</h2>
 <p>Class describing the dynamics of the two state variables. </p>

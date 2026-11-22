@@ -49,10 +49,10 @@ url: "/docs/linux/man/1-gm_georect/"
 <dt><code>3</code></dt>
 <dd> Enter the corresponding geographic coordinates for the GCP <code>OR</code> click on the same place in a georectified map (in a normal map display) to automatically extract the geographic coordinates and enter them into the geographic coordinate entry box in the GCP manager window (Note: use the <code>pointer tool</code> in the map display window)</dd></dl>
 <h3><code>GCP Management</code>Continue marking GCPs until you</h3>
-<p> have enough for an accurate georectification. At least 3 GCPs are needed for a simple 1st order (affine) transformation that can shift and rotate a map; at least 6 GCPs are needed for a 2nd order (polynomial) transformation that will do simple warping in addition to shifting and rotating; at least 10 GCPs are needed for a 3rd order (polynomial) transformation that will do complex warping.<br />
- Any GCP can be edited by typing new values or by selecting the appropriate entry box and clicking on the GCP-marking display or georectified map display.<br />
- GCPs can be excluded and not used for calculating the transformation equation or the total RMS error by unchecking the box in the &quot;use&quot; column at the left of each GCP entry line. Only active GCPs (i.e., with the &quot;use&quot; box checked) will be used for computing the georectification and total error.<br />
- You can delete all inactive GCPs (i.e., with unchecked &quot;use&quot; boxes) by clicking the <code>eraser tool</code> in the GCP manager tool bar.<br />
+<p> have enough for an accurate georectification. At least 3 GCPs are needed for a simple 1st order (affine) transformation that can shift and rotate a map; at least 6 GCPs are needed for a 2nd order (polynomial) transformation that will do simple warping in addition to shifting and rotating; at least 10 GCPs are needed for a 3rd order (polynomial) transformation that will do complex warping.<br/>
+ Any GCP can be edited by typing new values or by selecting the appropriate entry box and clicking on the GCP-marking display or georectified map display.<br/>
+ GCPs can be excluded and not used for calculating the transformation equation or the total RMS error by unchecking the box in the &quot;use&quot; column at the left of each GCP entry line. Only active GCPs (i.e., with the &quot;use&quot; box checked) will be used for computing the georectification and total error.<br/>
+ You can delete all inactive GCPs (i.e., with unchecked &quot;use&quot; boxes) by clicking the <code>eraser tool</code> in the GCP manager tool bar.<br/>
  Total <i>RMS (</i>root mean square) error is calculated from all active GCPs. Click the <code>RMS tool</code> in the GCP manager tool bar to update the total RMS error after changing or including/excluding a GCP. Excluding a GCP with an especially high individual error can reduce overall RMS error, but will also change the individual errors of all other GCPs. The lower the RMS error, the more accurate the final georectification will be. </p>
 <p> All active GCPs can be saved to a <i>POINTS</i> file, associated with the <i>imagery group</i> for the map(s) to be georectified. If a saved <i>POINTS</i> file exists, prior to a georectification session the GCP values in the <i>POINTS</i> file will automatically be entered into the GCP manager window when a georectification session is started. </p>
 <h3>Georectification</h3>
@@ -63,16 +63,16 @@ url: "/docs/linux/man/1-gm_georect/"
 <dt><code>2</code></dt>
 <dd> Press the <code>Georectification button</code> on the GCP manager tool bar. Depending on the number of cells in a raster map or nodes in a vector map, georectification may take some time.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <i> gis.m manual<br />
- gis.m: ANIMATION TOOL<br />
+<p> <i> gis.m manual<br/>
+ gis.m: ANIMATION TOOL<br/>
  gis.m: PROFILE TOOL </p>
-<p> i.points<br />
- i.vpoints<br />
- i.rectify<br />
- g.proj<br />
- g.setproj<br />
- m.proj<br />
- r.proj<br />
+<p> i.points<br/>
+ i.vpoints<br/>
+ i.rectify<br/>
+ g.proj<br/>
+ g.setproj<br/>
+ m.proj<br/>
+ r.proj<br/>
  v.proj </i></p>
 <h2>AUTHORS</h2>
 <p> Michael Barton, Arizona State University, Tempe, Arizona, USA </p>

@@ -68,11 +68,11 @@ description: "dcraw – command-line decoder for raw digital photos"
 <dd> Use (or don&#8217;t use) any color matrix from the camera metadata. The default is <code>+M</code> if <code>-w</code> is set, <code>-M</code> otherwise. This option only affects Olympus, Leaf, and Phase One cameras.</dd>
 <dt><code>-o [0-5]</code></dt>
 <dd> Select the output colorspace when the <code>-p</code> option is not used: </dd>
-<p> <code> 0</code> &nbsp;<wbr>&nbsp;<wbr>Raw color (unique to each camera)<br />
- <code> 1</code> &nbsp;<wbr>&nbsp;<wbr>sRGB D65 (default)<br />
- <code> 2</code> &nbsp;<wbr>&nbsp;<wbr>Adobe RGB (1998) D65<br />
- <code> 3</code> &nbsp;<wbr>&nbsp;<wbr>Wide Gamut RGB D65<br />
- <code> 4</code> &nbsp;<wbr>&nbsp;<wbr>Kodak ProPhoto RGB D65<br />
+<p> <code> 0</code> &nbsp;<wbr>&nbsp;<wbr>Raw color (unique to each camera)<br/>
+ <code> 1</code> &nbsp;<wbr>&nbsp;<wbr>sRGB D65 (default)<br/>
+ <code> 2</code> &nbsp;<wbr>&nbsp;<wbr>Adobe RGB (1998) D65<br/>
+ <code> 3</code> &nbsp;<wbr>&nbsp;<wbr>Wide Gamut RGB D65<br/>
+ <code> 4</code> &nbsp;<wbr>&nbsp;<wbr>Kodak ProPhoto RGB D65<br/>
  <code> 5</code> &nbsp;<wbr>&nbsp;<wbr>XYZ</p>
 <dt><code>-p camera.icm</code>&nbsp;<wbr>[&nbsp;<wbr><code>-o output.icm</code>&nbsp;<wbr>]</dt>
 <dd> Use ICC profiles to define the camera&#8217;s raw colorspace and the desired output colorspace (sRGB by default).</dd>

@@ -179,12 +179,12 @@ description: "ixpdimm-cli – CLI to manage Intel(R) DIMMs"
 <p> <code>ixpdimm-cli show -d HealthState,LockState -dimm</code></p>
 <dl>
 <dd>Show HealthState and LockState information for all DIMMs.</dd></dl>
-<p> <code>ixpdimm-cli set -source mypassphrase.file -dimm 1234</code><br />
+<p> <code>ixpdimm-cli set -source mypassphrase.file -dimm 1234</code><br/>
  <code>NewPassphrase= ConfirmPassphrase=</code></p>
 <dl>
 <dd>Set a passphrase on DIMM 1234 by supplying the passphrase in the file mypassphrase.file. The format of the file would be:</dd>
 <dl>
-<dd>#ascii<br />
+<dd>#ascii<br/>
  NewPassphrase=myNewPassphrase</dd></dl>
 </dl>
 <p> <code>ixpdimm-cli create -goal VolatileSize=32 PersistentSize=Remaining PersistentSettings=4KB_4KB</code></p>
@@ -202,12 +202,12 @@ description: "ixpdimm-cli – CLI to manage Intel(R) DIMMs"
 <p> <code>ixpdimm-cli show -a -namspace 12345678-1234-1234-1234-123456789012</code></p>
 <dl>
 <dd>Show all attributes for the specified namespace</dd></dl>
-<p> <code>ixpdimm-cli create -namespace -pool 12345678-1234-1234-1234-123456789012</code><br />
+<p> <code>ixpdimm-cli create -namespace -pool 12345678-1234-1234-1234-123456789012</code><br/>
  <code>Type=Storage BlockSize=512 BlockCount=2097152</code></p>
 <dl>
 <dd>Create a 1 GB Storage namespace on pool 12345678-1234-1234-1234-123456789012 with a block size of 512</dd></dl>
 <h2>Files</h2>
-<p>/usr/share/nvdimm-mgmt/apss.dat<br />
+<p>/usr/share/nvdimm-mgmt/apss.dat<br/>
  /usr/share/nvdimm-mgmt/public.rev0.pem</p>
 <h2>See Also</h2>
 <p>ixpdimm-monitor (8) </p>

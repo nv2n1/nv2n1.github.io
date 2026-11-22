@@ -17,7 +17,7 @@ description: "mii-tool – view, manipulate media-independent interface status"
 <h2>Options</h2>
 <dl>
 <dt><code>-v</code>, <code>&#8211;verbose</code></dt>
-<dd>Display more detailed MII status information. If used twice, also display raw MII register contents.<br />
+<dd>Display more detailed MII status information. If used twice, also display raw MII register contents.<br/>
  <code>Alert:</code> If used three times, will force reading all MII registers, including non standard ones. It&#8217;s not guaranteed any valid answer from PHY while PHY communication can even hang. With driver e1000e will fail while reading register 0x07.</dd>
 <dt><code>-V</code>, <code>&#8211;version</code></dt>
 <dd>Display program version information.</dd>
@@ -48,8 +48,8 @@ description: "mii-tool – view, manipulate media-independent interface status"
 <dd>The interface in question does not support MII queries. Most likely, it does not have MII transceivers, at all. </dd>
 </dl>
 <h2>Authors</h2>
-<p>David Hinds &#8211; dhinds [at] pcmcia.sourceforge.org<br />
- Donald Becker &#8211; becker [at] scyld.com<br />
+<p>David Hinds &#8211; dhinds [at] pcmcia.sourceforge.org<br/>
+ Donald Becker &#8211; becker [at] scyld.com<br/>
  Bernd Eckenfels &#8211; net-tools [at] lina.inka.de</p>
 <h2>See Also</h2>
 <p><a rel="nofollow" href="http://net-tools.sourceforge.net">http://net-tools.sourceforge.net</a> &#8211; Homepage of the net-tools project </p>

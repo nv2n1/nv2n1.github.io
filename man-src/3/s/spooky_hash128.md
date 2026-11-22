@@ -21,7 +21,7 @@ void spooky_hash128(const void *message, size_t len, uint64_t *hash1, uint64_t *
 <h2>Return Value</h2>
 <p><code>spooky_hash64</code> and <code>spooky_hash32</code> return the hash value directly. <code>spooky_hash128</code> is a void return function. It overwrites the two 64-bit integers that <code>hash1</code> and <code>hash2</code> on return. These functions never return errors, only hash values.</p>
 <h2>Notes</h2>
-<p>The original code was written in C<font SIZE="-2">++</font>. The spooky-c library is a reimplementation of the hash function in C. It&#8217;s quite fast on 64-bit hardware. </p>
+<p>The original code was written in C++. The spooky-c library is a reimplementation of the hash function in C. It&#8217;s quite fast on 64-bit hardware. </p>
 <p> There are some caveats with the SpookyHash function:</p>
 <dl>
 <dt>&bull;</dt>
@@ -31,4 +31,4 @@ void spooky_hash128(const void *message, size_t len, uint64_t *hash1, uint64_t *
 <h2>See Also</h2>
 <p>Bob Jenkins&#8217; webpage on SpookyHash: &lt;<a rel="nofollow" href="http://www.burtleburtle.net/bob/hash/spooky.html">http://www.burtleburtle.net/bob/hash/spooky.html</a>&gt;</p>
 <h2>Authors</h2>
-<p>Bob Jenkins &lt;bob_jenkins [at] burtleburtle.net&gt; invented the SpookyHash algorithm and wrote the original C<font SIZE="-2">++</font> implementation. The C implementation (spooky-c) was written by Andi Kleen &lt;andi [at] firstfloor.org&gt;. This manpage was authored by Jeff Layton &lt;jlayton [at] poochiereds.net&gt;.</p>
+<p>Bob Jenkins &lt;bob_jenkins [at] burtleburtle.net&gt; invented the SpookyHash algorithm and wrote the original C++ implementation. The C implementation (spooky-c) was written by Andi Kleen &lt;andi [at] firstfloor.org&gt;. This manpage was authored by Jeff Layton &lt;jlayton [at] poochiereds.net&gt;.</p>

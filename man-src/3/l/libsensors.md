@@ -80,14 +80,14 @@ void (*sensors_fatal_error)(const char *proc, const char *err);
 <p> <code>sensors_fatal_error()</code> Is a function which is called when an immediately fatal error (like no memory left) is detected. Give it a new value, and your own function is called instead of the default (which prints to stderr and ends the program). Never let it return! </p>
 <h2>DATA STRUCTURES</h2>
 <p> Structure <code>sensors_feature</code> contains information related to a given feature of a specific chip: </p>
-<p> <code>typedef struct sensors_feature {<br />
+<p> <code>typedef struct sensors_feature {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>const char *name;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int number;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>sensors_feature_type type;</p>
 <p> } sensors_feature;</code> </p>
 <p> There are other members not documented here, which are only meant for libsensors internal use. </p>
 <p> Structure <code>sensors_subfeature</code> contains information related to a given subfeature of a specific chip feature: </p>
-<p> <code>typedef struct sensors_subfeature {<br />
+<p> <code>typedef struct sensors_subfeature {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>const char *name;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int number;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>sensors_subfeature_type type;</p>
@@ -96,7 +96,7 @@ void (*sensors_fatal_error)(const char *proc, const char *err);
 <p> } sensors_subfeature;</code> </p>
 <p> The flags field is a bitfield, its value is a combination of <code>SENSORS_MODE_R</code> (readable), <code>SENSORS_MODE_W</code> (writable) and <code>SENSORS_COMPUTE_MAPPING</code> (affected by the computation rules of the main feature). </p>
 <h2>FILES</h2>
-<p> <i>/etc/sensors3.conf</i><br />
+<p> <i>/etc/sensors3.conf</i><br/>
  <i>/etc/sensors.conf</i></p>
 <dl>
 <dt>

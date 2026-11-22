@@ -10,7 +10,7 @@ description: "zlaic1.f –"
 <p>zlaic1.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaic1</code> (JOB, J, X, SEST, W, GAMMA, SESTPR, S, C)<br />
+<p>subroutine <code>zlaic1</code> (JOB, J, X, SEST, W, GAMMA, SESTPR, S, C)<br/>
  <i></i><code>ZLAIC1</code> applies one step of incremental condition estimation.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaic1 (integerJOB, integerJ, complex*16, dimension( j )X, double precisionSEST, complex*16, dimension( j )W, complex*16GAMMA, double precisionSESTPR, complex*16S, complex*16C)</h3>

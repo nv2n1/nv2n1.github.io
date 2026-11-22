@@ -150,50 +150,50 @@ int foo(int a, int b)
 <pre>
 $ llvm-mca -mtriple=x86_64-unknown-unknown -mcpu=btver2 -iterations=300 dot-product.s
 </pre>
-<p>Iterations : 300 Instructions : 900 Total Cycles : 610 Total uOps : 900 Dispatch Width : 2 uOps Per Cycle : 1.48 IPC : 1.48 Block RThroughput : 2.0 Instruction Info : [1] : #uOps<br />
-                                                                                                                                                                                 [2] : Latency<br />
-                                                                                                                                                                                           [3] : RThroughput<br />
-                                                                                                                                                                                                     [4] : MayLoad<br />
-                                                                                                                                                                                                               [5] : MayStore<br />
-                                                                                                                                                                                                                         [6] : HasSideEffects(U)<br />
-                                                                                                                                                                                                                                   [1][2][3][4][5][6] Instructions : 1 2 1.00 vmulps<br />
-                                                                                                                                                                                                                               %<br />
-                                                                                                                                                                                                                               xmm0,<br />
-    % xmm1, % xmm2 1 3 1.00 vhaddps % xmm2, % xmm2, % xmm3 1 3 1.00 vhaddps % xmm3, % xmm3, % xmm4<br />
-                                                                                                    Resources : [0] &#8211;<br />
-                                                                                                JALU0<br />
-                                                                                                    [1] &#8211;<br />
-                                                                                                JALU1<br />
-                                                                                                    [2] &#8211;<br />
-                                                                                                JDiv<br />
-                                                                                                    [3] &#8211;<br />
-                                                                                                JFPA<br />
-                                                                                                    [4] &#8211;<br />
-                                                                                                JFPM<br />
-                                                                                                    [5] &#8211;<br />
-                                                                                                JFPU0<br />
-                                                                                                    [6] &#8211;<br />
-                                                                                                JFPU1<br />
-                                                                                                    [7] &#8211;<br />
-                                                                                                JLAGU<br />
-                                                                                                    [8] &#8211;<br />
-                                                                                                JMul<br />
-                                                                                                    [9] &#8211;<br />
-                                                                                                JSAGU<br />
-                                                                                                    [10] &#8211;<br />
-                                                                                                JSTC<br />
-                                                                                                    [11] &#8211;<br />
-                                                                                                JVALU0<br />
-                                                                                                    [12] &#8211;<br />
-                                                                                                JVALU1<br />
-                                                                                                    [13] &#8211;<br />
-                                                                                                JVIMUL<br />
-                                                                                                Resource pressure per iteration : [0][1][2][3][4][5][6][7][8][9][10][11][12][13] &#8211;<br />
-                                                                                                                                  &#8211; -2.00 1.00 2.00 1.00 &#8211; &#8211; &#8211; &#8211; &#8211; &#8211; -Resource pressure by instruction : [0][1][2][3][4][5][6][7][8][9][10][11][12][13] Instructions : &#8211; &#8211; &#8211; -1.00 &#8211; 1.00 &#8211; &#8211; &#8211; &#8211; &#8211; &#8211; -vmulps % xmm0,<br />
-    % xmm1, % xmm2<br />
-                &#8211; &#8211; -1.00 &#8211; 1.00 &#8211; &#8211; &#8211; &#8211; &#8211; &#8211; &#8211; -vhaddps % xmm2,<br />
-    % xmm2, % xmm3<br />
-                &#8211; &#8211; -1.00 &#8211; 1.00 &#8211; &#8211; &#8211; &#8211; &#8211; &#8211; &#8211; -vhaddps % xmm3,<br />
+<p>Iterations : 300 Instructions : 900 Total Cycles : 610 Total uOps : 900 Dispatch Width : 2 uOps Per Cycle : 1.48 IPC : 1.48 Block RThroughput : 2.0 Instruction Info : [1] : #uOps<br/>
+                                                                                                                                                                                 [2] : Latency<br/>
+                                                                                                                                                                                           [3] : RThroughput<br/>
+                                                                                                                                                                                                     [4] : MayLoad<br/>
+                                                                                                                                                                                                               [5] : MayStore<br/>
+                                                                                                                                                                                                                         [6] : HasSideEffects(U)<br/>
+                                                                                                                                                                                                                                   [1][2][3][4][5][6] Instructions : 1 2 1.00 vmulps<br/>
+                                                                                                                                                                                                                               %<br/>
+                                                                                                                                                                                                                               xmm0,<br/>
+    % xmm1, % xmm2 1 3 1.00 vhaddps % xmm2, % xmm2, % xmm3 1 3 1.00 vhaddps % xmm3, % xmm3, % xmm4<br/>
+                                                                                                    Resources : [0] &#8211;<br/>
+                                                                                                JALU0<br/>
+                                                                                                    [1] &#8211;<br/>
+                                                                                                JALU1<br/>
+                                                                                                    [2] &#8211;<br/>
+                                                                                                JDiv<br/>
+                                                                                                    [3] &#8211;<br/>
+                                                                                                JFPA<br/>
+                                                                                                    [4] &#8211;<br/>
+                                                                                                JFPM<br/>
+                                                                                                    [5] &#8211;<br/>
+                                                                                                JFPU0<br/>
+                                                                                                    [6] &#8211;<br/>
+                                                                                                JFPU1<br/>
+                                                                                                    [7] &#8211;<br/>
+                                                                                                JLAGU<br/>
+                                                                                                    [8] &#8211;<br/>
+                                                                                                JMul<br/>
+                                                                                                    [9] &#8211;<br/>
+                                                                                                JSAGU<br/>
+                                                                                                    [10] &#8211;<br/>
+                                                                                                JSTC<br/>
+                                                                                                    [11] &#8211;<br/>
+                                                                                                JVALU0<br/>
+                                                                                                    [12] &#8211;<br/>
+                                                                                                JVALU1<br/>
+                                                                                                    [13] &#8211;<br/>
+                                                                                                JVIMUL<br/>
+                                                                                                Resource pressure per iteration : [0][1][2][3][4][5][6][7][8][9][10][11][12][13] &#8211;<br/>
+                                                                                                                                  &#8211; -2.00 1.00 2.00 1.00 &#8211; &#8211; &#8211; &#8211; &#8211; &#8211; -Resource pressure by instruction : [0][1][2][3][4][5][6][7][8][9][10][11][12][13] Instructions : &#8211; &#8211; &#8211; -1.00 &#8211; 1.00 &#8211; &#8211; &#8211; &#8211; &#8211; &#8211; -vmulps % xmm0,<br/>
+    % xmm1, % xmm2<br/>
+                &#8211; &#8211; -1.00 &#8211; 1.00 &#8211; &#8211; &#8211; &#8211; &#8211; &#8211; &#8211; -vhaddps % xmm2,<br/>
+    % xmm2, % xmm3<br/>
+                &#8211; &#8211; -1.00 &#8211; 1.00 &#8211; &#8211; &#8211; &#8211; &#8211; &#8211; &#8211; -vhaddps % xmm3,<br/>
     % xmm3, % xmm4</p>
 <p> According to this report, the dot-product kernel has been executed 300 times, for a total of 900 simulated instructions. The total number of simulated micro opcodes (uOps) is also 900. </p>
 <p> The report is structured in three main sections. The first section collects a few performance numbers; the goal of this section is to give a very quick overview of the performance throughput. Important performance indicators are <code>IPC</code>, <code>uOps Per Cycle</code>, and <code>Block RThroughput</code> (Block Reciprocal Throughput). </p>
@@ -208,16 +208,16 @@ $ llvm-mca -mtriple=x86_64-unknown-unknown -mcpu=btver2 -iterations=300 dot-prod
 <p> Field <i>RThroughput</i> is the reciprocal of the instruction throughput. Throughput is computed as the maximum number of instructions of a same type that can be executed per clock cycle in the absence of operand dependencies. In this example, the reciprocal throughput of a vector float multiply is 1 cycles/instruction. That is because the FP multiplier JFPM is only available from pipeline JFPU1. </p>
 <p> Instruction encodings are displayed within the instruction info view when flag <i>-show-encoding</i> is specified. </p>
 <p> Below is an example of <i>-show-encoding</i> output for the dot-product kernel: </p>
-<p>Instruction Info : [1] : #uOps<br />
-                             [2] : Latency<br />
-                                       [3] : RThroughput<br />
-                                                 [4] : MayLoad<br />
-                                                           [5] : MayStore<br />
-                                                                     [6] : HasSideEffects(U)<br />
-                                                                               [7] : Encoding Size<br />
-                                                                                         [1][2][3][4][5][6][7] Encodings : Instructions : 1 2 1.00 4 c5 f0 59 d0 vmulps<br />
-                                                                                                                           %<br />
-                                                                                                                           xmm0,<br />
+<p>Instruction Info : [1] : #uOps<br/>
+                             [2] : Latency<br/>
+                                       [3] : RThroughput<br/>
+                                                 [4] : MayLoad<br/>
+                                                           [5] : MayStore<br/>
+                                                                     [6] : HasSideEffects(U)<br/>
+                                                                               [7] : Encoding Size<br/>
+                                                                                         [1][2][3][4][5][6][7] Encodings : Instructions : 1 2 1.00 4 c5 f0 59 d0 vmulps<br/>
+                                                                                                                           %<br/>
+                                                                                                                           xmm0,<br/>
     % xmm1, % xmm2 1 4 1.00 4 c5 eb 7c da vhaddps % xmm2, % xmm2, % xmm3 1 4 1.00 4 c5 e3 7c e3 vhaddps % xmm3, % xmm3, % xmm4</p>
 <p> The <i>Encoding Size</i> column shows the size in bytes of instructions. The <i>Encodings</i> column shows the actual instruction encodings (byte sequences in hex). </p>
 <p> The third section is the <i>Resource pressure view</i>. This view reports the average number of resource cycles consumed every iteration by instructions for every processor resource unit available on the target. Information is structured in two tables. The first table reports the number of resource cycles spent on average every iteration. The second table correlates the resource cycles to the machine instruction in the sequence. For example, every iteration of the instruction vmulps always executes on resource unit [6] (JFPU1 &#8211; floating point pipeline #1), consuming an average of 1 resource cycle per iteration. Note that on AMD Jaguar, vector floating-point multiply can only be issued to pipeline JFPU1, while horizontal floating-point additions can only be issued to pipeline JFPU0. </p>
@@ -241,35 +241,35 @@ $ llvm-mca -mtriple=x86_64-unknown-unknown -mcpu=btver2 -iterations=300 dot-prod
 <pre>
 $ llvm-mca -mtriple=x86_64-unknown-unknown -mcpu=btver2 -iterations=3 -timeline dot-product.s
 </pre>
-<p>Timeline view : 012345 Index 0123456789<br />
-        [0, 0] DeeER&#8230;vmulps %<br />
-    xmm0,<br />
-    % xmm1, % xmm2<br />
-                        [0, 1] D ==<br />
-                eeeER..vhaddps % xmm2,<br />
-    % xmm2, % xmm3<br />
-                        [0, 2]<br />
-                            .D ==<br />
-                == eeeER.vhaddps % xmm3,<br />
-    % xmm3, % xmm4[1, 0].DeeE&#8211; &#8212; -R.vmulps % xmm0, % xmm1, % xmm2<br />
-                                                                     [1, 1]<br />
-                                                                         .D = eeeE&#8211; &#8211; R.vhaddps % xmm2,<br />
-                                                                       % xmm2, % xmm3<br />
-                                                                                           [1, 2]<br />
-                                                                                               .D ==<br />
-                                                                                   == eeeER.vhaddps % xmm3,<br />
-                                                                       % xmm3, % xmm4[2, 0].DeeE&#8211; &#8212; -R.vmulps % xmm0, % xmm1, % xmm2<br />
-                                                                                                                                            [2, 1]<br />
-                                                                                                                                                .D ==<br />
-                                                                                                                                    == eeeER.vhaddps % xmm2,<br />
-                                                                       % xmm2, % xmm3<br />
-                                                                                           [2, 2]<br />
-                                                                                               .D ==<br />
-                                                                                   == == eeeER vhaddps % xmm3,<br />
-                                                                       % xmm3, % xmm4 Average Wait times(based on the timeline view)<br />
-    : [0] : Executions[1] : Average time spent waiting in a scheduler&#8217;s queue [2] : Average time spent waiting in a scheduler&#8217;s queue while ready [3] : Average time elapsed from WB until retire stage[0][1][2][3] 0. 3 1.0 1.0 3.3 vmulps % xmm0,<br />
-                                                                       % xmm1, % xmm2 1. 3 3.3 0.7 1.0 vhaddps % xmm2, % xmm2, % xmm3 2. 3 5.7 0.0 0.0 vhaddps % xmm3, % xmm3, % xmm4<br />
-                                                                                                                                                                                       3 3.3 0.5 1.4 &lt;<br />
+<p>Timeline view : 012345 Index 0123456789<br/>
+        [0, 0] DeeER&#8230;vmulps %<br/>
+    xmm0,<br/>
+    % xmm1, % xmm2<br/>
+                        [0, 1] D ==<br/>
+                eeeER..vhaddps % xmm2,<br/>
+    % xmm2, % xmm3<br/>
+                        [0, 2]<br/>
+                            .D ==<br/>
+                == eeeER.vhaddps % xmm3,<br/>
+    % xmm3, % xmm4[1, 0].DeeE&#8211; &#8212; -R.vmulps % xmm0, % xmm1, % xmm2<br/>
+                                                                     [1, 1]<br/>
+                                                                         .D = eeeE&#8211; &#8211; R.vhaddps % xmm2,<br/>
+                                                                       % xmm2, % xmm3<br/>
+                                                                                           [1, 2]<br/>
+                                                                                               .D ==<br/>
+                                                                                   == eeeER.vhaddps % xmm3,<br/>
+                                                                       % xmm3, % xmm4[2, 0].DeeE&#8211; &#8212; -R.vmulps % xmm0, % xmm1, % xmm2<br/>
+                                                                                                                                            [2, 1]<br/>
+                                                                                                                                                .D ==<br/>
+                                                                                                                                    == eeeER.vhaddps % xmm2,<br/>
+                                                                       % xmm2, % xmm3<br/>
+                                                                                           [2, 2]<br/>
+                                                                                               .D ==<br/>
+                                                                                   == == eeeER vhaddps % xmm3,<br/>
+                                                                       % xmm3, % xmm4 Average Wait times(based on the timeline view)<br/>
+    : [0] : Executions[1] : Average time spent waiting in a scheduler&#8217;s queue [2] : Average time spent waiting in a scheduler&#8217;s queue while ready [3] : Average time elapsed from WB until retire stage[0][1][2][3] 0. 3 1.0 1.0 3.3 vmulps % xmm0,<br/>
+                                                                       % xmm1, % xmm2 1. 3 3.3 0.7 1.0 vhaddps % xmm2, % xmm2, % xmm3 2. 3 5.7 0.0 0.0 vhaddps % xmm3, % xmm3, % xmm4<br/>
+                                                                                                                                                                                       3 3.3 0.5 1.4 &lt;<br/>
                                                                                                                                                                                    total &gt;</p>
 <p> The timeline view is interesting because it shows instruction state changes during execution. It also gives an idea of how the tool processes instructions executed on the target, and how their timing information might be calculated. </p>
 <p> The timeline view is structured in two tables. The first table shows instructions changing state over time (measured in cycles); the second table (named <i>Average Wait times</i>) reports useful timing statistics, which should help diagnose performance bottlenecks caused by long data dependencies and sub-optimal usage of hardware resources. </p>
@@ -294,9 +294,9 @@ $ llvm-mca -mtriple=x86_64-unknown-unknown -mcpu=btver2 -iterations=3 -timeline 
 <p> The <code>-bottleneck-analysis</code> command line option enables the analysis of performance bottlenecks. </p>
 <p> This analysis is potentially expensive. It attempts to correlate increases in backend pressure (caused by pipeline resource pressure and data dependencies) to dynamic dispatch stalls. </p>
 <p> Below is an example of <code>-bottleneck-analysis</code> output generated by <code>llvm-mca</code> for 500 iterations of the dot-product example on btver2. </p>
-<p>Cycles with backend pressure increase[48.07 % ] Throughput Bottlenecks : Resource Pressure[47.77 % ] &#8211; JFPA[47.77 % ] &#8211; JFPU0[47.77 % ] Data Dependencies : [0.30 % ] &#8211; Register Dependencies[0.30 % ] &#8211; Memory Dependencies[0.00 % ] Critical sequence based on the simulation : Instruction Dependency Information + &#8212; &#8211;&lt;2. vhaddps % xmm3, % xmm3, % xmm4 | | &lt;loop carried&gt; | | 0. vmulps % xmm0, % xmm1, % xmm2 + &#8212; &#8211;&gt; 1. vhaddps % xmm2, % xmm2, % xmm3##RESOURCE interference : JFPA [probability:74 % ] + &#8212; &#8212; &gt; 2. vhaddps % xmm3, % xmm3, % xmm4##REGISTER dependency : % xmm3 |<br />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | &lt;loop carried&gt; |<br />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             +&#8211; &#8212; &gt; 1. vhaddps % xmm2,<br />
+<p>Cycles with backend pressure increase[48.07 % ] Throughput Bottlenecks : Resource Pressure[47.77 % ] &#8211; JFPA[47.77 % ] &#8211; JFPU0[47.77 % ] Data Dependencies : [0.30 % ] &#8211; Register Dependencies[0.30 % ] &#8211; Memory Dependencies[0.00 % ] Critical sequence based on the simulation : Instruction Dependency Information + &#8212; &#8211;&lt;2. vhaddps % xmm3, % xmm3, % xmm4 | | &lt;loop carried&gt; | | 0. vmulps % xmm0, % xmm1, % xmm2 + &#8212; &#8211;&gt; 1. vhaddps % xmm2, % xmm2, % xmm3##RESOURCE interference : JFPA [probability:74 % ] + &#8212; &#8212; &gt; 2. vhaddps % xmm3, % xmm3, % xmm4##REGISTER dependency : % xmm3 |<br/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | &lt;loop carried&gt; |<br/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             +&#8211; &#8212; &gt; 1. vhaddps % xmm2,<br/>
     % xmm2, % xmm3##RESOURCE interference : JFPA [probability:74 % ]</p>
 <p> According to the analysis, throughput is limited by resource pressure and not by data dependencies. The analysis observed increases in backend pressure during 48.07% of the simulated run. Almost all those pressure increase events were caused by contention on processor resources JFPA/JFPU0. </p>
 <p> The <i>critical sequence</i> is the most expensive sequence of instructions according to the simulation. It is annotated to provide extra information about critical register dependencies and resource interferences between instructions. </p>

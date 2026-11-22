@@ -10,15 +10,15 @@ description: "ql/pricingengines/vanilla/analytichestonengine.hpp – analytic He
 
 <p> ql/pricingengines/vanilla/analytichestonengine.hpp &#8211; analytic Heston-model engine </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/math/integrals/integral.hpp&gt;<br />
- #include &lt;ql/math/integrals/gaussianquadratures.hpp&gt;<br />
- #include &lt;ql/pricingengines/genericmodelengine.hpp&gt;<br />
- #include &lt;ql/models/equity/hestonmodel.hpp&gt;<br />
- #include &lt;ql/instruments/vanillaoption.hpp&gt;<br />
- #include &lt;boost/function.hpp&gt;<br />
+<p> #include &lt;ql/math/integrals/integral.hpp&gt;<br/>
+ #include &lt;ql/math/integrals/gaussianquadratures.hpp&gt;<br/>
+ #include &lt;ql/pricingengines/genericmodelengine.hpp&gt;<br/>
+ #include &lt;ql/models/equity/hestonmodel.hpp&gt;<br/>
+ #include &lt;ql/instruments/vanillaoption.hpp&gt;<br/>
+ #include &lt;boost/function.hpp&gt;<br/>
  #include &lt;complex&gt; </p>
 <h3>Classes</h3>
-<p> class <code>AnalyticHestonEngine</code><br />
+<p> class <code>AnalyticHestonEngine</code><br/>
  <i>analytic Heston-model engine based on Fourier transform </i></p>
 <h2>Detailed Description</h2>
 <p> analytic Heston-model engine </p>

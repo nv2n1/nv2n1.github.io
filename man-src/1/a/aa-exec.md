@@ -13,16 +13,16 @@ description: "aa-exec – confine a program with the specified AppArmor profile"
 <p> <code>aa-exec</code> [options] [&#8211;] [<i>&lt;command&gt;</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>aa-exec</code> is used to launch a program confined by the specified profile and or namespace. If both a profile and namespace are specified command will be confined by profile in the new policy namespace. If only a namespace is specified, the profile name of the current confinement will be used. If neither a profile or namespace is specified command will be run using standard profile attachment (ie. as if run without the aa-exec command). </p>
-<p> If the arguments are to be pasted to the <i>&lt;command&gt;</i> being invoked by aa-exec then &#8212; should be used to separate aa-exec arguments from the command.<br />
+<p> If the arguments are to be pasted to the <i>&lt;command&gt;</i> being invoked by aa-exec then &#8212; should be used to separate aa-exec arguments from the command.<br/>
 &nbsp;<wbr>&nbsp;aa-exec -p profile1 &#8212; ls -l</p>
 <h2>OPTIONS <code>aa-exec</code> accepts the following arguments:</h2>
 <dl>
-<dt>-p <font SIZE="-1">PROFILE,</font> &#8211;profile=PROFILE</dt>
-<dd> confine <i>&lt;command&gt;</i> with <font SIZE="-1">PROFILE.</font> If the <font SIZE="-1">PROFILE</font> is not specified use the current profile name (likely unconfined).</dd>
-<dt>-n <font SIZE="-1">NAMESPACE,</font> &#8211;namespace=NAMESPACE</dt>
-<dd> use profiles in <font SIZE="-1">NAMESPACE.</font> This will result in confinement transitioning to using the new profile namespace.</dd>
+<dt>-p PROFILE, &#8211;profile=PROFILE</dt>
+<dd> confine <i>&lt;command&gt;</i> with PROFILE. If the PROFILE is not specified use the current profile name (likely unconfined).</dd>
+<dt>-n NAMESPACE, &#8211;namespace=NAMESPACE</dt>
+<dd> use profiles in NAMESPACE. This will result in confinement transitioning to using the new profile namespace.</dd>
 <dt>-i, &#8211;immediate</dt>
-<dd> transition to <font SIZE="-1">PROFILE</font> before doing executing <i>&lt;command&gt;</i>. This subjects the running of <i>&lt;command&gt;</i> to the exec transition rules of the current profile.</dd>
+<dd> transition to PROFILE before doing executing <i>&lt;command&gt;</i>. This subjects the running of <i>&lt;command&gt;</i> to the exec transition rules of the current profile.</dd>
 <dt>-v, &#8211;verbose</dt>
 <dd> show commands being performed</dd>
 <dt>-d, &#8211;debug</dt>

@@ -11,9 +11,9 @@ description: "baby_steps – Calls your handler in baby_steps for set processing
 <h3>Modules</h3>
 <p><code>baby_steps_access_multiplexer: calls individual access methods based on baby_step mode.</code></p>
 <h3>Functions</h3>
-<p><code>netsnmp_mib_handler</code> * <code>netsnmp_baby_steps_handler_get</code> (u_long modes)<br />
- <i>returns a baby_steps handler that can be injected into a given handler chain. </i><br />
- void <code>netsnmp_baby_steps_handler_init</code> (void)<br />
+<p><code>netsnmp_mib_handler</code> * <code>netsnmp_baby_steps_handler_get</code> (u_long modes)<br/>
+ <i>returns a baby_steps handler that can be injected into a given handler chain. </i><br/>
+ void <code>netsnmp_baby_steps_handler_init</code> (void)<br/>
  <i>initializes the baby_steps helper which then registers a baby_steps handler as a run-time injectable handler for configuration file use. </i></p>
 <h2>Detailed Description</h2>
 <p>Calls your handler in baby_steps for set processing.</p>

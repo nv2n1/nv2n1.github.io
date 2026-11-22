@@ -109,35 +109,35 @@ l comment selection
 <p> The <code>file</code> command has three arguments. The first argument is a regular expression that is applied to the file name to determine if the following section applies to the file. The second argument is the description of the file type. It is used in <code>cooledit</code>; future versions of <code>mcedit</code> may use it as well. The third optional argument is a regular expression to match the first line of text of the file. The rules in the following section apply if either the file name or the first line of text matches. </p>
 <p> A section ends with the start of another section. Each section is divided into contexts, and each context contains rules. A context is a scope within the text that a particular set of rules belongs to. For instance, the text within a C style comment (i.e. between <code>/*</code> and <code>*/</code>) has its own color. This is a context, although it has no further rules inside it because there is probably nothing that we want highlighted within a C comment. </p>
 <p> A trivial C programming section might look like this: </p>
-<p>file .\*\.c C\sProgram\sFile (#include|/\\*)<br />
-wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_<br />
-#default colors<br />
-define  comment   brown<br />
-context default<br />
-  keyword  whole  if       yellow<br />
-  keyword  whole  else     yellow<br />
-  keyword  whole  for      yellow<br />
-  keyword  whole  while    yellow<br />
-  keyword  whole  do       yellow<br />
-  keyword  whole  switch   yellow<br />
-  keyword  whole  case     yellow<br />
-  keyword  whole  static   yellow<br />
-  keyword  whole  extern   yellow<br />
-  keyword         {        brightcyan<br />
-  keyword         }        brightcyan<br />
-  keyword         &#8216;*&#8217;      green<br />
-#C comments<br />
-context /\* \*/ comment<br />
-#C preprocessor directives<br />
+<p>file .\*\.c C\sProgram\sFile (#include|/\\*)<br/>
+wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_<br/>
+#default colors<br/>
+define  comment   brown<br/>
+context default<br/>
+  keyword  whole  if       yellow<br/>
+  keyword  whole  else     yellow<br/>
+  keyword  whole  for      yellow<br/>
+  keyword  whole  while    yellow<br/>
+  keyword  whole  do       yellow<br/>
+  keyword  whole  switch   yellow<br/>
+  keyword  whole  case     yellow<br/>
+  keyword  whole  static   yellow<br/>
+  keyword  whole  extern   yellow<br/>
+  keyword         {        brightcyan<br/>
+  keyword         }        brightcyan<br/>
+  keyword         &#8216;*&#8217;      green<br/>
+#C comments<br/>
+context /\* \*/ comment<br/>
+#C preprocessor directives<br/>
 context linestart # 
- red<br />
+ red<br/>
   keyword  \
-  brightred<br />
-#C string constants<br />
-context &#8221; &#8221; green<br />
-  keyword  %d    brightgreen<br />
-  keyword  %s    brightgreen<br />
-  keyword  %c    brightgreen<br />
+  brightred<br/>
+#C string constants<br/>
+context &#8221; &#8221; green<br/>
+  keyword  %d    brightgreen<br/>
+  keyword  %s    brightgreen<br/>
+  keyword  %c    brightgreen<br/>
   keyword  \&#8221;   brightgreen</p>
 <p> Each context starts with a line of the form: </p>
 <p> <code>context</code> [<code>exclusive</code>] [<code>whole</code>|<code>wholeright</code>|<code>wholeleft</code>] [<code>linestart</code>] <i>delim</i> [<code>linestart</code>] <i>delim</i> [<i>foreground</i>] [<i>background</i>] [<i>attributes</i>] </p>

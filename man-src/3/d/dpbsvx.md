@@ -11,7 +11,7 @@ description: "dpbsvx.f –"
 <p> dpbsvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dpbsvx</code> (FACT, UPLO, N, KD, NRHS, AB, LDAB, AFB, LDAFB, EQUED, S, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dpbsvx</code> (FACT, UPLO, N, KD, NRHS, AB, LDAB, AFB, LDAFB, EQUED, S, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code> DPBSVX computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpbsvx (characterFACT, characterUPLO, integerN, integerKD, integerNRHS, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( ldafb, * )AFB, integerLDAFB, characterEQUED, double precision, dimension( * )S, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldx, * )X, integerLDX, double precisionRCOND, double precision, dimension( * )FERR, double precision, dimension( * )BERR, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -108,16 +108,16 @@ description: "dpbsvx.f –"
           of the matrices B and X.  NRHS &gt;= 0.
 </pre>
 <p> <i>AB</i> </p>
-<p>          AB is DOUBLE PRECISION array, dimension (LDAB,N)<br />
-          On entry, the upper or lower triangle of the symmetric band<br />
-          matrix A, stored in the first KD+1 rows of the array, except<br />
-          if FACT = &#8216;F&#8217; and EQUED = &#8216;Y&#8217;, then A must contain the<br />
-          equilibrated matrix diag(S)*A*diag(S).  The j-th column of A<br />
-          is stored in the j-th column of the array AB as follows:<br />
-          if UPLO = &#8216;U&#8217;, AB(KD+1+i-j,j) = A(i,j) for max(1,j-KD)&lt;=i&lt;=j;<br />
-          if UPLO = &#8216;L&#8217;, AB(1+i-j,j)    = A(i,j) for j&lt;=i&lt;=min(N,j+KD).<br />
-          See below for further details.<br />
-          On exit, if FACT = &#8216;E&#8217; and EQUED = &#8216;Y&#8217;, A is overwritten by<br />
+<p>          AB is DOUBLE PRECISION array, dimension (LDAB,N)<br/>
+          On entry, the upper or lower triangle of the symmetric band<br/>
+          matrix A, stored in the first KD+1 rows of the array, except<br/>
+          if FACT = &#8216;F&#8217; and EQUED = &#8216;Y&#8217;, then A must contain the<br/>
+          equilibrated matrix diag(S)*A*diag(S).  The j-th column of A<br/>
+          is stored in the j-th column of the array AB as follows:<br/>
+          if UPLO = &#8216;U&#8217;, AB(KD+1+i-j,j) = A(i,j) for max(1,j-KD)&lt;=i&lt;=j;<br/>
+          if UPLO = &#8216;L&#8217;, AB(1+i-j,j)    = A(i,j) for j&lt;=i&lt;=min(N,j+KD).<br/>
+          See below for further details.<br/>
+          On exit, if FACT = &#8216;E&#8217; and EQUED = &#8216;Y&#8217;, A is overwritten by<br/>
           diag(S)*A*diag(S).</p>
 <p> <i>LDAB</i> </p>
 <pre>

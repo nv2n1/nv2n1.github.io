@@ -10,7 +10,7 @@ description: "slasd4.f –"
 <p>slasd4.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slasd4</code> (N, I, D, Z, DELTA, RHO, SIGMA, WORK, INFO)<br />
+<p>subroutine <code>slasd4</code> (N, I, D, Z, DELTA, RHO, SIGMA, WORK, INFO)<br/>
  <i></i><code>SLASD4</code> computes the square root of the i-th updated eigenvalue of a positive symmetric rank-one modification to a positive diagonal matrix. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasd4 (integerN, integerI, real, dimension( * )D, real, dimension( * )Z, real, dimension( * )DELTA, realRHO, realSIGMA, real, dimension( * )WORK, integerINFO)</h3>

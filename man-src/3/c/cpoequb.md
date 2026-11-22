@@ -11,7 +11,7 @@ description: "cpoequb.f –"
 <p> cpoequb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cpoequb</code> (N, A, LDA, S, SCOND, AMAX, INFO)<br />
+<p> subroutine <code>cpoequb</code> (N, A, LDA, S, SCOND, AMAX, INFO)<br/>
  <i></i><code>CPOEQUB</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpoequb (integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )S, realSCOND, realAMAX, integerINFO)</h3>

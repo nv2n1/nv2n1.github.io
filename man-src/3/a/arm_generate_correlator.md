@@ -11,7 +11,7 @@ description: "arm_generate_correlator – generate a correlator"
 <p> arm_generate_correlator &#8211; generate a correlator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
-<p> <code>arm_error_t<br />
+<p> <code>arm_error_t<br/>
  arm_generate_correlator( </p>
 <p>&nbsp;<wbr>const arm_app_start_handle_t&nbsp;<wbr></code><i>app_handle</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>const arm_id_t&nbsp;<wbr>*</code><i>tran_id</i><code>,&nbsp;<wbr> </p>
@@ -20,7 +20,7 @@ description: "arm_generate_correlator – generate a correlator"
 <p>&nbsp;<wbr>const arm_buffer4_t&nbsp;<wbr>*</code><i>buffer4</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>arm_correlator_t&nbsp;<wbr>*</code><i>current_correlator</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
-<p> <code>arm_generate_correlator()</code> is used to generate a correlator for use with <code>arm_report_transaction()</code>.<br />
+<p> <code>arm_generate_correlator()</code> is used to generate a correlator for use with <code>arm_report_transaction()</code>.<br/>
 &nbsp;<wbr> A correlator is a correlation token passed from a calling transaction to a called transaction. The correlation token may be used to establish a calling hierarchy across processes and systems. A correlator contains a two-byte length field, a one-byte format ID, a one-byte flag field, plus it may contain other data that is used to uniquely identify an instance of a transaction. Applications do not need to understand correlator internals. The maximum length is 512 (<code>ARM_CORR_MAX_LENGTH</code>) bytes. </p>
 <p> It is useful to think about its use in the context of what <code>arm_start_transaction()</code> and <code>arm_stop_transaction()</code> do:</p>
 <dl>

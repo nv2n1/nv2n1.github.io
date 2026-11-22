@@ -10,7 +10,7 @@ description: "pamstretch – scale up a PNM or PAM image by interpolating betwee
 
 <p> pamstretch &#8211; scale up a PNM or PAM image by interpolating between pixels </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pamstretch</code> [<code>-xscale=</code><i>X</i>] [<code>-yscale=</code><i>Y</i>]<br />
+<p> <code>pamstretch</code> [<code>-xscale=</code><i>X</i>] [<code>-yscale=</code><i>Y</i>]<br/>
  [<code>-blackedge</code>] [<code>-dropedge</code>] <i>N</i> [<i>infile</i>] </p>
 <p> You can use the minimum unique abbreviation of the options. You can use two hyphens instead of one. You can separate an option name from its value with white space instead of an equals sign. </p>
 <h2>DESCRIPTION</h2>

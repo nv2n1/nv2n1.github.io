@@ -10,7 +10,7 @@ description: "postmap – Postfix lookup table management"
 
 <p> postmap &#8211; Postfix lookup table management </p>
 <h2>SYNOPSIS</h2>
-<p> <code>postmap</code> [<code>-bfFhimnNoprsuUvw</code>] [<code>-c </code><i>config_dir</i>] [<code>-d </code><i>key</i>] [<code>-q </code><i>key</i>]<br />
+<p> <code>postmap</code> [<code>-bfFhimnNoprsuUvw</code>] [<code>-c </code><i>config_dir</i>] [<code>-d </code><i>key</i>] [<code>-q </code><i>key</i>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<i>file_type</i>:]<i>file_name</i>&nbsp;&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-postmap/">postmap</a></code>(1) command creates or queries one or more Postfix lookup tables, or updates an existing one. </p>

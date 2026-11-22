@@ -12,20 +12,20 @@ description: "std::__debug::deque< _Tp, _Allocator > –"
 <p> Inherits deque&lt; _Tp, _Allocator &gt;, and <code>__gnu_debug::_Safe_sequence&lt; deque&lt; _Tp, _Allocator &gt; &gt;</code>.</p>
 <h3>Public Types</h3>
 <p>typedef _Allocator <code>allocator_type</code> </p>
-<p> typedef<br />
- <code>__gnu_debug::_Safe_iterator</code><br />
+<p> typedef<br/>
+ <code>__gnu_debug::_Safe_iterator</code><br/>
  &lt; <code>_Base_const_iterator</code>, <code>deque</code> &gt; <code>const_iterator</code>&quot; </p>
 <p> typedef _Base::const_pointer <code>const_pointer</code> </p>
 <p> typedef _Base::const_reference <code>const_reference</code> </p>
-<p> typedef <code>std::reverse_iterator</code><br />
+<p> typedef <code>std::reverse_iterator</code><br/>
  &lt; <code>const_iterator</code> &gt; <code>const_reverse_iterator</code>&quot; </p>
 <p> typedef _Base::difference_type <code>difference_type</code> </p>
-<p> typedef<br />
- <code>__gnu_debug::_Safe_iterator</code><br />
+<p> typedef<br/>
+ <code>__gnu_debug::_Safe_iterator</code><br/>
  &lt; <code>_Base_iterator</code>, <code>deque</code> &gt; <code>iterator</code>&quot; </p>
 <p> typedef _Base::pointer <code>pointer</code> </p>
 <p> typedef _Base::reference <code>reference</code> </p>
-<p> typedef <code>std::reverse_iterator</code><br />
+<p> typedef <code>std::reverse_iterator</code><br/>
  &lt; <code>iterator</code> &gt; <code>reverse_iterator</code>&quot; </p>
 <p> typedef _Base::size_type <code>size_type</code> </p>
 <p> typedef _Tp <code>value_type</code></p>

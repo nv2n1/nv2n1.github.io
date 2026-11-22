@@ -64,8 +64,8 @@ description: "sane-artec_eplus48u – SANE backend for the scanner Artec E+ 48U 
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) </p>
 <h2>Author</h2>
-<p>Michael Herder.<br />
- This backend is based on the gt68xx test-program written by Sergey Vlasov, Andreas Nowack, and David Stevenson. Thanks to everyone who tested the backend or reported bugs.<br />
+<p>Michael Herder.<br/>
+ This backend is based on the gt68xx test-program written by Sergey Vlasov, Andreas Nowack, and David Stevenson. Thanks to everyone who tested the backend or reported bugs.<br/>
  This man page is based on man <code><a href="/docs/linux/man/5-sane-gt68xx/">sane-gt68xx</a></code>(5), written by Henning Meier-Geinitz.</p>
 <h2>Bugs</h2>
 <p>This backend has been tested on Linux only. If you are using it on a different platform, please contact us. Interpolation with 1200 dpi is weak. Support for buttons is missing due to missing support in SANE. Please contact us if you find a bug: <i><a rel="nofollow" href="http://www.sane-project.org/bugs.html">http://www.sane-project.org/bugs.html</a></i>. </p>

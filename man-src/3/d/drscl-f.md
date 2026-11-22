@@ -10,7 +10,7 @@ description: "drscl.f –"
 <p>drscl.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>drscl</code> (N, SA, SX, INCX)<br />
+<p>subroutine <code>drscl</code> (N, SA, SX, INCX)<br/>
  <i></i><code>DRSCL</code> multiplies a vector by the reciprocal of a real scalar.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine drscl (integerN, double precisionSA, double precision, dimension( * )SX, integerINCX)</h3>

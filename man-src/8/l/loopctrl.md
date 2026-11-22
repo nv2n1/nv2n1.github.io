@@ -11,7 +11,7 @@ description: "loopctrl – configure isdnloop ISDN driver"
 <h2>Synopsis</h2>
 <p><code>loopctrl [-d</code> <i>Driver-Id</i><code>]</code> <i>action options</i> <code>&#8230;</code></p>
 <h2>Description</h2>
-<p><code>loopctrl</code> is used to setup the isdnloop <font SIZE="-1">ISDN</font> driver. </p>
+<p><code>loopctrl</code> is used to setup the isdnloop ISDN driver. </p>
 <h2>Options</h2>
 <dl>
 <dt><code>-d </code><i>Driver-Id</i></dt>

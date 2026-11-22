@@ -11,9 +11,9 @@ description: "CMPIDateTime – CMPIDateTime class implementation"
 <h2>Synopsis</h2>
 <h3>Public Attributes</h3>
 <h2>Methods</h2>
-<p>int <code>void * hdl;</code><br />
- <i>Opaque pointer to class instance data. </i><br />
- <code>CMPIDateTimeFT</code> * <code>ft;</code><br />
+<p>int <code>void * hdl;</code><br/>
+ <i>Opaque pointer to class instance data. </i><br/>
+ <code>CMPIDateTimeFT</code> * <code>ft;</code><br/>
  <i>Pointer to the Function Table. </i></p>
 <h2>Methods</h2>
 <p>void (<code>CMPIType</code> type, <code>CMPIDateTime</code> *val) </p>

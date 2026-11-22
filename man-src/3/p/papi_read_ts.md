@@ -20,13 +20,13 @@ description: "PAPI_read_ts –"
 <p> <code>PAPI_read_ts()</code> assumes an initialized PAPI library and a properly added event set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>EventSet</i> &#8212; an integer handle for a PAPI Event Set as created by <code>PAPI_create_eventset()</code><br />
- <i>*values</i> &#8212; an array to hold the counter values of the counting events<br />
+<dd><i>EventSet</i> &#8212; an integer handle for a PAPI Event Set as created by <code>PAPI_create_eventset()</code><br/>
+ <i>*values</i> &#8212; an array to hold the counter values of the counting events<br/>
  <i>*cycles</i> &#8212; an array to hold the timestamp values</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
- <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.<br />
+<dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br/>
+ <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.<br/>
  <i>PAPI_ENOEVST</i> The event set specified does not exist.</dd></dl>
 <p> <code>Examples</code></p>
 <dl COMPACT>

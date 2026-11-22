@@ -19,8 +19,8 @@ description: "imapd.conf – IMAP configuration file"
 <p> where <i>option</i> is the name of the configuration option being set and <i>value</i> is the value that the configuration option is being set to. </p>
 <p> Although there is no limit to the length of a line, a &#8220;\&#8221; (backslash) character may be used as the last character on a line to force it to continue on the next one. No additional whitespace is inserted before or after the &#8220;\&#8221;. Note that a line that is split using &#8220;\&#8221; character(s) is still considered a single line. For example</p>
 <dl>
-<dd><i>option</i>:\<br />
- <i>value</i>1 <i>value</i>2 \<br />
+<dd><i>option</i>:\<br/>
+ <i>value</i>1 <i>value</i>2 \<br/>
  <i>value</i>3</dd></dl>
 <p> is equivalent to</p>
 <dl>
@@ -483,8 +483,8 @@ description: "imapd.conf – IMAP configuration file"
 <dd>This is the hostname visible in the greeting messages of the POP, IMAP and LMTP daemons. If it is unset, then the result returned from <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2) is used.</dd>
 <dt><code>serverinfo:</code> on</dt>
 <dd>The server information to display in the greeting and capability responses. Information is displayed as follows:</dd>
-<dd>&quot;off&quot; = no server information in the greeting or capabilities<br />
- &quot;min&quot; = <i>servername</i> in the greeting; no server information in the capabilities<br />
+<dd>&quot;off&quot; = no server information in the greeting or capabilities<br/>
+ &quot;min&quot; = <i>servername</i> in the greeting; no server information in the capabilities<br/>
  &quot;on&quot; = <i>servername</i> and product version in the greeting; product version in the capabilities </dd>
 <p> Allowed values: <i>off</i>, <i>min</i>, <i>on</i></p>
 <dt><code>sharedprefix:</code> Shared Folders</dt>

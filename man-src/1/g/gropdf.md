@@ -83,14 +83,14 @@ description: "gropdf – PDF driver for groff"
 <dt><code>\X&#8217;ps: exec </code><i>n </i><code>setlinejoin&#8217;</code></dt>
 <dd> where <i>n</i> can be one of the following values.</dd>
 <dt>
-</dt><dd> 0 = Miter join<br />
- 1 = Round join<br />
+</dt><dd> 0 = Miter join<br/>
+ 1 = Round join<br/>
  2 = Bevel join</dd>
 <dt><code>\X&#8217;ps: exec </code><i>n </i><code>setlinecap&#8217;</code></dt>
 <dd> where <i>n</i> can be one of the following values.</dd>
 <dt>
-</dt><dd> 0 = Butt cap<br />
- 1 = Round cap, and<br />
+</dt><dd> 0 = Butt cap<br/>
+ 1 = Round cap, and<br/>
  2 = Projecting square cap</dd></dl>
 <dl>
 <dt><code>\X&#8217;ps: &#8230; pdfmark&#8217;</code></dt>
@@ -98,8 +98,8 @@ description: "gropdf – PDF driver for groff"
 <p> <code>gropdf</code> also supports a subset of the commands introduced in present.tmac. Specifically it supports:-</p>
 <dl>
 <dt>
-</dt><dd> PAUSE<br />
- BLOCKS<br />
+</dt><dd> PAUSE<br/>
+ BLOCKS<br/>
  BLOCKE</dd></dl>
 <p> Which allows you to create presentation type PDFs. Many of the other commands are already available in other macro packages. </p>
 <p> These commands are implemented with <code>groff</code> X commands:- </p>
@@ -133,23 +133,23 @@ description: "gropdf – PDF driver for groff"
 <dt><code>\X&#8217;pdf: transition&#8217;</code>feature mode duration dimension motion direction scale bool</dt>
 <dd> where</dd>
 <dt>
-</dt><dd> <i>feature</i> can be either SLIDE or BLOCK. When it is SLIDE the transition is used when a new slide is introduced to the screen, if BLOCK then this transition is used for the individual blocks which make up the slide.<br />
+</dt><dd> <i>feature</i> can be either SLIDE or BLOCK. When it is SLIDE the transition is used when a new slide is introduced to the screen, if BLOCK then this transition is used for the individual blocks which make up the slide.<br/>
  <i>mode</i> is the transition type between slides:-</dd>
 <dl>
 <dl>
 <dt>
-</dt><dd> <code>Split</code> &#8211; Two lines sweep across the screen, revealing the new page. The lines may be either horizontal or vertical and may move inward from the edges of the page or outward from the center, as specified by the <i>dimension</i> and <i>motion</i> entries, respectively.<br />
- <code>Blinds</code> &#8211; Multiple lines, evenly spaced across the screen, synchronously sweep in the same direction to reveal the new page. The lines may be either horizontal or vertical, as specified by the <i>dimension</i><br />
-&nbsp;entry. Horizontal lines move downward; vertical lines move to the right.<br />
- <code>Box</code> &#8211; A rectangular box sweeps inward from the edges of the page or outward from the center, as specified by the <i>motion</i> entry, revealing the new page.<br />
- <code>Wipe</code> &#8211; A single line sweeps across the screen from one edge to the other in the direction specified by the <i>direction</i> entry, revealing the new page.<br />
- <code>Dissolve</code> &#8211; The old page dissolves gradually to reveal the new one.<br />
- <code>Glitter</code> &#8211; Similar to Dissolve, except that the effect sweeps across the page in a wide band moving from one side of the screen to the other in the direction specified by the <i>direction</i> entry.<br />
- <code>R</code> &#8211; The new page simply replaces the old one with no special transition effect; the <i>direction</i> entry shall be ignored.<br />
- <code>Fly</code> &#8211; (PDF 1.5) Changes are flown out or in (as specified by <i>motion</i>), in the direction specified by <i>direction</i>, to or from a location that is offscreen except when <i>direction</i> is <code>None</code>.<br />
- <code>Push</code> &#8211; (PDF 1.5) The old page slides off the screen while the new page slides in, pushing the old page out in the direction specified by <i>direction</i>.<br />
- <code>Cover</code> &#8211; (PDF 1.5) The new page slides on to the screen in the direction specified by <i>direction</i>, covering the old page.<br />
- <code>Uncover</code> &#8211; (PDF 1.5) The old page slides off the screen in the direction specified by <i>direction</i>, uncovering the new page in the direction specified by <i>direction</i>.<br />
+</dt><dd> <code>Split</code> &#8211; Two lines sweep across the screen, revealing the new page. The lines may be either horizontal or vertical and may move inward from the edges of the page or outward from the center, as specified by the <i>dimension</i> and <i>motion</i> entries, respectively.<br/>
+ <code>Blinds</code> &#8211; Multiple lines, evenly spaced across the screen, synchronously sweep in the same direction to reveal the new page. The lines may be either horizontal or vertical, as specified by the <i>dimension</i><br/>
+&nbsp;entry. Horizontal lines move downward; vertical lines move to the right.<br/>
+ <code>Box</code> &#8211; A rectangular box sweeps inward from the edges of the page or outward from the center, as specified by the <i>motion</i> entry, revealing the new page.<br/>
+ <code>Wipe</code> &#8211; A single line sweeps across the screen from one edge to the other in the direction specified by the <i>direction</i> entry, revealing the new page.<br/>
+ <code>Dissolve</code> &#8211; The old page dissolves gradually to reveal the new one.<br/>
+ <code>Glitter</code> &#8211; Similar to Dissolve, except that the effect sweeps across the page in a wide band moving from one side of the screen to the other in the direction specified by the <i>direction</i> entry.<br/>
+ <code>R</code> &#8211; The new page simply replaces the old one with no special transition effect; the <i>direction</i> entry shall be ignored.<br/>
+ <code>Fly</code> &#8211; (PDF 1.5) Changes are flown out or in (as specified by <i>motion</i>), in the direction specified by <i>direction</i>, to or from a location that is offscreen except when <i>direction</i> is <code>None</code>.<br/>
+ <code>Push</code> &#8211; (PDF 1.5) The old page slides off the screen while the new page slides in, pushing the old page out in the direction specified by <i>direction</i>.<br/>
+ <code>Cover</code> &#8211; (PDF 1.5) The new page slides on to the screen in the direction specified by <i>direction</i>, covering the old page.<br/>
+ <code>Uncover</code> &#8211; (PDF 1.5) The old page slides off the screen in the direction specified by <i>direction</i>, uncovering the new page in the direction specified by <i>direction</i>.<br/>
  <code>Fade</code> &#8211; (PDF 1.5) The new page gradually becomes visible through the old one.</dd></dl>
 </dl>
 <dt>

@@ -10,7 +10,7 @@ description: "pmie_check, pmie_daily – administration of the Performance Co-Pi
 
 <p> <code>pmie_check</code>, <code>pmie_daily</code> &#8211; administration of the Performance Co-Pilot inference engine</p>
 <h2>SYNOPSIS</h2>
-<p> <code>$PCP_BINADM_DIR/pmie_check</code> [<code>-CNsV</code>] [<code>-c</code> <i>control</i>] [<code>-l</code> <i>logfile</i>]<br />
+<p> <code>$PCP_BINADM_DIR/pmie_check</code> [<code>-CNsV</code>] [<code>-c</code> <i>control</i>] [<code>-l</code> <i>logfile</i>]<br/>
  <code>$PCP_BINADM_DIR/pmie_daily</code> [<code>-NV</code>] [<code>-c</code> <i>control</i>] [<code>-k</code> <i>discard</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>addresses</i>] [<code>-x</code> <i>compress</i>] [<code>-X</code> <i>program</i>] [<code>-Y</code> <i>regex</i>] </p>
 <h2>DESCRIPTION</h2>
 <p> This series of shell scripts and associated control files may be used to create a customized regime of administration and management for the Performance Co-Pilot (see <code><a href="/docs/linux/man/1-pcpintro/">PCPintro</a></code>(1)) inference engine, <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1). </p>
@@ -69,10 +69,10 @@ splat   n  PCP_LOG_DIR/pmie/splat   -c splat/cpu.conf
 <h2>FILES</h2>
 <dl>
 <dt><code>$PCP_PMIECONTROL_PATH</code></dt>
-<dd> the default PCP inference engine control file<br />
+<dd> the default PCP inference engine control file<br/>
  <code>Warning</code>: this file must not be writable by any user other than root.</dd>
 <dt><code>$PCP_PMIECONTROL_PATH</code>.d</dt>
-<dd> optional directory containing additional PCP inference engine control files, typically one per host<br />
+<dd> optional directory containing additional PCP inference engine control files, typically one per host<br/>
  <code>Warning</code>: this files herein must not be writable by any user other than root.</dd>
 <dt><code>$PCP_SYSCONF_DIR/pmie/crontab</code></dt>
 <dd> sample crontab for automated script execution by $PCP_USER (or root) &#8211; exists only if the platform does not support the <i>/etc/cron.d</i> mechanism.</dd>

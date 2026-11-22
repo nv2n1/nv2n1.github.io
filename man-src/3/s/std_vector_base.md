@@ -11,13 +11,13 @@ description: "std::_Vector_base< _Tp, _Alloc > –"
 <h2>Synopsis</h2>
 <p> Inherited by <code>std::vector&lt; _Tp, _Alloc &gt;</code> [protected].</p>
 <h3>Public Types</h3>
-<p>typedef<br />
- <code>__gnu_cxx::__alloc_traits</code><br />
- &lt; _Alloc &gt;::template rebind<br />
+<p>typedef<br/>
+ <code>__gnu_cxx::__alloc_traits</code><br/>
+ &lt; _Alloc &gt;::template rebind<br/>
  &lt; _Tp &gt;::other <code>_Tp_alloc_type</code>&quot; </p>
 <p> typedef _Alloc <code>allocator_type</code> </p>
-<p> typedef<br />
- <code>__gnu_cxx::__alloc_traits</code><br />
+<p> typedef<br/>
+ <code>__gnu_cxx::__alloc_traits</code><br/>
  &lt; _Tp_alloc_type &gt;::pointer <code>pointer</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <p><code>_Vector_base</code> (const allocator_type &amp;__a) </p>

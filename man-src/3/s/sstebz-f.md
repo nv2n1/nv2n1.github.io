@@ -10,7 +10,7 @@ description: "sstebz.f –"
 <p>sstebz.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sstebz</code> (RANGE, ORDER, N, VL, VU, IL, IU, ABSTOL, D, E, M, NSPLIT, W, IBLOCK, ISPLIT, WORK, IWORK, INFO)<br />
+<p>subroutine <code>sstebz</code> (RANGE, ORDER, N, VL, VU, IL, IU, ABSTOL, D, E, M, NSPLIT, W, IBLOCK, ISPLIT, WORK, IWORK, INFO)<br/>
  <i></i><code>SSTEBZ</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sstebz (characterRANGE, characterORDER, integerN, realVL, realVU, integerIL, integerIU, realABSTOL, real, dimension( * )D, real, dimension( * )E, integerM, integerNSPLIT, real, dimension( * )W, integer, dimension( * )IBLOCK, integer, dimension( * )ISPLIT, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

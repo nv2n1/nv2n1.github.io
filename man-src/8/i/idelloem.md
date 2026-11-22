@@ -54,13 +54,13 @@ description: "ipmiutil_delloem – OEM commands for Dell servers"
 <dt><i>lan</i> <i>set</i> &lt;<code>Mode</code>&gt;</dt>
 <dd>
 </dd><dl>
-<dd>Sets the NIC Selection Mode&nbsp;<wbr>(dedicated, shared,<br />
+<dd>Sets the NIC Selection Mode&nbsp;<wbr>(dedicated, shared,<br/>
 &nbsp;<wbr>shared with failover lom2, shared with Failover all loms). </dd>
 </dl>
 <dt><i>lan</i> <i>get</i></dt>
 <dd>
 </dd><dl>
-<dd>Returns the current NIC Selection Mode&nbsp;<wbr>(dedicated, shared,<br />
+<dd>Returns the current NIC Selection Mode&nbsp;<wbr>(dedicated, shared,<br/>
 &nbsp;<wbr>shared with failover lom2, shared with Failover all loms). </dd>
 </dl>
 <dt><i>lan</i> <i>get</i> <i>active</i></dt>

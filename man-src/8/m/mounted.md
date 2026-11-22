@@ -20,11 +20,11 @@ description: "mounted.ocfs2 – Detects all OCFS2 volumes on a system."
 <dd>Lists the <i>OCFS2</i> volumes along with the list of nodes that have mounted the volume. The node names are listed if the <i>O2CB</i> cluster is online. <code>Note:</code> As this information is gathered using dirty-read, the information may be stale. </dd>
 </dl>
 <h2>Examples</h2>
-<p>[root [at] node1 ~]# mounted.ocfs2 -d<br />
- Device FS UUID Label<br />
- /dev/sdb1 ocfs2 26d5dcdf-6d87-45a7-b01a-b98a7791bd61 logs_0405<br />
- [root [at] node1 ~]# mounted.ocfs2 -f<br />
- Device FS Nodes<br />
+<p>[root [at] node1 ~]# mounted.ocfs2 -d<br/>
+ Device FS UUID Label<br/>
+ /dev/sdb1 ocfs2 26d5dcdf-6d87-45a7-b01a-b98a7791bd61 logs_0405<br/>
+ [root [at] node1 ~]# mounted.ocfs2 -f<br/>
+ Device FS Nodes<br/>
  /dev/sdb1 ocfs2 node15, node1 </p>
 <h2>See Also</h2>
 <p><code>mkfs.ocfs2(8)</code> <code>fsck.ocfs2(8)</code> <code>tunefs.ocfs2(8)</code> <code>debugfs.ocfs2(8)</code> <code><a href="/docs/linux/man/8-ocfs2console/">ocfs2console</a>(8)</code> <code><a href="/docs/linux/man/7-o2cb/">o2cb</a>(7)</code> </p>

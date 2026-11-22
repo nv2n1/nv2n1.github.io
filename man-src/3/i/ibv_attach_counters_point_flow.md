@@ -41,10 +41,10 @@ int ibv_attach_counters_point_flow(struct ibv_counters *counters,
 <dl>
 <dt>
 </dt><dd>
-struct ibv_counter_attach_attr {<br />
-    enum ibv_counter_description counter_desc;<br />
-    uint32_t index;<br />
-    uint32_t comp_mask;<br />
+struct ibv_counter_attach_attr {<br/>
+    enum ibv_counter_description counter_desc;<br/>
+    uint32_t index;<br/>
+    uint32_t comp_mask;<br/>
 };
 </dd></dl>
 <h3>counter_desc Argument</h3>

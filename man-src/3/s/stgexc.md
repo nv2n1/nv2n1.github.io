@@ -11,7 +11,7 @@ description: "stgexc.f –"
 <p> stgexc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>stgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, WORK, LWORK, INFO)<br />
+<p> subroutine <code>stgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, WORK, LWORK, INFO)<br/>
  <i></i><code>STGEXC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stgexc (logicalWANTQ, logicalWANTZ, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( ldq, * )Q, integerLDQ, real, dimension( ldz, * )Z, integerLDZ, integerIFST, integerILST, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -134,11 +134,11 @@ ILST always points to the first row of the block in its
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>LWORK is INTEGER<br />
-        The dimension of the array WORK.LWORK &gt;= 1 when N &lt;= 1,<br />
-    otherwise LWORK &gt;= 4 *N + 16. If LWORK = -1, then a workspace query is assumed;<br />
-the routine<br />
-    only calculates the optimal size of the WORK array,<br />
+<p>LWORK is INTEGER<br/>
+        The dimension of the array WORK.LWORK &gt;= 1 when N &lt;= 1,<br/>
+    otherwise LWORK &gt;= 4 *N + 16. If LWORK = -1, then a workspace query is assumed;<br/>
+the routine<br/>
+    only calculates the optimal size of the WORK array,<br/>
     returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>INFO</i> </p>
 <pre>

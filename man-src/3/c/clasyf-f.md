@@ -10,7 +10,7 @@ description: "clasyf.f –"
 <p>clasyf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>clasyf</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />
+<p>subroutine <code>clasyf</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br/>
  <i></i><code>CLASYF</code> computes a partial factorization of a complex symmetric matrix, using the diagonal pivoting method.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clasyf (characterUPLO, integerN, integerNB, integerKB, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex, dimension( ldw, * )W, integerLDW, integerINFO)</h3>

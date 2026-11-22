@@ -55,7 +55,7 @@ mysqldiff-- server1 = root[at] host1-- server2 = root[at] host2-- difftype = sql
 </dt><dd> &bull; <code>&#8211;changes-for=server2</code>: Produce output that shows how to make the definitions of objects on server2 like the definitions of the corresponding objects on server1.</dd></dl>
 <p> The default direction is server1. </p>
 <p> For <code>sql</code> difference format, you can also see the reverse transformation by specifying the <code>&#8211;show-reverse</code> option. </p>
-<p> The utility stops on the first occurrence of missing objects or when an object does not match. To override this behavior, specify the <code>&#8211;force</code> option to cause the utility to attempt to compare all objects listed as arguments.<br />
+<p> The utility stops on the first occurrence of missing objects or when an object does not match. To override this behavior, specify the <code>&#8211;force</code> option to cause the utility to attempt to compare all objects listed as arguments.<br/>
 OPTIONS </p>
 <p> <code>mysqldiff</code> accepts the following command-line options: </p>
 <dl>
@@ -122,35 +122,35 @@ OPTIONS </p>
 </dt><dd> &bull; SQL extensions specific to MySQL Cluster are not supported.</dd></dl>
 <p> For the <code>&#8211;difftype</code> option, the permitted values are not case sensitive. In addition, values may be specified as any unambiguous prefix of a valid value. For example, <code>&#8211;difftype=d</code> specifies the differ type. An error occurs if a prefix matches more than one valid value. </p>
 <p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf). </p>
-<p> If any database object identifier specified as an argument contains special characters or is a reserved word, then it must be appropriately quoted with backticks (<code>`</code>). In turn, names quoted with backticks must also be quoted with single or double quotes depending on the operating system, i.e. (<code>&quot;</code>) in Windows or (<code>&#8216;</code>) in non-Windows systems, in order for the utilities to read backtick quoted identifiers as a single argument. For example, to show the difference between table <code>weird`table1</code> from database <code>weird`db.name</code> and table <code>weird`table2</code> from database <code>other:weird`db.name</code>, the objects pair must be specified using the following syntax (in non-Windows): <code>&#8216;`weird&#8220;db.name`.`weird&#8220;table1`:`other:weird&#8220;db.name`.`weird&#8220;table2`&#8217;</code>.<br />
+<p> If any database object identifier specified as an argument contains special characters or is a reserved word, then it must be appropriately quoted with backticks (<code>`</code>). In turn, names quoted with backticks must also be quoted with single or double quotes depending on the operating system, i.e. (<code>&quot;</code>) in Windows or (<code>&#8216;</code>) in non-Windows systems, in order for the utilities to read backtick quoted identifiers as a single argument. For example, to show the difference between table <code>weird`table1</code> from database <code>weird`db.name</code> and table <code>weird`table2</code> from database <code>other:weird`db.name</code>, the objects pair must be specified using the following syntax (in non-Windows): <code>&#8216;`weird&#8220;db.name`.`weird&#8220;table1`:`other:weird&#8220;db.name`.`weird&#8220;table2`&#8217;</code>.<br/>
 EXAMPLES </p>
 <p> To compare the employees and emp databases on the local server, use this command: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqldiff&#8211; server1 = root[at] localhost employees : emp1<br />
-#server1 on localhost : &#8230; connected.<br />
-                                                           WARNING : Objects in server1 : employees but not in server2 : emp1 : EVENT : e1<br />
-                                                                                                                                            Compare failed.One or<br />
-                        more differences found.$ mysqldiff&#8211; server1 = root[at] localhost<br />
-                                                                           employees.t1 : emp1.t1 employees.t3 : emp1.t3<br />
-#server1 on localhost : &#8230; connected.<br />
-#Comparing employees.t1 to emp1.t1[PASS]<br />
-#server1 on localhost : &#8230; connected.<br />
-#Comparing employees.t3 to emp1.t3[PASS]<br />
-                                                                                                                     Success.All objects are the same.$ mysqldiff&#8211; server1 = root[at] localhost<br />
-                                                                                                                                                                                  employees.salaries : emp1.salaries&#8211; differ<br />
-#server1 on localhost : &#8230; connected.<br />
-#Comparing employees.salaries to emp1.salaries[FAIL]<br />
-#Object definitions are not the same:<br />
-                                                                                                                                                                                                           CREATE TABLE `salaries` (<br />
-    `emp_no` int(11) NOT NULL,<br />
-    `salary` int(11) NOT NULL,<br />
-    `from_date` date NOT NULL,<br />
-    `to_date` date NOT NULL,<br />
-                                                                                                                                                                                                               PRIMARY KEY(`emp_no`,`from_date`),<br />
-                                                                                                                                                                                                               KEY `emp_no` (`emp_no`) -) ENGINE = InnoDB DEFAULT CHARSET = latin1<br />
-    ? ^^^^^+) ENGINE = MyISAM DEFAULT CHARSET = latin1<br />
+$ mysqldiff&#8211; server1 = root[at] localhost employees : emp1<br/>
+#server1 on localhost : &#8230; connected.<br/>
+                                                           WARNING : Objects in server1 : employees but not in server2 : emp1 : EVENT : e1<br/>
+                                                                                                                                            Compare failed.One or<br/>
+                        more differences found.$ mysqldiff&#8211; server1 = root[at] localhost<br/>
+                                                                           employees.t1 : emp1.t1 employees.t3 : emp1.t3<br/>
+#server1 on localhost : &#8230; connected.<br/>
+#Comparing employees.t1 to emp1.t1[PASS]<br/>
+#server1 on localhost : &#8230; connected.<br/>
+#Comparing employees.t3 to emp1.t3[PASS]<br/>
+                                                                                                                     Success.All objects are the same.$ mysqldiff&#8211; server1 = root[at] localhost<br/>
+                                                                                                                                                                                  employees.salaries : emp1.salaries&#8211; differ<br/>
+#server1 on localhost : &#8230; connected.<br/>
+#Comparing employees.salaries to emp1.salaries[FAIL]<br/>
+#Object definitions are not the same:<br/>
+                                                                                                                                                                                                           CREATE TABLE `salaries` (<br/>
+    `emp_no` int(11) NOT NULL,<br/>
+    `salary` int(11) NOT NULL,<br/>
+    `from_date` date NOT NULL,<br/>
+    `to_date` date NOT NULL,<br/>
+                                                                                                                                                                                                               PRIMARY KEY(`emp_no`,`from_date`),<br/>
+                                                                                                                                                                                                               KEY `emp_no` (`emp_no`) -) ENGINE = InnoDB DEFAULT CHARSET = latin1<br/>
+    ? ^^^^^+) ENGINE = MyISAM DEFAULT CHARSET = latin1<br/>
     ? ++^^^Compare failed.One or more differences found.
 </dd></dl>
 <p> The following examples show how to generate a transformation report. Assume the following object definitions: </p>
@@ -170,32 +170,32 @@ CREATE TABLE dbx.table3(num int, notes char(30), misc char(55));
 <dl>
 <dt>
 </dt><dd>
-$ mysqldiff &#8211;server1=root [at] host1 &#8211;server2=root [at] host2 \<br />
-      &#8211;changes-for=server1 &#8211;difftype=sql \<br />
-      db1.table1:dbx.table3<br />
-#server1 on host1 : &#8230; connected.<br />
-#server2 on host2 : &#8230; connected.<br />
-#Comparing db1.table1 to dbx.table3[FAIL]<br />
-#Transformation statements:<br />
-ALTER TABLE db1.table1<br />
-  ADD COLUMN notes char(30) AFTER a,<br />
-  CHANGE COLUMN misc misc char(55);<br />
+$ mysqldiff &#8211;server1=root [at] host1 &#8211;server2=root [at] host2 \<br/>
+      &#8211;changes-for=server1 &#8211;difftype=sql \<br/>
+      db1.table1:dbx.table3<br/>
+#server1 on host1 : &#8230; connected.<br/>
+#server2 on host2 : &#8230; connected.<br/>
+#Comparing db1.table1 to dbx.table3[FAIL]<br/>
+#Transformation statements:<br/>
+ALTER TABLE db1.table1<br/>
+  ADD COLUMN notes char(30) AFTER a,<br/>
+  CHANGE COLUMN misc misc char(55);<br/>
 Compare failed.One or more differences found.
 </dd></dl>
 <p> To generate a set of SQL statements that transform the definition of dbx.table3 to db1.table1, use this command: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqldiff &#8211;server1=root [at] host1 &#8211;server2=root [at] host2 \<br />
-      &#8211;changes-for=server2 &#8211;difftype=sql \<br />
-      db1.table1:dbx.table3<br />
-#server1 on host1 : &#8230; connected.<br />
-#server2 on host2 : &#8230; connected.<br />
-#Comparing db1.table1 to dbx.table3[FAIL]<br />
-#Transformation statements:<br />
-ALTER TABLE dbx.table3<br />
-  DROP COLUMN notes,<br />
-  CHANGE COLUMN misc misc char(30);<br />
+$ mysqldiff &#8211;server1=root [at] host1 &#8211;server2=root [at] host2 \<br/>
+      &#8211;changes-for=server2 &#8211;difftype=sql \<br/>
+      db1.table1:dbx.table3<br/>
+#server1 on host1 : &#8230; connected.<br/>
+#server2 on host2 : &#8230; connected.<br/>
+#Comparing db1.table1 to dbx.table3[FAIL]<br/>
+#Transformation statements:<br/>
+ALTER TABLE dbx.table3<br/>
+  DROP COLUMN notes,<br/>
+  CHANGE COLUMN misc misc char(30);<br/>
 Compare failed.One or more differences found.
 </dd></dl>
 <p> To generate a set of SQL statements that transform the definitions of dbx.table3 and db1.table1 in both directions, use this command: </p>

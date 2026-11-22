@@ -13,29 +13,29 @@ description: "std::integral_constant – std::integral_constant"
     template &lt;class T, T v&gt;
     (since C++ 11)
         struct integral_constant;</code></pre>
-<p>std::integral_constant wraps a static constant of specified type. It is the base class for the C++ type traits.<br />
-Helper templates<br />
+<p>std::integral_constant wraps a static constant of specified type. It is the base class for the C++ type traits.<br/>
+Helper templates<br/>
 A helper alias template std::bool_constant is defined for the common case where T is bool. <i>(since C++17)</i> template &lt;bool B&gt;</p>
 <p>using bool_constant = integral_constant&lt;bool, B&gt;;</p>
-<p>Two typedefs for the common case where T is bool are provided:<br />
-Defined in header &lt;type_traits&gt;<br />
-Type Definition<br />
-true_type std::integral_constant&lt;bool, true&gt;<br />
+<p>Two typedefs for the common case where T is bool are provided:<br/>
+Defined in header &lt;type_traits&gt;<br/>
+Type Definition<br/>
+true_type std::integral_constant&lt;bool, true&gt;<br/>
 false_type std::integral_constant&lt;bool, false&gt; </p>
 <h2>Member types</h2>
-<p>Type Definition<br />
-value_type T<br />
+<p>Type Definition<br/>
+value_type T<br/>
 type std::integral_constant&lt;T,v&gt;</p>
 <h2>Member constants</h2>
 <p>Name Value </p>
-<p>constexpr T value static constant of type T with value v<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br />
+<p>constexpr T value static constant of type T with value v<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br/>
 <code>[static]</code></p>
 <h2>Member functions</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;returns the wrapped value<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;returns the wrapped value<br/>
 operator value_type <i>(public member function)</i> </p>
-<p>operator() returns the wrapped value<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br />
+<p>operator() returns the wrapped value<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br/>
 <i>(C++14)</i> </p>
 <p>&nbsp;std::integral_constant::operator value_type </p>
 <p>constexpr operator value_type() const noexcept; </p>
@@ -44,13 +44,13 @@ operator value_type <i>(public member function)</i> </p>
 <p>constexpr value_type operator()() const noexcept; <i>(since C++14)</i> </p>
 <p>Returns the wrapped value. This function enables std::integral_constant to serve as a source of compile-time function objects.</p>
 <h2>Possible implementation</h2>
-<p>&nbsp;<wbr>&nbsp;template&lt;class T, T v&gt;<br />
-&nbsp;<wbr>&nbsp;struct integral_constant {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;static constexpr T value = v;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;typedef T value_type;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;typedef integral_constant type; // using injected-class-name<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constexpr operator value_type() const noexcept { return value; }<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constexpr value_type operator()() const noexcept { return value; } //since c++14<br />
+<p>&nbsp;<wbr>&nbsp;template&lt;class T, T v&gt;<br/>
+&nbsp;<wbr>&nbsp;struct integral_constant {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;static constexpr T value = v;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;typedef T value_type;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;typedef integral_constant type; // using injected-class-name<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constexpr operator value_type() const noexcept { return value; }<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constexpr value_type operator()() const noexcept { return value; } //since c++14<br/>
 &nbsp;<wbr>&nbsp;};</p>
 <h2>Example</h2>
 <p>// Run this code </p>

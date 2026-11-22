@@ -23,5 +23,5 @@ description: "XTextWidth, XTextWidth16 – compute text width"
 <h2>Description</h2>
 <p>The <code>XTextWidth</code> and <code>XTextWidth16</code> functions return the width of the specified 8-bit or 2-byte character strings.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xloadfont/">XLoadFont</a>(3), <a href="/docs/linux/man/3-xtextextents/">XTextExtents</a>(3)<br />
+<p><a href="/docs/linux/man/3-xloadfont/">XLoadFont</a>(3), <a href="/docs/linux/man/3-xtextextents/">XTextExtents</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

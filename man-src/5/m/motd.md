@@ -13,7 +13,7 @@ description: "motd – message of the day"
 <p> The abbreviation &quot;motd&quot; stands for &quot;message of the day&quot;, and this file has been traditionally used for exactly that (it requires much less disk space than mail to all users). </p>
 <p> On Debian GNU/Linux, dynamic content configured at <i>/etc/pam.d/login</i> is also displayed by <i>pam_exec</i>.</p>
 <h2>Files</h2>
-<p><i>/etc/motd</i><br />
+<p><i>/etc/motd</i><br/>
  <i>/etc/pam.d/login</i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-login/">login</a></code>(1), <code><a href="/docs/linux/man/5-issue/">issue</a></code>(5), <code><a href="/docs/linux/man/8-pam_motd/">pam_motd</a></code>(8)</p>

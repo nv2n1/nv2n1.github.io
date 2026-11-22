@@ -86,13 +86,13 @@ $ git cat-file commit foo
 <dt>
 </dt><dd> &bull; <i>long</i>: &lt;replaced sha1&gt; (&lt;replaced type&gt;) &rarr; &lt;replacement sha1&gt; (&lt;replacement type&gt;)</dd></dl>
 <h2>CREATING REPLACEMENT OBJECTS</h2>
-<p> <code><a href="/docs/linux/man/1-git-hash-object/">git-hash-object</a></code>(1), <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1), and m[blue]<code>git-filter-repo</code>m[]<font SIZE="-2">[1]</font>, among other git commands, can be used to create replacement objects from existing objects. The <code>&#8211;edit</code> option can also be used with <i>git replace</i> to create a replacement object by editing an existing object. </p>
+<p> <code><a href="/docs/linux/man/1-git-hash-object/">git-hash-object</a></code>(1), <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1), and m[blue]<code>git-filter-repo</code>m[][1], among other git commands, can be used to create replacement objects from existing objects. The <code>&#8211;edit</code> option can also be used with <i>git replace</i> to create a replacement object by editing an existing object. </p>
 <p> If you want to replace many blobs, trees or commits that are part of a string of commits, you may just want to create a replacement string of commits and then only replace the commit at the tip of the target string of commits with the commit at the tip of the replacement string of commits.</p>
 <h2>BUGS</h2>
 <p> Comparing blobs or trees that have been replaced with those that replace them will not work properly. And using <code>git reset &#8211;hard</code> to go back to a replaced commit will move the branch to the replacement commit instead of the replaced commit. </p>
 <p> There may be other problems when using <i>git rev-list</i> related to pending objects.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-git-hash-object/">git-hash-object</a></code>(1) <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1) <code><a href="/docs/linux/man/1-git-tag/">git-tag</a></code>(1) <code><a href="/docs/linux/man/1-git-branch/">git-branch</a></code>(1) <code><a href="/docs/linux/man/1-git-commit/">git-commit</a></code>(1) <code><a href="/docs/linux/man/1-git-var/">git-var</a></code>(1) <code><a href="/docs/linux/man/1-git/">git</a></code>(1) m[blue]<code>git-filter-repo</code>m[]<font SIZE="-2">[1]</font></p>
+<p> <code><a href="/docs/linux/man/1-git-hash-object/">git-hash-object</a></code>(1) <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1) <code><a href="/docs/linux/man/1-git-tag/">git-tag</a></code>(1) <code><a href="/docs/linux/man/1-git-branch/">git-branch</a></code>(1) <code><a href="/docs/linux/man/1-git-commit/">git-commit</a></code>(1) <code><a href="/docs/linux/man/1-git-var/">git-var</a></code>(1) <code><a href="/docs/linux/man/1-git/">git</a></code>(1) m[blue]<code>git-filter-repo</code>m[][1]</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>NOTES</h2>

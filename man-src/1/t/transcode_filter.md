@@ -146,11 +146,11 @@ description: "transcode – filter modules collection"
 </dl>
 <dt>
 </dt><dd> The format of the command file is framenumber followed by at least one whitespace followed by the command followed by at least one whitespace followed by arguments for the command. Empty lines and lines starting with a `#&#8217; are ignored. The frame numbers must be sorted ascending. </dd>
-<p>#&nbsp;<wbr>Example file<br />
-#&nbsp;<wbr>At frame 10 load the smooth filter<br />
-10 load smooth<br />
-#&nbsp;<wbr>reconfigure at 20<br />
-20 configure smooth=strength=0.9<br />
+<p>#&nbsp;<wbr>Example file<br/>
+#&nbsp;<wbr>At frame 10 load the smooth filter<br/>
+10 load smooth<br/>
+#&nbsp;<wbr>reconfigure at 20<br/>
+20 configure smooth=strength=0.9<br/>
 99 disable smooth </p>
 <dt><code>cpaudio</code> &#8211; <code>copy one audio channel to the other channel filter plugin</code></dt>
 <dd> <code>cpaudio</code> was written by William H Wittig. The version documented here is v0.1 (2003-04-30). This is a audio filter. It is a post-processing only filter.</dd>
@@ -370,23 +370,23 @@ description: "transcode – filter modules collection"
 <dt>
 </dt><dd> The &#8216;fields&#8217; filter is designed to shift, reorder, and generally rearrange independent fields of an interlaced video input. Input retrieved from broadcast (PAL, NTSC, etc) video sources generally comes in an interlaced form where each pass from top to bottom of the screen displays every other scanline, and then the next pass displays the lines between the lines from the first pass. Each pass is known as a &quot;field&quot; (there are generally two fields per frame). When this form of video is captured and manipulated digitally, the two fields of each frame are usually merged together into one flat (planar) image per frame. This usually produces reasonable results, however there are conditions which can cause this merging to be performed incorrectly or less-than-optimally, which is where this filter can help. </dd>
 <p> The following options are supported for this filter (they can be separated by colons): </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>shift &#8211; Shift the video by one field&nbsp;<wbr>(half a frame),<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>changing frame boundaries appropriately.&nbsp;<wbr>&nbsp;<wbr>This is<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>useful if a video capture started grabbing video<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>half a frame&nbsp;<wbr>(one field)&nbsp;<wbr>off from where frame<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>shift &#8211; Shift the video by one field&nbsp;<wbr>(half a frame),<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>changing frame boundaries appropriately.&nbsp;<wbr>&nbsp;<wbr>This is<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>useful if a video capture started grabbing video<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>half a frame&nbsp;<wbr>(one field)&nbsp;<wbr>off from where frame<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>boundaries were actually intended to be. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>flip&nbsp;<wbr>&nbsp;<wbr>&#8211; Exchange the top field and bottom field of each<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>frame.&nbsp;<wbr>&nbsp;<wbr>This can be useful if the video signal was<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>sent&nbsp;<wbr>&quot;bottom field first&quot;&nbsp;<wbr>(which can happen<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>sometimes with PAL video sources)&nbsp;<wbr>or other<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>oddities occurred which caused the frame<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>boundaries to be at the right place, but the<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>flip&nbsp;<wbr>&nbsp;<wbr>&#8211; Exchange the top field and bottom field of each<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>frame.&nbsp;<wbr>&nbsp;<wbr>This can be useful if the video signal was<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>sent&nbsp;<wbr>&quot;bottom field first&quot;&nbsp;<wbr>(which can happen<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>sometimes with PAL video sources)&nbsp;<wbr>or other<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>oddities occurred which caused the frame<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>boundaries to be at the right place, but the<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scanlines to be swapped. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>flip_first<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Normally shifting is performed before flipping if<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>both are specified.&nbsp;<wbr>&nbsp;<wbr>This option reverses that<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>behavior.&nbsp;<wbr>&nbsp;<wbr>You should not normally need to use<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>this unless you have some extremely odd input<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>flip_first<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Normally shifting is performed before flipping if<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>both are specified.&nbsp;<wbr>&nbsp;<wbr>This option reverses that<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>behavior.&nbsp;<wbr>&nbsp;<wbr>You should not normally need to use<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>this unless you have some extremely odd input<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>material, it is here mainly for completeness. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>help&nbsp;<wbr>&nbsp;<wbr>&#8211; Print this text. </p>
 <p> Note: the &#8216;shift&#8217; function may produce slight color discrepancies if YV12 is used as the internal transcode video format (default). This is because YV12 does not contain enough information to do field shifting cleanly. For best (but slower) results, use RGB mode for field shifting.</dl>
@@ -397,9 +397,9 @@ description: "transcode – filter modules collection"
 <dl>
 <dt>
 </dt><dd> options: &lt;input fps&gt;:&lt;output fps&gt; example: -J fps=25:29.97 will convert from PAL to NTSC If no options are given, defaults or -f/&#8211;export_fps/&#8211;export_frc will be used. Some examples: </dd>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-J fps=10:5:pre<tt>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>convert from 10 fps to 5 fps, preprocess<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-J fps=10:post:12<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>convert from 10 to 12, postprocess<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-J fps=pre=1:7:5<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>convert from 7 to 5, postprocess<br />
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-J fps=10:5:pre<tt>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>convert from 10 fps to 5 fps, preprocess<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-J fps=10:post:12<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>convert from 10 to 12, postprocess<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-J fps=pre=1:7:5<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>convert from 7 to 5, postprocess<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-J fps=9:3.1:post=-0x7<tt>&nbsp;<wbr>&nbsp;<wbr></tt>convert from 9 to 3.1, postprocess</p>
 <p> If that last one is confusing you, remember that 0 is false and everything else is true. Of course, octal and hexadecimal numbers are supported too. This is intended to be backward compatible with the old format.</dl>
 </dl>
@@ -650,13 +650,13 @@ description: "transcode – filter modules collection"
 <dl>
 <dt>
 </dt><dd> This plugin implements an unusual concept in spatial sharpening. Although designed specifically for anime, it also works well with normal video. The filter is very effective at sharpening important edges without amplifying noise. </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Strength&nbsp;<wbr>&#8216;strength&#8217;&nbsp;<wbr>(0-255)&nbsp;<wbr>[100]<br />
-&nbsp;<wbr>This is the strength of the sharpening to be applied to the edge detail areas. It is applied only to the edge detail areas as determined by the&nbsp;<wbr>&#8216;threshold&#8217;&nbsp;<wbr>parameter. Strength 255 is the strongest sharpening.<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Threshold&nbsp;<wbr>&#8216;threshold&#8217;&nbsp;<wbr>(0-255)&nbsp;<wbr>[10]<br />
-&nbsp;<wbr>This parameter determines what is detected as edge detail and thus sharpened. To see what edge detail areas will be sharpened, use the&nbsp;<wbr>&#8216;mask&#8217;&nbsp;<wbr>parameter.<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Mask&nbsp;<wbr>&#8216;mask&#8217;&nbsp;<wbr>(0-1)&nbsp;<wbr>[0]<br />
-&nbsp;<wbr>When set to true, the areas to be sharpened are shown in white against a black background. Use this to set the level of detail to be sharpened. This function also makes a basic edge detection filter.<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>HighQ&nbsp;<wbr>&#8216;highq&#8217;&nbsp;<wbr>(0-1)&nbsp;<wbr>[1]<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Strength&nbsp;<wbr>&#8216;strength&#8217;&nbsp;<wbr>(0-255)&nbsp;<wbr>[100]<br/>
+&nbsp;<wbr>This is the strength of the sharpening to be applied to the edge detail areas. It is applied only to the edge detail areas as determined by the&nbsp;<wbr>&#8216;threshold&#8217;&nbsp;<wbr>parameter. Strength 255 is the strongest sharpening.<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Threshold&nbsp;<wbr>&#8216;threshold&#8217;&nbsp;<wbr>(0-255)&nbsp;<wbr>[10]<br/>
+&nbsp;<wbr>This parameter determines what is detected as edge detail and thus sharpened. To see what edge detail areas will be sharpened, use the&nbsp;<wbr>&#8216;mask&#8217;&nbsp;<wbr>parameter.<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Mask&nbsp;<wbr>&#8216;mask&#8217;&nbsp;<wbr>(0-1)&nbsp;<wbr>[0]<br/>
+&nbsp;<wbr>When set to true, the areas to be sharpened are shown in white against a black background. Use this to set the level of detail to be sharpened. This function also makes a basic edge detection filter.<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>HighQ&nbsp;<wbr>&#8216;highq&#8217;&nbsp;<wbr>(0-1)&nbsp;<wbr>[1]<br/>
 &nbsp;<wbr>This parameter lets you tradeoff speed for quality of detail detection. Set it to true for the best detail detection. Set it to false for maximum speed.</dl>
 </dl>
 <dt><code>normalize</code> &#8211; <code>Volume normalizer</code></dt>
@@ -987,14 +987,14 @@ transcode -i file.avi -J pv=cache=30 --socket /tmp/sock
 </dl>
 <dt>
 </dt><dd> Usage -J subtitler=&quot;[no_objects] [subtitle_file=s] [color_depth=n] [font_dir=s] [font=n] [font_factor=f [frame_offset=n] [debug] [help]&quot; f is float, h is hex, n is integer, s is string. </dd>
-<p> no_objects disables subtitles and other objects (off).<br />
- color_depth= 32 or 24 (overrides X auto) (32).<br />
- font= 0 or 1, 1 gives strange symbols&#8230; (0).<br />
- font_dir= place where font.desc is (~/.subtitles/font).<br />
- font_factor= .1 to 100 outline characters (10.75).<br />
- frame_offset= positive (text later) or negative (earlier) integer (0).<br />
- subtitle_file= pathfilename.ppml location of ppml file (~/.subtitles/demo.ppml).<br />
- debug prints debug messages (off).<br />
+<p> no_objects disables subtitles and other objects (off).<br/>
+ color_depth= 32 or 24 (overrides X auto) (32).<br/>
+ font= 0 or 1, 1 gives strange symbols&#8230; (0).<br/>
+ font_dir= place where font.desc is (~/.subtitles/font).<br/>
+ font_factor= .1 to 100 outline characters (10.75).<br/>
+ frame_offset= positive (text later) or negative (earlier) integer (0).<br/>
+ subtitle_file= pathfilename.ppml location of ppml file (~/.subtitles/demo.ppml).<br/>
+ debug prints debug messages (off).<br/>
  help prints this list and exit.</p>
 <dt><code>testframe</code> &#8211; <code>generate stream of testframes</code></dt>
 <dd> <code>testframe</code> was written by Thomas Oestreich. The version documented here is v0.1.3 (2003-09-04). This is a video filter. It can handle RGB and YUV mode. It is a pre-processing only filter.</dd>
@@ -1144,9 +1144,9 @@ transcode -i file.avi -J pv=cache=30 --socket /tmp/sock
 <dl>
 <dt>
 </dt><dd> This filter performs a subtle but useful sharpening effect. The result is a sharpening effect that not only avoids amplifying noise, but also tends to reduce it. A welcome side effect is that files processed with this filter tend to compress to smaller files. </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>Strength&nbsp;<wbr>&#8216;strength&#8217;&nbsp;<wbr>(0-255)&nbsp;<wbr>[200]<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Strength&nbsp;<wbr>&#8216;strength&#8217;&nbsp;<wbr>(0-255)&nbsp;<wbr>[200]<br/>
 &nbsp;<wbr>When this value is 255, mapped pixels are not blended with the original pixel values, so a full-strength effect is obtained. As the value is reduced, each mapped pixel is blended with more of the original pixel. At a value of 0, the original pixels are passed through and there is no sharpening effect. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Threshold&nbsp;<wbr>&#8216;threshold&#8217;&nbsp;<wbr>(0-255)&nbsp;<wbr>[255]<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Threshold&nbsp;<wbr>&#8216;threshold&#8217;&nbsp;<wbr>(0-255)&nbsp;<wbr>[255]<br/>
 &nbsp;<wbr>This value determines how close a pixel must be to the brightest or dimmest pixel to be mapped. If a pixel is more than threshold away from the brightest or dimmest pixel, it is not mapped.&nbsp;<wbr>&nbsp;<wbr>Thus, as the threshold is reduced, pixels in the mid range start to be spared.</dl>
 </dl>
 <dt><code>yuvdenoise</code> &#8211; <code>mjpegs YUV denoiser</code></dt>
@@ -1256,7 +1256,7 @@ transcode -i file.avi -J pv=cache=30 --socket /tmp/sock
 </dl>
 </dl>
 <h2>AUTHORS</h2>
-<p> <code>transcode</code> was written by Thomas Oestreich<br />
+<p> <code>transcode</code> was written by Thomas Oestreich<br/>
  &lt;ostreich [at] theorie.physik.uni-goettingen.de&gt; with contributions from many others. See AUTHORS for details. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1), <code><a href="/docs/linux/man/1-transcode_import/">transcode_import</a></code>(1), <code><a href="/docs/linux/man/1-transcode_export/">transcode_export</a></code>(1), <code><a href="/docs/linux/man/1-tcmodinfo/">tcmodinfo</a></code>(1), </p>

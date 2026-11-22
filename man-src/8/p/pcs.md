@@ -180,10 +180,10 @@ description: "pcs – pacemaker/corosync configuration system"
 <dd>Get the raw xml from the CIB (Cluster Information Base). If a filename is provided, we save the CIB to that file, otherwise the CIB is printed. Specify scope to get a specific section of the CIB. Valid values of the scope are: configuration, nodes, resources, constraints, crm_config, rsc_defaults, op_defaults, status. <code>&#8211;config</code> is the same as scope=configuration. Do not specify a scope if you want to edit the saved CIB using pcs (pcs -f &lt;command&gt;).</dd>
 <dt>cib-push &lt;filename&gt; [diff-against=&lt;filename_original&gt; | scope=&lt;scope&gt; | <code>&#8211;config</code>] [<code>&#8211;wait</code>[=&lt;n&gt;]]</dt>
 <dd>Push the raw xml from &lt;filename&gt; to the CIB (Cluster Information Base). You can obtain the CIB by running the &#8216;pcs cluster cib&#8217; command, which is recommended first step when you want to perform desired modifications (pcs <code>-f</code> &lt;command&gt;) for the one-off push. If diff-against is specified, pcs diffs contents of filename against contents of filename_original and pushes the result to the CIB. Specify scope to push a specific section of the CIB. Valid values of the scope are: configuration, nodes, resources, constraints, crm_config, rsc_defaults, op_defaults. <code>&#8211;config</code> is the same as scope=configuration. Use of <code>&#8211;config</code> is recommended. Do not specify a scope if you need to push the whole CIB or be warned in the case of outdated CIB. If &#8211;wait is specified wait up to &#8216;n&#8217; seconds for changes to be applied. WARNING: the selected scope of the CIB will be overwritten by the current content of the specified file. </dd>
-<p> Example:<br />
-&nbsp;<wbr>pcs cluster cib&nbsp;<wbr>&gt;&nbsp;<wbr>original.xml<br />
-&nbsp;<wbr>cp original.xml new.xml<br />
-&nbsp;<wbr>pcs -f new.xml constraint location apache prefers node2<br />
+<p> Example:<br/>
+&nbsp;<wbr>pcs cluster cib&nbsp;<wbr>&gt;&nbsp;<wbr>original.xml<br/>
+&nbsp;<wbr>cp original.xml new.xml<br/>
+&nbsp;<wbr>pcs -f new.xml constraint location apache prefers node2<br/>
 &nbsp;<wbr>pcs cluster cib-push new.xml diff-against=original.xml</p>
 <dt>cib-upgrade</dt>
 <dd>Upgrade the CIB to conform to the latest version of the document schema.</dd>
@@ -305,7 +305,7 @@ description: "pcs – pacemaker/corosync configuration system"
 <p>&nbsp;<wbr>&nbsp;<wbr>date in_range&nbsp;<wbr>&lt;date&gt;&nbsp;<wbr>to duration&nbsp;<wbr>&lt;duration options&gt;&#8230; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>date-spec&nbsp;<wbr>&lt;date spec options&gt;&#8230; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&lt;expression&gt;&nbsp;<wbr>and|or&nbsp;<wbr>&lt;expression&gt; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>(&nbsp;<wbr>&lt;expression&gt;&nbsp;<wbr>)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>(&nbsp;<wbr>&lt;expression&gt;&nbsp;<wbr>)<br/>
  where duration options and date spec options are: hours, monthdays, weekdays, yeardays, months, weeks, years, weekyears, moon. If score is omitted it defaults to INFINITY. If id is omitted one is generated from the resource id. If resource-discovery is omitted it defaults to &#8216;always&#8217;.</p>
 <dt>location [show [resources|nodes [node id|resource id]&#8230;] [<code>&#8211;full</code>]]</dt>
 <dd>List all the current location constraints, if &#8216;resources&#8217; is specified location constraints are displayed per resource (default), if &#8216;nodes&#8217; is specified location constraints are displayed per node. If specific nodes or resources are specified then we only show information about them. If <code>&#8211;full</code> is specified show the internal constraint id&#8217;s as well.</dd>
@@ -350,7 +350,7 @@ description: "pcs – pacemaker/corosync configuration system"
 <p>&nbsp;<wbr>&nbsp;<wbr>date in_range&nbsp;<wbr>&lt;date&gt;&nbsp;<wbr>to duration&nbsp;<wbr>&lt;duration options&gt;&#8230; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>date-spec&nbsp;<wbr>&lt;date spec options&gt;&#8230; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&lt;expression&gt;&nbsp;<wbr>and|or&nbsp;<wbr>&lt;expression&gt; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>(&nbsp;<wbr>&lt;expression&gt;&nbsp;<wbr>)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>(&nbsp;<wbr>&lt;expression&gt;&nbsp;<wbr>)<br/>
  where duration options and date spec options are: hours, monthdays, weekdays, yeardays, months, weeks, years, weekyears, moon If score is ommited it defaults to INFINITY. If id is ommited one is generated from the constraint id.</p>
 <dt>rule remove &lt;rule id&gt;</dt>
 <dd>Remove a rule if a rule id is specified, if rule is last rule in its constraint, the constraint will be removed.</dd></dl>

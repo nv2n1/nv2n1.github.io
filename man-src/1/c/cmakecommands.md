@@ -70,13 +70,13 @@ description: "cmakecommands – Reference of available CMake commands."
 <dt><code>add_custom_command</code></dt>
 <dd> Add a custom build rule to the generated build system. </dd>
 <p> There are two main signatures for add_custom_command The first signature is for adding a custom command to produce an output. </p>
-<p>add_custom_command(OUTPUT output1[output2&#8230;] COMMAND command1[ARGS][args1&#8230;]<br />
-                                                              [COMMAND command2[ARGS][args2&#8230;]&#8230;]<br />
-                                                              [MAIN_DEPENDENCY depend]<br />
-                                                              [DEPENDS[depends&#8230;]]<br />
-                                                              [IMPLICIT_DEPENDS&lt;lang1&gt; depend1<br />
-                                                                   [&lt;lang2&gt; depend2]&#8230;]<br />
-                                                              [WORKING_DIRECTORY dir]<br />
+<p>add_custom_command(OUTPUT output1[output2&#8230;] COMMAND command1[ARGS][args1&#8230;]<br/>
+                                                              [COMMAND command2[ARGS][args2&#8230;]&#8230;]<br/>
+                                                              [MAIN_DEPENDENCY depend]<br/>
+                                                              [DEPENDS[depends&#8230;]]<br/>
+                                                              [IMPLICIT_DEPENDS&lt;lang1&gt; depend1<br/>
+                                                                   [&lt;lang2&gt; depend2]&#8230;]<br/>
+                                                              [WORKING_DIRECTORY dir]<br/>
                                                               [COMMENT comment][VERBATIM][APPEND])</p>
 <p> This defines a command to generate specified OUTPUT file(s). A target created in the same directory (CMakeLists.txt file) that specifies any output of the custom command as a source file is given a rule to generate the file using the command at build time. Do not list the output in more than one independent target that may build in parallel or the two instances of the rule may conflict (instead use add_custom_target to drive the command and make the other targets depend on that one). If an output name is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory. Note that MAIN_DEPENDENCY is completely optional and is used as a suggestion to visual studio about where to hang the custom command. In makefile terms this creates a new target in the following form: </p>
 <pre>
@@ -85,8 +85,8 @@ description: "cmakecommands – Reference of available CMake commands."
 </pre>
 <p> If more than one command is specified they will be executed in order. The optional ARGS argument is for backward compatibility and will be ignored. </p>
 <p> The second signature adds a custom command to a target such as a library or executable. This is useful for performing an operation before or after building the target. The command becomes part of the target and will only execute when the target itself is built. If the target is already built, the command will not execute. </p>
-<p>add_custom_command(TARGET target<br />
-                       PRE_BUILD |<br />
+<p>add_custom_command(TARGET target<br/>
+                       PRE_BUILD |<br/>
                    PRE_LINK | POST_BUILD COMMAND command1[ARGS][args1&#8230;][COMMAND command2[ARGS][args2&#8230;]&#8230;][WORKING_DIRECTORY dir][COMMENT comment][VERBATIM])</p>
 <p> This defines a new command that will be associated with building the specified target. When the command will happen is determined by which of the following is specified: </p>
 <pre>
@@ -101,32 +101,32 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> The IMPLICIT_DEPENDS option requests scanning of implicit dependencies of an input file. The language given specifies the programming language whose corresponding dependency scanner should be used. Currently only C and CXX language scanners are supported. The language has to be specified for every file in the IMPLICIT_DEPENDS list. Dependencies discovered from the scanning are added to those of the custom command at build time. Note that the IMPLICIT_DEPENDS option is currently supported only for Makefile generators and will be ignored by other generators. </p>
 <p> If COMMAND specifies an executable target (created by ADD_EXECUTABLE) it will automatically be replaced by the location of the executable created at build time. Additionally a target-level dependency will be added so that the executable target will be built before any target using this custom command. However this does NOT add a file-level dependency that would cause the custom command to re-run whenever the executable is recompiled. </p>
 <p> Arguments to COMMAND may use &quot;generator expressions&quot; with the syntax &quot;$&lt;&#8230;&gt;&quot;. Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -153,11 +153,11 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> The DEPENDS option specifies files on which the command depends. If any dependency is an OUTPUT of another custom command in the same directory (CMakeLists.txt file) CMake automatically brings the other custom command into the target in which this command is built. If DEPENDS is not specified the command will run whenever the OUTPUT is missing; if the command does not actually create the OUTPUT then the rule will always run. If DEPENDS specifies any target (created by an ADD_* command) a target-level dependency is created to make sure the target is built before any target using this custom command. Additionally, if the target is an executable or library a file-level dependency is created to cause the custom command to re-run whenever the target is recompiled. </p>
 <dt><code>add_custom_target</code></dt>
 <dd> Add a target with no output so it will always be built. </dd>
-<p>add_custom_target(Name[ALL][command1[args1&#8230;]]<br />
-                      [COMMAND command2[args2&#8230;]&#8230;]<br />
-                      [DEPENDS depend depend depend&#8230;]<br />
-                      [WORKING_DIRECTORY dir]<br />
-                      [COMMENT comment][VERBATIM]<br />
+<p>add_custom_target(Name[ALL][command1[args1&#8230;]]<br/>
+                      [COMMAND command2[args2&#8230;]&#8230;]<br/>
+                      [DEPENDS depend depend depend&#8230;]<br/>
+                      [WORKING_DIRECTORY dir]<br/>
+                      [COMMENT comment][VERBATIM]<br/>
                       [SOURCES src1[src2&#8230;]])</p>
 <p> Adds a target with the given name that executes the given commands. The target has no output file and is ALWAYS CONSIDERED OUT OF DATE even if the commands try to create a file with the name of the target. Use ADD_CUSTOM_COMMAND to generate a file with dependencies. By default nothing depends on the custom target. Use ADD_DEPENDENCIES to add dependencies to or from other targets. If the ALL option is specified it indicates that this target should be added to the default build target so that it will be run every time (the command cannot be called ALL). The command and arguments are optional and if not specified an empty target will be created. If WORKING_DIRECTORY is set, then the command will be run in that directory. If it is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory. If COMMENT is set, the value will be displayed as a message before the commands are executed at build time. Dependencies listed with the DEPENDS argument may reference files and outputs of custom commands created with add_custom_command() in the same directory (CMakeLists.txt file). </p>
 <p> If VERBATIM is given then all arguments to the commands will be escaped properly for the build tool so that the invoked command receives each argument unchanged. Note that one level of escapes is still used by the CMake language processor before add_custom_target even sees the arguments. Use of VERBATIM is recommended as it enables correct behavior. When VERBATIM is not given the behavior is platform specific because there is no protection of tool-specific special characters. </p>
@@ -177,7 +177,7 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> Make a top-level target depend on other top-level targets. A top-level target is one created by ADD_EXECUTABLE, ADD_LIBRARY, or ADD_CUSTOM_TARGET. Adding dependencies with this command can be used to make sure one target is built before another target. Dependencies added to an IMPORTED target are followed transitively in its place since the target itself does not build. See the DEPENDS option of ADD_CUSTOM_TARGET and ADD_CUSTOM_COMMAND for adding file-level dependencies in custom rules. See the OBJECT_DEPENDS option in SET_SOURCE_FILES_PROPERTIES to add file-level dependencies to object files. </p>
 <dt><code>add_executable</code></dt>
 <dd> Add an executable to the project using the specified source files. </dd>
-<p>add_executable(&lt;name&gt;[WIN32][MACOSX_BUNDLE]<br />
+<p>add_executable(&lt;name&gt;[WIN32][MACOSX_BUNDLE]<br/>
                      [EXCLUDE_FROM_ALL] source1 source2&#8230; sourceN)</p>
 <p> Adds an executable target called &lt;name&gt; to be built from the source files listed in the command invocation. The &lt;name&gt; corresponds to the logical target name and must be globally unique within a project. The actual file name of the executable built is constructed based on conventions of the native platform (such as &lt;name&gt;.exe or just &lt;name&gt;). </p>
 <p> By default the executable file will be created in the build tree directory corresponding to the source tree directory in which the command was invoked. See documentation of the RUNTIME_OUTPUT_DIRECTORY target property to change this location. See documentation of the OUTPUT_NAME target property to change the &lt;name&gt; part of the final file name. </p>
@@ -196,7 +196,7 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> creates an alias, such that &lt;name&gt; can be used to refer to &lt;target&gt; in subsequent commands. The &lt;name&gt; does not appear in the generated buildsystem as a make target. The &lt;target&gt; may not be an IMPORTED target or an ALIAS. Alias targets can be used as linkable targets, targets to read properties from, executables for custom commands and custom targets. They can also be tested for existance with the regular if(TARGET) subcommand. The &lt;name&gt; may not be used to modify properties of &lt;target&gt;, that is, it may not be used as the operand of set_property, set_target_properties, target_link_libraries etc. An ALIAS target may not be installed of exported. </p>
 <dt><code>add_library</code></dt>
 <dd> Add a library to the project using the specified source files. </dd>
-<p>add_library(&lt;name&gt;[STATIC | SHARED | MODULE]<br />
+<p>add_library(&lt;name&gt;[STATIC | SHARED | MODULE]<br/>
                   [EXCLUDE_FROM_ALL] source1 source2&#8230; sourceN)</p>
 <p> Adds a library target called &lt;name&gt; to be built from the source files listed in the command invocation. The &lt;name&gt; corresponds to the logical target name and must be globally unique within a project. The actual file name of the library built is constructed based on conventions of the native platform (such as lib&lt;name&gt;.a or &lt;name&gt;.lib). </p>
 <p> STATIC, SHARED, or MODULE may be given to specify the type of library to be created. STATIC libraries are archives of object files for use when linking other targets. SHARED libraries are linked dynamically and loaded at runtime. MODULE libraries are plugins that are not linked into other targets but may be loaded dynamically at runtime using dlopen-like functionality. If no type is given explicitly the type is STATIC or SHARED based on whether the current value of the variable BUILD_SHARED_LIBS is true. For SHARED and MODULE libraries the POSITION_INDEPENDENT_CODE target property is set to TRUE automatically. </p>
@@ -225,7 +225,7 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> creates an alias, such that &lt;name&gt; can be used to refer to &lt;target&gt; in subsequent commands. The &lt;name&gt; does not appear in the generated buildsystem as a make target. The &lt;target&gt; may not be an IMPORTED target or an ALIAS. Alias targets can be used as linkable targets, targets to read properties from. They can also be tested for existance with the regular if(TARGET) subcommand. The &lt;name&gt; may not be used to modify properties of &lt;target&gt;, that is, it may not be used as the operand of set_property, set_target_properties, target_link_libraries etc. An ALIAS target may not be installed of exported. </p>
 <dt><code>add_subdirectory</code></dt>
 <dd> Add a subdirectory to the build. </dd>
-<p>add_subdirectory(source_dir[binary_dir]<br />
+<p>add_subdirectory(source_dir[binary_dir]<br/>
                            [EXCLUDE_FROM_ALL])</p>
 <p> Add a subdirectory to the build. The source_dir specifies the directory in which the source CMakeLists.txt and code files are located. If it is a relative path it will be evaluated with respect to the current directory (the typical usage), but it may also be an absolute path. The binary_dir specifies the directory in which to place the output files. If it is a relative path it will be evaluated with respect to the current output directory, but it may also be an absolute path. If binary_dir is not specified, the value of source_dir, before expanding any relative path, will be used (the typical usage). The CMakeLists.txt file in the specified source directory will be processed immediately by CMake before processing in the current input file continues beyond this command. </p>
 <p> If the EXCLUDE_FROM_ALL argument is provided then targets in the subdirectory will not be included in the ALL target of the parent directory by default, and will be excluded from IDE project files. Users must explicitly build targets in the subdirectory. This is meant for use when the subdirectory contains a separate part of the project that is useful but not necessary, such as a set of examples. Typically the subdirectory should contain its own project() command invocation so that a full build system will be generated in the subdirectory (such as a VS IDE solution file). Note that inter-target dependencies supercede this exclusion. If a target built by the parent project depends on a target in the subdirectory, the dependee target will be included in the parent project build system to satisfy the dependency. </p>
@@ -235,36 +235,36 @@ description: "cmakecommands – Reference of available CMake commands."
   add_test(testname Exename arg1 arg2 ... )
 </pre>
 <p> If the ENABLE_TESTING command has been run, this command adds a test target to the current directory. If ENABLE_TESTING has not been run, this command does nothing. The tests are run by the testing subsystem by executing Exename with the specified arguments. Exename can be either an executable built by this project or an arbitrary executable on the system (like tclsh). The test will be run with the current working directory set to the CMakeList.txt files corresponding directory in the binary tree. </p>
-<p>add_test(NAME&lt;name&gt;[CONFIGURATIONS[Debug | Release | &#8230;]]<br />
+<p>add_test(NAME&lt;name&gt;[CONFIGURATIONS[Debug | Release | &#8230;]]<br/>
                    [WORKING_DIRECTORY dir] COMMAND&lt;command&gt;[arg1[arg2&#8230;]])</p>
 <p> Add a test called &lt;name&gt;. The test name may not contain spaces, quotes, or other characters special in CMake syntax. If COMMAND specifies an executable target (created by add_executable) it will automatically be replaced by the location of the executable created at build time. If a CONFIGURATIONS option is given then the test will be executed only when testing under one of the named configurations. If a WORKING_DIRECTORY option is given then the test will be executed in the given directory. </p>
 <p> Arguments after COMMAND may use &quot;generator expressions&quot; with the syntax &quot;$&lt;&#8230;&gt;&quot;. Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -305,8 +305,8 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> Breaks from an enclosing foreach loop or while loop </p>
 <dt><code>build_command</code></dt>
 <dd> Get the command line to build this project. </dd>
-<p>build_command(&lt;variable&gt;[CONFIGURATION&lt;config&gt;]<br />
-                        [PROJECT_NAME&lt;projname&gt;]<br />
+<p>build_command(&lt;variable&gt;[CONFIGURATION&lt;config&gt;]<br/>
+                        [PROJECT_NAME&lt;projname&gt;]<br/>
                         [TARGET&lt;target&gt;])</p>
 <p> Sets the given &lt;variable&gt; to a string containing the command line for building one configuration of a target in a project using the build tool appropriate for the current CMAKE_GENERATOR. </p>
 <p> If CONFIGURATION is omitted, CMake chooses a reasonable default value for multi-configuration generators. CONFIGURATION is ignored for single-configuration generators. </p>
@@ -336,7 +336,7 @@ description: "cmakecommands – Reference of available CMake commands."
 </pre>
 <dt><code>cmake_minimum_required</code></dt>
 <dd> Set the minimum required version of cmake for a project. </dd>
-<p>cmake_minimum_required(VERSION major[.minor[.patch[.tweak]]]<br />
+<p>cmake_minimum_required(VERSION major[.minor[.patch[.tweak]]]<br/>
                                     [FATAL_ERROR])</p>
 <p> If the current version of CMake is lower than that required it will stop processing the project and report an error. When a version higher than 2.4 is specified the command implicitly invokes </p>
 <p>cmake_policy(VERSION major[.minor[.patch[.tweak]]])</p>
@@ -370,7 +370,7 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> Functions and macros record policy settings when they are created and use the pre-record policies when they are invoked. If the function or macro implementation sets policies, the changes automatically propagate up through callers until they reach the closest nested policy stack entry. </p>
 <dt><code>configure_file</code></dt>
 <dd> Copy a file to another location and modify its contents. </dd>
-<p>configure_file(&lt;input&gt;&lt;output&gt;[COPYONLY][ESCAPE_QUOTES][@ONLY]<br />
+<p>configure_file(&lt;input&gt;&lt;output&gt;[COPYONLY][ESCAPE_QUOTES][@ONLY]<br/>
                               [NEWLINE_STYLE[UNIX | DOS | WIN32 | LF | CRLF]])</p>
 <p> Copies a file &lt;input&gt; to file &lt;output&gt; and substitutes variable values referenced in the file content. If &lt;input&gt; is a relative path it is evaluated with respect to the current source directory. The &lt;input&gt; must be a file, not a directory. If &lt;output&gt; is a relative path it is evaluated with respect to the current binary directory. If &lt;output&gt; names an existing directory the input file is placed in that directory with its original name. </p>
 <p> If the &lt;input&gt; file is modified the build system will re-run CMake to re-configure the file and generate the build system again. </p>
@@ -394,8 +394,8 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> A test driver is a program that links together many small tests into a single executable. This is useful when building static executables with large libraries to shrink the total required size. The list of source files needed to build the test driver will be in sourceListName. DriverName is the name of the test driver program. The rest of the arguments consist of a list of test source files, can be semicolon separated. Each test source file should have a function in it that is the same name as the file with no extension (foo.cxx should have int foo(int, char*[]);) DriverName will be able to call each of the tests by name on the command line. If EXTRA_INCLUDE is specified, then the next argument is included into the generated file. If FUNCTION is specified, then the next argument is taken as a function name that is passed a pointer to ac and av. This can be used to add extra command line processing to each test. The cmake variable CMAKE_TESTDRIVER_BEFORE_TESTMAIN can be set to have code that will be placed directly before calling the test main function. CMAKE_TESTDRIVER_AFTER_TESTMAIN can be set to have code that will be placed directly after the call to the test main function. </p>
 <dt><code>define_property</code></dt>
 <dd> Define and document custom properties. </dd>
-<p>define_property(&lt;GLOBAL | DIRECTORY | TARGET | SOURCE |<br />
-                 TEST | VARIABLE | CACHED_VARIABLE&gt;<br />
+<p>define_property(&lt;GLOBAL | DIRECTORY | TARGET | SOURCE |<br/>
+                 TEST | VARIABLE | CACHED_VARIABLE&gt;<br/>
                     PROPERTY&lt;name&gt;[INHERITED] BRIEF_DOCS&lt;brief &#8211; doc&gt;[docs&#8230;] FULL_DOCS&lt;full &#8211; doc&gt;[docs&#8230;])</p>
 <p> Define one property in a scope for use with the set_property and get_property commands. This is primarily useful to associate documentation with property names that may be retrieved with the get_property command. The first argument determines the kind of scope in which the property should be used. It must be one of the following: </p>
 <pre>
@@ -469,25 +469,25 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> See the while command. </p>
 <dt><code>execute_process</code></dt>
 <dd> Execute one or more child processes. </dd>
-<p>  execute_process(COMMAND &lt;cmd1&gt; [args1&#8230;]]<br />
-                  [COMMAND &lt;cmd2&gt; [args2&#8230;] [&#8230;]]<br />
-                  [WORKING_DIRECTORY &lt;directory&gt;]<br />
-                  [TIMEOUT &lt;seconds&gt;]<br />
-                  [RESULT_VARIABLE &lt;variable&gt;]<br />
-                  [OUTPUT_VARIABLE &lt;variable&gt;]<br />
-                  [ERROR_VARIABLE &lt;variable&gt;]<br />
-                  [INPUT_FILE &lt;file&gt;]<br />
-                  [OUTPUT_FILE &lt;file&gt;]<br />
-                  [ERROR_FILE &lt;file&gt;]<br />
-                  [OUTPUT_QUIET]<br />
-                  [ERROR_QUIET]<br />
-                  [OUTPUT_STRIP_TRAILING_WHITESPACE]<br />
+<p>  execute_process(COMMAND &lt;cmd1&gt; [args1&#8230;]]<br/>
+                  [COMMAND &lt;cmd2&gt; [args2&#8230;] [&#8230;]]<br/>
+                  [WORKING_DIRECTORY &lt;directory&gt;]<br/>
+                  [TIMEOUT &lt;seconds&gt;]<br/>
+                  [RESULT_VARIABLE &lt;variable&gt;]<br/>
+                  [OUTPUT_VARIABLE &lt;variable&gt;]<br/>
+                  [ERROR_VARIABLE &lt;variable&gt;]<br/>
+                  [INPUT_FILE &lt;file&gt;]<br/>
+                  [OUTPUT_FILE &lt;file&gt;]<br/>
+                  [ERROR_FILE &lt;file&gt;]<br/>
+                  [OUTPUT_QUIET]<br/>
+                  [ERROR_QUIET]<br/>
+                  [OUTPUT_STRIP_TRAILING_WHITESPACE]<br/>
                   [ERROR_STRIP_TRAILING_WHITESPACE])</p>
 <p> Runs the given sequence of one or more commands with the standard output of each process piped to the standard input of the next. A single standard error pipe is used for all processes. If WORKING_DIRECTORY is given the named directory will be set as the current working directory of the child processes. If TIMEOUT is given the child processes will be terminated if they do not finish in the specified number of seconds (fractions are allowed). If RESULT_VARIABLE is given the variable will be set to contain the result of running the processes. This will be an integer return code from the last child or a string describing an error condition. If OUTPUT_VARIABLE or ERROR_VARIABLE are given the variable named will be set with the contents of the standard output and standard error pipes respectively. If the same variable is named for both pipes their output will be merged in the order produced. If INPUT_FILE, OUTPUT_FILE, or ERROR_FILE is given the file named will be attached to the standard input of the first process, standard output of the last process, or standard error of all processes respectively. If OUTPUT_QUIET or ERROR_QUIET is given then the standard output or standard error results will be quietly ignored. If more than one OUTPUT_* or ERROR_* option is given for the same pipe the precedence is not specified. If no OUTPUT_* or ERROR_* options are given the output will be shared with the corresponding pipes of the CMake process itself. </p>
 <p> The execute_process command is a newer more powerful version of exec_program, but the old command has been kept for compatibility. </p>
 <dt><code>export</code></dt>
 <dd> Export targets from the build tree for use by outside projects. </dd>
-<p>export(TARGETS[target1[target2[&#8230;]]][NAMESPACE&lt;namespace&gt;]<br />
+<p>export(TARGETS[target1[target2[&#8230;]]][NAMESPACE&lt;namespace&gt;]<br/>
               [APPEND] FILE&lt;filename&gt;[EXPORT_LINK_INTERFACE_LIBRARIES])</p>
 <p> Create a file &lt;filename&gt; that may be included by outside projects to import targets from the current project&#8217;s build tree. This is useful during cross-compiling to build utility executables that can run on the host platform in one project and then import them into another project being compiled for the target platform. If the NAMESPACE option is given the &lt;namespace&gt; string will be prepended to all target names written to the file. If the APPEND option is given the generated code will be appended to the file instead of overwriting it. The EXPORT_LINK_INTERFACE_LIBRARIES keyword, if present, causes the contents of the properties matching (IMPORTED_)?LINK_INTERFACE_LIBRARIES(_&lt;CONFIG&gt;)? to be exported, when policy CMP0022 is NEW. If a library target is included in the export but a target to which it links is not included the behavior is unspecified. </p>
 <p> The file created by this command is specific to the build tree and should never be installed. See the install(EXPORT) command to export targets from an installation tree. </p>
@@ -498,32 +498,32 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> Store the current build directory in the CMake user package registry for package &lt;name&gt;. The find_package command may consider the directory while searching for package &lt;name&gt;. This helps dependent projects find and use a package from the current project&#8217;s build tree without help from the user. Note that the entry in the package registry that this command creates works only in conjunction with a package configuration file (&lt;name&gt;Config.cmake) that works with the build tree. </p>
 <dt><code>file</code></dt>
 <dd> File manipulation command. </dd>
-<p>file(WRITE filename &#8220;message to write&#8221; &#8230;)<br />
-    file(APPEND filename &#8220;message to write&#8221; &#8230;)<br />
-        file(READ filename variable[LIMIT numBytes][OFFSET offset][HEX])<br />
-            file(&lt;MD5 | SHA1 | SHA224 | SHA256 | SHA384 | SHA512&gt; filename variable)<br />
-                file(STRINGS filename variable[LIMIT_COUNT num]<br />
-                                              [LIMIT_INPUT numBytes][LIMIT_OUTPUT numBytes]<br />
-                                              [LENGTH_MINIMUM numBytes][LENGTH_MAXIMUM numBytes]<br />
-                                              [NEWLINE_CONSUME][REGEX regex]<br />
-                                              [NO_HEX_CONVERSION])<br />
-                    file(GLOB variable[RELATIVE path][globbing expressions]&#8230;)<br />
-                        file(GLOB_RECURSE variable[RELATIVE path]<br />
-                                                  [FOLLOW_SYMLINKS][globbing expressions]&#8230;)<br />
-                            file(RENAME&lt;oldname&gt;&lt;newname&gt;)<br />
-                                file(REMOVE[file1&#8230;])<br />
-                                    file(REMOVE_RECURSE[file1&#8230;])<br />
-                                        file(MAKE_DIRECTORY[directory1 directory2&#8230;])<br />
-                                            file(RELATIVE_PATH variable directory file)<br />
-                                                file(TO_CMAKE_PATH path result)<br />
-                                                    file(TO_NATIVE_PATH path result)<br />
-                                                        file(DOWNLOAD url file[INACTIVITY_TIMEOUT timeout]<br />
-                                                                              [TIMEOUT timeout][STATUS status][LOG log][SHOW_PROGRESS]<br />
-                                                                              [EXPECTED_HASH ALGO = value][EXPECTED_MD5 sum]<br />
-                                                                              [TLS_VERIFY on | off][TLS_CAINFO file])<br />
-                                                            file(UPLOAD filename url[INACTIVITY_TIMEOUT timeout]<br />
-                                                                                    [TIMEOUT timeout][STATUS status][LOG log][SHOW_PROGRESS])<br />
-                                                                file(TIMESTAMP filename variable[&lt;format string&gt;][UTC])<br />
+<p>file(WRITE filename &#8220;message to write&#8221; &#8230;)<br/>
+    file(APPEND filename &#8220;message to write&#8221; &#8230;)<br/>
+        file(READ filename variable[LIMIT numBytes][OFFSET offset][HEX])<br/>
+            file(&lt;MD5 | SHA1 | SHA224 | SHA256 | SHA384 | SHA512&gt; filename variable)<br/>
+                file(STRINGS filename variable[LIMIT_COUNT num]<br/>
+                                              [LIMIT_INPUT numBytes][LIMIT_OUTPUT numBytes]<br/>
+                                              [LENGTH_MINIMUM numBytes][LENGTH_MAXIMUM numBytes]<br/>
+                                              [NEWLINE_CONSUME][REGEX regex]<br/>
+                                              [NO_HEX_CONVERSION])<br/>
+                    file(GLOB variable[RELATIVE path][globbing expressions]&#8230;)<br/>
+                        file(GLOB_RECURSE variable[RELATIVE path]<br/>
+                                                  [FOLLOW_SYMLINKS][globbing expressions]&#8230;)<br/>
+                            file(RENAME&lt;oldname&gt;&lt;newname&gt;)<br/>
+                                file(REMOVE[file1&#8230;])<br/>
+                                    file(REMOVE_RECURSE[file1&#8230;])<br/>
+                                        file(MAKE_DIRECTORY[directory1 directory2&#8230;])<br/>
+                                            file(RELATIVE_PATH variable directory file)<br/>
+                                                file(TO_CMAKE_PATH path result)<br/>
+                                                    file(TO_NATIVE_PATH path result)<br/>
+                                                        file(DOWNLOAD url file[INACTIVITY_TIMEOUT timeout]<br/>
+                                                                              [TIMEOUT timeout][STATUS status][LOG log][SHOW_PROGRESS]<br/>
+                                                                              [EXPECTED_HASH ALGO = value][EXPECTED_MD5 sum]<br/>
+                                                                              [TLS_VERIFY on | off][TLS_CAINFO file])<br/>
+                                                            file(UPLOAD filename url[INACTIVITY_TIMEOUT timeout]<br/>
+                                                                                    [TIMEOUT timeout][STATUS status][LOG log][SHOW_PROGRESS])<br/>
+                                                                file(TIMESTAMP filename variable[&lt;format string&gt;][UTC])<br/>
                                                                     file(GENERATE OUTPUT output_file&lt;INPUT input_file | CONTENT input_content&gt;[CONDITION expression])</p>
 <p> WRITE will write a message into a file called &#8216;filename&#8217;. It overwrites the file if it already exists, and creates the file if it does not exist. (If the file is a build input, use configure_file to update the file only when its content changes.) </p>
 <p> APPEND will write a message into a file same as WRITE, except it will append it to the end of the file </p>
@@ -561,11 +561,11 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> Should the command be unable to obtain a timestamp variable will be set to the empty string &quot;&quot;. </p>
 <p> See documentation of the string TIMESTAMP sub-command for more details. </p>
 <p> The file() command also provides COPY and INSTALL signatures: </p>
-<p>file(&lt;COPY | INSTALL&gt; files&#8230; DESTINATION&lt;dir&gt;[FILE_PERMISSIONS permissions&#8230;]<br />
-                                               [DIRECTORY_PERMISSIONS permissions&#8230;]<br />
-                                               [NO_SOURCE_PERMISSIONS][USE_SOURCE_PERMISSIONS]<br />
-                                               [FILES_MATCHING]<br />
-                                               [[PATTERN&lt;pattern&gt; | REGEX&lt;regex&gt;]<br />
+<p>file(&lt;COPY | INSTALL&gt; files&#8230; DESTINATION&lt;dir&gt;[FILE_PERMISSIONS permissions&#8230;]<br/>
+                                               [DIRECTORY_PERMISSIONS permissions&#8230;]<br/>
+                                               [NO_SOURCE_PERMISSIONS][USE_SOURCE_PERMISSIONS]<br/>
+                                               [FILES_MATCHING]<br/>
+                                               [[PATTERN&lt;pattern&gt; | REGEX&lt;regex&gt;]<br/>
                                                     [EXCLUDE][PERMISSIONS permissions&#8230;]][&#8230;])</p>
 <p> The COPY signature copies files, directories, and symlinks to a destination folder. Relative input paths are evaluated with respect to the current source directory, and a relative destination is evaluated with respect to the current build directory. Copying preserves input file timestamps, and optimizes out a file if it exists at the destination with the same timestamp. Copying preserves input permissions unless explicit permissions or NO_SOURCE_PERMISSIONS are given (default is USE_SOURCE_PERMISSIONS). See the install(DIRECTORY) command for documentation of permissions, PATTERN, REGEX, and EXCLUDE options. </p>
 <p> The INSTALL signature differs slightly from COPY: it prints status messages, and NO_SOURCE_PERMISSIONS is default. Installation scripts generated by the install() command use this signature (with some undocumented options for internal use). </p>
@@ -576,21 +576,21 @@ description: "cmakecommands – Reference of available CMake commands."
    find_file(&lt;VAR&gt; name1 [path1 path2 ...])
 </pre>
 <p> This is the short-hand signature for the command that is sufficient in many cases. It is the same as find_file(&lt;VAR&gt; name1 [PATHS path1 path2 &#8230;]) </p>
-<p>find_file(<br />
-    &lt;VAR&gt;<br />
-        name |<br />
-    NAMES name1[name2&#8230;]<br />
-               [HINTS path1[path2&#8230; ENV var]]<br />
-               [PATHS path1[path2&#8230; ENV var]]<br />
-               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br />
-               [DOC &#8220;cache documentation string&#8221;]<br />
-               [NO_DEFAULT_PATH]<br />
-               [NO_CMAKE_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_PATH]<br />
-               [NO_SYSTEM_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_SYSTEM_PATH]<br />
-               [CMAKE_FIND_ROOT_PATH_BOTH |<br />
-                ONLY_CMAKE_FIND_ROOT_PATH |<br />
+<p>find_file(<br/>
+    &lt;VAR&gt;<br/>
+        name |<br/>
+    NAMES name1[name2&#8230;]<br/>
+               [HINTS path1[path2&#8230; ENV var]]<br/>
+               [PATHS path1[path2&#8230; ENV var]]<br/>
+               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br/>
+               [DOC &#8220;cache documentation string&#8221;]<br/>
+               [NO_DEFAULT_PATH]<br/>
+               [NO_CMAKE_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_PATH]<br/>
+               [NO_SYSTEM_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_SYSTEM_PATH]<br/>
+               [CMAKE_FIND_ROOT_PATH_BOTH |<br/>
+                ONLY_CMAKE_FIND_ROOT_PATH |<br/>
                 NO_CMAKE_FIND_ROOT_PATH])</p>
 <p> This command is used to find a full path to named file. A cache entry named by &lt;VAR&gt; is created to store the result of this command. If the full path to a file is found the result is stored in the variable and the search will not be repeated unless the variable is cleared. If nothing is found, the result will be &lt;VAR&gt;-NOTFOUND, and the search will be attempted again the next time find_file is invoked with the same variable. The name of the full path to a file that is searched for is specified by the names listed after the NAMES argument. Additional search locations can be specified after the PATHS argument. If ENV var is found in the HINTS or PATHS section the environment variable var will be read and converted from a system environment variable to a cmake style list of paths. For example ENV PATH would be a way to list the system path variable. The argument after DOC will be used for the documentation string in the cache. PATH_SUFFIXES specifies additional subdirectories to check below each search path. </p>
 <p> If NO_DEFAULT_PATH is specified, then no additional paths are added to the search. If NO_DEFAULT_PATH is not specified, the search process is as follows: </p>
@@ -653,21 +653,21 @@ description: "cmakecommands – Reference of available CMake commands."
    find_library(&lt;VAR&gt; name1 [path1 path2 ...])
 </pre>
 <p> This is the short-hand signature for the command that is sufficient in many cases. It is the same as find_library(&lt;VAR&gt; name1 [PATHS path1 path2 &#8230;]) </p>
-<p>find_library(<br />
-    &lt;VAR&gt;<br />
-        name |<br />
-    NAMES name1[name2&#8230;][NAMES_PER_DIR]<br />
-               [HINTS path1[path2&#8230; ENV var]]<br />
-               [PATHS path1[path2&#8230; ENV var]]<br />
-               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br />
-               [DOC &#8220;cache documentation string&#8221;]<br />
-               [NO_DEFAULT_PATH]<br />
-               [NO_CMAKE_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_PATH]<br />
-               [NO_SYSTEM_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_SYSTEM_PATH]<br />
-               [CMAKE_FIND_ROOT_PATH_BOTH |<br />
-                ONLY_CMAKE_FIND_ROOT_PATH |<br />
+<p>find_library(<br/>
+    &lt;VAR&gt;<br/>
+        name |<br/>
+    NAMES name1[name2&#8230;][NAMES_PER_DIR]<br/>
+               [HINTS path1[path2&#8230; ENV var]]<br/>
+               [PATHS path1[path2&#8230; ENV var]]<br/>
+               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br/>
+               [DOC &#8220;cache documentation string&#8221;]<br/>
+               [NO_DEFAULT_PATH]<br/>
+               [NO_CMAKE_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_PATH]<br/>
+               [NO_SYSTEM_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_SYSTEM_PATH]<br/>
+               [CMAKE_FIND_ROOT_PATH_BOTH |<br/>
+                ONLY_CMAKE_FIND_ROOT_PATH |<br/>
                 NO_CMAKE_FIND_ROOT_PATH])</p>
 <p> This command is used to find a library. A cache entry named by &lt;VAR&gt; is created to store the result of this command. If the library is found the result is stored in the variable and the search will not be repeated unless the variable is cleared. If nothing is found, the result will be &lt;VAR&gt;-NOTFOUND, and the search will be attempted again the next time find_library is invoked with the same variable. The name of the library that is searched for is specified by the names listed after the NAMES argument. Additional search locations can be specified after the PATHS argument. If ENV var is found in the HINTS or PATHS section the environment variable var will be read and converted from a system environment variable to a cmake style list of paths. For example ENV PATH would be a way to list the system path variable. The argument after DOC will be used for the documentation string in the cache. PATH_SUFFIXES specifies additional subdirectories to check below each search path. </p>
 <p> If NO_DEFAULT_PATH is specified, then no additional paths are added to the search. If NO_DEFAULT_PATH is not specified, the search process is as follows: </p>
@@ -729,8 +729,8 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> If the global property FIND_LIBRARY_USE_LIB64_PATHS is set all search paths will be tested as normal, with &quot;64/&quot; appended, and with all matches of &quot;lib/&quot; replaced with &quot;lib64/&quot;. This property is automatically set for the platforms that are known to need it if at least one of the languages supported by the PROJECT command is enabled. </p>
 <dt><code>find_package</code></dt>
 <dd> Load settings for an external project. </dd>
-<p>find_package(&lt;package&gt;[version][EXACT][QUIET][MODULE]<br />
-                      [REQUIRED] [[COMPONENTS] [components&#8230;]][OPTIONAL_COMPONENTS components&#8230;]<br />
+<p>find_package(&lt;package&gt;[version][EXACT][QUIET][MODULE]<br/>
+                      [REQUIRED] [[COMPONENTS] [components&#8230;]][OPTIONAL_COMPONENTS components&#8230;]<br/>
                       [NO_POLICY_SCOPE])</p>
 <p> Finds and loads settings from an external project. &lt;package&gt;_FOUND will be set to indicate whether the package was found. When the package is found package-specific information is provided through variables and imported targets documented by the package itself. The QUIET option disables messages if the package cannot be found. The MODULE option disables the second signature documented below. The REQUIRED option stops processing with an error message if the package cannot be found. </p>
 <p> A package-specific list of required components may be listed after the COMPONENTS option (or after the REQUIRED option if present). Additional optional components may be listed after OPTIONAL_COMPONENTS. Available components and their influence on whether a package is considered to be found are defined by the target package. </p>
@@ -738,33 +738,33 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> User code should generally look for packages using the above simple signature. The remainder of this command documentation specifies the full command signature and details of the search process. Project maintainers wishing to provide a package to be found by this command are encouraged to read on. </p>
 <p> The command has two modes by which it searches for packages: &quot;Module&quot; mode and &quot;Config&quot; mode. Module mode is available when the command is invoked with the above reduced signature. CMake searches for a file called &quot;Find&lt;package&gt;.cmake&quot; in the CMAKE_MODULE_PATH followed by the CMake installation. If the file is found, it is read and processed by CMake. It is responsible for finding the package, checking the version, and producing any needed messages. Many find-modules provide limited or no support for versioning; check the module documentation. If no module is found and the MODULE option is not given the command proceeds to Config mode. </p>
 <p> The complete Config mode command signature is: </p>
-<p>find_package(&lt;package&gt;[version][EXACT][QUIET]<br />
-                      [REQUIRED] [[COMPONENTS] [components&#8230;]][CONFIG | NO_MODULE]<br />
-                      [NO_POLICY_SCOPE]<br />
-                      [NAMES name1[name2&#8230;]]<br />
-                      [CONFIGS config1[config2&#8230;]]<br />
-                      [HINTS path1[path2&#8230;]]<br />
-                      [PATHS path1[path2&#8230;]]<br />
-                      [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br />
-                      [NO_DEFAULT_PATH]<br />
-                      [NO_CMAKE_ENVIRONMENT_PATH]<br />
-                      [NO_CMAKE_PATH]<br />
-                      [NO_SYSTEM_ENVIRONMENT_PATH]<br />
-                      [NO_CMAKE_PACKAGE_REGISTRY]<br />
-                      [NO_CMAKE_BUILDS_PATH]<br />
-                      [NO_CMAKE_SYSTEM_PATH]<br />
-                      [NO_CMAKE_SYSTEM_PACKAGE_REGISTRY]<br />
-                      [CMAKE_FIND_ROOT_PATH_BOTH |<br />
-                       ONLY_CMAKE_FIND_ROOT_PATH |<br />
+<p>find_package(&lt;package&gt;[version][EXACT][QUIET]<br/>
+                      [REQUIRED] [[COMPONENTS] [components&#8230;]][CONFIG | NO_MODULE]<br/>
+                      [NO_POLICY_SCOPE]<br/>
+                      [NAMES name1[name2&#8230;]]<br/>
+                      [CONFIGS config1[config2&#8230;]]<br/>
+                      [HINTS path1[path2&#8230;]]<br/>
+                      [PATHS path1[path2&#8230;]]<br/>
+                      [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br/>
+                      [NO_DEFAULT_PATH]<br/>
+                      [NO_CMAKE_ENVIRONMENT_PATH]<br/>
+                      [NO_CMAKE_PATH]<br/>
+                      [NO_SYSTEM_ENVIRONMENT_PATH]<br/>
+                      [NO_CMAKE_PACKAGE_REGISTRY]<br/>
+                      [NO_CMAKE_BUILDS_PATH]<br/>
+                      [NO_CMAKE_SYSTEM_PATH]<br/>
+                      [NO_CMAKE_SYSTEM_PACKAGE_REGISTRY]<br/>
+                      [CMAKE_FIND_ROOT_PATH_BOTH |<br/>
+                       ONLY_CMAKE_FIND_ROOT_PATH |<br/>
                        NO_CMAKE_FIND_ROOT_PATH])</p>
 <p> The CONFIG option may be used to skip Module mode explicitly and switch to Config mode. It is synonymous to using NO_MODULE. Config mode is also implied by use of options not specified in the reduced signature. </p>
 <p> Config mode attempts to locate a configuration file provided by the package to be found. A cache entry called &lt;package&gt;_DIR is created to hold the directory containing the file. By default the command searches for a package with the name &lt;package&gt;. If the NAMES option is given the names following it are used instead of &lt;package&gt;. The command searches for a file called &quot;&lt;name&gt;Config.cmake&quot; or &quot;&lt;lower-case-name&gt;-config.cmake&quot; for each name specified. A replacement set of possible configuration file names may be given using the CONFIGS option. The search procedure is specified below. Once found, the configuration file is read and processed by CMake. Since the file is provided by the package it already knows the location of package contents. The full path to the configuration file is stored in the cmake variable &lt;package&gt;_CONFIG. </p>
 <p> All configuration files which have been considered by CMake while searching for an installation of the package with an appropriate version are stored in the cmake variable &lt;package&gt;_CONSIDERED_CONFIGS, the associated versions in &lt;package&gt;_CONSIDERED_VERSIONS. </p>
 <p> If the package configuration file cannot be found CMake will generate an error describing the problem unless the QUIET argument is specified. If REQUIRED is specified and the package is not found a fatal error is generated and the configure step stops executing. If &lt;package&gt;_DIR has been set to a directory not containing a configuration file CMake will ignore it and search from scratch. </p>
 <p> When the [version] argument is given Config mode will only find a version of the package that claims compatibility with the requested version (format is major[.minor[.patch[.tweak]]]). If the EXACT option is given only a version of the package claiming an exact match of the requested version may be found. CMake does not establish any convention for the meaning of version numbers. Package version numbers are checked by &quot;version&quot; files provided by the packages themselves. For a candidate package configuration file &quot;&lt;config-file&gt;.cmake&quot; the corresponding version file is located next to it and named either &quot;&lt;config-file&gt;-version.cmake&quot; or &quot;&lt;config-file&gt;Version.cmake&quot;. If no such version file is available then the configuration file is assumed to not be compatible with any requested version. A basic version file containing generic version matching code can be created using the macro write_basic_package_version_file(), see its documentation for more details. When a version file is found it is loaded to check the requested version number. The version file is loaded in a nested scope in which the following variables have been defined: </p>
-<p>PACKAGE_FIND_NAME = the&lt;package&gt; name<br />
-    PACKAGE_FIND_VERSION = full requested version string<br />
-        PACKAGE_FIND_VERSION_MAJOR = major version if requested,<br />
+<p>PACKAGE_FIND_NAME = the&lt;package&gt; name<br/>
+    PACKAGE_FIND_VERSION = full requested version string<br/>
+        PACKAGE_FIND_VERSION_MAJOR = major version if requested,<br/>
     else 0 PACKAGE_FIND_VERSION_MINOR = minor version if requested, else 0 PACKAGE_FIND_VERSION_PATCH = patch version if requested, else 0 PACKAGE_FIND_VERSION_TWEAK = tweak version if requested, else 0 PACKAGE_FIND_VERSION_COUNT = number of version components, 0 to 4</p>
 <p> The version file checks whether it satisfies the requested version and sets these variables: </p>
 <pre>
@@ -774,11 +774,11 @@ description: "cmakecommands – Reference of available CMake commands."
   PACKAGE_VERSION_UNSUITABLE = true if unsuitable as any version
 </pre>
 <p> These variables are checked by the find_package command to determine whether the configuration file provides an acceptable version. They are not available after the find_package call returns. If the version is acceptable the following variables are set: </p>
-<p>  &lt;package&gt;_VERSION       = full provided version string<br />
-  &lt;package&gt;_VERSION_MAJOR = major version if provided, else 0<br />
-  &lt;package&gt;_VERSION_MINOR = minor version if provided, else 0<br />
-  &lt;package&gt;_VERSION_PATCH = patch version if provided, else 0<br />
-  &lt;package&gt;_VERSION_TWEAK = tweak version if provided, else 0<br />
+<p>  &lt;package&gt;_VERSION       = full provided version string<br/>
+  &lt;package&gt;_VERSION_MAJOR = major version if provided, else 0<br/>
+  &lt;package&gt;_VERSION_MINOR = minor version if provided, else 0<br/>
+  &lt;package&gt;_VERSION_PATCH = patch version if provided, else 0<br/>
+  &lt;package&gt;_VERSION_TWEAK = tweak version if provided, else 0<br/>
   &lt;package&gt;_VERSION_COUNT = number of version components, 0 to 4</p>
 <p> and the corresponding package configuration file is loaded. When multiple package configuration files are available whose version files claim compatibility with the version requested it is unspecified which one is chosen. No attempt is made to choose a highest or closest version number. </p>
 <p> Config mode provides an elaborate interface and search procedure. Much of the interface is provided for completeness and for use internally by find-modules loaded by Module mode. Most user code should simply call </p>
@@ -873,17 +873,17 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> Once one of the calls succeeds the result variable will be set and stored in the cache so that no call will search again. </p>
 <p> Every non-REQUIRED find_package() call can be disabled by setting the variable CMAKE_DISABLE_FIND_PACKAGE_&lt;package&gt; to TRUE. See the documentation for the CMAKE_DISABLE_FIND_PACKAGE_&lt;package&gt; variable for more information. </p>
 <p> When loading a find module or package configuration file find_package defines variables to provide information about the call arguments (and restores their original state before returning): </p>
-<p> &lt;package&gt;_FIND_REQUIRED      = true if REQUIRED option was given<br />
- &lt;package&gt;_FIND_QUIETLY       = true if QUIET option was given<br />
- &lt;package&gt;_FIND_VERSION       = full requested version string<br />
- &lt;package&gt;_FIND_VERSION_MAJOR = major version if requested, else 0<br />
- &lt;package&gt;_FIND_VERSION_MINOR = minor version if requested, else 0<br />
- &lt;package&gt;_FIND_VERSION_PATCH = patch version if requested, else 0<br />
- &lt;package&gt;_FIND_VERSION_TWEAK = tweak version if requested, else 0<br />
- &lt;package&gt;_FIND_VERSION_COUNT = number of version components, 0 to 4<br />
- &lt;package&gt;_FIND_VERSION_EXACT = true if EXACT option was given<br />
- &lt;package&gt;_FIND_COMPONENTS    = list of requested components<br />
- &lt;package&gt;_FIND_REQUIRED_&lt;c&gt;  = true if component &lt;c&gt; is required<br />
+<p> &lt;package&gt;_FIND_REQUIRED      = true if REQUIRED option was given<br/>
+ &lt;package&gt;_FIND_QUIETLY       = true if QUIET option was given<br/>
+ &lt;package&gt;_FIND_VERSION       = full requested version string<br/>
+ &lt;package&gt;_FIND_VERSION_MAJOR = major version if requested, else 0<br/>
+ &lt;package&gt;_FIND_VERSION_MINOR = minor version if requested, else 0<br/>
+ &lt;package&gt;_FIND_VERSION_PATCH = patch version if requested, else 0<br/>
+ &lt;package&gt;_FIND_VERSION_TWEAK = tweak version if requested, else 0<br/>
+ &lt;package&gt;_FIND_VERSION_COUNT = number of version components, 0 to 4<br/>
+ &lt;package&gt;_FIND_VERSION_EXACT = true if EXACT option was given<br/>
+ &lt;package&gt;_FIND_COMPONENTS    = list of requested components<br/>
+ &lt;package&gt;_FIND_REQUIRED_&lt;c&gt;  = true if component &lt;c&gt; is required<br/>
                                 false if component &lt;c&gt; is optional</p>
 <p> In Module mode the loaded find module is responsible to honor the request detailed by these variables; see the find module for details. In Config mode find_package handles REQUIRED, QUIET, and version options automatically but leaves it to the package configuration file to handle components in a way that makes sense for the package. The package configuration file may set &lt;package&gt;_FOUND to false to tell find_package that component requirements are not satisfied. </p>
 <p> See the cmake_policy() command documentation for discussion of the NO_POLICY_SCOPE option. </p>
@@ -893,21 +893,21 @@ description: "cmakecommands – Reference of available CMake commands."
    find_path(&lt;VAR&gt; name1 [path1 path2 ...])
 </pre>
 <p> This is the short-hand signature for the command that is sufficient in many cases. It is the same as find_path(&lt;VAR&gt; name1 [PATHS path1 path2 &#8230;]) </p>
-<p>find_path(<br />
-    &lt;VAR&gt;<br />
-        name |<br />
-    NAMES name1[name2&#8230;]<br />
-               [HINTS path1[path2&#8230; ENV var]]<br />
-               [PATHS path1[path2&#8230; ENV var]]<br />
-               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br />
-               [DOC &#8220;cache documentation string&#8221;]<br />
-               [NO_DEFAULT_PATH]<br />
-               [NO_CMAKE_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_PATH]<br />
-               [NO_SYSTEM_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_SYSTEM_PATH]<br />
-               [CMAKE_FIND_ROOT_PATH_BOTH |<br />
-                ONLY_CMAKE_FIND_ROOT_PATH |<br />
+<p>find_path(<br/>
+    &lt;VAR&gt;<br/>
+        name |<br/>
+    NAMES name1[name2&#8230;]<br/>
+               [HINTS path1[path2&#8230; ENV var]]<br/>
+               [PATHS path1[path2&#8230; ENV var]]<br/>
+               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br/>
+               [DOC &#8220;cache documentation string&#8221;]<br/>
+               [NO_DEFAULT_PATH]<br/>
+               [NO_CMAKE_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_PATH]<br/>
+               [NO_SYSTEM_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_SYSTEM_PATH]<br/>
+               [CMAKE_FIND_ROOT_PATH_BOTH |<br/>
+                ONLY_CMAKE_FIND_ROOT_PATH |<br/>
                 NO_CMAKE_FIND_ROOT_PATH])</p>
 <p> This command is used to find a directory containing the named file. A cache entry named by &lt;VAR&gt; is created to store the result of this command. If the file in a directory is found the result is stored in the variable and the search will not be repeated unless the variable is cleared. If nothing is found, the result will be &lt;VAR&gt;-NOTFOUND, and the search will be attempted again the next time find_path is invoked with the same variable. The name of the file in a directory that is searched for is specified by the names listed after the NAMES argument. Additional search locations can be specified after the PATHS argument. If ENV var is found in the HINTS or PATHS section the environment variable var will be read and converted from a system environment variable to a cmake style list of paths. For example ENV PATH would be a way to list the system path variable. The argument after DOC will be used for the documentation string in the cache. PATH_SUFFIXES specifies additional subdirectories to check below each search path. </p>
 <p> If NO_DEFAULT_PATH is specified, then no additional paths are added to the search. If NO_DEFAULT_PATH is not specified, the search process is as follows: </p>
@@ -971,21 +971,21 @@ description: "cmakecommands – Reference of available CMake commands."
    find_program(&lt;VAR&gt; name1 [path1 path2 ...])
 </pre>
 <p> This is the short-hand signature for the command that is sufficient in many cases. It is the same as find_program(&lt;VAR&gt; name1 [PATHS path1 path2 &#8230;]) </p>
-<p>find_program(<br />
-    &lt;VAR&gt;<br />
-        name |<br />
-    NAMES name1[name2&#8230;]<br />
-               [HINTS path1[path2&#8230; ENV var]]<br />
-               [PATHS path1[path2&#8230; ENV var]]<br />
-               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br />
-               [DOC &#8220;cache documentation string&#8221;]<br />
-               [NO_DEFAULT_PATH]<br />
-               [NO_CMAKE_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_PATH]<br />
-               [NO_SYSTEM_ENVIRONMENT_PATH]<br />
-               [NO_CMAKE_SYSTEM_PATH]<br />
-               [CMAKE_FIND_ROOT_PATH_BOTH |<br />
-                ONLY_CMAKE_FIND_ROOT_PATH |<br />
+<p>find_program(<br/>
+    &lt;VAR&gt;<br/>
+        name |<br/>
+    NAMES name1[name2&#8230;]<br/>
+               [HINTS path1[path2&#8230; ENV var]]<br/>
+               [PATHS path1[path2&#8230; ENV var]]<br/>
+               [PATH_SUFFIXES suffix1[suffix2&#8230;]]<br/>
+               [DOC &#8220;cache documentation string&#8221;]<br/>
+               [NO_DEFAULT_PATH]<br/>
+               [NO_CMAKE_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_PATH]<br/>
+               [NO_SYSTEM_ENVIRONMENT_PATH]<br/>
+               [NO_CMAKE_SYSTEM_PATH]<br/>
+               [CMAKE_FIND_ROOT_PATH_BOTH |<br/>
+                ONLY_CMAKE_FIND_ROOT_PATH |<br/>
                 NO_CMAKE_FIND_ROOT_PATH])</p>
 <p> This command is used to find a program. A cache entry named by &lt;VAR&gt; is created to store the result of this command. If the program is found the result is stored in the variable and the search will not be repeated unless the variable is cleared. If nothing is found, the result will be &lt;VAR&gt;-NOTFOUND, and the search will be attempted again the next time find_program is invoked with the same variable. The name of the program that is searched for is specified by the names listed after the NAMES argument. Additional search locations can be specified after the PATHS argument. If ENV var is found in the HINTS or PATHS section the environment variable var will be read and converted from a system environment variable to a cmake style list of paths. For example ENV PATH would be a way to list the system path variable. The argument after DOC will be used for the documentation string in the cache. PATH_SUFFIXES specifies additional subdirectories to check below each search path. </p>
 <p> If NO_DEFAULT_PATH is specified, then no additional paths are added to the search. If NO_DEFAULT_PATH is not specified, the search process is as follows: </p>
@@ -1063,13 +1063,13 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> * When specifying single number, the range will have elements 0 to &quot;total&quot;. </p>
 <p> * When specifying two numbers, the range will have elements from the first number to the second number. </p>
 <p> * The third optional number is the increment used to iterate from the first number to the second number. </p>
-<p>foreach (loop_var IN[LISTS[list1[&#8230;]]]<br />
+<p>foreach (loop_var IN[LISTS[list1[&#8230;]]]<br/>
                     [ITEMS[item1[&#8230;]]])</p>
 <p> Iterates over a precise list of items. The LISTS option names list-valued variables to be traversed, including empty elements (an empty string is a zero-length list). The ITEMS option ends argument parsing and includes all arguments following it in the iteration. </p>
 <dt><code>function</code></dt>
 <dd> Start recording a function for later invocation as a command. </dd>
-<p>function(&lt;name&gt;[arg1[arg2[arg3&#8230;]]])<br />
-    COMMAND1(ARGS&#8230;)<br />
+<p>function(&lt;name&gt;[arg1[arg2[arg3&#8230;]]])<br/>
+    COMMAND1(ARGS&#8230;)<br/>
         COMMAND2(ARGS&#8230;)&#8230; endfunction(&lt;name&gt;)</p>
 <p> Define a function named &lt;name&gt; that takes arguments named arg1 arg2 arg3 (&#8230;). Commands listed after function, but before the matching endfunction, are not invoked until the function is invoked. When it is invoked, the commands recorded in the function are first modified by replacing formal parameters (${arg1}) with the arguments passed, and then invoked as normal commands. In addition to referencing the formal parameters you can reference the variable ARGC which will be set to the number of arguments passed into the function as well as ARGV0 ARGV1 ARGV2 &#8230; which will have the actual values of the arguments passed in. This facilitates creating functions with optional arguments. Additionally ARGV holds the list of all arguments given to the function and ARGN holds the list of arguments past the last expected argument. </p>
 <p> A function opens a new scope: see set(var PARENT_SCOPE) for details. </p>
@@ -1109,20 +1109,20 @@ description: "cmakecommands – Reference of available CMake commands."
  PATH      = Legacy alias for DIRECTORY (use for CMake &lt;= 2.8.11)
 </pre>
 <p> Paths are returned with forward slashes and have no trailing slahes. The longest file extension is always considered. If the optional CACHE argument is specified, the result variable is added to the cache. </p>
-<p>get_filename_component(&lt;VAR&gt; FileName<br />
-                           PROGRAM[PROGRAM_ARGS&lt;ARG_VAR&gt;]<br />
+<p>get_filename_component(&lt;VAR&gt; FileName<br/>
+                           PROGRAM[PROGRAM_ARGS&lt;ARG_VAR&gt;]<br/>
                                   [CACHE])</p>
 <p> The program in FileName will be found in the system search path or left as a full path. If PROGRAM_ARGS is present with PROGRAM, then any command-line arguments present in the FileName string are split from the program name and stored in &lt;ARG_VAR&gt;. This is used to separate a program name from its arguments in a command line string. </p>
 <dt><code>get_property</code></dt>
 <dd> Get a property. </dd>
-<p>get_property(&lt;variable&gt;<br />
-             &lt;GLOBAL |<br />
-              DIRECTORY[dir] |<br />
-              TARGET&lt;target&gt; |<br />
-              SOURCE&lt;source&gt; |<br />
-              TEST&lt;test&gt; |<br />
-              CACHE&lt;entry&gt; |<br />
-              VARIABLE&gt;<br />
+<p>get_property(&lt;variable&gt;<br/>
+             &lt;GLOBAL |<br/>
+              DIRECTORY[dir] |<br/>
+              TARGET&lt;target&gt; |<br/>
+              SOURCE&lt;source&gt; |<br/>
+              TEST&lt;test&gt; |<br/>
+              CACHE&lt;entry&gt; |<br/>
+              VARIABLE&gt;<br/>
                  PROPERTY&lt;name&gt;[SET | DEFINED | BRIEF_DOCS | FULL_DOCS])</p>
 <p> Get one property from one object in a scope. The first argument specifies the variable in which to store the result. The second argument determines the scope from which to get the property. It must be one of the following: </p>
 <p> GLOBAL scope is unique and does not accept a name. </p>
@@ -1156,16 +1156,16 @@ description: "cmakecommands – Reference of available CMake commands."
 <p> See also the more general get_property() command. </p>
 <dt><code>if</code></dt>
 <dd> Conditionally execute a group of commands. </dd>
-<p>if (expression)<br />
-#then section.<br />
-    COMMAND1(ARGS&#8230;)<br />
-COMMAND2(ARGS&#8230;)<br />
-&#8230; elseif(expression2)<br />
-#elseif section.<br />
-    COMMAND1(ARGS&#8230;)<br />
-        COMMAND2(ARGS&#8230;)&#8230; else(expression)<br />
-#else section.<br />
-            COMMAND1(ARGS&#8230;)<br />
+<p>if (expression)<br/>
+#then section.<br/>
+    COMMAND1(ARGS&#8230;)<br/>
+COMMAND2(ARGS&#8230;)<br/>
+&#8230; elseif(expression2)<br/>
+#elseif section.<br/>
+    COMMAND1(ARGS&#8230;)<br/>
+        COMMAND2(ARGS&#8230;)&#8230; else(expression)<br/>
+#else section.<br/>
+            COMMAND1(ARGS&#8230;)<br/>
                 COMMAND2(ARGS&#8230;)&#8230; endif(expression)</p>
 <p> Evaluates the given expression. If the result is true, the commands in the THEN section are invoked. Otherwise, the commands in the else section are invoked. The elseif and else sections are optional. You may have multiple elseif clauses. Note that the expression in the else and endif clause is optional. Long expressions can be used and there is a traditional order of precedence. Parenthetical expressions are evaluated first followed by unary operators such as EXISTS, COMMAND, and DEFINED. Then any EQUAL, LESS, GREATER, STRLESS, STRGREATER, STREQUAL, MATCHES will be evaluated. Then NOT operators and finally AND, OR operators will be evaluated. Possible expressions are: </p>
 <pre>
@@ -1276,7 +1276,7 @@ COMMAND2(ARGS&#8230;)<br />
 <p> 7) The left and right hand arguments to AND OR are independently tested to see if they are boolean constants, if so they are used as such, otherwise they are assumed to be variables and are dereferenced. </p>
 <dt><code>include</code></dt>
 <dd> Load and run CMake code from a file or module. </dd>
-<p>include(&lt;file | module&gt;[OPTIONAL][RESULT_VARIABLE&lt;VAR&gt;]<br />
+<p>include(&lt;file | module&gt;[OPTIONAL][RESULT_VARIABLE&lt;VAR&gt;]<br/>
                        [NO_POLICY_SCOPE])</p>
 <p> Load and run CMake code from the file given. Variable reads and writes access the scope of the caller (dynamic scoping). If OPTIONAL is present, then no error is raised if the file does not exist. If RESULT_VARIABLE is given the variable will be set to the full filename which has been included or NOTFOUND if it failed. </p>
 <p> If a module is specified instead of a file, the file with name &lt;modulename&gt;.cmake is searched first in CMAKE_MODULE_PATH, then in the CMake module directory. There is one exception to this: if the file which calls include() is located itself in the CMake module directory, then first the CMake module directory is searched and CMAKE_MODULE_PATH afterwards. See also policy CMP0017. </p>
@@ -1290,9 +1290,9 @@ COMMAND2(ARGS&#8230;)<br />
 <p> If the SYSTEM option is given, the compiler will be told the directories are meant as system include directories on some platforms (signalling this setting might achieve effects such as the compiler skipping warnings, or these fixed-install system files not being considered in dependency calculations &#8211; see compiler docs). </p>
 <dt><code>include_external_msproject</code></dt>
 <dd> Include an external Microsoft project file in a workspace. </dd>
-<p>include_external_msproject(projectname location<br />
-                               [TYPE projectTypeGUID]<br />
-                               [GUID projectGUID]<br />
+<p>include_external_msproject(projectname location<br/>
+                               [TYPE projectTypeGUID]<br/>
+                               [GUID projectGUID]<br/>
                                [PLATFORM platformName] dep1 dep2&#8230;)</p>
 <p> Includes an external Microsoft project in the generated workspace file. Currently does nothing on UNIX. This will create a target named [projectname]. This can be used in the add_dependencies command to make things depend on the external project. </p>
 <p> TYPE, GUID and PLATFORM are optional parameters that allow one to specify the type of project, id (GUID) of the project and the name of the target platform. This is useful for projects requiring values other than the default (e.g. WIX projects). These options are not supported by the Visual Studio 6 generator. </p>
@@ -1317,15 +1317,15 @@ COMMAND2(ARGS&#8230;)<br />
 <p> The RENAME argument specifies a name for an installed file that may be different from the original file. Renaming is allowed only when a single file is installed by the command. </p>
 <p> The OPTIONAL argument specifies that it is not an error if the file to be installed does not exist. </p>
 <p> The TARGETS signature: </p>
-<p>install(TARGETS targets&#8230;[EXPORT&lt;export &#8211; name&gt;]<br />
-                          [[ARCHIVE | LIBRARY | RUNTIME | FRAMEWORK | BUNDLE |<br />
-                              PRIVATE_HEADER | PUBLIC_HEADER |<br />
-                              RESOURCE]<br />
-                               [DESTINATION&lt;dir&gt;]<br />
-                               [INCLUDES DESTINATION[&lt;dir&gt;&#8230;]]<br />
-                               [PERMISSIONS permissions&#8230;]<br />
-                               [CONFIGURATIONS[Debug | Release | &#8230;]]<br />
-                               [COMPONENT&lt;component&gt;]<br />
+<p>install(TARGETS targets&#8230;[EXPORT&lt;export &#8211; name&gt;]<br/>
+                          [[ARCHIVE | LIBRARY | RUNTIME | FRAMEWORK | BUNDLE |<br/>
+                              PRIVATE_HEADER | PUBLIC_HEADER |<br/>
+                              RESOURCE]<br/>
+                               [DESTINATION&lt;dir&gt;]<br/>
+                               [INCLUDES DESTINATION[&lt;dir&gt;&#8230;]]<br/>
+                               [PERMISSIONS permissions&#8230;]<br/>
+                               [CONFIGURATIONS[Debug | Release | &#8230;]]<br/>
+                               [COMPONENT&lt;component&gt;]<br/>
                                [OPTIONAL][NAMELINK_ONLY | NAMELINK_SKIP]][&#8230;])</p>
 <p> The TARGETS form specifies rules for installing targets from a project. There are five kinds of target files that may be installed: ARCHIVE, LIBRARY, RUNTIME, FRAMEWORK, and BUNDLE. Executables are treated as RUNTIME targets, except that those marked with the MACOSX_BUNDLE property are treated as BUNDLE targets on OS X. Static libraries are always treated as ARCHIVE targets. Module libraries are always treated as LIBRARY targets. For non-DLL platforms shared libraries are treated as LIBRARY targets, except that those marked with the FRAMEWORK property are treated as FRAMEWORK targets on OS X. For DLL platforms the DLL part of a shared library is treated as a RUNTIME target and the corresponding import library is treated as an ARCHIVE target. All Windows-based systems including Cygwin are DLL platforms. The ARCHIVE, LIBRARY, RUNTIME, and FRAMEWORK arguments change the type of target to which the subsequent properties apply. If none is given the installation properties apply to all target types. If only one is given then only targets of that type will be installed (which can be used to install just a DLL or just an import library).The INCLUDES DESTINATION specifies a list of directories which will be added to the INTERFACE_INCLUDE_DIRECTORIES of the &lt;targets&gt; when exported by install(EXPORT). If a relative path is specified, it is treated as relative to the $&lt;INSTALL_PREFIX&gt;. </p>
 <p> The PRIVATE_HEADER, PUBLIC_HEADER, and RESOURCE arguments cause subsequent properties to be applied to installing a FRAMEWORK shared library target&#8217;s associated files on non-Apple platforms. Rules defined by these arguments are ignored on Apple platforms because the associated files are installed into the appropriate locations inside the framework folder. See documentation of the PRIVATE_HEADER, PUBLIC_HEADER, and RESOURCE target properties for details. </p>
@@ -1346,24 +1346,24 @@ COMMAND2(ARGS&#8230;)<br />
 <p> The EXPORT option associates the installed target files with an export called &lt;export-name&gt;. It must appear before any RUNTIME, LIBRARY, or ARCHIVE options. To actually install the export file itself, call install(EXPORT). See documentation of the install(EXPORT &#8230;) signature below for details. </p>
 <p> Installing a target with EXCLUDE_FROM_ALL set to true has undefined behavior. </p>
 <p> The FILES signature: </p>
-<p>install(FILES files&#8230; DESTINATION&lt;dir&gt;[PERMISSIONS permissions&#8230;]<br />
-                                       [CONFIGURATIONS[Debug | Release | &#8230;]]<br />
-                                       [COMPONENT&lt;component&gt;]<br />
+<p>install(FILES files&#8230; DESTINATION&lt;dir&gt;[PERMISSIONS permissions&#8230;]<br/>
+                                       [CONFIGURATIONS[Debug | Release | &#8230;]]<br/>
+                                       [COMPONENT&lt;component&gt;]<br/>
                                        [RENAME&lt;name&gt;][OPTIONAL])</p>
 <p> The FILES form specifies rules for installing files for a project. File names given as relative paths are interpreted with respect to the current source directory. Files installed by this form are by default given permissions OWNER_WRITE, OWNER_READ, GROUP_READ, and WORLD_READ if no PERMISSIONS argument is given. </p>
 <p> The PROGRAMS signature: </p>
-<p>install(PROGRAMS files&#8230; DESTINATION&lt;dir&gt;[PERMISSIONS permissions&#8230;]<br />
-                                          [CONFIGURATIONS[Debug | Release | &#8230;]]<br />
-                                          [COMPONENT&lt;component&gt;]<br />
+<p>install(PROGRAMS files&#8230; DESTINATION&lt;dir&gt;[PERMISSIONS permissions&#8230;]<br/>
+                                          [CONFIGURATIONS[Debug | Release | &#8230;]]<br/>
+                                          [COMPONENT&lt;component&gt;]<br/>
                                           [RENAME&lt;name&gt;][OPTIONAL])</p>
 <p> The PROGRAMS form is identical to the FILES form except that the default permissions for the installed file also include OWNER_EXECUTE, GROUP_EXECUTE, and WORLD_EXECUTE. This form is intended to install programs that are not targets, such as shell scripts. Use the TARGETS form to install targets built within the project. </p>
 <p> The DIRECTORY signature: </p>
-<p>install(DIRECTORY dirs&#8230; DESTINATION&lt;dir&gt;[FILE_PERMISSIONS permissions&#8230;]<br />
-                                          [DIRECTORY_PERMISSIONS permissions&#8230;]<br />
-                                          [USE_SOURCE_PERMISSIONS][OPTIONAL]<br />
-                                          [CONFIGURATIONS[Debug | Release | &#8230;]]<br />
-                                          [COMPONENT&lt;component&gt;][FILES_MATCHING]<br />
-                                          [[PATTERN&lt;pattern&gt; | REGEX&lt;regex&gt;]<br />
+<p>install(DIRECTORY dirs&#8230; DESTINATION&lt;dir&gt;[FILE_PERMISSIONS permissions&#8230;]<br/>
+                                          [DIRECTORY_PERMISSIONS permissions&#8230;]<br/>
+                                          [USE_SOURCE_PERMISSIONS][OPTIONAL]<br/>
+                                          [CONFIGURATIONS[Debug | Release | &#8230;]]<br/>
+                                          [COMPONENT&lt;component&gt;][FILES_MATCHING]<br/>
+                                          [[PATTERN&lt;pattern&gt; | REGEX&lt;regex&gt;]<br/>
                                                [EXCLUDE][PERMISSIONS permissions&#8230;]][&#8230;])</p>
 <p> The DIRECTORY form installs contents of one or more directories to a given destination. The directory structure is copied verbatim to the destination. The last component of each directory name is appended to the destination directory but a trailing slash may be used to avoid this because it leaves the last component empty. Directory names given as relative paths are interpreted with respect to the current source directory. If no input directory names are given the destination directory will be created but nothing will be installed into it. The FILE_PERMISSIONS and DIRECTORY_PERMISSIONS options specify permissions given to files and directories in the destination. If USE_SOURCE_PERMISSIONS is specified and FILE_PERMISSIONS is not, file permissions will be copied from the source directory structure. If no permissions are specified files will be given the default permissions specified in the FILES form of the command, and the directories will be given the default permissions specified in the PROGRAMS form of the command. </p>
 <p> Installation of directories may be controlled with fine granularity using the PATTERN or REGEX options. These &quot;match&quot; options specify a globbing pattern or regular expression to match directories or files encountered within input directories. They may be used to apply certain options (see below) to a subset of the files and directories encountered. The full path to each input file or directory (with forward slashes) is matched against the expression. A PATTERN will match only complete file names: the portion of the full path matching the pattern must occur at the end of the file name and be preceded by a slash. A REGEX will match any portion of the full path but it may use &#8216;/&#8217; and &#8216;$&#8217; to simulate the PATTERN behavior. By default all files and directories are installed whether or not they are matched. The FILES_MATCHING option may be given before the first match option to disable installation of files (but not directories) not matched by any expression. For example, the code </p>
@@ -1389,10 +1389,10 @@ COMMAND2(ARGS&#8230;)<br />
 </pre>
 <p> will print a message during installation. </p>
 <p> The EXPORT signature: </p>
-<p>install(EXPORT&lt;export &#8211; name&gt; DESTINATION&lt;dir&gt;[NAMESPACE&lt;namespace&gt;][FILE&lt;name&gt;.cmake]<br />
-                                              [PERMISSIONS permissions&#8230;]<br />
-                                              [CONFIGURATIONS[Debug | Release | &#8230;]]<br />
-                                              [EXPORT_LINK_INTERFACE_LIBRARIES]<br />
+<p>install(EXPORT&lt;export &#8211; name&gt; DESTINATION&lt;dir&gt;[NAMESPACE&lt;namespace&gt;][FILE&lt;name&gt;.cmake]<br/>
+                                              [PERMISSIONS permissions&#8230;]<br/>
+                                              [CONFIGURATIONS[Debug | Release | &#8230;]]<br/>
+                                              [EXPORT_LINK_INTERFACE_LIBRARIES]<br/>
                                               [COMPONENT&lt;component&gt;])</p>
 <p> The EXPORT form generates and installs a CMake file containing code to import targets from the installation tree into another project. Target installations are associated with the export &lt;export-name&gt; using the EXPORT option of the install(TARGETS &#8230;) signature documented above. The NAMESPACE option will prepend &lt;namespace&gt; to the target names as they are written to the import file. By default the generated file will be called &lt;export-name&gt;.cmake but the FILE option may be used to specify a different name. The value given to the FILE option must be a file name with the &quot;.cmake&quot; extension. If a CONFIGURATIONS option is given then the file will only be installed when one of the named configurations is installed. Additionally, the generated import file will reference only the matching target configurations. The EXPORT_LINK_INTERFACE_LIBRARIES keyword, if present, causes the contents of the properties matching (IMPORTED_)?LINK_INTERFACE_LIBRARIES(_&lt;CONFIG&gt;)? to be exported, when policy CMP0022 is NEW. If a COMPONENT option is specified that does not match that given to the targets associated with &lt;export-name&gt; the behavior is undefined. If a library target is included in the export but a target to which it links is not included the behavior is unspecified. </p>
 <p> The EXPORT form is useful to help outside projects use targets built and installed by the current project. For example, the code </p>
@@ -1411,15 +1411,15 @@ COMMAND2(ARGS&#8230;)<br />
 <p> Note that this command is rarely necessary. Library locations returned by find_package() and find_library() are absolute paths. Pass these absolute library file paths directly to the target_link_libraries() command. CMake will ensure the linker finds them. </p>
 <dt><code>list</code></dt>
 <dd> List operations. </dd>
-<p>list(LENGTH&lt;list&gt;&lt;output variable&gt;)<br />
-    list(GET&lt;list&gt;&lt;element index&gt;[&lt;element index&gt;&#8230;]&lt;output variable&gt;)<br />
-        list(APPEND&lt;list&gt;&lt;element&gt;[&lt;element&gt;&#8230;])<br />
-            list(FIND&lt;list&gt;&lt;value&gt;&lt;output variable&gt;)<br />
-                list(INSERT&lt;list&gt;&lt;element_index&gt;&lt;element&gt;[&lt;element&gt;&#8230;])<br />
-                    list(REMOVE_ITEM&lt;list&gt;&lt;value&gt;[&lt;value&gt;&#8230;])<br />
-                        list(REMOVE_AT&lt;list&gt;&lt;index&gt;[&lt;index&gt;&#8230;])<br />
-                            list(REMOVE_DUPLICATES&lt;list&gt;)<br />
-                                list(REVERSE&lt;list&gt;)<br />
+<p>list(LENGTH&lt;list&gt;&lt;output variable&gt;)<br/>
+    list(GET&lt;list&gt;&lt;element index&gt;[&lt;element index&gt;&#8230;]&lt;output variable&gt;)<br/>
+        list(APPEND&lt;list&gt;&lt;element&gt;[&lt;element&gt;&#8230;])<br/>
+            list(FIND&lt;list&gt;&lt;value&gt;&lt;output variable&gt;)<br/>
+                list(INSERT&lt;list&gt;&lt;element_index&gt;&lt;element&gt;[&lt;element&gt;&#8230;])<br/>
+                    list(REMOVE_ITEM&lt;list&gt;&lt;value&gt;[&lt;value&gt;&#8230;])<br/>
+                        list(REMOVE_AT&lt;list&gt;&lt;index&gt;[&lt;index&gt;&#8230;])<br/>
+                            list(REMOVE_DUPLICATES&lt;list&gt;)<br/>
+                                list(REVERSE&lt;list&gt;)<br/>
                                     list(SORT&lt;list&gt;)</p>
 <p> LENGTH will return a given list&#8217;s length. </p>
 <p> GET will return list of elements specified by indices from the list. </p>
@@ -1440,7 +1440,7 @@ COMMAND2(ARGS&#8230;)<br />
              prefix entry1...)
 </pre>
 <p> Read the cache and store the requested entries in variables with their name prefixed with the given prefix. This only reads the values, and does not create entries in the local project&#8217;s cache. </p>
-<p>load_cache(pathToCacheFile[EXCLUDE entry1&#8230;]<br />
+<p>load_cache(pathToCacheFile[EXCLUDE entry1&#8230;]<br/>
                           [INCLUDE_INTERNALS entry1&#8230;])</p>
 <p> Load in the values from another cache and store them in the local project&#8217;s cache as internal entries. This is useful for a project that depends on another project built in a different tree. EXCLUDE option can be used to provide a list of entries to be excluded. INCLUDE_INTERNALS can be used to provide a list of internal entries to be included. Normally, no internal entries are brought in. Use of this form of the command is strongly discouraged, but it is provided for backward compatibility. </p>
 <dt><code>load_command</code></dt>
@@ -1455,8 +1455,8 @@ COMMAND2(ARGS&#8230;)<br />
 <p> will be set to the full path of the module that was loaded. Otherwise the variable will not be set. </p>
 <dt><code>macro</code></dt>
 <dd> Start recording a macro for later invocation as a command. </dd>
-<p>macro(&lt;name&gt;[arg1[arg2[arg3&#8230;]]])<br />
-    COMMAND1(ARGS&#8230;)<br />
+<p>macro(&lt;name&gt;[arg1[arg2[arg3&#8230;]]])<br/>
+    COMMAND1(ARGS&#8230;)<br/>
         COMMAND2(ARGS&#8230;)&#8230; endmacro(&lt;name&gt;)</p>
 <p> Define a macro named &lt;name&gt; that takes arguments named arg1 arg2 arg3 (&#8230;). Commands listed after macro, but before the matching endmacro, are not invoked until the macro is invoked. When it is invoked, the commands recorded in the macro are first modified by replacing formal parameters (${arg1}) with the arguments passed, and then invoked as normal commands. In addition to referencing the formal parameters you can reference the values ${ARGC} which will be set to the number of arguments passed into the function as well as ${ARGV0} ${ARGV1} ${ARGV2} &#8230; which will have the actual values of the arguments passed in. This facilitates creating macros with optional arguments. Additionally ${ARGV} holds the list of all arguments given to the macro and ${ARGN} holds the list of arguments past the last expected argument. Note that the parameters to a macro and values such as ARGN are not variables in the usual CMake sense. They are string replacements much like the C preprocessor would do with a macro. If you want true CMake variables and/or better CMake scope control you should look at the function command. </p>
 <p> See the cmake_policy() command documentation for the behavior of policies inside macros. </p>
@@ -1587,11 +1587,11 @@ COMMAND2(ARGS&#8230;)<br />
 <p> Set a property for the current directory and subdirectories. If the property is not found, CMake will report an error. The properties include: INCLUDE_DIRECTORIES, LINK_DIRECTORIES, INCLUDE_REGULAR_EXPRESSION, and ADDITIONAL_MAKE_CLEAN_FILES. ADDITIONAL_MAKE_CLEAN_FILES is a list of files that will be cleaned as a part of &quot;make clean&quot; stage. </p>
 <dt><code>set_property</code></dt>
 <dd> Set a named property in a given scope. </dd>
-<p>set_property(&lt;GLOBAL |<br />
-              DIRECTORY[dir] |<br />
-              TARGET[target1[target2&#8230;]] |<br />
-              SOURCE[src1[src2&#8230;]] |<br />
-              TEST[test1[test2&#8230;]] |<br />
+<p>set_property(&lt;GLOBAL |<br/>
+              DIRECTORY[dir] |<br/>
+              TARGET[target1[target2&#8230;]] |<br/>
+              SOURCE[src1[src2&#8230;]] |<br/>
+              TEST[test1[test2&#8230;]] |<br/>
               CACHE[entry1[entry2&#8230;]]&gt;[APPEND][APPEND_STRING] PROPERTY&lt;name&gt;[value1[value2&#8230;]])</p>
 <p> Set one property on zero or more objects of a scope. The first argument determines the scope in which the property is set. It must be one of the following: </p>
 <p> GLOBAL scope is unique and does not accept a name. </p>
@@ -1603,7 +1603,7 @@ COMMAND2(ARGS&#8230;)<br />
 <p> The required PROPERTY option is immediately followed by the name of the property to set. Remaining arguments are used to compose the property value in the form of a semicolon-separated list. If the APPEND option is given the list is appended to any existing property value.If the APPEND_STRING option is given the string is append to any existing property value as string, i.e. it results in a longer string and not a list of strings. </p>
 <dt><code>set_source_files_properties</code></dt>
 <dd> Source files can have properties that affect how they are built. </dd>
-<p>set_source_files_properties([file1[file2[&#8230;]]] PROPERTIES prop1 value1<br />
+<p>set_source_files_properties([file1[file2[&#8230;]]] PROPERTIES prop1 value1<br/>
                                 [prop2 value2[&#8230;]])</p>
 <p> Set properties associated with source files using a key/value paired list. See properties documentation for those known to CMake. Unrecognized properties are ignored. Source file properties are visible only to targets added in the same directory (CMakeLists.txt). </p>
 <dt><code>set_target_properties</code></dt>
@@ -1658,33 +1658,33 @@ COMMAND2(ARGS&#8230;)<br />
 </pre>
 <dt><code>string</code></dt>
 <dd> String operations. </dd>
-<p>string(REGEX MATCH&lt;regular_expression&gt;<br />
-       &lt;output variable&gt;&lt;input&gt;[&lt;input&gt;&#8230;])<br />
-    string(REGEX MATCHALL&lt;regular_expression&gt;<br />
-           &lt;output variable&gt;&lt;input&gt;[&lt;input&gt;&#8230;])<br />
-        string(REGEX REPLACE&lt;regular_expression&gt;<br />
-               &lt;replace_expression&gt;&lt;output variable&gt;<br />
-               &lt;input&gt;[&lt;input&gt;&#8230;])<br />
-            string(REPLACE&lt;match_string&gt;<br />
-                   &lt;replace_string&gt;&lt;output variable&gt;<br />
-                   &lt;input&gt;[&lt;input&gt;&#8230;])<br />
-                string(&lt;MD5 | SHA1 | SHA224 | SHA256 | SHA384 | SHA512&gt;<br />
-                       &lt;output variable&gt;&lt;input&gt;)<br />
-                    string(COMPARE EQUAL&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br />
-                        string(COMPARE NOTEQUAL&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br />
-                            string(COMPARE LESS&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br />
-                                string(COMPARE GREATER&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br />
-                                    string(ASCII&lt;number&gt;[&lt;number&gt;&#8230;]&lt;output variable&gt;)<br />
-                                        string(CONFIGURE&lt;string1&gt;&lt;output variable&gt;[@ONLY][ESCAPE_QUOTES])<br />
-                                            string(TOUPPER&lt;string1&gt;&lt;output variable&gt;)<br />
-                                                string(TOLOWER&lt;string1&gt;&lt;output variable&gt;)<br />
-                                                    string(LENGTH&lt;string&gt;&lt;output variable&gt;)<br />
-                                                        string(SUBSTRING&lt;string&gt;&lt;begin&gt;&lt;length&gt;&lt;output variable&gt;)<br />
-                                                            string(STRIP&lt;string&gt;&lt;output variable&gt;)<br />
-                                                                string(RANDOM[LENGTH&lt;length&gt;][ALPHABET&lt;alphabet&gt;]<br />
-                                                                             [RANDOM_SEED&lt;seed&gt;]&lt;output variable&gt;)<br />
-                                                                    string(FIND&lt;string&gt;&lt;substring&gt;&lt;output variable&gt;[REVERSE])<br />
-                                                                        string(TIMESTAMP&lt;output variable&gt;[&lt;format string&gt;][UTC])<br />
+<p>string(REGEX MATCH&lt;regular_expression&gt;<br/>
+       &lt;output variable&gt;&lt;input&gt;[&lt;input&gt;&#8230;])<br/>
+    string(REGEX MATCHALL&lt;regular_expression&gt;<br/>
+           &lt;output variable&gt;&lt;input&gt;[&lt;input&gt;&#8230;])<br/>
+        string(REGEX REPLACE&lt;regular_expression&gt;<br/>
+               &lt;replace_expression&gt;&lt;output variable&gt;<br/>
+               &lt;input&gt;[&lt;input&gt;&#8230;])<br/>
+            string(REPLACE&lt;match_string&gt;<br/>
+                   &lt;replace_string&gt;&lt;output variable&gt;<br/>
+                   &lt;input&gt;[&lt;input&gt;&#8230;])<br/>
+                string(&lt;MD5 | SHA1 | SHA224 | SHA256 | SHA384 | SHA512&gt;<br/>
+                       &lt;output variable&gt;&lt;input&gt;)<br/>
+                    string(COMPARE EQUAL&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br/>
+                        string(COMPARE NOTEQUAL&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br/>
+                            string(COMPARE LESS&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br/>
+                                string(COMPARE GREATER&lt;string1&gt;&lt;string2&gt;&lt;output variable&gt;)<br/>
+                                    string(ASCII&lt;number&gt;[&lt;number&gt;&#8230;]&lt;output variable&gt;)<br/>
+                                        string(CONFIGURE&lt;string1&gt;&lt;output variable&gt;[@ONLY][ESCAPE_QUOTES])<br/>
+                                            string(TOUPPER&lt;string1&gt;&lt;output variable&gt;)<br/>
+                                                string(TOLOWER&lt;string1&gt;&lt;output variable&gt;)<br/>
+                                                    string(LENGTH&lt;string&gt;&lt;output variable&gt;)<br/>
+                                                        string(SUBSTRING&lt;string&gt;&lt;begin&gt;&lt;length&gt;&lt;output variable&gt;)<br/>
+                                                            string(STRIP&lt;string&gt;&lt;output variable&gt;)<br/>
+                                                                string(RANDOM[LENGTH&lt;length&gt;][ALPHABET&lt;alphabet&gt;]<br/>
+                                                                             [RANDOM_SEED&lt;seed&gt;]&lt;output variable&gt;)<br/>
+                                                                    string(FIND&lt;string&gt;&lt;substring&gt;&lt;output variable&gt;[REVERSE])<br/>
+                                                                        string(TIMESTAMP&lt;output variable&gt;[&lt;format string&gt;][UTC])<br/>
                                                                             string(MAKE_C_IDENTIFIER&lt;input string&gt;&lt;output variable&gt;)</p>
 <p> REGEX MATCH will match the regular expression once and store the match in the output variable. </p>
 <p> REGEX MATCHALL will match the regular expression as many times as possible and store the matches in the output variable as a list. </p>
@@ -1701,29 +1701,29 @@ COMMAND2(ARGS&#8230;)<br />
 <p> RANDOM will return a random string of given length consisting of characters from the given alphabet. Default length is 5 characters and default alphabet is all numbers and upper and lower case letters. If an integer RANDOM_SEED is given, its value will be used to seed the random number generator. </p>
 <p> FIND will return the position where the given substring was found in the supplied string. If the REVERSE flag was used, the command will search for the position of the last occurrence of the specified substring. </p>
 <p> The following characters have special meaning in regular expressions: </p>
-<p>^Matches at beginning of input<br />
-     $ Matches at end of input<br />
-         .Matches any single character<br />
-             [] Matches any<br />
-             character(s)<br />
-inside the brackets<br />
-        [^] Matches any<br />
-        character(s) not inside the brackets<br />
-    &#8211; Inside brackets,<br />
-    specifies an inclusive range between<br />
-        characters on either side e.g.[a &#8211; f] is[abcdef] To match a literal<br />
-        &#8211; using brackets,<br />
-    make it the first<br />
-        or the last character e.g.[+* / -] matches basic mathematical operators.*Matches preceding pattern zero or more times + Matches preceding pattern one or more times<br />
-    ? Matches preceding pattern zero or once only<br />
-                                            | Matches a pattern on either side of the |<br />
-                                            () Saves a matched subexpression,<br />
-    which can be referenced<br />
-        in the REGEX REPLACE operation.Additionally it is saved<br />
-        by all regular expression<br />
-        &#8211; related commands,<br />
-    including<br />
-    e.g.if (MATCHES),<br />
+<p>^Matches at beginning of input<br/>
+     $ Matches at end of input<br/>
+         .Matches any single character<br/>
+             [] Matches any<br/>
+             character(s)<br/>
+inside the brackets<br/>
+        [^] Matches any<br/>
+        character(s) not inside the brackets<br/>
+    &#8211; Inside brackets,<br/>
+    specifies an inclusive range between<br/>
+        characters on either side e.g.[a &#8211; f] is[abcdef] To match a literal<br/>
+        &#8211; using brackets,<br/>
+    make it the first<br/>
+        or the last character e.g.[+* / -] matches basic mathematical operators.*Matches preceding pattern zero or more times + Matches preceding pattern one or more times<br/>
+    ? Matches preceding pattern zero or once only<br/>
+                                            | Matches a pattern on either side of the |<br/>
+                                            () Saves a matched subexpression,<br/>
+    which can be referenced<br/>
+        in the REGEX REPLACE operation.Additionally it is saved<br/>
+        by all regular expression<br/>
+        &#8211; related commands,<br/>
+    including<br/>
+    e.g.if (MATCHES),<br/>
     in the variables CMAKE_MATCH_(0..9).</p>
 <p> *, + and ? have higher precedence than concatenation. | has lower precedence than concatenation. This means that the regular expression &quot;^ab+d$&quot; matches &quot;abbd&quot; but not &quot;ababd&quot;, and the regular expression &quot;^(ab|cd)$&quot; matches &quot;ab&quot; but not &quot;abd&quot;. </p>
 <p> TIMESTAMP will write a string representation of the current date and/or time to the output variable. </p>
@@ -1753,36 +1753,36 @@ inside the brackets<br />
 <p> MAKE_C_IDENTIFIER will write a string which can be used as an identifier in C. </p>
 <dt><code>target_compile_definitions</code></dt>
 <dd> Add compile definitions to a target. </dd>
-<p>target_compile_definitions(&lt;target&gt;&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items1&#8230;]<br />
+<p>target_compile_definitions(&lt;target&gt;&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items1&#8230;]<br/>
                                                                  [&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items2&#8230;]&#8230;])</p>
 <p> Specify compile definitions to use when compiling a given target. The named &lt;target&gt; must have been created by a command such as add_executable or add_library and must not be an IMPORTED target. The INTERFACE, PUBLIC and PRIVATE keywords are required to specify the scope of the following arguments. PRIVATE and PUBLIC items will populate the COMPILE_DEFINITIONS property of &lt;target&gt;. PUBLIC and INTERFACE items will populate the INTERFACE_COMPILE_DEFINITIONS property of &lt;target&gt;. The following arguments specify compile definitions. Repeated calls for the same &lt;target&gt; append items in the order called. </p>
 <p> Arguments to target_compile_definitions may use &quot;generator expressions&quot; with the syntax &quot;$&lt;&#8230;&gt;&quot;. Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -1807,37 +1807,37 @@ inside the brackets<br />
 </pre>
 <dt><code>target_compile_options</code></dt>
 <dd> Add compile options to a target. </dd>
-<p>target_compile_options(&lt;target&gt;[BEFORE]&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items1&#8230;]<br />
+<p>target_compile_options(&lt;target&gt;[BEFORE]&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items1&#8230;]<br/>
                                                                      [&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items2&#8230;]&#8230;])</p>
 <p> Specify compile options to use when compiling a given target. The named &lt;target&gt; must have been created by a command such as add_executable or add_library and must not be an IMPORTED target. If BEFORE is specified, the content will be prepended to the property instead of being appended. </p>
 <p> The INTERFACE, PUBLIC and PRIVATE keywords are required to specify the scope of the following arguments. PRIVATE and PUBLIC items will populate the COMPILE_OPTIONS property of &lt;target&gt;. PUBLIC and INTERFACE items will populate the INTERFACE_COMPILE_OPTIONS property of &lt;target&gt;. The following arguments specify compile opitions. Repeated calls for the same &lt;target&gt; append items in the order called. </p>
 <p> Arguments to target_compile_options may use &quot;generator expressions&quot; with the syntax &quot;$&lt;&#8230;&gt;&quot;. Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -1862,38 +1862,38 @@ inside the brackets<br />
 </pre>
 <dt><code>target_include_directories</code></dt>
 <dd> Add include directories to a target. </dd>
-<p>target_include_directories(&lt;target&gt;[SYSTEM][BEFORE]&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items1&#8230;]<br />
+<p>target_include_directories(&lt;target&gt;[SYSTEM][BEFORE]&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items1&#8230;]<br/>
                                                                                  [&lt;INTERFACE | PUBLIC | PRIVATE&gt;[items2&#8230;]&#8230;])</p>
 <p> Specify include directories or targets to use when compiling a given target. The named &lt;target&gt; must have been created by a command such as add_executable or add_library and must not be an IMPORTED target. </p>
 <p> If BEFORE is specified, the content will be prepended to the property instead of being appended. </p>
 <p> The INTERFACE, PUBLIC and PRIVATE keywords are required to specify the scope of the following arguments. PRIVATE and PUBLIC items will populate the INCLUDE_DIRECTORIES property of &lt;target&gt;. PUBLIC and INTERFACE items will populate the INTERFACE_INCLUDE_DIRECTORIES property of &lt;target&gt;. The following arguments specify include directories. Specified include directories may be absolute paths or relative paths. Repeated calls for the same &lt;target&gt; append items in the order called.If SYSTEM is specified, the compiler will be told the directories are meant as system include directories on some platforms (signalling this setting might achieve effects such as the compiler skipping warnings, or these fixed-install system files not being considered in dependency calculations &#8211; see compiler docs). If SYSTEM is used together with PUBLIC or INTERFACE, the INTERFACE_SYSTEM_INCLUDE_DIRECTORIES target property will be populated with the specified directories. </p>
 <p> Arguments to target_include_directories may use &quot;generator expressions&quot; with the syntax &quot;$&lt;&#8230;&gt;&quot;. Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -1918,7 +1918,7 @@ inside the brackets<br />
 </pre>
 <dt><code>target_link_libraries</code></dt>
 <dd> Link a target to given libraries. </dd>
-<p>target_link_libraries(&lt;target&gt;[item1[item2[&#8230;]]]<br />
+<p>target_link_libraries(&lt;target&gt;[item1[item2[&#8230;]]]<br/>
                       [[debug | optimized | general]&lt;item&gt;]&#8230;)</p>
 <p> Specify libraries or flags to use when linking a given target. The named &lt;target&gt; must have been created in the current directory by a command such as add_executable or add_library. The remaining arguments specify library names or flags. Repeated calls for the same &lt;target&gt; append items in the order called. </p>
 <p> If a library name matches that of another target in the project a dependency will automatically be added in the build system to make sure the library being linked is up-to-date before the target links. Item names starting with &#8216;-&#8216;, but not &#8216;-l&#8217; or &#8216;-framework&#8217;, are treated as linker flags. </p>
@@ -1937,11 +1937,11 @@ inside the brackets<br />
                       [&lt;PRIVATE|PUBLIC|INTERFACE&gt; &lt;lib&gt; ... ] ...])
 </pre>
 <p> The PUBLIC, PRIVATE and INTERFACE keywords can be used to specify both the link dependencies and the link interface in one command. Libraries and targets following PUBLIC are linked to, and are made part of the link interface. Libraries and targets following PRIVATE are linked to, but are not made part of the link interface. Libraries following INTERFACE are appended to the link interface and are not used for linking &lt;target&gt;. </p>
-<p>target_link_libraries(&lt;target&gt; LINK_INTERFACE_LIBRARIES<br />
+<p>target_link_libraries(&lt;target&gt; LINK_INTERFACE_LIBRARIES<br/>
                       [[debug | optimized | general]&lt;lib&gt;]&#8230;)</p>
 <p> The LINK_INTERFACE_LIBRARIES mode appends the libraries to the INTERFACE_LINK_LIBRARIES target property instead of using them for linking. If policy CMP0022 is not NEW, then this mode also appends libraries to the LINK_INTERFACE_LIBRARIES and its per-configuration equivalent. This signature is for compatibility only. Prefer the INTERFACE mode instead. Libraries specified as &quot;debug&quot; are wrapped in a generator expression to correspond to debug builds. If policy CMP0022 is not NEW, the libraries are also appended to the LINK_INTERFACE_LIBRARIES_DEBUG property (or to the properties corresponding to configurations listed in the DEBUG_CONFIGURATIONS global property if it is set). Libraries specified as &quot;optimized&quot; are appended to the INTERFACE_LINK_LIBRARIES property. If policy CMP0022 is not NEW, they are also appended to the LINK_INTERFACE_LIBRARIES property. Libraries specified as &quot;general&quot; (or without any keyword) are treated as if specified for both &quot;debug&quot; and &quot;optimized&quot;. </p>
-<p>target_link_libraries(&lt;target&gt;<br />
-                      &lt;LINK_PRIVATE | LINK_PUBLIC&gt; [[debug | optimized | general]&lt;lib&gt;]&#8230;<br />
+<p>target_link_libraries(&lt;target&gt;<br/>
+                      &lt;LINK_PRIVATE | LINK_PUBLIC&gt; [[debug | optimized | general]&lt;lib&gt;]&#8230;<br/>
                           [&lt;LINK_PRIVATE | LINK_PUBLIC&gt; [[debug | optimized | general]&lt;lib&gt;]&#8230;])</p>
 <p> The LINK_PUBLIC and LINK_PRIVATE modes can be used to specify both the link dependencies and the link interface in one command. This signature is for compatibility only. Prefer the PUBLIC or PRIVATE keywords instead. Libraries and targets following LINK_PUBLIC are linked to, and are made part of the INTERFACE_LINK_LIBRARIES. If policy CMP0022 is not NEW, they are also made part of the LINK_INTERFACE_LIBRARIES. Libraries and targets following LINK_PRIVATE are linked to, but are not made part of the INTERFACE_LINK_LIBRARIES (or LINK_INTERFACE_LIBRARIES). </p>
 <p> The library dependency graph is normally acyclic (a DAG), but in the case of mutually-dependent STATIC libraries CMake allows the graph to contain cycles (strongly connected components). When another target links to one of the libraries CMake repeats the entire connected component. For example, the code </p>
@@ -1956,32 +1956,32 @@ inside the brackets<br />
 <p> links &#8216;main&#8217; to &#8216;A B A B&#8217;. (While one repetition is usually sufficient, pathological object file and symbol arrangements can require more. One may handle such cases by manually repeating the component in the last target_link_libraries call. However, if two archives are really so interdependent they should probably be combined into a single archive.) </p>
 <p> Arguments to target_link_libraries may use &quot;generator expressions&quot; with the syntax &quot;$&lt;&#8230;&gt;&quot;. Note however, that generator expressions will not be used in OLD handling of CMP0003 or CMP0004. </p>
 <p> Generator expressions are evaluated during build system generation to produce information specific to each build configuration. Valid expressions are: </p>
-<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br />
-  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br />
-  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br />
-  $&lt;CONFIGURATION&gt;          = configuration name<br />
-  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br />
-  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br />
-  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br />
-  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br />
-  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br />
-  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br />
-  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br />
-  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br />
-  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br />
-  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br />
-  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br />
-  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br />
-  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br />
-  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br />
-  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br />
-  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br />
-  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br />
-  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br />
+<p>  $&lt;0:&#8230;&gt;                  = empty string (ignores &#8220;&#8230;&#8221;)<br/>
+  $&lt;1:&#8230;&gt;                  = content of &#8220;&#8230;&#8221;<br/>
+  $&lt;CONFIG:cfg&gt;             = &#8216;1&#8217; if config is &#8220;cfg&#8221;, else &#8216;0&#8217;<br/>
+  $&lt;CONFIGURATION&gt;          = configuration name<br/>
+  $&lt;BOOL:&#8230;&gt;               = &#8216;1&#8217; if the &#8216;&#8230;&#8217; is true, else &#8216;0&#8217;<br/>
+  $&lt;STREQUAL:a,b&gt;           = &#8216;1&#8217; if a is STREQUAL b, else &#8216;0&#8217;<br/>
+  $&lt;ANGLE-R&gt;                = A literal &#8216;&gt;&#8217;. Used to compare strings which contain a &#8216;&gt;&#8217; for example.<br/>
+  $&lt;COMMA&gt;                  = A literal &#8216;,&#8217;. Used to compare strings which contain a &#8216;,&#8217; for example.<br/>
+  $&lt;SEMICOLON&gt;              = A literal &#8216;;&#8217;. Used to prevent list expansion on an argument with &#8216;;&#8217;.<br/>
+  $&lt;JOIN:list,&#8230;&gt;          = joins the list with the content of &#8220;&#8230;&#8221;<br/>
+  $&lt;TARGET_NAME:&#8230;&gt;        = Marks &#8230; as being the name of a target.  This is required if exporting targets to multiple dependent export sets.  The &#8216;&#8230;&#8217; must be a literal name of a target- it may not contain generator expressions.<br/>
+  $&lt;INSTALL_INTERFACE:&#8230;&gt;  = content of &#8220;&#8230;&#8221; when the property is exported using install(EXPORT), and empty otherwise.<br/>
+  $&lt;BUILD_INTERFACE:&#8230;&gt;    = content of &#8220;&#8230;&#8221; when the property is exported using export(), or when the target is used by another target in the same buildsystem. Expands to the empty string otherwise.<br/>
+  $&lt;C_COMPILER_ID&gt;          = The CMake-id of the C compiler used.<br/>
+  $&lt;C_COMPILER_ID:comp&gt;     = &#8216;1&#8217; if the CMake-id of the C compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_ID&gt;        = The CMake-id of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_ID:comp&gt;   = &#8216;1&#8217; if the CMake-id of the CXX compiler matches comp, otherwise &#8216;0&#8217;.<br/>
+  $&lt;VERSION_GREATER:v1,v2&gt;  = &#8216;1&#8217; if v1 is a version greater than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_LESS:v1,v2&gt;     = &#8216;1&#8217; if v1 is a version less than v2, else &#8216;0&#8217;.<br/>
+  $&lt;VERSION_EQUAL:v1,v2&gt;    = &#8216;1&#8217; if v1 is the same version as v2, else &#8216;0&#8217;.<br/>
+  $&lt;C_COMPILER_VERSION&gt;     = The version of the C compiler used.<br/>
+  $&lt;C_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the C compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;CXX_COMPILER_VERSION&gt;   = The version of the CXX compiler used.<br/>
+  $&lt;CXX_COMPILER_VERSION:ver&gt; = &#8216;1&#8217; if the version of the CXX compiler matches ver, otherwise &#8216;0&#8217;.<br/>
+  $&lt;TARGET_FILE:tgt&gt;        = main file (.exe, .so.1.2, .a)<br/>
+  $&lt;TARGET_LINKER_FILE:tgt&gt; = file used to link (.a, .lib, .so)<br/>
   $&lt;TARGET_SONAME_FILE:tgt&gt; = file with soname (.so.3)</p>
 <p> where &quot;tgt&quot; is the name of a target. Target file expressions produce a full path, but _DIR and _NAME versions can produce the directory and file name components: </p>
 <pre>
@@ -2006,24 +2006,24 @@ inside the brackets<br />
 </pre>
 <dt><code>try_compile</code></dt>
 <dd> Try building some code. </dd>
-<p>try_compile(RESULT_VAR&lt;bindir&gt;&lt;srcdir&gt;<br />
-            &lt;projectName&gt;[targetName][CMAKE_FLAGS flags&#8230;]<br />
+<p>try_compile(RESULT_VAR&lt;bindir&gt;&lt;srcdir&gt;<br/>
+            &lt;projectName&gt;[targetName][CMAKE_FLAGS flags&#8230;]<br/>
                          [OUTPUT_VARIABLE&lt;var&gt;])</p>
 <p> Try building a project. In this form, srcdir should contain a complete CMake project with a CMakeLists.txt file and all sources. The bindir and srcdir will not be deleted after this command is run. Specify targetName to build a specific target instead of the &#8216;all&#8217; or &#8216;ALL_BUILD&#8217; target. </p>
-<p>try_compile(RESULT_VAR&lt;bindir&gt;&lt;srcfile | SOURCES srcfile&#8230;&gt;[CMAKE_FLAGS flags&#8230;]<br />
-                                                            [COMPILE_DEFINITIONS flags&#8230;]<br />
-                                                            [LINK_LIBRARIES libs&#8230;]<br />
-                                                            [OUTPUT_VARIABLE&lt;var&gt;]<br />
+<p>try_compile(RESULT_VAR&lt;bindir&gt;&lt;srcfile | SOURCES srcfile&#8230;&gt;[CMAKE_FLAGS flags&#8230;]<br/>
+                                                            [COMPILE_DEFINITIONS flags&#8230;]<br/>
+                                                            [LINK_LIBRARIES libs&#8230;]<br/>
+                                                            [OUTPUT_VARIABLE&lt;var&gt;]<br/>
                                                             [COPY_FILE&lt;fileName&gt;[COPY_FILE_ERROR&lt;var&gt;]])</p>
 <p> Try building an executable from one or more source files. In this form the user need only supply one or more source files that include a definition for &#8216;main&#8217;. CMake will create a CMakeLists.txt file to build the source(s) as an executable. Specify COPY_FILE to get a copy of the linked executable at the given fileName and optionally COPY_FILE_ERROR to capture any error. </p>
 <p> In this version all files in bindir/CMakeFiles/CMakeTmp will be cleaned automatically. For debugging, &#8211;debug-trycompile can be passed to cmake to avoid this clean. However, multiple sequential try_compile operations reuse this single output directory. If you use &#8211;debug-trycompile, you can only debug one try_compile call at a time. The recommended procedure is to configure with cmake all the way through once, then delete the cache entry associated with the try_compile call of interest, and then re-run cmake again with &#8211;debug-trycompile. </p>
 <p> Some extra flags that can be included are, INCLUDE_DIRECTORIES, LINK_DIRECTORIES, and LINK_LIBRARIES. COMPILE_DEFINITIONS are -Ddefinition that will be passed to the compile line. </p>
 <p> The srcfile signature also accepts a LINK_LIBRARIES argument which may contain a list of libraries or IMPORTED targets which will be linked to in the generated project. If LINK_LIBRARIES is specified as a parameter to try_compile, then any LINK_LIBRARIES passed as CMAKE_FLAGS will be ignored. </p>
 <p> try_compile creates a CMakeList.txt file on the fly that looks like this: </p>
-<p>add_definitions(&lt;expanded COMPILE_DEFINITIONS from calling cmake&gt;)<br />
-    include_directories(${INCLUDE_DIRECTORIES})<br />
-        link_directories(${LINK_DIRECTORIES})<br />
-            add_executable(cmTryCompileExec sources)<br />
+<p>add_definitions(&lt;expanded COMPILE_DEFINITIONS from calling cmake&gt;)<br/>
+    include_directories(${INCLUDE_DIRECTORIES})<br/>
+        link_directories(${LINK_DIRECTORIES})<br/>
+            add_executable(cmTryCompileExec sources)<br/>
                 target_link_libraries(cmTryCompileExec ${LINK_LIBRARIES})</p>
 <p> In both versions of the command, if OUTPUT_VARIABLE is specified, then the output from the build process is stored in the given variable. The success or failure of the try_compile, i.e. TRUE or FALSE respectively, is returned in RESULT_VAR. CMAKE_FLAGS can be used to pass -DVAR:TYPE=VALUE flags to the cmake that is run during the build. Set variable CMAKE_TRY_COMPILE_CONFIGURATION to choose a build configuration. </p>
 <dt><code>try_run</code></dt>

@@ -13,31 +13,31 @@ description: "QwtPlot –"
 <p>#include &lt;qwt_plot.h&gt; </p>
 <p> Inherits QFrame, and <code>QwtPlotDict</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>Axis</code> { <code>yLeft</code>, <code>yRight</code>, <code>xBottom</code>, <code>xTop</code>, <code>axisCnt</code> }<br />
- <i>Axis index. </i><br />
+<p>enum <code>Axis</code> { <code>yLeft</code>, <code>yRight</code>, <code>xBottom</code>, <code>xTop</code>, <code>axisCnt</code> }<br/>
+ <i>Axis index. </i><br/>
  enum <code>LegendPosition</code> { <code>LeftLegend</code>, <code>RightLegend</code>, <code>BottomLegend</code>, <code>TopLegend</code> } </p>
 <h3>Public Slots</h3>
-<p>virtual void <code>replot</code> ()<br />
- <i>Redraw the plot. </i><br />
- void <code>autoRefresh</code> ()<br />
+<p>virtual void <code>replot</code> ()<br/>
+ <i>Redraw the plot. </i><br/>
+ void <code>autoRefresh</code> ()<br/>
  <i>Replots the plot if </i><code>autoReplot()</code> is true.</p>
 <h3>Signals</h3>
 <p>void <code>itemAttached</code> (<code>QwtPlotItem</code> *plotItem, bool on) </p>
 <p> void <code>legendDataChanged</code> (const QVariant &amp;itemInfo, const QList&lt; <code>QwtLegendData</code> &gt; &amp;data) </p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlot</code> (QWidget *=NULL)<br />
- <i>Constructor. </i><br />
- <code>QwtPlot</code> (const <code>QwtText</code> &amp;<code>title</code>, QWidget *=NULL)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPlot</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlot</code> (QWidget *=NULL)<br/>
+ <i>Constructor. </i><br/>
+ <code>QwtPlot</code> (const <code>QwtText</code> &amp;<code>title</code>, QWidget *=NULL)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPlot</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>applyProperties</code> (const QString &amp;) </p>
 <p> QString <code>grabProperties</code> () const </p>
-<p> void <code>setAutoReplot</code> (bool=true)<br />
- <i>Set or reset the autoReplot option. </i><br />
+<p> void <code>setAutoReplot</code> (bool=true)<br/>
+ <i>Set or reset the autoReplot option. </i><br/>
  bool <code>autoReplot</code> () const </p>
-<p> void <code>setPlotLayout</code> (<code>QwtPlotLayout</code> *)<br />
- <i>Assign a new plot layout. </i><br />
+<p> void <code>setPlotLayout</code> (<code>QwtPlotLayout</code> *)<br/>
+ <i>Assign a new plot layout. </i><br/>
  <code>QwtPlotLayout</code> * <code>plotLayout</code> () </p>
 <p> const <code>QwtPlotLayout</code> * <code>plotLayout</code> () const </p>
 <p> void <code>setTitle</code> (const QString &amp;) </p>
@@ -50,84 +50,84 @@ description: "QwtPlot –"
 <p> <code>QwtText</code> <code>footer</code> () const </p>
 <p> <code>QwtTextLabel</code> * <code>footerLabel</code> () </p>
 <p> const <code>QwtTextLabel</code> * <code>footerLabel</code> () const </p>
-<p> void <code>setCanvas</code> (QWidget *)<br />
- <i>Set the drawing canvas of the plot widget. </i><br />
+<p> void <code>setCanvas</code> (QWidget *)<br/>
+ <i>Set the drawing canvas of the plot widget. </i><br/>
  QWidget * <code>canvas</code> () </p>
 <p> const QWidget * <code>canvas</code> () const </p>
-<p> void <code>setCanvasBackground</code> (const QBrush &amp;)<br />
- <i>Change the background of the plotting area. </i><br />
+<p> void <code>setCanvasBackground</code> (const QBrush &amp;)<br/>
+ <i>Change the background of the plotting area. </i><br/>
  QBrush <code>canvasBackground</code> () const </p>
 <p> virtual <code>QwtScaleMap</code> <code>canvasMap</code> (int axisId) const </p>
 <p> double <code>invTransform</code> (int axisId, int pos) const </p>
-<p> double <code>transform</code> (int axisId, double value) const<br />
- <i>Transform a value into a coordinate in the plotting region. </i><br />
+<p> double <code>transform</code> (int axisId, double value) const<br/>
+ <i>Transform a value into a coordinate in the plotting region. </i><br/>
  <code>QwtScaleEngine</code> * <code>axisScaleEngine</code> (int axisId) </p>
 <p> const <code>QwtScaleEngine</code> * <code>axisScaleEngine</code> (int axisId) const </p>
 <p> void <code>setAxisScaleEngine</code> (int axisId, <code>QwtScaleEngine</code> *) </p>
-<p> void <code>setAxisAutoScale</code> (int axisId, bool on=true)<br />
- <i>Enable autoscaling for a specified axis. </i><br />
+<p> void <code>setAxisAutoScale</code> (int axisId, bool on=true)<br/>
+ <i>Enable autoscaling for a specified axis. </i><br/>
  bool <code>axisAutoScale</code> (int axisId) const </p>
-<p> void <code>enableAxis</code> (int axisId, bool tf=true)<br />
- <i>Enable or disable a specified axis. </i><br />
+<p> void <code>enableAxis</code> (int axisId, bool tf=true)<br/>
+ <i>Enable or disable a specified axis. </i><br/>
  bool <code>axisEnabled</code> (int axisId) const </p>
-<p> void <code>setAxisFont</code> (int axisId, const QFont &amp;f)<br />
- <i>Change the font of an axis. </i><br />
+<p> void <code>setAxisFont</code> (int axisId, const QFont &amp;f)<br/>
+ <i>Change the font of an axis. </i><br/>
  QFont <code>axisFont</code> (int axisId) const </p>
-<p> void <code>setAxisScale</code> (int axisId, double min, double max, double step=0)<br />
- <i>Disable autoscaling and specify a fixed scale for a selected axis. </i><br />
- void <code>setAxisScaleDiv</code> (int axisId, const <code>QwtScaleDiv</code> &amp;)<br />
- <i>Disable autoscaling and specify a fixed scale for a selected axis. </i><br />
- void <code>setAxisScaleDraw</code> (int axisId, <code>QwtScaleDraw</code> *)<br />
- <i>Set a scale draw. </i><br />
- double <code>axisStepSize</code> (int axisId) const<br />
- <i>Return the step size parameter that has been set in setAxisScale. </i><br />
- <code>QwtInterval</code> <code>axisInterval</code> (int axisId) const<br />
- <i>Return the current interval of the specified axis. </i><br />
- const <code>QwtScaleDiv</code> &amp; <code>axisScaleDiv</code> (int axisId) const<br />
- <i>Return the scale division of a specified axis. </i><br />
- const <code>QwtScaleDraw</code> * <code>axisScaleDraw</code> (int axisId) const<br />
- <i>Return the scale draw of a specified axis. </i><br />
- <code>QwtScaleDraw</code> * <code>axisScaleDraw</code> (int axisId)<br />
- <i>Return the scale draw of a specified axis. </i><br />
+<p> void <code>setAxisScale</code> (int axisId, double min, double max, double step=0)<br/>
+ <i>Disable autoscaling and specify a fixed scale for a selected axis. </i><br/>
+ void <code>setAxisScaleDiv</code> (int axisId, const <code>QwtScaleDiv</code> &amp;)<br/>
+ <i>Disable autoscaling and specify a fixed scale for a selected axis. </i><br/>
+ void <code>setAxisScaleDraw</code> (int axisId, <code>QwtScaleDraw</code> *)<br/>
+ <i>Set a scale draw. </i><br/>
+ double <code>axisStepSize</code> (int axisId) const<br/>
+ <i>Return the step size parameter that has been set in setAxisScale. </i><br/>
+ <code>QwtInterval</code> <code>axisInterval</code> (int axisId) const<br/>
+ <i>Return the current interval of the specified axis. </i><br/>
+ const <code>QwtScaleDiv</code> &amp; <code>axisScaleDiv</code> (int axisId) const<br/>
+ <i>Return the scale division of a specified axis. </i><br/>
+ const <code>QwtScaleDraw</code> * <code>axisScaleDraw</code> (int axisId) const<br/>
+ <i>Return the scale draw of a specified axis. </i><br/>
+ <code>QwtScaleDraw</code> * <code>axisScaleDraw</code> (int axisId)<br/>
+ <i>Return the scale draw of a specified axis. </i><br/>
  const <code>QwtScaleWidget</code> * <code>axisWidget</code> (int axisId) const </p>
 <p> <code>QwtScaleWidget</code> * <code>axisWidget</code> (int axisId) </p>
 <p> void <code>setAxisLabelAlignment</code> (int axisId, Qt::Alignment) </p>
 <p> void <code>setAxisLabelRotation</code> (int axisId, double rotation) </p>
-<p> void <code>setAxisTitle</code> (int axisId, const QString &amp;)<br />
- <i>Change the title of a specified axis. </i><br />
- void <code>setAxisTitle</code> (int axisId, const <code>QwtText</code> &amp;)<br />
- <i>Change the title of a specified axis. </i><br />
+<p> void <code>setAxisTitle</code> (int axisId, const QString &amp;)<br/>
+ <i>Change the title of a specified axis. </i><br/>
+ void <code>setAxisTitle</code> (int axisId, const <code>QwtText</code> &amp;)<br/>
+ <i>Change the title of a specified axis. </i><br/>
  <code>QwtText</code> <code>axisTitle</code> (int axisId) const </p>
 <p> void <code>setAxisMaxMinor</code> (int axisId, int maxMinor) </p>
 <p> int <code>axisMaxMinor</code> (int axisId) const </p>
 <p> void <code>setAxisMaxMajor</code> (int axisId, int maxMajor) </p>
 <p> int <code>axisMaxMajor</code> (int axisId) const </p>
-<p> void <code>insertLegend</code> (<code>QwtAbstractLegend</code> *, <code>LegendPosition</code>=<code>QwtPlot::RightLegend</code>, double ratio=-1.0)<br />
- <i>Insert a legend. </i><br />
+<p> void <code>insertLegend</code> (<code>QwtAbstractLegend</code> *, <code>LegendPosition</code>=<code>QwtPlot::RightLegend</code>, double ratio=-1.0)<br/>
+ <i>Insert a legend. </i><br/>
  <code>QwtAbstractLegend</code> * <code>legend</code> () </p>
 <p> const <code>QwtAbstractLegend</code> * <code>legend</code> () const </p>
 <p> void <code>updateLegend</code> () </p>
 <p> void <code>updateLegend</code> (const <code>QwtPlotItem</code> *) </p>
 <p> virtual QSize <code>sizeHint</code> () const </p>
-<p> virtual QSize <code>minimumSizeHint</code> () const<br />
- <i>Return a minimum size hint. </i><br />
- virtual void <code>updateLayout</code> ()<br />
- <i>Adjust plot content to its current size. </i><br />
+<p> virtual QSize <code>minimumSizeHint</code> () const<br/>
+ <i>Return a minimum size hint. </i><br/>
+ virtual void <code>updateLayout</code> ()<br/>
+ <i>Adjust plot content to its current size. </i><br/>
  virtual void <code>drawCanvas</code> (QPainter *) </p>
-<p> void <code>updateAxes</code> ()<br />
- <i>Rebuild the axes scales. </i><br />
- void <code>updateCanvasMargins</code> ()<br />
- <i>Update the canvas margins. </i><br />
- virtual void <code>getCanvasMarginsHint</code> (const <code>QwtScaleMap</code> maps[], const QRectF &amp;canvasRect, double &amp;left, double &amp;top, double &amp;right, double &amp;bottom) const<br />
- <i>Calculate the canvas margins. </i><br />
- virtual bool <code>event</code> (QEvent *)<br />
- <i>Adds handling of layout requests. </i><br />
- virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br />
- <i>Event filter. </i><br />
+<p> void <code>updateAxes</code> ()<br/>
+ <i>Rebuild the axes scales. </i><br/>
+ void <code>updateCanvasMargins</code> ()<br/>
+ <i>Update the canvas margins. </i><br/>
+ virtual void <code>getCanvasMarginsHint</code> (const <code>QwtScaleMap</code> maps[], const QRectF &amp;canvasRect, double &amp;left, double &amp;top, double &amp;right, double &amp;bottom) const<br/>
+ <i>Calculate the canvas margins. </i><br/>
+ virtual bool <code>event</code> (QEvent *)<br/>
+ <i>Adds handling of layout requests. </i><br/>
+ virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br/>
+ <i>Event filter. </i><br/>
  virtual void <code>drawItems</code> (QPainter *, const QRectF &amp;, const <code>QwtScaleMap</code> maps[<code>axisCnt</code>]) const </p>
-<p> virtual QVariant <code>itemToInfo</code> (<code>QwtPlotItem</code> *) const<br />
- <i>Build an information, that can be used to identify a plot item on the legend. </i><br />
- virtual <code>QwtPlotItem</code> * <code>infoToItem</code> (const QVariant &amp;) const<br />
+<p> virtual QVariant <code>itemToInfo</code> (<code>QwtPlotItem</code> *) const<br/>
+ <i>Build an information, that can be used to identify a plot item on the legend. </i><br/>
+ virtual <code>QwtPlotItem</code> * <code>infoToItem</code> (const QVariant &amp;) const<br/>
  <i>Identify the plot item according to an item info object, that has bee generated from </i><code>itemToInfo()</code>.</p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>resizeEvent</code> (QResizeEvent *e) </p>
@@ -196,7 +196,7 @@ myPlot-&gt;replot();</pre>
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>title</i> Title text<br />
+<dd><i>title</i> Title text<br/>
  <i>parent</i> Parent widget</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtPlot::applyProperties (const QString &amp;)</h3>
@@ -384,8 +384,8 @@ myPlot-&gt;replot();</pre>
 <p>Redraw the canvas items. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter used for drawing<br />
- <i>canvasRect</i> Bounding rectangle where to paint<br />
+<dd><i>painter</i> Painter used for drawing<br/>
+ <i>canvasRect</i> Bounding rectangle where to paint<br/>
  <i>maps</i> <code>QwtPlot::axisCnt</code> maps, mapping between plot and paint device coordinates</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -395,7 +395,7 @@ myPlot-&gt;replot();</pre>
 <p> Only xBottom and yLeft are enabled by default. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>tf</i> true (enabled) or false (disabled)</dd></dl>
 <h3>bool QwtPlot::event (QEvent *event) [virtual]</h3>
 <p>Adds handling of layout requests. </p>
@@ -414,7 +414,7 @@ myPlot-&gt;replot();</pre>
 <dd>QEvent::ContentsRectChange The layout needs to be recalculated</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>object</i> Object to be filtered<br />
+<dd><i>object</i> Object to be filtered<br/>
  <i>event</i> Event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -438,11 +438,11 @@ myPlot-&gt;replot();</pre>
 <p>Calculate the canvas margins. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>maps</i> <code>QwtPlot::axisCnt</code> maps, mapping between plot and paint device coordinates<br />
- <i>canvasRect</i> Bounding rectangle where to paint<br />
- <i>left</i> Return parameter for the left margin<br />
- <i>top</i> Return parameter for the top margin<br />
- <i>right</i> Return parameter for the right margin<br />
+<dd><i>maps</i> <code>QwtPlot::axisCnt</code> maps, mapping between plot and paint device coordinates<br/>
+ <i>canvasRect</i> Bounding rectangle where to paint<br/>
+ <i>left</i> Return parameter for the left margin<br/>
+ <i>top</i> Return parameter for the top margin<br/>
+ <i>right</i> Return parameter for the right margin<br/>
  <i>bottom</i> Return parameter for the bottom margin</dd></dl>
 <p> Plot items might indicate, that they need some extra space at the borders of the canvas by the <code>QwtPlotItem::Margins</code> flag. </p>
 <p> <code>updateCanvasMargins()</code>, <code>QwtPlotItem::getCanvasMarginHint()</code></p>
@@ -474,8 +474,8 @@ myPlot-&gt;replot();</pre>
 <p> Legends, that are not inserted into the layout of the plot widget need to connect to the <code>legendDataChanged()</code> signal. Calling <code>updateLegend()</code> initiates this signal for an initial update. When the application code wants to implement its own layout this also needs to be done for rendering plots to a document ( see <code>QwtPlotRenderer</code> ). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>legend</i> Legend<br />
- <i>pos</i> The legend&#8217;s position. For top/left position the number of columns will be limited to 1, otherwise it will be set to unlimited.<br />
+<dd><i>legend</i> Legend<br/>
+ <i>pos</i> The legend&#8217;s position. For top/left position the number of columns will be limited to 1, otherwise it will be set to unlimited.<br/>
  <i>ratio</i> Ratio between legend and the bounding rectangle of title, canvas and axes. The legend will be shrunk if it would need more space than the given ratio. The ratio is limited to ]0.0 .. 1.0]. In case of &lt;= 0.0 it will be reset to the default ratio. The default vertical/horizontal ratio is 0.33/0.5.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -484,7 +484,7 @@ myPlot-&gt;replot();</pre>
 <p>Transform the x or y coordinate of a position in the drawing region into a value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>pos</i> position</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -496,7 +496,7 @@ myPlot-&gt;replot();</pre>
 <p>A signal indicating, that an item has been attached/detached </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plotItem</i> Plot item<br />
+<dd><i>plotItem</i> Plot item<br/>
  <i>on</i> Attached/Detached</dd></dl>
 <h3>QVariant QwtPlot::itemToInfo (<code>QwtPlotItem</code> *plotItem) const [virtual]</h3>
 <p>Build an information, that can be used to identify a plot item on the legend. The default implementation simply wraps the plot item into a QVariant object. When overloading <code>itemToInfo()</code> usually <code>infoToItem()</code> needs to reimplemeted too. </p>
@@ -529,7 +529,7 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>A signal with the attributes how to update the legend entries for a plot item. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>itemInfo</i> Info about a plot item, build from <code>itemToInfo()</code><br />
+<dd><i>itemInfo</i> Info about a plot item, build from <code>itemToInfo()</code><br/>
  <i>data</i> Attributes of the entries ( usually &lt;= 1 ) for the plot item.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -565,7 +565,7 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>Enable autoscaling for a specified axis. This member function is used to switch back to autoscaling mode after a fixed scale has been set. Autoscaling is enabled by default. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -577,7 +577,7 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>Change the font of an axis. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>font</i> Font</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
@@ -586,7 +586,7 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>Change the alignment of the tick labels </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>alignment</i> Or&#8217;d Qt::AlignmentFlags see &lt;qnamespace.h&gt;</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -595,7 +595,7 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>Rotate all tick labels </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>rotation</i> Angle in degrees. When changing the label rotation, the label alignment might be adjusted too.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -604,7 +604,7 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>Set the maximum number of major scale intervals for a specified axis </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>maxMajor</i> Maximum number of major steps</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -613,7 +613,7 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>Set the maximum number of minor scale intervals for a specified axis </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>maxMinor</i> Maximum number of minor steps</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -622,9 +622,9 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>Disable autoscaling and specify a fixed scale for a selected axis. In <code>updateAxes()</code> the scale engine calculates a scale division from the specified parameters, that will be assigned to the scale widget. So updates of the scale widget usually happen delayed with the next replot. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
- <i>min</i> Minimum of the scale<br />
- <i>max</i> Maximum of the scale<br />
+<dd><i>axisId</i> Axis index<br/>
+ <i>min</i> Minimum of the scale<br/>
+ <i>max</i> Maximum of the scale<br/>
  <i>stepSize</i> Major step size. If step == 0, the step size is calculated automatically using the maxMajor setting.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -633,7 +633,7 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>Disable autoscaling and specify a fixed scale for a selected axis. The scale division will be stored locally only until the next call of <code>updateAxes()</code>. So updates of the scale widget usually happen delayed with the next replot. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>scaleDiv</i> Scale division</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -642,7 +642,7 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>Set a scale draw. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>scaleDraw</i> Object responsible for drawing scales.</dd></dl>
 <p> By passing scaleDraw it is possible to extend <code>QwtScaleDraw</code> functionality and let it take place in <code>QwtPlot</code>. Please note that scaleDraw has to be created with new and will be deleted by the corresponding QwtScale member ( like a child object ). </p>
 <p> <code>See Also:</code></p>
@@ -655,7 +655,7 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>Change the scale engine for an axis </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>scaleEngine</i> Scale engine</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -664,13 +664,13 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>Change the title of a specified axis. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>title</i> axis title</dd></dl>
 <h3>void QwtPlot::setAxisTitle (intaxisId, const <code>QwtText</code> &amp;title)</h3>
 <p>Change the title of a specified axis. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>title</i> Axis title</dd></dl>
 <h3>void QwtPlot::setCanvas (QWidget *canvas)</h3>
 <p>Set the drawing canvas of the plot widget. <code>QwtPlot</code> invokes methods of the canvas as meta methods ( see QMetaObject ). In opposite to using conventional C++ techniques like virtual methods they allow to use canvas implementations that are derived from QWidget or QGLWidget. </p>
@@ -746,7 +746,7 @@ qVariantSetValue( itemInfo, plotItem );</pre>
 <p>Transform a value into a coordinate in the plotting region. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axisId</i> Axis index<br />
+<dd><i>axisId</i> Axis index<br/>
  <i>value</i> value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

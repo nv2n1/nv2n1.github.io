@@ -12,8 +12,8 @@ description: "davix-rm – Deletion tool based on libdavix."
 <h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-rm [options]&#8230; url</p>
 <h2>DESCRIPTION</h2>
-<p> <code>davix-rm</code> is a tool to delete resources with HTTP, Webdav or REST compatible services.<br />
- The commands can delete resources and resources containers.<br />
+<p> <code>davix-rm</code> is a tool to delete resources with HTTP, Webdav or REST compatible services.<br/>
+ The commands can delete resources and resources containers.<br/>
  It supports the protocol Http (http(s)://), WebDav (dav(s)://) and S3 (s3(s)://). </p>
 <p> davix-rm is powered by libdavix. See <a href="/docs/linux/man/3-libdavix/">libdavix</a>(3) for details. </p>
 <h2>OPTIONS</h2>
@@ -182,11 +182,11 @@ description: "davix-rm – Deletion tool based on libdavix."
 <dt>
 </dt><dd> Azure authentication key</dd></dl>
 <h2>EXAMPLES</h2>
-<p> <code>Delete a file over http<br />
+<p> <code>Delete a file over http<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-rm&nbsp;<wbr><a rel="nofollow" href="https://example.org/file1">https://example.org/file1</a> </p>
-<p> Delete a directory over WebDav<br />
+<p> Delete a directory over WebDav<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-rm&nbsp;<wbr><a href="dav://webdav.example.org/collection/collection_to_delete">dav://webdav.example.org/collection/collection_to_delete</a> </p>
-<p> Delete a resource on a Grid Storage with VOMS authentication<br />
+<p> Delete a resource on a Grid Storage with VOMS authentication<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-rm -P grid&nbsp;<wbr><a href="davs://grid-storage.example.org/dir1/dir2/">davs://grid-storage.example.org/dir1/dir2/</a> </p>
 <p> </code></p>
 <h2>SEE ALSO</h2>

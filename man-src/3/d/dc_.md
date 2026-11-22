@@ -17,9 +17,9 @@ description: "QuantLib::FuturesConvAdjustmentQuote – quote for the futures-con
 <p> <code>FuturesConvAdjustmentQuote</code> (const boost::shared_ptr&lt; <code>IborIndex</code> &gt; &amp;index, const std::string &amp;immCode, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;futuresQuote, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;volatility, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;meanReversion) </p>
 <p> void <code>update</code> () </p>
 <p> <code>Quote interface</code> </p>
-<p> <code>Real</code> <code>value</code> () const<br />
- <i>returns the current value </i><br />
- bool <code>isValid</code> () const<br />
+<p> <code>Real</code> <code>value</code> () const<br/>
+ <i>returns the current value </i><br/>
+ bool <code>isValid</code> () const<br/>
  <i>returns true if the </i><code>Quote</code> holds a valid value </p>
 <p> <code>Inspectors</code> </p>
 <p> <code>Real</code> <code>futuresValue</code> () const </p>

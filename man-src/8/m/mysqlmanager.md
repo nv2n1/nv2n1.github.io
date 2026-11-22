@@ -14,7 +14,7 @@ description: "mysqlmanager – the MySQL Instance Manager"
 <h2>Description</h2>
 <dl>
 <dd>
-</dd><dd><font SIZE="+1"> <code>Important</code> </font></dd>
+</dd><dd> <code>Important</code> </dd>
 <dd>
 </dd><dd>MySQL Instance Manager has been deprecated and is removed in MySQL 5.5.  <code>mysqlmanager</code> is the MySQL Instance Manager (IM). This program monitors and manages MySQL Database Server instances. MySQL Instance Manager is available for Unix-like operating systems, as well as Windows. It runs as a daemon that listens on a TCP/IP port. On Unix, it also listens on a Unix socket file. MySQL Instance Manager can be used in place of the mysqld_safe script to start and stop one or more instances of MySQL Server. Because Instance Manager can manage multiple server instances, it can also be used in place of the <code>mysqld_multi</code> script. Instance Manager offers these capabilities:</dd>
 <dl>
@@ -34,7 +34,7 @@ description: "mysqlmanager – the MySQL Instance Manager"
 <p> The following sections describe MySQL Instance Manager operation in more detail.</dl>
 <h2>Mysql Instance Manager Command Options</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font> </dd>
+<dd> <code>Important</code>  </dd>
 <p> MySQL Instance Manager has been deprecated and is removed in MySQL 5.5. </p>
 </dl>
 <p> The MySQL Instance Manager supports a number of command options. For a brief listing, invoke <code>mysqlmanager</code> with the <code>&#8211;help</code> option. Options may be given on the command line or in the Instance Manager configuration file. On Windows, the standard configuration file is my.ini in the directory where Instance Manager is installed. On Unix, the standard file is /etc/my.cnf. To specify a different configuration file, start Instance Manager with the <code>&#8211;defaults-file</code> option. </p>
@@ -151,7 +151,7 @@ description: "mysqlmanager – the MySQL Instance Manager"
 <p> This option was added in MySQL 5.1.7. Before that, the timeout is 30 seconds and cannot be changed.</dl>
 <h2>Mysql Instance Manager Configuration Files</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font> </dd>
+<dd> <code>Important</code>  </dd>
 <p> MySQL Instance Manager has been deprecated and is removed in MySQL 5.5. </p>
 </dl>
 <p> Instance Manager uses its standard configuration file unless it is started with a <code>&#8211;defaults-file</code> option that specifies a different file. On Windows, the standard file is my.ini in the directory where Instance Manager is installed. On Unix, the standard file is /etc/my.cnf. </p>
@@ -170,7 +170,7 @@ bind-address = 192.168.1.5</pre>
 </dd></dl>
 <p> Each [mysqld] or [mysqld<i>N</i>] instance section specifies options given by Instance Manager to a server instance at startup. These are mainly common MySQL Server options (see Section 5.1.2, lqServer Command Optionsrq). In addition, a [mysqld<i>N</i>] section can contain the options in the following list, which are specific to Instance Manager. These options are interpreted by Instance Manager itself; it does not pass them to the server when it attempts to start that server. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font> </dd>
+<dd> <code>Warning</code>  </dd>
 <p> The Instance Manager-specific options must not be used in a [mysqld] section. If a server is started without using Instance Manager, it will not recognize these options and will fail to start properly. </p>
 </dl>
 <dl>
@@ -210,7 +210,7 @@ log=/tmp/fordel.log</pre>
 </dd></dl>
 <h2>Starting The Mysql Server With Mysql Instance Manager</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font> </dd>
+<dd> <code>Important</code>  </dd>
 <p> MySQL Instance Manager has been deprecated and is removed in MySQL 5.5. </p>
 </dl>
 <p> This section discusses how Instance Manager starts server instances when it starts. However, before you start Instance Manager, you should set up a password file for it. Otherwise, you will not be able to connect to Instance Manager to control it after it starts. For details about creating Instance Manager accounts, see the section called lqINSTANCE MANAGER USER AND PASSWORD MANAGEMENTrq. </p>
@@ -230,7 +230,7 @@ use-manager</pre>
 <p> Instance Manager also stops all guarded server instances when it shuts down. </p>
 <p> The allowable options for [mysqld<i>N</i>] server instance sections are described in the section called lqMYSQL INSTANCE MANAGER CONFIGURATION FILESrq. In these sections, you can use a special <code>mysqld-path=</code><i>path-to-mysqld-binary</i> option that is recognized only by Instance Manager. Use this option to let Instance Manager know where the <code>mysqld</code> binary resides. If there are multiple instances, it may also be necessary to set other options such as <code>datadir</code> and <code>port</code>, to ensure that each instance has a different data directory and TCP/IP port number. Section 5.6, lqRunning Multiple MySQL Servers on the Same Machinerq, discusses the configuration values that must differ for each instance when you run multiple instance on the same machine. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font> </dd>
+<dd> <code>Warning</code>  </dd>
 <p> The [mysqld] instance section, if it exists, must not contain any Instance Manager-specific options. </p>
 </dl>
 <p> The typical Unix startup/shutdown cycle for a MySQL server with the MySQL Instance Manager enabled is as follows: </p>
@@ -244,13 +244,13 @@ use-manager</pre>
 <dd>4. If Instance Manager is shut down (for example, with the <code>/etc/init.d/mysql stop</code> command), it shuts down all server instances.</dd></dl>
 <h2>Instance Manager User And Password Management</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font> </dd>
+<dd> <code>Important</code>  </dd>
 <p> MySQL Instance Manager has been deprecated and is removed in MySQL 5.5. </p>
 </dl>
 <p> The Instance Manager stores its user information in a password file. On Windows, the default is mysqlmanager.passwd in the directory where Instance Manager is installed. On Unix, the default file is /etc/mysqlmanager.passwd. To specify a different location for the password file, use the <code>&#8211;password-file</code> option. </p>
 <p> If the password file does not exist or contains no password entries, you cannot connect to the Instance Manager. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Any Instance Manager process that is running to monitor server instances does not notice changes to the password file. You must stop it and restart it after making password entry changes. </p>
 </dl>
 <p> Entries in the password file have the following format, where the two fields are the account user name and encrypted password, separated by a colon: </p>
@@ -344,7 +344,7 @@ Re-type password: <code>mikepass</code></pre>
 <p> This command empties the password file, which has the effect of dropping all users listed in it. The option creates the password file if it does not exist, so it can be used to initialize a new password file to be used for other account-management operations. Take care not to use this option to reinitialize a file containing accounts that you do not want to drop.</dl>
 <h2>Mysql Server Instance Status Monitoring</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font> </dd>
+<dd> <code>Important</code>  </dd>
 <p> MySQL Instance Manager has been deprecated and is removed in MySQL 5.5. </p>
 </dl>
 <p> To monitor the status of each guarded server instance, the MySQL Instance Manager attempts to connect to the instance at regular intervals using the MySQL_Instance_Manager [at] localhost user account with a password of check_connection. </p>
@@ -366,15 +366,15 @@ Re-type password: <code>mikepass</code></pre>
 </tr>
 <tr VALIGN=top>
 <td> starting </td>
-<td> The instance is starting (initializing). Nonguarded instances cannot be<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>in this state. A nonguarded instance goes directly from<br />
+<td> The instance is starting (initializing). Nonguarded instances cannot be<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>in this state. A nonguarded instance goes directly from<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>offline to online.
 </td>
 </tr>
 <tr VALIGN=top>
 <td> stopping </td>
-<td> The instance is stopping. Nonguarded instances cannot be in this state.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>A nonguarded instance goes directly from online to<br />
+<td> The instance is stopping. Nonguarded instances cannot be in this state.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>A nonguarded instance goes directly from online to<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>offline, or stays offline if startup fails.
 </td>
 </tr>
@@ -385,39 +385,39 @@ Re-type password: <code>mikepass</code></pre>
 </tr>
 <tr VALIGN=top>
 <td> failed </td>
-<td> The instance was online but it crashed and is being restarted by<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Instance Manager, or else the instance failed to start<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>at all and Instance Manager is again attempting to start<br />
+<td> The instance was online but it crashed and is being restarted by<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Instance Manager, or else the instance failed to start<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>at all and Instance Manager is again attempting to start<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>it. Nonguarded instances cannot be in this state.
 </td>
 </tr>
 <tr VALIGN=top>
 <td> crashed </td>
-<td> Instance Manager failed to start the instance after several attempts.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(Instance Manager will try again later.)&nbsp;<wbr>Nonguarded<br />
+<td> Instance Manager failed to start the instance after several attempts.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(Instance Manager will try again later.)&nbsp;<wbr>Nonguarded<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>instances cannot be in this state.
 </td>
 </tr>
 <tr VALIGN=top>
 <td> abandoned </td>
-<td> Instance Manager was not able to start the instance, has given up, and<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>will make no further attempts until instructed<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>otherwise. To tell Instance Manager to try again, you<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>must first use STOP INSTANCE to put<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the instance in offline state, and then use<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>START INSTANCE to start the instance.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>If it is necessary to make configuration changes for the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>instance, you must do so after putting the instance<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>offline and before starting it.&nbsp;<wbr>(Instance Manager<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>accepts configuration-changing commands only for offline<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>instances.)&nbsp;<wbr>Nonguarded instances cannot be in this<br />
+<td> Instance Manager was not able to start the instance, has given up, and<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>will make no further attempts until instructed<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>otherwise. To tell Instance Manager to try again, you<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>must first use STOP INSTANCE to put<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the instance in offline state, and then use<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>START INSTANCE to start the instance.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>If it is necessary to make configuration changes for the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>instance, you must do so after putting the instance<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>offline and before starting it.&nbsp;<wbr>(Instance Manager<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>accepts configuration-changing commands only for offline<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>instances.)&nbsp;<wbr>Nonguarded instances cannot be in this<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>state.
 </td>
 </tr>
 </table>
 <h2>Connecting To Mysql Instance Manager</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font> </dd>
+<dd> <code>Important</code>  </dd>
 <p> MySQL Instance Manager has been deprecated and is removed in MySQL 5.5. </p>
 </dl>
 <p> After you set up a password file for the MySQL Instance Manager and Instance Manager is running, you can connect to it. The MySQL client-server protocol is used to communicate with the Instance Manager. For example, you can connect to it using the standard <code>mysql</code> client program: </p>
@@ -428,7 +428,7 @@ Re-type password: <code>mikepass</code></pre>
 <p> Instance Manager supports the version of the MySQL client-server protocol used by the client tools and libraries distributed with MySQL 4.1 or later, so other programs that use the MySQL C API also can connect to it.</p>
 <h2>Mysql Instance Manager Commands</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font> </dd>
+<dd> <code>Important</code>  </dd>
 <p> MySQL Instance Manager has been deprecated and is removed in MySQL 5.5. </p>
 </dl>
 <p> After you connect to MySQL Instance Manager, you can issue commands. The following general principles apply to Instance Manager command execution: </p>

@@ -10,7 +10,7 @@ description: "pmprintf, pmflush – print formatted output in a window or to sta
 <p><code>pmprintf</code>, <code>pmflush</code> &#8211; print formatted output in a window or to standard error</p>
 <h2>C Synopsis</h2>
 <p><code> #include &lt;pcp/pmapi.h&gt; </p>
-<p> int pmprintf(const char *</code><i>fmt</i>, &#8230; /*<i>args</i>*/);<br />
+<p> int pmprintf(const char *</code><i>fmt</i>, &#8230; /*<i>args</i>*/);<br/>
  int pmflush(void); </p>
 <p> cc &#8230; -lpcp</p>
 <h2>Description</h2>

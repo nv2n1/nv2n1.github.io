@@ -30,7 +30,7 @@ description: "ntfsprogs – tools for doing neat things with NTFS"
 <h2>Authors</h2>
 <p>The tools were written by Anton Altaparmakov, Carmelo Kintana, Cristian Klein, Erik Sornes, Giang Nguyen, Holger Ohmacht, Lode Leroy, Matthew J. Fanto, Per Olofsson, Richard Russon, Szabolcs Szakacsits, Yura Pakhuchiy and Yuval Fledel.</p>
 <h2>Availability</h2>
-<p>The <code>ntfsprogs</code> are part of the <code>ntfs-3g</code> package which can be downloaded from:<br />
+<p>The <code>ntfsprogs</code> are part of the <code>ntfs-3g</code> package which can be downloaded from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfs-3g/">ntfs-3g</a></code>(8) </p>

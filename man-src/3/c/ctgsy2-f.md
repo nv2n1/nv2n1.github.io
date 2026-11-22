@@ -10,7 +10,7 @@ description: "ctgsy2.f –"
 <p>ctgsy2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ctgsy2</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, RDSUM, RDSCAL, INFO)<br />
+<p>subroutine <code>ctgsy2</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, RDSUM, RDSCAL, INFO)<br/>
  <i></i><code>CTGSY2</code> solves the generalized Sylvester equation (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctgsy2 (characterTRANS, integerIJOB, integerM, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldc, * )C, integerLDC, complex, dimension( ldd, * )D, integerLDD, complex, dimension( lde, * )E, integerLDE, complex, dimension( ldf, * )F, integerLDF, realSCALE, realRDSUM, realRDSCAL, integerINFO)</h3>

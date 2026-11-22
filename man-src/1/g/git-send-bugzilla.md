@@ -58,9 +58,9 @@ git - send - bugzilla[OPTIONS](--dry - run | &lt;bugid&gt;)&lt;since&gt;[..&lt;u
 <h2>EXAMPLES</h2>
 <p> git-send-bugzilla -n 12345 master Extract all commits which are in the current branch but not in the <i>master</i> branch. Each commit will be attached as a single patch to the bug #12345</p>
 <h2>AUTHOR</h2>
-<p> Written by Steve Fr&#8217;ecinaux &lt;m[blue]<code>code [at] istique.net</code>m[]<font SIZE="-2">[1]</font>&gt;.</p>
+<p> Written by Steve Fr&#8217;ecinaux &lt;m[blue]<code>code [at] istique.net</code>m[][1]&gt;.</p>
 <h2>DOCUMENTATION</h2>
-<p> Documentation by Steve Fr&#8217;ecinaux &lt;m[blue]<code>code [at] istique.net</code>m[]<font SIZE="-2">[1]</font>&gt;.</p>
+<p> Documentation by Steve Fr&#8217;ecinaux &lt;m[blue]<code>code [at] istique.net</code>m[][1]&gt;.</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

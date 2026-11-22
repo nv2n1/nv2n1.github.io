@@ -24,10 +24,10 @@ description: "pump – accelerate remote compilation with distcc"
 <p> For example:</p>
 <dl>
 <dt>
-</dt><dd> eval `pump &#8211;startup`<br />
- make -j80<br />
+</dt><dd> eval `pump &#8211;startup`<br/>
+ make -j80<br/>
  pump &#8211;shutdown</dd></dl>
-<p> Note that distcc&#8217;s pump-mode assumes that sources files will not be<br />
+<p> Note that distcc&#8217;s pump-mode assumes that sources files will not be<br/>
 &nbsp;<wbr>modified during the lifetime of the include server, so modifying source files during a build may cause inconsistent results.</p>
 <h2>INVOKING LSDISTCC</h2>
 <p> When invoked in either the simple &quot; <code>pump</code> <i>COMMAND [ARG]</i> &#8230; &quot; form, or as &quot; <code>pump &#8211;startup</code> &quot;, the <code>pump</code> script will invoke <code>lsdistcc</code> whenever DISTCC_POTENTIAL_HOSTS is set and DISTCC_HOSTS isn&#8217;t. It will pass the value of DISTCC_POTENTIAL_HOSTS to <code>lsdistcc</code> and use the output of <code>lsdistcc</code> to set DISTCC_HOSTS.</p>

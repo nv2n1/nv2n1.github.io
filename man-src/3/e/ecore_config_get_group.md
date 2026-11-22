@@ -9,25 +9,25 @@ description: "Configuration Retrieve Functions – Functions that retrieve confi
 
 <p>Configuration Retrieve Functions &#8211; Functions that retrieve configuration values, based on type. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Ecore_Config_Prop</code> * <code>ecore_config_get</code> (const char *key)<br />
- <i>Returns the property with the given key. </i><br />
- EAPI char * <code>ecore_config_string_get</code> (const char *key)<br />
- <i>Returns the specified property as a string. </i><br />
- EAPI int <code>ecore_config_boolean_get</code> (const char *key)<br />
- <i>Returns the specified property as an integer. </i><br />
- EAPI long <code>ecore_config_int_get</code> (const char *key)<br />
- <i>Returns the specified property as a long integer. </i><br />
- EAPI float <code>ecore_config_float_get</code> (const char *key)<br />
- <i>Returns the specified property as a float. </i><br />
- EAPI int <code>ecore_config_argb_get</code> (const char *key, int *a, int *r, int *g, int *b)<br />
- <i>Finds the alpha, red, green and blue values of a color property. </i><br />
- EAPI long <code>ecore_config_argbint_get</code> (const char *key)<br />
- <i>Returns a color property as a long. </i><br />
- EAPI char * <code>ecore_config_argbstr_get</code> (const char *key)<br />
- <i>Returns a color property as a string of hexadecimal characters. </i><br />
- EAPI char * <code>ecore_config_theme_get</code> (const char *key)<br />
- <i>Returns a theme property. </i><br />
- EAPI char * <code>ecore_config_as_string_get</code> (const char *key)<br />
+<p>EAPI <code>Ecore_Config_Prop</code> * <code>ecore_config_get</code> (const char *key)<br/>
+ <i>Returns the property with the given key. </i><br/>
+ EAPI char * <code>ecore_config_string_get</code> (const char *key)<br/>
+ <i>Returns the specified property as a string. </i><br/>
+ EAPI int <code>ecore_config_boolean_get</code> (const char *key)<br/>
+ <i>Returns the specified property as an integer. </i><br/>
+ EAPI long <code>ecore_config_int_get</code> (const char *key)<br/>
+ <i>Returns the specified property as a long integer. </i><br/>
+ EAPI float <code>ecore_config_float_get</code> (const char *key)<br/>
+ <i>Returns the specified property as a float. </i><br/>
+ EAPI int <code>ecore_config_argb_get</code> (const char *key, int *a, int *r, int *g, int *b)<br/>
+ <i>Finds the alpha, red, green and blue values of a color property. </i><br/>
+ EAPI long <code>ecore_config_argbint_get</code> (const char *key)<br/>
+ <i>Returns a color property as a long. </i><br/>
+ EAPI char * <code>ecore_config_argbstr_get</code> (const char *key)<br/>
+ <i>Returns a color property as a string of hexadecimal characters. </i><br/>
+ EAPI char * <code>ecore_config_theme_get</code> (const char *key)<br/>
+ <i>Returns a theme property. </i><br/>
+ EAPI char * <code>ecore_config_as_string_get</code> (const char *key)<br/>
  <i>Retrieves the key as a string. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that retrieve configuration values, based on type.</p>
@@ -36,10 +36,10 @@ description: "Configuration Retrieve Functions – Functions that retrieve confi
 <p>Finds the alpha, red, green and blue values of a color property. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
- <i>a</i> A pointer to an integer to store the alpha value into.<br />
- <i>r</i> A pointer to an integer to store the red value into.<br />
- <i>g</i> A pointer to an integer to store the green value into.<br />
+<dd><i>key</i> The property key.<br/>
+ <i>a</i> A pointer to an integer to store the alpha value into.<br/>
+ <i>r</i> A pointer to an integer to store the red value into.<br/>
+ <i>g</i> A pointer to an integer to store the green value into.<br/>
  <i>b</i> A pointer to an integer to store the blue value into.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

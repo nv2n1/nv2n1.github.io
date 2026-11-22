@@ -51,12 +51,12 @@ description: "ntfsrecover – Recover updates committed by Windows on an NTFS vo
 <dl>
 <dd><code>ntfsrecover &#8211;verbose &#8211;backward &#8211;clusters=100-119 /dev/sda1</code> </dd>
 <h2>Bugs</h2>
-<p>If you find a bug please send an email describing the problem to the development team:<br />
+<p>If you find a bug please send an email describing the problem to the development team:<br/>
  ntfs-3g-devel [at] lists.sf.net</p>
 <h2>Authors</h2>
 <p><code>ntfsrecover</code> was written by Jean-Pierre Andre</p>
 <h2>Availability</h2>
-<p><code>ntfsrecover</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+<p><code>ntfsrecover</code> is part of the <code>ntfs-3g</code> package and is available from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfs-3g/">ntfs-3g</a></code>(8), <code><a href="/docs/linux/man/8-ntfsfix/">ntfsfix</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>

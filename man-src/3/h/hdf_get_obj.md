@@ -17,7 +17,7 @@ description: "hdf_get_obj – return the HDF data set node at a named location"
 HDF *hdf_get_obj(HDF *hdf, const char *name);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf -&gt; the dataset node to start from<br />
+<p> hdf -&gt; the dataset node to start from<br/>
  name -&gt; the name to walk to </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_get_obj walks the dataset given by hdf to the node named name, and then returns the pointer to that node </p>

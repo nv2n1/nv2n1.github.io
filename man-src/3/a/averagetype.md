@@ -10,10 +10,10 @@ description: "ql/instruments/averagetype.hpp – Averaging algorithm enumeration
 
 <p> ql/instruments/averagetype.hpp &#8211; Averaging algorithm enumeration. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/qldefines.hpp&gt;<br />
+<p> #include &lt;ql/qldefines.hpp&gt;<br/>
  #include &lt;ostream&gt; </p>
 <h3>Classes</h3>
-<p> struct <code>Average</code><br />
+<p> struct <code>Average</code><br/>
  <i>Placeholder for enumerated averaging types. </i></p>
 <h3>Functions</h3>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;out, Average::Type type) </p>

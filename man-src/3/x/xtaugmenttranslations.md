@@ -30,6 +30,6 @@ description: "XtParseTranslationTable, XtAugmentTranslations, XtOverrideTranslat
 <p> To replace a widget&#8217;s translations completely, use <code>XtSetValues</code> on the XtNtranslations resource and specify a compiled translation table as the value. </p>
 <p> The <code>XtUninstallTranslations</code> function causes the entire translation table for widget to be removed.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappaddactions/">XtAppAddActions</a>(3), <a href="/docs/linux/man/3-xtcreatepopupshell/">XtCreatePopupShell</a>(3), <a href="/docs/linux/man/3-xtparseacceleratortable/">XtParseAcceleratorTable</a>(3), <a href="/docs/linux/man/3-xtpopup/">XtPopup</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappaddactions/">XtAppAddActions</a>(3), <a href="/docs/linux/man/3-xtcreatepopupshell/">XtCreatePopupShell</a>(3), <a href="/docs/linux/man/3-xtparseacceleratortable/">XtParseAcceleratorTable</a>(3), <a href="/docs/linux/man/3-xtpopup/">XtPopup</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>
